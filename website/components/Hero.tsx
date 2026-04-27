@@ -6,6 +6,7 @@ import { ArrowRight, BookOpen, Download, ShieldAlert, Sigma } from "lucide-react
 import { trackPdfInteraction } from "@/lib/track";
 import { cn } from "@/lib/utils";
 import { ThreeDecoderMap } from "./ThreeDecoderMap";
+import { TheoryUnpacking } from "./TheoryUnpacking";
 import { GlossTerm } from "./GlossTerm";
 
 const TWO_PAGE_SUMMARY = "/predictions/tfpt_two_page_summary.pdf";
@@ -141,6 +142,8 @@ export function Hero() {
             </motion.div>
           ))}
         </motion.div>
+
+        <TheoryUnpacking />
 
         <ThreeDecoderMap />
       </div>
