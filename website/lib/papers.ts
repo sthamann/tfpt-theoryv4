@@ -476,7 +476,7 @@ export const papers: Paper[] = [
         body: "The fine-structure constant emerges as the unique positive root of a self-consistent closure equation built only from primitive normalizations and the carrier packet.",
         formulas: [
           "\\alpha^{-1}(0) = 137.035\\,999\\,216\\,8\\ldots",
-          "F_{U(1)}(\\alpha)=\\alpha^3 - 2c_3^3\\alpha^2 - \\frac{4}{5}c_3^6\\!\\left(\\sum_{f,j} L_{f,j}^{\\mathrm{diag}} + N_\\Phi\\right)\\log(\\varphi_{\\mathrm{seam}}(\\alpha)^{-1})",
+          "\\begin{aligned} F_{U(1)}(\\alpha) \\;&=\\; \\alpha^3 \\;-\\; 2c_3^3\\,\\alpha^2 \\\\ &\\quad -\\; \\frac{4}{5}c_3^6\\!\\left(\\sum_{f,j} L_{f,j}^{\\mathrm{diag}} + N_\\Phi\\right)\\log(\\varphi_{\\mathrm{seam}}(\\alpha)^{-1}) \\end{aligned}",
         ],
       },
       {
@@ -675,7 +675,7 @@ export const papers: Paper[] = [
     ],
     contribution: [
       "Boundary-normalized metrology: λ_Σ = λ₁⁺(|B_Σ|), ρ★ = χ_geo,0² / λ_Σ², M_Pl² / λ_Σ² = ρ★/(2π²), G_N λ_Σ² = π/(4ρ★).",
-      "Einstein-limit normalizer ξ = c₃/φ₀ with κ² = ξ φ₀/c₃²; ξ_tree = 3/4 and ξ★ ≈ 0.748 fix the dimensionless transition between UFE and Einstein–Hilbert normalisation.",
+      "Einstein-limit normalizer ξ = c₃/φ₀ with κ² = ξ φ₀/c₃²; ξ_tree = 3/4 and ξ★ ≈ 0.748 fix the dimensionless transition between UFE and Einstein–Hilbert normalization.",
     ],
     notClaimed: [
       "No late-time H₀, no CMB.",
@@ -701,7 +701,7 @@ export const papers: Paper[] = [
       },
       {
         title: "Einstein-Limit Normalizer ξ = c₃ / φ₀",
-        body: "A single dimensionless quotient governs the transition between the UFE-normalised boundary functional and the Einstein–Hilbert presentation. The ratio is intrinsic — c₃ from Paper 1, φ₀ from Paper 3 — so gravity is not promoted to a primitive observable: the claim is a compression identity for the gravitational normaliser inside the dimensionless metrology layer.",
+        body: "A single dimensionless quotient governs the transition between the UFE-normalized boundary functional and the Einstein–Hilbert presentation. The ratio is intrinsic — c₃ from Paper 1, φ₀ from Paper 3 — so gravity is not promoted to a primitive observable: the claim is a compression identity for the gravitational normalizer inside the dimensionless metrology layer.",
         formulas: [
           "\\kappa^2 = \\xi\\,\\frac{\\varphi_0}{c_3^2}, \\quad \\xi = \\frac{c_3}{\\varphi_0}",
           "\\xi_{\\mathrm{tree}} = \\tfrac{3}{4}",
@@ -736,7 +736,7 @@ export const papers: Paper[] = [
       {
         label: "Einstein-limit normalizer",
         latex: "\\xi = \\dfrac{c_3}{\\varphi_0}, \\quad \\kappa^2 = \\xi\\,\\dfrac{\\varphi_0}{c_3^2}",
-        description: "ξ_tree = 3/4, ξ★ ≈ 0.748 — boundary-normalised UFE↔Einstein–Hilbert transition.",
+        description: "ξ_tree = 3/4, ξ★ ≈ 0.748 — boundary-normalized UFE↔Einstein–Hilbert transition.",
       },
     ],
     highlights: [
@@ -748,7 +748,7 @@ export const papers: Paper[] = [
       {
         label: "ξ = c₃/φ₀",
         value: "≈ 0.748",
-        description: "Einstein-limit normaliser, tree value 3/4",
+        description: "Einstein-limit normalizer, tree value 3/4",
       },
       {
         label: "Functor chain",

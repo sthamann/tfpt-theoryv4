@@ -76,7 +76,7 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
     sha256:
       "595f63badbcf64ef74f43bf628ddd922c1d50a35a56325d471cf4a9a0ac30699",
     changelog:
-      "Added the Einstein-limit normaliser ξ = c₃/φ₀ as a compression identity.",
+      "Added the Einstein-limit normalizer ξ = c₃/φ₀ as a compression identity.",
   },
   "/papers/06_cosmology.pdf": {
     href: "/papers/06_cosmology.pdf",

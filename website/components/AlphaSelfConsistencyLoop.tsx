@@ -34,7 +34,8 @@ export function AlphaSelfConsistencyLoop() {
           Self-consistency feedback loop
         </h4>
         <span className="rounded-full bg-violet-500/15 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-widest text-violet-200 ring-1 ring-violet-400/30">
-          α appears in φ_seam(α)
+          <span className="math-label">α</span> appears in{" "}
+          <span className="math-label">φ_seam(α)</span>
         </span>
       </div>
 

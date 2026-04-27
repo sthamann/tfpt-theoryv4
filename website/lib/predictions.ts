@@ -137,7 +137,7 @@ export const predictions: Prediction[] = [
       "Failure of the self-consistent root equation or a stable precision mismatch outside the stated interface uncertainty.",
     derivationFormulas: [
       "\\varphi_{\\mathrm{seam}}(\\alpha) = \\frac{1}{6\\pi} + \\frac{3 e^{-2\\alpha}}{256\\pi^4}\\!\\left(1-\\frac{3 e^{-2\\alpha}}{256\\pi^4}\\right)^{-5/4}",
-      "F_{U(1)}(\\alpha) = \\alpha^3 - 2 c_3^3 \\alpha^2 - \\tfrac{4}{5} c_3^6 \\!\\left(\\textstyle\\sum_{f,j} L_{f,j}^{\\mathrm{diag}} + N_\\Phi\\right) \\log \\!\\left(\\varphi_{\\mathrm{seam}}(\\alpha)^{-1}\\right)",
+      "\\begin{aligned} F_{U(1)}(\\alpha) \\;&=\\; \\alpha^3 \\;-\\; 2 c_3^3\\,\\alpha^2 \\\\ &\\quad -\\; \\tfrac{4}{5} c_3^6 \\!\\left(\\textstyle\\sum_{f,j} L_{f,j}^{\\mathrm{diag}} + N_\\Phi\\right) \\log \\!\\left(\\varphi_{\\mathrm{seam}}(\\alpha)^{-1}\\right) \\end{aligned}",
       "F_{U(1)}(\\alpha_\\star) = 0 \\Rightarrow \\alpha_\\star^{-1} = 137.035\\,999\\,216\\,8\\ldots",
     ],
     pdf: "/predictions/tfpt_prediction_alpha_em_closure.pdf",

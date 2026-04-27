@@ -122,7 +122,8 @@ export function PredictionMatrix() {
                 scope="col"
                 className="sticky left-0 z-10 min-w-[160px] border-b border-r border-slate-800/60 bg-slate-950/80 px-3 py-3 text-[10px] font-semibold uppercase tracking-widest text-slate-300"
               >
-                Status ↓ / Testability →
+                Status <span className="math-label">↓</span> / Testability{" "}
+                <span className="math-label">→</span>
               </th>
               {TESTABILITY_AXIS.map((t) => (
                 <th

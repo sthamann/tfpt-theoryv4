@@ -65,7 +65,7 @@ const ROWS: AuditRow[] = [
     freeKnobs: "0 (coupling) · model-dependent (geometry, emission radius)",
   },
   {
-    output: "ξ = c₃ / φ₀  (Einstein-limit normaliser)",
+    output: "ξ = c₃ / φ₀  (Einstein-limit normalizer)",
     inputsAllowed: "c₃ = 1/(8π) (Paper 1), φ₀ from the retained seed",
     inputsForbidden: "Deriving SI G_N from two dimensionless numbers",
     freeKnobs: "0",

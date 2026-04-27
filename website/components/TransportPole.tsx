@@ -4,26 +4,53 @@ import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
 import { Math as Tex } from "./Math";
 
+/**
+ * Three roots of the transport polynomial P(z). Each is a zero of P, not a
+ * zero of P′. The lower critical *point* (zero of P′) sits between the
+ * lower transport root and the mid transport root and is plotted as a
+ * separate triangular marker below.
+ */
 const ROOTS = [
   {
-    label: "Upper root",
+    label: "Upper transport root",
     value: "1",
     note: "Decoupled / trivial endpoint",
     accent: "from-slate-500 to-slate-400",
   },
   {
-    label: "Mid root",
+    label: "Mid transport root",
     value: "64/729",
     note: "Intermediate transport balance",
     accent: "from-cyan-500 to-blue-400",
   },
   {
-    label: "Lower critical root",
+    label: "Lower transport root",
     value: "1/729",
-    note: "Determines δ_ph on the retained branch",
+    note: "Anchor for δ_ph; the lower critical point of P′ sits just above it",
     accent: "from-violet-500 to-fuchsia-500",
   },
 ];
+
+/**
+ * Critical points of P′(z) for P(z) = (z − 1)(z − 64/729)(z − 1/729).
+ * Computed once at build time so the plot can mark them as triangles
+ * separate from the round root markers above. Numerical: P′(z) = 0 has two
+ * real solutions, sandwiched between consecutive roots.
+ */
+const CUBIC_CRITICAL_POINTS = (() => {
+  const r1 = 1 / 729;
+  const r2 = 64 / 729;
+  const r3 = 1;
+  // P(z) = z³ - (r1+r2+r3) z² + (r1 r2 + r1 r3 + r2 r3) z - r1 r2 r3
+  // P'(z) = 3 z² - 2(r1+r2+r3) z + (r1 r2 + r1 r3 + r2 r3)
+  const a = 3;
+  const b = -2 * (r1 + r2 + r3);
+  const c = r1 * r2 + r1 * r3 + r2 * r3;
+  const d = Math.sqrt(b * b - 4 * a * c);
+  const cpLow = (-b - d) / (2 * a);
+  const cpHigh = (-b + d) / (2 * a);
+  return [cpLow, cpHigh];
+})();
 
 export function TransportPole() {
   return (
@@ -40,22 +67,34 @@ export function TransportPole() {
       <div className="grid gap-8 p-6 md:p-8 lg:grid-cols-5">
         <div className="lg:col-span-2">
           <h3 className="font-serif text-lg font-semibold text-slate-50">
-            Three roots, one critical point
+            Three transport roots, two critical points
           </h3>
           <p className="mt-2 text-sm leading-relaxed text-slate-300">
             The transport phase is governed by the cubic{" "}
             <Tex>{"P(z) = (z-1)\\!\\left(z-\\tfrac{64}{729}\\right)\\!\\left(z-\\tfrac{1}{729}\\right)"}</Tex>
-            . Setting <Tex>{"P'(z) = 0"}</Tex> gives the critical points whose
-            lower value selects <Tex>{"\\delta_{\\mathrm{ph}}"}</Tex> on the
-            retained branch.
+            . Its three zeros — the <em>transport roots</em> — are
+            structurally distinct from the two zeros of{" "}
+            <Tex>{"P'(z) = 0"}</Tex>, the <em>critical points</em> that sit
+            between consecutive roots. The <em>lower critical point</em>{" "}
+            selects <Tex>{"\\delta_{\\mathrm{ph}}"}</Tex> on the retained
+            branch.
           </p>
+
+          <div className="mt-3 rounded-md border border-slate-700/40 bg-slate-950/50 px-3 py-2 text-[11px] leading-snug text-slate-300">
+            <span className="font-semibold text-slate-200">
+              Reading rule.
+            </span>{" "}
+            In the plot, transport roots of <Tex>{"P(z)"}</Tex> are drawn as
+            filled circles. Critical points of <Tex>{"P'(z)"}</Tex> are drawn
+            as triangles. The two are mathematically different objects.
+          </div>
 
           <div className="mt-4 flex flex-wrap items-center gap-2 rounded-xl border border-violet-400/25 bg-violet-500/5 px-3 py-2 text-xs text-violet-100/90">
             <span className="rounded-full bg-violet-500/20 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-widest text-violet-200">
               Output flow
             </span>
             <span className="font-mono">
-              z = 1/729
+              <Tex>{"z_{\\mathrm{cp,low}}"}</Tex>
             </span>
             <ArrowRight size={12} aria-hidden className="text-violet-300" />
             <span className="font-mono">
@@ -66,7 +105,7 @@ export function TransportPole() {
               <Tex>{"\\delta_{\\mathrm{CKM}}"}</Tex>
             </span>
             <span className="text-violet-200/80">
-              (rigid branch transport)
+              (lower critical point of P′, not the root z = 1/729)
             </span>
           </div>
 
@@ -201,66 +240,94 @@ function CubicChart() {
           strokeLinecap="round"
         />
 
-        {roots.map((r, i) => {
+        {roots.map((r, i) => (
+          <motion.g
+            key={`root-${r}`}
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.5,
+              delay: 1.6 + i * 0.12,
+              type: "spring",
+            }}
+          >
+            <circle
+              cx={xScale(r)}
+              cy={xAxisY}
+              r={6}
+              fill={i === 0 ? "#a78bfa" : i === 1 ? "#60a5fa" : "#94a3b8"}
+              stroke="#0f172a"
+              strokeWidth={2}
+            />
+            <text
+              x={xScale(r)}
+              y={xAxisY + 18}
+              fill="#cbd5e1"
+              fontSize="10"
+              fontFamily="JetBrains Mono, monospace"
+              textAnchor="middle"
+            >
+              {i === 0 ? "1/729" : i === 1 ? "64/729" : "1"}
+            </text>
+          </motion.g>
+        ))}
+
+        {CUBIC_CRITICAL_POINTS.map((cp, i) => {
           const isLower = i === 0;
+          const cpY = yScale(
+            (cp - 1) * (cp - 64 / 729) * (cp - 1 / 729),
+          );
+          const triHalf = 6;
+          const triPath = `M ${xScale(cp)} ${cpY - triHalf} L ${xScale(cp) - triHalf} ${cpY + triHalf} L ${xScale(cp) + triHalf} ${cpY + triHalf} Z`;
           return (
             <motion.g
-              key={r}
+              key={`cp-${i}`}
               initial={{ opacity: 0, scale: 0 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{
-                duration: 0.5,
-                delay: 1.6 + i * 0.15,
-                type: "spring",
-              }}
+              transition={{ duration: 0.5, delay: 2.0 + i * 0.15, type: "spring" }}
             >
               {isLower && (
                 <>
-                  <motion.circle
-                    cx={xScale(r)}
-                    cy={xAxisY}
+                  <circle
+                    cx={xScale(cp)}
+                    cy={cpY}
                     r={14}
                     fill="#a78bfa"
-                    opacity="0.15"
-                    initial={{ scale: 0 }}
-                    whileInView={{ scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1.2, delay: 2.0 }}
+                    opacity="0.18"
                   />
                   <line
-                    x1={xScale(r)}
-                    x2={xScale(r)}
+                    x1={xScale(cp)}
+                    x2={xScale(cp)}
                     y1={pad.top + 4}
-                    y2={xAxisY - 6}
+                    y2={cpY - 8}
                     stroke="#a78bfa"
                     strokeWidth={1}
                     strokeDasharray="3 3"
-                    opacity="0.5"
+                    opacity="0.55"
                   />
                 </>
               )}
-              <circle
-                cx={xScale(r)}
-                cy={xAxisY}
-                r={isLower ? 7 : 6}
-                fill={i === 0 ? "#a78bfa" : i === 1 ? "#60a5fa" : "#94a3b8"}
+              <path
+                d={triPath}
+                fill={isLower ? "#c4b5fd" : "#fcd34d"}
                 stroke="#0f172a"
-                strokeWidth={2}
+                strokeWidth={1.5}
               />
               <text
-                x={xScale(r)}
-                y={xAxisY + 18}
-                fill="#cbd5e1"
+                x={xScale(cp)}
+                y={cpY - triHalf - 6}
+                fill={isLower ? "#c4b5fd" : "#fde68a"}
                 fontSize="10"
                 fontFamily="JetBrains Mono, monospace"
                 textAnchor="middle"
               >
-                {i === 0 ? "1/729" : i === 1 ? "64/729" : "1"}
+                {isLower ? "z_cp,low" : "z_cp,high"}
               </text>
               {isLower && (
                 <text
-                  x={xScale(r)}
+                  x={xScale(cp)}
                   y={pad.top - 2}
                   fill="#c4b5fd"
                   fontSize="10"
@@ -273,6 +340,23 @@ function CubicChart() {
             </motion.g>
           );
         })}
+
+        {/* Inline legend */}
+        <g aria-hidden="true">
+          <circle cx={pad.left + 12} cy={pad.top + 14} r={5} fill="#94a3b8" stroke="#0f172a" strokeWidth={2} />
+          <text x={pad.left + 22} y={pad.top + 18} fill="#cbd5e1" fontSize="10" fontFamily="JetBrains Mono, monospace">
+            roots of P(z)
+          </text>
+          <path
+            d={`M ${pad.left + 130} ${pad.top + 9} L ${pad.left + 124} ${pad.top + 19} L ${pad.left + 136} ${pad.top + 19} Z`}
+            fill="#c4b5fd"
+            stroke="#0f172a"
+            strokeWidth={1.5}
+          />
+          <text x={pad.left + 142} y={pad.top + 18} fill="#cbd5e1" fontSize="10" fontFamily="JetBrains Mono, monospace">
+            critical points of P′(z)
+          </text>
+        </g>
 
         <text
           x={(w - pad.left - pad.right) / 2 + pad.left}
@@ -294,8 +378,12 @@ function CubicChart() {
       </svg>
 
       <p className="mt-3 text-center text-xs text-slate-400">
-        The lower critical point of P′(z) = 0 selects δ_ph as a branch consequence,
-        not a fit parameter.
+        Roots of <span className="font-mono text-slate-300">P(z)</span> and
+        critical points of{" "}
+        <span className="font-mono text-slate-300">P′(z)</span> are visually
+        separated. The lower critical point selects{" "}
+        <span className="font-mono text-slate-300">δ_ph</span> as a branch
+        consequence, not a fit parameter.
       </p>
     </div>
   );

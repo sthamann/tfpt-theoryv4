@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import { ArrowDown } from "lucide-react";
 import { Math } from "./Math";
+import { cn } from "@/lib/utils";
 
 const COLOR_TRIPLET = [
   { name: "1", colorClass: "from-orange-500 to-red-500" },
@@ -174,7 +175,8 @@ export function CarrierVisualization() {
             <div className="mt-5 rounded-xl border border-blue-400/25 bg-blue-500/5 p-4">
               <div className="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-widest text-blue-200">
                 <ArrowDown size={12} aria-hidden />
-                Determinant-normalised generator → polynomial as corollary
+                Determinant-normalized generator{" "}
+                <span className="math-label">→</span> polynomial as corollary
               </div>
               <div className="mt-2 grid gap-2">
                 <div className="overflow-x-auto formula-scroll rounded-md border border-slate-700/40 bg-slate-950/60 p-3">
@@ -259,15 +261,20 @@ export function CarrierVisualization() {
 
             <div className="mt-5 grid gap-3 sm:grid-cols-3">
               {[
-                { label: "Families", value: "3" },
-                { label: "Higgs N_Φ", value: "1" },
-                { label: "b₁", value: "41/10" },
+                { label: "Families", value: "3", isMath: false },
+                { label: "Higgs N_Φ", value: "1", isMath: true },
+                { label: "b₁", value: "41/10", isMath: true },
               ].map((c) => (
                 <div
                   key={c.label}
                   className="rounded-lg border border-slate-700/40 bg-slate-950/40 px-4 py-3 text-center"
                 >
-                  <div className="text-[10px] font-semibold uppercase tracking-widest text-blue-300/80">
+                  <div
+                    className={cn(
+                      "text-[10px] font-semibold tracking-widest text-blue-300/80",
+                      c.isMath ? "math-label" : "uppercase",
+                    )}
+                  >
                     {c.label}
                   </div>
                   <div className="mt-1 font-serif text-lg font-semibold text-slate-50">

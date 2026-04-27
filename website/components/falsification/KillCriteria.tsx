@@ -52,7 +52,7 @@ const ROWS: KillRow[] = [
     area: "Joint discrete solve",
     paper: "Papers 1, 2",
     criterion:
-      "An alternative admissible discrete solution survives all primitive constraints (boundary kernel, Higgs index, primitive Yukawa, seam normalisation). The closed branch would no longer be unique.",
+      "An alternative admissible discrete solution survives all primitive constraints (boundary kernel, Higgs index, primitive Yukawa, seam normalization). The closed branch would no longer be unique.",
     formal: "\\#\\,d^\\star_{\\mathrm{disc}} > 1",
     severity: "theorem",
   },

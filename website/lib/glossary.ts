@@ -31,12 +31,12 @@ export const GLOSSARY: GlossaryEntry[] = [
     term: "carrier",
     alias: ["carrier rigidity", "carrier packet"],
     short:
-      "Finite essential split E = E_- ⊕ E_+ carrying the determinant-normalised hypercharge generator Y. Polynomial 6Y² − Y − 1 = 0 is its corollary, not its assumption.",
+      "Finite essential split E = E_- ⊕ E_+ carrying the determinant-normalized hypercharge generator Y. Polynomial 6Y² − Y − 1 = 0 is its corollary, not its assumption.",
   },
   {
     term: "joint discrete solve",
     short:
-      "A single discrete admissibility solution that simultaneously fixes the rank split, the seam normalisation, and the bridge seed — the source of the three decoders.",
+      "A single discrete admissibility solution that simultaneously fixes the rank split, the seam normalization, and the bridge seed — the source of the three decoders.",
   },
   {
     term: "admissibility selector",
@@ -101,7 +101,7 @@ export const GLOSSARY: GlossaryEntry[] = [
   {
     term: "downstream interface",
     short:
-      "Cosmology / horizon / sky-realisation comparison surface; status-coded as programmatic or conjectural. Cannot tune the primitive branch.",
+      "Cosmology / horizon / sky-realization comparison surface; status-coded as programmatic or conjectural. Cannot tune the primitive branch.",
   },
 ];
 

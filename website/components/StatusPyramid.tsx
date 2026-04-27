@@ -70,7 +70,7 @@ const LAYERS: Layer[] = [
     level: 6,
     label: "Conjectural / programmatic",
     short: "Conjectural target",
-    examples: "CMB Stage 2 · sky realisation · transient channels · E8 atlas",
+    examples: "CMB Stage 2 · sky realization · transient channels · E8 atlas",
     tone: "from-slate-600 to-slate-700",
     ring: "ring-slate-400/30",
     text: "text-slate-200",
@@ -87,7 +87,8 @@ export function StatusPyramid() {
           Proof-status pyramid — not all outputs share the same status
         </span>
         <span className="rounded-full bg-slate-800/60 px-2.5 py-0.5 text-[10px] font-mono uppercase tracking-widest text-slate-300 ring-1 ring-slate-700/40">
-          Burden of proof, top → bottom
+          Burden of proof, top{" "}
+          <span className="math-label">→</span> bottom
         </span>
       </div>
 

@@ -141,7 +141,8 @@ export function Overview() {
           <div className="glass rounded-2xl ring-1 ring-emerald-400/20">
             <div className="border-b border-slate-800/60 px-5 py-3">
               <span className="text-[11px] font-semibold uppercase tracking-widest text-emerald-300/80">
-                Closure equation for α
+                Closure equation for{" "}
+                <span className="math-label">α</span>
               </span>
             </div>
             <div className="p-6">

@@ -108,7 +108,7 @@ const TRUNK_BEFORE: StepNode[] = [
     formula: "d^\\star_{\\mathrm{disc}}",
     input: "Primitive kernel",
     fixed:
-      "A single discrete admissibility solution that simultaneously determines the rank split, the seam normalisation, and the bridge seed",
+      "A single discrete admissibility solution that simultaneously determines the rank split, the seam normalization, and the bridge seed",
     notClaimed:
       "Not a sequential 'first carrier, then counting, then observables' chain — these are joint outputs of one discrete solve",
     fail:
@@ -139,7 +139,7 @@ const DECODERS: StepNode[] = [
     fixed:
       "Family count N_fam = 3, admissible occupancy Ω_adm = 48, Higgs index N_Φ = 1, abelian coefficient b₁ = 41/10",
     notClaimed: "No mass values, no flavor matrices",
-    fail: "An admissible alternative seam normalisation survives",
+    fail: "An admissible alternative seam normalization survives",
     status: "decoder",
   },
   {

@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react";
 import Link from "next/link";
-import { ArrowRight, BookOpen, Download, Sigma } from "lucide-react";
+import { ArrowRight, BookOpen, Download, ShieldAlert, Sigma } from "lucide-react";
 import { trackPdfInteraction } from "@/lib/track";
 import { cn } from "@/lib/utils";
 import { ThreeDecoderMap } from "./ThreeDecoderMap";
@@ -57,7 +57,7 @@ export function Hero() {
             <span className="font-semibold text-slate-100">
               Topological Fixed-Point Theory
             </span>{" "}
-            reconstructs the Standard-Model{" "}
+            presents a staged reconstruction of the Standard-Model{" "}
             <GlossTerm term="carrier">carrier packet</GlossTerm>, the
             fine-structure constant, the Cabibbo angle, the PMNS matrix,
             strong-CP closure, and downstream cosmology — from a single{" "}
@@ -66,13 +66,24 @@ export function Hero() {
             <span className="font-semibold text-blue-300">no fitted constants</span>.
           </p>
 
-          <div className="mt-10 flex flex-col items-center gap-3 sm:flex-row">
+          <div className="mt-10 flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center">
             <Link
               href="/orientation"
               className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/30 ring-1 ring-blue-400/40 transition-transform hover:scale-105 focus:scale-105"
             >
               <BookOpen size={16} />
               Read the orientation map
+              <ArrowRight
+                size={16}
+                className="transition-transform group-hover:translate-x-0.5"
+              />
+            </Link>
+            <Link
+              href="/falsification"
+              className="group inline-flex items-center gap-2 rounded-full border border-rose-400/40 bg-rose-500/10 px-6 py-3 text-sm font-semibold text-rose-100 transition-colors hover:bg-rose-500/20 focus:bg-rose-500/20"
+            >
+              <ShieldAlert size={16} />
+              How to kill TFPT
               <ArrowRight
                 size={16}
                 className="transition-transform group-hover:translate-x-0.5"

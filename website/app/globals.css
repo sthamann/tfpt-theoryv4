@@ -195,8 +195,31 @@
 }
 
 .katex {
-  font-size: 1.05em;
-  color: rgb(241 245 249);
+  font-size: 1.06em;
+  color: rgb(248 250 252);
+  font-weight: 500;
+}
+
+.katex .mord,
+.katex .mbin,
+.katex .mrel,
+.katex .mopen,
+.katex .mclose,
+.katex .mpunct,
+.katex .minner,
+.katex .mop {
+  color: rgb(248 250 252);
+}
+
+/*
+ * Headline values inside KPI / highlight cards. KaTeX-rendered tokens
+ * inherit, but plain HTML KPI numbers should also stay close to white so
+ * the eye latches on the value, not the label.
+ */
+.kpi-value,
+.value-strong {
+  color: rgb(248 250 252);
+  font-weight: 600;
 }
 
 .katex-display {
@@ -268,16 +291,35 @@
  * symbol, applying `text-transform: uppercase` actually changes the glyph
  * (α → Α, θ → Θ). Use `.math-label` (or `data-math-label`) to opt that
  * label out of uppercase styling without losing the typographic feel.
+ *
+ * The rule applies to the element itself AND every descendant, so an
+ * `<UpperLabel>` block can contain `<span class="math-label">α</span>`
+ * children that are never uppercased even when the parent has
+ * `text-transform: uppercase`.
  */
 .math-label,
-[data-math-label="true"] {
+.math-label *,
+[data-math-label="true"],
+[data-math-label="true"] * {
   text-transform: none !important;
   font-variant-caps: normal !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: 0 !important;
   font-feature-settings:
     "kern" 1,
     "liga" 0,
     "ss01" 0;
+}
+
+/*
+ * KaTeX renders inside its own DOM tree which must never be uppercased.
+ * If a KaTeX-rendered formula sits inside an `uppercase` parent, the
+ * Greek glyphs and the `.mord mathrm` tokens get rewritten by
+ * text-transform. Force everything inside `.katex` back to natural case.
+ */
+.katex,
+.katex * {
+  text-transform: none !important;
+  font-variant-caps: normal !important;
 }
 
 /*
@@ -307,6 +349,8 @@
   body {
     background: #ffffff !important;
     color: #0f172a !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
   }
 
   header,
@@ -337,6 +381,7 @@
   .katex-display,
   .overflow-x-auto {
     overflow: visible !important;
+    white-space: normal !important;
   }
 
   .formula-scroll::-webkit-scrollbar,
@@ -352,7 +397,12 @@
   .card,
   .paper-card,
   .prediction-card,
-  .formula-card {
+  .formula-card,
+  .visual-panel,
+  .swimlane,
+  .download-card,
+  ol > li,
+  table {
     break-inside: avoid;
     page-break-inside: avoid;
   }
@@ -366,16 +416,74 @@
     color: #0f172a !important;
   }
 
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
+  p,
+  li {
+    orphans: 4;
+    widows: 4;
   }
 
+  /*
+   * `motion/react` initialises `motion.*` elements at opacity:0 and reveals
+   * them via `whileInView`. The intersection observer never fires inside
+   * the print pipeline, so animated cards land in the PDF as empty boxes.
+   * Force every element to its final visible state.
+   *
+   * `print-color-adjust: exact` keeps colored badges, gradient pills and
+   * SVG strokes that ride on a dark background visible — without it Chrome
+   * drops the gradient and the white-on-white icons disappear.
+   */
   *,
   *::before,
   *::after {
     animation: none !important;
     transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    print-color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+
+  /*
+   * Lucide icons have stroke="currentColor". When their parent's white
+   * text colour is preserved but the gradient pill behind them gets
+   * dropped (older WebKit print pipelines), the icons would vanish on a
+   * white page. Falling back to a dark stroke keeps them visible.
+   */
+  .glass svg.lucide,
+  .glass-strong svg.lucide,
+  [class*="bg-gradient"] svg.lucide {
+    color: inherit;
+  }
+
+  /*
+   * Prediction / KPI text must wrap inside its card. Without this, long
+   * unit suffixes like "GHz" or "1.516×10⁻³ eV" silently get cut off.
+   */
+  .prediction-card,
+  .download-card,
+  .glass,
+  .formula-card,
+  .card,
+  .visual-panel,
+  td,
+  th {
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  /*
+   * Hide the on-screen reading-mode toggle and analytics-only chrome from
+   * print — they would otherwise carve a useless row at the top of the PDF.
+   */
+  .print-hide,
+  [data-print-hide="true"] {
+    display: none !important;
   }
 }
 

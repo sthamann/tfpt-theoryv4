@@ -5,7 +5,15 @@ import { Math } from "./Math";
 import { AlphaRootPlot } from "./AlphaRootPlot";
 import { AlphaSelfConsistencyLoop } from "./AlphaSelfConsistencyLoop";
 
-const COMPARISON = [
+const COMPARISON: Array<{
+  label: React.ReactNode;
+  value: string;
+  note: string;
+  accent: string;
+  kind: string;
+  /** Whether the label contains math glyphs that must skip uppercase. */
+  isMath?: boolean;
+}> = [
   {
     label: "TFPT closed-branch root",
     value: "137.035 999 216 8…",
@@ -21,11 +29,16 @@ const COMPARISON = [
     kind: "reference",
   },
   {
-    label: "Residual α⁻¹(TFPT − CODATA)",
+    label: (
+      <>
+        Residual <span className="math-label">α⁻¹</span>(TFPT − CODATA)
+      </>
+    ),
     value: "≈ 3.98 × 10⁻⁸",
     note: "Difference between theory root and recommended value",
     accent: "from-orange-500 to-amber-500",
     kind: "comparison",
+    isMath: true,
   },
 ];
 
@@ -34,7 +47,8 @@ export function AlphaVisualization() {
     <div className="glass rounded-2xl ring-1 ring-slate-700/40">
       <div className="border-b border-slate-800/60 px-5 py-3">
         <span className="text-[11px] font-semibold uppercase tracking-widest text-blue-300/80">
-          Electromagnetic closure — α as a self-consistent root
+          Electromagnetic closure —{" "}
+          <span className="math-label">α</span> as a self-consistent root
         </span>
       </div>
       <div className="grid gap-8 p-6 md:p-8 lg:grid-cols-2">
@@ -54,9 +68,12 @@ export function AlphaVisualization() {
             </Math>
           </div>
           <p className="mt-3 text-sm text-slate-300">enters the closure function</p>
-          <div className="mt-3 overflow-x-auto rounded-lg border border-slate-700/40 bg-slate-950/40 p-3">
+          <div className="mt-3 overflow-x-auto formula-scroll rounded-lg border border-slate-700/40 bg-slate-950/40 p-3">
             <Math block>
-              {"F_{U(1)}(\\alpha) = \\alpha^3 - 2c_3^3\\alpha^2 - \\tfrac{4}{5}c_3^6\\!\\left(\\textstyle\\sum L_{f,j} + N_\\Phi\\right)\\log\\!\\left(\\varphi_{\\mathrm{seam}}(\\alpha)^{-1}\\right)"}
+              {String.raw`\begin{aligned}
+F_{U(1)}(\alpha) \;&=\; \alpha^3 \;-\; 2 c_3^3\,\alpha^2 \\
+                  &\quad -\; \tfrac{4}{5}\, c_3^6\!\left(\textstyle\sum L_{f,j} + N_\Phi\right)\log\!\left(\varphi_{\mathrm{seam}}(\alpha)^{-1}\right)
+\end{aligned}`}
             </Math>
           </div>
           <p className="mt-3 text-sm text-slate-300">
@@ -72,7 +89,7 @@ export function AlphaVisualization() {
         <div className="space-y-3">
           {COMPARISON.map((c, i) => (
             <motion.div
-              key={c.label}
+              key={c.kind}
               initial={{ opacity: 0, x: 12 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -108,10 +125,112 @@ export function AlphaVisualization() {
 
       <div className="grid gap-6 border-t border-slate-800/60 p-6 md:p-8 lg:grid-cols-2">
         <AlphaRootPlot />
-        <div className="reviewer-only">
-          <AlphaSelfConsistencyLoop />
-        </div>
+        <AlphaInputAudit />
       </div>
+      <div className="reviewer-only border-t border-slate-800/60 p-6 md:p-8">
+        <AlphaSelfConsistencyLoop />
+      </div>
+    </div>
+  );
+}
+
+/**
+ * Compact audit table that puts every input the α-closure consumes next to
+ * the input it must explicitly NOT consume. The free-knob count is visible
+ * at the bottom — the bar that has to read 0 for "not a fit" to mean what
+ * it says.
+ */
+function AlphaInputAudit() {
+  const ROWS: Array<{
+    element: React.ReactNode;
+    from: string;
+    forbid: React.ReactNode;
+  }> = [
+    {
+      element: <Math>{"c_3 = 1/(8\\pi)"}</Math>,
+      from: "Paper 1 — boundary primitive",
+      forbid: "CODATA fitting",
+    },
+    {
+      element: <Math>{"b_1 = 41/10"}</Math>,
+      from: "Paper 2 — abelian index coefficient",
+      forbid: "Empirical post-tuning",
+    },
+    {
+      element: <Math>{"\\textstyle\\sum L_{f,j} + N_\\Phi"}</Math>,
+      from: "Paper 2 — carrier packet, Higgs index",
+      forbid: "Free parameter",
+    },
+    {
+      element: <Math>{"\\varphi_{\\mathrm{seam}}(\\alpha)"}</Math>,
+      from: "Paper 3 — exact seam opening",
+      forbid: <span>Freezing at <Math>{"\\varphi_0"}</Math> inside the root equation</span>,
+    },
+    {
+      element: <span className="font-mono text-slate-200">CODATA 2022</span>,
+      from: "External comparison row",
+      forbid: "Being used as input",
+    },
+  ];
+
+  return (
+    <div className="rounded-xl border border-slate-700/40 bg-slate-950/40 p-4 sm:p-5">
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <h4 className="font-serif text-base font-semibold text-slate-50">
+          What feeds the closure — and what must not
+        </h4>
+        <span className="rounded-full bg-emerald-500/15 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-widest text-emerald-200 ring-1 ring-emerald-400/30">
+          Free knobs: 0
+        </span>
+      </div>
+
+      <div className="mt-3 overflow-x-auto formula-scroll">
+        <table className="w-full min-w-full border-separate border-spacing-0 text-left text-xs">
+          <thead>
+            <tr>
+              <th
+                scope="col"
+                className="border-b border-slate-800/60 px-2 py-2 text-[10px] font-semibold uppercase tracking-widest text-slate-300"
+              >
+                Element
+              </th>
+              <th
+                scope="col"
+                className="border-b border-slate-800/60 px-2 py-2 text-[10px] font-semibold uppercase tracking-widest text-slate-300"
+              >
+                Comes from
+              </th>
+              <th
+                scope="col"
+                className="border-b border-slate-800/60 px-2 py-2 text-[10px] font-semibold uppercase tracking-widest text-slate-300"
+              >
+                Must not
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {ROWS.map((row, i) => (
+              <tr key={i} className="hover:bg-slate-900/30">
+                <td className="border-b border-slate-800/60 px-2 py-2 align-top font-mono text-slate-100">
+                  {row.element}
+                </td>
+                <td className="border-b border-slate-800/60 px-2 py-2 align-top leading-snug text-slate-300">
+                  {row.from}
+                </td>
+                <td className="border-b border-slate-800/60 px-2 py-2 align-top leading-snug text-rose-200/85">
+                  {row.forbid}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <p className="mt-3 text-[11px] leading-relaxed text-slate-400">
+        Every quantity on the left is fixed by an upstream paper before the
+        closure equation is touched. Anything in the right column would
+        silently turn the α prediction into a fit.
+      </p>
     </div>
   );
 }
