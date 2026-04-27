@@ -127,9 +127,11 @@ export default function FalsificationPage() {
       <section
         id="kill-criteria-section"
         className="relative scroll-mt-20 py-12 sm:py-16"
+        aria-labelledby="kill-criteria-heading"
       >
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
+            id="kill-criteria-heading"
             eyebrow="Per-area kill criteria"
             title="Each output has a single sufficient kill condition"
             description="Carrier theorem, joint discrete solve, electromagnetic closure, strong-CP, Higgs sector, axion haloscope, cosmic birefringence, EHT residual intercept, and the cosmology comparison surface — each row is sufficient on its own to falsify the construction."
@@ -141,9 +143,11 @@ export default function FalsificationPage() {
       <section
         id="no-knobs-section"
         className="relative scroll-mt-20 border-t border-slate-800/60 py-12 sm:py-16"
+        aria-labelledby="no-knobs-heading"
       >
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
+            id="no-knobs-heading"
             eyebrow="No-knobs audit"
             title="Inputs allowed, inputs forbidden, free knobs"
             description="A claim of 'no fitted constants' is only as strong as the audit table behind it. For each TFPT output, the table below records the inputs the construction may use, the inputs it explicitly may not use, and the number of free parameters available for absorption. The free-knob count is the bar to clear."

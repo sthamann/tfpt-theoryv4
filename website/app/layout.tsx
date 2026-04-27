@@ -101,12 +101,15 @@ export const metadata: Metadata = {
   },
   other: {
     "google-site-verification": process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION || "",
-    "citation_title":
+    // Highwire Press tags (Google Scholar). The spec defines `citation_author`
+    // and expects the meta tag to be repeated once per author. There is no
+    // `citation_author_2` — using it makes the second author invisible to
+    // Scholar. Next.js renders an array as repeated <meta> elements.
+    citation_title:
       "TFPT — Topological Fixed-Point Theory: Boundary Polarization, Carrier Rigidity & Observable Closure",
-    "citation_author": "Hamann, Stefan",
-    "citation_author_2": "Rizzo, Alessandro",
-    "citation_publication_date": "2026",
-    "citation_language": "en",
+    citation_author: ["Hamann, Stefan", "Rizzo, Alessandro"],
+    citation_publication_date: "2026",
+    citation_language: "en",
   },
 };
 

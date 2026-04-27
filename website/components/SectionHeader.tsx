@@ -9,6 +9,13 @@ interface SectionHeaderProps {
   description?: string;
   align?: "left" | "center";
   className?: string;
+  /**
+   * DOM id assigned to the `<h2>`. When set, sibling sections can use
+   * `aria-labelledby={id}` to expose this heading as the section's
+   * accessible name. Optional; safe to omit when no `<section>` needs to
+   * reference it.
+   */
+  id?: string;
 }
 
 export function SectionHeader({
@@ -17,6 +24,7 @@ export function SectionHeader({
   description,
   align = "left",
   className,
+  id,
 }: SectionHeaderProps) {
   return (
     <div
@@ -39,6 +47,7 @@ export function SectionHeader({
         </motion.span>
       )}
       <motion.h2
+        id={id}
         initial={{ opacity: 0, y: 12 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.05 }}

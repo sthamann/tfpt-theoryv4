@@ -75,9 +75,12 @@ export async function generateMetadata(
       description: oneSentence,
     },
     other: {
+      // Highwire Press tags (Google Scholar). The spec defines `citation_author`
+      // and expects the meta tag to be repeated once per author — there is no
+      // `citation_author_2`. Next.js renders an array as repeated <meta>
+      // elements, so two authors round-trip correctly.
       citation_title: paper.title,
-      citation_author: "Hamann, Stefan",
-      citation_author_2: "Rizzo, Alessandro",
+      citation_author: ["Hamann, Stefan", "Rizzo, Alessandro"],
       citation_publication_date: "2026",
       citation_pdf_url: `${SITE_URL}${paper.pdf}`,
       citation_language: "en",

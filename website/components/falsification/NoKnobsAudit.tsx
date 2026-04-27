@@ -80,12 +80,12 @@ const ROWS: AuditRow[] = [
 ];
 
 export function NoKnobsAudit() {
+  // Rendered inside an already-labelled <section> (see app/falsification/page.tsx),
+  // so this wrapper is a plain <div>: a nested <section> with the same
+  // aria-labelledby would create a duplicate landmark with the same accessible
+  // name. The id is preserved for in-page anchor links.
   return (
-    <section
-      id="no-knobs"
-      className="relative scroll-mt-20 py-12"
-      aria-labelledby="no-knobs-heading"
-    >
+    <div id="no-knobs" className="relative py-12">
       <div className="mx-auto max-w-6xl">
         <div className="glass overflow-hidden rounded-2xl ring-1 ring-slate-700/40">
           <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800/60 px-5 py-3">
@@ -165,6 +165,6 @@ export function NoKnobsAudit() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

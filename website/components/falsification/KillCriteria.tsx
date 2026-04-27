@@ -123,12 +123,12 @@ const ROWS: KillRow[] = [
 ];
 
 export function KillCriteria() {
+  // Rendered inside an already-labelled <section> (see app/falsification/page.tsx),
+  // so this wrapper is a plain <div>: a nested <section> with the same
+  // aria-labelledby would create a duplicate landmark with the same accessible
+  // name. The id is preserved for in-page anchor links.
   return (
-    <section
-      id="kill-criteria"
-      className="relative scroll-mt-20 py-12"
-      aria-labelledby="kill-criteria-heading"
-    >
+    <div id="kill-criteria" className="relative py-12">
       <div className="mx-auto max-w-5xl">
         <div className="space-y-3">
           {ROWS.map((row, i) => {
@@ -176,6 +176,6 @@ export function KillCriteria() {
           })}
         </div>
       </div>
-    </section>
+    </div>
   );
 }
