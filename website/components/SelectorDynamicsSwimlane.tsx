@@ -78,7 +78,7 @@ const DYNAMICS_LANE: LaneNode[] = [
 
 export function SelectorDynamicsSwimlane() {
   return (
-    <div className="reviewer-only glass overflow-hidden rounded-2xl ring-1 ring-slate-700/40">
+    <div className="glass overflow-hidden rounded-2xl ring-1 ring-slate-700/40">
       <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800/60 px-5 py-3">
         <span className="text-[11px] font-semibold uppercase tracking-widest text-blue-300/80">
           Selector vs. dynamics — two parallel lanes

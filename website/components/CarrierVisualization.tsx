@@ -287,7 +287,7 @@ export function CarrierVisualization() {
         </div>
       </div>
 
-      <div className="reviewer-only rounded-2xl border border-slate-700/40 bg-slate-950/40 p-6 sm:p-7">
+      <div className="rounded-2xl border border-slate-700/40 bg-slate-950/40 p-6 sm:p-7">
         <div className="text-[10px] font-semibold uppercase tracking-widest text-blue-300/80">
           Why this coefficient is forced — not guessed
         </div>

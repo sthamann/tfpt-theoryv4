@@ -322,23 +322,6 @@
   font-variant-caps: normal !important;
 }
 
-/*
- * Reading mode. The `<ReadingModeProvider>` applies
- * data-reading-mode="orientation" to <html>; in that mode any element
- * tagged `.reviewer-only` collapses out of the layout so first-time
- * readers see only the visuals and claim maps. The default mode is
- * `reviewer` and shows everything.
- */
-[data-reading-mode="orientation"] .reviewer-only {
-  display: none !important;
-}
-
-@media print {
-  /* In print we always show every detail regardless of reading mode. */
-  [data-reading-mode="orientation"] .reviewer-only {
-    display: revert !important;
-  }
-}
 
 /*
  * Print and PDF export. Sticky headers, animated gradients, and overflow-x

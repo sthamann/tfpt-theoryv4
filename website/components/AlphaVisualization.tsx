@@ -52,7 +52,7 @@ export function AlphaVisualization() {
         </span>
       </div>
       <div className="grid gap-8 p-6 md:p-8 lg:grid-cols-2">
-        <div className="reviewer-only">
+        <div>
           <h3 className="font-serif text-lg font-semibold text-slate-50">
             The closure equation
           </h3>
@@ -127,7 +127,7 @@ F_{U(1)}(\alpha) \;&=\; \alpha^3 \;-\; 2 c_3^3\,\alpha^2 \\
         <AlphaRootPlot />
         <AlphaInputAudit />
       </div>
-      <div className="reviewer-only border-t border-slate-800/60 p-6 md:p-8">
+      <div className="border-t border-slate-800/60 p-6 md:p-8">
         <AlphaSelfConsistencyLoop />
       </div>
     </div>

@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Logo } from "./Logo";
-import { ReadingModeToggle } from "./ReadingMode";
 
 const links = [
   { href: "/#overview", label: "Overview" },
@@ -48,7 +47,7 @@ export function Navbar() {
           <Logo size={36} />
         </Link>
 
-        <ul className="hidden items-center gap-1 lg:flex">
+        <ul className="hidden items-center gap-1 md:flex">
           {links.map((l) => (
             <li key={l.href}>
               <Link
@@ -59,9 +58,6 @@ export function Navbar() {
               </Link>
             </li>
           ))}
-          <li className="ml-1">
-            <ReadingModeToggle />
-          </li>
           <li>
             <Link
               href="/orientation"
@@ -75,7 +71,7 @@ export function Navbar() {
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-md text-slate-300 hover:bg-white/5 hover:text-white"
+          className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-md text-slate-300 hover:bg-white/5 hover:text-white"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
         >
@@ -86,7 +82,7 @@ export function Navbar() {
       {open && (
         <div
           id="mobile-menu"
-          className="lg:hidden glass-strong border-t border-slate-700/40 px-4 pb-4 pt-2"
+          className="md:hidden glass-strong border-t border-slate-700/40 px-4 pb-4 pt-2"
         >
           <ul className="flex flex-col gap-1">
             {links.map((l) => (
@@ -100,9 +96,6 @@ export function Navbar() {
                 </Link>
               </li>
             ))}
-            <li className="mt-2">
-              <ReadingModeToggle className="w-full justify-center" />
-            </li>
             <li>
               <Link
                 href="/orientation"

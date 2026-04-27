@@ -249,10 +249,10 @@ function StepCard({ node, delay }: StepCardProps) {
             {meta.label}
           </span>
         </div>
-        <div className="mt-3 overflow-x-auto formula-scroll reviewer-only">
+        <div className="mt-3 overflow-x-auto formula-scroll">
           <Math block>{node.formula}</Math>
         </div>
-        <dl className="mt-4 grid grid-cols-1 gap-3 text-xs sm:grid-cols-2 reviewer-only">
+        <dl className="mt-4 grid grid-cols-1 gap-3 text-xs sm:grid-cols-2">
           <Cell label="Input" body={node.input} />
           <Cell label="What is fixed" body={node.fixed} highlight />
           <Cell label="Not claimed here" body={node.notClaimed} />

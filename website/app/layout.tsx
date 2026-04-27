@@ -4,7 +4,6 @@ import "./globals.css";
 import "katex/dist/katex.min.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { ReadingModeProvider } from "@/components/ReadingMode";
 import { papers } from "@/lib/papers";
 import { predictions } from "@/lib/predictions";
 
@@ -277,13 +276,11 @@ export default function RootLayout({
         >
           Skip to main content
         </a>
-        <ReadingModeProvider>
-          <Navbar />
-          <main id="main" className="pt-16">
-            {children}
-          </main>
-          <Footer />
-        </ReadingModeProvider>
+        <Navbar />
+        <main id="main" className="pt-16">
+          {children}
+        </main>
+        <Footer />
         <Analytics />
       </body>
     </html>
