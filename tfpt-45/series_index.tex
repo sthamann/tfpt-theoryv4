@@ -1,0 +1,100 @@
+\documentclass[11pt,a4paper]{article}
+\input{tfpt45-common}
+
+\title{\color{tfptblue}\textbf{TFPT 4.5 Paper Series Index}\\[0.35em]
+{\Large Split by Burden of Proof}}
+\author{Stefan Hamann \and Alessandro Rizzo}
+\date{{\normalsize\color{tfptgray}\sffamily Working index generated from \sourceDraft{} -- \today}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This index records the dedicated TFPT 4.5 paper split. The organizing principle is not topical
+coverage but review burden: each document groups claims that need the same type of scrutiny and
+keeps speculative or downstream risks from contaminating the primitive core.
+\end{abstract}
+
+\tableofcontents
+
+\section{Documents}
+
+\begin{center}
+\begin{tabularx}{\textwidth}{@{}p{0.12\textwidth}p{0.34\textwidth}Y@{}}
+\toprule
+\textbf{File} & \textbf{Title} & \textbf{Role} \\
+\midrule
+\texttt{00\_orientation\_note.tex} & TFPT in One Map & Thin entry document and dependency map. \\
+\texttt{01\_boundary\_kernel.tex} & Boundary Polarization and the Primitive Kernel of TFPT & Primitive boundary kernel. \\
+\texttt{02\_carrier\_rigidity\_standard\_model\_packet.tex} & Carrier Rigidity, Hypercharge, and the Standard Model Packet & Carrier theorem and SM packet. \\
+\texttt{03\_electromagnetic\_closure\_flavor\_transport.tex} & Electromagnetic Fixed Point and Flavor Transport & Precision prediction and no-knobs audit. \\
+\texttt{04\_admissibility\_strong\_cp\_qft\_closure.tex} & Admissibility, Strong CP, and Nonperturbative QFT Closure & Conditional QFT closure layer. \\
+\texttt{05\_geometric\_hodge\_closure\_dimensionless\_metrology.tex} & Geometric Hodge Closure and Dimensionless Metrology & Boundary-normalized metrology. \\
+\texttt{06\_cosmology\_interfaces\_downstream\_closure.tex} & Cosmology Interfaces of the TFPT Closed Branch & Downstream cosmology interfaces and CMB targets. \\
+\texttt{technical\_companion.tex} & Technical Companion to TFPT & Long toolbox, conventions, ledgers, continuations. \\
+\texttt{tfpt45\_theory\_map.tex} & TFPT -- Von Boundary Struktur zu beobachtbarer Realit\"at & Vector status map of the staged derivation chain. \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\section{Mathematical Dependency Order}
+
+\begin{enumerate}[leftmargin=1.5em]
+    \item Paper 1: boundary primitive kernel.
+    \item Paper 2: carrier rigidity and Standard-Model packet.
+    \item Paper 3: electromagnetic and flavor readouts.
+    \item Paper 4: admissibility, strong CP, positivity, OS/local-net/scattering closure.
+    \item Paper 5: geometric branch and dimensionless metrology.
+    \item Paper 6: downstream cosmology interfaces.
+\end{enumerate}
+
+\section{Recommended Public Order}
+
+\begin{enumerate}[leftmargin=1.5em]
+    \item Paper 0 as public orientation.
+    \item Paper 2 as first visible core result.
+    \item Paper 1 as formal foundation backbone.
+    \item Paper 3 as prediction paper.
+    \item Papers 4 and 5 as analytic and metrological stabilization.
+    \item Paper 6 as downstream expansion.
+\end{enumerate}
+
+\section{Per-Paper Front-Box Rule}
+
+Every paper begins with the same four-part box:
+\begin{enumerate}[leftmargin=1.5em]
+    \item Inputs from previous papers.
+    \item New theorem contribution.
+    \item Not claimed here.
+    \item Falsification or audit surface.
+\end{enumerate}
+This is a deliberate anti-evasion device: each document states how it can fail. Each paper also
+ends with a short ``Not used here'' list so that excluded material does not re-enter through a
+back-door support appendix.
+
+\section{Global Exclusion Discipline}
+
+\begin{center}
+\begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}Y@{}}
+\toprule
+\textbf{Paper} & \textbf{Explicit exclusions} \\
+\midrule
+Paper 1 & Carrier, SM group, $\alpha$, flavor, gravity, cosmology, E8. \\
+Paper 2 & Exact $\alpha$, CKM, PMNS, masses, OS reconstruction, cosmology, E8. \\
+Paper 3 & Full QFT closure, gravity, CMB, E8, large mass tables. \\
+Paper 4 & $\alpha$ detail calculation, CMB, E8, full empirical tables. \\
+Paper 5 & Late-time $H_0$, CMB, black holes, horizons, E8 stage atlas, astrophysical bursts. \\
+Paper 6 & Carrier proofs, full $\alpha$ derivation, QFT closure proofs, SM packet proof. \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\section{Source}
+
+All documents in this folder are based on \sourceDraft. The dedicated papers are intentionally
+clean splits: they keep their own primary source body and refer cross-paper material through
+dependency boxes. The Technical Companion is the designated home for full appendix-level ballast,
+extended ledgers, optional continuations, E8 grammar, horizons, record algebra, and transient
+channels.
+
+\end{document}

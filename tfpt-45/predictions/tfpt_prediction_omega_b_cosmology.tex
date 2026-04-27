@@ -1,0 +1,59 @@
+\documentclass[11pt,a4paper]{article}
+\input{tfpt_prediction_common}
+\title{\color{tfptblue}\textbf{TFPT Prediction: Baryon Fraction as a Cosmology Comparison Row}}
+\author{Stefan Hamann \and Alessandro Rizzo}
+\date{{\normalsize\color{tfptgray}\sffamily Standalone prediction note -- \today}}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note isolates the baryon-fraction row as a cosmology comparison rather than a primitive seed observable. The value is compared only after the declared late-time interface.
+\end{abstract}
+
+\PredictionStatus{$\Omega_b=0.04894$}{Cosmology comparison; present-epoch reconstruction.}{cosmology readout $C_{\mathrm{cos}}$}{robust inconsistency of the density-readout package under the declared Planck comparison convention.}
+
+
+\section{Standalone Minimal Kernel}
+\MinimalKernelBox
+
+The paper is intentionally one-row: it does not reprove the full TFPT series. It states the minimal closed-branch input needed for this prediction, shows the sector map, and gives the direct failure mode. The source status follows the TFPT 4.5 split: boundary and carrier inputs are core, electromagnetic/flavor/metrology inputs are bridge readouts, QFT closure is conditional, and cosmology rows are downstream comparison targets when explicitly marked.
+
+
+\section{Dependency Graph}
+\DependencyDiagram{Cosmology comparison}{$\Omega_b$}{The row is present-epoch comparison, not a timeless UV observable.}{density package mismatch}
+
+\section{Derivation}
+
+The appendix comparison convention reconstructs the present-epoch baryon fraction from the Planck pair
+\[
+\Omega_b=\frac{\Omega_b h^2}{h^2},
+\qquad
+h=\frac{H_0}{100}.
+\]
+TFPT assigns the row to the cosmology package
+\[
+\Tstar\longmapsto C_{\mathrm{cos}}(\Tstar)\longmapsto \Omega_b.
+\]
+The compact UV identity
+\[
+\Omega_b=(4\pi-1)\beta_{\mathrm{rad}}
+\]
+is retained only as bookkeeping. The prediction ledger target is
+\[
+\Omega_b=0.04894,
+\]
+with Planck 2018 comparison representative $0.04930$ and residual $-0.421\sigma$ in the stated snapshot.
+
+
+\section{No-Knobs and Failure Surface}
+\NoKnobsBox{The row is not a primitive cosmological dial and not one member of an operational seed quartet. It is a late-time comparison image of the cosmology readout map.}
+
+\section{Minimal Submission Claim}
+The standalone claim is limited to the displayed target and dependency class. It does not assert
+that every comparison row of the full TFPT ledger has the same proof status. Any update of the
+upstream boundary kernel, carrier theorem, or sector map must be propagated into this prediction
+before the numerical row is distributed.
+
+\PredictionBibliography
+
+\end{document}

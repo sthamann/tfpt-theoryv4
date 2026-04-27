@@ -1,0 +1,6 @@
+\contentsline {section}{\numberline {1}Documents}{2}{section.1}%
+\contentsline {section}{\numberline {2}Mathematical Dependency Order}{2}{section.2}%
+\contentsline {section}{\numberline {3}Recommended Public Order}{2}{section.3}%
+\contentsline {section}{\numberline {4}Per-Paper Front-Box Rule}{2}{section.4}%
+\contentsline {section}{\numberline {5}Global Exclusion Discipline}{3}{section.5}%
+\contentsline {section}{\numberline {6}Source}{3}{section.6}%

@@ -1,0 +1,20 @@
+\contentsline {section}{\numberline {1}What TFPT Claims}{2}{section.1}%
+\contentsline {section}{\numberline {2}What TFPT Does Not Claim at This Level}{2}{section.2}%
+\contentsline {section}{\numberline {3}The Three Decoders}{2}{section.3}%
+\contentsline {section}{\numberline {4}Status Matrix}{3}{section.4}%
+\contentsline {section}{\numberline {5}Series Map}{3}{section.5}%
+\contentsline {section}{\numberline {6}Publication Order}{3}{section.6}%
+\contentsline {section}{\numberline {7}Source Boundary}{4}{section.7}%
+\contentsline {section}{\numberline {8}Main Technical Development}{5}{section.8}%
+\contentsline {section}{\numberline {9}Reading guide and claim map}{7}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Version 4.5 completion surface}{7}{subsection.9.1}%
+\contentsline {section}{\numberline {10}Big picture: what TFPT actually claims}{11}{section.10}%
+\contentsline {section}{\numberline {11}Canonical rigid object and falsification interface}{13}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Canonical rigid object}{13}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}Canonical rigid-object corollary}{14}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}Structural falsification map}{14}{subsection.11.3}%
+\contentsline {section}{\numberline {12}Conclusion}{14}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Closed theorem stack and interface layers}{14}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2}Two side maps from $\mathfrak T_{\star }$}{15}{subsection.12.2}%
+\contentsline {subsection}{\numberline {12.3}Conditional closure layer and status of the four downstream readouts}{15}{subsection.12.3}%
+\contentsline {subsection}{\numberline {12.4}Main claim}{16}{subsection.12.4}%

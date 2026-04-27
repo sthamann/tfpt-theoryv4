@@ -1,0 +1,141 @@
+\documentclass[11pt,a4paper]{article}
+\input{tfpt45-common}
+
+\title{\color{tfptblue}\textbf{Geometric Hodge Closure and Dimensionless Metrology}\\[0.35em]
+{\Large from the TFPT Boundary Branch}}
+\author{Stefan Hamann \and Alessandro Rizzo}
+\date{{\normalsize\color{tfptgray}\sffamily Paper 5 of the TFPT 4.5 series -- \today}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This paper isolates the geometric and metrological branch of TFPT. The theory is not presented as
+predicting isolated SI numbers. Instead it constructs an internal dimensionless metrology from the
+boundary spectral unit $\lambda_\Sigma$, with gravity, Planck normalization, electroweak matching,
+and pole readouts expressed as boundary-normalized observables.
+\end{abstract}
+
+\begin{tfptfrontbox}
+\textbf{Inputs from previous papers.} Paper 1 supplies the boundary branch and primitive spectral
+unit. Paper 2 supplies the carrier/Higgs structure. Paper 4 may supply the renormalized observable
+layer when the analytic QFT closure is referenced.
+
+\textbf{New theorem contribution.} The boundary-normalized metrology:
+\[
+\lambda_\Sigma=\lambda_1^+(|B_\Sigma|),\qquad
+\rho_\star=\frac{\chigeozero^2}{\lambda_\Sigma^2},\qquad
+\frac{\Mpl^2}{\lambda_\Sigma^2}=\frac{\rho_\star}{2\pi^2},\qquad
+G_N\lambda_\Sigma^2=\frac{\pi}{4\rho_\star}.
+\]
+
+\textbf{Not claimed here.} No late-time $H_0$, no CMB, no black holes or horizons, no E8 stage
+atlas, and no astrophysical bursts.
+
+\textbf{Falsification or audit surface.} The paper fails if SI units enter as hidden inputs, if
+$\lambda_\Sigma$ is not fixed by the boundary branch, or if electroweak matching is mixed with
+cosmological comparison rows.
+\end{tfptfrontbox}
+
+
+\begin{tfptclaimcontract}
+\textbf{Claim.} Boundary spectral unit $\lambda_\Sigma$ defines dimensionless metrology for gravity and EW readouts.\par
+\textbf{Inputs.} Boundary spectral unit, geometric Hodge branch, renormalized observable layer.\par
+\textbf{First assumptions.} Stationary root for $\rho_\star$, boundary-normalized functional, scheme projection only after physical readout.\par
+\textbf{Proof status.} Bridge/metrology theorem target.\par
+\textbf{Kill condition.} Any hidden SI input such as external $G_N$, $G_F$, GeV scale, or Planck normalization enters before the readout map.\par
+\end{tfptclaimcontract}
+
+\tableofcontents
+
+\section{Boundary Spectral Unit}
+
+The internal unit is
+\[
+\lambda_\Sigma=\lambda_1^+(|B_\Sigma|).
+\]
+All dimensionful-looking statements in this paper are rewritten as dimensionless quotients by
+powers of $\lambda_\Sigma$. This is the editorial rule that separates metrology from numerology.
+
+\section{Geometric Hodge Closure}
+
+The geometric branch reconstructs a spectral Einstein functional and its Hodge closure. The paper
+should retain the source draft's geometric reconstruction, spectral Einstein functional, and Planck
+closure, but it should remove cosmological and horizon continuations.
+
+\section{Planck Normalization}
+
+The Planck readout is internal:
+\[
+\rho_\star=\frac{\chigeozero^2}{\lambda_\Sigma^2},
+\qquad
+\frac{\Mpl^2}{\lambda_\Sigma^2}=\frac{\rho_\star}{2\pi^2},
+\qquad
+G_N\lambda_\Sigma^2=\frac{\pi}{4\rho_\star}.
+\]
+The question is not which SI value of $G_N$ is inserted, but which dimensionless branch quotient is
+fixed.
+
+\section{Electroweak Matching}
+
+The electroweak matching layer is included only as boundary-normalized metrology:
+\[
+v_{\mathrm{phys}}=\vgeo\sqrt{Z_{\mathrm{EW}}^{\mathrm{TFPT}}},
+\qquad
+G_Nv_{\mathrm{phys}}^2
+\]
+is an internal dimensionless output. Pole matching may be included in compact form when it is
+expressed as a quotient by $\lambda_\Sigma$.
+
+\section{Observable Functor}
+
+The output layer is organized as
+\[
+\Tstar
+\xrightarrow{\mathcal R_{\mathrm{ren}}}
+\GrenTFPT
+\xrightarrow{\mathcal M_{\mathrm{phys}}}
+\OphysTFPT
+\xrightarrow{\mathcal M_{\mathrm{scheme}}}
+\OschemeTFPT/\SchGrp.
+\]
+Only the final projection chooses scheme or comparison conventions. The paper should keep this
+distinction visible whenever a physical readout is compared to an empirical row.
+
+\clearpage
+\section{Main Technical Development}
+
+This section contains the main technical development assigned to this paper by the TFPT 4.5 clean split. Cross-paper background is referenced through dependency and scope boxes; extended backend material is kept in the Technical Companion.
+
+\input{source_extracts/05_metrology_source.tex}
+
+\section{Source Extraction Map}
+
+\begin{tfptsourcebox}
+Use \sourceDraft:
+\begin{itemize}[leftmargin=1.5em]
+    \item Sections 6.4, 6.7, 6.8, and 6.9 for geometric reconstruction, spectral Einstein
+    functional, and Planck closure.
+    \item Sections 6.21--6.26 for electroweak matching and pole matching.
+    \item Section 13.2 only for observable hierarchy parts not already used in Paper 4.
+    \item Section 14 in full as the dimensionless metrology core.
+    \item Appendix C only in shortened form and without making E8 prominent.
+\end{itemize}
+\end{tfptsourcebox}
+
+\begin{tfptwarningbox}
+Do not include late-time $H_0$, CMB, black holes, horizons, E8 stage atlas, or transient channels.
+Those belong to Paper 6 or the Technical Companion.
+\end{tfptwarningbox}
+
+
+\begin{tfptexports}
+Exports: $\lambda_\Sigma$, $\rho_\star$, $\bar M_{\mathrm{Pl}}/\lambda_\Sigma$, $G_N\lambda_\Sigma^2$, $v_{\mathrm{phys}}/\lambda_\Sigma$, and the metrology functor.
+\end{tfptexports}
+
+\section{Not Used Here}
+
+Late-time $H_0$, CMB spectra, sky realization, black holes, horizons, E8 stage atlas, transient
+channels, and cosmological comparison rows are not used as proof inputs in this paper.
+
+\end{document}

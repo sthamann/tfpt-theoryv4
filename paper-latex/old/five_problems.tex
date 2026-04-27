@@ -1,0 +1,208 @@
+\documentclass[11pt]{article}
+% Compile with LuaLaTeX or XeLaTeX for full Unicode support.
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{fvextra}
+\DefineVerbatimEnvironment{MyVerbatim}{Verbatim}{breaklines=true,breakanywhere=true,fontsize=\small}
+
+\title{TFPT Note S1}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\noindent\textbf{Source PDF:} Five Problems.pdf
+
+\bigskip
+\noindent\textbf{Note:} This \LaTeX\ file contains a best effort text extraction of the PDF.
+Line breaks and pagination markers are preserved in a verbatim block.
+
+\bigskip
+\begin{MyVerbatim}
+===== Page 1 of 4 =====
+TFPT Note S1
+Solutions to Foundational Problems in Physics
+Stefan Hamann
+September 26, 2025
+Abstract
+This note outlines five solutions to open problems in fundamental physics derived from the
+Topological Fixed Point Theory (TFPT) framework. We demonstrate how Asymptotic
+Safety provides a UV completion for gravity with torsion, how spacetime singularities
+are resolved via a torsion-driven bounce, and how black holes can be understood as
+non-singular spacetime vortices. Furthermore, we present the TFPT axion as a dark
+matter candidate with a fixed misalignment angle and derive dark energy from either
+a torsional condensate or the terminal stage of the E8 cascade. All results are derived
+from the core TFPT invariants (c ,ϕ ) without introducing new free parameters, yielding
+3 0
+sharp, testable predictions.
+1 UV Completion via Asymptotic Safety
+Ansatz (UFE-Compatible). We use the effective average action (FRG) with an independent
+torsion field, truncated to operators present in the Unified Field Equation (UFE):
+Z √ h i
+Γ = d4x −g Z (k)R−Z (k)∇·K +Z (k)K2−2Λ +L , (1)
+k R ∇K K2 k a,EM
+where L = −1F2+ 1(∂a)2+c aFF ˜. The axion-photon coupling g = −4c is fixed by
+a,EM 4 2 3 aγγ 3
+the cubic condition, with c = 1/(8π) being a core TFPT invariant. The UFE itself is
+3
+(cid:16) (cid:17) (cid:16) (cid:17)
+R−∇·K +K2 = κˆ2 T (a) +T (EM) . (2)
+AB AB
+AB
+Dimensionless Couplings. The dimensionless couplings are defined as g(k) = k2/(8πZ (k)),
+R
+λ(k) = Λ /k2, τ(k) = Z (k)/Z (k), and χ(k) = Z (k)/Z (k). The axion-photon coupling
+k K2 R ∇K R
+y ≡ g = −4c is scale-invariant.
+aγγ 3
+Wetterich Equation and Flows (truncated to {g,λ,τ}). The flow equations take the
+form ∂ g = (2+η )g, ∂ λ = (−2+η )λ+c g+c gτ, and ∂ τ = A g−B τ +O(gτ,τ2), with
+t R t R g τ t τ τ
+the anomalous dimension η = a g+a gτ +a gy2+.... Crucially:
+R 1 2 3
+• The K2 term is positive definite, ensuring A > 0 and B > 0, which means torsion
+τ τ
+provides UV damping.
+• The axion contribution via y2 = 16c2 ≈ 0.0253 is small and fixed, preserving the flow
+3
+structure.
+1
+
+===== Page 2 of 4 =====
+Existence Theorem (Non-Trivial UV Fixed Point). Since ∂ g ≈ 2g > 0 for g → 0 and
+t
+η ∼ −|a |g for large g, the intermediate value theorem guarantees a fixed point g > 0 where
+R 1 ⋆
+2+η (g ,τ ) = 0. The other fixed-point equations then yield finite values τ > 0 and λ . This
+R ⋆ ⋆ ⋆ ⋆
+establishes a non-Gaussian UV fixed point (g ,λ ,τ ) whose coordinates depend only on the
+⋆ ⋆ ⋆
+TFPT invariants (c ,ϕ ) and field content, leaving no free parameters.
+3 0
+Testable Consequence. The same structure that supports the UV fixed point fixes the
+cosmic birefringence to be
+ϕ
+β = 0 = 0.2427◦. (3)
+4π
+This prediction is consistent with Planck PR4 data and provides a direct observational test of
+the theory.
+2 Singularity Resolution via Torsion and Bounce
+Modified Friedmann Equation. For a homogeneous and isotropic (FLRW) geometry with
+a time-dependent axial torsion field S(t), the 00-component of the UFE yields a modified
+Friedmann equation:
+κ2 1 Λ
+H2 = ρ− K2+ eff , where K2 ≡ c S2. (4)
+3 3 3 K
+The K2 term from the UFE’s left-hand side acts as a repulsive contribution on the right. For a
+torsional condensate sourced by polarized fermions, S ∝ a−3, leading to
+κ2h i c S2 Λ
+H2 = ρ a−4+ρ a−3 − K ⋆ a−6+ eff . (5)
+3 rad m 3 3
+As a → 0, the repulsive a−6 term dominates and prevents collapse. The bounce (H = 0) occurs
+at a minimum scale factor
+
+ (cid:16) cKS ⋆ 2 (cid:17)1/2 in the radiation era,
+a = κ2ρrad (6)
+min
+ cKS ⋆ 2 in the matter era.
+κ2ρm
+The result is a non-singular bounce at a finite density, replacing the Big Bang singularity.
+3 Black Holes as Spacetime Vortices and the Information Para-
+dox
+Regular Black Hole Solution. For a static, spherically symmetric metric with a stationary,
+vortex-like torsion profile, the UFE yields a Reissner–Nordström-like solution:
+2GM Q2 Λ
+f(r) = 1− + T − eff r2. (7)
+r r2 3
+Here, Q is an effective torsional charge arising from the K2 term, which acts repulsively at
+T
+short distances. For Q ̸= 0, the central singularity is replaced by a regular core.
+T
+2
+
+===== Page 3 of 4 =====
+Information Storage. The torsional charge Q is topologically quantized and characterized
+T
+by c . Information can be stored in this vortex topology. During evaporation, an extremal
+3
+q
+configuration (M → M = Q2/G) leads to a stable Planck-mass remnant. This topological
+rem T
+memory provides a mechanism for resolving the information paradox within TFPTwithout
+violating unitarity.
+4 Dark Matter: Relic Density of the TFPT Axion
+Fixed Parameters from the E8 Cascade. The n = 10 block of the E8 cascade fixes the
+axion decay constant f ≃ 8.86×1010GeV and mass:
+a
+m
+m ≃ 64.36µeV ⇒ ν = a ≈ 15.56GHz. (8)
+a a 2πℏ
+Geometrically Fixed Misalignment Angle. In TFPT, the cosmic birefringence β =
+2c ∆a = ϕ /(4π) implies a fixed initial displacement ∆a = ϕ . Identifying this with the QCD
+3 0 0
+axion’s misalignment angle θ leaves no freedom:
+i
+θ = ϕ ≈ 0.05317
+i 0
+Relic Density. With a small initial angle θ = ϕ , the standard pre-inflationary misalignment
+i 0
+mechanism underproduces dark matter (Ω ≪ Ω ). This is a sharp TFPT prediction: if
+a DM
+the observed birefringence is sourced by a single global axion field, this axion can only be a
+sub-component of dark matter. The full dark matter density would require another source (e.g.,
+torsional excitations) or an additional cold component.
+Experimental Signature. A sharp spectral line target for haloscope experiments at ν ≈
+15.56GHz with a fixed coupling g = −4c .
+aγγ 3
+5 Dark Energy: Two TFPT-Consistent Paths
+A) Torsional Condensate from the UFE. In the vacuum, the UFE (cid:0) R−∇·K +K2(cid:1) =
+AB
+0 for a homogeneous background with ∇·K = 0 implies a de Sitter solution. The effective
+cosmological constant is identified with the expectation value of the torsional term:
+Λ = 1 ⟨K2⟩
+eff 4
+Thus, dark energy is not a new substance but the macroscopic manifestation of the universe’s
+microscopic spacetime vorticity.
+B) Terminal Stage of the E8 Cascade. The E8 cascade provides a discrete ladder of energy
+scales, X ∝ M ϕ . Assigning the vacuum energy density to a terminal stage of the cascade
+n Pl n
+(n ≥ 26) yields
+⋆
+ρ ∼ (M ϕ )4, (9)
+Λ Pl n⋆
+wheretheextremesuppressionofϕ naturallyexplainsthesmallnessoftheobservedvalue. Both
+n⋆
+paths are compatible: A) provides the geometric origin of Λ, while B) explains its magnitude.
+3
+
+===== Page 4 of 4 =====
+6 Summary and Outlook
+Key Results and Predictions. The TFPT framework is highly constrained. The cubic
+condition, the backreaction mechanism ϕ (α), the UFE, and the birefringence formula are all
+0
+fixed without free parameters.
+• Cosmic Birefringence: β = 0.2427◦ is consistent with Planck PR4 data at the 0.5 to
+1.7σ level.
+• Axion Window: m ≃ 64.36µeV (ν ≈ 15.56GHz) provides a sharp target. The misalign-
+a
+ment angle θ = ϕ is a prediction, not a free parameter.
+i 0
+New, Precise Tests.
+1. Measurement of cosmic birefringence (EB and TB modes) with a fixed value and sign.
+2. A haloscope search in the narrow band around 15.56GHz.
+3. Signatures of a bouncing cosmology from the a−6 torsion term in primordial spectra.
+4. Astrophysical signatures of stable black hole remnants due to torsional charge.
+References
+[1] S. Hamann, A. Rizzo, The Unified Field Equation and Cosmic Birefringence in TFPT, (in
+preparation, 2025).
+[2] Planck Collaboration, Planck 2018 results. IV. Diffuse component separation, Astronomy &
+Astrophysics 641, A4 (2020).
+doi:10.1051/0004-6361/201833881.
+4
+
+\end{MyVerbatim}
+\end{document}

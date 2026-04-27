@@ -1,0 +1,234 @@
+"use client";
+
+import { motion } from "motion/react";
+import { Math as Tex } from "./Math";
+
+const ROOTS = [
+  {
+    label: "Upper root",
+    value: "1",
+    note: "Decoupled / trivial endpoint",
+    accent: "from-slate-500 to-slate-400",
+  },
+  {
+    label: "Mid root",
+    value: "64/729",
+    note: "Intermediate transport balance",
+    accent: "from-cyan-500 to-blue-400",
+  },
+  {
+    label: "Lower critical root",
+    value: "1/729",
+    note: "Determines δ_ph on the retained branch",
+    accent: "from-violet-500 to-fuchsia-500",
+  },
+];
+
+export function TransportPole() {
+  return (
+    <div className="glass rounded-2xl ring-1 ring-slate-700/40">
+      <div className="border-b border-slate-800/60 px-5 py-3">
+        <span className="text-[11px] font-semibold uppercase tracking-widest text-blue-300/80">
+          Cusp cubic — transport phase polynomial
+        </span>
+      </div>
+
+      <div className="grid gap-8 p-6 md:p-8 lg:grid-cols-5">
+        <div className="lg:col-span-2">
+          <h3 className="font-serif text-lg font-semibold text-slate-50">
+            Three roots, one critical point
+          </h3>
+          <p className="mt-2 text-sm leading-relaxed text-slate-300">
+            The transport phase is governed by the cubic{" "}
+            <Tex>{"P(z) = (z-1)\\!\\left(z-\\tfrac{64}{729}\\right)\\!\\left(z-\\tfrac{1}{729}\\right)"}</Tex>
+            . Setting <Tex>{"P'(z) = 0"}</Tex> gives the critical points whose
+            lower value selects <Tex>{"\\delta_{\\mathrm{ph}}"}</Tex> on the
+            retained branch.
+          </p>
+
+          <div className="mt-6 space-y-3">
+            {ROOTS.map((r, i) => (
+              <motion.div
+                key={r.label}
+                initial={{ opacity: 0, y: 8 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="relative overflow-hidden rounded-xl border border-slate-700/40 bg-slate-950/40 px-4 py-3"
+              >
+                <div
+                  className={`absolute left-0 top-0 h-full w-1 bg-gradient-to-b ${r.accent}`}
+                />
+                <div className="flex items-baseline justify-between gap-3">
+                  <div>
+                    <div className="text-[10px] font-semibold uppercase tracking-widest text-slate-400">
+                      {r.label}
+                    </div>
+                    <div className="font-mono text-lg font-semibold text-slate-50">
+                      z = {r.value}
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-1 text-xs text-slate-400">{r.note}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        <div className="lg:col-span-3">
+          <CubicChart />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function CubicChart() {
+  const samples = 320;
+  const xMin = -0.05;
+  const xMax = 1.1;
+
+  const data = Array.from({ length: samples }, (_, i) => {
+    const z = xMin + (i / (samples - 1)) * (xMax - xMin);
+    const y = (z - 1) * (z - 64 / 729) * (z - 1 / 729);
+    return { z, y };
+  });
+
+  const yMin = Math.min(...data.map((d) => d.y));
+  const yMax = Math.max(...data.map((d) => d.y));
+
+  const w = 600;
+  const h = 280;
+  const pad = { top: 20, right: 20, bottom: 32, left: 40 };
+
+  const xScale = (z: number) =>
+    pad.left + ((z - xMin) / (xMax - xMin)) * (w - pad.left - pad.right);
+  const yScale = (y: number) =>
+    pad.top + ((yMax - y) / (yMax - yMin)) * (h - pad.top - pad.bottom);
+
+  const pathData = data
+    .map((d, i) => `${i === 0 ? "M" : "L"} ${xScale(d.z).toFixed(2)} ${yScale(d.y).toFixed(2)}`)
+    .join(" ");
+
+  const roots = [1 / 729, 64 / 729, 1];
+
+  const xAxisY = yScale(0);
+
+  return (
+    <div className="relative">
+      <svg
+        viewBox={`0 0 ${w} ${h}`}
+        className="block w-full"
+        role="img"
+        aria-label="Plot of the cusp cubic P(z) showing three roots at z = 1/729, 64/729, and 1"
+      >
+        <defs>
+          <linearGradient id="cubicStroke" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stopColor="#a78bfa" />
+            <stop offset="50%" stopColor="#60a5fa" />
+            <stop offset="100%" stopColor="#34d399" />
+          </linearGradient>
+          <linearGradient id="cubicFill" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#60a5fa" stopOpacity="0.25" />
+            <stop offset="100%" stopColor="#60a5fa" stopOpacity="0" />
+          </linearGradient>
+        </defs>
+
+        <g aria-hidden="true">
+          {[0.2, 0.4, 0.6, 0.8, 1.0].map((t) => (
+            <line
+              key={t}
+              x1={xScale(t)}
+              x2={xScale(t)}
+              y1={pad.top}
+              y2={h - pad.bottom}
+              stroke="rgba(148,163,184,0.08)"
+              strokeWidth={1}
+            />
+          ))}
+        </g>
+
+        <line
+          x1={pad.left}
+          x2={w - pad.right}
+          y1={xAxisY}
+          y2={xAxisY}
+          stroke="rgba(148,163,184,0.4)"
+          strokeWidth={1}
+        />
+        <line
+          x1={pad.left}
+          x2={pad.left}
+          y1={pad.top}
+          y2={h - pad.bottom}
+          stroke="rgba(148,163,184,0.4)"
+          strokeWidth={1}
+        />
+
+        <motion.path
+          initial={{ pathLength: 0, opacity: 0 }}
+          whileInView={{ pathLength: 1, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.6, ease: [0.16, 1, 0.3, 1] }}
+          d={pathData}
+          fill="none"
+          stroke="url(#cubicStroke)"
+          strokeWidth={2.5}
+          strokeLinecap="round"
+        />
+
+        {roots.map((r, i) => (
+          <motion.g
+            key={r}
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 1.6 + i * 0.15, type: "spring" }}
+          >
+            <circle
+              cx={xScale(r)}
+              cy={xAxisY}
+              r={6}
+              fill={i === 0 ? "#a78bfa" : i === 1 ? "#60a5fa" : "#94a3b8"}
+              stroke="#0f172a"
+              strokeWidth={2}
+            />
+            <text
+              x={xScale(r)}
+              y={xAxisY + 18}
+              fill="#cbd5e1"
+              fontSize="10"
+              fontFamily="JetBrains Mono, monospace"
+              textAnchor="middle"
+            >
+              {i === 0 ? "1/729" : i === 1 ? "64/729" : "1"}
+            </text>
+          </motion.g>
+        ))}
+
+        <text
+          x={(w - pad.left - pad.right) / 2 + pad.left}
+          y={h - 6}
+          fill="#94a3b8"
+          fontSize="10"
+          textAnchor="middle"
+        >
+          z
+        </text>
+        <text
+          x={pad.left - 28}
+          y={pad.top + 12}
+          fill="#94a3b8"
+          fontSize="10"
+        >
+          P(z)
+        </text>
+      </svg>
+
+      <p className="mt-3 text-center text-xs text-slate-400">
+        The lower critical point of P′(z) = 0 selects δ_ph as a branch consequence,
+        not a fit parameter.
+      </p>
+    </div>
+  );
+}

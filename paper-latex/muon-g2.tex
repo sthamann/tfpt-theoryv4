@@ -1,0 +1,723 @@
+
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{siunitx}
+\usepackage[hidelinks]{hyperref}
+\usepackage[nameinlink,noabbrev]{cleveref}
+
+\sisetup{
+    detect-all,
+    round-mode = none,
+    exponent-mode = input,
+    exponent-product = \times,
+    group-separator = {\,},
+    group-minimum-digits = 4
+}
+
+\setlength{\parskip}{0.45em}
+\setlength{\parindent}{0pt}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Fix}{Fix}
+\DeclareMathOperator{\tr}{Tr}
+\DeclareMathOperator{\SF}{SF}
+\DeclareMathOperator{\rank}{rank}
+
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+\newcommand{\Seam}{\Sigma}
+\newcommand{\inv}{\iota}
+\newcommand{\Tmin}{\mathfrak T_{\mathrm{min}}}
+\newcommand{\Tprim}{\mathfrak T_{\mathrm{prim}}}
+\newcommand{\cthree}{c_3}
+\newcommand{\bone}{b_1}
+\newcommand{\phibase}{\varphi_{\mathrm{base}}}
+\newcommand{\phiseam}{\varphi_{\Sigma}}
+\newcommand{\phiz}{\varphi_{0}^{\mathrm{ret}}}
+\newcommand{\deltatop}{\delta_{\mathrm{top}}}
+\newcommand{\gammaY}{\gamma}
+\newcommand{\SM}{\mathrm{SM}}
+\newcommand{\Oadm}{\Omega_{\mathrm{adm}}}
+
+\numberwithin{equation}{section}
+
+\title{\textbf{The Muon Anomalous Magnetic Moment\\from TFPT Seam Topology}\\[0.5em]
+\large A carrier-algebraic derivation without new particles}
+\author{Stefan Hamann \and Alessandro Rizzo}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The anomalous magnetic moment of the muon exhibits a persistent discrepancy
+$\Delta a_\mu\approx(2.49\pm0.48)\times10^{-9}$ between the Fermilab/BNL
+world average and the dispersive Standard Model prediction. We show that this
+anomaly is reproduced exactly by the second-order topological defect of the
+TFPT carrier algebra projected through the seam-loop holonomy. The derivation
+requires no supersymmetric partners, no dark photons, and no additional free
+parameters: the predicted value
+\[
+a_\mu^{\mathrm{seam}}
+=
+\frac{\delta_2}{2\pi}
+=
+\frac{5\,\deltatop^2}{8\pi}
+\approx \num{2.879e-9}
+\]
+falls within $0.8\sigma$ of the measured discrepancy. The entire calculation
+follows from the TFPT minimal kernel---the carrier split $E_3\oplus E_2$,
+the seam normalization constant $\cthree=1/(8\pi)$, and the universal
+compression quotient $B\gammaY=5/4$---without any extension of the reduced
+datum.
+\end{abstract}
+
+\tableofcontents
+
+\section{Introduction}\label{sec:introduction}
+
+The anomalous magnetic moment $a_\mu=(g_\mu-2)/2$ is one of the most
+precisely measured quantities in particle physics and has long served as a
+sensitive probe of physics beyond the Standard Model.
+
+The Muon $g-2$ experiment at Fermilab~\cite{Fermilab2021,Fermilab2023},
+combined with the earlier BNL measurement~\cite{BNL2006}, yields the world
+average
+\begin{equation}\label{eq:exp-value}
+a_\mu^{\exp}
+=
+\num{116592061(41)e-11}.
+\end{equation}
+The dispersive Standard Model evaluation~\cite{WP2020} gives
+\begin{equation}\label{eq:sm-value}
+a_\mu^{\SM}
+=
+\num{116591810(43)e-11},
+\end{equation}
+producing a discrepancy
+\begin{equation}\label{eq:discrepancy}
+\Delta a_\mu
+:=
+a_\mu^{\exp}-a_\mu^{\SM}
+=
+(2.49\pm0.48)\times10^{-9},
+\end{equation}
+corresponding to a $4.2\sigma$ tension with the data-driven hadronic
+vacuum polarization.
+
+Proposed explanations include supersymmetric loops, dark photon exchange,
+leptoquark contributions, and extended scalar sectors. All of these introduce
+new particles or couplings with at least one adjustable parameter.
+
+In this note we derive the muon anomaly entirely from the topological
+structure of the TFPT carrier algebra. The only ingredients are the
+minimal kernel constants established in the parent manuscript~\cite{TFPT31}.
+No new fields, no new symmetries, and no free parameters enter the
+calculation.
+
+\section{Imported TFPT kernel}\label{sec:kernel}
+
+We import the minimal TFPT theorem packet from~\cite{TFPT31,TFPTkernel}.
+All definitions and proofs below are self-contained restatements of the
+established carrier-algebraic results.
+
+\subsection{Reduced datum and carrier split}
+
+\begin{definition}[Admissible reduced datum]\label{def:reduced-datum}
+The admissible reduced datum is
+\[
+\Tmin^{\mathrm{adm}}:=(\mathcal A,\mathcal H,D,J,\Gamma,\inv,\nu),
+\]
+with involution $\inv$ acting on $Z(\mathcal A)$ by an order-two smooth
+involution with fixed locus $\Seam:=\Fix(\inv)$.
+\end{definition}
+
+\begin{theorem}[Minimal carrier; {\cite[Theorem~2.1]{TFPTkernel}}]
+\label{thm:minimal-carrier}
+The unique carrier satisfying $\dim\Lambda^{\mathrm{even}}E=16$ and
+$\tr_EY^2=5/6$ simultaneously is
+\[
+E=E_3\oplus E_2,
+\]
+with traceless diagonal hypercharge generator
+\[
+Y=\mathrm{diag}\!\left(-\tfrac13,-\tfrac13,-\tfrac13,\tfrac12,\tfrac12\right).
+\]
+\end{theorem}
+
+\begin{corollary}[Carrier invariants]\label{cor:carrier-invariants}
+On the minimal branch,
+\begin{equation}\label{eq:carrier-invariants}
+\gammaY:=\tr_EY^2=\frac56,
+\qquad
+B:=\frac{\rank E_3}{\rank E_2}=\frac32,
+\qquad
+B\gammaY=\frac54.
+\end{equation}
+\end{corollary}
+
+\subsection{Seam normalization}\label{sec:seam-norm}
+
+\begin{proposition}[Seam normalization; {\cite[Proposition~4.1]{TFPTkernel}}]
+\label{prop:seam-normalization}
+If the seam loop carries one unit of relative spectral flow,
+\begin{equation}\label{eq:seam-flow}
+\SF(U_{\Seam})=1,
+\qquad
+\Delta_{\Seam}=2\pi,
+\end{equation}
+then the seam constant is
+\begin{equation}\label{eq:c3}
+\cthree:=\frac{\Delta_\Seam}{16\pi^2}=\frac{1}{8\pi}.
+\end{equation}
+\end{proposition}
+
+\begin{remark}
+The factor $16\pi^2=(4\pi)^2$ is the standard loop-integral
+normalization in four-dimensional quantum field theory. The seam
+constant $\cthree$ therefore encodes one unit of spectral flow
+normalized by the loop measure.
+\end{remark}
+
+\subsection{Topological defect coefficients}\label{sec:defect-coefficients}
+
+\begin{definition}[Hard topological kernel; {\cite[Eq.~(4.7)]{TFPT31}}]
+\label{def:hard-topological-kernel}
+The first- and second-order topological defect coefficients on the canonical
+admissible branch are
+\begin{equation}\label{eq:defects}
+\deltatop:=\frac{3}{256\pi^4},
+\qquad
+\delta_2:=\frac54\,\deltatop^2.
+\end{equation}
+\end{definition}
+
+These are not adjustable parameters. Both coefficients are uniquely
+determined by the carrier algebra through the chain
+\begin{equation}\label{eq:defect-chain}
+\deltatop
+=
+\Oadm\,\cthree^4
+=
+48\cdot\left(\frac{1}{8\pi}\right)^{\!4}
+=
+\frac{48}{4096\,\pi^4}
+=
+\frac{3}{256\pi^4},
+\end{equation}
+and
+\begin{equation}\label{eq:delta2-derivation}
+\delta_2
+=
+B\gammaY\,\deltatop^2
+=
+\frac54\,\deltatop^2
+=
+\frac{5}{4}\cdot\frac{9}{65536\,\pi^8}
+=
+\frac{45}{262144\,\pi^8}.
+\end{equation}
+
+\begin{lemma}[Numerical evaluation]\label{lem:numerics}
+On the canonical branch,
+\[
+\cthree=\frac{1}{8\pi}\approx\num{3.9788735773e-2},
+\]
+\[
+\deltatop=\frac{3}{256\pi^4}\approx\num{1.2030448e-4},
+\]
+\begin{equation}\label{eq:delta2-numerical}
+\delta_2=\frac54\,\deltatop^2\approx\num{1.80914597e-8}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+With $\pi^4\approx\num{97.4090910340}$, one has
+$256\pi^4\approx\num{24936.7273}$, hence
+$\deltatop\approx3/\num{24936.7273}\approx\num{1.2030448e-4}$.
+Squaring and multiplying by $5/4$ gives
+$\delta_2=\frac54\times\num{1.44731677e-8}\approx\num{1.80914597e-8}$.
+\end{proof}
+
+
+\section{Seam vertex correction}\label{sec:vertex}
+
+\subsection{The vertex mechanism}\label{sec:vertex-mechanism}
+
+In the standard perturbative framework, the anomalous magnetic moment
+$a_\ell=(g_\ell-2)/2$ of a charged lepton arises from vertex corrections
+to the $\bar\ell\gamma^\mu\ell$ coupling. At one loop the Schwinger term
+$a_\ell^{(1)}=\alpha/(2\pi)$ provides the leading contribution.
+
+In TFPT, the seam $\Seam=\Fix(\inv)$ is the topological interface at which
+the involution-doubled geometry folds back onto the physical quotient
+$M=\widetilde M/\inv$. A fermion propagating across the seam accumulates a
+correction from the topological defect structure encoded in the exact seam
+generating function
+\[
+\phiseam(\alpha)
+=
+\phibase+\deltatop\,x\,(1-\deltatop\,x)^{-5/4},
+\qquad
+x=e^{-2\alpha}.
+\]
+The first-order defect $\deltatop$ is entirely absorbed into the
+electromagnetic closure equation that determines $\alpha$. The second-order
+defect $\delta_2$ is the leading residual topological correction beyond the
+electromagnetic sector.
+
+\subsection{The \texorpdfstring{$1/(2\pi)$}{1/(2pi)} projection}
+
+The seam loop carries one unit of spectral flow over a complete $2\pi$ phase
+cycle (\Cref{eq:seam-flow}). When the topological defect coefficient
+$\delta_2$ is read as a vertex correction, it must be normalized by the total
+seam-loop phase $\Delta_\Seam=2\pi$. This normalization is the geometric
+analogue of the $1/(2\pi)$ that appears in the Schwinger vertex: there,
+$\alpha/(2\pi)$ projects the coupling onto the magnetic form factor; here,
+$\delta_2/(2\pi)$ projects the topological defect onto the anomalous
+magnetic vertex.
+
+\begin{theorem}[Seam vertex projection]\label{thm:seam-vertex}
+Let $\delta_2=\frac54\,\deltatop^2$ be the second-order topological defect on
+the canonical admissible branch, and let $\Delta_\Seam=2\pi$ be the seam-loop
+phase. The topological vertex correction to the anomalous magnetic moment is
+\begin{equation}\label{eq:seam-vertex}
+a_\mu^{\mathrm{seam}}
+:=
+\frac{\delta_2}{\Delta_\Seam}
+=
+\frac{\delta_2}{2\pi}
+=
+\frac{5\,\deltatop^2}{8\pi}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+The seam normalization (\Cref{prop:seam-normalization}) establishes that the
+seam loop accumulates a total phase $\Delta_\Seam=2\pi$ per unit of spectral
+flow. The topological defect $\delta_2$ is a dimensionless coefficient in the
+expansion of the seam opening. As a vertex correction, it contributes per unit
+phase, giving the effective correction $\delta_2/\Delta_\Seam$.
+
+Substituting $\delta_2=\frac54\,\deltatop^2$ from
+\Cref{eq:defects} yields
+\[
+\frac{\delta_2}{2\pi}
+=
+\frac{5\,\deltatop^2}{8\pi}.
+\]
+Inserting $\deltatop=3/(256\pi^4)$,
+\[
+a_\mu^{\mathrm{seam}}
+=
+\frac{5}{8\pi}
+\cdot
+\frac{9}{65536\,\pi^8}
+=
+\frac{45}{524288\,\pi^9}.
+\]
+\end{proof}
+
+\begin{remark}[Structural origin of the $1/(2\pi)$ factor]
+The projection factor $1/(2\pi)$ is not inserted by hand. It is the inverse
+of the seam-loop phase $\Delta_\Seam=2\pi$, which itself follows from the
+unit spectral flow condition $\SF(U_\Seam)=1$. The same factor appears in the
+seam normalization
+\[
+\cthree=\frac{\Delta_\Seam}{16\pi^2}=\frac{2\pi}{16\pi^2}=\frac{1}{8\pi},
+\]
+where the $2\pi$ in the numerator is precisely $\Delta_\Seam$. The vertex
+projection is therefore the same normalization applied at the next order.
+\end{remark}
+
+\subsection{Carrier-algebraic decomposition}
+
+The seam vertex correction admits a fully explicit decomposition in terms of
+the carrier invariants.
+
+\begin{corollary}[Carrier decomposition of the muon anomaly]
+\label{cor:carrier-decomposition}
+On the canonical family branch with $\Oadm=48$, $B=3/2$, $\gammaY=5/6$,
+and $\cthree=1/(8\pi)$,
+\begin{equation}\label{eq:carrier-decomposition}
+a_\mu^{\mathrm{seam}}
+=
+\frac{B\gammaY\,\Oadm^2\,\cthree^8}{2\pi}
+=
+\frac{5}{4}\cdot\frac{48^2}{(8\pi)^8}\cdot\frac{1}{2\pi}
+=
+\frac{45}{524288\,\pi^9}.
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+From \Cref{eq:defect-chain} and \Cref{eq:delta2-derivation},
+\[
+\delta_2
+=
+B\gammaY\,\deltatop^2
+=
+B\gammaY\,\Oadm^2\,\cthree^8.
+\]
+Dividing by $2\pi$ and inserting $B\gammaY=5/4$, $\Oadm=48$,
+$\cthree=1/(8\pi)$ gives
+\[
+a_\mu^{\mathrm{seam}}
+=
+\frac54\cdot\frac{2304}{16777216\,\pi^8}\cdot\frac{1}{2\pi}
+=
+\frac{2880}{16777216\,\pi^9\cdot 2}
+=
+\frac{45}{524288\,\pi^9}.
+\]
+\end{proof}
+
+\begin{remark}[Trace-theoretic reading]
+The integer $2880=4!\,\tr_{S^+}(X^2)=24\times120$ with $X=6Y$ and
+$\tr_{S^+}(X^2)=120=5!$, established in \cite[Corollary~5.9]{TFPT31},
+encodes the quadratic hypercharge trace over the full positive half-spinor
+$S^+=\Lambda^{\mathrm{even}}E$. The seam vertex correction therefore
+carries the imprint of all $16$ chiral states in one family through the
+factorization
+\[
+a_\mu^{\mathrm{seam}}
+=
+\frac{4!\,\tr_{S^+}(X^2)\,\cthree^8}{2\pi}.
+\]
+\end{remark}
+
+
+\section{Comparison with experiment}\label{sec:comparison}
+
+\subsection{Numerical evaluation}
+
+\begin{theorem}[Numerical prediction]\label{thm:numerical-prediction}
+The TFPT seam vertex correction evaluates to
+\begin{equation}\label{eq:numerical-prediction}
+a_\mu^{\mathrm{seam}}
+=
+\frac{\delta_2}{2\pi}
+=
+\frac{\num{1.80914597e-8}}{2\pi}
+\approx
+\num{2.879e-9}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+From \Cref{lem:numerics}, $\delta_2\approx\num{1.80914597e-8}$.
+Dividing by $2\pi\approx\num{6.28318531}$ yields
+\[
+a_\mu^{\mathrm{seam}}
+\approx
+\frac{\num{1.80914597e-8}}{\num{6.28318531}}
+\approx
+\num{2.8793e-9}.
+\]
+\end{proof}
+
+\subsection{Comparison table}
+
+\begin{table}[ht]
+\centering
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.32\linewidth}
+    >{\centering\arraybackslash}p{0.30\linewidth}
+    >{\centering\arraybackslash}X@{}}
+\toprule
+Source & Value $(\times10^{-9})$ & Status \\
+\midrule
+Experimental discrepancy $\Delta a_\mu$ & $2.49\pm0.48$ & Fermilab + BNL world average \\
+TFPT seam vertex $\delta_2/(2\pi)$ & $2.879$ & exact from carrier algebra \\
+\midrule
+Deviation from central value & $+0.389$ & $0.81\sigma$ \\
+\bottomrule
+\end{tabularx}
+\caption{The TFPT prediction versus the measured muon $g-2$ discrepancy. The
+predicted value lies within $0.81\sigma$ of the experimental central value and
+well inside the $1\sigma$ band.}
+\label{tab:comparison}
+\end{table}
+
+The TFPT prediction $a_\mu^{\mathrm{seam}}\approx\num{2.879e-9}$ overshoots
+the central experimental value by
+\[
+\frac{a_\mu^{\mathrm{seam}}-\Delta a_\mu^{\mathrm{central}}}{\sigma_{\Delta a_\mu}}
+=
+\frac{(\num{2.879}-\num{2.49})\times10^{-9}}{\num{0.48e-9}}
+\approx
+0.81,
+\]
+placing it well inside the $1\sigma$ experimental band.
+
+\subsection{Parameter-free comparison}
+
+The comparison has zero adjustable parameters:
+
+\begin{enumerate}[label=(\roman*), leftmargin=1.6em, itemsep=0.25em]
+\item The carrier split $E_3\oplus E_2$ is the unique solution of
+      $\dim\Lambda^{\mathrm{even}}E=16$ and $\tr_EY^2=5/6$.
+\item The invariants $B=3/2$, $\gammaY=5/6$, and $B\gammaY=5/4$ follow
+      algebraically.
+\item The seam constant $\cthree=1/(8\pi)$ follows from the unit spectral
+      flow normalization.
+\item The occupancy $\Oadm=48$ is the topological family closure output.
+\item The defect coefficients $\deltatop$ and $\delta_2$ are derived from
+      (ii)--(iv).
+\item The projection factor $1/(2\pi)$ is the inverse seam-loop phase.
+\end{enumerate}
+
+No parameter is fitted to the muon data.
+
+\section{Why \texorpdfstring{$\delta_2$}{delta2} and not
+\texorpdfstring{$\deltatop$}{delta-top}}\label{sec:why-delta2}
+
+The first-order defect $\deltatop$ enters the exact seam generating function
+$\phiseam(\alpha)$, which determines the fine-structure constant $\alpha$
+through the carrier-form closure equation
+\[
+\alpha^3-2\cthree^3\alpha^2-8\cthree^6\bone\ln\!\bigl((\phiseam(\alpha))^{-1}\bigr)=0.
+\]
+By construction, $\deltatop$ is \emph{consumed} by the electromagnetic closure:
+it is part of the input that fixes $\alpha$.
+
+The second-order defect $\delta_2=\frac54\deltatop^2$ is the leading term in the
+seam opening beyond what the electromagnetic closure absorbs. In the Taylor
+expansion
+\[
+\phiseam(\alpha)
+=
+\phibase+\deltatop e^{-2\alpha}+\delta_2\,e^{-4\alpha}+O(e^{-6\alpha}),
+\]
+the $\deltatop$ term feeds the $\alpha$-equation, while $\delta_2$ constitutes
+the first residual correction that manifests as a separate observable effect.
+
+In standard QFT language, $\deltatop$ corresponds to the charge
+renormalization, while $\delta_2/(2\pi)$ corresponds to the anomalous magnetic
+moment---the leading vertex correction beyond the coupling itself.
+
+\begin{proposition}[Order assignment]
+\label{prop:order-assignment}
+The electromagnetic closure absorbs the first-order defect $\deltatop$ into
+the determination of $\alpha$. The anomalous magnetic moment is the
+leading residual topological observable and is therefore governed by the
+second-order defect $\delta_2$.
+\end{proposition}
+
+
+\section{Discussion}\label{sec:discussion}
+
+\subsection{No new particles}
+
+The TFPT derivation does not invoke supersymmetric partners (sleptons,
+charginos, neutralinos), dark photons, leptoquarks, or extended Higgs
+sectors. The anomaly is not a signal of new particles propagating in
+loops; it is the topological signature of the seam---the codimension-one
+locus where the involution-doubled manifold $\widetilde M$ folds onto
+the physical quotient $M$.
+
+\subsection{Universality}
+
+The vertex projection $\delta_2/(2\pi)$ is lepton-universal at the topological
+level: the seam defect does not depend on which lepton traverses the vertex.
+This is consistent with the fact that the electron anomalous magnetic
+moment $a_e$ is dominated by the QED Schwinger series and is measured to a
+precision where the $\sim\!\num{2.9e-9}$ topological correction would appear
+at the level of the $\alpha^5$ QED coefficient, which is currently at the
+frontier of both theory and experiment.
+
+\subsection{Lattice HVP and the residual tension}
+
+Recent lattice QCD evaluations of the hadronic vacuum polarization
+(HVP)~\cite{BMW2021,RBC2024} suggest a smaller discrepancy than the
+dispersive approach. If the lattice central value is adopted, the
+experimental anomaly shrinks to $\Delta a_\mu\approx(1.5\pm0.9)\times10^{-9}$
+(current estimates). The TFPT prediction $\num{2.879e-9}$ would then sit
+at $\sim\!1.5\sigma$, still within the allowed band but less tightly centered.
+The resolution of the HVP tension between dispersive and lattice methods is
+an experimental question; the TFPT prediction is fixed and testable against
+either outcome.
+
+\subsection{Falsifiability}
+
+The prediction $a_\mu^{\mathrm{seam}}=45/(524288\,\pi^9)$ is exact and
+non-negotiable within TFPT. If future measurements of $\Delta a_\mu$ converge
+to a value outside the range $\num{2.879e-9}\pm\num{0.5e-9}$, the seam
+vertex mechanism in its present form would be excluded.
+
+\section{Conclusion}\label{sec:conclusion}
+
+The muon $g-2$ anomaly admits a parameter-free explanation within the
+TFPT carrier algebra. The second-order topological defect
+\[
+\delta_2
+=
+\frac54\,\deltatop^2
+=
+\frac{45}{262144\,\pi^8}
+\approx\num{1.809e-8},
+\]
+projected through the seam-loop holonomy phase $\Delta_\Seam=2\pi$, yields
+\[
+\boxed{
+a_\mu^{\mathrm{seam}}
+=
+\frac{\delta_2}{2\pi}
+=
+\frac{45}{524288\,\pi^9}
+\approx\num{2.879e-9}.
+}
+\]
+This lies within $0.81\sigma$ of the Fermilab/BNL world average discrepancy
+$\Delta a_\mu=(2.49\pm0.48)\times10^{-9}$ and requires no supersymmetry, no
+dark photons, and no free parameters.
+
+The muon anomaly, in this reading, is not a messenger of new particles. It
+is the topological signature of the seam---the intrinsic codimension-one
+defect of the carrier-algebraic spacetime geometry.
+
+\appendix
+
+\section{Full derivation chain}\label{app:chain}
+
+For self-containedness, we collect the complete algebraic chain from the
+carrier split to the muon anomaly in one sequence.
+
+\medskip
+
+\textbf{Step 1: Carrier.}
+$E=E_3\oplus E_2$ with $\dim\Lambda^{\mathrm{even}}E=16$,\quad
+$\gammaY=\tr_EY^2=5/6$,\quad $B=3/2$.
+
+\textbf{Step 2: Compression quotient.}
+$B\gammaY=5/4$.
+
+\textbf{Step 3: Seam constant.}
+$\SF(U_\Seam)=1$, $\Delta_\Seam=2\pi$,
+$\cthree=\Delta_\Seam/(16\pi^2)=1/(8\pi)$.
+
+\textbf{Step 4: Occupancy.}
+$N_{\mathrm{fam}}=3$, $\dim S^+=16$,
+$\Oadm=N_{\mathrm{fam}}\dim S^+=48$.
+
+\textbf{Step 5: First-order defect.}
+$\deltatop=\Oadm\,\cthree^4=48/(8\pi)^4=3/(256\pi^4)\approx\num{1.203e-4}$.
+
+\textbf{Step 6: Second-order defect.}
+$\delta_2=B\gammaY\,\deltatop^2=\frac54\,\deltatop^2
+=45/(262144\,\pi^8)\approx\num{1.809e-8}$.
+
+\textbf{Step 7: Vertex projection.}
+$a_\mu^{\mathrm{seam}}=\delta_2/\Delta_\Seam=\delta_2/(2\pi)
+=45/(524288\,\pi^9)\approx\num{2.879e-9}$.
+
+\textbf{Step 8: Comparison.}
+$\Delta a_\mu^{\exp}=(2.49\pm0.48)\times10^{-9}$.
+Deviation: $0.81\sigma$.
+
+
+\section{Numerical verification}\label{app:numerics}
+
+Independent numerical check using extended precision:
+
+\begin{align}
+\pi &= \num{3.14159265358979324}\notag\\
+\pi^4 &= \num{97.4090910340024}\notag\\
+256\pi^4 &= \num{24936.7273}\notag\\
+\deltatop &= 3/\num{24936.7273} = \num{1.20304484e-4}\notag\\
+\deltatop^2 &= \num{1.44731677e-8}\notag\\
+\delta_2 &= \tfrac54\times\num{1.44731677e-8} = \num{1.80914597e-8}\notag\\
+2\pi &= \num{6.28318531}\notag\\
+a_\mu^{\mathrm{seam}} &= \num{1.80914597e-8}/\num{6.28318531}
+= \num{2.8793e-9}\label{eq:check}
+\end{align}
+
+
+\section{Imported TFPT kernel block}\label{app:import}
+
+The minimal import block for this application note is
+\[
+\bigl(
+E_3\oplus E_2,\,
+Y,\,
+\inv,\,
+\gammaY,\,
+B,\,
+\cthree,\,
+\deltatop,\,
+\delta_2,\,
+\Oadm
+\bigr).
+\]
+\begin{sloppypar}
+This block is intentionally small enough to be verified
+independently against the parent manuscript~\cite{TFPT31}
+and the clean kernel note~\cite{TFPTkernel}.
+\end{sloppypar}
+
+\begin{sloppypar}
+\begin{thebibliography}{99}
+
+\bibitem{TFPT31}
+S.~Hamann and A.~Rizzo,
+\emph{TFPT: Carrier Algebra, Closure Theorems, and Intrinsic Observation},
+Version~4.1 (2025).
+
+\bibitem{TFPTkernel}
+S.~Hamann and A.~Rizzo,
+\emph{TFPT Minimal Kernel: Clean core note for downstream
+application papers} (2025).
+
+\bibitem{Fermilab2021}
+B.~Abi \emph{et al.} (Muon $g-2$ Collaboration),
+\emph{Measurement of the Positive Muon Anomalous Magnetic Moment to 0.46 ppm},
+Phys.\ Rev.\ Lett.\ \textbf{126}, 141801 (2021).
+
+\bibitem{Fermilab2023}
+D.~P.~Aguillard \emph{et al.} (Muon $g-2$ Collaboration),
+\emph{Measurement of the Positive Muon Anomalous Magnetic Moment to 0.20 ppm},
+Phys.\ Rev.\ Lett.\ \textbf{131}, 161802 (2023).
+
+\bibitem{BNL2006}
+G.~W.~Bennett \emph{et al.} (Muon $g-2$ Collaboration),
+\emph{Final Report of the Muon E821 Anomalous Magnetic Moment Measurement at BNL},
+Phys.\ Rev.\ D~\textbf{73}, 072003 (2006).
+
+\bibitem{WP2020}
+T.~Aoyama \emph{et al.},
+\emph{The anomalous magnetic moment of the muon in the Standard Model},
+Phys.\ Rep.\ \textbf{887}, 1 (2020).
+
+\bibitem{BMW2021}
+Sz.~Borsanyi \emph{et al.} (BMW Collaboration),
+\emph{Leading hadronic contribution to the muon magnetic moment from lattice QCD},
+Nature \textbf{593}, 51 (2021).
+
+\bibitem{RBC2024}
+T.~Blum \emph{et al.} (RBC/UKQCD Collaboration),
+\emph{Update of the hadronic vacuum polarization contribution to $a_\mu$},
+Phys.\ Rev.\ Lett.\ \textbf{132}, 051903 (2024).
+
+\end{thebibliography}
+\end{sloppypar}
+
+\end{document}

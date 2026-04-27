@@ -1,0 +1,98 @@
+\documentclass[10pt,a4paper]{article}
+\input{tfpt_prediction_common}
+\geometry{margin=0.58in}
+\pagestyle{empty}
+
+\title{\vspace{-2.2em}\color{tfptblue}\textbf{TFPT in Two Pages}\\[-0.15em]
+{\large Boundary polarization, carrier rigidity, and testable readouts}}
+\author{Stefan Hamann \and Alessandro Rizzo}
+\date{\vspace{-1.0em}}
+
+\begin{document}
+\maketitle
+\vspace{-1.5em}
+
+\begin{tcolorbox}[colback=tfptblue!2, colframe=tfptblue!45, title={One-sentence claim}, colbacktitle=tfptblue!65]
+TFPT claims that a one-sided boundary datum canonically fixes a primitive kernel, a rigid
+$3+2$ carrier packet, an admissible physical sector, and a closed branch $\Tstar$ whose observable
+readouts are then compared through explicit sector maps rather than fitted one by one.
+\end{tcolorbox}
+
+\section*{Minimal Chain}
+\[
+\mathfrak S_{\min}\Rightarrow\mathcal B_{\min}\Rightarrow\Tbound
+\Rightarrow(\taudbl,\iC,\Pprim,[u_\Sigma],\cthree)
+\Rightarrow d^\star_{\mathrm{disc}}
+\Rightarrow\Padm
+\Rightarrow\mathcal Z_{\mathrm{cl}}=\{x^\star_{\mathrm{cl}}\}
+\Rightarrow\Tstar .
+\]
+The three decoders keep the theory readable:
+\[
+Y\ \text{generates structure},\qquad [u_\Sigma]=1\ \text{generates counting},\qquad
+u=\phiz\ \text{is only a UV shadow after sectorization}.
+\]
+The carrier theorem fixes
+\[
+6Y^2-Y-\mathbf1=0,\quad \tr_EY=0
+\quad\Rightarrow\quad
+E=E_3\oplus E_2,\quad
+Y=\operatorname{diag}(-1/3,-1/3,-1/3,1/2,1/2),
+\]
+and hence
+\[
+G_{\mathrm{phys}}=\frac{SU(3)\times SU(2)\times U(1)_Y}{\mathbb Z_6},
+\qquad
+S^+=\Lambda^{\mathrm{even}}E,\qquad
+N_{\mathrm{fam}}=3,\quad \Oadm=48,\quad N_\Phi=1.
+\]
+
+\section*{Status Discipline}
+\begin{center}
+\small
+\begin{tabularx}{\linewidth}{@{}p{0.20\linewidth}p{0.23\linewidth}Y@{}}
+\toprule
+Layer & Status & Role \\
+\midrule
+Boundary kernel & Core theorem & Builds $(\taudbl,\iC,\Pprim,[u_\Sigma],\cthree)$ from $\Tbound$.\\
+Carrier packet & Core theorem & Generates the Standard-Model-like representation packet.\\
+EM/flavor & Bridge/readout & Fixes $\alpha$, CKM, PMNS, and sectorized seed shadows.\\
+QFT/strong CP & Conditional closure & Uses stated admissibility, positivity, and gap hypotheses.\\
+Metrology & Bridge & Reads $G_N\lambda_\Sigma^2$, $\bar M_{\mathrm{Pl}}/\lambda_\Sigma$, and EW ratios.\\
+Cosmology & Downstream target & Stage 1 CMB spectra and Stage 2 sky realization remain status-separated.\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\newpage
+
+\section*{Prediction Surface}
+\begin{center}
+\scriptsize
+\begin{tabularx}{\linewidth}{@{}p{0.19\linewidth}p{0.22\linewidth}p{0.22\linewidth}Y@{}}
+\toprule
+Row & Target & Dependency class & Kill/pressure criterion \\
+\midrule
+$\alpha^{-1}(0)$ & $137.0359992168\ldots$ & exact EM closure & failure of the self-consistent root.\\
+$\lambda_C$ & $0.22438$ & flavor readout & stable CKM mismatch.\\
+$\sin^2\theta_{13}$ & $0.02311$ & neutrino closure & robust NO global-fit exclusion.\\
+$\beta$ & $0.2424^\circ$ & determinant response & calibrated $\beta=0$ within $\pm0.05^\circ$.\\
+Strong CP & $\theta_{\mathrm{eff}}=0$ & admissibility closure & stable nonzero hadronic EDM.\\
+Rare kaons & $K^+=9.40{\times}10^{-11}$, $K_L=3.47{\times}10^{-11}$ & flavor comparison & outside corridor/GN-plane mismatch.\\
+PMNS phase/octant & $\delta_{\mathrm{CP}}=240^\circ$, $\sin^2\theta_{23}=0.4557$ & neutrino readout & $3\sigma$ exclusion.\\
+$\Sigma m_\nu$ & $5.8764{\times}10^{-2}$ eV & neutrino readout & robust bound below branch value.\\
+$m_{\beta\beta}$ & $1.516{\times}10^{-3}$ eV & Majorana branch & detection implying $\gtrsim10^{-2}$ eV.\\
+Axion window & $m_a\simeq65.19\,\mu$eV, $\nu_a\simeq15.764$ GHz & cosmology readout & exclusion in the coupled window.\\
+$\eta_B$ & $5.97{\times}10^{-10}$ & leptogenesis comparison & robust exclusion of branch value.\\
+Second Higgs & no extra light seam-even doublet & bosonic index & robust discovery of a second light doublet.\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\section*{What This Is Not}
+The prediction papers do not treat every row as the same kind of truth. Some are theorem-level
+null tests, some are physical observables, some are scheme projections, and some are downstream
+comparison targets. Each standalone prediction paper states its dependency class and kill criterion
+before giving the formula chain.
+
+\end{document}

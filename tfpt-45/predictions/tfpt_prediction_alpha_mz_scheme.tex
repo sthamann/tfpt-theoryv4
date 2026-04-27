@@ -1,0 +1,53 @@
+\documentclass[11pt,a4paper]{article}
+\input{tfpt_prediction_common}
+\title{\color{tfptblue}\textbf{TFPT Prediction: Running Electromagnetic Scheme Projection at the Z Pole}}
+\author{Stefan Hamann \and Alessandro Rizzo}
+\date{{\normalsize\color{tfptgray}\sffamily Standalone prediction note -- \today}}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note isolates the Z-pole electromagnetic scheme projection. It is not the primary electromagnetic theorem row; it is a declared projection of the closed alpha(0) output.
+\end{abstract}
+
+\PredictionStatus{$\bar\alpha^{(5)}(M_Z)^{-1}=127.9405$}{Scheme projection; not a primitive observable.}{threshold/scheme projection $T_{\mathrm{phys}}$}{persistent mismatch after declared Standard-Model threshold map.}
+
+
+\section{Standalone Minimal Kernel}
+\MinimalKernelBox
+
+The paper is intentionally one-row: it does not reprove the full TFPT series. It states the minimal closed-branch input needed for this prediction, shows the sector map, and gives the direct failure mode. The source status follows the TFPT 4.5 split: boundary and carrier inputs are core, electromagnetic/flavor/metrology inputs are bridge readouts, QFT closure is conditional, and cosmology rows are downstream comparison targets when explicitly marked.
+
+
+\section{Dependency Graph}
+\DependencyDiagram{Scheme projection}{$\bar\alpha^{(5)}(M_Z)^{-1}$}{This row projects the exact alpha(0) readout through a declared scheme map.}{scheme mismatch}
+
+\section{Derivation}
+
+The physical electromagnetic input is the exact closure value
+\[
+\alpha^{-1}(0)=137.0359992168\ldots.
+\]
+The Z-pole comparison row is obtained only after the declared scheme map
+\[
+\mathcal R_{\SM}[\alpha(0)]
+\]
+is applied. The representative in the ledger is
+\[
+\bar\alpha^{(5)}(M_Z)^{-1}=127.9405.
+\]
+Its status is therefore scheme projection, not a separate primitive prediction.
+
+
+\section{No-Knobs and Failure Surface}
+\NoKnobsBox{The row must not be used as an independent fitting input. It is downstream of alpha(0) and the declared threshold convention.}
+
+\section{Minimal Submission Claim}
+The standalone claim is limited to the displayed target and dependency class. It does not assert
+that every comparison row of the full TFPT ledger has the same proof status. Any update of the
+upstream boundary kernel, carrier theorem, or sector map must be propagated into this prediction
+before the numerical row is distributed.
+
+\PredictionBibliography
+
+\end{document}

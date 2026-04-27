@@ -1,0 +1,120 @@
+\documentclass[11pt,a4paper]{article}
+\input{tfpt45-common}
+\geometry{landscape,margin=0.55in}
+
+\title{\color{tfptblue}\textbf{TFPT -- Von Boundary Struktur zu beobachtbarer Realit\"at}\\[0.35em]
+{\Large Eine Statuskarte der beanspruchten Ableitungskette, nicht aller Claims auf derselben Beweisstufe}}
+\author{Stefan Hamann \and Alessandro Rizzo}
+\date{{\normalsize\color{tfptgray}\sffamily TFPT 4.5 theory map -- \today}}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\begin{tikzpicture}[
+    font=\sffamily,
+    layer/.style={
+        rectangle,
+        rounded corners=3pt,
+        draw=#1!75!black,
+        fill=#1!7,
+        line width=0.7pt,
+        text width=0.92\linewidth,
+        inner xsep=8pt,
+        inner ysep=6pt,
+        align=left
+    },
+    badge/.style={
+        rectangle,
+        rounded corners=2pt,
+        draw=#1!80!black,
+        fill=#1!18,
+        text=#1!55!black,
+        font=\bfseries\scriptsize\sffamily,
+        inner xsep=5pt,
+        inner ysep=2pt
+    },
+    arrow/.style={-{Latex[length=2.6mm]}, line width=0.7pt, draw=tfptgray!80}
+]
+
+\node[layer=tfptblue] (l7) at (0,0) {
+    \begin{tabularx}{0.90\linewidth}{@{}p{0.08\linewidth}p{0.26\linewidth}Y@{}}
+    \textbf{7} &
+    \textbf{Kosmologie, Falsifikation und beobachtbare Welt}
+    \tikz[baseline=-0.6ex]\node[badge=tfptorange]{Downstream / Programmatic}; &
+    $\Lambda_{\mathrm{IR}}$;\quad axion window;\quad $\sum m_\nu$;\quad $\Omega_{b,0}$ comparison;\quad rare kaons as observable/falsification surface;\quad CMB Stage 1: spectra [P];\quad CMB Stage 2: sky realization [P/conjectural];\quad reheating;\quad leptogenesis.
+    \end{tabularx}
+};
+
+\node[layer=tfptgreen, below=0.36cm of l7] (l6) {
+    \begin{tabularx}{0.90\linewidth}{@{}p{0.08\linewidth}p{0.26\linewidth}Y@{}}
+    \textbf{6} &
+    \textbf{Geometrie, EW und Gravitation}
+    \tikz[baseline=-0.6ex]\node[badge=tfptgreen]{Bridge}; &
+    $\lambda_\Sigma$;\quad $\rho_\star$;\quad $\bar M_{\mathrm{Pl}}/\lambda_\Sigma$;\quad $G_N\lambda_\Sigma^2$;\quad $v_{\mathrm{phys}}/\lambda_\Sigma$;\quad geometric Hodge closure.
+    \end{tabularx}
+};
+
+\node[layer=tfptorange, below=0.36cm of l6] (l5) {
+    \begin{tabularx}{0.90\linewidth}{@{}p{0.08\linewidth}p{0.26\linewidth}Y@{}}
+    \textbf{5} &
+    \textbf{Admissibility, QFT und starke CP Closure}
+    \tikz[baseline=-0.6ex]\node[badge=tfptorange]{Conditional Closure}; &
+    $\Padm=\Pprim P_{\mathrm{sing}}P_\Theta$;\quad $\theta_{\mathrm{eff}}=0$;\quad $\arg\det M_u=\arg\det M_d=0$;\quad reflection positivity;\quad OS reconstruction;\quad local Minkowski net;\quad massive scattering;\quad exact admissible RG flow.
+    \end{tabularx}
+};
+
+\node[layer=tfptgreen, below=0.36cm of l5] (l4) {
+    \begin{tabularx}{0.90\linewidth}{@{}p{0.08\linewidth}p{0.26\linewidth}Y@{}}
+    \textbf{4} &
+    \textbf{Kopplungen, Flavor und sektorierte Seed Shadows}
+    \tikz[baseline=-0.6ex]\node[badge=tfptgreen]{Bridge}; &
+    $\alpha$;\quad $\delta_{\mathrm{ph}}$;\quad $\lambda_C$ (flavor);\quad CKM;\quad PMNS;\quad Yukawa transport;\quad $u=\varphi_0^{\mathrm{ret}}$ UV shadow;\quad $\beta_{\mathrm{rad}}$ sector: determinant response;\quad $\theta_{13}$ sector: neutrino closure;\quad $\Omega_b$ sector: cosmology comparison.
+    \end{tabularx}
+};
+
+\node[layer=tfptblue, below=0.36cm of l4] (l3) {
+    \begin{tabularx}{0.90\linewidth}{@{}p{0.08\linewidth}p{0.26\linewidth}Y@{}}
+    \textbf{3} &
+    \textbf{Standardmodell Paket}
+    \tikz[baseline=-0.6ex]\node[badge=tfptblue]{Kern}; &
+    $G_{\mathrm{phys}}=(SU(3)\times SU(2)\times U(1)_Y)/\mathbb Z_6$;\quad $S^+=\Lambda^{\mathrm{even}}E$;\quad $16$ states;\quad $3$ families;\quad $1$ Higgs;\quad $\Omega_{\mathrm{adm}}=48$;\quad $b_1=41/10$.
+    \end{tabularx}
+};
+
+\node[layer=tfptblue, below=0.36cm of l3] (l2) {
+    \begin{tabularx}{0.90\linewidth}{@{}p{0.08\linewidth}p{0.26\linewidth}Y@{}}
+    \textbf{2} &
+    \textbf{Carrier Algebra und diskrete Struktur}
+    \tikz[baseline=-0.6ex]\node[badge=tfptblue]{Kern}; &
+    $6Y^2-Y-\mathbf 1=0$;\quad $\operatorname{Tr}_E Y=0$;\quad $E_3\oplus E_2$;\quad $Y=\operatorname{diag}(-1/3,-1/3,-1/3,1/2,1/2)$.
+    \end{tabularx}
+};
+
+\node[layer=tfptblue, below=0.36cm of l2] (l1) {
+    \begin{tabularx}{0.90\linewidth}{@{}p{0.08\linewidth}p{0.26\linewidth}Y@{}}
+    \textbf{1} &
+    \textbf{Primitive Boundary und Topologie}
+    \tikz[baseline=-0.6ex]\node[badge=tfptblue]{Kern}; &
+    $\mathfrak S_{\min}\to\mathcal B_{\min}\to\Tbound$;\quad $\taudbl,\iC,\Pprim$;\quad $[u_\Sigma]=1$;\quad $\cthree=1/(8\pi)$.
+    \end{tabularx}
+};
+
+\draw[arrow] (l1.north) -- (l2.south);
+\draw[arrow] (l2.north) -- (l3.south);
+\draw[arrow] (l3.north) -- (l4.south);
+\draw[arrow] (l4.north) -- (l5.south);
+\draw[arrow] (l5.north) -- (l6.south);
+\draw[arrow] (l6.north) -- (l7.south);
+
+\end{tikzpicture}
+\end{center}
+
+\vspace{0.5em}
+\begin{tfptwarningbox}
+The map separates theorem-core, bridge, conditional closure, and downstream/programmatic layers.
+It is a status map of the derivation chain, not a claim that all displayed outputs have the same
+proof status.
+\end{tfptwarningbox}
+
+\end{document}

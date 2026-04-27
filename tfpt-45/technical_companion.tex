@@ -1,0 +1,127 @@
+\documentclass[11pt,a4paper]{article}
+\input{tfpt45-common}
+
+\title{\color{tfptblue}\textbf{Technical Companion to TFPT}\\[0.35em]
+{\Large Conventions, Positivity, APS Interfaces, and Comparison Maps}}
+\author{Stefan Hamann \and Alessandro Rizzo}
+\date{{\normalsize\color{tfptgray}\sffamily Companion document for the TFPT 4.5 paper series -- \today}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The Technical Companion is the long toolbox for the TFPT paper series. It holds conventions,
+analytic interfaces, auxiliary proofs, extended comparison maps, empirical ledgers, optional
+continuations, record algebra, horizon material, transient channels, and the E8 stage atlas. It is
+not a stand-alone theorem paper and should not be required reading for the primitive kernel or the
+carrier theorem.
+\end{abstract}
+
+\begin{tfptfrontbox}
+\textbf{Inputs from previous papers.} The entire TFPT 4.5 paper series.
+
+\textbf{New theorem contribution.} None by default. Companion material can support theorem papers,
+but new claims should be promoted into the appropriate paper rather than hidden here.
+
+\textbf{Not claimed here.} The companion does not replace Papers 1--6 and does not elevate
+comparison maps or optional continuations to theorem status.
+
+\textbf{Falsification or audit surface.} The companion fails if it blurs theorem, standard-theorem
+interface, empirical comparison, optional continuation, and programmatic target language.
+\end{tfptfrontbox}
+
+\tableofcontents
+
+\section{Purpose}
+
+The companion exists to keep the six papers short enough to be reviewed by the right audiences. A
+reader checking the carrier theorem should not be forced to read CMB sky maps, E8 scale grammar,
+record algebra, or horizon continuations.
+
+\section{Core Convention Blocks}
+
+The first part collects:
+\begin{itemize}[leftmargin=1.5em]
+    \item symbol guide,
+    \item relative objects,
+    \item layered datum and admissibility conventions,
+    \item APS and superconnection setup,
+    \item positivity conventions,
+    \item theorem-status vocabulary.
+\end{itemize}
+
+\section{Analytic Backend}
+
+This part holds expanded details for:
+\begin{itemize}[leftmargin=1.5em]
+    \item relative reflection positivity with fermions,
+    \item admissible OS reconstruction,
+    \item asymptotic scattering,
+    \item dressed massless interface,
+    \item exact admissible flow and 1PI expansion details,
+    \item Yukawa kernels and positivity lemmas.
+\end{itemize}
+
+\section{Comparison Backend}
+
+This part holds:
+\begin{itemize}[leftmargin=1.5em]
+    \item constants atlas,
+    \item extended benchmarks,
+    \item compact and full empirical ledgers,
+    \item residual readout and interface refinements,
+    \item operational prediction matrix,
+    \item target and kill-test rows,
+    \item novelty boundary and literature positioning.
+\end{itemize}
+
+\section{Downstream and Optional Continuations}
+
+This part holds material that should not drive the primitive theorem chain:
+\begin{itemize}[leftmargin=1.5em]
+    \item E8 stage atlas,
+    \item optional arithmetic continuations,
+    \item infrared seam-transfer continuations,
+    \item horizon continuations,
+    \item record algebra and pointer dynamics,
+    \item information-theoretic readings,
+    \item cut-and-project readings,
+    \item transient event channels.
+\end{itemize}
+
+\clearpage
+\section{Main Technical Development}
+
+This section contains the main technical development assigned to this paper by the TFPT 4.5 clean split. Cross-paper background is referenced through dependency and scope boxes; extended backend material is kept in the Technical Companion.
+
+\input{source_extracts/technical_companion_source.tex}
+
+\section{Source Extraction Map}
+
+\begin{tfptsourcebox}
+Use \sourceDraft:
+\begin{itemize}[leftmargin=1.5em]
+    \item Appendix-level empirical readout sections.
+    \item Technical conventions and data layers.
+    \item Constants atlas and downstream scale grammar.
+    \item Relative APS and superconnection setup.
+    \item Relative reflection positivity with fermions.
+    \item Admissible OS reconstruction and asymptotic scattering.
+    \item FRW reduction and cosmology interface proofs.
+    \item Yukawa kernels and positivity lemmas.
+    \item Information-theoretic and cut-and-project readings.
+    \item Record algebra and pointer dynamics.
+    \item Horizons, modular flow, and black hole thermality.
+    \item Prediction semantics and transient event channels.
+    \item Closed theoretical outputs and empirical comparison surface.
+    \item Extended benchmarks and novelty boundary.
+\end{itemize}
+\end{tfptsourcebox}
+
+\section{Promotion Rule}
+
+If a companion item becomes load-bearing for a theorem paper, it must be promoted into that paper's
+technical backend or cited as a named standard-theorem interface. The companion should never be the
+place where a major assumption first becomes invisible.
+
+\end{document}

@@ -1,0 +1,58 @@
+\documentclass[11pt,a4paper]{article}
+\input{tfpt_prediction_common}
+\title{\color{tfptblue}\textbf{TFPT Prediction: Axion Haloscope Window from the Seam-Transfer Cosmology Interface}}
+\author{Stefan Hamann \and Alessandro Rizzo}
+\date{{\normalsize\color{tfptgray}\sffamily Standalone prediction note -- \today}}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note isolates the axion haloscope window as a downstream cosmology readout target. It is not a primitive selector of the theory.
+\end{abstract}
+
+\PredictionStatus{$m_a\simeq65.19\,\mu\mathrm{eV}$, $\nu_a\simeq15.764\,\mathrm{GHz}$}{Cosmology readout target.}{cosmology readout $C_{\mathrm{cos}}$}{exclusion in $15.764\,\mathrm{GHz}\pm50\,\mathrm{MHz}$ at the coupled sensitivity.}
+
+
+\section{Standalone Minimal Kernel}
+\MinimalKernelBox
+
+The paper is intentionally one-row: it does not reprove the full TFPT series. It states the minimal closed-branch input needed for this prediction, shows the sector map, and gives the direct failure mode. The source status follows the TFPT 4.5 split: boundary and carrier inputs are core, electromagnetic/flavor/metrology inputs are bridge readouts, QFT closure is conditional, and cosmology rows are downstream comparison targets when explicitly marked.
+
+
+\section{Dependency Graph}
+\DependencyDiagram{Axion interface}{haloscope window}{The row is downstream of seam transfer and determinant-line phase.}{window exclusion}
+
+\section{Derivation}
+
+The determinant-line axion interface fixes
+\[
+N_{\mathrm{DW}}=1,
+\qquad
+\theta_i=\pi\bigl(1-\phiseam(\alpha_\star)\bigr),
+\]
+with seam-transfer and scalaron inputs supplying the cosmology interface. The closed-branch target recorded in the ledger is
+\[
+f_a\approx8.86\times10^{10}\,\mathrm{GeV},
+\qquad
+m_a\approx65.19\,\mu\mathrm{eV},
+\qquad
+\nu_a\approx15.764\,\mathrm{GHz}.
+\]
+The associated coupled sensitivity row is
+\[
+|g_{a\gamma\gamma}^{(\mathrm{phys})}|\approx1.80\times10^{-12}\,\mathrm{GeV}^{-1}.
+\]
+
+
+\section{No-Knobs and Failure Surface}
+\NoKnobsBox{The practical scan target is $15.764\,\mathrm{GHz}\pm50\,\mathrm{MHz}$. Exclusion in the relevant coupled window pressures the intrinsic axion row.}
+
+\section{Minimal Submission Claim}
+The standalone claim is limited to the displayed target and dependency class. It does not assert
+that every comparison row of the full TFPT ledger has the same proof status. Any update of the
+upstream boundary kernel, carrier theorem, or sector map must be propagated into this prediction
+before the numerical row is distributed.
+
+\PredictionBibliography
+
+\end{document}

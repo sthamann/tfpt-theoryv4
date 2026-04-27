@@ -1,0 +1,54 @@
+\documentclass[11pt,a4paper]{article}
+\input{tfpt_prediction_common}
+\title{\color{tfptblue}\textbf{TFPT Prediction: Baryon Asymmetry from the Leptogenesis Interface}}
+\author{Stefan Hamann \and Alessandro Rizzo}
+\date{{\normalsize\color{tfptgray}\sffamily Standalone prediction note -- \today}}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note isolates the baryon-asymmetry row as a downstream leptogenesis comparison target.
+\end{abstract}
+
+\PredictionStatus{$\eta_B=5.97\times10^{-10}$}{Cosmology comparison; flavored leptogenesis interface.}{cosmology comparison $C_{\mathrm{cos}}$}{robust exclusion of the quoted branch value under the declared Boltzmann solver.}
+
+
+\section{Standalone Minimal Kernel}
+\MinimalKernelBox
+
+The paper is intentionally one-row: it does not reprove the full TFPT series. It states the minimal closed-branch input needed for this prediction, shows the sector map, and gives the direct failure mode. The source status follows the TFPT 4.5 split: boundary and carrier inputs are core, electromagnetic/flavor/metrology inputs are bridge readouts, QFT closure is conditional, and cosmology rows are downstream comparison targets when explicitly marked.
+
+
+\section{Dependency Graph}
+\DependencyDiagram{Leptogenesis interface}{$\eta_B$}{The row is downstream of reheating and heavy-neutrino input data.}{asymmetry mismatch}
+
+\section{Derivation}
+
+The cosmology interface fixes a reheating / leptogenesis input block
+\[
+(\Lambda_{\mathrm{IR}},N_{\mathrm{DW}},\theta_i,T_R,\mathcal I_{\mathrm{LG}}).
+\]
+The flavored Boltzmann system has schematic form
+\[
+\frac{dY_{N_i}}{dz}=-D_i(Y_{N_i}-Y_{N_i}^{eq}),
+\qquad
+\frac{dY_{\Delta_\alpha}}{dz}=\sum_i\epsilon_{i\alpha}D_i(Y_{N_i}-Y_{N_i}^{eq})-W_{i\alpha}Y_{\Delta_\alpha}.
+\]
+The operational target recorded in the ledger is
+\[
+\eta_B=5.97\times10^{-10}.
+\]
+
+
+\section{No-Knobs and Failure Surface}
+\NoKnobsBox{The numerical asymmetry is a comparison-layer solution of the declared nonequilibrium system; it is not a primitive constant.}
+
+\section{Minimal Submission Claim}
+The standalone claim is limited to the displayed target and dependency class. It does not assert
+that every comparison row of the full TFPT ledger has the same proof status. Any update of the
+upstream boundary kernel, carrier theorem, or sector map must be propagated into this prediction
+before the numerical row is distributed.
+
+\PredictionBibliography
+
+\end{document}

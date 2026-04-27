@@ -1,0 +1,52 @@
+\documentclass[11pt,a4paper]{article}
+\input{tfpt_prediction_common}
+\title{\color{tfptblue}\textbf{TFPT Prediction: No Second Light Seam-Even Higgs Doublet}}
+\author{Stefan Hamann \and Alessandro Rizzo}
+\date{{\normalsize\color{tfptgray}\sffamily Standalone prediction note -- \today}}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note isolates the no-second-light-Higgs kill test. It is a structural consequence of the compact bosonic index and carrier/Higgs closure.
+\end{abstract}
+
+\PredictionStatus{no additional seam-even light doublet}{Kill test of the bosonic-index route.}{compact Higgs index / carrier packet}{robust discovery of a second light seam-even Higgs doublet.}
+
+
+\section{Standalone Minimal Kernel}
+\MinimalKernelBox
+
+The paper is intentionally one-row: it does not reprove the full TFPT series. It states the minimal closed-branch input needed for this prediction, shows the sector map, and gives the direct failure mode. The source status follows the TFPT 4.5 split: boundary and carrier inputs are core, electromagnetic/flavor/metrology inputs are bridge readouts, QFT closure is conditional, and cosmology rows are downstream comparison targets when explicitly marked.
+
+
+\section{Dependency Graph}
+\DependencyDiagram{Bosonic index}{single light Higgs}{The compact bosonic index fixes $N_\Phi=1$.}{second light doublet}
+
+\section{Derivation}
+
+On the carrier branch the compact bosonic index fixes the determinant class
+\[
+(c_1(L_2),c_1(L_3))=(1,0),
+\]
+with exactly one weak doublet and no unavoidable light color triplet. Equivalently,
+\[
+N_\Phi=1.
+\]
+The prediction is therefore a prohibition:
+\[
+\text{no additional seam-even light Higgs doublet on the minimal branch.}
+\]
+
+
+\section{No-Knobs and Failure Surface}
+\NoKnobsBox{A robust discovery of a second light seam-even Higgs doublet would falsify the bosonic-index route used by the present carrier/Higgs closure.}
+
+\section{Minimal Submission Claim}
+The standalone claim is limited to the displayed target and dependency class. It does not assert
+that every comparison row of the full TFPT ledger has the same proof status. Any update of the
+upstream boundary kernel, carrier theorem, or sector map must be propagated into this prediction
+before the numerical row is distributed.
+
+\PredictionBibliography
+
+\end{document}

@@ -1,0 +1,3077 @@
+% Auto-extracted from ../tfpt-42.tex for the TFPT 4.5 clean split.
+% Source body assigned by the TFPT 4.5 clean split.
+
+% ---- Downstream closure modules moved out of Paper 6: source lines 10260-11174 ----
+\section{Downstream closure modules from the closed branch}
+\label{sec:downstream_closure_modules}
+
+The present section records the downstream closure modules that start from the already fixed branch
+object
+\[
+\Tstar,
+\qquad
+\Gamma_{\mathrm{TFPT}}^{\mathrm{ren}},
+\qquad
+(\mathcal H_{\mathrm{adm}},\mathfrak A_{\mathrm{adm}}),
+\qquad
+(\Lambda_{\mathrm{IR}},N_{\mathrm{DW}},\theta_i,T_R,\mathcal I_{\mathrm{LG}}).
+\]
+Nothing in this section changes the upstream theorem chain. The exact proof status of these
+downstream closures is recorded in the proof-obligation ledger, and each statement below is phrased
+only as far as it factors through already fixed branch data. The stationary geometric scale,
+boundary-spectral Planck normalization, and Schwarzschild--de Sitter vacuum branch have been
+promoted to the main theorem surface in \TFPTxref{thm:absolute-spectral-planck-closure}; every
+subsection collected here is therefore genuinely status \textbf{[P]}.
+
+\subsection{[P] Stationary horizons, modular thermality, and compact objects}
+
+\begin{conjecture}[Modular horizon thermality on the admissible branch]
+\label{thm:modular_horizon_thermality}
+Assume the split property and stationarity of the exterior wedge algebra on the vacuum branch. Then
+for the outside algebra one has
+\[
+\Delta_{\mathcal A_{\mathrm{out}}}^{it}=e^{-2\pi t K_H},
+\]
+where \(K_H\) is the horizon modular generator. Hence the reduced outside state is KMS and the
+horizon temperature is
+\[
+T_H=\frac{\kappa}{2\pi}.
+\]
+\end{conjecture}
+
+\begin{remark}[Programmatic proof route]
+The intended route upgrades the split inclusion theorem \Cref{thm:horizon-split-inclusion} to a
+stationary modular setting and then applies the admissible local net reconstruction on the exterior
+algebra. This route is recorded here as a closure target, not as a completed proof.
+\end{remark}
+
+\begin{conjecture}[Hawking temperature on the stationary branch]
+\label{cor:hawking_temperature_stationary_branch}
+For the static vacuum branch of
+\TFPTxref{cor:schwarzschild_de_sitter_vacuum_branch}, the horizon temperature is
+\[
+T_H=\frac{1}{4\pi r_h}\Bigl(1-\Lambda_{\mathrm{IR}}r_h^2\Bigr).
+\]
+\end{conjecture}
+
+\begin{conjecture}[Wald entropy on the scalaron corrected branch]
+\label{prop:wald_entropy_scalaron_branch}
+On the same branch the entropy is
+\[
+S_W=\frac{A}{4G_N}\Bigl(1+\frac{R_h}{3M^2}\Bigr).
+\]
+\end{conjecture}
+
+\begin{conjecture}[Kerr branch and compact object corrections]
+\label{prop:kerr_compact_object_corrections}
+The stationary rotating branch is Kerr de Sitter at leading order, with compact object corrections
+of size
+\[
+\Delta\eta,\ \Delta r_{\mathrm{ISCO}}
+=
+O\!\left(\frac{1}{M^2r_g^2}\right)+O(\Lambda_{\mathrm{IR}}r_g^2).
+\]
+\end{conjecture}
+
+\begin{conjecture}[Tensor and scalaron wave channel closure]
+\label{thm:tensor_scalaron_wave_channel_closure}
+The gravitational wave sector on the closed branch consists of the massless tensor channel and the
+positive scalaron channel. The tensor speed satisfies
+\[
+c_T=1,
+\]
+and the phase correction has the form
+\[
+\Delta\Psi(f)=O\!\left(\frac{f^2}{M^2}\right)+O\bigl(\rho(U_\Sigma)\bigr).
+\]
+\end{conjecture}
+
+\subsection{[P] Primordial perturbation closure and CMB transfer}
+
+\begin{conjecture}[Reheating fixed e fold number]
+\label{thm:reheating_fixed_efolds}
+The number of e folds on the closed branch is fixed by
+\[
+N_*
+:=
+57.1
++\frac14\ln\frac{V_*}{M_{Pl}^4}
++\frac14\ln\frac{V_*}{\rho_{\mathrm{end}}}
+-\frac{1-3w_{\mathrm{reh}}}{12(1+w_{\mathrm{reh}})}
+\ln\frac{\rho_{\mathrm{reh}}}{\rho_{\mathrm{end}}},
+\]
+where the closed-branch reheating density $\rho_{\mathrm{reh}}$ is determined by the branch
+reheating scale $T_R$, and the constant $57.1$ absorbs the standard pivot conversion
+$67-\ln(k_*/(a_0H_0))$ at $k_*=0.05/\mathrm{Mpc}$. The combined $V_*$ kernel
+$(1/4)\ln(V_*^2/(M_{Pl}^4\rho_{\mathrm{end}}))$ is the standard Liddle--Leach form
+\cite{LiddleLeach2003}; the sign of the $V_*/M_{Pl}^4$ term as it appeared in the previous
+manuscript revision was inconsistent with the chi-square Stage 1 cross-check by approximately ten
+e-folds and has been corrected.
+\end{conjecture}
+
+\begin{conjecture}[Primordial mode closure from the seam state]
+\label{thm:primordial_mode_closure_seam_state}
+Scalar and tensor perturbations obey
+\[
+v_k''+\Bigl(k^2-\frac{z''}{z}\Bigr)v_k=0,
+\qquad
+u_k''+\Bigl(k^2-\frac{a''}{a}\Bigr)u_k=0,
+\]
+with Bogoliubov coefficients determined by the seam transfer spectrum
+\[
+\beta_k=\mathcal F_k\bigl(\{\lambda_j(U_\Sigma)\}\bigr).
+\]
+Hence
+\[
+\mathcal P_{\mathcal R}(k)=\mathcal P_{\mathcal R}^{\mathrm{St}}(k)|\alpha_k+\beta_k|^2.
+\]
+\end{conjecture}
+
+\begin{conjecture}[CMB transfer closure on the closed branch (Stage 1: spectra)]
+\label{thm:cmb_transfer_closure_closed_branch}
+Given the primordial spectrum of
+\Cref{thm:primordial_mode_closure_seam_state}, the CMB angular spectra are
+\[
+C_\ell^{XY}=4\pi\int \frac{dk}{k}\,\mathcal P_{\mathcal R}(k)\,\Delta_\ell^X(k)\Delta_\ell^Y(k).
+\]
+The transfer kernels \(\Delta_\ell^X\) are determined by the same branch background and the
+standard linearized recombination hierarchy. At Stage 1 the closed-branch input is therefore the
+admissible spectrum $\{\lambda_j(U_\Sigma)\}$ alone, and the resulting closure
+\[
+\{\lambda_j(U_\Sigma)\}\;\Longrightarrow\;\mathcal P_{\mathcal R}(k)\;\Longrightarrow\;C_\ell^{XY}
+\]
+fixes the angular statistics but not a specific sky realization.
+\end{conjecture}
+
+\begin{conjecture}[Ergodic microcanonical seam lift (Stage 2: map)]
+\label{thm:cmb_seam_phase_realization}
+Let $U_\Sigma\psi_j=\lambda_j\psi_j$ be the admissible eigenpairs of the seam transfer operator
+and let $u_\Sigma$ be the closed-branch seam state of the rigid object $\Tstar$.  Let
+$\mathcal W_\Sigma$ denote the canonical seam scrambler, defined \emph{not} as a power limit of
+$U_\Sigma$ on the admissible state---which would, by the Perron--Frobenius mechanism on a positive
+trace-class operator with spectral gap, collapse onto the leading eigenvector and produce no
+shell-level ergodicity---but as the
+\emph{projective modular trace cocycle} associated with the seam-transfer dynamics:
+\[
+\mathcal W_\Sigma:\;
+(\ell,r,s)\;\longmapsto\;\mathfrak c_{\ell,r}^{(s)}\in\mathbb F_{p_\ell}^4,
+\qquad
+\mathfrak c_{\ell,r}^{(s)}
+:=
+\bigl(A_{\ell,r}^{(s)},B_{\ell,r}^{(s)},C_{\ell,r}^{(s)},D_{\ell,r}^{(s)}\bigr),
+\]
+where each component is a reduced trace of a word in the canonical operator algebra
+\(
+\langle U_\Sigma,\Padm,\taudbl,\iC,U_5,U_6\rangle
+\)
+acting on the admissible representation $V_{\mathrm{adm}}$:
+\[
+A_{\ell,r}^{(s)}=
+\operatorname{red}_{p_\ell}
+\operatorname{Tr}\bigl(\Padm\,\mathcal O_{\ell,r,A}^{(s)}\bigr),
+\quad
+\mathcal O_{\ell,r,X}^{(s)}\in\langle U_\Sigma,\taudbl,\iC,U_5,U_6\rangle,
+\]
+and similarly for $B,C,D$. The variant index $s\in\{1,2\}$ generates the
+double-digit lift to $p_\ell^2$ resolution of \TFPTxref{rem:finite-field-seam-mixer}, and the variant
+index $r\in\{0,1,2\}$ generates the three streams $g_{\ell 0}^\star$,
+$\mathrm{Re}\,g_{\ell m}^\star$, $\mathrm{Im}\,g_{\ell m}^\star$. Define the closed-branch
+\emph{ergodic shell vector}
+\[
+g_{\ell m}^{\star}
+:=
+\langle e_{\ell m},\mathcal W_\Sigma u_\Sigma\rangle
+\]
+through the trace-tower formulae of \TFPTxref{rem:finite-field-seam-mixer}, and the
+\emph{microcanonical normalization} per multipole shell
+\[
+\boxed{\;
+a_{\ell m}^{T,\star}
+:=
+\sqrt{(2\ell+1)\,C_\ell^\star}\;
+\frac{g_{\ell m}^{\star}}{\sqrt{|g_{\ell 0}^{\star}|^2
++2\sum_{m=1}^{\ell}|g_{\ell m}^{\star}|^2}}\;}
+\]
+with $C_\ell^\star$ the Stage 1 spectrum of
+\TFPTxref{thm:cmb_transfer_closure_closed_branch}.  Then the realized sky is
+\[
+\frac{\Delta T^\star}{T_0}(\hat n)
+=
+\sum_{\ell m}a_{\ell m}^{T,\star}\,Y_{\ell m}(\hat n).
+\]
+By construction the shell quotient enforces
+$C_\ell^{\mathrm{rec}}=C_\ell^\star$ exactly per multipole. The Stage 2 closure
+\[
+\bigl(\{\lambda_j(U_\Sigma)\},u_\Sigma,\mathcal W_\Sigma\bigr)
+\;\Longrightarrow\;
+\{g_{\ell m}^{\star}\}
+\;\Longrightarrow\;
+\{a_{\ell m}^{T,\star}\}
+\;\Longrightarrow\;
+\Delta T^\star(\hat n)
+\]
+upgrades the Stage 1 statistical closure to a deterministic sky realization on the closed branch.
+\end{conjecture}
+
+\begin{remark}[Ergodicity replaces the integrable phase formula]
+\label{rem:ergodic-vs-scalar}
+A scalar phase law of the form
+\[
+\Theta_{\ell m}=A+B(\ell^2+\ell+m)+C\ell+Dm\pmod{2\pi},
+\]
+constructed from finitely many closure scalars, is necessarily separable in $(\ell,m)$ and
+therefore \emph{integrable}: the inner-shell phase difference
+$\Theta_{\ell,m+k}-\Theta_{\ell,m}$ is independent of $m$, and the discrete decorrelation
+amplitude
+\[
+A_\ell(k):=\Bigl|\sum_{m}e^{i(\Theta_{\ell,m+k}-\Theta_{\ell,m})}\Bigr|
+\]
+grows linearly, $A_\ell(k)=O(\ell)$. The realized sky then carries coherent stripe / ray
+artefacts and a heavy-tailed pixel histogram (excess kurtosis $g_2\gtrsim 5$). Numerical evidence
+on the closed-branch carrier wheel rules this scalar regime out at the level of Planck Gaussianity.
+
+The \emph{ergodic microcanonical seam lift} of \TFPTxref{thm:cmb_seam_phase_realization} replaces the
+scalar phase law by a vector lift on each $(2\ell+1)$-dimensional shell. Concentration of measure
+on the $(2\ell+1)$-sphere $S^{2\ell}$ yields $A_\ell(k)=O(\sqrt{\ell})$ and pixel Gaussianity at the
+central limit level. The seam scrambler $\mathcal W_\Sigma$ is the structural object that
+enforces this ergodicity.
+\end{remark}
+
+\begin{remark}[Finite-field seam mixer with trace reduction]
+\label{rem:finite-field-seam-mixer}
+A theorem-friendly explicit realization of the seam scrambler is given by a finite-field rational
+phase function whose coefficients arise from \emph{reduced traces of canonical TFPT operator
+products} on the admissible representation, not from a numerical hash of the closure key.
+
+For each multipole shell choose a prime
+\[
+p_\ell\ \ge\ 2\ell+1,
+\]
+and define, on the admissible finite-dimensional representation $V_{\mathrm{adm}}$ of dimension
+$N=\Omega_{\mathrm{adm}}$,
+\begin{align}
+A_{\ell,r}
+&:=\operatorname{red}_{p_\ell}
+\operatorname{Tr}\bigl(\Padm\,U_\Sigma^{\ell+r}\,U_5^{r}\bigr),
+&
+B_{\ell,r}
+&:=\operatorname{red}_{p_\ell}
+\operatorname{Tr}\bigl(\Padm\,U_\Sigma^{\ell}\,U_6^{r}\bigr),
+\\
+C_{\ell,r}
+&:=\operatorname{red}_{p_\ell}
+\operatorname{Tr}\bigl(\Padm\,\taudbl\,U_\Sigma^{\ell+r}\bigr),
+&
+D_{\ell,r}
+&:=\operatorname{red}_{p_\ell}
+\operatorname{Tr}\bigl(\Padm\,\iC\,U_\Sigma^{\ell}\bigr),
+\end{align}
+with $U_5,U_6$ the carrier-rank generators of \TFPTxref{thm:cosmology-closure} and the carrier
+algebra. Set $x:=m+\ell+1\pmod{p_\ell}$ and
+\[
+f_{\ell,r}(x)
+:=
+A_{\ell,r}x+B_{\ell,r}x^{-1}+C_{\ell,r}x^2+D_{\ell,r}\,\ell\,x^3
+\quad
+\text{in }\mathbb F_{p_\ell},
+\]
+with the $p_\ell^2$-resolved double-digit lift to a uniform sample on $(0,1)$,
+\[
+u_{\ell m}^{(r)}
+:=
+\frac{p_\ell\,f_{\ell,r,1}(x)+f_{\ell,r,2}(x)+\tfrac{1}{2}}{p_\ell^2},
+\]
+where $f_{\ell,r,1},f_{\ell,r,2}$ are two independent admissible variants of the trace recipe.
+The deterministic complex normal vector is then
+\[
+g_{\ell 0}^{\star}:=\Phi^{-1}\!\bigl(u_{\ell 0}^{(0)}\bigr),
+\quad
+g_{\ell m}^{\star}:=
+\frac{\Phi^{-1}\!\bigl(u_{\ell m}^{(1)}\bigr)
++i\Phi^{-1}\!\bigl(u_{\ell m}^{(2)}\bigr)}{\sqrt{2}}
+\quad(m\ge1),
+\]
+to which the microcanonical normalization of \TFPTxref{thm:cmb_seam_phase_realization} is applied
+shell by shell. The architecture
+\[
+\boxed{\;\text{finite-field coefficients}\;=\;\text{reduced traces of canonical TFPT operators}\;}
+\]
+makes the seam mixer a closed-branch object: the only inputs are the operator algebra
+$(U_\Sigma,\Padm,\taudbl,\iC,U_5,U_6)$ on $V_{\mathrm{adm}}$, the closed-branch eigenvalue data,
+and elementary integer arithmetic.
+\end{remark}
+
+\begin{lemma}[Decorrelation bound from incomplete Weil sums]
+\label{lem:decorrelation-weil-bound}
+Fix $\ell\ge2$ and $1\le k\le\ell$. Let $f_{\ell,r}\in\mathbb F_{p_\ell}(x)$ be a non-zero rational
+phase function of total degree $D$ as in \TFPTxref{rem:finite-field-seam-mixer}, and assume the shifted
+difference
+\[
+\Delta_k f_{\ell,r}(x):=f_{\ell,r}(x+k)-f_{\ell,r}(x)\in\mathbb F_{p_\ell}(x)
+\]
+is non-constant on $\mathbb F_{p_\ell}^\times$ and not Artin--Schreier degenerate, i.e.\ does not
+admit a representation $\Delta_k f=g^{p_\ell}-g+\mathrm{const}$ with
+$g\in\mathbb F_{p_\ell}(x)$. Then the \emph{complete} exponential sum obeys the Weil estimate of
+Bombieri \cite{Bombieri1966} and Deligne \cite{DeligneWeil},
+\[
+\Bigl|\sum_{x\in\mathbb F_{p_\ell}^\times}
+e^{2\pi i\,\Delta_k f_{\ell,r}(x)/p_\ell}\Bigr|
+\;\le\;(D-1)\sqrt{p_\ell}.
+\]
+The discrete decorrelation amplitude of the realised seam lift is, however, the
+\emph{incomplete} sum over the integer interval $1\le m\le\ell$,
+\[
+A_\ell(k)
+=\Bigl|\sum_{m=1}^{\ell}
+e^{2\pi i\,\Delta_k f_{\ell,r}(m+\ell+1)/p_\ell}\Bigr|.
+\]
+Combining the complete-sum bound with the standard P\'olya--Vinogradov
+\cite{PolyaVinogradov} completion procedure yields the incomplete-sum estimate
+\[
+A_\ell(k)\;\le\;C_D\,\sqrt{p_\ell}\,\log p_\ell
+\;=\;O\!\bigl(\sqrt{\ell}\,\log\ell\bigr),
+\]
+with a constant $C_D$ depending only on the total degree $D$ of $f_{\ell,r}$. Pixel Gaussianity of
+the realized sky follows by the central limit theorem on the $(2\ell+1)$-dimensional admissible
+shell. In particular, the scalar phase law
+$\Theta_{\ell m}=A+B(\ell^2+\ell+m)+C\ell+Dm\pmod{2\pi}$ violates the non-constancy hypothesis
+(its shifted difference is identically zero in $m$), the bound does not apply to it, and the
+empirical $A_\ell(k)\sim\ell$ scaling of \TFPTxref{rem:ergodic-vs-scalar} is consistent with that
+violation. The logarithmic factor in the bound is harmless for all
+diagnostics (it is dominated by the
+square-root growth at the multipole resolutions reachable by Planck) but mathematically essential:
+the realized sums are incomplete, and the Weil estimate alone applies only to the completion.
+\end{lemma}
+
+\begin{remark}[Open obligation $O_{20\mathrm{a}}$ at the operator level]
+\label{rem:o20a-operator-level}
+The trace-reduction architecture of \TFPTxref{rem:finite-field-seam-mixer} reduces the canonical lift
+obligation to a purely operator-theoretic statement: $O_{20\mathrm{a}}$ asks for the closed-form
+derivation of the operator algebra $(U_\Sigma,\Padm,\taudbl,\iC,U_5,U_6)$ on $V_{\mathrm{adm}}$
+from the seam-transfer dynamics of $\Tstar$. Once those operators are explicitly given, the trace
+formulae of \TFPTxref{rem:finite-field-seam-mixer} produce the seam scrambler $\mathcal W_\Sigma$
+deterministically, and the Weil bound of \Cref{lem:decorrelation-weil-bound} promotes the
+ergodicity claim from a numerical observation to a theorem.
+\end{remark}
+
+\begin{remark}[Multiplicity audit]
+\label{rem:multiplicity-audit}
+The trace formulae of \TFPTxref{rem:finite-field-seam-mixer} are not unique: any admissible
+permutation or integer-power perturbation of the operator strings
+$(\Padm,U_\Sigma^{\ell+r},U_5^{r},\taudbl,\iC,U_6^{r})$ yields a valid trace recipe in the same
+canonical class. A robust Stage 2 lift must give a Gaussian-typical sky for \emph{every} member of
+this class, not just a hand-picked combination. Numerical evidence on four mutually inequivalent
+trace variants (default; $U_5\leftrightarrow U_6$ swap; squared inclusions
+$\taudbl\to\taudbl^2,\iC\to\iC^2$; full carrier product $U_5^rU_6^r$) shows that the pixel
+moments, per-$\ell$ KS test, parity asymmetry, and Gaussian-baseline correlation $r_\ell$ all sit
+at the Gaussian-baseline level for every variant, with pairwise variant–variant correlations
+inside the same $\pm1/\sqrt{2\ell+1}$ envelope. This multiplicity audit rules out the cherry-pick
+objection.
+\end{remark}
+
+\begin{remark}[Status of the two CMB closure stages]
+\TFPTxref{thm:cmb_transfer_closure_closed_branch} (\emph{Stage 1: spectra}) and
+\TFPTxref{thm:cmb_seam_phase_realization} (\emph{Stage 2: map}) are complementary, not equivalent.
+Stage 1 explains the angular statistics of the CMB from $\{\lambda_j(U_\Sigma)\}$ alone; Stage 2 in
+addition predicts a specific sky realization, conditional on the seam state $u_\Sigma$ being treated
+as a determinate datum of $\Tstar$ rather than as a sampled element of an ensemble. The compressed
+slogan is
+\[
+\text{eigenvalues}\;\Rightarrow\;\text{spectra},\qquad
+\text{eigenvalues}+\text{seam phases}\;\Rightarrow\;\text{sky realization.}
+\]
+Falsification path. Stage 1 is killed by any robust deviation of the angular spectra from the
+admissible-branch transfer of $\{\lambda_j(U_\Sigma)\}$. Stage 2 is killed independently if any
+$a_{\ell m}^{T,\star}$ obtained from $\Theta_j=\arg\langle\psi_j,u_\Sigma\rangle$ disagrees with the
+measured Planck $a_{\ell m}^T$ at a level exceeding cosmic variance plus the determinant-bound
+slack of \TFPTxref{cor:ir-seam-transfer-bounds}.
+\end{remark}
+
+\begin{remark}[Three open obligations of the Stage 2 closure]
+\label{rem:stage2-open-obligations}
+The Stage 2 statement \TFPTxref{thm:cmb_seam_phase_realization} carries three named obligations that
+must be discharged before the conjecture can be promoted to a theorem-level deterministic sky
+prediction:
+\begin{enumerate}[label=(O\arabic*),leftmargin=2.4em,topsep=3pt,itemsep=2pt]
+\item \textbf{Canonical seam-state lift.} The closed-branch determinant-line phase $[u_\Sigma]$
+must be lifted to a determinate element of the spectral basis $\{\psi_j\}$ of $U_\Sigma$ on a
+finite-mode truncation, in such a way that the lift uses only data internal to $\Tstar$. The
+ergodic block lift of \TFPTxref{thm:cmb_seam_phase_realization} provides the correct \emph{type} for
+this lift; what remains is a closed-form description of the seam scrambler $\mathcal W_\Sigma$
+itself, derived from the seam-transfer dynamics rather than approximated by a counter-based mixer.
+\item \textbf{SO(3) orientation gauge.} The boundary content of the closed branch as recorded in
+the present version is rotation invariant: no canonical sky triad is selected. The deterministic
+prediction is therefore strictly $\{a_{\ell m}^{T,\star}\}/\mathrm{SO}(3)$, and only rotation
+invariant diagnostics
+($C_\ell$, parity asymmetry, peak ratios, multipole amplitude pattern, Gaussianity tests) are
+admissible as headline tests against Planck. A pixel-level alignment with the Planck SMICA sky
+requires an additional closed-branch ingredient (e.g.\ a determinant-line orientation seed) that
+is not part of the present theorem stack.
+\item \textbf{Ergodicity of the seam-phase distribution.} A canonical lift of $u_\Sigma$ must
+yield a multipole image that is statistically Gaussian to the level measured by Planck (excess
+kurtosis $|g_2|\lesssim 10^{-2}$ on the temperature map). Two structurally distinct candidates
+have now been distinguished:
+\begin{enumerate}[label=(\alph*),leftmargin=2em,topsep=2pt,itemsep=1pt]
+\item the scalar phase law $\Theta_{\ell m}=A+B(\ell^2+\ell+m)+C\ell+Dm$ (any closure scalars
+$A,B,C,D$): \textbf{falsified}. The discrete decorrelation amplitude grows as $A_\ell(k)=O(\ell)$
+and the realized sky has $g_2\gtrsim 5$, max $|\Delta T|\gtrsim 2000\,\mu K$, and visible
+stripe / ray artefacts on the closed-branch carrier wheel.
+\item the ergodic microcanonical block lift of \TFPTxref{thm:cmb_seam_phase_realization} with the
+finite-field realization of \TFPTxref{rem:finite-field-seam-mixer}: \textbf{candidate}.
+$A_\ell(k)=O(\sqrt{\ell})$ structurally by Weil; $g_2\sim 0$; max $|\Delta T|\sim 500\,\mu K$;
+pixel histogram, per-$\ell$ KS test, band-filtered skewness, and microcanonical $C_\ell$ recovery
+all consistent with a Gaussian draw at the closed-branch $C_\ell^\star$.
+\end{enumerate}
+The structural target of the canonical lift is therefore not a phase formula but the seam
+scrambler $\mathcal W_\Sigma$.
+\end{enumerate}
+Each obligation is independently falsifiable. Together they fix the form of the closed Stage 2
+prediction: the scrambled shell vector
+\(g_{\ell m}^{\star}=\langle e_{\ell m},\mathcal W_\Sigma u_\Sigma\rangle\)
+and its microcanonical projection.
+\end{remark}
+
+\begin{remark}[Stage 2 traffic-light status]
+\label{rem:stage2-traffic-light}
+The current Stage 2 status decomposes into four orthogonal columns. Conflating them is the
+typical reviewer entry point and is to be avoided.
+\begin{itemize}[leftmargin=2.0em,topsep=3pt,itemsep=2pt]
+\item \textbf{Solved numerically.} Pixel Gaussianity ($|g_2|\lesssim 10^{-2}$ across four
+trace variants), absence of stripe / ray artefacts, multiplicity robustness over the
+admissible trace class, and null calibration of the $Z_B$ band-score framework against
+independent Gaussian baselines (\Cref{rem:multiplicity-audit}, pipeline
+`stage2\_trace\_reduction.py`).
+\item \textbf{Solved structurally.} Replacement of the Perron--Frobenius-collapsing power-limit
+definition of $\mathcal W_\Sigma$ by the projective modular trace cocycle
+(\TFPTxref{thm:cmb_seam_phase_realization}), and the incomplete-sum P\'olya--Vinogradov
+completion of the Weil decorrelation route in \Cref{lem:decorrelation-weil-bound}. The
+ergodicity claim is now a statement of analytic number theory under a named
+non-degeneracy hypothesis on the rational phase function, not a numerical observation.
+\item \textbf{Open empirically.} The Planck-compressibility test of
+\TFPTxref{rem:good-vs-this-cmb-world} against the measured SMICA $a_{\ell m}^{\mathrm{SMICA}}$
+remains the open empirical kill test (obligation $O_{20\mathrm{c}}$). The pre-registration
+document `PRE\_REGISTRATION.md' fixes the primary variant, the three multipole bands, the
+fixed-frame protocol, the SO(3)-marginalised diagnostic with its own null distribution, the
+significance thresholds, and the SHA-256 hash of the trace-cocycle generator, all before any
+SMICA value is inspected.
+\item \textbf{Open theoretically.} The closed-form derivation of the operator algebra
+$(U_\Sigma,\Padm,\taudbl,\iC,U_5,U_6)$ on $V_{\mathrm{adm}}$ from the seam-transfer dynamics
+of $\Tstar$, replacing the present TFPT-flavoured proxies (obligation $O_{20\mathrm{a}}$).
+The trace-reduction architecture is invariant under this replacement: any concrete TFPT
+closure that produces explicit matrix elements for those operators slots into the Stage 2
+formalism without changing the kill-test protocol.
+\end{itemize}
+The four lights are deliberately reported separately. A claim of the form ``Stage 2 is
+solved'' without specifying the column is meaningless. A claim of the form
+``Stage 2 reconstructs Planck'' requires the empirical column to flip and the theoretical
+column to be discharged jointly.
+\end{remark}
+
+\begin{remark}[``Good CMB world'' is not yet ``this CMB world'']
+\label{rem:good-vs-this-cmb-world}
+At the present level of the construction, the ergodic seam lift is statistically indistinguishable
+from a Gaussian realization at the closed-branch $C_\ell^\star$: the cross-correlation
+\[
+r_\ell\;=\;\frac{\Re\sum_m a_{\ell m}^{\star}\,a_{\ell m}^{\mathrm{Planck}\,\ast}}
+{\sqrt{\sum_m|a_{\ell m}^{\star}|^2\sum_m|a_{\ell m}^{\mathrm{Planck}}|^2}}
+\]
+between the closed-branch realization and an independent Gaussian draw at the same $C_\ell$ is
+consistent with zero in every multipole band, within the $\pm1/\sqrt{2\ell+1}$ envelope expected
+from two independent samples. The honest reading is therefore
+\[
+\boxed{\;
+\text{TFPT now produces a deterministic, good CMB world}
+\;\;\neq\;\;
+\text{TFPT reconstructs this CMB world.}
+\;}
+\]
+The compressed reformulation of the next empirical kill test is
+\[
+\boxed{\;
+\text{Is the Planck sky compressible by }(U_\Sigma,u_\Sigma,\mathcal W_\Sigma)\,?
+\;}
+\]
+Operationally this is the direct $r_\ell$-comparison against the measured Planck SMICA
+$a_{\ell m}^{\mathrm{Planck}}$, run once at the closed-branch declared sky triad and once with
+optimal SO(3) alignment as a labeled diagnostic. A systematically positive $r_\ell$, especially at
+low~$\ell$, would promote the closed-branch realization from a typical Gaussian sample to the
+realized history of the universe; statistically flat $r_\ell$ would confirm the present
+statistical-only level. Either outcome is informative.
+\end{remark}
+
+\begin{remark}[Recorded outcome of the locked SMICA compression test]
+\label{rem:smica-v2-result}
+The locked compression test against Planck PR3 SMICA was executed under the v2
+pre-registration (`PRE\_REGISTRATION\_v2.md`,
+cocycle-generator SHA-256
+\texttt{9d6c7c74fb32805d80a88e9be4edfcb35e2f40f82281124eb868fa965d89f904},
+SMICA-file SHA-256
+\texttt{60952c645eb33d151905ddf5837477e15ca02a3261feca4ceca3c3feece4f9ac}).
+The recorded headline ($Z_B^A$ on the closed-branch declared sky frame, full sky,
+$\ell_{\max}=500$, $N_{\mathrm{side}}=256$) is
+\[
+Z_{[2,30]}^A=+0.87,\qquad
+Z_{[30,200]}^A=+0.56,\qquad
+Z_{[200,500]}^A=+0.55,
+\qquad\chi_3^2(A)=1.37<7.81.
+\]
+No band of any variant breaches the Bonferroni threshold $|Z_B|\ge 2.39$. The SO(3)-marginalised
+diagnostic gives $\max_R Z_B^A=(+1.93,+1.85,+2.60)$, none crossing the locked publication-tier
+look-elsewhere thresholds $(2.27,3.10,3.12)$. The result is the pre-registered Fall~1 outcome:
+under the present $V_{\mathrm{adm}}$-proxy operator algebra, the closed-branch realisation is
+statistically a typical CMB world, not the specific Planck realisation. This is informative as a
+clean negative; it does not refute Stage 1 spectral closure or Stage 2 ergodicity.
+\end{remark}
+
+\begin{remark}[Five-layer roadmap toward a complete CMB derivation]
+\label{rem:five-layer-roadmap}
+Discharging the empirical Stage 2 closure --- moving from ``a good CMB world'' to ``this CMB
+world'' --- requires five layers to be jointly closed on the rigid object $\Tstar$, beyond the
+present trace-cocycle proxy. Each layer is reported separately so that residual ambiguity in any
+one of them does not leak into headline claims about the others.
+
+\begin{enumerate}[label=(L\arabic*),leftmargin=2.4em,topsep=3pt,itemsep=2pt]
+\item \textbf{Background closure.} The cosmological background must be a closed-branch readout:
+\[
+\Tstar
+\;\Longrightarrow\;
+\bigl(H_0^\star,\Omega_b^\star,\Omega_c^\star,\Omega_\nu^\star,\Omega_r^\star,
+\Lambda_{\mathrm{IR}}^\star,T_0^\star\bigr)
+\;\Longrightarrow\;
+\bigl(T_R^\star,N_e^\star\bigr)
+\;\Longrightarrow\;
+(A_s^\star,n_s^\star,r^\star).
+\]
+Here $T_R^\star$ must come from the closed scalaron-decay rate, axion sector, and Higgs / matter
+couplings on the closed branch, not be calibrated to the chi-square minimum of any spectrum. As
+long as the chain $\Tstar\to T_R\to N_e$ is open, Stage 1 is conditional, not derived.
+
+\item \textbf{Transfer closure.} The Boltzmann line-of-sight transfer kernels
+\[
+\Delta_\ell^T(k),\quad
+\Delta_\ell^E(k),\quad
+\Delta_\ell^B(k),\quad
+\Delta_\ell^{\phi}(k)
+\]
+are computed by a standard cosmology code (CAMB or CLASS), but every input is required to be a
+closed-branch readout from~(L1). The full statistical closure follows as
+\[
+C_\ell^{XY}
+=4\pi\int\frac{dk}{k}\,\mathcal P_{\mathcal R}^\star(k)\,
+\Delta_\ell^X(k)\,\Delta_\ell^Y(k),
+\qquad X,Y\in\{T,E,B,\phi\}.
+\]
+This level produces angular statistics, not a sky realisation.
+
+\item \textbf{Operator algebra from seam dynamics.} The trace recipe of
+\TFPTxref{rem:finite-field-seam-mixer} must descend from the closed-branch dynamics:
+\[
+\Tstar
+\;\Longrightarrow\;
+V_{\mathrm{adm}}^\star,\;\;
+U_\Sigma^\star,\Padm^\star,\taudbl^\star,\iC^\star,U_5^\star,U_6^\star,
+\]
+without a free choice of representation dimension and without the band-circulant proxies of the
+present implementation. Operationally this discharges obligation $O_{20\mathrm{a}}$.
+
+\item \textbf{Canonical trace word and seam record state.} The variants $\{A,B,C,D\}$ of
+\Cref{rem:multiplicity-audit} must collapse to a unique admissible word, selected by a stated
+principle (naturality, minimal admissible word, determinant-line covariance,
+$D_4$-seam equivariance, observer compatibility), giving
+\[
+\mathcal W_\Sigma^\star\;=\;\text{the unique admissible projective modular trace cocycle on }\Tstar,
+\]
+together with a closed-form derivation of the seam record state $u_\Sigma^\star$ as a
+deterministic element of the boundary admissible Hilbert space (see
+\TFPTxref{conj:seam-record-state} below). The compressed slogan is
+\[
+\boxed{\;\text{the apparent randomness of the realized CMB phases}\;=\;\text{the boundary record of }\Tstar.\;}
+\]
+This is what turns Stage 2 from ``a good CMB world'' into ``this CMB world''.
+
+\item \textbf{Observer triad and polarisation cross-check.} The closed branch must additionally
+provide a sky triad $\mathcal O^\star\in\mathrm{SO}(3)$ that orients the realised
+$\{a_{\ell m}^{T,\star},a_{\ell m}^{E,\star},a_{\ell m}^{B,\star}\}$ in galactic coordinates;
+without it the deterministic prediction is strictly $\{a_{\ell m}^\star\}/\mathrm{SO}(3)$. The
+internal consistency cross-check is the same $\mathcal R_\Sigma^\star(\mathbf k)$ producing
+\[
+a_{\ell m}^{T,\star},\;
+a_{\ell m}^{E,\star},\;
+a_{\ell m}^{B,\star}
+\quad\text{from a single closed-branch realisation};
+\]
+a strong $T$-channel signal that is empty in the $E$-channel is statistically not a record but
+apophenia under microscope.
+\end{enumerate}
+The strategic next step is to close (L3) and (L4) on $\Tstar$ rather than to attempt further
+empirical compression tests under the present proxy. The slogan is
+\(\text{proxy out, record in, observer in, polarisation in.}\)
+\end{remark}
+
+\begin{conjecture}[Canonical seam record state on the closed branch]
+\label{conj:seam-record-state}
+On the closed branch $\Tstar$ there exists a unique unit-norm seam record state
+\[
+u_\Sigma^\star
+=
+\operatorname{Norm}\bigl(
+\Padm^\star\cdot
+\operatorname{Hol}_\Sigma\bigl(\Gamma_{\mathrm{TFPT}}^{\mathrm{ren}}\bigr)\cdot
+\Omega_{\mathrm{rec}}^\star
+\bigr)
+\]
+in the boundary admissible Hilbert space, where $\Omega_{\mathrm{rec}}^\star$ is the closed-branch
+record vacuum of the record-algebra block (cf.\ \Cref{prop:global_admissible_code_subspace}) and
+$\operatorname{Hol}_\Sigma(\Gamma_{\mathrm{TFPT}}^{\mathrm{ren}})$ is the seam holonomy of the
+renormalised admissible flow. The closed-branch ergodic shell vector
+$g_{\ell m}^\star=\langle e_{\ell m},\mathcal W_\Sigma^\star u_\Sigma^\star\rangle$ of
+\TFPTxref{thm:cmb_seam_phase_realization} is then a deterministic readout of $\Tstar$ alone.
+The acceptance test is that $u_\Sigma^\star$ produces the same realised phases through the
+$T$, $E$, and $\phi$ channels of (L5).
+\end{conjecture}
+
+\begin{conjecture}[Canonical trace word on the admissible operator algebra]
+\label{conj:canonical-trace-word}
+There is a unique admissible word
+$\mathcal O_\star\in\langle U_\Sigma^\star,\Padm^\star,\taudbl^\star,\iC^\star,U_5^\star,U_6^\star\rangle$
+selected by a single stated principle on the closed branch ($D_4$-seam equivariance and
+determinant-line covariance, with naturality under change of admissible truncation), such that the
+canonical trace cocycle is
+\[
+\mathfrak c_{\ell,r}^\star
+=
+\operatorname{red}_{p_\ell}\operatorname{Tr}\bigl(\Padm^\star\,\mathcal O_\star^{(\ell,r)}\bigr).
+\]
+The variant family $\{A,B,C,D\}$ of \Cref{rem:multiplicity-audit} is a robustness audit; the
+canonical word $\mathcal O_\star$ collapses the family to a single element and removes the
+``which variant did you pick'' degree of freedom from the empirical attack surface.
+\end{conjecture}
+
+\begin{conjecture}[Polarisation cross-check]
+\label{conj:polarisation-cross-check}
+Let $\mathcal R_\Sigma^\star(\mathbf k)$ be the closed-branch realisation of the seam state per
+\TFPTxref{thm:cmb_seam_phase_realization} after canonical lift via
+\TFPTxref{conj:seam-record-state,conj:canonical-trace-word}. Then the same $\mathcal R_\Sigma^\star$
+must produce, through the closed-branch transfer kernels $\Delta_\ell^X(k)$ of (L2),
+\[
+a_{\ell m}^{T,\star},\quad
+a_{\ell m}^{E,\star},\quad
+a_{\ell m}^{B,\star},\quad
+a_{\ell m}^{\phi,\star},
+\]
+and any TT compression score $r_\ell^{T,\mathrm{Planck}}$ that is significant in the locked test
+must be matched by a corresponding TE or EE compression score within the same multipole band, up
+to the inflation-branch tensor-to-scalar ratio $r$. A TT-only compression with empty TE / EE is
+ruled inconsistent with the conjecture and identified as sample variance / look-elsewhere
+artefact.
+\end{conjecture}
+
+\begin{conjecture}[Flavored Boltzmann closure for baryogenesis]
+\label{thm:flavored_boltzmann_closure_baryogenesis}
+The heavy neutrino, family, and reheating data of the closed branch determine the flavored
+Boltzmann system
+\[
+\frac{dY_{N_i}}{dz}=-D_i(Y_{N_i}-Y_{N_i}^{eq}),
+\qquad
+\frac{dY_{\Delta_\alpha}}{dz}
+=
+\sum_i \epsilon_{i\alpha}D_i(Y_{N_i}-Y_{N_i}^{eq})-W_{i\alpha}Y_{\Delta_\alpha},
+\]
+with branch-fixed decay asymmetries and washout kernels.
+\end{conjecture}
+
+\begin{definition}[Closed-branch baryonic and dimensionless density readouts]
+\label{def:closed-branch-density-readouts}
+Let
+\[
+\Omega_b^\star
+:=
+\Bigl(1-\tfrac{1}{4\pi}\Bigr)\bigl(\phibase+\deltatop\bigr)
+\]
+denote the closed-branch baryonic fraction read off the bridge map
+$u\mapsto(\lambda_C,\beta_{\mathrm{rad}},\Omega_b,\theta_{13})$ (cf.\ \TFPTxref{thm:cosmology-closure}
+and the constants atlas). Let $\omega_a^\star$, $\omega_\nu^\star$, $\omega_r^\star$ denote the
+dimensionless density readouts $\omega_X:=\Omega_X h^2$ for the closed-branch axion, neutrino, and
+radiation sectors, all computed from the same admissible flow $\Gamma_{\mathrm{TFPT}}^{\mathrm{ren}}$
+that controls the matter sector, and let
+\[
+\eta_{100}
+:=
+\frac{H_{100}}{\Mplunred},
+\qquad
+H_{100}=100\,\mathrm{km}\,\mathrm{s}^{-1}\,\mathrm{Mpc}^{-1},
+\]
+denote the dimensionless reference-Hubble unit. With this convention one has
+\[
+\frac{8\pi}{3\eta_{100}^2}\,\frac{\Lambda_{\mathrm{IR}}}{\Mplunred^4}
+=
+\frac{\Lambda_{\mathrm{IR}}}{\rho_{\mathrm{crit},100}}
+=
+\omega_\Lambda,
+\qquad
+\rho_{\mathrm{crit},100}:=3H_{100}^2\Mpl^2,
+\]
+which fixes the conversion between the dimensionful determinant scale
+$\Lambda_{\mathrm{IR}}/\Mplunred^4$ and the dimensionless $\omega$-readouts.
+\end{definition}
+
+\begin{conjecture}[Late-time Hubble readout from the closed branch]
+\label{cor:late_time_hubble_readout}
+The present Hubble scale is a downstream readout of the closed branch, given equivalently as the
+dimensional Friedmann form
+\[
+H_0^2
+:=
+\frac{8\pi G_N}{3}\bigl(\rho_{b,0}+\rho_{a,0}+\rho_{\nu,0}+\rho_{r,0}\bigr)
++\frac{\Lambda_{\mathrm{IR}}}{3}
+\]
+or as the dimensionless closed-form readout
+\[
+\boxed{\;
+h_\star^2
+=
+\frac{
+\omega_a^\star+\omega_\nu^\star+\omega_r^\star
++\dfrac{8\pi}{3\eta_{100}^2}\,\dfrac{\Lambda_{\mathrm{IR}}^\star}{\Mplunred^4}
+}{
+1-\Omega_b^\star
+}.\;}
+\]
+Here $\Lambda_{\mathrm{IR}}^\star$ refers either to the theorem-level seam-transfer determinant of
+\TFPTxref{thm:cosmology-closure} or to its conditional numerical reductions
+$\Lambda_{\mathrm{IR}}^{\mathrm{rec}}/\Lambda_{\mathrm{IR}}^{\mathrm{car}}$ from
+\TFPTxref{cor:conditional-lambda-ir-readout}, and $\Omega_b^\star,\omega_X^\star$ are the closed-branch
+density readouts of \Cref{def:closed-branch-density-readouts}.
+\end{conjecture}
+
+\begin{remark}[Why $H_0$ is not a primitive constant of the closed branch]
+The defining input of \TFPTxref{cor:late_time_hubble_readout} is not an independent ``Hubble dial'';
+$h_\star^2$ is fully determined by the seam-transfer determinant $\Lambda_{\mathrm{IR}}^\star$ and
+the dimensionless density readouts $(\Omega_b^\star,\omega_a^\star,\omega_\nu^\star,\omega_r^\star)$.
+The compressed slogan is
+\[
+\boxed{\;H_0\ \text{is a downstream cosmology readout, not a primitive constant.}\;}
+\]
+Falsification path. Any independent measurement of the four density readouts
+$(\Omega_b,\omega_a,\omega_\nu,\omega_r)$ together with the determinant scale
+$\Lambda_{\mathrm{IR}}/\Mplunred^4$ that does not satisfy the boxed identity at the level of the
+combined experimental and rank-one bounds of \TFPTxref{cor:ir-seam-transfer-bounds} kills the closed-form
+$H_0$ readout. Conversely, if all five inputs are independently fixed, then the
+$H_0$ tension between local distance ladders and CMB-anchored inferences becomes a quantitative test
+of the seam-transfer determinant rather than an independent free parameter.
+\end{remark}
+
+\begin{conjecture}[Matter power spectrum readout]
+\label{cor:matter_power_spectrum_readout}
+The late time matter spectrum is
+\[
+P_m(k,z)=\frac{2\pi^2}{k^3}\,\mathcal P_{\mathcal R}(k)\,T^2(k)D^2(z).
+\]
+\end{conjecture}
+
+\subsection{[P] Late time dark sector and structure growth}
+
+\begin{conjecture}[Axion Schr\"odinger Poisson closure on the late-time branch]
+\label{thm:axion_schrodinger_poisson_closure}
+The late-time axion sector is governed by
+\[
+i\partial_t\psi
+=
+-\frac{\nabla^2}{2m_a}\psi+m_a\Phi_N\psi+\frac{\lambda_a}{8m_a^2}|\psi|^2\psi,
+\qquad
+\nabla^2\Phi_N=4\pi G_N(\rho_b+m_a|\psi|^2).
+\]
+\end{conjecture}
+
+\begin{conjecture}[No fuzzy halo regime on the canonical branch]
+\label{cor:no_fuzzy_halo_regime}
+For the branch axion mass readout, galactic-scale halos lie in the cold and effectively
+collisionless regime rather than in an ultralight fuzzy regime.
+\end{conjecture}
+
+\begin{conjecture}[Relative admissible vacuum energy finiteness]
+\label{thm:relative_admissible_vacuum_energy_finiteness}
+The vacuum energy density on the admissible branch is the finite relative quantity
+\[
+\rho_{\mathrm{vac}}^{\mathrm{TFPT}}
+:=
+\frac1V\left[-\log Z_{\mathrm{rel}}^{\Padm}+\Re\log\det_{\zeta,\Padm}(D^2+\mu^2)+\frac12\eta_{\Sigma,\Padm}\right].
+\]
+\end{conjecture}
+
+\subsection{[P] Pole masses, Higgs readout, and full flavor output}
+
+\begin{definition}[Scheme-fixed Yukawa kernel and admissible RG readout]
+\label{def:scheme-fixed-yukawa-kernel}
+Let
+\[
+M_f^{(0)}=\frac{\vgeo}{\sqrt2}Y_f^\star,
+\qquad
+(Y_f^\star)_{ij}
+=
+\lambda_Y^{L_{f,i}^L+L_{f,j}^R}
+\langle e_i,\mathrm{Hol}_{\Gamma_{ij}^{\min}}(\nabla_F^\star)e_j\rangle,
+\]
+and let $\Gamma_{\mathrm{TFPT}}^{\mathrm{ren}}$ denote the renormalized admissible flow. For every
+mass-independent renormalization scheme $\mathcal S\in\{\overline{\mathrm{MS}},\mathrm{RI},\dots\}$
+and every renormalization scale $\mu$, the closed-branch \emph{quark mass readout} is the
+scheme-and-scale-fixed map
+\[
+m_q^{\mathcal S}(\mu)
+:=
+\mathcal R_{\mathcal S,\mu}\bigl[Y_q^\star,\Gamma_{\mathrm{TFPT}}^{\mathrm{ren}}\bigr],
+\qquad
+\mathbf m_q^{\mathrm{TFPT}}(\mathcal S,\mu)
+:=
+\bigl(m_u^{\mathcal S}(\mu),m_d^{\mathcal S}(\mu),m_s^{\mathcal S}(\mu),
+m_c^{\mathcal S}(\mu),m_b^{\mathcal S}(\mu),m_t^{\mathcal S}(\mu)\bigr).
+\]
+\end{definition}
+
+\begin{conjecture}[Quark masses as scheme-fixed RG readouts of the closed branch]
+\label{thm:closed_pole_mass_completion}
+The full quark mass spectrum on the closed branch is given by the readout of
+\TFPTxref{def:scheme-fixed-yukawa-kernel}: each $m_q^{\mathcal S}(\mu)$ is determined by the same
+renormalized admissible flow $\Gamma_{\mathrm{TFPT}}^{\mathrm{ren}}$ that controls the lepton sector,
+together with the closed-branch Yukawa data $Y_q^\star$.
+\end{conjecture}
+
+\begin{conjecture}[Hadron pole masses as singlet spectrum of the admissible QCD Hamiltonian]
+\label{thm:hadron_pole_masses_singlet_spectrum}
+The physical hadron mass spectrum is the gauge-invariant pole spectrum
+\[
+m_{\mathrm{had}}^{\mathrm{pole}}
+=
+\mathrm{Spec}_{\mathrm{singlet}}
+\bigl[\mathcal H_{\mathrm{QCD}}^{\mathrm{TFPT}}\bigr],
+\]
+where $\mathcal H_{\mathrm{QCD}}^{\mathrm{TFPT}}$ is the admissible QCD Hamiltonian determined by the
+closed-branch couplings, masses, and admissibility projector $\Padm$, and the singlet selection is
+the hadronic admissibility projector of the singlet algebra $\Asing$ developed in the hadronic
+admissibility block of closure architecture~B. The closed pole
+masses of charged leptons and the electroweak scale, in contrast, are read off directly from the
+Källén--Lehmann pole structure of the admissible propagator on $\Padm$, since these states appear as
+free asymptotic carriers in the LSZ closure of \Cref{thm:tailored-os-car-reconstruction}.
+\end{conjecture}
+
+\begin{remark}[Why \emph{quark} pole masses are not a TFPT output]
+Color-charged quarks do not appear as free asymptotic states in the admissible LSZ closure. A
+sentence of the form ``the physical pole masses of the six quarks are predicted'' therefore would be
+ontologically inconsistent with the closed-branch dynamics on $\Padm$. The closed branch produces
+exactly two physically distinct mass categories: scheme-fixed RG readouts
+$\mathbf m_q^{\mathrm{TFPT}}(\mathcal S,\mu)$ for the quarks, and gauge-invariant pole masses
+$m_{\mathrm{had}}^{\mathrm{pole}}$ for color singlets. The compressed slogan is
+\[
+\boxed{\text{quark masses are scheme-fixed RG readouts; hadron masses are physical poles.}}
+\]
+Falsification path. The conjectural content is killed if any future first-principles lattice or
+flow computation produces a $\mathbf m_q^{\mathrm{TFPT}}(\mathcal S,\mu)$ inconsistent with the
+admissible-branch Yukawa data $Y_q^\star$ at the matching scale, or if the singlet spectrum of
+$\mathcal H_{\mathrm{QCD}}^{\mathrm{TFPT}}$ disagrees with the measured hadron pole masses beyond the
+flow-resummation error of $\Gamma_{\mathrm{TFPT}}^{\mathrm{ren}}$.
+\end{remark}
+
+\begin{conjecture}[Higgs pole readout from the admissible RG branch]
+\label{thm:higgs_pole_readout_rg_branch}
+The Higgs pole mass is determined by the renormalized branch data through
+\[
+m_h^2=2\lambda_H^{\mathrm{phys}}v_{\mathrm{phys}}^2+\delta_{\mathrm{sc}},
+\]
+where \(\lambda_H^{\mathrm{phys}}\) is read from the admissible RG branch and
+\(\delta_{\mathrm{sc}}\) is the scalaron mixing correction.
+\end{conjecture}
+
+\subsection{[P] Admissible code subspace, entanglement, and pointer dynamics}
+
+\begin{conjecture}[Global admissible code subspace and emergent pointer reduction]
+\label{prop:global_admissible_code_subspace}
+The physical sector is the global admissible code subspace
+\[
+\mathcal H_{\mathrm{adm}}=\operatorname{Ran}(\Padm)=\ker\Delta_{\mathrm{adm}},
+\]
+and supports stable record algebras and pointer reductions of the form
+\[
+\mathcal M_O(\rho)=\sum_i (P_i\rho P_i)\otimes |i\rangle\langle i|.
+\]
+\end{conjecture}
+
+\subsection{[P] Topological transient channels and astrophysical bursts}
+
+\begin{conjecture}[Topological phase slip burst channel]
+\label{conj:topological_phase_slip_burst_channel}
+Local determinant phase slips of the compact mode \(a_\Sigma\) can source transient
+radio bursts with characteristic energy scale
+\[
+E_{\mathrm{burst}}\sim \epsilon\,4\pi R_c^2T_{\mathrm{wall}},
+\qquad
+T_{\mathrm{wall}}\sim 8f_a^2m_a,
+\]
+and photon conversion power
+\[
+P_{a\to\gamma}\sim g_{a\gamma\gamma}^2B^2L^2\dot a_\Sigma^2.
+\]
+\end{conjecture}
+
+\begin{remark}[Status of the transient channel]
+The transient channel is recorded as a programmatic closure target and not as a theorem. A full
+proof requires a closed defect dynamics and radiative transfer treatment.
+\end{remark}
+
+
+% ---- Full appendix, comparison backend, novelty positioning, and bibliography: source lines 12896-15051 ----
+\section{Appendix-level empirical readout}
+\label{sec:appendix-empirical-readout}
+\label{app:comparison}
+
+This appendix does not define the theorem-level physical observable object itself. The canonical
+scheme-facing object is the orbit
+\[
+[\Mop(\Tstar)]_{\SchGrp}.
+\]
+The tables below record only chosen representatives
+\[
+\begin{aligned}
+\Rcmp^{(s)}(\Tstar)
+&:=
+\Mscheme^{(s)}\!\bigl(\Mphys(\Rren(\Tstar))\bigr).
+\end{aligned}
+\]
+in declared scheme objects $s\in\SchGrp$. The appendix is therefore the carrier of the comparison
+map $\Rcmp(\Tstar)$ and remains hard-separated from the theorem chain
+\TFPTeqref{eq:closed-output-chain}, from the renormalized observable passage
+\[
+\Tstar\xrightarrow{\Rren}\GrenTFPT\xrightarrow{\Mphys}\OphysTFPT,
+\]
+and from the structural falsification map $\Ffals(\Tstar)$ of
+\TFPTxref{sec:structural-falsification-map}.
+
+The empirical reference values used in this section follow representative CODATA, PDG, NuFIT, Planck,
+and birefringence references
+\cite{codata2022,pdg2025,nufit2025,planck2018,minamiKomatsu2020,eskilt2023,sullivan2025}. The
+kaon comparison rows use the published NA62 observation, its current preliminary combined update,
+and the current KOTO bound \cite{na62obs2025,na62Moriond2026,koto2024}. The
+snapshot policy is frozen at CODATA 2022 / NIST for $\alpha(0)$, PDG 2025 for particle-mass and
+weak-mixing rows, NuFIT 2025 for neutrino-angle rows, and Planck 2018 for the baryon-fraction
+reconstruction used here. This section is not part of the closed theorem chain; it records only
+the readout conventions used when closed outputs are brought into contact with external data.
+The table below is intentionally restricted to six rows whose readout language is already
+convention-complete under the declared interface. The broader mass readout surfaces and source
+ledgers are collected in Appendix~\TFPTxref{app:benchmarks}. Beyond that narrow six-row surface, the
+manuscript also carries a
+small operational prediction set of experimentally actionable rows, collected explicitly below.
+The $\Omega_b$ row is a present-epoch reconstruction from the Planck pair $(\Omega_b h^2,H_0)$,
+not a claim that $\Omega_b(t)$ itself is a timeless UV quantity. Here \enquote{carrier-form
+closure equation} abbreviates the exact electromagnetic closure equation built from the exact seam generating
+function $\phiseam(\alpha)$. The rows $(\beta,\Omega_b,\lambda_C,\sin^2\theta_{13})$ are no longer
+read as one seed package: they are assigned respectively to determinant response, cosmology
+closure, exact CKM closure, and exact neutrino closure.
+
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\resizebox{0.95\linewidth}{!}{%
+\begin{tabular}{@{}lllrrrrll@{}}
+\toprule
+\makecell[l]{Obs.} & \makecell[l]{TFPT\\formula} & \makecell[l]{Metrology\\readout} & \makecell[r]{TFPT\\value} & \makecell[r]{Exp.\\value} & \makecell[r]{Unc.} & \makecell[r]{Residual} & \makecell[l]{Scale /\\scheme} & Status \\
+\midrule
+$\alpha^{-1}(0)$ & \makecell[l]{exact electromagnetic closure\\$\phiseam(\alpha)$} & \makecell[l]{$d_O=0$\\direct readout} & \num{137.0359992} & \num{137.03599918} & \num{2.1e-8} & $+1.87\sigma$ & \makecell[l]{Thomson\\on-shell} & physical observable \\
+\makecell[l]{$\bar\alpha^{(5)}$\\$(M_Z)^{-1}$} & \makecell[l]{$\mathcal R_{\SM}$\\$[\alpha(0)]$} & \makecell[l]{$d_O=0$\\scheme image} & \num{127.9405} & \num{127.93} & \num{0.008} & $+1.32\sigma$ & \makecell[l]{$\overline{\mathrm{MS}}$\\at $M_Z$} & scheme projection \\
+$\lambda_C$ & \makecell[l]{$s_{12}(V_{\mathrm{CKM}}^\star)$\\from hard flavor closure} & \makecell[l]{$d_O=0$\\direct readout} & \num{0.22438} & \num{0.22431} & \num{8.5e-4} & $+0.08\sigma$ & \makecell[l]{CKM\\physical angle} & physical observable \\
+$\sin^2\theta_{13}$ & \makecell[l]{$|(U_{\mathrm{PMNS}}^\star)_{e3}|^2$\\from neutrino closure} & \makecell[l]{$d_O=0$\\direct readout} & \num{0.02311} & \num{0.02224} & \num{5.7e-4} & $+1.524\sigma$ & \makecell[l]{NuFIT\\NO} & physical observable \\
+$\Omega_b$ & \makecell[l]{late-time cosmology\\comparison from\\$(T_R,\eta_B,\Omega_a)$} & \makecell[l]{$d_O=0$\\$C_{\mathrm{cos}}$ readout} & \num{0.04894} & \num{0.04930} & \num{8.57e-4} & $-0.421\sigma$ & \makecell[l]{Planck 2018\\present epoch\\from $\Omega_b h^2$} & cosmology comparison \\
+$\beta$ & \makecell[l]{determinant-line /\\Chern--Simons response} & \makecell[l]{$d_O=0$\\$\beta_{\mathrm{rad}}$} & \num{0.242} & \num{0.35} & \num{0.14} & $-0.77\sigma$ & \makecell[l]{Planck 2018\\Minami--Komatsu} & physical observable \\
+\bottomrule
+\end{tabular}}
+\caption{Restricted appendix benchmark table. The rows are separated into physical observables,
+cosmology comparisons, and scheme projections under the declared interface. The former seed quartet
+is now split across flavor, neutrino, determinant-response, and cosmology sectors. The metrology
+column records the actual dimensionless TFPT readout, while the numeric comparison column records
+only the chosen interface representative. Supplementary rows and out-of-sample checks are collected
+in Appendix~\TFPTxref{app:benchmarks}.}
+\label{tab:benchmark}
+\end{table}
+
+\begin{remark}[Former seed quartet after the sector split]
+The appendix still retains the exact UV identities driven by $\phiz$, and at that UV bookkeeping
+level the quartet is still read as four projections of the single decoder $u:=\phiz$. What is no
+longer claimed is that these rows form one operational independence class of physical observables.
+The rows $\beta$, $\Omega_b$, $\lambda_C$, and $\sin^2\theta_{13}$ now factor through
+$R_{\mathrm{CS}}$, $C_{\mathrm{cos}}$, $F_{\mathrm{fl}}$, and $N_\nu$, respectively. What remains
+true is the auxiliary UV identity
+\[
+\beta_{\mathrm{rad}}=\frac{\phiz}{4\pi},
+\qquad
+\Omega_b=(4\pi-1)\beta_{\mathrm{rad}},
+\qquad
+\lambda_C=\sqrt{\phiz(1-\phiz)},
+\qquad
+\sin^2\theta_{13}=\phiz e^{-\gamma},
+\]
+on the retained branch. It is useful as UV bookkeeping, but it no longer defines the operational
+independence classes of the observable layer.
+\end{remark}
+
+\begin{corollary}[UV seed-shadow identities on the retained branch]
+\label{cor:retained-seed-factorization}
+In the appendix UV bookkeeping layer the retained seed $\phiz$ satisfies
+\[
+\phiz
+=
+4\pi\beta_{\mathrm{rad}}
+=
+\Omega_b+\beta_{\mathrm{rad}}
+=
+\frac{1-\sqrt{1-4\lambda_C^2}}{2}
+=
+e^{\gamma}\sin^2\theta_{13}.
+\]
+These identities are auxiliary UV shadows of the retained branch. They do not replace the sector
+factorization of the physical observable layer established in
+\TFPTxref{thm:operational-completeness,cor:no-double-counting}.
+\end{corollary}
+
+\begin{proof}
+Combine the seed map, the Cabibbo inversion \TFPTeqref{eq:cabibbo-inversion}, and the exact
+seed-budget identity \TFPTeqref{eq:seed-budget-identity}. The last claim is immediate.
+\end{proof}
+
+\subsection{Operational prediction set}
+
+The narrow empirical readout table is not the whole experimental surface of the manuscript.
+\Cref{tab:operational-prediction-set} collects the rows that are operationally testable on near-
+to medium-term timescales, while keeping their status, next test, kill criterion, and dependency
+structure explicit. The point is not to flatten them into one truth class. Rather, the
+\emph{Status} column now uses only the manuscript's final output vocabulary, and the derivation
+and dependency columns show which rows are direct theorem outputs and which are appendix-level
+readout images under the declared threshold map. The electroweak triple
+$(m_W,\hat s_Z^2,\alpha_s)$ is omitted here only for compactness; by
+the appendix-level empirical readout remark following \TFPTxref{cor:no-alternatives-tfpt} these rows
+already belong to the appendix-level empirical readout. The first three rows emphasize the two
+independent theorem-level targets and the strong-CP null test; the remaining rows record
+second-line flavor and neutrino probes.
+
+\begin{table}[t]
+\centering
+\tiny
+\sisetup{round-mode=none, group-minimum-digits=20}
+\setlength{\tabcolsep}{0.3pt}
+\renewcommand{\arraystretch}{0.95}
+\sloppy
+\makebox[\linewidth][c]{\resizebox{0.87\linewidth}{!}{%
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.09\linewidth}>{\raggedright\arraybackslash}p{0.13\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.11\linewidth}@{}}
+\toprule
+\makecell[l]{Observable} & \makecell[l]{TFPT\\target} & Status & \makecell[l]{Derivation\\source} & \makecell[l]{Next\\test} & \makecell[l]{Kill\\criterion} & \makecell[l]{Dependency\\class} \\
+\midrule
+\makecell[l]{Cosmic\\birefringence $\beta$} & \num{0.2424}$^\circ$ & \makecell[l]{Physical\\observable} & \makecell[l]{determinant-line /\\Chern--Simons response} & \makecell[l]{calibrated CMB\\rotation analysis} & \makecell[l]{calibrated $\beta=0$\\within $\pm \num{0.05}^\circ$} & \makecell[l]{determinant\\response} \\
+$\theta_{\mathrm{eff}}=0$ / \makecell[l]{nEDM null\\test} & $\theta_{\mathrm{eff}}=0$ & \makecell[l]{Theorem} & \makecell[l]{determinant-line\\strong-CP closure} & \makecell[l]{next-gen EDM\\searches} & \makecell[l]{stable nonzero\\hadronic EDM signal} & \makecell[l]{strong-CP\\closure} \\
+\makecell[l]{Axion haloscope\\window} & \makecell[l]{$m_a\approx \num{65.19}$\\$\mu\mathrm{eV}$\\$\nu_a\approx \num{15.764}$\\$\mathrm{GHz}$} & \makecell[l]{Cosmology\\readout target} & \makecell[l]{determinant line /\\seam transfer /\\scalaron block} & \makecell[l]{haloscope scan\\near \num{15.764} GHz} & \makecell[l]{exclusion in\\\num{15.764} GHz\\$\pm \num{50}$ MHz} & \makecell[l]{cosmology\\readout} \\
+$\delta_{\mathrm{CKM}}$ & \makecell[l]{\num{1.198}\\rad} & \makecell[l]{Comparison\\quantity} & \makecell[l]{exact holonomy\\phase / phase lattice} & \makecell[l]{global flavor\\fit} & \makecell[l]{exclusion at\\$\ge 3\sigma$} & \makecell[l]{flavor\\readout} \\
+\makecell[l]{Rare kaons\\$K\to\pi\nu\bar\nu$} & \makecell[l]{$\mathrm{BR}(K^+)$\\$=\num{9.40e-11}$\\$\mathrm{BR}(K_L)$\\$=\num{3.47e-11}$} & \makecell[l]{Comparison\\quantity} & \makecell[l]{exact CKM point in\\short-distance\\amplitudes} & \makecell[l]{NA62 current\\result / KOTO\\program} & \makecell[l]{$K^+$ outside\\$[7,12]\times10^{-11}$\\or $K_L$ mismatch} & \makecell[l]{flavor\\readout} \\
+\makecell[l]{PMNS phase /\\octant} & \makecell[l]{$\delta_{\mathrm{CP}}=240^\circ$\\$\sin^2\theta_{23}=\num{0.4557}$} & \makecell[l]{Comparison\\quantity} & \makecell[l]{neutrino closure /\\phase lattice} & \makecell[l]{global oscillation\\fit} & \makecell[l]{exclude $240^\circ$\\or lower octant\\at $\ge 3\sigma$} & \makecell[l]{neutrino\\readout} \\
+$\Sigma m_\nu$ & \makecell[l]{\num{5.8764e-2}\\eV} & \makecell[l]{Comparison\\quantity} & \makecell[l]{neutrino closure\\(NO)} & \makecell[l]{cosmological\\mass-sum analyses} & \makecell[l]{robust upper bound\\below the branch value} & \makecell[l]{neutrino\\readout} \\
+$m_{\beta\beta}$ & \makecell[l]{\num{1.516e-3}\\eV} & \makecell[l]{Comparison\\quantity} & \makecell[l]{Majorana lattice\\on the closed\\neutrino branch} & \makecell[l]{light-Majorana\\$0\nu\beta\beta$ searches} & \makecell[l]{detection implying\\$m_{\beta\beta}\gtrsim$\\$\num{1e-2}$ eV} & \makecell[l]{neutrino\\readout} \\
+\bottomrule
+\end{tabular}}}
+\caption{Operational prediction set with explicit status and dependency classes.}
+\label{tab:operational-prediction-set}
+\end{table}
+
+\begin{remark}[Current rare-kaon status]
+At the time of this version, the combined preliminary NA62 analysis of 2016--2024 data gives
+\[
+\mathrm{BR}(K^+\to\pi^+\nu\bar\nu)=\left(9.6^{+1.9}_{-1.8}\right)\times10^{-11},
+\]
+which lies inside the quoted TFPT corridor and close to the branch target
+$\mathrm{BR}(K^+\to\pi^+\nu\bar\nu)=\num{9.40e-11}$ \cite{na62Moriond2026}. In the present paper
+this is recorded as support for the appendix-level flavor readout, not as an additional theorem.
+The neutral channel remains open; the current KOTO bound is
+\[
+\mathrm{BR}(K_L\to\pi^0\nu\bar\nu)<\num{2.2e-9}
+\]
+at $90\%$ C.L. \cite{koto2024}.
+\end{remark}
+
+\begin{remark}[Independence classes]
+The dependency labels are theorem-backed by
+\TFPTxref{thm:operational-completeness,cor:no-double-counting}. They identify basis packages of
+$\Bind(\Tstar)$ rather than informal clusters only. The rightmost column in
+\Cref{tab:operational-prediction-set} therefore records dependency structure rather than truth
+value. \emph{Determinant response} means a row is carried by the determinant-line / Chern--Simons
+sector; \emph{flavor readout} means it is downstream of the exact CKM transport output;
+\emph{neutrino readout} means it belongs to the closed neutrino branch; \emph{closure} means it is
+a direct consequence of an admissibility-closure theorem; and \emph{cosmology readout} means it is
+generated by the cosmology block and then, if needed, represented on the appendix interface. This
+keeps statistical and logical non-independence visible at the same place where the experimental
+targets are listed.
+\end{remark}
+
+\subsection{Basis factorization of readout rows}
+
+To make the renormalized / physical / scheme hierarchy explicit row by row, the visible appendix
+surface factors through the basis packages of $\Bind(\Tstar)$ as follows.
+
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.30\linewidth}>{\raggedright\arraybackslash}p{0.16\linewidth}YY@{}}
+\toprule
+Representative readout row(s) & Basis package in $\Bind(\Tstar)$ & Declared factorization map & Readout block \\
+\midrule
+$\alpha^{-1}(0)$ & $C_{\mathrm{em}}$ & exact electromagnetic closure via $\phiseam(\alpha)$ & benchmark surface \\
+$\phiz$ together with \Cref{cor:retained-seed-factorization} & $K_{\mathrm{UV}}$ & retained UV seed identities on the closed branch & UV bookkeeping \\
+{\makecell[l]{$(\bar\alpha^{(5)}(M_Z)^{-1},\overline{\mathrm{MS}}\text{ masses},$\\$\hat s_Z^2,\alpha_s)$}} & $T_{\mathrm{phys}}$ & scheme projection of the physical electroweak layer & threshold readout rows \\
+$(\lambda_C,\delta_{\mathrm{CKM}},K\to\pi\nu\bar\nu)$ & $F_{\mathrm{fl}}$ & flavor-holonomy and short-distance flavor readout maps & benchmark / operational flavor rows \\
+{\makecell[l]{$(\sin^2\theta_{13},\delta_{\mathrm{CP}}^\nu,\sin^2\theta_{23},$\\$\Sigma m_\nu,m_{\beta\beta},M_R)$}} & $N_{\nu}$ & neutrino-closure readout on the closed branch & benchmark / operational neutrino rows \\
+$\beta$ & $R_{\mathrm{CS}}$ & determinant-line / Chern--Simons response map & benchmark / operational response rows \\
+$\theta_{\mathrm{eff}}$ and nEDM / strong-CP rows & $C_{\mathrm{CP}}$ & determinant-line strong-CP closure on the admissible branch & operational prediction set \\
+{\makecell[l]{$(\Omega_b,S_\Sigma,\Lambda_{\mathrm{IR}},T_R,f_a,$\\$m_a,\nu_a,\Omega_{\mathrm{DM}},\eta_B)$}} & $C_{\mathrm{cos}}$ & seam-transfer / determinant-line / scalaron readout from the closed branch & cosmology and axion rows \\
+\bottomrule
+\end{tabularx}
+\caption{Basis factorization of the appendix-level readout rows. Each displayed row factors through
+exactly one basis package of $\Bind(\Tstar)$ under the declared physical / scheme hierarchy.}
+\label{tab:basis-factorization}
+\end{table}
+
+\subsection{Compact prediction ledger}
+
+The main empirical readout table shows only a narrow readout surface. To keep the output
+structure visible, \Cref{tab:prediction-ledger} summarizes which output packages belong to which
+layer of the paper.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.18\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}YY@{}}
+\toprule
+Domain & Status & Output package & Source layer \\
+\midrule
+Carrier packet & Theorem & $E_3\oplus E_2$, $G_{\mathrm{car}}$, $S^+$, $\gamma$, $\bone(N_{\mathrm{fam}},N_\Phi)$ & algebraic normal-form lemma, bosonic-rank corollary, branch-Yukawa rigidity theorem, and half-spinor decomposition \\
+Kernel constants & Theorem & $\cthree$, $\phibase$, $\phiz$, $\deltatop$ & exact seam opening and carrier-form closure equation \\
+Family / occupancy layer & Theorem & $\Padm$, $F$, $\Oadm=48$, $\deltatop$ & derived corner theorem, admissibility complex, and occupancy corollary \\
+Geometric branch & Theorem & $\Phi$, $\Mpl$, $\vgeo$, $R^2$ channel & compact bosonic index plus canonical spectral Einstein functional \\
+Renormalized low-energy layer & Theorem & $\GrenTFPT$, charged-current point closure, $v_{\mathrm{phys}}$, pole equations, determinant response, cosmology interface data & charged seam projector lemma, pole-level readout theorem, and renormalized observable hierarchy \\
+Transport / flavor closure & Theorem & $Y_f$, CKM, PMNS & residue--winding closure, hard holonomy theorem, and neutrino closure \\
+Hadronic / strong-CP closure & Theorem & $\Hhad$, anomaly inflow, $\arg\det M_u=\arg\det M_d=0$ & singlet admissibility plus hard-holonomy determinant suppression \\
+Physical observables & Physical observable & $\OphysTFPT$ including pole masses, mixing data, determinant responses, and closed-branch interface packages before late-time cosmology continuation & renormalized observable hierarchy and sector factorization \\
+Scheme projections & Scheme projection & $[\Mop(\Tstar)]_{\SchGrp}$ represented by $\Rcmp^{(s)}(\Tstar)$, threshold rows, and ledgers & declared scheme conventions and appendix comparison maps \\
+Cosmology block & Appendix continuation & $\Lambda_{\mathrm{IR}}$, $\theta_i$, $N_{\mathrm{DW}}$, $T_R$, and the cosmology interface block & seam transfer, determinant line, scalaron dynamics, and comparison-layer continuation \\
+Record layer & Appendix continuation & $\Arec$, $\Aobs$, $\Pred$ & appendix-level record and readout algebra elaboration \\
+Appendix continuation & Appendix continuation & E$_8$ scale ratios and modular inner-seam language & appendix-level scale grammar and horizon extension \\
+\bottomrule
+\end{tabularx}
+\caption{Compact prediction ledger for the closed-form presentation after the main-text surface is
+split into theorem outputs, physical observables, scheme projections, and appendix continuations.}
+\label{tab:prediction-ledger}
+\end{table}
+
+\subsection{Empirical readout and kill-test logic}
+
+The present main-text readout surface is no longer intentionally mixed. Its rows now use the
+manuscript's closed classes: theorem, physical observable, scheme projection, and appendix
+continuation. Carrier algebra and the exact $\alpha$ row remain the sharpest numerically
+load-bearing entries, while the former seed-driven rows are now reorganized by sector rather than
+counted as one compressed shadow package. The transport block is generative up to physical readout,
+the neutrino block is read on the same closed branch, and the electroweak threshold rows appear
+only as scheme projections. What remains outside this main-text surface is appendix continuation,
+not unresolved theorem load hidden in the core.
+
+\subsection{Residual readout and interface refinements}
+
+The residuals for the restricted six-row readout table are shown in
+\Cref{fig:residual-plot}. The carrier-linked electromagnetic, birefringence, and baryon-density
+channels all remain within the displayed few-sigma window. The CKM phase is not plotted here
+because it is better treated in the operational prediction set and Appendix~\TFPTxref{app:benchmarks}
+rather than inside the restricted six-row residual plot.
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=0.9\linewidth,
+    height=6.4cm,
+    xbar,
+    bar width=7pt,
+    xmin=-1.2,
+    xmax=2.1,
+    xlabel={signed residual in units of $\sigma$},
+    symbolic y coords={beta,omegab,theta13,lambdac,alphaMZ,alpha0},
+    ytick=data,
+    yticklabels={$\beta$,$\Omega_b$,$\sin^2\theta_{13}$,$\lambda_C$,$\bar\alpha^{(5)}(M_Z)^{-1}$,$\alpha^{-1}(0)$},
+    enlarge y limits=0.12,
+    axis x line*=bottom,
+    axis y line*=left,
+    tick align=outside,
+    major grid style={draw=gray!30},
+    xmajorgrids=true
+]
+\addplot[fill=blue!45, draw=blue!70!black] coordinates {
+    (-0.768,beta)
+    (-0.421,omegab)
+    (1.524,theta13)
+    (0.078,lambdac)
+    (1.315,alphaMZ)
+    (1.865,alpha0)
+};
+\end{axis}
+\end{tikzpicture}
+\caption{Residual plot for the main empirical readout rows with declared uncertainties.}
+\label{fig:residual-plot}
+\end{figure}
+
+The principal remaining refinements are therefore specific rather than diffuse:
+\begin{itemize}[leftmargin=1.5em, topsep=3pt, itemsep=2pt]
+    \item the CKM phase is read from the exact holonomy phase, with only the small-area transport asymptotic kept as a derived expansion,
+    \item the nonabelian comparison channels now split into fixed local kernel data and explicit matching functionals, so the remaining sensitivity is numerical rather than structural,
+    \item direct-search interface rows remain pressure tests on the closed branch rather than precision residual rows.
+\end{itemize}
+
+\section{Technical conventions and data layers}
+\label{app:tech}
+
+This appendix collects the technical bookkeeping that supports the boundary-to-carrier presentation but would slow the early main-text flow if placed before the carrier theorem.
+
+\subsection{Relative objects}
+
+The adjective \enquote{relative} is used in one fixed sense throughout the paper: every operator or action is compared to a declared reference object.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.22\linewidth}YY@{}}
+\toprule
+Relative object & Definition or schematic form & Role \\
+\midrule
+$D_{\mathrm{rel}}$ & $D-D_{\mathrm{ref}}$ or a specified relative pair $(D,D_{\mathrm{ref}})$ & fermionic comparison operator \\
+$\Gamma_{\mathrm{grav}}$ & $-6\chigeo^2\mathcal E_D+\Gamma_D^{(4)}$ with $\mathcal E_D=\operatorname*{Res}_{s=1}\mathcal Z_{\mathrm{rel}}$ and $\Gamma_D^{(4)}=\operatorname{FP}_{s=0}\mathcal Z_{\mathrm{rel}}$ & canonical spectral Einstein functional from relative residues \\
+$\Gamma_{\mathrm{rel}}$ & admissible relative action preserved by the sheet antiunitary involution & strong-CP and reflection-symmetry package \\
+$\Ind_{\mathrm{rel}}$ & APS-type index of a relative pair or superconnection package & carrier and bosonic counting \\
+$Z_{\mathrm{rel}}$ & $Z_{\mathrm{adm}}[J,\eta,\bar\eta]/Z_{\mathrm{ref}}[0,0,0]$ & normalized admissible generating functional \\
+$\Padm$ & $\operatorname*{s-lim}_{\beta\to\infty}e^{-\beta\Kadm}$; factorized form when the elementary projectors commute & operative admissibility selector on the closed branch \\
+$\langle W(C)\rangle_{\mathrm{rel}}$ & Wilson observable after subtraction of the declared reference sector & confinement diagnostics \\
+$\mathcal H_{\mathrm{rel}}$ & relative Hamiltonian used in admissible-sector minimization & optional record extension \\
+\bottomrule
+\end{tabularx}
+\caption{Conventions on relative objects.}
+\label{tab:relative-objects}
+\end{table}
+
+\subsection{Layered datum and admissibility}
+
+\begin{construction}[Layered datum]
+The technical bookkeeping behind the manuscript uses five levels:
+\[
+\Tcore^{\mathrm{kin}}
+=
+\bigl(
+\widetilde M\to M,\ \Seam,\ \taudbl,\ \iC,\ D_{\mathrm{ref}},\ D_{\mathrm{rel}},\ f,\ \chiseed
+\bigr),
+\]
+\[
+\Tker^\partial
+:=
+\bigl(
+(\mathcal A,\mathcal H,D,J,\Gamma,\taudbl,\iC,\Pprim),\ [u_\Sigma],\ \cthree
+\bigr),
+\]
+\[
+\Tker
+=
+\bigl(
+(\mathcal A,\mathcal H,D,J,\Gamma,\iC,\Pprim,\Padm),\ E_3\oplus E_2,\ Y,\ [u_\Sigma],\ \cthree
+\bigr),
+\]
+\[
+\Tbridge
+=
+\bigl(
+\mathcal R_{\SM},\ \alpha(0),\ M_Z,\ \{m_c,m_b,m_\tau,m_t\}
+\bigr),
+\]
+\[
+\Tcomp
+=
+\left(
+\begin{array}{l}
+(\mathsf{Adm},\Kadm,\Padm),\ (\chigeo,\mathcal B_{\mathrm{rel}},\mathbb A_{\Seam}),\ (F,T),\\
+(U_6,D_y,\mathcal Y_y^{(\varepsilon)},\epsilon_f),\ (Z_{\mathrm{rel}},\Theta,\Hrel,\Vadm),\\
+(\Arec,\Aobs,\Pred)
+\end{array}
+\right).
+\]
+Here $\Tker^\partial$ is the primitive boundary kernel, while $\Tker$ is the derived theorem-level
+post-carrier kernel reconstructed from the joint discrete datum and the full selector.
+\end{construction}
+
+Thus $\Tcore^{\mathrm{kin}}$ is the appendix bookkeeping rewrite of the primitive kinematic
+scaffold, while $\mathsf{Adm}$ first enters the layered datum only at closure level through
+$(\mathsf{Adm},\Kadm,\Padm)$. When an almost-commutative factorization
+$\mathcal H\cong L^2(\widetilde M,S)\otimes\Hint$ is chosen, $S$ and $\Hint$ refer to that
+factorization and are not additional entries in $\Tcore^{\mathrm{kin}}$.
+
+Optional horizon and far-downstream E$_8$ data are kept outside this compact layered datum and are introduced only in the dedicated appendix-level extension.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.31\linewidth}>{\raggedright\arraybackslash}p{0.13\linewidth}Y@{}}
+\toprule
+Level & Objects & Claim role & Function in the present paper \\
+\midrule
+Core datum & $\Tbound$, $\widetilde M\to M$, $\Seam$, $\taudbl$, $\iC$, $D_{\mathrm{ref}}$, $D_{\mathrm{rel}}$, $\chiseed$ & Boundary datum / theorem & one-sided input plus minimal kinematic scaffold before carrier data and admissibility closure; $S$ and $\Hint$ refer only to a chosen realization \\
+Post-carrier primitive kernel & $(\mathcal A,\mathcal H,D,J,\Gamma,\iC,\Pprim,\Padm)$, $E_3\oplus E_2$, $Y$, $[u_\Sigma]$, $\cthree$ & Theorem & primitive closure kernel carrying the admissibility, carrier, and seam-normalization data before the discrete/continuous branch split \\
+Closure data & $(\mathsf{Adm},\Kadm,\Padm)$, $(F,T)$, $(D_{\mathrm{geo}},\chigeo,\mathcal B_{\mathrm{rel}},\mathbb A_{\Seam})$, $(U_6,D_y,\mathcal Y_y^{(\varepsilon)},\epsilon_f)$, $(Z_{\mathrm{rel}},\Theta,\Hrel,\Vadm)$, $(\Arec,\Aobs,\Pred)$ & Derived consequence & collects the admissibility, family, geometric, transport, record, and vacuum data used by the closure theorems \\
+Comparison layer & $\mathcal R_{\mathrm{cmp}}$, $\mathcal R_{\SM}$, $\alpha(0)$, $M_Z$, $\{m_c,m_b,m_\tau,m_t\}$ & Comparison convention & translates closed outputs into scheme-specified observables, with $\mathcal R_{\SM}$ only the practical numerical preconditioner \\
+\bottomrule
+\end{tabularx}
+\caption{Core datum versus theorem, derived-consequence, and comparison-convention structures.}
+\label{tab:layered-datum}
+\end{table}
+
+\subsection{Symbol guide}
+
+The symbol guide is split into two tables to keep theorem-level objects lexically separate from
+appendix-only comparison and readout objects. \Cref{tab:symbol-guide-theorem} contains only
+symbols that participate in the main-text theorem chain; \Cref{tab:symbol-guide-appendix}
+contains only symbols that live in the appendix-level comparison and readout layer.
+
+\begin{table}[p]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{0.95}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.23\linewidth}Y>{\raggedright\arraybackslash}p{0.18\linewidth}@{}}
+\toprule
+Symbol & First-duty meaning in the theorem chain & Status class \\
+\midrule
+$\Tbound$ & one-sided boundary datum $(\mathcal A_+,\mathcal H_+,D_+,J,\Gamma,B_\Sigma)$ & Boundary datum \\
+$\Tmin^{\mathrm{cl}}$ & doubled closed datum $(\mathcal A,\mathcal H,D,J,\Gamma,\taudbl,\iC)$ reconstructed from $\Tbound$ & Theorem \\
+$\Tprim^{\mathrm{kin}}$ & primitive kinematic scaffold $(\widetilde M\to M,\Seam,\taudbl,\iC,D_{\mathrm{ref}},D_{\mathrm{rel}},\chiseed)$; when an almost-commutative realization is chosen, $S$ and $\Hint$ refer to that choice and are not additional reconstruction outputs & Theorem \\
+$\Cmin$ & minimal carrier kernel $E_3\oplus E_2$ with one-family packet $S^+$ & Theorem \\
+$\chiseed$ & primitive seam-even scalar response reconstructed on the primitive layer before geometric reconstruction & Theorem \\
+$\sigma$ (geometric), $\chigeo$ & local Weyl conformal factor and derived local spectral scale $\chigeo=\Lambda e^\sigma$ on the geometric branch & Theorem \\
+$\sigmaQCD$ & QCD string tension $\sigmaQCD=\cthree^2\chi_{\QCD}^2$ on the hadronic transport branch (lexically distinct from the Weyl conformal factor and from the standard-deviation $\sigma$ in benchmark tables) & Theorem \\
+$\APSdomprov$ & provisional APS realization of the geometric anchor used in \TFPTxref{thm:well-posed-primitive-dynamics}; an analytic starting representative & Boundary datum (analytic choice) \\
+$\APSdom$ & closed-branch APS domain obtained from $\APSdomprov$ by the Calder\'on upgrade \TFPTxref{thm:apsdom-upgrade} & Theorem \\
+$\APSfam$ & family-pairing data induced canonically on the doubled admissible branch by the master closure roadmap & Theorem (derived) \\
+$\Pprim$ & primitive admissibility projector built from $\iC$, $\APSdom$, and $D_{\mathrm{rel}}$ alone (\TFPTxref{def:primitive-admissibility-complex}) & Theorem \\
+$P_{\mathrm{sing}},P_\Theta$ & color-center singlet projector and determinant-sector involution projector available only after carrier and bosonic-index closure & Theorem \\
+$\mathsf{Adm},\Kadm,\Padm$ & admissibility predicate, positive constraint operator, and full operative selector $\Padm=\Pprim P_{\mathrm{sing}}P_\Theta$ on the admissible branch (\TFPTxref{thm:padm-upgrade}) & Theorem \\
+$F,\Oadm$ & topological family space and occupancy count after family closure; $\Oadm$ later feeds the closed reading of $\deltatop$ & Theorem \\
+$[\nabla_F]$ & $SU(3)_F$ conjugacy class of the rigid family local system used as the sole family-connection invariant in \TFPTxref{def:tfpt-rigid-pre-category} & Theorem \\
+$\delta_{\mathrm{ph}}$ & unique algebraic transport root on the $C_6$ hexagon used on the closed branch & Theorem \\
+$Q_\Theta$ & determinant-sector involution entering admissibility and the projector $P_\Theta$ & Theorem \\
+$\Cseam=\mathcal C_\Sigma$ & \emph{sheet-CP symmetry operator only}: $\Cseam:=CP\circ\taudbl$ on the admissible branch & Theorem \\
+$T$ & transport generator on the family / holonomy side & Theorem \\
+$\wspin=\varpi_{\mathrm{spin}}$ & spin holonomy weight entering the geometric package & Theorem \\
+$\Tstar$ & canonical rigid object of \TFPTxref{thm:no-alternatives-tfpt}; endpoint of the theorem chain & Theorem \\
+$\Ffals(\Tstar)$ & structural falsification map of \TFPTxref{sec:structural-falsification-map} (main text, hard-separated from $\Rcmp$) & Theorem (side card) \\
+\bottomrule
+\end{tabularx}
+\caption{Symbol guide for theorem-level objects only. Comparison-layer and readout symbols are
+collected separately in \Cref{tab:symbol-guide-appendix}. The previously colliding label
+$\mathcal C_\Sigma$ now denotes only the sheet-CP operator; seam cycle data are written
+$\mathfrak C_\Sigma$ (\Cref{tab:symbol-guide-appendix}).}
+\label{tab:symbol-guide-theorem}
+\label{tab:symbol-guide}
+\end{table}
+
+\begin{table}[p]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{0.95}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.23\linewidth}Y>{\raggedright\arraybackslash}p{0.18\linewidth}@{}}
+\toprule
+Symbol & First-duty meaning in the appendix layer & Status class \\
+\midrule
+$\Rcmp$ & appendix-only comparison map $\Rcmp:\Tstar\mapsto\Rcmp(\Tstar)$ of \TFPTxref{sec:appendix-empirical-readout}; never enters the theorem chain & Comparison convention \\
+$\mathcal R_{\SM}$ & practical finite-threshold numerical preconditioner used inside $\Rcmp$ & Comparison convention \\
+$\mathcal I_{41}$ & weighted abelian index $10\,\bone=\Omega_{\mathrm{occ}}\gamma+N_\Phi$ before the closed $41$ specialization (appendix bookkeeping) & Appendix bookkeeping \\
+$\hat m_f,\ m_f^{\mathrm{obs}}$ & internal source masses and their appendix-level comparison-surface images after matching & Comparison convention \\
+$M_\Sigma,\ g_\Sigma$ & seam matching scale read from the first positive seam boundary mode and the gauge coupling evaluated there (used inside $\Rcmp$) & Comparison convention \\
+$\Ccyc=\mathfrak C_\Sigma$ & seam cycle data used by the matching and holonomy package; lexically distinct from the sheet-CP operator $\Cseam$ in \Cref{tab:symbol-guide-theorem} & Appendix-level derived data \\
+$\Arec,\Aobs,\Pred$ & stable record algebra, observer algebra, and prediction map on the admissible sector (appendix continuation only; not part of the main theorem chain) & Appendix continuation \\
+$\sigma$ (statistical) & standard-deviation symbol used in benchmark tables for residuals (lexically distinct from the geometric Weyl factor $\sigma$ and from $\sigmaQCD$) & Appendix bookkeeping \\
+\bottomrule
+\end{tabularx}
+\caption{Symbol guide for appendix-level comparison and readout objects. These symbols never
+participate in the main-text theorem chain \TFPTeqref{eq:closed-output-chain} and are
+recorded here only because they appear in $\Rcmp$ or in the appendix bookkeeping.}
+\label{tab:symbol-guide-appendix}
+\end{table}
+
+\begin{definition}[Admissibility predicate and selector]
+In the present paper $\mathsf{Adm}$ denotes a predicate on relative sectors, and $\Padm$ denotes its operator realization on the retained closed branch. We write $\mathsf{Adm}(X)=1$ precisely when:
+\begin{enumerate}[label=(\arabic*), leftmargin=1.5em, topsep=3pt, itemsep=2pt]
+    \item $X$ lies in the declared domain of the relative operator pair,
+    \item the associated relative action or index density is finite after reference subtraction,
+    \item the required seam-evenness condition is satisfied,
+    \item colored sectors satisfy center neutrality when a hadronic interpretation is intended,
+    \item gap-stable transport positivity and the declared closure conditions hold in those sectors used for observable or transport statements.
+\end{enumerate}
+On those sectors, the selector language and the predicate language are identified by
+\[
+\mathsf{Adm}(X)=1
+\quad\Longleftrightarrow\quad
+\Padm X=X.
+\]
+\end{definition}
+
+\begin{remark}[Operator realization of admissibility]
+If one wants an operator language rather than a predicate language, the natural positive generator is $\Kadm$ and its commuting-factor realization is
+\[
+P_{\mathrm{adm}}=P_{\Seam,+}\,P_{\mathrm{sing}}\,P_{\Theta}\,P_{\mathrm{gap}},
+\]
+where the factors act on the commuting seam, color, determinant, and transport sectors of the admissible Hilbert-space decomposition. Here $P_{\Seam,+}$ projects to seam-even sectors, $P_{\mathrm{sing}}$ to center-neutral singlets when a hadronic interpretation is intended, $P_{\Theta}$ encodes the declared sheet / determinant selection, and $P_{\mathrm{gap}}$ imposes the transport-side positivity or gap condition. The main text defines $\Padm$ as the zero-temperature projector of $\Kadm$; the appendix records the explicit factorization available on the commuting retained branch.
+\end{remark}
+
+\section{Constants atlas and downstream scale grammar}
+\label{app:constants}
+
+This appendix collects material that is useful for internal compression but should not dominate the main-text scope of explicit claims.
+
+\subsection{Global rotation angle and constants atlas}
+
+On the canonical branch the seam loop carries one unit of spectral flow,
+\[
+U_{\Seam}(\theta)=e^{i\theta},
+\qquad
+\SF(U_{\Seam})=1,
+\qquad
+\Delta_{\Seam}=2\pi.
+\]
+Because the spin lift closes only after $4\pi$, the normalized rotation modulus is
+\[
+\atheta=\frac{\theta}{4\pi}.
+\]
+The cascade in \Cref{fig:constant-cascade} is kept here as technical bookkeeping rather than as an early main-text dependency graphic.
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[
+    scale=0.74,
+    transform shape,
+    >=Latex,
+    node distance=1.2cm and 1.0cm,
+    box/.style={draw=blue!55!black, rounded corners, fill=blue!4, align=center, minimum width=1.9cm, minimum height=0.95cm},
+    hardedge/.style={->, thick},
+    bridgeedge/.style={->, dashed, thick},
+    definedge/.style={->, dotted, thick},
+    optedge/.style={->, dash pattern=on 4pt off 2pt on 1pt off 2pt, thick}
+]
+\node[box] (theta) {$\theta$};
+\node[box, right=of theta] (a) {$\atheta=\theta/(4\pi)$};
+\node[box, right=of a] (c3) {$\cthree=1/(8\pi)$};
+\node[box, right=of c3] (delta) {$\deltatop=\Oadm \cthree^4$};
+\node[box, right=of delta] (phi0) {$\phiz=\phibase+\deltatop$};
+\node[box, below=of delta] (phibase) {$\phibase=1/(6\pi)$};
+\node[box, below=of phi0] (lambda) {$\lambdaY=\sqrt{\phiz(1-\phiz)}$};
+\node[box, below=of c3] (e8) {$\kappa_{E8}$};
+\draw[definedge] (theta) -- node[above, font=\scriptsize] {spin lift} (a);
+\draw[hardedge] (a) -- node[above, font=\scriptsize] {normalization} (c3);
+\draw[bridgeedge] (c3) -- node[above, font=\scriptsize] {transgression} (delta);
+\draw[definedge] (phibase) -- node[below right, font=\scriptsize] {base term} (phi0);
+\draw[bridgeedge] (delta) -- node[above, font=\scriptsize] {surcharge} (phi0);
+\draw[definedge] (phi0) -- node[right, font=\scriptsize] {definition} (lambda);
+\draw[optedge] (phi0) -- node[right, font=\scriptsize] {conditional grammar} (e8);
+\coordinate (legA) at ($(phibase.south west)+(-0.1,-1.2)$);
+\draw[hardedge] (legA) -- ++(0.9,0) node[right, black, font=\scriptsize] {normalization step};
+\coordinate (legB) at ($(legA)+(0,-0.55)$);
+\draw[bridgeedge] (legB) -- ++(0.9,0) node[right, black, font=\scriptsize] {transgression step};
+\coordinate (legC) at ($(legB)+(0,-0.55)$);
+\draw[definedge] (legC) -- ++(0.9,0) node[right, black, font=\scriptsize] {declared definition};
+\coordinate (legD) at ($(legC)+(0,-0.55)$);
+\draw[optedge] (legD) -- ++(0.9,0) node[right, black, font=\scriptsize] {conditional grammar};
+\end{tikzpicture}
+\caption{Constant cascade used for technical bookkeeping, shown in the occupancy-reinterpretation form for $\deltatop$. Arrow styles encode algebraic role rather than claim status: normalization, transgression, declared definition, and conditional downstream grammar.}
+\label{fig:constant-cascade}
+\end{figure}
+
+Here the arrow $\atheta\to\cthree$ records a normalization convention internal to the present setup, not an independently proved theorem beyond the declared seam and spin-lift normalization.
+
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.10\linewidth}>{\raggedright\arraybackslash}p{0.18\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.11\linewidth}YY@{}}
+\toprule
+Symbol & Definition & Manuscript role & First origin & Reappears in & Physical meaning \\
+\midrule
+$\theta$ & seam-loop angle & core datum & seam data & $\atheta$ & geometric rotation variable \\
+$\atheta$ & $\theta/(4\pi)$ & hard normalization & spin lift & $\cthree$, phase grammar & normalized cover rotation \\
+$\cthree$ & $1/(8\pi)$ & hard kernel constant & seam normalization & $\deltatop$, $\beta$, $\sigma$ & seam normalization constant \\
+$\phibase$ & $1/(6\pi)$ & hard kernel constant & carrier geometry & $\phiz$ & base opening \\
+$\deltatop$ & $\frac{3}{256\pi^4}$; bridge reading $\Oadm\cthree^4$ & hard kernel value with occupancy reinterpretation & retained numerical kernel & $\phiz$, $\delta_2$ & topological surcharge \\
+$\phiz$ & $\frac{1}{6\pi}+\frac{3}{256\pi^4}$ & retained canonical seed & retained numerical kernel & $\lambdaY$, $\beta$, flavor & minimal nontrivial opening \\
+$\gamma$ & $\tr_EY^2=5/6$ & hard kernel invariant & carrier packet & $\kappa_{E8}$, $\delta_2$ & carrier norm \\
+$B$ & $\rank E_3/\rank E_2=3/2$ & hard kernel invariant & carrier packet & $\delta_2$ & carrier rank ratio \\
+$\Oadm$ & $3\times16=48$ & closure quantity with bridge reinterpretation & APS family closure & $\deltatop$ & admissible chiral-state count on the family-closed branch \\
+$\bone$ & $\frac43N_{\mathrm{fam}}+\frac1{10}N_\Phi$ & hard kernel output & abelian index & benchmark map & hypercharge trace coefficient \\
+$\kappa_{E8}$ & $\gamma/\ln(248/60)$ & conditional grammar & Appendix~\TFPTxref{app:constants} & scale ladder & optional scale spacing \\
+\bottomrule
+\end{tabularx}
+\caption{Constants atlas for the present manuscript.}
+\label{tab:constants-atlas}
+\end{table}
+
+\subsection{\texorpdfstring{E$_8$}{E8} as downstream scale grammar}
+
+In the present paper E$_8$ is not used as a primitive cause. The retained parameter is
+\[
+\kappa_{E8}:=\frac{\gamma}{\ln(248/60)}=\frac{5/6}{\ln(248/60)}.
+\]
+On the retained branch this means
+\[
+\begin{aligned}
+\kappa_{E8}&\approx \num{0.58723},
+&
+f_a&\approx \num{8.86e10}\,\mathrm{GeV},
+\\
+m_a&\approx \num{65.19}\,\mu\mathrm{eV},
+&
+\nu_a&\approx \num{15.764}\,\mathrm{GHz}.
+\end{aligned}
+\]
+The intended reading is a downstream scale grammar:
+\begin{itemize}[leftmargin=1.5em, topsep=3pt, itemsep=2pt]
+    \item the carrier packet fixes $\gamma=5/6$,
+    \item $\kappa_{E8}$ then defines an optional ladder parameter,
+    \item the ladder is allowed to organize scale spacing,
+    \item but it does not replace the carrier theorem or the seam data.
+\end{itemize}
+In the fuller appendix-level grammar one may package a downstream block scale as
+\[
+X(n,r,I_1)=\frac{\Mplunred}{8}\,\sin^2\theta_{13}
+\left(\frac{60-2n}{60}\right)^{\kappa_{E8}}
+e^{-(8-r)/64}e^{-12\pi I_1},
+\]
+where $n$ is the ladder stage, $r$ a mild block-multiplicity label, and $I_1$ the dominant block trace. This makes the reading discipline explicit: the stage index orders the ladder, the trace controls most of the exponential suppression, and the extra block label only refines the scale. The denominator $64$ is part of that downstream grammar and is not interpreted here as a Hilbert-space dimension, state count, or hidden spinor multiplicity. E$_8$ is therefore a downstream scale grammar, not a universal mass formula.
+
+\subsection{Full stage atlas}
+
+The full real-domain atlas up to $n=29$ extends the main-text robust table with restricted-scan candidates and IR tail conjectures. Rows are classified as \emph{robust} (restrictive grammar, unambiguous target), \emph{restricted-scan} (plausible but less constrained), or \emph{tail conjecture} (new trace class $I_1\in\{\frac{11}{12},\frac{7}{6}\}$ not yet derived from block structure).
+
+\begin{table}[H]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\begin{tabularx}{\linewidth}{@{}>{\centering\arraybackslash}p{0.035\linewidth}>{\centering\arraybackslash}p{0.035\linewidth}>{\raggedright\arraybackslash}p{0.065\linewidth}>{\raggedleft\arraybackslash}p{0.12\linewidth}>{\raggedleft\arraybackslash}p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.09\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}Y@{}}
+\toprule
+$n$ & $r$ & $I_1$ & $X$ (GeV) & Target & Residual & Identification & Class \\
+\midrule
+$3$ & $8$ & $1/2$ & $\num{2.159e8}$ & $\num{2.160e8}$ & $0.06\%$ & $\mu_{\cthree}$ RG crossing & robust \\
+$5$ & $5$ & $1/12$ & $\num{1.307e15}$ & $\num{1.31e15}$ & $0.2\%$ & seesaw $M_R$ & robust \\
+$6$ & $6$ & $1$ & $\num{1.272}$ & $\num{1.27}$ & $0.2\%$ & charm band & restricted-scan \\
+$8$ & $1$ & $17/16$ & $\num{0.1059}$ & $\num{0.10566}$ & $0.2\%$ & muon band & restricted-scan \\
+$10$ & $1$ & $1/3$ & $\num{8.826e10}$ & direct search & --- & PQ scale $f_a$ & robust \\
+$12$ & $2$ & $41/48$ & $\num{246.35}$ & $\num{246.22}$ & $0.05\%$ & physical EW benchmark & robust \\
+$14$ & $4$ & $17/16$ & $\num{0.0921}$ & $\num{0.0927}$ & $0.6\%$ & $f_\pi$ band & robust \\
+$15$ & $4$ & $1$ & $\num{0.935}$ & $\num{0.938}$ & $0.3\%$ & hadron anchor & robust \\
+$21$ & $4$ & $1/6$ & $\num{3.051e13}$ & $\num{3.06e13}$ & $0.3\%$ & inflation $M$ & robust \\
+$21$ & $5$ & $41/48$ & $\num{171.8}$ & $\num{172.6}$ & $0.4\%$ & top quark & robust \\
+$24$ & $7$ & $5/8$ & $\num{7.895e5}$ & $\num{7.920e5}$ & $0.3\%$ & $\mu_{\phiz}$ RG crossing & robust \\
+$25$ & $5$ & $1$ & $\num{0.498}$ & $\num{0.498}$ & $0.0\%$ & kaon band & robust \\
+$25$ & $7$ & $41/48$ & $\num{125.5}$ & $\num{125.25}$ & $0.2\%$ & Higgs mass & robust \\
+$26$ & $2$ & $1$ & $\num{0.417}$ & $\num{0.42}$ & $0.7\%$ & $\sqrt{\sigmaQCD}$ confinement & robust \\
+$27$ & $6$ & $41/48$ & $\num{91.6}$ & $\num{91.19}$ & $0.4\%$ & $Z$ boson & restricted-scan \\
+$28$ & $1$ & $7/6$ & $\num{5.105e-4}$ & $\num{5.110e-4}$ & $0.1\%$ & electron & tail conjecture \\
+$29$ & $1$ & $11/12$ & $\num{4.210}$ & $\num{4.18}$ & $0.7\%$ & bottom quark & tail conjecture \\
+\bottomrule
+\end{tabularx}
+\caption{Full E$_8$ stage atlas on the canonical branch up to the real-domain boundary $n=29$.}
+\label{tab:e8-full-atlas}
+\end{table}
+
+\subsection{Compression identities on the minimal branch}
+
+The main-text compression identities are developed in the dedicated section on compression identities
+and numerical comparison of alternative discrete worlds. This appendix subsection collects
+additional arithmetic continuations and the compression chain summary.
+
+\begin{remark}[Abelian package from occupancy and carrier norm]
+On the canonical branch,
+\[
+\Oadm\gamma=48\cdot\frac56=40.
+\]
+Thus the characteristic coefficient $41$ is compressed to
+\[
+41=\Oadm\gamma+1=40+1,
+\]
+that is, fermionic occupancy trace plus one light Higgs doublet contribution.
+Writing $b_Y:=5\bone/3$ for the usual hypercharge-normalized coefficient and using the block-index relation $k_B=\frac32 I_1(B)$ to define $I_1^{\mathrm{EW}}:=\frac{5}{24}\bone$ and $k_{\mathrm{EW}}:=\frac{5}{16}\bone$, one obtains the unified chain
+\begin{equation}
+\label{eq:41-chain}
+48\,I_1^{\mathrm{EW}}
+=32\,k_{\mathrm{EW}}
+=10\,\bone
+=\Oadm\gamma+1
+=41.
+\end{equation}
+Equivalently,
+\[
+I_1^{\mathrm{EW}}=\frac{41}{48},
+\qquad
+k_{\mathrm{EW}}=\frac{41}{32},
+\qquad
+\bone=\frac{41}{10},
+\qquad
+b_Y=\frac{41}{6}.
+\]
+This is an algebraic signature rather than an accidental coincidence: the same integer $41$ appears simultaneously as electroweak block trace, E$_8$ exponent, UV hypercharge trace, and carrier occupancy times norm plus one.
+\end{remark}
+
+\begin{remark}[Rank lock and single-seed compression: main-text reference]
+The former rank-lock identity is recorded in the main text as the derived consistency statement
+\TFPTxref{prop:rank-lock}, while the carrier rank itself is fixed by the bosonic-rank corollary and the
+branch-Yukawa rigidity theorem, with \TFPTxref{thm:carrier-minimality-k} retained only as the
+algebraic normal form for the resulting exterior signatures.
+The single-seed compression and the Cabibbo inversion $\phiz=\frac12(1-\sqrt{1-4\lambda_C^2})$
+with all derived inter-observable relations are given in
+\TFPTxref{prop:retained-seed-decoder,eq:cabibbo-inversion,eq:lambda-c-master}. The numerical
+comparison of wrong discrete worlds is recorded in \TFPTxref{thm:carrier-exclusion}.
+\end{remark}
+
+\subsection{Optional arithmetic continuations}
+
+The next relations mix the main-text carrier with optional appendix-level E$_8$, inflation, or geometric notation. They are useful compression patterns, but their interpretation should remain conditional or conjectural.
+
+\begin{remark}[60, 48, and \texorpdfstring{$5/4$}{5/4} on the optional ladder]
+If the optional scale ladder is started at $D_1=60$, then
+\[
+\frac{D_1}{\Oadm}=\frac{60}{48}=\frac54=B\gamma.
+\]
+On the minimal branch one may also write the same number as
+\[
+\frac54=\frac{\gcar}{\gcar-1}\qquad (\gcar=5).
+\]
+This compresses the E$_8$ start index, the admissible chiral count, the mirror factor, and the two-defect coefficient to the same rational factor.
+\end{remark}
+
+\begin{corollary}[Arithmetic closure of $48$, $60$, and $240$]\label{rem:defect-factorization-gcd-lcm}
+From the main text identity
+\[
+\delta_2=\frac{5}{4}\,\deltatop^2,
+\qquad
+\deltatop=\Oadm\cthree^4,
+\]
+one obtains
+\[
+\delta_2=2880\,\cthree^8.
+\]
+Set
+\[
+g:=\gcar=5,
+\qquad
+d:=\dim\mathfrak g_{\SM}=12.
+\]
+Then
+\[
+\Oadm=(g-1)d=4\cdot 12=48,
+\qquad
+\Dstart=gd=5\cdot 12=60.
+\]
+On the canonical branch the same factor admits the exact arithmetic decompositions
+\[
+2880=\Dstart\Oadm=60\cdot48,
+\qquad
+2880=g(g-1)d^2=240\cdot12=|R(E_8)|\,d.
+\]
+The same pair $(\Oadm,\Dstart)=(48,60)$ also satisfies
+\[
+\gcd(\Oadm,\Dstart)
+=
+d=\dim \mathfrak g_{\SM},
+\]
+and
+\[
+\operatorname{lcm}(\Oadm,\Dstart)
+=
+g(g-1)d
+=
+240
+=
+|R(E_8)|.
+\]
+So the gauge algebra dimension is the common divisor of the neighboring carrier counts
+$48=(g-1)d$ and $60=gd$, while the number $240$ is their least common multiple. The arithmetic
+identities are exact. Here the value $12$ is the Lie-algebra dimension
+\[
+\dim\mathfrak g_{\SM}=8+3+1,
+\]
+not a derivation from a discrete permutation group of order $12$; at most the $3+2$ split carries
+such a discrete shadow.
+\end{corollary}
+
+\begin{remark}[External E$_8$ reading]
+On the same optional branch,
+\[
+|R(E_8)|=248-8=240=5\cdot48=5\,\Oadm.
+\]
+One may therefore record an external E$_8$ interpretation of the arithmetic closure, namely that
+the root count can be read as a fivefold unfolding of the admissible chiral packet. This
+interpretation is optional and is not used as a main-text theorem.
+\end{remark}
+
+\begin{remark}[Reactor seed of the optional scale ladder]
+If one writes the optional ladder as
+\[
+\varphi_n=\phiz e^{-\gamma}\left(\frac{D_n}{D_1}\right)^{\kappa_{E8}},
+\qquad
+D_n=60-2n,
+\]
+then the start value is precisely the reactor-angle seed,
+\[
+\varphi_n=\sin^2\theta_{13}\left(\frac{D_n}{D_1}\right)^{\kappa_{E8}}.
+\]
+Thus the appendix-level ladder may be read as a discrete continuation of the same seed that controls $\theta_{13}$.
+\end{remark}
+
+\begin{remark}[Conditional inflation-side compression]
+If one supplements the appendix with the conditional Starobinsky-side relations
+\[
+A_s=\frac{N^2}{24\pi^2}\left(\frac{M}{\Mpl}\right)^2,
+\qquad
+\frac{M}{\Mpl}=\sqrt{8\pi}\,\cthree^4,
+\]
+then on the minimal branch
+\[
+A_s=\frac{N^2}{3\pi}\cthree^8=\frac{N^2}{8640\pi}\,\delta_2,
+\]
+and also
+\[
+\frac{M}{\Mpl}=\frac{\sqrt{8\pi}}{\Oadm}\,\deltatop.
+\]
+This is recorded only as an appendix-level compression identity because inflation is outside the present main-text claim surface.
+\end{remark}
+
+\begin{remark}[Dyonic intercept and the $\alpha$ kernel]
+From the dyonic appendix the local astrophysical $\beta$ function reads
+\[
+\beta_{\mathrm{BH}}(r)=\frac{Q_eQ_m}{256\pi^4 r^2}=\frac{\deltatop}{3}\frac{Q_eQ_m}{r^2}=16\cthree^4\frac{Q_eQ_m}{r^2}.
+\]
+This is a cross-link between the EHT intercept channel and the $\alpha$ kernel: the same topological coefficient $\deltatop=48\cthree^4$ that pushes $\alpha$ into the precision zone also controls the local dyonic $\beta$ function. The local and cosmological sectors are therefore not two loose motifs but the same coefficient in two projections.
+\end{remark}
+
+\begin{remark}[Conditional occupancy route to gravity]
+If the relative Einstein term is of the form
+\[
+S_{\mathrm{EH}}^{\mathrm{rel}}
+=
+\frac{\chigeo^2}{192\pi^2}\tr_{\mathcal H_{\mathrm{ch}}}\mathbf 1
+\int d^4x\sqrt{-g}\,R,
+\]
+and if the family bridge identifies
+\[
+\tr_{\mathcal H_{\mathrm{ch}}}\mathbf 1=\Oadm=48,
+\]
+then
+\[
+\Mpl^2=\frac{\chigeozero^2}{2\pi^2}.
+\]
+This is the occupancy-to-gravity route alluded to in the main text.
+\end{remark}
+
+\begin{remark}[Compression chain]
+The appendix-level compression pattern may therefore be summarized as
+\[
+Y \leftrightarrow \epscar,
+\qquad
+\gamma=\frac56,
+\qquad
+B\gamma=\frac54,
+\qquad
+\frac{D_1}{\Oadm}=\frac54,
+\qquad
+|R(E_8)|=5\,\Oadm,
+\]
+\[
+\bone=\frac{\Oadm\gamma+1}{10},
+\qquad
+\Omega_b+\beta_{\mathrm{rad}}=\phiz,
+\qquad
+A_s=\frac{N^2}{8640\pi}\,\delta_2.
+\]
+The last relation remains a conditional inflation-side import.
+\end{remark}
+
+\subsection{Conditional minimal-parameter picture}
+
+The next package is stronger but also more conditional. It assumes that the carrier rank, family multiplicity, and seam normalization are all read as closed rather than only partially inherited.
+
+\begin{principle}[Conditional minimal-parameter compression]
+Assume the canonical branch
+\[
+\gcar:=\rank E=5,
+\qquad
+N_{\mathrm{fam}}=3,
+\qquad
+\cthree=\frac{1}{8\pi}.
+\]
+Then the numerical kernel may be rewritten almost entirely in terms of
+\[
+(\pi,\gcar,N_{\mathrm{fam}})=(\pi,5,3).
+\]
+Indeed, on this branch one has
+\[
+\gamma=\frac56=\frac{\gcar}{\gcar+1},
+\qquad
+\dim S^+=2^{\gcar-1},
+\qquad
+\Oadm=N_{\mathrm{fam}}2^{\gcar-1}=48,
+\]
+\[
+\phibase=\frac{1-\gamma}{\pi}=\frac{1}{(\gcar+1)\pi},
+\qquad
+\deltatop=\Oadm\,\cthree^4,
+\qquad
+\delta_2=\Dstart\,\Oadm\,\cthree^8,
+\]
+with
+\[
+\Dstart=\gcar\,\dim\mathfrak g_{\SM}=5\cdot 12=60,
+\qquad
+\Oadm=(\gcar-1)\dim\mathfrak g_{\SM}=4\cdot 12=48.
+\]
+\end{principle}
+
+\begin{remark}[Compressed dependency chain]
+Under the same derived closure package, the appendix-level numerical chain reads
+\[
+(\widetilde M\to M,\Seam,\taudbl,\iC,\chiseed)
+\Longrightarrow
+E_3\oplus E_2
+\Longrightarrow
+Y \leftrightarrow \epscar
+\Longrightarrow
+S(U(3)\times U(2))
+\Longrightarrow
+S^+,
+\]
+\[
+\Longrightarrow
+N_{\mathrm{fam}}=3
+\Longrightarrow
+\Oadm=48
+\Longrightarrow
+(\deltatop,\delta_2,\phiz)
+\Longrightarrow
+(\alpha,\lambda_C,\beta_{\mathrm{rad}},\Omega_b,\sin^2\theta_{13}),
+\]
+with the optional E$_8$, inflationary, and gravity-side sectors then read as downstream continuations of the same compressed core.
+\end{remark}
+
+\subsection{Infrared continuations of the seam transfer}
+\label{app:ir-seam-continuations}
+
+Theorem~\TFPTxref{thm:cosmology-closure} and \TFPTxref{cor:ir-seam-transfer-bounds} determine the
+theorem-level seam-transfer expression for $\Lambda_{\mathrm{IR}}$ and its determinant bounds.
+The numerical scales recorded below require one further infrared assumption and therefore are
+organized as a labeled \emph{conditional closure layer}, separated from the theorem core. Each
+member of the layer is stated as a conjecture or as a corollary conditional on the named seam-lift
+hypothesis, never as a theorem-level consequence of the present closure stack.
+
+\begin{conjecture}[Reconstruction infrared seam continuation]
+\label{conj:ir-seam-rec-continuation}
+Assume the lift hypothesis
+\[
+S_{\mathrm{IR}}^{\mathrm{rec}}
+:=
+-\log\rho(U_\Sigma)\bigl|_{\mathrm{IR}}
+=
+\frac{2}{\alpha_\star},
+\qquad
+\rho_{\mathrm{IR}}^{\mathrm{rec}}
+:=
+\deltatop e^{-2/\alpha_\star},
+\]
+i.e.\ the leading admissible eigenvalue $\rho(U_\Sigma)$ is continued into the deep infrared by the
+inverse-coupling exponential weighted by the topological seam coefficient $\deltatop$.
+\end{conjecture}
+
+\begin{conjecture}[Internal carrier infrared seam continuation]
+\label{conj:ir-seam-car-continuation}
+Assume the carrier-compressed lift hypothesis
+\[
+\rho_{\mathrm{IR}}^{\mathrm{car}}
+:=
+\phibase\,\bigl(\deltatop e^{-2\alpha_\star}\bigr)^{2^{\gcar}-1}
+=
+\phibase\,q(\alpha_\star)^{31},
+\qquad
+q(\alpha):=\deltatop e^{-2\alpha},
+\]
+on the canonical carrier branch $\gcar=5$, i.e.\ the seam transfer is dressed by the retained
+carrier opening $\phibase$ raised to the carrier branch exponent.
+\end{conjecture}
+
+\begin{corollary}[Conditional infrared cosmological-constant readout]
+\label{cor:conditional-lambda-ir-readout}
+Conditional on \Cref{conj:ir-seam-rec-continuation,conj:ir-seam-car-continuation} and on the
+rank-one truncation of \TFPTxref{cor:ir-seam-transfer-bounds}, the seam-transfer determinant evaluates
+to
+\[
+\frac{\Lambda_{\mathrm{IR}}^{\mathrm{rec}}}{\Mplunred^4}
+=
+-\log\!\bigl(1-\deltatop e^{-2/\alpha_\star}\bigr)
+\approx
+\num{1.1280419085743317e-123},
+\]
+\[
+\frac{\Lambda_{\mathrm{IR}}^{\mathrm{car}}}{\Mplunred^4}
+=
+-\log\!\Bigl(1-\phibase\bigl(\deltatop e^{-2\alpha_\star}\bigr)^{31}\Bigr)
+\approx
+\num{1.0397866510137286e-123}.
+\]
+The two readouts agree on order of magnitude and frame the observed value
+$\Lambda_{\mathrm{obs}}/\Mplunred^4\approx\num{1.1e-123}$ within the conditional closure layer; they
+become \emph{theorem level} as soon as the seam-lift hypothesis $S_{\mathrm{IR}}=2/\alpha_\star$ is
+discharged from $U_\Sigma$.
+\end{corollary}
+
+\begin{remark}[Lift target and kill test]
+The single non-theorem ingredient in \TFPTxref{cor:conditional-lambda-ir-readout} is the seam-lift
+hypothesis
+\[
+S_{\mathrm{IR}}=-\log\rho(U_\Sigma)\bigl|_{\mathrm{IR}}=\frac{2}{\alpha_\star}.
+\]
+Falsification path. Any independent computation of $\rho(U_\Sigma)$ in the deep infrared that
+deviates from $\deltatop e^{-2/\alpha_\star}$ by more than the rank-one error margin of
+\TFPTxref{cor:ir-seam-transfer-bounds} kills both numerical readouts at once. Conversely, a closed
+proof of the seam-lift identity promotes the rec/car corollary to a theorem and freezes the
+\(\Lambda_{\mathrm{IR}}\)-line of the metrology functor without any further appendix input.
+\end{remark}
+
+\section{Relative APS and superconnection setup}
+\label{app:aps}
+
+The geometric completion uses APS-type relative data \cite{aps1975}. In practice this means:
+\begin{itemize}[leftmargin=1.5em, topsep=3pt, itemsep=2pt]
+    \item one works with a declared pair $(D,D_{\mathrm{ref}})$ rather than a single unanchored operator,
+    \item boundary conditions on the seam $\Seam$ are part of the definition of the relative index,
+    \item the $\eta$-term keeps track of the residual spectral asymmetry,
+    \item the superconnection package is used in the same spirit as the spectral-action tradition \cite{chamseddineConnes1997}, but here always with an explicit reference subtraction.
+\end{itemize}
+
+This appendix now serves as the proof motor for the geometric reconstruction statements in the main text: its role is to make the common reference structure explicit enough that the reconstruction theorem and the local spectral-scale branch are not left hanging on a slogan.
+
+\section{Relative reflection positivity with fermions}
+\label{app:os-fermions}
+
+\subsection{Normalized quotient form}
+
+The relative Euclidean theory used in the main closure section is not interpreted as a difference of measures. Instead it is organized as the normalized quotient
+\[
+Z_{\mathrm{rel}}[J,\eta,\bar\eta]
+=
+\frac{Z_{\mathrm{adm}}[J,\eta,\bar\eta]}{Z_{\mathrm{ref}}[0,0,0]}.
+\]
+Because the denominator is source independent on the admissible sector, the reference theory acts only as a fixed normalizer and does not interfere with reflection positivity.
+
+\subsection{Bosonic and fermionic positivity on \texorpdfstring{$\Padm$}{Padm}}
+
+The commutation relations
+\[
+[\Theta,P_\Theta]=0,
+\qquad
+\Theta\Padm=\Padm\Theta
+\]
+ensure that reflection preserves the admissible subspace. The bosonic part then follows the standard Markov / reflection-stable Osterwalder--Schrader argument on admissible observables. For fermions, the admissible CAR kernel may be written as a reflected quadratic form; equivalently one may express the same condition as positivity of the associated Pfaffian structure on the admissible sector. Hence for every admissible observable $O$ supported in $\tau>0$,
+\[
+\langle \Theta O,O\rangle_{\mathrm{rel}}
+=
+\frac{1}{Z_{\mathrm{ref}}[0,0,0]}
+\langle \Theta O,O\rangle_{\mathrm{adm}}
+\ge 0.
+\]
+This appendix section is the mechanism behind \TFPTxref{lem:admissible-reflection-positivity,thm:reflection-positivity-admissible,thm:lorentzian-reconstruction}; it is recorded here so that the main-text reconstruction theorem is not supported only by a one-line axiom call.
+
+\section{Admissible OS reconstruction and asymptotic scattering}
+\label{app:os-scattering}
+
+This appendix upgrades the admissible Schwinger, reconstruction, and scattering block from a named
+standard interface to a manuscript-level proof package. The point is not to replace standard
+machinery by ad hoc notation, but to verify explicitly that the admissible branch satisfies the
+relevant hypotheses on $\Padm$.
+
+\subsection{Tempered admissible Schwinger families}
+
+\begin{lemma}[Temperedness and moment bounds for admissible Schwinger functions]
+\label{lem:tempered-schwinger-bounds}
+On the Euclidean continuation of $\mathcal U_{\mathrm{scat}}$, each truncated admissible Schwinger
+distribution $S_n^T$ defines a tempered distribution. Moreover, for every compact $K$ and every
+source monomial of total degree $n$, its moments obey polynomial bounds determined by the same
+uniform heat-kernel estimates and finite local moments of the admissible constructive measure.
+\end{lemma}
+
+\begin{proof}
+By \TFPTxref{thm:well-posed-primitive-dynamics}, the admissible Euclidean generator is realized by a
+self-adjoint elliptic operator on every blocked volume. Together with the constructive measure of
+\TFPTxref{thm:constructive-geometric-measure}, this yields uniform heat-kernel bounds and finite moments
+for local source insertions. Differentiating $W_{\mathrm{rel}}$ with respect to the local sources
+therefore produces distributions whose derivatives are controlled by polynomial combinations of the
+same bounds. Passing to the admissible projective limit preserves these polynomial estimates, so the
+resulting Schwinger family is tempered.
+\end{proof}
+
+\begin{lemma}[Graded Euclidean covariance and symmetry on \texorpdfstring{$\Padm$}{Padm}]
+\label{lem:graded-euclidean-covariance-padm}
+On the Euclidean continuation of $\mathcal U_{\mathrm{scat}}$, the admissible Schwinger family is
+graded Euclidean covariant, graded symmetric under exchange of external legs, and continuous in the
+Schwartz topology.
+\end{lemma}
+
+\begin{proof}
+The Dirac-type principal symbol of the geometric anchor and the low-curvature reduction imply local
+Euclidean covariance of the admissible source functional on $\mathcal U_{\mathrm{scat}}$. Bosonic
+source derivatives commute, while fermionic derivatives anticommute, so the mixed Schwinger family
+is graded symmetric with the usual CAR signs. Continuity follows from the tempered moment bounds of
+\Cref{lem:tempered-schwinger-bounds}, which control the action of $S_n^T$ on Schwartz test
+functions.
+\end{proof}
+
+\subsection{OS and CAR reconstruction on \texorpdfstring{$\Padm$}{Padm}}
+
+\begin{theorem}[Tailored OS/CAR reconstruction on \texorpdfstring{$\Padm$}{Padm}]
+\label{thm:tailored-os-car-reconstruction}
+Let $\{S_n^T\}_{n\ge 1}$ be the admissible Schwinger family on the Euclidean continuation of
+$\mathcal U_{\mathrm{scat}}$. If reflection positivity, temperedness, graded Euclidean covariance,
+graded symmetry, and clustering hold on $\Padm$, then there exist:
+\begin{enumerate}[label=(\roman*), leftmargin=1.8em, topsep=3pt, itemsep=2pt]
+    \item a Hilbert space $\mathcal H_{\mathrm{OS}}$ with vacuum vector $\Omega$,
+    \item a strongly continuous positive-energy semigroup $T_t=e^{-tH_{\mathrm{adm}}}$ with
+    self-adjoint generator $H_{\mathrm{adm}}\ge 0$,
+    \item a reconstructed graded local field net on $\Padm$ whose Euclidean boundary values are the
+    original admissible Schwinger functions.
+\end{enumerate}
+Equivalently, the admissible Euclidean family reconstructs a Wightman/CAR theory on the admissible
+sector.
+\end{theorem}
+
+\begin{proof}
+Define the OS sesquilinear form by
+\[
+(F,G)_{\mathrm{OS}}:=\langle \Theta F,G\rangle_{\mathrm{rel}}
+\]
+for positive-time admissible observables. Reflection positivity from
+\TFPTxref{thm:reflection-positivity-admissible} and the fermionic quotient-form analysis of
+\Cref{app:os-fermions} show that this form is positive semidefinite on the full graded admissible
+algebra. Quotienting by the null space and completing gives $\mathcal H_{\mathrm{OS}}$.
+
+Positive Euclidean time translation preserves the null space and acts by contractions, hence defines
+a strongly continuous contraction semigroup $T_t$ on $\mathcal H_{\mathrm{OS}}$. The dense domain of
+positive-time polynomial observables gives the symmetric generator domain. By Hille--Yosida, the
+closure of this generator is self-adjoint and nonnegative, so $T_t=e^{-tH_{\mathrm{adm}}}$ for a
+self-adjoint $H_{\mathrm{adm}}\ge 0$.
+
+The temperedness, covariance, graded symmetry, and clustering established in
+\Cref{lem:tempered-schwinger-bounds,lem:graded-euclidean-covariance-padm} are precisely the
+remaining OS/CAR reconstruction hypotheses. Therefore analytic continuation yields the reconstructed
+Wightman/CAR family with vacuum $\Omega$. Because $\Theta$, $P_\Theta$, and $\Padm$ commute, the
+entire reconstruction stays on the admissible sector $\Padm$.
+\end{proof}
+
+\subsection{Stable massive Haag--Ruelle and LSZ closure}
+
+\begin{lemma}[One-particle spectral projectors from isolated simple poles]
+\label{lem:one-particle-projectors-from-poles}
+Let $\widetilde G_a^{(2)}(p)$ have an isolated simple pole with positive residue at
+$p^2=-m_a^2<0$. Then the corresponding one-particle contribution defines a positive spectral
+projector on the admissible Hilbert space.
+\end{lemma}
+
+\begin{proof}
+The isolated simple pole separates a one-particle mass shell from the multiparticle continuum. By
+positivity of the residue, the contour integral of the resolvent around that pole defines a positive
+projector on $\mathcal H_{\mathrm{adm}}$. Its range is the one-particle subspace associated with the
+stable species $a$.
+\end{proof}
+
+\begin{theorem}[Haag--Ruelle scattering on the stable massive admissible sector]
+\label{thm:haag-ruelle-admissible-massive}
+For every stable massive admissible species with isolated simple pole below threshold, the
+Haag--Ruelle asymptotic fields exist on $\mathcal H_{\mathrm{adm}}$ and generate wave operators on
+the stable massive scattering sector.
+\end{theorem}
+
+\begin{proof}
+By \TFPTxref{thm:tailored-os-car-reconstruction,thm:admissible-local-minkowski-net}, the admissible
+branch carries a local relativistic net with positive Hamiltonian. By
+\TFPTxref{thm:nonperturbative-admissible-qft}, connected correlators cluster exponentially on the
+massive sector. The pole assumption and \Cref{lem:one-particle-projectors-from-poles} identify the
+one-particle subspace and give positive single-particle spectral projectors. The standard
+Haag--Ruelle estimates therefore apply to admissible local operators, yielding the in/out fields and
+the wave operators on the stable massive sector.
+\end{proof}
+
+\begin{corollary}[LSZ reduction on the stable massive admissible sector]
+\label{cor:lsz-admissible-massive}
+On the stable massive admissible sector, matrix elements of the scattering operator are obtained by
+amputating the connected correlators with the corresponding residue factors.
+\end{corollary}
+
+\begin{proof}
+By \Cref{thm:haag-ruelle-admissible-massive}, the asymptotic fields and wave operators exist on the
+stable massive sector. Applying the usual LSZ reduction to those asymptotic fields and the
+admissible local net yields the displayed amputated-correlator formula.
+\end{proof}
+
+\subsection{Dressed massless interface in the low-curvature region}
+
+The massless sector is not treated by bare Fock asymptotics in the present manuscript. The relevant
+object is the infrared-dressed interface package
+\[
+\mathcal I_{\mathrm{dress}}
+:=
+\bigl(\Omega_+^{\mathrm{dress}},\Omega_-^{\mathrm{dress}},S_{\mathrm{dress}}\bigr),
+\qquad
+S_{\mathrm{dress}}:=(\Omega_+^{\mathrm{dress}})^\ast\Omega_-^{\mathrm{dress}},
+\]
+constructed from the soft charges of the admissible local net on the low-curvature region
+$\mathcal U_{\mathrm{scat}}$. This is exactly the interface package used in the main-text theorem
+\TFPTxref{thm:dressed-massless-interface}.
+
+\section{FRW reduction and cosmology interface proofs}
+\label{app:frw-interface-proofs}
+
+This appendix section upgrades the cosmology interface block from a proof sketch to a manuscript
+proof. The point is to keep the theorem-level content at the level of closed-branch interface data,
+while leaving late-time numerical continuation in the comparison layer.
+
+\begin{lemma}[Minisuperspace reduction of the geometric Hodge branch]
+\label{lem:minisuperspace-reduction-hodge-branch}
+Restrict the closed-branch geometric Hodge action to homogeneous and isotropic variables
+\[
+(a(t),\varphi(t),\theta_\Sigma(t),N_i(t)).
+\]
+Then the reduced action is a minisuperspace action whose gravitational and scalar sectors coincide
+with the low-curvature FRW/scalaron block used in the main text.
+\end{lemma}
+
+\begin{proof}
+The closed-branch geometric action is local and covariant. Imposing homogeneity and isotropy kills
+all spatial derivative terms and leaves only the FRW scale factor, the scalaron mode, the
+determinant-line axion phase, and the heavy-neutrino input package. Evaluating the geometric Hodge
+action on this ansatz gives exactly the reduced minisuperspace action displayed in the main-text FRW
+theorem.
+\end{proof}
+
+\begin{lemma}[Seam-transfer determinant as the infrared vacuum term]
+\label{lem:seam-transfer-vacuum-term}
+On the closed branch, the positive trace-class seam-transfer operator contributes to the FRW
+reduction through the infrared vacuum term
+\[
+\Lambda_{\mathrm{IR}}
+=
+\Mplunred^4\bigl[-\log\det\nolimits_{\mathrm{adm}}(1-U_\Sigma)\bigr].
+\]
+\end{lemma}
+
+\begin{proof}
+By \TFPTxref{thm:cosmology-closure}, the seam-transfer operator is positive trace class with spectral
+radius strictly below one. Therefore its Fredholm determinant is well defined and contributes an
+additive vacuum term to the reduced action. The normalization by $\Mplunred^4$ is exactly the
+closed-branch dimensional lift used in the main text.
+\end{proof}
+
+\begin{lemma}[Determinant-line axion reduction]
+\label{lem:determinant-line-axion-reduction}
+On the canonical branch, the determinant-line phase reduces to a compact axion variable with
+\[
+N_{\mathrm{DW}}=1,
+\qquad
+\theta_i=\pi\bigl(1-\phiseam(\alpha_\star)\bigr),
+\]
+and the reheating input is fixed by the scalaron decay width.
+\end{lemma}
+
+\begin{proof}
+\TFPTxref{thm:boundary-winding-control} fixes the domain-wall number $N_{\mathrm{DW}}=1$ on the
+canonical branch. The determinant-line theorem and the electromagnetic closure determine the initial
+angle $\theta_i$, while the scalaron branch fixes the decay-width input entering the reheating scale
+$T_R$. These are exactly the determinant-line and scalaron data needed in the reduced FRW action.
+\end{proof}
+
+\begin{theorem}[Full FRW reduction and cosmology interface theorem]
+\label{thm:full-frw-interface-theorem}
+The closed-branch minisuperspace reduction determines the cosmology interface package
+\[
+\bigl(\Lambda_{\mathrm{IR}},N_{\mathrm{DW}},\theta_i,T_R,\mathcal I_{\mathrm{LG}}\bigr)
+\]
+from the same geometric Hodge, seam-transfer, determinant-line, and neutrino data that determine
+the closed branch.
+\end{theorem}
+
+\begin{proof}
+\Cref{lem:minisuperspace-reduction-hodge-branch} gives the reduced FRW/scalaron action,
+\Cref{lem:seam-transfer-vacuum-term} identifies the infrared vacuum term, and
+\Cref{lem:determinant-line-axion-reduction} identifies the determinant-line axion and reheating
+data. The leptogenesis input block $\mathcal I_{\mathrm{LG}}$ is fixed by the same closed-branch
+heavy-neutrino spectrum, family frame, and reheating input used in the main-text leptogenesis
+interface theorem. Therefore the entire displayed interface tuple is fixed internally on the closed
+branch.
+\end{proof}
+
+\section{Yukawa kernels and positivity lemmas}
+\label{app:yukawa}
+
+This appendix is the proof motor for the transport positivity, determinant-phase suppression, and
+bounded-residual statements used in the main text. The transport program is based on the regularized kernel
+\[
+\mathcal Y_f^{(\varepsilon)}=(D_f^\dagger D_f+\varepsilon^2)^{-1}.
+\]
+Three remarks are important.
+\begin{enumerate}[leftmargin=1.5em, topsep=3pt, itemsep=3pt]
+    \item The regulator $\varepsilon$ is not optional: without it the kernel becomes ill-defined exactly where the admissibility question is most delicate.
+    \item Positivity of the kernel belongs to the admissibility-closure layer rather than to the hard carrier kernel. The main text closes it through the finite hexagon gap and the lift to the full admissibility-projected operator; this appendix records the transport-side mechanism behind that closure.
+    \item Residual prefactors $\Lambda_{f,j}$ are bounded holonomy data inside the transport theorem. They must remain visible and must not be rhetorically hidden as if the mass map were diagonal without residual transport structure.
+\end{enumerate}
+
+\begin{remark}[Positive-kernel determinant route to strong CP]
+If the physical mass map is written in the polar form
+\[
+M_f=U_{f,L}H_fU_{f,R}^\dagger,
+\qquad
+H_f>0,
+\qquad
+U_{f,L},U_{f,R}\in SU(3)_F,
+\]
+with $H_f$ induced by the positive transport kernel $\mathcal Y_f^{(\varepsilon)}$, then the induced determinant phase vanishes:
+\[
+\arg\det M_f=0.
+\]
+At the same time weak CP may survive through
+\[
+V_{\mathrm{CKM}}=U_{u,L}^\dagger U_{d,L}.
+\]
+Combined with the sheet-CP symmetry protection of $\theta_{\mathrm{sheet}}$ in the relative action,
+this is the algebraic core of the determinant-phase theorem stated in the main text and of the
+strong-CP closure theorem recorded there. The role of the appendix remark is to display the
+polar-decomposition mechanics behind that route, not to reopen its status.
+\end{remark}
+
+\subsection{Optional strong-coupling sharpening}
+
+As an appendix-level dynamical sharpening of the hadronic admissibility theorem, one may further require the
+admissible center-neutral Wilson functional to obey strong-coupling dominance. On that optional
+route the relative Wilson loop satisfies
+\[
+\langle W(C)\rangle_{\mathrm{rel}}
+\le
+\exp[-\sigmaQCD A_{\min}(C)],
+\qquad
+\sigmaQCD=\cthree^2\chi_{\QCD}^2,
+\]
+and the physical Hilbert space contains no color-nonsinglet asymptotic states. This statement is
+kept in the appendix so that the main theorem surface does not depend on an extra strong-coupling
+sharpening beyond the closed admissible hadronic sector.
+
+\section{Information-theoretic and cut-and-project readings}
+\label{app:info-readings}
+
+This appendix collects interpretive notes that help organize the algebraic structure of the
+boundary-polarized closed form. When a theorem-level statement appears below, it refers back to a
+main-text proposition; the appendix itself does not upgrade any status label beyond the declared
+theorem / derived-consequence / comparison / appendix discipline.
+
+\subsection{\texorpdfstring{$41$}{41}-chain overdetermination of the canonical branch}
+
+The canonical $41$-chain admits a compact overdetermination reading:
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.26\linewidth}>{\raggedleft\arraybackslash}p{0.12\linewidth}Y@{}}
+\toprule
+Layer & Value & Role \\
+\midrule
+Electroweak trace block $48\,I_1^{\mathrm{EW}}$ & $41$ & retained electroweak trace packet \\
+Block exponent $32\,k_{\mathrm{EW}}$ & $41$ & E$_8$-side compression datum \\
+UV hypercharge coefficient $10\,b_1$ & $41$ & one-loop electroweak closure datum \\
+Occupancy-weighted carrier norm $\Oadm\gamma+1$ & $41$ & carrier / family compression identity \\
+\bottomrule
+\end{tabularx}
+\caption{$41$-chain overdetermination of the canonical branch. The common integer is read as a
+structural consistency marker, not as a cryptographic statement.}
+\label{tab:checksum-41}
+\end{table}
+
+The value of this table is structural rather than rhetorical: four independently defined layers
+collapse onto one integer on the retained branch. This is exactly the sense in which the branch
+carries the closed $41$-chain marker $\mathcal I_{41}$.
+
+\subsection{Seed variance and surprisal readings}
+
+The bridge identities also admit a disciplined probabilistic reading. Since
+\[
+\lambda_C^2=\phiz(1-\phiz),
+\]
+the Cabibbo scale is exactly the standard-deviation scale of a Bernoulli variable with success probability $p=\phiz$:
+\[
+\lambda_C=\sqrt{p(1-p)}.
+\]
+Equivalently, the Fisher information of the Bernoulli family is
+\[
+I(p)=\frac{1}{p(1-p)}=\frac{1}{\lambda_C^2},
+\]
+so the Cabibbo bridge measures the inverse square-root Fisher scale of the retained seed. This is the precise information-theoretic statement. The present paper does \emph{not} identify $\lambda_C$ itself with Fisher information or with a Bures distance.
+
+Likewise, whenever the electromagnetic closure is written with
+\[
+\ln\!\bigl((\phiz)^{-1}\bigr),
+\]
+the exact probabilistic reading is the surprisal of the seed event. That term should not be called the Shannon entropy of the full Bernoulli distribution, which would instead be
+\[
+H(\phiz)
+=
+-\phiz\ln\phiz-(1-\phiz)\ln(1-\phiz).
+\]
+Finally, the neutrino bridge relation
+\[
+\sin^2\theta_{13}=\phiz e^{-\gamma}
+\]
+is naturally described as Boltzmann-like weighting by the carrier norm $\gamma$, but the present draft does not define a full thermodynamic partition function at that point. These readings are therefore organizational interpretations of already established formulas, not new closure theorems.
+
+\subsection{Exact parity-code and information-compression reading}
+
+The strongest information-theoretic statement is no longer a loose analogy. By \TFPTxref{prop:parity-code-family}, the one-family packet is exactly the even-parity subspace on five occupation bits,
+\[
+S^+
+\cong
+\mathrm{span}\Bigl\{|x\rangle:\sum_{i=1}^5 x_i\equiv 0 \pmod 2\Bigr\},
+\]
+so the carrier packet is kinematically the classical even-parity $[5,4,2]$ code. The split formula
+\[
+S^+
+=
+\bigl(\Lambda^{\mathrm{even}}E_3\otimes\Lambda^{\mathrm{even}}E_2\bigr)
+\oplus
+\bigl(\Lambda^{\mathrm{odd}}E_3\otimes\Lambda^{\mathrm{odd}}E_2\bigr)
+\]
+shows that the coarse parity bits of the $3$-sector and $2$-sector are exactly locked. For the maximally mixed state on the $16$ basis words, the two parity observables are perfectly correlated and therefore carry exactly one bit of mutual information.
+
+The split weight enumerator in \TFPTxref{prop:split-weight-enumerator} is the corresponding code enumerator with hypercharge weights. It packages the six admissible occupancy sectors into the single polynomial
+\[
+W(u,v)
+=
+1+3u^2+6uv+v^2+2u^3v+3u^2v^2.
+\]
+The hypercharge-compression result of \TFPTxref{prop:family-hypercharge-compression} sharpens the same picture further. On the uniform distribution over the $16$ carrier basis states, the six $Y$-sectors have probabilities
+\[
+\frac1{16}(1,3,6,1,2,3),
+\]
+so the hypercharge entropy is
+\[
+H(Y)
+=
+-\sum_i p_i\log_2 p_i
+=
+\frac72-\frac34\log_2 3
+\approx
+\num{2.311}\ \text{bits}.
+\]
+Since the total carrier word takes $4$ bits to specify, the unresolved nonabelian degeneracy is
+\[
+4-H(Y)\approx \num{1.689}\ \text{bits}.
+\]
+Thus hypercharge is an efficient family-sector compressor, but not a lossless label for the individual basis word.
+
+\begin{remark}[Two code layers: kinematic and admissible]
+The code reading should be split into two layers. First, $S^+$ is exactly the classical even-parity $[5,4,2]$ code on five occupation bits. Second, on the commuting admissible branch the protected physical sector is
+\[
+\mathcal H_{\mathrm{adm}}
+:=
+\operatorname{Ran}(\Padm)
+=
+\ker \Kadm
+=
+\ker \Delta_{\mathrm{adm}},
+\]
+where the last equality uses the Hodge description of \TFPTxref{lem:hodge-admissibility-projector}. In that second layer the penalties $K_\Sigma,K_c,K_\Theta,K_g$ act as stabilizer-like sector constraints, and $\Padm$ is the Hodge projector onto the admissible physical subspace. This is the precise bridge to quantum-information language used in the manuscript. It is not yet a theorem of a self-correcting quantum memory, because no noise model, logical algebra, or lifetime analysis is derived here.
+\end{remark}
+
+\subsection{Cut-and-project model-set realization}
+
+The appendix-level quasicrystal language is kept outside the hard core, but it can be stated
+exactly as a compatible model-set construction.
+
+\begin{theorem}[Regular cut-and-project model set for the \texorpdfstring{$3+2$}{3+2} carrier]
+\label{thm:cut-project-model-set}
+Let
+\[
+L=\mathbb Z^5.
+\]
+Choose a direct sum decomposition
+\[
+\mathbb R^5=V_{\mathrm{vis}}\oplus V_{\mathrm{int}},
+\qquad
+\dim V_{\mathrm{vis}}=3,
+\qquad
+\dim V_{\mathrm{int}}=2,
+\]
+such that the projection of $L$ to $V_{\mathrm{int}}$ is dense. Let
+\[
+\pi_{\mathrm{vis}}:\mathbb R^5\to V_{\mathrm{vis}},
+\qquad
+\pi_{\mathrm{int}}:\mathbb R^5\to V_{\mathrm{int}}
+\]
+be the canonical projections, and let $W\subset V_{\mathrm{int}}$ be a compact regular window with
+nonempty interior and boundary of measure zero. Define
+\[
+\Lambda_W
+:=
+\left\{
+\pi_{\mathrm{vis}}(n)\;:\;
+n\in L,\;
+\pi_{\mathrm{int}}(n)\in W,\;
+\sum_{i=1}^5 n_i\equiv 0\!\!\!\pmod 2
+\right\}.
+\]
+Then $\Lambda_W$ is a regular model set. The parity constraint realizes the even-packet selection of
+$S^+$, and the dimension split $3+2$ realizes the visible/internal carrier architecture.
+\end{theorem}
+
+\begin{proof}
+This is the standard cut-and-project theorem for regular model sets. Density of the internal
+projection and regularity of the window imply that $\Lambda_W$ is Delone and has pure point
+diffraction. The congruence condition
+\[
+\sum_{i=1}^5 n_i\equiv 0\!\!\!\pmod 2
+\]
+selects the even parity class, matching the even exterior-packet sector of the carrier.
+\end{proof}
+
+\begin{remark}[Status of the quasicrystal reading]
+The model-set theorem makes the quasicrystal appendix mathematically sharp, but the irrational split
+and window are not derived from the hard TFPT core. The construction is therefore exact yet
+deliberately kept appendix level.
+\end{remark}
+
+\section{Record algebra and pointer dynamics}
+\label{app:record}
+
+This appendix elaborates the main-text record constructions and the stable pointer-algebra package
+used in the downstream closure discussion. Horizon thermality and prediction / transient semantics
+are separated into the following appendix sections so that record theory, black-hole continuation,
+and phenomenological event channels do not blur into one mixed extrapolation block.
+
+\subsection{Minimal admissible vacuum}
+
+At finite volume or with a declared cutoff, an admissible vacuum candidate is written as
+\[
+\rho_B
+:=
+\argmin_{\rho\in\Vadm}\tr(\rho\Hrel),
+\]
+with lower boundedness and coercivity understood exactly as in the main-text closure axioms. The stronger generative theorem path described in the conclusion would refine this object to the global admissible vacuum functional $\mathfrak V[g,\chigeo,\Phi,\nabla_F,\delta,\{L_f\}]$ whose variations also select the transport branch. In this appendix, however, the same vacuum object is used only as the background state for the record-algebra elaborations; no stronger cosmological claim is added here beyond the closed existence statement already declared in the main theorem stack.
+
+\subsection{Record growth principle}
+
+One useful coarse-grained record algebra is
+\[
+\Arec(t):=\bigoplus_{\Delta_i>\Hhub(t)}\mathcal A_i,
+\qquad
+S_{\mathrm{rec}}(t)=\log\dim\Arec(t).
+\]
+As $\Hhub(t)$ decreases, more stable channels open. The intended arrow-of-time claim is therefore
+\[
+\frac{dS_{\mathrm{rec}}}{dt}>0,
+\]
+but only as a record-growth principle, not as a replacement for detailed nonequilibrium dynamics.
+
+\subsection{Observer algebra and Born-type evaluation}
+
+An observer is modeled as a stable pointer subalgebra
+\[
+\Aobs\subset\Arec.
+\]
+
+\begin{theorem}[Born evaluation on the stable pointer algebra]
+\label{thm:born-pointer-algebra}
+Let $\{P_i\}\subset \Aobs$ be a complete family of orthogonal projectors. Then for every state
+$\rho$ the unique additive, positive, and phase-invariant evaluation rule on this projector family is
+\[
+p_i=\tr(\rho P_i).
+\]
+\end{theorem}
+
+\begin{proof}
+In finite-dimensional sectors this is the standard Born rule characterization. The extra TFPT input
+is not a different probability law but the selection of the stable pointer algebra by the gapped
+admissible sector.
+\end{proof}
+
+With these projectors one may write the measurement channel
+\[
+\mathcal M_O(\rho)=\sum_i(P_i\rho P_i)\otimes |i\rangle\langle i|.
+\]
+The theorem is therefore a constrained appendix-level evaluation statement on admissible sectors,
+not a new claim about measurement in arbitrary settings.
+
+\section{Horizons, modular flow, and black hole thermality}
+\label{app:horizons}
+
+This appendix section records the horizon-side analytic input that supports the downstream modular
+thermality program. In the present version the split-inclusion theorem is the firm appendix-level
+statement, while the full modular KMS upgrade and compact-object thermality package remain visible
+downstream closure targets.
+
+\subsection{Split inclusion horizon approximation}
+
+\begin{theorem}[Horizon approximation by split inclusion]
+\label{thm:horizon-split-inclusion}
+Let $\mathfrak A_{\mathrm{adm}}$ be the local admissible net reconstructed in
+\TFPTxref{thm:admissible-local-minkowski-net}, and assume in addition the split property. Then for
+every nested triple
+\[
+\mathcal O_{\mathrm{out}}\Subset \mathcal O_{\mathrm{collar}}\Subset \mathcal O_{\mathrm{ext}}
+\]
+there exists a type-I factor $N$ such that
+\[
+\mathfrak A_{\mathrm{adm}}(\mathcal O_{\mathrm{out}})
+\subset
+N
+\subset
+\mathfrak A_{\mathrm{adm}}(\mathcal O_{\mathrm{ext}}).
+\]
+Hence on a suitable code subspace one obtains an approximate tensor factorization
+\[
+\mathcal H_{\mathrm{code}}
+\cong
+\mathcal H_{\mathrm{out}}\otimes\mathcal H_{\mathrm{hor}}\otimes\mathcal H_{\mathrm{in}}.
+\]
+\end{theorem}
+
+\begin{proof}
+This is the standard consequence of the split property for local quantum field theory nets. The
+result supplies an algebraic horizon approximation without asserting an exact fundamental
+factorization.
+\end{proof}
+
+If a horizon is modeled as an inner seam, the manuscript therefore uses only this split-based
+approximation language rather than an exact microscopic tensor decomposition.
+
+\section{Prediction semantics and transient event channels}
+\label{app:prediction-semantics}
+
+This appendix section collects the optional semantic decorations of the prediction map and the
+status note for transient event channels. These items organize downstream interpretation, but they
+do not add new upstream theorem arrows to the rigid core.
+
+\subsection{Prediction semantics}
+
+The main-text prediction map can be decorated by explicit experimental metadata as
+\[
+Q=(\rho_0,\mathcal O_Q,\Delta_Q,t,\mathcal C_Q,\mathcal R_Q),
+\qquad
+\Pred(Q)=\mathcal R_Q\!\left(\tr(\rho_tE_Q(\Delta)),\mathcal C_Q\right),
+\]
+with
+\[
+\rho_t=U(t)\rho_0U^\dagger(t).
+\]
+This is kept only as an optional formal extension.
+
+\subsection{Transient event status}
+
+The topological burst channel of \Cref{conj:topological_phase_slip_burst_channel} is kept at
+programmatic-target status. What is fixed in the present version is only the admissible phase-slip
+channel and its scaling form, not yet a complete defect dynamics or radiative-transfer derivation.
+
+\section{Closed theoretical outputs and empirical comparison surface}
+\label{app:global-particle-ledger}
+
+This appendix collects the full Standard Model output of the boundary-polarized manuscript into a
+theoretical surface and an empirical comparison surface. The purpose is not to flatten the
+hierarchy but to keep theorem-level outputs, derived consequences, physical observables, scheme projections, and appendix continuations
+visibly distinct:
+
+\begin{tcolorbox}[colback=tfptblue!2, colframe=tfptblue!50, breakable,
+    title={Status legend for the particle ledger}, colbacktitle=tfptblue!70]
+\begin{itemize}[leftmargin=1.5em, topsep=3pt, itemsep=2pt]
+\item \textbf{Theorem:} a theorem-level output on the closed branch.
+\item \textbf{Derived consequence:} a structural output obtained by composing earlier theorems without adding a new scheme convention.
+\item \textbf{Physical observable:} a branch-fixed observable read internally before any scheme choice.
+\item \textbf{Scheme projection:} a row reported only after declared schemes, thresholds, or matching conventions.
+\item \textbf{Appendix continuation:} appendix-level continuation not needed for the closed core.
+\item \textbf{Programmatic target:} a precise downstream closure target recorded without a claimed proof in the present version.
+\end{itemize}
+Rows on the empirical comparison surface are compared only under the declared external
+conventions once the physical observable layer has already been fixed.
+\end{tcolorbox}
+
+\begin{remark}[Counting convention used here]
+\label{rem:counting-convention}
+One chiral family from $S^+=\Lambda^{\mathrm{even}}E$ contains $16$ states:
+$\nu^c$\,(1), $u^c$\,(3), $Q_L$\,(6), $e^c$\,(1), $L_L$\,(2), $d^c$\,(3).
+With $\nu^c$ explicitly in the carrier family packet, each family has $6$ Weyl field types.
+Three families give $\Oadm=3\times 16=48$ admissible chiral states.
+The gauge sector has $12$ bosons ($\gamma$, $8$ gluons, $W^\pm$, $Z$), and the Higgs sector has
+$1$ physical scalar. The total field-type count is therefore $3\times 6+4+1=23$ distinct types.
+\end{remark}
+
+\subsection{Table 1: Closed theoretical outputs}
+
+\begin{table}[H]
+\centering
+\tiny
+\setlength{\tabcolsep}{1.5pt}
+\renewcommand{\arraystretch}{1.0}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.09\linewidth}>{\raggedright\arraybackslash}p{0.11\linewidth}>{\raggedright\arraybackslash}p{0.10\linewidth}>{\centering\arraybackslash}p{0.04\linewidth}>{\raggedright\arraybackslash}p{0.18\linewidth}>{\raggedright\arraybackslash}p{0.20\linewidth}>{\raggedright\arraybackslash}p{0.08\linewidth}@{}}
+\toprule
+Particle & Repr. & Ext.\ source & $Y$ & TFPT origin & Internal source & Status \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{Fermion sector (one family $\times\,3$):}} \\
+$\nu^c$ & $(1,1)_0$ & $\Lambda^0E$ & $0$ & carrier scaffold & hard carrier, $S^+$ & Theorem \\
+$e^c$ & $(1,1)_1$ & $\Lambda^2E_2$ & $1$ & carrier scaffold & hard carrier, $S^+$ & Theorem \\
+$u^c$ & $(\bar 3,1)_{-2/3}$ & $\Lambda^2E_3$ & $-\frac23$ & carrier scaffold & hard carrier, $S^+$ & Theorem \\
+$d^c$ & $(\bar 3,1)_{1/3}$ & \makecell[l]{$\Lambda^2E_3$\\$\otimes\Lambda^2E_2$} & $\frac13$ & carrier scaffold & hard carrier, $S^+$ & Theorem \\
+$Q_L$ & $(3,2)_{1/6}$ & $E_3\otimes E_2$ & $\frac16$ & carrier scaffold & hard carrier, $S^+$ & Theorem \\
+$L_L$ & $(1,2)_{-1/2}$ & \makecell[l]{$\Lambda^3E_3$\\$\otimes E_2$} & $-\frac12$ & carrier scaffold & hard carrier, $S^+$ & Theorem \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{Gauge boson sector:}} \\
+$\gamma$ & $(1,1)_0$ & unbroken $U(1)_{\mathrm{em}}$ & $0$ & exact gauge direction & carrier algebra & Theorem \\
+$g$ ($\times 8$) & $(8,1)_0$ & unbroken $SU(3)_c$ & $0$ & exact gauge direction & carrier algebra & Theorem \\
+$W^\pm$ & $(1,3)_{\pm1}$ & SSB from $\Phi$ & $\pm1$ & bosonic index + Higgs mechanism & Dirac-anchor closure & Physical observable \\
+$Z$ & $(1,1)_0$ & SSB from $\Phi$ & $0$ & bosonic index + Higgs mechanism & Dirac-anchor closure & Physical observable \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{Scalar sector:}} \\
+$H$ & $(1,2)_{1/2}$ & seam-even $\Phi$ & $\frac12$ & compact bosonic index & $\Ind(\mathcal B_{E_2}^+)=1$ & Theorem \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{Structural outputs:}} \\
+$N_{\mathrm{fam}}=3$ & $\mathcal H_F\cong F\cong\mathbb C^3$ & $L^2$-APS harmonic family modes & --- & harmonic family-mode theorem & punctured family section & Theorem \\
+$\Oadm=48$ & $S^+\otimes \mathcal H_F$ & occupancy & --- & bridge corollary & $3\times 16$ & Theorem \\
+$G_{\mathrm{car}}$ & \makecell[l]{$S(U(3)\!\times\!U(2))$\\$\cong[SU(3)\!\times\!SU(2)$\\$\times U(1)_Y]/\mathbb Z_6$} & carrier split & --- & internal carrier stabilizer theorem (\TFPTxref{thm:global-sm-theorem}) & $E_3\oplus E_2$ & Theorem \\
+local algebra & $\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1)$ & local Lie algebra & --- & differential of the internal carrier theorem & local sections of $E_3\oplus E_2$ & Derived consequence \\
+\bottomrule
+\end{tabular}
+\caption{Standard Model content and origin map on the closed branch. The status column separates theorem outputs from physical observables and appendix-only scheme projections.}
+\label{tab:sm-content-origin}
+\end{table}
+
+\subsection{Table 2: Empirical comparison rows}
+
+\begin{table}[H]
+\centering
+\scriptsize
+\sisetup{round-mode=none, group-minimum-digits=20}
+\setlength{\tabcolsep}{1.5pt}
+\renewcommand{\arraystretch}{1.0}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{@{}lllllrlrrl@{}}
+\toprule
+Quantity & Sector & TFPT formula or source & \makecell[l]{Metrology\\readout} & \makecell[l]{Comparison\\map} & \makecell[r]{TFPT\\value} & Unit & \makecell[r]{Reference\\value} & Residual & Status \\
+\midrule
+\multicolumn{10}{@{}l}{\textit{Closed theoretical outputs:}} \\
+$\alpha^{-1}(0)$ & EM & exact $\phiseam(\alpha)$ closure & \makecell[l]{$d_O=0$\\direct readout} & on-shell Thomson & \num{137.0359992} & --- & \num{137.03599918} & $+1.87\sigma$ & Physical observable \\
+$m_\gamma$ & EM & unbroken $U(1)_{\mathrm{em}}$ & \makecell[l]{$d_O=1$\\$m_\gamma/\lambda_\Sigma=0$} & --- & $0$ & --- & $0$ & exact & Theorem \\
+$m_g$ & QCD & unbroken $SU(3)_c$ & \makecell[l]{$d_O=1$\\$m_g/\lambda_\Sigma=0$} & --- & $0$ & --- & $0$ & exact & Theorem \\
+\midrule
+\multicolumn{10}{@{}l}{\textit{Derived consequences:}} \\
+$e$ & lepton & $\frac{\vgeo}{\sqrt2}\frac{16\pi}{7}(\phiz)^5$ & \makecell[l]{$d_O=1$\\$\hat m_e/\lambda_\Sigma$} & exact $\vgeo$ branch & \num{0.52266} & MeV & \num{0.510999} & $+2.28\%$ & Derived consequence \\
+$\mu$ & lepton & $\frac{\vgeo}{\sqrt2}\frac{4\pi}{3}(\phiz)^3$ & \makecell[l]{$d_O=1$\\$\hat m_\mu/\lambda_\Sigma$} & exact $\vgeo$ branch & \num{107.84} & MeV & \num{105.658} & $+2.07\%$ & Derived consequence \\
+$\tau$ & lepton & $\frac{\vgeo}{\sqrt2}\frac{7\pi}{6}(\phiz)^2$ & \makecell[l]{$d_O=1$\\$\hat m_\tau/\lambda_\Sigma$} & exact $\vgeo$ branch & \num{1.7746} & GeV & \num{1.77686} & $-0.12\%$ & Derived consequence \\
+$u$ & quark & ChPT inversion from $m_s$ anchor & \makecell[l]{$d_O=1$\\$m_u/\lambda_\Sigma$} & $\overline{\mathrm{MS}}$, $2$\,GeV & \num{2.195} & MeV & \num{2.16} & $+1.62\%$ & Derived consequence \\
+$d$ & quark & $m_s/(m_s/m_d)$ & \makecell[l]{$d_O=1$\\$m_d/\lambda_\Sigma$} & $\overline{\mathrm{MS}}$, $2$\,GeV & \num{4.67} & MeV & \num{4.67} & $+0.00\%$ & Derived consequence \\
+$\pi^0$ & hadron & GMOR relation from $(m_u+m_d)$ & \makecell[l]{$d_O=1$\\$m_{\pi^0}/\lambda_\Sigma$} & --- & \num{134.979} & MeV & \num{134.977} & $+0.00\%$ & Derived consequence \\
+$p$ & hadron & hadron mass ladder & \makecell[l]{$d_O=1$\\$m_p/\lambda_\Sigma$} & --- & \num{935.03} & MeV & \num{938.272} & $-0.35\%$ & Derived consequence \\
+$\theta_{\mathrm{eff}}$ & strong CP & determinant-line strong-CP closure & \makecell[l]{$d_O=0$\\direct readout} & --- & $0$ & --- & $<10^{-10}$ & exact null & Theorem \\
+\midrule
+\multicolumn{10}{@{}l}{\textit{Empirical comparison rows:}} \\
+$W^\pm$ & EW & intrinsic threshold at $M_Z$ & \makecell[l]{$d_O=1$\\$m_W/\lambda_\Sigma$} & $\mathcal R_{\SM}$ & \num{80.369} & GeV & \num{80.369} & $0.00\%$ & Scheme projection \\
+$Z$ & EW & intrinsic threshold at $M_Z$ & \makecell[l]{$d_O=1$\\$m_Z/\lambda_\Sigma$} & $\mathcal R_{\SM}$ & \num{91.188} & GeV & \num{91.188} & $0.00\%$ & Scheme projection \\
+$H$ & EW & intrinsic threshold & \makecell[l]{$d_O=1$\\$m_H/\lambda_\Sigma$} & $\mathcal R_{\SM}$ & \num{125.25} & GeV & \num{125.25} & $0.00\%$ & Scheme projection \\
+$s$ & quark & strange-quark matched row & \makecell[l]{$d_O=1$\\$m_s/\lambda_\Sigma$} & $\overline{\mathrm{MS}}$, $2$\,GeV & \num{93.4} & MeV & \num{93.4} & $0.00\%$ & Scheme projection \\
+$c$ & quark & up-type ratio ladder & \makecell[l]{$d_O=1$\\$m_c/\lambda_\Sigma$} & threshold matching & \num{1.27} & GeV & \num{1.27} & $0.00\%$ & Scheme projection \\
+$b$ & quark & down-type ratio ladder & \makecell[l]{$d_O=1$\\$m_b/\lambda_\Sigma$} & threshold matching & \num{4.18} & GeV & \num{4.18} & $0.00\%$ & Scheme projection \\
+$t$ & quark & up-type ratio ladder & \makecell[l]{$d_O=1$\\$m_t/\lambda_\Sigma$} & threshold matching & \num{172.57} & GeV & \num{172.57} & $0.00\%$ & Scheme projection \\
+$\hat s_Z^2(M_Z)$ & EW & gauge closure + seam-even matching & \makecell[l]{$d_O=0$\\scheme image} & $\overline{\mathrm{MS}}$ & \num{0.23116} & --- & \num{0.23121} & $-0.02\%$ & Scheme projection \\
+$\alpha_s(M_Z)$ & QCD & gauge closure + singlet Wilson matching & \makecell[l]{$d_O=0$\\scheme image} & $\overline{\mathrm{MS}}$ & \num{0.11796} & --- & \num{0.1180} & $-0.03\%$ & Scheme projection \\
+$\bar\alpha^{(5)}(M_Z)^{-1}$ & EM & $\mathcal R_{\SM}[\alpha(0)]$ & \makecell[l]{$d_O=0$\\scheme image} & $\overline{\mathrm{MS}}$ & \num{127.9405} & --- & \num{127.93} & $+1.32\sigma$ & Scheme projection \\
+$\lambda_C$ & CKM & $s_{12}(V_{\mathrm{CKM}}^\star)$ & \makecell[l]{$d_O=0$\\direct readout} & CKM proxy & \num{0.22438} & --- & \num{0.22431} & $+0.08\sigma$ & Physical observable \\
+$\sin^2\theta_{13}$ & PMNS & $|(U_{\mathrm{PMNS}}^\star)_{e3}|^2$ & \makecell[l]{$d_O=0$\\direct readout} & NuFIT NO & \num{0.02311} & --- & \num{0.02224} & $+1.52\sigma$ & Physical observable \\
+$\Omega_b$ & cosmo & late-time cosmology comparison & \makecell[l]{$d_O=0$\\$C_{\mathrm{cos}}$ readout} & Planck 2018 & \num{0.04894} & --- & \num{0.04930} & $-0.42\sigma$ & Cosmology comparison \\
+$\beta$ & cosmo & determinant response in degrees & \makecell[l]{$d_O=0$\\$\beta_{\mathrm{rad}}$} & Planck / Minami--Komatsu & \num{0.242} & deg & \num{0.35} & $-0.77\sigma$ & Physical observable \\
+\midrule
+\multicolumn{10}{@{}l}{\textit{Intrinsic neutrino closure (no external anchor):}} \\
+$\nu_1$ & neutrino & intrinsic transport closure & \makecell[l]{$d_O=1$\\$m_{\nu_1}/\lambda_\Sigma$} & --- & $0$ & eV & --- & --- & Derived consequence \\
+$\nu_2$ & neutrino & intrinsic transport closure & \makecell[l]{$d_O=1$\\$m_{\nu_2}/\lambda_\Sigma$} & --- & \num{8.614e-3} & eV & --- & --- & Derived consequence \\
+$\nu_3$ & neutrino & intrinsic transport closure & \makecell[l]{$d_O=1$\\$m_{\nu_3}/\lambda_\Sigma$} & --- & \num{5.015e-2} & eV & --- & --- & Derived consequence \\
+$\Sigma m_\nu$ & neutrino & intrinsic closure sum & \makecell[l]{$d_O=1$\\$\Sigma m_\nu/\lambda_\Sigma$} & --- & \num{5.876e-2} & eV & $<0.12$ & compatible & Physical observable \\
+\bottomrule
+\end{tabular}}
+\caption{Full theoretical-output and empirical-comparison surface. Every row carries its TFPT
+source formula, its dimensionless metrology readout, and, where needed, one external comparison
+representative. Unitful entries are therefore interface representatives rather than theorem-level
+primitive outputs. Reference values are PDG~2024 and CODATA~2022 unless noted otherwise.}
+\label{tab:full-mass-benchmark-surface}
+\end{table}
+
+\subsection{Empirical comparison surface}
+
+\Cref{tab:strict-benchmark-surface} extracts only the rows that are fair as direct
+theory-versus-data comparisons. Derived consequences that still depend on internal branch formulas
+are excluded.
+
+\begin{table}[H]
+\centering
+\scriptsize
+\sisetup{round-mode=none, group-minimum-digits=20}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.0}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{@{}lllrlrrl@{}}
+\toprule
+Quantity & \makecell[l]{Metrology\\readout} & Comparison map & \makecell[r]{TFPT\\value} & Unit & \makecell[r]{Reference\\value} & Residual & Status \\
+\midrule
+\multicolumn{8}{@{}l}{\textit{Closed physical observables with direct comparison:}} \\
+$\alpha^{-1}(0)$ & \makecell[l]{$d_O=0$\\direct readout} & on-shell Thomson & \num{137.0359992} & --- & \num{137.03599918} & $+1.87\sigma$ & Physical observable \\
+$m_\gamma$ & \makecell[l]{$d_O=1$\\$m_\gamma/\lambda_\Sigma=0$} & --- & $0$ & --- & $0$ & exact & Theorem \\
+$m_g$ & \makecell[l]{$d_O=1$\\$m_g/\lambda_\Sigma=0$} & --- & $0$ & --- & $0$ & exact & Theorem \\
+$\theta_{\mathrm{eff}}=0$ & \makecell[l]{$d_O=0$\\direct readout} & --- & $0$ & --- & $<10^{-10}$ & exact null & Theorem \\
+\midrule
+\multicolumn{8}{@{}l}{\textit{Scheme projections and appended physical rows:}} \\
+$W^\pm$ & \makecell[l]{$d_O=1$\\$m_W/\lambda_\Sigma$} & $\mathcal R_{\SM}$ threshold & \num{80.369} GeV & GeV & \num{80.369} & $0.00\%$ & Scheme projection \\
+$Z$ & \makecell[l]{$d_O=1$\\$m_Z/\lambda_\Sigma$} & $\mathcal R_{\SM}$ threshold & \num{91.188} GeV & GeV & \num{91.188} & $0.00\%$ & Scheme projection \\
+$H$ & \makecell[l]{$d_O=1$\\$m_H/\lambda_\Sigma$} & $\mathcal R_{\SM}$ threshold & \num{125.25} GeV & GeV & \num{125.25} & $0.00\%$ & Scheme projection \\
+$s$ & \makecell[l]{$d_O=1$\\$m_s/\lambda_\Sigma$} & $\overline{\mathrm{MS}}$, $2$\,GeV & \num{93.4} MeV & MeV & \num{93.4} & $0.00\%$ & Scheme projection \\
+$c$ & \makecell[l]{$d_O=1$\\$m_c/\lambda_\Sigma$} & threshold matching & \num{1.27} GeV & GeV & \num{1.27} & $0.00\%$ & Scheme projection \\
+$b$ & \makecell[l]{$d_O=1$\\$m_b/\lambda_\Sigma$} & threshold matching & \num{4.18} GeV & GeV & \num{4.18} & $0.00\%$ & Scheme projection \\
+$t$ & \makecell[l]{$d_O=1$\\$m_t/\lambda_\Sigma$} & threshold matching & \num{172.57} GeV & GeV & \num{172.57} & $0.00\%$ & Scheme projection \\
+$\hat s_Z^2(M_Z)$ & \makecell[l]{$d_O=0$\\scheme image} & $\overline{\mathrm{MS}}$ & \num{0.23116} & --- & \num{0.23121} & $-0.02\%$ & Scheme projection \\
+$\alpha_s(M_Z)$ & \makecell[l]{$d_O=0$\\scheme image} & $\overline{\mathrm{MS}}$ & \num{0.11796} & --- & \num{0.1180} & $-0.03\%$ & Scheme projection \\
+$\bar\alpha^{(5)}(M_Z)^{-1}$ & \makecell[l]{$d_O=0$\\scheme image} & $\overline{\mathrm{MS}}$ & \num{127.9405} & --- & \num{127.93} & $+1.32\sigma$ & Scheme projection \\
+$\lambda_C$ & \makecell[l]{$d_O=0$\\direct readout} & CKM proxy & \num{0.22438} & --- & \num{0.22431} & $+0.08\sigma$ & Physical observable \\
+$\sin^2\theta_{13}$ & \makecell[l]{$d_O=0$\\direct readout} & NuFIT NO & \num{0.02311} & --- & \num{0.02224} & $+1.52\sigma$ & Physical observable \\
+$\Omega_b$ & \makecell[l]{$d_O=0$\\$C_{\mathrm{cos}}$ readout} & Planck 2018 & \num{0.04894} & --- & \num{0.04930} & $-0.42\sigma$ & Cosmology comparison \\
+$\beta$ & \makecell[l]{$d_O=0$\\$\beta_{\mathrm{rad}}$} & Planck / Minami--Komatsu & $0.242^\circ$ & deg & $0.35^\circ$ & $-0.77\sigma$ & Physical observable \\
+$\Sigma m_\nu$ & \makecell[l]{$d_O=1$\\$\Sigma m_\nu/\lambda_\Sigma$} & cosmological bound & \num{5.876e-2} eV & eV & $<0.12$ & compatible & Physical observable \\
+\bottomrule
+\end{tabular}}
+\caption{Empirical comparison surface. These are the rows for which a fair theory-versus-data
+comparison is meaningful under the declared external conventions. The metrology column records the
+dimensionless TFPT readout; the unitful value column is only its chosen comparison representative.
+The table separates physical observables from pure scheme projections. Derived branch-dependent rows
+are excluded here. Reference values are PDG~2024 and CODATA~2022 unless noted otherwise.}
+\label{tab:strict-benchmark-surface}
+\end{table}
+
+\section{Extended benchmarks}
+\label{app:benchmarks}
+
+This appendix turns the broader prediction surface into explicit experimental bookkeeping. The point is not to promote every row to main-text benchmark status, but to keep next test, kill criterion, and dependency structure visible wherever the theory already commits to a concrete target.
+
+\subsection{Operational prediction matrix}
+
+The appendix matrix keeps the same truth-mode discipline as the main text, but its final column
+adds a short row-level qualifier whenever an appendix-level auxiliary continuation needs to be
+made explicit.
+
+\begin{table}[H]
+\centering
+\tiny
+\sisetup{round-mode=none, group-minimum-digits=20}
+\setlength{\tabcolsep}{0.8pt}
+\renewcommand{\arraystretch}{0.94}
+\sloppy
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.14\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.20\linewidth}>{\raggedright\arraybackslash}p{0.10\linewidth}>{\raggedright\arraybackslash}p{0.14\linewidth}@{}}
+\toprule
+\makecell[l]{Observable} & \makecell[l]{TFPT\\target} & \makecell[l]{Experimental reading\\next test} & \makecell[l]{Kill\\criterion} & \makecell[l]{Dependency\\class} & \makecell[l]{Status\\note} \\
+\midrule
+Cosmic birefringence $\beta$ & \num{0.2424}$^\circ$ & \makecell[l]{calibrated achromatic\\CMB rotation fit\\without EB self-nulling} & \makecell[l]{calibrated $\beta=0$\\within $\pm\num{0.05}^\circ$} & \makecell[l]{determinant\\response} & \makecell[l]{Physical\\observable} \\
+$\delta_{\mathrm{CKM}}$ & \makecell[l]{\num{1.198}\\rad} & \makecell[l]{global flavor\\fit} & \makecell[l]{stable exclusion at\\$\ge 3\sigma$} & \makecell[l]{flavor\\comparison} & \makecell[l]{Comparison\\quantity\\exact phase} \\
+\makecell[l]{Rare kaons\\$K\to\pi\nu\bar\nu$} & \makecell[l]{$\mathrm{BR}(K^+)$\\$=\num{9.40e-11}$\\$\mathrm{BR}(K_L)$\\$=\num{3.47e-11}$} & \makecell[l]{NA62 current\\result / KOTO\\Grossman--Nir test} & \makecell[l]{$K^+$ outside\\$[7,12]\times10^{-11}$\\or $K_L$ mismatch} & \makecell[l]{flavor\\comparison} & \makecell[l]{Comparison\\quantity} \\
+\makecell[l]{PMNS phase /\\octant} & \makecell[l]{$\delta_{\mathrm{CP}}=240^\circ$\\$\sin^2\theta_{23}=\num{0.4557}$} & \makecell[l]{global oscillation\\fit} & \makecell[l]{exclude $240^\circ$\\or the lower octant\\at $\ge 3\sigma$} & \makecell[l]{neutrino\\comparison} & \makecell[l]{Comparison\\quantity} \\
+$\Sigma m_\nu$ & \makecell[l]{\num{5.8764e-2}\\eV} & \makecell[l]{cosmological mass-sum\\analyses} & \makecell[l]{robust upper bound\\below the branch value} & \makecell[l]{neutrino\\comparison} & \makecell[l]{Comparison\\quantity} \\
+$m_{\beta\beta}$ & \makecell[l]{\num{1.516e-3}\\eV} & \makecell[l]{light-Majorana\\$0\nu\beta\beta$ searches} & \makecell[l]{detection implying\\$m_{\beta\beta}\gtrsim \num{1e-2}$ eV} & \makecell[l]{neutrino\\comparison} & \makecell[l]{Comparison\\quantity} \\
+\makecell[l]{nEDM / strong\\CP} & $\theta_{\mathrm{eff}}=0$ & \makecell[l]{next-generation\\EDM searches} & \makecell[l]{stable nonzero\\hadronic EDM signal} & \makecell[l]{strong-CP\\theorem} & \makecell[l]{Theorem} \\
+\makecell[l]{Axion haloscope\\window} & \makecell[l]{$m_a\approx \num{65.19}$\\$\mu\mathrm{eV}$\\$\nu_a\approx \num{15.764}$\\$\mathrm{GHz}$} & \makecell[l]{haloscope scan at\\\num{15.764} GHz\\in the quoted window} & \makecell[l]{exclusion in\\\num{15.764} GHz\\$\pm \num{50}$ MHz} & \makecell[l]{cosmology\\readout} & \makecell[l]{Cosmology\\readout target} \\
+$m_{\pi^0}$ & \makecell[l]{\num{134.979}\\MeV} & \makecell[l]{hadronic\\theorem row} & \makecell[l]{robust mismatch outside the\\stated uncertainty budget} & closure & \makecell[l]{Derived hadronic\\row} \\
+$\eta_B$ & \makecell[l]{\num{5.97e-10}} & \makecell[l]{flavored leptogenesis\\consistency test} & \makecell[l]{robust exclusion of the\\quoted branch value} & \makecell[l]{cosmology\\comparison} & \makecell[l]{Cosmology\\comparison} \\
+\bottomrule
+\end{tabular}}
+\caption{Operational prediction matrix extending the main-text prediction surface. Each row carries its own status note, experimental reading, kill criterion, and dependency class.}
+\label{tab:extended-benchmarks}
+\end{table}
+
+\subsection{Target and kill-test rows}
+
+\begin{table}[H]
+\centering
+\scriptsize
+\sisetup{round-mode=none, group-minimum-digits=20}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{0.96}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.38\linewidth}@{}}
+\toprule
+Test row & TFPT target or prohibition & Status reading & Failure mode \\
+\midrule
+Second light Higgs doublet & \makecell[l]{no additional seam-even\\light doublet} & \makecell[l]{kill\\test} & \makecell[l]{robust discovery would\\falsify the bosonic-index route} \\
+Calibrated birefringence null & \makecell[l]{$\beta=\num{0.2424}^\circ$\\on the minimal branch} & \makecell[l]{kill\\test} & \makecell[l]{externally calibrated null\\consistent with zero at the\\stated tolerance would remove\\the minimal birefringence sector} \\
+Rare-kaon corridor & \makecell[l]{$\mathrm{BR}(K^+)=\num{9.40e-11}$\\$\mathrm{BR}(K_L)=\num{3.47e-11}$} & \makecell[l]{kill\\test} & \makecell[l]{a stable kaon result outside\\the quoted corridor or\\incompatible GN-plane\\correlation would break the\\present flavor bridge} \\
+Strong-CP / EDM signal & \makecell[l]{$\theta_{\mathrm{eff}}=0$ from\\determinant-line closure} & \makecell[l]{kill\\test} & \makecell[l]{stable nonzero EDM signal\\would break the present\\strong-CP theorem} \\
+Cosmological neutrino sum & \makecell[l]{$\Sigma m_\nu=\num{5.8764e-2}$ eV\\from intrinsic neutrino\\closure} & \makecell[l]{pressure\\test} & \makecell[l]{a robust upper bound below\\the stated branch value would\\force a neutrino-sector revision} \\
+Haloscope window & \makecell[l]{$\nu_a\approx\num{15.76}$ GHz\\from cosmology interface data} & \makecell[l]{target\\row} & \makecell[l]{exclusion in the relevant\\coupled window would pressure\\the intrinsic axion row} \\
+\bottomrule
+\end{tabular}}
+\caption{Target and kill-test rows. These are not current confirmations; they describe the most direct falsification or pressure points of the present branch.}
+\label{tab:kill-tests}
+\end{table}
+
+\subsection{Axion interface}
+
+The axion rows are cosmology readouts generated from the same determinant-line / seam-transfer /
+scalaron interface data that also fix reheating and the heavy-neutrino scale. On the closed
+cosmology branch,
+\[
+f_a\approx \num{8.86e10}\,\mathrm{GeV},
+\qquad
+m_a\approx \num{65.19}\,\mu\mathrm{eV},
+\qquad
+\nu_a\approx \num{15.764}\,\mathrm{GHz}.
+\]
+In standard haloscope units this gives
+\[
+\left|g_{a\gamma\gamma}^{(\mathrm{phys})}\right|
+=
+\frac{|g_{a\gamma\gamma}|}{f_a}
+\approx
+\num{1.80e-12}\,\mathrm{GeV}^{-1},
+\]
+so the practical scan prescription is a conservative window
+\[
+\nu_a=\num{15.764}\,\mathrm{GHz}\pm \num{50}\,\mathrm{MHz}
+\]
+at the quoted coupled sensitivity. The present appendix therefore records a practical cosmology
+readout target rather than introducing a new theorem-level observable claim.
+
+\subsection{Supplementary UV asymptotic mass-source rows}
+
+The compact main-text mass ledgers intentionally suppress explicit formula detail. The source rows
+collected here retain that information without forcing the main text to read like a mixed formula
+notebook. In the present version they are explicitly UV asymptotic source rows: the physical masses
+belong to the pole-level functor $\Mphys$ on $\GrenTFPT$, whereas the formulas below record the
+closed-branch source grammar before pole dressing and scheme projection.
+
+\begin{table}[H]
+\centering
+\tiny
+\sisetup{round-mode=none, group-minimum-digits=20}
+\setlength{\tabcolsep}{1pt}
+\renewcommand{\arraystretch}{0.96}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.09\linewidth}>{\raggedright\arraybackslash}p{0.38\linewidth}>{\raggedright\arraybackslash}p{0.18\linewidth}>{\raggedleft\arraybackslash}p{0.14\linewidth}Y@{}}
+\toprule
+Particle & TFPT formula or source row & \makecell[l]{Metrology /\\source readout} & \makecell[r]{Scheme\\representative} & Status note \\
+\midrule
+$e$ & \makecell[l]{$\tfrac{\vgeo}{\sqrt2}$\\$\times \tfrac{16\pi}{7}(\phiz)^5$} & \makecell[l]{$d_O=1$\\$\hat m_e/\lambda_\Sigma$} & \makecell[r]{\num{0.52266}\\MeV} & \makecell[l]{UV asymptotic source row\\exact $\vgeo$ branch} \\
+$\mu$ & \makecell[l]{$\tfrac{\vgeo}{\sqrt2}$\\$\times \tfrac{4\pi}{3}(\phiz)^3$} & \makecell[l]{$d_O=1$\\$\hat m_\mu/\lambda_\Sigma$} & \makecell[r]{\num{107.84}\\MeV} & \makecell[l]{UV asymptotic source row\\exact $\vgeo$ branch} \\
+$\tau$ & \makecell[l]{$\tfrac{\vgeo}{\sqrt2}$\\$\times \tfrac{7\pi}{6}(\phiz)^2$} & \makecell[l]{$d_O=1$\\$\hat m_\tau/\lambda_\Sigma$} & \makecell[r]{\num{1.7746}\\GeV} & \makecell[l]{UV asymptotic source row\\exact $\vgeo$ branch} \\
+\multicolumn{5}{@{}l}{\textit{Closed neutrino outputs:}} \\
+$\nu_1$ & intrinsic transport closure & \makecell[l]{$d_O=1$\\$m_{\nu_1}/\lambda_\Sigma$} & $0$ & theorem \\
+$\nu_2$ & intrinsic transport closure & \makecell[l]{$d_O=1$\\$m_{\nu_2}/\lambda_\Sigma$} & \makecell[r]{\num{8.614e-3}\\eV} & theorem \\
+$\nu_3$ & intrinsic transport closure & \makecell[l]{$d_O=1$\\$m_{\nu_3}/\lambda_\Sigma$} & \makecell[r]{\num{5.015e-2}\\eV} & theorem \\
+$\Sigma m_\nu$ & \makecell[l]{intrinsic transport\\closure sum} & \makecell[l]{$d_O=1$\\$\Sigma m_\nu/\lambda_\Sigma$} & \makecell[r]{\num{5.8764e-2}\\eV} & physical observable \\
+$u$ & ChPT ratio inversion anchored to $m_s$ & \makecell[l]{$d_O=1$\\$m_u/\lambda_\Sigma$} & \makecell[r]{\num{2.195}\\MeV} & \makecell[l]{derived; $\overline{\mathrm{MS}}$\\at $2$ GeV} \\
+$d$ & $m_s/(m_s/m_d)$ & \makecell[l]{$d_O=1$\\$m_d/\lambda_\Sigma$} & \makecell[r]{\num{4.67}\\MeV} & \makecell[l]{derived; $\overline{\mathrm{MS}}$\\at $2$ GeV} \\
+$s$ & strange-quark comparison row in the light-quark solver & \makecell[l]{$d_O=1$\\$m_s/\lambda_\Sigma$} & \makecell[r]{\num{93.4}\\MeV} & \makecell[l]{scheme projection;\\$\overline{\mathrm{MS}}$ at $2$ GeV} \\
+$c$ & \makecell[l]{up-type ratio ladder with\\$m_c/m_u=\num{486.92}$} & \makecell[l]{$d_O=1$\\$m_c/\lambda_\Sigma$} & \makecell[r]{\num{1.27}\\GeV} & \makecell[l]{scheme projection\\after threshold matching} \\
+$b$ & \makecell[l]{down-type ratio ladder with\\$m_b/m_s=\num{43.79}$} & \makecell[l]{$d_O=1$\\$m_b/\lambda_\Sigma$} & \makecell[r]{\num{4.18}\\GeV} & \makecell[l]{scheme projection\\after threshold matching} \\
+$t$ & \makecell[l]{up-type ratio ladder with\\$m_t/m_c=\num{133.01}$} & \makecell[l]{$d_O=1$\\$m_t/\lambda_\Sigma$} & \makecell[r]{\num{172.57}\\GeV} & \makecell[l]{scheme projection;\\pole / $\overline{\mathrm{MS}}$ distinction remains external} \\
+$\pi^0$ & \makecell[l]{GMOR relation from\\$(m_u+m_d)$ and $\langle\bar qq\rangle$} & \makecell[l]{$d_O=1$\\$m_{\pi^0}/\lambda_\Sigma$} & \makecell[r]{\num{134.979}\\MeV} & hadronic out-of-sample check \\
+$p$ & hadron mass ladder & \makecell[l]{$d_O=1$\\$m_p/\lambda_\Sigma$} & \makecell[r]{\num{935.03}\\MeV} & derived hadronic scale check \\
+\bottomrule
+\end{tabularx}
+\caption{Supplementary UV asymptotic mass-source rows for the compact main-text mass surface. The
+table records closed-branch source formulas before pole dressing and scheme projection. The
+metrology/source column isolates the dimensionless TFPT row; the unitful column is only its chosen
+comparison representative.}
+\label{tab:mass-source-supplement}
+\end{table}
+
+\begin{corollary}[Intrinsic charged-lepton UV source compression on the exact $\vgeo$ branch]
+\label{cor:charged-lepton-source-compression}
+On the exact $\vgeo$ branch the retained charged-lepton source rows satisfy
+\[
+(\hat m_e,\hat m_\mu,\hat m_\tau)
+=
+\frac{\vgeo\pi}{\sqrt2}
+\left(
+\frac{16}{7}(\phiz)^5,
+\frac{4}{3}(\phiz)^3,
+\frac{7}{6}(\phiz)^2
+\right).
+\]
+Hence
+\[
+\frac{\hat m_\mu}{\hat m_\tau}=\frac{8}{7}\phiz,
+\qquad
+\frac{\hat m_e}{\hat m_\mu}=\frac{12}{7}(\phiz)^2,
+\qquad
+\frac{\hat m_e \hat m_\tau}{\hat m_\mu^2}=\frac{3}{2}\phiz.
+\]
+Thus the intrinsic charged-lepton hierarchy is a one-seed compression of the UV source rows on the
+exact electroweak branch. It is not itself the final pole-mass readout.
+\end{corollary}
+
+\begin{proof}
+Read off the three charged-lepton source rows from \Cref{tab:mass-source-supplement} and divide the
+corresponding formulas. The common factor $\vgeo\pi/\sqrt2$ cancels.
+\end{proof}
+
+For the main-text baryon-fraction comparison we use the Planck 2018 base-$\Lambda$CDM conversion
+\[
+\Omega_b=\frac{\Omega_b h^2}{h^2},
+\qquad
+h=\frac{H_0}{100},
+\]
+so the quoted $\Omega_b$ row is not a free-floating cosmology number but an explicit reconstruction from the Planck parameter pair $(\Omega_b h^2,H_0)$ adopted in the suite ledger.
+
+\subsection{Extended comparison ledger}
+
+\begin{table}[H]
+\centering
+\scriptsize
+\sisetup{round-mode=none, group-minimum-digits=20}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{0.96}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.14\linewidth}>{\raggedright\arraybackslash}p{0.28\linewidth}>{\raggedright\arraybackslash}p{0.18\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}Y@{}}
+\toprule
+Row & TFPT source or target & \makecell[l]{Metrology\\readout} & \makecell[r]{Scheme\\representative} & Status note \\
+\midrule
+$m_\gamma$ & exact unbroken $U(1)_{\mathrm{em}}$ direction & \makecell[l]{$d_O=1$\\$m_\gamma/\lambda_\Sigma=0$} & $0$ & exact structural row \\
+$m_g$ & exact color gauge direction before confinement & \makecell[l]{$d_O=1$\\$m_g/\lambda_\Sigma=0$} & $0$ & exact structural row \\
+$W^\pm$ & threshold output at $M_Z$ & \makecell[l]{$d_O=1$\\$m_W/\lambda_\Sigma$} & \makecell[r]{\num{80.369}\\GeV} & scheme projection \\
+$Z$ & threshold output at $M_Z$ & \makecell[l]{$d_O=1$\\$m_Z/\lambda_\Sigma$} & \makecell[r]{\num{91.188}\\GeV} & scheme projection \\
+$H$ & threshold output & \makecell[l]{$d_O=1$\\$m_H/\lambda_\Sigma$} & \makecell[r]{\num{125.25}\\GeV} & scheme projection \\
+\makecell[l]{$\hat s_Z^2$\\$(M_Z)$} & \makecell[l]{local gauge closure plus\\seam-even matching} & \makecell[l]{$d_O=0$\\scheme image} & \num{0.23116113} & scheme projection \\
+\makecell[l]{$\alpha_s$\\$(M_Z)$} & \makecell[l]{local gauge closure plus\\singlet Wilson matching} & \makecell[l]{$d_O=0$\\scheme image} & \num{0.11796213} & scheme projection \\
+$\Sigma m_\nu$ & intrinsic neutrino closure sum & \makecell[l]{$d_O=1$\\$\Sigma m_\nu/\lambda_\Sigma$} & \makecell[r]{\num{5.8764e-2}\\eV} & physical observable \\
+$M_R$ & heavy-neutrino saddle on the closed neutrino / cosmology branch & \makecell[l]{$d_O=1$\\$M_R/\lambda_\Sigma$} & \makecell[r]{\num{1.31e15}\\GeV} & physical observable \\
+$\Sigma m_\nu^{\mathrm{ss}}$ & appendix-level seesaw comparison from exact $\vgeo$ and $M_R$ & \makecell[l]{$d_O=1$\\$\Sigma m_\nu^{\mathrm{ss}}/\lambda_\Sigma$} & \makecell[r]{\num{5.779e-2}\\eV} & appendix-level auxiliary continuation \\
+\bottomrule
+\end{tabularx}
+\caption{Supplementary gauge, Higgs, and neutrino rows for the extended comparison ledger. Exact
+zero rows, physical observables, scheme projections, and appendix-level auxiliary continuations are
+separated explicitly, with the dimensionless TFPT readout isolated from the chosen unitful
+representative.}
+\label{tab:extended-compiler-ledger}
+\end{table}
+
+\begin{table}[H]
+\centering
+\scriptsize
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.11\linewidth}>{\centering\arraybackslash}p{0.16\linewidth}>{\raggedleft\arraybackslash}p{0.16\linewidth}Y@{}}
+\toprule
+Field & Word-length data $L_{f,j}$ & Derived transport matrix element & Status note \\
+\midrule
+$e$ & $8$ & \num{0.466} & Derived \\
+$\mu$ & $5$ & \num{1.085} & Derived \\
+$\tau$ & $3$ & \num{0.899} & Derived \\
+$u$ & $7$ & \num{0.440} & Derived \\
+$d$ & $7$ & \num{0.936} & Derived \\
+$s$ & $5$ & \num{0.943} & Derived \\
+$c$ & $3$ & \num{0.646} & Derived \\
+$b$ & $2$ & \num{0.480} & Derived \\
+$t$ & $0$ & \num{0.986} & Derived \\
+\bottomrule
+\end{tabularx}
+\caption{Transport closure data as theorem outputs.}
+\label{tab:yukawa-residuals}
+\end{table}
+
+\subsection{Novelty boundary and literature positioning}
+
+The paper uses standard tools from relative spectral geometry, APS index theory, transport/resolvent language, and conventional RG comparison. The claim of novelty is not that these background ingredients are new in isolation, but that the minimal $3+2$ carrier packet, the compression identities, and the boundary-polarized closed architecture are organized into one tightly overdetermined program. Conversely, the manuscript does not claim novelty for standard benchmark conventions, nor does it claim that appendix-level information-theoretic or quasicrystal readings are part of the hard core.
+
+\begin{thebibliography}{99}
+
+\bibitem{aps1975}
+M.~F.~Atiyah, V.~K.~Patodi, and I.~M.~Singer,
+\newblock \emph{Spectral asymmetry and Riemannian geometry. I},
+\newblock Math. Proc. Cambridge Philos. Soc. \textbf{77} (1975), 43--69.
+
+\bibitem{chamseddineConnes1997}
+A.~H.~Chamseddine and A.~Connes,
+\newblock \emph{The spectral action principle},
+\newblock Commun. Math. Phys. \textbf{186} (1997), 731--750.
+
+\bibitem{codata2022}
+P.~J.~Mohr, D.~B.~Newell, and B.~N.~Taylor,
+\newblock \emph{CODATA recommended values of the fundamental physical constants: 2022 update},
+\newblock NIST / CODATA reference set, \url{https://physics.nist.gov/cuu/Constants/}, accessed March 2026.
+
+\bibitem{pdg2025}
+S.~Navas et al.\ (Particle Data Group),
+\newblock \emph{Review of Particle Physics},
+\newblock Phys.\ Rev.\ D \textbf{110} (2024), 030001; 2025 online update, \url{https://pdg.lbl.gov/2025/}, accessed March 2026.
+
+\bibitem{nufit2025}
+NuFIT Collaboration,
+\newblock \emph{NuFIT global analysis of neutrino oscillation data},
+\newblock website snapshot based on data available through November 2025, \url{https://www.nu-fit.org/}, accessed March 2026.
+
+\bibitem{planck2018}
+Planck Collaboration,
+\newblock \emph{Planck 2018 results. VI. Cosmological parameters},
+\newblock Astron. Astrophys. \textbf{641} (2020), A6.
+
+\bibitem{LiddleLeach2003}
+A.~R.~Liddle and S.~M.~Leach,
+\newblock \emph{How long before the end of inflation was observable inflation?},
+\newblock Phys. Rev. D \textbf{68} (2003), 103503; arXiv:astro-ph/0305263.
+
+\bibitem{Bombieri1966}
+E.~Bombieri,
+\newblock \emph{On exponential sums in finite fields},
+\newblock Amer. J. Math. \textbf{88} (1966), 71--105.
+
+\bibitem{DeligneWeil}
+P.~Deligne,
+\newblock \emph{La conjecture de Weil. I},
+\newblock Inst. Hautes \'Etudes Sci. Publ. Math. \textbf{43} (1974), 273--307.
+
+\bibitem{PolyaVinogradov}
+G.~P\'olya and I.~M.~Vinogradov,
+\newblock completion-of-sums lemma; classical references include
+G.~P\'olya, \emph{\"Uber die Verteilung der quadratischen Reste und Nichtreste},
+Nachr. K\"on. Ges. Wiss. G\"ottingen (1918), 21--29, and
+I.~M.~Vinogradov, \emph{Sur la distribution des r\'esidus et des non-r\'esidus des puissances},
+J. Phys.-Math. Soc. Perm \textbf{1} (1918), 94--98; modern textbook treatment:
+H.~Iwaniec and E.~Kowalski, \emph{Analytic Number Theory},
+AMS Colloquium Publications \textbf{53} (2004), \S 12.4.
+
+\bibitem{minamiKomatsu2020}
+Y.~Minami and E.~Komatsu,
+\newblock \emph{New extraction of the cosmic birefringence from the Planck 2018 polarization data},
+\newblock Phys. Rev. Lett. \textbf{125} (2020), 221301.
+
+\bibitem{eskilt2023}
+J.~R.~Eskilt et al.,
+\newblock \emph{Cosmoglobe DR1 results. II. Constraints on isotropic cosmic birefringence from reprocessed WMAP and Planck LFI data},
+\newblock Astron. Astrophys. \textbf{679} (2023), A144.
+
+\bibitem{sullivan2025}
+R.~M.~Sullivan, A.~Abghari, P.~Diego-Palazuelos, L.~T.~Hergt, and D.~Scott,
+\newblock \emph{Planck PR4 (NPIPE) map-space cosmic birefringence},
+\newblock arXiv:2502.07654.
+
+\bibitem{na62obs2025}
+NA62 Collaboration,
+\newblock \emph{Observation of the $K^{+}\to\pi^{+}\nu\bar{\nu}$ decay and measurement of its branching ratio},
+\newblock JHEP \textbf{02} (2025), 191; arXiv:2412.12015.
+
+\bibitem{na62Moriond2026}
+X.~Chang et al.\ (for the NA62 Collaboration),
+\newblock \emph{New measurement of $K^{+}\to\pi^{+}\nu\bar{\nu}$ branching ratio at the NA62 experiment},
+\newblock arXiv:2604.12649; contribution to the 2026 Electroweak session of the 60th Rencontres de Moriond.
+
+\bibitem{koto2024}
+KOTO Collaboration,
+\newblock \emph{Search for the $K_{L}\to\pi^{0}\nu\bar{\nu}$ decay at the J-PARC KOTO experiment},
+\newblock arXiv:2411.11237.
+
+\end{thebibliography}

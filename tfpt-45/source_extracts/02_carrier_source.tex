@@ -1,0 +1,3295 @@
+% Auto-extracted from ../tfpt-42.tex for the TFPT 4.5 clean split.
+% Source body assigned by the TFPT 4.5 clean split.
+
+% ---- Carrier algebraic normal form through abelian index: source lines 1306-2314 ----
+\subsection{Carrier algebraic normal form}
+\label{sec:minimal-carrier-proof}
+
+\begin{lemma}[Algebraic normal form from exterior signatures]
+\label{thm:carrier-minimality-k}
+\label{thm:carrier-minimality-kpp}
+Let
+\[
+E=E_-\oplus E_+
+\]
+be a finite chiral carrier with two simple factors of ranks
+\[
+b:=\dim E_-,
+\qquad
+s:=\dim E_+,
+\]
+and let
+\[
+S^+=\Lambda^{\mathrm{even}}E
+\]
+be the positive half-spinor packet. Let
+\[
+X=q_-P_-+q_+P_+
+\]
+be a primitive integer two-point generator with
+\[
+q_-<0<q_+,
+\qquad
+bq_-+sq_+=0.
+\]
+Assume only
+\[
+\dim \Lambda^2 E_+=1,
+\qquad
+\Lambda^2 E_- \cong E_-^\vee.
+\]
+Then necessarily
+\[
+s=2,
+\qquad
+b=3,
+\qquad
+g:=b+s=5.
+\]
+Hence
+\[
+\dim \Lambda^{\mathrm{even}}E=16.
+\]
+The even exterior algebra decomposes into exactly the six sectors
+\[
+(1,1)_0,\quad
+(3,2)_{1/6},\quad
+(\bar 3,1)_{-2/3},\quad
+(\bar 3,1)_{1/3},\quad
+(1,2)_{-1/2},\quad
+(1,1)_1,
+\]
+and the primitive trace condition therefore has the unique solution
+\[
+(q_-,q_+)=(-2,3).
+\]
+Consequently
+\[
+X=-2P_3+3P_2,
+\qquad
+Y:=\frac{X}{6}
+=
+\mathrm{diag}\!\left(-\frac13,-\frac13,-\frac13,\frac12,\frac12\right).
+\]
+\end{lemma}
+
+\begin{proof}
+From
+\[
+\dim\Lambda^2 E_+=\binom{s}{2}=1
+\]
+one gets $s=2$. For the color factor one always has
+\[
+\Lambda^{b-1}E_- \cong E_-^\vee.
+\]
+The assumption
+\[
+\Lambda^2E_- \cong E_-^\vee
+\]
+therefore forces $b-1=2$, hence $b=3$. Thus $g=5$.
+
+Now
+\[
+S^+=\Lambda^0E\oplus\Lambda^2E\oplus\Lambda^4E,
+\]
+and for $E=E_3\oplus E_2$,
+\[
+\Lambda^2E
+=
+\Lambda^2E_3
+\oplus
+(E_3\otimes E_2)
+\oplus
+\Lambda^2E_2,
+\]
+\[
+\Lambda^4E
+=
+(\Lambda^3E_3\otimes E_2)
+\oplus
+(\Lambda^2E_3\otimes \Lambda^2E_2).
+\]
+These are exactly the six sectors
+\[
+(1,1)_0,\ (3,2)_{1/6},\ (\bar 3,1)_{-2/3},\ (\bar 3,1)_{1/3},\ (1,2)_{-1/2},\ (1,1)_1.
+\]
+Hence
+\[
+\dim S^+=2^{5-1}=16.
+\]
+Finally
+\[
+3q_-+2q_+=0
+\]
+with primitive integers and $q_-<0<q_+$ has the unique solution
+\[
+(q_-,q_+)=(-2,3).
+\]
+\end{proof}
+
+\begin{corollary}[One chiral family emerges]
+Under the hypotheses of \TFPTxref{thm:carrier-minimality-k}, the positive half-spinor packet $S^+$
+carries exactly one chiral Standard Model family including $\nu^c$.
+\end{corollary}
+
+\begin{proof}
+The six-sector decomposition displayed in \TFPTxref{thm:carrier-minimality-k} is exactly
+\[
+(1,1)_0\oplus(3,2)_{1/6}\oplus(\bar 3,1)_{-2/3}\oplus(\bar 3,1)_{1/3}\oplus(1,2)_{-1/2}\oplus(1,1)_1,
+\]
+namely one chiral Standard Model family together with $\nu^c$.
+\end{proof}
+
+\begin{remark}[Logical status of the carrier normal form]
+The lemma above is the algebraic normal form of the former open carrier target Theorem~K. It is a rigidity
+statement under two exterior signatures:
+\[
+\dim \Lambda^2 E_+=1,
+\qquad
+\Lambda^2 E_- \cong E_-^\vee.
+\]
+Within those signatures the packet size
+\[
+\dim\Lambda^{\mathrm{even}}E=16
+\]
+and the one-family decomposition are outputs, while the occupancy identities move behind the
+carrier closure as derived consistency statements. On the retained branch, the compact Higgs index
+first fixes the bosonic rank and \TFPTxref{thm:yukawa-forces-32,cor:yukawa-discharges-kpp} then
+discharge these carrier-signature premises internally from the actual branch Yukawa tensor.
+\end{remark}
+
+\begin{corollary}[Carrier norm]
+On the minimal carrier one has
+\[
+Y
+=
+\mathrm{diag}\!\left(-\frac13,-\frac13,-\frac13,\frac12,\frac12\right),
+\qquad
+\gamma=\tr_EY^2=\frac56.
+\]
+\end{corollary}
+
+Hence from now on
+\[
+E=E_3\oplus E_2,
+\qquad
+X=-2P_3+3P_2,
+\qquad
+P_3=\frac{\mathbf 1-\epscar}{2},
+\qquad
+P_2=\frac{\mathbf 1+\epscar}{2},
+\]
+and the hypercharge operator is the normalized primitive two-point generator
+\begin{equation}
+\label{eq:explicit-hypercharge}
+Y
+=
+\mathrm{diag}\!\left(-\frac13,-\frac13,-\frac13,\frac12,\frac12\right)
+=
+\frac{X}{6}
+=
+-\frac13 P_3+\frac12 P_2
+=
+\frac1{12}\mathbf 1+\frac5{12}\epscar.
+\end{equation}
+
+\begin{lemma}[Charge-generator / carrier-polarization inversion]
+On the rigid carrier, the carrier polarization and the primitive two-point generator are recovered by
+\begin{align}
+\epscar&=\frac{2X-\mathbf 1}{5}=\frac{12Y-\mathbf 1}{5},
+\label{eq:hypercharge-seam-inversion}\\
+\qquad
+X&=\frac{5\epscar+\mathbf 1}{2},
+\nonumber\\
+(2X-\mathbf 1)^2&=25\,\mathbf 1,
+\nonumber\\
+X^2-X-6\,\mathbf 1&=0,
+\nonumber\\
+6Y^2-Y-\mathbf 1&=0.
+\label{eq:carrier-polynomial}
+\end{align}
+Consequently the carrier projectors are
+\[
+P_2=\frac{\mathbf 1+\epscar}{2}=\frac{2(3Y+\mathbf 1)}{5},
+\qquad
+P_3=\frac{\mathbf 1-\epscar}{2}=\frac{3(\mathbf 1-2Y)}{5}.
+\]
+\end{lemma}
+
+\begin{proof}
+The affine relations between $(X,Y)$ and $\epscar$ are inverted algebraically. Squaring the first
+relation and using $\epscar^2=\mathbf 1$ gives the quadratic generator polynomial
+$X^2-X-6\,\mathbf 1=0$, and dividing by $36$ yields the hypercharge polynomial. The projector
+formulas then follow from $P_2=(\mathbf 1+\epscar)/2$ and $P_3=(\mathbf 1-\epscar)/2$.
+\end{proof}
+
+\begin{lemma}[Primitive trace-balanced carrier]
+\label{lem:primitive-trace-balanced-carrier}
+Let $Y$ be an endomorphism of a finite-dimensional carrier $E$ such that
+\[
+6Y^2-Y-\mathbf 1=0,
+\qquad
+\tr_EY=0,
+\]
+and assume the realization is primitive in the sense that $E$ is not a nontrivial direct sum of
+identical trace-balanced $Y$-modules. Then
+\[
+\operatorname{Spec}(Y)=\left\{-\frac13,\frac12\right\},
+\qquad
+\dim\ker\!\left(Y+\frac13\mathbf 1\right)=3,
+\qquad
+\dim\ker\!\left(Y-\frac12\mathbf 1\right)=2.
+\]
+Equivalently,
+\[
+\rank E=5,
+\qquad
+E=E_3\oplus E_2,
+\qquad
+Y=-\frac13P_3+\frac12P_2.
+\]
+\end{lemma}
+
+\begin{proof}
+The quadratic polynomial factors as
+\[
+(2Y-\mathbf 1)(3Y+\mathbf 1)=0,
+\]
+so the only eigenvalues are
+\[
+y_+=\frac12,
+\qquad
+y_-=-\frac13.
+\]
+Write
+\[
+m_+:=\dim\ker(Y-y_+\mathbf 1),
+\qquad
+m_-:=\dim\ker(Y-y_-\mathbf 1).
+\]
+Then
+\[
+0=\tr_EY=\frac12\,m_+-\frac13\,m_-,
+\]
+so
+\[
+3m_+=2m_-.
+\]
+Because $\gcd(2,3)=1$, every positive integer solution has the form
+\[
+(m_+,m_-)=(2k,3k).
+\]
+Primitivity forces $k=1$, hence $(m_+,m_-)=(2,3)$. This is exactly the rigid $3+2$ split, with
+the displayed spectral form of $Y$.
+\end{proof}
+
+\begin{remark}[Compressed carrier decoder]
+The carrier can therefore be entered from the shorter algebraic normal form
+\[
+6Y^2-Y-\mathbf 1=0,
+\qquad
+\tr_EY=0,
+\qquad
+\text{primitive realization}
+\Longrightarrow
+E=E_3\oplus E_2.
+\]
+The exterior-signature route of \TFPTxref{thm:carrier-minimality-k} remains the theorem-level discharge
+of these algebraic hypotheses from the actual branch geometry.
+\end{remark}
+
+The hard carrier package is summarized visually in \Cref{fig:minimal-carrier-glance}. The point is
+that the same minimal data are readable in four equivalent ways: geometrically as an oriented
+double cover with deck reflection and boundary polarization, algebraically as the trace-balanced
+quadratic carrier decoder, combinatorially as the rigid $3+2$ split, and spectrally as the
+primitive two-point generator $X$ with normalized hypercharge $Y=X/6$.
+
+\begin{figure}[t]
+\centering
+\footnotesize
+\begin{tikzpicture}[
+    scale=0.88,
+    transform shape,
+    >=Latex,
+    slot3/.style={draw=blue!60!black, fill=blue!6, rounded corners, minimum width=0.72cm, minimum height=0.72cm, align=center},
+    slot2/.style={draw=orange!70!black, fill=orange!9, rounded corners, minimum width=0.72cm, minimum height=0.72cm, align=center},
+    info/.style={draw=black!55, rounded corners, fill=gray!3, align=center, inner sep=5pt}
+]
+\node[font=\bfseries] at (-3.5,1.95) {oriented double cover};
+\draw[draw=gray!70!black, fill=gray!6, rounded corners] (-5.4,0.55) rectangle (-1.7,1.35);
+\draw[draw=gray!70!black, fill=gray!6, rounded corners] (-5.4,-1.35) rectangle (-1.7,-0.55);
+\node at (-3.55,0.95) {upper sheet};
+\node at (-3.55,-0.95) {lower sheet};
+\draw[very thick, purple!70!black] (-5.6,0) -- (-1.45,0);
+\node[anchor=west, purple!70!black] at (-1.38,0) {seam $\Sigma$};
+\draw[<->, thick] (-3.55,0.42) -- (-3.55,-0.42);
+\node[anchor=west] at (-3.4,0) {$\iota$};
+
+\node[font=\bfseries] at (2.35,1.95) {rigid carrier split};
+\node[slot3] (c1) at (0.55,0.95) {$c_1$};
+\node[slot3, right=2mm of c1] (c2) {$c_2$};
+\node[slot3, right=2mm of c2] (c3) {$c_3$};
+\node[slot2, right=6mm of c3] (w1) {$w_1$};
+\node[slot2, right=2mm of w1] (w2) {$w_2$};
+\node[align=center, blue!60!black] at ($(c2.south)+(0,-0.45)$) {$E_3=P_3E$\\three color slots};
+\node[align=center, orange!75!black] at ($(w1.south)+(0.45,-0.45)$) {$E_2=P_2E$\\two weak slots};
+\draw[decorate, decoration={brace, amplitude=4pt}] ($(c1.north west)+(-0.07,0.12)$) -- ($(c3.north east)+(0.07,0.12)$);
+\node[blue!60!black] at ($(c2.north)+(0,0.42)$) {$3$};
+\draw[decorate, decoration={brace, amplitude=4pt}] ($(w1.north west)+(-0.07,0.12)$) -- ($(w2.north east)+(0.07,0.12)$);
+\node[orange!75!black] at ($(w1.north east)+(0.2,0.42)$) {$2$};
+
+\node[info] at (-0.45,-2.3) {%
+    $\displaystyle
+    X=-2P_3+3P_2,
+    \qquad
+    Y=\frac{X}{6}
+    =-\frac13 P_3+\frac12 P_2
+    =\frac1{12}\mathbf 1+\frac5{12}\iota
+    \qquad
+    \iota=\frac{2X-\mathbf 1}{5}
+    $\\[2pt]
+    $\displaystyle
+    P_3=\frac{\mathbf 1-\iota}{2},
+    \qquad
+    P_2=\frac{\mathbf 1+\iota}{2},
+    \qquad
+    \mathrm{Spec}(Y)=\left\{-\frac13,\frac12\right\}
+    $};
+\end{tikzpicture}
+\caption{Rigid carrier at a glance. The seam involution, the primitive two-point generator, and the
+normalized hypercharge operator carry the same hard information: geometrically they separate the
+two sheets, and algebraically they separate the $3+2$ carrier split through the projectors $P_3$
+and $P_2$.}
+\label{fig:minimal-carrier-glance}
+\end{figure}
+
+\begin{remark}[Two-point carrier algebra]
+Because the minimal carrier satisfies $6Y^2-Y-\mathbf 1=0$, every analytic function of $Y$ reduces to
+\[
+f(Y)=A_f\,\mathbf 1+B_f\,Y,
+\qquad
+A_f=\frac{2f(1/2)+3f(-1/3)}{5},
+\qquad
+B_f=\frac{6\bigl(f(1/2)-f(-1/3)\bigr)}{5}.
+\]
+Thus the hard carrier is effectively a two-point algebra supported on the spectral values $-1/3$ and $1/2$, and the projectors $P_3,P_2$ are already polynomial functions of $Y$.
+\end{remark}
+
+\begin{remark}[Factorized carrier polynomial and carrier discriminant]\label{rem:carrier-discriminant}
+For a general split carrier $E=E_b\oplus E_s$ with total rank $g:=b+s$ and eigenvalues $-1/b$ and $1/s$, the carrier generator satisfies
+\[
+\left(Y+\frac{1}{b}\right)\left(Y-\frac{1}{s}\right)=0
+\quad\Longleftrightarrow\quad
+bs\,Y^2+(s-b)Y-\mathbf 1=0.
+\]
+Its discriminant is
+\[
+\Delta_Y=(s-b)^2+4bs=(b+s)^2=g^2.
+\]
+Thus the square root of the carrier discriminant is the carrier rank itself. Moreover,
+\[
+Y=\frac{b-s}{2bs}\,\mathbf 1+\frac{g}{2bs}\,\epscar,
+\qquad
+\epscar=\frac{2bs\,Y-(b-s)\,\mathbf 1}{g}.
+\]
+On the minimal branch $(b,s)=(3,2)$, this reduces to
+\[
+6Y^2-Y-\mathbf 1=(2Y-\mathbf 1)(3Y+\mathbf 1),
+\qquad
+\Delta_Y=25=5^2,
+\qquad
+\epscar=\frac{12Y-\mathbf 1}{5}.
+\]
+Hence the denominator $5$ in the hypercharge--seam inversion is exactly $\sqrt{\Delta_Y}$, not an additional inserted constant.
+
+This does not replace the stabilizer proof of
+\[
+G_{\mathrm{car}}=S(U(3)\times U(2)),
+\]
+which is the actual source of the internal carrier stabilizer theorem in the present manuscript.
+What the factorization and discriminant do show exactly is that the hard carrier already supports the distinguished spectral values
+\[
+Y=\frac{1}{2},
+\qquad
+Y=-\frac{1}{3},
+\]
+and that the inversion denominator is fixed algebraically by the carrier discriminant.
+\end{remark}
+
+The two carrier invariants used repeatedly below are
+\[
+\gamma=\tr_EY^2=\frac56,
+\qquad
+B=\frac{\rank E_3}{\rank E_2}=\frac32.
+\]
+\begin{corollary}[Carrier norm from the carrier polynomial]
+The carrier polynomial already fixes
+\[
+\gamma=\tr_EY^2=\frac16\tr_E(Y+\mathbf 1)=\frac56,
+\]
+since $\tr_EY=0$ and $\rank E=5$.
+\end{corollary}
+
+\begin{corollary}[Minimal carrier compression]
+\label{cor:minimal-carrier-compression}
+On the minimal carrier branch,
+\[
+B\gamma=\frac32\cdot\frac56=\frac54.
+\]
+\end{corollary}
+
+We package the hard kernel as
+\[
+\Cmin=(E_3\oplus E_2,\ X,\ Y,\ S^+,\ \gamma,\ B).
+\]
+
+\subsection{Internal carrier stabilizer and one-family packet}
+
+\begin{theorem}[Internal carrier stabilizer]
+\label{thm:global-sm-theorem}
+The determinant-preserving connected stabilizer of the minimal carrier split is
+\[
+G_{\mathrm{car}}
+=
+S(U(3)\times U(2))
+\cong
+\frac{SU(3)\times SU(2)\times U(1)_Y}{\mathbb Z_6}.
+\]
+The corresponding Lie algebra factorization
+\[
+\mathfrak g_{\SM}=\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1)
+\]
+is only the differential, local form of the same statement; throughout the manuscript this quotient
+is intended as the internal carrier-stabilizer form whenever a group symbol is written, and the
+local algebra notation is used only when explicitly stated.
+\end{theorem}
+
+\begin{proof}
+An automorphism preserving the split $E_3\oplus E_2$ acts by a pair
+$(u_3,u_2)\in U(3)\times U(2)$. Requiring determinant preservation on the full
+carrier gives
+\[
+\det(u_3)\det(u_2)=1,
+\]
+so the connected stabilizer is exactly $S(U(3)\times U(2))$.
+
+Define
+\[
+\Phi:SU(3)\times SU(2)\times U(1)_Y \longrightarrow S(U(3)\times U(2)),
+\qquad
+\Phi(g_3,g_2,z)=\bigl(z^2 g_3,\ z^{-3} g_2\bigr).
+\]
+This is a well-defined group homomorphism because the exponents are integers, and
+\[
+\det(z^2 g_3)\det(z^{-3} g_2)=z^6 z^{-6}=1.
+\]
+
+To prove surjectivity, take $(u_3,u_2)\in S(U(3)\times U(2))$. Choose
+$z\in U(1)$ with
+\[
+z^6=\det(u_3)=\det(u_2)^{-1}.
+\]
+Then
+\[
+g_3:=z^{-2}u_3\in SU(3),
+\qquad
+g_2:=z^{3}u_2\in SU(2),
+\]
+and therefore
+\[
+\Phi(g_3,g_2,z)=(u_3,u_2).
+\]
+
+If $\Phi(g_3,g_2,z)=(\mathbf 1_3,\mathbf 1_2)$, then
+\[
+g_3=z^{-2}\mathbf 1_3,
+\qquad
+g_2=z^{3}\mathbf 1_2.
+\]
+The conditions $g_3\in SU(3)$ and $g_2\in SU(2)$ imply $z^6=1$. Hence
+\[
+\ker\Phi
+=
+\left\{
+\bigl(z^{-2}\mathbf 1_3,\ z^{3}\mathbf 1_2,\ z\bigr): z^6=1
+\right\}
+\cong \mathbb Z_6.
+\]
+Therefore
+\[
+S(U(3)\times U(2))
+\cong
+\frac{SU(3)\times SU(2)\times U(1)_Y}{\mathbb Z_6}.
+\]
+\end{proof}
+
+\begin{theorem}[Faithful physical global gauge group]
+\label{thm:physical-gauge-group}
+\label{thm:physical-gauge-group-faithful}
+The action of
+\[
+S(U(3)\times U(2))
+\]
+on the admissible matter-plus-Higgs package
+\[
+\mathcal R_{\mathrm{adm}}:=S^+\oplus E_2
+\]
+is faithful. Therefore
+\[
+G_{\mathrm{phys}}=G_{\mathrm{car}}=S(U(3)\times U(2)).
+\]
+Equivalently,
+\[
+G_{\mathrm{phys}}
+\cong
+\frac{SU(3)\times SU(2)\times U(1)_Y}{\mathbb Z_6}.
+\]
+No further nontrivial quotient survives on the physical matter-plus-Higgs package.
+\end{theorem}
+
+\begin{proof}
+Let $(u_3,u_2)\in S(U(3)\times U(2))$ act trivially on $\mathcal R_{\mathrm{adm}}$. The Higgs
+sector is $E_2$, so triviality there implies
+\[
+u_2=\mathbf 1_2.
+\]
+The matter packet contains the quark doublet sector
+\[
+Q=E_3\otimes E_2.
+\]
+Since $u_2=\mathbf 1_2$, trivial action on $Q$ forces
+\[
+u_3=\mathbf 1_3.
+\]
+Hence the kernel is trivial. The quotient from $SU(3)\times SU(2)\times U(1)$ to
+$S(U(3)\times U(2))$ already has kernel $\mathbb Z_6$ by \TFPTxref{thm:global-sm-theorem}, so this is
+the exact physical global form.
+\end{proof}
+
+Throughout the manuscript, $S(U(3)\times U(2))$ is therefore read not only as the internal carrier
+stabilizer but as the physical global gauge group selected by the faithful action on the admissible
+matter-plus-Higgs package.
+
+Matter is read from the positive half-spinor
+\[
+S^+=\Lambda^{\mathrm{even}}E,
+\qquad
+\dim S^+=16.
+\]
+
+\begin{theorem}[One carrier family from the exterior packet]
+The positive half-spinor of the minimal carrier decomposes as
+\[
+S^+
+\cong
+(1,1)_0\oplus(3,2)_{1/6}\oplus(\bar 3,1)_{-2/3}\oplus(\bar 3,1)_{1/3}\oplus(1,2)_{-1/2}\oplus(1,1)_1,
+\]
+that is, exactly one chiral Standard Model family with $\nu^c$. Equivalently, in the familiar unified packaging language,
+\[
+S^+\cong \mathbf 1\oplus \mathbf{10}\oplus \overline{\mathbf 5}.
+\]
+\end{theorem}
+
+\begin{proof}
+One has
+\[
+S^+=\Lambda^0E\oplus\Lambda^2E\oplus\Lambda^4E.
+\]
+The $\Lambda^0E$ sector is immediately
+\[
+\Lambda^0E\cong (1,1)_0,
+\]
+which is identified with $\nu^c$ in left-chiral notation. For the minimal carrier,
+\[
+\Lambda^2E
+\cong
+\Lambda^2E_3\oplus(E_3\otimes E_2)\oplus\Lambda^2E_2.
+\]
+Here
+\[
+\Lambda^2E_3\cong \bar 3,
+\qquad
+E_3\otimes E_2\cong (3,2),
+\qquad
+\Lambda^2E_2\cong 1,
+\]
+and the hypercharges are obtained by adding the carrier charges from
+\[
+Y=\mathrm{diag}\!\left(-\frac13,-\frac13,-\frac13,\frac12,\frac12\right).
+\]
+Therefore
+\[
+\Lambda^2E
+\cong
+(\bar 3,1)_{-2/3}\oplus(3,2)_{1/6}\oplus(1,1)_1.
+\]
+Because the full determinant is trivial in $S(U(3)\times U(2))$, one has $\Lambda^5E\cong 1$ and hence
+\[
+\Lambda^4E\cong E^\ast.
+\]
+Equivalently,
+\[
+\Lambda^4E
+\cong
+(\Lambda^3E_3\otimes E_2)\oplus(\Lambda^2E_3\otimes\Lambda^2E_2).
+\]
+Using $\Lambda^3E_3\cong 1$, $\Lambda^2E_2\cong 1$, and $\Lambda^2E_3\cong E_3^\ast\cong\bar 3$, one gets
+\[
+\Lambda^4E\cong (1,2)_{-1/2}\oplus(\bar 3,1)_{1/3}.
+\]
+Collecting the three even-degree sectors yields
+\[
+S^+
+\cong
+(1,1)_0\oplus(\bar 3,1)_{-2/3}\oplus(3,2)_{1/6}\oplus(1,1)_1\oplus(\bar 3,1)_{1/3}\oplus(1,2)_{-1/2},
+\]
+with total multiplicity $1+3+6+1+3+2=16$. The $\Lambda^2E$ sector is the standard left-chiral $\mathbf{10}$ of $SU(5)$, the $\Lambda^4E$ sector is the standard left-chiral $\overline{\mathbf 5}$, and the $\Lambda^0E$ sector is the singlet $\mathbf 1$.
+\end{proof}
+
+In left-chiral notation the one-family decomposition takes the explicit form shown in \TFPTxref{tab:one-family}. This is the place where the manuscript must be explicit: the carrier theorem is meaningful only if the reader can see how the sixteen states are organized.
+
+\begin{table}[t]
+\centering
+\footnotesize
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.18\linewidth}>{\raggedright\arraybackslash}p{0.19\linewidth}>{\raggedleft\arraybackslash}p{0.13\linewidth}>{\raggedright\arraybackslash}p{0.20\linewidth}>{\raggedleft\arraybackslash}p{0.08\linewidth}@{}}
+\toprule
+Exterior component & $\SM$ representation & Hypercharge & Field content & Mult. \\
+\midrule
+$\Lambda^0E$ & $(1,1)_0$ & $0$ & $\nu^c$ & $1$ \\
+$\Lambda^2E_3$ & $(\bar 3,1)_{-2/3}$ & $-2/3$ & $u^c$ & $3$ \\
+$E_3\otimes E_2$ & $(3,2)_{1/6}$ & $1/6$ & $Q_L$ & $6$ \\
+$\Lambda^2E_2$ & $(1,1)_1$ & $1$ & $e^c$ & $1$ \\
+\makecell[l]{$\Lambda^3E_3$\\$\otimes E_2$} & $(1,2)_{-1/2}$ & $-1/2$ & $L_L$ & $2$ \\
+\makecell[l]{$\Lambda^2E_3$\\$\otimes\Lambda^2E_2$} & $(\bar 3,1)_{1/3}$ & $1/3$ & $d^c$ & $3$ \\
+\midrule
+\multicolumn{4}{r}{Total multiplicity} & $16$ \\
+\bottomrule
+\end{tabular}
+\caption{One chiral family from $S^+=\Lambda^{\mathrm{even}}E$, written in left-chiral notation with charge-conjugate singlets.}
+\label{tab:one-family}
+\end{table}
+
+\begin{proposition}[Exact parity-code realization of the family packet]
+\label{prop:parity-code-family}
+Identifying each wedge monomial in $\Lambda E$ with its occupation word
+\[
+x=(x_1,\dots,x_5)\in\{0,1\}^5,
+\]
+the positive half-spinor is exactly the even-parity subspace
+\[
+S^+
+\cong
+\mathrm{span}\Bigl\{|x\rangle:\sum_{i=1}^5 x_i\equiv 0 \pmod 2\Bigr\}.
+\]
+Equivalently,
+\[
+S^+
+=
+\bigl(\Lambda^{\mathrm{even}}E_3\otimes\Lambda^{\mathrm{even}}E_2\bigr)
+\oplus
+\bigl(\Lambda^{\mathrm{odd}}E_3\otimes\Lambda^{\mathrm{odd}}E_2\bigr),
+\]
+and each summand has dimension $8$.
+\end{proposition}
+
+\begin{proof}
+Choose a basis of $E$ adapted to the split $E_3\oplus E_2$. Exterior monomials are then in bijection with occupation words $x\in\{0,1\}^5$, and the exterior degree is exactly the Hamming weight $\sum_i x_i$. Hence $\Lambda^{\mathrm{even}}E$ is the span of the even-parity words. Splitting the degree into the $E_3$ and $E_2$ contributions gives the direct-sum decomposition above. Since
+\[
+\dim \Lambda^{\mathrm{even}}E_3=1+\binom32=4,
+\qquad
+\dim \Lambda^{\mathrm{odd}}E_3=\binom31+\binom33=4,
+\]
+and
+\[
+\dim \Lambda^{\mathrm{even}}E_2=1+\binom22=2,
+\qquad
+\dim \Lambda^{\mathrm{odd}}E_2=\binom21=2,
+\]
+each tensor-product sector has dimension $8$.
+\end{proof}
+
+\begin{remark}[Exact parity lock, not a loose code analogy]
+The family packet is therefore not merely code-like: at the level of occupation kinematics it is exactly the classical even-parity $[5,4,2]$ code on five bits. What the present paper still does \emph{not} claim is a dynamical error-correction theorem for realistic noise channels. The exact statement is the parity lock itself. In the maximally mixed state on the $16$ occupation words, eight states lie in the $(\mathrm{even},\mathrm{even})$ sector and eight in $(\mathrm{odd},\mathrm{odd})$, so the coarse parity observables of the $3$-side and $2$-side carry exactly one bit of mutual information.
+\end{remark}
+
+The family packet can also be read as a two-dimensional occupancy map, shown in \Cref{fig:family-occupancy-map}. This is where the one-family table, the even-parity code, the split weight enumerator, and the $X=6Y$ arithmetic all meet in one glance.
+
+\begin{figure}[t]
+\centering
+\footnotesize
+\begin{tikzpicture}[>=Latex, x=1.7cm, y=1.45cm]
+\draw[->, thick] (-0.2,0) -- (3.4,0) node[below] {$n_3$};
+\draw[->, thick] (0,-0.2) -- (0,2.35) node[left] {$n_2$};
+\foreach \x in {0,1,2,3} {
+    \draw[gray!30] (\x,0) -- (\x,2.05);
+    \node[below] at (\x,-0.02) {\x};
+}
+\foreach \y in {0,1,2} {
+    \draw[gray!30] (0,\y) -- (3.05,\y);
+    \node[left] at (-0.02,\y) {\y};
+}
+\node[align=left, anchor=west] at (2.05,2.15) {$n_3+n_2$ even\\$\Longleftrightarrow S^+$ admissible};
+
+\foreach \x/\y in {1/0,3/0,0/1,2/1,1/2,3/2} {
+    \draw[red!65!black, line width=0.6pt] (\x-0.08,\y-0.08) -- (\x+0.08,\y+0.08);
+    \draw[red!65!black, line width=0.6pt] (\x-0.08,\y+0.08) -- (\x+0.08,\y-0.08);
+}
+
+\filldraw[blue!55!black] (0,0) circle (3.8pt);
+\node[text=white, font=\scriptsize] at (0,0) {1};
+\node[anchor=west] at (0.14,0.05) {$\nu^c$};
+
+\filldraw[blue!55!black] (2,0) circle (4.5pt);
+\node[text=white, font=\scriptsize] at (2,0) {3};
+\node[anchor=west] at (2.12,0.08) {$u^c$};
+
+\filldraw[green!55!black] (1,1) circle (5.5pt);
+\node[text=white, font=\scriptsize] at (1,1) {6};
+\node[anchor=west] at (1.14,1.08) {$Q_L$};
+
+\filldraw[orange!80!black] (0,2) circle (3.8pt);
+\node[text=white, font=\scriptsize] at (0,2) {1};
+\node[anchor=west] at (0.12,1.9) {$e^c$};
+
+\filldraw[orange!80!black] (3,1) circle (4.3pt);
+\node[text=white, font=\scriptsize] at (3,1) {2};
+\node[anchor=west] at (3.12,1.03) {$L_L$};
+
+\filldraw[orange!80!black] (2,2) circle (4.5pt);
+\node[text=white, font=\scriptsize] at (2,2) {3};
+\node[anchor=west] at (2.12,1.9) {$d^c$};
+
+\node[draw=black!55, rounded corners, fill=gray!4, align=center] at (1.55,-0.72) {%
+    multiplicity $=\binom{3}{n_3}\binom{2}{n_2}$\\
+    scaled hypercharge $X=3n_2-2n_3=6Y$};
+\end{tikzpicture}
+\caption{Occupancy map of the family packet. The admissible sectors are exactly the even lattice points in $(n_3,n_2)$, with multiplicities $(1,3,6,1,2,3)$ and field labels matching \TFPTxref{tab:one-family}. This is the visual meeting point of parity lock, split weight enumerator, and family hypercharge arithmetic.}
+\label{fig:family-occupancy-map}
+\end{figure}
+
+\subsection{Character, trace identities, and the abelian index}
+
+\begin{proposition}[Split weight enumerator and one-family character]
+\label{prop:split-weight-enumerator}
+For the present paragraph let
+\[
+\chi_{S^+}(t):=\tr_{S^+}(e^{tY}).
+\]
+Define also the split weight enumerator
+\[
+W(u,v)
+:=
+\sum_{\substack{0\le n_3\le 3\\ 0\le n_2\le 2\\ n_3+n_2\ \mathrm{even}}}
+\binom{3}{n_3}\binom{2}{n_2}u^{n_3}v^{n_2}.
+\]
+Then
+\begin{equation}
+\label{eq:split-weight-enumerator}
+W(u,v)
+=
+1+3u^2+6uv+v^2+2u^3v+3u^2v^2
+=
+\frac12\Big[(1+u)^3(1+v)^2+(1-u)^3(1-v)^2\Big].
+\end{equation}
+Moreover,
+\begin{equation}
+\label{eq:family-character}
+\chi_{S^+}(t)
+=
+\frac12\Big[
+\bigl(1+e^{-t/3}\bigr)^3\bigl(1+e^{t/2}\bigr)^2
++
+\bigl(1-e^{-t/3}\bigr)^3\bigl(1-e^{t/2}\bigr)^2
+\Big]
+=
+W(e^{-t/3},e^{t/2}).
+\end{equation}
+Consequently,
+\[
+\chi_{S^+}(0)=16,
+\qquad
+\chi_{S^+}'(0)=\tr_{S^+}Y=0,
+\qquad
+\chi_{S^+}''(0)=\tr_{S^+}Y^2=\frac{10}{3},
+\qquad
+\chi_{S^+}'''(0)=\tr_{S^+}Y^3=0.
+\]
+\end{proposition}
+
+\begin{remark}[Master generating function for the one-family packet]
+The even-parity split weight enumerator
+\[
+W(u,v)=\frac12\bigl[(1+u)^3(1+v)^2+(1-u)^3(1-v)^2\bigr]
+\]
+is the master generator of the family packet. The one-family character is obtained by the
+specialization $u=e^{-t/3}$ and $v=e^{t/2}$, while all trace moments of $Y$ are recovered by
+differentiating at $t=0$.
+\end{remark}
+
+\begin{proof}
+The pairs $(n_3,n_2)$ allowed by even total degree are
+\[
+(0,0),\ (2,0),\ (1,1),\ (0,2),\ (3,1),\ (2,2),
+\]
+with multiplicities
+\[
+1,\ 3,\ 6,\ 1,\ 2,\ 3.
+\]
+This gives the explicit polynomial formula for $W(u,v)$. Equivalently, the parity projector
+\[
+\frac12\bigl(1+(-1)^{n_3+n_2}\bigr)
+\]
+acting on $(1+u)^3(1+v)^2$ yields \Cref{eq:split-weight-enumerator}. Substituting
+\[
+u=e^{-t/3},
+\qquad
+v=e^{t/2}
+\]
+gives \Cref{eq:family-character}. For an even exterior algebra one also has
+\[
+\tr_{\Lambda^{\mathrm{even}}E}(e^{tY})
+=
+\frac12\Big[\prod_{j=1}^5(1+e^{tq_j})+\prod_{j=1}^5(1-e^{tq_j})\Big],
+\]
+with carrier charges $q_j\in\{-1/3,-1/3,-1/3,1/2,1/2\}$. Differentiating at $t=0$ yields the stated dimension and trace identities.
+\end{proof}
+
+\begin{corollary}[Multiplicative character as six-sector decoder]
+\label{cor:multiplicative-family-character}
+Let
+\[
+X:=6Y.
+\]
+Then the multiplicative one-family character
+\[
+\Xi_{S^+}(t):=\tr_{S^+}(t^X)
+\]
+is
+\begin{equation}
+\label{eq:multiplicative-family-character}
+\Xi_{S^+}(t)
+=
+\frac12\Big[
+(1+t^{-2})^3(1+t^3)^2
++
+(1-t^{-2})^3(1-t^3)^2
+\Big]
+=
+t^6+3t^2+6t+1+2t^{-3}+3t^{-4}.
+\end{equation}
+Consequently
+\[
+\Xi_{S^+}(1)=16,
+\qquad
+(t\partial_t)\Xi_{S^+}(1)=\tr_{S^+}X=0,
+\qquad
+(t\partial_t)^2\Xi_{S^+}(1)=\tr_{S^+}X^2=120=5!.
+\]
+Thus the six sectors and their multiplicities are read off directly from the monomials of
+\Cref{eq:multiplicative-family-character}.
+\end{corollary}
+
+\begin{proof}
+Since $X=3N_2-2N_3$, every admissible occupancy pair contributes the monomial
+$t^{3n_2-2n_3}$. Therefore
+\[
+\Xi_{S^+}(t)=W(t^{-2},t^3),
+\]
+and \Cref{eq:split-weight-enumerator} gives the displayed factorized form. Expanding yields the six
+monomials shown above. Applying $t\partial_t$ once and twice at $t=1$ recovers the first two trace
+moments of $X$.
+\end{proof}
+
+\begin{remark}[Table as readout, character as proof device]
+The one-family table remains useful as a reader-facing decoding sheet, but the whole six-sector
+arithmetic is already compressed into the single multiplicative character
+\Cref{eq:multiplicative-family-character}.
+\end{remark}
+
+\begin{remark}[Six admissible occupancy sectors]
+The six monomials in \Cref{eq:split-weight-enumerator} are exactly the six allowed occupancy pairs $(n_3,n_2)$ of the family packet. This is the shortest combinatorial route from the split carrier to the six Standard Model multiplet sectors listed in \TFPTxref{tab:one-family}.
+\end{remark}
+
+The carrier packet therefore reproduces the standard trace cancellations
+\[
+\tr_{S^+}Y=0,
+\qquad
+\tr_{S^+}Y^3=0,
+\]
+and packages them together with the quadratic trace in one formula. Since $\tr_{S^+}Y^2=4\gamma=10/3$ and $\tr_\Phi Y^2=1/2$ for one weak doublet with hypercharge $1/2$, the hypercharge trace coefficient organizes as
+\begin{equation}
+\label{eq:abelian-index}
+\bone(N_{\mathrm{fam}},N_\Phi)
+=
+\frac25N_{\mathrm{fam}}\tr_{S^+}Y^2+\frac15N_\Phi\tr_\Phi Y^2
+=
+\frac85N_{\mathrm{fam}}\gamma+\frac1{10}N_\Phi
+=
+\frac43N_{\mathrm{fam}}+\frac1{10}N_\Phi.
+\end{equation}
+On the canonical branch $(N_{\mathrm{fam}},N_\Phi)=(3,1)$ this gives
+\[
+\bone=\frac{41}{10}.
+\]
+The abelian index is therefore not inserted as an isolated Standard Model datum; it is a carrier-level output once the family and Higgs counts are declared.
+
+\begin{remark}[Canonical-branch Diophantine lock]
+If one imposes $\bone=41/10$ on nonnegative integer data, then
+\[
+40N_{\mathrm{fam}}+3N_\Phi=123.
+\]
+The physically nontrivial solution is $(N_{\mathrm{fam}},N_\Phi)=(3,1)$, so the canonical branch is already sharply constrained at the level of the trace arithmetic.
+\end{remark}
+
+\begin{proposition}[Family hypercharge arithmetic and compression]
+\label{prop:family-hypercharge-compression}
+Let $N_3$ and $N_2$ be the occupation-number operators on the $E_3$ and $E_2$ slots, restricted to $S^+$, and define the scaled hypercharge operator
+\[
+X:=6Y=3N_2-2N_3.
+\]
+Then on $S^+$ one has
+\begin{align}
+X&\equiv N_2\equiv N_3 \pmod 2,\label{eq:x-mod-2}\\
+X&\equiv N_3 \pmod 3,\label{eq:x-mod-3}\\
+X&\equiv 3(N_2+N_3) \pmod 5.\label{eq:x-mod-5}
+\end{align}
+In particular, the even exterior degree $k=N_2+N_3\in\{0,2,4\}$ is read off from the residue class of $X$ modulo $5$: if $X\equiv r\pmod 5$ with $r\in\{0,1,2\}$, then $k=2r$, so
+\[
+X\bmod 5=0,1,2
+\qquad\Longleftrightarrow\qquad
+\Lambda^0E,\ \Lambda^2E,\ \Lambda^4E.
+\]
+Moreover,
+\[
+\mathrm{Spec}(X|_{S^+})=\{0,-4,1,6,-3,2\},
+\]
+and therefore
+\begin{equation}
+\label{eq:family-x-polynomial}
+X(X+4)(X-1)(X-6)(X+3)(X-2)=0
+\qquad\text{on }S^+.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Each occupied $E_3$ mode contributes hypercharge $-1/3$ and each occupied $E_2$ mode contributes $+1/2$, so multiplying by $6$ gives $X=3N_2-2N_3$. Modulo $2$, the term $-2N_3$ vanishes, so $X\equiv N_2$. Because $S^+$ has even total degree, $N_2\equiv N_3\pmod 2$, which proves \Cref{eq:x-mod-2}. Modulo $3$, one has $3N_2\equiv 0$ and $-2\equiv 1$, giving \Cref{eq:x-mod-3}. Modulo $5$, the congruence $-2\equiv 3$ yields \Cref{eq:x-mod-5}. Since on $S^+$ the even degree is $k=N_2+N_3\in\{0,2,4\}$, the possible residues are $3k\equiv 0,1,2\pmod 5$, from which $k=2r$ with $r=X\bmod 5$ follows. Evaluating $X=3n_2-2n_3$ on the six admissible occupancy pairs $(n_3,n_2)$ gives the listed spectrum. The polynomial \Cref{eq:family-x-polynomial} is then the spectral polynomial with these six simple roots.
+\end{proof}
+
+\begin{corollary}[Five-fold phase filters for even degree]
+\label{cor:family-degree-filters}
+Let
+\[
+\zeta_5=e^{2\pi i/5},
+\qquad
+U_5:=e^{2\pi iX/5}.
+\]
+Then the even-degree projectors are the discrete Fourier filters
+\[
+P_{\Lambda^{2m}E}
+=
+\frac15\sum_{r=0}^{4}\zeta_5^{-mr}U_5^r,
+\qquad
+m=0,1,2.
+\]
+\end{corollary}
+
+\begin{proof}
+By \TFPTxref{prop:family-hypercharge-compression}, the eigenspaces $\Lambda^{2m}E$ carry the residue class $X\equiv m\pmod 5$. Hence $U_5$ has eigenvalue $\zeta_5^m$ on $\Lambda^{2m}E$, and the standard Fourier projector formula on the cyclic group $\mathbb Z_5$ gives the claim.
+\end{proof}
+
+\begin{remark}[From the two-point carrier to the six-point family algebra]
+The minimal carrier itself is a two-point algebra, but the family packet lifts the scaled hypercharge to a six-point algebra. Therefore every analytic function of $X$ on $S^+$ reduces to a polynomial of degree at most five. If
+\[
+M_n:=\tr_{S^+}(X^n),
+\]
+then \Cref{eq:family-x-polynomial} implies the finite recursion
+\[
+M_{n+6}
+=
+2M_{n+5}+31M_{n+4}-20M_{n+3}-156M_{n+2}+144M_{n+1}.
+\]
+In this sense the whole hypercharge statistics of one family is finitely compressed into six spectral values.
+\end{remark}
+
+
+% ---- Compression identities and carrier-relevant comparison setup: source lines 2696-3156 ----
+\section{Compression identities and numerical comparison of alternative discrete worlds}
+
+This section collects the algebraic compressions that turn the carrier packet and kernel numerics
+from a list of internally consistent outputs into an overdetermined structure. These compression
+identities are derived consistency statements on the retained branch: their formal derivation closes
+only once the bosonic-rank and branch-Yukawa carrier theorems have fixed the rigid $3+2$ split. By
+contrast, the discrete-world table below is a numerical comparison layer: it is not part of the
+rigid theorem surface and should be read as an appendix-style pressure test on the carrier packet.
+
+\subsection{Derived \texorpdfstring{$48=4\cdot12$}{48=4·12} identity and the \texorpdfstring{$2$-$3$-$5$}{2-3-5} arithmetic}
+
+\begin{proposition}[Derived \texorpdfstring{$48=4\cdot12$}{48=4·12} identity on the retained branch]
+\label{prop:rank-lock}
+On the retained branch, once the family multiplicity and carrier ranks have been fixed, one
+recovers
+\[
+\Oadm
+=
+N_{\mathrm{fam}}\,\dim S^+
+=
+(g-1)\dim\mathfrak g_{\mathrm{car}}
+=
+(g-1)(b^2+s^2-1)
+\]
+with
+\[
+N_{\mathrm{fam}}=3,
+\qquad
+\dim S^+=16,
+\qquad
+(b,s)=(3,2),
+\qquad
+g=5.
+\]
+Equivalently, the former rank-lock formula is a derived consistency identity evaluated at the
+closed branch point:
+\begin{equation}
+\label{eq:rank-lock}
+3\cdot 2^{g-1}=(g-1)(b^2+s^2-1).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+\Cref{thm:harmonic-family-modes} gives the physical family multiplicity
+\[
+N_{\mathrm{fam}}=\dim\mathcal H_F=3.
+\]
+The carrier closure is completed later by \TFPTxref{cor:bosonic-rank-two,thm:yukawa-forces-32}, which
+fix
+\[
+(b,s)=(3,2),
+\qquad
+g=5,
+\qquad
+\dim S^+=16.
+\]
+Therefore
+\[
+\Oadm=N_{\mathrm{fam}}\dim S^+=3\cdot16=48.
+\]
+For the same minimal branch,
+\[
+\dim\mathfrak g_{\mathrm{car}}
+=
+\dim\mathfrak{su}(3)+\dim\mathfrak{su}(2)+\dim\mathfrak u(1)
+=
+12.
+\]
+Therefore
+\[
+\Oadm=48=(g-1)\dim\mathfrak g_{\mathrm{car}}=4\cdot 12,
+\]
+which is exactly the displayed derived identity written in branch variables. The former occupancy
+balance is thus a consistency check rather than an input assumption.
+\end{proof}
+
+\begin{remark}[The $2$-$3$-$5$ arithmetic]
+The hard carrier packet rests on exactly three discrete numbers: $2$ (the double cover), $3$ (the color rank and family count), and $5$ (the carrier rank). From these three atoms one recovers
+\[
+\gamma=\frac{5}{6}=\frac{5}{2\cdot 3},
+\qquad
+B=\frac{3}{2},
+\qquad
+B\gamma=\frac{5}{4}=\frac{5}{2^2},
+\]
+\[
+\Oadm=3\cdot 2^4=48,
+\qquad
+\Dstart=5\cdot 12=60,
+\qquad
+\frac{\Dstart}{\Oadm}=\frac{5}{4}=B\gamma,
+\]
+and the defect coefficients $\deltatop=48\,\cthree^4$ and $\delta_2=\frac54\,\deltatop^2=2880\,\cthree^8$ with $2880=60\cdot 48$.
+The persistent appearance of $5/4$ as carrier asymmetry $\times$ norm, second defect stage, and ladder-to-occupancy ratio is therefore not three coincidences but one rational shadow of the $2$-$3$-$5$ triad.
+\end{remark}
+
+\begin{lemma}[Universal \texorpdfstring{$5/4$}{5/4} compression quotient on the minimal branch]
+\label{lem:universal-5-4-compression}
+Define
+\[
+\rho_{5/4}:=B\gamma.
+\]
+On the canonical minimal branch,
+\[
+\rho_{5/4}
+=
+B\gamma
+=
+\frac{\delta_2}{\deltatop^2}
+=
+\frac{\Dstart}{\Oadm}
+=
+\frac{\gcar}{\gcar-1}
+=
+\frac54.
+\]
+Thus $5/4$ is the universal compression quotient of the minimal branch rather than a recurring numerical motif.
+\end{lemma}
+
+\begin{proof}
+The identity $B\gamma=\frac54$ is \Cref{cor:minimal-carrier-compression}. The defect relation gives
+\[
+\frac{\delta_2}{\deltatop^2}=\frac54.
+\]
+On the canonical branch,
+\[
+\frac{\Dstart}{\Oadm}=\frac{60}{48}=\frac54,
+\]
+and with $\gcar=5$ one also has
+\[
+\frac{\gcar}{\gcar-1}=\frac{5}{4}.
+\]
+Hence all displayed ratios agree on the same exact value.
+\end{proof}
+
+\begin{remark}[Interpretive status of the quotient]
+The quotient itself is exact. Any holographic or spacetime-dimensional reading of the denominator $\gcar-1=4$ remains interpretive in the present manuscript rather than theorem-level.
+\end{remark}
+
+\begin{corollary}[Rank-5 master compression on the retained branch]
+\label{cor:rank-5-master-compression}
+On the retained branch one has $\gcar=5$. Consequently
+\[
+N_{\mathrm{fam}}=\frac{\gcar+1}{2}=3,
+\qquad
+\Oadm=(\gcar+1)\,2^{\gcar-2}=48,
+\]
+\[
+\Oadm\gamma=\gcar\,2^{\gcar-2}=40,
+\qquad
+\bone=\frac{\gcar\,2^{\gcar-2}+1}{10}=\frac{41}{10},
+\qquad
+10\,\bone=41.
+\]
+Thus the closed family count, admissible occupancy, weighted occupancy, and abelian index all
+compress to the single carrier rank.
+\end{corollary}
+
+\begin{proof}
+By \TFPTxref{cor:bosonic-rank-two,thm:yukawa-forces-32}, the retained carrier has
+\[
+\gcar=5.
+\]
+By \Cref{thm:harmonic-family-modes}, the family block fixes $N_{\mathrm{fam}}=3$, hence
+\[
+\Oadm=N_{\mathrm{fam}}\,2^{\gcar-1}=3\cdot 2^4=48.
+\]
+The carrier norm corollary gives $\gamma=5/6$, so
+\[
+\Oadm\gamma=48\cdot\frac56=40.
+\]
+Finally the closed Higgs branch has $N_\Phi=1$, and \TFPTeqref{eq:41-chain-main} yields
+\[
+10\,\bone=\Oadm\gamma+N_\Phi=40+1=41.
+\]
+\end{proof}
+
+\begin{corollary}[Pythagorean compression of the abelian index on the retained branch]
+\label{cor:pythagorean-integrity-index}
+On the retained branch,
+\[
+\mathcal I_{41}
+=
+10\,\bone
+=
+2\gcar(\gcar-1)+1
+=
+\gcar^2+(\gcar-1)^2.
+\]
+In particular, since $\gcar=5$ on the retained branch, one gets
+\[
+\mathcal I_{41}=5^2+4^2=41.
+\]
+\end{corollary}
+
+\begin{proof}
+By \TFPTxref{cor:rank-5-master-compression}, one has $\gcar=5$ and
+\[
+10\,\bone=\gcar\,2^{\gcar-2}+1=5\cdot 2^3+1=41.
+\]
+\[
+2\gcar(\gcar-1)+1=2\cdot 5\cdot 4+1=41.
+\]
+Since on the retained branch
+\[
+2\gcar(\gcar-1)+1=\gcar^2+(\gcar-1)^2,
+\]
+the claim follows.
+\end{proof}
+
+\begin{remark}[The number $4$ as a cross-cutting echo]
+In addition to the $2$-$3$-$5$ triad, the integer $4$ appears at four structurally distinct levels:
+\[
+F_{\mathrm{patch}}=4,
+\qquad
+\gcar-1=4,
+\qquad
+\frac{\Oadm}{\dim\mathfrak g_{\SM}}=\frac{48}{12}=4,
+\qquad
+\frac{|R(E_8)|}{\Dstart}=\frac{240}{60}=4.
+\]
+That is, four corner patches, carrier rank minus one, matter-to-gauge compression factor, and root-to-start quotient all evaluate to the same integer.
+\end{remark}
+
+\subsection{Carrier compressions on the minimal branch}
+
+\begin{corollary}[Two-point spectral compression of $\gamma$ and $\phibase$]
+Let
+\[
+y_+:=\frac12,
+\qquad
+y_-:=-\frac13
+\]
+be the two distinct carrier eigenvalues singled out by the factorized carrier polynomial. Then
+\[
+\gamma=y_+-y_-,
+\qquad
+\phibase=\frac{y_++y_-}{\pi}.
+\]
+Here $y_++y_-$ is the unweighted Vieta sum of the two distinct carrier eigenvalues, not the trace on $E$.
+\end{corollary}
+
+\begin{proof}
+By \Cref{eq:carrier-polynomial}, equivalently by the factorization
+\[
+6Y^2-Y-\mathbf 1=(2Y-\mathbf 1)(3Y+\mathbf 1),
+\]
+the two distinct carrier eigenvalues are exactly $y_+=1/2$ and $y_-=-1/3$. Their difference is
+\[
+y_+-y_-=\frac12+\frac13=\frac56=\gamma,
+\]
+while their sum is
+\[
+y_++y_-=\frac12-\frac13=\frac16.
+\]
+Since $\phibase=(1-\gamma)/\pi=1/(6\pi)$, the claim follows.
+\end{proof}
+
+\begin{proposition}[Dual-root generation of the hypercharge packet and admissible cusp set]
+\label{prop:dual-root-generation}
+Let
+\[
+y_+=\frac12,
+\qquad
+y_-=-\frac13.
+\]
+Then all one-family hypercharges are generated by the same two carrier roots:
+\[
+\begin{aligned}
+Y(Q_L)&=y_++y_-,
+&
+Y(u^c)&=2y_-,
+&
+Y(d^c)&=-y_-,
+\\
+Y(L_L)&=-y_+,
+&
+Y(e^c)&=2y_+,
+&
+Y(\nu^c)&=0.
+\end{aligned}
+\]
+Moreover the positive transport cusps satisfy
+\[
+\left\{1,\frac23,\frac13\right\}=\{2y_+,-2y_-,2(y_++y_-)\}.
+\]
+Thus the carrier packet and the transport grammar are generated by the same two-point root data.
+\end{proposition}
+
+\begin{proof}
+On the minimal carrier one has
+\[
+Y=\operatorname{diag}(y_-,y_-,y_-,y_+,y_+)
+\]
+with respect to the split $E_3\oplus E_2$. The one-family packet $S^+$ carries the sectors
+$Q_L,u^c,d^c,L_L,e^c,\nu^c$, and their hypercharges are the sums of the occupied carrier roots.
+This gives the displayed formulas. Substituting $y_+=1/2$ and $y_-=-1/3$ recovers the canonical
+values
+\[
+\frac16,\quad
+-\frac23,\quad
+\frac13,\quad
+-\frac12,\quad
+1,\quad
+0.
+\]
+The admissible transport cusps are fixed in \TFPTxref{thm:exact-transport-closure} as
+$\{1,\frac23,\frac13\}$, which is exactly the displayed root-generated set.
+\end{proof}
+
+\begin{corollary}[Family hypercharge variance and electroweak block trace]
+Equip one carrier family with the uniform average
+\[
+\mathbb E_{S^+}(A):=\frac{1}{16}\tr_{S^+}A.
+\]
+Then
+\[
+\operatorname{Var}_{S^+}(Y)
+:=
+\mathbb E_{S^+}(Y^2)-\mathbb E_{S^+}(Y)^2
+=
+\frac{1}{16}\tr_{S^+}Y^2
+=
+\frac{5}{24}.
+\]
+Consequently,
+\[
+I_1^{\mathrm{EW}}=\operatorname{Var}_{S^+}(Y)\,\bone.
+\]
+\end{corollary}
+
+\begin{proof}
+The one-family trace identities give $\tr_{S^+}Y=0$ and $\tr_{S^+}Y^2=10/3$. Hence the centered second moment is
+\[
+\frac{1}{16}\tr_{S^+}Y^2=\frac{10/3}{16}=\frac{5}{24}.
+\]
+Using $I_1^{\mathrm{EW}}=\frac{5}{24}\,\bone$ from the electroweak block relation yields the second identity.
+\end{proof}
+
+\begin{corollary}[Factorial quadratic trace and two-defect factorization]
+\label{cor:factorial-trace-delta2}
+Let
+\[
+X:=6Y.
+\]
+Then the one-family quadratic trace is
+\[
+\tr_{S^+}(X^2)
+=
+36\,\tr_{S^+}(Y^2)
+=
+36\cdot\frac{10}{3}
+=
+120
+=
+5!.
+\]
+Equivalently, using the six hypercharge sectors with multiplicities
+\[
+(1,3,6,1,2,3)
+\]
+at
+\[
+X\in\{0,-4,1,6,-3,2\},
+\]
+the same trace is
+\[
+0^2+3\cdot 4^2+6\cdot 1^2+1\cdot 6^2+2\cdot 3^2+3\cdot 2^2=120.
+\]
+On the retained branch this gives the exact factorization
+\[
+\delta_2
+=
+2880\,\cthree^8
+=
+4!\,\tr_{S^+}(X^2)\,\cthree^8.
+\]
+\end{corollary}
+
+\begin{proof}
+By \TFPTxref{prop:split-weight-enumerator}, one has
+\[
+\tr_{S^+}(Y^2)=\frac{10}{3}.
+\]
+Since $X=6Y$, the first identity follows immediately. The sector-by-sector sum is the same quadratic trace written in the basis of admissible occupancy sectors from \TFPTxref{prop:family-hypercharge-compression}. Finally, the hard kernel normalization gives
+\[
+\delta_2=2880\,\cthree^8=24\cdot 120\,\cthree^8
+=
+4!\,\tr_{S^+}(X^2)\,\cthree^8.
+\]
+\end{proof}
+
+\begin{remark}[Quadratic trace versus variance]
+The value $120=5!$ is the unnormalized quadratic trace $\tr_{S^+}(X^2)$, not the normalized variance. The corresponding uniform variance is
+\[
+\operatorname{Var}_{S^+}(X)=36\,\operatorname{Var}_{S^+}(Y)=36\cdot\frac{5}{24}=\frac{15}{2}.
+\]
+\end{remark}
+
+\begin{remark}[Generic abelian-index identity]
+Define the generic occupancy
+\[
+\Omega_{\mathrm{occ}}:=16\,N_{\mathrm{fam}}.
+\]
+Then the abelian-index formula gives
+\[
+10\,\bone
+=
+\frac{40}{3}N_{\mathrm{fam}}+N_\Phi
+=
+\Omega_{\mathrm{occ}}\,\gamma+N_\Phi.
+\]
+At this stage no canonical specialization is inserted yet. The closed $41$ chain will be derived
+only after the family and Higgs theorems fix $\Omega_{\mathrm{occ}}=48$ and $N_\Phi=1$.
+\end{remark}
+
+\begin{corollary}[Family integrality repair]
+\label{cor:family-integrality-repair}
+One carrier family contributes the weighted transport budget
+\[
+\dim S^+\cdot\gamma
+=
+16\cdot\frac56
+=
+\frac{40}{3}.
+\]
+Hence any integral global budget assembled from whole carrier families must satisfy
+\[
+N_{\mathrm{fam}}\cdot \frac{40}{3}\in\mathbb Z.
+\]
+The minimal positive repair is therefore
+\[
+N_{\mathrm{fam,min}}=3.
+\]
+For this minimal repair one gets
+\[
+\Omega_{\mathrm{occ}}=N_{\mathrm{fam,min}}\dim S^+=48,
+\qquad
+\Omega_{\mathrm{occ}}\gamma=40.
+\]
+The later family theorem realizes exactly this minimal arithmetic.
+\end{corollary}
+
+\begin{proof}
+The first identity uses $\dim S^+=16$ and $\gamma=5/6$. Since $\gcd(40,3)=1$, integrality forces
+$3\mid N_{\mathrm{fam}}$, so the smallest positive choice is $3$. Multiplying by $16$ and then by
+$\gamma$ gives the displayed values.
+\end{proof}
+
+\subsection{Generic abelian index identity}
+
+The abelian coefficient is first carried only in the generic form
+\begin{equation}
+\label{eq:41-chain-main}
+10\,\bone
+=
+\Omega_{\mathrm{occ}}\gamma+N_\Phi.
+\end{equation}
+The arithmetic specialization to $41$ is deferred until the family multiplicity and the Higgs
+sector have both been theorematically closed.
+
+
+% ---- Families, occupancy, and compact Higgs index: source lines 3483-4124 ----
+\section{Closure architecture A: families, Higgs, and local spectral scale}
+
+This first closure-architecture block is the shortest route from the hard carrier packet to the
+closed theorem body. It has three moves: primitive winding balance in the seam normal plane forces
+the four-corner structure of the fundamental section, that winding theorem globalizes into the
+family space $F$, the determinant line selects the unique light Higgs doublet together with the
+compact seam phase, and the local spectral-scale channel generates both $\Mpl$ and the electroweak
+vacuum from one common geometric response.
+
+\subsection{Family monodromy and occupancy}
+
+\begin{definition}[Family space]
+Let $\overline X_f$ denote the compact seam quotient with four $\mathbb Z_4$ corner points
+$p_1,\dots,p_4$, and define the punctured family section
+\[
+X_f^\circ:=\overline X_f\setminus\{p_1,p_2,p_3,p_4\}.
+\]
+Its rigid harmonic model is the Möbius class
+\[
+X_f^\circ\cong \mathbb P^1\setminus\mu_4.
+\]
+Set
+\[
+F:=H^1(X_f^\circ,\mathbb C).
+\]
+We use the distinguished cycle basis $(C_1,C_2,C_T)$ only as a concrete carrier-side basis of this family space; any later APS/Hodge realization is read as compatible analytic structure on the same topological family space.
+\end{definition}
+In this interpretation $F$ is neither an arbitrary flavor vector space nor a loose bookkeeping
+trick; it is a cycle space attached to the seam data. The actual bridge logic is shown in
+\Cref{fig:family-triangle}: the derived corner theorem fixes $N_{\mathrm{fam}}=3$, the
+topological family step promotes that count to a family space, and the occupancy corollary then
+feeds back into the defect channel.
+
+\begin{figure}[t]
+\centering
+\scriptsize
+\begin{tikzpicture}[
+    >=Latex,
+    hard/.style={draw=blue!60!black, fill=blue!6, rounded corners, align=center, text width=2.2cm, minimum height=1.0cm},
+    closure/.style={draw=orange!75!black, fill=orange!8, rounded corners, align=center, text width=2.4cm, minimum height=1.0cm},
+    bridge/.style={draw=green!50!black, fill=green!8, rounded corners, align=center, text width=2.25cm, minimum height=1.0cm}
+]
+\draw[draw=blue!60!black, fill=blue!4, rounded corners] (-5.5,-1.4) rectangle (-3.0,1.4);
+\foreach \x/\y in {-5.1/1.0,-3.4/1.0,-5.1/-1.0,-3.4/-1.0} {
+    \filldraw[blue!60!black] (\x,\y) circle (2.3pt);
+    \node[blue!60!black, anchor=south] at (\x,\y) {\tiny $\frac34$};
+}
+\node[align=center] at (-4.25,0) {\textbf{corner compactification}\\four $\mathbb Z_4$ corners\\each contributes $\frac34$};
+
+\node[hard] (nfam) at (-1.0,0) {$N_{\mathrm{fam}}$\\$=4\cdot\frac34=3$};
+
+\coordinate (A) at (2.0,1.15);
+\coordinate (B) at (0.7,-0.95);
+\coordinate (C) at (3.3,-0.95);
+\node[closure, text width=1.2cm, minimum height=0.8cm] at (A) {$C_1$};
+\node[closure, text width=1.2cm, minimum height=0.8cm] at (B) {$C_2$};
+\node[closure, text width=1.2cm, minimum height=0.8cm] at (C) {$C_T$};
+\draw[->, thick, orange!75!black] ($(A)+(0.2,-0.3)$) .. controls (2.7,0.25) .. ($(C)+(-0.2,0.3)$);
+\draw[->, thick, orange!75!black] ($(C)+(-0.38,-0.02)$) .. controls (2.0,-1.65) .. ($(B)+(0.38,-0.02)$);
+\draw[->, thick, orange!75!black] ($(B)+(0.2,0.3)$) .. controls (1.3,0.2) .. ($(A)+(-0.2,-0.3)$);
+\node[closure, text width=2.1cm, minimum height=0.9cm] at (2.0,-2.2) {topological family closure\\$F\cong\mathbb C^3$};
+
+\node[closure] (occ) at (5.85,0.55) {$\Omega_{\mathrm{adm}}$\\$=3\times16=48$};
+\node[bridge] (dtop) at (5.85,-1.15) {$\deltatop=\Omega_{\mathrm{adm}}\cthree^4$\\boundary-to-bulk bridge};
+
+\draw[->, thick] (-3.0,0) -- (nfam);
+\draw[->, thick] (nfam) -- (1.0,0.1);
+\draw[->, thick] (nfam) -- (occ);
+\draw[->, thick, orange!75!black] (2.0,-1.55) -- (2.0,-1.8);
+\draw[->, thick, orange!75!black] (3.05,-1.9) -- (occ);
+\draw[->, thick, green!50!black] (occ) -- (dtop);
+\end{tikzpicture}
+\caption{Carrier-to-family closure bridge. Corner compactification yields the punctured family
+section $X_f^\circ$, the harmonic family space $\mathcal H_F\cong F\cong H^1(X_f^\circ,\mathbb C)$
+gives the hard multiplicity $N_{\mathrm{fam}}=3$, and the resulting occupancy
+$\Omega_{\mathrm{adm}}=48$ feeds back into the bridge reading
+$\deltatop=\Omega_{\mathrm{adm}}\cthree^4$.}
+\label{fig:family-triangle}
+\end{figure}
+
+The Hodge metric on $F$ turns the monodromy data into an honest unitary family system rather than a merely decorative triangle sketch.
+
+\begin{theorem}[Four corners and the rigid family surface \texorpdfstring{$\mathbb P^1\setminus\mu_4$}{P1 minus mu4}]
+\label{thm:topological-family-closure}
+Let $\overline X_f$ be the compact seam quotient induced by the deck involution $\taudbl$ and its
+spin lift on the oriented normal two-plane. Every admissible fixed corner contributes one
+quarter-turn of the lifted spin rotation. Therefore
+\[
+N_{\mathrm{corner}}\cdot \frac{\pi}{2}=2\pi,
+\qquad
+N_{\mathrm{corner}}=4.
+\]
+Removing the four corner points gives a four-punctured sphere
+\[
+X_f^\circ:=\overline X_f\setminus\{p_1,p_2,p_3,p_4\}.
+\]
+The inherited finite symmetry group on the puncture set is a faithful dihedral group
+$D_4\subset PGL_2(\mathbb C)$. Every faithful copy of $D_4$ in $PGL_2(\mathbb C)$ is M\"obius
+conjugate to the standard action generated by
+\[
+r(z)=iz,
+\qquad
+s(z)=1/z.
+\]
+Up to M\"obius equivalence the unique $D_4$-invariant four-point configuration is therefore
+\[
+\mu_4:=\{z\in\mathbb C:\ z^4=1\}=\{1,-1,i,-i\}.
+\]
+Hence
+\[
+X_f^\circ\cong \mathbb P^1\setminus\mu_4,
+\qquad
+\chi(X_f^\circ)=-2,
+\qquad
+H_1(X_f^\circ,\mathbb Z)\cong \mathbb Z^3.
+\]
+Consequently
+\[
+F:=H^1(X_f^\circ,\mathbb C)\cong \mathbb C^3.
+\]
+\end{theorem}
+
+\begin{proof}
+The quarter-turn count gives four corner points. A sphere with four removed points is isomorphic to
+$\mathbb P^1\setminus\{q_1,q_2,q_3,q_4\}$ for some ordered quadruple. The classification of finite
+subgroups of $PGL_2(\mathbb C)$ implies that every faithful dihedral subgroup of order eight is
+M\"obius conjugate to the standard $D_4$ action generated by $z\mapsto iz$ and $z\mapsto 1/z$.
+Under that action the unique invariant orbit of cardinality four is the set of fourth roots of
+unity, namely $\mu_4=\{1,-1,i,-i\}$. Therefore
+\[
+X_f^\circ\cong \mathbb P^1\setminus\mu_4.
+\]
+The Euler characteristic is $2-4=-2$, and for a genus-zero surface with four punctures one has
+$\rank H_1=4-1=3$. Dualizing gives $F\cong\mathbb C^3$.
+\end{proof}
+
+\begin{theorem}[Three harmonic family modes on the four-punctured family surface]
+\label{thm:harmonic-family-modes}
+Let
+\[
+X_f^\circ=\mathbb P^1\setminus\mu_4
+\]
+with a complete cusp metric in its M\"obius class, and define the family Hilbert space by
+\[
+\mathcal H_F:=\ker \Delta^{(1)}_{L^2,\mathrm{APS}}(X_f^\circ).
+\]
+Then
+\[
+\dim\mathcal H_F=3.
+\]
+If the physical family multiplicity is defined by
+\[
+N_{\mathrm{fam}}:=\dim\mathcal H_F,
+\]
+then
+\[
+N_{\mathrm{fam}}=3,
+\qquad
+F\cong \mathcal H_F\cong \mathbb C^3.
+\]
+\end{theorem}
+
+\begin{proof}
+For a compact truncation $\overline X_{f,R}$ with four boundary circles,
+\[
+\chi(\overline X_{f,R})=2-4=-2.
+\]
+Hence
+\[
+\dim H^1(\overline X_{f,R},\partial\overline X_{f,R};\mathbb C)=3.
+\]
+The $L^2$ Hodge theorem for finite-area cusp surfaces identifies
+\[
+\ker \Delta^{(1)}_{L^2,\mathrm{APS}}(X_f^\circ)
+\cong
+H^1(\overline X_{f,R},\partial\overline X_{f,R};\mathbb C),
+\]
+so the dimension is $3$.
+\end{proof}
+
+\begin{remark}[How the family theorem is now used]
+The family theorem is used at rigid conformal strength in the present version. Any orbifold APS
+realization is read as compatible analytic structure on the same classification-rigid
+four-punctured section, while the physical multiplicity itself is carried by the harmonic family
+mode space $\mathcal H_F$.
+\end{remark}
+
+\begin{proposition}[Orbifold APS compatibility]
+\label{prop:orbifold-aps-compatibility}
+Under the additional analytical hypotheses of \TFPTxref{app:aps},
+\[
+\Ind^{\mathrm{orb,APS}}(D_{\mathrm{rel}}^+\otimes L_F)=3.
+\]
+\end{proposition}
+
+\begin{corollary}[Boundary-to-bulk bridge corollary for the admissible occupancy]
+\label{cor:boundary-bulk-occupancy}
+\label{cor:derived-occupancy-identity}
+On the canonical branch,
+\[
+\dim(S^+\otimes \mathcal H_F)=16\cdot 3=48=\Oadm.
+\]
+Hence the topological surcharge enters the present paper as a derived occupancy corollary:
+\[
+\deltatop
+=
+\cthree^4\,\dim(S^+\otimes \mathcal H_F)
+=
+\Oadm\,\cthree^4.
+\]
+\end{corollary}
+
+The family subsection is therefore no longer split between a local count, an independent index
+theorem, and a later occupancy reinterpretation. Those statements are compressed into one derived
+corner theorem with one bridge corollary, while the holonomy proposition below records the
+resulting unitary geometry on $F\cong \mathcal H_F$.
+
+This theorem is the family statement referenced later by the admissibility theorems: the closure layer uses it as the explicit family component of the master closure theorem rather than as an external import.
+
+\begin{proposition}[Rigid special-unitary family holonomy on the determinant-trivial branch]
+\label{prop:family-holonomy-su3}
+Let $L_F\to X_f^\circ$ be the flat Hermitian family bundle with fiber
+$F\cong \mathcal H_F\cong H^1(X_f^\circ,\mathbb C)$. Assume that its determinant line is flat trivial,
+\[
+\det L_F \cong X_f^\circ\times \mathbb C,
+\]
+and that the chosen flat connection preserves this trivialization. Then
+\[
+\mathrm{Hol}(\nabla_F)\subset SU(3)_F.
+\]
+\end{proposition}
+
+\begin{proof}
+The Hermitian metric implies
+\[
+\mathrm{Hol}(\nabla_F)\subset U(3).
+\]
+The induced connection on $\det L_F$ has trivial holonomy by assumption, so for
+every loop $\gamma$ one has
+\[
+\det \rho_F(\gamma)=1.
+\]
+Hence every holonomy matrix lies in $SU(3)$.
+\end{proof}
+
+The role of the present subsection is thus no longer only mnemonic. It displays both the local patch-deficit count and the global APS/Hodge realization before the later closure stack compresses them into the theorem-level output surface.
+
+\subsection{Occupancy and boundary-to-bulk bridge}
+
+With the family bridge installed, the matter space becomes $S^+\otimes \mathcal H_F$ and the
+occupancy $\Oadm=48$ is already fixed by the harmonic family-mode theorem and its bridge
+corollary. Here \emph{occupancy} means the admissible chiral-state count after family lifting; it
+is not used as a primitive datum. The bridge point is not that family lifting creates a new
+numerical surcharge. Rather, the inherited hard kernel value
+\[
+\deltatop=\frac{3}{256\pi^4}
+\]
+admits on the canonical family branch the occupancy reinterpretation $\deltatop=\Oadm\,\cthree^4$.
+Likewise the hard second-order defect contribution is re-read as
+\[
+\delta_2=\frac54\,\deltatop^2=B\gamma\,\Oadm^2\cthree^8.
+\]
+In the present manuscript this occupancy corollary is used with a derived bridge reading:
+it is the boundary-to-bulk step that later feeds both the electromagnetic closure and the
+geometric channel. The coefficient $5/4$ is therefore not an extra numerical motif; it is the
+minimal-carrier compression factor $B\gamma$ rewritten in defect language. At the same time, the
+equality $\deltatop=\Oadm\cthree^4$ is not presented as an independent dynamical transgression
+theorem in the ordinary field-theory sense.
+
+\subsection{From bridge to geometric completion}
+
+\begin{principle}[Closure split]
+Once the carrier packet and family closure architecture are fixed, the focused main-text closure
+problem splits into a geometric program $\Ageom$ and a transport program $\Atrans$. Record
+algebra and prediction semantics are now tied directly to the admissible gap in the main theorem
+stack, while E$_8$ scale grammar and horizon extrapolations are deferred to appendix-level
+continuations.
+\end{principle}
+
+\[
+D_{\mathrm{geo}}:=D_{\mathrm{ref}}+D_{\mathrm{rel}}=D.
+\]
+The two main-text programs are packaged as
+\[
+\Ageom
+:=
+\langle E_3\oplus E_2,\ D_{\mathrm{geo}},\ \mathcal B_{\mathrm{rel}},\ \wspin\rangle,
+\qquad
+\Atrans
+:=
+\langle U_6,\ T,\ D_y,\ \mathcal Y_y^{(\varepsilon)},\ \Ccyc\rangle.
+\]
+This split keeps the carrier theorem, the geometric reconstruction problem, and the record-level extensions from being flattened into one undifferentiated claim. In particular, the metric field is no longer treated here as an independent entry of $\Ageom$; it is reconstructed from the geometric Dirac anchor introduced next, while $D_{\mathrm{rel}}$ remains the comparison operator for spectral subtraction.
+
+\subsection{Relative APS and superconnection setup}
+
+The geometric completion is formulated on a graded bundle
+\[
+\mathcal E_{\mathrm{rel}}=\mathcal E_{\mathrm{rel}}^+\oplus\mathcal E_{\mathrm{rel}}^-,
+\]
+with the geometric Dirac anchor $D_{\mathrm{geo}}$, the declared reference operator
+$D_{\mathrm{ref}}$, and APS-type boundary conditions on the seam $\Seam$; see
+Appendix~\TFPTxref{app:aps}. The geometric package is
+\[
+\mathbb A_{\Seam}:=(D_{\mathrm{geo}},D_{\mathrm{rel}},A_{\Sigma}^{\mathrm{geo}}),
+\qquad
+A_{\Sigma}^{\mathrm{geo}}:=\mathcal B_{\mathrm{rel}}\oplus\nabla_{\chigeo}.
+\]
+Here $D_{\mathrm{geo}}$ is the geometric Dirac anchor, while $D_{\mathrm{rel}}$ is the relative comparison operator entering the spectral subtraction formulas. The bundle data $A_{\Sigma}^{\mathrm{geo}}$ reorganize the primitive seed package $A_{\Sigma}^{\mathrm{seed}}$ introduced earlier in \TFPTxref{eq:tfpt-master}.
+\begin{theorem}[Geometric reconstruction from the Dirac anchor]
+\label{thm:geometric-reconstruction-anchor}
+\label{thm:geometric-reconstruction-from-Dgeo}
+\label{thm:relative-geometric-reconstruction}
+Assume
+\[
+Z(\mathcal A)\cong C^\infty(M),
+\]
+and the geometric anchor $D_{\mathrm{geo}}$ is of Dirac type with principal symbol
+\[
+\sigma(D_{\mathrm{geo}})(x,\xi)^2
+=
+g^{\mu\nu}(x)\xi_\mu\xi_\nu\,\mathbf 1.
+\]
+Then $D_{\mathrm{geo}}$ reconstructs the metric $g$, the spin structure, and the
+Levi--Civita connection on the geometric branch. Inner fluctuations of the same anchored
+spectral datum generate the gauge sector.
+The operator $D_{\mathrm{rel}}$ is the reference-subtracted comparison operator on that
+same branch and is not itself used as the local geometric anchor.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+On the admissible branch the commutative center identifies the manifold algebra, while the
+principal symbol of the Dirac anchor determines the quadratic form on cotangent vectors.
+Standard Dirac-type reconstruction then recovers the spin bundle and Levi--Civita connection
+from that same symbol data. The relative operator changes the comparison bookkeeping, not the
+geometric source of the local symbol.
+\end{proof}
+
+\begin{theorem}[Retained branch from the admissibility selector]
+\label{thm:retained-branch-from-Padm}
+\label{thm:admissible-sector-on-reconstructed-geometry}
+\label{thm:full-operator-reconstruction}
+Let $D_{\mathrm{geo}}$ be the geometric anchor and let $\Padm$ be the retained
+admissibility selector.
+Then:
+\begin{enumerate}[label=(\roman*), leftmargin=1.5em, topsep=3pt, itemsep=2pt]
+\item $\Xbulk=\mathrm{Spec}\,Z(\mathcal A)$ and $\Seam=\mathrm{Fix}(\taudbl)$;
+\item the local spectral density of $D_{\mathrm{geo}}$ determines the geometric response
+      $\chigeo$;
+\item $\Padm$ defines the retained admissible sector for observables, transport,
+      and positivity statements on that branch.
+\end{enumerate}
+No claim is made that the compressed operator $\Padm D_{\mathrm{rel}}\Padm$
+carries the local principal symbol of the geometry.
+\end{theorem}
+
+\begin{corollary}[No residual geometric datum beyond the geometric anchor]
+The geometric package is reconstructed from $D_{\mathrm{geo}}$ and its local spectral density.
+The selector $\Padm$ acts downstream on the retained sector and is not part of the
+local geometric anchor.
+\end{corollary}
+
+\begin{definition}[Local spectral scale and canonical relative spectral residues]
+\label{def:local-spectral-scale}
+\label{def:canonical-residues}
+Write the geometric response as a local spectral scale
+\[
+\chigeo=\Lambda e^\sigma,
+\qquad
+D_{\sigma,\mathrm{geo}}:=e^{-\sigma/2}D_{\mathrm{geo}}e^{-\sigma/2}.
+\]
+\[
+\mathcal Z_{\mathrm{rel}}(s;\sigma)
+:=
+\operatorname{Tr}_{\mathrm{rel}}\!\left(
+|D_{\sigma,\mathrm{geo}}+\mathcal B_{\mathrm{rel}}|^{-2s}
+-|D_{\mathrm{ref}}|^{-2s}
+\right)
++\frac{i\pi}{2}\Delta\eta_\Sigma.
+\]
+The canonical Einstein residue and order-zero residue are
+\[
+\mathcal E_D
+:=
+\operatorname*{Res}_{s=1}\mathcal Z_{\mathrm{rel}}(s;\sigma),
+\qquad
+\Gamma_D^{(4)}
+:=
+\operatorname{FP}_{s=0}\mathcal Z_{\mathrm{rel}}(s;\sigma).
+\]
+The gravitational branch is then read from the profile-free residue pair rather than from a freely
+chosen spectral profile.
+\end{definition}
+
+\begin{corollary}[Constant-scale reduction of the geometric branch]
+\label{cor:constant-scale-reduction}
+If the local spectral scale is frozen to a constant $\sigma=\sigma_0$, then
+$\chigeo=\chigeozero:=\Lambda e^{\sigma_0}$ and the present geometric branch reduces to the
+constant-$\chigeo$ closure relations extracted from
+$\Gamma_{\mathrm{grav}}:=-6\chigeo^2\mathcal E_D+\Gamma_D^{(4)}$:
+\[
+\Mpl^2=\frac{\chigeozero^2}{2\pi^2},
+\qquad
+\vgeo^2=Z_H\,\frac{\mu_\Phi^2(\chigeozero)}{\lambda_\Phi}.
+\]
+Once the unique stationary root of \TFPTxref{thm:absolute-spectral-planck-closure} is imposed, the
+Einstein coefficient is equivalently the boundary-normalized readout
+\[
+\frac{\Mpl^2}{\lambda_\Sigma^2}=\frac{\rho_\star}{2\pi^2}.
+\]
+Thus the former constant-$\chigeo$ formulas are retained as the homogeneous branch of the local
+spectral-scale formulation rather than as a competing package.
+\end{corollary}
+
+
+\subsection{Bosonic relative index and Higgs selection}
+
+\begin{theorem}[Minimal determinant classes from the primitive charge generator]
+\label{thm:determinant-class-higgs-selection}
+\label{thm:determinant-clutching}
+Let
+\[
+L_2:=\det E_2,
+\qquad
+L_3:=\det E_3
+\]
+over the compactified oriented normal sphere $S^2=D_N\cup_{S^1}D_S$. Then the primitive charge
+generator
+\[
+X=-2P_3+3P_2
+\]
+together with center neutrality and seam-evenness forces the clutching map
+\[
+g_2(\varphi)=e^{i\varphi}
+\]
+for $L_2$, while center neutrality forces
+\[
+g_3(\varphi)=1
+\]
+for $L_3$. Therefore
+\[
+c_1(L_2)=\deg g_2=1,
+\qquad
+c_1(L_3)=\deg g_3=0.
+\]
+This pair is the unique minimal nonnegative admissible determinant class.
+\end{theorem}
+
+\begin{proof}
+Complex line bundles on
+\[
+S^2=D_N\cup_{S^1}D_S
+\]
+are classified by their clutching maps along the equator:
+\[
+\pi_1(U(1))\cong \mathbb Z.
+\]
+Hence the first Chern class is exactly the winding degree of the transition function.
+
+In the weak rank-two sector the primitive charge generator
+\[
+X=-2P_3+3P_2
+\]
+assigns the unique positive determinant winding to the seam-even weak block. The spin lift on the
+oriented normal sphere acts there by the half-angle representation, so on the determinant line the
+transition factor is
+\[
+g_2(\varphi)=e^{i\varphi},
+\]
+hence
+\[
+\deg g_2=1,
+\qquad
+c_1(L_2)=1.
+\]
+
+In the color sector admissibility imposes center neutrality. Therefore the determinant transition
+function of the color block is null-homotopic and may be chosen constant:
+\[
+g_3(\varphi)=1.
+\]
+Consequently
+\[
+\deg g_3=0,
+\qquad
+c_1(L_3)=0.
+\]
+
+The full primitive seam twist is therefore exhausted in the weak determinant class. Any nonnegative
+pair strictly smaller than $(1,0)$ would force vanishing weak determinant winding and hence remove
+the seam-even weak line required by the primitive charge generator. Any larger nonnegative pair
+would insert extra clutching not carried by the primitive generator and therefore violate
+minimality. Thus the unique minimal nonnegative admissible determinant class is
+\[
+(c_1(L_2),c_1(L_3))=(1,0).
+\]
+\end{proof}
+
+\begin{remark}[Energy interpretation on the retained branch]
+The older asymptotic bosonic functional
+\[
+\mathcal E_{\mathrm{asym}}(\Phi_2,\Phi_3)
+:=
+\tau_2\bigl|\mathrm{wind}(\det\Phi_2)\bigr|
++\tau_3\bigl|\mathrm{wind}(\det\Phi_3)\bigr|
++m_3^2\dim\ker\mathcal B_{E_3}^+,
+\]
+with $\tau_3>\tau_2>0$, remains a useful physical intuition for why the retained branch is energetically preferred. In the present rewrite, however, the structural weight is carried by the determinant-class theorem above rather than by the cost functional itself.
+\end{remark}
+
+\begin{theorem}[Bosonic index and unique Higgs doublet from the minimal determinant class]
+\label{thm:callias-higgs-selection}
+\label{thm:compact-higgs-unique}
+\label{thm:compact-determinant-higgs-index}
+Compactify the oriented two-dimensional normal slice $N_\Seam$ to $S^2$. For $a\in\{2,3\}$
+define
+\[
+\mathcal B_{E_a}:=\sigma^\mu\nabla^{(a)}_\mu+\Phi_a
+\]
+on the compactified normal sphere. Under the determinant-class data of
+\Cref{thm:determinant-class-higgs-selection}, one has
+\[
+L_2\cong\mathcal O(1),
+\qquad
+L_3\cong\mathcal O,
+\]
+and hence
+\[
+H^0(S^2,\mathcal O(1))\cong\mathbb C^2,
+\qquad
+H^1(S^2,\mathcal O(1))=0,
+\]
+and the compact bosonic index satisfies
+\[
+\Ind(\mathcal B_{E_2}^+)=1,
+\qquad
+\Ind(\mathcal B_{E_3}^+)=0.
+\]
+Consequently the closed branch contains exactly one complex weak doublet and no light color triplet,
+and the unique light seam-even bosonic zero mode lies in
+\[
+\Phi\in\Gamma(E_2)\cong (1,2)_{1/2},
+\qquad
+\taudbl^{\ast}\Phi=+\Phi.
+\]
+\end{theorem}
+
+\begin{proof}
+By \Cref{thm:determinant-class-higgs-selection}, the weak determinant line is the degree-one line
+bundle
+\[
+L_2\cong\mathcal O(1)
+\]
+on
+\[
+S^2\cong\mathbb CP^1,
+\]
+whereas the color determinant class is trivial and
+\[
+L_3\cong\mathcal O.
+\]
+For $\mathbb CP^1$, Birkhoff--Grothendieck identifies every holomorphic line bundle by its degree,
+and Riemann--Roch gives
+\[
+\chi(\mathcal O(1))=1+1=2.
+\]
+Serre duality yields
+\[
+H^1(S^2,\mathcal O(1))
+\cong
+H^0(S^2,\mathcal O(-3))^\vee
+=0,
+\]
+so
+\[
+H^0(S^2,\mathcal O(1))\cong\mathbb C^2,
+\qquad
+H^1(S^2,\mathcal O(1))=0.
+\]
+
+The resulting two-dimensional zero-mode space is exactly one complex weak doublet, so the compact
+bosonic index records it as
+\[
+\Ind(\mathcal B_{E_2}^+)=1.
+\]
+
+In the color sector one has $L_3\cong\mathcal O$, so no positive determinant degree is available.
+Center neutrality forbids an unpaired seam-even color contribution, hence the positive and negative
+triplet modes pair with zero net index:
+\[
+\Ind(\mathcal B_{E_3}^+)=0.
+\]
+Therefore the closed branch contains exactly one seam-even Higgs doublet and no light color
+triplet, and the unique light bosonic zero mode lies in the weak block.
+\end{proof}
+
+\begin{corollary}[Bosonic rank is two]
+\label{cor:bosonic-rank-two}
+On the closed branch the positive carrier block has rank
+\[
+\dim E_+=2.
+\]
+Equivalently, the unique seam-even light bosonic zero mode fills one complex weak doublet and no
+larger positive carrier block is retained.
+\end{corollary}
+
+\begin{proof}
+By \TFPTxref{thm:callias-higgs-selection}, the light seam-even bosonic zero mode lies in the weak block
+\[
+\Phi\in\Gamma(E_2)\cong (1,2)_{1/2},
+\]
+and the compact index identifies its zero-mode space with
+\[
+H^0(S^2,\mathcal O(1))\cong\mathbb C^2.
+\]
+Hence the retained positive carrier block is exactly two-dimensional.
+\end{proof}
+
+This is the sharp form of the Higgs claim used here. The issue is not whether a Higgs doublet can
+be written down, but whether a compact bosonic index can be shown to select it uniquely.
+\begin{remark}[Callias shadow]
+The older Callias formulation is retained only as the noncompact shadow of the same compact index
+theorem and is discussed separately in the appendical analytic remarks. It no longer carries the
+main proof burden.
+\end{remark}
+
+Once that uniqueness statement is fixed, the renormalizable carrier-compatible Yukawa couplings
+are the standard ones,
+\[
+Q\,u^c\,\Phi,
+\qquad
+Q\,d^c\,\Phi^\dagger,
+\qquad
+L\,e^c\,\Phi^\dagger,
+\qquad
+L\,\nu^c\,\Phi,
+\]
+so the Higgs statement becomes a genuine structural bridge rather than a notation choice. The
+formal carrier discharge from this Yukawa bridge is recorded later in
+\TFPTxref{cor:bosonic-rank-two,thm:yukawa-forces-32,cor:yukawa-discharges-kpp}, once the closure-theorem Higgs block has
+been stated in its final retained-branch form.
+
+
+% ---- Discrete admissible branch and carrier-premise discharge: source lines 7479-8167 ----
+
+The two-stage selector geometry is summarized in \Cref{fig:admissibility-stack}.
+
+\begin{figure}[t]
+\centering
+\scriptsize
+\begin{tikzpicture}[
+    >=Latex,
+    data/.style={draw=black!60, fill=gray!8, rounded corners, text width=2.55cm, minimum height=0.9cm, align=center},
+    prim/.style={draw=blue!60!black, fill=blue!6, rounded corners, text width=2.55cm, minimum height=0.95cm, align=center},
+    close/.style={draw=orange!75!black, fill=orange!8, rounded corners, text width=2.55cm, minimum height=0.95cm, align=center},
+    result/.style={draw=green!50!black, fill=green!8, rounded corners, text width=3.55cm, minimum height=1.0cm, align=center},
+    note/.style={font=\footnotesize\itshape, text=black!65, align=center}
+]
+\node[data] (seamdata) at (-3.3,1.95) {primitive datum\\$\iC,\ \APSdom,\ D_{\mathrm{rel}}$};
+\node[data] (carrierdata) at (3.3,1.95) {carrier \& determinant closure\\$X,\ Z_c,\ Q_\Theta$};
+
+\node[prim] (pseam) at (-4.55,0.15) {$P_{\Seam,+}$\\seam-even sector};
+\node[prim] (pgap) at (-2.0,0.15) {$P_{\mathrm{gap}}$\\admissible gap};
+\node[prim] (pprim) at (-3.3,-1.7) {$\Pprim$\\primitive selector};
+
+\node[close] (psing) at (2.0,0.15) {$P_{\mathrm{sing}}$\\color singlets};
+\node[close] (ptheta) at (4.55,0.15) {$P_\Theta$\\determinant sector};
+\node[close] (pupgrade) at (3.3,-1.7) {$P_{\mathrm{sing}}P_\Theta$\\closure upgrade};
+
+\node[result] (padm) at (0,-3.7) {$\Padm=\Pprim P_{\mathrm{sing}}P_\Theta$\\full admissibility projector};
+
+\draw[->, thick] (seamdata) -- (pseam);
+\draw[->, thick] (seamdata) -- (pgap);
+\draw[->, thick] (carrierdata) -- (psing);
+\draw[->, thick] (carrierdata) -- (ptheta);
+\draw[->, thick] (pseam) -- (pprim);
+\draw[->, thick] (pgap) -- (pprim);
+\draw[->, thick] (psing) -- (pupgrade);
+\draw[->, thick] (ptheta) -- (pupgrade);
+\draw[->, thick] (pprim) -- (padm);
+\draw[->, thick] (pupgrade) -- (padm);
+\node[note] at (0,-5.0) {Primitive data determine $\Pprim$; carrier and determinant closure upgrade it to $\Padm$.};
+\end{tikzpicture}
+\caption{Two-stage upgrade from the primitive selector to the full admissibility projector. The
+left lane is fixed by the primitive datum, while the right lane enters only after carrier and
+determinant closure.}
+\label{fig:admissibility-stack}
+\end{figure}
+
+\begin{theorem}[Calder\'on upgrade of the APS boundary domain]
+\label{thm:apsdom-upgrade}
+Let $\APSdomprov$ be the provisional APS realization of the geometric anchor used in
+\TFPTxref{thm:well-posed-primitive-dynamics}, and let $D_b$ be the canonical doubling of
+$D_{\mathrm{rel}}$ across $\Seam$. Let $C(D_b)$ denote the Calder\'on projector of $D_b$ on the
+seam collar. Then there is a canonical boundary-elliptic upgrade
+\[
+\APSdomprov
+\;\xrightarrow{\;C(D_b)\;}\;
+\APSdom
+\]
+such that:
+\begin{enumerate}[label=(\roman*), leftmargin=1.5em, topsep=3pt, itemsep=2pt]
+    \item $\APSdom$ lies in the same admissible elliptic class as $\APSdomprov$ and preserves the
+    self-adjoint Fredholm realization of the geometric anchor;
+    \item the relative graph domain of $D_{\mathrm{rel}}$ is unchanged, so all primitive results
+    that depended only on $\APSdomprov$ continue to hold with $\APSdom$;
+    \item the family-pairing data $\APSfam$ are induced canonically on the doubled admissible
+    branch and are not a separate primitive datum.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+The Calder\'on projector $C(D_b)$ is canonically associated with the doubled operator on the
+seam collar and produces a boundary-elliptic projection compatible with the provisional APS
+choice. Both $\APSdomprov$ and $\APSdom$ are admissible elliptic boundary conditions for the
+same Dirac-type operator and therefore define equivalent self-adjoint Fredholm realizations of
+the geometric anchor (boundary-elliptic equivalence preserves the Sobolev graph domain).
+Consequently every statement made on the primitive scaffold under $\APSdomprov$ persists on the
+closed branch under $\APSdom$. The induction of $\APSfam$ from canonical doubling is a standard
+consequence of the cobordism structure of the doubled APS pair.
+\end{proof}
+
+\begin{proposition}[Master closure roadmap from canonical doubling]
+\label{thm:master-closure}
+\label{prop:master-closure-roadmap}
+\label{ass:remaining-closure-inputs}
+This proposition is a roadmap statement: it lists the closure conclusions that the individual
+theorems of this section establish from $\Tbound$, the derived closed datum, the carrier theorem, and the
+canonical doubling. It is not used as an input to those proofs and is recovered as a master
+corollary at the end of the section. Let $X_b$ be the canonical double across $\Seam$ and write
+\[
+D_b=
+\begin{pmatrix}
+0&D_{\mathrm{rel}}^-\\
+D_{\mathrm{rel}}^+&0
+\end{pmatrix},
+\qquad
+Q_{\mathrm{tot}}:=Q_{\mathrm{adm}}+Q_{\mathrm{geo}},
+\qquad
+\Delta_{\mathrm{tot}}:=\{Q_{\mathrm{tot}},Q_{\mathrm{tot}}^\dagger\}.
+\]
+Then on the closed branch all of the following are derived from the same datum (each item is the
+output of a downstream theorem in this section, not an extra hypothesis here):
+\begin{enumerate}[label=(\arabic*), leftmargin=1.5em, topsep=3pt, itemsep=2pt]
+    \item the Calder\'on projector of $D_b$ canonically upgrades the provisional APS choice
+    $\APSdomprov$ to $\APSdom$ (cf.\ \TFPTxref{thm:apsdom-upgrade});
+    \item the family pairing data are induced canonically, so no separate $\APSfam$ datum remains;
+    \item the upgrade theorem \TFPTxref{thm:padm-upgrade} produces
+    \[
+    \Padm:=\Pi_{\ker \Delta_{\mathrm{adm}}}
+    =
+    \Pprim\,P_{\mathrm{sing}}\,P_\Theta,
+    \]
+    and the doubled total closure package preserves $\mathrm{Ran}(\Padm)$;
+    \item
+    \[
+    \chi(X_f^\circ)=-2,
+    \qquad
+    F\simeq H^1(X_f^\circ,\mathbb C)\simeq \mathbb C^3,
+    \qquad
+    N_{\mathrm{fam}}=3;
+    \]
+    \item the harmonic determinant line is parallel and therefore
+    \[
+    \mathrm{Hol}(\nabla_F)\subset SU(3)_F;
+    \]
+    \item admissible bosonic, fermionic, and geometric reflection positivity hold on $\mathrm{Ran}(\Padm)$;
+    \item the physical geometric sector takes the form
+    \[
+    \mathcal H_{\mathrm{phys}}
+    \cong
+    \mathcal H_2\otimes\mathcal H_{\mathrm{sc}}\otimes\mathcal H_{\mathrm{matt}},
+    \]
+    with the scalaron carried by the positive $(\chi_{\mathrm{geo}},R^2)$ block;
+    \item $\Padm\Hrel\Padm$ is lower bounded and coercive.
+\end{enumerate}
+\end{proposition}
+
+\begin{definition}[Relative generating functional]
+\label{def:relative-generating-functional}
+The relative Euclidean generating functional is normalized as
+\[
+Z_{\mathrm{rel}}[J,\eta,\bar\eta]
+:=
+\frac{Z_{\mathrm{adm}}[J,\eta,\bar\eta]}{Z_{\mathrm{ref}}[0,0,0]}.
+\]
+The reference sector is therefore a fixed normalizing denominator rather than a second fluctuating measure that would mix with admissible positivity.
+\end{definition}
+
+\begin{lemma}[Admissible reflection positivity]
+\label{lem:admissible-reflection-positivity}
+Assume
+\[
+[\Theta,P_\Theta]=0,
+\qquad
+\Theta\Padm=\Padm\Theta,
+\]
+the admissible bosonic kernel satisfies the Bernstein-positivity remark above and is
+reflection-stable on the admissible sector, and the
+admissible fermionic CAR kernel is reflection positive on that same sector. Then every
+admissible observable $O$ supported in $\tau>0$ satisfies
+\[
+\langle \Theta O,O\rangle_{\mathrm{rel}}
+=
+\frac{1}{Z_{\mathrm{ref}}[0,0,0]}
+\langle \Theta O,O\rangle_{\mathrm{adm}}
+\ge 0.
+\]
+\end{lemma}
+
+\begin{proof}
+By definition,
+\[
+\langle \Theta O,O\rangle_{\mathrm{rel}}
+=
+\frac{1}{Z_{\mathrm{ref}}[0,0,0]}\,
+\langle \Theta O,O\rangle_{\mathrm{adm}}.
+\]
+The denominator is a fixed positive normalizing constant, so the sign is determined entirely by the
+admissible numerator.
+
+Split $O$ into its bosonic and fermionic parts on the retained admissible sector. For the bosonic
+part, the Bernstein representation of the admissible kernel writes the Euclidean covariance as a
+positive superposition of reflection-stable heat kernels. Reflection across $\tau=0$ therefore sends
+every positive-time bosonic observable to a positive quadratic form, so the bosonic contribution to
+\[
+\langle \Theta O,O\rangle_{\mathrm{adm}}
+\]
+is nonnegative.
+
+For the fermionic part, the CAR reflection-positivity hypothesis on the admissible subspace implies
+that the reflected two-point kernel is positive in the standard fermionic sense; equivalently, the
+corresponding Pfaffian / determinant form on positive-time test spinors is nonnegative. Because the
+bosonic and fermionic admissible factors commute inside the normalized expectation, their product
+remains nonnegative. Dividing by the fixed reference normalization preserves that sign. Hence
+\[
+\langle \Theta O,O\rangle_{\mathrm{rel}}\ge 0.
+\]
+\end{proof}
+
+\begin{theorem}[Operative admissibility selector]
+Under \TFPTxref{def:full-admissibility-complex,thm:padm-upgrade,prop:master-closure-roadmap}, the
+operator $\Padm$ is idempotent on the retained branch and realizes the admissibility predicate
+on all sectors used by the closed output statements:
+\[
+\mathsf{Adm}(X)=1
+\quad\Longleftrightarrow\quad
+\Padm X = X.
+\]
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+By \TFPTxref{thm:padm-upgrade}, $\Padm=\Pprim P_{\mathrm{sing}}P_\Theta$ is the orthogonal projector
+onto the harmonic admissible sector of the full complex and is therefore idempotent by
+construction. \TFPTxref{cor:factorized-admissibility-selector} recovers the explicit factorized
+selector. The predicate and operator languages agree once the positive transport sector is fixed.
+\end{proof}
+
+\begin{theorem}[Topological family closure on the admissible branch]
+By \TFPTxref{thm:master-closure,thm:topological-family-closure,cor:boundary-bulk-occupancy},
+\[
+\chi(X_f^\circ)=-2,
+\qquad
+F\cong\mathbb C^3,
+\qquad
+N_{\mathrm{fam}}=3.
+\]
+Consequently
+\[
+\Oadm=N_{\mathrm{fam}}\dim S^+=3\times 16=48,
+\qquad
+\deltatop=\Oadm\,\cthree^4.
+\]
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+This theorem is now a direct consequence of the master closure theorem from Section~6. The
+topological family closure and the orbifold corner count have already been compressed there
+into one statement, so the present layer merely records the corresponding admissibility
+consequence.
+\end{proof}
+
+\begin{theorem}[Bosonic index and local spectral-scale closure]
+On the admissible branch,
+\[
+\Ind_{\mathrm{rel}}^{\Padm}(\mathcal B_{E_2}^+)=1,
+\qquad
+\Ind_{\mathrm{rel}}^{\Padm}(\mathcal B_{E_3}^+)=0,
+\]
+so the unique light seam-even bosonic zero mode is
+\[
+\Phi\in\Gamma(E_2)\cong(1,2)_{1/2},
+\qquad
+\taudbl^{\ast}\Phi=+\Phi.
+\]
+Moreover the same closure layer yields
+\[
+\begin{aligned}
+\frac{\Mpl^2}{\lambda_\Sigma^2}&=\frac{\rho_\star}{2\pi^2},
+&
+G_N\lambda_\Sigma^2&=\frac{\pi}{4\rho_\star},
+\\
+\frac{\vgeo}{\Mpl}&=\gcar\,\beta_{\mathrm{rad}}^2
+\exp\!\left[-\frac{\alpha^{-1}(0)+\delta_{\mathrm{ph}}}{5}\right],
+\\
+G_N\vgeo^2&=\frac{1}{8\pi}\gcar^2\beta_{\mathrm{rad}}^4
+\exp\!\left[-\frac{2(\alpha^{-1}(0)+\delta_{\mathrm{ph}})}{5}\right].
+\end{aligned}
+\]
+Here $\vgeo$ is the seam-even UV source scale. The physical electroweak benchmark is the residue
+matched quantity $v_{\mathrm{phys}}$ of \TFPTxref{thm:ew-geometric-to-physical-matching}.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+The bosonic sector is treated as a genuine Callias / Dirac / Dolbeault-type index problem rather
+than a scalar counting exercise. Relative heat-kernel closure together with
+\TFPTxref{prop:canonical-bosonic-normalization,lem:two-sheet-zero-mode-normalization,thm:absolute-spectral-planck-closure}
+produces the boundary-normalized Einstein branch, the canonical Higgs normalization, and the
+seam-even zero-mode formula for $\vgeo$.
+\end{proof}
+
+\begin{definition}[Primitive Yukawa generator]
+\label{def:primitive-yukawa-generator}
+Let
+\[
+\mathcal I_Y
+:=
+\bigoplus_{p,q,r,t}
+\operatorname{Hom}_{G_{\mathrm{car}}}
+\Bigl(
+(\Lambda^p E_-\otimes \Lambda^q E_+)
+\otimes
+(\Lambda^r E_-\otimes \Lambda^t E_+)
+\otimes E_+,\,
+\mathbb C
+\Bigr)
+\]
+be the graded algebra of carrier-invariant Yukawa trilinears. A homogeneous nonzero invariant is
+called primitive if it is indecomposable, equivalently if it does not lie in the ideal generated by
+positive-degree invariants of strictly lower carrier degree.
+\end{definition}
+
+\begin{lemma}[Lowest primitive Yukawa generator on the closed branch]
+\label{lem:lowest-primitive-yukawa-generator}
+Assume $\dim E_+=2$ and let $\mathbb Y_{\mathrm{br}}$ be the branch Yukawa tensor of
+\TFPTxref{thm:exact-transport-closure,thm:rigid-family-local-system}. Then the primitive generator of
+$\mathcal I_Y$ with two nontrivial fermionic legs is unique up to exchange of the two fermionic
+legs and belongs to
+\[
+\operatorname{Hom}_{G_{\mathrm{car}}}
+\bigl((E_-\otimes E_+)\otimes \Lambda^2 E_-\otimes E_+,\,\mathbb C\bigr).
+\]
+\end{lemma}
+
+\begin{proof}
+The positive-block determinant neutrality gives $q+t+1=2$, hence $q+t=1$. Up to exchanging the two
+fermionic legs, $(q,t)=(1,0)$. Evenness of both fermionic legs then forces $p$ odd and $r$ even.
+If $p\ge 3$, the corresponding invariant factors through an extra negative spectator wedge and
+therefore lies in the ideal generated by lower carrier degree. Likewise, if $r\ge 4$, the
+invariant factors through a spectator bivector insertion and is again decomposable. Primitive
+indecomposability therefore forces $p=1$ and $r=2$.
+\end{proof}
+
+\begin{theorem}[Carrier rigidity from the primitive component of the branch Yukawa tensor]
+\label{thm:yukawa-forces-32}
+Let
+\[
+E=E_-\oplus E_+
+\]
+be the two-factor carrier and let
+\[
+G_{\mathrm{car}}:=S\bigl(U(E_-)\times U(E_+)\bigr),
+\qquad
+S^+=\Lambda^{\mathrm{even}}E.
+\]
+Let $\mathbb Y_{\mathrm{br}}$ denote the branch Yukawa tensor induced by the canonical transport
+kernel and rigid family holonomy of
+\TFPTxref{thm:exact-transport-closure,thm:rigid-family-local-system}. Decompose its carrier-homogeneous
+components as trilinear maps of the form
+\[
+B_{p,q;r,t}:
+(\Lambda^p E_-\otimes \Lambda^q E_+)
+\otimes
+(\Lambda^r E_-\otimes \Lambda^t E_+)
+\otimes E_+
+\longrightarrow
+\mathbb C.
+\]
+Let the primitive component of $\mathbb Y_{\mathrm{br}}$ be the unique indecomposable generator of
+\Cref{def:primitive-yukawa-generator,lem:lowest-primitive-yukawa-generator} with two nontrivial
+fermionic legs. Then, up to exchanging the two fermionic legs, that primitive component is
+necessarily of type
+\[
+(E_-\otimes E_+) \otimes \Lambda^2 E_- \otimes E_+
+\longrightarrow
+\Lambda^3 E_-\otimes \Lambda^2 E_+\cong\mathbb C,
+\]
+and therefore
+\[
+\dim E_+=2,
+\qquad
+\dim E_-=3.
+\]
+Consequently
+\[
+\dim \Lambda^2 E_+=1,
+\qquad
+\Lambda^2 E_- \cong E_-^\vee,
+\qquad
+\dim \Lambda^{\mathrm{even}}E=16.
+\]
+Hence the rigid carrier is
+\[
+E=E_3\oplus E_2,
+\qquad
+X=-2P_3+3P_2,
+\qquad
+Y=-\frac13 P_3+\frac12 P_2.
+\]
+\end{theorem}
+
+\begin{proof}
+By \TFPTxref{cor:bosonic-rank-two}, the compact Higgs index has already fixed
+\[
+\dim E_+=2.
+\]
+Write the primitive nonzero Yukawa component with two nontrivial fermionic legs as
+\[
+B_{p,q;r,t}:
+(\Lambda^p E_-\otimes \Lambda^q E_+)
+\otimes
+(\Lambda^r E_-\otimes \Lambda^t E_+)
+\otimes E_+
+\longrightarrow
+\mathbb C
+\]
+and note that \Cref{lem:lowest-primitive-yukawa-generator} forces primitiveness in the invariant-ring
+sense to have
+\[
+(q,t)=(1,0),
+\qquad
+(p,r)=(1,2)
+\]
+up to exchanging the two fermionic legs. Thus the primitive carrier component is exactly
+\[
+(E_-\otimes E_+) \otimes \Lambda^2 E_- \otimes E_+.
+\]
+Its negative factor contracts canonically as
+\[
+E_- \otimes \Lambda^2 E_- \longrightarrow \Lambda^3 E_-,
+\]
+so scalarity forces $\Lambda^3 E_-$ to be the top exterior power. Hence
+\[
+\dim E_-=3.
+\]
+With
+\[
+(\dim E_-,\dim E_+)=(3,2),
+\]
+one obtains the carrier-signature consequences
+\[
+\Lambda^2 E_- \cong E_-^\vee,
+\qquad
+\dim\Lambda^2 E_+=1,
+\]
+and therefore
+\[
+\dim \Lambda^{\mathrm{even}}(E_3\oplus E_2)=2^{5-1}=16.
+\]
+Finally the unimodular primitive two-point generator is fixed by
+\[
+3q_-+2q_+=0,
+\qquad
+q_-<0<q_+,
+\qquad
+\gcd(q_-,q_+)=1,
+\]
+so $(q_-,q_+) = (-2,3)$ and hence
+\[
+X=-2P_3+3P_2,
+\qquad
+Y=\frac{X}{6}=-\frac13 P_3+\frac12 P_2.
+\]
+\end{proof}
+
+\begin{lemma}[Uniqueness of the cubic weak invariant]
+\label{lem:unique-cubic-weak-invariant}
+Let $E=E_-\oplus E_+$ be a two-factor carrier on the retained branch and let
+\[
+\Phi\in E_+
+\]
+be the unique seam-even light boson selected by the compact bosonic index. Then
+\[
+\dim \operatorname{Hom}_{G_{\mathrm{car}}}\bigl((E_-\otimes E_+)\otimes \Lambda^2 E_-\otimes E_+,\,\mathbb C\bigr)=1
+\]
+if and only if
+\[
+(\dim E_-,\dim E_+)=(3,2).
+\]
+In particular, on the retained branch the up-type cubic invariant is not an extra choice but the
+unique admissible cubic invariant.
+\end{lemma}
+
+\begin{proof}
+By Schur functor decomposition,
+\[
+\begin{aligned}
+\operatorname{Hom}_{G_{\mathrm{car}}}\bigl((E_-\otimes E_+)\otimes \Lambda^2 E_-\otimes E_+,\mathbb C\bigr)
+&\cong
+\operatorname{Hom}_{SU(E_-)}(E_-\otimes \Lambda^2E_-,\mathbb C)
+\\
+&\qquad\otimes
+\operatorname{Hom}_{SU(E_+)}(E_+\otimes E_+,\mathbb C).
+\end{aligned}
+\]
+The first factor is nonzero iff $\Lambda^2E_-\cong E_-^\vee$, hence iff $\dim E_-=3$. The second
+factor is nonzero iff the alternating contraction on two fundamentals is one-dimensional, hence iff
+$\dim E_+=2$. In that case both factors are one-dimensional, so the total invariant space is
+one-dimensional.
+\end{proof}
+
+\begin{corollary}[Carrier-signature premises are discharged internally]
+\label{cor:yukawa-discharges-kpp}
+Combine \TFPTxref{cor:bosonic-rank-two,thm:yukawa-forces-32,lem:unique-cubic-weak-invariant} with the
+one-family decomposition of
+$S^+=\Lambda^{\mathrm{even}}(E_3\oplus E_2)$ and with the unique seam-even Higgs theorem. Then the
+weak antisymmetric line, the color-dual antisymmetric sector, and the retained light-packet
+identification are no longer primitive inputs once the uniqueness of the retained cubic invariant
+has been proved on the same branch.
+\end{corollary}
+
+\begin{figure}[t]
+\centering
+\scriptsize
+\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}[
+    >=Latex,
+    source/.style={draw=blue!60!black, fill=blue!6, rounded corners, text width=2.75cm, minimum height=0.95cm, align=center},
+    force/.style={draw=orange!75!black, fill=orange!8, rounded corners, text width=2.9cm, minimum height=0.95cm, align=center},
+    result/.style={draw=green!50!black, fill=green!8, rounded corners, text width=2.9cm, minimum height=0.95cm, align=center},
+    note/.style={font=\footnotesize\itshape, text=black!60, align=center}
+]
+\node[source] (fam) at (-5.2,0.95) {$X_f^\circ,\ N_{\mathrm{fam}}=3$\\family closure};
+\node[source] (higgs) at (-1.7,0.95) {$\Ind(\mathcal B_{E_2}^+)=1$\\$\dim E_+=2$};
+\node[force] (yuk) at (1.8,0.95) {primitive indecomposable\\Yukawa generator};
+\node[result] (car) at (5.3,0.95) {$E_3\oplus E_2,\ g=5,$\\$S^+=\Lambda^{\mathrm{even}}E$};
+
+\node[result] (cons) at (1.8,-1.2) {derived check\\$\Oadm=48=4\cdot 12$};
+
+\draw[->, thick] (fam) -- (higgs);
+\draw[->, thick] (higgs) -- (yuk);
+\draw[->, thick] (yuk) -- (car);
+\draw[->, thick] (car) -- (cons);
+\draw[->, thick, dashed] (fam) -- (cons);
+
+\node[note] at (0,-2.35) {Carrier closure runs through Higgs rank and branch Yukawa rigidity; the
+old occupancy formula is only a downstream consistency identity.};
+\end{tikzpicture}%
+}
+\caption{Carrier closure after the proof-tree cut. The retained branch first fixes $\dim E_+=2$
+through the compact Higgs index, then $\dim E_-=3$ through the primitive indecomposable generator of
+the actual branch Yukawa tensor; only afterwards is $\Oadm=48=4\cdot12$ read as a consistency check.}
+\label{fig:carrier-closure-cut}
+\end{figure}
+
+\begin{corollary}[Hard holonomy form of the Yukawa matrices]
+On the admissible branch, each fermion sector obeys the canonical factorization
+\[
+Y_f=D_{L,f}U_f^\star D_{R,f},
+\qquad
+U_f^\star\in SU(3)_F,
+\]
+and, in the family basis fixed by \TFPTxref{thm:exact-transport-closure},
+\[
+(Y_f)_{ij}
+=
+\lambdaY^{L^L_{f,i}+L^R_{f,j}}
+\left\langle e_i,\mathrm{Hol}_{\Gamma_{ij}^{\min}}(\nabla_F^\star)e_j\right\rangle.
+\]
+Any factorization by $U_f^\star$ is therefore a consequence of the hard holonomy closure, not an
+independent flavor input. The diagonal path-length rows \TFPTxref{eq:path-length-yukawa} are the
+singular-value reduction of this matrix statement.
+\end{corollary}
+
+\begin{proof}[Proof sketch]
+The finite $C_6$ transport geometry fixes the graph-distance weights, while the rigid
+$D_4$-equivariant family connection fixes the holonomy factors on the canonical path frame. The
+diagonal ladder formulas arise once left and right admissible words are paired on the same
+singular-value channel, so the matrix factorization is recovered as a corollary of one closed
+holonomy statement rather than as a separate ansatz.
+\end{proof}
+
+\begin{definition}[Center-neutral admissible algebra]
+Let
+\[
+\Asing
+:=
+\overline{\mathrm{span}}\{A_w:\ z(w)=1,\ \varepsilon(w)=+1,\ \Padm A_w=A_w\}.
+\]
+\end{definition}
+
+\begin{theorem}[Hadronic admissibility closure]
+On the admissible branch, the physical hadronic Hilbert space is
+\[
+\Hhad:=\overline{\Asing|\Omega\rangle}.
+\]
+All physical hadronic states lie in $\Hhad$, while color-nonsinglet free-word sectors are removed by $\Padm$.
+\end{theorem}
+
+\begin{proof}
+Center neutrality and seam-evenness are already the carrier-side admissibility rules for physical hadrons. Passing to the norm closure of the singlet admissible algebra acting on the vacuum gives the completed hadronic space, and no state with $z(w)\neq 1$ survives the selector.
+\end{proof}
+
+\begin{theorem}[Anomaly cancellation and seam inflow]
+On the admissible branch,
+\[
+I_6^{\mathrm{tot}}=0,
+\qquad
+\delta_\Lambda S_{\mathrm{bulk}}+\delta_\Lambda S_{\eta,\Seam}=0.
+\]
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+The one-family packet $S^+$ is exactly the anomaly-free Standard Model family including $\nu^c$. The remaining seam contribution is carried by the relative $\eta$ term, so gauge variation cancels between bulk and seam sectors rather than being left as an uncancelled boundary defect.
+\end{proof}
+
+\begin{lemma}[Topological sector positivity]
+\label{lem:topological-sector-positivity}
+On the admissible branch every topological sector weight satisfies
+\[
+Z_Q\ge 0.
+\]
+\end{lemma}
+
+\begin{proof}
+Apply \TFPTxref{lem:retained-gamma5-hermiticity}. The nonzero spectrum of each $\mathcal D_f$ occurs in
+paired sets $\pm i\lambda_n$, while the branch mass eigenvalues are strictly positive by
+\TFPTxref{thm:sheet-cp-protection}. Therefore each sector determinant is nonnegative, and so is the
+full sector weight.
+\end{proof}
+
+\begin{lemma}[Nontrivial topological support on the closed branch]
+\label{lem:nontrivial-topological-support}
+On the closed branch the primitive topological sector has strictly positive weight:
+\[
+Z_1=Z_{-1}>0.
+\]
+\end{lemma}
+
+\begin{proof}
+By \TFPTxref{thm:boundary-winding-control}, the canonical branch has unit seam winding, so the primitive
+topological class $Q=1$ is nonempty on the admissible branch. Choose an admissible representative
+$\phi_1$ in that class. By \TFPTxref{thm:sheet-cp-protection}, the same branch carries a genuine compact
+determinant angle with primitive winding number one, so $\phi_1$ has finite admissible action and
+belongs to the closed branch sector $Q(\phi_1)=1$. Let $\mathcal U_1$ be a sufficiently small open
+neighborhood of $\phi_1$ inside that sector. The local Boltzmann density is strictly positive on
+$\mathcal U_1$, and \Cref{lem:topological-sector-positivity} gives nonnegative sector weights.
+Therefore
+\[
+Z_1
+\ge
+\int_{\mathcal U_1} e^{-S_{\mathrm{adm}}[\phi]}\,d\mu(\phi)
+>
+0.
+\]
+The antiunitary sheet symmetry exchanges $Q=1$ and $Q=-1$, hence $Z_{-1}=Z_1>0$.
+\end{proof}
+
+\begin{theorem}[Unconditional strong-CP closure on the admissible branch]
+\label{thm:strong-cp-closure}
+\label{thm:strong-cp-closure-positive}
+On the admissible branch one has
+\[
+\arg\det M_u=\arg\det M_d=0,
+\qquad
+\bar\theta=0.
+\]
+Moreover the free energy
+\[
+F(\theta):=-V^{-1}\log Z_{\mathrm{adm}}(\theta)
+\]
+has its unique minimum at
+\[
+\theta=0\!\!\mod 2\pi.
+\]
+Weak CP may still survive through
+\[
+V_{\mathrm{CKM}}=U_{u,L}^\dagger U_{d,L}.
+\]
+\end{theorem}
+
+\begin{proof}
+\TFPTxref{thm:sheet-cp-protection} gives
+\[
+\arg\det M_u=\arg\det M_d=0.
+\]
+By \Cref{lem:topological-sector-positivity}, the admissible partition function admits a sector
+decomposition
+\[
+Z_{\mathrm{adm}}(\theta)=\sum_{Q\in\mathbb Z} Z_Q e^{iQ\theta},
+\qquad
+Z_Q\ge 0.
+\]
+The antiunitary sheet symmetry of \TFPTxref{thm:sheet-cp-protection} gives
+\[
+\mathcal C_\Sigma\,Q\,\mathcal C_\Sigma^{-1}=-Q,
+\]
+so the sector weights satisfy $Z_Q=Z_{-Q}$. Hence
+\[
+\begin{aligned}
+Z_{\mathrm{adm}}(\theta)
+&=Z_0+2\sum_{Q>0}Z_Q\cos(Q\theta)\\
+&\le Z_0+2\sum_{Q>0}Z_Q
+=Z_{\mathrm{adm}}(0).
+\end{aligned}
+\]
+By \Cref{lem:nontrivial-topological-support}, one has $Z_1>0$. Therefore for every
+$\theta\not\equiv 0\mod 2\pi$,
+\[
+Z_{\mathrm{adm}}(\theta)
+\le
+Z_{\mathrm{adm}}(0)-2Z_1\bigl(1-\cos\theta\bigr)
+<
+Z_{\mathrm{adm}}(0),
+\]
+which implies
+\[
+F(\theta)>F(0)
+\qquad
+\text{for every }\theta\not\equiv 0\mod 2\pi.
+\]
+Thus the unique minimum is at $\theta=0$, and therefore $\bar\theta=0$.
+\end{proof}
+
+% ---- Joint discrete admissible sector excerpt: source lines 9158-9639 ----
+\begin{theorem}[Joint discrete admissible sector from the boundary primitive kernel]
+\label{thm:joint-discrete-admissible-sector}
+\label{thm:discrete-sector-from-primitive-kernel}
+For every admissible boundary primitive kernel $\Tker^\partial$, the compatible discrete datum
+\[
+\mathfrak D_{\mathrm{disc}}(\Tker^\partial)
+\]
+is a singleton. Its unique element is
+\[
+d^\star_{\mathrm{disc}}
+:=
+\Bigl(
+E_3\oplus E_2,\,
+Y,\,
+S^+,\,
+X_f^\circ,\,
+[\nabla_F^\star],\,
+c_1(L_2),\,
+c_1(L_3),\,
+N_{\mathrm{fam}},\,
+\theta_{\mathrm{eff}}
+\Bigr)
+\]
+with
+\[
+X_f^\circ\cong\mathbb P^1\setminus\mu_4,
+\qquad
+N_{\mathrm{fam}}=3,
+\qquad
+(g,b,s)=(5,3,2),
+\qquad
+\dim S^+=16,
+\]
+\[
+\begin{aligned}
+S^+&=\Lambda^{\mathrm{even}}(E_3\oplus E_2),\\
+Y&=\mathrm{diag}\!\left(-\tfrac13,-\tfrac13,-\tfrac13,\tfrac12,\tfrac12\right),\\
+(c_1(L_2),c_1(L_3))&=(1,0),\qquad
+\theta_{\mathrm{eff}}=0.
+\end{aligned}
+\]
+Equivalently, carrier data, family data, determinant data, and the effective strong angle are fixed
+jointly from the same boundary primitive kernel.
+\end{theorem}
+
+\begin{proof}
+We prove the discrete blocks in the only order that uses no downstream uniqueness claim.
+
+\textbf{Step 1: primitive winding.}
+By \TFPTxref{thm:primitive-seam-generator}, the primitive seam class is the positive generator
+\[
+[u_\Sigma]=1\in K^1(S^1)\cong\mathbb Z,
+\]
+and its associated spectral flow is
+\[
+\SF(U_\Sigma)=1.
+\]
+Hence the primitive branch carries exactly one elementary seam winding. Write this winding number as
+\[
+n:=\SF(U_\Sigma)=1.
+\]
+
+\textbf{Step 2: family geometry and family multiplicity.}
+The lifted spin action on the oriented normal two-plane closes only after $4\pi$, so one primitive
+winding is realized by four quarter-turn corners. Therefore the compact family quotient carries
+exactly four $\mathbb Z_4$ orbifold points, and removing them produces
+\[
+X_f^\circ\cong\mathbb{CP}^1\setminus\{q_1,q_2,q_3,q_4\}.
+\]
+The lifted seam symmetry acts by the symmetries of a square, so the marked configuration admits a
+faithful $D_4$ action. By the classification of finite subgroups of $PGL_2(\mathbb C)$, every
+faithful $D_4$ action on four marked points of $\mathbb{CP}^1$ is M\"obius conjugate to the square
+configuration
+\[
+\{1,-1,i,-i\}.
+\]
+Hence
+\[
+X_f^\circ\cong\mathbb P^1\setminus\mu_4.
+\]
+The corner deficit count is then
+\[
+N_{\mathrm{fam}}
+:=
+\sum_{j=1}^{4}\left(1-\frac14\right)
+=
+4\cdot\frac34
+=
+3.
+\]
+Because $\chi(X_f^\circ)=2-4=-2$, one also has
+\[
+H_1(X_f^\circ,\mathbb Z)\cong\mathbb Z^3,
+\qquad
+H^1(X_f^\circ,\mathbb C)\cong\mathbb C^3.
+\]
+Thus the family multiplicity and the family geometry are fixed already at the discrete level.
+
+\textbf{Step 3: carrier closure.}
+By \TFPTxref{cor:bosonic-rank-two}, the compact Higgs index has already fixed
+\[
+\dim E_+=2.
+\]
+By \TFPTxref{thm:yukawa-forces-32}, the primitive indecomposable generator of the actual branch Yukawa tensor
+then forces
+\[
+\dim E_-=3.
+\]
+Hence
+\[
+\begin{aligned}
+(b,s)&=(3,2),\\
+g&=b+s=5,\\
+\dim S^+&=2^{g-1}=16.
+\end{aligned}
+\]
+
+\textbf{Derived consistency check.}
+With $N_{\mathrm{fam}}=3$ from Step~2 and $(b,s)=(3,2)$ from the present step, one recovers
+\[
+\Oadm
+=
+N_{\mathrm{fam}}\dim S^+
+=
+3\cdot 16
+=
+48
+=
+(g-1)(b^2+s^2-1)
+=
+4\cdot 12.
+\]
+
+\textbf{Step 4: hypercharge and one-family packet.}
+With $(b,s)=(3,2)$ fixed, the even half-spin packet is
+\[
+S^+=\Lambda^{\mathrm{even}}(E_3\oplus E_2).
+\]
+Primitive unimodularity on the two-eigenvalue carrier gives
+\[
+3q_-+2q_+=0.
+\]
+The unique primitive integer solution with $q_-<0<q_+$ is
+\[
+(q_-,q_+)=(-2,3).
+\]
+Hence
+\[
+X=-2P_3+3P_2,
+\qquad
+Y=\frac{X}{6}
+=
+\mathrm{diag}\!\left(-\frac13,-\frac13,-\frac13,\frac12,\frac12\right).
+\]
+
+\textbf{Step 5: determinant class and strong CP.}
+The determinant-line data are classified by the clutching pair $(c_1(L_2),c_1(L_3))$. On the
+admissible branch the compact bosonic index satisfies
+\[
+\Ind(\mathcal B_{E_2}^+)\ge 0,
+\qquad
+\Ind(\mathcal B_{E_3}^+)\ge 0.
+\]
+Existence of a seam-even Higgs doublet forces $\Ind(\mathcal B_{E_2}^+)\ge 1$, while absence of an
+unavoidable light color triplet forces $\Ind(\mathcal B_{E_3}^+)=0$. Minimal clutching therefore
+gives the unique pair
+\[
+(c_1(L_2),c_1(L_3))=(1,0).
+\]
+For the determinant-phase sector, reflection positivity and determinant-line conjugation symmetry
+make the admissible free energy even in $\theta_{\mathrm{eff}}$, and the positive-transfer theorem
+gives a unique minimum at the origin. Hence
+\[
+\theta_{\mathrm{eff}}=0.
+\]
+
+All discrete blocks are therefore fixed jointly by the same boundary primitive kernel. Thus
+\[
+\mathfrak D_{\mathrm{disc}}(\Tker^\partial)=\{d^\star_{\mathrm{disc}}\}.
+\]
+\end{proof}
+
+\begin{corollary}[Derived post-carrier kernel]
+\label{cor:derived-post-carrier-kernel}
+The tuple
+\[
+\Tker
+:=
+(\mathcal A,\mathcal H,D,J,\Gamma,\iC,\Pprim,\Padm,E_3\oplus E_2,Y,[u_\Sigma],\cthree)
+\]
+is a theorem-level derived object of $\Tker^\partial$. In particular the old post-carrier kernel is
+no longer primitive; it is reconstructed from the unique discrete datum $d^\star_{\mathrm{disc}}$
+together with the full selector $\Padm=\Pprim P_{\mathrm{sing}}P_\Theta$.
+\end{corollary}
+
+\begin{proof}
+By \Cref{thm:joint-discrete-admissible-sector}, the carrier split $E_3\oplus E_2$, the charge
+operator $Y$, the determinant class, and the family geometry are already fixed by
+$\Tker^\partial$. The projector $P_{\mathrm{sing}}$ is then determined by the fixed carrier, and
+$P_\Theta$ is determined by the fixed determinant class. Therefore
+\[
+\Padm=\Pprim P_{\mathrm{sing}}P_\Theta
+\]
+is fully determined. The displayed tuple is thus derived, not primitive.
+\end{proof}
+
+\begin{definition}[Projected modular free energy and stratified master functional]
+\label{def:projected-modular-free-energy}
+Fix the unique joint discrete datum $d^\star_{\mathrm{disc}}$ of
+\Cref{thm:joint-discrete-admissible-sector}, and let $\Padm$ be the derived full selector of
+\Cref{cor:derived-post-carrier-kernel}. For
+\[
+\xi=(\alpha,\chigeo,\delta_{\mathrm{ph}},\rho_{\mathrm{vac}})
+\]
+on the retained admissible branch, define
+\[
+\begin{aligned}
+\mathcal M_{d^\star_{\mathrm{disc}}}(\xi)
+:={}&-\log Z^{\Padm}_{\mathrm{rel}}[\xi]
++\Re\log\det_{\zeta,\Padm}(D_\xi^2+\mu^2)\\
+&+\frac12\eta_{\Sigma,\Padm}(D_\xi)
+-\log\det(1-U_{6,\xi})
++\Gamma_{\mathrm{vac}}(\rho_\xi),
+\end{aligned}
+\]
+where every term is evaluated on the retained admissible sector $\operatorname{Ran}(\Padm)$.
+For a general admissible spectral-bordism state
+\[
+\mathfrak s=(\mathcal B,\xi),
+\qquad
+\mathcal B\in\mathbf{SBord}^{\mathrm{adm}},
+\]
+define the lexicographic barrier
+\[
+\mathbb B_{\mathrm{lex}}(\mathfrak s)
+:=
+\begin{cases}
+0,& \mathcal B\cong \mathcal B_{\min},\\
++\infty,& \text{otherwise},
+\end{cases}
+\]
+and the stratified master functional
+\[
+\mathbb M(\mathfrak s)
+:=
+\mathbb B_{\mathrm{lex}}(\mathfrak s)+\mathcal M_{d^\star_{\mathrm{disc}}}(\xi).
+\]
+Thus the continuous retained-branch functional $\mathcal M_{d^\star_{\mathrm{disc}}}$ is the
+restriction of one stratified functional to the unique minimal admissible stratum.
+\end{definition}
+
+\begin{theorem}[Stratified master functional and continuous closure]
+\label{thm:continuous-closure-from-master-functional}
+On the retained admissible branch, the projected modular free energy factorizes as
+\[
+\mathcal M_{d^\star_{\mathrm{disc}}}(\xi)
+=
+\Gamma_{U(1)}(\alpha)
++
+\Gamma_{\mathrm{grav}}(\chigeo)
++
+\Gamma_{\mathrm{tr}}(\delta_{\mathrm{ph}})
++
+\Gamma_{\mathrm{vac}}(\rho_{\mathrm{vac}})
++\mathrm{const}.
+\]
+Its admissible critical points are therefore exactly the solutions of
+\[
+\partial_\alpha\Gamma_{U(1)}(\alpha)=0,
+\qquad
+\partial_{\chigeo}\Gamma_{\mathrm{grav}}(\chigeo)=0,
+\qquad
+\partial_\delta\Gamma_{\mathrm{tr}}(\delta_{\mathrm{ph}})=0,
+\qquad
+\delta_\rho\Gamma_{\mathrm{vac}}(\rho_{\mathrm{vac}})=0.
+\]
+Equivalently, the continuous closure laws are
+\[
+F_{U(1)}(\alpha)=0,
+\qquad
+\mathcal R_{\mathrm{grav}}=0,
+\qquad
+P_{\mathrm{tr}}(\delta_{\mathrm{ph}})=0,
+\qquad
+\delta_\rho\Gamma_{\mathrm{vac}}(\rho_{\mathrm{vac}})=0.
+\]
+In particular the continuous closure equations are derived from one primitive variational object
+rather than imposed as independent sector primitives. Equivalently, the stationary points of the
+stratified master functional $\mathbb M$ are exactly the stationary points of
+$\mathcal M_{d^\star_{\mathrm{disc}}}$ on the minimal admissible stratum.
+\end{theorem}
+
+\begin{proof}
+By construction,
+\[
+\mathbb M(\mathfrak s)=+\infty
+\]
+off the unitary-equivalence class of the minimal admissible bordism $\mathcal B_{\min}$. Hence every
+stationary point of $\mathbb M$ must lie on that minimal stratum, where the barrier vanishes and
+\[
+\mathbb M(\mathfrak s)=\mathcal M_{d^\star_{\mathrm{disc}}}(\xi).
+\]
+
+Now apply \Cref{cor:derived-post-carrier-kernel}: all continuous terms are evaluated on one and the
+same retained sector $\operatorname{Ran}(\Padm)$. On that branch the family, determinant, transport,
+and vacuum projectors commute, and the physical Hilbert space splits into orthogonal direct summands
+corresponding to the electromagnetic, geometric, transport, and vacuum blocks. For a block-diagonal
+operator, the relative partition function factorizes, the zeta determinant factorizes, and the eta
+invariant is additive. Therefore the logarithms split $\mathcal M_{d^\star_{\mathrm{disc}}}$ into a
+sum of four sector functionals plus a constant.
+
+The $U(1)$ block is exactly the already-defined electromagnetic effective action, so
+\[
+\partial_\alpha\Gamma_{U(1)}(\alpha)=F_{U(1)}(\alpha).
+\]
+The geometric block is the reduced spectral Einstein functional, hence
+\[
+\partial_{\chigeo}\Gamma_{\mathrm{grav}}(\chigeo)=\mathcal R_{\mathrm{grav}}.
+\]
+The transport block is the logarithmic resolvent determinant of the exact $C_6$ transfer
+denominator, so
+\[
+\partial_\delta\Gamma_{\mathrm{tr}}(\delta_{\mathrm{ph}})
+=
+P_{\mathrm{tr}}(\delta_{\mathrm{ph}}).
+\]
+Finally the vacuum block is by definition the admissible vacuum effective action, so
+\[
+\delta_\rho\Gamma_{\mathrm{vac}}(\rho_{\mathrm{vac}})=0
+\]
+is exactly its Euler--Lagrange equation. Thus the four continuous closure equations are the
+Euler--Lagrange equations of one projected modular free energy.
+\end{proof}
+
+\begin{definition}[Sector solution sets]
+\label{def:intrinsic-closure-map}
+\label{def:core-closure-functional}
+\label{def:sector-solution-sets}
+Define
+\[
+Z_{\mathrm{disc}}:=\mathfrak D_{\mathrm{disc}}(\Tker^\partial),
+\qquad
+Z_{U(1)}:=\{\alpha:\ F_{U(1)}(\alpha)=0\},
+\qquad
+Z_{\mathrm{grav}}:=\{\chigeo:\ \mathcal R_{\mathrm{grav}}(\chigeo)=0\},
+\]
+\[
+Z_{\mathrm{tr}}:=\{\delta_{\mathrm{ph}}:\ P_{\mathrm{tr}}(\delta_{\mathrm{ph}})=0\},
+\qquad
+Z_{\mathrm{vac}}:=\{\rho_{\mathrm{vac}}:\ \delta_\rho\Gamma_{\mathrm{vac}}(\rho_{\mathrm{vac}})=0\}.
+\]
+Let
+\[
+\mathcal I_0
+:=
+(\Padm,\iC,[u_\Sigma],E_3\oplus E_2,Y,\cthree)
+\]
+be the upstream invariant tuple fixed before the continuous closure step.
+\end{definition}
+
+\begin{theorem}[Intrinsic branch as a singleton fiber product]
+\label{thm:intrinsic-closed-branch}
+\label{thm:observation-closure}
+\label{thm:singleton-fiber-product-branch}
+For every admissible boundary primitive kernel $\Tker^\partial$, the intrinsic closed branch is the
+singleton fiber product
+\[
+\mathcal Z_{\mathrm{cl}}
+\cong
+Z_{\mathrm{disc}}
+\times_{\mathcal I_0}
+Z_{U(1)}
+\times_{\mathcal I_0}
+Z_{\mathrm{grav}}
+\times_{\mathcal I_0}
+Z_{\mathrm{tr}}
+\times_{\mathcal I_0}
+Z_{\mathrm{vac}},
+\]
+and therefore
+\[
+\mathcal Z_{\mathrm{cl}}=\{x_{\mathrm{cl}}^\star\}.
+\]
+No Jacobian on mixed discrete and continuous variables is needed.
+\end{theorem}
+
+\begin{proof}
+By \Cref{thm:joint-discrete-admissible-sector},
+\[
+Z_{\mathrm{disc}}=\{d^\star_{\mathrm{disc}}\}.
+\]
+By the exact electromagnetic theorem,
+\[
+Z_{U(1)}=\{\alpha_\star\}.
+\]
+By coercivity and strict convexity of the reduced Einstein functional,
+\[
+Z_{\mathrm{grav}}=\{\chigeo^\star\}.
+\]
+By the algebraic transport theorem together with the word-length lock,
+\[
+Z_{\mathrm{tr}}=\{\delta_{\mathrm{ph}}^\star\}.
+\]
+By the positive-transfer, thermodynamic-limit, and gap-stability theorems,
+\[
+Z_{\mathrm{vac}}=\{\rho_{\mathrm{vac}}^\star\}.
+\]
+
+Each singleton carries its compatibility map to the same upstream invariant tuple $\mathcal I_0$.
+That common tuple is already fixed earlier: the discrete theorem fixes $E_3\oplus E_2$ and $Y$,
+the derived selector theorem fixes $\Padm$, and the seam theorem fixes $[u_\Sigma]$ and $\cthree$.
+Hence all compatibility maps land at the same point of $\mathcal I_0$. The fiber product of
+singleton sets over one common point is again a singleton. Therefore
+\[
+\mathcal Z_{\mathrm{cl}}=\{x_{\mathrm{cl}}^\star\}.
+\]
+\end{proof}
+
+\begin{theorem}[Internal analytic closure as a corollary of primitive completion]
+\label{thm:internal-analytic-closure}
+\label{thm:internal-analytic-closure-hard}
+For every admissible one-sided boundary datum, the analytic closure blocks needed for rigid
+reconstruction hold internally on the unique intrinsic branch determined by
+\Cref{thm:joint-discrete-admissible-sector,thm:continuous-closure-from-master-functional,thm:singleton-fiber-product-branch}.
+\end{theorem}
+
+\begin{proof}
+The Calder\'on and APS block is already fixed upstream by the primitive boundary theorem chain.
+The family, determinant, and effective strong-angle blocks are fixed by the joint discrete theorem.
+The electromagnetic, geometric, transport, and vacuum blocks are fixed by the continuous master
+functional together with the already-proved positivity, gap, and thermodynamic-limit theorems.
+Because the intrinsic branch is a singleton by \Cref{thm:singleton-fiber-product-branch}, all
+analytic closure blocks hold on one and the same branch, internally and without any extra closure
+package.
+\end{proof}
+
+\begin{theorem}[Canonical rigid reconstruction and essential injectivity on the rigid image]
+\label{thm:rigid-reconstruction-core}
+\label{thm:canonical-rigid-reconstruction-essential-injective}
+Let $\Tbound$ be an admissible one-sided boundary datum and let $\Tker^\partial$ be its boundary
+primitive kernel. Then the rigid tuple
+\[
+\mathfrak C(\Tker^\partial)
+:=
+\bigl(
+E_3\oplus E_2,\,
+Y,\,
+S^+,\,
+X_f^\circ,\,
+[\nabla_F^\star],\,
+\Phi^\star,\,
+\chigeo^\star,\,
+\delta_{\mathrm{ph}}^\star,\,
+\rho_{\mathrm{vac}}^\star,\,
+\theta_{\mathrm{eff}}=0,\,
+U_\Sigma^\star,\,
+\Lambda_{\mathrm{IR}}^\star
+\bigr)
+\]
+is uniquely determined. In particular the reconstruction functor is essentially injective on
+objects on its rigid image, and every two rigid realizations coming from the same boundary datum are
+uniquely unitarily isomorphic.
+\end{theorem}
+
+\begin{proof}
+The joint discrete theorem fixes $E_3\oplus E_2$, $Y$, $S^+$, $X_f^\circ$, $[\nabla_F^\star]$, the
+determinant class, and $\theta_{\mathrm{eff}}=0$. The seam theorem fixes $[u_\Sigma]$ and
+$\cthree$. The continuous master-functional theorem fixes $\alpha_\star$, $\chigeo^\star$,
+$\delta_{\mathrm{ph}}^\star$, and $\rho_{\mathrm{vac}}^\star$. The downstream definitions of
+$\Phi^\star$, $U_\Sigma^\star$, and $\Lambda_{\mathrm{IR}}^\star$ are then evaluated on that unique
+branch. Hence every displayed entry of $\mathfrak C(\Tker^\partial)$ is uniquely determined.
+
+If two rigid realizations arise from the same boundary datum, then all displayed entries agree. The
+carrier, seam, family, determinant, transport, and vacuum blocks each admit only the unique
+unitary intertwiner preserving the already-fixed theorem-level structures, and these intertwiners
+are compatible because they preserve the same upstream invariant tuple
+\[
+(\Padm,\iC,[u_\Sigma],E_3\oplus E_2,Y,\cthree).
+\]
+Their direct sum or tensor product therefore yields one global unitary intertwiner. Thus the rigid
+image is essentially injective on objects, with unique unitary isomorphism on that image.
+\end{proof}

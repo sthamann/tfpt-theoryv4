@@ -1,0 +1,64 @@
+\documentclass[11pt,a4paper]{article}
+\input{tfpt_prediction_common}
+\title{\color{tfptblue}\textbf{TFPT Prediction: Exact Electromagnetic Closure and the Fine-Structure Constant}}
+\author{Stefan Hamann \and Alessandro Rizzo}
+\date{{\normalsize\color{tfptgray}\sffamily Standalone prediction note -- \today}}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note isolates the TFPT prediction for the Thomson-limit fine-structure constant. The row is not a fit: it is the positive root of the carrier-form electromagnetic closure equation with the exact seam generating function.
+\end{abstract}
+
+\PredictionStatus{$\alpha^{-1}(0)=137.0359992168407\ldots$}{Physical observable; exact electromagnetic closure on the minimal seam mode.}{electromagnetic closure $C_{\mathrm{em}}$}{failure of the self-consistent root equation or a stable precision mismatch outside the stated interface uncertainty.}
+
+
+\section{Standalone Minimal Kernel}
+\MinimalKernelBox
+
+The paper is intentionally one-row: it does not reprove the full TFPT series. It states the minimal closed-branch input needed for this prediction, shows the sector map, and gives the direct failure mode. The source status follows the TFPT 4.5 split: boundary and carrier inputs are core, electromagnetic/flavor/metrology inputs are bridge readouts, QFT closure is conditional, and cosmology rows are downstream comparison targets when explicitly marked.
+
+
+\section{Dependency Graph}
+\DependencyDiagram{Electromagnetic closure}{$\alpha^{-1}(0)$}{Carrier budget and exact seam opening enter before the root is evaluated.}{root or residual failure}
+
+\section{Derivation}
+
+The electromagnetic row uses the exact seam opening, not the frozen retained seed. With
+\[
+\cthree=\frac{1}{8\pi},\qquad b_1=\frac{41}{10},\qquad
+\sum_{f,j}L_{f,j}^{\mathrm{diag}}+N_\Phi=41,
+\]
+define
+\[
+\phiseam(\alpha)=\frac{1}{6\pi}+\frac{3e^{-2\alpha}}{256\pi^4}
+\left(1-\frac{3e^{-2\alpha}}{256\pi^4}\right)^{-5/4}.
+\]
+The closure function is
+\[
+F_{U(1)}(\alpha)=\alpha^3-2\cthree^3\alpha^2-
+\frac45\cthree^6\left(\sum_{f,j}L_{f,j}^{\mathrm{diag}}+N_\Phi\right)
+\log\bigl(\phiseam(\alpha)^{-1}\bigr).
+\]
+The prediction is the unique positive root
+\[
+F_{U(1)}(\alpha_\star)=0,
+\qquad
+\alpha_\star=0.007297352562209853\ldots,
+\qquad
+\alpha_\star^{-1}=137.0359992168407\ldots .
+\]
+
+
+\section{No-Knobs and Failure Surface}
+\NoKnobsBox{The exact opening $\phiseam(\alpha)$ must remain inside the root equation. Freezing it at $\phiz$ shifts the result by about $5.02\times10^{-4}$ in $\alpha^{-1}$ and is not the benchmark definition.}
+
+\section{Minimal Submission Claim}
+The standalone claim is limited to the displayed target and dependency class. It does not assert
+that every comparison row of the full TFPT ledger has the same proof status. Any update of the
+upstream boundary kernel, carrier theorem, or sector map must be propagated into this prediction
+before the numerical row is distributed.
+
+\PredictionBibliography
+
+\end{document}

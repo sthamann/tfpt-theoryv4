@@ -1,0 +1,59 @@
+\documentclass[11pt,a4paper]{article}
+\input{tfpt_prediction_common}
+\title{\color{tfptblue}\textbf{TFPT Prediction: Cabibbo Angle from the Retained Flavor Branch}}
+\author{Stefan Hamann \and Alessandro Rizzo}
+\date{{\normalsize\color{tfptgray}\sffamily Standalone prediction note -- \today}}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note isolates the Cabibbo-angle prediction as a flavor-sector readout. The UV seed identity is retained as an exact shadow, but the physical observable is assigned to the flavor closure map.
+\end{abstract}
+
+\PredictionStatus{$\lambda_C=0.22438$}{Physical observable; flavor readout from hard holonomy closure.}{flavor readout $F_{\mathrm{fl}}$}{stable CKM global-fit mismatch after the declared comparison map.}
+
+
+\section{Standalone Minimal Kernel}
+\MinimalKernelBox
+
+The paper is intentionally one-row: it does not reprove the full TFPT series. It states the minimal closed-branch input needed for this prediction, shows the sector map, and gives the direct failure mode. The source status follows the TFPT 4.5 split: boundary and carrier inputs are core, electromagnetic/flavor/metrology inputs are bridge readouts, QFT closure is conditional, and cosmology rows are downstream comparison targets when explicitly marked.
+
+
+\section{Dependency Graph}
+\DependencyDiagram{Flavor transport}{$\lambda_C$}{The retained seed appears only as UV bookkeeping; the physical row factors through flavor closure.}{CKM mismatch}
+
+\section{Derivation}
+
+On the retained UV bookkeeping layer the seed obeys
+\[
+\lambda_C=\sqrt{\phiz(1-\phiz)},
+\qquad
+\phiz=\frac{1}{6\pi}+\frac{3}{256\pi^4}.
+\]
+Equivalently, the Cabibbo inversion is
+\[
+\phiz=\frac{1-\sqrt{1-4\lambda_C^2}}{2}.
+\]
+In the physical observable layer this identity is not treated as an independent seed quartet. The row factors through the flavor map
+\[
+\Tstar\longmapsto F_{\mathrm{fl}}(\Tstar)\longmapsto s_{12}(V_{\mathrm{CKM}}^\star)=\lambda_C.
+\]
+The numerical target used in the prediction ledger is
+\[
+\lambda_C=0.22438,
+\]
+compared to the CKM physical angle representative.
+
+
+\section{No-Knobs and Failure Surface}
+\NoKnobsBox{Do not count $\lambda_C$, $\beta_{\mathrm{rad}}$, $\Omega_b$, and $\theta_{13}$ as one operational class. $\lambda_C$ is the flavor member of the sectorized seed shadow.}
+
+\section{Minimal Submission Claim}
+The standalone claim is limited to the displayed target and dependency class. It does not assert
+that every comparison row of the full TFPT ledger has the same proof status. Any update of the
+upstream boundary kernel, carrier theorem, or sector map must be propagated into this prediction
+before the numerical row is distributed.
+
+\PredictionBibliography
+
+\end{document}

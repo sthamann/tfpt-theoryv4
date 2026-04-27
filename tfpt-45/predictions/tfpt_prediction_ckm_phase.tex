@@ -1,0 +1,53 @@
+\documentclass[11pt,a4paper]{article}
+\input{tfpt_prediction_common}
+\title{\color{tfptblue}\textbf{TFPT Prediction: CKM Phase from Exact Holonomy Transport}}
+\author{Stefan Hamann \and Alessandro Rizzo}
+\date{{\normalsize\color{tfptgray}\sffamily Standalone prediction note -- \today}}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note isolates the CKM-phase row as a flavor-comparison quantity produced by exact holonomy transport on the rigid branch.
+\end{abstract}
+
+\PredictionStatus{$\delta_{\mathrm{CKM}}=1.198\,\mathrm{rad}$}{Comparison quantity; exact phase/flavor readout.}{flavor readout $F_{\mathrm{fl}}$}{stable global-flavor-fit exclusion at $\ge3\sigma$.}
+
+
+\section{Standalone Minimal Kernel}
+\MinimalKernelBox
+
+The paper is intentionally one-row: it does not reprove the full TFPT series. It states the minimal closed-branch input needed for this prediction, shows the sector map, and gives the direct failure mode. The source status follows the TFPT 4.5 split: boundary and carrier inputs are core, electromagnetic/flavor/metrology inputs are bridge readouts, QFT closure is conditional, and cosmology rows are downstream comparison targets when explicitly marked.
+
+
+\section{Dependency Graph}
+\DependencyDiagram{Flavor holonomy}{$\delta_{\mathrm{CKM}}$}{Read from exact holonomy phase rather than a free CP dial.}{global-fit exclusion}
+
+\section{Derivation}
+
+The rigid transport branch fixes the CKM matrix through the hard holonomy closure
+\[
+V_{\mathrm{CKM}}=U_{u,L}^{\dagger}U_{d,L}.
+\]
+The phase row is therefore a flavor readout
+\[
+\Tstar\longmapsto F_{\mathrm{fl}}(\Tstar)\longmapsto \delta_{\mathrm{CKM}}.
+\]
+The operational prediction matrix records
+\[
+\delta_{\mathrm{CKM}}=1.198\,\mathrm{rad}.
+\]
+This is a comparison quantity tied to the exact phase-lattice / holonomy row, not an independently adjustable CP phase.
+
+
+\section{No-Knobs and Failure Surface}
+\NoKnobsBox{The row is pressured by global flavor fits. A stable exclusion at $\ge3\sigma$ would break the current flavor bridge.}
+
+\section{Minimal Submission Claim}
+The standalone claim is limited to the displayed target and dependency class. It does not assert
+that every comparison row of the full TFPT ledger has the same proof status. Any update of the
+upstream boundary kernel, carrier theorem, or sector map must be propagated into this prediction
+before the numerical row is distributed.
+
+\PredictionBibliography
+
+\end{document}

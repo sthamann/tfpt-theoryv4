@@ -1,0 +1,258 @@
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[sc]{mathpazo}
+\linespread{1.04}
+\usepackage[scaled=0.86]{helvet}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage[hidelinks]{hyperref}
+\usepackage[nameinlink,noabbrev]{cleveref}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{siunitx}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+\usepackage{thmtools}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds,matrix,decorations.pathmorphing}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{bm}
+\usepackage{csquotes}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+
+% ── Color palette ──
+\definecolor{tfptblue}{RGB}{35,60,120}
+\definecolor{tfptorange}{RGB}{190,100,20}
+\definecolor{tfptgreen}{RGB}{40,110,60}
+\definecolor{tfptgray}{RGB}{90,90,95}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=tfptblue!80!black,
+    citecolor=tfptblue!70!black,
+    urlcolor=tfptblue!60!black,
+}
+
+% ── Caption styling ──
+\captionsetup{
+    font={small,sf},
+    labelfont={bf,color=tfptgray},
+    labelsep=period,
+    margin=1.5em,
+    skip=6pt,
+}
+
+% ── Section heading styling ──
+\titleformat{\section}
+    {\Large\bfseries\color{tfptblue}}{\thesection}{0.8em}{}
+\titleformat{\subsection}
+    {\large\bfseries\color{tfptblue!85!black}}{\thesubsection}{0.7em}{}
+\titleformat{\subsubsection}
+    {\normalsize\bfseries\color{tfptblue!70!black}}{\thesubsubsection}{0.6em}{}
+\titlespacing*{\section}{0pt}{1.8ex plus 0.6ex minus 0.3ex}{0.9ex plus 0.2ex}
+\titlespacing*{\subsection}{0pt}{1.4ex plus 0.4ex minus 0.2ex}{0.6ex plus 0.1ex}
+
+% ── Running headers ──
+\pagestyle{fancy}
+\setlength{\headheight}{22pt}
+\fancyhf{}
+\fancyhead[L]{\small\itshape\color{tfptgray} TFPT 4.5: Boundary Polarization and Closed-Branch Dynamics}
+\fancyhead[R]{\small\color{tfptgray}\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{tfptblue!30}\leaders\hrule height \headrulewidth\hfill}}
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[C]{\small\color{tfptgray}\thepage}\renewcommand{\headrulewidth}{0pt}}
+
+% ── tcolorbox global defaults ──
+\tcbset{
+    enhanced,
+    boxrule=0.6pt,
+    arc=2.5pt,
+    left=6pt, right=6pt, top=5pt, bottom=5pt,
+    fonttitle=\bfseries\sffamily\small,
+    coltitle=white,
+    toptitle=2pt, bottomtitle=2pt,
+    shadow={0.8mm}{-0.6mm}{0mm}{black!12},
+}
+
+\sisetup{
+    detect-all,
+    round-mode = none,
+    exponent-mode = input,
+    exponent-product = \times,
+    group-separator = {\,},
+    group-minimum-digits = 4
+}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{principle}[theorem]{Principle}
+\newtheorem{construction}[theorem]{Construction}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{appendixstep}[theorem]{Appendix Step}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+\crefformat{thmt@dummyctr}{Remark}
+\Crefformat{thmt@dummyctr}{Remark}
+\crefname{thmt@dummyctr}{remark}{remarks}
+\Crefname{thmt@dummyctr}{Remark}{Remarks}
+\crefname{conjecture}{conjecture}{conjectures}
+\Crefname{conjecture}{Conjecture}{Conjectures}
+\crefname{definition}{definition}{definitions}
+\Crefname{definition}{Definition}{Definitions}
+
+\makeatletter
+\def\theHtheorem{\thesection.\thetheorem}
+\def\theHcorollary{\theHtheorem}
+\def\theHlemma{\theHtheorem}
+\def\theHdefinition{\theHtheorem}
+\def\theHconjecture{\theHtheorem}
+\def\theHproposition{\theHtheorem}
+\def\theHassumption{\theHtheorem}
+\def\theHprinciple{\theHtheorem}
+\def\theHconstruction{\theHtheorem}
+\def\theHclaim{\theHtheorem}
+\def\theHappendixstep{\theHtheorem}
+\makeatother
+
+\DeclareMathOperator{\tr}{Tr}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\SF}{SF}
+\DeclareMathOperator{\Ind}{Ind}
+\DeclareMathOperator{\argmin}{arg\,min}
+
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+\newcommand{\Seam}{\Sigma}
+\newcommand{\inv}{\iota}
+\newcommand{\taudbl}{\tau_{\mathrm{dbl}}}
+\newcommand{\iC}{\iota_{\mathrm C}}
+\newcommand{\epscar}{\varepsilon_{\mathrm{car}}}
+\newcommand{\Xbulk}{X_{\mathrm{bulk}}}
+\newcommand{\Mpl}{\bar M_{\mathrm{Pl}}}
+\newcommand{\Mplunred}{M_{\mathrm{Pl}}}
+\newcommand{\cthree}{c_3}
+\newcommand{\atheta}{a_\theta}
+\newcommand{\phibase}{\varphi_{\mathrm{base}}}
+\newcommand{\phiz}{\varphi_0^{\mathrm{ret}}}
+\newcommand{\phiseam}{\varphi_{\Sigma}}
+\newcommand{\deltatop}{\delta_{\mathrm{top}}}
+\newcommand{\omegaCCEW}{\omega_{\mathrm{CC}}^{(2)}}
+\newcommand{\bone}{b_1}
+\newcommand{\SM}{\mathrm{SM}}
+\newcommand{\QCD}{\mathrm{QCD}}
+\newcommand{\Oadm}{\Omega_{\mathrm{adm}}}
+\newcommand{\Cmin}{\mathcal C_{\min}}
+\newcommand{\Ageom}{\mathcal A_{\mathrm{geom}}}
+\newcommand{\Atrans}{\mathcal A_{\mathrm{trans}}}
+\newcommand{\Arec}{\mathcal A_{\mathrm{rec}}}
+\newcommand{\Aobs}{\mathcal A_{\mathrm{obs}}}
+\newcommand{\Asing}{\mathcal A_{\mathrm{sing}}}
+\newcommand{\Vadm}{\mathcal V_{\mathrm{adm}}}
+\newcommand{\Hrel}{\mathcal H_{\mathrm{rel}}}
+\newcommand{\Hhad}{\mathcal H_{\mathrm{had}}}
+\newcommand{\Hhub}{H_{\mathrm{hub}}}
+\newcommand{\Htot}{\mathcal H_{\mathrm{tot}}}
+\newcommand{\Gammaeff}{\Gamma_{\mathrm{eff}}}
+\newcommand{\lambdaY}{\lambda_Y}
+\newcommand{\Pred}{\operatorname{Pred}}
+\newcommand{\gcar}{g_{\mathrm{car}}}
+\newcommand{\Hint}{\mathcal H_{\mathrm{int}}}
+\newcommand{\Kadm}{K_{\mathrm{adm}}}
+\newcommand{\Tmin}{\mathfrak T_{\mathrm{min}}}
+\newcommand{\Tbound}{\mathfrak T_{\partial}^{\min}}
+\newcommand{\Tprim}{\mathfrak T_{\mathrm{prim}}}
+\newcommand{\chiseed}{\chi_{\mathrm{seed}}}
+\newcommand{\chigeo}{\chi_{\mathrm{geo}}}
+\newcommand{\chigeozero}{\chi_{\mathrm{geo},0}}
+\newcommand{\APSdom}{\mathrm{APS}_{\mathrm{dom}}}
+\newcommand{\APSfam}{\mathrm{APS}_{\mathrm{fam}}}
+\newcommand{\vgeo}{v_{\mathrm{geo}}}
+\newcommand{\vewref}{v_{\mathrm{EW}}^{\mathrm{ref}}}
+\newcommand{\Dstart}{D_{\mathrm{start}}}
+\newcommand{\Tcore}{\mathfrak T_{\mathrm{core}}}
+\newcommand{\Tbridge}{\mathfrak T_{\mathrm{bridge}}}
+\newcommand{\Tker}{\mathfrak T_{\mathrm{ker}}}
+\newcommand{\Tcomp}{\mathfrak T_{\mathrm{comp}}}
+\newcommand{\Padm}{P_{\mathrm{adm}}}
+\newcommand{\Pprim}{P_{\mathrm{prim}}}
+\newcommand{\Tpre}{\mathfrak T_{\mathrm{pre}}}
+\newcommand{\Tstar}{\mathfrak T_{\star}}
+\newcommand{\APSdomprov}{\mathrm{APS}_{\mathrm{dom}}^{\mathrm{prov}}}
+\newcommand{\sigmaQCD}{\sigma_{\mathrm{QCD}}}
+\newcommand{\Cseam}{\mathcal C_{\Sigma}}
+\newcommand{\Ccyc}{\mathfrak C_{\Sigma}}
+\newcommand{\Ffals}{\mathsf F_{\mathrm{fals}}}
+\newcommand{\Rcmp}{\mathcal R_{\mathrm{cmp}}}
+\newcommand{\wspin}{\varpi_{\mathrm{spin}}}
+\newcommand{\PhysAdmOne}{\widehat{\mathrm{PhysAdm}}_1}
+\newcommand{\ObsAdm}{\mathbf{Obs}_{\mathrm{adm}}}
+\newcommand{\GrenTFPT}{\Gamma_{\mathrm{TFPT}}^{\mathrm{ren}}}
+\newcommand{\OphysTFPT}{\mathbf O_{\mathrm{phys}}^{\mathrm{TFPT}}}
+\newcommand{\OschemeTFPT}{\mathbf O_{\mathrm{scheme}}^{\mathrm{TFPT}}}
+\newcommand{\SchGrp}{\mathbf{Sch}}
+\newcommand{\Runiv}{\mathfrak R}
+\newcommand{\Mop}{\mathfrak M}
+\newcommand{\Mphys}{\mathfrak M_{\mathrm{phys}}}
+\newcommand{\Mscheme}{\mathfrak M_{\mathrm{scheme}}}
+\newcommand{\Rren}{\mathfrak R_{\mathrm{ren}}}
+\newcommand{\Bind}{\mathcal B_{\mathrm{ind}}}
+\newcommand{\Clrig}{\mathfrak{Cl}}
+\newcommand{\Runivrig}{\overline{\Runiv}}
+\newcommand{\Seedop}{\mathbf{Seed}^{\mathrm{op}}}
+\newcommand{\Cseed}{\mathfrak C_{\mathrm{seed}}}
+\newcommand{\triv}{\textup{triv}}
+\newcommand{\rankess}{\rank_{\textup{ess}}}
+\newcommand{\red}{\textup{red}}
+
+
+% -- TFPT 4.5 split helpers --
+\newcommand{\sourceDraft}{\texttt{../tfpt-42.tex}}
+\newcommand{\paperstatus}{Draft split from \sourceDraft; theorem wording still inherits the status discipline of the source manuscript.}
+
+\newenvironment{tfptfrontbox}
+{\begin{tcolorbox}[colback=tfptblue!2, colframe=tfptblue!45, breakable,
+    title={Scope box: inputs, contribution, non-claims, audit surface}, colbacktitle=tfptblue!65]}
+{\end{tcolorbox}}
+
+\newenvironment{tfptwarningbox}
+{\begin{tcolorbox}[colback=tfptorange!4, colframe=tfptorange!55, breakable,
+    title={Editorial guardrail}, colbacktitle=tfptorange!75]}
+{\end{tcolorbox}}
+
+\newenvironment{tfptsourcebox}
+{\begin{tcolorbox}[colback=tfptgreen!3, colframe=tfptgreen!50, breakable,
+    title={Source extraction map}, colbacktitle=tfptgreen!65]}
+{\end{tcolorbox}}
+
+\newcommand{\TFPTxref}[1]{\textup{[TFPT cross-reference: \texttt{\detokenize{#1}}]}}
+\newcommand{\TFPTeqref}[1]{\textup{[TFPT equation: \texttt{\detokenize{#1}}]}}
+
+\newenvironment{tfptclaimcontract}
+{\begin{tcolorbox}[colback=tfptblue!2, colframe=tfptblue!50, breakable,
+    title={Claim contract}, colbacktitle=tfptblue!70]\small}
+{\end{tcolorbox}}
+
+\newenvironment{tfptexports}
+{\begin{tcolorbox}[colback=tfptgreen!3, colframe=tfptgreen!50, breakable,
+    title={Exported objects}, colbacktitle=tfptgreen!65]}
+{\end{tcolorbox}}
+

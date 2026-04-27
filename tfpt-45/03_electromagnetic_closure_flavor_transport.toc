@@ -1,0 +1,22 @@
+\contentsline {section}{\numberline {1}Electromagnetic Closure}{2}{section.1}%
+\contentsline {section}{\numberline {2}Transport Pole}{2}{section.2}%
+\contentsline {section}{\numberline {3}Retained Seed Decoder}{2}{section.3}%
+\contentsline {section}{\numberline {4}Flavor Transport}{3}{section.4}%
+\contentsline {section}{\numberline {5}No-Knobs Audit}{3}{section.5}%
+\contentsline {section}{\numberline {6}Alternative Discrete Worlds}{3}{section.6}%
+\contentsline {section}{\numberline {7}Main Technical Development}{4}{section.7}%
+\contentsline {section}{\numberline {8}Kernel numerics and electromagnetic closure}{4}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Carrier form of the electromagnetic closure}{4}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Kernel output package}{7}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}UV seed-shadow identities and the Cabibbo inversion}{8}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Carrier comparison of alternative discrete worlds}{11}{subsection.8.4}%
+\contentsline {section}{\numberline {9}Closure architecture B: Yukawas, masses, flavor, hadronic admissibility, and the strong-CP sector}{12}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Discrete phase operator and transport grammar}{12}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Regularized Yukawa kernels and path-length masses}{13}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}CKM and PMNS closure}{29}{subsection.9.3}%
+\contentsline {section}{\numberline {10}Appendix-level empirical readout}{31}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Operational prediction set}{32}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Basis factorization of readout rows}{33}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Compact prediction ledger}{33}{subsection.10.3}%
+\contentsline {section}{\numberline {11}Source Extraction Map}{33}{section.11}%
+\contentsline {section}{\numberline {12}Not Used Here}{34}{section.12}%

@@ -1,0 +1,70 @@
+\contentsline {section}{\numberline {1}Purpose}{3}{section.1}%
+\contentsline {section}{\numberline {2}Core Convention Blocks}{3}{section.2}%
+\contentsline {section}{\numberline {3}Analytic Backend}{3}{section.3}%
+\contentsline {section}{\numberline {4}Comparison Backend}{4}{section.4}%
+\contentsline {section}{\numberline {5}Downstream and Optional Continuations}{4}{section.5}%
+\contentsline {section}{\numberline {6}Main Technical Development}{5}{section.6}%
+\contentsline {section}{\numberline {7}Downstream closure modules from the closed branch}{5}{section.7}%
+\contentsline {subsection}{\numberline {7.1}[P] Stationary horizons, modular thermality, and compact objects}{5}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}[P] Primordial perturbation closure and CMB transfer}{6}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}[P] Late time dark sector and structure growth}{14}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}[P] Pole masses, Higgs readout, and full flavor output}{15}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}[P] Admissible code subspace, entanglement, and pointer dynamics}{16}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}[P] Topological transient channels and astrophysical bursts}{16}{subsection.7.6}%
+\contentsline {section}{\numberline {8}Appendix-level empirical readout}{16}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Operational prediction set}{17}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Basis factorization of readout rows}{18}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Compact prediction ledger}{19}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Empirical readout and kill-test logic}{19}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}Residual readout and interface refinements}{19}{subsection.8.5}%
+\contentsline {section}{\numberline {9}Technical conventions and data layers}{20}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Relative objects}{20}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Layered datum and admissibility}{20}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Symbol guide}{21}{subsection.9.3}%
+\contentsline {section}{\numberline {10}Constants atlas and downstream scale grammar}{21}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Global rotation angle and constants atlas}{21}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}E$_8$ as downstream scale grammar}{22}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Full stage atlas}{22}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.4}Compression identities on the minimal branch}{23}{subsection.10.4}%
+\contentsline {subsection}{\numberline {10.5}Optional arithmetic continuations}{24}{subsection.10.5}%
+\contentsline {subsection}{\numberline {10.6}Conditional minimal-parameter picture}{26}{subsection.10.6}%
+\contentsline {subsection}{\numberline {10.7}Infrared continuations of the seam transfer}{26}{subsection.10.7}%
+\contentsline {section}{\numberline {11}Relative APS and superconnection setup}{27}{section.11}%
+\contentsline {section}{\numberline {12}Relative reflection positivity with fermions}{27}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Normalized quotient form}{27}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2}Bosonic and fermionic positivity on $P_{\mathrm {adm}}$}{28}{subsection.12.2}%
+\contentsline {section}{\numberline {13}Admissible OS reconstruction and asymptotic scattering}{28}{section.13}%
+\contentsline {subsection}{\numberline {13.1}Tempered admissible Schwinger families}{28}{subsection.13.1}%
+\contentsline {subsection}{\numberline {13.2}OS and CAR reconstruction on $P_{\mathrm {adm}}$}{29}{subsection.13.2}%
+\contentsline {subsection}{\numberline {13.3}Stable massive Haag--Ruelle and LSZ closure}{29}{subsection.13.3}%
+\contentsline {subsection}{\numberline {13.4}Dressed massless interface in the low-curvature region}{30}{subsection.13.4}%
+\contentsline {section}{\numberline {14}FRW reduction and cosmology interface proofs}{30}{section.14}%
+\contentsline {section}{\numberline {15}Yukawa kernels and positivity lemmas}{31}{section.15}%
+\contentsline {subsection}{\numberline {15.1}Optional strong-coupling sharpening}{32}{subsection.15.1}%
+\contentsline {section}{\numberline {16}Information-theoretic and cut-and-project readings}{32}{section.16}%
+\contentsline {subsection}{\numberline {16.1}$41$-chain overdetermination of the canonical branch}{32}{subsection.16.1}%
+\contentsline {subsection}{\numberline {16.2}Seed variance and surprisal readings}{32}{subsection.16.2}%
+\contentsline {subsection}{\numberline {16.3}Exact parity-code and information-compression reading}{33}{subsection.16.3}%
+\contentsline {subsection}{\numberline {16.4}Cut-and-project model-set realization}{34}{subsection.16.4}%
+\contentsline {section}{\numberline {17}Record algebra and pointer dynamics}{34}{section.17}%
+\contentsline {subsection}{\numberline {17.1}Minimal admissible vacuum}{35}{subsection.17.1}%
+\contentsline {subsection}{\numberline {17.2}Record growth principle}{35}{subsection.17.2}%
+\contentsline {subsection}{\numberline {17.3}Observer algebra and Born-type evaluation}{35}{subsection.17.3}%
+\contentsline {section}{\numberline {18}Horizons, modular flow, and black hole thermality}{35}{section.18}%
+\contentsline {subsection}{\numberline {18.1}Split inclusion horizon approximation}{36}{subsection.18.1}%
+\contentsline {section}{\numberline {19}Prediction semantics and transient event channels}{36}{section.19}%
+\contentsline {subsection}{\numberline {19.1}Prediction semantics}{36}{subsection.19.1}%
+\contentsline {subsection}{\numberline {19.2}Transient event status}{36}{subsection.19.2}%
+\contentsline {section}{\numberline {20}Closed theoretical outputs and empirical comparison surface}{36}{section.20}%
+\contentsline {subsection}{\numberline {20.1}Table 1: Closed theoretical outputs}{37}{subsection.20.1}%
+\contentsline {subsection}{\numberline {20.2}Table 2: Empirical comparison rows}{38}{subsection.20.2}%
+\contentsline {subsection}{\numberline {20.3}Empirical comparison surface}{38}{subsection.20.3}%
+\contentsline {section}{\numberline {21}Extended benchmarks}{39}{section.21}%
+\contentsline {subsection}{\numberline {21.1}Operational prediction matrix}{39}{subsection.21.1}%
+\contentsline {subsection}{\numberline {21.2}Target and kill-test rows}{40}{subsection.21.2}%
+\contentsline {subsection}{\numberline {21.3}Axion interface}{40}{subsection.21.3}%
+\contentsline {subsection}{\numberline {21.4}Supplementary UV asymptotic mass-source rows}{41}{subsection.21.4}%
+\contentsline {subsection}{\numberline {21.5}Extended comparison ledger}{42}{subsection.21.5}%
+\contentsline {subsection}{\numberline {21.6}Novelty boundary and literature positioning}{42}{subsection.21.6}%
+\contentsline {section}{\numberline {22}Source Extraction Map}{44}{section.22}%
+\contentsline {section}{\numberline {23}Promotion Rule}{44}{section.23}%

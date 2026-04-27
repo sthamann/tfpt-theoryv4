@@ -1,0 +1,146 @@
+\documentclass[11pt]{article}
+% Compile with LuaLaTeX or XeLaTeX for full Unicode support.
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{fvextra}
+\DefineVerbatimEnvironment{MyVerbatim}{Verbatim}{breaklines=true,breakanywhere=true,fontsize=\small}
+
+\title{Geometric Self Consistency on the Orientable Double Cover}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\noindent\textbf{Source PDF:} ImprovedCubic.pdf
+
+\bigskip
+\noindent\textbf{Note:} This \LaTeX\ file contains a best effort text extraction of the PDF.
+Line breaks and pagination markers are preserved in a verbatim block.
+
+\bigskip
+\begin{MyVerbatim}
+===== Page 1 of 2 =====
+Geometric Self Consistency on the Orientable Double Cover
+Independent Note
+September 18, 2025
+1 Geometric self consistency on the orientable double cover
+1.1 Starting point and notation
+We use the invariants
+1 1 3 41
+c = , ϕ = , δ = = 48c4, b = .
+3 8π tree 6π top 256π4 3 1 10
+The cubic fixed point equation (CFE) is written in the normal form
+b 1
+α3 Aα2 Ac2κ(ϕ ) = 0, A = 2c3, κ(ϕ ) = 1 ln , (1)
+− − 3 0 3 0 2π ϕ
+0
+󰀓 󰀔
+with the baseline geometric fixpoint ϕold = ϕ +δ .
+0 tree top
+1.2 Backreaction on the double cover: derivation
+The same electromagnetic energy that produces the logarithm in κ(ϕ ) couples back to the
+0
+geometry that defines ϕ . On the orientable double cover M there are two identical boundary
+0
+contributions. Consider the stationary total action S [α,ϕ] = S [ϕ]+U [α,ϕ], where we
+tot geom EM
+retain the ϕ dependent parts, 󰁩
+2
+S [ϕ] = 6πϕ = 12πϕ, U [α,ϕ] = const ακ(ϕ),
+geom EM
+·
+s=1
+󰁛
+with κ as in (1). Stationarity requires ∂ S = 0 and ∂ S = 0. The first condition reproduces
+α tot ϕ tot
+(1). Variation with respect to ϕ gives
+∂S ∂κ ∂κ b 1
+tot 1
+0 = = 12π + const α , = . (2)
+∂ϕ · ∂ϕ ∂ϕ 2π ϕ
+Linearisingaroundthebaselinevalueϕold = ϕ +δ andwritingϕ = ϕold+∆ϕ,theresponse
+0 tree top 0 0
+∆ϕ is proportional to α. By symmetry and additivity on the two sheets the topological addend
+is reduced by αδ on each sheet. Hence
+top
+ϕnew(α) = ϕ +δ (1 2α) (3)
+0 tree top −
+with no new free number. The factor two is fixed by the double cover.
+Remark. Equation (3) is the minimal allowed correction built from the same ingredients that
+define the CFE. It is the linear first order response in α. Higher geometric corrections with
+unambiguous normalisation only shift the numerical effect slightly.
+1
+
+===== Page 2 of 2 =====
+1.3 Implicit solution of the CFE with ϕ (α)
+0
+Insert (3) into (1) and solve implicitly for α. Numerically we obtain
+α o−ld 1 = 137.036501464885822..., α n−e 1 w = 137.035990390121546...,
+which lowers the deviation to CODATA 2022 from +3.665372 parts per million to 0.064121
+−
+parts per million. The associated geometric shift is ∆ϕ = 2αδ 1.7558 10 6, about
+0 top −
+− ≈ − ×
+thirty three parts per million relative on ϕ .
+0
+The sensitivity from the implicit derivative of the cubic,
+dα
+=
+Ac2
+3 2
+b
+π
+1
+ϕ
+1
+0 ,
+dϕ − 3α2 2Aα
+0
+−
+evaluated at the baseline, reproduces the observed shift to better than a few parts in ten to the
+eight.
+1.4 Physical background
+1. Same cause, same effect. Thefieldenergythatdrivesthelogarithminκ(ϕ )couplesto
+0
+the same geometry that sets ϕ . Self consistency therefore requires a response ∆ϕ α.
+0 0
+∝
+2. Double cover enforces a factor two. On M the two boundary sheets contribute
+equally. The electromagnetic response adds up, which yields the factor two in (3).
+󰁩
+3. Parsimony. Neither c nor ϕ is altered, and δ remains a fixed topological invariant.
+3 tree top
+Only its effective strength is slightly reduced by field energy on the two sheets.
+4. Side effects are tiny. Cosmic birefringence β = ϕ /(4π) changes by about eight micro
+th 0
+degrees, well below present uncertainties.
+1.5 Old versus new
+Aspect Old: ϕ = ϕ +δ New: ϕ = ϕ +δ (1 2α)
+0 tree top 0 tree top
+−
+Extra number no no
+Geometric structure constant double cover acts
+Form of κ κ(ϕ ) κ(ϕ (α))
+0 0
+Solution type direct implicit fixed point
+α 1 137.0365014649 137.0359903901
+−
+Deviation to CODATA 2022 +3.665372 ppm 0.064121 ppm
+−
+Physical plausibility missing backreaction closed self consistency
+Impact on other tests unchanged only micro degree in birefringence
+1.6 Conclusion
+The form ϕ (α) = ϕ +δ (1 2α) closes the only open loop in the normal form. It is math-
+0 tree top
+−
+ematically minimal, physically required by the same energy that sources κ, and fully justified
+by the orientable double cover. The resulting improvement in the prediction is already below
+one tenth of one part per million.
+2
+
+\end{MyVerbatim}
+\end{document}

@@ -1,0 +1,104 @@
+\input{../tfpt45-common}
+
+\newcommand{\PredictionStatus}[4]{%
+\begin{tcolorbox}[colback=tfptblue!2, colframe=tfptblue!45, breakable,
+    title={Prediction scope and audit}, colbacktitle=tfptblue!65]
+\textbf{Target.} #1
+
+\textbf{Status.} #2
+
+\textbf{Dependency class.} #3
+
+\textbf{Kill or pressure test.} #4
+\end{tcolorbox}}
+
+\newcommand{\MinimalKernelBox}{%
+\begin{tcolorbox}[colback=tfptgreen!3, colframe=tfptgreen!50, breakable,
+    title={Minimal TFPT kernel used in this prediction}, colbacktitle=tfptgreen!65]
+The standalone input package is the boundary-polarized closed branch
+\[
+\mathfrak S_{\min}\Rightarrow\mathcal B_{\min}\Rightarrow\Tbound
+\Rightarrow(\taudbl,\iC,\Pprim,[u_\Sigma],\cthree)
+\Rightarrow d^\star_{\mathrm{disc}}\Rightarrow \Padm\Rightarrow\Tstar.
+\]
+The prediction uses only the sector map named in its audit box. Numerical comparison conventions
+are not theorem inputs; they enter only at the final interface row.
+\end{tcolorbox}}
+
+\newcommand{\DependencyDiagram}[4]{%
+\begin{center}
+\begin{tikzpicture}[
+    node distance=11mm,
+    box/.style={rectangle, rounded corners=2pt, draw=tfptblue!65, fill=tfptblue!5,
+        align=center, text width=3.1cm, inner sep=5pt, font=\small\sffamily},
+    predout/.style={rectangle, rounded corners=2pt, draw=tfptorange!70!black, fill=tfptorange!8,
+        align=center, text width=3.4cm, inner sep=5pt, font=\small\sffamily},
+    arr/.style={-{Latex[length=2.3mm]}, thick, draw=tfptgray!85}
+]
+\node[box] (kernel) {Boundary primitive\\kernel};
+\node[box, right=of kernel] (branch) {Rigid closed\\branch $\Tstar$};
+\node[box, right=of branch] (sector) {#1};
+\node[predout, right=of sector] (target) {#2};
+\draw[arr] (kernel) -- (branch);
+\draw[arr] (branch) -- (sector);
+\draw[arr] (sector) -- (target);
+\node[below=6mm of branch, text width=9.5cm, align=center, font=\footnotesize\sffamily\color{tfptgray}]
+{#3};
+\node[below=4mm of target, text width=3.4cm, align=center, font=\footnotesize\sffamily\color{tfptorange!70!black}]
+{#4};
+\end{tikzpicture}
+\end{center}}
+
+\newcommand{\NoKnobsBox}[1]{%
+\begin{tcolorbox}[colback=tfptorange!4, colframe=tfptorange!55, breakable,
+    title={No-knobs audit}, colbacktitle=tfptorange!75]
+#1
+\end{tcolorbox}}
+
+\newcommand{\PredictionBibliography}{%
+\begin{thebibliography}{99}
+\bibitem{aps1975}
+M.~F.~Atiyah, V.~K.~Patodi, and I.~M.~Singer,
+\newblock \emph{Spectral asymmetry and Riemannian geometry. I},
+\newblock Math. Proc. Cambridge Philos. Soc. \textbf{77} (1975), 43--69.
+
+\bibitem{chamseddineConnes1997}
+A.~H.~Chamseddine and A.~Connes,
+\newblock \emph{The spectral action principle},
+\newblock Commun. Math. Phys. \textbf{186} (1997), 731--750.
+
+\bibitem{codata2022}
+P.~J.~Mohr, D.~B.~Newell, and B.~N.~Taylor,
+\newblock \emph{CODATA recommended values of the fundamental physical constants: 2022 update},
+\newblock NIST / CODATA reference set, accessed March 2026.
+
+\bibitem{pdg2025}
+S.~Navas et al.\ (Particle Data Group),
+\newblock \emph{Review of Particle Physics},
+\newblock Phys.\ Rev.\ D \textbf{110} (2024), 030001; 2025 online update.
+
+\bibitem{nufit2025}
+NuFIT Collaboration,
+\newblock \emph{NuFIT global analysis of neutrino oscillation data},
+\newblock website snapshot based on data available through November 2025.
+
+\bibitem{planck2018}
+Planck Collaboration,
+\newblock \emph{Planck 2018 results. VI. Cosmological parameters},
+\newblock Astron. Astrophys. \textbf{641} (2020), A6.
+
+\bibitem{minamiKomatsu2020}
+Y.~Minami and E.~Komatsu,
+\newblock \emph{New extraction of the cosmic birefringence from the Planck 2018 polarization data},
+\newblock Phys. Rev. Lett. \textbf{125} (2020), 221301.
+
+\bibitem{na62Moriond2026}
+X.~Chang et al.\ (for the NA62 Collaboration),
+\newblock \emph{New measurement of $K^{+}\to\pi^{+}\nu\bar{\nu}$ branching ratio at the NA62 experiment},
+\newblock arXiv:2604.12649.
+
+\bibitem{koto2024}
+KOTO Collaboration,
+\newblock \emph{Search for the $K_{L}\to\pi^{0}\nu\bar{\nu}$ decay at the J-PARC KOTO experiment},
+\newblock arXiv:2411.11237.
+\end{thebibliography}}

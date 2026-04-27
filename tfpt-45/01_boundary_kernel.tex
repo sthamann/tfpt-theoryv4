@@ -1,0 +1,186 @@
+\documentclass[11pt,a4paper]{article}
+\input{tfpt45-common}
+
+\title{\color{tfptblue}\textbf{Boundary Polarization and the Primitive Kernel of TFPT}}
+\author{Stefan Hamann \and Alessandro Rizzo}
+\date{{\normalsize\color{tfptgray}\sffamily Paper 1 of the TFPT 4.5 series -- \today}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This paper isolates the primitive boundary kernel. Starting from the minimal operational seed and
+the one-sided boundary datum, it reconstructs the exact double, the deck involution, the Calderon
+polarization, the primitive admissibility complex, the primitive seam generator, the winding
+normalization $[u_\Sigma]=1$, and the normalization $\cthree=1/(8\pi)$. No Standard-Model,
+phenomenological, gravitational, cosmological, or E8 claim is made in this paper.
+\end{abstract}
+
+\begin{tfptfrontbox}
+\textbf{Inputs from previous papers.} Only the orientation map of Paper 0, if read first.
+
+\textbf{New theorem contribution.} The primitive kernel
+\[
+\Tker^\partial=(\mathcal A,\mathcal H,D,J,\Gamma,\taudbl,\iC,\Pprim,[u_\Sigma],\cthree)
+\]
+is reconstructed from the one-sided boundary datum rather than inserted later.
+
+\textbf{Not claimed here.} No carrier $3+2$ theorem, no Standard-Model gauge group, no $\alpha$,
+no flavor, no gravity, no cosmology, and no E8 scale grammar.
+
+\textbf{Falsification or audit surface.} The paper fails if the one-sided datum does not determine
+the doubled datum, the Calderon polarization, the primitive Hodge selector, or the normalization of
+the primitive seam class.
+\end{tfptfrontbox}
+
+
+\begin{tfptclaimcontract}
+\textbf{Claim.} $\mathfrak S_{\min}\Rightarrow\mathcal B_{\min}\Rightarrow\Tbound\Rightarrow(\taudbl,\iC,\Pprim,[u_\Sigma],\cthree)$.\par
+\textbf{Inputs.} One-sided admissible boundary datum and stated boundary-elliptic regularity.\par
+\textbf{First assumptions.} Product collar, ellipticity, self-adjoint boundary realization, Calderon uniqueness, orientation normalization.\par
+\textbf{Proof status.} Core theorem target for the primitive kernel.\par
+\textbf{Kill condition.} Failure of the boundary datum to determine $P_C$, $\iC$, $\taudbl$, $\Pprim$, $[u_\Sigma]$, or $\cthree$.\par
+\end{tfptclaimcontract}
+
+\tableofcontents
+
+\section{Claim Map}
+
+The paper proves the first load-bearing arrow of the TFPT series:
+\[
+\mathfrak S_{\min}
+\Rightarrow
+\mathcal B_{\min}
+\Rightarrow
+\Tbound
+\Rightarrow
+(\taudbl,\iC,\Pprim,[u_\Sigma],\cthree).
+\]
+All later discrete, physical, and numerical structures are treated as unavailable here. The purpose
+is to make the boundary primitive kernel auditable on its own.
+
+\begin{tfptwarningbox}
+Minimality is used only as a presentation-invariant defect filtration on essentialized admissible
+bordisms. It is not a preference order over desired physics. In particular, the corner count and
+the later $3+2$ carrier ranks are not free minimization coordinates in this paper.
+\end{tfptwarningbox}
+
+\section{One-Sided Boundary Datum}
+
+The starting object is
+\[
+\Tbound=(\mathcal A_+,\mathcal H_+,D_+,J,\Gamma,B_\Sigma).
+\]
+The paper should keep only the source manuscript material needed to explain one-sided admissible
+data, induced boundary spectral data, and the passage to a doubled closed datum. The proof burden is
+that the primitive boundary structure is not chosen by hand.
+
+\section{Exact Double and Deck Involution}
+
+The exact double reconstructs
+\[
+\Tmin^{\mathrm{cl}}=(\mathcal A,\mathcal H,D,J,\Gamma,\taudbl,\iC)
+\]
+with $\taudbl$ as deck involution and $\iC$ as the involution induced by the Calderon polarization.
+This section carries the analytic interface to Calderon projectors and the primitive relative
+spectral dynamics from the source draft.
+
+\section{Primitive Admissibility Complex}
+
+The primitive selector is introduced before any color, determinant, family, or QFT sector:
+\[
+\Pprim=\Pi_{\ker\Delta_{\mathrm{prim}}}.
+\]
+The section should include the primitive admissibility differential, the primitive Hodge form, and
+the selector upgrade logic only as far as it is needed to prove that a later full selector can
+factor through $\Pprim$.
+
+\section{Primitive Seam Generator}
+
+The primitive seam generator records the two normalizations that are allowed to survive this paper:
+\[
+[u_\Sigma]=1,
+\qquad
+\cthree=\frac{1}{8\pi}.
+\]
+The winding class is a primitive boundary output. It is not yet a family-counting or flavor
+transport input; those interpretations are postponed to Papers 2 and 3.
+
+\section{Boundary Primitive Kernel}
+
+\begin{theorem}[Primitive boundary kernel]
+Under the one-sided boundary hypotheses and the primitive admissibility assumptions stated above,
+the minimal boundary datum canonically determines
+\[
+\Tker^\partial
+=
+(\mathcal A,\mathcal H,D,J,\Gamma,\taudbl,\iC,\Pprim,[u_\Sigma],\cthree).
+\]
+\end{theorem}
+
+\begin{proof}[Proof structure]
+The proof follows the source draft in four steps: operational seed to boundary datum; boundary
+datum to exact double; Calderon polarization to $\iC$ and $\Pprim$; primitive seam normalization to
+$[u_\Sigma]=1$ and $\cthree=1/(8\pi)$. The paper must keep the representation-theoretic carrier
+and all observable readouts out of the argument.
+\end{proof}
+
+\section{Audit Protocol}
+
+\begin{center}
+\begin{tabularx}{\textwidth}{@{}p{0.24\textwidth}Y@{}}
+\toprule
+\textbf{Audit item} & \textbf{Question} \\
+\midrule
+One-sided datum & Is every primitive object reconstructed from $\Tbound$ or from standard boundary spectral data? \\
+Calderon interface & Are regularity and projection hypotheses explicit? \\
+Primitive selector & Does $\Pprim$ precede the later singlet and determinant projections? \\
+Winding class & Is $[u_\Sigma]=1$ fixed before any family or flavor interpretation? \\
+Normalization & Is $\cthree=1/(8\pi)$ derived without empirical input? \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\clearpage
+\section{Main Technical Development}
+
+This section contains the main technical development assigned to this paper by the TFPT 4.5 clean split. Cross-paper background is referenced through dependency and scope boxes; extended backend material is kept in the Technical Companion.
+
+\input{source_extracts/01_boundary_kernel_source.tex}
+
+\section{Source Extraction Map}
+
+\begin{tfptsourcebox}
+Use \sourceDraft:
+\begin{itemize}[leftmargin=1.5em]
+    \item Sections 1 and 2 only as a shortened claim map.
+    \item Sections 3.1 and 3.2 for primitive core, one-sided boundary datum, doubling, deck
+    involution, Calderon projector, and primitive admissibility complex.
+    \item Section 4.1 only for the primitive seam generator, $[u_\Sigma]=1$, and $\cthree$.
+    \item Sections 8.1--8.4 only for primitive selector and upgrade logic.
+    \item Sections 9.1--9.3 for operational seed, admissible bordisms, and boundary primitive
+    kernel.
+    \item Appendices B and D in shortened technical form.
+\end{itemize}
+\end{tfptsourcebox}
+
+\begin{tfptwarningbox}
+Every occurrence of carrier rigidity, Standard-Model representations, $\alpha$, gravity,
+cosmology, CMB, or E8 should be deleted or converted into a forward reference.
+\end{tfptwarningbox}
+
+
+\begin{tfptexports}
+Exports: $\taudbl$, $\iC$, $\Pprim$, $[u_\Sigma]=1$, $\cthree=1/(8\pi)$, and the boundary primitive kernel $\Tker^\partial$.
+\end{tfptexports}
+
+\section{Not Used Here}
+
+Carrier rigidity, the Standard-Model packet, exact electromagnetic closure, flavor transport,
+QFT reconstruction, gravity/metrology, cosmology, CMB targets, E8 grammar, horizons, and transient
+channels are not used as inputs in this paper.
+
+\clearpage
+\input{source_extracts/bibliography_core_theory.tex}
+
+\end{document}

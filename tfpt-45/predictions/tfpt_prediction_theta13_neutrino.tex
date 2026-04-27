@@ -1,0 +1,58 @@
+\documentclass[11pt,a4paper]{article}
+\input{tfpt_prediction_common}
+\title{\color{tfptblue}\textbf{TFPT Prediction: Neutrino Reactor Angle from the Closed PMNS Branch}}
+\author{Stefan Hamann \and Alessandro Rizzo}
+\date{{\normalsize\color{tfptgray}\sffamily Standalone prediction note -- \today}}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note isolates the TFPT row for the reactor angle. The formula retains the compact seed expression, while the status assignment is the neutrino closure map.
+\end{abstract}
+
+\PredictionStatus{$\sin^2\theta_{13}=0.02311$}{Physical observable; neutrino closure readout.}{neutrino readout $N_
+u$}{robust normal-ordering global-fit exclusion at the stated confidence level.}
+
+
+\section{Standalone Minimal Kernel}
+\MinimalKernelBox
+
+The paper is intentionally one-row: it does not reprove the full TFPT series. It states the minimal closed-branch input needed for this prediction, shows the sector map, and gives the direct failure mode. The source status follows the TFPT 4.5 split: boundary and carrier inputs are core, electromagnetic/flavor/metrology inputs are bridge readouts, QFT closure is conditional, and cosmology rows are downstream comparison targets when explicitly marked.
+
+
+\section{Dependency Graph}
+\DependencyDiagram{Neutrino closure}{$\sin^2\theta_{13}$}{The UV identity is a shadow; the operational row belongs to PMNS/neutrino closure.}{NuFIT exclusion}
+
+\section{Derivation}
+
+The compact UV identity is
+\[
+\sin^2\theta_{13}=\phiz e^{-\gamma},
+\qquad
+\phiz=\frac{1}{6\pi}+\frac{3}{256\pi^4},
+\qquad
+\gamma=\frac56.
+\]
+After sectorization, the physical row is read as
+\[
+\Tstar\longmapsto N_\nu(\Tstar)\longmapsto |(U_{\mathrm{PMNS}}^\star)_{e3}|^2.
+\]
+The benchmark target recorded in the prediction table is
+\[
+\sin^2\theta_{13}=0.02311.
+\]
+The comparison convention used in the ledger is the NuFIT normal-ordering representative.
+
+
+\section{No-Knobs and Failure Surface}
+\NoKnobsBox{The row must not be presented as a free seed projection. Its operational status is neutrino closure; the seed expression is only a compact UV shadow.}
+
+\section{Minimal Submission Claim}
+The standalone claim is limited to the displayed target and dependency class. It does not assert
+that every comparison row of the full TFPT ledger has the same proof status. Any update of the
+upstream boundary kernel, carrier theorem, or sector map must be propagated into this prediction
+before the numerical row is distributed.
+
+\PredictionBibliography
+
+\end{document}

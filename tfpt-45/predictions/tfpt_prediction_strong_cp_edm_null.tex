@@ -1,0 +1,55 @@
+\documentclass[11pt,a4paper]{article}
+\input{tfpt_prediction_common}
+\title{\color{tfptblue}\textbf{TFPT Prediction: Strong-CP Closure and the Neutron-EDM Null Test}}
+\author{Stefan Hamann \and Alessandro Rizzo}
+\date{{\normalsize\color{tfptgray}\sffamily Standalone prediction note -- \today}}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note isolates the strong-CP prediction as a theorem-level null row. It is a consequence of determinant-line closure and admissibility, not a tunable flavor-sector phase.
+\end{abstract}
+
+\PredictionStatus{$\theta_{\mathrm{eff}}=0$}{Theorem-level null prediction on the admissible branch.}{strong-CP closure $C_{\mathrm{CP}}$}{stable nonzero hadronic EDM signal.}
+
+
+\section{Standalone Minimal Kernel}
+\MinimalKernelBox
+
+The paper is intentionally one-row: it does not reprove the full TFPT series. It states the minimal closed-branch input needed for this prediction, shows the sector map, and gives the direct failure mode. The source status follows the TFPT 4.5 split: boundary and carrier inputs are core, electromagnetic/flavor/metrology inputs are bridge readouts, QFT closure is conditional, and cosmology rows are downstream comparison targets when explicitly marked.
+
+
+\section{Dependency Graph}
+\DependencyDiagram{Admissibility and determinant-line closure}{$\theta_{\mathrm{eff}}=0$}{Strong CP belongs to admissibility/QFT closure, not to the flavor paper.}{nonzero EDM}
+
+\section{Derivation}
+
+On the admissible branch the determinant-line closure gives
+\[
+\arg\det M_u=\arg\det M_d=0.
+\]
+Together with the admissible topological-sector positivity and sheet symmetry, the effective strong angle is
+\[
+\theta_{\mathrm{eff}}=0.
+\]
+The physical null row is therefore
+\[
+\bar\theta=0,
+\qquad
+F(\theta)>F(0)\quad\text{for}\quad \theta\not\equiv0\ \mathrm{mod}\ 2\pi.
+\]
+The experimental pressure point is the hadronic EDM program.
+
+
+\section{No-Knobs and Failure Surface}
+\NoKnobsBox{A stable nonzero hadronic EDM signal would break the present determinant-line strong-CP closure rather than merely shift a fit parameter.}
+
+\section{Minimal Submission Claim}
+The standalone claim is limited to the displayed target and dependency class. It does not assert
+that every comparison row of the full TFPT ledger has the same proof status. Any update of the
+upstream boundary kernel, carrier theorem, or sector map must be propagated into this prediction
+before the numerical row is distributed.
+
+\PredictionBibliography
+
+\end{document}

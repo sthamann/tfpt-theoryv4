@@ -1,0 +1,21 @@
+\contentsline {section}{\numberline {1}Boundary Spectral Unit}{2}{section.1}%
+\contentsline {section}{\numberline {2}Geometric Hodge Closure}{2}{section.2}%
+\contentsline {section}{\numberline {3}Planck Normalization}{2}{section.3}%
+\contentsline {section}{\numberline {4}Electroweak Matching}{2}{section.4}%
+\contentsline {section}{\numberline {5}Observable Functor}{3}{section.5}%
+\contentsline {section}{\numberline {6}Main Technical Development}{4}{section.6}%
+\contentsline {subsection}{\numberline {6.1}From bridge to geometric completion}{4}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Relative APS and superconnection setup}{4}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Bosonic relative index and Higgs selection}{6}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Closed $41$ chain after family and Higgs closure}{8}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Canonical spectral Einstein functional and geometric Hodge closure}{9}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}Native charged-current hard matching and the charged seam projector}{13}{subsection.6.6}%
+\contentsline {subsection}{\numberline {6.7}Absolute spectral Planck closure}{19}{subsection.6.7}%
+\contentsline {section}{\numberline {7}Absolute dimensionless metrology from the boundary branch}{24}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Boundary spectral unit}{24}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Stationary spectral Planck root}{24}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Infrared seam and sector bifurcation}{25}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Physical readout and metrology functor}{26}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Conditional minimal-parameter picture}{28}{subsection.7.5}%
+\contentsline {section}{\numberline {8}Source Extraction Map}{28}{section.8}%
+\contentsline {section}{\numberline {9}Not Used Here}{29}{section.9}%

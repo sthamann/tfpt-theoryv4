@@ -1,0 +1,22 @@
+\contentsline {section}{\numberline {1}Claim Map}{2}{section.1}%
+\contentsline {section}{\numberline {2}One-Sided Boundary Datum}{2}{section.2}%
+\contentsline {section}{\numberline {3}Exact Double and Deck Involution}{3}{section.3}%
+\contentsline {section}{\numberline {4}Primitive Admissibility Complex}{3}{section.4}%
+\contentsline {section}{\numberline {5}Primitive Seam Generator}{3}{section.5}%
+\contentsline {section}{\numberline {6}Boundary Primitive Kernel}{3}{section.6}%
+\contentsline {section}{\numberline {7}Audit Protocol}{3}{section.7}%
+\contentsline {section}{\numberline {8}Main Technical Development}{4}{section.8}%
+\contentsline {section}{\numberline {9}Primitive core and hard carrier kernel}{4}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Primitive core and conventions}{4}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Primitive relative spectral dynamics}{4}{subsection.9.2}%
+\contentsline {section}{\numberline {10}Intrinsic closed branch and canonical rigid object}{9}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Operational seed and boundary generation}{9}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Initial admissible bordisms and induced boundary data}{12}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Primitive completion from the boundary kernel}{13}{subsection.10.3}%
+\contentsline {section}{\numberline {11}Technical conventions and data layers}{13}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Relative objects}{13}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}Layered datum and admissibility}{13}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}Symbol guide}{14}{subsection.11.3}%
+\contentsline {section}{\numberline {12}Relative APS and superconnection setup}{15}{section.12}%
+\contentsline {section}{\numberline {13}Source Extraction Map}{15}{section.13}%
+\contentsline {section}{\numberline {14}Not Used Here}{17}{section.14}%

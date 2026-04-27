@@ -1,0 +1,55 @@
+\documentclass[11pt,a4paper]{article}
+\input{tfpt_prediction_common}
+\title{\color{tfptblue}\textbf{TFPT Prediction: Intrinsic Neutrino Mass Sum on the Closed Branch}}
+\author{Stefan Hamann \and Alessandro Rizzo}
+\date{{\normalsize\color{tfptgray}\sffamily Standalone prediction note -- \today}}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note isolates the neutrino mass-sum row as an intrinsic normal-ordering output of the closed neutrino branch.
+\end{abstract}
+
+\PredictionStatus{$\Sigma m_\nu=5.8764\times10^{-2}\,\mathrm{eV}$}{Physical observable / comparison quantity; neutrino closure readout.}{neutrino readout $N_
+u$}{robust cosmological upper bound below the branch value.}
+
+
+\section{Standalone Minimal Kernel}
+\MinimalKernelBox
+
+The paper is intentionally one-row: it does not reprove the full TFPT series. It states the minimal closed-branch input needed for this prediction, shows the sector map, and gives the direct failure mode. The source status follows the TFPT 4.5 split: boundary and carrier inputs are core, electromagnetic/flavor/metrology inputs are bridge readouts, QFT closure is conditional, and cosmology rows are downstream comparison targets when explicitly marked.
+
+
+\section{Dependency Graph}
+\DependencyDiagram{Neutrino closure}{$\Sigma m_\nu$}{No external oscillation inversion is used as primitive input.}{bound below target}
+
+\section{Derivation}
+
+The intrinsic neutrino closure row gives
+\[
+m_{\nu_1}=0,
+\qquad
+m_{\nu_2}=8.614\times10^{-3}\,\mathrm{eV},
+\qquad
+m_{\nu_3}=5.015\times10^{-2}\,\mathrm{eV}.
+\]
+Thus
+\[
+\Sigma m_\nu=m_{\nu_1}+m_{\nu_2}+m_{\nu_3}
+=5.8764\times10^{-2}\,\mathrm{eV}.
+\]
+The row is compared to cosmological mass-sum analyses only after the neutrino closure map has fixed the internal value.
+
+
+\section{No-Knobs and Failure Surface}
+\NoKnobsBox{A robust upper bound below the branch value would pressure the closed neutrino sector, not merely a comparison convention.}
+
+\section{Minimal Submission Claim}
+The standalone claim is limited to the displayed target and dependency class. It does not assert
+that every comparison row of the full TFPT ledger has the same proof status. Any update of the
+upstream boundary kernel, carrier theorem, or sector map must be propagated into this prediction
+before the numerical row is distributed.
+
+\PredictionBibliography
+
+\end{document}

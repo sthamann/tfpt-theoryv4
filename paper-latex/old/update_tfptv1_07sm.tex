@@ -1,0 +1,327 @@
+\documentclass[11pt]{article}
+% Compile with LuaLaTeX or XeLaTeX for full Unicode support.
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{fvextra}
+\DefineVerbatimEnvironment{MyVerbatim}{Verbatim}{breaklines=true,breakanywhere=true,fontsize=\small}
+
+\title{Topological Fixed Point Theory (TFPT)}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\noindent\textbf{Source PDF:} Update TFPTV1.07SM.pdf
+
+\bigskip
+\noindent\textbf{Note:} This \LaTeX\ file contains a best effort text extraction of the PDF.
+Line breaks and pagination markers are preserved in a verbatim block.
+
+\bigskip
+\begin{MyVerbatim}
+===== Page 1 of 8 =====
+Topological Fixed Point Theory (TFPT)
+Complete Standard Model Derivations
+α Self-Consistency, E8 Cascade, and Z3 Flavor Architecture (v1.0.8)
+Stefan Hamann and Alessandro Rizzo
+September 26, 2025
+Executive Summary: A Constructive Derivation of the SM
+Core Idea: TFPT replaces the free parameters of the Standard Model (SM) with invariants from
+Topology (c ) and Geometry (φ ), ordered by an E8 cascade.
+3 0
+Key Developments Integrated:
+• Geometric Self-Consistency: Backreaction on the orientable double cover φ (α) closes the
+0
+Cubic Fixed Point Equation (CFE), yielding α at -0.064 ppm precision.
+• E8 Log-Exact Cascade: Provides the parameter-free backbone for all energy scales (EW,
+Hadronic, Seesaw).
+• Z3 Flavor Architecture: Asinglephaseδ,anchoredinleptonsandgeometry(δ ≈ 3/5+φ /6),
+0
+determines all mass ratios via six Möbius relations and fixes CKM/PMNS structures. Koide
+emerges naturally.
+• Unified Field Equation (UFE): Fixes g = −4c and predicts cosmic birefringence
+aγγ 3
+β = φ /(4π) ≈ 0.2427.
+0
+Contents
+1 Foundations: Invariants and the Cubic Fixed Point 3
+1.1 The Invariants . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+1.2 The Cubic Fixed Point Equation (CFE) . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+1.3 Geometric Self-Consistency (Backreaction). . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+1.4 Numerical Impact on α . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+2 The Architecture of Scales: E8 Cascade 3
+2.1 The Log-Exact E8 Ladder . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+2.2 Block Projection . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+3 The Z3 Flavor Architecture 4
+3.1 The Single Universal Phase δ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+3.1.1 Anchoring δ: Empirical and Theoretical . . . . . . . . . . . . . . . . . . . . . . . . 4
+1
+
+===== Page 2 of 8 =====
+3.2 The Möbius Map and Mass Ratios . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+3.2.1 The Six Möbius Relations (Fit-Free) . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+3.3 The Z Flavor Texture (Circulant + Diagonal) . . . . . . . . . . . . . . . . . . . . . . . . 5
+3
+4 Mixing Matrices: CKM and PMNS 6
+4.1 CKM Matrix (Quarks) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+4.2 PMNS Matrix (Leptons) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+5 Unified Field Equation (UFE) and Birefringence 6
+6 Comprehensive Overview and Status 7
+6.1 Structural Integrity Checks . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+6.2 Status Dashboard . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+6.3 Conclusion and Roadmap . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+2
+
+===== Page 3 of 8 =====
+1 Foundations: Invariants and the Cubic Fixed Point
+The theory rests on fixed topological and geometric invariants derived from first principles.
+1.1 The Invariants
+1. Topological Fixed Point: c = 1 (from 11D Chern-Simons quantization).
+3 8π
+1 3
+2. Geometric Scale (Baseline): φ = + (from Möbius geometry).
+0base 6π 256π4
+|{z} | {z }
+φtree δtop
+1.2 The Cubic Fixed Point Equation (CFE)
+The fine structure constant α is the unique physical solution to the CFE:
+1
+α3−2c3α2−8b c6ln = 0 (1)
+3 1 3 φ (α)
+0
+where b = 41/10 (SM abelian trace).
+1
+1.3 Geometric Self-Consistency (Backreaction)
+The Closure: The electromagnetic energy driving the logarithm must couple back to the geometry on
+the orientable double cover. This enforces a minimal, parameter-free response:
+φ (α) = φ +δ (1−2α) (2)
+0 tree top
+This closes the loop self-consistently.
+1.4 Numerical Impact on α
+Table 1: Impact of Geometric Self-Consistency on α.
+Scenario α−1 Deviation from CODATA 2022
+Baseline (Fixed φ ) 137.036501465 +3.67 ppm
+0
+Self-Consistent (φ (α)) 137.035990390 -0.064 ppm
+0
+CODATA 2022 137.035999177 —
+2 The Architecture of Scales: E8 Cascade
+All energy scales are organized by the E8 group structure.
+2.1 The Log-Exact E8 Ladder
+We utilize the log-exact form derived from the E8 nilpotent orbit dimensions D = 60−2n:
+n
+3
+
+===== Page 4 of 8 =====
+4 3.67
+2
+0
+−6.4·10−2
+Baseline
+2202
+ATADOC
+sv
+mpp
+Figure 1: The double cover backreaction closes the CFE and drives the deviation to the sub-ppm level.
+(cid:18)60−2n(cid:19)λ
+φ = φ ·e−γ(0) (3)
+n 0
+58
+with γ(0) = 0.834 and λ = γ(0)/(ln248−ln60) ≈ 0.5877. Ratio laws ϕ /ϕ are fit-free.
+m n
+2.2 Block Projection
+Physical scales X are derived via the Block Formula X = ζ ·M ·ϕ . This mechanism yields the
+B B B Pl nB
+key SM scales (Electroweak n = 12, Hadronic n = 15,16, etc., detailed in Section 6).
+3 The Z3 Flavor Architecture
+The hierarchy and mixing patterns of quarks and leptons emerge from a Z geometry, governed by a
+3
+single universal phase δ.
+3.1 The Single Universal Phase δ
+The phase δ governs the deformation of the Z structure. It is universal across quarks and leptons.
+3
+3.1.1 Anchoring δ: Empirical and Theoretical
+δ is fixed by the lepton sector and confirmed by geometry:
+1. Empirical Calibration (Leptons): Extracted via the Möbius map definition:
+q
+m /m −1
+τ µ
+δ = ≈ 0.607909 (4)
+M q
+m /m +1
+τ µ
+2. Theoretical Anchor (Geometry): Derived from the invariant φ :
+0
+3 φ
+0
+δ = + ≈ 0.608862 (5)
+⋆
+5 6
+The agreement is remarkable: |δ −δ | ≈ −0.156%.
+⋆ M
+4
+
+===== Page 5 of 8 =====
+3.2 The Möbius Map and Mass Ratios
+The universal δ drives the mass hierarchies via the Möbius map M (δ) = (y+δ)/(y−δ) evaluated at
+y
+the three geometric cusps y ∈ {1, 1, 2}.
+3 3
+3.2.1 The Six Möbius Relations (Fit-Free)
+Using δ = δ , we derive all inter-generation mass ratios:
+M
+Ratio Möbius Relation Prediction Empirical
+(Indicative)
+Leptons
+m /m (M (δ))2 16.817 16.817 (Input)
+τ µ 1
+m /m (M (δ)|M (δ)|)2 197.619 ≈ 206.77
+µ e 1 1/3
+Down-type Quarks
+m /m (M (δ))2 16.817 ≈ 19.9
+s d 1
+m /m (M (δ)(1+δ))2 43.478 ≈ 44.95
+b s 1
+Up-type Quarks
+m /m (M (δ))2 470.547 ≈ 588.0
+c u 2/3
+m /m ( 2/3 )2 128.733 ≈ 136.0
+t c 2/3−δ
+Note: Empirical quark ratios are scheme-dependent; the theory provides the structure before RG running.
+588
+600
+500 470.55
+400
+300
+1972.0662.77
+200
+128.17336
+100
+43.4448.95
+16.8129.9
+0
+m /m m /m m /m m /m m /m
+s d b s c u t c µ e
+oitaR
+ssaM
+Theory (Fit-Free)
+Empirical (Indicative)
+Figure 2: Comparison of fit-free theoretical predictions for mass ratios (derived from the single phase δ)
+against indicative empirical values.
+3.3 The Z Flavor Texture (Circulant + Diagonal)
+3
+The Yukawa matrices follow a specific texture, incorporating geometric slopes and topological offsets:
+Y(y) = y [C(δ)+a φ D+bc 1] (6)
+⋆ y 0 3
+5
+
+===== Page 6 of 8 =====
+Where C(δ) is a circulant matrix, D = diag(1,0,−1). This structure naturally explains the Koide relation
+(K ≈ 2/3) in the lepton sector.
+ℓ
+4 Mixing Matrices: CKM and PMNS
+4.1 CKM Matrix (Quarks)
+The CKM elements are derived using the Wolfenstein parameterization anchored to geometry.
+1. Cabibbo Angle (λ): Fixed parameter-free by φ :
+0
+√
+λ = sinθ = φ (1− 1φ ) = 0.224460 (Ref: 0.2248) (7)
+C 0 2 0
+2. Sector Slopes (A): Determined by the Z3 cusps: a = 2,a = 1.
+u 3 d
+a +a 5
+u d
+A = = ≈ 0.833333 (8)
+2 6
+3. CKM Elements (Cold Pass): The phase δ defines the CP violation parameters (ρ,η).
+sinθq = Aλ2 ≈ 0.04199 (Ref: ≈ 0.0418)
+23
+Aλ3
+sinθq = ≈ 0.00314 (Ref: ≈ 0.00369)
+13 3
+(q)
+The Jarlskog invariant J follows from the phase inherent in the texture:
+CP
+J (q) ≃ A2λ6η ≈ 7.66×10−6 (9)
+CP
+Note: This leading-order result demonstrates the mechanism; precise matching requires full texture
+diagonalization and phase alignment (e.g., using the Koide phase π/12 or the Möbius phase δ).
+4.2 PMNS Matrix (Leptons)
+The lepton mixing is anchored by the first step of the E8 cascade, ϕ .
+1
+1. Reactor Angle (θ ):
+13
+sin2θℓ = ϕ ≈ 0.023093 (Ref: 0.02240) (10)
+13 1
+2. Solar and Atmospheric Angles: Derived from the Z3 texture using the same phase and a neutrino
+sector slope a ≈ 1.103:
+ν
+sin2θℓ ≈ 1 − 1a φ ≈ 0.304 (Ref: ≈ 0.304)
+12 3 2 ν 0
+a φ
+sin2θℓ ≈ 1 + ν 0 ≈ 0.5196 (Ref: ≈ 0.57)
+23 2 3
+J (ℓ) ≈ −8.83×10−3
+CP
+5 Unified Field Equation (UFE) and Birefringence
+The framework is coherent across all scales. A torsionful geometry yields the UFE and a modified Maxwell
+system.
+Axion-Photon Coupling: The CFE fixes g = −4c .
+aγγ 3
+6
+
+===== Page 7 of 8 =====
+Cosmic Birefringence Prediction (Parameter-Free):
+φ
+0
+β = ≈ 0.2427 (11)
+4π
+Consistent with Planck PR4 analyses (typically within 0.5σ to 1.7σ) and recent ACT DR6 results (e.g.,
+0.215◦±0.074◦).
+6 Comprehensive Overview and Status
+6.1 Structural Integrity Checks
+The theory exhibits deep structural coherence:
+• The abelian trace 41 appears in the CFE (b = 41/10) and the Electroweak block index (k =
+1 EW
+41/32).
+• φ anchors the CFE, the E8 ladder, the Cabibbo angle, the theoretical δ , and the Birefringence β.
+0 ⋆
+• c anchors the CFE, the block suppression factors, and the axion-photon coupling.
+3
+6.2 Status Dashboard
+Exact/ppm (< 0.01%); Solid (< 1%); Minor (< 3%); Moderate (< 5%).
+Table 3: Summary Dashboard of Key Predictions.
+Domain Quantity Deviation Status
+Quantum (CFE) Fine Structure α -0.064 ppm Exact
+E8 Scales Electroweak v H ,M W ,M Z 1.8% – Minor
+2.4%
+Hadronic m p ,f π 3.2% – Moderate
+4.3%
+Z3 Flavor δ (Theory vs Lepton) -0.156% Solid
+Mass Ratios (Möbius) (Consistent) Solid
+CKM Cabibbo λ -0.15% Solid
+PMNS sin2θ 13 +3.1% Moderate
+Cosmic (UFE) Birefringence β (Consistent) Solid
+6.3 Conclusion and Roadmap
+The integration of the CFE (with geometric self-consistency), the E8 cascade, and the unified Z3 flavor
+architecture provides a complete, parameter-free derivation of the Standard Model.
+Roadmap to Completion (The Last Percent): The remaining deviations fall within expected
+technical refinements:
+1. Two-loop EW Thresholds: Consistent matching will close the 2% gap in the EW block.
+7
+
+===== Page 8 of 8 =====
+2. RG-stable Flavor: Full RG running for Yukawas with thresholds to refine the CKM/PMNS
+predictions and mass ratios, utilizing the derived a φ and bc fine structure.
+y 0 3
+3. Index Derivation: Formal proof of the block indices k from the boundary cycle geometry on
+B
+the double cover.
+8
+
+\end{MyVerbatim}
+\end{document}

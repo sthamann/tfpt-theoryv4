@@ -1,0 +1,161 @@
+\documentclass[11pt,a4paper]{article}
+\input{tfpt45-common}
+
+\title{\color{tfptblue}\textbf{Electromagnetic Fixed Point and Flavor Transport}\\[0.35em]
+{\Large on the Rigid TFPT Branch}}
+\author{Stefan Hamann \and Alessandro Rizzo}
+\date{{\normalsize\color{tfptgray}\sffamily Paper 3 of the TFPT 4.5 series -- \today}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This paper isolates the precision-readout layer of TFPT after the primitive kernel and carrier
+packet have been fixed. It treats the electromagnetic fixed point, the transport pole of the cusp
+cubic, the retained seed decoder, and the flavor transport grammar yielding $\alpha$,
+$\delta_{\mathrm{ph}}$, $\lambda_C$, $\beta_{\mathrm{rad}}$, $\Omega_b$, $\theta_{13}$, CKM, and
+PMNS readouts.
+\end{abstract}
+
+\begin{tfptfrontbox}
+\textbf{Inputs from previous papers.} Paper 1 supplies the primitive kernel and $[u_\Sigma]=1$.
+Paper 2 supplies the rigid carrier, family count, admissible occupancy, compact Higgs index, and
+abelian index coefficient.
+
+\textbf{New theorem contribution.} The electromagnetic fixed point and flavor transport outputs:
+\[
+\alpha^{-1}(0)=137.035999216\ldots,\qquad
+P'(z)=0\Rightarrow\delta_{\mathrm{ph}},\qquad
+\lambda_C=\sqrt{\phiz(1-\phiz)}.
+\]
+
+\textbf{Not claimed here.} No full QFT closure, no gravity/metrology proof, no CMB, no E8, and no
+large pole-mass table.
+
+\textbf{Falsification or audit surface.} The paper fails if any numerical constant enters after the
+fact, if $\alpha$ is used to tune later readouts, or if alternative discrete worlds are not visibly
+ruled out by the same branch constraints.
+\end{tfptfrontbox}
+
+
+\begin{tfptclaimcontract}
+\textbf{Claim.} Exact electromagnetic fixed point and flavor/PMNS/CKM readouts on the rigid branch.\par
+\textbf{Inputs.} Papers 1--2: primitive kernel, carrier packet, family count, Higgs index, abelian index.\par
+\textbf{First assumptions.} Exact seam opening $\phiseam(\alpha)$, transport pole, retained seed as UV shadow, branch budget $41$.\par
+\textbf{Proof status.} Bridge/readout layer with no-knobs audit.\par
+\textbf{Kill condition.} Frozen inputs move after comparison, alternative discrete worlds survive, or precision rows fail stated tests.\par
+\end{tfptclaimcontract}
+
+\tableofcontents
+
+\section{Electromagnetic Closure}
+
+The electromagnetic calculation is presented only after the carrier branch is fixed. The fixed
+point is read as a closed-branch output:
+\[
+\alpha^{-1}(0)=137.035999216\ldots.
+\]
+The paper should include the carrier form of the electromagnetic closure and the compact audit of
+which structural quantities enter the fixed point.
+
+\section{Transport Pole}
+
+The transport phase is governed by the cubic
+\[
+P(z)=(z-1)\left(z-\frac{64}{729}\right)\left(z-\frac{1}{729}\right),
+\qquad
+P'(z)=0.
+\]
+The lower critical point determines $\delta_{\mathrm{ph}}$ on the retained branch. The transport
+pole must be introduced as a branch consequence, not as a fit parameter.
+
+\section{Retained Seed Decoder}
+
+The retained seed
+\[
+u:=\phiz
+\]
+projects to the bridge observables
+\[
+\lambda_C=\sqrt{\phiz(1-\phiz)},
+\qquad
+\beta_{\mathrm{rad}}=\frac{\phiz}{4\pi},
+\qquad
+\sin^2\theta_{13}=\phiz e^{-\gamma}.
+\]
+The text should make explicit which earlier theorem fixes each symbol before it appears in a
+readout.
+
+\section{Flavor Transport}
+
+The CKM and PMNS closure block belongs here, together with the transport grammar and regularized
+Yukawa kernels needed for the flavor statements. Representative hard readouts include
+\[
+|V_{ub}|=\frac{|V_{us}|^3}{3}.
+\]
+Large mass tables belong in the companion or a later empirical ledger, not in this paper.
+
+\section{No-Knobs Audit}
+
+\begin{center}
+\begin{tabularx}{\textwidth}{@{}p{0.18\textwidth}p{0.2\textwidth}p{0.18\textwidth}p{0.13\textwidth}Y@{}}
+\toprule
+\textbf{Constant} & \textbf{First appearance} & \textbf{Prior dependency} & \textbf{Before $\alpha$?} & \textbf{Variation consequence} \\
+\midrule
+$Y$ & Paper 2 carrier theorem & Paper 1 primitive kernel & Yes & Breaks $3+2$, gauge quotient, and all downstream readouts. \\
+$[u_\Sigma]$ & Paper 1 seam generator & Boundary primitive kernel & Yes & Breaks family counting and transport branch normalization. \\
+$\phiz$ & Transport branch & Papers 1--2 & Yes & Moves $\lambda_C$, $\beta_{\mathrm{rad}}$, $\theta_{13}$, and flavor transport together. \\
+$N_\Phi$ & Paper 2 Higgs index & Carrier/Higgs discharge & Yes & Changes the electromagnetic budget. \\
+$\bone$ & Paper 2 abelian index & Carrier packet & Yes & Changes the fixed-point coefficient. \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\section{Alternative Discrete Worlds}
+
+The alternative discrete worlds table is a falsification device. It should not be presented as
+decorative numerics. Each alternative must fail because it breaks a prior branch constraint, the
+fixed-point equation, or the simultaneous reuse audit.
+
+\clearpage
+\section{Main Technical Development}
+
+This section contains the main technical development assigned to this paper by the TFPT 4.5 clean split. Cross-paper background is referenced through dependency and scope boxes; extended backend material is kept in the Technical Companion.
+
+\input{source_extracts/03_em_flavor_source.tex}
+
+\section{Source Extraction Map}
+
+\begin{tfptsourcebox}
+Use \sourceDraft:
+\begin{itemize}[leftmargin=1.5em]
+    \item Sections 4.1 and 4.2 for electromagnetic closure.
+    \item Sections 5.4 and 5.5 for UV seed shadow, Cabibbo inversion, and alternative discrete
+    worlds.
+    \item Sections 7.1--7.3 for the discrete phase operator, transport grammar, and Yukawa kernels.
+    \item Sections 7.16--7.27 for CKM and PMNS closure.
+    \item Appendix A only as a narrow operational prediction surface and compact prediction ledger.
+    \item Add a dedicated $\alpha$ audit appendix inside this paper.
+\end{itemize}
+\end{tfptsourcebox}
+
+\begin{tfptwarningbox}
+Do not import full QFT closure, gravity, CMB, E8, or large mass tables. This is the precision
+prediction paper, and its credibility depends on a short no-knobs audit.
+\end{tfptwarningbox}
+
+
+\begin{tfptexports}
+Exports: $\alpha_\star$, $\delta_{\mathrm{ph}}$, $\lambda_C$, CKM/PMNS readout rows, sectorized seed shadows, and no-knobs audit table.
+\end{tfptexports}
+
+\section{Not Used Here}
+
+Strong-CP admissibility closure, OS/CAR reconstruction, local Minkowski nets, scattering,
+gravity/metrology proofs, CMB spectra, sky realization, E8 grammar, horizons, and large pole-mass
+tables are not used as proof inputs in this paper.
+
+\clearpage
+\input{source_extracts/bibliography_precision.tex}
+
+\end{document}

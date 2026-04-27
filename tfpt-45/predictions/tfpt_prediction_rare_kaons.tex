@@ -1,0 +1,48 @@
+\documentclass[11pt,a4paper]{article}
+\input{tfpt_prediction_common}
+\title{\color{tfptblue}\textbf{TFPT Prediction: Rare-Kaon Corridor from the Closed CKM Point}}
+\author{Stefan Hamann \and Alessandro Rizzo}
+\date{{\normalsize\color{tfptgray}\sffamily Standalone prediction note -- \today}}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note isolates the rare-kaon corridor. It follows the closed CKM point into standard short-distance rare-kaon amplitudes and is compared against NA62/KOTO-style channels.
+\end{abstract}
+
+\PredictionStatus{$\mathrm{BR}(K^+)=9.40\times10^{-11}$, $\mathrm{BR}(K_L)=3.47\times10^{-11}$}{Comparison quantity; flavor readout through short-distance amplitudes.}{flavor readout $F_{\mathrm{fl}}$}{$K^+$ outside $[7,12]\times10^{-11}$ or incompatible Grossman--Nir-plane correlation.}
+
+
+\section{Standalone Minimal Kernel}
+\MinimalKernelBox
+
+The paper is intentionally one-row: it does not reprove the full TFPT series. It states the minimal closed-branch input needed for this prediction, shows the sector map, and gives the direct failure mode. The source status follows the TFPT 4.5 split: boundary and carrier inputs are core, electromagnetic/flavor/metrology inputs are bridge readouts, QFT closure is conditional, and cosmology rows are downstream comparison targets when explicitly marked.
+
+
+\section{Dependency Graph}
+\DependencyDiagram{Flavor comparison}{$K\to\pi\nu\bar\nu$}{Closed CKM point enters the short-distance kaon amplitudes.}{corridor failure}
+
+\section{Derivation}
+
+The flavor sector fixes a closed CKM point. The rare-kaon comparison row then evaluates the short-distance amplitudes at that point:
+\[
+\mathrm{BR}(K^+\to\pi^+\nu\bar\nu)=9.40\times10^{-11},
+\]
+\[
+\mathrm{BR}(K_L\to\pi^0\nu\bar\nu)=3.47\times10^{-11}.
+\]
+The current charged-channel reading quoted in the ledger is compatible with the target corridor, while the neutral channel remains open.
+
+
+\section{No-Knobs and Failure Surface}
+\NoKnobsBox{This row is not a theorem-level Standard-Model proof; it is a flavor-comparison target. A stable $K^+$ value outside $[7,12]\times10^{-11}$ or a GN-plane mismatch would break the present flavor bridge.}
+
+\section{Minimal Submission Claim}
+The standalone claim is limited to the displayed target and dependency class. It does not assert
+that every comparison row of the full TFPT ledger has the same proof status. Any update of the
+upstream boundary kernel, carrier theorem, or sector map must be propagated into this prediction
+before the numerical row is distributed.
+
+\PredictionBibliography
+
+\end{document}

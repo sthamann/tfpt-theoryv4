@@ -1,0 +1,163 @@
+\documentclass[11pt,a4paper]{article}
+\input{tfpt45-common}
+
+\title{\color{tfptblue}\textbf{TFPT in One Map}\\[0.4em]
+{\Large Boundary Polarization, Carrier Rigidity, and Observable Closure}}
+\author{Stefan Hamann \and Alessandro Rizzo}
+\date{{\normalsize\color{tfptgray}\sffamily Orientation Note for the TFPT 4.5 paper series -- \today}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note is the thin entry document for the TFPT 4.5 series. It does not attempt to prove the
+full theory. Its purpose is to state what TFPT claims, what it does not claim, how the closed branch
+is organized, and where each load-bearing argument is isolated in the paper sequence.
+\end{abstract}
+
+\begin{tfptfrontbox}
+\textbf{Inputs from previous papers.} None. This is the public orientation layer for the series.
+
+\textbf{New theorem contribution.} None. The note contributes only organization, status discipline,
+and a dependency map.
+
+\textbf{Not claimed here.} No carrier proof, no exact electromagnetic calculation, no CMB fit, no
+mass ledger, no E8 stage atlas, and no nonperturbative QFT proof.
+
+\textbf{Falsification or audit surface.} The note can fail if it misstates the dependency order,
+overstates the status of a downstream module, or hides where an assumption first enters.
+\end{tfptfrontbox}
+
+
+\begin{tfptclaimcontract}
+\textbf{Claim.} Orientation and dependency map only; no theorem proof.\par
+\textbf{Inputs.} None.\par
+\textbf{First assumptions.} Status vocabulary and series dependency order.\par
+\textbf{Proof status.} Reader contract / orientation.\par
+\textbf{Kill condition.} Misstates dependency order or promotes downstream targets to core claims.\par
+\end{tfptclaimcontract}
+
+\tableofcontents
+
+\section{What TFPT Claims}
+
+TFPT is organized as a boundary-polarized spectral theory whose primitive input is a one-sided
+boundary datum
+\[
+\Tbound=(\mathcal A_+,\mathcal H_+,D_+,J,\Gamma,B_\Sigma).
+\]
+The main theorem chain in the source draft is not a collection of unrelated numerological
+readouts. It is a staged reconstruction:
+\[
+\Tbound
+\Rightarrow
+(\taudbl,\iC,\Pprim,[u_\Sigma],\cthree)
+\Rightarrow
+d^\star_{\mathrm{disc}}
+\Rightarrow
+\Padm
+\Rightarrow
+\mathcal M_{d^\star_{\mathrm{disc}}}
+\Rightarrow
+\mathcal Z_{\mathrm{cl}}=\{x^\star_{\mathrm{cl}}\}
+\Rightarrow
+\Tstar .
+\]
+The split series follows this burden of proof rather than the order in which a reader might find
+the numerics exciting.
+
+\section{What TFPT Does Not Claim at This Level}
+
+The orientation note does not certify every downstream comparison row as a theorem. In particular,
+the CMB interface, sky-map realization, horizon continuations, transient channels, and E8 scale
+grammar remain outside the primitive theorem chain. They are comparison and programmatic layers
+unless explicitly promoted by a later proof obligation.
+
+\section{The Three Decoders}
+
+The source manuscript condenses the closed branch through three decoders:
+\[
+\begin{aligned}
+Y&\quad\text{generates structure},\\
+[u_\Sigma]=1&\quad\text{generates counting},\\
+u:=\phiz&\quad\text{generates bridge observables}.
+\end{aligned}
+\]
+This orientation is the reason the paper series separates the primitive kernel, the carrier
+packet, the precision readouts, the QFT closure layer, the metrology layer, and the cosmology
+interface.
+
+\section{Status Matrix}
+
+\begin{center}
+\begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}p{0.22\textwidth}Y@{}}
+\toprule
+\textbf{Layer} & \textbf{Status language} & \textbf{Where handled} \\
+\midrule
+Boundary primitive kernel & Theorem-level target & Paper 1 \\
+Carrier rigidity and SM packet & Theorem-level target with representation audit & Paper 2 \\
+Electromagnetic and flavor readouts & Closed-branch prediction layer with no-knobs audit & Paper 3 \\
+Admissibility and QFT closure & Conditional nonperturbative closure under stated hypotheses & Paper 4 \\
+Boundary-normalized metrology & Dimensionless observable functor from $\lambda_\Sigma$ & Paper 5 \\
+Cosmology and CMB & Downstream interface; Stage 1 spectra, Stage 2 sky realization target & Paper 6 \\
+Extended comparison maps & Appendix and companion material & Technical Companion \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\section{Series Map}
+
+\begin{enumerate}[leftmargin=1.5em]
+    \item \textbf{Boundary Polarization and the Primitive Kernel of TFPT.}
+    Establishes $\Tbound\Rightarrow(\taudbl,\iC,\Pprim,[u_\Sigma],\cthree)$ and keeps all
+    Standard-Model claims out.
+    \item \textbf{Carrier Rigidity, Hypercharge, and the Standard Model Packet from Boundary
+    Polarization.}
+    Establishes the rigid $3+2$ carrier, hypercharge, $S^+=\Lambda^{\mathrm{even}}E$,
+    $G_{\mathrm{phys}}$, $N_{\mathrm{fam}}=3$, $\Omega_{\mathrm{adm}}=48$, $N_\Phi=1$, and
+    $\bone=41/10$.
+    \item \textbf{Electromagnetic Fixed Point and Flavor Transport on the Rigid TFPT Branch.}
+    Isolates $\alpha$, $\delta_{\mathrm{ph}}$, $\lambda_C$, $\beta_{\mathrm{rad}}$, $\Omega_b$,
+    $\theta_{13}$, CKM, and PMNS.
+    \item \textbf{Admissibility, Strong CP, and Nonperturbative QFT Closure on the TFPT Branch.}
+    Separates selector from dynamics and states the positivity, OS, local-net, scattering, and
+    exact-flow obligations.
+    \item \textbf{Geometric Hodge Closure and Dimensionless Metrology from the TFPT Boundary
+    Branch.}
+    Treats $\lambda_\Sigma$, Planck normalization, electroweak matching, and boundary-normalized
+    observables.
+    \item \textbf{Cosmology Interfaces of the TFPT Closed Branch.}
+    Treats seam transfer, determinant-line phase, axion sector, reheating, leptogenesis, CMB
+    spectra, and sky-realization targets.
+\end{enumerate}
+
+\section{Publication Order}
+
+The recommended public order is Paper 0, Paper 2, Paper 1, Paper 3, Paper 4, Paper 5, and finally
+Paper 6. The mathematical dependency order remains Paper 1 before Paper 2; the publication order
+uses Paper 2 as the clearest visible hook while Paper 0 explains the dependency discipline.
+
+\section{Source Boundary}
+
+\begin{tfptsourcebox}
+Primary source: \sourceDraft.
+
+The orientation note draws especially from the abstract, the closed-architecture box, Sections 1
+and 2, the canonical rigid-object discussion, the structural falsification map, and the conclusion.
+It intentionally does not import the extended empirical ledgers, E8 stage atlas, CMB figures, or
+mass tables.
+\end{tfptsourcebox}
+
+\clearpage
+\section{Main Technical Development}
+
+This section contains the main technical development assigned to this paper by the TFPT 4.5 clean split. Cross-paper background is referenced through dependency and scope boxes; extended backend material is kept in the Technical Companion.
+
+\input{source_extracts/00_orientation_source.tex}
+
+
+\begin{tfptexports}
+Exports: series dependency order; status vocabulary; publication strategy; global falsification categories.
+\end{tfptexports}
+
+\end{document}

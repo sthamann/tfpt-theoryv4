@@ -1,0 +1,26 @@
+\contentsline {section}{\numberline {1}Selector Versus Dynamics}{3}{section.1}%
+\contentsline {section}{\numberline {2}Full Admissibility Complex}{3}{section.2}%
+\contentsline {section}{\numberline {3}Strong CP Closure}{3}{section.3}%
+\contentsline {section}{\numberline {4}Reflection Positivity and OS Reconstruction}{3}{section.4}%
+\contentsline {section}{\numberline {5}Local Net and Scattering}{3}{section.5}%
+\contentsline {section}{\numberline {6}Exact Admissible Flow}{3}{section.6}%
+\contentsline {section}{\numberline {7}Main Technical Development}{4}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Hadronic admissibility as singlet selection}{4}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Transport-side ingredients for the strong-CP sector}{4}{subsection.7.2}%
+\contentsline {section}{\numberline {8}Closure theorems from the admissibility complex}{6}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Admissible Schwinger functions, Minkowski locality, and scattering closure}{22}{subsection.8.1}%
+\contentsline {section}{\numberline {9}Internal reduction theorem and renormalized observable hierarchy}{25}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Weakened ambient class}{25}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Renormalized, physical, and scheme readout layers}{29}{subsection.9.2}%
+\contentsline {section}{\numberline {10}Relative reflection positivity with fermions}{35}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Normalized quotient form}{35}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Bosonic and fermionic positivity on $P_{\mathrm {adm}}$}{35}{subsection.10.2}%
+\contentsline {section}{\numberline {11}Admissible OS reconstruction and asymptotic scattering}{35}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Tempered admissible Schwinger families}{35}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}OS and CAR reconstruction on $P_{\mathrm {adm}}$}{36}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}Stable massive Haag--Ruelle and LSZ closure}{36}{subsection.11.3}%
+\contentsline {subsection}{\numberline {11.4}Dressed massless interface in the low-curvature region}{37}{subsection.11.4}%
+\contentsline {section}{\numberline {12}Yukawa kernels and positivity lemmas}{37}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Optional strong-coupling sharpening}{38}{subsection.12.1}%
+\contentsline {section}{\numberline {13}Source Extraction Map}{38}{section.13}%
+\contentsline {section}{\numberline {14}Not Used Here}{38}{section.14}%

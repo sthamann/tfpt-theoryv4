@@ -1,0 +1,162 @@
+\documentclass[11pt,a4paper]{article}
+\input{tfpt45-common}
+
+\title{\color{tfptblue}\textbf{Admissibility, Strong CP, and Nonperturbative QFT Closure}\\[0.35em]
+{\Large on the TFPT Branch}}
+\author{Stefan Hamann \and Alessandro Rizzo}
+\date{{\normalsize\color{tfptgray}\sffamily Paper 4 of the TFPT 4.5 series -- \today}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This paper isolates the analytic closure layer of TFPT. The selector $\Padm$ is treated as a
+physical admissible-sector construction, while the dynamics is carried by $Z_{\mathrm{rel}}$,
+admissible Schwinger distributions, Osterwalder--Schrader reconstruction, the local Minkowski net,
+stable massive scattering, and the exact admissible RG flow.
+\end{abstract}
+
+\begin{tfptfrontbox}
+\textbf{Inputs from previous papers.} Paper 1 supplies $\Pprim$. Paper 2 supplies the carrier and
+discrete determinant data needed for $P_{\mathrm{sing}}$ and $P_\Theta$. Paper 3 is not logically
+required except for optional observable cross-references.
+
+\textbf{New theorem contribution.} Conditional nonperturbative closure on the admissible sector:
+\[
+\Padm=\Pprim P_{\mathrm{sing}}P_\Theta,\qquad
+\theta_{\mathrm{eff}}=0,\qquad
+\operatorname{arg}\det M_u=\operatorname{arg}\det M_d=0,
+\]
+together with reflection positivity, OS reconstruction, local Minkowski net, stable massive
+scattering, and exact admissible flow.
+
+\textbf{Not claimed here.} No $\alpha$ detail calculation, no CMB, no E8, and no full empirical
+tables.
+
+\textbf{Falsification or audit surface.} The paper fails if selector and dynamics are conflated, if
+positivity/gap hypotheses are hidden, or if strong-CP closure uses an inadmissible phase convention.
+\end{tfptfrontbox}
+
+\begin{tfptwarningbox}
+Preferred claim language: \emph{conditional nonperturbative closure under explicitly stated
+admissibility, positivity, and gap hypotheses}. Avoid unqualified ``proved QFT'' rhetoric.
+\end{tfptwarningbox}
+
+\begin{tfptwarningbox}
+Every analytic theorem in this paper is to be read with its hypotheses in the statement, not as an
+unconditional construction of four-dimensional QFT. The standing checklist is: admissible
+Schwinger family, temperedness, Euclidean covariance, reflection positivity, clustering,
+locality-domain regularity, and a stated massive-sector gap where scattering is invoked.
+\end{tfptwarningbox}
+
+
+\begin{tfptclaimcontract}
+\textbf{Claim.} $\Padm$ selects the physical sector; strong CP closes; QFT reconstruction is conditional on stated analytic hypotheses.\par
+\textbf{Inputs.} $\Pprim$, carrier/determinant data, admissibility complex, positivity/gap hypotheses.\par
+\textbf{First assumptions.} Reflection positivity, temperedness, Euclidean covariance, clustering, locality-domain regularity, sector gap.\par
+\textbf{Proof status.} Conditional nonperturbative closure / standard-theorem interface.\par
+\textbf{Kill condition.} Hidden positivity/gap assumption, nonzero strong-CP angle, or failure of OS/local-net hypotheses.\par
+\end{tfptclaimcontract}
+
+\tableofcontents
+
+\section{Selector Versus Dynamics}
+
+The central distinction is
+\[
+\Padm\quad\text{selects the physical sector},
+\]
+whereas dynamics is carried by
+\[
+Z_{\mathrm{rel}}
+\Rightarrow
+\{S_n^T\}
+\Rightarrow
+(\mathcal H_{\mathrm{adm}},\mathfrak A_{\mathrm{adm}})
+\Rightarrow
+\Gamma_k
+\Rightarrow
+\GrenTFPT .
+\]
+This separation must be repeated in the introduction and conclusion because it is the main defense
+against overclaiming.
+
+\section{Full Admissibility Complex}
+
+After carrier and determinant data are fixed, the full selector is
+\[
+\Padm=\Pprim P_{\mathrm{sing}}P_\Theta.
+\]
+The paper should retain the two-stage upgrade from $\Pprim$ to $\Padm$, the Hodge projector
+description, and the exact role of the gap projection. Carrier material is summarized only as an
+input.
+
+\section{Strong CP Closure}
+
+The strong-CP sector is stated as an admissibility result:
+\[
+\theta_{\mathrm{eff}}=0,
+\qquad
+\operatorname{arg}\det M_u=0,
+\qquad
+\operatorname{arg}\det M_d=0.
+\]
+The argument should connect hadronic singlet selection, determinant structure,
+$\gamma_5$-Hermiticity, and the sheet involution without importing phenomenological tuning.
+
+\section{Reflection Positivity and OS Reconstruction}
+
+The reflection-positivity block should state all assumptions on the admissible Schwinger functions,
+fermionic positivity, quotient form, and domain regularity. The OS theorem is used as a standard
+interface only after the admissible-sector positivity hypotheses are named.
+
+\section{Local Net and Scattering}
+
+The local Minkowski net, Haag--Ruelle/LSZ massive scattering, and dressed massless interface are
+treated as conditional closure outputs. The paper must distinguish stable massive scattering from
+low-curvature dressed massless behavior.
+
+\section{Exact Admissible Flow}
+
+The exact admissible RG flow is the analytic continuation of the same sector:
+\[
+\partial_k\Gamma_k
+=
+\frac12\operatorname{STr}\left[(\Gamma_k^{(2)}+R_k)^{-1}\partial_kR_k\right]_{\mathrm{adm}},
+\]
+with the admissible projection included as part of the flow definition. The observable hierarchy is
+included only as far as it supports the QFT closure layer.
+
+\clearpage
+\section{Main Technical Development}
+
+This section contains the main technical development assigned to this paper by the TFPT 4.5 clean split. Cross-paper background is referenced through dependency and scope boxes; extended backend material is kept in the Technical Companion.
+
+\input{source_extracts/04_qft_source.tex}
+
+\section{Source Extraction Map}
+
+\begin{tfptsourcebox}
+Use \sourceDraft:
+\begin{itemize}[leftmargin=1.5em]
+    \item Sections 7.4 and 7.5 for hadronic admissibility and strong-CP ingredients.
+    \item Section 8 as the main technical body, with carrier repetition removed.
+    \item Sections 8.20--8.22 for topological positivity and strong-CP closure.
+    \item Sections 8.23--8.41 for reflection positivity, OS closure, local net, and scattering.
+    \item Section 13.2 for exact admissible RG flow, 1PI expansion, and observable hierarchy.
+    \item Appendices E, F, and H as the technical backend.
+\end{itemize}
+\end{tfptsourcebox}
+
+
+\begin{tfptexports}
+Exports: $\Padm=\Pprim P_{\mathrm{sing}}P_\Theta$, $\theta_{\mathrm{eff}}=0$, admissible Schwinger/OS interface, local-net and RG-flow hypotheses/results under conditional closure.
+\end{tfptexports}
+
+\section{Not Used Here}
+
+Exact electromagnetic benchmark derivations, CKM/PMNS prediction tables, gravity/metrology
+readouts, CMB spectra, sky realization, E8 grammar, full empirical ledgers, horizons, and transient
+channels are not used as proof inputs in this paper.
+
+\end{document}

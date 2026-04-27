@@ -1,0 +1,3071 @@
+\documentclass[11pt]{article}
+% Compile with LuaLaTeX or XeLaTeX for full Unicode support.
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{fvextra}
+\DefineVerbatimEnvironment{MyVerbatim}{Verbatim}{breaklines=true,breakanywhere=true,fontsize=\small}
+
+\title{Paper V1.06 - 01.09.2025}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\noindent\textbf{Source PDF:} Paper V1.06 - 01.09.2025.pdf
+
+\bigskip
+\noindent\textbf{Note:} This \LaTeX\ file contains a best effort text extraction of the PDF.
+Line breaks and pagination markers are preserved in a verbatim block.
+
+\bigskip
+\begin{MyVerbatim}
+===== Page 1 of 81 =====
+Paper V1.06 - 01.09.2025
+Paper V1.06 - 01.09.2025
+α
+Von Topologie zu Dynamik: Die Ordnung hinter und den
+Naturkonstanten
+Stefan Hamann, 01.09.2025, Version 1.0.6
+Von Topologie zu Dynamik: Die Ordnung hinter $\alpha$ und den Naturkonstanten
+Abstract
+1. Introduction
+- 1.1 Der genetische Algorithmus
+- 1.2 ) Genetischer Algorithmus – Setup, Validierung, Ergebnisse
+- 1.3) Repräsentative Hoch-Fitness-Lagrangians und Muster
+- 1.4) Vom Muster zur ersten Theorie-Iteration
+2.) Erste 6D→4D-Modelle
+2.1 Erkenntnisse aus der Vorstufe
+3. Full-Stack Theory: Von Geometrie zu Dynamik
+3.1 Bottom-Up Approach: Konstante als Invariante
+3.2 Geometrische Herleitung von c₃ und φ₀
+3.2.1 Der Fixpunkt c₃
+3.2.2 Die Längenskala φ₀
+3.2.3 ABJ-Link zu $c_3$
+3.3 Von Fixpunkten zur konkreten Struktur: 11D → 6D → 4D und E₈
+3.3.1 Warum 11 Dimensionen?
+3.3.2 Rationale Cusps und Möbius Leiter
+4 Big Picture der Full-Stack Theory
+4.1 Die E₈-Kaskade: Mathematische Struktur und physikalische Anker
+4.2 Wie diese Form gefunden wurde
+4.3 Berechnung der Kaskadenstufen
+4.4 Direkte Treffer und Interpretation
+4.5 Konstruktion der Kette und Ableitung der Dämpfung — Algorithmus und Eindeutigkeit
+4.5.1 Daten, Graph und gültige Ketten
+4.5.2 Bewertungsfunktion und totale Ordnung
+4.5.3 Eindeutigkeitssatz
+4.5.4 Exakter Algorithmus auf dem geschichteten DAG
+4.5.5 Praktische Reproduktion und Qualitätschecks
+4.6 Interpretation
+5. Zwei-Schleifen RGE-Run: Dynamische Fingerprints der Fixpunkte
+5.1 Konfiguration
+5.1b Schwellen aus der $E_{8}$-Leiter
+5.2 Ergebnisse
+5.2b Gauge–Moduli–Locking im E sechs Fenster
+5.3 Korrelationen
+5.4 Interpretation
+5.5 Fazit
+6. Inflation aus Topologie und Geometrie
+6.1 Setup und Annahmen
+6.2 Feldraum und kanonische Variable
+1 / 81
+
+===== Page 2 of 81 =====
+6.3 Potential auf dem Plateau
+Paper V1.06 - 01.09.2025
+6.4 Universelle Vorhersagen
+6.5 Zahlen aus TFPT
+6.6 Verbindung zur Kaskade $E_{8}\to E_{7}\to E_{6}$
+6.7 Abgleich mit Referenzwerten
+6.8 Tests und klare Falsifikation
+6.9 Harter Abgleich mit Referenzwerten
+6.10 Reheating Fenster und $\Delta N$
+6.11 Info Box
+6.12 Eindeutige Fixierung von $\alpha_{\text{inf}}$
+7. Rolle von α und die parameterfreie Lösung
+7.1 Motivation und Ursprung des Ansatzes
+7.2 Ein Parameter Normalform für $\alpha$: Darstellung nur in $c_{3}$
+7.3 Die Lösung
+7.4 Genauigkeit der Lösung
+7.5 Alternative Näherungen und optimierte Berechnungsarten
+7.5.1 Kubikwurzel-Näherung
+7.5.2 Ramanujan-ähnliche Serie
+7.5.3 Newton-Verfahren
+7.6 Variationsableitung in vier Dimensionen (kubische Fixpunktgleichung aus der Einstein Wirkung)
+7.6.1 Callan–Symanzik-Route
+7.6.2 A und κ auf einen Blick mit Querverweisen
+7.7 Interpretation
+8. Von E₈ zu E₇ zu E₆ und zum Standardmodell
+Zwei Achsen, ein gemeinsames Raster
+Wie aus Struktur und Dynamik Zahlen des SM werden
+Wo ist der Anschluss an das Standardmodell
+Was machen die Stufen ohne direkten Block
+8.0a Chiralität aus Rand und Fluss: operative Kurzfassung
+8.1 Ausführliche Beschreibung
+8.1.1 Block-Konstanten aus Randzyklen und abelscher Spur
+8.1.2 Herleitung der $\zeta_{B}$-Formel aus dem Randfunktional
+8.2 Rechenrezept in drei Schritten
+8.3 Benötigte Leiterstufen $\varphi_n$ (log exakt)
+8.4 Ergebnisse pro Block mit Referenzen
+8.4.1 Elektroschwacher Block $n=12$
+8.4.2 PQ Block $n=10$
+8.4.3 Seesaw Block $n=5$
+8.4.4 Flavor Anker aus $n=1$
+8.4.5 Hadron Fenster und pionische Observablen
+8.4.6 Feinstrukturkonstante $\alpha$
+8.4.7 Kosmologie aus der Basisstufe
+8.5 Zusammenfassung auf einen Blick
+8.5.1 Systematik der Abweichungen
+8.6 Wo E₇ und E₆ konkret einhaken
+8.7 Was noch offen ist und wie wir es schließen
+8.8 Zahlenkasten für diese Sektion
+9. Weitere Informationen, Ausblick und FAQ
+9.1 Ergänzungen zum Verständnis
+2 / 81
+
+===== Page 3 of 81 =====
+Selbstkonsistenz: $\varphi_{0}\leftrightarrow \alpha$
+Paper V1.06 - 01.09.2025
+9.2 Offene Fragen und nächste Schritte
+9.3 FAQ: Zehn Fragen und Antworten
+9.4 Plausibilitätsargumente: Wahrscheinlichkeit und strukturelle Abhängigkeiten
+Appendix A — Zahlenkasten der Fixpunkte (hochpräzise)
+Appendix B – E₈-Kaskade in geschlossener Form
+B.0 Verifikation der Eindeutigkeit
+B.1 – E8 Kaskade: log exakte Größen pro Stufe
+Appendix C – Block-Formeln für Observablen
+C.8 Möbius Leiter: Definition und Fehlerfortpflanzung
+Appendix D: Möbius Faser: Rand, Krümmungsnormalisierung und der Koeffizient 6pi
+D.1 Setup, Notation und konforme Skalierung
+D.2 Orientierbare Doppelabdeckung und der Naht-Beitrag
+D.3 Reduzierte 6D-Wirkung und der lineare $\varphi$-Koeffizient
+D.4 Stationarität und Baumwert $\varphi_{\text{tree}}$
+D.5 Der topologische Zuschlag $\delta_{\text{top}}$
+D.6 Eindeutigkeit, Invarianz und Normierungsfragen
+D.7 Konsistenzcheck
+D.8 Cross Ratio
+D.9 Kurze FAQ
+Ergebnis
+Appendix E — Von der 11D-Wirkung zum 4D-Koeffizienten $A$ und zur Log-Konstante $\kappa$
+E.1 Setup der effektiven 4D-Theorie
+E.2 Integrieren des schweren Modus und lokale Operatoren
+E.3 Hintergrundfeld-Methode: Log-Anteil der Vakuumpolarisation
+E.4 Integrierte Eins-Schleife und $\kappa$
+E.5 Fixpunktgleichung aus Callan–Symanzik
+Appendix F – Zwei-Schleifen RGE-Setup
+Konfiguration
+Resultate
+Fingerprints der Fixpunkte
+Nahe Unifikation
+Kontinuität und Steigungen
+Spacing Invariante
+PyR@TE Konfiguration (kurz, v2)
+Appendix G Nilpotent Orbits in Type E8
+Appendix H: Referenzen:
+- 1. Nilpotente Orbits in Semisimple Lie-Algebren (insbesondere E8)
+- 2. Chern-Simons-Term in 11D Supergravity und Topologische Fixpunkte
+- 3. E8 in Grand Unified Theories (GUTs) und String-Theorie
+- 4. Theoretische Ableitungen der Feinstrukturkonstante (α)
+- 5. Weitere Verwandte Themen (z.B. RG-Flüsse, Genetische Algorithmen in Physik)
+Appendix I: Changelog
+Version 1.0.6 - 2025-09-01
+Appendix J — Chiralität auf der Doppelabdeckung
+J.1 Setup und Notation
+J.2 Sechs dimensionale Spinor Reduktion und Projektoren
+J.3 Index Satz auf $\widetilde M$ und Familienzahl
+J.4 Anomaliefreiheit einer Familie
+J.5 Kompatibilität mit Rangfenstern und Spur 3 / 81
+
+===== Page 4 of 81 =====
+J.6 Stabilität gegenüber Zwei Schleifen Fenstern
+Paper V1.06 - 01.09.2025
+Abstract
+Wir zeigen, dass die Feinstrukturkonstante α und weitere fundamentale Größen nicht als freie Inputs benötigt werden,
+sondern aus Topologie, Geometrie und Symmetrie folgen. Ausgangspunkte sind
+der topologische Fixpunkt c 3 = 8 1 π ,
+eine geometrisch definierte Längenskala φ 0 = 6 1 π + 256 3 π4 =0.053171952 (reduzierte Planck-Einheiten),
+sowie eine durch E₈ geordnete Dämpfungsfunktion γ(n) für die diskrete Vakuumleiter φ n.
+Kernresultat ist eine Ein-Parameter-Normalform für α (Parameter = c 3). Aus c 3 folgen exakt
+4 b 1 41
+[φ = c +48c4, A=2c3, κ= 1 ln , b = ,]
+0 3 3 3 3 2π φ 1 10
+0
+und damit die kubische Fixpunktgleichung
+1
+[ α3−2c3α2−8b c6ln( )=0 ]
+3 1 3 4c +48c4
+3 3 3
+mit genau einer reellen physischen Lösung α(c 3 ). Für c 3 = 8 1 π erhalten wir
+[φ =0.0531719521768, κ=1.914684795, α=0.007297325816919221, α−1 =137.03650146488582,]
+0
+also eine Abweichung von 3.67 ppm gegenüber CODATA-2022 – ohne freie Parameter.
+Dieselbe Struktur erzeugt eine log-exakte E₈-Kaskade φ n+1 =φ n e−γ(n), deren Ankerstufen Flavor-Mischungen,
+elektroschwache und hadronische Skalen sowie kosmologische Konstanten treffen.
+Eine zwei Schleifen RGE Analyse bestätigt beide Fingerprints:
+α 3 (1PeV)=0.052923411 liegt 0.47% unter φ 0 =0.053171952,
+und bei μ≃2.5×108GeV ergibt sich α 3 =0.039713807, also 0.19% unter c 3 =1/(8π).
+Eine farbadjunkte Brücke G8 oberhalb M G8 =1.8×1010GeV
+reduziert die Steigung von α−1 von 7 zu 5 und erzeugt einen engen Unifikationskorridor mit minimaler relativer
+3 2π 2π
+Spreizung 1.23% bei μ⋆ ≈1.43×1015GeV.
+Damit ergibt sich ein konsistentes Bild:
+Topologie fixiert die Normalisierungen, Geometrie die Längenskala, E₈ ordnet die Skalenleiter, RG-Dynamik bestätigt
+die Fingerabdrücke.
+4 / 81
+
+===== Page 5 of 81 =====
+Paper V1.06 - 01.09.2025
+Info Box: Notation und Konventionen
+Indizes: (c 3 →c ₃ ),(b 1 →b ₁ ) im Fließtext, in Formeln wie gesetzt.
+Längenskala: (ϕ 0 = 6 1 π + 256 3 π4 ),(ϕ n+1 =ϕ n e−γ(n)).
+Topologie und Kopplungen: (g=8c2 = 1 ),(A=2c3 = 1 ).
+₃ 8π2 ₃ 256π3
+RG Konstante: (κ= b ₁ ln 1 ),(b =41∕10) in GUT Norm.
+2π ϕ0 ₁
+Gruppen: (E 8 ),(E 7 ),(E 6 ) immer als Indexschreibweise (E ₈ ),(E ₇ ),(E ₆ ).
+Einheiten: alle dimensionierten Größen in reduzierten Planck Einheiten sofern nicht anders angegeben.
+1. Introduction
+Die Frage nach dem Ursprung von Naturkonstanten – insbesondere der Feinstrukturkonstante α – wird hier bottom-up
+beantwortet: Konstanten sind Invarianten eines gemeinsamen Rahmens aus Topologie, Geometrie und Symmetrie,
+nicht externe Knöpfe.
+1.1 Der genetische Algorithmus
+Wir lassen einen genetischen Algorithmus (GA) über Lagrange-Dichten mit sechs Koeffizienten (c 0 ,…,c 5 ) evolvieren
+(Kinetik, Masse, quartische Kinetik, Maxwell, EH-Term). Harte physikalische Constraints (Lorentz, Ghostfreiheit, richtige
+Vorzeichen) werden strikt erzwungen; Fitness misst fehlerinvariant δ c ,δ α ,δ G zu Zielgrößen. Typische Populationen
+N=800, Turnierselektion, Eliten, Crossover, adaptive Mutationen. Ergebnis: robuste Cluster bei c 4 (EM-Normierung), c 3
+(quartische Kinetik, Spur 1/(8π)2) und einem engen φ 0-Tal.
+Abbildung: Benutzeroberfläche der GA-Search Application
+5 / 81
+
+===== Page 6 of 81 =====
+Paper V1.06 - 01.09.2025
+1.2 ) Genetischer Algorithmus – Setup, Validierung, Ergebnisse
+Konvergenz: ∼ 24 Mio. Bewertungen, ∼ 15. 000 Generationen; Reproduzierbarkeit über Seeds.
+Muster: c 3 erscheint als Quadratspur 8c2 3 = 8π 1 2 ⇒ Fixpunkt c 3 = 8 1 π . Massenterm-Cluster legen φ 0 nahe.
+EM-Normierung deutet auf ln(1/φ 0 ) im F2-Sektor.
+Ablationen: Ohne Constraints → Ghost/Tachyon-Kollaps; ohne separaten Feinschliff auf c 4 bleibt α auf 3–4 Ziffern
+stecken. Adaptive Präzision verhindert Rundungsartefakte.
+1.3) Repräsentative Hoch-Fitness-Lagrangians und Muster**
+Beispiele (aus Hall-of-Fame):
+L =−0.57618478(∂ φ)2 + 0.57618478(∇φ)2 − 0.98847468φ2
+#3566 t
++0.0130338797(∂ φ)2φ2 − 0.0917012368F2
+t μν
+L =−0.50000000(∂ φ)2 + 0.50000000(∇φ)2 − 0.059422638φ2
+can. t
+−0.039752599(∂ φ)2φ2 − 0.10047012F2 + 3.2658×108κR
+t μν
+Systematische Cluster (robust über Seeds/Generationen):
+Quartischer Kinetik-Koeffizient (hier c 3 der Dichte):
+c(Lag) ≃ 1 =0.0126651 (observiertz. B. 0.0130339, Δ∼+2.9%). Wir interpretieren dies als Quadratspur des
+3 8π2
+1
+topologischen Fixpunkts c( 3 Topo) = 8π , 8π 1 2 =8(c( 3 Topo))2 , der im nichtlinearen Term (∂ t φ)2φ2 wiederkehrt.
+Skalar-Massenterm: Häufige Peaks in [,0.051,,0.061,] (in
+M¯
+P). Wir identifizieren den Längen-Fixpunkt
+φ 0 =0.053171952 (M¯ P ), φ 0 /√8π=0.0106063M P.
+|c |
+Maxwell-Normierung: c 4 clustert bei -0.091701, was α model = 4π 4 ≈0.007297352566 reproduziert (ppm-Präzision).
+Varianten mit -0.04585 entsprechen einer alternativen internen F2-Normierung (Faktor ½).
+Kurzinterpretation. Der GA „findet“ keine Zufallszahlen, sondern kanonische Invarianten: die topologische
+Normalisierung 1/(8π), die geometrische Länge φ 0 und einen logaritmischen Fingerabdruck im EM-Term (s. u.). Diese
+Muster sind über Populationen, Seeds und Suchmodi stabil.
+6 / 81
+
+===== Page 7 of 81 =====
+Paper V1.06 - 01.09.2025
+1.4) Vom Muster zur ersten Theorie-Iteration
+Die drei GA-Befunde führen direkt zur ersten, analytisch kontrollierten Theorieiteration:
+1. Fixpunkte statt Fits.
+Der wiederkehrende Wert c(Lag)≈1/(8π2) erzwingt den topologischen Fixpunkt c(Topo) =1/(8π) als zugrundeliegende
+3 3
+Normalisierung nichtlinearer Terme.
+2. Geometrische Skala φ 0.
+Die Massenterm-Cluster legen φ 0 als geometrischen Radion-Fixpunkt fest (Möbius-Reduktion). Damit wird eine
+diskrete Skalenleiter φ n plausibel, die später in der E_8-Kaskade präzisiert wird.
+3. EM-Logarithmus ln(1/φ 0 ).
+Die beobachtete EM-Normierung erlaubt eine parameterfreie Fixpunktgleichung für α, in der sich Topologie (1/8π)
+und Geometrie (φ 0) koppeln. Diese Gleichung besitzt genau eine physikalisch reelle Lösung und reproduziert α auf
+ppm-Niveau – konsistent mit den GA-Outputs.
+4. Dynamische Prüfung.
+Aufbauend auf (1)–(3) wurde später ein 2-Loop-RG-„Smoke Test“ formuliert (E_8-Kaskaden-Mock mit EH-Term). Die
+Flüsse zeigen die Fingerprints α 3 (1PeV)≈φ 0 und α 3 (μ)=1/(8π) bei μ∼2.5×108GeV sowie einen engen
+Gleichstandskorridor der drei Kopplungen bei 1014–15GeV – in Einklang mit der GA-Struktur und ohne Feintuning.
+Bottom line. Der genetische Algorithmus validiert (durch Reproduzierbarkeit, harte Physik-Constraints und
+Ablationen) ein strukturiertes, nicht-parametrisches Muster in der Lagrange-Dichte. Dieses Muster –
+c( 3 Topo) =1/(8π),φ 0 als Längen-Fixpunkt und ein EM-Logarithmus in c 4 – motiviert unmittelbar die erste analytische
+Theorieiteration (Fixpunktgleichung für α, E_8-Kaskade, 2-Loop-RG-Check) und ersetzt Fits durch Fixpunkte.
+2.) Erste 6D→4D-Modelle
+Nach dieser numerischen Spur wurde ein analytisch kontrollierbares Zwischenmodell entwickelt: ein kompakter 6D
+„Quantum Foam“-Ansatz, der auf eine 4D-Effektive Theorie reduziert wurde. Ziel war es zu prüfen, ob die im GA
+entdeckten Konstanten in einem realistischen Feldtheorie-Setting reproduziert werden.
+Zentrale Eigenschaften dieser 6D-Version:
+1. Ein-Parameter-Struktur:
+Der Vakuumwert φ 0 ≈0.058M¯ P genügte, um zentrale kosmologische Observablen zu fixieren. Es ergaben sich
+n
+s
+≈1−πφ
+0
+≈0.964, r≈0.008−0.010,
+im Einklang mit Planck-Daten. Auch die Reheating-Temperatur T rh ∼1013GeV lag stabil im erwarteten Bereich.
+2. Topologische Spur von c 3:
+Bereits hier traten Koeffizienten wie g n =n/(8π) oder quartische Terme ∼1/(8π2) auf. Dies deutete klar darauf hin,
+dass c 3 =1/(8π) ein fundamentaler Fixpunkt sein musste.
+3. Konsistente Energieskalen:
+Inflationsskala E inf ∼5×1016GeV,ReheatingT rh ∼1013GeV, Sub-Plancksche Felder und perturbative Stabilität
+bestätigten die physikalische Plausibilität.
+Allerdings zeigten sich auch Limitierungen:
+Die Amplitude A s wurde um 10–20 % verfehlt, da Nullmoden und Geometriefaktoren nicht sauber normalisiert waren.
+7 / 81
+
+===== Page 8 of 81 =====
+RG-Tests lieferten falsche Werte für sin2θ W ,α s und die W/Z-Massen, da Schwellenbehandlungen unvollständig
+Paper V1.06 - 01.09.2025
+waren.
+Yukawa-Hierarchien blieben zu steil, wenn man sie allein mit Potenzen von φ 0 modellierte.
+Diese Defizite machten klar, dass ein tieferliegendes Symmetrie- und Ordnungsprinzip nötig war.
+2.1 Erkenntnisse aus der Vorstufe
+Die 6D-Phase war der entscheidende Beweis des Prinzips. Drei Erkenntnisse kristallisierten sich heraus:
+1. Fixpunkte statt Fits:
+c 3 =1/(8π) und φ 0 sind Invarianten, keine verstellbaren Knöpfe. Ihre wiederholte Emergenz im GA und ihre Stabilität
+in 6D-Tests zeigte, dass sie tieferliegende Struktur tragen.
+2. Diskrete Skalenleiter:
+Die Bedingung χ=φR=1 erzeugte bereits eine diskrete Leiter an Skalen. Dies bereitete den Übergang zur
+späteren VEV-Kaskade φ n+1 =φ n e−γ(n) vor.
+3. Symmetriebedarf:
+Um die Form von γ(n) und die Stabilität der Leiter zu begründen, war ein größeres Gerüst nötig. Hier führte der Weg
+konsequent zu E₈ und zur Einbettung in ein 11D-Elternmodell mit Möbius-Kompaktifikation.
+3. Full-Stack Theory: Von Geometrie zu Dynamik
+Die bisherigen numerischen Hinweise aus genetischem Algorithmus und 6D-Vorstufe legen nahe, dass fundamentale
+Konstanten keine willkürlichen Eingaben sind. Der nächste Schritt besteht darin, diese Spur systematisch und bottom-
+up auszubauen: Wir fragen nicht, wie man eine Theorie mit α, m_p oder Ω_b konsistent formulieren kann, sondern: was
+wäre, wenn alle Konstanten von Anfang an geometrisch und topologisch fixiert sind?
+Diese Perspektive verändert den Blick. Konstanten werden nicht mehr als „Parameter“ behandelt, sondern als
+Invarianten, die sich aus der Struktur des zugrunde liegenden Raumes ergeben. In dieser Sicht ist α keine Zahl, die
+experimentell gemessen und in die Theorie zurückgeschrieben wird, sondern das Ergebnis einer Fixpunktgleichung,
+die durch Topologie, Geometrie und Symmetrie erzwungen wird.
+3.1 Bottom-Up Approach: Konstante als Invariante
+Die Hypothese lautet:
+1. Topologische Fixpunkte bestimmen fundamentale Normalisierungen. Beispiel: der Chern–Simons-Faktor 1/(8π).
+2. Geometrische Reduktionen legen fundamentale Längenskalen fest. Beispiel: der Radion-Wert φ 0.
+3. Symmetrie-Ordnungen (wie E₈) definieren die Relationen zwischen Skalenstufen. Beispiel: die Dämpfung γ(n).
+In einem solchen Framework sind Konstanten nicht frei, sondern „Zwangslösungen“ – das, was übrig bleibt, wenn man
+Topologie, Geometrie und Symmetrie konsequent zusammennimmt.
+Diese Sichtweise ist radikal bottom-up: Anstatt vom Standardmodell oder einer String-Konstruktion auszugehen, beginnt
+man mit den einfachsten invarianten Objekten (Fixpunkte, Normalisierungen, Orbits) und prüft, wie weit man kommt.
+3.2 Geometrische Herleitung von c₃ und φ₀
+8 / 81
+
+===== Page 9 of 81 =====
+Paper V1.06 - 01.09.2025
+3.2.1 Der Fixpunkt c₃
+Numerik und Definition.
+Die GA-Läufe liefern stabil einen quantisierten Topologie-Koeffizienten
+g = 1 ≈ 0.012665147955.
+8π2
+Wir parametrisieren dies durch
+g = 8c2 3 , ⇒ c 3 = 8 1 π ≈ 0.039788735773,
+und prüfen sofort die Identität 8c2 =1/(8π2) numerisch.
+3
+Strenge Herleitung aus der elf dimensionalen Chern Simons Kopplung.
+Ausgangspunkt ist
+S CS = 12 1 κ2 11 ∫ M 11 C 3 ∧G 4 ∧G 4,
+G 4 =dC 3.
+Wir reduzieren auf M 11 =M 4 ×Y 7 und wählen integer-normierte Kohomologieformen
+ω
+2
+∈H2(Y
+7
+,Z),
+ω
+3
+∈H3(Y
+7
+,Z),
+mit
+n := ∫
+Y
+ω
+3
+∧ω
+2
+∧ω
+2
+∈ Z.
+7
+Der Kaluza-Klein-Ansatz
+C 3 =a(x)ω 3 +A(x)∧ω 2,
+G =F ∧ω
+4 2
+liefert für den vierdimensionalen Topologie-Term genau
+9 / 81
+
+===== Page 10 of 81 =====
+C ∧G ∧G
+3 4 4
+Paper V1.06 - 01.09.2025
+⊃aF ∧F ω 3 ∧ω 2 ∧ω 2.
+Nach Integration über Y 7 bleibt
+S
+CS
+⊃
+12
+n
+κ2 11
+∫
+M 4
+aF ∧F.
+Wir definieren ein dimensionsloses Axion a^ durch Reskalierung von a sowie eine kanonische Normierung des
+vierdimensionalen Eichfeldes, so dass alle dimensionsbehafteten Faktoren aus κ 11 und aus dem Volumen von Y 7
+absorbiert werden. Entscheidend ist dann die Gross-Eich-Invarianz von eiS: für a^→a^+2π muss
+ΔS = g(2π)∫ F ∧F = 2πZ gelten. Da ∫ F ∧F =8π2k mit k∈Z folgt
+M M
+4 4
+g = n .
+8π2
+Der minimale Schnitt n=1 ergibt
+g= 1 ,
+8π2
+g=8c2 3 ⇒ c 3 = 8 1 π .
+Damit ist c 3 nicht gefittet, sondern direkt durch die ganzzahlige Intersektion auf Y 7 fixiert. Zusätzliche Level-Argumente
+sind nicht erforderlich.
+Siehe die komprimierte Ableitung der Normierung in Appendix E, Abschnitt „Derivation Note zur Normierung von
+A und κ“, sowie die Möbius-Geometrie in Appendix D.
+Erklär Box: ABJ Anomalie und die gleiche Topologie Skala
+~
+Die axiale Anomalie (∂ μ jμ 5 = 16 e π 2 2 FF) verwendet dieselbe Zahlen Skala (1∕(8π2)) wie die reduzierte Chern Simons
+Kopplung. In unserem Rahmen ist
+(g= 1 =8c2) keine Zusatzannahme, sondern eine äquivalente Parametrisierung der gleichen topologischen
+8π2 ₃
+Invariante.
+Siehe auch die Detailableitung in Appendix E.
+3.2.2 Die Längenskala φ₀
+Definition und Normalisierung.
+Die zweidimensionale Möbius-Faser M trägt das Modulus φ über die Metrik
+g M = φ2g^ M,
+R M = φ−2R^ M.
+Wir verwenden die dimensionslose Kombination
+χ = φR
+M
+als Normierungsgrösse der Faserkrümmung und legen
+χ = 1
+als Bedingung für eine Einheit topologischer Torsion fest.
+Baumwert.
+Nach Reduktion des sechs dimensionalen Einstein-Hilbert-Anteils entsteht ein effektives Potential, dessen φ-
+Abhängigkeit aus dem Krümmungsteil der Faser linear ist. Die stationäre Bedingung ∂ φ V eff =0 unter χ=1 fixiert
+10 / 81
+
+===== Page 11 of 81 =====
+φ tree = ∫ M~√ 1 g^R^e
+M
+ff . Paper V1.06 - 01.09.2025
+~
+Für die Möbius-Faser mit orientierbarer Doppelabdeckung M und der hier gewählten Rand- plus Krümmungs-
+Normalisierung trägt die effektive integrierte Krümmung den Wert
+∫ ~ √g^R^eff = 6π,
+M M
+woraus unmittelbar
+φ = 1 ≈ 0.053051647697
+tree 6π
+folgt.
+Hinweis: Die Zerlegung in Flächenkrümmung und Randbeitrag auf der orientierbaren Doppelabdeckung ist im Anhang
+ausgeführt. Für den Haupttext genügt, dass die Möbius-Normalisierung die effektive Krümmung auf 6π festlegt.
+Topologischer Zuschlag.
+Der universelle Zuschlag stammt aus dem quadratischen topologischen Beitrag, der über g festgelegt ist. Er ist
+unabhängig von lokalen Details der Faser und lautet
+δ top = 6 8π c 2 2 3 = 256 3 π4 ≈ 1.203044795×10−4 .
+Damit ist
+φ
+0
+= φ
+tree
++δ
+top
+=
+6
+1
+π
++
+256
+3
+π4
+;≈ 0.053171952177.
+Bezug zur reduzierten Planck-Norm.
+Ein GA-Cluster im Bereich 0.051 bis 0.061 in reduzierten Planck-Einheiten ist konsistent mit
+φ(M¯ P) ≈0.059
+0
+⇒ φ 0 = 0.059 ≈ 0.0117687973M P.
+√8π
+Interpretation.
+φ 0 ist damit keine freie Längenskala, sondern ein geometrisch-topologischer Invariant der Reduktion von elf auf sechs
+Dimensionen. Der Baumwert folgt aus der Möbius-Normalisierung, der Zuschlag aus der universellen Topologie-Skala
+g=1/(8π2).
+Topologische Einheitsform – alles aus (c 3)
+1 4
+c = , φ = c , δ =48c4,
+3 8π tree 3 3 top 3
+4 b 1 1
+φ = c +48c4, A=2c3, κ= 1 ln =4b c ln .
+0 3 3 3 3 2π φ 1 3 φ
+0 0
+1
+α3−2c3α2−8b c6 ln =0 .
+3 1 3 4c +48c4
+3 3 3
+Diese Reduktion eliminiert scheinbare Freiheitsgrade: (φ 0) und (A) sind keine Eingaben, sondern exakte Funktionen
+von (c 3).
+3.2.3 ABJ-Link zu c 3
+Die axiale Anomalie liefert
+11 / 81
+
+===== Page 12 of 81 =====
+~
+∂
+μ
+jμ
+5
+=
+16
+e
+π
+2
+2
+FF,
+Paper V1.06 - 01.09.2025
+also dieselbe universelle Topologie-Skala 1/(8π2), die auch im reduzierten Chern-Simons-Term erscheint. In unserem
+Rahmen ist der beobachtete Koeffizient
+g = 1
+8π2
+damit natürlich. Die Schreibweise
+c 3 = 8 1 π , g=8c2 3 ,
+ist eine äquivalente Parametrisierung und kein zusätzlicher physikalischer Annahmeschritt.
+3.3 Von Fixpunkten zur konkreten Struktur: 11D → 6D → 4D und E₈
+3.3.1 Warum 11 Dimensionen?
+Motivation.
+Elf Dimensionen bieten die minimal grosse Elternstruktur für Gravitation, Eichtopologie und die beobachtete Topologie-
+Skala. Der Chern Simons-Term der elf dimensionalen Supergravitation erzeugt nach Reduktion genau die quantisierte
+Kopplung g=1/(8π2).
+Reduktionsansatz.
+Mit M 11 =M 4 ×Y 7, integer-normierten ω 2 ,ω 3 und
+n = ∫
+Y7
+ω
+3
+∧ω
+2
+∧ω
+2
+∈Z,
+sowie
+C 3 =aω 3 +A∧ω 2,
+G 4 =F ∧ω 2,
+erhält man
+1 n
+S ⊃ (∫ ω ∧ω ∧ω )∫ aF ∧F = ∫ aF ∧F
+CS 12κ2 3 2 2 12κ2
+11 Y7 M4 11 M4
+Nach kanonischer Normierung der vierdimensionalen Felder und des dimensionslosen Axions a^ erzwingt Gross-Eich-
+Invarianz
+n n
+S ⊃ ∫ a^F ∧F, g=
+4 8π2 8π2
+M4
+Der minimale Schnitt n=1 liefert
+1 1
+g= , c =
+8π2 3 8π
+Ein zusätzlicher Hintergrundfluss ist für diesen Schluss nicht erforderlich und würde den F ∧F −Term nicht ersetzen.
+Entscheidend ist allein die ganzzahlige Intersektion auf Y 7 und die Quantisierung ∫ M F ∧F =8π2Z.
+4
+Konsequenz.
+Die beiden Fixpunkte
+c 3 = 8 1 π ,
+φ 0 = 6 1 π + 256 3 π4 ,
+12 / 81
+
+===== Page 13 of 81 =====
+entstehen damit direkt aus der elf dimensionalen Topologie und der Möbius-Geometrie der sechs dimensionalen Phase.
+Paper V1.06 - 01.09.2025
+Sie sind nicht frei wählbar, sondern durch Intersektionen, Gross-Eich-Invarianz und die gewählte Faser-Normalisierung
+bestimmt.
+3.3.2 Rationale Cusps und Möbius Leiter
+Idee.
+Die Flavor Randdynamik wirkt als Möbius Abbildung. Reelle Fixpunkte bei ±y erzeugen für eine kleine Deformation
+x=y−δ genau den Cross Ratio
+y+δ
+CR(x;y,−y,0)= .
+y−δ
+Damit ist die natürliche Leiterabbildung
+y+δ
+M y (δ)= y−δ .
+Cusps.
+Die rationalen Werte y∈{1, 1, 2} sind die relevanten Cusps der Randabbildung, konsistent mit der SU fünf Normierung
+3 3
+der Hypercharge Fraktionen.
+Ein einziger Deformationsparameter.
+Die beobachteten Massenleitern erscheinen über Wurzeln von Massenverhältnissen als
+√ m m s =M 1 (δ),
+d
+√mb =M (δ)(1+δ),
+ms 1
+√
+m
+mτ =M
+1
+(δ),
+μ
+√m μ =M (δ)M (δ),
+me 1 1/3
+√mc =M (δ),
+mu 2/3
+2/3
+√m t = .
+mc 2/3−δ
+Kalibrierregel aus Leptonen.
+1+δ
+Aus √m τ = folgt
+m μ 1−δ
+√m /m −1
+τ μ
+δ= .
+√m /m +1
+τ μ
+Topologischer Anker.
+Die Theorie fixiert die Verschiebung über
+3 φ
+δ = + 0
+⋆ 5 6
+und verknüpft die Leiter direkt mit der Grundkonstante φ 0, die auch in der Fixpunktgleichung für α erscheint.
+4 Big Picture der Full-Stack Theory
+Topologie liefert den Fixpunkt c 3 =1/(8π).
+Geometrie der Möbius-Reduktion fixiert φ 0.
+Symmetrie in Gestalt von E₈ bestimmt die Dämpfung γ(n).
+13 / 81
+
+===== Page 14 of 81 =====
+Dynamik über RG-Flüsse bestätigt beide Fixpunkte als „Fingerabdrücke“ im Verlauf.
+Paper V1.06 - 01.09.2025
+4.1 Die E₈-Kaskade: Mathematische Struktur und physikalische Anker
+Ziel und Idee
+Wir benötigen eine deterministische Ordnung für eine diskrete Skalenleiter φ n, die ohne Fits aus der Struktur der Theorie
+folgt. E acht liefert dazu die richtige Granularität. Die nilpotenten Orbits erzeugen eine natürliche Folge fallender
+Zentralisator Dimensionen D n, und daraus lässt sich eine Dämpfung γ(n) definieren, welche die Leiter φ n+1 =φ n e−γ(n)
+vollständig fixiert. Der Punkt ist nicht ein weiterer Fit an Daten, sondern die Ableitung der Leiter aus purer Struktur.
+Datenquelle und Auswahl der Kette
+Ausgehend von einer vollständigen Tabelle der E acht Orbits bauen wir einen Hasse Graphen auf den D=248−dimO
+Werten. Kanten verbinden nur benachbarte Schichten mit ΔD=2. Startpunkt ist A4+A1 bei D=60. Ein Beam Search
+über den Hasse Graphen liefert die streng monotone Kette mit maximaler Länge und minimaler Strukturabweichung.
+Bewertet wird entlang der Kette mit fünf rein strukturellen Größen: Glattheit der Schrittweiten, Sprungzahl, Summe der
+Höhenänderungen, kumulative Label Distanz sowie der Variationskoeffizient der dritten Vorwärtsdifferenz von lnD.
+Das Ergebnis ist eine eindeutige 27 stufige Kette
+D=60,58,…,8 (n=0,…,26).
+Die Orbit Labels folgen der bekannten Bala Carter Nomenklatur. Die Kette endet in E acht bei D=8; jenseits davon gibt
+es keine Orbit Stufe mehr. Das fixiert die Leiter bis n=26.
+Normierung und Dämpfung aus Strukturprinzip statt Wahl
+14 / 81
+
+===== Page 15 of 81 =====
+Ziel. Wir zeigen, dass die Anfangsdämpfung γ(0) und damit λ=γ(0)/s⋆ (s⋆ =ln248−ln60) nicht als freie Zahl
+Paper V1.06 - 01.09.2025
+eingeführt werden müssen, sondern durch ein strukturelles Extremalprinzip der E 8-Kette fixiert sind. Die log exakte
+Form γ(n)=λ[lnD n −lnD n+1 ] bleibt unverändert. Siehe die Kette D n =60−2n in 4.1 bis 4.5 und Tab. B.1.
+Definition (diskrete Glättungsfunktional). Setze
+[ \mathcal S[\lambda,\gamma(0)]=\sum_{n=1}^{26}\Big(\Delta^{2}\big[\ln\varphi_{n}\big]\Big)^{2}\quad\text{with}\quad&nbsp; \ln\va
+und Δ2[x n ]=x n+1 −2x n +x n−1. S misst die diskrete Krümmung der Leiter im reinen E 8-Raum, unabhängig von
+Einheiten.
+Nebenbedingung (physikalische Anker). Die Kette soll die beiden dynamischen Fenster ohne Fit treffen:
+[α (μ )≃φ , α (μ )≃c ,]
+3 E6 0 3 E8 3
+wobei μ E6 und μ E8 die in 5.2 extrahierten Fenster sind. Diese Bedingung ist rein strukturell, da c 3 und φ 0 Fixpunkte sind
+und die Lage der Fenster im Fluss aus 5.2 folgt.
+Satz 4.1.1 (Eindeutige Normierung). Das Minimierungsproblem
+[(λ⋆,γ⋆(0))=argmin{S[λ,γ(0)]} undertheconditionsdefinedabove]
+λ,γ(0)
+hat eine eindeutige Lösung. Numerisch ergibt sich
+[ \gamma^{\star}(0)=0.834000\pm 0.002,\qquad&nbsp; \lambda^{\star}=\frac{\gamma^{\star}(0)}{\ln 248-\ln 60}=0.587703\pm 0.001, ]
+identisch zur in 4.1 verwendeten Normierung. Damit ist γ(0) kein freier Fit, sondern das Resultat eines wohldefinierten
+Extremalprinzips auf der E 8-Kette, gekoppelt an die Fixpunkte aus 3.2 und an die RG-Fenster aus 5.2.
+Korollar. Alle Verhältnisgesetze φ m /φ n =(D m /D n )λ⋆ für m,n≥1 sind kalibrierungsfrei; γ(0) fällt dort weg. Für absolute
+Stufen mit n≥1 ist nur die Blockeinheit ζ B nötig, siehe 8.1 bis 8.3.
+Physikalische Lesart. Die Pfadwahl D n =60−2n minimiert Übergangskrämmung in lnD unter ΔD=2. Das
+Extremalprinzip fixiert die einzige verbleibende Normierungsfreiheit, ohne Rückgriff auf Daten außerhalb der Fixpunkte
+und der in 5.2 nachgewiesenen Fenster.
+Warum E acht und wie E sechs hineinpasst
+E acht liefert als größte einfache Ausnahmegruppe ein Orbit Gefüge mit ausreichend Tiefe, um eine lange Leiter ohne
+Mehrdeutigkeiten zu erzeugen. Die Reduktion E acht zu E sieben und E sechs ist in unserem Bild kein zusätzlicher
+Modell Trick, sondern spiegelt sich als E Fenster im Zwei Schleifen Fluss der Kopplungen wider. An genau den Stellen,
+wo α 3 (μ) die Werte 1/(8π), 1/(7π), 1/(6π) trifft, erscheinen die Signaturen der jeweiligen Gruppen.
+• E acht Fenster bei α 3 =1/(8π) verankert den topologischen Fixpunkt c 3.
+• E sechs Fenster bei α 3 =1/(6π) liegt nahe der geometrischen Skala φ 0 und verbindet damit Geometrie und Dynamik.
+• E sieben ist die Zwischenstufe, die den gleichmäßigen Abstand im Log Raum stabilisiert.
+Die Kaskade ordnet also Skalen, während die RG Fenster zeigen, dass genau diese Skalen auch dynamisch
+angesteuert werden. E acht gibt uns die diskrete Leiter, E sechs liefert die natürliche Ankerung an die beobachtete
+Geometrie, beide zusammen erklären, warum die Leiter nicht willkürlich ist.
+Wofür wir das brauchen
+Wir benötigen eine robuste, fit freie Skalenordnung für Flavor, EW, Hadronik und Kosmo. Die E acht Leiter mit log
+exakter Dämpfung liefert genau das. Sie erzeugt testbare Verhältnis Gesetze, markiert Blockgrenzen durch Orbit Höhe
+und lässt sich direkt mit Zwei Schleifen Flüssen verbinden. Vor allem aber ersetzt sie freie Knöpfe durch Invarianten: λ
+ist fest durch den Anker, φ n wird zur reinen Funktion von D n, und die wichtigen Verhältnisse zwischen Stufen sind
+vollständig ohne Kalibrierung vorhersagbar.
+15 / 81
+
+===== Page 16 of 81 =====
+Paper V1.06 - 01.09.2025
+Details zur geschlossenen Form, zur Tabelle der Stufen und zu kalibrierungsfreien Tests stehen in Appendix B.
+Hinweis zu Relationen.
+Die Kaskade liefert nur die Skalenordnung φ n.
+Die relationale Struktur der Flavor Leiter wird in Abschnitt 3.3.2 eingeführt und in 7.4.4 auf Daten angewendet.
+4.2 Wie diese Form gefunden wurde
+Ausgangspunkt ist die vollständige Liste nilpotenter Orbits von E acht mit ihren Orbitdimensionen dimO und Bala Carter
+Labels. Für jedes Orbit definieren wir die Zentralisator Dimension
+D = 248−dimO .
+Wir konstruieren aus allen Orbits einen Hasse Graphen über den D Schichten und erlauben nur Kanten mit ΔD=2. Ein
+Beam Search über diesen Graphen liefert eine strikt monotone Kette maximaler Länge
+D 0 =60, D 1 =58, D 2 =56, …, D 26 =8 ,
+mit den bekannten Labels von A4+A1 bis E8. Diese Kette ist eindeutig durch Monotonie, Schrittweite und
+Inklusionsstruktur bestimmt. Sie endet bei D=8; jenseits davon existiert in E acht keine weitere Orbitstufe.
+Die Dämpfung der Leiter wird ohne Fit direkt aus den Log Schrittweiten der Kette definiert.
+Wir verankern die Normierung am Übergang von der adjungierten Dimension zu D 0 =60
+[s⋆ =ln248−ln60, λ= 0.834]
+s⋆
+und setzen
+[γ(0)=0.834, γ(n)=λ[lnD −lnD ] (n≥1)]
+n n+1
+Diese Form ist log exakt. Eine Quadratik in n (vorheriger Approach) ist dafür nicht erforderlich und dient nur noch als
+Diagnostik. Der oft genannte Kubik Test auf lnD n zeigt global keine konstante dritte Vorwärtsdifferenz; lokal kann er in
+Teilfenstern näherungsweise greifen, ändert aber die log exakte Definition nicht. Für n≥1 beschreibt eine einfache
+Hyperbel A/(B−n) die Daten sehr genau, bleibt jedoch reine Näherung.
+Wie die Form gefunden wurde.
+y+δ
+Die Daten der sechs Verhältnisse √m a /m b zeigen dieselbe Abbildung y−δ für y∈{1, 1 3 , 2 3 }.
+Kalibriert man δ nur aus τ zu μ, tragen die übrigen fünf Stufen.
+3 φ
+Die Werte der Cusps fallen mit den Hypercharge Fraktionen zusammen, was δ ⋆ = 5 + 6 0 als topologisch motivierte
+Verschiebung nahelegt.
+Die Kaskade aus 4.1 ordnet Skalen, die Möbius Leiter ordnet Relationen. Beides greift ineinander, ohne zusätzliche freie
+Knöpfe.
+16 / 81
+
+===== Page 17 of 81 =====
+Paper V1.06 - 01.09.2025
+4.3 Berechnung der Kaskadenstufen
+Test Box: Drei Verhältnisgesetze ohne Kalibrierung
+λ λ λ
+[> ϕ12 =(36) , > ϕ15 =(30) , > ϕ25 =(10) ]
+ϕ 40 ϕ 36 ϕ 30
+10 12 15
+Diese drei Relationen sind rein strukturell aus der E₈ Kette (D n =60−2n). Sie dienen als sofortige
+Reproduktionstests unabhängig von jeder Einheitenwahl.
+Siehe Tabellenwert in Appendix B, Tab. B.1.
+Die Leiter φ n+1 =φ n e−γ(n) lässt sich mit der obigen \gamma Definition vollständig schließen.
+Da
+[∑n
+k=
+−
+1
+1[lnD
+k
+−lnD
+k+1
+]=lnD
+1
+−lnD
+n
+],
+folgt für n≥1
+[∑n
+k=
+−
+0
+1γ(k)=γ(0)+λ[lnD
+1
+−lnD
+n
+]],
+und damit die log exakte Leiter
+λ
+[φ
+n
+=φ
+0
+e−γ(0)(D
+D
+n) (n≥1), D
+n
+=60−2n, D
+1
+=58]
+1
+Drei Ratio-Tests ohne jegliche Normierung
+φ 36 λ φ 30 λ φ 10 λ
+[ 12 =( ) , 15 =( ) , 25 =( ) .]
+φ 40 φ 36 φ 30
+10 12 15
+Gültig für λ=γ⋆(0)/(ln248−ln60) aus 4.1.1. Damit sind die wichtigsten Konsistenzprüfungen der Leiter vollständig
+datenfrei. Siehe Tab. B.1.
+4.4 Direkte Treffer und Interpretation
+Die Positionen der Ankerstufen bleiben unverändert. Zahlen, die direkt φ n verwenden, sind mit der log exakten φ n aus
+Tab. B.2 neu einzusetzen. Stufen über n=26 sind als Extrapolation zu kennzeichnen.
+• n=0 Basisstufe
+Ω b =φ 0 (1−2c 3 )=0.04894 sowie θ c ≃arcsin(√φ 0 (1−φ 0 /2))=0.2264rad. Diese beiden Größen bleiben unverändert,
+da sie nur φ 0 und c 3 verwenden.
+• n=1 Flavor Anker
+sinθ 13 ≈√φ 1. Mit φ 1 =φ 0 e−γ(0)(D 1 /D 1 )λ folgt sinθ 13 ≈0.15196. Dieser Wert bleibt stabil, da nur γ(0) eingeht.
+• n≥2 blockweise Mappings
+Alle Observablen, die linear in φ n modelliert sind, werden direkt mit
+φ =φ e−γ(0)(60−2n)λ
+n 0 58
+neu eingesetzt.
+Beispiele:
+• PQ Fenster n=10: f a =ζ a M Pl φ 10, einmalige Kalibrierung von ζ a auf f a ∼1012GeV liefert m a im Standardfenster.
+17 / 81
+
+===== Page 18 of 81 =====
+• EW Block n=12: v H =ζ EW M Pl φ 12 setzt M W und MZ über die üblichen Relationen; $\zeta{\rm EW}$ bestimmt die
+Paper V1.06 - 01.09.2025
+Einheit.
+• Hadron Block n=15,17: m p =ζ p M Pl φ 15, m b =ζ b M Pl φ 15, m u =ζ u M Pl φ 17. Die ζ Konstanten bleiben blockweise fix, alle
+Relationen innerhalb des Blocks sind durch das Ratio Gesetz vorgegeben.
+• CMB Block n=25: T γ0 =ζ γ M Pl φ 25 und T ν =(4/11)1/3T γ0. Eine einmalige Kalibrierung auf T γ0 =2.725 K reproduziert
+T
+ν
+≃1.95 K.
+Ratio Tests ohne Kalibrierung
+Als unmittelbare, datenfreie Konsistenzprüfungen eignen sich
+φ
+12
+=(36)λ,
+φ10 40
+φ
+15
+=(30)λ,
+φ12 36
+φ 25 =(10) λ .
+φ 30
+15
+Diese Verhältnisse sind reine Strukturfolgen der E acht Kette.
+Hinweis zur Grenze Die E acht Leiter endet bei n=26. Aussagen zu n\approx 30 können als analytische Fortsetzung der
+Hyperbel Form diskutiert werden, gehören jedoch in den Ausblick.
+4.5 Konstruktion der Kette und Ableitung der Dämpfung — Algorithmus und
+Eindeutigkeit
+Ziel. Wir präzisieren die Auswahlregel "monotone Kette mit ΔD = 2, maximale Länge, minimale Strukturabweichung" und
+beweisen, dass sie genau eine Kette liefert. Anschließend formulieren wir einen exakten Solver auf dem geschichteten
+DAG, der diese Kette deterministisch findet. Die Dämpfung γ(n) bleibt log exakte Funktion der Schrittweiten, vgl. 4.1 bis
+4.3.
+4.5.1 Daten, Graph und gültige Ketten
+Daten. Für jedes nilpotente E 8-Orbit O verwenden wir
+[D(O)=248−dimO, h(O)∈N (height), L(O) (Bala–Carter-Label).]
+Die in 4.2 und Appendix G tabellierten Orbits liefern die Schichten D∈{60,58,…,8} mit Start A 4 +A 1 bei D=60 und
+Ende E 8 bei D=8.
+Hasse-Graph. Wir betrachten den geschichteten DAG
+–
+[H=(V,E), V ={O}, E ={(O→O′): D(O′)=D(O)−2, O′ ⊂O}.]
+Damit sind Kanten genau die Überdeckungsrelationen mit ΔD=2 in der Abschlussordnung. H ist endlich und azyklisch.
+Gültige Kette. Eine Kette ist eine Folge C =(O 0 ,…,O 26 ) mit
+[D(O )=60−2n, (O →O )∈E, O =A +A , O =E .]
+n n n+1 0 4 1 26 8
+Wir schreiben D n =D(O n ), ℓ n =lnD n und s n =ℓ n −ℓ n+1.
+4.5.2 Bewertungsfunktion und totale Ordnung
+Label-Distanz. Für Bala–Carter-Labels definieren wir eine simple Set-Distanz: Zerlege L in seine einfachen Summanden
+(z. B. D 5 (a 1 )+A 1 ↦{D 5 (a 1 ),A 1 }) und setze
+|L∩L′|
+[d (L,L′)=1− ∈[0,1].]
+BC |L∪L′|
+18 / 81
+
+===== Page 19 of 81 =====
+Glättungsfunktional. Die log Schrittweiten sollen möglichst regularisiert sein. Wir definieren
+Paper V1.06 - 01.09.2025
+25 2
+[S (C)=∑(Δ2ℓ ) , Δ2ℓ =ℓ −2ℓ +ℓ .]
+2 n n n+1 n n−1
+n=1
+Als ergänzende Diagnostik verwenden wir die dritte Vorwärtsdifferenz x n =Δ3ℓ n und führen die kompakten Summen
+24 24
+[S (C)=∑x , S (C)=∑x2]
+1 n 2 n
+n=1 n=1
+mit k=24; daraus ergibt sich am Ende cv 3 (C)=√S 2 /k/|S 1 /k| (Konvention +∞ falls S 1 =0).
+Kostenvektor. Für jede gültige Kette C definieren wir den lexikografischen Kostenvektor
+25 25
+[F(C)=( −|C| , S (C) , ∑|h(O )−h(O )|, ∑d (L ,L ), cv (C) , lex(L ,…,L )).]
+ 2  n+1 n BC n n+1  3   0 26
+max.length log-smoothing n=0   n=0   thirddifference tie-break
+heightstability labelcoherence
+Wir minimieren F in dieser Reihenfolge. Der letzte Eintrag ist die rein lexikografische Ordnung der kompletten Labelfolge
+und fungiert als deterministischer Tie-Breaker. Diese Wahl bildet exakt die in 4.2 genutzten strukturellen Kriterien ab und
+macht die Auswahl total.
+Definition. C⋆ sei die Kette mit minimalem F.
+4.5.3 Eindeutigkeitssatz
+Satz 4.5.1 (Eindeutigkeit). Auf der endlichen Kettenmenge C induziert F eine totale Ordnung. Es existiert genau eine
+minimale Kette C⋆.
+Beweis.
+(i) C ist endlich: in jeder Schicht D=60−2n liegt nur eine endliche Menge von Orbits; H ist azyklisch.
+(ii) Lex-Minimierung auf R4×R ≥0 ×L mit dem letzten Eintrag lex(L 0 ,…,L 26 ) ist eine totale Ordnung, da zwei
+verschiedene Ketten immer in mindestens einem Eintrag differieren, spätestens in der Labelfolge.
+(iii) Jede totale Ordnung auf einer endlichen Menge hat genau ein minimales Element. ∎
+Korollar 4.5.2 (Eindeutigkeit der in 4.2 verwendeten Kette). Setzt man die in 4.2 genutzten Kriterien "maximale Länge,
+ΔD=2, minimale Strukturabweichung" exakt durch F, so ist die dort angegebene Kette D n =60−2n mit den
+ausgewiesenen Labels die einzige gültige Minimallösung. Die in Tab. B.1 kodierte Dämpfung folgt dann log exakt über
+γ(n)=λ(lnD n −lnD n+1 ) für n≥1 und γ(0)=0.834 wie in 4.1, 4.3.
+4.5.4 Exakter Algorithmus auf dem geschichteten DAG
+Wir lösen das Minimierungsproblem als dynamisches Programm auf H.
+Zustand. Ein Zustand in Schicht n ist ein Tupel
+[Z =(O ; ℓ ,ℓ ,ℓ ; S ,S ,k; H, L),]
+n n n−2 n−1 n 2 1
+wobei (ℓ n−2 ,ℓ n−1 ,ℓ n ) die Historie für Δ2 und Δ3 enthält, (S 2 ,S 1 ,k) die laufenden Summen der dritten Differenz, H die
+kumulierte Höhenabweichung und L die verkettete Labelfolge bis n.
+Übergang. Für jede Kante (O n →O n+1 ):
+add Δ2ℓ =(ℓ −2ℓ +ℓ ) zu S ,
+n n+1 n n−1 2
+[update x =Δ3ℓ , S +=x , S +=x2, k+=1, ]
+n n 1 n 2 n
+H +=|h(O )−h(O )|, L↦L∥L(O ), add d (L ,L ).
+n+1 n n+1 BC n n+1
+Dominanz und Speicherung. In jeder Schicht halten wir für jedes Zielorbit nur nicht dominierte Zustände im lex Sinn
+der partiellen Kostenpräfixe. Da die Schichtenzahl 27 ist, bleibt der Speicher klein; bei E 8 sind de facto nur wenige
+Präfixe pro Orbit nicht dominiert.
+19 / 81
+
+===== Page 20 of 81 =====
+Abschluss. Am Ende (n=26) wird cv 3 =√S 2 /k/|S 1 /k| gebildet und die finale Lex-Ordnung angewandt. Der
+Paper V1.06 - 01.09.2025
+resultierende Pfad ist C⋆.
+Korrektheit. Der Graph ist ein geschichteter DAG, alle Übergangskosten sind additiv oder über (S 1 ,S 2 ,k) vollständig
+akkumulativ kodierbar; damit ist dynamische Programmierung exakt. Die Lex-Ordnung ist totales Ranking, also liefert der
+Algorithmus die eindeutige Minimalkette (Satz 4.5.1). ∎
+Komplexität. O(|E|) bis O(|E|ρ) mit kleinem Pareto-Faktor ρ≪10 in der Praxis; hier |E| nur zwischen benachbarten
+Schichten (ΔD=2). oai_citation:7‡Paper V1.06 - 01.09.2025.pdf
+4.5.5 Praktische Reproduktion und Qualitätschecks
+Reproduktion. Lies die Orbitliste (Appendix G), baue H aus allen Kanten mit ΔD=2, laufe den oben beschriebenen
+DP-Solver, und vergleiche die Labelfolge mit der in 4.2 und Tab. B.1. Die einzige Minimalkette beginnt bei A 4 +A 1 und
+endet bei E 8, mit D n =60−2n und genau den in 4.2 gelisteten Labels.
+Dämpfung. Mit λ=γ(0)/(ln248−ln60) und γ(0)=0.834 folgt für n≥1
+D λ
+[γ(n)=λ[lnD −lnD ], φ =φ e−γ(0)( n) .]
+n n+1 n 0 D
+1
+Die kalibrierungsfreien Ratio-Gesetze φ m /φ n =(D m /D n )λ sind unmittelbare Strukturfolgen der Kette (siehe 4.3 und
+Tab. B.1).
+n label dim D lnD height s_n (lnDₙ − lnDₙ₊₁) s_n_raw (lnDₙ₊₁ − lnDₙ)
+0 A4+A1 188 60 4.0943445622221 3 0.03390155167568132 0.0
+1 D5(a1) 190 58 4.060443010546419 4 0.03509131981126945 -0.03390155167568132
+2 A4+2A1 192 56 4.02535169073515 2 0.036367644170875124 -0.03509131981126945
+3 A4+A2 194 54 3.9889840465642745 2 0.03774032798284699 -0.03636764417087512
+4 D5(a1)+A1 196 52 3.9512437185814275 3 0.03922071315328157 -0.03774032798284699
+5 D4+A2 198 50 3.912023005428146 2 0.04082199452025481 -0.03922071315328157
+6 A4+A3 200 48 3.871201010907891 2 0.04255961441879608 -0.04082199452025481
+7 A5+A1 202 46 3.828641396489095 3 0.04445176257083405 -0.04255961441879608
+8 D5(a1)+A2 204 44 3.784189633918261 4 0.04652001563489261 -0.04445176257083405
+9 E6(a3)+A1 206 42 3.7376696182833684 3 0.04879016416943216 -0.04652001563489261
+10 D5+A1 208 40 3.6888794541139363 5 0.05129329438755059 -0.04879016416943216
+11 A6 210 38 3.6375861597263857 5 0.054067221270275745 -0.05129329438755059
+12 E7(a4) 212 36 3.58351893845611 4 0.05715841383994835 -0.05406722127027574
+13 D5+A2 214 34 3.5263605246161616 5 0.06062462181643502 -0.05715841383994835
+14 D7(a2) 216 32 3.4657359027997265 4 0.06453852113757108 -0.06062462181643502
+15 A7 218 30 3.4011973816621555 4 0.06899287148695166 -0.06453852113757108
+16 E8(b6) 220 28 3.332204510175204 4 0.07410797215372167 -0.06899287148695166
+17 D7(a1) 222 26 3.258096538021482 6 0.08004270767353638 -0.07410797215372167
+18 E7(a2) 224 24 3.1780538303479458 6 0.08701137698962969 -0.08004270767353638
+19 D7 226 22 3.091042453358316 6 0.09531017980432521 -0.08701137698962969
+20 E8(a5) 228 20 2.995732273553991 6 0.10536051565782634 -0.09531017980432521
+21 E8(b4) 230 18 2.8903717578961645 9 0.11778303565638337 -0.10536051565782634
+22 E7 232 16 2.772588722239781 10 0.13353139262452274 -0.11778303565638337
+23 E8(a3) 234 14 2.6390573296152584 12 0.15415067982725805 -0.13353139262452274
+24 E8(a2) 236 12 2.4849066497880004 12 0.18232155679395445 -0.15415067982725805
+20 / 81
+
+===== Page 21 of 81 =====
+n label dim D lnD height s_n (lnDₙ − lnDₙ₊₁) s_n_raw (lnDₙ₊₁ − lnDₙ)
+Paper V1.06 - 01.09.2025
+25 E8(a1) 238 10 2.302585092994046 14 0.22314355131421015 -0.18232155679395445
+26 E8 240 8 2.0794415416798357 16
+Algorithmus in drei Schritten
+1. Graph bauen. Schichte alle Orbits nach D=248−dimO. Ziehe Kanten nur zwischen benachbarten
+Schichten mit ΔD=2 gemäß Abschlussordnung.
+2. Lex-Kriterien ansetzen. Verwende F(C) aus 4.5.2 mit der Reihenfolge: Länge, S 2, Höhenruhe,
+Label-Kohärenz, cv 3, Label-Tie-Break.
+3. Exakte Suche. Führe dynamische Programmierung über die 27 Schichten aus. Ergebnis ist die einzige
+Minimalkette C⋆ aus 4.2 und Tab. B.1.
+Prüfe danach die Ratio-Tests aus 4.3; sie sind unabhängig von jeder Einheitenwahl.
+4.6 Interpretation
+Die E acht Kette liefert eine deterministische Ordnung der Skalenleiter. Keine Fits, keine freien Knöpfe: λ ist durch den
+Anker fixiert, γ(n) folgt direkt aus den Log Schrittweiten, φ n ist eine reine Funktion von D n.
+Physikalische Bedeutung.
+• Blockstruktur aus der Kette. Sprünge in der Orbit Höhe markieren natürliche Übergänge zwischen Flavor,
+elektroschwach, hadronisch und kosmologisch.
+• Verhältnisgesetze statt absoluter Tuningwerte. Innerhalb und zwischen Blöcken sind alle Relationen φ m /φ n fitfrei
+vorhersagbar. Eine einzige Kalibrierung pro Block reicht, um dimensionierte Größen zu fixieren.
+• Terminales Gesetz. Gegen Ende der Kette gilt φ n ∝Dλ n . Das erklärt die milde, aber stetige Zunahme der Dämpfung bis
+n=26.
+• Fenster in der Dynamik. Die E Fenster im Zwei Schleifen Fluss verankern c 3 und φ 0 dynamisch. E acht ordnet die
+Leiter, E sechs bindet sie an die beobachtete Geometrie, beide Ebenen greifen ineinander.
+Abgrenzung zum alten Bild.
+Die Quadratik in n war eine nützliche Heuristik, ist aber nicht grundlegend. Die Kette zeigt, dass γ(n) log exakt ist und die
+globale Kubik Annahme für lnD n nicht benötigt wird. Die Relation γ 2 =γ 0 /(8π2) wird von der Struktur nicht erzwungen
+und bleibt als offene Idee im Ausblick.
+5. Zwei-Schleifen RGE-Run: Dynamische Fingerprints der Fixpunkte
+5.1 Konfiguration
+Zur dynamischen Prüfung der Fixpunkte c 3 =1/(8π) und φ 0 = 6 1 π + 256 3 π4 ≈0.053171952 wird ein vollständiger Zwei
+Schleifen Renormierungsgruppenlauf ausgeführt. Die Implementierung basiert auf einer PyR@TE Definition der E₈
+Kaskade, erweitert um Standardmodellfelder und zusätzliche Freiheitsgrade:
+• Fermionen: Standardmodell plus elektroschwaches Triplet Σ F (Decoupling bei 103,GeV) und drei rechtshändige
+Neutrinos N R1,2,3 mit getrennten Schwellen M N =1014,GeV, M N =3×1014,GeV, M N =8×1014,GeV.
+1 2 3
+21 / 81
+
+===== Page 22 of 81 =====
+• Farb Brücke: Ein farbadjunktes Fermion G8 von SU(3) c ist oberhalb M G8 =1.8×1010,GeV aktiv. Stückweise gilt
+Paper V1.06 - 01.09.2025
+dα−1
+Δb 3 =+2, damit ändert sich dln 3 μ von 2 7 π zu 2 5 π für μ>M G8.
+• Skalare: Standardmodell Higgs H, PQ Feld Φ mit Schwelle M Φ =1016,GeV.
+• Spurion: Ein effektiver R3 Term modelliert lokal den kubischen Beitrag ∝α3 im abelschen Sektor.
+• Normierung: Hyperladung in GUT Norm mit b 1 =41/10. Konvention
+gGUT =√5,g , β!(gGUT)= 3,β(g ).
+1 3 Y 1 5 Y
+Alle Zahlen in 5.2 und im Anhang F nutzen diese Konvention.
+• Startwerte bei μ=M Z:
+gG
+1
+UT ≃0.462, g
+2
+=0.652, g
+3
+=1.232.
+Der Fluss wird über mehr als fünfzehn Dekaden integriert (mindestens 102,GeV bis ≳1017,GeV) inklusive aller Zwei
+Schleifen Terme und stückweisem Threshold Matching.
+Info Box: Hyperladung in GUT Norm
+PyR@TE arbeitet standardmäßig mit $b_{1}=41/6$ in SM Norm. Für die hier verwendete GUT Norm gilt
+$g_{1}^{\mathrm{GUT}}=\sqrt{\tfrac{5}{3}},g_{Y}$ und $\beta(g_{1}^{\mathrm{GUT}})=\tfrac{3}
+{5},\beta(g_{Y})$.
+Damit folgt konsistent $b_{1}=41/10$ für die Steigung von $\alpha_{1}^{-1}$.
+Prüfbox zum Lauf
+Steigungstest für $U(1)$ in GUT Norm:
+$\frac{d\alpha_{1}^{-1}}{d\ln\mu}=-\frac{b_{1}}{2\pi}$
+numerisch $-0.6525352666767507$ vs. Erwartung $-0.6525352666767709$ (relative Abweichung
+$3.1\times 10^{-14}$).
+Brücken Steigung oberhalb $M_{G8}$: gemessen $\dfrac{d\alpha_{3}^{-1}}{d\ln\mu}=0.8063126$ vs.
+Erwartung $\tfrac{5}{2\pi}=0.7957747$ (1.3% Abweichung).
+Hinweis zu den Beta Funktionen.
+Die analytischen Beta Funktionen entsprechen in Form und Ordnung den Standardmodell Koeffizienten auf einer und
+zwei Schleifen. Geändert wird nur der Feldinhalt stückweise über die genannten Schwellen, insbesondere Δb 3 =+2
+oberhalb M G8.
+5.1b Schwellen aus der E 8-Leiter
+Regel. Ein neuer Freiheitsgrad X mit Skala M X wird an eine Stufe n X gebunden durch
+[M
+X
+=ζ
+X
+M
+Pl
+φ
+nX
+, ζ
+X
+=(πc
+3
+)e−βXπc3e−kX/c3.]
+Damit wird z. B. das farbadjunkte Fermion G 8 nicht „gewählt“, sondern an n X =16 oder 17 gebunden, was bei plausiblen
+(r X ,k X ) direkt M G8 ∼1010 bis 1011 GeV ergibt, konsistent mit 5.2.
+Konsequenz. Der in 5.1 verwendete Feldinhalt ist leitableitbar. Variationen in ζ X sind Einheitenwahl pro Block, keine
+neuen freien Modellparameter.
+22 / 81
+
+===== Page 23 of 81 =====
+5.2 Ergebnisse
+Paper V1.06 - 01.09.2025
+Die zentralen Befunde lassen sich in drei Punkten zusammenfassen:
+Fingerprints der Fixpunkte
+Bei μ≃1,PeV gilt
+α 3 =0.052923411, das liegt 0.47% unter φ 0 =0.053171952.
+Bei
+μ=2.5×108,GeV
+gilt
+α 3 =0.039713807, das liegt 0.19% unter c 3 = 8 1 π =0.039788736.
+QCD fingerprints: $\alpha_3$ meets $\varphi_{0}$ and $c_{3}$.
+Annäherung der Unifikation.
+Die minimale relative Spreizung der inversen Kopplungen
+(α−1,α−1,α−1) beträgt
+1 2 3
+max(α−1)−min(α−1)
+min i i =1.23
+μ 1 ∑ α−1
+3 i i
+Die drei paarweisen Gleichstände liegen gebündelt um diesen Wert:
+α−1 =α−1 bei 6.06×1014,GeV,
+2 3
+α−1 =α−1 bei 1.46×1015,GeV und
+1 3
+α−1 =α−1 bei 2.38×1015,GeV.
+1 2
+Das definiert einen engen und robusten Korridor statt eines exakten Dreifachschnitts.
+23 / 81
+
+===== Page 24 of 81 =====
+Paper V1.06 - 01.09.2025
+Inverse couplings: pairwise equalities and minimal spread.
+Unification measure: pairwise differences of inverse couplings.
+Perturbativität und Stabilität.
+Alle Kopplungen bleiben bis mindestens in den Bereich 1017,GeV kleiner als 1.3, keine Landau Pole, keine instabilen
+Bereiche im Higgs Potential.
+24 / 81
+
+===== Page 25 of 81 =====
+Verlaufdiagramme direkt aus dem Pyr@ate Run:
+Paper V1.06 - 01.09.2025
+E8 TFPT mit G8 Brücke: oben links Kopplungsverläufe, oben Mitte Unifikationsanalyse und Brückenfenster, oben rechts
+Fingerprint Checks, unten links eins Schleifen b Koeffizienten, unten rechts Brückeneffekt auf alpha.
+5.2b Gauge–Moduli–Locking im E sechs Fenster
+Die 4D-Wirkung enthält durch die Reduktion einen linearen Kopplungsfaktor der Form f(ρ)TrG2 mit f(ρ)∝φ(ρ) entlang
+der leichten Radionrichtung. Im E sechs Fenster wird die skalare Anregung schwer und friert die Moduli auf ρ=ρ 0 ein,
+sodass sich bei der Kreuzungsskala μ E6 die Identität
+[α (μ )=φ(ρ )≡φ ]
+3 E6 0 0
+ergibt. Das erklärt die in 5.2 beobachtete Übereinstimmung ohne Zusatzannahmen: dieselbe Modulkombination, die φ 0
+bestimmt, multipliziert im E sechs Fenster den QCD-Term.
+5.3 Korrelationen
+Die 2-Loop-Analyse erlaubt es, die gefundenen Fixpunkte systematisch mit bekannten Strukturen zu verknüpfen:
+• Geometrie Fingerprint: α 3 (1,PeV)≈φ 0 verknüpft die geometrische Länge direkt mit der QCD Kopplung.
+• Topologie Fingerprint: α 3 (μ)≈c 3 bei μ∼2.5×108,GeV spiegelt den Chern–Simons Maßstab 1/(8π).
+• Spacing Invariante: Die drei paarweisen Gleichstände liegen im Log Raum nahezu äquidistant und bleiben stabil unter
+Dekadenschwankungen der Schwellen.
+G8 Farb Brücke: Oberhalb M G8 reduziert Δb 3 =+2 die Steigung von 2 7 π zu 2 5 π ; gemessen 0.8063 gegenüber Erwartung
+0.7958 (1.3% Mehrneigung). Der Effekt zieht den Korridor in Richtung 1015,GeV zusammen.
+25 / 81
+
+===== Page 26 of 81 =====
+5.4 Interpretation
+Paper V1.06 - 01.09.2025
+Die 2-Loop-RGE-Analyse liefert eine dynamische Bestätigung der zentralen Postulate der Theorie:
+1. Unabhängigkeit: φ 0 und c 3 erscheinen unabhängig im Fluss, einer im PeV Bereich, einer bei 108,GeV.
+2. Kohärenz: Dieselben Zahlen treten in unterschiedlichen Schichten auf – Geometrie, Topologie und jetzt RG Dynamik
+– und bestätigen sich gegenseitig.
+3. Stabilität: Der Gleichstandskorridor bei
+1014
+bis
+1015,GeV
+ist robust gegenüber Schwellenverschiebungen.
+4. Ohne Feintuning: Die Treffer folgen allein aus den Fixpunkten und dem stückweisen Feldinhalt, zusätzliche Knöpfe
+sind nicht nötig.
+RG Stabilität der Möbius Leiter.
+Mit δ(μ) aus √m τ (μ)/m μ (μ) bleibt die Deformation in einem weiten Fenster nahezu konstant; universelle Terme a y ,φ 0
+und b y ,c 3 fangen Prozentreste ab.
+5.5 Fazit
+c 3 =1/(8π) und φ 0 treten als dynamische Fingerprints im Verlauf der Eichkopplungen auf. Zusammen mit der log
+exakten Ordnung der E₈ Kaskade ergibt sich ein konsistentes Bild:
+• Topologie setzt die Skala,
+• Geometrie liefert die Länge,
+• E₈ ordnet die Leiter,
+• RG Dynamik bestätigt die Fingerprints.
+6. Inflation aus Topologie und Geometrie
+Die Reduktion von elf Dimensionen über sechs Dimensionen in vier Dimensionen erzeugt einen hyperbolischen
+Feldraum mit Plateau Dynamik. Die Krümmung wird allein durch die beiden TFPT Invarianten c 3 und φ 0 festgelegt.
+Daraus folgt ein Alpha Attractor mit robusten Vorhersagen für n s und r. Die Kaskade E 8 →E 7 →E 6 bestimmt Reheating
+Parameter und kleine Korrekturen über die effektive Freiheitszahldichte.
+6.1 Setup und Annahmen
+1. Topologischer Kern und Längenskala
+Wir verwenden die TFPT Invarianten
+1
+c 3 = 8π , φ 0 =0.0531719522.
+c 3 ist die topologische Kopplung aus dem Chern Simons Sektor, φ 0 setzt die globale Längenskala der Kompaktifizierung.
+2. Felder aus der Reduktion
+Nach der Reduktion 11D→6D→4D bleiben zwei leichte Moden: ein Volumen Modus ρ(x) und ein axionartiger Modus
+θ(x) aus dem integrierten Drei Form Potential auf einem internen Zyklus.
+3. Wirkung im Einstein Rahmen
+26 / 81
+
+===== Page 27 of 81 =====
+Nach Weyl Reskalierung erhalten wir ein zweidimensionales Sigma Modell für (ρ,θ) mit negativ gekrümmtem Feldraum.
+Paper V1.06 - 01.09.2025
+Entlang einer leichten Talrichtung definieren wir die kanonische Inflaton Variable ϕ.
+4. Potential aus Flüssen
+Flussquantisierung und der Chern Simons Term erzeugen entlang der Talrichtung ein Plateau Potential der Alpha
+Attractor Familie. E Modell und T Modell sind beide geeignet und führen zu denselben Leitvorhersagen.
+6.2 Feldraum und kanonische Variable
+Die Kinetik nimmt die universelle Form
+M2 3,α ,(∂z)2 ϕ
+L
+kin
+=
+2
+P √−g,
+(1
+i
+−
+nf
+z2)2
+, z=tanh!(
+√6α ,M
+),
+inf P
+mit Feldraumkrümmung
+2
+R K =−, 3,α .
+inf
+α inf ist eine reine Funktion der TFPT Invarianten. Zwei direkt aus der Reduktion motivierte Normalisierungen rahmen die
+Krümmung eng ein:
+c
+Variante A α inf = φ 3 =0.74830308
+0
+φ
+Variante B α inf = 2c 0 =0.66817846
+3
+Numerik der Krümmung: RA ≃−0.891, RB ≃−0.998.
+K K
+Beide Varianten entstehen aus der Kombination der Faser Skalierung e−2ρ mit der topologischen Gewichtung durch c 3
+und der globalen Längenskala φ 0. Keine Fits, nur Geometrie.
+27 / 81
+
+===== Page 28 of 81 =====
+Paper V1.06 - 01.09.2025
+28 / 81
+
+===== Page 29 of 81 =====
+Fig. 6.1 Top row: compactification 11D → 6D → 4D with flux and Chern Simons.
+Paper V1.06 - 01.09.2025
+Right box: hyperbolic sigma model L kin = M 2 P 2 √−g 3 ( α 1 i − nf ( z ∂ 2 z )2 )2 , mapping z=tanh( √6α ϕ inf M P ), curvature R K =− 3α 2 inf .
+Center: Poincaré disk with geodesics, radial inflaton trajectory toward z=1. Bottom tiles: representative numbers at
+N =55 for both α inf variants.
+6.3 Potential auf dem Plateau
+Als repräsentatives Beispiel genügt
+2 ϕ 2
+V(ϕ)=V (1−exp![−√ ])
+0 3α M
+inf P
+oder äquivalent
+ϕ
+V(ϕ)=V
+0
+,tanh2!( ).
+√6α ,M
+inf P
+Die Plateau Asymptotik garantiert kleine Tensoren und eine Neigung, die fast nur von der Anzahl der e Faltungen N
+abhängt.
+ϕ
+Fig. 6.6 V(ϕ)/V 0 =tanh2( ) for α inf =0.748 and 0.668. The asymptotics illustrate the plateau at large field
+√6α M
+inf P
+values.
+6.4 Universelle Vorhersagen
+29 / 81
+
+===== Page 30 of 81 =====
+Am CMB Pivot gilt
+Paper V1.06 - 01.09.2025
+2 12,α dn 2 r
+n s ≃1− N , r≃ N2 inf , α s ≡ dln s k ≃−, N2 , n t ≃−, 8 .
+Die Amplitude A s ≃2.1×10−9 fixiert V 0. Praktisch nützlich sind
+A ,r
+V1∕4 ≃(3π2A s r) 1∕4 M P, H ≃π,M P ,√ 2 s .
+Fig. 6.1b The inflaton follows a radial trajectory with z=tanh( ϕ ) and approaches the boundary z=1.
+√6α M
+inf P
+Geodesics are drawn as diameters and as arcs orthogonal to the boundary. Negative curvature R K =− 3α 2 .
+inf
+6.5 Zahlen aus TFPT
+Wir setzen c 3 = 8 1 π und φ 0 =0.0531719522. Die Resultate für N =50,55,60 sind:
+Variante B α inf =φ 0 ∕(2c 3 )=0.66817846
+N n s r α s n t V1∕4 [GeV] H [GeV]
+50 0.960000 0.00320726 −8.00×10−4 −4.01×10−4 9.150×1015 1.404×1013
+55 0.963636 0.00265063 −6.61×10−4 −3.31×10−4 8.725×1015 1.276×1013
+60 0.966667 0.00222726 −5.56×10−4 −2.78×10−4 8.353×1015 1.170×1013
+Variante A α inf =c 3 ∕φ 0 =0.74830308
+N n s r α s n t V1∕4 [GeV] H [GeV]
+50 0.960000 0.00359185 −8.00×10−4 −4.49×10−4 9.413×1015 1.486×1013
+30 / 81
+
+===== Page 31 of 81 =====
+55 0.963636 0.00296848 −6.61×10−4 −3.71×10−4 8.975×1015 1.351×1013
+Paper V1.06 - 01.09.2025
+60 0.966667 0.00249434 −5.56×10−4 −3.12×10−4 8.593×1015 1.238×1013
+Lyth Grenze.
+Δϕ≳N,√r∕8,M P. Für N =55 ergibt sich Δϕ≃1.00,M P bis 1.06,M P für die Varianten B und A. Also minimal
+transplanckian, typisch für Plateaus mit kleinem r.
+Fig. 6.3 r(N) for α inf =0.748 and 0.668. The dashed horizontal line is the BK18 limit, the vertical line marks the
+implied by Planck .
+E → E → E
+6.6 Verbindung zur Kaskade
+8 7 6
+1. Reheating und Freiheitsgrade
+Die Kaskade legt die effektive Freiheitszahldichte g ∗ während Reheating fest. Damit verschiebt sich N um wenige
+Einheiten. Der Zusammenhang
+1−3w ρ
+ΔN ≃ reh ln!( reh )
+12,(1+w ) ρ
+reh end
+macht sichtbar, wie E 7 bis E 6 Schwellen über w reh und ρ reh in n s und r eingehen. Realistische Verschiebungen bleiben
+klein und ändern r im Prozent Bereich.
+2. n gleich 6 Schwelle und TeV Fenster
+Die Kaskade markiert eine Schwelle im TeV Bereich. Das beeinflusst die Kopplung an sichtbare Freiheitsgrade am Ende
+der Inflation und damit die Reheating Effizienz. Der Impact liegt vor allem in ΔN, nicht in der Form der Vorhersagen.
+3. Feinstruktur im Potential
+31 / 81
+
+===== Page 32 of 81 =====
+Kleine Plateau Falten durch Kaskaden Stufen können skalenabhängige Mini Features in n s (k) erzeugen. Solange diese
+Paper V1.06 - 01.09.2025
+nicht explizit hergeleitet sind, genügt die glatte Plateau Näherung. Später können wir diese Feinstruktur als eigene
+Vorhersagen ausbauen.
+6.7 Abgleich mit Referenzwerten
+• Neigung n s.
+2
+Planck liefert n s =0.9649±0.0042 am Pivot k ∗ =0.05,Mpc−1 . Daraus folgt N = 1−n =56.98 mit 1σ Band 50.89 bis
+s
+64.72.
+• Tensoren r.
+Mit α inf aus Abschnitt 6.2 ergibt r=3,α inf (1−n s )2 zentral
+2.47×10−3 (Variante B) bis 2.77×10−3 (Variante A). Das liegt deutlich unter BK18 mit r<0.036 und genau im Ziel
+Korridor der kommenden CMB Generation.
+• Running α s.
+2
+α s ≃−, ≈−6.2×10−4 , damit nahezu skaleninvariant und innerhalb der Planck Unsicherheit.
+N2
+• Tensorneigung n t.
+Konsistenzrelation n t =−r∕8 liefert −(2.3 bis 3.5)×10−4 .
+• Faustformel r=φ2.
+0
+φ2 =0.002827. Für N =55 ergibt sich r≃0.00247 bis 0.00277, also im sechs Prozent Fenster um φ2. Wählt man
+0 0
+α inf ≃0.713, fällt exakt r=φ2 0 .
+r
+Fig. 6.4 α inf = 3(1−n )2 for three values of . Dots mark the two TFPT normalisations at N(nP s lanck).
+s 32 / 81
+
+===== Page 33 of 81 =====
+6.8 Tests und klare Falsifikation
+Paper V1.06 - 01.09.2025
+• CMB Polarisation.
+CMB Experimente der nächsten Generation messen r bis in den unteren drei mal zehn hoch minus drei Bereich. Ein
+sicheres Null Ergebnis unterhalb r≲0.001 zwingt in TFPT eine Neubestimmung von α inf oder der Reheating Historie mit
+deutlich größerem N.
+• Reheating und Kaskaden Fingerabdruck.
+Präzise Messungen von n s und r plus unabhängige Informationen über Reheating erlauben Rückschlüsse auf die E 7 bis
+E 6 Schwellen. Das verbindet kosmologische und Collider Signaturen.
+6.9 Harter Abgleich mit Referenzwerten
+Setup.
+Planck Pivots: n s =0.9649±0.0042, ln(1010A s )=3.044 also A s ≈2.11×10−9.
+BK18 Grenze: r 0.05 <0.036 bei 95 Prozent.
+2
+Aus n s folgt N = 1−n =56.98 mit 1σ Band 50.89 bis 64.72.
+s
+Aus N und α inf folgt r=3,α inf (1−n s )2.
+Zentralwerte bei n s =0.9649.
+Größe Formel Wert B Wert A Kommentar
+2
+N N = 56.980 56.980 aus Planck
+1−n
+s
+r r=3,α inf (1−n s )2 2.470×10−3 2.766×10−3 klar unter BK18
+A r
+H H =πM P √ 2 s 1.232×1013,GeV 1.303×1013,GeV Pivot Skala
+V1∕4 V1∕4 =(3π2A s r)1∕4M P 8.571×1015 8.817×1015 Plateau Skala
+√12,π,√A
+m ϕ m ϕ = N s,M P 2.131×1013 2.131×1013 unabhängig von α inf
+8π2A
+λ ϕ λ ϕ = 3,α ,N s 2 2.546×10−11 2.274×10−11 klein, erwartungskonform
+inf
+A r
+Ω gw (k ∗ ) Ω gw ≃ 2 s 4 ,Ω r,0 1.987×10−17 2.225×10−17 mit Ω r,0 ≈9.2×10−5
+r
+Δϕ Δϕ≃N√ 8 ,M P 1.001,M P 1.059,M P minimal transplanckian
+Verhältnis zu BK18 r∕0.036 0.0686 0.0768 weit unter Grenze
+Band über 1σ in n s.
+Variante B α inf =φ 0 ∕(2c 3 )=0.66817846
+n s N r H [GeV] V1∕4 [GeV] m ϕ [GeV] λ ϕ
+0.9607 50.891 3.096×10−3 1.379×1013 9.069×1015 2.386×1013 3.192×10−11
+0.9649 56.980 2.470×10−3 1.232×1013 8.571×1015 2.131×1013 2.546×10−11
+0.9691 64.725 1.914×10−3 1.084×1013 8.041×1015 1.876×1013 1.973×10−11
+33 / 81
+
+===== Page 34 of 81 =====
+Variante A α inf =c 3 ∕φ 0 =0.74830308
+Paper V1.06 - 01.09.2025
+n s N r H [GeV] V1∕4 [GeV] m ϕ [GeV] λ ϕ
+0.9607 50.891 3.467×10−3 1.459×1013 9.329×1015 2.386×1013 2.850×10−11
+0.9649 56.980 2.766×10−3 1.303×1013 8.817×1015 2.131×1013 2.274×10−11
+0.9691 64.725 2.143×10−3 1.147×1013 8.272×1015 1.876×1013 1.762×10−11
+Direkter Krümmungs Test.
+r
+(1−n )2 =3,α inf. Diese Identität erlaubt die Rekonstruktion von α inf direkt aus Daten.
+s
+ΔN
+6.10 Reheating Fenster und
+Definitionen:
+1−3w ρ π2
+ΔN ≃ 12,(1+w reh ) ln!( ρ reh ), ρ reh = 30 g ∗ T r 4 eh , ρ end ≈c,V 0 mit c≈0.34 bis 0.37, g ∗ ≈120.
+reh end
+Ergebnisse für w reh =0:
+Szenario Variante B Variante A Bemerkung
+ΔN bei T reh =6,MeV −13.54 −13.55 zu kalt, inkonsistent mit Planck Band
+Tmin für ΔN =−6 4.01×107,GeV 4.12×107,GeV materieartiges Reheating
+reh
+Tmax bei schneller Umwandlung ≈2.71×1015,GeV ≈2.73×1015,GeV c≃0.34 bis 0.37
+reh
+Fig. 6.5 ΔN(T reh ) for matter like reheating w=0 and g ∗ ≈120. The dotted line near ΔN ≈−13.5 corresponds to BBN
+scale reheating ∼6 MeV. The dashed line at ΔN =−6 indicates the approximate boundary consistent with the
+Planck band. 34 / 81
+
+===== Page 35 of 81 =====
+6.11 Info Box
+Paper V1.06 - 01.09.2025
+2
+N = =56.98 (1σ: 50.89 bis 64.72), r=3,α (1−n )2 ={2.47×10−3 (VarianteB) 2.77×10−3 (VarianteA), m
+1−n inf s
+s
+Kurz: Die Inflations Skala bestimmt jetzt m ϕ und λ ϕ ohne freie Drehknöpfe. Die Relation r∕(1−n s )2 =3α inf ist ein
+direkter Test der topologisch fixierten Krümmung.
+α
+6.12 Eindeutige Fixierung von
+inf
+Variante A (α inf =c 3 /φ 0) und Variante B (α inf =φ 0 /(2c 3 )) sind zwei Referenzmetriken derselben Moduli-Fixierung. Wir
+wählen eine eindeutige Normalisierung durch
+[Kriterium: |R
+K
++1|=min beiErhaltderTFPT-Identität r=3α
+inf
+(1−n
+s
+)2.]
+Numerisch ergibt dies R K ≃−0.998 und damit Variante B als eindeutige Wahl:
+φ 3φ
+[α = 0 =0.66817846, r= 0 (1−n )2.]
+inf 2c 2c s
+3 3
+Die Vorhersagen in 6.5 und 6.7 bleiben im selben engen Korridor, nun ohne Ambiguität. Siehe auch die
+Poincaré-Scheibenabbildung in 6.2.
+7. Rolle von α und die parameterfreie Lösung
+7.1 Motivation und Ursprung des Ansatzes
+Die Feinstrukturkonstante α ist im Standardmodell ein externer Eingabeparameter. Schon frühe Überlegungen
+(Sommerfeld, Dirac, Eddington) hatten vermutet, dass hinter der Zahl α−1 ≈137 eine tiefere mathematische Struktur
+stecken müsse.
+Die genetischen Algorithmen und die 6D-Vorstufen zeigten wiederholt, dass α eng mit zwei Konstanten verknüpft ist:
+c 3 = 8 1 π , φ 0 ≈0.053171.
+Beide Größen tauchten unabhängig in Kinetik-, Maxwell- und Massentermen auf. Die entscheidende Beobachtung war,
+dass α immer dort „auftauchte“, wo topologische Normalisierung (über c 3) und geometrische Länge (über φ 0)
+gleichzeitig wirksam waren.
+Dies führte zur Hypothese: α ist nicht frei, sondern die eindeutige Lösung einer Fixpunktbedingung, die genau
+diese beiden Konstanten koppelt.
+α c
+7.2 Ein Parameter Normalform für : Darstellung nur in
+3
+Normalform. Mit c 3 = 8 1 π ,
+φ 0 = 4 3 c 3 +48c4 3 , A=2c3 3 , κ= 2 b π 1 ln φ 1 0 , b 1 = 4 1 1 0 ,
+wird
+α3−Aα2−Ac2κ=0
+3
+zur reinen c 3-Form
+35 / 81
+
+===== Page 36 of 81 =====
+1
+α3−2c3α2−8b c6 ln =0 .
+3 Paper V11.063 - 01.0 4 9. c 202 + 5 48c4
+3 3 3
+Geschlossene Lösung (Cardano). Setze α=y+ 2c3, dann y3+py+q=0 mit
+3 3
+1
+p=−4c6, q=−16c9−8b c6ln ,
+3 3 27 3 1 3 4c +48c4
+3 3 3
+Δ=(q)2+(p)3
+und
+2 3
+2 q q
+α(c )= c3+√3 − +√Δ+√3 − −√Δ .
+3 3 3 2 2
+Praxisformel. Sehr genaue, geschlossene Näherung
+1/3 2
+α≈(8b c6 ln 1 ) + c3 .
+1 3 4 c +48c4 3 3
+3 3 3
+Praxisformel
+Sehr genaue Praxisformel
+1/3
+[>α≈(8b c6ln 1 ) + 2c3 >]
+1 3 4 3 3
+3
+c3+48c4
+3
+liefert bereits die ppm-Nähe. Für c 3 =1/(8π) folgt α−1 =137.0365014649.
+7.3 Die Lösung
+Die Fixpunktgleichung ist ein kubisches Polynom, das genau eine physikalisch reelle positive Nullstelle besitzt.
+c = 1 ⇒ φ =0.0531719521768, κ=1.914684795, α=0.007297325816919221, α−1 =137.03650146488582.
+3 8π 0
+Die eindeutige reelle Lösung ist
+α=0.0072973258169192213, α−1 =137.03650146488582.
+Das liegt um 3.665×10−6 relativ unter CODATA 2022 α CODATA =0.0072973525628bzw.α−1 =137.035999177.
+Die beiden anderen Wurzeln sind komplex und unphysikalisch.
+Damit ist α nicht postuliert, sondern das Output einer zwingenden Gleichung.
+36 / 81
+
+===== Page 37 of 81 =====
+Paper V1.06 - 01.09.2025
+7.4 Genauigkeit der Lösung
+Vergleich mit CODATA 2022 Referenz (α−1 =137.035999177(21)):
+Abweichung: wenige Teile pro Million (ppm).
+Keine Feinanpassung nötig – die Übereinstimmung folgt direkt aus c₃, φ₀ und b₁.
+Dies ist bemerkenswert, weil es die bislang präziseste parameterfreie theoretische Ableitung von α darstellt.
+7.5 Alternative Näherungen und optimierte Berechnungsarten
+7.5.1 Kubikwurzel-Näherung
+In der Grenze kleiner A kann man α approximieren durch
+α ≈ (Ac2κ)1/3+ A.
+3 3
+Der erste Term (Ac2κ)1/3 liefert den Hauptwert.
+3
+Der additive Zuschlag A/3 (universell, unabhängig von φ 0) bringt die Zahl in ppm-Nähe.
+Absoluter Fehler
+2.44×10−7
+entspricht etwa 33 ppm
+Diese Näherung trifft α bereits auf 10⁻⁷ genau.
+37 / 81
+
+===== Page 38 of 81 =====
+Paper V1.06 - 01.09.2025
+7.5.2 Ramanujan-ähnliche Serie
+Setzt man α=(Ac2κ)1/3(1+u) und entwickelt in Potenzen von u, ergibt sich eine konvergente Serie:
+3
+α=B1/3+ A + A2 + 2A3 +…, B=Ac2κ.
+3 9B1/3 81B2/3 3
+Schon nach drei Termen liegt die Abweichung <0.2 ppm.
+Vier Terme liefern Genauigkeit auf 10⁻¹².
+Fehler ≈9.38×10−10
+7.5.3 Newton-Verfahren
+Startet man bei g=B1/3+A/3 und setzt einmal Newton an, erreicht man dieselbe Genauigkeit wie mit der Serie.
+Formel:
+α≈g− f(g) , f(α)=α3−Aα2−B.
+f′(g)
+Damit lässt sich α extrem effizient und exakt berechnen.
+7.6 Variationsableitung in vier Dimensionen (kubische Fixpunktgleichung aus der
+Einstein Wirkung)
+Ziel und Kontext. Wir zeigen, dass die in 7.2 verwendete kubische Fixpunktgleichung für α als Stationaritätsbedingung
+einer expliziten vierdimensionalen Wirkung folgt. Die Konstanten c 3 und φ 0 stammen exakt aus den bereits etablierten
+Invarianten der Theorie, und die Normierungen A und κ sind identisch zu den Definitionen in Anhang E. Damit entsteht
+eine zweite, unabhängige Herleitung derselben Gleichung ohne frei wählbare Skalen. Vgl. die Ableitungen von c 3 in
+Abschn. 3.2.1 und von φ 0 in Abschn. 3.2.2, sowie die Normierungsnotiz in Anhang E.
+38 / 81
+
+===== Page 39 of 81 =====
+Fixe Invarianten aus Topologie und Geometrie
+Paper V1.06 - 01.09.2025
+Aus der Chern Simons Reduktion mit M 11 =M 4 ×Y 7 und ganzzahliger Schnittzahl folgt der topologische Fixpunkt
+c 3 = 8 1 π .
+Siehe die strenge Herleitung über C 3 ∧G 4 ∧G 4 und die Quantisierung von ∫ M F ∧F =8π2Z in Abschn. 3.2.1. Die
+4
+Möbius Reduktion mit Gauss Bonnet und Rand liefert
+φ 0 = 6 1 π + 256 3 π4 ,
+siehe Abschn. 3.2.2 und Anhang D. Zusammen mit b 1 =41/10 in GUT Norm sind alle Größen fixiert.
+Vierdimensionale Wirkung und U(α)
+Wir betrachten nach Reduktion und kanonischer Normierung den abelschen Sektor in homogener Hintergrundlage und
+verstehen U(α) als Gradient Darstellung im Kopplungsraum
+∂ α U ∝β α,
+so dass Stationarität ∂ α U =0 äquivalent zu β α =0 ist, vgl. die Interpretation in 7.6. Die effektive Wirkung lautet
+S eff =∫ d4x√−g[M 2 P 2 R−U(α)+…].
+Bis zur relevanten Ordnung genügt ein skalares Potential
+U(α)= A α4 − 2A c3α3 − A[8b c6 ln(1/φ )]α.
+4 3 3 1 3 0
+• Leitterm α4: Glatter Referenzanteil, der in ∂ α U den führenden α3 Beitrag liefert.
+• Kubischer Beitrag ∝c3α3 Er entsteht aus der reduzierten Chern Simons Struktur über die Kopplung eines schweren
+3
+~
+skalaren Modus a an FF und die Eliminierung von a im Null Impuls Grenzfall. Die kombinierte Zählung zweier identischer
+topologischer Einsätze, der Umrechnung g↦α und des Symmetriefaktors liefert den universellen Faktor
+A= 1 ≡2c3,
+256π3 3
+genau wie in Anhang E Schritt 2 gezeigt.
+• Linearer Logarithmus. Die integrierte Eins Schleifen Renormierung zwischen μ UV =M P und μ IR =φ 0 M P ergibt
+κ≡ b 1 ln( 1 ),
+2π φ
+0
+in der Potentialschreibweise als Term −A[8b 1 c6 3 ln(1/φ 0 )]α. Dies ist identisch zur in Anhang E Schritt 1 definierten
+Normierung κ.
+Alle Größen sind in reduzierten Planck Einheiten, vgl. Info Box.
+Stationarität und Normalform
+Die Variationsbedingung liefert
+∂
+∂
+U
+α
+=A[α3−2c3
+3
+α2−8b
+1
+c6
+3
+ln(
+φ
+1
+0
+)]=0,
+also die kubische Fixpunktgleichung
+α3−2c3α2−8b c6 ln( 1 )=0 .
+3 1 3 φ0
+Gleichwertige Normalform wie in 7.2 verwendet:
+α3−Aα2−Ac2κ=0, A=2c3, κ= b 1 ln( 1 ).
+3 3 2π φ0
+Die eindeutige reelle Lösung stimmt numerisch mit 7.3 übe3r9e /i n81, dort ausgewiesen mit α−1 =137.03650146488582.
+
+===== Page 40 of 81 =====
+Physikalische Einordnung und Konsistenz
+Paper V1.06 - 01.09.2025
+1. Schemenfreiheit. A ist eine reine Zahl aus Topologie und kanonischer Normierung, κ hängt nur vom festen b 1 und
+der geometrisch fixierten Skala φ 0 ab. Ein Schemenwechsel verschiebt nur additive, skalenunabhängige Beiträge in κ
+, nicht aber die Lage des Fixpunkts, vgl. Anhang E.
+2. Bedeutung von U(α) U ist kein Materiepotential, sondern eine kompakte Darstellung der Kopplungsdynamik,
+∂ α U ∝β α.
+3. Bezug zum übrigen Gefüge. Die gleichen Invarianten setzen dynamische Fingerabdrücke in der zwei Schleifen
+Analyse, α 3 (1 PeV)≈φ 0 und α 3 (μ)≈c 3 bei μ∼2.5×108 GeV, siehe 5.2.
+4. Abelische Spur als roter Faden. Die Zahl 41 erscheint sowohl in b 1 =41/10 der Fixpunktgleichung als auch im EW
+Block über k EW =41/32, vgl. 8.4.6. Das unterstreicht, dass dieselbe abelsche Spur in beiden Kontexten wirkt, ohne
+Zirkularität.
+Left: invariants ((c 3 ,φ 0 ,b 1 )). Middle: (U 3 ,U 4 ,U 1 ). Right: (U(α)), stationarity, cubic fixed point.
+7.6.1 Callan–Symanzik-Route
+Mit μdα/dμ=β α = 2 b π 1 α2+Ac2 3 α3+… und A=1/(256π3) aus Appendix E führt die Integration zwischen M Pl und
+φ 0 M Pl unmittelbar zur Kubik
+1
+[α3−2c3α2−8b c6ln =0.]
+3 1 3 φ
+0
+Dies ist unabhängig von der Potential-Darstellung U(α) und macht die Fixpunktgleichung zweifach hergeleitet.
+7.6.2 A und κ auf einen Blick mit Querverweisen
+Zweck. Diese Box bündelt die Normierungen und Invarianten, die in 7.6 für die Variationsableitung verwendet werden,
+und verweist auf die formalen Herleitungen in 3.2.1, 3.2.2 sowie Anhang E.
+⸻
+Fixpunkte und Skalen.
+Topologie aus Chern Simons Reduktion, vgl. 3.2.1:
+1
+(c
+3
+=
+8π
+=0.039788735772973836…)
+Geometrie der Moebius Faser mit Gauss Bonnet und Rand, vgl. 3.2.2 und Anhang D:
+40 / 81
+
+===== Page 41 of 81 =====
+1 3
+(φ
+0
+=
+6π
++
+256π4
+=0.053171952176845526…)
+Paper V1.06 - 01.09.2025
+Abelsche Spur in GUT Norm.
+( b_{1}=\dfrac{41}{10}=4.1 )&nbsp; \; ( \Rightarrow ) Definition von (κ) unten, vgl. Anhang E.
+⸻
+Zentrale Kurzschreibweisen aus Anhang E.
+Reiner Topologie Faktor
+1
+(A ≡ 2c3 = = 1.259825563796855×10−4).
+3 256π3
+Integrierte eins Schleifen Konstante
+b
+(κ ≡ 1 ln( 1 )).
+2π φ 0
+⸻
+Effektives Potential in 7.1.1. (U(α)) als Gradient Darstellung im Kopplungsraum
+(∂ α U ∝β α ). Bis zur relevanten Ordnung:
+A 2A
+[U(α)= α4− c3α3−A[8b c6ln( 1 )]α.]
+4 3 3 1 3 φ0
+Stationaritaet gleich Fixpunkt.
+∂U
+[ =A[α3−2c3α2−8b c6ln( 1 )]=0]
+∂α 3 1 3 φ 0
+Normalform wie in 7.2:
+b
+[α3−Aα2−Ac2κ=0, A=2c3, κ= 1 ln( 1 ).]
+3 3 2π φ0
+Dynamische Fingerabdruecke und Kosmo Anker.
+(α 3 (1PeV)≈φ 0 ) und (α 3 (μ)≈c 3 ) bei (μ∼2.5×108GeV), vgl. 5.2.
+(Ω b =φ 0 (1−2c 3 )) nahe Planck, vgl. 8.4.7.
+7.7 Interpretation
+Die Rolle von α ist in diesem Framework grundlegend neu definiert:
+Kein Input, sondern Fixpunkt. α ist keine willkürliche Zahl, sondern die eindeutige Lösung einer geometrisch-
+topologischen Bedingung.
+Dominanz der Topologie. Sensitivitätsanalysen zeigen: α reagiert am stärksten auf c₃ (topologischer Fixpunkt),
+weniger auf b₁ (Spektrum), am schwächsten auf φ₀ (Geometrie).
+Universeller Zuschlag. Der konstante Korrekturterm A/3 erklärt, warum α ppm-genau sitzt – eine kleine, aber
+strukturelle Verschiebung.
+Damit ist die Feinstrukturkonstante nicht zufällig, sondern ein emergenter Fixpunkt aus Topologie, Geometrie und
+Symmetrie.
+Gemeinsame Ursache von α und Flavor Relationen.
+3 φ
+α folgt aus (φ 0 ,c 3 ), die Möbius Leiter nutzt δ ⋆ = 5 + 6 0 .
+Damit entsteht die Schleife φ 0 ⇒α(φ 0 ,c 3 ) und φ 0 ⇒δ ⋆ ⇒ Flavor Relationen.
+41 / 81
+
+===== Page 42 of 81 =====
+8. Von E₈ zu E₇ zu E₆ und zum Standardmodell
+Paper V1.06 - 01.09.2025
+Eine klare Blockstruktur, rechnerisch geschlossen, sofort reproduzierbar
+Fixpunkte und Leiter
+Topologie: c 3 = 8 1 π =0.039788735772973836
+Geometrie: φ 0 = 6 1 π + 256 3 π4 =0.05317195217684553
+0.834
+Leiter Normierung: γ(0)=0.834, λ= =0.5877029773404678
+ln248−ln60
+Plankonstante für Zahlen: M Pl =1.221×1019 GeV
+Idee in einem Satz
+Wir verbinden eine diskrete Strukturachse aus E₈ mit Stufen n und eine dynamische Achse aus
+Renormierungsgruppe μ.
+E₈ ordnet die Leiter φ n. Die RG Dynamik liefert Fenster E r bei α 3 (μ)≈1/(rπ).
+Blöcke verknüpfen beides und projizieren auf messbare Größen des Standardmodells.
+Zwei Achsen, ein gemeinsames Raster
+Strukturachse
+Aus der nilpotenten Orbitologie von E₈ entsteht eine eindeutige, streng fallende Kette
+D =60−2n, n=0…26,
+n
+die eine log exakte Leiter definiert
+D λ
+φ =φ e−γ(0)( n) (n≥1).
+n 0 D
+1
+Diese Achse ist diskret. Sie ordnet Verhältnisse von Skalen. Sie erklärt, warum bestimmte Sprünge zwischen Ebenen
+immer wieder gleich aussehen.
+Dynamikachse
+42 / 81
+
+===== Page 43 of 81 =====
+Auf der RG Achse läuft die starke Kopplung α 3 (μ) kontinuierlich. Es gibt drei natürliche Fenster
+Paper V1.06 - 01.09.2025
+1
+α (μ )= , r∈{6,7,8},
+3 r rπ
+also E₆ um 1/(6π) nahe PeV, E₇ um 1/(7π) dazwischen, E₈ um 1/(8π)=c 3 bei etwa 2.5×108 GeV.
+Leseregel
+n zählt Struktur und bestimmt Ratio Gesetze.
+E r markiert Dynamik und bestimmt Lagen auf der Energieachse.
+Synchronisiert werden beide durch die Fixpunkte c 3 = 8 1 π und φ 0 = 6 1 π + 256 3 π4 .
+Info Box — Chiralität kommt aus Geometrie, nicht aus E8
+E8 dient hier ausschließlich als Ordnungsprinzip einer diskreten Skalenleiter (φ n ).
+Es gibt keine 4D Eichgruppe (E 8 ) und keine Einbettung der SM Fermionen in (E 8 ) Darstellungen.
+Die 4D Chiralität entsteht unabhängig davon durch Randbedingungen und integer quantisierte Flüsse auf der
+orientierbaren Doppelabdeckung der Möbius Faser.
+Drei Randzyklen und die Chern–Simons Quantisierung liefern den chiralen Index:
+1
+(IndD=
+2π
+∫
+M˜
+F =ν
+1
++ν
+2
++ν
+T
+).
+Mit der Minimalwahl ((ν 1 ,ν 2 ,ν T )=(1,1,1)) ergeben sich drei linkschirale Familien, Spiegel Zustände fehlen durch
+die Projektoren auf den Randzyklen.
+Details in Anhang J. (Bezüge: 3.2.1 (c 3 = 8 1 π ), 3.2.2 (φ 0 ), 8.4.6 (k EW =41/32)).
+43 / 81
+
+===== Page 44 of 81 =====
+Paper V1.06 - 01.09.2025
+Wie aus Struktur und Dynamik Zahlen des SM werden
+44 / 81
+
+===== Page 45 of 81 =====
+Paper V1.06 - 01.09.2025
+Der Schritt von dimensionslosen Leiterstufen zu messbaren Größen erfolgt blockweise. Jeder Block B hat drei
+Kennzahlen:
+r B wirksamer Rang in der Kette E₈⊃E₇⊃E₆⊃SM
+k B fraktionale Topologiezahl aus den Randzyklen der Möbius Faser
+45 / 81
+
+===== Page 46 of 81 =====
+n B Stufe der Leiter
+Paper V1.06 - 01.09.2025
+Daraus folgt zuerst eine Blockkonstante
+k 8−r
+ζ =(πc ) exp[−β πc ] exp[− B], β = B,
+B 3 B 3 c B 8
+3
+und dann die dimensionierte Größe
+X =ζ M φ .
+B B Pl nB
+So setzen wir zum Beispiel
+EW Block bei n=12 im E₇ Fenster: v H =ζ EW M Pl φ 12
+Hadron Blöcke bei n=15 und n=17 im E₆ Korridor: m p ≃ζ had M Pl φ 15
+Lepton Blöcke tief unten n=22,25,26: leichte Yukawas
+Schnellstart für Leser
+1. Finde im Text den Block für die gesuchte Größe.
+2. Lies r B ,k B ,n B ab und berechne ζ B.
+3. Setze X B =ζ B M Pl φ nB mit der log exakten φ n aus der E₈ Leiter.
+Wo ist der Anschluss an das Standardmodell
+Die Kette E₈⊃E₇⊃E₆⊃SM liefert die Ranglogik und die abelsche Spur:
+Am EW Anker n=12 erscheint die Spur Y S 2 M+H = 4 4 1 8 . Daraus ergibt sich k EW = 4 3 1 2 und konsistent b 1 = 4 1 1 0 in GUT
+Norm.
+Die hadronischen Fenster liegen in der E₆ Domäne der Leiter und stützen die zusätzliche Dämpfung, die
+baryonische Skalen auszeichnet.
+Die RG Fenster verankern diese Struktur dynamisch: α 3 (μ) trifft 1/(6π),1/(7π),1/(8π) an genau den Stellen, die
+durch die Leiter motiviert sind.
+Kurz: Struktur ordnet, Dynamik bestätigt, Blöcke projizieren. Das ist unser Pfad von Topologie und Geometrie zu den
+Zahlen des Standardmodells.
+Was machen die Stufen ohne direkten Block
+Nicht jede Stufe muss eine konkrete Observabel tragen. Diese Stufen sind wichtiges Tragwerk:
+1. Geometrie der Leiter
+Sie sichern das Gesetz
+φ D λ
+m =( m) (m,n≥1),
+φ D
+n n
+also die fitfreie Ratio Struktur.
+2. Feine Rastpunkte in Fenstern
+Ein dynamisches Fenster ist ein Bereich in μ. Die diskreten n fungieren als Rastpunkte, an denen Schwellen und
+Mischungen wirken können, ohne das globale Ratio Gesetz zu verletzen.
+3. Reserve für neue Observablen 46 / 81
+
+===== Page 47 of 81 =====
+Weitere Größen wie Schwellen, Axion Kopplungen, präzise hadronische Parameter können später genau dort andocken.
+Paper V1.06 - 01.09.2025
+Die Plätze sind strukturell schon korrekt verdrahtet.
+Intuition
+Denke an ein Getriebe. Die Blockstufen sind die Zahnräder, die eine Achse treiben. Die Zwischenzähne sorgen dafür,
+dass die Kraft sauber und ohne Rutschen übertragen wird. Ohne sie gäbe es Sprünge, aber keine Ordnung.
+8.0a Chiralität aus Rand und Fluss: operative Kurzfassung
+Geometrie und Rand
+Wir arbeiten auf der orientierbaren Doppelabdeckung
+(M˜)
+der Möbius Faser mit drei geschlossenen Randzyklen
+(C 1 ,C 2 ,C T ). Die Randzählung ist kanonisch: (∑ i ∮ Ci ˆk g ds=6π).
+Die aus der sechs dimensionalen Reduktion resultierenden Projektoren wählen eine interne Chiralität:
+[ P_{T}=\tfrac12\!\left(\mathbf 1+\mathrm i\,\sigma^{3}\sigma^{n}\right),\quad&nbsp; P_{1}=P_{2}=\tfrac12\!\left(\mathbf 1-\mathrm i\
+sodass nur (χ + ) Nullmoden trägt und die 4D Nullmoden linkschiral sind.
+Index und Familienzahl
+Eine glatte abelsche Verbindung (A) mit quantisiertem Fluss (m= 1 ∫ F ∈Z) liefert
+2π M˜
+[ \mathrm{Ind}\,D_{\widetilde M} = \#\{\chi_{+}\} - \#\{\chi_{-}\} = \tfrac{1}{2\pi}\!\int_{\widetilde M}\!F&nbsp; = \nu_{1}+\nu_{2}+
+Die Minimalwahl ((ν 1 ,ν 2 ,ν T )=(1,1,1)) ergibt drei Familien ohne Spiegel.
+Wilson Linien sind flach und lesen nur die abelsche Spur aus, kompatibel mit (k EW = 4 3 1 2 ). Verweise: 3.2.1 (c 3 = 8 1 π ),
+3.2.2 (φ 0 ), 8.4.6 Spur (41).
+8.1 Ausführliche Beschreibung
+E₈ ordnet die Skalenleiter φ n log exakt, E₇ und E₆ setzen die physikalischen Fenster pro Block, und Topologie mit
+Geometrie liefert über c 3 und φ 0 die Normalisierungen. Dimensionierte Größen entstehen aus einer kompakten Block
+Formel:
+X B =ζ B M Pl φ n B , ζ B =(πc 3 )e−β B πc 3e−k B /c 3, β B = 8− 8 r B
+mit r B als effektivem Rang im Block und k B als rationaler topologischer Zahl der drei Randzyklen.
+Die E₈ Leiter ist log exakt:
+0.834
+γ(0)=0.834, γ(n)=λ[lnD −lnD ], D =60−2n, λ= .
+n n+1 n ln248−ln60
+Für n≥1 gilt
+D λ
+φ =φ e−γ(0)( n) , D =58 .
+n 0 D 1
+1
+47 / 81
+
+===== Page 48 of 81 =====
+Paper V1.06 - 01.09.2025
+8.1.1 Block-Konstanten aus Randzyklen und abelscher Spur
+Ziel. k B sind keine Fits, sondern folgen aus einer Zählung abelscher Quadrate auf den drei Randzyklen der
+orientierbaren Darstellung, multipliziert mit einem universellen Faktor.
+Definition (abelsche Spur in GUT-Norm). Für einen Block B sei
+[I
+1
+(B)= ∑ ∑ q
+i
+2(Φ) mit Y inGUT-Norm.]
+Φ∈Bi∈U(1)
+Y
+Satz 8.1.1 (Topologische Blockzahl). Die rationale Zahl
+3
+[k = I (B)]
+B 2 1
+ergibt sich aus der Summe der drei Randzyklen (Faktor 3) und dem faktorisierten Halbgewicht der orientierbaren
+Doppelabdeckung (Faktor 1/2).
+Beispiel EW-Block. Für B=SM+H gilt I 1 = 4 4 1 8 , also k EW = 3 2 ⋅ 4 4 1 8 = 4 3 1 2 , genau wie in 8.4.1 verwendet; gleichzeitig
+erscheint dieselbe Spur in b 1 = 4 1 1 0 , siehe 7.6.1.
+Bemerkung Hadron- und Pion-Blöcke. Für baryonische und pioniche Größen wird I 1 durch die effektiven abelschen
+Untergruppen der flavor-chiral Dynamik ersetzt (U(1) B bzw. U(1) I3). Damit folgen k p = 3 2 und k π = 5 3 1 2 als konkrete
+Auswertung derselben Zählregel im jeweiligen Block. Siehe 8.4.5.
+ζ
+8.1.2 Herleitung der -Formel aus dem Randfunktional
+B
+Die effektive Randwirkung pro Block hat die Form
+k
+[S(B) =πc − β πc − B,]
+∂ 3 B 3 c
+3
+wobei β B =(8−r B )/8 aus der effektiven Rangzahl r B resultiert (Zählung der nicht gedämpften Richtungen).
+Exponentiation der additiven Beiträge liefert
+[ζ =(πc ) exp[−β πc ]exp[−k /c ], X =ζ M φ .]
+B 3 B 3 B 3 B B Pl n
+B
+48 / 81
+
+===== Page 49 of 81 =====
+Damit sind v H, m p, f π und T γ0 direkt aus (r B ,k B ,n B ) berechenbar, ohne zusätzliche Freiheitsgrade. Siehe 8.4.1 bis
+Paper V1.06 - 01.09.2025
+8.4.7.
+8.2 Rechenrezept in drei Schritten
+1. Leiter auswerten
+λ
+φ =φ e−γ(0)(60−2n) (n≥1).
+n 0 58
+2. Blockkonstanten setzen
+Für den Block B: r B wählen, β B =(8−r B )/8, dazu k B rational aus der Randzählung.
+ζ B =(πc 3 )e−β B πc 3e−k B /c 3, πc 3 = 1 8 .
+3. Größe bestimmen
+X =ζ M φ .
+B B Pl n
+B
+Verhältnisgesetze ohne Einheitenwahl
+φ 60−2m λ
+m =( ) (m,n≥1).
+φ 60−2n
+n
+φ
+8.3 Benötigte Leiterstufen (log exakt)
+n
+n D φ
+n n
+1 58 0.0230930346695
+5 50 0.0211640537281
+10 40 0.0185628455934
+12 36 0.0174482846938
+15 30 0.0156753658147
+16 28 0.0150524852088
+22 16 0.0108336306291
+25 10 0.0082188698412
+26 8 0.0072087140665
+8.4 Ergebnisse pro Block mit Referenzen
+8.4.1 Elektroschwacher Block n = 12
+Annahmen: r EW =2⇒β EW =3/4, k EW = 4 3 1 2
+3 41
+ζ
+EW
+=(πc
+3
+)e− 4 πc 3e− 32 /c3 =1.17852087206×10−15.
+v =ζ M φ =251.07628 GeV.
+H EW Pl 12
+Mit g 2 =0.652, gS 1 M =0.357 am M Z:
+49 / 81
+
+===== Page 50 of 81 =====
+M = 1g v =81.85087 GeV, M = 1√g2+g2v =93.31741 GeV.
+W 2 2 H Paper V1.06 - 0Z1.09.22025 2 1 H
+Vergleich
+v=(√2G F )−1/2 =246.21965 GeV ⇒ +1.97 Prozent
+M W =80.3692 GeV ⇒ +1.84 Prozent
+M Z =91.1876 GeV ⇒ +2.34 Prozent
+Lesart
+Der Block setzt die Skala v H auf ein bis zwei Prozent genau. Endliche Beiträge mit zwei Schleifen und Schwellen
+verschieben M W ,M Z nach unten in Richtung der Referenzen.
+Topmasse als Minimalannahme
+y
+t
+≈1⇒m
+t
+≃v
+H
+/√2=177.54 GeV.
+8.4.2 PQ Block n = 10
+Annahmen: r PQ =1⇒β PQ =7/8, k PQ = 1 2
+ζ =3.90754185582×10−7, f =ζ M φ =8.8565×1010 GeV.
+PQ a PQ Pl 10
+Axionmasse:
+1012 GeV
+m ≃(5.7 μeV)× =64.36 μeV.
+a f
+a
+8.4.3 Seesaw Block n = 5
+Annahmen: r N R =4⇒β N R =1/2, k N R = 1 8
+M =ζ M φ =1.311×1015 GeV.
+R N Pl 5
+R
+Mit y ν3 ∼1:
+v2
+m ≃ H =0.04807 eV, Δm2 ≃2.31×10−3 eV2.
+ν3 M 31
+R
+8.4.4 Flavor Anker aus n = 1
+sin2θ =φ =0.023093, sinθ =0.15197.
+13 1 13
+Cabibbo Winkel aus Basisstufe
+φ
+sinθ ≃√φ (1− 0)=0.22446, θ =arcsin(sinθ )=0.22639 rad.
+C 0 2 C C
+Möbius Massenleiter mit einer Deformation δ.
+Kalibriere δ nur aus Leptonen:
+√m /m −1
+δ= τ μ .
+√m /m +1
+τ μ
+Setze diese eine Zahl in die sechs Relationen ein:
+50 / 81
+
+===== Page 51 of 81 =====
+Down: √ m m d s = Pap M er V 1 1 ( . δ 06 ) , - 01. √ 09.2m m 02s b 5 =M 1 (δ)(1+δ),
+Leptonen: √ m m τ =M 1 (δ), √m m μ =M 1 (δ)M 1/3 (δ),
+μ e
+2/3
+Up: √ m m u c =M 2/3 (δ), √ m m c t = 2/3−δ .
+Topologischer Check.
+3 φ
+Die Theorie erwartet δ ⋆ = 5 + 6 0 .
+Vergleiche δ aus den Leptonen mit δ ⋆ und dokumentiere die Abweichung in Prozent.
+Es kommen keine neuen freien Parameter hinzu.
+8.4.5 Hadron Fenster und pionische Observablen
+Proton n=15, Annahmen r had =5⇒β had =3/8, k p = 3 2 :
+m =ζ M φ =0.96821 GeV.
+p had Pl 15
+Pion n=16, gleiche Rangzahl r=5, stärkerer topologischer Dämpfer k π = 5 3 1 2 :
+f =88.12 MeV (chiraleNorm).
+π
+GMOR Konsistenz mit |⟨q¯q⟩|1/3 ≃272 MeV, (m u +m d ) 2 GeV ≃6.8 MeV:
+(m +m )|⟨q¯q⟩|
+m ≃√ u d =132.75 MeV.
+π f2
+π
+8.4.6 Feinstrukturkonstante α
+(Querverweis zu Abschnitt 6)
+Mit
+1
+α3−2c3α2−8b c6ln =0, b = 41,
+3 1 3 4c +48c4 1 10
+3 3 3
+ergibt sich die eindeutige reelle Lösung
+α=0.007297325816919221, α−1 =137.03650146488582
+Abweichung zu CODATA 2022 α−1 =137.035999177: +3.67 ppm.
+Kurzfassung
+Das gleiche Zählmaß 41 aus der Hyperladung erscheint zweifach:
+– in der α-Fixpunktgleichung über (b 1 = 4 1 1 0 )
+– im EW-Block über (k EW = 4 3 1 2 )
+Beides folgt aus derselben abelschen Spur (Y2 = 41). α ist hier also kein Input, sondern ein Konsistenz-Echo
+SM+H 48
+derselben Struktur, die (v H ) ankert.
+1) α als Fixpunkt aus Topologie und Geometrie
+Die kubische Gleichung
+[\alpha^{3}-2c_3^{3}\alpha^{2}-8\,b_1\,c_3^{6}\,\ln\!\frac{1}{\varphi_0}=0,\quad&nbsp; c_3=\tfrac{1}{8\pi},\ \ \varphi_0=\tfrac{1}{6\p
+liefert (α−1 =137.0365) ohne freie Parameter. 51 / 81
+
+===== Page 52 of 81 =====
+Hier kommt die 41 über (b 1 ) herein – die Hyperladungsspur des Standardmodells in GUT-Norm.
+Paper V1.06 - 01.09.2025
+2) Der gleiche 41-Fingerabdruck setzt den EW-Block
+Im EW-Block (Fenster bei (n=12)) verwenden wir
+[ \zeta_{\rm EW}=(\pi c_3)\,\mathrm e^{-\beta_{\rm EW}\pi c_3}\,\mathrm e^{-k_{\rm EW}/c_3}, \quad \beta_{\rm EW}=\tfrac{3}{4},\
+Auch hier steckt die gleiche 41, jetzt in (k EW ). Damit wird (v H ) über (v H =ζ EW M Pl φ 12 ) bestimmt.
+Ergebnis: (v H ≃251.1 GeV) (Skalenanker, erwartete 1–2 Prozent Drift zu (G F )).
+3) α im EW-Bild: Kombination aus (g_1) und (g_2)
+Nach Elektroschwacher Mischung gilt
+[ e=g_2\sin\theta_W=g_1\cos\theta_W,\qquad&nbsp; \alpha=\frac{e^2}{4\pi}. ]
+Setzt man typische Werte am (M Z ) ((g 2 ≈0.652, gS 1 M ≈0.357)), erhält man (α(M Z )) in der Größenordnung (1/128) –
+das ist die laufende** α am Z-Pol.
+Unsere Fixpunktlösung gibt die IR-α ((α−1 ≈137.0365)); der Unterschied ist schlicht Renormierungsfluss. Entscheidend
+ist: die gleiche 41 steuert sowohl die Fixpunktgleichung (über (b 1 )) als auch den EW-Anker (über (k EW )).
+Kein Kreisbezug
+c 3 = 8 1 π , φ 0 = 6 1 π + 256 3 π4
+⇒ κ= b 1 ln 1 , A=2c3
+2π φ 3
+0
+⇒ Kubik in α.
+Parallel: Y S 2 M+H = 4 4 1 8 ⇒k EW = 4 3 1 2 .
+Dieselbe abelsche Spur setzt b 1 und k EW, ohne Rückkopplung von α nach v H.
+Mini-Zahlencheck
+– Fixpunkt: (α− IR 1 =137.0365) (aus (c 3 ,φ 0 ,b 1 ))
+– Am (M Z ): (α(M Z )∼1/128) aus (g 1 ,g 2 ,θ W )
+– Beide Werte sind durch denselben U(1)-Inhalt verknüpft; die 41 erscheint zweimal und erklärt, warum α hier
+natürlich wieder ins Bild kommt.
+8.4.7 Kosmologie aus der Basisstufe
+Ω =φ (1−2c )=0.04894066.
+b 0 3
+8.5 Zusammenfassung auf einen Blick
+Größe Vorhersage Referenz Abweichung
+v H 251.07628 GeV 246.21965 GeV +1.97 %
+M W 81.85087 GeV 80.3692 GeV +1.84 %
+M Z 93.31741 GeV 91.1876 GeV +2.34 %
+m t 177.54 GeV 172.57 GeV +2.9 %
+f a 8.8565×1010 GeV Standardfenster —
+m a 64.36 μeV Standardfenster —
+52 / 81
+
+===== Page 53 of 81 =====
+Größe Vorhersage Referenz Abweichung
+Paper V1.06 - 01.09.2025
+M R 1.311×1015 GeV — —
+m ν3 0.04807 eV — —
+Δm2 2.31×10−3 eV² 2.509×10−3 eV² −7.9 %
+31
+sin2θ 13 0.023093 0.02240±0.00065 +3.1 %
+sinθ C 0.22446 0.2248±0.0006 −0.15 %
+m p 0.96821 GeV 0.938272 GeV +3.19 %
+f π 88.12 MeV 92.07 MeV −4.3 %
+m π 132.75 MeV 134.98 MeV (π0) −1.6 %
+α−1 137.036501465 137.035999177 +3.67 ppm
+Ω b 0.04894066 0.0493 −0.7 %
+8.5.1 Systematik der Abweichungen
+Die 1 bis 3 Prozent Abweichungen bei v H ,M W ,M Z entstehen aus
+(i) fehlenden Zwei-Schleifen-Termen im elektroschwachen Sektor,
+(ii) Schwellenanpassungen am Übergang zu n=12,
+(iii) der Blockeinheit ζ EW als reiner Einheitenwahl.
+Erwartung. Eine konsistente Nachführung mit Zwei-Schleifen und Stückweise-Matching (vgl. 5.1, 5.2) verschiebt v H, M W
+, M Z systematisch nach unten in Richtung der Referenzen, bei Δ∼1 bis 2 Prozent. Die Ratio-Tests innerhalb des
+Blocks bleiben unverändert, da sie nur von φ n abhängen. Siehe 8.4.1 und 5.4.
+8.6 Wo E₇ und E₆ konkret einhaken
+E₇ Fenster bei n=12 verankert die elektroschwache Skala. Die abelsche Spur Y2 = 41 führt via drei halbe
+SM+H 48
+Randzyklen zu k EW = 4 3 1 2 . Dieselbe 41 erscheint als b 1 = 4 1 1 0 in der Fixpunktgleichung von α.
+E₆ Korridor trägt die starke Dynamik. r had =5 erklärt die mildere Dämpfung im Hadronblock und rechtfertigt kleine
+rationale Δk für Goldstone Physik relativ zu Baryonen.
+8.7 Was noch offen ist und wie wir es schließen
+Feinstruktur der Yukawas: Hier wurden bewusst nur Skalen gesetzt. Texturen und Phasen sind die nächste
+Schicht. Prozentstreuungen im Block Rahmen sind erwartbar.
+Zwei Schleifen Feinschliff im elektroschwachen Sektor: Eine konsistente Nachführung mit Schwellen wird
+v H ,M W ,M Z systematisch Richtung Referenzen ziehen.
+Formale Ableitung von k B: Die verwendeten rationalen k B sind aus der Randzählung motiviert. Eine indexartige
+Ableitung pro Block gehört in den Anhang.
+Chiralität: geschlossen durch Randbedingungen und integer Flüsse auf der orientierbaren Doppelabdeckung, siehe
+Box in 8 und Appendix J.
+8.8 Zahlenkasten für diese Sektion
+c = 1 =0.039788735772973836
+3 8π 53 / 81
+
+===== Page 54 of 81 =====
+φ = 1 + 3 =0.05317195217684553
+0 6π 256π4 Paper V1.06 - 01.09.2025
+γ(0)=0.834, λ=0.5877029773404678
+φ =0.018562845593356334, φ =0.01744828469380037
+10 12
+φ =0.015675365814677055, φ =0.015052485208841481
+15 16
+φ =0.01083363062914777, φ =0.008218869841220914, φ =0.007208714066517271
+22 25 26
+ζ =1.17852087206×10−15, ζ =3.90754185582×10−7
+EW PQ
+M =1.221×1019 GeV
+Pl
+g 2 =0.652, gS 1 M =0.357 am M Z
+α=0.007297325816919221, α−1 =137.03650146488582
+9. Weitere Informationen, Ausblick und FAQ
+9.1 Ergänzungen zum Verständnis
+Die bisherigen Kapitel haben die Kernstruktur der Theorie hergeleitet: zwei fundamentale Fixpunkte (c 3, φ 0), die E₈-
+Kaskade und die Fixpunktlösung für α. Für das Gesamtverständnis sind drei weitere Aspekte hervorzuheben:
+1. Einpunkt-Kalibrierung:
+Die Kaskade φ n ist bis auf eine additive Konstante in logφ bestimmt. Eine einzige physikalische Kalibrierung (etwa
+am EW-Block, n=12) fixiert alle übrigen Stufen. Dies ist kein „Knopf“, sondern eine Wahl der Einheit.
+2. Block-Formeln:
+Die Dimensionierung einzelner Observablen (z. B. Protonmasse, CMB-Temperatur, Dunkle Energie) erfolgt über
+kompakte Block-Formeln, die in den Anhängen angegeben sind. Sie binden die dimensionslosen φ n an messbare
+Größen.
+3. Spurion-Beiträge:
+Der in den 2-Loop-Runs verwendete R3-Spurion ist kein freier Parameter, sondern eine effektive Beschreibung
+höherer Beiträge, die in der Chern–Simons-Struktur unvermeidlich auftreten. Sein Einfluss ist klein, aber notwendig,
+um den kubischen Term für α korrekt zu modellieren.
+Die abelsche Spur ist der rote Faden: dieselbe (41) steuert (b 1 = 4 1 1 0 ) in (κ= 2 b π 1 ln φ 1 ) sowie (k EW = 4 3 1 2 ) im EW Block;
+0
+geometrisch werden die Phasen über drei Randzyklen auf der Doppelabdeckung gelesen, siehe Appendix J.
+54 / 81
+
+===== Page 55 of 81 =====
+Paper V1.06 - 01.09.2025
+Sensitivität
+Die Sensitivität von α gegenüber den Parametern skaliert stark mit c 3, deutlich schwächer mit b 1 und nur moderat mit
+φ 0, siehe Figure 7.1.
+φ ↔ α
+Selbstkonsistenz:
+0
+Die Fixpunktgleichung erzeugt nicht nur α als Funktion von φ₀, sondern φ₀ selbst ist aus der geometrischen Reduktion ϕ₀
+= 1/(6π) + 3/(256π⁴) motiviert. Kombiniert man beide Abhängigkeiten, ergibt sich eine geschlossene Schleife:
+κ(φ )= b 1 ln 1
+−−[φ 0 2π φ0→ Big[ α3−2c3α2−8b c6ln 1 = 0 ] Lösun → g α(φ )]
+0 3 1 3 φ 0
+0
+Diese Schleife schließt sich, da φ 0 selbst aus der Geometrie folgt (φ 0 =1/(6π)+3/(256π4)) und die Lösung für α die
+Eingabe bestätigt.
+Diese Selbstreferenzstruktur ersetzt klassische Fine-Tuning-Debatten durch eine strukturelle Rückkopplung – φ 0 und α
+bestimmen sich gegenseitig. Kleine Änderungen in φ₀ propagieren durch κ direkt in die Gleichung, die dann einen neuen
+α-Wert ergibt. Die ursprüngliche Eingabe wird durch die resultierende Lösung wieder bestätigt – ein strukturelles „locking“
+statt einstellbarem Parameter. 55 / 81
+
+===== Page 56 of 81 =====
+Falsifikationskasten
+Paper V1.06 - 01.09.2025
+A — α-Präzision: Abweichung der Kubik-Lösung jenseits einiger zehn ppm widerlegt die Struktur.
+B — Fingerprints: Verfehlt α 3 (1PeV) das φ 0-Fenster oder α 3 das c 3-Fenster bei μ∼108 GeV robust, ist das Modell
+widerlegt.
+C — Spacing: Bricht die nahezu äquidistante Log-Abstands-Invariante der drei Gleichstände, ist die Leiterinkohärenz
+belegt.
+9.2 Offene Fragen und nächste Schritte
+Mehrere Punkte sind in der Theorie bereits angelegt, erfordern aber vertiefte Arbeit:
+Formale Ableitung von γ(n):
+Die Quadratik wurde plausibel aus der E₈-Orbitkette motiviert. Eine exakte algebraische Herleitung mit vollständiger
+Referenztabelle der Orbits und Fit-Residuen ist der nächste mathematische Schritt.
+Block-Konstanten ζ:
+Für EW-, Hadron- und Kosmo-Blöcke wurden kompakte ζ-Faktoren eingeführt. Deren genauere topologische
+Interpretation (z. B. aus Anomalien oder Indexsätzen) steht noch aus.
+RG-Robustheit:
+Erste Tests zeigen, dass die Gleichstandskorridore extrem stabil sind. Eine systematische Analyse mit variierenden
+Schwellen (± Dekade) und alternativen Feldinhalten ist geplant.
+Kosmologische Erweiterungen:
+Die Stufen n=20,25,30 reproduzieren Knie, CMB und Dunkle Energie. Hier soll geprüft werden, ob auch S 8 /σ 8-
+Spannungen und frühe Dunkle Energie konsistent eingebettet werden können.
+9.3 FAQ: Zehn Fragen und Antworten
+1. Ist das nur Zahlenspielerei oder Numerologie?
+Nein. c 3 =1/(8π) folgt aus einer quantisierten Chern Simons Kopplung. φ 0 folgt aus Möbius Geometrie plus Randtermen.
+Beide Größen erscheinen unabhängig in unterschiedlichen Teilen der Theorie und speisen dann die Fixpunktgleichung
+für α. Das unterscheidet ein strukturelles Resultat von einem Fit.
+2. Gibt es freie Parameter?
+Nein. Nach Festlegung der topologisch und geometrisch bestimmten Größen c 3 und φ 0 sowie der physikalisch fixen
+U(1)Y Konstante b1=41/10 bleibt kein frei wählbarer Parameter. Es gibt nur eine triviale Einheitenkalibrierung.
+3. Warum gerade E 8?
+Nur E 8 besitzt ausreichend reiche Orbitstrukturen, deren Zentralisator Dimensionen eine eindeutige monotone Kette
+bilden. Über den Logarithmus der Dimensionen entsteht eine einfache Schrittstruktur, aus der die Dämpfung γ(n) in
+blockweise konstanter Form folgt. Kleinere Gruppen brechen diese Monotonie oder liefern inkonsistente Sprungmuster.
+4. Unterschied zu klassischen GUT Ansätzen wie SU(5) oder SO(10)?
+Klassische GUTs postulieren zusätzliche Symmetrie und eine neue Skala, um Kopplungen zu vereinheitlichen. Hier
+werden Konstanten aus Topologie und Geometrie abgeleitet. Unifikation erscheint als Nebenwirkung des Flusses, nicht
+als Axiom.
+5. Wie robust sind die Zahlen?
+Sehr robust. Schwellen um eine Dekade verschoben verändern die Lage charakteristischer Gleichstände nur im
+Promillebereich. Die Lösung der Fixpunktgleichung für α bleibt im ppm Bereich stabil. Die Stufen der Leiter sind
+deterministisch, nicht fitgetrieben.
+56 / 81
+
+===== Page 57 of 81 =====
+6. Warum ist α so präzise, andere Größen aber nur auf Prozent genau?
+Paper V1.06 - 01.09.2025
+α wird direkt durch die Fixpunktgleichung festgelegt. Massen und Mischungen tragen zusätzliche QCD Dynamik, Flavour
+Struktur und Schema Effekte. Diese Beiträge sind in der vorliegenden Version bewusst modular gehalten und erzeugen
+natürliche Streuungen auf Prozentniveau.
+7. Wie kann man die Theorie widerlegen?
+Drei klare Hebel:
+a) RG Fingerprints an zwei charakteristischen Skalen, etwa im PeV Bereich und bei etwa 2.5×108GeV.
+b) Stabilität des Abstandsmusters zwischen Gleichständen über einen breiten Parameterbereich.
+c) Vorhersagen in Präzisionsbereichen wie Atominterferometrie oder Rydberg Konstante für α. Systematische
+Abweichungen widerlegen das Modell.
+8. Gibt es Bezüge zu Stringtheorie oder M Theorie?
+Ja, auf der Ebene der 11 dimensionalen Elternstruktur mit Chern Simons Term und kompaktifizierter Topologie. Anders
+als Landschafts Ansätze benötigt TFPT keine Vielzahl freier Moduli. Die Ableitungen bleiben lokal und topologisch.
+9. Was sagt die Theorie zur kosmologischen Konstante?
+Die Stufe n=30 der Leiter liefert eine Energiedichte ρ Λ in der Größenordnung der Planck Messungen. Entscheidend ist
+die Herkunft des Exponenten aus der Leiter, nicht ein Fit an Daten.
+10. Wo liegen die größten Unsicherheiten?
+Zwei Punkte: die formale Herleitung der geschlossenen Form von γ(n) direkt aus der E 8 Orbitologie und die tiefe
+Interpretation der Block Konstanten ζ. Beides wird in den Ausblicks Abschnitten als Arbeitsprogramm benannt.
+11. Woher stammen A= 256 1 π3 und κ= 2 b π 1 ln(1/φ 0 )?
+Aus der gewählten Normierung α=g2/(4π), GUT Norm für U(1){Y} und einer topologisch induzierten einschleifigen
+Korrektur zu F2 mit zwei identischen Einfügungen von c3. Siehe Derivation Note A1 im Anhang für die vollständige
+Rechnung.
+12. Wie schemaabhängig sind die Aussagen?
+Ein Schemawechsel verschiebt nur additive, skalenunabhängige Terme in κ. Der reine Zahlenfaktor A ist durch Topologie
+und kanonische Eichkinetik fixiert. Fixpunkte und Leiterstrukturen bleiben invariant.
+13. Was bedeutet „keine freien Parameter“ praktisch, wenn numerische Werte doch gerundet werden?
+Rundungen betreffen nur Darstellung und numerische Propagation. Die Strukturgleichungen sind parameterfrei. In
+Reproduktionen sollen alle Konstanten mit definierter Präzision angegeben und Fehlerbalken aus Schema und
+Schwellen Variation ausgewiesen werden.
+14. Warum eine kubische Gleichung für α und keine quadratische oder quartische?
+Die kleinste nicht triviale Ordnung, in der der topologische Beitrag zur Wellenfunktionsrenormierung des Photons lokal
+und paritäts even auftritt, ist proportional zu g6. In α Skala entspricht dies der dritten Potenz. Niedrigere Ordnungen sind
+durch Symmetrie oder Quantisierung ausgeschlossen.
+15. Wie werden zwei Schleifen Effekte und Schwellen technisch behandelt?
+Die nicht abelschen Kopplungen laufen zwei schleifig mit Standardkoeffizienten und Schwellensprüngen an den
+effektiven Massen der schweren Moden. Sensitivitätsanalysen zeigen, dass die beiden charakteristischen Fingerprints in
+Lage und Abstand stabil bleiben. Die abelsche Gleichung erhält zusätzlich den topologischen kubischen Term.
+16. Wie reproduziere ich die Kernergebnisse numerisch?
+57 / 81
+
+===== Page 58 of 81 =====
+Schritte:
+Paper V1.06 - 01.09.2025
+a) Setze c 3 =1/(8π) und φ 0 gemäß Abschnitt 3.2.
+b) Berechne κ=(b 1 /2π)ln(1/φ 0 ) mit b 1 =41/10.
+c) Löse die Fixpunktgleichung in 6.2 für α mit A=1/(256π3).
+d) Lasse die nicht abelschen Kopplungen zwei schleifig laufen, setze definierte Schwellen, prüfe die Fingerprints.
+e) Variiere Schwellen und Schema Parameter in plausiblen Bereichen und gib Fehlerbalken an.
+17. Was ist die Physik hinter φ 0?
+φ 0 ist keine Fit Konstante, sondern entsteht aus einer geometrischen Relation auf der orientierbaren Doppelabdeckung
+der Möbius Reduktion. Gauss Bonnet mit Rand liefert den Flächenanteil, der Randterm den Zuschlag. Zusammen fixiert
+das die effektive dimensionslose Skalenrelation.
+19. Wo endet die Zuständigkeit der Theorie derzeit bewusst?
+In der vorliegenden Version werden Flavor Details, CKM und PMNS Phasen sowie nicht triviale Hadronen
+Phänomenologie nur gerahmt. Das ist eine bewusste Modularisierung. Ziel ist zuerst ein sauberes Fundament aus
+Topologie, Geometrie und Kopplungsdynamik.
+20. Was folgt als nächstes, um die offenen Punkte zu schließen?
+Drei konkrete Schritte:
+a) Formale Ableitung der geschlossenen γ(n) Gestalt direkt aus nilpotenten Orbits und Zentralisatoren.
+b) Vollständige zwei schleifige Validierung mit systematischer Schwellenauswertung und Fehlerbudget.
+c) Präzisionstests für α über unabhängige Messkanäle und Simulationen, inklusive klarer Abweichungsschwellen für
+Falsifikation.
+9.4 Plausibilitätsargumente: Wahrscheinlichkeit und strukturelle Abhängigkeiten
+Die Plausibilität der vorliegenden Theorie ergibt sich aus zwei komplementären Aspekten: (i) der extrem geringen
+Wahrscheinlichkeit multipler präziser Übereinstimmungen ohne freie Parameter und (ii) den tiefen strukturellen
+Abhängigkeiten zwischen Topologie, Geometrie, Symmetrie und Dynamik.
+Zunächst zur Wahrscheinlichkeit: Die parameterfreie Vorhersage der Feinstrukturkonstante α−1 ≈137.03650 weicht
+lediglich um 3.67 ppm vom CODATA 2022 Referenzwert ab. Unter der naiven Annahme einer gleichmäßigen Verteilung
+von α in einem physikalisch plausiblen Bereich (z. B. 0.001 bis 0.01) beträgt die Wahrscheinlichkeit einer solch geringen
+Abweichung nur etwa
+6×10−7
+(basierend auf einer absoluten Differenz von
+2.7×10−8
+). Entsprechende Treffer finden
+sich auch in der E₈-Kaskade, etwa für Ω b ≈0.04894 (Abweichung 0.06% gegenüber den Planck-Daten) oder
+m p ≈937MeV (Abweichung 0.12%). Jeder dieser Werte entspricht einer unabhängigen Wahrscheinlichkeit im Bereich
+von
+10−2
+bis
+10−6
+. Multipliziert man diese für rund zehn zentrale Vorhersagen (Flavor-Mischungen, Massen,
+kosmologische Konstanten), ergibt sich eine kombinierte Zufallswahrscheinlichkeit von kleiner als
+10−20
+. Dies ist
+vergleichbar mit der Unwahrscheinlichkeit, dass eine Serie unabhängiger Würfelwürfe exakt dasselbe Muster wiederholt.
+Hinzu kommen die strukturellen Abhängigkeiten: Die Fixpunkte c 3 und φ 0 entstehen nicht isoliert, sondern folgen aus
+unterschiedlichen, jedoch konsistenten Prinzipien – c 3 aus topologischen Chern–Simons-Normalisierungen in elf
+Dimensionen, φ 0 aus geometrischer Möbius-Reduktion. Beide Parameter werden unabhängig in
+renormierungsgruppenbasierten Flüssen bestätigt, etwa durch α 3 (1PeV)≈φ 0. Die Schichten greifen ineinander:
+Topologie fixiert die Normalisierungen, E₈ ordnet die Kaskade, die RG-Flüsse liefern dynamische Konsistenz.
+58 / 81
+
+===== Page 59 of 81 =====
+Diese interne Verschränkung reduziert die Wahrscheinlichkeit, dass es sich lediglich um zufällige Koinzidenzen handelt,
+Paper V1.06 - 01.09.2025
+erheblich. Ein Versagen in einer Schicht (z. B. im genetischen Algorithmus oder in den Dimensionsketten) würde die
+übrigen nicht tangieren, wird empirisch jedoch nicht beobachtet. Stattdessen ergibt sich ein kohärentes Gesamtbild, das
+durch Reproduzierbarkeit und Falsifizierbarkeit (z. B. bei der vorhergesagten Axionmasse) überprüfbar ist.
+Appendix A — Zahlenkasten der Fixpunkte (hochpräzise)
+1 4
+c = =0.039788735772973836, φ = c +48c4 =0.053171952176845526,
+3 8π 0 3 3 3
+41 1 1
+A=2c3 =1.259825563796855×10−4, κ= ln =1.914684795.
+3 10 2π φ
+0
+α=0.007297325816919221, α−1 =137.03650146488582.
+Referenz: CODATA 2022 α CODATA =7.2973525628(11)×10−3,
+Abweichung ≈3.67 ppm.
+Appendix B – E₈-Kaskade in geschlossener Form
+Definitionen und Normierung
+Sei für jedes nilpotente E₈ Orbit
+D
+n
+= 248−dimO
+n
+, n=0,…,26,
+mit der gefundenen Kette D n =60−2n von D 0 =60 bis D 26 =8.
+Die Leiter folgt aus einer einzigen Normierung am ersten Schritt
+s⋆ =ln248−ln60=1.419084183942882, λ= 0.834 =0.5877029773404678 .
+s⋆
+Dämpfung
+γ(0)=0.834, γ(n)=λ[lnD
+n
+−lnD
+n+1
+] (n≥1).
+Rekursion
+φ n+1 =φ n e−γ(n) .
+Geschlossene Form der Leiter
+Für n≥1 gilt
+λ
+φ
+n
+= φ
+0
+e−γ(0)(D
+D
+n) , D
+1
+=58.
+1
+Kalibrierungsfreie Tests
+1. Verhältnisgesetz für m,n≥1:
+φ λ λ
+m =(Dm) =(60−2m)
+.
+φ n D n 60−2n
+2. Log lineares Gesetz
+logφ n =Konstante+λ logD n .
+Bemerkung zum Kettenende
+Die E acht Kette endet strukturell bei n=26 mit D=8. Werte für n>26 wären eine analytische Fortsetzung und werden
+als Extrapolation gekennzeichnet.
+59 / 81
+
+===== Page 60 of 81 =====
+B.0 Verifikation der Eindeutigkeit
+Paper V1.06 - 01.09.2025
+Wir haben die Kettenmenge C vollständig auf dem ΔD=2-DAG enumeriert und F aus 4.5.2 lexikografisch minimiert. Es
+ergab sich genau eine Minimalkette (Satz 4.5.1), identisch zur in Tab. B.1 gezeigten Folge D n =60−2n mit den in 4.2
+gelisteten Labels. Die daraus abgeleitete log exakte Leiter und die Dämpfung γ(n) stimmen stufenweise überein.
+B.1 – E8 Kaskade: log exakte Größen pro Stufe
+Spalten:
+n
+D
+n
+lnD
+n
+s =lnD −lnD
+n n n+1
+γ(n) mit γ(0)=0.834, sonst λs n
+Σγ kumuliert bis Stufe n exklusiv
+φ n /φ 0 unkalibriert
+(Dn)λ
+als reine Kettenzahl
+D
+1
+Hinweis: φ n /φ 0 =e−γ(0)(D D n 1 )λ für n≥1; für n=0 gilt φ 0 /φ 0 =1.
+Tabellenhinweis
+Die Spalte (D n /D 1 )λ ist für n≥1 die Kettenzahl der Leiter. Der Eintrag für n=0 dient nur der Kontrolle und wird
+physikalisch nicht verwendet.
+n D ln D s_n γ(n) Σγ φ_n/φ₀ (Dₙ/D₁)^λ
+0 60 4.094345 0.033902 0.834000 0.000000 1.000000 1.020124
+1 58 4.060443 0.035091 0.020623 0.834000 0.434309 1.000000
+2 56 4.025352 0.036368 0.021373 0.854623 0.425443 0.979064
+3 54 3.988984 0.037740 0.022180 0.875997 0.416447 0.957994
+4 52 3.951244 0.039221 0.023050 0.898177 0.407312 0.936782
+5 50 3.912023 0.040822 0.023991 0.921227 0.398030 0.915419
+6 48 3.871201 0.042560 0.025012 0.945218 0.388595 0.893899
+7 46 3.828641 0.044452 0.026124 0.970230 0.378996 0.872211
+8 44 3.784190 0.046520 0.027340 0.996355 0.369223 0.850347
+9 42 3.737670 0.048790 0.028674 1.023695 0.359265 0.828299
+10 40 3.688879 0.051293 0.030101 1.052369 0.349110 0.806058
+11 38 3.637586 0.054067 0.031767 1.082514 0.338744 0.783615
+12 36 3.583519 0.057158 0.033589 1.114290 0.328148 0.760962
+13 34 3.526361 0.060625 0.035571 1.147880 0.317306 0.738089
+14 32 3.465736 0.064539 0.037915 1.183450 0.306202 0.714988
+15 30 3.401197 0.068993 0.040555 1.221365 0.294805 0.691650
+16 28 3.332205 0.074108 0.043581 1.261920 0.283078 0.668066
+17 26 3.258097 0.080043 0.047041 1.305501 0.271026 0.644229
+18 24 3.178054 0.087011 0.051117 1.352542 0.258584 0.620130
+19 22 3.091042 0.095310 0.055996 1.403659 0.245652 0.595761
+60 / 81
+
+===== Page 61 of 81 =====
+n D ln D s_n γ(n) Σγ φ_n/φ₀ (Dₙ/D₁)^λ
+Paper V1.06 - 01.09.2025
+20 20 2.995732 0.105361 0.061940 1.459655 0.232102 0.571113
+21 18 2.890372 0.117783 0.069239 1.520595 0.217761 0.546180
+22 16 2.772589 0.133531 0.078477 1.589835 0.203747 0.520953
+23 14 2.639057 0.154151 0.090595 1.668311 0.188369 0.495424
+24 12 2.484907 0.182322 0.107151 1.758907 0.172054 0.469584
+25 10 2.302585 0.223144 0.131142 1.867098 0.154572 0.443426
+26 8 2.079442 1.998240 0.135574 0.416948
+Appendix C – Block-Formeln für Observablen
+Block-Kalibrierung in der Praxis
+Pro Block genügt eine Einheiten-Kalibrierung ζ auf eine Referenzgröße. Alle Relationen im Block folgen dann fitfrei
+aus den Ratio-Gesetzen der Kette, siehe 4.3 und Appendix B.
+Elektroschwacher Block (n=12):
+v H =ζ EW M Pl φ 12 , M W = 1 2 g 2 v H , M Z = 1 2 √g2 1 +g2 2 v H.
+Hadronischer Block (n=15,17):
+m p =ζ p M Pl φ 15 , m b =ζ b M Pl φ 15 , m u =ζ u M Pl φ 17.
+Kosmo-Blöcke:
+T γ0 =ζ γ M Pl φ 25 , T ν =(4/11)1/3T γ0 , ρ Λ =ζ Λ M P 4 l φ9 3 7 0 /30 .
+Fundamentale Relationen nahe n=0:
+Ω b =φ 0 (1−2c 3 ), r=φ2 0 , V us /V ud =√φ 0.
+C.8 Möbius Leiter: Definition und Fehlerfortpflanzung
+Definition.
+y+δ
+M y (δ)= y−δ mit y∈{1, 1 3 , 2 3 }.
+Kalibrierregel.
+√m /m −1
+τ μ
+δ= .
+√m /m +1
+τ μ
+Ableitungen.
+dδ 2
+Setze R=√m τ /m μ. Dann gilt dR = (R+1)2 .
+∂R 1 1
+Mit = und
+∂m
+τ
+2 √m
+τ
+m
+μ
+∂R 1 √m
+τ
+=− folgt
+∂m
+μ
+2 m3/2
+μ
+dδ
+σ2 =( )2σ2 .
+δ dR R
+Vorhersageformeln.
+Setze δ in die sechs Relationen aus 7.4.4 ein.
+61 / 81
+
+===== Page 62 of 81 =====
+Feinkorrekturen lassen sich als universelle Verschiebung schreiben:
+Paper V1.06 - 01.09.2025
+δ→δ+a y φ 0 +b y c 3 mit kleinen sektorspezifischen a y ,b y.
+Appendix D: Möbius Faser: Rand, Krümmungsnormalisierung und der
+Koeffizient 6pi
+Ziel
+Wir begründen, warum in 3.2.2 der lineare Randkoeffizient 6π auftritt und daraus φ tree =1/(6π) folgt. Zusätzlich zeigen
+wir den topologischen Zuschlag δ top in äquivalenten Formen und klären Unabhängigkeiten von Repräsentationen und
+Schemata.
+D.1 Setup, Notation und konforme Skalierung
+Sei M die zweidimensionale Möbius-Faser (kompakt, mit Rand), g M =φ2g^ M eine reine konforme Reskalierung. Für
+Gauß-Krümmung K und geodätische Randkrümmung k g gilt
+∫ K,dA+∮ k ,ds=2π,χ(M),
+g
+M ∂M
+K =φ−2K^, dA=φ2dA ^ , ds=φ,ds^.
+Daraus folgt konforme Invarianz des Flächenintegrals und Linearität des Randintegrals:
+∫ K,dA=∫ K^,dA ^ , ∮ k ,ds=φ,∮ k^ ,ds^.
+g g
+M M ∂M ∂M
+Somit stammt die explizite φ-Abhängigkeit der reduzierten gravitativen Wirkung ausschließlich aus dem Rand (vgl. 3.2.2).
+D.2 Orientierbare Doppelabdeckung und der Naht-Beitrag
+Die orientierbare Doppelabdeckung
+M˜
+der Möbius-Faser ist ein Zylinder mit zwei geometrischen Randkomponenten.
+Zusätzlich entsteht durch die Z 2-Identifikation eine Naht-Kurve Γ. Diese trägt wie ein dritter effektiver Randzyklus.
+Lemma D.2 (Naht als Randterm). Modelliert man die Identifikation entlang Γ als Grenzfall einer dünnen
+Kollarnachbarschaft mit zwei gegenüberliegenden Randkurven und dihedralem Winkel π, so liefert der Corner-
+beziehungsweise Naht-Term in der Gauss-Bonnet-Bilanz für jede geschlossene Γ einen integrierten Beitrag, der
+äquivalent zu einem vollwertigen Randintegral mit Normierung 2π ist. ∎
+Normierung.
+K := ∑ ∮ k^ ,ds^=2π+2π+2π=6π.
+∂ g
+Randzyklen
+Damit ist die Zahl 6π kanonisch und unabhängig von einer speziellen Repräsentation.
+62 / 81
+
+===== Page 63 of 81 =====
+Paper V1.06 - 01.09.2025
+63 / 81
+
+===== Page 64 of 81 =====
+⎢ ⎥
+Illustration: The Möbius fiber can be represented by its orientable double cover, a cylinder with two ordinary boundaries
+Paper V1.06 - 01.09.2025
+plus one effective seam Γ. Each contributes 2π to the Gauss–Bonnet balance, leading to the canonical total 6π.
+φ
+D.3 Reduzierte 6D-Wirkung und der lineare -Koeffizient
+In der 6D-Reduktion trägt der geometrische Anteil linear in φ:
+⎡ ⎤
+M4 M4
+S(6) ⊃ 6 ∫ √g ∫ KdA +∮ k ds = 6 ∫ √g (6πφ)+…
+grav 2 B g 2 B
+B M  ∂M  B
+⎣ ⎦
+konforminvariant = φK∂
+Der wirksame lineare Koeffizient ist 6π.
+φ
+D.4 Stationarität und Baumwert
+tree
+Die effektive Potentialdichte enthält zusätzlich einen quantisierten topologischen Beitrag. Stationarität liefert:
+1
+∂ V (φ)∝6πφ−1=0 ⇒ φ = .
+φ eff tree 6π
+δ
+D.5 Der topologische Zuschlag
+top
+Die Reduktion des 11D-Chern-Simons-Terms erzeugt in 4D eine quantisierte Kopplung g=8c2 3 mit c 3 =1/(8π). Der
+Zuschlag lässt sich schreiben als:
+3
+δ = =48c4 =6c2g= 3g2
+top 256π4 3 3 4
+mit g= 8π 1 2 , c 3 = 8 1 π .
+Damit:
+φ =φ +δ = 1 + 3 = 4c +48c4
+0 tree top 6π 256π4 3 3 3
+D.6 Eindeutigkeit, Invarianz und Normierungsfragen
+1. Repräsentationsfreiheit. 6π hängt nur von der Topologie ab.
+2. Normierung. χ=1 fixiert φ tree.
+3. Orthogonalität. 6π (geometrisch) und g (topologisch) sind unabhängig.
+4. Schema-Robustheit. δ top ist reiner Zahlenbeitrag.
+D.7 Konsistenzcheck
+1
+φ 0 = 6 1 π + 256 3 π4 ⇒ κ= 2 b π 1 ln φ , A=2c3 3 = 256 1 π3
+0
+– konsistent mit 7.6.
+D.8 Cross Ratio
+y+δ
+CR(x;y,−y,0)= =:M (δ)
+64 / 8y1−δ y
+
+===== Page 65 of 81 =====
+mit Verschiebung
+Paper V1.06 - 01.09.2025
+δ
+⋆
+= 3
+5
++ φ
+6
+0.
+Damit Anbindung an die Leiter-Abbildung (vgl. 3.3.2).
+D.9 Kurze FAQ
+• Warum drei Randzyklen? Zwei Zylinderränder plus Naht.
+• Ist die Naht willkürlich? Nein, Corner-Term in Gauss-Bonnet.
+• Ist δ top Zahlenspiel? Nein, folgt rein algebraisch aus c 3 ,g.
+Ergebnis
+φ = 1 , δ = 3 =48c4 = 3g2, φ = 1 + 3
+tree 6π top 256π4 3 4 0 6π 256π4
+Fazit
+Der Koeffizient 6π ist geometrisch fixiert, δ top topologisch motiviert und mehrfach äquivalent dargestellt. Die Kopplung an
+die übrigen Konstanten des Papers ist explizit nachvollziehbar.
+A
+Appendix E — Von der 11D-Wirkung zum 4D-Koeffizienten und zur
+κ
+Log-Konstante
+E.1 Setup der effektiven 4D-Theorie
+~
+Aus 3.2.1 folgt die topologische Kopplung gaFF mit g=8c2 und periodischem Axion a. Nach kanonischer Normierung
+3
+lautet der relevante 4D-Sektor
+1 1 1 ~
+[L =− F Fμν+ (∂a)2− m2a2+gaFF,]
+eff 4 μν 2 2 a
+wobei m a ein schwerer geometrischer Modus der Reduktion ist. α≡g2 em /(4π). Siehe 3.2 und 7.6.
+E.2 Integrieren des schweren Modus und lokale Operatoren
+Das Eliminieren von a im Pfadintegral erzeugt bei p2 ≪m2 eine lokale Serie
+a
+g2 ~ g2 ~
+[ΔL= (FF)2+ (∂FF)2+…,]
+2m2 2m4
+a a
+deren führender Term paritätsgerade zur Renormierung der Photonen-Zweipunktfunktion beiträgt. Die m a-Abhängigkeit
+verschwindet aus dem logarithmisch divergenten Teil der Vakuumpolarisation, so dass der lnμ-Koeffizient
+schemainvariant ist.
+E.3 Hintergrundfeld-Methode: Log-Anteil der Vakuumpolarisation
+In Hintergrundfeld-Eichung ergibt der einschleifige Beitrag mit zwei topologischen Einfügungen den Term
+1 1 μ
+[δZ = (8c2)2 ln +…]
+F  3  (4π)3 4 μ
+      0
+zwei g-Einsätze
+Symmetrie
+Schleifenmaß
+und damit in β α einen Zusatz ∝c2 3 α3. Zusammen folgt
+65 / 81
+b
+
+===== Page 66 of 81 =====
+1 b
+[A= =2c3, β = 1 α2+Ac2α3+…]
+256π3 P3aper V1.06 α- 01.092.2π025 3
+Die Ableitung ist unabhängig von Details der a-Kinetik und vom Schema, da nur der Koeffizient des Logs verwendet
+wird. Diese Zahl ist identisch zur in 7.6 verwendeten Variationsableitung.
+E.4 Integrierte Eins-Schleife und κ
+Integration von dα/dlnμ=(b 1 /2π)α2 zwischen μ UV =M Pl und μ IR =φ 0 M Pl liefert
+b 1 41
+[κ=
+2π
+1 ln
+φ
+, b
+1
+=
+10
+inGUT-Norm,]
+0
+wie in 7.6.1 zusammengefasst. κ hängt nur von b 1 und vom geometrisch fixierten φ 0.
+E.5 Fixpunktgleichung aus Callan–Symanzik
+Mit dem A aus E.3 und der integrierten Konstante κ folgt direkt
+1
+[α3−2c3α2−8b c6ln =0,]
+3 1 3 φ
+0
+identisch zu 7.6. Damit ist A vollständig aus der effektiven Theorie abgeleitet.
+Appendix F – Zwei-Schleifen RGE-Setup
+Konfiguration
+• Fermionen: Standardmodell plus elektroschwaches Triplet Σ F mit Decoupling bei 103,GeV; farbadjunktes Fermion G8
+von SU(3) c aktiv für μ>M G8 =1.8×1010,GeV; drei rechtshändige Neutrinos mit gestaffelten Schwellen
+M N1 =1014,GeV, M N2 =3×1014,GeV, M N3 =8×1014,GeV. Oberhalb M G8 gilt stückweise Δb 3 =+2.
+• Skalare: Standardmodell Higgs H, PQ Feld Φ mit Schwelle M Φ =1016,GeV.
+• Spurion: Effektiver R3 Term zur Modellierung des kubischen Beitrags ∝α3 im abelschen Sektor.
+• Normierung: Hyperladung in GUT Norm
+gGUT =√5,g , b = 41.
+1 3 Y 1 10
+dα−1
+Für die Steigung gilt , 1 =−b 1 .
+dlnμ 2π
+• Startwerte bei μ=M Z:
+gG
+1
+UT ≈0.462, g
+2
+=0.652, g
+3
+=1.2323.
+• Integration: Zwei Schleifen Betafunktionen mit stückweisem Threshold Matching über mindestens fünfzehn Dekaden;
+optionaler Drei Schleifen Steigungscheck für SU(3) c.
+Resultate
+Fingerprints der Fixpunkte
+α 3 (1,PeV)=0.052923411 gegen φ 0 =0.053171952 ⇒ Abweichung -0.47%;
+α 3 (2.5×108,GeV)=0.039713807 gegen c 3 = 8 1 π =0.039788736 ⇒ Abweichung -0.19%.
+Nahe Unifikation
+66 / 81
+
+===== Page 67 of 81 =====
+Minimaler relativer Spread der inversen Kopplungen = 1.23 % bei μ⋆ ≈1.43×1015,GeV.
+Paper V1.06 - 01.09.2025
+Kontinuität und Steigungen
+Stückweises Matching ohne Sprünge in α− i 1; gemessene U(1) Steigung konsistent mit −b 1 /(2π), G8 Brücken Steigung
+numerisch 0.8063 gegenüber Erwartung 5 =0.7958 (1.3%).
+2π
+Spacing Invariante
+Die drei paarweisen Gleichstände liegen bei
+μ
+23
+≈6.05×1014,GeV,
+μ
+13
+≈1.46×1015,GeV,
+μ
+12
+≈2.38×1015,GeV,
+damit
+S =log μ −2log μ +log μ ≈−0.17.
+10 23 10 13 10 12
+PyR@TE Konfiguration (kurz, v2)
+Settings:
+LoopOrder: 3 # Export; Solver nutzt volle 2-Loop + optional 3-Loop SU(3)
+Groups: {U1Y: U1, SU2L: SU2, SU3c: SU3}
+Thresholds:
+- {Scale: MSigma, Fields: [SigmaF]} # 1.0e3 GeV
+- {Scale: MG8, Fields: [G8]} # 1.8e10 GeV (Δb3 = +2 oberhalb)
+- {Scale: MNR1, Fields: [NR1]} # 1.0e14 GeV
+- {Scale: MNR2, Fields: [NR2]} # 3.0e14 GeV
+- {Scale: MNR3, Fields: [NR3]} # 8.0e14 GeV
+- {Scale: MPhi, Fields: [phiR, phiI]} # 1.0e16 GeV
+Fermions:
+G8: {Gen: 1, Qnb: {U1Y: 0, SU2L: 1, SU3c: 8}} # neues Oktett
+NR1: {Gen: 1, Qnb: {U1Y: 0, SU2L: 1, SU3c: 1}}
+NR2: {Gen: 1, Qnb: {U1Y: 0, SU2L: 1, SU3c: 1}}
+NR3: {Gen: 1, Qnb: {U1Y: 0, SU2L: 1, SU3c: 1}}
+(vollständige YAML siehe Modelldatei v2)
+Pyr@ate Configuration:
+---
+Author: "E8 Cascade TFPT v2.1 – G8 Adjoint Enhanced"
+Date: 2025-08-29
+67 / 81
+
+===== Page 68 of 81 =====
+Name: E8CascadeTFPTG8_v2
+Paper V1.06 - 01.09.2025
+# ------------------------------------------------------------
+# ENHANCED E8 CASCADE MODEL WITH G8 ADJOINT FERMION (v2)
+#
+# GOALS:
+# - Keep TFPT fingerprints SM-driven (1-loop) below 10^9 GeV
+# - Provide clean G8 color-bridge for unification (Δb3 = +2 above MG8)
+# - Unambiguous U(1) GUT normalization and documentation
+# ------------------------------------------------------------
+Settings:
+LoopOrder: 3
+ExportBetaFunctions: true
+# ------------------------------------------------------------
+# ENHANCED E8 CASCADE THRESHOLDS
+# ------------------------------------------------------------
+Thresholds:
+- Scale: MSigma
+Fields: [SigmaF]
+- Scale: MG8
+Fields: [G8]
+- Scale: MNR1
+Fields: [NR1]
+- Scale: MNR2
+Fields: [NR2]
+- Scale: MNR3
+Fields: [NR3]
+68 / 81
+
+===== Page 69 of 81 =====
+- Scale: MPhi
+Paper V1.06 - 01.09.2025
+Fields: [phiR, phiI]
+Groups: {U1Y: U1, SU2L: SU2, SU3c: SU3}
+Fermions:
+Q : {Gen: 3, Qnb: {U1Y: 1/6, SU2L: 2, SU3c: 3}}
+L : {Gen: 3, Qnb: {U1Y: -1/2, SU2L: 2}}
+uR : {Gen: 3, Qnb: {U1Y: 2/3, SU3c: 3}}
+dR : {Gen: 3, Qnb: {U1Y: -1/3, SU3c: 3}}
+eR : {Gen: 3, Qnb: {U1Y: -1}}
+SigmaF : {Gen: 1, Qnb: {U1Y: 0, SU2L: 3, SU3c: 1}}
+G8 : {Gen: 1, Qnb: {U1Y: 0, SU2L: 1, SU3c: 8}}
+NR1 : {Gen: 1, Qnb: {U1Y: 0, SU2L: 1, SU3c: 1}}
+NR2 : {Gen: 1, Qnb: {U1Y: 0, SU2L: 1, SU3c: 1}}
+NR3 : {Gen: 1, Qnb: {U1Y: 0, SU2L: 1, SU3c: 1}}
+RealScalars:
+phiR : {Qnb: {U1Y: 0, SU2L: 1, SU3c: 1}}
+phiI : {Qnb: {U1Y: 0, SU2L: 1, SU3c: 1}}
+R3 : {Qnb: {U1Y: 0, SU2L: 1, SU3c: 1}, External: True}
+ComplexScalars:
+H : {RealFields: [Pi, Sigma], Norm: 1/sqrt(2), Qnb: {U1Y: 1/2, SU2L: 2}}
+Potential:
+Definitions:
+69 / 81
+
+===== Page 70 of 81 =====
+Htilde[i]: Eps[i,j]*Hbar[j]
+Paper V1.06 - 01.09.2025
+Yukawas:
+Yu: Qbar[i,a] Htilde[i] uR[a]
+Yd: Qbar[i,a] H[i] dR[a]
+Ye: Lbar[i] H[i] eR
+# ySig (Type III): intentionally not exported to PyR@TE due to indexing;
+# solver includes its 2-loop trace contribution explicitly.
+# ySig: Lbar[i] SigmaF[i,j] H[j]
+yN1: Lbar[i] Htilde[i] NR1
+yN2: Lbar[i] Htilde[i] NR2
+yN3: Lbar[i] Htilde[i] NR3
+QuarticTerms:
+lambda : (Hbar[i] H[i])**2
+lPhi : (phiR**2 + phiI**2)**2
+lHphi : (Hbar[i] H[i])*(phiR**2 + phiI**2)
+TrilinearTerms:
+cR3 : R3 * (Hbar[i] H[i])
+ScalarMasses:
+mu2 : -Hbar[i] H[i]
+MPhi : phiR*phiR + phiI*phiI
+Vevs:
+vSM : Pi[2]
+70 / 81
+
+===== Page 71 of 81 =====
+vPQ : phiR
+Paper V1.06 - 01.09.2025
+Parameters:
+- {name: MPl, value: 1.221e19}
+- {name: MSigma, value: 1.0e3}
+- {name: MG8, value: 1.8e10}
+- {name: MNR1, value: 1.0e14}
+- {name: MNR2, value: 3.0e14}
+- {name: MNR3, value: 8.0e14}
+- {name: MPhi, value: 1.0e16}
+- {name: c3, value: 0.039788735772973836}
+- {name: phi0, value: 0.053171952176845526}
+- {name: g1, value: 0.357}
+- {name: g2, value: 0.652}
+- {name: g3, value: 1.2322690515271375}
+- {name: Yu33, value: 0.857375}
+- {name: Yd33, value: 0.024}
+- {name: Ye33, value: 0.010}
+- {name: ySig, value: 0.50}
+- {name: yN1, value: 0.70}
+- {name: yN2, value: 0.70}
+- {name: yN3, value: 0.70}
+- {name: lambda, value: 0.130}
+- {name: lPhi, value: 0.10}
+- {name: lHphi, value: 0.01}
+- {name: cR3, value: 0.01}
+71 / 81
+
+===== Page 72 of 81 =====
+Substitutions: { g_U1Y: g1, g_SU2L: g2, g_SU3c: g3 }
+Paper V1.06 - 01.09.2025
+# ------------------------------------------------------------
+# THEORY NOTES (v2):
+# - U(1) GUT normalization: g1_GUT = sqrt(5/3) * gY; b1_GUT = 41/10.
+# - ySig kept out of PyR@TE export; solver adds its 2-loop trace.
+# - LoopOrder=3 in YAML; solver uses full 2-loop + optional 3-loop SU(3).
+# - G8 bridge above MG8: Δ(α3^{-1})(μ) = -(Δb3)/(2π) ln(μ/MG8), Δb3=+2.
+# ------------------------------------------------------------
+Appendix G Nilpotent Orbits in Type E8
+72 / 81
+
+===== Page 73 of 81 =====
+Paper V1.06 - 01.09.2025
+73 / 81
+
+===== Page 74 of 81 =====
+Paper V1.06 - 01.09.2025
+74 / 81
+
+===== Page 75 of 81 =====
+Paper V1.06 - 01.09.2025
+75 / 81
+
+===== Page 76 of 81 =====
+Paper V1.06 - 01.09.2025
+Appendix H: Referenzen:
+1. Nilpotente Orbits in Semisimple Lie-Algebren (insbesondere E8)
+Collingwood, D.H. und McGovern, W.M., Nilpotent Orbits in Semisimple Lie Algebras, Van Nostrand Reinhold, New
+York (1993). – Referenziert für die allgemeine Klassifikation nilpotenter Orbits in semisimple Lie-Algebren, inklusive
+detaillierter Tabellen und Dimensionen für E8-Orbits, die als Basis für die γ(n)-Dämpfungsfunktion und die
+parabolische Kaskade dienen.
+Djouadi, A. et al., "Induced Nilpotent Orbits of the Simple Lie Algebras of Exceptional Type", arXiv: (aus
+Veröffentlichung, z.B. ähnlich zu iris.unitn.it/handle/11572/77393) (200x). – Referenziert für die Induktion nilpotenter
+Orbits in E8 und deren Dimensionen, die die monotone Abfallsequenz in der Kaskade (z.B. von 248 zu 206)
+motivieren.
+Landsberg, J.M. und Manivel, L., "Series of Nilpotent Orbits", Experimental Mathematics 13(1) (2004), 69–78. –
+Referenziert für die Organisation nilpotenter Orbits in Serien innerhalb exceptioneller Algebren wie E8, einschließlich
+Dimensionsformeln, die die quadratische Glättung von γ(n) unterstützen.
+2. Chern-Simons-Term in 11D Supergravity und Topologische Fixpunkte
+Cremmer, E., Julia, B. und Scherk, J., "Supergravity Theory in Eleven-Dimensions", Physics Letters B 76(4) (1978),
+409–412. – Referenziert für die ursprüngliche Formulierung der 11D Supergravity, inklusive des Chern-Simons-
+Terms, der die Normalisierung 1/(8π) für c₃ und topologische Fixpunkte ableitet.
+Troncoso, R. und Zanelli, J., "Higher-Dimensional Supergravities as Chern-Simons Theories", International Journal of
+Theoretical Physics 38(4) (1999), 1181–1193 (oder erweiterte Version arXiv:1103.2182). – Referenziert für die
+Interpretation der 11D Supergravity als Chern-Simons-Theorie, die die topologische Spur von c₃ = 1/(8π) und die
+Möbius-Reduktion zu φ₀ erklärt.
+76 / 81
+
+===== Page 77 of 81 =====
+Duff, M.J., "Eleven-Dimensional Supergravity, Anomalies and the E8 Yang-Mills Sector", Nuclear Physics B 325(2)
+Paper V1.06 - 01.09.2025
+(1989), 505–522. – Referenziert für die Verbindung zwischen Chern-Simons-Termen in 11D und E8-Symmetrien,
+relevant für die topologische Korrektur in φ₀ (z.B. 3/(256π⁴)).
+3. E8 in Grand Unified Theories (GUTs) und String-Theorie
+Gross, D.J., Harvey, J.A., Martinec, E. und Rohm, R., "Heterotic String Theory (I). The Free Heterotic String", Nuclear
+Physics B 256 (1985), 253–284. – Referenziert für die Rolle von E8 × E8 in heterotischen String-Theorien, die die
+Einbettung von E8 als Ordnungsprinzip für die Skalenleiter (γ(n) aus Orbits) inspirieren.
+Lisi, A.G., "An Exceptionally Simple Theory of Everything", arXiv:0711.0770 (2007). – Referenziert für den Versuch,
+E8 als vereinheitlichte Symmetrie für alle Kräfte und Materie zu verwenden, ähnlich zur E8-Kaskade im Paper,
+inklusive Orbit-Strukturen für Flavor und Skalen.
+Green, M.B., Schwarz, J.H. und Witten, E., Superstring Theory, Cambridge University Press (1987), Band 2. –
+Referenziert für die E8-Gauge-Gruppe in String-Theorie, speziell deren nilpotente Elemente und Anomalien, die die
+quadratische Form von γ(n) und die RG-Bestätigung unterstützen.
+4. Theoretische Ableitungen der Feinstrukturkonstante (α)
+Wyler, A., "On the Conformal Groups in the Theory of Relativity and a New Value for the Universal Constant α",
+Lettere al Nuovo Cimento 3(13) (1971), 533–536. – Referenziert für eine frühe geometrische Ableitung von α aus
+Konformalgruppen, die die parameterfreie kubische Fixpunktgleichung im Paper (basierend auf Geometrie und
+Topologie) vorwegnimmt.
+Atiyah, M.F., "On the Fine-Structure Constant", (Vortrag/Notiz, 2018, siehe z.B.
+preposterousuniverse.com/blog/2018/09/25/atiyah-and-the-fine-structure-constant/). – Referenziert für eine
+mathematische Herleitung von α ≈ 1/137 aus algebraischen Strukturen, vergleichbar mit der kubischen Gleichung
+und der ppm-Genauigkeit im Paper.
+Smith, S.J., "A New Theoretical Derivation of the Fine Structure Constant", Progress in Physics 28(1) (2012), 1–5. –
+Referenziert für eine moderne Ableitung von α ohne freie Parameter, die den Ansatz des Papers (Kopplung von
+Topologie c₃ und Geometrie φ₀) ergänzt.
+5. Weitere Verwandte Themen (z.B. RG-Flüsse, Genetische Algorithmen in Physik)
+'t Hooft, G. und Veltman, M., "Regularization and Renormalization of Gauge Fields", Nuclear Physics B 44(1) (1972),
+189–213. – Referenziert für die Grundlagen von RG-Flüssen in Gauge-Theorien, die die Zwei-Schleifen-Analyse und
+Fingerprints (φ₀ bei 1 PeV, c₃ bei 10^8 GeV) im QCD-Verlauf untermauern.
+Koza, J.R., Genetic Programming: On the Programming of Computers by Means of Natural Selection, MIT Press
+(1992). – Referenziert für die Methode genetischer Algorithmen, die den GA-Ansatz im Paper (Suche nach Lagrange-
+Dichten und Emergenz von Fixpunkten) methodisch begründet.
+Appendix I: Changelog
+Version 1.0.6 - 2025-09-01
+1. Neue Sektion 7.6 - Variationsableitung in vier Dimensionen
+2. Sektion 5: Anpassung auf neue 2-Loop RGE Konfiguration & Ergebnisse
+3. Neue Sektion 8.0a - Chiralität aus Rand und Fluss: operative Kurzfassung
+4. Neuer Appendix J - Chiralität auf der Doppelabdeckung
+5. Sektion 4.5 - Vollständige Anpassung zum Beweis der Eindeutigkeit der Kette
+6. Neue Sektionen 8.1.1 und 8.1.2 - Block-Konstanten aus Randzyklen und abelscher Spur & Herleitung der ζ B-Formel
+aus dem Randfunktional
+7. Überarbeitung Sektion D
+8. Neu 5.1b Schwellen als Leiter-Outputs statt Modellwahl
+9. Neu 5.2c Gauge–Moduli–Locking im E sechs Fenster
+10. Sektion 6.12 - Eindeutige Fixierung von α inf
+77 / 81
+
+===== Page 78 of 81 =====
+11. Sektion 8.5.1 - Systematik der Abweichungen
+Paper V1.06 - 01.09.2025
+12. Sektion 7.6.2 - Callan-Symanzik-Route
+13. Überarbeitung 8.4.6 - Kein Kreisbezug
+14.
+Appendix J — Chiralität auf der Doppelabdeckung
+J.1 Setup und Notation
+Geometrie: (M 6 =M 4 ×M˜), dabei ist (M˜) die orientierbare Doppelabdeckung der Möbius Faser mit drei
+geschlossenen Randzyklen (C 1 ,C 2 ,C T ).
+Randzählung: (∑ i ∮ C ˆk g ds=6π).
+i
+Die Zahl (6π) fixiert in 3.2.2 den linearen Randkoeffizienten und damit (φ tree = 6 1 π ), plus den topologischen Zuschlag
+(δ top = 256 3 π4 ) zu (φ 0 ). Verweise: 3.2.2 und Appendix D.
+Fig. J.1 zeigt (M˜ ) mit den drei Randzyklen und den Projektoren (P i ) (siehe unten).
+78 / 81
+
+===== Page 79 of 81 =====
+Paper V1.06 - 01.09.2025
+J.2 Sechs dimensionale Spinor Reduktion und Projektoren
+Wähle Γ Matrizen als
+Γμ =γμ⊗σ0, Γ5 =γ ⊗σ1, Γ6 =1⊗σ2.
+5
+Die 6D Weyl Bedingung
+Γ =γ ⊗σ3, Γ Ψ=+Ψ
+7 5 7
+liefert
+Ψ(x,y)=ψ (x)⊗χ (y)+ψ (x)⊗χ (y),
+L + R −
+mit
+σ3χ =±χ .
+± ±
+Chirale Randbedingungen auf den drei Randzyklen:
+P = 1(1+iσ3σn), P =P = 1(1−iσ3σn).
+T 2 1 2 2
+Damit existieren Nullmoden nur für χ +, die 4D Nullmoden sind linkschiral.
+Die Wahl ist elliptisch und eichinvariant.
+Optional legen Wilson Linien W i ∈SU(3)×SU(2)×U(1) entlang C i nur Phasen fest, ohne die 4D Eichgruppe zu
+brechen.
+Sie dienen dem Auslesen der abelschen Spur im EW Block mit
+k = 41.
+EW 32
+(Verweis 8.4.6)
+˜
+M
+J.3 Index Satz auf und Familienzahl
+Sei A eine abelsche Verbindung mit Fluss
+79 / 81
+
+===== Page 80 of 81 =====
+m= 1 ∫ F ∈Z
+Paper V21π.06 - 01.09.2025
+M˜
+und Randholonomien
+1 ∮ A=ν ∈Z.
+2π i
+C
+i
+Für die Projektoren P i gilt der Index:
+IndD =#χ −#χ = 1 ∫ F =ν +ν +ν .
+M˜ + − 2π 1 2 T
+M˜
+Begründungsskizze: APS Formel mit Randprojektionen setzt die η Beiträge auf null, Stokes liefert
+∑∮ A=∫ F.
+i C i M˜
+Korollar: Minimal (ν 1 ,ν 2 ,ν T )=(1,1,1) ergibt
+IndD=3
+→ drei Familien.
+Die Integer Struktur ist konsistent mit der Chern–Simons Quantisierung aus 3.2.1:
+g= n , c = 1 .
+8π2 3 8π
+Fig. J.2 illustriert die Zählung IndD=ν 1 +ν 2 +ν T.
+J.4 Anomaliefreiheit einer Familie
+Standardmodell pro Familie mit rechtem Neutrino ist anomaliefrei:
+U(1)3 : 3⋅2(1)3+3(−2)3+3(1)3+2(−1)3+(1)3 =0,
+Y 6 3 3 2
+U(1) ×SU(2)2 : 3⋅ 1 +(−1)=0,
+Y 6 2
+U(1) ×SU(3)2 : 2⋅ 1 +(−2)+(1)=0,
+Y 6 3 3
+Gravitation−U(1) : 3⋅2⋅ 1 +3(−2)+3(1)+2(−1)+1=0.
+Y 6 3 3 2
+Mit IndD=3 bleibt die Gesamttheorie anomaliefrei.
+J.5 Kompatibilität mit Rangfenstern und Spur
+Die Kette
+E ⊃E ⊃E
+8 7 6
+bleibt Fensterlogik im RG Fluss, kein 4D Eichinhalt.
+Die Wilson Linien sind flach und erhalten SU(3)×SU(2)×U(1).
+Die gleiche abelsche Spur erscheint zweifach:
+k = 41
+EW 32
+im EW Block und
+b = 41
+1 10
+in
+80 / 81
+b
+
+===== Page 81 of 81 =====
+κ= b 1 ln 1
+Paper V1.0 2 6 π - 01.0 φ 90.2025
+der α Fixpunktgleichung.
+(Verweise 7.6, 8.4.6)
+J.6 Stabilität gegenüber Zwei Schleifen Fenstern
+Flache Wilson Linien ändern nur Kaluza Schwellen minimal.
+Die in 5.2 dokumentierten Fingerprints
+α (1PeV)≃φ , α ≃c bei μ∼2.5×108GeV
+3 0 3 3
+bleiben stabil.
+81 / 81
+
+\end{MyVerbatim}
+\end{document}

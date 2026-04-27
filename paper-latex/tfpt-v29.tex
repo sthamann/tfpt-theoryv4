@@ -1,0 +1,912 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{siunitx}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+
+\sisetup{
+    detect-all,
+    round-mode = figures,
+    round-precision = 10,
+    exponent-mode = input,
+    exponent-product = \times,
+    group-separator = {\,},
+    group-minimum-digits = 4
+}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+\newcommand{\Mpl}{\bar M_{\mathrm{Pl}}}
+\newcommand{\cthree}{c_3}
+\newcommand{\phitree}{\varphi_{\mathrm{tree}}}
+\newcommand{\phiz}{\varphi_0}
+\newcommand{\deltatop}{\delta_{\mathrm{top}}}
+\newcommand{\bone}{b_1}
+\newcommand{\tr}{\operatorname{Tr}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\SM}{\mathrm{SM}}
+\newcommand{\Hch}{\mathcal H_{\mathrm{ch}}}
+\newcommand{\Oadm}{\Omega_{\mathrm{adm}}}
+\newcommand{\Cmin}{\mathcal C_{\min}}
+
+\title{%
+    \textbf{TFPT v2.9: Admissible Vacua, Minimal Carrier, and Electromagnetic Stationarity}\\[0.5em]
+    \Large A Carrier-First Primary Form
+}
+\author{Stefan Hamann \and Alessandro Rizzo}
+\date{\textbf{Draft for Version 2.9 -- 10 March 2026}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This document rewrites TFPT v2.8 into a carrier-first primary form. The rigid core is the Minimal Carrier Theorem: admissibility on the orientable double cover together with the seam involution forces the minimal carrier $E_3\oplus E_2$. From this rigid package follow the global Standard Model group $S(U(3)\times U(2))$, one chiral family $S^+=\Lambda^{\mathrm{even}}E$, the carrier norm $\tr_EY^2=5/6$, and the linear and cubic trace cancellations. On the canonical occupancy branch, the admissible chiral multiplicity is
+\[
+\Oadm = N_{\mathrm{fam}}\dim S^+ = 3\times16 = 48.
+\]
+The abelian coefficient takes the carrier form
+\[
+\bone(N_{\mathrm{fam}},N_H)=\frac43 N_{\mathrm{fam}}+\frac1{10}N_H,
+\]
+so the canonical branch $(N_{\mathrm{fam}},N_H)=(3,1)$ gives $\bone=41/10$. The electromagnetic stationarity equation can then be written entirely in terms of the carrier packet
+\[
+\Cmin=(E_3\oplus E_2,\;Y,\;S^+,\;\gamma,\;B),
+\]
+with $\gamma=\tr_EY^2=5/6$ and $B=\rank E_3/\rank E_2=3/2$. Seam descent for $\cthree$, the induced Einstein channel, the E$_8$ reinterpretation, Higgs selection, and discrete phase grammar are retained as structural bridges or dynamical completion targets, but no longer presented as part of the hard carrier core.
+\end{abstract}
+
+\begin{tcolorbox}[colback=gray!5, colframe=gray!60, breakable,
+    title={\textbf{Status boundary for the v2.9 rewrite}}, fonttitle=\bfseries]
+\textbf{1. Hard carrier statements}
+\begin{itemize}[leftmargin=1.5em, topsep=3pt, itemsep=2pt]
+    \item minimal carrier $E_3\oplus E_2$,
+    \item global Standard Model group $S(U(3)\times U(2)) \cong (SU(3)\times SU(2)\times U(1)_Y)/\mathbb Z_6$,
+    \item $S^+=\Lambda^{\mathrm{even}}E$ as one chiral family with $\nu^c$,
+    \item carrier invariants $\dim S^+=16$, $\gamma=\tr_EY^2=5/6$, and $B=\rank E_3/\rank E_2=3/2$,
+    \item linear and cubic trace cancellation,
+    \item the general abelian index formula $\bone(N_{\mathrm{fam}},N_H)=\frac43 N_{\mathrm{fam}}+\frac1{10}N_H$.
+\end{itemize}
+
+\textbf{2. Structural bridges}
+\begin{itemize}[leftmargin=1.5em, topsep=3pt, itemsep=2pt]
+    \item three families from the three distinguished cycles $C_1,C_2,C_T$,
+    \item $\Oadm=N_{\mathrm{fam}}\dim S^+$ and $\Oadm=48$ on the canonical branch,
+    \item $\deltatop = \Oadm\,\cthree^4$ as occupancy transgression,
+    \item $\delta_2 = B\gamma\,\Oadm^2\cthree^8$ and therefore $B\gamma=5/4$ on the minimal carrier,
+    \item the E$_8$ rereading $\lambda_{E8}=\gamma/\ln(248/60)$.
+\end{itemize}
+
+\textbf{3. Dynamical completions}
+\begin{itemize}[leftmargin=1.5em, topsep=3pt, itemsep=2pt]
+    \item seam descent for $\cthree$,
+    \item the relative-$a_2$ / induced-Einstein channel,
+    \item the light seam-even Higgs candidate in $E_2$,
+    \item the physical realization of the $\mathbb Z_6\rtimes \mathbb Z_2$ phase grammar.
+\end{itemize}
+\end{tcolorbox}
+
+\tableofcontents
+
+\section{Overview and Claim Map}
+
+The v2.9 rewrite should be read from admissibility to carrier, from carrier to occupancy, and only then from occupancy to closure and phenomenology. The master line is therefore
+\[
+(\widetilde M,\Gamma,\tau)
+\Rightarrow E_3\oplus E_2
+\Rightarrow Y,\ S^+,\ \gamma,\ B
+\Rightarrow \bone,\ \Oadm
+\Rightarrow \text{CFE}
+\Rightarrow \alpha.
+\]
+The main bridge branches are secondary to this line:
+\[
+\Oadm \Rightarrow \deltatop,\ \delta_2,
+\qquad
+\gamma \Rightarrow \lambda_{E8},
+\qquad
+\Delta a_2^{\mathrm{rel}} \Rightarrow \Mpl.
+\]
+The center of the architecture is therefore not the number $48$ by itself, but the rigid minimal carrier package that later induces $48$ on the canonical occupancy branch.
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedright\arraybackslash}p{0.14\linewidth}X>{\raggedright\arraybackslash}p{0.12\linewidth}@{}}
+\toprule
+Claim & Status & Depends on & First derived in section \\
+\midrule
+Minimal carrier $E_3\oplus E_2$ & hard & admissibility on $\widetilde M$ and seam involution $\tau$ & 3 \\
+Global Standard Model group & hard & minimal carrier split & 3 \\
+One chiral family $S^+$ & hard & minimal carrier and half-spinor construction & 4 \\
+General abelian index $\bone(N_{\mathrm{fam}},N_H)$ & hard & carrier traces plus scalar multiplicity & 4 \\
+Canonical occupancy $\Oadm=48$ & structural bridge & family-index bridge and $\dim S^+=16$ & 5 \\
+Carrier form of the CFE & structural bridge & $\cthree$, $\Oadm$, $\bone$, $B$, $\gamma$ & 6 \\
+Induced Einstein channel & dynamical target & relative spectral completion and canonical occupancy & 8 \\
+E$_8$ rereading & downstream reinterpretation & carrier norm $\gamma$ & 9 \\
+\bottomrule
+\end{tabularx}
+\caption{Claim map for the carrier-first v2.9 presentation. Appendix~A records a compact v2.8$\to$v2.9 dictionary.}
+\end{table}
+
+\section{Admissibility and Seam Data}
+
+The ambient v2.9 datum may be packaged as
+\[
+\mathfrak T_{2.9} = \bigl(\widetilde M \to M,\ \Gamma,\ \tau,\ \chi\bigr),
+\]
+but the hard carrier core uses only $(\widetilde M,\Gamma,\tau)$. The field $\chi$ belongs to the absolute-scale and gravity channels discussed later in Section~8.
+
+\subsection{Seam data recalled from v2.8}
+
+The seam information needed by the carrier rewrite is already present in v2.8. In the minimal gluing class one has
+\[
+U_\Gamma(\theta)=e^{i\theta},
+\qquad
+\mathrm{SF}(U_\Gamma)=1,
+\qquad
+\Delta_\Gamma=2\pi.
+\]
+On the orientable double cover the distinguished cycles are
+\[
+C_1,\qquad C_2,\qquad C_T,
+\]
+where $C_T$ is the seam cycle in the glued description and corresponds to $\Gamma_+\cup\Gamma_-$ in the cut description. These data should appear near the front of the paper because Sections~3--6 all depend on them.
+
+\begin{tcolorbox}[colback=blue!3, colframe=blue!50!black,
+    title={\textbf{What $\chi$ does and does not do}}, fonttitle=\bfseries\small]
+$\chi$ belongs to the absolute-scale and gravitational channels. It does \emph{not} enter the hard derivation of the minimal carrier, the global Standard Model group, the one-family half-spinor, or the carrier norm $\tr_EY^2=5/6$. Only after the carrier packet has been fixed does $\chi$ enter the relative spectral stationarity problem and the induced-gravity target.
+\end{tcolorbox}
+
+\section{The Minimal Carrier Theorem}
+
+\subsection{Uniqueness of the \texorpdfstring{$3+2$}{3+2} split}
+
+\begin{theorem}[Minimal carrier theorem]
+Let $E=E_b\oplus E_s$ be a split carrier with traceless diagonal generator
+\[
+Y_{b,s}=\mathrm{diag}\!\left(-\frac1b,\ldots,-\frac1b,\frac1s,\ldots,\frac1s\right).
+\]
+If one simultaneously requires
+\[
+\dim \Lambda^{\mathrm{even}}E = 16
+\qquad\text{and}\qquad
+\tr_E Y_{b,s}^2 = \frac56,
+\]
+then necessarily $\{b,s\}=\{3,2\}$.
+\end{theorem}
+
+\begin{proof}
+For a rank-$g$ carrier with $g=b+s$, the positive half-spinor has dimension
+\[
+\dim \Lambda^{\mathrm{even}}E = 2^{g-1}.
+\]
+Demanding one chiral family gives $2^{g-1}=16$, hence $g=5$ and therefore $b+s=5$.
+
+For the traceless generator above one has
+\[
+\tr_E Y_{b,s}^2 = b\left(\frac{1}{b^2}\right)+s\left(\frac{1}{s^2}\right)
+= \frac1b+\frac1s
+= \frac{b+s}{bs}
+= \frac{5}{bs}.
+\]
+Imposing $\tr_EY_{b,s}^2=5/6$ yields $bs=6$. Together with $b+s=5$, this forces $(b,s)=(3,2)$ up to order.
+\end{proof}
+
+Hence from now on we set
+\[
+E=E_3\oplus E_2,
+\qquad
+P_3:=\frac{1-\tau}{2},
+\qquad
+P_2:=\frac{1+\tau}{2}.
+\]
+
+\begin{proposition}[Hypercharge as an affine form of the seam involution]
+For the minimal carrier,
+\[
+Y=-\frac13 P_3+\frac12 P_2
+=\mathrm{diag}\!\left(-\frac13,-\frac13,-\frac13,\frac12,\frac12\right),
+\]
+and equivalently
+\[
+Y=\frac{1}{12}\mathbf 1+\frac{5}{12}\tau.
+\]
+\end{proposition}
+
+\begin{proof}
+Using $P_3=(1-\tau)/2$ and $P_2=(1+\tau)/2$ gives
+\[
+-\frac13 P_3+\frac12 P_2
+= -\frac16(1-\tau)+\frac14(1+\tau)
+= \frac{1}{12}\mathbf 1+\frac{5}{12}\tau.
+\]
+\end{proof}
+
+\begin{theorem}[Global Standard Model theorem]
+The determinant-preserving connected stabilizer of the minimal carrier split is
+\[
+\mathrm{Aut}_0(E_3\oplus E_2,\det=1)
+= S(U(3)\times U(2))
+\cong \frac{SU(3)\times SU(2)\times U(1)_Y}{\mathbb Z_6}.
+\]
+\end{theorem}
+
+\begin{proof}
+Automorphisms preserving the split and the determinant condition act independently on $E_3$ and $E_2$ with unit determinant on the combined carrier. This gives $S(U(3)\times U(2))$. The covering map from $SU(3)\times SU(2)\times U(1)_Y$ to $S(U(3)\times U(2))$ has the canonical $\mathbb Z_6$ subgroup as kernel, yielding the stated global Standard Model form.
+\end{proof}
+
+Set
+\[
+S^+ := \Lambda^{\mathrm{even}}(E_3\oplus E_2).
+\]
+
+\begin{proposition}[Carrier invariants]
+For the minimal carrier,
+\[
+\gamma := \tr_EY^2 = \frac56,
+\qquad
+B := \frac{\rank E_3}{\rank E_2} = \frac32,
+\qquad
+\dim S^+ = 16.
+\]
+\end{proposition}
+
+\begin{proof}
+The first identity is
+\[
+\tr_EY^2 = 3\left(\frac19\right)+2\left(\frac14\right)=\frac13+\frac12=\frac56.
+\]
+The second is immediate from the split ranks. The third follows from
+\[
+\dim S^+ = \dim \Lambda^{\mathrm{even}}E = 2^{5-1}=16.
+\]
+\end{proof}
+
+\begin{definition}[Minimal carrier packet]
+The rigid carrier packet of v2.9 is
+\[
+\Cmin := (E_3\oplus E_2,\;Y,\;S^+,\;\gamma,\;B).
+\]
+\end{definition}
+
+\section{Carrier Matter, Trace Identities, and the Abelian Index}
+
+\subsection{One chiral family from the positive half-spinor}
+
+\begin{theorem}[Carrier matter theorem]
+For the minimal carrier $E=E_3\oplus E_2$, the positive half-spinor
+\[
+S^+ := \Lambda^{\mathrm{even}}(E_3\oplus E_2)
+\]
+decomposes as
+\[
+(1,1)_0
+\oplus
+(3,2)_{1/6}
+\oplus
+(\bar 3,1)_{-2/3}
+\oplus
+(\bar 3,1)_{1/3}
+\oplus
+(1,2)_{-1/2}
+\oplus
+(1,1)_1.
+\]
+Thus $S^+$ carries exactly one Standard Model family with a right-handed neutrino:
+\[
+\nu^c,\ Q,\ u^c,\ d^c,\ L,\ e^c.
+\]
+\end{theorem}
+
+\begin{proof}
+The even exterior powers split as
+\[
+\Lambda^{\mathrm{even}}E
+=
+\Lambda^0 E \oplus \Lambda^2 E \oplus \Lambda^4 E.
+\]
+Now
+\[
+\Lambda^0 E = (1,1)_0,
+\]
+\[
+\Lambda^2 E = \Lambda^2 E_3 \oplus (E_3\otimes E_2)\oplus \Lambda^2 E_2
+= (\bar 3,1)_{-2/3}\oplus (3,2)_{1/6}\oplus (1,1)_1,
+\]
+and $\Lambda^4E \cong E^\ast$ because $\det E$ is trivial in the $S(U(3)\times U(2))$ form, so
+\[
+\Lambda^4E \cong (\bar 3,1)_{1/3}\oplus (1,2)_{-1/2}.
+\]
+Collecting the terms gives the stated multiplets.
+\end{proof}
+
+\subsection{Trace identities}
+
+\begin{theorem}[General half-spinor quadratic trace identity]
+Let $Y$ be a traceless diagonal generator on a rank-$g$ carrier $E$. Then on the positive half-spinor
+\[
+S^+ = \Lambda^{\mathrm{even}}E
+\]
+one has
+\[
+\tr_{S^+}Y^2 = 2^{g-3}\,\tr_EY^2.
+\]
+\end{theorem}
+
+\begin{proof}
+Write the diagonal weights of $Y$ as $q_i$ with $\sum_i q_i=0$. Then
+\[
+\tr_{S^+}Y^2
+=
+\sum_{S\ \mathrm{even}}
+\left(\sum_{i\in S} q_i\right)^2.
+\]
+Each $q_i^2$ appears in $2^{g-2}$ even subsets and each pair $q_iq_j$ appears in $2^{g-3}$ even subsets. Using
+\[
+\left(\sum_i q_i\right)^2=0
+\]
+shows that the cross terms cancel half the self-term contribution, leaving
+\[
+\tr_{S^+}Y^2
+=
+2^{g-3}\sum_i q_i^2
+=
+2^{g-3}\tr_EY^2.
+\]
+\end{proof}
+
+\begin{corollary}[Minimal carrier quadratic trace]
+For the minimal carrier,
+\[
+\tr_{S^+}Y^2 = 2^{5-3}\tr_EY^2 = 4\cdot\frac56 = \frac{10}{3}.
+\]
+\end{corollary}
+
+\begin{theorem}[Linear and cubic trace cancellation]
+On the one-family carrier spectrum $S^+$ one has
+\[
+\tr_{S^+}Y = 0,
+\qquad
+\tr_{S^+}Y^3 = 0.
+\]
+\end{theorem}
+
+\begin{proof}
+Using the explicit family decomposition above, the hypercharges are
+\[
+0,\quad \frac16,\quad -\frac23,\quad \frac13,\quad -\frac12,\quad 1,
+\]
+with multiplicities $1,6,3,3,2,1$. Hence
+\[
+\tr_{S^+}Y
+= 6\cdot\frac16+3\cdot\!\left(-\frac23\right)+3\cdot\frac13+2\cdot\!\left(-\frac12\right)+1=0,
+\]
+and
+\[
+\tr_{S^+}Y^3
+= 6\cdot\left(\frac16\right)^3
++3\cdot\left(-\frac23\right)^3
++3\cdot\left(\frac13\right)^3
++2\cdot\left(-\frac12\right)^3
++1^3=0.
+\]
+\end{proof}
+
+\subsection{General abelian index}
+
+\begin{theorem}[General carrier formula for the abelian coefficient]
+For a branch with $N_{\mathrm{fam}}$ copies of the carrier family and $N_H$ light weak doublets from $E_2$, one has
+\[
+b_Y(N_{\mathrm{fam}},N_H)
+:= \frac23 N_{\mathrm{fam}}\tr_{S^+}Y^2 + \frac13 N_H\tr_{E_2}Y^2.
+\]
+For the minimal carrier this becomes
+\[
+b_Y(N_{\mathrm{fam}},N_H)
+= \frac23 N_{\mathrm{fam}}\cdot\frac{10}{3} + \frac13 N_H\cdot\frac12
+= \frac{20}{9}N_{\mathrm{fam}}+\frac16 N_H.
+\]
+Therefore
+\[
+\bone(N_{\mathrm{fam}},N_H)
+= \frac35\,b_Y(N_{\mathrm{fam}},N_H)
+= \frac43 N_{\mathrm{fam}}+\frac1{10}N_H.
+\]
+\end{theorem}
+
+\begin{corollary}[Canonical carrier branch]
+For the canonical branch $(N_{\mathrm{fam}},N_H)=(3,1)$,
+\[
+b_Y=\frac{41}{6},
+\qquad
+\bone=\frac{41}{10}.
+\]
+\end{corollary}
+
+\begin{remark}
+The symbol $\nu^c$ is already part of the hard packet $S^+$. Removing it does not define a different carrier; it is an external truncation of the family packet and is treated as such only in Section~7.
+\end{remark}
+
+\section{Boundary Multiplicity and Admissible Occupancy}
+
+\subsection{Family-index bridge}
+
+\begin{conjecture}[Family-index bridge]
+Let each distinguished cycle $C_i$ carry an integer family index $I_{\mathrm{fam}}(C_i)$. Then the v2.8 block coefficient may be organized as
+\[
+k_B = \frac12\sum_{i=1}^{3} I_{\mathrm{fam}}(C_i)\,I_1(B).
+\]
+\end{conjecture}
+
+Combined with the v2.8 block formula
+\[
+k_B=\frac32\,I_1(B),
+\]
+this gives
+\[
+\sum_{i=1}^{3} I_{\mathrm{fam}}(C_i)=3.
+\]
+The equal-one assignment
+\[
+I_{\mathrm{fam}}(C_1)=I_{\mathrm{fam}}(C_2)=I_{\mathrm{fam}}(C_T)=1
+\]
+is the minimal symmetric branch and yields
+\[
+N_{\mathrm{fam}}=3.
+\]
+
+\subsection{Admissible occupancy and topological surcharge}
+
+\begin{definition}[Admissible occupancy]
+The admissible chiral occupancy is
+\[
+\Oadm := \tr_{\Hch}\mathbf 1 = N_{\mathrm{fam}}\dim S^+.
+\]
+\end{definition}
+
+On the canonical branch one therefore has
+\[
+\Oadm = 3\times 16 = 48.
+\]
+
+\begin{conjecture}[Occupancy transgression]
+The topological surcharge should be written as
+\[
+\deltatop = \Oadm\,\cthree^4.
+\]
+\end{conjecture}
+
+For the canonical branch this becomes
+\[
+\deltatop = 48\cthree^4 = \frac{3}{256\pi^4} = 3\cdot 16\,\cthree^4.
+\]
+In this reading the factor $3$ comes from the weighted boundary geometry while the factor $16$ comes from the minimal carrier packet itself.
+
+\subsection{Seam descent normalization of \texorpdfstring{$\cthree$}{c3}}
+
+The normalization of $\cthree$ is best presented in two stages.
+
+\textbf{Stage 1: hard seam geometry.}
+On the spin lift of the minimal seam loop one has
+\[
+\widetilde U_\Gamma(2\pi)=-1,
+\qquad
+\widetilde U_\Gamma(4\pi)=1.
+\]
+So the spin-lifted loop closes only after $4\pi$.
+
+\textbf{Stage 2: conditional axionic identification.}
+If the admissible carrier modulus is identified with the axionic angle variable, write
+\[
+a=\frac{\theta}{4\pi}.
+\]
+Then
+\[
+\mathcal L_\theta = \frac{\theta}{32\pi^2}F\widetilde F
+= \frac{1}{8\pi}aF\widetilde F,
+\]
+hence
+\[
+\cthree = \frac{1}{8\pi}.
+\]
+The geometry and the final normalization are thus explicitly separated: the $4\pi$ closure is geometric, while the identification of the carrier modulus with the axionic angle remains the extra conditional step.
+
+\section{Electromagnetic Stationarity and the Carrier CFE}
+
+\subsection{Carrier form of the stationary equation}
+
+The electromagnetic closure channel should first be written on a general admissible branch. Define
+\[
+\phiz(\alpha)
+= \frac{1}{6\pi}
++ \Oadm\,\cthree^4 e^{-2\alpha}
++ B\gamma\,\Oadm^2\cthree^8 e^{-4\alpha}
++ \cdots.
+\]
+Then the carrier form of the CFE is
+\[
+\alpha^3
+-2\cthree^3\alpha^2
+-8\cthree^6\,\bone(N_{\mathrm{fam}},N_H)
+\ln\!\bigl(\phiz(\alpha)^{-1}\bigr)
+=0.
+\]
+This is the preferred v2.9 presentation because the coefficients are now grouped by carrier data rather than as parallel numerical motifs.
+
+\begin{proposition}[Canonical carrier branch]
+For
+\[
+(N_{\mathrm{fam}},N_H,\nu^c)=(3,1,\text{present}),
+\]
+one has
+\[
+\Oadm=48,
+\qquad
+\bone=\frac{41}{10},
+\qquad
+B\gamma=\frac32\cdot\frac56=\frac54.
+\]
+Hence
+\[
+\phiz(\alpha)
+= \frac{1}{6\pi}
++ 48\cthree^4 e^{-2\alpha}
++ \frac54\,48^2\cthree^8 e^{-4\alpha}
++ \cdots.
+\]
+\end{proposition}
+
+\begin{remark}
+The identity
+\[
+\frac54 = B\gamma
+\]
+is the compressed carrier reading of the v2.8 two-defect weight.
+\end{remark}
+
+Using
+\[
+\cthree=\frac{1}{8\pi},
+\qquad
+\phitree=\frac{1}{6\pi},
+\qquad
+\deltatop=48\cthree^4,
+\]
+the positive stationary root remains
+\[
+\alpha^{-1}(0)=\num{137.03599921615843}.
+\]
+The point of v2.9 is therefore not to move the number, but to reduce the number of primitive inputs behind it.
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabularx}{\linewidth}{@{}lXl@{}}
+\toprule
+Quantity & Carrier meaning & Value \\
+\midrule
+$\cthree$ & canonical seam-descent normalization & $\frac{1}{8\pi}$ \\
+$\Oadm$ & admissible chiral occupancy & $48$ \\
+$\gamma$ & carrier norm $\tr_EY^2$ & $\frac56$ \\
+$B$ & carrier rank ratio $\rank E_3/\rank E_2$ & $\frac32$ \\
+$B\gamma$ & compressed two-defect weight & $\frac54$ \\
+$\bone$ & canonical abelian coefficient & $\frac{41}{10}$ \\
+$\alpha^{-1}(0)$ & positive root of the carrier CFE & \num{137.03599921615843} \\
+\bottomrule
+\end{tabularx}
+\caption{Numerical summary of the canonical carrier branch.}
+\end{table}
+
+\subsection{Algebraic corollaries of the carrier kernel}
+
+Evaluated on the stationary root of the canonical branch, several previously separate formulas become algebraic corollaries of the same carrier package:
+\[
+g_{a\gamma\gamma}=-4\cthree=-\frac{1}{2\pi},
+\qquad
+\beta_{\mathrm{rad}}=\frac{\phiz}{4\pi},
+\]
+\[
+\lambda_C=\sqrt{\phiz(1-\phiz)},
+\qquad
+\sin^2\theta_{13}=\phiz e^{-\gamma}.
+\]
+The structural gain is not that these quantities are numerically new, but that they are now visibly downstream of $\Cmin$ and the occupancy branch.
+
+\subsection{Conditional \texorpdfstring{$\chi$}{chi}-channel corollaries}
+
+If the $\chi$ channel and the induced Einstein channel are successfully completed, then the inflationary block can be written as
+\[
+\frac{M}{\chi_0}=\frac{2}{\sqrt{\pi}}\,\cthree^4,
+\qquad
+\frac{M}{\Mpl}=\sqrt{8\pi}\,\cthree^4,
+\]
+and therefore
+\[
+A_s=\frac{N^2}{24\pi^2}\left(\frac{M}{\Mpl}\right)^2
+= \frac{N^2}{3\pi}\cthree^8.
+\]
+For $N=56$ this yields
+\[
+A_s=\num{2.09019136432946e-9}.
+\]
+These results are kept separate from the hard carrier corollaries because they depend on the success of the relative-$\chi$ and gravity channels.
+
+\section{Discrete Exclusion Structure}
+
+The carrier-centered rewrite is strongest when it excludes wrong branches, not when it celebrates an isolated number. The relevant deformations fall into three logical classes.
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabularx}{\linewidth}{@{}l l X l@{}}
+\toprule
+Logical type & Deformation & Carrier/CFE consequence & Result \\
+\midrule
+Boundary multiplicity & $N_{\mathrm{fam}}=2$ & $\Oadm=32$ and $\bone=\frac{83}{30}$ in the carrier CFE & $\alpha^{-1}(0)=\num{156.094045457}$ \\
+Boundary multiplicity & $N_{\mathrm{fam}}=4$ & $\Oadm=64$ and $\bone=\frac{163}{30}$ in the carrier CFE & $\alpha^{-1}(0)=\num{124.835054800}$ \\
+Scalar content & $N_H=2$ & $\bone=\frac{21}{5}$ with the same carrier family packet & $\alpha^{-1}(0)=\num{135.945991742}$ \\
+External truncation & no $\nu^c$ & the family packet is externally reduced from $16$ to $15$ states, so $\Oadm=45$ and the hard carrier theorem no longer applies unchanged & $\alpha^{-1}(0)=\num{137.033841585}$ \\
+\bottomrule
+\end{tabularx}
+\caption{Discrete exclusion structure in the carrier reading. The ``no $\nu^c$'' row is an external truncation of the hard family packet, not a normal carrier alternative.}
+\end{table}
+
+In addition, a light seam-even colored triplet zero mode would require a light seam-even bosonic mode in $E_3$. The minimal carrier picture does not provide such a mode, so the colored partner is not on equal footing with the Higgs candidate in $E_2$.
+
+\section{Relative Spectral Completion Targets}
+
+\begin{tcolorbox}[colback=gray!5, colframe=gray!60, breakable,
+    title={\textbf{Status: dynamical target, not part of the hard carrier core}}, fonttitle=\bfseries]
+The relative spectral action is the natural place to unify the $\alpha$-, $\chi$-, and metric channels, but the heat-kernel completion is not yet theorem-hard. In v2.9 it should therefore appear as a completion target rather than as part of the rigid carrier packet.
+\end{tcolorbox}
+
+The natural completion ansatz is
+\[
+S_{\mathrm{rel}}
+= \tr f(D/\chi)
+- \tr f(D_{\mathrm{ref}}/\chi)
++ \frac{i\pi}{2}\Delta\eta_\Gamma
++ S_{\mathrm{defect}}.
+\]
+The three stationarity channels are then
+\[
+\frac{\delta S_{\mathrm{rel}}}{\delta\alpha}=0,
+\qquad
+\frac{\delta S_{\mathrm{rel}}}{\delta\chi}=0,
+\qquad
+\frac{\delta S_{\mathrm{rel}}}{\delta e}=0,
+\]
+with an independent $\omega$ variation left to a later Palatini/Einstein--Cartan completion.
+
+\subsection{Why the denominator 192 pi squared is plausible}
+
+For a Dirac-type Laplace operator written as
+\[
+D^2=-\nabla^2+\mathcal E,
+\]
+the local four-dimensional heat-kernel coefficient is
+\[
+a_2(D^2)=\frac{1}{16\pi^2}\int d^4x\sqrt{-g}\,
+\tr\!\left(\mathcal E+\frac16 R\right).
+\]
+For a Dirac-type curvature coupling one has $\mathcal E\sim R/4+\cdots$, so the curvature part scales like
+\[
+\frac{1}{16\pi^2}\left(\frac14+\frac16\right)
+\int d^4x\sqrt{-g}\,\tr(\mathbf 1)\,R
+=
+\frac{5}{192\pi^2}
+\int d^4x\sqrt{-g}\,\tr(\mathbf 1)\,R.
+\]
+After relative admissible-minus-reference subtraction and TFPT normalization, an Einstein-channel coefficient with denominator $192\pi^2$ is therefore natural. What remains open is the exact numerator and the precise sector trace selected by the full relative operator.
+
+\begin{conjecture}[Induced Einstein channel]
+The relative spectral completion should organize the metric channel as
+\[
+S_{\mathrm{EH}}^{\mathrm{rel}}
+=
+\frac{\chi^2}{192\pi^2}\,\tr_{\Hch}\mathbf 1
+\int d^4x\sqrt{-g}\,R.
+\]
+On the canonical occupancy branch, where $\tr_{\Hch}\mathbf 1=\Oadm=48$, this gives
+\[
+S_{\mathrm{EH}}^{2.9}
+= \int d^4x\sqrt{-g}\,\frac{\chi^2}{4\pi^2}R
+= \int d^4x\sqrt{-g}\,\frac{\Mpl^2}{2}R,
+\]
+so that
+\[
+\Mpl^2=\frac{\chi_0^2}{2\pi^2}.
+\]
+\end{conjecture}
+
+Using the observed reduced Planck mass only as a calibration check gives
+\[
+\chi_0 = \sqrt2\,\pi\,\Mpl \approx \num{1.08184e19}\ \mathrm{GeV}.
+\]
+The v2.9 claim is not that this is already hard, but that the relative-$a_2$ channel is the correct place to make it hard.
+
+\section{Downstream Reinterpretations: \texorpdfstring{E$_8$}{E8}, Higgs, Flavor}
+
+\subsection{\texorpdfstring{E$_8$}{E8} as a downstream carrier rereading}
+
+The strongest E$_8$ rereading to retain is
+\[
+\lambda_{E8}=\frac{\gamma}{\ln(248/60)},
+\qquad
+\gamma=\tr_EY^2=\frac56.
+\]
+The E$_8$ sector is downstream of the carrier norm, not part of the hard minimal carrier core. One suggestive but non-rigid echo is $60=48+12=\Oadm+\dim\mathfrak g_{\SM}$.\footnote{This identity is numerically suggestive, but not theorem-level and should remain secondary or appendix-level.}
+
+\subsection{Higgs as a conditional seam-even mode in \texorpdfstring{$E_2$}{E2}}
+
+If a light seam-even bosonic zero mode exists in $E_2$, then the minimal carrier provides a natural Higgs candidate
+\[
+\tau H = +H,
+\qquad
+H\in \Gamma(E_2)\cong (1,2)_{1/2}.
+\]
+This is the correct representation-theoretic slot for a Standard Model Higgs doublet. The existence of the light mode itself remains part of the dynamical completion and should not be overstated as a theorem of the hard carrier core.
+
+\subsection{Flavor and the phase grammar}
+
+The hard group-theoretic statement is
+\[
+G_{\mathrm{SM}}^{\mathrm{glob}}
+=
+S(U(3)\times U(2))
+\cong \frac{SU(3)\times SU(2)\times U(1)_Y}{\mathbb Z_6}.
+\]
+The separate, still dynamical question is whether the observed CKM, PMNS, and Majorana phases actually realize the associated discrete grammar.
+
+\begin{conjecture}[Phase grammar]
+The global quotient data suggest a distinguished six-point phase lattice
+\[
+\delta \in \left\{
+0,\frac{\pi}{3},\frac{2\pi}{3},\pi,\frac{4\pi}{3},\frac{5\pi}{3}
+\right\}\mod 2\pi.
+\]
+With CP acting by inversion,
+\[
+\delta \mapsto -\delta \mod 2\pi,
+\]
+the resulting phase grammar is naturally
+\[
+\mathbb Z_6\rtimes \mathbb Z_2.
+\]
+\end{conjecture}
+
+In v2.9 the quotient theorem should therefore be stated hard, while the physical realization of the phase grammar should remain explicitly conjectural.
+
+\section{Conclusion}
+
+The rigid core of v2.9 is not a number but a theorem:
+\[
+\boxed{
+\text{admissibility on the orientable double cover and the seam involution}
+}
+\]
+\[
+\boxed{
+\text{force the minimal carrier }E_3\oplus E_2.
+}
+\]
+From this follow the global Standard Model group, one chiral family, the carrier norm $\tr_EY^2=5/6$, and the general abelian index formula. Only on the canonical occupancy branch does the same rigid package produce
+\[
+\Oadm = N_{\mathrm{fam}}\dim S^+ = 3\times 16 = 48.
+\]
+The center is therefore the minimal carrier. The number $48$ is the first large trace of that carrier packet in an admissible vacuum, not the foundation of the architecture.
+
+\appendix
+
+\section{v2.8 to v2.9 Dictionary}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabularx}{\linewidth}{@{}lX@{}}
+\toprule
+v2.8 language & v2.9 carrier reading \\
+\midrule
+$g=5$ & $\gamma=\frac56$ together with $B=\frac32$ on the minimal carrier packet \\
+$48$ & $\Oadm=N_{\mathrm{fam}}\dim S^+$ on the canonical occupancy branch \\
+$\bone=\frac{41}{10}$ & $\bone(N_{\mathrm{fam}},N_H)=\frac43 N_{\mathrm{fam}}+\frac1{10}N_H$ evaluated at $(3,1)$ \\
+$\delta_2=\frac54\,\deltatop^2$ & $\delta_2 = B\gamma\,\Oadm^2\cthree^8$ with $B\gamma=\frac54$ \\
+$\gamma(0)=\frac56$ in E$_8$ language & $\gamma=\tr_EY^2$ as a carrier invariant \\
+\bottomrule
+\end{tabularx}
+\caption{Compact dictionary from the v2.8 closure language to the v2.9 carrier language.}
+\end{table}
+
+\section{Family-Index Bridge}
+
+The v2.8 block relation
+\[
+k_B=\frac32\,I_1(B)
+\]
+already shows that family multiplicity is tied to the three distinguished cycles of the orientable double cover. Writing
+\[
+k_B=\frac12\sum_{i=1}^{3} I_{\mathrm{fam}}(C_i)\,I_1(B)
+\]
+makes the same factorization explicit and immediately yields
+\[
+\sum_{i=1}^{3} I_{\mathrm{fam}}(C_i)=3.
+\]
+The equal-one assignment is the minimal symmetric branch and is the natural source of $N_{\mathrm{fam}}=3$.
+
+\section{Occupancy Transgression}
+
+The canonical bridge is
+\[
+\Oadm = N_{\mathrm{fam}}\dim S^+ = 3\cdot 16 = 48.
+\]
+With $\cthree=1/(8\pi)$ this gives
+\[
+\Oadm\,\cthree^4
+= 48\left(\frac{1}{8\pi}\right)^4
+= \frac{3}{256\pi^4}
+= \deltatop.
+\]
+This is the precise sense in which the topological surcharge is re-read as admissible occupancy transgression.
+
+\section{Seam Descent Normalization}
+
+The seam descent logic is intentionally separated into two pieces:
+\begin{enumerate}[leftmargin=1.5em, topsep=3pt, itemsep=2pt]
+    \item the spin-lifted seam loop closes only after $4\pi$, so $\widetilde U_\Gamma(2\pi)=-1$ and $\widetilde U_\Gamma(4\pi)=1$;
+    \item if the admissible carrier modulus is identified with the axionic angle variable, then $a=\theta/(4\pi)$ and therefore $\cthree=1/(8\pi)$.
+\end{enumerate}
+The first step is geometric. The second is the explicit carrier-to-axion identification.
+
+\section{Relative \texorpdfstring{$a_2$}{a2} Sketch}
+
+The relative Einstein target rests on the standard four-dimensional heat-kernel structure
+\[
+a_2(D^2)=\frac{1}{16\pi^2}\int d^4x\sqrt{-g}\,
+\tr\!\left(\mathcal E+\frac16 R\right).
+\]
+For Dirac-type curvature coupling $\mathcal E\sim R/4+\cdots$, so curvature terms naturally carry a denominator of the form $192\pi^2$. The open step is not whether such a denominator is plausible, but which relative subtraction and sector trace produce the final canonical coefficient
+\[
+\frac{\chi^2}{192\pi^2}\,\tr_{\Hch}\mathbf 1.
+\]
+
+\section{Numerical Branch Table}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}Xcccc@{}}
+\toprule
+Branch & $N_{\mathrm{fam}}$ & $N_H$ & $\Oadm$ & $\alpha^{-1}(0)$ \\
+\midrule
+canonical carrier branch & $3$ & $1$ & $48$ & \num{137.03599921615843} \\
+boundary multiplicity deformation & $2$ & $1$ & $32$ & \num{156.094045457} \\
+boundary multiplicity deformation & $4$ & $1$ & $64$ & \num{124.835054800} \\
+scalar-content deformation & $3$ & $2$ & $48$ & \num{135.945991742} \\
+external truncation (no $\nu^c$) & $3$ & $1$ & $45$ & \num{137.033841585} \\
+\bottomrule
+\end{tabularx}
+\caption{Representative branches in the carrier CFE. The ``no $\nu^c$'' row is not a normal carrier branch but an external truncation of the hard family packet.}
+\end{table}
+
+\end{document}

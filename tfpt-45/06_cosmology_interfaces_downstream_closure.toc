@@ -1,0 +1,16 @@
+\contentsline {section}{\numberline {1}Cosmology as Downstream Interface}{2}{section.1}%
+\contentsline {section}{\numberline {2}Seam Transfer and Infrared Determinant}{2}{section.2}%
+\contentsline {section}{\numberline {3}Axion Interface}{2}{section.3}%
+\contentsline {section}{\numberline {4}Reheating, Leptogenesis, and Neutrino Inputs}{2}{section.4}%
+\contentsline {section}{\numberline {5}CMB Stage 1: Spectra}{3}{section.5}%
+\contentsline {section}{\numberline {6}CMB Stage 2: Sky Realization}{3}{section.6}%
+\contentsline {section}{\numberline {7}Downstream Obligations Moved to the Companion}{3}{section.7}%
+\contentsline {section}{\numberline {8}Main Technical Development}{4}{section.8}%
+\contentsline {section}{\numberline {9}FRW reduction, seam transfer, and the scalaron branch}{4}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Falsification matrix}{8}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Proof-obligation ledger}{9}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Infrared continuations of the seam transfer}{10}{subsection.9.3}%
+\contentsline {section}{\numberline {10}FRW reduction and cosmology interface proofs}{12}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Axion interface}{13}{subsection.10.1}%
+\contentsline {section}{\numberline {11}Source Extraction Map}{13}{section.11}%
+\contentsline {section}{\numberline {12}Not Used Here}{13}{section.12}%

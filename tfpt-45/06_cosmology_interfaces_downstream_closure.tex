@@ -1,0 +1,163 @@
+\documentclass[11pt,a4paper]{article}
+\input{tfpt45-common}
+
+\title{\color{tfptblue}\textbf{Cosmology Interfaces of the TFPT Closed Branch}\\[0.35em]
+{\Large Seam Transfer, Axion Sector, Reheating, and CMB Targets}}
+\author{Stefan Hamann \and Alessandro Rizzo}
+\date{{\normalsize\color{tfptgray}\sffamily Paper 6 of the TFPT 4.5 series -- \today}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This paper isolates the downstream cosmology interface of TFPT. Cosmology is not used as a
+primitive selector of the theory. It is read from the closed branch through seam transfer,
+determinant-line phase, scalaron sector, axion interface, reheating input, leptogenesis input,
+neutrino sector, CMB spectra, and conjectural sky-map realization targets.
+\end{abstract}
+
+\begin{tfptfrontbox}
+\textbf{Inputs from previous papers.} Papers 1--5 supply the closed branch $\Tstar$, the carrier
+packet, the precision branch, the admissible QFT sector, and the boundary-normalized metrology.
+
+\textbf{New theorem contribution.} Downstream cosmology interfaces:
+\[
+\Lambda_{\mathrm{IR}}
+=
+\Mplunred^4\left[-\log\det_{\mathrm{adm}}(1-U_\Sigma)\right],
+\qquad
+S_\Sigma=\log\mu_\Sigma(\alpha_\star),
+\qquad
+N_{\mathrm{DW}}=1,
+\]
+with axion, reheating, leptogenesis, and CMB targets stated at their proper status levels.
+
+\textbf{Not claimed here.} No carrier proofs, no full $\alpha$ derivation, no QFT closure proof,
+and no Standard-Model packet proof.
+
+\textbf{Falsification or audit surface.} The paper fails if CMB Stage 2 is sold as a theorem, if a
+good CMB world is conflated with this observed sky realization, or if cosmology is allowed to tune
+the primitive branch.
+\end{tfptfrontbox}
+
+\begin{tfptwarningbox}
+CMB and E8 must never be written as hard theorem claims in this paper. Stage 1 is spectra. Stage 2
+is sky realization as a conjectural or programmatic target.
+\end{tfptwarningbox}
+
+
+\begin{tfptclaimcontract}
+\textbf{Claim.} Closed branch exports cosmology interface data: seam transfer, axion interface, reheating/leptogenesis inputs, and CMB Stage 1/2 targets.\par
+\textbf{Inputs.} Fixed $\Tstar$, metrology layer, determinant-line phase, scalaron and neutrino sectors.\par
+\textbf{First assumptions.} Infrared continuation and nonequilibrium solver are separate comparison-layer inputs.\par
+\textbf{Proof status.} Downstream interface; Stage 2 sky realization is programmatic/conjectural.\par
+\textbf{Kill condition.} Cosmology tunes the primitive branch or Stage 2 is presented as theorem-level sky reconstruction.\par
+\end{tfptclaimcontract}
+
+\tableofcontents
+
+\section{Cosmology as Downstream Interface}
+
+The closed branch is fixed before cosmology enters:
+\[
+\Tstar
+\Rightarrow
+(U_\Sigma,\det_{\mathrm{adm}},\text{scalaron branch},\text{neutrino sector})
+\Rightarrow
+\text{cosmology interfaces}.
+\]
+This section should make the nonprimitive status of cosmology explicit.
+
+\section{Seam Transfer and Infrared Determinant}
+
+The seam-transfer expression is
+\[
+\Lambda_{\mathrm{IR}}
+=
+\Mplunred^4\left[-\log\det_{\mathrm{adm}}(1-U_\Sigma)\right].
+\]
+The text should state which part is theorem-level interface data and which part is an empirical
+comparison convention.
+
+\section{Axion Interface}
+
+The axion sector is recorded as
+\[
+S_\Sigma=\log\mu_\Sigma(\alpha_\star),
+\qquad
+N_{\mathrm{DW}}=1,
+\qquad
+\theta_i=\pi(1-\phiseam(\alpha_\star)).
+\]
+The axion interface belongs here because it depends on seam transfer and determinant-line phase,
+not on the primitive carrier proof.
+
+\section{Reheating, Leptogenesis, and Neutrino Inputs}
+
+Reheating and leptogenesis are stated as downstream inputs supplied by the closed branch. The paper
+should keep them status-coded and avoid turning the module into a hidden fit engine for later CMB
+targets.
+
+\section{CMB Stage 1: Spectra}
+
+Stage 1 is the spectral target: transfer functions, angular spectra, and comparison rows. This
+stage may define falsification targets and benchmark rows, but it does not claim a unique sky-map
+realization.
+
+\section{CMB Stage 2: Sky Realization}
+
+Stage 2 is a conjectural realization target. The source draft's distinction should remain explicit:
+a good CMB world is not automatically this CMB world. The map-realization layer therefore belongs
+in a programmatic or conditional section, not in the theorem stack.
+
+\section{Downstream Obligations Moved to the Companion}
+
+\begin{center}
+\begin{tabularx}{\textwidth}{@{}p{0.28\textwidth}Y@{}}
+\toprule
+\textbf{Module} & \textbf{Status in this paper} \\
+\midrule
+Stationary horizons and compact objects & Listed only as downstream programmatic obligations; technical material is in the Companion. \\
+Code subspace, pointer dynamics, and record algebra & Not part of the cosmology-interface proof surface. \\
+Transient event channels & Falsification and prediction semantics belong to the Companion. \\
+Pole masses, Higgs readout, and full flavor output & Inputs from earlier readout papers or Companion ledgers, not cosmology claims. \\
+Extended comparison ledgers & Companion-only material. \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\clearpage
+\section{Main Technical Development}
+
+This section contains the main technical development assigned to this paper by the TFPT 4.5 clean split. Cross-paper background is referenced through dependency and scope boxes; extended backend material is kept in the Technical Companion.
+
+\input{source_extracts/06_cosmology_source.tex}
+
+\section{Source Extraction Map}
+
+\begin{tfptsourcebox}
+Use \sourceDraft:
+\begin{itemize}[leftmargin=1.5em]
+    \item Section 10 for FRW reduction, seam transfer, and scalaron branch.
+    \item Sections 10.1 and 10.2 for falsification matrix and proof-obligation ledger.
+    \item Appendix C.7, Appendix G, and the cosmology-interface proof material in Appendix J.
+    \item Appendix N only for the axion-interface excerpt.
+    \item Keep CMB Stage 1 and Stage 2 visibly separate.
+\end{itemize}
+\end{tfptsourcebox}
+
+
+\begin{tfptexports}
+Exports: $\Lambda_{\mathrm{IR}}$ interface, $S_\Sigma$, $N_{\mathrm{DW}}=1$, $\theta_i$, reheating/leptogenesis input block, CMB Stage 1/2 status separation, and axion target interface.
+\end{tfptexports}
+
+\section{Not Used Here}
+
+Carrier proofs, the full $\alpha$ derivation, QFT closure proofs, Standard-Model packet proofs,
+and metrology proofs are not reproved or used as adjustable inputs in this paper. They enter only
+as fixed outputs of the earlier closed branch.
+
+\clearpage
+\input{source_extracts/bibliography_cosmology.tex}
+
+\end{document}

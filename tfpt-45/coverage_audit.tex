@@ -1,0 +1,68 @@
+\documentclass[11pt,a4paper]{article}
+\input{tfpt45-common}
+\title{\color{tfptblue}\textbf{TFPT 4.5 Source Coverage Audit}}
+\author{Stefan Hamann \and Alessandro Rizzo}
+\date{\today}
+\begin{document}
+\maketitle
+\section{Purpose}
+This audit records the primary ownership map from \sourceDraft{} into the TFPT 4.5 split. The
+dedicated papers should contain only their own source body plus directly necessary local technical
+material. Cross-paper background is referenced through dependency boxes; extended backend material
+is assigned to the Technical Companion.
+\section{Primary Coverage Map}
+\begin{longtable}{@{}p{0.18\textwidth}p{0.18\textwidth}p{0.54\textwidth}@{}}
+\toprule
+\textbf{Original lines} & \textbf{Primary owner} & \textbf{Content}\\
+\midrule
+225--848 & Paper 0 & Title metadata, original abstract, architecture box, reading guide, big picture.\\
+849--1305 & Paper 1 & Primitive core and primitive relative spectral dynamics.\\
+1306--2314 & Paper 2 & Carrier algebraic normal form, stabilizer, packet, traces, abelian index.\\
+2315--2695 & Paper 3 & Kernel numerics and electromagnetic closure.\\
+2696--3156 & Paper 2 & Compression identities and carrier-relevant comparison setup.\\
+3157--3482 & Paper 3 & UV seed shadow, Cabibbo inversion, alternative worlds.\\
+3483--4124 & Paper 2 & Families, occupancy, compact Higgs index.\\
+4125--5571 & Paper 5 & Closed 41 chain, geometric Hodge closure, EW matching, Planck closure.\\
+5572--7156 & Paper 3 & Yukawas, masses, flavor, CKM, PMNS.\\
+7157--7357 & Paper 4 & Hadronic admissibility and strong-CP ingredients.\\
+7358--8906 & Paper 4 & Admissibility complex, positivity, OS/locality/scattering closure.\\
+8907--9746 & Paper 1 & Operational seed, admissible bordisms, boundary generation, primitive completion.\\
+9747--10259 & Paper 6 & FRW reduction, seam transfer, scalaron branch, falsification matrix, proof-obligation ledger.\\
+10260--11174 & Technical Companion & Downstream closure modules: horizons, CMB transfer extensions, late-time structure, pole-mass continuation, code subspace, transient channels.\\
+11175--11327 & Paper 0 & Canonical rigid object and falsification interface.\\
+11328--12235 & Paper 4 & Internal reduction theorem and renormalized observable hierarchy.\\
+12236--12625 & Paper 5 & Absolute dimensionless metrology.\\
+12626--12893 & Paper 0 & Conclusion and interface layers.\\
+12896--13142 & Paper 3 & Narrow operational prediction surface and compact prediction ledger.\\
+13143--13203 & Technical Companion & Empirical readout refinements and residual comparison material.\\
+13204--13403 & Paper 1 & Technical conventions, relative objects, symbol guide.\\
+13404--13492 & Paper 5 & Constants atlas before E8 grammar.\\
+13493--13772 & Technical Companion & E8 scale grammar, full stage atlas, optional arithmetic continuations.\\
+13773--13838 & Paper 5 & Conditional minimal-parameter picture.\\
+13839--13920 & Paper 6 & Infrared continuations of seam transfer.\\
+13921--13933 & Paper 1 & Relative APS and superconnection setup.\\
+13934--14109 & Paper 4 & Reflection positivity, OS reconstruction, scattering appendices.\\
+14110--14190 & Paper 6 & FRW reduction and cosmology interface proofs.\\
+14191--14244 & Paper 4 & Yukawa kernels and positivity lemmas.\\
+14245--14529 & Technical Companion & Information-theoretic readings, record algebra, horizons.\\
+14530--14798 & Technical Companion & Prediction semantics, transient status, comparison surface, and target rows.\\
+14799--14825 & Paper 6 & Axion interface excerpt.\\
+14826--14959 & Technical Companion & Supplementary UV mass-source rows and extended comparison ledger.\\
+14960--15051 & Technical Companion & Novelty boundary and bibliography.\\
+\bottomrule
+\end{longtable}
+\section{Clean Split Rule}
+Every dedicated paper contains its primary source body and ends with a ``Not used here'' list. The
+Technical Companion is the only document intended to hold full appendix-level ballast, comparison
+maps, E8 grammar, horizons, record algebra, transient channels, and extended ledgers.
+
+\section{Scope Leak Watchlist}
+The clean split treats the following as explicit non-goals of the owner papers:
+\begin{itemize}[leftmargin=1.5em]
+    \item Paper 1 uses an essentialized defect filtration, not a free lexicographic wish list; carrier
+    ranks and corner counts are downstream readings rather than minimization slots.
+    \item Paper 2 treats $6Y^2-Y-\mathbf 1=0$ as a corollary of boundary polarization, compact Higgs
+    rank selection, and primitive Yukawa type, not as a start assumption.
+    \item Paper 5 keeps the constants atlas and E8 scale grammar out of the metrology proof surface.
+\end{itemize}
+\end{document}

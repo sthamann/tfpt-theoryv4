@@ -1,0 +1,263 @@
+\documentclass[11pt,a4paper]{article}
+\input{tfpt45-common}
+
+\title{\color{tfptblue}\textbf{Carrier Rigidity, Hypercharge, and the Standard Model Packet}\\[0.35em]
+{\Large from Boundary Polarization}}
+\author{Stefan Hamann \and Alessandro Rizzo}
+\date{{\normalsize\color{tfptgray}\sffamily Paper 2 of the TFPT 4.5 series -- \today}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This paper isolates the carrier theorem of TFPT. The carrier polynomial is no longer taken as an
+entry assumption. Boundary polarization first gives a finite essential two-point carrier
+$E=E_-\oplus E_+$. The compact determinant/Higgs index fixes $\dim E_+=2$, while primitive
+indecomposable Yukawa type fixes the complementary essential rank $\dim E_-=3$. The determinant
+normalized generator is then forced to be
+\[
+Y=-\frac13P_-+\frac12P_+,
+\]
+and the former carrier equation
+\[
+6Y^2-Y-\mathbf 1=0,\qquad \tr_EY=0
+\]
+appears only as its algebraic shadow. From this derived carrier follow the hypercharge vector, the
+even exterior packet $S^+=\Lambda^{\mathrm{even}}E$, one chiral Standard-Model family including
+$\nu^c$, the physical gauge quotient, family counting, admissible occupancy, the compact Higgs
+index, and the abelian index coefficient.
+\end{abstract}
+
+\begin{tfptfrontbox}
+\textbf{Inputs from previous papers.} The primitive boundary kernel
+$(\taudbl,\iC,\Pprim,[u_\Sigma],\cthree)$ from Paper 1.
+
+\textbf{New theorem contribution.} The rigid carrier and packet:
+\[
+E=E_3\oplus E_2,\quad
+Y=\operatorname{diag}(-1/3,-1/3,-1/3,1/2,1/2),\quad
+S^+=\Lambda^{\mathrm{even}}E,\quad
+G_{\mathrm{phys}}=\frac{SU(3)\times SU(2)\times U(1)_Y}{\mathbb Z_6}.
+\]
+
+\textbf{Not claimed here.} No exact $\alpha$ value, no CKM/PMNS closure, no pole-mass ledger, no OS
+reconstruction, no cosmology, and no E8 grammar.
+
+\textbf{Falsification or audit surface.} The paper fails if the carrier normal form imports
+Standard-Model representation data by hand, if the Higgs and branch-Yukawa discharge is not
+prominent, or if the family and occupancy counts depend on downstream numerics.
+\end{tfptfrontbox}
+
+
+\begin{tfptclaimcontract}
+\textbf{Claim.} Boundary polarization, compact Higgs selection, and primitive Yukawa type force $\dim E_-=3$, $\dim E_+=2$; the carrier polynomial is a corollary.\par
+\textbf{Inputs.} Primitive kernel from Paper 1 and carrier/exterior-signature discharge.\par
+\textbf{First assumptions.} Essential carrier block, minimal determinant/Higgs index on the positive polarization block, primitive indecomposable Yukawa type; no carrier polynomial assumption.\par
+\textbf{Proof status.} Core theorem plus explicit representation audit.\par
+\textbf{Kill condition.} Higgs/Yukawa rank discharge fails or the determinant-normalized two-point generator is not forced before phenomenological matching.\par
+\end{tfptclaimcontract}
+
+\tableofcontents
+
+\section{Carrier Polynomial as a Corollary}
+
+The paper does not begin by assuming
+\[
+6Y^2-Y-\mathbf 1=0,\qquad \tr_EY=0.
+\]
+It begins with the carrier involution induced by the boundary polarization:
+\[
+\varepsilon_{\mathrm{car}}:=\iC|_E,
+\qquad
+\varepsilon_{\mathrm{car}}^2=\mathbf 1,
+\qquad
+E=E_-\oplus E_+,
+\qquad
+P_\pm=\frac{\mathbf 1\pm\varepsilon_{\mathrm{car}}}{2}.
+\]
+At this stage there is only a two-point algebra
+\[
+\mathbb C[\varepsilon_{\mathrm{car}}]=\{a\mathbf 1+b\varepsilon_{\mathrm{car}}\}.
+\]
+No $3+2$ split, hypercharge vector, Standard-Model packet, or electromagnetic number has been
+used.
+
+\begin{theorem}[Carrier polynomial from boundary polarization]
+Let $\Tbound$ be the one-sided admissible boundary datum and let the Calderon polarization induce
+the finite essential carrier involution above. Assume only:
+\begin{enumerate}[label=(\roman*), leftmargin=1.7em]
+    \item the carrier block is essential, so no contractible spectator summand is present on which
+    seam winding, determinant clutching, and primitive local interaction type all vanish;
+    \item unit seam winding selects the minimal nonnegative determinant class on the compactified
+    normal sphere, fixing the positive polarization block by the compact Higgs index;
+    \item the retained branch contains a nonzero primitive indecomposable local trilinear type with
+    two nontrivial fermionic legs and one seam-even bosonic leg.
+\end{enumerate}
+Then
+\[
+\dim E_+=2,\qquad \dim E_-=3.
+\]
+The determinant-normalized two-point generator is uniquely
+\[
+Y=-\frac13P_-+\frac12P_+,
+\]
+and hence
+\[
+6Y^2-Y-\mathbf 1=0,\qquad \tr_EY=0.
+\]
+\end{theorem}
+
+\begin{proof}[Proof spine]
+Boundary polarization gives only $E=E_-\oplus E_+$. The minimal positive determinant class on the
+seam-even block gives $L_+\simeq\mathcal O(1)$ on the compactified normal sphere, so
+$H^0(S^2,\mathcal O(1))\simeq\mathbb C^2$ and $\dim E_+=2$. The primitive indecomposable Yukawa
+type is a local type statement, not the later numerical transport realization. With $\dim E_+=2$,
+the seam-even bosonic leg contributes the line $\Lambda^2E_+$, and closure of the negative factor
+without a spectator requires
+\[
+E_-\otimes\Lambda^2E_-\longrightarrow\Lambda^3E_-=\det E_-,
+\]
+so $\dim E_-=3$. A determinant-preserving two-point generator has the primitive integer form
+\[
+X=q_-P_-+q_+P_+,\qquad 3q_-+2q_+=0,\qquad q_-<0<q_+,\qquad \gcd(|q_-|,q_+)=1,
+\]
+whose unique solution is $(q_-,q_+)=(-2,3)$. Determinant normalization gives
+$Y=X/6=-P_-/3+P_+/2$. The polynomial is the minimal polynomial of these two roots:
+\[
+\left(Y+\frac13\right)\left(Y-\frac12\right)=0
+\quad\Longleftrightarrow\quad
+6Y^2-Y-\mathbf 1=0,
+\]
+and the trace vanishes because $3(-1/3)+2(1/2)=0$.
+\end{proof}
+
+\begin{remark}[General split check]
+For a general essential split $E_b\oplus E_s$ with determinant-normalized roots
+$-1/b$ and $1/s$, the two-point generator satisfies
+\[
+bs\,Y^2+(s-b)Y-\mathbf 1=0.
+\]
+The boundary/Higgs/Yukawa rank argument fixes $(b,s)=(3,2)$, hence the coefficient $6=3\cdot2$
+is not guessed or phenomenologically tuned.
+\end{remark}
+
+\section{Hypercharge and Gauge Quotient}
+
+The carrier normal form gives
+\[
+Y=\operatorname{diag}\left(-\frac13,-\frac13,-\frac13,\frac12,\frac12\right),
+\]
+and the internal stabilizer gives the physical quotient
+\[
+G_{\mathrm{phys}}
+=
+\frac{SU(3)\times SU(2)\times U(1)_Y}{\mathbb Z_6}.
+\]
+The proof must be written as a stabilizer theorem of the carrier datum, not as a reconstruction of
+a known gauge group.
+
+\section{One-Family Packet}
+
+The spinor packet is
+\[
+S^+=\Lambda^{\mathrm{even}}E,
+\qquad
+\dim S^+=16.
+\]
+This section carries the one-family decomposition including the right-handed neutrino state. It is
+the place where character identities, trace identities, and the abelian index are stated.
+
+\section{Discharging the Rank and Exterior Premises}
+
+The editorial risk is that
+\[
+\dim \Lambda^2E_+=1,
+\qquad
+\Lambda^2E_-\cong E_-^\vee
+\]
+look like disguised Standard-Model inputs. For that reason the compact Higgs index and primitive
+Yukawa type discharge are central rather than appended as a footnote. The value-level transport
+Yukawa matrices belong downstream; the upstream step here uses only the existence and type of a
+primitive indecomposable local trilinear.
+
+\section{Counting Outputs}
+
+The paper records the discrete counting outputs:
+\[
+N_{\mathrm{fam}}=3,
+\qquad
+\Oadm=48,
+\qquad
+N_\Phi=1,
+\qquad
+\bone=\frac{41}{10}.
+\]
+These should be presented as structural consequences of carrier, winding, occupancy, and compact
+Higgs index closure. They are not yet precision-observable readouts.
+
+\section{Main Result}
+
+\begin{theorem}[Carrier rigidity and Standard-Model packet]
+Given the primitive boundary kernel of Paper 1, the essential carrier block, the compact Higgs
+rank selection, and primitive Yukawa type, the admissible carrier branch is the rigid split
+$E=E_-\oplus E_+$ with $(\dim E_-,\dim E_+)=(3,2)$. Renaming these blocks
+$E_3:=E_-$ and $E_2:=E_+$ gives the hypercharge vector above. The even exterior packet
+$S^+=\Lambda^{\mathrm{even}}E$ has dimension $16$, carries one chiral Standard-Model family
+including $\nu^c$, and has physical stabilizer $G_{\mathrm{phys}}$.
+\end{theorem}
+
+\section{Audit Protocol}
+
+\begin{center}
+\begin{tabularx}{\textwidth}{@{}p{0.24\textwidth}Y@{}}
+\toprule
+\textbf{Audit item} & \textbf{Question} \\
+\midrule
+Rank discharge & Do compact Higgs selection and primitive Yukawa type force $(\dim E_-,\dim E_+)=(3,2)$ before the carrier polynomial is written? \\
+Carrier polynomial & Is $6Y^2-Y-\mathbf 1=0$ presented only as the minimal polynomial of the derived roots? \\
+Hypercharge & Is the normalization fixed before any phenomenological matching? \\
+Packet & Is $S^+=\Lambda^{\mathrm{even}}E$ derived as the primitive packet, not imported? \\
+Gauge quotient & Is the $\mathbb Z_6$ quotient obtained from the stabilizer? \\
+Higgs/Yukawa discharge & Are the exterior-power premises discharged in the body of the paper? \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\clearpage
+\section{Main Technical Development}
+
+This section contains the main technical development assigned to this paper by the TFPT 4.5 clean split. Cross-paper background is referenced through dependency and scope boxes; extended backend material is kept in the Technical Companion.
+
+\input{source_extracts/02_carrier_source.tex}
+
+\section{Source Extraction Map}
+
+\begin{tfptsourcebox}
+Use \sourceDraft:
+\begin{itemize}[leftmargin=1.5em]
+    \item Sections 3.3, 3.4, and 3.5 for carrier normal form, internal stabilizer, one-family
+    packet, character identities, trace identities, and abelian index.
+    \item Sections 5.1--5.3 only for carrier-relevant compression identities.
+    \item Sections 6.1--6.6 for families, occupancy, and compact Higgs index.
+    \item Sections 8.11--8.15 for the Yukawa-based discharge of carrier premises.
+    \item Section 8.19 and Section 9.11 only for the joint discrete admissible sector.
+\end{itemize}
+\end{tfptsourcebox}
+
+\begin{tfptwarningbox}
+Delete or defer exact electromagnetic numerics, CKM/PMNS, masses, OS reconstruction, cosmology, and
+E8. The paper stands or falls on the carrier theorem and the representation audit.
+\end{tfptwarningbox}
+
+
+\begin{tfptexports}
+Exports: $E_3\oplus E_2$, $Y$, $S^+=\Lambda^{\mathrm{even}}E$, $G_{\mathrm{phys}}$, $N_{\mathrm{fam}}=3$, $\Oadm=48$, $N_\Phi=1$, and $b_1=41/10$.
+\end{tfptexports}
+
+\section{Not Used Here}
+
+Exact $\alpha$ numerics, CKM/PMNS closure, pole-mass ledgers, OS/CAR reconstruction, local
+Minkowski nets, scattering, gravity/metrology, cosmology, CMB targets, and E8 grammar are not used
+as proof inputs in this paper.
+
+\end{document}
