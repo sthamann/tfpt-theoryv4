@@ -4,6 +4,10 @@ import { motion } from "motion/react";
 import Link from "next/link";
 import { ArrowLeft, Download, FileText, Sigma } from "lucide-react";
 import { Math } from "@/components/Math";
+import { trackPdfDownload } from "@/lib/track";
+
+const ORIENTATION_PDF = "/papers/00_orientation_note.pdf";
+const ORIENTATION_TITLE = "TFPT in One Map (Paper 0)";
 
 export function OrientationHero() {
   return (
@@ -64,18 +68,34 @@ export function OrientationHero() {
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <Link
-              href="/papers/00_orientation_note.pdf"
+              href={ORIENTATION_PDF}
               target="_blank"
               rel="noopener"
+              onClick={() =>
+                trackPdfDownload({
+                  file: ORIENTATION_PDF,
+                  source: "orientation-hero",
+                  kind: "paper",
+                  title: ORIENTATION_TITLE,
+                })
+              }
               className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-500/30 ring-1 ring-blue-400/40 transition-transform hover:scale-105 focus:scale-105"
             >
               <Download size={16} />
               Download Paper 0 (PDF)
             </Link>
             <Link
-              href="/papers/00_orientation_note.pdf"
+              href={ORIENTATION_PDF}
               target="_blank"
               rel="noopener"
+              onClick={() =>
+                trackPdfDownload({
+                  file: ORIENTATION_PDF,
+                  source: "orientation-hero",
+                  kind: "paper",
+                  title: ORIENTATION_TITLE,
+                })
+              }
               className="inline-flex items-center gap-2 rounded-full border border-slate-600/60 bg-slate-900/60 px-5 py-2.5 text-sm font-semibold text-slate-100 backdrop-blur transition-colors hover:bg-slate-800/80"
             >
               <FileText size={16} />

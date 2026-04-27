@@ -8,6 +8,9 @@ import { SectionHeader } from "./SectionHeader";
 import { PredictionCard } from "./PredictionCard";
 import { predictions, Prediction, CATEGORY_META } from "@/lib/predictions";
 import { cn } from "@/lib/utils";
+import { trackPdfDownload } from "@/lib/track";
+
+const TWO_PAGE_SUMMARY = "/predictions/tfpt_two_page_summary.pdf";
 
 const FILTERS: { id: Prediction["category"] | "All"; label: string }[] = [
   { id: "All", label: "All predictions" },
@@ -126,9 +129,17 @@ export function PredictionsSection() {
             full prediction surface in compact form.
           </p>
           <Link
-            href="/predictions/tfpt_two_page_summary.pdf"
+            href={TWO_PAGE_SUMMARY}
             target="_blank"
             rel="noopener"
+            onClick={() =>
+              trackPdfDownload({
+                file: TWO_PAGE_SUMMARY,
+                source: "predictions-summary-cta",
+                kind: "summary",
+                title: "Two-page summary",
+              })
+            }
             className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition-transform hover:scale-105"
           >
             <Download size={16} />

@@ -3,6 +3,38 @@
 import Link from "next/link";
 import { motion } from "motion/react";
 import { Download, FileText, ArrowRight } from "lucide-react";
+import { trackPdfDownload, type DownloadKind } from "@/lib/track";
+
+const ORIENTATION_PDF = "/papers/00_orientation_note.pdf";
+const ORIENTATION_TITLE = "TFPT in One Map (Paper 0)";
+
+interface SidebarLink {
+  href: string;
+  label: string;
+  desc: string;
+  kind: DownloadKind;
+}
+
+const SIDEBAR_LINKS: SidebarLink[] = [
+  {
+    href: "/papers/series_index.pdf",
+    label: "Series index",
+    desc: "Working index, dependency split",
+    kind: "series-index",
+  },
+  {
+    href: "/papers/theory_map.pdf",
+    label: "Theory status map",
+    desc: "Status of the staged derivation chain",
+    kind: "theory-map",
+  },
+  {
+    href: "/predictions/tfpt_two_page_summary.pdf",
+    label: "Two-page summary",
+    desc: "Compact claim + prediction surface",
+    kind: "summary",
+  },
+];
 
 export function OrientationDownload() {
   return (
@@ -45,18 +77,34 @@ export function OrientationDownload() {
 
               <div className="mt-6 flex flex-wrap gap-3">
                 <Link
-                  href="/papers/00_orientation_note.pdf"
+                  href={ORIENTATION_PDF}
                   target="_blank"
                   rel="noopener"
+                  onClick={() =>
+                    trackPdfDownload({
+                      file: ORIENTATION_PDF,
+                      source: "orientation-download",
+                      kind: "paper",
+                      title: ORIENTATION_TITLE,
+                    })
+                  }
                   className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/30 ring-1 ring-blue-400/40 transition-transform hover:scale-105 focus:scale-105"
                 >
                   <Download size={16} />
                   Download Paper 0 (PDF)
                 </Link>
                 <Link
-                  href="/papers/00_orientation_note.pdf"
+                  href={ORIENTATION_PDF}
                   target="_blank"
                   rel="noopener"
+                  onClick={() =>
+                    trackPdfDownload({
+                      file: ORIENTATION_PDF,
+                      source: "orientation-download",
+                      kind: "paper",
+                      title: ORIENTATION_TITLE,
+                    })
+                  }
                   className="inline-flex items-center gap-2 rounded-full border border-slate-600/60 bg-slate-900/60 px-6 py-3 text-sm font-semibold text-slate-100 backdrop-blur transition-colors hover:bg-slate-800/80"
                 >
                   <FileText size={16} />
@@ -72,63 +120,34 @@ export function OrientationDownload() {
             </div>
 
             <div className="space-y-3">
-              <Link
-                href="/papers/series_index.pdf"
-                target="_blank"
-                rel="noopener"
-                className="group flex items-center justify-between rounded-xl border border-slate-700/40 bg-slate-950/40 p-4 transition-colors hover:bg-slate-900/40"
-              >
-                <div>
-                  <div className="font-serif text-sm font-semibold text-slate-100">
-                    Series index
+              {SIDEBAR_LINKS.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener"
+                  onClick={() =>
+                    trackPdfDownload({
+                      file: link.href,
+                      source: "orientation-sidebar",
+                      kind: link.kind,
+                      title: link.label,
+                    })
+                  }
+                  className="group flex items-center justify-between rounded-xl border border-slate-700/40 bg-slate-950/40 p-4 transition-colors hover:bg-slate-900/40"
+                >
+                  <div>
+                    <div className="font-serif text-sm font-semibold text-slate-100">
+                      {link.label}
+                    </div>
+                    <div className="text-xs text-slate-400">{link.desc}</div>
                   </div>
-                  <div className="text-xs text-slate-400">
-                    Working index, dependency split
-                  </div>
-                </div>
-                <ArrowRight
-                  size={16}
-                  className="text-slate-500 transition-transform group-hover:translate-x-0.5 group-hover:text-slate-200"
-                />
-              </Link>
-              <Link
-                href="/papers/theory_map.pdf"
-                target="_blank"
-                rel="noopener"
-                className="group flex items-center justify-between rounded-xl border border-slate-700/40 bg-slate-950/40 p-4 transition-colors hover:bg-slate-900/40"
-              >
-                <div>
-                  <div className="font-serif text-sm font-semibold text-slate-100">
-                    Theory status map
-                  </div>
-                  <div className="text-xs text-slate-400">
-                    Status of the staged derivation chain
-                  </div>
-                </div>
-                <ArrowRight
-                  size={16}
-                  className="text-slate-500 transition-transform group-hover:translate-x-0.5 group-hover:text-slate-200"
-                />
-              </Link>
-              <Link
-                href="/predictions/tfpt_two_page_summary.pdf"
-                target="_blank"
-                rel="noopener"
-                className="group flex items-center justify-between rounded-xl border border-slate-700/40 bg-slate-950/40 p-4 transition-colors hover:bg-slate-900/40"
-              >
-                <div>
-                  <div className="font-serif text-sm font-semibold text-slate-100">
-                    Two-page summary
-                  </div>
-                  <div className="text-xs text-slate-400">
-                    Compact claim + prediction surface
-                  </div>
-                </div>
-                <ArrowRight
-                  size={16}
-                  className="text-slate-500 transition-transform group-hover:translate-x-0.5 group-hover:text-slate-200"
-                />
-              </Link>
+                  <ArrowRight
+                    size={16}
+                    className="text-slate-500 transition-transform group-hover:translate-x-0.5 group-hover:text-slate-200"
+                  />
+                </Link>
+              ))}
             </div>
           </div>
         </motion.div>

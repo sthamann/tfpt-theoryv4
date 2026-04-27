@@ -4,6 +4,9 @@ import { motion } from "motion/react";
 import Link from "next/link";
 import { ArrowRight, BookOpen, Download, Sigma } from "lucide-react";
 import { Math } from "./Math";
+import { trackPdfDownload } from "@/lib/track";
+
+const TWO_PAGE_SUMMARY = "/predictions/tfpt_two_page_summary.pdf";
 
 export function Hero() {
   return (
@@ -62,9 +65,17 @@ export function Hero() {
               />
             </Link>
             <Link
-              href="/predictions/tfpt_two_page_summary.pdf"
+              href={TWO_PAGE_SUMMARY}
               target="_blank"
               rel="noopener"
+              onClick={() =>
+                trackPdfDownload({
+                  file: TWO_PAGE_SUMMARY,
+                  source: "hero",
+                  kind: "summary",
+                  title: "Two-page summary",
+                })
+              }
               className="inline-flex items-center gap-2 rounded-full border border-slate-600/60 bg-slate-900/60 px-6 py-3 text-sm font-semibold text-slate-100 backdrop-blur transition-colors hover:bg-slate-800/80"
             >
               <Download size={16} />

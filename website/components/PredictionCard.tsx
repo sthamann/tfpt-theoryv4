@@ -6,6 +6,7 @@ import { Download, Target, AlertTriangle } from "lucide-react";
 import { Math as Tex } from "./Math";
 import { Prediction, STATUS_BADGE, CATEGORY_META } from "@/lib/predictions";
 import { cn } from "@/lib/utils";
+import { trackPdfDownload } from "@/lib/track";
 
 export function PredictionCard({
   prediction,
@@ -107,6 +108,14 @@ export function PredictionCard({
           href={prediction.pdf}
           target="_blank"
           rel="noopener"
+          onClick={() =>
+            trackPdfDownload({
+              file: prediction.pdf,
+              source: "predictions-card",
+              kind: "prediction",
+              title: prediction.title,
+            })
+          }
           className="inline-flex items-center gap-2 text-sm font-semibold text-blue-300 transition-colors hover:text-blue-200"
         >
           <Download size={14} />

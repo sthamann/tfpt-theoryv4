@@ -6,6 +6,7 @@ import { Download, FileText } from "lucide-react";
 import { Math } from "./Math";
 import { Paper, STATUS_META } from "@/lib/papers";
 import { cn } from "@/lib/utils";
+import { trackPdfDownload } from "@/lib/track";
 
 export function PaperSection({ paper }: { paper: Paper }) {
   const meta = STATUS_META[paper.status];
@@ -94,6 +95,14 @@ export function PaperSection({ paper }: { paper: Paper }) {
                 href={paper.pdf}
                 target="_blank"
                 rel="noopener"
+                onClick={() =>
+                  trackPdfDownload({
+                    file: paper.pdf,
+                    source: "papers-detail",
+                    kind: "paper",
+                    title: paper.title,
+                  })
+                }
                 className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition-transform hover:scale-105"
               >
                 <Download size={16} />
@@ -103,6 +112,14 @@ export function PaperSection({ paper }: { paper: Paper }) {
                 href={paper.pdf}
                 target="_blank"
                 rel="noopener"
+                onClick={() =>
+                  trackPdfDownload({
+                    file: paper.pdf,
+                    source: "papers-detail",
+                    kind: "paper",
+                    title: paper.title,
+                  })
+                }
                 className="inline-flex items-center gap-2 rounded-full border border-slate-600/60 bg-slate-900/40 px-5 py-2.5 text-sm font-semibold text-slate-100 backdrop-blur transition-colors hover:bg-slate-800/60"
               >
                 <FileText size={16} />

@@ -1,5 +1,44 @@
+"use client";
+
 import Link from "next/link";
 import { Logo } from "./Logo";
+import { trackPdfDownload, type DownloadKind } from "@/lib/track";
+
+interface FooterLink {
+  href: string;
+  label: string;
+  kind: DownloadKind;
+}
+
+const THEORY_MAP: FooterLink = {
+  href: "/papers/theory_map.pdf",
+  label: "Theory status map (PDF)",
+  kind: "theory-map",
+};
+const SERIES_INDEX: FooterLink = {
+  href: "/papers/series_index.pdf",
+  label: "Series index",
+  kind: "series-index",
+};
+const TECHNICAL_COMPANION: FooterLink = {
+  href: "/papers/technical_companion.pdf",
+  label: "Technical companion",
+  kind: "companion",
+};
+const TWO_PAGE_SUMMARY: FooterLink = {
+  href: "/predictions/tfpt_two_page_summary.pdf",
+  label: "Two-page summary",
+  kind: "summary",
+};
+
+function trackFooter(link: FooterLink) {
+  trackPdfDownload({
+    file: link.href,
+    source: "footer",
+    kind: link.kind,
+    title: link.label,
+  });
+}
 
 export function Footer() {
   return (
@@ -45,12 +84,13 @@ export function Footer() {
             </li>
             <li>
               <Link
-                href="/papers/theory_map.pdf"
+                href={THEORY_MAP.href}
                 target="_blank"
                 rel="noopener"
+                onClick={() => trackFooter(THEORY_MAP)}
                 className="text-slate-400 hover:text-white"
               >
-                Theory status map (PDF)
+                {THEORY_MAP.label}
               </Link>
             </li>
           </ul>
@@ -71,32 +111,35 @@ export function Footer() {
             </li>
             <li>
               <Link
-                href="/papers/series_index.pdf"
+                href={SERIES_INDEX.href}
                 target="_blank"
                 rel="noopener"
+                onClick={() => trackFooter(SERIES_INDEX)}
                 className="text-slate-400 hover:text-white"
               >
-                Series index
+                {SERIES_INDEX.label}
               </Link>
             </li>
             <li>
               <Link
-                href="/papers/technical_companion.pdf"
+                href={TECHNICAL_COMPANION.href}
                 target="_blank"
                 rel="noopener"
+                onClick={() => trackFooter(TECHNICAL_COMPANION)}
                 className="text-slate-400 hover:text-white"
               >
-                Technical companion
+                {TECHNICAL_COMPANION.label}
               </Link>
             </li>
             <li>
               <Link
-                href="/predictions/tfpt_two_page_summary.pdf"
+                href={TWO_PAGE_SUMMARY.href}
                 target="_blank"
                 rel="noopener"
+                onClick={() => trackFooter(TWO_PAGE_SUMMARY)}
                 className="text-slate-400 hover:text-white"
               >
-                Two-page summary
+                {TWO_PAGE_SUMMARY.label}
               </Link>
             </li>
           </ul>
@@ -112,6 +155,20 @@ export function Footer() {
           <p className="text-slate-600">
             TFPT 4.5 series — boundary polarization · carrier rigidity · observable closure
           </p>
+        </div>
+        <div className="mx-auto mt-3 max-w-7xl text-[11px] leading-relaxed text-slate-600">
+          This site uses{" "}
+          <Link
+            href="https://vercel.com/docs/analytics/privacy-policy"
+            target="_blank"
+            rel="noopener"
+            className="underline decoration-slate-700 underline-offset-2 hover:text-slate-400"
+          >
+            Vercel Web Analytics
+          </Link>{" "}
+          for cookie-free, anonymous aggregate page-view and PDF-download
+          counts. No personal identifiers, no IP addresses, and no cookies are
+          stored.
         </div>
       </div>
     </footer>

@@ -6,32 +6,43 @@ import { Download, FileText } from "lucide-react";
 import { papers, STATUS_META } from "@/lib/papers";
 import { cn } from "@/lib/utils";
 import { SectionHeader } from "./SectionHeader";
+import { trackPdfDownload, type DownloadKind } from "@/lib/track";
 
-const COMPANIONS = [
+const COMPANIONS: Array<{
+  label: string;
+  desc: string;
+  href: string;
+  kind: DownloadKind;
+}> = [
   {
     label: "Series index",
     desc: "Index of the dedicated TFPT 4.5 split, organized by burden of proof.",
     href: "/papers/series_index.pdf",
+    kind: "series-index",
   },
   {
     label: "Theory map",
     desc: "Status map of the staged derivation chain — theorem-core, bridge, conditional, downstream.",
     href: "/papers/theory_map.pdf",
+    kind: "theory-map",
   },
   {
     label: "Technical companion",
     desc: "Conventions, positivity, APS interfaces, comparison maps, and downstream continuations.",
     href: "/papers/technical_companion.pdf",
+    kind: "companion",
   },
   {
     label: "Coverage audit",
     desc: "Audit of which sections of the source draft are covered, and where.",
     href: "/papers/coverage_audit.pdf",
+    kind: "coverage-audit",
   },
   {
     label: "Two-page summary",
     desc: "One-page claim, one-page predictions — for fast review.",
     href: "/predictions/tfpt_two_page_summary.pdf",
+    kind: "summary",
   },
 ];
 
@@ -104,6 +115,14 @@ export function DownloadsSection() {
                         href={p.pdf}
                         target="_blank"
                         rel="noopener"
+                        onClick={() =>
+                          trackPdfDownload({
+                            file: p.pdf,
+                            source: "downloads-papers",
+                            kind: "paper",
+                            title: p.title,
+                          })
+                        }
                         className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-300 transition-colors hover:text-blue-200"
                       >
                         <Download size={13} />
@@ -113,6 +132,14 @@ export function DownloadsSection() {
                         href={p.pdf}
                         target="_blank"
                         rel="noopener"
+                        onClick={() =>
+                          trackPdfDownload({
+                            file: p.pdf,
+                            source: "downloads-papers",
+                            kind: "paper",
+                            title: p.title,
+                          })
+                        }
                         className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-300 transition-colors hover:text-slate-100"
                       >
                         <FileText size={13} />
@@ -148,6 +175,14 @@ export function DownloadsSection() {
                   href={c.href}
                   target="_blank"
                   rel="noopener"
+                  onClick={() =>
+                    trackPdfDownload({
+                      file: c.href,
+                      source: "downloads-companions",
+                      kind: c.kind,
+                      title: c.label,
+                    })
+                  }
                   className="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-blue-300 transition-colors hover:text-blue-200"
                 >
                   <Download size={13} />

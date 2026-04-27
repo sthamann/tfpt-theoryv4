@@ -6,6 +6,7 @@ import { Download, ArrowRight } from "lucide-react";
 import { SectionHeader } from "@/components/SectionHeader";
 import { papers, STATUS_META } from "@/lib/papers";
 import { cn } from "@/lib/utils";
+import { trackPdfDownload } from "@/lib/track";
 
 export function SeriesMap() {
   return (
@@ -74,6 +75,14 @@ export function SeriesMap() {
                         href={p.pdf}
                         target="_blank"
                         rel="noopener"
+                        onClick={() =>
+                          trackPdfDownload({
+                            file: p.pdf,
+                            source: "series-map",
+                            kind: "paper",
+                            title: p.title,
+                          })
+                        }
                         className="inline-flex items-center gap-1.5 rounded-full bg-blue-500/15 px-3 py-1.5 text-xs font-semibold text-blue-200 ring-1 ring-blue-400/30 transition-colors hover:bg-blue-500/25"
                       >
                         <Download size={13} />
