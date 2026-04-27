@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "release:hashes": "node scripts/release-hashes.mjs",
+    "release:write": "node scripts/release-hashes.mjs --write"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

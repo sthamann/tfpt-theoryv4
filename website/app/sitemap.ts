@@ -51,7 +51,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    {
+      url: `${SITE_URL}/falsification`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
   ];
+
+  const paperPages: MetadataRoute.Sitemap = papers.map((p) => ({
+    url: `${SITE_URL}/papers/${p.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.85,
+  }));
 
   const paperFiles: MetadataRoute.Sitemap = papers.map((p) => ({
     url: `${SITE_URL}${p.pdf}`,
@@ -67,5 +80,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.55,
   }));
 
-  return [...pages, ...paperFiles, ...predictionFiles];
+  return [...pages, ...paperPages, ...paperFiles, ...predictionFiles];
 }

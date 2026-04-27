@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 import Link from "next/link";
 import { ArrowLeft, Download, FileText, Sigma } from "lucide-react";
 import { Math } from "@/components/Math";
-import { trackPdfDownload } from "@/lib/track";
+import { trackPdfInteraction } from "@/lib/track";
 
 const ORIENTATION_PDF = "/papers/00_orientation_note.pdf";
 const ORIENTATION_TITLE = "TFPT in One Map (Paper 0)";
@@ -46,7 +46,7 @@ export function OrientationHero() {
         >
           <span className="inline-flex items-center gap-2 rounded-full border border-blue-400/20 bg-blue-500/10 px-4 py-1.5 text-xs font-medium tracking-wider text-blue-200">
             <Sigma size={14} className="opacity-80" />
-            <span className="uppercase">Paper 0 · Orientation note</span>
+            <span className="uppercase">Paper 0 · Orientation Map</span>
           </span>
 
           <h1 className="mt-6 font-serif text-4xl font-semibold leading-[1.05] text-slate-50 sm:text-5xl md:text-6xl">
@@ -72,10 +72,11 @@ export function OrientationHero() {
               target="_blank"
               rel="noopener"
               onClick={() =>
-                trackPdfDownload({
+                trackPdfInteraction({
                   file: ORIENTATION_PDF,
                   source: "orientation-hero",
                   kind: "paper",
+                  interaction: "download",
                   title: ORIENTATION_TITLE,
                 })
               }
@@ -89,10 +90,11 @@ export function OrientationHero() {
               target="_blank"
               rel="noopener"
               onClick={() =>
-                trackPdfDownload({
+                trackPdfInteraction({
                   file: ORIENTATION_PDF,
                   source: "orientation-hero",
                   kind: "paper",
+                  interaction: "view",
                   title: ORIENTATION_TITLE,
                 })
               }

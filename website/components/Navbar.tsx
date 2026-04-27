@@ -5,12 +5,14 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Logo } from "./Logo";
+import { ReadingModeToggle } from "./ReadingMode";
 
 const links = [
   { href: "/#overview", label: "Overview" },
   { href: "/#chain", label: "Chain" },
   { href: "/#papers", label: "Papers" },
   { href: "/#predictions", label: "Predictions" },
+  { href: "/falsification", label: "Falsification" },
   { href: "/#downloads", label: "Downloads" },
 ];
 
@@ -46,7 +48,7 @@ export function Navbar() {
           <Logo size={36} />
         </Link>
 
-        <ul className="hidden items-center gap-1 md:flex">
+        <ul className="hidden items-center gap-1 lg:flex">
           {links.map((l) => (
             <li key={l.href}>
               <Link
@@ -57,12 +59,15 @@ export function Navbar() {
               </Link>
             </li>
           ))}
+          <li className="ml-1">
+            <ReadingModeToggle />
+          </li>
           <li>
             <Link
               href="/orientation"
               className="ml-2 rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition-transform hover:scale-105 focus:scale-105"
             >
-              Read the orientation
+              Read the orientation map
             </Link>
           </li>
         </ul>
@@ -70,7 +75,7 @@ export function Navbar() {
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-md text-slate-300 hover:bg-white/5 hover:text-white"
+          className="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-md text-slate-300 hover:bg-white/5 hover:text-white"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
         >
@@ -81,7 +86,7 @@ export function Navbar() {
       {open && (
         <div
           id="mobile-menu"
-          className="md:hidden glass-strong border-t border-slate-700/40 px-4 pb-4 pt-2"
+          className="lg:hidden glass-strong border-t border-slate-700/40 px-4 pb-4 pt-2"
         >
           <ul className="flex flex-col gap-1">
             {links.map((l) => (
@@ -95,13 +100,16 @@ export function Navbar() {
                 </Link>
               </li>
             ))}
+            <li className="mt-2">
+              <ReadingModeToggle className="w-full justify-center" />
+            </li>
             <li>
               <Link
                 href="/orientation"
                 onClick={() => setOpen(false)}
                 className="mt-2 block rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-4 py-2 text-center text-sm font-semibold text-white"
               >
-                Read the orientation
+                Read the orientation map
               </Link>
             </li>
           </ul>

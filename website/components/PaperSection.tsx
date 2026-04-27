@@ -6,7 +6,16 @@ import { Download, FileText } from "lucide-react";
 import { Math } from "./Math";
 import { Paper, STATUS_META } from "@/lib/papers";
 import { cn } from "@/lib/utils";
-import { trackPdfDownload } from "@/lib/track";
+import { trackPdfInteraction } from "@/lib/track";
+
+/**
+ * Detects whether a label contains math/Greek symbols that should not be
+ * uppercased. CSS `text-transform: uppercase` rewrites lowercase Greek
+ * letters to uppercase Greek (α → Α, θ → Θ), which is wrong for symbols.
+ */
+const MATH_LABEL_RE =
+  /[\u0370-\u03FF\u00B9\u00B2\u00B3⁰¹²³⁴⁵⁶⁷⁸⁹₀₁₂₃₄₅₆₇₈₉ξφθαβγδεζηικλμνπρστυχψωΣΞΦΘΛΠΩΓΔ\[\]√⁻⁺×⋅·]/;
+const isMathLabel = (s: string) => MATH_LABEL_RE.test(s);
 
 export function PaperSection({ paper }: { paper: Paper }) {
   const meta = STATUS_META[paper.status];
@@ -96,10 +105,11 @@ export function PaperSection({ paper }: { paper: Paper }) {
                 target="_blank"
                 rel="noopener"
                 onClick={() =>
-                  trackPdfDownload({
+                  trackPdfInteraction({
                     file: paper.pdf,
                     source: "papers-detail",
                     kind: "paper",
+                    interaction: "download",
                     title: paper.title,
                   })
                 }
@@ -113,10 +123,11 @@ export function PaperSection({ paper }: { paper: Paper }) {
                 target="_blank"
                 rel="noopener"
                 onClick={() =>
-                  trackPdfDownload({
+                  trackPdfInteraction({
                     file: paper.pdf,
                     source: "papers-detail",
                     kind: "paper",
+                    interaction: "view",
                     title: paper.title,
                   })
                 }
@@ -147,7 +158,12 @@ export function PaperSection({ paper }: { paper: Paper }) {
                     key={h.label}
                     className="flex flex-col gap-1 bg-slate-950/40 px-4 py-4 transition-colors hover:bg-slate-900/60"
                   >
-                    <span className="text-[10px] font-semibold uppercase tracking-widest text-blue-300/80">
+                    <span
+                      className={cn(
+                        "text-[10px] font-semibold tracking-widest text-blue-300/80",
+                        isMathLabel(h.label) ? "math-label" : "uppercase",
+                      )}
+                    >
                       {h.label}
                     </span>
                     <span className="font-serif text-xl font-semibold text-slate-50 sm:text-2xl">
@@ -170,7 +186,12 @@ export function PaperSection({ paper }: { paper: Paper }) {
                       key={f.label}
                       className="rounded-lg border border-slate-800/60 bg-slate-950/40 p-3"
                     >
-                      <div className="text-[11px] font-semibold uppercase tracking-widest text-blue-300/80">
+                      <div
+                        className={cn(
+                          "text-[11px] font-semibold tracking-widest text-blue-300/80",
+                          isMathLabel(f.label) ? "math-label" : "uppercase",
+                        )}
+                      >
                         {f.label}
                       </div>
                       <div className="mt-1 overflow-x-auto">

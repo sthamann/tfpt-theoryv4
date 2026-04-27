@@ -12,9 +12,9 @@ const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://tfpt-theory.vercel.app";
 
 export const metadata: Metadata = {
-  title: "TFPT in One Map — Orientation Note (Paper 0)",
+  title: "TFPT in One Map — Orientation Map (Paper 0)",
   description:
-    "The TFPT 4.5 orientation note. What Topological Fixed-Point Theory claims, what it does not claim, the staged reconstruction, the three decoders Y / [u_Σ]=1 / φ₀, the status matrix, the dependency map between Papers 1–6, and the recommended public reading order. By Stefan Hamann & Alessandro Rizzo.",
+    "The TFPT 4.5 orientation map. What Topological Fixed-Point Theory claims, what it does not claim, the staged reconstruction, the three decoders Y / [u_Σ]=1 / φ₀, the status matrix, the dependency map between Papers 1–6, and the recommended public reading order. By Stefan Hamann & Alessandro Rizzo.",
   keywords: [
     "TFPT orientation",
     "TFPT in one map",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "article",
-    title: "TFPT in One Map — Orientation Note (Paper 0)",
+    title: "TFPT in One Map — Orientation Map (Paper 0)",
     description:
       "The public entry document for the TFPT 4.5 series: what is claimed at theorem level, what is downstream, the three decoders, the status matrix, and the dependency map between Papers 1–6.",
     url: `${SITE_URL}/orientation`,
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "TFPT in One Map — Orientation Note",
+    title: "TFPT in One Map — Orientation Map",
     description:
       "What TFPT claims, what it doesn't, the three decoders, and the dependency map between Papers 1–6.",
   },
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
 const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "ScholarlyArticle",
-  headline: "TFPT in One Map — Orientation Note (Paper 0)",
+  headline: "TFPT in One Map — Orientation Map (Paper 0)",
   alternateName: "Boundary Polarization, Carrier Rigidity, and Observable Closure",
   url: `${SITE_URL}/orientation`,
   inLanguage: "en",

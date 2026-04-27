@@ -6,7 +6,7 @@ import { Download, ArrowRight } from "lucide-react";
 import { SectionHeader } from "@/components/SectionHeader";
 import { papers, STATUS_META } from "@/lib/papers";
 import { cn } from "@/lib/utils";
-import { trackPdfDownload } from "@/lib/track";
+import { trackPdfInteraction } from "@/lib/track";
 
 export function SeriesMap() {
   return (
@@ -18,8 +18,8 @@ export function SeriesMap() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
           eyebrow="Series map"
-          title="Six papers, one staged proof"
-          description="The recommended public order is Paper 0 (orientation), then Paper 2 (visible core result), then Paper 1 (formal foundation), Paper 3 (precision), Paper 4 (analytic closure), Paper 5 (metrology), and finally Paper 6 (downstream cosmology). The mathematical dependency order is Paper 1 → 2 → 3 → 4 → 5 → 6."
+          title="Six technical papers, one orientation map"
+          description="The recommended public order is Paper 0 (orientation map), then Paper 2 (visible core result), then Paper 1 (formal foundation), Paper 3 (precision), Paper 4 (analytic closure), Paper 5 (metrology), and finally Paper 6 (downstream cosmology). The mathematical dependency order is Paper 1 → 2 → 3 → 4 → 5 → 6."
         />
 
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -38,14 +38,8 @@ export function SeriesMap() {
                 >
                   <div
                     className={cn(
-                      "absolute inset-x-0 top-0 h-px",
-                      p.status === "core"
-                        ? "bg-gradient-to-r from-blue-500 to-violet-500"
-                        : p.status === "bridge"
-                          ? "bg-gradient-to-r from-emerald-500 to-teal-500"
-                          : p.status === "conditional"
-                            ? "bg-gradient-to-r from-orange-500 to-red-500"
-                            : "bg-gradient-to-r from-fuchsia-500 to-pink-500",
+                      "absolute inset-x-0 top-0 h-px bg-gradient-to-r",
+                      meta.gradient,
                     )}
                   />
                   <div className="flex flex-1 flex-col p-6">
@@ -76,10 +70,11 @@ export function SeriesMap() {
                         target="_blank"
                         rel="noopener"
                         onClick={() =>
-                          trackPdfDownload({
+                          trackPdfInteraction({
                             file: p.pdf,
                             source: "series-map",
                             kind: "paper",
+                            interaction: "download",
                             title: p.title,
                           })
                         }
@@ -89,7 +84,7 @@ export function SeriesMap() {
                         Download
                       </Link>
                       <Link
-                        href={`/#paper-${p.id}`}
+                        href={`/papers/${p.slug}`}
                         className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-300 transition-colors hover:text-white"
                       >
                         Open in detail

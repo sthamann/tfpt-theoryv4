@@ -2,11 +2,16 @@
 
 import { motion } from "motion/react";
 import Link from "next/link";
-import { Download, Target, AlertTriangle } from "lucide-react";
+import { Download, Target, AlertTriangle, Clock, FileText } from "lucide-react";
 import { Math as Tex } from "./Math";
-import { Prediction, STATUS_BADGE, CATEGORY_META } from "@/lib/predictions";
+import {
+  Prediction,
+  STATUS_BADGE,
+  CATEGORY_META,
+  LINK_STATUS_META,
+} from "@/lib/predictions";
 import { cn } from "@/lib/utils";
-import { trackPdfDownload } from "@/lib/track";
+import { trackPdfInteraction } from "@/lib/track";
 
 export function PredictionCard({
   prediction,
@@ -104,23 +109,54 @@ export function PredictionCard({
       </div>
 
       <div className="mt-auto border-t border-slate-800/60 px-5 py-3">
-        <Link
-          href={prediction.pdf}
-          target="_blank"
-          rel="noopener"
-          onClick={() =>
-            trackPdfDownload({
-              file: prediction.pdf,
-              source: "predictions-card",
-              kind: "prediction",
-              title: prediction.title,
-            })
+        {(() => {
+          const linkState = prediction.linkStatus ?? "available";
+          const linkMeta = LINK_STATUS_META[linkState];
+          const Icon =
+            linkState === "available"
+              ? Download
+              : linkState === "note"
+                ? FileText
+                : Clock;
+          if (linkMeta.disabled) {
+            return (
+              <span
+                aria-disabled="true"
+                className={cn(
+                  "inline-flex items-center gap-2 text-sm font-semibold",
+                  linkMeta.tone,
+                )}
+                title="Standalone PDF not yet published"
+              >
+                <Icon size={14} aria-hidden="true" />
+                {linkMeta.label}
+              </span>
+            );
           }
-          className="inline-flex items-center gap-2 text-sm font-semibold text-blue-300 transition-colors hover:text-blue-200"
-        >
-          <Download size={14} />
-          Download dedicated paper
-        </Link>
+          return (
+            <Link
+              href={prediction.pdf}
+              target="_blank"
+              rel="noopener"
+              onClick={() =>
+                trackPdfInteraction({
+                  file: prediction.pdf,
+                  source: "predictions-card",
+                  kind: "prediction",
+                  interaction: linkState === "note" ? "view" : "download",
+                  title: prediction.title,
+                })
+              }
+              className={cn(
+                "inline-flex items-center gap-2 text-sm font-semibold transition-colors",
+                linkMeta.tone,
+              )}
+            >
+              <Icon size={14} aria-hidden="true" />
+              {linkMeta.label}
+            </Link>
+          );
+        })()}
       </div>
     </motion.article>
   );

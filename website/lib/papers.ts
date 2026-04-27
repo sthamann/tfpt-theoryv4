@@ -1,4 +1,9 @@
-export type PaperStatus = "core" | "bridge" | "conditional" | "downstream";
+export type PaperStatus =
+  | "core"
+  | "bridge"
+  | "conditional"
+  | "downstream"
+  | "orientation";
 
 export interface Paper {
   id: string;
@@ -40,31 +45,42 @@ export interface Highlight {
 
 export const STATUS_META: Record<
   PaperStatus,
-  { label: string; color: string; bg: string; ring: string }
+  { label: string; color: string; bg: string; ring: string; gradient: string }
 > = {
+  orientation: {
+    label: "Orientation Map",
+    color: "text-slate-200",
+    bg: "bg-slate-500/10",
+    ring: "ring-slate-400/30",
+    gradient: "from-slate-400 to-slate-500",
+  },
   core: {
     label: "Core Theorem",
     color: "text-blue-300",
     bg: "bg-blue-500/10",
     ring: "ring-blue-500/30",
+    gradient: "from-blue-500 to-violet-500",
   },
   bridge: {
     label: "Bridge Readout",
     color: "text-emerald-300",
     bg: "bg-emerald-500/10",
     ring: "ring-emerald-500/30",
+    gradient: "from-emerald-500 to-teal-500",
   },
   conditional: {
     label: "Conditional Closure",
     color: "text-orange-300",
     bg: "bg-orange-500/10",
     ring: "ring-orange-500/30",
+    gradient: "from-orange-500 to-red-500",
   },
   downstream: {
     label: "Downstream Interface",
     color: "text-fuchsia-300",
     bg: "bg-fuchsia-500/10",
     ring: "ring-fuchsia-500/30",
+    gradient: "from-fuchsia-500 to-pink-500",
   },
 };
 
@@ -77,8 +93,8 @@ export const papers: Paper[] = [
     subtitle: "Boundary Polarization, Carrier Rigidity, and Observable Closure",
     abstract:
       "The thin entry document for the TFPT 4.5 series. It does not attempt to prove the full theory. Its purpose is to state what TFPT claims, what it does not claim, how the closed branch is organized, and where each load-bearing argument is isolated in the paper sequence.",
-    status: "core",
-    statusLabel: "Orientation",
+    status: "orientation",
+    statusLabel: "Orientation Map",
     pdf: "/papers/00_orientation_note.pdf",
     inputs: ["None — public orientation layer for the series"],
     contribution: [
@@ -534,7 +550,7 @@ export const papers: Paper[] = [
       {
         label: "α⁻¹(0)",
         value: "137.0360",
-        description: "Computed root vs CODATA 137.035 999 084(21)",
+        description: "Closed-branch root; CODATA 2022 recommended 137.035 999 177(21)",
       },
       {
         label: "λ_C",

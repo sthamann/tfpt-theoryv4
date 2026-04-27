@@ -19,6 +19,40 @@ export type PredictionStatus =
   | "Kill test"
   | "Out-of-sample check";
 
+/**
+ * Whether the dedicated PDF behind the card actually exists. Defaults to
+ * "available" when omitted. Used by the prediction card to render a
+ * differentiated CTA (Download paper / Paper forthcoming / View note /
+ * Coming soon) so a button never silently links to a missing file.
+ */
+export type LinkStatus = "available" | "forthcoming" | "note" | "soon";
+
+export const LINK_STATUS_META: Record<
+  LinkStatus,
+  { label: string; tone: string; disabled: boolean }
+> = {
+  available: {
+    label: "Download dedicated paper",
+    tone: "text-blue-300 hover:text-blue-200",
+    disabled: false,
+  },
+  note: {
+    label: "View standalone note",
+    tone: "text-emerald-300 hover:text-emerald-200",
+    disabled: false,
+  },
+  forthcoming: {
+    label: "Paper forthcoming",
+    tone: "text-amber-300/80 cursor-not-allowed",
+    disabled: true,
+  },
+  soon: {
+    label: "Coming soon",
+    tone: "text-slate-400 cursor-not-allowed",
+    disabled: true,
+  },
+};
+
 export interface Prediction {
   id: string;
   slug: string;
@@ -33,6 +67,12 @@ export interface Prediction {
   killTest: string;
   derivationFormulas: string[];
   pdf: string;
+  /**
+   * Link state for the CTA on the prediction card. Defaults to "available"
+   * when omitted. Use "forthcoming" / "note" / "soon" when the PDF does not
+   * yet exist or only a short note is published.
+   */
+  linkStatus?: LinkStatus;
   description: string;
   category:
     | "Coupling"

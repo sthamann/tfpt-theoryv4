@@ -3,8 +3,10 @@
 import { motion } from "motion/react";
 import Link from "next/link";
 import { ArrowRight, BookOpen, Download, Sigma } from "lucide-react";
-import { Math } from "./Math";
-import { trackPdfDownload } from "@/lib/track";
+import { trackPdfInteraction } from "@/lib/track";
+import { cn } from "@/lib/utils";
+import { ThreeDecoderMap } from "./ThreeDecoderMap";
+import { GlossTerm } from "./GlossTerm";
 
 const TWO_PAGE_SUMMARY = "/predictions/tfpt_two_page_summary.pdf";
 
@@ -37,18 +39,30 @@ export function Hero() {
           </span>
 
           <h1 className="mt-6 max-w-4xl font-serif text-4xl font-semibold leading-[1.05] text-slate-50 sm:text-5xl md:text-6xl lg:text-7xl">
-            One <span className="text-gradient-blue">boundary datum</span>.{" "}
-            <br className="hidden sm:block" />
-            The whole Standard Model.
+            <span className="block">
+              One{" "}
+              <span className="text-gradient-blue">boundary datum</span>.
+            </span>
+            <span className="block">A staged reconstruction of the</span>
+            <span className="block">Standard Model packet.</span>
           </h1>
+          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate-400">
+            <span className="font-semibold text-slate-200">Proof discipline.</span>{" "}
+            The page separates theorem core, bridge readouts, conditional QFT
+            closure, and downstream targets. Every output has an explicit
+            failure mode.
+          </p>
 
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg md:text-xl">
             <span className="font-semibold text-slate-100">
               Topological Fixed-Point Theory
             </span>{" "}
-            reconstructs the Standard-Model packet, the fine-structure constant,
-            the Cabibbo angle, the PMNS matrix, strong-CP closure, and downstream
-            cosmology — from a single one-sided boundary datum, with{" "}
+            reconstructs the Standard-Model{" "}
+            <GlossTerm term="carrier">carrier packet</GlossTerm>, the
+            fine-structure constant, the Cabibbo angle, the PMNS matrix,
+            strong-CP closure, and downstream cosmology — from a single{" "}
+            <GlossTerm term="boundary datum">one-sided boundary datum</GlossTerm>
+            , with{" "}
             <span className="font-semibold text-blue-300">no fitted constants</span>.
           </p>
 
@@ -58,7 +72,7 @@ export function Hero() {
               className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/30 ring-1 ring-blue-400/40 transition-transform hover:scale-105 focus:scale-105"
             >
               <BookOpen size={16} />
-              Read the orientation
+              Read the orientation map
               <ArrowRight
                 size={16}
                 className="transition-transform group-hover:translate-x-0.5"
@@ -69,10 +83,11 @@ export function Hero() {
               target="_blank"
               rel="noopener"
               onClick={() =>
-                trackPdfDownload({
+                trackPdfInteraction({
                   file: TWO_PAGE_SUMMARY,
                   source: "hero",
                   kind: "summary",
+                  interaction: "download",
                   title: "Two-page summary",
                 })
               }
@@ -98,7 +113,12 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.3 + i * 0.08 }}
               className="glass relative flex flex-col gap-1 rounded-2xl px-5 py-5 ring-1 ring-slate-700/40"
             >
-              <div className="text-[11px] font-semibold uppercase tracking-widest text-blue-300/80">
+              <div
+                className={cn(
+                  "text-[11px] font-semibold tracking-widest text-blue-300/80",
+                  s.isMath ? "math-label" : "uppercase",
+                )}
+              >
                 {s.label}
               </div>
               <div className="font-serif text-2xl font-semibold text-slate-50 sm:text-3xl">
@@ -111,48 +131,23 @@ export function Hero() {
           ))}
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          className="relative mx-auto mt-16 max-w-4xl"
-        >
-          <div className="glass overflow-hidden rounded-2xl ring-1 ring-slate-700/40">
-            <div className="flex items-center gap-2 border-b border-slate-800/60 px-5 py-3">
-              <div className="flex gap-1.5">
-                <span className="h-2.5 w-2.5 rounded-full bg-rose-400/60" />
-                <span className="h-2.5 w-2.5 rounded-full bg-amber-400/60" />
-                <span className="h-2.5 w-2.5 rounded-full bg-emerald-400/60" />
-              </div>
-              <span className="ml-2 text-xs font-mono uppercase tracking-widest text-slate-400">
-                The staged reconstruction
-              </span>
-            </div>
-            <div className="px-6 py-8 sm:px-10 sm:py-12">
-              <div className="overflow-x-auto">
-                <Math block>
-                  {String.raw`\mathfrak{S}_{\min}\Rightarrow\mathcal{B}_{\min}\Rightarrow\mathfrak{T}_\partial \Rightarrow (\tau_{\mathrm{dbl}},\iota_C,P_{\mathrm{prim}},[u_\Sigma],c_3) \Rightarrow d^\star_{\mathrm{disc}}\Rightarrow P_{\mathrm{adm}}\Rightarrow \mathfrak{T}_\star`}
-                </Math>
-              </div>
-              <p className="mt-4 text-center text-xs text-slate-400">
-                From the minimal seed{" "}
-                <Math>{`\\mathfrak{S}_{\\min}`}</Math> to the closed branch{" "}
-                <Math>{`\\mathfrak{T}_\\star`}</Math> — the same chain that fixes
-                the Standard-Model packet, the gauge group, α, CKM, and PMNS.
-              </p>
-            </div>
-          </div>
-        </motion.div>
+        <ThreeDecoderMap />
       </div>
     </section>
   );
 }
 
-const STATS = [
+const STATS: Array<{
+  label: string;
+  value: string;
+  note: string;
+  isMath?: boolean;
+}> = [
   {
     label: "α⁻¹(0)",
     value: "137.0359992",
-    note: "Closed-branch root vs CODATA 137.035 999 084(21)",
+    note: "Closed-branch root; CODATA 2022 recommended 137.035 999 177(21)",
+    isMath: true,
   },
   {
     label: "Families",
@@ -163,10 +158,12 @@ const STATS = [
     label: "θ_eff",
     value: "0",
     note: "Strong-CP null — theorem-level on the admissible branch",
+    isMath: true,
   },
   {
     label: "β_BH(r)",
     value: "16 c₃⁴ / r²",
     note: "Achromatic dyonic residual intercept — EHT/ngEHT prediction",
+    isMath: true,
   },
 ];

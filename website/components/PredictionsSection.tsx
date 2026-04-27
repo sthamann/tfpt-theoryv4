@@ -3,12 +3,13 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 import Link from "next/link";
-import { Download } from "lucide-react";
+import { Download, LayoutGrid, Table2 } from "lucide-react";
 import { SectionHeader } from "./SectionHeader";
 import { PredictionCard } from "./PredictionCard";
+import { PredictionMatrix } from "./PredictionMatrix";
 import { predictions, Prediction, CATEGORY_META } from "@/lib/predictions";
 import { cn } from "@/lib/utils";
-import { trackPdfDownload } from "@/lib/track";
+import { trackPdfInteraction } from "@/lib/track";
 
 const TWO_PAGE_SUMMARY = "/predictions/tfpt_two_page_summary.pdf";
 
@@ -23,8 +24,11 @@ const FILTERS: { id: Prediction["category"] | "All"; label: string }[] = [
   { id: "Astrophysics", label: "Astrophysics" },
 ];
 
+type View = "cards" | "matrix";
+
 export function PredictionsSection() {
   const [filter, setFilter] = useState<Prediction["category"] | "All">("All");
+  const [view, setView] = useState<View>("cards");
   const list =
     filter === "All" ? predictions : predictions.filter((p) => p.category === filter);
 
@@ -85,17 +89,58 @@ export function PredictionsSection() {
           ))}
         </div>
 
-        <div className="mt-8 flex flex-wrap gap-2">
+        <div className="mt-8 flex flex-wrap items-center gap-2">
+          <div
+            role="tablist"
+            aria-label="Prediction view"
+            className="inline-flex rounded-full bg-slate-900/50 p-0.5 ring-1 ring-slate-700/40"
+          >
+            <button
+              type="button"
+              role="tab"
+              aria-selected={view === "cards"}
+              onClick={() => setView("cards")}
+              className={cn(
+                "inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold transition-colors",
+                view === "cards"
+                  ? "bg-blue-500 text-white shadow-md shadow-blue-500/20"
+                  : "text-slate-300 hover:text-white",
+              )}
+            >
+              <LayoutGrid size={13} aria-hidden />
+              Card view
+            </button>
+            <button
+              type="button"
+              role="tab"
+              aria-selected={view === "matrix"}
+              onClick={() => setView("matrix")}
+              className={cn(
+                "inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold transition-colors",
+                view === "matrix"
+                  ? "bg-blue-500 text-white shadow-md shadow-blue-500/20"
+                  : "text-slate-300 hover:text-white",
+              )}
+            >
+              <Table2 size={13} aria-hidden />
+              Status × testability
+            </button>
+          </div>
+
+          <span className="mx-2 hidden h-5 w-px bg-slate-800 sm:block" aria-hidden />
+
           {FILTERS.map((f) => (
             <button
               key={f.id}
               type="button"
               onClick={() => setFilter(f.id)}
+              disabled={view === "matrix"}
               className={cn(
                 "rounded-full px-4 py-1.5 text-xs font-medium transition-colors ring-1",
-                filter === f.id
+                filter === f.id && view === "cards"
                   ? "bg-blue-500 text-white ring-blue-400/40 shadow-md shadow-blue-500/20"
                   : "bg-slate-900/40 text-slate-300 ring-slate-700/40 hover:bg-slate-800/60",
+                view === "matrix" && "cursor-not-allowed opacity-40",
               )}
               aria-pressed={filter === f.id}
             >
@@ -104,14 +149,18 @@ export function PredictionsSection() {
           ))}
         </div>
 
-        <motion.div
-          layout
-          className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
-        >
-          {list.map((p, i) => (
-            <PredictionCard key={p.id} prediction={p} index={i} />
-          ))}
-        </motion.div>
+        {view === "cards" ? (
+          <motion.div
+            layout
+            className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
+          >
+            {list.map((p, i) => (
+              <PredictionCard key={p.id} prediction={p} index={i} />
+            ))}
+          </motion.div>
+        ) : (
+          <PredictionMatrix />
+        )}
 
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -133,10 +182,11 @@ export function PredictionsSection() {
             target="_blank"
             rel="noopener"
             onClick={() =>
-              trackPdfDownload({
+              trackPdfInteraction({
                 file: TWO_PAGE_SUMMARY,
                 source: "predictions-summary-cta",
                 kind: "summary",
+                interaction: "download",
                 title: "Two-page summary",
               })
             }

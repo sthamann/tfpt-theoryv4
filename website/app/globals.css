@@ -130,19 +130,45 @@
   }
 
   .text-gradient-blue {
+    color: #93c5fd;
     background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #f472b6 100%);
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
+    -webkit-text-fill-color: transparent;
     background-size: 200% auto;
     animation: shimmer 8s ease-in-out infinite;
   }
 
   .text-gradient-warm {
+    color: #fb923c;
     background: linear-gradient(135deg, #fb923c 0%, #f87171 50%, #c084fc 100%);
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /*
+   * Render fallback. Browsers that do not support background-clip: text
+   * (e.g. PDF export pipelines, forced-colors mode, some screenshot tools)
+   * will see the explicit `color` value instead of transparent text.
+   */
+  @supports not ((-webkit-background-clip: text) or (background-clip: text)) {
+    .text-gradient-blue,
+    .text-gradient-warm {
+      background: none !important;
+      -webkit-text-fill-color: currentColor !important;
+      animation: none !important;
+    }
+  }
+
+  @media (forced-colors: active) {
+    .text-gradient-blue,
+    .text-gradient-warm {
+      color: CanvasText !important;
+      background: none !important;
+      -webkit-text-fill-color: currentColor !important;
+      animation: none !important;
+    }
   }
 
   .grid-bg {
@@ -188,6 +214,168 @@
 @media (max-width: 640px) {
   .katex-display {
     font-size: 0.92em;
+  }
+}
+
+/*
+ * KaTeX block accessibility: KaTeX already emits a sibling node with the
+ * source TeX inside `.katex-mathml`, hidden visually. We keep the visual
+ * `.katex-html` selectable so screen readers can fall back to either.
+ */
+.katex-display .katex-html,
+.katex .katex-html {
+  user-select: text;
+}
+
+/*
+ * Scrollable formula and table containers. Without this rule, browsers fall
+ * back to the OS-default scrollbar, which renders as a heavy black bar in
+ * PDF exports and screenshot pipelines.
+ */
+.formula-scroll,
+.scroll-soft,
+.katex-display,
+.overflow-x-auto {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.35) transparent;
+}
+
+.formula-scroll::-webkit-scrollbar,
+.scroll-soft::-webkit-scrollbar,
+.katex-display::-webkit-scrollbar,
+.overflow-x-auto::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+
+.formula-scroll::-webkit-scrollbar-track,
+.scroll-soft::-webkit-scrollbar-track,
+.katex-display::-webkit-scrollbar-track,
+.overflow-x-auto::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.formula-scroll::-webkit-scrollbar-thumb,
+.scroll-soft::-webkit-scrollbar-thumb,
+.katex-display::-webkit-scrollbar-thumb,
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.35);
+  border-radius: 4px;
+}
+
+/*
+ * Math labels. When a KPI / eyebrow label contains a Greek mathematical
+ * symbol, applying `text-transform: uppercase` actually changes the glyph
+ * (α → Α, θ → Θ). Use `.math-label` (or `data-math-label`) to opt that
+ * label out of uppercase styling without losing the typographic feel.
+ */
+.math-label,
+[data-math-label="true"] {
+  text-transform: none !important;
+  font-variant-caps: normal !important;
+  letter-spacing: 0.04em !important;
+  font-feature-settings:
+    "kern" 1,
+    "liga" 0,
+    "ss01" 0;
+}
+
+/*
+ * Reading mode. The `<ReadingModeProvider>` applies
+ * data-reading-mode="orientation" to <html>; in that mode any element
+ * tagged `.reviewer-only` collapses out of the layout so first-time
+ * readers see only the visuals and claim maps. The default mode is
+ * `reviewer` and shows everything.
+ */
+[data-reading-mode="orientation"] .reviewer-only {
+  display: none !important;
+}
+
+@media print {
+  /* In print we always show every detail regardless of reading mode. */
+  [data-reading-mode="orientation"] .reviewer-only {
+    display: revert !important;
+  }
+}
+
+/*
+ * Print and PDF export. Sticky headers, animated gradients, and overflow-x
+ * scrollbars all hurt PDF rendering. Page-break rules keep cards together.
+ */
+@media print {
+  html,
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+  }
+
+  header,
+  nav,
+  .sticky-nav,
+  [class*="fixed"] {
+    position: static !important;
+  }
+
+  .glass,
+  .glass-strong {
+    background: #ffffff !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: 1px solid #cbd5e1 !important;
+  }
+
+  .text-gradient-blue,
+  .text-gradient-warm {
+    background: none !important;
+    -webkit-text-fill-color: currentColor !important;
+    color: #1e3a8a !important;
+    animation: none !important;
+  }
+
+  .formula-scroll,
+  .scroll-soft,
+  .katex-display,
+  .overflow-x-auto {
+    overflow: visible !important;
+  }
+
+  .formula-scroll::-webkit-scrollbar,
+  .scroll-soft::-webkit-scrollbar,
+  .katex-display::-webkit-scrollbar,
+  .overflow-x-auto::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  article,
+  section,
+  .glass,
+  .card,
+  .paper-card,
+  .prediction-card,
+  .formula-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    break-after: avoid;
+    page-break-after: avoid;
+    color: #0f172a !important;
+  }
+
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
   }
 }
 

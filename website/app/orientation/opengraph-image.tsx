@@ -98,7 +98,7 @@ export default function OrientationOgImage() {
                 marginTop: 2,
               }}
             >
-              Orientation note · Paper 0
+              Orientation Map · Paper 0
             </div>
           </div>
         </div>

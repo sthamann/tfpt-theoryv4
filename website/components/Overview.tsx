@@ -4,6 +4,8 @@ import { motion } from "motion/react";
 import { Compass, Layers, Target, Shield } from "lucide-react";
 import { SectionHeader } from "./SectionHeader";
 import { Math } from "./Math";
+import { StatusPyramid } from "./StatusPyramid";
+import { GlossTerm } from "./GlossTerm";
 
 const PILLARS = [
   {
@@ -160,12 +162,29 @@ export function Overview() {
                 </Math>
               </div>
               <p className="mt-3 text-xs text-slate-400">
-                Compared to CODATA 137.035 999 084(21) — a residual of{" "}
-                <span className="font-mono text-slate-200">~1.3 × 10⁻⁷</span>,
-                inside the stated interface uncertainty.
+                CODATA 2022 recommends{" "}
+                <span className="font-mono text-slate-200">
+                  137.035 999 177(21)
+                </span>
+                ; the residual{" "}
+                <span className="font-mono text-slate-200">
+                  α⁻¹(TFPT − CODATA) ≈ 3.98 × 10⁻⁸
+                </span>{" "}
+                is the difference between the closed-branch root and the
+                recommended adjustment.
               </p>
             </div>
           </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="mt-14"
+        >
+          <StatusPyramid />
         </motion.div>
       </div>
     </section>

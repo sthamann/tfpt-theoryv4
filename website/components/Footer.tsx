@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Logo } from "./Logo";
-import { trackPdfDownload, type DownloadKind } from "@/lib/track";
+import { trackPdfInteraction, type DownloadKind } from "@/lib/track";
 
 interface FooterLink {
   href: string;
@@ -32,10 +32,11 @@ const TWO_PAGE_SUMMARY: FooterLink = {
 };
 
 function trackFooter(link: FooterLink) {
-  trackPdfDownload({
+  trackPdfInteraction({
     file: link.href,
     source: "footer",
     kind: link.kind,
+    interaction: "download",
     title: link.label,
   });
 }
@@ -84,6 +85,14 @@ export function Footer() {
             </li>
             <li>
               <Link
+                href="/falsification"
+                className="text-slate-400 hover:text-white"
+              >
+                How to kill TFPT
+              </Link>
+            </li>
+            <li>
+              <Link
                 href={THEORY_MAP.href}
                 target="_blank"
                 rel="noopener"
@@ -106,7 +115,7 @@ export function Footer() {
                 href="/orientation"
                 className="text-slate-400 hover:text-white"
               >
-                Orientation note
+                Orientation map
               </Link>
             </li>
             <li>
@@ -149,8 +158,11 @@ export function Footer() {
       <div className="border-t border-slate-800/80 px-4 py-6 sm:px-6 lg:px-8">
         <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-3 text-xs text-slate-500 sm:flex-row sm:items-center">
           <p>
-            © {new Date().getFullYear()} Stefan Hamann &amp; Alessandro Rizzo.
-            All papers and predictions distributed for academic use.
+            <span>© {new Date().getFullYear()}</span>
+            {"\u00A0"}
+            <span>Stefan Hamann &amp; Alessandro Rizzo.</span>
+            {" "}
+            <span>All papers and predictions distributed for academic use.</span>
           </p>
           <p className="text-slate-600">
             TFPT 4.5 series — boundary polarization · carrier rigidity · observable closure

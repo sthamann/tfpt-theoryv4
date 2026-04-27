@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion } from "motion/react";
 import { Download, FileText, ArrowRight } from "lucide-react";
-import { trackPdfDownload, type DownloadKind } from "@/lib/track";
+import { trackPdfInteraction, type DownloadKind } from "@/lib/track";
 
 const ORIENTATION_PDF = "/papers/00_orientation_note.pdf";
 const ORIENTATION_TITLE = "TFPT in One Map (Paper 0)";
@@ -66,7 +66,7 @@ export function OrientationDownload() {
                 id="download-heading"
                 className="font-serif text-3xl font-semibold leading-tight text-slate-50 sm:text-4xl"
               >
-                Read the full orientation note.
+                Read the full orientation map.
               </h2>
               <p className="mt-3 max-w-xl text-base leading-relaxed text-slate-300">
                 Paper 0 is the public entry document of the TFPT 4.5 series. It
@@ -81,10 +81,11 @@ export function OrientationDownload() {
                   target="_blank"
                   rel="noopener"
                   onClick={() =>
-                    trackPdfDownload({
+                    trackPdfInteraction({
                       file: ORIENTATION_PDF,
                       source: "orientation-download",
                       kind: "paper",
+                      interaction: "download",
                       title: ORIENTATION_TITLE,
                     })
                   }
@@ -98,10 +99,11 @@ export function OrientationDownload() {
                   target="_blank"
                   rel="noopener"
                   onClick={() =>
-                    trackPdfDownload({
+                    trackPdfInteraction({
                       file: ORIENTATION_PDF,
                       source: "orientation-download",
                       kind: "paper",
+                      interaction: "view",
                       title: ORIENTATION_TITLE,
                     })
                   }
@@ -127,10 +129,11 @@ export function OrientationDownload() {
                   target="_blank"
                   rel="noopener"
                   onClick={() =>
-                    trackPdfDownload({
+                    trackPdfInteraction({
                       file: link.href,
                       source: "orientation-sidebar",
                       kind: link.kind,
+                      interaction: "download",
                       title: link.label,
                     })
                   }

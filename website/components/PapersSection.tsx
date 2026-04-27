@@ -6,6 +6,7 @@ import { CarrierVisualization } from "./CarrierVisualization";
 import { AlphaVisualization } from "./AlphaVisualization";
 import { TransportPole } from "./TransportPole";
 import { CosmologyTimeline } from "./CosmologyTimeline";
+import { SelectorDynamicsSwimlane } from "./SelectorDynamicsSwimlane";
 import { SectionHeader } from "./SectionHeader";
 
 export function PapersSection() {
@@ -18,8 +19,8 @@ export function PapersSection() {
       <div className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
         <SectionHeader
           eyebrow="The paper series"
-          title="Six papers, one staged proof"
-          description="The TFPT 4.5 series is split by burden of proof. Each paper isolates one type of scrutiny — primitive kernel, carrier theorem, precision readout, conditional QFT closure, dimensionless metrology, and downstream cosmology — with explicit inputs, contributions, exclusions, and falsification surface."
+          title="Six technical papers, one orientation map"
+          description="The TFPT 4.5 series is split by burden of proof. Six technical papers carry the staged reconstruction — primitive kernel, carrier theorem, precision readout, conditional QFT closure, dimensionless metrology, and downstream cosmology — each with explicit inputs, contributions, exclusions, and falsification surface. Paper 0 is the orientation map and dependency overview; it does not prove the theory."
         />
       </div>
 
@@ -37,6 +38,11 @@ export function PapersSection() {
               <div className="mx-auto mb-16 max-w-7xl space-y-8 px-4 sm:px-6 lg:px-8">
                 <AlphaVisualization />
                 <TransportPole />
+              </div>
+            )}
+            {p.number === 4 && (
+              <div className="mx-auto mb-16 max-w-7xl px-4 sm:px-6 lg:px-8">
+                <SelectorDynamicsSwimlane />
               </div>
             )}
             {p.number === 6 && (

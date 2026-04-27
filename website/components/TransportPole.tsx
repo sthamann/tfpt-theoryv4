@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import { ArrowRight } from "lucide-react";
 import { Math as Tex } from "./Math";
 
 const ROOTS = [
@@ -27,9 +28,12 @@ const ROOTS = [
 export function TransportPole() {
   return (
     <div className="glass rounded-2xl ring-1 ring-slate-700/40">
-      <div className="border-b border-slate-800/60 px-5 py-3">
+      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800/60 px-5 py-3">
         <span className="text-[11px] font-semibold uppercase tracking-widest text-blue-300/80">
           Cusp cubic — transport phase polynomial
+        </span>
+        <span className="rounded-full bg-emerald-500/15 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-widest text-emerald-200 ring-1 ring-emerald-400/30">
+          Bridge readout · not theorem core
         </span>
       </div>
 
@@ -45,6 +49,26 @@ export function TransportPole() {
             lower value selects <Tex>{"\\delta_{\\mathrm{ph}}"}</Tex> on the
             retained branch.
           </p>
+
+          <div className="mt-4 flex flex-wrap items-center gap-2 rounded-xl border border-violet-400/25 bg-violet-500/5 px-3 py-2 text-xs text-violet-100/90">
+            <span className="rounded-full bg-violet-500/20 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-widest text-violet-200">
+              Output flow
+            </span>
+            <span className="font-mono">
+              z = 1/729
+            </span>
+            <ArrowRight size={12} aria-hidden className="text-violet-300" />
+            <span className="font-mono">
+              <Tex>{"\\delta_{\\mathrm{ph}}"}</Tex>
+            </span>
+            <ArrowRight size={12} aria-hidden className="text-violet-300" />
+            <span className="font-mono">
+              <Tex>{"\\delta_{\\mathrm{CKM}}"}</Tex>
+            </span>
+            <span className="text-violet-200/80">
+              (rigid branch transport)
+            </span>
+          </div>
 
           <div className="mt-6 space-y-3">
             {ROOTS.map((r, i) => (
@@ -177,34 +201,78 @@ function CubicChart() {
           strokeLinecap="round"
         />
 
-        {roots.map((r, i) => (
-          <motion.g
-            key={r}
-            initial={{ opacity: 0, scale: 0 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 1.6 + i * 0.15, type: "spring" }}
-          >
-            <circle
-              cx={xScale(r)}
-              cy={xAxisY}
-              r={6}
-              fill={i === 0 ? "#a78bfa" : i === 1 ? "#60a5fa" : "#94a3b8"}
-              stroke="#0f172a"
-              strokeWidth={2}
-            />
-            <text
-              x={xScale(r)}
-              y={xAxisY + 18}
-              fill="#cbd5e1"
-              fontSize="10"
-              fontFamily="JetBrains Mono, monospace"
-              textAnchor="middle"
+        {roots.map((r, i) => {
+          const isLower = i === 0;
+          return (
+            <motion.g
+              key={r}
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.5,
+                delay: 1.6 + i * 0.15,
+                type: "spring",
+              }}
             >
-              {i === 0 ? "1/729" : i === 1 ? "64/729" : "1"}
-            </text>
-          </motion.g>
-        ))}
+              {isLower && (
+                <>
+                  <motion.circle
+                    cx={xScale(r)}
+                    cy={xAxisY}
+                    r={14}
+                    fill="#a78bfa"
+                    opacity="0.15"
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1.2, delay: 2.0 }}
+                  />
+                  <line
+                    x1={xScale(r)}
+                    x2={xScale(r)}
+                    y1={pad.top + 4}
+                    y2={xAxisY - 6}
+                    stroke="#a78bfa"
+                    strokeWidth={1}
+                    strokeDasharray="3 3"
+                    opacity="0.5"
+                  />
+                </>
+              )}
+              <circle
+                cx={xScale(r)}
+                cy={xAxisY}
+                r={isLower ? 7 : 6}
+                fill={i === 0 ? "#a78bfa" : i === 1 ? "#60a5fa" : "#94a3b8"}
+                stroke="#0f172a"
+                strokeWidth={2}
+              />
+              <text
+                x={xScale(r)}
+                y={xAxisY + 18}
+                fill="#cbd5e1"
+                fontSize="10"
+                fontFamily="JetBrains Mono, monospace"
+                textAnchor="middle"
+              >
+                {i === 0 ? "1/729" : i === 1 ? "64/729" : "1"}
+              </text>
+              {isLower && (
+                <text
+                  x={xScale(r)}
+                  y={pad.top - 2}
+                  fill="#c4b5fd"
+                  fontSize="10"
+                  fontFamily="JetBrains Mono, monospace"
+                  textAnchor="middle"
+                >
+                  selects δ_ph
+                </text>
+              )}
+            </motion.g>
+          );
+        })}
 
         <text
           x={(w - pad.left - pad.right) / 2 + pad.left}

@@ -2,25 +2,30 @@
 
 import { motion } from "motion/react";
 import { Math } from "./Math";
+import { AlphaRootPlot } from "./AlphaRootPlot";
+import { AlphaSelfConsistencyLoop } from "./AlphaSelfConsistencyLoop";
 
 const COMPARISON = [
   {
-    label: "TFPT closed root",
+    label: "TFPT closed-branch root",
     value: "137.035 999 216 8…",
-    note: "Unique positive root of F_U(1)(α) = 0",
+    note: "Unique positive root of F_U(1)(α) = 0; theoretical, no fit",
     accent: "from-blue-500 to-violet-500",
+    kind: "theory",
   },
   {
-    label: "CODATA 2022",
-    value: "137.035 999 084(21)",
-    note: "Recommended value, atomic-physics input",
+    label: "CODATA 2022 recommended",
+    value: "137.035 999 177(21)",
+    note: "NIST CODATA 2022 adjustment, recommended value",
     accent: "from-emerald-500 to-teal-500",
+    kind: "reference",
   },
   {
-    label: "Residual",
-    value: "≈ 1.3 × 10⁻⁷",
-    note: "Inside the stated interface uncertainty",
+    label: "Residual α⁻¹(TFPT − CODATA)",
+    value: "≈ 3.98 × 10⁻⁸",
+    note: "Difference between theory root and recommended value",
     accent: "from-orange-500 to-amber-500",
+    kind: "comparison",
   },
 ];
 
@@ -33,7 +38,7 @@ export function AlphaVisualization() {
         </span>
       </div>
       <div className="grid gap-8 p-6 md:p-8 lg:grid-cols-2">
-        <div>
+        <div className="reviewer-only">
           <h3 className="font-serif text-lg font-semibold text-slate-50">
             The closure equation
           </h3>
@@ -98,6 +103,13 @@ export function AlphaVisualization() {
             the result by ~ 5.02 × 10⁻⁴ in α⁻¹ and is not the benchmark
             definition.
           </div>
+        </div>
+      </div>
+
+      <div className="grid gap-6 border-t border-slate-800/60 p-6 md:p-8 lg:grid-cols-2">
+        <AlphaRootPlot />
+        <div className="reviewer-only">
+          <AlphaSelfConsistencyLoop />
         </div>
       </div>
     </div>

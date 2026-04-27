@@ -31,18 +31,21 @@ export type DownloadKind =
   | "theory-map"
   | "coverage-audit";
 
+export type PdfInteraction = "download" | "view";
+
 export interface TrackPdfArgs {
   file: string;
   source: DownloadSource;
   kind: DownloadKind;
+  interaction: PdfInteraction;
   title?: string;
 }
 
 /**
- * Fire a Vercel Web Analytics custom event for a PDF open / download click.
+ * Fire a Vercel Web Analytics custom event for a PDF interaction.
  *
- * - Event name: "pdf_download"
- * - Properties: file (path without leading slash), source, kind, title?
+ * - Event names: "pdf_download", "pdf_view"
+ * - Properties: file (path without leading slash), source, kind, interaction, title?
  *
  * Vercel Web Analytics is cookie-free and does not store IP addresses,
  * so no consent banner is required for this event.
@@ -51,15 +54,22 @@ export interface TrackPdfArgs {
  * `navigator.sendBeacon` under the hood, so the event is reliably
  * delivered even when the link opens in a new tab.
  */
-export function trackPdfDownload({ file, source, kind, title }: TrackPdfArgs) {
+export function trackPdfInteraction({
+  file,
+  source,
+  kind,
+  interaction,
+  title,
+}: TrackPdfArgs) {
   const fileLabel = file.replace(/^\//, "");
   const props: Record<string, string> = {
     file: fileLabel,
     source,
     kind,
+    interaction,
   };
   if (title) {
     props.title = title.length > 120 ? `${title.slice(0, 117)}...` : title;
   }
-  track("pdf_download", props);
+  track(interaction === "view" ? "pdf_view" : "pdf_download", props);
 }

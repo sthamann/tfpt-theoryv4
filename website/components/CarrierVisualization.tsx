@@ -170,6 +170,30 @@ export function CarrierVisualization() {
               — not an additional constraint, just arithmetic on the derived
               eigenvalues.
             </div>
+
+            <div className="mt-5 rounded-xl border border-blue-400/25 bg-blue-500/5 p-4">
+              <div className="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-widest text-blue-200">
+                <ArrowDown size={12} aria-hidden />
+                Determinant-normalised generator → polynomial as corollary
+              </div>
+              <div className="mt-2 grid gap-2">
+                <div className="overflow-x-auto formula-scroll rounded-md border border-slate-700/40 bg-slate-950/60 p-3">
+                  <Math block>
+                    {"Y = -\\tfrac{1}{3}\\,P_- + \\tfrac{1}{2}\\,P_+"}
+                  </Math>
+                </div>
+                <div className="overflow-x-auto formula-scroll rounded-md border border-blue-400/30 bg-blue-500/5 p-3">
+                  <Math block>
+                    {"\\Rightarrow \\;\\; \\left(Y+\\tfrac{1}{3}\\right)\\!\\left(Y-\\tfrac{1}{2}\\right) = 0 \\;\\;\\Longleftrightarrow\\;\\; 6Y^2 - Y - \\mathbf{1} = 0"}
+                  </Math>
+                </div>
+                <p className="text-[11px] leading-relaxed text-blue-100/85">
+                  The polynomial is{" "}
+                  <span className="font-semibold text-amber-200">not</span>{" "}
+                  assumed. It is the algebraic shadow of the forced 3+2 split.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -256,7 +280,7 @@ export function CarrierVisualization() {
         </div>
       </div>
 
-      <div className="rounded-2xl border border-slate-700/40 bg-slate-950/40 p-6 sm:p-7">
+      <div className="reviewer-only rounded-2xl border border-slate-700/40 bg-slate-950/40 p-6 sm:p-7">
         <div className="text-[10px] font-semibold uppercase tracking-widest text-blue-300/80">
           Why this coefficient is forced — not guessed
         </div>
