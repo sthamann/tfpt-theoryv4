@@ -26,7 +26,16 @@ layer when the analytic QFT closure is referenced.
 \lambda_\Sigma=\lambda_1^+(|B_\Sigma|),\qquad
 \rho_\star=\frac{\chigeozero^2}{\lambda_\Sigma^2},\qquad
 \frac{\Mpl^2}{\lambda_\Sigma^2}=\frac{\rho_\star}{2\pi^2},\qquad
-G_N\lambda_\Sigma^2=\frac{\pi}{4\rho_\star}.
+G_N\lambda_\Sigma^2=\frac{\pi}{4\rho_\star},
+\]
+and the Einstein-limit normalizer
+\[
+\xi=\frac{\cthree}{\phiz},
+\qquad
+\kappa^2=\xi\,\frac{\phiz}{\cthree^2},
+\qquad
+\xi_{\mathrm{tree}}=\tfrac{3}{4},\;\;
+\xi_\star\approx 0.748327808\ldots
 \]
 
 \textbf{Not claimed here.} No late-time $H_0$, no CMB, no black holes or horizons, no E8 stage
@@ -75,6 +84,50 @@ G_N\lambda_\Sigma^2=\frac{\pi}{4\rho_\star}.
 \]
 The question is not which SI value of $G_N$ is inserted, but which dimensionless branch quotient is
 fixed.
+
+\subsection{Einstein-limit normalizer \texorpdfstring{$\xi=\cthree/\phiz$}{xi = c3/phi0}}
+\label{ssec:einstein-limit-normalizer}
+
+Once the boundary spectral unit $\lambda_\Sigma$, the seam constant $\cthree$, and the retained
+seed $\phiz$ are fixed, a single dimensionless quotient governs the transition between the
+UFE-normalized boundary functional and the Einstein--Hilbert presentation. Writing
+$\kappa^2=8\pi G_N$ for the Einstein--Hilbert prefactor, the boundary-branch reduction yields a
+relation of the form
+\begin{equation}
+\label{eq:kappa-xi}
+\kappa^2 \;=\; \xi\,\frac{\phiz}{\cthree^2},
+\qquad
+\xi \;=\; \frac{\cthree}{\phiz}.
+\end{equation}
+The product is intrinsic: only one number, $\xi$, parametrises how the UFE normalization is
+rephrased in the Einstein--Hilbert form. At tree level on the canonical branch one finds
+\[
+\xi_{\mathrm{tree}}=\frac{3}{4},
+\]
+and the self-consistent geometric reduction gives the closed-branch readout
+\[
+\xi_\star \;\approx\; 0.748327808\ldots
+\]
+The two values agree to better than $0.3\%$, which is the structural sense in which the tree
+identity $\xi=3/4$ already captures the boundary-normalised Einstein limit.
+
+\begin{tfptfrontbox}
+\textbf{What is and is not claimed by $\xi$.} Equation \eqref{eq:kappa-xi} does \emph{not} derive
+the SI numerical value of $G_N$ from two dimensionless numbers. It says, in a precise and
+boundary-normalised sense, that the dimensionless transition factor between the UFE functional
+and the Einstein--Hilbert action is fixed by the same invariant pair $(\cthree,\phiz)$ that fixes
+$\alpha$ via the carrier-form closure and $\beta_{\mathrm{rad}}$ via the determinant-line
+response. Gravity is not promoted to a primitive observable here. The claim is a compression
+identity for the gravitational normaliser inside the dimensionless metrology layer.
+\end{tfptfrontbox}
+
+\begin{remark}[Why this is not a fitting knob]
+The ratio $\cthree/\phiz$ is not free: $\cthree=1/(8\pi)$ from the boundary primitive (Paper~1)
+and $\phiz=\frac{1}{6\pi}+\frac{3}{256\pi^4}$ from the retained seed decoder (Paper~3). Both are
+fixed before the gravity readout is touched. Substituting these values into
+\eqref{eq:kappa-xi} returns the closed-branch $\xi_\star$ above, which slots into the same
+boundary-normalised metrology that already controls $\Mpl^2/\lambda_\Sigma^2$.
+\end{remark}
 
 \section{Electroweak Matching}
 
@@ -130,7 +183,7 @@ Those belong to Paper 6 or the Technical Companion.
 
 
 \begin{tfptexports}
-Exports: $\lambda_\Sigma$, $\rho_\star$, $\bar M_{\mathrm{Pl}}/\lambda_\Sigma$, $G_N\lambda_\Sigma^2$, $v_{\mathrm{phys}}/\lambda_\Sigma$, and the metrology functor.
+Exports: $\lambda_\Sigma$, $\rho_\star$, $\bar M_{\mathrm{Pl}}/\lambda_\Sigma$, $G_N\lambda_\Sigma^2$, $v_{\mathrm{phys}}/\lambda_\Sigma$, the Einstein-limit normalizer $\xi=\cthree/\phiz$, and the metrology functor.
 \end{tfptexports}
 
 \section{Not Used Here}

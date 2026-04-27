@@ -1,4 +1,4 @@
-PWD /Users/stefanhamann/Documents/tfpt31/tfpt-45
+PWD /Users/stefanhamann/Projekte/tfpt-theoryv4/tfpt-45
 INPUT /usr/local/texlive/2025/texmf.cnf
 INPUT /usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt
@@ -617,10 +617,15 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mathpazo/fplmb.tfm
 OUTPUT 03_electromagnetic_closure_flavor_transport.toc
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/palatino/pplri9e.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/vf/adobe/palatino/pplri9e.vf
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/palatino/pplb9e.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/palatino/pplri9e.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/vf/adobe/palatino/pplb9e.vf
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mathpazo/fplmb.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/vf/adobe/palatino/pplri9e.vf
 INPUT ./source_extracts/03_em_flavor_source.tex
 INPUT ./source_extracts/03_em_flavor_source.tex
 INPUT source_extracts/03_em_flavor_source.tex
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/palatino/pplri9e.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/ufplmbb.fd
@@ -644,12 +649,7 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mathpazo/fplmbb.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/helvetic/phvr8t.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mathpazo/fplmbb.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mathpazo/fplmbb.tfm
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/palatino/pplb9e.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ectt1095.tfm
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/vf/adobe/palatino/pplri9e.vf
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/vf/adobe/palatino/pplb9e.vf
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mathpazo/fplmb.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/vf/adobe/palatino/pplb9e.vf
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mathpazo/fplmb.tfm

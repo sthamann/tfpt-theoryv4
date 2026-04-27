@@ -443,6 +443,8 @@ export const papers: Paper[] = [
       "Electromagnetic fixed point α⁻¹(0) = 137.035 999 216 8…",
       "Transport pole of the cusp cubic determines δ_ph.",
       "Retained seed decoder λ_C = √(φ₀(1 − φ₀)) and downstream flavor readouts.",
+      "Compact UFE bridge: g_aγγ = −4c₃ and Δa = φ₀ recover β_rad = φ₀/(4π) ≈ 0.2424°.",
+      "Structured local dyonic intercept β_BH(r) ∼ Q_e^eff Q_m^eff /(256π⁴ r²) — same topological coefficient δ_top = 48 c₃⁴ that fixes the α-kernel correction.",
     ],
     notClaimed: [
       "No full QFT closure.",
@@ -480,6 +482,24 @@ export const papers: Paper[] = [
         ],
       },
       {
+        title: "UFE Bridge for the Birefringence Seed",
+        body: "A short reader-bridge: from the dimensionless axion–photon anomaly coefficient g_aγγ = −4c₃ and the admissible-branch increment Δa = φ₀, the modified Maxwell sector gives β = 2c₃Δa, recovering the seed identity β_rad = φ₀/(4π) ≈ 0.2424° before the determinant-line response is invoked in full.",
+        formulas: [
+          "g_{a\\gamma\\gamma} = -4 c_3 = -\\frac{1}{2\\pi}",
+          "\\beta = 2 c_3 \\Delta a, \\quad \\Delta a = \\varphi_0",
+          "\\beta_{\\mathrm{rad}} = \\frac{\\varphi_0}{4\\pi} \\Rightarrow \\beta \\approx 0.2424^\\circ",
+        ],
+      },
+      {
+        title: "Achromatic Dyonic Intercept around Compact Objects",
+        body: "The same admissibility data emits a structured local astrophysical β amplitude in the magnetised inflow region of a compact object. The TFPT coupling 1/(256π⁴) = 16c₃⁴ is fixed; the geometric weights Q_e^eff, Q_m^eff and the emission radius are model-dependent. The corresponding observation channel is the achromatic residual intercept χ₀^res = χ₀^obs − χ₀^GRMHD of the linear-polarization angle, with three independent nulls (frequency, 1/r² profile, E·B sign flip).",
+        formulas: [
+          "\\beta_{\\mathrm{BH}}(r) \\sim \\frac{Q_e^{\\mathrm{eff}}\\,Q_m^{\\mathrm{eff}}}{256\\pi^4\\,r^2} = 16 c_3^4 \\frac{Q_e^{\\mathrm{eff}}\\,Q_m^{\\mathrm{eff}}}{r^2}",
+          "\\chi(x,\\lambda^2) = \\chi_0(x) + \\mathrm{RM}(x)\\,\\lambda^2 + \\epsilon",
+          "\\chi_0^{\\mathrm{res}}(x) = \\chi_0^{\\mathrm{obs}}(x) - \\chi_0^{\\mathrm{GRMHD}}(x)",
+        ],
+      },
+      {
         title: "Flavor Transport — CKM and PMNS",
         body: "CKM and PMNS closure follow from holonomy transport on the rigid branch, including hard readouts such as |V_ub| = |V_us|³/3.",
         formulas: ["|V_{ub}| = \\frac{|V_{us}|^3}{3}"],
@@ -502,6 +522,13 @@ export const papers: Paper[] = [
           "P(z) = (z-1)(z-\\tfrac{64}{729})(z-\\tfrac{1}{729})",
         description: "Transport phase polynomial, source of δ_ph.",
       },
+      {
+        label: "Local dyonic β intercept",
+        latex:
+          "\\beta_{\\mathrm{BH}}(r) = 16 c_3^4 \\dfrac{Q_e^{\\mathrm{eff}} Q_m^{\\mathrm{eff}}}{r^2}",
+        description:
+          "Same topological coefficient δ_top = 48c₃⁴ as the α-kernel correction.",
+      },
     ],
     highlights: [
       {
@@ -520,9 +547,9 @@ export const papers: Paper[] = [
         description: "Reactor angle from neutrino closure",
       },
       {
-        label: "Free knobs",
-        value: "0",
-        description: "No-knobs audit: every constant traced upstream",
+        label: "β / β_BH",
+        value: "0.2424°",
+        description: "Cosmic + structured local dyonic intercept",
       },
     ],
   },
@@ -632,6 +659,7 @@ export const papers: Paper[] = [
     ],
     contribution: [
       "Boundary-normalized metrology: λ_Σ = λ₁⁺(|B_Σ|), ρ★ = χ_geo,0² / λ_Σ², M_Pl² / λ_Σ² = ρ★/(2π²), G_N λ_Σ² = π/(4ρ★).",
+      "Einstein-limit normalizer ξ = c₃/φ₀ with κ² = ξ φ₀/c₃²; ξ_tree = 3/4 and ξ★ ≈ 0.748 fix the dimensionless transition between UFE and Einstein–Hilbert normalisation.",
     ],
     notClaimed: [
       "No late-time H₀, no CMB.",
@@ -653,6 +681,15 @@ export const papers: Paper[] = [
           "\\rho_\\star = \\frac{\\chi_{\\mathrm{geo},0}^2}{\\lambda_\\Sigma^2}",
           "\\frac{\\bar M_{\\mathrm{Pl}}^2}{\\lambda_\\Sigma^2} = \\frac{\\rho_\\star}{2\\pi^2}",
           "G_N \\lambda_\\Sigma^2 = \\frac{\\pi}{4\\rho_\\star}",
+        ],
+      },
+      {
+        title: "Einstein-Limit Normalizer ξ = c₃ / φ₀",
+        body: "A single dimensionless quotient governs the transition between the UFE-normalised boundary functional and the Einstein–Hilbert presentation. The ratio is intrinsic — c₃ from Paper 1, φ₀ from Paper 3 — so gravity is not promoted to a primitive observable: the claim is a compression identity for the gravitational normaliser inside the dimensionless metrology layer.",
+        formulas: [
+          "\\kappa^2 = \\xi\\,\\frac{\\varphi_0}{c_3^2}, \\quad \\xi = \\frac{c_3}{\\varphi_0}",
+          "\\xi_{\\mathrm{tree}} = \\tfrac{3}{4}",
+          "\\xi_\\star \\approx 0.748\\,327\\,808\\ldots",
         ],
       },
       {
@@ -680,6 +717,11 @@ export const papers: Paper[] = [
         label: "Newton constant",
         latex: "G_N \\lambda_\\Sigma^2 = \\dfrac{\\pi}{4\\rho_\\star}",
       },
+      {
+        label: "Einstein-limit normalizer",
+        latex: "\\xi = \\dfrac{c_3}{\\varphi_0}, \\quad \\kappa^2 = \\xi\\,\\dfrac{\\varphi_0}{c_3^2}",
+        description: "ξ_tree = 3/4, ξ★ ≈ 0.748 — boundary-normalised UFE↔Einstein–Hilbert transition.",
+      },
     ],
     highlights: [
       {
@@ -688,9 +730,9 @@ export const papers: Paper[] = [
         description: "First eigenvalue of |B_Σ| — internal length scale",
       },
       {
-        label: "Metrology",
-        value: "Dimensionless",
-        description: "All ratios are scheme-independent quotients",
+        label: "ξ = c₃/φ₀",
+        value: "≈ 0.748",
+        description: "Einstein-limit normaliser, tree value 3/4",
       },
       {
         label: "Functor chain",

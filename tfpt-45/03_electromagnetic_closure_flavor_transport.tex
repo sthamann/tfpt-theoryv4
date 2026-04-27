@@ -22,12 +22,17 @@ PMNS readouts.
 Paper 2 supplies the rigid carrier, family count, admissible occupancy, compact Higgs index, and
 abelian index coefficient.
 
-\textbf{New theorem contribution.} The electromagnetic fixed point and flavor transport outputs:
+\textbf{New theorem contribution.} The electromagnetic fixed point, the transport pole, the
+retained seed decoder, and the UFE-form bridge to the determinant-line response:
 \[
 \alpha^{-1}(0)=137.035999216\ldots,\qquad
 P'(z)=0\Rightarrow\delta_{\mathrm{ph}},\qquad
-\lambda_C=\sqrt{\phiz(1-\phiz)}.
+\lambda_C=\sqrt{\phiz(1-\phiz)},\qquad
+\beta=\beta_{\mathrm{rad}}\frac{180^\circ}{\pi}\approx 0.2424^\circ,
 \]
+and the structured local dyonic projection $\beta_{\mathrm{BH}}(r)\sim 16\cthree^4
+Q_e^{\mathrm{eff}}Q_m^{\mathrm{eff}}/r^2$ underlying the EHT-class achromatic residual intercept
+test.
 
 \textbf{Not claimed here.} No full QFT closure, no gravity/metrology proof, no CMB, no E8, and no
 large pole-mass table.
@@ -85,6 +90,58 @@ projects to the bridge observables
 \]
 The text should make explicit which earlier theorem fixes each symbol before it appears in a
 readout.
+
+\subsection{Compact UFE bridge for the birefringence seed}
+\label{ssec:ufe-birefringence-bridge}
+
+Before the determinant-line response is invoked in its full form, the same retained seed admits a
+short bridge derivation that connects the boundary-normalised axion--photon coupling to the
+cosmological birefringence amplitude. Starting from the unified-field-equation reduction of the
+seam transfer, the dimensionless axion--photon anomaly coefficient is
+\[
+g_{a\gamma\gamma}=-4\,\cthree=-\frac{1}{2\pi},
+\]
+and the modified Maxwell sector responds to a constant axion increment $\Delta a=\phiz$ on the
+admissible branch. The local rotation rate per unit determinant-line phase is then
+\[
+\beta = 2\,\cthree\,\Delta a,
+\]
+so substituting $\Delta a=\phiz$ and $\cthree=\tfrac{1}{8\pi}$ recovers the seed identity
+\begin{equation}
+\label{eq:beta-rad-ufe-bridge}
+\beta_{\mathrm{rad}}=\frac{\phiz}{4\pi},
+\qquad
+\beta=\beta_{\mathrm{rad}}\!\times\!\frac{180^\circ}{\pi}\;\approx\;0.2424^\circ.
+\end{equation}
+This compact reduction is intended as a reader bridge; the determinant-line / Chern--Simons
+formulation of Paper~3 and Paper~4 remains the load-bearing derivation.
+
+\begin{remark}[Achromatic, dyonic intercept and the $\alpha$-kernel]
+\label{rem:dyonic-intercept-alpha-kernel}
+The same admissibility data emits a structured \emph{local} astrophysical $\beta$ amplitude in
+the magnetised inflow region of a compact object,
+\begin{equation}
+\label{eq:beta-bh-paper3}
+\beta_{\mathrm{BH}}(r)\;\sim\;\frac{Q_e^{\mathrm{eff}}\,Q_m^{\mathrm{eff}}}{256\pi^4\,r^2}
+\;=\;16\,\cthree^4\,\frac{Q_e^{\mathrm{eff}}\,Q_m^{\mathrm{eff}}}{r^2}
+\;=\;\frac{\deltatop}{3}\,\frac{Q_e^{\mathrm{eff}}\,Q_m^{\mathrm{eff}}}{r^2},
+\end{equation}
+where $\deltatop=48\cthree^4$ is the same topological coefficient that controls the precision-zone
+correction of the $\alpha$-kernel. The corresponding observation channel is the achromatic
+\emph{residual intercept} of the linear-polarization angle in horizon-scale polarimetry,
+\[
+\chi_0^{\mathrm{res}}(x)
+=
+\chi_0^{\mathrm{obs}}(x)-\chi_0^{\mathrm{GRMHD}}(x),
+\]
+i.e.\ the part of $\chi_0$ left after the GRMHD/synchrotron forward model and calibration are
+subtracted. The TFPT contribution is the structured component of $\chi_0^{\mathrm{res}}(x)$ with
+the spatial $1/r^2$ profile of \eqref{eq:beta-bh-paper3} and a sign flip under reversal of the
+effective $E\!\cdot\!B$ orientation. The coupling $1/(256\pi^4)$ is fixed; the geometric weights
+$Q_e^{\mathrm{eff}}(x), Q_m^{\mathrm{eff}}(x)$ and the emission radius are model dependent. A
+dedicated standalone prediction note states the full observation protocol and three independent
+null tests (frequency, spatial profile, sign flip).
+\end{remark}
 
 \section{Flavor Transport}
 
@@ -146,7 +203,7 @@ prediction paper, and its credibility depends on a short no-knobs audit.
 
 
 \begin{tfptexports}
-Exports: $\alpha_\star$, $\delta_{\mathrm{ph}}$, $\lambda_C$, CKM/PMNS readout rows, sectorized seed shadows, and no-knobs audit table.
+Exports: $\alpha_\star$, $\delta_{\mathrm{ph}}$, $\lambda_C$, CKM/PMNS readout rows, sectorized seed shadows, the UFE bridge for $\beta_{\mathrm{rad}}$, the achromatic dyonic intercept $\beta_{\mathrm{BH}}(r)$, and the no-knobs audit table.
 \end{tfptexports}
 
 \section{Not Used Here}

@@ -1,0 +1,183 @@
+\documentclass[11pt,a4paper]{article}
+\input{tfpt_prediction_common}
+\title{\color{tfptblue}\textbf{TFPT Prediction: Achromatic Residual Polarization Intercept around Compact Objects}\\[0.35em]
+{\Large An EHT/ngEHT Test of the Local Dyonic $\beta_{\mathrm{BH}}$ Channel}}
+\author{Stefan Hamann \and Alessandro Rizzo}
+\date{{\normalsize\color{tfptgray}\sffamily Standalone prediction note -- \today}}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note isolates a new TFPT observation channel: a structured, achromatic residual intercept of
+the linear-polarization angle in the magnetised inflow region of a horizon-scale black hole.
+The residual is sectorised away from the cosmological birefringence row of the determinant-line
+response. Its amplitude is fixed by the same admissibility/index data that controls the
+fine-structure constant and the cosmic-birefringence seed; only the geometric and emission
+factors carrying the local effective $E\!\cdot\!B$ structure are model dependent.
+\end{abstract}
+
+\PredictionStatus%
+{$\beta_{\mathrm{BH}}(r)\sim \dfrac{Q_e^{\mathrm{eff}}\,Q_m^{\mathrm{eff}}}{256\pi^4\,r^2}$\,, achromatic and structured.}%
+{Physical observable; local dyonic projection of the determinant-line response. Coupling fixed; geometric weights model dependent.}%
+{determinant response $R_{\mathrm{CS}}$, dyonic projection on the horizon collar.}%
+{calibrated achromatic residual intercept $\chi_0^{\mathrm{res}}$ statistically consistent with zero across the horizon-scale image at the declared sensitivity.}
+
+
+\section{Standalone Minimal Kernel}
+\MinimalKernelBox
+
+This row uses the same closed-branch input package as the cosmic-birefringence prediction. The new
+content is the projection map onto the local dyonic geometry of a magnetised compact object.
+Source status follows the TFPT 4.5 split: boundary, carrier, and electromagnetic-closure inputs
+are core; the determinant-line response is a bridge readout; cosmology and astrophysical
+projections are downstream comparison surfaces.
+
+
+\section{Dependency Graph}
+\DependencyDiagram{Determinant-line response, dyonic projection}{$\chi_0^{\mathrm{res}}(x),\,\beta_{\mathrm{BH}}(r)$}{Local $E\!\cdot\!B$ projection on the horizon collar after GRMHD subtraction.}{calibrated null}
+
+
+\section{From the Determinant-Line Response to a Local Channel}
+\label{sec:eht-derivation}
+
+The determinant-line response of TFPT yields the cosmological birefringence row through
+\[
+\beta_{\mathrm{rad}}=\frac{\phiz}{4\pi},
+\qquad
+\beta=\beta_{\mathrm{rad}}\times\!\left(\frac{180^\circ}{\pi}\right)
+\;\approx\;0.2424^\circ.
+\]
+The same admissibility data emits a \emph{local} astrophysical $\beta$ amplitude for a magnetised
+horizon-scale region. Tracing the dyonic appendix of the TFPT~4.2 source through the closure
+chain $\Tstar \rightarrow R_{\mathrm{CS}} \rightarrow$ local response, the local rotation rate
+takes the structured form
+\begin{equation}
+\label{eq:beta-bh}
+\beta_{\mathrm{BH}}(r)
+\;=\;
+\frac{Q_e^{\mathrm{eff}}(x)\,Q_m^{\mathrm{eff}}(x)}{256\pi^4\,r^2}
+\;=\;
+16\,\cthree^4\,\frac{Q_e^{\mathrm{eff}}(x)\,Q_m^{\mathrm{eff}}(x)}{r^2}
+\;=\;
+\frac{\delta_{\mathrm{top}}}{3}\,\frac{Q_e^{\mathrm{eff}}(x)\,Q_m^{\mathrm{eff}}(x)}{r^2},
+\end{equation}
+where $\cthree=\tfrac{1}{8\pi}$ is the fixed coupling normaliser of Paper~1 and
+$\delta_{\mathrm{top}}=48\cthree^4$ is the same topological coefficient that fixes the
+$\alpha$-kernel correction in Paper~3. The product
+$Q_e^{\mathrm{eff}}\,Q_m^{\mathrm{eff}}$ encodes the local effective $E\!\cdot\!B$ structure on
+the horizon collar and is treated below as a model-dependent geometric weight.
+
+\begin{remark}[Coupling fixed, geometry model dependent]
+The numerical coefficient $1/(256\pi^4)=16\cthree^4$ is fixed by the same TFPT branch data that
+controls $\alpha$ and $\beta_{\mathrm{rad}}$ — there is no free coupling here. What is
+\emph{not} fixed by TFPT alone is the spatial profile of the effective dyonic charges
+$Q_e^{\mathrm{eff}}(x)$, $Q_m^{\mathrm{eff}}(x)$, the inflow geometry, and the emission radius;
+these are MHD/GR inputs of the source model. The TFPT claim is therefore the structured shape and
+sign pattern of the residual, not a parameter-free amplitude prediction at one pixel of the
+image.
+\end{remark}
+
+
+\section{Observation Protocol}
+\label{sec:eht-protocol}
+
+The conventional rotation-measure decomposition of the linear-polarization angle is
+\begin{equation}
+\label{eq:chi-RM}
+\chi(x,\lambda^2) \;=\; \chi_0(x) + \mathrm{RM}(x)\,\lambda^2 + \epsilon,
+\end{equation}
+i.e. the wavelength-squared coefficient $\mathrm{RM}(x)$ captures conventional Faraday rotation
+and the intercept $\chi_0(x)$ collects the achromatic part: intrinsic emission orientation,
+calibration, and any new physics insensitive to $\lambda^2$.
+
+The TFPT contribution sits inside $\chi_0(x)$. To isolate it we work with the achromatic
+\emph{residual intercept}
+\begin{equation}
+\label{eq:chi-res}
+\chi_0^{\mathrm{res}}(x)
+\;=\;
+\chi_0^{\mathrm{obs}}(x)\;-\;\chi_0^{\mathrm{GRMHD}}(x),
+\end{equation}
+where $\chi_0^{\mathrm{GRMHD}}(x)$ is the achromatic intercept produced by the calibrated
+intrinsic-emission and astrophysical-modelling pipeline of the chosen GRMHD/synchrotron forward
+model. The TFPT prediction is then a structured pattern in $\chi_0^{\mathrm{res}}(x)$, not a
+generic ``intercept different from zero''.
+
+\begin{tcolorbox}[colback=tfptblue!2, colframe=tfptblue!50, breakable,
+    title={Achromatic residual-intercept test}, colbacktitle=tfptblue!70]
+\textbf{Step 1 — Multi-frequency map.} Build a per-pixel polarization-angle map
+$\chi(x,\lambda^2)$ across at least three frequency bands. Fit \eqref{eq:chi-RM} per pixel.
+
+\textbf{Step 2 — Forward subtraction.} Subtract the GRMHD/synchrotron pipeline's prediction for
+the achromatic intercept $\chi_0^{\mathrm{GRMHD}}(x)$, including calibration and intrinsic
+emission orientation, to obtain the residual map $\chi_0^{\mathrm{res}}(x)$.
+
+\textbf{Step 3 — Spatial pattern.} Test the residual map for the structured $1/r^2$ amplitude
+profile \eqref{eq:beta-bh} along the bright magnetically dominated lensed regions of the
+horizon-scale image, accumulated against the local effective-$E\!\cdot\!B$ orientation.
+
+\textbf{Step 4 — Sign-flip null.} Confirm or reject the TFPT-predicted sign flip of
+$\chi_0^{\mathrm{res}}$ when the effective $E\!\cdot\!B$ orientation reverses (e.g. when one
+compares two regions of opposite jet-orientation context, or jet vs.\ counter-jet sectors).
+
+\textbf{Step 5 — Frequency null.} Confirm that the surviving structured component is achromatic:
+no detectable $\lambda^2$ dependence beyond the fitted $\mathrm{RM}(x)$ term.
+\end{tcolorbox}
+
+
+\section{Three Independent Nulls}
+
+The prediction is robust because three independent null tests must be passed simultaneously
+before it can be claimed:
+
+\begin{enumerate}[leftmargin=1.5em]
+    \item \textbf{Frequency-null.} The TFPT residual must be \emph{achromatic}: any structured
+    component remaining after \eqref{eq:chi-RM} that scales with $\lambda^2$ does not belong to
+    this channel.
+    \item \textbf{Spatial-null.} The TFPT residual is required to follow the structured $1/r^2$
+    profile of \eqref{eq:beta-bh}; a spatially uniform residual is calibration, not the
+    determinant-line projection.
+    \item \textbf{Sign-flip null.} The TFPT residual must reverse sign when the effective
+    $E\!\cdot\!B$ orientation reverses; a residual that does not flip is also calibration.
+\end{enumerate}
+
+
+\section{\texorpdfstring{Cross-Link to the $\alpha$-Kernel}{Cross-Link to the alpha-Kernel}}
+
+The local dyonic amplitude in \eqref{eq:beta-bh} carries the same topological coefficient that
+controls the precision-zone correction of the $\alpha$-kernel:
+\[
+\delta_{\mathrm{top}}\;=\;48\,\cthree^4,
+\qquad
+\beta_{\mathrm{BH}}(r)\;=\;\frac{\delta_{\mathrm{top}}}{3}\,\frac{Q_e^{\mathrm{eff}}\,Q_m^{\mathrm{eff}}}{r^2}.
+\]
+This cross-link is structural, not numerical: the same TFPT branch number that puts the
+electromagnetic closure into the precision zone of CODATA also controls the size of the local
+dyonic intercept. EHT-class polarimetry therefore probes the same admissibility data as the
+$\alpha$ row, only projected onto the local horizon collar instead of the asymptotic Thomson
+limit.
+
+
+\section{No-Knobs and Failure Surface}
+\NoKnobsBox{The TFPT coupling $1/(256\pi^4)=16\cthree^4$ is fixed by the same kernel that fixes
+$\alpha$ and $\beta_{\mathrm{rad}}$: there is \emph{no free coupling} in
+\eqref{eq:beta-bh}. The model-dependent ingredients are the geometric weights
+$Q_e^{\mathrm{eff}}(x)$ and $Q_m^{\mathrm{eff}}(x)$, the inflow geometry, and the emission
+radius. A structured, achromatic residual $\chi_0^{\mathrm{res}}(x)$ statistically consistent
+with zero across the horizon-scale image, after honest GRMHD subtraction, and at the declared
+sensitivity, falsifies this row. A residual without the predicted spatial $1/r^2$ shape, without
+sign reversal under effective $E\!\cdot\!B$ flips, or with measurable $\lambda^2$ dependence, also
+falsifies it.}
+
+
+\section{Minimal Submission Claim}
+The standalone claim is limited to the structured achromatic residual intercept, its sign-flip
+behaviour, and its $1/r^2$ profile in the magnetised horizon collar. It does \emph{not} claim a
+full microscopic black-hole solution and does \emph{not} reinterpret rotation-measure analyses.
+Any update of the upstream boundary kernel, carrier theorem, electromagnetic closure, or
+determinant-line response must be propagated into this prediction before the protocol is
+distributed.
+
+\PredictionBibliography
+
+\end{document}

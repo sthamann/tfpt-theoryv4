@@ -3,6 +3,7 @@ export type DependencyClass =
   | "Flavor readout"
   | "Neutrino closure"
   | "Determinant response"
+  | "Determinant response (local)"
   | "Strong-CP closure"
   | "Carrier / Higgs index"
   | "Cosmology readout"
@@ -33,7 +34,14 @@ export interface Prediction {
   derivationFormulas: string[];
   pdf: string;
   description: string;
-  category: "Coupling" | "Flavor" | "Neutrino" | "QCD/EDM" | "Cosmology" | "Higgs";
+  category:
+    | "Coupling"
+    | "Flavor"
+    | "Neutrino"
+    | "QCD/EDM"
+    | "Cosmology"
+    | "Higgs"
+    | "Astrophysics";
 }
 
 export const STATUS_BADGE: Record<PredictionStatus, { color: string; bg: string }> = {
@@ -68,6 +76,10 @@ export const CATEGORY_META: Record<
   "QCD/EDM": { label: "QCD / EDM", color: "from-orange-500/20 to-amber-500/20" },
   Cosmology: { label: "Cosmology", color: "from-fuchsia-500/20 to-pink-500/20" },
   Higgs: { label: "Higgs sector", color: "from-rose-500/20 to-red-500/20" },
+  Astrophysics: {
+    label: "Astrophysics / Horizon",
+    color: "from-indigo-500/20 to-sky-500/20",
+  },
 };
 
 export const predictions: Prediction[] = [
@@ -306,6 +318,31 @@ export const predictions: Prediction[] = [
     description:
       "Determinant-line / Chern–Simons response — sectorized away from the old seed quartet.",
     category: "QCD/EDM",
+  },
+  {
+    id: "eht-achromatic",
+    slug: "eht-achromatic-intercept",
+    title:
+      "Achromatic Residual Polarization Intercept — EHT/ngEHT Test",
+    shortTitle: "β_BH(r)",
+    target:
+      "β_BH(r) ∼ Q_e^eff Q_m^eff / (256π⁴ r²)  — structured, achromatic",
+    targetLatex:
+      "\\beta_{\\mathrm{BH}}(r) \\sim \\frac{Q_e^{\\mathrm{eff}}\\,Q_m^{\\mathrm{eff}}}{256\\pi^4\\,r^2} = 16 c_3^4 \\frac{Q_e^{\\mathrm{eff}}\\,Q_m^{\\mathrm{eff}}}{r^2}",
+    numericValue: "16 c_3^4",
+    status: "Physical observable",
+    dependencyClass: "Determinant response (local)",
+    killTest:
+      "Calibrated achromatic residual intercept χ₀^res(x) statistically consistent with zero across the horizon-scale image after honest GRMHD subtraction, or no 1/r² profile, or no sign flip under E·B reversal, or measurable λ² dependence.",
+    derivationFormulas: [
+      "\\chi(x,\\lambda^2) = \\chi_0(x) + \\mathrm{RM}(x)\\,\\lambda^2 + \\epsilon",
+      "\\chi_0^{\\mathrm{res}}(x) = \\chi_0^{\\mathrm{obs}}(x) - \\chi_0^{\\mathrm{GRMHD}}(x)",
+      "\\beta_{\\mathrm{BH}}(r) = \\frac{Q_e^{\\mathrm{eff}}\\,Q_m^{\\mathrm{eff}}}{256\\pi^4\\,r^2} = \\frac{\\delta_{\\mathrm{top}}}{3}\\frac{Q_e^{\\mathrm{eff}}\\,Q_m^{\\mathrm{eff}}}{r^2}",
+    ],
+    pdf: "/predictions/tfpt_prediction_eht_achromatic_intercept.pdf",
+    description:
+      "Local dyonic projection of the determinant-line response. The TFPT coupling 1/(256π⁴) = 16c₃⁴ is fixed by the same branch data that fixes α and β_rad; only the geometric weights and emission radius are model-dependent. Three independent nulls (frequency, 1/r² profile, E·B sign flip) must be passed simultaneously.",
+    category: "Astrophysics",
   },
   {
     id: "axion",

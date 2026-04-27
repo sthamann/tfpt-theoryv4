@@ -84,11 +84,12 @@ export function CosmologyTimeline() {
           })}
         </div>
 
-        <div className="mt-8 grid gap-4 md:grid-cols-3">
+        <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           {[
             { l: "Λ_IR", v: "Seam transfer", n: "−log det_adm(1 − U_Σ)" },
             { l: "Axion", v: "ν_a ≈ 15.764 GHz", n: "Haloscope window" },
             { l: "η_B", v: "5.97 × 10⁻¹⁰", n: "Leptogenesis interface" },
+            { l: "β_BH(r)", v: "16 c₃⁴ Q_e^eff Q_m^eff / r²", n: "EHT/ngEHT achromatic residual intercept" },
           ].map((it) => (
             <div
               key={it.l}

@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1777287950.66869 "03_electromagnetic_closure_flavor_transport.tex" "03_electromagnetic_closure_flavor_transport.pdf" "03_electromagnetic_closure_flavor_transport" 1777287952.7326 0
+["pdflatex"] 1777293495.77815 "03_electromagnetic_closure_flavor_transport.tex" "03_electromagnetic_closure_flavor_transport.pdf" "03_electromagnetic_closure_flavor_transport" 1777293498.12663 0
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -304,10 +304,10 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1770563042 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1770563009 3345741 291b171e47e12b785db93d1f2e7436ca ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "03_electromagnetic_closure_flavor_transport.aux" 1777287952.61504 39068 608cf78103ae6ba962a13603473eca8c "pdflatex"
-  "03_electromagnetic_closure_flavor_transport.out" 1777287952.61717 4873 9d641bd50cd0fd918f090f7859d8eae0 "pdflatex"
-  "03_electromagnetic_closure_flavor_transport.tex" 1777284854.41219 6561 667b90cf2bec76392f476b94d1dced0b ""
-  "03_electromagnetic_closure_flavor_transport.toc" 1777287952.6175 2066 b6bd0bfcec2a768ddf3e9ad248bb5126 "pdflatex"
+  "03_electromagnetic_closure_flavor_transport.aux" 1777293497.99774 40262 a1a347a258bd923ef40e00450dc15ab6 "pdflatex"
+  "03_electromagnetic_closure_flavor_transport.out" 1777293498.00015 5174 598ba8c8d8cd199a4cd586530186adef "pdflatex"
+  "03_electromagnetic_closure_flavor_transport.tex" 1777293347.35155 9730 bd4ff509ddaaa71d79aef903c452b89a ""
+  "03_electromagnetic_closure_flavor_transport.toc" 1777293498.00055 2177 e357d380c8a3abb498c4fbe4da9deab8 "pdflatex"
   "source_extracts/03_em_flavor_source.tex" 1777284801.95364 96568 64b4ede63f5d4f06b3f95b757f40804b ""
   "source_extracts/bibliography_precision.tex" 1777278727.84898 2261 543b821f71d0a2b99a1829c6f07b9237 ""
   "tfpt45-common.tex" 1777287902.94288 9239 7d559ebcbd620cc400a7c988286a7f66 ""

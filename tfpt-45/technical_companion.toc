@@ -1,6 +1,6 @@
 \contentsline {section}{\numberline {1}Purpose}{3}{section.1}%
 \contentsline {section}{\numberline {2}Core Convention Blocks}{3}{section.2}%
-\contentsline {section}{\numberline {3}Analytic Backend}{3}{section.3}%
+\contentsline {section}{\numberline {3}Analytic Backend}{4}{section.3}%
 \contentsline {section}{\numberline {4}Comparison Backend}{4}{section.4}%
 \contentsline {section}{\numberline {5}Downstream and Optional Continuations}{4}{section.5}%
 \contentsline {section}{\numberline {6}Main Technical Development}{5}{section.6}%
@@ -65,6 +65,15 @@
 \contentsline {subsection}{\numberline {21.3}Axion interface}{40}{subsection.21.3}%
 \contentsline {subsection}{\numberline {21.4}Supplementary UV asymptotic mass-source rows}{41}{subsection.21.4}%
 \contentsline {subsection}{\numberline {21.5}Extended comparison ledger}{42}{subsection.21.5}%
-\contentsline {subsection}{\numberline {21.6}Novelty boundary and literature positioning}{42}{subsection.21.6}%
-\contentsline {section}{\numberline {22}Source Extraction Map}{44}{section.22}%
-\contentsline {section}{\numberline {23}Promotion Rule}{44}{section.23}%
+\contentsline {subsection}{\numberline {21.6}Novelty boundary and literature positioning}{43}{subsection.21.6}%
+\contentsline {section}{\numberline {22}Dyonic Calibration Lemma and Local $\beta _{\mathrm {BH}}(r)$ Intercept}{49}{section.22}%
+\contentsline {subsection}{\numberline {22.1}Analytic dyonic toy ansatz}{49}{subsection.22.1}%
+\contentsline {subsection}{\numberline {22.2}Local $\beta _{\mathrm {BH}}(r)$ intercept}{49}{subsection.22.2}%
+\contentsline {subsection}{\numberline {22.3}Horizon-shift sign correction}{49}{subsection.22.3}%
+\contentsline {subsection}{\numberline {22.4}Calibration scope}{50}{subsection.22.4}%
+\contentsline {section}{\numberline {23}External RG Fingerprint Protocol}{51}{section.23}%
+\contentsline {subsection}{\numberline {23.1}TFPT branch input package}{51}{subsection.23.1}%
+\contentsline {subsection}{\numberline {23.2}Four fingerprints}{51}{subsection.23.2}%
+\contentsline {subsection}{\numberline {23.3}Status discipline}{51}{subsection.23.3}%
+\contentsline {section}{\numberline {24}Source Extraction Map}{52}{section.24}%
+\contentsline {section}{\numberline {25}Promotion Rule}{52}{section.25}%

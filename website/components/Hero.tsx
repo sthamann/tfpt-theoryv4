@@ -154,8 +154,8 @@ const STATS = [
     note: "Strong-CP null — theorem-level on the admissible branch",
   },
   {
-    label: "Higgs doublets",
-    value: "1",
-    note: "Compact bosonic index: N_Φ = 1, no extra light doublet",
+    label: "β_BH(r)",
+    value: "16 c₃⁴ / r²",
+    note: "Achromatic dyonic residual intercept — EHT/ngEHT prediction",
   },
 ];

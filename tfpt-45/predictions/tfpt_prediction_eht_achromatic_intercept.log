@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  27 APR 2026 14:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  27 APR 2026 14:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**technical_companion.tex
-(./technical_companion.tex
+**tfpt_prediction_eht_achromatic_intercept.tex
+(./tfpt_prediction_eht_achromatic_intercept.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (/usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
@@ -23,7 +23,7 @@ File: size11.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
 \belowcaptionskip=\skip50
 \bibindent=\dimen141
 )
-(./tfpt45-common.tex
+(./tfpt_prediction_common.tex (../tfpt45-common.tex
 (/usr/local/texlive/2025/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 )
@@ -1144,12 +1144,12 @@ Package siunitx Info: Option "detect-all" has been deprecated in this release.
 (siunitx)             as a replacement.
 
 \c@theorem=\count372
-)
+))
 Package translations Info: No language package found. I am going to use `englis
-h' as default language. on input line 9.
+h' as default language. on input line 7.
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
-LaTeX Font Info:    Trying to load font information for T1+pplx on input line 9
+LaTeX Font Info:    Trying to load font information for T1+pplx on input line 7
 .
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/t1pplx.fd
@@ -1160,27 +1160,27 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count373
 \l__pdf_internal_box=\box102
 )
-(./technical_companion.aux)
-\openout1 = `technical_companion.aux'.
+(./tfpt_prediction_eht_achromatic_intercept.aux)
+\openout1 = `tfpt_prediction_eht_achromatic_intercept.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1216,25 +1216,26 @@ LaTeX Font Info:    ... okay on input line 9.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 9.
-(./technical_companion.out) (./technical_companion.out)
+Package hyperref Info: Link coloring ON on input line 7.
+(./tfpt_prediction_eht_achromatic_intercept.out)
+(./tfpt_prediction_eht_achromatic_intercept.out)
 \@outlinefile=\write4
-\openout4 = `technical_companion.out'.
+\openout4 = `tfpt_prediction_eht_achromatic_intercept.out'.
 
-LaTeX Info: Redefining \microtypecontext on input line 9.
-Package microtype Info: Applying patch `item' on input line 9.
-Package microtype Info: Applying patch `toc' on input line 9.
-Package microtype Info: Applying patch `eqnum' on input line 9.
-Package microtype Info: Applying patch `footnote' on input line 9.
-Package microtype Info: Applying patch `verbatim' on input line 9.
-LaTeX Info: Redefining \microtypesetup on input line 9.
+LaTeX Info: Redefining \microtypecontext on input line 7.
+Package microtype Info: Applying patch `item' on input line 7.
+Package microtype Info: Applying patch `toc' on input line 7.
+Package microtype Info: Applying patch `eqnum' on input line 7.
+Package microtype Info: Applying patch `footnote' on input line 7.
+Package microtype Info: Applying patch `verbatim' on input line 7.
+LaTeX Info: Redefining \microtypesetup on input line 7.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 9.
+LaTeX Info: Redefining \showhyphens on input line 7.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1248,7 +1249,7 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 9.
+or `english'. on input line 7.
 
 (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1284,30 +1285,30 @@ Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
 LaTeX Font Info:    Trying to load font information for OT1+pplx on input line 
-11.
+9.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/ot1pplx.fd
 File: ot1pplx.fd 2004/09/06 font definitions for OT1/pplx.
 )
 LaTeX Font Info:    Trying to load font information for OML+zplm on input line 
-11.
+9.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 
-11.
+9.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 
-11.
+9.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 
-11.
+9.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
@@ -1317,520 +1318,131 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 11.
+(Font)              scaled to size 15.0049pt on input line 9.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 11.
+(Font)              scaled to size 10.42007pt on input line 9.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 11.
+(Font)              scaled to size 8.33606pt on input line 9.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 11.
+(Font)              scaled to size 15.0049pt on input line 9.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 11.
+(Font)              scaled to size 10.42007pt on input line 9.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 11.
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 11
-.
+(Font)              scaled to size 8.33606pt on input line 9.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 12.50409pt on input line 9.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 9.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 9.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 12.50409pt on input line 9.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 9.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 9.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 9.
+
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 9.41699pt on input line 11.
+(Font)              scaled to size 9.41699pt on input line 9.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `phv' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.91925pt on input line 16.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 6.25204pt on input line 16.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.91925pt on input line 16.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 6.25204pt on input line 16.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 9.41699pt on input line 20.
+(Font)              scaled to size 9.41699pt on input line 23.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 8.6pt on input line 20.
+(Font)              scaled to size 8.6pt on input line 23.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 11.40997pt on input line 23.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 11.40997pt on input line 23.
 
-(./technical_companion.toc
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-euf.cfg
+File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
+
+)
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.6pt on input line 37.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 7.74pt on input line 37.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 11.40997pt on input line 8.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 8.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 8.
+(Font)              scaled to size 5.21004pt on input line 37.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 11.40997pt on input line 8.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 8.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 8.
+(Font)              scaled to size 5.21004pt on input line 37.
+
+Overfull \hbox (43.87642pt too wide) in paragraph at lines 37--37
+ [] 
+ []
+
 
 
 [1
 
 {/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
 al/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc}]
+Package hyperref Info: bookmark level for unknown remark defaults to 0 on input
+ line 70.
 
-[2])
-\tf@toc=\write5
-\openout5 = `technical_companion.toc'.
 
-LaTeX Font Info:    Trying to load font information for TS1+pplx on input line 
-45.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/ts1pplx.fd
-File: ts1pplx.fd 2004/09/06 font definitions for TS1/pplx.
-)
+[2]
 
 [3]
 
-[4] (./source_extracts/technical_companion_source.tex
-(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-euf.cfg
-File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
-
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `cmtt' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-Package hyperref Info: bookmark level for unknown conjecture defaults to 0 on i
-nput line 28.
-Package hyperref Info: bookmark level for unknown remark defaults to 0 on input
- line 42.
-
-
-[5
-
-{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
-LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 
-157.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/ufplmbb.fd
-File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
-)
-
-[6]
-Overfull \hbox (25.86848pt too wide) in paragraph at lines 194--197
-\T1/pplx/m/n/10.95 (-20) with $\OML/zplm/m/it/10.95 C[]$ \T1/pplx/m/n/10.95 (-2
-0) the Stage 1 spec-trum of [TFPT cross-reference: \T1/cmtt/m/n/10.95 thm:cmb_t
-ransfer_closure_closed_branch\T1/pplx/m/n/10.95 (-20) ].
- []
-
-
-Overfull \hbox (18.09439pt too wide) in paragraph at lines 233--238
-[]\T1/pplx/m/n/10.95 (-20) The \T1/pplx/m/it/10.95 (-20) er-godic mi-cro-canon-
-i-cal seam lift \T1/pplx/m/n/10.95 (-20) of [TFPT cross-reference: \T1/cmtt/m/n
-/10.95 thm:cmb_seam_phase_realization\T1/pplx/m/n/10.95 (-20) ]
- []
-
-
-
-[7]
-Overfull \hbox (45.9662pt too wide) in paragraph at lines 293--296
-\T1/pplx/m/n/10.95 (-20) to which the mi-cro-canon-i-cal nor-mal-iza-tion of [T
-FPT cross-reference: \T1/cmtt/m/n/10.95 thm:cmb_seam_phase_realization\T1/pplx/
-m/n/10.95 (-20) ]
- []
-
-Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
-line 304.
-
-
-[8]
-Overfull \hbox (42.63577pt too wide) in paragraph at lines 348--355
-\T1/pplx/m/n/10.95 (-20) er-a-tors are ex-plic-itly given, the trace for-mu-lae
- of [TFPT cross-reference: \T1/cmtt/m/n/10.95 rem:finite-field-seam-mixer\T1/pp
-lx/m/n/10.95 (-20) ]
- []
-
-
-Overfull \hbox (48.70453pt too wide) in paragraph at lines 359--370
-[]\T1/pplx/m/it/10.95 (-20) Remark \T1/pplx/m/n/10.95 (-20) (Mul-ti-plic-ity au
--dit)\T1/pplx/m/it/10.95 (-20) . []\T1/pplx/m/n/10.95 (-20) The trace for-mu-la
-e of [TFPT cross-reference: \T1/cmtt/m/n/10.95 rem:finite-field-seam-mixer\T1/p
-plx/m/n/10.95 (-20) ]
- []
-
-
-Overfull \hbox (96.78355pt too wide) in paragraph at lines 373--379
-[]\T1/pplx/m/it/10.95 (-20) Remark \T1/pplx/m/n/10.95 (-20) (Sta-tus of the two
- CMB clo-sure stages)\T1/pplx/m/it/10.95 (-20) . []\T1/pplx/m/n/10.95 (-20) [TF
-PT cross-reference: \T1/cmtt/m/n/10.95 thm:cmb_transfer_closure_closed_branch\T
-1/pplx/m/n/10.95 (-20) ]
- []
-
-
-Overfull \hbox (11.01254pt too wide) in paragraph at lines 382--388
-\T1/pplx/m/n/10.95 (-20) ance plus the determinant-bound slack of [TFPT cross-r
-eference: \T1/cmtt/m/n/10.95 cor:ir-seam-transfer-bounds\T1/pplx/m/n/10.95 (-20
-) ]. 
- []
-
-
-
-[9]
-Overfull \hbox (62.86967pt too wide) in paragraph at lines 419--424
-[]\T1/pplx/m/n/10.95 (-20) the er-godic mi-cro-canon-i-cal block lift of [TFPT 
-cross-reference: \T1/cmtt/m/n/10.95 thm:cmb_seam_phase_realization\T1/pplx/m/n/
-10.95 (-20) ]
- []
-
-
-Overfull \hbox (19.22163pt too wide) in paragraph at lines 419--424
-\T1/pplx/m/n/10.95 (-20) with the finite-field re-al-iza-tion of [TFPT cross-re
-ference: \T1/cmtt/m/n/10.95 rem:finite-field-seam-mixer\T1/pplx/m/n/10.95 (-20)
- ]:
- []
-
-
-Overfull \hbox (97.86513pt too wide) in paragraph at lines 444--450
-\T1/pplx/m/n/10.95 (-20) tion of $\OMS/zplm/m/n/10.95 W[]$ \T1/pplx/m/n/10.95 (
--20) by the pro-jec-tive mod-u-lar trace co-cy-cle ([TFPT cross-reference: \T1/
-cmtt/m/n/10.95 thm:cmb_seam_phase_realization\T1/pplx/m/n/10.95 (-20) ]),
- []
-
-
-Overfull \hbox (82.0328pt too wide) in paragraph at lines 450--457
-[]\T1/pplx/b/n/10.95 (-20) Open em-pir-i-cally. \T1/pplx/m/n/10.95 (-20) The Pl
-anck-compressibility test of [TFPT cross-reference: \T1/cmtt/m/n/10.95 rem:good
--vs-this-cmb-world\T1/pplx/m/n/10.95 (-20) ]
- []
-
-
-Overfull \hbox (26.55315pt too wide) in paragraph at lines 457--463
-[]\T1/pplx/b/n/10.95 (-20) Open the-o-ret-i-cally. \T1/pplx/m/n/10.95 (-20) The
- closed-form deriva-tion of the op-er-a-tor al-ge-bra $\OT1/zplm/m/n/10.95 (\OM
-L/zplm/m/it/10.95 U[]\OT1/pplx/m/n/10.95 (-20) , \OML/zplm/m/it/10.95 P[]\OT1/p
-plx/m/n/10.95 (-20) , \OML/zplm/m/it/10.95 ^^\[]\OT1/pplx/m/n/10.95 (-20) , \OM
-L/zplm/m/it/10.95 ^^S[]\OT1/pplx/m/n/10.95 (-20) , \OML/zplm/m/it/10.95 U[]\OT1
-/pplx/m/n/10.95 (-20) , \OML/zplm/m/it/10.95 U[]\OT1/zplm/m/n/10.95 )$
- []
-
-
-
-[10]
-Overfull \hbox (24.61746pt too wide) detected at line 487
-[]
- []
-
-
-Overfull \hbox (52.56465pt too wide) in paragraph at lines 504--512
-\T1/pplx/m/n/10.95 (-20) test against Planck PR3 SMICA was ex-e-cuted un-der th
-e v2 pre-registration (`PRE_REGISTRATION_v2.md`,
- []
-
-
-Overfull \hbox (41.24371pt too wide) in paragraph at lines 504--512
-\T1/pplx/m/n/10.95 (-20) cocycle-generator SHA-256 \T1/cmtt/m/n/10.95 9d6c7c74f
-b32805d80a88e9be4edfcb35e2f40f82281124eb868fa965d89f904\T1/pplx/m/n/10.95 (-20)
- ,
- []
-
-
-Overfull \hbox (14.61533pt too wide) in paragraph at lines 504--512
-\T1/pplx/m/n/10.95 (-20) SMICA-file SHA-256 \T1/cmtt/m/n/10.95 60952c645eb33d15
-1905ddf5837477e15ca02a3261feca4ceca3c3feece4f9ac\T1/pplx/m/n/10.95 (-20) ).
- []
-
-
-
-[11]
-Overfull \hbox (0.80128pt too wide) detected at line 589
-[]
- []
-
-
-Overfull \hbox (52.04395pt too wide) in paragraph at lines 606--609
-\T1/pplx/m/n/10.95 (-20) com-pres-sion tests un-der the present proxy. The slo-
-gan is $[]$ 
- []
-
-
-
-[12]
-Package hyperref Info: bookmark level for unknown definition defaults to 0 on i
-nput line 683.
-
-
-[13]
-
-[14]
-
-[15]
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `cmss' (encoding: OT1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-
-Overfull \hbox (89.42862pt too wide) in paragraph at lines 944--947
-\T1/pplx/m/n/10.95 (-20) and from the struc-tural fal-si-fi-ca-tion map $\OT1/c
-mss/m/n/10.95 F[]\OT1/zplm/m/n/10.95 (\U/euf/m/n/10.95 T[]\OT1/zplm/m/n/10.95 )
-$ \T1/pplx/m/n/10.95 (-20) of [TFPT cross-reference: \T1/cmtt/m/n/10.95 sec:str
-uctural-falsification-map\T1/pplx/m/n/10.95 (-20) ]. 
- []
-
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 985.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 985.
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.6pt on input line 991.
-
-
-[16]
-Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
-put line 1015.
-
-Overfull \hbox (162.92111pt too wide) in paragraph at lines 1028--1032
-\T1/pplx/m/it/10.95 (-20) tion of the phys-i-cal ob-serv-able layer es-tab-lish
-ed in \T1/pplx/m/n/10.95 (-20) [TFPT cross-reference: \T1/cmtt/m/n/10.95 thm:op
-erational-completeness,cor:no-double-counting\T1/pplx/m/n/10.95 (-20) ]\T1/pplx
-/m/it/10.95 (-20) . 
- []
-
-
-
-[17]
-Overfull \hbox (5.4978pt too wide) in paragraph at lines 1075--1075
-|[][] 
- []
-
-
-
-[18]
-Package pgfplots info on input line 1208: Using 'lua backend=false' for axis: x
- coord trafo unsupported.
-
-
-[19]
-Package hyperref Info: bookmark level for unknown construction defaults to 0 on
- input line 1262.
-
-
-[20]
-Overfull \hbox (7.96873pt too wide) in paragraph at lines 1514--1514
-[]|\T1/pplx/m/n/8 (-20) Appendix [TFPT 
- []
-
-
-Overfull \hbox (8.0205pt too wide) in paragraph at lines 1514--1514
-\T1/cmtt/m/n/8 app:constants\T1/pplx/m/n/8 (-20) ]|  
- []
-
-
-
-[21]
-
-[22]
-Overfull \hbox (188.14035pt too wide) in paragraph at lines 1626--1634
-\T1/pplx/m/n/10.95 (-20) observable re-la-tions are given in [TFPT cross-refere
-nce: \T1/cmtt/m/n/10.95 prop:retained-seed-decoder,eq:cabibbo-inversion,eq:lamb
-da-c-master\T1/pplx/m/n/10.95 (-20) ].
- []
-
-
-
-[23]
-
-[24]
-
-[25]
-Package hyperref Info: bookmark level for unknown principle defaults to 0 on in
-put line 1803.
-
-Overfull \hbox (111.08766pt too wide) in paragraph at lines 1868--1874
-\T1/pplx/m/n/10.95 (-20) Theorem [TFPT cross-reference: \T1/cmtt/m/n/10.95 thm:
-cosmology-closure\T1/pplx/m/n/10.95 (-20) ] and [TFPT cross-reference: \T1/cmtt
-/m/n/10.95 cor:ir-seam-transfer-bounds\T1/pplx/m/n/10.95 (-20) ]
- []
-
-
-Overfull \hbox (45.53464pt too wide) in paragraph at lines 1911--1914
-\T1/pplx/m/it/10.95 (-20) tures 10.3[][] and [][]10.4[][] and on the rank-one t
-run-ca-tion of \T1/pplx/m/n/10.95 (-20) [TFPT cross-reference: \T1/cmtt/m/n/10.
-95 cor:ir-seam-transfer-bounds\T1/pplx/m/n/10.95 (-20) ]\T1/pplx/m/it/10.95 (-2
-0) ,
- []
-
-
-
-[26]
-
-[27]
-Overfull \hbox (468.85863pt too wide) in paragraph at lines 1988--1990
-\T1/pplx/m/n/10.95 (-20) This ap-pendix sec-tion is the mech-a-nism be-hind [TF
-PT cross-reference: \T1/cmtt/m/n/10.95 lem:admissible-reflection-positivity,thm
-:reflection-positivity-admissible,thm:lorentzian-reconstruction\T1/pplx/m/n/10.
-95 (-20) ];
- []
-
-
-Overfull \hbox (42.06541pt too wide) in paragraph at lines 2010--2017
-\T1/pplx/m/n/10.95 (-20) gether with the con-struc-tive mea-sure of [TFPT cross
--reference: \T1/cmtt/m/n/10.95 thm:constructive-geometric-measure\T1/pplx/m/n/1
-0.95 (-20) ],
- []
-
-Package hyperref Info: bookmark level for unknown theorem defaults to 0 on inpu
-t line 2037.
-
-
-[28]
-Overfull \hbox (97.82147pt too wide) in paragraph at lines 2100--2107
-[]\T1/pplx/m/n/10.95 (-20) By [TFPT cross-reference: \T1/cmtt/m/n/10.95 thm:tai
-lored-os-car-reconstruction,thm:admissible-local-minkowski-net\T1/pplx/m/n/10.9
-5 (-20) ],
- []
-
-
-
-[29]
-
-[30]
-
-[31]
-
-[32]
-Overfull \hbox (44.44228pt too wide) in paragraph at lines 2360--2362
-\T1/pplx/m/n/10.95 (-20) The hypercharge-compression re-sult of [TFPT cross-ref
-erence: \T1/cmtt/m/n/10.95 prop:family-hypercharge-compression\T1/pplx/m/n/10.9
-5 (-20) ]
- []
-
-
-Overfull \hbox (99.01706pt too wide) in paragraph at lines 2391--2393
-\T1/pplx/m/n/10.95 (-20) where the last equal-ity uses the Hodge de-scrip-tion 
-of [TFPT cross-reference: \T1/cmtt/m/n/10.95 lem:hodge-admissibility-projector\
-T1/pplx/m/n/10.95 (-20) ].
- []
-
-
-
-[33]
-
-[34]
-
-[35]
-
-[36]
-
-[37]
-
-[38]
-
-[39]
-
-[40]
-Overfull \hbox (16.65549pt too wide) in paragraph at lines 2888--2888
-|[][] 
- []
-
-
-
-[41]
-
-[42]
-
-[43])
-
-[44]
-
-[45]
-
-[46]
-
-[47]
-
-[48]
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 15.0049pt on input line 100.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 15.0049pt on input line 100.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 100.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\beta' on input line 100.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 100.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 100.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 135.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\beta' on input line 135.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 135.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 135.
-
-
-
-[49
-
-]
-
-[50]
-
-[51
-
-]
-
-[52] (./technical_companion.aux)
+[4] (./tfpt_prediction_eht_achromatic_intercept.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-Package rerunfilecheck Info: File `technical_companion.out' has not changed.
-(rerunfilecheck)             Checksum: 11B4141DE8B8C945AF889F6796A86075;18788.
+Package rerunfilecheck Info: File `tfpt_prediction_eht_achromatic_intercept.out
+' has not changed.
+(rerunfilecheck)             Checksum: 4D5A8CD1C36A7E611249AA1EFD18C2A8;1502.
  ) 
 Here is how much of TeX's memory you used:
- 50356 strings out of 473190
- 1174468 string characters out of 5715801
- 1745482 words of memory out of 5000000
- 71535 multiletter control sequences out of 15000+600000
- 721385 words of font info for 913 fonts, out of 8000000 for 9000
+ 48497 strings out of 473190
+ 1136169 string characters out of 5715801
+ 1639203 words of memory out of 5000000
+ 70499 multiletter control sequences out of 15000+600000
+ 674825 words of font info for 529 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 121i,25n,124p,1016b,2184s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 126i,12n,127p,1037b,1425s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 ></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
-usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></u
-sr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr
-/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
-local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></us
-r/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></u
-sr/local/texlive/2025/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/l
-ocal/texlive/2025/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/
-texlive/2025/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texl
-ive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/
-texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></usr/local/te
-xlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texl
-ive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texliv
-e/2025/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2025/
-texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2025/texmf-d
-ist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2025/texmf-dist/fon
-ts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type
-1/urw/palatino/uplri8a.pfb>
-Output written on technical_companion.pdf (52 pages, 516649 bytes).
+usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
+sr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><
+/usr/local/texlive/2025/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/
+local/texlive/2025/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/loca
+l/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texli
+ve/2025/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2025
+/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2025/texmf-
+dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2025/texmf-dist/fo
+nts/type1/urw/palatino/uplri8a.pfb>
+Output written on tfpt_prediction_eht_achromatic_intercept.pdf (4 pages, 147739
+ bytes).
 PDF statistics:
- 1073 PDF objects out of 1200 (max. 8388607)
- 963 compressed objects within 10 object streams
- 335 named destinations out of 1000 (max. 500000)
- 208005 words of extra memory for PDF output out of 221844 (max. 10000000)
+ 150 PDF objects out of 1000 (max. 8388607)
+ 118 compressed objects within 2 object streams
+ 29 named destinations out of 1000 (max. 500000)
+ 143437 words of extra memory for PDF output out of 154059 (max. 10000000)
 

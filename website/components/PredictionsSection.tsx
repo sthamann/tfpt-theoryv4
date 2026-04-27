@@ -17,6 +17,7 @@ const FILTERS: { id: Prediction["category"] | "All"; label: string }[] = [
   { id: "QCD/EDM", label: "QCD / EDM" },
   { id: "Cosmology", label: "Cosmology" },
   { id: "Higgs", label: "Higgs" },
+  { id: "Astrophysics", label: "Astrophysics" },
 ];
 
 export function PredictionsSection() {
@@ -50,7 +51,7 @@ export function PredictionsSection() {
           description="Every row below is a single closed-branch readout with an explicit dependency class and a stated kill or pressure criterion. Each entry has its own dedicated standalone paper for review and submission."
         />
 
-        <div className="mt-6 grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+        <div className="mt-6 grid gap-3 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-8">
           <div className="glass flex flex-col rounded-xl px-4 py-3 ring-1 ring-slate-700/40">
             <span className="text-[10px] font-semibold uppercase tracking-widest text-slate-400">
               Total

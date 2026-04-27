@@ -1,7 +1,8 @@
 \contentsline {section}{\numberline {1}Boundary Spectral Unit}{2}{section.1}%
 \contentsline {section}{\numberline {2}Geometric Hodge Closure}{2}{section.2}%
 \contentsline {section}{\numberline {3}Planck Normalization}{2}{section.3}%
-\contentsline {section}{\numberline {4}Electroweak Matching}{2}{section.4}%
+\contentsline {subsection}{\numberline {3.1}Einstein-limit normalizer $\xi =c_3/\varphi _0^{\mathrm {ret}}$}{3}{subsection.3.1}%
+\contentsline {section}{\numberline {4}Electroweak Matching}{3}{section.4}%
 \contentsline {section}{\numberline {5}Observable Functor}{3}{section.5}%
 \contentsline {section}{\numberline {6}Main Technical Development}{4}{section.6}%
 \contentsline {subsection}{\numberline {6.1}From bridge to geometric completion}{4}{subsection.6.1}%
