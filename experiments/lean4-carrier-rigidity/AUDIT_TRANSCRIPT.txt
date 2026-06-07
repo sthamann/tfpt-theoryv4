@@ -1,0 +1,30 @@
+TFPT carrier-rigidity Lean audit transcript
+date: 2026-06-02T19:21:53Z
+toolchain: leanprover/lean4:v4.29.1
+lean: Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)
+command: bash scripts/audit.sh
+============================================================
+
+=== Build ===
+  [PASS] lake build succeeded
+
+=== sorry / admit ===
+  [PASS] no sorry or admit found
+
+=== axiom / constant declarations ===
+  [PASS] no axiom or constant declarations
+
+=== unsafe / opaque / partial declarations ===
+  [PASS] no unsafe / opaque / partial declarations
+
+=== axiom audit (#print axioms) ===
+  [PASS] all theorems use only [propext, Classical.choice, Quot.sound]
+
+=== headline theorems (Lean #check) ===
+  [PASS] AuditCheck.lean elaborated; all headline #checks succeeded
+
+=== theorem signatures (Lean example signature-lock) ===
+  [PASS] AuditContract.lean elaborated; all signature locks hold
+
+=== Final verdict ===
+  AUDIT: PASS

@@ -55,6 +55,45 @@ cosmological comparison rows.
 \textbf{Kill condition.} Any hidden SI input such as external $G_N$, $G_F$, GeV scale, or Planck normalization enters before the readout map.\par
 \end{tfptclaimcontract}
 
+\begin{tfptstatusbox}
+\textbf{\stag{L} (Lean verified) used as input.}\ The $3+2$
+hypercharge carrier of Paper 2 enters as the algebraic anchor
+for the boundary-normalised metrology.
+
+\smallskip
+\textbf{\stag{I} (Lean interfaced).}\ The Paper-1 input enters
+as \texttt{BoundaryPolarization}. The Higgs rank-2 interface
+enters via \texttt{HiggsTopForm} (Lean-proved at the algebraic
+shadow level: $E_+ \simeq K[X_0,X_1]_1$).
+
+\smallskip
+\textbf{Higgs-rank-2 origin: \stag{M} with \stag{L} algebraic
+shadow and \stag{S} Proj cohomology.}\ The Higgs rank-2
+discharge is reached by combining three pieces:
+\begin{itemize}[leftmargin=1.6em, itemsep=0pt]
+    \item the Lean theorem
+        \texttt{HiggsSchemeCohomologyShadow.toDegreeOneTwoVarForm}
+        ($K[X_0,X_1]_1 \simeq_K \texttt{DegreeOneTwoVarForm}\,K$,
+        \stag{L});
+    \item the present paper's manuscript proof of the compact
+        Higgs index on the seam-even bosonic block (\stag{M});
+    \item the standard algebraic-geometry identification
+        $H^0(\mathrm{Proj}\,K[X,Y], \mathcal O(1)) \simeq K[X,Y]_1$
+        (\stag{S}: cited, not reproved).
+\end{itemize}
+Taking those three together, the Higgs rank-2 statement
+$\dim E_+ = 2$ is therefore \stag{M} as a TFPT theorem with a
+Lean-verified algebraic shadow.
+
+\smallskip
+\textbf{\stag{C} (downstream observable readouts).}\ The
+boundary spectral unit $\lambda_\Sigma$ as a Planck
+normalisation, the resulting electroweak matching, and the
+dimensionless observable functor are presented as
+\emph{conditional} downstream readouts. The audit obligation
+is that no SI input enters before the readout map.
+\end{tfptstatusbox}
+
 \tableofcontents
 
 \section{Boundary Spectral Unit}
@@ -159,6 +198,21 @@ distinction visible whenever a physical readout is compared to an empirical row.
 \section{Main Technical Development}
 
 This section contains the main technical development assigned to this paper by the TFPT 4.5 clean split. Cross-paper background is referenced through dependency and scope boxes; extended backend material is kept in the Technical Companion.
+
+\begin{tfptwarningbox}
+\textbf{Status-tier mapping for the source-extract body.}\
+The body contains \stag{M} manuscript theorems on the boundary
+spectral unit, the absolute spectral Planck closure, the
+stationary vacuum theorem, and the Higgs / electroweak matching
+on the boundary-normalised functor. None of these are \stag{L}.
+Theorems labelled \stag{A} in the legacy source-extract style
+should be read as \stag{M}. Downstream observable readouts
+(reduced-Planck, Newton, Schwarzschild--de~Sitter, electroweak)
+remain \stag{C} until the SI-projection / scheme step is
+explicitly separated.
+\end{tfptwarningbox}
+
+\tfptDraftXrefNotice
 
 \input{source_extracts/05_metrology_source.tex}
 

@@ -58,6 +58,38 @@ locality-domain regularity, and a stated massive-sector gap where scattering is 
 \textbf{Kill condition.} Hidden positivity/gap assumption, nonzero strong-CP angle, or failure of OS/local-net hypotheses.\par
 \end{tfptclaimcontract}
 
+\begin{tfptstatusbox}
+\textbf{\stag{L} (Lean verified) used as input.}\ The $3+2$
+hypercharge carrier from Paper 2 supplies $Y$,
+$(q_-,q_+) = (-2,3)$, $\tr_E Y = 0$, and the carrier polynomial.
+
+\smallskip
+\textbf{\stag{I} (Lean interfaced).}\ The Paper-1 boundary
+input is \texttt{BoundaryPolarization}; the seam-class input
+is \texttt{SeamWindingData}; the Yukawa Stage-D upstream input
+is \texttt{BoundaryYukawaKernel}. The body's manuscript
+"primitive Yukawa generator" / "branch Yukawa tensor"
+construction is intended to factor through these typed
+targets.
+
+\smallskip
+\textbf{\stag{M} (manuscript-theorem content).}\ The
+manuscript-level theorems in the source-extract body
+(Yukawa rigidity from the primitive component of the branch
+Yukawa tensor, primitive Yukawa generator existence, lowest
+primitive Yukawa generator) are \stag{M}.
+
+\smallskip
+\textbf{\stag{C} (conditional, the QFT closure layer).}\ The
+admissibility selector $\Padm$, the strong-CP closure
+$\theta_{\mathrm{eff}} = 0$, the OS / reflection-positivity
+reconstruction, the local-net structure, the scattering /
+S-matrix layer, and the exact RG / nonperturbative flow are
+\emph{conditional} on the analytic hypotheses listed in the
+claim contract. They are \emph{not} \stag{L} and should be
+read with their hypotheses in the statement.
+\end{tfptstatusbox}
+
 \tableofcontents
 
 \section{Selector Versus Dynamics}
@@ -131,6 +163,36 @@ included only as far as it supports the QFT closure layer.
 \section{Main Technical Development}
 
 This section contains the main technical development assigned to this paper by the TFPT 4.5 clean split. Cross-paper background is referenced through dependency and scope boxes; extended backend material is kept in the Technical Companion.
+
+\begin{tfptwarningbox}
+\textbf{Status-tier mapping for the source-extract body.}\
+The text below carries the manuscript precursors of the
+Yukawa Stage-D content. Specifically, the
+``\emph{Primitive Yukawa generator}'' definition, the
+``\emph{Lowest primitive Yukawa generator on the closed
+branch}'' lemma, and the ``\emph{Carrier rigidity from the
+primitive component of the branch Yukawa tensor}'' theorem
+are the source-side picture of what the companion Lean note
+records as the v11 typed interface
+\[
+\text{branch Yukawa tensor (manuscript)}
+\;\Longrightarrow\;
+\texttt{BoundaryYukawaKernel}\,K\,E_-
+\;\Longrightarrow\;
+\bigl(\omega,\ \texttt{CI},\ \texttt{CS},\ \texttt{Nontrivial}\,E_-\bigr).
+\]
+Read the body under this mapping. The
+\stag{L} content of the rank-3 discharge is
+\texttt{YukawaStageDExistence.stage\_D\_iff\_finrank\_eq\_three};
+the manuscript theorem ``Carrier rigidity from the primitive
+component of the branch Yukawa tensor'' is \stag{M}, intended
+to factor through the \stag{I} target
+\texttt{BoundaryYukawaKernel}. Strong-CP, hadronic admissibility,
+and seam-inflow theorems are \stag{C} (conditional on the
+analytic hypotheses listed in the claim contract).
+\end{tfptwarningbox}
+
+\tfptDraftXrefNotice
 
 \input{source_extracts/04_qft_source.tex}
 

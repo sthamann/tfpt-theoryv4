@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  27 APR 2026 14:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  1 JUN 2026 12:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1373,33 +1373,44 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 11.40997pt on input line 25.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 8.33606pt on input line 25.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Trying to load font information for TS1+pplx on input line 
+74.
 
-(./05_geometric_hodge_closure_dimensionless_metrology.toc
+(/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/ts1pplx.fd
+File: ts1pplx.fd 2004/09/06 font definitions for TS1/pplx.
+)
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.6pt on input line 77.
+
 
 [1
 
 {/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
-al/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc}])
+al/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc}]
+(./05_geometric_hodge_closure_dimensionless_metrology.toc)
 \tf@toc=\write5
 \openout5 = `05_geometric_hodge_closure_dimensionless_metrology.toc'.
 
 
 
-[2]
+[2{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
+]
+
+[3]
 Package hyperref Info: bookmark level for unknown remark defaults to 0 on input
- line 124.
+ line 163.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-euf.cfg
 File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
 
 )
 
-[3] (./source_extracts/05_metrology_source.tex
+[4] (./source_extracts/05_metrology_source.tex
 Package hyperref Info: bookmark level for unknown principle defaults to 0 on in
 put line 7.
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `cmtt' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 
 40.
 
@@ -1410,9 +1421,9 @@ Package hyperref Info: bookmark level for unknown theorem defaults to 0 on inpu
 t line 45.
 
 
-[4
+[5
 
-{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
+]
 Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
 put line 92.
 Package hyperref Info: bookmark level for unknown definition defaults to 0 on i
@@ -1426,11 +1437,11 @@ Overfull \hbox (12.94644pt too wide) in paragraph at lines 140--143
 
 
 
-[5]
-
 [6]
 
 [7]
+
+[8]
 Overfull \hbox (12.55238pt too wide) in paragraph at lines 372--377
 \T1/cmtt/m/n/10.95 cor:bosonic-rank-two,thm:yukawa-forces-32,cor:yukawa-dischar
 ges-kpp\T1/pplx/m/n/10.95 (-20) ], once the closure-
@@ -1444,18 +1455,16 @@ LaTeX Font Info:    Font shape `U/msa/m/n' will be
 (Font)              scaled to size 15.0049pt on input line 405.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 15.0049pt on input line 405.
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.6pt on input line 412.
 
-
-[8]
 
 [9]
+
+[10]
+
+[11]
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
 line 621.
 
-
-[10]
 Overfull \hbox (15.62694pt too wide) in paragraph at lines 652--654
 \T1/pplx/m/n/10.95 (-20) Using $[] \OT1/zplm/m/n/10.95 = \OML/zplm/m/it/10.95 ^
 ^_[]\OT1/zplm/m/n/10.95 /(\OT1/pplx/m/n/10.95 (-20) 2\OML/zplm/m/it/10.95 ^^Y[]
@@ -1465,11 +1474,11 @@ Overfull \hbox (15.62694pt too wide) in paragraph at lines 652--654
 
 
 
-[11]
-
 [12]
 
 [13]
+
+[14]
 Overfull \hbox (84.47026pt too wide) in paragraph at lines 910--914
 \T1/pplx/m/n/10.95 (-20) mis-si-ble $\OML/zplm/m/it/10.95 C[]$ \T1/pplx/m/n/10.
 95 (-20) cusp is $\OT1/pplx/m/n/10.95 (-20) 1\OT1/zplm/m/n/10.95 /\OT1/pplx/m/n
@@ -1479,8 +1488,6 @@ Overfull \hbox (84.47026pt too wide) in paragraph at lines 910--914
  []
 
 
-
-[14]
 
 [15]
 
@@ -1497,6 +1504,8 @@ Overfull \hbox (84.47026pt too wide) in paragraph at lines 910--914
 [21]
 
 [22]
+
+[23]
 Overfull \hbox (33.06183pt too wide) in paragraph at lines 1772--1774
 []\T1/pplx/m/it/10.95 (-20) the con-struc-tive ge-o-met-ric mea-sure of \T1/ppl
 x/m/n/10.95 (-20) [TFPT cross-reference: \T1/cmtt/m/n/10.95 thm:constructive-ge
@@ -1505,7 +1514,7 @@ ometric-measure\T1/pplx/m/n/10.95 (-20) ]
 
 
 
-[23]
+[24]
 Overfull \hbox (138.93849pt too wide) in paragraph at lines 1872--1874
 []\T1/pplx/b/n/10.95 (-20) Corollary 7.2 \T1/pplx/m/n/10.95 (-20) (Unique sta-t
 ion-ary spec-tral Planck root)\T1/pplx/b/n/10.95 (-20) . []\T1/pplx/m/it/10.95 
@@ -1516,7 +1525,9 @@ ion-ary spec-tral Planck root)\T1/pplx/b/n/10.95 (-20) . []\T1/pplx/m/it/10.95
 
 
 
-[24]
+[25]
+
+[26]
 Overfull \hbox (60.90094pt too wide) in paragraph at lines 1991--1995
 \T1/pplx/m/n/10.95 (-20) branch vari-ables. On the canon-i-cal car-rier branch,
  [TFPT cross-reference: \T1/cmtt/m/n/10.95 cor:rank-5-master-compression\T1/ppl
@@ -1524,8 +1535,6 @@ x/m/n/10.95 (-20) ]
  []
 
 
-
-[25]
 Overfull \hbox (53.46194pt too wide) in paragraph at lines 2042--2046
 []\T1/pplx/m/n/10.95 (-20) The match-ing iden-tity is ex-actly [TFPT cross-refe
 rence: \T1/cmtt/m/n/10.95 thm:ew-geometric-to-physical-matching\T1/pplx/m/n/10.
@@ -1541,18 +1550,18 @@ eference: \T1/cmtt/m/n/10.95 thm:operational-completeness\T1/pplx/m/n/10.95 (-2
 
 
 
-[26]
+[27]
 
-[27])
-LaTeX Font Info:    Trying to load font information for TS1+pplx on input line 
-170.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/ts1pplx.fd
-File: ts1pplx.fd 2004/09/06 font definitions for TS1/pplx.
-)
+[28])
 
-[28]
+[29]
 
-[29] (./05_geometric_hodge_closure_dimensionless_metrology.aux)
+Package tcolorbox Warning: Using nobreak failed. Try to enlarge `lines before b
+reak' or set page breaks manually on input line 231.
+
+
+
+[30] (./05_geometric_hodge_closure_dimensionless_metrology.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1562,13 +1571,13 @@ rology.out' has not changed.
 (rerunfilecheck)             Checksum: 2C8890AC4EA1FE2DB44BC5BC3622F306;5109.
  ) 
 Here is how much of TeX's memory you used:
- 49376 strings out of 473190
- 1153920 string characters out of 5715801
- 1649736 words of memory out of 5000000
- 70952 multiletter control sequences out of 15000+600000
- 701253 words of font info for 735 fonts, out of 8000000 for 9000
+ 49462 strings out of 473190
+ 1154863 string characters out of 5715801
+ 1652419 words of memory out of 5000000
+ 70974 multiletter control sequences out of 15000+600000
+ 708080 words of font info for 785 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 121i,13n,124p,1047b,1338s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 121i,13n,124p,1047b,1437s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 ></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
@@ -1578,17 +1587,18 @@ sr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><
 /local/texlive/2025/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/loca
 l/texlive/2025/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/te
 xlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loca
-l/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/
-texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive
-/2025/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2025/t
-exmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2025/texmf-di
-st/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2025/texmf-dist/font
-s/type1/urw/palatino/uplri8a.pfb>
-Output written on 05_geometric_hodge_closure_dimensionless_metrology.pdf (29 pa
-ges, 326418 bytes).
+l/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/
+texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/te
+xlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2
+025/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2025/tex
+mf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2025/texmf-dist
+/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/
+type1/urw/palatino/uplri8a.pfb>
+Output written on 05_geometric_hodge_closure_dimensionless_metrology.pdf (30 pa
+ges, 364268 bytes).
 PDF statistics:
- 521 PDF objects out of 1000 (max. 8388607)
- 455 compressed objects within 5 object streams
- 172 named destinations out of 1000 (max. 500000)
- 187069 words of extra memory for PDF output out of 221844 (max. 10000000)
+ 530 PDF objects out of 1000 (max. 8388607)
+ 461 compressed objects within 5 object streams
+ 173 named destinations out of 1000 (max. 500000)
+ 194749 words of extra memory for PDF output out of 221844 (max. 10000000)
 

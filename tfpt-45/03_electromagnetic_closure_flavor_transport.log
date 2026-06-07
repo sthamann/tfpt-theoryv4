@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  27 APR 2026 14:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  1 JUN 2026 12:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1384,12 +1384,20 @@ lm/m/it/10.95 ^^L \OT1/zplm/m/n/10.95 = \OML/zplm/m/it/10.95 ^^L[][] \OMS/zplm/
 m/n/10.95 ^^Y \OT1/pplx/m/n/10.95 0.2424[],
  []
 
-(./03_electromagnetic_closure_flavor_transport.toc
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.6pt on input line 49.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
 
 [1
 
 {/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
-al/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc}])
+al/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2025
+/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
+(./03_electromagnetic_closure_flavor_transport.toc)
 \tf@toc=\write5
 \openout5 = `03_electromagnetic_closure_flavor_transport.toc'.
 
@@ -1397,27 +1405,29 @@ al/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc}])
 
 [2]
 Package hyperref Info: bookmark level for unknown remark defaults to 0 on input
- line 119.
+ line 159.
 
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 168--168
+Underfull \hbox (badness 10000) in paragraph at lines 208--208
 []|\T1/pplx/b/n/10.95 (+20) Prior de-pen-
  []
 
 
-Underfull \hbox (badness 2608) in paragraph at lines 168--168
+Underfull \hbox (badness 2608) in paragraph at lines 208--208
 []|\T1/pplx/m/n/10.95 (+20) Paper 1 prim-i-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 168--168
+Underfull \hbox (badness 10000) in paragraph at lines 208--208
 []|\T1/pplx/m/n/10.95 (+20) Carrier/Higgs
  []
 
 
 
-[4] (./source_extracts/03_em_flavor_source.tex
+[4]
+
+[5] (./source_extracts/03_em_flavor_source.tex
 Package hyperref Info: bookmark level for unknown theorem defaults to 0 on inpu
 t line 9.
 LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 
@@ -1430,38 +1440,29 @@ LaTeX Font Info:    Font shape `U/msa/m/n' will be
 (Font)              scaled to size 5.21004pt on input line 58.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 5.21004pt on input line 58.
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.6pt on input line 71.
 Package hyperref Info: bookmark level for unknown proposition defaults to 0 on 
 input line 87.
 Package hyperref Info: bookmark level for unknown definition defaults to 0 on i
 nput line 94.
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `cmtt' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
 
 
-[5
+[6
 
 ]
 
-[6{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-]
+[7]
 
-[7] (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-euf.cfg
+[8] (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-euf.cfg
 File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
 
 )
 
-[8]
-
 [9]
+
+[10]
 Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
 put line 475.
 
-
-[10]
 
 [11]
 
@@ -1472,13 +1473,15 @@ put line 475.
 [14]
 
 [15]
+
+[16]
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
 line 999.
 
 
-[16]
-
 [17]
+
+[18]
 Overfull \hbox (167.50513pt too wide) in paragraph at lines 1199--1205
 \T1/pplx/m/it/10.95 (-20) sen-ta-tion is the ex-plicit holon-omy da-tum $\OML/z
 plm/m/it/10.95 ^^Z[]$ \T1/pplx/m/it/10.95 (-20) of \T1/pplx/m/n/10.95 (-20) [TF
@@ -1488,17 +1491,15 @@ dromy-rigidity\T1/pplx/m/n/10.95 (-20) ]\T1/pplx/m/it/10.95 (-20) .
 
 
 
-[18]
-
 [19]
+
+[20]
 Overfull \hbox (1.22343pt too wide) in paragraph at lines 1298--1304
 \T1/cmtt/m/n/10.95 def:structural-transport-kernel,thm:algebraic-transport-pole
 \T1/pplx/m/n/10.95 (-20) ] fixes the struc-tural pos-
  []
 
 
-
-[20]
 
 [21]
 
@@ -1517,6 +1518,8 @@ Overfull \hbox (1.22343pt too wide) in paragraph at lines 1298--1304
 [28]
 
 [29]
+
+[30]
 Overfull \hbox (56.48747pt too wide) in paragraph at lines 2205--2208
 \T1/pplx/m/it/10.95 (-20) is a branch in-vari-ant fixed by the hard holon-omy f
 orm of \T1/pplx/m/n/10.95 (-20) [TFPT cross-reference: \T1/cmtt/m/n/10.95 thm:e
@@ -1531,9 +1534,9 @@ Overfull \hbox (7.6305pt too wide) in paragraph at lines 2224--2229
 
 
 
-[30]
-
 [31]
+
+[32]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
@@ -1552,7 +1555,7 @@ LaTeX Font Info:    Trying to load font information for TS1+pplx on input line
 File: ts1pplx.fd 2004/09/06 font definitions for TS1/pplx.
 )
 
-[32]
+[33]
 Overfull \hbox (162.92111pt too wide) in paragraph at lines 2409--2413
 \T1/pplx/m/it/10.95 (-20) tion of the phys-i-cal ob-serv-able layer es-tab-lish
 ed in \T1/pplx/m/n/10.95 (-20) [TFPT cross-reference: \T1/cmtt/m/n/10.95 thm:op
@@ -1567,15 +1570,15 @@ Overfull \hbox (5.4978pt too wide) in paragraph at lines 2456--2456
 
 
 
-[33])
-
-[34]
+[34])
 
 [35]
 
-[36] (./source_extracts/bibliography_precision.tex)
+[36]
 
-[37
+[37] (./source_extracts/bibliography_precision.tex)
+
+[38
 
 ] (./03_electromagnetic_closure_flavor_transport.aux)
  ***********
@@ -1587,11 +1590,11 @@ out' has not changed.
 (rerunfilecheck)             Checksum: 598BA8C8D8CD199A4CD586530186ADEF;5174.
  ) 
 Here is how much of TeX's memory you used:
- 49734 strings out of 473190
- 1159278 string characters out of 5715801
- 1684369 words of memory out of 5000000
- 71151 multiletter control sequences out of 15000+600000
- 707488 words of font info for 813 fonts, out of 8000000 for 9000
+ 49798 strings out of 473190
+ 1159855 string characters out of 5715801
+ 1686039 words of memory out of 5000000
+ 71157 multiletter control sequences out of 15000+600000
+ 710606 words of font info for 857 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  121i,24n,124p,1040b,1447s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
@@ -1611,11 +1614,11 @@ live/2025/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/20
 f-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2025/texmf-dist/
 fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/t
 ype1/urw/palatino/uplri8a.pfb>
-Output written on 03_electromagnetic_closure_flavor_transport.pdf (37 pages, 38
-7201 bytes).
+Output written on 03_electromagnetic_closure_flavor_transport.pdf (38 pages, 39
+9545 bytes).
 PDF statistics:
- 621 PDF objects out of 1000 (max. 8388607)
- 540 compressed objects within 6 object streams
- 208 named destinations out of 1000 (max. 500000)
+ 625 PDF objects out of 1000 (max. 8388607)
+ 543 compressed objects within 6 object streams
+ 209 named destinations out of 1000 (max. 500000)
  189125 words of extra memory for PDF output out of 221844 (max. 10000000)
 

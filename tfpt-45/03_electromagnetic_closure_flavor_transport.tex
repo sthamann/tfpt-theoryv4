@@ -45,11 +45,51 @@ ruled out by the same branch constraints.
 
 \begin{tfptclaimcontract}
 \textbf{Claim.} Exact electromagnetic fixed point and flavor/PMNS/CKM readouts on the rigid branch.\par
-\textbf{Inputs.} Papers 1--2: primitive kernel, carrier packet, family count, Higgs index, abelian index.\par
+\textbf{Inputs.}\
+\stag{L} carrier core from Paper 2
+($Y$, $(q_-,q_+)=(-2,3)$, $\tr_E Y = 0$, $6Y^2-Y-\mathbf 1 = \mathbf 0$);\
+\stag{I} boundary input from Paper 1 (\texttt{BoundaryPolarization});\
+\stag{C} conditional downstream branch ledger from Paper 2's
+\stag{C} outlook ($N_{\mathrm{fam}}$, $\Omega_{\mathrm{adm}}$,
+$N_\Phi$, $b_1$). The numerical readouts of the present paper
+depend on the \stag{C} branch ledger and are therefore
+themselves \stag{C} until those upstream values are upgraded.\par
 \textbf{First assumptions.} Exact seam opening $\phiseam(\alpha)$, transport pole, retained seed as UV shadow, branch budget $41$.\par
 \textbf{Proof status.} Bridge/readout layer with no-knobs audit.\par
 \textbf{Kill condition.} Frozen inputs move after comparison, alternative discrete worlds survive, or precision rows fail stated tests.\par
 \end{tfptclaimcontract}
+
+\begin{tfptstatusbox}
+\textbf{\stag{L} (Lean verified) used as input.}\ The $3+2$
+hypercharge carrier from Paper 2 is the only \stag{L} input of
+this paper:
+\[
+Y = \operatorname{diag}\!\left(-\tfrac13,-\tfrac13,-\tfrac13,\tfrac12,\tfrac12\right),
+\quad
+\tr_E Y = 0,
+\quad
+6 Y^2 - Y - \mathbf 1 = \mathbf 0.
+\]
+
+\smallskip
+\textbf{\stag{I} (Lean interfaced).}\ Paper~1's boundary input
+enters via the Lean-typed \texttt{BoundaryPolarization}; no
+\stag{I} obligation is discharged in the present paper.
+
+\smallskip
+\textbf{\stag{C} (this paper's content).}\ The electromagnetic
+fixed point $\alpha$, the seam opening $\phiseam(\alpha)$, the
+photon-line normalisation $\delta_{\mathrm{ph}}$, the Cabibbo
+angle $\lambda_C$, the radiative slope $\beta_{\mathrm{rad}}$,
+the baryon density $\Omega_b$, the reactor angle $\theta_{13}$,
+and the CKM / PMNS readouts are presented as predictions of
+the closed branch, \emph{conditional on} (a) the \stag{L}
+carrier core, (b) the \stag{I} Paper-1 input, and (c) Paper 2's
+\stag{C} downstream branch ledger
+($N_{\mathrm{fam}}$, $\Omega_{\mathrm{adm}}$, $N_\Phi$, $b_1$).
+They are \emph{not} \stag{L} and \emph{not} present manuscript
+\stag{M} theorems.
+\end{tfptstatusbox}
 
 \tableofcontents
 

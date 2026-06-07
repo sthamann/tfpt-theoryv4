@@ -1,23 +1,25 @@
-\contentsline {section}{\numberline {1}Carrier Polynomial as a Corollary}{2}{section.1}%
-\contentsline {section}{\numberline {2}Hypercharge and Gauge Quotient}{4}{section.2}%
-\contentsline {section}{\numberline {3}One-Family Packet}{4}{section.3}%
-\contentsline {section}{\numberline {4}Discharging the Rank and Exterior Premises}{4}{section.4}%
-\contentsline {section}{\numberline {5}Counting Outputs}{4}{section.5}%
-\contentsline {section}{\numberline {6}Main Result}{4}{section.6}%
-\contentsline {section}{\numberline {7}Audit Protocol}{5}{section.7}%
-\contentsline {section}{\numberline {8}Main Technical Development}{6}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Carrier algebraic normal form}{6}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Internal carrier stabilizer and one-family packet}{10}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Character, trace identities, and the abelian index}{14}{subsection.8.3}%
-\contentsline {section}{\numberline {9}Compression identities and numerical comparison of alternative discrete worlds}{17}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Derived $48=4\cdot 12$ identity and the $2$-$3$-$5$ arithmetic}{17}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Carrier compressions on the minimal branch}{20}{subsection.9.2}%
-\contentsline {subsection}{\numberline {9.3}Generic abelian index identity}{22}{subsection.9.3}%
-\contentsline {section}{\numberline {10}Closure architecture A: families, Higgs, and local spectral scale}{22}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Family monodromy and occupancy}{23}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}Occupancy and boundary-to-bulk bridge}{25}{subsection.10.2}%
-\contentsline {subsection}{\numberline {10.3}From bridge to geometric completion}{26}{subsection.10.3}%
-\contentsline {subsection}{\numberline {10.4}Relative APS and superconnection setup}{26}{subsection.10.4}%
-\contentsline {subsection}{\numberline {10.5}Bosonic relative index and Higgs selection}{28}{subsection.10.5}%
-\contentsline {section}{\numberline {11}Source Extraction Map}{43}{section.11}%
-\contentsline {section}{\numberline {12}Not Used Here}{44}{section.12}%
+\contentsline {section}{\numberline {1}Formal Status of the Carrier Theorem}{3}{section.1}%
+\contentsline {section}{\numberline {2}Carrier Polynomial as a Corollary}{4}{section.2}%
+\contentsline {section}{\numberline {3}Seam Winding as Source of the Integer Conditions}{5}{section.3}%
+\contentsline {section}{\numberline {4}Hypercharge and Gauge Quotient (Status C outlook)}{6}{section.4}%
+\contentsline {section}{\numberline {5}One-Family Packet (Status C outlook)}{6}{section.5}%
+\contentsline {section}{\numberline {6}Discharging the Rank and Exterior Premises}{7}{section.6}%
+\contentsline {section}{\numberline {7}Counting Outputs (Status C outlook)}{7}{section.7}%
+\contentsline {section}{\numberline {8}Main Result --- Carrier Rigidity (Status A)}{7}{section.8}%
+\contentsline {section}{\numberline {9}Audit Protocol}{7}{section.9}%
+\contentsline {section}{\numberline {10}Main Technical Development}{9}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Carrier algebraic normal form}{10}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Internal carrier stabilizer and one-family packet}{14}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Character, trace identities, and the abelian index}{18}{subsection.10.3}%
+\contentsline {section}{\numberline {11}Compression identities and numerical comparison of alternative discrete worlds}{21}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Derived $48=4\cdot 12$ identity and the $2$-$3$-$5$ arithmetic}{21}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}Carrier compressions on the minimal branch}{24}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}Generic abelian index identity}{26}{subsection.11.3}%
+\contentsline {section}{\numberline {12}Closure architecture A: families, Higgs, and local spectral scale}{26}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Family monodromy and occupancy}{27}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2}Occupancy and boundary-to-bulk bridge}{29}{subsection.12.2}%
+\contentsline {subsection}{\numberline {12.3}From bridge to geometric completion}{30}{subsection.12.3}%
+\contentsline {subsection}{\numberline {12.4}Relative APS and superconnection setup}{30}{subsection.12.4}%
+\contentsline {subsection}{\numberline {12.5}Bosonic relative index and Higgs selection}{32}{subsection.12.5}%
+\contentsline {section}{\numberline {13}Source Extraction Map}{47}{section.13}%
+\contentsline {section}{\numberline {14}Not Used Here}{48}{section.14}%

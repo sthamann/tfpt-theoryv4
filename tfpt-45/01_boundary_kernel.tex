@@ -42,6 +42,56 @@ the primitive seam class.
 \textbf{Kill condition.} Failure of the boundary datum to determine $P_C$, $\iC$, $\taudbl$, $\Pprim$, $[u_\Sigma]$, or $\cthree$.\par
 \end{tfptclaimcontract}
 
+\begin{tfptstatusbox}
+\textbf{\stag{L} (Lean verified).}\ None in this paper's
+body. The analytic content of this paper is not formalised
+in Lean.
+
+\smallskip\noindent
+\textbf{\stag{I} (Lean interfaced).}\ The algebraic shadow of
+the Calder\'on polarisation has an explicit Lean target type
+in the companion Lean note. The chain
+\[
+H = H_+ \oplus H_-
+\;\Rightarrow\;
+\pi^2 = \pi
+\;\Rightarrow\;
+\varepsilon^2 = \mathbf 1
+\;\Rightarrow\;
+P_\pm
+\]
+is Lean-proved \stag{L} \emph{in the companion note},
+with $H = H_+ \oplus H_-$ packaged as
+\texttt{TFPT.Carrier.BoundaryPolarization.BoundaryPolarization}.
+The Lean-proved \emph{algebraic} equivalence
+\[
+\texttt{BoundaryPolarization}
+\;\;\simeq\;\;
+\texttt{CarrierInvolution}
+\]
+shows that the polarisation picture and the involution picture
+are two presentations of the same finite-dimensional carrier
+datum. The analytic step of this paper feeds this target type.
+
+\smallskip\noindent
+\textbf{\stag{M} (manuscript theorem --- the analytic
+contribution of this paper).}\ The analytic Paper-1 theorem
+\[
+\Tbound
+\;+\;
+\text{boundary elliptic regularity}
+\;\Rightarrow\;
+H = H_+ \oplus H_-
+\;\text{(i.e.\ inhabitant of \texttt{BoundaryPolarization})}
+\]
+is the manuscript-level theorem of the present paper.
+Producing a \texttt{BoundaryPolarization} from the boundary
+spectral pair $(\mathfrak T_\partial, \text{Calder\'on
+operator})$ is the analytic obligation that Paper 1
+\emph{discharges at \stag{M} rigour} for the carrier chain
+to apply.
+\end{tfptstatusbox}
+
 \tableofcontents
 
 \section{Claim Map}
@@ -109,6 +159,7 @@ transport input; those interpretations are postponed to Papers 2 and 3.
 \section{Boundary Primitive Kernel}
 
 \begin{theorem}[Primitive boundary kernel]
+\label{thm:primitive-boundary-kernel}
 Under the one-sided boundary hypotheses and the primitive admissibility assumptions stated above,
 the minimal boundary datum canonically determines
 \[
@@ -116,6 +167,14 @@ the minimal boundary datum canonically determines
 =
 (\mathcal A,\mathcal H,D,J,\Gamma,\taudbl,\iC,\Pprim,[u_\Sigma],\cthree).
 \]
+In particular, the Calderon polarization induces a direct-sum decomposition
+\[
+\mathcal H = \mathcal H_+ \oplus \mathcal H_-,
+\qquad
+\iC = \mathrm{id}_{\mathcal H_+} - \mathrm{id}_{\mathcal H_-},
+\]
+which (passed to the finite essential carrier $E$) inhabits the Lean-side target type
+\texttt{BoundaryPolarization}.
 \end{theorem}
 
 \begin{proof}[Proof structure]
@@ -124,6 +183,28 @@ datum to exact double; Calderon polarization to $\iC$ and $\Pprim$; primitive se
 $[u_\Sigma]=1$ and $\cthree=1/(8\pi)$. The paper must keep the representation-theoretic carrier
 and all observable readouts out of the argument.
 \end{proof}
+
+\begin{remark}[Lean-side target]
+\label{rem:lean-target-paper1}
+The output of \Cref{thm:primitive-boundary-kernel} is exactly the typed datum consumed by the
+companion Lean note. Restricted to the finite essential carrier $E \subset \mathcal H$, the
+decomposition $E = E_- \oplus E_+$ is precisely an inhabitant of
+\texttt{TFPT.Carrier.BoundaryPolarization.BoundaryPolarization}$\,K\,E$
+($K = \mathbb Q$ or $\mathbb C$ depending on the working ring). Via the Lean-proved bridges
+\texttt{toCalderonProjector}, \texttt{toCalderonCertificate}, and
+\texttt{toCarrierInvolution} this immediately feeds the carrier-rigidity chain
+of Paper~2 and the Lean note.
+
+Equivalently (and used in some constructions), one may produce the carrier involution
+$\epscar$ directly: an inhabitant of $\texttt{CarrierInvolution}\,(\mathrm{End}_K E)$. The Lean-proved
+algebraic equivalence
+\[
+\texttt{BoundaryPolarization}\,K\,E
+\;\simeq\;
+\texttt{CarrierInvolution}\,(\mathrm{End}_K E)
+\]
+ensures that either presentation suffices.
+\end{remark}
 
 \section{Audit Protocol}
 

@@ -256,3 +256,55 @@
     title={Exported objects}, colbacktitle=tfptgreen!65]}
 {\end{tcolorbox}}
 
+% Five-tier formal status taxonomy used uniformly across the
+% series. Each load-bearing claim in every paper is tagged with
+% one of the labels [L], [I], [M], [S], [C], [P] introduced below.
+%
+%   [L] = Lean verified
+%         Statement is a theorem in the companion Lean project,
+%         signature-locked in AuditContract.lean, axioms only in
+%         {propext, Classical.choice, Quot.sound}.
+%   [I] = Lean interfaced
+%         The Lean-side target type for the statement exists
+%         (a structure or theorem signature in TfptCarrier).
+%         The TFPT-internal proof producing an inhabitant of
+%         that type remains open.
+%   [M] = Manuscript theorem
+%         A proof exists in the present manuscript or its source,
+%         at standard mathematical-writing rigour. Not formalised
+%         in Lean.
+%   [S] = Standard-theorem interface
+%         The statement is a routine consequence of a standard
+%         result in the mathematical literature (e.g. algebraic
+%         geometry of Proj). Cited rather than reproved.
+%   [C] = Conditional downstream proposal
+%         Mathematically formulated but not Lean verified,
+%         not Lean interfaced, and not a present manuscript
+%         theorem. Conditional on upstream Status L/I/M/S claims.
+%   [P] = Programmatic target
+%         A target for future work; not a claim. Stage-2 pipelines,
+%         comparison ledgers, sky-realisation tasks fall here.
+\newenvironment{tfptstatusbox}
+{\begin{tcolorbox}[colback=tfptgray!4, colframe=tfptgray!55, breakable,
+    title={Formal status of this paper (taxonomy L/I/M/S/C/P)},
+    colbacktitle=tfptgray!75]\small}
+{\end{tcolorbox}}
+
+% Inline status tag macro. Usage: \stag{L}, \stag{M}, \stag{C}, etc.
+\newcommand{\stag}[1]{\textsf{[#1]}}
+
+% A small "Draft cross-reference" note for any unresolved
+% [TFPT cross-reference: ...] placeholder. Used in front matter
+% of papers that still carry such placeholders.
+\newcommand{\tfptDraftXrefNotice}{%
+\begin{tcolorbox}[colback=tfptorange!4, colframe=tfptorange!55,
+    title={Internal draft note: unresolved cross-references},
+    colbacktitle=tfptorange!75]\small
+Source-extract bodies in this paper still contain
+\texttt{[TFPT cross-reference: ...]} placeholders. These are
+internal-draft markers from the source-manuscript extraction
+pass and do not enter any Status-L or Status-M claim. External
+release of this paper requires the resolution of all such
+placeholders to live cross-references.
+\end{tcolorbox}}
+

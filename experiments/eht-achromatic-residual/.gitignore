@@ -1,0 +1,17 @@
+.venv/
+.pytest_cache/
+.ruff_cache/
+__pycache__/
+*.egg-info/
+build/
+dist/
+*.pyc
+
+# data and results are not tracked by default
+data/*
+!data/README.md
+results/*
+!results/.gitkeep
+
+# notebook checkpoints
+.ipynb_checkpoints/

@@ -1,0 +1,107 @@
+"""Generate stable per-file content manifests (reviewer points A3/A5 + Lean).
+
+Writes two manifests under the repo root:
+
+  * manifest.sha256       -- the TeX/figures/verification bundle (the stable
+                             content identity of the paper+script layer);
+  * lean_manifest.sha256  -- the Lean archive (sources, lakefile, lake-manifest,
+                             toolchain pin, audit script + transcript), so the
+                             Lean layer has its own stable content identity
+                             (Alessandro 5.0 review, point 2).
+
+Neither is the Overleaf export zip hash (a container hash); these are the
+content identities.
+
+Run:  python make_manifest.py
+"""
+import hashlib
+import os
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.normpath(os.path.join(HERE, ".."))
+LEAN_DIR = "experiments/lean4-carrier-rigidity"   # repo path (where the files live)
+SHIP_LEAN = "lean4-carrier-rigidity"              # canonical shipped path (what the package exports)
+
+TEX = [
+    "introduction.tex", "tfpt_1_architecture_e8.tex", "tfpt_2_standard_model.tex",
+    "tfpt_3_e8_audit_bootstrap.tex", "tfpt_4_frontier.tex",
+    "tfpt_horizon_readouts.tex", "tfpt_research_contracts.tex",
+    "origin_theory.tex",
+]
+FIG = ["figures/action_tower.pdf", "figures/alpha_ablation.pdf",
+       "figures/mass_ladder.pdf", "figures/status_heatmap.pdf",
+       "figures/coxeter_circle.pdf", "figures/attractor.pdf"]
+
+
+def collect():
+    files = list(TEX) + list(FIG)
+    vdir = os.path.join(ROOT, "verification")
+    for f in sorted(os.listdir(vdir)):
+        if f.endswith((".py", ".csv", ".md")):
+            files.append("verification/" + f)
+    # Wolfram independent path (.wl / .wls + its README)
+    wdir = os.path.join(vdir, "wolfram")
+    if os.path.isdir(wdir):
+        for f in sorted(os.listdir(wdir)):
+            if f.endswith((".wl", ".wls", ".md")):
+                files.append("verification/wolfram/" + f)
+    return files
+
+
+def collect_lean():
+    """Lean sources + build descriptors + toolchain pin + audit script/transcript.
+
+    Excludes LaTeX build artefacts of the Lean note and any .lake/build cache;
+    only the reviewer-relevant, version-controlled inputs are hashed.
+    """
+    base = os.path.join(ROOT, LEAN_DIR)
+    if not os.path.isdir(base):
+        return []
+    keep_ext = (".lean",)
+    keep_name = {"lakefile.lean", "lake-manifest.json", "lean-toolchain",
+                 "AUDIT_TRANSCRIPT.txt", "README.md", "REVIEWER_USAGE.md", "audit.sh"}
+    out = []
+    for dirpath, dirnames, filenames in os.walk(base):
+        dirnames[:] = [d for d in dirnames if d != ".lake"]   # skip build cache
+        for fn in filenames:
+            if fn.endswith(keep_ext) or fn in keep_name:
+                rel = os.path.relpath(os.path.join(dirpath, fn), ROOT).replace(os.sep, "/")
+                # record under the CANONICAL SHIPPED path, but read from the repo path
+                ship = rel.replace(LEAN_DIR, SHIP_LEAN, 1)
+                out.append((ship, rel))
+    return out
+
+
+def sha256(path):
+    h = hashlib.sha256()
+    with open(path, "rb") as fh:
+        for chunk in iter(lambda: fh.read(65536), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+def write_manifest(files, out_name, label):
+    lines = []
+    for item in files:
+        # each item is either "rel" (read==record) or ("record_rel", "read_rel")
+        record, readrel = item if isinstance(item, tuple) else (item, item)
+        p = os.path.join(ROOT, readrel)
+        if os.path.isfile(p):
+            lines.append(f"{sha256(p)}  {record}")
+    lines.sort(key=lambda s: s.split("  ", 1)[1])
+    out = os.path.join(ROOT, out_name)
+    with open(out, "w") as fh:
+        fh.write("\n".join(lines) + "\n")
+    top = hashlib.sha256("\n".join(lines).encode()).hexdigest()
+    print(f"wrote {out} ({len(lines)} files)")
+    print(f"  {label} digest (content id): {top}")
+    return top
+
+
+def main():
+    write_manifest(collect(), "manifest.sha256", "manifest")
+    write_manifest(collect_lean(), "lean_manifest.sha256", "lean manifest")
+
+
+if __name__ == "__main__":
+    main()

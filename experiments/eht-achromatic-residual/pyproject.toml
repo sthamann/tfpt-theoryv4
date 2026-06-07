@@ -1,0 +1,57 @@
+[build-system]
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[project]
+name = "tfpt-eht"
+version = "0.1.0"
+description = "TFPT achromatic dyonic residual intercept pipeline for EHT / ngEHT horizon polarimetry"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+    { name = "Stefan Hamann" },
+    { name = "Alessandro Rizzo" },
+]
+keywords = [
+    "TFPT",
+    "EHT",
+    "polarimetry",
+    "cosmic birefringence",
+    "general relativity",
+    "magnetohydrodynamics",
+]
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.12",
+    "matplotlib>=3.8",
+    "pandas>=2.1",
+]
+
+[project.optional-dependencies]
+notebooks = [
+    "jupyterlab>=4.0",
+    "ipykernel>=6.29",
+]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=4.1",
+    "ruff>=0.5",
+]
+
+[project.scripts]
+tfpt-eht = "tfpt_eht.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tfpt_eht"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "NPY"]
