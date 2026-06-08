@@ -1820,6 +1820,26 @@ one-generation spinor packet is the even exterior algebra, equivalently the even
 The two carrier roots $y_+=\tfrac12$, $y_-=-\tfrac13$ generate all hypercharges
 ($Y(Q_L)=y_++y_-=\tfrac16$, $Y(u^c)=2y_-$, $Y(e^c)=2y_+$, $Y(\nu^c)=0$) and the transport cusps
 $\{1,\tfrac23,\tfrac13\}=\{2y_+,-2y_-,2(y_++y_-)\}$, with $\gamma_{\mathrm{car}}=\operatorname{Tr}_EY^2=3y_-^2+2y_+^2=\tfrac56$. \tI
+\smallskip\\
+\noindent\textbf{Gauge-rank factorisation (\veri{v79\_review\_identities.py}).} The carrier polynomial factors
+into the two gauge ranks directly:
+\[
+  \boxed{\ 6Y^2-Y-1=(2Y-1)(3Y+1)\ },\qquad Y=\tfrac12\ (s{=}2,\ SU(2)),\quad Y=-\tfrac13\ (b{=}3,\ SU(3)),
+\]
+i.e.\ $(sY-1)(bY+1)$ --- the polynomial splits into one linear representative of each Standard-Model
+non-abelian factor; the $5$-slot carrier \emph{forces} the split into $SU(3)\times SU(2)$.
+
+\begin{keybox}[Hypercharge Lucas--Binet resonances \tI\ (mode reading \tP, \veri{v79\_review\_identities.py})]
+The integer carrier charges $(q_+,q_-)=(3,-2)$ (the primitive trace-free pair, $X^2{-}X{-}6=(X{-}3)(X{+}2)$,
+Lean \texttt{unique\_carrier\_pair}) generate the Lucas $U$-sequence
+\[
+  D_n=\frac{3^n-(-2)^n}{5}:\qquad D_1{,}\dots{,}D_6=1,\ 1,\ 7,\ 13,\ 55,\ 133,
+\]
+which is, \emph{in order}, $(N_\Phi,\ \cdot\ ,\ \text{scalaron exponent }7,\ \Delta_Q{=}13,\ \text{quark numerator }55,\ \dim E_7{=}133)$.
+In particular the quark ratio reads $c_u/c_d=D_5/(\Nfam^2 D_4)=\tfrac{55}{117}$ --- a single recurrence of the
+hypercharge generator, not a free integer. \tI\ for the arithmetic; the per-mode physical identification is a
+\tP\ cross-domain reading (only $n\le6$, the carrier-slot range, is meaningful).
+\end{keybox}
 
 % =====================================================================
 \section*{Theorem 2 --- Exterior--Action Duality}
@@ -1847,6 +1867,12 @@ The Standard-Model family is the \emph{valency} side $(1,10,5)$ of one scheme; t
 ladder is its \emph{spectral} side $(1,5,10)$. The action ladder is therefore not merely ``also
 binomial'' --- it is the spectral dual of the even exterior family. \tP
 \end{remark}
+\noindent\textbf{This duality is the MacWilliams transform (\veri{v79\_review\_identities.py}).} $C^+$ is the
+even-weight code $[5,4,2]$; its dual $(C^+)^\perp$ is the repetition code $[5,1,5]=\{00000,11111\}$ (the
+uniform/vacuum word). The MacWilliams identity sends the weight enumerator of the dual to that of $C^+$, namely
+$(1,10,5)$ --- so the valency$\leftrightarrow$spectral duality \emph{is} the coding-theoretic UV/IR duality, and
+the carrier grading $\Lambda^{\mathrm{even}}(5)=1{+}10{+}5$ is the MacWilliams image of the repetition vacuum.
+\tL\ (code identity) / \tP\ (holographic reading).
 
 \noindent\textbf{The full Bose--Mesner algebra} (machine-checkable) fixes the duality beyond
 eigenvalues:

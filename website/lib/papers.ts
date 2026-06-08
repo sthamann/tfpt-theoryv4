@@ -422,6 +422,11 @@ export const papers: Paper[] = [
         value: "55/117, 34/47, 3/26",
         description: "Integer Plücker readouts on the selector stratum",
       },
+      {
+        label: "Anchor plane",
+        value: "(3x+2)(3x+5)",
+        description: "det B(K+xQ): 2/3 (Koide/gap) & 5/3 (D₅/A₃) are its singular points [I/L]",
+      },
     ],
   },
   {

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  8 JUN 2026 11:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  8 JUN 2026 13:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2112,7 +2112,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <20.74> on input line 1772.
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1834.
+Underfull \hbox (badness 10000) in paragraph at lines 1832--1832
+[]\T1/lmr/bx/n/10.95 (+20) Hypercharge Lucas--Binet res-o-nances []\T1/lmr/bx/n
+/10 (+20) [I][] \T1/lmr/bx/n/10.95 (+20) (mode read-ing []\T1/lmr/bx/n/10 (+20)
+ [P][]\T1/lmr/bx/n/10.95 (+20) ,
+ []
 
 
 
@@ -2120,43 +2124,46 @@ LaTeX Font Warning: Command \small invalid in math mode on input line 1834.
 
 ]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1842.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1854.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1859.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1862.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1869.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1885.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1884.
-
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 1896.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1895.
 
 
 
 [33]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1917.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1910.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1923.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1922.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 1943.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 1949.
 
 
 
 [34]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1952.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1978.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1959.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1985.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1969.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1995.
 
 
-Overfull \hbox (2.97888pt too wide) detected at line 1979
+Overfull \hbox (2.97888pt too wide) detected at line 2005
 [][][]\OML/lmm/m/it/10.95 ^^U[] \OT1/lmr/m/n/10.95 = \OML/lmm/m/it/10.95 u\OT1/
 lmr/m/n/10.95 (1 \OMS/lmsy/m/n/10.95 ^^@ \OML/lmm/m/it/10.95 u\OT1/lmr/m/n/10.9
 5 )\OML/lmm/m/it/10.95 ;  ^^L[] \OT1/lmr/m/n/10.95 = 2\OML/lmm/m/it/10.95 c[]u;
@@ -2165,7 +2172,7 @@ lmr/m/n/10.95 (1 \OMS/lmsy/m/n/10.95 ^^@ \OML/lmm/m/it/10.95 u\OT1/lmr/m/n/10.9
  []
 
 
-Overfull \hbox (0.72803pt too wide) in paragraph at lines 1990--1993
+Overfull \hbox (0.72803pt too wide) in paragraph at lines 2016--2019
 \T1/lmr/bx/n/10.95 (-20) Flavor trans-port is a $\OML/lmm/m/it/10.95 D[] \OMS/l
 msy/m/n/10.95 ^^B \OML/lmm/m/it/10.95 A[]$ \T1/lmr/bx/n/10.95 (-20) ob-ject. \T
 1/lmr/m/n/10.95 (-20) The trans-port pack-ets $\OML/lmm/m/it/10.95 L[][]\OT1/lm
@@ -2178,40 +2185,40 @@ it/10.95 ; \OT1/lmr/m/n/10.95 (-20) 0)\OML/lmm/m/it/10.95 ; L[][]\OT1/lmr/m/n/1
  []
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1995.
-
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 2007.
-
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 2008.
-
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 2008.
+LaTeX Font Warning: Command \small invalid in math mode on input line 2021.
 
 
 
 [35]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 2054.
+LaTeX Font Warning: Command \small invalid in math mode on input line 2033.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 2062.
+LaTeX Font Warning: Command \small invalid in math mode on input line 2034.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 2073.
+LaTeX Font Warning: Command \small invalid in math mode on input line 2034.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 2087.
+LaTeX Font Warning: Command \small invalid in math mode on input line 2080.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 2088.
 
 
 
 [36]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 2115.
+LaTeX Font Warning: Command \small invalid in math mode on input line 2099.
 
 
-Underfull \hbox (badness 6364) in paragraph at lines 2120--2120
+LaTeX Font Warning: Command \small invalid in math mode on input line 2113.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 2141.
+
+
+Underfull \hbox (badness 6364) in paragraph at lines 2146--2146
 []\T1/lmr/bx/n/10.95 (+20) The whole in-te-ger skele-ton from one pair $\OT1/lm
 r/m/n/10.95 (+20) (\OML/lmm/m/it/10.95 g[]; N[]\OT1/lmr/m/n/10.95 (+20) ) = (5\
 OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 (+20) 3)$ []\T1/lmr/bx/n/10 (+20) [I][]
@@ -2222,44 +2229,44 @@ OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 (+20) 3)$ []\T1/lmr/bx/n/10 (+20) [I][]
 
 [37]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 2171.
-
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 2200.
-
-
-Overfull \hbox (5.42258pt too wide) detected at line 2201
-[][][][] []\OML/lmm/m/it/10.95 :
- []
+LaTeX Font Warning: Command \small invalid in math mode on input line 2197.
 
 
 
 [38]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 2225.
+LaTeX Font Warning: Command \small invalid in math mode on input line 2226.
+
+
+Overfull \hbox (5.42258pt too wide) detected at line 2227
+[][][][] []\OML/lmm/m/it/10.95 :
+ []
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 2251.
 
 
 
 [39]
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2317.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 2317.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2317.
-
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 2333.
-
-
-
 [40]
-Underfull \hbox (badness 1521) in paragraph at lines 2354--2361
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2343.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 2343.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2343.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 2359.
+
+
+Underfull \hbox (badness 1521) in paragraph at lines 2380--2387
 \T1/lmr/bx/n/10.95 (+20) Simple-root Gram (uni-mod-u-lar check). \T1/lmr/m/n/10
 .95 (+20) With the Bour-baki sim-ple roots $\OML/lmm/m/it/10.95 [] \OT1/lmr/m/
 n/10.95 (+20) =
@@ -2271,7 +2278,7 @@ n/10.95 (+20) =
 <figures/alpha_ablation.pdf, id=755, 607.068pt x 238.49101pt>
 File: figures/alpha_ablation.pdf Graphic file (type pdf)
 <use figures/alpha_ablation.pdf>
-Package pdftex.def Info: figures/alpha_ablation.pdf  used on input line 2373.
+Package pdftex.def Info: figures/alpha_ablation.pdf  used on input line 2399.
 (pdftex.def)             Requested size: 429.29416pt x 168.64928pt.
 
 
@@ -2289,13 +2296,13 @@ Package rerunfilecheck Info: File `tfpt_1_architecture_e8.out' has not changed.
 (rerunfilecheck)             Checksum: 1CCE63D48737FC8F54A20ABDAF6A46D9;16742.
  ) 
 Here is how much of TeX's memory you used:
- 35958 strings out of 473190
- 722018 string characters out of 5715801
+ 35965 strings out of 473190
+ 722115 string characters out of 5715801
  1221503 words of memory out of 5000000
- 57795 multiletter control sequences out of 15000+600000
- 742141 words of font info for 418 fonts, out of 8000000 for 9000
+ 57798 multiletter control sequences out of 15000+600000
+ 742330 words of font info for 420 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,19n,107p,1019b,1118s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,19n,107p,1019b,1120s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.
 pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7
 .pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr
@@ -2329,7 +2336,7 @@ xlive/2025/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/local/texlive/2025/
 texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2
 025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texli
 ve/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on tfpt_1_architecture_e8.pdf (43 pages, 945353 bytes).
+Output written on tfpt_1_architecture_e8.pdf (43 pages, 950024 bytes).
 PDF statistics:
  1069 PDF objects out of 1200 (max. 8388607)
  794 compressed objects within 8 object streams

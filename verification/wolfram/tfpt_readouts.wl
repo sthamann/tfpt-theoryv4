@@ -383,6 +383,30 @@ checkExact["level-1 c=dim/(1+h^v): c(E8)=248/31=8=rank E8, c(D5)=45/9=5, c(A3)=1
 checkExact["S_dS * rho_Lambda = 1/(128 c3^4) = 32 pi^4 (cosmological pinning of the single scale)",
   Module[{c3 = 1/(8 Pi)}, 1/(128 c3^4) == 32 Pi^4]];
 
+(* ---- (v79) hypercharge Lucas-Binet D_n + the quark-ratio reading ---- *)
+checkExact["Lucas-Binet D_n=(3^n-(-2)^n)/5 = {1,1,7,13,55,133}; c_u/c_d = D_5/(N_fam^2 D_4) = 55/117",
+  Module[{D}, D = Table[(3^n - (-2)^n)/5, {n, 1, 6}];
+    D == {1, 1, 7, 13, 55, 133} && D[[5]]/(Nfam^2 D[[4]]) == 55/117]];
+
+(* ---- (v79) Inverse Anchor Theorem: 1^T M^-1 1 = 1/atom; a^T M^-1 a = 1 for R,K,L ---- *)
+checkExact["1^T M^-1 1 = 1/atom (Q->1/3,R=K->1/4,L->1/10); a^T R^-1 a = a^T K^-1 a = a^T L^-1 a = 1 (a^T Q^-1 a=7/3)",
+  Module[{one = {1, 1, 1}, av = {1, 1, 2}},
+    (one.Inverse[Q].one == 1/3) && (one.Inverse[R].one == 1/4) && (one.Inverse[K].one == 1/4) &&
+    (one.Inverse[L].one == 1/10) && (av.Inverse[R].av == 1) && (av.Inverse[K].av == 1) &&
+    (av.Inverse[L].av == 1) && (av.Inverse[Q].av == 7/3)]];
+
+(* ---- (v80) operator-pencil geometry: anchor singularity + block-det type checker + F4xG2 shadow ---- *)
+checkExact["anchor singularity: det B(K+xQ)=(3x+2)(3x+5); type checker det B = (9,10,16,40) for (Q,K,R,L)",
+  Module[{one = {1, 1, 1}, av = {1, 1, 2}, bb, dbx},
+    bb[M_] := {{one.M.one, one.M.av}, {av.M.one, av.M.av}};
+    dbx = Det[bb[K + xx*Q]];
+    (Factor[dbx] == (3 xx + 2) (3 xx + 5)) &&
+    (Det[bb[Q]] == 9) && (Det[bb[K]] == 10) && (Det[bb[R]] == 16) && (Det[bb[L]] == 40)]];
+checkExact["F4xG2 shadow: det B_{R+Q}=52=dim F4; 248 = 52 + 14 + 26*7 (real E8->F4xG2 branching)",
+  Module[{one = {1, 1, 1}, av = {1, 1, 2}, F = R + Q, bb},
+    bb[M_] := {{one.M.one, one.M.av}, {av.M.one, av.M.av}};
+    (Det[bb[F]] == 52) && (52 + 14 + 26*7 == 248)]];
+
 (* ---- summary ---- *)
 Print["--- Wolfram readouts: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM CHECKS PASSED"]];

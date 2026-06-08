@@ -165,6 +165,8 @@ const CLUSTERS: Cluster[] = [
       { file: "v76_gmetric_reduction.py", what: "Gate 2: decoupling Δ_eff=1.648>0; G6 holographically reduced to a seam-boundary measure" },
       { file: "v77_e8_conformal_net.py", what: "G6 route: seam boundary = (E₈)₁ lattice net (rigorous); c(E₈)=8, c(D₅)=5, c(A₃)=3, embedding 5+3=8" },
       { file: "v78_vgeo_floor.py", what: "v_geo = dimensional-analysis floor: one scale + π; S_dS·ρ_Λ=32π⁴ pins it from one measurement" },
+      { file: "v79_review_identities.py", what: "hypercharge Lucas–Binet (1,1,7,13,55,133); Inverse Anchor Theorem (a^T M⁻¹ a=1); MacWilliams (1,10,5); + firewall on m_p/m_e, η_B" },
+      { file: "v80_operator_pencil_geometry.py", what: "operator pencil: anchor singularity det B(K+xQ)=(3x+2)(3x+5); block-det type checker (9,10,16,40); F₄×G₂ shadow 52+14+26·7=248" },
     ],
   },
 ];

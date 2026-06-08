@@ -48,13 +48,13 @@
 \contentsline {part}{II\hspace {1em}The Coxeter--cyclotomic compiler and the explicit $E_8$ construction}{32}{part.2}%
 \contentsline {section}{Theorem 1}{32}{section*.2}%
 \contentsline {section}{Theorem 2}{33}{section*.3}%
-\contentsline {section}{Theorem 3}{33}{section*.4}%
+\contentsline {section}{Theorem 3}{34}{section*.4}%
 \contentsline {section}{Theorem 4}{34}{section*.5}%
 \contentsline {section}{Theorem 5}{34}{section*.6}%
-\contentsline {section}{Theorem 6}{34}{section*.7}%
+\contentsline {section}{Theorem 6}{35}{section*.7}%
 \contentsline {section}{Theorem 7}{36}{section*.8}%
 \contentsline {section}{Theorem 8 --- anchor microcode}{39}{section*.9}%
-\contentsline {section}{Master statement}{39}{section*.10}%
-\contentsline {section}{Appendix: explicit $E_8$ construction}{40}{section*.11}%
+\contentsline {section}{Master statement}{40}{section*.10}%
+\contentsline {section}{Appendix: explicit $E_8$ construction}{41}{section*.11}%
 \contentsline {part}{III\hspace {1em}Appendix: ablation of the EM fixed point}{42}{part.3}%
 \contentsline {section}{Appendix: computational verification}{43}{section*.12}%

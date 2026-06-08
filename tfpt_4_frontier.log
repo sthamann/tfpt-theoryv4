@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  8 JUN 2026 11:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  8 JUN 2026 13:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1121,18 +1121,26 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 156.
 
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <9> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 173.
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--181
+\T1/lmr/bx/n/10.95 (+20) A re-jected near-formula (recorded as a dis-ci-pline b
+ound-ary,
+ []
+
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 175.
+(hyperref)                removing `math shift' on input line 184.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 175.
+(hyperref)                removing `math shift' on input line 184.
 
 
 
 [3]
-Underfull \hbox (badness 1655) in paragraph at lines 211--216
+Underfull \hbox (badness 1655) in paragraph at lines 220--225
 \T1/lmr/m/n/10.95 (+20) overshooting $[] \OT1/lmr/m/n/10.95 (+20) = 0\OML/lmm/m
 /it/10.95 :\OT1/lmr/m/n/10.95 (+20) 6666667$ \T1/lmr/m/n/10.95 (+20) by only $\
 OT1/lmr/m/n/10.95 (+20) 1\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 (+20) 3 \OMS/l
@@ -1147,9 +1155,9 @@ e \T1/lmr/m/it/10.95 (+20) con-jec-ture $\OML/lmm/m/it/10.95 Q[] \OMS/lmsy/m/n/
 
 [5]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 310.
+(Font)              <9> on input line 319.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 310.
+(Font)              <5> on input line 319.
 
 
 [6]
@@ -1163,38 +1171,40 @@ Package rerunfilecheck Info: File `tfpt_4_frontier.out' has not changed.
 (rerunfilecheck)             Checksum: EDFC116B38EA4909AB05596E8302307A;2025.
  ) 
 Here is how much of TeX's memory you used:
- 31834 strings out of 473190
- 633195 string characters out of 5715801
+ 31843 strings out of 473190
+ 633303 string characters out of 5715801
  1098042 words of memory out of 5000000
- 54298 multiletter control sequences out of 15000+600000
- 669607 words of font info for 221 fonts, out of 8000000 for 9000
+ 54301 multiletter control sequences out of 15000+600000
+ 673111 words of font info for 225 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,10n,107p,1012b,1051s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/lo
 cal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texliv
-e/2025/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/local/texlive/2025/te
-xmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2025/texmf-dist/f
-onts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1
-/public/lm/lmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm
-/lmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi7.pfb>
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local
-/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></usr/local/texlive/20
-25/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-di
-st/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/ty
-pe1/public/lm/lmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/l
-m/lmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb><
-/usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/t
-exlive/2025/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/202
-5/texmf-dist/fonts/type1/public/lm/lmri8.pfb></usr/local/texlive/2025/texmf-dis
-t/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/ty
-pe1/public/lm/lmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/
-lm/lmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.p
-fb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/lo
-cal/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tfpt_4_frontier.pdf (7 pages, 434235 bytes).
+e/2025/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive/2025/texm
+f-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/local/texlive/2025/texmf-dist/fo
+nts/type1/public/lm/lmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/
+public/lm/lmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/
+lmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi6.pfb>
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local
+/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/20
+25/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></usr/local/texlive/2025/texmf-di
+st/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/ty
+pe1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/
+lm/lmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr7.pfb>
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/
+texlive/2025/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2025
+/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2025/texmf-dis
+t/fonts/type1/public/lm/lmri8.pfb></usr/local/texlive/2025/texmf-dist/fonts/typ
+e1/public/lm/lmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/
+lm/lmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pf
+b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/lo
+cal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texliv
+e/2025/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/local/texlive/2025/texm
+f-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on tfpt_4_frontier.pdf (7 pages, 484362 bytes).
 PDF statistics:
- 265 PDF objects out of 1000 (max. 8388607)
- 178 compressed objects within 2 object streams
+ 275 PDF objects out of 1000 (max. 8388607)
+ 184 compressed objects within 2 object streams
  24 named destinations out of 1000 (max. 500000)
- 56533 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 59093 words of extra memory for PDF output out of 61914 (max. 10000000)
 

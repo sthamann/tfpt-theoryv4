@@ -5,6 +5,6 @@
 \contentsline {section}{\numberline {2}Proton/electron ratio $m_p/m_e$ --- a cross-sector ratio}{3}{section.2}%
 \contentsline {section}{\numberline {3}The Koide relation --- near $2/3$, computed exactly}{3}{section.3}%
 \contentsline {section}{\numberline {4}Dark matter --- the candidate is fixed, the scale is pending}{5}{section.4}%
-\contentsline {section}{\numberline {5}Full quantum gravity --- induced from the boundary kernel}{5}{section.5}%
+\contentsline {section}{\numberline {5}Full quantum gravity --- induced from the boundary kernel}{6}{section.5}%
 \contentsline {section}{Summary}{6}{section*.4}%
 \contentsline {section}{Appendix: computational verification}{7}{section*.5}%

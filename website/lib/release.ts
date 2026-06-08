@@ -34,27 +34,27 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/introduction.pdf": {
     href: "/papers/introduction.pdf",
     ...COMMON,
-    bytes: 911844,
+    bytes: 913385,
     sha256:
-      "dfc41f164ee6709faf23c25f5e3ff0610dc4174d5f702d939db389a791f22a8f",
+      "d135c6fdcb7821fbb81d1e81311441fce0a89b1fc74e4c8fa9cf2c1632270d6d",
     changelog:
       "Compiler-closure reading guide: two axioms, the dependency DAG, the predictions and the proof ledger.",
   },
   "/papers/tfpt_1_architecture_e8.pdf": {
     href: "/papers/tfpt_1_architecture_e8.pdf",
     ...COMMON,
-    bytes: 945353,
+    bytes: 950024,
     sha256:
-      "9eb4412df51b8c6dafa03962ba8ba824000514ebc1314650c2edfad645ba9286",
+      "2a5bc1bcf28e9d22cc59d2208a58651ac7243df293adb8c38bee5c7e3ee1142e",
     changelog:
       "Architecture: the two axioms, the D₅ × A₃ → E₈ construction, and the EM fixed point with existence + uniqueness.",
   },
   "/papers/tfpt_2_standard_model.pdf": {
     href: "/papers/tfpt_2_standard_model.pdf",
     ...COMMON,
-    bytes: 936854,
+    bytes: 943986,
     sha256:
-      "4a33ec8c9e647f49f550682132d67ab7795c844e00a1c96cb6bae7db6d108de6",
+      "afa9b5183f428b7d258ac7e12165180a0dd6623ea9425fdd828143e469774ac9",
     changelog:
       "The Standard Model in one φ₀-ladder, the flavor residue matrix, and the derived solar angle θ₁₂.",
   },
@@ -70,9 +70,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/tfpt_4_frontier.pdf": {
     href: "/papers/tfpt_4_frontier.pdf",
     ...COMMON,
-    bytes: 434235,
+    bytes: 484362,
     sha256:
-      "bfbf342414b8947c00ad3bba3f47524d00545d80fd2a157be536829f2694427b",
+      "ecd115a5fa89bec116b83bcda62f5e8d9ad4890945b49a073091a123c9035516",
     changelog:
       "Honest status of η_B, m_p/m_e, Koide, dark matter and full quantum gravity — not forced onto the ladder.",
   },

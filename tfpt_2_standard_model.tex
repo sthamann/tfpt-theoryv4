@@ -635,6 +635,30 @@ $[K,L]=[L,Q]=[K,Q]$ (forced by $L=K+Q$) with $\chi_{[K,Q]}(t)=t^3+5t+14$, readin
 $\dim G_2=14$ (audit-level \tA). \veri{v37\_plucker\_anchor.py}
 \end{winbox}
 
+\begin{keybox}[Operator-pencil geometry: the anchor plane as a small area in operator space \tI/\tL\ (\veri{v80\_operator\_pencil\_geometry.py})]
+Read the four operators through the \emph{anchor block} $B_M=\begin{psmallmatrix}\mathbf1^\top M\mathbf1&\mathbf1^\top Ma\\a^\top M\mathbf1&a^\top Ma\end{psmallmatrix}$.
+\textbf{(i) Anchor Singularity Theorem.} On the pencil $P(x)=K+xQ$,
+\[
+  \boxed{\ \det B_{K+xQ}=9x^2+21x+10=(\Nfam x+|\Z_2|)(\Nfam x+\gcar)=(3x+2)(3x+5)\ }\qquad\tI ,
+\]
+so the oriented anchor area \emph{degenerates} at exactly $x=-|\Z_2|/\Nfam=-\tfrac23$ and $x=-\gcar/\Nfam=-\tfrac53$.
+The first zero is the Koide target / transport-gap base ($\lambda_2=(\tfrac23)^6$); the second is the $D_5/A_3$
+glue asymmetry. \textbf{So $\tfrac23$ is not just a recurring fraction --- it is the first singular point of the
+mass$\leftrightarrow$transport anchor plane}, a structural \emph{location} where an oriented area collapses.
+\textbf{(ii) Type checker.} The anchor-block determinants classify the operators:
+$\det B_Q=9=\Nfam^2$ (family square), $\det B_K=10=\AL$ (pair sector), $\det B_R=16=\dim S^+$ (one generation),
+$\det B_L=40=|R(D_5)|$ (carrier root budget) --- each a determinant of a fixed block, not a loose integer.
+\textbf{(iii) Buildup chain.} The pencil coefficients $(3,7,6,4)$ have partial sums $(3,10,16,20)=(\Nfam,\AL,\dim S^+,\det L)$,
+so the scalaron exponent is the internal flavor transition $7=\AL-\Nfam$.
+\smallskip\\
+\noindent\emph{Audit layer (exact values \tI, decorative reading \tP).} $D(x)=\det(K{+}xQ)$ and its derivatives
+at $x=-1,0,1,2$ give $(2,4,20,68),(1,6,29,70),(-4,14,32,50)$ ($29$ the top $E_8$ exponent, $32=2^{\gcar}$, $50$
+the $A_4{\times}A_4$ off-block); and the missing corner $F=R+Q$ has $\det B_F=52=\dim F_4$ with
+$248=52+14+26\cdot7$ --- the genuine $E_8\!\supset\!F_4{\times}G_2$ branching $(52,1){\oplus}(1,14){\oplus}(26,7)$
+as an operator \emph{shadow}. These are exact identities; their atlas/embedding significance is kept audit-level
+(\tP), since the coefficients are themselves atoms.
+\end{keybox}
+
 \begin{winbox}[Grand Mass Volume: the absolute mass-scaling normalisation \tI]
 The individual $c_q$ are a gauge, but the \emph{absolute} normalisation of the mass spectrum is fixed by the
 sector mass-matrix \emph{determinants} --- each a clean $\phiz$-power whose exponent is the $K$-row sum:
@@ -801,6 +825,23 @@ The solar angle is thus a \emph{reduced} readout whose coefficient is now \emph{
 $\varepsilon=q(A_3)\varphi_0$, the $A_3$ glue-norm. The residual is only \emph{why} the misalignment equals
 the $A_3$ discriminant norm
 (\tP). \veri{v16\_solar\_dual\_anchor.py}\,\veri{v21\_solar\_product\_quark.py}
+\end{keybox}
+
+\begin{keybox}[Inverse Anchor Normalisation Theorem \tI/\tL\ (\veri{v79\_review\_identities.py})]
+The dual-anchor identity is one row of a sharper invariance. On the \emph{inverses} of the flavor operators the
+all-ones vector reads the reciprocal compiler atoms,
+\[
+  \mathbf1^\top Q^{-1}\mathbf1=\tfrac13=\tfrac1{\Nfam},\quad
+  \mathbf1^\top R^{-1}\mathbf1=\mathbf1^\top K^{-1}\mathbf1=\tfrac14=\tfrac1{|\mu_4|},\quad
+  \mathbf1^\top L^{-1}\mathbf1=\tfrac1{10}=\tfrac1{\mathcal A_\Lambda},
+\]
+and the anchor is \emph{self-dual} under the physical (residue/mass/transport) operators:
+\[
+  \boxed{\ a^\top R^{-1}a=a^\top K^{-1}a=a^\top L^{-1}a=1\ }\qquad(\text{while }a^\top Q^{-1}a=\tfrac73).
+\]
+So the passage mass-powers $K\to$ residues $R\to$ transport $L$ leaves the anchor plane \emph{exactly}
+normalised --- the anchor is its own dual under physical evolution --- and the exception $a^\top Q^{-1}a=\tfrac73$
+pins the self-duality to precisely the residue/mass/transport triple, not the pure $\Sigma$-difference $Q$. \tI/\tL
 \end{keybox}
 
 % =====================================================================
