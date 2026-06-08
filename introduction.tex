@@ -472,10 +472,12 @@ marked inactive and drawn dimmed --- the canonical status is the only one read a
 \]
 TFPT~5.0 closes the discrete compiler, the algebraic Standard-Model readout, the EM fixed point, the
 admissible gapped IR sector and the $R+R^2$ spectral-action shadow. It does \emph{not} yet certify a strict
-physical TOE. The remaining strict gates are: the \emph{absolute} amplitude normalisation of the $R$ bridge
-($U_{\mathrm{point}}$, an anchor --- the ratio $c_u/c_d$ itself is rigid, v49, and the selector stratum is now
-\emph{derived}, v69/v70/v71), the ambient metric projective measure ($G_{\mathrm{metric}}$), and the named
-QFT/cosmology transfer interfaces ($F_{\mathrm{frontier}}$).
+physical TOE. The remaining items have now collapsed sharply: the $R$-bridge amplitude normalisation
+$U_{\mathrm{point}}$ \emph{reduces to} $v_{\mathrm{geo}}$ (Gate 1 closed, v75 --- the same anchor as $1/G$), and
+the ambient metric measure is \emph{holographically reduced} to a finite seam-\emph{boundary} measure (Gate 2
+tier B, v76). So the only genuine residuals are \emph{one} dimensionful scale $v_{\mathrm{geo}}$ (shared by
+flavor and gravity), the open ambient \emph{boundary} projective limit ($G_{\mathrm{metric}}$, constructive
+grade), and the named QFT/cosmology transfer interfaces ($F_{\mathrm{frontier}}$).
 \smallskip\\
 \noindent\textbf{Two points that are \emph{not} in the residual (closed, but easy to mis-list as open).}
 \emph{(i) Parameter-freeness is a theorem, not a hope:} the boundary transport is gapped
@@ -487,8 +489,9 @@ static bootstrap web ($\gcar=5$ forced three ways, \veri{v6\_bootstrap.py}, \ver
 $G_N$ is read out \emph{after} the branch choice $+$ \emph{one} dimensionful induced-gravity anchor (\tI/\tP,
 \veri{v60\_lambda\_metrology\_branch.py}), not predicted from pure numbers. What stays irreducible is then
 just $\pi$, the discrete $E_8$-closure fixed point (self-consistent, \emph{not} a free axiom; the bootstrap of
-\texttt{tfpt\_3}), and \emph{one} dimensionful scale (dimensional analysis; the induced-gravity anchor,
-\veri{v68\_seeley\_dewitt\_residual.py}).
+\texttt{tfpt\_3}), and \emph{one} dimensionful scale $v_{\mathrm{geo}}$ --- and that single scale is shared by
+\emph{both} the flavor sector ($U_{\mathrm{point}}\to v_{\mathrm{geo}}$, v75) and gravity ($1/G$, v68): the two
+$[A]$ anchors are \emph{one} (dimensional analysis; no metre from pure mathematics).
 \end{keybox}
 
 \begin{keybox}[The hard reduction: everything open is two research gates plus typed interfaces]
@@ -507,10 +510,10 @@ QFT/cosmology interfaces. The status card:
 parameter-freeness (self-consistency) & \tI/\tL & gapped transport $\Rightarrow$ \emph{unique} Perron--Frobenius attractor (v56); bootstrap web $\gcar{=}5$ forced (v6/v14) \\
 Newton constant $G_N$ & \tI/\tP & not \emph{independent}: branch pins $\bar M_{\mathrm{Pl}}$ rel.\ to $\Lambda$ (v60); readout after branch $+$ one dim.\ anchor \\
 ratio $c_u/c_d=\tfrac{55}{117}$ & \tI & $\gcar\|\mathrm{Pl}_{\mathbf1,a}(K)\|_1/(\Nfam^2\Delta_Q)$; rigid on the derived stratum (v49/v71), no solve \\
-$(U)$ flavor gate & \tA & only the \emph{absolute} amplitude scale ($U_{\mathrm{point}}$); ratios are closed \\
+$(U)$ flavor gate & \tA$\to v_{\mathrm{geo}}$ & \textbf{Gate 1 closed}: $U_{\mathrm{point}}{\to}v_{\mathrm{geo}}$ (ratios $+$ Grand Mass Volume, v75); same anchor as $1/G$ \\
 $R+R^2$ gravity & \tI/\tP & covariant $f(R)$ field equation closed in regime; heat-kernel grounded (G2) \\
 physical QG sector & \tF/\tP & gap-decoupled admissible measure ($\Delta_{\mathrm{eff}}{=}1.648{>}0$) \\
-ambient QG measure & \tA & strict-TOE completion target (G6); bounded IR unaffected, blocks strict-TOE cert.\ ($G_{\mathrm{metric}}$) \\
+ambient QG measure & \tA (reduced) & \textbf{Gate 2 tier B}: holographically reduced to a finite seam-\emph{boundary} measure (v76); IR tier closed (decoupling); strict-TOE cert.\ open ($G_{\mathrm{metric}}$) \\
 Koide & \tP & $Q_{\mathrm{src}}+\varphi_0/24$ as source$\to$pole transfer conjecture \\
 axion DM & \tP/\tA & $f_a=M_{\mathrm{scal}}/128$ as a scenario \\
 $\eta_B$ & \tP & readout closed; leptogenesis Boltzmann solve missing \\
@@ -1102,6 +1105,8 @@ throughout the documents point to the exact script; the table below is the maste
 \texttt{v72\_\allowbreak q\_\allowbreak det\_\allowbreak from\_\allowbreak cusp.py} & $\det Q{=}\Nfam$ derived from the cusp class: $\det Q{=}|\!\operatorname{coker}Q|{=}$ cusp-class order $=$ denominator of the weights $\{0,\tfrac13,\tfrac23\}$ (same data as $\operatorname{Spec}Q_+$); $\operatorname{coker}Q{=}\Z/\Nfam{=}$ triality deck group $\Rightarrow$ integer-lift residual closed \tI/\tL \\
 \texttt{v73\_\allowbreak k\_\allowbreak c3\_\allowbreak half.py} & Central coefficient $k{=}\cthree/2$ \emph{forced}: $(1/2)$ variational $\times$ $1/(|\Z_2|2\pi\chi(S^2))$ Gauss--Bonnet topology ($\chi(S^2){=}2$), both cutoff-indep $\Rightarrow$ Fursaev--Solodukhin $S{=}A/4$; only the absolute $4$D Newton scale stays the anchor (v68) \tI/\tL \\
 \texttt{v74\_\allowbreak compiler\_\allowbreak micro\_\allowbreak lemmas.py} & Spine quotient ladder ($\tfrac23,\tfrac34,\tfrac45,\tfrac54,\tfrac43$ $=$ adjacent quotients of $(2,3,4,5)$); pencil differences $(2,16,48){=}(|\Z_2|,\dim S^+,\Oadm)$ sheet$\to$1gen$\to$3gens; anchor QF $a^\top K a{-}\mathbf1^\top K\mathbf1{=}41{-}25{=}16{=}\dim S^+$ (EM budget $=$ mass vol $+$ one gen); solar dual anchor $L{=}R{+}6\mathbf1 e_1^\top$, $a^\top R^{-1}\mathbf1{=}0$ (Sherman--Morrison rank-one invariance) \tI \\
+\texttt{v75\_\allowbreak upoint\_\allowbreak to\_\allowbreak vgeo.py} & \textbf{Gate 1 complete:} $U_{\mathrm{point}}{\to}v_{\mathrm{geo}}$. Ratios closed (v49/v71) $+$ lepton $c$ exact (v20) $+$ sector products $=\phiz$-powers (v46); $(\text{ratios},\text{product}){\Leftrightarrow}(\text{individuals})$ bijection $\Rightarrow$ absolute amplitudes fixed up to \emph{one} scale $v_{\mathrm{geo}}$ $=$ the same anchor as $1/G$ (v68); two $[A]\to$ one \tI/\tA \\
+\texttt{v76\_\allowbreak gmetric\_\allowbreak reduction.py} & \textbf{Gate 2:} Tier A (IR) closed under RP$+$gap (Decoupling Thm: $\Delta_{\mathrm{eff}}{=}6\log\tfrac32{-}\tfrac{31}{4\pi^2}{=}1.648{>}0$, $\|V\|{\le}248\cthree^2{=}\tfrac{31}{8\pi^2}$); Tier B (strict TOE) holographically reduced from bulk to a finite seam-\emph{boundary} measure (conditional: RP$+$tightness $\Rightarrow$ closes) \tI/\tP \\
 \bottomrule
 \end{tabularx}
 \end{center}

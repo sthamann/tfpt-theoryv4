@@ -363,6 +363,17 @@ checkExact["anchor QF: 1^TK1=25=g_car^2, a^TKa=41=10 b1, a^TKa-1^TK1=16=dim S+ (
   Module[{one = {1, 1, 1}, av = {1, 1, 2}},
     (one.K.one == 25 == gcar^2) && (av.K.av == 41) && (av.K.av - one.K.one == 16)]];
 
+(* ---- (v75) Gate 1: U_point -> v_geo. lepton product 32/9; (ratios,product)<=>(individuals) bijection ---- *)
+checkExact["lepton c-product 16/7*4/3*7/6 = 32/9 = 2^g_car/N_fam^2; (ratios,product)=>(individuals) bijection rebuilds (16/7,4/3,7/6)",
+  Module[{c = {16/7, 4/3, 7/6}, P, r, c0},
+    P = Times @@ c; r = c/c[[1]]; c0 = (P/(Times @@ r))^(1/3);
+    (P == 32/9 == 2^gcar/Nfam^2) && (c0*r === c)]];
+
+(* ---- (v76) Gate 2: decoupling margin Delta_eff = 6log(3/2) - 31/(4pi^2) > 0 ---- *)
+checkExact["||V||<=248 c3^2 = 31/(8pi^2) (31=2^g_car-1); 2||V||=31/(4pi^2); Delta_eff=6log(3/2)-31/(4pi^2)>0",
+  Module[{c3 = 1/(8 Pi)},
+    (248 c3^2 == 31/(8 Pi^2)) && (31 == 2^gcar - 1) && (6 Log[3/2] - 31/(4 Pi^2) > 0)]];
+
 (* ---- summary ---- *)
 Print["--- Wolfram readouts: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM CHECKS PASSED"]];

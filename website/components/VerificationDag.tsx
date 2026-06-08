@@ -203,7 +203,7 @@ const NODES: DagNode[] = [
     marker: "[I] / [P]",
     title: "Masses & mixings — the φ₀-ladder",
     summary:
-      "All nine masses, CKM and the PMNS skeleton from one master formula m = (v/√2) λ_Y^L Λ with the seed φ₀. Charged-lepton coefficients (16/7, 4/3, 7/6) are exact; quark mass ratios (55/117, …) are integer Plücker readouts; only the absolute quark scale is the U_point anchor.",
+      "All nine masses, CKM and the PMNS skeleton from one master formula m = (v/√2) λ_Y^L Λ with the seed φ₀. Charged-lepton coefficients (16/7, 4/3, 7/6) are exact; quark mass ratios (55/117, …) are integer Plücker readouts. Gate 1 is now complete: the absolute amplitude U_point reduces to one overall scale v_geo (ratios + Grand Mass Volume) — the same dimensionful anchor as gravity's 1/G.",
     inputs: ["R, L", "φ₀ (from c₃)"],
     outputs: ["9 masses, mixings"],
     failure: "Hierarchy mismatch.",
@@ -213,6 +213,7 @@ const NODES: DagNode[] = [
       "v24_quark_ratio_closure.py",
       "v46_grand_mass_volume.py",
       "v49_readout_rigidity.py",
+      "v75_upoint_to_vgeo.py",
     ],
   },
   {
@@ -243,7 +244,7 @@ const NODES: DagNode[] = [
     marker: "[P] conditional",
     title: "Gravity & cosmology — the geometry channel",
     summary:
-      "The spectral action gives R + R²; the scalaron mass is M = c₃^(7/2) M̄ = 3.06×10¹³ GeV (exponent 7 = Ω_adm − 10 b₁). From the same attractor: n_s = 0.965, r ≈ 0.004, A_s ≈ 2.0×10⁻⁹, Λ ∼ e⁻²ᵅ⁻¹, H₀ ∼ √Λ.",
+      "The spectral action gives R + R²; the scalaron mass is M = c₃^(7/2) M̄ = 3.06×10¹³ GeV (exponent 7 = Ω_adm − 10 b₁). From the same attractor: n_s = 0.965, r ≈ 0.004, A_s ≈ 2.0×10⁻⁹, Λ ∼ e⁻²ᵅ⁻¹, H₀ ∼ √Λ. Gate 2: the IR tier is gap-decoupled (Δ_eff = 1.648 > 0), and the ambient measure G6 is holographically reduced to a finite seam-boundary measure.",
     inputs: ["c₃ (P1)", "E₈"],
     outputs: ["Λ, A_s, n_s, r, scalaron M"],
     failure: "Ambient reflection-positivity fails.",
@@ -252,8 +253,10 @@ const NODES: DagNode[] = [
       "v28_gravity_fR.py",
       "v36_spectral_action_g2.py",
       "v60_lambda_metrology_branch.py",
+      "v76_gmetric_reduction.py",
     ],
   },
+
   {
     id: "boot",
     label: "self-consistency",

@@ -34,27 +34,27 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/introduction.pdf": {
     href: "/papers/introduction.pdf",
     ...COMMON,
-    bytes: 906799,
+    bytes: 910693,
     sha256:
-      "aec339d10992635342e348da43fe650ee2d2c838340ac95b0532c37a8fbe1dbd",
+      "58f69852105d191df9ebd1844a6ecc071d8b54c35c8b64d78c2a4e306053e1a4",
     changelog:
       "Compiler-closure reading guide: two axioms, the dependency DAG, the predictions and the proof ledger.",
   },
   "/papers/tfpt_1_architecture_e8.pdf": {
     href: "/papers/tfpt_1_architecture_e8.pdf",
     ...COMMON,
-    bytes: 941548,
+    bytes: 945353,
     sha256:
-      "33247c11f702d00fe665b1a033fe428e5b26f1ae9bea559bd0a1eb0d8904a6a3",
+      "9eb4412df51b8c6dafa03962ba8ba824000514ebc1314650c2edfad645ba9286",
     changelog:
       "Architecture: the two axioms, the D₅ × A₃ → E₈ construction, and the EM fixed point with existence + uniqueness.",
   },
   "/papers/tfpt_2_standard_model.pdf": {
     href: "/papers/tfpt_2_standard_model.pdf",
     ...COMMON,
-    bytes: 931790,
+    bytes: 936854,
     sha256:
-      "691d548ee83e1698197bd1986e8351673fbbabe4f233f08891969ec014290f32",
+      "4a33ec8c9e647f49f550682132d67ab7795c844e00a1c96cb6bae7db6d108de6",
     changelog:
       "The Standard Model in one φ₀-ladder, the flavor residue matrix, and the derived solar angle θ₁₂.",
   },
@@ -88,18 +88,18 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/origin_theory.pdf": {
     href: "/papers/origin_theory.pdf",
     ...COMMON,
-    bytes: 628010,
+    bytes: 629625,
     sha256:
-      "b1492c03d7346b252857e0e643098b477dd6b61cccabfe50c9519d283763c44f",
+      "166b851c12b83c2b64c59cdf2b541d8a27dc84bddc9ddb4c954f2716dba9d593",
     changelog:
       "Origin Theory: the (5,3) skeleton, the triply-forced 8, the order-30 Coxeter cycle, and the gapped unique attractor.",
   },
   "/papers/tfpt_research_contracts.pdf": {
     href: "/papers/tfpt_research_contracts.pdf",
     ...COMMON,
-    bytes: 582360,
+    bytes: 588229,
     sha256:
-      "8b9a92c05e24d820dbc4558c380b1cea5be81bc894da1b0fa1413ecf69143fe3",
+      "8f46304c687d529c9ff38b8d35be12b40077ceb0abaec0b6bf90c3bdf56b5048",
     changelog:
       "Research contracts for the two open gates: (U_wall) flavor wall-selection and (G_metric) the QG measure.",
   },

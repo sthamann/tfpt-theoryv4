@@ -134,6 +134,7 @@ const CLUSTERS: Cluster[] = [
       { file: "v39_uwall_selectors.py", what: "selectors: splitting type = a, det R = 8, Spec(Q₊)" },
       { file: "v40_harmonic_metric.py", what: "harmonic metric = finite linear algebra (polystable ⇒ unitary)" },
       { file: "v41_leg_assignment.py", what: "final leg test: amplitudes = δ=½ resolvent; honest negative" },
+      { file: "v75_upoint_to_vgeo.py", what: "Gate 1 complete: U_point → v_geo (ratios + Grand Mass Volume); same anchor as 1/G" },
     ],
   },
   {
@@ -160,6 +161,8 @@ const CLUSTERS: Cluster[] = [
       { file: "v70_q_integer_lift.py", what: "Q integer-lift: det Q = 3 = N_fam; SNF diag(1,1,3)" },
       { file: "v71_simple_r_bridge.py", what: "simple R-bridge: selector stratum fully derived; quark ratios" },
       { file: "v72_q_det_from_cusp.py", what: "det Q = N_fam from the cusp class (triality deck group)" },
+      { file: "v74_compiler_micro_lemmas.py", what: "spine quotient ladder; pencil differences 2→16→48; anchor QF 41−25=16; solar dual anchor" },
+      { file: "v76_gmetric_reduction.py", what: "Gate 2: decoupling Δ_eff=1.648>0; G6 holographically reduced to a seam-boundary measure" },
     ],
   },
 ];

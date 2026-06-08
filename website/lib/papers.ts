@@ -331,7 +331,7 @@ export const papers: Paper[] = [
       "The solar angle sin²θ₁₂ = 1/3 − φ₀/2 = 0.3067 from the seam misalignment ε = q(A₃)φ₀.",
     ],
     notClaimed: [
-      "Charged-lepton masses and quark mass ratios are closed; the absolute quark amplitude scale reduces to the (U_wall) anchor.",
+      "Charged-lepton masses and quark mass ratios are closed; the absolute quark amplitude scale reduces to one overall scale v_geo (Grand Mass Volume + ratios) — the same dimensionful anchor as gravity's 1/G.",
       "Dimensionful m_W, m_Z, m_H, sin²θ_W, α_s are RG scheme-layer projections, not compiler outputs.",
     ],
     falsification: [
@@ -364,7 +364,7 @@ export const papers: Paper[] = [
       },
       {
         title: "Quark ratios from the same word-lengths",
-        body: "The quark mass ratios are pure integer Plücker readouts on the derived selector stratum — no transcendental solve. Only the absolute amplitude scale reduces to the (U_wall) anchor.",
+        body: "The quark mass ratios are pure integer Plücker readouts on the derived selector stratum — no transcendental solve. The absolute amplitude reduces to one overall scale v_geo (ratios + Grand Mass Volume), the same dimensionful anchor as gravity's 1/G.",
         formulas: [
           "\\frac{c_u}{c_d} = \\frac{g_{\\mathrm{car}}\\cdot 11}{N_{\\mathrm{fam}}^2\\,\\Delta_Q} = \\frac{55}{117}, \\quad \\frac{c_c}{c_s} = \\frac{34}{47}, \\quad \\frac{c_t}{c_b} = \\frac{3}{26}",
           "\\hat m_t/\\hat m_b = \\tfrac{3}{26}(\\varphi_0)^{-2} = 40.81",
@@ -582,7 +582,7 @@ export const papers: Paper[] = [
       },
       {
         title: "Full quantum gravity — induced from the seam",
-        body: "c₃ = 1/(8π) is the gravitational seam constant; the spectral action gives R + R² structurally (G2), and the closed admissible sector is gap-decoupled from the un-built ambient (G5). The ambient projective measure (G6) is the strict-TOE completion target.",
+        body: "c₃ = 1/(8π) is the gravitational seam constant; the spectral action gives R + R² structurally (G2), and the closed admissible sector is gap-decoupled from the un-built ambient (G5, Decoupling Theorem). The ambient measure (G6) is holographically reduced to a finite seam-boundary measure — the strict-TOE completion target, no longer a bulk problem.",
         formulas: [
           "2\\|V_{\\mathrm{metric}}\\| = 0.785 < \\Delta = 6\\log\\tfrac{3}{2} = 2.433, \\qquad \\Delta_{\\mathrm{eff}} = 1.648 > 0",
           "M_{\\mathrm{scal}}^2/\\bar M_{\\mathrm{Pl}}^2 = c_3^7, \\qquad M_{\\mathrm{scal}} = 3.06\\times 10^{13}\\,\\text{GeV}",
@@ -800,13 +800,13 @@ export const papers: Paper[] = [
       "The closed compiler and the two named residual gates from the introduction's status card.",
     ],
     contribution: [
-      "Contract 1 (U_wall): pin the one D₄-symmetric, rank-3, four-point parabolic realisation; the four-way split where only the absolute amplitude scale U_point stays open.",
-      "Contract 2 (G_metric): construct the reflection-positive projective-limit metric measure; G2 (R + R²) and G5 (gap dominance) certified, G6 (ambient limit) open.",
+      "Contract 1 (U_wall) — now complete: the quark ratios are closed (Readout Rigidity) and the absolute amplitude U_point reduces to one overall scale v_geo (ratios + Grand Mass Volume) — the same dimensionful anchor as gravity's 1/G. The two [A] anchors collapse to one.",
+      "Contract 2 (G_metric): IR tier closed under RP + gap (Decoupling Theorem, Δ_eff = 1.648 > 0); the ambient measure G6 is holographically reduced from a bulk to a finite seam-boundary measure — conditional on RP + tightness, no longer diffuse.",
       "The quark ratio c_u/c_d = 55/117 is closed (Readout Rigidity); the '11' is the Pascal sum 16 − g_car.",
     ],
     notClaimed: [
-      "The D₄ symmetry fixes the admissible chamber, not the physical point; the absolute flavor amplitude scale U_point is [A].",
-      "The ambient projective measure (G6) blocks certification as a strict physical TOE; its absence does not affect the bounded IR claim.",
+      "U_point is not a free transcendental input but the single overall scale v_geo (shared with 1/G); the strict claim is only that one dimensionful anchor remains.",
+      "The ambient boundary projective measure (G6) is reduced but not closed; it blocks certification as a strict physical TOE, but its absence does not affect the bounded IR claim.",
     ],
     falsification: [
       "Each contract names its closing theorem and certifiability; fails if a lemma certified [F] does not in fact machine-check, or if the closing theorem is asserted before its chain completes.",
@@ -822,7 +822,7 @@ export const papers: Paper[] = [
       },
       {
         title: "Theorem U — the four-way split",
-        body: "The remaining flavor bridge splits into four pieces: unitarity (polystable ⇒ unitary, finite linear algebra), the H2 readoff, the Λ² readout rigidity, and only U_point (the full amplitude normalisation) stays open.",
+        body: "The remaining flavor bridge splits into four pieces: unitarity (polystable ⇒ unitary, finite linear algebra), the H2 readoff, the Λ² readout rigidity, and U_point (the full amplitude normalisation) — which now reduces to the single overall scale v_geo (the same anchor as 1/G). Gate 1 is complete.",
         formulas: [
           "(U_{\\mathrm{wall}}) = U_{\\mathrm{unitary}} + U_{\\mathrm{H2}} + U_{\\Lambda^2} + U_{\\mathrm{point}}",
           "\\|\\mathrm{Pl}(K)\\|_1 = \\textstyle\\sum_{k=0}^{2}\\binom{4}{k} = 11 = 16 - g_{\\mathrm{car}}",
@@ -830,7 +830,7 @@ export const papers: Paper[] = [
       },
       {
         title: "Contract 2 — (G_metric), the QG measure",
-        body: "The goal is the reflection-positive projective-limit measure over the diffeomorphism-quotiented metric sector. G2 (Seeley–DeWitt R + R²) and G5 (gap dominance) are certified; the projective limit G6 is the hardest, open step.",
+        body: "The goal is the reflection-positive projective-limit measure over the diffeomorphism-quotiented metric sector. G2 (Seeley–DeWitt R + R²) and G5 (gap dominance, Decoupling Theorem) are certified; the projective limit G6 is now holographically reduced — because the seam is a finite causal boundary, the bulk measure is reconstructed from a finite seam-boundary (Calderón) measure, so G6 is a boundary projective limit (conditional on RP + tightness), not a diffuse bulk problem.",
         formulas: [
           "a_2 = -\\tfrac{R}{3}, \\qquad a_4\\big|_{R^2} = \\tfrac{R^2}{72}",
           "2\\|V_{\\mathrm{metric}}\\| = 0.785 < \\Delta = 6\\log\\tfrac{3}{2} = 2.433, \\qquad \\Delta_{\\mathrm{eff}} = 1.648 > 0",
@@ -846,9 +846,9 @@ export const papers: Paper[] = [
     ],
     keyFormulas: [
       {
-        label: "U_wall selectors",
-        latex: "\\det R = 8, \\qquad \\operatorname{Spec}(Q_+) = \\{1,2,3\\}",
-        description: "Read off the bundle; only U_point stays open. [F/A]",
+        label: "Gate 1 closed",
+        latex: "U_{\\mathrm{point}} \\to v_{\\mathrm{geo}} = \\text{the } 1/G \\text{ anchor}",
+        description: "Ratios + Grand Mass Volume ⇒ one overall scale. [I]/[A]",
       },
       {
         label: "Quark ratio closed",
@@ -856,16 +856,16 @@ export const papers: Paper[] = [
         description: "Readout Rigidity on the discrete stratum. [I]",
       },
       {
-        label: "G_metric gap",
-        latex: "2\\|V\\| = 0.785 < \\Delta = 2.433 \\Rightarrow \\Delta_{\\mathrm{eff}} = 1.648",
-        description: "Gap dominance certified (G5); ambient limit (G6) open. [F/A]",
+        label: "Gate 2 reduction",
+        latex: "2\\|V\\| = \\tfrac{31}{4\\pi^2} < \\Delta = 6\\log\\tfrac32 \\Rightarrow \\Delta_{\\mathrm{eff}} = 1.648",
+        description: "IR closed (decoupling); G6 reduced to a seam-boundary measure. [I]/[P]",
       },
     ],
     highlights: [
       { label: "Gates", value: "2", description: "(U_wall) flavor + (G_metric) quantum gravity" },
-      { label: "U_point", value: "open [A]", description: "Only the absolute flavor amplitude scale" },
+      { label: "U_point", value: "→ v_geo", description: "Gate 1 closed: the single overall scale (= 1/G anchor)" },
       { label: "c_u/c_d", value: "55/117", description: "Closed by Readout Rigidity" },
-      { label: "G6", value: "open [A]", description: "Ambient measure — strict-TOE target" },
+      { label: "G6", value: "→ boundary", description: "Holographically reduced to a finite seam-boundary measure" },
     ],
   },
 ];

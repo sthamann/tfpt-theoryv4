@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  8 JUN 2026 07:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  8 JUN 2026 11:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1797,7 +1797,7 @@ Package rerunfilecheck Info: File `tfpt_2_standard_model.out' has not changed.
 Here is how much of TeX's memory you used:
  35572 strings out of 473190
  715748 string characters out of 5715801
- 1182999 words of memory out of 5000000
+ 1183000 words of memory out of 5000000
  57427 multiletter control sequences out of 15000+600000
  732778 words of font info for 434 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
