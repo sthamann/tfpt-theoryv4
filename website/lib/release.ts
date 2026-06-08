@@ -34,9 +34,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/introduction.pdf": {
     href: "/papers/introduction.pdf",
     ...COMMON,
-    bytes: 910693,
+    bytes: 911844,
     sha256:
-      "58f69852105d191df9ebd1844a6ecc071d8b54c35c8b64d78c2a4e306053e1a4",
+      "dfc41f164ee6709faf23c25f5e3ff0610dc4174d5f702d939db389a791f22a8f",
     changelog:
       "Compiler-closure reading guide: two axioms, the dependency DAG, the predictions and the proof ledger.",
   },
@@ -61,9 +61,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/tfpt_3_e8_audit_bootstrap.pdf": {
     href: "/papers/tfpt_3_e8_audit_bootstrap.pdf",
     ...COMMON,
-    bytes: 766073,
+    bytes: 767106,
     sha256:
-      "a9be93ad824cc04923439aa9cd40aeced55f8699c5f82f03a8947886ecca6dfa",
+      "dfc6fe5a8cc2f383f3c357cf0f716f030269c9cfa6e2fe3a53cee291e43cf5cb",
     changelog:
       "The seven E₈ slices as an audit raster, the cascade bridge, and the Möbius bootstrap.",
   },
@@ -88,18 +88,18 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/origin_theory.pdf": {
     href: "/papers/origin_theory.pdf",
     ...COMMON,
-    bytes: 629625,
+    bytes: 636251,
     sha256:
-      "166b851c12b83c2b64c59cdf2b541d8a27dc84bddc9ddb4c954f2716dba9d593",
+      "1616b176c4c88da36509371df8ae895c657de0da7418ad866ed94766e01e791d",
     changelog:
       "Origin Theory: the (5,3) skeleton, the triply-forced 8, the order-30 Coxeter cycle, and the gapped unique attractor.",
   },
   "/papers/tfpt_research_contracts.pdf": {
     href: "/papers/tfpt_research_contracts.pdf",
     ...COMMON,
-    bytes: 588229,
+    bytes: 591053,
     sha256:
-      "8f46304c687d529c9ff38b8d35be12b40077ceb0abaec0b6bf90c3bdf56b5048",
+      "6aa91814065060d8a64409ae11616e72b95fa8cdbb1f80fd8547ce4218884930",
     changelog:
       "Research contracts for the two open gates: (U_wall) flavor wall-selection and (G_metric) the QG measure.",
   },

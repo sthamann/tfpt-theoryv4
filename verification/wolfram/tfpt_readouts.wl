@@ -374,6 +374,15 @@ checkExact["||V||<=248 c3^2 = 31/(8pi^2) (31=2^g_car-1); 2||V||=31/(4pi^2); Delt
   Module[{c3 = 1/(8 Pi)},
     (248 c3^2 == 31/(8 Pi^2)) && (31 == 2^gcar - 1) && (6 Log[3/2] - 31/(4 Pi^2) > 0)]];
 
+(* ---- (v77) G6 via E8 level-1 net: level-1 central charges + conformal embedding c-sum ---- *)
+checkExact["level-1 c=dim/(1+h^v): c(E8)=248/31=8=rank E8, c(D5)=45/9=5, c(A3)=15/5=3; embedding 5+3=8 => coset c=0",
+  Module[{cE8 = 248/(1 + 30), cD5 = 45/(1 + 8), cA3 = 15/(1 + 4)},
+    (cE8 == 8) && (cD5 == 5) && (cA3 == 3) && (cD5 + cA3 == cE8)]];
+
+(* ---- (v78) v_geo floor: S_dS*rho_Lambda = 1/(128 c3^4) = 32 pi^4 (one scale pinned by one measurement) ---- *)
+checkExact["S_dS * rho_Lambda = 1/(128 c3^4) = 32 pi^4 (cosmological pinning of the single scale)",
+  Module[{c3 = 1/(8 Pi)}, 1/(128 c3^4) == 32 Pi^4]];
+
 (* ---- summary ---- *)
 Print["--- Wolfram readouts: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM CHECKS PASSED"]];

@@ -163,6 +163,8 @@ const CLUSTERS: Cluster[] = [
       { file: "v72_q_det_from_cusp.py", what: "det Q = N_fam from the cusp class (triality deck group)" },
       { file: "v74_compiler_micro_lemmas.py", what: "spine quotient ladder; pencil differences 2→16→48; anchor QF 41−25=16; solar dual anchor" },
       { file: "v76_gmetric_reduction.py", what: "Gate 2: decoupling Δ_eff=1.648>0; G6 holographically reduced to a seam-boundary measure" },
+      { file: "v77_e8_conformal_net.py", what: "G6 route: seam boundary = (E₈)₁ lattice net (rigorous); c(E₈)=8, c(D₅)=5, c(A₃)=3, embedding 5+3=8" },
+      { file: "v78_vgeo_floor.py", what: "v_geo = dimensional-analysis floor: one scale + π; S_dS·ρ_Λ=32π⁴ pins it from one measurement" },
     ],
   },
 ];

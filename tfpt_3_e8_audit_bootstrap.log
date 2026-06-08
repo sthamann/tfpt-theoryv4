@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  8 JUN 2026 11:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  8 JUN 2026 11:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1543,18 +1543,18 @@ asimir de-grees
 [20]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1087.
+(hyperref)                removing `math shift' on input line 1090.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 1087.
+(hyperref)                removing `subscript' on input line 1090.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1087.
+(hyperref)                removing `math shift' on input line 1090.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1143.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1146.
 
 
 
@@ -1563,26 +1563,26 @@ LaTeX Font Warning: Command \small invalid in math mode on input line 1143.
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1159.
+(hyperref)                removing `math shift' on input line 1162.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 1159.
+(hyperref)                removing `subscript' on input line 1162.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1159.
+(hyperref)                removing `math shift' on input line 1162.
 
 
 
 [22]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1209.
+(hyperref)                removing `math shift' on input line 1212.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1209.
+(hyperref)                removing `math shift' on input line 1212.
 
 
 
@@ -1634,7 +1634,7 @@ ic/lm/lmsy9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtk1
 0.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></us
 r/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/local/tex
 live/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tfpt_3_e8_audit_bootstrap.pdf (24 pages, 766073 bytes).
+Output written on tfpt_3_e8_audit_bootstrap.pdf (24 pages, 767106 bytes).
 PDF statistics:
  507 PDF objects out of 1000 (max. 8388607)
  379 compressed objects within 4 object streams

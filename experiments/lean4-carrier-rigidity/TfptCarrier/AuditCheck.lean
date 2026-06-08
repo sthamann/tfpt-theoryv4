@@ -22,6 +22,7 @@ import TfptCarrier.CalderonProjector
 import TfptCarrier.BoundaryPolarization
 import TfptCarrier.MathlibBridge
 import TfptCarrier.LatticeRigidityGeneral
+import TfptCarrier.CarrierRankUniqueness
 import TfptCarrier.Rigidity
 import TfptCarrier.OrientedDeterminantCarrier
 import TfptCarrier.TraceProjection
@@ -54,6 +55,12 @@ import TfptCarrier.Hypercharge
 #check @TFPT.Carrier.LatticeRigidityGeneral.primitive_trace_free_pair_general
 #check @TFPT.Carrier.LatticeRigidityGeneral.primitive_trace_free_pair_3_2
 #check @TFPT.Carrier.Rigidity.unique_carrier_pair
+
+-- Layer 3a: Theorem A — carrier rank uniqueness (g_car = 5)
+#check @TFPT.Carrier.CarrierRankUniqueness.pascal_growth
+#check @TFPT.Carrier.CarrierRankUniqueness.carrier_rank_pascal_unique
+#check @TFPT.Carrier.CarrierRankUniqueness.g_car_unique
+#check @TFPT.Carrier.CarrierRankUniqueness.carrier_closure_integers
 
 -- Layer 3b: Primitive oriented determinant-preserving carrier bundle
 #check @TFPT.Carrier.OrientedDeterminantCarrier.PrimitiveOrientedDeterminantCarrier.to_rigidity_pair_eq

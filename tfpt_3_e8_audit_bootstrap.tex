@@ -1073,7 +1073,10 @@ continuous origin is $\pi$ from the Möbius boundary geometry.} (Not ``zero axio
   $E_8$ closure (two independent Lie-theory conditions); the integer ``$8$'' in $\cthree$ is the carrier
   Coxeter $=$ $E_8$ rank; the discrete data closes a loop. The earlier landscape scan confirms
   $\gcar=5$ is the \emph{unique} value at which all hierarchies/family/gauge close --- so the fixed point
-  is unique, not one of many.
+  is unique, not one of many. \textbf{This uniqueness is now machine-formalised \tF\ in Lean 4} (Theorem A,
+  \texttt{lean4-carrier-rigidity}): the division-free Pascal condition $2^{g}=g^2+g+2$ has the \emph{unique}
+  solution $g=5$ (\texttt{carrier\_rank\_pascal\_unique}; growth lemma for $g\ge6$; $\Nfam=(2^{4}{-}1)/5=3$,
+  $g{+}\Nfam=8$), audited to use only the standard kernel axioms.
 \item \textbf{What this is \emph{not}:} a derivation from zero inputs. A self-consistency loop is
   consistent \emph{at} a value; uniqueness is what makes it predictive (and that is supplied by the
   landscape scan). The continuous $\pi$ is not produced by the loop --- it is the Möbius/boundary

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  8 JUN 2026 11:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  8 JUN 2026 11:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1366,15 +1366,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 502--515
  []
 
 
+Underfull \hbox (badness 6316) in paragraph at lines 526--534
+\T1/lmr/bx/n/10.95 (+20) And that one scale is the dimensional-analysis floor, 
+not a gap
+ []
+
+
+Underfull \hbox (badness 5652) in paragraph at lines 535--541
+\T1/lmr/bx/n/10.95 (+20) The last open piece, $\OML/lmm/m/it/10.95 G\OT1/lmr/m/
+n/10.95 (+20) 6$\T1/lmr/bx/n/10.95 (+20) , re-duces to a rigorously-constructed
+ net
+ []
+
+
 
 [9]
 
 [10]
 
-[11
-
-]
-Underfull \hbox (badness 1184) in paragraph at lines 636--641
+[11]
+Underfull \hbox (badness 1184) in paragraph at lines 652--657
 []\T1/lmr/m/it/10.95 (+20) Uniqueness of the $\OML/lmm/m/it/10.95 ^^V[]$ \T1/lm
 r/m/it/10.95 (+20) lat-tice clo-sure \T1/lmr/m/n/10.95 (+20) --- \T1/lmr/bx/n/1
 0.95 (+20) al-ready es-tab-lished []\T1/lmr/bx/n/10 (+20) [L][]\T1/lmr/m/n/10.9
@@ -1382,7 +1393,7 @@ r/m/it/10.95 (+20) lat-tice clo-sure \T1/lmr/m/n/10.95 (+20) --- \T1/lmr/bx/n/1
  []
 
 
-Underfull \hbox (badness 6944) in paragraph at lines 636--641
+Underfull \hbox (badness 6944) in paragraph at lines 652--657
 \T1/lmr/m/n/10.95 (+20) ([]\T1/lmr/m/n/9 (+20) [\T1/lmtt/m/n/9 verification/v6_
 bootstrap.py\T1/lmr/m/n/9 (+20) ][][][\T1/lmtt/m/n/9 verification/v15_bootstrap
 _classification.py\T1/lmr/m/n/9 (+20) ][]\T1/lmr/m/n/10.95 (+20) ). So three
@@ -1391,44 +1402,46 @@ _classification.py\T1/lmr/m/n/9 (+20) ][]\T1/lmr/m/n/10.95 (+20) ). So three
 
 
 [12]
-Underfull \hbox (badness 1874) in paragraph at lines 717--717
+
+[13]
+Underfull \hbox (badness 1874) in paragraph at lines 733--733
 []|\T1/lmr/m/n/10 (+20) one $\OML/lmm/m/it/10 []$ \T1/lmr/m/n/10 (+20) sets EM
 , $\OML/lmm/m/it/10 S[]$ \T1/lmr/m/n/10 (+20) and $\OT1/lmr/m/n/10 (+20) ^^C$
  []
 
 
-Underfull \hbox (badness 2772) in paragraph at lines 717--717
+Underfull \hbox (badness 2772) in paragraph at lines 733--733
 []|\T1/lmr/m/n/10 (+20) horizon cross-links (Ja-cob-son/E-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 717--717
+Underfull \hbox (badness 10000) in paragraph at lines 733--733
 \T1/lmr/m/n/10 (+20) in-stein $\OT1/lmr/m/n/10 (+20) 8\OML/lmm/m/it/10 ^^Y[]\OT
 1/lmr/m/n/10 (+20) 1\OML/lmm/m/it/10 =c[]$\T1/lmr/m/n/10 (+20) , Hod $[] \OT1/l
 mr/m/n/10 (+20) 3$\T1/lmr/m/n/10 (+20) ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 717--717
+Underfull \hbox (badness 10000) in paragraph at lines 733--733
 []|\T1/lmr/bx/n/10 (+20) cyclic self-reproduction
  []
 
 
-
-[13]
-Overfull \hbox (18.5217pt too wide) in paragraph at lines 742--742
+Overfull \hbox (18.5217pt too wide) in paragraph at lines 758--758
 []|\T1/lmtt/m/n/10 v54_seam_horizon_keystones.py| 
  []
 
 
-Underfull \hbox (badness 1735) in paragraph at lines 744--747
+
+[14]
+Underfull \hbox (badness 1735) in paragraph at lines 760--763
 \T1/lmtt/m/n/10.95 wolframscript -file verification/wolfram/tfpt_readouts.wl \T
 1/lmr/m/n/10.95 (+20) (all pass). Fig-ures are
  []
 
 
 
-[14] (./origin_theory.aux)
+[15] (./origin_theory.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1437,11 +1450,11 @@ Package rerunfilecheck Info: File `origin_theory.out' has not changed.
 (rerunfilecheck)             Checksum: D5E28BD09DFE3B42F3A96B7BA7A78AA5;3125.
  ) 
 Here is how much of TeX's memory you used:
- 33561 strings out of 473190
- 671069 string characters out of 5715801
- 1135244 words of memory out of 5000000
- 55797 multiletter control sequences out of 15000+600000
- 718958 words of font info for 324 fonts, out of 8000000 for 9000
+ 33567 strings out of 473190
+ 671136 string characters out of 5715801
+ 1137244 words of memory out of 5000000
+ 55798 multiletter control sequences out of 15000+600000
+ 719124 words of font info for 326 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  86i,16n,96p,1010b,1049s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.
@@ -1452,28 +1465,29 @@ xmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive/2025/texmf-dist/fo
 nts/type1/public/lm/lmbxi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1
 /public/lm/lmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm
 /lmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pf
-b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/loc
-al/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/
-2025/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></usr/local/texlive/2025/texmf-
-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/
-type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/publi
-c/lm/lmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr7.pf
-b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/loca
-l/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/20
-25/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2025/texmf-d
-ist/fonts/type1/public/lm/lmri8.pfb></usr/local/texlive/2025/texmf-dist/fonts/t
-ype1/public/lm/lmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/publi
-c/lm/lmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy7.
-pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/l
-ocal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/local/texli
-ve/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2025/te
-xmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/local/texlive/2025/texmf-dist/fo
-nts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dis
-t/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on origin_theory.pdf (14 pages, 629625 bytes).
+b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/loc
+al/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/
+2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2025/texmf-
+dist/fonts/type1/public/lm/lmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/
+type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/publi
+c/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.p
+fb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/loc
+al/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2
+025/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2025/texmf-di
+st/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2025/texmf-dist/fonts/t
+ype1/public/lm/lmri8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public
+/lm/lmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy6.
+pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/l
+ocal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texliv
+e/2025/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/local/texlive/2025/tex
+mf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2025/texmf-dist/fo
+nts/type1/public/lm/lmtt9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/p
+ublic/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/typ
+e1/public/amsfonts/symbols/msbm10.pfb>
+Output written on origin_theory.pdf (15 pages, 636251 bytes).
 PDF statistics:
- 498 PDF objects out of 1000 (max. 8388607)
- 305 compressed objects within 4 object streams
- 47 named destinations out of 1000 (max. 500000)
+ 507 PDF objects out of 1000 (max. 8388607)
+ 311 compressed objects within 4 object streams
+ 48 named destinations out of 1000 (max. 500000)
  88831 words of extra memory for PDF output out of 89155 (max. 10000000)
 

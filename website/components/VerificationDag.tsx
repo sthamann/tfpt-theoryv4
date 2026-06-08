@@ -99,7 +99,7 @@ const NODES: DagNode[] = [
     marker: "[A] axiom · [F] Lean",
     title: "P2 — the five-slot carrier",
     summary:
-      "The carrier rank g_car = 5 (3 colour + 2 weak). The P2 algebra — hypercharge, anomaly-freedom, integer rigidity — is Lean-formalised (0 sorry).",
+      "The carrier rank g_car = 5 (3 colour + 2 weak). The P2 algebra — hypercharge, anomaly-freedom, integer rigidity — is Lean-formalised (0 sorry). Theorem A is now also Lean-formalised: the Pascal carrier condition 2^g = g²+g+2 has the unique solution g = 5 (audited to the standard kernel axioms).",
     inputs: ["— declared axiom"],
     outputs: ["g_car = 5"],
     failure: "Wrong family / charge lattice.",
@@ -244,7 +244,7 @@ const NODES: DagNode[] = [
     marker: "[P] conditional",
     title: "Gravity & cosmology — the geometry channel",
     summary:
-      "The spectral action gives R + R²; the scalaron mass is M = c₃^(7/2) M̄ = 3.06×10¹³ GeV (exponent 7 = Ω_adm − 10 b₁). From the same attractor: n_s = 0.965, r ≈ 0.004, A_s ≈ 2.0×10⁻⁹, Λ ∼ e⁻²ᵅ⁻¹, H₀ ∼ √Λ. Gate 2: the IR tier is gap-decoupled (Δ_eff = 1.648 > 0), and the ambient measure G6 is holographically reduced to a finite seam-boundary measure.",
+      "The spectral action gives R + R²; the scalaron mass is M = c₃^(7/2) M̄ = 3.06×10¹³ GeV (exponent 7 = Ω_adm − 10 b₁). From the same attractor: n_s = 0.965, r ≈ 0.004, A_s ≈ 2.0×10⁻⁹, Λ ∼ e⁻²ᵅ⁻¹, H₀ ∼ √Λ. Gate 2: the IR tier is gap-decoupled (Δ_eff = 1.648 > 0), and the ambient measure G6 is holographically reduced to the rigorously-constructed (E₈)₁ lattice net (c = 8 = 5 + 3). Every scale is a ratio to one v_geo — the dimensional-analysis floor.",
     inputs: ["c₃ (P1)", "E₈"],
     outputs: ["Λ, A_s, n_s, r, scalaron M"],
     failure: "Ambient reflection-positivity fails.",
@@ -254,6 +254,8 @@ const NODES: DagNode[] = [
       "v36_spectral_action_g2.py",
       "v60_lambda_metrology_branch.py",
       "v76_gmetric_reduction.py",
+      "v77_e8_conformal_net.py",
+      "v78_vgeo_floor.py",
     ],
   },
 

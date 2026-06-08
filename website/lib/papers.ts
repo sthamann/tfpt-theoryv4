@@ -801,7 +801,7 @@ export const papers: Paper[] = [
     ],
     contribution: [
       "Contract 1 (U_wall) — now complete: the quark ratios are closed (Readout Rigidity) and the absolute amplitude U_point reduces to one overall scale v_geo (ratios + Grand Mass Volume) — the same dimensionful anchor as gravity's 1/G. The two [A] anchors collapse to one.",
-      "Contract 2 (G_metric): IR tier closed under RP + gap (Decoupling Theorem, Δ_eff = 1.648 > 0); the ambient measure G6 is holographically reduced from a bulk to a finite seam-boundary measure — conditional on RP + tightness, no longer diffuse.",
+      "Contract 2 (G_metric): IR tier closed under RP + gap (Decoupling Theorem, Δ_eff = 1.648 > 0); the ambient measure G6 is holographically reduced to a finite seam-boundary measure that is the rigorously-constructed (E₈)₁ lattice net (c = 8 = 5 + 3, conformal embedding (D₅)₁×(A₃)₁, coset c = 0) — so G6 is imported into existing RCFT/conformal-net rigor, not built anew.",
       "The quark ratio c_u/c_d = 55/117 is closed (Readout Rigidity); the '11' is the Pascal sum 16 − g_car.",
     ],
     notClaimed: [
@@ -865,7 +865,8 @@ export const papers: Paper[] = [
       { label: "Gates", value: "2", description: "(U_wall) flavor + (G_metric) quantum gravity" },
       { label: "U_point", value: "→ v_geo", description: "Gate 1 closed: the single overall scale (= 1/G anchor)" },
       { label: "c_u/c_d", value: "55/117", description: "Closed by Readout Rigidity" },
-      { label: "G6", value: "→ boundary", description: "Holographically reduced to a finite seam-boundary measure" },
+      { label: "G6", value: "→ (E₈)₁ net", description: "Reduced to the rigorously-constructed E₈ level-1 lattice net (c = 8 = 5 + 3)" },
+      { label: "v_geo", value: "1 scale", description: "Dimensional-analysis floor: one scale + π; shared by flavor & gravity" },
     ],
   },
 ];
