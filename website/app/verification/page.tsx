@@ -267,21 +267,36 @@ export default function VerificationPage() {
 
           <div className="mt-10 flex flex-col items-center gap-3 rounded-2xl border border-blue-400/25 bg-gradient-to-br from-blue-500/10 to-violet-500/5 p-8 text-center">
             <h3 className="font-serif text-xl font-semibold text-slate-50">
-              The full source, scripts and ledger
+              Independent scrutiny is the point
             </h3>
-            <p className="max-w-xl text-sm text-slate-400">
-              Theory documents, the Python + Wolfram + Lean verification stack,
-              and the versioned status ledger — all in one public repository.
+            <p className="max-w-2xl text-sm leading-relaxed text-slate-400">
+              These checks are reproducible by anyone — that is what
+              &ldquo;independent&rdquo; means here: the same result falls out on
+              your machine, on an independent Wolfram path, and (for the carrier)
+              in Lean. We do not claim external endorsements; we invite review.
+              Open questions and known limitations are tracked openly in the
+              research contracts and the status ledger — disagreements go in the
+              issue tracker.
             </p>
-            <Link
-              href={REPO_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition-transform hover:scale-105"
-            >
-              <Github size={16} />
-              github.com/sthamann/tfpt-theoryv4
-            </Link>
+            <div className="mt-1 flex flex-wrap items-center justify-center gap-3">
+              <Link
+                href={REPO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition-transform hover:scale-105"
+              >
+                <Github size={16} />
+                Source, scripts &amp; ledger
+              </Link>
+              <Link
+                href={`${REPO_URL}/issues`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-slate-600/60 bg-slate-900/60 px-5 py-2.5 text-sm font-semibold text-slate-100 transition-colors hover:bg-slate-800/80"
+              >
+                Open an issue / review
+              </Link>
+            </div>
           </div>
         </div>
       </section>
