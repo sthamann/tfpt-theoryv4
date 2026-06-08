@@ -35,6 +35,12 @@ constants and scale grammar. Every load-bearing claim must be machine-checked.
   asked. (The old `tfpt-breakthrough` note was deleted; its scale-grammar / action-
   ladder `1:5:10` / `g_car=5` overdetermination content lives in `tfpt_1`.)
 - **Python venv** — `experiments/tfpt-discovery/.venv` (mpmath, numpy, sympy, scipy).
+- **Website** — `website/` (Next.js, static, Vercel): a public mirror of the 8 docs +
+  the verification suite, driven by `lib/papers.ts`, `lib/predictions.ts`, `lib/glossary.ts`,
+  `lib/release.ts`, `public/papers/*.pdf`, `public/verification/*.py`, and the
+  `/verification` interactive DAG + in-browser (Pyodide) script reproducer. It must be
+  updated in the same change as the theory/scripts — see the **`website-sync` rule** for the
+  file-by-file mapping.
 
 ## Status markers (use everywhere; never silently upgrade)
 
@@ -78,7 +84,12 @@ and the `GATE.*` rows in the ledger.
    `claim,statement,type,location,depends_on,script,external`). Quote fields with commas.
 7. **Recompile** touched docs and check no overfull > 30pt (see command below).
 8. **Consistency audit** — run the audit command below; it must print nothing.
-9. **Refresh manifests** (always last).
+9. **Mirror into the website** (mandatory — see the **`website-sync` rule**): copy the new
+   `vN_*.py` (and any recompiled PDF) into `website/public/`, add the script to
+   `website/components/ScriptIndex.tsx` (every script listed) and, if it backs a DAG node, to
+   `website/components/VerificationDag.tsx`; reflect any status change in the website cards;
+   then `cd website && npm run build` must pass and the touched page browser-checked.
+10. **Refresh manifests** (always last).
 
 ## Maintenance commands (run from `verification/` with venv active)
 
@@ -130,7 +141,12 @@ before refreshing manifests.
   that agrees across all docs. The consistency audit above must print nothing, and
   `build.sh notes` must report `8 ok, 0 failed`, before any commit/manifest refresh.
 - Status markers `[I]/[L]/[F]/[N]/[P]/[A]` are never silently upgraded; a downgrade or
-  upgrade in one doc must be propagated to the intro status card and `tfpt_4_frontier`.
+  upgrade in one doc must be propagated to the intro status card and `tfpt_4_frontier`
+  **and** to the website (`VerificationDag.tsx`, `StatusPyramid.tsx`, `orientation/StatusMatrix.tsx`).
+- **The website mirrors the suite + ledger.** Every `vN_*.py` is copied into
+  `website/public/verification/` and listed in `ScriptIndex.tsx`; every PDF in
+  `website/public/papers/` has a current `lib/release.ts` hash (`npm run release:write`);
+  `website` builds clean (`npm run build`). See the `website-sync` rule.
 - `\phiz` already carries a superscript → write `(\phiz)^n`, never `\phiz^n`.
 - Reduced Planck mass macro differs per doc (`\Mbar` in most, `\Mpl` in
   `tfpt_4_frontier`) — check the local `\newcommand` before using it.

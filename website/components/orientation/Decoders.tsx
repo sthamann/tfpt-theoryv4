@@ -24,7 +24,7 @@ const DECODERS = [
   {
     symbol: "E_8\\text{ closure}",
     role: "The bootstrap loop",
-    body: "The E₈ closure feeds back and fixes the inputs: g_car = 5 is forced three ways (rank-fill, Coxeter-match, integer-glue), and the 8 in c₃ equals rank E₈ = h(D₅) = φ(30). Inputs and output prove each other — only π stays irreducible.",
+    body: "The E₈ closure feeds back as an internal consistency check: g_car = 5 is forced three ways (rank-fill, Coxeter-match, integer-glue), and the 8 in c₃ equals rank E₈ = h(D₅) = φ(30) — recovered independently. The bootstrap overdetermines the discrete core; only π stays irreducible.",
     formula: "E_8 \\Rightarrow g_{\\mathrm{car}}{=}5,\\ 8 = \\operatorname{rank}E_8",
     accent: "from-fuchsia-500 to-pink-500",
     border: "border-fuchsia-400/30 bg-fuchsia-500/5",

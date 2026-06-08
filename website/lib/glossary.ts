@@ -62,7 +62,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     term: "bootstrap loop",
     alias: ["bootstrap", "Möbius bootstrap", "self-consistency loop"],
     short:
-      "The E₈ closure feeds back and fixes the inputs: g_car = 5 is forced three ways and the 8 in c₃ = rank E₈ = h(D₅) = φ(30). Inputs and output prove each other; only π stays free.",
+      "The E₈ closure feeds back as an internal consistency check: g_car = 5 is forced three ways and the 8 in c₃ = rank E₈ = h(D₅) = φ(30) are recovered independently. The bootstrap overdetermines the discrete core; only π stays free.",
   },
   {
     term: "gapped attractor",

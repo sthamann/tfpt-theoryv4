@@ -9,6 +9,8 @@ import {
   STATUS_BADGE,
   CATEGORY_META,
   LINK_STATUS_META,
+  CLAIM_ID,
+  STATUS_MARKER,
 } from "@/lib/predictions";
 import { cn } from "@/lib/utils";
 import { trackPdfInteraction } from "@/lib/track";
@@ -46,11 +48,12 @@ export function PredictionCard({
           </span>
           <span
             className={cn(
-              "rounded-full px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-widest ring-1",
+              "inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-widest ring-1",
               status.bg,
               status.color,
             )}
           >
+            <span className="font-mono">{STATUS_MARKER[prediction.status]}</span>
             {prediction.status}
           </span>
         </div>
@@ -58,6 +61,11 @@ export function PredictionCard({
         <h3 className="font-serif text-lg font-semibold leading-snug text-slate-50">
           {prediction.title}
         </h3>
+        {CLAIM_ID[prediction.id] && (
+          <span className="font-mono text-[10px] tracking-wider text-slate-500">
+            Claim ID: {CLAIM_ID[prediction.id]}
+          </span>
+        )}
       </div>
 
       <div className="px-5 pb-3 pt-3">
@@ -108,7 +116,7 @@ export function PredictionCard({
         </div>
       </div>
 
-      <div className="mt-auto border-t border-slate-800/60 px-5 py-3">
+      <div className="mt-auto flex items-center justify-between gap-2 border-t border-slate-800/60 px-5 py-3">
         {(() => {
           const linkState = prediction.linkStatus ?? "available";
           const linkMeta = LINK_STATUS_META[linkState];
@@ -157,6 +165,13 @@ export function PredictionCard({
             </Link>
           );
         })()}
+        <Link
+          href="/verification"
+          className="inline-flex flex-none items-center gap-1 text-xs font-semibold text-slate-400 transition-colors hover:text-blue-200"
+          title="See this claim in the verification ledger"
+        >
+          Ledger →
+        </Link>
       </div>
     </motion.article>
   );

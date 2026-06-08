@@ -531,3 +531,64 @@ export const predictions: Prediction[] = [
     category: "Astrophysics",
   },
 ];
+
+/** Ledger claim IDs per prediction (mirror of the status-ledger row keys). */
+export const CLAIM_ID: Record<string, string> = {
+  "alpha-em": "EM.FP.01",
+  "lambda-c": "FLAV.CABIBBO.01",
+  "flavor-invariants": "FLAV.R.01",
+  koide: "FRONT.KOIDE.01",
+  theta12: "NU.THETA12.01",
+  theta13: "NU.THETA13.01",
+  theta23: "NU.THETA23.01",
+  "neutrino-ordering": "NU.ORDER.01",
+  "strong-cp": "QCD.THETA.01",
+  mpme: "FRONT.MPME.01",
+  ns: "INF.NS.01",
+  "r-tensor": "INF.R.01",
+  "as-amplitude": "INF.AS.01",
+  scalaron: "INF.MSCAL.01",
+  "omega-b": "COSMO.OMEGAB.01",
+  "eta-b": "FRONT.ETAB.01",
+  hubble: "COSMO.H0.01",
+  "no-second-higgs": "HIGGS.NPHI.01",
+  birefringence: "DET.BETA.01",
+  axion: "FRONT.AXION.01",
+};
+
+/** Compact status marker per prediction status grade. */
+export const STATUS_MARKER: Record<PredictionStatus, string> = {
+  "Exact identity": "[I]",
+  "Lattice theorem": "[L]",
+  "Numerical fixed point": "[N]",
+  Conditional: "[P]",
+  "Open / not forced": "[A]",
+};
+
+/** Status × testability reading guide shown at the top of the surface. */
+export const TEST_SURFACE_GROUPS: {
+  label: string;
+  tone: string;
+  items: string[];
+}[] = [
+  {
+    label: "Closed numerical tests",
+    tone: "border-emerald-400/25 bg-emerald-500/5 text-emerald-200",
+    items: ["α⁻¹", "sin²θ₁₂", "sin²θ₁₃", "λ_C", "β_rad", "det R / minors"],
+  },
+  {
+    label: "Structural kill tests",
+    tone: "border-blue-400/25 bg-blue-500/5 text-blue-200",
+    items: ["no 2nd Higgs (N_Φ=1)", "neutron EDM (θ_eff=0)", "no 4th generation"],
+  },
+  {
+    label: "Conditional cosmology tests",
+    tone: "border-amber-400/25 bg-amber-500/5 text-amber-200",
+    items: ["r", "n_s", "A_s", "Ω_b", "η_B", "w ≠ −1"],
+  },
+  {
+    label: "Honest non-claims",
+    tone: "border-rose-400/25 bg-rose-500/5 text-rose-200",
+    items: ["m_p/m_e", "exact Koide", "axion relic abundance"],
+  },
+];

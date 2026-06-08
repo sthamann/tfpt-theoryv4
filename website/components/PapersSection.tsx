@@ -16,8 +16,8 @@ export function PapersSection() {
       <div className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
         <SectionHeader
           eyebrow="The document set"
-          title="Five core documents plus three companions"
-          description="The whole development consolidates into eight documents. The introduction is the reading guide; tfpt_1–4 carry the architecture, the Standard Model, the E₈ audit and the honest frontier; and three companions — Appendix H (horizon unit system), the Origin Theory synthesis, and the research contracts — sit alongside. Each opens with its inputs, contribution, what it does not claim, and its falsification surface."
+          title="8 documents: 1 reading guide, 4 core papers, 3 companions"
+          description="Doc 0 is the reading guide (introduction). Docs 1–4 are the core papers — architecture & E₈, the Standard Model, the E₈ audit & bootstrap, the honest frontier. Docs 5–7 are the companions — Appendix H (horizon unit system), the Origin Theory synthesis, and the research contracts. Each opens with its inputs, contribution, what it does not claim, and its falsification surface."
         />
       </div>
 

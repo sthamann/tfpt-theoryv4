@@ -42,7 +42,7 @@ export function GlossTerm({
     <span className="relative inline-block">
       <button
         type="button"
-        aria-describedby={id}
+        aria-describedby={open ? id : undefined}
         aria-expanded={open}
         onClick={() => setOpen((v) => !v)}
         onMouseEnter={() => setOpen(true)}
@@ -57,22 +57,25 @@ export function GlossTerm({
       >
         {children}
       </button>
-      <span
-        id={id}
-        role="tooltip"
-        aria-hidden={!open}
-        className={cn(
-          "pointer-events-none absolute left-1/2 top-full z-30 mt-2 w-72 max-w-[80vw] -translate-x-1/2 rounded-xl border border-slate-700/60 bg-slate-950/95 p-3 text-xs leading-relaxed text-slate-200 opacity-0 shadow-2xl ring-1 ring-blue-400/20 backdrop-blur-md transition-opacity duration-150",
-          open && "pointer-events-auto opacity-100",
-        )}
-      >
-        {entry && (
-          <span className="block text-[10px] font-semibold uppercase tracking-widest text-blue-300/80">
-            {entry.term}
-          </span>
-        )}
-        <span className="mt-1 block text-slate-200">{definition}</span>
-      </span>
+      {/*
+        Rendered only while open so the definition text never sits in the inline
+        reading flow (clean copy/paste, search-engine and screen-reader text);
+        the native `title` still surfaces the definition when collapsed.
+      */}
+      {open && (
+        <span
+          id={id}
+          role="tooltip"
+          className="absolute left-1/2 top-full z-30 mt-2 w-72 max-w-[80vw] -translate-x-1/2 rounded-xl border border-slate-700/60 bg-slate-950/95 p-3 text-xs leading-relaxed text-slate-200 shadow-2xl ring-1 ring-blue-400/20 backdrop-blur-md"
+        >
+          {entry && (
+            <span className="block text-[10px] font-semibold uppercase tracking-widest text-blue-300/80">
+              {entry.term}
+            </span>
+          )}
+          <span className="mt-1 block text-slate-200">{definition}</span>
+        </span>
+      )}
     </span>
   );
 }

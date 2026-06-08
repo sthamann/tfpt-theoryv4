@@ -204,6 +204,37 @@ const collectionJsonLd = {
   })),
 };
 
+const softwareJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  name: "TFPT verification suite",
+  description:
+    "The independent verification stack for TFPT: a Python suite (one file per claim cluster), an independent Wolfram mirror, a Lean 4 carrier-rigidity proof, and a versioned status ledger. Every exact identity, lattice theorem and numerical fixed point is re-derived from the two axioms.",
+  codeRepository: REPO_URL,
+  url: REPO_URL,
+  programmingLanguage: ["Python", "Wolfram Language", "Lean 4", "TypeScript"],
+  license: "https://www.mozilla.org/MPL/2.0/",
+  author: [
+    { "@type": "Person", name: "Stefan Hamann" },
+    { "@type": "Person", name: "Alessandro Rizzo" },
+  ],
+};
+
+const ledgerDatasetJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  name: "TFPT status ledger & content checksums",
+  description:
+    "The versioned per-claim status ledger (claim id, status grade, location, dependency, verifying script) and the SHA-256 content manifests that pin the documents, figures and verification suite.",
+  url: `${REPO_URL}/blob/main/verification/status_ledger.csv`,
+  isAccessibleForFree: true,
+  sameAs: [REPO_URL],
+  creator: [
+    { "@type": "Person", name: "Stefan Hamann" },
+    { "@type": "Person", name: "Alessandro Rizzo" },
+  ],
+};
+
 const predictionsJsonLd = {
   "@context": "https://schema.org",
   "@type": "Dataset",
@@ -274,6 +305,14 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(predictionsJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(ledgerDatasetJsonLd) }}
         />
         <a
           href="#main"

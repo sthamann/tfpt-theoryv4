@@ -1,0 +1,41 @@
+/**
+ * Hostile-referee FAQ data. Kept in a plain (non-"use client") module so both
+ * the client UI component and the server page (for FAQPage JSON-LD) can import
+ * the actual array rather than a client reference.
+ */
+export interface FaqItem {
+  q: string;
+  /** Plain-text answer (also used to build FAQPage JSON-LD). */
+  a: string;
+}
+
+export const FAQ_ITEMS: FaqItem[] = [
+  {
+    q: "Is this just E₈ unification again?",
+    a: "No. In TFPT, E₈ is the unimodular audit / compiler hull that classifies the admissible discrete charge and residue structures — not an unbroken physical gauge group. The Standard Model is a readout after projection, not an E₈ gauge theory. This is exactly why the no-go results against literal E₈ world-formulas (Distler–Garibaldi; Coleman–Mandula) do not apply: they constrain E₈ as a spacetime gauge symmetry, which TFPT does not claim.",
+  },
+  {
+    q: "Where does experimental input enter?",
+    a: "Into the comparison rows, not the construction. CODATA-2022, NuFIT 6.0, ACT DR6, Planck and the running/upcoming experiments are how the closed-branch readouts are checked — they are never used as inputs. The closed branch is built only from the two axioms c₃ = 1/(8π) and g_car = 5.",
+  },
+  {
+    q: "What is actually fitted?",
+    a: "In the closed branch: nothing. There are zero fitted constants on the dimensionless axis, and parameter-freeness is a theorem (a gapped boundary transport with Δ = 6 log(3/2) > 0 has, by Perron–Frobenius, a unique attractor). The only continuous primitive left is π. The conditional layer has declared inputs — the e-fold count N★ for inflation and one dimensionful induced-gravity scale — which are typed [P]/[A], never smuggled in.",
+  },
+  {
+    q: "Couldn't all the integer coincidences be numerology?",
+    a: "The discipline rule is: every load-bearing number must appear in at least one E₈ branching projection, which turns the number stock into a falsifiable raster. Beyond that, every [I] identity, [L] lattice theorem and [N] numerical fixed point is re-derived from the two axioms by an independent Python suite, mirrored on an independent Wolfram path, and recorded in a versioned status ledger.",
+  },
+  {
+    q: "What would kill the theory fastest?",
+    a: "Any one of: the α fixed-point equation F_U(1)(α) = 0 failing or admitting a second admissible root; a robust neutron-EDM signal (θ_eff = 0 is structural); the discovery of a second light seam-even Higgs doublet (N_Φ = 1); a robust tensor ratio r ≳ 0.01 (the R² branch carries M_Pl and A_s); a robust w ≠ −1 (the single-engine dark-energy readout); a JUNO solar angle clearly away from 0.307; or any verification script failing to reproduce its claim.",
+  },
+  {
+    q: "What is still open?",
+    a: "Two genuine research gates plus typed interfaces. (U_wall): the absolute flavor amplitude scale U_point (the quark ratios are already closed). (G_metric): the ambient projective quantum-gravity measure G6 — so a strict physical TOE is not certified. The frontier interfaces (Koide, η_B, the axion relic scale, m_p/m_e) are explicitly not claimed as compiler powers.",
+  },
+  {
+    q: "Why call α⁻¹ a prediction at 1.9σ from CODATA?",
+    a: "α⁻¹ = 137.0359992168 is the unique positive root of a parameter-free cubic with proven existence and uniqueness — it is a fixed point, not a fit. The deviation from the CODATA-2022 recommended value is 3.98×10⁻⁸ in α⁻¹, about 1.9σ of that adjustment's uncertainty. It is presented as a numerical fixed point [N], with its kill criterion stated.",
+  },
+];

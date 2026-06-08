@@ -39,7 +39,10 @@ export function Hero() {
             <span className="uppercase">TFPT 5.0 · the compiler closure · 2026</span>
           </span>
 
-          <h1 className="mt-6 max-w-4xl font-serif text-4xl font-semibold leading-[1.05] text-slate-50 sm:text-5xl md:text-6xl lg:text-7xl">
+          <h1
+            aria-label="Two axioms. One compiler. The Standard Model, derived."
+            className="mt-6 max-w-4xl font-serif text-4xl font-semibold leading-[1.05] text-slate-50 sm:text-5xl md:text-6xl lg:text-7xl"
+          >
             <span className="block">Two axioms. One compiler.</span>
             <span className="block">
               The <span className="text-gradient-blue">Standard Model</span>, derived.
@@ -49,8 +52,10 @@ export function Hero() {
             The gauge group, three families, hypercharge and the flavor matrix
             follow from two numbers.{" "}
             <span className="font-semibold text-blue-300">α⁻¹ = 137.0359992</span>,
-            1.9σ from CODATA-2022. 20 falsifiable predictions, zero fitted
-            constants.
+            1.9σ from CODATA-2022.{" "}
+            <span className="font-semibold text-slate-100">20 status-graded test surfaces</span>;
+            zero fitted constants in the closed branch. Every claim is ledger-typed,
+            reproducible, or explicitly open.
           </p>
 
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg md:text-xl">
@@ -175,19 +180,18 @@ const STATS: Array<{
     note: "c₃ = 1/(8π) and g_car = 5; everything else is a consequence",
   },
   {
-    label: "α⁻¹(0)",
-    value: "137.0359992",
-    note: "Unique root of F_U(1)(α) = 0; 1.9σ from CODATA-2022",
-    isMath: true,
-  },
-  {
-    label: "Predictions",
+    label: "Test surfaces",
     value: "20",
-    note: "Falsifiable readouts, each with a committed kill criterion",
+    note: "Status-graded readouts and kill criteria, each with a marker",
   },
   {
     label: "Fitted constants",
     value: "0",
-    note: "No free dial; only π stays irreducible after the bootstrap",
+    note: "In the closed branch; only π stays irreducible after the bootstrap",
+  },
+  {
+    label: "Open gates",
+    value: "2",
+    note: "(U_wall) flavor scale + (G_metric) QG measure — explicitly open",
   },
 ];

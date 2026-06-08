@@ -1,0 +1,63 @@
+---
+description: Keep the website (website/) in sync when the theory documents or the verification suite change
+globs: website/**,verification/**,*.tex
+alwaysApply: false
+---
+
+# Website sync — mirror theory & verification changes into `website/`
+
+The public site in `website/` (Next.js, static, deployed on Vercel) is a
+**mirror of the active root documents and the verification suite**. Whenever the
+theory or the scripts change, the website must be updated in the **same change**.
+Never invent numbers or claims — everything on the site is grounded in the
+documents and the ledger (the ledger wins on any disagreement).
+
+## What drives the site (data layer)
+
+- `website/lib/papers.ts` — the **8 documents** (number 0 = `introduction`, 1 =
+  `tfpt_1_architecture_e8`, 2 = `tfpt_2_standard_model`, 3 = `tfpt_3_e8_audit_bootstrap`,
+  4 = `tfpt_4_frontier`, 5 = `tfpt_horizon_readouts`, 6 = `origin_theory`,
+  7 = `tfpt_research_contracts`): abstract, sections, `keyFormulas`, `highlights`, status.
+- `website/lib/predictions.ts` — the prediction surface (status = `[I]/[L]/[N]/[P]/[A]` grades).
+- `website/lib/glossary.ts` — `GlossTerm` vocabulary.
+- `website/lib/release.ts` — per-PDF version / bytes / SHA-256.
+- `website/public/papers/*.pdf` — copies of the 8 root PDFs (same filenames).
+- `website/public/verification/*.py` — copies of `verification/tfpt_constants.py` + **every**
+  `vN_*.py`; the in-browser Pyodide reproducer (`lib/pyodide.ts`, `components/Reproducer.tsx`)
+  fetches these and runs them client-side.
+- `website/components/VerificationDag.tsx` — dependency-graph nodes; each node lists the
+  `scripts` that verify it + its status marker.
+- `website/components/ScriptIndex.tsx` — clustered list that must contain **every** script
+  (one-line `what`); `TOTAL` auto-counts.
+- Status markers also live in `components/StatusPyramid.tsx`, `components/orientation/StatusMatrix.tsx`,
+  and the `/verification` marker legend — keep them agreeing with the ledger.
+
+## When the verification suite changes (new / renamed / removed `vN_*.py`)
+
+1. Re-copy into the site: `cp verification/tfpt_constants.py verification/v*.py website/public/verification/`.
+2. Add/rename the script in `website/components/ScriptIndex.tsx` (correct cluster, concise `what`).
+   It mirrors the `introduction.tex` script index — list every script, no dangling filenames.
+3. If it backs a DAG node, add its filename to that node's `scripts` in `VerificationDag.tsx`.
+
+## When a document changes (content or a recompiled `*.pdf`)
+
+1. Copy the changed root PDF(s) into `website/public/papers/` (same filename).
+2. `cd website && npm run release:write` — refreshes bytes + SHA-256 in `lib/release.ts`.
+3. Update that document's entry in `lib/papers.ts` (abstract / sections / `keyFormulas` /
+   `highlights`); update `lib/predictions.ts` / `lib/glossary.ts` if a prediction or term changed.
+
+## When a result or status marker changes
+
+- A marker upgrade/downgrade must propagate to **every** website surface that shows it
+  (`VerificationDag.tsx`, `StatusPyramid.tsx`, `orientation/StatusMatrix.tsx`) so markers
+  never disagree with the ledger.
+- The `introduction` is the reading guide → the `/orientation` components mirror its
+  before/after, predictions and status card.
+
+## Gate (before done — always)
+
+- `cd website && npm run build` must pass (TypeScript + all static pages generated).
+- Browser-check the touched page(s): `/`, `/verification`, `/papers/<slug>`, `/orientation`,
+  `/falsification`. On `/verification`, click a changed script to confirm the reproducer runs.
+- The canonical repo link is `REPO_URL` in `lib/utils.ts`; the Pyodide version is pinned in
+  `lib/pyodide.ts`.

@@ -7,7 +7,12 @@ import { Download, LayoutGrid, Table2 } from "lucide-react";
 import { SectionHeader } from "./SectionHeader";
 import { PredictionCard } from "./PredictionCard";
 import { PredictionMatrix } from "./PredictionMatrix";
-import { predictions, Prediction, CATEGORY_META } from "@/lib/predictions";
+import {
+  predictions,
+  Prediction,
+  CATEGORY_META,
+  TEST_SURFACE_GROUPS,
+} from "@/lib/predictions";
 import { cn } from "@/lib/utils";
 import { trackPdfInteraction } from "@/lib/track";
 
@@ -55,10 +60,38 @@ export function PredictionsSection() {
         <SectionHeader
           eyebrow="The prediction surface"
           title="Sharp, falsifiable readouts"
-          description="Every row is a single readout with an explicit status marker, dependency class, and a stated kill or pressure criterion. Each links to the source document that derives it — and the freeze file commits the decisive kill criteria in advance."
+          description="Every row is a single readout with an explicit status marker, dependency class, and a stated kill or pressure criterion. Each links to the source document that derives it — and the freeze file commits the decisive kill criteria in advance. Some rows are closed numerical tests, some are structural kill tests, some are conditional, and a few are honestly-typed non-claims."
         />
 
-        <div className="mt-6 grid gap-3 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-8">
+        <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {TEST_SURFACE_GROUPS.map((g) => (
+            <div
+              key={g.label}
+              className={cn("rounded-xl border p-4", g.tone.split(" ").slice(0, 2).join(" "))}
+            >
+              <div
+                className={cn(
+                  "text-[10px] font-semibold uppercase tracking-widest",
+                  g.tone.split(" ").slice(2).join(" "),
+                )}
+              >
+                {g.label}
+              </div>
+              <ul className="mt-2 flex flex-wrap gap-1.5">
+                {g.items.map((it) => (
+                  <li
+                    key={it}
+                    className="rounded-md border border-slate-700/40 bg-slate-950/40 px-2 py-0.5 font-mono text-[10px] text-slate-300"
+                  >
+                    {it}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-8 grid gap-3 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-8">
           <div className="glass flex flex-col rounded-xl px-4 py-3 ring-1 ring-slate-700/40">
             <span className="text-[10px] font-semibold uppercase tracking-widest text-slate-400">
               Total

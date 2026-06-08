@@ -287,8 +287,9 @@ function ClosedBranchPill() {
           Bootstrap loop
         </span>
         <span className="text-[11px] text-rose-50/90">
-          E₈ closure ⇒ g_car = 5 and 8 = rank E₈ in c₃ — inputs and output prove
-          each other; only π stays free
+          The E₈ closure feeds back as an internal consistency check: g_car = 5
+          and the denominator 8 in c₃ are recovered independently, so the
+          bootstrap overdetermines the discrete core — only π stays free
         </span>
       </div>
     </div>

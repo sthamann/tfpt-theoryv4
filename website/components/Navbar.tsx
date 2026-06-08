@@ -8,11 +8,11 @@ import { Logo } from "./Logo";
 
 const links = [
   { href: "/#overview", label: "Overview" },
-  { href: "/#chain", label: "Pipeline" },
-  { href: "/#papers", label: "Documents" },
+  { href: "/#open-gates", label: "Open gates" },
   { href: "/#predictions", label: "Predictions" },
   { href: "/verification", label: "Verification" },
   { href: "/falsification", label: "Falsification" },
+  { href: "/faq", label: "FAQ" },
 ];
 
 export function Navbar() {
