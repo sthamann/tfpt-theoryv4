@@ -88,6 +88,14 @@ export function Footer() {
             </li>
             <li>
               <Link
+                href="/verification"
+                className="text-slate-400 hover:text-white"
+              >
+                Verification &amp; workflow
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="/falsification"
                 className="text-slate-400 hover:text-white"
               >

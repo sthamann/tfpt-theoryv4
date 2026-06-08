@@ -2,6 +2,8 @@
 
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { Math } from "./Math";
 import { SectionHeader } from "./SectionHeader";
 
@@ -350,6 +352,15 @@ export function ReconstructionChain() {
             here&rdquo; and &ldquo;how it can fail&rdquo; rows. The machine-checked
             ledger is the single source of truth.
           </span>
+          <div className="mt-4">
+            <Link
+              href="/verification"
+              className="inline-flex items-center gap-1.5 rounded-full border border-amber-400/30 bg-amber-500/10 px-4 py-2 text-xs font-semibold text-amber-100 transition-colors hover:bg-amber-500/20"
+            >
+              Explore the interactive dependency graph
+              <ArrowRight size={13} aria-hidden />
+            </Link>
+          </div>
         </motion.div>
       </div>
     </section>

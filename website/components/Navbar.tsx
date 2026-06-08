@@ -11,8 +11,8 @@ const links = [
   { href: "/#chain", label: "Pipeline" },
   { href: "/#papers", label: "Documents" },
   { href: "/#predictions", label: "Predictions" },
+  { href: "/verification", label: "Verification" },
   { href: "/falsification", label: "Falsification" },
-  { href: "/#downloads", label: "Downloads" },
 ];
 
 export function Navbar() {

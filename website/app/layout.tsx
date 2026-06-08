@@ -4,6 +4,7 @@ import "./globals.css";
 import "katex/dist/katex.min.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { ReproducerProvider } from "@/components/Reproducer";
 import { papers } from "@/lib/papers";
 import { predictions } from "@/lib/predictions";
 import { REPO_URL } from "@/lib/utils";
@@ -282,7 +283,7 @@ export default function RootLayout({
         </a>
         <Navbar />
         <main id="main" className="pt-16">
-          {children}
+          <ReproducerProvider>{children}</ReproducerProvider>
         </main>
         <Footer />
         <Analytics />
