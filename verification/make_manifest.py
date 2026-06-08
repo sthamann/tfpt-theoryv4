@@ -19,8 +19,21 @@ import os
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.normpath(os.path.join(HERE, ".."))
-LEAN_DIR = "experiments/lean4-carrier-rigidity"   # repo path (where the files live)
 SHIP_LEAN = "lean4-carrier-rigidity"              # canonical shipped path (what the package exports)
+
+
+def _lean_read_dir():
+    """Lean source dir, robust to both layouts (Alessandro v73 portability request):
+    prefer the shipped path ``lean4-carrier-rigidity/`` when present, fall back to the
+    source-repo path ``experiments/lean4-carrier-rigidity/``.  Never silently yields zero
+    files when the Lean sources are present under either layout."""
+    for cand in (SHIP_LEAN, "experiments/lean4-carrier-rigidity"):
+        if os.path.isdir(os.path.join(ROOT, cand)):
+            return cand
+    return "experiments/lean4-carrier-rigidity"
+
+
+LEAN_DIR = _lean_read_dir()                        # repo path (where the files actually live)
 
 TEX = [
     "introduction.tex", "tfpt_1_architecture_e8.tex", "tfpt_2_standard_model.tex",
