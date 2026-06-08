@@ -34,9 +34,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/introduction.pdf": {
     href: "/papers/introduction.pdf",
     ...COMMON,
-    bytes: 913385,
+    bytes: 914014,
     sha256:
-      "d135c6fdcb7821fbb81d1e81311441fce0a89b1fc74e4c8fa9cf2c1632270d6d",
+      "23a7ba22bbabdaaaa0a361ca856a1688d8d807fa8f7c068d0de8584e262b57ff",
     changelog:
       "Compiler-closure reading guide: two axioms, the dependency DAG, the predictions and the proof ledger.",
   },
@@ -52,9 +52,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/tfpt_2_standard_model.pdf": {
     href: "/papers/tfpt_2_standard_model.pdf",
     ...COMMON,
-    bytes: 943986,
+    bytes: 950698,
     sha256:
-      "afa9b5183f428b7d258ac7e12165180a0dd6623ea9425fdd828143e469774ac9",
+      "de0522d8fdd47eed891a9e516a9e7a4ead4634827a28a3b5a6eca8c24db5d9f6",
     changelog:
       "The Standard Model in one φ₀-ladder, the flavor residue matrix, and the derived solar angle θ₁₂.",
   },

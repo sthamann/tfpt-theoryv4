@@ -659,6 +659,44 @@ as an operator \emph{shadow}. These are exact identities; their atlas/embedding 
 (\tP), since the coefficients are themselves atoms.
 \end{keybox}
 
+\begin{keybox}[The Koide point is one branch of a double cover \tI/\tL\ (\veri{v81\_singular\_pencil\_matrices.py})]
+The anchor-block determinant $\det B_{K+xQ}=(3x+2)(3x+5)$ is \emph{quadratic}, so
+\[
+  \boxed{\ y^2=\det B_{K+xQ}=(3x+2)(3x+5)\ }
+\]
+is a $2{:}1$ cover of the pencil line, \emph{ramified exactly over its two zeros}. Hence the Koide/gap point
+$x=-|\Z_2|/\Nfam=-\tfrac23$ and the carrier point $x=-\gcar/\Nfam=-\tfrac53$ are \textbf{the two branch points of
+one double cover}: \emph{Koide is literally ``the other side'' of the carrier point}. The deck involution is
+$y\mapsto-y$ of degree $2=|\Z_2|$ --- the sheet itself --- which is the line-bundle reflection of the
+$\mathrm{Spin}(10)\!\to\!\mathrm{SO}(10)$ half-spinor cover the carrier lives on. Three rigid readings:
+\begin{itemize}\setlength\itemsep{1pt}
+  \item \textbf{Branch locus $=$ spine ends / family.} The ramification is at $-2/3$ and $-5/3$, i.e.\
+  $-(|\Z_2|,\gcar)/\Nfam$ --- the \emph{two ends} of the spine $(2,3,4,5)$ over $\Nfam$.
+  \item \textbf{Discriminant $=\Nfam^4=81$} (a perfect square $\Rightarrow$ rational, split branch points);
+  $\sqrt{81}=9=\Nfam^2=\det B_Q$.
+  \item \textbf{Separation $=1=$ one transport period} (the $K\!\to\!L$ step $x:0\!\to\!1$); the deck-translation
+  $x\mapsto x+1$ carries the carrier point onto the Koide point.
+  \item \textbf{Branch divisor $=$ (scalaron, $\AL$).} Sum of branch points $=-7/3=-7/\Nfam$, product $=10/9=\AL/\Nfam^2$;
+  the integer labels $\{|\Z_2|,\gcar\}=\{2,5\}$ have $\mathrm{sum}=7$, $\mathrm{prod}=10=\AL$, $\mathrm{diff}=3=\Nfam$.
+  \textbf{So the scalaron is the \emph{trace} of the branch divisor} --- its several readouts ($\Oadm{-}10b_1$,
+  $\AL{-}\Nfam$, $\gcar{+}|\Z_2|$, the mixed anchor area) collapse to this one geometric origin.
+  \item \textbf{The sheet lives on the cut.} The fibre $y^2{=}\det B$ is $\AL$ at $K$ and $4\AL$ at $L$, so transport
+  multiplies $y$ by $|\Z_2|$; the $\Z_2$ sheet endpoint $x{=}{-}1$ sits \emph{between} the branch points where
+  $y^2{=}\det B_{K-Q}{=}{-}|\Z_2|{<}0$ --- on the imaginary branch cut joining Koide and the carrier.
+\end{itemize}
+\noindent At each branch point the pencil clears its $3$-denominator into an integer compiler matrix.
+\emph{Koide} $C_{2/3}=3K-2Q$ reproduces the carrier glue: $\operatorname{tr}=15=\dim A_3$, $\textstyle\sum=45=\dim D_5$,
+$\det=60=D_{\mathrm{start}}$, and the (now forced rank-one) anchor block
+$B_{C_{2/3}}=\begin{psmallmatrix}45&55\\63&77\end{psmallmatrix}=\binom{\gcar}{7}\,(\,\Nfam^2\ \ 11\,)$ with
+$\sum=240=|R(E_8)|$. \emph{Carrier} $C_{5/3}=3K-5Q$ is the charge-\emph{neutral} side ($\sum_{ij}=0$) with
+$\chi(\lambda)=(\lambda+|\Z_2|)(\lambda^2+\lambda+|R^+(A_3)|)=(\lambda+2)(\lambda^2+\lambda+6)$, splitting off
+the sheet eigenvalue $-|\Z_2|$. So the recurring $\tfrac23$ is not a quotient that ``appears everywhere'' --- it
+is one ramification point of the mass$\leftrightarrow$transport double cover. The sharper open question is then
+\emph{why the leptonic source-to-pole transfer renormalises onto a branch point, and which sheet ($y\to\pm$) the
+parity selects} --- a cleaner target than ``why $2/3$''. (The $D_5/A_3$ and $E_8$ labels on the clearing matrices
+are exact; their per-entry atlas reading stays audit-level \tP.)
+\end{keybox}
+
 \begin{winbox}[Grand Mass Volume: the absolute mass-scaling normalisation \tI]
 The individual $c_q$ are a gauge, but the \emph{absolute} normalisation of the mass spectrum is fixed by the
 sector mass-matrix \emph{determinants} --- each a clean $\phiz$-power whose exponent is the $K$-row sum:

@@ -407,6 +407,26 @@ checkExact["F4xG2 shadow: det B_{R+Q}=52=dim F4; 248 = 52 + 14 + 26*7 (real E8->
     bb[M_] := {{one.M.one, one.M.av}, {av.M.one, av.M.av}};
     (Det[bb[F]] == 52) && (52 + 14 + 26*7 == 248)]];
 
+(* ---- (v81) double cover: det B(K+xQ) quadratic, branch points {-2/3,-5/3}, disc=81=N_fam^4 ---- *)
+checkExact["double cover y^2=det B(K+xQ)=(3x+2)(3x+5): branch points {-5/3,-2/3}, discriminant 81=N_fam^4, separation 1",
+  Module[{one = {1, 1, 1}, av = {1, 1, 2}, bb, q},
+    bb[M_] := {{one.M.one, one.M.av}, {av.M.one, av.M.av}};
+    q = Det[bb[K + xx*Q]];
+    (Factor[q] == (3 xx + 2) (3 xx + 5)) && (Discriminant[q, xx] == 81) &&
+    (Sort[xx /. Solve[q == 0, xx]] == {-5/3, -2/3})]];
+checkExact["clearing matrices: C_{2/3}=3K-2Q (tr=15,sum=45,det=60), B=(5,7)^T(9,11) sum=240; C_{5/3}=3K-5Q neutral chi=(l+2)(l^2+l+6)",
+  Module[{one = {1, 1, 1}, av = {1, 1, 2}, bb, c23, c53},
+    bb[M_] := {{one.M.one, one.M.av}, {av.M.one, av.M.av}};
+    c23 = 3 K - 2 Q; c53 = 3 K - 5 Q;
+    (Tr[c23] == 15) && (Total[c23, 2] == 45) && (Det[c23] == 60) &&
+    (bb[c23] == Outer[Times, {5, 7}, {9, 11}]) && (Total[bb[c23], 2] == 240) &&
+    (Total[c53, 2] == 0) && (Factor[-CharacteristicPolynomial[c53, ll]] == (ll + 2) (ll^2 + ll + 6))]];
+checkExact["branch divisor = (scalaron,A_Lambda): sum roots=-7/3=-scalaron/N_fam, product=10/9=A_Lambda/N_fam^2; {2,5} sum=7 prod=10 diff=3",
+  Module[{one = {1, 1, 1}, av = {1, 1, 2}, bb, q, rt},
+    bb[M_] := {{one.M.one, one.M.av}, {av.M.one, av.M.av}};
+    q = Det[bb[K + xx*Q]]; rt = Sort[xx /. Solve[q == 0, xx]];
+    (Total[rt] == -7/3) && (Times @@ rt == 10/9) && (2 + 5 == 7) && (2*5 == 10) && (5 - 2 == 3)]];
+
 (* ---- summary ---- *)
 Print["--- Wolfram readouts: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM CHECKS PASSED"]];

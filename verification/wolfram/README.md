@@ -23,7 +23,7 @@ the kernel path is configured, and the free Wolfram Engine license is
 **activated**. `wolframscript -file tfpt_readouts.wl` runs clean:
 
 ```
---- Wolfram readouts: 113 passed, 0 failed ---
+--- Wolfram readouts: 116 passed, 0 failed ---
 ALL WOLFRAM CHECKS PASSED
 ```
 

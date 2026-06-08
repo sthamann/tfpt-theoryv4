@@ -427,6 +427,11 @@ export const papers: Paper[] = [
         value: "(3x+2)(3x+5)",
         description: "det B(K+xQ): 2/3 (Koide/gap) & 5/3 (D₅/A₃) are its singular points [I/L]",
       },
+      {
+        label: "Double cover",
+        value: "Koide = branch pt",
+        description: "y² = det B(K+xQ): Koide −2/3 & carrier −5/3 are the two branch points (deck 2 = |ℤ₂|, disc = N_fam⁴) [I/L]",
+      },
     ],
   },
   {
