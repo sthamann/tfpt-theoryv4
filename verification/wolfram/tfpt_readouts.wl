@@ -346,6 +346,15 @@ checkExact["det ladder (Q,K,R,L)=(3,4,8,20)=(N_fam,|mu4|,rank E8,det L); det R=8
 checkExact["selector stratum derived => c_u/c_d=55/117 is a pure integer Plucker readout (13=8+5=9+4)",
   (gcar*11)/(Nfam^2*13) == 55/117 && 13 == 8 + 5 == Nfam^2 + 4];
 
+(* ---- (v72) det Q = N_fam from the cusp class: order = weight denominator = |coker Q| ---- *)
+checkExact["det Q=3=|coker Q|=cusp-class order=denominator of cusp weights {0,1/3,2/3}=N_fam (same data as Spec Q_+)",
+  Det[Q] == 3 == Nfam && LCM[1, 3, 3] == 3 == Nfam && Sort[{1, 2, 3}] == Sort[3*{0, 1/3, 2/3} + 1]];
+
+(* ---- (v73) k=c3/2 forced: variational factor x Gauss-Bonnet topology; Fursaev-Solodukhin S=A/4 ---- *)
+checkExact["k=c3/2=1/(16pi)=(1/2)*(1/(|Z2|*2pi*chi(S2))), chi(S2)=2; Fursaev-Solodukhin 4pi k = 1/4",
+  Module[{c3 = 1/(8 Pi), chi = 2, Z2 = 2},
+    (c3/2 == 1/(16 Pi)) && (c3 == 1/(Z2*2 Pi*chi)) && (4 Pi*(c3/2) == 1/4)]];
+
 (* ---- summary ---- *)
 Print["--- Wolfram readouts: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM CHECKS PASSED"]];

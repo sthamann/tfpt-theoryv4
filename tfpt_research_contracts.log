@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  7 JUN 2026 10:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  8 JUN 2026 06:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1181,7 +1181,7 @@ Package rerunfilecheck Info: File `tfpt_research_contracts.out' has not changed
 Here is how much of TeX's memory you used:
  32372 strings out of 473190
  639080 string characters out of 5715801
- 1105023 words of memory out of 5000000
+ 1105022 words of memory out of 5000000
  54674 multiletter control sequences out of 15000+600000
  714846 words of font info for 310 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1212,7 +1212,7 @@ exlive/2025/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/local/texlive/2025
 /texmf-dist/fonts/type1/public/lm/lmtti10.pfb></usr/local/texlive/2025/texmf-di
 st/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texm
 f-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tfpt_research_contracts.pdf (8 pages, 582250 bytes).
+Output written on tfpt_research_contracts.pdf (8 pages, 582360 bytes).
 PDF statistics:
  278 PDF objects out of 1000 (max. 8388607)
  179 compressed objects within 2 object streams

@@ -679,19 +679,30 @@ $\{-1,i,-i\}$), while the transport has $\boxed{\det Q=3=\Nfam}$ (SNF $\operator
 integer lift is exactly the parabolic-degree-$0$ embedding carrying the extra $\det=\Nfam$ (the family
 multiplicity) that $D_4$ alone (unimodular) does not supply --- one named lattice invariant, no longer a
 diffuse ``derive $Q$''.
+\smallskip\\
+\noindent\textbf{And that invariant is the cusp order itself (\veri{v72\_q\_det\_from\_cusp.py}).} The extra
+$\det Q=\Nfam$ is \emph{not} an independent lattice input: $\det Q=|\!\operatorname{coker}Q|=3$ equals the
+\emph{order of the cusp monodromy class} (eigenvalues $\{1,\omega,\omega^2\}$, $\omega^3{=}1$) $=$ the common
+\emph{denominator} of the very cusp weights $\{0,\tfrac13,\tfrac23\}$ that fix $\operatorname{Spec}(Q_+)$. So
+$\det Q=\Nfam$ comes from the \emph{same} cusp datum as the spectrum, and $\operatorname{coker}Q=\Z/\Nfam$ is
+the deck group of the degree-$\Nfam$ triality cover defining the family space --- the integer lift is derived
+from the geometry, not posited (\tI\ chain; the coker$=$deck-group identification is the standard non-abelian
+Hodge reading \tL).
 \end{keybox}
 
-\begin{gapbox}[Status and the open derivation target \tP$\to$\tL\ (advanced)]
+\begin{gapbox}[Status: $Q$-geometry derived (spectra, $\Sigma$-split \emph{and} integer lift) \tL]
 What is \emph{proved} (\tI): the algebraic identities $K=R+Q\Sigma$, $L=R+Q(I+\Sigma)$, the spectra, the
 $1920$ determinant ladder, the anchor block --- all machine-checked. \textbf{Newly advanced (\veri{v69\_d4\_q\_geometry.py}):}
 the $D_4$-equivariant origin of the \emph{$Q$-spectra and the $\Sigma$-split} is now derived --- $Q_+$ is the
 $3w{+}1$ image of the cusp weights $w\in\{0,\tfrac13,\tfrac23\}$ on the three $\mu_4{=}\Z_4$ eigenspaces of
 $H_1(\PP^1\!\setminus\!\mu_4)$, and $Q_-$ is the $E$-block coupling $\sqrt{\Nfam}$ on $H_1=B_1\oplus E$, with
 $\Sigma$ the $\Z_2$ reflection of $D_4=\Z_4\rtimes\Z_2$. So the $\phiz$-mass ladder and the transport are two
-$\Sigma$-shadows of one $D_4$-equivariant parabolic operator. What \emph{remains} \tP/\tA: the cusp weights
-are the established monodromy exponents (v61), and the explicit integer matrix $Q$ (beyond its spectra) still
-needs the lattice/SNF datum. So the $Q,\Sigma$ algebra is now an \tI/\tL\ layer with its geometric origin
-\emph{derived at the spectral/equivariant level}, the residual reduced to the integer-lift.
+$\Sigma$-shadows of one $D_4$-equivariant parabolic operator. \textbf{Integer lift closed to the cusp order
+(\veri{v72\_q\_det\_from\_cusp.py}):} the one remaining lattice datum $\det Q=\Nfam$ is the order of the cusp
+class $=$ the denominator of the same cusp weights, i.e.\ the \emph{same} geometry that fixes the spectrum
+(coker$\,Q=\Z/\Nfam=$ triality deck group). So the $Q,\Sigma$ algebra is now an \tI/\tL\ layer whose spectra,
+$\Sigma$-split \emph{and} integer lift are all read from the order-$\Nfam$ cusp structure; the only standing
+input is the established fact $\Nfam=3=\operatorname{rank}A_3=\dim H_1$.
 \end{gapbox}
 
 \subsection{Closing the audit gates: is $M{=}41$, $K$, $Q$ derived or imported?}

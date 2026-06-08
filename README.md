@@ -73,7 +73,7 @@ layers (this separation is the discipline of the whole package):
 | **3. Anchors** | `π`, one dimensionful induced-gravity scale, `U_point` absolute amplitude norm | `[A]` (declared, not "missing") |
 | **4. Interfaces** | `m_p/m_e`, `η_B` (leptogenesis), Koide, axion relic, full ambient QG measure | `[P]/[A]` |
 
-The single remaining **central theorem target** (after Alessandro's audit) is to derive the
+The single remaining **central theorem target** is to derive the
 `1/(8π)` area-law coefficient from the replica variation of the seam determinant. Its *structure*
 is closed (Fursaev–Solodukhin ⟹ `c₃ = 1/(8π)` is the unique value giving `S = A/4`), and the
 residual is identified as the one irreducible dimensionful anchor (`1/G` is UV-sensitive,

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  7 JUN 2026 10:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  8 JUN 2026 06:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1361,7 +1361,7 @@ LaTeX Font Warning: Command \small invalid in math mode on input line 461.
 LaTeX Font Warning: Command \small invalid in math mode on input line 464.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 500--511
+Underfull \hbox (badness 10000) in paragraph at lines 502--515
 \T1/lmr/bx/n/10.95 (+20) Residual re-solved as an an-chor, not a gap
  []
 
@@ -1372,7 +1372,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 500--511
 [10]
 
 [11]
-Underfull \hbox (badness 1184) in paragraph at lines 605--610
+Underfull \hbox (badness 1184) in paragraph at lines 626--631
 []\T1/lmr/m/it/10.95 (+20) Uniqueness of the $\OML/lmm/m/it/10.95 ^^V[]$ \T1/lm
 r/m/it/10.95 (+20) lat-tice clo-sure \T1/lmr/m/n/10.95 (+20) --- \T1/lmr/bx/n/1
 0.95 (+20) al-ready es-tab-lished []\T1/lmr/bx/n/10 (+20) [L][]\T1/lmr/m/n/10.9
@@ -1380,7 +1380,7 @@ r/m/it/10.95 (+20) lat-tice clo-sure \T1/lmr/m/n/10.95 (+20) --- \T1/lmr/bx/n/1
  []
 
 
-Underfull \hbox (badness 6944) in paragraph at lines 605--610
+Underfull \hbox (badness 6944) in paragraph at lines 626--631
 \T1/lmr/m/n/10.95 (+20) ([]\T1/lmr/m/n/9 (+20) [\T1/lmtt/m/n/9 verification/v6_
 bootstrap.py\T1/lmr/m/n/9 (+20) ][][][\T1/lmtt/m/n/9 verification/v15_bootstrap
 _classification.py\T1/lmr/m/n/9 (+20) ][]\T1/lmr/m/n/10.95 (+20) ). So three
@@ -1389,37 +1389,37 @@ _classification.py\T1/lmr/m/n/9 (+20) ][]\T1/lmr/m/n/10.95 (+20) ). So three
 
 
 [12]
-Underfull \hbox (badness 1874) in paragraph at lines 686--686
+Underfull \hbox (badness 1874) in paragraph at lines 707--707
 []|\T1/lmr/m/n/10 (+20) one $\OML/lmm/m/it/10 []$ \T1/lmr/m/n/10 (+20) sets EM
 , $\OML/lmm/m/it/10 S[]$ \T1/lmr/m/n/10 (+20) and $\OT1/lmr/m/n/10 (+20) ^^C$
  []
 
 
-Underfull \hbox (badness 2772) in paragraph at lines 686--686
+Underfull \hbox (badness 2772) in paragraph at lines 707--707
 []|\T1/lmr/m/n/10 (+20) horizon cross-links (Ja-cob-son/E-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 686--686
+Underfull \hbox (badness 10000) in paragraph at lines 707--707
 \T1/lmr/m/n/10 (+20) in-stein $\OT1/lmr/m/n/10 (+20) 8\OML/lmm/m/it/10 ^^Y[]\OT
 1/lmr/m/n/10 (+20) 1\OML/lmm/m/it/10 =c[]$\T1/lmr/m/n/10 (+20) , Hod $[] \OT1/l
 mr/m/n/10 (+20) 3$\T1/lmr/m/n/10 (+20) ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 686--686
+Underfull \hbox (badness 10000) in paragraph at lines 707--707
 []|\T1/lmr/bx/n/10 (+20) cyclic self-reproduction
  []
 
 
 
 [13]
-Overfull \hbox (18.5217pt too wide) in paragraph at lines 711--711
+Overfull \hbox (18.5217pt too wide) in paragraph at lines 732--732
 []|\T1/lmtt/m/n/10 v54_seam_horizon_keystones.py| 
  []
 
 
-Underfull \hbox (badness 1735) in paragraph at lines 713--716
+Underfull \hbox (badness 1735) in paragraph at lines 734--737
 \T1/lmtt/m/n/10.95 wolframscript -file verification/wolfram/tfpt_readouts.wl \T
 1/lmr/m/n/10.95 (+20) (all pass). Fig-ures are
  []
@@ -1435,11 +1435,11 @@ Package rerunfilecheck Info: File `origin_theory.out' has not changed.
 (rerunfilecheck)             Checksum: D5E28BD09DFE3B42F3A96B7BA7A78AA5;3125.
  ) 
 Here is how much of TeX's memory you used:
- 33543 strings out of 473190
- 670866 string characters out of 5715801
- 1129244 words of memory out of 5000000
- 55797 multiletter control sequences out of 15000+600000
- 717997 words of font info for 315 fonts, out of 8000000 for 9000
+ 33557 strings out of 473190
+ 671032 string characters out of 5715801
+ 1133243 words of memory out of 5000000
+ 55799 multiletter control sequences out of 15000+600000
+ 718636 words of font info for 321 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  86i,16n,96p,1010b,1049s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.
@@ -1468,7 +1468,7 @@ ve/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2025/te
 xmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/local/texlive/2025/texmf-dist/fo
 nts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dis
 t/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on origin_theory.pdf (14 pages, 624685 bytes).
+Output written on origin_theory.pdf (14 pages, 628010 bytes).
 PDF statistics:
  498 PDF objects out of 1000 (max. 8388607)
  305 compressed objects within 4 object streams

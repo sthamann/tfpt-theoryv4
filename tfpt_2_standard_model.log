@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  7 JUN 2026 11:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  8 JUN 2026 06:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1392,64 +1392,63 @@ LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <9> not available
 
 [12]
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 697.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 697.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 697.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 697.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 697.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 697.
-
-
-
 [13]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 747.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 708.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 708.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 708.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 708.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 708.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 708.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 758.
 
 
 
 [14]
-Underfull \hbox (badness 10000) in alignment at lines 785--785
+Underfull \hbox (badness 10000) in alignment at lines 796--796
 [][][][] 
- []
-
-
-Underfull \hbox (badness 10000) in alignment at lines 840--840
-[][][] 
  []
 
 
 
 [15]
-Underfull \hbox (badness 2486) in paragraph at lines 870--870
+Underfull \hbox (badness 10000) in alignment at lines 851--851
+[][][] 
+ []
+
+
+Underfull \hbox (badness 2486) in paragraph at lines 881--881
 []|\T1/lmr/m/n/10 (+20) carrier, $\OT1/lmr/m/n/10 (+20) 16$\T1/lmr/m/n/10 (+20)
  , $\OML/lmm/m/it/10 N[][]\OT1/lmr/m/n/10 (+20) 3$\T1/lmr/m/n/10 (+20) ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 870--870
+Underfull \hbox (badness 10000) in paragraph at lines 881--881
 []|\T1/lmr/m/n/10 (+20) admissibility, strong
  []
 
 
 
 [16]
-Underfull \hbox (badness 3803) in paragraph at lines 915--918
+Underfull \hbox (badness 3803) in paragraph at lines 926--929
 []\T1/lmr/m/n/10.95 (+20) The di-men-sion-ful EW/QCD ob-serv-ables are \T1/lmr/
 m/it/10.95 (+20) not \T1/lmr/m/n/10.95 (+20) com-piler pow-ers --- declar-ing
  []
@@ -1461,7 +1460,9 @@ m/it/10.95 (+20) not \T1/lmr/m/n/10.95 (+20) com-piler pow-ers --- declar-ing
 [18]
 
 [19]
-Underfull \hbox (badness 2111) in paragraph at lines 1127--1129
+
+[20]
+Underfull \hbox (badness 2111) in paragraph at lines 1138--1140
 []\T1/lmr/bx/n/10.95 (+20) Provenance. \T1/lmr/m/n/10.95 (+20) Canon-i-cal ship
 ped folder \T1/lmtt/m/n/10.95 lean4-carrier-rigidity/ \T1/lmr/m/n/10.95 (+20) (
 source repo:
@@ -1469,28 +1470,26 @@ source repo:
 
 
 
-[20]
-Underfull \hbox (badness 10000) in paragraph at lines 1197--1197
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 1208--1208
 []|\T1/lmr/bx/n/10 (+20) Original pa-per (dis-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1197--1197
+Underfull \hbox (badness 10000) in paragraph at lines 1208--1208
 []|\T1/lmr/m/n/10 (+20) transport bud-get
  []
 
 
-Underfull \hbox (badness 5064) in paragraph at lines 1197--1197
+Underfull \hbox (badness 5064) in paragraph at lines 1208--1208
 []|\T1/lmr/m/n/10 (+20) separate re-sol-vent eval-u-a-
  []
 
 
 
-[21]
-
 [22]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1288.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1299.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1501,49 +1500,49 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 ]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1336.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1347.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1351.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1362.
 
 
 
 [24]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1427.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1438.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1440.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1451.
 
 
 
 [25]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1459.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1470.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1477.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1488.
 
 
 
 [26]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1503.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1514.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1503.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1522.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1514.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 1522.
+(hyperref)                removing `math shift' on input line 1533.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1522.
+(hyperref)                removing `subscript' on input line 1533.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1533.
 
 
 
@@ -1552,93 +1551,93 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.15})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1587 \begin{equation}
+l.1598 \begin{equation}
                        
 pdfTeX warning (ext4): destination with the same identifier (name{equation.15})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1587 \begin{equation}
+l.1598 \begin{equation}
                        
 pdfTeX warning (ext4): destination with the same identifier (name{equation.15})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1587 \begin{equation}
+l.1598 \begin{equation}
                        
 pdfTeX warning (ext4): destination with the same identifier (name{equation.15})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1587 \begin{equation}
+l.1598 \begin{equation}
                        
 
 [28]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1636.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1647.
 
 
-Overfull \hbox (12.41829pt too wide) detected at line 1637
+Overfull \hbox (12.41829pt too wide) detected at line 1648
 [][][][] []\OML/lmm/m/it/10.95 :
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1641.
+(hyperref)                removing `math shift' on input line 1652.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 1641.
+(hyperref)                removing `subscript' on input line 1652.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\deg' on input line 1641.
+(hyperref)                removing `\deg' on input line 1652.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1641.
+(hyperref)                removing `math shift' on input line 1652.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1649.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1660.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1658.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1669.
 
 
-Overfull \hbox (1.20189pt too wide) detected at line 1659
+Overfull \hbox (1.20189pt too wide) detected at line 1670
 [][][][] []\OML/lmm/m/it/10.95 :
  []
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1671.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1682.
 
 
 LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 16
-71.
+82.
 
 
 
 [29]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1707.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1718.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1712.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1723.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1735.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1746.
 
 
-Overfull \hbox (14.37666pt too wide) detected at line 1736
+Overfull \hbox (14.37666pt too wide) detected at line 1747
 [][][]\OML/lmm/m/it/10.95 R \OT1/lmr/m/n/10.95 = [] :  [] []\OML/lmm/m/it/10.95
  ;
  []
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1739.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1750.
 
 
-Overfull \hbox (22.64693pt too wide) detected at line 1740
+Overfull \hbox (22.64693pt too wide) detected at line 1751
 [][][][] []\OML/lmm/m/it/10.95 ;
  []
 
@@ -1659,51 +1658,51 @@ Overfull \hbox (22.64693pt too wide) detected at line 1740
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2069.
+(hyperref)                removing `math shift' on input line 2080.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 2069.
+(hyperref)                removing `superscript' on input line 2080.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\ge' on input line 2069.
+(hyperref)                removing `\ge' on input line 2080.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2069.
+(hyperref)                removing `math shift' on input line 2080.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2069.
+(hyperref)                removing `math shift' on input line 2080.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 2069.
+(hyperref)                removing `subscript' on input line 2080.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\star' on input line 2069.
+(hyperref)                removing `\star' on input line 2080.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 2069.
+(hyperref)                removing `superscript' on input line 2080.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2069.
+(hyperref)                removing `math shift' on input line 2080.
 
 
 
 [36]
-Overfull \hbox (13.7095pt too wide) detected at line 2107
+Overfull \hbox (13.7095pt too wide) detected at line 2118
 []
  []
 
 
 
 [37]
-Overfull \hbox (7.12401pt too wide) detected at line 2231
+Overfull \hbox (7.12401pt too wide) detected at line 2242
 []
  []
 
@@ -1714,40 +1713,40 @@ Overfull \hbox (7.12401pt too wide) detected at line 2231
 [39]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2323.
+(hyperref)                removing `math shift' on input line 2334.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\theta' on input line 2323.
+(hyperref)                removing `\theta' on input line 2334.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 2323.
+(hyperref)                removing `subscript' on input line 2334.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2323.
+(hyperref)                removing `math shift' on input line 2334.
 
 
 
 [40]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2379.
+(hyperref)                removing `math shift' on input line 2390.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2379.
+(hyperref)                removing `math shift' on input line 2390.
 
 
-Underfull \hbox (badness 10000) in alignment at lines 2394--2394
+Underfull \hbox (badness 10000) in alignment at lines 2405--2405
 [][][][][][][][][][] 
  []
 
 
 
 [41]
-Underfull \hbox (badness 3138) in paragraph at lines 2474--2479
+Underfull \hbox (badness 3138) in paragraph at lines 2485--2490
 []\T1/lmr/bx/n/10.95 (+20) Required am-pli-tudes. \T1/lmr/m/n/10.95 (+20) The l
 ep-ton $\OML/lmm/m/it/10.95 c$\T1/lmr/m/n/10.95 (+20) 's force $\OT1/lmr/m/n/10
 .95 (+20) ^^C[] = \OML/lmm/m/it/10.95 ^^Yc \OT1/lmr/m/n/10.95 (+20) (\OML/lmm/m
@@ -1772,11 +1771,11 @@ Package rerunfilecheck Info: File `tfpt_2_standard_model.out' has not changed.
 (rerunfilecheck)             Checksum: 699BCA3822E3BECB488291F6E358E0DD;11487.
  ) 
 Here is how much of TeX's memory you used:
- 35567 strings out of 473190
- 715689 string characters out of 5715801
- 1183000 words of memory out of 5000000
- 57427 multiletter control sequences out of 15000+600000
- 732551 words of font info for 432 fonts, out of 8000000 for 9000
+ 35572 strings out of 473190
+ 715753 string characters out of 5715801
+ 1183999 words of memory out of 5000000
+ 57428 multiletter control sequences out of 15000+600000
+ 732775 words of font info for 434 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,15n,107p,1018b,1490s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.
@@ -1810,7 +1809,7 @@ ic/lm/lmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy9
 live/2025/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/local/texlive/2025/t
 exmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/20
 25/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tfpt_2_standard_model.pdf (45 pages, 929749 bytes).
+Output written on tfpt_2_standard_model.pdf (45 pages, 931790 bytes).
 PDF statistics:
  857 PDF objects out of 1000 (max. 8388607)
  638 compressed objects within 7 object streams

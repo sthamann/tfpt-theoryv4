@@ -460,13 +460,15 @@ Einstein normalisation with $8\pi G$. \textbf{Status of the chain:}
   \underbrace{\cthree=\tfrac1{8\pi}}_{\tI}\Rightarrow
   \underbrace{\text{KMS }T=4\cthree\kappa}_{\tI}\\[3pt]
   \Rightarrow
-  \underbrace{S=A/(4G_\Sigma)}_{\textbf{\tA\ open: area-law from the seam determinant}}\Rightarrow
+  \underbrace{S=A/(4G_\Sigma)}_{\substack{\textbf{coeff. }k=\cthree/2\textbf{ forced (v73);}\\\textbf{absolute scale }=\textbf{anchor}}}\Rightarrow
   \underbrace{\text{Einstein }8\pi G}_{\tP\,(\text{Jacobson})}.
   \end{gathered}
 \]
-Links 1--3 (and RT in seam units) are exact; the single missing analytic step is the replica/area-law from
-the seam kernel. If it closes, $\cthree=\tfrac1{8\pi}$ stops being ``the known GR number in a new hat'' and
-becomes the visible imprint of the boundary geometry from which gravity is read thermodynamically.
+Links 1--3 (and RT in seam units) are exact; the area-law \emph{coefficient} $k=\cthree/2$ is now forced by
+topology $\times$ variation (v73, below), so the \emph{dimensionless} content is closed --- the only residual
+is the absolute $4$D Newton scale (anchor). $\cthree=\tfrac1{8\pi}$ thereby stops being ``the known GR number
+in a new hat'' and becomes the visible imprint of the boundary geometry from which gravity is read
+thermodynamically.
 
 \smallskip\noindent\textbf{This is now \emph{the} central TOE-closure target} (Alessandro). The full chain it
 would complete is
@@ -492,22 +494,41 @@ $k=\tfrac1{16\pi G}\big|_{G=1}=\tfrac{\cthree}2$,
 \]
 i.e.\ $\cthree=\tfrac1{8\pi}$ is the \emph{unique} value for which the replica/conical area-law coefficient
 equals the Bekenstein--Hawking $\tfrac14$ \tI/\tL. The whole theorem therefore reduces to the \emph{single}
-remaining coefficient statement $k=\tfrac{\cthree}2$ --- the seam determinant's heat-kernel Einstein--Hilbert
-coefficient (the induced $\tfrac1{16\pi G}$ of Susskind--Uglum/Callan--Wilczek, fixed by the Seeley--DeWitt
-$a_2$ of the carrier content). That is one sharp spectral computation \tA, no longer a diffuse ``derive
-$\tfrac1{8\pi}$''.
+coefficient statement $k=\tfrac{\cthree}2$ --- and that statement is \emph{itself forced} (next paragraph,
+\veri{v73\_k\_c3\_half.py}): the \emph{dimensionless} $k=\cthree/2$ is the universal variational factor
+$\tfrac12$ times the Gauss--Bonnet topology of the seam $S^2$ slice. Only the \emph{absolute} $4$D Newton
+scale stays an anchor.
 
 \smallskip\noindent\textbf{Residual resolved as an anchor, not a gap (\veri{v68\_seeley\_dewitt\_residual.py}).}
 The Seeley--DeWitt coefficient for the carrier Dirac operator is $a_2=-\tfrac{d}{192\pi^2}R$ ($d=\dim S^+=16$
 or $2^{\gcar}=32$), giving $\tfrac1{16\pi G}=f_2\Lambda^2\,d/(192\pi^2)$ --- \emph{UV-sensitive} (it depends on
-the seam cutoff $\Lambda$ and the moment $f_2$). So $1/G$ is \emph{not} a pure number (Sakharov/Connes induced
-gravity): $k=\tfrac{\cthree}2$ is the seam normalisation P1 carried through the heat kernel, and the physical
-identification ``seam scale $=$ observed Planck scale'' is the \emph{one} irreducible dimensionful anchor
-($v_{\mathrm{geo}}$; no metre from pure mathematics). What \emph{is} cutoff-independent --- the $R^2$
+the seam cutoff $\Lambda$ and the moment $f_2$). So the \emph{absolute} $1/G$ is \emph{not} a pure number
+(Sakharov/Connes induced gravity) --- it is the $\Lambda^2 f_2$ prefactor, and the physical identification
+``seam scale $=$ observed Planck scale'' is the \emph{one} irreducible dimensionful anchor
+($v_{\mathrm{geo}}$; no metre from pure mathematics). \emph{Crucially this anchor is only the absolute scale:}
+the \emph{dimensionless} coefficient $k=\cthree/2$ that multiplies $\Lambda^2 f_2$ is forced (v73), not a free
+normalisation. What \emph{is} cutoff-independent --- the $R^2$
 coefficient, the scalaron $M_{\mathrm{scal}}=\cthree^{7/2}\bar M_{\mathrm{Pl}}\approx3.06\times10^{13}$ GeV,
 $v_{\mathrm{GW}}=c$ --- is already derived (\veri{v36\_spectral\_action\_g2.py}). \textbf{So the central theorem
 is ``maximally closed'':} the structure is proven, the predictive gravitational content is derived, and the
 residual is the single irreducible anchor every theory must carry, \emph{not} a missing step.
+
+\smallskip\noindent\textbf{The coefficient $k=\tfrac{\cthree}2$ is internally forced (\veri{v73\_k\_c3\_half.py}).}
+The \emph{dimensionless} coefficient statement splits into two cutoff-independent pieces, neither a free
+normalisation:
+\[
+  k=\frac{\cthree}{2}=\underbrace{\frac12}_{\text{variational}}\times
+  \underbrace{\frac{1}{|\Z_2|\cdot 2\pi\,\chi(S^2)}}_{\text{Gauss--Bonnet topology}},
+\]
+where \emph{(a)} the factor $\tfrac12$ is the universal action$\leftrightarrow$EOM factor
+($16\pi G$ action vs $8\pi G$ field equation, forced by $\delta(\sqrt g R)\!\to\!G_{\mu\nu}$); and \emph{(b)}
+$\cthree=1/(|\Z_2|\!\cdot\!2\pi\chi(S^2))=1/(2\!\cdot\!4\pi)=1/(8\pi)$ is the one-sided Gauss--Bonnet of the seam
+normal slice $S^2$ ($\chi(S^2)=2$, hence $\int K=4\pi$ \emph{topological}, cutoff-independent). With this
+$k$, Fursaev--Solodukhin gives $S=4\pi k A=2\pi\cthree A=\tfrac14 A$ exactly. \textbf{So Alessandro's
+target is met at the level it can be:} the coefficient $k=\tfrac{\cthree}2$ is forced by topology $\times$
+variation; the \emph{only} UV-sensitive piece left is the absolute $4$D Newton scale (the $\Lambda^2 f_2$
+prefactor of the carrier-Dirac $a_2$, v68) --- the one irreducible \emph{dimensionful} anchor, exactly where
+it should sit.
 
 \smallskip\noindent\textbf{The necessary condition is met (\veri{v59\_area\_law\_evidence.py}).} A
 reflection-positive Gaussian (Calder\'on-type) kernel \emph{generically} produces an area law

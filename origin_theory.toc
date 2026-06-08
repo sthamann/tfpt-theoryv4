@@ -7,6 +7,6 @@
 \contentsline {section}{\numberline {6}Interpretation {\small \textcolor {tfgold}{\textbf {[P]}}}: the self-reproducing cosmic cycle}{5}{section.6}%
 \contentsline {section}{\numberline {7}Falsifiers}{6}{section.7}%
 \contentsline {section}{\numberline {8}The seam and the horizon: the precise statement}{7}{section.8}%
-\contentsline {section}{\numberline {9}Consequences, and the whole story {\small \textcolor {tfgold}{\textbf {[P]}}}}{10}{section.9}%
-\contentsline {section}{\numberline {10}A closure program (next phase) {\small \textcolor {tfred}{\textbf {[A]}}}}{11}{section.10}%
-\contentsline {section}{\numberline {11}Honest status}{13}{section.11}%
+\contentsline {section}{\numberline {9}Consequences, and the whole story {\small \textcolor {tfgold}{\textbf {[P]}}}}{11}{section.9}%
+\contentsline {section}{\numberline {10}A closure program (next phase) {\small \textcolor {tfred}{\textbf {[A]}}}}{12}{section.10}%
+\contentsline {section}{\numberline {11}Honest status}{14}{section.11}%

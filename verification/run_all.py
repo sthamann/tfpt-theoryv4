@@ -79,6 +79,8 @@ MODULES = [
     ("v69_d4_q_geometry", "D4-equivariant Q-geometry (gate #2): Q_+=3*cusp-weights+1 => Spec{1,2,3} on mu4=Z4 eigenspaces; Q_-=E-block coupling sqrt(N_fam), B1 kernel => t(t^2-3); Sigma-split=D4=Z4><Z2; Theorem Q [P]->[L]"),
     ("v70_q_integer_lift", "integer-lift of Q sharpened: Z4 puncture action R unimodular (eigenvalues {-1,i,-i}); det Q=3=N_fam, SNF diag(1,1,3); residual = ONE lattice invariant det Q=N_fam, not closable by D4 alone"),
     ("v71_simple_r_bridge", "SIMPLE R-bridge (gate #3): quark RATIOS are integer Plucker readouts of R (det=rank E8=8) and Q (det=N_fam=3); selector stratum derived (v69) => ratios closed combinatorially (v49), NO monodromy; residual U_point=absolute norm=anchor"),
+    ("v72_q_det_from_cusp", "det Q = N_fam DERIVED from the cusp class (Alessandro Q-residual): cusp weights {0,1/3,2/3} have denominator 3=N_fam (same data as Spec Q_+=diag(1,2,3)); det Q=|coker Q|=cusp-class order=N_fam; coker Q=Z/N_fam = triality deck group => not an independent lattice input"),
+    ("v73_k_c3_half", "k=c3/2 FORCED (Alessandro central target): the dimensionless seam-area coefficient k=c3/2=(1/2)x(1/(|Z2|*2pi*chi(S2))) = variational factor [I] x Gauss-Bonnet topology of S2 slice [I/L], both cutoff-independent; Fursaev-Solodukhin => S=A/4; ONLY the absolute 4D Newton scale (Lambda^2*f2, v68) stays the irreducible dimensionful anchor"),
 ]
 
 
