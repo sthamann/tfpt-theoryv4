@@ -17,63 +17,62 @@ interface Layer {
 const LAYERS: Layer[] = [
   {
     level: 1,
-    label: "Theorem core",
-    short: "Theorem core",
-    examples: "Boundary primitive kernel · carrier rigidity · joint discrete solve",
-    tone: "from-blue-600 to-blue-500",
-    ring: "ring-blue-400/40",
-    text: "text-blue-100",
+    label: "[A] Axioms — declared inputs",
+    short: "Axiom",
+    examples: "c₃ = 1/(8π) (P1) · five-slot carrier g_car = 5 (P2)",
+    tone: "from-slate-600 to-slate-500",
+    ring: "ring-slate-400/40",
+    text: "text-slate-100",
     width: "w-full",
   },
   {
     level: 2,
-    label: "Derived structural output",
-    short: "Derived structure",
-    examples: "SM packet · 3 families · gauge quotient · N_Φ = 1 · b₁ = 41/10",
-    tone: "from-blue-500 to-cyan-500",
-    ring: "ring-cyan-400/40",
+    label: "[F] Formalised — Lean / exact script",
+    short: "Formal",
+    examples: "P2 algebra (Lean, 0 sorry) · E₈ glue machine-checked",
+    tone: "from-blue-600 to-blue-500",
+    ring: "ring-blue-400/40",
     text: "text-blue-50",
     width: "w-[88%]",
   },
   {
     level: 3,
-    label: "Bridge readout",
-    short: "Bridge readout",
-    examples: "α⁻¹(0) · λ_C · sin²θ_13 · CKM · PMNS · β_rad",
-    tone: "from-emerald-500 to-teal-500",
-    ring: "ring-emerald-400/40",
-    text: "text-emerald-50",
+    label: "[L] Lattice / Lie theorem",
+    short: "Lattice",
+    examples: "E₈ = (D₅ ⊕ A₃) + μ₄ · bootstrap μ² − 5μ + 4 = 0 · order-30 Coxeter",
+    tone: "from-cyan-500 to-blue-500",
+    ring: "ring-cyan-400/40",
+    text: "text-cyan-50",
     width: "w-[76%]",
   },
   {
     level: 4,
-    label: "Conditional closure",
-    short: "Conditional closure",
-    examples:
-      "P_adm · OS reconstruction · local Minkowski net · admissible RG flow",
-    tone: "from-orange-500 to-red-500",
-    ring: "ring-orange-400/40",
-    text: "text-orange-50",
+    label: "[I] Exact identity",
+    short: "Identity",
+    examples: "240 = 16·5·3 · 248 = 240+8 · b₁ = 41/10 · det R = 8 · χ_R",
+    tone: "from-emerald-500 to-teal-500",
+    ring: "ring-emerald-400/40",
+    text: "text-emerald-50",
     width: "w-[64%]",
   },
   {
     level: 5,
-    label: "Downstream interface",
-    short: "Downstream",
-    examples: "Λ_IR · seam transfer · axion 15.764 GHz · η_B · Σ m_ν · m_ββ",
-    tone: "from-fuchsia-500 to-pink-500",
-    ring: "ring-fuchsia-400/40",
-    text: "text-fuchsia-50",
+    label: "[N] Numerical fixed point",
+    short: "Numerical",
+    examples: "α⁻¹ = 137.0359992 · sin²θ₁₂ = 0.3067 · sin²θ₁₃ = 0.0231 · β_rad",
+    tone: "from-violet-500 to-fuchsia-500",
+    ring: "ring-violet-400/40",
+    text: "text-violet-50",
     width: "w-[52%]",
   },
   {
     level: 6,
-    label: "Conjectural / programmatic",
-    short: "Conjectural target",
-    examples: "CMB Stage 2 · sky realization · transient channels · E8 atlas",
-    tone: "from-slate-600 to-slate-700",
-    ring: "ring-slate-400/30",
-    text: "text-slate-200",
+    label: "[P]/[A] Conditional & open",
+    short: "Conditional / open",
+    examples: "masses · A_s, n_s, r · η_B · Koide · (U_wall) flavor · (G_metric) QG",
+    tone: "from-amber-500 to-orange-600",
+    ring: "ring-amber-400/40",
+    text: "text-amber-50",
     width: "w-[40%]",
     dashed: true,
   },
@@ -84,11 +83,11 @@ export function StatusPyramid() {
     <div className="glass rounded-2xl ring-1 ring-slate-700/40">
       <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800/60 px-5 py-3">
         <span className="text-[11px] font-semibold uppercase tracking-widest text-blue-300/80">
-          Proof-status pyramid — not all outputs share the same status
+          The claim stack — not all outputs share the same grade
         </span>
         <span className="rounded-full bg-slate-800/60 px-2.5 py-0.5 text-[10px] font-mono uppercase tracking-widest text-slate-300 ring-1 ring-slate-700/40">
-          Burden of proof, top{" "}
-          <span className="math-label">→</span> bottom
+          Foundation{" "}
+          <span className="math-label">→</span> conditional
         </span>
       </div>
 
@@ -137,13 +136,14 @@ export function StatusPyramid() {
 
       <div className="border-t border-slate-800/60 px-6 py-4 sm:px-8">
         <p className="text-xs leading-relaxed text-slate-400">
-          <strong className="text-slate-200">Reading rule.</strong> Higher
-          layers are the foundation. Each lower layer{" "}
-          <em>depends on</em> the layers above and inherits stricter
-          falsification surface, but the <em>proof status weakens</em>:
-          theorem-core claims fail with a single counterexample; downstream
-          interfaces fail only against a declared comparison convention;
-          conjectural targets fail only as programmatic predictions.
+          <strong className="text-slate-200">Reading rule.</strong> The two
+          axioms at the top are the foundation; each lower band{" "}
+          <em>depends on</em> the bands above. Exact identities and lattice
+          theorems fail with a single counterexample; numerical fixed points
+          fail against a declared comparison; conditional and open items fail
+          only as named hypotheses. The single source of truth for which claim
+          sits where is the machine-checked status ledger — if the text and the
+          ledger ever disagree, the ledger wins.
         </p>
       </div>
     </div>

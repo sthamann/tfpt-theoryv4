@@ -453,6 +453,21 @@ $2\|V\|=0.7852<2.4328$ and $\Delta_{\mathrm{eff}}\ge\Delta-2\|V\|>1.647>0$. The 
 trivial (\veri{v29\_research\_contract\_certs.py}); the work is the operator-norm bound (hard).
 \end{lemma}
 
+\begin{theorem}[Decoupling theorem --- physical low-energy claims do \emph{not} need the full $G_{\mathrm{metric}}$]
+\emph{If} the admissible sector is reflection-positive (G4) and the metric coupling is gap-dominated,
+$2\|V_{\mathrm{metric}}\|<\Delta=6\log\tfrac32$ (G5), \emph{then} the admissible IR measure is stable under
+the ambient completion: a strictly positive effective gap $\Delta_{\mathrm{eff}}=\Delta-2\|V\|>0$ protects the
+admissible sector from the (un-built) ambient/deep-UV, so every \emph{physical low-energy} read-out (masses,
+mixings, $\alpha^{-1}$, the $R{+}R^2$ regime) is independent of the open ambient measure. Symbolically
+\[
+  \boxed{\ \mathrm{RP}\ +\ 2\|V\|<\Delta\ \Longrightarrow\ \text{admissible IR measure stable under ambient completion}\ .}
+\]
+Thus $(G_{\mathrm{metric}})$ is \emph{not} a diffuse ``full quantum gravity missing'' block: it is the sharply
+delimited \emph{ambient projective limit} (G6), a strict-TOE certification target whose closure the
+falsifiable IR physics does not depend on. \textbf{Typing:} the inequality is machine-checked \tF; the
+operator-norm bound on $\|V_{\mathrm{metric}}\|$ is the conditional input.
+\end{theorem}
+
 \begin{lemma}[G6--G7 --- projective limit \& Ward identities]
 A projective system $\mu_{\chi_n}$ with $\pi_{m,n*}\mu_{\chi_m}=\mu_{\chi_n}$, uniform moment bounds
 $\sup_n\!\int\|g\|_{H^s}^p\,d\mu_{\chi_n}<\infty$, tightness and regulator-independence yields

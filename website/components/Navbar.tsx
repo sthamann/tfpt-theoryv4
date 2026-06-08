@@ -2,14 +2,14 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { Github, Menu, X } from "lucide-react";
+import { cn, REPO_URL } from "@/lib/utils";
 import { Logo } from "./Logo";
 
 const links = [
   { href: "/#overview", label: "Overview" },
-  { href: "/#chain", label: "Chain" },
-  { href: "/#papers", label: "Papers" },
+  { href: "/#chain", label: "Pipeline" },
+  { href: "/#papers", label: "Documents" },
   { href: "/#predictions", label: "Predictions" },
   { href: "/falsification", label: "Falsification" },
   { href: "/#downloads", label: "Downloads" },
@@ -60,10 +60,22 @@ export function Navbar() {
           ))}
           <li>
             <Link
-              href="/orientation"
-              className="ml-2 rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition-transform hover:scale-105 focus:scale-105"
+              href={REPO_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Verification suite on GitHub"
+              className="ml-1 inline-flex items-center gap-1.5 rounded-md px-3 py-2 text-sm font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-white"
             >
-              Read the orientation map
+              <Github size={16} aria-hidden />
+              GitHub
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/orientation"
+              className="ml-1 rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition-transform hover:scale-105 focus:scale-105"
+            >
+              Read the reading guide
             </Link>
           </li>
         </ul>
@@ -98,11 +110,23 @@ export function Navbar() {
             ))}
             <li>
               <Link
+                href={REPO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setOpen(false)}
+                className="flex items-center gap-2 rounded-md px-3 py-2 text-base text-slate-200 hover:bg-white/5"
+              >
+                <Github size={16} aria-hidden />
+                Code &amp; verification (GitHub)
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="/orientation"
                 onClick={() => setOpen(false)}
                 className="mt-2 block rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-4 py-2 text-center text-sm font-semibold text-white"
               >
-                Read the orientation map
+                Read the reading guide
               </Link>
             </li>
           </ul>

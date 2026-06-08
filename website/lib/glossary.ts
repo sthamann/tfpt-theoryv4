@@ -11,97 +11,100 @@ export interface GlossaryEntry {
 
 export const GLOSSARY: GlossaryEntry[] = [
   {
-    term: "boundary datum",
-    alias: ["one-sided boundary datum", "one sided boundary datum"],
+    term: "seam constant",
+    alias: ["c₃", "c3", "boundary number", "c_3"],
     short:
-      "Minimal one-sided spectral input from which the primitive kernel is reconstructed. The single primitive admissible object the rest of TFPT is built on.",
-  },
-  {
-    term: "Calderón polarization",
-    alias: ["Calderon polarization", "Calderón projector"],
-    short:
-      "The boundary projector that splits the doubled datum into positive and negative polarization sectors; supplies the carrier involution.",
-  },
-  {
-    term: "primitive kernel",
-    short:
-      "The five-tuple (τ_dbl, ι_C, P_prim, [u_Σ], c₃) reconstructed from the boundary datum before any phenomenological input.",
+      "The first axiom P1: c₃ = 1/(8π). The boundary/seam normaliser, Gauss–Bonnet-hardenable as 1/(|ℤ₂|·∮ K). Drives the seed, α⁻¹ and the scale grammar.",
   },
   {
     term: "carrier",
-    alias: ["carrier rigidity", "carrier packet"],
+    alias: ["g_car", "carrier rank", "g_{car}", "five-slot carrier", "3+2"],
     short:
-      "Finite essential split E = E_- ⊕ E_+ carrying the determinant-normalized hypercharge generator Y. Polynomial 6Y² − Y − 1 = 0 is its corollary, not its assumption.",
+      "The second axiom P2: a five-slot carrier g_car = 5 (3 colour + 2 weak). Its even-Hamming code is the D₅ half-spinor; the Pascal sum 1+5+10 = 16 forces g_car = 5.",
   },
   {
-    term: "joint discrete solve",
+    term: "E8 compiler",
+    alias: ["compiler", "audit hull", "E₈ compiler", "E8", "E₈"],
     short:
-      "A single discrete admissibility solution that simultaneously fixes the rank split, the seam normalization, and the bridge seed — the source of the three decoders.",
+      "E₈ is the unimodular audit/compiler hull — not a physical gauge group. The Standard Model is a readout after projection; the no-go theorems against literal E₈ do not bite.",
   },
   {
-    term: "admissibility selector",
-    alias: ["admissibility", "P_adm", "selector"],
+    term: "μ₄ glue",
+    alias: ["mu4 glue", "glue theorem", "mu_4 glue", "glue"],
     short:
-      "The composite projector P_adm = P_prim · P_sing · P_Θ that selects (does not evolve) the physical admissible sector of TFPT. Forces θ_eff = 0.",
+      "D₅ and A₃ share the discriminant group ℤ₄; their glue norms q(D₅)+q(A₃) = 5/4+3/4 = 2 add to the E₈ root norm. Hence E₈ = (D₅ ⊕ A₃) + μ₄ closes as a lattice theorem.",
   },
   {
-    term: "closed branch",
-    alias: ["T★", "T_star"],
+    term: "Coxeter compiler",
+    alias: ["Z30", "Z₃₀", "Coxeter number", "30 = 2·3·5"],
     short:
-      "The fully reconstructed admissible TFPT object after the selector and the closure dynamics have been applied. Inputs to all observable readouts.",
+      "The Coxeter number h(E₈) = 30 = 2·3·5 factorises into the three discrete atoms: sheet ℤ₂, families ℤ₃, and the carrier g_car = 5. rank E₈ = 8 = φ(30) is the live-phase count.",
   },
   {
-    term: "bridge readout",
+    term: "seed",
+    alias: ["φ₀", "phi_0", "phi0", "u = φ₀", "retained seed", "varphi_0"],
     short:
-      "An observable numerical output (α, λ_C, sin²θ_13, β, …) read off after theorem core and admissibility, with declared comparison map but no fitted constants.",
+      "The bridge seed φ₀ = 1/(6π) + 3/(256π⁴). The carrier base λ_Y = √(φ₀(1−φ₀)) of the mass ladder; also gives sin²θ₁₃ = φ₀ e⁻⁵ᐟ⁶ and β_rad = φ₀/(4π).",
   },
   {
-    term: "seam transfer",
+    term: "residue matrix",
+    alias: ["R", "flavor residue matrix", "residue matrix R"],
     short:
-      "The infrared map Λ_IR = M̄_Pl⁴[−log det_adm(1 − U_Σ)] connecting the admissible determinant line to the cosmological constant scale.",
+      "The 3×3 compiler residue matrix R with det R = 8 = h(D₅), principal 2-minors (2,3,5), ‖R‖_F² = 78 = dim E₆, and χ_R = t³ − 9t² + 10t − 8. The flavor signature.",
   },
   {
-    term: "determinant-line response",
-    alias: ["determinant line", "Chern–Simons response"],
+    term: "word-length",
+    alias: ["L matrix", "word-length matrix", "word lengths"],
     short:
-      "The Chern–Simons-type response sector that produces the cosmic birefringence amplitude β = φ₀/(4π) and, locally projected, the achromatic dyonic intercept β_BH(r).",
+      "The integer matrix L = R + 6·(winding) of transport word-lengths in the φ₀-ladder. Σ L = 40, and Σ L + N_Φ = 41 = 10 b₁ fixes the abelian coefficient.",
   },
   {
-    term: "retained seed",
-    alias: ["φ₀", "phi_0", "u = φ₀"],
+    term: "bootstrap loop",
+    alias: ["bootstrap", "Möbius bootstrap", "self-consistency loop"],
     short:
-      "The primitive bridge seed φ₀ = 1/(6π) + 3/(256π⁴) projecting to λ_C = √(φ₀(1−φ₀)), β_rad = φ₀/(4π), sin²θ_13 = φ₀ e^(−γ).",
+      "The E₈ closure feeds back and fixes the inputs: g_car = 5 is forced three ways and the 8 in c₃ = rank E₈ = h(D₅) = φ(30). Inputs and output prove each other; only π stays free.",
   },
   {
-    term: "seam opening",
-    alias: ["φ_seam(α)"],
+    term: "gapped attractor",
+    alias: ["unique attractor", "Perron–Frobenius", "attractor"],
     short:
-      "The α-dependent opening φ_seam(α) used inside the carrier-form electromagnetic closure equation. Different from the retained seed φ₀.",
+      "The boundary transport has spectral gap Δ = 6 log(3/2) > 0, so by Perron–Frobenius it has a unique attracting fixed point. The constants are selected, not tuned.",
   },
   {
-    term: "compact Higgs index",
+    term: "anchor",
+    alias: ["a = (1,1,2)", "parabolic anchor", "(1,1,2)"],
     short:
-      "The Riemann–Roch readout H⁰(S², 𝒪(1)) ≅ ℂ² that fixes dim E_+ = 2 on the seam-even line bundle of the compactified normal sphere.",
+      "The single parabolic anchor a = (1,1,2). Its elementary symmetric polynomials are (4,5,2) = (|μ₄|, g_car, |ℤ₂|); its power sums generate 240 and 248. Inputs collapse to a plus π.",
   },
   {
-    term: "primitive Yukawa type",
+    term: "scale grammar",
+    alias: ["action ladder", "1:5:10", "exponential engine"],
     short:
-      "An indecomposable local trilinear with two fermionic legs and one seam-even bosonic leg; closes the negative factor and forces dim E_- = 3.",
+      "The large scale ratios are exponential actions of α⁻¹ with rungs 1 : 5 : 10 = C(5,0):C(5,1):C(5,2). v_EW ∼ e^(−α⁻¹/5), Λ ∼ e^(−2α⁻¹), H₀ ∼ √Λ — one engine.",
   },
   {
-    term: "cusp cubic",
+    term: "status markers",
+    alias: ["[I]", "[L]", "[F]", "[N]", "[P]", "[A]", "marker key"],
     short:
-      "The transport polynomial P(z) = (z − 1)(z − 64/729)(z − 1/729). Its lower critical point selects δ_ph on the rigid flavor branch.",
+      "The proof grades: [I] exact identity, [L] Lie/lattice theorem, [F] formalised (Lean/script), [N] numerical fixed point, [P] physical/conditional, [A] axiom/open. The ledger is the source of truth.",
   },
   {
-    term: "scheme projection",
+    term: "two engines",
+    alias: ["discrete closure", "boundary dressing"],
     short:
-      "Final mapping in the observable functor chain that sends physical observables into a chosen comparison scheme (e.g. MS̄ at M_Z). Conventions enter only here.",
+      "The theory factorises into two engines: Engine 1 (discrete closure from g_car = 5) builds E₈ and the SM packet; Engine 2 (boundary dressing from c₃) gives the seed, α⁻¹ and the scale grammar. Gravity is Engine 2's geometry channel.",
   },
   {
-    term: "downstream interface",
+    term: "U_wall",
+    alias: ["(U_wall)", "wall selection", "parabolic wall"],
     short:
-      "Cosmology / horizon / sky-realization comparison surface; status-coded as programmatic or conjectural. Cannot tune the primitive branch.",
+      "The flavor research gate: pinning the one D₄-symmetric parabolic realisation. The quark ratios are closed (Readout Rigidity, 55/117); only the absolute amplitude scale U_point stays open [A].",
+  },
+  {
+    term: "G_metric",
+    alias: ["(G_metric)", "ambient measure", "quantum-gravity measure"],
+    short:
+      "The quantum-gravity research gate: a reflection-positive projective-limit metric measure. R + R² is heat-kernel grounded (G2) and gap-decoupled (G5); the ambient limit (G6) is the strict-TOE target [A].",
   },
 ];
 

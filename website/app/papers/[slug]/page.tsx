@@ -31,7 +31,7 @@ export async function generateMetadata(
   const oneSentence = [
     paper.contribution[0]
       ? paper.contribution[0]
-      : "Single-paper development on the TFPT 4.5 series.",
+      : "A document of the TFPT 5.0 compiler-closure set.",
     paper.notClaimed[0] ? `Not claimed: ${paper.notClaimed[0]}` : null,
   ]
     .filter(Boolean)
@@ -67,7 +67,7 @@ export async function generateMetadata(
       siteName: "TFPT — Topological Fixed-Point Theory",
       locale: "en_US",
       authors: ["Stefan Hamann", "Alessandro Rizzo"],
-      tags: [paper.title, meta.label, "TFPT 4.5"],
+      tags: [paper.title, meta.label, "TFPT 5.0"],
     },
     twitter: {
       card: "summary_large_image",
@@ -110,7 +110,7 @@ export default async function PaperPage({ params }: PaperPageProps) {
     isPartOf: {
       "@type": "PublicationIssue",
       issueNumber: String(paper.number),
-      name: "TFPT 4.5 paper series",
+      name: "TFPT 5.0 compiler-closure document set",
     },
     author: [
       { "@type": "Person", name: "Stefan Hamann" },
@@ -179,7 +179,7 @@ export default async function PaperPage({ params }: PaperPageProps) {
           </nav>
           <div className="flex flex-wrap items-center gap-2">
             <span className="rounded-full border border-slate-600/40 bg-slate-900/50 px-2.5 py-0.5 font-mono text-[10px] font-semibold uppercase tracking-widest text-slate-300">
-              Paper {paper.number} of the TFPT 4.5 series
+              Document {paper.number} of the TFPT 5.0 set
             </span>
             <span
               className={`rounded-full px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-widest ring-1 ${meta.bg} ${meta.color} ${meta.ring}`}

@@ -12,26 +12,26 @@ const ITEMS: {
 }[] = [
   {
     icon: Compass,
-    title: "Inputs from previous papers",
-    body: "None. This is the public orientation layer for the series.",
+    title: "Inputs",
+    body: "The two axioms {c₃ = 1/(8π), g_car = 5}. Everything else — the gauge group, the constants, the scale grammar — is a consequence.",
     tone: "from-blue-500/15 to-cyan-500/10 ring-blue-400/25",
   },
   {
     icon: ShieldCheck,
-    title: "New theorem contribution",
-    body: "None. The note contributes only organization, status discipline, and a dependency map.",
+    title: "Contribution",
+    body: "The compiler closure, the two-engine picture, the dependency DAG, the proof ledger, and the live experimental tests — stated in one place.",
     tone: "from-emerald-500/15 to-teal-500/10 ring-emerald-400/25",
   },
   {
     icon: XOctagon,
-    title: "Not claimed here",
-    body: "No carrier proof, no exact electromagnetic calculation, no CMB fit, no mass ledger, no E8 stage atlas, and no nonperturbative QFT proof.",
+    title: "Not introduced here",
+    body: "No new physics. The load-bearing derivations — the E₈ glue, the SM packet, the masses, the gravity sector — live in the companion documents.",
     tone: "from-slate-500/15 to-slate-500/5 ring-slate-400/25",
   },
   {
     icon: Crosshair,
     title: "Falsification or audit surface",
-    body: "The note can fail if it misstates the dependency order, overstates the status of a downstream module, or hides where an assumption first enters.",
+    body: "Fails as a guide if it misstates the dependency order, if a status marker disagrees with the ledger, or if a claim is promoted past the grade its companion document carries.",
     tone: "from-orange-500/15 to-amber-500/10 ring-orange-400/25",
   },
 ];

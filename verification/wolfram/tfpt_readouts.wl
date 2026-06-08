@@ -355,6 +355,14 @@ checkExact["k=c3/2=1/(16pi)=(1/2)*(1/(|Z2|*2pi*chi(S2))), chi(S2)=2; Fursaev-Sol
   Module[{c3 = 1/(8 Pi), chi = 2, Z2 = 2},
     (c3/2 == 1/(16 Pi)) && (c3 == 1/(Z2*2 Pi*chi)) && (4 Pi*(c3/2) == 1/4)]];
 
+(* ---- (v74) compiler micro-lemmas: pencil differences 2->16->48; anchor QF 41-25=16 ---- *)
+checkExact["pencil P(x)=det(K+xQ) endpoints (2,4,20,68); consecutive differences (2,16,48)=(|Z2|,dim S+,Omega_adm)",
+  Module[{P, v}, P[xx_] := Det[K + xx*Q]; v = P /@ {-1, 0, 1, 2};
+    v == {2, 4, 20, 68} && Differences[v] == {2, 16, 48}]];
+checkExact["anchor QF: 1^TK1=25=g_car^2, a^TKa=41=10 b1, a^TKa-1^TK1=16=dim S+ (EM budget = mass vol + one gen)",
+  Module[{one = {1, 1, 1}, av = {1, 1, 2}},
+    (one.K.one == 25 == gcar^2) && (av.K.av == 41) && (av.K.av - one.K.one == 16)]];
+
 (* ---- summary ---- *)
 Print["--- Wolfram readouts: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM CHECKS PASSED"]];

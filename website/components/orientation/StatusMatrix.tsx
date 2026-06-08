@@ -12,45 +12,45 @@ interface Row {
 
 const ROWS: Row[] = [
   {
-    layer: "Boundary primitive kernel",
-    status: "Theorem-level target",
-    paper: "Paper 1",
-    tone: "core",
-  },
-  {
-    layer: "Carrier rigidity and SM packet",
-    status: "Theorem-level target with representation audit",
-    paper: "Paper 2",
-    tone: "core",
-  },
-  {
-    layer: "Electromagnetic and flavor readouts",
-    status: "Closed-branch prediction layer with no-knobs audit",
-    paper: "Paper 3",
-    tone: "bridge",
-  },
-  {
-    layer: "Admissibility and QFT closure",
-    status: "Conditional nonperturbative closure under stated hypotheses",
-    paper: "Paper 4",
-    tone: "conditional",
-  },
-  {
-    layer: "Boundary-normalized metrology",
-    status: "Dimensionless observable functor from λ_Σ",
-    paper: "Paper 5",
-    tone: "bridge",
-  },
-  {
-    layer: "Cosmology and CMB",
-    status: "Downstream interface; Stage 1 spectra, Stage 2 sky realization target",
-    paper: "Paper 6",
+    layer: "Two axioms {c₃, g_car}",
+    status: "Declared inputs — c₃ Gauss–Bonnet-hardenable, P2 algebra Lean-formalised",
+    paper: "Doc 1",
     tone: "downstream",
   },
   {
-    layer: "Extended comparison maps",
-    status: "Appendix and companion material",
-    paper: "Technical Companion",
+    layer: "E₈ glue D₅ ⊕ A₃ + μ₄",
+    status: "Lattice theorem — common discriminant ℤ₄, glue norms 5/4 + 3/4 = 2",
+    paper: "Doc 1",
+    tone: "core",
+  },
+  {
+    layer: "Carrier traces 240, 248, b₁, det R",
+    status: "Exact identities read off the carrier and the residue matrix",
+    paper: "Docs 1–2",
+    tone: "core",
+  },
+  {
+    layer: "EM fixed point & flavor angles",
+    status: "Numerical fixed points — α⁻¹ = 137.0359992, sin²θ₁₂, sin²θ₁₃",
+    paper: "Docs 1–2",
+    tone: "bridge",
+  },
+  {
+    layer: "Masses, inflation, baryons",
+    status: "Conditional — the φ₀-ladder, the R² scalaron, Ω_b and η_B",
+    paper: "Docs 2, 4",
+    tone: "conditional",
+  },
+  {
+    layer: "Frontier items",
+    status: "Honest handles — Koide, m_p/m_e, dark matter, full quantum gravity",
+    paper: "Doc 4",
+    tone: "conditional",
+  },
+  {
+    layer: "Open gates (U_wall), (G_metric)",
+    status: "Two research contracts — the flavor wall-selection and the QG measure",
+    paper: "Doc 7",
     tone: "downstream",
   },
 ];
@@ -60,28 +60,28 @@ const TONE: Record<
   { label: string; bg: string; text: string; ring: string; bar: string }
 > = {
   core: {
-    label: "Core theorem",
+    label: "[I] / [L]",
     bg: "bg-blue-500/15",
     text: "text-blue-200",
     ring: "ring-blue-400/30",
     bar: "from-blue-500 to-violet-500",
   },
   bridge: {
-    label: "Bridge",
+    label: "[N]",
     bg: "bg-emerald-500/15",
     text: "text-emerald-200",
     ring: "ring-emerald-400/30",
     bar: "from-emerald-500 to-teal-500",
   },
   conditional: {
-    label: "Conditional closure",
+    label: "[P]",
     bg: "bg-orange-500/15",
     text: "text-orange-200",
     ring: "ring-orange-400/30",
     bar: "from-orange-500 to-red-500",
   },
   downstream: {
-    label: "Downstream",
+    label: "[A]",
     bg: "bg-fuchsia-500/15",
     text: "text-fuchsia-200",
     ring: "ring-fuchsia-400/30",
@@ -100,7 +100,7 @@ export function StatusMatrix() {
         <SectionHeader
           eyebrow="Status discipline"
           title="The status matrix"
-          description="Every layer of the derivation chain has its own proof status. The series is split by burden of proof so that a reader checking the carrier theorem is not asked to also accept downstream sky realizations."
+          description="Every layer of the dependency DAG carries its own grade — exact identity, lattice theorem, numerical fixed point, conditional, or open. The single source of truth is the machine-checked status ledger; if the text and the ledger ever disagree, the ledger wins."
         />
 
         <div className="mt-10 overflow-hidden rounded-2xl border border-slate-700/40 bg-slate-950/40">

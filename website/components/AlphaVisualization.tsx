@@ -35,7 +35,7 @@ const COMPARISON: Array<{
       </>
     ),
     value: "≈ 3.98 × 10⁻⁸",
-    note: "Difference between theory root and recommended value",
+    note: "≈ 1.9σ of the CODATA-2022 uncertainty 2.1 × 10⁻⁸ — a fixed point, not a fit",
     accent: "from-orange-500 to-amber-500",
     kind: "comparison",
     isMath: true,
@@ -148,22 +148,22 @@ function AlphaInputAudit() {
   }> = [
     {
       element: <Math>{"c_3 = 1/(8\\pi)"}</Math>,
-      from: "Paper 1 — boundary primitive",
+      from: "Axiom P1 — the seam constant",
       forbid: "CODATA fitting",
     },
     {
       element: <Math>{"b_1 = 41/10"}</Math>,
-      from: "Paper 2 — abelian index coefficient",
+      from: "Doc 1 — abelian index coefficient",
       forbid: "Empirical post-tuning",
     },
     {
-      element: <Math>{"\\textstyle\\sum L_{f,j} + N_\\Phi"}</Math>,
-      from: "Paper 2 — carrier packet, Higgs index",
+      element: <Math>{"\\textstyle\\sum L_{f,j} + N_\\Phi = 41"}</Math>,
+      from: "Doc 2 — word-lengths + Higgs index",
       forbid: "Free parameter",
     },
     {
       element: <Math>{"\\varphi_{\\mathrm{seam}}(\\alpha)"}</Math>,
-      from: "Paper 3 — exact seam opening",
+      from: "Doc 1 — exact seam opening",
       forbid: <span>Freezing at <Math>{"\\varphi_0"}</Math> inside the root equation</span>,
     },
     {

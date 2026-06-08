@@ -5,31 +5,30 @@ import { Compass, Layers, Target, Shield } from "lucide-react";
 import { SectionHeader } from "./SectionHeader";
 import { Math } from "./Math";
 import { StatusPyramid } from "./StatusPyramid";
-import { GlossTerm } from "./GlossTerm";
 
 const PILLARS = [
   {
     icon: Compass,
-    title: "One-sided boundary datum",
-    body: "Everything reconstructs from a single one-sided boundary datum 𝓣_∂ = (𝒜₊, ℋ₊, D₊, J, Γ, B_Σ). No carrier, no SM group, no α is inserted by hand.",
+    title: "Two axioms",
+    body: "Everything starts from the seam constant c₃ = 1/(8π) (P1) and the five-slot carrier g_car = 5 (P2). No SM gauge group, no families, no α is inserted by hand — they are consequences.",
     accent: "from-blue-500 to-cyan-500",
   },
   {
     icon: Layers,
-    title: "Three decoders",
-    body: "Y generates structure (the SM packet). [u_Σ] = 1 generates counting (3 families, 1 Higgs). u = φ₀ generates bridge observables (α, λ_C, sin²θ₁₃).",
+    title: "The E₈ compiler",
+    body: "The carrier gives the D₅ half-spinor, the family geometry ℙ¹∖μ₄ gives A₃, and the μ₄ glue closes E₈ = (D₅ ⊕ A₃) + μ₄ as a lattice theorem. E₈ is the audit hull; the SM is a readout after projection.",
     accent: "from-violet-500 to-purple-500",
   },
   {
     icon: Target,
-    title: "Falsifiable predictions",
-    body: "Each readout has a stated dependency class and a kill criterion. θ_eff = 0 is theorem-level. α⁻¹(0) is a closed-branch root. The axion window scans 15.764 GHz ± 50 MHz.",
+    title: "The bootstrap loop",
+    body: "The E₈ closure feeds back and fixes the inputs: g_car = 5 is forced three ways and the 8 in c₃ equals rank E₈ = h(D₅) = φ(30). The discrete core is overdetermined — only π stays irreducible.",
     accent: "from-emerald-500 to-teal-500",
   },
   {
     icon: Shield,
     title: "Status discipline",
-    body: "Theorem-core, bridge, conditional closure, downstream — every paper opens with what it proves, what it doesn't, and exactly how it can fail.",
+    body: "Every claim carries a grade — [I] identity, [L] lattice theorem, [F] formalised, [N] numerical fixed point, [P] conditional, [A] open — and resolves to a single machine-checked ledger. The ledger wins on any disagreement.",
     accent: "from-orange-500 to-amber-500",
   },
 ];
@@ -44,8 +43,8 @@ export function Overview() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
           eyebrow="What TFPT claims"
-          title="A boundary-polarized spectral framework"
-          description="TFPT is not a list of unrelated numerological readouts. It is a staged reconstruction in which the Standard Model, the fine-structure constant, the flavor sector, the strong-CP null, and the cosmology interface are forced by the same primitive boundary datum."
+          title="One discrete compiler, not many coincidences"
+          description="The seven original papers reproduced dozens of numbers but could not say why the same small integers (2, 3, 5, 16, 240, 248) kept reappearing. The compiler closure answers exactly that: one tiny machine, fed by two inputs, builds E₈ and reads off the Standard Model, the constants, and the scale grammar."
         />
 
         <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
@@ -87,53 +86,46 @@ export function Overview() {
           <div className="glass rounded-2xl ring-1 ring-blue-400/20">
             <div className="border-b border-slate-800/60 px-5 py-3">
               <span className="text-[11px] font-semibold uppercase tracking-widest text-blue-300/80">
-                Carrier theorem — polynomial as corollary
+                The μ₄ glue — E₈ as a closure, not an input
               </span>
             </div>
             <div className="p-6">
               <p className="text-sm leading-relaxed text-slate-300">
-                The carrier polynomial is{" "}
-                <span className="font-semibold text-slate-100">not</span> assumed.
-                Boundary polarization gives a finite involution, the compact
-                Higgs index fixes one rank, and primitive Yukawa type fixes the
-                other:
+                D₅ = so(10) (spinor 16) and A₃ = su(4) (the four-puncture family
+                geometry) share the{" "}
+                <span className="font-semibold text-slate-100">same</span>{" "}
+                discriminant group ℤ₄. Their glue norms add to the E₈ root norm:
               </p>
               <div className="mt-3 grid gap-2 text-xs">
                 <div className="rounded-lg border border-slate-700/40 bg-slate-950/40 p-3">
                   <span className="font-mono text-blue-300">1.</span>{" "}
-                  <Math>{"\\varepsilon_{\\mathrm{car}} = \\iota_C|_E"}</Math>
+                  <Math>{"\\operatorname{disc}(D_5) = \\operatorname{disc}(A_3) = \\mathbb{Z}_4"}</Math>
+                </div>
+                <div className="rounded-lg border border-slate-700/40 bg-slate-950/40 p-3">
+                  <span className="font-mono text-blue-300">2.</span>{" "}
+                  <Math>{"q(D_5) + q(A_3) = \\tfrac{5}{4} + \\tfrac{3}{4} = 2"}</Math>
                   <span className="text-slate-400">
                     {" "}
-                    → <Math>{"E = E_- \\oplus E_+"}</Math>
+                    = the E₈ root norm
                   </span>
                 </div>
                 <div className="rounded-lg border border-slate-700/40 bg-slate-950/40 p-3">
-                  <span className="font-mono text-blue-300">2.</span> Compact
-                  Higgs index{" "}
-                  <Math>{"H^0(S^2,\\mathcal{O}(1)) \\simeq \\mathbb{C}^2"}</Math>
+                  <span className="font-mono text-blue-300">3.</span>{" "}
+                  <Math>{"|R(E_8)| = 16\\cdot 5\\cdot 3 = 240"}</Math>
                   <span className="text-slate-400">
                     {" "}
-                    → <Math>{"\\dim E_+ = 2"}</Math>
-                  </span>
-                </div>
-                <div className="rounded-lg border border-slate-700/40 bg-slate-950/40 p-3">
-                  <span className="font-mono text-blue-300">3.</span> Primitive
-                  Yukawa type{" "}
-                  <Math>{"\\Lambda^3 E_- = \\det E_-"}</Math>
-                  <span className="text-slate-400">
-                    {" "}
-                    → <Math>{"\\dim E_- = 3"}</Math>
+                    , <Math>{"\\dim E_8 = 240 + 8 = 248"}</Math>
                   </span>
                 </div>
               </div>
               <div className="mt-3 overflow-x-auto rounded-lg border border-blue-400/30 bg-blue-500/5 p-3">
                 <Math block>
-                  {"Y = -\\tfrac{1}{3} P_- + \\tfrac{1}{2} P_+ \\;\\Rightarrow\\; 6Y^2 - Y - \\mathbf{1} = 0"}
+                  {"E_8 = (D_5 \\oplus A_3) + \\mu_4"}
                 </Math>
               </div>
               <p className="mt-2 text-xs text-slate-400">
-                The polynomial is the minimal polynomial of the derived
-                eigenvalues — its algebraic shadow.
+                A closed lattice-theoretic construction — not a blind positing
+                of 248. The E₈ numbers are carrier traces, not inputs.
               </p>
             </div>
           </div>
@@ -141,38 +133,35 @@ export function Overview() {
           <div className="glass rounded-2xl ring-1 ring-emerald-400/20">
             <div className="border-b border-slate-800/60 px-5 py-3">
               <span className="text-[11px] font-semibold uppercase tracking-widest text-emerald-300/80">
-                Closure equation for{" "}
+                The electromagnetic fixed point{" "}
                 <span className="math-label">α</span>
               </span>
             </div>
             <div className="p-6">
               <p className="text-sm leading-relaxed text-slate-300">
-                With the seam opening{" "}
-                <Math>{"\\varphi_{\\mathrm{seam}}(\\alpha)"}</Math>, the
-                fine-structure constant is the unique positive root of the
-                self-consistent equation:
+                The fine-structure constant is the unique positive root of a
+                parameter-free cubic built only from c₃ and the abelian
+                coefficient 41 = 10 b₁ — existence and uniqueness are proved:
               </p>
               <div className="mt-3 overflow-x-auto rounded-lg border border-slate-700/40 bg-slate-950/40 p-3">
                 <Math block>
-                  {"F_{U(1)}(\\alpha_\\star) = 0"}
+                  {"F_{U(1)}(\\alpha) = \\alpha^3 - 2c_3^3\\alpha^2 - \\tfrac{4}{5}c_3^6\\cdot 41 \\log\\tfrac{1}{\\varphi_{\\mathrm{seam}}(\\alpha)} = 0"}
                 </Math>
               </div>
               <div className="mt-2 overflow-x-auto rounded-lg border border-emerald-400/30 bg-emerald-500/5 p-3">
                 <Math block>
-                  {"\\Rightarrow \\alpha_\\star^{-1} = 137.035\\,999\\,216\\,8\\ldots"}
+                  {"\\Rightarrow \\alpha^{-1} = 137.035\\,999\\,216\\,8\\ldots"}
                 </Math>
               </div>
               <p className="mt-3 text-xs text-slate-400">
-                CODATA 2022 recommends{" "}
+                CODATA-2022 recommends{" "}
                 <span className="font-mono text-slate-200">
                   137.035 999 177(21)
                 </span>
-                ; the residual{" "}
-                <span className="font-mono text-slate-200">
-                  α⁻¹(TFPT − CODATA) ≈ 3.98 × 10⁻⁸
-                </span>{" "}
-                is the difference between the closed-branch root and the
-                recommended adjustment.
+                ; the deviation is{" "}
+                <span className="font-mono text-slate-200">2.9 × 10⁻¹⁰</span>,
+                about <span className="font-mono text-slate-200">1.9σ</span> of
+                its uncertainty — a fixed point, not a fit.
               </p>
             </div>
           </div>

@@ -10,12 +10,12 @@ const SEVERITY_META: Record<
   { label: string; chip: string; tone: string }
 > = {
   theorem: {
-    label: "Theorem-level kill",
+    label: "Identity / theorem kill",
     chip: "bg-blue-500/15 text-blue-200 ring-blue-400/30",
     tone: "from-blue-500 to-violet-500",
   },
   bridge: {
-    label: "Bridge readout kill",
+    label: "Numerical kill",
     chip: "bg-emerald-500/15 text-emerald-200 ring-emerald-400/30",
     tone: "from-emerald-500 to-teal-500",
   },
@@ -25,7 +25,7 @@ const SEVERITY_META: Record<
     tone: "from-orange-500 to-red-500",
   },
   downstream: {
-    label: "Downstream kill",
+    label: "Cosmology kill",
     chip: "bg-fuchsia-500/15 text-fuchsia-200 ring-fuchsia-400/30",
     tone: "from-fuchsia-500 to-pink-500",
   },
@@ -41,83 +41,91 @@ interface KillRow {
 
 const ROWS: KillRow[] = [
   {
-    area: "Carrier theorem",
-    paper: "Paper 2",
+    area: "Solar angle θ₁₂",
+    paper: "Doc 2 · JUNO (live)",
     criterion:
-      "The 3+2 carrier split is not derivable without importing Standard-Model representation data — i.e. dim E_+ = 2 or dim E_- = 3 turn out to require an SM-side input rather than the compact Higgs index and the primitive Yukawa type.",
-    formal: "(\\dim E_-,\\dim E_+) = (3,2) \\text{ requires an SM-side import}",
-    severity: "theorem",
-  },
-  {
-    area: "Joint discrete solve",
-    paper: "Papers 1, 2",
-    criterion:
-      "An alternative admissible discrete solution survives all primitive constraints (boundary kernel, Higgs index, primitive Yukawa, seam normalization). The closed branch would no longer be unique.",
-    formal: "\\#\\,d^\\star_{\\mathrm{disc}} > 1",
-    severity: "theorem",
-  },
-  {
-    area: "Electromagnetic closure",
-    paper: "Paper 3",
-    criterion:
-      "The carrier-form closure equation F_U(1)(α) = 0 fails to admit a unique positive root, or the root differs from CODATA 2022 by more than the declared interface uncertainty (currently ≈ 4 × 10⁻⁸ in α⁻¹).",
-    formal: "F_{U(1)}(\\alpha_\\star)=0 \\text{ has no positive root, or }|\\alpha_\\star^{-1} - \\alpha^{-1}_{\\mathrm{CODATA}}| > \\Delta",
+      "A JUNO central value clearly away from sin²θ₁₂ ≈ 0.307 at high significance kills the seam-misalignment mechanism. JUNO has been taking data since August 2025 — this is the sharpest live test.",
+    formal: "\\sin^2\\theta_{12} \\neq \\tfrac{1}{3} - \\tfrac{\\varphi_0}{2} \\approx 0.3067",
     severity: "bridge",
   },
   {
-    area: "Strong CP",
-    paper: "Paper 4",
+    area: "Tensor ratio r",
+    paper: "Doc 1 · CMB-S4",
     criterion:
-      "A stable nonzero hadronic EDM signal under the declared comparison convention. The admissibility/determinant-line argument forces θ_eff = 0 at theorem level, so any robust EDM detection kills the construction.",
+      "Any robust r ≳ 0.01 is incompatible with the R² branch on which M_Pl and A_s rest. The scalaron predicts r = 12/N★² ≈ 0.004, already below the BK18 bound r < 0.036.",
+    formal: "r \\gtrsim 0.01 \\;\\Rightarrow\\; R^2\\text{ branch killed}",
+    severity: "bridge",
+  },
+  {
+    area: "Neutrino ordering / m_ββ",
+    paper: "Doc 2 · LEGEND, nEXO",
+    criterion:
+      "Inverted ordering, or a large effective Majorana mass m_ββ, kills the Majorana branch. TFPT prefers normal ordering with a small m_ββ.",
+    formal: "\\text{inverted ordering, or } m_{\\beta\\beta} \\gtrsim 10^{-2}\\,\\text{eV}",
+    severity: "bridge",
+  },
+  {
+    area: "Strong CP θ_eff",
+    paper: "Doc 2 · PSI nEDM",
+    criterion:
+      "A solid neutron-EDM signal above the SM background falsifies the structural cancellation. θ_eff = 0 follows from γ₅-Hermiticity, polar structure and the sheet involution plus reflection positivity.",
     formal: "\\theta_{\\mathrm{eff}} \\neq 0 \\;\\Rightarrow\\; \\text{construction killed}",
     severity: "theorem",
   },
   {
-    area: "Higgs sector",
-    paper: "Paper 2 → 3",
+    area: "Dark-energy w",
+    paper: "Doc 1 · DESI",
     criterion:
-      "Robust discovery of a second light seam-even Higgs doublet. The compact bosonic index forces N_Φ = 1; an additional doublet kills the determinant class.",
-    formal: "N_\\Phi = 1 \\text{ (forced by index) } \\Rightarrow \\text{no second light doublet}",
-    severity: "structural",
-  },
-  {
-    area: "Axion haloscope",
-    paper: "Paper 6",
-    criterion:
-      "Calibrated haloscope exclusion of the 15.764 GHz ± 50 MHz window at the coupled sensitivity. A clean exclusion of the predicted band kills the cosmology readout chain.",
-    formal: "\\nu_a \\notin [15.714, 15.814]\\,\\mathrm{GHz}",
+      "A robust w ≠ −1 kills the single-engine dark-energy readout, where Λ ∼ e⁻²ᵅ⁻¹ and H₀ ∼ √Λ come from the same exponential scale grammar.",
+    formal: "w \\neq -1",
     severity: "downstream",
   },
   {
-    area: "Cosmic birefringence β",
-    paper: "Paper 3 (response)",
+    area: "EM fixed point α⁻¹",
+    paper: "Doc 1 · CODATA",
     criterion:
-      "Externally calibrated cosmic-rotation analysis statistically consistent with β = 0 within ±0.05° (without EB self-nulling). Determinant-line response would not be in the data.",
-    formal: "\\beta = 0 \\pm 0.05^\\circ \\text{ at declared confidence}",
+      "F_U(1)(α) = 0 fails to admit a unique positive root, or the root drifts outside the declared interface uncertainty (currently ≈ 4 × 10⁻⁸ in α⁻¹, about 1.9σ of CODATA-2022).",
+    formal: "F_{U(1)}(\\alpha_\\star) = 0 \\text{ has no/second root, or } |\\Delta\\alpha^{-1}| > \\Delta",
     severity: "bridge",
   },
   {
-    area: "EHT achromatic intercept",
-    paper: "Paper 3 → standalone",
+    area: "E₈ glue",
+    paper: "Doc 1 (structural)",
     criterion:
-      "Calibrated achromatic residual χ₀^res(x) = χ₀^obs − χ₀^GRMHD statistically consistent with zero across the horizon-scale image, or no 1/r² profile, or no E·B sign flip, or measurable λ² dependence.",
-    formal: "\\chi_0^{\\mathrm{res}} \\equiv 0 \\text{ after honest GRMHD subtraction}",
-    severity: "downstream",
+      "D₅ and A₃ fail to share the ℤ₄ discriminant, or the glue norms do not sum to the E₈ root norm 2. The whole compiler closure rests on this lattice fact.",
+    formal: "\\operatorname{disc}(D_5) \\neq \\operatorname{disc}(A_3) \\text{ or } q(D_5)+q(A_3) \\neq 2",
+    severity: "theorem",
   },
   {
-    area: "Cosmology comparison",
-    paper: "Paper 6",
+    area: "Flavor invariants",
+    paper: "Doc 2 (structural)",
     criterion:
-      "Robust inconsistency between the closed-branch readouts (Λ_IR, η_B, Σ m_ν, Ω_b) and the comparison data under the declared convention, beyond stated interface uncertainty.",
-    formal: "\\text{Closed-branch row} \\notin \\text{declared comparison interval}",
-    severity: "downstream",
+      "A future global CKM/PMNS fit that cannot be carried by a residue matrix with det R = 8, principal 2-minors (2,3,5) and χ_R = t³ − 9t² + 10t − 8. Every load-bearing flavor number must live in an E₈ projection.",
+    formal: "\\det R \\neq 8 \\text{ or } \\mathrm{minors} \\neq (2,3,5)",
+    severity: "structural",
+  },
+  {
+    area: "No second Higgs",
+    paper: "Doc 1 (structural)",
+    criterion:
+      "Robust discovery of a second light seam-even Higgs doublet. The carrier index forces N_Φ = g_car − |μ₄| = 1; an additional doublet kills it.",
+    formal: "N_\\Phi = 1 \\Rightarrow \\text{no second light doublet}",
+    severity: "structural",
+  },
+  {
+    area: "m_p/m_e — not claimed",
+    paper: "Doc 4 (honesty)",
+    criterion:
+      "The proton/electron ratio is explicitly NOT claimed as a compiler power. It is a cross-sector QCD/EW ratio, deliberately not forced onto the ladder — it only fails if mis-asserted as a compiler power.",
+    formal: "m_p/m_e \\text{ is } [\\mathrm{A}],\\ \\text{not a compiler power}",
+    severity: "structural",
   },
   {
     area: "Status discipline",
     paper: "Cross-cutting",
     criterion:
-      "An assumption first becomes invisible — i.e. an empirical input enters the proof chain without being declared as such, or a downstream comparison feeds back into the primitive branch.",
-    formal: "\\text{Hidden empirical input upstream of }\\mathfrak{T}_\\star",
+      "A claim is promoted past the grade its document carries, an empirical input enters undeclared, or the text disagrees with the machine-checked ledger. The ledger always wins.",
+    formal: "\\text{text} \\neq \\text{status ledger}",
     severity: "structural",
   },
 ];

@@ -8,17 +8,13 @@ const SITE_URL =
 /**
  * Sitemap priority by asset path.
  *
- * The numbered core papers (00–06) carry the load-bearing arguments and rank
- * highest. Auxiliary papers (theory map, technical companion, series index,
- * coverage audit) and the two-page summary are still first-class downloads
- * but slightly lower. Individual prediction PDFs sit just below since they
- * are leaf nodes of the closed branch.
+ * The introduction (the reading guide) and the four core documents carry the
+ * load-bearing arguments and rank highest; the three companions (Appendix H,
+ * Origin Theory, research contracts) sit just below.
  */
 function priorityForAsset(href: string): number {
-  if (/^\/papers\/0\d_/.test(href)) return 0.7;
-  if (href === "/predictions/tfpt_two_page_summary.pdf") return 0.65;
-  if (href.startsWith("/papers/")) return 0.6;
-  if (href.startsWith("/predictions/")) return 0.55;
+  if (href === "/papers/introduction.pdf") return 0.7;
+  if (href.startsWith("/papers/")) return 0.65;
   return 0.5;
 }
 

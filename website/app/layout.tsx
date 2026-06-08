@@ -6,12 +6,13 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { papers } from "@/lib/papers";
 import { predictions } from "@/lib/predictions";
+import { REPO_URL } from "@/lib/utils";
 
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://tfpt-theory.vercel.app";
 const SITE_NAME = "TFPT — Topological Fixed-Point Theory";
 const SITE_DESCRIPTION =
-  "Topological Fixed-Point Theory (TFPT). A boundary-polarized spectral framework that derives the Standard-Model packet, the fine-structure constant α⁻¹(0) = 137.035 999 216 8, the Cabibbo angle, the PMNS matrix, strong-CP closure, and downstream cosmology — from a one-sided boundary datum, with no fitted constants.";
+  "Topological Fixed-Point Theory (TFPT). From two numbers, the seam constant c₃ = 1/(8π) and the carrier rank g_car = 5, a discrete compiler reads off the Standard Model, the constants (α⁻¹ = 137.0359992, 1.9σ from CODATA-2022), the flavor sector and the scale grammar. 20 falsifiable predictions, zero fitted constants; only π is irreducible.";
 
 export const viewport: Viewport = {
   themeColor: [
@@ -27,7 +28,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME}: Boundary Polarization, Carrier Rigidity & Observable Closure`,
+    default: `${SITE_NAME}: Two Axioms, One Compiler, the Standard Model Derived`,
     template: "%s · TFPT",
   },
   description: SITE_DESCRIPTION,
@@ -35,8 +36,9 @@ export const metadata: Metadata = {
   keywords: [
     "TFPT",
     "Topological Fixed-Point Theory",
-    "Boundary polarization",
-    "Carrier rigidity",
+    "Compiler closure",
+    "E8 audit hull",
+    "Two axioms",
     "Standard Model derivation",
     "Fine-structure constant",
     "Strong CP problem",
@@ -44,16 +46,16 @@ export const metadata: Metadata = {
     "Cabibbo angle",
     "PMNS matrix",
     "CKM matrix",
-    "Calderón polarization",
-    "Hodge closure",
-    "Boundary spectral theory",
+    "D5 A3 E8 glue",
+    "Bootstrap loop",
+    "Coxeter compiler",
     "Stefan Hamann",
     "Alessandro Rizzo",
     "Theoretical physics",
     "Mathematical physics",
     "α = 137.0359992",
     "Quantum field theory",
-    "TFPT 4.5 paper series",
+    "TFPT 5.0",
   ],
   authors: [
     { name: "Stefan Hamann" },
@@ -71,9 +73,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: SITE_NAME,
-    title: `${SITE_NAME}: Boundary Polarization, Carrier Rigidity & Observable Closure`,
+    title: `${SITE_NAME}: Two Axioms, One Compiler, the Standard Model Derived`,
     description:
-      "A boundary-polarized spectral framework that reconstructs the Standard-Model packet and predicts α⁻¹(0), λ_C, sin²θ₁₃, θ_eff = 0, and downstream cosmology — from a one-sided boundary datum, with no fitted constants.",
+      "From two numbers, c₃ = 1/(8π) and g_car = 5, a discrete compiler reads off the Standard Model, α⁻¹ = 137.0359992 (1.9σ from CODATA-2022), the flavor sector, strong-CP closure, and the scale grammar. 20 falsifiable predictions, zero fitted constants.",
     locale: "en_US",
     url: SITE_URL,
   },
@@ -81,7 +83,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: SITE_NAME,
     description:
-      "A boundary-polarized spectral framework deriving the Standard-Model packet and observable closure — no fitted constants.",
+      "Two axioms build E₈; E₈ reads off the Standard Model, the constants, and the scale grammar — no fitted constants, only π irreducible.",
     creator: "@tfpttheory",
   },
   robots: {
@@ -105,7 +107,7 @@ export const metadata: Metadata = {
     // `citation_author_2` — using it makes the second author invisible to
     // Scholar. Next.js renders an array as repeated <meta> elements.
     citation_title:
-      "TFPT — Topological Fixed-Point Theory: Boundary Polarization, Carrier Rigidity & Observable Closure",
+      "TFPT — Topological Fixed-Point Theory: Two Axioms, One Compiler, the Standard Model Derived",
     citation_author: ["Hamann, Stefan", "Rizzo, Alessandro"],
     citation_publication_date: "2026",
     citation_language: "en",
@@ -119,6 +121,7 @@ const websiteJsonLd = {
   url: SITE_URL,
   description: SITE_DESCRIPTION,
   inLanguage: "en",
+  sameAs: [REPO_URL],
   publisher: {
     "@type": "Organization",
     name: "TFPT Collaboration",
@@ -140,10 +143,11 @@ const researchProjectJsonLd = {
   name: SITE_NAME,
   url: SITE_URL,
   description: SITE_DESCRIPTION,
+  sameAs: [REPO_URL],
   keywords: [
     "Topological Fixed-Point Theory",
-    "Boundary polarization",
-    "Carrier rigidity",
+    "Compiler closure",
+    "E8 audit hull",
     "Standard Model",
     "Fine-structure constant",
     "Strong CP",
@@ -159,9 +163,9 @@ const researchProjectJsonLd = {
     name: "TFPT Collaboration",
   },
   about: [
-    "Boundary spectral theory",
-    "Calderón polarization",
-    "Hodge closure",
+    "Discrete compiler",
+    "D5 A3 E8 glue",
+    "Coxeter–cyclotomic compiler",
     "Standard Model derivation",
     "Strong-CP closure",
   ],
@@ -170,10 +174,10 @@ const researchProjectJsonLd = {
 const collectionJsonLd = {
   "@context": "https://schema.org",
   "@type": "Collection",
-  name: "TFPT 4.5 Paper Series",
+  name: "TFPT 5.0 Compiler-Closure Document Set",
   url: `${SITE_URL}#papers`,
   description:
-    "The TFPT 4.5 paper series, split by burden of proof: orientation, primitive kernel, carrier rigidity, EM closure, QFT closure, metrology, and cosmology interfaces.",
+    "The TFPT 5.0 document set: the introduction reading guide, the architecture and E₈ compiler, the Standard Model, the E₈ audit and bootstrap, the honest frontier, Appendix H (horizon), the Origin Theory synthesis, and the research contracts.",
   hasPart: papers.map((p) => ({
     "@type": "ScholarlyArticle",
     name: p.title,
@@ -188,7 +192,7 @@ const collectionJsonLd = {
     ],
     isPartOf: {
       "@type": "PublicationIssue",
-      name: "TFPT 4.5 paper series",
+      name: "TFPT 5.0 compiler-closure document set",
       issueNumber: String(p.number),
     },
     encoding: {
@@ -204,7 +208,7 @@ const predictionsJsonLd = {
   "@type": "Dataset",
   name: "TFPT prediction surface",
   description:
-    "Falsifiable predictions of the TFPT closed branch: α⁻¹(0), λ_C, sin²θ₁₃, β cosmic birefringence, strong-CP null θ_eff = 0, axion haloscope window, η_B leptogenesis, Σm_ν, m_ββ, rare kaons, and more.",
+    "Falsifiable predictions of the TFPT compiler closure: α⁻¹(0), the solar angle sin²θ₁₂ = 1/3 − φ₀/2, sin²θ₁₃, the inflation tensor ratio r, n_s, A_s, the strong-CP null θ_eff = 0, cosmic birefringence β, Ω_b, η_B, the axion window, and the flavor invariants (det R = 8).",
   url: `${SITE_URL}#predictions`,
   creator: [
     { "@type": "Person", name: "Stefan Hamann" },

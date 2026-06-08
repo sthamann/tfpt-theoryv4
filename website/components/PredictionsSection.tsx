@@ -11,7 +11,7 @@ import { predictions, Prediction, CATEGORY_META } from "@/lib/predictions";
 import { cn } from "@/lib/utils";
 import { trackPdfInteraction } from "@/lib/track";
 
-const TWO_PAGE_SUMMARY = "/predictions/tfpt_two_page_summary.pdf";
+const READING_GUIDE = "/papers/introduction.pdf";
 
 const FILTERS: { id: Prediction["category"] | "All"; label: string }[] = [
   { id: "All", label: "All predictions" },
@@ -55,7 +55,7 @@ export function PredictionsSection() {
         <SectionHeader
           eyebrow="The prediction surface"
           title="Sharp, falsifiable readouts"
-          description="Every row below is a single closed-branch readout with an explicit dependency class and a stated kill or pressure criterion. Each entry has its own dedicated standalone paper for review and submission."
+          description="Every row is a single readout with an explicit status marker, dependency class, and a stated kill or pressure criterion. Each links to the source document that derives it — and the freeze file commits the decisive kill criteria in advance."
         />
 
         <div className="mt-6 grid gap-3 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-8">
@@ -170,30 +170,30 @@ export function PredictionsSection() {
           className="mt-12 flex flex-col items-center gap-4 rounded-2xl border border-slate-700/40 bg-slate-950/40 p-8 text-center"
         >
           <h3 className="font-serif text-xl font-semibold text-slate-50">
-            Want everything in two pages?
+            Want the full reading guide?
           </h3>
           <p className="max-w-xl text-sm text-slate-400">
-            The two-page summary states the one-sentence claim, the staged
-            reconstruction, the carrier theorem, the status discipline, and the
-            full prediction surface in compact form.
+            The introduction states the compiler closure, the dependency DAG,
+            the before/after against the seven original papers, the predictions,
+            and the single proof ledger.
           </p>
           <Link
-            href={TWO_PAGE_SUMMARY}
+            href={READING_GUIDE}
             target="_blank"
             rel="noopener"
             onClick={() =>
               trackPdfInteraction({
-                file: TWO_PAGE_SUMMARY,
+                file: READING_GUIDE,
                 source: "predictions-summary-cta",
                 kind: "summary",
                 interaction: "download",
-                title: "Two-page summary",
+                title: "Reading guide (introduction)",
               })
             }
             className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition-transform hover:scale-105"
           >
             <Download size={16} />
-            Download two-page summary
+            Open the reading guide
           </Link>
         </motion.div>
       </div>

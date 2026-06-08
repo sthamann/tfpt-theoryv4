@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 export const alt =
-  "TFPT in One Map — Orientation Note (Paper 0). The public entry document of the TFPT 4.5 paper series.";
+  "TFPT in One Map — the compiler closure. The reading guide of the TFPT 5.0 document set.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -98,7 +98,7 @@ export default function OrientationOgImage() {
                 marginTop: 2,
               }}
             >
-              Orientation Map · Paper 0
+              Introduction · Reading guide
             </div>
           </div>
         </div>
@@ -157,7 +157,7 @@ export default function OrientationOgImage() {
               display: "flex",
             }}
           >
-            Boundary polarization, carrier rigidity, and observable closure — what TFPT claims, what it doesn't, and the dependency map between Papers 1 to 6.
+            Two axioms, one E₈ compiler, the Standard Model — what TFPT claims, what it doesn't, the two engines, the bootstrap loop, and the document map.
           </div>
           <div
             style={{

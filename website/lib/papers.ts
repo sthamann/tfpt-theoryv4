@@ -1,9 +1,11 @@
 export type PaperStatus =
+  | "orientation"
   | "core"
-  | "bridge"
-  | "conditional"
-  | "downstream"
-  | "orientation";
+  | "synthesis"
+  | "audit"
+  | "frontier"
+  | "horizon"
+  | "contracts";
 
 export interface Paper {
   id: string;
@@ -48,39 +50,53 @@ export const STATUS_META: Record<
   { label: string; color: string; bg: string; ring: string; gradient: string }
 > = {
   orientation: {
-    label: "Orientation Map",
+    label: "Reading guide",
     color: "text-slate-200",
     bg: "bg-slate-500/10",
     ring: "ring-slate-400/30",
     gradient: "from-slate-400 to-slate-500",
   },
   core: {
-    label: "Core Theorem",
+    label: "Compiler core",
     color: "text-blue-300",
     bg: "bg-blue-500/10",
     ring: "ring-blue-500/30",
     gradient: "from-blue-500 to-violet-500",
   },
-  bridge: {
-    label: "Bridge Readout",
+  synthesis: {
+    label: "Origin synthesis",
     color: "text-emerald-300",
     bg: "bg-emerald-500/10",
     ring: "ring-emerald-500/30",
     gradient: "from-emerald-500 to-teal-500",
   },
-  conditional: {
-    label: "Conditional Closure",
+  audit: {
+    label: "E8 audit & bootstrap",
+    color: "text-cyan-300",
+    bg: "bg-cyan-500/10",
+    ring: "ring-cyan-500/30",
+    gradient: "from-cyan-500 to-blue-500",
+  },
+  frontier: {
+    label: "Honest frontier",
     color: "text-orange-300",
     bg: "bg-orange-500/10",
     ring: "ring-orange-500/30",
     gradient: "from-orange-500 to-red-500",
   },
-  downstream: {
-    label: "Downstream Interface",
+  horizon: {
+    label: "Appendix H — reframe",
     color: "text-fuchsia-300",
     bg: "bg-fuchsia-500/10",
     ring: "ring-fuchsia-500/30",
     gradient: "from-fuchsia-500 to-pink-500",
+  },
+  contracts: {
+    label: "Open research gates",
+    color: "text-amber-300",
+    bg: "bg-amber-500/10",
+    ring: "ring-amber-500/30",
+    gradient: "from-amber-500 to-yellow-500",
   },
 };
 
@@ -88,755 +104,768 @@ export const papers: Paper[] = [
   {
     id: "00",
     number: 0,
-    slug: "orientation",
-    title: "TFPT in One Map",
-    subtitle: "Boundary Polarization, Carrier Rigidity, and Observable Closure",
+    slug: "introduction",
+    title: "The Compiler Closure of TFPT",
+    subtitle: "Reading guide, status assessment, and the dependency DAG",
     abstract:
-      "The thin entry document for the TFPT 4.5 series. It does not attempt to prove the full theory. Its purpose is to state what TFPT claims, what it does not claim, how the closed branch is organized, and where each load-bearing argument is isolated in the paper sequence.",
+      "The entry document. TFPT tips from 'many sectors with surprising hits' to 'one small discrete compiler generates those sectors': from two axioms — the seam constant c₃ = 1/(8π) and the carrier rank g_car = 5 — it builds D₅ ⊕ A₃ + μ₄ ⇒ E₈ and reads off the Standard Model, the constants, and the scale grammar. This note is the reading guide: the architecture, the before/after against the seven original papers, the predictions, the dependency DAG, and the single proof ledger.",
     status: "orientation",
-    statusLabel: "Orientation Map",
-    pdf: "/papers/00_orientation_note.pdf",
-    inputs: ["None — public orientation layer for the series"],
+    statusLabel: "Reading guide",
+    pdf: "/papers/introduction.pdf",
+    inputs: ["The two axioms {c₃, g_car}; everything else is a consequence."],
     contribution: [
-      "Organization, status discipline, and a dependency map for the closed-branch argument.",
+      "States the compiler closure, the two-engine picture, the dependency DAG, the proof ledger, and the live experimental tests in one place.",
     ],
     notClaimed: [
-      "No carrier proof, no exact electromagnetic calculation, no CMB fit, no mass ledger, no E8 stage atlas, and no nonperturbative QFT proof.",
+      "No new physics is introduced here — the introduction is a map. Load-bearing derivations live in the companion documents.",
     ],
     falsification: [
-      "The note can fail if it misstates the dependency order, overstates the status of a downstream module, or hides where an assumption first enters.",
+      "Fails as a guide if the dependency order is misstated, if a status marker disagrees with the ledger, or if a claim is promoted past the grade the companion document carries.",
     ],
     sections: [
       {
-        title: "What TFPT Claims",
-        body: "TFPT is organized as a boundary-polarized spectral theory whose primitive input is a one-sided boundary datum. The main theorem chain is not a collection of unrelated numerological readouts — it is a staged reconstruction.",
+        title: "Two inputs, one machine",
+        body: "Two numbers go in — a boundary number 1/(8π) and a five-slot carrier — and the discrete Standard-Model core, the dimensionless constants and several scale readouts come out. The dashed loop is the point: the machine reproduces the very two numbers it started from, so the discrete core is overdetermined rather than fitted.",
         formulas: [
-          "\\mathfrak{S}_{\\min}\\Rightarrow\\mathcal{B}_{\\min}\\Rightarrow\\mathfrak{T}_\\partial \\Rightarrow (\\tau_{\\mathrm{dbl}},\\iota_C,P_{\\mathrm{prim}},[u_\\Sigma],c_3) \\Rightarrow d^\\star_{\\mathrm{disc}}\\Rightarrow P_{\\mathrm{adm}}\\Rightarrow \\mathfrak{T}_\\star",
+          "\\{c_3, g_{\\mathrm{car}}\\} \\;\\Rightarrow\\; D_5 \\oplus A_3 \\xrightarrow{\\;\\mu_4\\;} E_8 \\;\\Rightarrow\\; (\\text{SM},\\ \\text{constants},\\ \\text{scale grammar})",
         ],
       },
       {
-        title: "The Three Decoders",
-        body: "The closed branch is read through three decoders that separate structure, counting, and bridge observables.",
+        title: "The master story is two engines",
+        body: "Read from the two axioms, the theory factorises into exactly two engines: a discrete closure (from g_car = 5) that builds E₈ and the SM packet, and a boundary dressing (from c₃) that produces the seed, α⁻¹ and the scale grammar. Gravity is not a third block — it is the geometry channel of Engine 2.",
         formulas: [
-          "Y \\text{ generates structure}",
-          "[u_\\Sigma]=1 \\text{ generates counting}",
-          "u := \\varphi_0 \\text{ generates bridge observables}",
+          "\\text{Engine 1: } g_{\\mathrm{car}}{=}5 \\to E_8 \\to (N_{\\mathrm{fam}}, \\Omega_{\\mathrm{adm}}, b_1, R)",
+          "\\text{Engine 2: } c_3{=}\\tfrac{1}{8\\pi} \\to (u{=}\\varphi_0, \\alpha^{-1}, \\xi, \\Lambda, H_0)",
+        ],
+      },
+      {
+        title: "The compact status formula",
+        body: "TFPT 5.0 closes the discrete compiler, the algebraic SM readout, the EM fixed point, the admissible gapped IR sector and the R + R² spectral-action shadow. It does not yet certify a strict physical TOE. The residual is one flavor wall-selection, one quantum-gravity measure, and a set of deliberately typed interfaces.",
+        formulas: [
+          "\\underbrace{\\text{compiler}}_{\\text{closed}}\\ \\Big|\\ \\underbrace{\\text{admissible IR physics}}_{\\text{conditional (RP, gap)}}\\ \\Big|\\ \\underbrace{\\text{strict physical TOE}}_{\\text{open}}",
+          "\\text{Rest} = (U_{\\mathrm{wall}}) \\oplus (G_{\\mathrm{metric}}) \\oplus (F_{\\mathrm{frontier}})",
+        ],
+      },
+      {
+        title: "The anchor: one number a = (1,1,2)",
+        body: "The two axioms are not even independent: they are the elementary symmetric polynomials of the single parabolic anchor a = (1,1,2), and its power sums generate the big Lie data directly. The inputs collapse to the anchor plus the lone continuous primitive π.",
+        formulas: [
+          "e_1(a)=4=|\\mu_4|,\\quad e_2(a)=5=g_{\\mathrm{car}},\\quad e_3(a)=2=|\\mathbb{Z}_2|",
+          "c_3 = \\frac{1}{2\\,e_1(a)\\,\\pi} = \\frac{1}{8\\pi}, \\qquad |R(E_8)| = p_1 p_2 p_3 = 240",
         ],
       },
     ],
     keyFormulas: [
       {
-        label: "Staged reconstruction",
+        label: "Compiler closure",
         latex:
-          "\\mathfrak{S}_{\\min}\\Rightarrow\\mathcal{B}_{\\min}\\Rightarrow\\mathfrak{T}_\\partial \\Rightarrow \\mathfrak{T}_\\star",
-        description: "The full burden-of-proof chain from minimal seed to closed branch.",
+          "\\{c_3, g_{\\mathrm{car}}\\} \\Rightarrow D_5 \\oplus A_3 + \\mu_4 \\Rightarrow E_8",
+        description: "Two axioms build the E₈ audit hull; the SM is read off by projection.",
+      },
+      {
+        label: "Bootstrap loop",
+        latex: "E_8\\text{ closure} \\Rightarrow g_{\\mathrm{car}}{=}5,\\ \\ 8 = \\operatorname{rank}E_8",
+        description: "Inputs and output are mutually locked — only π stays irreducible.",
+      },
+      {
+        label: "Reduction in one line",
+        latex: "247\\,\\text{pages} \\rightsquigarrow \\text{2 inputs} + \\text{1 machine}",
+        description: "The number of independent structural assumptions drops to two.",
       },
     ],
     highlights: [
       {
-        label: "Layers",
-        value: "7",
-        description: "Stratified derivation chain, from boundary primitive to cosmology",
+        label: "Axioms",
+        value: "2",
+        description: "c₃ = 1/(8π) and g_car = 5 — the rest is a consequence",
       },
       {
-        label: "Decoders",
-        value: "3",
-        description: "Y for structure, [u_Σ]=1 for counting, φ₀ for observables",
+        label: "Compiler",
+        value: "Z₃₀ = 2·3·5",
+        description: "Coxeter–cyclotomic generator behind every sector",
       },
       {
-        label: "Status discipline",
-        value: "4",
-        description: "Theorem core, bridge, conditional closure, downstream",
+        label: "Free primitive",
+        value: "π",
+        description: "The one genuinely irreducible continuous number",
+      },
+      {
+        label: "Documents",
+        value: "8",
+        description: "Introduction + 4 core docs + Appendix H + Origin Theory + contracts",
       },
     ],
   },
   {
     id: "01",
     number: 1,
-    slug: "boundary-kernel",
-    title: "Boundary Polarization and the Primitive Kernel",
-    subtitle: "The boundary primitive kernel of TFPT",
+    slug: "architecture-e8",
+    title: "Architecture and the E₈ Compiler",
+    subtitle: "The two axioms, the derivation map, and the D₅ × A₃ → E₈ construction",
     abstract:
-      "This paper isolates the primitive boundary kernel. Starting from the minimal operational seed and the one-sided boundary datum, it reconstructs the exact double, the deck involution, the Calderón polarization, the primitive admissibility complex, the primitive seam generator, the winding normalization, and the c₃ normalization. No Standard-Model, phenomenological, gravitational, cosmological, or E8 claim is made in this paper.",
+      "The architecture layer: how the two axioms c₃ = 1/(8π) and g_car = 5 build the Coxeter–cyclotomic compiler — the carrier C⁺ = D₅, the family geometry ℙ¹∖μ₄ = A₃, the μ₄ glue D₅ ⊕ A₃ + μ₄ ⇒ E₈, the electromagnetic fixed point α⁻¹ (with its ablation), and the whole number alphabet 16, 40, 41, 48, 240, 248 as carrier traces.",
     status: "core",
-    statusLabel: "Theorem-level core",
-    pdf: "/papers/01_boundary_kernel.pdf",
-    inputs: ["Only the orientation map of Paper 0, if read first."],
+    statusLabel: "Compiler core",
+    pdf: "/papers/tfpt_1_architecture_e8.pdf",
+    inputs: [
+      "P1: the boundary kernel c₃ = 1/(8π) (Gauss–Bonnet hardenable).",
+      "P2: the five-slot carrier g_car = 5 (3 colour + 2 weak); P2 algebra is Lean-formalised.",
+    ],
     contribution: [
-      "The primitive kernel 𝓣ᵏᵉʳ_∂ = (𝒜, ℋ, D, J, Γ, τ_dbl, ι_C, P_prim, [u_Σ], c₃) is reconstructed from the one-sided boundary datum rather than inserted later.",
+      "The glue theorem E₈ = (D₅ ⊕ A₃) + μ₄: common discriminant ℤ₄, glue index |μ₄| = 4, and q(D₅) + q(A₃) = 5/4 + 3/4 = 2 (the E₈ root norm).",
+      "240 = 16·5·3 and 248 = 240 + 8 derived as carrier traces; b₁ = 41/10 and the hypercharge polynomial from the 3+2 split.",
+      "The electromagnetic fixed point α⁻¹ = 137.0359992168… as the unique root of F_U(1)(α) = 0.",
     ],
     notClaimed: [
-      "No carrier 3+2 theorem.",
-      "No Standard-Model gauge group.",
-      "No α, no flavor, no gravity, no cosmology, no E8 grammar.",
+      "E₈ is the unimodular audit/compiler hull, not an unbroken physical gauge group; the SM is a readout after projection.",
+      "No dimensionful mass ladder, no full quantum-gravity measure, no cosmology fit.",
     ],
     falsification: [
-      "Fails if the one-sided datum does not determine the doubled datum, the Calderón polarization, the primitive Hodge selector, or the normalization of the primitive seam class.",
-      "Fails if minimality is read as a preference order over desired physics rather than as a presentation-invariant defect filtration on essentialized bordisms.",
+      "Fails if D₅ and A₃ do not share the ℤ₄ discriminant, if the glue norms do not sum to 2, or if F_U(1)(α) = 0 has no/second admissible root.",
     ],
     sections: [
       {
-        title: "One-Sided Boundary Datum",
-        body:
-          "The starting object is a one-sided boundary datum from which all primitive structure is reconstructed by canonical procedure, not by hand.",
+        title: "The Pascal compiler on five carrier slots",
+        body: "The even-Hamming code on five slots is the D₅ half-spinor: its dimension is the Pascal sum 1 + 5 + 10 = 16, which forces g_car = 5 uniquely. The E₈ root count is then a pure carrier trace.",
         formulas: [
-          "\\mathfrak{T}_\\partial = (\\mathcal{A}_+, \\mathcal{H}_+, D_+, J, \\Gamma, B_\\Sigma)",
+          "\\dim S^+ = 2^{g_{\\mathrm{car}}-1} = \\binom{g_{\\mathrm{car}}}{0}+\\binom{g_{\\mathrm{car}}}{1}+\\binom{g_{\\mathrm{car}}}{2} \\iff g_{\\mathrm{car}} = 5",
+          "|R(E_8)| = \\dim S^+(\\dim S^+ - 1) = 16 \\cdot 15 = 240",
         ],
       },
       {
-        title: "Exact Double and Deck Involution",
-        body:
-          "The exact double reconstructs the closed minimal datum carrying the Calderón polarization-induced involution. This section carries the analytic interface to Calderón projectors.",
+        title: "The μ₄ glue: how E₈ is really built",
+        body: "D₅ = so(10) (spinor 16) and A₃ = su(4) (the four-puncture family geometry ℙ¹∖μ₄) have the same discriminant group ℤ₄. Their discriminant-form norms are two TFPT constants that add to the E₈ root norm, so the glue closes as a lattice theorem — not a posited 248.",
         formulas: [
-          "\\mathfrak{T}_{\\min}^{\\mathrm{cl}} = (\\mathcal{A}, \\mathcal{H}, D, J, \\Gamma, \\tau_{\\mathrm{dbl}}, \\iota_C)",
+          "\\operatorname{disc}(D_5) = \\operatorname{disc}(A_3) = \\mathbb{Z}_4, \\qquad [E_8 : D_5 \\oplus A_3] = |\\mu_4| = 4",
+          "q(D_5) + q(A_3) = \\tfrac{5}{4} + \\tfrac{3}{4} = 2 = |\\text{$E_8$ root}|^2",
         ],
       },
       {
-        title: "Primitive Admissibility Complex",
-        body:
-          "The primitive selector is introduced before any color, determinant, family, or QFT sector. A later full selector can factor through P_prim.",
-        formulas: ["P_{\\mathrm{prim}} = \\Pi_{\\ker \\Delta_{\\mathrm{prim}}}"],
-      },
-      {
-        title: "Primitive Seam Generator",
-        body:
-          "The primitive seam generator records the two normalizations that survive at this level. The winding class is a primitive boundary output, not yet a family-counting input.",
-        formulas: ["[u_\\Sigma] = 1, \\qquad c_3 = \\frac{1}{8\\pi}"],
-      },
-      {
-        title: "Defect Filtration on Essentialized Bordisms",
-        body:
-          "Minimality is not a wishlist over preferred physics. It is a canonical defect filtration 𝔇(B^ess) on essentialized admissible bordisms, ordered lexicographically. Each later coordinate is only defined on the stratum where all earlier obstructions are minimal — it is an order of definitions, not an order of weights.",
+        title: "The Z₃₀ = 2·3·5 cyclotomic Coxeter compiler",
+        body: "The Coxeter number of E₈ is h = 30 = 2·3·5 — exactly the three discrete atoms (sheet ℤ₂, families ℤ₃, carrier g_car = 5). The rank is the count of live phases of the order-30 cycle.",
         formulas: [
-          "\\mathfrak{D}(B) = \\big(d_0(B),\\, d_1(B),\\, d_2(B),\\, d_3(B)\\big)",
-          "d_0 = |SF(U_\\Sigma)|, \\;\\; d_1 = \\operatorname{rank}_{\\mathrm{ess}}(H^{\\mathrm{fin}}_{\\mathrm{prim}}), \\;\\; d_2 = \\deg^+_{\\mathrm{det}}, \\;\\; d_3 = h^{\\mathrm{red}}_\\Sigma",
+          "h = |\\mathbb{Z}_2|\\cdot N_{\\mathrm{fam}}\\cdot g_{\\mathrm{car}} = 2\\cdot 3\\cdot 5 = 30",
+          "|R(E_8)| = r h = 240, \\qquad \\dim E_8 = r(h+1) = 8\\cdot 31 = 248, \\qquad r = \\varphi(30) = 8",
         ],
       },
       {
-        title: "Essentialization (Stability against Trivial Stabilization)",
-        body:
-          "For every admissible bordism B, define B^ess = B / B^triv where B^triv is the maximal direct summand on which all primitive load-bearing data vanish. The defect filtration is then read on the essentialized bordism. Adding an empty internal factor cannot change the lexicographic order — rank minimality is not vulnerable under trivial stabilization.",
+        title: "The electromagnetic fixed point",
+        body: "The fine-structure constant is the unique positive root of a parameter-free cubic built only from c₃, the abelian coefficient (Σ L + N_Φ = 41 = 10 b₁) and the exact seam generating function. Existence and uniqueness are proved; the value lands 1.9σ from CODATA-2022.",
         formulas: [
-          "B^{\\mathrm{ess}} := B / B^{\\mathrm{triv}}",
-          "B^{\\mathrm{triv}}: \\quad SF = 0,\\; \\iota_C \\text{ trivial},\\; \\deg_{\\mathrm{det}} = 0,\\; Y_{\\mathrm{prim}}^{\\mathrm{type}} = 0",
-          "\\mathfrak{D}(B) := \\mathfrak{D}(B^{\\mathrm{ess}})",
+          "F_{U(1)}(\\alpha) = \\alpha^3 - 2c_3^3\\,\\alpha^2 - \\tfrac{4}{5}c_3^6\\Big(\\textstyle\\sum_{f,j}L_{f,j} + N_\\Phi\\Big)\\log\\tfrac{1}{\\varphi_{\\mathrm{seam}}(\\alpha)} = 0",
+          "\\alpha^{-1} = 137.035\\,999\\,216\\,8\\ldots",
         ],
       },
       {
-        title: "Invariance Theorem for Equivalent Presentations",
-        body:
-          "The lexicographic minimizer is presentation-independent. If F is an equivalence of admissible presentations and ψ_i are strictly increasing per-coordinate maps, then B is a minimizer of 𝔇 if and only if F(B) is a minimizer of 𝔇'. Strictly increasing coordinate maps preserve and reflect the first coordinate at which two vectors differ.",
+        title: "The scale grammar: one exponential engine",
+        body: "The same α⁻¹ ≈ 137 generates the electroweak scale (divided by the carrier 5), the cosmological constant (times 2) and the Hubble scale (via the square root) — the action ladder 1 : 5 : 10 is the Pascal row of the carrier.",
         formulas: [
-          "F: \\mathcal{C} \\to \\mathcal{C}', \\quad d'_i(F(B)) = \\psi_i(d_i(B)), \\quad \\psi_i \\text{ strictly increasing}",
-          "\\mathfrak{D}(B) <_{\\mathrm{lex}} \\mathfrak{D}(C) \\iff \\mathfrak{D}'(F(B)) <_{\\mathrm{lex}} \\mathfrak{D}'(F(C))",
-        ],
-      },
-      {
-        title: "Minimal Values on the Canonical Branch",
-        body:
-          "After the repair the minimal chain reads: d_0 = 1 from the minimal nontrivial seam winding; d_1 = dim E_- + dim E_+ = 5 from compact Higgs and primitive Yukawa (downstream of Paper 2); d_2 = 1 from the minimal nonnegative determinant class; d_3 from reduced boundary nullity. The corner count and the 3+2 carrier ranks are not free minimization coordinates here — they are read off downstream.",
-        formulas: [
-          "(d_0, d_1, d_2) = (1, 5, 1)",
-          "|SF(U_\\Sigma)| = 1 \\Rightarrow N_{\\mathrm{corner}} = 4 \\;\\;\\text{(derived, not minimized)}",
+          "A_{\\mathrm{EW}} : A_H : A_\\Lambda = 1 : 5 : 10 = \\tbinom{5}{0} : \\tbinom{5}{1} : \\tbinom{5}{2}",
+          "v_{\\mathrm{EW}} \\sim e^{-\\alpha^{-1}/5}, \\qquad \\Lambda \\sim e^{-2\\alpha^{-1}}, \\qquad H_0 \\sim \\sqrt{\\Lambda}",
         ],
       },
     ],
     keyFormulas: [
       {
-        label: "Boundary primitive kernel",
-        latex:
-          "\\mathfrak{T}_\\partial^{\\mathrm{ker}} = (\\mathcal{A}, \\mathcal{H}, D, J, \\Gamma, \\tau_{\\mathrm{dbl}}, \\iota_C, P_{\\mathrm{prim}}, [u_\\Sigma], c_3)",
-        description: "The full primitive kernel reconstructed from the one-sided datum.",
+        label: "Glue theorem",
+        latex: "E_8 = (D_5 \\oplus A_3) + \\mu_4",
+        description: "disc = ℤ₄, glue index 4, q(D₅)+q(A₃) = 2. [L]",
       },
       {
-        label: "Winding normalization",
-        latex: "[u_\\Sigma] = 1",
-        description: "Primitive seam class, the source of family counting downstream.",
+        label: "Carrier traces",
+        latex: "240 = 16\\cdot 5\\cdot 3, \\qquad 248 = 240 + 8",
+        description: "E₈ numbers as traces over the 3+2 carrier, not inputs. [I]",
       },
       {
-        label: "Coupling normalization",
-        latex: "c_3 = \\dfrac{1}{8\\pi}",
-        description: "Derived without empirical input, fixed before any phenomenology.",
+        label: "EM fixed point",
+        latex: "F_{U(1)}(\\alpha_\\star) = 0 \\Rightarrow \\alpha^{-1} = 137.0359992168\\ldots",
+        description: "Unique root; CODATA-2022 137.035999177(21), dev 2.9×10⁻¹⁰ (1.9σ). [I/N]",
+      },
+      {
+        label: "Abelian coefficient",
+        latex: "10\\,b_1 = 41 = \\textstyle\\sum_{f,j} L_{f,j} + N_\\Phi",
+        description: "b₁ = 41/10 as a carrier trace.",
       },
     ],
     highlights: [
       {
-        label: "Datum",
-        value: "1-sided",
-        description: "Single boundary datum reconstructs all primitive structure",
+        label: "E₈ glue",
+        value: "D₅ ⊕ A₃ + μ₄",
+        description: "Closed lattice construction, not a posited 248",
       },
       {
-        label: "c₃",
-        value: "1/8π",
-        description: "Primitive coupling normalization, no empirical tuning",
+        label: "α⁻¹",
+        value: "137.0359992",
+        description: "Unique root of F_U(1)(α) = 0; 1.9σ from CODATA-2022",
       },
       {
-        label: "[u_Σ]",
-        value: "1",
-        description: "Winding class normalization, fixed at the primitive level",
+        label: "q(D₅)+q(A₃)",
+        value: "5/4 + 3/4 = 2",
+        description: "The even glue condition — the E₈ root norm",
+      },
+      {
+        label: "rank E₈",
+        value: "8 = φ(30)",
+        description: "Live phases of the order-30 Coxeter cycle",
       },
     ],
   },
   {
     id: "02",
     number: 2,
-    slug: "carrier-rigidity",
-    title: "Carrier Rigidity and the Standard-Model Packet",
-    subtitle: "Hypercharge, Spinor Packet, and the SM gauge quotient from boundary polarization",
+    slug: "standard-model",
+    title: "The Standard Model from the Compiler",
+    subtitle: "The φ₀-ladder, flavor from parabolic transport, and the worked closures",
     abstract:
-      "The carrier polynomial is no longer taken as an entry assumption. Boundary polarization first gives a finite essential two-point carrier E = E_- ⊕ E_+. The compact determinant / Higgs index fixes dim E_+ = 2, while primitive indecomposable Yukawa type fixes the complementary essential rank dim E_- = 3. The determinant-normalized generator is then forced to be Y = −1/3 P_- + 1/2 P_+, and the former carrier equation 6Y² − Y − 1 = 0 with tr_E Y = 0 appears only as its algebraic shadow. From this derived carrier follow the hypercharge vector, the even exterior packet S⁺ = Λ^even E, one chiral Standard-Model family including ν^c, the physical gauge quotient, family counting, admissible occupancy, and the abelian index coefficient.",
+      "The fermion spectrum — masses, Yukawa structure, CKM, the PMNS skeleton and neutrinos — follows from one master formula with one seed φ₀, the carrier base λ_Y = √(φ₀(1−φ₀)), and the residue matrix of the compiler. Plus the flavor block from parabolic transport on ℙ¹∖μ₄, the five worked closures (θ₁₂, quark c, the explicit mass gap, Starobinsky M, the H2 splitting), and gravity/QG as the seam response.",
     status: "core",
-    statusLabel: "Theorem-level core",
-    pdf: "/papers/02_carrier_rigidity.pdf",
+    statusLabel: "Compiler core",
+    pdf: "/papers/tfpt_2_standard_model.pdf",
     inputs: [
-      "The primitive boundary kernel (τ_dbl, ι_C, P_prim, [u_Σ], c₃) from Paper 1.",
-      "Essential carrier block — no contractible spectator summand.",
-      "Compact determinant / Higgs index on the positive polarization block.",
-      "Primitive indecomposable Yukawa type — local trilinear with two fermionic legs and one seam-even bosonic leg.",
+      "The two axioms and the E₈ compiler of Document 1.",
+      "The seed φ₀ = 1/(6π) + 3/(256π⁴) and the carrier base λ_Y = √(φ₀(1−φ₀)).",
     ],
     contribution: [
-      "Boundary polarization → finite carrier involution ε_car = ι_C|_E with E = E_- ⊕ E_+ (no rank yet).",
-      "Compact Higgs index on S² with L_+ ≃ 𝒪(1) → dim E_+ = 2.",
-      "Primitive Yukawa type forces Λ³E_- = det E_- → dim E_- = 3.",
-      "Determinant-normalized generator Y = −1/3 P_- + 1/2 P_+ as a corollary, with 6Y² − Y − 1 = 0 as its minimal polynomial.",
-      "Even exterior packet S⁺ = Λ^even E, gauge quotient G_phys = (SU(3) × SU(2) × U(1)_Y)/ℤ₆, and discrete counting outputs N_fam = 3, Ω_adm = 48, N_Φ = 1, b₁ = 41/10.",
+      "One master mass formula for all nine masses, Yukawa, CKM, PMNS and neutrinos, with the word-lengths read off the compiler residue matrix.",
+      "The residue matrix R with det R = 8 = h(D₅), principal 2-minors (2,3,5), and χ_R = t³ − 9t² + 10t − 8.",
+      "The solar angle sin²θ₁₂ = 1/3 − φ₀/2 = 0.3067 from the seam misalignment ε = q(A₃)φ₀.",
     ],
     notClaimed: [
-      "The carrier polynomial is not assumed — only used as the algebraic shadow of the derived eigenvalues.",
-      "No exact α value, no CKM / PMNS closure, no value-level transport Yukawa matrices.",
-      "No pole-mass ledger, no OS reconstruction, no cosmology, no E8 grammar.",
+      "Charged-lepton masses and quark mass ratios are closed; the absolute quark amplitude scale reduces to the (U_wall) anchor.",
+      "Dimensionful m_W, m_Z, m_H, sin²θ_W, α_s are RG scheme-layer projections, not compiler outputs.",
     ],
     falsification: [
-      "Fails if the carrier polynomial 6Y² − Y − 1 = 0 is invoked before the rank discharge (compact Higgs and primitive Yukawa) is complete.",
-      "Fails if the determinant-normalized two-point generator is not forced before any phenomenological matching.",
-      "Fails if Standard-Model representation data is imported by hand at any earlier step.",
+      "Fails if the residue invariants (det 8, minors 2,3,5, χ_R) are not respected by a future global CKM/PMNS fit, or if the lepton φ₀-ladder mismatches the observed hierarchy.",
     ],
     sections: [
       {
-        title: "1. Boundary Carrier Involution",
-        body:
-          "The paper does not begin with the carrier polynomial. It begins with the involution induced by the Calderón polarization. At this stage there is only a two-point algebra ℂ[ε_car] = {a·1 + b·ε_car} — no 3+2 split, no hypercharge vector, no Standard-Model packet has been used.",
+        title: "One master formula instead of many Yukawas",
+        body: "Every fermion mass is the same ladder: the geometric VEV times the carrier base raised to a compiler word-length, times an O(1) residue. The word-lengths are the fixed residue matrix of the compiler — not free parameters.",
         formulas: [
-          "\\varepsilon_{\\mathrm{car}} := \\iota_C\\big|_E, \\qquad \\varepsilon_{\\mathrm{car}}^2 = \\mathbf{1}",
-          "E = E_- \\oplus E_+, \\qquad P_\\pm = \\tfrac{\\mathbf{1} \\pm \\varepsilon_{\\mathrm{car}}}{2}",
+          "\\hat m_{f,j} = \\frac{v_{\\mathrm{geo}}}{\\sqrt2}\\,\\lambda_Y^{\\,L_{f,j}}\\,\\Lambda_{f,j}, \\qquad \\lambda_Y = \\sqrt{\\varphi_0(1-\\varphi_0)}",
+          "\\varphi_0 = \\frac{1}{6\\pi} + \\frac{3}{256\\pi^4} = 0.05317\\ldots",
         ],
       },
       {
-        title: "2. Essential Carrier Block",
-        body:
-          "All contractible spectator summands on which seam winding, determinant clutching, and the primitive local interaction type vanish are quotiented out. The defect filtration is read on the essentialized bordism B^ess. This prevents any artificial reduction by a trivial direct factor.",
+        title: "The flavor residue matrix is the compiler signature",
+        body: "The word-length matrix L = R + 6·(winding) carries only compiler numbers: its trace is N_fam², its determinant is h(D₅) = 8, its principal 2-minors are (2,3,5) with product 30 = h(E₈), and its Frobenius norm is dim E₆ = 78.",
         formulas: [
-          "B^{\\mathrm{ess}} = B / B^{\\mathrm{triv}}",
-          "B^{\\mathrm{triv}}: \\quad SF=0,\\; \\iota_C \\text{ trivial},\\; \\deg_{\\mathrm{det}} = 0,\\; Y_{\\mathrm{prim}}^{\\mathrm{type}} = 0",
+          "R = \\begin{pmatrix} 1 & 3 & 0 \\\\ 1 & 5 & 2 \\\\ 2 & 5 & 3 \\end{pmatrix}, \\qquad \\det R = 8, \\quad \\|R\\|_F^2 = 78",
+          "\\chi_R(t) = t^3 - \\underbrace{9}_{N_{\\mathrm{fam}}^2}t^2 + \\underbrace{10}_{\\binom{5}{2}}t - \\underbrace{8}_{h(D_5)}",
         ],
       },
       {
-        title: "3. Compact Higgs Index → dim E_+ = 2",
-        body:
-          "The unit seam winding selects the minimal nonnegative determinant class on the compactified normal sphere. The seam-even positive polarization block carries c₁(L_+) = 1, the determinant-neutral negative block c₁(L_-) = 0. Riemann–Roch on 𝒪(1) over S² gives a 2-dimensional space of holomorphic sections — this fixes the positive rank, with no Standard-Model name yet attached.",
+        title: "Charged leptons: completely closed in φ₀",
+        body: "The lepton amplitudes are the rationals (16/7, 4/3, 7/6) with product 2⁵/N_fam² = 32/9, and the masses are exact φ₀-powers. Applied to the down sector the lepton law provably fails — the quark c's live on the parabolic wall.",
         formulas: [
-          "L_+ \\simeq \\mathcal{O}(1), \\quad L_- \\simeq \\mathcal{O} \\;\\;\\text{on}\\;\\; S^2",
-          "H^0(S^2,\\mathcal{O}(1)) \\simeq \\mathbb{C}^2, \\qquad H^1(S^2,\\mathcal{O}(1)) = 0",
-          "\\Rightarrow \\;\\; \\dim E_+ = 2",
+          "(\\hat m_e, \\hat m_\\mu, \\hat m_\\tau) = \\frac{v_{\\mathrm{geo}}\\pi}{\\sqrt2}\\Big(\\tfrac{16}{7}(\\varphi_0)^5,\\ \\tfrac{4}{3}(\\varphi_0)^3,\\ \\tfrac{7}{6}(\\varphi_0)^2\\Big)",
+          "c_e\\,c_\\mu\\,c_\\tau = \\frac{2^{g_{\\mathrm{car}}}}{N_{\\mathrm{fam}}^2} = \\frac{32}{9}",
         ],
       },
       {
-        title: "4. Primitive Yukawa Type → dim E_- = 3",
-        body:
-          "The retained branch contains a nonzero primitive indecomposable local trilinear with two fermionic legs and one seam-even bosonic leg. With dim E_+ = 2, the seam-even bosonic leg contributes the line Λ²E_+. Closure of the negative factor without a spectator forces Λ³E_- = det E_-, hence dim E_- = 3. This is a local type statement, not the value-level transport Yukawa matrices, which belong downstream to Paper 3.",
+        title: "Quark ratios from the same word-lengths",
+        body: "The quark mass ratios are pure integer Plücker readouts on the derived selector stratum — no transcendental solve. Only the absolute amplitude scale reduces to the (U_wall) anchor.",
         formulas: [
-          "Y_{\\mathrm{prim}}^{\\mathrm{type}}:\\;\\; (E_- \\otimes E_+) \\otimes \\Lambda^2 E_- \\otimes E_+ \\longrightarrow \\Lambda^3 E_- \\otimes \\Lambda^2 E_+ \\simeq \\mathbb{C}",
-          "\\Rightarrow \\;\\; \\Lambda^3 E_- = \\det E_- \\;\\Rightarrow\\; \\dim E_- = 3",
+          "\\frac{c_u}{c_d} = \\frac{g_{\\mathrm{car}}\\cdot 11}{N_{\\mathrm{fam}}^2\\,\\Delta_Q} = \\frac{55}{117}, \\quad \\frac{c_c}{c_s} = \\frac{34}{47}, \\quad \\frac{c_t}{c_b} = \\frac{3}{26}",
+          "\\hat m_t/\\hat m_b = \\tfrac{3}{26}(\\varphi_0)^{-2} = 40.81",
         ],
       },
       {
-        title: "5. Determinant-Normalized Generator Y",
-        body:
-          "Once (dim E_-, dim E_+) = (3, 2) is fixed by the boundary and index arguments, the primitive integer determinant-preserving generator has a unique solution. One unit of determinant winding per block normalizes the eigenvalues to −1/3 and 1/2.",
+        title: "The solar angle θ₁₂ from the seam",
+        body: "Tri-bimaximal gives 1/3; the charged-lepton 1–2 misalignment is the seam ε = q(A₃)φ₀ = (3/4)φ₀, and TBM geometry gives the only previously open SM angle as a conditional derivation — 0.1% from NuFIT 6.0.",
         formulas: [
-          "X = q_- P_- + q_+ P_+, \\quad 3 q_- + 2 q_+ = 0, \\quad q_- < 0 < q_+, \\quad \\gcd(|q_-|, q_+) = 1",
-          "\\Rightarrow \\;\\; (q_-, q_+) = (-2, 3) \\;\\Rightarrow\\; X = -2 P_- + 3 P_+",
-          "Y = X / 6 = -\\tfrac{1}{3} P_- + \\tfrac{1}{2} P_+",
-        ],
-      },
-      {
-        title: "6. Carrier Polynomial as Corollary",
-        body:
-          "Now the former carrier equation appears only as the minimal polynomial of the two derived roots. The trace vanishes automatically because 3·(−1/3) + 2·(1/2) = 0. The coefficient 6 = 3·2 is not guessed — it is the determinant-periodized block normalization of the rigid 3+2 carrier.",
-        formulas: [
-          "\\left(Y + \\tfrac{1}{3}\\right)\\left(Y - \\tfrac{1}{2}\\right) = 0 \\;\\;\\Longleftrightarrow\\;\\; 6 Y^2 - Y - \\mathbf{1} = 0",
-          "\\operatorname{tr}_E Y = 3 \\cdot \\left(-\\tfrac{1}{3}\\right) + 2 \\cdot \\left(\\tfrac{1}{2}\\right) = 0",
-          "\\text{General split: } b s\\, Y^2 + (s - b) Y - \\mathbf{1} = 0, \\;\\; (b, s) = (3, 2)",
-        ],
-      },
-      {
-        title: "7. Hypercharge, Exterior Packet & Stabilizer",
-        body:
-          "Renaming E_3 := E_- and E_2 := E_+ recovers the diagonal hypercharge vector. The even exterior packet S⁺ = Λ^even E has dimension 16 and carries one chiral Standard-Model family including the right-handed neutrino. The internal stabilizer of the carrier datum yields the physical gauge quotient — read as a stabilizer theorem, not as a reconstruction of a known gauge group.",
-        formulas: [
-          "Y = \\operatorname{diag}\\!\\left(-\\tfrac{1}{3},-\\tfrac{1}{3},-\\tfrac{1}{3},\\tfrac{1}{2},\\tfrac{1}{2}\\right)",
-          "S^+ = \\Lambda^{\\mathrm{even}} E, \\qquad \\dim S^+ = 16",
-          "G_{\\mathrm{phys}} = \\frac{SU(3) \\times SU(2) \\times U(1)_Y}{\\mathbb{Z}_6}",
-        ],
-      },
-      {
-        title: "8. Counting Outputs",
-        body:
-          "Family count, admissible occupancy, the compact bosonic index, and the abelian index coefficient follow as structural consequences of the carrier, winding, occupancy, and Higgs-index closure — not as precision-observable readouts.",
-        formulas: [
-          "N_{\\mathrm{fam}} = 3, \\qquad \\Omega_{\\mathrm{adm}} = 48, \\qquad N_\\Phi = 1, \\qquad b_1 = \\tfrac{41}{10}",
+          "\\varepsilon = q(A_3)\\,\\varphi_0 = \\tfrac{3}{4}\\varphi_0, \\qquad q(A_3) = \\frac{N_{\\mathrm{fam}}}{|\\mu_4|}",
+          "\\sin^2\\theta_{12} = \\tfrac{1}{3} - \\tfrac{2}{3}\\varepsilon = \\tfrac{1}{3} - \\tfrac{\\varphi_0}{2} = 0.3067",
         ],
       },
     ],
     keyFormulas: [
       {
-        label: "Boundary involution (start)",
-        latex:
-          "\\varepsilon_{\\mathrm{car}} = \\iota_C|_E,\\;\\; E = E_- \\oplus E_+",
-        description: "From Calderón polarization — no rank yet.",
+        label: "Master mass formula",
+        latex: "\\hat m_{f,j} = \\frac{v_{\\mathrm{geo}}}{\\sqrt2}\\,\\lambda_Y^{\\,L_{f,j}}\\,\\Lambda_{f,j}",
+        description: "One seed φ₀, one carrier base, the compiler residue matrix.",
       },
       {
-        label: "Compact Higgs index → dim E_+",
-        latex: "H^0(S^2, \\mathcal{O}(1)) \\simeq \\mathbb{C}^2",
-        description: "Riemann–Roch on the seam-even line bundle gives dim E_+ = 2.",
+        label: "Flavor invariants",
+        latex: "\\det R = 8,\\quad \\mathrm{minors}=(2,3,5),\\quad \\chi_R = t^3 - 9t^2 + 10t - 8",
+        description: "Exact compiler signature any future fit must satisfy. [I]",
       },
       {
-        label: "Primitive Yukawa → dim E_-",
-        latex: "\\Lambda^3 E_- = \\det E_- \\Rightarrow \\dim E_- = 3",
-        description: "Type-level statement — not value-level transport matrix.",
+        label: "Solar angle",
+        latex: "\\sin^2\\theta_{12} = \\tfrac{1}{3} - \\tfrac{\\varphi_0}{2} = 0.3067",
+        description: "Previously open; now conditionally derived (seam ε = (3/4)φ₀). [N/P]",
       },
       {
-        label: "Determinant-normalized Y",
-        latex: "Y = -\\tfrac{1}{3} P_- + \\tfrac{1}{2} P_+",
-        description: "Forced — not chosen — by the discharged ranks (3, 2).",
-      },
-      {
-        label: "Carrier polynomial (corollary)",
-        latex: "6 Y^2 - Y - \\mathbf{1} = 0",
-        description:
-          "Minimal polynomial of the derived roots, not an entry assumption.",
+        label: "Lepton product",
+        latex: "c_e c_\\mu c_\\tau = \\frac{2^{g_{\\mathrm{car}}}}{N_{\\mathrm{fam}}^2} = \\frac{32}{9}",
+        description: "Charged-lepton amplitudes closed in φ₀.",
       },
     ],
     highlights: [
       {
-        label: "Carrier polynomial",
-        value: "Corollary",
-        description: "Derived from boundary + compact Higgs + primitive Yukawa",
+        label: "Masses",
+        value: "1 formula",
+        description: "All nine masses + mixings from one φ₀-ladder",
       },
       {
-        label: "dim E_+",
-        value: "2",
-        description: "Riemann–Roch on the compact Higgs index",
+        label: "det R",
+        value: "8 = h(D₅)",
+        description: "Flavor matrix determinant is a compiler number",
       },
       {
-        label: "dim E_-",
-        value: "3",
-        description: "Primitive Yukawa type forces Λ³E_- = det E_-",
+        label: "sin²θ₁₂",
+        value: "0.3067",
+        description: "1/3 − φ₀/2; 0.1% from NuFIT 6.0",
       },
       {
-        label: "Coefficient 6",
-        value: "= 3·2",
-        description: "Determinant-periodized block normalization",
+        label: "Quark ratios",
+        value: "55/117, 34/47, 3/26",
+        description: "Integer Plücker readouts on the selector stratum",
       },
     ],
   },
   {
     id: "03",
     number: 3,
-    slug: "em-flavor-transport",
-    title: "Electromagnetic Closure and Flavor Transport",
-    subtitle: "α, the cusp cubic, and the rigid flavor branch",
+    slug: "e8-audit-bootstrap",
+    title: "E₈ Audit, Cascade Bridge and Bootstrap",
+    subtitle: "The seven E₈ slices as an audit raster, the cascade spine, and the Möbius loop",
     abstract:
-      "After the primitive kernel and carrier packet are fixed, the precision-readout layer of TFPT addresses the electromagnetic fixed point, the transport pole of the cusp cubic, the retained seed decoder, and the flavor transport grammar yielding α, δ_ph, λ_C, β_rad, Ω_b, θ₁₃, CKM, and PMNS readouts.",
-    status: "bridge",
-    statusLabel: "Bridge / precision readout",
-    pdf: "/papers/03_em_closure.pdf",
+      "E₈ as an audit container, not a mystery: the seven maximal slices of 248 as a falsification raster (every load-bearing number must appear in at least one projection), the bridge showing the old E₈ orbit cascade D = 60 − 2n is the same even-integer spine as the compiler, and the Möbius bootstrap in which g_car = 5 and the '8' in c₃ are overdetermined E₈-closure fixed points — only π irreducible.",
+    status: "audit",
+    statusLabel: "E8 audit & bootstrap",
+    pdf: "/papers/tfpt_3_e8_audit_bootstrap.pdf",
     inputs: [
-      "Paper 1 supplies the primitive kernel and [u_Σ] = 1.",
-      "Paper 2 supplies the rigid carrier, family count, admissible occupancy, compact Higgs index, and abelian index coefficient.",
+      "The compiler core {c₃, g_car} ⇒ E₈ and the residue matrix R from Documents 1–2.",
     ],
     contribution: [
-      "Electromagnetic fixed point α⁻¹(0) = 137.035 999 216 8…",
-      "Transport pole of the cusp cubic determines δ_ph.",
-      "Retained seed decoder λ_C = √(φ₀(1 − φ₀)) and downstream flavor readouts.",
-      "Compact UFE bridge: g_aγγ = −4c₃ and Δa = φ₀ recover β_rad = φ₀/(4π) ≈ 0.2424°.",
-      "Structured local dyonic intercept β_BH(r) ∼ Q_e^eff Q_m^eff /(256π⁴ r²) — same topological coefficient δ_top = 48 c₃⁴ that fixes the α-kernel correction.",
+      "The discipline rule: every load-bearing TFPT number must appear in at least one E₈ branching projection — turning the number stock into a falsifiable raster, not numerology.",
+      "E₆ × A₂ reads the flavor matrix: 248 = 78 + 8 + 2·27·3 with ‖R‖_F² = 78 = dim E₆ and det R = 8 = dim A₂.",
+      "The Möbius bootstrap: g_car = 5 forced three ways and the '8' in c₃ = rank E₈ = h(D₅) = φ(30) = det R.",
     ],
     notClaimed: [
-      "No full QFT closure.",
-      "No gravity / metrology proof, no CMB.",
-      "No E8 grammar, no large pole-mass tables.",
+      "The atlas slice readings are audit-level [A] — a program, not a proof of new physics.",
+      "The bootstrap is not creation from nothing: two inputs remain, and π is not produced by the loop.",
     ],
     falsification: [
-      "Fails if any numerical constant enters after the fact, if α is used to tune later readouts, or if alternative discrete worlds are not visibly ruled out by the same branch constraints.",
+      "Fails if a load-bearing number cannot be placed in any E₈ projection, or if the reverse glue μ² − 5μ + 4 = 0 does not single out the (D₅, A₃) branch.",
     ],
     sections: [
       {
-        title: "Electromagnetic Closure",
-        body: "The fine-structure constant emerges as the unique positive root of a self-consistent closure equation built only from primitive normalizations and the carrier packet.",
+        title: "The seven E₈ slices as an audit raster",
+        body: "Each maximal subalgebra of E₈ projects a TFPT module. The strongest new hit: E₆ × A₂ reads the flavor residue matrix, with E₆ reading its Frobenius norm and A₂ the three-family symmetry.",
         formulas: [
-          "\\alpha^{-1}(0) = 137.035\\,999\\,216\\,8\\ldots",
-          "\\begin{aligned} F_{U(1)}(\\alpha) \\;&=\\; \\alpha^3 \\;-\\; 2c_3^3\\,\\alpha^2 \\\\ &\\quad -\\; \\frac{4}{5}c_3^6\\!\\left(\\sum_{f,j} L_{f,j}^{\\mathrm{diag}} + N_\\Phi\\right)\\log(\\varphi_{\\mathrm{seam}}(\\alpha)^{-1}) \\end{aligned}",
+          "248 = \\|R\\|_F^2 + \\det R + 2(\\mathbf{1}^\\top R\\,a)\\,N_{\\mathrm{fam}} = 78 + 8 + 2\\cdot 27\\cdot 3",
+          "\\|R\\|_F^2 = 78 = \\dim E_6, \\qquad \\det R = 8 = \\dim A_2 = h(D_5)",
         ],
       },
       {
-        title: "Transport Pole — the Cusp Cubic",
-        body: "The transport phase is governed by a cubic with three explicit roots. The lower critical point determines δ_ph on the retained branch.",
+        title: "The cascade bridge: D = 60 − 2n",
+        body: "The old E₈ orbit cascade is the same even-integer spine: it starts at 60 = 2·3·10, ends at 8 = h(D₅) (the flavor selector), passes the Coxeter rung 30 = h(E₈), and the product of endpoints recovers the root count.",
         formulas: [
-          "P(z) = (z-1)\\!\\left(z-\\tfrac{64}{729}\\right)\\!\\left(z-\\tfrac{1}{729}\\right)",
-          "P'(z) = 0",
+          "D_n = 60 - 2n, \\qquad \\frac{D_{\\mathrm{start}}\\,D_{\\mathrm{end}}}{2} = \\frac{60\\cdot 8}{2} = 240 = |R(E_8)|",
+          "240 + D_{\\mathrm{end}} = 248 = \\dim E_8",
         ],
       },
       {
-        title: "Retained Seed Decoder",
-        body: "The retained seed projects to bridge observables.",
+        title: "g_car = 5 forced three ways",
+        body: "The carrier rank is an overdetermined E₈-closure fixed point: rank-fill (g + 3 = 8), Coxeter-match (h(D_g) = 2g − 2 = 8), and the integer-glue/norm closure whose reverse-glue quadratic has nontrivial root μ = 4.",
         formulas: [
-          "u := \\varphi_0",
-          "\\lambda_C = \\sqrt{\\varphi_0(1-\\varphi_0)}",
-          "\\beta_{\\mathrm{rad}} = \\frac{\\varphi_0}{4\\pi}",
-          "\\sin^2\\theta_{13} = \\varphi_0 e^{-\\gamma}",
+          "g_{\\mathrm{car}} + 3 = 8, \\qquad h(D_{g}) = 2g - 2 = 8 \\Rightarrow g_{\\mathrm{car}} = 5",
+          "q(D_g) + q(A_{\\mu-1}) = 2 \\;\\Longrightarrow\\; \\mu^2 - 5\\mu + 4 = 0",
         ],
       },
       {
-        title: "UFE Bridge for the Birefringence Seed",
-        body: "A short reader-bridge: from the dimensionless axion–photon anomaly coefficient g_aγγ = −4c₃ and the admissible-branch increment Δa = φ₀, the modified Maxwell sector gives β = 2c₃Δa, recovering the seed identity β_rad = φ₀/(4π) ≈ 0.2424° before the determinant-line response is invoked in full.",
+        title: "The '8' in c₃ and the irreducible π",
+        body: "The seam denominator is fixed five concordant ways. The two axioms collapse to one continuous primitive (π, from Möbius/Gauss–Bonnet) plus one discrete fixed point (the E₈ closure).",
         formulas: [
-          "g_{a\\gamma\\gamma} = -4 c_3 = -\\frac{1}{2\\pi}",
-          "\\beta = 2 c_3 \\Delta a, \\quad \\Delta a = \\varphi_0",
-          "\\beta_{\\mathrm{rad}} = \\frac{\\varphi_0}{4\\pi} \\Rightarrow \\beta \\approx 0.2424^\\circ",
+          "8 = 2|\\mu_4| = \\operatorname{rank}E_8 = h(D_5) = \\varphi(30) = \\det R",
+          "\\{c_3, g_{\\mathrm{car}}\\} \\longrightarrow \\underbrace{\\pi}_{\\text{continuous}} + \\underbrace{E_8\\text{ closure}}_{\\text{discrete}}",
         ],
-      },
-      {
-        title: "Achromatic Dyonic Intercept around Compact Objects",
-        body: "The same admissibility data emits a structured local astrophysical β amplitude in the magnetised inflow region of a compact object. The TFPT coupling 1/(256π⁴) = 16c₃⁴ is fixed; the geometric weights Q_e^eff, Q_m^eff and the emission radius are model-dependent. The corresponding observation channel is the achromatic residual intercept χ₀^res = χ₀^obs − χ₀^GRMHD of the linear-polarization angle, with three independent nulls (frequency, 1/r² profile, E·B sign flip).",
-        formulas: [
-          "\\beta_{\\mathrm{BH}}(r) \\sim \\frac{Q_e^{\\mathrm{eff}}\\,Q_m^{\\mathrm{eff}}}{256\\pi^4\\,r^2} = 16 c_3^4 \\frac{Q_e^{\\mathrm{eff}}\\,Q_m^{\\mathrm{eff}}}{r^2}",
-          "\\chi(x,\\lambda^2) = \\chi_0(x) + \\mathrm{RM}(x)\\,\\lambda^2 + \\epsilon",
-          "\\chi_0^{\\mathrm{res}}(x) = \\chi_0^{\\mathrm{obs}}(x) - \\chi_0^{\\mathrm{GRMHD}}(x)",
-        ],
-      },
-      {
-        title: "Flavor Transport — CKM and PMNS",
-        body: "CKM and PMNS closure follow from holonomy transport on the rigid branch, including hard readouts such as |V_ub| = |V_us|³/3.",
-        formulas: ["|V_{ub}| = \\frac{|V_{us}|^3}{3}"],
       },
     ],
     keyFormulas: [
       {
-        label: "α inverse",
-        latex: "\\alpha^{-1}(0) = 137.035\\,999\\,216\\,8\\ldots",
-        description: "Closed-branch root, no fit parameters.",
+        label: "E₆ × A₂ flavor read",
+        latex: "248 = 78 + 8 + 2\\cdot 27\\cdot 3",
+        description: "‖R‖_F² = 78 = dim E₆, det R = 8 = dim A₂. Audit-level [A].",
       },
       {
-        label: "Cabibbo seed",
-        latex: "\\lambda_C = \\sqrt{\\varphi_0 (1-\\varphi_0)}",
-        description: "From φ₀ = 1/(6π) + 3/(256π⁴).",
+        label: "Cascade endpoints",
+        latex: "\\tfrac{1}{2}D_{\\mathrm{start}}D_{\\mathrm{end}} = \\tfrac{60\\cdot 8}{2} = 240",
+        description: "The old cascade is the same even-integer spine. [I]",
       },
       {
-        label: "Cusp cubic",
-        latex:
-          "P(z) = (z-1)(z-\\tfrac{64}{729})(z-\\tfrac{1}{729})",
-        description: "Transport phase polynomial, source of δ_ph.",
+        label: "Reverse glue",
+        latex: "\\mu^2 - 5\\mu + 4 = 0",
+        description: "Singles out μ = 4 (A₃), g_car = 5. [L]",
       },
       {
-        label: "Local dyonic β intercept",
-        latex:
-          "\\beta_{\\mathrm{BH}}(r) = 16 c_3^4 \\dfrac{Q_e^{\\mathrm{eff}} Q_m^{\\mathrm{eff}}}{r^2}",
-        description:
-          "Same topological coefficient δ_top = 48c₃⁴ as the α-kernel correction.",
+        label: "Five readings of 8",
+        latex: "8 = \\operatorname{rank}E_8 = h(D_5) = \\varphi(30) = \\det R = 2|\\mu_4|",
+        description: "The c₃ denominator is overdetermined.",
       },
     ],
     highlights: [
       {
-        label: "α⁻¹(0)",
-        value: "137.0360",
-        description: "Closed-branch root; CODATA 2022 recommended 137.035 999 177(21)",
+        label: "Audit rule",
+        value: "7 slices",
+        description: "Every load-bearing number lives in an E₈ projection",
       },
       {
-        label: "λ_C",
-        value: "0.22438",
-        description: "Cabibbo angle from retained seed",
+        label: "Flavor read",
+        value: "E₆ × A₂",
+        description: "‖R‖² = 78 = dim E₆, det R = 8 = dim A₂",
       },
       {
-        label: "sin²θ₁₃",
-        value: "0.02311",
-        description: "Reactor angle from neutrino closure",
+        label: "g_car = 5",
+        value: "forced 3×",
+        description: "Rank-fill, Coxeter-match, integer-glue",
       },
       {
-        label: "β / β_BH",
-        value: "0.2424°",
-        description: "Cosmic + structured local dyonic intercept",
+        label: "Irreducible",
+        value: "π only",
+        description: "Bootstrap leaves no free discrete number",
       },
     ],
   },
   {
     id: "04",
     number: 4,
-    slug: "admissibility-qft",
-    title: "Admissibility, Strong CP, and Nonperturbative QFT Closure",
-    subtitle: "Selector vs. dynamics on the TFPT branch",
+    slug: "frontier",
+    title: "Frontier Items",
+    subtitle: "η_B, m_p/m_e, Koide, dark matter and quantum gravity — honest status",
     abstract:
-      "The analytic closure layer of TFPT. The selector P_adm is treated as a physical admissible-sector construction, while the dynamics is carried by Z_rel, admissible Schwinger distributions, Osterwalder–Schrader reconstruction, the local Minkowski net, stable massive scattering, and the exact admissible RG flow.",
-    status: "conditional",
-    statusLabel: "Conditional closure",
-    pdf: "/papers/04_admissibility_qft.pdf",
+      "The honest frontier: which physics has a genuine TFPT handle and which does not. For each of η_B, m_p/m_e, the Koide relation, dark matter and full quantum gravity, this note states the genuine structural handle, the precision it currently lands at, and — crucially — what is not a clean compiler power and is deliberately not forced onto the ladder. This document is the status authority for the frontier items.",
+    status: "frontier",
+    statusLabel: "Honest frontier",
+    pdf: "/papers/tfpt_4_frontier.pdf",
     inputs: [
-      "Paper 1 supplies P_prim.",
-      "Paper 2 supplies the carrier and discrete determinant data.",
-      "Paper 3 is not logically required except for cross-references.",
+      "The closed branch of Documents 1–3 (compiler, SM packet, scale grammar).",
     ],
     contribution: [
-      "Conditional nonperturbative closure: P_adm = P_prim · P_sing · P_Θ, with θ_eff = 0 and arg det M_u = arg det M_d = 0.",
-      "Reflection positivity, OS reconstruction, local Minkowski net, stable massive scattering, exact admissible RG flow.",
+      "η_B = 6.1×10⁻¹⁰ as a downstream readout from the closed Ω_b h² (not a fundamental compiler power).",
+      "The Koide relation computed exactly: Q = 0.664, 0.33% below the democratic target 2/3 = |ℤ₂|/N_fam.",
+      "The axion dark-matter candidate fixed (θ_i = 170° closed), with f_a = M_scal/128 a conjecture; full QG R + R² heat-kernel grounded, ambient measure open.",
     ],
     notClaimed: [
-      "No α detail calculation.",
-      "No CMB, no E8.",
-      "No full empirical tables.",
+      "η_B as a fundamental compiler power, the absolute axion relic abundance, an exact Koide 2/3, and m_p/m_e as a compiler number are all explicitly not claimed.",
+      "Hard rule: Koide, η_B, the axion relic scale and m_p/m_e are not compiler powers unless their missing QFT/cosmology transfer is supplied.",
     ],
     falsification: [
-      "Fails if selector and dynamics are conflated, if positivity/gap hypotheses are hidden, or if strong-CP closure uses an inadmissible phase convention.",
+      "Fails if a frontier item is silently asserted as a forced compiler power; m_p/m_e is explicitly left open [A] and only fails if mis-asserted.",
     ],
     sections: [
       {
-        title: "Selector vs. Dynamics",
-        body: "The central distinction: P_adm selects the physical sector, while dynamics is carried by Z_rel, then S^T_n, then OS reconstruction, then the local net, the flow Γ_k, and the renormalized observable layer. This separation is the main defence against overclaiming.",
+        title: "Baryon asymmetry η_B — downstream readout",
+        body: "From the closed baryon fraction Ω_b = (4π − 1)β_rad, the asymmetry follows as a cosmological readout. As a fundamental compiler power it is not closed — the leptogenesis Boltzmann solve is not carried out.",
         formulas: [
-          "P_{\\mathrm{adm}} \\quad \\text{selects the physical sector}",
-          "Z_{\\mathrm{rel}}\\Rightarrow\\{S_n^T\\}\\Rightarrow(\\mathcal{H}_{\\mathrm{adm}},\\mathfrak{A}_{\\mathrm{adm}})\\Rightarrow \\Gamma_k \\Rightarrow \\mathfrak{G}^{\\mathrm{ren}}_{\\mathrm{TFPT}}",
+          "\\Omega_b = (4\\pi - 1)\\beta_{\\mathrm{rad}} = 0.04894, \\qquad \\Omega_b h^2 = 0.0222",
+          "\\eta_B = 6.09\\times 10^{-10} \\quad (\\text{observed } 6.1\\times 10^{-10})",
         ],
       },
       {
-        title: "Full Admissibility Complex",
-        body: "After carrier and determinant data are fixed, the full selector is composed of three admissibility projectors.",
-        formulas: ["P_{\\mathrm{adm}} = P_{\\mathrm{prim}} \\, P_{\\mathrm{sing}} \\, P_\\Theta"],
-      },
-      {
-        title: "Strong CP Closure",
-        body: "The strong-CP sector is stated as an admissibility result. The argument connects hadronic singlet selection, determinant structure, γ₅-Hermiticity, and the sheet involution without importing phenomenological tuning.",
+        title: "The Koide relation — near 2/3, computed exactly",
+        body: "The source-level Koide quotient from the lepton φ₀-ladder is 0.664, 0.33% below the democratic compiler target 2/3 = |ℤ₂|/N_fam. A source→pole transfer conjecture brings it onto 2/3, but is not a derivation.",
         formulas: [
-          "\\theta_{\\mathrm{eff}} = 0",
-          "\\arg\\det M_u = \\arg\\det M_d = 0",
+          "Q_{\\mathrm{TFPT}} = \\frac{\\sum_\\ell \\hat m_\\ell}{(\\sum_\\ell \\sqrt{\\hat m_\\ell})^2} = 0.66446\\ldots, \\qquad Q_\\star = \\frac{|\\mathbb{Z}_2|}{N_{\\mathrm{fam}}} = \\frac{2}{3}",
+          "\\lambda_2 = \\left(\\tfrac{2}{3}\\right)^6 = Q_\\star^{\\,|R^+(A_3)|}",
         ],
       },
       {
-        title: "Exact Admissible RG Flow",
-        body: "The exact admissible flow is the analytic continuation of the same sector, with the admissible projection included in the flow definition.",
+        title: "Dark matter — candidate fixed, scale pending",
+        body: "The candidate is the determinant-line axion of the strong-CP sector; WIMPs are ruled out (no spare E₈ singlet). The misalignment angle is closed; the decay constant is a conjecture.",
         formulas: [
-          "\\partial_k \\Gamma_k = \\tfrac{1}{2}\\operatorname{STr}\\!\\left[(\\Gamma_k^{(2)} + R_k)^{-1}\\partial_k R_k\\right]_{\\mathrm{adm}}",
+          "\\theta_i = \\pi(1 - \\varphi_{\\mathrm{seam}}(\\alpha_\\star)) = 170.4^\\circ",
+          "f_a = \\frac{M_{\\mathrm{scal}}}{2\\dim S^+ |\\mu_4|} = \\frac{M_{\\mathrm{scal}}}{128} \\approx 2.39\\times 10^{11}\\,\\text{GeV}, \\quad m_a \\approx 23.8\\,\\mu\\text{eV}",
+        ],
+      },
+      {
+        title: "Full quantum gravity — induced from the seam",
+        body: "c₃ = 1/(8π) is the gravitational seam constant; the spectral action gives R + R² structurally (G2), and the closed admissible sector is gap-decoupled from the un-built ambient (G5). The ambient projective measure (G6) is the strict-TOE completion target.",
+        formulas: [
+          "2\\|V_{\\mathrm{metric}}\\| = 0.785 < \\Delta = 6\\log\\tfrac{3}{2} = 2.433, \\qquad \\Delta_{\\mathrm{eff}} = 1.648 > 0",
+          "M_{\\mathrm{scal}}^2/\\bar M_{\\mathrm{Pl}}^2 = c_3^7, \\qquad M_{\\mathrm{scal}} = 3.06\\times 10^{13}\\,\\text{GeV}",
         ],
       },
     ],
     keyFormulas: [
       {
-        label: "Admissibility selector",
-        latex: "P_{\\mathrm{adm}} = P_{\\mathrm{prim}} \\, P_{\\mathrm{sing}} \\, P_\\Theta",
-        description: "Composition of three admissibility projectors.",
+        label: "η_B (downstream)",
+        latex: "\\eta_B = 6.1\\times 10^{-10}",
+        description: "From closed Ω_b h² = 0.0222; not a compiler power. [P]",
       },
       {
-        label: "Strong-CP null",
-        latex: "\\theta_{\\mathrm{eff}} = 0",
-        description: "Theorem-level null on the admissible branch.",
+        label: "Koide",
+        latex: "Q = 0.664 \\to Q_\\star = \\tfrac{2}{3} = \\tfrac{|\\mathbb{Z}_2|}{N_{\\mathrm{fam}}}",
+        description: "Near-miss, 0.33% below 2/3; not exact at source. [P]",
+      },
+      {
+        label: "Axion DM",
+        latex: "f_a = M_{\\mathrm{scal}}/128, \\quad m_a \\approx 23.8\\,\\mu\\text{eV}",
+        description: "Candidate fixed, θ_i = 170° closed; f_a conjectural. [P/A]",
+      },
+      {
+        label: "QG gap-decoupling",
+        latex: "\\Delta_{\\mathrm{eff}} = \\Delta - 2\\|V\\| = 1.648 > 0",
+        description: "R + R² grounded (G2); ambient measure (G6) open. [F/A]",
       },
     ],
     highlights: [
-      {
-        label: "θ_eff",
-        value: "0",
-        description: "Theorem-level null, not a tuned parameter",
-      },
-      {
-        label: "OS",
-        value: "✓",
-        description: "Osterwalder–Schrader reconstruction inside the admissible sector",
-      },
-      {
-        label: "Selector",
-        value: "P_adm",
-        description: "Three projectors: primitive, singlet, theta",
-      },
+      { label: "η_B", value: "6.1×10⁻¹⁰", description: "Downstream readout from Ω_b h² [P]" },
+      { label: "Koide Q", value: "0.664", description: "0.33% below 2/3 = |ℤ₂|/N_fam [P]" },
+      { label: "m_a", value: "≈ 23.8 µeV", description: "Axion candidate; f_a = M_scal/128 [P]" },
+      { label: "m_p/m_e", value: "open [A]", description: "Cross-sector ratio, not a compiler power" },
     ],
   },
   {
     id: "05",
     number: 5,
-    slug: "metrology",
-    title: "Geometric Hodge Closure and Dimensionless Metrology",
-    subtitle: "Boundary-normalized observables from λ_Σ",
+    slug: "horizon-readouts",
+    title: "Appendix H — The Horizon Unit System",
+    subtitle: "One seam constant c₃ = 1/(8π) as the universal horizon thermal code",
     abstract:
-      "The geometric and metrological branch of TFPT. The theory is not presented as predicting isolated SI numbers. Instead it constructs an internal dimensionless metrology from the boundary spectral unit λ_Σ, with gravity, Planck normalization, electroweak matching, and pole readouts expressed as boundary-normalized observables.",
-    status: "bridge",
-    statusLabel: "Bridge / metrology",
-    pdf: "/papers/05_metrology.pdf",
-    inputs: [
-      "Paper 1 supplies the boundary branch and primitive spectral unit.",
-      "Paper 2 supplies the carrier/Higgs structure.",
-      "Paper 4 may supply the renormalized observable layer when the analytic QFT closure is referenced.",
-    ],
+      "A change of bookkeeping, not new gravitational physics: if gravity is the geometry-channel readout of the seam, then all horizons read the same boundary constant c₃ = 1/(8π). This note collects the readouts — Hawking, de Sitter and Unruh temperature, black-hole thermodynamics, the Page time, scrambling, the Nariai bound, v_GW = c and cosmic birefringence — in seam units, with two genuine compiler fingerprints (1920 = |W(D₅)|, |μ₄| = 4).",
+    status: "horizon",
+    statusLabel: "Appendix H — reframe",
+    pdf: "/papers/tfpt_horizon_readouts.pdf",
+    inputs: ["The seam constant c₃ = 1/(8π) from P1, read as the horizon normaliser."],
     contribution: [
-      "Boundary-normalized metrology: λ_Σ = λ₁⁺(|B_Σ|), ρ★ = χ_geo,0² / λ_Σ², M_Pl² / λ_Σ² = ρ★/(2π²), G_N λ_Σ² = π/(4ρ★).",
-      "Einstein-limit normalizer ξ = c₃/φ₀ with κ² = ξ φ₀/c₃²; ξ_tree = 3/4 and ξ★ ≈ 0.748 fix the dimensionless transition between UFE and Einstein–Hilbert normalization.",
+      "All horizon temperatures share one factor, 1/(2π) = 4c₃; black-hole, de Sitter and Unruh share one thermal grammar.",
+      "Two genuine compiler fingerprints: 1920 = |W(D₅)| in the Hawking power, and |μ₄| = 4 in the scrambling time.",
+      "The boundary transport sub-leading eigenvalue λ₂ = (2/3)⁶ governs both the SM flavor gap and the horizon Page recovery.",
     ],
     notClaimed: [
-      "No late-time H₀, no CMB.",
-      "No black holes, no horizons, no E8 stage atlas, no astrophysical bursts.",
+      "Nothing here is new gravitational physics — it is a reframe that exposes shared structure. The search ansätze are explicitly [A], not results.",
     ],
     falsification: [
-      "Fails if SI units enter as hidden inputs, if λ_Σ is not fixed by the boundary branch, or if electroweak matching is mixed with cosmological comparison rows.",
+      "As a reframe it cannot be falsified by new gravity; the compiler fingerprints (1920, |μ₄|) and the shared λ₂ fail only if the underlying lattice numbers are wrong.",
     ],
     sections: [
       {
-        title: "Boundary Spectral Unit",
-        body: "The internal unit comes from the first eigenvalue of the boundary operator. All dimensionful-looking statements are rewritten as dimensionless quotients by powers of λ_Σ.",
-        formulas: ["\\lambda_\\Sigma = \\lambda_1^+\\!\\left(|B_\\Sigma|\\right)"],
-      },
-      {
-        title: "Planck Normalization",
-        body: "The Planck readout is internal — the question is not which SI value of G_N is inserted, but which dimensionless branch quotient is fixed.",
+        title: "The universal horizon temperature factor",
+        body: "The factor that appears in every horizon temperature is the seam constant itself. Black holes, de Sitter and Unruh therefore share one thermal grammar.",
         formulas: [
-          "\\rho_\\star = \\frac{\\chi_{\\mathrm{geo},0}^2}{\\lambda_\\Sigma^2}",
-          "\\frac{\\bar M_{\\mathrm{Pl}}^2}{\\lambda_\\Sigma^2} = \\frac{\\rho_\\star}{2\\pi^2}",
-          "G_N \\lambda_\\Sigma^2 = \\frac{\\pi}{4\\rho_\\star}",
+          "\\frac{1}{2\\pi} = 4c_3, \\qquad \\frac{1}{8\\pi} = c_3",
+          "T_{\\mathrm{hor}} = 4c_3\\,\\frac{\\hbar\\kappa}{c\\,k_B}",
         ],
       },
       {
-        title: "Einstein-Limit Normalizer ξ = c₃ / φ₀",
-        body: "A single dimensionless quotient governs the transition between the UFE-normalized boundary functional and the Einstein–Hilbert presentation. The ratio is intrinsic — c₃ from Paper 1, φ₀ from Paper 3 — so gravity is not promoted to a primitive observable: the claim is a compression identity for the gravitational normalizer inside the dimensionless metrology layer.",
+        title: "Schwarzschild thermodynamics in four c₃-lines",
+        body: "Temperature, entropy, power and lifetime all read off c₃, with the Hawking power denominator carrying the compiler fingerprint 1920 = |W(D₅)| (the Weyl group order of D₅).",
         formulas: [
-          "\\kappa^2 = \\xi\\,\\frac{\\varphi_0}{c_3^2}, \\quad \\xi = \\frac{c_3}{\\varphi_0}",
-          "\\xi_{\\mathrm{tree}} = \\tfrac{3}{4}",
-          "\\xi_\\star \\approx 0.748\\,327\\,808\\ldots",
+          "T_H = \\frac{c_3}{M}, \\quad S_{BH} = \\frac{M^2}{2c_3}, \\quad P_H = \\frac{c_3}{1920\\,M^2}, \\quad \\tau_{\\mathrm{evap}} = \\frac{640}{c_3}M^3",
+          "1920 = |W(D_5)|",
         ],
       },
       {
-        title: "Electroweak Matching",
-        body: "The electroweak matching layer is included only as boundary-normalized metrology. Pole matching enters in compact form when expressed as a quotient by λ_Σ.",
+        title: "Page time and scrambling",
+        body: "The Page time is a fixed fraction of the evaporation time, and the scrambling time carries the second fingerprint |μ₄| = 4. The Page-recovery kernel decays at the same λ₂ = (2/3)⁶ that sets the SM flavor gap.",
         formulas: [
-          "v_{\\mathrm{phys}} = v_{\\mathrm{geo}}\\sqrt{Z_{\\mathrm{EW}}^{\\mathrm{TFPT}}}",
-          "G_N v_{\\mathrm{phys}}^2",
+          "t_{\\mathrm{scr}} \\sim |\\mu_4|\\,M\\log S, \\qquad |\\mu_4| = 4",
+          "I_n \\sim \\lambda_2^{\\,n} = (2/3)^{6n}, \\qquad \\Delta_{\\mathrm{gap}} = -\\log(2/3)^6 = 6\\log\\tfrac{3}{2}",
         ],
       },
       {
-        title: "Observable Functor Chain",
-        body: "Outputs are organized as a chain: closed branch, renormalized observables, physical observables, and finally scheme-projected observables.",
+        title: "De Sitter, Nariai and cosmic birefringence",
+        body: "The de Sitter entropy and the cosmic-birefringence angle are the same seam readouts; v_GW = c follows with no measurable dispersion.",
         formulas: [
-          "\\mathfrak{T}_\\star \\xrightarrow{\\mathcal{R}_{\\mathrm{ren}}} \\mathfrak{G}^{\\mathrm{ren}}_{\\mathrm{TFPT}} \\xrightarrow{\\mathcal{M}_{\\mathrm{phys}}} \\mathfrak{O}^{\\mathrm{phys}}_{\\mathrm{TFPT}} \\xrightarrow{\\mathcal{M}_{\\mathrm{scheme}}} \\mathfrak{O}^{\\mathrm{scheme}}_{\\mathrm{TFPT}}/\\mathrm{SchGrp}",
+          "S_{dS} = \\frac{e^{2\\alpha^{-1}}}{128\\,c_3^4} = 32\\pi^4 e^{2\\alpha^{-1}} \\approx 3.32\\times 10^{122}",
+          "\\beta_{\\mathrm{rad}} = \\frac{\\varphi_0}{4\\pi} \\approx 0.2424^\\circ, \\qquad v_{\\mathrm{GW}} = c",
         ],
       },
     ],
     keyFormulas: [
       {
-        label: "Planck normalization",
-        latex: "\\dfrac{\\bar M_{\\mathrm{Pl}}^2}{\\lambda_\\Sigma^2} = \\dfrac{\\rho_\\star}{2\\pi^2}",
+        label: "Universal factor",
+        latex: "\\tfrac{1}{2\\pi} = 4c_3, \\qquad T_H = c_3/M",
+        description: "One seam constant behind every horizon temperature. [I]",
       },
       {
-        label: "Newton constant",
-        latex: "G_N \\lambda_\\Sigma^2 = \\dfrac{\\pi}{4\\rho_\\star}",
+        label: "Hawking fingerprint",
+        latex: "P_H = \\frac{c_3}{1920\\,M^2}, \\quad 1920 = |W(D_5)|",
+        description: "Compiler Weyl-group order in the Hawking power. [I]",
       },
       {
-        label: "Einstein-limit normalizer",
-        latex: "\\xi = \\dfrac{c_3}{\\varphi_0}, \\quad \\kappa^2 = \\xi\\,\\dfrac{\\varphi_0}{c_3^2}",
-        description: "ξ_tree = 3/4, ξ★ ≈ 0.748 — boundary-normalized UFE↔Einstein–Hilbert transition.",
+        label: "Shared transport",
+        latex: "\\lambda_2 = (2/3)^6",
+        description: "Same eigenvalue fixes flavor gap and Page recovery. [I]",
       },
     ],
     highlights: [
-      {
-        label: "Spectral unit",
-        value: "λ_Σ",
-        description: "First eigenvalue of |B_Σ| — internal length scale",
-      },
-      {
-        label: "ξ = c₃/φ₀",
-        value: "≈ 0.748",
-        description: "Einstein-limit normalizer, tree value 3/4",
-      },
-      {
-        label: "Functor chain",
-        value: "4 steps",
-        description: "T★ → ren → phys → scheme",
-      },
+      { label: "Factor", value: "1/(2π) = 4c₃", description: "Universal horizon temperature factor" },
+      { label: "Hawking", value: "1920 = |W(D₅)|", description: "Compiler fingerprint in the power" },
+      { label: "S_dS", value: "≈ 3.32×10¹²²", description: "De Sitter entropy from the Λ closure" },
+      { label: "β_rad", value: "0.2424°", description: "Cosmic birefringence (ACT DR6: 0.4σ)" },
     ],
   },
   {
     id: "06",
     number: 6,
-    slug: "cosmology",
-    title: "Cosmology Interfaces of the TFPT Closed Branch",
-    subtitle: "Seam transfer, axion sector, reheating, and CMB targets",
+    slug: "origin-theory",
+    title: "Origin Theory",
+    subtitle: "The seam as a horizon, the cyclic compiler hull, and the parameter-free attractor",
     abstract:
-      "Cosmology is not used as a primitive selector of the theory. It is read from the closed branch through seam transfer, determinant-line phase, scalaron sector, axion interface, reheating input, leptogenesis input, neutrino sector, CMB spectra, and conjectural sky-map realization targets.",
-    status: "downstream",
-    statusLabel: "Downstream interface",
-    pdf: "/papers/06_cosmology.pdf",
-    inputs: [
-      "Papers 1–5 supply the closed branch T★, the carrier packet, the precision branch, the admissible QFT sector, and the boundary-normalized metrology.",
-    ],
+      "Why the two TFPT inputs leave no free fundamental number. Two layers, kept strictly apart: a structural [I]/[L] core (exact, machine-checked identities) — the (g_car, N_fam) = (5,3) skeleton, the triply-forced 8 (geometry = lattice = gravity), the order-30 Coxeter cycle, one boundary transport for both flavor and horizon, and a gapped unique attractor — plus one honestly-typed [P] interpretation: the cyclic self-reproduction reading.",
+    status: "synthesis",
+    statusLabel: "Origin synthesis",
+    pdf: "/papers/origin_theory.pdf",
+    inputs: ["The single boundary pair (g_car, N_fam) = (5, 3)."],
     contribution: [
-      "Downstream cosmology interfaces: Λ_IR, S_Σ, N_DW, axion / reheating / leptogenesis / CMB targets at their proper status levels.",
+      "The whole integer skeleton from one pair: rank E₈ = g + N = 8, |ℤ₂| = g − N = 2, |μ₄| = (g+N)/2 = 4, and the Pythagorean mass volume Δ_Y = g² = N² + dim S⁺ = 9 + 16 = 25.",
+      "The '8' triply forced — geometry (Gauss–Bonnet seam winding) = lattice (rank E₈) = gravity (Hawking/Einstein 8π).",
+      "A gapped boundary transport (gap 6 log(3/2) > 0) ⇒ a unique Perron–Frobenius attractor: the constants are selected, not tuned.",
     ],
     notClaimed: [
-      "No carrier proofs, no full α derivation, no QFT closure proof, no SM packet proof.",
+      "The seam is not identical to an event horizon — it is the abstract normaliser whose local gravitational realisation is a horizon; that identification stays [P].",
+      "The cyclic self-reproduction (§6) is a falsifiable interpretation [P], not derived and not machine-checkable.",
     ],
     falsification: [
-      "Fails if CMB Stage 2 is sold as a theorem, if a good CMB world is conflated with this observed sky realization, or if cosmology is allowed to tune the primitive branch.",
+      "The exact core fails if (5,3) does not generate the skeleton or the transport gap is not positive; the cyclic interpretation is falsified by a robust β = 0 or w ≠ −1.",
     ],
     sections: [
       {
-        title: "Cosmology as Downstream Interface",
-        body: "The closed branch is fixed before cosmology enters. CMB and E8 must never be written as hard theorem claims in this paper. Stage 1 is spectra; Stage 2 is sky realization as a conjectural or programmatic target.",
+        title: "The whole skeleton from one pair (5,3)",
+        body: "The integer alphabet of the theory falls out of (g_car, N_fam) = (5,3): the E₈ rank, the sheet and glue counts, and the Pythagorean mass volume as a difference of squares.",
         formulas: [
-          "\\mathfrak{T}_\\star \\Rightarrow (U_\\Sigma, \\det_{\\mathrm{adm}}, \\text{scalaron}, \\text{neutrino sector})\\Rightarrow \\text{cosmology interfaces}",
+          "\\operatorname{rank}E_8 = g_{\\mathrm{car}} + N_{\\mathrm{fam}} = 8, \\quad |\\mathbb{Z}_2| = g_{\\mathrm{car}} - N_{\\mathrm{fam}} = 2, \\quad |\\mu_4| = \\tfrac{g+N}{2} = 4",
+          "\\Delta_Y = g_{\\mathrm{car}}^2 = N_{\\mathrm{fam}}^2 + |\\mathbb{Z}_2|\\cdot\\operatorname{rank}E_8 = 9 + 16 = 25",
         ],
       },
       {
-        title: "Seam Transfer and Infrared Determinant",
-        body: "The seam-transfer expression connects the admissible determinant line to the cosmological constant scale.",
+        title: "The '8' is triply forced",
+        body: "The seam denominator is fixed three independent ways. If the seam is a horizon, the gravitational 8π forces c₃; it must then coincide with the geometric 2|μ₄| (Gauss–Bonnet) and the lattice rank E₈ — all three give 8.",
         formulas: [
-          "\\Lambda_{\\mathrm{IR}} = \\bar M_{\\mathrm{Pl}}^4 \\!\\left[-\\log\\det_{\\mathrm{adm}}(1 - U_\\Sigma)\\right]",
+          "c_3 = \\frac{1}{|\\mathbb{Z}_2|\\oint_{S^2}K\\,dA} = \\frac{1}{2\\cdot 4\\pi} = \\frac{1}{8\\pi}, \\qquad 8\\pi = |\\mathbb{Z}_2|\\cdot 2\\pi\\chi(S^2)",
+          "S = 4\\pi k\\,A = 2\\pi c_3\\,A = \\tfrac{1}{4}A \\iff 2\\pi c_3 = \\tfrac{1}{4}",
         ],
       },
       {
-        title: "Axion Interface",
-        body: "The axion sector depends on seam transfer and determinant-line phase, not on the primitive carrier proof.",
+        title: "One transport for flavor and horizon",
+        body: "The boundary transport spectrum {1, (2/3)⁶, (1/3)⁶} has a sub-leading eigenvalue that appears in both sectors: the SM flavor gap and the horizon Page recovery are the same number.",
         formulas: [
-          "S_\\Sigma = \\log \\mu_\\Sigma(\\alpha_\\star)",
-          "N_{\\mathrm{DW}} = 1",
-          "\\theta_i = \\pi(1 - \\varphi_{\\mathrm{seam}}(\\alpha_\\star))",
+          "\\lambda_2 = (2/3)^6: \\quad \\Delta_{\\mathrm{gap}} = 6\\log\\tfrac{3}{2} \\;\\Longleftrightarrow\\; I_n \\sim (2/3)^{6n}",
         ],
       },
       {
-        title: "CMB — Stage 1 vs. Stage 2",
-        body: "Stage 1 is the spectral target: transfer functions, angular spectra, comparison rows. Stage 2 is a conjectural realization target: a good CMB world is not automatically this CMB world.",
+        title: "The gapped unique attractor",
+        body: "The transport gap is positive, so by Perron–Frobenius the operator has a unique dominant eigenvector and iterating from any start converges to the same fixed direction. Parameter-freeness is an attractor, not a tuning.",
+        formulas: [
+          "\\Delta = -\\log(2/3)^6 = 6\\log\\tfrac{3}{2} = 2.4328 > 0",
+          "S_{dS}\\,\\rho_\\Lambda = \\frac{1}{128\\,c_3^4} = 32\\pi^4",
+        ],
       },
     ],
     keyFormulas: [
       {
-        label: "Λ_IR (seam transfer)",
-        latex:
-          "\\Lambda_{\\mathrm{IR}} = \\bar M_{\\mathrm{Pl}}^4 \\!\\left[-\\log\\det_{\\mathrm{adm}}(1 - U_\\Sigma)\\right]",
+        label: "Pythagorean volume",
+        latex: "\\Delta_Y = g^2 = N^2 + |\\mathbb{Z}_2|\\cdot\\operatorname{rank}E_8 = 9 + 16 = 25",
+        description: "The whole skeleton from (5,3). [I]",
       },
       {
-        label: "Axion interface",
-        latex: "N_{\\mathrm{DW}} = 1, \\quad \\theta_i = \\pi(1 - \\varphi_{\\mathrm{seam}}(\\alpha_\\star))",
+        label: "Triply-forced 8",
+        latex: "8 = 2|\\mu_4| = \\operatorname{rank}E_8 = h(D_5)",
+        description: "Geometry = lattice = gravity. [I]",
+      },
+      {
+        label: "Gapped attractor",
+        latex: "\\Delta = 6\\log\\tfrac{3}{2} > 0 \\Rightarrow \\text{unique fixed point}",
+        description: "Constants selected by Perron–Frobenius, not tuned. [I/L]",
+      },
+      {
+        label: "Area law",
+        latex: "S = 2\\pi c_3\\,A = \\tfrac{1}{4}A \\iff c_3 = \\tfrac{1}{8\\pi}",
+        description: "c₃ is the unique value with the Bekenstein–Hawking 1/4. [I/L]",
       },
     ],
     highlights: [
-      { label: "N_DW", value: "1", description: "Domain-wall number from the determinant line" },
+      { label: "Skeleton", value: "(5,3)", description: "One pair generates the integer alphabet" },
+      { label: "Δ_Y", value: "25 = 9 + 16", description: "Pythagorean mass volume" },
+      { label: "Gap", value: "6 log(3/2)", description: "Positive ⇒ unique attractor" },
+      { label: "Free numbers", value: "0", description: "Only π is primitive" },
+    ],
+  },
+  {
+    id: "07",
+    number: 7,
+    slug: "research-contracts",
+    title: "Research Contracts for the Two Open Gates",
+    subtitle: "(U_wall) the parabolic flavor wall-selection · (G_metric) the full QG measure",
+    abstract:
+      "After the compiler closure the entire residual is Rest = (U_wall) ⊕ (G_metric) ⊕ (F_frontier). This note turns the two genuine research gates into contracts: a numbered chain of lemmas, the single theorem that closes each gate, and — for every step — whether it is machine-certifiable today. F_frontier is not a gate. Priority: (U_wall) first (finite, algebraic, falsifiable), then (G_metric) (deep analytic programme).",
+    status: "contracts",
+    statusLabel: "Open research gates",
+    pdf: "/papers/tfpt_research_contracts.pdf",
+    inputs: [
+      "The closed compiler and the two named residual gates from the introduction's status card.",
+    ],
+    contribution: [
+      "Contract 1 (U_wall): pin the one D₄-symmetric, rank-3, four-point parabolic realisation; the four-way split where only the absolute amplitude scale U_point stays open.",
+      "Contract 2 (G_metric): construct the reflection-positive projective-limit metric measure; G2 (R + R²) and G5 (gap dominance) certified, G6 (ambient limit) open.",
+      "The quark ratio c_u/c_d = 55/117 is closed (Readout Rigidity); the '11' is the Pascal sum 16 − g_car.",
+    ],
+    notClaimed: [
+      "The D₄ symmetry fixes the admissible chamber, not the physical point; the absolute flavor amplitude scale U_point is [A].",
+      "The ambient projective measure (G6) blocks certification as a strict physical TOE; its absence does not affect the bounded IR claim.",
+    ],
+    falsification: [
+      "Each contract names its closing theorem and certifiability; fails if a lemma certified [F] does not in fact machine-check, or if the closing theorem is asserted before its chain completes.",
+    ],
+    sections: [
       {
-        label: "Axion ν",
-        value: "≈ 15.764 GHz",
-        description: "Haloscope window prediction",
+        title: "Contract 1 — (U_wall), the flavor wall",
+        body: "The goal is to select the one D₄-symmetric realisation on the family curve. The selectors det R = 8 and Spec(Q₊) = {1,2,3} are read off the bundle; the quark ratio is closed by Readout Rigidity, leaving only the absolute amplitude scale.",
+        formulas: [
+          "\\det R = 8 = n\\cdot a, \\qquad \\operatorname{Spec}(Q_+) = \\{1,2,3\\} = 3\\alpha + 1",
+          "\\frac{c_u}{c_d} = \\frac{g_{\\mathrm{car}}\\,\\|\\mathrm{Pl}(K)\\|_1}{N_{\\mathrm{fam}}^2\\,\\Delta_Q} = \\frac{5\\cdot 11}{9\\cdot 13} = \\frac{55}{117}",
+        ],
       },
       {
-        label: "Σ m_ν",
-        value: "0.0588 eV",
-        description: "Intrinsic neutrino mass sum",
+        title: "Theorem U — the four-way split",
+        body: "The remaining flavor bridge splits into four pieces: unitarity (polystable ⇒ unitary, finite linear algebra), the H2 readoff, the Λ² readout rigidity, and only U_point (the full amplitude normalisation) stays open.",
+        formulas: [
+          "(U_{\\mathrm{wall}}) = U_{\\mathrm{unitary}} + U_{\\mathrm{H2}} + U_{\\Lambda^2} + U_{\\mathrm{point}}",
+          "\\|\\mathrm{Pl}(K)\\|_1 = \\textstyle\\sum_{k=0}^{2}\\binom{4}{k} = 11 = 16 - g_{\\mathrm{car}}",
+        ],
       },
       {
-        label: "η_B",
-        value: "5.97 × 10⁻¹⁰",
-        description: "Baryon asymmetry, leptogenesis interface",
+        title: "Contract 2 — (G_metric), the QG measure",
+        body: "The goal is the reflection-positive projective-limit measure over the diffeomorphism-quotiented metric sector. G2 (Seeley–DeWitt R + R²) and G5 (gap dominance) are certified; the projective limit G6 is the hardest, open step.",
+        formulas: [
+          "a_2 = -\\tfrac{R}{3}, \\qquad a_4\\big|_{R^2} = \\tfrac{R^2}{72}",
+          "2\\|V_{\\mathrm{metric}}\\| = 0.785 < \\Delta = 6\\log\\tfrac{3}{2} = 2.433, \\qquad \\Delta_{\\mathrm{eff}} = 1.648 > 0",
+        ],
       },
+      {
+        title: "Certifiability and order",
+        body: "(U_wall) is finite, algebraic and falsifiable today; (G_metric) is a deep analytic programme. The recommended order freezes the frontier status in between.",
+        formulas: [
+          "(U_{\\mathrm{wall}}) \\rightarrow \\text{freeze frontier status} \\rightarrow (G_{\\mathrm{metric}})",
+        ],
+      },
+    ],
+    keyFormulas: [
+      {
+        label: "U_wall selectors",
+        latex: "\\det R = 8, \\qquad \\operatorname{Spec}(Q_+) = \\{1,2,3\\}",
+        description: "Read off the bundle; only U_point stays open. [F/A]",
+      },
+      {
+        label: "Quark ratio closed",
+        latex: "\\frac{c_u}{c_d} = \\frac{5\\cdot 11}{9\\cdot 13} = \\frac{55}{117}",
+        description: "Readout Rigidity on the discrete stratum. [I]",
+      },
+      {
+        label: "G_metric gap",
+        latex: "2\\|V\\| = 0.785 < \\Delta = 2.433 \\Rightarrow \\Delta_{\\mathrm{eff}} = 1.648",
+        description: "Gap dominance certified (G5); ambient limit (G6) open. [F/A]",
+      },
+    ],
+    highlights: [
+      { label: "Gates", value: "2", description: "(U_wall) flavor + (G_metric) quantum gravity" },
+      { label: "U_point", value: "open [A]", description: "Only the absolute flavor amplitude scale" },
+      { label: "c_u/c_d", value: "55/117", description: "Closed by Readout Rigidity" },
+      { label: "G6", value: "open [A]", description: "Ambient measure — strict-TOE target" },
     ],
   },
 ];

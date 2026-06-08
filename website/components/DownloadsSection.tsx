@@ -2,54 +2,16 @@
 
 import { motion } from "motion/react";
 import Link from "next/link";
-import { Copy, Download, FileText } from "lucide-react";
+import { ArrowUpRight, Copy, Download, FileText, Github } from "lucide-react";
 import { papers, STATUS_META } from "@/lib/papers";
-import { cn } from "@/lib/utils";
+import { cn, REPO_URL } from "@/lib/utils";
 import { SectionHeader } from "./SectionHeader";
-import { trackPdfInteraction, type DownloadKind } from "@/lib/track";
+import { trackPdfInteraction } from "@/lib/track";
 import {
   getReleaseAsset,
   formatBytes,
   formatHashShort,
 } from "@/lib/release";
-
-const COMPANIONS: Array<{
-  label: string;
-  desc: string;
-  href: string;
-  kind: DownloadKind;
-}> = [
-  {
-    label: "Series index",
-    desc: "Index of the dedicated TFPT 4.5 split, organized by burden of proof.",
-    href: "/papers/series_index.pdf",
-    kind: "series-index",
-  },
-  {
-    label: "Theory map",
-    desc: "Status map of the staged derivation chain — theorem-core, bridge, conditional, downstream.",
-    href: "/papers/theory_map.pdf",
-    kind: "theory-map",
-  },
-  {
-    label: "Technical companion",
-    desc: "Conventions, positivity, APS interfaces, comparison maps, and downstream continuations.",
-    href: "/papers/technical_companion.pdf",
-    kind: "companion",
-  },
-  {
-    label: "Coverage audit",
-    desc: "Audit of which sections of the source draft are covered, and where.",
-    href: "/papers/coverage_audit.pdf",
-    kind: "coverage-audit",
-  },
-  {
-    label: "Two-page summary",
-    desc: "One-page claim, one-page predictions — for fast review.",
-    href: "/predictions/tfpt_two_page_summary.pdf",
-    kind: "summary",
-  },
-];
 
 export function DownloadsSection() {
   return (
@@ -61,13 +23,13 @@ export function DownloadsSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
           eyebrow="Downloads"
-          title="Every PDF, in one place"
-          description="The full TFPT 4.5 paper series, the technical companion, the theory status map, and the two-page executive summary — all distributed for academic use."
+          title="Every document, in one place"
+          description="The full TFPT 5.0 document set — the introduction reading guide, the four core documents, and the three companions (Appendix H, the Origin Theory synthesis, and the research contracts). All distributed for academic use."
         />
 
         <div className="mt-12">
           <h3 className="font-serif text-lg font-semibold text-slate-100">
-            Paper series
+            The document set
           </h3>
           <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {papers.map((p, i) => {
@@ -158,48 +120,56 @@ export function DownloadsSection() {
           </div>
         </div>
 
-        <div className="mt-14">
-          <h3 className="font-serif text-lg font-semibold text-slate-100">
-            Companion documents
-          </h3>
-          <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {COMPANIONS.map((c, i) => {
-              const release = getReleaseAsset(c.href);
-              return (
-              <motion.div
-                key={c.label}
-                initial={{ opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.05 }}
-                transition={{ duration: 0.5, delay: i * 0.05 }}
-                className="rounded-xl border border-slate-700/40 bg-slate-950/40 p-5 transition-colors hover:bg-slate-900/40"
+        <div className="mt-14 overflow-hidden rounded-2xl border border-blue-400/25 bg-gradient-to-br from-blue-500/10 to-violet-500/5 p-6 sm:p-8">
+          <div className="grid gap-6 lg:grid-cols-[1.5fr_1fr] lg:items-center">
+            <div>
+              <div className="flex items-center gap-2">
+                <Github size={18} className="text-slate-200" aria-hidden />
+                <h3 className="font-serif text-lg font-semibold text-slate-100">
+                  Reproducibility — everything is on GitHub
+                </h3>
+              </div>
+              <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate-300">
+                Every claim marked exact identity, lattice theorem or numerical
+                fixed point is re-derived from the two axioms by a self-contained
+                Python verification suite, mirrored in an independent Wolfram
+                path, and recorded in a single machine-checked status ledger. The
+                carrier algebra (P2) is Lean-formalised (0 sorry, only kernel
+                axioms). The full source — theory documents, scripts and ledger —
+                lives in one public repository. If the text and the ledger ever
+                disagree, the ledger wins.
+              </p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {[
+                  "Python verification suite",
+                  "Independent Wolfram mirror",
+                  "Lean-formalised carrier (P2)",
+                  "Versioned status ledger",
+                ].map((t) => (
+                  <span
+                    key={t}
+                    className="rounded-full border border-slate-700/40 bg-slate-900/50 px-3 py-1 text-[11px] font-medium text-slate-300"
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div className="flex flex-col items-start gap-2 lg:items-end">
+              <Link
+                href={REPO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition-transform hover:scale-105"
               >
-                <h4 className="font-serif text-base font-semibold text-slate-100">
-                  {c.label}
-                </h4>
-                <p className="mt-2 text-xs leading-relaxed text-slate-400">{c.desc}</p>
-                {release && <ReleaseLine release={release} compact />}
-                <Link
-                  href={c.href}
-                  target="_blank"
-                  rel="noopener"
-                  onClick={() =>
-                    trackPdfInteraction({
-                      file: c.href,
-                      source: "downloads-companions",
-                      kind: c.kind,
-                      interaction: "download",
-                      title: c.label,
-                    })
-                  }
-                  className="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-blue-300 transition-colors hover:text-blue-200"
-                >
-                  <Download size={13} />
-                  Download PDF
-                </Link>
-              </motion.div>
-              );
-            })}
+                <Github size={16} />
+                View the source &amp; verification suite
+                <ArrowUpRight size={16} />
+              </Link>
+              <span className="font-mono text-[11px] text-slate-500">
+                github.com/sthamann/tfpt-theoryv4
+              </span>
+            </div>
           </div>
         </div>
       </div>

@@ -2,14 +2,14 @@
 
 import { motion } from "motion/react";
 import Link from "next/link";
-import { ArrowRight, BookOpen, Download, ShieldAlert, Sigma } from "lucide-react";
+import { ArrowRight, BookOpen, Download, Github, ShieldAlert, Sigma } from "lucide-react";
 import { trackPdfInteraction } from "@/lib/track";
-import { cn } from "@/lib/utils";
+import { cn, REPO_URL } from "@/lib/utils";
 import { ThreeDecoderMap } from "./ThreeDecoderMap";
 import { TheoryUnpacking } from "./TheoryUnpacking";
 import { GlossTerm } from "./GlossTerm";
 
-const TWO_PAGE_SUMMARY = "/predictions/tfpt_two_page_summary.pdf";
+const READING_GUIDE = "/papers/introduction.pdf";
 
 export function Hero() {
   return (
@@ -36,35 +36,38 @@ export function Hero() {
         >
           <span className="inline-flex items-center gap-2 rounded-full border border-blue-400/20 bg-blue-500/10 px-4 py-1.5 text-xs font-medium tracking-wider text-blue-200">
             <Sigma size={14} className="opacity-80" />
-            <span className="uppercase">TFPT 4.5 paper series · 2026</span>
+            <span className="uppercase">TFPT 5.0 · the compiler closure · 2026</span>
           </span>
 
           <h1 className="mt-6 max-w-4xl font-serif text-4xl font-semibold leading-[1.05] text-slate-50 sm:text-5xl md:text-6xl lg:text-7xl">
+            <span className="block">Two axioms. One compiler.</span>
             <span className="block">
-              One{" "}
-              <span className="text-gradient-blue">boundary datum</span>.
+              The <span className="text-gradient-blue">Standard Model</span>, derived.
             </span>
-            <span className="block">A staged reconstruction of the</span>
-            <span className="block">Standard Model packet.</span>
           </h1>
-          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate-400">
-            <span className="font-semibold text-slate-200">Proof discipline.</span>{" "}
-            The page separates theorem core, bridge readouts, conditional QFT
-            closure, and downstream targets. Every output has an explicit
-            failure mode.
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-300">
+            The gauge group, three families, hypercharge and the flavor matrix
+            follow from two numbers.{" "}
+            <span className="font-semibold text-blue-300">α⁻¹ = 137.0359992</span>,
+            1.9σ from CODATA-2022. 20 falsifiable predictions, zero fitted
+            constants.
           </p>
 
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg md:text-xl">
             <span className="font-semibold text-slate-100">
               Topological Fixed-Point Theory
             </span>{" "}
-            presents a staged reconstruction of the Standard-Model{" "}
-            <GlossTerm term="carrier">carrier packet</GlossTerm>, the
-            fine-structure constant, the Cabibbo angle, the PMNS matrix,
-            strong-CP closure, and downstream cosmology — from a single{" "}
-            <GlossTerm term="boundary datum">one-sided boundary datum</GlossTerm>
-            , with{" "}
-            <span className="font-semibold text-blue-300">no fitted constants</span>.
+            reads the Standard Model, the constants and the scale grammar off a
+            single{" "}
+            <GlossTerm term="E8 compiler">discrete compiler</GlossTerm> built
+            from the{" "}
+            <GlossTerm term="seam constant">seam constant c₃ = 1/(8π)</GlossTerm>{" "}
+            and the <GlossTerm term="carrier">carrier g_car = 5</GlossTerm>. The
+            exceptional lattice E₈ is the compiler&rsquo;s internal bookkeeping,
+            not a gauge group. The{" "}
+            <GlossTerm term="bootstrap loop">bootstrap loop</GlossTerm> even
+            re-derives its own inputs, so the core is{" "}
+            <span className="font-semibold text-blue-300">overdetermined, not fitted</span>.
           </p>
 
           <div className="mt-10 flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center">
@@ -73,7 +76,7 @@ export function Hero() {
               className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/30 ring-1 ring-blue-400/40 transition-transform hover:scale-105 focus:scale-105"
             >
               <BookOpen size={16} />
-              Read the orientation map
+              Read the reading guide
               <ArrowRight
                 size={16}
                 className="transition-transform group-hover:translate-x-0.5"
@@ -91,22 +94,31 @@ export function Hero() {
               />
             </Link>
             <Link
-              href={TWO_PAGE_SUMMARY}
+              href={READING_GUIDE}
               target="_blank"
               rel="noopener"
               onClick={() =>
                 trackPdfInteraction({
-                  file: TWO_PAGE_SUMMARY,
+                  file: READING_GUIDE,
                   source: "hero",
                   kind: "summary",
                   interaction: "download",
-                  title: "Two-page summary",
+                  title: "Reading guide (introduction)",
                 })
               }
               className="inline-flex items-center gap-2 rounded-full border border-slate-600/60 bg-slate-900/60 px-6 py-3 text-sm font-semibold text-slate-100 backdrop-blur transition-colors hover:bg-slate-800/80"
             >
               <Download size={16} />
-              Two-page summary
+              Reading guide (PDF)
+            </Link>
+            <Link
+              href={REPO_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-slate-600/60 bg-slate-900/60 px-6 py-3 text-sm font-semibold text-slate-100 backdrop-blur transition-colors hover:bg-slate-800/80"
+            >
+              <Github size={16} />
+              Code &amp; verification
             </Link>
           </div>
         </motion.div>
@@ -158,26 +170,24 @@ const STATS: Array<{
   isMath?: boolean;
 }> = [
   {
+    label: "Axioms",
+    value: "2",
+    note: "c₃ = 1/(8π) and g_car = 5; everything else is a consequence",
+  },
+  {
     label: "α⁻¹(0)",
     value: "137.0359992",
-    note: "Closed-branch root; CODATA 2022 recommended 137.035 999 177(21)",
+    note: "Unique root of F_U(1)(α) = 0; 1.9σ from CODATA-2022",
     isMath: true,
   },
   {
-    label: "Families",
-    value: "3",
-    note: "From admissible occupancy on the rigid carrier",
+    label: "Predictions",
+    value: "20",
+    note: "Falsifiable readouts, each with a committed kill criterion",
   },
   {
-    label: "θ_eff",
+    label: "Fitted constants",
     value: "0",
-    note: "Strong-CP null — theorem-level on the admissible branch",
-    isMath: true,
-  },
-  {
-    label: "β_BH(r)",
-    value: "16 c₃⁴ / r²",
-    note: "Achromatic dyonic residual intercept — EHT/ngEHT prediction",
-    isMath: true,
+    note: "No free dial; only π stays irreducible after the bootstrap",
   },
 ];

@@ -5,8 +5,8 @@ import { motion } from "motion/react";
 import { Download, FileText, ArrowRight } from "lucide-react";
 import { trackPdfInteraction, type DownloadKind } from "@/lib/track";
 
-const ORIENTATION_PDF = "/papers/00_orientation_note.pdf";
-const ORIENTATION_TITLE = "TFPT in One Map (Paper 0)";
+const ORIENTATION_PDF = "/papers/introduction.pdf";
+const ORIENTATION_TITLE = "The Compiler Closure of TFPT (Introduction)";
 
 interface SidebarLink {
   href: string;
@@ -17,22 +17,22 @@ interface SidebarLink {
 
 const SIDEBAR_LINKS: SidebarLink[] = [
   {
-    href: "/papers/series_index.pdf",
-    label: "Series index",
-    desc: "Working index, dependency split",
-    kind: "series-index",
+    href: "/papers/tfpt_1_architecture_e8.pdf",
+    label: "Architecture & E₈",
+    desc: "The two axioms, the glue, α⁻¹",
+    kind: "paper",
   },
   {
-    href: "/papers/theory_map.pdf",
-    label: "Theory status map",
-    desc: "Status of the staged derivation chain",
-    kind: "theory-map",
+    href: "/papers/origin_theory.pdf",
+    label: "Origin Theory",
+    desc: "Why no free fundamental number remains",
+    kind: "paper",
   },
   {
-    href: "/predictions/tfpt_two_page_summary.pdf",
-    label: "Two-page summary",
-    desc: "Compact claim + prediction surface",
-    kind: "summary",
+    href: "/papers/tfpt_research_contracts.pdf",
+    label: "Research contracts",
+    desc: "The two open gates, as contracts",
+    kind: "paper",
   },
 ];
 
@@ -66,13 +66,13 @@ export function OrientationDownload() {
                 id="download-heading"
                 className="font-serif text-3xl font-semibold leading-tight text-slate-50 sm:text-4xl"
               >
-                Read the full orientation map.
+                Read the full reading guide.
               </h2>
               <p className="mt-3 max-w-xl text-base leading-relaxed text-slate-300">
-                Paper 0 is the public entry document of the TFPT 4.5 series. It
-                states the staged reconstruction, the three decoders, the status
-                matrix, and the dependency map between the six papers — without
-                imported numerics, without invisible assumptions.
+                The introduction is the entry document of the TFPT 5.0 set. It
+                states the compiler closure, the two-engine picture, the
+                dependency DAG, the proof ledger, and the live experimental
+                tests — with every claim graded and resolving to the ledger.
               </p>
 
               <div className="mt-6 flex flex-wrap gap-3">
@@ -92,7 +92,7 @@ export function OrientationDownload() {
                   className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/30 ring-1 ring-blue-400/40 transition-transform hover:scale-105 focus:scale-105"
                 >
                   <Download size={16} />
-                  Download Paper 0 (PDF)
+                  Open the introduction (PDF)
                 </Link>
                 <Link
                   href={ORIENTATION_PDF}
@@ -117,7 +117,7 @@ export function OrientationDownload() {
               <ul className="mt-8 grid gap-2 text-xs text-slate-400 sm:grid-cols-3">
                 <li>· Stefan Hamann</li>
                 <li>· Alessandro Rizzo</li>
-                <li>· TFPT 4.5 paper series</li>
+                <li>· TFPT 5.0 document set</li>
               </ul>
             </div>
 

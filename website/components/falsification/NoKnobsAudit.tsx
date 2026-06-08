@@ -13,69 +13,71 @@ const ROWS: AuditRow[] = [
   {
     output: "α⁻¹(0)",
     inputsAllowed:
-      "Primitive kernel (Paper 1), carrier packet (Paper 2), exact seam opening φ_seam(α)",
+      "c₃ = 1/(8π), b₁ = 41/10, the word-lengths Σ L + N_Φ = 41, the exact seam opening φ_seam(α)",
     inputsForbidden:
       "Fitting against CODATA / atom-recoil values; freezing φ_seam at φ₀ inside the root equation",
     freeKnobs: "0",
   },
   {
-    output: "λ_C  (Cabibbo angle)",
-    inputsAllowed: "Retained seed φ₀ from the joint discrete solve",
-    inputsForbidden: "Global CKM-fit residual absorbed into λ_C",
+    output: "sin²θ₁₂  (solar angle)",
+    inputsAllowed: "The seed φ₀ and the glue norm q(A₃) = 3/4 (seam misalignment ε = (3/4)φ₀)",
+    inputsForbidden: "NuFIT central value pre-loaded as input",
     freeKnobs: "0",
   },
   {
     output: "sin²θ₁₃  (reactor angle)",
-    inputsAllowed: "Retained seed φ₀ + γ = 5/6",
+    inputsAllowed: "The seed φ₀ and the carrier trace e⁻⁵ᐟ⁶ (γ = 5/6)",
     inputsForbidden: "Oscillation-fit central value pre-loaded as input",
     freeKnobs: "0",
   },
   {
-    output: "δ_CKM  (CP phase)",
-    inputsAllowed:
-      "Holonomy transport on the rigid branch; lower critical point of the cusp cubic",
-    inputsForbidden: "Adjustable CP dial in the transport sector",
+    output: "det R = 8, minors (2,3,5)",
+    inputsAllowed: "The compiler residue matrix R = R(g_car, μ₄)",
+    inputsForbidden: "Fitting R to a CKM/PMNS global fit",
     freeKnobs: "0",
   },
   {
     output: "N_Φ = 1  (Higgs index)",
-    inputsAllowed: "Compact bosonic index on the seam-even line bundle",
+    inputsAllowed: "The carrier index, N_Φ = g_car − |μ₄| = 1",
     inputsForbidden: "Observed Higgs count used as primitive input",
     freeKnobs: "0",
   },
   {
     output: "θ_eff = 0  (strong-CP null)",
     inputsAllowed:
-      "Admissibility selector P_adm = P_prim · P_sing · P_Θ, determinant-line phase",
+      "γ₅-Hermiticity, polar structure, sheet involution + reflection positivity",
     inputsForbidden: "Tuned θ-phase, hidden flavor-side cancellation",
     freeKnobs: "0",
   },
   {
-    output: "β = 0.2424°  (cosmic birefringence)",
-    inputsAllowed: "Determinant-line / Chern–Simons response, retained seed φ₀",
+    output: "M_scal = c₃^(7/2) M̄  (scalaron)",
+    inputsAllowed: "The seam power c₃⁷ = c₃^(Ω_adm − 10 b₁), exponent 7 = 48 − 41",
+    inputsForbidden: "Fitting the scalaron mass to A_s",
+    freeKnobs: "0",
+  },
+  {
+    output: "n_s, r, A_s  (inflation)",
+    inputsAllowed: "The R² attractor + the seam-fixed scalaron mass + the e-fold count N★",
+    inputsForbidden: "A free inflationary amplitude",
+    freeKnobs: "0 (amplitude) · N★ input (50–60)",
+  },
+  {
+    output: "β_rad = 0.2424°  (birefringence)",
+    inputsAllowed: "The determinant-line response, β_rad = φ₀/(4π)",
     inputsForbidden: "Calibration absorbed into the predicted angle",
     freeKnobs: "0",
   },
   {
-    output: "β_BH(r)  (achromatic dyonic intercept)",
-    inputsAllowed:
-      "Coupling 1/(256π⁴) = 16 c₃⁴ from the same admissibility data as α; geometric weights from the GRMHD source model",
-    inputsForbidden:
-      "Free coupling rescaling; spatial profile fitted to the residual map",
-    freeKnobs: "0 (coupling) · model-dependent (geometry, emission radius)",
-  },
-  {
-    output: "ξ = c₃ / φ₀  (Einstein-limit normalizer)",
-    inputsAllowed: "c₃ = 1/(8π) (Paper 1), φ₀ from the retained seed",
-    inputsForbidden: "Deriving SI G_N from two dimensionless numbers",
+    output: "Ω_b = 0.04894  (baryon density)",
+    inputsAllowed: "β_rad via Ω_b = (4π − 1)β_rad",
+    inputsForbidden: "Planck value used as primitive input",
     freeKnobs: "0",
   },
   {
-    output: "ν_a ≈ 15.764 GHz  (axion haloscope)",
-    inputsAllowed:
-      "Seam transfer, determinant-line phase, downstream cosmology budget",
+    output: "m_a ≈ 23.8 µeV  (axion DM)",
+    inputsAllowed: "f_a = M_scal/128 and the closed misalignment θ_i = 170°",
     inputsForbidden: "Coupling rescaling to fit a haloscope window",
-    freeKnobs: "0 (coupling) · model-dependent (cosmology)",
+    freeKnobs: "0 (decay-constant conjecture) · scenario-dependent (relic)",
   },
 ];
 

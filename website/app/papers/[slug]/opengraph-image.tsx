@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { papers, STATUS_META } from "@/lib/papers";
 
 export const runtime = "edge";
-export const alt = "TFPT 4.5 paper preview";
+export const alt = "TFPT 5.0 document preview";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -21,9 +21,11 @@ export default async function PaperOgImage(
   const accentByStatus: Record<string, [string, string]> = {
     orientation: ["#94a3b8", "#475569"],
     core: ["#60a5fa", "#a855f7"],
-    bridge: ["#34d399", "#14b8a6"],
-    conditional: ["#fb923c", "#ef4444"],
-    downstream: ["#f472b6", "#ec4899"],
+    synthesis: ["#34d399", "#14b8a6"],
+    audit: ["#22d3ee", "#3b82f6"],
+    frontier: ["#fb923c", "#ef4444"],
+    horizon: ["#f472b6", "#ec4899"],
+    contracts: ["#f59e0b", "#eab308"],
   };
   const [accentA, accentB] = accentByStatus[paper.status] ?? [
     "#60a5fa",
@@ -73,7 +75,7 @@ export default async function PaperOgImage(
                 color: "#f1f5f9",
               }}
             >
-              TFPT 4.5 paper series
+              TFPT 5.0 document set
             </div>
             <div
               style={{

@@ -12,17 +12,17 @@ const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://tfpt-theory.vercel.app";
 
 export const metadata: Metadata = {
-  title: "TFPT in One Map — Orientation Map (Paper 0)",
+  title: "TFPT in One Map — The Compiler Closure (Introduction)",
   description:
-    "The TFPT 4.5 orientation map. What Topological Fixed-Point Theory claims, what it does not claim, the staged reconstruction, the three decoders Y / [u_Σ]=1 / φ₀, the status matrix, the dependency map between Papers 1–6, and the recommended public reading order. By Stefan Hamann & Alessandro Rizzo.",
+    "The TFPT 5.0 reading guide. What Topological Fixed-Point Theory claims and does not claim, the compiler closure from two axioms {c₃ = 1/(8π), g_car = 5} to E₈, the two engines, the bootstrap loop, the status matrix, and the document map. By Stefan Hamann & Alessandro Rizzo.",
   keywords: [
-    "TFPT orientation",
+    "TFPT introduction",
     "TFPT in one map",
-    "Boundary polarization",
-    "Carrier rigidity",
-    "Three decoders",
-    "Status matrix",
-    "Series index",
+    "Compiler closure",
+    "E8 audit hull",
+    "Two axioms",
+    "Bootstrap loop",
+    "Status ledger",
     "Stefan Hamann",
     "Alessandro Rizzo",
     "Topological Fixed-Point Theory",
@@ -32,57 +32,57 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "article",
-    title: "TFPT in One Map — Orientation Map (Paper 0)",
+    title: "TFPT in One Map — The Compiler Closure (Introduction)",
     description:
-      "The public entry document for the TFPT 4.5 series: what is claimed at theorem level, what is downstream, the three decoders, the status matrix, and the dependency map between Papers 1–6.",
+      "The entry document for the TFPT 5.0 set: the compiler closure from two axioms to E₈, the two engines, the bootstrap loop, the status matrix, and the document map.",
     url: `${SITE_URL}/orientation`,
     siteName: "TFPT — Topological Fixed-Point Theory",
     locale: "en_US",
-    publishedTime: "2026-04-27T00:00:00.000Z",
+    publishedTime: "2026-06-08T00:00:00.000Z",
     authors: ["Stefan Hamann", "Alessandro Rizzo"],
     tags: [
       "Topological Fixed-Point Theory",
-      "Boundary polarization",
-      "Carrier rigidity",
+      "Compiler closure",
+      "E8",
       "Standard Model",
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "TFPT in One Map — Orientation Map",
+    title: "TFPT in One Map — The Compiler Closure",
     description:
-      "What TFPT claims, what it doesn't, the three decoders, and the dependency map between Papers 1–6.",
+      "What TFPT claims, what it doesn't, the two engines, the bootstrap loop, and the document map.",
   },
 };
 
 const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "ScholarlyArticle",
-  headline: "TFPT in One Map — Orientation Map (Paper 0)",
-  alternateName: "Boundary Polarization, Carrier Rigidity, and Observable Closure",
+  headline: "TFPT in One Map — The Compiler Closure (Introduction)",
+  alternateName: "Reading guide, status assessment, and the dependency DAG",
   url: `${SITE_URL}/orientation`,
   inLanguage: "en",
   isPartOf: {
     "@type": "PublicationIssue",
     issueNumber: "0",
-    name: "TFPT 4.5 paper series",
+    name: "TFPT 5.0 compiler-closure document set",
   },
   author: [
     { "@type": "Person", name: "Stefan Hamann" },
     { "@type": "Person", name: "Alessandro Rizzo" },
   ],
   abstract:
-    "The thin entry document for the TFPT 4.5 series. It states what TFPT claims, what it does not claim, how the closed branch is organized, and where each load-bearing argument is isolated in the paper sequence.",
+    "The entry document for the TFPT 5.0 set. It states what TFPT claims and does not claim, the compiler closure from two axioms to E₈, the two engines, the bootstrap loop, and where each load-bearing argument is isolated in the document set.",
   about: [
-    "Boundary polarization",
+    "Compiler closure",
     "Topological Fixed-Point Theory",
-    "Carrier rigidity",
+    "E8 audit hull",
     "Standard Model",
     "Status discipline",
   ],
   encoding: {
     "@type": "MediaObject",
-    contentUrl: `${SITE_URL}/papers/00_orientation_note.pdf`,
+    contentUrl: `${SITE_URL}/papers/introduction.pdf`,
     encodingFormat: "application/pdf",
   },
 };

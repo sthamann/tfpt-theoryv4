@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "TFPT — Topological Fixed-Point Theory",
     short_name: "TFPT",
     description:
-      "A boundary-polarized spectral framework that derives the Standard-Model packet, α, CKM, PMNS, and downstream cosmology from a one-sided boundary datum.",
+      "A discrete compiler that builds E₈ from two axioms {c₃ = 1/(8π), g_car = 5} and reads off the Standard Model, α, the flavor sector, and the scale grammar.",
     start_url: "/",
     display: "standalone",
     background_color: "#06091a",

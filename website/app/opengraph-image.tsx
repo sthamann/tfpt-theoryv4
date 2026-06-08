@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 export const alt =
-  "TFPT — Topological Fixed-Point Theory: Boundary polarization, carrier rigidity, and observable closure.";
+  "TFPT — Topological Fixed-Point Theory: two axioms, one compiler, the Standard Model derived.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -142,7 +142,7 @@ export default function OpengraphImage() {
                 opacity: 0.8,
               }}
             />
-            TFPT 4.5 paper series · 2026
+            TFPT 5.0 · the compiler closure · 2026
           </div>
           <div
             style={{
@@ -160,7 +160,7 @@ export default function OpengraphImage() {
               gap: 22,
             }}
           >
-            <span style={{ display: "flex" }}>One</span>
+            <span style={{ display: "flex" }}>Two axioms.</span>
             <span
               style={{
                 display: "flex",
@@ -170,7 +170,7 @@ export default function OpengraphImage() {
                 color: "transparent",
               }}
             >
-              boundary datum.
+              One compiler.
             </span>
           </div>
           <div
@@ -185,7 +185,7 @@ export default function OpengraphImage() {
               marginTop: 8,
             }}
           >
-            The whole Standard Model.
+            The Standard Model, derived.
           </div>
           <div
             style={{
@@ -197,7 +197,7 @@ export default function OpengraphImage() {
               display: "flex",
             }}
           >
-            Derives the Standard-Model packet, the fine-structure constant 1/137.0360, the Cabibbo angle, the PMNS matrix, and strong-CP closure — with no fitted constants.
+            From c₃ = 1/(8π) and g_car = 5: the gauge group, three families, α⁻¹ = 137.0359992, and the flavor sector. 20 falsifiable predictions, zero fitted constants.
           </div>
           <div
             style={{

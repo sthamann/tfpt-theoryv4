@@ -4,9 +4,6 @@ import { papers } from "@/lib/papers";
 import { PaperSection } from "./PaperSection";
 import { CarrierVisualization } from "./CarrierVisualization";
 import { AlphaVisualization } from "./AlphaVisualization";
-import { TransportPole } from "./TransportPole";
-import { CosmologyTimeline } from "./CosmologyTimeline";
-import { SelectorDynamicsSwimlane } from "./SelectorDynamicsSwimlane";
 import { SectionHeader } from "./SectionHeader";
 
 export function PapersSection() {
@@ -18,9 +15,9 @@ export function PapersSection() {
     >
       <div className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
         <SectionHeader
-          eyebrow="The paper series"
-          title="Six technical papers, one orientation map"
-          description="The TFPT 4.5 series is split by burden of proof. Six technical papers carry the staged reconstruction — primitive kernel, carrier theorem, precision readout, conditional QFT closure, dimensionless metrology, and downstream cosmology — each with explicit inputs, contributions, exclusions, and falsification surface. Paper 0 is the orientation map and dependency overview; it does not prove the theory."
+          eyebrow="The document set"
+          title="Five core documents plus three companions"
+          description="The whole development consolidates into eight documents. The introduction is the reading guide; tfpt_1–4 carry the architecture, the Standard Model, the E₈ audit and the honest frontier; and three companions — Appendix H (horizon unit system), the Origin Theory synthesis, and the research contracts — sit alongside. Each opens with its inputs, contribution, what it does not claim, and its falsification surface."
         />
       </div>
 
@@ -29,25 +26,14 @@ export function PapersSection() {
         .map((p) => (
           <div key={p.id}>
             <PaperSection paper={p} />
+            {p.number === 1 && (
+              <div className="mx-auto mb-16 max-w-7xl px-4 sm:px-6 lg:px-8">
+                <AlphaVisualization />
+              </div>
+            )}
             {p.number === 2 && (
               <div className="mx-auto mb-16 max-w-7xl px-4 sm:px-6 lg:px-8">
                 <CarrierVisualization />
-              </div>
-            )}
-            {p.number === 3 && (
-              <div className="mx-auto mb-16 max-w-7xl space-y-8 px-4 sm:px-6 lg:px-8">
-                <AlphaVisualization />
-                <TransportPole />
-              </div>
-            )}
-            {p.number === 4 && (
-              <div className="mx-auto mb-16 max-w-7xl px-4 sm:px-6 lg:px-8">
-                <SelectorDynamicsSwimlane />
-              </div>
-            )}
-            {p.number === 6 && (
-              <div className="mx-auto mb-16 max-w-7xl px-4 sm:px-6 lg:px-8">
-                <CosmologyTimeline />
               </div>
             )}
           </div>

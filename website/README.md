@@ -1,6 +1,6 @@
 # TFPT — Topological Fixed-Point Theory · Website
 
-Modern, accessible, SEO-optimized presentation of the **TFPT 4.5 paper series** — boundary polarization, carrier rigidity, and observable closure — by Stefan Hamann & Alessandro Rizzo.
+Modern, accessible, SEO-optimized presentation of the **TFPT 5.0 compiler closure** — two axioms {c₃ = 1/(8π), g_car = 5} build E₈ and read off the Standard Model, the constants and the scale grammar — by Stefan Hamann & Alessandro Rizzo.
 
 Built with **Next.js 16**, **Tailwind CSS v4**, **TypeScript**, **Motion**, and **KaTeX** for math rendering. Designed for one-click **Vercel** deployment.
 
@@ -34,34 +34,33 @@ npm run start   # serve production build
 website/
 ├── app/
 │   ├── layout.tsx        Root layout with SEO + JSON-LD
-│   ├── page.tsx          Home (Hero → Overview → Chain → Papers → Predictions → Downloads)
+│   ├── page.tsx          Home (Hero → Overview → Pipeline → Documents → Predictions → Downloads)
 │   ├── robots.ts         /robots.txt
 │   ├── sitemap.ts        /sitemap.xml
 │   └── globals.css       Tailwind v4 + design tokens
 ├── components/
 │   ├── Navbar.tsx                Sticky navigation, mobile menu
 │   ├── Footer.tsx                Site footer with downloads
-│   ├── Hero.tsx                  Hero with animated chain
-│   ├── Overview.tsx              Four pillars + carrier theorem + α closure
-│   ├── ReconstructionChain.tsx   The 7-layer staged reconstruction
-│   ├── PapersSection.tsx         Wrapper for the 6 papers
-│   ├── PaperSection.tsx          Single paper card with highlights
-│   ├── CarrierVisualization.tsx  3+2 split + spinor packet table (Paper 2)
-│   ├── AlphaVisualization.tsx    α closure equation + comparison (Paper 3)
-│   ├── TransportPole.tsx         Cusp cubic with animated SVG plot (Paper 3)
-│   ├── CosmologyTimeline.tsx     CMB Stage 1/2 + axion (Paper 6)
-│   ├── PredictionsSection.tsx    All 17 predictions + filters
+│   ├── Hero.tsx                  Hero with the compiler map + 6-frame unpacking
+│   ├── Overview.tsx              Four pillars + μ₄ glue + α closure + claim stack
+│   ├── ReconstructionChain.tsx   The compiler pipeline / dependency DAG
+│   ├── PapersSection.tsx         Wrapper for the 8 documents
+│   ├── PaperSection.tsx          Single document card with highlights
+│   ├── CarrierVisualization.tsx  3+2 carrier → D₅ spinor + SM packet (Doc 2)
+│   ├── AlphaVisualization.tsx    EM fixed point F_U(1)(α)=0 + no-knobs audit (Doc 1)
+│   ├── PredictionsSection.tsx    The prediction surface + filters
 │   ├── PredictionCard.tsx        Single prediction card
-│   ├── DownloadsSection.tsx      All-paper downloads
+│   ├── DownloadsSection.tsx      All-document downloads + reproducibility
 │   ├── Math.tsx                  KaTeX wrapper
 │   └── SectionHeader.tsx
 ├── lib/
-│   ├── papers.ts          Paper metadata, abstracts, highlights, formulas
-│   ├── predictions.ts     17 predictions with status, kill criteria, formulas
+│   ├── papers.ts          Document metadata, abstracts, highlights, formulas
+│   ├── predictions.ts     Predictions with status markers, kill criteria, formulas
+│   ├── glossary.ts        Inline glossary vocabulary
+│   ├── release.ts         PDF version / size / SHA-256 metadata
 │   └── utils.ts
 ├── public/
-│   ├── papers/            All 6 paper PDFs + companion + theory map + audit
-│   ├── predictions/       All 16 prediction PDFs + two-page summary
+│   ├── papers/            All 8 document PDFs (introduction + tfpt_1–4 + horizon + origin + contracts)
 │   └── favicon.svg
 ├── vercel.json            Deployment config
 ├── next.config.ts
@@ -94,9 +93,9 @@ The site is fully static after build (`○ (Static) prerendered as static conten
 
 ## Content & data
 
-All paper and prediction content is read from `lib/papers.ts` and `lib/predictions.ts`. To update text, formulas, target values, or add a new prediction, edit those files — no other change is required.
+All document and prediction content is read from `lib/papers.ts` and `lib/predictions.ts`. To update text, formulas, target values, or add a new prediction, edit those files — no other change is required.
 
-PDFs in `public/papers/` and `public/predictions/` are mirrors of the corresponding `tfpt-45/` directory. Replace them in place to update the downloadable artifacts.
+PDFs in `public/papers/` are mirrors of the eight active root documents (`introduction.tex`, `tfpt_1`–`tfpt_4`, `tfpt_horizon_readouts`, `origin_theory`, `tfpt_research_contracts`). Replace them in place and run `npm run release:write` to refresh the size + SHA-256 metadata in `lib/release.ts`.
 
 ## Accessibility & SEO
 

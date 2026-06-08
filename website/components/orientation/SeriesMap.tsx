@@ -17,9 +17,9 @@ export function SeriesMap() {
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
-          eyebrow="Series map"
-          title="Six technical papers, one orientation map"
-          description="The recommended public order is Paper 0 (orientation map), then Paper 2 (visible core result), then Paper 1 (formal foundation), Paper 3 (precision), Paper 4 (analytic closure), Paper 5 (metrology), and finally Paper 6 (downstream cosmology). The mathematical dependency order is Paper 1 → 2 → 3 → 4 → 5 → 6."
+          eyebrow="Document map"
+          title="Four core documents plus three companions"
+          description="The reviewer path is the architecture and the two axioms (Doc 1), the E₈ glue and the α fixed point (Doc 1), the Standard Model (Doc 2), the E₈ audit and bootstrap (Doc 3), and the honest frontier (Doc 4). Appendix H (horizon), the Origin Theory synthesis, and the research contracts sit alongside."
         />
 
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -45,7 +45,7 @@ export function SeriesMap() {
                   <div className="flex flex-1 flex-col p-6">
                     <div className="flex flex-wrap items-center gap-2">
                       <span className="rounded-full border border-slate-600/40 bg-slate-900/50 px-2.5 py-0.5 font-mono text-[10px] font-semibold uppercase tracking-widest text-slate-300">
-                        Paper {p.number}
+                        Doc {p.number}
                       </span>
                       <span
                         className={cn(

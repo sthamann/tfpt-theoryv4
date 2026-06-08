@@ -81,6 +81,7 @@ MODULES = [
     ("v71_simple_r_bridge", "SIMPLE R-bridge (gate #3): quark RATIOS are integer Plucker readouts of R (det=rank E8=8) and Q (det=N_fam=3); selector stratum derived (v69) => ratios closed combinatorially (v49), NO monodromy; residual U_point=absolute norm=anchor"),
     ("v72_q_det_from_cusp", "det Q = N_fam DERIVED from the cusp class (Alessandro Q-residual): cusp weights {0,1/3,2/3} have denominator 3=N_fam (same data as Spec Q_+=diag(1,2,3)); det Q=|coker Q|=cusp-class order=N_fam; coker Q=Z/N_fam = triality deck group => not an independent lattice input"),
     ("v73_k_c3_half", "k=c3/2 FORCED (Alessandro central target): the dimensionless seam-area coefficient k=c3/2=(1/2)x(1/(|Z2|*2pi*chi(S2))) = variational factor [I] x Gauss-Bonnet topology of S2 slice [I/L], both cutoff-independent; Fursaev-Solodukhin => S=A/4; ONLY the absolute 4D Newton scale (Lambda^2*f2, v68) stays the irreducible dimensionful anchor"),
+    ("v74_compiler_micro_lemmas", "compiler micro-lemmas (review synthesis): spine quotient ladder (2/3,3/4,4/5,5/4,4/3 = adjacent quotients of spine (2,3,4,5)); K+xQ pencil DIFFERENCES (2,16,48)=(|Z2|,dim S+,Omega_adm)=sheet->1gen->3gens; anchor QF a^TKa-1^TK1=41-25=16=dim S+ (EM budget = mass volume + one generation); solar dual anchor L=R+6*1e1^T with a^T R^-1.1=0 => Sherman-Morrison rank-one invariance (TBM stable)"),
 ]
 
 

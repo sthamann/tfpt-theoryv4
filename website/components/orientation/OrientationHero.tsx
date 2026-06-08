@@ -6,8 +6,8 @@ import { ArrowLeft, Download, FileText, Sigma } from "lucide-react";
 import { Math } from "@/components/Math";
 import { trackPdfInteraction } from "@/lib/track";
 
-const ORIENTATION_PDF = "/papers/00_orientation_note.pdf";
-const ORIENTATION_TITLE = "TFPT in One Map (Paper 0)";
+const ORIENTATION_PDF = "/papers/introduction.pdf";
+const ORIENTATION_TITLE = "The Compiler Closure of TFPT (Introduction)";
 
 export function OrientationHero() {
   return (
@@ -46,7 +46,7 @@ export function OrientationHero() {
         >
           <span className="inline-flex items-center gap-2 rounded-full border border-blue-400/20 bg-blue-500/10 px-4 py-1.5 text-xs font-medium tracking-wider text-blue-200">
             <Sigma size={14} className="opacity-80" />
-            <span className="uppercase">Paper 0 · Orientation Map</span>
+            <span className="uppercase">Introduction · Reading guide</span>
           </span>
 
           <h1 className="mt-6 font-serif text-4xl font-semibold leading-[1.05] text-slate-50 sm:text-5xl md:text-6xl">
@@ -54,16 +54,17 @@ export function OrientationHero() {
           </h1>
 
           <p className="mt-2 font-serif text-xl text-slate-400 sm:text-2xl">
-            Boundary polarization, carrier rigidity, and observable closure.
+            Two axioms, one discrete compiler, the Standard Model.
           </p>
 
           <p className="mt-6 max-w-3xl text-base leading-relaxed text-slate-300 sm:text-lg">
-            The thin entry document for the TFPT 4.5 series. It does not attempt to
-            prove the full theory. Its purpose is to state{" "}
+            The entry document for the TFPT 5.0 set. It does not introduce new
+            physics — it is the reading guide. Its purpose is to state{" "}
             <span className="font-semibold text-slate-100">what TFPT claims</span>,{" "}
             <span className="font-semibold text-slate-100">what it does not claim</span>,
-            how the closed branch is organized, and where each load-bearing argument
-            is isolated in the paper sequence.
+            how the compiler closure is organized, and where each load-bearing
+            argument is isolated in the document set — every claim graded and
+            resolving to a single machine-checked ledger.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -83,7 +84,7 @@ export function OrientationHero() {
               className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-500/30 ring-1 ring-blue-400/40 transition-transform hover:scale-105 focus:scale-105"
             >
               <Download size={16} />
-              Download Paper 0 (PDF)
+              Open the introduction (PDF)
             </Link>
             <Link
               href={ORIENTATION_PDF}
@@ -123,13 +124,13 @@ export function OrientationHero() {
                 <span className="h-2.5 w-2.5 rounded-full bg-emerald-400/60" />
               </div>
               <span className="ml-2 text-xs font-mono uppercase tracking-widest text-slate-400">
-                The staged reconstruction (one-line claim)
+                The compiler closure (one-line claim)
               </span>
             </div>
             <div className="px-6 py-7 sm:px-10 sm:py-9">
               <div className="overflow-x-auto">
                 <Math block>
-                  {String.raw`\mathfrak{S}_{\min}\Rightarrow\mathcal{B}_{\min}\Rightarrow\mathfrak{T}_\partial \Rightarrow (\tau_{\mathrm{dbl}},\iota_C,P_{\mathrm{prim}},[u_\Sigma],c_3) \Rightarrow d^\star_{\mathrm{disc}}\Rightarrow P_{\mathrm{adm}}\Rightarrow \mathcal{M}_{d^\star_{\mathrm{disc}}} \Rightarrow \mathcal{Z}_{\mathrm{cl}} \Rightarrow \mathfrak{T}_\star`}
+                  {String.raw`\{c_3, g_{\mathrm{car}}\} \;\Rightarrow\; D_5 \oplus A_3 \xrightarrow{\;\mu_4\;} E_8 \;\Rightarrow\; (\text{SM},\ \text{constants},\ \text{scale grammar})`}
                 </Math>
               </div>
             </div>

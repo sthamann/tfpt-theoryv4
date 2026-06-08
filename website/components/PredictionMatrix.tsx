@@ -13,13 +13,11 @@ import { cn } from "@/lib/utils";
 import { trackPdfInteraction } from "@/lib/track";
 
 type StatusAxis =
-  | "Theorem-level null"
-  | "Physical observable"
-  | "Comparison quantity"
-  | "Cosmology comparison"
-  | "Scheme projection"
-  | "Kill test"
-  | "Out-of-sample check";
+  | "Exact identity"
+  | "Lattice theorem"
+  | "Numerical fixed point"
+  | "Conditional"
+  | "Open / not forced";
 
 type TestabilityAxis =
   | "currently testable"
@@ -41,32 +39,33 @@ const TESTABILITY_LABEL: Record<TestabilityAxis, string> = {
  */
 const TESTABILITY_BY_ID: Record<string, TestabilityAxis> = {
   "alpha-em": "currently testable",
-  "alpha-mz": "currently testable",
   "lambda-c": "currently testable",
-  "ckm-phase": "currently testable",
-  "rare-kaons": "currently testable",
+  "flavor-invariants": "structural",
+  koide: "long-term",
+  theta12: "currently testable",
   theta13: "currently testable",
-  pmns: "near-term",
-  "neutrino-sum": "near-term",
-  "0vbb": "long-term",
-  "strong-cp": "structural",
-  birefringence: "currently testable",
-  "eht-achromatic": "near-term",
-  axion: "near-term",
-  "eta-b": "long-term",
+  theta23: "near-term",
+  "neutrino-ordering": "long-term",
+  "strong-cp": "currently testable",
+  mpme: "structural",
+  ns: "currently testable",
+  "r-tensor": "near-term",
+  "as-amplitude": "currently testable",
+  scalaron: "structural",
   "omega-b": "currently testable",
+  "eta-b": "long-term",
+  hubble: "currently testable",
   "no-second-higgs": "structural",
-  pi0: "currently testable",
+  birefringence: "currently testable",
+  axion: "near-term",
 };
 
 const STATUS_AXIS: StatusAxis[] = [
-  "Theorem-level null",
-  "Physical observable",
-  "Comparison quantity",
-  "Cosmology comparison",
-  "Scheme projection",
-  "Out-of-sample check",
-  "Kill test",
+  "Exact identity",
+  "Lattice theorem",
+  "Numerical fixed point",
+  "Conditional",
+  "Open / not forced",
 ];
 
 const TESTABILITY_AXIS: TestabilityAxis[] = [

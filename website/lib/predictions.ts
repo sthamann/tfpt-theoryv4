@@ -1,29 +1,29 @@
 export type DependencyClass =
   | "EM closure"
-  | "Flavor readout"
-  | "Neutrino closure"
-  | "Determinant response"
-  | "Determinant response (local)"
+  | "Flavor / residue matrix"
+  | "Neutrino transport"
+  | "Scale grammar"
+  | "Inflation (R²)"
   | "Strong-CP closure"
+  | "Horizon / determinant line"
   | "Carrier / Higgs index"
-  | "Cosmology readout"
-  | "Hadronic readout"
-  | "Scheme projection";
-
-export type PredictionStatus =
-  | "Theorem-level null"
-  | "Physical observable"
-  | "Comparison quantity"
-  | "Cosmology comparison"
-  | "Scheme projection"
-  | "Kill test"
-  | "Out-of-sample check";
+  | "Frontier interface";
 
 /**
- * Whether the dedicated PDF behind the card actually exists. Defaults to
- * "available" when omitted. Used by the prediction card to render a
- * differentiated CTA (Download paper / Paper forthcoming / View note /
- * Coming soon) so a button never silently links to a missing file.
+ * Status markers follow the TFPT 5.0 ledger grades:
+ *   [I] exact identity · [L] Lie/lattice theorem · [N] numerical fixed point
+ *   [P] physical/conditional · [A] axiom/open.
+ */
+export type PredictionStatus =
+  | "Exact identity"
+  | "Lattice theorem"
+  | "Numerical fixed point"
+  | "Conditional"
+  | "Open / not forced";
+
+/**
+ * Whether the linked PDF behind the card exists. Defaults to "available".
+ * Every prediction now links to the source document that derives it.
  */
 export type LinkStatus = "available" | "forthcoming" | "note" | "soon";
 
@@ -32,7 +32,7 @@ export const LINK_STATUS_META: Record<
   { label: string; tone: string; disabled: boolean }
 > = {
   available: {
-    label: "Download dedicated paper",
+    label: "Open the source document",
     tone: "text-blue-300 hover:text-blue-200",
     disabled: false,
   },
@@ -67,11 +67,6 @@ export interface Prediction {
   killTest: string;
   derivationFormulas: string[];
   pdf: string;
-  /**
-   * Link state for the CTA on the prediction card. Defaults to "available"
-   * when omitted. Use "forthcoming" / "note" / "soon" when the PDF does not
-   * yet exist or only a short note is published.
-   */
   linkStatus?: LinkStatus;
   description: string;
   category:
@@ -85,24 +80,22 @@ export interface Prediction {
 }
 
 export const STATUS_BADGE: Record<PredictionStatus, { color: string; bg: string }> = {
-  "Theorem-level null": { color: "text-blue-200", bg: "bg-blue-500/15 ring-blue-400/30" },
-  "Physical observable": {
+  "Exact identity": { color: "text-blue-200", bg: "bg-blue-500/15 ring-blue-400/30" },
+  "Lattice theorem": {
+    color: "text-cyan-200",
+    bg: "bg-cyan-500/15 ring-cyan-400/30",
+  },
+  "Numerical fixed point": {
     color: "text-emerald-200",
     bg: "bg-emerald-500/15 ring-emerald-400/30",
   },
-  "Comparison quantity": {
+  Conditional: {
     color: "text-amber-200",
     bg: "bg-amber-500/15 ring-amber-400/30",
   },
-  "Cosmology comparison": {
-    color: "text-fuchsia-200",
-    bg: "bg-fuchsia-500/15 ring-fuchsia-400/30",
-  },
-  "Scheme projection": { color: "text-sky-200", bg: "bg-sky-500/15 ring-sky-400/30" },
-  "Kill test": { color: "text-rose-200", bg: "bg-rose-500/15 ring-rose-400/30" },
-  "Out-of-sample check": {
-    color: "text-violet-200",
-    bg: "bg-violet-500/15 ring-violet-400/30",
+  "Open / not forced": {
+    color: "text-rose-200",
+    bg: "bg-rose-500/15 ring-rose-400/30",
   },
 };
 
@@ -114,10 +107,10 @@ export const CATEGORY_META: Record<
   Flavor: { label: "Flavor / CKM", color: "from-emerald-500/20 to-teal-500/20" },
   Neutrino: { label: "Neutrino sector", color: "from-violet-500/20 to-purple-500/20" },
   "QCD/EDM": { label: "QCD / EDM", color: "from-orange-500/20 to-amber-500/20" },
-  Cosmology: { label: "Cosmology", color: "from-fuchsia-500/20 to-pink-500/20" },
+  Cosmology: { label: "Cosmology / inflation", color: "from-fuchsia-500/20 to-pink-500/20" },
   Higgs: { label: "Higgs sector", color: "from-rose-500/20 to-red-500/20" },
   Astrophysics: {
-    label: "Astrophysics / Horizon",
+    label: "Astrophysics / horizon",
     color: "from-indigo-500/20 to-sky-500/20",
   },
 };
@@ -126,193 +119,169 @@ export const predictions: Prediction[] = [
   {
     id: "alpha-em",
     slug: "alpha-em-closure",
-    title: "Exact Electromagnetic Closure — Fine-Structure Constant",
+    title: "Fine-Structure Constant — Electromagnetic Fixed Point",
     shortTitle: "α⁻¹(0)",
     target: "α⁻¹(0) = 137.035 999 216 8…",
     targetLatex: "\\alpha^{-1}(0) = 137.035\\,999\\,216\\,8\\ldots",
     numericValue: "137.035999216",
-    status: "Physical observable",
+    status: "Exact identity",
     dependencyClass: "EM closure",
     killTest:
-      "Failure of the self-consistent root equation or a stable precision mismatch outside the stated interface uncertainty.",
+      "Failure of the unique-root equation F_U(1)(α) = 0, a second admissible root, or a stable mismatch outside the stated interface uncertainty.",
     derivationFormulas: [
-      "\\varphi_{\\mathrm{seam}}(\\alpha) = \\frac{1}{6\\pi} + \\frac{3 e^{-2\\alpha}}{256\\pi^4}\\!\\left(1-\\frac{3 e^{-2\\alpha}}{256\\pi^4}\\right)^{-5/4}",
-      "\\begin{aligned} F_{U(1)}(\\alpha) \\;&=\\; \\alpha^3 \\;-\\; 2 c_3^3\\,\\alpha^2 \\\\ &\\quad -\\; \\tfrac{4}{5} c_3^6 \\!\\left(\\textstyle\\sum_{f,j} L_{f,j}^{\\mathrm{diag}} + N_\\Phi\\right) \\log \\!\\left(\\varphi_{\\mathrm{seam}}(\\alpha)^{-1}\\right) \\end{aligned}",
-      "F_{U(1)}(\\alpha_\\star) = 0 \\Rightarrow \\alpha_\\star^{-1} = 137.035\\,999\\,216\\,8\\ldots",
+      "F_{U(1)}(\\alpha) = \\alpha^3 - 2c_3^3\\alpha^2 - \\tfrac{4}{5}c_3^6\\Big(\\textstyle\\sum_{f,j}L_{f,j} + N_\\Phi\\Big)\\log\\tfrac{1}{\\varphi_{\\mathrm{seam}}(\\alpha)} = 0",
+      "\\textstyle\\sum_{f,j}L_{f,j} + N_\\Phi = 41 = 10\\,b_1",
+      "\\alpha^{-1} = 137.035\\,999\\,216\\,8\\ldots",
     ],
-    pdf: "/predictions/tfpt_prediction_alpha_em_closure.pdf",
+    pdf: "/papers/tfpt_1_architecture_e8.pdf",
     description:
-      "The fine-structure constant emerges as the unique positive root of the carrier-form electromagnetic closure equation with the exact seam generating function — not as a fit.",
-    category: "Coupling",
-  },
-  {
-    id: "alpha-mz",
-    slug: "alpha-mz-scheme",
-    title: "Running α at the Z-Pole",
-    shortTitle: "α̅⁽⁵⁾(M_Z)⁻¹",
-    target: "α̅⁽⁵⁾(M_Z)⁻¹ = 127.9405",
-    targetLatex: "\\bar\\alpha^{(5)}(M_Z)^{-1} = 127.9405",
-    numericValue: "127.9405",
-    status: "Scheme projection",
-    dependencyClass: "Scheme projection",
-    killTest:
-      "Persistent mismatch after declared Standard-Model threshold map.",
-    derivationFormulas: [
-      "\\alpha^{-1}(0) = 137.035\\,999\\,216\\,8\\ldots",
-      "\\bar\\alpha^{(5)}(M_Z)^{-1} = \\mathcal{R}_{\\mathrm{SM}}[\\alpha(0)] = 127.9405",
-    ],
-    pdf: "/predictions/tfpt_prediction_alpha_mz_scheme.pdf",
-    description:
-      "Scheme projection of α(0) through the declared Standard-Model threshold map. Not an independently fitted observable.",
+      "The fine-structure constant is the unique positive root of the parameter-free cubic built from c₃ and the abelian coefficient 41 = 10 b₁. Existence and uniqueness are proved; the value lands 2.9×10⁻¹⁰ (1.9σ) from CODATA-2022.",
     category: "Coupling",
   },
   {
     id: "lambda-c",
-    slug: "lambda-c-cabibbo",
-    title: "Cabibbo Angle — Retained Flavor Branch",
+    slug: "cabibbo-angle",
+    title: "Cabibbo Angle — Retained Seed",
     shortTitle: "λ_C",
     target: "λ_C = 0.22438",
-    targetLatex: "\\lambda_C = 0.22438",
+    targetLatex: "\\lambda_C = \\sqrt{\\varphi_0(1-\\varphi_0)} = 0.22438",
     numericValue: "0.22438",
-    status: "Physical observable",
-    dependencyClass: "Flavor readout",
+    status: "Exact identity",
+    dependencyClass: "Flavor / residue matrix",
     killTest: "Stable CKM global-fit mismatch after the declared comparison map.",
     derivationFormulas: [
       "\\varphi_0 = \\frac{1}{6\\pi} + \\frac{3}{256\\pi^4}",
       "\\lambda_C = \\sqrt{\\varphi_0(1-\\varphi_0)} = 0.22438",
-      "\\varphi_0 = \\frac{1 - \\sqrt{1 - 4\\lambda_C^2}}{2}",
     ],
-    pdf: "/predictions/tfpt_prediction_lambda_c_cabibbo.pdf",
+    pdf: "/papers/tfpt_2_standard_model.pdf",
     description:
-      "Physical observable from the hard holonomy closure on the rigid flavor branch, with the retained UV identity as a compact shadow.",
+      "The Cabibbo angle is the carrier base of the φ₀-ladder — the same seed that fixes the reactor angle and the birefringence amplitude.",
     category: "Flavor",
   },
   {
-    id: "ckm-phase",
-    slug: "ckm-phase",
-    title: "CKM Phase — Holonomy Transport",
-    shortTitle: "δ_CKM",
-    target: "δ_CKM = 1.198 rad",
-    targetLatex: "\\delta_{\\mathrm{CKM}} = 1.198\\,\\text{rad}",
-    numericValue: "1.198",
-    unit: "rad",
-    status: "Comparison quantity",
-    dependencyClass: "Flavor readout",
-    killTest: "Stable global-flavor-fit exclusion at ≥ 3σ.",
-    derivationFormulas: [
-      "V_{\\mathrm{CKM}} = U_{u,L}^\\dagger U_{d,L}",
-      "\\delta_{\\mathrm{CKM}} = 1.198\\,\\text{rad}",
-    ],
-    pdf: "/predictions/tfpt_prediction_ckm_phase.pdf",
-    description:
-      "CKM phase from exact holonomy transport on the rigid branch, not from an adjustable CP dial.",
-    category: "Flavor",
-  },
-  {
-    id: "rare-kaons",
-    slug: "rare-kaons",
-    title: "Rare-Kaon Corridor",
-    shortTitle: "K → π ν ν̄",
-    target: "BR(K⁺) = 9.40·10⁻¹¹, BR(K_L) = 3.47·10⁻¹¹",
-    targetLatex:
-      "\\mathrm{BR}(K^+\\!\\to\\pi^+\\nu\\bar\\nu) = 9.40\\!\\times\\!10^{-11}",
-    numericValue: "9.40e-11 / 3.47e-11",
-    status: "Comparison quantity",
-    dependencyClass: "Flavor readout",
+    id: "flavor-invariants",
+    slug: "flavor-invariants",
+    title: "Flavor Residue Invariants",
+    shortTitle: "det R, χ_R",
+    target: "det R = 8, minors (2,3,5), χ_R = t³ − 9t² + 10t − 8",
+    targetLatex: "\\det R = 8,\\ \\ \\mathrm{minors}=(2,3,5),\\ \\ \\chi_R = t^3 - 9t^2 + 10t - 8",
+    numericValue: "8",
+    status: "Exact identity",
+    dependencyClass: "Flavor / residue matrix",
     killTest:
-      "K⁺ outside [7,12]·10⁻¹¹ or incompatible Grossman–Nir-plane correlation.",
+      "A future CKM/PMNS global fit that cannot be carried by a residue matrix with det 8, principal minors (2,3,5) and this characteristic polynomial.",
     derivationFormulas: [
-      "\\mathrm{BR}(K^+\\!\\to\\pi^+\\nu\\bar\\nu) = 9.40\\!\\times\\!10^{-11}",
-      "\\mathrm{BR}(K_L\\!\\to\\pi^0\\nu\\bar\\nu) = 3.47\\!\\times\\!10^{-11}",
+      "R = \\begin{pmatrix} 1 & 3 & 0 \\\\ 1 & 5 & 2 \\\\ 2 & 5 & 3 \\end{pmatrix}",
+      "\\det R = 8 = h(D_5), \\quad \\|R\\|_F^2 = 78 = \\dim E_6",
+      "\\chi_R(t) = t^3 - 9t^2 + 10t - 8",
     ],
-    pdf: "/predictions/tfpt_prediction_rare_kaons.pdf",
+    pdf: "/papers/tfpt_2_standard_model.pdf",
     description:
-      "The closed CKM point feeds into rare-kaon short-distance amplitudes, with NA62/KOTO as the comparison surface.",
+      "The flavor matrix carries only compiler numbers: determinant h(D₅) = 8, principal 2-minors (2,3,5) with product h(E₈) = 30, trace N_fam². Any future global fit must satisfy these.",
     category: "Flavor",
+  },
+  {
+    id: "koide",
+    slug: "koide-relation",
+    title: "Koide Relation — Near 2/3",
+    shortTitle: "Q_Koide",
+    target: "Q = 0.664 (target 2/3 = |ℤ₂|/N_fam)",
+    targetLatex: "Q = 0.664 \\;\\to\\; Q_\\star = \\tfrac{2}{3} = \\tfrac{|\\mathbb{Z}_2|}{N_{\\mathrm{fam}}}",
+    numericValue: "0.664",
+    status: "Conditional",
+    dependencyClass: "Frontier interface",
+    killTest:
+      "A source→pole transfer that lands far from 2/3, or a demonstration that the lepton φ₀-ladder is incompatible with the measured charged-lepton masses.",
+    derivationFormulas: [
+      "Q_{\\mathrm{TFPT}} = \\frac{\\sum_\\ell \\hat m_\\ell}{(\\sum_\\ell \\sqrt{\\hat m_\\ell})^2} = 0.66446\\ldots",
+      "Q_\\star = \\frac{|\\mathbb{Z}_2|}{N_{\\mathrm{fam}}} = \\frac{2}{3}",
+    ],
+    pdf: "/papers/tfpt_4_frontier.pdf",
+    description:
+      "The source-level Koide quotient is 0.664, 0.33% below the democratic compiler target 2/3. Near-miss, not an exact derivation — the source→pole transfer is a conjecture.",
+    category: "Flavor",
+  },
+  {
+    id: "theta12",
+    slug: "solar-angle",
+    title: "Solar Angle — Seam Misalignment",
+    shortTitle: "sin²θ₁₂",
+    target: "sin²θ₁₂ = 1/3 − φ₀/2 = 0.3067",
+    targetLatex: "\\sin^2\\theta_{12} = \\tfrac{1}{3} - \\tfrac{\\varphi_0}{2} = 0.3067",
+    numericValue: "0.3067",
+    status: "Numerical fixed point",
+    dependencyClass: "Neutrino transport",
+    killTest:
+      "A JUNO central value clearly away from 0.307 at high significance kills the seam-misalignment mechanism.",
+    derivationFormulas: [
+      "\\varepsilon = q(A_3)\\,\\varphi_0 = \\tfrac{3}{4}\\varphi_0",
+      "\\sin^2\\theta_{12} = \\tfrac{1}{3} - \\tfrac{2}{3}\\varepsilon = \\tfrac{1}{3} - \\tfrac{\\varphi_0}{2} = 0.3067",
+    ],
+    pdf: "/papers/tfpt_2_standard_model.pdf",
+    description:
+      "Previously the only open SM angle. Tri-bimaximal 1/3 plus the seam misalignment ε = (3/4)φ₀ gives 0.3067 — 0.1% from NuFIT 6.0. JUNO (data since Aug 2025) is the sharpest live test.",
+    category: "Neutrino",
   },
   {
     id: "theta13",
-    slug: "theta13-neutrino",
-    title: "Reactor Angle — Neutrino Closure",
+    slug: "reactor-angle",
+    title: "Reactor Angle — Seed × Carrier Trace",
     shortTitle: "sin²θ₁₃",
-    target: "sin²θ₁₃ = 0.02311",
-    targetLatex: "\\sin^2\\theta_{13} = 0.02311",
-    numericValue: "0.02311",
-    status: "Physical observable",
-    dependencyClass: "Neutrino closure",
+    target: "sin²θ₁₃ = φ₀ e^(−5/6) = 0.0231",
+    targetLatex: "\\sin^2\\theta_{13} = \\varphi_0\\,e^{-5/6} = 0.0231",
+    numericValue: "0.0231",
+    status: "Exact identity",
+    dependencyClass: "Neutrino transport",
     killTest: "Robust normal-ordering global-fit exclusion at the stated confidence level.",
     derivationFormulas: [
-      "\\sin^2\\theta_{13} = \\varphi_0 e^{-\\gamma}",
-      "\\varphi_0 = \\frac{1}{6\\pi} + \\frac{3}{256\\pi^4}, \\quad \\gamma = \\tfrac{5}{6}",
-      "\\sin^2\\theta_{13} = 0.02311",
+      "\\sin^2\\theta_{13} = \\varphi_0\\,e^{-5/6}",
+      "\\varphi_0 = \\frac{1}{6\\pi} + \\frac{3}{256\\pi^4}",
+      "\\sin^2\\theta_{13} = 0.0231",
     ],
-    pdf: "/predictions/tfpt_prediction_theta13_neutrino.pdf",
+    pdf: "/papers/tfpt_2_standard_model.pdf",
     description:
-      "PMNS reactor angle from neutrino closure on the closed branch, with the seed expression as a compact UV shadow.",
+      "The reactor angle is the seed times the carrier-trace factor e⁻⁵ᐟ⁶ (γ = 5/6). Daya Bay / RENO / JUNO compare; PDG 0.0220.",
     category: "Neutrino",
   },
   {
-    id: "pmns",
-    slug: "pmns-phase-octant",
-    title: "PMNS Phase and Atmospheric Octant",
-    shortTitle: "δ_CP, sin²θ₂₃",
-    target: "δ_CP = 240°, sin²θ₂₃ = 0.4557",
-    targetLatex: "\\delta_{\\mathrm{CP}} = 240^\\circ, \\quad \\sin^2\\theta_{23} = 0.4557",
-    numericValue: "240° / 0.4557",
-    status: "Comparison quantity",
-    dependencyClass: "Neutrino closure",
-    killTest: "Exclusion of 240° or lower octant at ≥ 3σ.",
+    id: "theta23",
+    slug: "atmospheric-octant",
+    title: "Atmospheric Angle — μτ-Symmetric Limit",
+    shortTitle: "sin²θ₂₃",
+    target: "sin²θ₂₃ ≈ 1/2 (octant not selected)",
+    targetLatex: "\\sin^2\\theta_{23} \\approx \\tfrac{1}{2}",
+    numericValue: "0.5",
+    status: "Conditional",
+    dependencyClass: "Neutrino transport",
+    killTest: "A robust off-maximal octant determination by NOvA / T2K / DUNE.",
     derivationFormulas: [
-      "U_{\\mathrm{PMNS}} = U_{e,L}^\\dagger U_{\\nu,L}",
-      "\\delta_{\\mathrm{CP}} = 240^\\circ, \\quad \\sin^2\\theta_{23} = 0.4557",
+      "\\theta_{23} = 45^\\circ \\quad (\\mu\\tau\\text{-symmetric limit})",
+      "\\delta_{\\mathrm{CP}} = \\tfrac{4\\pi}{3} = 240^\\circ",
     ],
-    pdf: "/predictions/tfpt_prediction_pmns_phase_octant.pdf",
+    pdf: "/papers/tfpt_2_standard_model.pdf",
     description:
-      "The Majorana neutrino sector is generated by the same admissible transport grammar that fixes the PMNS matrix and mass sum.",
+      "The atmospheric angle is near-maximal in the μτ-symmetric limit; the octant is not selected by the present transport. DUNE addresses the ambiguity.",
     category: "Neutrino",
   },
   {
-    id: "neutrino-sum",
-    slug: "neutrino-sum",
-    title: "Neutrino Mass Sum — Closed Branch",
-    shortTitle: "Σ m_ν",
-    target: "Σ m_ν = 5.876·10⁻² eV",
-    targetLatex: "\\Sigma m_\\nu = 5.876\\!\\times\\!10^{-2}\\,\\text{eV}",
-    numericValue: "0.05876",
-    unit: "eV",
-    status: "Physical observable",
-    dependencyClass: "Neutrino closure",
-    killTest: "Robust cosmological upper bound below the branch value.",
-    derivationFormulas: [
-      "m_{\\nu_1} = 0",
-      "m_{\\nu_2} = 8.614\\!\\times\\!10^{-3}\\,\\text{eV}",
-      "m_{\\nu_3} = 5.015\\!\\times\\!10^{-2}\\,\\text{eV}",
-      "\\Sigma m_\\nu = 5.876\\!\\times\\!10^{-2}\\,\\text{eV}",
-    ],
-    pdf: "/predictions/tfpt_prediction_neutrino_sum.pdf",
-    description:
-      "Intrinsic normal-ordering mass-sum output of the closed neutrino branch — no external oscillation inversion is used as primitive input.",
-    category: "Neutrino",
-  },
-  {
-    id: "0vbb",
-    slug: "neutrinoless-double-beta",
-    title: "Neutrinoless Double-Beta — Majorana Branch",
-    shortTitle: "m_ββ",
-    target: "m_ββ = 1.516·10⁻³ eV",
-    targetLatex: "m_{\\beta\\beta} = 1.516\\!\\times\\!10^{-3}\\,\\text{eV}",
-    numericValue: "0.001516",
-    unit: "eV",
-    status: "Comparison quantity",
-    dependencyClass: "Neutrino closure",
+    id: "neutrino-ordering",
+    slug: "neutrino-ordering",
+    title: "Mass Ordering & Majorana Branch",
+    shortTitle: "NO, m_ββ",
+    target: "Normal ordering, small m_ββ",
+    targetLatex: "\\text{normal ordering}, \\quad m_{\\beta\\beta}\\ \\text{small}",
+    numericValue: "0",
+    status: "Conditional",
+    dependencyClass: "Neutrino transport",
     killTest:
-      "Light-Majorana detection implying m_ββ ≳ 10⁻² eV.",
+      "Inverted ordering, or a large m_ββ detection, kills the Majorana branch.",
     derivationFormulas: [
-      "m_{\\beta\\beta} = 1.516\\!\\times\\!10^{-3}\\,\\text{eV}",
+      "\\text{normal ordering preferred}",
+      "\\delta_{\\mathrm{CP}} = 240^\\circ",
     ],
-    pdf: "/predictions/tfpt_prediction_neutrinoless_double_beta.pdf",
+    pdf: "/papers/tfpt_2_standard_model.pdf",
     description:
-      "Low-amplitude Majorana target generated by the same neutrino-closure package that fixes PMNS and the mass sum.",
+      "The Majorana neutrino sector prefers normal ordering with a small effective mass. LEGEND / nEXO / DUNE / KATRIN are the comparison surface.",
     category: "Neutrino",
   },
   {
@@ -320,134 +289,182 @@ export const predictions: Prediction[] = [
     slug: "strong-cp-edm-null",
     title: "Strong CP — Neutron-EDM Null",
     shortTitle: "θ_eff = 0",
-    target: "θ_eff = 0 (theorem-level null)",
+    target: "θ_eff = 0 (structural null)",
     targetLatex: "\\theta_{\\mathrm{eff}} = 0",
     numericValue: "0",
-    status: "Theorem-level null",
+    status: "Exact identity",
     dependencyClass: "Strong-CP closure",
-    killTest: "Stable nonzero hadronic EDM signal.",
+    killTest: "A solid neutron-EDM signal above the SM background falsifies the structural cancellation.",
     derivationFormulas: [
       "\\arg\\det M_u = \\arg\\det M_d = 0",
       "\\theta_{\\mathrm{eff}} = 0",
-      "\\bar\\theta = 0, \\quad F(\\theta) > F(0) \\text{ for } \\theta \\not\\equiv 0",
     ],
-    pdf: "/predictions/tfpt_prediction_strong_cp_edm_null.pdf",
+    pdf: "/papers/tfpt_2_standard_model.pdf",
     description:
-      "Consequence of determinant-line closure and admissibility, not a tunable flavor-sector phase.",
+      "θ_eff = 0 follows from three structural facts (γ₅-Hermiticity, polar structure, sheet involution) plus reflection positivity — without a mass gap. PSI nEDM / SNS test it.",
     category: "QCD/EDM",
   },
   {
-    id: "birefringence",
-    slug: "birefringence-beta",
-    title: "Cosmic Birefringence — Determinant-Line Response",
-    shortTitle: "β",
-    target: "β = 0.2424°",
-    targetLatex: "\\beta = 0.2424^\\circ",
-    numericValue: "0.2424",
-    unit: "°",
-    status: "Physical observable",
-    dependencyClass: "Determinant response",
+    id: "mpme",
+    slug: "proton-electron-ratio",
+    title: "Proton/Electron Ratio — Not a Compiler Power",
+    shortTitle: "m_p/m_e",
+    target: "m_p/m_e = 1836.15 (explicitly not claimed)",
+    targetLatex: "\\frac{m_p}{m_e} = 1836.15",
+    numericValue: "1836.15",
+    status: "Open / not forced",
+    dependencyClass: "Frontier interface",
     killTest:
-      "Externally calibrated β = 0 within ±0.05°.",
+      "Only fails if mis-asserted as a compiler power; there is no clean φ₀ power for the QCD-confinement / EW-Yukawa ratio.",
     derivationFormulas: [
-      "\\beta_{\\mathrm{rad}} = \\frac{\\varphi_0}{4\\pi}",
-      "\\varphi_0 = \\frac{1}{6\\pi} + \\frac{3}{256\\pi^4}",
-      "\\beta = 0.2424^\\circ",
+      "\\frac{m_p}{m_e} = \\frac{\\text{QCD confinement scale}}{\\text{EW electron Yukawa}}",
+      "1/(\\varphi_0)^2 = 353.7, \\quad 1/(\\varphi_0)^3 = 6651 \\;\\text{bracket}\\; 1836",
     ],
-    pdf: "/predictions/tfpt_prediction_birefringence_beta.pdf",
+    pdf: "/papers/tfpt_4_frontier.pdf",
     description:
-      "Determinant-line / Chern–Simons response — sectorized away from the old seed quartet.",
+      "Listed for honesty: m_p/m_e is a cross-sector ratio, computable at scheme level but genuinely not a compiler power. It is deliberately not forced onto the ladder.",
     category: "QCD/EDM",
   },
   {
-    id: "eht-achromatic",
-    slug: "eht-achromatic-intercept",
-    title:
-      "Achromatic Residual Polarization Intercept — EHT/ngEHT Test",
-    shortTitle: "β_BH(r)",
-    target:
-      "β_BH(r) ∼ Q_e^eff Q_m^eff / (256π⁴ r²)  — structured, achromatic",
-    targetLatex:
-      "\\beta_{\\mathrm{BH}}(r) \\sim \\frac{Q_e^{\\mathrm{eff}}\\,Q_m^{\\mathrm{eff}}}{256\\pi^4\\,r^2} = 16 c_3^4 \\frac{Q_e^{\\mathrm{eff}}\\,Q_m^{\\mathrm{eff}}}{r^2}",
-    numericValue: "16 c_3^4",
-    status: "Physical observable",
-    dependencyClass: "Determinant response (local)",
-    killTest:
-      "Calibrated achromatic residual intercept χ₀^res(x) statistically consistent with zero across the horizon-scale image after honest GRMHD subtraction, or no 1/r² profile, or no sign flip under E·B reversal, or measurable λ² dependence.",
+    id: "ns",
+    slug: "spectral-tilt",
+    title: "Scalar Tilt — R² Attractor",
+    shortTitle: "n_s",
+    target: "n_s = 1 − 2/N★ = 0.965",
+    targetLatex: "n_s = 1 - \\tfrac{2}{N_\\star} = 0.965",
+    numericValue: "0.965",
+    status: "Conditional",
+    dependencyClass: "Inflation (R²)",
+    killTest: "A robust n_s far from the Starobinsky line on the same R² attractor.",
     derivationFormulas: [
-      "\\chi(x,\\lambda^2) = \\chi_0(x) + \\mathrm{RM}(x)\\,\\lambda^2 + \\epsilon",
-      "\\chi_0^{\\mathrm{res}}(x) = \\chi_0^{\\mathrm{obs}}(x) - \\chi_0^{\\mathrm{GRMHD}}(x)",
-      "\\beta_{\\mathrm{BH}}(r) = \\frac{Q_e^{\\mathrm{eff}}\\,Q_m^{\\mathrm{eff}}}{256\\pi^4\\,r^2} = \\frac{\\delta_{\\mathrm{top}}}{3}\\frac{Q_e^{\\mathrm{eff}}\\,Q_m^{\\mathrm{eff}}}{r^2}",
+      "n_s = 1 - \\tfrac{2}{N_\\star}, \\qquad N_\\star \\simeq 55\\text{–}57",
+      "n_s = 0.965",
     ],
-    pdf: "/predictions/tfpt_prediction_eht_achromatic_intercept.pdf",
+    pdf: "/papers/tfpt_1_architecture_e8.pdf",
     description:
-      "Local dyonic projection of the determinant-line response. The TFPT coupling 1/(256π⁴) = 16c₃⁴ is fixed by the same branch data that fixes α and β_rad; only the geometric weights and emission radius are model-dependent. Three independent nulls (frequency, 1/r² profile, E·B sign flip) must be passed simultaneously.",
-    category: "Astrophysics",
-  },
-  {
-    id: "axion",
-    slug: "axion-haloscope-window",
-    title: "Axion Haloscope Window",
-    shortTitle: "m_a, ν_a",
-    target: "m_a ≈ 65.19 µeV, ν_a ≈ 15.764 GHz",
-    targetLatex:
-      "m_a \\simeq 65.19\\,\\mu\\text{eV}, \\quad \\nu_a \\simeq 15.764\\,\\text{GHz}",
-    numericValue: "15.764",
-    unit: "GHz",
-    status: "Comparison quantity",
-    dependencyClass: "Cosmology readout",
-    killTest:
-      "Exclusion in 15.764 GHz ± 50 MHz at the coupled sensitivity.",
-    derivationFormulas: [
-      "f_a \\approx 8.86\\!\\times\\!10^{10}\\,\\text{GeV}",
-      "m_a \\approx 65.19\\,\\mu\\text{eV}, \\quad \\nu_a \\approx 15.764\\,\\text{GHz}",
-      "|g_{a\\gamma\\gamma}^{(\\mathrm{phys})}| \\approx 1.80\\!\\times\\!10^{-12}\\,\\text{GeV}^{-1}",
-    ],
-    pdf: "/predictions/tfpt_prediction_axion_haloscope_window.pdf",
-    description:
-      "Downstream of seam transfer and determinant-line phase. The practical scan window is 15.764 GHz ± 50 MHz.",
+      "The scalar tilt comes from the same R² (Starobinsky) attractor that fixes the scalaron mass — Planck measures 0.965; CMB-S4 sharpens.",
     category: "Cosmology",
   },
   {
-    id: "eta-b",
-    slug: "eta-b-leptogenesis",
-    title: "Baryon Asymmetry — Leptogenesis Interface",
-    shortTitle: "η_B",
-    target: "η_B = 5.97·10⁻¹⁰",
-    targetLatex: "\\eta_B = 5.97\\!\\times\\!10^{-10}",
-    numericValue: "5.97e-10",
-    status: "Cosmology comparison",
-    dependencyClass: "Cosmology readout",
-    killTest:
-      "Robust exclusion of the quoted branch value under the declared Boltzmann solver.",
+    id: "r-tensor",
+    slug: "tensor-ratio",
+    title: "Tensor-to-Scalar Ratio — R² Branch",
+    shortTitle: "r",
+    target: "r = 12/N★² ≈ 0.0040",
+    targetLatex: "r = \\tfrac{12}{N_\\star^2} \\approx 0.0040",
+    numericValue: "0.0040",
+    status: "Conditional",
+    dependencyClass: "Inflation (R²)",
+    killTest: "Any robust r ≳ 0.01 kills the R² branch carrying M_Pl and A_s.",
     derivationFormulas: [
-      "\\eta_B = 5.97\\!\\times\\!10^{-10}",
-      "\\frac{dY_{\\Delta_\\alpha}}{dz}=\\sum_i \\epsilon_{i\\alpha} D_i (Y_{N_i}-Y_{N_i}^{\\mathrm{eq}}) - W_{i\\alpha} Y_{\\Delta_\\alpha}",
+      "r = \\tfrac{12}{N_\\star^2} \\approx 0.0040",
+      "\\text{current bound } r < 0.036\\ (\\text{BICEP/Keck BK18})",
     ],
-    pdf: "/predictions/tfpt_prediction_eta_b_leptogenesis.pdf",
+    pdf: "/papers/tfpt_1_architecture_e8.pdf",
     description:
-      "Downstream of reheating and heavy-neutrino input data, evaluated through the flavored Boltzmann system.",
+      "The tensor ratio of the R² scalaron is already below the current bound and within reach of CMB-S4 (σ_r ≤ 5×10⁻⁴, ~2033).",
+    category: "Cosmology",
+  },
+  {
+    id: "as-amplitude",
+    slug: "scalar-amplitude",
+    title: "Scalar Amplitude — Parameter-Free",
+    shortTitle: "A_s",
+    target: "A_s = N★² c₃⁷/(24π²) ≈ 2.0×10⁻⁹",
+    targetLatex: "A_s = \\frac{N_\\star^2}{24\\pi^2}\\,c_3^7 \\approx 2.0\\times 10^{-9}",
+    numericValue: "2.0e-9",
+    status: "Conditional",
+    dependencyClass: "Inflation (R²)",
+    killTest: "A_s incompatible with the seam-fixed scalaron mass on the R² branch.",
+    derivationFormulas: [
+      "A_s = \\frac{N_\\star^2}{24\\pi^2}\\,c_3^7 \\approx 2.0\\times 10^{-9}",
+      "\\text{Planck } \\simeq 2.1\\times 10^{-9}",
+    ],
+    pdf: "/papers/tfpt_1_architecture_e8.pdf",
+    description:
+      "Generic Starobinsky fits the scalaron mass to A_s; TFPT fixes it by the seam, (M/M̄)² = c₃⁷, so A_s becomes a prediction (and the measured A_s predicts N★ ≈ 56).",
+    category: "Cosmology",
+  },
+  {
+    id: "scalaron",
+    slug: "scalaron-mass",
+    title: "Scalaron Mass — Seam Power",
+    shortTitle: "M_scal",
+    target: "M = c₃^(7/2) M̄ = 3.06×10¹³ GeV",
+    targetLatex: "M_{\\mathrm{scal}} = c_3^{7/2}\\,\\bar M_{\\mathrm{Pl}} = 3.06\\times 10^{13}\\,\\text{GeV}",
+    numericValue: "3.06e13",
+    unit: "GeV",
+    status: "Exact identity",
+    dependencyClass: "Inflation (R²)",
+    killTest: "A scalaron mass incompatible with the seam power c₃⁷ = c₃^(Ω_adm − 10 b₁).",
+    derivationFormulas: [
+      "\\frac{M_{\\mathrm{scal}}^2}{\\bar M_{\\mathrm{Pl}}^2} = c_3^{\\,\\Omega_{\\mathrm{adm}} - 10 b_1} = c_3^7",
+      "M_{\\mathrm{scal}} = 3.06\\times 10^{13}\\,\\text{GeV}",
+    ],
+    pdf: "/papers/tfpt_1_architecture_e8.pdf",
+    description:
+      "The scalaron mass comes out exactly at the canonical Starobinsky value, with the exponent 7 = 48 − 41 = Ω_adm − 10 b₁ fixed by the seam. A former input is now an output.",
     category: "Cosmology",
   },
   {
     id: "omega-b",
-    slug: "omega-b-cosmology",
-    title: "Baryon Density — Cosmology Comparison",
+    slug: "baryon-density",
+    title: "Baryon Density — One-Engine Readout",
     shortTitle: "Ω_b",
-    target: "Ω_b = 0.04894",
-    targetLatex: "\\Omega_b = 0.04894",
+    target: "Ω_b = (4π − 1)β_rad = 0.04894",
+    targetLatex: "\\Omega_b = (4\\pi - 1)\\beta_{\\mathrm{rad}} = 0.04894",
     numericValue: "0.04894",
-    status: "Cosmology comparison",
-    dependencyClass: "Cosmology readout",
-    killTest:
-      "Robust inconsistency under the declared Planck comparison convention.",
+    status: "Conditional",
+    dependencyClass: "Scale grammar",
+    killTest: "Robust inconsistency under the declared Planck comparison convention.",
     derivationFormulas: [
-      "\\Omega_b = \\frac{\\Omega_b h^2}{h^2}, \\quad h = \\tfrac{H_0}{100}",
-      "\\Omega_b = (4\\pi - 1)\\beta_{\\mathrm{rad}} = 0.04894",
+      "\\Omega_b = (4\\pi - 1)\\,\\beta_{\\mathrm{rad}} = 0.04894",
+      "\\Omega_b h^2 = 0.0222",
     ],
-    pdf: "/predictions/tfpt_prediction_omega_b_cosmology.pdf",
+    pdf: "/papers/tfpt_4_frontier.pdf",
     description:
-      "Present-epoch reconstruction, Planck 2018 comparison row 0.04930 (residual −0.421σ).",
+      "The baryon fraction reads off the determinant-line angle β_rad. Planck comparison row 0.04930.",
+    category: "Cosmology",
+  },
+  {
+    id: "eta-b",
+    slug: "baryon-asymmetry",
+    title: "Baryon Asymmetry — Downstream Readout",
+    shortTitle: "η_B",
+    target: "η_B = 6.1×10⁻¹⁰",
+    targetLatex: "\\eta_B = 6.1\\times 10^{-10}",
+    numericValue: "6.1e-10",
+    status: "Conditional",
+    dependencyClass: "Frontier interface",
+    killTest:
+      "Robust exclusion of the quoted value under the declared cosmological pipeline (as a compiler power it is explicitly not closed).",
+    derivationFormulas: [
+      "\\Omega_b h^2 = 0.0222",
+      "\\eta_B = 273.9\\times 10^{-10}\\,\\Omega_b h^2 = 6.09\\times 10^{-10}",
+    ],
+    pdf: "/papers/tfpt_4_frontier.pdf",
+    description:
+      "A downstream cosmological readout from the closed Ω_b h² (observed 6.1×10⁻¹⁰). As a fundamental compiler power it is not closed — the leptogenesis Boltzmann solve is an interface.",
+    category: "Cosmology",
+  },
+  {
+    id: "hubble",
+    slug: "hubble-lambda",
+    title: "H₀ vs Λ — One Exponential Engine",
+    shortTitle: "H₀ ∼ √Λ",
+    target: "v_EW ∼ e^(−α⁻¹/5), Λ ∼ e^(−2α⁻¹), H₀ ∼ √Λ",
+    targetLatex: "v_{\\mathrm{EW}} \\sim e^{-\\alpha^{-1}/5},\\ \\ \\Lambda \\sim e^{-2\\alpha^{-1}},\\ \\ H_0 \\sim \\sqrt{\\Lambda}",
+    numericValue: "0",
+    status: "Conditional",
+    dependencyClass: "Scale grammar",
+    killTest: "A robust w ≠ −1 kills the single-engine dark-energy readout.",
+    derivationFormulas: [
+      "A_{\\mathrm{EW}} : A_H : A_\\Lambda = 1 : 5 : 10",
+      "\\frac{\\rho_\\Lambda}{\\bar M_{\\mathrm{Pl}}^4} = \\frac{3}{4\\pi^2}\\,e^{-2\\alpha^{-1}}",
+    ],
+    pdf: "/papers/tfpt_1_architecture_e8.pdf",
+    description:
+      "The electroweak scale, the cosmological constant and the Hubble scale are all powers of one exponential engine on the carrier — the same α⁻¹ ≈ 137. SH0ES / DESI / Planck (Hubble tension) test it.",
     category: "Cosmology",
   },
   {
@@ -455,41 +472,62 @@ export const predictions: Prediction[] = [
     slug: "no-second-higgs",
     title: "No Second Light Higgs Doublet",
     shortTitle: "N_Φ = 1",
-    target: "no additional seam-even light doublet",
+    target: "exactly one seam-even light doublet",
     targetLatex: "N_\\Phi = 1",
     numericValue: "1",
-    status: "Kill test",
+    status: "Exact identity",
     dependencyClass: "Carrier / Higgs index",
     killTest: "Robust discovery of a second light seam-even Higgs doublet.",
     derivationFormulas: [
-      "(c_1(L_2), c_1(L_3)) = (1, 0)",
-      "N_\\Phi = 1",
+      "10\\,b_1 = 41 = \\textstyle\\sum_{f,j}L_{f,j} + N_\\Phi",
+      "N_\\Phi = g_{\\mathrm{car}} - |\\mu_4| = 1",
     ],
-    pdf: "/predictions/tfpt_prediction_no_second_higgs.pdf",
+    pdf: "/papers/tfpt_1_architecture_e8.pdf",
     description:
-      "Compact bosonic index fixes the determinant class with exactly one weak doublet — a structural prohibition, not a fit.",
+      "The carrier index fixes exactly one weak doublet (N_Φ = g_car − |μ₄| = 1). A structural prohibition, not a fit.",
     category: "Higgs",
   },
   {
-    id: "pi0",
-    slug: "pi0-hadronic",
-    title: "Neutral Pion — Hadronic Check",
-    shortTitle: "m_π⁰",
-    target: "m_π⁰ = 134.979 MeV",
-    targetLatex: "m_{\\pi^0} = 134.979\\,\\text{MeV}",
-    numericValue: "134.979",
-    unit: "MeV",
-    status: "Out-of-sample check",
-    dependencyClass: "Hadronic readout",
-    killTest:
-      "Robust mismatch outside the stated hadronic uncertainty budget.",
+    id: "birefringence",
+    slug: "cosmic-birefringence",
+    title: "Cosmic Birefringence — Determinant Line",
+    shortTitle: "β_rad",
+    target: "β_rad = φ₀/(4π) = 0.2424°",
+    targetLatex: "\\beta_{\\mathrm{rad}} = \\frac{\\varphi_0}{4\\pi} = 0.2424^\\circ",
+    numericValue: "0.2424",
+    unit: "°",
+    status: "Numerical fixed point",
+    dependencyClass: "Horizon / determinant line",
+    killTest: "An externally calibrated β = 0 within tight error.",
     derivationFormulas: [
-      "m_{\\pi^0}\\,\\text{from GMOR with}\\,(m_u + m_d)\\,\\text{and}\\,\\langle\\bar q q\\rangle",
-      "m_{\\pi^0} = 134.979\\,\\text{MeV}",
+      "\\beta_{\\mathrm{rad}} = \\frac{\\varphi_0}{4\\pi} = 0.2424^\\circ",
+      "\\text{ACT DR6: } 0.215^\\circ \\pm 0.074^\\circ\\ (0.4\\sigma)",
     ],
-    pdf: "/predictions/tfpt_prediction_pi0_hadronic.pdf",
+    pdf: "/papers/tfpt_horizon_readouts.pdf",
     description:
-      "Out-of-sample hadronic consistency check derived from the closed branch — not used to tune the carrier or flavor branch.",
-    category: "QCD/EDM",
+      "The determinant-line / Chern–Simons response of the seam. ACT DR6 measures 0.215° ± 0.074° — within 0.4σ of the TFPT value.",
+    category: "Astrophysics",
+  },
+  {
+    id: "axion",
+    slug: "axion-dark-matter",
+    title: "Axion Dark Matter — Candidate Fixed",
+    shortTitle: "m_a",
+    target: "m_a ≈ 23.8 µeV, f_a = M_scal/128",
+    targetLatex: "m_a \\approx 23.8\\,\\mu\\text{eV}, \\quad f_a = \\frac{M_{\\mathrm{scal}}}{128} \\approx 2.39\\times 10^{11}\\,\\text{GeV}",
+    numericValue: "23.8",
+    unit: "µeV",
+    status: "Conditional",
+    dependencyClass: "Frontier interface",
+    killTest:
+      "Exclusion of the determinant-line axion window at the coupled sensitivity (relic abundance is scenario-sensitive, not closed).",
+    derivationFormulas: [
+      "\\theta_i = \\pi(1 - \\varphi_{\\mathrm{seam}}(\\alpha_\\star)) = 170.4^\\circ",
+      "f_a = \\frac{M_{\\mathrm{scal}}}{2\\dim S^+|\\mu_4|} = \\frac{M_{\\mathrm{scal}}}{128}, \\quad m_a \\approx 23.8\\,\\mu\\text{eV}",
+    ],
+    pdf: "/papers/tfpt_4_frontier.pdf",
+    description:
+      "The candidate is the determinant-line axion of the strong-CP sector (WIMPs ruled out — no spare E₈ singlet). The misalignment angle is closed; f_a = M_scal/128 is a conjecture.",
+    category: "Astrophysics",
   },
 ];

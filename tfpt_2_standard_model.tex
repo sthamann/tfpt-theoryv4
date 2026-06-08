@@ -595,6 +595,17 @@ are the $A_3$ exponents ($\det Q_+=6=|R^+(A_3)|$), $\chi_{Q_-}=t(t^2-3)$ (a squa
 $\chi_{K_-}=t(t^2-8)$ (a square root of $h(D_5)$). Finally the EM budget sits in the $K$ anchor block:
 $a^\top K a=41=10b_1$ with $a=(1,1,2)$, and $\det\!\begin{psmallmatrix}\mathbf1^\top K\mathbf1&\mathbf1^\top Ka\\ a^\top K\mathbf1&a^\top Ka\end{psmallmatrix}=\det\begin{psmallmatrix}25&29\\35&41\end{psmallmatrix}=10=\AL$.
 \veri{v10\_projection\_involution.py}, \veri{v12\_mass\_generation\_polynomials.py}
+\smallskip\\
+\noindent\textbf{Mass volume and the EM budget are \emph{one} anchor operation
+(\veri{v74\_compiler\_micro\_lemmas.py}).} The two diagonal entries of $B_K$ are the two physical readouts:
+$\mathbf1^\top K\mathbf1=25=\gcar^2$ is the grand \emph{mass-volume} exponent ($\det M_{\rm SM}\!\sim\!(\phiz)^{25}$),
+and $a^\top K a=41=10b_1$ is the \emph{EM budget}. Their difference is one generation,
+\[
+  \boxed{\ a^\top K a-\mathbf1^\top K\mathbf1=41-25=16=\dim S^+\ },
+\]
+i.e.\ \emph{EM budget $=$ mass volume $+$ one generation}. So the number $41$ that the EM fixed point reads is
+not ``$40{+}1$'' but the anchor quadratic form of the mass-power matrix, tied to the mass volume $\gcar^2$ by
+a single half-spinor $\dim S^+$.
 \end{winbox}
 
 \begin{winbox}[Mass and transport are one pencil: $\det(K+xQ)$ carries the scalaron sequence \tI]
@@ -610,6 +621,15 @@ The pencil is anchored at four integer nodes by compiler atoms:
 $P(-1)=2=|\Z_2|$ (the $K{-}Q$ sheet endpoint, with $\det(K{-}Q)=|\Z_2|$, $\operatorname{tr}(K{-}Q)=\Nfam$),
 $P(0)=4=\det K=|\mu_4|$, $P(1)=20=\det L$, and $P(2)=68=2\,p_5(a)$ (twice the anchor power sum $p_5=34$).
 \veri{v52\_pencil\_endpoints.py}
+\smallskip\\
+\noindent\textbf{And the consecutive \emph{differences} are the sheet$\to$matter chain
+(\veri{v74\_compiler\_micro\_lemmas.py}).} The node values $(2,4,20,68)$ step by
+\[
+  \boxed{\ P(0){-}P(-1)=2=|\Z_2|,\quad P(1){-}P(0)=16=\dim S^+,\quad P(2){-}P(1)=48=\Oadm\ }
+\]
+i.e.\ $2\to16\to48$ --- \emph{sheet $\to$ one generation $\to$ three generations} --- so the single
+determinant pencil already encodes the passage from the $\Z_2$ sheet to the one-family half-spinor to the
+full admissible matter packet. The $(K,Q,L)$ operators are therefore not separate artefacts but one curve.
 The non-commutativity of the mass$\to$transport step is a fixed $G_2$-sized obstruction:
 $[K,L]=[L,Q]=[K,Q]$ (forced by $L=K+Q$) with $\chi_{[K,Q]}(t)=t^3+5t+14$, reading $\gcar=5$ and
 $\dim G_2=14$ (audit-level \tA). \veri{v37\_plucker\_anchor.py}
@@ -752,13 +772,18 @@ pivot $N_\star$ stays a \emph{reheating input} (\tP), not a compiler output.
 \end{keybox}
 
 \begin{keybox}[Gate 4 (new): the solar angle from a shared dual anchor \tI/\tP]
-The residue matrix $R$ and the word-length matrix $L=R+6\,e_1 a^\top$ act \emph{identically} on the
-dual of the anchor $a=(1,1,2)$:
+The residue matrix $R$ and the word-length matrix $L=R+6\,\mathbf 1\,e_1^\top$ (a \emph{rank-one} winding
+deformation, $L{-}R=[[6,0,0],[6,0,0],[6,0,0]]$) act \emph{identically} on the dual of the anchor $a=(1,1,2)$:
 \[
   \boxed{\ a^\top R^{-1}=a^\top L^{-1}=(-\tfrac12,-\tfrac12,1)\ }\qquad\tI .
 \]
-This exact identity (the two equal entries are the $\mathrm{gen}\,1{\leftrightarrow}2$ TBM symmetry, the
-$1$ marks the third-generation anchor) ties the solar misalignment to the seam. \textbf{New: the
+\textbf{Mechanism (\veri{v74\_compiler\_micro\_lemmas.py}).} This is \emph{not} a coincidence: since
+$a^\top R^{-1}\mathbf 1=0$, the Sherman--Morrison correction for the rank-one update
+$L=R+6\,\mathbf 1\,e_1^\top$ has numerator $a^\top R^{-1}(6\,\mathbf1)=0$, so $a^\top L^{-1}=a^\top R^{-1}$
+\emph{exactly} --- the winding deformation is \emph{invisible} to the dual anchor. So the
+$\mathrm{gen}\,1{\leftrightarrow}2$ TBM symmetry vector (the two equal entries; the $1$ marks the
+third-generation anchor) is \emph{stable} under transport, which is the structural reason the solar texture
+survives. This ties the solar misalignment to the seam. \textbf{New: the
 coefficient is the $A_3$ family-lattice discriminant norm.} The misalignment is
 \[
   \boxed{\ \varepsilon=q(A_3)\,\varphi_0=\tfrac34\varphi_0\ },\qquad
@@ -2329,6 +2354,12 @@ which branch (rec vs car) and pure-vs-total action enters the determinant. \tP
 
 \noindent So the ``$10^{-123}$'' and the ``tenth power'' are \emph{not} in conflict --- they live in
 different normalisations linked by $(8\pi)^2$; the only genuinely open choice is the branch label.
+\smallskip\\
+\noindent\textbf{Explicit branch variable (review discipline).} To prevent silent branch-hopping, the open
+choice is carried as a named variable $B_\Lambda\in\{\mathrm{rec},\mathrm{car}\}$, and every cosmological-$\Lambda$
+statement is written $\rho_\Lambda(B_\Lambda)$ --- never a bare $\rho_\Lambda$. A claim is only comparable to
+data once $B_\Lambda$ is fixed; the two branches differ by the structural factor noted above, so quoting
+$\rho_\Lambda(\mathrm{rec})$ against $\rho_\Lambda(\mathrm{car})$ is an explicit type error, not a tuning knob.
 
 % =====================================================================
 \section{The solar angle $\theta_{12}$: derived from the seam}

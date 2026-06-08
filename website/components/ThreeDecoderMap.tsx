@@ -15,36 +15,40 @@ interface DecoderEntry {
 
 const DECODERS: DecoderEntry[] = [
   {
-    id: "Y",
-    title: "Y",
-    tex: "Y",
-    role: "Structure",
+    id: "sm",
+    title: "SM",
+    tex: "N_{\\mathrm{fam}} = 3",
+    role: "Standard Model",
     bullets: [
-      "3 + 2 carrier split",
-      "Hypercharge generator",
-      "SM packet, gauge quotient",
+      "16 = 1 + 5 + 10 spinor",
+      "N_fam = 3, Ω_adm = 48",
+      "b₁ = 41/10, det R = 8",
     ],
     accent: "from-blue-500 to-violet-500",
     chip: "bg-blue-500/15 text-blue-200 ring-blue-400/30",
   },
   {
-    id: "uSigma",
-    title: "[u_Σ] = 1",
-    tex: "[u_\\Sigma] = 1",
-    role: "Counting",
-    bullets: ["N_fam = 3", "Ω_adm = 48", "N_Φ = 1, b₁ = 41/10"],
+    id: "constants",
+    title: "α⁻¹",
+    tex: "\\alpha^{-1}",
+    role: "Constants",
+    bullets: [
+      "α⁻¹ = 137.0359992",
+      "λ_C, sin²θ₁₃, β_rad",
+      "θ_eff = 0 (strong CP)",
+    ],
     accent: "from-violet-500 to-fuchsia-500",
     chip: "bg-violet-500/15 text-violet-200 ring-violet-400/30",
   },
   {
-    id: "phi0",
-    title: "u = φ₀",
-    tex: "u = \\varphi_0",
-    role: "Bridge observables",
+    id: "cosmos",
+    title: "Λ, A_s",
+    tex: "\\Lambda,\\ A_s",
+    role: "Gravity & cosmos",
     bullets: [
-      "λ_C, sin²θ_13, β_rad",
-      "α via φ_seam(α)",
-      "Cabibbo / PMNS / cosmic β",
+      "scalaron M = c₃^(7/2) M̄",
+      "n_s = 0.965, r ≈ 0.004",
+      "Λ ∼ e⁻²ᵅ⁻¹, H₀ ∼ √Λ",
     ],
     accent: "from-emerald-500 to-teal-500",
     chip: "bg-emerald-500/15 text-emerald-200 ring-emerald-400/30",
@@ -58,11 +62,11 @@ export function ThreeDecoderMap() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
       className="glass mx-auto mt-12 max-w-5xl overflow-hidden rounded-2xl ring-1 ring-slate-700/40"
-      aria-label="The three-decoder map: structure, counting, and bridge observables."
+      aria-label="The compiler map: two axioms, the two atoms, the E8 glue, and three readouts."
     >
       <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800/60 px-5 py-3">
         <span className="text-[11px] font-semibold uppercase tracking-widest text-blue-300/80">
-          One datum · One joint solve · Three decoders
+          Two axioms · one compiler · three readouts
         </span>
         <span className="rounded-full bg-slate-800/60 px-2.5 py-0.5 text-[10px] font-mono uppercase tracking-widest text-slate-300 ring-1 ring-slate-700/40">
           15-second overview
@@ -73,23 +77,23 @@ export function ThreeDecoderMap() {
         <ol className="mx-auto flex max-w-3xl flex-col items-stretch gap-3">
           <TrunkStep
             n="1"
-            label="One-sided boundary datum"
-            tex="\mathfrak{T}_\partial"
+            label="Two axioms"
+            tex="c_3 = \tfrac{1}{8\pi}, \qquad g_{\mathrm{car}} = 5\ (3{+}2)"
             accent="from-slate-400 to-slate-500"
           />
           <TrunkConnector />
           <TrunkStep
             n="2"
-            label="Primitive kernel"
-            tex="(\tau_{\mathrm{dbl}},\iota_C,P_{\mathrm{prim}},[u_\Sigma],c_3)"
+            label="The two atoms"
+            tex="C^+ = D_5\ (16\text{-spinor}), \qquad \mathbb{P}^1\setminus\mu_4 = A_3"
             accent="from-blue-500 to-violet-500"
           />
           <TrunkConnector />
           <TrunkStep
             n="3"
-            label="Joint discrete admissibility solve"
-            sublabel="Single discrete solution; structure, counting, bridge seed are joint outputs"
-            tex="d^\star_{\mathrm{disc}}"
+            label="The μ₄ glue ⇒ E₈"
+            sublabel="240 roots, det 1 — the unimodular audit hull; the SM is a readout after projection"
+            tex="D_5 \oplus A_3 + \mu_4 \Rightarrow E_8"
             accent="from-blue-500 to-violet-500"
             highlight
           />
@@ -201,7 +205,7 @@ function TrunkConnector() {
 }
 
 /**
- * Visual three-way fork from the joint discrete solve to the three decoders.
+ * Visual three-way fork from the E₈ compiler to the three readouts.
  * Drawn as an SVG with a center stem and three branches so the geometry
  * stays the same on any width and prints cleanly to PDF.
  */
@@ -232,7 +236,7 @@ function ThreeWayFork() {
         <line x1="500" y1="20" x2="500" y2="44" stroke="url(#forkStroke)" strokeWidth="1.5" />
       </svg>
       <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-slate-900/85 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-widest text-violet-200 ring-1 ring-violet-400/30">
-        Three parallel decoders
+        Three readouts
       </span>
     </div>
   );
@@ -277,13 +281,14 @@ function ConvergenceFork() {
 
 function ClosedBranchPill() {
   return (
-    <div className="rounded-xl border border-emerald-400/30 bg-emerald-500/10 px-4 py-3">
+    <div className="rounded-xl border border-rose-400/30 bg-rose-500/10 px-4 py-3">
       <div className="flex flex-wrap items-center gap-2">
-        <span className="rounded-full bg-emerald-500/20 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-widest text-emerald-200 ring-1 ring-emerald-400/30">
-          Closed branch <span className="math-label">T★</span>
+        <span className="rounded-full bg-rose-500/20 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-widest text-rose-200 ring-1 ring-rose-400/30">
+          Bootstrap loop
         </span>
-        <span className="text-[11px] text-emerald-50/90">
-          SM packet · α · flavor · θ_eff = 0 · cosmology interfaces
+        <span className="text-[11px] text-rose-50/90">
+          E₈ closure ⇒ g_car = 5 and 8 = rank E₈ in c₃ — inputs and output prove
+          each other; only π stays free
         </span>
       </div>
     </div>

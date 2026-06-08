@@ -6,26 +6,26 @@ import { SectionHeader } from "@/components/SectionHeader";
 
 const DECODERS = [
   {
-    symbol: "Y",
-    role: "Generates structure",
-    body: "The carrier decoder Y is the determinant-normalized two-point generator on the derived split E = E_- ⊕ E_+. The ranks are forced by the compact Higgs index (dim E_+ = 2) and primitive Yukawa type (dim E_- = 3). The carrier polynomial 6Y² − Y − 1 = 0 is then the minimal polynomial of the two derived roots — a corollary, not an entry assumption.",
-    formula: "Y = -\\tfrac{1}{3} P_- + \\tfrac{1}{2} P_+",
+    symbol: "g_{\\mathrm{car}} = 5",
+    role: "Engine 1 — discrete closure",
+    body: "From the five-slot carrier: the D₅ half-spinor, the family geometry A₃ = ℙ¹∖μ₄, the μ₄ glue to E₈, and the Standard-Model packet — N_fam = 3, Ω_adm = 48, b₁ = 41/10, and the residue matrix R with det 8.",
+    formula: "g_{\\mathrm{car}} = 5 \\to E_8 \\to (N_{\\mathrm{fam}}, b_1, R)",
     accent: "from-blue-500 to-violet-500",
     border: "border-blue-400/30 bg-blue-500/5",
   },
   {
-    symbol: "[u_\\Sigma] = 1",
-    role: "Generates counting",
-    body: "The primitive seam class normalization controls family counting (3), admissible occupancy (Ω_adm = 48), and the compact Higgs index (N_Φ = 1).",
-    formula: "[u_\\Sigma] = 1",
-    accent: "from-violet-500 to-fuchsia-500",
-    border: "border-violet-400/30 bg-violet-500/5",
+    symbol: "c_3 = \\tfrac{1}{8\\pi}",
+    role: "Engine 2 — boundary dressing",
+    body: "From the seam constant: the seed u = φ₀, the electromagnetic fixed point α⁻¹, the Einstein normaliser ξ, and the exponential scale grammar 1 : 5 : 10 that gives v_EW, H₀ and Λ. Gravity is this engine's geometry channel.",
+    formula: "c_3 \\to (u{=}\\varphi_0,\\ \\alpha^{-1},\\ \\xi,\\ \\Lambda,\\ H_0)",
+    accent: "from-emerald-500 to-teal-500",
+    border: "border-emerald-400/30 bg-emerald-500/5",
   },
   {
-    symbol: "u := \\varphi_0",
-    role: "Generates bridge observables",
-    body: "After sectorization, the retained UV seed projects to the bridge observables — the Cabibbo angle, the radiative β coefficient, and the reactor angle of the PMNS matrix.",
-    formula: "u := \\varphi_0",
+    symbol: "E_8\\text{ closure}",
+    role: "The bootstrap loop",
+    body: "The E₈ closure feeds back and fixes the inputs: g_car = 5 is forced three ways (rank-fill, Coxeter-match, integer-glue), and the 8 in c₃ equals rank E₈ = h(D₅) = φ(30). Inputs and output prove each other — only π stays irreducible.",
+    formula: "E_8 \\Rightarrow g_{\\mathrm{car}}{=}5,\\ 8 = \\operatorname{rank}E_8",
     accent: "from-fuchsia-500 to-pink-500",
     border: "border-fuchsia-400/30 bg-fuchsia-500/5",
   },
@@ -40,9 +40,9 @@ export function Decoders() {
     >
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
-          eyebrow="The three decoders"
-          title="Structure, counting, observables"
-          description="The closed branch is condensed through three decoders. Each one isolates a different burden of proof, which is why the paper series separates kernel, carrier, precision readouts, QFT closure, metrology, and cosmology."
+          eyebrow="The two engines"
+          title="Discrete closure, boundary dressing, bootstrap"
+          description="Read from the two axioms, the theory factorises into exactly two engines — a discrete closure from g_car and a boundary dressing from c₃ — and the bootstrap loop that feeds the E₈ closure back to fix the inputs."
         />
 
         <div className="mt-12 grid gap-5 lg:grid-cols-3">

@@ -5,22 +5,22 @@ import { ArrowRight } from "lucide-react";
 import { SectionHeader } from "@/components/SectionHeader";
 
 const PUBLIC_ORDER = [
-  { n: 0, label: "Orientation", note: "Public entry document" },
-  { n: 2, label: "Carrier rigidity", note: "First visible core result" },
-  { n: 1, label: "Boundary kernel", note: "Formal foundation backbone" },
-  { n: 3, label: "EM closure", note: "Precision prediction layer" },
-  { n: 4, label: "QFT closure", note: "Analytic stabilization" },
-  { n: 5, label: "Metrology", note: "Dimensionless metrology" },
-  { n: 6, label: "Cosmology", note: "Downstream expansion" },
+  { n: 0, label: "Introduction", note: "Reading guide & status assessment" },
+  { n: 1, label: "Architecture & E₈", note: "Two axioms, the glue, α⁻¹" },
+  { n: 2, label: "Standard Model", note: "The φ₀-ladder & flavor matrix" },
+  { n: 3, label: "E₈ audit & bootstrap", note: "Audit raster, the loop" },
+  { n: 4, label: "Frontier", note: "Honest open items" },
+  { n: 6, label: "Origin Theory", note: "Why no free number remains" },
+  { n: 7, label: "Research contracts", note: "The two open gates" },
 ];
 
 const MATH_ORDER = [
-  { n: 1, label: "Boundary primitive kernel" },
-  { n: 2, label: "Carrier rigidity & SM packet" },
-  { n: 3, label: "EM and flavor readouts" },
-  { n: 4, label: "Admissibility, strong CP, OS / scattering" },
-  { n: 5, label: "Geometric branch & metrology" },
-  { n: 6, label: "Downstream cosmology interfaces" },
+  { n: 1, label: "Architecture: the two axioms, D₅ × A₃ → E₈, α⁻¹" },
+  { n: 2, label: "Standard Model: the φ₀-ladder, flavor matrix, θ₁₂" },
+  { n: 3, label: "E₈ audit raster, cascade bridge, Möbius bootstrap" },
+  { n: 4, label: "Frontier: η_B, m_p/m_e, Koide, dark matter, QG" },
+  { n: 5, label: "Appendix H — horizon unit system (reframe)" },
+  { n: 6, label: "Origin Theory — the gapped unique attractor" },
 ];
 
 export function PublicationOrder() {
@@ -33,8 +33,8 @@ export function PublicationOrder() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
           eyebrow="Reading order"
-          title="Two paths through the same theory"
-          description="The mathematical dependency order is rigid. The recommended public order uses Paper 2 as the visible hook and Paper 0 as the discipline document — without breaking the dependency chain."
+          title="Two paths through the same set"
+          description="The dependency order of the four core documents is rigid (1 → 2 → 3 → 4). The recommended reading order starts from the introduction and adds the three companions — Appendix H, the Origin Theory synthesis, and the research contracts — without breaking the chain."
         />
 
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
@@ -61,7 +61,7 @@ export function PublicationOrder() {
                   </span>
                   <div className="flex-1">
                     <div className="font-serif text-sm font-semibold text-slate-100">
-                      Paper {p.n} — {p.label}
+                      Doc {p.n} — {p.label}
                     </div>
                     <div className="text-xs text-slate-400">{p.note}</div>
                   </div>
@@ -100,7 +100,7 @@ export function PublicationOrder() {
                   </span>
                   <div className="flex-1">
                     <div className="font-serif text-sm font-semibold text-slate-100">
-                      Paper {p.n} — {p.label}
+                      Doc {p.n} — {p.label}
                     </div>
                   </div>
                   {i < MATH_ORDER.length - 1 && (

@@ -30,25 +30,25 @@ const STATUS_META: Record<
   { label: string; tone: string; ring: string; chip: string }
 > = {
   operational: {
-    label: "Operational primitive",
+    label: "Axiom — declared input",
     tone: "from-slate-400 to-slate-500",
     ring: "ring-slate-400/30",
     chip: "bg-slate-500/15 text-slate-200",
   },
   "theorem-core": {
-    label: "Theorem core",
+    label: "Lattice / identity",
     tone: "from-blue-500 to-violet-500",
     ring: "ring-blue-400/40",
     chip: "bg-blue-500/15 text-blue-200",
   },
   decoder: {
-    label: "Decoder",
+    label: "Readout",
     tone: "from-violet-500 to-fuchsia-500",
     ring: "ring-violet-400/40",
     chip: "bg-violet-500/15 text-violet-200",
   },
   conditional: {
-    label: "Conditional closure",
+    label: "Open / frontier",
     tone: "from-orange-500 to-red-500",
     ring: "ring-orange-400/40",
     chip: "bg-orange-500/15 text-orange-200",
@@ -60,7 +60,7 @@ const STATUS_META: Record<
     chip: "bg-emerald-500/15 text-emerald-200",
   },
   downstream: {
-    label: "Downstream interface",
+    label: "Geometry channel",
     tone: "from-fuchsia-500 to-pink-500",
     ring: "ring-fuchsia-400/40",
     chip: "bg-fuchsia-500/15 text-fuchsia-200",
@@ -69,148 +69,117 @@ const STATUS_META: Record<
 
 const TRUNK_BEFORE: StepNode[] = [
   {
-    id: "seed",
+    id: "axioms",
     step: 1,
-    label: "Operational seed",
-    formula: "\\mathfrak{S}_{\\min}",
-    input: "Pre-physical primitive",
-    fixed: "The minimal admissible seed of the framework",
-    notClaimed: "No carrier, no Standard Model, no α",
-    fail: "Misuse as a tunable phenomenological input",
+    label: "Two axioms",
+    formula: "c_3 = \\tfrac{1}{8\\pi}, \\qquad g_{\\mathrm{car}} = 5",
+    input: "Declared (P1 Gauss–Bonnet-hardenable, P2 Lean-formalised)",
+    fixed: "The seam constant and the five-slot carrier — the only structural inputs",
+    notClaimed: "No SM gauge group, no families, no α inserted by hand",
+    fail: "No reflection-positive seam, or the wrong family/charge lattice",
     status: "operational",
   },
   {
-    id: "boundary",
+    id: "atoms",
     step: 2,
-    label: "Boundary datum",
-    formula: "\\mathfrak{T}_\\partial = (\\mathcal{A}_+,\\mathcal{H}_+,D_+,J,\\Gamma,B_\\Sigma)",
-    input: "Operational seed",
-    fixed: "One-sided spectral datum from which all primitive structure is reconstructed",
-    notClaimed: "No physical observables yet",
-    fail: "The one-sided datum fails to determine the doubled datum or the Calderón polarization",
+    label: "The two atoms",
+    formula: "C^+ = D_5\\ (16), \\qquad \\mathbb{P}^1\\setminus\\mu_4 = A_3",
+    input: "The carrier g_car = 5 and the four-puncture family geometry",
+    fixed: "The D₅ half-spinor (dim 16, hypercharge Y) and the A₃ family geometry (N_fam = 3)",
+    notClaimed: "Not yet E₈ — the atoms are intermediate products of the inputs",
+    fail: "Group/matter mismatch, or the wrong family multiplicity",
     status: "theorem-core",
   },
   {
-    id: "kernel",
+    id: "glue",
     step: 3,
-    label: "Primitive kernel",
-    formula: "(\\tau_{\\mathrm{dbl}},\\iota_C,P_{\\mathrm{prim}},[u_\\Sigma],c_3)",
-    input: "Boundary datum",
-    fixed: "Five primitive invariants from the Calderón polarization and the seam class",
-    notClaimed: "No Standard Model gauge group, no α",
-    fail: "A primitive invariant is not fixed by the boundary procedure",
-    status: "theorem-core",
-  },
-  {
-    id: "joint-solve",
-    step: 4,
-    label: "Joint discrete admissibility solve",
-    formula: "d^\\star_{\\mathrm{disc}}",
-    input: "Primitive kernel",
-    fixed:
-      "A single discrete admissibility solution that simultaneously determines the rank split, the seam normalization, and the bridge seed",
-    notClaimed:
-      "Not a sequential 'first carrier, then counting, then observables' chain — these are joint outputs of one discrete solve",
-    fail:
-      "An alternative admissible discrete solution survives all primitive constraints",
+    label: "The μ₄ glue ⇒ E₈",
+    formula: "E_8 = (D_5 \\oplus A_3) + \\mu_4",
+    input: "D₅, A₃ with the common discriminant ℤ₄",
+    fixed: "240 = 16·5·3 roots, 248 = 240 + 8; q(D₅)+q(A₃) = 5/4+3/4 = 2",
+    notClaimed: "E₈ is the unimodular audit hull, not a physical gauge group",
+    fail: "Not even-unimodular, or the glue norms do not sum to the root norm 2",
     status: "theorem-core",
   },
 ];
 
 const DECODERS: StepNode[] = [
   {
-    id: "decoder-Y",
-    step: "5a",
-    label: "Y — structure",
-    formula: "Y = -\\tfrac{1}{3} P_- + \\tfrac{1}{2} P_+",
-    input: "Joint solve, carrier block",
+    id: "decoder-sm",
+    step: "4a",
+    label: "Standard Model — Engine 1",
+    formula: "N_{\\mathrm{fam}}=3,\\ \\Omega_{\\mathrm{adm}}=48,\\ b_1=\\tfrac{41}{10}",
+    input: "E₈ projection + carrier traces",
     fixed:
-      "The hypercharge generator, the 3+2 rank split, the Standard Model packet, and the gauge quotient",
-    notClaimed: "No flavor closure, no α value",
-    fail: "The 3+2 split is not forced without an SM-side import",
+      "The gauge group, 3 families, hypercharge, b₁ = 41/10, and the residue matrix R (det 8)",
+    notClaimed: "No absolute quark amplitude scale (the U_wall anchor)",
+    fail: "Hierarchy mismatch, or a robust fourth generation",
     status: "decoder",
   },
   {
-    id: "decoder-uSigma",
-    step: "5b",
-    label: "[u_Σ] = 1 — counting",
-    formula: "[u_\\Sigma] = 1",
-    input: "Joint solve, seam class",
+    id: "decoder-constants",
+    step: "4b",
+    label: "Constants — Engine 2",
+    formula: "\\alpha^{-1} = 137.0359992,\\quad \\theta_{\\mathrm{eff}} = 0",
+    input: "The seed u = φ₀ and the abelian coefficient 41 = 10 b₁",
     fixed:
-      "Family count N_fam = 3, admissible occupancy Ω_adm = 48, Higgs index N_Φ = 1, abelian coefficient b₁ = 41/10",
-    notClaimed: "No mass values, no flavor matrices",
-    fail: "An admissible alternative seam normalization survives",
+      "α⁻¹, the Cabibbo angle λ_C, sin²θ₁₃, β_rad, and the strong-CP null",
+    notClaimed: "Not the dimensionful EW/QCD masses (those sit on the RG scheme layer)",
+    fail: "No root or a second root of F_U(1)(α), or a robust nonzero neutron EDM",
     status: "decoder",
   },
   {
-    id: "decoder-phi0",
-    step: "5c",
-    label: "u = φ₀ — bridge seed",
-    formula: "u := \\varphi_0 = \\tfrac{1}{6\\pi} + \\tfrac{3}{256\\pi^4}",
-    input: "Joint solve, retained branch",
+    id: "decoder-cosmos",
+    step: "4c",
+    label: "Gravity & cosmos — Engine 2",
+    formula: "M_{\\mathrm{scal}} = c_3^{7/2}\\bar M_{\\mathrm{Pl}}",
+    input: "The seam constant via the geometry channel (R + R²)",
     fixed:
-      "Bridge readouts λ_C = √(φ₀(1−φ₀)), β_rad = φ₀/(4π), sin²θ₁₃ = φ₀ e^{−γ}",
-    notClaimed: "Not the exact electromagnetic root (that uses φ_seam(α) instead of φ₀)",
-    fail:
-      "Bridge readouts deviate from declared comparison rows beyond stated interface uncertainty",
-    status: "decoder",
+      "Scalaron mass 3.06×10¹³ GeV, n_s = 0.965, r ≈ 0.004, Λ ∼ e⁻²ᵅ⁻¹, H₀ ∼ √Λ",
+    notClaimed: "The absolute dark-energy density is a typed cosmology interface",
+    fail: "A robust r ≳ 0.01, or a robust w ≠ −1",
+    status: "downstream",
   },
 ];
 
 const TRUNK_AFTER: StepNode[] = [
   {
-    id: "admissibility",
-    step: 6,
-    label: "Admissibility selector",
-    formula: "P_{\\mathrm{adm}} = P_{\\mathrm{prim}}\\,P_{\\mathrm{sing}}\\,P_\\Theta",
-    input: "Joint solve outputs + analytic data",
-    fixed:
-      "Selection of the physical admissible sector and the strong-CP null θ_eff = 0",
-    notClaimed: "Not the dynamics of the physical sector",
-    fail: "Selector and dynamics are conflated, or positivity hypotheses are hidden",
-    status: "conditional",
-  },
-  {
-    id: "closure",
-    step: 7,
-    label: "Closure dynamics",
+    id: "ladder",
+    step: 5,
+    label: "The φ₀-ladder & flavor matrix",
     formula:
-      "Z_{\\mathrm{rel}} \\Rightarrow \\{S_n^T\\} \\Rightarrow (\\mathcal{H}_{\\mathrm{adm}},\\mathfrak{A}_{\\mathrm{adm}}) \\Rightarrow \\Gamma_k",
-    input: "Admissibility selector",
+      "\\hat m_{f,j} = \\tfrac{v_{\\mathrm{geo}}}{\\sqrt2}\\,\\lambda_Y^{\\,L_{f,j}}\\,\\Lambda_{f,j}",
+    input: "The residue matrix R and the seed φ₀",
     fixed:
-      "Reflection positivity, OS reconstruction, local Minkowski net, exact admissible RG flow — under stated hypotheses",
-    notClaimed: "No CMB fit, no Stage 2 sky realization",
-    fail:
-      "Positivity, gap, or OS hypotheses fail on the admissible sector under stated conditions",
-    status: "conditional",
-  },
-  {
-    id: "observables",
-    step: 8,
-    label: "Observable functor",
-    formula:
-      "\\mathfrak{T}_\\star \\xrightarrow{\\mathcal{R}_{\\mathrm{ren}}} \\Gamma_{\\mathrm{TFPT}}^{\\mathrm{ren}} \\xrightarrow{\\mathcal{M}_{\\mathrm{phys}}} \\mathbf{O}_{\\mathrm{phys}}^{\\mathrm{TFPT}}",
-    input: "Closure dynamics + decoder outputs",
-    fixed:
-      "Renormalised observables and physical readouts (α, CKM, PMNS, β, …) only after explicit physical and scheme projection",
-    notClaimed:
-      "Scheme conventions are not theorem inputs; comparison rows are projected last",
-    fail:
-      "Scheme projection is allowed to feed back into the admissibility data",
+      "All nine masses, CKM, the PMNS skeleton; the solar angle sin²θ₁₂ = 1/3 − φ₀/2",
+    notClaimed: "Quark ratios closed; the absolute quark scale is the U_point anchor",
+    fail: "The lepton φ₀-ladder mismatches the observed charged-lepton hierarchy",
     status: "bridge",
   },
   {
-    id: "cosmo-interface",
-    step: 9,
-    label: "Cosmology interfaces",
+    id: "bootstrap",
+    step: 6,
+    label: "The bootstrap loop",
+    formula: "E_8\\text{ closure} \\Rightarrow g_{\\mathrm{car}}{=}5,\\ \\ 8 = \\operatorname{rank}E_8",
+    input: "The E₈ closure fed back to the inputs",
+    fixed:
+      "The two inputs are re-derived — the discrete core is overdetermined, not fitted; only π stays free",
+    notClaimed: "Not creation from nothing — two inputs remain",
+    fail: "g_car = 5 not forced three ways, or the reverse glue μ² − 5μ + 4 = 0 does not pick μ = 4",
+    status: "theorem-core",
+  },
+  {
+    id: "residual",
+    step: 7,
+    label: "The residual: two gates + interfaces",
     formula:
-      "\\Lambda_{\\mathrm{IR}}, S_\\Sigma, N_{\\mathrm{DW}}, \\theta_i, T_R, \\eta_B, \\Sigma m_\\nu, m_a",
-    input: "Closed branch T★ + seam transfer",
-    fixed: "Downstream cosmology comparison surface",
-    notClaimed:
-      "Stage 1 spectra are programmatic targets; Stage 2 sky realization is conjectural",
-    fail: "Cosmology is allowed to tune the primitive branch",
-    status: "downstream",
+      "\\text{Rest} = (U_{\\mathrm{wall}}) \\oplus (G_{\\mathrm{metric}}) \\oplus (F_{\\mathrm{frontier}})",
+    input: "The compiler closure",
+    fixed:
+      "One flavor wall-selection, one quantum-gravity measure, and a set of typed frontier interfaces",
+    notClaimed: "No strict physical TOE certification yet (the ambient measure G6 is open)",
+    fail: "A gate's closing theorem asserted before its lemma chain completes",
+    status: "conditional",
   },
 ];
 
@@ -325,9 +294,9 @@ export function ReconstructionChain() {
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
-          eyebrow="The staged reconstruction"
-          title="From boundary datum to observable closure"
-          description="TFPT is not a linear chain of independent claims. The primitive kernel feeds a single joint discrete admissibility solve from which three decoders branch in parallel — structure (Y), counting ([u_Σ]=1), and bridge observables (u = φ₀). The selector P_adm is downstream of the decoders, not parallel to them."
+          eyebrow="The compiler pipeline"
+          title="From two axioms to the observables"
+          description="TFPT is a directed acyclic graph: two axioms at the source, the E₈ compiler in the middle, the observables as sinks. The compiler factorises into two engines — a discrete closure (from g_car) and a boundary dressing (from c₃) — that branch into three readouts, and the bootstrap loop feeds the output back to fix the inputs."
         />
 
         <div ref={ref} className="relative mx-auto mt-14 max-w-5xl space-y-3">
@@ -338,7 +307,7 @@ export function ReconstructionChain() {
             </div>
           ))}
 
-          <Connector label="Three parallel decoders" />
+          <Connector label="Three readouts (two engines)" />
 
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -355,7 +324,7 @@ export function ReconstructionChain() {
             ))}
           </motion.div>
 
-          <Connector label="Joint outputs feed the admissibility/closure layer" />
+          <Connector label="Readouts feed the ladder, the bootstrap and the residual" />
 
           {TRUNK_AFTER.map((n, i) => (
             <div key={n.id}>
@@ -374,12 +343,12 @@ export function ReconstructionChain() {
         >
           <strong className="font-semibold text-amber-200">Status discipline.</strong>
           <span className="ml-2 text-amber-100/85">
-            The diagram is a status map of the derivation chain, not a claim
-            that all displayed outputs share the same proof status. Theorem
-            core, decoder outputs, conditional closure, bridge readouts, and
-            downstream interfaces are all visibly distinct — and labelled with
-            their own &ldquo;not claimed here&rdquo; and &ldquo;how it can
-            fail&rdquo; rows.
+            The diagram is a status map of the dependency DAG, not a claim that
+            all displayed outputs share the same grade. Axioms, lattice/identity
+            steps, readouts, the bridge ladder and the open residual are all
+            visibly distinct — and each carries its own &ldquo;not claimed
+            here&rdquo; and &ldquo;how it can fail&rdquo; rows. The machine-checked
+            ledger is the single source of truth.
           </span>
         </motion.div>
       </div>

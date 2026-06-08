@@ -1,7 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import { Github } from "lucide-react";
 import { Logo } from "./Logo";
+import { REPO_URL } from "@/lib/utils";
 import { trackPdfInteraction, type DownloadKind } from "@/lib/track";
 
 interface FooterLink {
@@ -10,25 +12,25 @@ interface FooterLink {
   kind: DownloadKind;
 }
 
-const THEORY_MAP: FooterLink = {
-  href: "/papers/theory_map.pdf",
-  label: "Theory status map (PDF)",
-  kind: "theory-map",
+const READING_GUIDE: FooterLink = {
+  href: "/papers/introduction.pdf",
+  label: "Reading guide (PDF)",
+  kind: "paper",
 };
-const SERIES_INDEX: FooterLink = {
-  href: "/papers/series_index.pdf",
-  label: "Series index",
-  kind: "series-index",
+const ORIGIN_THEORY: FooterLink = {
+  href: "/papers/origin_theory.pdf",
+  label: "Origin Theory",
+  kind: "paper",
 };
-const TECHNICAL_COMPANION: FooterLink = {
-  href: "/papers/technical_companion.pdf",
-  label: "Technical companion",
-  kind: "companion",
+const RESEARCH_CONTRACTS: FooterLink = {
+  href: "/papers/tfpt_research_contracts.pdf",
+  label: "Research contracts",
+  kind: "paper",
 };
-const TWO_PAGE_SUMMARY: FooterLink = {
-  href: "/predictions/tfpt_two_page_summary.pdf",
-  label: "Two-page summary",
-  kind: "summary",
+const HORIZON: FooterLink = {
+  href: "/papers/tfpt_horizon_readouts.pdf",
+  label: "Appendix H — horizon",
+  kind: "paper",
 };
 
 function trackFooter(link: FooterLink) {
@@ -49,10 +51,11 @@ export function Footer() {
         <div>
           <Logo size={40} />
           <p className="mt-4 max-w-md text-sm leading-relaxed text-slate-400">
-            Topological Fixed-Point Theory. A boundary-polarized spectral framework
-            that derives the Standard-Model packet, predicts α⁻¹(0), the Cabibbo
-            angle, the PMNS matrix, and downstream cosmology — from a one-sided
-            boundary datum, with no fitted constants.
+            Topological Fixed-Point Theory. A discrete compiler that builds E₈
+            from two axioms — the seam constant c₃ = 1/(8π) and the carrier rank
+            g_car = 5 — and reads off the Standard Model, α⁻¹ = 137.0359992, the
+            flavor sector and the scale grammar. No fitted constants; only π is
+            irreducible.
           </p>
           <p className="mt-4 text-xs text-slate-500">
             By <span className="text-slate-300">Stefan Hamann</span> &amp;{" "}
@@ -67,12 +70,12 @@ export function Footer() {
           <ul className="mt-4 space-y-2 text-sm">
             <li>
               <Link href="/#chain" className="text-slate-400 hover:text-white">
-                Reconstruction chain
+                Compiler pipeline
               </Link>
             </li>
             <li>
               <Link href="/#papers" className="text-slate-400 hover:text-white">
-                Paper series
+                Document set
               </Link>
             </li>
             <li>
@@ -93,13 +96,24 @@ export function Footer() {
             </li>
             <li>
               <Link
-                href={THEORY_MAP.href}
+                href={READING_GUIDE.href}
                 target="_blank"
                 rel="noopener"
-                onClick={() => trackFooter(THEORY_MAP)}
+                onClick={() => trackFooter(READING_GUIDE)}
                 className="text-slate-400 hover:text-white"
               >
-                {THEORY_MAP.label}
+                {READING_GUIDE.label}
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={REPO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-slate-400 hover:text-white"
+              >
+                <Github size={13} aria-hidden />
+                Code &amp; verification (GitHub)
               </Link>
             </li>
           </ul>
@@ -115,40 +129,40 @@ export function Footer() {
                 href="/orientation"
                 className="text-slate-400 hover:text-white"
               >
-                Orientation map
+                Reading guide
               </Link>
             </li>
             <li>
               <Link
-                href={SERIES_INDEX.href}
+                href={ORIGIN_THEORY.href}
                 target="_blank"
                 rel="noopener"
-                onClick={() => trackFooter(SERIES_INDEX)}
+                onClick={() => trackFooter(ORIGIN_THEORY)}
                 className="text-slate-400 hover:text-white"
               >
-                {SERIES_INDEX.label}
+                {ORIGIN_THEORY.label}
               </Link>
             </li>
             <li>
               <Link
-                href={TECHNICAL_COMPANION.href}
+                href={RESEARCH_CONTRACTS.href}
                 target="_blank"
                 rel="noopener"
-                onClick={() => trackFooter(TECHNICAL_COMPANION)}
+                onClick={() => trackFooter(RESEARCH_CONTRACTS)}
                 className="text-slate-400 hover:text-white"
               >
-                {TECHNICAL_COMPANION.label}
+                {RESEARCH_CONTRACTS.label}
               </Link>
             </li>
             <li>
               <Link
-                href={TWO_PAGE_SUMMARY.href}
+                href={HORIZON.href}
                 target="_blank"
                 rel="noopener"
-                onClick={() => trackFooter(TWO_PAGE_SUMMARY)}
+                onClick={() => trackFooter(HORIZON)}
                 className="text-slate-400 hover:text-white"
               >
-                {TWO_PAGE_SUMMARY.label}
+                {HORIZON.label}
               </Link>
             </li>
           </ul>
@@ -165,7 +179,7 @@ export function Footer() {
             <span>All papers and predictions distributed for academic use.</span>
           </p>
           <p className="text-slate-600">
-            TFPT 4.5 series — boundary polarization · carrier rigidity · observable closure
+            TFPT 5.0 — two axioms · one E₈ compiler · the Standard Model
           </p>
         </div>
         <div className="mx-auto mt-3 max-w-7xl text-[11px] leading-relaxed text-slate-600">

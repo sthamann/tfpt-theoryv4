@@ -6,17 +6,17 @@ import { Math } from "@/components/Math";
 import { SectionHeader } from "@/components/SectionHeader";
 
 const CLAIMS = [
-  "TFPT is a boundary-polarized spectral theory whose primitive input is a one-sided boundary datum.",
-  "Boundary polarization induces a finite carrier involution; compact Higgs index and primitive Yukawa type force the ranks (dim E_-, dim E_+) = (3, 2) — the carrier polynomial 6Y² − Y − 1 = 0 is a corollary, not an entry assumption.",
-  "The Standard-Model packet, α, the Cabibbo angle, and the PMNS reactor angle are forced by the same primitive datum, not fitted independently.",
-  "The strong-CP null θ_eff = 0 is a theorem-level consequence of admissibility and determinant-line closure.",
+  "TFPT is a discrete compiler with two inputs: the seam constant c₃ = 1/(8π) and the five-slot carrier g_car = 5. Nothing else is inserted by hand.",
+  "The carrier gives D₅, the family geometry gives A₃, and the μ₄ glue closes E₈ = (D₅ ⊕ A₃) + μ₄ as a lattice theorem — 240 = 16·5·3, 248 = 240 + 8 are carrier traces.",
+  "α⁻¹ = 137.0359992168 is the unique root of a parameter-free cubic (existence + uniqueness proved), and the flavor matrix, masses and θ₁₂ = 1/3 − φ₀/2 follow from one φ₀-ladder.",
+  "The bootstrap loop re-derives the inputs: g_car = 5 is forced three ways and the 8 in c₃ equals rank E₈ — the discrete core is overdetermined, with only π irreducible.",
 ];
 
 const NOT_CLAIMS = [
-  "The carrier polynomial is not invoked before the rank discharge — it appears only as the minimal polynomial of the derived eigenvalues.",
-  "Minimality is not a wishlist over preferred physics — it is a presentation-invariant defect filtration on essentialized admissible bordisms.",
-  "The CMB Stage 2 sky realization is not a theorem. A good CMB world is not automatically this CMB world.",
-  "The full pole-mass ledger, detailed E8 stage atlas, and cosmological comparison rows (Ω_b, η_B, m_a) are downstream comparisons, not primitive selectors.",
+  "E₈ is the unimodular audit/compiler hull, not an unbroken physical gauge group — so the no-go results against literal E₈ world-formulas do not apply.",
+  "The dimensionful EW/QCD masses (m_W, m_Z, m_H, sin²θ_W, α_s) sit on the RG scheme layer; the absolute quark amplitude scale reduces to the U_point anchor.",
+  "The frontier items — η_B, m_p/m_e, Koide, dark matter, full quantum gravity — are honest handles, not forced compiler powers.",
+  "No strict physical TOE is certified: the ambient quantum-gravity measure (G6) remains the open completion target.",
 ];
 
 export function WhatTfptClaims() {
@@ -29,8 +29,8 @@ export function WhatTfptClaims() {
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
           eyebrow="What TFPT claims"
-          title="A staged reconstruction, not a list of fits"
-          description="The orientation makes two things explicit: what TFPT does claim at the primitive level, and what it explicitly does not promote to theorem status. The split is what makes the falsification surface auditable."
+          title="One compiler, not a list of fits"
+          description="The introduction makes two things explicit: what TFPT does claim at the compiler level, and what it explicitly does not promote past its grade. The split is what makes the falsification surface auditable."
         />
 
         <div className="mt-12 grid gap-5 lg:grid-cols-2">
@@ -99,32 +99,32 @@ export function WhatTfptClaims() {
           className="mt-10 rounded-2xl border border-slate-700/40 bg-slate-950/40 p-6 sm:p-8"
         >
           <h3 className="font-serif text-lg font-semibold text-slate-50">
-            The primitive boundary datum
+            The two axioms
           </h3>
           <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-300">
-            Everything reconstructs from a single one-sided boundary datum. The
-            primitive kernel is reconstructed canonically; carrier, gauge group,
-            and the Standard-Model packet follow from a stabilizer theorem rather
-            than from a list of inserted representations.
+            Everything is generated from the seam constant and the five-slot
+            carrier. They are not even independent: both are elementary symmetric
+            polynomials of the single anchor a = (1,1,2), so the inputs collapse
+            to the anchor plus the lone continuous primitive π.
           </p>
           <div className="mt-5 grid gap-3 lg:grid-cols-2">
             <div className="rounded-lg border border-slate-700/40 bg-slate-950/60 p-4">
               <div className="text-[10px] font-semibold uppercase tracking-widest text-blue-300/80">
-                Primitive datum
+                P1 — seam constant
               </div>
               <div className="mt-2 overflow-x-auto">
                 <Math block>
-                  {"\\mathfrak{T}_\\partial = (\\mathcal{A}_+,\\mathcal{H}_+,D_+,J,\\Gamma,B_\\Sigma)"}
+                  {"c_3 = \\frac{1}{|\\mathbb{Z}_2|\\oint_{S^2}K\\,dA} = \\frac{1}{8\\pi}"}
                 </Math>
               </div>
             </div>
             <div className="rounded-lg border border-slate-700/40 bg-slate-950/60 p-4">
               <div className="text-[10px] font-semibold uppercase tracking-widest text-blue-300/80">
-                Primitive kernel
+                P2 — five-slot carrier
               </div>
               <div className="mt-2 overflow-x-auto">
                 <Math block>
-                  {"\\mathfrak{T}_\\partial^{\\mathrm{ker}} = (\\mathcal{A},\\mathcal{H},D,J,\\Gamma,\\tau_{\\mathrm{dbl}},\\iota_C,P_{\\mathrm{prim}},[u_\\Sigma],c_3)"}
+                  {"g_{\\mathrm{car}} = 5 = 3 + 2, \\quad \\dim S^+ = 2^{g-1} = 16"}
                 </Math>
               </div>
             </div>

@@ -32,9 +32,11 @@ export function CarrierVisualization() {
           The carrier polynomial{" "}
           <Math>{"6Y^2 - Y - \\mathbf{1} = 0"}</Math> is{" "}
           <span className="font-semibold text-amber-200">not</span> an entry
-          assumption. It is the algebraic shadow of a derived rank split{" "}
-          <Math>{"(\\dim E_-, \\dim E_+) = (3, 2)"}</Math>. The four steps below
-          show the order in which TFPT actually proves this.
+          assumption. It is the algebraic shadow of the 3+2 split forced by the
+          five-slot carrier{" "}
+          <Math>{"g_{\\mathrm{car}} = 5"}</Math> — the same split that gives the
+          D₅ half-spinor and the hypercharge. The four steps below show the
+          order in which the compiler reads this off.
         </p>
       </div>
 
@@ -42,36 +44,36 @@ export function CarrierVisualization() {
         <ProofStep
           step={1}
           accent="from-blue-500 to-cyan-500"
-          title="Boundary involution"
-          subtitle="Calderón polarization"
-          body="The Calderón polarization of the one-sided boundary datum induces a finite essential carrier involution. At this stage there is only a two-point algebra — no rank, no Standard Model."
-          formula={"\\varepsilon_{\\mathrm{car}} = \\iota_C|_E,\\; E = E_- \\oplus E_+"}
-          conclusion={"\\dim E = ?"}
+          title="Five-slot carrier"
+          subtitle="The second axiom"
+          body="The carrier is five slots — 3 colour + 2 weak. Its even-Hamming code is the D₅ half-spinor. This is the only structural input on the matter side."
+          formula={"g_{\\mathrm{car}} = 5 = 3 + 2"}
+          conclusion={"C^+ = D_5"}
         />
         <ProofStep
           step={2}
           accent="from-violet-500 to-purple-500"
-          title="Compact Higgs index"
-          subtitle="Riemann–Roch on S²"
-          body="Unit seam winding selects the minimal nonnegative determinant class on the compactified normal sphere. The seam-even block carries 𝒪(1) on S²; Riemann–Roch gives a 2-dimensional space of holomorphic sections."
-          formula={"H^0(S^2,\\mathcal{O}(1)) \\simeq \\mathbb{C}^2"}
-          conclusion={"\\Rightarrow \\dim E_+ = 2"}
+          title="Pascal closure"
+          subtitle="Even exterior code"
+          body="The half-spinor dimension is the Pascal sum on the carrier slots. The identity 2^(g−1) = C(g,0)+C(g,1)+C(g,2) holds only at g = 5, which fixes the carrier rank uniquely."
+          formula={"2^{g-1} = \\binom{g}{0}+\\binom{g}{1}+\\binom{g}{2}"}
+          conclusion={"\\dim S^+ = 16 = 1+5+10"}
         />
         <ProofStep
           step={3}
           accent="from-emerald-500 to-teal-500"
-          title="Primitive Yukawa type"
-          subtitle="Indecomposable trilinear"
-          body="The retained branch contains a nonzero primitive indecomposable local trilinear with two fermionic legs and one seam-even bosonic leg. Closure of the negative factor without a spectator forces Λ³E_- = det E_-."
-          formula={"\\Lambda^3 E_- = \\det E_-"}
-          conclusion={"\\Rightarrow \\dim E_- = 3"}
+          title="The 3 + 2 split"
+          subtitle="Unique integer split"
+          body="The colour/weak split of the five slots is the unique integer solution of b + s = 5 with b² + s² = 13 = |R(A₃)| + 1. No SM data is imported — the split is forced arithmetically."
+          formula={"b + s = 5,\\;\\; b^2 + s^2 = 13"}
+          conclusion={"(b, s) = (3, 2)"}
         />
         <ProofStep
           step={4}
           accent="from-fuchsia-500 to-pink-500"
-          title="Determinant-normalized Y"
+          title="Hypercharge generator"
           subtitle="Polynomial as corollary"
-          body="With (dim E_-, dim E_+) = (3, 2) the primitive integer determinant-preserving generator is unique. The carrier polynomial appears only as the minimal polynomial of its two derived roots."
+          body="With (b, s) = (3, 2) the determinant-normalized generator is unique: Y = −1/3 on the colour block, +1/2 on the weak block. The carrier polynomial appears only as the minimal polynomial of these two derived roots."
           formula={"Y = -\\tfrac{1}{3} P_- + \\tfrac{1}{2} P_+"}
           conclusion={"6Y^2 - Y - \\mathbf{1} = 0"}
         />
@@ -100,13 +102,13 @@ export function CarrierVisualization() {
                 className="relative rounded-xl border border-orange-400/30 bg-gradient-to-br from-orange-500/10 to-red-500/5 p-5"
               >
                 <div className="text-[10px] font-semibold uppercase tracking-widest text-orange-200/90">
-                  E_- (negative polarization)
+                  E_- (colour block)
                 </div>
                 <div className="mt-2 font-serif text-3xl font-semibold text-slate-50">
                   dim 3
                 </div>
                 <div className="mt-1 text-xs text-slate-400">
-                  forced by primitive Yukawa type
+                  the 3 colour slots of the carrier
                 </div>
                 <div className="mt-4 flex gap-2">
                   {COLOR_TRIPLET.map((c, i) => (
@@ -135,13 +137,13 @@ export function CarrierVisualization() {
                 className="relative rounded-xl border border-violet-400/30 bg-gradient-to-br from-violet-500/10 to-purple-500/5 p-5"
               >
                 <div className="text-[10px] font-semibold uppercase tracking-widest text-violet-200/90">
-                  E_+ (positive polarization)
+                  E_+ (weak block)
                 </div>
                 <div className="mt-2 font-serif text-3xl font-semibold text-slate-50">
                   dim 2
                 </div>
                 <div className="mt-1 text-xs text-slate-400">
-                  forced by compact Higgs index
+                  the 2 weak slots of the carrier
                 </div>
                 <div className="mt-4 flex gap-2">
                   {WEAK_DOUBLET.map((c, i) => (
@@ -304,7 +306,7 @@ export function CarrierVisualization() {
           </Math>
         </div>
         <p className="mt-3 text-sm leading-relaxed text-slate-300">
-          The boundary / Higgs / Yukawa rank arguments fix{" "}
+          The carrier and family arguments fix{" "}
           <Math>{"(b, s) = (3, 2)"}</Math>. The coefficient{" "}
           <span className="font-mono text-slate-100">6 = 3 · 2</span> is the
           determinant-periodized block normalization of the rigid 3+2 carrier

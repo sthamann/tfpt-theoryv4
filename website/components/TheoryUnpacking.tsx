@@ -9,15 +9,15 @@ import { cn } from "@/lib/utils";
 /**
  * Animated 6-frame "theory unpacking" diagram.
  *
- * The narrative shows what TFPT does to reality — geometrically — in six
+ * The narrative shows the compiler construction — geometrically — in six
  * tightly-coupled steps:
  *
- *   1. Boundary datum (one-sided half-manifold)
- *   2. Exact double via τ_dbl (mirror reflects, seam appears)
- *   3. Calderón polarization (positive / negative split)
- *   4. Carrier involution → 3 + 2 rank split
- *   5. Counting via [u_Σ] = 1 (3 families · 1 doublet)
- *   6. Closed branch T★ → bridge readouts (α⁻¹, λ_C, sin²θ_13, θ_eff = 0)
+ *   1. The two axioms (seam constant c₃, five-slot carrier g_car)
+ *   2. The seam and its ℤ₂ sheet (Gauss–Bonnet normalisation)
+ *   3. Carrier split → 3 + 2 (the D₅ half-spinor)
+ *   4. The 3 + 2 carrier (hypercharge, dim S⁺ = 16)
+ *   5. The μ₄ glue ⇒ E₈ (240 roots)
+ *   6. The readouts + bootstrap (α⁻¹, θ_eff = 0)
  *
  * The component runs an autoplay cycle but pauses when the user clicks a
  * step pip, the play/pause button, or hovers over the canvas. It also
@@ -37,48 +37,47 @@ const STEPS: UnpackingStep[] = [
   {
     id: 0,
     badge: "Frame 1",
-    title: "One-sided boundary datum",
-    body: "Reality enters as a single spectral datum on a seam-bounded half-space. No bulk, no carrier, no Standard Model yet — only the boundary primitive.",
-    formula:
-      "\\mathfrak{T}_\\partial = (\\mathcal{A}_+, \\mathcal{H}_+, D_+, J, \\Gamma, B_\\Sigma)",
+    title: "The two axioms",
+    body: "Two numbers enter: the seam constant c₃ = 1/(8π) on the boundary, and a five-slot carrier g_car = 5. Nothing else — no gauge group, no families, no α — is inserted by hand.",
+    formula: "c_3 = \\tfrac{1}{8\\pi}, \\qquad g_{\\mathrm{car}} = 5",
   },
   {
     id: 1,
     badge: "Frame 2",
-    title: "Exact double via τ_dbl",
-    body: "The half-space is reflected across its boundary into an exact double. The shared edge becomes the seam Σ — the involution τ_dbl is the only structure carried across.",
+    title: "The seam and its sheet",
+    body: "The seam carries a ℤ₂ sheet involution. The Gauss–Bonnet normalisation of the one-sided seam sphere fixes the seam constant — only π stays continuous.",
     formula:
-      "\\tau_{\\mathrm{dbl}}: \\mathfrak{T}_\\partial \\rightsquigarrow \\mathfrak{T}_{\\min}^{\\mathrm{cl}}",
+      "c_3 = \\frac{1}{|\\mathbb{Z}_2|\\oint_{S^2}K\\,dA} = \\frac{1}{8\\pi}",
   },
   {
     id: 2,
     badge: "Frame 3",
-    title: "Calderón polarization ι_C",
-    body: "The doubled datum splits canonically into positive and negative polarization sectors. The split is not chosen — it is the boundary projector of D acting on the double.",
+    title: "Carrier split → 3 + 2",
+    body: "The five carrier slots split into 3 colour + 2 weak. The even-Hamming code on the slots is the D₅ half-spinor — the split is arithmetic, not assumed.",
     formula:
-      "\\iota_C: \\mathcal{H} = \\mathcal{H}_+ \\oplus \\mathcal{H}_-",
+      "g_{\\mathrm{car}} = 5 = 3 + 2 \\;\\Rightarrow\\; C^+ = D_5",
   },
   {
     id: 3,
     badge: "Frame 4",
-    title: "Carrier ε_car → 3 + 2",
-    body: "The polarization induces a finite carrier involution. Compact Higgs index forces dim E₊ = 2; primitive Yukawa type forces dim E₋ = 3. The 3 + 2 split is derived, not assumed.",
+    title: "The 3 + 2 carrier",
+    body: "The colour block (dim 3) and weak block (dim 2) carry the determinant-normalized hypercharge Y = −1/3, +1/2. The half-spinor packet is Λ^even of the carrier, dim 16.",
     formula:
-      "E = E_- \\oplus E_+, \\quad (\\dim E_-, \\dim E_+) = (3, 2)",
+      "(\\dim E_-, \\dim E_+) = (3, 2), \\quad \\dim S^+ = 16",
   },
   {
     id: 4,
     badge: "Frame 5",
-    title: "Counting via [u_Σ] = 1",
-    body: "The unit seam class fixes 3 chiral families on E₋ and exactly one weak doublet on E₊. The Standard-Model packet emerges as a counting consequence.",
+    title: "Glue ⇒ E₈",
+    body: "Three families and the four-puncture geometry ℙ¹∖μ₄ = A₃ glue with the D₅ spinor across the common discriminant ℤ₄: E₈ = (D₅ ⊕ A₃) + μ₄, 240 roots.",
     formula:
-      "[u_\\Sigma] = 1 \\;\\Rightarrow\\; N_{\\mathrm{fam}} = 3,\\; N_\\Phi = 1",
+      "E_8 = (D_5 \\oplus A_3) + \\mu_4, \\quad |R(E_8)| = 240",
   },
   {
     id: 5,
     badge: "Frame 6",
-    title: "Closed branch T★ → observables",
-    body: "The closed branch projects onto bridge readouts. α, λ_C, sin²θ_13, β_rad, and the strong-CP null θ_eff = 0 all read off the same admissibility data — none are fitted.",
+    title: "The readouts + bootstrap",
+    body: "The compiler reads off α⁻¹, the flavor angles, the strong-CP null and β_rad — none fitted — and the bootstrap loop re-derives its own inputs, so the discrete core is overdetermined.",
     formula:
       "\\alpha^{-1}(0) = 137.035\\,999\\,217\\,\\ldots,\\;\\; \\theta_{\\mathrm{eff}} = 0",
   },
@@ -317,7 +316,7 @@ function UnpackingCanvas({ step }: { step: number }) {
           transition={{ duration: 1.2, ease: "easeOut" }}
         />
 
-        {/* ---- Layer 1: left half-disk (boundary datum) ---- */}
+        {/* ---- Layer 1: left half-disk (the seam) ---- */}
         <motion.g
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
@@ -370,7 +369,7 @@ function UnpackingCanvas({ step }: { step: number }) {
               fontSize="14"
               fontFamily="ui-monospace, monospace"
             >
-              Boundary datum
+              Seam · c₃ = 1/(8π)
             </text>
             <text
               x={CX - 220}
@@ -379,7 +378,7 @@ function UnpackingCanvas({ step }: { step: number }) {
               fontSize="11"
               fontFamily="ui-monospace, monospace"
             >
-              one-sided · seam edge highlighted
+              the boundary normaliser
             </text>
           </motion.g>
         </motion.g>
@@ -438,7 +437,7 @@ function UnpackingCanvas({ step }: { step: number }) {
             fontSize="11"
             fontFamily="ui-monospace, monospace"
           >
-            τ_dbl involution
+            ℤ₂ sheet involution
           </text>
         </motion.g>
 
@@ -464,7 +463,7 @@ function UnpackingCanvas({ step }: { step: number }) {
             fontSize="11"
             fontFamily="ui-monospace, monospace"
           >
-            ℋ_−
+            colour
           </text>
           <text
             x={CX + R - 32}
@@ -483,7 +482,7 @@ function UnpackingCanvas({ step }: { step: number }) {
             fontSize="11"
             fontFamily="ui-monospace, monospace"
           >
-            ℋ_+
+            weak
           </text>
         </motion.g>
 
@@ -675,7 +674,7 @@ function CountingClusters({ step }: { step: number }) {
           textAnchor="middle"
           fontFamily="ui-monospace, monospace"
         >
-          [u_Σ] = 1 → 3 families · 1 weak doublet
+          g_car = 5 → D₅ spinor · 3 families · 1 doublet
         </text>
       </motion.g>
     </motion.g>
@@ -803,7 +802,7 @@ function ObservableReadouts({ step }: { step: number }) {
           fontFamily="ui-monospace, monospace"
           fontWeight="600"
         >
-          Closed branch T★
+          Compiler output
         </text>
         <text
           x={CX}

@@ -11,16 +11,16 @@ const SITE_URL =
 export const metadata: Metadata = {
   title: "How to kill TFPT — Falsification Surface and No-Knobs Audit",
   description:
-    "An explicit list of falsification surfaces for the TFPT 4.5 series, paired with a no-knobs audit. Each output is shown with its allowed inputs, forbidden inputs, and free-knob count. The construction is killed by any single satisfied criterion.",
+    "An explicit falsification surface for the TFPT 5.0 compiler closure, paired with a no-knobs audit. The freeze file commits the decisive kill criteria — JUNO θ₁₂, the tensor ratio r, neutrino ordering, the strong-CP null, and w = −1 — in advance. The construction is killed by any single satisfied criterion.",
   keywords: [
     "TFPT falsification",
     "How to kill TFPT",
     "Topological Fixed-Point Theory falsification",
     "No-knobs audit",
+    "Freeze file",
     "Strong-CP null",
-    "Cosmic birefringence",
-    "EHT achromatic intercept",
-    "Axion haloscope",
+    "JUNO solar angle",
+    "Tensor ratio r",
     "Stefan Hamann",
     "Alessandro Rizzo",
   ],
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     type: "article",
     title: "How to kill TFPT — Falsification Surface and No-Knobs Audit",
     description:
-      "Explicit falsification surface for the TFPT 4.5 series, with no-knobs audit. Every output has a stated kill criterion.",
+      "Explicit falsification surface for the TFPT 5.0 compiler closure, with a no-knobs audit. Every output has a committed kill criterion.",
     url: `${SITE_URL}/falsification`,
     siteName: "TFPT — Topological Fixed-Point Theory",
     locale: "en_US",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "How to kill TFPT — Falsification Surface",
     description:
-      "Each TFPT output ships with its own kill criterion. Free knobs: 0.",
+      "Each TFPT output ships with its own committed kill criterion. Free knobs: 0.",
   },
 };
 
@@ -49,26 +49,26 @@ const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "ScholarlyArticle",
   headline: "How to kill TFPT — Falsification Surface and No-Knobs Audit",
-  alternateName: "TFPT 4.5 Falsification Map",
+  alternateName: "TFPT 5.0 Falsification Map",
   url: `${SITE_URL}/falsification`,
   inLanguage: "en",
   isPartOf: {
     "@type": "PublicationIssue",
-    name: "TFPT 4.5 paper series",
+    name: "TFPT 5.0 compiler-closure document set",
   },
   author: [
     { "@type": "Person", name: "Stefan Hamann" },
     { "@type": "Person", name: "Alessandro Rizzo" },
   ],
   abstract:
-    "An explicit falsification surface for the TFPT 4.5 series. For every output the page lists allowed inputs, forbidden inputs, free-knob count, and a kill criterion that, if satisfied, falsifies the construction.",
+    "An explicit falsification surface for the TFPT 5.0 compiler closure. For every output the page lists allowed inputs, forbidden inputs, free-knob count, and a committed kill criterion that, if satisfied, falsifies the construction.",
   about: [
     "Falsification",
     "No-knobs audit",
     "Topological Fixed-Point Theory",
     "Strong-CP problem",
-    "Cosmic birefringence",
-    "EHT polarimetry",
+    "Solar neutrino angle",
+    "Inflation tensor ratio",
   ],
 };
 
@@ -107,8 +107,9 @@ export default function FalsificationPage() {
             How to <span className="text-gradient-blue">kill</span> TFPT.
           </h1>
           <p className="mt-3 max-w-2xl text-base leading-relaxed text-slate-300">
-            A theory that cannot fail explains nothing. This page lists every
-            output of the TFPT 4.5 series together with the experiment or
+            A theory that cannot fail explains nothing. This page lists the
+            committed kill criteria of the TFPT 5.0 compiler closure — frozen in
+            advance in the freeze file — together with the experiment or
             structural argument that would{" "}
             <span className="font-semibold text-slate-100">
               kill the construction
@@ -132,9 +133,9 @@ export default function FalsificationPage() {
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
             id="kill-criteria-heading"
-            eyebrow="Per-area kill criteria"
+            eyebrow="Committed kill criteria"
             title="Each output has a single sufficient kill condition"
-            description="Carrier theorem, joint discrete solve, electromagnetic closure, strong-CP, Higgs sector, axion haloscope, cosmic birefringence, EHT residual intercept, and the cosmology comparison surface — each row is sufficient on its own to falsify the construction."
+            description="The solar angle θ₁₂ (JUNO), the tensor ratio r (CMB-S4), neutrino ordering, the strong-CP null, dark-energy w, the EM fixed point, the E₈ glue, the flavor invariants, and no second Higgs — each row is sufficient on its own to falsify the construction. m_p/m_e is listed for honesty: it is explicitly not claimed as a compiler power."
           />
           <KillCriteria />
         </div>
@@ -150,7 +151,7 @@ export default function FalsificationPage() {
             id="no-knobs-heading"
             eyebrow="No-knobs audit"
             title="Inputs allowed, inputs forbidden, free knobs"
-            description="A claim of 'no fitted constants' is only as strong as the audit table behind it. For each TFPT output, the table below records the inputs the construction may use, the inputs it explicitly may not use, and the number of free parameters available for absorption. The free-knob count is the bar to clear."
+            description="A claim of 'no fitted constants' is only as strong as the audit table behind it. For each TFPT output, the table below records the inputs the construction may use (the two axioms and their consequences), the inputs it explicitly may not use, and the number of free parameters available for absorption. The free-knob count is the bar to clear."
           />
           <NoKnobsAudit />
         </div>

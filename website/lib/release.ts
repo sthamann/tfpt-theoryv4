@@ -5,7 +5,7 @@
  *
  * To regenerate these values after a re-build:
  *
- *   pnpm run release:hashes  (or)  npm run release:hashes
+ *   npm run release:write   (rewrites bytes + sha256 in place)
  *
  * which invokes scripts/release-hashes.mjs against website/public.
  */
@@ -26,222 +26,82 @@ export interface ReleaseAsset {
 }
 
 const COMMON = {
-  version: "TFPT 4.5",
-  releaseDate: "2026-04-27",
+  version: "TFPT 5.0",
+  releaseDate: "2026-06-08",
 };
 
 export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
-  "/papers/00_orientation_note.pdf": {
-    href: "/papers/00_orientation_note.pdf",
+  "/papers/introduction.pdf": {
+    href: "/papers/introduction.pdf",
     ...COMMON,
-    bytes: 291651,
+    bytes: 906799,
     sha256:
-      "3a4f9ed654c23427e0ac19ca9bf88c1099a536e032c437342ff454153dd7a552",
-    changelog: "Orientation map updated to reflect 4.5 series terminology.",
-  },
-  "/papers/01_boundary_kernel.pdf": {
-    href: "/papers/01_boundary_kernel.pdf",
-    ...COMMON,
-    bytes: 326384,
-    sha256:
-      "e5e17cd615088f3bf0b1ceff5b33bf6efb1556445ff038ffeab27a12240500f0",
-  },
-  "/papers/02_carrier_rigidity.pdf": {
-    href: "/papers/02_carrier_rigidity.pdf",
-    ...COMMON,
-    bytes: 405267,
-    sha256:
-      "506437119d7f198118ac958cc78ec63b05894937ecddac0425648b21e4f0004f",
-  },
-  "/papers/03_em_closure.pdf": {
-    href: "/papers/03_em_closure.pdf",
-    ...COMMON,
-    bytes: 387201,
-    sha256:
-      "d678e9d0fbb4edde6ed6136d5fdc72990f166d056ef7c5c20208fda0e20041ed",
+      "aec339d10992635342e348da43fe650ee2d2c838340ac95b0532c37a8fbe1dbd",
     changelog:
-      "Added UFE bridge for the birefringence seed and the achromatic dyonic intercept remark β_BH(r).",
+      "Compiler-closure reading guide: two axioms, the dependency DAG, the predictions and the proof ledger.",
   },
-  "/papers/04_admissibility_qft.pdf": {
-    href: "/papers/04_admissibility_qft.pdf",
+  "/papers/tfpt_1_architecture_e8.pdf": {
+    href: "/papers/tfpt_1_architecture_e8.pdf",
     ...COMMON,
-    bytes: 394606,
+    bytes: 941548,
     sha256:
-      "27ab3e60b3081d759ab12ebc7290d02bbf5beef0523e413383fc23a741aaf60d",
-  },
-  "/papers/05_metrology.pdf": {
-    href: "/papers/05_metrology.pdf",
-    ...COMMON,
-    bytes: 326418,
-    sha256:
-      "595f63badbcf64ef74f43bf628ddd922c1d50a35a56325d471cf4a9a0ac30699",
+      "33247c11f702d00fe665b1a033fe428e5b26f1ae9bea559bd0a1eb0d8904a6a3",
     changelog:
-      "Added the Einstein-limit normalizer ξ = c₃/φ₀ as a compression identity.",
+      "Architecture: the two axioms, the D₅ × A₃ → E₈ construction, and the EM fixed point with existence + uniqueness.",
   },
-  "/papers/06_cosmology.pdf": {
-    href: "/papers/06_cosmology.pdf",
+  "/papers/tfpt_2_standard_model.pdf": {
+    href: "/papers/tfpt_2_standard_model.pdf",
     ...COMMON,
-    bytes: 270246,
+    bytes: 931790,
     sha256:
-      "390307bcb5283f01e71dfe28d3ed8071e99cee0266ad4fb944ed8cbce293264e",
-  },
-  "/papers/coverage_audit.pdf": {
-    href: "/papers/coverage_audit.pdf",
-    ...COMMON,
-    bytes: 102401,
-    sha256:
-      "179c709429ecbc5d42fd660b7956e161193fe264f5634855258628fe29f6d868",
-  },
-  "/papers/series_index.pdf": {
-    href: "/papers/series_index.pdf",
-    ...COMMON,
-    bytes: 102428,
-    sha256:
-      "ba9cd6c801f20263deb27c60f39881400e27e5e3a1a186818819b608634e4f9d",
-  },
-  "/papers/technical_companion.pdf": {
-    href: "/papers/technical_companion.pdf",
-    ...COMMON,
-    bytes: 516649,
-    sha256:
-      "ecf1ed4597efe622ee966c2487bf23e98945ee008f440f17f8cb610fc0534326",
+      "691d548ee83e1698197bd1986e8351673fbbabe4f233f08891969ec014290f32",
     changelog:
-      "Added the dyonic calibration lemma with horizon-shift sign correction and the external RG-fingerprint protocol.",
+      "The Standard Model in one φ₀-ladder, the flavor residue matrix, and the derived solar angle θ₁₂.",
   },
-  "/papers/theory_map.pdf": {
-    href: "/papers/theory_map.pdf",
+  "/papers/tfpt_3_e8_audit_bootstrap.pdf": {
+    href: "/papers/tfpt_3_e8_audit_bootstrap.pdf",
     ...COMMON,
-    bytes: 123614,
+    bytes: 766073,
     sha256:
-      "83b99fea8ff088dffcfa956b532a0b7080389bcf898495a104ee13411089286c",
-  },
-  "/predictions/tfpt_prediction_alpha_em_closure.pdf": {
-    href: "/predictions/tfpt_prediction_alpha_em_closure.pdf",
-    ...COMMON,
-    bytes: 137631,
-    sha256:
-      "38ab64ce33915f8ce8cb6502f2964885315a3756ed549319c3b4612e0cd78ac4",
-  },
-  "/predictions/tfpt_prediction_alpha_mz_scheme.pdf": {
-    href: "/predictions/tfpt_prediction_alpha_mz_scheme.pdf",
-    ...COMMON,
-    bytes: 126262,
-    sha256:
-      "3372201bccbcc3dd0bb38d340d401945a0571ddc5cde786eaa615f5bb8b55699",
-  },
-  "/predictions/tfpt_prediction_axion_haloscope_window.pdf": {
-    href: "/predictions/tfpt_prediction_axion_haloscope_window.pdf",
-    ...COMMON,
-    bytes: 135390,
-    sha256:
-      "bb3e4dcda20e332b89e55a8e88516fe7b32200bc5403605b39d46369f811065a",
-  },
-  "/predictions/tfpt_prediction_birefringence_beta.pdf": {
-    href: "/predictions/tfpt_prediction_birefringence_beta.pdf",
-    ...COMMON,
-    bytes: 126201,
-    sha256:
-      "c001318c942e33a6b79bdaf167f762bc60963d56b914d37d421c9cfd46eb251d",
-  },
-  "/predictions/tfpt_prediction_ckm_phase.pdf": {
-    href: "/predictions/tfpt_prediction_ckm_phase.pdf",
-    ...COMMON,
-    bytes: 127405,
-    sha256:
-      "e6ac37ab5e091262dab199724389a5dff52aae9ece025ebcdde6c11b4b731c6f",
-  },
-  "/predictions/tfpt_prediction_eht_achromatic_intercept.pdf": {
-    href: "/predictions/tfpt_prediction_eht_achromatic_intercept.pdf",
-    ...COMMON,
-    bytes: 147739,
-    sha256:
-      "f435495e934b5539f9cd900eab7caf32ea44ffb3ffc80b0403a8b0fcf46b744e",
+      "a9be93ad824cc04923439aa9cd40aeced55f8699c5f82f03a8947886ecca6dfa",
     changelog:
-      "Initial release: achromatic residual intercept protocol for EHT/ngEHT polarimetry.",
+      "The seven E₈ slices as an audit raster, the cascade bridge, and the Möbius bootstrap.",
   },
-  "/predictions/tfpt_prediction_eta_b_leptogenesis.pdf": {
-    href: "/predictions/tfpt_prediction_eta_b_leptogenesis.pdf",
+  "/papers/tfpt_4_frontier.pdf": {
+    href: "/papers/tfpt_4_frontier.pdf",
     ...COMMON,
-    bytes: 128766,
+    bytes: 434235,
     sha256:
-      "57aba21cc040b8d1215b9d1c1ee942698769bb281390c3d018ca8056500ef94c",
+      "bfbf342414b8947c00ad3bba3f47524d00545d80fd2a157be536829f2694427b",
+    changelog:
+      "Honest status of η_B, m_p/m_e, Koide, dark matter and full quantum gravity — not forced onto the ladder.",
   },
-  "/predictions/tfpt_prediction_lambda_c_cabibbo.pdf": {
-    href: "/predictions/tfpt_prediction_lambda_c_cabibbo.pdf",
+  "/papers/tfpt_horizon_readouts.pdf": {
+    href: "/papers/tfpt_horizon_readouts.pdf",
     ...COMMON,
-    bytes: 135921,
+    bytes: 385616,
     sha256:
-      "9f1304ff8aaa2388a44ce95a8a2e9ed990a034cfee898acf2625956ca06a7f8b",
+      "eb7e9aeb3dabbffc67ababb92ce68a7c017ccd9c66bc67f47f403b22df2c3a91",
+    changelog:
+      "Appendix H — the horizon unit system: c₃ = 1/(8π) as the universal horizon thermal code.",
   },
-  "/predictions/tfpt_prediction_neutrino_sum.pdf": {
-    href: "/predictions/tfpt_prediction_neutrino_sum.pdf",
+  "/papers/origin_theory.pdf": {
+    href: "/papers/origin_theory.pdf",
     ...COMMON,
-    bytes: 124592,
+    bytes: 628010,
     sha256:
-      "ba062b9d6fc5c882f47389eba10bc9f0473a666a29857370d9693610dd649ebb",
+      "b1492c03d7346b252857e0e643098b477dd6b61cccabfe50c9519d283763c44f",
+    changelog:
+      "Origin Theory: the (5,3) skeleton, the triply-forced 8, the order-30 Coxeter cycle, and the gapped unique attractor.",
   },
-  "/predictions/tfpt_prediction_neutrinoless_double_beta.pdf": {
-    href: "/predictions/tfpt_prediction_neutrinoless_double_beta.pdf",
+  "/papers/tfpt_research_contracts.pdf": {
+    href: "/papers/tfpt_research_contracts.pdf",
     ...COMMON,
-    bytes: 134103,
+    bytes: 582360,
     sha256:
-      "ec1fec5b68c6517c908060959686b4edfa79fd5329155b71f73e0bb69caa7135",
-  },
-  "/predictions/tfpt_prediction_no_second_higgs.pdf": {
-    href: "/predictions/tfpt_prediction_no_second_higgs.pdf",
-    ...COMMON,
-    bytes: 125298,
-    sha256:
-      "36890b9f3e5e46b6d8cf826ebeb35280a42aa7f9414b1d8bbc7bc285d1393c56",
-  },
-  "/predictions/tfpt_prediction_omega_b_cosmology.pdf": {
-    href: "/predictions/tfpt_prediction_omega_b_cosmology.pdf",
-    ...COMMON,
-    bytes: 127147,
-    sha256:
-      "912f6f168a642848064f9d567cdc1312a333d211561e5464fb9f6057291611d8",
-  },
-  "/predictions/tfpt_prediction_pi0_hadronic.pdf": {
-    href: "/predictions/tfpt_prediction_pi0_hadronic.pdf",
-    ...COMMON,
-    bytes: 125842,
-    sha256:
-      "be5d57e18c4b175fd4590057c8a48452dbe2dec71c4a7ee94170f199df74604f",
-  },
-  "/predictions/tfpt_prediction_pmns_phase_octant.pdf": {
-    href: "/predictions/tfpt_prediction_pmns_phase_octant.pdf",
-    ...COMMON,
-    bytes: 126325,
-    sha256:
-      "9f80a5514065e0e07405668daba20a7650f17f5f5c90dc29d65cacc92ef95f4c",
-  },
-  "/predictions/tfpt_prediction_rare_kaons.pdf": {
-    href: "/predictions/tfpt_prediction_rare_kaons.pdf",
-    ...COMMON,
-    bytes: 124810,
-    sha256:
-      "28f6d147bdcab5be9bc5954d069da9acbb205c71798bdab07f4fd468f68f1f63",
-  },
-  "/predictions/tfpt_prediction_strong_cp_edm_null.pdf": {
-    href: "/predictions/tfpt_prediction_strong_cp_edm_null.pdf",
-    ...COMMON,
-    bytes: 126293,
-    sha256:
-      "1a2422981a730f07751db64bc95da09d2e6bdf56b3a5d0c22ae14abd34dd7021",
-  },
-  "/predictions/tfpt_prediction_theta13_neutrino.pdf": {
-    href: "/predictions/tfpt_prediction_theta13_neutrino.pdf",
-    ...COMMON,
-    bytes: 126613,
-    sha256:
-      "1ad92e70e901ab4e878421144fabdb9b12b3d39dc0d37551fd18e8c904a861f1",
-  },
-  "/predictions/tfpt_two_page_summary.pdf": {
-    href: "/predictions/tfpt_two_page_summary.pdf",
-    ...COMMON,
-    bytes: 119855,
-    sha256:
-      "3db298e8bd8f34b399fb5360e35c334e040ba70b7296960a893f2a39747710b7",
+      "8b9a92c05e24d820dbc4558c380b1cea5be81bc894da1b0fa1413ecf69143fe3",
+    changelog:
+      "Research contracts for the two open gates: (U_wall) flavor wall-selection and (G_metric) the QG measure.",
   },
 };
 
