@@ -65,6 +65,21 @@ only the standard library (writes `../manifest.sha256`).
 | `v33_explicit_flat_bundle.py` | **explicit valid flat bundle (RH-solve output)**: hardcoded `A₀` realises cusp class + splitting `O(-2)⊕O(-1)²` + trivial ∞-monodromy `‖M_∞−I‖~1e-9` (⇒`∏M_k=I`) + **irreducible (case A)**. Existence + case A confirmed; unique `∇_F*` needs `det R=8`, `c_u/c_d` needs H2 | tfpt_research_contracts |
 | `v34_h2_bridge_attempt.py` | **H2-bridge attempt (honest negative)**: explicit per-puncture `M_k` (cusp class, `∏M_k=I`); `\|diag M_k\|=(0,½,½)`, natural extraction does NOT reproduce the lepton amplitudes ⇒ the `Γ^min` geodesic-to-word dictionary is genuinely missing; `c_u/c_d` not obtained (no fabrication) | tfpt_research_contracts |
 
+> **Scripts `v35`–`v82`.** The table above lists the original `v1`–`v34` core; the
+> later scripts (`v35`–`v82`, including the operator-pencil trilogy
+> `v80`/`v81`/`v82`) are each registered with a one-line description in
+> `run_all.py` and typed in `status_ledger.csv` (**the source of truth**). The most
+> recent, `v82_koide_attractor_splitting.py`, proves two structural results on top of
+> the `v80`/`v81` anchor-block double cover: **(A)** the Koide source→pole RG attractor
+> is *forced, not postulated* — a branch-divisor-preserving Möbius map fixing both
+> branch points `q=2,5` is unique, and its multiplier `(2/3)⁶` is exactly the
+> subleading eigenvalue `λ₂` of the already-established gapped transfer operator
+> (`v54`/`v56`), with the Koide branch `−2/3=−|Z2|/N_fam` equal to that operator's cusp
+> weight — so the three "Koide postulates" collapse to one `[P]` identification
+> (`FR.KOIDE.04`); and **(B)** the clean rational double cover is *non-generic* — the
+> splitting-type placements give discriminants `81=N_fam⁴`, `49=scalaron²`,
+> `40=|R(D5)|`, only two of which split, hardening "anchor-first" (`FLAV.PENCIL.04`).
+
 **Freeze file.** `freeze_file.csv` registers the committed kill criteria for every
 falsifiable prediction (solar angle, `r`, ordering, nEDM, `w`, ...), referenced by
 the introduction's *Freeze file* box.
@@ -148,3 +163,26 @@ and must not be rendered as closed:
 | `N_star` | `[P]` | reheating input, **not** a compiler consequence |
 | Covariant metric-sector eq. | `[A]` | full Einstein-side field equation open; `R+R²`/scalaron is a readout, not a closure |
 | Wolfram `[C]` second path | — | `.wl`/`.wls` exports shipped in `verification/wolfram/` as an independent numerical path |
+
+## Red Team / Stress Test layer (`redteam/`)
+
+A **deliberately adversarial** layer that tries to *break* the five load-bearing
+reductions instead of confirming them (the v78-review request). It is separate
+from `run_all.py` on purpose: its checks assert adversarial facts (a
+counterexample exists, a hidden assumption is needed, a firewall holds), and the
+honest outcome of each target lives in a **status**, not a green pass.
+
+```bash
+cd redteam && python run_redteam.py     # runs targets A–E + writes redteam_table.txt
+```
+
+| Target | Script | Verdict |
+|---|---|---|
+| A — (E8)₁ boundary-net identification | `redteam/rt_A_e8net.py` | reduced, not closed (`c=8` underdetermines the net; holomorphy is the missing assumption) |
+| B — carrier rank / Pascal condition | `redteam/rt_B_pascal.py` | survives, narrowed (arithmetic `[F]` stands; the Pascal *selection* is typed `[A]/[P]`) |
+| C — `k = c₃/2` seam-area coefficient | `redteam/rt_C_kc3.py` | survives (dimensional firewall: no naked `k_phys = c₃/2`) |
+| D — `U_point → v_geo` bijection | `redteam/rt_D_upoint.py` | survives, narrowed (four hypotheses made explicit; CP phases residual) |
+| E — `v_geo` dimensional floor | `redteam/rt_E_vgeo.py` | survives, narrowed (floor of the certified tiers; frontier scales stay typed) |
+
+Verdicts are recorded as ledger rows `REDTEAM.A.01 … REDTEAM.E.01` and presented
+in the note `tfpt_5_redteam.tex`. See `redteam/README.md` for the full protocol.

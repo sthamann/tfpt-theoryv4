@@ -1,0 +1,53 @@
+==============================================================================
+  TFPT RED TEAM / STRESS TEST -- summary table
+  (purpose: try to BREAK the reductions; verdict carries the honest status)
+==============================================================================
+
+  Target A   [STATUS: REDUCED, not closed]
+    claim    : seam-Calderon boundary measure = (E8)_1 lattice net
+    assume   : holomorphy (mu-index 1) + Haag duality/locality/modularity + tightness + constructive map + unique bulk reconstruction
+    works    : central charges (8=5+3) and the conformal embedding c_coset=0 are exact [I]; gap Delta_eff>0 gives clustering (supports tightness)
+    fails    : c=8 alone underdetermines the net (SO(16)_1, Narain family); equality of measures + the constructive boundary->bulk map are NOT established
+    verdict  : keep 'reduced to a rigorous boundary-net identification problem'; do NOT write 'metric sector closed'. The red team confirms the conservative wording.
+    residual : holomorphy proof + seam-Calderon->(E8)_1 constructive map + bulk-reconstruction uniqueness (constructive-QFT grade).
+
+  Target B   [STATUS: SURVIVES (narrowed)]
+    claim    : the carrier rank g=5 is forced by the Pascal condition
+    assume   : even-exterior generation + truncation at degree 2 + count = 2^(g-1)
+    works    : arithmetic uniqueness g=5 is Lean-verified [F]; g=5 is over-determined (Pascal, D5 half-spinor 16, family closure all give 5)
+    fails    : the SELECTION rule is not derived: degree K sets g=2K+1, so K=2 (=>5) is a physical choice; perturbing the constant breaks g=5
+    verdict  : Theorem A's arithmetic core stands; the Pascal SELECTION must be typed as an explicit physical postulate [A]/[P], not [I].
+    residual : a boundary/seam derivation of half-spinor exhaustion (why degree-2 truncation / why count = 2^(g-1)).
+
+  Target C   [STATUS: SURVIVES]
+    claim    : k = c3/2 = 1/(16 pi) (reduced) and S/A = 1/4
+    assume   : c3 dimensionless; G carries the gravitational dimension; k read as the REDUCED coefficient (= G*k_phys)
+    works    : the dimensionless content k_red=c3/2 is forced by topology+variation; S=A/(4G) is dimensionally correct; suite uses only the reduced reading
+    fails    : the identity k_phys=c3/2 is dimensionally false (legal only at G=1 / Planck units) -- must never appear unqualified
+    verdict  : claim is safe AS WORDED (reduced coefficient). Firewall finds no naked dimensionful identity; absolute 1/G stays the anchor (v68).
+    residual : the absolute 4D Newton scale (1/G, Lambda^2*f2) remains the one dimensionful anchor; only that, nothing dimensionless, is open.
+
+  Target D   [STATUS: SURVIVES (narrowed)]
+    claim    : ratios + products fix the amplitudes up to one scale v_geo
+    assume   : real, positive, fixed branch, no zeros, odd sector size (=N_fam=3)
+    works    : exact for the TFPT sectors (positive rational c, n=3 odd): the bijection reconstructs every amplitude up to one scale
+    fails    : even sector size (sign), complex amplitudes (n-th-root branch), zeros all break it; CP phases are not covered by v_geo
+    verdict  : bijection holds for TFPT once the four assumptions are STATED. They are silent in v75 and must be promoted to named hypotheses.
+    residual : CP phases (delta_CKM/PMNS) stay independent of v_geo; the magnitude reduction is the only thing v_geo closes.
+
+  Target E   [STATUS: SURVIVES (narrowed)]
+    claim    : exactly one dimensionful scale v_geo carries the whole theory
+    assume   : dimensionless prefactors from {c3, phi0, pi, integers}; seam=Planck identification for the cutoff
+    works    : the closed compiler + protected IR tiers reduce every dimensionful readout to (pure number) x v_geo; 1/G and the flavor scale are one anchor
+    fails    : the full theory still carries frontier dimensionful inputs (EW matching, reheating temperature, leptogenesis scale) + the seam-cutoff identification
+    verdict  : v_geo is the unique dimensional floor of the CERTIFIED tiers (true by dimensional analysis). Full single-scale-ness is conditional on the flagged identifications staying honestly typed.
+    residual : explicit reduction (or honest frontier typing) of EW/reheating/leptogenesis scales + the seam=Planck cutoff identification.
+
+==============================================================================
+  STATUS MATRIX
+    A  REDUCED, not closed     seam-Calderon boundary measure = (E8)_1 lattice net
+    B  SURVIVES (narrowed)     the carrier rank g=5 is forced by the Pascal condition
+    C  SURVIVES                k = c3/2 = 1/(16 pi) (reduced) and S/A = 1/4
+    D  SURVIVES (narrowed)     ratios + products fix the amplitudes up to one scale v_geo
+    E  SURVIVES (narrowed)     exactly one dimensionful scale v_geo carries the whole theory
+==============================================================================

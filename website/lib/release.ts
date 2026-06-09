@@ -34,72 +34,72 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/introduction.pdf": {
     href: "/papers/introduction.pdf",
     ...COMMON,
-    bytes: 914014,
+    bytes: 916077,
     sha256:
-      "23a7ba22bbabdaaaa0a361ca856a1688d8d807fa8f7c068d0de8584e262b57ff",
+      "ec845db73d4931f252f978c89e889d80d7f0399b7eddeb3b9bdda766d9d01f1e",
     changelog:
       "Compiler-closure reading guide: two axioms, the dependency DAG, the predictions and the proof ledger.",
   },
   "/papers/tfpt_1_architecture_e8.pdf": {
     href: "/papers/tfpt_1_architecture_e8.pdf",
     ...COMMON,
-    bytes: 950024,
+    bytes: 950450,
     sha256:
-      "2a5bc1bcf28e9d22cc59d2208a58651ac7243df293adb8c38bee5c7e3ee1142e",
+      "7219537e0c39e4bf637ea4ec2fcb446ac9e482d28ac813e82323924c30eac7ef",
     changelog:
       "Architecture: the two axioms, the D₅ × A₃ → E₈ construction, and the EM fixed point with existence + uniqueness.",
   },
   "/papers/tfpt_2_standard_model.pdf": {
     href: "/papers/tfpt_2_standard_model.pdf",
     ...COMMON,
-    bytes: 950698,
+    bytes: 955533,
     sha256:
-      "de0522d8fdd47eed891a9e516a9e7a4ead4634827a28a3b5a6eca8c24db5d9f6",
+      "bbd8811e0d0710ec4906b7e72acb484a0048e0b4b2792730b7c4c7a7085df110",
     changelog:
       "The Standard Model in one φ₀-ladder, the flavor residue matrix, and the derived solar angle θ₁₂.",
   },
   "/papers/tfpt_3_e8_audit_bootstrap.pdf": {
     href: "/papers/tfpt_3_e8_audit_bootstrap.pdf",
     ...COMMON,
-    bytes: 767106,
+    bytes: 768214,
     sha256:
-      "dfc6fe5a8cc2f383f3c357cf0f716f030269c9cfa6e2fe3a53cee291e43cf5cb",
+      "d719e5c4a428177fcb1861e524769a378a40e58491a75a858fa2c23c34eb6bb1",
     changelog:
       "The seven E₈ slices as an audit raster, the cascade bridge, and the Möbius bootstrap.",
   },
   "/papers/tfpt_4_frontier.pdf": {
     href: "/papers/tfpt_4_frontier.pdf",
     ...COMMON,
-    bytes: 484362,
+    bytes: 489751,
     sha256:
-      "ecd115a5fa89bec116b83bcda62f5e8d9ad4890945b49a073091a123c9035516",
+      "12b15882a9dfc6e6fdc0cd910ad983a504e268610c261feb785adfd7a2f8cf4e",
     changelog:
       "Honest status of η_B, m_p/m_e, Koide, dark matter and full quantum gravity — not forced onto the ladder.",
   },
   "/papers/tfpt_horizon_readouts.pdf": {
     href: "/papers/tfpt_horizon_readouts.pdf",
     ...COMMON,
-    bytes: 385616,
+    bytes: 385578,
     sha256:
-      "eb7e9aeb3dabbffc67ababb92ce68a7c017ccd9c66bc67f47f403b22df2c3a91",
+      "870edd0129f643906957c1c349900866122013a64ce10efd15fefd888130e872",
     changelog:
       "Appendix H — the horizon unit system: c₃ = 1/(8π) as the universal horizon thermal code.",
   },
   "/papers/origin_theory.pdf": {
     href: "/papers/origin_theory.pdf",
     ...COMMON,
-    bytes: 636251,
+    bytes: 636522,
     sha256:
-      "1616b176c4c88da36509371df8ae895c657de0da7418ad866ed94766e01e791d",
+      "5787472ec469e7bdc8142059b7264df07d967109acd82f8ea0cee40a7eb3759e",
     changelog:
       "Origin Theory: the (5,3) skeleton, the triply-forced 8, the order-30 Coxeter cycle, and the gapped unique attractor.",
   },
   "/papers/tfpt_research_contracts.pdf": {
     href: "/papers/tfpt_research_contracts.pdf",
     ...COMMON,
-    bytes: 591053,
+    bytes: 590992,
     sha256:
-      "6aa91814065060d8a64409ae11616e72b95fa8cdbb1f80fd8547ce4218884930",
+      "8c7e7ebc154fe2486854ee7f96d3dd26db96a72cef24eb5618881898899e4221",
     changelog:
       "Research contracts for the two open gates: (U_wall) flavor wall-selection and (G_metric) the QG measure.",
   },

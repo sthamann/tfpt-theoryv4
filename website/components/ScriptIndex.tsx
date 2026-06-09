@@ -168,6 +168,8 @@ const CLUSTERS: Cluster[] = [
       { file: "v79_review_identities.py", what: "hypercharge Lucas–Binet (1,1,7,13,55,133); Inverse Anchor Theorem (a^T M⁻¹ a=1); MacWilliams (1,10,5); + firewall on m_p/m_e, η_B" },
       { file: "v80_operator_pencil_geometry.py", what: "operator pencil: anchor singularity det B(K+xQ)=(3x+2)(3x+5); block-det type checker (9,10,16,40); F₄×G₂ shadow 52+14+26·7=248" },
       { file: "v81_singular_pencil_matrices.py", what: "double cover y²=det B(K+xQ): Koide −2/3 & carrier −5/3 are the two branch points (deck 2=|ℤ₂|, disc=81=N_fam⁴); clearing matrices 3K−2Q (D₅⊕A₃ glue, sum=240) & 3K−5Q (charge-neutral)" },
+      { file: "v82_koide_attractor_splitting.py", what: "Koide attractor FORCED, not postulated: the branch-preserving map fixing q=2,5 is unique, and its multiplier (2/3)⁶ = the established transfer gap λ₂ (v54/56) ⇒ 3 Koide postulates → 1; + splitting trichotomy disc 81/49/40 (clean split is non-generic)" },
+      { file: "v83_e8net_holomorphic_uniqueness.py", what: "closes red-team Target A residual 1: #primaries=det(Cartan) ⇒ holomorphy (E8 det 1) is necessary AND sufficient — (D8)₁=SO(16)₁ shares c=8 but has 4 primaries; E8 the unique even-unimodular rank-8 lattice (mass=1/|W(E8)|). A drops 3→2 residuals; + Target B reduced to the half-spinor midpoint K=(g−1)/2" },
     ],
   },
 ];

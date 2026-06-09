@@ -31,6 +31,7 @@ NOTES=(
   tfpt_2_standard_model
   tfpt_3_e8_audit_bootstrap
   tfpt_4_frontier
+  tfpt_5_redteam
   tfpt_horizon_readouts
   tfpt_research_contracts
   origin_theory

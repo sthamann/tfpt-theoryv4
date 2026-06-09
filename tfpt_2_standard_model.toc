@@ -6,14 +6,14 @@
 \contentsline {section}{\numberline {4}Charged leptons: completely closed in $\varphi _0^{\mathrm {ret}}$}{7}{section.4}%
 \contentsline {section}{\numberline {5}Quarks: hierarchy from the same word-lengths}{8}{section.5}%
 \contentsline {section}{\numberline {6}The $Q,\Sigma $ projection algebra: masses and transport from one operator}{11}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Closing the audit gates: is $M{=}41$, $K$, $Q$ derived or imported?}{15}{subsection.6.1}%
-\contentsline {section}{\numberline {7}Mixing: CKM and PMNS from holonomy}{17}{section.7}%
+\contentsline {subsection}{\numberline {6.1}Closing the audit gates: is $M{=}41$, $K$, $Q$ derived or imported?}{16}{subsection.6.1}%
+\contentsline {section}{\numberline {7}Mixing: CKM and PMNS from holonomy}{18}{section.7}%
 \contentsline {paragraph}{Honest note on the search.}{18}{section*.2}%
-\contentsline {section}{\numberline {8}Neutrinos}{18}{section.8}%
+\contentsline {section}{\numberline {8}Neutrinos}{19}{section.8}%
 \contentsline {section}{\numberline {9}How each of the seven papers simplifies}{19}{section.9}%
-\contentsline {section}{\numberline {10}Is the entire Standard Model thereby derived?}{19}{section.10}%
-\contentsline {section}{\numberline {11}Complete solutions of the five open questions}{20}{section.11}%
-\contentsline {section}{\numberline {12}How the original-paper predictions simplify}{24}{section.12}%
+\contentsline {section}{\numberline {10}Is the entire Standard Model thereby derived?}{20}{section.10}%
+\contentsline {section}{\numberline {11}Complete solutions of the five open questions}{21}{section.11}%
+\contentsline {section}{\numberline {12}How the original-paper predictions simplify}{25}{section.12}%
 \contentsline {section}{Conclusion}{25}{section*.8}%
 \contentsline {part}{II\hspace {1em}The flavor block: parabolic weights and the transport theorem}{26}{part.2}%
 \contentsline {section}{\numberline {13}The setup: parabolic data on the family curve}{26}{section.13}%

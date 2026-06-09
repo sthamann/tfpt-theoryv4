@@ -37,7 +37,7 @@ LEAN_DIR = _lean_read_dir()                        # repo path (where the files 
 
 TEX = [
     "introduction.tex", "tfpt_1_architecture_e8.tex", "tfpt_2_standard_model.tex",
-    "tfpt_3_e8_audit_bootstrap.tex", "tfpt_4_frontier.tex",
+    "tfpt_3_e8_audit_bootstrap.tex", "tfpt_4_frontier.tex", "tfpt_5_redteam.tex",
     "tfpt_horizon_readouts.tex", "tfpt_research_contracts.tex",
     "origin_theory.tex",
 ]
@@ -58,6 +58,12 @@ def collect():
         for f in sorted(os.listdir(wdir)):
             if f.endswith((".wl", ".wls", ".md")):
                 files.append("verification/wolfram/" + f)
+    # Red-team / stress-test layer (.py sources + README + generated summary table)
+    rdir = os.path.join(vdir, "redteam")
+    if os.path.isdir(rdir):
+        for f in sorted(os.listdir(rdir)):
+            if f.endswith((".py", ".md", ".txt")):
+                files.append("verification/redteam/" + f)
     return files
 
 

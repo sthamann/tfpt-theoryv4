@@ -697,6 +697,35 @@ parity selects} --- a cleaner target than ``why $2/3$''. (The $D_5/A_3$ and $E_8
 are exact; their per-entry atlas reading stays audit-level \tP.)
 \end{keybox}
 
+\begin{keybox}[The Koide branch is a \emph{forced} attractor, and the clean split is non-generic \tI/\tP\ (\veri{v82\_koide\_attractor\_splitting.py})]
+This sharpens the open question above. Work in the branch coordinate $q=-3x$ (Koide $q=2$, carrier $q=5$).
+\textbf{(A) The source-to-pole map is forced, not postulated.} Any branch-divisor-preserving M\"obius map of the
+pencil line that fixes \emph{both} branch points is, in the cross-ratio coordinate $\rho=(q-2)/(5-q)$, exactly
+$\rho\mapsto\mu\rho$ --- hence \emph{unique} once $\mu$ is fixed. The multiplier is not a new input: $\mu=(2/3)^6$
+is the subleading eigenvalue $\lambda_2$ of the \emph{already-established} unique gapped boundary transfer operator
+(spectrum $\{1,(2/3)^6,(1/3)^6\}$, gap $6\log\tfrac32>0$; \veri{v54\_seam\_horizon\_keystones.py}, \veri{v56\_unique\_attractor.py}),
+and the Koide branch $x=-2/3=-|\Z_2|/\Nfam$ is precisely its cusp weight $2/3=\{0,1,|\Z_2|\}/\Nfam$ (the carrier maps to
+Koide under the deck period $q\mapsto q-\Nfam$, the same cusp class). With $\mu=(2/3)^6$ the unique map is the integer
+M\"obius map
+\[
+  \boxed{\ F(q)=\frac{2(569q-3325)}{665q-3517}\ },\qquad F(2)=2,\ \ F(5)=5,\ \ F'(2)=(2/3)^6<1,\ \ F'(5)=(3/2)^6>1,
+\]
+so Koide is the \textbf{attractor} and the carrier the \textbf{repeller}, and $q_n\to2$ i.e.\ $x\to-2/3$ at the
+\emph{same} rate that governs the SM flavor gap and horizon recovery. The three structural postulates needed for a
+Koide derivation thus collapse to \emph{one} physical identification --- \emph{source-to-pole transfer $=$
+branch-preserving relaxation of the established transfer operator} --- after which rate, uniqueness and direction
+all follow. That single identification stays \tP; the rest is \tI. \textbf{(B) The clean rational split is
+non-generic.} The splitting-type exponents $(2,1,1)$ (the anchor $a=(1,1,2)$) placed across the three family slots
+give three different covers: $(1,1,2)$ gives $\det B_{K+xQ}=(3x+2)(3x+5)$, $\mathrm{disc}=81=\Nfam^4$ (\emph{split},
+rational labels $\{2,5\}$); $(2,1,1)$ gives $(x+2)(9x+11)$, $\mathrm{disc}=49=7^2$ (\emph{split}); $(1,2,1)$ gives
+$5x^2+10x+3$, $\mathrm{disc}=40=|R(D_5)|=\det B_L$, which is \emph{not} a square --- a \textbf{non-split} cover with
+Galois-conjugate branch points $-1\pm\sqrt{10}/5$ centred exactly on the sheet $x=-1$ ($q=3$), separation
+$2\sqrt{\AL}$. (Negative control, as for the cover itself: the $R$-pencil has $\mathrm{disc}=153$, also not a
+square.) So Koide and the carrier appearing as \emph{separate rational} singularities is a special feature of the
+canonical anchor placement, not a generic one --- a hardening of anchor-first. The physical fermion-sector
+identification of the three placements is not claimed and stays \tP.
+\end{keybox}
+
 \begin{winbox}[Grand Mass Volume: the absolute mass-scaling normalisation \tI]
 The individual $c_q$ are a gauge, but the \emph{absolute} normalisation of the mass spectrum is fixed by the
 sector mass-matrix \emph{determinants} --- each a clean $\phiz$-power whose exponent is the $K$-row sum:

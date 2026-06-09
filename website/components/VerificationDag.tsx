@@ -168,7 +168,7 @@ const NODES: DagNode[] = [
     marker: "[I] identity",
     title: "R, L — the flavor residue matrix",
     summary:
-      "The residue + winding matrix on the anchor a = (1,1,2). det R = 8 = h(D₅), principal 2-minors (2,3,5) with product h(E₈) = 30, ‖R‖_F² = 78 = dim E₆, χ_R = t³ − 9t² + 10t − 8, Σ L = 40. Inverse Anchor Theorem: 1ᵀM⁻¹1 = 1/atom and aᵀM⁻¹a = 1 for R, K, L. Operator-pencil geometry: det B(K+xQ) = (3x+2)(3x+5), a quadratic ⇒ y² = det B(K+xQ) is a double cover of the pencil line branched exactly at Koide x = −2/3 and carrier x = −5/3 — they are the two branch points (deck degree 2 = |ℤ₂| = the sheet; disc = 81 = N_fam⁴; separation = 1 transport period). Clearing matrices: 3K−2Q reproduces the D₅⊕A₃ glue (Σ = 240 = |R(E₈)|), 3K−5Q is charge-neutral. Block-det type checker det B = (9,10,16,40) for (Q,K,R,L).",
+      "The residue + winding matrix on the anchor a = (1,1,2). det R = 8 = h(D₅), principal 2-minors (2,3,5) with product h(E₈) = 30, ‖R‖_F² = 78 = dim E₆, χ_R = t³ − 9t² + 10t − 8, Σ L = 40. Inverse Anchor Theorem: 1ᵀM⁻¹1 = 1/atom and aᵀM⁻¹a = 1 for R, K, L. Operator-pencil geometry: det B(K+xQ) = (3x+2)(3x+5), a quadratic ⇒ y² = det B(K+xQ) is a double cover of the pencil line branched exactly at Koide x = −2/3 and carrier x = −5/3 — they are the two branch points (deck degree 2 = |ℤ₂| = the sheet; disc = 81 = N_fam⁴; separation = 1 transport period). Clearing matrices: 3K−2Q reproduces the D₅⊕A₃ glue (Σ = 240 = |R(E₈)|), 3K−5Q is charge-neutral. Block-det type checker det B = (9,10,16,40) for (Q,K,R,L). The relative operator T = 3 B(Q)⁻¹B(K) = [[5,11/3],[0,2]] has Spec {2,5}, tr 7 = scalaron, det 10 = A_Λ — the basis-invariant core. Forced Koide attractor: the unique branch-preserving Möbius map fixing q = 2,5 has multiplier (2/3)⁶ = the established transfer gap λ₂ (v54/56), so the Koide RG collapses to one identification; the clean rational split is non-generic (placement discriminants 81/49/40).",
     inputs: ["E₈ / A₃"],
     outputs: ["det 8, minors (2,3,5), Σ L = 40"],
     failure: "Wrong D₆ branch.",
@@ -180,6 +180,7 @@ const NODES: DagNode[] = [
       "v79_review_identities.py",
       "v80_operator_pencil_geometry.py",
       "v81_singular_pencil_matrices.py",
+      "v82_koide_attractor_splitting.py",
     ],
   },
   {
@@ -247,7 +248,7 @@ const NODES: DagNode[] = [
     marker: "[P] conditional",
     title: "Gravity & cosmology — the geometry channel",
     summary:
-      "The spectral action gives R + R²; the scalaron mass is M = c₃^(7/2) M̄ = 3.06×10¹³ GeV (exponent 7 = Ω_adm − 10 b₁). From the same attractor: n_s = 0.965, r ≈ 0.004, A_s ≈ 2.0×10⁻⁹, Λ ∼ e⁻²ᵅ⁻¹, H₀ ∼ √Λ. Gate 2: the IR tier is gap-decoupled (Δ_eff = 1.648 > 0), and the ambient measure G6 is holographically reduced to the rigorously-constructed (E₈)₁ lattice net (c = 8 = 5 + 3). Every scale is a ratio to one v_geo — the dimensional-analysis floor.",
+      "The spectral action gives R + R²; the scalaron mass is M = c₃^(7/2) M̄ = 3.06×10¹³ GeV (exponent 7 = Ω_adm − 10 b₁). From the same attractor: n_s = 0.965, r ≈ 0.004, A_s ≈ 2.0×10⁻⁹, Λ ∼ e⁻²ᵅ⁻¹, H₀ ∼ √Λ. Gate 2: the IR tier is gap-decoupled (Δ_eff = 1.648 > 0), and the ambient measure G6 is holographically reduced to the rigorously-constructed (E₈)₁ lattice net (c = 8 = 5 + 3). The red-team Target-A residual that pins this net is now closed at the lattice level: holomorphy (μ-index 1 = det Cartan 1) is necessary AND sufficient — E₈ is the unique even-unimodular rank-8 lattice (mass = 1/|W(E₈)|) — so only the boundary-net holomorphy/c=8 proof and bulk-reconstruction uniqueness remain open. Every scale is a ratio to one v_geo — the dimensional-analysis floor.",
     inputs: ["c₃ (P1)", "E₈"],
     outputs: ["Λ, A_s, n_s, r, scalaron M"],
     failure: "Ambient reflection-positivity fails.",
@@ -259,6 +260,7 @@ const NODES: DagNode[] = [
       "v76_gmetric_reduction.py",
       "v77_e8_conformal_net.py",
       "v78_vgeo_floor.py",
+      "v83_e8net_holomorphic_uniqueness.py",
     ],
   },
 

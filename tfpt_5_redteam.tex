@@ -1,0 +1,237 @@
+% ---------------------------------------------------------------------
+%  TFPT --- Red Team / Stress Test layer (Targets A--E)
+%  A deliberately adversarial pass over the five load-bearing reductions.
+%  Backed by verification/redteam/rt_A..rt_E + run_redteam.py.
+% ---------------------------------------------------------------------
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage[a4paper,margin=2.3cm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{booktabs,array,tabularx}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{microtype}
+\usepackage[hidelinks,colorlinks=true,linkcolor=blue!55!black,urlcolor=blue!55!black]{hyperref}
+\emergencystretch=3em
+
+\definecolor{tfblue}{HTML}{1F4E79}
+\definecolor{tfgreen}{HTML}{1E7B45}
+\definecolor{tfred}{HTML}{9B2226}
+\definecolor{tfgold}{HTML}{B8860B}
+\newtcolorbox{keybox}[1][]{enhanced,breakable,colback=tfblue!5!white,colframe=tfblue,fonttitle=\bfseries,coltitle=white,title={#1}}
+\newtcolorbox{winbox}[1][]{enhanced,breakable,colback=tfgreen!6!white,colframe=tfgreen!75!black,fonttitle=\bfseries,coltitle=white,title={#1}}
+\newtcolorbox{gapbox}[1][]{enhanced,breakable,colback=tfred!5!white,colframe=tfred!80!black,fonttitle=\bfseries,coltitle=white,title={#1}}
+
+\newcommand{\tI}{{\small\textcolor{tfgreen}{\textbf{[I]}}}}
+\newcommand{\tL}{{\small\textcolor{tfblue}{\textbf{[L]}}}}
+\newcommand{\tF}{{\small\textcolor{tfgreen!45!black}{\textbf{[F]}}}}
+\newcommand{\tN}{{\small\textcolor{tfgreen}{\textbf{[N]}}}}
+\newcommand{\tP}{{\small\textcolor{tfgold}{\textbf{[P]}}}}
+\newcommand{\tA}{{\small\textcolor{tfred}{\textbf{[A]}}}}
+\newcommand{\veri}[1]{\,{\footnotesize\textcolor{tfblue!70!black}{[\,\texttt{verification/#1}\,]}}}
+\newcommand{\cthree}{c_3}
+\newcommand{\vgeo}{v_{\mathrm{geo}}}
+\newcommand{\Mpl}{\bar M_{\mathrm{Pl}}}
+\newcommand{\Nfam}{N_{\mathrm{fam}}}
+\newcommand{\gcar}{g_{\mathrm{car}}}
+\setlist{itemsep=2pt,topsep=3pt}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+\title{\vspace{-1.2cm}\textbf{TFPT --- Red Team / Stress Test layer}\\[2mm]
+\large Five adversarial targets (A--E): try to \emph{break} the reductions, not confirm them}
+\author{}\date{\today}
+
+\begin{document}
+\maketitle
+\vspace{-0.6cm}
+
+\begin{keybox}[What this note is]
+This is the deliberately \emph{adversarial} layer requested in the v78 review. Its purpose is
+\textbf{not} to confirm TFPT but to attack the five load-bearing reductions at their weakest
+logical transitions. Each target is run through one fixed protocol --- minimal statement,
+assumptions, logical chain, validity conditions, counterexample search, limiting/degenerate
+cases, alternative structures, provisional verdict --- and produces a deliberately narrow output:
+where the statement works, where it could fail, and the residual risk. The layer is machine-backed
+by \veri{redteam/rt\_A\_e8net.py} \dots \veri{redteam/rt\_E\_vgeo.py} and
+\veri{redteam/run\_redteam.py}; a red-team check asserts an \emph{adversarial} fact (a counterexample
+really exists, a hidden assumption is really needed, a firewall really holds), and the honest
+outcome lives in the \textbf{status} of each target, never in a green pass.
+\end{keybox}
+
+\begin{center}\small
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{@{}l Y l Y@{}}
+\toprule
+\textbf{Target} & \textbf{Minimal claim} & \textbf{Status} & \textbf{Residual risk} \\
+\midrule
+A & seam--Calder\'on measure $=$ $(E8)_1$ net & \textcolor{tfred}{\textbf{reduced, not closed}} & holomorphy proof $+$ constructive map $+$ bulk uniqueness \\
+B & $\gcar=5$ forced by the Pascal rule & \textcolor{tfgold}{\textbf{survives (narrowed)}} & boundary derivation of half-spinor exhaustion (degree-2 truncation) \\
+C & $k=\cthree/2=\tfrac{1}{16\pi}$, $S/A=\tfrac14$ & \textcolor{tfgreen}{\textbf{survives}} & absolute $1/G$ (UV-sensitive) is the one anchor \\
+D & ratios$+$products $\Rightarrow$ one scale $\vgeo$ & \textcolor{tfgold}{\textbf{survives (narrowed)}} & CP phases ($\delta_{\mathrm{CKM/PMNS}}$) not covered by $\vgeo$ \\
+E & one scale $\vgeo$ carries the theory & \textcolor{tfgold}{\textbf{survives (narrowed)}} & EW/reheating/leptogenesis scales $+$ seam$=$Planck identification \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+% =====================================================================
+\section*{Method}
+% =====================================================================
+The red team treats each reduction as a hostile witness. A confirmatory script that always passes
+is worthless here: the layer is built so that it \emph{may} downgrade a claim. Three outcomes are
+allowed --- \textbf{survives} (stands as worded), \textbf{survives (narrowed)} (stands only after a
+silent assumption is made explicit), and \textbf{reduced, not closed} (the conservative wording is
+the correct one). A fourth, \textbf{broken}, is reserved for an actual failure; none occurred.
+
+% =====================================================================
+\section*{Target A --- the $(E8)_1$ boundary-net identification}\label{sec:A}
+% =====================================================================
+\noindent\textbf{Minimal claim.} The ambient metric/projective measure is reduced to identifying the
+seam--Calder\'on boundary measure with the $(E8)_1$ lattice net, carrier subnet
+$(D5)_1\times(A3)_1$.\veri{redteam/rt\_A\_e8net.py}
+
+\smallskip\noindent\textbf{Logical chain (established).} The Sugawara level-1 central charges are
+$c(E8)_1=\tfrac{248}{31}=8$, $c(D5)_1=5=\gcar$, $c(A3)_1=3=\Nfam$, so the conformal-embedding
+criterion $c_{\mathrm{coset}}=c(E8)-c(D5)-c(A3)=0$ holds \tI. This is \emph{compatibility}.
+
+\begin{gapbox}[Where it breaks: central charge underdetermines the net]
+Counterexample: $(D8)_1=SO(16)_1$ also has $c=\tfrac{120}{15}=8$, but is \emph{not} holomorphic
+(four primaries $1,v,s,c$) --- a distinct $c=8$ net. Hence equal central charge is \emph{necessary,
+not sufficient}: $(E8)_1$ is the unique \emph{holomorphic} $c=8$ net (even unimodular rank-8
+lattice $=E8$), so \textbf{holomorphy (single vacuum sector, $\mu$-index $1$) is the load-bearing
+extra assumption}. Dropping chirality is worse: the $c=8$ Narain family is positive-dimensional.
+The constructive map seam--Calder\'on kernel $\to$ $(E8)_1$ and the uniqueness of bulk
+reconstruction are not established; the gap $\Delta_{\mathrm{eff}}>0$ \emph{supports} tightness
+(clustering) but does not prove it.
+\end{gapbox}
+
+\noindent\textbf{Verdict.} Keep ``reduced to a rigorous boundary-net identification problem''; do
+\emph{not} write ``metric sector closed''. The red team confirms the conservative wording. Status
+\tP. Residual: holomorphy proof $+$ constructive boundary map $+$ bulk-reconstruction uniqueness.
+
+% =====================================================================
+\section*{Target B --- carrier rank / the Pascal condition}\label{sec:B}
+% =====================================================================
+\noindent\textbf{Minimal formal claim.} $2^{g}=g^2+g+2$ has the unique solution $g=5$ (Lean-verified
+\tF). This arithmetic is \emph{not} attacked. The attack is upstream: why must the carrier obey the
+Pascal half-spinor exhaustion $2^{g-1}=\binom{g}{0}+\binom{g}{1}+\binom{g}{2}$?\veri{redteam/rt\_B\_pascal.py}
+
+\begin{keybox}[Where it narrows: the rule, not the arithmetic, selects 5]
+Perturbing the constant breaks it: $2^{g}=g^2+g+c$ gives $\{5\}$ only at $c=2$; neighbours give
+other or empty solution sets. The truncation \emph{degree} is the real choice: with
+$2^{g-1}=\sum_{k\le K}\binom{g}{k}$ one finds $K{=}0\!\to\!g{=}1$, $K{=}1\!\to\!3$,
+$K{=}2\!\to\!5$, $K{=}3\!\to\!7$, i.e.\ $g=2K+1$. So choosing $K=2$ (to reach $\gcar=5$) is a
+physical postulate. It is corroborated --- the $D5$ half-spinor $\dim S^+=2^{g-1}=16\Leftrightarrow g=5$
+and the family closure $\Nfam=(2^{g-1}{-}1)/g$, $g+\Nfam=8$ both pick $5$ --- but each is itself a
+postulate, not a theorem.
+\end{keybox}
+
+\noindent\textbf{Verdict.} Theorem A's arithmetic core stands; the Pascal \emph{selection} must be
+typed \tA/\tP, not \tI. Residual: a boundary/seam derivation of half-spinor exhaustion.
+
+% =====================================================================
+\section*{Target C --- $k=\cthree/2$ and the seam-area coefficient}\label{sec:C}
+% =====================================================================
+\noindent\textbf{Minimal claim.} In reduced units $k=\cthree/2=\tfrac{1}{16\pi}$ and
+Fursaev--Solodukhin gives $S/A=\tfrac14$.\veri{redteam/rt\_C\_kc3.py}
+
+\begin{winbox}[The dimensional firewall holds]
+The only legal chain is
+\[
+  k_{\mathrm{red}}=\tfrac{\cthree}{2}=\tfrac{1}{16\pi}\ \text{(dimensionless)},\qquad
+  k_{\mathrm{phys}}=\tfrac{k_{\mathrm{red}}}{G},\qquad
+  S=4\pi\,k_{\mathrm{phys}}A_{\mathrm{phys}}=\tfrac{A_{\mathrm{phys}}}{4G}.
+\]
+The forbidden form $k_{\mathrm{phys}}=\cthree/2$ is dimensionally false (legal only at $G=1$). A
+scan of \texttt{v67/v68/v73} finds every $\cthree/2$ used as the \emph{reduced} coefficient and
+\textbf{zero} naked dimensionful identities; the firewall's teeth are verified against a synthetic
+violation. Internally consistent with $1/G$ being UV-sensitive (Sakharov/Connes, v68).
+\end{winbox}
+
+\noindent\textbf{Verdict.} Safe as worded (reduced coefficient). Status \tI\,(structure) $+$ \tA\,for
+the residual. Residual: the absolute $4D$ Newton scale $1/G$ ($\propto \Lambda^2 f_2$) stays the one
+dimensionful anchor; nothing \emph{dimensionless} is open.
+
+% =====================================================================
+\section*{Target D --- $U_{\mathrm{point}}\to\vgeo$}\label{sec:D}
+% =====================================================================
+\noindent\textbf{Minimal claim.} Ratios plus sector products determine the dimensionless amplitudes,
+leaving one common scale $\vgeo$.\veri{redteam/rt\_D\_upoint.py}
+
+\begin{keybox}[Where it narrows: the bijection needs explicit hypotheses]
+For positive reals, (ratios, product) $\Leftrightarrow$ (individuals) is a bijection, and the TFPT
+sectors satisfy it (positive rational $c$, odd size $3=\Nfam$). But it \emph{fails} off-assumption:
+even sector size leaves a sign ambiguity ($\{2,3\}$ vs $\{-2,-3\}$ share ratio $3/2$ and product
+$6$); complex amplitudes leave an $n$-th-root branch ambiguity ($\{1,1,1\},\{\omega,\omega,\omega\},
+\{\omega^2,\omega^2,\omega^2\}$ share all ratios and product $1$); a zero amplitude is degenerate.
+\textbf{Genuine residual:} the bijection fixes amplitude \emph{magnitudes} only --- CP phases
+$\delta_{\mathrm{CKM}},\delta_{\mathrm{PMNS}}$ are complex and are \emph{not} folded into $\vgeo$.
+\end{keybox}
+
+\noindent\textbf{Verdict.} Holds for TFPT once four hypotheses (real, positive, fixed branch, no
+zeros / odd sector size) are made explicit; they are silent in v75 and must be named. Status \tI\,
+(reduction) $+$ \tA\,($\vgeo$). Residual: the CP-phase sector.
+
+% =====================================================================
+\section*{Target E --- $\vgeo$ as the unique dimensional floor}\label{sec:E}
+% =====================================================================
+\noindent\textbf{Minimal claim.} No pure-number theory can derive an absolute dimensionful scale; all
+scales are ratios to one unit $\vgeo$.\veri{redteam/rt\_E\_vgeo.py}
+
+\begin{keybox}[Single-scale audit: exact for the certified tiers, conditional beyond]
+The closed compiler $+$ protected IR readouts all reduce to (pure number)$\times\vgeo$:
+$M_{\mathrm{scal}}=\cthree^{7/2}\Mpl$, $f_a=(\cthree/|\mu_4|)^{7/2}\Mpl$, masses
+$=(\pi/\sqrt2)\,c_f\,\varphi_0^{k}\,\vgeo$, and $1/G$ shares the same anchor (v68/v75). The audit
+\emph{surfaces} candidates that are not pure reductions: the seam cutoff $\Lambda$ (only an
+\emph{identification} seam$=$Planck collapses it to $\vgeo$), the electroweak matching scale, the
+reheating temperature, and the leptogenesis scale --- all frontier \tP/\tA\ inputs that must not be
+silently absorbed into $\vgeo$.
+\end{keybox}
+
+\noindent\textbf{Verdict.} $\vgeo$ is the unique dimensional floor of the certified tiers (true by
+dimensional analysis). Full single-scale-ness is conditional on the flagged identifications staying
+honestly typed. Status \tI\,(ratios) $+$ \tA\,(one scale). Residual: explicit reduction (or honest
+frontier typing) of the EW / reheating / leptogenesis scales $+$ the seam$=$Planck cutoff.
+
+% =====================================================================
+\section*{Outcome}
+% =====================================================================
+\begin{keybox}[What the red team changed]
+No target broke. The hardest gate (A) is confirmed \emph{open} with the conservative wording;
+three targets (B, D, E) \emph{survive once a silent assumption is named}; one (C) survives as
+worded. The net effect is not new physics but sharper typing: the package now states \emph{where}
+each reduction would fail and \emph{which} assumptions are truly necessary, exactly at the weakest
+logical transitions. Reproduce with \texttt{cd verification/redteam \&\& python run\_redteam.py}.
+\end{keybox}
+
+\begin{winbox}[Follow-up --- the verdicts were then used as a worklist \tL/\tI\ (\veri{v83\_e8net\_holomorphic\_uniqueness.py})]
+Two residuals were attacked directly after the red-team pass; the result is recorded in ledger rows
+\texttt{GATE.METRIC.04} and \texttt{CAR.PASCAL.01}.
+
+\smallskip\noindent\textbf{Target A, residual 1 --- closed \tL.} At level 1 the number of primaries equals
+$\det(\text{Cartan})=|\text{fundamental group}|$: $A_3{=}4$, $D_5{=}4$, $D_8{=}4$, $\mathbf{E_8{=}1}$. So holomorphy
+(single vacuum sector, $\mu$-index $1$) is \emph{necessary} --- it excludes the same-$c$ rival $(D_8)_1=SO(16)_1$
+($c=120/15=8$ but four primaries $1,v,s,c$) --- \emph{and sufficient}: a holomorphic $c=8$ chiral CFT is the lattice
+theory of an even unimodular rank-$8$ lattice, of which there is exactly one, $E_8$, by the Minkowski--Siegel mass
+formula ($\text{mass}=1/|W(E_8)|=1/696729600$, and $|\mathrm{Aut}(E_8)|$ saturates it). The
+$(D_5)_1\times(A_3)_1$ embedding $c=5+3=8$ stays \emph{compatibility} ($16$ primaries vs $1$). \textbf{Consequence:}
+the constructive map need only show the seam--Calder\'on boundary net is holomorphic with $c=8$ (then $E_8$ is
+automatic), so Target~A drops from \emph{three} residuals to \emph{two}: (i)~boundary-net holomorphy $+\,c=8$
+($\Delta_{\mathrm{eff}}>0$ supports, not proves), and (ii)~bulk-reconstruction uniqueness --- both still \tP/\tA.
+
+\smallskip\noindent\textbf{Target B --- reduced \tI/\tL.} The ``$K=2$ Pascal truncation'' is not free:
+$K=(g-1)/2$ is the Pascal-row midpoint $\sum_{k\le(g-1)/2}\binom{g}{k}=2^{g-1}$ (odd $g$), i.e.\ the half-spinor
+split; the carrier is the even Clifford half-spinor $\Lambda^{\mathrm{even}}(\mathbb C^{5})=1+10+5=16=\dim S^+$. So
+B's residual reduces to the single standard input ``carrier $=$ half-spinor of $\mathrm{Spin}(10)$'' (the Lean
+arithmetic core stays \tF).
+
+\smallskip\noindent Still open, typed honestly: A\,(i)$+$(ii); Target~D's CP-phase residual (at $\theta_{13}=0$ the
+Dirac phase is undefined, so this needs a texture correction); Target~E's reheating/leptogenesis scales and the
+seam$=$Planck identification. Target~C is a dimensional \emph{floor}, not a gap. \textbf{No target was promoted.}
+\end{winbox}
+
+\end{document}

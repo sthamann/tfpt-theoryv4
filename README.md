@@ -83,7 +83,7 @@ Sakharov-type induced gravity) — not a diffuse gap.
 
 ## 2. Repository structure
 
-### Theory documents (8 active LaTeX "notes", compiled from repo root)
+### Theory documents (9 active LaTeX "notes", compiled from repo root)
 
 | File | Contents |
 |---|---|
@@ -92,6 +92,7 @@ Sakharov-type induced gravity) — not a diffuse gap.
 | `tfpt_2_standard_model.tex` | **Standard Model.** The `φ₀`-ladder mass formula, flavor block from parabolic transport, neutrinos, CKM/PMNS, the worked closures. |
 | `tfpt_3_e8_audit_bootstrap.tex` | **`E8` audit & bootstrap.** The seven `E8` slices, the cascade bridge, and the Möbius self-consistency loop. |
 | `tfpt_4_frontier.tex` | **Frontier.** Honest status of `η_B`, `m_p/m_e`, Koide, dark matter, quantum gravity — what is *not* forced. |
+| `tfpt_5_redteam.tex` | **Red Team.** Adversarial stress test of the five load-bearing reductions (Targets A–E): where each would fail and which assumptions are truly necessary. |
 | `tfpt_horizon_readouts.tex` | **Appendix H.** `c₃ = 1/(8π)` as the universal horizon thermal code (reframe, not new physics). |
 | `tfpt_research_contracts.tex` | The open gates as numbered lemma-chain *contracts* (`U_wall`, `G_metric`). |
 | `origin_theory.tex` | Synthesis: the seam-as-horizon formulation, the attractor, and one honestly-typed `[P]` cyclic interpretation. |
@@ -107,6 +108,7 @@ Sakharov-type induced gravity) — not a diffuse gap.
 | `make_figures.py` | Regenerates the figures (status heatmap, attractor, Coxeter circle, …). |
 | `make_manifest.py` | Writes `manifest.sha256` + `lean_manifest.sha256` (content digests). |
 | `wolfram/tfpt_readouts.wl` | Independent second path on Wolfram Engine (`101/101` checks). |
+| `redteam/run_redteam.py` | **Adversarial layer.** Tries to *break* the five reductions (Targets A–E); verdicts in `REDTEAM.*` ledger rows + `tfpt_5_redteam.tex`. |
 
 ### Other directories
 
@@ -125,7 +127,7 @@ Dependencies: a LaTeX distribution (`pdflatex`), Python 3 with `sympy`, `mpmath`
 `matplotlib`; optionally Wolfram Engine and Lean 4 (`elan`/`lake`).
 
 ```bash
-# 1. Compile the 8 active documents  ->  "8 ok, 0 failed"
+# 1. Compile the 9 active documents  ->  "9 ok, 0 failed"
 bash build.sh notes
 
 # 2. Run the Python verification suite  ->  "ALL CHECKS PASSED"
@@ -137,7 +139,10 @@ wolframscript -file verification/wolfram/tfpt_readouts.wl
 # 4. Lean carrier-rigidity proof  ->  "AUDIT: PASS"  (optional)
 cd experiments/lean4-carrier-rigidity && lake exe cache get && bash scripts/audit.sh
 
-# 5. Regenerate reproducibility manifests (run last)
+# 5. Red Team / Stress Test layer (adversarial; prints a status per target A-E)
+cd verification/redteam && python run_redteam.py
+
+# 6. Regenerate reproducibility manifests (run last)
 python verification/make_manifest.py
 ```
 
