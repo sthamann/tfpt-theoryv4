@@ -88,9 +88,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/origin_theory.pdf": {
     href: "/papers/origin_theory.pdf",
     ...COMMON,
-    bytes: 639839,
+    bytes: 661830,
     sha256:
-      "da1a3c64af5d81d3fe464e18205386a5861d616bc5d2ed02cb7860e27b06477a",
+      "1932d6547938a20f3317db7e63061a8a9c304d50a417832bda0853a49b3b32a3",
     changelog:
       "Origin Theory: the (5,3) skeleton, the triply-forced 8, the order-30 Coxeter cycle, and the gapped unique attractor.",
   },

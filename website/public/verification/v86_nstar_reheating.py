@@ -182,6 +182,19 @@ def run():
           "the prediction surface of record",
           (As(ns_inst) - planck_As) / planck_As_sig > mp.mpf('-1.6'))
 
+    # the dichotomy, quantified: at fixed N_star = 51.4 the measured A_s
+    # would need M_scal raised by +9.2% -- but M_scal = c3^{7/2} Mbar is
+    # [I]-locked (exponent 7 fourfold forced).  So the future discriminator:
+    # either a fast preheating mechanism [P] (then N_star -> 55-56 and the
+    # c3^7 normalisation stands), or precision cosmology pins slow reheating
+    # and the exponent-7 reading fails.  Both outcomes are decisive.
+    M_needed = mp.sqrt(planck_As / As(ns))
+    check("dichotomy quantified: matching A_s at N_star=51.4 needs "
+          "M_scal x 1.092 (+9.2%) -- impossible at locked c3^{7/2} => "
+          "either fast preheating [P] or the exponent-7 normalisation "
+          "fails (decisive future discriminator)",
+          M_needed, mp.mpf('1.0924'), tol=mp.mpf('1e-3'))
+
     return summary("v86 N_star reheating")
 
 

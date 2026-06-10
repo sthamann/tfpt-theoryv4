@@ -109,7 +109,7 @@ Sakharov-type induced gravity) — not a diffuse gap.
 
 | Item | What it is |
 |---|---|
-| `v1_*.py … v88_*.py` | 88 numbered claim checks (one file per claim cluster). |
+| `v1_*.py … v90_*.py` | 90 numbered claim checks (one file per claim cluster). |
 | `run_all.py` | Runs the whole suite; ends `ALL CHECKS PASSED`. |
 | `tfpt_constants.py` | Shared constants + `check()` harness. |
 | `predictions_frozen.json` | **Blind-prediction registry** (frozen 2026-06-09): every dimensionless prediction of record at 25 digits, locked to its formula by `v84_frozen_registry.py` on every run; exactly one `θ12` prediction of record (seed `0.306747`), `r`/`n_s` only as `N_star` bands. |
@@ -181,12 +181,15 @@ The ledger is *append-only and versioned*: superseded rows are marked `active=fa
 
 ## 5. What is genuinely open
 
-- **The central theorem**: `1/(8π)` from the seam-determinant replica — structure closed,
-  residual reduced to the one dimensionful induced-gravity anchor.
+- **The central theorem**: `1/(8π)` from the seam-determinant replica — structure closed, the
+  Fursaev–Solodukhin factor now machine-derived (`v90`, no Bekenstein–Hawking import); the single
+  isolated residual is "seam determinant ⇒ EH form", plus the one dimensionful induced-gravity anchor.
 - **Full covariant metric-sector / ambient QG measure** (`G_metric`) — kept open by design;
   gap-decoupled from the admissible IR sector (`Δ_eff = 1.648 > 0`). After `v83`/`v87` the whole
   Target-A gate is **one** theorem: *the seam–Calderón boundary net is holomorphic with `c = 8`*
-  — then `(E8)₁` and the unique 2D bulk both follow.
+  — then `(E8)₁` and the unique 2D bulk both follow. Equivalent index form (`v89`): *the seam net
+  contains the carrier net with Jones index `4 = |μ₄|` as its `μ₄` simple-current extension* —
+  holomorphy then follows from μ-additivity instead of being assumed.
 - **Absolute amplitude normalisation** (`U_point`) — an anchor; the quark *ratios* are closed.
 - **Frontier interfaces** (`m_p/m_e`, `η_B`, Koide, axion relic) — deliberately typed as
   interfaces, never quoted as compiler outputs.

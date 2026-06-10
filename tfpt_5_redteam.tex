@@ -245,7 +245,15 @@ machine-checked: the same-$c$ rival $SO(16)_1$ (discriminant category $\mathbb Z
 $|\chi_0{+}\chi_{s/c}|^2$ (the lattice glue $E_8=D_8\cup(D_8{+}s)$, $h_s{=}1$ bosonic), and two twisted pairings ---
 so without holomorphy the $c=8$ bulk is \emph{multiply} ambiguous; with it, trivially unique. Hence the entire
 Target~A reduces to the single theorem ``seam--Calder\'on boundary net is holomorphic with $c=8$'' (\tP/\tA;
-ledger \texttt{GATE.METRIC.05}).
+ledger \texttt{GATE.METRIC.05}). The theorem also has an equivalent, more tractable \emph{index} form
+(\veri{v89\_carrier\_index\_lemma.py}, ledger \texttt{GATE.METRIC.06}): by Kawahigashi--Longo--M\"uger,
+$\mu_A=[B{:}A]^2\mu_B$, the carrier inclusion has Jones index
+$[(E_8)_1:(D_5)_1{\times}(A_3)_1]=\sqrt{16}=4=|\mu_4|$ --- the glue-group order \emph{is} the inclusion
+index --- and the extension is the $\mu_4$ simple-current extension (all three glue sectors are $h=1$
+currents; $248=45{+}15{+}64{+}64{+}60$). Since an index-$4$ simple-current extension of the carrier has
+$\mu=16/4^2=1$, \textbf{holomorphy follows from the index statement}: Target~A $\Leftrightarrow$ ``the seam
+net contains the carrier net with Jones index $4$ as its $\mu_4$ simple-current extension'' --- both ends
+constructed objects, the index controllable by Longo theory, the gap supporting finiteness.
 
 \smallskip\noindent\textbf{Target D --- the CP-phase residual quantified \tN\ (not closed).} With the frozen leading
 reading $\delta=\pi/3+3\lambda_C^2=68.65^\circ$: pull vs $\gamma_{\mathrm{PDG}}=65.7^\circ\pm3.0^\circ$ is $+0.98\sigma$

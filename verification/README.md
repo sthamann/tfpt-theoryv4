@@ -65,8 +65,8 @@ only the standard library (writes `../manifest.sha256`).
 | `v33_explicit_flat_bundle.py` | **explicit valid flat bundle (RH-solve output)**: hardcoded `A₀` realises cusp class + splitting `O(-2)⊕O(-1)²` + trivial ∞-monodromy `‖M_∞−I‖~1e-9` (⇒`∏M_k=I`) + **irreducible (case A)**. Existence + case A confirmed; unique `∇_F*` needs `det R=8`, `c_u/c_d` needs H2 | tfpt_research_contracts |
 | `v34_h2_bridge_attempt.py` | **H2-bridge attempt (honest negative)**: explicit per-puncture `M_k` (cusp class, `∏M_k=I`); `\|diag M_k\|=(0,½,½)`, natural extraction does NOT reproduce the lepton amplitudes ⇒ the `Γ^min` geodesic-to-word dictionary is genuinely missing; `c_u/c_d` not obtained (no fabrication) | tfpt_research_contracts |
 
-> **Scripts `v35`–`v86`.** The table above lists the original `v1`–`v34` core; the
-> later scripts (`v35`–`v86`, including the operator-pencil sequence
+> **Scripts `v35`–`v90`.** The table above lists the original `v1`–`v34` core; the
+> later scripts (`v35`–`v90`, including the operator-pencil sequence
 > `v80`/`v81`/`v82`/`v85`) are each registered with a one-line description in
 > `run_all.py` and typed in `status_ledger.csv` (**the source of truth**).
 > `v82_koide_attractor_splitting.py` proves two structural results on top of
@@ -92,6 +92,19 @@ only the standard library (writes `../manifest.sha256`).
 > `N_star(k=0.05/Mpc) = 51.4` ⇒ `n_s = 0.9611`, `r = 0.0045` — typed `[P]`,
 > inside the frozen registry band (registry untouched), with the +0.9σ Planck
 > `n_s` tension recorded as the kill criterion.
+> The B-round adds three structural scripts: `v89_carrier_index_lemma.py`
+> (`GATE.METRIC.06`) reframes the Gate-A theorem as an **index computation** —
+> KLM `μ_A = [B:A]²μ_B` gives Jones index `[(E8)₁:(D5)₁×(A3)₁] = 4 = |μ₄|`
+> (the glue-group order *is* the inclusion index; all three glue sectors are
+> `h=1` currents; holomorphy then *follows* from μ-additivity `16/4² = 1`);
+> `v90_conical_defect_chain.py` (`SEAM.AREACOEFF.03`) **derives** the
+> Fursaev–Solodukhin factor `S = 4πkA` (smoothed-cone Gauss–Bonnet, exactly
+> smoothing-independent; `S = A/4 ⇔ c₃ = 1/(8π)` sympy-solved) so the
+> Seam–Horizon residual is isolated to the single step "seam determinant ⇒ EH
+> form", with no Bekenstein–Hawking import anywhere; and `v86` (extended)
+> records the **A_s dichotomy**: matching A_s at the slow-reheating point
+> would need `M_scal × 1.092` — impossible at locked `c₃^{7/2}` — so either
+> fast preheating `[P]` or the exponent-7 normalisation fails (decisive).
 > Two red-team follow-ups complete the round: `v87_bulk_uniqueness_reduction.py`
 > (`GATE.METRIC.05`) merges Target-A residual (ii) into (i) — for a holomorphic
 > net the 2D bulk is unique (LR/KLM/BKLR), machine-contrasted against `SO(16)₁`
