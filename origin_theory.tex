@@ -671,6 +671,20 @@ input, not a derived rung; a future derivation would have to come from a reheati
 compiler. \textbf{Prediction layer (Alessandro \#6)} with explicit failure thresholds is now machine-recorded
 (\veri{v65\_falsification\_layer.py}).
 
+\smallskip\noindent\textbf{$N_\star$ --- the band sharpened to a point \tP\ (this round).} The demotion
+stands, but the announced ``reheating model'' is now computed (\veri{v86\_nstar\_reheating.py}): since the
+compiler fixes $M_{\mathrm{scal}}=\cthree^{7/2}\bar M_{\mathrm{Pl}}=3.06\times10^{13}$ GeV \tI,
+\emph{standard} physics fixes the rest --- scalaron width
+$\Gamma=4M^3/(48\pi\bar M_{\mathrm{Pl}}^2)=128$ GeV (SM Higgs-doublet channel),
+$T_{\mathrm{reh}}=9.6\times10^{9}$ GeV, and the pivot-matching equation on the exact Starobinsky potential
+gives $\boxed{N_\star(k{=}0.05/\mathrm{Mpc})=51.4}$, hence $n_s=0.9611$, $r=0.00454$. The chain is robust
+(decay-channel ambiguity $N_{\mathrm{eff}}{=}1..100$ moves $N_\star$ by $<0.8$; instantaneous reheating
+bounds $N_\star\le55.7$) and reproduces the literature value $\sim54$ at the old pivot $0.002/\mathrm{Mpc}$.
+Every step beyond $M_{\mathrm{scal}}$ is \emph{imported standard physics}, so the result is typed \tP, the
+frozen registry band $[50,60]$ is untouched, and the \textbf{honest consequence is recorded}: $n_s=0.9611$
+sits $0.9\sigma$ \emph{below} Planck 2018 and increases the DESI-combined tension --- a robust
+$n_s\ge0.967$ falsifies this reheating chain.
+
 \begin{keybox}[The Seam-Engineering Index and the possibility map \tI\,(index) / \tA\,(classes B,C) (\veri{v63\_seam\_engineering\_index.py})]
 TFPT is a \emph{boundary} machine, not a particle machine: the levers are $\cthree$ (thermal),
 $\lambda_2{=}(2/3)^6$ (information) and $G_{\mathrm{metric}}$ (geometry). The IR-stability margin has an

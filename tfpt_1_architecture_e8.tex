@@ -704,7 +704,7 @@ One generation ($16$, incl.\ $\nu^c$) & $S^+=D_5$ half-spinor $=\Lambda^{0,2,4}E
 Hypercharge spectrum & all $Y$ from $y_\pm=\{\tfrac12,-\tfrac13\}$; $\operatorname{Tr}X^2=120$ & $D_5$ root data & \tI \\
 Abelian index $b_1$ & $10b_1=1+|\mu_4||E(K_5)|=1+4\cdot10=41$ & $\mu_4\times K_5$ & \tI \\
 Fermion family occupancy & $\Oadm=\Nfam\dim S^+=(\Nfam{+}N_\Phi)|R(A_3)|=48$ & $A_3$ & \tI \\
-Fine structure $\ainv=137.0359992168$ & root of $F_{U(1)}(\alpha)=0$ (explicit, unique) & EM closure & \tI \\
+Fine structure $\ainv=137.0359992168$ & root of $F_{U(1)}(\alpha)=0$ (explicit, unique) & EM closure & \tN \\
 Cabibbo angle & $\lC=\sqrt{\useed(1-\useed)}$, $\useed=\tfrac43\cthree+48\cthree^4$ & seed & \tI \\
 CKM CP phase & $\delta_{\rm CKM}=\tfrac{2\pi}{|R^+(A_3)|}+\Nfam\useed(1-\useed)=\tfrac\pi3+3\lC^2$ & $A_3^+$, seed & \tI/\tP \\
 PMNS angles/phase & $\sin^2\theta_{12}=\tfrac13-\tfrac\useed2$, $\sin^2\theta_{13}=e^{-5/6}\useed$, $\delta^\nu=\tfrac{4\pi}{3}$ & $A_3^+$, seed & \tI/\tP \\
@@ -917,7 +917,7 @@ The engine $\ainv$ is not an input --- it is the unique root of an explicit clos
 (Paper~3, Thm.\ ``exact electromagnetic closure''). With $\cthree=1/(8\pi)$, $\phibase=1/(6\pi)$,
 $q(\alpha)=\dtop e^{-2\alpha}$ and the seam response $\phiseam(\alpha)=\phibase+q(\alpha)(1-q(\alpha))^{-5/4}$,
 \begin{equation}
-  \boxed{\ F_{U(1)}(\alpha)=\alpha^3-2\cthree^3\alpha^2-\tfrac{4}{5}\cthree^6\Bigl(\textstyle\sum_{f,j}L_{f,j}+N_\Phi\Bigr)\log\frac{1}{\phiseam(\alpha)}=0\ }\qquad\tI ,
+  \boxed{\ F_{U(1)}(\alpha)=\alpha^3-2\cthree^3\alpha^2-\tfrac{4}{5}\cthree^6\Bigl(\textstyle\sum_{f,j}L_{f,j}+N_\Phi\Bigr)\log\frac{1}{\phiseam(\alpha)}=0\ }\qquad\tI/\tP ,
 \end{equation}
 where the coefficient is $\tfrac45(\sum L+N_\Phi)\cthree^6=\tfrac45\cdot41\,\cthree^6=8b_1\cthree^6$, so the
 fine-structure constant reads the \emph{flavor transport budget} $\sum L=40$ and the $U(1)$ index
@@ -954,7 +954,7 @@ endpoint (definite signs), and a $200$-cell interval partition of $(\alpha_c,0.0
 
 \noindent Solving:
 \begin{equation}
-  \boxed{\ \alpha_\star=0.00729735256220985\ldots,\quad \ainv=137.0359992168407\ldots\ }\quad\tI
+  \boxed{\ \alpha_\star=0.00729735256220985\ldots,\quad \ainv=137.0359992168407\ldots\ }\quad\tN
 \end{equation}
 \veri{v3\_em\_alpha.py}\;
 versus CODATA-2022 $\ainv=137.035999177(21)$ --- a relative deviation $2.9\times10^{-10}$ ($\approx1.9\sigma$
@@ -989,7 +989,7 @@ the \hyperref[sec:ablation]{Ablation appendix} below.
 $\alpha$ and solving for the integer budget $M=\sum L+N_\Phi$ --- returns
 $M=41.0000001\ldots$, i.e.\ the external measurement reconstructs the internal discrete budget
 $41=40+1$ to $10^{-7}$. This is stronger than ``we hit $\alpha$'': the equation reads the discrete
-$41$ out of nature. \tI
+$41$ out of nature. \tN
 
 \subsection{The decuple bridge (new, exact headline)}
 

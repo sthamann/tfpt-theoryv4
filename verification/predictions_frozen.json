@@ -1,0 +1,223 @@
+{
+  "registry": "TFPT blind-prediction registry (frozen, machine-enforced)",
+  "freeze_date": "2026-06-09",
+  "axioms": { "c3": "1/(8*pi)", "g_car": 5 },
+  "policy": "Every entry below is FROZEN as of freeze_date, before the next decisive data releases (JUNO theta12/theta13, CMB-S4/LiteBIRD r and beta, DESI n_s). The decimals are recomputed from the two axioms by v84_frozen_registry.py on every suite run; any later change of a formula or a value breaks the suite and is visible in manifest.sha256 / git history. Entries are dimensionless (the dimensionless axis is the only axis on which TFPT claims closure). Layer tags follow the document markers: core = [N] numerical fixed point of the closed compiler; conditional = [N]/[P] (named hypothesis stated in conditional_on); assigned = texture/phase-lattice assignment, not a derivation.",
+  "predictions": [
+    {
+      "id": "ALPHA_INV",
+      "observable": "fine-structure constant alpha^-1",
+      "formula": "1/root of F_U1(alpha) = alpha^3 - 2 c3^3 alpha^2 - (4/5) c3^6 * 41 * log(1/phi_seam(alpha)) = 0",
+      "frozen_value": "137.0359992168407125035379",
+      "layer": "core",
+      "conditional_on": "Ward-origin reading of F_U1 is [P]; the root itself is unconditional given the equation",
+      "experiment": "CODATA adjustments",
+      "kill_criterion": "persistent deviation beyond combined theory+measurement error"
+    },
+    {
+      "id": "SIN2_THETA12_SEED",
+      "observable": "solar mixing angle sin^2(theta_12) -- PREDICTION OF RECORD",
+      "role": "prediction_of_record",
+      "formula": "1/3 - phi0/2",
+      "frozen_value": "0.3067473572449105696786871",
+      "layer": "conditional",
+      "conditional_on": "seam-misalignment lemma (epsilon = (3/4) phi0)",
+      "experiment": "JUNO",
+      "kill_criterion": "JUNO value away from 0.306747 beyond 3 sigma kills the seam-misalignment reading"
+    },
+    {
+      "id": "SIN2_THETA13",
+      "observable": "reactor mixing angle sin^2(theta_13)",
+      "formula": "phi0 * exp(-5/6)",
+      "frozen_value": "0.02310843515888110429328466",
+      "layer": "core",
+      "conditional_on": null,
+      "experiment": "JUNO / global fits (NuFIT 6.0: 0.02195 +- 0.00058, currently ~2 sigma tension)",
+      "kill_criterion": "persistent deviation beyond 3 sigma after global fit"
+    },
+    {
+      "id": "BETA_BIREFRINGENCE_DEG",
+      "observable": "cosmic birefringence angle beta (degrees)",
+      "formula": "(phi0 / (4*pi)) * (180/pi)",
+      "frozen_value": "0.2424350309009295284924315",
+      "layer": "conditional",
+      "conditional_on": "CMB EB/TB rotation = the same boundary phase as the flavor seed [P]",
+      "experiment": "LiteBIRD / CMB-S4 (ACT DR6: 0.215 +- 0.074 deg)",
+      "kill_criterion": "systematics-controlled exclusion of 0.2424 deg at > 3 sigma (incl. precise zero or wrong sign)"
+    },
+    {
+      "id": "OMEGA_B",
+      "observable": "baryon density parameter Omega_b",
+      "formula": "(1 - 1/(4*pi)) * phi0",
+      "frozen_value": "0.04894066266545011220054565",
+      "layer": "conditional",
+      "conditional_on": "seed-budget reading Omega_b + beta_rad = phi0 [P]",
+      "experiment": "CMB (Planck 2018: ~0.0493)",
+      "kill_criterion": "robust deviation beyond combined error"
+    },
+    {
+      "id": "LAMBDA_C",
+      "observable": "Cabibbo angle s12_CKM = lambda_C",
+      "formula": "sqrt(phi0 * (1 - phi0))",
+      "frozen_value": "0.2243762368847217731120972",
+      "layer": "core",
+      "conditional_on": null,
+      "experiment": "PDG (0.2245)",
+      "kill_criterion": "persistent deviation beyond combined error"
+    },
+    {
+      "id": "S23_CKM",
+      "observable": "CKM s23",
+      "formula": "phi0 / (1 + lambda_C)",
+      "frozen_value": "0.04342778843220215630289116",
+      "layer": "core",
+      "conditional_on": null,
+      "experiment": "PDG (~0.041)",
+      "kill_criterion": "persistent deviation beyond combined error"
+    },
+    {
+      "id": "S13_CKM",
+      "observable": "CKM s13",
+      "formula": "lambda_C^3 / 3",
+      "frozen_value": "0.003765384454486429837965432",
+      "layer": "core",
+      "conditional_on": null,
+      "experiment": "PDG (~0.0038)",
+      "kill_criterion": "persistent deviation beyond combined error"
+    },
+    {
+      "id": "DELTA_CKM_RAD",
+      "observable": "CKM CP phase delta (radians, leading order)",
+      "formula": "pi/3 + 3 * lambda_C^2",
+      "frozen_value": "1.198231638232244084651243",
+      "layer": "conditional",
+      "conditional_on": "leading-order holonomy readout [P]; sub-leading corrections not closed",
+      "experiment": "PDG (~1.14)",
+      "kill_criterion": "leading-order reading fails if precise delta departs from pi/3 + 3 lambda_C^2 beyond the stated sub-leading budget"
+    },
+    {
+      "id": "MMU_OVER_MTAU",
+      "observable": "lepton mass ratio m_mu / m_tau",
+      "formula": "(8/7) * phi0",
+      "frozen_value": "0.06076794534496631692490568",
+      "layer": "core",
+      "conditional_on": "source-scale (hat) masses, not pole masses",
+      "experiment": "PDG (0.05946)",
+      "kill_criterion": "scheme-consistent comparison departing beyond stated transport corrections"
+    },
+    {
+      "id": "ME_OVER_MMU",
+      "observable": "lepton mass ratio m_e / m_mu",
+      "formula": "(12/7) * phi0^2",
+      "frozen_value": "0.004846725425651567674771059",
+      "layer": "core",
+      "conditional_on": "source-scale (hat) masses, not pole masses",
+      "experiment": "PDG (0.004836)",
+      "kill_criterion": "scheme-consistent comparison departing beyond stated transport corrections"
+    },
+    {
+      "id": "MU_OVER_MD",
+      "observable": "quark mass ratio m_u / m_d",
+      "formula": "55/117",
+      "frozen_value": "0.4700854700854700854700855",
+      "layer": "core",
+      "conditional_on": "integer Plucker readout on the derived selector stratum (v49/v71)",
+      "experiment": "lattice/FLAG (~0.47)",
+      "kill_criterion": "scheme-consistent ratio robustly away from 55/117"
+    },
+    {
+      "id": "MC_OVER_MS",
+      "observable": "quark mass ratio m_c / m_s",
+      "formula": "(34/47) / phi0",
+      "frozen_value": "13.60499710285539356302651",
+      "layer": "core",
+      "conditional_on": "integer Plucker readout on the derived selector stratum (v49/v71)",
+      "experiment": "lattice/FLAG (~11-14)",
+      "kill_criterion": "scheme-consistent ratio robustly away from (34/47)/phi0"
+    },
+    {
+      "id": "MT_OVER_MB",
+      "observable": "quark mass ratio m_t / m_b",
+      "formula": "(3/26) / phi0^2",
+      "frozen_value": "40.8115130177002629681607",
+      "layer": "core",
+      "conditional_on": "integer Plucker readout on the derived selector stratum (v49/v71)",
+      "experiment": "PDG (~41)",
+      "kill_criterion": "scheme-consistent ratio robustly away from (3/26)/phi0^2"
+    },
+    {
+      "id": "MSCAL_OVER_MBAR",
+      "observable": "scalaron mass ratio M_scal / M_bar",
+      "formula": "c3^(7/2)",
+      "frozen_value": "0.00001256494208322844896998079",
+      "layer": "conditional",
+      "conditional_on": "identification M_Starobinsky = M_scal [P]",
+      "experiment": "CMB inflation sector",
+      "kill_criterion": "r > 0.01 robustly kills the R^2 branch"
+    },
+    {
+      "id": "RHOL_OVER_MBAR4",
+      "observable": "vacuum energy density rho_Lambda / M_bar^4",
+      "formula": "(3/(4*pi^2)) * exp(-2 * alpha_inv)",
+      "frozen_value": "7.125329526706216792033797e-121",
+      "layer": "conditional",
+      "conditional_on": "physical Lambda branch selection (8pi)^2 delta_top = 3/(4pi^2) [A]; alpha^-1 <-> Lambda identification [P]",
+      "experiment": "Planck (rho_Lambda^1/4 ~ 2.24 meV)",
+      "kill_criterion": "robust w != -1, or absolute scale off after anchoring"
+    }
+  ],
+  "assigned_texture_values": [
+    {
+      "id": "DELTA_CP_NU_DEG",
+      "observable": "neutrino Dirac CP phase (degrees)",
+      "formula": "240 (phase lattice 4*pi/3)",
+      "frozen_value": "240",
+      "layer": "assigned",
+      "experiment": "DUNE / Hyper-K",
+      "kill_criterion": "precise value incompatible with the branch"
+    },
+    {
+      "id": "SIN2_THETA23",
+      "observable": "atmospheric angle sin^2(theta_23)",
+      "formula": "0.5 (mu-tau symmetric texture; octant NOT predicted)",
+      "frozen_value": "0.5",
+      "layer": "assigned",
+      "experiment": "JUNO / DUNE",
+      "kill_criterion": "strongly non-maximal with no matching breaking structure"
+    }
+  ],
+  "conditional_bands": [
+    {
+      "id": "R_TENSOR",
+      "observable": "tensor-to-scalar ratio r",
+      "formula": "12 / N_star^2, N_star in [50, 60] (external reheating input, NOT a compiler output)",
+      "band_min": "0.0033333333333333333333",
+      "band_max": "0.0048",
+      "experiment": "CMB-S4 / LiteBIRD",
+      "kill_criterion": "r > 0.01 robustly kills the R^2 branch"
+    },
+    {
+      "id": "N_S",
+      "observable": "spectral tilt n_s",
+      "formula": "1 - 2/N_star, N_star in [50, 60] (external reheating input, NOT a compiler output)",
+      "band_min": "0.96",
+      "band_max": "0.96666666666666666667",
+      "experiment": "Planck / DESI (current ~2 sigma tension with DESI-combined)",
+      "kill_criterion": "value robustly outside the Starobinsky window at fixed reheating"
+    }
+  ],
+  "derived_variants_not_predictions": [
+    {
+      "id": "SIN2_THETA12_SEAM",
+      "formula": "1/3 - 1/(12*pi)",
+      "value": "0.306807509484684110705186",
+      "note": "leading-epsilon variant (epsilon = c3); a truncation of the SAME texture, NOT an alternative prediction"
+    },
+    {
+      "id": "SIN2_THETA12_NONLIN",
+      "formula": "full non-linear TBM + epsilon=(3/4)phi0 rotation, sin^2 = |U_e2|^2/(1-|U_e3|^2)",
+      "value": "0.3070195373705387648045858",
+      "note": "non-linearised variant of the SAME texture, NOT an alternative prediction; cf. v9_neutrino_texture.py"
+    }
+  ]
+}

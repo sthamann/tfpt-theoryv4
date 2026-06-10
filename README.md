@@ -53,13 +53,19 @@ bootstrap fixed point* (forced three independent ways via the `E8` closure), so 
 - **Flavor**: an integer operator ladder with `det(Q,K,R,L) = (3,4,8,20)`, product
   `1920 = |W(D5)|`; charged-lepton coefficients `(16/7, 4/3, 7/6)` exactly; quark mass *ratios*
   as integer Plücker readouts (`c_u/c_d = 55/117`, …).
-- **Solar angle** `sin²θ₁₂ = 1/3 − φ₀/2 = 0.306747` (frozen prediction; conditional on the
-  seam-misalignment lemma).
+- **Solar angle** `sin²θ₁₂ = 1/3 − φ₀/2 = 0.306747` (frozen prediction of record, machine-enforced
+  via `predictions_frozen.json`/`v84`; conditional on the seam-misalignment lemma).
 - **Cosmology**: `Ω_b`, the Starobinsky scalaron mass, `Λ ~ e^(−2α⁻¹)`, cosmic birefringence
-  `β = φ₀/(4π) ≈ 0.2424°`.
-- **Self-consistency**: "parameter-free" is a *theorem* — the gapped boundary transport
-  (`Δ = 6·log(3/2) > 0`) has, by Perron–Frobenius, a **unique attractor** at rate `(2/3)⁶`; the
-  hull carries a literal order-`30 = 2·3·5` Coxeter cycle.
+  `β = φ₀/(4π) ≈ 0.2424°`; the former external band `N_star ∈ [50,60]` is sharpened to a point
+  `N_star(k=0.05/Mpc) = 51.4` `[P]` via the scalaron-reheating chain (`v86`; `n_s = 0.9611`,
+  `r = 0.0045`, honest +0.9σ Planck tension recorded).
+- **Self-consistency**: under the named gapped-transport hypotheses, "parameter-free" is a
+  *theorem* — the gapped boundary transport (`Δ = 6·log(3/2) > 0`) has, by Perron–Frobenius, a
+  **unique attractor** at rate `(2/3)⁶` (the physical identification of the transport operator
+  stays `[P]`); the hull carries a literal order-`30 = 2·3·5` Coxeter cycle.
+- **Master cover** (`v85`): all anchor-block pencil covers are *one* double cover up to GL(2)
+  Möbius reparametrisation (`disc = N_fam⁴·det(G)²`); Koide and the carrier are its two branch
+  points, the scalaron exponent its trace; `μ₄` is *not* a 4:1 cover of the line (honest negative).
 
 ### Honest scope — the four layers
 
@@ -101,9 +107,10 @@ Sakharov-type induced gravity) — not a diffuse gap.
 
 | Item | What it is |
 |---|---|
-| `v1_*.py … v71_*.py` | 71 numbered claim checks (one file per claim cluster). |
+| `v1_*.py … v88_*.py` | 88 numbered claim checks (one file per claim cluster). |
 | `run_all.py` | Runs the whole suite; ends `ALL CHECKS PASSED`. |
 | `tfpt_constants.py` | Shared constants + `check()` harness. |
+| `predictions_frozen.json` | **Blind-prediction registry** (frozen 2026-06-09): every dimensionless prediction of record at 25 digits, locked to its formula by `v84_frozen_registry.py` on every run; exactly one `θ12` prediction of record (seed `0.306747`), `r`/`n_s` only as `N_star` bands. |
 | `status_ledger.csv` | **Single source of truth.** Every claim with id, status, location, dependency, script — *versioned* (`active`, `canonical_status`, `supersedes`). |
 | `make_figures.py` | Regenerates the figures (status heatmap, attractor, Coxeter circle, …). |
 | `make_manifest.py` | Writes `manifest.sha256` + `lean_manifest.sha256` (content digests). |
@@ -175,7 +182,9 @@ The ledger is *append-only and versioned*: superseded rows are marked `active=fa
 - **The central theorem**: `1/(8π)` from the seam-determinant replica — structure closed,
   residual reduced to the one dimensionful induced-gravity anchor.
 - **Full covariant metric-sector / ambient QG measure** (`G_metric`) — kept open by design;
-  gap-decoupled from the admissible IR sector (`Δ_eff = 1.648 > 0`).
+  gap-decoupled from the admissible IR sector (`Δ_eff = 1.648 > 0`). After `v83`/`v87` the whole
+  Target-A gate is **one** theorem: *the seam–Calderón boundary net is holomorphic with `c = 8`*
+  — then `(E8)₁` and the unique 2D bulk both follow.
 - **Absolute amplitude normalisation** (`U_point`) — an anchor; the quark *ratios* are closed.
 - **Frontier interfaces** (`m_p/m_e`, `η_B`, Koide, axion relic) — deliberately typed as
   interfaces, never quoted as compiler outputs.

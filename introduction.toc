@@ -13,4 +13,4 @@
 \contentsline {section}{\numberline {12}Does this make the theory more probable?}{15}{section.12}%
 \contentsline {section}{\numberline {13}Predictions for running and upcoming experiments}{16}{section.13}%
 \contentsline {section}{Conclusion}{17}{section*.2}%
-\contentsline {section}{Appendix: computational verification}{17}{section*.3}%
+\contentsline {section}{Appendix: computational verification}{18}{section*.3}%

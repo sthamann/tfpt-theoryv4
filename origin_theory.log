@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex 2026.3.4)  9 JUN 2026 10:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex 2026.3.4)  10 JUN 2026 08:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1528,34 +1528,34 @@ _classification.py\T1/lmr/m/n/9 (+20) ][]\T1/lmr/m/n/10.95 (+20) ). So three
  []
 
 [12] [13]
-Underfull \hbox (badness 1874) in paragraph at lines 733--733
+Underfull \hbox (badness 1874) in paragraph at lines 747--747
 []|\T1/lmr/m/n/10 (+20) one $\OML/lmm/m/it/10 []$ \T1/lmr/m/n/10 (+20) sets EM
 , $\OML/lmm/m/it/10 S[]$ \T1/lmr/m/n/10 (+20) and $\OT1/lmr/m/n/10 (+20) ^^C$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 733--733
+Underfull \hbox (badness 10000) in paragraph at lines 747--747
 []|\T1/lmr/m/n/10 (+20) horizon cross-links (Ja-cob-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 733--733
+Underfull \hbox (badness 10000) in paragraph at lines 747--747
 \T1/lmr/m/n/10 (+20) son/Einstein $\OT1/lmr/m/n/10 (+20) 8\OML/lmm/m/it/10 ^^Y[
 ]\OT1/lmr/m/n/10 (+20) 1\OML/lmm/m/it/10 =c[]$\T1/lmr/m/n/10 (+20) , Hod
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 733--733
+Underfull \hbox (badness 10000) in paragraph at lines 747--747
 []|\T1/lmr/bx/n/10 (+20) cyclic self-reproduction
  []
 
-
-Overfull \hbox (18.5217pt too wide) in paragraph at lines 758--758
+[14]
+Overfull \hbox (18.5217pt too wide) in paragraph at lines 772--772
 []|\T1/lmtt/m/n/10 v54_seam_horizon_keystones.py| 
  []
 
-[14]
-Underfull \hbox (badness 1735) in paragraph at lines 760--763
+
+Underfull \hbox (badness 1735) in paragraph at lines 774--777
 \T1/lmtt/m/n/10.95 wolframscript -file verification/wolfram/tfpt_readouts.wl \T
 1/lmr/m/n/10.95 (+20) (all pass). Fig-ures are
  []
@@ -1569,11 +1569,11 @@ Package rerunfilecheck Info: File `origin_theory.out' has not changed.
 (rerunfilecheck)             Checksum: D5E28BD09DFE3B42F3A96B7BA7A78AA5;3125.
  ) 
 Here is how much of TeX's memory you used:
- 33644 strings out of 467525
- 681846 string characters out of 5408440
+ 33649 strings out of 467525
+ 681902 string characters out of 5408440
  1153455 words of memory out of 5000000
- 61537 multiletter control sequences out of 15000+600000
- 788008 words of font info for 330 fonts, out of 8000000 for 9000
+ 61538 multiletter control sequences out of 15000+600000
+ 788180 words of font info for 332 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  86i,16n,96p,1010b,1033s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/am
@@ -1611,7 +1611,7 @@ dist/fonts/type1/public/lm/lmtt9.pfb></opt/homebrew/Cellar/texlive/20260301/sha
 re/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></opt/homebrew/Cel
 lar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm1
 0.pfb>
-Output written on origin_theory.pdf (15 pages, 636522 bytes).
+Output written on origin_theory.pdf (15 pages, 638792 bytes).
 PDF statistics:
  507 PDF objects out of 1000 (max. 8388607)
  311 compressed objects within 4 object streams

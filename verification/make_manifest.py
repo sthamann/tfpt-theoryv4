@@ -50,7 +50,8 @@ def collect():
     files = list(TEX) + list(FIG)
     vdir = os.path.join(ROOT, "verification")
     for f in sorted(os.listdir(vdir)):
-        if f.endswith((".py", ".csv", ".md")):
+        # .json covers the frozen blind-prediction registry (REG.FREEZE.01)
+        if f.endswith((".py", ".csv", ".md", ".json")):
             files.append("verification/" + f)
     # Wolfram independent path (.wl / .wls + its README)
     wdir = os.path.join(vdir, "wolfram")

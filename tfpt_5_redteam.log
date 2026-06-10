@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex 2026.3.4)  9 JUN 2026 11:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex 2026.3.4)  10 JUN 2026 08:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1252,7 +1252,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 211--211
 (+20) [I][]
  []
 
-[3] [4] (./tfpt_5_redteam.aux)
+[3]
+Underfull \hbox (badness 3623) in paragraph at lines 237--237
+[]\T1/lmr/bx/n/10.95 (+20) Second follow-up round []\T1/lmr/bx/n/10 (+20) [L][]
+\T1/lmr/bx/n/10.95 (+20) /[]\T1/lmr/bx/n/10 (+20) [N][] \T1/lmr/bx/n/10.95 (+20
+) ([]\T1/lmr/bx/n/9 (+20) [\T1/lmtt/b/n/9 verification/v87_bulk_uniqueness_redu
+ction.py\T1/lmr/bx/n/9 (+20) ][]\T1/lmr/bx/n/10.95 (+20) ,
+ []
+
+[4] [5] (./tfpt_5_redteam.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -1261,43 +1269,45 @@ Package rerunfilecheck Info: File `tfpt_5_redteam.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 32125 strings out of 467525
- 643832 string characters out of 5408440
+ 32153 strings out of 467525
+ 644303 string characters out of 5408440
  1120388 words of memory out of 5000000
- 60265 multiletter control sequences out of 15000+600000
- 728783 words of font info for 218 fonts, out of 8000000 for 9000
+ 60275 multiletter control sequences out of 15000+600000
+ 733900 words of font info for 227 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 116i,11n,121p,1011b,932s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 116i,11n,121p,1011b,1030s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/lm
 /lmbx10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1
 /public/lm/lmbx12.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/f
 onts/type1/public/lm/lmbx8.pfb></opt/homebrew/Cellar/texlive/20260301/share/tex
 mf-dist/fonts/type1/public/lm/lmbx9.pfb></opt/homebrew/Cellar/texlive/20260301/
-share/texmf-dist/fonts/type1/public/lm/lmex10.pfb></opt/homebrew/Cellar/texlive
-/20260301/share/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></opt/homebrew/Cell
-ar/texlive/20260301/share/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></opt/hom
-ebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/lm/lmmi7.pfb>
-</opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/lm/l
-mmi8.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/pu
-blic/lm/lmr10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts
-/type1/public/lm/lmr12.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-d
-ist/fonts/type1/public/lm/lmr6.pfb></opt/homebrew/Cellar/texlive/20260301/share
-/texmf-dist/fonts/type1/public/lm/lmr7.pfb></opt/homebrew/Cellar/texlive/202603
-01/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></opt/homebrew/Cellar/texliv
-e/20260301/share/texmf-dist/fonts/type1/public/lm/lmr9.pfb></opt/homebrew/Cella
-r/texlive/20260301/share/texmf-dist/fonts/type1/public/lm/lmri10.pfb></opt/home
-brew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/lm/lmri12.pfb>
-</opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/lm/l
-msy10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/p
-ublic/lm/lmsy8.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/font
-s/type1/public/lm/lmtk10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf
--dist/fonts/type1/public/lm/lmtt10.pfb></opt/homebrew/Cellar/texlive/20260301/s
-hare/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></opt/homebrew/Cellar/texlive/2
-0260301/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tfpt_5_redteam.pdf (4 pages, 430558 bytes).
+share/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></opt/homebrew/Cellar/texliv
+e/20260301/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb></opt/homebrew/Cel
+lar/texlive/20260301/share/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></opt/ho
+mebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/lm/lmmi12.pf
+b></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/lm
+/lmmi7.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/
+public/lm/lmmi8.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fon
+ts/type1/public/lm/lmr10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf
+-dist/fonts/type1/public/lm/lmr12.pfb></opt/homebrew/Cellar/texlive/20260301/sh
+are/texmf-dist/fonts/type1/public/lm/lmr6.pfb></opt/homebrew/Cellar/texlive/202
+60301/share/texmf-dist/fonts/type1/public/lm/lmr7.pfb></opt/homebrew/Cellar/tex
+live/20260301/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></opt/homebrew/Ce
+llar/texlive/20260301/share/texmf-dist/fonts/type1/public/lm/lmr9.pfb></opt/hom
+ebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/lm/lmri10.pfb
+></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/lm/
+lmri12.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/
+public/lm/lmsy10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fo
+nts/type1/public/lm/lmsy8.pfb></opt/homebrew/Cellar/texlive/20260301/share/texm
+f-dist/fonts/type1/public/lm/lmtk10.pfb></opt/homebrew/Cellar/texlive/20260301/
+share/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></opt/homebrew/Cellar/texlive
+/20260301/share/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></opt/homebrew/Cella
+r/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.
+pfb>
+Output written on tfpt_5_redteam.pdf (5 pages, 458927 bytes).
 PDF statistics:
- 203 PDF objects out of 1000 (max. 8388607)
- 122 compressed objects within 2 object streams
- 12 named destinations out of 1000 (max. 500000)
- 54941 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 213 PDF objects out of 1000 (max. 8388607)
+ 129 compressed objects within 2 object streams
+ 13 named destinations out of 1000 (max. 500000)
+ 56989 words of extra memory for PDF output out of 61914 (max. 10000000)
 

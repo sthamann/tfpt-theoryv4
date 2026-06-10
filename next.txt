@@ -187,3 +187,42 @@ P6 (niedrig) DOPPELCOVER vs. mu4->Z2.
  ueberlagerung; der Scalaron ist ihre Spur, das Sheet-Z2 ihr Schnitt -- TFPT ist die
  Anchor-und-Pencil-Geometrie von a=(1,1,2) mit genau zwei Singularitaeten."
 ================================================================================
+
+================================================================================
+ADDENDUM 2026-06-09  --  Stand nach v85_master_cover.py (Ledger FLAV.PENCIL.05)
+================================================================================
+P3  GELOEST [I]/[L]: Es gibt einen MASTER-COVER, und es ist der K+xQ-Cover selbst.
+    Die Anchorblock-Determinante ist GL(2)-kovariant auf span{K,Q}:
+        det B((aK+bQ)+x(cK+dQ)) = (gamma x+alpha)^2 * p_KQ(moebius_G(x))   (exakt),
+        disc = 81*det(G)^2 = N_fam^4 * Quadrat.
+    Die gesamte disc-81-Familie ({-8/3,-5/3}, {-5/8,-2/5}, {-3/2,-3/5}) ist die
+    GL(2)-Bahn EINES Covers; -8/3 = -rank(E8)/N_fam ist der Carrier-Punkt minus
+    eine Transport-Periode (rank E8 = g_car+N_fam) -- KEINE neue Struktur.
+    Negativkontrollen: R-Richtung disc 153 / 201 (nicht quadratisch) => anchor-first.
+
+P6  NEGATIV BEANTWORTET [I]: Der natuerliche 4-Blatt-Kandidat
+    det B(K+xQ)*det B(L+xQ) faktorisiert durch das erzwungene Quadrat (3x+5)^2;
+    mu4=Z4 wirkt NICHT als echter 4:1-Cover der Pencil-Linie. Der Transport-Turm
+    erzeugt stattdessen eine LEITER von Double Covers (Sprosse n: {-2/3-n,-5/3-n});
+    zweite Stufe w^2=(3x+2)(3x+8) (disc 324=18^2) verbindet Koide mit rank E8
+    bei Branch-Abstand 2=|Z2|.
+
+P4  TYPISIERT [I] + ehrliche Grenze: Die Branch-Divisor-Spur -7/3 fixiert NUR den
+    Skalen-Exponenten (M_scal=c3^{7/2}); n_s=1-2/N*, r=12/N*^2 haengen allein am
+    externen N* => der Cover kann den Tilt nicht von [P] befoerdern.
+    (n_s, r sind im Blind-Registry predictions_frozen.json nur als N*-BAENDER
+    registriert, nie als Punktvorhersagen.)
+
+P1, P2, P5 bleiben OFFEN (P2 = die eine [P]-Identifikation aus v82; P1 braucht
+eine definierte Abbildung Sektor-Projektor -> Blatt, bevor gerechnet werden kann).
+
+P1-NACHTRAG (2026-06-10, ehrliches Negativ, nicht in die Suite gezogen):
+    Der naheliegendste Kandidat -- Sektor-Zeilen von K/L/Q auf die Anker-2-Ebene
+    <1,a> projizieren und das Verhaeltnis beta/alpha als Pencil-Punkt lesen --
+    liefert KEINE erzwungene Blattwahl: K-Zeilen geben (up,down,lep) =
+    (-1/2, -3/10, -1/3), L-Zeilen (-1/2, -2/5, -7/20), Q-Zeilen (-1/2, -1/2, -3/8).
+    Nichts davon trifft den Branch-Locus {-5/3,-2/3} oder den Schnittpunkt -1,
+    und die Zuordnung ist zwischen K/L/Q nicht stabil. => Der Kandidat ist
+    verworfen; P1 bleibt blockiert, bis eine unabhaengig motivierte Definition
+    der Abbildung Sektor -> Blatt vorliegt (kein Zahlenfischen auf der Leiter).
+================================================================================

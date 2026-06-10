@@ -65,11 +65,11 @@ only the standard library (writes `../manifest.sha256`).
 | `v33_explicit_flat_bundle.py` | **explicit valid flat bundle (RH-solve output)**: hardcoded `A₀` realises cusp class + splitting `O(-2)⊕O(-1)²` + trivial ∞-monodromy `‖M_∞−I‖~1e-9` (⇒`∏M_k=I`) + **irreducible (case A)**. Existence + case A confirmed; unique `∇_F*` needs `det R=8`, `c_u/c_d` needs H2 | tfpt_research_contracts |
 | `v34_h2_bridge_attempt.py` | **H2-bridge attempt (honest negative)**: explicit per-puncture `M_k` (cusp class, `∏M_k=I`); `\|diag M_k\|=(0,½,½)`, natural extraction does NOT reproduce the lepton amplitudes ⇒ the `Γ^min` geodesic-to-word dictionary is genuinely missing; `c_u/c_d` not obtained (no fabrication) | tfpt_research_contracts |
 
-> **Scripts `v35`–`v82`.** The table above lists the original `v1`–`v34` core; the
-> later scripts (`v35`–`v82`, including the operator-pencil trilogy
-> `v80`/`v81`/`v82`) are each registered with a one-line description in
-> `run_all.py` and typed in `status_ledger.csv` (**the source of truth**). The most
-> recent, `v82_koide_attractor_splitting.py`, proves two structural results on top of
+> **Scripts `v35`–`v86`.** The table above lists the original `v1`–`v34` core; the
+> later scripts (`v35`–`v86`, including the operator-pencil sequence
+> `v80`/`v81`/`v82`/`v85`) are each registered with a one-line description in
+> `run_all.py` and typed in `status_ledger.csv` (**the source of truth**).
+> `v82_koide_attractor_splitting.py` proves two structural results on top of
 > the `v80`/`v81` anchor-block double cover: **(A)** the Koide source→pole RG attractor
 > is *forced, not postulated* — a branch-divisor-preserving Möbius map fixing both
 > branch points `q=2,5` is unique, and its multiplier `(2/3)⁶` is exactly the
@@ -79,10 +79,48 @@ only the standard library (writes `../manifest.sha256`).
 > (`FR.KOIDE.04`); and **(B)** the clean rational double cover is *non-generic* — the
 > splitting-type placements give discriminants `81=N_fam⁴`, `49=scalaron²`,
 > `40=|R(D5)|`, only two of which split, hardening "anchor-first" (`FLAV.PENCIL.04`).
+> The most recent, `v85_master_cover.py` (`FLAV.PENCIL.05`), answers `next.txt` P3:
+> the anchor-block determinant is **GL(2)-covariant** on `span{K,Q}`, so there is
+> exactly **one** double cover up to Möbius reparametrisation (`disc = N_fam⁴·det(G)²`)
+> and the whole disc-81 family (incl. the `−8/3 = −rank(E8)/N_fam` rung = carrier −
+> one transport period) is its orbit; P6 is answered **negatively** (`μ₄` is not a
+> 4:1 cover of the line — the tower is a ladder of double covers); P4 is typed (the
+> branch trace fixes only the scalaron *scale* exponent, the tilt stays `[P]` with
+> external `N_star`); and `v86_nstar_reheating.py` (`COSMO.NSTAR.01`) computes that
+> external `N_star` from the theory's own scalaron mass plus *standard* reheating
+> physics: `Γ = 4M³/(48πM̄²) = 128 GeV`, `T_reh = 9.6e9 GeV`,
+> `N_star(k=0.05/Mpc) = 51.4` ⇒ `n_s = 0.9611`, `r = 0.0045` — typed `[P]`,
+> inside the frozen registry band (registry untouched), with the +0.9σ Planck
+> `n_s` tension recorded as the kill criterion.
+> Two red-team follow-ups complete the round: `v87_bulk_uniqueness_reduction.py`
+> (`GATE.METRIC.05`) merges Target-A residual (ii) into (i) — for a holomorphic
+> net the 2D bulk is unique (LR/KLM/BKLR), machine-contrasted against `SO(16)₁`
+> whose `Z2×Z2` discriminant category admits **six** modular invariants (incl.
+> both `E8`-extension pairings) — so **Target A = one residual**; and
+> `v88_cp_phase_audit.py` (`FLAV.CP.01`) quantifies the Target-D CP residual:
+> frozen `δ = π/3+3λ²` survives at `+0.98σ` vs `γ_PDG`, the data central value
+> sits `0.07°` from the alternative `π/3+2λ²` (recorded as a look-elsewhere
+> trap, **not** adopted), decision at `σ_γ ≤ 0.96°`.
 
 **Freeze file.** `freeze_file.csv` registers the committed kill criteria for every
 falsifiable prediction (solar angle, `r`, ordering, nEDM, `w`, ...), referenced by
 the introduction's *Freeze file* box.
+
+**Blind-prediction registry (frozen 2026-06-09, machine-enforced).**
+`predictions_frozen.json` freezes every *dimensionless prediction of record* at
+25 significant digits **before** the next decisive data releases (JUNO
+`θ12`/`θ13`, CMB-S4/LiteBIRD `r` and `β`, DESI `n_s`). `v84_frozen_registry.py`
+re-derives every frozen decimal from the two axioms on each suite run, so the
+formula and the frozen value are locked together: changing either alone fails
+the suite, and the file itself is covered by `manifest.sha256`. The registry
+also *enforces* the `θ12` freeze convention of `tfpt_2`: exactly **one**
+prediction of record (`sin²θ12 = 1/3 − φ0/2 = 0.306747…`), with the seam
+(`0.306808`) and non-linear (`0.307020`) values typed as derived variants of the
+*same* texture — they can never silently become alternative predictions
+(look-elsewhere ambiguity machine-excluded). Conditional entries carry their
+hypothesis by name; `r` and `n_s` are registered as *bands* over the declared
+external `N_star ∈ [50, 60]`, never as point predictions. Ledger row:
+`REG.FREEZE.01`.
 
 `tfpt_constants.py` holds the shared primitives and the `check()` harness; it is
 imported by every `v*` script and by `run_all.py`. **All carrier integers
@@ -178,7 +216,7 @@ cd redteam && python run_redteam.py     # runs targets A–E + writes redteam_ta
 
 | Target | Script | Verdict |
 |---|---|---|
-| A — (E8)₁ boundary-net identification | `redteam/rt_A_e8net.py` | reduced, not closed (`c=8` underdetermines the net; holomorphy is the missing assumption) |
+| A — (E8)₁ boundary-net identification | `redteam/rt_A_e8net.py` | reduced, not closed (`c=8` underdetermines the net; holomorphy is the missing assumption). After `v83` + `v87`: **one** residual — holomorphy+`c=8` pins both the net (`v83`) *and* the unique 2D bulk (`v87`, LR/KLM/BKLR; `SO(16)₁` counter-model admits six modular invariants) |
 | B — carrier rank / Pascal condition | `redteam/rt_B_pascal.py` | survives, narrowed (arithmetic `[F]` stands; the Pascal *selection* is typed `[A]/[P]`) |
 | C — `k = c₃/2` seam-area coefficient | `redteam/rt_C_kc3.py` | survives (dimensional firewall: no naked `k_phys = c₃/2`) |
 | D — `U_point → v_geo` bijection | `redteam/rt_D_upoint.py` | survives, narrowed (four hypotheses made explicit; CP phases residual) |

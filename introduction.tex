@@ -482,10 +482,12 @@ shared by flavor and gravity --- the boundary net identification, and the named 
 interfaces ($F_{\mathrm{frontier}}$).
 \smallskip\\
 \noindent\textbf{Two points that are \emph{not} in the residual (closed, but easy to mis-list as open).}
-\emph{(i) Parameter-freeness is a theorem, not a hope:} the boundary transport is gapped
+\emph{(i) Parameter-freeness is a theorem under the named hypotheses:} the boundary transport is gapped
 ($\Delta=6\log\tfrac32>0$), so by Perron--Frobenius its iteration has a \emph{unique} attracting fixed point
---- the constants are \emph{selected}, not tuned (\tI/\tL, \veri{v56\_unique\_attractor.py}), reinforcing the
-static bootstrap web ($\gcar=5$ forced three ways, \veri{v6\_bootstrap.py}, \veri{v14\_carrier\_uniqueness.py}).
+--- the constants are \emph{selected}, not tuned (\tI/\tL\ for the attractor, \veri{v56\_unique\_attractor.py};
+the \emph{physical identification} of the transport operator stays \tP), reinforcing the
+static bootstrap web ($\gcar=5$ forced three ways \emph{given} the $E_8$ closure rank --- a consistency
+loop, see red team Target~B --- \veri{v6\_bootstrap.py}, \veri{v14\_carrier\_uniqueness.py}).
 \emph{(ii) Newton's constant is not an \emph{independent} input:} fixing the physical $\Lambda$ branch
 ($(8\pi)^2\delta_{\mathrm{top}}=\tfrac{3}{4\pi^2}$) pins $\bar M_{\mathrm{Pl}}$ \emph{relative to} $\Lambda$, so
 $G_N$ is read out \emph{after} the branch choice $+$ \emph{one} dimensionful induced-gravity anchor (\tI/\tP,
@@ -860,7 +862,7 @@ spectrum, gravity, and the quantum measure. The current state, graded honestly:
 gauge group, $\Nfam$, hypercharge, $b_1$ & \tI & --- complete \\
 $E_8=(D_5{\oplus}A_3){+}\mu_4$, group closure & \tL & --- complete \\
 bootstrap $(g,\mu){=}(5,4)$, ``$8$'' in $\cthree$ & \tL & --- complete (reverse glue $\mu^2{-}5\mu{+}4{=}0$) \\
-fine structure $\ainv$ & \tI & --- \textbf{now existence+uniqueness proved} (this round) \\
+fine structure $\ainv$ & \tN & --- \textbf{existence+uniqueness proved}; value is a numerical fixed point (ledger \texttt{EM.FP.01}), Ward origin \tP \\
 fermion masses ($\phiz$-ladder) & \tI/\tA & leptons exact; quark \emph{ratios} closed (Pl\"ucker, v49/v71); absolute scale $=$ anchor \\
 mixings $\theta_{13},\theta_{23},\theta_{12}$ & \tN/\tP & $\theta_{12}$ cond.\ derived; $\theta_{23}$ maximal \\
 flavour matrix / H2 & \tI & up to Mehta--Seshadri unitarity (U), a Paper-3 input \\
@@ -992,6 +994,17 @@ machine-readable registry \texttt{verification/freeze\_file.csv}. The decisive e
 \item \textbf{$w=-1$} --- a robust $w\neq-1$ kills the single-engine dark-energy readout.
 \end{itemize}
 The proton/electron ratio is explicitly \emph{not} claimed as a compiler power (only fails if mis-asserted as one).
+\smallskip
+
+\noindent\textbf{Blind-prediction registry (frozen 2026-06-09, machine-enforced).} Beyond the kill criteria,
+the \emph{values} themselves are now frozen: \texttt{verification/predictions\_frozen.json} registers every
+dimensionless prediction of record at $25$ significant digits \emph{before} JUNO / CMB-S4 / LiteBIRD / DESI
+decide, and \veri{v84\_frozen\_registry.py} re-derives each decimal from the two axioms on every suite run
+(formula$\leftrightarrow$value lock; covered by \texttt{manifest.sha256}; ledger \texttt{REG.FREEZE.01}).
+In particular the registry admits exactly \emph{one} $\theta_{12}$ prediction of record (the seed
+$\tfrac13-\tfrac{\phiz}2=0.306747$) --- the seam and non-linear variants are typed as derived variants of the
+same texture and can never be silently promoted afterwards. $r$ and $n_s$ enter only as \emph{bands} over the
+declared external $N_\star\in[50,60]$, never as point predictions.
 \end{winbox}
 
 \begin{winbox}[What likely follows next]

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex 2026.3.4)  9 JUN 2026 10:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex 2026.3.4)  10 JUN 2026 08:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1342,7 +1342,7 @@ are/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></opt/homebrew/Cellar/texlive/20
 260301/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></opt/ho
 mebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/sym
 bols/msbm10.pfb>
-Output written on tfpt_horizon_readouts.pdf (4 pages, 385578 bytes).
+Output written on tfpt_horizon_readouts.pdf (4 pages, 385509 bytes).
 PDF statistics:
  241 PDF objects out of 1000 (max. 8388607)
  158 compressed objects within 2 object streams

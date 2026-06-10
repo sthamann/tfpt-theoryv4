@@ -234,4 +234,32 @@ Dirac phase is undefined, so this needs a texture correction); Target~E's reheat
 seam$=$Planck identification. Target~C is a dimensional \emph{floor}, not a gap. \textbf{No target was promoted.}
 \end{winbox}
 
+\begin{winbox}[Second follow-up round \tL/\tN\ (\veri{v87\_bulk\_uniqueness\_reduction.py}, \veri{v88\_cp\_phase\_audit.py}, \veri{v86\_nstar\_reheating.py})]
+\smallskip\noindent\textbf{Target A, residual (ii) --- conditionally closed \tL: Target A $=$ ONE residual.}
+Bulk-reconstruction uniqueness is \emph{not} independent of residual (i). By the algebraic-QFT classification of
+full 2D CFTs over a chiral net (Longo--Rehren; Kawahigashi--Longo--M\"uger; Bischoff--Kawahigashi--Longo--Rehren),
+the possible bulks are the haploid commutative Q-systems $\simeq$ physical modular invariants of $\mathrm{Rep}(A)$.
+For a \emph{holomorphic} net $\mathrm{Rep}(A)=\mathrm{Vect}$, so the bulk pairing is \emph{unique}. The contrast is
+machine-checked: the same-$c$ rival $SO(16)_1$ (discriminant category $\mathbb Z_2{\times}\mathbb Z_2$, $\mu$-index $4$) admits
+\emph{six} modular invariants --- diagonal, $s{\leftrightarrow}c$ swap, both $E_8$-extension invariants
+$|\chi_0{+}\chi_{s/c}|^2$ (the lattice glue $E_8=D_8\cup(D_8{+}s)$, $h_s{=}1$ bosonic), and two twisted pairings ---
+so without holomorphy the $c=8$ bulk is \emph{multiply} ambiguous; with it, trivially unique. Hence the entire
+Target~A reduces to the single theorem ``seam--Calder\'on boundary net is holomorphic with $c=8$'' (\tP/\tA;
+ledger \texttt{GATE.METRIC.05}).
+
+\smallskip\noindent\textbf{Target D --- the CP-phase residual quantified \tN\ (not closed).} With the frozen leading
+reading $\delta=\pi/3+3\lambda_C^2=68.65^\circ$: pull vs $\gamma_{\mathrm{PDG}}=65.7^\circ\pm3.0^\circ$ is $+0.98\sigma$
+(survives). Audit, \emph{not} promoted: the data central value sits $0.07^\circ$ from the alternative coefficient
+reading $\pi/3+2\lambda_C^2$ ($|\mathbb Z_2|$ instead of $\Nfam$) --- a textbook look-elsewhere trap; the registry keeps
+coefficient $3$ (\texttt{REG.FREEZE.01}). Decision threshold: the readings differ by $\lambda_C^2=2.88^\circ$, i.e.\
+$3\sigma$-distinguishable once $\sigma_\gamma\le0.96^\circ$. The $J$-inversion is flagged magnitude-contaminated
+(source-scale $s_{23}$ vs $M_Z$). Ledger \texttt{FLAV.CP.01}.
+
+\smallskip\noindent\textbf{Target E --- one flagged scale computed \tP.} The reheating temperature is no longer a
+silent input: $M_{\mathrm{scal}}=\cthree^{7/2}\bar M_{\mathrm{Pl}}$ \tI\ $+$ standard physics give
+$T_{\mathrm{reh}}=9.6\times10^9$ GeV and $N_\star(0.05/\mathrm{Mpc})=51.4$ \tP\ (ledger \texttt{COSMO.NSTAR.01});
+the leptogenesis scale and the seam$=$Planck identification remain typed inputs. \textbf{Again: no target was
+promoted; one residual was \emph{merged} (A), one was \emph{quantified} (D), one input was \emph{computed} (E).}
+\end{winbox}
+
 \end{document}
