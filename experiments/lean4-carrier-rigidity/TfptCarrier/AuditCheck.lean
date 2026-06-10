@@ -39,6 +39,7 @@ import TfptCarrier.BoundaryYukawaKernelInterface
 import TfptCarrier.SeamWindingInterface
 import TfptCarrier.CarrierData
 import TfptCarrier.Hypercharge
+import TfptCarrier.GlueUniqueness
 
 -- Layer 1: Polarization (algebraic core)
 #check @TFPT.Carrier.Polarization.sixY_carrier_polynomial
@@ -172,3 +173,15 @@ import TfptCarrier.Hypercharge
 -- Concrete 5×5 model
 #check @TFPT.Carrier.Hypercharge.trace_Y
 #check @TFPT.Carrier.Hypercharge.Y_carrier_polynomial
+
+-- Glue uniqueness + carrier index (v89/v92 arithmetic cores)
+#check @TFPT.Carrier.GlueUniqueness.isotropic_elements_classified
+#check @TFPT.Carrier.GlueUniqueness.isotropic_order4_classified
+#check @TFPT.Carrier.GlueUniqueness.orbit33_eq_H1
+#check @TFPT.Carrier.GlueUniqueness.orbit31_eq_H2
+#check @TFPT.Carrier.GlueUniqueness.glues_isotropic
+#check @TFPT.Carrier.GlueUniqueness.klein_not_isotropic
+#check @TFPT.Carrier.GlueUniqueness.spinor_swap_exchanges
+#check @TFPT.Carrier.GlueUniqueness.unique_halfway_stage
+#check @TFPT.Carrier.GlueUniqueness.carrier_index_lemma
+#check @TFPT.Carrier.GlueUniqueness.glue_sectors_are_currents

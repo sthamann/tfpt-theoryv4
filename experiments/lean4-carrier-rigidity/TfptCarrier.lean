@@ -49,6 +49,7 @@ import TfptCarrier.BoundaryYukawaKernelInterface
 import TfptCarrier.SeamWindingInterface
 import TfptCarrier.CarrierData
 import TfptCarrier.Hypercharge
+import TfptCarrier.GlueUniqueness
 import TfptCarrier.Sanity
 import TfptCarrier.AxiomCheck
 import TfptCarrier.AuditCheck

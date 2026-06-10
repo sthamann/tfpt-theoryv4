@@ -113,14 +113,14 @@ Sakharov-type induced gravity) — not a diffuse gap.
 
 | Item | What it is |
 |---|---|
-| `v1_*.py … v91_*.py` | 91 numbered claim checks (one file per claim cluster). |
+| `v1_*.py … v93_*.py` | 93 numbered claim checks (one file per claim cluster). |
 | `run_all.py` | Runs the whole suite; ends `ALL CHECKS PASSED`. |
 | `tfpt_constants.py` | Shared constants + `check()` harness. |
 | `predictions_frozen.json` | **Blind-prediction registry** (frozen 2026-06-09): every dimensionless prediction of record at 25 digits, locked to its formula by `v84_frozen_registry.py` on every run; exactly one `θ12` prediction of record (seed `0.306747`), `r`/`n_s` only as `N_star` bands. |
 | `status_ledger.csv` | **Single source of truth.** Every claim with id, status, location, dependency, script — *versioned* (`active`, `canonical_status`, `supersedes`). |
 | `make_figures.py` | Regenerates the figures (status heatmap, attractor, Coxeter circle, …). |
 | `make_manifest.py` | Writes `manifest.sha256` + `lean_manifest.sha256` (content digests). |
-| `wolfram/tfpt_readouts.wl` | Independent second path on Wolfram Engine (`101/101` checks). |
+| `wolfram/tfpt_readouts.wl` | Independent second path on Wolfram Engine (`101/101` checks); `wolfram/tfpt_readouts_extension.wl` mirrors v84–v93 (authored, awaiting first engine run). |
 | `redteam/run_redteam.py` | **Adversarial layer.** Tries to *break* the five reductions (Targets A–E); verdicts in `REDTEAM.*` ledger rows + `tfpt_5_redteam.tex`. |
 
 ### Other directories
@@ -193,7 +193,10 @@ The ledger is *append-only and versioned*: superseded rows are marked `active=fa
   Target-A gate is **one** theorem: *the seam–Calderón boundary net is holomorphic with `c = 8`*
   — then `(E8)₁` and the unique 2D bulk both follow. Equivalent index form (`v89`): *the seam net
   contains the carrier net with Jones index `4 = |μ₄|` as its `μ₄` simple-current extension* —
-  holomorphy then follows from μ-additivity instead of being assumed.
+  holomorphy then follows from μ-additivity instead of being assumed. And *which* extension carries
+  no freedom (`v92`): the carrier extension tower is completely rigid — carrier `(μ=16)` →
+  `SO(16)₁` `(μ=4`, the unique intermediate`)` → `(E8)₁` `(μ=1`, two chiralities = sheet`)` —
+  so Gate A is the *bare* index statement.
 - **Absolute amplitude normalisation** (`U_point`) — an anchor; the quark *ratios* are closed.
 - **Frontier interfaces** (`m_p/m_e`, `η_B`, Koide, axion relic) — deliberately typed as
   interfaces, never quoted as compiler outputs.

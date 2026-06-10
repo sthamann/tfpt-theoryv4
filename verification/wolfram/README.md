@@ -89,3 +89,14 @@ As with the Lean archive (whose local reproduction is pending on the reviewer's
 side), this Wolfram path is shipped as source; it was authored to match the
 machine-checked Python results to the quoted precision. The two primitives
 `c3 = 1/(8π)` and `g_car = 5` are the only inputs.
+
+## Extension file (v84–v93) — pending first engine run
+
+`tfpt_readouts_extension.wl` mirrors the v84–v93 round (frozen registry,
+master cover, reheating arithmetic, bulk uniqueness, carrier index, conical
+defect chain, spine tetrahedron, glue uniqueness, Koide relaxation toy).
+It is kept **separate** from `tfpt_readouts.wl` so the verified 101/101 base
+file is untouched. **Status: authored 2026-06-10 on a machine without a
+Wolfram Engine — values mirror the Python-verified numbers 1:1, but the file
+awaits its first `wolframscript` run** (ledger `GATE.WOLFRAM.02`, typed
+*pending*, not verified).
