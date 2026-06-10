@@ -68,6 +68,10 @@ bootstrap fixed point* (forced three independent ways via the `E8` closure), so 
 - **Master cover** (`v85`): all anchor-block pencil covers are *one* double cover up to GL(2)
   Möbius reparametrisation (`disc = N_fam⁴·det(G)²`); Koide and the carrier are its two branch
   points, the scalaron exponent its trace; `μ₄` is *not* a 4:1 cover of the line (honest negative).
+- **Spine tetrahedron** (`v91`): the spine `{2,3,4,5} = {e₃(a), p₀(a), e₁(a), e₂(a)}` is *one*
+  finite object — edges `{6,8,10,12,15,20}`, faces `{24,30,40,60}`, volume `120 = |R⁺(E8)|`;
+  `240 = |μ₄|·|E(K₄)|·|E(K₅)|` (breaks at `K₆` — specific, not generic). Dual cuts are typed as
+  tautological presentation; `7, 16, 41, 48, 240, 248` lie *outside* the sub-grammar (honest).
 
 ### Honest scope — the four layers
 
@@ -109,7 +113,7 @@ Sakharov-type induced gravity) — not a diffuse gap.
 
 | Item | What it is |
 |---|---|
-| `v1_*.py … v90_*.py` | 90 numbered claim checks (one file per claim cluster). |
+| `v1_*.py … v91_*.py` | 91 numbered claim checks (one file per claim cluster). |
 | `run_all.py` | Runs the whole suite; ends `ALL CHECKS PASSED`. |
 | `tfpt_constants.py` | Shared constants + `check()` harness. |
 | `predictions_frozen.json` | **Blind-prediction registry** (frozen 2026-06-09): every dimensionless prediction of record at 25 digits, locked to its formula by `v84_frozen_registry.py` on every run; exactly one `θ12` prediction of record (seed `0.306747`), `r`/`n_s` only as `N_star` bands. |

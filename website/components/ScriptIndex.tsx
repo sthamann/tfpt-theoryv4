@@ -185,6 +185,7 @@ const CLUSTERS: Cluster[] = [
       { file: "v88_cp_phase_audit.py", what: "Target D follow-up: frozen δ=π/3+3λ² survives at +0.98σ vs γ_PDG; audit (not promoted): data sit 0.07° from the alternative π/3+2λ² — decision at σ_γ ≤ 0.96° (LHCb/Belle II); J-inversion flagged magnitude-contaminated" },
       { file: "v89_carrier_index_lemma.py", what: "Carrier Index Lemma: KLM μ_A=[B:A]²μ_B ⇒ Jones index [(E₈)₁:(D₅)₁×(A₃)₁] = 4 = |μ₄| — the glue-group order IS the inclusion index; all three glue sectors are h=1 currents (248=45+15+64+64+60); holomorphy FOLLOWS from μ-additivity 16/4²=1 ⇒ Gate A ⇔ an index computation" },
       { file: "v90_conical_defect_chain.py", what: "Fursaev–Solodukhin factor DERIVED, not imported: smoothed-cone Gauss–Bonnet ∫K = 2π(1−α) exactly (smoothing-independent), codim-2 lift 4π(1−α)A, replica ⇒ S = 4πkA; with k=c₃/2: S = A/4 ⇔ c₃ = 1/(8π) (sympy-solved, unique). The Seam–Horizon residual is isolated to one step: seam determinant ⇒ EH form" },
+      { file: "v91_spine_tetrahedron.py", what: "Spine tetrahedron {2,3,4,5} = {e₃(a), p₀(a), e₁(a), e₂(a)}: edges {6,8,10,12,15,20}, faces {24,30,40,60}, volume 120 = |R⁺(E₈)| = 5!; 240 = |μ₄|·|E(K₄)|·|E(K₅)| with K₆ negative control; dual cuts typed as tautological presentation; sub-grammar honestly incomplete (7,16,41,48,240,248 outside)" },
     ],
   },
 ];

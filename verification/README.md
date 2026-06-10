@@ -65,8 +65,8 @@ only the standard library (writes `../manifest.sha256`).
 | `v33_explicit_flat_bundle.py` | **explicit valid flat bundle (RH-solve output)**: hardcoded `A₀` realises cusp class + splitting `O(-2)⊕O(-1)²` + trivial ∞-monodromy `‖M_∞−I‖~1e-9` (⇒`∏M_k=I`) + **irreducible (case A)**. Existence + case A confirmed; unique `∇_F*` needs `det R=8`, `c_u/c_d` needs H2 | tfpt_research_contracts |
 | `v34_h2_bridge_attempt.py` | **H2-bridge attempt (honest negative)**: explicit per-puncture `M_k` (cusp class, `∏M_k=I`); `\|diag M_k\|=(0,½,½)`, natural extraction does NOT reproduce the lepton amplitudes ⇒ the `Γ^min` geodesic-to-word dictionary is genuinely missing; `c_u/c_d` not obtained (no fabrication) | tfpt_research_contracts |
 
-> **Scripts `v35`–`v90`.** The table above lists the original `v1`–`v34` core; the
-> later scripts (`v35`–`v90`, including the operator-pencil sequence
+> **Scripts `v35`–`v91`.** The table above lists the original `v1`–`v34` core; the
+> later scripts (`v35`–`v91`, including the operator-pencil sequence
 > `v80`/`v81`/`v82`/`v85`) are each registered with a one-line description in
 > `run_all.py` and typed in `status_ledger.csv` (**the source of truth**).
 > `v82_koide_attractor_splitting.py` proves two structural results on top of
@@ -105,6 +105,11 @@ only the standard library (writes `../manifest.sha256`).
 > records the **A_s dichotomy**: matching A_s at the slow-reheating point
 > would need `M_scal × 1.092` — impossible at locked `c₃^{7/2}` — so either
 > fast preheating `[P]` or the exponent-7 normalisation fails (decisive).
+> `v91_spine_tetrahedron.py` (`ARCH.SPINE.01`) packages the spine `{2,3,4,5}`
+> as one finite object (edges/faces/volume = the integer grammar, volume `120 =
+> |R⁺(E8)|`, graph form `240 = |μ₄|·|E(K₄)|·|E(K₅)|` with a `K₆` negative
+> control), with the dual cuts typed as tautological presentation and the
+> sub-grammar incompleteness (`7,16,41,48,240,248` outside) stated honestly.
 > Two red-team follow-ups complete the round: `v87_bulk_uniqueness_reduction.py`
 > (`GATE.METRIC.05`) merges Target-A residual (ii) into (i) — for a holomorphic
 > net the 2D bulk is unique (LR/KLM/BKLR), machine-contrasted against `SO(16)₁`
