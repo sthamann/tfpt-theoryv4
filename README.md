@@ -56,9 +56,11 @@ bootstrap fixed point* (forced three independent ways via the `E8` closure), so 
 - **Solar angle** `sin²θ₁₂ = 1/3 − φ₀/2 = 0.306747` (frozen prediction of record, machine-enforced
   via `predictions_frozen.json`/`v84`; conditional on the seam-misalignment lemma).
 - **Cosmology**: `Ω_b`, the Starobinsky scalaron mass, `Λ ~ e^(−2α⁻¹)`, cosmic birefringence
-  `β = φ₀/(4π) ≈ 0.2424°`; the former external band `N_star ∈ [50,60]` is sharpened to a point
-  `N_star(k=0.05/Mpc) = 51.4` `[P]` via the scalaron-reheating chain (`v86`; `n_s = 0.9611`,
-  `r = 0.0045`, honest +0.9σ Planck tension recorded).
+  `β = φ₀/(4π) ≈ 0.2424°`; the former external band `N_star ∈ [50,60]` is sharpened to a
+  *conditional* point `N_star(k=0.05/Mpc) = 51.4` `[P]` via the scalaron-reheating chain (`v86`;
+  `n_s = 0.9611`, `r = 0.0045`) — honestly recorded: the slow Higgs-channel point is
+  `A_s`-disfavoured (−11.4σ; the measured `A_s` requires near-instantaneous reheating), so the
+  frozen band stays the surface of record.
 - **Self-consistency**: under the named gapped-transport hypotheses, "parameter-free" is a
   *theorem* — the gapped boundary transport (`Δ = 6·log(3/2) > 0`) has, by Perron–Frobenius, a
   **unique attractor** at rate `(2/3)⁶` (the physical identification of the transport operator

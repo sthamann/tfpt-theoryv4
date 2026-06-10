@@ -28,8 +28,8 @@ const GATES: Gate[] = [
     tag: "Research gate 2",
     marker: "[A]",
     title: "(G_metric) — the quantum-gravity measure",
-    body: "R + R² is heat-kernel grounded (G2) and the admissible IR sector is gap-decoupled (G5, Δ_eff = 1.648 > 0). The ambient projective limit G6 remains open — so a strict physical TOE is not certified.",
-    formula: "2\\|V\\| = 0.785 < \\Delta = 6\\log\\tfrac{3}{2};\\ \\ G_6\\ \\text{open}",
+    body: "R + R² is heat-kernel grounded (G2) and the admissible IR sector is gap-decoupled (G5, Δ_eff = 1.648 > 0). The ambient gate G6 remains open — but after v83/v87 it is exactly ONE theorem: prove the seam–Calderón boundary net is holomorphic with c = 8. Then (E₈)₁ and the unique 2D bulk both follow (LR/KLM/BKLR). A strict physical TOE is still not certified.",
+    formula: "2\\|V\\| = 0.785 < \\Delta = 6\\log\\tfrac{3}{2};\\ \\ G_6 = \\text{one theorem: holomorphy} + c = 8",
     tone: "border-amber-400/30 bg-amber-500/5",
   },
   {

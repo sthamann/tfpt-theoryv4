@@ -119,6 +119,11 @@ function parseOutput(raw: string): Omit<RunResult, "raw" | "error"> {
  * Run one verification script (e.g. "v3_em_alpha.py") in the browser and
  * return its parsed [PASS]/[FAIL] output. Throws only on unexpected I/O.
  */
+/** Extra data files a script reads from its own directory at runtime. */
+const SCRIPT_ASSETS: Record<string, string[]> = {
+  "v84_frozen_registry.py": ["predictions_frozen.json"],
+};
+
 export async function runScript(
   file: string,
   onStatus?: StatusFn,
@@ -127,6 +132,10 @@ export async function runScript(
   onStatus?.(`Fetching ${file}…`);
   const src = await fetchText(`/verification/${file}`);
   py.FS.writeFile(`${WORK_DIR}/${file}`, src);
+  for (const asset of SCRIPT_ASSETS[file] ?? []) {
+    const data = await fetchText(`/verification/${asset}`);
+    py.FS.writeFile(`${WORK_DIR}/${asset}`, data);
+  }
 
   onStatus?.("Resolving packages (numpy, sympy, mpmath, scipy…)…");
   await py.loadPackagesFromImports(src);

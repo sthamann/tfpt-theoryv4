@@ -181,6 +181,7 @@ const NODES: DagNode[] = [
       "v80_operator_pencil_geometry.py",
       "v81_singular_pencil_matrices.py",
       "v82_koide_attractor_splitting.py",
+      "v85_master_cover.py",
     ],
   },
   {
@@ -218,6 +219,7 @@ const NODES: DagNode[] = [
       "v46_grand_mass_volume.py",
       "v49_readout_rigidity.py",
       "v75_upoint_to_vgeo.py",
+      "v88_cp_phase_audit.py",
     ],
   },
   {
@@ -229,14 +231,15 @@ const NODES: DagNode[] = [
     marker: "[N] / [P]",
     title: "Solar angle — the seam misalignment",
     summary:
-      "The previously open SM angle. Tri-bimaximal 1/3 plus the seam misalignment ε = q(A₃)φ₀ = (3/4)φ₀ gives sin²θ₁₂ = 1/3 − φ₀/2 = 0.3067 — 0.1% from NuFIT 6.0. The live JUNO test.",
+      "The previously open SM angle. Tri-bimaximal 1/3 plus the seam misalignment ε = q(A₃)φ₀ = (3/4)φ₀ gives sin²θ₁₂ = 1/3 − φ₀/2 = 0.306747 — 0.1% from NuFIT 6.0. The live JUNO test. Since 2026-06-09 this is the frozen prediction of record in the machine-enforced blind registry (v84): exactly one θ₁₂ number is committed in advance, and the seam/non-linear variants are typed as derived variants of the same texture, never as alternatives.",
     inputs: ["R, L", "φ₀"],
-    outputs: ["sin²θ₁₂ = 0.3067"],
+    outputs: ["sin²θ₁₂ = 0.306747 (frozen)"],
     failure: "Seam-misalignment lemma fails.",
     scripts: [
       "v9_neutrino_texture.py",
       "v16_solar_dual_anchor.py",
       "v21_solar_product_quark.py",
+      "v84_frozen_registry.py",
     ],
   },
   {
@@ -248,7 +251,7 @@ const NODES: DagNode[] = [
     marker: "[P] conditional",
     title: "Gravity & cosmology — the geometry channel",
     summary:
-      "The spectral action gives R + R²; the scalaron mass is M = c₃^(7/2) M̄ = 3.06×10¹³ GeV (exponent 7 = Ω_adm − 10 b₁). From the same attractor: n_s = 0.965, r ≈ 0.004, A_s ≈ 2.0×10⁻⁹, Λ ∼ e⁻²ᵅ⁻¹, H₀ ∼ √Λ. Gate 2: the IR tier is gap-decoupled (Δ_eff = 1.648 > 0), and the ambient measure G6 is holographically reduced to the rigorously-constructed (E₈)₁ lattice net (c = 8 = 5 + 3). The red-team Target-A residual that pins this net is now closed at the lattice level: holomorphy (μ-index 1 = det Cartan 1) is necessary AND sufficient — E₈ is the unique even-unimodular rank-8 lattice (mass = 1/|W(E₈)|) — so only the boundary-net holomorphy/c=8 proof and bulk-reconstruction uniqueness remain open. Every scale is a ratio to one v_geo — the dimensional-analysis floor.",
+      "The spectral action gives R + R²; the scalaron mass is M = c₃^(7/2) M̄ = 3.06×10¹³ GeV (exponent 7 = Ω_adm − 10 b₁). From the same attractor: n_s = 1 − 2/N★ and r = 12/N★² over the frozen band N★ ∈ [50,60]; the scalaron-reheating chain (v86) sharpens this conditionally to N★ = 51.4 ⇒ n_s = 0.9611, r = 0.0045 — recorded with its tensions (A_s coherence disfavours the slow Higgs channel at −11.4σ; the measured A_s requires near-instantaneous reheating). Λ ∼ e⁻²ᵅ⁻¹, H₀ ∼ √Λ. Gate 2: the IR tier is gap-decoupled (Δ_eff = 1.648 > 0), and the ambient measure G6 is holographically reduced to the rigorously-constructed (E₈)₁ lattice net (c = 8 = 5 + 3). After v83 + v87 the whole Target-A gate is ONE theorem: prove the seam–Calderón boundary net is holomorphic with c = 8 — then (E₈)₁ is the unique net (Minkowski–Siegel) AND the 2D bulk is unique (LR/KLM/BKLR; SO(16)₁ counter-model admits six modular invariants). Every scale is a ratio to one v_geo — the dimensional-analysis floor.",
     inputs: ["c₃ (P1)", "E₈"],
     outputs: ["Λ, A_s, n_s, r, scalaron M"],
     failure: "Ambient reflection-positivity fails.",
@@ -261,6 +264,8 @@ const NODES: DagNode[] = [
       "v77_e8_conformal_net.py",
       "v78_vgeo_floor.py",
       "v83_e8net_holomorphic_uniqueness.py",
+      "v86_nstar_reheating.py",
+      "v87_bulk_uniqueness_reduction.py",
     ],
   },
 

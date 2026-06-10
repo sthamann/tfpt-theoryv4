@@ -20,7 +20,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     q: "What is actually fitted?",
-    a: "In the closed branch: nothing. There are zero fitted constants on the dimensionless axis, and parameter-freeness is a theorem (a gapped boundary transport with Δ = 6 log(3/2) > 0 has, by Perron–Frobenius, a unique attractor). The only continuous primitive left is π. The conditional layer has declared inputs — the e-fold count N★ for inflation and one dimensionful induced-gravity scale — which are typed [P]/[A], never smuggled in.",
+    a: "In the closed branch: nothing. There are zero fitted constants on the dimensionless axis, and parameter-freeness is a theorem under the named gapped-transport hypotheses (Δ = 6 log(3/2) > 0 gives, by Perron–Frobenius, a unique attractor; the physical identification of the transport operator stays [P]). The only continuous primitive left is π. The conditional layer has declared inputs — the e-fold count N★ for inflation (kept as the frozen band [50,60]; the scalaron-reheating chain computes a conditional point N★ = 51.4 [P], recorded with its A_s tension) and one dimensionful induced-gravity scale — which are typed [P]/[A], never smuggled in.",
   },
   {
     q: "Couldn't all the integer coincidences be numerology?",

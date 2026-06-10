@@ -172,6 +172,19 @@ const CLUSTERS: Cluster[] = [
       { file: "v83_e8net_holomorphic_uniqueness.py", what: "closes red-team Target A residual 1: #primaries=det(Cartan) ⇒ holomorphy (E8 det 1) is necessary AND sufficient — (D8)₁=SO(16)₁ shares c=8 but has 4 primaries; E8 the unique even-unimodular rank-8 lattice (mass=1/|W(E8)|). A drops 3→2 residuals; + Target B reduced to the half-spinor midpoint K=(g−1)/2" },
     ],
   },
+  {
+    title: "Blind registry & red-team follow-ups (v84–v88)",
+    purpose:
+      "The frozen prediction registry and the second follow-up round: Target A merged to one residual, the CP residual quantified, N★ computed from reheating — every freeze machine-enforced.",
+    accent: "from-emerald-500 to-cyan-500",
+    scripts: [
+      { file: "v84_frozen_registry.py", what: "blind-prediction registry FROZEN 2026-06-09: every dimensionless prediction of record at 25 digits, re-derived from the two axioms each run (formula↔value lock); exactly ONE θ₁₂ prediction of record = 1/3−φ₀/2 = 0.306747, variants typed as derived (look-elsewhere machine-excluded); r/n_s only as N★ bands" },
+      { file: "v85_master_cover.py", what: "Master-Cover Theorem: GL(2) covariance ⇒ exactly ONE anchor-block double cover up to Möbius reparametrisation (disc = N_fam⁴·det G²); the −8/3 = −rank E₈/N_fam rung = carrier − one transport period; μ₄ is NOT a 4:1 cover (honest negative); branch trace fixes only the scalaron scale" },
+      { file: "v86_nstar_reheating.py", what: "N★ from the theory's own scalaron mass + standard reheating: Γ=128 GeV, T_reh=9.6×10⁹ GeV, N★(0.05/Mpc)=51.4 ⇒ n_s=0.9611, r=0.0045 [P] — recorded honestly: A_s coherence disfavours the slow Higgs channel (−11.4σ); the frozen band [50,60] stays the surface of record" },
+      { file: "v87_bulk_uniqueness_reduction.py", what: "red-team Target A = ONE residual: holomorphy ⇒ unique 2D bulk (LR/KLM/BKLR); machine contrast: SO(16)₁ admits SIX modular invariants (incl. both E₈-extension pairings) ⇒ non-holomorphic c=8 bulk is multiply ambiguous" },
+      { file: "v88_cp_phase_audit.py", what: "Target D follow-up: frozen δ=π/3+3λ² survives at +0.98σ vs γ_PDG; audit (not promoted): data sit 0.07° from the alternative π/3+2λ² — decision at σ_γ ≤ 0.96° (LHCb/Belle II); J-inversion flagged magnitude-contaminated" },
+    ],
+  },
 ];
 
 const TOTAL = CLUSTERS.reduce((n, c) => n + c.scripts.length, 0);
