@@ -19,6 +19,8 @@
     YukawaType             — Stage-A interface for primitive indecomposable Yukawa type
     CarrierData            — main bundled theorem: tr Y = 0 from all premises
     Hypercharge            — concrete 5×5 model:  tr Y = 0 and 6 Y² − Y − 1 = 0
+    GlueUniqueness         — v89/v92 cores: glue uniqueness up to the spinor
+                             swap + carrier index 4 = |μ₄| (kernel decide)
     Sanity                 — #eval smoke tests
     AxiomCheck             — #print axioms for the main theorems
 

@@ -266,6 +266,25 @@ chosen branch are all forced. This is still not a closure: that single identific
 counterpart of the multiplicative-seed conjecture $u\mapsto(53/54)u$ above; both contract the source onto $2/3$.)
 \end{winbox}
 
+\begin{winbox}[Relaxation toy: basin, exact rate, and two honest negatives \tI/\tN\ (\veri{v93\_koide\_relaxation\_toy.py})]
+The relaxation picture is now stress-tested on the physical values (ledger \texttt{FR.KOIDE.05}).
+\textbf{Basin lemma \tI\ (new):} under the canonical dictionary $q=\Nfam\,Q$ the \emph{entire} physical Koide
+range $Q\in[\tfrac13,1]$ (Cauchy--Schwarz) maps to $q\in[1,3]$ --- the attractor $q=2$ lies inside, the
+repeller $q=5$ outside: every physically possible charged-lepton configuration is in the attractor basin, no
+fine-tuning of the start. \textbf{Exact rate \tI:} along the trajectory from the physical source value the
+cross-ratio contracts by \emph{exactly} $(2/3)^6$ per step. \textbf{Source/pole \tI/\tN:} the exact ladder
+gives $Q_{\mathrm{src}}=0.6644638$, i.e.\ $\rho_{\mathrm{src}}=-0.0021980\approx-\varphi_0/24$ to $0.8\%$ ---
+the $\varphi_0/24$ conjecture re-expressed in attractor coordinates: \emph{the source sits one seed quantum
+before the branch point} ($24=|W(A_3)|$); PDG pole masses give $Q_{\mathrm{pole}}=0.6666645$, the branch
+point hit to $3.3\times10^{-6}$. \textbf{Honest negatives (they narrow the gate):} (i) the flow time
+source$\to$pole is $t=\log_\mu(\rho_{\mathrm{pole}}/\rho_{\mathrm{src}})=2.84$ --- \emph{not} an integer, so
+the literal discrete iteration $\mathrm{pole}=F^n(\mathrm{source})$ is \emph{excluded}; if the v82 map drives
+the transfer at all, the missing \tP\ object is a \emph{continuous-time} generator $\exp(t\log F)$;
+(ii) the $0.79\%$ mismatch of $\rho_{\mathrm{src}}$ vs $-\varphi_0/24$ is far above ladder precision, so
+``exactly $\varphi_0/24$'' remains a conjecture, not an identity. The open question is no longer ``why
+$2/3$?''\ but ``what is the continuous transfer generator, and why is its flow time $\sim2.8$ periods?''.
+\end{winbox}
+
 % =====================================================================
 \section{Dark matter --- the candidate is fixed, the scale is pending}
 % =====================================================================

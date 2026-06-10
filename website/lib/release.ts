@@ -70,9 +70,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/tfpt_4_frontier.pdf": {
     href: "/papers/tfpt_4_frontier.pdf",
     ...COMMON,
-    bytes: 489690,
+    bytes: 494985,
     sha256:
-      "f7bd43e1279d9f4884569248a10e37b2a7a50f1831110ce7702d47af70c4fe80",
+      "dcdeff2dfb908681104d57392be891af26c261af8e8c2d51ab653880de3fa43a",
     changelog:
       "Honest status of η_B, m_p/m_e, Koide, dark matter and full quantum gravity — not forced onto the ladder.",
   },

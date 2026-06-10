@@ -53,6 +53,30 @@ Boundary Polarization*).
 > Formally verified: `TFPT.Carrier.Hypercharge.trace_Y` and
 > `TFPT.Carrier.Hypercharge.Y_carrier_polynomial`.
 
+> **Theorem (Glue uniqueness + carrier index, v89/v92 cores; added
+> 2026-06-10).** On the carrier discriminant form `A = ℤ₄ × ℤ₄` with
+> `qZ(x,y) = (5x² + 3y²) mod 8`:
+>
+> * the isotropic elements are exactly
+>   `{(0,0), (1,1), (1,3), (2,2), (3,1), (3,3)}`;
+> * the order-4 isotropic elements generate exactly **two** cyclic
+>   subgroups `H₁ = ⟨(1,1)⟩`, `H₂ = ⟨(1,3)⟩`, the unique Klein
+>   four-subgroup is **not** isotropic, and the spinor swap
+>   `(x,y) ↦ (x,−y)` provably exchanges `H₁ ↔ H₂` — the Lagrangian
+>   (`μ₄`) glue is **unique up to the sheet**;
+> * the unique isotropic order-2 element is `(2,2)` (the `SO(16)₁`
+>   halfway stage of the extension tower);
+> * carrier index arithmetic: `μ(D₅)·μ(A₃) = 16`, `[B:A]² = 16 ⇒`
+>   Jones index `4 = |μ₄| = |ℤ₂|²`, and `16/4² = 1` (μ-additivity:
+>   holomorphy follows from index 4); glue sectors are `h = 1`
+>   currents and `248 = 45+15+64+64+60`.
+>
+> All by kernel `decide` (no `native_decide`).
+> Formally verified: `TFPT.Carrier.GlueUniqueness.*` (ten theorems,
+> wired into `AxiomCheck`/`AuditCheck`; mirrors
+> `verification/v89_carrier_index_lemma.py` and
+> `verification/v92_glue_uniqueness.py`, ledger `FORM.GLUE.01`).
+
 ## Why this is interesting
 
 * The carrier polynomial `6 Y² − Y − 1 = 0` is in earlier TFPT drafts

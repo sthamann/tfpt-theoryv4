@@ -36,7 +36,7 @@ const GATES: Gate[] = [
     tag: "Not a gate",
     marker: "[P]/[A]",
     title: "Frontier interfaces — explicitly not compiler powers",
-    body: "Koide (near-miss), η_B (downstream readout), the axion relic scale, and m_p/m_e are honestly typed interfaces. They are deliberately not claimed as forced compiler outputs.",
+    body: "Koide is no longer a bare near-miss but an attractor boundary condition: every physical configuration lies in the attractor basin, the rate (2/3)⁶ is forced, the source sits one seed quantum φ₀/24 before the branch point — open is only the continuous transfer generator (v93). η_B (downstream readout), the axion relic scale, and m_p/m_e remain honestly typed interfaces, deliberately not claimed as forced compiler outputs.",
     tone: "border-slate-500/30 bg-slate-500/5",
   },
 ];

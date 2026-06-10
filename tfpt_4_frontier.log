@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex 2026.3.4)  10 JUN 2026 08:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex 2026.3.4)  10 JUN 2026 13:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1310,13 +1310,20 @@ g.py\T1/lmr/m/n/9 (+20) ][] \T1/lmr/m/n/10.95 (+20) turns the pair-ing into a \
 T1/lmr/m/it/10.95 (+20) mech-a-nism\T1/lmr/m/n/10.95 (+20) .
  []
 
+
+Underfull \hbox (badness 2452) in paragraph at lines 269--269
+[]\T1/lmr/bx/n/10.95 (+20) Relaxation toy: basin, ex-act rate, and two hon-est 
+neg-a-tives []\T1/lmr/bx/n/10 (+20) [I][]\T1/lmr/bx/n/10.95 (+20) /[]\T1/lmr/bx
+/n/10 (+20) [N][]
+ []
+
 [5]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 332.
+(Font)              <9> on input line 351.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 332.
+(Font)              <5> on input line 351.
  [6]
-Underfull \hbox (badness 2894) in paragraph at lines 376--376
+Underfull \hbox (badness 2894) in paragraph at lines 395--395
 []\T1/lmr/m/it/8 (+20) Marker key: []\T1/lmr/bx/it/10 (+20) [I][] \T1/lmr/m/it/
 8 (+20) ex-act iden-tity$\OMS/lmsy/m/n/8 ^^A$[]\T1/lmr/bx/it/10 (+20) [L][] \T1
 /lmr/m/it/8 (+20) Lie/lattice the-o-rem$\OMS/lmsy/m/n/8 ^^A$[]\T1/lmr/bx/it/10 
@@ -1325,7 +1332,7 @@ t/10 (+20) [N][] \T1/lmr/m/it/8 (+20) nu-mer-i-cal fixed point$\OMS/lmsy/m/n/8
 ^^A$[]\T1/lmr/bx/it/10 (+20) [P][] \T1/lmr/m/it/8 (+20) phys-i-
  []
 
-[7] (./tfpt_4_frontier.aux)
+[7] [8] (./tfpt_4_frontier.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -1334,13 +1341,13 @@ Package rerunfilecheck Info: File `tfpt_4_frontier.out' has not changed.
 (rerunfilecheck)             Checksum: EDFC116B38EA4909AB05596E8302307A;2025.
  ) 
 Here is how much of TeX's memory you used:
- 31920 strings out of 467525
- 643311 string characters out of 5408440
+ 31934 strings out of 467525
+ 643457 string characters out of 5408440
  1115318 words of memory out of 5000000
- 60038 multiletter control sequences out of 15000+600000
- 742125 words of font info for 230 fonts, out of 8000000 for 9000
+ 60037 multiletter control sequences out of 15000+600000
+ 742775 words of font info for 237 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,10n,107p,1012b,1044s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,10n,107p,1012b,991s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/lm
 /lmbx10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1
 /public/lm/lmbx12.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/f
@@ -1371,10 +1378,10 @@ texlive/20260301/share/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></opt/homebr
 ew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></o
 pt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfont
 s/symbols/msbm10.pfb>
-Output written on tfpt_4_frontier.pdf (7 pages, 489690 bytes).
+Output written on tfpt_4_frontier.pdf (8 pages, 494985 bytes).
 PDF statistics:
- 275 PDF objects out of 1000 (max. 8388607)
- 184 compressed objects within 2 object streams
- 24 named destinations out of 1000 (max. 500000)
+ 280 PDF objects out of 1000 (max. 8388607)
+ 188 compressed objects within 2 object streams
+ 25 named destinations out of 1000 (max. 500000)
  59093 words of extra memory for PDF output out of 61914 (max. 10000000)
 
