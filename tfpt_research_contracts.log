@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex 2026.3.4)  10 JUN 2026 08:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex 2026.3.4)  11 JUN 2026 10:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1227,15 +1227,11 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 72.
+(Font)              <14.4> on input line 87.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 72.
+(Font)              <10> on input line 87.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 72.
-
-LaTeX Font Warning: Font shape `T1/lmtt/bx/it' in size <9> not available
-(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 111.
-
+(Font)              <7> on input line 87.
 [1
 
 {/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/map/pdftex/updmap
@@ -1245,7 +1241,12 @@ vips/lm/lm-ec.enc}{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts
 /fonts/enc/dvips/lm/lm-mathit.enc}{/opt/homebrew/Cellar/texlive/20260301/share/
 texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/opt/homebrew/Cellar/texlive/20260
 301/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
-Underfull \hbox (badness 1735) in paragraph at lines 143--153
+
+LaTeX Font Warning: Font shape `T1/lmtt/bx/it' in size <9> not available
+(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 126.
+
+
+Underfull \hbox (badness 1735) in paragraph at lines 158--168
 [][]\T1/lmr/bx/n/10.95 (+20) Lemma 4 \T1/lmr/m/n/10.95 (+20) (U3 --- $\OML/lmm/
 m/it/10.95 D[]$ \T1/lmr/m/n/10.95 (+20) fixed lo-cus as an ex-plicit va-ri-ety,
  \T1/lmr/m/it/10.95 (+20) pos-i-tive-di-men-sional\T1/lmr/m/n/10.95 (+20) )\T1/
@@ -1253,7 +1254,7 @@ lmr/bx/n/10.95 (+20) . []\T1/lmr/m/it/10.95 (+20) With
  []
 
 [2] [3]
-Overfull \hbox (3.90785pt too wide) detected at line 249
+Overfull \hbox (3.90785pt too wide) detected at line 264
 \OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 K; \OT1/lmr/bx/n/10.95 1\OML/lmm/m/it/1
 0.95 ; a\OT1/lmr/m/n/10.95 ) \OMS/lmsy/m/n/10.95 ! \OML/lmm/m/it/10.95 B[] \OT1
 /lmr/m/n/10.95 = [][] \OMS/lmsy/m/n/10.95 ! []\OT1/lmr/m/n/10.95 (\OML/lmm/m/it
@@ -1268,8 +1269,8 @@ it/10.95 ^^V[]\OMS/lmsy/m/n/10.95 j\OT1/lmr/m/n/10.95 ) \OMS/lmsy/m/n/10.95 ! k
  []
 
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <9> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 263.
-LaTeX Font Info:    Trying to load font information for U+euf on input line 294
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 278.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 309
 .
 
 (/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/ueuf
@@ -1282,21 +1283,21 @@ File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
 
 ) [4]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 3
-44.
+59.
 
 (/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Underfull \hbox (badness 1102) in paragraph at lines 349--355
+Underfull \hbox (badness 1102) in paragraph at lines 364--370
 []$\OML/lmm/m/it/10.95 U[]$ []\T1/lmr/bx/n/10 (+20) [I][]\T1/lmr/m/n/10.95 (+20
 ) : \T1/lmr/bx/n/10.95 (+20) Read-out Rigid-ity \T1/lmr/m/n/10.95 (+20) --- on 
 the dis-crete stra-tum $\OMS/lmsy/m/n/10.95 S[] \OT1/lmr/m/n/10.95 (+20) = \OMS
 /lmsy/m/n/10.95 f[] \OML/lmm/m/it/10.95 R \OT1/lmr/m/n/10.95 (+20) =
  []
 
-[5{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc/dvips/lm/lm
--ts1.enc}]
-Overfull \hbox (1.44386pt too wide) detected at line 417
+[5] [6{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc/dvips/l
+m/lm-ts1.enc}]
+Overfull \hbox (1.44386pt too wide) detected at line 432
 \OML/lmm/m/it/10.95 a[] \OT1/lmr/m/n/10.95 = [] [](6\OML/lmm/m/it/10.95 E \OT1/
 lmr/m/n/10.95 + \OML/lmm/m/it/10.95 R \OT1/lmr/bx/n/10.95 1\OT1/lmr/m/n/10.95 )
  = \OMS/lmsy/m/n/10.95 ^^@[] \OT1/lmr/m/n/10.95 ([] []  \OML/lmm/m/it/10.95 R\O
@@ -1306,13 +1307,13 @@ m/n/10.95 5\OML/lmm/m/it/10.95 R[]\OT1/lmr/bx/n/10.95 1\OT1/lmr/m/n/10.95 ) = [
 ]
  []
 
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 503--513
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 518--528
 \T1/lmr/bx/n/10.95 (+20) And that bound-ary mea-sure is a \T1/lmr/bx/it/10.95 (
 +20) rig-or-ously con-structed \T1/lmr/bx/n/10.95 (+20) net
  []
 
-[7] [8] [9] (./tfpt_research_contracts.aux)
+[8] [9] (./tfpt_research_contracts.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -1322,11 +1323,11 @@ Package rerunfilecheck Info: File `tfpt_research_contracts.out' has not changed
 (rerunfilecheck)             Checksum: EA0F840AA5FE10FE18FBCF540447189D;594.
  ) 
 Here is how much of TeX's memory you used:
- 32462 strings out of 467525
- 649489 string characters out of 5408440
- 1123234 words of memory out of 5000000
+ 32470 strings out of 467525
+ 649576 string characters out of 5408440
+ 1124234 words of memory out of 5000000
  60410 multiletter control sequences out of 15000+600000
- 784453 words of font info for 321 fonts, out of 8000000 for 9000
+ 784843 words of font info for 325 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  116i,12n,121p,1020b,1032s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/am
@@ -1363,7 +1364,7 @@ onts/type1/public/lm/lmtti10.pfb></opt/homebrew/Cellar/texlive/20260301/share/t
 exmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></opt/homebrew/Cellar/
 texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pf
 b>
-Output written on tfpt_research_contracts.pdf (9 pages, 590897 bytes).
+Output written on tfpt_research_contracts.pdf (9 pages, 595888 bytes).
 PDF statistics:
  284 PDF objects out of 1000 (max. 8388607)
  184 compressed objects within 2 object streams

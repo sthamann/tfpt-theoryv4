@@ -72,6 +72,12 @@ bootstrap fixed point* (forced three independent ways via the `E8` closure), so 
   finite object — edges `{6,8,10,12,15,20}`, faces `{24,30,40,60}`, volume `120 = |R⁺(E8)|`;
   `240 = |μ₄|·|E(K₄)|·|E(K₅)|` (breaks at `K₆` — specific, not generic). Dual cuts are typed as
   tautological presentation; `7, 16, 41, 48, 240, 248` lie *outside* the sub-grammar (honest).
+  The tetrahedron is the *presentation raster of the anchor microcode* — the engine stays
+  `a = (1,1,2)` (plus `p₀(a) = 3`).
+- **Centered flavor diamond** (`v95`): the four flavor operators are *one* center plus *two*
+  axes — `Q = U+V`, `R/L = C∓U` (winding), `K/F = C∓V` (sheet, `Spec V = {0,1,2}` = the cusp
+  class); the center has `det C = 14`, `ΣC = 31 = 2^g−1` (the IR gap-bound numerator),
+  `Pl_R(C) = 7·(2,3,1)` — the `G₂` reading stays audit-typed.
 
 ### Honest scope — the four layers
 
@@ -113,7 +119,7 @@ Sakharov-type induced gravity) — not a diffuse gap.
 
 | Item | What it is |
 |---|---|
-| `v1_*.py … v94_*.py` | 94 numbered claim checks (one file per claim cluster). |
+| `v1_*.py … v95_*.py` | 95 numbered claim checks (one file per claim cluster). |
 | `run_all.py` | Runs the whole suite; ends `ALL CHECKS PASSED`. |
 | `tfpt_constants.py` | Shared constants + `check()` harness. |
 | `predictions_frozen.json` | **Blind-prediction registry** (frozen 2026-06-09): every dimensionless prediction of record at 25 digits, locked to its formula by `v84_frozen_registry.py` on every run; exactly one `θ12` prediction of record (seed `0.306747`), `r`/`n_s` only as `N_star` bands. |

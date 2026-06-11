@@ -52,9 +52,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/tfpt_2_standard_model.pdf": {
     href: "/papers/tfpt_2_standard_model.pdf",
     ...COMMON,
-    bytes: 962413,
+    bytes: 965480,
     sha256:
-      "3dddfdd10309cdae094f1917e3a979abf05a99c2f090e504ff6384e2a579beaf",
+      "240a967d4f459f9eaaed360c56eeb321e092d2e8f75709e6d6878784fd623a6c",
     changelog:
       "The Standard Model in one φ₀-ladder, the flavor residue matrix, and the derived solar angle θ₁₂.",
   },
@@ -97,9 +97,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/tfpt_research_contracts.pdf": {
     href: "/papers/tfpt_research_contracts.pdf",
     ...COMMON,
-    bytes: 590897,
+    bytes: 595888,
     sha256:
-      "a073d041ab091c5668b275952324a9c6568993b4f1ee792e761cdce0710e83e4",
+      "e7bca9cef048f65994e7ec9c822d4e63b45679c1b0fd3a77b680593073cd11b8",
     changelog:
       "Research contracts for the two open gates: (U_wall) flavor wall-selection and (G_metric) the QG measure.",
   },

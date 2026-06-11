@@ -595,6 +595,24 @@ factorisation is \textbf{not generic}: the surface carries its own negative cont
 $t{=}s$ gives $9s^2{+}27s{+}16$ with discriminant $153$ (non-square; the \emph{same} control discriminant as
 the $R$-direction pencils), and the $R{\to}L$ cut $t{=}0$ is linear (degenerate direction, no cover).
 \smallskip\\
+\noindent\textbf{Centered normal form (\veri{v95\_centered\_diamond.py}).} The diamond is a \emph{centered
+cross}: with the center $C:=M(1,0)=\tfrac{R+L}{2}=\tfrac{K+F}{2}$ and the two axes
+$U:=Q\operatorname{diag}(1,0,0)=\Nfam\,\mathbf1e_1^\top$ (winding, rank $1$, spectrum $\{3,0,0\}$) and
+$V:=Q\operatorname{diag}(0,1,1)$ (sheet, rank $2$),
+\[
+  \boxed{\ Q=U+V,\qquad R=C{-}U,\quad L=C{+}U,\quad K=C{-}V,\quad F=C{+}V\ }\qquad\tI ,
+\]
+so five objects collapse to three, and the winding line below \emph{is} the $U$-axis ($L=R+2U$). The sheet
+axis carries exactly the cusp class: $\operatorname{Spec}(V)=\{0,1,2\}=\Nfam\{0,\tfrac13,\tfrac23\}$
+(cf.\ $Q_+=3\,\mathrm{cusp}+1$ with $\{1,2,3\}$, v69/v72). The center is tightly typed:
+$\det C=14$, $\operatorname{SNF}(C)=(1,1,14)$, $\sum_{ij}C_{ij}=31=2^{\gcar}{-}1=1{+}h^\vee(E_8)$ (the same
+$31$ as the IR gap-bound numerator $\|V_{\mathrm{metric}}\|\le31/(8\pi^2)$), $\det B_C=28=2\cdot14$,
+$\operatorname{Pl}(C)=(0,14,14)$ and $\operatorname{Pl}_R(C)=7\,(2,3,1)$ --- the same ray $(2,3,1)$ as
+$\operatorname{Pl}_R(L)=10\,(2,3,1)$, scalaron-$7$ vs decuple-$10$ scaling. \emph{Typing:} the normal form
+and all integers are exact \tI; the ``$G_2$ center'' reading ($14=\dim G_2$, also the constant term of
+$\chi_{[K,Q]}=t^3{+}5t{+}14$ and $\sqrt{\sum B_F}$) is an \emph{audit} Lie-dimension match, recorded, not
+promoted.
+\smallskip\\
 \noindent\textbf{The Winding Line.} On $R_s=R+s\,\mathbf 1e_1^\top$ (the $R\to L$ channel) anchor area and
 torsion volume run \emph{synchronously} for all $s$:
 \[
