@@ -580,6 +580,31 @@ Module[{jwOps, evensOf, buildQuads, runWorld},
   ];
 ];
 
+(* ---- (v112) self-counting channel ---- *)
+Module[{worldW, neutralCount, chanGrading, codeGrading, foldGrading, results},
+  worldW[g_] := {Select[Tuples[{1/2, -1/2}, g], EvenQ[Count[#, -1/2]] &],
+                 Select[Tuples[{1/2, -1/2}, g], OddQ[Count[#, -1/2]] &]};
+  neutralCount[g_] := Module[{sp, sm}, {sp, sm} = worldW[g];
+    {AllTrue[sp, MemberQ[sm, -#] &],
+     Count[Flatten[Outer[Plus, sp, sm, 1], 1], ConstantArray[0, g]]}];
+  chanGrading[g_] := Module[{vecw},
+    vecw = Join[IdentityMatrix[g], -IdentityMatrix[g]];
+    Table[If[m == 0, 1,
+      Count[Total /@ Subsets[vecw, {2 m}], ConstantArray[0, g]]], {m, 0, (g - 1)/2}]];
+  codeGrading[g_] := Module[{sp = First[worldW[g]]},
+    Table[Count[sp, w_ /; Count[w, -1/2] == 2 j], {j, 0, (g - 1)/2}]];
+  foldGrading[g_] := Table[Binomial[g, Min[2 j, g - 2 j]], {j, 0, (g - 1)/2}];
+  results = Table[{g, neutralCount[g], chanGrading[g], codeGrading[g], foldGrading[g]}, {g, {3, 5, 7}}];
+  checkExact["v112 canonical bijection: w -> -w maps S+ into S-; # neutral kernels = dim S+ = 2^{g-1} (4, 16, 64)",
+    AllTrue[results, (#[[2, 1]] && #[[2, 2]] == 2^(#[[1]] - 1)) &]];
+  checkExact["v112 Pascal partition: channel pair-grading = (C(g,m))_{m<=K}; g=5 -> (1,5,10)",
+    AllTrue[results, (#[[3]] == Table[Binomial[#[[1]], m], {m, 0, (#[[1]] - 1)/2}]) &]];
+  checkExact["v112 the closure is an identity: 2^{g-1} = Sum_{m<=K} C(g,m) for all odd g = 3..13",
+    AllTrue[Range[3, 13, 2], (2^(# - 1) == Sum[Binomial[#, m], {m, 0, (# - 1)/2}]) &]];
+  checkExact["v112 Hodge fold: code minus-grading C(g,2j) = C(g,min(2j,g-2j)), same multiset as the channel grading",
+    AllTrue[results, (#[[4]] == #[[5]] && Sort[#[[4]]] == Sort[#[[3]]]) &]];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v111: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v112: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

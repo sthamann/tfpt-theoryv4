@@ -126,6 +126,7 @@ const NODES: DagNode[] = [
       "v109_sheet_pairing.py",
       "v110_calderon_sheet.py",
       "v111_quadratic_transport.py",
+      "v112_selfcounting_channel.py",
     ],
   },
   {

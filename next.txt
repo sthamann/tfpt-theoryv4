@@ -555,4 +555,35 @@ QUADRATIC-TRANSPORT-THEOREM (v111, Ledger CAR.QTRANS.01) -- die
        (b') zertifiziertes ZUSTANDS-Inventar = der <=2-Slot-Turm
             (Pascal-Seite, v108).
        Ueber den TRANSPORT ist nichts mehr hypothetisch.
+
+SELF-COUNTING-CHANNEL (v112, Ledger CAR.COUNT.01) -- der Pascal-Abschluss
+    ist eine IDENTITAET des zertifizierten Kanals, keine Zusatzforderung;
+    die Zustands-Haelfte des QBL-Kerns ist strukturell geschlossen:
+    (1) KANONISCHE BIJEKTION [I]: w -> -w bildet S+ bijektiv ins andere
+        Blatt ab (v109-Paritaet als Bijektion); die Cartan-neutralen
+        Kerne des Kanals S+xS- sind exakt die Paare (w,-w) -- EINER PRO
+        CODE-ZUSTAND: #neutrale Kerne = dim S+ = 2^{g-1} exakt
+        (4, 16, 64 fuer g = 3, 5, 7). Der Kanal zaehlt den Code.
+    (2) PASCAL-PARTITION [I]: dieselbe neutrale Menge nach Paar-Grad m
+        graduiert hat Groessen C(g,m), m = 0..K; g=5 -> (1,5,10).
+    (3) DER ABSCHLUSS IST EINE IDENTITAET [I]: zwei Zaehlungen EINER
+        Menge geben 2^{g-1} = sum_{m<=K} C(g,m) (symbolisch fuer alle
+        ungeraden g=3..13) -- v108s Abschluss-BEDINGUNG ist die
+        Selbstzaehlung des Kanals.
+    (4) HODGE-FALTUNG [I]: Code-Minus-Graduierung C(g,2j) =
+        C(g, min(2j, g-2j)), min <= K -- jeder Code-Sektor erscheint
+        bei Paar-Grad <= K (g=5: Code (1,10,5) vs Kanal (1,5,10),
+        gleiche Multimenge, gefaltet).
+    (5) LEITER-GENERIZITAET: gilt fuer jedes ungerade g, traegt KEINE
+        g-Selektion -- die Selektion bleibt bei Rank-8 (g+N_fam=8, v14)
+        + Integralitaet (v108).
+    => RESIDUUM NEU TYPISIERT [P]: QBL-(b') verliert seine Abschluss-
+       Last (der Kanal enthaelt automatisch einen neutralen Kern pro
+       Code-Zustand bei Paar-Grad <= K -- (b') ist die DEFINITION des
+       Kanals). Verbleibender physikalischer Input: "der Seam
+       zertifiziert ueber EINEN skalaren Zweipunkt-Kern" (freies c=8
+       Seam-Netz: Wick setzt den einen Kern per Determinanten auf den
+       ganzen geraden Turm fort). Die Carrier-SELEKTION traegt Rank-8 +
+       Integralitaet; QBL ist der strukturelle Konsistenzrahmen, kein
+       fehlender Selektor mehr.
 ================================================================================
