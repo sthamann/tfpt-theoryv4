@@ -65,8 +65,8 @@ only the standard library (writes `../manifest.sha256`).
 | `v33_explicit_flat_bundle.py` | **explicit valid flat bundle (RH-solve output)**: hardcoded `A₀` realises cusp class + splitting `O(-2)⊕O(-1)²` + trivial ∞-monodromy `‖M_∞−I‖~1e-9` (⇒`∏M_k=I`) + **irreducible (case A)**. Existence + case A confirmed; unique `∇_F*` needs `det R=8`, `c_u/c_d` needs H2 | tfpt_research_contracts |
 | `v34_h2_bridge_attempt.py` | **H2-bridge attempt (honest negative)**: explicit per-puncture `M_k` (cusp class, `∏M_k=I`); `\|diag M_k\|=(0,½,½)`, natural extraction does NOT reproduce the lepton amplitudes ⇒ the `Γ^min` geodesic-to-word dictionary is genuinely missing; `c_u/c_d` not obtained (no fabrication) | tfpt_research_contracts |
 
-> **Scripts `v35`–`v93`.** The table above lists the original `v1`–`v34` core; the
-> later scripts (`v35`–`v93`, including the operator-pencil sequence
+> **Scripts `v35`–`v94`.** The table above lists the original `v1`–`v34` core; the
+> later scripts (`v35`–`v94`, including the operator-pencil sequence
 > `v80`/`v81`/`v82`/`v85`) are each registered with a one-line description in
 > `run_all.py` and typed in `status_ledger.csv` (**the source of truth**).
 > `v82_koide_attractor_splitting.py` proves two structural results on top of
@@ -123,6 +123,17 @@ only the standard library (writes `../manifest.sha256`).
 > negatives — the pole is **not** an integer number of F-steps from the source
 > (t = 2.84 ⇒ the missing object is a *continuous* transfer generator), and
 > `φ₀/24` stays a `[P]` conjecture (0.8% mismatch).
+> `v94_sheet_diamond.py` (`FLAV.DIAMOND.01`/`FLAV.PLUCKER.02`) integrates the
+> validated subset of the second review round: all four flavor operators are
+> points of **one** surface `M(s,t) = R + Q·diag(s,t,t)` (the mass pencil is the
+> cut `(1+x, x−1)`; the diagonal cut reproduces v85's non-square control disc
+> 153); the winding line satisfies `det B = 2·det` for **all** s with the s=6
+> triple lock; the cofactor seam normal `(5,−9,6)` selects generation 1 as the
+> only open torsion channel; the quark-ratio integers are **canonicalised** as
+> left/right Plücker norms of the same operator K (11 and 26). Honest
+> corrections recorded: the reality threshold is s* ≈ 2.83 (reality does *not*
+> select s=6), and the proposed spine-quotient firewall is **rejected** as a
+> hard rule (16/7, 7/6, 5/6, 8/7 are load-bearing counterexamples).
 > Two red-team follow-ups complete the round: `v87_bulk_uniqueness_reduction.py`
 > (`GATE.METRIC.05`) merges Target-A residual (ii) into (i) — for a holomorphic
 > net the 2D bulk is unique (LR/KLM/BKLR), machine-contrasted against `SO(16)₁`
