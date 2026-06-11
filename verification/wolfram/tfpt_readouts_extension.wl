@@ -605,6 +605,38 @@ Module[{worldW, neutralCount, chanGrading, codeGrading, foldGrading, results},
     AllTrue[results, (#[[4]] == #[[5]] && Sort[#[[4]]] == Sort[#[[3]]]) &]];
 ];
 
+(* ---- (v113) quasi-free kernel ---- *)
+Module[{jwOps, g = 5, a, ad, cs, vac, vev, m2, amat, pol, k10, pf, ok4, ok6, a16, p16},
+  jwOps[gg_] := Module[{eye = IdentityMatrix[2], zee = {{1, 0}, {0, -1}}, am = {{0, 1}, {0, 0}}},
+    Table[KroneckerProduct @@ Join[ConstantArray[zee, i - 1], {am}, ConstantArray[eye, gg - i]], {i, gg}]];
+  checkExact["v113 Majorana bookkeeping: c(D5)1 = 45/9 = 5 = g_car, c(A3)1 = 15/5 = 3 = N_fam, c(SO16)1 = 8, c(E8)1 = 248/31 = 8; carrier = 10+6 = 16 free Majoranas; tower index 2x2 = 4 = |mu4|",
+    45/9 == 5 && 15/5 == 3 && 120/15 == 8 && 248/31 == 8 && 10 + 6 == 16 && Sqrt[16/4] Sqrt[4/1] == 4];
+  a = jwOps[g]; ad = Transpose /@ a;
+  cs = Flatten[Table[{a[[i]] + ad[[i]], I (ad[[i]] - a[[i]])}, {i, g}], 1];
+  vac = UnitVector[2^g, 1];
+  vev[ops_] := vac . (Dot @@ ops) . vac;
+  m2 = Table[vev[{cs[[j]], cs[[k]]}], {j, 10}, {k, 10}];
+  amat = (m2 - IdentityMatrix[10])/I;
+  pol = (IdentityMatrix[10] + I amat)/2;
+  checkExact["v113 kernel = Calderon involution of rank g: M = I+iA, A integer antisym, A^2 = -I, P = M/2 projection of rank 5 = g_car, eps = iA involution",
+    amat == -Transpose[amat] && AllTrue[Flatten[amat], IntegerQ] &&
+    amat . amat == -IdentityMatrix[10] && pol . pol == pol && MatrixRank[pol] == 5 &&
+    (I amat) . (I amat) == IdentityMatrix[10]];
+  k10 = Table[If[x < y, vev[{cs[[x]], cs[[y]]}], 0], {x, 10}, {y, 10}];
+  pf[idx_] := If[idx === {}, 1,
+    Sum[(-1)^(t - 1) k10[[idx[[1]], idx[[t + 1]]]] pf[Delete[Rest[idx], t]], {t, Length[idx] - 1}]];
+  ok4 = AllTrue[Subsets[Range[10], {4}], (vev[cs[[#]]] == pf[#]) &];
+  ok6 = AllTrue[Subsets[Range[10], {6}], (vev[cs[[#]]] == pf[#]) &];
+  checkExact["v113 Wick/Pfaffian: all 210 vacuum 4-point AND all 210 6-point functions equal the Pfaffian of the single 2-point kernel",
+    ok4 && ok6];
+  checkExact["v113 one kernel <=> one state: joint annihilator kernel exactly 1-dimensional",
+    2^g - MatrixRank[Join @@ a] == 1];
+  a16 = SparseArray[Join[Table[{2 i - 1, 2 i} -> 1, {i, 8}], Table[{2 i, 2 i - 1} -> -1, {i, 8}]], {16, 16}] // Normal;
+  p16 = (IdentityMatrix[16] + I a16)/2;
+  checkExact["v113 seam level: 16-Majorana kernel rank 8 = rank E8 = c (the central charge is the rank of the one kernel)",
+    p16 . p16 == p16 && MatrixRank[p16] == 8];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v112: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v113: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

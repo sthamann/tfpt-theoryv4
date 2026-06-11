@@ -586,4 +586,33 @@ SELF-COUNTING-CHANNEL (v112, Ledger CAR.COUNT.01) -- der Pascal-Abschluss
        ganzen geraden Turm fort). Die Carrier-SELEKTION traegt Rank-8 +
        Integralitaet; QBL ist der strukturelle Konsistenzrahmen, kein
        fehlender Selektor mehr.
+
+EIN KERN IST DAS GANZE NETZ (v113, Ledger CAR.QFREE.01) -- der QBL-Input
+    verschmilzt mit der R2/Holomorphie-Praemisse; die Carrier-Wahl haengt
+    jetzt am Gate-A-Objekt selbst:
+    (1) MAJORANA-BUCHHALTUNG [I]: c(D5)_1 = 45/9 = 5 = g_car, c(A3)_1 =
+        15/5 = 3 = N_fam; das Carrier-Netz (D5)_1 x (A3)_1 = SO(10)_1 x
+        SO(6)_1 = 10+6 = 16 FREIE MAJORANA-FERMIONEN, c = 16/2 = 8.
+        Der GANZE Erweiterungsturm carrier(mu=16) -> SO(16)_1(mu=4) ->
+        E8_1(mu=1) traegt DIESELBEN 16 Fermionen -- nur der zertifizierte
+        Glue waechst (Index 2x2 = 4 = |mu4|, v89).
+    (2) WICK/PFAFF [I] exakt: im 10-Majorana-Modell sind ALLE 210
+        Vakuum-4-Punkt- UND alle 210 6-Punkt-Funktionen Pfaffsche des
+        EINEN Zweipunkt-Kerns -- ein Kern bestimmt alle Korrelationen.
+    (3) DER KERN IST EINE CALDERON-INVOLUTION VOM RANG g [I]:
+        M = I + iA, A ganzzahlig antisym, A^2 = -I; P = M/2 Projektion
+        mit Rang 5 = g_car; eps = iA Involution; auf Seam-Ebene
+        (16 Majoranas) Rang 8 = rank E8.
+        => DIE ZENTRALLADUNG IST DER RANG DES EINEN KERNS
+           (5 Carrier-Block, 8 Seam-Huelle).
+    (4) EIN KERN <=> EIN ZUSTAND [I]: gemeinsamer Annihilator-Kern
+        exakt 1-dimensional -- die Polarisation fixiert das Vakuum.
+    (5) PRAEMISSEN-FUSION [P]: "ein skalarer Zweipunkt-Kern" =
+        "Seam-Zustand quasi-frei" = die definierende Eigenschaft des
+        freien Fermion-Netzes, das das R2-Gate ohnehin setzt (Gate-A
+        (H') Index-4-Erweiterung, v89). QBL fuegt R2 NICHTS hinzu.
+        UPGRADE-VERTRAG: R2 schliesst => Carrier-Wahl schliesst [L]
+        entlang: freies Netz => ein Kern => sheet-odd (v110) =>
+        selbstzaehlender Turm (v109/v112) => vollstaendiger Transport
+        (v111) => Carrier. Gate-Typisierung [P]/[A] unveraendert.
 ================================================================================

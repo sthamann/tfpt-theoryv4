@@ -127,6 +127,7 @@ const NODES: DagNode[] = [
       "v110_calderon_sheet.py",
       "v111_quadratic_transport.py",
       "v112_selfcounting_channel.py",
+      "v113_quasifree_kernel.py",
     ],
   },
   {

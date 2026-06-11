@@ -34,18 +34,18 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/introduction.pdf": {
     href: "/papers/introduction.pdf",
     ...COMMON,
-    bytes: 968291,
+    bytes: 968847,
     sha256:
-      "01ee41c33eb8a49493aa5a8c8427257f16b8effc223c6d6eb95639ffef926ded",
+      "c7beab94d82bff1fef2078f9bd126adfb7e17735764a662cc7f74db486c102e8",
     changelog:
       "Compiler-closure reading guide: two axioms, the dependency DAG, the predictions and the proof ledger.",
   },
   "/papers/tfpt_1_architecture_e8.pdf": {
     href: "/papers/tfpt_1_architecture_e8.pdf",
     ...COMMON,
-    bytes: 966765,
+    bytes: 970378,
     sha256:
-      "7f8be2b8b08c9e4ee244c1aa92ca20ade195ceaac9807f1456068c313de19147",
+      "6034992e347a0414a39bc7a0242958b07181bfbec49f455639cc3f4f423ba61a",
     changelog:
       "Architecture: the two axioms, the D₅ × A₃ → E₈ construction, and the EM fixed point with existence + uniqueness.",
   },
@@ -97,9 +97,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/tfpt_research_contracts.pdf": {
     href: "/papers/tfpt_research_contracts.pdf",
     ...COMMON,
-    bytes: 595925,
+    bytes: 596778,
     sha256:
-      "d990eea742eb108abeb8c37d5efed2104bc871e6c7408f73d35eebf9d88d087c",
+      "f0a38d93ed2a0d6a54a42ef7ab2ef9d1e7171e90edf1372810942b432080a416",
     changelog:
       "Research contracts for the two open gates: (U_wall) flavor wall-selection and (G_metric) the QG measure.",
   },
