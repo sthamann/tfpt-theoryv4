@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  11 JUN 2026 17:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  11 JUN 2026 17:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1202,11 +1202,11 @@ Package rerunfilecheck Info: File `tfpt_4_frontier.out' has not changed.
 (rerunfilecheck)             Checksum: EDFC116B38EA4909AB05596E8302307A;2025.
  ) 
 Here is how much of TeX's memory you used:
- 31872 strings out of 473190
- 633652 string characters out of 5715801
+ 31886 strings out of 473190
+ 633806 string characters out of 5715801
  1100042 words of memory out of 5000000
  54305 multiletter control sequences out of 15000+600000
- 674303 words of font info for 237 fonts, out of 8000000 for 9000
+ 674942 words of font info for 244 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,10n,107p,1012b,1047s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/lo
@@ -1232,7 +1232,7 @@ b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/lo
 cal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texliv
 e/2025/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/local/texlive/2025/texm
 f-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tfpt_4_frontier.pdf (8 pages, 500810 bytes).
+Output written on tfpt_4_frontier.pdf (8 pages, 503691 bytes).
 PDF statistics:
  280 PDF objects out of 1000 (max. 8388607)
  188 compressed objects within 2 object streams

@@ -831,6 +831,26 @@ irreducibles (one scale $v_{\mathrm{geo}}$, the primitive $\pi$) and the frozen 
 closed by this box; its claim is \emph{completeness} --- a sixth structural gap would fail the script.
 \end{keybox}
 
+\begin{keybox}[The carrier chapter: the interior is free, the structure is the certificate \tI/\tP\ (\veri{v113\_quasifree\_kernel.py})]
+The QBL round (v108--v113) adds the missing chapter of the origin story --- \emph{why this carrier}. The
+seam owns exactly \emph{one} measuring device: a single scalar two-point kernel. Four theorems pin what
+such a device can do. \emph{(i)} A scalar kernel exists \emph{iff} it pairs the two sheets; there are
+exactly $2=|\Z_2|$ such kernels --- the glue ambiguity, resolved by the same sheet choice as everywhere
+(\veri{v110\_calderon\_sheet.py}). \emph{(ii)} The certified channel \emph{counts the code by itself}:
+one neutral kernel per code state, graded $(1,5,10)$ --- the Pascal closure is two countings of one set,
+not a condition (\veri{v112\_selfcounting\_channel.py}). \emph{(iii)} Pair transport is minimally
+complete: degree $\le1$ generates nothing, degree $2$ generates every code operation
+(\veri{v111\_quadratic\_transport.py}). \emph{(iv)} The carrier net is $16$ \emph{free} Majorana
+fermions whose tower carrier$\,\to SO(16)_1\to(E_8)_1$ never changes the field content --- only the
+certificate grows (index $2{\times}2=4=|\mu_4|$), and the central charge \emph{is} the rank of the one
+kernel ($5$ carrier block, $8$ seam hull). In the origin-story voice: \textbf{the interior of the world
+is free and structureless; everything we call structure lives in the certificate the seam issues} ---
+$E_8$ is that certificate's unique checksum, the anchor $a=(1,1,2)$ its discrete genome, and the
+black-hole keystones (Nariai $=$ anchor, one orientation, one clock) are the same bookkeeping read at
+the horizon. \emph{Honest residue:} the premise ``the seam is the free $c{=}8$ net'' is the
+$G_{\mathrm{net}}$ gate itself --- one theorem now closes both the metric story and the carrier choice.
+\end{keybox}
+
 % =====================================================================
 \section*{Appendix: computational verification}
 % =====================================================================

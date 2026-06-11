@@ -233,6 +233,14 @@ export const papers: Paper[] = [
         ],
       },
       {
+        title: "Why this carrier: the QBL theorem chain (v108–v113)",
+        body: "The seam owns exactly one measuring device — a single scalar two-point kernel — and four theorems pin what it can do. A scalar kernel exists iff it pairs the two sheets (exactly 2 = |ℤ₂| kernels = the glue ambiguity, v110); the certified channel counts the code by itself — one neutral kernel per code state, graded (1,5,10), so the Pascal closure is two countings of one set, not a condition (v112); pair transport is minimally complete — degree ≤ 1 generates nothing, degree 2 generates every code operation (v111); and the carrier net is 16 free Majorana fermions whose tower carrier → SO(16)₁ → E8₁ never changes the field content — only the certificate grows, and the central charge is the rank of the one kernel: 5 on the carrier block, 8 on the seam hull (v113). The interior is free; the structure is the certificate. Honest residue: the premise 'the seam is the free c=8 net' is the G_net gate itself — one theorem now closes both the metric story and the carrier choice.",
+        formulas: [
+          "\\text{scalar kernel exists} \\iff \\varepsilon\\ \\text{sheet-odd}, \\qquad \\#\\,\\text{kernels} = 2 = |\\mathbb{Z}_2|",
+          "2^{g-1} = \\sum_{m\\le K}\\binom{g}{m} \\ \\text{(two countings of one set)}, \\qquad c = \\operatorname{rank}(P): \\ 5\\ \\text{carrier}, \\ 8\\ \\text{seam}",
+        ],
+      },
+      {
         title: "The μ₄ glue: how E₈ is really built",
         body: "D₅ = so(10) (spinor 16) and A₃ = su(4) (the four-puncture family geometry ℙ¹∖μ₄) have the same discriminant group ℤ₄. Their discriminant-form norms are two TFPT constants that add to the E₈ root norm, so the glue closes as a lattice theorem — not a posited 248.",
         formulas: [

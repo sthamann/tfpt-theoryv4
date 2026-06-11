@@ -19,7 +19,7 @@ const LAYERS: Layer[] = [
     level: 1,
     label: "[A] Axioms — declared inputs",
     short: "Axiom",
-    examples: "c₃ = 1/(8π) (P1) · five-slot carrier g_car = 5 (P2)",
+    examples: "c₃ = 1/(8π) (P1) · five-slot carrier g_car = 5 (P2 — since v108–v113 reduced to the boundary-net premise: gate closes ⇒ carrier becomes [L])",
     tone: "from-slate-600 to-slate-500",
     ring: "ring-slate-400/40",
     text: "text-slate-100",

@@ -34,9 +34,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/introduction.pdf": {
     href: "/papers/introduction.pdf",
     ...COMMON,
-    bytes: 968847,
+    bytes: 969593,
     sha256:
-      "c7beab94d82bff1fef2078f9bd126adfb7e17735764a662cc7f74db486c102e8",
+      "f28a8e7a3af08e12d0beb3baf00e80b9a1a36e3813a7ba0e947054bb439df989",
     changelog:
       "Compiler-closure reading guide: two axioms, the dependency DAG, the predictions and the proof ledger.",
   },
@@ -70,9 +70,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/tfpt_4_frontier.pdf": {
     href: "/papers/tfpt_4_frontier.pdf",
     ...COMMON,
-    bytes: 500810,
+    bytes: 503691,
     sha256:
-      "f70eeac028fe6dd47911047e0797dcc7322a89e027cc5f8c0ae750c63c4c47f8",
+      "c05fb23516f04282675086cf050d8209809c95cb6576235819842e74b922b251",
     changelog:
       "Honest status of η_B, m_p/m_e, Koide, dark matter and full quantum gravity — not forced onto the ladder.",
   },
@@ -88,9 +88,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/origin_theory.pdf": {
     href: "/papers/origin_theory.pdf",
     ...COMMON,
-    bytes: 693816,
+    bytes: 697179,
     sha256:
-      "86c23615b27d5221d8ffb9b78c34223ae3bed1cafdea92c6988369d61dad4a7c",
+      "2b87110213c7392b6f9021d8265eb6d1c07299c19b3dd6df08f84e8ae44c8eed",
     changelog:
       "Origin Theory: the (5,3) skeleton, the triply-forced 8, the order-30 Coxeter cycle, and the gapped unique attractor.",
   },

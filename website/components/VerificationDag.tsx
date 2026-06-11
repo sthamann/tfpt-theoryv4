@@ -99,7 +99,7 @@ const NODES: DagNode[] = [
     marker: "[A] axiom · [F] Lean",
     title: "P2 — the five-slot carrier",
     summary:
-      "The carrier rank g_car = 5 (3 colour + 2 weak). The P2 algebra — hypercharge, anomaly-freedom, integer rigidity — is Lean-formalised (0 sorry). Theorem A is now also Lean-formalised: the Pascal carrier condition 2^g = g²+g+2 has the unique solution g = 5 (audited to the standard kernel axioms).",
+      "The carrier rank g_car = 5 (3 colour + 2 weak). The P2 algebra — hypercharge, anomaly-freedom, integer rigidity — is Lean-formalised (0 sorry). Theorem A is now also Lean-formalised: the Pascal carrier condition 2^g = g²+g+2 has the unique solution g = 5 (audited to the standard kernel axioms). Since the QBL theorem chain (v108–v113) the axiom is reduced to the boundary-net premise: the seam's one scalar kernel must pair the sheets (v110), the certified channel counts the code identically (v112), pair transport is minimally complete (v111), and the one quasi-free kernel — rank = c: 5 carrier block, 8 seam hull — is the defining datum of the free c=8 net (v113); closing the index-4 net statement closes this axiom to [L].",
     inputs: ["— declared axiom"],
     outputs: ["g_car = 5"],
     failure: "Wrong family / charge lattice.",

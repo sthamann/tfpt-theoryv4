@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  11 JUN 2026 17:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  11 JUN 2026 17:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1449,12 +1449,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 801--801
 [15]
 
 [16]
-Overfull \hbox (18.5217pt too wide) in paragraph at lines 848--848
+Overfull \hbox (18.5217pt too wide) in paragraph at lines 868--868
 []|\T1/lmtt/m/n/10 v54_seam_horizon_keystones.py| 
  []
 
 
-Underfull \hbox (badness 1735) in paragraph at lines 850--853
+Underfull \hbox (badness 1735) in paragraph at lines 870--873
 \T1/lmtt/m/n/10.95 wolframscript -file verification/wolfram/tfpt_readouts.wl \T
 1/lmr/m/n/10.95 (+20) (all pass). Fig-ures are
  []
@@ -1470,11 +1470,11 @@ Package rerunfilecheck Info: File `origin_theory.out' has not changed.
 (rerunfilecheck)             Checksum: D5E28BD09DFE3B42F3A96B7BA7A78AA5;3125.
  ) 
 Here is how much of TeX's memory you used:
- 33624 strings out of 473190
- 672007 string characters out of 5715801
+ 33633 strings out of 473190
+ 672107 string characters out of 5715801
  1138541 words of memory out of 5000000
- 55816 multiletter control sequences out of 15000+600000
- 725802 words of font info for 346 fonts, out of 8000000 for 9000
+ 55817 multiletter control sequences out of 15000+600000
+ 726151 words of font info for 350 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  86i,16n,96p,1010b,1049s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.
@@ -1506,7 +1506,7 @@ ublic/lm/lmtt9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lm
 tti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbo
 ls/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/s
 ymbols/msbm10.pfb>
-Output written on origin_theory.pdf (17 pages, 693816 bytes).
+Output written on origin_theory.pdf (17 pages, 697179 bytes).
 PDF statistics:
  606 PDF objects out of 1000 (max. 8388607)
  344 compressed objects within 4 object streams
