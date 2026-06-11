@@ -231,6 +231,7 @@ const NODES: DagNode[] = [
       "v75_upoint_to_vgeo.py",
       "v88_cp_phase_audit.py",
       "v114_torsion_delta.py",
+      "v115_anchor_residue.py",
     ],
   },
   {

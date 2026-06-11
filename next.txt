@@ -643,4 +643,34 @@ TORSIONS-NORMALFORM + DELTA = 1/2 SATZ (v114, Ledger GATE.UWALL.06) --
     => REST [P]: erzwingt die Bundle-Seite (Anker-Splitting
        O(-2)+O(-1)^2, Mehta-Seshadri) den d1 = 0-Schnitt -- oder
        waehlt sie den involutiven Zweig? delta selbst ist geschlossen.
+
+DER ANKER PINNT DAS RESIDUUM (v115, Ledger GATE.UWALL.07) -- die
+    v114-Zweigfrage ist beantwortet UND der v33-RH-Punkt hat jetzt eine
+    EXAKTE geschlossene Form:
+    (1) MU4-MITTEL-LEMMA [I, symbolisch]: sum_k U^k X U^{-k} = 4 diag(X)
+        -- mu4-Konjugationsmittelung IST die Diagonalprojektion =>
+        Exponenten im Unendlichen = 4 diag(A0) => Anker-Splitting
+        O(-2)+O(-1)^2 <=> diag A0 = (2,1,1)/4 = ANKER/|mu4|.
+        (v33s Diagonale war erzwungen, nicht gewaehlt.)
+    (2) DAS (8,0,5)/144-LEMMA [I]: Anker-Diagonale + Cusp-Spektrum
+        {0,1,2}/N_fam pinnen sum|off|^2 = 13/144; mit a13 = 0 loest
+        det = 0 EINDEUTIG zu (|a12|^2,|a23|^2) = (8,5)/144 --
+        Zaehler (rank E8, g_car), Nenner (|mu4| N_fam)^2,
+        Summe 13 = Delta_Q (der Quark-Nenner 117 = 9x13!).
+    (3) EXAKTE NORMALFORM [I]: A0* = [[1/2, sqrt2/6, 0],
+        [sqrt2/6, 1/4, sqrt5/12],[0, sqrt5/12, 1/4]] hat charpoly
+        lam(lam-1/3)(lam-2/3) EXAKT.
+    (4) A0* IST DIE RH-LOESUNG [N]: Grosskreis-Monodromie trivial bis
+        1.6e-10, prod M_k = 1, unitarisiert |diag M~0| = (0,1/2,1/2),
+        tr(M~0 U) = 1 -- der numerische v33/v40-Punkt ist
+        eich-aequivalent zur exakten Matrix.
+    (5) DER ANKER ERZWINGT d1 = 0 [N]: Multi-Seed-RH-Scan ueber die
+        anker-gepinnte Spektral-Mannigfaltigkeit landet bei JEDER
+        flachen Loesung auf DERSELBEN Eichbahn mit (0,1/2,1/2) --
+        zusammen mit v114: die ganze harmonische Diagonale ist
+        ANKER + TORSION erzwungen; delta = 1/2 braucht keine Auswahl.
+    => REST [P]: a13 = 0 + Eichbahn-Eindeutigkeit sind numerisch
+       (eine Komponente ueber alle Seeds); Promotion zu [I]/[L] via
+       Groebner auf den RH-Constraints = der verbleibende
+       U_point-Schritt.
 ================================================================================

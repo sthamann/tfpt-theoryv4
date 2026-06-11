@@ -280,6 +280,38 @@ $(0,\tfrac12,\tfrac12)$ to machine precision, while on the $\{1,i,-i\}$ branch $
 question; $\delta=\tfrac12$ itself is no longer the open item.
 \end{winbox}
 
+\begin{winbox}[The anchor pins the residue: an exact normal form for the $(U_{\mathrm{wall}})$ bundle \tI/\tN\ (\veri{v115\_anchor\_residue.py})]
+The v114 branch question is answered --- and the v33 \emph{numerical} Riemann--Hilbert point acquires an
+\emph{exact closed form}. \emph{(i) $\mu_4$-average lemma \tI:} $\sum_kU^kXU^{-k}=4\operatorname{diag}X$
+for any $X$ --- $\mu_4$ conjugation-averaging \emph{is} the diagonal projection, so the exponents at
+infinity are $4\operatorname{diag}A_0$ and the anchor splitting holds \emph{iff}
+$\operatorname{diag}A_0=(2,1,1)/4=a/|\mu_4|$: the residue diagonal \textbf{is} the anchor over $\mu_4$
+(v33's diagonal was forced, not chosen). \emph{(ii) The $(8,0,5)/144$ lemma \tI:} the anchor diagonal
+and the cusp spectrum $\{0,1,2\}/\Nfam$ pin $\sum|a_{ij}|^2=\tfrac{13}{144}$, and with $a_{13}=0$ the
+determinant condition solves \emph{uniquely} to
+\[
+  \boxed{\ \bigl(|a_{12}|^2,\,|a_{13}|^2,\,|a_{23}|^2\bigr)=\frac{(8,\,0,\,5)}{144}\ }
+  \quad\begin{aligned}
+  &\scriptstyle 8=\operatorname{rank}E_8,\ 5=\gcar,\\[-2pt]
+  &\scriptstyle 144=(|\mu_4|\Nfam)^2,\ 8+5=13=\Delta_Q
+  \end{aligned}
+\]
+--- the off-diagonal weights are compiler atoms, and the total $13$ is the \emph{same} $\Delta_Q$ that
+denominates $c_u/c_d=55/117=5\cdot11/(9\cdot13)$. \emph{(iii) Exact normal form \tI:}
+$A_0^\star=\bigl[\begin{smallmatrix}1/2&\sqrt2/6&0\\\sqrt2/6&1/4&\sqrt5/12\\0&\sqrt5/12&1/4\end{smallmatrix}\bigr]$
+has $\chi=\lambda(\lambda-\tfrac13)(\lambda-\tfrac23)$ \emph{exactly}. \emph{(iv) $A_0^\star$ is the RH
+solution \tN:} its big-circle monodromy is trivial to $10^{-10}$, $\prod M_k=\mathbf1$, and the
+unitarised holonomy has $|\operatorname{diag}\widetilde M_0|=(0,\tfrac12,\tfrac12)$,
+$\operatorname{tr}(\widetilde M_0U)=1$ --- the v33/v40 point is gauge-equivalent to $A_0^\star$ (the
+$a_{12},a_{23}$ phases are diagonal gauge). \emph{(v) The anchor forces the $d_1=0$ slice \tN:} a
+multi-seed RH scan over the anchor-pinned spectral manifold lands at \emph{every} flat solution on the
+\emph{same} gauge orbit with $|\operatorname{diag}\widetilde M_0|=(0,\tfrac12,\tfrac12)$ --- combined
+with v114, the whole harmonic diagonal is \textbf{anchor $+$ torsion forced}; $\delta=\tfrac12$ needs no
+selection. \emph{Residue \tP:} $a_{13}=0$ and the gauge-orbit uniqueness are numerical (one component
+across all seeds); promoting them to \tI/\tL\ via Gr\"obner on the RH constraints is the remaining
+$U_{\mathrm{point}}$ step.
+\end{winbox}
+
 \begin{keybox}[Exterior Leg Lemma --- the quark $u/d$ leg is a $\Lambda^2F$ area, not a scalar \tI/\tP]
 The v41 negative is a \emph{category error}, not a dead end. $u$ and $d$ share the hexagon-radial data
 $(r,w)=(1,1)$ ($L=7$ for both), and the $C_6$ resolvent $c(r,w)=|\mu_4|^w/(\tfrac54-\cos\tfrac{r\pi}3)$

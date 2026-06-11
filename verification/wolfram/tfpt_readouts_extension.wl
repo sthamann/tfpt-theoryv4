@@ -666,6 +666,25 @@ Module[{msym, usym, prod, vvec, tmat, mmat, lam, a1, a2, b1, b2, b3, p1, p2, vg,
     Simplify[ComplexExpand[Im[cond]] == 2 b3^2 - 2 b2^2, Assumptions -> {b1 > 0, b2 > 0, b3 > 0, p1 \[Element] Reals, p2 \[Element] Reals}]];
 ];
 
+(* ---- (v115) anchor residue ----
+   The [N] Riemann-Hilbert parts (scipy ODE monodromy of the Fuchsian
+   system, multi-seed uniqueness scan) are Python-only by convention;
+   the exact lemmas are mirrored here. *)
+Module[{xsym, usym, ssum, x, y, sol, astar, lam},
+  xsym = Array[Subscript[xx, #1, #2] &, {3, 3}];
+  usym = DiagonalMatrix[{1, I, -I}];
+  ssum = Sum[MatrixPower[usym, k] . xsym . MatrixPower[usym, 4 - k], {k, 0, 3}];
+  checkExact["v115 mu4-average lemma: sum_k U^k X U^{-k} = 4 diag(X) (anchor splitting <=> diag A0 = (2,1,1)/4 = a/|mu4|)",
+    Expand[ssum] === Expand[4 DiagonalMatrix[Diagonal[xsym]]]];
+  sol = Solve[{x + y == 13/144, 1/32 - y/2 - x/4 == 0}, {x, y}];
+  checkExact["v115 the (8,0,5)/144 lemma: unique solution (|a12|^2, |a23|^2) = (8/144, 5/144); 8+5 = 13 = Delta_Q, 144 = (|mu4| N_fam)^2",
+    sol === {{x -> 1/18, y -> 5/144}} && 8 + 5 == 13 && (4*3)^2 == 144 && 9*13 == 117];
+  astar = {{1/2, Sqrt[2]/6, 0}, {Sqrt[2]/6, 1/4, Sqrt[5]/12}, {0, Sqrt[5]/12, 1/4}};
+  lam = \[FormalLambda];
+  checkExact["v115 exact residue normal form: char poly of A0* = -lam(lam-1/3)(lam-2/3) exactly (eigenvalues = cusp weights)",
+    Simplify[CharacteristicPolynomial[astar, lam] + lam (lam - 1/3) (lam - 2/3)] === 0];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v114: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v115: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];
