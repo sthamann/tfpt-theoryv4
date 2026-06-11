@@ -232,6 +232,7 @@ const NODES: DagNode[] = [
       "v88_cp_phase_audit.py",
       "v114_torsion_delta.py",
       "v115_anchor_residue.py",
+      "v116_resonance_uniqueness.py",
     ],
   },
   {

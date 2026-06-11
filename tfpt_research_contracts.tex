@@ -312,6 +312,32 @@ across all seeds); promoting them to \tI/\tL\ via Gr\"obner on the RH constraint
 $U_{\mathrm{point}}$ step.
 \end{winbox}
 
+\begin{keybox}[The resonance theorem: $M_\infty=\mathbf1\iff a_{13}=0$ --- one gauge orbit \tI\ (\veri{v116\_resonance\_uniqueness.py})]
+The anticipated Gr\"obner promotion turned out to be a \emph{linear} computation. Writing the
+equivariant system at infinity as $dY/dw=-(1/w)(B_0+B_1w+\cdots)Y$ with
+$B_m=\sum_k i^{km}\,U^kA_0U^{-k}$, the \emph{twisted} $\mu_4$ averages collapse \tI:
+\[
+  B_0=4\operatorname{diag}A_0,\qquad
+  \boxed{\ B_1=4a_{12}E_{12}+4\overline{a_{13}}E_{31}\ }
+\]
+(only the eigenvalue-ratio $-i$ cells survive). The anchor exponents $\operatorname{diag}(2,1,1)$ have
+resonance gap $1$; the level-$1$ formal-gauge equation $(1-\operatorname{ad}R_0)H_1=R_1$ is singular
+exactly on the cells $\{(2,1),(3,1)\}$, where $B_1$ has entries $(0,\,4\overline{a_{13}})$; all higher
+levels are non-resonant and the formal monodromy is $e^{-2\pi i\operatorname{diag}(2,1,1)}=\mathbf1$.
+Hence \tI:
+\[
+  \boxed{\ M_\infty=\mathbf1\iff a_{13}=0\ }
+\]
+--- the transcendental Riemann--Hilbert condition collapses to \emph{one linear equation}.
+\emph{Uniqueness corollary \tI:} $a_{13}=0$ $+$ the $(8,0,5)/144$ moduli $+$ phases $=$ diagonal gauge
+$\Rightarrow$ the flat anchor locus is \textbf{exactly one gauge orbit}, the exact $A_0^\star$: within
+the $\mu_4$-equivariant anchor class the $(U_{\mathrm{wall}})$ bundle datum is \emph{algebraically
+unique}. \emph{Sharpness \tN:} $\|M_\infty-\mathbf1\|\sim8.5\,|a_{13}|$ ($0.17$ at $a_{13}=0.02$) vs
+$10^{-10}$ at $A_0^\star$. \emph{Honest scope \tP:} the equivariant ansatz is the established $D_4$
+selector input (v19/v30); the \emph{residue} side is now \tI, while the holonomy values (the harmonic
+diagonal $(0,\tfrac12,\tfrac12)$) remain \tN\ --- transcendental monodromy of an exact system.
+\end{keybox}
+
 \begin{keybox}[Exterior Leg Lemma --- the quark $u/d$ leg is a $\Lambda^2F$ area, not a scalar \tI/\tP]
 The v41 negative is a \emph{category error}, not a dead end. $u$ and $d$ share the hexagon-radial data
 $(r,w)=(1,1)$ ($L=7$ for both), and the $C_6$ resolvent $c(r,w)=|\mu_4|^w/(\tfrac54-\cos\tfrac{r\pi}3)$

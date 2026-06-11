@@ -685,6 +685,32 @@ Module[{xsym, usym, ssum, x, y, sol, astar, lam},
     Simplify[CharacteristicPolynomial[astar, lam] + lam (lam - 1/3) (lam - 2/3)] === 0];
 ];
 
+(* ---- (v116) resonance theorem ----
+   The [N] falsification control (scipy ODE) is Python-only by convention;
+   the exact statements are mirrored here. *)
+Module[{a12, a13, a23, a0, usym, bmat, b0, b1, b1expect, lams, sing, gauge, conjA, phi2, phi3},
+  a0 = {{1/2, a12, a13}, {Conjugate[a12], 1/4, a23}, {Conjugate[a13], Conjugate[a23], 1/4}};
+  usym = DiagonalMatrix[{1, I, -I}];
+  bmat[m_] := Sum[(I^k)^m MatrixPower[usym, k] . a0 . MatrixPower[usym, 4 - k], {k, 0, 3}];
+  b0 = Expand[bmat[0]]; b1 = Expand[bmat[1]];
+  b1expect = SparseArray[{{1, 2} -> 4 a12, {3, 1} -> 4 Conjugate[a13]}, {3, 3}] // Normal;
+  checkExact["v116 twisted-average lemma: B0 = 4 diag(A0), B1 = 4 a12 E_12 + 4 conj(a13) E_31 (only ratio -i cells survive)",
+    Simplify[b0 - 4 DiagonalMatrix[Diagonal[a0]]] === ConstantArray[0, {3, 3}] &&
+    Simplify[b1 - b1expect] === ConstantArray[0, {3, 3}]];
+  lams = {-2, -1, -1};
+  sing = Select[Tuples[Range[3], 2], lams[[#[[1]]]] - lams[[#[[2]]]] == 1 &];
+  checkExact["v116 resonance theorem: singular cells {(2,1),(3,1)}; obstruction (0, 4 conj(a13)); k >= 2 non-resonant => M_inf = 1 <=> a13 = 0",
+    sing === {{2, 1}, {3, 1}} && b1[[2, 1]] === 0 && Simplify[b1[[3, 1]] - 4 Conjugate[a13]] === 0 &&
+    AllTrue[Flatten[Table[k - (lams[[a]] - lams[[b]]), {k, 2, 7}, {a, 3}, {b, 3}]], # != 0 &]];
+  gauge = DiagonalMatrix[{1, Exp[I phi2], Exp[I phi3]}];
+  conjA = Expand[gauge . (a0 /. {a13 -> 0, Conjugate[a13] -> 0}) . Inverse[gauge]];
+  checkExact["v116 uniqueness corollary: diagonal gauge commutes with U, fixes the diagonal, rotates arg(a12), arg(a23) freely => one gauge orbit",
+    Simplify[gauge . usym - usym . gauge] === ConstantArray[0, {3, 3}] &&
+    Simplify[Diagonal[conjA] - Diagonal[a0]] === {0, 0, 0} &&
+    Simplify[conjA[[1, 2]] - a12 Exp[-I phi2]] === 0 &&
+    Simplify[conjA[[2, 3]] - a23 Exp[I (phi2 - phi3)]] === 0];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v115: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v116: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];
