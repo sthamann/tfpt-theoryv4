@@ -333,6 +333,174 @@ def fig_nariai_entropy():
     plt.close(fig)
 
 
+def fig_cover_twins():
+    """The flavor double cover and the SdS mass-line cover, side by side."""
+    fig, (axf, axg) = plt.subplots(1, 2, figsize=(8.8, 3.7))
+    # flavor: y^2 = (3x+2)(3x+5)
+    xs = np.linspace(-2.6, 0.4, 700)
+    det = (3 * xs + 2) * (3 * xs + 5)
+    pos = det >= 0
+    for s in (+1, -1):
+        axf.plot(np.where(pos, xs, np.nan), s * np.sqrt(np.abs(det)),
+                 color=C["blue"], lw=1.6)
+        axf.plot(np.where(~pos, xs, np.nan), s * np.sqrt(np.abs(det)),
+                 color=C["gray"], lw=1.1, ls=":")
+    for bp, lab in ((-2 / 3, "Koide $-\\frac{2}{3}$"),
+                    (-5 / 3, "carrier $-\\frac{5}{3}$")):
+        axf.scatter([bp], [0], s=70, color=C["red"], zorder=4,
+                    edgecolor="k", lw=0.5)
+        axf.annotate(lab, (bp, 0), textcoords="offset points",
+                     xytext=(-12, -16), fontsize=9, color=C["red"])
+    axf.axhline(0, color="k", lw=0.4, alpha=0.4)
+    axf.set_title("flavor: $y^2=\\det B_{K+xQ}=(3x{+}2)(3x{+}5)$\n"
+                  "two sheets, branch points $-\\frac{2}{3},-\\frac{5}{3}$",
+                  fontsize=9.5)
+    axf.set_xlabel("pencil coordinate $x$")
+    axf.set_ylabel("$y$  (dotted: imaginary cut)")
+    axf.grid(alpha=0.25)
+    # gravity: w^2 = (1-3m)(1+3m)
+    ms = np.linspace(-0.55, 0.55, 700)
+    d2 = (1 - 3 * ms) * (1 + 3 * ms)
+    pos2 = d2 >= 0
+    for s in (+1, -1):
+        axg.plot(np.where(pos2, ms, np.nan), s * np.sqrt(np.abs(d2)),
+                 color=C["blue"], lw=1.6)
+        axg.plot(np.where(~pos2, ms, np.nan), s * np.sqrt(np.abs(d2)),
+                 color=C["gray"], lw=1.1, ls=":")
+    for bp, lab in ((1 / 3, "Nariai $+\\frac{1}{3}$"),
+                    (-1 / 3, "$-\\frac{1}{3}$")):
+        axg.scatter([bp], [0], s=70, color=C["red"], zorder=4,
+                    edgecolor="k", lw=0.5)
+        axg.annotate(lab, (bp, 0), textcoords="offset points",
+                     xytext=(-12, -16), fontsize=9, color=C["red"])
+    axg.axhline(0, color="k", lw=0.4, alpha=0.4)
+    axg.set_title("gravity: $w^2\\propto\\mathrm{disc}=(1{-}3m)(1{+}3m)$\n"
+                  "branch points $\\pm\\frac{1}{3}=\\pm 1/N_{\\rm fam}$",
+                  fontsize=9.5)
+    axg.set_xlabel("dimensionless mass $m=M\\sqrt{\\Lambda}$")
+    axg.set_ylabel("$w$")
+    axg.grid(alpha=0.25)
+    fig.suptitle("Twin double covers: the same split $N_{\\rm fam}$-linear "
+                 "form in flavor and in classical gravity", fontsize=10.5)
+    fig.tight_layout(rect=(0, 0, 1, 0.92))
+    fig.savefig(os.path.join(OUT, "cover_twins.pdf"))
+    plt.close(fig)
+
+
+def fig_orientation():
+    """The orientation theorem: anchor = stationary repeller, both sectors."""
+    fig, (axf, axg) = plt.subplots(1, 2, figsize=(8.8, 3.7))
+    Delta = 6 * np.log(1.5)
+    qs = np.linspace(0.8, 6.2, 500)
+    V = -(Delta / 3) * (qs**3 / 3 - 3.5 * qs**2 + 10 * qs)
+    V = V - V.min()
+    axf.plot(qs, V, color=C["blue"], lw=1.8)
+    q2 = -(Delta / 3) * (2**3 / 3 - 3.5 * 4 + 20)
+    q5 = -(Delta / 3) * (5**3 / 3 - 3.5 * 25 + 50)
+    Vmin = (-(Delta / 3) * (qs**3 / 3 - 3.5 * qs**2 + 10 * qs)).min()
+    axf.scatter([2], [q2 - Vmin], s=80, color=C["green"], zorder=4,
+                edgecolor="k", lw=0.5)
+    axf.scatter([5], [q5 - Vmin], s=80, color=C["red"], zorder=4,
+                edgecolor="k", lw=0.5)
+    axf.annotate("Koide $q{=}2$ (attractor)\n$V''=+\\Delta$",
+                 (2, q2 - Vmin), textcoords="offset points",
+                 xytext=(-28, 30), fontsize=9, color=C["green"])
+    axf.annotate("carrier $q{=}5$ (repeller)\n$V''=-\\Delta$",
+                 (5, q5 - Vmin), textcoords="offset points",
+                 xytext=(-10, -34), fontsize=9, color=C["red"])
+    axf.annotate("", xy=(2.6, q2 - Vmin + 0.35), xytext=(4.3, q2 - Vmin + 1.55),
+                 arrowprops=dict(arrowstyle="->", color=C["gray"], lw=1.4))
+    axf.text(2.9, q2 - Vmin + 1.35, "relaxation", fontsize=8.5,
+             color=C["gray"])
+    axf.set_xlabel("branch coordinate $q$")
+    axf.set_ylabel("$V(q)$")
+    axf.set_title("flavor: gradient flow in a cubic potential\n"
+                  "stationary points $=$ the two branch points", fontsize=9.5)
+    axf.grid(alpha=0.25)
+
+    xs = np.linspace(0, 1, 400)
+    S = (xs**2 + 1) / (xs**2 + xs + 1)
+    axg.plot(xs, S, color=C["blue"], lw=1.8)
+    axg.scatter([1], [2 / 3], s=80, color=C["red"], zorder=4,
+                edgecolor="k", lw=0.5)
+    axg.scatter([0], [1], s=80, color=C["green"], zorder=4,
+                edgecolor="k", lw=0.5)
+    axg.annotate("Nariai $x{=}1$ (anchor):\nstationary, $S''=\\frac{2}{9}"
+                 "=|\\mathbb{Z}_2|/N_{\\rm fam}^2$",
+                 (1, 2 / 3), textcoords="offset points", xytext=(-165, 36),
+                 fontsize=9, color=C["red"])
+    axg.annotate("pure dS (democratic):\nentropy maximum", (0, 1),
+                 textcoords="offset points", xytext=(8, -20), fontsize=9,
+                 color=C["green"])
+    axg.annotate("", xy=(0.25, (0.25**2 + 1) / (0.25**2 + 1.25) + 0.012),
+                 xytext=(0.7, (0.7**2 + 1) / (0.7**2 + 1.7) + 0.012),
+                 arrowprops=dict(arrowstyle="->", color=C["gray"], lw=1.4))
+    axg.text(0.42, 0.93, "evaporation\n(entropy ascent)", fontsize=8.5,
+             color=C["gray"])
+    axg.set_xlabel("sheet ratio $x=r_b/r_c$")
+    axg.set_ylabel("$S_{\\rm tot}/S_{dS}$")
+    axg.set_title("gravity: entropy ascent away from the anchor\n"
+                  "stationary point $=$ Nariai", fontsize=9.5)
+    axg.grid(alpha=0.25)
+    fig.suptitle("One orientation: the anchor is the stationary repeller in "
+                 "both sectors", fontsize=10.5)
+    fig.tight_layout(rect=(0, 0, 1, 0.92))
+    fig.savefig(os.path.join(OUT, "orientation.pdf"))
+    plt.close(fig)
+
+
+def fig_seam_units():
+    """Black-hole mechanics in seam units: one graphic table."""
+    rows = [
+        ("Einstein equations", "$G_{\\mu\\nu}=8\\pi\\,T_{\\mu\\nu}$",
+         "$G_{\\mu\\nu}=T_{\\mu\\nu}/c_3$", "$c_3=1/(8\\pi)$ (P1)"),
+        ("first law", "$dM=\\frac{\\kappa}{8\\pi}dA$",
+         "$dM=c_3\\,\\kappa\\,dA$", "seam constant"),
+        ("Smarr (Schw.)", "$M=\\frac{\\kappa A}{4\\pi}$",
+         "$M=2c_3\\,\\kappa A$", ""),
+        ("temperature", "$T_H=\\frac{\\kappa}{2\\pi}$",
+         "$T_H=4c_3\\,\\kappa$", "$1/(2\\pi)=4c_3$"),
+        ("entropy", "$S=\\frac{A}{4}$", "$S=2\\pi c_3 A$",
+         "$1/4=1/|\\mu_4|$"),
+        ("Bekenstein bound", "$S\\leq 2\\pi E R$", "$S\\leq ER/(4c_3)$", ""),
+        ("Hawking power", "$P=\\frac{1}{15360\\,\\pi M^2}$",
+         "$P=\\frac{c_3}{1920\\,M^2}$", "$1920=|W(D_5)|$"),
+        ("lifetime", "$\\tau=5120\\,\\pi M^3$",
+         "$\\tau=128\\,g_{\\rm car}M^3/c_3$",
+         "$128=2^7$, $7=$ scalaron"),
+        ("Kerr extremal", "$A_{\\rm ext}=8\\pi M^2$",
+         "$A_{\\rm ext}=M^2/c_3$",
+         "$A_{\\rm ext}/A_{\\rm Schw}=1/|\\mathbb{Z}_2|$"),
+        ("area quantum (Hod)", "$\\Delta A=4\\ln 3$",
+         "$\\Delta A=\\ln(N_{\\rm fam}^4)$",
+         "$81=$ disc of the cover"),
+        ("Nariai bound", "$S_N=\\frac{2\\pi}{\\Lambda}$",
+         "$S_N=\\frac{2}{3}S_{dS}$",
+         "$2/3=|\\mathbb{Z}_2|/N_{\\rm fam}$ (Koide)"),
+    ]
+    fig, ax = plt.subplots(figsize=(8.6, 0.46 * len(rows) + 1.1))
+    ax.axis("off")
+    cols = ["quantity", "standard form", "seam form", "compiler atom"]
+    xpos = [0.01, 0.24, 0.52, 0.78]
+    ax.text(0.5, 1.0, "Black-hole mechanics in seam units "
+            "($c_3=1/(8\\pi)$): every coefficient is a compiler atom",
+            ha="center", va="top", fontsize=11, fontweight="bold",
+            transform=ax.transAxes)
+    for j, cname in enumerate(cols):
+        ax.text(xpos[j], 0.92, cname, fontsize=9, fontweight="bold",
+                color=C["blue"], transform=ax.transAxes)
+    for i, row in enumerate(rows):
+        y = 0.86 - 0.082 * i
+        if i % 2 == 0:
+            ax.axhspan(y - 0.030, y + 0.045, xmin=0.0, xmax=1.0,
+                       color=C["blue"], alpha=0.05)
+        for j, cell in enumerate(row):
+            ax.text(xpos[j], y, cell, fontsize=8.6, transform=ax.transAxes)
+    fig.tight_layout()
+    fig.savefig(os.path.join(OUT, "seam_units.pdf"))
+    plt.close(fig)
+
+
 if __name__ == "__main__":
     fig_alpha_ablation()
     fig_mass_ladder()
@@ -342,4 +510,7 @@ if __name__ == "__main__":
     fig_attractor()
     fig_sds_cover()
     fig_nariai_entropy()
+    fig_cover_twins()
+    fig_orientation()
+    fig_seam_units()
     print("figures written to", os.path.normpath(OUT))

@@ -257,6 +257,58 @@ $SU(4)_1$ weights $[\tfrac38,\tfrac12]$. \veri{v101\_horizon\_anchor.py}}
 \label{fig:nariai}
 \end{figure}
 
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.94\linewidth]{figures/cover_twins.pdf}
+\caption{Twin double covers: the flavor anchor-block cover $y^2=(3x{+}2)(3x{+}5)$ (Paper~2) and the SdS
+mass-line cover $w^2\propto(1{-}3m)(1{+}3m)$ share the split $N_{\mathrm{fam}}$-linear form with rational
+branch points at spine-over-family values. \veri{v101\_horizon\_anchor.py}}
+\label{fig:covertwins}
+\end{figure}
+
+\begin{winbox}[One orientation: the anchor is the \emph{stationary repeller} in both sectors \tI/\tP\ (\veri{v102\_seam\_orientation.py})]
+The evaporation direction of the temperature lemma upgrades to exact variational structure on both
+one-dimensional moduli lines (Fig.~\ref{fig:orientation}). \textbf{Flavor:} the canonical relaxation
+$\dot q=(\Delta/N_{\mathrm{fam}})(q{-}2)(q{-}5)$ is the \emph{gradient flow} of the cubic potential
+\[
+  V(q)=-\frac{\Delta}{N_{\mathrm{fam}}}\Bigl(\frac{q^3}{3}-\frac{7}{2}q^2+10q\Bigr),\qquad
+  \boxed{\ V''(2)=+\Delta,\quad V''(5)=-\Delta\ }
+\]
+--- the critical points are exactly the two branch points, the stationary curvatures are $\pm$the
+transfer gap, the inflection sits at $q=\tfrac72=$ scalaron$/2$, and the Lyapunov rate is constant:
+$d(-\ln\rho)/dt=\Delta$ exactly. \textbf{Gravity:} the SdS entropy functional has
+\[
+  \frac{d}{dx}\frac{S_{\mathrm{tot}}}{S_{dS}}=\frac{(x-1)(x+1)}{\Phi_3(x)^2},\qquad
+  \boxed{\ \Bigl(\frac{S_{\mathrm{tot}}}{S_{dS}}\Bigr)''(1)=\frac29=\frac{|\Z_2|}{N_{\mathrm{fam}}^2}=\frac23\cdot\frac13\ }
+\]
+--- the Nariai/anchor point is the \emph{unique} physical stationary point, its curvature is a grammar
+constant ($=$ the product of the two Nariai entropy fractions), and the temperature lemma makes the
+evaporation an entropy \emph{ascent} away from it. \textbf{Orientation theorem \tI:} in both sectors the
+anchor-type configuration is a stationary point of the natural functional and the dynamics flows away
+from it, with grammar-constant stationary curvatures. \emph{Honest disanalogies (recorded):} the flavor
+attractor is itself a branch point while the gravity attractor is the smooth endpoint; the flavor
+functional is the potential of a \tP-typed relaxation while the gravity functional is the
+Bekenstein--Hawking entropy --- ``one variational principle of the seam'' stays a \emph{reading} \tP, and
+no open gate is touched.
+\end{winbox}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.94\linewidth]{figures/orientation.pdf}
+\caption{The orientation theorem: the anchor configuration is the stationary repeller of the natural
+functional in both sectors --- flavor (cubic potential, curvatures $\pm\Delta$) and gravity (SdS entropy,
+curvature $2/9=|\Z_2|/N_{\mathrm{fam}}^2$). \veri{v102\_seam\_orientation.py}}
+\label{fig:orientation}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\linewidth]{figures/seam_units.pdf}
+\caption{Black-hole mechanics in seam units: every classical coefficient is a compiler atom.
+\veri{v101\_horizon\_anchor.py}}
+\label{fig:seamunits}
+\end{figure}
+
 % =====================================================================
 \section{Turnaround radius, gravitational waves, light}
 % =====================================================================

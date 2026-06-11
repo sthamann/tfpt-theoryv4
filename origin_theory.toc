@@ -4,9 +4,9 @@
 \contentsline {section}{\numberline {3}A cyclic element \emph {inside} the hull: the order-$30$ Coxeter rotation}{3}{section.3}%
 \contentsline {section}{\numberline {4}The unique attractor: a gapped transport selects ONE fixed point}{4}{section.4}%
 \contentsline {section}{\numberline {5}One $\alpha ^{-1}$ for electromagnetism, the cosmic horizon and $\Lambda $}{4}{section.5}%
-\contentsline {section}{\numberline {6}Interpretation {\small \textcolor {tfgold}{\textbf {[P]}}}: the self-reproducing cosmic cycle}{5}{section.6}%
+\contentsline {section}{\numberline {6}Interpretation {\small \textcolor {tfgold}{\textbf {[P]}}}: the self-reproducing cosmic cycle}{6}{section.6}%
 \contentsline {section}{\numberline {7}Falsifiers}{7}{section.7}%
 \contentsline {section}{\numberline {8}The seam and the horizon: the precise statement}{8}{section.8}%
 \contentsline {section}{\numberline {9}Consequences, and the whole story {\small \textcolor {tfgold}{\textbf {[P]}}}}{12}{section.9}%
 \contentsline {section}{\numberline {10}A closure program (next phase) {\small \textcolor {tfred}{\textbf {[A]}}}}{13}{section.10}%
-\contentsline {section}{\numberline {11}Honest status}{15}{section.11}%
+\contentsline {section}{\numberline {11}Honest status}{16}{section.11}%

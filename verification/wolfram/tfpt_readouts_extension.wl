@@ -371,6 +371,25 @@ checkExact["v101 seam-unit mechanics: 1/(8Pi) = c3; Smarr 1/(4Pi) = 2c3; Bekenst
   (Simplify[5120 Pi - 128*5/c3] === 0) &&
   (Simplify[8 Pi - 1/c3] === 0) && (Simplify[4 Log[3] - Log[81]] === 0)];
 
+(* ---- (v102) seam orientation: anchor = stationary repeller, both sectors ---- *)
+DeltaG = 6 Log[3/2];
+Vq = Integrate[-(DeltaG/3) (q - 2) (q - 5), q];
+checkExact["v102 flavor gradient flow: V' = -(Delta/3)(q-2)(q-5), critical points = the branch points {2,5}",
+  (Simplify[D[Vq, q] + (DeltaG/3) (q - 2) (q - 5)] === 0) &&
+  (Sort[q /. Solve[D[Vq, q] == 0, q]] == {2, 5})];
+checkExact["v102 stationary curvatures = +-the gap: V''(2) = +Delta, V''(5) = -Delta; inflection at q = 7/2",
+  (Simplify[(D[Vq, {q, 2}] /. q -> 2) - DeltaG] === 0) &&
+  (Simplify[(D[Vq, {q, 2}] /. q -> 5) + DeltaG] === 0) &&
+  ((q /. Solve[D[Vq, {q, 2}] == 0, q]) == {7/2})];
+checkExact["v102 Lyapunov rate: d(-ln rho)/dt = Delta exactly along the flow",
+  Simplify[D[-Log[(q - 2)/(5 - q)], q] (DeltaG/3) (q - 2) (q - 5) - DeltaG,
+    Assumptions -> 2 < q < 5] === 0];
+SgX = (xx^2 + 1)/(xx^2 + xx + 1);
+checkExact["v102 gravity: dS/dx = (x-1)(x+1)/Phi_3^2 -- Nariai is the unique physical stationary point",
+  Simplify[D[SgX, xx] - (xx - 1) (xx + 1)/(xx^2 + xx + 1)^2] === 0];
+checkExact["v102 stationary curvature S''(1) = 2/9 = |Z2|/N_fam^2 = (2/3)(1/3)",
+  (Simplify[D[SgX, {xx, 2}] /. xx -> 1] == 2/9) && (2/9 == (2/3) (1/3))];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v101: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v102: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

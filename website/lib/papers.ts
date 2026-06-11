@@ -714,6 +714,14 @@ export const papers: Paper[] = [
           "\\frac{S_{\\mathrm{tot}}}{S_{dS}} = \\frac{x^2+1}{x^2+x+1}, \\qquad \\mathrm{disc} \\propto (1-3m)(1+3m)",
         ],
       },
+      {
+        title: "One orientation: the anchor is the stationary repeller (both sectors)",
+        body: "The flavor relaxation is the gradient flow of a cubic potential whose critical points are exactly the two branch points, with stationary curvatures ±Δ (the transfer gap) and a constant Lyapunov rate Δ. The SdS entropy functional has the Nariai/anchor point as its unique stationary point with curvature 2/9 = |ℤ₂|/N_fam², and evaporation ascends the entropy away from it. Both sectors flow away from an anchor-stationary configuration with grammar-constant curvatures; reading this as one variational principle of the seam stays [P], with the disanalogies recorded honestly.",
+        formulas: [
+          "V''(q{=}2) = +\\Delta, \\quad V''(q{=}5) = -\\Delta, \\qquad \\frac{d(-\\ln\\rho)}{dt} = \\Delta",
+          "\\Bigl(\\frac{S_{\\mathrm{tot}}}{S_{dS}}\\Bigr)''(x{=}1) = \\frac{2}{9} = \\frac{|\\mathbb{Z}_2|}{N_{\\mathrm{fam}}^2}",
+        ],
+      },
     ],
     keyFormulas: [
       {

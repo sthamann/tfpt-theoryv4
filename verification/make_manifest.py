@@ -54,7 +54,9 @@ TEX = [
 FIG = ["figures/action_tower.pdf", "figures/alpha_ablation.pdf",
        "figures/mass_ladder.pdf", "figures/status_heatmap.pdf",
        "figures/coxeter_circle.pdf", "figures/attractor.pdf",
-       "figures/sds_cover.pdf", "figures/nariai_entropy.pdf"]
+       "figures/sds_cover.pdf", "figures/nariai_entropy.pdf",
+       "figures/cover_twins.pdf", "figures/orientation.pdf",
+       "figures/seam_units.pdf"]
 
 
 def collect():

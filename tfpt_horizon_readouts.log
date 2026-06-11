@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  11 JUN 2026 14:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  11 JUN 2026 15:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1176,20 +1176,50 @@ Package pdftex.def Info: figures/nariai_entropy.pdf  used on input line 253.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+<figures/cover_twins.pdf, id=128, 635.97598pt x 267.39899pt>
+File: figures/cover_twins.pdf Graphic file (type pdf)
+<use figures/cover_twins.pdf>
+Package pdftex.def Info: figures/cover_twins.pdf  used on input line 262.
+(pdftex.def)             Requested size: 438.62866pt x 184.42389pt.
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 271.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
 [4]
+<figures/orientation.pdf, id=141, 635.97598pt x 267.39899pt>
+File: figures/orientation.pdf Graphic file (type pdf)
+<use figures/orientation.pdf>
+Package pdftex.def Info: figures/orientation.pdf  used on input line 297.
+(pdftex.def)             Requested size: 438.62866pt x 184.42389pt.
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 280.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figures/seam_units.pdf, id=142, 621.52202pt x 445.18318pt>
+File: figures/seam_units.pdf Graphic file (type pdf)
+<use figures/seam_units.pdf>
+Package pdftex.def Info: figures/seam_units.pdf  used on input line 306.
+(pdftex.def)             Requested size: 419.95967pt x 300.81174pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 323.
 
 
 
 [5 <./figures/sds_cover.pdf>]
 
-[6 <./figures/nariai_entropy.pdf>] (./tfpt_horizon_readouts.aux)
+LaTeX Font Warning: Command \small invalid in math mode on input line 332.
+
+
+
+[6 <./figures/nariai_entropy.pdf> <./figures/cover_twins.pdf>]
+
+[7 <./figures/orientation.pdf>]
+
+[8 <./figures/seam_units.pdf>] (./tfpt_horizon_readouts.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1198,40 +1228,41 @@ Package rerunfilecheck Info: File `tfpt_horizon_readouts.out' has not changed.
 (rerunfilecheck)             Checksum: B4F047632898351A3B2E38CB6FDE3B2C;1955.
  ) 
 Here is how much of TeX's memory you used:
- 32151 strings out of 473190
- 636091 string characters out of 5715801
- 1105436 words of memory out of 5000000
- 54602 multiletter control sequences out of 15000+600000
- 675169 words of font info for 222 fonts, out of 8000000 for 9000
+ 32204 strings out of 473190
+ 637322 string characters out of 5715801
+ 1108123 words of memory out of 5000000
+ 54637 multiletter control sequences out of 15000+600000
+ 680131 words of font info for 229 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 116i,12n,121p,1018b,949s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 116i,12n,121p,1018b,1047s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/lo
 cal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texliv
 e/2025/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive/2025/texm
-f-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2025/texmf-dist/fon
-ts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/p
-ublic/lm/lmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/l
-mmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></
-usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/t
-exlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025
-/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist
-/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1
-/public/lm/lmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/l
-mr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr9.pfb></us
-r/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/te
-xlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2025
-/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2025/texmf-dis
-t/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/typ
-e1/public/lm/lmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/l
-m/lmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtk10.pf
-b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/lo
-cal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/local/texlive
-/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/tex
-live/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tfpt_horizon_readouts.pdf (6 pages, 493746 bytes).
+f-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/local/texlive/2025/texmf-dist/fo
+nts/type1/public/lm/lmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/
+public/lm/lmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/
+lmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi6.pfb>
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local
+/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/20
+25/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-di
+st/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/ty
+pe1/public/lm/lmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/l
+m/lmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb><
+/usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/t
+exlive/2025/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/202
+5/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2025/texmf-di
+st/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/t
+ype1/public/lm/lmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public
+/lm/lmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.p
+fb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/l
+ocal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texli
+ve/2025/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/local/texlive/2025/tex
+mf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025
+/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on tfpt_horizon_readouts.pdf (8 pages, 591802 bytes).
 PDF statistics:
- 421 PDF objects out of 1000 (max. 8388607)
- 213 compressed objects within 3 object streams
- 23 named destinations out of 1000 (max. 500000)
- 67295 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 704 PDF objects out of 1000 (max. 8388607)
+ 276 compressed objects within 3 object streams
+ 28 named destinations out of 1000 (max. 500000)
+ 69358 words of extra memory for PDF output out of 74296 (max. 10000000)
 

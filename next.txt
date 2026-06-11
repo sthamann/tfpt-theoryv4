@@ -346,6 +346,22 @@ den Atomen; die Bulk-Lesart (zwei Glue-Chiralitaeten = zwei Horizont-Blaetter,
 Ramifikation = Nariai) bleibt [P]. Keine neue Messflaeche (M_N ~ 1e22 M_sun).
 NEUE LEITFRAGE daraus (fuer G_metric/P2-Erzaehlung): "Anker = Repeller,
 demokratisch = Attraktor" gilt jetzt in BEIDEN Sektoren (Flavor-Relaxation und
-BH-Verdampfung) -- Kandidat fuer ein gemeinsames Variationsprinzip des Seams;
-noch keine Rechnung, nur Richtung.
+BH-Verdampfung) -- Kandidat fuer ein gemeinsames Variationsprinzip des Seams.
+
+GERECHNET (v102, Ledger HOR.ORIENT.01; Figuren orientation.pdf, cover_twins.pdf,
+seam_units.pdf): Die Leitfrage hat jetzt exakte Variationsstruktur auf beiden
+Seiten. FLAVOR: dq/dt = (Delta/N_fam)(q-2)(q-5) ist GRADIENTENFLUSS des
+kubischen Potentials V(q) = -(Delta/N_fam)(q^3/3 - 7q^2/2 + 10q); kritische
+Punkte = exakt die zwei Branch-Punkte; stationaere Kruemmungen = +-Delta
+(der Gap!); Inflexion bei q = 7/2 = Scalaron/2; Lyapunov-Rate d(-ln rho)/dt =
+Delta exakt konstant. GRAVITATION: d(S_tot/S_dS)/dx = (x-1)(x+1)/Phi_3(x)^2 --
+Nariai/Anker ist der EINDEUTIGE stationaere Punkt des Entropie-Funktionals,
+Kruemmung 2/9 = |Z2|/N_fam^2 = (2/3)(1/3); Verdampfung = Entropie-AUFSTIEG weg
+vom Anker. ORIENTIERUNGSSATZ [I]: beide Sektoren fliessen von einer Anker-
+stationaeren Konfiguration weg, mit Grammatik-Kruemmungen. EHRLICH: Flavor-
+Attraktor = Branch-Punkt vs. Gravitations-Attraktor = glatter Endpunkt;
+"EIN Variationsprinzip des Seams" bleibt Lesart [P]; kein Gate geschlossen.
+NAECHSTE SCHAERFUNG (offen): gibt es eine kanonische Koordinate, in der BEIDE
+Funktionale dieselbe Normalform haben (z.B. Kruemmungs-Matching Delta <->
+|Z2|/N_fam^2)? Erst rechnen, dann typisieren.
 ================================================================================

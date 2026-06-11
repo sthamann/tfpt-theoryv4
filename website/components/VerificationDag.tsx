@@ -271,6 +271,7 @@ const NODES: DagNode[] = [
       "v86_nstar_reheating.py",
       "v87_bulk_uniqueness_reduction.py",
       "v101_horizon_anchor.py",
+      "v102_seam_orientation.py",
     ],
   },
 
