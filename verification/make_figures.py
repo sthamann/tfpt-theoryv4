@@ -501,6 +501,45 @@ def fig_seam_units():
     plt.close(fig)
 
 
+def fig_trisection():
+    """The trisection normal form: mass and entropy as pure (co)sines."""
+    psi = np.linspace(0, np.pi / 2, 400)
+    mm = np.cos(psi) / 3
+    sg = 4 / 3 - (2 / 3) * np.cos(2 * psi / 3)
+    fig, ax = plt.subplots(figsize=(7.4, 3.8))
+    ax.plot(psi, mm, color=C["gold"], lw=1.8,
+            label="mass $m=\\cos(\\psi)/N_{\\rm fam}$")
+    ax.plot(psi, sg, color=C["blue"], lw=2.0,
+            label="entropy $S_{\\rm tot}/S_{dS}="
+                  "\\frac{4}{3}-\\frac{2}{3}\\cos(2\\psi/3)$")
+    ax.axhline(2 / 3, color=C["red"], lw=0.9, ls=":",
+               label="Nariai bound $2/3$")
+    ax.scatter([0, 0], [1 / 3, 2 / 3], s=70,
+               color=[C["gold"], C["red"]], zorder=4, edgecolor="k", lw=0.5)
+    ax.scatter([np.pi / 2, np.pi / 2], [0, 1], s=70,
+               color=[C["gold"], C["green"]], zorder=4,
+               edgecolor="k", lw=0.5)
+    ax.annotate("anchor ($\\psi{=}0$):\n$m=\\frac{1}{3}$, "
+                "$\\sigma''=(\\frac{2}{3})^3$",
+                (0, 2 / 3), textcoords="offset points", xytext=(8, 26),
+                fontsize=9, color=C["red"])
+    ax.annotate("pure dS ($\\psi{=}\\pi/2$)", (np.pi / 2, 1),
+                textcoords="offset points", xytext=(-104, 6),
+                fontsize=9, color=C["green"])
+    ax.set_xlabel("canonical trisection angle $\\psi$  "
+                  "($\\cos(3\\theta)=-3m$, centered)")
+    ax.set_ylabel("dimensionless value")
+    ax.set_title("The trisection normal form: one cosine of glue atoms "
+                 "(mean $\\frac{|\\mu_4|}{N_{\\rm fam}}$, amplitude & "
+                 "frequency $\\frac{|\\mathbb{Z}_2|}{N_{\\rm fam}}$)",
+                 fontsize=10)
+    ax.legend(fontsize=8, loc="center right")
+    ax.grid(alpha=0.25)
+    fig.tight_layout()
+    fig.savefig(os.path.join(OUT, "trisection.pdf"))
+    plt.close(fig)
+
+
 if __name__ == "__main__":
     fig_alpha_ablation()
     fig_mass_ladder()
@@ -513,4 +552,5 @@ if __name__ == "__main__":
     fig_cover_twins()
     fig_orientation()
     fig_seam_units()
+    fig_trisection()
     print("figures written to", os.path.normpath(OUT))

@@ -390,6 +390,34 @@ checkExact["v102 gravity: dS/dx = (x-1)(x+1)/Phi_3^2 -- Nariai is the unique phy
 checkExact["v102 stationary curvature S''(1) = 2/9 = |Z2|/N_fam^2 = (2/3)(1/3)",
   (Simplify[D[SgX, {xx, 2}] /. xx -> 1] == 2/9) && (2/9 == (2/3) (1/3))];
 
+(* ---- (v103) trisection normal form ---- *)
+checkExact["v103 trisection: r = 2 cos(theta) => r^3 - 3r = 2 cos(3 theta) exactly",
+  Simplify[(2 Cos[th])^3 - 3 (2 Cos[th]) - 2 Cos[3 th]] === 0];
+rcT = 2 Cos[(ps + Pi)/3]; rbT = 2 Cos[(ps - Pi)/3]; r3T = 2 Cos[(ps + 3 Pi)/3];
+checkExact["v103 centered angle: m = cos(psi)/3; roots sum 0, e2 = -3; Nariai roots (1,1,-2) at psi = 0",
+  (Simplify[-Cos[ps + Pi]/3 - Cos[ps]/3] === 0) &&
+  (Simplify[rcT + rbT + r3T] === 0) &&
+  (Simplify[rcT rbT + rcT r3T + rbT r3T + 3] === 0) &&
+  (Simplify[{rcT, rbT, r3T} /. ps -> 0] == {1, 1, -2})];
+sigT = Simplify[(rbT^2 + rcT^2)/3];
+checkExact["v103 NORMAL FORM: sigma(psi) = 4/3 - (2/3) cos(2 psi/3); sigma(0) = 2/3, sigma(pi/2) = 1",
+  (Simplify[sigT - (4/3 - (2/3) Cos[2 ps/3])] === 0) &&
+  (Simplify[sigT /. ps -> 0] == 2/3) && (Simplify[sigT /. ps -> Pi/2] == 1)];
+checkExact["v103 canonical curvature sigma''(0) = 8/27 = (2/3)^3 (the Koide constant to the family power)",
+  (Simplify[D[sigT, {ps, 2}] /. ps -> 0] == 8/27) && ((2/3)^3 == 8/27)];
+checkExact["v103 invariant base slope: dsigma/dm = -(4/3) sin(2 psi/3)/sin(psi), limit -8/9 = -rank(E8)/N_fam^2",
+  (Simplify[D[sigT, ps]/D[Cos[ps]/3, ps] + (4/3) Sin[2 ps/3]/Sin[ps]] === 0) &&
+  (Limit[D[sigT, ps]/D[Cos[ps]/3, ps], ps -> 0] == -8/9)];
+checkExact["v103 x-coordinate cross-check: m(x) deck-invariant, m''(1) = -1/4, sigma''(1)/m''(1) = -8/9",
+  Module[{mxw = Sqrt[3]/2 xx (1 + xx)/(xx^2 + xx + 1)^(3/2),
+          sxw = (xx^2 + 1)/(xx^2 + xx + 1)},
+   (Simplify[(mxw /. xx -> 1/xx) - mxw, Assumptions -> xx > 0] === 0) &&
+   (Simplify[D[mxw, xx] /. xx -> 1] == 0) &&
+   (Simplify[D[mxw, {xx, 2}] /. xx -> 1] == -1/4) &&
+   (Simplify[(D[sxw, {xx, 2}] /. xx -> 1)/(D[mxw, {xx, 2}] /. xx -> 1)] == -8/9)]];
+checkExact["v103 bridge: (2/3)^6 = ((2/3)^3)^2 -- same base, exponent ratio 2 = |Z2|",
+  (2/3)^6 == ((2/3)^3)^2];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v102: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v103: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

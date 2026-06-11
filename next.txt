@@ -364,4 +364,28 @@ Attraktor = Branch-Punkt vs. Gravitations-Attraktor = glatter Endpunkt;
 NAECHSTE SCHAERFUNG (offen): gibt es eine kanonische Koordinate, in der BEIDE
 Funktionale dieselbe Normalform haben (z.B. Kruemmungs-Matching Delta <->
 |Z2|/N_fam^2)? Erst rechnen, dann typisieren.
+
+GERECHNET UND BEANTWORTET (v103, Ledger HOR.TRISECT.01; Figur trisection.pdf):
+Die kanonische Koordinate EXISTIERT -- die SdS-Kubik wird durch WINKELDREITEILUNG
+uniformisiert: r = 2cos(theta) gibt exakt r^3-3r = 2cos(3theta), also Kubik
+<=> cos(3theta) = -3m. Im zentrierten Winkel psi: m = cos(psi)/N_fam, und die
+Entropie kollabiert auf EINE Kosinus-Normalform:
+    S_tot/S_dS = 4/3 - (2/3) cos(2psi/3)
+(Mittel |mu4|/N_fam, Amplitude |Z2|/N_fam, Frequenz |Z2|/N_fam -- jede
+Konstante ein Glue-Atom). Kanonische Kruemmung am Anker: (2/3)^3 =
+(|Z2|/N_fam)^N_fam -- DIE KOIDE-KONSTANTE HOCH N_FAM. Invarianter Basis-Slope:
+dsigma/dm|_Nariai = -8/9 = -rank(E8)/N_fam^2 (koordinatenunabhaengig, in
+beiden Koordinaten gegengeprueft); dimensionsbehaftet dS_tot/dM|_N =
+-r_N/(N_fam c3). Z3-Trisektions-Deck = Trialitaet (v72-Querverweis).
+
+DAMIT IST DIE MATCHING-FRAGE GEOMETRISCH BEANTWORTET: Flavor-Invariante =
+RATE (2/3)^{2 N_fam} pro Transportschritt; Gravitations-Invariante =
+KRUEMMUNG (2/3)^{N_fam} im kanonischen Winkel. Gleiche Basis 2/3 = |Z2|/N_fam,
+Exponenten-Verhaeltnis 2 = |Z2|. Was fuer die VOLLE Identifikation fehlt, ist
+genau EIN Objekt: die UHR der Gravitationsseite (der near-Nariai-Verdampfungs-
+generator, der Kruemmung in Rate uebersetzt) -- dieselbe Objektklasse wie der
+fehlende P2-Transfergenerator. NEUE ZIELFORM: "EINE Uhr, zwei bekannte
+Geometrien." Kandidat fuer die Uhr: die semiklassische near-Nariai-Dynamik
+(Bousso-Hawking-Klasse) in dS-Hubble-Einheiten -- externe QFT-Physik, ehrlich
+zu typisieren, NICHT aus der Grammatik ableitbar ohne neuen Mechanismus.
 ================================================================================

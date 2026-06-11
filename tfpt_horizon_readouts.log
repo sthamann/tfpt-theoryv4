@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  11 JUN 2026 15:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  11 JUN 2026 15:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -899,7 +899,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip65
 )
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 51
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 52
 .
  (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -912,24 +912,24 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 (./tfpt_horizon_readouts.aux)
 \openout1 = `tfpt_horizon_readouts.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -988,20 +988,20 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \c@lstlisting=\count357
-LaTeX Info: Redefining \microtypecontext on input line 51.
-Package microtype Info: Applying patch `item' on input line 51.
-Package microtype Info: Applying patch `toc' on input line 51.
-Package microtype Info: Applying patch `eqnum' on input line 51.
-Package microtype Info: Applying patch `footnote' on input line 51.
-Package microtype Info: Applying patch `verbatim' on input line 51.
-LaTeX Info: Redefining \microtypesetup on input line 51.
+LaTeX Info: Redefining \microtypecontext on input line 52.
+Package microtype Info: Applying patch `item' on input line 52.
+Package microtype Info: Applying patch `toc' on input line 52.
+Package microtype Info: Applying patch `eqnum' on input line 52.
+Package microtype Info: Applying patch `footnote' on input line 52.
+Package microtype Info: Applying patch `verbatim' on input line 52.
+LaTeX Info: Redefining \microtypesetup on input line 52.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 51.
+LaTeX Info: Redefining \showhyphens on input line 52.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1010,43 +1010,43 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-Package hyperref Info: Link coloring ON on input line 51.
+Package hyperref Info: Link coloring ON on input line 52.
 
 (./tfpt_horizon_readouts.out) (./tfpt_horizon_readouts.out)
 \@outlinefile=\write4
 \openout4 = `tfpt_horizon_readouts.out'.
 
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 5
-3.
+4.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 5
-3.
+4.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-53.
+54.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-53.
+54.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 53.
+(Font)              <12> on input line 54.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 53.
+(Font)              <8> on input line 54.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 53.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 53.
+(Font)              <6> on input line 54.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 54.
 
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -1055,7 +1055,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 53.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 54.
 
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -1065,9 +1065,9 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 57.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 6
-9.
+(Font)              <10.95> on input line 58.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 7
+0.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -1090,65 +1090,65 @@ vips/lm/lm-mathsy.enc}])
 \openout5 = `tfpt_horizon_readouts.toc'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--105
+Underfull \hbox (badness 10000) in paragraph at lines 106--106
 []|$[] \OT1/lmr/m/n/10 (+20) = \OML/lmm/m/it/10 M[]=[]$\T1/lmr/m/n/10 (+20) ,
  []
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 122.
+LaTeX Font Warning: Command \small invalid in math mode on input line 123.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 128.
+(Font)              <14.4> on input line 129.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 128.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 128.
+(hyperref)                removing `math shift' on input line 129.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 128.
+(hyperref)                removing `subscript' on input line 129.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 133.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 129.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 134.
 
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-37.
+38.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 
 [2]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 161.
+LaTeX Font Warning: Command \small invalid in math mode on input line 162.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 172.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 176.
+LaTeX Font Warning: Command \small invalid in math mode on input line 173.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Lambda' on input line 176.
+(hyperref)                removing `math shift' on input line 177.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 176.
+(hyperref)                removing `\Lambda' on input line 177.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 182.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 177.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 187.
+LaTeX Font Warning: Command \small invalid in math mode on input line 183.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 188.
 
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <9> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 198.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 199.
 
-Underfull \hbox (badness 7777) in paragraph at lines 198--198
+Underfull \hbox (badness 7777) in paragraph at lines 199--199
 []\T1/lmr/bx/n/10.95 (+20) Nariai $\OT1/lmr/m/n/10.95 (+20) =$ \T1/lmr/bx/n/10.
 95 (+20) the an-chor; the Koide $\OT1/lmr/m/n/10.95 (+20) 2\OML/lmm/m/it/10.95 
 =\OT1/lmr/m/n/10.95 (+20) 3$ \T1/lmr/bx/n/10.95 (+20) is the en-tropy bound []\
@@ -1162,7 +1162,7 @@ T1/lmr/bx/n/10 (+20) [I][]
 <figures/sds_cover.pdf, id=126, 491.436pt x 274.626pt>
 File: figures/sds_cover.pdf Graphic file (type pdf)
 <use figures/sds_cover.pdf>
-Package pdftex.def Info: figures/sds_cover.pdf  used on input line 244.
+Package pdftex.def Info: figures/sds_cover.pdf  used on input line 245.
 (pdftex.def)             Requested size: 363.96695pt x 203.40443pt.
 
 
@@ -1171,7 +1171,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <figures/nariai_entropy.pdf, id=127, 621.52202pt x 252.945pt>
 File: figures/nariai_entropy.pdf Graphic file (type pdf)
 <use figures/nariai_entropy.pdf>
-Package pdftex.def Info: figures/nariai_entropy.pdf  used on input line 253.
+Package pdftex.def Info: figures/nariai_entropy.pdf  used on input line 254.
 (pdftex.def)             Requested size: 438.62866pt x 178.51537pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1179,7 +1179,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <figures/cover_twins.pdf, id=128, 635.97598pt x 267.39899pt>
 File: figures/cover_twins.pdf Graphic file (type pdf)
 <use figures/cover_twins.pdf>
-Package pdftex.def Info: figures/cover_twins.pdf  used on input line 262.
+Package pdftex.def Info: figures/cover_twins.pdf  used on input line 263.
 (pdftex.def)             Requested size: 438.62866pt x 184.42389pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1190,51 +1190,70 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <figures/orientation.pdf, id=141, 635.97598pt x 267.39899pt>
 File: figures/orientation.pdf Graphic file (type pdf)
 <use figures/orientation.pdf>
-Package pdftex.def Info: figures/orientation.pdf  used on input line 297.
+Package pdftex.def Info: figures/orientation.pdf  used on input line 298.
 (pdftex.def)             Requested size: 438.62866pt x 184.42389pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/seam_units.pdf, id=142, 621.52202pt x 445.18318pt>
-File: figures/seam_units.pdf Graphic file (type pdf)
-<use figures/seam_units.pdf>
-Package pdftex.def Info: figures/seam_units.pdf  used on input line 306.
-(pdftex.def)             Requested size: 419.95967pt x 300.81174pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 323.
+Underfull \hbox (badness 10000) in paragraph at lines 305--305
+[]\T1/lmr/bx/n/10.95 (+20) The tri-sec-tion nor-mal form: the canon-i-cal co-or
+-di-nate ex-ists []\T1/lmr/bx/n/10 (+20) [I][]
+ []
 
 
 
 [5 <./figures/sds_cover.pdf>]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 332.
-
-
-
 [6 <./figures/nariai_entropy.pdf> <./figures/cover_twins.pdf>]
+<figures/trisection.pdf, id=367, 534.79799pt x 274.626pt>
+File: figures/trisection.pdf Graphic file (type pdf)
+<use figures/trisection.pdf>
+Package pdftex.def Info: figures/trisection.pdf  used on input line 335.
+(pdftex.def)             Requested size: 401.2978pt x 206.07375pt.
+<figures/seam_units.pdf, id=368, 621.52202pt x 445.18318pt>
+File: figures/seam_units.pdf Graphic file (type pdf)
+<use figures/seam_units.pdf>
+Package pdftex.def Info: figures/seam_units.pdf  used on input line 344.
+(pdftex.def)             Requested size: 419.95967pt x 300.81174pt.
 
-[7 <./figures/orientation.pdf>]
 
-[8 <./figures/seam_units.pdf>] (./tfpt_horizon_readouts.aux)
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 361.
+
+
+
+[7 <./figures/orientation.pdf> <./figures/trisection.pdf>]
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 370.
+
+
+
+[8 <./figures/seam_units.pdf>]
+
+[9] (./tfpt_horizon_readouts.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `tfpt_horizon_readouts.out' has not changed.
 (rerunfilecheck)             Checksum: B4F047632898351A3B2E38CB6FDE3B2C;1955.
  ) 
 Here is how much of TeX's memory you used:
- 32204 strings out of 473190
- 637322 string characters out of 5715801
- 1108123 words of memory out of 5000000
- 54637 multiletter control sequences out of 15000+600000
- 680131 words of font info for 229 fonts, out of 8000000 for 9000
+ 32228 strings out of 473190
+ 637742 string characters out of 5715801
+ 1108379 words of memory out of 5000000
+ 54649 multiletter control sequences out of 15000+600000
+ 680615 words of font info for 234 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 116i,12n,121p,1018b,1047s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 116i,12n,121p,1018b,1048s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/lo
 cal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texliv
 e/2025/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive/2025/texm
@@ -1259,10 +1278,10 @@ ocal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texli
 ve/2025/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/local/texlive/2025/tex
 mf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025
 /texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tfpt_horizon_readouts.pdf (8 pages, 591802 bytes).
+Output written on tfpt_horizon_readouts.pdf (9 pages, 621488 bytes).
 PDF statistics:
- 704 PDF objects out of 1000 (max. 8388607)
- 276 compressed objects within 3 object streams
- 28 named destinations out of 1000 (max. 500000)
- 69358 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 783 PDF objects out of 1000 (max. 8388607)
+ 298 compressed objects within 3 object streams
+ 30 named destinations out of 1000 (max. 500000)
+ 69363 words of extra memory for PDF output out of 74296 (max. 10000000)
 

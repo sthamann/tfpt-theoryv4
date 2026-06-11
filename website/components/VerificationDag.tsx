@@ -272,6 +272,7 @@ const NODES: DagNode[] = [
       "v87_bulk_uniqueness_reduction.py",
       "v101_horizon_anchor.py",
       "v102_seam_orientation.py",
+      "v103_trisection_normal_form.py",
     ],
   },
 

@@ -40,6 +40,7 @@
 \newcommand{\Mbar}{\bar M_{\mathrm{Pl}}}
 \newcommand{\ainv}{\alpha^{-1}_\star}
 \newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Nfam}{N_{\mathrm{fam}}}
 \setlist{itemsep=2pt,topsep=3pt}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 
@@ -299,6 +300,43 @@ no open gate is touched.
 functional in both sectors --- flavor (cubic potential, curvatures $\pm\Delta$) and gravity (SdS entropy,
 curvature $2/9=|\Z_2|/N_{\mathrm{fam}}^2$). \veri{v102\_seam\_orientation.py}}
 \label{fig:orientation}
+\end{figure}
+
+\begin{keybox}[The trisection normal form: the canonical coordinate exists \tI\ (\veri{v103\_trisection\_normal\_form.py})]
+The curvature-matching question of the previous box has a closed answer. The SdS horizon cubic is
+uniformized by \textbf{angle trisection}: with $r=2\cos\theta$ (units $1/\sqrt\Lambda$),
+$r^3-3r=2\cos3\theta$ \emph{exactly}, so the cubic is $\cos3\theta=-3m$ --- the three horizon roots are
+the three trisection branches (the $\Z_3$ rotation $=$ the triality deck, cf.\ $\operatorname{coker}Q=\Z/\Nfam$).
+In the centered angle $\psi$ ($\cos\varphi=-3m$, $\psi=\varphi-\pi$; Nariai $\psi=0$, pure dS $\psi=\pi/2$,
+deck $\psi\to-\psi$):
+\[
+  m=\frac{\cos\psi}{\Nfam},\qquad
+  \boxed{\ \frac{S_{\mathrm{tot}}}{S_{dS}}=\frac43-\frac23\cos\frac{2\psi}{3}\ }
+\]
+--- \emph{one} cosine whose mean ($|\mu_4|/\Nfam$), amplitude and frequency (both $|\Z_2|/\Nfam$) are glue
+atoms over the family count (Fig.~\ref{fig:trisection}). Three exact consequences:
+\begin{itemize}\setlength\itemsep{1pt}
+  \item \textbf{Canonical curvature $=$ the Koide constant to the family power:}
+  $\sigma''(\psi{=}0)=\tfrac{8}{27}=(\tfrac23)^3=(|\Z_2|/\Nfam)^{\Nfam}$.
+  \item \textbf{Invariant base slope:} $d\sigma/dm|_{\mathrm{Nariai}}=-\tfrac89=-\operatorname{rank}E_8/\Nfam^2$
+  (coordinate-invariant, cross-checked in both coordinates; generally $-\tfrac43\sin(2\psi/3)/\sin\psi$);
+  dimensionful $dS_{\mathrm{tot}}/dM|_N=-r_N/(\Nfam\cthree)$.
+  \item \textbf{The bridge:} the flavor invariant is a \emph{rate}, multiplier $(2/3)^6=(2/3)^{2\Nfam}$
+  per transport step; the gravity invariant is a \emph{curvature}, $(2/3)^{\Nfam}$ in the canonical angle
+  --- same base $2/3=|\Z_2|/\Nfam$, exponent ratio $2=|\Z_2|$. What is still missing for a full
+  identification is the gravity-side \emph{clock} (the near-Nariai evaporation generator that converts
+  curvature into a rate) --- the same class of missing object as the Koide transfer generator of Paper~4:
+  \textbf{one clock, two known geometries}. That identification stays \tP.
+\end{itemize}
+\end{keybox}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.86\linewidth]{figures/trisection.pdf}
+\caption{The trisection normal form: in the canonical angle $\psi$ the mass and the total entropy are
+pure (co)sines built from glue atoms; the anchor sits at $\psi=0$ with canonical curvature
+$(2/3)^3$. \veri{v103\_trisection\_normal\_form.py}}
+\label{fig:trisection}
 \end{figure}
 
 \begin{figure}[h]
