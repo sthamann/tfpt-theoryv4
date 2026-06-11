@@ -1,19 +1,20 @@
 (* ::Package:: *)
 
 (* tfpt_readouts_extension.wl -- independent Wolfram Language parity for the
-   v84-v93 round (blind registry, master cover, N_star reheating arithmetic,
+   v84-v99 round (blind registry, master cover, N_star reheating arithmetic,
    bulk uniqueness, carrier index, conical defect chain, spine tetrahedron,
-   glue uniqueness, Koide relaxation toy).
+   glue uniqueness, Koide relaxation toy, sheet diamond, centered diamond,
+   branch-kernel selection, sheet-conjugation bridge, discriminant
+   dictionary, Koide flow time).
 
-   Kept SEPARATE from tfpt_readouts.wl so the verified 101/101 base file
+   Kept SEPARATE from tfpt_readouts.wl so the verified 116/116 base file
    stays untouched.  Run with:
 
        wolframscript -file tfpt_readouts_extension.wl
 
-   STATUS NOTE: authored 2026-06-10 on a machine without a Wolfram Engine;
-   the checks mirror the Python-verified values 1:1 but await their first
-   engine run (see wolfram/README.md).  Only c3 = 1/(8 Pi) and g_car = 5
-   are inputs. *)
+   STATUS: first engine run 2026-06-11 (Wolfram Engine 14.3) -- the v84-v93
+   block passed 45/45 on first run; the v94-v97 block was added the same day
+   and verified.  Only c3 = 1/(8 Pi) and g_car = 5 are inputs. *)
 
 $MaxExtraPrecision = 200;
 $pass = 0; $fail = 0;
@@ -176,6 +177,153 @@ rhoOf[q_] := (q - 2)/(5 - q);
 check["v93 rho_src = -phi0/24 to 0.8% (v25 conjecture in attractor coordinates)",
   rhoOf[3 Qsrc]/(-phi0/24), 0.992105906542`12, 10^-8];
 
+(* ---- (v94) sheet diamond & winding line ---- *)
+MM[s_, t_] := R + Q.DiagonalMatrix[{s, t, t}];
+checkExact["v94 corners: R=M(0,0), K=M(1,-1), L=M(2,0), F=M(1,1)",
+  (MM[0, 0] == R) && (MM[1, -1] == K) &&
+  (MM[2, 0] == R + 2 Q.DiagonalMatrix[{1, 0, 0}]) && (MM[1, 1] == R + Q)];
+checkExact["v94 global invariants det M and det B_M (exact polynomials)",
+  (Expand[Det[MM[ss, tt]]] == Expand[3 ss tt^2 + 9 ss tt + 6 ss + tt^2 + 5 tt + 8]) &&
+  (Expand[Det[bb[MM[ss, tt]]]] == Expand[6 ss tt + 12 ss + 3 tt^2 + 15 tt + 16])];
+checkExact["v94 pencil cut (1+x, x-1) refactorises the master cover (3x+2)(3x+5)",
+  Factor[Det[bb[MM[1 + xx, xx - 1]]]] == (3 xx + 2) (3 xx + 5)];
+checkExact["v94 diagonal cut disc = 153 NON-square (negative control)",
+  (Discriminant[Det[bb[MM[ss, ss]]], ss] == 153) && ! IntegerQ[Sqrt[153]]];
+Rw[s_] := R + s Outer[Times, one, {1, 0, 0}];
+checkExact["v94 winding line: det B = 2 det for ALL s (8+2s vs 16+4s)",
+  (Expand[Det[Rw[ss]]] == 8 + 2 ss) && (Expand[Det[bb[Rw[ss]]]] == 16 + 4 ss)];
+nrm = {5, -9, 6};
+checkExact["v94 cofactor seam normal n=(5,-9,6): n.1=2=|Z2|, n.R=(8,0,0), n.L=(20,0,0)",
+  (nrm.one == 2) && (nrm.R == {8, 0, 0}) && (nrm.(R + 2 Q.DiagonalMatrix[{1, 0, 0}]) == {20, 0, 0})];
+plL[M_] := Module[{blk = {one.M, av.M}},
+  {Det[blk[[All, {1, 2}]]], Det[blk[[All, {1, 3}]]], Det[blk[[All, {2, 3}]]]}];
+plR[M_] := Module[{blk = Transpose[{M.one, M.av}]},
+  {Det[blk[[{1, 2}, All]]], Det[blk[[{1, 3}, All]]], Det[blk[[{2, 3}, All]]]}];
+checkExact["v94 Pluecker canonicalisation: ||Pi_L(K)||_1 = 11 and ||Pi_R(K)||_1 = 26",
+  (Total[Abs[plL[K]]] == 11) && (Total[Abs[plR[K]]] == 26)];
+
+(* ---- (v95) centered flavor diamond ---- *)
+Uop = Q.DiagonalMatrix[{1, 0, 0}];
+Vop = Q.DiagonalMatrix[{0, 1, 1}];
+Cc = R + Uop;
+Lop = R + 2 Uop; Fop = R + Q;
+checkExact["v95 centered cross: Q=U+V; R=C-U, L=C+U, K=C-V, F=C+V",
+  (Q == Uop + Vop) && (R == Cc - Uop) && (Lop == Cc + Uop) &&
+  (K == Cc - Vop) && (Fop == Cc + Vop)];
+checkExact["v95 axes spectra: Spec U = {3,0,0} (winding), Spec V = {0,1,2} = N_fam*cusp",
+  (Sort[Eigenvalues[Uop]] == {0, 0, 3}) && (Sort[Eigenvalues[Vop]] == {0, 1, 2})];
+checkExact["v95 center invariants: tr C=12, det C=14, sum C=31=2^g_car-1, det B_C=28",
+  (Tr[Cc] == 12) && (Det[Cc] == 14) && (Total[Cc, 2] == 31) &&
+  (31 == 2^gcar - 1) && (Det[bb[Cc]] == 28)];
+checkExact["v95 ray alignment: Pi_R(C)=7(2,3,1), Pi_R(L)=10(2,3,1)",
+  (plR[Cc] == 7 {2, 3, 1}) && (plR[Lop] == 10 {2, 3, 1})];
+
+(* ---- (v96) branch-kernel selection (P1) ---- *)
+BX[x_] := bb[K + x Q];
+checkExact["v96 B(x) = [[15x+25,16x+29],[21x+35,23x+41]], det = (3x+2)(3x+5)",
+  (Simplify[BX[xx] == {{15 xx + 25, 16 xx + 29}, {21 xx + 35, 23 xx + 41}}]) &&
+  (Factor[Det[BX[xx]]] == (3 xx + 2) (3 xx + 5))];
+wKoide = 11 one - 9 av;  vKoide = 7 one - 5 av;
+wCarr = one;             vCarr = 8 one - 7 av;
+checkExact["v96 integer kernels: Koide w=(2,2,-7), v=(2,2,-3); carrier w=1, v=(1,1,-6)",
+  (wKoide == {2, 2, -7}) && (vKoide == {2, 2, -3}) && (vCarr == {1, 1, -6}) &&
+  (BX[-2/3].{11, -9} == {0, 0}) && ({7, -5}.BX[-2/3] == {0, 0}) &&
+  (BX[-5/3].{1, 0} == {0, 0}) && ({8, -7}.BX[-5/3] == {0, 0})];
+PK[x_] := K + x Q;
+checkExact["v96 collapse lemma: P(-2/3).w = (20/3)(1,-1,0), P(-5/3).w = (2/3)(-1,1,0)",
+  (PK[-2/3].wKoide == (20/3) {1, -1, 0}) && (PK[-5/3].wCarr == (2/3) {-1, 1, 0})];
+checkExact["v96 generation side: v.P prop (-1,1,0) at both branch points",
+  (vKoide.PK[-2/3] == {-1, 1, 0}) && (vCarr.PK[-5/3] == 2 {-1, 1, 0})];
+checkExact["v96 sector ladder: Koide kernel -> (8x+12, 10x, 3x+2); carrier kernel -> (4x+6, 5x+9, 6x+10)",
+  (Expand[PK[xx].wKoide] == {8 xx + 12, 10 xx, 3 xx + 2}) &&
+  (Expand[PK[xx].wCarr] == {4 xx + 6, 5 xx + 9, 6 xx + 10})];
+checkExact["v96 lepton pairings ARE the det-B factors; up-row of P(-3/2) = (-1/2)(1,-1,0)",
+  (Solve[3 xx + 2 == 0, xx] == {{xx -> -2/3}}) &&
+  (Solve[6 xx + 10 == 0, xx] == {{xx -> -5/3}}) &&
+  (PK[-3/2][[1]] == (-1/2) {1, -1, 0})];
+bb2[M_, a2_] := {{one.M.one, one.M.a2}, {a2.M.one, a2.M.a2}};
+checkExact["v96 controls: anchor (2,1,1) det B = (x+2)(9x+11) (split, disc 49); (1,2,1) disc 40 non-square",
+  (Factor[Det[bb2[PK[xx], {2, 1, 1}]]] == (xx + 2) (9 xx + 11)) &&
+  (Discriminant[Det[bb2[PK[xx], {2, 1, 1}]], xx] == 49) &&
+  (Discriminant[Det[bb2[PK[xx], {1, 2, 1}]], xx] == 40) && ! IntegerQ[Sqrt[40]]];
+
+(* ---- (v97) sheet-conjugation bridge (P1 -> one [P]) ---- *)
+TA = {{0, 1, 0}, {1, 0, 0}, {2, -2, 1}};
+SigM = DiagonalMatrix[{1, -1, -1}];
+sig12 = {{0, 1, 0}, {1, 0, 0}, {0, 0, 1}};
+e1v = {0, 0, 1}; e2v = {0, 1, 2}; e3v = {1, 0, 0};
+QPm = (Q + SigM.Q.SigM)/2;
+checkExact["v97 Q_+ eigenvectors e1=(0,0,1) [l=1], e2=(0,1,2) [l=2], e3=(1,0,0) [l=3]",
+  (QPm.e1v == 1 e1v) && (QPm.e2v == 2 e2v) && (QPm.e3v == 3 e3v)];
+checkExact["v97 T_A integer involution, det -1, fixes 1 and a; T_A swaps e2 <-> e3, fixes e1",
+  (TA.TA == IdentityMatrix[3]) && (Det[TA] == -1) && (TA.one == one) &&
+  (TA.av == av) && (TA.e2v == e3v) && (TA.e3v == e2v) && (TA.e1v == e1v)];
+checkExact["v97 anchor = conjugation-symmetric vector: a = e2+e3, 1 = a-e1; odd line e2-e3",
+  (av == e2v + e3v) && (one == av - e1v) && (TA.(e2v - e3v) == -(e2v - e3v))];
+ddir = {-1, 1, 0};
+coeffs = LinearSolve[Transpose[{one, av, ddir}], TA.ddir];
+checkExact["v97 one deck action: T_A = -1 on R^3/span{1,a} (like sigma_12); parity det T_A = det sigma_12 = -1, det Sigma = +1",
+  (coeffs[[3]] == -1) && (sig12.ddir == -ddir) &&
+  (Det[sig12] == -1) && (Det[SigM] == 1)];
+Gm = TA.SigM;
+RrotM = {{0, 0, -1}, {1, 0, -1}, {0, 1, -1}};
+checkExact["v97 D4 closure: G = T_A.Sigma has order 4, char (t+1)(t^2+1) = char(v70 R_rot)",
+  (MatrixPower[Gm, 4] == IdentityMatrix[3]) && (MatrixPower[Gm, 2] != IdentityMatrix[3]) &&
+  (Expand[CharacteristicPolynomial[Gm, t] + (t + 1) (t^2 + 1)] === 0) &&
+  (Expand[CharacteristicPolynomial[Gm, t] - CharacteristicPolynomial[RrotM, t]] === 0)];
+Svars = Array[sv, {3, 3}];
+solS = Quiet[Solve[Flatten[Svars.Gm - RrotM.Svars] == 0, Flatten[Svars]],
+  Solve::svars];
+Sgen = Svars /. First[solS];
+detSgen = Factor[Det[Sgen]];
+checkExact["v97 sheet-index lemma: det S always EVEN on the integer intertwiner space, minimum |det| = 2 = |Z2|",
+  Module[{vars = Variables[detSgen], vals},
+   vals = Select[Abs[detSgen /. Thread[vars -> #]] & /@
+       Tuples[Range[-2, 2], Length[vars]], # =!= 0 &];
+   (And @@ (EvenQ /@ vals)) && (Min[vals] == 2)]];
+checkExact["v97 Q (det = N_fam) does NOT intertwine G -> R_rot (independent bridge)",
+  Q.Gm != RrotM.Q];
+
+(* ---- (v98) discriminant dictionary derived ---- *)
+GenMu4 = TA.SigM;
+checkExact["v98 integer mu4 on the cusp basis: G e1 = -e1, G e3 = e2, G e2 = -e3; G^4 = I",
+  (GenMu4.e1v == -e1v) && (GenMu4.e3v == e2v) && (GenMu4.e2v == -e3v) &&
+  (MatrixPower[GenMu4, 4] == IdentityMatrix[3])];
+checkExact["v98 dictionary: cusp-0 line = the self-conjugate Z4-class-2 line (-1 eigenspace of G)",
+  Length[NullSpace[GenMu4 + IdentityMatrix[3]]] == 1 &&
+  Cross[First[NullSpace[GenMu4 + IdentityMatrix[3]]], e1v] == {0, 0, 0}];
+checkExact["v98 T_A G T_A^-1 = G^-1 (discriminant conjugation k -> -k); Sigma = T_A G",
+  (TA.GenMu4.Inverse[TA] == Inverse[GenMu4]) && (SigM == TA.GenMu4)];
+checkExact["v98 q_A3 respects the swap: q(1) = q(3) = 3/8, q(2) = 1/2, q(0) = 0",
+  (Mod[3/8, 1] == Mod[3*9/8, 1] == 3/8) && (Mod[3*4/8, 1] == 1/2) && (Mod[0, 1] == 0)];
+checkExact["v98 reflection classes separated: T_A e1 = +e1 (det -1, glue-swapping) vs Sigma e1 = -e1 (det +1, glue-fixing)",
+  (TA.e1v == e1v) && (Det[TA] == -1) && (SigM.e1v == -e1v) && (Det[SigM] == 1)];
+checkExact["v98 audit: G a = e2 - e3; dihedral (T_A G)^2 = I",
+  (GenMu4.av == e2v - e3v) && (MatrixPower[TA.GenMu4, 2] == IdentityMatrix[3])];
+
+(* ---- (v99) Koide flow time ---- *)
+DeltaGap = 6 Log[3/2];
+rhoK[q_] := (q - 2)/(5 - q);
+qOfRho[r_] := (2 + 5 r)/(1 + r);
+checkExact["v99 canonical generator: time-1 map of the rho-scaling flow IS the v82 Moebius F (exact symbolic identity)",
+  Simplify[FK[q] - qOfRho[(2/3)^6 rhoK[q]]] === 0];
+checkExact["v99 e^{-Delta} = (2/3)^6 exactly (the gap is the multiplier)",
+  Simplify[Exp[-DeltaGap] - (2/3)^6] === 0];
+koideQ[a_, b_, c_] := (a + b + c)/(Sqrt[a] + Sqrt[b] + Sqrt[c])^2;
+mE = 0.51099895069`20; mMU = 105.6583755`20;   (* PDG 2024 pole masses, MeV *)
+rhoSrc = rhoK[3 koideQ[(16/7) phi0^5, (4/3) phi0^3, (7/6) phi0^2]];
+tFlow[mtau_] := Log[rhoK[3 koideQ[mE, mMU, mtau]]/rhoSrc]/Log[(2/3)^6];
+check["v99 flow time at PDG central m_tau = 1776.93: t = 2.8385", tFlow[1776.93`20], 2.838456`10, 10^-5];
+check["v99 t(-1 sigma) = 2.347 (data fragility)", tFlow[1776.84`20], 2.34693`10, 10^-4];
+mtauFor[rt_] := mtau /. FindRoot[koideQ[mE, mMU, mtau] - qOfRho[rt]/3, {mtau, 1776.94`20},
+  WorkingPrecision -> 20];
+check["v99 Q = 2/3 exactly at m_tau = 1776.9690 (+0.43 sigma, inside the band)",
+  mtauFor[0], 1776.96903`10, 10^-7];
+check["v99 conditional n=3 (= N_fam steps): m_tau = 1776.9427 MeV",
+  mtauFor[rhoSrc (2/3)^18], 1776.94268`10, 10^-7];
+check["v99 n=2 excluded: m_tau = 1776.6690 MeV (-2.9 sigma)",
+  mtauFor[rhoSrc (2/3)^12], 1776.66897`10, 10^-7];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v93: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v99: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

@@ -226,3 +226,89 @@ P1-NACHTRAG (2026-06-10, ehrliches Negativ, nicht in die Suite gezogen):
     verworfen; P1 bleibt blockiert, bis eine unabhaengig motivierte Definition
     der Abbildung Sektor -> Blatt vorliegt (kein Zahlenfischen auf der Leiter).
 ================================================================================
+
+================================================================================
+ADDENDUM 2026-06-11  --  P1 ENTBLOCKT (v96/v97, Ledger FLAV.SHEET.01/.02)
+================================================================================
+P1  ENTBLOCKT, auf EINE [P]-Restfrage verengt. Die fehlende "unabhaengig
+    motivierte Definition" liefert das Cover selbst: an den Branch-Punkten ist
+    der Anchorblock RANG 1 mit kanonischen INTEGER-Kernen (Koide: w=11*1-9a=
+    (2,2,-7), v=7*1-5a=(2,2,-3); Carrier: w=1 selbst, v=8*1-7a=(1,1,-6)).
+
+    (a) KOLLAPS-LEMMA [L] (v96): Rang 1 erzwingt P(x0).w senkrecht auf <1,a>,
+        also proportional (-1,1,0) = antisymmetrische Richtung der beiden
+        gleichgewichtigen Anker-Slots -- beidseitig: Sektoren (up=-down,
+        LEPTON-PAARUNG=0: Leptonen sitzen AUF der Ramifikation; Koide ist
+        leptonisch) und Generationen (gen1=-gen2, gen3=0).
+    (b) SEKTOR-NULLSTELLEN-LEITER [I] (v96): Lepton-Paarungen SIND die beiden
+        det-B-Faktoren (Nullstellen = Branch-Punkte); up: -3/2=-N_fam/|Z2|
+        doppelt (die ganze up-Zeile von P(-3/2) IST die ungerade Richtung --
+        die bisher unerklaerte GL(2)-Sprosse aus v85); down: 0 (=K) und -9/5.
+        Orientierung: Deck-Translation flippt (up,down)=(+,-)->(-,+),
+        Betragsverhaeltnis 10=A_Lambda. Kontrollen: Anker (2,1,1) verschiebt
+        den Kollaps nach (0,1,-1); (1,2,1) non-split, keine rationalen Kerne.
+    (c) KONJUGATIONS-BRUECKE [I]/[L] (v97): Die Familien-Konjugation (Cusp-
+        Negation 0 fix, 1/3<->2/3 auf den Q_+-Eigenraeumen) hat eine EINDEUTIG
+        ankervertraegliche Integer-Realisierung T_A=[[0,1,0],[1,0,0],[2,-2,1]]
+        (det=-1; T.1=1 und T.a=a erzwingen beide dieselbe Skala; die zwei
+        Alternativ-Paarungen werden VERWORFEN). Dabei: a = e2+e3 -- der Anker
+        IST der konjugationssymmetrische Vektor des getauschten Paares.
+        T_A = -1 auf R^3/<1,a> wie sigma_12: EINE Deck-Wirkung, wo das Cover
+        lebt. Paritaet passt zu v92 (det -1 einseitig=Glue-Tausch, det Sigma=+1
+        simultan=Glue-fixierend); <T_A,Sigma> schliesst die D4 aus v69; Sheet-
+        Index-Lemma: Generationen-mu4 und Homologie-mu4 (v70) sind rational,
+        aber NICHT GL(3,Z)-konjugiert -- alle Intertwiner-Dets GERADE, Minimum
+        |det|=2=|Z2| (genau eine Sheet-Verdopplung; Q det=3 intertwined nicht).
+
+    VERBLEIBENDER REST [P] (die neue, scharfe P1-Frage): das eine Gitter-
+    Woerterbuch "Q_+-Eigenraum-Graduierung der Generationen = A3-Diskriminanten-
+    Graduierung". Wenn das steht, ist T_A buchstaeblich die v92-A3-Konjugation
+    und die Blattwahl geschlossen.
+
+P2-NOTIZ (2026-06-11, Analyse, noch NICHT in die Suite gezogen): das v93-Negativ
+    "Flusszeit t=2.838 nicht ganzzahlig" ist DATENFRAGIL: rho_pole liegt so nah
+    am Branch-Punkt, dass t innerhalb von +0.5 sigma(m_tau) jede ganze Zahl >=3
+    durchlaeuft (Q kreuzt 2/3 bei +0.46 sigma). Umgekehrt: pole=F^3(source)
+    (3=N_fam Schritte) sagt m_tau=1776.9427 MeV voraus (+0.14 sigma; n=2 ist mit
+    -2.9 sigma AUSGESCHLOSSEN; n=3/n=4/unendlich derzeit nicht trennbar --
+    entscheidbar bei sigma(m_tau)~0.01 MeV, Belle II). Ein Skalen-Kandidat
+    ln(M_scal/m_tau)/ln(46080) wurde durch Negativkontrollen ZERSTOERT (jedes W
+    liefert <0.1 sigma -- look-elsewhere). TODO: als v93-Erweiterung festschreiben.
+================================================================================
+
+================================================================================
+ADDENDUM 2026-06-11 (nachmittags)  --  v98/v99: P1-Woerterbuch ABGELEITET,
+P2-TODO AUSGEFUEHRT (Ledger FLAV.SHEET.03, FR.KOIDE.06)
+================================================================================
+P1  WOERTERBUCH ABGELEITET (v98): Der oben genannte [P]-Rest ist INNERHALB des
+    Modells beweisbar. Der Generationenraum traegt ein INTEGER-mu4: G = T_A*Sigma
+    wirkt auf der Cusp-Basis als G e1=-e1, G e3=e2, G e2=-e3 -- exakt die
+    v69-Zerlegung B1+E, ganzzahlig realisiert. Damit IST die Cusp-0-Linie die
+    selbstkonjugierte Z4-Klasse-2-Linie, und das getauschte Cusp-Paar {1/3,2/3}
+    IST das konjugierte Klassenpaar {1,3}: das Woerterbuch "Q_+-Graduierung =
+    A3-Diskriminanten-Graduierung" ist ABGELEITET, nicht angenommen.
+    T_A G T_A^-1 = G^-1 (Diskriminanten-Konjugation k->-k); q_A3(1)=q_A3(3)=3/8,
+    q_A3(2)=1/2; die zwei D4-Spiegelklassen trennen exakt die Glue-Arithmetik
+    (T_A e1=+e1, det=-1 = Glue-Tausch; Sigma e1=-e1, det=+1 = Glue-fix;
+    Sigma = T_A G).
+    => P1 traegt KEINEN eigenen [P]-Rest mehr. Was bleibt, ist exakt das ohnehin
+    offene GATE.QGEO (parabolische Realisierung von Q) -- EIN Gate statt zwei.
+    Konditional auf dieses etablierte Typing ist die Blattwahl GESCHLOSSEN:
+    up/down = Deck-ungerades Paar, Leptonen auf der Ramifikation, Deck-
+    Involution = A3-seitige Spinor-Konjugation T_A.
+
+P2  TODO AUSGEFUEHRT (v99): (a) kanonischer Generator dq/dt =
+    (Delta/N_fam)(q-2)(q-5) = (Delta/N_fam) det B(q); Zeit-1-Abbildung = F
+    (maschinell geprueft, e^-Delta = (2/3)^6 exakt) [I]. (b) Datenfragilitaet
+    des v93-Negativs festgeschrieben [N]: Q kreuzt 2/3 bei +0.43 sigma(m_tau);
+    der Ausschluss von pole=F^n gilt nur am Zentralwert. (c) Konditionale
+    Schritte [P], Registry unberuehrt: n=2 ausgeschlossen (-2.9 sigma);
+    n=3=N_fam -> m_tau = 1776.9427 MeV (+0.14 sigma); Kill-Kriterium
+    sigma(m_tau)~0.01 MeV (Belle II). (d) ln(46080)-Firewall dokumentiert.
+    P2-Typ unveraendert ([P], eine Identifikation); diskret-vs-kontinuierlich
+    ist jetzt eine EXPERIMENTELLE Frage.
+
+STAND DER URSPRUENGLICHEN P-LISTE: P1 geschlossen modulo GATE.QGEO (v96-v98);
+P2 verengt + experimentell entscheidbar (v82/v93/v99); P3/P4/P6 geloest/typisiert
+(v85/v86); P5 bleibt niedrig-prior offen (Genus-0-Buehne, durch v85 gestuetzt).
+================================================================================

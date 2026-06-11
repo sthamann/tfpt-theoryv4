@@ -581,8 +581,10 @@ projection $Q$ on $R$.
 \begin{winbox}[The Sheet Diamond: all four operators are points of \emph{one} surface \tI\ (\veri{v94\_sheet\_diamond.py})]
 The whole flavor algebra lives on a single two-parameter operator surface,
 \[
-  M(s,t)=R+Q\,\operatorname{diag}(s,t,t):\qquad
-  R=M(0,0),\quad K=M(1,-1),\quad L=M(2,0),\quad F:=R{+}Q=M(1,1),
+\begin{gathered}
+  M(s,t)=R+Q\,\operatorname{diag}(s,t,t):\\
+  R=M(0,0),\qquad K=M(1,-1),\qquad L=M(2,0),\qquad F:=R{+}Q=M(1,1),
+\end{gathered}
 \]
 with the two global invariants
 \[
@@ -624,8 +626,8 @@ The mechanism is the \textbf{cofactor seam normal} $n=c_2{\times}c_3=(5,-9,6)$ (
 second and third \emph{columns} of $R$) --- the common first adjugate row of $R$ \emph{and} $L$ (columns
 $2,3$ are winding-invariant) --- with
 \[
-  n\cdot\mathbf 1=2=|\Z_2|\ (\text{the per-winding determinant increment}),\qquad
-  n^\top R=(8,0,0),\qquad n^\top L=(20,0,0):
+  n\cdot\mathbf 1=2=|\Z_2|\ (\text{per-winding det increment}),\quad
+  n^\top R=(8,0,0),\quad n^\top L=(20,0,0):
 \]
 the normal annihilates the stable columns, so \emph{generation one is the only open torsion channel} ---
 the $+6$ winding is not sorted by hand. \emph{Honest scope:} the winding line crosses the spectral
@@ -784,6 +786,75 @@ $2\sqrt{\AL}$. (Negative control, as for the cover itself: the $R$-pencil has $\
 square.) So Koide and the carrier appearing as \emph{separate rational} singularities is a special feature of the
 canonical anchor placement, not a generic one --- a hardening of anchor-first. The physical fermion-sector
 identification of the three placements is not claimed and stays \tP.
+\end{keybox}
+
+\begin{keybox}[Branch kernels select the sectors; one deck involution \tI/\tL\ (\veri{v96\_branch\_kernel\_selection.py}, \veri{v97\_sheet\_conjugation\_bridge.py})]
+The ``which sheet does parity select'' question above had a blocker: no \emph{independently motivated}
+sector$\to$sheet map. The cover supplies one itself. At each branch point the anchor block is \textbf{rank
+one}, with canonical \emph{integer} kernels:
+\[
+\begin{aligned}
+  &\text{Koide } x=-\tfrac23:\ \ w=11\,\mathbf1-9a=(2,2,-7),\quad v=7\,\mathbf1-5a=(2,2,-3);\\
+  &\text{carrier } x=-\tfrac53:\ \ w=\mathbf 1,\quad v=8\,\mathbf1-7a=(1,1,-6),
+\end{aligned}
+\]
+--- at the carrier point the block annihilates the \emph{democratic vector itself}. \textbf{Collapse lemma
+\tL:} rank one forces $P(x_0)\,w\perp\operatorname{span}\{\mathbf1,a\}$, hence proportional to the
+antisymmetric direction $(-1,1,0)$ of the anchor's two \emph{equal} slots --- on both sides:
+\[
+  P(-\tfrac23)\,w=\tfrac{20}{3}\,(1,-1,0),\qquad P(-\tfrac53)\,w=\tfrac23\,(-1,1,0),\qquad
+  v^\top P(x_0)\propto(-1,1,0)\ \text{at both points} .
+\]
+Reading the rows as the sectors $(u,d,e)$: \emph{up and down are the deck-odd pair} ($f_u=-f_d$;
+convention-free, $f_uf_d<0$ at both points), and the \emph{lepton pairing vanishes} --- the leptons sit
+\emph{on} the ramification, consistent with Koide being a charged-lepton relation. Indeed the lepton
+pairing forms \emph{are} the two det-$B$ factors: the \textbf{sector zero ladder} reads
+lepton $\to\{-\tfrac23,-\tfrac53\}$ (the branch points), up $\to-\tfrac32=-\Nfam/|\Z_2|$ \emph{doubly}
+(the whole up-row of $P(-\tfrac32)$ \emph{is} the odd direction $-\tfrac12(1,-1,0)$ --- the previously
+unexplained $\mathrm{GL}(2)$ rung), down $\to\{0\ (=K),\ -\tfrac95=-\Nfam^2/\gcar\}$. The deck translation
+flips the orientation $(+,-)\to(-,+)$ with magnitude ratio $10=\AL$. \emph{Controls:} anchor $(2,1,1)$
+moves the collapse to $(0,1,-1)$; $(1,2,1)$ is non-split (disc $40$), no rational kernels at all.
+\smallskip\\
+\noindent\textbf{The bridge to the glue chiralities (\veri{v97\_sheet\_conjugation\_bridge.py}).} The two
+$E_8$ glues are swapped by \emph{either single} spinor conjugation and fixed by the simultaneous one
+(\veri{v92\_glue\_uniqueness.py}); on the family side, conjugation negates the cusp classes
+($0$ fixed, $\tfrac13\leftrightarrow\tfrac23$ on the $Q_+$ eigenspaces $e_1=(0,0,1)$, $e_2=(0,1,2)$,
+$e_3=(1,0,0)$). That conjugation has a \emph{unique anchor-compatible} integer realisation: $T\mathbf1=\mathbf1$
+and $Ta=a$ \emph{both} force the same scale, giving
+\[
+  \boxed{\ T_A=\begin{psmallmatrix}0&1&0\\1&0&0\\2&-2&1\end{psmallmatrix},\quad T_A^2=I,\quad\det T_A=-1\ },
+  \qquad\text{and}\qquad \boxed{\ a=e_2+e_3\ }
+\]
+--- \emph{the anchor is the conjugation-symmetrised vector of the swapped pair} (the two alternative
+pairings admit \emph{no} anchor-compatible scale). On the quotient by the anchor plane, $T_A=-1$ exactly
+like the sector transposition: \textbf{one deck action where the cover lives}. The parity matches the glue
+arithmetic ($\det=-1$ single/swapping vs $\det\Sigma=+1$ simultaneous/fixing); $\langle T_A,\Sigma\rangle$
+closes the \emph{same} $D_4=\Z_4\rtimes\Z_2$ as the $Q$-geometry, with $\chi_{T_A\Sigma}=(t{+}1)(t^2{+}1)$
+identical to the $\mu_4$ homology matrix; and the \textbf{sheet-index lemma}: the generation-$\mu_4$ and the
+homology-$\mu_4$ are rationally but \emph{not} $\mathrm{GL}(3,\Z)$-conjugate --- every intertwiner has
+\emph{even} determinant, minimum $|\det|=2=|\Z_2|$ (one sheet doubling; independent of $\det Q=\Nfam$).
+\smallskip\\
+\noindent\textbf{The dictionary is derived, not assumed (\veri{v98\_discriminant\_dictionary.py}).}
+The generation space carries an \emph{integer} $\mu_4$: $G:=T_A\Sigma$ acts on the cusp basis as
+\[
+  \boxed{\ G\,e_1=-e_1,\qquad G\,e_3=e_2,\qquad G\,e_2=-e_3\ }\qquad
+  (G^4=I,\ \ \chi_G=(t{+}1)(t^2{+}1)),
+\]
+i.e.\ the $B_1\!\oplus\!E$ decomposition of the $D_4$-equivariant $Q$-geometry realised \emph{integrally}:
+$e_1$ spans the $B_1$ line ($G$-eigenvalue $-1$ $=$ the self-conjugate $\Z_4$ class $2$), and
+$\operatorname{span}\{e_2,e_3\}$ is the $E$-plane (eigenvalues $\pm i$ $=$ the conjugate class pair
+$\{1,3\}$). \textbf{So the cusp-$0$ line \emph{is} the self-conjugate discriminant line, and the swapped
+cusp pair \emph{is} the conjugate class pair} --- the dictionary \emph{``$Q_+$ grading $=$ $A_3$
+discriminant grading''} holds inside the model. Consistently: $T_A G T_A^{-1}=G^{-1}$ (the discriminant
+conjugation $k\mapsto-k$), $q_{A_3}(1)=q_{A_3}(3)=\tfrac38$ (equal on the swapped pair) with
+$q_{A_3}(2)=\tfrac12$ fixed, and the two $D_4$ reflection classes separate exactly the glue arithmetic:
+$T_Ae_1=+e_1$, $\det=-1$ (glue-\emph{swapping}) vs $\Sigma e_1=-e_1$, $\det=+1$ (glue-\emph{fixing}),
+with $\Sigma=T_AG$. \emph{Honest scope:} the sheet question therefore carries \textbf{no separate \tP\
+residual any more} --- what remains is exactly the already-open $Q$-geometry realisation gate
+(\textsc{gate.qgeo}, the parabolic construction that realises the documented $Q$ on
+$\PP^1\!\setminus\!\mu_4$); conditional on that established typing, the sector$\to$sheet selection is
+\emph{closed}: up/down are the deck-odd pair, the leptons sit on the ramification, and the deck involution
+is the $A_3$-side spinor conjugation realised as $T_A$.
 \end{keybox}
 
 \begin{winbox}[Grand Mass Volume: the absolute mass-scaling normalisation \tI]

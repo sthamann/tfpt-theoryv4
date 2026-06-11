@@ -168,7 +168,7 @@ const NODES: DagNode[] = [
     marker: "[I] identity",
     title: "R, L — the flavor residue matrix",
     summary:
-      "The residue + winding matrix on the anchor a = (1,1,2). det R = 8 = h(D₅), principal 2-minors (2,3,5) with product h(E₈) = 30, ‖R‖_F² = 78 = dim E₆, χ_R = t³ − 9t² + 10t − 8, Σ L = 40. Inverse Anchor Theorem: 1ᵀM⁻¹1 = 1/atom and aᵀM⁻¹a = 1 for R, K, L. Operator-pencil geometry: det B(K+xQ) = (3x+2)(3x+5), a quadratic ⇒ y² = det B(K+xQ) is a double cover of the pencil line branched exactly at Koide x = −2/3 and carrier x = −5/3 — they are the two branch points (deck degree 2 = |ℤ₂| = the sheet; disc = 81 = N_fam⁴; separation = 1 transport period). Clearing matrices: 3K−2Q reproduces the D₅⊕A₃ glue (Σ = 240 = |R(E₈)|), 3K−5Q is charge-neutral. Block-det type checker det B = (9,10,16,40) for (Q,K,R,L). The relative operator T = 3 B(Q)⁻¹B(K) = [[5,11/3],[0,2]] has Spec {2,5}, tr 7 = scalaron, det 10 = A_Λ — the basis-invariant core. Forced Koide attractor: the unique branch-preserving Möbius map fixing q = 2,5 has multiplier (2/3)⁶ = the established transfer gap λ₂ (v54/56), so the Koide RG collapses to one identification; the clean rational split is non-generic (placement discriminants 81/49/40).",
+      "The residue + winding matrix on the anchor a = (1,1,2). det R = 8 = h(D₅), principal 2-minors (2,3,5) with product h(E₈) = 30, ‖R‖_F² = 78 = dim E₆, χ_R = t³ − 9t² + 10t − 8, Σ L = 40. Inverse Anchor Theorem: 1ᵀM⁻¹1 = 1/atom and aᵀM⁻¹a = 1 for R, K, L. Operator-pencil geometry: det B(K+xQ) = (3x+2)(3x+5), a quadratic ⇒ y² = det B(K+xQ) is a double cover of the pencil line branched exactly at Koide x = −2/3 and carrier x = −5/3 — they are the two branch points (deck degree 2 = |ℤ₂| = the sheet; disc = 81 = N_fam⁴; separation = 1 transport period). Clearing matrices: 3K−2Q reproduces the D₅⊕A₃ glue (Σ = 240 = |R(E₈)|), 3K−5Q is charge-neutral. Block-det type checker det B = (9,10,16,40) for (Q,K,R,L). The relative operator T = 3 B(Q)⁻¹B(K) = [[5,11/3],[0,2]] has Spec {2,5}, tr 7 = scalaron, det 10 = A_Λ — the basis-invariant core. Forced Koide attractor: the unique branch-preserving Möbius map fixing q = 2,5 has multiplier (2/3)⁶ = the established transfer gap λ₂ (v54/56), so the Koide RG collapses to one identification; the clean rational split is non-generic (placement discriminants 81/49/40). Branch-kernel selection: at each branch point the anchor block is rank 1 with integer kernels (carrier kernel = the democratic vector 1); the collapse direction (−1,1,0) makes up/down the deck-odd pair and puts the leptons ON the ramification — and the anchor-forced cusp conjugation T_A (a = e₂+e₃) realises the same deck action. The dictionary 'Q₊ grading = A₃ discriminant grading' is now DERIVED (G = T_A·Σ acts integrally as B₁⊕E on the cusp basis), so the sheet question carries no separate [P]: its residual folds into the one existing Q-geometry gate. The Koide flow has the canonical generator dq/dt = (Δ/N_fam)·det B(q); the discrete-vs-continuous question is experimental (n=3 steps ⇔ m_τ = 1776.9427 MeV, decision at σ(m_τ) ~ 0.01 MeV).",
     inputs: ["E₈ / A₃"],
     outputs: ["det 8, minors (2,3,5), Σ L = 40"],
     failure: "Wrong D₆ branch.",
@@ -182,6 +182,10 @@ const NODES: DagNode[] = [
       "v81_singular_pencil_matrices.py",
       "v82_koide_attractor_splitting.py",
       "v85_master_cover.py",
+      "v96_branch_kernel_selection.py",
+      "v97_sheet_conjugation_bridge.py",
+      "v98_discriminant_dictionary.py",
+      "v99_koide_flow_time.py",
     ],
   },
   {

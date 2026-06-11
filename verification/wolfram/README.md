@@ -90,13 +90,26 @@ side), this Wolfram path is shipped as source; it was authored to match the
 machine-checked Python results to the quoted precision. The two primitives
 `c3 = 1/(8π)` and `g_car = 5` are the only inputs.
 
-## Extension file (v84–v93) — pending first engine run
+## Extension file (v84–v99) — verified running
 
-`tfpt_readouts_extension.wl` mirrors the v84–v93 round (frozen registry,
+`tfpt_readouts_extension.wl` mirrors the v84–v99 round (frozen registry,
 master cover, reheating arithmetic, bulk uniqueness, carrier index, conical
-defect chain, spine tetrahedron, glue uniqueness, Koide relaxation toy).
-It is kept **separate** from `tfpt_readouts.wl` so the verified 101/101 base
-file is untouched. **Status: authored 2026-06-10 on a machine without a
-Wolfram Engine — values mirror the Python-verified numbers 1:1, but the file
-awaits its first `wolframscript` run** (ledger `GATE.WOLFRAM.02`, typed
-*pending*, not verified).
+defect chain, spine tetrahedron, glue uniqueness, Koide relaxation toy,
+sheet diamond `v94`, centered diamond `v95`, branch-kernel selection `v96`,
+sheet-conjugation bridge `v97`, discriminant dictionary `v98`, Koide flow
+time `v99`). It is kept **separate** from `tfpt_readouts.wl` so the
+verified 116/116 base file is untouched.
+
+**Status: verified.** First engine run 2026-06-11 (Wolfram Engine 14.3): the
+v84–v93 block passed **45/45** on first run; the v94–v99 blocks were added
+the same day. Current state:
+
+```
+--- Wolfram extension v84-v99: 83 passed, 0 failed ---
+ALL WOLFRAM EXTENSION CHECKS PASSED
+```
+
+(ledger `GATE.WOLFRAM.02`). The scipy-only parts of the round (the `v86`
+pivot ODE solve, the `v88` data pulls, the `v99` mpmath ODE probe of the
+time-1 map — its exact symbolic form *is* mirrored) stay Python-only and
+are flagged as such in the `.wl` comments.
