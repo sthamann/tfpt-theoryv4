@@ -558,7 +558,7 @@ five-order hierarchy is one ladder.}
 \end{figure}
 
 % =====================================================================
-\section{The $Q,\Sigma$ projection algebra: masses and transport from one operator}
+\section{The Sheet Diamond and the Winding Line: masses and transport from one surface}
 % =====================================================================
 The mass-power matrix and the transport word-length matrix are \emph{not} two independent machines: they
 are the two sheet-readouts of \emph{one} parabolic projection $Q$ acting on the residue matrix $R$. Collect
@@ -577,6 +577,45 @@ and since $I+\Sigma=\operatorname{diag}(2,0,0)$ and $Q$'s first column is $(3,3,
 sheet ($\Z_2$) $\times$ families ($\Z_3$) $=$ the $C_6$ transport. So the $\phiz$-mass powers are the
 $\Sigma$-odd readout, and the transport lengths are the $(I{+}\Sigma)$ readout, of the \emph{same}
 projection $Q$ on $R$.
+
+\begin{winbox}[The Sheet Diamond: all four operators are points of \emph{one} surface \tI\ (\veri{v94\_sheet\_diamond.py})]
+The whole flavor algebra lives on a single two-parameter operator surface,
+\[
+  M(s,t)=R+Q\,\operatorname{diag}(s,t,t):\qquad
+  R=M(0,0),\quad K=M(1,-1),\quad L=M(2,0),\quad F:=R{+}Q=M(1,1),
+\]
+with the two global invariants
+\[
+  \det M(s,t)=3st^2+9st+6s+t^2+5t+8,\qquad
+  \det B_{M(s,t)}=6st+12s+3t^2+15t+16 .
+\]
+The mass-transport pencil $K+xQ$ is the \emph{cut} $(s,t)=(1{+}x,\,x{-}1)$, on which the anchor-block
+determinant factorises as $(3x{+}2)(3x{+}5)$ --- the master cover of the operator-pencil sections below. The
+factorisation is \textbf{not generic}: the surface carries its own negative controls --- the diagonal cut
+$t{=}s$ gives $9s^2{+}27s{+}16$ with discriminant $153$ (non-square; the \emph{same} control discriminant as
+the $R$-direction pencils), and the $R{\to}L$ cut $t{=}0$ is linear (degenerate direction, no cover).
+\smallskip\\
+\noindent\textbf{The Winding Line.} On $R_s=R+s\,\mathbf 1e_1^\top$ (the $R\to L$ channel) anchor area and
+torsion volume run \emph{synchronously} for all $s$:
+\[
+  \boxed{\ \det R_s=8+2s,\qquad \det B_{R_s}=16+4s=2\det R_s\ },
+\]
+and the physical winding $s=6=|R^+(A_3)|$ is fixed by \emph{each} of three closure conditions alone:
+$\operatorname{tr}R_s=15=\dim A_3$, $\det R_s=20=\det L$, and the Coxeter lift $(R_s^\top a)_1=30=h(E_8)$.
+The mechanism is the \textbf{cofactor seam normal} $n=c_2{\times}c_3=(5,-9,6)$ (cross product of the
+second and third \emph{columns} of $R$) --- the common first adjugate row of $R$ \emph{and} $L$ (columns
+$2,3$ are winding-invariant) --- with
+\[
+  n\cdot\mathbf 1=2=|\Z_2|\ (\text{the per-winding determinant increment}),\qquad
+  n^\top R=(8,0,0),\qquad n^\top L=(20,0,0):
+\]
+the normal annihilates the stable columns, so \emph{generation one is the only open torsion channel} ---
+the $+6$ winding is not sorted by hand. \emph{Honest scope:} the winding line crosses the spectral
+\emph{reality} threshold at $s^*\!\approx\!2.83$ (not at $6$), so reality is a \emph{property} of the
+physical point --- $\operatorname{disc}\chi_L=39200=2(10\cdot14)^2$, spectrum real positive --- not its
+selector; and the corner $F=R{+}Q$ is an \emph{audit} operator (the $F_4{\times}G_2$ shadow:
+$\det B_F=52=\dim F_4$, $\sum B_F=196=(\dim G_2)^2$), not a physical transport.
+\end{winbox}
 
 \begin{winbox}[Spectra and the determinant ladder $\to|W(D_5)|$ \tI]
 The two operators carry the compiler atoms in their characteristic polynomials,

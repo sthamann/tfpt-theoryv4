@@ -52,9 +52,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/tfpt_2_standard_model.pdf": {
     href: "/papers/tfpt_2_standard_model.pdf",
     ...COMMON,
-    bytes: 957993,
+    bytes: 962413,
     sha256:
-      "3e437e35df80482d80dabc63287c7e6689417a3ddaef09ddf61c8b6a06e291fb",
+      "3dddfdd10309cdae094f1917e3a979abf05a99c2f090e504ff6384e2a579beaf",
     changelog:
       "The Standard Model in one φ₀-ladder, the flavor residue matrix, and the derived solar angle θ₁₂.",
   },
