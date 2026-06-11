@@ -751,4 +751,33 @@ DAS HEXAGON IST DAS SIGN-GETWISTETE FAMILIENSPEKTRUM (v118, Ledger
     => REST [P]: die WERTE des Woerterbuchs sind exakt; seine
        ADRESS-TABELLE (welcher Fermion-Slot auf welchem Hexagon-Site
        sitzt; Quark-Komposition) bleibt offen.
+
+ZWEITE REVIEW-VALIDIERUNG (v119, Ledger ARCH.TRIAD.01) -- Befund zur
+    externen Analyse vom 2026-06-11b:
+    NEU UND BESTAETIGT [I]:
+    (1) ANKER-QUOTIENTEN-TRIAS (benanntes Lemma): (e3,e1,e2)/p0 =
+        (2/3, 4/3, 5/3) = (Koide-Branch/Sheet-Ratio, Seed-Gain
+        |mu4|/N_fam, Carrier-Branch); die kanonischen Fluss-
+        Fixpunkte sind EXAKT (2,5) = (e3,e2), Inflexion 7/2 =
+        (e3+e2)/2 -- die wiederkehrenden Brueche sind die drei
+        normierten Anker-Koeffizienten.
+    (2) 121-AUDIT-LEMMA: (1+a)^T R (1+a) = 121 = 11^2 =
+        ||Pl(K)||_1^2 = (p3+1)^2 -- die Quark-11 erscheint ein
+        ZWEITES Mal als quadratische Anker-Norm von R; Sensitivitaet:
+        Orderings geben {105,121,135}, nur kanonisch = 121; Bonus:
+        1^T R 1 = 22 = 2x11, a^T R a = 40 = p1 p3. Typisiert AUDIT,
+        nicht tragend (Pluecker bleibt die Herleitung).
+    (3) Mikro-Identitaeten: Omega_adm = 2 p1 p2, 10b1 = 1 + p1 p3,
+        Delta_Y = e2^2 = p0^2 + 2 rank, h(E8) = e3 p0 e2,
+        rank = p0 + e2.
+    SCHON VORHANDEN (Review hat etabliertes erkannt): mu4-Projektion =
+        v115/v116; Anker-Triptychon = v104/v105; "innen frei" = v113;
+        Flavor-Flaeche M(s,t) + Kreuzform = v94/v95; der One-Liner
+        "Anchor erzeugt Syntax, Boundary erzeugt Skalen, E8 prueft"
+        steht woertlich in der introduction-Keybox.
+    EDITORIAL (offen, kein Check): Anchor-first-Einstieg konsequent
+        machen ({a, pi} statt {c3, g_car} als Praesentations-Start);
+        Anchor-Normalform-Tabelle (jede Zahl in eine von vier
+        Kategorien e_i / p_i / Quotient / pi-Dressing); Flavor nur
+        noch ueber M(s,t) einfuehren.
 ================================================================================

@@ -409,6 +409,14 @@ $\|\cdot\|_1=11$, $5\cdot11/(9\cdot13)=55/117$); and --- by Readout Rigidity (v4
 derived selector stratum and so does \emph{not} need any point-selection on $\Lambda^2F$. The quark residual is
 thereby re-typed from ``find the right scalar $y$'' to a closed exterior readout for the \emph{ratio}; only the
 \emph{absolute} amplitude scale ($U_{\mathrm{point}}$) stays as an anchor, no new scalar, no fishing.
+\smallskip\\
+\noindent\emph{Audit (the $121$ lemma, \veri{v119\_review\_validation\_2.py}):} the ``$11$'' has a second,
+independent appearance \tI: with $h=\mathbf1+a=(2,2,3)$ in the canonical anchor ordering,
+$h^TRh=121=11^2=\|\operatorname{Pl}(K)\|_1^2=(p_3+1)^2$ --- the quadratic \emph{anchor norm} of the
+residue operator $R$ reproduces the Plücker integer (sensitivity control: the three orderings of $h$
+give $\{105,121,135\}$; only the canonical one yields $121$). Bonus checksums:
+$\mathbf1^TR\mathbf1=22=2\times11$ (the entry sum of $R$) and $a^TRa=40=p_1p_3=10b_1-1$. Typed
+\emph{audit}, not load-bearing --- the oriented Plücker mechanism above remains the derivation.
 \veri{v42\_exterior\_leg.py}
 \smallskip\\
 \noindent\textbf{Bridge test (\veri{v43\_exterior\_bridge.py}).} The typing is confirmed: for the $SU(3)$

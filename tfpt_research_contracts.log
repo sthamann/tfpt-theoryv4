@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  11 JUN 2026 20:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  11 JUN 2026 20:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1139,7 +1139,7 @@ it/10.95 ^^V[]\OMS/lmsy/m/n/10.95 j\OT1/lmr/m/n/10.95 ) \OMS/lmsy/m/n/10.95 ! k
 0.95 k[] \OT1/lmr/m/n/10.95 = 11\OML/lmm/m/it/10.95 ;
  []
 
-LaTeX Font Info:    Trying to load font information for U+euf on input line 445
+LaTeX Font Info:    Trying to load font information for U+euf on input line 453
 .
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
@@ -1152,12 +1152,12 @@ File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
 [6]
 
 [7]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 4
-95.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 5
+03.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Underfull \hbox (badness 1102) in paragraph at lines 500--506
+Underfull \hbox (badness 1102) in paragraph at lines 508--514
 []$\OML/lmm/m/it/10.95 U[]$ []\T1/lmr/bx/n/10 (+20) [I][]\T1/lmr/m/n/10.95 (+20
 ) : \T1/lmr/bx/n/10.95 (+20) Read-out Rigid-ity \T1/lmr/m/n/10.95 (+20) --- on 
 the dis-crete stra-tum $\OMS/lmsy/m/n/10.95 S[] \OT1/lmr/m/n/10.95 (+20) = \OMS
@@ -1167,7 +1167,7 @@ the dis-crete stra-tum $\OMS/lmsy/m/n/10.95 S[] \OT1/lmr/m/n/10.95 (+20) = \OMS
 
 
 [8{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
-Overfull \hbox (1.44386pt too wide) detected at line 568
+Overfull \hbox (1.44386pt too wide) detected at line 576
 \OML/lmm/m/it/10.95 a[] \OT1/lmr/m/n/10.95 = [] [](6\OML/lmm/m/it/10.95 E \OT1/
 lmr/m/n/10.95 + \OML/lmm/m/it/10.95 R \OT1/lmr/bx/n/10.95 1\OT1/lmr/m/n/10.95 )
  = \OMS/lmsy/m/n/10.95 ^^@[] \OT1/lmr/m/n/10.95 ([] []  \OML/lmm/m/it/10.95 R\O
@@ -1180,7 +1180,7 @@ m/n/10.95 5\OML/lmm/m/it/10.95 R[]\OT1/lmr/bx/n/10.95 1\OT1/lmr/m/n/10.95 ) = [
 
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 654--664
+Underfull \hbox (badness 10000) in paragraph at lines 662--672
 \T1/lmr/bx/n/10.95 (+20) And that bound-ary mea-sure is a \T1/lmr/bx/it/10.95 (
 +20) rig-or-ously con-structed \T1/lmr/bx/n/10.95 (+20) net
  []
@@ -1189,7 +1189,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 654--664
 
 [10]
 
-[11] (./tfpt_research_contracts.aux)
+[11]
+
+[12] (./tfpt_research_contracts.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1199,11 +1201,11 @@ Package rerunfilecheck Info: File `tfpt_research_contracts.out' has not changed
 (rerunfilecheck)             Checksum: EA0F840AA5FE10FE18FBCF540447189D;594.
  ) 
 Here is how much of TeX's memory you used:
- 32462 strings out of 473190
- 640237 string characters out of 5715801
- 1113025 words of memory out of 5000000
- 54688 multiletter control sequences out of 15000+600000
- 718602 words of font info for 346 fonts, out of 8000000 for 9000
+ 32467 strings out of 473190
+ 640318 string characters out of 5715801
+ 1114025 words of memory out of 5000000
+ 54690 multiletter control sequences out of 15000+600000
+ 718694 words of font info for 347 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  116i,12n,121p,1020b,1048s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.
@@ -1232,10 +1234,10 @@ exlive/2025/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/local/texlive/2025
 /texmf-dist/fonts/type1/public/lm/lmtti10.pfb></usr/local/texlive/2025/texmf-di
 st/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texm
 f-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tfpt_research_contracts.pdf (11 pages, 619914 bytes).
+Output written on tfpt_research_contracts.pdf (12 pages, 622235 bytes).
 PDF statistics:
- 292 PDF objects out of 1000 (max. 8388607)
- 190 compressed objects within 2 object streams
- 28 named destinations out of 1000 (max. 500000)
+ 296 PDF objects out of 1000 (max. 8388607)
+ 193 compressed objects within 2 object streams
+ 29 named destinations out of 1000 (max. 500000)
  82613 words of extra memory for PDF output out of 89155 (max. 10000000)
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  11 JUN 2026 20:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  11 JUN 2026 20:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1160,130 +1160,132 @@ Overfull \hbox (20.29504pt too wide) detected at line 289
 []
  []
 
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <9> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 294.
 
 
 [4]
-Overfull \hbox (3.81992pt too wide) in paragraph at lines 311--311
+Overfull \hbox (3.81992pt too wide) in paragraph at lines 325--325
 []|\T1/lmtt/m/n/8 tfpt_3_e8_audit_bootstrap| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 311--311
+Underfull \hbox (badness 10000) in paragraph at lines 325--325
 []|\T1/lmtt/m/n/8 tfpt_horizon_readouts
  []
 
 
 
 [5]
-Overfull \hbox (13.0pt too wide) in paragraph at lines 397--398
+Overfull \hbox (13.0pt too wide) in paragraph at lines 411--412
  [] 
  []
 
 
-Underfull \hbox (badness 1789) in paragraph at lines 447--447
+Underfull \hbox (badness 1789) in paragraph at lines 461--461
 []|\T1/lmr/m/n/8 (+20) RP bound-ary ker-nel,
  []
 
 
-Underfull \hbox (badness 1028) in paragraph at lines 447--447
+Underfull \hbox (badness 1028) in paragraph at lines 461--461
 []|$\U/msb/m/n/8 P[]  \OMS/lmsy/m/n/8 n  \OML/lmm/m/it/8 ^^V[]$ \T1/lmr/m/n/8 (
 +20) four-puncture
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 447--447
+Underfull \hbox (badness 10000) in paragraph at lines 461--461
 []|$[] \OT1/lmr/m/n/8 (+20) 8$\T1/lmr/m/n/8 (+20) , mi-nors
  []
 
 
 
 [6{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
-<figures/status_heatmap.pdf, id=196, 607.068pt x 549.25201pt>
+<figures/status_heatmap.pdf, id=197, 607.068pt x 549.25201pt>
 File: figures/status_heatmap.pdf Graphic file (type pdf)
 <use figures/status_heatmap.pdf>
-Package pdftex.def Info: figures/status_heatmap.pdf  used on input line 456.
+Package pdftex.def Info: figures/status_heatmap.pdf  used on input line 470.
 (pdftex.def)             Requested size: 429.29416pt x 388.40443pt.
 
-Underfull \hbox (badness 7415) in paragraph at lines 463--463
+Underfull \hbox (badness 7415) in paragraph at lines 477--477
 []\T1/lmr/m/n/10.95 (+20) Figure 1: []Status heatmap, gen-er-ated di-rectly fro
 m the sin-gle source of truth
  []
 
 
 
-[7 <./figures/status_heatmap.pdf>]
+[7]
 
-[8]
+[8 <./figures/status_heatmap.pdf>]
 
 [9]
-Underfull \hbox (badness 1616) in paragraph at lines 626--626
+Underfull \hbox (badness 1616) in paragraph at lines 640--640
 \T1/lmr/m/n/9 (+20) de-coder core $\OML/lmm/m/it/9 Y; \OT1/lmr/m/n/9 (+20) [\OM
 L/lmm/m/it/9 u[]\OT1/lmr/m/n/9 (+20) ]\OML/lmm/m/it/9 ; u$\T1/lmr/m/n/9 (+20) ,
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 626--626
+Underfull \hbox (badness 10000) in paragraph at lines 640--640
 \T1/lmr/m/n/9 (+20) Calderón po-lar-iza-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 626--626
+Underfull \hbox (badness 10000) in paragraph at lines 640--640
 \T1/lmr/m/n/9 (+20) tion, car-rier de-coder
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 626--626
+Underfull \hbox (badness 10000) in paragraph at lines 640--640
 []|\T1/lmr/m/n/9 (+20) carrier/SM packet:
  []
 
 
-Underfull \hbox (badness 1776) in paragraph at lines 626--626
+Underfull \hbox (badness 1776) in paragraph at lines 640--640
 \OT1/lmr/m/n/9 (+20) 
 [][]48$\T1/lmr/m/n/9 (+20) , hy-per-charge,
  []
 
 
-Underfull \hbox (badness 1448) in paragraph at lines 626--626
+Underfull \hbox (badness 1448) in paragraph at lines 640--640
 []|\T1/lmr/m/n/9 (+20) EM clo-sure: $\OML/lmm/m/it/9 []$ \T1/lmr/m/n/9 (+20) v
 ia
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 626--626
+Underfull \hbox (badness 10000) in paragraph at lines 640--640
 [] \OML/lmm/m/it/9 L[]N[][]\OT1/lmr/m/n/9 (+20) 41$\T1/lmr/m/n/9 (+20) ; fla-vo
 r
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 626--626
+Underfull \hbox (badness 10000) in paragraph at lines 640--640
 []|\T1/lmr/m/n/9 (+20) admissibility/strong
  []
 
 
-Underfull \hbox (badness 4726) in paragraph at lines 626--626
+Underfull \hbox (badness 4726) in paragraph at lines 640--640
 \T1/lmr/m/n/9 (+20) CP/QFT: $\OML/lmm/m/it/9 ^^R[][]\OT1/lmr/m/n/9 (+20) 0$\T1/
 lmr/m/n/9 (+20) , OS
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 626--626
+Underfull \hbox (badness 10000) in paragraph at lines 640--640
 []|\T1/lmr/m/n/9 (+20) cosmology in-ter-face:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 626--626
+Underfull \hbox (badness 10000) in paragraph at lines 640--640
 \T1/lmr/m/n/9 (+20) FRW, $\OT1/lmr/m/n/9 (+20) ^^C[]$\T1/lmr/m/n/9 (+20) , scal
 aron,
  []
 
 
-Underfull \hbox (badness 2181) in paragraph at lines 626--626
+Underfull \hbox (badness 2181) in paragraph at lines 640--640
 \T1/lmr/m/n/9 (+20) re-heat-ing, lep-to-ge-n-e-sis,
  []
 
 
-Underfull \hbox (badness 1983) in paragraph at lines 626--626
+Underfull \hbox (badness 1983) in paragraph at lines 640--640
 \OML/lmm/m/it/9 C[]$\T1/lmr/m/n/9 (+20) , $\OML/lmm/m/it/9 a[]$\T1/lmr/m/n/9 (+
 20) , seam mixer,
  []
@@ -1293,57 +1295,57 @@ Underfull \hbox (badness 1983) in paragraph at lines 626--626
 [10]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 653.
+(hyperref)                removing `math shift' on input line 667.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\cdot' on input line 653.
+(hyperref)                removing `\cdot' on input line 667.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\cdot' on input line 653.
+(hyperref)                removing `\cdot' on input line 667.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 653.
+(hyperref)                removing `math shift' on input line 667.
 
 
 
 [11]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 6
-72.
+86.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 681.
+(hyperref)                removing `math shift' on input line 695.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mu' on input line 681.
+(hyperref)                removing `\mu' on input line 695.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 681.
+(hyperref)                removing `subscript' on input line 695.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 681.
+(hyperref)                removing `math shift' on input line 695.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 681.
+(hyperref)                removing `math shift' on input line 695.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 681.
+(hyperref)                removing `subscript' on input line 695.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 681.
+(hyperref)                removing `math shift' on input line 695.
 
-LaTeX Font Info:    Trying to load font information for U+euf on input line 689
+LaTeX Font Info:    Trying to load font information for U+euf on input line 703
 .
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
@@ -1352,14 +1354,14 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 727--727
+Underfull \hbox (badness 10000) in paragraph at lines 741--741
 []|\T1/lmr/m/n/10 (+20) carrier $\OT1/lmr/m/n/10 (+20) 3[]2$\T1/lmr/m/n/10 (+20
 ) , $[] \OML/lmm/m/it/10 S[][]\OT1/lmr/m/n/10 (+20) 16$\T1/lmr/m/n/10 (+20) , $
 \OML/lmm/m/it/10 N[][]\OT1/lmr/m/n/10 (+20) 3$\T1/lmr/m/n/10 (+20) ,
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 727--727
+Underfull \hbox (badness 10000) in alignment at lines 741--741
 [][][] 
  []
 
@@ -1370,15 +1372,15 @@ Underfull \hbox (badness 10000) in alignment at lines 727--727
 [13]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 803.
+(hyperref)                removing `math shift' on input line 817.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 803.
+(hyperref)                removing `subscript' on input line 817.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 803.
+(hyperref)                removing `math shift' on input line 817.
 
 
 
@@ -1387,22 +1389,22 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 [15]
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 975--975
+Underfull \hbox (badness 10000) in paragraph at lines 989--989
 []|\T1/lmr/m/n/9 (+20) solar an-gle
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 975--975
+Underfull \hbox (badness 10000) in paragraph at lines 989--989
 []|\T1/lmr/m/n/9 (+20) reactor an-gle
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 975--975
+Underfull \hbox (badness 10000) in paragraph at lines 989--989
 []|\T1/lmr/m/n/9 (+20) atmospheric
  []
 
 
-Underfull \hbox (badness 2205) in paragraph at lines 975--975
+Underfull \hbox (badness 2205) in paragraph at lines 989--989
 \OT1/lmr/m/n/9 (+20) (2\OML/lmm/m/it/9 ; \OT1/lmr/m/n/9 (+20) 3\OML/lmm/m/it/9 
 ; \OT1/lmr/m/n/9 (+20) 5)$\T1/lmr/m/n/9 (+20) , $\OML/lmm/m/it/9 ^^_[][]t[][]\O
 T1/lmr/m/n/9 (+20) 9\OML/lmm/m/it/9 t[][]\OT1/lmr/m/n/9 (+20) 10\OML/lmm/m/it/9
@@ -1414,574 +1416,579 @@ T1/lmr/m/n/9 (+20) 9\OML/lmm/m/it/9 t[][]\OT1/lmr/m/n/9 (+20) 10\OML/lmm/m/it/9
 [17]
 
 [18]
-Overfull \hbox (5.41505pt too wide) in paragraph at lines 1185--1185
+Overfull \hbox (5.41505pt too wide) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v2_carrier_pascal.py| 
  []
 
 
-Overfull \hbox (15.91502pt too wide) in paragraph at lines 1185--1185
+Overfull \hbox (15.91502pt too wide) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v9_neutrino_texture.py| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v10_projection_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v12_mass_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 \T1/lmtt/m/n/10 generation_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v14_carrier_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v15_bootstrap_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v16_solar_dual_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v17_hexagonal_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v19_monodromy_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v20_lepton_c_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v21_solar_product_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v22_open_gates_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v23_anchor_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v24_quark_ratio_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v25_frontier_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v26_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 \T1/lmtt/m/n/10 flavor_frontier_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v27_wall_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v29_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 \T1/lmtt/m/n/10 research_contract_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v30_d4_character_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v31_R_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v32_rh_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v33_explicit_flat_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v34_h2_bridge_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v35_quark_qcd_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v36_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 \T1/lmtt/m/n/10 spectral_action_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v37_plucker_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v38_uwall_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v39_uwall_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v40_harmonic_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v41_leg_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v42_exterior_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v43_exterior_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v44_carrier_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v45_family_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v46_grand_mass_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v47_selection_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v49_readout_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v51_boundary_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v52_pencil_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v53_compiler_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v54_seam_horizon_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v55_coxeter_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v56_unique_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v57_horizon_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v58_seam_horizon_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v59_area_law_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v60_lambda_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 \T1/lmtt/m/n/10 metrology_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v62_data_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v63_seam_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 \T1/lmtt/m/n/10 engineering_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v64_causal_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v65_falsification_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v66_e8_casimir_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v67_area_law_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v68_seeley_dewitt_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v69_d4_q_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v70_q_integer_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v71_simple_r_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v72_q_det_from_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v74_compiler_micro_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v75_upoint_to_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v76_gmetric_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v77_e8_conformal_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v79_review_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v80_operator_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v81_singular_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v82_koide_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 \T1/lmtt/m/n/10 attractor_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v83_e8net_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 \T1/lmtt/m/n/10 holomorphic_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v84_frozen_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v85_master_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v86_nstar_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v87_bulk_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 \T1/lmtt/m/n/10 uniqueness_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v88_cp_phase_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v89_carrier_index_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v90_conical_defect_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v91_spine_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v92_glue_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v93_koide_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v94_sheet_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v95_centered_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v96_branch_kernel_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v97_sheet_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 \T1/lmtt/m/n/10 conjugation_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v98_discriminant_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v99_koide_flow_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v101_horizon_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v102_seam_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v103_trisection_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v104_nariai_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v105_residual_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v106_review_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v107_quantum_clock_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v108_pascal_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v109_sheet_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v110_calderon_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v111_quadratic_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v112_selfcounting_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v113_quasifree_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v114_torsion_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v115_anchor_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v116_resonance_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v117_monodromy_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v118_hexagon_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 \T1/lmtt/m/n/10 family_
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
+[]|\T1/lmtt/m/n/10 v119_review_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmtt/m/n/10 v100_numerology_
  []
 
 
 
 [19]
-Overfull \vbox (4432.4075pt too high) has occurred while \output is active []
+Overfull \vbox (4495.4075pt too high) has occurred while \output is active []
 
 
 
@@ -1996,13 +2003,13 @@ Package rerunfilecheck Info: File `introduction.out' has not changed.
 (rerunfilecheck)             Checksum: 2F163A62F685EF1712E2083DB4D765E0;3963.
  ) 
 Here is how much of TeX's memory you used:
- 33992 strings out of 473190
- 676000 string characters out of 5715801
- 1432080 words of memory out of 5000000
- 56005 multiletter control sequences out of 15000+600000
- 738290 words of font info for 428 fonts, out of 8000000 for 9000
+ 34000 strings out of 473190
+ 676086 string characters out of 5715801
+ 1436958 words of memory out of 5000000
+ 56006 multiletter control sequences out of 15000+600000
+ 738880 words of font info for 432 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,16n,107p,1009b,1062s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,16n,107p,1009b,1064s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.
 pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/
 local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texl
@@ -2035,15 +2042,16 @@ sbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
 25/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2025/texmf-di
 st/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/ty
 pe1/public/lm/lmsy9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/
-lm/lmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt8.p
-fb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/lo
-cal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtti10.pfb></usr/local/texli
-ve/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/t
-exlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on introduction.pdf (21 pages, 973543 bytes).
+lm/lmtk10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.
+pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt8.pfb></usr/l
+ocal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/local/texliv
+e/2025/texmf-dist/fonts/type1/public/lm/lmtti10.pfb></usr/local/texlive/2025/te
+xmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/202
+5/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on introduction.pdf (21 pages, 1001545 bytes).
 PDF statistics:
- 602 PDF objects out of 1000 (max. 8388607)
- 357 compressed objects within 4 object streams
+ 607 PDF objects out of 1000 (max. 8388607)
+ 360 compressed objects within 4 object streams
  57 named destinations out of 1000 (max. 500000)
- 97050 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 97562 words of extra memory for PDF output out of 106986 (max. 10000000)
 

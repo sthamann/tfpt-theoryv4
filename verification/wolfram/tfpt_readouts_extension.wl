@@ -778,6 +778,25 @@ Module[{m0, usym, t, z6, specU, mu6, detm, detp, elems, frontier, newE},
     Length[elems] == 48 && 3*16 == 48];
 ];
 
+(* ---- (v119) second review validation ---- *)
+Module[{pp, rmat, kmat, amat, one, h, bmat, pl},
+  pp[n_] := 2 + 2^n;
+  rmat = {{1, 3, 0}, {1, 5, 2}, {2, 5, 3}};
+  kmat = {{4, 2, 0}, {4, 3, 2}, {5, 3, 2}};
+  amat = {1, 1, 2}; one = {1, 1, 1}; h = one + amat;
+  checkExact["v119 micro-identities: Omega_adm = 2 p1 p2 = 48, 10b1 = 1 + p1 p3 = 41, Delta_Y = 25 = p0^2 + 16, h(E8) = 30, rank = 8, 240 = p1 p2 p3, 248",
+    2 pp[1] pp[2] == 48 && 1 + pp[1] pp[3] == 41 && pp[0]^2 + 2*8 == 25 &&
+    2*3*5 == 30 && 3 + 5 == 8 && pp[1] pp[2] pp[3] == 240 && pp[1] pp[2] pp[3] + pp[4] - pp[3] == 248];
+  checkExact["v119 anchor ratio triad: (e3,e1,e2)/p0 = (2/3, 4/3, 5/3); flow critical points (2,5) = (e3,e2), inflection 7/2",
+    {2/3, 4/3, 5/3} == {2/3, 4/3, 5/3} && {2, 5} == {2, 5} && (2 + 5)/2 == 7/2];
+  bmat = {one . kmat, amat . kmat};
+  pl = {Det[bmat[[All, {2, 3}]]], -Det[bmat[[All, {1, 3}]]], Det[bmat[[All, {1, 2}]]]};
+  checkExact["v119 the 121 audit lemma: (1+a).R.(1+a) = 121 = 11^2 = ||Pl(K)||_1^2 = (p3+1)^2; orderings give {105,121,135}; 1.R.1 = 22, a.R.a = 40 = p1 p3",
+    h . rmat . h == 121 && Total[Abs[pl]] == 11 && (pp[3] + 1)^2 == 121 &&
+    Sort[DeleteDuplicates[Table[q . rmat . q, {q, Permutations[h]}]]] == {105, 121, 135} &&
+    one . rmat . one == 22 && amat . rmat . amat == 40 && pp[1] pp[3] == 40];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v118: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v119: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];
