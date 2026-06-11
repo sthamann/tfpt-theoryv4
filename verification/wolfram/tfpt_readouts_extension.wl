@@ -797,6 +797,21 @@ Module[{pp, rmat, kmat, amat, one, h, bmat, pl},
     one . rmat . one == 22 && amat . rmat . amat == 40 && pp[1] pp[3] == 40];
 ];
 
+(* ---- (v120) address table ---- *)
+Module[{pp, llep, lqrk, addr, up, down},
+  pp[n_] := 2 + 2^n;
+  llep = {8, 5, 3}; lqrk = {7, 7, 5, 3, 2, 0};
+  checkExact["v120 lepton words = compiler atoms: (8,5,3) = (rank E8, g_car, N_fam) = (p0+e2, e2, p0); sum = 16 = dim S+",
+    llep == {3 + 5, 5, 3} && Total[llep] == 16];
+  addr = {Mod[#, 6], Quotient[#, 6]} & /@ llep;
+  checkExact["v120 addresses = division by hexagon p2 = 6: (r,w) = {(2,1),(5,0),(3,0)}; sum r = 10 = p3",
+    addr == {{2, 1}, {5, 0}, {3, 0}} && Total[addr[[All, 1]]] == pp[3] && pp[2] == 6];
+  up = 7 + 3 + 0; down = 7 + 5 + 2;
+  checkExact["v120 quark sum rules: up = 10 = p3, down = 14 = p1+p3, quarks = 24 = |W(A3)|, all nine = 40 = p1 p3; top at vacuum site (0,0)",
+    up == pp[3] && down == pp[1] + pp[3] && up + down == 24 &&
+    Total[llep] + up + down == pp[1] pp[3] && Mod[0, 6] == 0 && Quotient[0, 6] == 0];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v119: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v120: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

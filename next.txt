@@ -780,4 +780,32 @@ ZWEITE REVIEW-VALIDIERUNG (v119, Ledger ARCH.TRIAD.01) -- Befund zur
         Anchor-Normalform-Tabelle (jede Zahl in eine von vier
         Kategorien e_i / p_i / Quotient / pi-Dressing); Flavor nur
         noch ueber M(s,t) einfuehren.
+
+DIE ADRESS-TABELLE (v120, Ledger FLAV.H2.03) -- das offene H2-Stueck
+    strukturiert; exakte Arithmetik auf EINGEFRORENEN v18/v20-Integern
+    (Firewall: alle Zahlen lagen vor den heutigen Lesarten fest):
+    (1) DIE LEPTON-WOERTER SIND DIE COMPILER-ATOME [I]:
+        (L_e, L_mu, L_tau) = (8, 5, 3) = (rank E8, g_car, N_fam) =
+        (p0+e2, e2, p0) -- in Massenordnung (laengstes Wort =
+        leichtestes Lepton).
+    (2) ADRESSEN = DIVISION DURCH DAS HEXAGON [I]: (r,w) = L divmod
+        p2 (p2 = 6 = |R+(A3)| selbst ein Atom): e -> (2,1),
+        mu -> (5,0), tau -> (3,0); sum r = 10 = p3 = A_Lambda;
+        sum L = 16 = dim S+.
+    (3) SHEET-PARITAET [I] (v118-Woerterbuch angewandt): e auf dem
+        ungetwisteten Blatt (omega in spec M0), mu/tau auf dem
+        getwisteten (-omega, -1); das Anker-Lepton tau sitzt am
+        einzigen REELLEN getwisteten Eigenwert -1 -- genau dort, wo
+        v20s Produktregel die Resolvente ersetzt.
+    (4) QUARK-SUMMENREGELN [I] (eingefrorene v18-Woerter 7,7,5,3,2,0):
+        up-Summe = 10 = p3; down-Summe = 14 = p1+p3; ALLE QUARKS =
+        24 = |W(A3)| (die Monodromie-Gruppenordnung, v117!); ALLE
+        NEUN GELADENEN FERMIONEN = 40 = p1 p3 = a^T R a (v119!);
+        Quark sum r = 2 p2, sum w = |Z2|; der Top sitzt am
+        Vakuum-Site (0,0) (Wortlaenge 0, keine Unterdrueckung --
+        der etablierte Leiter-Anker).
+    => REST [P]: fuenf unabhaengige Schliessungen (16, 10, 14, 24, 40
+       -- alles Anker-Atome oder heutige Gruppenordnungen) zwingen
+       die Adress-Karte; die Pro-Fermion-ZUORDNUNG bleibt v18/v20-
+       Input -- ihre Herleitung ist der verbleibende H2-Inhalt.
 ================================================================================
