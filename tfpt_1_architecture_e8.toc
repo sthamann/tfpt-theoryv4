@@ -3,20 +3,20 @@
 \contentsline {section}{\numberline {1}How to read this, and where it sits in Papers 1--7}{5}{section.1}%
 \contentsline {section}{\numberline {2}Headline: the Pascal compiler on five carrier slots}{8}{section.2}%
 \contentsline {subsection}{\numberline {2.1}$g_{\mathrm {car}}=5$ as the Pascal closure}{8}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}One master moment generates $40$, $41$, $240$, $\delta _2$}{9}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Compact $E_8$ compression and the role of $\nu ^c$}{9}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.2}One master moment generates $40$, $41$, $240$, $\delta _2$}{10}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Compact $E_8$ compression and the role of $\nu ^c$}{10}{subsection.2.3}%
 \contentsline {section}{\numberline {3}The $D_5\times A_3$ compiler: $E_8$ as a closure, not an input}{10}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Carrier $=D_5=\mathfrak {so}_{10}$ (proved)}{10}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Family $=A_3=\mathfrak {su}_4$ from $\mathbb P^1\setminus \mu _4$ (proved, with the metric settled)}{10}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.2}Family $=A_3=\mathfrak {su}_4$ from $\mathbb P^1\setminus \mu _4$ (proved, with the metric settled)}{11}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}The $\mu _4$ glue and the $5/4+3/4=2$ discriminant theorem (proved)}{11}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Glue-norm arithmetic, and three readings of $41$, $60$, $120$}{12}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}What the compiler outputs for the Standard Model and our reality}{13}{subsection.3.5}%
-\contentsline {section}{\numberline {4}Grammar I --- the carrier grammar ($3+2$)}{14}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Dual-root dictionary (everything from two charges)}{14}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Carrier arithmetic (proved identities)}{15}{subsection.4.2}%
+\contentsline {subsection}{\numberline {3.5}What the compiler outputs for the Standard Model and our reality}{14}{subsection.3.5}%
+\contentsline {section}{\numberline {4}Grammar I --- the carrier grammar ($3+2$)}{15}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Dual-root dictionary (everything from two charges)}{15}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Carrier arithmetic (proved identities)}{16}{subsection.4.2}%
 \contentsline {section}{\numberline {5}Grammar II --- the seed grammar (one decoder $u$)}{16}{section.5}%
-\contentsline {section}{\numberline {6}Grammar III --- the action grammar (exponentials of $\alpha ^{-1}_\star $)}{16}{section.6}%
-\contentsline {subsection}{\numberline {6.1}The EM closure: $\alpha ^{-1}_\star $ as an explicit fixed point (Paper 3, made explicit here)}{18}{subsection.6.1}%
+\contentsline {section}{\numberline {6}Grammar III --- the action grammar (exponentials of $\alpha ^{-1}_\star $)}{17}{section.6}%
+\contentsline {subsection}{\numberline {6.1}The EM closure: $\alpha ^{-1}_\star $ as an explicit fixed point (Paper 3, made explicit here)}{17}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}The decuple bridge (new, exact headline)}{19}{subsection.6.2}%
 \contentsline {subsection}{\numberline {6.3}The full power tower: $x^{1},x^{5},x^{10}$ on the carrier graph $K_5$}{19}{subsection.6.3}%
 \contentsline {subsection}{\numberline {6.4}Hubble is the square root of $\Lambda $ (corollary, exact)}{20}{subsection.6.4}%
@@ -25,7 +25,7 @@
 \contentsline {subsection}{\numberline {6.7}Discriminant action theorem: the ladder reads the hypercharge discriminant}{21}{subsection.6.7}%
 \contentsline {subsection}{\numberline {6.8}A two-dimensional action lattice}{21}{subsection.6.8}%
 \contentsline {section}{\numberline {7}The Einstein normaliser as a corrected tree value}{21}{section.7}%
-\contentsline {section}{\numberline {8}$\Lambda $-anchored metrology closure, and two anchors}{21}{section.8}%
+\contentsline {section}{\numberline {8}$\Lambda $-anchored metrology closure, and two anchors}{22}{section.8}%
 \contentsline {section}{\numberline {9}The landscape: $g_{\mathrm {car}}=5$ is overdetermined}{23}{section.9}%
 \contentsline {section}{\numberline {10}The $E_8$ carrier atlas --- stated unambiguously}{23}{section.10}%
 \contentsline {subsection}{\numberline {10.1}Level 1 --- original $E_8$ data of the series ({\small \textcolor {tfgreen}{\textbf {[I]}}})}{23}{subsection.10.1}%

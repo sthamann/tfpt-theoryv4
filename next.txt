@@ -525,4 +525,34 @@ CALDERON-SHEET-SELEKTIONSSATZ (v110, Ledger CAR.PAIR.02) -- die Antwort
        (b) ANALYTISCHER KERN: "der Zweipunkt-Kern zertifiziert nur
            Slot-Grade <= 2" -- das eigentliche Locality-Statement.
        Beide bewiesen => QBL => K=2 <=> g=5 schliesst die Carrier-Wahl.
+
+QUADRATIC-TRANSPORT-THEOREM (v111, Ledger CAR.QTRANS.01) -- die
+    TRANSPORT-HAELFTE des analytischen QBL-Kerns ist jetzt ein SATZ:
+    Seam-Transport nach Clifford-Grad graduiert (10 Feldoperatoren auf
+    dem 5-Slot-Fock-Raum; ganzzahliges Jordan-Wigner-Modell, Spanning-
+    Aussagen via mod-p-Vollrang-Zertifikate, gueltig ueber Q):
+    (1) PARITAET [I]: alle 10 linearen Woerter sind sheet-odd
+        (S+ -> S-), alle 45 quadratischen sheet-even -- code-erhaltender
+        Transport hat geraden Clifford-Grad (dieselbe Z2 wie v109/v110).
+    (2) MINIMALITAET [I]: sheet-even Woerter vom Grad <= 1 sind nur die
+        Skalare (dim 1 < 256) -- Grad 2 ist die erste nichttriviale
+        code-erhaltende Stufe.
+    (3) GENERATION [I]: die 45 Quadratiken (= dim so(10) = der
+        Lambda^2-Term des zertifizierten Turms 1+45+210) erzeugen den
+        GESAMTEN Code aus dem Vakuum bei Wortlaenge <= 2.
+    (4) VOLLSTAENDIGKEIT [I] (Burnside explizit): Produkte der Laenge
+        <= 2 spannen das VOLLE End(S+) = 256 -- jede Code-Operation
+        ueberhaupt ist ein Wort in Paar-Transport; alle hoeheren geraden
+        Grade (z.B. die 210 Quartiken) sind redundant.
+    => DER TRANSPORT-GRAD IST EXAKT 2: Grad <= 1 erzeugt nichts,
+       Grad 2 erzeugt alles. Ein Satz, keine Hypothese mehr.
+    (5) LEITER-GENERIZITAET (Anti-Overclaim): g=3 verhaelt sich
+        identisch (15 Quadratiken -> End = 16) -- der Satz selektiert
+        den GRAD, nicht den Rang; g-Selektion bleibt bei Pascal +
+        Rank-8 (v108/v14).
+    => QBL-REST NACH v109-v111: nur noch ZWEI Interface-Aussagen [P]:
+       (a) Seam-Calderon-Involution sheet-odd (v110a);
+       (b') zertifiziertes ZUSTANDS-Inventar = der <=2-Slot-Turm
+            (Pascal-Seite, v108).
+       Ueber den TRANSPORT ist nichts mehr hypothetisch.
 ================================================================================

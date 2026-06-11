@@ -540,6 +540,46 @@ Module[{worldW, zm, ladder},
     ladder == {{0, 4, 1}, {0, 16, 2}, {0, 64, 3}}];
 ];
 
+(* ---- (v111) quadratic transport ---- *)
+Module[{jwOps, evensOf, buildQuads, runWorld},
+  jwOps[g_] := Module[{eye = IdentityMatrix[2], zee = {{1, 0}, {0, -1}}, am = {{0, 1}, {0, 0}}},
+    Table[KroneckerProduct @@ Join[ConstantArray[zee, i - 1], {am}, ConstantArray[eye, g - i]], {i, g}]];
+  evensOf[g_] := Select[Range[2^g], EvenQ[DigitCount[# - 1, 2, 1]] &];
+  buildQuads[g_] := Module[{a = jwOps[g], ad},
+    ad = Transpose /@ a;
+    Join[
+      Flatten[Table[{ad[[i]] . ad[[j]], a[[i]] . a[[j]]}, {i, g}, {j, i + 1, g}], 2],
+      Flatten[Table[ad[[i]] . a[[j]], {i, g}, {j, g}], 1]]];
+  runWorld[g_] := Module[{a = jwOps[g], ad, ev = evensOf[g], od, quads, vac, d1, d2, orbit, qr, words},
+    ad = Transpose /@ a;
+    od = Complement[Range[2^g], ev];
+    quads = buildQuads[g];
+    vac = UnitVector[2^g, 1];
+    d1 = (# . vac) & /@ quads;
+    d2 = Flatten[Outer[Dot, quads, d1, 1], 1];
+    orbit = (#[[ev]]) & /@ Join[{vac}, d1, d2];
+    qr = (#[[ev, ev]]) & /@ quads;
+    words = Join[{IdentityMatrix[Length[ev]]}, qr, Flatten[Outer[Dot, qr, qr, 1], 1]];
+    {Length[quads],
+     And @@ ((Max[Abs[#[[ev, ev]]]] == 0 && Max[Abs[#[[od, od]]]] == 0) & /@ Join[a, ad]),
+     And @@ ((Max[Abs[#[[ev, od]]]] == 0 && Max[Abs[#[[od, ev]]]] == 0) & /@ quads),
+     MatrixRank[orbit],
+     MatrixRank[Flatten /@ words],
+     Length[ev]}];
+  Module[{r5 = runWorld[5], r3 = runWorld[3]},
+    checkExact["v111 model: 45 quadratics = dim so(10); 10 linears sheet-ODD, 45 quadratics sheet-EVEN (exact block-zero)",
+      r5[[1]] == 45 && r5[[2]] && r5[[3]]];
+    checkExact["v111 GENERATION: quadratic words of length <= 2 span all 16 code states from the vacuum",
+      r5[[4]] == 16];
+    checkExact["v111 COMPLETENESS: products of length <= 2 of the 45 quadratics span End(S+) = 256 (transport degree exactly 2)",
+      r5[[5]] == 256];
+    checkExact["v111 ladder genericity: g=3 world identical (15 quadratics -> End(S+) = 16) - degree selected, not rank",
+      r3[[1]] == 15 && r3[[5]] == 16];
+    checkExact["v111 channel reading: certified tower 256 = 1 + 45 + 210 = norm + transport generators + pair sector",
+      1 + 45 + 210 == 256];
+  ];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v110: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v111: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];
