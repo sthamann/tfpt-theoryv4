@@ -275,6 +275,23 @@ data, so the truncation $K=2$ is \emph{forced} rather than chosen; if proven, th
 \Rightarrow g{=}5\Rightarrow16\Rightarrow D_5\Rightarrow E_8$ closes the carrier choice. \emph{Audit:}
 the even-code transition reading $240=16\times15$ is exact arithmetic but non-unique ($240=16\times5\times3$
 is the established glue factorisation) and stays recorded, not promoted.
+\smallskip\\
+\noindent\textbf{The Sheet-Pairing Lemma (\veri{v109\_sheet\_pairing.py}) --- the first exact anchor of
+the hypothesis.} Character-exact weight-multiset combinatorics of the $D_5$ spinor weights
+$(\pm\tfrac12)^5$ gives: \emph{(i)} \textbf{no scalar within a sheet} --- the zero-weight multiplicity of
+$S^+\!\otimes S^+$ is $0$, because the odd slot count $g=5$ flips the sign parity of $-w$ (a parity
+theorem of the five-slot code); \emph{(ii)} \textbf{the scalar lives across the sheets}:
+\[
+  \boxed{\ S^+\!\otimes S^-=\Lambda^0\oplus\Lambda^2\oplus\Lambda^4\ }\quad(256=1+45+210),
+\]
+exact as weight multisets, with zero-mode grading $(1,5,10)$ $=$ the carrier code; \emph{(iii)}
+\textbf{sheet-diagonal $=$ odd forms}: $(S^+\!\otimes S^+)\cup(S^-\!\otimes S^-)=2\Lambda^1+2\Lambda^3+\Lambda^5$
+exactly --- within-sheet pairings are odd-form-valued, never scalar; \emph{(iv)} the scalar-bearing tower
+\textbf{tops at $\Lambda^{2K}$} with $K=2$ --- bilinear seam data reach exactly the Pascal-ladder degree
+(Paper~3). \emph{Consequence \tP:} the seam's single scalar two-point kernel is necessarily a
+\textbf{sheet pairing} (chirality-off-diagonal --- the same $\Z_2$ as the glue chiralities and the
+branch-kernel selection); the remaining QBL step is to show the Calder\'on kernel supplies exactly this
+pairing and nothing beyond.
 \end{keybox}
 
 \begin{keybox}[Hardening (P1): the Gauss--Bonnet origin of $c_3=\tfrac1{8\pi}$]

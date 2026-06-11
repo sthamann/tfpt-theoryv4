@@ -482,4 +482,22 @@ PASCAL-LEITER-SATZ (v108): 2^{g-1} = sum_{k<=K} C(g,k) <=> g = 2K+1 (exakt;
     QBL praezise formuliert: "Seam-Calderon-Datum = EIN Zweipunkt-Kern; der
     Carrier-Code wird von den zertifizierten Graden K<=2 erzeugt" --
     beweisbar aus RP waere der Upgrade-Pfad [A]/[P] -> [L].
+
+SHEET-PAIRING-LEMMA (v109, Ledger CAR.PAIR.01) -- der erste exakte
+    darstellungstheoretische Anker fuer QBL, charakter-exakt aus den
+    Spinor-Gewichten (+-1/2)^5 allein:
+    (1) KEIN SKALAR INNERHALB EINES BLATTES: Null-Gewichts-Multiplizitaet
+        von S+xS+ ist 0 -- der ungerade Slot-Count g=5 flippt die Paritaet
+        von -w (Paritaets-Satz des 5-Slot-Codes).
+    (2) DER SKALAR LEBT ZWISCHEN DEN BLAETTERN: S+xS- = L0+L2+L4 EXAKT als
+        Gewichts-Multimenge (256 = 1+45+210); Null-Moden-Graduierung
+        (1,5,10) = der Carrier-Code.
+    (3) BLATT-DIAGONAL = UNGERADE FORMEN: (S+xS+)u(S-xS-) = 2L1+2L3+L5
+        exakt -- nie skalar.
+    (4) Der skalartragende Turm endet bei L^{2K}, K=2 -- bilineare Seam-
+        Daten reichen exakt bis zum Pascal-Leiter-Grad (v108).
+    => QBL-LESART [P]: der eine skalare Seam-Kern ist notwendig ein
+    SHEET-PAIRING (chiralitaets-off-diagonal -- dieselbe Z2 wie Glues/
+    Branch-Kerne). Verbleibender QBL-Schritt: zeigen, dass der Calderon-
+    Kern GENAU dieses Pairing liefert und nichts darueber hinaus.
 ================================================================================

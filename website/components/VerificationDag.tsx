@@ -123,6 +123,7 @@ const NODES: DagNode[] = [
       "v1_e8_glue.py",
       "v44_carrier_exterior.py",
       "v108_pascal_ladder.py",
+      "v109_sheet_pairing.py",
     ],
   },
   {

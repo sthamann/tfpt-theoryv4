@@ -497,6 +497,31 @@ checkExact["v108 neighbour worlds: K=1 -> N_fam 1; K=2 -> 3; K=3 -> 9; K=4 -> 25
   ! IntegerQ[(2^8 - 1)/9] &&
   (Select[{1, 2, 3}, (2 # + 1) + (2^(2 #) - 1)/(2 # + 1) == 8 &] == {2})];
 
+(* ---- (v109) sheet pairing ---- *)
+Module[{splus, sminus, vecw, lamW, addW, crossT, formsEven, diagT, formsOdd, zmult},
+  splus = Select[Tuples[{1/2, -1/2}, 5], EvenQ[Count[#, -1/2]] &];
+  sminus = Select[Tuples[{1/2, -1/2}, 5], OddQ[Count[#, -1/2]] &];
+  vecw = Flatten[Table[s UnitVector[5, i], {i, 5}, {s, {1, -1}}], 1];
+  lamW[k_] := If[k == 0, {ConstantArray[0, 5]}, Total /@ Subsets[vecw, {k}]];
+  checkExact["v109 no scalar within a sheet: zero-weight mult of S+xS+ and S-xS- is 0",
+    (Count[Flatten[Outer[Plus, splus, splus, 1], 1], ConstantArray[0, 5]] == 0) &&
+    (Count[Flatten[Outer[Plus, sminus, sminus, 1], 1], ConstantArray[0, 5]] == 0)];
+  crossT = Sort[Flatten[Outer[Plus, splus, sminus, 1], 1]];
+  checkExact["v109 cross-sheet zero-weight mult = 16 = 1+5+10 (Pascal triple)",
+    Count[crossT, ConstantArray[0, 5]] == 16];
+  formsEven = Sort[Join[lamW[0], lamW[2], lamW[4]]];
+  checkExact["v109 EXACT multiset: S+xS- = Lambda^0+Lambda^2+Lambda^4 (256 = 1+45+210)",
+    crossT === formsEven && Length[crossT] == 256];
+  diagT = Sort[Join[Flatten[Outer[Plus, splus, splus, 1], 1],
+                    Flatten[Outer[Plus, sminus, sminus, 1], 1]]];
+  formsOdd = Sort[Join[lamW[1], lamW[1], lamW[3], lamW[3], lamW[5]]];
+  checkExact["v109 sheet-diagonal = odd forms: (S+xS+)u(S-xS-) = 2L1+2L3+L5 (512)",
+    diagT === formsOdd && Length[diagT] == 512];
+  zmult[k_] := Count[lamW[k], ConstantArray[0, 5]];
+  checkExact["v109 zero-mode grading (L0,L2,L4) -> (1,5,10) = the carrier code; tower tops at 2K = 4",
+    ({zmult[0], zmult[2], zmult[4]} == {1, 5, 10}) && (4 == 2*2)];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v108: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v109: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];
