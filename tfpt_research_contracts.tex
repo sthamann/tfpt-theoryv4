@@ -338,6 +338,33 @@ selector input (v19/v30); the \emph{residue} side is now \tI, while the holonomy
 diagonal $(0,\tfrac12,\tfrac12)$) remain \tN\ --- transcendental monodromy of an exact system.
 \end{keybox}
 
+\begin{keybox}[The monodromy is the Weyl group of $A_3$ --- the holonomy is exact \tI/\tN\ (\veri{v117\_monodromy\_weyl\_a3.py})]
+The last \tN\ item of the chain --- the holonomy \emph{values} --- closes: the unitarised monodromy of
+the exact $A_0^\star$ system is itself \emph{exact}, with entries in $\tfrac12\Z[i]$:
+\[
+  \boxed{\ \widetilde M_0=\begin{pmatrix}0&-\tfrac{1+i}2&\tfrac{1-i}2\\[2pt]
+  -\tfrac{1+i}2&-\tfrac i2&-\tfrac12\\[2pt]
+  \tfrac{1-i}2&-\tfrac12&\tfrac i2\end{pmatrix}\ }
+\]
+unitary, $\det=1$, $\operatorname{tr}=0$, $\chi=\lambda^3-1$ (the cusp class \emph{exactly}),
+$\widetilde M_0^3=\mathbf1$, and $\operatorname{diag}\widetilde M_0=(0,-\tfrac i2,+\tfrac i2)$ --- so
+$d_1=0$ and $\delta=\tfrac12$ are now \emph{matrix entries}, not observations; $(\widetilde M_0U)^4=\mathbf1$
+with $\operatorname{tr}(\widetilde M_0U)=1$ (the $\{1,i,-i\}$ branch, $d_1=0$ slice --- exactly where
+v114/v115 located the physical point). \emph{The group} \tI: exact enumeration of
+$\langle U,\widetilde M_0\rangle$ gives order $24$ with order statistics $(1,9,8,6)$ and character
+values $(3,-1,0,1)$ --- uniquely $S_4$ in its standard${}\otimes{}$sign representation, i.e.\ the
+(twisted) reflection representation of the \textbf{Weyl group of the family lattice $A_3$}:
+\[
+  \boxed{\ \text{monodromy}(U_{\mathrm{wall}})=W(A_3)=S_4,\qquad |W(A_3)|=4!=24\ }
+\]
+--- the flavor wall realises the $A_3$ factor of the glue $D_5\oplus A_3+\mu_4$ as its Weyl group ($U$
+$=$ a $4$-cycle, the $\mu_4$ deck; $\widetilde M_0$ $=$ a $3$-cycle, the family rotation).
+\emph{Identification \tN:} the ODE monodromy of $A_0^\star$ equals the exact $\widetilde M_0$ to
+$3.5\times10^{-10}$, and the invariant form $H$ is $U$-invariant to $10^{-11}$. \emph{Status:} holonomy
+values \tI; only the analytic identification stays \tN. The $\delta$ thread
+(v20 $\to$ v40/v41 $\to$ v114 $\to$ v115 $\to$ v117) is closed end to end.
+\end{keybox}
+
 \begin{keybox}[Exterior Leg Lemma --- the quark $u/d$ leg is a $\Lambda^2F$ area, not a scalar \tI/\tP]
 The v41 negative is a \emph{category error}, not a dead end. $u$ and $d$ share the hexagon-radial data
 $(r,w)=(1,1)$ ($L=7$ for both), and the $C_6$ resolvent $c(r,w)=|\mu_4|^w/(\tfrac54-\cos\tfrac{r\pi}3)$

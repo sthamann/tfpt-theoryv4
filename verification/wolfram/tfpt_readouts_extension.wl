@@ -711,6 +711,42 @@ Module[{a12, a13, a23, a0, usym, bmat, b0, b1, b1expect, lams, sing, gauge, conj
     Simplify[conjA[[2, 3]] - a23 Exp[I (phi2 - phi3)]] === 0];
 ];
 
+(* ---- (v117) monodromy = W(A3) ----
+   The [N] ODE identification (scipy monodromy of the exact A0* system)
+   is Python-only by convention; the exact statements are mirrored here. *)
+Module[{m0, usym, lam, tmat, prod, elems, frontier, newE, orders, chars, x, o, p},
+  m0 = {{0, -(1 + I)/2, (1 - I)/2}, {-(1 + I)/2, -I/2, -1/2}, {(1 - I)/2, -1/2, I/2}};
+  usym = DiagonalMatrix[{1, I, -I}];
+  lam = \[FormalLambda];
+  checkExact["v117 exact monodromy: M0 unitary, det 1, tr 0, char poly lam^3 - 1, M0^3 = 1, diag = (0, -i/2, i/2) => d1 = 0 and delta = 1/2 exact",
+    Simplify[ConjugateTranspose[m0] . m0] === IdentityMatrix[3] &&
+    Det[m0] === 1 && Tr[m0] === 0 &&
+    Simplify[CharacteristicPolynomial[m0, lam] + (lam^3 - 1)] === 0 &&
+    Simplify[MatrixPower[m0, 3]] === IdentityMatrix[3] &&
+    Diagonal[m0] === {0, -I/2, I/2}];
+  tmat = m0 . usym;
+  prod = Dot @@ Table[MatrixPower[usym, k] . m0 . MatrixPower[usym, 4 - k], {k, 0, 3}];
+  checkExact["v117 torsion/flatness: (M0 U)^4 = 1, tr(M0 U) = 1, prod_k U^k M0 U^{-k} = 1",
+    Simplify[MatrixPower[tmat, 4]] === IdentityMatrix[3] && Simplify[Tr[tmat]] === 1 &&
+    Simplify[prod] === IdentityMatrix[3]];
+  elems = <|Expand[IdentityMatrix[3]] -> True|>;
+  frontier = {IdentityMatrix[3]};
+  While[frontier =!= {},
+    newE = {};
+    Do[Module[{xg = Expand[g . e]},
+        If[! KeyExistsQ[elems, xg], elems[xg] = True; AppendTo[newE, xg]]],
+      {e, frontier}, {g, {usym, m0}}];
+    frontier = newE];
+  orders = Counts[Table[
+    o = 1; p = x; While[Expand[p] =!= IdentityMatrix[3], p = Expand[p . x]; o++]; o,
+    {x, Keys[elems]}]];
+  chars = Counts[Simplify[Tr[#]] & /@ Keys[elems]];
+  checkExact["v117 the group is W(A3) = S4: order 24, order statistics (1,9,8,6), character values (3,-1,0,1) with counts (1,9,8,6); 24 = |W(A3)| = 4!",
+    Length[elems] == 24 &&
+    Sort[Normal[orders]] === Sort[{1 -> 1, 2 -> 9, 3 -> 8, 4 -> 6}] &&
+    Sort[Normal[chars]] === Sort[{3 -> 1, -1 -> 9, 0 -> 8, 1 -> 6}] && 4! == 24];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v116: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v117: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];
