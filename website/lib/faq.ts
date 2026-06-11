@@ -24,7 +24,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     q: "Couldn't all the integer coincidences be numerology?",
-    a: "The discipline rule is: every load-bearing number must appear in at least one E₈ branching projection, which turns the number stock into a falsifiable raster. Beyond that, every [I] identity, [L] lattice theorem and [N] numerical fixed point is re-derived from the two axioms by an independent Python suite, mirrored on an independent Wolfram path, and recorded in a versioned status ledger.",
+    a: "The discipline rule is: every load-bearing number must appear in at least one E₈ branching projection, which turns the number stock into a falsifiable raster. Beyond that, every [I] identity, [L] lattice theorem and [N] numerical fixed point is re-derived from the two axioms by an independent Python suite, mirrored on an independent Wolfram path, and recorded in a versioned status ledger. Since v100 the charge is also quantified by an explicit null model: exhaustively enumerating a declared formula grammar (which provably contains every scored TFPT formula) against conservative data windows gives a joint look-elsewhere-corrected probability ≤ 10⁻³⁰·⁷ that a random theory of equal formula complexity reproduces the scorecard — including the α⁻¹ equation, where exactly one of 94 500 complexity-matched variants hits CODATA. Honestly stated: that is a null-model rejection conditional on the declared grammar, not a certificate — and the test has demonstrated power (perturbing φ₀ by 1% collapses the scorecard).",
   },
   {
     q: "What would kill the theory fastest?",

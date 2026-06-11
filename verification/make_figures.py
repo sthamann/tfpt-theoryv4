@@ -244,6 +244,95 @@ def fig_attractor():
     plt.close(fig)
 
 
+def _sds_horizons(mm):
+    """Black-hole and cosmological horizon radii (units 1/sqrt(Lambda))
+    for dimensionless mass m in [0, 1/3]: roots of r^3 - 3r + 6m."""
+    rb, rc = [], []
+    for m in mm:
+        roots = np.sort(np.roots([1.0, 0.0, -3.0, 6.0 * m]).real)
+        rb.append(max(roots[1], 0.0))   # black-hole horizon (smaller >= 0)
+        rc.append(roots[2])             # cosmological horizon
+    return np.array(rb), np.array(rc)
+
+
+def fig_sds_cover():
+    """SdS horizons over the mass line: two sheets merging at Nariai."""
+    mm = np.linspace(0, 1 / 3, 400)
+    rb, rc = _sds_horizons(mm)
+    fig, ax = plt.subplots(figsize=(6.8, 3.8))
+    ax.plot(mm, rc, color=C["blue"], lw=1.8,
+            label="cosmological horizon $r_c$")
+    ax.plot(mm, rb, color=C["gold"], lw=1.8,
+            label="black-hole horizon $r_b$")
+    ax.plot(mm, -(rb + rc), color=C["gray"], lw=1.2, ls=":",
+            label="virtual third root $-(r_b{+}r_c)$")
+    ax.scatter([1 / 3], [1.0], s=80, color=C["red"], zorder=4,
+               edgecolor="k", lw=0.5)
+    ax.scatter([1 / 3], [-2.0], s=50, color=C["red"], zorder=4,
+               edgecolor="k", lw=0.5)
+    ax.annotate("Nariai $m=\\frac{1}{3}=\\frac{1}{N_{\\rm fam}}$:\n"
+                "roots $(1,1,-2)$ $=$ traceless anchor",
+                (1 / 3, 1.0), textcoords="offset points", xytext=(-150, 14),
+                fontsize=9, color=C["red"])
+    ax.axvline(1 / 3, color=C["red"], lw=0.7, ls="--", alpha=0.5)
+    ax.axhline(0, color="k", lw=0.4, alpha=0.4)
+    ax.set_xlabel("dimensionless mass $m = M\\sqrt{\\Lambda}$")
+    ax.set_ylabel("horizon radii  $r\\sqrt{\\Lambda}$")
+    ax.set_title("SdS mass line as a double cover: two horizon sheets merge "
+                 "at the anchor point\n(disc $\\propto(1{-}3m)(1{+}3m)$: "
+                 "branch points $\\pm1/N_{\\rm fam}$, separation "
+                 "$2/3=|\\mathbb{Z}_2|/N_{\\rm fam}$)", fontsize=9.5)
+    ax.legend(fontsize=8, loc="center left")
+    ax.grid(alpha=0.25)
+    fig.tight_layout()
+    fig.savefig(os.path.join(OUT, "sds_cover.pdf"))
+    plt.close(fig)
+
+
+def fig_nariai_entropy():
+    """Entropy interpolation S_total/S_dS and the Koide-form root quotient."""
+    xx = np.linspace(0, 1, 300)
+    s_tot = (xx**2 + 1) / (xx**2 + xx + 1)
+    s_bh = xx**2 / (xx**2 + xx + 1)
+    s_cos = 1 / (xx**2 + xx + 1)
+    q_geom = (xx**2 + (xx + 1)**2 + 1) / (4 * (xx + 1)**2)
+    fig, (ax, ax2) = plt.subplots(1, 2, figsize=(8.6, 3.5))
+    ax.plot(xx, s_tot, color=C["blue"], lw=2.0, label="total")
+    ax.plot(xx, s_cos, color=C["green"], lw=1.3, ls="--",
+            label="cosmological sheet")
+    ax.plot(xx, s_bh, color=C["gold"], lw=1.3, ls="--",
+            label="black-hole sheet")
+    ax.axhline(2 / 3, color=C["red"], lw=1.0, ls=":",
+               label="Nariai bound $2/3=|\\mathbb{Z}_2|/N_{\\rm fam}$")
+    ax.axhline(1 / 3, color=C["gray"], lw=0.8, ls=":", alpha=0.7)
+    ax.scatter([1], [2 / 3], s=70, color=C["red"], zorder=4,
+               edgecolor="k", lw=0.5)
+    ax.set_xlabel("$x = r_b/r_c$")
+    ax.set_ylabel("$S/S_{dS}$")
+    ax.set_title("(a) $S_{\\rm tot}/S_{dS}=\\frac{x^2+1}{x^2+x+1}$ "
+                 "(denominator $=\\Phi_3$)", fontsize=9.5)
+    ax.legend(fontsize=7.5)
+    ax.grid(alpha=0.25)
+
+    ax2.plot(xx, q_geom, color=C["blue"], lw=2.0)
+    ax2.axhline(1 / 2, color=C["green"], lw=1.0, ls=":",
+                label="$1/2=\\delta=|\\mathbb{Z}_2|/|\\mu_4|$ (pure dS)")
+    ax2.axhline(3 / 8, color=C["red"], lw=1.0, ls=":",
+                label="$3/8=p_2(a)/e_1(a)^2$ (Nariai)")
+    ax2.scatter([0, 1], [0.5, 3 / 8], s=60, color=[C["green"], C["red"]],
+                zorder=4, edgecolor="k", lw=0.5)
+    ax2.set_xlabel("$x = r_b/r_c$")
+    ax2.set_ylabel("$Q_{\\rm geom}$")
+    ax2.set_title("(b) Koide-form quotient of the three roots:\nrange "
+                  "$[3/8,\\,1/2]$ $=$ the nonzero $SU(4)_1$ weights",
+                  fontsize=9.5)
+    ax2.legend(fontsize=7.5)
+    ax2.grid(alpha=0.25)
+    fig.tight_layout()
+    fig.savefig(os.path.join(OUT, "nariai_entropy.pdf"))
+    plt.close(fig)
+
+
 if __name__ == "__main__":
     fig_alpha_ablation()
     fig_mass_ladder()
@@ -251,4 +340,6 @@ if __name__ == "__main__":
     fig_status_heatmap()
     fig_coxeter_circle()
     fig_attractor()
+    fig_sds_cover()
+    fig_nariai_entropy()
     print("figures written to", os.path.normpath(OUT))

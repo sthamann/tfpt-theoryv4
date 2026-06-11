@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  11 JUN 2026 14:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  11 JUN 2026 14:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1129,11 +1129,11 @@ Package rerunfilecheck Info: File `tfpt_5_redteam.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 32097 strings out of 473190
- 634379 string characters out of 5715801
+ 32104 strings out of 473190
+ 634457 string characters out of 5715801
  1104177 words of memory out of 5000000
- 54539 multiletter control sequences out of 15000+600000
- 665900 words of font info for 232 fonts, out of 8000000 for 9000
+ 54540 multiletter control sequences out of 15000+600000
+ 666155 words of font info for 235 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  116i,11n,121p,1011b,1046s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/lo
@@ -1157,7 +1157,7 @@ ype1/public/lm/lmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public
 /lm/lmtk10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10
 .pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/
 local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tfpt_5_redteam.pdf (5 pages, 464403 bytes).
+Output written on tfpt_5_redteam.pdf (5 pages, 469833 bytes).
 PDF statistics:
  213 PDF objects out of 1000 (max. 8388607)
  129 compressed objects within 2 object streams

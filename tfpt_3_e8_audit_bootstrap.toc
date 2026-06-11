@@ -4,10 +4,10 @@
 \contentsline {section}{\numberline {2}The $(1,1,2)$ anchor microcode}{3}{section.2}%
 \contentsline {section}{\numberline {3}The residue and length matrices as spectral objects}{5}{section.3}%
 \contentsline {paragraph}{Bilinear anchor forms.}{5}{section*.2}%
-\contentsline {section}{\numberline {4}The secondary branching atlas}{6}{section.4}%
+\contentsline {section}{\numberline {4}The secondary branching atlas}{7}{section.4}%
 \contentsline {section}{\numberline {5}Group-theoretic audits (optional)}{8}{section.5}%
-\contentsline {section}{\numberline {6}Further audit lemmas (machine-verified this round)}{8}{section.6}%
-\contentsline {section}{\numberline {7}What this changes, and what stays open}{9}{section.7}%
+\contentsline {section}{\numberline {6}Further audit lemmas (machine-verified this round)}{9}{section.6}%
+\contentsline {section}{\numberline {7}What this changes, and what stays open}{10}{section.7}%
 \contentsline {part}{II\hspace {1em}The $E_8$ cascade bridge}{11}{part.2}%
 \contentsline {section}{\numberline {8}The old cascade, recalled}{11}{section.8}%
 \contentsline {section}{\numberline {9}The spine: every rung is a current number}{11}{section.9}%

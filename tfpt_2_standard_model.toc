@@ -6,7 +6,7 @@
 \contentsline {section}{\numberline {4}Charged leptons: completely closed in $\varphi _0^{\mathrm {ret}}$}{7}{section.4}%
 \contentsline {section}{\numberline {5}Quarks: hierarchy from the same word-lengths}{8}{section.5}%
 \contentsline {section}{\numberline {6}The Sheet Diamond and the Winding Line: masses and transport from one surface}{11}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Closing the audit gates: is $M{=}41$, $K$, $Q$ derived or imported?}{18}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.1}Closing the audit gates: is $M{=}41$, $K$, $Q$ derived or imported?}{19}{subsection.6.1}%
 \contentsline {section}{\numberline {7}Mixing: CKM and PMNS from holonomy}{20}{section.7}%
 \contentsline {paragraph}{Honest note on the search.}{21}{section*.2}%
 \contentsline {section}{\numberline {8}Neutrinos}{21}{section.8}%

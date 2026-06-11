@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  11 JUN 2026 14:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  11 JUN 2026 14:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1220,59 +1220,65 @@ Underfull \hbox (badness 10000) in paragraph at lines 151--151
  []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 166.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 166.
-
-<figures/coxeter_circle.pdf, id=123, 310.761pt x 310.761pt>
-File: figures/coxeter_circle.pdf Graphic file (type pdf)
-<use figures/coxeter_circle.pdf>
-Package pdftex.def Info: figures/coxeter_circle.pdf  used on input line 171.
-(pdftex.def)             Requested size: 214.65063pt x 214.65767pt.
-
 
 [2{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
-<figures/attractor.pdf, id=139, 462.52798pt x 260.17201pt>
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 188.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 188.
+
+<figures/coxeter_circle.pdf, id=139, 310.761pt x 310.761pt>
+File: figures/coxeter_circle.pdf Graphic file (type pdf)
+<use figures/coxeter_circle.pdf>
+Package pdftex.def Info: figures/coxeter_circle.pdf  used on input line 193.
+(pdftex.def)             Requested size: 214.65063pt x 214.65767pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figures/attractor.pdf, id=140, 462.52798pt x 260.17201pt>
 File: figures/attractor.pdf Graphic file (type pdf)
 <use figures/attractor.pdf>
-Package pdftex.def Info: figures/attractor.pdf  used on input line 199.
+Package pdftex.def Info: figures/attractor.pdf  used on input line 221.
 (pdftex.def)             Requested size: 345.30508pt x 194.24323pt.
 
 
-[3 <./figures/coxeter_circle.pdf>]
+[3]
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 216.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\alpha' on input line 216.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 216.
+(hyperref)                removing `math shift' on input line 238.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 216.
+(hyperref)                removing `\alpha' on input line 238.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 216.
+(hyperref)                removing `superscript' on input line 238.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Lambda' on input line 216.
+(hyperref)                removing `math shift' on input line 238.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 216.
+(hyperref)                removing `math shift' on input line 238.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 221--221
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Lambda' on input line 238.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 238.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 243--243
 []\T1/lmr/bx/n/10.95 (+20) The same fixed point sets EM, $\OML/lmm/m/it/10.95 S
 []$ \T1/lmr/bx/n/10.95 (+20) and $\OT1/lmr/m/n/10.95 (+20) ^^C$ []\T1/lmr/bx/n/
 10 (+20) [I][]\T1/lmr/bx/n/10.95 (+20) -form / []\T1/lmr/bx/n/10 (+20) [P][]\T1
@@ -1281,65 +1287,61 @@ Underfull \hbox (badness 10000) in paragraph at lines 221--221
 
 
 
-[4 <./figures/attractor.pdf>]
+[4 <./figures/coxeter_circle.pdf>]
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+[5 <./figures/attractor.pdf>]
 
-
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 348--348
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 370--370
 []|\T1/lmr/m/n/10 (+20) match ($\OMS/lmsy/m/n/10 ^^X$\T1/lmr/m/n/10 (+20) 9
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--348
+Underfull \hbox (badness 10000) in paragraph at lines 370--370
 []|\T1/lmr/m/n/10 (+20) match
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--348
+Underfull \hbox (badness 10000) in paragraph at lines 370--370
 []|\T1/lmr/m/n/10 (+20) match
  []
 
 
-Underfull \hbox (badness 2376) in paragraph at lines 348--348
+Underfull \hbox (badness 2376) in paragraph at lines 370--370
 []|\T1/lmr/m/n/10 (+20) mild ten-sion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--348
+Underfull \hbox (badness 10000) in paragraph at lines 370--370
 []|\T1/lmr/m/n/10 (+20) match
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--348
+Underfull \hbox (badness 10000) in paragraph at lines 370--370
 \T1/lmr/m/n/10 (+20) (Planck)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--348
+Underfull \hbox (badness 10000) in paragraph at lines 370--370
 \T1/lmr/m/n/10 (+20) / ten-sion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--348
+Underfull \hbox (badness 10000) in paragraph at lines 370--370
 []|\T1/lmr/m/n/10 (+20) future test
  []
 
 
 
-[6]
-
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 393--393
+Underfull \hbox (badness 10000) in paragraph at lines 415--415
 []\T1/lmr/bx/n/10.95 (+20) Geometric ori-gin of the seam ``$\OT1/lmr/m/n/10.95 
 (+20) 8$\T1/lmr/bx/n/10.95 (+20) '': one-sided Gauss--Bonnet []\T1/lmr/bx/n/10 
 (+20) [I][]
  []
 
 
-Underfull \hbox (badness 2237) in paragraph at lines 405--405
+Underfull \hbox (badness 2237) in paragraph at lines 427--427
 []\T1/lmr/bx/n/10.95 (+20) The boundary-CFT mir-ror: cen-tral charges $\OT1/lmr
 /m/n/10.95 (+20) =$ \T1/lmr/bx/n/10.95 (+20) com-piler atoms []\T1/lmr/bx/n/10 
 (+20) [I][]\T1/lmr/bx/n/10.95 (+20) /[]\T1/lmr/bx/n/10 (+20) [L][]
@@ -1349,30 +1351,30 @@ Underfull \hbox (badness 2237) in paragraph at lines 405--405
 
 [8]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 459.
+LaTeX Font Warning: Command \small invalid in math mode on input line 481.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 460.
+LaTeX Font Warning: Command \small invalid in math mode on input line 482.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 461.
+LaTeX Font Warning: Command \small invalid in math mode on input line 483.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 464.
+LaTeX Font Warning: Command \small invalid in math mode on input line 486.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 509--522
+Underfull \hbox (badness 10000) in paragraph at lines 531--544
 \T1/lmr/bx/n/10.95 (+20) Residual re-solved as an an-chor, not a gap
  []
 
 
-Underfull \hbox (badness 6316) in paragraph at lines 533--541
+Underfull \hbox (badness 6316) in paragraph at lines 555--563
 \T1/lmr/bx/n/10.95 (+20) And that one scale is the dimensional-analysis floor, 
 not a gap
  []
 
 
-Underfull \hbox (badness 5652) in paragraph at lines 542--548
+Underfull \hbox (badness 5652) in paragraph at lines 564--570
 \T1/lmr/bx/n/10.95 (+20) The last open piece, $\OML/lmm/m/it/10.95 G\OT1/lmr/m/
 n/10.95 (+20) 6$\T1/lmr/bx/n/10.95 (+20) , re-duces to a rigorously-constructed
  net
@@ -1387,7 +1389,7 @@ n/10.95 (+20) 6$\T1/lmr/bx/n/10.95 (+20) , re-duces to a rigorously-constructed
 [11]
 
 [12]
-Underfull \hbox (badness 1184) in paragraph at lines 659--664
+Underfull \hbox (badness 1184) in paragraph at lines 681--686
 []\T1/lmr/m/it/10.95 (+20) Uniqueness of the $\OML/lmm/m/it/10.95 ^^V[]$ \T1/lm
 r/m/it/10.95 (+20) lat-tice clo-sure \T1/lmr/m/n/10.95 (+20) --- \T1/lmr/bx/n/1
 0.95 (+20) al-ready es-tab-lished []\T1/lmr/bx/n/10 (+20) [L][]\T1/lmr/m/n/10.9
@@ -1395,7 +1397,7 @@ r/m/it/10.95 (+20) lat-tice clo-sure \T1/lmr/m/n/10.95 (+20) --- \T1/lmr/bx/n/1
  []
 
 
-Underfull \hbox (badness 6944) in paragraph at lines 659--664
+Underfull \hbox (badness 6944) in paragraph at lines 681--686
 \T1/lmr/m/n/10.95 (+20) ([]\T1/lmr/m/n/9 (+20) [\T1/lmtt/m/n/9 verification/v6_
 bootstrap.py\T1/lmr/m/n/9 (+20) ][][][\T1/lmtt/m/n/9 verification/v15_bootstrap
 _classification.py\T1/lmr/m/n/9 (+20) ][]\T1/lmr/m/n/10.95 (+20) ). So three
@@ -1404,44 +1406,46 @@ _classification.py\T1/lmr/m/n/9 (+20) ][]\T1/lmr/m/n/10.95 (+20) ). So three
 
 
 [13]
-Underfull \hbox (badness 1874) in paragraph at lines 760--760
+
+[14]
+Underfull \hbox (badness 1874) in paragraph at lines 782--782
 []|\T1/lmr/m/n/10 (+20) one $\OML/lmm/m/it/10 []$ \T1/lmr/m/n/10 (+20) sets EM
 , $\OML/lmm/m/it/10 S[]$ \T1/lmr/m/n/10 (+20) and $\OT1/lmr/m/n/10 (+20) ^^C$
  []
 
 
-Underfull \hbox (badness 2772) in paragraph at lines 760--760
+Underfull \hbox (badness 2772) in paragraph at lines 782--782
 []|\T1/lmr/m/n/10 (+20) horizon cross-links (Ja-cob-son/E-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 760--760
+Underfull \hbox (badness 10000) in paragraph at lines 782--782
 \T1/lmr/m/n/10 (+20) in-stein $\OT1/lmr/m/n/10 (+20) 8\OML/lmm/m/it/10 ^^Y[]\OT
 1/lmr/m/n/10 (+20) 1\OML/lmm/m/it/10 =c[]$\T1/lmr/m/n/10 (+20) , Hod $[] \OT1/l
 mr/m/n/10 (+20) 3$\T1/lmr/m/n/10 (+20) ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 760--760
+Underfull \hbox (badness 10000) in paragraph at lines 782--782
 []|\T1/lmr/bx/n/10 (+20) cyclic self-reproduction
  []
 
 
-
-[14]
-Overfull \hbox (18.5217pt too wide) in paragraph at lines 785--785
+Overfull \hbox (18.5217pt too wide) in paragraph at lines 807--807
 []|\T1/lmtt/m/n/10 v54_seam_horizon_keystones.py| 
  []
 
 
-Underfull \hbox (badness 1735) in paragraph at lines 787--790
+Underfull \hbox (badness 1735) in paragraph at lines 809--812
 \T1/lmtt/m/n/10.95 wolframscript -file verification/wolfram/tfpt_readouts.wl \T
 1/lmr/m/n/10.95 (+20) (all pass). Fig-ures are
  []
 
 
 
-[15] (./origin_theory.aux)
+[15]
+
+[16] (./origin_theory.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1450,11 +1454,11 @@ Package rerunfilecheck Info: File `origin_theory.out' has not changed.
 (rerunfilecheck)             Checksum: D5E28BD09DFE3B42F3A96B7BA7A78AA5;3125.
  ) 
 Here is how much of TeX's memory you used:
- 33586 strings out of 473190
- 671402 string characters out of 5715801
- 1138244 words of memory out of 5000000
- 55805 multiletter control sequences out of 15000+600000
- 724634 words of font info for 334 fonts, out of 8000000 for 9000
+ 33594 strings out of 473190
+ 671491 string characters out of 5715801
+ 1144244 words of memory out of 5000000
+ 55806 multiletter control sequences out of 15000+600000
+ 724941 words of font info for 337 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  86i,16n,96p,1010b,1049s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.
@@ -1486,10 +1490,10 @@ ublic/lm/lmtt9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lm
 tti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbo
 ls/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/s
 ymbols/msbm10.pfb>
-Output written on origin_theory.pdf (15 pages, 661756 bytes).
+Output written on origin_theory.pdf (16 pages, 666008 bytes).
 PDF statistics:
- 517 PDF objects out of 1000 (max. 8388607)
- 317 compressed objects within 4 object streams
- 48 named destinations out of 1000 (max. 500000)
+ 523 PDF objects out of 1000 (max. 8388607)
+ 322 compressed objects within 4 object streams
+ 49 named destinations out of 1000 (max. 500000)
  91903 words of extra memory for PDF output out of 106986 (max. 10000000)
 

@@ -39,6 +39,7 @@
 \newcommand{\cthree}{c_3}
 \newcommand{\Mbar}{\bar M_{\mathrm{Pl}}}
 \newcommand{\ainv}{\alpha^{-1}_\star}
+\newcommand{\Z}{\mathbb{Z}}
 \setlist{itemsep=2pt,topsep=3pt}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 
@@ -186,6 +187,75 @@ black hole in de Sitter (Nariai) is
   M_N\approx2.16\times10^{22}\,M_\odot\approx4.3\times10^{52}\,\mathrm{kg},\qquad S_N=\tfrac13 S_{dS}\qquad\tP,
 \]
 the absolute gravitational-capacity limit, not an observed structure.
+
+% =====================================================================
+\section{The maximal black hole is the anchor: SdS in seam units}
+% =====================================================================
+The Nariai limit is not just a capacity number --- written in compiler units, the entire
+Schwarzschild--de~Sitter (SdS) family lands on atoms that are already load-bearing elsewhere in TFPT,
+with no adjustable parameter on either side. \tI\ \veri{v101\_horizon\_anchor.py}
+
+\begin{keybox}[Nariai $=$ the anchor; the Koide $2/3$ is the entropy bound \tI\ (\veri{v101\_horizon\_anchor.py})]
+With $f(r)=1-2M/r-\Lambda r^2/3$, the horizon cubic at the maximal mass
+$M_N=1/(3\sqrt\Lambda)=1/(N_{\mathrm{fam}}\sqrt\Lambda)$ is, in units $1/\sqrt\Lambda$,
+\[
+  \boxed{\ t^3-3t+2=(t-1)^2(t+2)\ }\qquad\text{roots }(1,1,-2),
+\]
+with coefficients $(-3,2)=(-N_{\mathrm{fam}},|\Z_2|)$ --- and the root pattern is exactly the
+\textbf{traceless projection of the anchor}: $a-\tfrac{p_1(a)}{3}\mathbf 1=-\tfrac13(1,1,-2)$ for
+$a=(1,1,2)$ (compare $\chi_a=(t-1)^2(t-2)$, Paper~1). Five exact companions:
+\begin{itemize}\setlength\itemsep{2pt}
+\item \textbf{Entropy bound $=$ the Koide branch value.} Each Nariai horizon carries $S_{dS}/3=S_{dS}/N_{\mathrm{fam}}$
+and the total is $\boxed{S_{\mathrm{Nariai}}/S_{dS}=2/3=|\Z_2|/N_{\mathrm{fam}}}$ (deficit exactly $S_{dS}/3$). The
+interpolation in $x=r_b/r_c$ is the closed form
+$S_{\mathrm{tot}}/S_{dS}=(x^2{+}1)/(x^2{+}x{+}1)$ --- denominator $=\Phi_3(x)$, the $N_{\mathrm{fam}}$
+cyclotomic --- monotone from $1$ to $2/3$ with its minimum exactly at the merge (Fig.~\ref{fig:nariai}a).
+\item \textbf{Three-sheet conservation.} The cubic is traceless with fixed $e_2$, so
+$\pi\sum_i r_i^2=6\pi/\Lambda=|\Z_2|\,S_{dS}$ for \emph{every} $M$: the black hole redistributes entropy
+between the two physical sheets and the virtual third root; the three-sheet total never moves.
+\item \textbf{Koide-form quotient of the roots.} $Q_{\mathrm{geom}}=\sum r_i^2/(\sum|r_i|)^2$ runs
+monotonically over $[\tfrac38,\tfrac12]$: pure dS gives $\tfrac12=|\Z_2|/|\mu_4|=\delta$ (the half-step),
+Nariai gives $\tfrac38=p_2(a)/e_1(a)^2$ --- exactly the two nonzero $SU(4)_1$ conformal weights
+(Fig.~\ref{fig:nariai}b).
+\item \textbf{The mass line is a double cover.} $\operatorname{disc}_r\propto(1-3m)(1+3m)$ in
+$m=M\sqrt\Lambda$: branch points $m=\pm1/N_{\mathrm{fam}}$, separation $2/3=|\Z_2|/N_{\mathrm{fam}}$, deck involution
+$=$ the black-hole$\,\leftrightarrow\,$cosmological horizon swap --- the gravitational twin of the flavor
+sheet $\Z_2$ and of the split $N_{\mathrm{fam}}$-linear cover $(3x{+}2)(3x{+}5)$ of Paper~2 (Fig.~\ref{fig:sdscover}).
+\item \textbf{Temperature lemma / orientation.} $|\kappa_b/\kappa_c|=(2x{+}1)/(x(x{+}2))>1$ for $x<1$
+(equality iff $x=1$): the black-hole sheet is \emph{always} hotter, so evaporation flows \emph{away} from
+the merge --- the anchor configuration is the \textbf{repeller} and the democratic endpoint the attractor,
+the same orientation as the flavor flow (Koide attractor / carrier repeller, Paper~4). \emph{Audit reading.}
+\end{itemize}
+Completing the seam-unit table: $dM=\cthree\,\kappa\,dA$ (first law), $M=2\cthree\,\kappa A$ (Smarr),
+$S\le ER/(4\cthree)$ (Bekenstein), $P_H=\cthree/(1920\,M^2)$, lifetime
+$\tau=5120\pi M^3=128\,g_{\mathrm{car}}M^3/\cthree$ ($128=2^7$ the dS prefactor, $7$ the scalaron exponent;
+photon/geometric-optics conventions, typed external), Kerr $A_{\mathrm{ext}}=M^2/\cthree$ with
+$A_{\mathrm{ext}}/A_{\mathrm{Schw}}=1/2=1/|\Z_2|$ and $S_{\mathrm{ext}}=M^2/(4\cthree)$, and the
+Bekenstein--Mukhanov--Hod area quantum $4\ln3=\ln81=\ln(N_{\mathrm{fam}}^4)=\ln(\operatorname{disc}$ of the flavor
+cover$)$ (\tP\ as the QNM reading). \emph{Honest scope:} the GR identities are textbook facts; the \tI\
+content is six independent landings on already-load-bearing atoms with zero free parameters. The
+``carrier in the bulk'' reading (two glue chiralities $=$ two horizon sheets, ramification $=$ Nariai)
+stays \tP. No new data test ($M_N$ today $\sim10^{22}M_\odot$): a structure surface, not a measurement
+surface.
+\end{keybox}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.78\linewidth]{figures/sds_cover.pdf}
+\caption{The SdS mass line as a double cover: black-hole and cosmological horizon sheets merge at the
+Nariai point $m=1/N_{\mathrm{fam}}$, where the three roots form the traceless anchor pattern $(1,1,-2)$.
+\veri{v101\_horizon\_anchor.py}}
+\label{fig:sdscover}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.94\linewidth]{figures/nariai_entropy.pdf}
+\caption{(a) Total SdS entropy interpolates from $S_{dS}$ to the Nariai bound $\tfrac23 S_{dS}$ via
+$(x^2{+}1)/\Phi_3(x)$. (b) The Koide-form quotient of the three roots runs exactly over the nonzero
+$SU(4)_1$ weights $[\tfrac38,\tfrac12]$. \veri{v101\_horizon\_anchor.py}}
+\label{fig:nariai}
+\end{figure}
 
 % =====================================================================
 \section{Turnaround radius, gravitational waves, light}

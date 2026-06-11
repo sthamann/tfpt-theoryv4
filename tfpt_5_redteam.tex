@@ -281,4 +281,21 @@ inputs. \textbf{Again: no target was
 promoted; one residual was \emph{merged} (A), one was \emph{quantified} (D), one input was \emph{computed} (E).}
 \end{winbox}
 
+\begin{winbox}[Global look-elsewhere closure \tN\ (\veri{v100\_numerology\_null\_mc.py})]
+The per-target look-elsewhere traps recorded above (the $\pi/3+2\lambda_C^2$ alternative in Target D, the
+$\ln(46080)$ scale reading destroyed in \veri{v99\_koide\_flow\_time.py}) are local instances of the global
+adversarial question: \emph{could the whole scorecard be formula-fishing?} The numerology null test answers
+it with an explicit, declared null model run in adversarial mode: the \emph{entire} complexity-matched
+formula grammar (which provably contains every scored TFPT formula --- the null space includes the theory)
+is enumerated against conservative data windows. Joint formula-fishing probability $\prod_i p_i=10^{-25.8}$
+over the $13$ scored observables; all $94\,500$ $F_{U(1)}$ variants solved, exactly one hits CODATA
+($p_\alpha\le1.1{\cdot}10^{-5}$); total $\le10^{-30.7}$. The test is falsifiable in both directions: the
+negative controls (seed perturbation $1\%/10\%$ collapses TFPT's own hit count $13\to9/6$; data shuffling
+$\to1.2$) prove it has power, and the census is stable under budget/window variation ($<2$ orders). Honest
+limit, stated as such everywhere: this is a null-model rejection \emph{conditional on the declared grammar}
+--- no statistical test certifies a theory; the tension observables keep their large windows and contribute
+nothing to the number. Details and the grammar definition: the audit note (\texttt{tfpt\_3}) and the module
+docstring.
+\end{winbox}
+
 \end{document}

@@ -3,5 +3,6 @@
 \contentsline {section}{\numberline {2}Schwarzschild thermodynamics in four $c_3$-lines}{2}{section.2}%
 \contentsline {section}{\numberline {3}Page time and scrambling}{3}{section.3}%
 \contentsline {section}{\numberline {4}De Sitter and the Nariai bound from the $\Lambda $ closure}{3}{section.4}%
-\contentsline {section}{\numberline {5}Turnaround radius, gravitational waves, light}{3}{section.5}%
-\contentsline {section}{\numberline {6}Search targets (not claims)}{4}{section.6}%
+\contentsline {section}{\numberline {5}The maximal black hole is the anchor: SdS in seam units}{3}{section.5}%
+\contentsline {section}{\numberline {6}Turnaround radius, gravitational waves, light}{4}{section.6}%
+\contentsline {section}{\numberline {7}Search targets (not claims)}{5}{section.7}%

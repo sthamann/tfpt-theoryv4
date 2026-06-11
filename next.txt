@@ -312,3 +312,40 @@ STAND DER URSPRUENGLICHEN P-LISTE: P1 geschlossen modulo GATE.QGEO (v96-v98);
 P2 verengt + experimentell entscheidbar (v82/v93/v99); P3/P4/P6 geloest/typisiert
 (v85/v86); P5 bleibt niedrig-prior offen (Genus-0-Buehne, durch v85 gestuetzt).
 ================================================================================
+
+================================================================================
+ADDENDUM 2026-06-11 (spaeter Nachmittag)  --  v101: DER CARRIER IM BULK
+(Ledger HOR.NARIAI.01; Figuren sds_cover.pdf, nariai_entropy.pdf)
+================================================================================
+EXPLORATION "Carrier sitzt im Bulk eines Schwarzen Lochs" ausgefuehrt: SdS
+(Schwarzes Loch im de-Sitter-Bulk) in Seam-Einheiten landet auf bereits
+tragenden Atomen -- sechs unabhaengige Treffer, null freie Parameter:
+
+  (1) NARIAI = ANKER: Horizont-Kubik bei M_N = 1/(N_fam sqrt(L)) ist
+      t^3-3t+2 = (t-1)^2(t+2), Wurzeln (1,1,-2) = spurfreie Projektion des
+      Ankers a=(1,1,2); Koeffizienten (-N_fam, |Z2|).
+  (2) KOIDE-2/3 = NARIAI-ENTROPIE-SCHRANKE: S/Horizont = S_dS/N_fam, total
+      (|Z2|/N_fam) S_dS; Interpolation (x^2+1)/Phi_3(x) (N_fam-Kreisteilung!).
+  (3) DREI-BLAETTER-ERHALTUNG: pi Sum r_i^2 = |Z2| S_dS fuer jedes M.
+  (4) Q_geom der drei Wurzeln in [3/8, 1/2] = die zwei nichttrivialen
+      SU(4)_1-Gewichte (rein-dS -> delta = 1/2; Nariai -> p2(a)/e1(a)^2 = 3/8).
+  (5) MASSENLINIE = DOUBLE COVER: disc ~ (1-3m)(1+3m), Branch +-1/N_fam,
+      Separation 2/3; Deck = Horizont-Tausch (Gravitations-Zwilling der
+      Sheet-Z2).
+  (6) TEMPERATUR-LEMMA: |kappa_b/kappa_c| = (2x+1)/(x(x+2)) > 1 =>
+      Verdampfung fliesst WEG vom Merge-Punkt: ANKER = REPELLER, demokratischer
+      Endpunkt = Attraktor -- dieselbe Orientierung wie der Flavor-Fluss (v82:
+      Carrier-Repeller, Koide-Attraktor). [Audit-Lesart]
+  (7) Seam-Einheiten-Tabelle: dM = c3 kappa dA; Smarr 2c3; Bekenstein 1/(4c3);
+      P_H = c3/(1920 M^2); tau = 128 g_car M^3/c3 (128 = 2^7 = dS-Praefaktor);
+      Kerr A_ext = M^2/c3 (1/2 = 1/|Z2|, 1/4 = 1/|mu4|); Flaechenquant
+      4 ln3 = ln(N_fam^4) = ln(disc des Flavor-Covers).
+
+EHRLICH: GR-Identitaeten sind Lehrbuch; [I] ist die parameterfreie Landung auf
+den Atomen; die Bulk-Lesart (zwei Glue-Chiralitaeten = zwei Horizont-Blaetter,
+Ramifikation = Nariai) bleibt [P]. Keine neue Messflaeche (M_N ~ 1e22 M_sun).
+NEUE LEITFRAGE daraus (fuer G_metric/P2-Erzaehlung): "Anker = Repeller,
+demokratisch = Attraktor" gilt jetzt in BEIDEN Sektoren (Flavor-Relaxation und
+BH-Verdampfung) -- Kandidat fuer ein gemeinsames Variationsprinzip des Seams;
+noch keine Rechnung, nur Richtung.
+================================================================================

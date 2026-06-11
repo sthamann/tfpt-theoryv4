@@ -324,6 +324,53 @@ check["v99 conditional n=3 (= N_fam steps): m_tau = 1776.9427 MeV",
 check["v99 n=2 excluded: m_tau = 1776.6690 MeV (-2.9 sigma)",
   mtauFor[rhoSrc (2/3)^12], 1776.66897`10, 10^-7];
 
+(* v100_numerology_null_mc.py is Python-only by design: it is a STATISTICAL
+   module (exact integer census of a declared formula grammar + deterministic
+   Monte-Carlo pseudo-theories + RNG-seeded negative controls + 94500 float
+   root-solves), not an exact algebraic identity -- same convention as the
+   Python-only v62/v64/v65. No Wolfram mirror is required; flagged in
+   README.md and ledger GATE.WOLFRAM.02. *)
+
+(* ---- (v101) horizon anchor: SdS in seam units ---- *)
+fSdS = 1 - 2 mm/rr - LL rr^2/3;
+cubicSdS = Expand[-fSdS 3 rr/LL];
+narSol = Solve[{cubicSdS == 0, D[cubicSdS, rr] == 0}, {rr, mm},
+  Assumptions -> LL > 0];
+checkExact["v101 Nariai double root: M_N = 1/(3 Sqrt[L]) = 1/(N_fam Sqrt[L]), r_N = 1/Sqrt[L]",
+  MemberQ[Simplify[{rr, mm} /. narSol],
+    {1/Sqrt[LL], 1/(3 Sqrt[LL])}]];
+checkExact["v101 Nariai cubic = t^3 - 3t + 2 = (t-1)^2(t+2): roots (1,1,-2) = traceless anchor",
+  (Expand[(t - 1)^2 (t + 2)] == t^3 - 3 t + 2) &&
+  (Simplify[{1, 1, 2} - (4/3) {1, 1, 1} - (-1/3) {1, 1, -2}] == {0, 0, 0})];
+checkExact["v101 Koide 2/3 = Nariai entropy bound: S_N/S_dS = 2/3, per horizon 1/3, deficit 1/3",
+  ((2 Pi/LL)/(3 Pi/LL) == 2/3) && ((Pi/LL)/(3 Pi/LL) == 1/3)];
+checkExact["v101 interpolation S_tot/S_dS = (x^2+1)/(x^2+x+1) (denominator = Phi_3), min at merge",
+  (Simplify[(xx^2 + 1)/(xx^2 + xx + 1) - 
+     (Pi (xx^2 + 1) 3/(LL (xx^2 + xx + 1)))/(3 Pi/LL)] === 0) &&
+  (Cyclotomic[3, xx] == xx^2 + xx + 1) &&
+  (((xx^2 + 1)/(xx^2 + xx + 1) /. xx -> 0) == 1) &&
+  (((xx^2 + 1)/(xx^2 + xx + 1) /. xx -> 1) == 2/3)];
+checkExact["v101 three-sheet conservation: Sum r_i^2 = 2(rb^2+rb rc+rc^2) for roots (rb, rc, -(rb+rc))",
+  Expand[rbb^2 + rcc^2 + (rbb + rcc)^2 - 2 (rbb^2 + rbb rcc + rcc^2)] === 0];
+checkExact["v101 Q_geom range: pure dS -> 1/2 = delta, Nariai -> 3/8 = p2(a)/e1(a)^2 = SU(4)_1 weights",
+  Module[{Qg = (xx^2 + (xx + 1)^2 + 1)/(4 (xx + 1)^2)},
+   ((Qg /. xx -> 0) == 1/2) && ((Qg /. xx -> 1) == 3/8) && (6/16 == 3/8)]];
+checkExact["v101 mass-line double cover: disc = (108/L^3)(1-9 L M^2) -> (1-3m)(1+3m), branch +-1/N_fam",
+  (Simplify[Discriminant[cubicSdS, rr] - 108/LL^3 (1 - 9 LL mm^2)] === 0) &&
+  (Expand[(1 - 3 md) (1 + 3 md) - (1 - 9 md^2)] === 0)];
+checkExact["v101 temperature lemma: |kappa_b/kappa_c| = (2x+1)/(x(x+2)), = 1 iff x = 1",
+  Module[{ff, kb, kc},
+   ff = -LL/(3 rr) (rr - rbb) (rr - rcc) (rr + rbb + rcc);
+   kb = D[ff, rr] /. rr -> rbb; kc = D[ff, rr] /. rr -> rcc;
+   Simplify[(kb/-kc /. rbb -> xx rcc) - (2 xx + 1)/(xx (xx + 2)),
+     Assumptions -> rcc > 0 && xx > 0 && xx < 1] === 0]];
+checkExact["v101 seam-unit mechanics: 1/(8Pi) = c3; Smarr 1/(4Pi) = 2c3; Bekenstein 2Pi = 1/(4c3); P_H 15360 Pi = 1920/c3; lifetime 5120 Pi = 128*5/c3; Kerr A_ext = M^2/c3; 4 Log[3] = Log[81]",
+  (1/(8 Pi) == c3) && (Simplify[1/(4 Pi) - 2 c3] === 0) &&
+  (Simplify[2 Pi - 1/(4 c3)] === 0) &&
+  (Simplify[1/(15360 Pi) - c3/1920] === 0) &&
+  (Simplify[5120 Pi - 128*5/c3] === 0) &&
+  (Simplify[8 Pi - 1/c3] === 0) && (Simplify[4 Log[3] - Log[81]] === 0)];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v99: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v101: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

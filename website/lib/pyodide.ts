@@ -122,6 +122,7 @@ function parseOutput(raw: string): Omit<RunResult, "raw" | "error"> {
 /** Extra data files a script reads from its own directory at runtime. */
 const SCRIPT_ASSETS: Record<string, string[]> = {
   "v84_frozen_registry.py": ["predictions_frozen.json"],
+  "v100_numerology_null_mc.py": ["predictions_frozen.json"],
 };
 
 export async function runScript(

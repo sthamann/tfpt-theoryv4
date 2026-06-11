@@ -255,7 +255,7 @@ const NODES: DagNode[] = [
     marker: "[P] conditional",
     title: "Gravity & cosmology — the geometry channel",
     summary:
-      "The spectral action gives R + R²; the scalaron mass is M = c₃^(7/2) M̄ = 3.06×10¹³ GeV (exponent 7 = Ω_adm − 10 b₁). From the same attractor: n_s = 1 − 2/N★ and r = 12/N★² over the frozen band N★ ∈ [50,60]; the scalaron-reheating chain (v86) sharpens this conditionally to N★ = 51.4 ⇒ n_s = 0.9611, r = 0.0045 — recorded with its tensions (A_s coherence disfavours the slow Higgs channel at −11.4σ; the measured A_s requires near-instantaneous reheating). Λ ∼ e⁻²ᵅ⁻¹, H₀ ∼ √Λ. Gate 2: the IR tier is gap-decoupled (Δ_eff = 1.648 > 0), and the ambient measure G6 is holographically reduced to the rigorously-constructed (E₈)₁ lattice net (c = 8 = 5 + 3). After v83 + v87 the whole Target-A gate is ONE theorem: prove the seam–Calderón boundary net is holomorphic with c = 8 — then (E₈)₁ is the unique net (Minkowski–Siegel) AND the 2D bulk is unique (LR/KLM/BKLR; SO(16)₁ counter-model admits six modular invariants). Every scale is a ratio to one v_geo — the dimensional-analysis floor.",
+      "The spectral action gives R + R²; the scalaron mass is M = c₃^(7/2) M̄ = 3.06×10¹³ GeV (exponent 7 = Ω_adm − 10 b₁). From the same attractor: n_s = 1 − 2/N★ and r = 12/N★² over the frozen band N★ ∈ [50,60]; the scalaron-reheating chain (v86) sharpens this conditionally to N★ = 51.4 ⇒ n_s = 0.9611, r = 0.0045 — recorded with its tensions (A_s coherence disfavours the slow Higgs channel at −11.4σ; the measured A_s requires near-instantaneous reheating). Λ ∼ e⁻²ᵅ⁻¹, H₀ ∼ √Λ. Gate 2: the IR tier is gap-decoupled (Δ_eff = 1.648 > 0), and the ambient measure G6 is holographically reduced to the rigorously-constructed (E₈)₁ lattice net (c = 8 = 5 + 3). After v83 + v87 the whole Target-A gate is ONE theorem: prove the seam–Calderón boundary net is holomorphic with c = 8 — then (E₈)₁ is the unique net (Minkowski–Siegel) AND the 2D bulk is unique (LR/KLM/BKLR; SO(16)₁ counter-model admits six modular invariants). Every scale is a ratio to one v_geo — the dimensional-analysis floor. New classical-gravity fingerprint (v101): the maximal black hole in the de Sitter bulk (Nariai) has horizon roots (1,1,−2) = the traceless anchor, its entropy bound is exactly the Koide 2/3 = |ℤ₂|/N_fam, the SdS mass line is itself a split double cover (deck = horizon swap), and evaporation flows away from the anchor point — the same repeller/attractor orientation as the flavor relaxation. Six atom landings, zero free parameters.",
     inputs: ["c₃ (P1)", "E₈"],
     outputs: ["Λ, A_s, n_s, r, scalaron M"],
     failure: "Ambient reflection-positivity fails.",
@@ -270,6 +270,7 @@ const NODES: DagNode[] = [
       "v83_e8net_holomorphic_uniqueness.py",
       "v86_nstar_reheating.py",
       "v87_bulk_uniqueness_reduction.py",
+      "v101_horizon_anchor.py",
     ],
   },
 
