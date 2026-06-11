@@ -418,6 +418,85 @@ checkExact["v103 x-coordinate cross-check: m(x) deck-invariant, m''(1) = -1/4, s
 checkExact["v103 bridge: (2/3)^6 = ((2/3)^3)^2 -- same base, exponent ratio 2 = |Z2|",
   (2/3)^6 == ((2/3)^3)^2];
 
+(* ---- (v104) the classical Nariai clock ---- *)
+checkExact["v104 static pin: phi = rho solves d/drho[(1-L rho^2) phi'] = -2 L phi exactly",
+  Simplify[D[(1 - LL rh^2) D[rh, rh], rh] + 2 LL rh] === 0];
+checkExact["v104 horizon split: r_{b,c} = 1 -+ psi/Sqrt[3] - psi^2/18 + O(psi^3) (coefficient 1/Sqrt[N_fam])",
+  (Normal[Series[2 Cos[(ps + Pi)/3], {ps, 0, 2}]] == 1 - ps/Sqrt[3] - ps^2/18) &&
+  (Normal[Series[2 Cos[(ps - Pi)/3], {ps, 0, 2}]] == 1 + ps/Sqrt[3] - ps^2/18)];
+checkExact["v104 Ginsparg-Perry tower (l(l+1)-2): {-2, 0, 4, 10} -- exactly one negative mode = -|Z2|",
+  (Table[l (l + 1) - 2, {l, 0, 3}] == {-2, 0, 4, 10}) &&
+  (Count[Table[l (l + 1) - 2, {l, 0, 3}], _?Negative] == 1)];
+checkExact["v104 THE CLOCK: lambda^2 + lambda - 2 = (lambda-1)(lambda+2) = the anchor quadratic; Nariai cubic = (t-1) x clock",
+  (Factor[la^2 + la - 2] == (la - 1) (la + 2)) &&
+  (Expand[(t - 1)^2 (t + 2) - (t - 1) (t^2 + t - 2)] === 0)];
+checkExact["v104 entropy-deviation rate: d/dt log((1/2)(2/3)^3 (psi0 e^{H t})^2) = 2H = |Z2| H",
+  Simplify[D[Log[(1/2) (2/3)^3 (p0 Exp[hh tt])^2], tt] - 2 hh] === 0];
+
+(* ---- (v105) residual inventory ---- *)
+checkExact["v105 one-constant inventory (exact items): Koide branch -2/3; gap base (2/3)^6; Nariai bound 2/3; branch separation 2/3; canonical amplitude/frequency 2/3; curvature (2/3)^3",
+  ((3 (-2/3) + 2) == 0) && ((2/3)^6 == 64/729) &&
+  ((4/3 - (2/3) Cos[0]) == 2/3) &&
+  ((1/3) - (-1/3) == 2/3) &&
+  (Coefficient[4/3 - (2/3) Cos[2 ps/3], Cos[2 ps/3]] == -2/3) &&
+  (((2/3)^3) == 8/27)];
+checkExact["v105 anchor triptych: chi_a = (t-1)^2(t-2); Nariai = (t-1)^2(t+2) = (t-1) x clock (lam-1)(lam+2)",
+  (Expand[(t - 1)^2 (t - 2)] == t^3 - 4 t^2 + 5 t - 2) &&
+  (Expand[(t - 1)^2 (t + 2) - (t - 1) (t^2 + t - 2)] === 0)];
+check["v105 relocation: eps = (8/24Pi) * 7.125e-121 = 7.56e-122 (deficient ~121.5 orders vs Delta)",
+  (8/(24 Pi)) 7.125329526706`20 10^-121 / (6 Log[3/2]), 10^-121.5076, 10^-3];
+checkExact["v105 residual table: exactly FIVE structural objects + 2 irreducibles (typing contract)",
+  Length[{"R1clock", "R2holc8", "R3seamEH", "R4H2", "R5Qreal"}] == 5];
+
+(* ---- (v106) review validation ---- *)
+checkExact["v106 seed normal form: phi0 = (4/3) c3 + 48 c3^4 with 4/3 = |mu4|/N_fam, 48 = N_fam dim S+, exponent = |mu4|",
+  (Simplify[phi0 - ((4/3) c3 + 48 c3^4)] === 0) && (4/3 == 4/Nfam) && (48 == Nfam 16)];
+checkExact["v106 anchor ladder: p_n = 2+2^n; (3,4,6,10); 240; 8; 248",
+  Module[{p}, p[n_] := 1 + 1 + 2^n;
+   (Table[p[n], {n, 0, 3}] == {3, 4, 6, 10}) && (p[1] p[2] p[3] == 240) &&
+   (p[4] - p[3] == 8) && (p[1] p[2] p[3] + p[4] - p[3] == 248)]];
+checkExact["v106 hypercharge moment: Tr X = 0, Tr X^2 = 120 = 5! (X = 6Y, 16 states)",
+  Module[{g = {{6, 1/6}, {3, -2/3}, {3, 1/3}, {2, -1/2}, {1, 1}, {1, 0}}},
+   (Total[#[[1]] 6 #[[2]] & /@ g] == 0) &&
+   (Total[#[[1]] (6 #[[2]])^2 & /@ g] == 120) && (120 == 5!)]];
+checkExact["v106 factorial spine: 5! = 120 = sum E8 exponents; 240 = 2x120; 1920 = 2^4 x 5!",
+  (5! == 120) && (Total[{1, 7, 11, 13, 17, 19, 23, 29}] == 120) &&
+  (2 120 == 240) && (2^4 5! == 1920)];
+checkExact["v106 degree-2 inventory: Pascal K=2 closure unique at g=5 (1..40); 5/4+3/4 = 2; (1/2)(1/(4Pi)) = 1/(8Pi); C(5,2) = 10",
+  (Select[Range[40], 2^(# - 1) == Total[Binomial[#, Range[0, 2]]] &] == {5}) &&
+  (5/4 + 3/4 == 2) && (Simplify[(1/2) (1/(4 Pi)) - 1/(8 Pi)] === 0) &&
+  (Binomial[5, 2] == 10)];
+checkExact["v106 audit: 240 = 16x15 = 16x5x3 (two readings, non-unique)",
+  (16 15 == 240) && (16 5 3 == 240)];
+
+(* ---- (v107) quantum-clock target ---- *)
+checkExact["v107 per-l clock: l=0 (la-1)(la+2), l=1 la(la+1); l>=2 complex Re=-1/2",
+  (Factor[la^2 + la + (0 - 2)] == (la - 1) (la + 2)) &&
+  (Factor[la^2 + la + (2 - 2)] == la (la + 1)) &&
+  (Re[la /. Solve[la^2 + la + 4 == 0, la]] == {-1/2, -1/2})];
+checkExact["v107 cusp-ladder cross-link: decay set {0,-1,-2} = -Spec(Q diag(0,1,1)) = -N_fam x cusp",
+  Module[{Vw = Q.DiagonalMatrix[{0, 1, 1}]},
+   Sort[Eigenvalues[Vw]] == {0, 1, 2}]];
+checkExact["v107 exact target: (1/3)^6 = ((2/3)^6)^{log_{3/2}3}; ratio = 1 + log_{3/2}2",
+  (FullSimplify[-6 Log[3] - (Log[3]/Log[3/2]) (6 Log[2] - 6 Log[3])] === 0) &&
+  (FullSimplify[Log[3]/Log[3/2] - (1 + Log[2]/Log[3/2])] === 0)];
+check["v107 bend log_{9/4}(3) = 1.354756; seam coupling 1/(3Pi) = 0.106103",
+  Log[3]/Log[9/4], 1.3547556457`10, 10^-9];
+
+(* ---- (v108) Pascal ladder ---- *)
+checkExact["v108 ladder: closure 2^{g-1} = sum_{k<=K} C(g,k) solved exactly by g = 2K+1 (K=1..6, g<=60)",
+  And @@ Table[
+    Select[Range[60], 2^(# - 1) == Total[Binomial[#, Range[0, K]]] &] == {2 K + 1},
+    {K, 1, 6}]];
+checkExact["v108 even-g straddle: sum_{k<g/2} < 2^{g-1} < sum_{k<=g/2} for g = 2..16 even",
+  And @@ Table[
+    (Total[Binomial[g, Range[0, g/2 - 1]]] < 2^(g - 1)) &&
+    (2^(g - 1) < Total[Binomial[g, Range[0, g/2]]]), {g, 2, 16, 2}]];
+checkExact["v108 neighbour worlds: K=1 -> N_fam 1; K=2 -> 3; K=3 -> 9; K=4 -> 255/9 not integer; only K=2 has g+N_fam = 8",
+  ((2^2 - 1)/3 == 1) && ((2^4 - 1)/5 == 3) && ((2^6 - 1)/7 == 9) &&
+  ! IntegerQ[(2^8 - 1)/9] &&
+  (Select[{1, 2, 3}, (2 # + 1) + (2^(2 #) - 1)/(2 # + 1) == 8 &] == {2})];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v103: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v108: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

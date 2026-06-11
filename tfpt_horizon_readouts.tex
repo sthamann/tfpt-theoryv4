@@ -339,6 +339,52 @@ $(2/3)^3$. \veri{v103\_trisection\_normal\_form.py}}
 \label{fig:trisection}
 \end{figure}
 
+\begin{winbox}[The classical clock speaks anchor --- and the honest $(2/3)$-test \tI/\tP\ (\veri{v104\_nariai\_clock.py})]
+The clock question of the previous box has a \emph{classical} half, and it is pure GR
+(Ginsparg--Perry~1983; Bousso--Hawking class): linearize around the Nariai geometry
+$dS_2\times S^2$. \textbf{Static pin \tI:} on the $dS_2$ static patch the function $\phi(\rho)=\rho$
+satisfies $\frac{d}{d\rho}\bigl[(1-\Lambda\rho^2)\phi'\bigr]=-2\Lambda\phi$ \emph{exactly} --- and this
+static mode \emph{is} the exact SdS two-horizon deformation, so the $S^2$-radius modulus mass is pinned
+internally: $m^2=-2\Lambda=-|\Z_2|\Lambda$ (the Laplace-type form of the linearization is the one
+external GR import, typed honestly). The Euclidean spectrum is the Ginsparg--Perry tower
+$(l(l+1)-2)\Lambda$: exactly \emph{one} negative mode $-|\Z_2|\Lambda$. \textbf{The clock \tI:} in
+Hubble units the homogeneous modes $\phi\sim e^{\lambda Ht}$ obey
+\[
+  \boxed{\ \chi_{\mathrm{clock}}(\lambda)=\lambda^2+\lambda-2=(\lambda-1)(\lambda+2)\ }
+\]
+--- \textbf{the anchor quadratic}: eigenvalues $\{1,-2\}$ $=$ the distinct anchor roots, and the Nariai
+cubic factors as $(t-1)^2(t+2)=(t-1)\cdot\chi_{\mathrm{clock}}(t)$. The anchor thus appears a
+\emph{third} time: as configuration roots, as the curvature base, and as the spectrum of the linearized
+clock. The horizon split is linear in the canonical angle with coefficient $1/\sqrt{\Nfam}$, and the
+entropy deviation grows at exactly $2H=|\Z_2|\times$Hubble. \textbf{Honest $(2/3)$-test \tP:} the
+classical clock eigenvalues are \emph{integers}, not $(2/3)$-powers --- the $(2/3)$-powers stay in the
+functional (curvature $(2/3)^{\Nfam}$). The conversion curvature$\to$rate at one loop (quantum
+(anti-)evaporation) remains external QFT input: the bridge to the flavor rate $(2/3)^{2\Nfam}$ is
+\emph{not} closed here. The seam variational principle now has exactly \emph{one} missing object: the
+quantum clock.
+\end{winbox}
+
+\begin{winbox}[The quantum-clock target, made quantitative \tI/\tP\ (\veri{v107\_quantum\_clock\_target.py})]
+Instead of guessing the quantum clock, its job description can be pinned exactly. \textbf{(1) The
+classical clock already lives on the cusp ladder \tI:} across the physical Ginsparg--Perry modes
+($l=0$: $(\lambda{-}1)(\lambda{+}2)$; $l=1$: $\lambda(\lambda{+}1)$) the decay exponents are
+\[
+  \boxed{\ \{0,-1,-2\}=-\operatorname{Spec}(V)=-\Nfam\times\text{cusp weights}\ }
+\]
+--- exactly the grading that carries the transfer operator's eigenspaces (Papers~2/6); the $l\ge2$ modes
+are damped oscillations with $\operatorname{Re}\lambda=-\tfrac12=-\delta$ (audit). \textbf{(2) The exact
+target \tI:} the transfer rates $\{0,\Delta,6\ln3\}$ are \emph{not} weight-linear ---
+$\mathrm{rate}(2)/\mathrm{rate}(1)=\log_{3/2}3=1+\log_{3/2}2=2.7095$, with the exact identity
+$(1/3)^6=\bigl((2/3)^6\bigr)^{\log_{3/2}3}$: \emph{the quantum clock must bend the weight-linear spectrum
+by $\log_{9/4}3=1.35476$ per weight step}. \textbf{(3) Coupling landscape \tI:} the dimensionless clock
+coupling $\kappa=(c/24\pi)(\Lambda/\bar M_{\mathrm{Pl}}^2)$ with $c=8$ is $7.6\times10^{-122}$ at the
+cosmological Nariai (hopeless) and $\kappa=1/(3\pi)=0.106$ at seam curvature --- the only regime where an
+$O(0.35)$ bend is reachable, and it is borderline non-perturbative: one-loop linear response cannot fix
+the bend; an $O(1)$ resummation or an exact seam construction is required. \emph{Status \tP:} R1 is
+sharpened from ``find a clock'' to ``produce the bend $\log_{3/2}3$ on the cusp ladder at coupling
+$O(1/3\pi)$''. Nothing is fitted; the identification stays open.
+\end{winbox}
+
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.9\linewidth]{figures/seam_units.pdf}

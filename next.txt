@@ -388,4 +388,98 @@ fehlende P2-Transfergenerator. NEUE ZIELFORM: "EINE Uhr, zwei bekannte
 Geometrien." Kandidat fuer die Uhr: die semiklassische near-Nariai-Dynamik
 (Bousso-Hawking-Klasse) in dS-Hubble-Einheiten -- externe QFT-Physik, ehrlich
 zu typisieren, NICHT aus der Grammatik ableitbar ohne neuen Mechanismus.
+
+UHR, KLASSISCHE HAELFTE GERECHNET (v104, Ledger HOR.CLOCK.01): Die klassische
+near-Nariai-Uhr ist reine GR und liefert -- DEN ANKER, zum dritten Mal:
+  - Statischer Pin [I]: phi(rho)=rho loest die dS2-Static-Patch-Gleichung mit
+    m^2 = -2 Lambda = -|Z2| Lambda EXAKT (die exakte SdS-Familie selbst pinnt
+    die Modulus-Masse; Laplace-Typ der Linearisierung = Standard-GR,
+    Ginsparg-Perry 1983 / Bousso-Hawking 1997, extern typisiert).
+  - Ginsparg-Perry-Turm [I]: (l(l+1)-2)Lambda -- genau EIN negativer Mode.
+  - DIE UHR [I]: in Hubble-Einheiten chi_clock(lambda) = lambda^2+lambda-2 =
+    (lambda-1)(lambda+2) = DIE ANKER-QUADRIK; Eigenwerte {1,-2} = die
+    distinkten Anker-Wurzeln; Nariai-Kubik = (t-1) x chi_clock. Anker =
+    Konfigurations-Wurzeln (v101) + Kruemmungsbasis (v103) + UHR-SPEKTRUM.
+  - Entropie-Abweichungsrate = 2H = |Z2| x Hubble exakt [I].
+  - EHRLICHER (2/3)-TEST: NEGATIV fuer die klassische Uhr (Eigenwerte ganz-
+    zahlig, keine 2/3-Potenzen). Die 2/3-Potenzen bleiben im Funktional.
+=> Das Seam-Variationsprinzip hat jetzt genau EIN fehlendes Objekt: die
+QUANTEN-Uhr (1-Loop-Konversion Kruemmung->Rate, quantum (anti-)evaporation).
+Die Flavor-Raten-Bruecke ist NICHT geschlossen; nichts ueberverkauft.
+
+NEBENBEFUND (Exploration, nicht in die Suite gezogen): In der Cusp-Basis
+(e1,e2,e3) hat Q die huebsche Normalform [[1,0,-3],[0,2,3],[0,1,3]] und
+T_A wird die reine Transposition [[1,0,0],[0,0,1],[0,1,0]], G die reine
+Rotations-Normalform [[-1,0,0],[0,0,1],[0,-1,0]] -- aber kein erzwungener
+Schliessungsweg fuer GATE.QGEO sichtbar (row/col-Summen von Q_cusp sind
+(-2,5,4)/(1,3,3), keine eindeutige Grammatik-Lesart). Ehrlich: kein Fortschritt
+am QGEO-Residuum heute.
+================================================================================
+
+================================================================================
+ADDENDUM 2026-06-11 (abends)  --  v105: DIE RESIDUAL-INVENTUR
+(Ledger SYNTH.INVENTORY.01)
+================================================================================
+Kein Schliessen der offenen Tore: die VOLLSTAENDIGE, maschinell gepinnte
+Inventur dessen, was bleibt (der ehrliche Endpunkt des Reduktionsprogramms).
+
+(A) EIN-KONSTANTEN-INVENTUR [I]: 2/3 = |Z2|/N_fam erscheint EXAKT an sieben
+    unabhaengigen Stellen beider Sektoren (Flavor: Koide-Branch-Punkt, Gap-
+    Basis (2/3)^6, Attraktor im physischen Becken; Gravitation: Nariai-
+    Schranke, SdS-Branch-Separation, kanonische Amplitude+Frequenz,
+    kanonische Kruemmungsbasis (2/3)^N_fam). ANKER-TRIPTYCHON [I]:
+    Konfiguration chi_a=(t-1)^2(t-2), Nariai (t-1)^2(t+2) = spurfreier Anker,
+    Uhr (lam-1)(lam+2); Nariai = (t-1) x Uhr; a = e2+e3.
+
+(B) RELOKATIONS-THEOREM [I]+[P]: Die Quanten-Uhr KANN NICHT auf der
+    kosmologischen Nariai-Skala leben -- die 1-Loop-Korrektur eps =
+    (c/24pi) Lambda/Mbar^2 = 7.6e-122 (c=8 = Seam-Zentralladung, gefrorenes
+    rho_L) liegt 121.5 GROESSENORDNUNGEN unter dem benoetigten O(1)-Gap, und
+    das Defizit IST die Lambda-Hierarchie 2 alpha^-1/ln10 = 119.0 (+2.5
+    Praefaktoren, der v60-Split). => Die Uhr muss auf der SEAM-Skala leben,
+    wo der einzige gapped Generator der etablierte Transfer-Operator ist.
+    ENDFORM DER BRUECKE: EINE [P]-Identifikation -- "der Transfer-Operator
+    IST die Nariai-Uhr des Seams".
+
+(C) DIE RESIDUAL-TABELLE (Typisierungs-Vertrag, maschinell gepinnt):
+    Genau FUENF strukturelle Objekte trennen den zertifizierten Kern von
+    einer strikten TOE:
+      R1  Seam-Quanten-Uhr (Transfer = Seam-Nariai-Uhr)        [P]
+      R2  Seam-Netz holomorph + c=8 (Gate A, EIN Satz)         [P]/[A]
+      R3  Seam-Determinante => EH-Form                         [A]
+      R4  H2 Geodaeten<->Wort-Woerterbuch ((U_wall))           [A]/[P]
+      R5  parabolische Realisierung von Q (traegt P1)          [P]
+    plus die zwei Irreduziblen (EINE Skala v_geo per Dimensionsanalyse; pi)
+    und die gefrorenen Datenflaechen (gamma_CP, n_s/A_s, theta13, m_tau, r).
+    VOLLSTAENDIGKEIT ist selbst der Claim: ein sechstes strukturelles Loch
+    wuerde v105 FAILEN lassen.
+================================================================================
+
+================================================================================
+ADDENDUM 2026-06-11 (spaet)  --  v107/v108: R1-ZIELARITHMETIK + PASCAL-LEITER
+(Ledger HOR.CLOCK.02, CAR.LADDER.01)
+================================================================================
+R1 QUANTITATIV GEMACHT (v107): Die klassische Uhr lebt bereits auf der
+    richtigen Graduierung -- die Zerfalls-Exponenten der physischen
+    Ginsparg-Perry-Moden (l=0,1) sind {0,-1,-2} = -Spec(V) = -N_fam x Cusp:
+    exakt die Leiter der Transfer-Eigenraeume (v69/v95). NEU + exakt.
+    ZIEL-IDENTITAET: (1/3)^6 = ((2/3)^6)^{log_{3/2}3} -- die Quanten-Uhr muss
+    die gewichts-lineare Leiter um exakt log_{9/4}3 = 1.35476 pro Stufe
+    verbiegen. KOPPLUNG: kappa = (c/24pi)(Lambda/M^2): kosmologisch 7.6e-122
+    (hoffnungslos, v105) vs. Seam 1/(3pi) = 0.106 -- einziges Regime, in dem
+    der O(0.35)-Bend erreichbar ist; grenzwertig nichtperturbativ => 1-Loop
+    lineare Antwort reicht NICHT, O(1)-Resummation oder exakte Seam-
+    Konstruktion noetig. R1 = "erzeuge den Bend log_{3/2}3 auf der Cusp-
+    Leiter bei Kopplung O(1/3pi)". Nichts gefittet, nichts geschlossen.
+
+PASCAL-LEITER-SATZ (v108): 2^{g-1} = sum_{k<=K} C(g,k) <=> g = 2K+1 (exakt;
+    ungerade-g-Mittelpunkts-Identitaet + gerade-g-Straddle). KONSEQUENZ MIT
+    NULL SPIELRAUM: Carrier-Selektion g=5 <=> Trunkierungsgrad K=2 -- das
+    Red-Team-Target-B-Residuum IST die eine QBL-Hypothese (v106).
+    Nachbar-Welten: K=1 -> 1-Familien-Welt; K=3 -> 9-Familien-Welt; K=4 ->
+    inkonsistent (255/9). UEBERBESTIMMUNG: nur K=2 erfuellt zusaetzlich
+    g+N_fam = 8 = rank E8 (v14) -- zwei unabhaengige Selektionen, eine Welt.
+    QBL praezise formuliert: "Seam-Calderon-Datum = EIN Zweipunkt-Kern; der
+    Carrier-Code wird von den zertifizierten Graden K<=2 erzeugt" --
+    beweisbar aus RP waere der Upgrade-Pfad [A]/[P] -> [L].
 ================================================================================

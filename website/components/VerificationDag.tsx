@@ -122,6 +122,7 @@ const NODES: DagNode[] = [
       "v2_carrier_pascal.py",
       "v1_e8_glue.py",
       "v44_carrier_exterior.py",
+      "v108_pascal_ladder.py",
     ],
   },
   {
@@ -273,6 +274,9 @@ const NODES: DagNode[] = [
       "v101_horizon_anchor.py",
       "v102_seam_orientation.py",
       "v103_trisection_normal_form.py",
+      "v104_nariai_clock.py",
+      "v105_residual_inventory.py",
+      "v107_quantum_clock_target.py",
     ],
   },
 

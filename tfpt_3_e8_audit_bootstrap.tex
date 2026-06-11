@@ -282,6 +282,21 @@ $g=5$ the row is $\binom50,\binom51,\binom52=1,5,10$, the same Pascal triple tha
 ladder and the $E_8$ root count $16\cdot5\cdot3=240$. This is the fourth independent lock on $\gcar=5$
 (with rank-fill, Coxeter-match, and integer-glue/norm), and unlike those it explicitly \emph{kills} the
 neighbours $g=4,6$.
+\smallskip\\
+\noindent\textbf{The Pascal Ladder Theorem (\veri{v108\_pascal\_ladder.py}).} The closure generalises
+exactly: for \emph{every} truncation degree $K$,
+\[
+  \boxed{\ 2^{\,g-1}=\textstyle\sum_{k\le K}\binom gk\ \Longleftrightarrow\ g=2K+1\ }
+\]
+(odd $g$ solves by the binomial midpoint identity; even $g$ is excluded by the strict straddle
+$\sum_{k<g/2}<2^{g-1}<\sum_{k\le g/2}$). \textbf{Consequence (zero slack): the carrier selection $g=5$ is
+\emph{equivalent} to the truncation degree $K=2$} --- the Pascal-\emph{selection} residual of the red team
+(Target~B) is therefore exactly the one named hypothesis \emph{Quadratic Boundary Locality} (the seam
+certifies code degrees $\le2$; Paper~1). Neighbour worlds on the ladder: $K{=}1\to g{=}3$ (a
+\emph{one}-family world), $K{=}2\to g{=}5$ (three families), $K{=}3\to g{=}7$ (\emph{nine} families),
+$K{=}4\to g{=}9$ \emph{inconsistent} ($N_{\mathrm{fam}}=255/9\notin\Z$). Overdetermination: among the
+ladder worlds, only $K=2$ also satisfies the independent rank closure $g+N_{\mathrm{fam}}=8=\operatorname{rank}E_8$
+--- two independent selections agree on the same world. The hypothesis itself stays \tP.
 \end{keybox}
 
 \begin{winbox}[The seed is an anchor expression]
@@ -1108,7 +1123,13 @@ continuous origin is $\pi$ from the Möbius boundary geometry.} (Not ``zero axio
   is unique, not one of many. \textbf{This uniqueness is now machine-formalised \tF\ in Lean 4} (Theorem A,
   \texttt{lean4-carrier-rigidity}): the division-free Pascal condition $2^{g}=g^2+g+2$ has the \emph{unique}
   solution $g=5$ (\texttt{carrier\_rank\_pascal\_unique}; growth lemma for $g\ge6$; $\Nfam=(2^{4}{-}1)/5=3$,
-  $g{+}\Nfam=8$), audited to use only the standard kernel axioms.
+  $g{+}\Nfam=8$), audited to use only the standard kernel axioms. The 2026-06-11 hardening round adds two
+  formal modules: \texttt{AnchorLadder.lean} (the anchor power-sum law $p_n(a)=2+2^n$ for \emph{all} $n$,
+  the ladder atoms $(3,4,6,10)$, $240/8/248$, and the binary ladder $p_{n+1}{-}p_n=2^n$ as general
+  theorems) and \texttt{PascalLadder.lean} (the odd-midpoint ladder identity
+  $\sum_{k\le K}\binom{2K+1}k=2^{2K}$ for \emph{all} $K$ via Mathlib, plus the kernel-decidable bounded
+  uniqueness of the $K{=}2$ carrier case) --- the solves-side of the Pascal Ladder Theorem
+  (\veri{v108\_pascal\_ladder.py}) is thereby \tF.
 \item \textbf{What this is \emph{not}:} a derivation from zero inputs. A self-consistency loop is
   consistent \emph{at} a value; uniqueness is what makes it predictive (and that is supplied by the
   landscape scan). The continuous $\pi$ is not produced by the loop --- it is the Möbius/boundary

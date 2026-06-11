@@ -251,6 +251,32 @@ $\dim E_8=240+(p_4{-}p_3)=248$ and the binary ladder $p_{n+1}{-}p_n=2^n$. So the
 $\{a=(1,1,2),\,\pi\}$. \veri{v23\_anchor\_generator.py}
 \end{keybox}
 
+\begin{keybox}[Seed normal form, the factorial spine, and the degree-$2$ pattern \tI/\tP\ (\veri{v106\_review\_validation.py})]
+Three review-validated sharpenings of the anchor picture. \textbf{(1) Seed normal form \tI.} The seed
+formula is exactly
+\[
+  \boxed{\ \phiz=\frac{|\mu_4|}{\Nfam}\,\cthree\;+\;\Oadm\,\cthree^{\,|\mu_4|}\ }
+  \qquad\Bigl(\tfrac43=\tfrac{|\mu_4|}{\Nfam},\ \ 48=\Oadm=\Nfam\dim S^+\Bigr),
+\]
+a \emph{linear seam term} plus a \emph{topological fourth-order correction} over all admissible fermion
+states --- a structured anchor readout, not a fitted expression. \textbf{(2) Factorial spine \tI.} With
+$X=6Y$ on one $16$-state generation, $\operatorname{Tr}X=0$ and $\operatorname{Tr}X^2=120=5!$ (computed
+from the explicit charge table); the \emph{same} factorial moment is $|R^+(E_8)|=\sum(\text{$E_8$
+exponents})=120$, doubles to $|R(E_8)|=240$, and scales to $|W(D_5)|=2^4\cdot5!=1920$ (the Hawking-power
+fingerprint) --- one moment, four projections (hypercharge, roots, Weyl group, horizon). \textbf{(3) The
+degree-$2$ inventory.} The compiler repeatedly selects \emph{degree two}: the Pascal closure
+$2^{g-1}=\sum_{k\le2}\binom gk$ truncates at $K{=}2$ with the \emph{unique} solution $g=5$ (scan
+$1..40$); the glue norms add to the root norm, $\tfrac54+\tfrac34=2$; $\cthree=\tfrac12\times\tfrac1{4\pi}$
+(variational half $\times$ two-dimensional-slice Gauss--Bonnet); the pair sector $\binom52=10=\AL$; the
+hypercharge moment is a \emph{second} moment; the seam is codimension \emph{two}. \emph{Named hypothesis
+\tP\ (recorded, not claimed):} \textbf{Quadratic Boundary Locality} --- the seam supports only bilinear
+data, so the truncation $K=2$ is \emph{forced} rather than chosen; if proven, the Pascal \emph{selection}
+(red-team Target~B residual, typed \tA/\tP) upgrades to \tL\ and the chain locality $\Rightarrow K{=}2
+\Rightarrow g{=}5\Rightarrow16\Rightarrow D_5\Rightarrow E_8$ closes the carrier choice. \emph{Audit:}
+the even-code transition reading $240=16\times15$ is exact arithmetic but non-unique ($240=16\times5\times3$
+is the established glue factorisation) and stays recorded, not promoted.
+\end{keybox}
+
 \begin{keybox}[Hardening (P1): the Gauss--Bonnet origin of $c_3=\tfrac1{8\pi}$]
 $\cthree=1/(8\pi)$ is not an arbitrary number: it is the \emph{one-sided Gauss--Bonnet normalisation of
 the seam}. Paper~5 compactifies the oriented two-dimensional normal slice $N_\Sigma$ to a sphere $S^2$,
