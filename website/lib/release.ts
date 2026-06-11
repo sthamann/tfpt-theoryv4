@@ -34,18 +34,18 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/introduction.pdf": {
     href: "/papers/introduction.pdf",
     ...COMMON,
-    bytes: 966152,
+    bytes: 967010,
     sha256:
-      "f574304baf7e7c81aabeaaec1837e047ce0182cd6468b253c56fb4d6539c2217",
+      "153b7bb42a803886900611980095a095c2fed6b6e1230ee8842c83e8964921f0",
     changelog:
       "Compiler-closure reading guide: two axioms, the dependency DAG, the predictions and the proof ledger.",
   },
   "/papers/tfpt_1_architecture_e8.pdf": {
     href: "/papers/tfpt_1_architecture_e8.pdf",
     ...COMMON,
-    bytes: 957188,
+    bytes: 960041,
     sha256:
-      "8e7df8ae567b38dd0f5d36b37f959572a2eb4d2069168c66a2a8fb56e92ee5e9",
+      "508748a280ba145ca51b45e0cc3450b1af9c34e85f0c6402abf5ffa7712e0819",
     changelog:
       "Architecture: the two axioms, the D₅ × A₃ → E₈ construction, and the EM fixed point with existence + uniqueness.",
   },

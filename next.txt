@@ -500,4 +500,29 @@ SHEET-PAIRING-LEMMA (v109, Ledger CAR.PAIR.01) -- der erste exakte
     SHEET-PAIRING (chiralitaets-off-diagonal -- dieselbe Z2 wie Glues/
     Branch-Kerne). Verbleibender QBL-Schritt: zeigen, dass der Calderon-
     Kern GENAU dieses Pairing liefert und nichts darueber hinaus.
+
+CALDERON-SHEET-SELEKTIONSSATZ (v110, Ledger CAR.PAIR.02) -- die Antwort
+    auf die v109-Frage "welche Involutionen zertifizieren einen Skalar?":
+    (1) SELEKTIONSSATZ [I] (endliches Modell): die zertifizierten Daten
+        einer Calderon-Involution eps (eps^2=1) auf H = S+ (+) S- sind
+        <f, eps g>; mit den v109-Singulett-Zaehlungen pro Block (0,0,1,1)
+        gilt EXAKT: "ein skalares Zweipunkt-Datum existiert <=> eps ist
+        sheet-odd". Sheet-odd: genau 1+1 = 2 = |Z2| invariante Kerne
+        (einer pro Orientierung); sheet-even: KEINER.
+    (2) DIE ZWEI KERNE = DIE GLUE-AMBIGUITAET [I]: 2 = |Z2| = die zwei
+        Lagrange-Glues (v92, getauscht durch Einzel-Konjugation) -- der
+        skalare Calderon-Kanal traegt exakt die Glue-Ambiguitaet,
+        aufgeloest durch DIESELBE Blattwahl wie ueberall.
+    (3) LEITER-GENERIZITAET [I] (Anti-Overclaim-Kontrolle): fuer g=3,5,7
+        gilt innerblatt 0 / kreuz 2^{g-1} -- Sheet-Oddness erzwingt die
+        HALF-SPINOR-RELATION K=(g-1)/2, NICHT den Wert g=5; die
+        g-Selektion bleibt bei Rank-8/Integralitaet (v14/v108).
+    => DER QBL-REST ZERFAELLT IN ZWEI BENANNTE TEILE [P]:
+       (a) INTERFACE: "die Seam-Calderon-Involution ist sheet-odd" --
+           strukturell naheliegend, denn das one-sided-Collar/Doppel-
+           Cover-Deck ist DIESELBE |Z2|, die c3 = 1/(2*4pi) halbiert
+           (Seitentausch des Covers ist sheet-odd per Konstruktion);
+       (b) ANALYTISCHER KERN: "der Zweipunkt-Kern zertifiziert nur
+           Slot-Grade <= 2" -- das eigentliche Locality-Statement.
+       Beide bewiesen => QBL => K=2 <=> g=5 schliesst die Carrier-Wahl.
 ================================================================================

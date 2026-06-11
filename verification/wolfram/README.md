@@ -90,22 +90,22 @@ side), this Wolfram path is shipped as source; it was authored to match the
 machine-checked Python results to the quoted precision. The two primitives
 `c3 = 1/(8π)` and `g_car = 5` are the only inputs.
 
-## Extension file (v84–v109) — verified running
+## Extension file (v84–v110) — verified running
 
 `tfpt_readouts_extension.wl` mirrors the v84–v101 round (frozen registry,
 master cover, reheating arithmetic, bulk uniqueness, carrier index, conical
 defect chain, spine tetrahedron, glue uniqueness, Koide relaxation toy,
 sheet diamond `v94`, centered diamond `v95`, branch-kernel selection `v96`,
 sheet-conjugation bridge `v97`, discriminant dictionary `v98`, Koide flow
-time `v99`, horizon anchor `v101`, seam orientation `v102`, trisection normal form `v103`, Nariai clock `v104`, residual inventory `v105`, review validation `v106`, quantum-clock target `v107`, Pascal ladder `v108`, sheet pairing `v109`). It is kept **separate** from `tfpt_readouts.wl` so the
+time `v99`, horizon anchor `v101`, seam orientation `v102`, trisection normal form `v103`, Nariai clock `v104`, residual inventory `v105`, review validation `v106`, quantum-clock target `v107`, Pascal ladder `v108`, sheet pairing `v109`, Calderón-sheet selection `v110`). It is kept **separate** from `tfpt_readouts.wl` so the
 verified 116/116 base file is untouched.
 
 **Status: verified.** First engine run 2026-06-11 (Wolfram Engine 14.3): the
-v84–v93 block passed **45/45** on first run; the v94–v109 blocks were added
+v84–v93 block passed **45/45** on first run; the v94–v110 blocks were added
 the same day. Current state:
 
 ```
---- Wolfram extension v84-v109: 131 passed, 0 failed ---
+--- Wolfram extension v84-v110: 134 passed, 0 failed ---
 ALL WOLFRAM EXTENSION CHECKS PASSED
 ```
 

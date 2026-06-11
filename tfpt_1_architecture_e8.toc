@@ -1,15 +1,15 @@
 \babel@toc {english}{}\relax 
 \contentsline {part}{I\hspace {1em}Architecture and the derivation map}{4}{part.1}%
 \contentsline {section}{\numberline {1}How to read this, and where it sits in Papers 1--7}{5}{section.1}%
-\contentsline {section}{\numberline {2}Headline: the Pascal compiler on five carrier slots}{7}{section.2}%
+\contentsline {section}{\numberline {2}Headline: the Pascal compiler on five carrier slots}{8}{section.2}%
 \contentsline {subsection}{\numberline {2.1}$g_{\mathrm {car}}=5$ as the Pascal closure}{8}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}One master moment generates $40$, $41$, $240$, $\delta _2$}{9}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Compact $E_8$ compression and the role of $\nu ^c$}{9}{subsection.2.3}%
-\contentsline {section}{\numberline {3}The $D_5\times A_3$ compiler: $E_8$ as a closure, not an input}{9}{section.3}%
+\contentsline {section}{\numberline {3}The $D_5\times A_3$ compiler: $E_8$ as a closure, not an input}{10}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Carrier $=D_5=\mathfrak {so}_{10}$ (proved)}{10}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Family $=A_3=\mathfrak {su}_4$ from $\mathbb P^1\setminus \mu _4$ (proved, with the metric settled)}{10}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}The $\mu _4$ glue and the $5/4+3/4=2$ discriminant theorem (proved)}{10}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Glue-norm arithmetic, and three readings of $41$, $60$, $120$}{11}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.3}The $\mu _4$ glue and the $5/4+3/4=2$ discriminant theorem (proved)}{11}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Glue-norm arithmetic, and three readings of $41$, $60$, $120$}{12}{subsection.3.4}%
 \contentsline {subsection}{\numberline {3.5}What the compiler outputs for the Standard Model and our reality}{13}{subsection.3.5}%
 \contentsline {section}{\numberline {4}Grammar I --- the carrier grammar ($3+2$)}{14}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Dual-root dictionary (everything from two charges)}{14}{subsection.4.1}%

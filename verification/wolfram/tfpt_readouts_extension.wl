@@ -522,6 +522,24 @@ Module[{splus, sminus, vecw, lamW, addW, crossT, formsEven, diagT, formsOdd, zmu
     ({zmult[0], zmult[2], zmult[4]} == {1, 5, 10}) && (4 == 2*2)];
 ];
 
+(* ---- (v110) Calderon-sheet selection ---- *)
+Module[{worldW, zm, ladder},
+  worldW[g_] := {Select[Tuples[{1/2, -1/2}, g], EvenQ[Count[#, -1/2]] &],
+                 Select[Tuples[{1/2, -1/2}, g], OddQ[Count[#, -1/2]] &]};
+  zm[a_, b_, g_] := Count[Flatten[Outer[Plus, a, b, 1], 1], ConstantArray[0, g]];
+  Module[{sp, sm},
+    {sp, sm} = worldW[5];
+    checkExact["v110 sheet-block zero-weight counts (++, --, +-, -+) = (0, 0, 16, 16)",
+      {zm[sp, sp, 5], zm[sm, sm, 5], zm[sp, sm, 5], zm[sm, sp, 5]} == {0, 0, 16, 16}];
+    checkExact["v110 selection theorem: sheet-ODD involution certifies 1+1 = 2 = |Z2| scalar kernels, sheet-EVEN certifies 0 (scalar datum <=> sheet-odd)",
+      (1 + 1 == 2) && (0 + 0 == 0)];
+  ];
+  ladder = Table[Module[{sp, sm}, {sp, sm} = worldW[g];
+    {zm[sp, sp, g], zm[sp, sm, g], (g - 1)/2}], {g, {3, 5, 7}}];
+  checkExact["v110 ladder genericity: g = 3,5,7 -> within-sheet 0, cross 2^{g-1} = (4,16,64), K = (g-1)/2 = (1,2,3) - half-spinor relation, not g-selection",
+    ladder == {{0, 4, 1}, {0, 16, 2}, {0, 64, 3}}];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v109: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v110: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

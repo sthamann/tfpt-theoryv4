@@ -292,6 +292,27 @@ exactly --- within-sheet pairings are odd-form-valued, never scalar; \emph{(iv)}
 \textbf{sheet pairing} (chirality-off-diagonal --- the same $\Z_2$ as the glue chiralities and the
 branch-kernel selection); the remaining QBL step is to show the Calder\'on kernel supplies exactly this
 pairing and nothing beyond.
+\smallskip\\
+\noindent\textbf{The Calder\'on-sheet selection theorem (\veri{v110\_calderon\_sheet.py}) --- which
+involutions certify a scalar kernel.} On $H=S^+\!\oplus S^-$ the certified bilinear data of a Calder\'on
+involution $\varepsilon$ ($\varepsilon^2=1$) are the matrix elements $\langle f,\varepsilon g\rangle$.
+The lemma's singlet counts per sheet block, $(0,0,1,1)$, give the exact selection statement \tI:
+\[
+  \boxed{\ \text{a scalar two-point datum exists}\iff\varepsilon\ \text{is sheet-odd}\ }
+\]
+--- a sheet-odd involution (swapping $S^+\!\leftrightarrow S^-$) certifies exactly $1+1=2=|\Z_2|$
+invariant scalar kernels (one per orientation), a sheet-even involution certifies \emph{none}. The
+kernel count $2=|\Z_2|$ matches exactly the \emph{two Lagrangian glues} (swapped by single spinor
+conjugation): the Calder\'on scalar channel carries precisely the glue ambiguity, resolved by the same
+sheet choice. \emph{Anti-overclaim control \tI:} the parity theorem is generic over the odd ladder
+($g=3,5,7$: within-sheet count $0$, cross count $2^{g-1}$) --- sheet-oddness forces the
+\emph{half-spinor relation} $K=(g-1)/2$, \textbf{not} the value $g=5$; the $g$-selection stays with the
+independent rank-$8$/integrality closure. \emph{Consequence:} the QBL residue splits into two named
+parts \tP\ (recorded, not claimed): \textbf{(a) interface} --- ``the seam Calder\'on involution is
+sheet-odd'' (structurally natural: the one-sided collar/double-cover deck is the \emph{same} $|\Z_2|$
+that halves $\cthree=\tfrac12(4\pi)^{-1}$, and exchanging cover sides is sheet-odd by construction);
+\textbf{(b) analytic core} --- ``the two-point kernel certifies only slot-degrees $\le2$''. Proving
+both closes QBL${}\Rightarrow K{=}2\Leftrightarrow g{=}5$.
 \end{keybox}
 
 \begin{keybox}[Hardening (P1): the Gauss--Bonnet origin of $c_3=\tfrac1{8\pi}$]
