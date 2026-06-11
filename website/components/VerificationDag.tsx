@@ -218,7 +218,7 @@ const NODES: DagNode[] = [
     marker: "[I] / [P]",
     title: "Masses & mixings — the φ₀-ladder",
     summary:
-      "All nine masses, CKM and the PMNS skeleton from one master formula m = (v/√2) λ_Y^L Λ with the seed φ₀. Charged-lepton coefficients (16/7, 4/3, 7/6) are exact; quark mass ratios (55/117, …) are integer Plücker readouts. Gate 1 is now complete: the absolute amplitude U_point reduces to one overall scale v_geo (ratios + Grand Mass Volume) — the same dimensionful anchor as gravity's 1/G.",
+      "All nine masses, CKM and the PMNS skeleton from one master formula m = (v/√2) λ_Y^L Λ with the seed φ₀. Charged-lepton coefficients (16/7, 4/3, 7/6) are exact; quark mass ratios (55/117, …) are integer Plücker readouts. Gate 1 is now complete: the absolute amplitude U_point reduces to one overall scale v_geo (ratios + Grand Mass Volume) — the same dimensionful anchor as gravity's 1/G. New (v114): the distinguished transport value δ = 1/2 is a μ₄-torsion theorem — flatness of the U_wall family is exactly (MU)⁴ = 1, and on the involutive branch the cusp trace forces diag M = (0, i/2, −i/2) with the cusp class automatic.",
     inputs: ["R, L", "φ₀ (from c₃)"],
     outputs: ["9 masses, mixings"],
     failure: "Hierarchy mismatch.",
@@ -230,6 +230,7 @@ const NODES: DagNode[] = [
       "v49_readout_rigidity.py",
       "v75_upoint_to_vgeo.py",
       "v88_cp_phase_audit.py",
+      "v114_torsion_delta.py",
     ],
   },
   {

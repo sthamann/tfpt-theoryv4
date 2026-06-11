@@ -615,4 +615,32 @@ EIN KERN IST DAS GANZE NETZ (v113, Ledger CAR.QFREE.01) -- der QBL-Input
         entlang: freies Netz => ein Kern => sheet-odd (v110) =>
         selbstzaehlender Turm (v109/v112) => vollstaendiger Transport
         (v111) => Carrier. Gate-Typisierung [P]/[A] unveraendert.
+
+TORSIONS-NORMALFORM + DELTA = 1/2 SATZ (v114, Ledger GATE.UWALL.06) --
+    das "Genericity future work" aus v41 ist ausgefuehrt und liefert
+    einen Satz; delta = 1/2 ist keine Beobachtung mehr:
+    (1) FLACHHEIT = MU4-TORSION [I, symbolisch, generisches M]:
+        prod_k U^k M U^{-k} = (MU)^4 exakt -- die Z4-Flachheit der
+        U_wall-Familie IST die Aussage "T = MU ist vierte
+        Einheitswurzel": das mu4-Atom erscheint als ORDNUNG des
+        gedrehten Cusp-Generators.
+    (2) DELTA-SATZ [I, beide Richtungen]: auf dem involutiven Zweig
+        (T^2 = 1) ist T eine Hermitesche Spiegelung 2vv^dag - 1; die
+        Cusp-Spur 2v^dag U^{-1}v = 1 spaltet EXAKT in |v1|^2 = 1/2
+        (Realteil) + |v2| = |v3| (Imaginaerteil) =>
+        diag M = (0, i/2, -i/2), spec M = {1,w,w^2} AUTOMATISCH
+        (unitaer + Spur 0 + det 1 => lam^3 - 1).
+        => delta = 1/2 EXAKT UND KONSTANT auf dem ganzen Zweig --
+        der v20-Handwert ist eine mu4-Torsions-Identitaet.
+    (3) SPIEGELUNGS-LEMMA [I]: D4-Reflexion => diag M = (r, z, zquer),
+        r reell, Re z = -r/2 -- die ganze D4-Diagonalfreiheit ist EIN
+        reeller Parameter; delta = 1/2 <=> r = 0.
+    (4) ZWEIG-ZENSUS [N, geseedet]: voller D4-Locus realisiert nur
+        tr(MU) in {1,-1}; involutiver Zweig: Diagonale KONSTANT
+        (0,1/2,1/2) bis 1e-15; {1,i,-i}-Zweig: d1 variiert in [0,1] --
+        der explizite v33/v40-Punkt sitzt in dessen d1 = 0-Schnitt
+        (derselbe delta-Wert).
+    => REST [P]: erzwingt die Bundle-Seite (Anker-Splitting
+       O(-2)+O(-1)^2, Mehta-Seshadri) den d1 = 0-Schnitt -- oder
+       waehlt sie den involutiven Zweig? delta selbst ist geschlossen.
 ================================================================================

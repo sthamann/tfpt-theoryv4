@@ -34,9 +34,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/introduction.pdf": {
     href: "/papers/introduction.pdf",
     ...COMMON,
-    bytes: 969593,
+    bytes: 970283,
     sha256:
-      "f28a8e7a3af08e12d0beb3baf00e80b9a1a36e3813a7ba0e947054bb439df989",
+      "40f8de41d2e14b00c9dc3907e05d6855deb32190eecccd998dad5a806ec1ab24",
     changelog:
       "Compiler-closure reading guide: two axioms, the dependency DAG, the predictions and the proof ledger.",
   },
@@ -97,9 +97,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/tfpt_research_contracts.pdf": {
     href: "/papers/tfpt_research_contracts.pdf",
     ...COMMON,
-    bytes: 596778,
+    bytes: 601798,
     sha256:
-      "f0a38d93ed2a0d6a54a42ef7ab2ef9d1e7171e90edf1372810942b432080a416",
+      "f3e9364932764256ed2a8c18c7e301305039f273e09285f300c0a533f580d710",
     changelog:
       "Research contracts for the two open gates: (U_wall) flavor wall-selection and (G_metric) the QG measure.",
   },

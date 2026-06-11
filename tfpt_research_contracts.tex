@@ -254,6 +254,32 @@ negative is now \emph{explained}: the scalar leg is wrongly typed --- see the Ex
 \veri{v41\_leg\_assignment.py}
 \end{winbox}
 
+\begin{winbox}[The torsion normal form and the $\delta=\tfrac12$ theorem \tI/\tN\ (\veri{v114\_torsion\_delta.py})]
+The v41 ``genericity is future work'' item is now executed --- and yields a theorem. \emph{(i) Flatness
+$=$ $\mu_4$ torsion \tI:} for \emph{any} $M$ (symbolic), $\prod_k U^kMU^{-k}=(MU)^4$ --- the $\Z_4$-family
+flatness constraint \emph{is} the torsion statement ``$T=MU$ is a fourth root of unity'': the $\mu_4$
+atom appears as the \emph{order} of the twisted cusp generator. \emph{(ii) The $\delta=\tfrac12$ theorem
+\tI\ (both directions):} on the \emph{involutive} branch ($T^2=\mathbf1$) $T$ is a Hermitian reflection
+$2vv^\dagger-\mathbf1$, and the cusp trace condition $2v^\dagger U^{-1}v=1$ splits \emph{exactly} into
+$|v_1|^2=\tfrac12$ (real part) and $|v_2|=|v_3|$ (imaginary part), forcing
+\[
+  \boxed{\ \operatorname{diag}M=(0,\tfrac i2,-\tfrac i2),\qquad \operatorname{spec}M=\{1,\omega,\omega^2\}\
+  \text{automatic}\ }
+\]
+($\chi_M=\lambda^3-1$ from unitary $+$ trace $0$ $+$ $\det 1$). So $\delta=|M_{22}|=\tfrac12$ holds
+\emph{exactly and constantly} on the whole two-parameter branch --- the distinguished lepton transport
+value that v20 used by hand is a \emph{$\mu_4$-torsion identity}, not an observation. \emph{(iii)
+Reflection lemma \tI:} the $D_4$ reflection forces $\operatorname{diag}M=(r,z,\bar z)$ with $r$ real and
+$\operatorname{Re}z=-r/2$ --- the whole $D_4$ diagonal freedom is \emph{one} real parameter, and
+$\delta=\tfrac12\iff r=0$. \emph{(iv) Branch census \tN\ (seeded):} the full $D_4$-fixed flat cusp locus
+realises only $\operatorname{tr}(MU)\in\{1,-1\}$; the involutive branch has the diagonal \emph{constant}
+$(0,\tfrac12,\tfrac12)$ to machine precision, while on the $\{1,i,-i\}$ branch $d_1$ varies over $[0,1]$
+--- and the explicit v33/v40 point sits exactly in its $d_1=0$ slice, the \emph{same} $\delta$ value.
+\emph{Residue \tP\ (recorded):} whether the anchor splitting $\mathcal O(-2)\oplus\mathcal O(-1)^2$
+(Mehta--Seshadri side) forces the $d_1=0$ slice --- or selects the involutive branch --- is the remaining
+question; $\delta=\tfrac12$ itself is no longer the open item.
+\end{winbox}
+
 \begin{keybox}[Exterior Leg Lemma --- the quark $u/d$ leg is a $\Lambda^2F$ area, not a scalar \tI/\tP]
 The v41 negative is a \emph{category error}, not a dead end. $u$ and $d$ share the hexagon-radial data
 $(r,w)=(1,1)$ ($L=7$ for both), and the $C_6$ resolvent $c(r,w)=|\mu_4|^w/(\tfrac54-\cos\tfrac{r\pi}3)$

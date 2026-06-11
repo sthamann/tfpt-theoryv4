@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  11 JUN 2026 17:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  11 JUN 2026 18:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1111,7 +1111,17 @@ lmr/bx/n/10.95 (+20) . []\T1/lmr/m/it/10.95 (+20) With
 [2]
 
 [3]
-Overfull \hbox (3.90785pt too wide) detected at line 268
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <9> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 257.
+
+Underfull \hbox (badness 10000) in paragraph at lines 257--257
+[]\T1/lmr/bx/n/10.95 (+20) The tor-sion nor-mal form and the $\OML/lmm/m/it/10.
+95 ^^N \OT1/lmr/m/n/10.95 (+20) = []$ \T1/lmr/bx/n/10.95 (+20) the-o-rem []\T1/
+lmr/bx/n/10 (+20) [I][]\T1/lmr/bx/n/10.95 (+20) /[]\T1/lmr/bx/n/10 (+20) [N][]
+ []
+
+
+Overfull \hbox (3.90785pt too wide) detected at line 294
 \OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 K; \OT1/lmr/bx/n/10.95 1\OML/lmm/m/it/1
 0.95 ; a\OT1/lmr/m/n/10.95 ) \OMS/lmsy/m/n/10.95 ! \OML/lmm/m/it/10.95 B[] \OT1
 /lmr/m/n/10.95 = [][] \OMS/lmsy/m/n/10.95 ! []\OT1/lmr/m/n/10.95 (\OML/lmm/m/it
@@ -1125,9 +1135,7 @@ it/10.95 ^^V[]\OMS/lmsy/m/n/10.95 j\OT1/lmr/m/n/10.95 ) \OMS/lmsy/m/n/10.95 ! k
 0.95 k[] \OT1/lmr/m/n/10.95 = 11\OML/lmm/m/it/10.95 ;
  []
 
-LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <9> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 282.
-LaTeX Font Info:    Trying to load font information for U+euf on input line 313
+LaTeX Font Info:    Trying to load font information for U+euf on input line 339
 .
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
@@ -1138,12 +1146,14 @@ File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
 )
 
 [4]
+
+[5]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 3
-63.
+89.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Underfull \hbox (badness 1102) in paragraph at lines 368--374
+Underfull \hbox (badness 1102) in paragraph at lines 394--400
 []$\OML/lmm/m/it/10.95 U[]$ []\T1/lmr/bx/n/10 (+20) [I][]\T1/lmr/m/n/10.95 (+20
 ) : \T1/lmr/bx/n/10.95 (+20) Read-out Rigid-ity \T1/lmr/m/n/10.95 (+20) --- on 
 the dis-crete stra-tum $\OMS/lmsy/m/n/10.95 S[] \OT1/lmr/m/n/10.95 (+20) = \OMS
@@ -1152,10 +1162,8 @@ the dis-crete stra-tum $\OMS/lmsy/m/n/10.95 S[] \OT1/lmr/m/n/10.95 (+20) = \OMS
 
 
 
-[5]
-
 [6{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
-Overfull \hbox (1.44386pt too wide) detected at line 436
+Overfull \hbox (1.44386pt too wide) detected at line 462
 \OML/lmm/m/it/10.95 a[] \OT1/lmr/m/n/10.95 = [] [](6\OML/lmm/m/it/10.95 E \OT1/
 lmr/m/n/10.95 + \OML/lmm/m/it/10.95 R \OT1/lmr/bx/n/10.95 1\OT1/lmr/m/n/10.95 )
  = \OMS/lmsy/m/n/10.95 ^^@[] \OT1/lmr/m/n/10.95 ([] []  \OML/lmm/m/it/10.95 R\O
@@ -1168,7 +1176,7 @@ m/n/10.95 5\OML/lmm/m/it/10.95 R[]\OT1/lmr/bx/n/10.95 1\OT1/lmr/m/n/10.95 ) = [
 
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 522--532
+Underfull \hbox (badness 10000) in paragraph at lines 548--558
 \T1/lmr/bx/n/10.95 (+20) And that bound-ary mea-sure is a \T1/lmr/bx/it/10.95 (
 +20) rig-or-ously con-structed \T1/lmr/bx/n/10.95 (+20) net
  []
@@ -1177,7 +1185,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 522--532
 
 [8]
 
-[9] (./tfpt_research_contracts.aux)
+[9]
+
+[10] (./tfpt_research_contracts.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1187,11 +1197,11 @@ Package rerunfilecheck Info: File `tfpt_research_contracts.out' has not changed
 (rerunfilecheck)             Checksum: EA0F840AA5FE10FE18FBCF540447189D;594.
  ) 
 Here is how much of TeX's memory you used:
- 32396 strings out of 473190
- 639352 string characters out of 5715801
- 1108023 words of memory out of 5000000
- 54674 multiletter control sequences out of 15000+600000
- 715959 words of font info for 321 fonts, out of 8000000 for 9000
+ 32416 strings out of 473190
+ 639625 string characters out of 5715801
+ 1113025 words of memory out of 5000000
+ 54679 multiletter control sequences out of 15000+600000
+ 716733 words of font info for 328 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  116i,12n,121p,1020b,1048s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.
@@ -1220,10 +1230,10 @@ exlive/2025/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/local/texlive/2025
 /texmf-dist/fonts/type1/public/lm/lmtti10.pfb></usr/local/texlive/2025/texmf-di
 st/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texm
 f-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tfpt_research_contracts.pdf (9 pages, 596778 bytes).
+Output written on tfpt_research_contracts.pdf (10 pages, 601798 bytes).
 PDF statistics:
- 284 PDF objects out of 1000 (max. 8388607)
- 184 compressed objects within 2 object streams
- 26 named destinations out of 1000 (max. 500000)
+ 288 PDF objects out of 1000 (max. 8388607)
+ 187 compressed objects within 2 object streams
+ 27 named destinations out of 1000 (max. 500000)
  82613 words of extra memory for PDF output out of 89155 (max. 10000000)
 

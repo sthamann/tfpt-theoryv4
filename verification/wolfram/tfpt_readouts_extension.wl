@@ -637,6 +637,35 @@ Module[{jwOps, g = 5, a, ad, cs, vac, vev, m2, amat, pol, k10, pf, ok4, ok6, a16
     p16 . p16 == p16 && MatrixRank[p16] == 8];
 ];
 
+(* ---- (v114) torsion normal form + delta = 1/2 theorem ----
+   The [N] branch census (scipy Nelder-Mead sampling of the D4-fixed flat
+   cusp locus) is Python-only by convention; the exact statements are
+   mirrored here. *)
+Module[{msym, usym, prod, vvec, tmat, mmat, lam, a1, a2, b1, b2, b3, p1, p2, vg, cond},
+  msym = Array[Subscript[mm, #1, #2] &, {3, 3}];
+  usym = DiagonalMatrix[{1, I, -I}];
+  prod = IdentityMatrix[3];
+  Do[prod = prod . (MatrixPower[usym, k] . msym . MatrixPower[usym, 4 - k]), {k, 0, 3}];
+  checkExact["v114 flatness = mu4 torsion: prod_k U^k M U^{-k} = (MU)^4 for generic symbolic M",
+    Expand[prod] === Expand[MatrixPower[msym . usym, 4]]];
+  vvec = {1/Sqrt[2], Exp[I a1]/2, Exp[I a2]/2};
+  tmat = 2 Outer[Times, vvec, Conjugate[vvec]] - IdentityMatrix[3];
+  mmat = tmat . Inverse[usym];
+  lam = \[FormalLambda];
+  checkExact["v114 delta theorem (construction): T^2 = 1, M = TU^-1 unitary, tr M = 0, diag M = (0, i/2, -i/2), char poly = lam^3 - 1 (cusp class automatic)",
+    Simplify[tmat . tmat == IdentityMatrix[3], Assumptions -> {a1 \[Element] Reals, a2 \[Element] Reals}] &&
+    Simplify[ConjugateTranspose[mmat] . mmat == IdentityMatrix[3], Assumptions -> {a1 \[Element] Reals, a2 \[Element] Reals}] &&
+    Simplify[Tr[mmat] == 0, Assumptions -> {a1 \[Element] Reals, a2 \[Element] Reals}] &&
+    Simplify[Diagonal[mmat] == {0, I/2, -I/2}, Assumptions -> {a1 \[Element] Reals, a2 \[Element] Reals}] &&
+    Simplify[CharacteristicPolynomial[mmat, lam] == -(lam^3 - 1), Assumptions -> {a1 \[Element] Reals, a2 \[Element] Reals}]];
+  vg = {b1, b2 Exp[I p1], b3 Exp[I p2]};
+  cond = ComplexExpand[2 Conjugate[vg] . Inverse[usym] . vg - 1,
+    TargetFunctions -> {Re, Im}];
+  checkExact["v114 delta theorem (necessity): cusp trace condition splits into |v1|^2 = 1/2 (real) and |v2| = |v3| (imaginary)",
+    Simplify[ComplexExpand[Re[cond]] == 2 b1^2 - 1, Assumptions -> {b1 > 0, b2 > 0, b3 > 0, p1 \[Element] Reals, p2 \[Element] Reals}] &&
+    Simplify[ComplexExpand[Im[cond]] == 2 b3^2 - 2 b2^2, Assumptions -> {b1 > 0, b2 > 0, b3 > 0, p1 \[Element] Reals, p2 \[Element] Reals}]];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v113: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v114: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];
