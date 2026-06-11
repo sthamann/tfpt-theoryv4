@@ -155,8 +155,12 @@ cd experiments/lean4-carrier-rigidity && lake exe cache get && bash scripts/audi
 # 5. Red Team / Stress Test layer (adversarial; prints a status per target A-E)
 cd verification/redteam && python run_redteam.py
 
-# 6. Regenerate reproducibility manifests (run last)
+# 6. Regenerate reproducibility manifests (ALWAYS the last step before export)
 python verification/make_manifest.py
+
+# 7. Verify the shipped manifests against the tree (must pass on any export;
+#    guards against the stale-row class of error found in the v83 review)
+python verification/make_manifest.py --check
 ```
 
 Every script cited in `run_all.py` is also cited inline in the documents via `\veri{vN_*.py}`,

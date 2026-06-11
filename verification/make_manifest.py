@@ -12,10 +12,20 @@ Writes two manifests under the repo root:
 Neither is the Overleaf export zip hash (a container hash); these are the
 content identities.
 
-Run:  python make_manifest.py
+Run:    python make_manifest.py            # (re)generate both manifests
+Check:  python make_manifest.py --check    # verify the SHIPPED manifests
+                                           # against the working tree; exits
+                                           # nonzero on any missing/stale row
+
+The --check mode exists because of the v83 reviewer finding (Alessandro):
+the exported package shipped one stale `status_ledger.csv` row because the
+manifest had not been regenerated after a final ledger edit.  RELEASE RULE:
+`make_manifest.py` is always the LAST step before export, and
+`make_manifest.py --check` must pass on the exported tree.
 """
 import hashlib
 import os
+import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.normpath(os.path.join(HERE, ".."))
@@ -118,7 +128,42 @@ def write_manifest(files, out_name, label):
     return top
 
 
+def check_manifest(name):
+    """Verify a shipped manifest line-by-line against the working tree.
+    Returns (missing, stale); prints every offending row."""
+    path = os.path.join(ROOT, name)
+    missing, stale = 0, 0
+    with open(path) as fh:
+        for line in fh:
+            line = line.strip()
+            if not line:
+                continue
+            want, rel = line.split("  ", 1)
+            # the Lean manifest records the canonical SHIPPED path; map it
+            # back to the repo path when reading from a source checkout
+            read = rel
+            if rel.startswith(SHIP_LEAN + "/") and LEAN_DIR != SHIP_LEAN:
+                read = rel.replace(SHIP_LEAN, LEAN_DIR, 1)
+            p = os.path.join(ROOT, read)
+            if not os.path.isfile(p):
+                missing += 1
+                print(f"  MISSING  {rel}")
+            elif sha256(p) != want:
+                stale += 1
+                print(f"  STALE    {rel}")
+    status = "OK" if missing == 0 and stale == 0 else "FAIL"
+    print(f"{name}: missing {missing}, stale {stale}  [{status}]")
+    return missing, stale
+
+
 def main():
+    if "--check" in sys.argv[1:]:
+        m1, s1 = check_manifest("manifest.sha256")
+        m2, s2 = check_manifest("lean_manifest.sha256")
+        ok = (m1 + s1 + m2 + s2) == 0
+        print("MANIFEST CHECK " + ("PASSED" if ok else "FAILED"
+              + " -- rerun make_manifest.py as the LAST release step"))
+        raise SystemExit(0 if ok else 1)
     write_manifest(collect(), "manifest.sha256", "manifest")
     write_manifest(collect_lean(), "lean_manifest.sha256", "lean manifest")
 

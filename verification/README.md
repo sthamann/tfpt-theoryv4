@@ -171,6 +171,19 @@ the six TeX sources, the figures, and the verification suite) plus a single
 *manifest digest* that is the stable content identity of the project — use this,
 not the Overleaf export-zip hash, as the canonical identity (reviewer point A3).
 
+**Release rule (v83 review finding).** The exported v83 package shipped one
+stale `status_ledger.csv` manifest row because a final ledger edit happened
+*after* the last manifest regeneration. Therefore: `make_manifest.py` is
+always the **last** step before export, and
+
+```bash
+python make_manifest.py --check   # verifies both shipped manifests
+                                  # line-by-line; exits nonzero on any
+                                  # missing/stale row
+```
+
+must pass on the exported tree (ledger `REVIEW.REPRO.02`).
+
 ## Single status ledger (source of truth)
 
 `status_ledger.csv` is the **single source of truth** for every claim: its
