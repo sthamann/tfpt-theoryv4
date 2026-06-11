@@ -808,4 +808,28 @@ DIE ADRESS-TABELLE (v120, Ledger FLAV.H2.03) -- das offene H2-Stueck
        -- alles Anker-Atome oder heutige Gruppenordnungen) zwingen
        die Adress-Karte; die Pro-Fermion-ZUORDNUNG bleibt v18/v20-
        Input -- ihre Herleitung ist der verbleibende H2-Inhalt.
+
+DIE ADRESS-TABELLE IST GEPINNT (v121, Ledger FLAV.H2.04) -- die
+    Pro-Fermion-Zuordnung schliesst auf Informationsebene:
+    (1) DIE WORT-TABELLE IST DER RESIDUEN-OPERATOR [I]: L = R + 2U
+        (v95) => die Wortlaengen-Tabelle IST L[Sektor][Generation]
+        mit Zeilen (up; down; lepton) = ((7,3,0); (7,5,2); (8,5,3))
+        -- woertlich die v18/v20-Werte; Adressen = R-Eintraege +
+        eine Hexagon-Windung fuer Generation 1; R-Spalte 1 = der
+        ANKER a = (1,1,2).
+    (2) DIE RAENDER SIND ATOME [I]: Zeilensummen (4,8,10) =
+        (e1, rank E8, p3); Spaltensummen (4,13,5) =
+        (e1, Delta_Q, g_car); Gesamtsumme 22 = 2x11.
+    (3) PINNING-SATZ [I, exakter Zensus]: unter ALLEN 3x3-Matrizen
+        mit Eintraegen im Hexagon {0..5} haben genau 17 die
+        Atom-Raender -- und genau EINE davon det = 8 = rank E8:
+        R selbst (ebenso eindeutig mit SNF (1,1,8); alle 17
+        Determinanten verschieden, Kontrolle explizit).
+        => DIE ZUORDNUNGSTABELLE TRAEGT NULL RESTINFORMATION
+           jenseits der Atom-Raender + Rang-Determinante.
+    (4) Innerhalb des Sektors: etablierte Transport-Lesart
+        (laengeres Wort = leichteres Fermion).
+    => REST [P]: H2 schrumpft von "leite 9 Integer her" auf "leite
+       die sechs Atom-Raender + det = rank her". FIREWALL: R, L und
+       alle Wortlaengen seit v4/v18/v20/v71 eingefroren.
 ================================================================================

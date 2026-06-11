@@ -237,6 +237,7 @@ const NODES: DagNode[] = [
       "v118_hexagon_family_dictionary.py",
       "v119_review_validation_2.py",
       "v120_address_table.py",
+      "v121_address_pinning.py",
     ],
   },
   {

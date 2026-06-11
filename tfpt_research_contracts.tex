@@ -407,6 +407,29 @@ the address map; the per-fermion \emph{assignment} remains the v18/v20 input ---
 remaining H2 content.
 \end{keybox}
 
+\begin{keybox}[The address table is pinned: $R$ is the unique hexagon matrix with atom margins \tI\ (\veri{v121\_address\_pinning.py})]
+The per-fermion assignment closes at the \emph{information} level. The established identity
+$L=R+2U$ (v95) says the word-length table \emph{is} $L[\text{sector}][\text{generation}]$ --- rows
+(up; down; lepton) $=$ $((7,3,0);(7,5,2);(8,5,3))$, the v18/v20 words verbatim --- so the addresses are
+the entries of the \emph{residue operator} $R$ plus one hexagon turn for the first generation, and
+$R$'s first column is the \textbf{anchor} $a=(1,1,2)$. The margins are atoms \tI: row sums
+$(4,8,10)=(e_1,\operatorname{rank}E_8,p_3)$, column sums $(4,13,5)=(e_1,\Delta_Q,\gcar)$. And the
+census closes it \tI:
+\[
+  \boxed{\ \begin{array}{c}
+  \text{\small among all $3\times3$ matrices with entries in the hexagon $\{0..5\}$,}\\[1pt]
+  \text{\small exactly $17$ have the atom margins --- and exactly ONE has $\det=8$}
+  \end{array}\ }
+\]
+--- and it is $R$ (also the unique one with $\operatorname{SNF}=(1,1,8)$; all $17$ determinants are
+distinct, $8$ occurs once --- control computed explicitly). \textbf{The assignment table carries zero
+residual information beyond the atom margins and the rank determinant.} Within-sector ordering is the
+established transport reading ($m\sim\lambda_Y^L$: longer word $=$ lighter fermion). \emph{Residue
+\tP:} the open H2 item shrinks from ``derive $9$ per-fermion integers'' to ``derive the six atom
+margins $+$ $\det=\operatorname{rank}$''. \emph{Firewall:} $R$, $L$ and all word lengths were frozen in
+v4/v18/v20/v71 long before this census --- no degrees of freedom spent.
+\end{keybox}
+
 \begin{keybox}[Exterior Leg Lemma --- the quark $u/d$ leg is a $\Lambda^2F$ area, not a scalar \tI/\tP]
 The v41 negative is a \emph{category error}, not a dead end. $u$ and $d$ share the hexagon-radial data
 $(r,w)=(1,1)$ ($L=7$ for both), and the $C_6$ resolvent $c(r,w)=|\mu_4|^w/(\tfrac54-\cos\tfrac{r\pi}3)$

@@ -812,6 +812,26 @@ Module[{pp, llep, lqrk, addr, up, down},
     Total[llep] + up + down == pp[1] pp[3] && Mod[0, 6] == 0 && Quotient[0, 6] == 0];
 ];
 
+(* ---- (v121) address pinning ---- *)
+Module[{rmat, lmat, uax, rows4, rows8, candidates, det8, dets},
+  rmat = {{1, 3, 0}, {1, 5, 2}, {2, 5, 3}};
+  lmat = {{7, 3, 0}, {7, 5, 2}, {8, 5, 3}};
+  uax = 3 Outer[Times, {1, 1, 1}, {1, 0, 0}];
+  checkExact["v121 word table = residue operator: L = R + 2U; R col 1 = anchor (1,1,2); margins rows (4,8,10) = (e1, rank, p3), cols (4,13,5) = (e1, Delta_Q, g_car)",
+    lmat == rmat + 2 uax && rmat[[All, 1]] == {1, 1, 2} &&
+    Total /@ rmat == {4, 8, 10} && Total[rmat] == {4, 13, 5}];
+  rows4 = Select[Tuples[Range[0, 5], 3], Total[#] == 4 &];
+  rows8 = Select[Tuples[Range[0, 5], 3], Total[#] == 8 &];
+  candidates = Reap[Do[Module[{r3 = {4, 13, 5} - r1 - r2},
+        If[AllTrue[r3, 0 <= # <= 5 &], Sow[{r1, r2, r3}]]],
+      {r1, rows4}, {r2, rows8}]][[2, 1]];
+  det8 = Select[candidates, Det[#] == 8 &];
+  dets = Sort[Det /@ candidates];
+  checkExact["v121 pinning theorem: exactly 17 hexagon matrices with the atom margins; exactly ONE with det = 8 = rank E8 - and it is R; all 17 dets distinct",
+    Length[candidates] == 17 && Length[det8] == 1 && det8[[1]] == rmat &&
+    Count[dets, 8] == 1 && Length[DeleteDuplicates[dets]] == 17];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v120: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v121: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

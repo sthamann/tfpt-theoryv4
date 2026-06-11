@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  11 JUN 2026 20:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  11 JUN 2026 21:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1134,7 +1134,10 @@ n/10 (+20) [P][]
 
 
 [6]
-Overfull \hbox (3.90785pt too wide) detected at line 421
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 422.
+
+Overfull \hbox (3.90785pt too wide) detected at line 444
 \OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 K; \OT1/lmr/bx/n/10.95 1\OML/lmm/m/it/1
 0.95 ; a\OT1/lmr/m/n/10.95 ) \OMS/lmsy/m/n/10.95 ! \OML/lmm/m/it/10.95 B[] \OT1
 /lmr/m/n/10.95 = [][] \OMS/lmsy/m/n/10.95 ! []\OT1/lmr/m/n/10.95 (\OML/lmm/m/it
@@ -1148,7 +1151,7 @@ it/10.95 ^^V[]\OMS/lmsy/m/n/10.95 j\OT1/lmr/m/n/10.95 ) \OMS/lmsy/m/n/10.95 ! k
 0.95 k[] \OT1/lmr/m/n/10.95 = 11\OML/lmm/m/it/10.95 ;
  []
 
-LaTeX Font Info:    Trying to load font information for U+euf on input line 474
+LaTeX Font Info:    Trying to load font information for U+euf on input line 497
 .
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
@@ -1159,12 +1162,14 @@ File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
 )
 
 [7]
+
+[8]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 5
-24.
+47.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Underfull \hbox (badness 1102) in paragraph at lines 529--535
+Underfull \hbox (badness 1102) in paragraph at lines 552--558
 []$\OML/lmm/m/it/10.95 U[]$ []\T1/lmr/bx/n/10 (+20) [I][]\T1/lmr/m/n/10.95 (+20
 ) : \T1/lmr/bx/n/10.95 (+20) Read-out Rigid-ity \T1/lmr/m/n/10.95 (+20) --- on 
 the dis-crete stra-tum $\OMS/lmsy/m/n/10.95 S[] \OT1/lmr/m/n/10.95 (+20) = \OMS
@@ -1173,8 +1178,8 @@ the dis-crete stra-tum $\OMS/lmsy/m/n/10.95 S[] \OT1/lmr/m/n/10.95 (+20) = \OMS
 
 
 
-[8{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
-Overfull \hbox (1.44386pt too wide) detected at line 597
+[9{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
+Overfull \hbox (1.44386pt too wide) detected at line 620
 \OML/lmm/m/it/10.95 a[] \OT1/lmr/m/n/10.95 = [] [](6\OML/lmm/m/it/10.95 E \OT1/
 lmr/m/n/10.95 + \OML/lmm/m/it/10.95 R \OT1/lmr/bx/n/10.95 1\OT1/lmr/m/n/10.95 )
  = \OMS/lmsy/m/n/10.95 ^^@[] \OT1/lmr/m/n/10.95 ([] []  \OML/lmm/m/it/10.95 R\O
@@ -1186,10 +1191,8 @@ m/n/10.95 5\OML/lmm/m/it/10.95 R[]\OT1/lmr/bx/n/10.95 1\OT1/lmr/m/n/10.95 ) = [
 
 
 
-[9]
-
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 683--693
+Underfull \hbox (badness 10000) in paragraph at lines 706--716
 \T1/lmr/bx/n/10.95 (+20) And that bound-ary mea-sure is a \T1/lmr/bx/it/10.95 (
 +20) rig-or-ously con-structed \T1/lmr/bx/n/10.95 (+20) net
  []
@@ -1208,13 +1211,13 @@ Package rerunfilecheck Info: File `tfpt_research_contracts.out' has not changed
 (rerunfilecheck)             Checksum: EA0F840AA5FE10FE18FBCF540447189D;594.
  ) 
 Here is how much of TeX's memory you used:
- 32470 strings out of 473190
- 640361 string characters out of 5715801
+ 32480 strings out of 473190
+ 640525 string characters out of 5715801
  1110025 words of memory out of 5000000
- 54691 multiletter control sequences out of 15000+600000
- 718839 words of font info for 348 fonts, out of 8000000 for 9000
+ 54697 multiletter control sequences out of 15000+600000
+ 719016 words of font info for 350 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 116i,12n,121p,1020b,1048s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 116i,14n,121p,1020b,1048s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.
 pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/
 local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texl
@@ -1241,7 +1244,7 @@ exlive/2025/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/local/texlive/2025
 /texmf-dist/fonts/type1/public/lm/lmtti10.pfb></usr/local/texlive/2025/texmf-di
 st/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texm
 f-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tfpt_research_contracts.pdf (12 pages, 626081 bytes).
+Output written on tfpt_research_contracts.pdf (12 pages, 629448 bytes).
 PDF statistics:
  296 PDF objects out of 1000 (max. 8388607)
  193 compressed objects within 2 object streams
