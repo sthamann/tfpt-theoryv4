@@ -34,9 +34,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/introduction.pdf": {
     href: "/papers/introduction.pdf",
     ...COMMON,
-    bytes: 972434,
+    bytes: 973543,
     sha256:
-      "ff1ac635b171deb4c8d8e9c817b99c27a80ddda076f77fdd0f1bee29190d6269",
+      "1cf278feda0e5a82093c6b6b9b78d54bed84bad983d1e3b7764b3e13ebd4f219",
     changelog:
       "Compiler-closure reading guide: two axioms, the dependency DAG, the predictions and the proof ledger.",
   },
@@ -52,9 +52,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/tfpt_2_standard_model.pdf": {
     href: "/papers/tfpt_2_standard_model.pdf",
     ...COMMON,
-    bytes: 997976,
+    bytes: 1019101,
     sha256:
-      "8429b3fffe826a8b28397dc6d251cbb58e873321d782bece8ab28f68835c95c6",
+      "50779ee04678a400f91c42a1d039ddb255da2ee8fd7c5c402559bbfc4f2a456f",
     changelog:
       "The Standard Model in one φ₀-ladder, the flavor residue matrix, and the derived solar angle θ₁₂.",
   },
@@ -97,9 +97,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/tfpt_research_contracts.pdf": {
     href: "/papers/tfpt_research_contracts.pdf",
     ...COMMON,
-    bytes: 616137,
+    bytes: 619914,
     sha256:
-      "7b998bc87567457b0cbd983e33225bd7485673a7b58d05f356db1a2423eae1b9",
+      "cd83d4381b36c38acf44431511394eabcce7123bc553a3d28f96d896f5a40d1a",
     changelog:
       "Research contracts for the two open gates: (U_wall) flavor wall-selection and (G_metric) the QG measure.",
   },

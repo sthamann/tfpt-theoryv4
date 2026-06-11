@@ -726,4 +726,29 @@ DIE MONODROMIE IST W(A3) (v117, Ledger GATE.UWALL.09) -- das letzte
        Identifikation bleibt [N]. Der delta-Faden
        v20 -> v40/v41 -> v114 -> v115 -> v117 ist Ende-zu-Ende
        geschlossen.
+
+DAS HEXAGON IST DAS SIGN-GETWISTETE FAMILIENSPEKTRUM (v118, Ledger
+    FLAV.H2.02) -- das erste exakte Stueck des H2-Woerterbuchs; die
+    v20-Lepton-Koeffizienten sind Resolventen-Determinanten der
+    exakten W(A3)-Monodromie:
+    (1) SIGN-TWIST-LEMMA [I]: -M0 hat Ordnung 6 ((-M0)^3 = -1) und
+        spec(M0) u spec(-M0) = mu_6 -- das 6-Site-Hypercharge-Hexagon
+        IST das Familienspektrum plus Sheet-Twist (Z6 = Z2 x Z3 =
+        (-1) x <M0>); die v20-Nenner 5/4 - cos(r pi/3) sind exakt die
+        Eigen-Nenner |1 - zeta_6^r/2|^2 der zwei Familien-Resolventen
+        (1 -+ M0/2)^{-1}.
+    (2) ZYKLOTOMISCHE DETERMINANTE [I]: det(1 - t M0) = 1 - t^3 =
+        (1-t) Phi_3(t) => det(1 -+ M0/2) = (7/8, 9/8).
+    (3) LEPTON-KOEFFIZIENTEN = RESOLVENTEN-DETERMINANTEN [I]:
+        c_e = |mu4|/(2 det-) = 16/7, c_mu = N_fam/(2 det+) = 4/3,
+        c_tau = |mu4| det-/N_fam = 7/6, Produktregel = |mu4|/det+ =
+        32/9 -- die Lepton-7 und -9 SIND die zwei Resolventen-
+        Determinanten (x 8); delta = 1/2 = |(M0)_22| liefert die
+        Matrix selbst. Die e/mu/tau-LEG-ZUORDNUNG bleibt v20s
+        etablierter Input -- nichts nachgefischt.
+    (4) SHEET-ERWEITERTE GRUPPE [I]: <U, M0, -1> hat Ordnung 48 =
+        Omega_adm = N_fam x dim S+ (der Seed-Quartik-Koeffizient).
+    => REST [P]: die WERTE des Woerterbuchs sind exakt; seine
+       ADRESS-TABELLE (welcher Fermion-Slot auf welchem Hexagon-Site
+       sitzt; Quark-Komposition) bleibt offen.
 ================================================================================

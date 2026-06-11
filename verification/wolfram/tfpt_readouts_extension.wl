@@ -747,6 +747,37 @@ Module[{m0, usym, lam, tmat, prod, elems, frontier, newE, orders, chars, x, o, p
     Sort[Normal[chars]] === Sort[{3 -> 1, -1 -> 9, 0 -> 8, 1 -> 6}] && 4! == 24];
 ];
 
+(* ---- (v118) hexagon-family dictionary ---- *)
+Module[{m0, usym, t, z6, specU, mu6, detm, detp, elems, frontier, newE},
+  m0 = {{0, -(1 + I)/2, (1 - I)/2}, {-(1 + I)/2, -I/2, -1/2}, {(1 - I)/2, -1/2, I/2}};
+  usym = DiagonalMatrix[{1, I, -I}];
+  z6 = Exp[I Pi/3];
+  specU = Sort[Join[Eigenvalues[m0], -Eigenvalues[m0]], LessEqual[Arg[#1], Arg[#2]] &];
+  mu6 = Sort[Table[Exp[I Pi k/3], {k, 0, 5}], LessEqual[Arg[#1], Arg[#2]] &];
+  checkExact["v118 sign-twist lemma: (-M0)^3 = -1 and spec(M0) u spec(-M0) = mu_6 (the hexagon); denominators 5/4 - cos(r pi/3) = |1 - zeta_6^r/2|^2",
+    Simplify[MatrixPower[-m0, 3]] === -IdentityMatrix[3] &&
+    AllTrue[Transpose[{FullSimplify[specU], FullSimplify[mu6]}], FullSimplify[#[[1]] - #[[2]]] === 0 &] &&
+    AllTrue[Range[0, 5], FullSimplify[(5/4 - Cos[# Pi/3]) - (1 - z6^#/2) (1 - Conjugate[z6^#]/2)] === 0 &]];
+  t = \[FormalT];
+  detm = Det[IdentityMatrix[3] - m0/2]; detp = Det[IdentityMatrix[3] + m0/2];
+  checkExact["v118 cyclotomic determinant: det(1 - t M0) = 1 - t^3; det(1 -+ M0/2) = (7/8, 9/8)",
+    FullSimplify[Det[IdentityMatrix[3] - t m0] - (1 - t^3)] === 0 &&
+    Simplify[detm] == 7/8 && Simplify[detp] == 9/8];
+  checkExact["v118 lepton coefficients = resolvent determinants: c_e = 4/(2 det-) = 16/7, c_mu = 3/(2 det+) = 4/3, c_tau = 4 det-/3 = 7/6, product = 4/det+ = 32/9",
+    Simplify[4/(2 detm)] == 16/7 && Simplify[3/(2 detp)] == 4/3 &&
+    Simplify[4 detm/3] == 7/6 && Simplify[4/detp] == 32/9 && Abs[m0[[2, 2]]] == 1/2];
+  elems = <|Expand[IdentityMatrix[3]] -> True|>;
+  frontier = {IdentityMatrix[3]};
+  While[frontier =!= {},
+    newE = {};
+    Do[Module[{xg = Expand[g . e]},
+        If[! KeyExistsQ[elems, xg], elems[xg] = True; AppendTo[newE, xg]]],
+      {e, frontier}, {g, {usym, m0, -IdentityMatrix[3]}}];
+    frontier = newE];
+  checkExact["v118 sheet-extended group: <U, M0, -1> has order 48 = Omega_adm = 3 x 16 = |S4 x Z2|",
+    Length[elems] == 48 && 3*16 == 48];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v117: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v118: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

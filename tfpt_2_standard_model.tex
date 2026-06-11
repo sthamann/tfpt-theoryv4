@@ -374,6 +374,20 @@ $\Nfam^2$, and the lepton word-lengths obey $\sum_j L_j=16=\dim S^+$, $\sum_j(L_
 \emph{Edge--centre ring:} the two boundary generations close on the middle one,
 $c_e\,c_\tau=\tfrac{16}7\!\cdot\!\tfrac76=\tfrac83=|\Z_2|\,c_\mu$, so the lepton amplitudes form a closed
 algebraic ring with sheet-parity $|\Z_2|=2$. \veri{v20\_lepton\_c\_derivation.py}\,\allowbreak\veri{v21\_solar\_product\_quark.py}\,\allowbreak\veri{v37\_plucker\_anchor.py}
+\smallskip\\
+\noindent\emph{Update (the hexagon is the family monodromy, \veri{v118\_hexagon\_family\_dictionary.py}):}
+with the flavor-wall monodromy now exact ($\widetilde M_0\in W(A_3)$, research contracts), the hexagon
+constants stop being separate inputs \tI: $\operatorname{spec}(\widetilde M_0)\cup\operatorname{spec}(-\widetilde M_0)=\mu_6$
+(the six sites $=$ family spectrum $+$ sheet twist), $\det(\mathbf1-t\widetilde M_0)=1-t^3$, and
+\[
+  c_e=\frac{|\mu_4|}{2\det(\mathbf1-\tfrac12\widetilde M_0)}=\frac{16}{7},\quad
+  c_\mu=\frac{\Nfam}{2\det(\mathbf1+\tfrac12\widetilde M_0)}=\frac{4}{3},\quad
+  c_\tau=\frac{|\mu_4|\det(\mathbf1-\tfrac12\widetilde M_0)}{\Nfam}=\frac{7}{6},
+\]
+with the product rule $=|\mu_4|/\det(\mathbf1+\tfrac12\widetilde M_0)=\tfrac{32}9$ --- the lepton $7$
+and $9$ \emph{are} the two family-resolvent determinants ($\times2^3$), and $\delta=\tfrac12=
+|(\widetilde M_0)_{22}|$ is supplied by the monodromy itself. The $e/\mu/\tau$ \emph{leg assignment}
+remains the established input above; nothing is re-fitted.
 
 \smallskip
 \noindent\emph{Scope (honest).} This law is lepton-specific. Applied to the down sector it fails provably:

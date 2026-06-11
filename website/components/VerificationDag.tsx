@@ -234,6 +234,7 @@ const NODES: DagNode[] = [
       "v115_anchor_residue.py",
       "v116_resonance_uniqueness.py",
       "v117_monodromy_weyl_a3.py",
+      "v118_hexagon_family_dictionary.py",
     ],
   },
   {
