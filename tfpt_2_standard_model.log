@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 09:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 09:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1619,9 +1619,6 @@ Overfull \hbox (12.41829pt too wide) detected at line 1968
  []
 
 
-
-[32]
-
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1972.
 
@@ -1641,6 +1638,9 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 LaTeX Font Warning: Command \small invalid in math mode on input line 1980.
 
 
+
+[32]
+
 LaTeX Font Warning: Command \small invalid in math mode on input line 1989.
 
 
@@ -1656,17 +1656,14 @@ LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 20
 02.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
 LaTeX Font Warning: Command \small invalid in math mode on input line 2038.
-
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 2043.
 
 
 
 [33]
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 2043.
+
 
 LaTeX Font Warning: Command \small invalid in math mode on input line 2066.
 
@@ -1806,11 +1803,11 @@ Package rerunfilecheck Info: File `tfpt_2_standard_model.out' has not changed.
 (rerunfilecheck)             Checksum: 47857756798436AF1193C4059CC2C95A;11574.
  ) 
 Here is how much of TeX's memory you used:
- 36285 strings out of 473190
- 727045 string characters out of 5715801
+ 36277 strings out of 473190
+ 726833 string characters out of 5715801
  1203155 words of memory out of 5000000
- 57920 multiletter control sequences out of 15000+600000
- 763056 words of font info for 542 fonts, out of 8000000 for 9000
+ 57906 multiletter control sequences out of 15000+600000
+ 763289 words of font info for 545 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,15n,107p,1018b,1526s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.
@@ -1846,7 +1843,7 @@ xlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2025
 /fonts/type1/public/lm/lmtti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/ty
 pe1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/font
 s/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tfpt_2_standard_model.pdf (48 pages, 1045269 bytes).
+Output written on tfpt_2_standard_model.pdf (48 pages, 1042295 bytes).
 PDF statistics:
  884 PDF objects out of 1000 (max. 8388607)
  657 compressed objects within 7 object streams

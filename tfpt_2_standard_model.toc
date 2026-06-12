@@ -22,7 +22,7 @@
 \contentsline {section}{\numberline {16}The parabolic-weight computation (resolved this round)}{29}{section.16}%
 \contentsline {section}{\numberline {17}Global computation: the anchor multiset is derived}{30}{section.17}%
 \contentsline {subsection}{\numberline {17.1}Part (ii): the $\mathbb Z_6$ structure of the residues, and the frontier}{31}{subsection.17.1}%
-\contentsline {subsection}{\numberline {17.2}The flavor transport theorem}{32}{subsection.17.2}%
+\contentsline {subsection}{\numberline {17.2}The flavor transport theorem}{31}{subsection.17.2}%
 \contentsline {section}{\numberline {18}The Parabolic Anchor Compiler}{32}{section.18}%
 \contentsline {subsection}{\numberline {18.1}Budget master table: everything is $d_p=-\deg E=4$ times a Coxeter datum}{33}{subsection.18.1}%
 \contentsline {subsection}{\numberline {18.2}Flavor budget split, row sums, scalaron deficit}{33}{subsection.18.2}%

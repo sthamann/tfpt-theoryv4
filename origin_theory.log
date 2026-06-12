@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 09:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 09:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1344,8 +1344,6 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 [7]
-
-[8]
 Underfull \hbox (badness 10000) in paragraph at lines 380--380
 []|\T1/lmr/m/n/10 (+20) match ($\OMS/lmsy/m/n/10 ^^X$\T1/lmr/m/n/10 (+20) 9
  []
@@ -1387,6 +1385,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 380--380
 
 
 
+[8]
+
 [9]
 Underfull \hbox (badness 10000) in paragraph at lines 425--425
 []\T1/lmr/bx/n/10 (+20) Geometric ori-gin of the seam ``$\OT1/lmr/m/n/10 (+20) 
@@ -1399,9 +1399,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 437--437
 n/10 (+20) =$ \T1/lmr/bx/n/10 (+20) com-piler atoms [][I][]/[][L][]
  []
 
-
-
-[10]
 
 LaTeX Font Warning: Command \small invalid in math mode on input line 491.
 
@@ -1441,6 +1438,8 @@ e8_conformal_net.py\T1/lmr/bx/n/9 (+20) ][]\T1/lmr/bx/n/10 (+20) ). \T1/lmr/m/n
  []
 
 
+
+[10]
 
 [11]
 
@@ -1518,13 +1517,13 @@ Package rerunfilecheck Info: File `origin_theory.out' has not changed.
 (rerunfilecheck)             Checksum: D5E28BD09DFE3B42F3A96B7BA7A78AA5;3125.
  ) 
 Here is how much of TeX's memory you used:
- 35000 strings out of 473190
- 702830 string characters out of 5715801
- 1181239 words of memory out of 5000000
- 57059 multiletter control sequences out of 15000+600000
+ 34996 strings out of 473190
+ 702742 string characters out of 5715801
+ 1191239 words of memory out of 5000000
+ 57055 multiletter control sequences out of 15000+600000
  737765 words of font info for 395 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 86i,16n,96p,1010b,1054s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 86i,16n,96p,1010b,1064s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.
 pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/
 local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texl
@@ -1558,7 +1557,7 @@ exmf-dist/fonts/type1/public/lm/lmtti10.pfb></usr/local/texlive/2025/texmf-dist
 /fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/te
 xmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on origin_theory.pdf (17 pages, 782513 bytes).
+Output written on origin_theory.pdf (17 pages, 782062 bytes).
 PDF statistics:
  644 PDF objects out of 1000 (max. 8388607)
  370 compressed objects within 4 object streams

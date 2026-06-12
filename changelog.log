@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 09:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 09:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -527,10 +527,10 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 6
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 60.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 62.
+(Font)              <10.95> on input line 60.
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 70.
 
 
 [1
@@ -538,10 +538,10 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 {/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
 al/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/202
 5/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2025/texmf-dist/
-fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/
-dvips/lm/lm-rm.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ma
+fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvip
+s/lm/lm-mathit.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ma
 thsy.enc}]
-Underfull \hbox (badness 1253) in paragraph at lines 101--108
+Underfull \hbox (badness 1253) in paragraph at lines 111--118
 []\T1/lmr/bx/n/10.95 (+20) Shared style and cen-tral sta-tus ar-ti-fact. \T1/lm
 r/m/n/10.95 (+20) Two new single-source frag-ments:
  []
@@ -551,7 +551,7 @@ r/m/n/10.95 (+20) Two new single-source frag-ments:
 [2]
 
 [3]
-Overfull \hbox (23.4928pt too wide) in paragraph at lines 219--223
+Overfull \hbox (23.4928pt too wide) in paragraph at lines 229--233
 []\T1/lmr/bx/n/10.95 (-20) Blind reg-istry frozen (v84). \T1/lmr/m/n/10.95 (-20
 ) Machine-enforced pre-dic-tion reg-istry (\T1/lmtt/m/n/10.95 predictions_froze
 n.json\T1/lmr/m/n/10.95 (-20) ):
@@ -567,11 +567,11 @@ L3 programming layer <2025-01-18>
 Package rerunfilecheck Info: File `changelog.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  )
-(\end occurred when \ifdefined on line 242 was incomplete) 
+(\end occurred when \ifdefined on line 252 was incomplete) 
 Here is how much of TeX's memory you used:
- 13279 strings out of 473190
- 211068 string characters out of 5715801
- 664881 words of memory out of 5000000
+ 13280 strings out of 473190
+ 211079 string characters out of 5715801
+ 665881 words of memory out of 5000000
  36169 multiletter control sequences out of 15000+600000
  616429 words of font info for 164 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -590,10 +590,10 @@ ublic/lm/lmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lm
 sy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></
 usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/
 texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on changelog.pdf (4 pages, 296438 bytes).
+Output written on changelog.pdf (4 pages, 297491 bytes).
 PDF statistics:
- 126 PDF objects out of 1000 (max. 8388607)
- 86 compressed objects within 1 object stream
- 14 named destinations out of 1000 (max. 500000)
+ 127 PDF objects out of 1000 (max. 8388607)
+ 87 compressed objects within 1 object stream
+ 15 named destinations out of 1000 (max. 500000)
  31745 words of extra memory for PDF output out of 35830 (max. 10000000)
 

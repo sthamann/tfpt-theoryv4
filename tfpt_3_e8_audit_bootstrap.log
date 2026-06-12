@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 09:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 09:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1313,8 +1313,6 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 
 [11]
 
-[12]
-
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 614.
 
@@ -1349,13 +1347,13 @@ Underfull \hbox (badness 10000) in alignment at lines 666--666
 
 
 
-[13
+[12
 
 ]
 
-[14]
+[13]
 
-[15]
+[14]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 770.
@@ -1378,7 +1376,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 
-[16]
+[15]
 Underfull \hbox (badness 10000) in paragraph at lines 814--814
 []|$\OT1/lmr/m/n/8 (+20) 
 [] = \OML/lmm/m/it/8 '[]\OT1/lmr/m/n/8 (+20) (1[]2\OML/lmm/m/it/8 c[]\OT1/lmr/m
@@ -1423,9 +1421,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 814--814
 
 
 
-[17]
+[16]
 
-[18]
+[17]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 879.
@@ -1440,7 +1438,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 
-[19
+[18
 
 ]
 
@@ -1477,7 +1475,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 
-[20]
+[19]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 999.
@@ -1499,9 +1497,9 @@ mr/bx/n/10 (+20) the hull: the order-$\OT1/lmr/m/n/10 (+20) 30$ \T1/lmr/bx/n/10
 
 
 
-[21]
+[20]
 
-[22]
+[21]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1114.
@@ -1519,7 +1517,7 @@ LaTeX Font Warning: Command \small invalid in math mode on input line 1170.
 
 
 
-[23
+[22
 
 ]
 
@@ -1536,7 +1534,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 
-[24]
+[23]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1236.
@@ -1547,7 +1545,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 
-[25] (./tfpt_3_e8_audit_bootstrap.aux)
+[24] (./tfpt_3_e8_audit_bootstrap.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1557,11 +1555,11 @@ ed.
 (rerunfilecheck)             Checksum: 50482109F7FF45C15ADDA3296281F5B0;6455.
  ) 
 Here is how much of TeX's memory you used:
- 35895 strings out of 473190
- 723521 string characters out of 5715801
+ 35888 strings out of 473190
+ 723392 string characters out of 5715801
  1200258 words of memory out of 5000000
- 57871 multiletter control sequences out of 15000+600000
- 749848 words of font info for 421 fonts, out of 8000000 for 9000
+ 57865 multiletter control sequences out of 15000+600000
+ 749837 words of font info for 421 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,13n,107p,1022b,1120s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.
@@ -1595,10 +1593,10 @@ lic/lm/lmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy
 r/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/te
 xlive/2025/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/local/texlive/2025/
 texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tfpt_3_e8_audit_bootstrap.pdf (25 pages, 808712 bytes).
+Output written on tfpt_3_e8_audit_bootstrap.pdf (24 pages, 807426 bytes).
 PDF statistics:
- 525 PDF objects out of 1000 (max. 8388607)
- 391 compressed objects within 4 object streams
- 71 named destinations out of 1000 (max. 500000)
+ 520 PDF objects out of 1000 (max. 8388607)
+ 387 compressed objects within 4 object streams
+ 70 named destinations out of 1000 (max. 500000)
  102757 words of extra memory for PDF output out of 106986 (max. 10000000)
 

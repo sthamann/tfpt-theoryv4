@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 09:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 09:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1572,14 +1572,6 @@ Overfull \hbox (17.19954pt too wide) detected at line 710
 LaTeX Font Warning: Command \small invalid in math mode on input line 718.
 
 
-Underfull \hbox (badness 1742) in paragraph at lines 727--743
-\T1/lmr/m/n/10 (+20) ([]\T1/lmr/m/n/9 (+20) [\T1/lmtt/m/n/9 verification/v115_a
-nchor_residue.py\T1/lmr/m/n/9 (+20) ][]\T1/lmr/m/n/10 (+20) , []\T1/lmr/m/n/9 (
-+20) [\T1/lmtt/m/n/9 verification/v116_resonance_uniqueness.py\T1/lmr/m/n/9 (+2
-0) ][]\T1/lmr/m/n/10 (+20) ), the uni-
- []
-
-
 
 [14]
 Underfull \hbox (badness 10000) in paragraph at lines 813--813
@@ -1837,11 +1829,11 @@ LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 11
 85.
 
 
-
-[21]
-
 LaTeX Font Warning: Command \small invalid in math mode on input line 1204.
 
+
+
+[21]
 
 LaTeX Font Warning: Command \small invalid in math mode on input line 1245.
 
@@ -1948,27 +1940,24 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 LaTeX Font Warning: Command \small invalid in math mode on input line 1450.
 
 
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1463.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\cdot' on input line 1463.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\cdot' on input line 1463.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1463.
+
+
 
 [25]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1463.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\cdot' on input line 1463.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\cdot' on input line 1463.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1463.
-
-
-
-[26]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1516.
@@ -1981,6 +1970,9 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1516.
 
+
+
+[26]
 
 LaTeX Font Warning: Command \small invalid in math mode on input line 1540.
 
@@ -2044,14 +2036,15 @@ LaTeX Font Warning: Command \small invalid in math mode on input line 1622.
 LaTeX Font Warning: Command \small invalid in math mode on input line 1622.
 
 
-
-[28]
 Underfull \hbox (badness 1147) in paragraph at lines 1645--1646
 \T1/lmr/m/it/10.95 (+20) Machine checks for this sec-tion: []\T1/lmr/m/n/9 (+20
 ) [\T1/lmtt/m/n/9 verification/v7_gravity_cosmo.py\T1/lmr/m/n/9 (+20) ][] [][\T
 1/lmtt/m/n/9 verification/v86_nstar_
  []
 
+
+
+[28]
 
 LaTeX Font Warning: Command \small invalid in math mode on input line 1660.
 
@@ -2272,13 +2265,13 @@ Package rerunfilecheck Info: File `tfpt_1_architecture_e8.out' has not changed.
 (rerunfilecheck)             Checksum: 2177DA9E7CF7F6DE4AADA92F0F87EDF3;16488.
  ) 
 Here is how much of TeX's memory you used:
- 36311 strings out of 473190
- 727219 string characters out of 5715801
- 1225256 words of memory out of 5000000
- 57984 multiletter control sequences out of 15000+600000
- 756432 words of font info for 497 fonts, out of 8000000 for 9000
+ 36315 strings out of 473190
+ 727133 string characters out of 5715801
+ 1223951 words of memory out of 5000000
+ 57966 multiletter control sequences out of 15000+600000
+ 761853 words of font info for 509 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,19n,107p,1019b,1122s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,19n,107p,1019b,1121s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.
 pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7
 .pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr
@@ -2313,10 +2306,10 @@ texmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/local/texlive/2025/texmf-dist/
 fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-d
 ist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/tex
 mf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on tfpt_1_architecture_e8.pdf (44 pages, 1018892 bytes).
+Output written on tfpt_1_architecture_e8.pdf (44 pages, 1012739 bytes).
 PDF statistics:
  1082 PDF objects out of 1200 (max. 8388607)
  802 compressed objects within 9 object streams
  232 named destinations out of 1000 (max. 500000)
- 105087 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 107135 words of extra memory for PDF output out of 128383 (max. 10000000)
 

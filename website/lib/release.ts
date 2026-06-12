@@ -34,36 +34,36 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/introduction.pdf": {
     href: "/papers/introduction.pdf",
     ...COMMON,
-    bytes: 961941,
+    bytes: 962793,
     sha256:
-      "763acc86aaf5cff7aaff3d1bd0717bc15041fe36e62e6f488dc9f142208cb99c",
+      "a090c2cf63edcc72a98a0b2d49207e9bf56346419b670314400f24b46a073f8e",
     changelog:
       "Compiler-closure reading guide: two axioms, the dependency DAG, the predictions and the proof ledger.",
   },
   "/papers/tfpt_1_architecture_e8.pdf": {
     href: "/papers/tfpt_1_architecture_e8.pdf",
     ...COMMON,
-    bytes: 1018892,
+    bytes: 1012739,
     sha256:
-      "f337a8d887bb2cf10ba9cefb90d662a51840004f0e191bfa4647c9b0e6a06e4c",
+      "c3a5730c2b654c89973625af25656988677246c90a1689b2b54a0e28700dcea8",
     changelog:
       "Architecture: the two axioms, the D₅ × A₃ → E₈ construction, and the EM fixed point with existence + uniqueness.",
   },
   "/papers/tfpt_2_standard_model.pdf": {
     href: "/papers/tfpt_2_standard_model.pdf",
     ...COMMON,
-    bytes: 1045269,
+    bytes: 1042295,
     sha256:
-      "0d12e0dc272427c180e3c171af29b03a7742012d3a6b6884342147d4e327cd62",
+      "e83f3fa6bd6b2ac6d3eee68d1992e7cc36139dc274495fa349c63552b068e9b7",
     changelog:
       "The Standard Model in one φ₀-ladder, the flavor residue matrix, and the derived solar angle θ₁₂.",
   },
   "/papers/tfpt_3_e8_audit_bootstrap.pdf": {
     href: "/papers/tfpt_3_e8_audit_bootstrap.pdf",
     ...COMMON,
-    bytes: 808712,
+    bytes: 807426,
     sha256:
-      "4c3094af855584d09c6287e5c238fb20bdc1ef2699fc8324d58e19ede81459eb",
+      "b484ce6b301d3fcb5a270e56110fce748922b7e6f271ae5a06a9d1a2f2b610cb",
     changelog:
       "The seven E₈ slices as an audit raster, the cascade bridge, and the Möbius bootstrap.",
   },
@@ -88,9 +88,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/origin_theory.pdf": {
     href: "/papers/origin_theory.pdf",
     ...COMMON,
-    bytes: 782513,
+    bytes: 782062,
     sha256:
-      "1c055fd5e53f785a6b114da072bc0fb30502c1aaea37f811e2a5f8d9c59d882d",
+      "7ced38696f29596a1cc81ff5ff2c7eeed982fd236370d01714d8e99bf56f7b73",
     changelog:
       "Origin Theory: the (5,3) skeleton, the triply-forced 8, the order-30 Coxeter cycle, and the gapped unique attractor.",
   },

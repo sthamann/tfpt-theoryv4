@@ -275,7 +275,7 @@ $|\mu_4|=4\to\mathcal A_L=10$. \tI
 \end{itemize}
 \end{winbox}
 
-\begin{auditbox}[Audit-level only: flavor linear-algebra fingerprints (not load-bearing)]
+\par\smallskip\noindent\textbf{Audit-level only: flavor linear-algebra fingerprints (not load-bearing).}
 The following are \emph{audit fingerprints} (exact linear algebra of $R,L$), kept here, not in any
 derivation, under the no-free-pattern rule. \tI
 \begin{itemize}\setlength\itemsep{2pt}
@@ -292,7 +292,7 @@ $\sum=40=|R(D_5)|$, $\prod=1470=7^2 h(E_8)$.
 \item\textbf{Commutator is a pure winding rotation.} $[R,L]$ has rank $2$, trace $0$, and char.\ poly
 $\lambda(\lambda^2+432)$ --- a single $2$D rotation in the non-anchor plane with a null direction.
 \end{itemize}
-\end{auditbox}
+\par\smallskip
 
 % =====================================================================
 \section{Charged leptons: completely closed in $\phiz$}
@@ -1702,7 +1702,7 @@ $M_0M_1M_2M_3=\mathbb 1$ is solvable to machine precision, and the unique rotati
 $\{i,-1,-i\}$: the $A_3$ Coxeter element. \tI\ This independently reproduces the corner-rotation
 $=$ Coxeter identity and confirms the family connection exists.
 
-\begin{auditbox}[Rigidity: honest count]
+\par\smallskip\noindent\textbf{Rigidity: honest count.}
 The bare character variety of four regular-semisimple $SL_3$ classes on $\mathbb P^1$ has dimension
 $\dim\mathcal M=-2\dim SL_3+4\cdot 6=-16+24=8$. The $\mathbb Z_4$-reduction (four punctures $\to$ one
 orbifold image, plus the two rotation fixed points) gives a three-point system, still with
@@ -1711,15 +1711,15 @@ own (a hypergeometric/pseudo-reflection point would be needed for $\dim=0$). Ful
 the \emph{full} $D_4$ (including the reflection $z\mapsto 1/z$) together with the determinant-trivial
 branch, i.e.\ Paper 2's classification, which the explicit solution above is consistent with. We do not
 claim Katz rigidity for the bare $\mathbb Z_4$ system.
-\end{auditbox}
+\par\smallskip
 
-\begin{auditbox}[Why the monodromy alone does not give the integers]
+\par\smallskip\noindent\textbf{Why the monodromy alone does not give the integers.}
 The flat monodromy fixes the \emph{exponents} $\alpha\in\{0,\tfrac13,\tfrac23\}$ but not the integer
 \emph{degrees} $n_{f,j}$ nor the per-generation flag positions. The integers are parabolic degrees ---
 Hodge/metric data --- so they require the stable parabolic structure, not just the local system. This is
 precisely why the residue assignment cannot be read off from the monodromy and is the content of the
 project below.
-\end{auditbox}
+\par\smallskip
 
 % =====================================================================
 \section{The parabolic-weight computation (resolved this round)}
@@ -1730,7 +1730,7 @@ and \veri{v4\_flavor\_matrix.py}), and the solar texture is built (\veri{v9\_neu
 roadmap below is kept as the \emph{derivation record} of how $L_{f,j}$ is obtained; it is no longer an open
 project. The only residual is the parabolic$\leftrightarrow$transport equivalence, conditional on
 Mehta--Seshadri unitarity (U).
-\begin{roadbox}[Derivation record for $L_{f,j}$ (how the word-lengths are obtained)]
+\par\smallskip\noindent\textbf{Derivation record for $L_{f,j}$ (how the word-lengths are obtained).}
 \textbf{(1)} Fix the $D_4$-equivariant stable parabolic structure on
 $E=\mathcal O(-2)\oplus\mathcal O(-1)\oplus\mathcal O(-1)$ (the descended three-orbifold-point bundle
 with weights: cusp class $\{0,\tfrac13,\tfrac23\}$ at the puncture image; $A_3$-Coxeter exponents at the
@@ -1743,7 +1743,7 @@ degree of the corresponding parabolic line sub-bundle: the integer part is the w
 fractional part times $6$ (plus the sheet) is the residue $r_{f,j}$.\\
 \textbf{(4)} Verify the output equals
 $\{0,1,3\}$ (up), $\{1,2,5\}$ (down), $\{2,3,5\}$ (lepton), and the per-sector anchors $(1,1,2)$.
-\end{roadbox}
+\par\smallskip
 
 \noindent\textbf{What is already pinned down for step (3).} The residue must be of the form
 $6w+3s\bmod 6$ with $w\in\{0,\tfrac13,\tfrac23\}$; the candidate compact map of the main note,
@@ -1759,7 +1759,7 @@ puncture, $\alpha(v_j,M_k)=\alpha(v_j,C)$ for all $k$. Hence the parabolic degre
 \end{equation}
 \end{proposition}
 
-\begin{auditbox}[What the explicit computation shows: the local model is insufficient]
+\par\smallskip\noindent\textbf{What the explicit computation shows: the local model is insufficient.}
 Evaluating $\alpha_j$ from the Riemann--Hilbert solution (the $R$-eigenvectors against the $C$-flag,
 $F_1{=}\langle e_1\rangle$ weight $0$, $F_2{=}\langle e_1,e_2\rangle$ weight $\tfrac13$, $F_3$ weight
 $\tfrac23$) gives \emph{degenerate} weights --- generically all $\tfrac23$, at best $\{\tfrac23,0,\tfrac23\}$
@@ -1770,7 +1770,7 @@ sub-sheaf, not from the fibre alignment of an eigenvector. So the computation ge
 global stable parabolic structure (the holomorphic Hecke modification matching the weights, with
 parabolic stability fixing the saturation), confirming the $\tP$ classification: it is an
 algebraic-geometry computation on $\mathbb P^1$, not a linear-algebra one on a single fibre.
-\end{auditbox}
+\par\smallskip
 
 \noindent The open piece is therefore the explicit \emph{global} parabolic-degree evaluation at the
 $D_4$-fixed point --- the holomorphic Hecke modifications of $\mathcal O(-2)\oplus\mathcal O(-1)^2$
@@ -1842,13 +1842,13 @@ suppressed --- exponent $2$ --- consistent with $m_e<m_u<m_d$.
 $A_3$ stability (Schur--Horn $+$ balance) $=$ splitting type $\mathcal O(-2)\oplus\mathcal O(-1)^2$, and
 the \emph{assignment} lepton$\to2$, up$\to1$, down$\to1$ from the $D_5$ cusp ordering via parabolic
 stability. Multiset from $A_3$, assignment from $D_5$.
-\begin{auditbox}[The single remaining piece --- part (ii)]
+\par\smallskip\noindent\textbf{The single remaining piece --- part (ii).}
 Only the \emph{full} residue sets $\{0,1,3\}$, $\{1,2,5\}$, $\{2,3,5\}$ stay open. The value $3$ exceeds
 the exponent-at-infinity bound $\tfrac83$, so it is a genuine \emph{per-puncture} parabolic degree (an
 asymmetric Hecke saturation at the individual punctures), not an exponent at infinity. The anchors (the
 first-generation entries) are fixed above; the remaining two entries per sector require the non-symmetric
 per-puncture saturation. \tP
-\end{auditbox}
+\par\smallskip
 
 \subsection{Part (ii): the $\mathbb Z_6$ structure of the residues, and the frontier}
 Every residue decomposes \emph{uniquely} into a cusp index $c\in\{0,1,2\}$ (the $\mathbb Z_3$ family
@@ -2099,7 +2099,7 @@ $10$). The bilinear forms on $\{\mathbf 1,a\}$ with $a=(1,1,2)$ are
 \end{equation}
 so $a^{\!\top}La=64=\dim S^+|\mu_4|$ is exactly one $E_8$ spinor glue sheet $(16,4)$, and the winding lift
 $a^{\!\top}La-a^{\!\top}Ra=64-40=24=|W(A_3)|$ is the $A_3$ Weyl group. \tI
-\begin{auditbox}[(H2), now a small algebraic selector --- and an honest negative result]
+\par\smallskip\noindent\textbf{(H2), now a small algebraic selector --- and an honest negative result.}
 With (H1),(H3), the cusp input (H2) is reduced to one binary branch, selected by the canonical spectral
 form $\det R=h(D_5)$, principal minors $(2,3,5)$, $\chi_R=t^3-\Nfam^2t^2+\AL t-h(D_5)$. So ``derive the
 flavor matrix from cusp geometry'' becomes the sharp statement: \emph{the cusp action on
@@ -2127,7 +2127,7 @@ independent characterisation. What genuinely remains is only the \emph{equivalen
 descriptions of the same connection --- the parabolic Hecke degrees on $\mathbb P^1\setminus\mu_4$ equal
 the transport-holonomy word-lengths of Paper 3. H2's \emph{answer} is fixed; only this parabolic
 $\leftrightarrow$ transport bridge is open. \tI\ (transport derivation) / \tP\ (parabolic equivalence)
-\end{auditbox}
+\par\smallskip
 
 % =====================================================================
 \section{Closing the flavor block: two theorems}
@@ -2220,14 +2220,14 @@ so the geodesic representative is unique.
 hence $\deg_{\mathrm{par}}=L^{\mathrm{transp}}_{\min}$ term by term. \qedhere
 \end{proof}
 
-\begin{auditbox}[Flavor block: reduced to one structural input $(U)$]
+\par\smallskip\noindent\textbf{Flavor block: reduced to one structural input $(U)$.}
 With Lemma~\ref{lem:dd} (H1, proved), Proposition~\ref{prop:equiv} (residues $+$ windings, proved) and
 Theorem~\ref{thm:ms} (stable $=$ minimal), the parabolic and transport derivations of the full flavor
 matrix \emph{coincide}. The single remaining input is \emph{(U)}, the unitarity of $\nabla_F^\star$ ---
 a structural property asserted by Paper 3 (the family connection is metric, holonomy in $U(\Nfam)$), not
 a new conjecture. The flavor block is therefore \emph{reduced} to (U) --- closed given (U), open without it. \tI\
 (given (U)).
-\end{auditbox}
+\par\smallskip
 
 \begin{theorem}[H2 as a spectral-selector realisation --- the sharp statement]
 \label{thm:h2}

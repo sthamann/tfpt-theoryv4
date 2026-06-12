@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 09:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 09:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2026,9 +2026,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 1069--1069
 
 [26]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 60.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 70.
 
-Underfull \hbox (badness 1253) in paragraph at lines 101--108
+Underfull \hbox (badness 1253) in paragraph at lines 111--118
 []\T1/lmr/bx/n/10.95 (+20) Shared style and cen-tral sta-tus ar-ti-fact. \T1/lm
 r/m/n/10.95 (+20) Two new single-source frag-ments:
  []
@@ -2040,15 +2040,15 @@ r/m/n/10.95 (+20) Two new single-source frag-ments:
 ]
 
 [28]
-Overfull \hbox (23.4928pt too wide) in paragraph at lines 219--223
+
+[29]
+Overfull \hbox (23.4928pt too wide) in paragraph at lines 229--233
 []\T1/lmr/bx/n/10.95 (-20) Blind reg-istry frozen (v84). \T1/lmr/m/n/10.95 (-20
 ) Machine-enforced pre-dic-tion reg-istry (\T1/lmtt/m/n/10.95 predictions_froze
 n.json\T1/lmr/m/n/10.95 (-20) ):
  []
 
-
-
-[29])
+)
 
 [30] (./introduction.aux)
  ***********
@@ -2059,8 +2059,8 @@ Package rerunfilecheck Info: File `introduction.out' has not changed.
 (rerunfilecheck)             Checksum: DB547C63C1C465A45F3980B0F6A67E1E;3440.
  ) 
 Here is how much of TeX's memory you used:
- 34609 strings out of 473190
- 685856 string characters out of 5715801
+ 34610 strings out of 473190
+ 685867 string characters out of 5715801
  1657112 words of memory out of 5000000
  56503 multiletter control sequences out of 15000+600000
  733012 words of font info for 466 fonts, out of 8000000 for 9000
@@ -2102,10 +2102,10 @@ fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type
 b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam1
 0.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/m
 sbm10.pfb>
-Output written on introduction.pdf (30 pages, 961941 bytes).
+Output written on introduction.pdf (30 pages, 962793 bytes).
 PDF statistics:
- 522 PDF objects out of 1000 (max. 8388607)
- 373 compressed objects within 4 object streams
- 72 named destinations out of 1000 (max. 500000)
+ 525 PDF objects out of 1000 (max. 8388607)
+ 376 compressed objects within 4 object streams
+ 73 named destinations out of 1000 (max. 500000)
  92429 words of extra memory for PDF output out of 106986 (max. 10000000)
 
