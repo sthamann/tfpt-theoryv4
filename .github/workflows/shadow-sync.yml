@@ -15,13 +15,20 @@ jobs:
       - name: Checkout main repository
         uses: actions/checkout@v4
 
-      - name: Checkout shadow repository
-        uses: actions/checkout@v4
-        with:
-          repository: sthamann/tfpt5-shadow
-          token: ${{ secrets.SHADOW_REPO_TOKEN }}
-          path: shadow
-          fetch-depth: 0
+      - name: Prepare shadow repository checkout
+        env:
+          SHADOW_TOKEN: ${{ secrets.SHADOW_REPO_TOKEN }}
+        run: |
+          set -euo pipefail
+          remote="https://x-access-token:${SHADOW_TOKEN}@github.com/sthamann/tfpt5-shadow.git"
+
+          if git ls-remote --heads "$remote" main | grep -q .; then
+            git clone --depth 1 --branch main "$remote" shadow
+          else
+            mkdir shadow
+            git -C shadow init -b main
+            git -C shadow remote add origin "$remote"
+          fi
 
       - name: Export filtered tree
         env:
@@ -49,4 +56,4 @@ jobs:
           git commit -m "Sync from ${SOURCE_REPO}@${short_sha}
 
           One-way mirror for Overleaf GitHub sync (no _archive, website, or PDFs)."
-          git push "https://x-access-token:${SHADOW_TOKEN}@github.com/sthamann/tfpt5-shadow.git" HEAD:main
+          git push -u "https://x-access-token:${SHADOW_TOKEN}@github.com/sthamann/tfpt5-shadow.git" HEAD:main
