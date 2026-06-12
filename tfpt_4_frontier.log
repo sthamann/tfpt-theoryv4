@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 08:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 08:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -867,10 +867,30 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 85.
 )
 \Hy@SectionHShift=\skip58
-)
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 54
+) (./tfpt_style.tex
+(/usr/local/texlive/2025/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip59
+\f@nch@offset@elh=\skip60
+\f@nch@offset@erh=\skip61
+\f@nch@offset@olh=\skip62
+\f@nch@offset@orh=\skip63
+\f@nch@offset@elf=\skip64
+\f@nch@offset@erf=\skip65
+\f@nch@offset@olf=\skip66
+\f@nch@offset@orf=\skip67
+\f@nch@height=\skip68
+\f@nch@footalignment=\skip69
+\f@nch@widthL=\skip70
+\f@nch@widthC=\skip71
+\f@nch@widthR=\skip72
+\@temptokenb=\toks46
+))
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 38
 .
- (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmr.fd
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 (/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
@@ -881,24 +901,24 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 (./tfpt_4_frontier.aux)
 \openout1 = `tfpt_4_frontier.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -917,7 +937,7 @@ LaTeX Font Info:    ... okay on input line 54.
 * \oddsidemargin=-6.82857pt
 * \evensidemargin=-6.82857pt
 * \topmargin=-43.82857pt
-* \headheight=12.0pt
+* \headheight=14.0pt
 * \headsep=25.0pt
 * \topskip=11.0pt
 * \footskip=30.0pt
@@ -941,12 +961,12 @@ LaTeX Font Info:    ... okay on input line 54.
 \scratchbox=\box85
 \nofMPsegments=\count348
 \nofMParguments=\count349
-\everyMPshowfont=\toks46
+\everyMPshowfont=\toks47
 \MPscratchCnt=\count350
 \MPscratchDim=\dimen307
 \MPnumerator=\count351
 \makeMPintoPDFobject=\count352
-\everyMPtoPDFconversion=\toks47
+\everyMPtoPDFconversion=\toks48
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -957,20 +977,20 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \c@lstlisting=\count353
-LaTeX Info: Redefining \microtypecontext on input line 54.
-Package microtype Info: Applying patch `item' on input line 54.
-Package microtype Info: Applying patch `toc' on input line 54.
-Package microtype Info: Applying patch `eqnum' on input line 54.
-Package microtype Info: Applying patch `footnote' on input line 54.
-Package microtype Info: Applying patch `verbatim' on input line 54.
-LaTeX Info: Redefining \microtypesetup on input line 54.
+LaTeX Info: Redefining \microtypecontext on input line 38.
+Package microtype Info: Applying patch `item' on input line 38.
+Package microtype Info: Applying patch `toc' on input line 38.
+Package microtype Info: Applying patch `eqnum' on input line 38.
+Package microtype Info: Applying patch `footnote' on input line 38.
+Package microtype Info: Applying patch `verbatim' on input line 38.
+LaTeX Info: Redefining \microtypesetup on input line 38.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 54.
+LaTeX Info: Redefining \showhyphens on input line 38.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -979,43 +999,43 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-Package hyperref Info: Link coloring ON on input line 54.
+Package hyperref Info: Link coloring ON on input line 38.
 
 (./tfpt_4_frontier.out) (./tfpt_4_frontier.out)
 \@outlinefile=\write4
 \openout4 = `tfpt_4_frontier.out'.
 
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 5
-6.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 4
+0.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 5
-6.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4
+0.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-56.
+40.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-56.
+40.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 56.
+(Font)              <12> on input line 40.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 56.
+(Font)              <8> on input line 40.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 56.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 56.
+(Font)              <6> on input line 40.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 40.
 
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -1024,7 +1044,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 56.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 40.
 
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -1034,13 +1054,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 60.
+(Font)              <10> on input line 44.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 60.
+(Font)              <7> on input line 44.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 60.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 6
-4.
+(Font)              <5> on input line 44.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 4
+8.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -1049,10 +1069,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- (./tfpt_docset.tex) (./tfpt_4_frontier.toc
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 2.
-
+ (./tfpt_docset.tex) (./tfpt_status.tex
 
 [1
 
@@ -1060,113 +1077,121 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 al/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/202
 5/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2025/texmf-di
 st/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/d
-vips/lm/lm-mathsy.enc}])
+vips/lm/lm-mathsy.enc}]) (./tfpt_4_frontier.toc
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 2.
+)
 \tf@toc=\write5
 \openout5 = `tfpt_4_frontier.toc'.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 99.
+(Font)              <14.4> on input line 85.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 99.
+(hyperref)                removing `math shift' on input line 85.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\eta' on input line 99.
+(hyperref)                removing `\eta' on input line 85.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 99.
+(hyperref)                removing `subscript' on input line 85.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 99.
+(hyperref)                removing `math shift' on input line 85.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 99.
+(hyperref)                removing `math shift' on input line 85.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Omega' on input line 99.
+(hyperref)                removing `\Omega' on input line 85.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 99.
+(hyperref)                removing `subscript' on input line 85.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 99.
+(hyperref)                removing `superscript' on input line 85.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 99.
+(hyperref)                removing `math shift' on input line 85.
 
 
 
-[2{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 143.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 143.
-
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 9
+4.
+(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [2{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 143.
+(hyperref)                removing `math shift' on input line 129.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 143.
+(hyperref)                removing `subscript' on input line 129.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 129.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 129.
 
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <9> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 160.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 146.
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--168
+Underfull \hbox (badness 10000) in paragraph at lines 142--154
 \T1/lmr/bx/n/10 (+20) A re-jected near-formula (recorded as a dis-ci-pline boun
 d-ary,
  []
 
 
+
+[3{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
+
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 171.
+(hyperref)                removing `math shift' on input line 157.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 171.
+(hyperref)                removing `math shift' on input line 157.
 
 
-
-[3]
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 243--243
+Underfull \hbox (badness 10000) in paragraph at lines 229--229
 []\T1/lmr/bx/n/10 (+20) Sharpening: the source$\OMS/lmsy/m/n/10 !$\T1/lmr/bx/n/
 10 (+20) pole map is \T1/lmr/bx/it/10 (+20) forced \T1/lmr/bx/n/10 (+20) by tha
 t gap [][I][]/[][P][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--254
+Underfull \hbox (badness 10000) in paragraph at lines 230--240
 []\T1/lmr/m/n/10 (+20) The pre-vi-ous box pairs the Koide tar-get with $\OML/lm
 m/m/it/10 ^^U[] \OT1/lmr/m/n/10 (+20) = (2\OML/lmm/m/it/10 =\OT1/lmr/m/n/10 (+2
 0) 3)[]$\T1/lmr/m/n/10 (+20) ;
  []
 
 
-Underfull \hbox (badness 1102) in paragraph at lines 244--254
-[]\T1/lmr/m/n/9 (+20) [\T1/lmtt/m/n/9 verification/v82_koide_attractor_splittin
-g.py\T1/lmr/m/n/9 (+20) ][] \T1/lmr/m/n/10 (+20) turns the pair-ing into a \T1/
-lmr/m/it/10 (+20) mech-a-nism\T1/lmr/m/n/10 (+20) . On
+Underfull \hbox (badness 10000) in paragraph at lines 242--242
+[]\T1/lmr/bx/n/10 (+20) Relaxation toy: basin, ex-act rate, and two hon-est neg
+-a-tives [][I][]/[][N][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 256--256
-[]\T1/lmr/bx/n/10 (+20) Relaxation toy: basin, ex-act rate, and two hon-est neg
--a-tives [][I][]/[][N][]
+Underfull \hbox (badness 1048) in paragraph at lines 261--261
+[]\T1/lmr/bx/n/10 (+20) Flow time: canon-i-cal gen-er-a-tor, data-fragility, an
+d a con-di-tional $\OML/lmm/m/it/10 m[]$ []\T1/lmr/bx/n/10 (+20) [I][]/[][N][]/
+[][P][]
  []
 
 
@@ -1175,7 +1200,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 256--256
 
 [6]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 367.
+(Font)              <9> on input line 353.
 
 
 [7]
@@ -1189,13 +1214,13 @@ Package rerunfilecheck Info: File `tfpt_4_frontier.out' has not changed.
 (rerunfilecheck)             Checksum: EDFC116B38EA4909AB05596E8302307A;2025.
  ) 
 Here is how much of TeX's memory you used:
- 31984 strings out of 473190
- 634941 string characters out of 5715801
- 1102119 words of memory out of 5000000
- 54319 multiletter control sequences out of 15000+600000
- 685071 words of font info for 287 fonts, out of 8000000 for 9000
+ 32399 strings out of 473190
+ 642701 string characters out of 5715801
+ 1113364 words of memory out of 5000000
+ 54734 multiletter control sequences out of 15000+600000
+ 688975 words of font info for 281 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,10n,107p,1012b,1053s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,13n,107p,1012b,1054s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/lo
 cal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texliv
 e/2025/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive/2025/texm
@@ -1214,18 +1239,19 @@ lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr5.pfb
 5/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2025/texmf-dist
 /fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1
 /public/lm/lmri10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm
-/lmri8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
-></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/loca
-l/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2
-025/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/local/texlive/2025/texmf-
-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts
-/type1/public/lm/lmtt9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/publ
-ic/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/
-public/amsfonts/symbols/msbm7.pfb>
-Output written on tfpt_4_frontier.pdf (8 pages, 537439 bytes).
+/lmri8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri9.pfb>
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/loca
+l/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2
+025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2025/texmf-d
+ist/fonts/type1/public/lm/lmtk10.pfb></usr/local/texlive/2025/texmf-dist/fonts/
+type1/public/lm/lmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/publ
+ic/lm/lmtt9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts
+/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsf
+onts/symbols/msbm7.pfb>
+Output written on tfpt_4_frontier.pdf (8 pages, 555162 bytes).
 PDF statistics:
- 293 PDF objects out of 1000 (max. 8388607)
- 195 compressed objects within 2 object streams
+ 303 PDF objects out of 1000 (max. 8388607)
+ 201 compressed objects within 3 object streams
  24 named destinations out of 1000 (max. 500000)
- 63701 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 67797 words of extra memory for PDF output out of 74296 (max. 10000000)
 

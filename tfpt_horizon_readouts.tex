@@ -18,24 +18,7 @@
 \usepackage[hidelinks,colorlinks=true,linkcolor=blue!55!black,urlcolor=blue!55!black]{hyperref}
 \emergencystretch=3em
 
-\definecolor{tfblue}{HTML}{1F4E79}
-\definecolor{tfgreen}{HTML}{1E7B45}
-\definecolor{tfred}{HTML}{9B2226}
-\definecolor{tfgold}{HTML}{B8860B}
-
-\newtcolorbox{keybox}[1][]{enhanced,breakable,colback=tfblue!5!white,colframe=tfblue,fonttitle=\bfseries\small,coltitle=white,title={#1},fontupper=\small}
-\newtcolorbox{winbox}[1][]{enhanced,breakable,colback=tfgreen!6!white,colframe=tfgreen!75!black,fonttitle=\bfseries\small,coltitle=white,title={#1},fontupper=\small}
-\newtcolorbox{gapbox}[1][]{enhanced,breakable,colback=tfred!5!white,colframe=tfred!80!black,fonttitle=\bfseries\small,coltitle=white,title={#1},fontupper=\small}
-
-% --- six-grade status markers ---
-\newcommand{\tI}{{\small\textcolor{tfgreen}{\textbf{[I]}}}}
-\newcommand{\tL}{{\small\textcolor{tfblue}{\textbf{[L]}}}}
-\newcommand{\tF}{{\small\textcolor{tfgreen!45!black}{\textbf{[F]}}}}
-\newcommand{\tN}{{\small\textcolor{tfgreen}{\textbf{[N]}}}}
-\newcommand{\tP}{{\small\textcolor{tfgold}{\textbf{[P]}}}}
-\newcommand{\tA}{{\small\textcolor{tfred}{\textbf{[A]}}}}
-% inline reference to the script that machine-checks a claim (see verification/)
-\newcommand{\veri}[1]{\,{\footnotesize\textcolor{tfblue!70!black}{[\,\texttt{verification/#1}\,]}}}
+\input{tfpt_style}
 \newcommand{\cthree}{c_3}
 \newcommand{\Mbar}{\bar M_{\mathrm{Pl}}}
 \newcommand{\ainv}{\alpha^{-1}_\star}
@@ -49,6 +32,7 @@
 (Hawking, de Sitter, Unruh, Page, scrambling --- \emph{standard physics in seam units, not new gravity})}
 \author{}\date{\today}
 
+\def\TFPTdoctitle{Appendix~H --- Horizon Readouts}
 \begin{document}
 \maketitle
 \vspace{-0.6cm}
@@ -78,6 +62,8 @@ documents plus this appendix}, best read in order:
 \end{keybox}
 
 \tableofcontents
+
+\input{tfpt_status}
 \bigskip
 
 \begin{keybox}[Scope and honest typing]

@@ -23,25 +23,7 @@
 \emergencystretch=3em
 \graphicspath{{figures/}}
 
-\definecolor{tfblue}{HTML}{1F4E79}
-\definecolor{tfgreen}{HTML}{1E7B45}
-\definecolor{tfred}{HTML}{9B2226}
-\definecolor{tfgold}{HTML}{B8860B}
-
-\newtcolorbox{keybox}[1][]{enhanced,breakable,colback=tfblue!5!white,colframe=tfblue,fonttitle=\bfseries\small,coltitle=white,title={#1},fontupper=\small}
-\newtcolorbox{winbox}[1][]{enhanced,breakable,colback=tfgreen!6!white,colframe=tfgreen!75!black,fonttitle=\bfseries\small,coltitle=white,title={#1},fontupper=\small}
-\newtcolorbox{gapbox}[1][]{enhanced,breakable,colback=tfred!5!white,colframe=tfred!80!black,fonttitle=\bfseries\small,coltitle=white,title={#1},fontupper=\small}
-\newtcolorbox{intbox}[1][]{enhanced,breakable,colback=tfgold!7!white,colframe=tfgold!80!black,fonttitle=\bfseries\small,coltitle=white,title={#1},fontupper=\small}
-
-% --- six-grade status markers ---
-\newcommand{\tI}{{\small\textcolor{tfgreen}{\textbf{[I]}}}}
-\newcommand{\tL}{{\small\textcolor{tfblue}{\textbf{[L]}}}}
-\newcommand{\tF}{{\small\textcolor{tfgreen!45!black}{\textbf{[F]}}}}
-\newcommand{\tN}{{\small\textcolor{tfgreen}{\textbf{[N]}}}}
-\newcommand{\tP}{{\small\textcolor{tfgold}{\textbf{[P]}}}}
-\newcommand{\tA}{{\small\textcolor{tfred}{\textbf{[A]}}}}
-\newcommand{\markerkey}{\par\vspace{1.5pt}\noindent{\scriptsize\itshape\textcolor{black!58}{Marker key:\ \tI~exact identity\,$\cdot$\,\tL~Lie/lattice theorem\,$\cdot$\,\tN~numerical fixed point\,$\cdot$\,\tP~physical/interpretive\,$\cdot$\,\tA~open.}}\par\vspace{2pt}}
-\newcommand{\veri}[1]{\,{\footnotesize\textcolor{tfblue!70!black}{[\,\texttt{verification/#1}\,]}}}
+\input{tfpt_style}
 % falsifier-class tags (Alessandro: which falsifier tests what)
 \newcommand{\fcore}{{\small\textcolor{tfgreen!50!black}{\textbf{[core]}}}}
 \newcommand{\fcyc}{{\small\textcolor{tfgold!75!black}{\textbf{[cyc]}}}}
@@ -62,6 +44,7 @@ and the self-reproducing parameter-free fixed point\\[2mm]
 \normalsize\textmd{An \tI/\tL\ structural core ($\mathtt{v53}$--$\mathtt{v56}$) with one honestly-typed \tP\ interpretation}}
 \author{}\date{\today}
 
+\def\TFPTdoctitle{Origin Theory}
 \begin{document}
 \maketitle
 \vspace{-0.7cm}
@@ -84,6 +67,8 @@ Nothing in the \tP\ layer is sold as proven; nothing in the \tI/\tL\ layer depen
 \markerkey
 
 \tableofcontents
+
+\input{tfpt_status}
 \bigskip
 
 % =====================================================================

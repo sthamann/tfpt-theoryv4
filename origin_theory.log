@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 08:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 08:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -933,10 +933,30 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 85.
 )
 \Hy@SectionHShift=\skip65
-)
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 65
+) (./tfpt_style.tex
+(/usr/local/texlive/2025/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip66
+\f@nch@offset@elh=\skip67
+\f@nch@offset@erh=\skip68
+\f@nch@offset@olh=\skip69
+\f@nch@offset@orh=\skip70
+\f@nch@offset@elf=\skip71
+\f@nch@offset@erf=\skip72
+\f@nch@offset@olf=\skip73
+\f@nch@offset@orf=\skip74
+\f@nch@height=\skip75
+\f@nch@footalignment=\skip76
+\f@nch@widthL=\skip77
+\f@nch@widthC=\skip78
+\f@nch@widthR=\skip79
+\@temptokenb=\toks52
+))
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 48
 .
- (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmr.fd
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 (/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
@@ -947,24 +967,24 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 (./origin_theory.aux)
 \openout1 = `origin_theory.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -983,7 +1003,7 @@ LaTeX Font Info:    ... okay on input line 65.
 * \oddsidemargin=-6.82857pt
 * \evensidemargin=-6.82857pt
 * \topmargin=-43.82857pt
-* \headheight=12.0pt
+* \headheight=14.0pt
 * \headsep=25.0pt
 * \topskip=11.0pt
 * \footskip=30.0pt
@@ -1007,12 +1027,12 @@ LaTeX Font Info:    ... okay on input line 65.
 \scratchbox=\box87
 \nofMPsegments=\count353
 \nofMParguments=\count354
-\everyMPshowfont=\toks52
+\everyMPshowfont=\toks53
 \MPscratchCnt=\count355
 \MPscratchDim=\dimen324
 \MPnumerator=\count356
 \makeMPintoPDFobject=\count357
-\everyMPtoPDFconversion=\toks53
+\everyMPtoPDFconversion=\toks54
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1023,20 +1043,20 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \c@lstlisting=\count358
-LaTeX Info: Redefining \microtypecontext on input line 65.
-Package microtype Info: Applying patch `item' on input line 65.
-Package microtype Info: Applying patch `toc' on input line 65.
-Package microtype Info: Applying patch `eqnum' on input line 65.
-Package microtype Info: Applying patch `footnote' on input line 65.
-Package microtype Info: Applying patch `verbatim' on input line 65.
-LaTeX Info: Redefining \microtypesetup on input line 65.
+LaTeX Info: Redefining \microtypecontext on input line 48.
+Package microtype Info: Applying patch `item' on input line 48.
+Package microtype Info: Applying patch `toc' on input line 48.
+Package microtype Info: Applying patch `eqnum' on input line 48.
+Package microtype Info: Applying patch `footnote' on input line 48.
+Package microtype Info: Applying patch `verbatim' on input line 48.
+LaTeX Info: Redefining \microtypesetup on input line 48.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 65.
+LaTeX Info: Redefining \showhyphens on input line 48.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1045,43 +1065,43 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-Package hyperref Info: Link coloring ON on input line 65.
+Package hyperref Info: Link coloring ON on input line 48.
 
 (./origin_theory.out) (./origin_theory.out)
 \@outlinefile=\write4
 \openout4 = `origin_theory.out'.
 
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 6
-7.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 5
+0.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 6
-7.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 5
+0.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-67.
+50.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-67.
+50.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 67.
+(Font)              <10.95> on input line 50.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 67.
+(Font)              <8> on input line 50.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 67.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 67.
+(Font)              <6> on input line 50.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 50.
 
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -1090,7 +1110,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 67.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 50.
 
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -1100,7 +1120,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
-67.
+50.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -1110,15 +1130,15 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 67.
+(Font)              <12> on input line 50.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 71.
+(Font)              <10> on input line 54.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 71.
+(Font)              <7> on input line 54.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 71.
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 7
-4.
+(Font)              <5> on input line 54.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 5
+7.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -1127,25 +1147,17 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 \tf@toc=\write5
 \openout5 = `origin_theory.toc'.
 
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 90.
+ (./tfpt_status.tex
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
+2.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 90.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 90.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 90.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 90.
-
+(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
 
 
 [1
@@ -1155,26 +1167,36 @@ al/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/202
 5/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc}{/usr/local/texlive/2025/texmf-dist
 /fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc
 /dvips/lm/lm-rm.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-t
-s1.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 9
-7.
-(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <9> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 97.
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `lmtt' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
+s1.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}])
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 75.
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--97
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 75.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 75.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 75.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 75.
+
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <9> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 82.
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
 []\T1/lmr/bx/n/10 (+20) The $\OT1/lmr/m/n/10 (+20) (5\OML/lmm/m/it/10 ; \OT1/lm
 r/m/n/10 (+20) 3)$ \T1/lmr/bx/n/10 (+20) gen-er-a-tor and the Pythagorean mass 
 vol-ume [][I][]
  []
 
-LaTeX Font Info:    Trying to load font information for U+euf on input line 117
+LaTeX Font Info:    Trying to load font information for U+euf on input line 102
 .
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
@@ -1185,105 +1207,100 @@ File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
 )
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 122.
+(hyperref)                removing `math shift' on input line 107.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 122.
+(hyperref)                removing `math shift' on input line 107.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 122.
+(hyperref)                removing `math shift' on input line 107.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 122.
+(hyperref)                removing `math shift' on input line 107.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 122.
+(hyperref)                removing `math shift' on input line 107.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 122.
+(hyperref)                removing `math shift' on input line 107.
 
+
+
+[2{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 143.
+(Font)              <9> on input line 128.
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--151
+Underfull \hbox (badness 10000) in paragraph at lines 136--136
 []\T1/lmr/bx/n/10 (+20) One bound-ary trans-port for fla-vor \T1/lmr/bx/it/10 (
 +20) and \T1/lmr/bx/n/10 (+20) hori-zon [][I][]
  []
 
 
 
-[2{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
-<figures/orientation.pdf, id=149, 635.97598pt x 267.39899pt>
+[3]
+<figures/orientation.pdf, id=156, 635.97598pt x 267.39899pt>
 File: figures/orientation.pdf Graphic file (type pdf)
 <use figures/orientation.pdf>
-Package pdftex.def Info: figures/orientation.pdf  used on input line 198.
+Package pdftex.def Info: figures/orientation.pdf  used on input line 183.
 (pdftex.def)             Requested size: 429.29416pt x 180.49876pt.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 192.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 207.
+(hyperref)                removing `math shift' on input line 192.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 207.
-
-<figures/coxeter_circle.pdf, id=150, 310.761pt x 310.761pt>
+<figures/coxeter_circle.pdf, id=157, 310.761pt x 310.761pt>
 File: figures/coxeter_circle.pdf Graphic file (type pdf)
 <use figures/coxeter_circle.pdf>
-Package pdftex.def Info: figures/coxeter_circle.pdf  used on input line 212.
+Package pdftex.def Info: figures/coxeter_circle.pdf  used on input line 197.
 (pdftex.def)             Requested size: 214.65063pt x 214.65767pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/attractor.pdf, id=151, 462.52798pt x 260.17201pt>
+[4 <./figures/orientation.pdf> <./figures/coxeter_circle.pdf>]
+<figures/attractor.pdf, id=283, 462.52798pt x 260.17201pt>
 File: figures/attractor.pdf Graphic file (type pdf)
 <use figures/attractor.pdf>
-Package pdftex.def Info: figures/attractor.pdf  used on input line 240.
+Package pdftex.def Info: figures/attractor.pdf  used on input line 225.
 (pdftex.def)             Requested size: 345.30508pt x 194.24323pt.
 
 
-[3]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 242.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 257.
+(hyperref)                removing `\alpha' on input line 242.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\alpha' on input line 257.
+(hyperref)                removing `superscript' on input line 242.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 257.
+(hyperref)                removing `math shift' on input line 242.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 257.
+(hyperref)                removing `math shift' on input line 242.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 257.
+(hyperref)                removing `\Lambda' on input line 242.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Lambda' on input line 257.
+(hyperref)                removing `math shift' on input line 242.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 257.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 262--262
+Underfull \hbox (badness 10000) in paragraph at lines 247--247
 []\T1/lmr/bx/n/10 (+20) The same fixed point sets EM, $\OML/lmm/m/it/10 S[]$ \T
 1/lmr/bx/n/10 (+20) and $\OT1/lmr/m/n/10 (+20) ^^C$ []\T1/lmr/bx/n/10 (+20) [I]
 []-form / [][P][]-link
@@ -1291,96 +1308,104 @@ Underfull \hbox (badness 10000) in paragraph at lines 262--262
 
 
 
-[4 <./figures/orientation.pdf>]
+[5 <./figures/attractor.pdf>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[5 <./figures/coxeter_circle.pdf>]
+[6]
 
-[6 <./figures/attractor.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 389--389
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 374--374
 []|\T1/lmr/m/n/10 (+20) match ($\OMS/lmsy/m/n/10 ^^X$\T1/lmr/m/n/10 (+20) 9
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 389--389
+Underfull \hbox (badness 10000) in paragraph at lines 374--374
 []|\T1/lmr/m/n/10 (+20) match
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 389--389
+Underfull \hbox (badness 10000) in paragraph at lines 374--374
 []|\T1/lmr/m/n/10 (+20) match
  []
 
 
-Underfull \hbox (badness 2376) in paragraph at lines 389--389
+Underfull \hbox (badness 2376) in paragraph at lines 374--374
 []|\T1/lmr/m/n/10 (+20) mild ten-sion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 389--389
+Underfull \hbox (badness 10000) in paragraph at lines 374--374
 []|\T1/lmr/m/n/10 (+20) match
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 389--389
+Underfull \hbox (badness 10000) in paragraph at lines 374--374
 \T1/lmr/m/n/10 (+20) (Planck)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 389--389
+Underfull \hbox (badness 10000) in paragraph at lines 374--374
 \T1/lmr/m/n/10 (+20) / ten-sion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 389--389
+Underfull \hbox (badness 10000) in paragraph at lines 374--374
 []|\T1/lmr/m/n/10 (+20) future test
  []
 
 
 
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 434--434
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 419--419
 []\T1/lmr/bx/n/10 (+20) Geometric ori-gin of the seam ``$\OT1/lmr/m/n/10 (+20) 
 8$\T1/lmr/bx/n/10 (+20) '': one-sided Gauss--Bonnet [][I][]
  []
 
 
-
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 446--446
+Underfull \hbox (badness 10000) in paragraph at lines 431--431
 []\T1/lmr/bx/n/10 (+20) The boundary-CFT mir-ror: cen-tral charges $\OT1/lmr/m/
 n/10 (+20) =$ \T1/lmr/bx/n/10 (+20) com-piler atoms [][I][]/[][L][]
  []
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 500.
+
+[9]
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 485.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 501.
+LaTeX Font Warning: Command \small invalid in math mode on input line 486.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 502.
+LaTeX Font Warning: Command \small invalid in math mode on input line 487.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 505.
+LaTeX Font Warning: Command \small invalid in math mode on input line 490.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 574--582
+Underfull \hbox (badness 10000) in paragraph at lines 559--567
 \T1/lmr/bx/n/10 (+20) And that one scale is the dimensional-analysis floor, not
  a gap
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 583--589
+Underfull \hbox (badness 1675) in paragraph at lines 559--567
+\T1/lmr/bx/n/10 (+20) ([]\T1/lmr/bx/n/9 (+20) [\T1/lmtt/b/n/9 verification/v78_
+vgeo_floor.py\T1/lmr/bx/n/9 (+20) ][]\T1/lmr/bx/n/10 (+20) ). \T1/lmr/m/n/10 (+
+20) No the-ory de-rives a di-men-sion-ful con-stant from pure
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 568--574
 \T1/lmr/bx/n/10 (+20) The last open piece, $\OML/lmm/m/it/10 G\OT1/lmr/m/n/10 (
 +20) 6$\T1/lmr/bx/n/10 (+20) , re-duces to a rigorously-constructed net
  []
 
 
-Underfull \hbox (badness 1769) in paragraph at lines 583--589
+Underfull \hbox (badness 5245) in paragraph at lines 568--574
 \T1/lmr/bx/n/10 (+20) ([]\T1/lmr/bx/n/9 (+20) [\T1/lmtt/b/n/9 verification/v77_
 e8_conformal_net.py\T1/lmr/bx/n/9 (+20) ][]\T1/lmr/bx/n/10 (+20) ). \T1/lmr/m/n
 /10 (+20) The holographically-reduced bound-ary mea-sure
@@ -1388,14 +1413,12 @@ e8_conformal_net.py\T1/lmr/bx/n/9 (+20) ][]\T1/lmr/bx/n/10 (+20) ). \T1/lmr/m/n
 
 
 
-[9]
-
 [10]
 
 [11]
 
 [12]
-Underfull \hbox (badness 1184) in paragraph at lines 700--705
+Underfull \hbox (badness 1184) in paragraph at lines 685--690
 []\T1/lmr/m/it/10.95 (+20) Uniqueness of the $\OML/lmm/m/it/10.95 ^^V[]$ \T1/lm
 r/m/it/10.95 (+20) lat-tice clo-sure \T1/lmr/m/n/10.95 (+20) --- \T1/lmr/bx/n/1
 0.95 (+20) al-ready es-tab-lished []\T1/lmr/bx/n/10 (+20) [L][]\T1/lmr/m/n/10.9
@@ -1403,7 +1426,7 @@ r/m/it/10.95 (+20) lat-tice clo-sure \T1/lmr/m/n/10.95 (+20) --- \T1/lmr/bx/n/1
  []
 
 
-Underfull \hbox (badness 6944) in paragraph at lines 700--705
+Underfull \hbox (badness 6944) in paragraph at lines 685--690
 \T1/lmr/m/n/10.95 (+20) ([]\T1/lmr/m/n/9 (+20) [\T1/lmtt/m/n/9 verification/v6_
 bootstrap.py\T1/lmr/m/n/9 (+20) ][][][\T1/lmtt/m/n/9 verification/v15_bootstrap
 _classification.py\T1/lmr/m/n/9 (+20) ][]\T1/lmr/m/n/10.95 (+20) ). So three
@@ -1412,32 +1435,32 @@ _classification.py\T1/lmr/m/n/9 (+20) ][]\T1/lmr/m/n/10.95 (+20) ). So three
 
 
 [13]
-Underfull \hbox (badness 1874) in paragraph at lines 801--801
+Underfull \hbox (badness 1874) in paragraph at lines 786--786
 []|\T1/lmr/m/n/10 (+20) one $\OML/lmm/m/it/10 []$ \T1/lmr/m/n/10 (+20) sets EM
 , $\OML/lmm/m/it/10 S[]$ \T1/lmr/m/n/10 (+20) and $\OT1/lmr/m/n/10 (+20) ^^C$
  []
 
 
-Underfull \hbox (badness 2772) in paragraph at lines 801--801
+Underfull \hbox (badness 2772) in paragraph at lines 786--786
 []|\T1/lmr/m/n/10 (+20) horizon cross-links (Ja-cob-son/E-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 801--801
+Underfull \hbox (badness 10000) in paragraph at lines 786--786
 \T1/lmr/m/n/10 (+20) in-stein $\OT1/lmr/m/n/10 (+20) 8\OML/lmm/m/it/10 ^^Y[]\OT
 1/lmr/m/n/10 (+20) 1\OML/lmm/m/it/10 =c[]$\T1/lmr/m/n/10 (+20) , Hod $[] \OT1/l
 mr/m/n/10 (+20) 3$\T1/lmr/m/n/10 (+20) ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 801--801
+Underfull \hbox (badness 10000) in paragraph at lines 786--786
 []|\T1/lmr/bx/n/10 (+20) cyclic self-reproduction
  []
 
 
 
 [14]
-Underfull \hbox (badness 1281) in paragraph at lines 812--812
+Underfull \hbox (badness 2229) in paragraph at lines 797--797
 []\T1/lmr/bx/n/10 (+20) The resid-ual in-ven-tory: one con-stant, one an-chor, 
 one clock to find [][I][]/[][P][]
  []
@@ -1445,12 +1468,12 @@ one clock to find [][I][]/[][P][]
 
 
 [15]
-Overfull \hbox (18.5217pt too wide) in paragraph at lines 879--879
+Overfull \hbox (18.5217pt too wide) in paragraph at lines 864--864
 []|\T1/lmtt/m/n/10 v54_seam_horizon_keystones.py| 
  []
 
 
-Underfull \hbox (badness 1735) in paragraph at lines 881--884
+Underfull \hbox (badness 1735) in paragraph at lines 866--869
 \T1/lmtt/m/n/10.95 wolframscript -file verification/wolfram/tfpt_readouts.wl \T
 1/lmr/m/n/10.95 (+20) (all pass). Fig-ures are
  []
@@ -1462,17 +1485,21 @@ Underfull \hbox (badness 1735) in paragraph at lines 881--884
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `origin_theory.out' has not changed.
 (rerunfilecheck)             Checksum: D5E28BD09DFE3B42F3A96B7BA7A78AA5;3125.
  ) 
 Here is how much of TeX's memory you used:
- 33715 strings out of 473190
- 673036 string characters out of 5715801
- 1147631 words of memory out of 5000000
- 55823 multiletter control sequences out of 15000+600000
- 737290 words of font info for 391 fonts, out of 8000000 for 9000
+ 34106 strings out of 473190
+ 679987 string characters out of 5715801
+ 1145706 words of memory out of 5000000
+ 56203 multiletter control sequences out of 15000+600000
+ 737505 words of font info for 392 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 86i,16n,96p,1010b,1061s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 86i,16n,96p,1010b,1052s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.
 pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/
 local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texl
@@ -1504,10 +1531,10 @@ r/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtti10.pfb></usr/local/t
 exlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loc
 al/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr
 /local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on origin_theory.pdf (16 pages, 733522 bytes).
+Output written on origin_theory.pdf (16 pages, 748854 bytes).
 PDF statistics:
- 617 PDF objects out of 1000 (max. 8388607)
- 350 compressed objects within 4 object streams
+ 620 PDF objects out of 1000 (max. 8388607)
+ 352 compressed objects within 4 object streams
  50 named destinations out of 1000 (max. 500000)
- 98052 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 100100 words of extra memory for PDF output out of 106986 (max. 10000000)
 

@@ -19,21 +19,7 @@
 \usepackage[hidelinks,colorlinks=true,linkcolor=blue!55!black,urlcolor=blue!55!black]{hyperref}
 \emergencystretch=3em
 
-\definecolor{tfblue}{HTML}{1F4E79}
-\definecolor{tfgreen}{HTML}{1E7B45}
-\definecolor{tfred}{HTML}{9B2226}
-\definecolor{tfgold}{HTML}{B8860B}
-\newtcolorbox{keybox}[1][]{enhanced,breakable,colback=tfblue!5!white,colframe=tfblue,fonttitle=\bfseries,coltitle=white,title={#1}}
-\newtcolorbox{winbox}[1][]{enhanced,breakable,colback=tfgreen!6!white,colframe=tfgreen!75!black,fonttitle=\bfseries,coltitle=white,title={#1}}
-\newtcolorbox{gapbox}[1][]{enhanced,breakable,colback=tfred!5!white,colframe=tfred!80!black,fonttitle=\bfseries,coltitle=white,title={#1}}
-
-\newcommand{\tI}{{\small\textcolor{tfgreen}{\textbf{[I]}}}}
-\newcommand{\tL}{{\small\textcolor{tfblue}{\textbf{[L]}}}}
-\newcommand{\tF}{{\small\textcolor{tfgreen!45!black}{\textbf{[F]}}}}
-\newcommand{\tN}{{\small\textcolor{tfgreen}{\textbf{[N]}}}}
-\newcommand{\tP}{{\small\textcolor{tfgold}{\textbf{[P]}}}}
-\newcommand{\tA}{{\small\textcolor{tfred}{\textbf{[A]}}}}
-\newcommand{\veri}[1]{\,{\footnotesize\textcolor{tfblue!70!black}{[\,\texttt{verification/#1}\,]}}}
+\input{tfpt_style}
 \newcommand{\cthree}{c_3}
 \newcommand{\vgeo}{v_{\mathrm{geo}}}
 \newcommand{\Mpl}{\bar M_{\mathrm{Pl}}}
@@ -46,8 +32,11 @@
 \large Five adversarial targets (A--E): try to \emph{break} the reductions, not confirm them}
 \author{}\date{\today}
 
+\def\TFPTdoctitle{Red Team}
 \begin{document}
 \maketitle
+
+\input{tfpt_status}
 \vspace{-0.6cm}
 
 \begin{keybox}[What this note is]

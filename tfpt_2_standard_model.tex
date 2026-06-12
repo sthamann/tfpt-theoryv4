@@ -19,31 +19,7 @@
 \emergencystretch=3.5em
 
 % ---- colours ----
-\definecolor{tfblue}{HTML}{1F4E79}
-\definecolor{tfgreen}{HTML}{1E7B45}
-\definecolor{tfred}{HTML}{9B2226}
-\definecolor{tfgold}{HTML}{B8860B}
-\definecolor{tfgray}{HTML}{555555}
-
-% ---- tcolorbox environments (union of all merged notes) ----
-\newtcolorbox{keybox}[1][]{enhanced,breakable,colback=tfblue!5!white,colframe=tfblue,fonttitle=\bfseries\small,coltitle=white,title={#1},fontupper=\small}
-\newtcolorbox{winbox}[1][]{enhanced,breakable,colback=tfgreen!6!white,colframe=tfgreen!75!black,fonttitle=\bfseries\small,coltitle=white,title={#1},fontupper=\small}
-\newtcolorbox{gapbox}[1][]{enhanced,breakable,colback=tfred!5!white,colframe=tfred!80!black,fonttitle=\bfseries\small,coltitle=white,title={#1},fontupper=\small}
-\newtcolorbox{auditbox}[1][]{enhanced,breakable,colback=tfgold!8!white,colframe=tfgold!80!black,fonttitle=\bfseries\small,coltitle=white,title={#1},fontupper=\small}
-\newtcolorbox{audbox}[1][]{enhanced,breakable,colback=tfgold!8!white,colframe=tfgold!80!black,fonttitle=\bfseries\small,coltitle=white,title={#1},fontupper=\small}
-\newtcolorbox{resbox}[1][]{enhanced,breakable,colback=tfgreen!5!white,colframe=tfgreen!55!black,fonttitle=\bfseries\small,coltitle=white,title={#1},fontupper=\small}
-\newtcolorbox{roadbox}[1][]{enhanced,breakable,colback=tfgreen!5!white,colframe=tfgreen!55!black,fonttitle=\bfseries\small,coltitle=white,title={#1},fontupper=\small}
-
-% ---- status markers (colored) ----
-\newcommand{\tI}{{\small\textcolor{tfgreen}{\textbf{[I]}}}}          % exact identity
-\newcommand{\tL}{{\small\textcolor{tfblue}{\textbf{[L]}}}}           % Lie / lattice theorem
-\newcommand{\tF}{{\small\textcolor{tfgreen!45!black}{\textbf{[F]}}}} % formalised (Lean / script)
-\newcommand{\tN}{{\small\textcolor{tfgreen}{\textbf{[N]}}}}          % numerical fixed point
-\newcommand{\tP}{{\small\textcolor{tfgold}{\textbf{[P]}}}}           % physical / conditional
-\newcommand{\tA}{{\small\textcolor{tfred}{\textbf{[A]}}}}            % axiom / open
-\newcommand{\markerkey}{\par\vspace{1.5pt}\noindent{\scriptsize\itshape\textcolor{black!58}{Marker key:\ \tI~exact identity\,$\cdot$\,\tL~Lie/lattice theorem\,$\cdot$\,\tF~formalised\,$\cdot$\,\tN~numerical fixed point\,$\cdot$\,\tP~physical/conditional\,$\cdot$\,\tA~axiom\,/\,open.}}\par\vspace{2pt}}
-% inline reference to the script that machine-checks a claim (see verification/)
-\newcommand{\veri}[1]{\,{\footnotesize\textcolor{tfblue!70!black}{[\,\texttt{verification/#1}\,]}}}
+\input{tfpt_style}
 
 % ---- symbol macros (union; one definition each) ----
 \newcommand{\TFPT}{\mathrm{TFPT}}
@@ -115,6 +91,7 @@
 
 \title{\vspace{-1.2cm}\textbf{TFPT --- The Standard Model from the Compiler}\\[2mm]\large The $\varphi_0$-ladder, the flavor block from parabolic transport, and the worked closures ($\theta_{12}$, quark $c$, the gap, Starobinsky $M$)}
 \author{}\date{\today}
+\def\TFPTdoctitle{Standard-Model Readouts}
 \begin{document}
 \maketitle
 \vspace{-0.4cm}
@@ -130,6 +107,8 @@ QG sector, leaving only the ambient projective limit as a mathematical-completen
 
 \input{tfpt_docset}
 \noindent\textbf{You are reading document \#3.}
+
+\input{tfpt_status}
 
 \tableofcontents
 \clearpage

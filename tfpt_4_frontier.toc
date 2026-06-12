@@ -1,10 +1,10 @@
 \babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {1}Baryon asymmetry $\eta _B$ --- a downstream readout from the closed $\Omega _b h^2$}{2}{section.1}%
-\contentsline {paragraph}{Route A --- from the closed baryon fraction.}{2}{section*.2}%
-\contentsline {paragraph}{Route B --- leptogenesis interface (Paper 6, {\small \textcolor {tfgreen}{\textbf {[I]}}}).}{2}{section*.3}%
+\contentsline {paragraph}{Route A --- from the closed baryon fraction.}{3}{section*.2}%
+\contentsline {paragraph}{Route B --- leptogenesis interface (Paper 6, {\small \textcolor {tfgreen}{\textbf {[I]}}}).}{3}{section*.3}%
 \contentsline {section}{\numberline {2}Proton/electron ratio $m_p/m_e$ --- a cross-sector ratio}{3}{section.2}%
-\contentsline {section}{\numberline {3}The Koide relation --- near $2/3$, computed exactly}{3}{section.3}%
+\contentsline {section}{\numberline {3}The Koide relation --- near $2/3$, computed exactly}{4}{section.3}%
 \contentsline {section}{\numberline {4}Dark matter --- the candidate is fixed, the scale is pending}{6}{section.4}%
 \contentsline {section}{\numberline {5}Full quantum gravity --- induced from the boundary kernel}{7}{section.5}%
-\contentsline {section}{Summary}{7}{section*.4}%
+\contentsline {section}{Summary}{8}{section*.4}%
 \contentsline {section}{Appendix: computational verification}{8}{section*.5}%

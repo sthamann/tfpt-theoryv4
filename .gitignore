@@ -15,5 +15,6 @@ build/
 .ruff_cache/
 
 # Local drafts / correspondence
+list.txt
 experiments/older_tests/befund*
 alessandro*.html

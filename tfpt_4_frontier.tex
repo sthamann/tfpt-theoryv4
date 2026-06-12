@@ -20,24 +20,7 @@
 \usepackage[hidelinks,colorlinks=true,linkcolor=blue!55!black,urlcolor=blue!55!black]{hyperref}
 \emergencystretch=3em
 
-\definecolor{tfblue}{HTML}{1F4E79}
-\definecolor{tfgreen}{HTML}{1E7B45}
-\definecolor{tfred}{HTML}{9B2226}
-\definecolor{tfgold}{HTML}{B8860B}
-
-\newtcolorbox{keybox}[1][]{enhanced,breakable,colback=tfblue!5!white,colframe=tfblue,fonttitle=\bfseries\small,coltitle=white,title={#1},fontupper=\small}
-\newtcolorbox{winbox}[1][]{enhanced,breakable,colback=tfgreen!6!white,colframe=tfgreen!75!black,fonttitle=\bfseries\small,coltitle=white,title={#1},fontupper=\small}
-\newtcolorbox{gapbox}[1][]{enhanced,breakable,colback=tfred!5!white,colframe=tfred!80!black,fonttitle=\bfseries\small,coltitle=white,title={#1},fontupper=\small}
-
-\newcommand{\tI}{{\small\textcolor{tfgreen}{\textbf{[I]}}}}
-\newcommand{\tL}{{\small\textcolor{tfblue}{\textbf{[L]}}}}
-\newcommand{\tF}{{\small\textcolor{tfgreen!45!black}{\textbf{[F]}}}}
-\newcommand{\tN}{{\small\textcolor{tfgreen}{\textbf{[N]}}}}
-\newcommand{\tP}{{\small\textcolor{tfgold}{\textbf{[P]}}}}
-\newcommand{\tA}{{\small\textcolor{tfred}{\textbf{[A]}}}}
-\newcommand{\markerkey}{\par\vspace{1.5pt}\noindent{\scriptsize\itshape\textcolor{black!58}{Marker key:\ \tI~exact identity\,$\cdot$\,\tL~Lie/lattice theorem\,$\cdot$\,\tF~formalised\,$\cdot$\,\tN~numerical fixed point\,$\cdot$\,\tP~physical/conditional\,$\cdot$\,\tA~axiom\,/\,open.}}\par\vspace{2pt}}
-% inline reference to the script that machine-checks a claim (see verification/)
-\newcommand{\veri}[1]{\,{\footnotesize\textcolor{tfblue!70!black}{[\,\texttt{verification/#1}\,]}}}
+\input{tfpt_style}
 \newcommand{\phiz}{\varphi_0^{\mathrm{ret}}}
 \newcommand{\cthree}{c_3}
 \newcommand{\Mpl}{M_{\mathrm{Pl}}}
@@ -51,6 +34,7 @@
 the honest status, not forced onto the ladder}
 \author{}\date{\today}
 
+\def\TFPTdoctitle{Frontier}
 \begin{document}
 \maketitle
 \vspace{-0.6cm}
@@ -66,6 +50,8 @@ markers here disagree, the typing here (and the \texttt{status\_ledger.csv}) win
 
 \input{tfpt_docset}
 \noindent\textbf{You are reading document \#5.}
+
+\input{tfpt_status}
 
 \tableofcontents
 \bigskip

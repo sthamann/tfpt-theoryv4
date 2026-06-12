@@ -43,6 +43,17 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-12 (later)}
+\begin{itemize}
+\item \textbf{Shared style and central status artifact.} Two new single-source fragments:
+  \texttt{tfpt\_style.tex} (the canonical palette, status markers, marker key, \texttt{\textbackslash veri}
+  reference, the four tcolorbox families with back-compat aliases, and one running header/footer)
+  is now \texttt{\textbackslash input} by all eight documents --- the per-paper duplicated preambles
+  are gone; and \texttt{tfpt\_status.tex} (``TFPT status at a glance'') gives one canonical overall-status
+  card imported near the front of every document, replacing the divergent per-paper status statements.
+  Both registered in \texttt{build.sh} and the manifest \texttt{TEX} list.
+\end{itemize}
+
 \subsection*{2026-06-12}
 \begin{itemize}
 \item \textbf{Margin theorem (v122).} The established frozen selectors ($D_4$ annihilator

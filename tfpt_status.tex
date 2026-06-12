@@ -1,0 +1,37 @@
+% ---------------------------------------------------------------------
+%  tfpt_status.tex -- THE canonical "status at a glance" card.
+%  Single source for the overall theory status; \input near the front
+%  of every document so there is ONE status statement, not one per
+%  paper.  Requires tfpt_style.tex (keybox, markers).  Detailed,
+%  paper-specific status expansions live only where they belong
+%  (introduction: five-questions + closure ledger; tfpt_4: frontier
+%  table; tfpt_research_contracts: the contracts).
+% ---------------------------------------------------------------------
+\begin{keybox}[TFPT status at a glance --- read this card the same way in every document]
+\textbf{Two inputs, one compiler.} From the boundary constant $c_3=\tfrac1{8\pi}$ (axiom~P1) and the
+five-slot carrier $g_{\mathrm{car}}=5$ (axiom~P2) --- jointly the elementary symmetric data of one anchor
+$a=(1,1,2)$ --- the discrete compiler $D_5\oplus A_3+\mu_4\Rightarrow E_8$ is \emph{built}, and the
+Standard-Model skeleton (gauge group, three families, hypercharges, the flavor matrix), the dimensionless
+constants ($\alpha^{-1}=137.0359992$) and the scale grammar are read off as fixed points. The algebraic
+core is machine-checked; physical readouts run through \emph{named bridges} whose status is typed below.
+\smallskip\\
+\noindent\textbf{What is closed, and what genuinely remains.} The discrete/algebraic layer is closed
+(\tI/\tL/\tF); the everything-open residual reduces to \emph{three named interface problems}:
+\begin{center}\small
+\renewcommand{\arraystretch}{1.18}
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Interface} & \textbf{Question} & \textbf{Status} \\
+\midrule
+$v_{\mathrm{geo}}$ & the one dimensionful scale anchor (same nature as $1/G$) & reduced \tA \\
+$G_{\mathrm{net}}$ & the index-4 seam-net inclusion certifying the metric sector & open \tB/\tA \\
+$F_{\mathrm{transfer}}$ & source$\to$pole / relic / cosmology transport (Koide, $\eta_B$, axion, $m_p/m_e$) & open \tB/\tP \\
+\bottomrule
+\end{tabular}
+\end{center}
+\noindent Everything carries a claim ID resolving to a row of \texttt{verification/status\_ledger.csv}
+(the single source of truth); \textbf{if the text and the ledger ever disagree, the ledger wins.} The
+historical labels $(U_{\mathrm{wall}},G_{\mathrm{metric}},F_{\mathrm{frontier}})$ are retained only for
+ledger continuity --- the live residual is $v_{\mathrm{geo}}\oplus G_{\mathrm{net}}\oplus F_{\mathrm{transfer}}$.
+\markerkey
+\end{keybox}

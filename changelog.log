@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 08:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 08:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -527,8 +527,13 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 4
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
+Underfull \hbox (badness 1253) in paragraph at lines 48--55
+[]\T1/lmr/bx/n/10.95 (+20) Shared style and cen-tral sta-tus ar-ti-fact. \T1/lm
+r/m/n/10.95 (+20) Two new single-source frag-ments:
+ []
+
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 48.
+(Font)              <10.95> on input line 59.
 
 
 [1
@@ -541,7 +546,7 @@ dvips/lm/lm-rm.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ma
 thsy.enc}]
 
 [2]
-Overfull \hbox (23.4928pt too wide) in paragraph at lines 155--159
+Overfull \hbox (23.4928pt too wide) in paragraph at lines 166--170
 []\T1/lmr/bx/n/10.95 (-20) Blind reg-istry frozen (v84). \T1/lmr/m/n/10.95 (-20
 ) Machine-enforced pre-dic-tion reg-istry (\T1/lmtt/m/n/10.95 predictions_froze
 n.json\T1/lmr/m/n/10.95 (-20) ):
@@ -557,15 +562,15 @@ L3 programming layer <2025-01-18>
 Package rerunfilecheck Info: File `changelog.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  )
-(\end occurred when \ifdefined on line 178 was incomplete) 
+(\end occurred when \ifdefined on line 189 was incomplete) 
 Here is how much of TeX's memory you used:
- 13234 strings out of 473190
- 210707 string characters out of 5715801
- 668684 words of memory out of 5000000
+ 13235 strings out of 473190
+ 210717 string characters out of 5715801
+ 665684 words of memory out of 5000000
  36143 multiletter control sequences out of 15000+600000
  615510 words of font info for 156 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,5n,79p,1006b,610s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,5n,79p,1006b,606s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2
 025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2025/texmf-
 dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts
@@ -580,10 +585,10 @@ ublic/lm/lmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lm
 sy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></
 usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pf
 b>
-Output written on changelog.pdf (3 pages, 256260 bytes).
+Output written on changelog.pdf (3 pages, 258176 bytes).
 PDF statistics:
- 113 PDF objects out of 1000 (max. 8388607)
- 76 compressed objects within 1 object stream
- 10 named destinations out of 1000 (max. 500000)
+ 114 PDF objects out of 1000 (max. 8388607)
+ 77 compressed objects within 1 object stream
+ 11 named destinations out of 1000 (max. 500000)
  31233 words of extra memory for PDF output out of 35830 (max. 10000000)
 
