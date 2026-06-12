@@ -59,6 +59,15 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-12 (Overleaf shadow mirror: tfpt5-shadow)}
+\begin{itemize}
+\item \textbf{One-way GitHub mirror for Overleaf sync.} Added \texttt{scripts/export-shadow.sh} and
+  \texttt{.github/workflows/shadow-sync.yml}: on every push to \texttt{main}, a filtered copy is pushed to
+  \texttt{sthamann/tfpt5-shadow} (papers, \texttt{tex-artefacts/}, \texttt{figures/},
+  \texttt{verification/}, \texttt{experiments/}; excludes \texttt{\_archive/}, \texttt{website/}, all
+  \texttt{*.pdf}, \texttt{.cursor/}). $\sim$270 files / $\sim$3\,MB --- within Overleaf GitHub-sync limits.
+\end{itemize}
+
 \subsection*{2026-06-12 (origin\_theory style alignment + box reduction)}
 \begin{itemize}
 \item \textbf{Fewer boxes, embedded in text.} \texttt{origin\_theory} from $22$ to $16$ boxes: the
@@ -123,12 +132,20 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
 \item \textbf{Citation gaps closed.} The audit immediately found three scripts cited
   only in the master index: \vref{v17} and \vref{v85} are now cited in their
   \texttt{tfpt\_2} sections (hexagonal resolvent; master cover), and two short
-  \texttt{\textbackslash veri\{v19\}} citations were expanded to the full script name;
-  \vref{v91} (spine tetrahedron) is recorded in \texttt{audit\_baseline.json} as a known
-  open integration gap.
+  \texttt{\textbackslash veri\{v19\}} citations were expanded to the full script name.
+  \vref{v91} (spine tetrahedron) had no paper section at all --- it is now integrated:
+  a keybox in \texttt{tfpt\_3} (``Three views of one spine'': anchor closure, edge/face
+  products, volume $120$, $K_6$ negative control, the tautology/sub-grammar caveats) and
+  a closing note in the \texttt{tfpt\_1} Spine Quotient Lemma; the
+  \texttt{ARCH.SPINE.01} ledger location is corrected to \texttt{tfpt\_1;tfpt\_3} and the
+  baseline exception list is empty again.
 \item \textbf{Rules.} \texttt{.cursor/rules} updated (\texttt{tfpt-workflow},
   \texttt{website-sync}) and a new \texttt{sync-maps} rule added describing the agentic
-  procedure: enumerate affected surfaces from the maps first, audit as the exit gate.
+  procedure: \emph{regenerate} the maps first, enumerate the affected surfaces from
+  them, audit as the exit gate. The mirror map (\texttt{website\_map.csv}) also covers
+  the root \texttt{README.md} and \texttt{next.txt} (bare \texttt{vN} ids resolved to
+  full script names), and both files are named explicitly as status surfaces that move
+  with every finding.
 \end{itemize}
 
 \subsection*{2026-06-12 (tfpt\_3 / tfpt\_4 style alignment + box reduction)}

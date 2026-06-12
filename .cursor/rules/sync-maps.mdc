@@ -16,25 +16,38 @@ audit as the exit gate.
   splitting the papers): `doc, kind, title, line_start, line_end, scripts, hash,
   last_changed`. The `scripts` column lists every `vN_*.py` cited in that
   section; `last_changed` is the date the section's content hash last changed.
-- `verification/website_map.csv` — one row per website file that mentions a
-  script or document: `file, scripts, docs`.
+- `verification/website_map.csv` — one row per **mirror surface** that mentions
+  a script or document: every website file under `app/components/lib` **plus the
+  root `README.md` and `next.txt`** (bare module ids like `v91` are resolved to
+  the full script name): `file, scripts, docs`.
 - Both are GENERATED — never edit them; re-run `bash build.sh gen` after any
   paper or website edit so they stay fresh (the audit fails on stale maps).
 
 ## Agentic procedure when a result/status/script changes
 
+0. **Refresh the maps FIRST**: `bash build.sh gen` — before reading them, so the
+   enumeration reflects the current tree (papers may have been edited since the
+   last generation). Only then start editing.
 1. **Enumerate the paper surfaces**: `grep <vN_script> verification/docs_map.csv`
    → every (doc, section, line range) that cites the script. Open exactly those
    sections and update them. Sections with related content but no citation can
    be found via the section titles in the map (read it like a global table of
    contents with freshness dates).
-2. **Enumerate the website surfaces**: `grep <vN_script> verification/website_map.csv`
+2. **Enumerate the mirror surfaces**: `grep <vN_script> verification/website_map.csv`
    and `grep <doc-name> verification/website_map.csv` → every website file that
    mirrors the affected content (`papers.ts` sections, DAG nodes, status
-   components, …). Update those in the same change.
-3. **Regenerate**: `bash build.sh gen` (maps + script index), recompile touched
-   docs, `bash build.sh website` if PDFs/scripts changed.
-4. **Gate**: `bash build.sh audit` must end `AUDIT OK`. It enforces (both
+   components, …) **and**, via the same map, the root `README.md` and `next.txt`
+   when they mention the affected script/document. Update everything the grep
+   surfaces in the same change.
+3. **Keep the prose mirrors current even without a grep hit**: the root
+   `README.md` (highlights, "What is genuinely open", repo-structure tables,
+   reproduce commands) and `next.txt` (the running research notes; the only
+   German-allowed file) state status and results too — when a status, gate or
+   headline result moves, check both and update them in the same change.
+4. **Regenerate**: `bash build.sh gen` again after the edits (maps + script
+   index), recompile touched docs, `bash build.sh website` if PDFs/scripts
+   changed.
+5. **Gate**: `bash build.sh audit` must end `AUDIT OK`. It enforces (both
    directions): suite ↔ run_all ↔ registry ↔ ledger; citations in paper BODIES;
    no stale `\veri`/`\vref` targets; changelog entry for every new module;
    byte-identical website mirror + release hashes + version stamps; overfull

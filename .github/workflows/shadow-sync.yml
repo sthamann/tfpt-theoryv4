@@ -1,0 +1,52 @@
+name: Sync tfpt5-shadow mirror
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main repository
+        uses: actions/checkout@v4
+
+      - name: Checkout shadow repository
+        uses: actions/checkout@v4
+        with:
+          repository: sthamann/tfpt5-shadow
+          token: ${{ secrets.SHADOW_REPO_TOKEN }}
+          path: shadow
+          fetch-depth: 0
+
+      - name: Export filtered tree
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_SHA: ${{ github.sha }}
+        run: bash scripts/export-shadow.sh shadow
+
+      - name: Commit and push mirror
+        working-directory: shadow
+        env:
+          SHADOW_TOKEN: ${{ secrets.SHADOW_REPO_TOKEN }}
+          SOURCE_REPO: ${{ github.repository }}
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add -A
+          if git diff --staged --quiet; then
+            echo "Shadow mirror already up to date."
+            exit 0
+          fi
+
+          short_sha="${SOURCE_SHA:0:7}"
+          git commit -m "Sync from ${SOURCE_REPO}@${short_sha}
+
+          One-way mirror for Overleaf GitHub sync (no _archive, website, or PDFs)."
+          git push "https://x-access-token:${SHADOW_TOKEN}@github.com/sthamann/tfpt5-shadow.git" HEAD:main
