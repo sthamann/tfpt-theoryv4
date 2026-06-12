@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 07:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 08:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1111,25 +1111,24 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <12> on input line 67.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 71.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 71.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 71.
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 7
 4.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 84.
-
 (./origin_theory.toc)
 \tf@toc=\write5
 \openout5 = `origin_theory.toc'.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <14.4> on input line 90.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 90.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 90.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -1170,9 +1169,9 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 
 Underfull \hbox (badness 10000) in paragraph at lines 97--97
-[]\T1/lmr/bx/n/10.95 (+20) The $\OT1/lmr/m/n/10.95 (+20) (5\OML/lmm/m/it/10.95 
-; \OT1/lmr/m/n/10.95 (+20) 3)$ \T1/lmr/bx/n/10.95 (+20) gen-er-a-tor and the Py
-thagorean mass vol-ume []\T1/lmr/bx/n/10 (+20) [I][]
+[]\T1/lmr/bx/n/10 (+20) The $\OT1/lmr/m/n/10 (+20) (5\OML/lmm/m/it/10 ; \OT1/lm
+r/m/n/10 (+20) 3)$ \T1/lmr/bx/n/10 (+20) gen-er-a-tor and the Pythagorean mass 
+vol-ume [][I][]
  []
 
 LaTeX Font Info:    Trying to load font information for U+euf on input line 117
@@ -1211,18 +1210,15 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 143.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 151--151
-[]\T1/lmr/bx/n/10.95 (+20) One bound-ary trans-port for fla-vor \T1/lmr/bx/it/1
-0.95 (+20) and \T1/lmr/bx/n/10.95 (+20) hori-zon []\T1/lmr/bx/n/10 (+20) [I][]
+[]\T1/lmr/bx/n/10 (+20) One bound-ary trans-port for fla-vor \T1/lmr/bx/it/10 (
++20) and \T1/lmr/bx/n/10 (+20) hori-zon [][I][]
  []
 
 
 
 [2{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
-<figures/orientation.pdf, id=140, 635.97598pt x 267.39899pt>
+<figures/orientation.pdf, id=149, 635.97598pt x 267.39899pt>
 File: figures/orientation.pdf Graphic file (type pdf)
 <use figures/orientation.pdf>
 Package pdftex.def Info: figures/orientation.pdf  used on input line 198.
@@ -1239,7 +1235,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 207.
 
-<figures/coxeter_circle.pdf, id=141, 310.761pt x 310.761pt>
+<figures/coxeter_circle.pdf, id=150, 310.761pt x 310.761pt>
 File: figures/coxeter_circle.pdf Graphic file (type pdf)
 <use figures/coxeter_circle.pdf>
 Package pdftex.def Info: figures/coxeter_circle.pdf  used on input line 212.
@@ -1247,15 +1243,14 @@ Package pdftex.def Info: figures/coxeter_circle.pdf  used on input line 212.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-
-[3]
-<figures/attractor.pdf, id=153, 462.52798pt x 260.17201pt>
+<figures/attractor.pdf, id=151, 462.52798pt x 260.17201pt>
 File: figures/attractor.pdf Graphic file (type pdf)
 <use figures/attractor.pdf>
 Package pdftex.def Info: figures/attractor.pdf  used on input line 240.
 (pdftex.def)             Requested size: 345.30508pt x 194.24323pt.
 
+
+[3]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1289,25 +1284,22 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 262--262
-[]\T1/lmr/bx/n/10.95 (+20) The same fixed point sets EM, $\OML/lmm/m/it/10.95 S
-[]$ \T1/lmr/bx/n/10.95 (+20) and $\OT1/lmr/m/n/10.95 (+20) ^^C$ []\T1/lmr/bx/n/
-10 (+20) [I][]\T1/lmr/bx/n/10.95 (+20) -form / []\T1/lmr/bx/n/10 (+20) [P][]\T1
-/lmr/bx/n/10.95 (+20) -link
+[]\T1/lmr/bx/n/10 (+20) The same fixed point sets EM, $\OML/lmm/m/it/10 S[]$ \T
+1/lmr/bx/n/10 (+20) and $\OT1/lmr/m/n/10 (+20) ^^C$ []\T1/lmr/bx/n/10 (+20) [I]
+[]-form / [][P][]-link
  []
 
 
 
 [4 <./figures/orientation.pdf>]
 
-[5 <./figures/coxeter_circle.pdf>]
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[6 <./figures/attractor.pdf>]
+[5 <./figures/coxeter_circle.pdf>]
 
-[7]
+[6 <./figures/attractor.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 389--389
 []|\T1/lmr/m/n/10 (+20) match ($\OMS/lmsy/m/n/10 ^^X$\T1/lmr/m/n/10 (+20) 9
  []
@@ -1349,23 +1341,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 389--389
 
 
 
-[8]
+[7]
 Underfull \hbox (badness 10000) in paragraph at lines 434--434
-[]\T1/lmr/bx/n/10.95 (+20) Geometric ori-gin of the seam ``$\OT1/lmr/m/n/10.95 
-(+20) 8$\T1/lmr/bx/n/10.95 (+20) '': one-sided Gauss--Bonnet []\T1/lmr/bx/n/10 
-(+20) [I][]
- []
-
-
-Underfull \hbox (badness 2237) in paragraph at lines 446--446
-[]\T1/lmr/bx/n/10.95 (+20) The boundary-CFT mir-ror: cen-tral charges $\OT1/lmr
-/m/n/10.95 (+20) =$ \T1/lmr/bx/n/10.95 (+20) com-piler atoms []\T1/lmr/bx/n/10 
-(+20) [I][]\T1/lmr/bx/n/10.95 (+20) /[]\T1/lmr/bx/n/10 (+20) [L][]
+[]\T1/lmr/bx/n/10 (+20) Geometric ori-gin of the seam ``$\OT1/lmr/m/n/10 (+20) 
+8$\T1/lmr/bx/n/10 (+20) '': one-sided Gauss--Bonnet [][I][]
  []
 
 
 
-[9]
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 446--446
+[]\T1/lmr/bx/n/10 (+20) The boundary-CFT mir-ror: cen-tral charges $\OT1/lmr/m/
+n/10 (+20) =$ \T1/lmr/bx/n/10 (+20) com-piler atoms [][I][]/[][L][]
+ []
+
 
 LaTeX Font Warning: Command \small invalid in math mode on input line 500.
 
@@ -1379,32 +1368,33 @@ LaTeX Font Warning: Command \small invalid in math mode on input line 502.
 LaTeX Font Warning: Command \small invalid in math mode on input line 505.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 550--563
-\T1/lmr/bx/n/10.95 (+20) Residual re-solved as an an-chor, not a gap
+Underfull \hbox (badness 10000) in paragraph at lines 574--582
+\T1/lmr/bx/n/10 (+20) And that one scale is the dimensional-analysis floor, not
+ a gap
  []
 
 
-Underfull \hbox (badness 6316) in paragraph at lines 574--582
-\T1/lmr/bx/n/10.95 (+20) And that one scale is the dimensional-analysis floor, 
-not a gap
+Underfull \hbox (badness 10000) in paragraph at lines 583--589
+\T1/lmr/bx/n/10 (+20) The last open piece, $\OML/lmm/m/it/10 G\OT1/lmr/m/n/10 (
++20) 6$\T1/lmr/bx/n/10 (+20) , re-duces to a rigorously-constructed net
  []
 
 
-Underfull \hbox (badness 5652) in paragraph at lines 583--589
-\T1/lmr/bx/n/10.95 (+20) The last open piece, $\OML/lmm/m/it/10.95 G\OT1/lmr/m/
-n/10.95 (+20) 6$\T1/lmr/bx/n/10.95 (+20) , re-duces to a rigorously-constructed
- net
+Underfull \hbox (badness 1769) in paragraph at lines 583--589
+\T1/lmr/bx/n/10 (+20) ([]\T1/lmr/bx/n/9 (+20) [\T1/lmtt/b/n/9 verification/v77_
+e8_conformal_net.py\T1/lmr/bx/n/9 (+20) ][]\T1/lmr/bx/n/10 (+20) ). \T1/lmr/m/n
+/10 (+20) The holographically-reduced bound-ary mea-sure
  []
 
 
+
+[9]
 
 [10]
 
 [11]
 
 [12]
-
-[13]
 Underfull \hbox (badness 1184) in paragraph at lines 700--705
 []\T1/lmr/m/it/10.95 (+20) Uniqueness of the $\OML/lmm/m/it/10.95 ^^V[]$ \T1/lm
 r/m/it/10.95 (+20) lat-tice clo-sure \T1/lmr/m/n/10.95 (+20) --- \T1/lmr/bx/n/1
@@ -1421,7 +1411,7 @@ _classification.py\T1/lmr/m/n/9 (+20) ][]\T1/lmr/m/n/10.95 (+20) ). So three
 
 
 
-[14]
+[13]
 Underfull \hbox (badness 1874) in paragraph at lines 801--801
 []|\T1/lmr/m/n/10 (+20) one $\OML/lmm/m/it/10 []$ \T1/lmr/m/n/10 (+20) sets EM
 , $\OML/lmm/m/it/10 S[]$ \T1/lmr/m/n/10 (+20) and $\OT1/lmr/m/n/10 (+20) ^^C$
@@ -1446,9 +1436,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 801--801
 
 
 
-[15]
+[14]
+Underfull \hbox (badness 1281) in paragraph at lines 812--812
+[]\T1/lmr/bx/n/10 (+20) The resid-ual in-ven-tory: one con-stant, one an-chor, 
+one clock to find [][I][]/[][P][]
+ []
 
-[16]
+
+
+[15]
 Overfull \hbox (18.5217pt too wide) in paragraph at lines 879--879
 []|\T1/lmtt/m/n/10 v54_seam_horizon_keystones.py| 
  []
@@ -1461,7 +1457,7 @@ Underfull \hbox (badness 1735) in paragraph at lines 881--884
 
 
 
-[17] (./origin_theory.aux)
+[16] (./origin_theory.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1470,46 +1466,48 @@ Package rerunfilecheck Info: File `origin_theory.out' has not changed.
 (rerunfilecheck)             Checksum: D5E28BD09DFE3B42F3A96B7BA7A78AA5;3125.
  ) 
 Here is how much of TeX's memory you used:
- 33634 strings out of 473190
- 672121 string characters out of 5715801
- 1138540 words of memory out of 5000000
- 55818 multiletter control sequences out of 15000+600000
- 726187 words of font info for 350 fonts, out of 8000000 for 9000
+ 33715 strings out of 473190
+ 673036 string characters out of 5715801
+ 1147631 words of memory out of 5000000
+ 55823 multiletter control sequences out of 15000+600000
+ 737290 words of font info for 391 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 86i,16n,96p,1010b,1049s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 86i,16n,96p,1010b,1061s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.
 pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/
 local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texl
-ive/2025/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local/texlive/2025/te
+ive/2025/texmf-dist/fonts/type1/public/lm/lmbx7.pfb></usr/local/texlive/2025/te
 xmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive/2025/texmf-dist/fo
 nts/type1/public/lm/lmbxi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1
 /public/lm/lmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm
 /lmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pf
-b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/loc
+b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/loc
 al/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/
 2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2025/texmf-
 dist/fonts/type1/public/lm/lmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/
 type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/publi
-c/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.p
-fb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/loc
-al/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2
-025/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2025/texmf-di
-st/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2025/texmf-dist/fonts/t
-ype1/public/lm/lmri8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public
-/lm/lmri9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.
-pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/l
-ocal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texliv
-e/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2025/texm
-f-dist/fonts/type1/public/lm/lmtk10.pfb></usr/local/texlive/2025/texmf-dist/fon
-ts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/p
-ublic/lm/lmtt9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lm
-tti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbo
-ls/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/s
-ymbols/msbm10.pfb>
-Output written on origin_theory.pdf (17 pages, 701650 bytes).
+c/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr5.p
+fb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/loc
+al/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2
+025/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2025/texmf-di
+st/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/typ
+e1/public/lm/lmri10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/
+lm/lmri8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri9.pf
+b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/lo
+cal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive
+/2025/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2025/texmf
+-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts
+/type1/public/lm/lmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/publ
+ic/lm/lmtk10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt
+10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></us
+r/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtti10.pfb></usr/local/t
+exlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loc
+al/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr
+/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on origin_theory.pdf (16 pages, 733522 bytes).
 PDF statistics:
- 606 PDF objects out of 1000 (max. 8388607)
- 344 compressed objects within 4 object streams
- 51 named destinations out of 1000 (max. 500000)
- 91908 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 617 PDF objects out of 1000 (max. 8388607)
+ 350 compressed objects within 4 object streams
+ 50 named destinations out of 1000 (max. 500000)
+ 98052 words of extra memory for PDF output out of 106986 (max. 10000000)
 

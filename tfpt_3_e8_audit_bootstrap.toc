@@ -4,24 +4,24 @@
 \contentsline {section}{\numberline {2}The $(1,1,2)$ anchor microcode}{3}{section.2}%
 \contentsline {section}{\numberline {3}The residue and length matrices as spectral objects}{5}{section.3}%
 \contentsline {paragraph}{Bilinear anchor forms.}{5}{section*.2}%
-\contentsline {section}{\numberline {4}The secondary branching atlas}{7}{section.4}%
+\contentsline {section}{\numberline {4}The secondary branching atlas}{6}{section.4}%
 \contentsline {section}{\numberline {5}Group-theoretic audits (optional)}{8}{section.5}%
-\contentsline {section}{\numberline {6}Further audit lemmas (machine-verified this round)}{9}{section.6}%
-\contentsline {section}{\numberline {7}What this changes, and what stays open}{10}{section.7}%
+\contentsline {section}{\numberline {6}Further audit lemmas (machine-verified this round)}{8}{section.6}%
+\contentsline {section}{\numberline {7}What this changes, and what stays open}{9}{section.7}%
 \contentsline {part}{II\hspace {1em}The $E_8$ cascade bridge}{11}{part.2}%
 \contentsline {section}{\numberline {8}The old cascade, recalled}{11}{section.8}%
 \contentsline {section}{\numberline {9}The spine: every rung is a current number}{11}{section.9}%
-\contentsline {section}{\numberline {10}Three views of one spine}{13}{section.10}%
-\contentsline {section}{\numberline {11}Direct $\varphi _0^{\mathrm {ret}}$ relations: old vs current}{14}{section.11}%
-\contentsline {section}{\numberline {12}Sector inventory: have all the old-cascade sectors been computed?}{14}{section.12}%
-\contentsline {section}{\numberline {13}What is new, what is old, what stays open}{15}{section.13}%
-\contentsline {part}{III\hspace {1em}The self-consistency loop}{16}{part.3}%
-\contentsline {section}{\numberline {14}The loop for $g_{\mathrm {car}}$ --- an overdetermined fixed point}{16}{section.14}%
+\contentsline {section}{\numberline {10}Three views of one spine}{14}{section.10}%
+\contentsline {section}{\numberline {11}Direct $\varphi _0^{\mathrm {ret}}$ relations: old vs current}{15}{section.11}%
+\contentsline {section}{\numberline {12}Sector inventory: have all the old-cascade sectors been computed?}{15}{section.12}%
+\contentsline {section}{\numberline {13}What is new, what is old, what stays open}{16}{section.13}%
+\contentsline {part}{III\hspace {1em}The self-consistency loop}{17}{part.3}%
+\contentsline {section}{\numberline {14}The loop for $g_{\mathrm {car}}$ --- an overdetermined fixed point}{17}{section.14}%
 \contentsline {section}{\numberline {15}The loop for $c_3$ --- the ``$8$'' is the $E_8$ rank}{18}{section.15}%
-\contentsline {section}{\numberline {16}The Möbius origin of the irreducible $\pi $}{18}{section.16}%
+\contentsline {section}{\numberline {16}The Möbius origin of the irreducible $\pi $}{19}{section.16}%
 \contentsline {section}{\numberline {17}Honest status: bootstrap, not creation from nothing}{20}{section.17}%
-\contentsline {part}{IV\hspace {1em}Open items and the $E_8$-slice scan}{21}{part.4}%
-\contentsline {section}{\numberline {18}The honest open-items list}{21}{section.18}%
-\contentsline {section}{\numberline {19}The $E_8$-slice scan: results (honest hit / miss)}{22}{section.19}%
-\contentsline {section}{\numberline {20}Following the $SU(9)$ lead: cross-slice consistency}{23}{section.20}%
-\contentsline {section}{Appendix: computational verification}{23}{section*.3}%
+\contentsline {part}{IV\hspace {1em}Open items and the $E_8$-slice scan}{22}{part.4}%
+\contentsline {section}{\numberline {18}The honest open-items list}{22}{section.18}%
+\contentsline {section}{\numberline {19}The $E_8$-slice scan: results (honest hit / miss)}{23}{section.19}%
+\contentsline {section}{\numberline {20}Following the $SU(9)$ lead: cross-slice consistency}{24}{section.20}%
+\contentsline {section}{Appendix: computational verification}{24}{section*.3}%

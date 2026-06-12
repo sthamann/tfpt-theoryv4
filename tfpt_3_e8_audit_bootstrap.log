@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 07:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 08:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1209,19 +1209,21 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 141.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 144.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-70.
+(Font)              <7> on input line 144.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 144.
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmtt.fd
+(./tfpt_docset.tex
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
+5.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-
-(./tfpt_3_e8_audit_bootstrap.toc
+) (./tfpt_3_e8_audit_bootstrap.toc
 
 [1
 
@@ -1229,7 +1231,10 @@ Package microtype Info: Loading generic protrusion settings for font family
 al/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/202
 5/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2025/texmf-di
 st/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/d
-vips/lm/lm-mathsy.enc}])
+vips/lm/lm-mathsy.enc}]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 4.
+)
 \tf@toc=\write5
 \openout5 = `tfpt_3_e8_audit_bootstrap.toc'.
 
@@ -1238,25 +1243,23 @@ vips/lm/lm-mathsy.enc}])
 [2]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 182.
+(hyperref)                removing `math shift' on input line 169.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 182.
+(hyperref)                removing `subscript' on input line 169.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 182.
+(hyperref)                removing `math shift' on input line 169.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.74> on input line 182.
+(Font)              <20.74> on input line 169.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 182.
+(Font)              <14.4> on input line 169.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 201.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 201.
-LaTeX Font Info:    Trying to load font information for U+euf on input line 210
+(Font)              <9> on input line 188.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 197
 .
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
@@ -1265,59 +1268,67 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
 
 )
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 216.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 203.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 216.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 216.
+(hyperref)                removing `math shift' on input line 203.
 
 
 
 [3
 
 {/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
-Overfull \hbox (3.33105pt too wide) detected at line 253
-[] \OT1/lmr/m/n/10.95 :  (2\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 4\OML/lmm/m
-/it/10.95 ; \OT1/lmr/m/n/10.95 8\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 16) = 
-[]\OMS/lmsy/m/n/10.95 j\U/msb/m/n/10.95 Z[]\OMS/lmsy/m/n/10.95 j\OML/lmm/m/it/1
-0.95 ;  \OMS/lmsy/m/n/10.95 j\OML/lmm/m/it/10.95 ^^V[]\OMS/lmsy/m/n/10.95 j\OML
-/lmm/m/it/10.95 ;  h\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 D[]\OT1/lmr/m/n/10.
-95 )\OML/lmm/m/it/10.95 ;  [] S[][]:
- []
-
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <9> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 286.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 273.
 
 
 [4]
 
 [5]
+Underfull \hbox (badness 3168) in paragraph at lines 404--409
+\T1/lmr/m/it/10 (+20) conditional on the de-clared gram-mar \T1/lmr/m/n/10 (+20
+) --- a look-elsewhere-corrected null-model re-jec-tion,
+ []
+
+
+Underfull \hbox (badness 3029) in paragraph at lines 404--409
+\T1/lmr/m/n/10 (+20) never ``cer-tainty''. Com-ple-men-tary to the frozen reg-i
+stry: the freeze (v84) pre-vents
+ []
+
+
+Underfull \hbox (badness 3769) in paragraph at lines 404--409
+\T1/lmr/m/it/10 (+20) fu-ture \T1/lmr/m/n/10 (+20) look-elsewhere drift, this t
+est quan-ti-fies the \T1/lmr/m/it/10 (+20) ret-ro-spec-tive \T1/lmr/m/n/10 (+20
+) look-elsewhere bur-den.
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 
 [6]
 
 [7]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 5
-15.
+02.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 
 [8{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
-Overfull \hbox (10.80014pt too wide) detected at line 562
-\OMS/lmsy/m/n/10.95 k\OML/lmm/m/it/10.95 L\OMS/lmsy/m/n/10.95 k[] \OT1/lmr/m/n/
-10.95 = 234 = \OML/lmm/m/it/10.95 N[] \OMS/lmsy/m/n/10.95 k\OML/lmm/m/it/10.95 
-R\OMS/lmsy/m/n/10.95 k[] \OT1/lmr/m/n/10.95 = 3 [] \OML/lmm/m/it/10.95 E[];  \O
-MS/lmsy/m/n/10.95 k\OML/lmm/m/it/10.95 L\OMS/lmsy/m/n/10.95 k[] \OT1/lmr/m/n/10
-.95 = \OMS/lmsy/m/n/10.95 k\OML/lmm/m/it/10.95 R\OMS/lmsy/m/n/10.95 k[] \OT1/lm
-r/m/n/10.95 + 12\OMS/lmsy/m/n/10.95 h\OML/lmm/m/it/10.95 R; W\OMS/lmsy/m/n/10.9
-5 i \OT1/lmr/m/n/10.95 + 36\OMS/lmsy/m/n/10.95 k\OML/lmm/m/it/10.95 W\OMS/lmsy/
-m/n/10.95 k[] \OT1/lmr/m/n/10.95 = 78 + 48 + 108\OML/lmm/m/it/10.95 ;
+Underfull \hbox (badness 2828) in paragraph at lines 578--581
+\T1/lmr/m/n/10 (+20) matching the $\OML/lmm/m/it/10 D[]$ \T1/lmr/m/n/10 (+20) b
+ranch-ing $\OT1/lmr/m/n/10 (+20) 248 = 120 + 128$\T1/lmr/m/n/10 (+20) ; the de-
+grees are a TFPT dic-tio-nary
  []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
@@ -1326,18 +1337,18 @@ m/n/10.95 k[] \OT1/lmr/m/n/10.95 = 78 + 48 + 108\OML/lmm/m/it/10.95 ;
 [10]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 645.
+(hyperref)                removing `math shift' on input line 632.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 645.
+(hyperref)                removing `subscript' on input line 632.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 645.
+(hyperref)                removing `math shift' on input line 632.
 
 
-Underfull \hbox (badness 7907) in paragraph at lines 663--669
+Underfull \hbox (badness 7907) in paragraph at lines 650--656
 \T1/lmr/m/n/10.95 (+20) checked.[]\T1/lmr/m/n/9 (+20) [\T1/lmtt/m/n/9 verificat
 ion/v5_e8_cascade.py\T1/lmr/m/n/9 (+20) ][] \T1/lmr/m/n/10.95 (+20) with the si
 n-gle struc-tural nor-mal-i-sa-tion $\OML/lmm/m/it/10.95 ^^U \OT1/lmr/m/n/10.95
@@ -1345,7 +1356,7 @@ n-gle struc-tural nor-mal-i-sa-tion $\OML/lmm/m/it/10.95 ^^U \OT1/lmr/m/n/10.95
  []
 
 
-Underfull \hbox (badness 1097) in paragraph at lines 663--669
+Underfull \hbox (badness 1097) in paragraph at lines 650--656
 \OML/lmm/m/it/10.95 ^^M\OT1/lmr/m/n/10.95 (+20) (0)\OML/lmm/m/it/10.95 =\OT1/lm
 r/m/n/10.95 (+20) ([] 248 \OMS/lmsy/m/n/10.95 ^^@ [] \OT1/lmr/m/n/10.95 (+20) 6
 0) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 (+20) 58770$\T1/lmr/m/n/10.95 (+2
@@ -1353,7 +1364,7 @@ r/m/n/10.95 (+20) ([] 248 \OMS/lmsy/m/n/10.95 ^^@ [] \OT1/lmr/m/n/10.95 (+20) 6
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 697--697
+Underfull \hbox (badness 10000) in alignment at lines 684--684
 [][][][][][] 
  []
 
@@ -1362,230 +1373,209 @@ Underfull \hbox (badness 10000) in alignment at lines 697--697
 [11
 
 ]
-Overfull \hbox (13.64317pt too wide) detected at line 725
-[]
- []
-
-
 
 [12]
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 801.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\varphi' on input line 801.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 801.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 801.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 801.
-
-
-
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 845--845
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 788.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\varphi' on input line 788.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 788.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 788.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 788.
+
+
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 832--832
 []|$\OT1/lmr/m/n/8 (+20) 
 [] = \OML/lmm/m/it/8 '[]\OT1/lmr/m/n/8 (+20) (1[]2\OML/lmm/m/it/8 c[]\OT1/lmr/m
 /n/8 (+20) )$\T1/lmr/m/n/8 (+20) ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 845--845
+Underfull \hbox (badness 10000) in paragraph at lines 832--832
 \OML/lmm/m/it/8 V[]=V[] \OT1/lmr/m/n/8 (+20) = []$\T1/lmr/m/n/8 (+20) ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 845--845
+Underfull \hbox (badness 10000) in paragraph at lines 832--832
 []|$\OML/lmm/m/it/8 v[] \OT1/lmr/m/n/8 (+20) = \OML/lmm/m/it/8 ^^P[]M[]'[]$\T1/
 lmr/m/n/8 (+20) ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 845--845
+Underfull \hbox (badness 10000) in paragraph at lines 832--832
 []|\T1/lmr/m/n/8 (+20) hadronic,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 845--845
+Underfull \hbox (badness 10000) in paragraph at lines 832--832
 []|$[][]\OML/lmm/m/it/8 ^^P[]M[]'[]$\T1/lmr/m/n/8 (+20) ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 845--845
+Underfull \hbox (badness 10000) in paragraph at lines 832--832
 \OML/lmm/m/it/8 m[][]^^P[]M[]'[]$\T1/lmr/m/n/8 (+20) ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 845--845
+Underfull \hbox (badness 10000) in paragraph at lines 832--832
 []|\T1/lmr/m/n/8 (+20) cosmo,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 845--845
+Underfull \hbox (badness 10000) in paragraph at lines 832--832
 []|$\OML/lmm/m/it/8 T[][]^^P[]M[]'[]$\T1/lmr/m/n/8 (+20) ,
  []
 
 
 
-[14]
-
 [15]
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 910.
-
+[16]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 910.
+(hyperref)                removing `math shift' on input line 897.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 910.
+(hyperref)                removing `subscript' on input line 897.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 897.
 
 
 
-[16
+[17
 
 ]
-Underfull \hbox (badness 1205) in paragraph at lines 974--978
-$\OML/lmm/m/it/10.95 E[][]A[]$ \T1/lmr/m/n/10.95 (+20) gives only $\OT1/lmr/m/n
-/10.95 (+20) 2$ \T1/lmr/m/n/10.95 (+20) fam-i-lies, $\OML/lmm/m/it/10.95 E[][]A
-[]$ \T1/lmr/m/n/10.95 (+20) only $\OT1/lmr/m/n/10.95 (+20) 1$\T1/lmr/m/n/10.95 
-(+20) ; $\OML/lmm/m/it/10.95 D[]$ \T1/lmr/m/n/10.95 (+20) has non-cyclic glue $
-\OT1/lmr/m/n/10.95 (+20) (\U/msb/m/n/10.95 Z[]\OT1/lmr/m/n/10.95 (+20) )[]$ \T1
-/lmr/m/n/10.95 (+20) and
- []
 
-
-Underfull \hbox (badness 2772) in paragraph at lines 974--978
-\OML/lmm/m/it/10.95 A[]$ \T1/lmr/m/n/10.95 (+20) is a sin-gle rank-$\OT1/lmr/m/
-n/10.95 (+20) 8$ \T1/lmr/m/n/10.95 (+20) fac-tor. So the carrier$\OT1/lmr/m/n/1
-0.95 (+20) +$\T1/lmr/m/n/10.95 (+20) family de-com-po-si-tion is forced.
- []
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 995.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1008.
+(hyperref)                removing `subscript' on input line 995.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 1008.
+(hyperref)                removing `math shift' on input line 995.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1008.
+(hyperref)                removing `math shift' on input line 995.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1008.
+(hyperref)                removing `math shift' on input line 995.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1008.
+(hyperref)                removing `math shift' on input line 995.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1008.
+(hyperref)                removing `subscript' on input line 995.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 1008.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1008.
-
-
-
-[17]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1030.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\pi' on input line 1030.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1030.
+(hyperref)                removing `math shift' on input line 995.
 
 
 
 [18]
-Underfull \hbox (badness 2277) in paragraph at lines 1063--1063
-[]\T1/lmr/bx/n/10.95 (+20) A cyclic el-e-ment \T1/lmr/bx/it/10.95 (+20) in-side
- \T1/lmr/bx/n/10.95 (+20) the hull: the order-$\OT1/lmr/m/n/10.95 (+20) 30$ \T1
-/lmr/bx/n/10.95 (+20) Cox-eter ro-ta-tion []\T1/lmr/bx/n/10 (+20) [L][]
- []
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1017.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1077--1077
-[]\T1/lmr/bx/n/10.95 (+20) The com-piler atoms \T1/lmr/bx/it/10.95 (+20) are \T
-1/lmr/bx/n/10.95 (+20) the $\OML/lmm/m/it/10.95 E[]$ \T1/lmr/bx/n/10.95 (+20) C
-asimir de-grees
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\pi' on input line 1017.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1017.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1050--1050
+[]\T1/lmr/bx/n/10 (+20) A cyclic el-e-ment \T1/lmr/bx/it/10 (+20) in-side \T1/l
+mr/bx/n/10 (+20) the hull: the order-$\OT1/lmr/m/n/10 (+20) 30$ \T1/lmr/bx/n/10
+ (+20) Cox-eter ro-ta-tion [][L][]
  []
 
 
 
 [19]
+Underfull \hbox (badness 10000) in paragraph at lines 1064--1064
+[]\T1/lmr/bx/n/10 (+20) The com-piler atoms \T1/lmr/bx/it/10 (+20) are \T1/lmr/
+bx/n/10 (+20) the $\OML/lmm/m/it/10 E[]$ \T1/lmr/bx/n/10 (+20) Casimir de-grees
+
+ []
+
+
 
 [20]
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1145.
-
+[21]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 1145.
+(hyperref)                removing `math shift' on input line 1132.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1145.
+(hyperref)                removing `subscript' on input line 1132.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1201.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1132.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 1188.
 
 
 
-[21
+[22
 
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1217.
+(hyperref)                removing `math shift' on input line 1204.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 1217.
+(hyperref)                removing `subscript' on input line 1204.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1217.
-
-
-
-[22]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1267.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1267.
+(hyperref)                removing `math shift' on input line 1204.
 
 
 
 [23]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1254.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1254.
+
+
 
 [24] (./tfpt_3_e8_audit_bootstrap.aux)
  ***********
@@ -1597,46 +1587,48 @@ ed.
 (rerunfilecheck)             Checksum: 50482109F7FF45C15ADDA3296281F5B0;6455.
  ) 
 Here is how much of TeX's memory you used:
- 35664 strings out of 473190
- 720150 string characters out of 5715801
- 1190899 words of memory out of 5000000
- 57750 multiletter control sequences out of 15000+600000
- 735590 words of font info for 369 fonts, out of 8000000 for 9000
+ 35800 strings out of 473190
+ 721754 string characters out of 5715801
+ 1195123 words of memory out of 5000000
+ 57765 multiletter control sequences out of 15000+600000
+ 750589 words of font info for 432 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,13n,107p,1022b,1120s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,13n,107p,1022b,1122s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.
-pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/
-local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texl
-ive/2025/texmf-dist/fonts/type1/public/lm/lmbx6.pfb></usr/local/texlive/2025/te
-xmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local/texlive/2025/texmf-dist/fo
-nts/type1/public/lm/lmbx9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/p
-ublic/lm/lmbxi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/
-lmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.pfb
-></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/loc
-al/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/
-2025/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2025/texmf-
-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/
-type1/public/lm/lmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/publi
-c/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.
-pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/lo
-cal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/
-2025/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2025/texmf-d
-ist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/ty
-pe1/public/lm/lmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/l
-m/lmri10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri8.pf
-b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri9.pfb></usr/loc
-al/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive
-/2025/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2025/texmf
--dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts
-/type1/public/lm/lmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/publ
-ic/lm/lmsy9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtk1
-0.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></us
-r/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/local/tex
-live/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tfpt_3_e8_audit_bootstrap.pdf (24 pages, 779375 bytes).
+pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7
+.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr
+/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/tex
+live/2025/texmf-dist/fonts/type1/public/lm/lmbx6.pfb></usr/local/texlive/2025/t
+exmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local/texlive/2025/texmf-dist/f
+onts/type1/public/lm/lmbx9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/
+public/lm/lmbxi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm
+/lmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.pf
+b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/lo
+cal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive
+/2025/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2025/texmf
+-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts
+/type1/public/lm/lmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/publ
+ic/lm/lmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10
+.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/
+local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texliv
+e/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2025/texmf
+-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/
+type1/public/lm/lmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public
+/lm/lmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri10.p
+fb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri8.pfb></usr/lo
+cal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri9.pfb></usr/local/texlive
+/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2025/texm
+f-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2025/texmf-dist/font
+s/type1/public/lm/lmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/pub
+lic/lm/lmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy
+9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></us
+r/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/te
+xlive/2025/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/local/texlive/2025/
+texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on tfpt_3_e8_audit_bootstrap.pdf (24 pages, 797592 bytes).
 PDF statistics:
- 507 PDF objects out of 1000 (max. 8388607)
- 379 compressed objects within 4 object streams
- 70 named destinations out of 1000 (max. 500000)
- 94053 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 519 PDF objects out of 1000 (max. 8388607)
+ 386 compressed objects within 4 object streams
+ 69 named destinations out of 1000 (max. 500000)
+ 102757 words of extra memory for PDF output out of 106986 (max. 10000000)
 

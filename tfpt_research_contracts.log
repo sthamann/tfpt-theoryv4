@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 07:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 08:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1067,7 +1067,11 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 60.
+(Font)              <10> on input line 60.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 60.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 60.
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 6
 6.
 
@@ -1081,9 +1085,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <14.4> on input line 91.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 91.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 91.
+(Font)              <10.95> on input line 95.
 
 
 [1
@@ -1115,61 +1117,53 @@ LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <9> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 261.
 
 Underfull \hbox (badness 10000) in paragraph at lines 261--261
-[]\T1/lmr/bx/n/10.95 (+20) The tor-sion nor-mal form and the $\OML/lmm/m/it/10.
-95 ^^N \OT1/lmr/m/n/10.95 (+20) = []$ \T1/lmr/bx/n/10.95 (+20) the-o-rem []\T1/
-lmr/bx/n/10 (+20) [I][]\T1/lmr/bx/n/10.95 (+20) /[]\T1/lmr/bx/n/10 (+20) [N][]
+[]\T1/lmr/bx/n/10 (+20) The tor-sion nor-mal form and the $\OML/lmm/m/it/10 ^^N
+ \OT1/lmr/m/n/10 (+20) = []$ \T1/lmr/bx/n/10 (+20) the-o-rem [][I][]/[][N][]
  []
 
 
 
 [4]
+Underfull \hbox (badness 1348) in paragraph at lines 319--319
+[]\T1/lmr/bx/n/10 (+20) The res-o-nance the-o-rem: $\OML/lmm/m/it/10 M[] \OT1/l
+mr/m/n/10 (+20) = \OT1/lmr/bx/n/10 (+20) 1  \OMS/lmsy/m/n/10 ([])  \OML/lmm/m/i
+t/10 a[] \OT1/lmr/m/n/10 (+20) = 0$ \T1/lmr/bx/n/10 (+20) --- one gauge or-bit 
+[][I][]
+ []
+
+
+Underfull \hbox (badness 1264) in paragraph at lines 345--345
+[]\T1/lmr/bx/n/10 (+20) The mon-odromy is the Weyl group of $\OML/lmm/m/it/10 A
+[]$ \T1/lmr/bx/n/10 (+20) --- the holon-omy is ex-act [][I][]/[][N][]
+ []
+
+
+Underfull \hbox (badness 1122) in paragraph at lines 372--372
+[]\T1/lmr/bx/n/10 (+20) The hexagon is the sign-twisted fam-ily spec-trum --- f
+irst ex-act H2 piece [][I][]
+ []
+
+
 
 [5]
-Underfull \hbox (badness 1946) in paragraph at lines 393--393
-[]\T1/lmr/bx/n/10.95 (+20) The ad-dress ta-ble: the lep-ton words are the com-p
-iler atoms []\T1/lmr/bx/n/10 (+20) [I][]\T1/lmr/bx/n/10.95 (+20) /[]\T1/lmr/bx/
-n/10 (+20) [P][]
+Underfull \hbox (badness 10000) in paragraph at lines 393--393
+[]\T1/lmr/bx/n/10 (+20) The ad-dress ta-ble: the lep-ton words are the com-pile
+r atoms [][I][]/[][P][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 427--471
+\T1/lmr/bx/n/10 (+20) The dual-normal se-lec-tor: $\OT1/lmr/m/n/10 (+20) (\OML/
+lmm/m/it/10 d; n\OT1/lmr/m/n/10 (+20) )$ \T1/lmr/bx/n/10 (+20) pins $\OML/lmm/m
+/it/10 R$ \T1/lmr/bx/n/10 (+20) colum-n-wise
  []
 
 
 
 [6]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 426.
-
-Underfull \hbox (badness 10000) in paragraph at lines 427--471
-\T1/lmr/bx/n/10.95 (+20) The dual-normal se-lec-tor: $\OT1/lmr/m/n/10.95 (+20) 
-(\OML/lmm/m/it/10.95 d; n\OT1/lmr/m/n/10.95 (+20) )$ \T1/lmr/bx/n/10.95 (+20) p
-ins $\OML/lmm/m/it/10.95 R$ \T1/lmr/bx/n/10.95 (+20) colum-n-wise
- []
-
-
-Underfull \hbox (badness 2426) in paragraph at lines 427--471
-\T1/lmr/bx/n/10.95 (+20) ([]\T1/lmr/bx/n/9 (+20) [\T1/lmtt/b/n/9 verification/v
-136_dual_normal_selector.py\T1/lmr/bx/n/9 (+20) ][]\T1/lmr/bx/n/10.95 (+20) ). 
-\T1/lmr/m/n/10.95 (+20) The se-lec-tor list shrinks once more.
- []
-
-
-
-[7]
-Overfull \hbox (3.90785pt too wide) detected at line 494
-\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 K; \OT1/lmr/bx/n/10.95 1\OML/lmm/m/it/1
-0.95 ; a\OT1/lmr/m/n/10.95 ) \OMS/lmsy/m/n/10.95 ! \OML/lmm/m/it/10.95 B[] \OT1
-/lmr/m/n/10.95 = [][] \OMS/lmsy/m/n/10.95 ! []\OT1/lmr/m/n/10.95 (\OML/lmm/m/it
-/10.95 K\OT1/lmr/m/n/10.95 ) = (\OMS/lmsy/m/n/10.95 ^^@\OT1/lmr/m/n/10.95 1\OML
-/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 6\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 
-4) = (\OMS/lmsy/m/n/10.95 ^^@\OML/lmm/m/it/10.95 N[]; \OMS/lmsy/m/n/10.95 j\OML
-/lmm/m/it/10.95 R[] \OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 A[]\OT1/lmr/m/n/10.
-95 )\OMS/lmsy/m/n/10.95 j\OML/lmm/m/it/10.95 ; \OMS/lmsy/m/n/10.95 j\OML/lmm/m/
-it/10.95 ^^V[]\OMS/lmsy/m/n/10.95 j\OT1/lmr/m/n/10.95 ) \OMS/lmsy/m/n/10.95 ! k
- []\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 K\OT1/lmr/m/n/10.95 )\OMS/lmsy/m/n/1
-0.95 k[] \OT1/lmr/m/n/10.95 = 11\OML/lmm/m/it/10.95 ;
- []
-
 LaTeX Font Info:    Trying to load font information for U+euf on input line 547
 .
-(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
 (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-euf.cfg
@@ -1177,24 +1171,35 @@ File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
 
 )
 
-[8]
+[7]
 
-[9]
+[8]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 5
 99.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Underfull \hbox (badness 1102) in paragraph at lines 604--610
-[]$\OML/lmm/m/it/10.95 U[]$ []\T1/lmr/bx/n/10 (+20) [I][]\T1/lmr/m/n/10.95 (+20
-) : \T1/lmr/bx/n/10.95 (+20) Read-out Rigid-ity \T1/lmr/m/n/10.95 (+20) --- on 
-the dis-crete stra-tum $\OMS/lmsy/m/n/10.95 S[] \OT1/lmr/m/n/10.95 (+20) = \OMS
-/lmsy/m/n/10.95 f[] \OML/lmm/m/it/10.95 R \OT1/lmr/m/n/10.95 (+20) =
+Underfull \hbox (badness 4859) in paragraph at lines 604--610
+[]$\OML/lmm/m/it/10 U[]$ []\T1/lmr/bx/n/10 (+20) [I][]\T1/lmr/m/n/10 (+20) : \T
+1/lmr/bx/n/10 (+20) Read-out Rigid-ity \T1/lmr/m/n/10 (+20) --- on the dis-cret
+e stra-tum $\OMS/lmsy/m/n/10 S[] \OT1/lmr/m/n/10 (+20) = \OMS/lmsy/m/n/10 f[] \
+OML/lmm/m/it/10 R \OT1/lmr/m/n/10 (+20) =
+ []
+
+
+Underfull \hbox (badness 1755) in paragraph at lines 604--610
+\OT1/lmr/m/n/10 (+20) 8\OML/lmm/m/it/10 ; []\OT1/lmr/m/n/10 (+20) (\OML/lmm/m/i
+t/10 R\OT1/lmr/m/n/10 (+20) ) = (1\OML/lmm/m/it/10 ; \OT1/lmr/m/n/10 (+20) 1\OM
+L/lmm/m/it/10 ; \OT1/lmr/m/n/10 (+20) 8)\OML/lmm/m/it/10 ; []\OT1/lmr/m/n/10 (+
+20) (\OML/lmm/m/it/10 Q[]\OT1/lmr/m/n/10 (+20) ) = \OMS/lmsy/m/n/10 f\OT1/lmr/m
+/n/10 (+20) 1\OML/lmm/m/it/10 ; \OT1/lmr/m/n/10 (+20) 2\OML/lmm/m/it/10 ; \OT1/
+lmr/m/n/10 (+20) 3\OMS/lmsy/m/n/10 gg$ \T1/lmr/m/n/10 (+20) the anchor-plane re
+ad-out is \T1/lmr/m/it/10 (+20) con-stant\T1/lmr/m/n/10 (+20) ,
  []
 
 
 
-[10{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
+[9{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
 Overfull \hbox (1.44386pt too wide) detected at line 672
 \OML/lmm/m/it/10.95 a[] \OT1/lmr/m/n/10.95 = [] [](6\OML/lmm/m/it/10.95 E \OT1/
 lmr/m/n/10.95 + \OML/lmm/m/it/10.95 R \OT1/lmr/bx/n/10.95 1\OT1/lmr/m/n/10.95 )
@@ -1207,24 +1212,35 @@ m/n/10.95 5\OML/lmm/m/it/10.95 R[]\OT1/lmr/bx/n/10.95 1\OT1/lmr/m/n/10.95 ) = [
 
 
 
-[11]
-Overfull \hbox (22.22044pt too wide) detected at line 735
-[]
+[10]
+Underfull \hbox (badness 4205) in paragraph at lines 780--780
+[]\T1/lmr/bx/n/10 (+20) Gate 2 re-duc-tion: G6 is a \T1/lmr/bx/it/10 (+20) boun
+d-ary \T1/lmr/bx/n/10 (+20) pro-jec-tive limit, not a bulk one
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 794--804
+\T1/lmr/bx/n/10 (+20) And that bound-ary mea-sure is a \T1/lmr/bx/it/10 (+20) r
+ig-or-ously con-structed \T1/lmr/bx/n/10 (+20) net
+ []
+
+
+Underfull \hbox (badness 1460) in paragraph at lines 794--804
+\T1/lmr/m/n/10 (+20) give $\OML/lmm/m/it/10 c\OT1/lmr/m/n/10 (+20) (\OML/lmm/m/
+it/10 E[]\OT1/lmr/m/n/10 (+20) )[] = [] = 8 = [] \OML/lmm/m/it/10 E[]$\T1/lmr/m
+/n/10 (+20) , $\OML/lmm/m/it/10 c\OT1/lmr/m/n/10 (+20) (\OML/lmm/m/it/10 D[]\OT
+1/lmr/m/n/10 (+20) )[] = [] = 5$\T1/lmr/m/n/10 (+20) , $\OML/lmm/m/it/10 c\OT1/
+lmr/m/n/10 (+20) (\OML/lmm/m/it/10 A[]\OT1/lmr/m/n/10 (+20) )[] = [] = 3$\T1/lm
+r/m/n/10 (+20) , and
+ []
+
+
+
+[11]
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 794--804
-\T1/lmr/bx/n/10.95 (+20) And that bound-ary mea-sure is a \T1/lmr/bx/it/10.95 (
-+20) rig-or-ously con-structed \T1/lmr/bx/n/10.95 (+20) net
- []
 
-
-
-[13]
-
-[14] (./tfpt_research_contracts.aux)
+[13] (./tfpt_research_contracts.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1234,43 +1250,47 @@ Package rerunfilecheck Info: File `tfpt_research_contracts.out' has not changed
 (rerunfilecheck)             Checksum: EA0F840AA5FE10FE18FBCF540447189D;594.
  ) 
 Here is how much of TeX's memory you used:
- 32499 strings out of 473190
- 640660 string characters out of 5715801
- 1110024 words of memory out of 5000000
- 54690 multiletter control sequences out of 15000+600000
- 720313 words of font info for 362 fonts, out of 8000000 for 9000
+ 32574 strings out of 473190
+ 641481 string characters out of 5715801
+ 1114102 words of memory out of 5000000
+ 54692 multiletter control sequences out of 15000+600000
+ 723921 words of font info for 399 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 116i,14n,121p,1020b,1048s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 116i,13n,121p,1020b,1050s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.
 pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/
 local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texl
-ive/2025/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local/texlive/2025/te
+ive/2025/texmf-dist/fonts/type1/public/lm/lmbx7.pfb></usr/local/texlive/2025/te
 xmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive/2025/texmf-dist/fo
 nts/type1/public/lm/lmbxi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1
 /public/lm/lmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm
 /lmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pf
-b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/loc
-al/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/
-2025/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></usr/local/texlive/2025/texmf-
-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/
-type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/publi
-c/lm/lmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pf
-b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/loca
-l/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/
-2025/texmf-dist/fonts/type1/public/lm/lmri9.pfb></usr/local/texlive/2025/texmf-
-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts
-/type1/public/lm/lmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/publ
-ic/lm/lmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtk1
-0.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtko10.pfb></u
-sr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/t
-exlive/2025/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/local/texlive/2025
-/texmf-dist/fonts/type1/public/lm/lmtti10.pfb></usr/local/texlive/2025/texmf-di
-st/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texm
-f-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tfpt_research_contracts.pdf (14 pages, 643072 bytes).
+b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/loc
+al/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/
+2025/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2025/texmf-
+dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/
+type1/public/lm/lmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/publi
+c/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.
+pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/lo
+cal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/
+2025/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2025/texmf-d
+ist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/ty
+pe1/public/lm/lmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/l
+m/lmri10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri9.pf
+b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/lo
+cal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive
+/2025/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2025/texmf
+-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts
+/type1/public/lm/lmtk10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/pub
+lic/lm/lmtko10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lm
+tt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></
+usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtti10.pfb></usr/local
+/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/l
+ocal/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on tfpt_research_contracts.pdf (13 pages, 706726 bytes).
 PDF statistics:
- 307 PDF objects out of 1000 (max. 8388607)
- 201 compressed objects within 3 object streams
- 31 named destinations out of 1000 (max. 500000)
+ 327 PDF objects out of 1000 (max. 8388607)
+ 212 compressed objects within 3 object streams
+ 30 named destinations out of 1000 (max. 500000)
  82613 words of extra memory for PDF output out of 89155 (max. 10000000)
 

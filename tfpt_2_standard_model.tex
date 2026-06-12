@@ -26,13 +26,13 @@
 \definecolor{tfgray}{HTML}{555555}
 
 % ---- tcolorbox environments (union of all merged notes) ----
-\newtcolorbox{keybox}[1][]{enhanced,breakable,colback=tfblue!5!white,colframe=tfblue,fonttitle=\bfseries,coltitle=white,title={#1}}
-\newtcolorbox{winbox}[1][]{enhanced,breakable,colback=tfgreen!6!white,colframe=tfgreen!75!black,fonttitle=\bfseries,coltitle=white,title={#1}}
-\newtcolorbox{gapbox}[1][]{enhanced,breakable,colback=tfred!5!white,colframe=tfred!80!black,fonttitle=\bfseries,coltitle=white,title={#1}}
-\newtcolorbox{auditbox}[1][]{enhanced,breakable,colback=tfgold!8!white,colframe=tfgold!80!black,fonttitle=\bfseries,coltitle=white,title={#1}}
-\newtcolorbox{audbox}[1][]{enhanced,breakable,colback=tfgold!8!white,colframe=tfgold!80!black,fonttitle=\bfseries,coltitle=white,title={#1}}
-\newtcolorbox{resbox}[1][]{enhanced,breakable,colback=tfgreen!5!white,colframe=tfgreen!55!black,fonttitle=\bfseries,coltitle=white,title={#1}}
-\newtcolorbox{roadbox}[1][]{enhanced,breakable,colback=tfgreen!5!white,colframe=tfgreen!55!black,fonttitle=\bfseries,coltitle=white,title={#1}}
+\newtcolorbox{keybox}[1][]{enhanced,breakable,colback=tfblue!5!white,colframe=tfblue,fonttitle=\bfseries\small,coltitle=white,title={#1},fontupper=\small}
+\newtcolorbox{winbox}[1][]{enhanced,breakable,colback=tfgreen!6!white,colframe=tfgreen!75!black,fonttitle=\bfseries\small,coltitle=white,title={#1},fontupper=\small}
+\newtcolorbox{gapbox}[1][]{enhanced,breakable,colback=tfred!5!white,colframe=tfred!80!black,fonttitle=\bfseries\small,coltitle=white,title={#1},fontupper=\small}
+\newtcolorbox{auditbox}[1][]{enhanced,breakable,colback=tfgold!8!white,colframe=tfgold!80!black,fonttitle=\bfseries\small,coltitle=white,title={#1},fontupper=\small}
+\newtcolorbox{audbox}[1][]{enhanced,breakable,colback=tfgold!8!white,colframe=tfgold!80!black,fonttitle=\bfseries\small,coltitle=white,title={#1},fontupper=\small}
+\newtcolorbox{resbox}[1][]{enhanced,breakable,colback=tfgreen!5!white,colframe=tfgreen!55!black,fonttitle=\bfseries\small,coltitle=white,title={#1},fontupper=\small}
+\newtcolorbox{roadbox}[1][]{enhanced,breakable,colback=tfgreen!5!white,colframe=tfgreen!55!black,fonttitle=\bfseries\small,coltitle=white,title={#1},fontupper=\small}
 
 % ---- status markers (colored) ----
 \newcommand{\tI}{{\small\textcolor{tfgreen}{\textbf{[I]}}}}          % exact identity
@@ -128,21 +128,8 @@ heat-kernel grounding of $R+R^2$, and the metric-coupled gap bound that \emph{ga
 QG sector, leaving only the ambient projective limit as a mathematical-completeness item).
 \end{keybox}
 
-\begin{keybox}[The TFPT document set --- what is treated where]
-\textbf{Plain language:} TFPT is a small discrete compiler. Two inputs --- the seam constant
-$c_3=\tfrac1{8\pi}$ and the carrier rank $g_{\mathrm{car}}=5$ --- build $D_5\oplus A_3+\mu_4\Rightarrow E_8$
-and read off the Standard Model, the constants and the scale grammar. The development is \textbf{six short
-documents}, best read in order:
-\begin{enumerate}[leftmargin=1.7em,itemsep=1pt]
-\item \texttt{introduction} --- reading guide, compiler closure, paper-by-paper comparison, predictions, the dependency DAG and proof ledger.
-\item \texttt{tfpt\_1\_architecture\_e8} --- the two axioms, the derivation map, the EM fixed point $\alpha^{-1}$, the $D_5\oplus A_3+\mu_4\Rightarrow E_8$ construction.
-\item \texttt{tfpt\_2\_standard\_model} --- the SM in one $\varphi_0$-ladder formula, flavor from parabolic transport, the worked closures, and gravity/QG as the seam response.
-\item \texttt{tfpt\_3\_e8\_audit\_bootstrap} --- the seven $E_8$ slices as an audit raster, the cascade bridge, the M\"obius bootstrap.
-\item \texttt{tfpt\_4\_frontier} --- honest status of $\eta_B$, $m_p/m_e$, Koide, dark matter, full QG.
-\item \texttt{tfpt\_horizon\_readouts} --- one seam constant as the universal horizon thermal code.
-\end{enumerate}
-\textbf{You are reading document \#3.}
-\end{keybox}
+\input{tfpt_docset}
+\noindent\textbf{You are reading document \#3.}
 
 \tableofcontents
 \clearpage
@@ -162,7 +149,7 @@ $(U_{\mathrm{wall}})$ anchor.
 % =====================================================================
 \section{The principle: one master formula instead of many Yukawa numbers}
 % =====================================================================
-In Papers 1--7 each fermion mass arises through a Yukawa coupling $y_{f,j}$ built as a transport
+In the source-layer construction each fermion mass arises through a Yukawa coupling $y_{f,j}$ built as a transport
 word-length $L_{f,j}$ on a hexagon ($C_6$) times a holonomy amplitude. In the compiler picture this is
 \emph{one} line:
 
@@ -1533,7 +1520,7 @@ discrete core.
 % =====================================================================
 \section{How the original-paper predictions simplify}
 % =====================================================================
-The same numbers as in Papers 1--7, but now as \emph{closed} expressions instead of distributed
+The same numbers, now as \emph{closed} expressions instead of distributed
 theorems:
 
 \begin{center}\small
