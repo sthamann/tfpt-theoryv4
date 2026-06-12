@@ -966,6 +966,17 @@ Module[{nzero},
     Simplify[(s^(nzero/2))^2 - s^6] === 0];
 ];
 
+(* ---- (v131) measure is area ---- *)
+Module[{pref, harms, norms},
+  pref = Sqrt[3/(4 Pi)];
+  harms = {pref Cos[\[Theta]], pref Sin[\[Theta]] Cos[\[Phi]], pref Sin[\[Theta]] Sin[\[Phi]]};
+  norms = Table[Integrate[Integrate[y^2 rr^2 Sin[\[Theta]], {\[Theta], 0, Pi}], {\[Phi], 0, 2 Pi}], {y, harms}];
+  checkExact["v131 zero-mode norm = area: all three l=1 norms^2 = r^2 = A/(4pi); Jacobian bookkeeping (x^3)^2 = x^6; c3 = (1/2)(1/4pi)",
+    AllTrue[norms, Simplify[# - rr^2] === 0 &] &&
+    Simplify[(4 Pi rr^2)/(4 Pi) - rr^2] === 0 &&
+    Simplify[(x^3)^2 - x^6] === 0 && 1/2 * 1/(4 Pi) == 1/(8 Pi)];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v130: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v131: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

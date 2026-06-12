@@ -1044,4 +1044,28 @@ DAS BORN-QUADRAT (v130, Ledger HOR.CLOCK.07) -- das v129-Gewichts-
        Lehrbuch-Klasse; in R1 bleibt KEIN exotisches Objekt mehr
        (Log = Ringsumme, Potenzgesetz = Entropie-Anteile,
        Exponent = born-quadrierte Modenzahl).
+
+DAS MASS IST DIE FLAECHE (v131, Ledger HOR.CLOCK.08) -- der
+    geometrische Kern der S^{1/2}-Normierung ist EXAKT:
+    (1) NULLMODEN-NORM = FLAECHE [I]: auf S^2(r) ist die L^2-Norm^2
+        jeder der drei normierten l=1-Harmonischen EXAKT r^2 =
+        A/(4pi) (alle drei exakt integriert) -- die Modennorm IST
+        die Horizontflaeche, also die Entropie.
+    (2) JACOBIAN-BUCHHALTUNG [I]: Kollektivkoordinaten-Jacobian pro
+        Mode = Modennorm ~ S^{1/2} (Standard-Variablenwechsel, kein
+        Modell-Input); sechs Moden => Amplitude (S_n/S_dS)^3; Born
+        => Gamma-Ratio (S_n/S_dS)^6 = v129-Potenzgesetz. Jeder
+        Exponenten-Faktor hat jetzt Herleitungs-Ursprung:
+        Norm = Flaeche -> Jacobian = S^{1/2} -> sechs Moden ->
+        Amplitude S^3 -> Born -> S^6.
+    (3) EINHEITEN-KONSISTENZ [I]: das 4pi in Norm^2 = A/(4pi) ist
+        dieselbe Gauss-Bonnet-Primitive, die c3 = 1/(2x4pi) baut;
+        es kuerzt sich in allen Ratios -- genau deshalb sieht die
+        Uhr nur Entropie-ANTEILE.
+    => LETZTER SCHRITT [P], scharf benannt: zeige
+       det'_n / det'_dS = 1 + O(Defizit) (Kuerzung der Nicht-
+       Nullmoden-Determinanten im Ratio; gleiche lokale near-Nariai-
+       Geometrie) -- die EINE verbleibende Rechnung. R1 = Norm
+       (exakt, erledigt) + Jacobian (Standard) + Born (Regel) +
+       Det-Ratio (offen).
 ================================================================================

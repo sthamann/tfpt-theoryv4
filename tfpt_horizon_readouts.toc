@@ -4,5 +4,5 @@
 \contentsline {section}{\numberline {3}Page time and scrambling}{3}{section.3}%
 \contentsline {section}{\numberline {4}De Sitter and the Nariai bound from the $\Lambda $ closure}{3}{section.4}%
 \contentsline {section}{\numberline {5}The maximal black hole is the anchor: SdS in seam units}{3}{section.5}%
-\contentsline {section}{\numberline {6}Turnaround radius, gravitational waves, light}{10}{section.6}%
-\contentsline {section}{\numberline {7}Search targets (not claims)}{11}{section.7}%
+\contentsline {section}{\numberline {6}Turnaround radius, gravitational waves, light}{11}{section.6}%
+\contentsline {section}{\numberline {7}Search targets (not claims)}{12}{section.7}%
