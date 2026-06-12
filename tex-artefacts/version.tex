@@ -1,0 +1,20 @@
+% ---------------------------------------------------------------------
+%  tex-artefacts/version.tex -- single source for author list, version
+%  and the automatic title-page date stamp of every TFPT document.
+%  \input by tex-artefacts/tfpt_style.tex, so every paper that loads the
+%  shared style automatically gets:
+%     \TFPTauthors   -- the author list (use as \author{\TFPTauthors})
+%     \TFPTversion   -- curated semantic version (bump per release; mirror
+%                       the bump in changelog.tex)
+%     \TFPTrev       -- auto build revision = git commit count, injected by
+%                       build.sh into tex-artefacts/version-auto.tex
+%                       (gitignored); falls back to "dev" for standalone runs
+%     \TFPTdatestamp -- the title-page date line: \today + version + revision
+%  Bump \TFPTversion here ONCE; it then updates in all papers at the next build.
+% ---------------------------------------------------------------------
+\def\TFPTauthors{Stefan Hamann \and Alessandro Rizzo}
+\def\TFPTversion{5.1}
+\def\TFPTrev{dev}
+% build.sh regenerates the line below with the live git commit count:
+\InputIfFileExists{tex-artefacts/version-auto.tex}{}{}
+\def\TFPTdatestamp{\today\,\textperiodcentered\,v\TFPTversion\,(rev~\TFPTrev)}

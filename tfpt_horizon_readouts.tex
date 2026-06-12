@@ -18,7 +18,7 @@
 \usepackage[hidelinks,colorlinks=true,linkcolor=blue!55!black,urlcolor=blue!55!black]{hyperref}
 \emergencystretch=3em
 
-\input{tfpt_style}
+\input{tex-artefacts/tfpt_style}
 \newcommand{\cthree}{c_3}
 \newcommand{\Mbar}{\bar M_{\mathrm{Pl}}}
 \newcommand{\ainv}{\alpha^{-1}_\star}
@@ -30,7 +30,7 @@
 \title{\vspace{-1.2cm}\textbf{TFPT --- Appendix H: the horizon unit system}\\[2mm]
 \large One seam constant $\cthree=\tfrac1{8\pi}$ as the universal horizon thermal code\\
 (Hawking, de Sitter, Unruh, Page, scrambling --- \emph{standard physics in seam units, not new gravity})}
-\author{}\date{\today}
+\author{\TFPTauthors}\date{\TFPTdatestamp}
 
 \def\TFPTdoctitle{Appendix~H --- Horizon Readouts}
 \begin{document}
@@ -45,42 +45,25 @@ scrambling, the Nariai bound, $v_{\mathrm{GW}}=c$ and cosmic birefringence --- i
 genuine compiler fingerprints ($1920=|W(D_5)|$, $|\mu_4|=4$).
 \end{keybox}
 
-\begin{keybox}[The TFPT document set --- what is treated where]
-\textbf{Plain language:} TFPT is a small discrete compiler. Two inputs --- the seam constant
-$c_3=\tfrac1{8\pi}$ and the carrier rank $g_{\mathrm{car}}=5$ --- build $D_5\oplus A_3+\mu_4\Rightarrow E_8$
-and read off the Standard Model, the constants and the scale grammar. The development is \textbf{five short
-documents plus this appendix}, best read in order:
-\begin{enumerate}[leftmargin=1.7em,itemsep=1pt]
-\item \texttt{introduction} --- reading guide, compiler closure, paper-by-paper comparison, predictions, the dependency DAG and proof ledger.
-\item \texttt{tfpt\_1\_architecture\_e8} --- the two axioms, the derivation map, the EM fixed point $\alpha^{-1}$, the $D_5\oplus A_3+\mu_4\Rightarrow E_8$ construction.
-\item \texttt{tfpt\_2\_standard\_model} --- the SM in one $\varphi_0$-ladder formula, flavor from parabolic transport, the worked closures, and gravity/QG as the seam response.
-\item \texttt{tfpt\_3\_e8\_audit\_bootstrap} --- the seven $E_8$ slices as an audit raster, the cascade bridge, the M\"obius bootstrap.
-\item \texttt{tfpt\_4\_frontier} --- honest status of $\eta_B$, $m_p/m_e$, Koide, dark matter, full QG.
-\item[H.] \texttt{tfpt\_horizon\_readouts} --- \textbf{Appendix H}: one seam constant as the universal horizon thermal code (a unit-system reframe, \emph{not} a peer paper, \emph{not} new physics).
-\end{enumerate}
-\textbf{You are reading Appendix H} --- a notation/unit reframing; all new-physics content lives in documents 1--4.
-\end{keybox}
-
 \tableofcontents
 
-\input{tfpt_docset}
+\input{tex-artefacts/tfpt_docset}
 \noindent\textbf{You are reading \textbf{companion~H} (Appendix~H --- Horizon Readouts).}
 
-\input{tfpt_status}
+\input{tex-artefacts/tfpt_status}
 \TFPTbadges
 \TFPTclaimstack[frontier]
 
 \bigskip
 
-\begin{keybox}[Scope and honest typing]
+\par\smallskip\noindent\textbf{Scope and honest typing.}
 If gravity is the geometry-channel readout of the seam (companion note ``Seam response grammar''), then
 horizons are not separate miracles --- they all read the \emph{same} boundary normaliser $\cthree=1/(8\pi)$.
-This note collects the readouts. Markers: \tP\ standard horizon physics rewritten in TFPT/seam units (no
-new claim), \tI\ an exact compiler connection (audit-level), \tN\ a numerical readout (reproduced),
-\tA\ a search target, not a result. Nothing
+This note collects the readouts. Markers: \mC\ is standard horizon physics rewritten in TFPT/seam units
+(no new claim) or a search target; \mE\ is an exact compiler connection (audit-level) or a reproduced
+numerical readout; \mO\ is a search target, not a result. Nothing
 here is sold as new gravitational physics; it is a \emph{change of bookkeeping} that exposes shared
 structure.
-\end{keybox}
 
 \begin{keybox}[Unit conventions used throughout]
 Three unit systems appear; the seam factor $\cthree=1/(8\pi)$ is the same number in all of them, only the
@@ -112,10 +95,10 @@ new derivation of these} --- only a rewriting in the seam unit $\cthree$.
 % =====================================================================
 Every Killing horizon has $T=\hbar\kappa/(2\pi c k_B)$. Since
 \[
-  \boxed{\ \frac{1}{2\pi}=4\cthree,\qquad \frac{1}{8\pi}=\cthree\ }\qquad\tI,
+  \boxed{\ \frac{1}{2\pi}=4\cthree,\qquad \frac{1}{8\pi}=\cthree\ }\qquad\mE,
 \]
 the universal factor \emph{is} the seam constant: $T_{\mathrm{hor}}=4\cthree\,\hbar\kappa/(ck_B)$. Black
-holes, de Sitter and Unruh therefore share \emph{one} thermal grammar. \tP\ \veri{v8\_horizon.py}
+holes, de Sitter and Unruh therefore share \emph{one} thermal grammar. \mC\ \veri{v8\_horizon.py}
 
 % =====================================================================
 \section{Schwarzschild thermodynamics in four $\cthree$-lines}
@@ -123,12 +106,12 @@ holes, de Sitter and Unruh therefore share \emph{one} thermal grammar. \tP\ \ver
 For a non-rotating, uncharged hole in Planck units ($G{=}\hbar{=}c{=}k_B{=}1$):
 \[
   \boxed{\ T_H=\frac{\cthree}{M},\qquad S_{BH}=\frac{M^2}{2\cthree},\qquad
-  P_H=\frac{\cthree}{1920\,M^2},\qquad \tau_{\mathrm{evap}}=\frac{640}{\cthree}M^3\ }\qquad\tP.
+  P_H=\frac{\cthree}{1920\,M^2},\qquad \tau_{\mathrm{evap}}=\frac{640}{\cthree}M^3\ }\qquad\mC.
 \]
 Two of the constants are compiler numbers, not coincidences:
 \begin{itemize}\setlength\itemsep{2pt}
-\item the Hawking temperature factor is $\cthree=1/(8\pi)$ --- the same P1 boundary normaliser; \tI
-\item the radiated-power denominator is $1920=|W(D_5)|$, the Weyl-group order of the $D_5$ carrier. \tI
+\item the Hawking temperature factor is $\cthree=1/(8\pi)$ --- the same P1 boundary normaliser; \mE
+\item the radiated-power denominator is $1920=|W(D_5)|$, the Weyl-group order of the $D_5$ carrier. \mE
 \end{itemize}
 \noindent\emph{Scope of $P_H$:} this is the idealised massless single-channel blackbody normalisation.
 Greybody factors and the radiated species content shift the phenomenological evaporation coefficient; the
@@ -151,7 +134,7 @@ PBH evaporating now ($1.7\times10^{11}$ kg) & $k_BT\approx61$ MeV & relevant for
 % =====================================================================
 Since $S_{BH}\propto M^2$ and $\tau\propto M^3$, the Page point ($M\to M/\sqrt2$) is
 \[
-  t_{\mathrm{Page}}=\Bigl(1-\tfrac1{2\sqrt2}\Bigr)\tau_{\mathrm{evap}}\approx0.6464\,\tau_{\mathrm{evap}}\qquad\tP.
+  t_{\mathrm{Page}}=\Bigl(1-\tfrac1{2\sqrt2}\Bigr)\tau_{\mathrm{evap}}\approx0.6464\,\tau_{\mathrm{evap}}\qquad\mC.
 \]
 In TFPT the Page curve is \emph{boundary recoverability}: the physical sector is OS-reconstructed and
 gapped, and the recovered mutual information decays at the transfer rate,
@@ -159,10 +142,10 @@ $I(A{:}C|B)_n\sim\lambda_2^{\,n}=(2/3)^{6n}$. \textbf{This is the same operator 
 Model:} the boundary transport spectrum is $\{1,(2/3)^6,(1/3)^6\}$ and its sub-leading eigenvalue
 $\lambda_2=(2/3)^6$ is exactly the flavor-gap eigenvalue of Paper~2 ($\Delta_{\mathrm{gap}}=-\log(2/3)^6=6\log\tfrac32$).
 One boundary transport thus governs \emph{both} the SM flavor hierarchy and the horizon information recovery.
-\tI\ \veri{v54\_seam\_horizon\_keystones.py} The scrambling prefactor carries a $\mu_4$ signature: with
+\mE\ \veri{v54\_seam\_horizon\_keystones.py} The scrambling prefactor carries a $\mu_4$ signature: with
 $\beta=1/T_H=8\pi M$, $\beta/2\pi=4M$, so
 \[
-  \boxed{\ t_{\mathrm{scr}}\sim|\mu_4|\,M\log S\ }\qquad(|\mu_4|=4)\qquad\tI\text{-audit}.
+  \boxed{\ t_{\mathrm{scr}}\sim|\mu_4|\,M\log S\ }\qquad(|\mu_4|=4)\qquad\mE\text{-audit}.
 \]
 
 % =====================================================================
@@ -172,12 +155,12 @@ With the action-grammar Hubble/$\Lambda$ readouts ($H_0/\Mbar=e^{-\ainv}/(2\pi\s
 $\rho_\Lambda/\Mbar^4\sim e^{-2\ainv}$), the asymptotic de Sitter horizon gives
 \[
   \boxed{\ \frac{T_{dS}}{\Mbar}=16\cthree^2\,e^{-\ainv},\qquad
-  S_{dS}=\frac{e^{2\ainv}}{128\cthree^4}=32\pi^4 e^{2\ainv}\approx3.32\times10^{122}\ }\qquad\tP.
+  S_{dS}=\frac{e^{2\ainv}}{128\cthree^4}=32\pi^4 e^{2\ainv}\approx3.32\times10^{122}\ }\qquad\mC.
 \]
 This is the area-law horizon capacity of the universe from $(\ainv,\cthree,H_\Lambda)$ alone. The maximal
 black hole in de Sitter (Nariai) is
 \[
-  M_N\approx2.16\times10^{22}\,M_\odot\approx4.3\times10^{52}\,\mathrm{kg},\qquad S_N=\tfrac13 S_{dS}\qquad\tP,
+  M_N\approx2.16\times10^{22}\,M_\odot\approx4.3\times10^{52}\,\mathrm{kg},\qquad S_N=\tfrac13 S_{dS}\qquad\mC,
 \]
 the absolute gravitational-capacity limit, not an observed structure.
 
@@ -186,11 +169,11 @@ the absolute gravitational-capacity limit, not an observed structure.
 % =====================================================================
 The Nariai limit is not just a capacity number --- written in compiler units, the entire
 Schwarzschild--de~Sitter (SdS) family lands on atoms that are already load-bearing elsewhere in TFPT,
-with no adjustable parameter on either side. \tI\ \veri{v101\_horizon\_anchor.py}
+with no adjustable parameter on either side. \mE\ \veri{v101\_horizon\_anchor.py}
 
 \TFPTmotif
 
-\begin{keybox}[Nariai $=$ the anchor; the Koide $2/3$ is the entropy bound \tI\ (\veri{v101\_horizon\_anchor.py})]
+\begin{keybox}[Nariai $=$ the anchor; the Koide $2/3$ is the entropy bound \mE\ (\veri{v101\_horizon\_anchor.py})]
 With $f(r)=1-2M/r-\Lambda r^2/3$, the horizon cubic at the maximal mass
 $M_N=1/(3\sqrt\Lambda)=1/(N_{\mathrm{fam}}\sqrt\Lambda)$ is, in units $1/\sqrt\Lambda$,
 \[
@@ -227,14 +210,14 @@ $\tau=5120\pi M^3=128\,g_{\mathrm{car}}M^3/\cthree$ ($128=2^7$ the dS prefactor,
 photon/geometric-optics conventions, typed external), Kerr $A_{\mathrm{ext}}=M^2/\cthree$ with
 $A_{\mathrm{ext}}/A_{\mathrm{Schw}}=1/2=1/|\Z_2|$ and $S_{\mathrm{ext}}=M^2/(4\cthree)$, and the
 Bekenstein--Mukhanov--Hod area quantum $4\ln3=\ln81=\ln(N_{\mathrm{fam}}^4)=\ln(\operatorname{disc}$ of the flavor
-cover$)$ (\tP\ as the QNM reading). \emph{Honest scope:} the GR identities are textbook facts; the \tI\
+cover$)$ (\mC\ as the QNM reading). \emph{Honest scope:} the GR identities are textbook facts; the \mE\
 content is six independent landings on already-load-bearing atoms with zero free parameters. The
 ``carrier in the bulk'' reading (two glue chiralities $=$ two horizon sheets, ramification $=$ Nariai)
-stays \tP. No new data test ($M_N$ today $\sim10^{22}M_\odot$): a structure surface, not a measurement
+stays \mC. No new data test ($M_N$ today $\sim10^{22}M_\odot$): a structure surface, not a measurement
 surface.
 \end{keybox}
 
-\begin{keybox}[The dual anchor: the inverse flavor response \emph{is} the Nariai root \tI\ (\veri{v134\_dual\_anchor.py})]
+\begin{keybox}[The dual anchor: the inverse flavor response \emph{is} the Nariai root \mE\ (\veri{v134\_dual\_anchor.py})]
 The Nariai pattern is not only the traceless anchor --- it is stored \emph{inside the flavor compiler} as a
 dual invariant. For the residue/winding operators $R,L$ of Paper~2 and the anchor $a=(1,1,2)$,
 \[
@@ -248,10 +231,10 @@ $L=R+6\,\mathbf 1e_1^\top$, a covector is winding-invariant iff it annihilates $
 kills. Controls: $\mathbf 1$, $e_1$ and the torsion normal $n=(5,-9,6)$ do \emph{not} lie on the invariance
 plane ($\tfrac14,\tfrac14,-\tfrac52$), so the anchor's membership is special. Together $(d,n)$ form the dual
 normal pair of the flavor boundary: $d$ reads the traceless horizon structure, $n$ reads first-generation
-torsion ($n^\top R=(8,0,0)$, $n^\top L=(20,0,0)$). \emph{Typing:} all identities \tI; the reading --- a
+torsion ($n^\top R=(8,0,0)$, $n^\top L=(20,0,0)$). \emph{Typing:} all identities \mE; the reading --- a
 third, purely \emph{algebraic} leg of the flavor$\,\leftrightarrow\,$horizon bridge, beside the shared clock
 spectrum (\veri{v126\_clock\_wall\_bridge.py}) and the entropy power law (\veri{v129\_entropy\_power\_law.py})
---- stays \tP.
+--- stays \mC.
 \end{keybox}
 
 \begin{figure}[h]
@@ -281,7 +264,7 @@ branch points at spine-over-family values. \veri{v101\_horizon\_anchor.py}}
 \label{fig:covertwins}
 \end{figure}
 
-\begin{winbox}[One orientation: the anchor is the \emph{stationary repeller} in both sectors \tI/\tP\ (\veri{v102\_seam\_orientation.py})]
+\par\smallskip\noindent\textbf{One orientation: the anchor is the \emph{stationary repeller} in both sectors} (\mE/\mC).
 The evaporation direction of the temperature lemma upgrades to exact variational structure on both
 one-dimensional moduli lines (Fig.~\ref{fig:orientation}). \textbf{Flavor:} the canonical relaxation
 $\dot q=(\Delta/N_{\mathrm{fam}})(q{-}2)(q{-}5)$ is the \emph{gradient flow} of the cubic potential
@@ -298,14 +281,14 @@ $d(-\ln\rho)/dt=\Delta$ exactly. \textbf{Gravity:} the SdS entropy functional ha
 \]
 --- the Nariai/anchor point is the \emph{unique} physical stationary point, its curvature is a grammar
 constant ($=$ the product of the two Nariai entropy fractions), and the temperature lemma makes the
-evaporation an entropy \emph{ascent} away from it. \textbf{Orientation theorem \tI:} in both sectors the
+evaporation an entropy \emph{ascent} away from it. \textbf{Orientation theorem \mE:} in both sectors the
 anchor-type configuration is a stationary point of the natural functional and the dynamics flows away
 from it, with grammar-constant stationary curvatures. \emph{Honest disanalogies (recorded):} the flavor
 attractor is itself a branch point while the gravity attractor is the smooth endpoint; the flavor
-functional is the potential of a \tP-typed relaxation while the gravity functional is the
-Bekenstein--Hawking entropy --- ``one variational principle of the seam'' stays a \emph{reading} \tP, and
-no open gate is touched.
-\end{winbox}
+functional is the potential of a \mC-typed relaxation while the gravity functional is the
+Bekenstein--Hawking entropy --- ``one variational principle of the seam'' stays a \emph{reading} \mC, and
+no open gate is touched. \veri{v102\_seam\_orientation.py}
+
 
 \begin{figure}[h]
 \centering
@@ -316,7 +299,7 @@ curvature $2/9=|\Z_2|/N_{\mathrm{fam}}^2$). \veri{v102\_seam\_orientation.py}}
 \label{fig:orientation}
 \end{figure}
 
-\begin{keybox}[The trisection normal form: the canonical coordinate exists \tI\ (\veri{v103\_trisection\_normal\_form.py})]
+\begin{keybox}[The trisection normal form: the canonical coordinate exists \mE\ (\veri{v103\_trisection\_normal\_form.py})]
 The curvature-matching question of the previous box has a closed answer. The SdS horizon cubic is
 uniformized by \textbf{angle trisection}: with $r=2\cos\theta$ (units $1/\sqrt\Lambda$),
 $r^3-3r=2\cos3\theta$ \emph{exactly}, so the cubic is $\cos3\theta=-3m$ --- the three horizon roots are
@@ -340,7 +323,7 @@ atoms over the family count (Fig.~\ref{fig:trisection}). Three exact consequence
   --- same base $2/3=|\Z_2|/\Nfam$, exponent ratio $2=|\Z_2|$. What is still missing for a full
   identification is the gravity-side \emph{clock} (the near-Nariai evaporation generator that converts
   curvature into a rate) --- the same class of missing object as the Koide transfer generator of Paper~4:
-  \textbf{one clock, two known geometries}. That identification stays \tP.
+  \textbf{one clock, two known geometries}. That identification stays \mC.
 \end{itemize}
 \end{keybox}
 
@@ -353,15 +336,15 @@ $(2/3)^3$. \veri{v103\_trisection\_normal\_form.py}}
 \label{fig:trisection}
 \end{figure}
 
-\begin{winbox}[The classical clock speaks anchor --- and the honest $(2/3)$-test \tI/\tP\ (\veri{v104\_nariai\_clock.py})]
+\par\smallskip\noindent\textbf{The classical clock speaks anchor --- and the honest $(2/3)$-test} (\mE/\mC).
 The clock question of the previous box has a \emph{classical} half, and it is pure GR
 (Ginsparg--Perry~1983; Bousso--Hawking class): linearize around the Nariai geometry
-$dS_2\times S^2$. \textbf{Static pin \tI:} on the $dS_2$ static patch the function $\phi(\rho)=\rho$
+$dS_2\times S^2$. \textbf{Static pin \mE:} on the $dS_2$ static patch the function $\phi(\rho)=\rho$
 satisfies $\frac{d}{d\rho}\bigl[(1-\Lambda\rho^2)\phi'\bigr]=-2\Lambda\phi$ \emph{exactly} --- and this
 static mode \emph{is} the exact SdS two-horizon deformation, so the $S^2$-radius modulus mass is pinned
 internally: $m^2=-2\Lambda=-|\Z_2|\Lambda$ (the Laplace-type form of the linearization is the one
 external GR import, typed honestly). The Euclidean spectrum is the Ginsparg--Perry tower
-$(l(l+1)-2)\Lambda$: exactly \emph{one} negative mode $-|\Z_2|\Lambda$. \textbf{The clock \tI:} in
+$(l(l+1)-2)\Lambda$: exactly \emph{one} negative mode $-|\Z_2|\Lambda$. \textbf{The clock \mE:} in
 Hubble units the homogeneous modes $\phi\sim e^{\lambda Ht}$ obey
 \[
   \boxed{\ \chi_{\mathrm{clock}}(\lambda)=\lambda^2+\lambda-2=(\lambda-1)(\lambda+2)\ }
@@ -370,124 +353,124 @@ Hubble units the homogeneous modes $\phi\sim e^{\lambda Ht}$ obey
 cubic factors as $(t-1)^2(t+2)=(t-1)\cdot\chi_{\mathrm{clock}}(t)$. The anchor thus appears a
 \emph{third} time: as configuration roots, as the curvature base, and as the spectrum of the linearized
 clock. The horizon split is linear in the canonical angle with coefficient $1/\sqrt{\Nfam}$, and the
-entropy deviation grows at exactly $2H=|\Z_2|\times$Hubble. \textbf{Honest $(2/3)$-test \tP:} the
+entropy deviation grows at exactly $2H=|\Z_2|\times$Hubble. \textbf{Honest $(2/3)$-test \mC:} the
 classical clock eigenvalues are \emph{integers}, not $(2/3)$-powers --- the $(2/3)$-powers stay in the
 functional (curvature $(2/3)^{\Nfam}$). The conversion curvature$\to$rate at one loop (quantum
 (anti-)evaporation) remains external QFT input: the bridge to the flavor rate $(2/3)^{2\Nfam}$ is
 \emph{not} closed here. The seam variational principle now has exactly \emph{one} missing object: the
-quantum clock.
-\end{winbox}
+quantum clock. \veri{v104\_nariai\_clock.py}
 
-\begin{winbox}[The quantum-clock target, made quantitative \tI/\tP\ (\veri{v107\_quantum\_clock\_target.py})]
+
+\par\smallskip\noindent\textbf{The quantum-clock target, made quantitative} (\mE/\mC).
 Instead of guessing the quantum clock, its job description can be pinned exactly. \textbf{(1) The
-classical clock already lives on the cusp ladder \tI:} across the physical Ginsparg--Perry modes
+classical clock already lives on the cusp ladder \mE:} across the physical Ginsparg--Perry modes
 ($l=0$: $(\lambda{-}1)(\lambda{+}2)$; $l=1$: $\lambda(\lambda{+}1)$) the decay exponents are
 \[
   \boxed{\ \{0,-1,-2\}=-\operatorname{Spec}(V)=-\Nfam\times\text{cusp weights}\ }
 \]
 --- exactly the grading that carries the transfer operator's eigenspaces (Papers~2/6); the $l\ge2$ modes
 are damped oscillations with $\operatorname{Re}\lambda=-\tfrac12=-\delta$ (audit). \textbf{(2) The exact
-target \tI:} the transfer rates $\{0,\Delta,6\ln3\}$ are \emph{not} weight-linear ---
+target \mE:} the transfer rates $\{0,\Delta,6\ln3\}$ are \emph{not} weight-linear ---
 $\mathrm{rate}(2)/\mathrm{rate}(1)=\log_{3/2}3=1+\log_{3/2}2=2.7095$, with the exact identity
 $(1/3)^6=\bigl((2/3)^6\bigr)^{\log_{3/2}3}$: \emph{the quantum clock must bend the weight-linear spectrum
-by $\log_{9/4}3=1.35476$ per weight step}. \textbf{(3) Coupling landscape \tI:} the dimensionless clock
+by $\log_{9/4}3=1.35476$ per weight step}. \textbf{(3) Coupling landscape \mE:} the dimensionless clock
 coupling $\kappa=(c/24\pi)(\Lambda/\bar M_{\mathrm{Pl}}^2)$ with $c=8$ is $7.6\times10^{-122}$ at the
 cosmological Nariai (hopeless) and $\kappa=1/(3\pi)=0.106$ at seam curvature --- the only regime where an
 $O(0.35)$ bend is reachable, and it is borderline non-perturbative: one-loop linear response cannot fix
-the bend; an $O(1)$ resummation or an exact seam construction is required. \emph{Status \tP:} R1 is
+the bend; an $O(1)$ resummation or an exact seam construction is required. \emph{Status \mC:} R1 is
 sharpened from ``find a clock'' to ``produce the bend $\log_{3/2}3$ on the cusp ladder at coupling
-$O(1/3\pi)$''. Nothing is fitted; the identification stays open.
-\end{winbox}
+$O(1/3\pi)$''. Nothing is fitted; the identification stays open. \veri{v107\_quantum\_clock\_target.py}
 
-\begin{winbox}[The resummed clock: the bend has a closed form \tI/\tP\ (\veri{v124\_resummed\_clock.py})]
+
+\par\smallskip\noindent\textbf{The resummed clock: the bend has a closed form} (\mE/\mC).
 The ``bend'' is not an exotic target --- the frozen transfer spectrum \emph{is} a resummed logarithm.
-\textbf{(1) Spectrum reading \tI:} the eigenvalues $\{1,(\tfrac23)^6,(\tfrac13)^6\}$ are exactly
+\textbf{(1) Spectrum reading \mE:} the eigenvalues $\{1,(\tfrac23)^6,(\tfrac13)^6\}$ are exactly
 \[
   \boxed{\ \lambda_n=\Bigl(1-\frac n{\Nfam}\Bigr)^{p_2},\qquad n=0,1,2\ }
   \qquad(p_2=6=|R^+(A_3)|),
 \]
 so the clock has the closed form $\mathrm{rate}(n)=-p_2\ln(1-n/\Nfam)$ --- it reproduces
-$\{0,\Delta,6\ln3\}$, and the v107 bend $\log_{3/2}3$ becomes a one-line consequence. \textbf{(2) The
-linearisation carries the sheet \tI:} $\mathrm{rate}(n)=|\Z_2|\,n+\tfrac{n^2}3+\tfrac{2n^3}{27}+\cdots$
+$\{0,\Delta,6\ln3\}$, and the \vref{v107} bend $\log_{3/2}3$ becomes a one-line consequence. \textbf{(2) The
+linearisation carries the sheet \mE:} $\mathrm{rate}(n)=|\Z_2|\,n+\tfrac{n^2}3+\tfrac{2n^3}{27}+\cdots$
 --- the one-loop term has slope exactly $|\Z_2|=2$ relative to the \emph{integer} classical
 Ginsparg--Perry clock $\{0,-1,-2\}$: the quantum clock is the sheet-doubled classical clock plus the
-geometric tail $\sum_k(n/N)^k/k$. \textbf{(3) The wall at $\Nfam$ \tI:} $\mathrm{rate}\to\infty$ as
+geometric tail $\sum_k(n/N)^k/k$. \textbf{(3) The wall at $\Nfam$ \mE:} $\mathrm{rate}\to\infty$ as
 $n\to\Nfam$ --- the resummed logarithm has a pole at the family count, so the cusp ladder \emph{must}
 end at $n=\Nfam-1=2$: the three-level transfer spectrum is forced by the clock itself. \emph{R1
-re-sharpened \tP:} the semiclassical job is now ``derive $-p_2\ln(1-n/\Nfam)$ from the near-Nariai
+re-sharpened \mC:} the semiclassical job is now ``derive $-p_2\ln(1-n/\Nfam)$ from the near-Nariai
 one-loop at $\kappa=1/(3\pi)$'' --- a closed-form target, with the linear-response slope $|\Z_2|$ as
-its first checkpoint. All spectra frozen (v54/v69/v95/v104/v107); nothing fitted.
-\end{winbox}
+its first checkpoint. All spectra frozen (\vref{v54}/\vref{v69}/\vref{v95}/\vref{v104}/\vref{v107}); nothing fitted. \veri{v124\_resummed\_clock.py}
 
-\begin{winbox}[The clock and the wall share a spectrum \tI/\tP\ (\veri{v126\_clock\_wall\_bridge.py})]
+
+\par\smallskip\noindent\textbf{The clock and the wall share a spectrum} (\mE/\mC).
 Both ends of the resummed clock connect to established exact objects. \textbf{(1) The weights are the
-parabolic weights \tI:} the arguments $n/\Nfam=\{0,\tfrac13,\tfrac23\}$ of the resummed logarithm are
+parabolic weights \mE:} the arguments $n/\Nfam=\{0,\tfrac13,\tfrac23\}$ of the resummed logarithm are
 \emph{exactly} $\operatorname{spec}A_0^\star$ --- the spectrum of the exact $(U_{\mathrm{wall}})$
 residue (research contracts):
 \[
   \boxed{\ \lambda_n=(1-\alpha_n)^{p_2},\qquad \alpha_n\in\operatorname{spec}A_0^\star=\{0,\tfrac13,\tfrac23\}\ }
 \]
 --- the horizon clock and the flavor wall share their spectrum through the complement map
-$\alpha\mapsto1-\alpha$. \textbf{(2) Checkpoint 1 passes classically \tI:} the clock's linear
+$\alpha\mapsto1-\alpha$. \textbf{(2) Checkpoint 1 passes classically \mE:} the clock's linear
 coefficient $p_2/\Nfam=2=|\Z_2|$ \emph{equals} the established classical entropy-deviation rate
-$2H=|\Z_2|\times$Hubble (v104) --- the slope-$2$ linear response is already the classical entropy
+$2H=|\Z_2|\times$Hubble (\vref{v104}) --- the slope-$2$ linear response is already the classical entropy
 rate; the genuinely \emph{quantum} content of R1 isolates to the geometric tail
-$\sum_{k\ge2}\alpha^k/k$. \textbf{(3) The determinant is the entropy curvature \tI:}
+$\sum_{k\ge2}\alpha^k/k$. \textbf{(3) The determinant is the entropy curvature \mE:}
 $\det(\mathbf1-A_0^\star)=\tfrac29=|\Z_2|/\Nfam^2$ --- exactly the gravity entropy curvature at the
-anchor (v102), a fourth independent appearance; $\operatorname{tr}(\mathbf1-A_0^\star)=2=|\Z_2|$,
-$\det A_0^\star=0$. \emph{R1 re-targeted \tP:} derive ``rate $=-p_2\ln(1-\alpha)$'' with $\alpha$ the
+anchor (\vref{v102}), a fourth independent appearance; $\operatorname{tr}(\mathbf1-A_0^\star)=2=|\Z_2|$,
+$\det A_0^\star=0$. \emph{R1 re-targeted \mC:} derive ``rate $=-p_2\ln(1-\alpha)$'' with $\alpha$ the
 Mehta--Seshadri parabolic weight --- first order classical, tail quantum: \textbf{one spectrum, two
-gates, one object $A_0^\star$}.
-\end{winbox}
+gates, one object $A_0^\star$}. \veri{v126\_clock\_wall\_bridge.py}
 
-\begin{winbox}[The clock is a log-determinant: the tail is the ring (RPA) resummation \tI/\tP\ (\veri{v127\_ring\_resummation.py})]
-The ``$O(1)$ resummation'' demanded by v107 is now \emph{typed}. For a rank-one insertion $P$
+
+\par\smallskip\noindent\textbf{The clock is a log-determinant: the tail is the ring (RPA) resummation} (\mE/\mC).
+The ``$O(1)$ resummation'' demanded by \vref{v107} is now \emph{typed}. For a rank-one insertion $P$
 ($\operatorname{tr}P^k=1$), $-\ln\det(\mathbf1-\alpha P)=-\ln(1-\alpha)=\sum_k\alpha^k/k$, so the
 resummed clock is exactly
 \[
   \boxed{\ \mathrm{rate}=-p_2\,\operatorname{Tr}\ln(\mathbf1-\alpha P)\ }
 \]
 --- $p_2=6$ \emph{identical} one-loop ring (RPA) towers, \textbf{one per hexagon site} ($=$ positive
-root of $A_3$), with coupling $\alpha$ $=$ the parabolic weight. \emph{Ring ladder \tI:} the $k{=}1$
-ring is the \emph{classical} term ($6\alpha=|\Z_2|n$, the v104/v126 entropy rate); the $k{=}2$ ring is
+root of $A_3$), with coupling $\alpha$ $=$ the parabolic weight. \emph{Ring ladder \mE:} the $k{=}1$
+ring is the \emph{classical} term ($6\alpha=|\Z_2|n$, the \vref{v104}/\vref{v126} entropy rate); the $k{=}2$ ring is
 the first quantum correction ($\tfrac13$ at weight $1$); the partial sums converge to
-$\{\Delta,6\ln3\}$ monotonically from below. \emph{Coupling cross-link \tI\ (audit):} the established
+$\{\Delta,6\ln3\}$ monotonically from below. \emph{Coupling cross-link \mE\ (audit):} the established
 seam coupling is $\kappa=\tfrac c{24\pi}=\tfrac8{24\pi}=\tfrac1{3\pi}=\alpha_1/\pi$ --- the
-\emph{first parabolic weight over $\pi$}. \emph{The wall \tI:} the ring series diverges at
-$\alpha\to1$ ($n\to\Nfam$) --- the v124 wall is the standard RPA instability. \emph{R1 final form
-\tP:} show that the near-Nariai one-loop effective action of the seam mode, with insertion $=$
+\emph{first parabolic weight over $\pi$}. \emph{The wall \mE:} the ring series diverges at
+$\alpha\to1$ ($n\to\Nfam$) --- the \vref{v124} wall is the standard RPA instability. \emph{R1 final form
+\mC:} show that the near-Nariai one-loop effective action of the seam mode, with insertion $=$
 parabolic weight and multiplicity $p_2$, is this ring sum --- ``\textbf{the seam clock is the RPA
 determinant of one mode on six sites}''. The resummation type is identified; the derivation itself
 remains open.
 \smallskip\\
 \noindent\emph{Where the six sites live (\veri{v128\_graded\_hull.py}):} the Ginsparg--Perry $l=1$
-sector --- the \emph{zero modes} $\lambda\in\{0,-1\}$ of the classical clock (v104/v107) --- has
-$2l+1=3$ modes, and sheet doubling gives $2\times3=6=p_2$ \tI: the ring multiplicity equals the
-sheet-doubled zero-mode count. \tP\ reading (recorded): zero modes are exactly the modes that force
-nonperturbative resummation in de Sitter one-loop physics --- the natural home of the six RPA towers.
-\end{winbox}
+sector --- the \emph{zero modes} $\lambda\in\{0,-1\}$ of the classical clock (\vref{v104}/\vref{v107}) --- has
+$2l+1=3$ modes, and sheet doubling gives $2\times3=6=p_2$ \mE: the ring multiplicity equals the
+sheet-doubled zero-mode count. \mC\ reading (recorded): zero modes are exactly the modes that force
+nonperturbative resummation in de Sitter one-loop physics --- the natural home of the six RPA towers. \veri{v127\_ring\_resummation.py}
 
-\begin{winbox}[The clock is an entropy power law \tI/\tP\ (\veri{v129\_entropy\_power\_law.py})]
+
+\par\smallskip\noindent\textbf{The clock is an entropy power law} (\mE/\mC).
 What the resummation argument $1-n/\Nfam$ \emph{is} physically: the three established Nariai entropy
-levels (v101) are $S/S_{dS}\in\{1,\tfrac23,\tfrac13\}$ (pure dS; two-horizon total; single horizon ---
-deficit $S_{dS}/3$ per step) --- exactly the complementary cusp weights. Hence \tI:
+levels (\vref{v101}) are $S/S_{dS}\in\{1,\tfrac23,\tfrac13\}$ (pure dS; two-horizon total; single horizon ---
+deficit $S_{dS}/3$ per step) --- exactly the complementary cusp weights. Hence \mE:
 \[
   \boxed{\ \lambda_n=\Bigl(\frac{S_n}{S_{dS}}\Bigr)^{p_2},\qquad
   \mathrm{rate}(n)=p_2\ln\frac{S_{dS}}{S_n}\ }
 \]
 --- the transfer eigenvalues are the \emph{entropy fractions to the hexagon power}; the rates are
-hexagon-weighted log-entropy deficits. \emph{The coupling is the entropy deficit \tI\ (triple
-identity):} $\alpha=n/\Nfam$ $=$ the Mehta--Seshadri parabolic weight (v115/v126) $=$
+hexagon-weighted log-entropy deficits. \emph{The coupling is the entropy deficit \mE\ (triple
+identity):} $\alpha=n/\Nfam$ $=$ the Mehta--Seshadri parabolic weight (\vref{v115}/\vref{v126}) $=$
 $1-S_n/S_{dS}$ $=$ $\Delta S_n/S_{dS}$ --- the RPA insertion strength is the fractional entropy
 deficit; the coupling is not a free parameter in \emph{any} of its three readings. \emph{Orientation
-\tI:} weight $0\leftrightarrow$ pure dS (maximal entropy, stationary attractor), weight
+\mE:} weight $0\leftrightarrow$ pure dS (maximal entropy, stationary attractor), weight
 $2\leftrightarrow$ single horizon (fastest decay) --- the established repeller$\to$attractor flow.
-\emph{R1, thermodynamic form \tP:} derive $\Gamma_n\propto(S_n/S_{dS})^{p_2}$ from the near-Nariai
+\emph{R1, thermodynamic form \mC:} derive $\Gamma_n\propto(S_n/S_{dS})^{p_2}$ from the near-Nariai
 one-loop --- a Gibbons--Hawking-type entropy power law with exponent $=$ the hexagon size (audit:
 $p_2=6=2h$ reads as the two-point form of a weight $h=3=\Nfam$ operator; recorded, not claimed).
 \smallskip\\
 \noindent\emph{The Born square (\veri{v130\_born\_square.py}):} the weight audit is now \emph{derived}
-from mode counting \tI. In the standard collective-coordinate treatment each zero mode contributes a
+from mode counting \mE. In the standard collective-coordinate treatment each zero mode contributes a
 moduli factor $\propto S^{1/2}$, so with $n_{\mathrm{zero}}=6$ the transition \emph{amplitude} scales
 as $A\sim(S/S_{dS})^{3}$ and the \emph{probability} is its Born square $\Gamma=|A|^2=(S/S_{dS})^{6}$:
 \[
@@ -495,13 +478,13 @@ as $A\sim(S/S_{dS})^{3}$ and the \emph{probability} is its Born square $\Gamma=|
 \]
 --- and the $3$ is the dimension of the $l{=}1$ eigenspace $=$ the number of \emph{proper conformal
 Killing vectors of $S^2$} (the classic near-Nariai zero modes, Ginsparg--Perry/Bousso--Hawking class),
-while the $\times2$ is the \emph{horizon pair} $=$ the SdS mass-line deck (v101). The same $3$ counts
-the generations and the sphere's conformal directions. \emph{Residue \tP:} justify the per-zero-mode
+while the $\times2$ is the \emph{horizon pair} $=$ the SdS mass-line deck (\vref{v101}). The same $3$ counts
+the generations and the sphere's conformal directions. \emph{Residue \mC:} justify the per-zero-mode
 $S^{1/2}$ normalisation on the Nariai instanton for exactly these six modes --- a textbook-class
 computation; no exotic object remains in R1.
 \smallskip\\
 \noindent\emph{The measure is the area (\veri{v131\_measure\_is\_area.py}):} the geometric core of
-that normalisation is exact \tI: on $S^2(r)$ the $L^2$ norm of \emph{each} of the three normalised
+that normalisation is exact \mE: on $S^2(r)$ the $L^2$ norm of \emph{each} of the three normalised
 $l{=}1$ harmonics is
 \[
   \boxed{\ \|Y_{1m}\|^2=r^2=\frac{A}{4\pi}\ }
@@ -511,15 +494,15 @@ The collective-coordinate Jacobian per mode is the mode norm $\sim S^{1/2}$ (sta
 variables), so: norm $=$ area $\to$ Jacobian $=S^{1/2}$ $\to$ six modes $\to$ amplitude $S^3$ $\to$
 Born $\to$ $S^6$ --- every exponent factor carries a derivation-level origin. The $4\pi$ is the same
 Gauss--Bonnet primitive that builds $\cthree=\tfrac12(4\pi)^{-1}$, and it \emph{cancels} in all
-ratios --- exactly why the clock sees only entropy fractions. \emph{The last step \tP:} show
+ratios --- exactly why the clock sees only entropy fractions. \emph{The last step \mC:} show
 $\det'_n/\det'_{dS}=1+O(\text{deficit})$ (non-zero-mode determinant cancellation; same local
-near-Nariai geometry) --- the one remaining computation of R1.
-\end{winbox}
+near-Nariai geometry) --- the one remaining computation of R1. \veri{v129\_entropy\_power\_law.py}
 
-\begin{winbox}[The det-ratio anomaly is the Koide constant \tI/\tP\ (\veri{v132\_detratio\_anomaly.py})]
+
+\par\smallskip\noindent\textbf{The det-ratio anomaly is the Koide constant} (\mE/\mC).
 The det-ratio question acquires its first \emph{exact} invariant. The Ginsparg--Perry sphere operator
-on the unit $S^2$ is $L=-\Delta-2$ (the $-2=-|\Z_2|$ is the v104 modulus mass), with eigenvalues
-$(l{+}2)(l{-}1)$ and kernel the three $l{=}1$ zero modes. Its heat coefficient is made of atoms \tI:
+on the unit $S^2$ is $L=-\Delta-2$ (the $-2=-|\Z_2|$ is the \vref{v104} modulus mass), with eigenvalues
+$(l{+}2)(l{-}1)$ and kernel the three $l{=}1$ zero modes. Its heat coefficient is made of atoms \mE:
 $a_1=\tfrac R6-E=\tfrac13+2=\tfrac1{\Nfam}+|\Z_2|=\tfrac73$, and the scaling anomaly of the
 non-zero-mode determinant is
 \[
@@ -527,36 +510,36 @@ non-zero-mode determinant is
 \]
 --- confirmed independently by numerical continuation of the heat trace ($\sim10^{-7}$): \textbf{the
 det-ratio anomaly is the Koide constant}, the eighth appearance of $2/3$ and the first as a
-\emph{spectral} anomaly. \emph{Consequence \tI:} $\det'(cL)=c^{\zeta(0)}\det'(L)$ --- the determinant
+\emph{spectral} anomaly. \emph{Consequence \mE:} $\det'(cL)=c^{\zeta(0)}\det'(L)$ --- the determinant
 ratio between configurations is \emph{not} automatically $1$; the $S^2$-sector share of the scaling
 budget is exactly $-\tfrac23$ per Hubble-unit conversion, while the dimensionless tower itself is
-configuration-independent (pure-number GP spectrum). \emph{The budget statement \tP\ (the remaining
+configuration-independent (pure-number GP spectrum). \emph{The budget statement \mC\ (the remaining
 step, made precise):} show the \emph{full} $\zeta(0)$ budget of the 4d Nariai fluctuation problem
 ($dS_2$ $+$ gauge/ghost $+$ this $S^2$ sector) vanishes or is absorbed into the established power law
---- the $S^2$ share is pinned exactly; nothing is claimed about the total.
-\end{winbox}
+--- the $S^2$ share is pinned exactly; nothing is claimed about the total. \veri{v132\_detratio\_anomaly.py}
 
-\begin{winbox}[The zeta budget: the reduced route carries the anchor ratios \tI/\tP\ (\veri{v133\_zeta\_budget.py})]
+
+\par\smallskip\noindent\textbf{The zeta budget: the reduced route carries the anchor ratios} (\mE/\mC).
 Euclidean Nariai is $S^2\times S^2$ --- the temporal sector continues to the \emph{same} unit sphere,
-so both candidate determinant routes are exactly computable. \emph{(i) The reduced route \tI:} each
-2d sector carries the v132 operator with $\zeta(0)|_{\det'}=-\tfrac23$; the two sectors give
+so both candidate determinant routes are exactly computable. \emph{(i) The reduced route \mE:} each
+2d sector carries the \vref{v132} operator with $\zeta(0)|_{\det'}=-\tfrac23$; the two sectors give
 \[
   \boxed{\ \text{budget}_{\mathrm{red}}=-\tfrac23-\tfrac23=-\tfrac43=-\frac{e_1}{p_0}\ \text{(minus
   the seed gain)}\ }
 \]
---- the per-sector share and the total are \emph{two of the three v119 anchor-ratio triad values};
+--- the per-sector share and the total are \emph{two of the three \vref{v119} anchor-ratio triad values};
 the six zero modes split $3+3$ across the two spheres: the sheet doubling \emph{is} the two-sphere
-structure of Euclidean Nariai ($=$ the horizon pair, v101). \emph{(ii) The naive 4d route \tI:} with
+structure of Euclidean Nariai ($=$ the horizon pair, \vref{v101}). \emph{(ii) The naive 4d route \mE:} with
 the standard $S^2$ heat expansion $1/t+\tfrac13+t/15$ and the symmetric split, $a_2(4d)=
 (\tfrac43)^2+2\cdot\tfrac9{10}=\tfrac{161}{45}$, six zero modes, $\zeta(0)|_{\det',4d}=
 \tfrac{161}{45}-6=-\tfrac{109}{45}$ --- \emph{no} anchor-atom reading. \emph{(iii) Route
-discrimination \tP:} the budget computation structurally favours the \textbf{reduced seam reading}
+discrimination \mC:} the budget computation structurally favours the \textbf{reduced seam reading}
 (pure anchor-ratio anomalies), consistent with the theory's 2d-seam architecture throughout ---
-route-selection evidence, not proof. \emph{Remaining \tP:} the graviton/ghost shares on $S^2\times
-S^2$ (Volkov--Wipf class, external standard) --- a finite list of known heat coefficients.
-\end{winbox}
+route-selection evidence, not proof. \emph{Remaining \mC:} the graviton/ghost shares on $S^2\times
+S^2$ (Volkov--Wipf class, external standard) --- a finite list of known heat coefficients. \veri{v133\_zeta\_budget.py}
 
-\begin{winbox}[The Volkov--Wipf firewall: the external edge is two copies of the reduced budget \tI/\tP\ (\veri{v138\_vw\_firewall.py})]
+
+\par\smallskip\noindent\textbf{The Volkov--Wipf firewall: the external edge is two copies of the reduced budget} (\mE/\mC).
 The ``finite list'' above is now \emph{filled in externally}. For the full one-loop graviton path
 integral on $S^2\times S^2$ the log-coefficient is (arXiv:2506.02142, Table~4.1, agreeing with
 Volkov--Wipf, Nucl.\ Phys.\ B582 (2000) 313):
@@ -573,12 +556,12 @@ per horizon), and
 --- the per-copy magnitude $\tfrac43=e_1/p_0$ is \emph{exactly} the reduced seam budget above (the seed
 gain; $-\tfrac23$ per sector). The TFPT reduced route lands on the \textbf{edge sector} of the external
 bulk/edge split; the bulk ($\tfrac{22}{45}$) is the ideal graviton gas, which the seam clock does not
-contain; two copies $=$ the horizon pair $=$ the sheet doubling (v101; the $3{+}3$ zero-mode split).
-\emph{Typing decision \tP\ (recorded):} R1 $=$ the reduced zero-mode/RPA seam clock $=$ an edge-sector
+contain; two copies $=$ the horizon pair $=$ the sheet doubling (\vref{v101}; the $3{+}3$ zero-mode split).
+\emph{Typing decision \mC\ (recorded):} R1 $=$ the reduced zero-mode/RPA seam clock $=$ an edge-sector
 object; the full 4d Volkov--Wipf determinant is the \emph{gravity firewall} (its $-\tfrac{98}{45}$ is
 absorbed in the $\mu_0/(\Lambda G)^3$ normalisation), not a TFPT atom. Per-copy sign/orientation (the
-edge factor enters inverted) and the Lorentzian edge-mode reading stay \tP.
-\end{winbox}
+edge factor enters inverted) and the Lorentzian edge-mode reading stay \mC. \veri{v138\_vw\_firewall.py}
+
 
 \begin{figure}[h]
 \centering
@@ -593,13 +576,13 @@ edge factor enters inverted) and the Lorentzian edge-mode reading stay \tP.
 % =====================================================================
 \textbf{Bound structures.} In a $\Lambda$-universe the maximal bound radius is
 $r_{\mathrm{ta}}(M)=\bigl(GM[\,2\pi e^{\ainv}/\Mbar]^2\bigr)^{1/3}$ --- halo, cluster, supercluster and
-void scales follow from the $\Lambda$ closure with no new parameter. \tP
+void scales follow from the $\Lambda$ closure with no new parameter. \mC
 
 \textbf{Gravitational waves.} The low-curvature branch is $R+R^2$; the tensor graviton runs on the Lorentz
 cone and the only extra mode (the scalaron, $M_{\mathrm{scal}}\approx3.06\times10^{13}$ GeV) is frozen for
 astrophysical frequencies. Hence
 \[
-  \boxed{\ v_{\mathrm{GW}}=c\ }\qquad\text{(no measurable dispersion)}\qquad\tP,
+  \boxed{\ v_{\mathrm{GW}}=c\ }\qquad\text{(no measurable dispersion)}\qquad\mC,
 \]
 a clean falsifier: a genuine $v_{\mathrm{GW}}\ne c$ would break this gravity closure.
 
@@ -608,14 +591,14 @@ of the causal cone} --- RP $\to$ OS reconstruction $\to$ one Lorentzian cone sha
 massless modes ($v_\gamma=v_g=c$, no native photon dispersion). What it \emph{does} compute is not a speed
 shift but a polarisation rotation, cosmic birefringence
 \[
-  \boxed{\ \beta_{\mathrm{rad}}=\frac{u}{4\pi}\approx0.2424^\circ\ }\qquad\tN,
+  \boxed{\ \beta_{\mathrm{rad}}=\frac{u}{4\pi}\approx0.2424^\circ\ }\qquad\mE,
 \]
 from the same seed $u=\phi_0^{\mathrm{ret}}$ that fixes the Cabibbo angle, $\Omega_b$ and $\theta_{13}$.
 
 % =====================================================================
 \section{Search targets (not claims)}
 % =====================================================================
-\begin{gapbox}[Audit-level search ansätze \tA]
+\begin{gapbox}[Audit-level search ansätze \mO]
 \begin{itemize}\setlength\itemsep{2pt}
 \item \textbf{Black-hole echoes:} any near-horizon echo amplitude ratio would be a natural transfer-rate
 target, $\mathcal A_{n+1}/\mathcal A_n\lesssim(2/3)^6\approx0.0878$. A search ansatz, no prediction.
@@ -640,6 +623,6 @@ power denominator $1920{=}|W(D_5)|$, the de Sitter entropy form, the Page fracti
 $|\mu_4|{=}4$, and $\beta_{\rm rad}{=}\varphi_0^{\rm ret}/4\pi{=}0.2424^\circ$) are re-derived and machine-checked in
 \texttt{verification/v8\_horizon.py}. Run \texttt{python verification/v8\_horizon.py} (needs
 \texttt{mpmath}); it imports the same $\cthree{=}1/(8\pi)$ primitive as the rest of the suite. The
-search-target ans\"atze remain \tA\ and are deliberately not part of the pass/fail checks.
+search-target ans\"atze remain \mO\ and are deliberately not part of the pass/fail checks.
 
 \end{document}

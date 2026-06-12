@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Github, Menu, X } from "lucide-react";
 import { cn, REPO_URL } from "@/lib/utils";
+import { SITE_VERSION, SITE_DATE, SITE_REV } from "@/lib/version";
 import { Logo } from "./Logo";
 
 const links = [
@@ -39,13 +40,23 @@ export function Navbar() {
         aria-label="Primary"
         className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
       >
-        <Link
-          href="/"
-          className="group flex items-center"
-          aria-label="TFPT home"
-        >
-          <Logo size={36} />
-        </Link>
+        <div className="flex items-center gap-2.5">
+          <Link
+            href="/"
+            className="group flex items-center"
+            aria-label="TFPT home"
+          >
+            <Logo size={36} />
+          </Link>
+          <span
+            className="hidden select-none items-baseline gap-1.5 rounded-full bg-slate-800/50 px-2.5 py-1 font-mono text-[10px] tracking-wide text-slate-400 ring-1 ring-slate-700/40 sm:inline-flex"
+            title={`TFPT ${SITE_VERSION} — document set last synced ${SITE_DATE} (build rev ${SITE_REV})`}
+          >
+            <span className="font-semibold text-slate-300">v{SITE_VERSION}</span>
+            <span aria-hidden>·</span>
+            <time dateTime={SITE_DATE}>{SITE_DATE}</time>
+          </span>
+        </div>
 
         <ul className="hidden items-center gap-1 md:flex">
           {links.map((l) => (

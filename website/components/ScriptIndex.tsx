@@ -1,3 +1,6 @@
+// GENERATED FILE -- DO NOT EDIT THE CLUSTERS DATA BY HAND.
+// Source: verification/script_registry.csv + script_clusters.csv.
+// Regenerate with:  python3 verification/make_script_index.py
 "use client";
 
 import { motion } from "motion/react";
@@ -19,8 +22,7 @@ interface Cluster {
 const CLUSTERS: Cluster[] = [
   {
     title: "Compiler core & the E₈ glue",
-    purpose:
-      "Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows.",
+    purpose: "Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows.",
     accent: "from-blue-500 to-violet-500",
     scripts: [
       { file: "v1_e8_glue.py", what: "E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248" },
@@ -36,8 +38,7 @@ const CLUSTERS: Cluster[] = [
   },
   {
     title: "Electromagnetic fixed point",
-    purpose:
-      "The fine-structure constant as the unique root of the boundary U(1) Ward identity.",
+    purpose: "The fine-structure constant as the unique root of the boundary U(1) Ward identity.",
     accent: "from-cyan-500 to-blue-500",
     scripts: [
       { file: "v3_em_alpha.py", what: "α⁻¹ = 137.0359992168 unique root of F_U(1)=0; ablation" },
@@ -46,8 +47,7 @@ const CLUSTERS: Cluster[] = [
   },
   {
     title: "Flavor matrix & operators",
-    purpose:
-      "The integer operator ladder (R, K, Q, L) and its spectral invariants — the flavor signature.",
+    purpose: "The integer operator ladder (R, K, Q, L) and its spectral invariants — the flavor signature.",
     accent: "from-emerald-500 to-teal-500",
     scripts: [
       { file: "v4_flavor_matrix.py", what: "residue matrix R: det 8, minors (2,3,5), χ_R, Σ L = 40" },
@@ -61,8 +61,7 @@ const CLUSTERS: Cluster[] = [
   },
   {
     title: "Masses, leptons & quark ratios",
-    purpose:
-      "The φ₀-ladder mass formula, the exact lepton coefficients, and the integer-Plücker quark ratios.",
+    purpose: "The φ₀-ladder mass formula, the exact lepton coefficients, and the integer-Plücker quark ratios.",
     accent: "from-teal-500 to-emerald-500",
     scripts: [
       { file: "v18_quark_yukawa.py", what: "quark source ratios; lepton c=(16/7,4/3,7/6); full hierarchy" },
@@ -78,8 +77,7 @@ const CLUSTERS: Cluster[] = [
   },
   {
     title: "Neutrinos & the solar angle",
-    purpose:
-      "The Majorana texture, the dual anchor, and the previously open solar angle from the seam.",
+    purpose: "The Majorana texture, the dual anchor, and the previously open solar angle from the seam.",
     accent: "from-violet-500 to-purple-500",
     scripts: [
       { file: "v9_neutrino_texture.py", what: "μτ Majorana texture → sin²θ₁₂ = 1/3 − φ₀/2, θ₂₃ = 45°" },
@@ -89,8 +87,7 @@ const CLUSTERS: Cluster[] = [
   },
   {
     title: "Gravity, inflation & cosmology",
-    purpose:
-      "The R + R² spectral-action shadow, the seam-fixed scalaron, and the cosmological readouts.",
+    purpose: "The R + R² spectral-action shadow, the seam-fixed scalaron, and the cosmological readouts.",
     accent: "from-fuchsia-500 to-pink-500",
     scripts: [
       { file: "v7_gravity_cosmo.py", what: "scalaron c₃⁷, A_s, n_s, r, Ω_b, sin²θ₁₂" },
@@ -101,8 +98,7 @@ const CLUSTERS: Cluster[] = [
   },
   {
     title: "Horizon code & Origin Theory (self-consistency)",
-    purpose:
-      "The seam as the universal horizon code, the order-30 Coxeter cycle, and the gapped unique attractor that makes parameter-freeness a theorem.",
+    purpose: "The seam as the universal horizon code, the order-30 Coxeter cycle, and the gapped unique attractor that makes parameter-freeness a theorem.",
     accent: "from-rose-500 to-orange-500",
     scripts: [
       { file: "v6_bootstrap.py", what: "reverse glue μ²−5μ+4=0; g_car=5 three ways; 8 = rank E₈ = φ(30)" },
@@ -120,8 +116,7 @@ const CLUSTERS: Cluster[] = [
   },
   {
     title: "Open gate (U_wall) — the flavor wall",
-    purpose:
-      "The parabolic wall-selection contract: the quark ratios are closed; only the absolute amplitude scale stays open.",
+    purpose: "The parabolic wall-selection contract: the quark ratios are closed; only the absolute amplitude scale stays open.",
     accent: "from-amber-500 to-yellow-500",
     scripts: [
       { file: "v27_wall_representative.py", what: "explicit balanced wall rep W_wall; det R=8, Spec(Q₊)={1,2,3}" },
@@ -139,8 +134,7 @@ const CLUSTERS: Cluster[] = [
   },
   {
     title: "Open gate (G_metric) & the frontier",
-    purpose:
-      "The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items.",
+    purpose: "The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items.",
     accent: "from-slate-500 to-slate-600",
     scripts: [
       { file: "v5_e8_cascade.py", what: "cascade D = 60 − 2n: endpoints, exponent rungs → 240" },
@@ -174,8 +168,7 @@ const CLUSTERS: Cluster[] = [
   },
   {
     title: "Blind registry & red-team follow-ups (v84–v140)",
-    purpose:
-      "The frozen prediction registry and the second follow-up round: Target A merged to one residual, the CP residual quantified, N★ computed from reheating — every freeze machine-enforced.",
+    purpose: "The frozen prediction registry and the second follow-up round: Target A merged to one residual, the CP residual quantified, N★ computed from reheating — every freeze machine-enforced.",
     accent: "from-emerald-500 to-cyan-500",
     scripts: [
       { file: "v84_frozen_registry.py", what: "blind-prediction registry FROZEN 2026-06-09: every dimensionless prediction of record at 25 digits, re-derived from the two axioms each run (formula↔value lock); exactly ONE θ₁₂ prediction of record = 1/3−φ₀/2 = 0.306747, variants typed as derived (look-elsewhere machine-excluded); r/n_s only as N★ bands" },

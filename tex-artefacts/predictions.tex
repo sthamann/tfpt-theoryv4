@@ -1,0 +1,59 @@
+% ---------------------------------------------------------------------
+%  tex-artefacts/predictions.tex -- the running/upcoming-experiment
+%  predictions table of the introduction. Outsourced from
+%  introduction.tex; \input in the "Predictions for running and upcoming
+%  experiments" section. Requires tabularx + the Y column type and the
+%  status-marker macros (\mE etc., \markerkey) from tex-artefacts/tfpt_style.
+%
+%  Maintenance: keep this table 1:1 with verification/predictions_frozen.json
+%  and the status_ledger.csv rows it cites (the ledger wins on any disagreement).
+% ---------------------------------------------------------------------
+\begin{center}\footnotesize
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\linewidth}{@{}p{2.5cm}p{4.9cm}Yc@{}}
+\toprule
+\textbf{Observable} & \textbf{TFPT value \& derivation} & \textbf{Experiment (running / upcoming)} & \textbf{St.} \\
+\midrule
+solar angle $\sin^2\theta_{12}$ &
+  prediction of record $\tfrac13-\tfrac{\phiz}{2}=0.306747$; TBM $+$ seam misalignment $\varepsilon=\tfrac34\phiz=\cthree+36\cthree^4$ (cond.) &
+  \textbf{JUNO}: first $59.1$\,d run $0.3092{\pm}0.0087$ (compatible), precision phase pending & \mE/\mC \\
+reactor angle $\sin^2\theta_{13}$ &
+  $\phiz e^{-5/6}=0.0231$; seed $\times$ carrier-trace $e^{-\gamma}$, $\gamma{=}\tfrac56$ &
+  Daya~Bay / RENO / JUNO (PDG $0.0220$) & \mE \\
+atmospheric $\sin^2\theta_{23}$ &
+  $\approx\tfrac12$ ($\mu\tau$-symmetric limit; octant not selected) &
+  NOvA / T2K / \textbf{DUNE} (octant ambiguity; NuFIT~6.0 pre-JUNO baseline) & \mC \\
+fine structure $\ainv$ &
+  $137.0359992$ as the unique root of $F_{U(1)}(\alpha){=}0$ (no fit, no second branch) &
+  CODATA-2022 (data through 2022) $137.035999177(21)$: dev.\ $2.9\times10^{-10}$ ($1.9\sigma$ of its uncertainty) & \mE \\
+tensor ratio $r$ &
+  $r=\tfrac{12}{N_\star^2}\in[0.0033,0.0048]$ (frozen band, $N_\star\in[50,60]$); scalaron-reheating point $0.0045$ ($N_\star{=}51.4$, \vref{v86}) &
+  now $r{<}0.036$ (BICEP/Keck BK18); \textbf{CMB-S4} ($\sigma_r\!\le\!5{\times}10^{-4}$, obs.\ $\sim$2033) & \mC \\
+tilt $n_s$ &
+  $n_s=1-\tfrac{2}{N_\star}\in[0.960,0.967]$ (same band); scalaron-reheating point $0.9611$ ($N_\star{=}51.4$, \vref{v86}) &
+  Planck ($0.9649{\pm}0.0042$); CMB-S4 sharpens & \mC \\
+amplitude $A_s$ &
+  $\tfrac{N_\star^2}{24\pi^2}\cthree^7$; $2.0\times10^{-9}$ at $N_\star{=}55$ (the measured $A_s$ prefers fast reheating, \vref{v86}) &
+  Planck ($2.1\times10^{-9}$) & \mC \\
+neutron EDM &
+  $\theta_{\mathrm{eff}}=0\Rightarrow d_n$ essentially null (structure $+$ RP) &
+  \textbf{PSI~nEDM} / SNS (running) & \mE \\
+CP phase $\delta_{\mathrm{CKM}}$ &
+  $\delta=\tfrac\pi3+3\lambda^2=66.96^\circ$ (frozen of record, \vref{v88}); survives at $+0.98\sigma$ vs $\gamma_{\mathrm{PDG}}$ &
+  \textbf{LHCb} / Belle~II $\gamma$ combination; decision at $\sigma_\gamma\le0.96^\circ$ & \mE \\
+cosmic birefringence $\beta$ &
+  $\beta=\tfrac{\phiz}{4\pi}=0.2424^\circ$ (seam readout) &
+  ACT~DR6 hint $0.215^\circ{\pm}0.074^\circ$ (systematics not yet understood --- not a validation target); \textbf{Simons Obs.} / LiteBIRD & \mC \\
+$0\nu\beta\beta$ / ordering &
+  Majorana branch; normal-ordering preference &
+  \textbf{LEGEND / nEXO}, DUNE, KATRIN & \mC \\
+flavor invariants &
+  $\det R{=}h(D_5){=}8$, principal minors $(2,3,5)$, $\chi_R{=}t^3{-}9t^2{+}10t{-}8$ (exact) &
+  any future CKM/PMNS global fit must satisfy these & \mE \\
+$H_0$ vs.\ $\Lambda$ &
+  $v_{\mathrm{EW}}\sim e^{-\ainv/5}$, $\Lambda\sim e^{-2\ainv}$, $H_0\sim\sqrt\Lambda$: one engine &
+  SH0ES / \textbf{DESI} / Planck (Hubble tension) & \mC \\
+\bottomrule
+\end{tabularx}
+\end{center}
+\markerkey

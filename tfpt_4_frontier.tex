@@ -20,7 +20,7 @@
 \usepackage[hidelinks,colorlinks=true,linkcolor=blue!55!black,urlcolor=blue!55!black]{hyperref}
 \emergencystretch=3em
 
-\input{tfpt_style}
+\input{tex-artefacts/tfpt_style}
 \newcommand{\phiz}{\varphi_0^{\mathrm{ret}}}
 \newcommand{\cthree}{c_3}
 \newcommand{\Mpl}{M_{\mathrm{Pl}}}
@@ -32,7 +32,7 @@
 \title{\vspace{-1.2cm}\textbf{TFPT --- Frontier items}\\[2mm]
 \large $\eta_B$, $m_p/m_e$, the Koide relation, dark matter and quantum gravity ---\\
 the honest status, not forced onto the ladder}
-\author{}\date{\today}
+\author{\TFPTauthors}\date{\TFPTdatestamp}
 
 \def\TFPTdoctitle{Frontier}
 \begin{document}
@@ -48,10 +48,10 @@ document is the status authority for the frontier items:} where any other docume
 markers here disagree, the typing here (and the \texttt{status\_ledger.csv}) wins.
 \end{keybox}
 
-\input{tfpt_docset}
+\input{tex-artefacts/tfpt_docset}
 \noindent\textbf{You are reading \textbf{document~4} (Frontier).}
 
-\input{tfpt_status}
+\input{tex-artefacts/tfpt_status}
 \TFPTbadges
 \TFPTclaimstack[frontier]
 
@@ -59,13 +59,11 @@ markers here disagree, the typing here (and the \texttt{status\_ledger.csv}) win
 \tableofcontents
 \bigskip
 
-\begin{gapbox}[Ground rule]
-These five are exactly the items previously flagged ``\emph{not on a clean action/ladder yet --- do not
-force}.'' This note gives, for each, the \emph{genuine} structural handle that does exist, the precision
-with which it currently lands, and a clear statement of what is \emph{not} a single compiler power. No
-fabricated ladder rungs; the honest markers \tI/\tP/\tA\ are applied throughout. (All numbers
-machine-verified.)
-\end{gapbox}
+\par\smallskip\noindent\textbf{Ground rule.} These five are exactly the items previously flagged
+``\emph{not on a clean action/ladder yet --- do not force}.'' This note gives, for each, the
+\emph{genuine} structural handle that does exist, the precision with which it currently lands, and a
+clear statement of what is \emph{not} a single compiler power. No fabricated ladder rungs; the honest
+markers \mE/\mC/\mO\ are applied throughout. (All numbers machine-verified.)
 
 \begin{gapbox}[Hard rule on the frontier --- one interface $F_{\mathrm{transfer}}$]
 \textbf{Koide, $\eta_B$, the axion relic scale and $m_p/m_e$ are \emph{not} compiler powers unless their
@@ -106,7 +104,7 @@ cosmological readout $\eta_B=273.9\times10^{-10}\,\Omega_b h^2$. With the TFPT H
 So $\eta_B$ is a \emph{downstream cosmological readout} from the closed $\Omega_b h^2$ handle --- not an
 independent compiler rung, and the fundamental leptogenesis route remains an interface.
 
-\paragraph{Route B --- leptogenesis interface (Paper 6, \tI).} The closed branch also fixes the
+\paragraph{Route B --- leptogenesis interface (Paper 6, \mE).} The closed branch also fixes the
 leptogenesis inputs: the heavy scale $M_R\approx1.3\times10^{15}$ GeV, the CP phases ($\delta_{\mathrm{CKM}}$,
 $\delta^\nu_{\mathrm{CP}}$, both closed), the reheating $T_R$, and the seam-fixed initial phase. The
 numerical $\eta_B$ then follows from the \emph{standard} flavored-leptogenesis Boltzmann solve --- an
@@ -117,7 +115,7 @@ machinery (Davidson--Nardi--Nir, \emph{Phys.\ Rep.}\ 466 (2008) 105; Buchm\"ulle
 \emph{named interface}, not a closed number; only Route~A (downstream of the closed $\Omega_b h^2$) is
 quoted.
 
-\begin{keybox}[Honest status of $\eta_B$ --- strictly typed \tP]
+\begin{keybox}[Honest status of $\eta_B$ --- strictly typed \mC]
 The two statements must be kept apart and not interchanged:
 \[
   \boxed{\ \eta_B\ \text{as a cosmological readout from the closed }\Omega_b h^2\ \text{is \emph{determined}}\ (6.1\times10^{-10})\ }
@@ -125,7 +123,7 @@ The two statements must be kept apart and not interchanged:
 \[
   \boxed{\ \eta_B\ \text{as a fundamental \emph{compiler power} is \emph{not} closed}\ }
 \]
-The leptogenesis route requires a standard (washout-dependent) Boltzmann solve. So $\eta_B$ is \tP ---
+The leptogenesis route requires a standard (washout-dependent) Boltzmann solve. So $\eta_B$ is \mC ---
 determined as a downstream readout, but \emph{not} a clean compiler rung; it must never be quoted as a
 fundamental TFPT output.
 \end{keybox}
@@ -143,19 +141,19 @@ Hence
 mixes \emph{two different sectors}. It is no single $\phiz$ power: $1/(\phiz)^2=353.7$ and
 $1/(\phiz)^3=6651$ bracket $1836$ with no clean rung in between.
 
-\begin{keybox}[Honest status of $m_p/m_e$ \tA]
+\begin{keybox}[Honest status of $m_p/m_e$ \mO]
 Computable at \emph{scheme level} (from $\alpha_s(M_Z)$ running $+$ the closed $m_e$), exactly like the
 dimensionful EW/QCD masses $m_W,m_Z$. But it is \emph{genuinely not} a compiler power, because it is a
-ratio across the QCD and electroweak sectors. Left \tA\ --- not forced.
+ratio across the QCD and electroweak sectors. Left \mO\ --- not forced.
 \smallskip\\
 \noindent\textbf{A rejected near-formula (recorded as a discipline boundary, \veri{v79\_review\_identities.py}).}
 The combination $|W(D_5)|-\dim\Lambda^3(SU(9))+\Nfam\lambda_C^2=1920-84+0.151=1836.151$ matches the PDG value to
 $\sim10^{-6}$ --- and is \emph{deliberately rejected}. Two reasons make it numerology, not a derivation:
 $SU(9)=A_8$ (the $\dim\Lambda^3=84$ block) does \emph{not} occur in the carrier $D_5\oplus A_3$, and $m_p$ is
 QCD confinement (gluon binding energy) with \emph{no} mechanism linking it to an algebraic sum. Integrating it
-would \emph{invite} the numerology charge, not retire it; $m_p/m_e$ stays \tA. (The same firewall rejects
+would \emph{invite} the numerology charge, not retire it; $m_p/m_e$ stays \mO. (The same firewall rejects
 $\eta_B=\tfrac{|\Z_2|}{\Delta_Q}\cthree^6\approx6.10\times10^{-10}$: arithmetically close, but a two-atom
-prefactor fit to a washout-dependent leptogenesis output --- $\eta_B$ stays \tP, the downstream readout above.)
+prefactor fit to a washout-dependent leptogenesis output --- $\eta_B$ stays \mC, the downstream readout above.)
 \end{keybox}
 
 % =====================================================================
@@ -170,26 +168,23 @@ the Koide ratio is a pure number (the common prefactor cancels):
 The measured pole-mass value is famously $Q_{\mathrm{PDG}}=0.66666$. So TFPT predicts a Koide ratio that
 is \emph{near} $2/3$ but \emph{not exactly} $2/3$ at source level.
 
-\begin{keybox}[Honest status of Koide \tP]
+\begin{keybox}[Honest status of Koide \mC]
 $Q_{\mathrm{TFPT}}=0.664$ is a \emph{prediction}, $0.33\%$ below $2/3$. Exact $2/3$ would require the
 three carrier rationals $(\tfrac{16}{7},\tfrac43,\tfrac76)$ to satisfy a specific quadratic constraint,
 which they do \emph{not}; the small residual is of the size of the source$\to$pole RG shift. We report
 the near-miss honestly and do \emph{not} tune the rationals to force $2/3$.
 \end{keybox}
 
-\begin{winbox}[New: the \emph{target} $2/3$ has a compiler reading $|\Z_2|/\Nfam$]
+\par\smallskip\noindent\textbf{The \emph{target} $2/3$ has a compiler reading $|\Z_2|/\Nfam$.}
 The $E_8$-slice scan adds the missing piece: the value the data sits on, $Q=2/3$, is exactly
-\[
-  Q_\star=\frac{|\Z_2|}{\Nfam}=\frac{2}{3},
-\]
+$Q_\star=|\Z_2|/\Nfam=2/3$,
 the sheet over the family count --- the same two atoms $(2,3)$ that run through the whole compiler. So
 the picture splits cleanly: the \emph{democratic target} is $|\Z_2|/\Nfam=2/3$ (a compiler number), and
 the \emph{source-level pole-mass} value computed from the carrier rationals is $0.664$, $0.33\%$ below it
 by the source$\to$pole shift. Koide is thus ``democratic $2/3$ from $(|\Z_2|,\Nfam)$, realised to
-$0.33\%$ by the explicit masses'' --- promoted from a bare near-miss to a reading with a target. \tP
-\end{winbox}
+$0.33\%$ by the explicit masses'' --- promoted from a bare near-miss to a reading with a target. \mC
 
-\begin{winbox}[Conjecture: a source$\to$pole correction of size $\varphi_0/|W(A_3)|$ \tP]
+\par\smallskip\noindent\textbf{Conjecture: a source$\to$pole correction of size $\varphi_0/|W(A_3)|$} (\mC).
 The source value sits just below $2/3$, and the deficit is almost exactly the family-Weyl quantum
 $\varphi_0/|W(A_3)|$ with $|W(A_3)|=4!=24$:
 \[
@@ -200,9 +195,8 @@ overshooting $\tfrac23=0.6666667$ by only $1.3\times10^{-5}$. So the \emph{conje
 $Q_\ell^{\mathrm{pole}}\approx Q_\ell^{\mathrm{source}}+\varphi_0/|W(A_3)|$ would land essentially on the
 democratic $2/3$. Reported as a source$\to$pole correction \emph{conjecture}, not a derivation; the
 rationals are \emph{not} tuned. \veri{v25\_frontier\_conjectures.py}
-\end{winbox}
 
-\begin{winbox}[Sharper conjecture: a multiplicative seed transfer $u\to\tfrac{53}{54}u$ \tP]
+\par\smallskip\noindent\textbf{Sharper conjecture: a multiplicative seed transfer $u\to\tfrac{53}{54}u$} (\mC).
 A cleaner version shifts the \emph{seed} rather than $Q$ additively, and introduces \emph{no} new free
 number. Keep the lepton formula $m_e{:}m_\mu{:}m_\tau=\tfrac{16}7u^5{:}\tfrac43u^3{:}\tfrac76u^2$ but
 evaluate it at the source$\to$pole seed
@@ -214,11 +208,10 @@ Then $Q_\ell\bigl(\tfrac{53}{54}u\bigr)=0.66666610$, i.e.\ $2/3$ to within $-5.7
 an order of magnitude tighter than the additive $\varphi_0/24$ correction, with $54$ a pure compiler
 number and no tuning. This sharpens the research gate to a concrete QFT task: \emph{show that the
 leptonic source$\to$pole transfer of the seed is $u\mapsto u\,(1-\tfrac{1}{2\Nfam^3})$} (a renormalised-seed
-effect from the leptonic self-energy or the $A_3$ family-Weyl averaging). Status remains \tP\ until that
+effect from the leptonic self-energy or the $A_3$ family-Weyl averaging). Status remains \mC\ until that
 transfer is derived. \veri{v37\_plucker\_anchor.py}
-\end{winbox}
 
-\begin{winbox}[The Koide target and the QFT transfer gap are the \emph{same} quotient \tI/\tP]
+\par\smallskip\noindent\textbf{The Koide target and the QFT transfer gap are the \emph{same} quotient} (\mE/\mC).
 The same $Q_\star$ controls a second, independent object --- the first non-trivial eigenvalue of the
 admissible $C_6$ transport operator. Its spectrum is $\{1,(2/3)^6,(1/3)^6\}$, so
 \[
@@ -226,61 +219,58 @@ admissible $C_6$ transport operator. Its spectrum is $\{1,(2/3)^6,(1/3)^6\}$, so
 \]
 The Koide democratic target, the QFT mass-gap eigenvalue $\lambda_2$ (hence $\Delta=6\log\tfrac32=-\log\lambda_2$),
 and the $A_3$ positive-root hexagon are therefore \emph{one} quotient raised to one exponent. Typing:
-Koide target \tP, gap eigenvalue \tI, the connection an \tI-audit. This does not ``solve'' Koide, but it
+Koide target \mC, gap eigenvalue \mE, the connection an \mE-audit. This does not ``solve'' Koide, but it
 explains \emph{why} the near-value $2/3$ recurs: the same sheet-over-family ratio fixes both the
 democratic lepton target and the leading transfer eigenmode.
-\end{winbox}
 
-\begin{winbox}[Sharpening: the source$\to$pole map is \emph{forced} by that gap \tI/\tP\ (\veri{v82\_koide\_attractor\_splitting.py})]
-The previous box pairs the Koide target with $\lambda_2=(2/3)^6$; \veri{v82\_koide\_attractor\_splitting.py} turns the
-pairing into a \emph{mechanism}. On the anchor double cover (Paper 2) the two branch points are Koide $q=2$ and carrier
+\par\smallskip\noindent\textbf{The source$\to$pole map is \emph{forced} by that gap} (\mE/\mC).
+The previous paragraph pairs the Koide target with $\lambda_2=(2/3)^6$; \vref{v82} turns the
+pairing into a \emph{mechanism} (\veri{v82\_koide\_attractor\_splitting.py}). On the anchor double cover (Paper 2) the two branch points are Koide $q=2$ and carrier
 $q=5$; any branch-preserving M\"obius transfer that fixes both is, in $\rho=(q-2)/(5-q)$, exactly $\rho\mapsto\mu\rho$,
 hence \emph{unique} once $\mu$ is set. Choosing $\mu=\lambda_2=(2/3)^6$ (no new number) gives the unique map
 $F(q)=2(569q-3325)/(665q-3517)$ with $F'(2)=(2/3)^6<1$ and $F'(5)=(3/2)^6>1$: \textbf{Koide is the attractor, the
 carrier the repeller}, and $q_n\to2$ ($x\to-2/3$) at the established gap rate. So the three structural inputs a Koide
 \emph{derivation} would need collapse to \emph{one} identification --- the leptonic source$\to$pole transfer is the
 branch-preserving relaxation of the gapped operator --- after which the value $2/3$, the convergence rate and the
-chosen branch are all forced. This is still not a closure: that single identification stays \tP. (It is the dynamical
+chosen branch are all forced. This is still not a closure: that single identification stays \mC. (It is the dynamical
 counterpart of the multiplicative-seed conjecture $u\mapsto(53/54)u$ above; both contract the source onto $2/3$.)
-\end{winbox}
 
-\begin{winbox}[Relaxation toy: basin, exact rate, and two honest negatives \tI/\tN\ (\veri{v93\_koide\_relaxation\_toy.py})]
-The relaxation picture is now stress-tested on the physical values (ledger \texttt{FR.KOIDE.05}).
-\textbf{Basin lemma \tI\ (new):} under the canonical dictionary $q=\Nfam\,Q$ the \emph{entire} physical Koide
+\par\smallskip\noindent\textbf{Relaxation toy: basin, exact rate, and two honest negatives} (\mE).
+The relaxation picture is now stress-tested on the physical values (ledger \texttt{FR.KOIDE.05}, \veri{v93\_koide\_relaxation\_toy.py}).
+\textbf{Basin lemma \mE\ (new):} under the canonical dictionary $q=\Nfam\,Q$ the \emph{entire} physical Koide
 range $Q\in[\tfrac13,1]$ (Cauchy--Schwarz) maps to $q\in[1,3]$ --- the attractor $q=2$ lies inside, the
 repeller $q=5$ outside: every physically possible charged-lepton configuration is in the attractor basin, no
-fine-tuning of the start. \textbf{Exact rate \tI:} along the trajectory from the physical source value the
-cross-ratio contracts by \emph{exactly} $(2/3)^6$ per step. \textbf{Source/pole \tI/\tN:} the exact ladder
+fine-tuning of the start. \textbf{Exact rate \mE:} along the trajectory from the physical source value the
+cross-ratio contracts by \emph{exactly} $(2/3)^6$ per step. \textbf{Source/pole \mE:} the exact ladder
 gives $Q_{\mathrm{src}}=0.6644638$, i.e.\ $\rho_{\mathrm{src}}=-0.0021980\approx-\varphi_0/24$ to $0.8\%$ ---
 the $\varphi_0/24$ conjecture re-expressed in attractor coordinates: \emph{the source sits one seed quantum
 before the branch point} ($24=|W(A_3)|$); PDG pole masses give $Q_{\mathrm{pole}}=0.6666645$, the branch
 point hit to $3.3\times10^{-6}$. \textbf{Honest negatives (they narrow the gate):} (i) the flow time
 source$\to$pole is $t=\log_\mu(\rho_{\mathrm{pole}}/\rho_{\mathrm{src}})=2.84$ --- \emph{not} an integer, so
-the literal discrete iteration $\mathrm{pole}=F^n(\mathrm{source})$ is \emph{excluded}; if the v82 map drives
-the transfer at all, the missing \tP\ object is a \emph{continuous-time} generator $\exp(t\log F)$;
+the literal discrete iteration $\mathrm{pole}=F^n(\mathrm{source})$ is \emph{excluded}; if the \vref{v82} map drives
+the transfer at all, the missing \mC\ object is a \emph{continuous-time} generator $\exp(t\log F)$;
 (ii) the $0.79\%$ mismatch of $\rho_{\mathrm{src}}$ vs $-\varphi_0/24$ is far above ladder precision, so
 ``exactly $\varphi_0/24$'' remains a conjecture, not an identity. The open question is no longer ``why
 $2/3$?''\ but ``what is the continuous transfer generator, and why is its flow time $\sim2.8$ periods?''.
-\end{winbox}
 
-\begin{winbox}[Flow time: canonical generator, data-fragility, and a conditional $m_\tau$ \tI/\tN/\tP\ (\veri{v99\_koide\_flow\_time.py})]
-Three sharpenings of the box above (ledger \texttt{FR.KOIDE.06}); they correct the \emph{robustness} of
-negative (i), not its arithmetic. \textbf{(1) The continuous generator has a canonical form \tI.} The v82
+\par\smallskip\noindent\textbf{Flow time: canonical generator, data-fragility, and a conditional $m_\tau$} (\mE/\mC).
+Three sharpenings of the paragraph above (ledger \texttt{FR.KOIDE.06}, \veri{v99\_koide\_flow\_time.py}); they correct the \emph{robustness} of
+negative (i), not its arithmetic. \textbf{(1) The continuous generator has a canonical form \mE.} The \vref{v82}
 flow is generated by the autonomous equation
 \[
   \boxed{\ \frac{dq}{dt}=\frac{\Delta}{\Nfam}\,(q-2)(q-5)=\frac{\Delta}{\Nfam}\,\det B(q)\ },\qquad
   \Delta=6\log\tfrac32\ \ (\text{the gap}),
 \]
 whose time-$1$ map \emph{is} the M\"obius map $F$ (machine-checked; $e^{-\Delta}=(2/3)^6$ exactly). The
-missing \tP\ object is therefore precisely a QFT mechanism producing \emph{gap $\times$ anchor-block
+missing \mC\ object is therefore precisely a QFT mechanism producing \emph{gap $\times$ anchor-block
 quadric} --- the form is canonical, only its physical derivation is open. \textbf{(2) The non-integrality
-of $t$ is data-fragile \tN.} Because $\rho_{\mathrm{pole}}=-2.2\times10^{-6}$ sits so close to the branch
+of $t$ is data-fragile \mE.} Because $\rho_{\mathrm{pole}}=-2.2\times10^{-6}$ sits so close to the branch
 point, $t$ is hypersensitive to $m_\tau$ (PDG $1776.93\pm0.09$\,MeV): $t(-1\sigma)=2.35$,
 $t(\mathrm{central})=2.84$, and $Q$ crosses $\tfrac23$ \emph{inside} the error band (at $+0.43\sigma$,
 where $t\to\infty$) --- within $+0.5\sigma$, $t$ passes \emph{every} integer $\ge3$. So the exclusion of
 $\mathrm{pole}=F^n(\mathrm{source})$ holds only at the central value. \textbf{(3) Conditional discrete
-steps \tP\ (registry untouched; not predictions of record):} $n{=}2$ is \emph{excluded} ($-2.9\sigma$,
-\tN); $n{=}3{=}\Nfam$ steps --- one per family --- predicts
+steps \mC\ (registry untouched; not predictions of record):} $n{=}2$ is \emph{excluded} ($-2.9\sigma$,
+\mE); $n{=}3{=}\Nfam$ steps --- one per family --- predicts
 \[
   \boxed{\ m_\tau=1776.9427\ \mathrm{MeV}\ }\quad(+0.14\sigma;\ \text{source-variant stable to }0.0002\ \mathrm{MeV}),
 \]
@@ -288,15 +278,14 @@ while $n{=}4$ ($1776.9667$) and the exact branch ($1776.9690$) are not yet separ
 is $\sigma(m_\tau)\!\sim\!0.01$\,MeV (Belle~II). \emph{Look-elsewhere firewall:} a tempting scale reading
 $t=\ln(M_{\mathrm{scal}}/m_\tau)/\ln W$ matched $W=46080=|W(D_5)||W(A_3)|$ to $10^{-4}$ --- and is
 \emph{destroyed} by negative controls (the same hypersensitivity makes \emph{any} $W$ in a wide range land
-within $0.1\sigma$); it is rejected and recorded so it is not re-fished. P2's type is unchanged ([P], one
+within $0.1\sigma$); it is rejected and recorded so it is not re-fished. P2's type is unchanged (\mC, one
 identification); the discrete-vs-continuous question is now \emph{experimental}, not settled.
-\end{winbox}
 
 % =====================================================================
 \section{Dark matter --- the candidate is fixed, the scale is pending}
 % =====================================================================
 TFPT \emph{does} contain a dark-matter candidate, and it is not ad hoc: the \textbf{determinant-line
-axion} of the strong-CP sector (Paper 6, Thm.\ ``determinant-line axion interface'', \tI). Two of its
+axion} of the strong-CP sector (Paper 6, Thm.\ ``determinant-line axion interface'', \mE). Two of its
 inputs are already \emph{closed}:
 \[
   \text{initial misalignment}\quad \theta_i=\pi\bigl(1-\varphi_{\mathrm{seam}}(\alpha_\star)\bigr)=2.974\ \text{rad}=170.4^\circ,
@@ -308,26 +297,25 @@ the standard misalignment-plus-string expression
 \]
 and Paper 6 states that the minimal closed branch has \emph{dominant axion-like dark matter}.
 
-\begin{winbox}[New: the $E_8$ scan rules out a rival WIMP candidate]
+\par\smallskip\noindent\textbf{The $E_8$ scan rules out a rival WIMP candidate.}
 The $D_8=SO(16)$ slice scan sharpens \emph{why} the axion is the candidate, not a new heavy state: the
 spinor $128=(16,4)\oplus(\overline{16},\overline4)$ is the \emph{same} matter spinor as in the
 $D_5\times A_3$ construction --- there is \emph{no spare $E_8$ singlet} left over to play a WIMP. Every
 $E_8$ direction is accounted for by the carrier $\times$ family content. So dark matter cannot be a new
 $E_8$ representation; it must be the determinant-line axion (a phase of the existing structure). A useful
-\emph{negative} that removes the WIMP option on structural grounds. \tI
-\end{winbox}
+\emph{negative} that removes the WIMP option on structural grounds. \mE
 
-\begin{keybox}[Honest status of dark matter \tP/\tA]
+\begin{keybox}[Honest status of dark matter \mC/\mO]
 The candidate is \emph{identified} (the axion) and its misalignment angle $\theta_i=170^\circ$ is
-\emph{closed} \tI. The relic abundance still needs the decay constant $f_a$ and mass $m_a$ (interface
+\emph{closed} \mE. The relic abundance still needs the decay constant $f_a$ and mass $m_a$ (interface
 data set by the $M_R/\Lambda$ scales) --- a standard axion-DM computation, not yet a compiler power. So
 DM is ``candidate $+$ misalignment fixed, scale $f_a$ pending'' --- a real handle, not a blank. (A
 secondary candidate is the lightest seam-even sterile state near $M_R$.)
 \end{keybox}
 
-\begin{winbox}[Conjecture: a determinant-line axion scale $f_a=M_{\mathrm{scal}}/128$ \tP]
+\par\smallskip\noindent\textbf{Conjecture: a determinant-line axion scale $f_a=M_{\mathrm{scal}}/128$} (\mC).
 A natural compiler scale for the decay constant is the scalaron mass over the full carrier $\times$ deck
-multiplicity:
+multiplicity,
 \[
   f_a=\frac{M_{\mathrm{scal}}}{2\,\dim S^+\,|\mu_4|}=\frac{M_{\mathrm{scal}}}{128},\qquad
   M_{\mathrm{scal}}=\cthree^{7/2}\Mpl\approx3.06\times10^{13}\,\mathrm{GeV},
@@ -337,7 +325,6 @@ $m_a\simeq5.70\,\mu\mathrm{eV}\,(10^{12}\,\mathrm{GeV}/f_a)$, a mass $m_a\approx
 This is consistent with the closed near-hilltop misalignment $\theta_i=170.4^\circ$, but it is a
 \emph{cosmological scenario} (sensitive to anharmonic / string corrections near the hilltop), not a closed
 hit. \veri{v25\_frontier\_conjectures.py}
-\end{winbox}
 
 % =====================================================================
 \section{Full quantum gravity --- induced from the boundary kernel}
@@ -354,7 +341,7 @@ The normalisation $\cthree=1/(8\pi)$ \emph{is} the gravitational seam constant: 
 \emph{Newton's constant is then not an \emph{independent} input:} fixing the physical $\Lambda$ branch
 ($(8\pi)^2\delta_{\mathrm{top}}=\tfrac{3}{4\pi^2}$) pins $\bar M_{\mathrm{Pl}}$ \emph{relative to} $\Lambda$, so
 $G_N$ is read out \emph{after} selecting the physical $\Lambda$ branch \emph{and} fixing the one dimensionful
-induced-gravity (Sakharov) anchor (\tI/\tP, \veri{v60\_lambda\_metrology\_branch.py}) --- a metrology readout,
+induced-gravity (Sakharov) anchor (\mE/\mC, \veri{v60\_lambda\_metrology\_branch.py}) --- a metrology readout,
 not a from-nothing prediction.
 
 \begin{center}
@@ -369,7 +356,7 @@ not a from-nothing prediction.
 \end{tikzpicture}
 \end{center}
 
-\begin{keybox}[Honest status of quantum gravity --- physical sector closed, ambient gap-decoupled \tF/\tA]
+\begin{keybox}[Honest status of quantum gravity --- physical sector closed, ambient gap-decoupled \mE/\mO]
 ``Full quantum gravity beyond the $R^2$ sector'' is, in TFPT, \emph{not} a separate graviton-quantisation
 programme: it is the well-definedness of the \emph{boundary-kernel path-integral measure} extended to the
 dynamical metric beyond the FRW/minisuperspace reduction. Two results sharpen its status.
@@ -381,17 +368,17 @@ $M^2/\Mpl^2=6(4\pi)^2/f_0$ with the TFPT closure $\cthree^7$ fixing the cutoff m
 $2\|V_{\mathrm{metric}}\|=0.785<\Delta=6\log\tfrac32=2.433$, so the admissible sector keeps a strictly
 positive effective gap $\Delta_{\mathrm{eff}}=1.648>0$ under the stated RP and metric-coupling assumptions.
 A positive gap protects the admissible IR sector from the un-built ambient, so under those assumptions the
-admissible-sector measure is closed. \textbf{What remains \tA:} the ambient metric measure --- the
+admissible-sector measure is closed. \textbf{What remains \mO:} the ambient metric measure --- the
 projective limit (G6) --- is the $G_{\mathrm{metric}}$ research gate; we do \emph{not} claim it is
 physically irrelevant (that would itself be a physical interpretation), only that it is decoupled from the
 admissible IR sector under the stated assumptions. \veri{v36\_spectral\_action\_g2.py}
 \smallskip\\
-\noindent\emph{Update (QBL chain, v108--v113):} the boundary-net residual now carries \emph{double}
+\noindent\emph{Update (QBL chain, \vref{v108}--\vref{v113}):} the boundary-net residual now carries \emph{double}
 weight --- the carrier choice $g=5$ has been reduced to the \emph{same} premise. The certified scalar
 kernel exists iff it pairs the two sheets, the certified channel counts the code identically (Pascal
 closure $=$ channel identity), pair transport is minimally complete, and the single quasi-free kernel
 (rank $=c$: $5$ carrier block, $8$ seam hull) is the defining datum of the free $c=8$ net this gate
-already posits. Closing the index-$4$ statement therefore also closes the carrier selection \tL\
+already posits. Closing the index-$4$ statement therefore also closes the carrier selection \mE\
 (see \texttt{tfpt\_1} and \texttt{tfpt\_research\_contracts}). \veri{v113\_quasifree\_kernel.py}
 \end{keybox}
 
@@ -405,11 +392,11 @@ already posits. Closing the index-$4$ statement therefore also closes the carrie
 \toprule
 \textbf{Item} & \textbf{Status} & \textbf{Honest handle / what is missing} \\
 \midrule
-$\eta_B$ & \tP & downstream readout $=6.1{\times}10^{-10}$ from closed $\Omega_b h^2$; leptogenesis is an interface (Boltzmann) \\
-$m_p/m_e$ & \tA & cross-sector (QCD scale / closed $m_e$); scheme-level, not a compiler power \\
-Koide $Q$ & \tP & computed $Q=0.664$, $0.33\%$ from $2/3$; near, not exact --- not tuned \\
-dark matter & \tP/\tA & determinant-line axion candidate fixed, $\theta_i=170^\circ$ closed; relic scale $f_a,m_a$ open \\
-quantum gravity & \tF/\tA & $R+R^2$ heat-kernel grounded (G2); physical sector gap-decoupled; only ambient limit (G6) open \\
+$\eta_B$ & \mC & downstream readout $=6.1{\times}10^{-10}$ from closed $\Omega_b h^2$; leptogenesis is an interface (Boltzmann) \\
+$m_p/m_e$ & \mO & cross-sector (QCD scale / closed $m_e$); scheme-level, not a compiler power \\
+Koide $Q$ & \mC & computed $Q=0.664$, $0.33\%$ from $2/3$; near, not exact --- not tuned \\
+dark matter & \mC/\mO & determinant-line axion candidate fixed, $\theta_i=170^\circ$ closed; relic scale $f_a,m_a$ open \\
+quantum gravity & \mE/\mO & $R+R^2$ heat-kernel grounded (G2); physical sector gap-decoupled; only ambient limit (G6) open \\
 \bottomrule
 \end{tabularx}
 \end{center}
@@ -428,13 +415,13 @@ precisely because the weak ones are not oversold.
 \section*{Appendix: computational verification}
 \addcontentsline{toc}{section}{Appendix: computational verification}
 % =====================================================================
-These are the \emph{frontier} items: most carry \tA\ (open) or \tP\ (conditional) and are therefore
+These are the \emph{frontier} items: most carry \mO\ (open) or \mC\ (conditional) and are therefore
 \emph{not} part of the pass/fail suite. The one quantitative handle that is reproduced is
 $\Omega_b{=}(1{-}\tfrac1{4\pi})\phiz$ (whence the $\eta_B$ order) in
 \texttt{verification/v7\_gravity\_cosmo.py}. The $R+R^2$ structure and the gap-decoupling of the physical
 QG sector \emph{are} machine-checked (\texttt{v28\_gravity\_fR.py}, \texttt{v36\_spectral\_action\_g2.py});
 only the proton/electron ratio and the ambient projective limit (G6) are left open by design --- no script
-``proves'' those, consistent with their \tA\ marking. The compiler/SM
+``proves'' those, consistent with their \mO\ marking. The compiler/SM
 identities they build on are checked by the suite in \texttt{verification/} (run
 \texttt{python verification/run\_all.py}; see \texttt{verification/README.md}).
 

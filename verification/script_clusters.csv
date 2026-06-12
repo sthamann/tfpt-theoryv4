@@ -1,0 +1,11 @@
+cluster,title,purpose,accent
+core,Compiler core & the E₈ glue,"Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows.",from-blue-500 to-violet-500
+em,Electromagnetic fixed point,The fine-structure constant as the unique root of the boundary U(1) Ward identity.,from-cyan-500 to-blue-500
+flavor,Flavor matrix & operators,"The integer operator ladder (R, K, Q, L) and its spectral invariants — the flavor signature.",from-emerald-500 to-teal-500
+masses,"Masses, leptons & quark ratios","The φ₀-ladder mass formula, the exact lepton coefficients, and the integer-Plücker quark ratios.",from-teal-500 to-emerald-500
+neutrinos,Neutrinos & the solar angle,"The Majorana texture, the dual anchor, and the previously open solar angle from the seam.",from-violet-500 to-purple-500
+gravity,"Gravity, inflation & cosmology","The R + R² spectral-action shadow, the seam-fixed scalaron, and the cosmological readouts.",from-fuchsia-500 to-pink-500
+horizon,Horizon code & Origin Theory (self-consistency),"The seam as the universal horizon code, the order-30 Coxeter cycle, and the gapped unique attractor that makes parameter-freeness a theorem.",from-rose-500 to-orange-500
+uwall,Open gate (U_wall) — the flavor wall,The parabolic wall-selection contract: the quark ratios are closed; only the absolute amplitude scale stays open.,from-amber-500 to-yellow-500
+frontier,Open gate (G_metric) & the frontier,"The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items.",from-slate-500 to-slate-600
+registry,Blind registry & red-team follow-ups (v84–v140),"The frozen prediction registry and the second follow-up round: Target A merged to one residual, the CP residual quantified, N★ computed from reheating — every freeze machine-enforced.",from-emerald-500 to-cyan-500

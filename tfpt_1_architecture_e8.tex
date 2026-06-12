@@ -18,19 +18,10 @@
 \usepackage[hidelinks,colorlinks=true,linkcolor=blue!55!black,citecolor=blue!55!black,urlcolor=blue!55!black]{hyperref}
 \emergencystretch=3.5em
 
-% ---- colours ----
-\input{tfpt_style}
-
-% ---- central marker legend in the page footer (so [I],[L],... are documented on every page) ----
-\usepackage{fancyhdr}
-\newcommand{\footmarkers}{\scriptsize\textcolor{black!55}{\textbf{Markers:}\ \tI~identity\quad\tL~Lie/lattice\quad\tF~formalised\quad\tN~numerical\quad\tP~phys./cond.\quad\tA~axiom/open}}
-\pagestyle{fancy}
-\fancyhf{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0.3pt}
-\fancyfoot[C]{\footmarkers}
-\fancyfoot[R]{\small\thepage}
-\fancypagestyle{plain}{\fancyhf{}\renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0.3pt}\fancyfoot[C]{\footmarkers}\fancyfoot[R]{\small\thepage}}
+% ---- colours, shared header/footer (version stamp), boxes, markers ----
+%  (header/footer and the 4-class markers come from the shared style; no
+%   per-document override, so every TFPT document looks identical.)
+\input{tex-artefacts/tfpt_style}
 
 % ---- symbol macros (union; one definition each) ----
 \newcommand{\TFPT}{\mathrm{TFPT}}
@@ -101,7 +92,7 @@
 \renewcommand{\arraystretch}{1.15}
 
 \title{\vspace{-1.2cm}\textbf{TFPT --- Architecture and the $E_8$ Compiler}\\[2mm]\large The two axioms $\{c_3,g_{\mathrm{car}}\}$, the derivation map, and the Coxeter--cyclotomic $D_5\times A_3\to E_8$ construction}
-\author{}\date{\today}
+\author{\TFPTauthors}\date{\TFPTdatestamp}
 \def\TFPTdoctitle{Architecture \& the $E_8$ Compiler}
 \begin{document}
 \maketitle
@@ -114,10 +105,10 @@ the $\mu_4$ glue $D_5\oplus A_3+\mu_4\Rightarrow E_8$, the EM fixed point $\alph
 and the whole number alphabet $16,40,41,48,240,248$ as carrier traces.
 \end{keybox}
 
-\input{tfpt_docset}
+\input{tex-artefacts/tfpt_docset}
 \noindent\textbf{You are reading \textbf{document~1} (Architecture).}
 
-\input{tfpt_status}
+\input{tex-artefacts/tfpt_status}
 \TFPTbadges
 \TFPTclaimstack[compiler]
 
@@ -145,8 +136,8 @@ $R_4=$ Clebsch graph), the family geometry $\mathbb P^1\setminus\mu_4$ is an $A_
 explicit unimodular glue closure of $D_5\oplus A_3$ --- with the discriminant-form norms $q(D_5)=5/4$
 and $q(A_3)=3/4$ summing to the $E_8$ root norm $2$ and coinciding with the TFPT constants
 $\dtwo/\dtop^2$ and $\xi_{\mathrm{tree}}$. Status markers used throughout:
-\tI~exact identity, \tL~Lie/lattice theorem, \tF~formalised, \tN~numerical fixed point,
-\tP~physical/conditional, \tA~axiom/open. (All markers are explicit; the legacy \texttt{[M]}/\texttt{[C]} compatibility aliases have been removed.)
+\mE~exact identity, \mE~Lie/lattice theorem, \mE~formalised, \mE~numerical fixed point,
+\mC~physical/conditional, \mO~axiom/open. (All markers are explicit; the legacy \texttt{[M]}/\texttt{[C]} compatibility aliases have been removed.)
 \end{abstract}
 
 
@@ -181,9 +172,9 @@ are honestly flagged as the theory's axioms:
   \item[\textnormal{(P2) Carrier interface.}] This splits into an \emph{axiom} and a \emph{theorem},
   which must not be conflated:
   \begin{itemize}\setlength\itemsep{1pt}
-  \item \textbf{P2$_{\mathrm{interface}}$ \tA\ (axiom):} the seam is read out by a five-slot carrier
+  \item \textbf{P2$_{\mathrm{interface}}$ \mO\ (axiom):} the seam is read out by a five-slot carrier
   $\gcar=5$ ($3$ colour $+\,2$ weak) --- a postulate (the readout interface).
-  \item \textbf{P2$_{\mathrm{algebra}}$ \tF\ (theorem):} \emph{given} the carrier, hypercharge
+  \item \textbf{P2$_{\mathrm{algebra}}$ \mE\ (theorem):} \emph{given} the carrier, hypercharge
   ($y_-=-\tfrac13$, $y_+=\tfrac12$), rigidity and the family count follow from the idempotent/lattice
   axioms --- machine-verified in Lean (\texttt{Hypercharge.lean}, \texttt{LatticeRigidityGeneral.lean},
   \texttt{Rigidity.lean}).
@@ -203,15 +194,15 @@ $\dim E_8=240+(p_4{-}p_3)=248$ and the binary ladder $p_{n+1}{-}p_n=2^n$. So the
 $\{a=(1,1,2),\,\pi\}$. \veri{v23\_anchor\_generator.py}
 \end{keybox}
 
-\begin{keybox}[Seed normal form, the factorial spine, and the degree-$2$ pattern \tI/\tP\ (\veri{v106\_review\_validation.py})]
-Three review-validated sharpenings of the anchor picture. \textbf{(1) Seed normal form \tI.} The seed
+\begin{keybox}[Seed normal form, the factorial spine, and the degree-$2$ pattern \mE/\mC\ (\veri{v106\_review\_validation.py})]
+Three review-validated sharpenings of the anchor picture. \textbf{(1) Seed normal form \mE.} The seed
 formula is exactly
 \[
   \boxed{\ \phiz=\frac{|\mu_4|}{\Nfam}\,\cthree\;+\;\Oadm\,\cthree^{\,|\mu_4|}\ }
   \qquad\Bigl(\tfrac43=\tfrac{|\mu_4|}{\Nfam},\ \ 48=\Oadm=\Nfam\dim S^+\Bigr),
 \]
 a \emph{linear seam term} plus a \emph{topological fourth-order correction} over all admissible fermion
-states --- a structured anchor readout, not a fitted expression. \textbf{(2) Factorial spine \tI.} With
+states --- a structured anchor readout, not a fitted expression. \textbf{(2) Factorial spine \mE.} With
 $X=6Y$ on one $16$-state generation, $\operatorname{Tr}X=0$ and $\operatorname{Tr}X^2=120=5!$ (computed
 from the explicit charge table); the \emph{same} factorial moment is $|R^+(E_8)|=\sum(\text{$E_8$
 exponents})=120$, doubles to $|R(E_8)|=240$, and scales to $|W(D_5)|=2^4\cdot5!=1920$ (the Hawking-power
@@ -221,9 +212,9 @@ $2^{g-1}=\sum_{k\le2}\binom gk$ truncates at $K{=}2$ with the \emph{unique} solu
 $1..40$); the glue norms add to the root norm, $\tfrac54+\tfrac34=2$; $\cthree=\tfrac12\times\tfrac1{4\pi}$
 (variational half $\times$ two-dimensional-slice Gauss--Bonnet); the pair sector $\binom52=10=\AL$; the
 hypercharge moment is a \emph{second} moment; the seam is codimension \emph{two}. \emph{Named hypothesis
-\tP\ (recorded, not claimed):} \textbf{Quadratic Boundary Locality} --- the seam supports only bilinear
+\mC\ (recorded, not claimed):} \textbf{Quadratic Boundary Locality} --- the seam supports only bilinear
 data, so the truncation $K=2$ is \emph{forced} rather than chosen; if proven, the Pascal \emph{selection}
-(red-team Target~B residual, typed \tA/\tP) upgrades to \tL\ and the chain locality $\Rightarrow K{=}2
+(red-team Target~B residual, typed \mO/\mC) upgrades to \mE\ and the chain locality $\Rightarrow K{=}2
 \Rightarrow g{=}5\Rightarrow16\Rightarrow D_5\Rightarrow E_8$ closes the carrier choice. \emph{Audit:}
 the even-code transition reading $240=16\times15$ is exact arithmetic but non-unique ($240=16\times5\times3$
 is the established glue factorisation) and stays recorded, not promoted.
@@ -240,7 +231,7 @@ exact as weight multisets, with zero-mode grading $(1,5,10)$ $=$ the carrier cod
 \textbf{sheet-diagonal $=$ odd forms}: $(S^+\!\otimes S^+)\cup(S^-\!\otimes S^-)=2\Lambda^1+2\Lambda^3+\Lambda^5$
 exactly --- within-sheet pairings are odd-form-valued, never scalar; \emph{(iv)} the scalar-bearing tower
 \textbf{tops at $\Lambda^{2K}$} with $K=2$ --- bilinear seam data reach exactly the Pascal-ladder degree
-(the source-layer transport theorem; document~3). \emph{Consequence \tP:} the seam's single scalar two-point kernel is necessarily a
+(the source-layer transport theorem; document~3). \emph{Consequence \mC:} the seam's single scalar two-point kernel is necessarily a
 \textbf{sheet pairing} (chirality-off-diagonal --- the same $\Z_2$ as the glue chiralities and the
 branch-kernel selection); the remaining QBL step is to show the Calder\'on kernel supplies exactly this
 pairing and nothing beyond.
@@ -248,7 +239,7 @@ pairing and nothing beyond.
 \noindent\textbf{The Calder\'on-sheet selection theorem (\veri{v110\_calderon\_sheet.py}) --- which
 involutions certify a scalar kernel.} On $H=S^+\!\oplus S^-$ the certified bilinear data of a Calder\'on
 involution $\varepsilon$ ($\varepsilon^2=1$) are the matrix elements $\langle f,\varepsilon g\rangle$.
-The lemma's singlet counts per sheet block, $(0,0,1,1)$, give the exact selection statement \tI:
+The lemma's singlet counts per sheet block, $(0,0,1,1)$, give the exact selection statement \mE:
 \[
   \boxed{\ \text{a scalar two-point datum exists}\iff\varepsilon\ \text{is sheet-odd}\ }
 \]
@@ -256,11 +247,11 @@ The lemma's singlet counts per sheet block, $(0,0,1,1)$, give the exact selectio
 invariant scalar kernels (one per orientation), a sheet-even involution certifies \emph{none}. The
 kernel count $2=|\Z_2|$ matches exactly the \emph{two Lagrangian glues} (swapped by single spinor
 conjugation): the Calder\'on scalar channel carries precisely the glue ambiguity, resolved by the same
-sheet choice. \emph{Anti-overclaim control \tI:} the parity theorem is generic over the odd ladder
+sheet choice. \emph{Anti-overclaim control \mE:} the parity theorem is generic over the odd ladder
 ($g=3,5,7$: within-sheet count $0$, cross count $2^{g-1}$) --- sheet-oddness forces the
 \emph{half-spinor relation} $K=(g-1)/2$, \textbf{not} the value $g=5$; the $g$-selection stays with the
 independent rank-$8$/integrality closure. \emph{Consequence:} the QBL residue splits into two named
-parts \tP\ (recorded, not claimed): \textbf{(a) interface} --- ``the seam Calder\'on involution is
+parts \mC\ (recorded, not claimed): \textbf{(a) interface} --- ``the seam Calder\'on involution is
 sheet-odd'' (structurally natural: the one-sided collar/double-cover deck is the \emph{same} $|\Z_2|$
 that halves $\cthree=\tfrac12(4\pi)^{-1}$, and exchanging cover sides is sheet-odd by construction);
 \textbf{(b) analytic core} --- ``the two-point kernel certifies only slot-degrees $\le2$''. Proving
@@ -270,10 +261,10 @@ both closes QBL${}\Rightarrow K{=}2\Leftrightarrow g{=}5$.
 transport half of the analytic core \emph{is} a theorem.} Grade seam transport by Clifford degree in
 the ten field operators on the five-slot Fock space ($S=\Lambda^\bullet(\mathbb C^5)$, $S^+$ the
 $16$-state code; integer Jordan--Wigner model, spanning claims by full-rank certificates mod $p$,
-valid over $\mathbb Q$). \emph{Parity} \tI: all linear words are sheet-odd, all $45$ quadratic words
+valid over $\mathbb Q$). \emph{Parity} \mE: all linear words are sheet-odd, all $45$ quadratic words
 sheet-even --- code-preserving transport has \emph{even} Clifford degree (the same $\Z_2$ again).
-\emph{Minimality} \tI: sheet-even words of degree $\le1$ are the scalars alone. \emph{Generation and
-completeness} \tI: the $45$ quadratics ($=\mathfrak{so}(10)$, exactly the $\Lambda^2$ term of the
+\emph{Minimality} \mE: sheet-even words of degree $\le1$ are the scalars alone. \emph{Generation and
+completeness} \mE: the $45$ quadratics ($=\mathfrak{so}(10)$, exactly the $\Lambda^2$ term of the
 certified tower $1+45+210$) generate the whole code from the vacuum \emph{and} span the full operator
 algebra $\operatorname{End}(S^+)$ ($\dim=256$) at word length two --- every code operation whatsoever
 is a word in pair transport, and all higher even-degree elements (e.g.\ the $210$ quartics) are
@@ -282,9 +273,9 @@ redundant. Hence
   \boxed{\ \text{the transport degree is exactly }2\ }
 \]
 --- degree $\le1$ generates nothing, degree $2$ generates everything: a theorem, not a hypothesis.
-\emph{Anti-overclaim control \tI:} the $g=3$ world behaves identically ($15$ quadratics generate
+\emph{Anti-overclaim control \mE:} the $g=3$ world behaves identically ($15$ quadratics generate
 $\operatorname{End}(S^+)=16$) --- the theorem selects the \emph{degree}, not the rank; the
-$g$-selection stays with Pascal closure $+$ rank-$8$. \emph{Residue after v109--v111} \tP: QBL's
+$g$-selection stays with Pascal closure $+$ rank-$8$. \emph{Residue after \vref{v109}--\vref{v111}} \mC: QBL's
 remaining content is two \emph{interface} statements --- (a) the seam Calder\'on involution is
 sheet-odd; (b$'$) the certified \emph{state} inventory is the $\le2$-slot tower. Nothing about
 transport remains hypothetical.
@@ -293,18 +284,18 @@ transport remains hypothetical.
 closure is an \emph{identity} of the certified channel.} For odd $g$, negation $w\mapsto-w$ maps the
 $S^+$ weights bijectively into the opposite sheet, so the Cartan-neutral kernels of the certified
 channel are exactly the pairs $(w,-w)$ --- \emph{one per code state}:
-$\#\{\text{neutral kernels}\}=\dim S^+=2^{g-1}$ exactly \tI. Grading the \emph{same} neutral set by
-pair-degree $m$ gives sizes $\binom gm$, $m=0..K$ --- for $g=5$ the triple $(1,5,10)$ \tI. Two
+$\#\{\text{neutral kernels}\}=\dim S^+=2^{g-1}$ exactly \mE. Grading the \emph{same} neutral set by
+pair-degree $m$ gives sizes $\binom gm$, $m=0..K$ --- for $g=5$ the triple $(1,5,10)$ \mE. Two
 countings of one set:
 \[
   \boxed{\ 2^{g-1}=\sum_{m\le K}\binom gm\ \text{is the channel counting itself}\ }
 \]
 (symbolically verified for all odd $g=3..13$) --- the Pascal \emph{closure} (\texttt{v2}/\texttt{v108}) is not an
-extra requirement but an identity of the certified channel. \emph{Hodge fold} \tI: the code's
+extra requirement but an identity of the certified channel. \emph{Hodge fold} \mE: the code's
 minus-sign grading $\binom g{2j}$ equals the folded binomial $\binom g{\min(2j,\,g-2j)}$ with
 $\min(2j,g-2j)\le K$ --- every code sector appears at pair-degree $\le K$. \emph{Anti-overclaim:}
 the identity holds for every odd $g$ and carries no $g$-selection; the selection stays with the
-rank-$8$ closure $g+\Nfam=8$ and ladder integrality. \emph{Residue re-type \tP\ (recorded, not
+rank-$8$ closure $g+\Nfam=8$ and ladder integrality. \emph{Residue re-type \mC\ (recorded, not
 claimed):} clause (b$'$) loses its closure burden --- given the sheet-odd kernel, the channel
 \emph{automatically} contains one neutral kernel per code state at pair-degree $\le K$; what remains
 physical is the single input ``the seam certifies through one scalar two-point kernel'' (for the
@@ -314,26 +305,26 @@ determinants). QBL is thereby the structural consistency frame of the carrier ch
 \smallskip\\
 \noindent\textbf{One kernel is the whole net (\veri{v113\_quasifree\_kernel.py}) --- the QBL input
 merges with the holomorphy premise.} The remaining input is now anchored in the established Gate-A
-objects. \emph{Bookkeeping} \tI: $c(D_5)_1=\tfrac{45}9=5=g_{\mathrm{car}}$, $c(A_3)_1=\tfrac{15}5=3=\Nfam$,
+objects. \emph{Bookkeeping} \mE: $c(D_5)_1=\tfrac{45}9=5=g_{\mathrm{car}}$, $c(A_3)_1=\tfrac{15}5=3=\Nfam$,
 and the carrier net $(D_5)_1\times(A_3)_1=SO(10)_1\times SO(6)_1$ is $10+6=16$ \emph{free Majorana
 fermions} ($c=\tfrac{16}2=8$); the whole extension tower carrier$\,(\mu{=}16)\to SO(16)_1(\mu{=}4)\to
 (E_8)_1(\mu{=}1)$ carries the \emph{same} sixteen fermions --- only the certified glue grows (index
-$2\times2=4=|\mu_4|$). \emph{Wick/Pfaffian} \tI: in the exact ten-Majorana model \emph{all} $210$
+$2\times2=4=|\mu_4|$). \emph{Wick/Pfaffian} \mE: in the exact ten-Majorana model \emph{all} $210$
 vacuum four-point and all $210$ six-point functions equal the Pfaffian of the single two-point kernel
 --- one kernel determines all correlations. \emph{The kernel is a Calder\'on involution of rank $g$}
-\tI: $M=\mathbf1+iA$ with $A^2=-\mathbf1$, so $P=M/2$ is a projection with $\operatorname{rank}P=5=
+\mE: $M=\mathbf1+iA$ with $A^2=-\mathbf1$, so $P=M/2$ is a projection with $\operatorname{rank}P=5=
 g_{\mathrm{car}}$ and $\varepsilon=iA$ an involution; at seam level (sixteen Majoranas) the rank is
 $8=\operatorname{rank}E_8$:
 \[
   \boxed{\ \text{the central charge is the rank of the one kernel}\ }
 \]
 ($c=5$ carrier block, $c=8$ seam hull); and the polarization fixes the vacuum \emph{uniquely} (joint
-annihilator kernel one-dimensional). \emph{Premise merge \tP\ (recorded, not claimed):} ``single
+annihilator kernel one-dimensional). \emph{Premise merge \mC\ (recorded, not claimed):} ``single
 scalar two-point kernel'' $=$ ``the seam state is quasi-free'' $=$ the defining property of the
 free-fermion net the holomorphy gate already posits --- QBL adds \emph{no} assumption beyond Gate~A;
-when the gate closes, the carrier choice closes \tL\ along free net $\Rightarrow$ one kernel
+when the gate closes, the carrier choice closes \mE\ along free net $\Rightarrow$ one kernel
 $\Rightarrow$ sheet-odd $\Rightarrow$ self-counting tower $\Rightarrow$ complete transport
-$\Rightarrow$ carrier. Gate typing \tP/\tA\ unchanged.
+$\Rightarrow$ carrier. Gate typing \mC/\mO\ unchanged.
 \end{keybox}
 
 \begin{keybox}[Hardening (P1): the Gauss--Bonnet origin of $c_3=\tfrac1{8\pi}$]
@@ -356,10 +347,11 @@ This locates both factors precisely:
 \item the \emph{continuous} $\pi$ is the irreducible Gauss--Bonnet / $2$D-Gaussian primitive ($\int e^{-x^2}=\sqrt\pi$), the single primitive the self-consistency loop also isolates.
 \end{itemize}
 \emph{Status:} this \emph{hardens} (P1) --- it gives $\cthree$ a named geometric origin and reconciles the
-``$8$'' with $E_8$ --- but does \emph{not} eliminate $\pi$; $\pi$ remains the one continuous primitive. \tP
+``$8$'' with $E_8$ --- but does \emph{not} eliminate $\pi$; $\pi$ remains the one continuous primitive. \mC
 \end{keybox}
 
-\begin{keybox}[The one-paragraph version]
+\par\medskip
+\noindent\textbf{The one-paragraph version.}
 There is a boundary (the seam). It yields $\cthree=1/(8\pi)$ and a five-slot carrier $\gcar=5$,
 split $3$ colour $+\,2$ weak. Two base charges $y_-=-1/3$ and $y_+=1/2$ generate the whole
 fermion family; the $16$ even-occupation states are one generation, three families give
@@ -367,7 +359,7 @@ $3\times16=48$. One seed $\useed=\varphi^{\mathrm{ret}}_0$ drives four low-energ
 $\ainv\approx137$ is the exponential engine: the electroweak scale takes one fifth of it
 ($e^{-\ainv/5}$), the cosmological constant takes it twice ($e^{-2\ainv}$), and the Hubble scale is
 the square root of $\Lambda$. A small grammar generates many sectors.
-\end{keybox}
+\par\medskip
 
 % =====================================================================
 \section{Headline: the Pascal compiler on five carrier slots}
@@ -392,7 +384,7 @@ one Pascal row:
   |R(E_8)|=\dim S^+(\dim S^+-1)=16\cdot15=240 .
 \]
 Family (exterior degree), cosmology (action charge) and $E_8$ (root transitions) read the same
-$\{1,5,10\}$. \tI
+$\{1,5,10\}$. \mE
 \end{keybox}
 
 \begin{figure}[ht]
@@ -432,7 +424,7 @@ why the decuple bridge has exponent $10$ --- $\Lambda$ is a product over all $\b
 A family is exactly the complete Pascal truncation to degree two:
 \begin{equation}
   \boxed{\ \dim S^+=2^{\gcar-1}=\binom{\gcar}{0}+\binom{\gcar}{1}+\binom{\gcar}{2}\ \Longleftrightarrow\ \gcar=5\ }
-  \qquad(16=1+5+10),\quad\tI,
+  \qquad(16=1+5+10),\quad\mE,
 \end{equation}
 the unique positive-integer solution of $f(g):=2^{g-1}-1-\tfrac{g(g+1)}{2}=0$. \emph{Proof of
 uniqueness.} Direct evaluation gives $f(1){=}{-1}$, $f(2){=}{-2}$, $f(3){=}{-3}$, $f(4){=}{-3}$,
@@ -443,7 +435,7 @@ further root. Thus $\gcar=5$ is the unique solution (no finite-range caveat). \v
 This is sharper than $2\gcar=\binom{\gcar}{2}$: the family code (even states, $2^{g-1}$) equals the action
 code (sum of the first three Pascal entries) only at $\gcar=5$.
 
-\begin{keybox}[Carrier uniqueness theorem: $\gcar=5$ and the $3{+}2$ split are forced \tI]
+\begin{keybox}[Carrier uniqueness theorem: $\gcar=5$ and the $3{+}2$ split are forced \mE]
 The carrier rank and its colour/weak split are not chosen --- they are the unique solutions of two
 integer conditions tied to the $E_8$ closure and the SM gauge algebra:
 \begin{align}
@@ -458,7 +450,7 @@ the \emph{split} are forced; only the seam$\to$carrier interface itself remains 
 \veri{v14\_carrier\_uniqueness.py}
 \end{keybox}
 
-\par\smallskip\noindent\textbf{The Pascal grammar: one $\Lambda^\bullet$ mechanism in four places (anti-numerology) \tI.}
+\par\smallskip\noindent\textbf{The Pascal grammar: one $\Lambda^\bullet$ mechanism in four places (anti-numerology) \mE.}
 The recurring small integers are \emph{not} coincidences --- they are the \emph{same} exterior-algebra
 (Pascal) mechanism read in four spaces, which is why the binomials of rows $4$ and $5$ keep reappearing:
 \[
@@ -489,7 +481,7 @@ and it generates the whole integer chain:
 \end{gathered}
 \end{equation}
 The flavor budget, the $U(1)$ budget, the $E_8$ count and the second seam defect all hang on the
-second hypercharge moment $5!$. \tI
+second hypercharge moment $5!$. \mE
 
 \subsection{Compact $E_8$ compression and the role of $\nu^c$}
 \begin{equation}
@@ -498,7 +490,7 @@ second hypercharge moment $5!$. \tI
     \dim E_8&=\dim S^+(\AH+\AL)+(\gcar+\Nfam)=240+8=248
   \end{aligned}\ }
 \end{equation}
-with $\Nfam=(2^{\gcar-1}-1)/\gcar=15/5=3$ and $\operatorname{rank}E_8=\gcar+\Nfam=8$. \tI. The
+with $\Nfam=(2^{\gcar-1}-1)/\gcar=15/5=3$ and $\operatorname{rank}E_8=\gcar+\Nfam=8$. \mE. The
 right-handed neutrino $\nu^c$ is the Pascal singleton $\Lambda^0E=(1,1)_0$ that closes $16=1+5+10$;
 removing it breaks the truncation and shifts $\alpha^{-1}$ by $2.16\times10^{-3}$.
 
@@ -514,13 +506,12 @@ glue closure of $D_5\oplus A_3$ --- with the four punctures $\mu_4$ as the glue 
 
 \TFPTeightglue
 
-\begin{keybox}[The compiler in one line]
-\[
-  \boxed{\ \text{five carrier slots}\Rightarrow D_5,\quad
+\par\smallskip\noindent\textbf{The compiler in one line:}
+\begin{keyeq}
+$\displaystyle \text{five carrier slots}\Rightarrow D_5,\quad
   \text{four family corners }\mu_4\Rightarrow A_3,\quad
-  (D_5\oplus A_3)+\mu_4\text{-glue}\Rightarrow E_8.\ }
-\]
-\end{keybox}
+  (D_5\oplus A_3)+\mu_4\text{-glue}\Rightarrow E_8.$
+\end{keyeq}
 
 \begin{figure}[ht]
 \centering
@@ -553,7 +544,7 @@ flip-weight-$4$ relation is the \textbf{Clebsch graph} $\mathrm{SRG}(16,5,0,2)$ 
 relation is its complement $\mathrm{SRG}(16,10,6,6)$; the \emph{affine} automorphism group of the scheme
 (translations $\rtimes$ coordinate permutations) is the $D_5$ Weyl group,
 \begin{equation}
-  \boxed{\ \operatorname{Aut}_{\mathrm{aff}}(C^+)=C^+\rtimes S_5,\quad |\operatorname{Aut}_{\mathrm{aff}}(C^+)|=2^{\gcar-1}\gcar!=1920=|W(D_5)|=r\,|R(E_8)|\ }\qquad\tI ,
+  \boxed{\ \operatorname{Aut}_{\mathrm{aff}}(C^+)=C^+\rtimes S_5,\quad |\operatorname{Aut}_{\mathrm{aff}}(C^+)|=2^{\gcar-1}\gcar!=1920=|W(D_5)|=r\,|R(E_8)|\ }\qquad\mE ,
 \end{equation}
 (the linear code automorphism group alone is only $S_5$; the order-$1920$ group is the affine/scheme one)
 and the Clebsch edge count is the flavor budget $|E(R_4)|=\tfrac{16\cdot5}{2}=40=|R(D_5)|=\sum_{f,j}L_{f,j}$.
@@ -564,18 +555,18 @@ $z\mapsto iz,\ z\mapsto1/z$. The twelve puncture-difference cycles $\gamma_i-\ga
 residue pairing $\operatorname{Res}(\omega_i,\gamma_j)=\delta_{ij}$ and form the $A_3$ root system:
 \begin{equation}
   \boxed{\ \#\{\gamma_i-\gamma_j\}=12=|R(A_3)|=\dimg,\quad \operatorname{rank}=3=\Nfam,\quad
-  \mathrm{Gram}=\mathrm{Cartan}(A_3),\ \det=4\ }\qquad\tI .
+  \mathrm{Gram}=\mathrm{Cartan}(A_3),\ \det=4\ }\qquad\mE .
 \end{equation}
 The corner rotation $z\mapsto iz$ acts on $H^1=\mathbb C^3$ as the $A_3$ Coxeter element (order
 $4=h(A_3)=|\mu_4|$, spectrum $\{i,-1,-i\}$, $\chi=\Phi_4\Phi_2$), an isometry of the Cartan form ---
 the exact analogue of the $E_8$ Coxeter element reading $\Phi_{30}$.
-\par\smallskip\noindent\textbf{The metric, settled (former \tP).}
+\par\smallskip\noindent\textbf{The metric, settled (former \mC).}
 The transcendental geometric (Green) metric $G_{ij}=-\log|p_i-p_j|$ on $\mu_4$ is only
 $D_4$-symmetric, with a regularisation-independent anisotropy $-\log2$ on the root space, so it is
 \emph{not} proportional to the $A_3$ Cartan form. But it does not need to be: the $E_8$-relevant $A_3$
 is the canonical \emph{residue} pairing (integral, $S_4$-symmetric, $=\mathrm{Cartan}(A_3)$), and the
 geometric metric is a $D_4$-equivariant deformation preserving the root system, Weyl group and Coxeter
-element. So the lattice structure is exact \tI; the analytic metric is a characterised deformation,
+element. So the lattice structure is exact \mE; the analytic metric is a characterised deformation,
 not an open gap.
 \par\smallskip
 
@@ -592,7 +583,7 @@ TFPT constants:
   \boxed{\ \begin{aligned}
     &q(D_5)=\tfrac54=\frac{\dtwo}{\dtop^2},\qquad q(A_3)=\tfrac34=\xi_{\mathrm{tree}},\\
     &q(D_5)+q(A_3)=2=|\text{$E_8$ root}|^2
-  \end{aligned}\ }\qquad\tI\ \veri{v1\_e8\_glue.py}
+  \end{aligned}\ }\qquad\mE\ \veri{v1\_e8\_glue.py}
 \end{equation}
 This is literally the $E_8$ spinor-root split $\tfrac12(\pm)^8=\tfrac12(\pm)^5\oplus\tfrac12(\pm)^3$,
 $5\cdot\tfrac14+3\cdot\tfrac14=2$.
@@ -641,7 +632,7 @@ sheets over the four corners $\mu_4$.}
 \end{figure}
 and assembling $D_5\oplus D_3\subset D_8$ with the even spinor coset produces all $240$ roots
 (norm $2$, Cartan $\det=1$, every root an integer combination of one simple-root basis): \emph{the
-$240$-metrisation is no longer blind --- $E_8$ is built}. \tI
+$240$-metrisation is no longer blind --- $E_8$ is built}. \mE
 
 \subsection{Glue-norm arithmetic, and three readings of $41$, $60$, $120$}
 The two glue norms generate the carrier integers through sum, difference and product. With
@@ -650,13 +641,13 @@ $\dim S^+=16$:
   \boxed{\ \begin{aligned}
     &16(q_D{+}q_A)=32=2^{\gcar}=h(D_5)h(A_3),\qquad 16(q_D{-}q_A)=8=r(E_8)=h(D_5),\\
     &16\,q_Dq_A=15=\dim S^+{-}1
-  \end{aligned}\ }\qquad\tI ,
+  \end{aligned}\ }\qquad\mE ,
 \end{equation}
 so the glue already contains the full carrier exhaustion $2^{\gcar}$, the $E_8$ rank, and the
 non-trivial transition count $\AH{+}\AL=15$; and $|\mu_4|=(q_D-1)^{-1}=(1-q_A)^{-1}=4$ is the inverse
 displacement of the two norms from the unit norm.
 
-\begin{keybox}[Spine Quotient Lemma: the recurring factors are adjacent quotients of $(2,3,4,5)$ \tI\ (\veri{v74\_compiler\_micro\_lemmas.py})]
+\begin{keybox}[Spine Quotient Lemma: the recurring factors are adjacent quotients of $(2,3,4,5)$ \mE\ (\veri{v74\_compiler\_micro\_lemmas.py})]
 The integers of the spine are $(|\Z_2|,\Nfam,|\mu_4|,\gcar)=(2,3,4,5)$. Every ``mysterious'' $O(1)$ factor in
 TFPT is an \emph{adjacent quotient} of this chain, not a separate special number:
 \[
@@ -671,7 +662,7 @@ are five projections of one discrete chain --- not scattered constants.
 \end{keybox} The carrier adjoint $\dim D_5=|R(D_5)|+\gcar=45$
 then gives a second reading of the $U(1)$ integer,
 \begin{equation}
-  \boxed{\ 10b_1=\dim D_5-|\mu_4|=45-4=41=\underbrace{40}_{\sum L}+\underbrace{(\gcar-|\mu_4|)}_{=N_\Phi=1}\ }\qquad\tI ,
+  \boxed{\ 10b_1=\dim D_5-|\mu_4|=45-4=41=\underbrace{40}_{\sum L}+\underbrace{(\gcar-|\mu_4|)}_{=N_\Phi=1}\ }\qquad\mE ,
 \end{equation}
 i.e.\ the single Higgs doublet is the carrier rank minus the glue corners, $5-4=1$. The start defect
 $60$ and the hypercharge moment $120$ are ``bilingual'':
@@ -685,7 +676,7 @@ and $\dim E_8=248=\operatorname{Tr}_{S^+}X^2+2\dim S^+|\mu_4|=120+2\cdot16\cdot4
 hypercharge norm and the EW exponent are $A_3$-rational,
 \begin{equation}
   \boxed{\ \gamma_{\mathrm{car}}=\frac{\AL}{|R(A_3)|}=\frac{10}{12}=\frac56,\qquad
-  I_1^{\mathrm{EW}}=\frac{|E(K_5)|}{|R(A_3)|}+\frac{1}{|\mu_4||R(A_3)|}=\frac{10}{12}+\frac1{48}=\frac{41}{48}\ }\qquad\tI .
+  I_1^{\mathrm{EW}}=\frac{|E(K_5)|}{|R(A_3)|}+\frac{1}{|\mu_4||R(A_3)|}=\frac{10}{12}+\frac1{48}=\frac{41}{48}\ }\qquad\mE .
 \end{equation}
 
 \noindent\emph{Transport reduction.} The flavor matrix $L$ has its mod-$6$ content fixed by a single
@@ -699,14 +690,14 @@ The \emph{only} remaining datum is then, per sector, which residue is the first-
 receives the winding:
 \begin{equation}
   \boxed{\ \text{anchors}\ (a_u,a_d,a_e)=(1,1,2)\ \Rightarrow\
-  L_u=(7,3,0),\ L_d=(7,5,2),\ L_e=(8,5,3)\ }\qquad\tI\ (\text{given anchors}) .
+  L_u=(7,3,0),\ L_d=(7,5,2),\ L_e=(8,5,3)\ }\qquad\mE\ (\text{given anchors}) .
 \end{equation}
 So the open step of a full ``Clebsch walk'' theorem is sharply isolated: it is exactly these three
 per-sector anchors. They are \emph{not} free: the three transport cusps are exactly the $D_5$
 dual-root combinations, and each sector is tied to its cusp by the right-handed hypercharge,
 \begin{equation}
   \boxed{\ \{1,\tfrac23,\tfrac13\}=\{2y_+,\,-2y_-,\,2(y_++y_-)\},\qquad
-  \text{lepton}\leftrightarrow 2y_+,\ \text{up}\leftrightarrow -2y_-,\ \text{down}\leftrightarrow 2(y_++y_-)\ }\qquad\tI .
+  \text{lepton}\leftrightarrow 2y_+,\ \text{up}\leftrightarrow -2y_-,\ \text{down}\leftrightarrow 2(y_++y_-)\ }\qquad\mE .
 \end{equation}
 The canonical-transport-kernel theorem (document~3, Part~II) derives the residue packets --- and hence the anchors ---
 as the \emph{word-lengths of the family-connection holonomy} $\operatorname{Hol}_{\mathcal G_{D_4}}(\nabla_F^\star)$
@@ -715,7 +706,7 @@ data. The anchors are therefore a genuine $D_5\times A_3$ readout (cusps from th
 holonomy from the $A_3$ four-punctured sphere), not an extra parameter. A compact candidate closed form
 is the nearest-integer cusp map
 \begin{equation}
-  \boxed{\ a_f=\operatorname{round}(2\,\mathrm{cusp}_f):\quad (a_u,a_d,a_e)=\operatorname{round}\bigl(\tfrac43,\tfrac23,2\bigr)=(1,1,2)\ }\qquad\tP ,
+  \boxed{\ a_f=\operatorname{round}(2\,\mathrm{cusp}_f):\quad (a_u,a_d,a_e)=\operatorname{round}\bigl(\tfrac43,\tfrac23,2\bigr)=(1,1,2)\ }\qquad\mC ,
 \end{equation}
 which reproduces the matrix exactly. The remaining open step is now precise and purely geometric:
 an \emph{independent} closed-form evaluation of the $D_4$-spine holonomy word-lengths from the lattice
@@ -739,7 +730,7 @@ $\operatorname{spec}=\{0,\tfrac13,\tfrac23\}$ is pinned algebraically
 exact $24$-element $W(A_3)=S_4$ (\veri{v117\_monodromy\_weyl\_a3.py}), and the parabolic weights are the
 $\mu_4$-character degrees of $H^1(\mathbb P^1\setminus\mu_4)$ --- one spectrum in four readouts
 (\veri{v137\_qplus\_cohomology.py}). What remains of the old residual is the much smaller selector
-establishment R4$'$ (research contracts): derive the three atom pairings of the torsion normal. \tI\,$+$\,\tP
+establishment R4$'$ (research contracts): derive the three atom pairings of the torsion normal. \mE/\mC
 \par\smallskip
 
 \begin{figure}[ht]
@@ -789,26 +780,26 @@ an independent input. ``Reads'' names the lattice object the observable comes fr
 \toprule
 \textbf{SM / cosmology observable} & \textbf{Compiler output} & \textbf{Reads} & \textbf{St.} \\
 \midrule
-Number of generations & $\Nfam=3=\operatorname{rank}A_3=\dim H^1(\mathbb P^1\setminus\mu_4)$ & $A_3$ & \tI \\
-Gauge algebra dimension & $\dimg=12=|R(A_3)|=\gcd(6r,2h)$ & $A_3$ & \tI \\
-One generation ($16$, incl.\ $\nu^c$) & $S^+=D_5$ half-spinor $=\Lambda^{0,2,4}E$ & $D_5$ & \tI \\
-Hypercharge spectrum & all $Y$ from $y_\pm=\{\tfrac12,-\tfrac13\}$; $\operatorname{Tr}X^2=120$ & $D_5$ root data & \tI \\
-Abelian index $b_1$ & $10b_1=1+|\mu_4||E(K_5)|=1+4\cdot10=41$ & $\mu_4\times K_5$ & \tI \\
-Fermion family occupancy & $\Oadm=\Nfam\dim S^+=(\Nfam{+}N_\Phi)|R(A_3)|=48$ & $A_3$ & \tI \\
-Fine structure $\ainv=137.0359992168$ & root of $F_{U(1)}(\alpha)=0$ (explicit, unique) & EM closure & \tN \\
-Cabibbo angle & $\lC=\sqrt{\useed(1-\useed)}$, $\useed=\tfrac43\cthree+48\cthree^4$ & seed & \tI \\
-CKM CP phase & $\delta_{\rm CKM}=\tfrac{2\pi}{|R^+(A_3)|}+\Nfam\useed(1-\useed)=\tfrac\pi3+3\lC^2$ & $A_3^+$, seed & \tI/\tP \\
-PMNS angles/phase & $\sin^2\theta_{12}=\tfrac13-\tfrac\useed2$, $\sin^2\theta_{13}=e^{-5/6}\useed$, $\delta^\nu=\tfrac{4\pi}{3}$ & $A_3^+$, seed & \tI/\tP \\
-Charged-lepton hierarchy & $\det M_\ell\propto\useed^{\,h/\Nfam}=\useed^{10}$; $(5,3,2)$ & decuple & \tI/\tP \\
-Mass-hierarchy transport & $\sum L=40=|R(D_5)|$; entries on $C_6=|R^+(A_3)|$ & $D_5\times A_3$ & \tI \\
-Strong CP & $\theta_{\rm eff}=0$ (determinant erasure; document~3, Part~III) & --- & \tI \\
-Weak CP & holonomy: $\delta_{\rm CKM}-\tfrac\pi3=\Nfam\,\useed(1-\useed)$ & $A_3^+$ & \tP \\
-Gravity tree normaliser & $\xi_{\rm tree}=\tfrac{\dimg}{\dim S^+}=\tfrac34=q(A_3)$ & $A_3$ glue & \tI \\
-Cosmological constant & $\rho_\Lambda/\Mbar^4=\tfrac{3}{4\pi^2}e^{2\dph}[v_{\rm geo}/(5\betarad^2\Mbar)]^{10}$ & decuple & \tI \\
-Hubble anchor & $H_0\sqrt{\Omega_\Lambda}=\Mbar e^{-\ainv}/(2\pi)$ & action & \tI \\
-Baryon density & $\omega_b=\lC/\AL=\lC/10$ & decuple & \tI/\tP \\
-Inflation (scalaron) & $M_{\rm scal}^2/\Mbar^2=\cthree^{\,\Oadm-10b_1}=\cthree^{7}$ & deficit $r-1$ & \tI \\
-Inflation amplitude & $A_s=N_\star^2\cthree^7/24\pi^2\approx2.2\times10^{-9}$ & deficit & \tP/\tA \\
+Number of generations & $\Nfam=3=\operatorname{rank}A_3=\dim H^1(\mathbb P^1\setminus\mu_4)$ & $A_3$ & \mE \\
+Gauge algebra dimension & $\dimg=12=|R(A_3)|=\gcd(6r,2h)$ & $A_3$ & \mE \\
+One generation ($16$, incl.\ $\nu^c$) & $S^+=D_5$ half-spinor $=\Lambda^{0,2,4}E$ & $D_5$ & \mE \\
+Hypercharge spectrum & all $Y$ from $y_\pm=\{\tfrac12,-\tfrac13\}$; $\operatorname{Tr}X^2=120$ & $D_5$ root data & \mE \\
+Abelian index $b_1$ & $10b_1=1+|\mu_4||E(K_5)|=1+4\cdot10=41$ & $\mu_4\times K_5$ & \mE \\
+Fermion family occupancy & $\Oadm=\Nfam\dim S^+=(\Nfam{+}N_\Phi)|R(A_3)|=48$ & $A_3$ & \mE \\
+Fine structure $\ainv=137.0359992168$ & root of $F_{U(1)}(\alpha)=0$ (explicit, unique) & EM closure & \mE \\
+Cabibbo angle & $\lC=\sqrt{\useed(1-\useed)}$, $\useed=\tfrac43\cthree+48\cthree^4$ & seed & \mE \\
+CKM CP phase & $\delta_{\rm CKM}=\tfrac{2\pi}{|R^+(A_3)|}+\Nfam\useed(1-\useed)=\tfrac\pi3+3\lC^2$ & $A_3^+$, seed & \mE/\mC \\
+PMNS angles/phase & $\sin^2\theta_{12}=\tfrac13-\tfrac\useed2$, $\sin^2\theta_{13}=e^{-5/6}\useed$, $\delta^\nu=\tfrac{4\pi}{3}$ & $A_3^+$, seed & \mE/\mC \\
+Charged-lepton hierarchy & $\det M_\ell\propto\useed^{\,h/\Nfam}=\useed^{10}$; $(5,3,2)$ & decuple & \mE/\mC \\
+Mass-hierarchy transport & $\sum L=40=|R(D_5)|$; entries on $C_6=|R^+(A_3)|$ & $D_5\times A_3$ & \mE \\
+Strong CP & $\theta_{\rm eff}=0$ (determinant erasure; document~3, Part~III) & --- & \mE \\
+Weak CP & holonomy: $\delta_{\rm CKM}-\tfrac\pi3=\Nfam\,\useed(1-\useed)$ & $A_3^+$ & \mC \\
+Gravity tree normaliser & $\xi_{\rm tree}=\tfrac{\dimg}{\dim S^+}=\tfrac34=q(A_3)$ & $A_3$ glue & \mE \\
+Cosmological constant & $\rho_\Lambda/\Mbar^4=\tfrac{3}{4\pi^2}e^{2\dph}[v_{\rm geo}/(5\betarad^2\Mbar)]^{10}$ & decuple & \mE \\
+Hubble anchor & $H_0\sqrt{\Omega_\Lambda}=\Mbar e^{-\ainv}/(2\pi)$ & action & \mE \\
+Baryon density & $\omega_b=\lC/\AL=\lC/10$ & decuple & \mE/\mC \\
+Inflation (scalaron) & $M_{\rm scal}^2/\Mbar^2=\cthree^{\,\Oadm-10b_1}=\cthree^{7}$ & deficit $r-1$ & \mE \\
+Inflation amplitude & $A_s=N_\star^2\cthree^7/24\pi^2\approx2.2\times10^{-9}$ & deficit & \mC/\mO \\
 \bottomrule
 \end{tabularx}
 \end{center}
@@ -842,7 +833,7 @@ From $\gcar=5$ and the split $(b,s)=(3,2)$ the carrier data follow:
 
 \subsection{Dual-root dictionary (everything from two charges)}
 
-\par\smallskip\noindent\textbf{Two carrier roots generate the family and the transport cusps \tI.}
+\par\smallskip\noindent\textbf{Two carrier roots generate the family and the transport cusps \mE.}
 With $y_+=\tfrac12$ and $y_-=-\tfrac13$ (the determinant-normalised carrier eigenvalues), the full
 one-family hypercharge spectrum and the flavor-transport cusps are sums of the two roots:
 \[
@@ -862,7 +853,7 @@ All residuals are exactly zero. The Standard-Model charge table is not assumed; 
 addition from $\{1/2,-1/3\}$.
 \par\smallskip
 
-\begin{keybox}[The $X=6Y$ quadratic and the hypercharge Pascal-sign duality \tI]
+\begin{keybox}[The $X=6Y$ quadratic and the hypercharge Pascal-sign duality \mE]
 Clearing denominators with $X=6Y$ turns the two base charges into the integer roots $x_+=3$, $x_-=-2$ of
 \[
   \boxed{\ x^2-x-6=0\ }:\qquad
@@ -882,7 +873,7 @@ gives the \emph{Pascal triple} again:
 \]
 with $\nu^c\leftrightarrow\binom50$ the neutral singleton --- the right-handed neutrino is the Pascal zero
 with a job. The moment ladder adds $\operatorname{Tr}X^2=120=5!$ and
-$\operatorname{Tr}X^4/\operatorname{Tr}X^2=2280/120=19$ (an $E_8$ exponent; audit). \tI
+$\operatorname{Tr}X^4/\operatorname{Tr}X^2=2280/120=19$ (an $E_8$ exponent; audit). \mE
 \end{keybox}
 
 \subsection{Carrier arithmetic (proved identities)}
@@ -890,15 +881,15 @@ $\operatorname{Tr}X^4/\operatorname{Tr}X^2=2280/120=19$ (an $E_8$ exponent; audi
 The discrete coefficients are not isolated numbers; they are exact carrier traces:
 \begin{align}
   10\,b_1 &= 41 = \gcar^2+(\gcar-1)^2 = \Oadm\,\gamma_{\mathrm{car}}+1
-      = 1+h_{E_8}\tfrac{\dim S^+}{\dimg} = 1+30\cdot\tfrac{16}{12} = 40+1, &&\tI\\
+      = 1+h_{E_8}\tfrac{\dim S^+}{\dimg} = 1+30\cdot\tfrac{16}{12} = 40+1, &&\mE\\
   I_1^{\mathrm{EW}} &= \frac{41}{48}=\operatorname{Var}_{S^+}(Y)\cdot b_1=\frac{5}{24}\cdot\frac{41}{10}
-      = \gamma_{\mathrm{car}}+\frac{1}{\Oadm}, &&\tI\\
+      = \gamma_{\mathrm{car}}+\frac{1}{\Oadm}, &&\mE\\
   \operatorname{Tr}_{S^+}(X^2) &= 120 = 5!\quad(X=6Y), \qquad
-  \dtwo = \tfrac54\dtop^2 = 2880\,\cthree^8 = 4!\cdot 5!\,\cthree^8 = 4!\,\operatorname{Tr}_{S^+}(X^2)\,\cthree^8, &&\tI\\
+  \dtwo = \tfrac54\dtop^2 = 2880\,\cthree^8 = 4!\cdot 5!\,\cthree^8 = 4!\,\operatorname{Tr}_{S^+}(X^2)\,\cthree^8, &&\mE\\
   \frac54 &= \underbrace{\tfrac32\cdot\tfrac56}_{B\gamma}
       = \underbrace{\tfrac{\Dstart}{\Oadm}}_{60/48}
       = \underbrace{\tfrac{\gcar}{\gcar-1}}_{5/4}
-      = \frac{\dtwo}{\dtop^2}. &&\tI
+      = \frac{\dtwo}{\dtop^2}. &&\mE
 \end{align}
 So: $b_1$ is a Pythagorean carrier identity ($5^2+4^2$); equivalently the anchor-product form
 $10b_1=p_1p_3+(\gcar-p_1)=4\cdot10+(5-4)=41$ reads ``all four glue corners times all ten carrier pairs,
@@ -907,7 +898,7 @@ hypercharge variance times the $U(1)$ budget; the second seam defect $2880\,\cth
 of factorial traces $4!\cdot5!$; and the universal compression $5/4=\gcar/(\gcar-1)$ recurs whenever
 the five-slot carrier projects onto four effective directions. As a minor curiosity, the SU(5)-tree
 weak mixing angle rewrites as $\sin^2\theta_W^{\mathrm{tree}}=\tfrac38=\Nfam/(\gcar+\Nfam)=\Nfam/\operatorname{rank}(E_8)$
-(the value is the standard one; the rewrite is a coincidence to note, not a claim). \tP
+(the value is the standard one; the rewrite is a coincidence to note, not a claim). \mC
 
 % =====================================================================
 \section{Grammar II --- the seed grammar (one decoder $\useed$)}
@@ -918,13 +909,13 @@ weak mixing angle rewrites as $\sin^2\theta_W^{\mathrm{tree}}=\tfrac38=\Nfam/(\g
 The seed is, exactly, a pure function of $\cthree$:
 \begin{equation}
   \boxed{\ \useed=\varphi^{\mathrm{ret}}_0=\frac43\,\cthree+\Oadm\,\cthree^4
-  =\underbrace{\frac{1}{6\pi}}_{\phibase}+\underbrace{\frac{3}{256\pi^4}}_{\dtop}=0.0531719521768\ }\qquad\tI.
+  =\underbrace{\frac{1}{6\pi}}_{\phibase}+\underbrace{\frac{3}{256\pi^4}}_{\dtop}=0.0531719521768\ }\qquad\mE.
 \end{equation}
 Its two coefficients are themselves carrier data: $\tfrac43=\dim S^+/\dimg=16/12=8/(\gcar+1)$ (so
 $\phibase=1/((\gcar+1)\pi)$) and $48=\Oadm$. The seed is thus a pure function of $\cthree$ and the
 carrier counts.
 
-\par\smallskip\noindent\textbf{One seed, four readouts (and their inverses) \tI.}
+\par\smallskip\noindent\textbf{One seed, four readouts (and their inverses) \mE.}
 \[
   \lC^2=\useed(1-\useed),\quad
   \betarad=\frac{\useed}{4\pi},\quad
@@ -943,7 +934,7 @@ carrier counts.
 $\sqrt{\useed(1-\useed)}$), cosmic birefringence, the baryon fraction, and the reactor angle. Turning
 one forces the others; there is no free per-observable tuning. The exponent $5/6$ is the carrier
 trace $\gamma_{\mathrm{car}}=\operatorname{Tr}_E Y^2$, \emph{not} the Euler--Mascheroni constant
-$0.5772\ldots$ (audit \tA).
+$0.5772\ldots$ (audit \mO).
 
 % =====================================================================
 \section{Grammar III --- the action grammar (exponentials of $\ainv$)}
@@ -1012,7 +1003,7 @@ The engine $\ainv$ is not an input --- it is the unique root of an explicit clos
 (the exact electromagnetic closure theorem). With $\cthree=1/(8\pi)$, $\phibase=1/(6\pi)$,
 $q(\alpha)=\dtop e^{-2\alpha}$ and the seam response $\phiseam(\alpha)=\phibase+q(\alpha)(1-q(\alpha))^{-5/4}$,
 \begin{equation}
-  \boxed{\ F_{U(1)}(\alpha)=\alpha^3-2\cthree^3\alpha^2-\tfrac{4}{5}\cthree^6\Bigl(\textstyle\sum_{f,j}L_{f,j}+N_\Phi\Bigr)\log\frac{1}{\phiseam(\alpha)}=0\ }\qquad\tI/\tP ,
+  \boxed{\ F_{U(1)}(\alpha)=\alpha^3-2\cthree^3\alpha^2-\tfrac{4}{5}\cthree^6\Bigl(\textstyle\sum_{f,j}L_{f,j}+N_\Phi\Bigr)\log\frac{1}{\phiseam(\alpha)}=0\ }\qquad\mE/\mC ,
 \end{equation}
 where the coefficient is $\tfrac45(\sum L+N_\Phi)\cthree^6=\tfrac45\cdot41\,\cthree^6=8b_1\cthree^6$, so the
 fine-structure constant reads the \emph{flavor transport budget} $\sum L=40$ and the $U(1)$ index
@@ -1049,7 +1040,7 @@ endpoint (definite signs), and a $200$-cell interval partition of $(\alpha_c,0.0
 
 \noindent Solving:
 \begin{equation}
-  \boxed{\ \alpha_\star=0.00729735256220985\ldots,\quad \ainv=137.0359992168407\ldots\ }\quad\tN
+  \boxed{\ \alpha_\star=0.00729735256220985\ldots,\quad \ainv=137.0359992168407\ldots\ }\quad\mE
 \end{equation}
 \veri{v3\_em\_alpha.py}\;
 versus CODATA-2022 $\ainv=137.035999177(21)$ --- a relative deviation $2.9\times10^{-10}$ ($\approx1.9\sigma$
@@ -1059,7 +1050,7 @@ discriminant norm $q(D_5)$, and $\dtop=48\cthree^4$, so the closure is built onl
 carrier, and the flavor budget. This discharges the former open audit point: the EM closure is a stated,
 existence-/uniqueness-proven, numerically reproduced equation, not a fit.
 
-\par\smallskip\noindent\textbf{Why \emph{this} function: the boundary $U(1)$ Ward reading (Theorem C) \tI/\tP.}
+\par\smallskip\noindent\textbf{Why \emph{this} function: the boundary $U(1)$ Ward reading (Theorem C) \mE/\mC.}
 $F_{U(1)}$ is not a chosen ansatz but the reduced Ward identity of the boundary $U(1)$ partition function
 $Z_{\partial}=Z_{\mathrm{Maxwell}}\,Z_{\mathrm{Calder\acute on}}\,Z_{\mathrm{transport}}$, with three terms
 whose coefficients are compiler atoms, not fits:
@@ -1071,10 +1062,10 @@ whose coefficients are compiler atoms, not fits:
 \]
 The Calder\'on factor $2=|\Z_2|$ (sheet), the transport power $\cthree^6$ is the $C_6$ hexagon, and the
 seam exponent $-\tfrac54=-q(D_5)$ is the carrier discriminant norm. \textbf{Typing:} the three-term
-decomposition and the coefficient identities ($8b_1=\tfrac45 M$, $-\tfrac54=q(D_5)$) are exact \tI; the
+decomposition and the coefficient identities ($8b_1=\tfrac45 M$, $-\tfrac54=q(D_5)$) are exact \mE; the
 \emph{physical origin} as a boundary Ward closure (the lemmas $\partial_\tau\log Z_{\mathrm{Maxwell}}=\alpha^3$,
 $\partial_\tau\log Z_{\mathrm{Calder\acute on}}=-2\cthree^3\alpha^2$, $\partial_\tau\log\det\nolimits_\zeta(1-\mathcal T_{C_6,U(1)})=-8b_1\cthree^6\log\tfrac1{\phiseam}$)
-is a conjectured \tP\ interpretation, not yet machine-proven. \veri{v48\_em\_ward.py}
+is a conjectured \mC\ interpretation, not yet machine-proven. \veri{v48\_em\_ward.py}
 \par\smallskip
 
 \noindent The full ablation --- which inputs are load-bearing and which only set the last digit --- is in
@@ -1084,14 +1075,14 @@ the \hyperref[sec:ablation]{Ablation appendix} below.
 $\alpha$ and solving for the integer budget $M=\sum L+N_\Phi$ --- returns
 $M=41.0000001\ldots$, i.e.\ the external measurement reconstructs the internal discrete budget
 $41=40+1$ to $10^{-7}$. This is stronger than ``we hit $\alpha$'': the equation reads the discrete
-$41$ out of nature. \tN
+$41$ out of nature. \mE
 
 \subsection{The decuple bridge (new, exact headline)}
 
 Eliminating $\ainv=\gcar\,\AEW-\dph$ between the electroweak and the cosmological-constant lines
 gives a direct relation between the two scales:
 
-\begin{keybox}[Decuple bridge: $\Lambda$ is the tenth power of the stripped EW scale \tI]
+\begin{keybox}[Decuple bridge: $\Lambda$ is the tenth power of the stripped EW scale \mE]
 \begin{equation}
   \boxed{\ \frac{\rho_\Lambda}{\Mbar^4}
   =\frac{3}{4\pi^2}\,e^{2\dph}\,
@@ -1122,7 +1113,7 @@ with binomial exponents (verified exactly):
   \frac{\rho_\Lambda}{\Mbar^4}=x^{\binom52}R_\Lambda=x^{10}R_\Lambda\ }
 \end{equation}
 with residues $R_{\mathrm H}=e^{\dph}/(2\pi\sqrt{\Omega_\Lambda})$ and $R_\Lambda=\tfrac{3}{4\pi^2}e^{2\dph}$.
-\tI. The exponents are the complete-graph counts of the five-slot carrier $K_5$:
+\mE. The exponents are the complete-graph counts of the five-slot carrier $K_5$:
 \[
   H \leftrightarrow \text{vertices of }K_5\ (\,\#=\tbinom51=5\,),\qquad
   \Lambda \leftrightarrow \text{edges of }K_5\ (\,\#=\tbinom52=10\,).
@@ -1142,7 +1133,7 @@ line gives
 So the Hubble rung is \emph{not} an independent third hit: it is the square root of the vacuum
 energy plus a geometric cosmology factor. The genuine TFPT content is the single $e^{-\ainv}$.
 (The numerical coincidence $\AH-\ainv\approx\pi^2/6$ is just $\ln(2\pi\sqrt{\Omega_\Lambda})$ and is
-$\Omega_\Lambda$-dependent; not a claim. \tA)
+$\Omega_\Lambda$-dependent; not a claim. \mO)
 
 \subsection{The $\sim123$ orders of the cosmological constant}
 \begin{equation}
@@ -1152,11 +1143,11 @@ $\Omega_\Lambda$-dependent; not a claim. \tA)
 \end{equation}
 The ``$119$'' is the action $2\ainv$; the ``$\approx4$'' is the seam defect $\dtop=\Oadm\cthree^4$.
 
-\begin{winbox}[High-precision cosmological constant: a $\sim10^{-13}$ prediction \tN]
+\begin{winbox}[High-precision cosmological constant: a $\sim10^{-13}$ prediction \mE]
 Because $\ainv$ is a \emph{derived} number (the EM fixed point, known to $13$ digits) and the residue
 $3/(4\pi^2)$ is exact, the dimensionless vacuum energy is predicted essentially exactly:
 \begin{equation}
-  \boxed{\ \frac{\rho_\Lambda}{\Mbar^4}=\frac{3}{4\pi^2}\,e^{-2\ainv}=7.12533\times10^{-121}\ }\qquad\tN\ \veri{v7\_gravity\_cosmo.py} ,
+  \boxed{\ \frac{\rho_\Lambda}{\Mbar^4}=\frac{3}{4\pi^2}\,e^{-2\ainv}=7.12533\times10^{-121}\ }\qquad\mE\ \veri{v7\_gravity\_cosmo.py} ,
 \end{equation}
 i.e.\ a dark-energy scale
 $\rho_\Lambda^{1/4}=\bigl(\tfrac{3}{4\pi^2}\bigr)^{1/4}\Mbar\,e^{-\ainv/2}=2.23747\ \mathrm{meV}$
@@ -1182,7 +1173,7 @@ coefficients of the five-slot carrier:
 The first two are automatic ($\binom{\gcar}{0}=1$, $\binom{\gcar}{1}=\gcar$). The non-trivial content
 is the cosmological-constant charge:
 \begin{equation}
-  \boxed{\ 2\gcar=\binom{\gcar}{2}\quad\Longleftrightarrow\quad \gcar=5\ }\qquad\tI\ \veri{v2\_carrier\_pascal.py},
+  \boxed{\ 2\gcar=\binom{\gcar}{2}\quad\Longleftrightarrow\quad \gcar=5\ }\qquad\mE\ \veri{v2\_carrier\_pascal.py},
 \end{equation}
 since $\binom{\gcar}{2}=\tfrac{\gcar(\gcar-1)}{2}=2\gcar\iff\gcar=5$. So the ``double overlap'' charge
 $2\gcar$ equals the number of carrier-slot \emph{pairs} $\binom{\gcar}{2}$ \emph{only} at $\gcar=5$:
@@ -1201,7 +1192,7 @@ $bs\,Y^2+(s-b)Y-1=0$ with discriminant
 Hence the action ladder is, exactly,
 \begin{equation}
   \boxed{\ \AEW=\frac{\ainv}{\sqrt{\Delta_Y}},\qquad \AH=\sqrt{\Delta_Y}\,\AEW,\qquad
-  \AL=\binom{\sqrt{\Delta_Y}}{2}\AEW\ }\qquad\tI .
+  \AL=\binom{\sqrt{\Delta_Y}}{2}\AEW\ }\qquad\mE .
 \end{equation}
 The electroweak hierarchy therefore reads the \emph{discriminant of the hypercharge polynomial}, tying
 the Standard-Model hypercharge derivation directly to the EW-hierarchy and $\Lambda$ problems.
@@ -1226,12 +1217,12 @@ $m_\tau/\Mbar$ & $1$ & $2$ & flavor \\
 \end{center}
 The cosmological/gauge sector runs along $b=0$ with binomial charges; the charged-fermion sector
 runs along $a=1$ with the integer flavor ladder $n_f=(5,3,2)$. This is the compact ``periodic table''
-of TFPT scales: two integer labels per scale. \tI\ (charges) / \tP\ (residues).
+of TFPT scales: two integer labels per scale. \mE\ (charges) / \mC\ (residues).
 
 \noindent A third (seam/gravity) generator completes the lattice: $L_c=\ln(1/\cthree)=\ln(8\pi)$.
 The scalaron lives purely on it, $M_{\mathrm{scal}}/\Mbar=\cthree^{7/2}=e^{-\frac72 L_c}$, and the seam
 defect is $\dtop=e^{-(4L_c-\ln48)}$. So the three log-generators are $\{\ainv\ (\text{hierarchy}),\,
-L_0=\ln(1/\useed)\ (\text{flavor}),\,L_c=\ln(1/\cthree)\ (\text{seam/gravity})\}$. \tI
+L_0=\ln(1/\useed)\ (\text{flavor}),\,L_c=\ln(1/\cthree)\ (\text{seam/gravity})\}$. \mE
 
 % =====================================================================
 \section{The Einstein normaliser as a corrected tree value}
@@ -1242,7 +1233,7 @@ L_0=\ln(1/\useed)\ (\text{flavor}),\,L_c=\ln(1/\cthree)\ (\text{seam/gravity})\}
 The gravitational normaliser $\xi=\cthree/\useed$ has a transparent exact form. Writing
 $\useed=\tfrac{1}{6\pi}\bigl[1+\tfrac{9}{128\pi^3}\bigr]$,
 \begin{equation}
-  \boxed{\ \xi=\frac{\cthree}{\useed}=\frac34\cdot\frac{1}{1+\dfrac{9}{128\pi^3}}=0.748303\ }\qquad\tI .
+  \boxed{\ \xi=\frac{\cthree}{\useed}=\frac34\cdot\frac{1}{1+\dfrac{9}{128\pi^3}}=0.748303\ }\qquad\mE .
 \end{equation}
 So $\xi_{\mathrm{tree}}=\tfrac34=\dimg/\dim S^+=12/16$ is the exact leading value (the inverse of the
 $\tfrac43=\dim S^+/\dimg$ family/gauge compression that sits in the seed $u_{\mathrm{base}}=\tfrac43\cthree$,
@@ -1273,7 +1264,7 @@ curvature $\Lamgeom^{\mathrm{obs}}>0$,
 $\rho_\Lambda=\lambda_\Lambda\Mbar^4$, so $\Lamgeom=\lambda_\Lambda\Mbar^2$, giving $\Mbar^2$ and
 then $\GN=\lambda_\Lambda/(8\pi\Lamgeom^{\mathrm{obs}})$; restoring $c^3/\hbar$ closes it. $\square$
 
-\par\smallskip\noindent\textbf{Non-circularity (\tA, essential).}
+\par\smallskip\noindent\textbf{Non-circularity (\mO, essential).}
 The anchor must be the curvature $\Lamgeom^{\mathrm{obs}}$ (units $\mathrm{m}^{-2}$), \emph{not} the
 SI vacuum energy density $\rho_\Lambda^{\mathrm{obs}}=\Lamgeom c^4/(8\pi\GN)$, which already contains
 $\GN$. The curvature follows from $\Lamgeom^{\mathrm{obs}}=3\Omega_\Lambda H_0^2/c^2$.
@@ -1292,16 +1283,16 @@ With the example anchor $H_0=67.36\,\mathrm{km\,s^{-1}\,Mpc^{-1}}$, $\Omega_\Lam
   \GN^{\TFPT}=6.65071\times10^{-11}\,\mathrm{m^3kg^{-1}s^{-2}},\qquad
   \GN^{\TFPT}/\GN^{\mathrm{CODATA}}-1=-3.5\times10^{-3}.
 \end{equation}
-Closure algebra \tI; SI anchor and numerical match \tP\ (the cosmological anchor is model dependent;
+Closure algebra \mE; SI anchor and numerical match \mC\ (the cosmological anchor is model dependent;
 the Hubble tension applies). EW crosscheck: the $\Lambda$-pinned $\Mbar=2.43964\times10^{18}\,$GeV
 gives $v_{\mathrm{geo}}=242.6\,$GeV, needing $Z_{\mathrm{EW}}=(246.22/242.61)^2=1.030$.
 
-\par\smallskip\noindent\textbf{Prefactor branch (\tA).}
+\par\smallskip\noindent\textbf{Prefactor branch (\mO).}
 This note uses $\LamIR/\MPl^4=\dtop e^{-2\ainv}$. A competing prefactor $2\cthree e^{-2\ainv}$ would
 differ by $2\cthree/\dtop=661.5$ and misscale $\GN$ by the same factor; the branch must be versioned.
 \par\smallskip
 
-\par\smallskip\noindent\textbf{Mandatory $\Lambda$-layer typing (\tA).}
+\par\smallskip\noindent\textbf{Mandatory $\Lambda$-layer typing (\mO).}
 Three distinct $\Lambda$ objects must never be conflated:
 \[
   \underbrace{\frac{\rho_\Lambda}{\Mbar^4}=\frac{3}{4\pi^2}e^{-2\ainv}}_{\text{vacuum density quotient (dimensionless)}}
@@ -1321,7 +1312,7 @@ typed protects the decuple bridge and the metrology closure from a spurious pref
   \left[\frac{v_{\mathrm{phys}}}{5\betarad^2\sqrt{Z_{\mathrm{EW}}}\,\Mbar}\right]^{10}.
 \end{equation}
 This is the same identity, written in the low-energy charged-current scale rather than the geometric
-source scale; both forms should appear side by side. \tI/\tP
+source scale; both forms should appear side by side. \mE/\mC
 
 % =====================================================================
 \section{The landscape: $\gcar=5$ is overdetermined}
@@ -1347,7 +1338,7 @@ $\gcar$ & $\Nfam$ & $\dim S^+$ & $\Oadm$ & $10b_1$ & $\alpha^{-1}(\gcar)$ & verd
 Several distinct requirements converge on $\gcar=5$: integer families ($\gcar$ odd); three families
 $(\gcar{+}1)/2=3$; the observed $\alpha^{-1}$ on the monotone curve; the SM structure $(b,s)=(3,2)$,
 $\dim S^+=16$; and $\Oadm=48$, $10b_1=41$. A clean algebraic shadow:
-$\tfrac{g(g+1)}{2}=2^{g-1}-1$ has $g=5$ as its non-trivial solution (\tP).
+$\tfrac{g(g+1)}{2}=2^{g-1}-1$ has $g=5$ as its non-trivial solution (\mC).
 
 % =====================================================================
 \section{The $E_8$ carrier atlas --- stated unambiguously}
@@ -1359,7 +1350,7 @@ $\tfrac{g(g+1)}{2}=2^{g-1}-1$ has $g=5$ as its non-trivial solution (\tP).
 In the series $E_8$ is a \emph{downstream scale grammar}, not a primitive cause: the boundary kernel
 fixes $\alpha$, the carrier rank, families and admissibility without $E_8$ upstream. Three levels.
 
-\subsection{Level 1 --- original $E_8$ data of the series (\tI)}
+\subsection{Level 1 --- original $E_8$ data of the series (\mE)}
 \begin{align}
   |R(E_8)| &= 248-8=240=5\cdot48=5\,\Oadm=\operatorname{lcm}(\Oadm,\Dstart)=\operatorname{lcm}(48,60), \\
   \Dstart &= \gcar\cdot\dimg=5\cdot12=60,\qquad \gcd(\Oadm,\Dstart)=12=\dimg, \\
@@ -1374,9 +1365,9 @@ $\gcd(2h_{E_8},6r_{E_8})=\dimg=12$ and $\operatorname{lcm}(2h_{E_8},6r_{E_8})=|R
 SM algebra is the gcd of the Coxeter double-period and the $\mathbb Z_6$ rank-occupancy, and the $E_8$
 root count is their lcm. Likewise the EW exponent reads
 $I_1^{\mathrm{EW}}=\tfrac{41}{48}=\tfrac{h_{E_8}}{36}+\tfrac{1}{6r_{E_8}}=\tfrac56+\tfrac{1}{48}$
-(Coxeter principal part plus a rank singlet). \tI\ (arithmetic) / \tP\ (typing).
+(Coxeter principal part plus a rank singlet). \mE\ (arithmetic) / \mC\ (typing).
 
-\subsection{Level 2 --- new exact counting identities (\tI)}
+\subsection{Level 2 --- new exact counting identities (\mE)}
 \begin{align}
   |R(E_8)| &= 240 = 16\cdot15=\dim S^+\,(\dim S^+-1), \\
   \dim E_8 &= 248 = 8\cdot31=(\gcar+\Nfam)(2^{\gcar}-1), \\
@@ -1392,11 +1383,11 @@ $\binom52+\binom54=10+5=15$ flips, giving
 \begin{equation}
   240=16\cdot(10+5)=\underbrace{160}_{|F|=2}+\underbrace{80}_{|F|=4},
 \end{equation}
-and the $120$ undirected flips match the $120$ $E_8$ root \emph{pairs} (\tI, counting). This makes the
+and the $120$ undirected flips match the $120$ $E_8$ root \emph{pairs} (\mE, counting). This makes the
 atlas conjecture \emph{testable}: a genuine root map must send each flip to a norm-$2$ vector in
 $\mathbb R^8$ with inner products in $\{-2,-1,0,1,2\}$ reproducing the $E_8$ profile (per root:
 $1$ self, $56$ at $+1$, $126$ orthogonal, $56$ at $-1$, $1$ anti).
-\par\smallskip\noindent\textbf{Honest obstruction (\tA).}
+\par\smallskip\noindent\textbf{Honest obstruction (\mO).}
 The flip atlas splits $160+80$ by flip size; the standard $E_8$ ($D_8$) split is $112+128$. Since
 $160+80\neq112+128$, no flip-size-preserving map is an $E_8$ root system; a metrization, if it
 exists, must mix flip sizes. Until a norm-$2$, $E_8$-profile embedding is exhibited, $E_8$ stays a
@@ -1408,9 +1399,9 @@ hard; a much earlier, cheaper test is the Coxeter spectrum. \emph{Stage A:} find
 operator $C_{\mathrm{TFPT}}$ on the even-flip atlas (or its $8$-dimensional primitive-character space)
 with characteristic polynomial $\chi_{C_{\mathrm{TFPT}}}(t)=\Phi_{30}(t)$. \emph{Stage B (only if A
 holds):} the norm-$2$, $E_8$-profile, Weyl-closure metrization. Stage A can fail or carry far sooner
-than B, so it is the right first falsifier. \tA
+than B, so it is the right first falsifier. \mO
 
-\par\smallskip\noindent\textbf{Audit only --- \emph{non-load-bearing} speculation: the $\dim 496$ heterotic count \tA.}
+\par\smallskip\noindent\textbf{Audit only --- \emph{non-load-bearing} speculation: the $\dim 496$ heterotic count \mO.}
 \emph{This box feeds no derivation; it is an arithmetic coincidence kept for completeness only, under the
 no-free-pattern rule.} The even half $S^+$ and odd half $S^-$ of the exterior algebra each have dimension
 $2^{\gcar-1}=16$ and each carry $16\cdot15=240$ transitions. Together the full carrier ($2^{\gcar}=32$
@@ -1420,7 +1411,7 @@ states) gives
 \]
 i.e.\ the two halves read as two $E_8$ root atlases, all $\binom{32}{2}=496$ pairs as $SO(32)$ --- the two
 anomaly-free heterotic gauge dimensions. The \emph{dimension} equality is exact; that the carrier algebra
-\emph{is} either gauge group is unproven and not used anywhere. \tA\ (audit-only).
+\emph{is} either gauge group is unproven and not used anywhere. \mO\ (audit-only).
 \par\smallskip
 
 \subsection{Level 2.7 --- the carrier Coxeter theorem (the strongest new bridge)}
@@ -1428,7 +1419,7 @@ Use the universal root-system identity $|R|=\operatorname{rank}\cdot h$ (Coxeter
 carrier values $\operatorname{rank}(E_8)=\gcar+\Nfam=8$ and $|R(E_8)|=\dim S^+(\dim S^+-1)=240$,
 \begin{equation}
   \boxed{\ h_{E_8}=\frac{|R(E_8)|}{\operatorname{rank}(E_8)}=\frac{240}{8}=30
-  =\Nfam\binom{\gcar}{2}=\Nfam\,A_\Lambda=2\gcar\Nfam=2^{\gcar}-2\ }\qquad\tI .
+  =\Nfam\binom{\gcar}{2}=\Nfam\,A_\Lambda=2\gcar\Nfam=2^{\gcar}-2\ }\qquad\mE .
 \end{equation}
 The Coxeter number of $E_8$ is exactly three families times the cosmological pair action: each family
 contributes one $\Lambda$-decuple ($A_\Lambda=\binom52=10$) to the Coxeter period. Equivalently the
@@ -1436,18 +1427,18 @@ action ladder is a Coxeter ladder,
 \begin{equation}
   A_H=\frac{h_{E_8}}{2\Nfam}=5,\qquad A_\Lambda=\frac{h_{E_8}}{\Nfam}=10,
 \end{equation}
-so Hubble reads half a Coxeter period per family and $\Lambda$ a full Coxeter period per family. \tP
+so Hubble reads half a Coxeter period per family and $\Lambda$ a full Coxeter period per family. \mC
 
 \noindent\textbf{Rank--Coxeter coupling.} Equivalently $\dim S^+=2\operatorname{rank}(E_8)=16$ and
 $h_{E_8}=2(\dim S^+-1)=2\cdot15=30$, so $\dim E_8=(\gcar+\Nfam)(h+1)=8\cdot31$. The two counting forms
 $16\cdot15=8\cdot30=240$ coincide because $\dim S^+=2r$. Dropping $\nu^c$ sends $\dim S^+\to15$, which
 breaks \emph{both} $\dim S^+=2r$ and $\dim S^+(\dim S^+-1)=240$: $\nu^c$ is the state that closes the
-rank--Coxeter coupling, not an optional singlet. \tI/\tP
+rank--Coxeter coupling, not an optional singlet. \mE/\mC
 
 \subsection{Level 2.8 --- positive-root moment: $|R^+(E_8)|=\operatorname{Tr}_{S^+}X^2=5!$}
 The number of positive $E_8$ roots equals the master hypercharge moment:
 \begin{equation}
-  \boxed{\ |R^+(E_8)|=120=\operatorname{Tr}_{S^+}X^2=5!\ }\qquad\tI,
+  \boxed{\ |R^+(E_8)|=120=\operatorname{Tr}_{S^+}X^2=5!\ }\qquad\mE,
 \end{equation}
 so the second hypercharge moment of one family \emph{is} the positive-root half-system. The whole
 integer chain then reads off $|R^+|$:
@@ -1457,7 +1448,7 @@ integer chain then reads off $|R^+|$:
   \dtwo=4!\,|R^+(E_8)|\,\cthree^8 .
 \end{equation}
 The $\mathbb Z_6$ slice is then $|R(E_8)|/6=\tfrac{|R^+|}{3}=40=\Oadm\gamma$: one $\mathbb Z_6$ phase
-slice of the $E_8$ root atlas is exactly the full flavor transport budget. \tI\ (arithmetic) / \tP\
+slice of the $E_8$ root atlas is exactly the full flavor transport budget. \mE\ (arithmetic) / \mC\
 (interpretation).
 
 \subsection{Level 2.9 --- the $2{\cdot}3{\cdot}5$ Coxeter cyclotomic compiler (meta-theorem)}
@@ -1484,9 +1475,9 @@ the $30$th cyclotomic polynomial
   \chi_C(t)=\Phi_{30}(t)=t^8+t^7-t^5-t^4-t^3+t+1 .
 \end{equation}
 \textbf{Reading:} $E_8$ here is not primarily a root count but the \emph{Coxeter cyclotomic readout of
-the $2,3,5$ carrier}. \tI\ (arithmetic) / \tP\ (interpretation).
+the $2,3,5$ carrier}. \mE\ (arithmetic) / \mC\ (interpretation).
 
-\subsection{Level 3 --- conjectural geometric readings (\tP)}
+\subsection{Level 3 --- conjectural geometric readings (\mC)}
 \begin{conjecture}[Carrier transition atlas]
 $R(E_8)\cong\{(a,b)\in S^+\times S^+: a\neq b\}$ as a structure-bearing transition set, since
 $16\cdot15=240$. \emph{Open:} a structure-preserving map (roots, lengths, Weyl data), not only the
@@ -1501,10 +1492,10 @@ structure over the $31$ non-empty carrier words.
 Levels 1--2 are exact arithmetic. There are now \emph{two} distinct routes to $E_8$, and they must not
 be conflated:
 \begin{itemize}
-\item \textbf{Glue route (closed, \tL):} $E_8=(D_5\oplus A_3)+\mu_4$-glue is built explicitly in
+\item \textbf{Glue route (closed, \mE):} $E_8=(D_5\oplus A_3)+\mu_4$-glue is built explicitly in
 Section~\ref{sec:d5a3} ($\operatorname{disc}(D_5)=\operatorname{disc}(A_3)=\mathbb Z_4$, glue index $4$,
 $240$ roots of norm $2$, simple-root Gram $\det 1$). This closes the former ``blind $240$-metrisation''.
-\item \textbf{Direct flip-atlas route (open, \tA, optional bonus):} the even-flip transition set
+\item \textbf{Direct flip-atlas route (open, \mO, optional bonus):} the even-flip transition set
 $240=160+80$ is \emph{not} a flip-size-preserving $E_8$ map, since $160+80\neq 112+128$. A direct
 structure-preserving metrisation of the flip graph remains open --- a nice-to-have, not load-bearing,
 because the glue route already delivers $E_8$.
@@ -1529,7 +1520,7 @@ From the documented inputs $s_{12}=\lC$, $s_{23}=\useed/(1+\lC)$, $s_{13}=\lC^3/
 derived readouts $|V_{td}|=0.00908$, $|V_{ts}|=0.04264$, $J_{\mathrm{CKM}}=3.33\times10^{-5}$. On
 the neutrino side, with $\sin^2\theta_{13}=e^{-5/6}\useed=0.02311$, $\sin^2\theta_{23}=0.4557$,
 $\delta_{\mathrm{CP}}=4\pi/3$ and the solar candidate $\sin^2\theta_{12}=\tfrac13-\tfrac{\useed}{2}=0.30675$,
-a near-maximal $|J^\nu_{\mathrm{CP}}|\approx0.030$ (sharp readout for DUNE/Hyper-Kamiokande). \tP
+a near-maximal $|J^\nu_{\mathrm{CP}}|\approx0.030$ (sharp readout for DUNE/Hyper-Kamiokande). \mC
 
 \subsection{CP as triple seed variance; a closed observable quadrilateral}
 The Cabibbo angle is the Bernoulli width of the seed. The \emph{exact} CKM phase is the family
@@ -1537,7 +1528,7 @@ transport holonomy (document~3), $\delta_{\mathrm{CKM}}=\arg\operatorname{Tr}\Pi
 small-area branch this has the compact readout form (with an $O(\lC^4)$ remainder)
 \begin{equation}
   \lC=\sqrt{\useed(1-\useed)},\qquad
-  \boxed{\ \delta_{\mathrm{CKM}}-\frac{\pi}{3}=\Nfam\,\useed(1-\useed)=3\lC^2\ }\qquad\tI/\tP\ (\text{readout; exact}=\text{holonomy}) .
+  \boxed{\ \delta_{\mathrm{CKM}}-\frac{\pi}{3}=\Nfam\,\useed(1-\useed)=3\lC^2\ }\qquad\mE/\mC\ (\text{readout; exact}=\text{holonomy}) .
 \end{equation}
 The coefficient $3$ is the family number $\Nfam$: weak CP is the $\mathbb Z_6$ base angle $\pi/3$
 plus $\Nfam$ times the seed (Bernoulli) variance. The $\mathbb Z_6$ base angle now has an $A_3$ root:
@@ -1545,15 +1536,15 @@ since $\mathbb Z_6=|R^+(A_3)|=6$ (the positive-root hexagon of the family algebr
 integer steps of the $A_3$ holonomy quantum $2\pi/|R^+(A_3)|$,
 \begin{equation}
   \boxed{\ \delta_{\mathrm{CKM}}=\frac{2\pi}{|R^+(A_3)|}+\Nfam\,\useed(1-\useed),\qquad
-  \delta^{\mathrm{PMNS}}_{\mathrm{CP}}=4\cdot\frac{2\pi}{|R^+(A_3)|}=\frac{4\pi}{3}\ }\qquad\tI/\tP .
+  \delta^{\mathrm{PMNS}}_{\mathrm{CP}}=4\cdot\frac{2\pi}{|R^+(A_3)|}=\frac{4\pi}{3}\ }\qquad\mE/\mC .
 \end{equation}
 So weak CP $=$ ($A_3$ positive-root phase step) $+$ (family count $\times$ seed variance), while strong
 CP is the \emph{determinant} sector, erased. The solar angle reads as a carrier root plus a half-seed,
 $\sin^2\theta_{12}=\tfrac13-\tfrac{\useed}{2}=-y_- - \tfrac{\useed}{2}$ (since $-y_-=\tfrac13$), so
-PMNS $=$ carrier root $+$ seed $+$ $A_3$ holonomy phase. \tP
+PMNS $=$ carrier root $+$ seed $+$ $A_3$ holonomy phase. \mC
 Strong CP is killed by the determinant selector ($\arg\det M_u=\arg\det M_d=0$, $\bar\theta=0$),
 while weak CP survives as the seed-deformed $\mathbb Z_6$ holonomy: CP is not forbidden, only
-\emph{determinant} CP is. \tP\ --- the strong-CP closure lives on the admissible QFT branch and is
+\emph{determinant} CP is. \mC\ --- the strong-CP closure lives on the admissible QFT branch and is
 \emph{conditional} on the analytic hypotheses of the QFT closure (document~3, Part~III: reflection positivity, temperedness,
 clustering, mass gap, OS reconstruction); its status is therefore weaker than the discrete lattice
 identities, even though the semantics ``determinant CP forbidden, holonomy CP allowed'' is robust. Since $\useed=\Omega_b+\betarad$ exactly, eliminating the seed closes the
@@ -1563,7 +1554,7 @@ four UV-shadow observables into one cycle:
   \sin^2\theta_{13}=e^{-5/6}(\Omega_b+\betarad),\quad
   \Omega_b=\Bigl(1-\tfrac{1}{4\pi}\Bigr)e^{5/6}\sin^2\theta_{13}. 
 \end{equation}
-One measured member of $\{\lC,\theta_{13},\Omega_b,\betarad\}$ fixes the other three. \tI\ (the four
+One measured member of $\{\lC,\theta_{13},\Omega_b,\betarad\}$ fixes the other three. \mE\ (the four
 rows remain operationally distinct readout classes).
 
 % =====================================================================
@@ -1578,8 +1569,8 @@ The transport length packets are
 \end{equation}
 Modulo $6$ they lie on related triples of the $C_6$ hexagon; the first generation carries one extra
 full turn ($u,d:\,1+6$; $e:\,2+6$), costing $\lambda_Y^6=(\useed(1-\useed))^3\approx1.28\times10^{-4}$
-and explaining why the first generation is so light --- ``one turn more'', not a free fit. \tP
-\emph{Flagged proximity (\tA, not exact):} the full-turn cost is close to the topological seam defect,
+and explaining why the first generation is so light --- ``one turn more'', not a free fit. \mC
+\emph{Flagged proximity (\mO, not exact):} the full-turn cost is close to the topological seam defect,
 $\lambda_C^6/\dtop=1.061$ ($\sim6\%$), hinting that one flavor winding $\approx$ one seam-defect unit
 $\dtop=\Oadm\cthree^4$ --- a structural smell, not a theorem.
 Writing the length matrix $L=R+W$ with $R=L\bmod6$ the residue shadow and $W$ the full-winding part,
@@ -1591,7 +1582,7 @@ Writing the length matrix $L=R+W$ with $R=L\bmod6$ the residue shadow and $W$ th
 \]
 and the column sums are $(22,13,5)$ with $S_1=22=\sum R$ and $S_2+S_3=18=\sum W$. So the first
 generation is light because it stores the \emph{entire} residue budget plus the three full $C_6$
-windings; generations 2 and 3 are the winding complement. \tI\ (arithmetic).
+windings; generations 2 and 3 are the winding complement. \mE\ (arithmetic).
 
 \subsection{Lepton flavor decuple: the charged-lepton determinant carries $u^{10}$}
 The source masses on the $v_{\mathrm{geo}}$ branch are
@@ -1600,7 +1591,7 @@ Their product is a pure decuple in the seed:
 \begin{equation}
   \boxed{\ \frac{\hat m_e\hat m_\mu\hat m_\tau}{(v_{\mathrm{geo}}\pi/\sqrt2)^3}
   =\Bigl(\tfrac{16}{7}\cdot\tfrac43\cdot\tfrac76\Bigr)\,\useed^{5+3+2}
-  =\frac{32}{9}\,\useed^{10}\ }\qquad\tI,
+  =\frac{32}{9}\,\useed^{10}\ }\qquad\mE,
 \end{equation}
 with $5+3+2=\gcar+b+s=10=\binom52$. So the charged-lepton Yukawa powers $(n_e,n_\mu,n_\tau)=(5,3,2)$
 \emph{are} the three carrier numbers $(\gcar,b,s)$, and the lepton determinant carries the same
@@ -1614,12 +1605,12 @@ numbers at once: their sum is the $\Lambda$ action, their product is the $E_8$ C
   5+3+2=10=A_\Lambda,\qquad 5\cdot3\cdot2=30=h_{E_8}=2\cdot3\cdot5 ,
 \end{equation}
 and $(5,3,2)$ is the prime factorisation of $h_{E_8}=30$. So $\det M_\ell$, $\rho_\Lambda$ and the
-$E_8$ Coxeter period read the same carrier core additively ($=10$) and multiplicatively ($=30$). \tI/\tP
+$E_8$ Coxeter period read the same carrier core additively ($=10$) and multiplicatively ($=30$). \mE/\mC
 
 \subsection{Why the top Yukawa is $\approx1$: the $L=0$ anchor (Froggatt--Nielsen ladder)}
 The transport length $L_f$ is a Froggatt--Nielsen-type charge with expansion parameter $\lC$:
 \begin{equation}
-  \boxed{\ y_f\simeq\lambda_C^{\,L_f}\times\Lambda_f\ (\Lambda_f=\mathcal O(1)),\qquad y_t\simeq1\ \text{because}\ L_t=0\ }\qquad\tI/\tP .
+  \boxed{\ y_f\simeq\lambda_C^{\,L_f}\times\Lambda_f\ (\Lambda_f=\mathcal O(1)),\qquad y_t\simeq1\ \text{because}\ L_t=0\ }\qquad\mE/\mC .
 \end{equation}
 The top sits at $L_t=0$ (the \emph{unwound} carrier direction), so $y_t=\Lambda_t\simeq1$
 ($\sqrt2\,m_t/v=0.991$); every other charged fermion is suppressed by integer powers of
@@ -1657,18 +1648,18 @@ $n_s$ matches Planck; $r=0.0037$ is the falsifiable target for LiteBIRD/CMB-S4.
 
 \noindent\textbf{Amplitude (status-clean).} The scalaron mass is a pure seam power,
 \begin{equation}
-  \boxed{\ \frac{M_{\mathrm{scal}}^2}{\Mbar^2}=\cthree^{\,r-1}=\cthree^{\,\Oadm-10b_1}=\cthree^7\ }\qquad\tI ,
+  \boxed{\ \frac{M_{\mathrm{scal}}^2}{\Mbar^2}=\cthree^{\,r-1}=\cthree^{\,\Oadm-10b_1}=\cthree^7\ }\qquad\mE ,
 \end{equation}
 an \emph{exact} identity (the exponent $7=48-41$ is the post-flavor, post-Higgs occupancy deficit).
 The cosmology interface reduces the geometric gravity action to an FRW $R^2$/scalaron branch in which $M_{\mathrm{scal}}$
 \emph{is} the Starobinsky mass $M$; the identification is therefore derived in that sector, not posited.
 With the standard large-$N$ amplitude $A_s=\tfrac{N_\star^2}{24\pi^2}(M/\Mbar)^2$ this gives
 \begin{equation}
-  A_s=\frac{N_\star^2\,\cthree^7}{24\pi^2}=\frac{N_\star^2\,\dtwo}{8640\pi}=2.17\times10^{-9}\qquad\tP/\tA ,
+  A_s=\frac{N_\star^2\,\cthree^7}{24\pi^2}=\frac{N_\star^2\,\dtwo}{8640\pi}=2.17\times10^{-9}\qquad\mC/\mO ,
 \end{equation}
 matching Planck ($\simeq2.1\times10^{-9}$); $\dtwo=2880\,\cthree^8$ is the second seam defect. The
-seam-power form is exact \tI; the amplitude is then determined \emph{within} the $R^2$ sector, the only
-residual being the geometric-gravity (Hodge) closure on which that sector rests \tP. \emph{Convention
+seam-power form is exact \mE; the amplitude is then determined \emph{within} the $R^2$ sector, the only
+residual being the geometric-gravity (Hodge) closure on which that sector rests \mC. \emph{Convention
 note:} $A_s\propto N_\star^2$, so
 the quoted $2.17\times10^{-9}$ uses the pivot $N_\star=57.1$; the alternative seed pivot $N_\star=3/\useed-1=55.4$
 gives $2.05\times10^{-9}$. A number should only be quoted with $N_\star$ fixed.
@@ -1681,14 +1672,14 @@ gives $2.05\times10^{-9}$. A number should only be quoted with $N_\star$ fixed.
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{Dark-energy equation of state $w=-1$ (exact).} The TFPT $\Lambda$ is a genuine vacuum
 constant $\rho_\Lambda=\tfrac{3}{4\pi^2}e^{-2\ainv}\Mbar^4$, not a rolling field, so $w=-1$ identically
-(no quintessence). A robust measurement $w\neq-1$ would falsify the $\Lambda$-branch. \tI\ (structural).
+(no quintessence). A robust measurement $w\neq-1$ would falsify the $\Lambda$-branch. \mE\ (structural).
 \item \textbf{Effective neutrino number $N_{\mathrm{eff}}\simeq3$.} Three families ($\Nfam=3$) give
-three light neutrinos and the standard $N_{\mathrm{eff}}\simeq3.04$. \tI.
+three light neutrinos and the standard $N_{\mathrm{eff}}\simeq3.04$. \mE.
 \item \textbf{Top Yukawa $\simeq1$} as the $L=0$ anchor (above): a bridge to the Froggatt--Nielsen
 flavor mechanism.
 \item \emph{Flagged (not clean):} $m_H/v=0.509$ is near $\tfrac12$ ($1.7\%$); $m_W/m_Z=0.881$ matches
 the running $\sqrt{1-\sin^2\theta_W(M_Z)}$ (not the tree $\sqrt{5/8}=0.79$). No clean closed bridge
-for the Higgs/$W$/$Z$ masses yet. \tA
+for the Higgs/$W$/$Z$ masses yet. \mO
 \end{itemize}
 
 % =====================================================================
@@ -1709,30 +1700,30 @@ depends on them.
   $\lambdaY^{L}\Lambda=\pi\,c\,(\phiz)^{k}$ --- the nine $\Lambda$ are hexagonal-resolvent outputs (not
   free numbers); the \emph{charged-lepton} ones are exact, the \emph{quark} ones are reduced to the
   $(U_{\mathrm{wall}})$ selector. The $\phiz$-order ladder is
-  $t(0)>\{b,c,\tau\}(2)>\{s,\mu\}(3)>\{u,d\}(4)>e(5)$. \tI\ (leptons exact, quark ratios closed v49/v71) / \tA\ (absolute quark scale)
+  $t(0)>\{b,c,\tau\}(2)>\{s,\mu\}(3)>\{u,d\}(4)>e(5)$. \mE\ (leptons exact, quark ratios closed \vref{v49}/\vref{v71}) / \mO\ (absolute quark scale)
 
 \item \textbf{H2 reduced via the Mehta--Seshadri framework.} Mehta--Seshadri supplies the equivalence
   (stable parabolic $\leftrightarrow$ irreducible unitary); the TFPT-specific step --- ``stable $=$
   transport-minimal'' and the geodesic $C_6$ word length --- is conditional on the unitarity (U) of
   $\nabla_F^\star$ (document~3) and the parabolic-degree$\to C_6$ dictionary. H2 is the sharp realisation
   statement: the $D_4$-equivariant stable structure on $\mathcal O(-2)\oplus\mathcal O(-1)^2$ realises the
-  branch with $\det R=h(D_5)=8$, principal $2$-minors $(2,3,5)$. \tI\ (given (U))
+  branch with $\det R=h(D_5)=8$, principal $2$-minors $(2,3,5)$. \mE\ (given (U))
 
 \item \textbf{Strong CP / dynamics via the explicit gap.} $\theta_{\mathrm{eff}}=0$ needs only
   $\gamma_5$-Hermiticity $+$ polar mass $+$ sheet involution $+$ reflection positivity (no mass gap).
   The full dynamics closes on the physical sector because the $C_6$ transport transfer operator has the
   \emph{explicit} spectrum $\{(k/3)^6\}$, giving the mass gap $\Delta=6\log\tfrac32=2.43$ in closed form
-  $\Rightarrow$ OS reconstruction $\Rightarrow$ measure on the admissible sector. \tI\ (phys.\ sector)
+  $\Rightarrow$ OS reconstruction $\Rightarrow$ measure on the admissible sector. \mE\ (phys.\ sector)
 
 \item \textbf{$E_6\times A_2$ flavor shadow.} The residue matrix sits inside an $E_8$ secondary
   branching: $248=\|R\|_F^2+\det R+2(\mathbf 1^\top R a)\Nfam=78+8+2\cdot27\cdot3$, with
   $\|R\|_F^2=78=\dim E_6$, $\det R=8=\dim A_2$. The seven $E_8$ slices form an audit raster (atlas note).
-  \tA
+  \mO
 
 \item \textbf{SM completeness.} The discrete structure and dimensionless core are closed; the
   dimensionful EW/QCD masses ($m_W,m_Z,m_H,\sin^2\theta_W,\alpha_s$) are schema-level via $\mathcal R_{\mathrm{SM}}$,
   with $m_H$ resting on the closed UV quartic $\lambda_\Phi=1/(16\pi^2)$ (near-criticality). The only
-  genuinely open SM point is the \emph{exact} solar angle $\theta_{12}$ (leading $1/\Nfam=\tfrac13$). \tP
+  genuinely open SM point is the \emph{exact} solar angle $\theta_{12}$ (leading $1/\Nfam=\tfrac13$). \mC
 \end{enumerate}
 
 % =====================================================================
@@ -1746,53 +1737,53 @@ depends on them.
 \toprule
 Statement & Status & Note \\
 \midrule
-Dual-root dictionary ($Y$, cusps, $\gamma_{\mathrm{car}}$, $\phibase$) & \tI & exact, from $\{1/2,-1/3\}$ \\
-$10b_1=5^2+4^2=\Oadm\gamma+1$ & \tI & Pythagorean carrier identity \\
-$I_1^{\mathrm{EW}}=41/48=\operatorname{Var}(Y)\,b_1$ & \tI & exact \\
-$\dtwo=4!\cdot5!\,\cthree^8$, $\operatorname{Tr}X^2=5!$ & \tI & factorial traces \\
-$5/4=\gcar/(\gcar-1)$ universal compression & \tI & exact \\
-$\useed=\tfrac43\cthree+48\cthree^4$; one-decoder identities & \tI & exact \\
-$\xi=\tfrac34/(1+9/128\pi^3)$ & \tI & corrected tree value \\
-Ladder $\AEW:\AH:\AL=1:\gcar:2\gcar$ & \tI/\tP & Hubble rung is a corollary \\
-Ladder $=\binom{\gcar}{0}:\binom{\gcar}{1}:\binom{\gcar}{2}$; $2\gcar=\binom{\gcar}{2}\Leftrightarrow\gcar=5$ & \tI & new overdetermination of $\gcar=5$ \\
-2D action lattice $S_x=a(\ainv/\gcar)+bL_0$ & \tI/\tP & two integer labels per scale \\
-\textbf{Decuple bridge} $\rho_\Lambda/\Mbar^4=\tfrac{3}{4\pi^2}e^{2\dph}[v/(5\betarad^2\Mbar)]^{10}$ & \tI & exact, $10=2\gcar=\dim\Lambda^2E$ \\
-Family $=$ ladder $=$ Pascal row $\{1,5,10\}$; $16=1+5+10$ & \tI & central new identification \\
-$\gcar=5$ via $2^{\gcar-1}=\binom{\gcar}{0}{+}\binom{\gcar}{1}{+}\binom{\gcar}{2}$ & \tI & Pascal closure (unique) \\
-$\operatorname{Tr}_{S^+}X^2=5!$ generates $40,41,240,\dtwo$ & \tI & master moment \\
-$|R(E_8)|=16\cdot5\cdot3$; $\dim E_8=240+8$ & \tI & $E_8$ compression \\
-Even-flip atlas $240=160+80$ & \tI/\tA & $E_8$ metrization open ($\neq112+128$) \\
-$\delta_{\mathrm{CKM}}-\pi/3=3\useed(1-\useed)$ & \tI & CP $=$ triple seed variance \\
-Observable quadrilateral ($\useed=\Omega_b+\betarad$) & \tI & closed UV-shadow cycle \\
-Power tower $v{=}x^1,\,H{=}x^5R_H,\,\Lambda{=}x^{10}R_\Lambda$ & \tI & $K_5$ vertices/edges \\
-$496=16\cdot31=\dim(E_8{\times}E_8)=\dim SO(32)$ & \tI/\tP & heterotic-dimension count \\
-$\AEW=\ainv/\sqrt{\Delta_Y}$, $\Delta_Y=(b{+}s)^2=25$ & \tI & discriminant action theorem \\
-$\hat m_e\hat m_\mu\hat m_\tau\propto\tfrac{32}{9}\useed^{10}$; $(5,3,2)=(\gcar,b,s)$ & \tI & lepton flavor decuple \\
-$M_{\mathrm{scal}}/\Mbar=\cthree^{7/2}$ & \tI & scalaron seam power \\
-$\delta_{\mathrm{CKM}}-\pi/3=\Nfam\,\useed(1-\useed)$ & \tI & weak CP $=\Nfam\times$ seed variance \\
-$L=R+W$: $\sum R=22$, $\sum W=18$ & \tI & first generation $=$ residue store \\
-$|R(E_8)|/6=\sum L=40$ ($\mathbb Z_6$ slice) & \tI & one $\mathbb Z_6$ slice $=$ flavor budget \\
-$h_{E_8}=|R|/\operatorname{rank}=30=\Nfam\binom52=\Nfam A_\Lambda$ & \tI/\tP & carrier Coxeter theorem \\
-$|R^+(E_8)|=\operatorname{Tr}_{S^+}X^2=120=5!$ & \tI & positive-root moment \\
-common decuple $\binom52{=}A_\Lambda{=}u^{5+3+2}{=}h_{E_8}/\Nfam{=}10$ & \tI/\tP & one carrier pair-decuple \\
-$\lambda_C^6/\dtop=1.061$ (winding $\approx$ seam defect) & \tA & flagged proximity (not exact) \\
-$y_f\simeq\lambda_C^{L_f}$, top $L_t=0\Rightarrow y_t\simeq1$ & \tI/\tP & Froggatt--Nielsen ladder \\
-$w=-1$ (true $\Lambda$); $N_{\mathrm{eff}}\simeq3$ & \tI & dark energy / neutrino species \\
-3-generator lattice $\{\ainv,L_0,L_c\}$; $M_{\mathrm{scal}}=e^{-\frac72 L_c}$ & \tI & seam axis $L_c=\ln(1/\cthree)$ \\
-$\dim S^+=2\operatorname{rank}(E_8)$, $h_{E_8}=2(\dim S^+{-}1)=2^{g}{-}2$ & \tI & rank--Coxeter coupling ($\nu^c$ closes it) \\
-$\gcd(2h,6r)=\dimg=12$, $\operatorname{lcm}=240$ & \tI/\tP & SM algebra $=$ gcd; $E_8$ count $=$ lcm \\
-$I_1^{\mathrm{EW}}=h_{E_8}/36+1/(6r)=41/48$ & \tI/\tP & Coxeter part $+$ rank singlet \\
-$M_{\mathrm{scal}}^2/\Mbar^2=\cthree^{r-1}=\cthree^7$ exact; $A_s=N_\star^2\cthree^7/24\pi^2$ & \tI\,/\,\tP/\tA & seam power exact; $A_s$ conditional (Starobinsky) \\
-$h_{E_8}=2{\cdot}3{\cdot}5=30$, $r=\varphi(30)=8$ & \tI/\tP & $2,3,5$ Coxeter cyclotomic compiler \\
-$\operatorname{Exp}(E_8)=(\mathbb Z/30)^\times$, $\sum=120$, $\chi_C=\Phi_{30}$ & \tI/\tP & exponents $=$ primitive residues \\
-lepton $(5,3,2)$: $\sum{=}10{=}A_\Lambda$, $\prod{=}30{=}h_{E_8}$ & \tI/\tP & sum$=$action, product$=$Coxeter \\
-Hubble $H_0/\Mbar=e^{-\ainv}/(2\pi\sqrt{\Omega_\Lambda})$ & \tI & exact corollary \\
-$\Lambda$-anchored closure $\GN=\tfrac{3c^3}{32\pi^3\hbar\Lamgeom}e^{-2\ainv}$ & \tI/\tP & $\GN$ to $-0.35\%$ \\
-$\gcar=5$ overdetermined & \tP & monotone $\alpha^{-1}(\gcar)$ \\
-$|R(E_8)|=240=16\cdot15$, $248=8\cdot31$ & \tI & counting identities \\
-$E_8\leftrightarrow$ carrier-transition map & \tP & needs structure map \\
-$\delta_{\mathrm{CP}}=4\pi/3$, $\theta_{12}=\tfrac13-\tfrac{\useed}{2}$ & \tP & PMNS readouts \\
-$|V_{td}|,|V_{ts}|,J_{\mathrm{CKM}},J^\nu_{\mathrm{CP}}$; $n_s,r$ & \tP & derived readouts \\
+Dual-root dictionary ($Y$, cusps, $\gamma_{\mathrm{car}}$, $\phibase$) & \mE & exact, from $\{1/2,-1/3\}$ \\
+$10b_1=5^2+4^2=\Oadm\gamma+1$ & \mE & Pythagorean carrier identity \\
+$I_1^{\mathrm{EW}}=41/48=\operatorname{Var}(Y)\,b_1$ & \mE & exact \\
+$\dtwo=4!\cdot5!\,\cthree^8$, $\operatorname{Tr}X^2=5!$ & \mE & factorial traces \\
+$5/4=\gcar/(\gcar-1)$ universal compression & \mE & exact \\
+$\useed=\tfrac43\cthree+48\cthree^4$; one-decoder identities & \mE & exact \\
+$\xi=\tfrac34/(1+9/128\pi^3)$ & \mE & corrected tree value \\
+Ladder $\AEW:\AH:\AL=1:\gcar:2\gcar$ & \mE/\mC & Hubble rung is a corollary \\
+Ladder $=\binom{\gcar}{0}:\binom{\gcar}{1}:\binom{\gcar}{2}$; $2\gcar=\binom{\gcar}{2}\Leftrightarrow\gcar=5$ & \mE & new overdetermination of $\gcar=5$ \\
+2D action lattice $S_x=a(\ainv/\gcar)+bL_0$ & \mE/\mC & two integer labels per scale \\
+\textbf{Decuple bridge} $\rho_\Lambda/\Mbar^4=\tfrac{3}{4\pi^2}e^{2\dph}[v/(5\betarad^2\Mbar)]^{10}$ & \mE & exact, $10=2\gcar=\dim\Lambda^2E$ \\
+Family $=$ ladder $=$ Pascal row $\{1,5,10\}$; $16=1+5+10$ & \mE & central new identification \\
+$\gcar=5$ via $2^{\gcar-1}=\binom{\gcar}{0}{+}\binom{\gcar}{1}{+}\binom{\gcar}{2}$ & \mE & Pascal closure (unique) \\
+$\operatorname{Tr}_{S^+}X^2=5!$ generates $40,41,240,\dtwo$ & \mE & master moment \\
+$|R(E_8)|=16\cdot5\cdot3$; $\dim E_8=240+8$ & \mE & $E_8$ compression \\
+Even-flip atlas $240=160+80$ & \mE/\mO & $E_8$ metrization open ($\neq112+128$) \\
+$\delta_{\mathrm{CKM}}-\pi/3=3\useed(1-\useed)$ & \mE & CP $=$ triple seed variance \\
+Observable quadrilateral ($\useed=\Omega_b+\betarad$) & \mE & closed UV-shadow cycle \\
+Power tower $v{=}x^1,\,H{=}x^5R_H,\,\Lambda{=}x^{10}R_\Lambda$ & \mE & $K_5$ vertices/edges \\
+$496=16\cdot31=\dim(E_8{\times}E_8)=\dim SO(32)$ & \mE/\mC & heterotic-dimension count \\
+$\AEW=\ainv/\sqrt{\Delta_Y}$, $\Delta_Y=(b{+}s)^2=25$ & \mE & discriminant action theorem \\
+$\hat m_e\hat m_\mu\hat m_\tau\propto\tfrac{32}{9}\useed^{10}$; $(5,3,2)=(\gcar,b,s)$ & \mE & lepton flavor decuple \\
+$M_{\mathrm{scal}}/\Mbar=\cthree^{7/2}$ & \mE & scalaron seam power \\
+$\delta_{\mathrm{CKM}}-\pi/3=\Nfam\,\useed(1-\useed)$ & \mE & weak CP $=\Nfam\times$ seed variance \\
+$L=R+W$: $\sum R=22$, $\sum W=18$ & \mE & first generation $=$ residue store \\
+$|R(E_8)|/6=\sum L=40$ ($\mathbb Z_6$ slice) & \mE & one $\mathbb Z_6$ slice $=$ flavor budget \\
+$h_{E_8}=|R|/\operatorname{rank}=30=\Nfam\binom52=\Nfam A_\Lambda$ & \mE/\mC & carrier Coxeter theorem \\
+$|R^+(E_8)|=\operatorname{Tr}_{S^+}X^2=120=5!$ & \mE & positive-root moment \\
+common decuple $\binom52{=}A_\Lambda{=}u^{5+3+2}{=}h_{E_8}/\Nfam{=}10$ & \mE/\mC & one carrier pair-decuple \\
+$\lambda_C^6/\dtop=1.061$ (winding $\approx$ seam defect) & \mO & flagged proximity (not exact) \\
+$y_f\simeq\lambda_C^{L_f}$, top $L_t=0\Rightarrow y_t\simeq1$ & \mE/\mC & Froggatt--Nielsen ladder \\
+$w=-1$ (true $\Lambda$); $N_{\mathrm{eff}}\simeq3$ & \mE & dark energy / neutrino species \\
+3-generator lattice $\{\ainv,L_0,L_c\}$; $M_{\mathrm{scal}}=e^{-\frac72 L_c}$ & \mE & seam axis $L_c=\ln(1/\cthree)$ \\
+$\dim S^+=2\operatorname{rank}(E_8)$, $h_{E_8}=2(\dim S^+{-}1)=2^{g}{-}2$ & \mE & rank--Coxeter coupling ($\nu^c$ closes it) \\
+$\gcd(2h,6r)=\dimg=12$, $\operatorname{lcm}=240$ & \mE/\mC & SM algebra $=$ gcd; $E_8$ count $=$ lcm \\
+$I_1^{\mathrm{EW}}=h_{E_8}/36+1/(6r)=41/48$ & \mE/\mC & Coxeter part $+$ rank singlet \\
+$M_{\mathrm{scal}}^2/\Mbar^2=\cthree^{r-1}=\cthree^7$ exact; $A_s=N_\star^2\cthree^7/24\pi^2$ & \mE/\mC/\mO & seam power exact; $A_s$ conditional (Starobinsky) \\
+$h_{E_8}=2{\cdot}3{\cdot}5=30$, $r=\varphi(30)=8$ & \mE/\mC & $2,3,5$ Coxeter cyclotomic compiler \\
+$\operatorname{Exp}(E_8)=(\mathbb Z/30)^\times$, $\sum=120$, $\chi_C=\Phi_{30}$ & \mE/\mC & exponents $=$ primitive residues \\
+lepton $(5,3,2)$: $\sum{=}10{=}A_\Lambda$, $\prod{=}30{=}h_{E_8}$ & \mE/\mC & sum$=$action, product$=$Coxeter \\
+Hubble $H_0/\Mbar=e^{-\ainv}/(2\pi\sqrt{\Omega_\Lambda})$ & \mE & exact corollary \\
+$\Lambda$-anchored closure $\GN=\tfrac{3c^3}{32\pi^3\hbar\Lamgeom}e^{-2\ainv}$ & \mE/\mC & $\GN$ to $-0.35\%$ \\
+$\gcar=5$ overdetermined & \mC & monotone $\alpha^{-1}(\gcar)$ \\
+$|R(E_8)|=240=16\cdot15$, $248=8\cdot31$ & \mE & counting identities \\
+$E_8\leftrightarrow$ carrier-transition map & \mC & needs structure map \\
+$\delta_{\mathrm{CP}}=4\pi/3$, $\theta_{12}=\tfrac13-\tfrac{\useed}{2}$ & \mC & PMNS readouts \\
+$|V_{td}|,|V_{ts}|,J_{\mathrm{CKM}},J^\nu_{\mathrm{CP}}$; $n_s,r$ & \mC & derived readouts \\
 \bottomrule
 \end{longtable}
 \end{center}
@@ -1806,13 +1797,13 @@ Starobinsky-$M$ identification is the \emph{only} condition for $A_s=N_\star^2\c
 (the seam power $M_{\mathrm{scal}}^2/\Mbar^2=\cthree^7$ itself is exact); (6) the $E_8$ \emph{lattice} is
 now built explicitly as $(D_5\oplus A_3)+\mu_4$-glue (Section~\ref{sec:d5a3}), so the former ``blind
 $240$-metrisation'' is closed. The flavor status (companion parabolic-weight note) now splits cleanly:
-the \emph{anchor multiset} $\{1,1,2\}$ is derived (Schur--Horn $+$ stability) \tI; the \emph{sector
-assignment} $(1,1,2)$ follows from the $D_5$ cusp ordering \tI/\tP; the \emph{first-generation $+6$
-winding} is the hierarchy convention \tP; the six \emph{non-anchor residues} are then forced (residue
-sets $=D_6$ orbit of $\{0,1,3\}$, minus anchor, monotone) \tI. The single remaining geometric input is
+the \emph{anchor multiset} $\{1,1,2\}$ is derived (Schur--Horn $+$ stability) \mE; the \emph{sector
+assignment} $(1,1,2)$ follows from the $D_5$ cusp ordering \mE/\mC; the \emph{first-generation $+6$
+winding} is the hierarchy convention \mC; the six \emph{non-anchor residues} are then forced (residue
+sets $=D_6$ orbit of $\{0,1,3\}$, minus anchor, monotone) \mE. The single remaining geometric input is
 (H2), the specific $D_6$ cusp labelling on $\mathbb P^1\setminus\mu_4$ --- sharply characterised by the
 residue-matrix spectral selector ($\det R=h(D_5)$, principal minors $(2,3,5)$), with a naive
-cusp-position shortcut explicitly ruled out \tP. The explicit Riemann--Hilbert construction confirms
+cusp-position shortcut explicitly ruled out \mC. The explicit Riemann--Hilbert construction confirms
 the rigid $SU(3)$ system and its $A_3$ Coxeter rotation; the genuine open step is the global
 parabolic-weight (Hodge) realisation of that selector.
 
@@ -1828,7 +1819,7 @@ present grammar. These are stated so the strong items are not read as a uniform 
 \section{Consolidated picture}
 % =====================================================================
 
-\begin{keybox}[The three nested grammars]
+\par\medskip\noindent\textbf{The three nested grammars.}
 \[
   \begin{aligned}
   \textbf{Carrier:}\quad & 3+2 \Rightarrow \{y_-,y_+\}=\{-\tfrac13,\tfrac12\}\Rightarrow Y,\ \dim S^+=16,\ \Nfam=3,\ \Oadm=48,\ b_1=\tfrac{41}{10},\\
@@ -1837,7 +1828,6 @@ present grammar. These are stated so the strong items are not read as a uniform 
   \Rightarrow \frac{\rho_\Lambda}{\Mbar^4}=\frac{3}{4\pi^2}e^{2\dph}\Bigl[\frac{v_{\mathrm{geo}}}{5\betarad^2\Mbar}\Bigr]^{10}.
   \end{aligned}
 \]
-\end{keybox}
 
 \noindent A small grammar generates many sectors: the Standard-Model packet, flavor, the electroweak
 hierarchy, the cosmological constant, the metrology, and the inflation/CMB interface. The strongest
@@ -1847,11 +1837,8 @@ Einstein normaliser is the corrected tree value $\tfrac34/(1+9/128\pi^3)$. None 
 as a proof of a final theory; it is offered as a tightening of the existing architecture for your
 assessment.
 
-\begin{keybox}[The compiler in one line]
-\[
-  \boxed{\ \text{TFPT}=\text{even carrier code}+\text{seed decoder}+2{\cdot}3{\cdot}5\ \text{Coxeter compiler}\ }
-\]
-From the three atoms $(2,3,\gcar{=}5)$:
+\par\medskip\noindent\textbf{The compiler in one line:} TFPT $=$ even carrier code $+$ seed decoder
+$+\ 2{\cdot}3{\cdot}5$ Coxeter compiler. From the three atoms $(2,3,\gcar{=}5)$:
 \[
   h_{E_8}=2{\cdot}3{\cdot}5=30,\qquad r_{E_8}=\varphi(30)=8=\gcar{+}\Nfam,
 \]
@@ -1881,7 +1868,6 @@ action) $=\useed^{5+3+2}$ (lepton determinant) $=h_{E_8}/\Nfam$ (Coxeter per fam
 charged-lepton determinant, the $E_8$ Coxeter structure and the action ladder all read the \emph{same}
 carrier pair-decuple. The open core is one question: can the even-flip atlas be metrised as a genuine
 $E_8$ root system (the $160{+}80$ vs $112{+}128$ obstruction)?
-\end{keybox}
 
 \clearpage
 \part{The Coxeter--cyclotomic compiler and the explicit $E_8$ construction}
@@ -1910,17 +1896,16 @@ separate open problems). Master statement: \emph{five carrier
 slots give $D_5$, four family corners give $A_3$, and $\mu_4$ glues $D_5\times A_3$ into the $E_8$ atlas.}
 \end{abstract}
 
-\begin{keybox}[The compression]
-\[
-  \boxed{\ \begin{aligned}
+\par\medskip\noindent\textbf{The compression.}
+\begin{keyeq}
+$\displaystyle \begin{aligned}
    &\text{TFPT}=\underbrace{D_5\ \text{half-spin carrier}}_{C^+}+\underbrace{A_3\ \text{four-point family}}_{\mathbb P^1\setminus\mu_4}+\ \cthree\ \text{seam seed},\\
    &E_8=\text{closure of }D_5\times A_3
-  \end{aligned}\ }
-\]
-with $\cthree=\dfrac{1}{8\pi}$, $\gcar=5$, $h:=2\cdot3\cdot\gcar=30$, $r:=\varphi(h)=\varphi(30)=8$,
+  \end{aligned}$
+\end{keyeq}
+\noindent with $\cthree=\dfrac{1}{8\pi}$, $\gcar=5$, $h:=2\cdot3\cdot\gcar=30$, $r:=\varphi(h)=\varphi(30)=8$,
 $\Nfam=3$, $N_\Phi=1$, $\dimg=12$. Equivalently $C^+$ + $\mathbb Z_{30}$ Coxeter compiler + $\cthree$
 seed; the $D_5\times A_3$ reading is the structural lift of the same object.
-\end{keybox}
 
 % =====================================================================
 \section*{Theorem 1 --- the even carrier code}
@@ -1934,7 +1919,7 @@ one-generation spinor packet is the even exterior algebra, equivalently the even
 \end{equation}
 The two carrier roots $y_+=\tfrac12$, $y_-=-\tfrac13$ generate all hypercharges
 ($Y(Q_L)=y_++y_-=\tfrac16$, $Y(u^c)=2y_-$, $Y(e^c)=2y_+$, $Y(\nu^c)=0$) and the transport cusps
-$\{1,\tfrac23,\tfrac13\}=\{2y_+,-2y_-,2(y_++y_-)\}$, with $\gamma_{\mathrm{car}}=\operatorname{Tr}_EY^2=3y_-^2+2y_+^2=\tfrac56$. \tI
+$\{1,\tfrac23,\tfrac13\}=\{2y_+,-2y_-,2(y_++y_-)\}$, with $\gamma_{\mathrm{car}}=\operatorname{Tr}_EY^2=3y_-^2+2y_+^2=\tfrac56$. \mE
 \smallskip\\
 \noindent\textbf{Gauge-rank factorisation (\veri{v79\_review\_identities.py}).} The carrier polynomial factors
 into the two gauge ranks directly:
@@ -1944,7 +1929,7 @@ into the two gauge ranks directly:
 i.e.\ $(sY-1)(bY+1)$ --- the polynomial splits into one linear representative of each Standard-Model
 non-abelian factor; the $5$-slot carrier \emph{forces} the split into $SU(3)\times SU(2)$.
 
-\begin{keybox}[Hypercharge Lucas--Binet resonances \tI\ (mode reading \tP, \veri{v79\_review\_identities.py})]
+\begin{keybox}[Hypercharge Lucas--Binet resonances \mE\ (mode reading \mC, \veri{v79\_review\_identities.py})]
 The integer carrier charges $(q_+,q_-)=(3,-2)$ (the primitive trace-free pair, $X^2{-}X{-}6=(X{-}3)(X{+}2)$,
 Lean \texttt{unique\_carrier\_pair}) generate the Lucas $U$-sequence
 \[
@@ -1952,8 +1937,8 @@ Lean \texttt{unique\_carrier\_pair}) generate the Lucas $U$-sequence
 \]
 which is, \emph{in order}, $(N_\Phi,\ \cdot\ ,\ \text{scalaron exponent }7,\ \Delta_Q{=}13,\ \text{quark numerator }55,\ \dim E_7{=}133)$.
 In particular the quark ratio reads $c_u/c_d=D_5/(\Nfam^2 D_4)=\tfrac{55}{117}$ --- a single recurrence of the
-hypercharge generator, not a free integer. \tI\ for the arithmetic; the per-mode physical identification is a
-\tP\ cross-domain reading (only $n\le6$, the carrier-slot range, is meaningful).
+hypercharge generator, not a free integer. \mE\ for the arithmetic; the per-mode physical identification is a
+\mC\ cross-domain reading (only $n\le6$, the carrier-slot range, is meaningful).
 \end{keybox}
 
 % =====================================================================
@@ -1966,7 +1951,7 @@ $R_0,R_2,R_4$ form a symmetric association scheme (the even Hamming scheme on fi
   \boxed{\ \begin{aligned}
     &\text{valencies}\ (1,10,5)=(\dim\Lambda^0E,\dim\Lambda^2E,\dim\Lambda^4E),\\
     &\text{spectral multiplicities}\ (1,5,10)=\AEW{:}\AH{:}\AL
-  \end{aligned}\ }\qquad\tI .
+  \end{aligned}\ }\qquad\mE .
 \end{equation}
 The eigenvalues (computed directly) are
 $A_2:\{10^{(1)},2^{(5)},(-2)^{(10)}\}$ and $A_4:\{5^{(1)},(-3)^{(5)},1^{(10)}\}$, with
@@ -1974,20 +1959,20 @@ $A_2+A_4=K_{16}-\mathbf 1$. The two graphs are named objects:
 \begin{equation}
 \begin{aligned}
   &R_2(C^+)=\text{folded/complement, } \mathrm{SRG}(16,10,6,6)\ (\text{the Clebsch complement});\\
-  &\boxed{\ R_4(C^+)=\text{Clebsch graph, } \mathrm{SRG}(16,5,0,2)\ }\qquad\tI .
+  &\boxed{\ R_4(C^+)=\text{Clebsch graph, } \mathrm{SRG}(16,5,0,2)\ }\qquad\mE .
 \end{aligned}
 \end{equation}
 \begin{remark}
 The Standard-Model family is the \emph{valency} side $(1,10,5)$ of one scheme; the cosmological action
 ladder is its \emph{spectral} side $(1,5,10)$. The action ladder is therefore not merely ``also
-binomial'' --- it is the spectral dual of the even exterior family. \tP
+binomial'' --- it is the spectral dual of the even exterior family. \mC
 \end{remark}
 \noindent\textbf{This duality is the MacWilliams transform (\veri{v79\_review\_identities.py}).} $C^+$ is the
 even-weight code $[5,4,2]$; its dual $(C^+)^\perp$ is the repetition code $[5,1,5]=\{00000,11111\}$ (the
 uniform/vacuum word). The MacWilliams identity sends the weight enumerator of the dual to that of $C^+$, namely
 $(1,10,5)$ --- so the valency$\leftrightarrow$spectral duality \emph{is} the coding-theoretic UV/IR duality, and
 the carrier grading $\Lambda^{\mathrm{even}}(5)=1{+}10{+}5$ is the MacWilliams image of the repetition vacuum.
-\tL\ (code identity) / \tP\ (holographic reading).
+\mE\ (code identity) / \mC\ (holographic reading).
 
 \noindent\textbf{The full Bose--Mesner algebra} (machine-checkable) fixes the duality beyond
 eigenvalues:
@@ -1997,7 +1982,7 @@ eigenvalues:
 with eigenmatrix and multiplicity orthogonality
 \begin{equation}
   P=\begin{pmatrix}1&10&5\\1&2&-3\\1&-2&1\end{pmatrix},\quad \det P=-64,\qquad
-  \boxed{\ P^{\!\top}\operatorname{diag}(1,5,10)\,P=\operatorname{diag}(16,160,80)\ }\qquad\tI ,
+  \boxed{\ P^{\!\top}\operatorname{diag}(1,5,10)\,P=\operatorname{diag}(16,160,80)\ }\qquad\mE ,
 \end{equation}
 so the flip split $240=160+80$ ($|F|=2,4$) appears directly in the scheme's eigenmatrix orthogonality.
 
@@ -2007,7 +1992,7 @@ The flip-2 and flip-4 graphs are translation- and permutation-invariant, so the 
 $C^+\rtimes S_5$ (translations $\rtimes$ coordinate permutations) acts by graph/scheme automorphisms; the
 group closure gives the automorphism group of the even Hamming scheme (equivalently the Clebsch graph),
 \begin{equation}
-  \boxed{\ \operatorname{Aut}_{\mathrm{aff}}(C^+)=C^+\rtimes S_5,\qquad |\operatorname{Aut}_{\mathrm{aff}}(C^+)|=2^{\gcar-1}\,\gcar!=16\cdot120=1920=|W(D_5)|\ }\qquad\tI ,
+  \boxed{\ \operatorname{Aut}_{\mathrm{aff}}(C^+)=C^+\rtimes S_5,\qquad |\operatorname{Aut}_{\mathrm{aff}}(C^+)|=2^{\gcar-1}\,\gcar!=16\cdot120=1920=|W(D_5)|\ }\qquad\mE ,
 \end{equation}
 and $1920=r\,|R(E_8)|=8\cdot240$. (The \emph{linear} code automorphism group alone is only the
 coordinate group $S_5$ of order $120$; the factor $2^{\gcar-1}=16$ is the translation/scheme part. It is
@@ -2022,7 +2007,7 @@ weight structure of $\mathfrak{so}_{10}$, the classical home of one SM family wi
 Requiring the even family to equal the action truncation through pair degree,
 $\dim S^+=2^{g-1}=\binom g0+\binom g1+\binom g2$, i.e.
 \begin{equation}
-  \boxed{\ 2^{g}-2=g(g+1)\ \Longleftrightarrow\ g=5\ }\qquad\tI,
+  \boxed{\ 2^{g}-2=g(g+1)\ \Longleftrightarrow\ g=5\ }\qquad\mE,
 \end{equation}
 the unique positive-integer solution. At $g=5$ the two sides equal $30$, so
 \emph{carrier exhaustion} $2^{g}-2$ and the \emph{Coxeter period} $g(g+1)$ coincide only at five
@@ -2034,7 +2019,7 @@ slots: $2^{\gcar}-2=30=h$ and $\gcar(\gcar+1)=30$.
 \addcontentsline{toc}{section}{Theorem 4}
 From the three atoms $(2,3,\gcar)$, with $h=2\cdot3\cdot\gcar=30$ and $r=\varphi(h)=8$:
 \begin{equation}
-  \boxed{\ |R(E_8)|=rh=240,\qquad \dim E_8=r(h+1)=8\cdot31=248,\qquad h+1=2^{\gcar}-1=31\ }\qquad\tI .
+  \boxed{\ |R(E_8)|=rh=240,\qquad \dim E_8=r(h+1)=8\cdot31=248,\qquad h+1=2^{\gcar}-1=31\ }\qquad\mE .
 \end{equation}
 The $E_8$ exponents are the primitive residues modulo $30$,
 \begin{equation}
@@ -2055,13 +2040,13 @@ The directed even-flips of $C^+$ are the complete graph $K_{16}$:
 \begin{equation}
   \boxed{\ \begin{gathered}
   |R^+(E_8)|=\binom{\dim S^+}{2}=\binom{16}{2}=120=\operatorname{Tr}_{S^+}X^2=5!=\!\!\sum_{m\in(\mathbb Z/30)^\times}\!\!\!m,\\[2pt]
-  |R(E_8)|=2\binom{16}{2}=240\ \end{gathered}}\quad\tI .
+  |R(E_8)|=2\binom{16}{2}=240\ \end{gathered}}\quad\mE .
 \end{equation}
 ($X=6Y$.) So the positive $E_8$ roots are the unordered transitions of one family; the second
 hypercharge moment, the positive-root count and the sum of the $E_8$ exponents coincide at $120$.
 The CP pairing $m\leftrightarrow 30-m$ of the exponents gives four pairs, each of sum $h=30$:
 \begin{equation}
-  \boxed{\ \operatorname{Tr}_{S^+}X^2=(N_{\mathrm{fam}}+N_\Phi)\,h=4\cdot30=120=\dim\mathfrak{so}_{16}=\underbrace{45}_{D_5}+\underbrace{15}_{A_3}+\underbrace{60}_{(10,6)}\ }\qquad\tI ,
+  \boxed{\ \operatorname{Tr}_{S^+}X^2=(N_{\mathrm{fam}}+N_\Phi)\,h=4\cdot30=120=\dim\mathfrak{so}_{16}=\underbrace{45}_{D_5}+\underbrace{15}_{A_3}+\underbrace{60}_{(10,6)}\ }\qquad\mE ,
 \end{equation}
 so the hypercharge moment is simultaneously four CP-paired Coxeter periods \emph{and} the adjoint
 half $\mathfrak{so}_{16}=(45,1)\oplus(1,15)\oplus(10,6)$ of the $E_8$ closure.
@@ -2070,7 +2055,7 @@ A naive flip-size-preserving map $R_{\mathrm{flip}}\to\mathbb R^8$ cannot be $E_
 $240=160+80$ ($|F|=2,4$) differs from the $D_8$ split $112+128$. The correct route is \emph{not} a
 direct $240$-metrization but the standard branching $E_8\supset D_5\times A_3$ (Theorem 7), which
 builds the root spaces from known $D_5$ and $A_3$ data. Until the $A_3$ lattice is derived from the
-four punctures (Theorem 7, \tA), $E_8$ remains a Coxeter atlas with a concrete, falsifiable lift.
+four punctures (Theorem 7, \mO), $E_8$ remains a Coxeter atlas with a concrete, falsifiable lift.
 \par\smallskip
 
 % =====================================================================
@@ -2090,14 +2075,14 @@ All discrete budgets and the seam seed are functions of $(h,r,\cthree)=(30,8,1/(
 the family-corner graph $K_4$ on $\mu_4$ ($|E(K_4)|=\binom42=6$, $|R(A_3)|=2|E(K_4)|=12$), every large
 budget is a product of the two graphs:
 \begin{equation}
-  \boxed{\ 40=10\cdot4,\quad 60=10\cdot6,\quad 120=10\cdot12,\quad 240=10\cdot24\ }\qquad\tI ,
+  \boxed{\ 40=10\cdot4,\quad 60=10\cdot6,\quad 120=10\cdot12,\quad 240=10\cdot24\ }\qquad\mE ,
 \end{equation}
 i.e.\ ($\sum L$, $D_{\mathrm{start}}$, $|R^+(E_8)|$, $|R(E_8)|$) $=10\cdot(|\mu_4|,|E(K_4)|,|R(A_3)|,|S_4|)$.
 Two occupancy identities follow,
 \begin{equation}
 \begin{aligned}
   &\boxed{\ 10b_1=1+|\mu_4|\,|E(K_5)|=1+4\cdot10=41\ },\\
-  &\boxed{\ \Oadm=\Nfam\dim S^+=(\Nfam{+}N_\Phi)|R(A_3)|=3\cdot16=4\cdot12=48\ }\qquad\tI ,
+  &\boxed{\ \Oadm=\Nfam\dim S^+=(\Nfam{+}N_\Phi)|R(A_3)|=3\cdot16=4\cdot12=48\ }\qquad\mE ,
 \end{aligned}
 \end{equation}
 so the Higgs singleton is the fourth ($\mu_4$) direction that closes $\Nfam=3$ to $\mathbf 4$ of $A_3$.
@@ -2107,7 +2092,7 @@ so the Higgs singleton is the fourth ($\mu_4$) direction that closes $\Nfam=3$ t
     &\Oadm=\underbrace{40}_{\sum L\,(\text{flavor})}+\underbrace{1}_{\text{Higgs}}+\underbrace{7}_{\text{scalaron}}=48,\qquad
     \Oadm-\!\sum L=8=h(D_5)=r(E_8),\\
     &\Oadm-10b_1=7=h(D_5)-1
-  \end{aligned}\ }\qquad\tI ,
+  \end{aligned}\ }\qquad\mE ,
 \end{equation}
 so the scalaron exponent $r-1=7$ is exactly the post-flavor, post-Higgs occupancy remainder,
 $M_{\mathrm{scal}}^2/\Mbar^2=\cthree^{\,\Oadm-10b_1}=\cthree^7$. With $h(D_5)=8$ and $|R^+(A_3)|=6$
@@ -2133,20 +2118,20 @@ Coxeter period). The first-generation transport sums read the non-primitive $\ma
 $L_u{=}(7,3,0),L_d{=}(7,5,2),L_e{=}(8,5,3)$ split into a $D_5$ budget and an $A_3$ geometry:
 \begin{equation}
   \boxed{\ \textstyle\sum_{f,j}L_{f,j}=40=|R(D_5)|\ (\text{Clebsch edges}),\qquad
-  L_{f,j}\bmod 6\ \text{lives on}\ C_6=Z_6=|R^+(A_3)|\ }\qquad\tI ,
+  L_{f,j}\bmod 6\ \text{lives on}\ C_6=Z_6=|R^+(A_3)|\ }\qquad\mE ,
 \end{equation}
 the residues being the $D_6$-orbit of the perfect set $\{0,1,3\}\subset C_6$ (cyclic distances
 $\{1,2,3\}$): $u\!\equiv\!\{0,1,3\}$, $d\!\equiv\!2{-}\{0,1,3\}$, $e\!\equiv\!2{+}\{0,1,3\}$, with the
 universal first-generation $+6$ winding. So the carrier $D_5$ sets the total budget and the family
 $A_3$ (its $6$-element positive-root hexagon) sets the per-entry distances.
-The scalaron mass is a pure seam power \tI; the amplitude is a \emph{conditional} readout, kept
-\tP/\tA\ until the scalaron variable is formally identified with the Starobinsky $M$ parameter. That
+The scalaron mass is a pure seam power \mE; the amplitude is a \emph{conditional} readout, kept
+\mC/\mO\ until the scalaron variable is formally identified with the Starobinsky $M$ parameter. That
 identification is now \emph{heat-kernel grounded} (G2): the spectral-action Seeley--DeWitt coefficient
 $a_4|_{R^2}\!\sim\!R^2/72$ delivers exactly the Starobinsky $R^2$ term, with $M^2/\Mbar^2=6(4\pi)^2/f_0$ and
 the TFPT closure $\cthree^7$ fixing the cutoff moment $f_0$ (\veri{v36\_spectral\_action\_g2.py}):
 \begin{equation}
-  \underbrace{\frac{M_{\mathrm{scal}}^2}{\Mbar^2}=\cthree^{\,r-1}=\cthree^7}_{\tI},\qquad
-  \underbrace{A_s=\frac{N_\star^2}{24\pi^2}\frac{M_{\mathrm{scal}}^2}{\Mbar^2}=\frac{N_\star^2\cthree^7}{24\pi^2}=2.17\times10^{-9}}_{\tP/\tA\ (\text{if }M_{\mathrm{scal}}=M_{\mathrm{Star}})} .
+  \underbrace{\frac{M_{\mathrm{scal}}^2}{\Mbar^2}=\cthree^{\,r-1}=\cthree^7}_{\mE},\qquad
+  \underbrace{A_s=\frac{N_\star^2}{24\pi^2}\frac{M_{\mathrm{scal}}^2}{\Mbar^2}=\frac{N_\star^2\cthree^7}{24\pi^2}=2.17\times10^{-9}}_{\mC/\mO\ (\text{if }M_{\mathrm{scal}}=M_{\mathrm{Star}})} .
 \end{equation}
 
 % =====================================================================
@@ -2180,9 +2165,9 @@ $(16,4)\oplus(\overline{16},\overline4)$ & $2\cdot64$ & matter half-spinor $S^+$
 \end{center}
 
 \noindent\textbf{Proof route (replaces the old blind $240$-metrization).}
-\emph{Stage 1 ($D_5$, \tI):} $C^+$ is the $D_5$ half-spin orbit, $R_4=$ Clebsch, $\operatorname{Aut}=W(D_5)$,
+\emph{Stage 1 ($D_5$, \mE):} $C^+$ is the $D_5$ half-spin orbit, $R_4=$ Clebsch, $\operatorname{Aut}=W(D_5)$,
 $|E(R_4)|=40=|R(D_5)|$ --- Theorem 2.
-\emph{Stage 2 ($A_3$, \tI):} the carrier geometry fixes $X_f^\circ=\mathbb P^1\setminus\mu_4$ with
+\emph{Stage 2 ($A_3$, \mE):} the carrier geometry fixes $X_f^\circ=\mathbb P^1\setminus\mu_4$ with
 $H_1(X_f^\circ,\mathbb Z)=\mathbb Z^3$ and a rigid $D_4\subset PGL_2$ generated by $z\mapsto iz$ and
 $z\mapsto 1/z$. The logarithmic forms $\omega_i=dz/(z-p_i)$ regular at infinity span $H^1$ by their
 differences, dual under the residue pairing to the puncture loops $\gamma_i$ with $\operatorname{Res}(\omega_i,\gamma_j)=\delta_{ij}$;
@@ -2192,7 +2177,7 @@ puncture-difference cycles $\gamma_i-\gamma_j$ are exactly the $A_3$ roots:
   \boxed{\ \begin{aligned}
     &\{\gamma_i-\gamma_j\}_{i\ne j}:\ \#=12=|R(A_3)|=\dimg,\quad \operatorname{rank}=3=\Nfam,\\
     &\text{Gram}=\text{Cartan}(A_3),\ \det=4
-  \end{aligned}\ }\qquad\tI ,
+  \end{aligned}\ }\qquad\mE ,
 \end{equation}
 with $\dim A_3=15=\dim S^+-1$, and the $A_3$ positive roots equal the exponent sum $1{+}2{+}3=6=Z_6=|E(K_4)|$.
 \emph{The corner rotation realises the $A_3$ Coxeter element.} The carrier generator $z\mapsto iz$
@@ -2200,18 +2185,18 @@ permutes $\mu_4$ as the $4$-cycle $(p_1p_2p_3p_4)\in S_4=W(A_3)$ and acts on $H^
 isometry of the Cartan form with
 \begin{equation}
   \boxed{\ \text{ord}=4=h(A_3)=|\mu_4|,\quad \text{spec}=\{i,-1,-i\},\quad
-  \chi(t)=\tfrac{t^4-1}{t-1}=\Phi_4(t)\Phi_2(t)\ }\qquad\tI ,
+  \chi(t)=\tfrac{t^4-1}{t-1}=\Phi_4(t)\Phi_2(t)\ }\qquad\mE ,
 \end{equation}
 i.e.\ the eigenvalues are the $A_3$ exponents $\{1,2,3\}$ as fourth roots of unity --- the exact analogue
 of the $E_8$ Coxeter element reading $\Phi_{30}$. The full $D_4=\langle z\mapsto iz,z\mapsto1/z\rangle$
-embeds in $W(A_3)=S_4$ (order $8$, index $3$) by isometries. \emph{Stage 3 (standard, \tI):} assemble
+embeds in $W(A_3)=S_4$ (order $8$, index $3$) by isometries. \emph{Stage 3 (standard, \mE):} assemble
 $E_8$ from the $D_5\times A_3$ branching --- no $240$-map required.
 
 \noindent\textbf{The $\mu_4$ glue theorem (why the four corners appear everywhere).} The two factors
 have equal discriminant groups, and $E_8$ is unimodular:
 \begin{equation}
   \boxed{\ \operatorname{disc}(D_5)=\operatorname{disc}(A_3)=\mathbb Z_4,\qquad
-  [\,E_8:D_5\oplus A_3\,]=\sqrt{\tfrac{\det D_5\cdot\det A_3}{\det E_8}}=\sqrt{\tfrac{4\cdot4}{1}}=4=|\mu_4|\ }\qquad\tI .
+  [\,E_8:D_5\oplus A_3\,]=\sqrt{\tfrac{\det D_5\cdot\det A_3}{\det E_8}}=\sqrt{\tfrac{4\cdot4}{1}}=4=|\mu_4|\ }\qquad\mE .
 \end{equation}
 So $E_8=(D_5\oplus A_3)+\mu_4$-\emph{glue}: the four family corners $\mu_4=\mathbb Z_4$ are precisely the
 glue code that fuses the carrier and the family into the unimodular $E_8$ lattice. The glue pairs the
@@ -2225,7 +2210,7 @@ generators carry the discriminant quadratic form $q\in\mathbb Q/2\mathbb Z$:
     &q(D_5)=\tfrac{n}{4}\big|_{n=5}=\tfrac54\ (\text{spinor class}),\quad
     q(A_3)=\tfrac{n}{n+1}\big|_{n=3}=\tfrac34\ (\text{corner class}),\\
     &q(D_5)+q(A_3)=2\equiv0\!\!\pmod 2,\qquad q(D_5)-q(A_3)=\tfrac12
-  \end{aligned}\ }\qquad\tI .
+  \end{aligned}\ }\qquad\mE .
 \end{equation}
 The diagonal $\langle(s,g)\rangle\cong\mathbb Z_4$ is isotropic ($k^2\cdot2\equiv0$ for all $k$), so the
 glue closes to an \emph{even unimodular} lattice --- this is $E_8$.
@@ -2253,12 +2238,12 @@ literally the $E_8$ spinor-root norm $\tfrac12(\pm)^8$ split across $D_5\times D
 $5\cdot\tfrac14+3\cdot\tfrac14=2$. Strikingly, both norms are pre-existing TFPT constants:
 \begin{equation}
   \boxed{\ \frac{\dtwo}{\dtop^2}=\frac{2880\,\cthree^8}{(48\,\cthree^4)^2}=\frac54=q(D_5),\qquad
-  \xi_{\mathrm{tree}}=\frac{\dimg}{\dim S^+}=\frac{12}{16}=\frac34=q(A_3)\ }\qquad\tI ,
+  \xi_{\mathrm{tree}}=\frac{\dimg}{\dim S^+}=\frac{12}{16}=\frac34=q(A_3)\ }\qquad\mE ,
 \end{equation}
 so $\dtwo/\dtop^2+\xi_{\mathrm{tree}}=2$: the two-loop/defect ratio is the $D_5$ spinor norm and the
 gravitational tree normalization is the $A_3$ corner norm, and their sum is the $E_8$ root norm.
 
-\begin{keybox}[The whole integer skeleton from one pair $(\gcar,\Nfam)=(5,3)$ \tI\ (\veri{v53\_compiler\_core.py})]
+\begin{keybox}[The whole integer skeleton from one pair $(\gcar,\Nfam)=(5,3)$ \mE\ (\veri{v53\_compiler\_core.py})]
 Every load-bearing integer of the compiler flows from the single boundary pair
 $(\gcar,\Nfam)=(5,3)$ by sum, difference and squares:
 \[
@@ -2285,7 +2270,7 @@ $8=\operatorname{rank}E_8$, and the seed $\tfrac1{6\pi}$, $6=|R^+(A_3)|$); every
 $(5,3)$-generated integer skeleton.
 \end{keybox}
 
-\begin{keybox}[Boundary Carrier Selection Theorem (Theorem A) \tL/\tP]
+\begin{keybox}[Boundary Carrier Selection Theorem (Theorem A) \mE/\mC]
 $E_8$ is not assumed: it is \emph{selected} as the unique even-unimodular audit hull of the admissible
 boundary-carrier data. \textbf{Boundary side:} $\mu_4=\{1,i,-1,-i\}$ gives $X_f=\PP^1\setminus\mu_4$ with
 $H_1=\Z^3$, hence $A_3$ and $\Nfam=3$. \textbf{Carrier side:} a minimal $D$-type carrier with a $16$-dim
@@ -2300,8 +2285,8 @@ rank-$8$ lattice. \textbf{Exclusion:} the four conditions
 are met \emph{only} by $D_5\oplus A_3$; $D_8$ (non-cyclic $\Z_2{\times}\Z_2$, no family geometry),
 $E_7{\oplus}A_1$ ($1$ family, no $16$-spinor), $E_6{\oplus}A_2$ ($2$ families, $\Z_3$), $A_4{\oplus}A_4$
 (no $D$-spinor, $\Z_5$) and $A_8$ (single factor) each fail at least one. \textbf{Typing:} the
-lattice/classification facts are \tL; the physical selection (reflection-positive seam $\cthree=1/8\pi$ +
-minimal chiral carrier $\Rightarrow$ exactly these inputs) is the \tP/\tA\ selection axiom (P1 analytic
+lattice/classification facts are \mE; the physical selection (reflection-positive seam $\cthree=1/8\pi$ +
+minimal chiral carrier $\Rightarrow$ exactly these inputs) is the \mC/\mO\ selection axiom (P1 analytic
 interface $+$ P2 carrier interface), not a zero-input derivation. \veri{v47\_selection\_theorem.py}
 \end{keybox}
 
@@ -2309,7 +2294,7 @@ interface $+$ P2 carrier interface), not a zero-input derivation. \veri{v47\_sel
 group statement, because both factors share the \emph{same} centre and $\mu_4$ \emph{is} the diagonal:
 \begin{equation}
   \boxed{\ Z(\mathrm{Spin}(10))=\mathbb Z_4,\quad Z(SU(4))=\mathbb Z_4,\quad |\mu_4|=4,\quad
-  G_{\mathrm{closure}}=\frac{\mathrm{Spin}(10)\times SU(4)}{\Delta\mathbb Z_4}\subset E_8\ }\qquad\tI ,
+  G_{\mathrm{closure}}=\frac{\mathrm{Spin}(10)\times SU(4)}{\Delta\mathbb Z_4}\subset E_8\ }\qquad\mE ,
 \end{equation}
 with $\operatorname{rank}=5+3=8=\operatorname{rank}E_8$. Every adjoint block is diagonal-$\mathbb Z_4$
 neutral (generator $\omega=i$; charges mod $4$): $(45,1),(1,15)\!:\!0$; $(10,6)\!:\!2{+}2{=}0$;
@@ -2338,7 +2323,7 @@ $D_5\oplus A_3=D_5\oplus D_3\subset D_8$ and adjoining the even spinor coset (th
 $240$ roots are produced explicitly and verified:
 \begin{equation}
   \boxed{\ \{\pm e_i\pm e_j\}_{i<j}^{8}\ (112)\ \cup\ \{\tfrac12(\pm)^8:\ \text{even}\}\ (128)
-  \ =\ 240\ \text{roots, all norm }2,\ \text{Cartan }\det=1\ }\qquad\tL .
+  \ =\ 240\ \text{roots, all norm }2,\ \text{Cartan }\det=1\ }\qquad\mE .
 \end{equation}
 Splitting each root into its $D_5$ (first five) and $A_3$ (last three) parts gives exactly the
 branching blocks --- $(2,0)\!:\!40$, $(0,2)\!:\!12$, $(1,1)\!:\!60$, and $(\tfrac54,\tfrac34)\!:\!128$ ---
@@ -2353,7 +2338,7 @@ The transcendental geometric metric $G_{ij}=-\log|p_i-p_j|$ on $\mu_4$ has been 
 $D_4$-symmetric, with a regularisation-independent anisotropy $-\log2$ on the root space, hence
 \emph{not} proportional to $\mathrm{Cartan}(A_3)$. It need not be: the $E_8$-relevant $A_3$ is the
 canonical \emph{residue} pairing, and the geometric metric is a $D_4$-equivariant deformation that
-preserves the root system, Weyl group and Coxeter element. So the lattice data is exact \tI; the
+preserves the root system, Weyl group and Coxeter element. So the lattice data is exact \mE; the
 analytic metric is a \emph{characterised} deformation, not an open gap.
 \end{remark}
 
@@ -2363,7 +2348,7 @@ two TFPT Coxeter numbers are themselves carrier data:
   \boxed{\ \begin{aligned}
     &h(D_5)=8=r(E_8)=\varphi(30),\quad h(A_3)=4=|\mu_4|,\\
     &h(D_5)\,h(A_3)=2^{\gcar}=32,\quad 2^{\gcar}-2=30=h(E_8)
-  \end{aligned}\ }\qquad\tI ,
+  \end{aligned}\ }\qquad\mE ,
 \end{equation}
 so the Coxeter closure of Theorem 3 reappears as $h(E_8)=h(D_5)h(A_3)-2$, and
 $h(D_5)+h(A_3)=12=\dimg=|R(A_3)|$.
@@ -2376,7 +2361,7 @@ $h(D_5)+h(A_3)=12=\dimg=|R(A_3)|$.
 The parabolic flavor bundle $E_\bullet=\mathcal O(-2)\oplus\mathcal O(-1)^2$ on $\mathbb P^1\setminus\mu_4$
 has splitting type $a=(1,1,2)$, whose power sums $p_n(a)=2+2^n$ generate the whole compiler budget:
 
-\begin{keybox}[The anchor power compiler]
+\par\medskip\noindent\textbf{The anchor power compiler.}
 \[
   (p_1,\dots,p_5)=(4,6,10,18,34)=\bigl(|\mu_4|,\,|R^+(A_3)|,\,\AL,\,\Nfam|R^+(A_3)|,\,\text{$\mathbb Z_6$ lift}\bigr),
 \]
@@ -2389,7 +2374,6 @@ has splitting type $a=(1,1,2)$, whose power sums $p_n(a)=2+2^n$ generate the who
 The elementary symmetric data $\chi_a(t)=(t-1)^2(t-2)$ give $(e_1,e_2,e_3)=(4,5,2)=(|\mu_4|,\gcar,|\mathbb Z_2|)$,
 so the anchor reconstructs the carrier rank, and $10b_1=e_1^2+e_2^2=4^2+5^2=41$. The seed itself is the
 two-term anchor form $\phiz=\tfrac{2p_1}{p_2}\cthree+2p_1p_2\,\cthree^4=\tfrac43\cthree+48\cthree^4$.
-\end{keybox}
 
 \noindent\textbf{The $\varphi_0$-ladder.} With $\lambda_Y=\sqrt{\phiz(1-\phiz)}$, every fermion mass is the
 single closed form $\hat m_{f,j}=\tfrac{v_{\mathrm{geo}}}{\sqrt2}\lambda_Y^{L_{f,j}}\Lambda_{f,j}$ with
@@ -2405,41 +2389,39 @@ companion note \texttt{e8\_secondary\_branching\_atlas} as a falsifiable audit r
 \section*{Master statement and status}
 % =====================================================================
 \addcontentsline{toc}{section}{Master statement}
-\begin{keybox}[One line]
-\[
-  \boxed{\ \text{Five carrier slots give }D_5,\ \text{four family corners give }A_3,\ \text{and }D_5\times A_3\text{ gives the }E_8\text{ atlas.}\ }
-\]
-Equivalently: $\AL=\tfrac{h}{\Nfam}=10=\binom52$, $h=30=2\cdot3\cdot5$, $(5,3,2):\ \sum=10,\ \prod=30$;
+\begin{keyeq}
+Five carrier slots give $D_5$,\ four family corners give $A_3$,\ and $D_5\times A_3$ gives the $E_8$ atlas.
+\end{keyeq}
+\noindent Equivalently: $\AL=\tfrac{h}{\Nfam}=10=\binom52$, $h=30=2\cdot3\cdot5$, $(5,3,2):\ \sum=10,\ \prod=30$;
 $\Lambda$, $\det M_\ell$, the $E_8$ Coxeter structure and the action ladder read the same five-slot
 pair-decuple. The Standard model, flavor, $\Lambda$, inflation and $E_8$ are projections of the
 even carrier code $C^+$ ($=D_5$ half-spinor) on five slots together with the four-point family $A_3$.
-\end{keybox}
 
 \begin{center}\small
 \begin{tabularx}{\linewidth}{@{}p{0.52\linewidth}p{0.10\linewidth}Y@{}}
 \toprule
 Statement & Status & Note \\
 \midrule
-Even code $C^+$, $\dim S^+=16$, dual-root $Y$ & \tI & Theorem 1 \\
-Exterior--Action duality $(1,10,5)\!\leftrightarrow\!(1,5,10)$ & \tI & scheme eigenvalues verified \\
-$R_4=$ Clebsch $(16,5,0,2)$, $R_2=(16,10,6,6)$; $\operatorname{Aut}_{\mathrm{aff}}=W(D_5)=1920$ & \tI & carrier $=D_5$ half-spinor \\
-$2^g-2=g(g+1)\Leftrightarrow g=5$ & \tI & Coxeter closure (unique) \\
-$h{=}30{=}2{\cdot}3{\cdot}5$, $r{=}\varphi(30){=}8$, $\chi_C{=}\Phi_{30}$ & \tI/\tP & cyclotomic compiler \\
-$|R^+|=\binom{16}{2}=\operatorname{Tr}X^2=4h=120$ & \tI & positive-edge moment \\
-$40,60,120,240=10\cdot(4,6,12,24)$; $41{=}1{+}4{\cdot}10$ & \tI & $K_5\times K_4$ product table \\
-$10b_1{=}5r{+}1$, $u$ totient, $M_{\mathrm{scal}}^2{=}\cthree^{r-1}$, $\omega_b{=}\lC/10$ & \tI/\tP & downstream readouts \\
-$A_s=N_\star^2\cthree^7/24\pi^2$ & \tP/\tA & if $M_{\mathrm{scal}}=M_{\mathrm{Star}}$ \\
-$\mathfrak e_8=(45,1)\oplus(1,15)\oplus(10,6)\oplus(16,4)\oplus(\overline{16},\overline4)$ & \tI/\tP & $D_5\times A_3$ lift \\
-$240$ roots built from $D_5{\oplus}A_3{+}\mu_4$ glue, $\det 1$ & \tL & explicit $E_8$ construction \\
-flavor $\sum L{=}40{=}|R(D_5)|$, entries on $C_6{=}|R^+(A_3)|$ & \tI & transport $=D_5{\times}A_3$ \\
-$A_3$ from $\mathbb P^1\setminus\mu_4$: residue pairing $=$ Cartan, $\det 4$ & \tI & Stage 2 (Theorem 7) \\
-corner $z\mapsto iz=$ $A_3$ Coxeter el.: $\{i,-1,-i\}$, $\Phi_4\Phi_2$ & \tI & order $4=h(A_3)=|\mu_4|$ \\
-$\operatorname{disc}(D_5)=\operatorname{disc}(A_3)=\mathbb Z_4$, glue $=\mu_4$ & \tI & $E_8=(D_5{\oplus}A_3){+}\mu_4$ \\
-$q(D_5){=}\tfrac54{=}\dtwo/\dtop^2$, $q(A_3){=}\tfrac34{=}\xi_{\mathrm{tree}}$, sum $2$ & \tI & discriminant-norm glue \\
-$120{=}\dim\mathfrak{so}_{16}$; $\Oadm{=}40{+}1{+}7$ & \tI & adjoint half; deficit ladder \\
-$h(D_5){=}8{=}r(E_8)$, $h(A_3){=}4{=}|\mu_4|$, $|R|{=}h\cdot r$ & \tI & uniform Coxeter law \\
-$\operatorname{Exp}(E_8)$ as $41/48$ budget deficits & \tA & exponent ledger (fingerprint) \\
-geometric metric $D_4$-deform (anisotropy $-\log2$), residue $=A_3$ & \tI & metric computed/characterised \\
+Even code $C^+$, $\dim S^+=16$, dual-root $Y$ & \mE & Theorem 1 \\
+Exterior--Action duality $(1,10,5)\!\leftrightarrow\!(1,5,10)$ & \mE & scheme eigenvalues verified \\
+$R_4=$ Clebsch $(16,5,0,2)$, $R_2=(16,10,6,6)$; $\operatorname{Aut}_{\mathrm{aff}}=W(D_5)=1920$ & \mE & carrier $=D_5$ half-spinor \\
+$2^g-2=g(g+1)\Leftrightarrow g=5$ & \mE & Coxeter closure (unique) \\
+$h{=}30{=}2{\cdot}3{\cdot}5$, $r{=}\varphi(30){=}8$, $\chi_C{=}\Phi_{30}$ & \mE/\mC & cyclotomic compiler \\
+$|R^+|=\binom{16}{2}=\operatorname{Tr}X^2=4h=120$ & \mE & positive-edge moment \\
+$40,60,120,240=10\cdot(4,6,12,24)$; $41{=}1{+}4{\cdot}10$ & \mE & $K_5\times K_4$ product table \\
+$10b_1{=}5r{+}1$, $u$ totient, $M_{\mathrm{scal}}^2{=}\cthree^{r-1}$, $\omega_b{=}\lC/10$ & \mE/\mC & downstream readouts \\
+$A_s=N_\star^2\cthree^7/24\pi^2$ & \mC/\mO & if $M_{\mathrm{scal}}=M_{\mathrm{Star}}$ \\
+$\mathfrak e_8=(45,1)\oplus(1,15)\oplus(10,6)\oplus(16,4)\oplus(\overline{16},\overline4)$ & \mE/\mC & $D_5\times A_3$ lift \\
+$240$ roots built from $D_5{\oplus}A_3{+}\mu_4$ glue, $\det 1$ & \mE & explicit $E_8$ construction \\
+flavor $\sum L{=}40{=}|R(D_5)|$, entries on $C_6{=}|R^+(A_3)|$ & \mE & transport $=D_5{\times}A_3$ \\
+$A_3$ from $\mathbb P^1\setminus\mu_4$: residue pairing $=$ Cartan, $\det 4$ & \mE & Stage 2 (Theorem 7) \\
+corner $z\mapsto iz=$ $A_3$ Coxeter el.: $\{i,-1,-i\}$, $\Phi_4\Phi_2$ & \mE & order $4=h(A_3)=|\mu_4|$ \\
+$\operatorname{disc}(D_5)=\operatorname{disc}(A_3)=\mathbb Z_4$, glue $=\mu_4$ & \mE & $E_8=(D_5{\oplus}A_3){+}\mu_4$ \\
+$q(D_5){=}\tfrac54{=}\dtwo/\dtop^2$, $q(A_3){=}\tfrac34{=}\xi_{\mathrm{tree}}$, sum $2$ & \mE & discriminant-norm glue \\
+$120{=}\dim\mathfrak{so}_{16}$; $\Oadm{=}40{+}1{+}7$ & \mE & adjoint half; deficit ladder \\
+$h(D_5){=}8{=}r(E_8)$, $h(A_3){=}4{=}|\mu_4|$, $|R|{=}h\cdot r$ & \mE & uniform Coxeter law \\
+$\operatorname{Exp}(E_8)$ as $41/48$ budget deficits & \mO & exponent ledger (fingerprint) \\
+geometric metric $D_4$-deform (anisotropy $-\log2$), residue $=A_3$ & \mE & metric computed/characterised \\
 \bottomrule
 \end{tabularx}
 \end{center}
@@ -2448,7 +2430,7 @@ geometric metric $D_4$-deform (anisotropy $-\log2$), residue $=A_3$ & \tI & metr
 (the P1 hardening chain) or the carrier rigidity theorem (Lean), and it makes no claim of a final theory. The
 arithmetic and the $D_5$/Clebsch/$W(D_5)$, $A_3$/residue-Cartan/Coxeter, and $\mu_4$-glue
 identifications are exact, and the $E_8$ lattice is now built explicitly from $D_5\oplus A_3$ plus the
-$\mu_4$ glue ($240$ roots, $\det1$). The only residual \tP\ is the analytic identification of the carrier geometry's
+$\mu_4$ glue ($240$ roots, $\det1$). The only residual \mC\ is the analytic identification of the carrier geometry's
 $L^2$ cusp Hodge metric with the canonical residue metric up to scale, which does not affect the
 explicit root/lattice/Weyl construction. Honest non-fits (Koide $0.6645\neq2/3$, $\eta_B$, $m_p/m_e$)
 stay outside the compiler.
@@ -2471,11 +2453,11 @@ $[\,E_8:D_5\oplus A_3\,]=\sqrt{4\cdot4/1}=4=|\mu_4|$, with discriminant-form nor
 $q(A_3)=\tfrac34$, $q(D_5)+q(A_3)=2\equiv0\pmod 2$ (even-glue). Writing $\mu:=|\mu_4|=4$ the norms are
 $q(D_5)=\tfrac{\mu+1}{\mu}$, $q(A_3)=\tfrac{\mu-1}{\mu}$, so $q(D_5)q(A_3)=1-\tfrac1{\mu^2}=\tfrac{15}{16}$ and
 \begin{equation}
-  \boxed{\ \dim S^+\bigl(1-q(D_5)q(A_3)\bigr)=16\cdot\tfrac1{16}=1\ }\qquad\tI ,
+  \boxed{\ \dim S^+\bigl(1-q(D_5)q(A_3)\bigr)=16\cdot\tfrac1{16}=1\ }\qquad\mE ,
 \end{equation}
 i.e.\ the glue product fills all $15=\dim S^+{-}1$ non-trivial half-spin states and the defect is exactly
 the singleton (the $\nu^c$/Higgs closure). And $E_8$ has a tidy $\mu_4$-cardinal form,
-$\dim E_8=\binom{|\mu_4|^2}{2}+2|\mu_4|^3=\binom{16}{2}+2\cdot64=120+128=248$ \tP.
+$\dim E_8=\binom{|\mu_4|^2}{2}+2|\mu_4|^3=\binom{16}{2}+2\cdot64=120+128=248$ \mC.
 
 \smallskip
 \noindent\textbf{Explicit roots.} Split $\mathbb R^8=\mathbb R^5_{(D_5)}\oplus\mathbb R^3_{(A_3)}$. The
@@ -2497,7 +2479,7 @@ $\alpha_1=\tfrac12(e_1{-}e_2{-}\dots{-}e_7{+}e_8)$, $\alpha_2=e_1{+}e_2$, and
 $\alpha_{k}=e_{k-1}{-}e_{k-2}$ for $k=3,\dots,8$ (so $\alpha_3=e_2{-}e_1,\ \alpha_4=e_3{-}e_2,\ \dots,\ \alpha_8=e_7{-}e_6$),
 the Gram matrix $G_{ij}=\langle\alpha_i,\alpha_j\rangle$ is the $E_8$ Cartan matrix with $\det G=1$ and
 all $G_{ii}=2$; every one of the $240$ roots is an integer combination of the $\alpha_i$. Hence the
-assembled lattice is $E_8$, not merely a $240$-count. \tF\ (The shifted index $e_{k-2}{-}e_{k-3}$ would
+assembled lattice is $E_8$, not merely a $240$-count. \mE\ (The shifted index $e_{k-2}{-}e_{k-3}$ would
 duplicate $\alpha_3$ and make $G$ singular --- use $e_{k-1}{-}e_{k-2}$.)
 
 \clearpage
@@ -2569,14 +2551,14 @@ $8=\operatorname{rank}E_8$, each decisive (a single-unit change misses by $\sim1
 \textbf{fine test of one norm}, the carrier discriminant exponent $-\tfrac54=q(D_5)$ (seventh digit). The
 equation is therefore \emph{not} freely tunable to $137.036$: the two integers that hit it are exactly the
 compiler/bootstrap numbers, fixed elsewhere. What it does \emph{not} do is pin the carrier norm strongly
---- that is honest, and it is the right level of claim. \tN
+--- that is honest, and it is the right level of claim. \mE
 \end{keybox}
 
 % =====================================================================
 \section*{Appendix: computational verification}
 \addcontentsline{toc}{section}{Appendix: computational verification}
 % =====================================================================
-The load-bearing identities of this document (marked \tI, \tL, \tN) are re-derived from
+The load-bearing identities of this document (marked \mE, \mE, \mE) are re-derived from
 $\{\cthree,\gcar\}$ alone and machine-checked by the suite in the repository folder
 \texttt{verification/}; the inline tags \texttt{[verification/$\dots$]} point to the exact script.
 Relevant here:

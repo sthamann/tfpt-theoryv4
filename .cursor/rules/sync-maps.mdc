@@ -1,0 +1,57 @@
+---
+description: Use the generated content maps + audit_sync to find and verify every surface a change touches
+alwaysApply: true
+---
+
+# Sync maps — the agentic "what else must move?" check
+
+The repo generates two machine-readable content maps (committed, refreshed by
+`bash build.sh gen`). They exist so that an agent NEVER has to guess which
+surfaces a change touches — consult them FIRST, before editing, and use the
+audit as the exit gate.
+
+## The maps
+
+- `verification/docs_map.csv` — one row per paper section (without physically
+  splitting the papers): `doc, kind, title, line_start, line_end, scripts, hash,
+  last_changed`. The `scripts` column lists every `vN_*.py` cited in that
+  section; `last_changed` is the date the section's content hash last changed.
+- `verification/website_map.csv` — one row per website file that mentions a
+  script or document: `file, scripts, docs`.
+- Both are GENERATED — never edit them; re-run `bash build.sh gen` after any
+  paper or website edit so they stay fresh (the audit fails on stale maps).
+
+## Agentic procedure when a result/status/script changes
+
+1. **Enumerate the paper surfaces**: `grep <vN_script> verification/docs_map.csv`
+   → every (doc, section, line range) that cites the script. Open exactly those
+   sections and update them. Sections with related content but no citation can
+   be found via the section titles in the map (read it like a global table of
+   contents with freshness dates).
+2. **Enumerate the website surfaces**: `grep <vN_script> verification/website_map.csv`
+   and `grep <doc-name> verification/website_map.csv` → every website file that
+   mirrors the affected content (`papers.ts` sections, DAG nodes, status
+   components, …). Update those in the same change.
+3. **Regenerate**: `bash build.sh gen` (maps + script index), recompile touched
+   docs, `bash build.sh website` if PDFs/scripts changed.
+4. **Gate**: `bash build.sh audit` must end `AUDIT OK`. It enforces (both
+   directions): suite ↔ run_all ↔ registry ↔ ledger; citations in paper BODIES;
+   no stale `\veri`/`\vref` targets; changelog entry for every new module;
+   byte-identical website mirror + release hashes + version stamps; overfull
+   boxes. Never "fix" an audit failure by adding to
+   `verification/audit_baseline.json` — that file is frozen (remove-only).
+
+## Version + date surfaces (single source)
+
+- Bump `\TFPTversion` ONLY in `tex-artefacts/version.tex`. `bash build.sh
+  website` propagates it (+ today's date + git revision) into
+  `website/lib/version.ts` (shown in the site header) and into the
+  `lib/release.ts` COMMON block. Never hand-edit those two targets.
+
+## When the structure itself changes
+
+- New paper/document: add it to `NOTES` in `build.sh`, `DOCS` in
+  `verification/make_docs_map.py`, `make_manifest.py` TEX list,
+  `tex-artefacts/tfpt_docset.tex`, and the website (`papers.ts`,
+  `lib/release.ts` entry) — then `bash build.sh release`.
+- New script cluster: add a row to `verification/script_clusters.csv`.

@@ -46,7 +46,13 @@ def _lean_read_dir():
 LEAN_DIR = _lean_read_dir()                        # repo path (where the files actually live)
 
 TEX = [
-    "introduction.tex", "tfpt_docset.tex", "tfpt_style.tex", "tfpt_status.tex", "tfpt_figures.tex", "changelog.tex",
+    "introduction.tex", "changelog.tex",
+    # shared, imported fragments now live in tex-artefacts/
+    # (the auto-generated tex-artefacts/version-auto.tex is gitignored and excluded)
+    "tex-artefacts/tfpt_docset.tex", "tex-artefacts/tfpt_style.tex",
+    "tex-artefacts/tfpt_status.tex", "tex-artefacts/tfpt_figures.tex",
+    "tex-artefacts/verification.tex", "tex-artefacts/version.tex",
+    "tex-artefacts/predictions.tex",
     "tfpt_1_architecture_e8.tex", "tfpt_2_standard_model.tex",
     "tfpt_3_e8_audit_bootstrap.tex", "tfpt_4_frontier.tex", "tfpt_5_redteam.tex",
     "tfpt_horizon_readouts.tex", "tfpt_research_contracts.tex",

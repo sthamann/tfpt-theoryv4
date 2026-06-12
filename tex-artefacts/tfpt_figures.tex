@@ -99,22 +99,28 @@
 \end{center}}
 
 % ===== B7: the K5 action-lattice mnemonic ========================
+%  Layout: complete graph K5 (pentagon, all 10 edges) on the LEFT, the
+%  Pascal-row reading list on the RIGHT, vertically centred on the graph
+%  so the two blocks never overlap.
 \newcommand{\TFPTactionkfive}{%
 \begin{center}
 \begin{tikzpicture}[font=\scriptsize]
-  \foreach \i in {1,...,5}{\coordinate (k\i) at ({90+72*(\i-1)}:14mm);}
+  % --- K5 vertices on a regular pentagon, centred at the origin ---
+  \foreach \i in {1,...,5}{\coordinate (k\i) at ({90+72*(\i-1)}:12mm);}
   \begin{scope}[on background layer]
     \foreach \i in {1,...,5}{\foreach \j in {1,...,5}{\ifnum\i<\j
-      \draw[tfgray!55] (k\i)--(k\j);\fi}}
+      \draw[tfgray!55,line width=0.5pt] (k\i)--(k\j);\fi}}
   \end{scope}
-  \foreach \i in {1,...,5}{\fill[tfblue!70!black] (k\i) circle (1.6pt);}
-  \node[right=12mm of k1,align=left,font=\scriptsize] {%
-    $\binom51=5$\ vertices --- action $x^1$ (Hubble slot)\\
-    $\binom52=10$\ edges --- $\Lambda$ density pair $x^{10}$\\
-    $\binom53=10$\ triangles --- dual sector\\
-    $\binom54=5$\ complements --- inverse sector\\
-    $\binom55=1$\ determinant --- closure};
+  \foreach \i in {1,...,5}{\fill[tfblue!70!black] (k\i) circle (1.8pt);}
+  \node[tfgray,font=\scriptsize\itshape] at (0,-1.9) {$K_5$};
+  % --- reading list, anchored to the right of the whole graph, centred ---
+  \node[anchor=west,align=left,inner sep=0pt] at (1.9cm,0) {%
+    $\tbinom51=5$\ \ vertices --- action $x^1$ (Hubble slot)\\[1pt]
+    $\tbinom52=10$\ edges --- $\Lambda$ density pair $x^{10}$\\[1pt]
+    $\tbinom53=10$\ triangles --- dual sector\\[1pt]
+    $\tbinom54=5$\ \ complements --- inverse sector\\[1pt]
+    $\tbinom55=1$\ \ determinant --- closure};
 \end{tikzpicture}\\[2pt]
 {\scriptsize\itshape $K_5$ on the five carrier slots; the action powers $x^{1},x^{5},x^{10}$ are its
-$\binom5k$ faces \ \textcolor{tfgray}{(mnemonic; the physical scale map stays [P]).}}
+$\tbinom5k$ faces \ \textcolor{tfgray}{(mnemonic; the physical scale map stays [P]).}}
 \end{center}}

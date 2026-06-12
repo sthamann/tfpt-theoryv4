@@ -19,7 +19,7 @@
 \usepackage[hidelinks,colorlinks=true,linkcolor=blue!55!black,urlcolor=blue!55!black]{hyperref}
 \emergencystretch=3em
 
-\input{tfpt_style}
+\input{tex-artefacts/tfpt_style}
 \newcommand{\cthree}{c_3}
 \newcommand{\vgeo}{v_{\mathrm{geo}}}
 \newcommand{\Mpl}{\bar M_{\mathrm{Pl}}}
@@ -30,23 +30,23 @@
 
 \title{\vspace{-1.2cm}\textbf{TFPT --- Red Team / Stress Test layer}\\[2mm]
 \large Five adversarial targets (A--E): try to \emph{break} the reductions, not confirm them}
-\author{}\date{\today}
+\author{\TFPTauthors}\date{\TFPTdatestamp}
 
 \def\TFPTdoctitle{Red Team}
 \begin{document}
 \maketitle
 
-\input{tfpt_docset}
+\input{tex-artefacts/tfpt_docset}
 \noindent\textbf{You are reading \textbf{document~5} (Red Team).}
 
-\input{tfpt_status}
+\input{tex-artefacts/tfpt_status}
 \TFPTbadges
 \TFPTclaimstack[none]
 
 \vspace{-0.6cm}
 
 \begin{keybox}[What this note is]
-This is the deliberately \emph{adversarial} layer requested in the v78 review. Its purpose is
+This is the deliberately \emph{adversarial} layer requested in the \vref{v78} review. Its purpose is
 \textbf{not} to confirm TFPT but to attack the five load-bearing reductions at their weakest
 logical transitions. Each target is run through one fixed protocol --- minimal statement,
 assumptions, logical chain, validity conditions, counterexample search, limiting/degenerate
@@ -91,7 +91,7 @@ $(D5)_1\times(A3)_1$.\veri{redteam/rt\_A\_e8net.py}
 
 \smallskip\noindent\textbf{Logical chain (established).} The Sugawara level-1 central charges are
 $c(E8)_1=\tfrac{248}{31}=8$, $c(D5)_1=5=\gcar$, $c(A3)_1=3=\Nfam$, so the conformal-embedding
-criterion $c_{\mathrm{coset}}=c(E8)-c(D5)-c(A3)=0$ holds \tI. This is \emph{compatibility}.
+criterion $c_{\mathrm{coset}}=c(E8)-c(D5)-c(A3)=0$ holds \mE. This is \emph{compatibility}.
 
 \begin{gapbox}[Where it breaks: central charge underdetermines the net]
 Counterexample: $(D8)_1=SO(16)_1$ also has $c=\tfrac{120}{15}=8$, but is \emph{not} holomorphic
@@ -106,13 +106,13 @@ reconstruction are not established; the gap $\Delta_{\mathrm{eff}}>0$ \emph{supp
 
 \noindent\textbf{Verdict.} Keep ``reduced to a rigorous boundary-net identification problem''; do
 \emph{not} write ``metric sector closed''. The red team confirms the conservative wording. Status
-\tP. Residual: holomorphy proof $+$ constructive boundary map $+$ bulk-reconstruction uniqueness.
+\mC. Residual: holomorphy proof $+$ constructive boundary map $+$ bulk-reconstruction uniqueness.
 
 % =====================================================================
 \section*{Target B --- carrier rank / the Pascal condition}\label{sec:B}
 % =====================================================================
 \noindent\textbf{Minimal formal claim.} $2^{g}=g^2+g+2$ has the unique solution $g=5$ (Lean-verified
-\tF). This arithmetic is \emph{not} attacked. The attack is upstream: why must the carrier obey the
+\mE). This arithmetic is \emph{not} attacked. The attack is upstream: why must the carrier obey the
 Pascal half-spinor exhaustion $2^{g-1}=\binom{g}{0}+\binom{g}{1}+\binom{g}{2}$?\veri{redteam/rt\_B\_pascal.py}
 
 \begin{keybox}[Where it narrows: the rule, not the arithmetic, selects 5]
@@ -126,7 +126,7 @@ postulate, not a theorem.
 \end{keybox}
 
 \noindent\textbf{Verdict.} Theorem A's arithmetic core stands; the Pascal \emph{selection} must be
-typed \tA/\tP, not \tI. Residual: a boundary/seam derivation of half-spinor exhaustion.
+typed \mO/\mC, not \mE. Residual: a boundary/seam derivation of half-spinor exhaustion.
 
 % =====================================================================
 \section*{Target C --- $k=\cthree/2$ and the seam-area coefficient}\label{sec:C}
@@ -142,12 +142,12 @@ The only legal chain is
   S=4\pi\,k_{\mathrm{phys}}A_{\mathrm{phys}}=\tfrac{A_{\mathrm{phys}}}{4G}.
 \]
 The forbidden form $k_{\mathrm{phys}}=\cthree/2$ is dimensionally false (legal only at $G=1$). A
-scan of \texttt{v67/v68/v73} finds every $\cthree/2$ used as the \emph{reduced} coefficient and
+scan of \texttt{v67/\vref{v68}/v73} finds every $\cthree/2$ used as the \emph{reduced} coefficient and
 \textbf{zero} naked dimensionful identities; the firewall's teeth are verified against a synthetic
-violation. Internally consistent with $1/G$ being UV-sensitive (Sakharov/Connes, v68).
+violation. Internally consistent with $1/G$ being UV-sensitive (Sakharov/Connes, \vref{v68}).
 \end{winbox}
 
-\noindent\textbf{Verdict.} Safe as worded (reduced coefficient). Status \tI\,(structure) $+$ \tA\,for
+\noindent\textbf{Verdict.} Safe as worded (reduced coefficient). Status \mE\,(structure) $+$ \mO\,for
 the residual. Residual: the absolute $4D$ Newton scale $1/G$ ($\propto \Lambda^2 f_2$) stays the one
 dimensionful anchor; nothing \emph{dimensionless} is open.
 
@@ -168,8 +168,8 @@ $\delta_{\mathrm{CKM}},\delta_{\mathrm{PMNS}}$ are complex and are \emph{not} fo
 \end{keybox}
 
 \noindent\textbf{Verdict.} Holds for TFPT once four hypotheses (real, positive, fixed branch, no
-zeros / odd sector size) are made explicit; they are silent in v75 and must be named. Status \tI\,
-(reduction) $+$ \tA\,($\vgeo$). Residual: the CP-phase sector.
+zeros / odd sector size) are made explicit; they are silent in \vref{v75} and must be named. Status \mE\,
+(reduction) $+$ \mO\,($\vgeo$). Residual: the CP-phase sector.
 
 % =====================================================================
 \section*{Target E --- $\vgeo$ as the unique dimensional floor}\label{sec:E}
@@ -180,16 +180,16 @@ scales are ratios to one unit $\vgeo$.\veri{redteam/rt\_E\_vgeo.py}
 \begin{keybox}[Single-scale audit: exact for the certified tiers, conditional beyond]
 The closed compiler $+$ protected IR readouts all reduce to (pure number)$\times\vgeo$:
 $M_{\mathrm{scal}}=\cthree^{7/2}\Mpl$, $f_a=(\cthree/|\mu_4|)^{7/2}\Mpl$, masses
-$=(\pi/\sqrt2)\,c_f\,\varphi_0^{k}\,\vgeo$, and $1/G$ shares the same anchor (v68/v75). The audit
+$=(\pi/\sqrt2)\,c_f\,\varphi_0^{k}\,\vgeo$, and $1/G$ shares the same anchor (\vref{v68}/\vref{v75}). The audit
 \emph{surfaces} candidates that are not pure reductions: the seam cutoff $\Lambda$ (only an
 \emph{identification} seam$=$Planck collapses it to $\vgeo$), the electroweak matching scale, the
-reheating temperature, and the leptogenesis scale --- all frontier \tP/\tA\ inputs that must not be
+reheating temperature, and the leptogenesis scale --- all frontier \mC/\mO\ inputs that must not be
 silently absorbed into $\vgeo$.
 \end{keybox}
 
 \noindent\textbf{Verdict.} $\vgeo$ is the unique dimensional floor of the certified tiers (true by
 dimensional analysis). Full single-scale-ness is conditional on the flagged identifications staying
-honestly typed. Status \tI\,(ratios) $+$ \tA\,(one scale). Residual: explicit reduction (or honest
+honestly typed. Status \mE\,(ratios) $+$ \mO\,(one scale). Residual: explicit reduction (or honest
 frontier typing) of the EW / reheating / leptogenesis scales $+$ the seam$=$Planck cutoff.
 
 % =====================================================================
@@ -203,11 +203,11 @@ each reduction would fail and \emph{which} assumptions are truly necessary, exac
 logical transitions. Reproduce with \texttt{cd verification/redteam \&\& python run\_redteam.py}.
 \end{keybox}
 
-\begin{winbox}[Follow-up --- the verdicts were then used as a worklist \tL/\tI\ (\veri{v83\_e8net\_holomorphic\_uniqueness.py})]
+\begin{winbox}[Follow-up --- the verdicts were then used as a worklist \mE\ (\veri{v83\_e8net\_holomorphic\_uniqueness.py})]
 Two residuals were attacked directly after the red-team pass; the result is recorded in ledger rows
 \texttt{GATE.METRIC.04} and \texttt{CAR.PASCAL.01}.
 
-\smallskip\noindent\textbf{Target A, residual 1 --- closed \tL.} At level 1 the number of primaries equals
+\smallskip\noindent\textbf{Target A, residual 1 --- closed \mE.} At level 1 the number of primaries equals
 $\det(\text{Cartan})=|\text{fundamental group}|$: $A_3{=}4$, $D_5{=}4$, $D_8{=}4$, $\mathbf{E_8{=}1}$. So holomorphy
 (single vacuum sector, $\mu$-index $1$) is \emph{necessary} --- it excludes the same-$c$ rival $(D_8)_1=SO(16)_1$
 ($c=120/15=8$ but four primaries $1,v,s,c$) --- \emph{and sufficient}: a holomorphic $c=8$ chiral CFT is the lattice
@@ -216,21 +216,21 @@ formula ($\text{mass}=1/|W(E_8)|=1/696729600$, and $|\mathrm{Aut}(E_8)|$ saturat
 $(D_5)_1\times(A_3)_1$ embedding $c=5+3=8$ stays \emph{compatibility} ($16$ primaries vs $1$). \textbf{Consequence:}
 the constructive map need only show the seam--Calder\'on boundary net is holomorphic with $c=8$ (then $E_8$ is
 automatic), so Target~A drops from \emph{three} residuals to \emph{two}: (i)~boundary-net holomorphy $+\,c=8$
-($\Delta_{\mathrm{eff}}>0$ supports, not proves), and (ii)~bulk-reconstruction uniqueness --- both still \tP/\tA.
+($\Delta_{\mathrm{eff}}>0$ supports, not proves), and (ii)~bulk-reconstruction uniqueness --- both still \mC/\mO.
 
-\smallskip\noindent\textbf{Target B --- reduced \tI/\tL.} The ``$K=2$ Pascal truncation'' is not free:
+\smallskip\noindent\textbf{Target B --- reduced \mE.} The ``$K=2$ Pascal truncation'' is not free:
 $K=(g-1)/2$ is the Pascal-row midpoint $\sum_{k\le(g-1)/2}\binom{g}{k}=2^{g-1}$ (odd $g$), i.e.\ the half-spinor
 split; the carrier is the even Clifford half-spinor $\Lambda^{\mathrm{even}}(\mathbb C^{5})=1+10+5=16=\dim S^+$. So
 B's residual reduces to the single standard input ``carrier $=$ half-spinor of $\mathrm{Spin}(10)$'' (the Lean
-arithmetic core stays \tF).
+arithmetic core stays \mE).
 
 \smallskip\noindent Still open, typed honestly: A\,(i)$+$(ii); Target~D's CP-phase residual (at $\theta_{13}=0$ the
 Dirac phase is undefined, so this needs a texture correction); Target~E's reheating/leptogenesis scales and the
 seam$=$Planck identification. Target~C is a dimensional \emph{floor}, not a gap. \textbf{No target was promoted.}
 \end{winbox}
 
-\begin{winbox}[Second follow-up round \tL/\tN\ (\veri{v87\_bulk\_uniqueness\_reduction.py}, \veri{v88\_cp\_phase\_audit.py}, \veri{v86\_nstar\_reheating.py})]
-\smallskip\noindent\textbf{Target A, residual (ii) --- conditionally closed \tL: Target A $=$ ONE residual.}
+\begin{winbox}[Second follow-up round \mE\ (\veri{v87\_bulk\_uniqueness\_reduction.py}, \veri{v88\_cp\_phase\_audit.py}, \veri{v86\_nstar\_reheating.py})]
+\smallskip\noindent\textbf{Target A, residual (ii) --- conditionally closed \mE: Target A $=$ ONE residual.}
 Bulk-reconstruction uniqueness is \emph{not} independent of residual (i). By the algebraic-QFT classification of
 full 2D CFTs over a chiral net (Longo--Rehren; Kawahigashi--Longo--M\"uger; Bischoff--Kawahigashi--Longo--Rehren),
 the possible bulks are the haploid commutative Q-systems $\simeq$ physical modular invariants of $\mathrm{Rep}(A)$.
@@ -239,7 +239,7 @@ machine-checked: the same-$c$ rival $SO(16)_1$ (discriminant category $\mathbb Z
 \emph{six} modular invariants --- diagonal, $s{\leftrightarrow}c$ swap, both $E_8$-extension invariants
 $|\chi_0{+}\chi_{s/c}|^2$ (the lattice glue $E_8=D_8\cup(D_8{+}s)$, $h_s{=}1$ bosonic), and two twisted pairings ---
 so without holomorphy the $c=8$ bulk is \emph{multiply} ambiguous; with it, trivially unique. Hence the entire
-Target~A reduces to the single theorem ``seam--Calder\'on boundary net is holomorphic with $c=8$'' (\tP/\tA;
+Target~A reduces to the single theorem ``seam--Calder\'on boundary net is holomorphic with $c=8$'' (\mC/\mO;
 ledger \texttt{GATE.METRIC.05}). The theorem also has an equivalent, more tractable \emph{index} form
 (\veri{v89\_carrier\_index\_lemma.py}, ledger \texttt{GATE.METRIC.06}): by Kawahigashi--Longo--M\"uger,
 $\mu_A=[B{:}A]^2\mu_B$, the carrier inclusion has Jones index
@@ -258,7 +258,7 @@ rival is the unique intermediate of the tower, not an arbitrary counter-model. T
 carrier\,$(\mu{=}16)\to SO(16)_1\,(\mu{=}4)\to(E_8)_1\,(\mu{=}1$, sheet pair$)$ --- nothing else exists.
 Target~A is thereby the \emph{bare} index statement.
 
-\smallskip\noindent\textbf{Target D --- the CP-phase residual quantified \tN\ (not closed).} With the frozen leading
+\smallskip\noindent\textbf{Target D --- the CP-phase residual quantified \mE\ (not closed).} With the frozen leading
 reading $\delta=\pi/3+3\lambda_C^2=68.65^\circ$: pull vs $\gamma_{\mathrm{PDG}}=65.7^\circ\pm3.0^\circ$ is $+0.98\sigma$
 (survives). Audit, \emph{not} promoted: the data central value sits $0.07^\circ$ from the alternative coefficient
 reading $\pi/3+2\lambda_C^2$ ($|\mathbb Z_2|$ instead of $\Nfam$) --- a textbook look-elsewhere trap; the registry keeps
@@ -266,9 +266,9 @@ coefficient $3$ (\texttt{REG.FREEZE.01}). Decision threshold: the readings diffe
 $3\sigma$-distinguishable once $\sigma_\gamma\le0.96^\circ$. The $J$-inversion is flagged magnitude-contaminated
 (source-scale $s_{23}$ vs $M_Z$). Ledger \texttt{FLAV.CP.01}.
 
-\smallskip\noindent\textbf{Target E --- one flagged scale computed \tP.} The reheating temperature is no longer a
-silent input: $M_{\mathrm{scal}}=\cthree^{7/2}\bar M_{\mathrm{Pl}}$ \tI\ $+$ standard physics give
-$T_{\mathrm{reh}}=9.6\times10^9$ GeV and $N_\star(0.05/\mathrm{Mpc})=51.4$ \tP\ (ledger \texttt{COSMO.NSTAR.01});
+\smallskip\noindent\textbf{Target E --- one flagged scale computed \mC.} The reheating temperature is no longer a
+silent input: $M_{\mathrm{scal}}=\cthree^{7/2}\bar M_{\mathrm{Pl}}$ \mE\ $+$ standard physics give
+$T_{\mathrm{reh}}=9.6\times10^9$ GeV and $N_\star(0.05/\mathrm{Mpc})=51.4$ \mC\ (ledger \texttt{COSMO.NSTAR.01});
 honestly recorded: this slow Higgs-channel point is \emph{$A_s$-disfavoured} ($-11.4\sigma$; the measured $A_s$
 requires near-instantaneous reheating), so the point is conditional on the decay channel and the frozen band
 $[50,60]$ stays the surface of record; the leptogenesis scale and the seam$=$Planck identification remain typed
@@ -276,7 +276,7 @@ inputs. \textbf{Again: no target was
 promoted; one residual was \emph{merged} (A), one was \emph{quantified} (D), one input was \emph{computed} (E).}
 \end{winbox}
 
-\begin{winbox}[Global look-elsewhere closure \tN\ (\veri{v100\_numerology\_null\_mc.py})]
+\begin{winbox}[Global look-elsewhere closure \mE\ (\veri{v100\_numerology\_null\_mc.py})]
 The per-target look-elsewhere traps recorded above (the $\pi/3+2\lambda_C^2$ alternative in Target D, the
 $\ln(46080)$ scale reading destroyed in \veri{v99\_koide\_flow\_time.py}) are local instances of the global
 adversarial question: \emph{could the whole scorecard be formula-fishing?} The numerology null test answers

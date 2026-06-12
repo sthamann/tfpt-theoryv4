@@ -19,7 +19,7 @@
 \usepackage[hidelinks,colorlinks=true,linkcolor=blue!55!black,urlcolor=blue!55!black]{hyperref}
 \emergencystretch=3em
 
-\input{tfpt_style}
+\input{tex-artefacts/tfpt_style}
 \newcommand{\phiz}{\varphi_0^{\mathrm{ret}}}
 \newcommand{\cthree}{c_3}
 \newcommand{\Mpl}{\bar M_{\mathrm{Pl}}}
@@ -35,16 +35,16 @@
 \title{\vspace{-1.2cm}\textbf{TFPT --- Research Contracts for the Remaining Interfaces:\\$v_{\mathrm{geo}}$, $G_{\mathrm{net}}$, $F_{\mathrm{transfer}}$}\\[2mm]
 \large $(U_{\mathrm{wall}})$: the parabolic flavor wall-selection \quad and\quad
 $(G_{\mathrm{metric}})$: the full quantum-gravity measure}
-\author{}\date{\today}
+\author{\TFPTauthors}\date{\TFPTdatestamp}
 
 \def\TFPTdoctitle{Research Contracts}
 \begin{document}
 \maketitle
 
-\input{tfpt_docset}
+\input{tex-artefacts/tfpt_docset}
 \noindent\textbf{You are reading \textbf{companion~R} (Research Contracts).}
 
-\input{tfpt_status}
+\input{tex-artefacts/tfpt_status}
 \TFPTbadges
 \TFPTclaimstack[bridges]
 
@@ -69,15 +69,15 @@ gates, so the operative residual reads sharper:
   \boxed{\ \text{Rest}_{\mathrm{operativ}}=v_{\mathrm{geo}}\ \oplus\ G_{\mathrm{net}}\ \oplus\ F_{\mathrm{transfer}}\ }
 \]
 --- $(U_{\mathrm{wall}})\to v_{\mathrm{geo}}$: the quark \emph{ratios} are closed combinatorially (Readout
-Rigidity $+$ Pl\"ucker, U2/v49/v71), $U_{\mathrm{point}}$ collapses to the \emph{one} dimensionful unit
-$v_{\mathrm{geo}}$ shared with $1/G$ (v75/v68) --- what remains is a scale anchor, not a flavor gap (the
+Rigidity $+$ Pl\"ucker, U2/\vref{v49}/\vref{v71}), $U_{\mathrm{point}}$ collapses to the \emph{one} dimensionful unit
+$v_{\mathrm{geo}}$ shared with $1/G$ (\vref{v75}/\vref{v68}) --- what remains is a scale anchor, not a flavor gap (the
 \emph{full} amplitude matrix beyond the ratios is the only place where $U_{\mathrm{point}}$ still appears);
 $(G_{\mathrm{metric}})\to G_{\mathrm{net}}$: holographically reduced to the single boundary-net statement
 \emph{``the seam--Calder\'on inclusion has Jones index $4=|\mu_4|$''} --- holomorphy, $(E_8)_1$ and the
-unique 2D bulk then \emph{follow} (v89/v92/\texttt{GATE.METRIC.05--07}); and the carrier-side QBL input
+unique 2D bulk then \emph{follow} (\vref{v89}/\vref{v92}/\texttt{GATE.METRIC.05--07}); and the carrier-side QBL input
 now merges into the \emph{same} statement: the tower carrier${}\to SO(16)_1\to(E_8)_1$ carries one and
 the same $16$-fermion content, whose single quasi-free kernel (rank $=c$; Wick/Pfaffian exact) is the
-certified Calder\'on datum --- closing $G_{\mathrm{net}}$ therefore also closes the carrier choice \tL\
+certified Calder\'on datum --- closing $G_{\mathrm{net}}$ therefore also closes the carrier choice \mE\
 (\veri{v113\_quasifree\_kernel.py}); $(F_{\mathrm{frontier}})\to
 F_{\mathrm{transfer}}$: named QFT/cosmology \emph{transfer} interfaces, never compiler powers.
 \end{keybox}
@@ -139,11 +139,11 @@ the genuine RH solve; and $R$-extraction still needs the $C_6\leftrightarrow\PP\
 RH route fixes the \emph{splitting} algebraically but not $c_u/c_d$.
 \end{lemma}
 
-\begin{lemma}[U2 --- the kill switch, \emph{run and hardened} \tN]
+\begin{lemma}[U2 --- the kill switch, \emph{run and hardened} \mE]
 The selected polystable wall representative must \emph{not} collapse to the diagonal abelian $U(1)^3$
 point if it is to give non-trivial $SU(3)_F$ transport mixing: \textbf{(A)} $\nabla_F^\star$ polystable but
 \emph{not} simultaneously diagonal (the desired breakthrough), or \textbf{(B)} diagonal collapse, in which
-case $c_u/c_d$ stays honestly \tP. \textbf{Result: the cheap test is run robustly and lands on A.} The
+case $c_u/c_d$ stays honestly \mC. \textbf{Result: the cheap test is run robustly and lands on A.} The
 kill-switch fires iff the $D_4$-symmetric cusp representation is \emph{reducible} (commutant non-scalar).
 Across $400$ random cusp-class generators of the $\Z_4$ family $M_k=U^{k-1}MU^{-(k-1)}$ the commutant is
 scalar at \emph{every} point (irreducible $400/400$), the reducible locus is hit with probability $0$
@@ -159,7 +159,7 @@ $M_1=VM_1^{-1}V^{-1}$, $M_3=VM_3^{-1}V^{-1}$, $M_2=VM_4^{-1}V^{-1}$ (with $V=-[[
 $V^2{=}1$, $VUV^{-1}{=}U^{-1}$), the relations become polynomials in the entries of $A\in C_{\mathrm{cusp}}$;
 $\mathcal X_{\mathrm{cusp}}^{D_4}$ is cut out as $\bigcup_kC_k$, parametrised by trace coordinates
 $x=\operatorname{tr}(M_1M_2)$ (note $\operatorname{tr}A=1{+}\omega{+}\omega^2=0$). \textbf{Result
-($C_U^{(2)}$, \veri{v30\_d4\_character\_variety.py}):} adding the reflection to the $\Z_4$ locus of v19 does
+($C_U^{(2)}$, \veri{v30\_d4\_character\_variety.py}):} adding the reflection to the $\Z_4$ locus of \vref{v19} does
 \emph{not} isolate the point --- the \emph{full} $D_4$-fixed product locus is still
 \emph{positive-dimensional} ($|\operatorname{tr}(M_1M_2)|$ varies continuously over $\approx[0,3]$). So even
 the full $D_4$ symmetry cannot select $\nabla_F^\star$. \emph{Machine: dimension confirmed numerically;
@@ -179,7 +179,7 @@ positive-dimensional, the \emph{selector} must do all the cutting --- and evalua
 $\operatorname{Spec}(Q_+(\rho))$ as functions on $\mathcal X_{\mathrm{cusp}}^{D_4}$ requires the
 \emph{parabolic-degree\,$\leftrightarrow$\,residue dictionary} $R(\rho)$, i.e.\ the H2 equivalence. That
 dictionary was the single remaining analytic input of the $(U_{\mathrm{wall}})$ gate. \emph{Status update:
-since v118--v122 the dictionary itself is exact} --- hexagon $=$ sign-twisted family spectrum, lepton
+since \vref{v118}--\vref{v122} the dictionary itself is exact} --- hexagon $=$ sign-twisted family spectrum, lepton
 coefficients $=$ resolvent determinants of the $W(A_3)$ monodromy, addresses pinned, margins theorems
 (boxes below); what remains is the strictly smaller R4$'$, the \emph{establishment of the selectors}
 ($n=(5,-9,6)$ $+$ the diamond determinants; since \veri{v134\_dual\_anchor.py}: the pair $(d,n)$).
@@ -196,7 +196,7 @@ the generic Higgs locus}. \textbf{Refinement (U4$''$, \veri{v40\_harmonic\_metri
 \emph{polystable} point TFPT actually selects this pessimism does not apply --- see the box below.
 \end{lemma}
 
-\begin{winbox}[Progress: the \emph{selector side} of U4 is closed on the explicit point \tN]
+\begin{winbox}[Progress: the \emph{selector side} of U4 is closed on the explicit point \mE]
 While $R(\rho)$ as a function on the whole locus needs the Hitchin solve, the two U4 \emph{selectors} are
 \emph{algebraically} accessible on the explicit flat bundle of \veri{v33\_explicit\_flat\_bundle.py} --- no
 PDE. Computed exactly from $A_0$: the exponents at infinity $\operatorname{eig}(\sum_kA_k)=\{2,1,1\}$ give
@@ -213,12 +213,12 @@ So $\det R=8$ is the anchor pairing of the splitting type and $\operatorname{Spe
 ($d{=}3$ the weight denominator) of the cusp weights --- \emph{both selectors are read off the explicit
 bundle's algebraic data}. \textbf{Residual (sharpened below by Readout Rigidity):} the quark \emph{ratio}
 $c_u/c_d$ turns out \emph{not} to need the Hitchin datum at all --- it is \emph{constant} on this discrete
-selector stratum (v49), hence an integer Pl\"ucker readout. The only genuinely transcendental input left is
+selector stratum (\vref{v49}), hence an integer Pl\"ucker readout. The only genuinely transcendental input left is
 the \emph{absolute} amplitude normalisation ($U_{\mathrm{point}}$), which is an anchor, not a missing PDE.
 \veri{v39\_uwall\_selectors.py}
 \end{winbox}
 
-\begin{winbox}[Breakthrough: the harmonic metric is \emph{finite linear algebra}, not a PDE \tN]
+\begin{winbox}[Breakthrough: the harmonic metric is \emph{finite linear algebra}, not a PDE \mE]
 The U4 ``transcendental Hitchin solve'' is the worst case for a \emph{generic} Higgs bundle, but the point
 TFPT selects is \emph{polystable}, and by Mehta--Seshadri a parabolic-degree-$0$ polystable bundle is
 \emph{unitary} --- a unitary representation has the \emph{constant} invariant Hermitian harmonic metric and
@@ -235,14 +235,14 @@ Readout Rigidity (below), and only the \emph{absolute} amplitude scale remains a
 \veri{v40\_harmonic\_metric.py}
 \end{winbox}
 
-\begin{winbox}[The final leg-assignment test (honest result) \tN]
+\begin{winbox}[The final leg-assignment test (honest result) \mE]
 Does the harmonic-frame holonomy $\{0,\tfrac12,\tfrac1{\sqrt2}\}$ feed the $\delta=\tfrac12$ resolvent to
 give the lepton amplitudes $\Lambda=(0.475,1.107,0.917)$? \textbf{(i) Ruled out as a literal identity:}
 $\Lambda_\mu=1.107>1$, while unitary holonomy entries have modulus $\le1$, so the amplitudes \emph{cannot}
-be holonomy matrix elements --- they are the non-unitary resolvent Green function (as v19 already noted).
+be holonomy matrix elements --- they are the non-unitary resolvent Green function (as \vref{v19} already noted).
 \textbf{(ii) Suggestive positive:} the harmonic-frame holonomy diagonal modulus is exactly
 $|\mathrm{diag}\,\widetilde M_0|=(0,\tfrac12,\tfrac12)$, and that $\tfrac12$ \emph{equals} the distinguished
-lepton transport value $\delta=\tfrac12$ that v20 used by hand --- so the geometry plausibly \emph{supplies}
+lepton transport value $\delta=\tfrac12$ that \vref{v20} used by hand --- so the geometry plausibly \emph{supplies}
 $\delta$ (an observation at the explicit point; genericity across the locus is future work).
 \textbf{(iii) Clean negative:} no natural holonomy construction (e.g.\ $(\mathbf1-\tfrac12\widetilde M)^{-1}$)
 maps the holonomy to the amplitude vector. \textbf{Verdict:} the amplitudes are the $\delta=\tfrac12$
@@ -253,12 +253,12 @@ negative is now \emph{explained}: the scalar leg is wrongly typed --- see the Ex
 \veri{v41\_leg\_assignment.py}
 \end{winbox}
 
-\begin{winbox}[The torsion normal form and the $\delta=\tfrac12$ theorem \tI/\tN\ (\veri{v114\_torsion\_delta.py})]
-The v41 ``genericity is future work'' item is now executed --- and yields a theorem. \emph{(i) Flatness
-$=$ $\mu_4$ torsion \tI:} for \emph{any} $M$ (symbolic), $\prod_k U^kMU^{-k}=(MU)^4$ --- the $\Z_4$-family
+\begin{winbox}[The torsion normal form and the $\delta=\tfrac12$ theorem \mE\ (\veri{v114\_torsion\_delta.py})]
+The \vref{v41} ``genericity is future work'' item is now executed --- and yields a theorem. \emph{(i) Flatness
+$=$ $\mu_4$ torsion \mE:} for \emph{any} $M$ (symbolic), $\prod_k U^kMU^{-k}=(MU)^4$ --- the $\Z_4$-family
 flatness constraint \emph{is} the torsion statement ``$T=MU$ is a fourth root of unity'': the $\mu_4$
 atom appears as the \emph{order} of the twisted cusp generator. \emph{(ii) The $\delta=\tfrac12$ theorem
-\tI\ (both directions):} on the \emph{involutive} branch ($T^2=\mathbf1$) $T$ is a Hermitian reflection
+\mE\ (both directions):} on the \emph{involutive} branch ($T^2=\mathbf1$) $T$ is a Hermitian reflection
 $2vv^\dagger-\mathbf1$, and the cusp trace condition $2v^\dagger U^{-1}v=1$ splits \emph{exactly} into
 $|v_1|^2=\tfrac12$ (real part) and $|v_2|=|v_3|$ (imaginary part), forcing
 \[
@@ -267,25 +267,25 @@ $|v_1|^2=\tfrac12$ (real part) and $|v_2|=|v_3|$ (imaginary part), forcing
 \]
 ($\chi_M=\lambda^3-1$ from unitary $+$ trace $0$ $+$ $\det 1$). So $\delta=|M_{22}|=\tfrac12$ holds
 \emph{exactly and constantly} on the whole two-parameter branch --- the distinguished lepton transport
-value that v20 used by hand is a \emph{$\mu_4$-torsion identity}, not an observation. \emph{(iii)
-Reflection lemma \tI:} the $D_4$ reflection forces $\operatorname{diag}M=(r,z,\bar z)$ with $r$ real and
+value that \vref{v20} used by hand is a \emph{$\mu_4$-torsion identity}, not an observation. \emph{(iii)
+Reflection lemma \mE:} the $D_4$ reflection forces $\operatorname{diag}M=(r,z,\bar z)$ with $r$ real and
 $\operatorname{Re}z=-r/2$ --- the whole $D_4$ diagonal freedom is \emph{one} real parameter, and
-$\delta=\tfrac12\iff r=0$. \emph{(iv) Branch census \tN\ (seeded):} the full $D_4$-fixed flat cusp locus
+$\delta=\tfrac12\iff r=0$. \emph{(iv) Branch census \mE\ (seeded):} the full $D_4$-fixed flat cusp locus
 realises only $\operatorname{tr}(MU)\in\{1,-1\}$; the involutive branch has the diagonal \emph{constant}
 $(0,\tfrac12,\tfrac12)$ to machine precision, while on the $\{1,i,-i\}$ branch $d_1$ varies over $[0,1]$
---- and the explicit v33/v40 point sits exactly in its $d_1=0$ slice, the \emph{same} $\delta$ value.
-\emph{Residue \tP\ (recorded):} whether the anchor splitting $\mathcal O(-2)\oplus\mathcal O(-1)^2$
+--- and the explicit \vref{v33}/\vref{v40} point sits exactly in its $d_1=0$ slice, the \emph{same} $\delta$ value.
+\emph{Residue \mC\ (recorded):} whether the anchor splitting $\mathcal O(-2)\oplus\mathcal O(-1)^2$
 (Mehta--Seshadri side) forces the $d_1=0$ slice --- or selects the involutive branch --- is the remaining
 question; $\delta=\tfrac12$ itself is no longer the open item.
 \end{winbox}
 
-\begin{winbox}[The anchor pins the residue: an exact normal form for the $(U_{\mathrm{wall}})$ bundle \tI/\tN\ (\veri{v115\_anchor\_residue.py})]
-The v114 branch question is answered --- and the v33 \emph{numerical} Riemann--Hilbert point acquires an
-\emph{exact closed form}. \emph{(i) $\mu_4$-average lemma \tI:} $\sum_kU^kXU^{-k}=4\operatorname{diag}X$
+\begin{winbox}[The anchor pins the residue: an exact normal form for the $(U_{\mathrm{wall}})$ bundle \mE\ (\veri{v115\_anchor\_residue.py})]
+The \vref{v114} branch question is answered --- and the \vref{v33} \emph{numerical} Riemann--Hilbert point acquires an
+\emph{exact closed form}. \emph{(i) $\mu_4$-average lemma \mE:} $\sum_kU^kXU^{-k}=4\operatorname{diag}X$
 for any $X$ --- $\mu_4$ conjugation-averaging \emph{is} the diagonal projection, so the exponents at
 infinity are $4\operatorname{diag}A_0$ and the anchor splitting holds \emph{iff}
 $\operatorname{diag}A_0=(2,1,1)/4=a/|\mu_4|$: the residue diagonal \textbf{is} the anchor over $\mu_4$
-(v33's diagonal was forced, not chosen). \emph{(ii) The $(8,0,5)/144$ lemma \tI:} the anchor diagonal
+(\vref{v33}'s diagonal was forced, not chosen). \emph{(ii) The $(8,0,5)/144$ lemma \mE:} the anchor diagonal
 and the cusp spectrum $\{0,1,2\}/\Nfam$ pin $\sum|a_{ij}|^2=\tfrac{13}{144}$, and with $a_{13}=0$ the
 determinant condition solves \emph{uniquely} to
 \[
@@ -296,25 +296,25 @@ determinant condition solves \emph{uniquely} to
   \end{aligned}
 \]
 --- the off-diagonal weights are compiler atoms, and the total $13$ is the \emph{same} $\Delta_Q$ that
-denominates $c_u/c_d=55/117=5\cdot11/(9\cdot13)$. \emph{(iii) Exact normal form \tI:}
+denominates $c_u/c_d=55/117=5\cdot11/(9\cdot13)$. \emph{(iii) Exact normal form \mE:}
 $A_0^\star=\bigl[\begin{smallmatrix}1/2&\sqrt2/6&0\\\sqrt2/6&1/4&\sqrt5/12\\0&\sqrt5/12&1/4\end{smallmatrix}\bigr]$
 has $\chi=\lambda(\lambda-\tfrac13)(\lambda-\tfrac23)$ \emph{exactly}. \emph{(iv) $A_0^\star$ is the RH
-solution \tN:} its big-circle monodromy is trivial to $10^{-10}$, $\prod M_k=\mathbf1$, and the
+solution \mE:} its big-circle monodromy is trivial to $10^{-10}$, $\prod M_k=\mathbf1$, and the
 unitarised holonomy has $|\operatorname{diag}\widetilde M_0|=(0,\tfrac12,\tfrac12)$,
-$\operatorname{tr}(\widetilde M_0U)=1$ --- the v33/v40 point is gauge-equivalent to $A_0^\star$ (the
-$a_{12},a_{23}$ phases are diagonal gauge). \emph{(v) The anchor forces the $d_1=0$ slice \tN:} a
+$\operatorname{tr}(\widetilde M_0U)=1$ --- the \vref{v33}/\vref{v40} point is gauge-equivalent to $A_0^\star$ (the
+$a_{12},a_{23}$ phases are diagonal gauge). \emph{(v) The anchor forces the $d_1=0$ slice \mE:} a
 multi-seed RH scan over the anchor-pinned spectral manifold lands at \emph{every} flat solution on the
 \emph{same} gauge orbit with $|\operatorname{diag}\widetilde M_0|=(0,\tfrac12,\tfrac12)$ --- combined
-with v114, the whole harmonic diagonal is \textbf{anchor $+$ torsion forced}; $\delta=\tfrac12$ needs no
-selection. \emph{Residue \tP:} $a_{13}=0$ and the gauge-orbit uniqueness are numerical (one component
-across all seeds); promoting them to \tI/\tL\ via Gr\"obner on the RH constraints is the remaining
+with \vref{v114}, the whole harmonic diagonal is \textbf{anchor $+$ torsion forced}; $\delta=\tfrac12$ needs no
+selection. \emph{Residue \mC:} $a_{13}=0$ and the gauge-orbit uniqueness are numerical (one component
+across all seeds); promoting them to \mE\ via Gr\"obner on the RH constraints is the remaining
 $U_{\mathrm{point}}$ step.
 \end{winbox}
 
-\begin{keybox}[The resonance theorem: $M_\infty=\mathbf1\iff a_{13}=0$ --- one gauge orbit \tI\ (\veri{v116\_resonance\_uniqueness.py})]
+\begin{keybox}[The resonance theorem: $M_\infty=\mathbf1\iff a_{13}=0$ --- one gauge orbit \mE\ (\veri{v116\_resonance\_uniqueness.py})]
 The anticipated Gr\"obner promotion turned out to be a \emph{linear} computation. Writing the
 equivariant system at infinity as $dY/dw=-(1/w)(B_0+B_1w+\cdots)Y$ with
-$B_m=\sum_k i^{km}\,U^kA_0U^{-k}$, the \emph{twisted} $\mu_4$ averages collapse \tI:
+$B_m=\sum_k i^{km}\,U^kA_0U^{-k}$, the \emph{twisted} $\mu_4$ averages collapse \mE:
 \[
   B_0=4\operatorname{diag}A_0,\qquad
   \boxed{\ B_1=4a_{12}E_{12}+4\overline{a_{13}}E_{31}\ }
@@ -323,22 +323,22 @@ $B_m=\sum_k i^{km}\,U^kA_0U^{-k}$, the \emph{twisted} $\mu_4$ averages collapse 
 resonance gap $1$; the level-$1$ formal-gauge equation $(1-\operatorname{ad}R_0)H_1=R_1$ is singular
 exactly on the cells $\{(2,1),(3,1)\}$, where $B_1$ has entries $(0,\,4\overline{a_{13}})$; all higher
 levels are non-resonant and the formal monodromy is $e^{-2\pi i\operatorname{diag}(2,1,1)}=\mathbf1$.
-Hence \tI:
+Hence \mE:
 \[
   \boxed{\ M_\infty=\mathbf1\iff a_{13}=0\ }
 \]
 --- the transcendental Riemann--Hilbert condition collapses to \emph{one linear equation}.
-\emph{Uniqueness corollary \tI:} $a_{13}=0$ $+$ the $(8,0,5)/144$ moduli $+$ phases $=$ diagonal gauge
+\emph{Uniqueness corollary \mE:} $a_{13}=0$ $+$ the $(8,0,5)/144$ moduli $+$ phases $=$ diagonal gauge
 $\Rightarrow$ the flat anchor locus is \textbf{exactly one gauge orbit}, the exact $A_0^\star$: within
 the $\mu_4$-equivariant anchor class the $(U_{\mathrm{wall}})$ bundle datum is \emph{algebraically
-unique}. \emph{Sharpness \tN:} $\|M_\infty-\mathbf1\|\sim8.5\,|a_{13}|$ ($0.17$ at $a_{13}=0.02$) vs
-$10^{-10}$ at $A_0^\star$. \emph{Honest scope \tP:} the equivariant ansatz is the established $D_4$
-selector input (v19/v30); the \emph{residue} side is now \tI, while the holonomy values (the harmonic
-diagonal $(0,\tfrac12,\tfrac12)$) remain \tN\ --- transcendental monodromy of an exact system.
+unique}. \emph{Sharpness \mE:} $\|M_\infty-\mathbf1\|\sim8.5\,|a_{13}|$ ($0.17$ at $a_{13}=0.02$) vs
+$10^{-10}$ at $A_0^\star$. \emph{Honest scope \mC:} the equivariant ansatz is the established $D_4$
+selector input (\vref{v19}/\vref{v30}); the \emph{residue} side is now \mE, while the holonomy values (the harmonic
+diagonal $(0,\tfrac12,\tfrac12)$) remain \mE\ --- transcendental monodromy of an exact system.
 \end{keybox}
 
-\begin{keybox}[The monodromy is the Weyl group of $A_3$ --- the holonomy is exact \tI/\tN\ (\veri{v117\_monodromy\_weyl\_a3.py})]
-The last \tN\ item of the chain --- the holonomy \emph{values} --- closes: the unitarised monodromy of
+\begin{keybox}[The monodromy is the Weyl group of $A_3$ --- the holonomy is exact \mE\ (\veri{v117\_monodromy\_weyl\_a3.py})]
+The last \mE\ item of the chain --- the holonomy \emph{values} --- closes: the unitarised monodromy of
 the exact $A_0^\star$ system is itself \emph{exact}, with entries in $\tfrac12\Z[i]$:
 \[
   \boxed{\ \widetilde M_0=\begin{pmatrix}0&-\tfrac{1+i}2&\tfrac{1-i}2\\[2pt]
@@ -349,7 +349,7 @@ unitary, $\det=1$, $\operatorname{tr}=0$, $\chi=\lambda^3-1$ (the cusp class \em
 $\widetilde M_0^3=\mathbf1$, and $\operatorname{diag}\widetilde M_0=(0,-\tfrac i2,+\tfrac i2)$ --- so
 $d_1=0$ and $\delta=\tfrac12$ are now \emph{matrix entries}, not observations; $(\widetilde M_0U)^4=\mathbf1$
 with $\operatorname{tr}(\widetilde M_0U)=1$ (the $\{1,i,-i\}$ branch, $d_1=0$ slice --- exactly where
-v114/v115 located the physical point). \emph{The group} \tI: exact enumeration of
+\vref{v114}/\vref{v115} located the physical point). \emph{The group} \mE: exact enumeration of
 $\langle U,\widetilde M_0\rangle$ gives order $24$ with order statistics $(1,9,8,6)$ and character
 values $(3,-1,0,1)$ --- uniquely $S_4$ in its standard${}\otimes{}$sign representation, i.e.\ the
 (twisted) reflection representation of the \textbf{Weyl group of the family lattice $A_3$}:
@@ -358,62 +358,62 @@ values $(3,-1,0,1)$ --- uniquely $S_4$ in its standard${}\otimes{}$sign represen
 \]
 --- the flavor wall realises the $A_3$ factor of the glue $D_5\oplus A_3+\mu_4$ as its Weyl group ($U$
 $=$ a $4$-cycle, the $\mu_4$ deck; $\widetilde M_0$ $=$ a $3$-cycle, the family rotation).
-\emph{Identification \tN:} the ODE monodromy of $A_0^\star$ equals the exact $\widetilde M_0$ to
+\emph{Identification \mE:} the ODE monodromy of $A_0^\star$ equals the exact $\widetilde M_0$ to
 $3.5\times10^{-10}$, and the invariant form $H$ is $U$-invariant to $10^{-11}$. \emph{Status:} holonomy
-values \tI; only the analytic identification stays \tN. The $\delta$ thread
-(v20 $\to$ v40/v41 $\to$ v114 $\to$ v115 $\to$ v117) is closed end to end.
+values \mE; only the analytic identification stays \mE. The $\delta$ thread
+(\vref{v20} $\to$ \vref{v40}/\vref{v41} $\to$ \vref{v114} $\to$ \vref{v115} $\to$ \vref{v117}) is closed end to end.
 \end{keybox}
 
-\begin{keybox}[The hexagon is the sign-twisted family spectrum --- first exact H2 piece \tI\ (\veri{v118\_hexagon\_family\_dictionary.py})]
+\begin{keybox}[The hexagon is the sign-twisted family spectrum --- first exact H2 piece \mE\ (\veri{v118\_hexagon\_family\_dictionary.py})]
 The missing ``$C_6\leftrightarrow\PP\setminus\mu_4$ dictionary'' (H2) acquires its first exact entry.
-\emph{Sign-twist lemma \tI:} $-\widetilde M_0$ has order $6$ and
+\emph{Sign-twist lemma \mE:} $-\widetilde M_0$ has order $6$ and
 \[
   \boxed{\ \operatorname{spec}(\widetilde M_0)\,\cup\,\operatorname{spec}(-\widetilde M_0)=\mu_6\ }
 \]
 --- the six-site hypercharge hexagon spectrum \emph{is} the family monodromy spectrum together with its
-sheet twist ($\Z_6=\Z_2\times\Z_3$ realised as $(-1)\times\langle\widetilde M_0\rangle$); the v20
+sheet twist ($\Z_6=\Z_2\times\Z_3$ realised as $(-1)\times\langle\widetilde M_0\rangle$); the \vref{v20}
 denominators $\tfrac54-\cos(r\pi/3)$ are exactly the eigen-denominators $|1-\zeta_6^r/2|^2$ of the two
-family resolvents $(\mathbf1\mp\tfrac12\widetilde M_0)^{-1}$. \emph{Cyclotomic determinant \tI:}
+family resolvents $(\mathbf1\mp\tfrac12\widetilde M_0)^{-1}$. \emph{Cyclotomic determinant \mE:}
 $\det(\mathbf1-t\widetilde M_0)=1-t^3=(1-t)\Phi_3(t)$, so $\det(\mathbf1\mp\tfrac12\widetilde M_0)=
 (\tfrac78,\tfrac98)$ --- and the lepton coefficients become resolvent determinants:
 $c_e=|\mu_4|/(2\det_-)=\tfrac{16}7$, $c_\mu=\Nfam/(2\det_+)=\tfrac43$,
 $c_\tau=|\mu_4|\det_-/\Nfam=\tfrac76$, product rule $=|\mu_4|/\det_+=\tfrac{32}9$. The lepton $7$ and
 $9$ \emph{are} the family-resolvent determinants; $\delta=\tfrac12=|(\widetilde M_0)_{22}|$ is supplied
-by the matrix itself. \emph{Sheet-extended group \tI\ (audit):} $\langle U,\widetilde M_0,-\mathbf1\rangle$
-has order $48=\Omega_{\mathrm{adm}}=\Nfam\dim S^+$ --- the seed's quartic coefficient. \emph{Residue \tP:} the
+by the matrix itself. \emph{Sheet-extended group \mE\ (audit):} $\langle U,\widetilde M_0,-\mathbf1\rangle$
+has order $48=\Omega_{\mathrm{adm}}=\Nfam\dim S^+$ --- the seed's quartic coefficient. \emph{Residue \mC:} the
 dictionary's \emph{values} are exact; its \emph{address table} (which hexagon site each fermion
-occupies; the quark composition) remains v20's established input / open --- nothing re-fished.
+occupies; the quark composition) remains \vref{v20}'s established input / open --- nothing re-fished.
 \end{keybox}
 
-\begin{keybox}[The address table: the lepton words are the compiler atoms \tI/\tP\ (\veri{v120\_address\_table.py})]
-The address table acquires its structure --- on word-length integers \emph{frozen} in v18/v20, long
-before today's readings (the red-team firewall). \emph{(i) The lepton words are the atoms \tI:}
+\begin{keybox}[The address table: the lepton words are the compiler atoms \mE/\mC\ (\veri{v120\_address\_table.py})]
+The address table acquires its structure --- on word-length integers \emph{frozen} in \vref{v18}/\vref{v20}, long
+before today's readings (the red-team firewall). \emph{(i) The lepton words are the atoms \mE:}
 \[
   \boxed{\ (L_e,L_\mu,L_\tau)=(8,5,3)=(\operatorname{rank}E_8,\ \gcar,\ \Nfam)=(p_0{+}e_2,\ e_2,\ p_0)\ }
 \]
 in mass order (longest word $=$ lightest lepton). \emph{(ii) Addresses $=$ division by the hexagon
-\tI:} $(r,w)=L\ \mathrm{divmod}\ p_2$ with $p_2=6=|R^+(A_3)|$ itself an atom: $e\to(2,1)$,
+\mE:} $(r,w)=L\ \mathrm{divmod}\ p_2$ with $p_2=6=|R^+(A_3)|$ itself an atom: $e\to(2,1)$,
 $\mu\to(5,0)$, $\tau\to(3,0)$; $\sum r=10=p_3=\mathcal A_\Lambda$, $\sum L=16=\dim S^+$. \emph{(iii) Sheet parity
-\tI:} by the v118 dictionary, $e$ sits on the \emph{untwisted} sheet ($\omega\in\operatorname{spec}
+\mE:} by the \vref{v118} dictionary, $e$ sits on the \emph{untwisted} sheet ($\omega\in\operatorname{spec}
 \widetilde M_0$), $\mu,\tau$ on the \emph{twisted} sheet ($-\omega,-1$); the anchor lepton $\tau$
-occupies the unique \emph{real} twisted eigenvalue $-1$ --- exactly the site where v20's product rule
-replaces the resolvent. \emph{(iv) Quark sum rules \tI\ (frozen v18 words $7,7,5,3,2,0$):} up-type sum
+occupies the unique \emph{real} twisted eigenvalue $-1$ --- exactly the site where \vref{v20}'s product rule
+replaces the resolvent. \emph{(iv) Quark sum rules \mE\ (frozen \vref{v18} words $7,7,5,3,2,0$):} up-type sum
 $=10=p_3$; down-type sum $=14=p_1{+}p_3$; \textbf{all quarks $=24=|W(A_3)|$} (the monodromy group
-order, v117); \textbf{all nine charged fermions $=40=p_1p_3=a^TRa$} (v119); quark $\sum r=2p_2$,
+order, \vref{v117}); \textbf{all nine charged fermions $=40=p_1p_3=a^TRa$} (\vref{v119}); quark $\sum r=2p_2$,
 $\sum w=|\Z_2|$; the top sits at the vacuum site $(0,0)$ --- zero word, no suppression, the
-established ladder anchor. \emph{Residue \tP:} five independent closures ($16,10,14,24,40$) constrain
-the address map; the per-fermion \emph{assignment} remains the v18/v20 input --- deriving it is the
+established ladder anchor. \emph{Residue \mC:} five independent closures ($16,10,14,24,40$) constrain
+the address map; the per-fermion \emph{assignment} remains the \vref{v18}/\vref{v20} input --- deriving it is the
 remaining H2 content.
 \end{keybox}
 
-\begin{keybox}[The address table is pinned: $R$ is the unique hexagon matrix with atom margins \tI\ (\veri{v121\_address\_pinning.py})]
+\begin{keybox}[The address table is pinned: $R$ is the unique hexagon matrix with atom margins \mE\ (\veri{v121\_address\_pinning.py})]
 The per-fermion assignment closes at the \emph{information} level. The established identity
-$L=R+2U$ (v95) says the word-length table \emph{is} $L[\text{sector}][\text{generation}]$ --- rows
-(up; down; lepton) $=$ $((7,3,0);(7,5,2);(8,5,3))$, the v18/v20 words verbatim --- so the addresses are
+$L=R+2U$ (\vref{v95}) says the word-length table \emph{is} $L[\text{sector}][\text{generation}]$ --- rows
+(up; down; lepton) $=$ $((7,3,0);(7,5,2);(8,5,3))$, the \vref{v18}/\vref{v20} words verbatim --- so the addresses are
 the entries of the \emph{residue operator} $R$ plus one hexagon turn for the first generation, and
-$R$'s first column is the \textbf{anchor} $a=(1,1,2)$. The margins are atoms \tI: row sums
+$R$'s first column is the \textbf{anchor} $a=(1,1,2)$. The margins are atoms \mE: row sums
 $(4,8,10)=(e_1,\operatorname{rank}E_8,p_3)$, column sums $(4,13,5)=(e_1,\Delta_Q,\gcar)$. And the
-census closes it \tI:
+census closes it \mE:
 \[
   \boxed{\ \begin{array}{c}
   \text{\small among all $3\times3$ matrices with entries in the hexagon $\{0..5\}$,}\\[1pt]
@@ -424,20 +424,20 @@ census closes it \tI:
 distinct, $8$ occurs once --- control computed explicitly). \textbf{The assignment table carries zero
 residual information beyond the atom margins and the rank determinant.} Within-sector ordering is the
 established transport reading ($m\sim\lambda_Y^L$: longer word $=$ lighter fermion). \emph{Residue
-\tP:} the open H2 item shrinks from ``derive $9$ per-fermion integers'' to ``derive the six atom
+\mC:} the open H2 item shrinks from ``derive $9$ per-fermion integers'' to ``derive the six atom
 margins $+$ $\det=\operatorname{rank}$''. \emph{Firewall:} $R$, $L$ and all word lengths were frozen in
-v4/v18/v20/v71 long before this census --- no degrees of freedom spent.
+\vref{v4}/\vref{v18}/\vref{v20}/\vref{v71} long before this census --- no degrees of freedom spent.
 \smallskip\\
 \noindent\textbf{The margins are theorems (\veri{v122\_margin\_theorem.py}).} Even the margins are not
 input. Three selectors, all established and frozen \emph{before} the address question was posed ---
 \emph{(S1)} the $D_4$ annihilator $n=(5,-9,6)$ with $n^TR=(8,0,0)$ (it kills the unchanged
 $(c_2,c_3)$ plane; $n\!\cdot\!a=8$), \emph{(S2)} $\det R=8$, \emph{(S3)} $\det K=4$ with $K=R+Q\Sigma$
---- pin $R$ \emph{uniquely} among hexagon matrices \tI: the $(S1)$ census has $4\times4\times4=64$
+--- pin $R$ \emph{uniquely} among hexagon matrices \mE: the $(S1)$ census has $4\times4\times4=64$
 candidates, $(S2)$ leaves $12$, $(S3)$ leaves \textbf{exactly one}, and it is $R$. Hence the atom
 margins, the anchor column $Re_1=a$ and all sum rules above are \emph{consequences} --- their input
-status is revoked. \emph{Bonus lemma \tI:} on the $(S1)+(S2)$ locus $\det(M+2U)=20=\det L$ holds for
+status is revoked. \emph{Bonus lemma \mE:} on the $(S1)+(S2)$ locus $\det(M+2U)=20=\det L$ holds for
 \emph{all} $12$ candidates --- the fourth quartet determinant is redundant, the compiler's familiar
-overdetermination. \emph{Residue \tP:} H2 reduces to the establishment of the selectors themselves
+overdetermination. \emph{Residue \mC:} H2 reduces to the establishment of the selectors themselves
 ($n$ and the diamond determinants --- pre-existing inventoried objects); the address question
 introduces \emph{no new residual class}.
 \smallskip\\
@@ -447,14 +447,14 @@ and the torsion normal $n$, each \emph{column} of $R$ obeys $d\cdot c_j=a_j$ and
 the common kernel of $(d,n)$ is the primitive vector $(6,8,7)$ (audit: $p_2$, $\operatorname{rank}E_8$,
 scalaron-$7$), so within the address box $\{0..5\}^3$ each column is the \emph{unique} lattice point
 (census: $1$ of $216$ each) --- $(d,n)\Rightarrow R$, and the $6^9$ census above collapses to three
-column problems \tI. \emph{Honesty:} $K$ is \emph{not} pinned directly ($d^\top K=(1,\tfrac12,1)$); $\det
+column problems \mE. \emph{Honesty:} $K$ is \emph{not} pinned directly ($d^\top K=(1,\tfrac12,1)$); $\det
 K=4$ comes via the $\mu_4$ wall (\veri{v135\_det\_surface.py}). \emph{The mechanism is bounded:} the zero
 mode of $A_0^\star$ carries the exact spectral normal $\sigma=(2,-9,5)=(|\Z_2|,-\Nfam^2,\gcar)$ (signed
 squares; $\|v\|^2=\tfrac{16}9$ with $16=\dim S^+$, $\operatorname{adj}A_0^\star=\tfrac29P_v$ with
 $\tfrac29=$ the SdS entropy curvature), $\sigma\cdot\mathbf 1=-|\Z_2|$, $\sigma\cdot a=\Nfam$,
 $n\cdot\sigma=121=\|\operatorname{Pl}(K)\|_1^2$; and the exact $W(A_3)$ orbit control shows \emph{no}
 group image of $\sigma$ is proportional to $n$ --- the naive cofactor/orbit lift fails, the step
-$\sigma\to n$ is a genuine mechanism beyond the monodromy group. \emph{R4$'$ restated \tP:} derive the
+$\sigma\to n$ is a genuine mechanism beyond the monodromy group. \emph{R4$'$ restated \mC:} derive the
 \emph{pair} $(d,n)$; then $R$ is forced columnwise.
 \smallskip\\
 \noindent\textbf{The selector triangle (\veri{v139\_selector\_triangle.py}).} The pair itself now
@@ -471,12 +471,12 @@ atom pairings
 line the $\sigma$-pairing is $11(11{+}t)$: divisible by $11$ for \emph{every} $t$, a perfect square
 exactly at the true $n$ ($t{=}0$). The review's predicted lift is exact as an audit identity:
 $n=\operatorname{reverse}(\sigma)+|\mu_4|e_3$ (generation flip $+$ $\mu_4$ lift at the third slot).
-\emph{R4$'$ residue \tP\ (final form):} derive the three pairings --- everything else in the chain
+\emph{R4$'$ residue \mC\ (final form):} derive the three pairings --- everything else in the chain
 anchor $\to(d,n)\to R$ is exact.
 \end{keybox}
 
-\begin{keybox}[Exterior Leg Lemma --- the quark $u/d$ leg is a $\Lambda^2F$ area, not a scalar \tI/\tP]
-The v41 negative is a \emph{category error}, not a dead end. $u$ and $d$ share the hexagon-radial data
+\begin{keybox}[Exterior Leg Lemma --- the quark $u/d$ leg is a $\Lambda^2F$ area, not a scalar \mE/\mC]
+The \vref{v41} negative is a \emph{category error}, not a dead end. $u$ and $d$ share the hexagon-radial data
 $(r,w)=(1,1)$ ($L=7$ for both), and the $C_6$ resolvent $c(r,w)=|\mu_4|^w/(\tfrac54-\cos\tfrac{r\pi}3)$
 reads \emph{only} $(r,w)$ --- so any \emph{scalar} leg gives $c_u/c_d\equiv1$. A scalar sees radius, not
 orientation. The $u/d$ separation lives in the smallest \emph{non-scalar} invariant of the $SU(3)_F$
@@ -492,15 +492,15 @@ $\operatorname{Pl}_{\mathbf1,a}(K)$. The ``$11$'' is then \emph{generated}, not 
   =\frac{5\cdot11}{9\cdot13}=\frac{55}{117}\ }
   \quad(\text{anchor microcode }=\tfrac{e_2(a)(p_3(a)+1)}{p_0(a)^2(2p_2(a)+1)}).
 \]
-\textbf{Typing:} \tI\ for the Plücker / microcode identities ($\operatorname{Pl}(K)=(-1,6,4)$,
-$\|\cdot\|_1=11$, $5\cdot11/(9\cdot13)=55/117$); and --- by Readout Rigidity (v49, below) --- \tI\ also for the
+\textbf{Typing:} \mE\ for the Plücker / microcode identities ($\operatorname{Pl}(K)=(-1,6,4)$,
+$\|\cdot\|_1=11$, $5\cdot11/(9\cdot13)=55/117$); and --- by Readout Rigidity (\vref{v49}, below) --- \mE\ also for the
 \emph{physical} ratio $\mathcal C_{ud}(\rho^\star)=$ this $\Lambda^2F$ readout, which is \emph{constant} on the
 derived selector stratum and so does \emph{not} need any point-selection on $\Lambda^2F$. The quark residual is
 thereby re-typed from ``find the right scalar $y$'' to a closed exterior readout for the \emph{ratio}; only the
 \emph{absolute} amplitude scale ($U_{\mathrm{point}}$) stays as an anchor, no new scalar, no fishing.
 \smallskip\\
 \noindent\emph{Audit (the $121$ lemma, \veri{v119\_review\_validation\_2.py}):} the ``$11$'' has a second,
-independent appearance \tI: with $h=\mathbf1+a=(2,2,3)$ in the canonical anchor ordering,
+independent appearance \mE: with $h=\mathbf1+a=(2,2,3)$ in the canonical anchor ordering,
 $h^TRh=121=11^2=\|\operatorname{Pl}(K)\|_1^2=(p_3+1)^2$ --- the quadratic \emph{anchor norm} of the
 residue operator $R$ reproduces the Plücker integer (sensitivity control: the three orderings of $h$
 give $\{105,121,135\}$; only the canonical one yields $121$). Bonus checksums:
@@ -525,10 +525,10 @@ $\bar5=\Lambda^4(5)$. So the \emph{exterior degrees} are $\deg(u^c)=2$, $\deg(d^
 $\deg(u){+}\deg(d)=6=|R^+(A_3)|$ (the hexagon) and $\deg(d){-}\deg(u)=2=|\Z_2|$ (the sheet). The
 ``$\Lambda^2$'' of the exterior leg is therefore not exotic Hodge data --- it is the carrier's own
 $\Lambda^2$ grading (the up quark \emph{lives} in $\Lambda^2(5)$). This re-types the residual once more:
-from ``discrete non-abelian-Hodge invariant'' to ``the carrier exterior degree'' --- a standard \tL\ fact.
+from ``discrete non-abelian-Hodge invariant'' to ``the carrier exterior degree'' --- a standard \mE\ fact.
 \emph{Honest scope:} this grounds the \emph{type}; the Plücker \emph{number} $55/117$ stays the family
-$\operatorname{Pl}(K)$ \tI, and the carrier-$\Lambda^2$ $\leftrightarrow$ family-$\Lambda^2F$ link (via
-$\text{family}\otimes\text{carrier}=15=16{-}1$) plus the normalisation remain \tP.
+$\operatorname{Pl}(K)$ \mE, and the carrier-$\Lambda^2$ $\leftrightarrow$ family-$\Lambda^2F$ link (via
+$\text{family}\otimes\text{carrier}=15=16{-}1$) plus the normalisation remain \mC.
 \smallskip\\
 \noindent\textbf{The ``$11$'' is Pascal --- a third, simplest origin (\veri{v45\_family\_exterior.py}).}
 Following that link, $\operatorname{Pl}(K)$ is the \emph{exterior algebra of the family fundamental}
@@ -541,27 +541,27 @@ its distinct exterior powers. Hence
 (the cumulative $\Lambda^\bullet(\mu_4)$ up to degree $2=\deg(u^c)$),
 and $\text{family}\otimes\text{carrier}=15=\dim\mathfrak{su}(4)=\Lambda^2(5){\oplus}\Lambda^4(5)=10{+}5=\Nfam\gcar$
 read three ways. So the ``$11$'' is generated a \emph{third} way --- the cumulative family exterior algebra
-up to the up-quark's degree --- pure Pascal/branching, \emph{no special math}. The \tP\ physical
+up to the up-quark's degree --- pure Pascal/branching, \emph{no special math}. The \mC\ physical
 normalisation is unchanged; the algebraic origin of $55/117$ is now triply grounded.
 \end{keybox}
 
 \begin{lemma}[U5 --- the ``$11$'' worry, \emph{discharged} by Readout Rigidity]
 The original worry was that $c_u/c_d=\mathcal C_{ud}(\rho^\star)$ must be evaluated at the uniquely selected
 $\rho^\star$ \emph{without} using $11$ as input, so that until then $55/117$ would be a mere table-level
-rational shadow. \textbf{This is now resolved (v49):} $\mathcal C_{ud}$ is \emph{constant} on the discrete
+rational shadow. \textbf{This is now resolved (\vref{v49}):} $\mathcal C_{ud}$ is \emph{constant} on the discrete
 selector stratum $\mathcal S_{8,Q}$, so the ``$11$'' is \emph{earned} as the rigid Pl\"ucker readout
-$\|\operatorname{Pl}(K)\|_1$ (v42) --- \emph{independently} of point-uniqueness. Point-uniqueness of
+$\|\operatorname{Pl}(K)\|_1$ (\vref{v42}) --- \emph{independently} of point-uniqueness. Point-uniqueness of
 $\rho^\star$ enters only the \emph{absolute} amplitude scale, not the ratio.
 \end{lemma}
 
 \begin{lemma}[U6 --- the four certificates]
 $C_U^{(1)}$ wall enumeration (done); $C_U^{(2)}$ $D_4$-fixed character solver; $C_U^{(3)}$ selector
 uniqueness (one $S$-equivalence class); $C_U^{(4)}$ amplitude extraction --- the \emph{ratios}
-$R,Q,c_u/c_d$ are read off the (derived) selector stratum (closed, v49/v71); only the \emph{absolute}
+$R,Q,c_u/c_d$ are read off the (derived) selector stratum (closed, \vref{v49}/\vref{v71}); only the \emph{absolute}
 $U_f^\star,c_q$ normalisation is the anchor.
 \end{lemma}
 
-\begin{winbox}[Progress: an explicit valid flat bundle is realised (RH solve) \tN]
+\begin{winbox}[Progress: an explicit valid flat bundle is realised (RH solve) \mE]
 A numerical Riemann--Hilbert solve produced an \emph{explicit} Hermitian residue $A_0$ (eigenvalues
 $\{0,\tfrac13,\tfrac23\}$, $\operatorname{diag}=(\tfrac12,\tfrac14,\tfrac14)$) for which the Fuchsian system
 $A(z)=\sum_kU^{k-1}A_0U^{-(k-1)}/(z-i^k)$ simultaneously satisfies: the cusp class at each puncture; the
@@ -580,29 +580,29 @@ resolvent-dressed diagonal extraction ($|\mathrm{diag}\,M_k|=(0,\tfrac12,\tfrac1
 resolvent factor) does \emph{not} reproduce the lepton amplitudes $(0.475,1.107,0.917)$. So the precise
 $\Gamma^{\min}_{ij}$ geodesic-to-word dictionary (how the $6$-site hypercharge hexagon combines with the
 $3$-dim family $\rho^\star$) was the genuine remaining analytic input --- it is \emph{not} fixed by a
-natural guess, and we do \emph{not} fish for $55/117$. \emph{Resolved since (v118): the correct
+natural guess, and we do \emph{not} fish for $55/117$. \emph{Resolved since (\vref{v118}): the correct
 extraction is the resolvent determinant of the $W(A_3)$ monodromy, not the diagonal dressing --- the
 probe's failure is thereby explained, and the dictionary is exact.}
 \end{winbox}
 
-\begin{keybox}[Theorem U --- the four-way split (sharper than one monster gate) \tF/\tA]
+\begin{keybox}[Theorem U --- the four-way split (sharper than one monster gate) \mE/\mO]
 $D_4$ \emph{fixes the admissible chamber, not the physical point} (the $D_4$-fixed locus is
 positive-dimensional, U3); the discrete selectors $\det R=8$, $\operatorname{SNF}(R)=(1,1,8)$,
 $\operatorname{Spec}(Q_+)=\{1,2,3\}$ do the cutting. The gate splits into four pieces, three of them
 essentially closed:
 \begin{itemize}
-\item $U_{\mathrm{unitary}}$ \tN: parabolic degree $0$ $+$ polystable $\Rightarrow$ unitary (Mehta--Seshadri)
+\item $U_{\mathrm{unitary}}$ \mE: parabolic degree $0$ $+$ polystable $\Rightarrow$ unitary (Mehta--Seshadri)
   $\Rightarrow\Phi=0$; the harmonic metric is the \emph{finite} invariant form $H$ ($M_k^\dagger HM_k=H$),
   not a Hitchin PDE (\veri{v40\_harmonic\_metric.py}).
-\item $U_{\mathrm{H2}}$ \tN: $R,Q,K$ are read off the bundle (splitting type $=a$, $\det R=8$,
+\item $U_{\mathrm{H2}}$ \mE: $R,Q,K$ are read off the bundle (splitting type $=a$, $\det R=8$,
   $\operatorname{Spec}(Q_+)$) (\veri{v39\_uwall\_selectors.py}).
-\item $U_{\Lambda^2}$ \tI: \textbf{Readout Rigidity} --- on the discrete stratum
+\item $U_{\Lambda^2}$ \mE: \textbf{Readout Rigidity} --- on the discrete stratum
   $\mathcal S_{8,Q}=\{\det R=8,\operatorname{SNF}(R)=(1,1,8),\operatorname{Spec}(Q_+)=\{1,2,3\}\}$ the
   anchor-plane readout is \emph{constant},
   $\mathcal C_{ud}(\rho)=\gcar\|\operatorname{Pl}_{\mathbf1,a}(K)\|_1/(\Nfam^2\Delta_Q)=\tfrac{55}{117}$,
   \emph{independent} of the continuous $D_4$ position --- so $c_u/c_d$ needs no point uniqueness
   (\veri{v49\_readout\_rigidity.py}, \veri{v42\_exterior\_leg.py}).
-\item $U_{\mathrm{point}}$ \tA: full uniqueness of $\rho^\star$ --- needed only for the \emph{complete}
+\item $U_{\mathrm{point}}$ \mO: full uniqueness of $\rho^\star$ --- needed only for the \emph{complete}
   $U_f^\star$ amplitude matrix, \emph{not} for $c_u/c_d$.
 \end{itemize}
 \textbf{Headline:} the remaining flavor bridge is not a PDE gate --- it is a finite exterior
@@ -610,8 +610,8 @@ essentially closed:
 
 \smallskip\noindent\textbf{The simple closure (\veri{v71\_simple\_r\_bridge.py}).} The selector stratum
 $\mathcal S_{8,Q}$ is now \emph{fully derived}: $\det R=8=\operatorname{rank}E_8$ with $\operatorname{SNF}(R)=(1,1,8)$
-is the lattice invariant (cf.\ $\det Q=3=\Nfam$, v70), and $\operatorname{Spec}(Q_+)=\{1,2,3\}$ is the
-$D_4$-equivariant result (v69). The four flavor operators are integer lattice maps with compiler-atom
+is the lattice invariant (cf.\ $\det Q=3=\Nfam$, \vref{v70}), and $\operatorname{Spec}(Q_+)=\{1,2,3\}$ is the
+$D_4$-equivariant result (\vref{v69}). The four flavor operators are integer lattice maps with compiler-atom
 determinants $(\det Q,\det K,\det R,\det L)=(3,4,8,20)$, product $1920=|W(D_5)|$. So by Readout Rigidity the
 quark \emph{ratios} ($c_u/c_d=g_{\mathrm{car}}\!\cdot\!11/(\Nfam^2\!\cdot\!13)=\tfrac{55}{117}$, etc.) are
 \emph{pure integer Pl\"ucker readouts --- no transcendental monodromy solve}. The earlier monodromy
@@ -621,13 +621,13 @@ a missing computation.
 
 \smallskip\noindent\textbf{Gate 1 complete: $U_{\mathrm{point}}\to v_{\mathrm{geo}}$ (\veri{v75\_upoint\_to\_vgeo.py}).}
 The absolute amplitudes are not free either. The lepton amplitudes are exact ($c=(\tfrac{16}7,\tfrac43,\tfrac76)$,
-v20), every cross-sector $c$-ratio is closed (Pl\"ucker), and each \emph{sector product} is a clean
-$\phiz$-power (Grand Mass Volume, v46: $\det M_{\rm sector}\!\sim\!(\phiz)^{6,9,10}$; the lepton product is
+\vref{v20}), every cross-sector $c$-ratio is closed (Pl\"ucker), and each \emph{sector product} is a clean
+$\phiz$-power (Grand Mass Volume, \vref{v46}: $\det M_{\rm sector}\!\sim\!(\phiz)^{6,9,10}$; the lepton product is
 $\tfrac{16}7\!\cdot\!\tfrac43\!\cdot\!\tfrac76=\tfrac{32}9=2^{\gcar}/\Nfam^2$). Since $(\text{pairwise
 ratios})+(\text{product})\Leftrightarrow(\text{individuals})$ is a bijection, the nine charged-fermion
 amplitudes are \emph{fixed up to one overall scale} $v_{\mathrm{geo}}$. \textbf{So $U_{\mathrm{point}}$ is not an
 independent gate: it reduces to $v_{\mathrm{geo}}$, the \emph{same} one irreducible dimensionful anchor as
-gravity's $1/G$ (v68) --- the two $[A]$ anchors collapse to one.}
+gravity's $1/G$ (\vref{v68}) --- the two $[A]$ anchors collapse to one.}
 \end{keybox}
 
 % =====================================================================
@@ -655,7 +655,7 @@ Fredholm; the conformal mode is removed as BRST-exact / non-propagating in the C
 in Lean (medium).}
 \end{lemma}
 
-\begin{lemma}[G2 --- finite relative spectral action, \emph{heat-kernel grounded} \tN]
+\begin{lemma}[G2 --- finite relative spectral action, \emph{heat-kernel grounded} \mE]
 $S_{\mathrm{rel},\chi}$ is finite, differentiable, with a local Seeley--DeWitt expansion
 $\operatorname{Tr}f(D^2/\chi^2)\sim f_4\chi^4 a_0+f_2\chi^2 a_2+f_0 a_4+\cdots$. For the Lichnerowicz
 Dirac operator $D^2=\nabla^2+\tfrac R4$ (so $E=-\tfrac R4$, spinor trace $\operatorname{tr}\mathbf1=4$) the
@@ -675,7 +675,7 @@ $n_s\simeq1-\tfrac2N$, $r\simeq\tfrac{12}{N^2}$. The $R+R^2$ \emph{structure} is
 here (\veri{v36\_spectral\_action\_g2.py}, \veri{v28\_gravity\_fR.py}).
 \end{lemma}
 
-\begin{winbox}[The simpler resolution: ``full QG'' for physics is the gap-decoupled admissible sector \tF]
+\begin{winbox}[The simpler resolution: ``full QG'' for physics is the gap-decoupled admissible sector \mE]
 The infinite-dimensional ambient measure (G6) is the summit, but the admissible IR sector does not wait for
 it. The metric coupling is gap-dominated (G5): $2\|V_{\mathrm{metric}}\|=0.785<\Delta=6\log\tfrac32=2.433$,
 so the admissible sector keeps a \emph{strictly positive} effective gap $\Delta_{\mathrm{eff}}=1.648>0$
@@ -697,31 +697,31 @@ absence does \emph{not} affect the bounded IR claim, but it \emph{does block cer
 physical TOE} --- so we do not call it ``mere mathematical completeness''. \veri{v36\_spectral\_action\_g2.py}
 \end{winbox}
 
-\begin{winbox}[The glue Q-system: the index-$4$ object of the $G_{\mathrm{net}}$ statement exists explicitly \tI/\tP\ (\veri{v125\_glue\_qsystem.py})]
+\begin{winbox}[The glue Q-system: the index-$4$ object of the $G_{\mathrm{net}}$ statement exists explicitly \mE/\mC\ (\veri{v125\_glue\_qsystem.py})]
 The $G_{\mathrm{net}}$ target --- \emph{``the seam--Calder\'on inclusion has Jones index $4=|\mu_4|$''}
 --- no longer refers to an unknown object. On the glue group algebra $A=\mathbb C[\Z_4]$ (multiplication
 $\delta_a\otimes\delta_b\mapsto\delta_{a+b}$, unit $\delta_0$) \emph{all} Longo Q-system axioms hold
-exactly \tI: associativity, unit law, the Frobenius identity
+exactly \mE: associativity, unit law, the Frobenius identity
 $(m\otimes1)(1\otimes m^*)=m^*m=(1\otimes m)(m^*\otimes1)$, and specialness $mm^*=|\Z_4|\,\mathbf1$ ---
 a special C$^*$ Frobenius algebra with
 \[
   \boxed{\ \dim\theta=4=|\mu_4|=[B:A]\ }
 \]
 exactly the Carrier Index Lemma value (KLM: $\mu_{\mathrm{carrier}}=16=4^2\mu_{E_8}$ re-verified).
-\emph{Locality $=$ isotropy \tI:} on the Lagrangian glue $\langle(1,1)\rangle$ the discriminant form
-gives $q(k(1,1))=k^2\in\Z$ for every $k$ --- the braiding obstruction vanishes (v92 in Q-system
+\emph{Locality $=$ isotropy \mE:} on the Lagrangian glue $\langle(1,1)\rangle$ the discriminant form
+gives $q(k(1,1))=k^2\in\Z$ for every $k$ --- the braiding obstruction vanishes (\vref{v92} in Q-system
 language); the two Lagrangian glues (the sheet pair) are the only maximal isotropic choices.
-\emph{Halfway step \tI:} $\{0,2\}<\Z_4$ closes and gives the unique intermediate Q-system
+\emph{Halfway step \mE:} $\{0,2\}<\Z_4$ closes and gives the unique intermediate Q-system
 $\mathbb C[\Z_2]$ $=$ the $SO(16)_1$ tower step, with index factorisation $4=2\times2$. \emph{R2 sharpened
-\tP\ (recorded, not claimed):} what remains is the operator-algebraic \emph{identification} ``the
-seam--Calder\'on inclusion of the $16$-Majorana net (v113) realises \emph{this} Q-system'' --- matching
-two constructed objects, not a search; the three loads (metric $+$ carrier $+$ QBL, v123) hang on this
+\mC\ (recorded, not claimed):} what remains is the operator-algebraic \emph{identification} ``the
+seam--Calder\'on inclusion of the $16$-Majorana net (\vref{v113}) realises \emph{this} Q-system'' --- matching
+two constructed objects, not a search; the three loads (metric $+$ carrier $+$ QBL, \vref{v123}) hang on this
 one identification.
 \smallskip\\
 \noindent\textbf{The hull is the graded module of the Q-system (\veri{v128\_graded\_hull.py}).} The
-Q-system is not merely an abstract companion of $E_8$ --- $E_8$ \emph{realises} it \tI: the $240$
+Q-system is not merely an abstract companion of $E_8$ --- $E_8$ \emph{realises} it \mE: the $240$
 roots, built as explicit norm-$2$ vectors in $D_5\oplus A_3+$glue coordinates, decompose as
-$240=52+64+60+64$ over the glue $\Z_4$ (the v89 branching as vectors), and for \emph{all} $6720$ root
+$240=52+64+60+64$ over the glue $\Z_4$ (the \vref{v89} branching as vectors), and for \emph{all} $6720$ root
 pairs whose sum is again a root, $\operatorname{coset}(r_1{+}r_2)=\operatorname{coset}(r_1)+
 \operatorname{coset}(r_2)\bmod4$:
 \[
@@ -742,7 +742,7 @@ $\int\langle\Theta F,F\rangle_{\mathcal K_g}\,d\mu_{\mathrm{Cal},\chi}\ge0$ (G4)
 step:} RP after integrating over dynamical metrics, not merely at fixed background.
 \end{lemma}
 
-\begin{lemma}[G5 --- gap dominance \tF]
+\begin{lemma}[G5 --- gap dominance \mE]
 $2\|V_{\mathrm{metric}}\|_{\mathrm{rel}}<\Delta=6\log\tfrac32$, with
 $\|V_{\mathrm{metric}}\|_{\mathrm{rel}}\le248\cthree^2=\tfrac{31}{8\pi^2}=0.39262$, hence
 $2\|V\|=0.7852<2.4328$ and $\Delta_{\mathrm{eff}}\ge\Delta-2\|V\|>1.647>0$. The numerical inequality is
@@ -760,7 +760,7 @@ mixings, $\alpha^{-1}$, the $R{+}R^2$ regime) is independent of the open ambient
 \]
 Thus $(G_{\mathrm{metric}})$ is \emph{not} a diffuse ``full quantum gravity missing'' block: it is the sharply
 delimited \emph{ambient projective limit} (G6), a strict-TOE certification target whose closure the
-falsifiable IR physics does not depend on. \textbf{Typing:} the inequality is machine-checked \tF; the
+falsifiable IR physics does not depend on. \textbf{Typing:} the inequality is machine-checked \mE; the
 operator-norm bound on $\|V_{\mathrm{metric}}\|$ is the conditional input.
 \end{theorem}
 
@@ -784,7 +784,7 @@ measure --- so $G6$ is a \emph{boundary} projective limit. The conditional theor
 i.e.\ the dimension of the open problem drops from bulk QG to a finite seam-boundary measure. \textbf{Residual:}
 the constructive boundary projective limit (constructive-QFT grade) --- reduced, not closed. So Gate 2 is now
 \emph{two clean tiers}: Tier A (IR physics) closed under RP$+$gap; Tier B (strict TOE) reduced to a boundary
-measure, no longer a diffuse ``full QG missing''. \tP/\tA
+measure, no longer a diffuse ``full QG missing''. \mC/\mO
 
 \smallskip\noindent\textbf{And that boundary measure is a \emph{rigorously constructed} net (\veri{v77\_e8\_conformal\_net.py}).}
 The level-1 central charges $c=\dim\mathfrak g/(1+h^\vee)$ give $c(E_8)_1=\tfrac{248}{31}=8=\operatorname{rank}E_8$,
@@ -795,10 +795,10 @@ embedding} $(D_5)_1\!\times\!(A_3)_1\subset(E_8)_1$ (coset $c=0$). Now $(E_8)_1$
 \emph{identify the seam-Calder\'on boundary measure with the $(E_8)_1$ lattice net} (carrier $=(D_5)_1\!\times\!(A_3)_1$
 subnet), and the gap $\Delta_{\mathrm{eff}}>0$ supplies the clustering/tightness --- so $G6$ is imported into
 existing RCFT/conformal-net rigor rather than built from scratch. Residual $=$ the net identification $+$ bulk
-reconstruction. \tI\ (charges, embedding) $+$ \tP\ (identification)
+reconstruction. \mE\ (charges, embedding) $+$ \mC\ (identification)
 \end{keybox}
 
-\begin{keybox}[Theorem G --- the closure statement \tA\ (target)]
+\begin{keybox}[Theorem G --- the closure statement \mO\ (target)]
 The relative spectral boundary kernel over the diffeomorphism-quotiented metric sector admits a
 regulator-independent, reflection-positive projective-limit measure $\mu_{\mathrm{QG}}$. Its Ward
 identities imply covariant conservation, and its low-curvature expansion is the TFPT $R+R^2$ seam action
@@ -838,7 +838,7 @@ Ward identities (G7) & BV/BRST formal $+$ checks & hard \\
   \boxed{\ \text{Selector-triangle pairings}\ \rightarrow\ v_{\mathrm{geo}}\ \text{scale anchor}\ \rightarrow\ G_{\mathrm{net}}\ \text{inclusion theorem}\ }
 \]
 The flavor interface (historically $U_{\mathrm{wall}}$) is now reduced to the \emph{selector-triangle
-pairings} (the dual normal pair $(d,n)$ forcing $R$ columnwise, v136/v139); it is finite,
+pairings} (the dual normal pair $(d,n)$ forcing $R$ columnwise, \vref{v136}/\vref{v139}); it is finite,
 falsifiable and the cheapest visible upgrade. The $v_{\mathrm{geo}}$ scale anchor is the one dimensionful
 input (same nature as $1/G$). $G_{\mathrm{net}}$ --- the index-4 seam-net inclusion certifying the metric
 sector --- is more fundamental but a \emph{programme}, not a single proof: heavy machinery, with the

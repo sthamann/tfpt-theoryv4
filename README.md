@@ -119,7 +119,7 @@ Sakharov-type induced gravity) — not a diffuse gap.
 
 | Item | What it is |
 |---|---|
-| `v1_*.py … v95_*.py` | 95 numbered claim checks (one file per claim cluster). |
+| `v1_*.py … v140_*.py` | 140 numbered claim checks (one file per claim cluster). |
 | `run_all.py` | Runs the whole suite; ends `ALL CHECKS PASSED`. |
 | `tfpt_constants.py` | Shared constants + `check()` harness. |
 | `predictions_frozen.json` | **Blind-prediction registry** (frozen 2026-06-09): every dimensionless prediction of record at 25 digits, locked to its formula by `v84_frozen_registry.py` on every run; exactly one `θ12` prediction of record (seed `0.306747`), `r`/`n_s` only as `N_star` bands. |
@@ -146,7 +146,7 @@ Dependencies: a LaTeX distribution (`pdflatex`), Python 3 with `sympy`, `mpmath`
 `matplotlib`; optionally Wolfram Engine and Lean 4 (`elan`/`lake`).
 
 ```bash
-# 1. Compile the 9 active documents  ->  "9 ok, 0 failed"
+# 1. Compile the 9 active documents + the changelog  ->  "10 ok, 0 failed"
 bash build.sh notes
 
 # 2. Run the Python verification suite  ->  "ALL CHECKS PASSED"
@@ -179,14 +179,15 @@ and the ledger stay in lock-step.
 
 Used consistently across all documents and the ledger:
 
-| Marker | Meaning |
-|---|---|
-| `[I]` | exact identity |
-| `[L]` | Lie-/lattice-theorem |
-| `[F]` | formalised (Lean) |
-| `[N]` | numerical fixed point |
-| `[P]` | physical / conditional |
-| `[A]` | axiom / anchor / open |
+The **documents** show a simplified four-class display marker; the **ledger** keeps the fine-grained
+per-claim type (Axiom / Formal / Lattice / Numerical / Identity / Physical), so no fidelity is lost.
+
+| Display marker | Meaning | Ledger fine types it covers |
+|---|---|---|
+| `[E]` | exact / machine-proven | Identity, Lattice (Lie/lattice), Formal (Lean), Numerical |
+| `[C]` | conditional (holds under named hypotheses) | Physical, bridge, readout |
+| `[O]` | open / axiom (declared input or genuine gap) | Axiom |
+| `[X]` | falsifiable kill test | — |
 
 The ledger is *append-only and versioned*: superseded rows are marked `active=false` with a
 `canonical_status` pointer, so the current authoritative status of any claim is unambiguous.

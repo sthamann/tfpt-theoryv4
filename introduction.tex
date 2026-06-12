@@ -24,7 +24,7 @@
 \usepackage[hidelinks,colorlinks=true,linkcolor=blue!55!black,urlcolor=blue!55!black]{hyperref}
 
 % ---- colours / boxes ----
-\input{tfpt_style}
+\input{tex-artefacts/tfpt_style}
 
 % ---- short macros ----
 \newcommand{\cthree}{c_3}
@@ -46,15 +46,15 @@
 \Large A discrete compiler for the constants of physics\\[2.5mm]
 \large Two inputs --- the boundary constant $c_3=\tfrac1{8\pi}$ and a five-slot carrier --- build $E_8$\\
 and read off the Standard Model: status assessment and reading guide}
-\author{}
-\date{\today}
+\author{\TFPTauthors}
+\date{\TFPTdatestamp}
 
 \def\TFPTdoctitle{Introduction \& Reading Guide}
 \begin{document}
 \maketitle
 \vspace{-0.8cm}
 
-\begin{keybox}[In one sentence]
+\begin{keyboxnb}[In one sentence]
 \textbf{Topological Fixed-Point Theory (TFPT)} constructs, from exactly \textbf{two inputs} --- a boundary
 constant $\cthree=\tfrac1{8\pi}$ (P1) and a five-slot carrier $\gcar=5$ (P2) --- a discrete compiler for
 the Standard-Model skeleton: the gauge group, three families, hypercharges and the flavor matrix, with
@@ -63,27 +63,29 @@ machine-checkable} and the dimensionless constants follow as fixed points ($\ain
 \emph{physical readouts} --- absolute scales, masses, inflation, gravity and cosmological transfers ---
 run through explicitly \emph{named, status-typed bridges} ($v_{\mathrm{geo}}$, $G_{\mathrm{net}}$,
 $F_{\mathrm{transfer}}$), not as free outputs. The honest one-line claim is on the status card below.
-\end{keybox}
+\end{keyboxnb}
 
-\input{tfpt_docset}
+\input{tex-artefacts/tfpt_docset}
 \noindent\textbf{You are reading the \textbf{introduction} --- the entry point and reading guide.}
 
-\input{tfpt_status}
+\input{tex-artefacts/tfpt_status}
 \TFPTbadges
 \TFPTclaimstack[none]
 
 
 \tableofcontents
 
-\noindent\textbf{Reading the markers (refined).} The former overloaded ``[M]'' is split into the grade it
-actually carries, so a reviewer can see at a glance which claims are exact, which are formal, and which are
-conditional:
-\tI\ \emph{exact identity} (e.g.\ $240=16\cdot5\cdot3$);
-\tL\ \emph{Lie/lattice theorem} (e.g.\ $D_5{\oplus}A_3{+}\mu_4{=}E_8$);
-\tF\ \emph{formalised} (Lean- or script-verified);
-\tN\ \emph{numerical fixed point} (reproduced, stable);
-\tP\ \emph{physical/conditional} (follows under named hypotheses);
-\tA\ \emph{axiom or open}.
+\noindent\textbf{Reading the markers.} Claims carry one of \emph{four} reader-facing classes, so one can
+see at a glance what is proven and what is conditional:
+\mE\ \emph{exact / machine-proven} --- an exact identity (e.g.\ $240=16\cdot5\cdot3$), a Lie/lattice
+theorem (e.g.\ $D_5{\oplus}A_3{+}\mu_4{=}E_8$), a Lean/script formalisation, or a reproduced numerical
+fixed point;
+\mC\ \emph{conditional} --- follows under explicitly named hypotheses (a physical bridge, readout or
+pending step);
+\mO\ \emph{open / axiom} --- a declared input or a genuine gap;
+\mX\ \emph{kill test} --- a falsifiable threshold.
+The finer per-claim type (Axiom / Formal / Lattice / Numerical / Identity / Physical) is kept in
+\texttt{verification/status\_ledger.csv}, the single source of truth.
 
 \begin{center}
 \begin{tikzpicture}[font=\footnotesize,
@@ -110,7 +112,7 @@ conditional. The single source of truth for which claim sits where is
 \noindent\textbf{No-free-pattern rule.} To keep the structure from drowning in decorative coincidences, an
 identity enters the \emph{main text} only if it (1) is a necessary step in a derivation, (2) kills an
 alternative, (3) is ablation-relevant, (4) links two previously independent modules, or (5) is
-experimentally tested. Everything else is explicitly demoted to an \emph{audit fingerprint} \tI\ (clearly
+experimentally tested. Everything else is explicitly demoted to an \emph{audit fingerprint} \mE\ (clearly
 boxed as such) --- so the load-bearing beams stay visible and the ornament never gets promoted to spine.
 
 \noindent\textbf{Admissible-invariant classes (the harder filter).} Sharper still: a \emph{load-bearing}
@@ -122,24 +124,24 @@ branching block; (vii) a pre-registered experimental observable. Anything else i
 frontier item, never spine. This is what converts TFPT from \emph{pattern hunting} (``look, another number'')
 into a typed compiler: \emph{fewer admissible kinds of explanation}, not more matches.
 
-\begin{keybox}[Reviewer path (read in this order; the rest is support)]
+\noindent\textbf{Reviewer path} (read in this order; the rest is support):
 \begin{enumerate}[leftmargin=1.7em,itemsep=1pt]
 \item the architecture: the two axioms $\{\cthree,\gcar\}$ and the two-engine picture (\S\ref{sec:docmap}, the figures);
-\item the $E_8$ glue $E_8{=}(D_5{\oplus}A_3){+}\mu_4$ --- document~1, Part~II, machine-checked (\texttt{verification/v1\_e8\_glue.py});
+\item the $E_8$ glue $E_8{=}(D_5{\oplus}A_3){+}\mu_4$ --- document~1, Part~II, machine-checked (\texttt{v1\_e8\_glue.py});
 \item the $\alpha^{-1}$ fixed point plus ablation (\texttt{v3\_em\_alpha.py});
 \item the \textbf{single status ledger} \texttt{verification/status\_ledger.csv} --- the source of truth for every claim's grade, location, dependency and script;
 \item the \textbf{open gates} as numbered research contracts (\texttt{tfpt\_research\_contracts}: the residual classes R1--R5 and their current reductions) and the honest frontier list (document~4).
 \end{enumerate}
-Everything carries a claim ID (e.g.\ \texttt{E8.GLU.01}, \texttt{EM.FP.01}) that resolves to a row of the
+\noindent Everything carries a claim ID (e.g.\ \texttt{E8.GLU.01}, \texttt{EM.FP.01}) that resolves to a row of the
 ledger. \textbf{If the text and the ledger ever disagree, the ledger wins.}
-\end{keybox}
 
 % =====================================================================
 \section{What this is about: the jump in construction principle}\label{sec:docmap}
 % =====================================================================
 
-\begin{keybox}[In plain words --- what we found, and why it matters]
-\textbf{What we found.} TFPT reproduces dozens of real numbers of physics (particle masses, the
+\subsection*{In plain words}
+
+\noindent\textbf{What we found.} TFPT reproduces dozens of real numbers of physics (particle masses, the
 fine-structure constant, dark-energy and inflation values) from a small set of inputs --- and the
 compiler closure says \emph{why} the same handful of small integers ($2,3,5,16,\dots$) reappears in
 every sector: those numbers are not separate lucky hits. A single tiny ``machine'' --- fed by just
@@ -150,19 +152,19 @@ read off by projection and boundary dressing (not ``printed'' for free --- where
 interface is needed, it is named).
 
 \smallskip
-\textbf{Why this is simple.} There are not many separate derivations that happen to share numbers ---
+\noindent\textbf{Why this is simple.} There are not many separate derivations that happen to share numbers ---
 there is \emph{one generator and a handful of corollaries}, and the number of independent structural
 assumptions is \textbf{two}.
 
 \smallskip
-\textbf{How plausible it is.} A theory becomes more believable when it \emph{explains more from less}.
+\noindent\textbf{How plausible it is.} A theory becomes more believable when it \emph{explains more from less}.
 Here the two inputs are even \emph{over-determined}: the machine reproduces the very two numbers it
 started from (the dashed bootstrap loop in the architecture diagram, \S2), so there is \emph{no free
 dial left to tune}. The only genuinely free, continuous ingredient that remains is the number $\pi$.
-\end{keybox}
 
-\begin{keybox}[Sharper still: one anchor $a=(1,1,2)$, and $E_8$ as a \emph{compiler hull} \tI/\tL]
-The two axioms are not even independent: they are the \emph{elementary symmetric polynomials} of the
+\subsection*{Sharper still: one anchor $a=(1,1,2)$, and $E_8$ as a compiler hull \texorpdfstring{(\mE)}{}}
+
+\noindent The two axioms are not even independent: they are the \emph{elementary symmetric polynomials} of the
 single parabolic anchor $a=(1,1,2)$ (the exponents-at-infinity / splitting type $\mathcal O(-2)\oplus\mathcal O(-1)^2$):
 \[
   e_1(a)=4=|\mu_4|,\qquad e_2(a)=5=\gcar,\qquad e_3(a)=2=|\Z_2|,\qquad
@@ -175,13 +177,13 @@ $p_1{=}4{=}|\mu_4|$, $p_2{=}6{=}|R^+(A_3)|$, $p_3{=}10{=}\mathcal A_\Lambda$, an
 \]
 with the binary ladder $p_{n+1}-p_n=2^n$. So the inputs collapse from $\{\cthree,\gcar\}$ to
 $\boxed{\,a=(1,1,2)\ \text{plus}\ \pi\,}$. \veri{v23\_anchor\_generator.py}
-\smallskip\\
-\noindent\emph{And $a$ is itself half-forced} (\tL/\tP): on $\mathbb P^1$ every bundle splits
+\par\smallskip
+\noindent\emph{And $a$ is itself half-forced} (\mE/\mC): on $\mathbb P^1$ every bundle splits
 (Birkhoff--Grothendieck), so once $|\mu_4|=4$, $\Nfam=3$, $\deg E=-4$ are set, the three positive
 anti-degrees are positive integers summing to $4$, and $4=2+1+1$ is the \emph{unique} partition into three
 positive parts. The genuine remaining axiom is therefore not ``why $a=(1,1,2)$'' but ``why the carrier
-$\gcar=5$ / $(|\mu_4|,\Nfam)=(4,3)$'' --- that interface (with $\cthree$) is the \tA\ input layer.
-\smallskip\\
+$\gcar=5$ / $(|\mu_4|,\Nfam)=(4,3)$'' --- that interface (with $\cthree$) is the \mO\ input layer.
+\par\smallskip
 \noindent\textbf{What $E_8$ is (and is not).} In TFPT $E_8$ is \emph{not} an unbroken physical gauge group:
 it is the unimodular \emph{audit / compiler hull} that classifies the admissible discrete charge and
 residue structures. The Standard Model is a \emph{readout} after projection, not a direct $E_8$ gauge
@@ -190,17 +192,17 @@ adjoint''. This is exactly why the known no-go results against literal $E_8$ wor
 (Distler--Garibaldi; Coleman--Mandula) do \emph{not} bite: they constrain $E_8$ as a spacetime gauge
 symmetry, which TFPT does not claim. The defensible claim is: \emph{TFPT is the unique parabolic
 compilation of the anchor $a=(1,1,2)$ into the $E_8$ audit hull.}
-\smallskip\\
+\par\smallskip
 \noindent In one line:
-\[
-  \boxed{\ \text{The anchor generates the syntax; the boundary generates the scale; }E_8\text{ checks the consistency.}\ }
-\]
+\begin{keyeq}
+The anchor generates the syntax; the boundary generates the scale; $E_8$ checks the consistency.
+\end{keyeq}
 i.e.\ the discrete content (carrier $D_5\oplus A_3+\mu_4$, the operators $R,Q,K,L$) flows from
 $a=(1,1,2)$; the continuous content ($c_3=\tfrac1{8\pi}$, $\varphi_0$, $\ainv$, the exponential scales) flows
 from $\pi$; and $E_8$ is the unimodular \emph{checksum container}, not the world group.
-\smallskip\\
+\par\smallskip
 \noindent\textbf{The anchor ratio triad (\veri{v119\_review\_validation\_2.py}).} The three elementary
-symmetric values, normalised by the family count, are the theory's three recurring fractions \tI:
+symmetric values, normalised by the family count, are the theory's three recurring fractions \mE:
 \[
   \frac{e_3}{p_0}=\frac23\ \text{(Koide branch / sheet ratio)},\quad
   \frac{e_1}{p_0}=\frac43\ \text{(seed gain)},\quad
@@ -208,15 +210,16 @@ symmetric values, normalised by the family count, are the theory's three recurri
 \]
 --- the canonical flow's critical points are exactly $(2,5)=(e_3,e_2)$ with inflection
 $\tfrac72=\tfrac{e_3+e_2}2$: the fractions $\tfrac23,\tfrac43,\tfrac53$ are not scattered numbers but the
-three normalised anchor coefficients. Further micro-identities \tI:
+three normalised anchor coefficients. Further micro-identities \mE:
 $\Omega_{\mathrm{adm}}=2p_1p_2=48$, $10b_1=1+p_1p_3=41$,
 $\Delta_Y=e_2^2=p_0^2+2\operatorname{rank}E_8=25$, $h(E_8)=e_3p_0e_2=30$,
 $\operatorname{rank}E_8=p_0+e_2$.
-\end{keybox}
 
 \TFPTanchorcockpit
 
-That is now the case. The whole development is consolidated into \textbf{seven companion documents} (plus
+\subsection*{The companion documents}
+
+\noindent The whole development is consolidated into \textbf{eight companion documents} (plus
 this introduction), organised in layers that build on one another; this introduction is the entry point
 and reading guide. Each document collects the material of its layer into self-contained parts:
 
@@ -230,9 +233,10 @@ and reading guide. Each document collects the material of its layer into self-co
 \texttt{tfpt\_2\_standard\_model} & \textbf{Standard Model.} The full SM in one $\phiz$-ladder formula (Part~I); the flavor block from parabolic weights and the transport theorem, H2 as a spectral selector (Part~II); the worked closures --- explicit gap, APS--Fredholm, truncation/$n_s,r$, Starobinsky $M$, derived $\theta_{12}$, quark $c$, the H2 splitting type, $\Lambda$-typing (Part~III). \\
 \texttt{tfpt\_3\_e8\_audit\_bootstrap} & \textbf{$E_8$ audit \& bootstrap.} The seven $E_8$ slices as an audit raster ($E_6{\times}A_2$ reads the flavor matrix) (Part~I); the old cascade $D{=}60{-}2n$ as the same even-integer spine (Part~II); the M\"obius bootstrap --- $\gcar{=}5$ and the ``$8$'' in $\cthree$ as overdetermined fixed points, only $\pi$ irreducible (Part~III). \\
 \texttt{tfpt\_4\_frontier} & \textbf{Frontier.} The honest status of $\eta_B$, $m_p/m_e$, Koide, dark matter and quantum gravity --- the genuine handle, the precision, and what is \emph{not} forced onto the ladder. \\
+\texttt{tfpt\_5\_redteam} & \textbf{Red Team.} The adversarial audit of the five load-bearing reductions (Targets A--E): the declared attacks, what survives each, what each one reduces to, and the explicit kill tests. \\
 \texttt{tfpt\_research\_contracts} & \textbf{Research contracts.} The open gates as numbered contracts with lemma chains and closing theorems: $(U_{\mathrm{wall}})$ (now reduced to the selector triangle: $(d,n)\Rightarrow R$ columnwise, residue $=$ three atom pairings) and $G_{\mathrm{metric}}/G_{\mathrm{net}}$ (the index-$4$ seam-net identification --- one theorem, three doors). \\
-\texttt{tfpt\_horizon\_readouts} \textbf{(App.~H)} & \textbf{Appendix~H --- horizon unit system (reframe, not new physics).} One seam constant $\cthree{=}\tfrac1{8\pi}$ as the universal horizon thermal code: Hawking/de Sitter/Unruh, BH thermodynamics, Page, scrambling, Nariai bound, $v_{\rm GW}{=}c$ --- standard physics in seam units, two compiler fingerprints ($1920{=}|W(D_5)|$, $|\mu_4|{=}4$); plus the Nariai/anchor surface, the dual anchor and the resummed seam clock (v101--v138). \\
-\texttt{origin\_theory} & \textbf{Origin Theory.} Why no free fundamental number remains: the $(\gcar,\Nfam)$ skeleton, the triply-forced $8$, the order-$30$ Coxeter cycle, one boundary transport for flavor and horizon, the gapped unique attractor; \tI/\tL\ core plus one honestly-typed \tP\ cyclic interpretation. \\
+\texttt{tfpt\_horizon\_readouts} \textbf{(App.~H)} & \textbf{Appendix~H --- horizon unit system (reframe, not new physics).} One seam constant $\cthree{=}\tfrac1{8\pi}$ as the universal horizon thermal code: Hawking/de Sitter/Unruh, BH thermodynamics, Page, scrambling, Nariai bound, $v_{\rm GW}{=}c$ --- standard physics in seam units, two compiler fingerprints ($1920{=}|W(D_5)|$, $|\mu_4|{=}4$); plus the Nariai/anchor surface, the dual anchor and the resummed seam clock (\vref{v101}--\vref{v138}). \\
+\texttt{origin\_theory} & \textbf{Origin Theory.} Why no free fundamental number remains: the $(\gcar,\Nfam)$ skeleton, the triply-forced $8$, the order-$30$ Coxeter cycle, one boundary transport for flavor and horizon, the gapped unique attractor; \mE\ core plus one honestly-typed \mC\ cyclic interpretation. \\
 \bottomrule
 \end{tabularx}
 \end{center}
@@ -241,8 +245,8 @@ and reading guide. Each document collects the material of its layer into self-co
 documents where they belong --- the group-level closure $(\mathrm{Spin}(10){\times}SU(4))/\Delta\Z_4$ in
 document~1 (closed), and the H2 splitting type, the Starobinsky scalaron mass, the $\theta_{12}$ texture and
 the quark $c$ in document~2 (the first two closed; the quark \emph{ratios} now closed combinatorially
-(v49/v71), only the \emph{absolute} scale a $U_{\mathrm{point}}$ anchor; $\theta_{12}$ the
-seam-misalignment residual). Seven companion files (plus this introduction), each result
+(\vref{v49}/\vref{v71}), only the \emph{absolute} scale a $U_{\mathrm{point}}$ anchor; $\theta_{12}$ the
+seam-misalignment residual). Eight companion files (plus this introduction), each result
 where it logically lives.
 
 % =====================================================================
@@ -360,16 +364,16 @@ declared input, and each node fails in exactly one way.
 \toprule
 \textbf{Node} & \textbf{Definition} & \textbf{Inputs} & \textbf{St.} & \textbf{Output} & \textbf{Failure mode} \\
 \midrule
-P1 & RP boundary kernel, $\cthree{=}1/(8\pi)$ & --- (axiom) & \tA & $\cthree$ & no reflection-positive seam \\
-P2 & $5$-slot carrier $\gcar{=}5$ & --- (axiom) & \tA & carrier $3{+}2$ & wrong family/charge lattice \\
-$D_5$ & $C^+$ even-Hamming $=$ half-spinor $16$ & P2 & \tI & $\dim S^+{=}16$, $Y$ & group/matter mismatch \\
-$A_3$ & $\PP^1\!\setminus\!\mu_4$ four-puncture geom. & P1 & \tI & $\Nfam{=}3$, $\Z_6$ & wrong multiplicity \\
-$E_8$ & $\mu_4$ glue: $\operatorname{disc}{=}\Z_4$, $q$-sum$=2$ & $D_5,A_3$ & \tI & $240,248$ & not even-unimodular \\
-$R,L$ & residue $+$ winding matrix, anchor $(1,1,2)$ & $A_3$ & \tI & $\det8$, minors $(2,3,5)$ & wrong $D_6$ branch \\
-$\ainv$ & root of $F_{U(1)}(\alpha){=}0$ & $\cthree$, $M{=}41$ & \tN & $137.0359992$ & no/second root (excl.) \\
-masses & $\phiz$-ladder $\lambda_Y^{L}\Lambda$ & $R,L$, $\cthree$ & \tI/\tP & $9$ masses, mixings & hierarchy mismatch \\
-$\theta_{12}$ & TBM $+$ seam $\varepsilon{=}\cthree$ & $R,L$ & \tN/\tP & $0.307$ & seam-misalign.\ lemma fails \\
-$\Lambda,A_s$ & seam det.\ / $R^2$ scalaron & $\cthree$ & \tP & $\Lambda$, $A_s,n_s,r$ & ambient RP fails \\
+P1 & RP boundary kernel, $\cthree{=}1/(8\pi)$ & --- (axiom) & \mO & $\cthree$ & no reflection-positive seam \\
+P2 & $5$-slot carrier $\gcar{=}5$ & --- (axiom) & \mO & carrier $3{+}2$ & wrong family/charge lattice \\
+$D_5$ & $C^+$ even-Hamming $=$ half-spinor $16$ & P2 & \mE & $\dim S^+{=}16$, $Y$ & group/matter mismatch \\
+$A_3$ & $\PP^1\!\setminus\!\mu_4$ four-puncture geom. & P1 & \mE & $\Nfam{=}3$, $\Z_6$ & wrong multiplicity \\
+$E_8$ & $\mu_4$ glue: $\operatorname{disc}{=}\Z_4$, $q$-sum$=2$ & $D_5,A_3$ & \mE & $240,248$ & not even-unimodular \\
+$R,L$ & residue $+$ winding matrix, anchor $(1,1,2)$ & $A_3$ & \mE & $\det8$, minors $(2,3,5)$ & wrong $D_6$ branch \\
+$\ainv$ & root of $F_{U(1)}(\alpha){=}0$ & $\cthree$, $M{=}41$ & \mE & $137.0359992$ & no/second root (excl.) \\
+masses & $\phiz$-ladder $\lambda_Y^{L}\Lambda$ & $R,L$, $\cthree$ & \mE/\mC & $9$ masses, mixings & hierarchy mismatch \\
+$\theta_{12}$ & TBM $+$ seam $\varepsilon{=}\cthree$ & $R,L$ & \mE/\mC & $0.307$ & seam-misalign.\ lemma fails \\
+$\Lambda,A_s$ & seam det.\ / $R^2$ scalaron & $\cthree$ & \mC & $\Lambda$, $A_s,n_s,r$ & ambient RP fails \\
 \bottomrule
 \end{tabularx}
 \end{center}
@@ -384,89 +388,87 @@ carries a claim ID, its dependencies, its verification script, and \texttt{activ
 early ``flavor gate open'' rows, now \emph{ratios closed} via \texttt{FLAV.RIGID}) are marked inactive ---
 the canonical status is the only one read as current.
 
-\begin{keybox}[The compact status formula (three honest layers)]
-\[
-  \boxed{\ \underbrace{\text{compiler}}_{\text{closed}}\ \Big|\ 
-  \underbrace{\text{admissible IR physics}}_{\text{conditionally closed (RP, gap)}}\ \Big|\ 
-  \underbrace{\text{strict physical TOE}}_{\text{open}}\ }
-\]
+\subsection*{The compact status formula: three honest layers}
+\begin{keyeq}
+$\displaystyle \underbrace{\text{compiler}}_{\text{closed}}\ \Big|\
+  \underbrace{\text{admissible IR physics}}_{\text{conditionally closed (RP, gap)}}\ \Big|\
+  \underbrace{\text{strict physical TOE}}_{\text{open}}$
+\end{keyeq}
 TFPT~5.0 closes the discrete compiler, the algebraic Standard-Model readout, the EM fixed point, the
 admissible gapped IR sector and the $R+R^2$ spectral-action shadow. It does \emph{not} yet certify a strict
 physical TOE. The remaining items have now collapsed sharply: the $R$-bridge amplitude normalisation
-$U_{\mathrm{point}}$ \emph{reduces to} $v_{\mathrm{geo}}$ (Gate 1 closed, v75 --- the same anchor as $1/G$), and
+$U_{\mathrm{point}}$ \emph{reduces to} $v_{\mathrm{geo}}$ (Gate 1 closed, \vref{v75} --- the same anchor as $1/G$), and
 the ambient metric measure is \emph{holographically reduced} to a finite seam-\emph{boundary} measure (Gate 2
-tier B, v76) --- which is in turn the rigorously-constructed $(E_8)_1$ lattice net (v77), so $G_{\mathrm{metric}}$
+tier B, \vref{v76}) --- which is in turn the rigorously-constructed $(E_8)_1$ lattice net (\vref{v77}), so $G_{\mathrm{metric}}$
 is imported into existing RCFT rigor rather than built anew. So the only genuine residuals are \emph{one}
-dimensionful scale $v_{\mathrm{geo}}$ --- the \emph{dimensional-analysis floor} that no theory escapes (v78),
+dimensionful scale $v_{\mathrm{geo}}$ --- the \emph{dimensional-analysis floor} that no theory escapes (\vref{v78}),
 shared by flavor and gravity --- the boundary net identification, and the named QFT/cosmology transfer
 interfaces ($F_{\mathrm{frontier}}$).
-\smallskip\\
-\noindent\textbf{Two points that are \emph{not} in the residual (closed, but easy to mis-list as open).}
+\par\smallskip\noindent\textbf{Two points that are \emph{not} in the residual (closed, but easy to mis-list as open).}
 \emph{(i) Parameter-freeness is a theorem under the named hypotheses:} the boundary transport is gapped
 ($\Delta=6\log\tfrac32>0$), so by Perron--Frobenius its iteration has a \emph{unique} attracting fixed point
---- the constants are \emph{selected}, not tuned (\tI/\tL\ for the attractor, \veri{v56\_unique\_attractor.py};
-the \emph{physical identification} of the transport operator stays \tP), reinforcing the
+--- the constants are \emph{selected}, not tuned (\mE\ for the attractor, \veri{v56\_unique\_attractor.py};
+the \emph{physical identification} of the transport operator stays \mC), reinforcing the
 static bootstrap web ($\gcar=5$ forced three ways \emph{given} the $E_8$ closure rank --- a consistency
 loop, see red team Target~B --- \veri{v6\_bootstrap.py}, \veri{v14\_carrier\_uniqueness.py}).
 \emph{(ii) Newton's constant is not an \emph{independent} input:} fixing the physical $\Lambda$ branch
 ($(8\pi)^2\delta_{\mathrm{top}}=\tfrac{3}{4\pi^2}$) pins $\bar M_{\mathrm{Pl}}$ \emph{relative to} $\Lambda$, so
-$G_N$ is read out \emph{after} the branch choice $+$ \emph{one} dimensionful induced-gravity anchor (\tI/\tP,
+$G_N$ is read out \emph{after} the branch choice $+$ \emph{one} dimensionful induced-gravity anchor (\mE/\mC,
 \veri{v60\_lambda\_metrology\_branch.py}), not predicted from pure numbers. What stays irreducible is then
 just $\pi$, the discrete $E_8$-closure fixed point (self-consistent, \emph{not} a free axiom; the bootstrap of
 \texttt{tfpt\_3}), and \emph{one} dimensionful scale $v_{\mathrm{geo}}$ --- and that single scale is shared by
-\emph{both} the flavor sector ($U_{\mathrm{point}}\to v_{\mathrm{geo}}$, v75) and gravity ($1/G$, v68): the two
+\emph{both} the flavor sector ($U_{\mathrm{point}}\to v_{\mathrm{geo}}$, \vref{v75}) and gravity ($1/G$, \vref{v68}): the two
 $[A]$ anchors are \emph{one} (dimensional analysis; no metre from pure mathematics).
-\end{keybox}
 
-\begin{keybox}[The hard reduction: everything open is two research gates plus typed interfaces]
-After the compiler closure, the entire residual is
-\[
-  \boxed{\ \text{Rest}=(U_{\mathrm{wall}})\ \oplus\ (G_{\mathrm{metric}})\ \oplus\ (F_{\mathrm{frontier}})\ }
-\]
+\subsection*{The hard reduction: two research gates plus typed interfaces}
+\noindent After the compiler closure, the entire residual is
+\begin{keyeq}
+$\displaystyle \text{Rest}=(U_{\mathrm{wall}})\ \oplus\ (G_{\mathrm{metric}})\ \oplus\ (F_{\mathrm{frontier}})$
+\end{keyeq}
 --- one parabolic wall-selection, one quantum-gravity measure, and a set of deliberately typed
 QFT/cosmology interfaces. \emph{Sharper aliases} (current state of the reductions; the historical gate
 names are kept for ledger continuity): $(U_{\mathrm{wall}})\to v_{\mathrm{geo}}$ --- the flavor ratios are
-\emph{closed} (Pl\"ucker/Readout Rigidity, v49/v71/v75), what remains is \emph{one dimensionful unit}, not a
+\emph{closed} (Pl\"ucker/Readout Rigidity, \vref{v49}/\vref{v71}/\vref{v75}), what remains is \emph{one dimensionful unit}, not a
 flavor gap; $(G_{\mathrm{metric}})\to G_{\mathrm{net}}$ --- reduced to a single boundary-net theorem,
 \emph{``the seam--Calder\'on net is the index-$4$ $\mu_4$ simple-current extension of the carrier net''}
-(holomorphy then follows, v89/\texttt{GATE.METRIC.06}); since the QBL chain
-(v108--v113) the \emph{carrier choice rides on the same theorem}: the certified scalar kernel exists
-iff it pairs the sheets (v110), the certified channel counts the code identically (v112), pair
-transport is minimally complete (v111), and the one quasi-free kernel --- rank $=c$: $5$ carrier
-block, $8$ seam hull --- is the defining datum of the free net the gate already posits (v113), so
-closing $G_{\mathrm{net}}$ also closes the carrier selection \tL; $(F_{\mathrm{frontier}})\to F_{\mathrm{transfer}}$
+(holomorphy then follows, \vref{v89}/\texttt{GATE.METRIC.06}); since the QBL chain
+(\vref{v108}--\vref{v113}) the \emph{carrier choice rides on the same theorem}: the certified scalar kernel exists
+iff it pairs the sheets (\vref{v110}), the certified channel counts the code identically (\vref{v112}), pair
+transport is minimally complete (\vref{v111}), and the one quasi-free kernel --- rank $=c$: $5$ carrier
+block, $8$ seam hull --- is the defining datum of the free net the gate already posits (\vref{v113}), so
+closing $G_{\mathrm{net}}$ also closes the carrier selection \mE; $(F_{\mathrm{frontier}})\to F_{\mathrm{transfer}}$
 --- named QFT/cosmology \emph{transfer} interfaces (Koide source$\to$pole, $\eta_B$ Boltzmann, axion relic,
-$m_p/m_e$), never compiler powers. \emph{Latest reductions (v134--v140):} the flavor selector residue
+$m_p/m_e$), never compiler powers. \emph{Latest reductions (\vref{v134}--\vref{v140}):} the flavor selector residue
 R4$'$ is now ``derive \emph{three atom pairings}'' --- $d=\tfrac32a-2\cdot\mathbf1$ is pure anchor data
-and $(d,n)$ forces $R$ \emph{columnwise} (v136/v139); the sheet/parity question \texttt{GATE.QGEO}
-collapses to \emph{one} $\Z_3$ choice (the canonical map exists and is Schur-rigid, v137/v140); and the
+and $(d,n)$ forces $R$ \emph{columnwise} (\vref{v136}/\vref{v139}); the sheet/parity question \texttt{GATE.QGEO}
+collapses to \emph{one} $\Z_3$ choice (the canonical map exists and is Schur-rigid, \vref{v137}/\vref{v140}); and the
 seam quantum clock R1 is \emph{typed closed} --- the reduced clock is an edge-sector object whose budget
 matches the external Volkov--Wipf edge exactly ($-\tfrac83=2\times(-\tfrac43)$), while the full 4d
-determinant is the gravity firewall (v138). The status card:
+determinant is the gravity firewall (\vref{v138}). The status card:
 \begin{center}\footnotesize
 \renewcommand{\arraystretch}{1.18}
 \begin{tabularx}{\linewidth}{@{}lcY@{}}
 \toprule
 \textbf{Item} & \textbf{Status} & \textbf{Reading} \\
 \midrule
-parameter-freeness (self-consistency) & \tI/\tL & gapped transport $\Rightarrow$ \emph{unique} Perron--Frobenius attractor (v56); bootstrap web $\gcar{=}5$ forced (v6/v14) \\
-Newton constant $G_N$ & \tI/\tP & not \emph{independent}: branch pins $\bar M_{\mathrm{Pl}}$ rel.\ to $\Lambda$ (v60); readout after branch $+$ one dim.\ anchor \\
-ratio $c_u/c_d=\tfrac{55}{117}$ & \tI & $\gcar\|\mathrm{Pl}_{\mathbf1,a}(K)\|_1/(\Nfam^2\Delta_Q)$; rigid on the derived stratum (v49/v71), no solve \\
-$(U)$ flavor gate & \tA$\to v_{\mathrm{geo}}$ & \textbf{Gate 1 closed}: $U_{\mathrm{point}}{\to}v_{\mathrm{geo}}$ (ratios $+$ Grand Mass Volume, v75); same anchor as $1/G$ \\
-$R+R^2$ gravity & \tI/\tP & covariant $f(R)$ field equation closed in regime; heat-kernel grounded (G2) \\
-physical QG sector & \tF/\tP & gap-decoupled admissible measure ($\Delta_{\mathrm{eff}}{=}1.648{>}0$) \\
-ambient QG measure & \tA (reduced) & \textbf{Gate 2 tier B}: holographically reduced to a finite seam-\emph{boundary} measure (v76); IR tier closed (decoupling); strict-TOE cert.\ open ($G_{\mathrm{metric}}$) \\
-Koide & \tP & $Q_{\mathrm{src}}+\varphi_0/24$ as source$\to$pole transfer conjecture \\
-axion DM & \tP/\tA & $f_a=M_{\mathrm{scal}}/128$ as a scenario \\
-$\eta_B$ & \tP & readout closed; leptogenesis Boltzmann solve missing \\
-$m_p/m_e$ & \tA & cross-sector QCD/EW ratio \\
-$N_\star$ & \tP & reheating input, $N_\star\simeq57$ (continuous) \\
-$a=(1,1,2)$ & \tL/\tP & forced by $4=2+1+1$, conditional on the carrier \\
-carrier selection $g{=}5$ (QBL) & \tI/\tL\,$+$\,\tP & theorem chain v108--v113: sheet-odd kernel, self-counting channel, transport degree $2$, one quasi-free kernel (rank $=c$); residue $=$ the $G_{\mathrm{net}}$ premise itself --- gate closes $\Rightarrow$ carrier \tL \\
-selector establishment R4$'$ & \tI\,$+$\,\tP & $(d,n)\Rightarrow R$ columnwise (v136); $d$ pure anchor data, $n$ unique from pairings $(2,8,121)$ on the frame $(\mathbf1,a,\sigma)$, $\det{=}11$ (v139); residue $=$ derive the three pairings \\
-sheet/parity \texttt{GATE.QGEO} & \tI\,$+$\,\tP & $H^1$ characters $=$ $\operatorname{Spec}(Q_+)$ $=$ $A_3$ exponents (v137); canonical map Schur-rigid; residue $=$ \emph{one} $\Z_3$ choice (v140) \\
-seam quantum clock R1 & \tI\,$+$\,\tP & typed closed: resummed clock $=$ entropy power law (v124--v133); external VW edge $=2\times$ reduced budget; full 4d det $=$ firewall (v138) \\
-$E_8$ Lean & \tF$\to$\tL & hardening, not a blocker (script-certified) \\
+parameter-freeness (self-consistency) & \mE & gapped transport $\Rightarrow$ \emph{unique} Perron--Frobenius attractor (\vref{v56}); bootstrap web $\gcar{=}5$ forced (\vref{v6}/\vref{v14}) \\
+Newton constant $G_N$ & \mE/\mC & not \emph{independent}: branch pins $\bar M_{\mathrm{Pl}}$ rel.\ to $\Lambda$ (\vref{v60}); readout after branch $+$ one dim.\ anchor \\
+ratio $c_u/c_d=\tfrac{55}{117}$ & \mE & $\gcar\|\mathrm{Pl}_{\mathbf1,a}(K)\|_1/(\Nfam^2\Delta_Q)$; rigid on the derived stratum (\vref{v49}/\vref{v71}), no solve \\
+$(U)$ flavor gate & \mO$\to v_{\mathrm{geo}}$ & \textbf{Gate 1 closed}: $U_{\mathrm{point}}{\to}v_{\mathrm{geo}}$ (ratios $+$ Grand Mass Volume, \vref{v75}); same anchor as $1/G$ \\
+$R+R^2$ gravity & \mE/\mC & covariant $f(R)$ field equation closed in regime; heat-kernel grounded (G2) \\
+physical QG sector & \mE/\mC & gap-decoupled admissible measure ($\Delta_{\mathrm{eff}}{=}1.648{>}0$) \\
+ambient QG measure & \mO (reduced) & \textbf{Gate 2 tier B}: holographically reduced to a finite seam-\emph{boundary} measure (\vref{v76}); IR tier closed (decoupling); strict-TOE cert.\ open ($G_{\mathrm{metric}}$) \\
+Koide & \mC & $Q_{\mathrm{src}}+\varphi_0/24$ as source$\to$pole transfer conjecture \\
+axion DM & \mC/\mO & $f_a=M_{\mathrm{scal}}/128$ as a scenario \\
+$\eta_B$ & \mC & readout closed; leptogenesis Boltzmann solve missing \\
+$m_p/m_e$ & \mO & cross-sector QCD/EW ratio \\
+$N_\star$ & \mC & reheating input; scalaron-reheating point $N_\star{=}51.4$ (\vref{v86}); frozen band $[50,60]$ \\
+$a=(1,1,2)$ & \mE/\mC & forced by $4=2+1+1$, conditional on the carrier \\
+carrier selection $g{=}5$ (QBL) & \mE/\mC & theorem chain \vref{v108}--\vref{v113}: sheet-odd kernel, self-counting channel, transport degree $2$, one quasi-free kernel (rank $=c$); residue $=$ the $G_{\mathrm{net}}$ premise itself --- gate closes $\Rightarrow$ carrier \mE \\
+selector establishment R4$'$ & \mE/\mC & $(d,n)\Rightarrow R$ columnwise (\vref{v136}); $d$ pure anchor data, $n$ unique from pairings $(2,8,121)$ on the frame $(\mathbf1,a,\sigma)$, $\det{=}11$ (\vref{v139}); residue $=$ derive the three pairings \\
+sheet/parity \texttt{GATE.QGEO} & \mE/\mC & $H^1$ characters $=$ $\operatorname{Spec}(Q_+)$ $=$ $A_3$ exponents (\vref{v137}); canonical map Schur-rigid; residue $=$ \emph{one} $\Z_3$ choice (\vref{v140}) \\
+seam quantum clock R1 & \mE/\mC & typed closed: resummed clock $=$ entropy power law (\vref{v124}--\vref{v133}); external VW edge $=2\times$ reduced budget; full 4d det $=$ firewall (\vref{v138}) \\
+$E_8$ Lean & \mE & hardening, not a blocker (script-certified) \\
 \bottomrule
 \end{tabularx}
 \end{center}
@@ -482,9 +484,8 @@ block certification as a strict physical TOE. Both are written up as numbered \e
 \texttt{tfpt\_research\_contracts}, with priority on the selector-triangle pairings (the
 $v_{\mathrm{geo}}$ scale anchor) and the $G_{\mathrm{net}}$ inclusion theorem.
 \veri{v36\_spectral\_action\_g2.py}
-\end{keybox}
 
-\begin{winbox}[Reduction in one line]
+\begin{winboxnb}[Reduction in one line]
 The number of \emph{structural} assumptions is \textbf{two axioms}. Everything else
 ($\Nfam,\Oadm,b_1,\ainv$, the flavor matrix, the $E_8$ glue, the scale grammar) is a
 \emph{consequence}. \emph{And even those two tighten:} the
@@ -494,7 +495,8 @@ leaving \emph{one} genuine continuous primitive: $\pi$ from the Möbius boundary
 core has no freely tunable fundamental numbers --- the bootstrap is \emph{not creation from nothing} (two
 inputs remain), but an overdetermination of those inputs. (This concerns the discrete core only;
 dimensionful masses, the QG measure and frontier items remain typed-open.)
-\end{winbox}
+\veri{v6\_bootstrap.py} \veri{v14\_carrier\_uniqueness.py} \veri{v23\_anchor\_generator.py}
+\end{winboxnb}
 
 % =====================================================================
 \section{The compiler: why $30=2\cdot3\cdot5$}
@@ -518,10 +520,10 @@ discrete atoms of the theory --- that is the point of the compiler:
 \begin{itemize}[leftmargin=1.4em]
 \item $\dim S^+ = 1+10+5 = 16$ (one generation) as the even exterior algebra of the $5$-slot carrier ---
       the same Pascal row $\binom50,\binom51,\binom52 = 1,5,10$ appears in family, action ladder and the
-      $E_8$ root count. \tI
-\item $|R(E_8)| = 16\cdot5\cdot3 = 240$ and $\dim E_8 = 240 + (5+3) = 248$. \tI
+      $E_8$ root count. \mE
+\item $|R(E_8)| = 16\cdot5\cdot3 = 240$ and $\dim E_8 = 240 + (5+3) = 248$. \mE
 \item the $\Z_{30}$ Coxeter element $\leftrightarrow$ the cyclotomic polynomial $\Phi_{30}$; the corner
-      rotation $z\mapsto iz$ on $\PP^1\!\setminus\!\mu_4$ is the $A_3$ Coxeter element. \tI
+      rotation $z\mapsto iz$ on $\PP^1\!\setminus\!\mu_4$ is the $A_3$ Coxeter element. \mE
 \end{itemize}
 
 % =====================================================================
@@ -542,11 +544,12 @@ their discriminant-form norms are exactly two TFPT constants which add up to the
 \end{tikzpicture}
 \end{center}
 
-\begin{keybox}[Glue theorem (proved)]
+\begin{winboxnb}[Glue theorem (proved)]
 $\operatorname{disc}(D_5)=\operatorname{disc}(A_3)=\Z_4$, glue index $|{\mu_4}|=4$, and
 $q(D_5)+q(A_3)=\tfrac54+\tfrac34=2=$ the $E_8$ root norm. Hence $E_8=(D_5\oplus A_3)+\mu_4$-glue is a
-\emph{closed lattice-theoretic} construction --- not a blind ``positing of $248$''. \tL
-\end{keybox}
+\emph{closed lattice-theoretic} construction --- not a blind ``positing of $248$''. \mE\
+\veri{v1\_e8\_glue.py}
+\end{winboxnb}
 
 % =====================================================================
 \section{How derivation now works: the derivation map}
@@ -560,16 +563,16 @@ a consequence rather than an assumption.
 \toprule
 \textbf{Sector} & \textbf{How it now arises} & \textbf{Status} \\
 \midrule
-gauge group / families & carrier $3{+}2$, $\dim S^+{=}16$, $\Nfam{=}3$, $\Oadm{=}48$ & \tI \\
-hypercharge & roots of the charge polynomial $bsY^2+(s{-}b)Y-1$ & \tI \\
-$U(1)$ index $b_1$ & $b_1=\dfrac{\gcar\,2^{\gcar-2}+1}{10}=\dfrac{41}{10}$ & \tI \\
-fine structure $\ainv$ & unique root of $F_{U(1)}(\alpha)=0$ & \tI/\tN \\
-flavor matrix & transport theorem (H1 proved, H2/H3 force the matrix) & \tI/\tP \\
-electroweak scale & $v_{\mathrm{EW}}\sim e^{-\ainv/5}$ (carrier divides $\ainv$ by 5) & \tI \\
-cosmological constant & $\Lambda\sim e^{-2\ainv}$ (density quotient; see typing note) & \tI/\tP \\
-Hubble scale & $H_0\sim\sqrt{\Lambda}$ & \tP \\
-inflation amplitude & $A_s=\dfrac{N_\star^2}{24\pi^2}c_3^7$ in the $R^2$ branch & \tP \\
-$E_8$ & $D_5\oplus A_3+\mu_4$-glue & \tL \\
+gauge group / families & carrier $3{+}2$, $\dim S^+{=}16$, $\Nfam{=}3$, $\Oadm{=}48$ & \mE \\
+hypercharge & roots of the charge polynomial $bsY^2+(s{-}b)Y-1$ & \mE \\
+$U(1)$ index $b_1$ & $b_1=\dfrac{\gcar\,2^{\gcar-2}+1}{10}=\dfrac{41}{10}$ & \mE \\
+fine structure $\ainv$ & unique root of $F_{U(1)}(\alpha)=0$ & \mE \\
+flavor matrix & transport theorem (H1 proved, H2/H3 force the matrix) & \mE/\mC \\
+electroweak scale & $v_{\mathrm{EW}}\sim e^{-\ainv/5}$ (carrier divides $\ainv$ by 5) & \mE \\
+cosmological constant & $\Lambda\sim e^{-2\ainv}$ (density quotient; see typing note) & \mE/\mC \\
+Hubble scale & $H_0\sim\sqrt{\Lambda}$ & \mC \\
+inflation amplitude & $A_s=\dfrac{N_\star^2}{24\pi^2}c_3^7$ in the $R^2$ branch & \mC \\
+$E_8$ & $D_5\oplus A_3+\mu_4$-glue & \mE \\
 \bottomrule
 \end{tabularx}
 \end{center}
@@ -583,26 +586,25 @@ magnitude.
 \smallskip
 \noindent\textbf{Typing note on $\Lambda$ (a deliberate danger zone).} ``$\Lambda$'' denotes \emph{three}
 distinct objects that must not be conflated: (i) the seam-determinant exponent $e^{-2\ainv}$ (an exact
-\tI\ readout), (ii) the dimensionless density quotient $\rho_\Lambda/\Mbar^4$ (which carries a prefactor
-\emph{branch}, hence \tP), and (iii) the observed curvature, to which (ii) is \emph{anchored}, not
+\mE\ readout), (ii) the dimensionless density quotient $\rho_\Lambda/\Mbar^4$ (which carries a prefactor
+\emph{branch}, hence \mC), and (iii) the observed curvature, to which (ii) is \emph{anchored}, not
 predicted. The exponential is exact; the absolute dark-energy density remains a typed cosmology interface
 (full disambiguation in \texttt{tfpt\_2\_standard\_model}).
 
-\begin{keybox}[Cosmology is the Pascal action grammar of the carrier --- not a separate module]
-With $x=v_{\mathrm{geo}}/(5\beta_{\mathrm{rad}}^2\Mbar)$ the cosmological readouts are a \emph{power tower}
+\subsection*{Cosmology is the Pascal action grammar of the carrier}
+\noindent With $x=v_{\mathrm{geo}}/(5\beta_{\mathrm{rad}}^2\Mbar)$ the cosmological readouts are a \emph{power tower}
 on the five-slot carrier graph $K_5$:
-\[
-  \boxed{\ \frac{H_0}{\Mbar}=x^{5}R_H,\qquad \frac{\rho_\Lambda}{\Mbar^4}=x^{10}R_\Lambda\ },\qquad
-  (1,5,10)=\tbinom50,\tbinom51,\tbinom52 .
-\]
+\begin{keyeq}
+$\displaystyle \frac{H_0}{\Mbar}=x^{5}R_H,\qquad \frac{\rho_\Lambda}{\Mbar^4}=x^{10}R_\Lambda,\qquad
+  (1,5,10)=\tbinom50,\tbinom51,\tbinom52$
+\end{keyeq}
 EW is the unit $x^1$, Hubble is the product over the $\binom51=5$ vertices, $\Lambda$ is the product over
 the $\binom52=10$ edges --- the \emph{same} Pascal triple that reads one generation, the action ladder
-and the $E_8$ root count $16\cdot5\cdot3=240$. ``Hubble $=$ slot product, $\Lambda=$ pair product.'' \tI
-\end{keybox}
+and the $E_8$ root count $16\cdot5\cdot3=240$. ``Hubble $=$ slot product, $\Lambda=$ pair product.'' \mE
 
 \TFPTactionkfive
 
-\begin{winbox}[The entire fermion spectrum in one formula]
+\begin{winboxnb}[The entire fermion spectrum in one formula]
 Masses, Yukawa, CKM, PMNS and neutrinos all follow from \emph{one} master formula with \emph{one} seed:
 \[
   \hat m_{f,j}=\frac{v_{\mathrm{geo}}}{\sqrt2}\,\lambda_Y^{\,L_{f,j}}\,\Lambda_{f,j},\qquad
@@ -613,7 +615,7 @@ polynomial $t^3-9t^2+10t-8$ carries only compiler numbers ($\operatorname{tr}=9=
 $\det=8=h(D_5)$, principal $2$-minors $2{,}3{,}5$ with product $30=h(E_8)$). Through the $\phiz$-ladder
 $\hat m=\tfrac{v_{\mathrm{geo}}\pi}{\sqrt2}c\,(\phiz)^k$ all nine word-lengths are fixed and the
 \emph{charged-lepton} amplitudes are closed; the \emph{quark} mass \emph{ratios} are closed too (integer
-Pl\"ucker readouts on the derived selector stratum, v49/v71), with only the \emph{absolute} amplitude scale
+Pl\"ucker readouts on the derived selector stratum, \vref{v49}/\vref{v71}), with only the \emph{absolute} amplitude scale
 reducing to the $(U_{\mathrm{wall}})$ anchor.
 \textbf{SM status:} the discrete packet, the dimensionless flavor skeleton, the charged-lepton source
 masses and the quark \emph{ratios} are closed; the \emph{absolute} quark scale and the full PMNS completion
@@ -622,7 +624,8 @@ $m_W,m_Z,m_H,\sin^2\theta_W,\alpha_s$ are RG scheme-layer ($m_H$ rests on the cl
 $\tfrac1{16\pi^2}$); and the solar angle is \emph{realized by a TFPT texture} and reduced to the
 seam-misalignment lemma ($\sin^2\theta_{12}=\tfrac13-\tfrac{\phiz}{2}$; see below). \emph{(Full derivation:
 document~2, \texttt{tfpt\_2\_standard\_model}.)}
-\end{winbox}
+\veri{v18\_quark\_yukawa.py} \veri{v20\_lepton\_c\_derivation.py} \veri{v46\_grand\_mass\_volume.py}
+\end{winboxnb}
 
 % =====================================================================
 \section{Physical, geometric, topological: why the architecture is plausible}
@@ -633,12 +636,11 @@ geometry $\PP^1\!\setminus\!\mu_4$ produce $D_5$ and $A_3$, glued to $E_8$; \emp
 common discriminant $\Z_4$ (the $\mu_4$ winding) forces the glue and $\Phi_{30}$/Coxeter drives the
 sectors --- with exactly $2$ axioms and the rest a consequence.
 
-\begin{winbox}[Why the compiled architecture is plausible]
+\noindent\textbf{Why the compiled architecture is plausible.}
 It is (i) \emph{parsimonious} (few independent assumptions $\Rightarrow$ low overfitting risk),
 (ii) \emph{rigid} (the glue condition $5/4+3/4=2$ and the discriminant $\Z_4$ leave little freedom),
 and (iii) \emph{checkable} (machine-checkable $E_8$ appendix, explicit fixed-point equation for
 $\ainv$). More explained from less --- exactly the criterion that makes a theory more probable.
-\end{winbox}
 
 % =====================================================================
 \section{What role $E_8$ now plays exactly}
@@ -657,58 +659,56 @@ $E_8$ is no longer the starting point but the \emph{output format}:
 
 \noindent\textbf{New --- the secondary atlas.} Beyond that, $E_8$ is an \emph{audit container}: each
 maximal subalgebra projects a TFPT module. Document~3 (\texttt{tfpt\_3\_e8\_audit\_bootstrap}, Part~I)
-shows the seven slices of $248$ explicitly and labelled. The strongest new hit:
-\begin{keybox}[$E_6\times A_2$ reads the flavor matrix]
+shows the seven slices of $248$ explicitly and labelled. The strongest new hit is that
+$E_6\times A_2$ reads the flavor matrix:
 \[
   248=\|R\|_F^2+\det R+2\,(\mathbf 1^\top R\,a)\,\Nfam=\underbrace{78}_{\dim E_6}+\underbrace{8}_{\dim A_2}+2\cdot27\cdot3 ,
 \]
 with $\|R\|_F^2=78=\dim E_6$, $\det R=8=\dim A_2=h(D_5)$. The discipline rule is: \emph{every load-bearing
 number must appear in at least one $E_8$ projection} --- this makes the structure falsifiable rather than
 numerological. (Audit level; all identities machine-verified.)
-\end{keybox}
 
 % =====================================================================
 \section{What this means for the theory-of-everything question}
 % =====================================================================
 \needspace{0.46\textheight}
-\begin{gapbox}[The state of the five questions --- closed, reduced or typed]
+\begin{gapboxnb}[The state of the five questions --- closed, reduced or typed]
 \begin{enumerate}[leftmargin=1.6em,itemsep=2pt,topsep=2pt]
 \item \textbf{Flavor residual --- ratios closed; only the absolute scale is the wall-selection.}
       Mehta--Seshadri supplies the equivalence-class framework (stable parabolic $\leftrightarrow$ unitary
       representation); the algebraic selector $R$, the $Q$ spectrum and the splitting type are fixed (now
-      \emph{derived}: $\det R=8$ lattice, $\operatorname{Spec}(Q_+)$ from $D_4$, v69/v70; since
-      v136/v139 the dual pair $(d,n)$ forces $R$ \emph{columnwise}, $d$ is pure anchor data, and
+      \emph{derived}: $\det R=8$ lattice, $\operatorname{Spec}(Q_+)$ from $D_4$, \vref{v69}/\vref{v70}; since
+      \vref{v136}/\vref{v139} the dual pair $(d,n)$ forces $R$ \emph{columnwise}, $d$ is pure anchor data, and
       $\operatorname{Spec}(Q_+)=(1,2,3)$ is the $A_3$-exponent grading on the seam curve's cohomology,
-      v137), and the charged-lepton amplitudes are closed. The quark mass \emph{ratios}
+      \vref{v137}), and the charged-lepton amplitudes are closed. The quark mass \emph{ratios}
       ($c_u/c_d=\tfrac{55}{117}$ etc.) are
-      then \emph{constant} on this discrete selector stratum (Readout Rigidity, v49/v71) --- integer Pl\"ucker
+      then \emph{constant} on this discrete selector stratum (Readout Rigidity, \vref{v49}/\vref{v71}) --- integer Pl\"ucker
       readouts, no transcendental solve. Only the \emph{absolute} amplitude scale reduces to the selected
       \emph{polystable} point on the parabolic stability wall ($U_{\mathrm{point}}$, an anchor; Research
-      Contract 1). \tI/\tA
+      Contract 1). \mE/\mO
 \item \textbf{Gravity --- exact in the $R^2$ regime.} Spectral action $\to R{+}R^2$, BRST/Hodge kills the
       gauge directions, FRW reduction $\to$ Starobinsky; the only remainder is the \emph{controlled}
-      low-curvature truncation ($R^{n\ge3}\!\to\!R^2$, valid for curvature $\ll M^2$). \tI\ in the regime
+      low-curvature truncation ($R^{n\ge3}\!\to\!R^2$, valid for curvature $\ll M^2$). \mE\ in the regime
 \item \textbf{Strong CP --- decoupled.} $\theta_{\mathrm{eff}}{=}0$ follows from three structural facts
       ($\gamma_5$-Hermiticity, polar structure, sheet involution) $+$ reflection positivity ---
-      \emph{without} a mass gap. \tI\ (given RP)
+      \emph{without} a mass gap. \mE\ (given RP)
 \item \textbf{Full dynamics --- the admissible transfer model is closed.} The mass gap is the
       \emph{explicit} discrete gap $6\log\tfrac32$ of the $C_6$ transfer operator (eigenvalues $(k/3)^6$),
       which supports the OS reconstruction path on the admissible sector; the continuum and metric-coupled
-      theory still require the stated RP, cluster and limit assumptions. \tI\ (transfer model) / \tP\ (continuum)
+      theory still require the stated RP, cluster and limit assumptions. \mE\ (transfer model) / \mC\ (continuum)
 \item \textbf{Axioms P1/P2 --- P2 machine-verified.} The Lean proof builds cleanly (\texttt{1886 jobs},
       0 \texttt{sorry}, only kernel axioms); the P2 algebra is a theorem, P1 a typed interface. They
-      remain declared inputs. \tI/\tA
+      remain declared inputs. \mE/\mO
 \end{enumerate}
-\end{gapbox}
+\end{gapboxnb}
 
 \noindent In other words: the theory has shrunk from ``many open audit points'' to ``\emph{standard
 steps} (cluster expansion, Fredholm, truncation bound) $+$ two declared axioms''. The five questions are
 now \emph{closed, reduced or typed} rather than open-ended --- a qualitative jump in discipline, not a claim
 of completion. \emph{(Details and proof chains: document~2, \texttt{tfpt\_2\_standard\_model}, Part~III.)}
 
-\needspace{0.5\textheight}
-\begin{keybox}[The closure ledger --- what is done, and what genuinely remains]
-A complete theory must close the discrete structure, the dimensionless constants, the mass
+\subsection*{The closure ledger: what is done, and what genuinely remains}
+\noindent A complete theory must close the discrete structure, the dimensionless constants, the mass
 spectrum, gravity, and the quantum measure. The current state, graded honestly:
 \begin{center}\footnotesize
 \renewcommand{\arraystretch}{1.2}
@@ -716,26 +716,25 @@ spectrum, gravity, and the quantum measure. The current state, graded honestly:
 \toprule
 \textbf{TOE piece} & \textbf{Status} & \textbf{If not complete: what closes it} \\
 \midrule
-gauge group, $\Nfam$, hypercharge, $b_1$ & \tI & --- complete \\
-$E_8=(D_5{\oplus}A_3){+}\mu_4$, group closure & \tL & --- complete \\
-bootstrap $(g,\mu){=}(5,4)$, ``$8$'' in $\cthree$ & \tL & --- complete (reverse glue $\mu^2{-}5\mu{+}4{=}0$) \\
-fine structure $\ainv$ & \tN & --- \textbf{existence+uniqueness proved}; value is a numerical fixed point (ledger \texttt{EM.FP.01}), Ward origin \tP \\
-fermion masses ($\phiz$-ladder) & \tI/\tA & leptons exact; quark \emph{ratios} closed (Pl\"ucker, v49/v71); absolute scale $=$ anchor \\
-mixings $\theta_{13},\theta_{23},\theta_{12}$ & \tN/\tP & $\theta_{12}$ cond.\ derived; $\theta_{23}$ maximal \\
-flavour matrix / H2 & \tI & dictionary \emph{exact} (hexagon $=$ twisted family spectrum, addresses pinned, margins forced, v118--v122); $R$ forced columnwise by $(d,n)$ (v136/v139); residue $=$ three atom pairings \\
-seam quantum clock (R1) & \tI/\tP & typed closed: reduced edge-sector clock (v124--v133); external VW edge $=2\times$ reduced budget, full 4d det $=$ firewall (v138) \\
-inflation $A_s,n_s,r$, scalaron $M$ & \tN & parameter-free given $M_{\rm Star}{=}M_{\rm scal}$ \\
+gauge group, $\Nfam$, hypercharge, $b_1$ & \mE & --- complete \\
+$E_8=(D_5{\oplus}A_3){+}\mu_4$, group closure & \mE & --- complete \\
+bootstrap $(g,\mu){=}(5,4)$, ``$8$'' in $\cthree$ & \mE & --- complete (reverse glue $\mu^2{-}5\mu{+}4{=}0$) \\
+fine structure $\ainv$ & \mE & --- \textbf{existence+uniqueness proved}; value is a numerical fixed point (ledger \texttt{EM.FP.01}), Ward origin \mC \\
+fermion masses ($\phiz$-ladder) & \mE/\mO & leptons exact; quark \emph{ratios} closed (Pl\"ucker, \vref{v49}/\vref{v71}); absolute scale $=$ anchor \\
+mixings $\theta_{13},\theta_{23},\theta_{12}$ & \mE/\mC & $\theta_{12}$ cond.\ derived; $\theta_{23}$ maximal \\
+flavour matrix / H2 & \mE & dictionary \emph{exact} (hexagon $=$ twisted family spectrum, addresses pinned, margins forced, \vref{v118}--\vref{v122}); $R$ forced columnwise by $(d,n)$ (\vref{v136}/\vref{v139}); residue $=$ three atom pairings \\
+seam quantum clock (R1) & \mE/\mC & typed closed: reduced edge-sector clock (\vref{v124}--\vref{v133}); external VW edge $=2\times$ reduced budget, full 4d det $=$ firewall (\vref{v138}) \\
+inflation $A_s,n_s,r$, scalaron $M$ & \mC & scalaron $M{=}\cthree^{7/2}\Mbar$ exact; $n_s,r$ are bands over $N_\star\in[50,60]$ (reheating point $51.4$, \vref{v86}) \\
 \midrule
 \multicolumn{3}{@{}l}{\textit{genuinely open --- the actual TOE remainder}}\\
-dim.\ EW/QCD masses & \tP & standard RG threshold matching (no new physics) \\
-QFT measure (admissible sector) & \tI & \textbf{closed: RP from cusp spectrum, OS reconstruction} \\
-ambient QFT $+$ full gravity (metric sector) & \tA & \emph{not constructed here} (frontier doc); conditionally reduces to one named hypothesis (ambient RP) on the relative spectral-action measure \\
-analytic boundary origin of $\pi$ ($c_3{=}\tfrac1{8\pi}$) & \tP & \textbf{hardened: $c_3{=}1/(|\Z_2|\oint_{S^2}K)=1/(8\pi)$ (Gauss--Bonnet)}; ``$8$''${=}\operatorname{rank}E_8$; $\pi$ stays the one primitive \\
-$\eta_B$, $m_p/m_e$, Koide, dark matter & \tA & frontier handles only (see document~4) \\
+dim.\ EW/QCD masses & \mC & standard RG threshold matching (no new physics) \\
+QFT measure (admissible sector) & \mE & \textbf{closed: RP from cusp spectrum, OS reconstruction} \\
+ambient QFT $+$ full gravity (metric sector) & \mO & \emph{not constructed here} (frontier doc); conditionally reduces to one named hypothesis (ambient RP) on the relative spectral-action measure \\
+analytic boundary origin of $\pi$ ($c_3{=}\tfrac1{8\pi}$) & \mC & \textbf{hardened: $c_3{=}1/(|\Z_2|\oint_{S^2}K)=1/(8\pi)$ (Gauss--Bonnet)}; ``$8$''${=}\operatorname{rank}E_8$; $\pi$ stays the one primitive \\
+$\eta_B$, $m_p/m_e$, Koide, dark matter & \mO & frontier handles only (see document~4) \\
 \bottomrule
 \end{tabularx}
 \end{center}
-\end{keybox}
 \markerkey
 
 \noindent\textbf{The honest bottom line:} the discrete core, the dimensionless constants, the
@@ -743,7 +742,7 @@ $\eta_B$, $m_p/m_e$, Koide, dark matter & \tA & frontier handles only (see docum
 $\phiz$-ladder (lepton rationals exact, quark $O(1)$ digits still a conditional finite evaluation). The
 \emph{admissible-sector} QFT measure is closed (a finite gapped transfer system, RP from the cusp
 spectrum, OS-reconstructed); the \emph{ambient/metric-sector} measure --- i.e.\ \emph{full quantum
-gravity} --- is \emph{not} constructed here and stays \tA\ (frontier doc), reducing conditionally to a
+gravity} --- is \emph{not} constructed here and stays \mO\ (frontier doc), reducing conditionally to a
 single named hypothesis (ambient reflection positivity). The seam seed is \emph{hardened}:
 $c_3=1/(|\Z_2|\oint_{S^2}K\,dA)=1/(8\pi)$ is the one-sided Gauss--Bonnet normalisation of the seam sphere,
 with the discrete ``$8$'' equal to $\operatorname{rank}E_8$ and only the Gauss--Bonnet $\pi$ left as the
@@ -755,17 +754,17 @@ $\pi$ is the lone continuous primitive.
 % =====================================================================
 \section{Does this make the theory more probable?}
 % =====================================================================
-\begin{keybox}[Plausibility balance]
-\textbf{Pro:} (a) two inputs instead of many; (b) $\ainv$ to $2.9\times10^{-10}$ (CODATA-2022, $1.9\sigma$) as a \emph{fixed point},
+\noindent\textbf{Plausibility balance.}
+\emph{Pro:} (a) two inputs instead of many; (b) $\ainv$ to $2.9\times10^{-10}$ (CODATA-2022, $1.9\sigma$) as a \emph{fixed point},
 not a fit; (c) $E_8$ constructed, not postulated; (d) one compiler generates several sectors $\Rightarrow$
-fewer degrees of freedom, more predictive power.\\[2pt]
-\textbf{Contra/open:} what remains are only \emph{standard steps} (cluster expansion in the thermodynamic
+fewer degrees of freedom, more predictive power.
+\par\smallskip
+\noindent\emph{Contra/open:} what remains are only \emph{standard steps} (cluster expansion in the thermodynamic
 limit, the Fredholm property, the truncation bound) and the two declared axioms P1/P2; on the SM side the
 dimensionful EW/QCD masses ($m_W,m_Z,m_H,\sin^2\theta_W,\alpha_s$) sit on the RG scheme layer. The solar
 angle, previously the one open SM number, is now \emph{conditionally derived} ($\tfrac13-\tfrac{\phiz}{2}$,
 modulo the seam-misalignment lemma). A final
 verdict ``it maps reality'' requires this short list plus the near-term experimental tests (below).
-\end{keybox}
 
 Net: the parsimony (Kolmogorov-like compression: many numbers from little) and the high precision of
 individual closures raise the a-posteriori plausibility substantially --- without hiding the open points.
@@ -777,68 +776,21 @@ Because \emph{one} generator now sits behind the numbers, the theory makes a set
 statements that running or near-term experiments are actively testing. Each row gives the TFPT value,
 the \emph{new} derivation behind it, the experiment, and an honest status.
 
-\begin{center}\footnotesize
-\renewcommand{\arraystretch}{1.3}
-\begin{tabularx}{\linewidth}{@{}p{2.5cm}p{4.9cm}Yc@{}}
-\toprule
-\textbf{Observable} & \textbf{TFPT value \& derivation} & \textbf{Experiment (running / upcoming)} & \textbf{St.} \\
-\midrule
-solar angle $\sin^2\theta_{12}$ &
-  prediction of record $\tfrac13-\tfrac{\phiz}{2}=0.306747$; TBM $+$ seam misalignment $\varepsilon=\tfrac34\phiz=\cthree+36\cthree^4$ (cond.) &
-  \textbf{JUNO}: first $59.1$\,d run $0.3092{\pm}0.0087$ (compatible), precision phase pending & \tN/\tP \\
-reactor angle $\sin^2\theta_{13}$ &
-  $\phiz e^{-5/6}=0.0231$; seed $\times$ carrier-trace $e^{-\gamma}$, $\gamma{=}\tfrac56$ &
-  Daya~Bay / RENO / JUNO (PDG $0.0220$) & \tI \\
-atmospheric $\sin^2\theta_{23}$ &
-  $\approx\tfrac12$ ($\mu\tau$-symmetric limit; octant not selected) &
-  NOvA / T2K / \textbf{DUNE} (octant ambiguity; NuFIT~6.0 pre-JUNO baseline) & \tP \\
-fine structure $\ainv$ &
-  $137.0359992$ as the unique root of $F_{U(1)}(\alpha){=}0$ (no fit, no second branch) &
-  CODATA-2022 (data through 2022) $137.035999177(21)$: dev.\ $2.9\times10^{-10}$ ($1.9\sigma$ of its uncertainty) & \tI/\tN \\
-tensor ratio $r$ &
-  $r=\tfrac{12}{N_\star^2}=0.0040$ ($N_\star{=}55$); $R^2$ attractor, $M{=}\cthree^{7/2}\Mbar$ &
-  now $r{<}0.036$ (BICEP/Keck BK18); \textbf{CMB-S4} ($\sigma_r\!\le\!5{\times}10^{-4}$, obs.\ $\sim$2033) & \tP \\
-tilt $n_s$ &
-  $n_s=1-\tfrac{2}{N_\star}=0.964$ (same attractor) &
-  Planck ($0.965$); CMB-S4 sharpens & \tP \\
-amplitude $A_s$ &
-  $\tfrac{N_\star^2}{24\pi^2}\cthree^7=2.0\times10^{-9}$, parameter-free &
-  Planck ($2.1\times10^{-9}$) & \tP \\
-neutron EDM &
-  $\theta_{\mathrm{eff}}=0\Rightarrow d_n$ essentially null (structure $+$ RP) &
-  \textbf{PSI~nEDM} / SNS (running) & \tI \\
-CP phase $\delta_{\mathrm{CKM}}$ &
-  $\delta=\tfrac\pi3+3\lambda^2=66.96^\circ$ (frozen of record, v88); survives at $+0.98\sigma$ vs $\gamma_{\mathrm{PDG}}$ &
-  \textbf{LHCb} / Belle~II $\gamma$ combination; decision at $\sigma_\gamma\le0.96^\circ$ & \tN \\
-cosmic birefringence $\beta$ &
-  $\beta=\tfrac{\phiz}{4\pi}=0.2424^\circ$ (seam readout) &
-  ACT~DR6 hint $0.215^\circ{\pm}0.074^\circ$ (systematics not yet understood --- not a validation target); \textbf{Simons Obs.} / LiteBIRD & \tP \\
-$0\nu\beta\beta$ / ordering &
-  Majorana branch; normal-ordering preference &
-  \textbf{LEGEND / nEXO}, DUNE, KATRIN & \tP \\
-flavor invariants &
-  $\det R{=}h(D_5){=}8$, principal minors $(2,3,5)$, $\chi_R{=}t^3{-}9t^2{+}10t{-}8$ (exact) &
-  any future CKM/PMNS global fit must satisfy these & \tI \\
-$H_0$ vs.\ $\Lambda$ &
-  $v_{\mathrm{EW}}\sim e^{-\ainv/5}$, $\Lambda\sim e^{-2\ainv}$, $H_0\sim\sqrt\Lambda$: one engine &
-  SH0ES / \textbf{DESI} / Planck (Hubble tension) & \tP \\
-\bottomrule
-\end{tabularx}
-\end{center}
-\markerkey
+\input{tex-artefacts/predictions}
 
-\begin{winbox}[The two decisive near-term tests]
+\begin{winboxnb}[The two decisive near-term tests]
 \textbf{(1) JUNO and $\theta_{12}$.} JUNO is \emph{taking data since August 2025} and targets sub-percent
 $\sin^2\theta_{12}$. TFPT commits to the single prediction of record
 $\tfrac13-\tfrac{\phiz}{2}=0.306747$ (misalignment $\varepsilon=\tfrac34\phiz=\cthree+36\cthree^4$). The
 first $59.1$-day JUNO run reports $\sin^2\theta_{12}=0.3092\pm0.0087$ --- \emph{compatible}, but the
 precision phase is still pending; this is a first compatibility check, not yet the decisive test. A
 converged central value away from $\sim0.307$ at high significance falsifies the seam mechanism.\\[2pt]
-\textbf{(2) $r$.} The $R^2$ scalaron with $M$ fixed by $\cthree^7$ predicts $r=0.0040$ ($N_\star{=}55$),
-already below the current bound $r<0.036$ (BICEP/Keck BK18) and within reach of CMB-S4
-($\sigma_r\!\le\!5\times10^{-4}$, first observations $\sim$2033--34). A detection of $r\gtrsim0.01$ would be
-incompatible with the $R^2$ branch on which $\Mpl$ and $A_s$ rest.
-\end{winbox}
+\textbf{(2) $r$.} The $R^2$ scalaron with $M$ fixed by $\cthree^7$ predicts a small $r=12/N_\star^2$:
+the frozen band $r\in[0.0033,0.0048]$ over $N_\star\in[50,60]$, with the scalaron-reheating point
+$r=0.0045$ ($N_\star{=}51.4$, \vref{v86}) --- already below the current bound $r<0.036$ (BICEP/Keck BK18)
+and within reach of CMB-S4 ($\sigma_r\!\le\!5\times10^{-4}$, first observations $\sim$2033--34). A
+detection of $r\gtrsim0.01$ would be incompatible with the $R^2$ branch on which $\Mpl$ and $A_s$ rest.
+\end{winboxnb}
 
 \noindent\textbf{Structural (non-experimental) checks.} Independent of any apparatus, the
 machine-checkable $E_8$ appendix (all $240$ roots, Gram matrices, discriminant groups) lets anyone verify
@@ -848,9 +800,9 @@ rather than numerology. The numerology charge is additionally \emph{quantified} 
 under the declared formula grammar the alignment density is anomalously high --- a random theory of equal
 formula complexity essentially does not reproduce the scorecard. This is a \emph{grammar-internal null-model
 bound}, not a Bayesian probability that TFPT is true; the explicit figure and its controls are stated in the
-verification appendix \tN\ \veri{v100\_numerology\_null\_mc.py}.
+verification appendix \mE\ \veri{v100\_numerology\_null\_mc.py}.
 
-\begin{winbox}[Freeze file: committed kill criteria]
+\begin{winboxnb}[Freeze file: committed kill criteria]
 To prevent post-hoc rescue, the predictions above are frozen with explicit kill criteria in the
 machine-readable registry \texttt{verification/freeze\_file.csv}. The decisive entries:
 \begin{itemize}[leftmargin=1.4em,itemsep=1pt]
@@ -875,19 +827,18 @@ In particular the registry admits exactly \emph{one} $\theta_{12}$ prediction of
 $\tfrac13-\tfrac{\phiz}2=0.306747$) --- the seam and non-linear variants are typed as derived variants of the
 same texture and can never be silently promoted afterwards. $r$ and $n_s$ enter only as \emph{bands} over the
 declared external $N_\star\in[50,60]$, never as point predictions.
-\end{winbox}
+\end{winboxnb}
 
-\begin{winbox}[What likely follows next]
+\noindent\textbf{What likely follows next.}
 \begin{itemize}[leftmargin=1.4em]
 \item the quark mass \emph{ratios} are now closed combinatorially (integer Pl\"ucker readouts on the derived
-      selector stratum, v49/v69/v71); the only residual is the \emph{absolute} amplitude scale, an anchor
+      selector stratum, \vref{v49}/\vref{v69}/\vref{v71}); the only residual is the \emph{absolute} amplitude scale, an anchor
       ($U_{\mathrm{point}}$) of the same nature as the one dimensionful scale --- no new physics;
 \item further constants as carrier traces (analogous to $b_1=41/10$), since the compiler systematically
       produces traces over $S^+$;
 \item a sharper geometry$\leftrightarrow$gravity bridge once the Hodge/$R^2$ branch is lifted from
-      \tP\ to \tI.
+      \mC\ to \mE.
 \end{itemize}
-\end{winbox}
 
 % =====================================================================
 \section*{Conclusion}
@@ -905,177 +856,21 @@ path to closure is now short and concrete.
 \section*{Appendix: computational verification (reproducibility)}
 \addcontentsline{toc}{section}{Appendix: computational verification}
 % =====================================================================
-Every claim in this document marked \tI\ (exact identity), \tL\ (Lie/lattice theorem) or \tN\ (numerical
+Every claim in this document marked \mE\ (exact identity), \mE\ (Lie/lattice theorem) or \mE\ (numerical
 fixed point) is re-derived from the two axioms $\{\cthree,\gcar\}$ alone by a small, self-contained Python
 suite in the repository folder \texttt{verification/}. The inline references \texttt{[verification/$\dots$]}
-throughout the documents point to the exact script; the table below is the master map.
+throughout the documents point to the exact script; the table below is the master map (its source is
+the shared fragment \texttt{tex-artefacts/verification.tex}).
 
-{\small
-\renewcommand{\arraystretch}{1.25}
-\begin{xltabular}{\linewidth}{@{}p{3.5cm}Y@{}}
-\toprule
-\textbf{Script} & \textbf{What it machine-checks} \\
-\midrule
-\endfirsthead
-\toprule
-\textbf{Script} & \textbf{What it machine-checks \emph{(continued)}} \\
-\midrule
-\endhead
-\midrule
-\multicolumn{2}{r@{}}{\scriptsize\itshape continued on next page}\\
-\endfoot
-\bottomrule
-\endlastfoot
-\texttt{v1\_e8\_glue.py} & glue theorem $E_8{=}(D_5{\oplus}A_3){+}\mu_4$: $\operatorname{disc}{=}\Z_4$, $q(D_5){+}q(A_3){=}\tfrac54{+}\tfrac34{=}2$, $240{=}16{\cdot}5{\cdot}3$, $248{=}240{+}8$ \\
-\texttt{v2\_carrier\_pascal.py} & $\gcar{=}5$ unique Pascal solution; $16{=}1{+}5{+}10$, $\Nfam{=}3$, $\operatorname{rank}E_8{=}8$, $\Oadm{=}48$, $b_1{=}\tfrac{41}{10}$ \\
-\texttt{v3\_em\_alpha.py} & EM closure: unique root of $F_{U(1)}(\alpha){=}0$, $\ainv{=}137.0359992168$, existence/uniqueness, inverse test, ablation \\
-\texttt{v4\_flavor\_matrix.py} & residue matrix $R$: $\det{=}8$, minors $\{2,3,5\}$, $\chi_R{=}t^3{-}9t^2{+}10t{-}8$, SNF $\operatorname{diag}(1,1,8)$, $\|R\|_F^2{=}78$, $\sum L{=}40$ \\
-\texttt{v5\_e8\_cascade.py} & cascade $D_n{=}60{-}2n$: endpoints, exponent rungs $\to240$, IR tail $46080$, variance $6552$ \\
-\texttt{v6\_bootstrap.py} & reverse glue $\mu^2{-}5\mu{+}4{=}0$; $\gcar{=}5$ three ways; $8{=}\operatorname{rank}E_8{=}h(D_5){=}\varphi(30)$ \\
-\texttt{v7\_gravity\_cosmo.py} & scalaron exponent $7$, $M_{\rm scal}^2/\Mbar^2{=}\cthree^7$, $A_s,n_s,r$, $\Omega_b$, $\sin^2\theta_{12}$ \\
-\texttt{v8\_horizon.py} & horizon code: $\tfrac1{2\pi}{=}4\cthree$, $1920{=}|W(D_5)|$, $S_{dS}$, Page, $\beta_{\rm rad}{=}0.2424^\circ$ \\
-\texttt{v9\_neutrino\_texture.py} & solar angle: explicit $\mu\tau$ Majorana texture $\to\sin^2\theta_{12}{=}\tfrac13{-}\tfrac{\phiz}2$, $\theta_{23}{=}45^\circ$, $\theta_{13}{=}0$ \\
-\texttt{v10\_\allowbreak projection\_\allowbreak involution.py} & $Q,\Sigma$ algebra: $K{=}R{+}Q\Sigma$, $L{=}R{+}Q(I{+}\Sigma)$; $\chi_Q,\chi_K$; det ladder $3{\cdot}4{\cdot}8{\cdot}20{=}1920{=}|W(D_5)|$; $a^\top Ka{=}41$ \\
-\texttt{v11\_unique\_KQ.py} & $K,Q$ are the \emph{unique} nonneg-int matrices with their compiler budgets, spectrum and monotone rows (enumeration) \\
-\texttt{v12\_\allowbreak mass\_\allowbreak generation\_\allowbreak polynomials.py} & sector/generation polynomials of $K$ and the anchor-block det ladder $(9,10,16,40)$ \\
-\texttt{v13\_open\_gates.py} & gate closures: $M{=}41{=}10b_1{=}\sum L{+}N_\Phi$; $Q_+$ $=$ $A_3$ exponents, $Q_-^2{=}\Nfam$ \\
-\texttt{v14\_\allowbreak carrier\_\allowbreak uniqueness.py} & $\gcar{=}5$ unique ($\Nfam\in\Z^+$, rank $E_8{=}8$); split $(3,2)$ from $b{+}s{=}5,b^2{+}s^2{=}13$; $\operatorname{Tr}Y{=}\operatorname{Tr}Y^3{=}0$ \\
-\texttt{v15\_\allowbreak bootstrap\_\allowbreak classification.py} & $D_5{\oplus}A_3$ unique familyful cyclic-glue of $E_8$ ($16$-spinor $+$ $3$ families), glue $\Z_4$ \\
-\texttt{v16\_\allowbreak solar\_\allowbreak dual\_\allowbreak anchor.py} & $a^\top R^{-1}{=}a^\top L^{-1}{=}(-\tfrac12,-\tfrac12,1)$; $\sin^2\theta_{12}{=}\tfrac13{-}\tfrac{\phiz}{2}$; full PMNS \\
-\texttt{v17\_\allowbreak hexagonal\_\allowbreak resolvent.py} & finite resolvent $D_y^{-1}{=}(\sum y^{5-m}\delta^m U_6^m)/(y^6{-}\delta^6)$ (quark $c$ backbone) \\
-\texttt{v18\_quark\_yukawa.py} & quark source ratios $\tfrac{m_u}{m_d}{=}0.470085,\tfrac{m_c}{m_s}{=}13.61,\tfrac{m_t}{m_b}{=}40.80$ exact; lepton $c{=}(\tfrac{16}{7},\tfrac43,\tfrac76)$; full hierarchy \\
-\texttt{v19\_\allowbreak monodromy\_\allowbreak moduli.py} & exact pole $z_\star{=}\tfrac{794-7\sqrt{9961}}{2187}$ ($3^7$); $D_4$ $SU(3)$ monodromy constructible but $D_4$-fixed locus positive-dim $\Rightarrow$ exact quark $c$ reduce to $(U)$ \\
-\texttt{v20\_\allowbreak lepton\_c\_\allowbreak derivation.py} & lepton $c$'s derived: $\delta{=}\tfrac12$ resolvent $c{=}|\mu_4|^w/(\tfrac54{-}\cos\tfrac{r\pi}3)$ $\Rightarrow$ $\tfrac{16}7,\tfrac43$; product $\tfrac{2^{\gcar}}{\Nfam^2}{=}\tfrac{32}9$ $\Rightarrow$ $\tfrac76$ \\
-\texttt{v21\_\allowbreak solar\_\allowbreak product\_\allowbreak quark.py} & solar coeff $=q(A_3){=}\tfrac34$ (glue-norm, $q(D_5){+}q(A_3){=}2$), $\sin^2\theta_{12}{=}\tfrac13{-}\tfrac{\phiz}2$; product $\tfrac{2^{\gcar}}{\Nfam^2}$; quark law fails ($\tfrac17$ vs $0.724$) \\
-\texttt{v22\_\allowbreak open\_gates\_\allowbreak audit.py} & residual-gates audit contract: exact reduction of each open gate (A2,B3,B4,B5,B6,C7) machine-pinned (forced part vs.\ named residual) \\
-\texttt{v23\_\allowbreak anchor\_\allowbreak generator.py} & anchor $a{=}(1,1,2)$: $e_k{=}(4,5,2)$, $\cthree{=}\tfrac1{2e_1\pi}$; $p_n{=}2{+}2^n\!\Rightarrow\!240,248$, binary ladder; inputs $\to\{a,\pi\}$ \\
-\texttt{v24\_\allowbreak quark\_\allowbreak ratio\_\allowbreak closure.py} & quark ratios $\tfrac{55}{117},\tfrac{34}{47},\tfrac3{26}$ from TFPT blocks; mass ratios match $<0.03\%$; rational $c$ gauge, $\Lambda_q$ in $O(1)$ \\
-\texttt{v25\_\allowbreak frontier\_\allowbreak conjectures.py} & conjectures: Koide $Q_{\mathrm{src}}{+}\tfrac{\phiz}{24}{\approx}\tfrac23$; axion $f_a{=}M_{\mathrm{scal}}/128{\to}m_a{\approx}23.8\,\mu$eV \\
-\texttt{v26\_\allowbreak flavor\_frontier\_\allowbreak unification.py} & the ``$11$'' is not uniquely forced ($\Rightarrow$\,\tP); flavor frontier unifies to one $(U)$ gate; cusp config on the parabolic stability wall \\
-\texttt{v27\_\allowbreak wall\_\allowbreak representative.py} & explicit balanced wall rep $W_{\mathrm{wall}}$ (cols $=$ perm$(0,1,2)$, rows $w{=}(2,1,1)$, pardeg $0$); selector $\det R{=}8$, $\mathrm{Spec}(Q_+){=}\{1,2,3\}$ \\
-\texttt{v28\_\allowbreak gravity\_\allowbreak fR.py} & $R{+}R^2$ closed: $f(R)$, $M{=}\cthree^{7/2}\Mbar$ scalaron, $N_\star{=}57\!\to\!n_s,r,A_s$; full metric measure open; $248\cthree^2{<}6\log\tfrac32$ \\
-\texttt{v29\_\allowbreak research\_contract\_\allowbreak certs.py} & research-contract certificates: $C_U^{(1)}$ wall enumeration ($1296{\to}144{\to}5$ orbits; symmetry alone does not pick $W_{\mathrm{wall}}$) and $G5$ gap-dominance $2\|V\|{<}\Delta$ \\
-\texttt{v30\_\allowbreak d4\_character\_\allowbreak variety.py} & $C_U^{(2)}$: full $D_4$-fixed $SU(3)$ character variety is positive-dimensional $\Rightarrow$ selector needs the $R(\rho)$ dictionary (H2; exact since v118--v122, residue $=$ the R4$'$ selector establishment) \\
-\texttt{v31\_\allowbreak R\_\allowbreak dictionary.py} & $R(\rho)$ characterized: case A alive (irreducible $\Rightarrow$ mixing); $R$ integer but $\rho$-invariants continuous $\Rightarrow$ $R(\rho)$ is the transcendental non-abelian-Hodge map (residual $=$ Hitchin solve) \\
-\texttt{v32\_\allowbreak rh\_\allowbreak splitting.py} & RH route: $\sum_kU^kA_0U^{-k}{=}4\operatorname{diag}(A_0)$ exact $\Rightarrow$ splitting $\mathcal O(-2){\oplus}\mathcal O(-1)^2\!\Leftrightarrow\!\operatorname{diag}(A_0){=}(\tfrac12,\tfrac14,\tfrac14)$ (algebraic); $\prod M_k{=}I$ + $R$-bridge stay open ($c_u/c_d$ not forced) \\
-\texttt{v33\_\allowbreak explicit\_flat\_\allowbreak bundle.py} & explicit valid $(U_{\mathrm{wall}})$ flat bundle (RH solve): cusp $+$ $\mathcal O(-2){\oplus}\mathcal O(-1)^2$ $+$ $\|M_\infty{-}I\|{\sim}10^{-9}$ ($\prod M_k{=}I$) $+$ irreducible (case A) \\
-\texttt{v34\_\allowbreak h2\_bridge\_\allowbreak attempt.py} & H2 bridge: explicit per-puncture $M_k$ (cusp, $\prod M_k{=}I$); honest negative --- natural extraction $\neq$ lepton amplitudes, the $\Gamma^{\min}$ dictionary is the remaining input ($c_u/c_d$ not obtained) \\
-\texttt{v35\_\allowbreak quark\_qcd\_\allowbreak boundary.py} & the open gates are the discrete$\leftrightarrow$continuous boundary: quark cross-ratio cleanness tracks generation/QCD sensitivity (compiler hands off to continuous physics) \\
-\texttt{v36\_\allowbreak spectral\_action\_\allowbreak g2.py} & G2: spectral action $\to R{+}R^2$ ($a_2{\sim}{-}R/3$, $a_4|_{R^2}{\sim}R^2/72$); $M^2/\Mbar^2{=}6(4\pi)^2/f_0$, $\cthree^7$ fixes $f_0$; gap-decoupling $\Delta_{\mathrm{eff}}{=}1.648{>}0\Rightarrow$ admissible IR closed under RP, ambient (G6) $=$ strict-TOE completion target \\
-\texttt{v37\_\allowbreak plucker\_\allowbreak anchor.py} & anchor-plane Plücker apparatus: $\|\mathrm{Pl}(K)\|_1{=}11$, $\|\mathrm{Pl}_R(K)\|_1{=}26$, $\sum\mathrm{Pl}_R(L){=}60$; pencil $\det(K{+}xQ){=}3x^3{+}7x^2{+}6x{+}4$; $K_e{-}K_u{=}a$, $L_e{-}L_u{=}\mathrm{Exp}(A_3)$; lepton ring $c_ec_\tau{=}|\Z_2|c_\mu$; Koide $u{\to}\tfrac{53}{54}u$ (\tP) \\
-\texttt{v38\_\allowbreak uwall\_\allowbreak killswitch.py} & $(U_{\mathrm{wall}})$ U2 kill-switch hardened: $D_4$-cusp rep irreducible at all $400$ sampled points (commutant${=}1$), mixing ${\ge}0.35$, reducible locus measure-zero $\Rightarrow$ case A generic, $(U_{\mathrm{wall}})$ survives; amplitude dictionary still research-level \\
-\texttt{v39\_\allowbreak uwall\_\allowbreak selectors.py} & $(U_{\mathrm{wall}})$ selector side closed on the explicit point: splitting type ${=}$ anchor $a{=}(1,1,2)$, pardeg ${=}0$; $\det R{=}8{=}n{\cdot}a$, $\mathrm{Spec}(Q_+){=}\{1,2,3\}{=}3\alpha{+}1$ read off the bundle; only the amplitudes $c_u/c_d$ ($\Gamma^{\min}$ Hitchin) remain \\
-\texttt{v40\_\allowbreak harmonic\_\allowbreak metric.py} & $(U_{\mathrm{wall}})$ harmonic metric ${=}$ FINITE linear algebra (polystable${\Rightarrow}$unitary${\Rightarrow}\Phi{=}0$): unique invariant form $H{>}0$, unitarised $\widetilde M_k$ cusp-class with $|\widetilde M_k|{\in}\{0,\tfrac12,\tfrac1{\sqrt2}\}$; the feared Hitchin PDE collapses to unitarisation $+$ combinatorial $R$ \\
-\texttt{v41\_\allowbreak leg\_\allowbreak assignment.py} & $(U_{\mathrm{wall}})$ final leg test: amplitudes ${=}$ $\delta{=}\tfrac12$ resolvent (closed); $\Lambda_\mu{>}1$ rules out holonomy moduli; harmonic holonomy $|\mathrm{diag}|{=}(0,\tfrac12,\tfrac12)$ supplies $\delta{=}\tfrac12$ (suggestive); honest negative on literal $c_u/c_d$ reproduction \\
-\texttt{v42\_\allowbreak exterior\_\allowbreak leg.py} & $(U_{\mathrm{wall}})$ Exterior Leg Lemma: $u,d$ share $(r,w){=}(1,1)$ so any scalar leg gives $c_u/c_d{\equiv}1$; the $u/d$ split is the $\Lambda^2F$ area $\mathrm{Pl}_{\mathbf1,a}(K)$, $\|{\cdot}\|_1{=}11$ generated $\Rightarrow$ $\tfrac{5\cdot11}{9\cdot13}{=}\tfrac{55}{117}$ \tI; phys.\ identification \tP\ \\
-\texttt{v43\_\allowbreak exterior\_\allowbreak bridge.py} & $(U_{\mathrm{wall}})$ $\Lambda^2F$ bridge: $\Lambda^2(\widetilde M){=}\overline{\widetilde M}$ (exterior leg ${=}\mathbf{\bar3}$) confirmed; continuous action $\neq$ integer $\mathrm{Pl}(K)$ $\Rightarrow$ bridge is the discrete H2 invariant ($\det R{=}8$, $\mathrm{Spec}(Q_+)$ confirmed), not continuous \\
-\texttt{v44\_\allowbreak carrier\_\allowbreak exterior.py} & $(U_{\mathrm{wall}})$ Lie-level grounding: $16{=}\Lambda^{\mathrm{even}}(5){=}1{+}10{+}5$; $u^c{\in}\Lambda^2(5)$, $d^c{\in}\Lambda^4(5)$ $\Rightarrow$ exterior degrees $(2,4)$, sum${=}6{=}|R^+\!(A_3)|$, diff${=}2{=}|\Z_2|$; the exterior leg is the carrier's own $\Lambda^2$ grading (no special math) \\
-\texttt{v45\_\allowbreak family\_\allowbreak exterior.py} & $(U_{\mathrm{wall}})$ the ``$11$'' is Pascal: $|\mathrm{Pl}(K)|{=}(1,4,6){=}\{\Lambda^0,\Lambda^1,\Lambda^2\}(\mu_4)$; $\|\mathrm{Pl}(K)\|_1{=}11{=}\sum_{k\le2}\binom4k{=}16{-}\gcar$ (cumulative ext of $\mu_4$ up to $\deg u^c{=}2$); $15{=}\dim\mathfrak{su}(4){=}10{+}5{=}\Nfam\gcar$ \\
-\texttt{v46\_\allowbreak grand\_mass\_\allowbreak volume.py} & absolute mass-scaling is \tI, not a product rule: sector dets $(\phiz)^{6},(\phiz)^{9},(\phiz)^{10}$ (exponents $|R^+\!A_3|,\Nfam^2,\mathcal A_\Lambda$) $\Rightarrow$ $\det M_{\mathrm{SM}}{\sim}(\phiz)^{25}{=}(\phiz)^{\gcar^2}$; $Q$-rows $(4,5,6)$ sum $15{=}\dim A_3$; $25{+}15{=}40{=}\sum L$ \\
-\texttt{v47\_\allowbreak selection\_\allowbreak theorem.py} & Boundary Carrier Selection (Thm A): $\mu_4{\to}A_3,\Nfam{=}3$; $16$-spinor${\to}D_5$; $q(D_5){+}q(A_3){=}2$, glue $4{=}|\mu_4|$; only $D_5{\oplus}A_3$ meets all four conditions ($D_8,E_7{+}A_1,E_6{+}A_2,A_4{+}A_4,A_8$ excluded) \tL/\tP \\
-\texttt{v48\_\allowbreak em\_ward.py} & EM boundary Ward (Thm C): $F_{U(1)}{=}$ Maxwell $\alpha^3$ $-$ Calder\'on $2\cthree^3\alpha^2$ $-$ transport $8b_1\cthree^6\log\tfrac1{\varphi_{\mathrm{seam}}}$; $8b_1{=}\tfrac45 M{=}\tfrac{164}5$, $-\tfrac54{=}q(D_5)$ \tI; Ward origin \tP \\
-\texttt{v49\_\allowbreak readout\_\allowbreak rigidity.py} & Readout Rigidity (Thm U2): $c_u/c_d{=}\tfrac{55}{117}$ is constant on the discrete selector stratum $\mathcal S_{8,Q}$ $\Rightarrow$ no point-uniqueness needed; $(U_{\mathrm{wall}}){=}U_{\mathrm{unitary}}{+}U_{\mathrm{H2}}{+}U_{\Lambda^2}{+}U_{\mathrm{point}}$, only $U_{\mathrm{point}}$ open \\
-\texttt{v50\_\allowbreak q\_geometry.py} & Q geometry (Thm Q): $Q_+{=}$ diag$(3,2,1)$-block $\chi{=}(t{-}1)(t{-}2)(t{-}3)$, $Q_-$ $\chi{=}t(t^2{-}3)$; $Q$ unique under rows$(4,5,6)$/cols$(9,5,1)$/spectra; geom.\ origin \tP \\
-\texttt{v51\_\allowbreak boundary\_\allowbreak half\_step.py} & glue norms ${=}(\gcar,\Nfam)/|\mu_4|$: $q(D_5){=}\tfrac54$, $q(A_3){=}\tfrac34$; four ops forced ${\to}$ $\{$sum$=2$ root norm, diff$=\tfrac12{=}|\Z_2|/|\mu_4|{=}\delta$, prod$=\tfrac{15}{16}$, ratio$=\tfrac53\}$. So $\delta{=}\tfrac12$ is the carrier$-$family count over the glue index, not chosen \tI \\
-\texttt{v52\_\allowbreak pencil\_\allowbreak endpoints.py} & $K{+}xQ$ pencil endpoints: $P({-}1){=}2{=}|\Z_2|$, $P(0){=}4{=}|\mu_4|$, $P(1){=}20{=}\det L$, $P(2){=}68{=}2p_5(a)$; $\det(K{-}Q){=}2$, $\operatorname{tr}{=}\Nfam$ (audit ext.\ of v37) \tI \\
-\texttt{v53\_\allowbreak compiler\_\allowbreak core.py} & Big picture: the whole integer skeleton from $(\gcar,\Nfam){=}(5,3)$ --- $\operatorname{rank}E_8{=}8$, $|\Z_2|{=}2$, Pythagorean $\Delta_Y{=}\gcar^2{=}25{=}\Nfam^2{+}|\Z_2|\!\cdot\!\operatorname{rank}E_8{=}9{+}16{=}\dim S^+$ (diff.\ of squares); anchor char-poly $(t{-}1)^2(t{-}2)$ unique \tI \\
-\texttt{v54\_\allowbreak seam\_\allowbreak horizon\_\allowbreak keystones.py} & The ``$8$'' in $\cthree{=}\tfrac1{8\pi}$ overdetermined and gravitationally aligned ($2|\mu_4|{=}\operatorname{rank}E_8{=}h(D_5){=}\varphi(30){=}8\pi$ Hawking/Einstein); one boundary transport operator (spec $\{1,(2/3)^6,(1/3)^6\}$, $\lambda_2{=}(2/3)^6$) governs \emph{both} SM flavor gap and horizon Page recovery \tI \\
-\texttt{v55\_\allowbreak coxeter\_\allowbreak cycle.py} & Computed $E_8$ Coxeter element: order exactly $30{=}|\Z_2|\Nfam\gcar$, eigenphases ${=}$ exponents ${=}$ totatives of $30$, so $\operatorname{rank}E_8{=}8{=}\varphi(30){=}$ live phases of the order-$30$ cycle; one $\alpha^{-1}$ sets EM, $S_{dS}$ and $\Lambda$ ($S_{dS}\rho_\Lambda{=}32\pi^4$) \tI/\tL \\
-\texttt{v56\_\allowbreak unique\_\allowbreak attractor.py} & Gapped boundary transport (gap $6\log\tfrac32{>}0$) $\Rightarrow$ \emph{unique} attracting fixed point, geometric rate $(2/3)^6$ (two starts $\to$ same direction); Coxeter in $|\mu_4|{=}4$ planes; entropy reset ${=}$ rank-$1$ projector \tI/\tL \\
-\texttt{v57\_\allowbreak horizon\_\allowbreak crosslinks.py} & Horizon cross-links: $\cthree{=}\tfrac1{8\pi}$ is the Einstein/Jacobson coefficient ($1/4{=}1/|\mu_4|$ entropy density); Hod QNM $\omega_R/T_H{=}\ln3{=}\ln\Nfam$; Hawking power denom $1920{=}|W(D_5)|$; one $\alpha^{-1}$ for EM/$S_{dS}$/$\Lambda$/Hubble \tI\ (+ \tP\ identification) \\
-\texttt{v58\_\allowbreak seam\_\allowbreak horizon\_\allowbreak chain.py} & Seam-horizon chain (precise: seam $=$ abstract normaliser, locally realised as a horizon): one-sided $S^2$ Gauss--Bonnet $\cthree{=}1/(2{\cdot}4\pi){=}\tfrac1{8\pi}$; KMS $4\cthree\kappa$; $S_{BH}{=}M^2/2\cthree$; RT in seam units. Seam--Horizon Theorem (area-law from the seam kernel) \tA\ open \\
-\texttt{v59\_\allowbreak area\_\allowbreak law\_\allowbreak evidence.py} & Area-law necessary condition met: a reflection-positive Gaussian (Calder\'on-type) kernel yields an area law (gapped block-EE saturates; gapless $\sim\tfrac c3\log L$), by the \emph{same} gap that fixes the attractor; $8{=}|\Z_2||\mu_4|$. The $\cthree$ coefficient stays \tA\ open \\
-\texttt{v60\_\allowbreak lambda\_\allowbreak metrology\_\allowbreak branch.py} & $\Lambda$ branch selection: $(8\pi)^2\delta_{\mathrm{top}}{=}\tfrac3{4\pi^2}$, mis-scale $2\cthree/\delta_{\mathrm{top}}{=}\tfrac{64\pi^3}3{=}661.47$ $\Rightarrow$ $G_N$ pinned as output; $123$ orders $=119.028{+}3.920$; ACT DR6 birefringence $0.215^\circ{\pm}0.074^\circ$ vs $0.2424^\circ$ ($0.37\sigma$) \tI/\tN \\
-\texttt{v61\_\allowbreak cft\_\allowbreak bridge.py} & Boundary-CFT mirror: level-$1$ WZW central charges $c(E_8){=}8$, $c(D_5){=}5$, $c(A_3){=}3$ $=$ $(\operatorname{rank}E_8,\gcar,\Nfam)$; conformal embedding $c_{\mathrm{coset}}{=}0$; $SU(3)\!\leftrightarrow\!SU(4)$ reconciliation $\Nfam{=}|\mu_4|{-}1$, $4{\to}3{+}1$ (one geometry $\mathbb P^1\!\setminus\!\mu_4$, two sides) \tI/\tL \\
-\texttt{v62\_\allowbreak data\_\allowbreak scorecard.py} & TFPT vs 2024/25 data: $\alpha^{-1}$, $\sin^2\theta_{12}$, $\beta_{\mathrm{rad}}$ match; $\sin^2\theta_{13}$ ($2.0\sigma$) and Starobinsky $n_s$ vs DESI ($\sim2\sigma$) mild tensions; $\theta_{23}$ open; $r{\approx}0.004$ future falsifier \tN \\
-\texttt{v63\_\allowbreak seam\_\allowbreak engineering\_\allowbreak index.py} & Exact Seam-Engineering Index $\Xi{=}2\|V\|/\Delta{=}\tfrac{31}{24\pi^2\log(3/2)}{\approx}0.323$ ($2\|V\|{=}\tfrac{31}{4\pi^2}$, $248{=}\dim E_8$, $31{=}1{+}h^\vee$), $\Delta_{\mathrm{eff}}{\approx}1.648$; four-class possibility taxonomy \tI/\tA \\
-\texttt{v64\_\allowbreak causal\_\allowbreak boundary\_\allowbreak nogo.py} & Causal Boundary Engineering \emph{conditional no-go}: gapped transfer has no periodic orbit (discrete no-CTC); RP$+$OS$+$gap $\Rightarrow$ ANEC $\Rightarrow$ Topological Censorship $\Rightarrow$ no traversable shortcut; only ER$=$EPR bridge survives \tI\,(core)/\tP\,(chain) \\
-\texttt{v65\_\allowbreak falsification\_\allowbreak layer.py} & Prediction layer with explicit failure thresholds: 3 core ($v_{\mathrm{GW}}{=}c$, no 4th gen, seam${=}8$), 4 observational ($\beta$, $r$, $n_s$, $\theta_{12}$), no-go $+$ unitarity; $N_\star$ demoted to \tP\ input; none violated \tN \\
-\texttt{v66\_\allowbreak e8\_\allowbreak casimir\_\allowbreak degrees.py} & Organizing simplification: the compiler atoms \emph{are} the $E_8$ Casimir degrees $\{2,8,12,14,18,20,24,30\}$ ($2{=}|\Z_2|$, $8{=}\operatorname{rank}$, $14{=}\dim G_2$, $20{=}\det L$, $24{=}|W(A_3)|$, $30{=}h(E_8)$); $\sum{=}128{=}2^7$ (dS prefactor), $\sum\text{exp}{=}120{=}|R^+(E_8)|$ \tL \\
-\texttt{v67\_\allowbreak area\_\allowbreak law\_\allowbreak coefficient.py} & Central-theorem \emph{structural closure}: Fursaev--Solodukhin $S{=}4\pi k A$, $k{=}\cthree/2$ $\Rightarrow$ $S{=}2\pi\cthree A{=}\tfrac14 A$ ($2\pi\cthree{=}\tfrac14$); $\cthree{=}\tfrac1{8\pi}$ is the \emph{unique} value with replica-coeff ${=}$ BH $\tfrac14$. Reduces to the one coeff $k{=}\cthree/2$ (then \emph{forced}, v73) \tI/\tL \\
-\texttt{v68\_\allowbreak seeley\_\allowbreak dewitt\_\allowbreak residual.py} & Residual \emph{resolved as an anchor}: $a_2{=}{-}\tfrac{d}{192\pi^2}R$ $\Rightarrow$ the \emph{absolute} $\tfrac1{16\pi G}$ is UV-sensitive ($\propto d\Lambda^2 f_2$), so the \emph{scale} $1/G$ is the one dimensionful anchor (the dimensionless $k{=}\cthree/2$ is forced, v73); cutoff-indep.\ $R^2$/scalaron derived \tI/\tL \\
-\texttt{v69\_\allowbreak d4\_\allowbreak q\_\allowbreak geometry.py} & $D_4$-equivariant Q-geometry (gate \tP$\to$\tL): on $H_1(\PP^1\!\setminus\!\mu_4){=}B_1{\oplus}E$, $Q_+{=}3w{+}1{=}\operatorname{diag}(1,2,3)$ (cusp weights on $\mu_4{=}\Z_4$ eigenspaces), $Q_-{=}E$-coupling $\sqrt{\Nfam}$ $\Rightarrow$ $t(t^2{-}3)$; $\Sigma$-split ${=}D_4{=}\Z_4{\rtimes}\Z_2$ \tL \\
-\texttt{v70\_\allowbreak q\_\allowbreak integer\_\allowbreak lift.py} & Q integer-lift sharpened: $\Z_4$ puncture action $R$ unimodular (eigenvalues $\{-1,i,-i\}$); $\det Q{=}3{=}\Nfam$, SNF $\operatorname{diag}(1,1,3)$ $\Rightarrow$ residual ${=}$ one lattice invariant $\det Q{=}\Nfam$, not closable by $D_4$ alone \tI/\tL \\
-\texttt{v71\_\allowbreak simple\_\allowbreak r\_\allowbreak bridge.py} & \emph{Simple} R-bridge (gate \#3): selector stratum $\mathcal S_{8,Q}$ now fully derived ($\det R{=}8{=}\operatorname{rank}E_8$ lattice $+$ $\operatorname{Spec}(Q_+){=}\{1,2,3\}$ from v69) $\Rightarrow$ quark \emph{ratios} are pure integer Pl\"ucker readouts ($\tfrac{55}{117}$, no monodromy, v49 rigidity); residual $U_{\mathrm{point}}{=}$ absolute norm.\ $=$ an anchor \tI/\tA \\
-\texttt{v72\_\allowbreak q\_\allowbreak det\_\allowbreak from\_\allowbreak cusp.py} & $\det Q{=}\Nfam$ derived from the cusp class: $\det Q{=}|\!\operatorname{coker}Q|{=}$ cusp-class order $=$ denominator of the weights $\{0,\tfrac13,\tfrac23\}$ (same data as $\operatorname{Spec}Q_+$); $\operatorname{coker}Q{=}\Z/\Nfam{=}$ triality deck group $\Rightarrow$ integer-lift residual closed \tI/\tL \\
-\texttt{v73\_\allowbreak k\_\allowbreak c3\_\allowbreak half.py} & Central coefficient $k{=}\cthree/2$ \emph{forced}: $(1/2)$ variational $\times$ $1/(|\Z_2|2\pi\chi(S^2))$ Gauss--Bonnet topology ($\chi(S^2){=}2$), both cutoff-indep $\Rightarrow$ Fursaev--Solodukhin $S{=}A/4$; only the absolute $4$D Newton scale stays the anchor (v68) \tI/\tL \\
-\texttt{v74\_\allowbreak compiler\_\allowbreak micro\_\allowbreak lemmas.py} & Spine quotient ladder ($\tfrac23,\tfrac34,\tfrac45,\tfrac54,\tfrac43$ $=$ adjacent quotients of $(2,3,4,5)$); pencil differences $(2,16,48){=}(|\Z_2|,\dim S^+,\Oadm)$ sheet$\to$1gen$\to$3gens; anchor QF $a^\top K a{-}\mathbf1^\top K\mathbf1{=}41{-}25{=}16{=}\dim S^+$ (EM budget $=$ mass vol $+$ one gen); solar dual anchor $L{=}R{+}6\mathbf1 e_1^\top$, $a^\top R^{-1}\mathbf1{=}0$ (Sherman--Morrison rank-one invariance) \tI \\
-\texttt{v75\_\allowbreak upoint\_\allowbreak to\_\allowbreak vgeo.py} & \textbf{Gate 1 complete:} $U_{\mathrm{point}}{\to}v_{\mathrm{geo}}$. Ratios closed (v49/v71) $+$ lepton $c$ exact (v20) $+$ sector products $=\phiz$-powers (v46); $(\text{ratios},\text{product}){\Leftrightarrow}(\text{individuals})$ bijection $\Rightarrow$ absolute amplitudes fixed up to \emph{one} scale $v_{\mathrm{geo}}$ $=$ the same anchor as $1/G$ (v68); two $[A]\to$ one \tI/\tA \\
-\texttt{v76\_\allowbreak gmetric\_\allowbreak reduction.py} & \textbf{Gate 2:} Tier A (IR) closed under RP$+$gap (Decoupling Thm: $\Delta_{\mathrm{eff}}{=}6\log\tfrac32{-}\tfrac{31}{4\pi^2}{=}1.648{>}0$, $\|V\|{\le}248\cthree^2{=}\tfrac{31}{8\pi^2}$); Tier B (strict TOE) holographically reduced from bulk to a finite seam-\emph{boundary} measure (conditional: RP$+$tightness $\Rightarrow$ closes) \tI/\tP \\
-\texttt{v77\_\allowbreak e8\_\allowbreak conformal\_\allowbreak net.py} & \textbf{G6 route:} the seam boundary measure $=$ the $(E_8)_1$ \emph{lattice net} (rigorous, holomorphic $c{=}8$); level-1 $c(E_8){=}\tfrac{248}{31}{=}8$, $c(D_5){=}5$, $c(A_3){=}3$, embedding $5{+}3{=}8$ (coset $c{=}0$); imports $G6$ into RCFT/conformal-net rigor \tI/\tP \\
-\texttt{v78\_\allowbreak vgeo\_\allowbreak floor.py} & \textbf{$v_{\mathrm{geo}}$ floor:} no pure number is dimensionful $\Rightarrow$ $v_{\mathrm{geo}}$ irreducible by logic; all scales are ratios $\times$ one $\bar M_{\mathrm{Pl}}$; $S_{dS}\rho_\Lambda{=}32\pi^4$ pins it from one measurement; theory at the minimum (one scale $+$ $\pi$) \tI/\tA \\
-\texttt{v79\_\allowbreak review\_\allowbreak identities.py} & Four validated review identities $+$ one firewall: hypercharge Lucas--Binet $D_n{=}(3^n{-}(-2)^n)/5{=}1,1,7,13,55,133$ (roots $=$ carrier charges); Inverse Anchor Thm ($\mathbf1^\top M^{-1}\mathbf1{=}1/$atom, $a^\top M^{-1}a{=}1$ for $R,K,L$); MacWilliams $(1,10,5)$; $6Y^2{-}Y{-}1{=}(2Y{-}1)(3Y{+}1)$. Rejects $m_p/m_e$, $\eta_B$ near-formulas (firewall) \tI/\tL \\
-\texttt{v80\_\allowbreak operator\_\allowbreak pencil\_\allowbreak geometry.py} & Operator-pencil geometry: Anchor Singularity Thm $\det B_{K+xQ}{=}(\Nfam x{+}|\Z_2|)(\Nfam x{+}\gcar){=}(3x{+}2)(3x{+}5)$ ($\tfrac23$ Koide/gap $=$ anchor-plane singularity); buildup chain $(3,10,16,20)$; type checker $\det B_{Q,K,R,L}{=}(9,10,16,40)$; audit: differential spectrum, $F_4{\times}G_2$ shadow $248{=}52{+}14{+}26{\cdot}7$ \tI/\tL\,$+$\,\tP \\
-\texttt{v81\_\allowbreak singular\_\allowbreak pencil\_\allowbreak matrices.py} & Double cover $y^2{=}\det B_{K+xQ}{=}(3x{+}2)(3x{+}5)$: Koide $x{=}{-}\tfrac23$ and carrier $x{=}{-}\tfrac53$ are the two branch points (deck $2{=}|\Z_2|$; disc${=}81{=}\Nfam^4$; separation${=}1$ transport period). Clearing matrices $C_{2/3}{=}3K{-}2Q$ ($D_5{\oplus}A_3$ glue, $B{=}(5,7)^\top(9,11)$, $\sum{=}240$), $C_{5/3}{=}3K{-}5Q$ (neutral, $\chi{=}(\lambda{+}2)(\lambda^2{+}\lambda{+}6)$); scalaron $7{=}$ mixed anchor disc$/\Nfam$ \tI/\tL \\
-\texttt{v82\_\allowbreak koide\_\allowbreak attractor\_\allowbreak splitting.py} & Koide attractor \emph{forced}: the branch-divisor-preserving M\"obius map fixing $q{=}2,5$ is unique, multiplier $(2/3)^6{=}\lambda_2$ of the established transfer operator $\Rightarrow$ $F'(2){<}1$ attractor, $F'(5){>}1$ repeller; three postulates $\to$ one \tP. Splitting trichotomy disc $81/49/40$: the clean split is non-generic (anchor-first) \tI\,$+$\,\tP \\
-\texttt{v83\_\allowbreak e8net\_\allowbreak holomorphic\_\allowbreak uniqueness.py} & Holomorphy pins $(E_8)_1$: \#primaries ${=}\det$ Cartan ($D_8{:}4$ vs $E_8{:}1$), and a holomorphic $c{=}8$ chiral CFT is the lattice theory of the \emph{unique} even unimodular rank-$8$ lattice (Minkowski--Siegel mass $1/|W(E_8)|$); carrier Pascal truncation $K{=}(g{-}1)/2$ $=$ half-spinor split \tL/\tI \\
-\texttt{v84\_\allowbreak frozen\_\allowbreak registry.py} & Blind-prediction registry frozen 2026-06-09 (25 digits, machine-enforced lock formula$\leftrightarrow$value): exactly \emph{one} $\theta_{12}$ prediction of record; $r$, $n_s$ as $N_\star$ \emph{bands}; conditional entries carry their hypothesis by name \tN \\
-\texttt{v85\_\allowbreak master\_\allowbreak cover.py} & Master-cover theorem: $\det B$ is $\mathrm{GL}(2)$-covariant on $\operatorname{span}\{K,Q\}$ $\Rightarrow$ exactly \emph{one} double cover up to M\"obius (disc $=\Nfam^4\det(G)^2$); the disc-$81$ family is its orbit ($-\tfrac83{=}{-}\mathrm{rank}E_8/\Nfam$ $=$ carrier $-$ one period); $\mu_4$ is \emph{not} a $4{:}1$ cover (ladder of double covers); branch trace fixes only the scalaron \emph{scale} \tI/\tL \\
-\texttt{v86\_\allowbreak nstar\_\allowbreak reheating.py} & $N_\star$ band $\to$ point \tP: $\Gamma{=}4M^3\!/48\pi\bar M^2{=}128$\,GeV, $T_{\mathrm{reh}}{=}9.6{\times}10^9$\,GeV, $N_\star(0.05/\mathrm{Mpc}){=}51.4$ $\Rightarrow$ $n_s{=}0.9611$, $r{=}0.0045$ (inside the frozen band); honest tensions: $n_s$ $+0.9\sigma$, $A_s$ dichotomy (slow point $-11.4\sigma$ $\Rightarrow$ near-instant reheating or exponent fails) \tP \\
-\texttt{v87\_\allowbreak bulk\_\allowbreak uniqueness\_\allowbreak reduction.py} & Red-team Target A residual (ii) conditionally closed: holomorphic $\Rightarrow$ Rep $=$ Vect $\Rightarrow$ 2D bulk \emph{unique} (LR/KLM/BKLR); machine contrast $SO(16)_1$ admits \emph{six} modular invariants (incl.\ both $E_8$ pairings) $\Rightarrow$ Target A $=$ one residual \tL\,$+$\,\tP/\tA \\
-\texttt{v88\_\allowbreak cp\_\allowbreak phase\_\allowbreak audit.py} & Target-D CP residual quantified: frozen $\delta{=}\pi/3{+}3\lambda^2$ survives at $+0.98\sigma$ vs $\gamma_{\mathrm{PDG}}$; the $0.07^\circ$-near alternative $\pi/3{+}2\lambda^2$ recorded as look-elsewhere trap, \emph{not} adopted; decision at $\sigma_\gamma{\le}0.96^\circ$ \tN \\
-\texttt{v89\_\allowbreak carrier\_\allowbreak index\_\allowbreak lemma.py} & Carrier Index Lemma: KLM $\mu_A{=}[B{:}A]^2\mu_B$ $\Rightarrow$ Jones index $[(E_8)_1{:}(D_5)_1{\times}(A_3)_1]{=}4{=}|\mu_4|$ (glue order \emph{is} the index); $\mu$-additivity $16/4^2{=}1$ $\Rightarrow$ holomorphy \emph{follows}; Gate A (H)$\Leftrightarrow$(H$'$) index-$4$ extension \tL \\
-\texttt{v90\_\allowbreak conical\_\allowbreak defect\_\allowbreak chain.py} & Fursaev--Solodukhin factor $4\pi$ \emph{derived} (smoothed-cone Gauss--Bonnet, exactly smoothing-independent); replica $S{=}4\pi kA$, $k{=}\cthree/2$ $\Rightarrow$ $S{=}A/4\Leftrightarrow\cthree{=}\tfrac1{8\pi}$ (sympy-solved); residual isolated to ``seam determinant $\Rightarrow$ EH form'' \tI\,$+$\,\tA \\
-\texttt{v91\_\allowbreak spine\_\allowbreak tetrahedron.py} & Spine tetrahedron $\{2,3,4,5\}$ $=$ anchor $+$ zeroth moment; edges/faces/volume $=$ the integer grammar, volume $120{=}|R^+(E_8)|$; $240{=}|\mu_4||E(K_4)||E(K_5)|$ with $K_6$ negative control; dual cuts typed tautological; sub-grammar incompleteness honest \tI \\
-\texttt{v92\_\allowbreak glue\_\allowbreak uniqueness.py} & Glue uniqueness: of all $15$ subgroups of the discriminant form exactly two Lagrangian glues (the two \emph{chiralities}, swapped by either single spinor conjugation, fixed by the simultaneous one) and exactly one halfway extension $=SO(16)_1$; tower carrier${\to}SO(16)_1{\to}(E_8)_1$, nothing else \tI/\tL \\
-\texttt{v93\_\allowbreak koide\_\allowbreak relaxation\_\allowbreak toy.py} & Koide relaxation toy (P2 narrowed): basin lemma (every physical configuration in the attractor basin); exact rate $(2/3)^6$; source at $\rho{=}{-}\phiz/24$ to $0.8\%$ (\tP); honest negatives: flow time $t{=}2.84\notin\Z$ $\Rightarrow$ the missing object is a \emph{continuous} generator \tI/\tN\,$+$\,\tP \\
-\texttt{v94\_\allowbreak sheet\_\allowbreak diamond.py} & Sheet diamond: all four flavor operators on \emph{one} surface $M(s,t){=}R{+}Q\operatorname{diag}(s,t,t)$ (pencil $=$ the cut $(1{+}x,x{-}1)$; diagonal-cut disc $153$ negative control); winding line $\det B{=}2\det$ for all $s$; cofactor seam normal $(5,-9,6)$; Pl\"ucker canonicalisation: $11$ \emph{and} $26$ both live in $K$; spine-quotient firewall \emph{rejected} \tI \\
-\texttt{v95\_\allowbreak centered\_\allowbreak diamond.py} & Centered cross: $Q{=}U{+}V$, $R/L{=}C{\mp}U$, $K/F{=}C{\mp}V$ (five objects $\to$ three); $\operatorname{Spec}V{=}\{0,1,2\}{=}\Nfam\cdot$cusp; $\det C{=}14$, $\sum C{=}31{=}2^{\gcar}{-}1$; $\operatorname{Pl}_R(C){=}7(2,3,1)\parallel\operatorname{Pl}_R(L){=}10(2,3,1)$; $G_2$ reading audit-typed \tI \\
-\texttt{v96\_\allowbreak branch\_\allowbreak kernel\_\allowbreak selection.py} & Branch-kernel selection (P1 unblocked): rank-$1$ anchor blocks at the branch points have \emph{integer} kernels (carrier kernel $=\mathbf1$); collapse lemma $\Rightarrow$ $(-1,1,0)$: up $=-$down, \emph{lepton pairing} $=0$ (leptons on the ramification); sector zero ladder (up $-\tfrac32$ doubly, down $0$ \&\ $-\tfrac95$); anchor-placement controls \tI/\tL \\
-\texttt{v97\_\allowbreak sheet\_\allowbreak conjugation\_\allowbreak bridge.py} & Sheet-conjugation bridge (P1 $\to$ one \tP): the anchor forces the cusp conjugation uniquely $\Rightarrow$ integer $T_A$, $\det{=}{-}1$; $a{=}e_2{+}e_3$ (conjugation-symmetric); one deck action on $\mathbb{R}^3/\operatorname{span}\{\mathbf1,a\}$; $\langle T_A,\Sigma\rangle{=}D_4$; sheet-index lemma (intertwiner dets even, min $2{=}|\Z_2|$); remaining \tP: $Q_+$ grading $=$ $A_3$ discriminant grading \tI/\tL\,$+$\,\tP \\
-\texttt{v98\_\allowbreak discriminant\_\allowbreak dictionary.py} & Dictionary \emph{derived} (P1 closed modulo \textsc{gate.qgeo}): $G{=}T_A\Sigma$ acts integrally on the cusp basis ($Ge_1{=}{-}e_1$, $Ge_3{=}e_2$, $Ge_2{=}{-}e_3$ $=$ $B_1{\oplus}E$); cusp-$0$ line $=$ self-conjugate $\Z_4$-class-$2$ line; $T_AGT_A^{-1}{=}G^{-1}$ ($k{\mapsto}{-}k$); $q_{A_3}(1){=}q_{A_3}(3){=}\tfrac38$, $q_{A_3}(2){=}\tfrac12$; reflection classes $=$ glue-swap vs glue-fix parities $\Rightarrow$ P1 carries no separate \tP; residual $=$ the one existing $Q$-geometry gate \tI/\tL \\
-\texttt{v99\_\allowbreak koide\_\allowbreak flow\_\allowbreak time.py} & Koide flow time: canonical generator $\dot q{=}(\Delta/\Nfam)(q{-}2)(q{-}5){=}(\Delta/\Nfam)\det B(q)$, time-$1$ map $=F$ \tI; non-integrality of $t{=}2.84$ is \emph{data-fragile} ($Q$ crosses $\tfrac23$ at $+0.43\sigma(m_\tau)$, $t$ passes every integer $\ge3$ within $+0.5\sigma$) \tN; conditional steps: $n{=}2$ excluded ($-2.9\sigma$), $n{=}3{=}\Nfam$ $\Rightarrow$ $m_\tau{=}1776.9427$\,MeV ($+0.14\sigma$), decision at $\sigma(m_\tau){\sim}0.01$\,MeV \tP; $\ln(46080)$ scale reading destroyed by controls (firewall) \\
-\texttt{v101\_\allowbreak horizon\_\allowbreak anchor.py} & The maximal black hole is the anchor (SdS in seam units): Nariai cubic $t^3{-}3t{+}2{=}(t{-}1)^2(t{+}2)$, roots $(1,1,-2)$ $=$ traceless anchor; $S_{\mathrm{Nariai}}/S_{dS}{=}\tfrac23{=}|\Z_2|/\Nfam$ (per horizon $\tfrac13$); interpolation $(x^2{+}1)/\Phi_3(x)$; three-sheet total $|\Z_2|S_{dS}$ conserved; $Q_{\mathrm{geom}}\in[\tfrac38,\tfrac12]$ $=$ the $SU(4)_1$ weights; mass-line cover $(1{-}3m)(1{+}3m)$, deck $=$ horizon swap; $\tau_{BH}{=}128\,\gcar M^3/\cthree$; six atom landings, zero free parameters \tI\,$+$\,\tP\ (bulk reading) \\
-\texttt{v102\_\allowbreak seam\_\allowbreak orientation.py} & One orientation: the anchor is the \emph{stationary repeller} in both sectors --- flavor relaxation $=$ gradient flow of a cubic potential with critical points $=$ the branch points, curvatures $V''(2){=}{+}\Delta$, $V''(5){=}{-}\Delta$ ($=$ the gap), inflection at scalaron$/2$, Lyapunov rate $\Delta$ constant; SdS entropy has Nariai as its \emph{unique} stationary point, curvature $\tfrac29{=}|\Z_2|/\Nfam^2$; evaporation $=$ entropy ascent away from the anchor \tI; ``one variational principle of the seam'' stays a reading \tP \\
-\texttt{v103\_\allowbreak trisection\_\allowbreak normal\_\allowbreak form.py} & Trisection normal form (the canonical coordinate): SdS cubic $\Leftrightarrow$ $\cos3\theta{=}{-}3m$ (angle trisection; $\Z_3$ deck $=$ triality); $m{=}\cos\psi/\Nfam$ and $S_{\mathrm{tot}}/S_{dS}{=}\tfrac43{-}\tfrac23\cos\tfrac{2\psi}3$ --- \emph{one} cosine of glue atoms; canonical curvature $(\tfrac23)^3{=}(|\Z_2|/\Nfam)^{\Nfam}$ (Koide constant to the family power); invariant slope $d\sigma/dm|_N{=}{-}\tfrac89{=}{-}\operatorname{rank}E_8/\Nfam^2$; bridge: flavor rate $(2/3)^{2\Nfam}$ vs gravity curvature $(2/3)^{\Nfam}$, missing $=$ one \emph{clock} \tI\,$+$\,\tP \\
-\texttt{v104\_\allowbreak nariai\_\allowbreak clock.py} & The \emph{classical} Nariai clock is the anchor (third appearance): static pin $\phi{=}\rho$ solves the $dS_2$ static-patch equation with $m^2{=}{-}2\Lambda{=}{-}|\Z_2|\Lambda$ exactly (Ginsparg--Perry tower: one negative mode); in Hubble units $\chi_{\mathrm{clock}}{=}(\lambda{-}1)(\lambda{+}2)$ $=$ the anchor quadratic, eigenvalues $\{1,-2\}$; Nariai cubic $=(t{-}1)\cdot\chi_{\mathrm{clock}}$; entropy-deviation rate $2H{=}|\Z_2|H$; honest $(2/3)$-test \emph{negative} for the classical clock --- the quantum clock is the one remaining \tP\ of the seam variational principle \tI\,$+$\,\tP \\
-\texttt{v105\_\allowbreak residual\_\allowbreak inventory.py} & The residual inventory: \emph{one constant} ($2/3{=}|\Z_2|/\Nfam$ exact in seven places across both sectors), \emph{one anchor} (three dynamical appearances: configuration, Nariai roots, clock spectrum), \emph{relocation theorem} (cosmological quantum clock suppressed by the $\Lambda$ hierarchy, $121.5$ orders $\approx2\alpha^{-1}\!/\ln10$ $\Rightarrow$ the clock must be the seam transfer operator --- one \tP\ identification), and the \emph{complete machine-pinned gap list}: exactly five structural objects $+$ one scale $+$ $\pi$; a sixth gap would fail the script \tI\,$+$\,\tP \\
-\texttt{v106\_\allowbreak review\_\allowbreak validation.py} & External-review validation: seed normal form $\phiz{=}\tfrac{|\mu_4|}{\Nfam}\cthree{+}\Oadm\cthree^{|\mu_4|}$ exact \tI; hypercharge moment $\operatorname{Tr}X^2{=}120{=}5!$ computed from the charge table; factorial spine $5!{=}|R^+(E_8)|{=}\sum$exponents, $240{=}2{\cdot}120$, $1920{=}2^4{\cdot}5!$; degree-$2$ inventory (Pascal $K{=}2$ unique at $g{=}5$, glue norms sum $2$, $\cthree{=}\tfrac12{\times}\tfrac1{4\pi}$, $\binom52{=}10$); named \tP\ hypothesis \emph{Quadratic Boundary Locality} ($\Rightarrow K{=}2$ forced; would upgrade the Pascal selection to \tL); audit $240{=}16{\times}15$ non-unique \tI\,$+$\,\tP \\
-\texttt{v107\_\allowbreak quantum\_\allowbreak clock\_\allowbreak target.py} & Quantum-clock target made quantitative: the classical Ginsparg--Perry clock decays on $\{0,-1,-2\}=-\operatorname{Spec}(V)=-\Nfam\times$cusp (the transfer operator's own grading) \tI; exact target identity $(1/3)^6=\bigl((2/3)^6\bigr)^{\log_{3/2}3}$ --- required bend $\log_{9/4}3=1.355$ per weight step; coupling landscape $\kappa=c/(24\pi)\cdot\Lambda/\bar M_{\mathrm{Pl}}^2$: $10^{-122}$ cosmological vs $1/(3\pi)$ at seam curvature (the only viable, borderline-nonperturbative regime) \tI; identification stays \tP \\
-\texttt{v108\_\allowbreak pascal\_\allowbreak ladder.py} & Pascal Ladder Theorem: $2^{g-1}{=}\sum_{k\le K}\binom gk\Leftrightarrow g{=}2K{+}1$ (odd-$g$ midpoint identity $+$ even-$g$ straddle) $\Rightarrow$ carrier selection $g{=}5$ \emph{exactly equivalent} to degree bound $K{=}2$ --- the Target-B residual $=$ the one QBL hypothesis; neighbour worlds: $K{=}1$ one-family, $K{=}3$ nine-family, $K{=}4$ inconsistent; only $K{=}2$ also satisfies $g{+}\Nfam{=}8$ (v14 overdetermination) \tI/\tL\,$+$\,\tP \\
-\texttt{v109\_\allowbreak sheet\_\allowbreak pairing.py} & Sheet-Pairing Lemma (QBL anchored): character-exact multisets from $(\pm\tfrac12)^5$ --- no scalar within a sheet (zero-weight mult of $S^+\!\otimes S^+$ $=0$; odd $g$ flips parity); $S^+\!\otimes S^-{=}\Lambda^0{\oplus}\Lambda^2{\oplus}\Lambda^4$ exactly ($256{=}1{+}45{+}210$, zero-modes $(1,5,10)$ $=$ the code); sheet-diagonal $=$ odd forms ($2\Lambda^1{+}2\Lambda^3{+}\Lambda^5$); tower tops at $\Lambda^{2K}$, $K{=}2$ $\Rightarrow$ the seam scalar kernel is necessarily a \emph{sheet pairing} \tI\,$+$\,\tP \\
-\texttt{v110\_\allowbreak calderon\_\allowbreak sheet.py} & Calder\'on-sheet selection theorem: a Calder\'on involution $\varepsilon$ on $S^+{\oplus}S^-$ certifies a scalar two-point datum \emph{iff} it is sheet-odd; sheet-odd $\Rightarrow$ exactly $2{=}|\mathbb Z_2|$ invariant kernels $=$ the two Lagrangian glues; ladder genericity ($g{=}3,5,7$): sheet-oddness forces $K{=}(g{-}1)/2$, \emph{not} $g{=}5$ (anti-overclaim); QBL residue split into \emph{interface} (``$\varepsilon$ sheet-odd'', natural from the one-sided collar) $+$ \emph{analytic core} (slot-degrees $\le2$) \tI\,$+$\,\tP \\
-\texttt{v111\_\allowbreak quadratic\_\allowbreak transport.py} & Quadratic-Transport Theorem: in the integer Jordan--Wigner model linears are sheet-odd, the $45$ quadratics ($=\mathfrak{so}(10)$, the $\Lambda^2$ term of $1{+}45{+}210$) sheet-even, generate the code from the vacuum \emph{and} span the full $\operatorname{End}(S^+){=}256$ at word length $2$ $\Rightarrow$ \emph{transport degree exactly 2} (degree $\le1$ generates nothing) --- the transport half of the QBL core is a theorem; $g{=}3$ control: degree selected, not rank \tI\,$+$\,\tP \\
-\texttt{v112\_\allowbreak selfcounting\_\allowbreak channel.py} & Self-Counting Channel: $w\mapsto(w,-w)$ is a bijection code states $\leftrightarrow$ neutral certified kernels, so $\#$kernels $=2^{g-1}$ \emph{exactly}; graded by pair-degree the same set has sizes $\binom gm$ $\Rightarrow$ the Pascal closure $2^{g-1}{=}\sum_{m\le K}\binom gm$ is \emph{two countings of one set} (an identity, not a requirement); Hodge fold $\binom g{2j}{=}\binom g{\min(2j,g-2j)}$; QBL residue $=$ one input (``a single scalar $2$-point kernel''), selection carried by rank-$8$+integrality \tI\,$+$\,\tP \\
-\texttt{v113\_\allowbreak quasifree\_\allowbreak kernel.py} & One kernel is the whole net: carrier $(D_5)_1{\times}(A_3)_1=SO(10)_1{\times}SO(6)_1=16$ free Majoranas, $c{=}5{+}3{=}8$ at every tower level (only the glue grows, index $2{\times}2{=}4{=}|\mu_4|$); Wick/Pfaffian exact (all $210{+}210$ higher correlators $=$ Pfaffians of the one kernel); kernel $=$ Calder\'on involution, $\operatorname{rank}P{=}5{=}g_{\mathrm{car}}$, seam level $8{=}\operatorname{rank}E_8$ ($c=$ rank of the kernel); vacuum unique $\Rightarrow$ QBL input $=$ R2 premise: gate closes $\Rightarrow$ carrier choice closes \tL\ \tI\,$+$\,\tP \\
-\texttt{v114\_\allowbreak torsion\_\allowbreak delta.py} & Torsion normal form $+$ $\delta{=}\tfrac12$ theorem: flatness of the $(U_{\mathrm{wall}})$ $\Z_4$-family $\Leftrightarrow$ $(MU)^4{=}\mathbf1$ ($\mu_4$ $=$ order of the twisted cusp generator); on the involutive branch ($T^2{=}\mathbf1$) the cusp trace forces $\operatorname{diag}M{=}(0,\tfrac i2,-\tfrac i2)$ with spec $\{1,\omega,\omega^2\}$ automatic $\Rightarrow$ $\delta{=}\tfrac12$ exact and constant (v20's hand value $=$ torsion identity); census: $\{1,i,-i\}$ branch varies, v33 point in its $d_1{=}0$ slice; residue $=$ bundle-side branch selection \tI\,$+$\,\tN\,$+$\,\tP \\
-\texttt{v115\_\allowbreak anchor\_\allowbreak residue.py} & The anchor pins the residue: $\mu_4$-average $=$ diagonal projection $\Rightarrow$ anchor splitting $\Leftrightarrow$ $\operatorname{diag}A_0{=}a/|\mu_4|$; off-weights uniquely $(8,0,5)/144$ ($=\!(\operatorname{rank}E_8,0,\gcar)/(|\mu_4|\Nfam)^2$, total $13{=}\Delta_Q$); \emph{exact} residue $A_0^\star$ with $\chi{=}\lambda(\lambda{-}\tfrac13)(\lambda{-}\tfrac23)$ is the RH solution ($\|M_\infty{-}\mathbf1\|{\sim}10^{-10}$); anchor forces $d_1{=}0$ $\Rightarrow$ harmonic diagonal anchor$+$torsion-forced \tI\,$+$\,\tN \\
-\texttt{v116\_\allowbreak resonance\_\allowbreak uniqueness.py} & Resonance theorem (v115 [N]$\to$\tI, linear --- no Gr\"obner): twisted $\mu_4$ averages collapse to $B_1{=}4a_{12}E_{12}{+}4\overline{a_{13}}E_{31}$; anchor exponents $\operatorname{diag}(2,1,1)$ give resonance gap $1$ with obstruction $4\overline{a_{13}}$ $\Rightarrow$ $M_\infty{=}\mathbf1\Leftrightarrow a_{13}{=}0$; $+$ $(8,0,5)/144$ $+$ Diagonaleichung $\Rightarrow$ flat anchor locus $=$ \emph{one} gauge orbit $=$ exact $A_0^\star$ --- $U_{\mathrm{wall}}$ bundle datum algebraically unique; sharpness control $\|M_\infty{-}\mathbf1\|\sim8.5|a_{13}|$ \tI\,$+$\,\tN \\
-\texttt{v117\_\allowbreak monodromy\_\allowbreak weyl\_\allowbreak a3.py} & The monodromy is $W(A_3)$: the unitarised holonomy of $A_0^\star$ is \emph{exact} (entries in $\tfrac12\mathbb Z[i]$), $\operatorname{diag}\widetilde M_0{=}(0,-\tfrac i2,\tfrac i2)$ $\Rightarrow$ $d_1{=}0$, $\delta{=}\tfrac12$ are matrix entries; $\langle U,\widetilde M_0\rangle$ enumerated exactly: order $24$, statistics $(1,9,8,6)$, characters $(3,-1,0,1)$ $=$ $S_4{=}W(A_3)$ (standard$\otimes$sign) --- the flavor wall realises the $A_3$ glue factor as its Weyl group; ODE match $3.5{\times}10^{-10}$ \tI\,$+$\,\tN \\
-\texttt{v118\_\allowbreak hexagon\_\allowbreak family\_\allowbreak dictionary.py} & First exact H2 piece: $\operatorname{spec}(\widetilde M_0)\cup\operatorname{spec}(-\widetilde M_0)=\mu_6$ (hexagon $=$ family spectrum $+$ sheet twist, $\Z_6{=}\Z_2{\times}\Z_3$); $\det(\mathbf1{-}t\widetilde M_0){=}1{-}t^3$ $\Rightarrow$ $\det_\mp{=}(\tfrac78,\tfrac98)$; lepton coefficients $=$ resolvent determinants ($c_e{=}|\mu_4|/(2\det_-)$, $c_\mu{=}\Nfam/(2\det_+)$, $c_\tau{=}|\mu_4|\det_-/\Nfam$, product $=|\mu_4|/\det_+{=}\tfrac{32}9$); $\langle U,\widetilde M_0,-\mathbf1\rangle$ has order $48{=}\Omega_{\mathrm{adm}}$; the address table stays open \tI\,$+$\,\tP \\
-\texttt{v119\_\allowbreak review\_\allowbreak validation\_2.py} & Second review validation: anchor ratio triad $(e_3,e_1,e_2)/p_0{=}(\tfrac23,\tfrac43,\tfrac53)$ $=$ (Koide branch, seed gain, carrier branch; flow critical points $(2,5){=}(e_3,e_2)$); the $121$ audit lemma $(\mathbf1{+}a)^TR(\mathbf1{+}a){=}121{=}11^2{=}\|\operatorname{Pl}(K)\|_1^2$ (orderings $\{105,121,135\}$, only canonical $=121$; audit, not load-bearing); micro-identities $\Omega_{\mathrm{adm}}{=}2p_1p_2$, $10b_1{=}1{+}p_1p_3$, $\Delta_Y{=}e_2^2{=}p_0^2{+}2\,\mathrm{rank}$; flavor surface $=$ v94/v95 (presentational) \tI \\
-\texttt{v120\_\allowbreak address\_\allowbreak table.py} & Address table (frozen v18/v20 integers): lepton words $(8,5,3){=}(\operatorname{rank}E_8,\gcar,\Nfam)$; addresses $=$ divmod by the hexagon ($p_2{=}6$): $e{\to}(2,1)$, $\mu{\to}(5,0)$, $\tau{\to}(3,0)$, $\sum r{=}p_3$; sheet parity: $\tau$ sits at the real twisted eigenvalue $-1$ ($=$ the product-rule site); quark sums: up $=p_3$, down $=p_1{+}p_3$, all quarks $=24{=}|W(A_3)|$, all nine $=40{=}p_1p_3{=}a^TRa$; top at the vacuum site $(0,0)$; the assignment derivation stays open \tI\,$+$\,\tP \\
-\texttt{v121\_\allowbreak address\_\allowbreak pinning.py} & Address pinning: $L{=}R{+}2U$ (v95) $\Rightarrow$ the word table $=$ the residue operator $R$ $+$ the generation-1 winding, $R$ column 1 $=$ the anchor $a$; margins $=$ atoms (rows $(e_1,\mathrm{rank},p_3)$, columns $(e_1,\Delta_Q,\gcar)$); \emph{census theorem}: among all hexagon matrices with atom margins ($17$ of them) exactly \emph{one} has $\det{=}8$ --- and it is $R$ (also unique with SNF $(1,1,8)$; all $17$ determinants distinct) $\Rightarrow$ the address table carries \emph{zero} residual information; the H2 residue $=$ the six atom margins \tI\,$+$\,\tP \\
-\texttt{v122\_\allowbreak margin\_\allowbreak theorem.py} & Margin theorem: the \emph{established} selectors --- the $D_4$ annihilator $n{=}(5,-9,6)$ with $n^TR{=}(8,0,0)$ (v94), $\det R{=}8$, $\det K{=}4$ (the v71 quartet) --- pin $R$ \emph{uniquely} among hexagon matrices ($64\to12\to1$) $\Rightarrow$ the atom margins, the anchor column and all sum rules are \emph{consequences} (their input status is revoked); bonus: $\det L{=}20$ holds automatically on the locus (the quartet is redundant); H2 introduces \emph{no} new residual class \tI\,$+$\,\tP \\
-\texttt{v123\_\allowbreak inventory\_\allowbreak update.py} & Residual inventory updated (post v110--v122): thirteen new ledger rows machine-pinned; R2 carries \emph{three} loads (metric $+$ carrier $+$ QBL: one theorem, three doors); the table re-pins to \emph{five} classes --- R1 clock, R2 index-4 net, R3 EH, R4$'$ selector establishment (replacing the \emph{discharged} H2 dictionary), R5 $Q$ realisation --- $+$ $v_{\mathrm{geo}}$, $\pi$; a sixth class fails the script \tI \\
-\texttt{v124\_\allowbreak resummed\_\allowbreak clock.py} & Resummed clock (the R1 bend in closed form): transfer eigenvalues $=$ exactly $(1{-}n/\Nfam)^{p_2}$ $\Rightarrow$ $\mathrm{rate}(n){=}{-}p_2\ln(1{-}n/\Nfam)$ reproduces $\{0,\Delta,6\ln3\}$, the bend $\log_{3/2}3$ in one line; the linearisation carries slope $|\Z_2|{=}2$ relative to the classical GP clock $\{0,-1,-2\}$; the pole at $n{=}\Nfam$ forces the three-level spectrum; the R1 target is now closed-form \tI\,$+$\,\tP \\
-\texttt{v125\_\allowbreak glue\_\allowbreak qsystem.py} & Glue Q-system: $\mathbb C[\Z_4]$ satisfies all Longo Q-system axioms exactly (associativity, unit, Frobenius, specialness $mm^*{=}|\Z_4|\mathbf1$) $\Rightarrow$ Jones index $4{=}|\mu_4|$ (the v89 value); locality $=$ isotropy ($q(k(1,1)){=}k^2\in\Z$, v92); halfway sub-Q-system $\mathbb C[\Z_2]$ $=$ the $SO(16)_1$ step, $4{=}2{\times}2$; R2 sharpens from ``find'' to ``identify'' \tI\,$+$\,\tP \\
-\texttt{v126\_\allowbreak clock\_\allowbreak wall\_\allowbreak bridge.py} & Clock and wall share one spectrum: the resummation weights $n/\Nfam{=}\{0,\tfrac13,\tfrac23\}$ $=$ exactly $\operatorname{spec}A_0^\star$ (the parabolic MS weights); $\lambda_n{=}(1{-}\alpha_n)^{p_2}$; checkpoint 1 passed \emph{classically} ($p_2/\Nfam{=}2{=}|\Z_2|$ $=$ the v104 entropy rate $2H$); $\det(\mathbf1{-}A_0^\star){=}\tfrac29$ $=$ the entropy curvature (v102); the quantum content of R1 is isolated in the geometric tail \tI\,$+$\,\tP \\
-\texttt{v127\_\allowbreak ring\_\allowbreak resummation.py} & The clock is a log determinant: rate $=-p_2\operatorname{Tr}\ln(\mathbf1{-}\alpha P)$ --- six identical ring (RPA) towers, \emph{one per hexagon site}, coupling $=$ the parabolic weight; the $k{=}1$ ring $=$ the classical term, the $k{=}2$ ring $=$ the first quantum correction; $\kappa_{\mathrm{seam}}{=}\tfrac1{3\pi}{=}\alpha_1/\pi$ (audit); the wall $=$ the RPA instability at $\alpha{\to}1$; v107's ``O(1) resummation'' is thereby \emph{typed} (ring/log-det), its derivation open \tI\,$+$\,\tP \\
-\texttt{v128\_\allowbreak graded\_\allowbreak hull.py} & Graded hull $+$ zero-mode multiplicity: the $240$ $E_8$ roots explicit in $D_5{\oplus}A_3{+}$glue coordinates, coset decomposition $240{=}52{+}64{+}60{+}64$; the grading is exactly additive on \emph{all} $6720$ root-pair sums $\Rightarrow$ $E_8$ is a $\Z_4$-\emph{graded} Lie algebra over the carrier (grading $=$ glue $=$ Q-system); ring multiplicity $6{=}2(2l{+}1)|_{l=1}$ $=$ the sheet-doubled GP zero modes \tI\,$+$\,\tP \\
-\texttt{v129\_\allowbreak entropy\_\allowbreak power\_\allowbreak law.py} & The clock is an entropy power law: $\lambda_n{=}(S_n/S_{dS})^{p_2}$ with the three Nariai entropy levels $S/S_{dS}{\in}\{1,\tfrac23,\tfrac13\}$ (v101); rate $=p_2\ln(S_{dS}/S)$; triple identity $\alpha{=}n/\Nfam{=}$ MS weight $=$ entropy-deficit share $\Rightarrow$ the RPA coupling is nowhere free; orientation consistent (attractor $=$ max entropy); R1 thermodynamic: $\Gamma{\propto}(S/S_{dS})^{p_2}$ (a Gibbons--Hawking power law, $h{=}\Nfam$ audit) \tI\,$+$\,\tP \\
-\texttt{v130\_\allowbreak born\_\allowbreak square.py} & Born square: amplitude $\sim(S/S_{dS})^{n_{\mathrm{zero}}/2}{=}(S/S_{dS})^3$ (one $S^{1/2}$ per zero mode), probability $=|A|^2{=}(S/S_{dS})^6$ $\Rightarrow$ $h{=}n_{\mathrm{zero}}/2{=}3{=}\Nfam$, $p_2{=}2h$ (the Born rule) --- the v129 weight audit is \emph{derived}; the $3$ $=$ the dimension of the $l{=}1$ space $=$ the number of proper conformal Killing vectors of $S^2$; the $\times2$ $=$ the horizon pair (the v101 deck); the R1 residue $=$ the standard zero-mode measure \tI\,$+$\,\tP \\
-\texttt{v131\_\allowbreak measure\_\allowbreak is\_\allowbreak area.py} & The measure is the area: $\|Y_{1m}\|^2{=}r^2{=}A/(4\pi)$ \emph{exactly} (all three $l{=}1$ modes integrated) $\Rightarrow$ the per-mode Jacobian $=$ the mode norm $\sim S^{1/2}$ $\Rightarrow$ amplitude $S^3$, Born $S^6$ --- every exponent factor with a derivation origin; the $4\pi$ $=$ the same Gauss--Bonnet primitive as in $c_3$, cancelling in all ratios; the R1 residue $=$ \emph{one} det-ratio cancellation $\det'_n/\det'_{dS}{=}1{+}O(\mathrm{deficit})$ \tI\,$+$\,\tP \\
-\texttt{v132\_\allowbreak detratio\_\allowbreak anomaly.py} & Det-ratio anomaly $=$ the Koide constant: $\zeta(0)|_{\det'}$ of the GP sphere operator $-\Delta{-}2$ (the $3$ zero modes removed) $=a_1{-}3=\tfrac73{-}3={-}\tfrac23={-}|\Z_2|/\Nfam$ exactly ($a_1{=}\tfrac1{\Nfam}{+}|\Z_2|$; numerical continuation $\sim10^{-7}$) --- the eighth $2/3$ appearance, the first as a \emph{spectral} anomaly; consequence $\det'(cL){=}c^{\zeta(0)}\det'(L)$; the R1 residue $=$ \emph{one} $\zeta(0)$ budget statement (the 4d sum) \tI\,$+$\,\tP \\
-\texttt{v133\_\allowbreak zeta\_\allowbreak budget.py} & The $\zeta$ budget, both routes exact (Euclidean Nariai $=S^2{\times}S^2$): the reduced route gives $-\tfrac23$ per sector, total $-\tfrac43{=}{-}e_1/p_0$ ($=$ minus the seed gain --- two of the three triad values); the naive 4d route gives $a_2{=}\tfrac{161}{45}$, $\zeta(0){=}{-}\tfrac{109}{45}$ (\emph{no} atom; continuation $\sim10^{-8}$); zero modes $3{+}3$ $=$ the horizon pair $\Rightarrow$ the budget structurally favours the \emph{reduced} seam reading; remainder $=$ graviton/ghost shares (Volkov--Wipf class) \tI\,$+$\,\tP \\
-\texttt{v134\_\allowbreak dual\_\allowbreak anchor.py} & Dual anchor lemma: $d{:=}a^\top R^{-1}{=}a^\top L^{-1}{=}(-\tfrac12,-\tfrac12,1)$, $d{\cdot}\mathbf 1{=}0$, $d{\cdot}a{=}1$, $(1,1,-2){=}{-}2d$ --- the inverse flavor response \emph{is} the Nariai root (v101); the invariance is exact via Sherman--Morrison ($\Leftrightarrow$ orthogonality to $R^{-1}\mathbf 1{=}\tfrac14(1,1,-1)$; controls: $\mathbf 1,e_1,n$ do \emph{not} lie on the plane); $(d,n)$ $=$ the dual normal pair of the flavor boundary; a third purely \emph{algebraic} leg of the flavor$\leftrightarrow$horizon bridge \tI\,$+$\,\tP \\
-\texttt{v135\_\allowbreak det\_\allowbreak surface.py} & Determinant surface: $\det M(s,t){=}3s(t{+}1)(t{+}2){+}t^2{+}5t{+}8$ --- two $s$-independent iso-volume walls $t{=}{-}2{\Rightarrow}2{=}|\Z_2|$, $t{=}{-}1{\Rightarrow}4{=}|\mu_4|$ ($\det K{=}4$ is a \emph{layer}); winding line $6s{+}8\Rightarrow(8,14,20)$, $\det F{=}32{=}2^{\gcar}$; $\det B(s,0){=}2\det M(s,0)$ exactly, $B$-wall only at $t{=}{-}2$; row-sum axes $C{=}(7,11,13)$, $U{=}(3,3,3)$, $V{=}(1,2,3){=}\mathrm{Spec}(Q_+)$; micro-identities $e_1^2{+}e_2^2{=}41{=}10b_1$, $p_1^2{+}p_2^2{=}52{=}$ the carrier coset root count (v128) \tI\,$+$\,\tP \\
-\texttt{v136\_\allowbreak dual\_\allowbreak normal\_\allowbreak selector.py} & Dual-normal selector: $(d,n)$ pins $R$ \emph{columnwise} --- $d{\cdot}c_j{=}a_j$, $n{\cdot}c_j{=}8\delta_{1j}$, kernel $=$ primitive $(6,8,7)$, census: each column unique ($1$ of $216$) $\Rightarrow$ R4$'$ shrinks from $6^9$ to three column problems; the $A_0^\star$ zero mode carries $\sigma{=}(2,-9,5){=}(|\Z_2|,-\Nfam^2,\gcar)$ ($\|v\|^2{=}\tfrac{16}9$, $16{=}\dim S^+$; $\operatorname{adj}{=}\tfrac29P_v$ $=$ the SdS curvature); $n{\cdot}\sigma{=}121{=}11^2$; $W(A_3)$ orbit control: the naive lift $\sigma{\to}n$ fails --- a genuine mechanism, not a group element \tI\,$+$\,\tP \\
-\texttt{v137\_\allowbreak qplus\_\allowbreak cohomology.py} & The $Q_+$ grading is cohomology: $H^1(\PP\setminus\mu_4){=}\chi_1{\oplus}\chi_2{\oplus}\chi_3$ ($\omega_k{=}z^{k-1}dz/(z^4{-}1)$, character $i^k$, residues $\zeta^k/4$); degrees $(1,2,3){=}\operatorname{Spec}(Q_+){=}$ the $A_3$ exponents ($h{=}4{=}|\mu_4|$); cusp weights $\{0,\tfrac13,\tfrac23\}{=}\operatorname{spec}(A_0^\star)$ $\Rightarrow$ MS weights $=$ cusp classes $=$ characters $=$ $Q_+$: \emph{one} spectrum, four readouts; the QGEO residue $=$ the naturality of the canonical map \tI\,$+$\,\tP \\
-\texttt{v138\_\allowbreak vw\_\allowbreak firewall.py} & Volkov--Wipf firewall (R1 typed closed): external 4d value $\alpha_{\mathrm{PI}}{=}{-}\tfrac{98}{45}{=}\tfrac{22}{45}{-}\tfrac83$ (arXiv:2506.02142 Tab.~4.1 $=$ VW hep-th/0003081); \textbf{edge match}: $\alpha_{\mathrm{edge}}{=}{-}\tfrac83{=}2{\times}({-}\tfrac43)$ --- two identical edge copies (the horizon pair), per copy exactly the reduced seam budget (v133, the seed gain); bulk $\tfrac{22}{45}$ $=$ the graviton gas (not the clock); difference $-\tfrac{38}{45}$ no atom $\Rightarrow$ typing: the seam clock $=$ an edge object, the full 4d determinant $=$ the gravity firewall \tI\,$+$\,\tP \\
-\texttt{v139\_\allowbreak selector\_\allowbreak triangle.py} & Selector triangle: $d{=}\tfrac32a{-}2\cdot\mathbf1$ exactly (pure anchor data, no $R$) $\Rightarrow$ the first selector is \emph{derived}; the frame $(\mathbf1,a,\sigma)$ has $\det{=}11{=}\|\operatorname{Pl}(K)\|_1$, and $n$ is the \emph{unique} covector with atom pairings $(2,8,121){=}(|\Z_2|,\operatorname{rank}E_8,11^2)$; on the constrained line the pairing is $11(11{+}t)$, a square only at the true $n$; review lift exact (audit): $n{=}\operatorname{reverse}(\sigma){+}|\mu_4|e_3$; R4$'$ residue $=$ three pairings \tI\,$+$\,\tP \\
-\texttt{v140\_\allowbreak canonical\_\allowbreak map.py} & The canonical map exists and is rigid: the plain deck $U$ (characters $(0,1,3)$) cannot match $H^1$; the \emph{sheet-twisted} $-U$ ($(2,3,1)$) and the cusp exponential $i^{Q_+}$ ($(1,2,3)$) both carry the $H^1$ character set $\{1,2,3\}$ (the v118 sign twist); multiplicity-freeness $\Rightarrow$ Schur-rigid equivariant isomorphism (unique up to scalars); $i^{Q_+}$ pulls the Euler degree back to $Q_+$, $-U$ to $Q_+\!\circ\rho$ --- the QGEO residue collapses to \emph{one} $\Z_3$ choice \tI\,$+$\,\tP \\
-\texttt{v100\_\allowbreak numerology\_\allowbreak null\_\allowbreak mc.py} & Numerology null test (look-elsewhere corrected): exact census of the full declared formula grammar over the $13$ scored frozen-registry observables (conservative data windows) gives joint formula-fishing probability $\prod p_i=10^{-25.8}$, robust to budget/window variation; $2{\times}2{\cdot}10^5$ Monte-Carlo pseudo-theories reach at most $5/13$ hits vs.\ TFPT $13/13$; power controls (seed perturbation, data shuffle) collapse the scorecard; all $94\,500$ $F_{U(1)}$ variants solved, exactly \emph{one} hits CODATA $\Rightarrow$ total $\le10^{-30.7}$, \emph{conditional on the declared grammar} \tN \\
-\end{xltabular}
-}
+\input{tex-artefacts/verification}
 
 \noindent\textbf{How to run.} From the repository root,
 \texttt{python verification/run\_all.py} (dependencies \texttt{mpmath}, \texttt{numpy}, \texttt{sympy});
 each module also runs standalone, e.g.\ \texttt{python verification/v1\_e8\_glue.py}. The runner exits with
 code $0$ iff all checks pass; see \texttt{verification/README.md} for the full claim$\leftrightarrow$script
 map and \texttt{verification/status\_ledger.csv} for the \textbf{single status ledger} (claim ID, status,
-location, dependencies, script, external datum --- the source of truth all six documents are written
-against). The \tF\ (Lean-formalised) carrier material lives in the canonical shipped folder
+location, dependencies, script, external datum --- the source of truth all nine documents are written
+against). The \mE\ (Lean-formalised) carrier material lives in the canonical shipped folder
 \texttt{lean4-carrier-rigidity/} (at the package root; the source repository keeps the same project under
 \texttt{experiments/}).
 

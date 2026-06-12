@@ -20,31 +20,40 @@ documents and the ledger (the ledger wins on any disagreement).
   7 = `tfpt_research_contracts`): abstract, sections, `keyFormulas`, `highlights`, status.
 - `website/lib/predictions.ts` — the prediction surface (status = `[I]/[L]/[N]/[P]/[A]` grades).
 - `website/lib/glossary.ts` — `GlossTerm` vocabulary.
-- `website/lib/release.ts` — per-PDF version / bytes / SHA-256.
-- `website/public/papers/*.pdf` — copies of the 8 root PDFs (same filenames).
-- `website/public/verification/*.py` — copies of `verification/tfpt_constants.py` + **every**
-  `vN_*.py`; the in-browser Pyodide reproducer (`lib/pyodide.ts`, `components/Reproducer.tsx`)
-  fetches these and runs them client-side.
+- `website/lib/release.ts` — per-PDF version / bytes / SHA-256 (refreshed by
+  `bash build.sh website`; new PDFs still need their entry added by hand once).
+- `website/lib/version.ts` — **GENERATED** by `bash build.sh website` from
+  `tex-artefacts/version.tex` + git revision + date; shown in the site header
+  (`Navbar.tsx`). Never edit by hand.
+- `website/public/papers/*.pdf` — copies of ALL active root PDFs incl.
+  `tfpt_5_redteam.pdf` + `changelog.pdf` (copied by `bash build.sh website`).
+- `website/public/verification/*.py` + `predictions_frozen.json` — copies of
+  `verification/` (copied by `bash build.sh website`); the in-browser Pyodide
+  reproducer (`lib/pyodide.ts`, `components/Reproducer.tsx`) fetches these.
 - `website/components/VerificationDag.tsx` — dependency-graph nodes; each node lists the
   `scripts` that verify it + its status marker.
-- `website/components/ScriptIndex.tsx` — clustered list that must contain **every** script
-  (one-line `what`); `TOTAL` auto-counts.
+- `website/components/ScriptIndex.tsx` — **GENERATED** from
+  `verification/script_registry.csv` + `script_clusters.csv` via
+  `bash build.sh gen`. To add/change a script entry, edit the registry CSV and
+  regenerate — never edit the TSX data by hand.
 - Status markers also live in `components/StatusPyramid.tsx`, `components/orientation/StatusMatrix.tsx`,
   and the `/verification` marker legend — keep them agreeing with the ledger.
 
 ## When the verification suite changes (new / renamed / removed `vN_*.py`)
 
-1. Re-copy into the site: `cp verification/tfpt_constants.py verification/v*.py website/public/verification/`.
-2. Add/rename the script in `website/components/ScriptIndex.tsx` (correct cluster, concise `what`).
-   It mirrors the `introduction.tex` script index — list every script, no dangling filenames.
+1. Add the script's row to `verification/script_registry.csv`, then
+   `bash build.sh gen` (regenerates `ScriptIndex.tsx` + the master TeX index).
+2. `bash build.sh website` (re-copies all `vN_*.py` + PDFs, stamps version + hashes).
 3. If it backs a DAG node, add its filename to that node's `scripts` in `VerificationDag.tsx`.
 
 ## When a document changes (content or a recompiled `*.pdf`)
 
-1. Copy the changed root PDF(s) into `website/public/papers/` (same filename).
-2. `cd website && npm run release:write` — refreshes bytes + SHA-256 in `lib/release.ts`.
-3. Update that document's entry in `lib/papers.ts` (abstract / sections / `keyFormulas` /
+1. `bash build.sh website` — copies the root PDFs into `website/public/papers/`,
+   refreshes bytes + SHA-256 + version/date in `lib/release.ts` and `lib/version.ts`.
+2. Update that document's entry in `lib/papers.ts` (abstract / sections / `keyFormulas` /
    `highlights`); update `lib/predictions.ts` / `lib/glossary.ts` if a prediction or term changed.
+   `verification/website_map.csv` lists which website files mention which documents/scripts
+   (see the `sync-maps` rule).
 
 ## When a result or status marker changes
 
@@ -56,7 +65,10 @@ documents and the ledger (the ledger wins on any disagreement).
 
 ## Gate (before done — always)
 
+- `bash build.sh audit` must end "AUDIT OK" (mirror byte-identical, release hashes
+  current, versions agree, no orphaned/unknown script references in website code).
 - `cd website && npm run build` must pass (TypeScript + all static pages generated).
+  `bash build.sh release` runs both plus the doc compile in one go.
 - Browser-check the touched page(s): `/`, `/verification`, `/papers/<slug>`, `/orientation`,
   `/falsification`. On `/verification`, click a changed script to confirm the reproducer runs.
 - The canonical repo link is `REPO_URL` in `lib/utils.ts`; the Pyodide version is pinned in

@@ -19,20 +19,12 @@
 \emergencystretch=3.5em
 
 % ---- colours ----
-\input{tfpt_style}
+\input{tex-artefacts/tfpt_style}
 
-% ---- central marker legend in the page footer (markers documented on every page) ----
-\usepackage{fancyhdr}
+% ---- shared header/footer (version stamp) + 4-class markers come from tfpt_style ----
+%  (no per-document footer override, so every TFPT document looks identical.)
 \usepackage{needspace}
 \usepackage{etoolbox}
-\newcommand{\footmarkers}{\scriptsize\textcolor{black!55}{\textbf{Markers:}\ \tI~identity\quad\tL~Lie/lattice\quad\tF~formalised\quad\tN~numerical\quad\tP~phys./cond.\quad\tA~axiom/open}}
-\pagestyle{fancy}
-\fancyhf{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0.3pt}
-\fancyfoot[C]{\footmarkers}
-\fancyfoot[R]{\small\thepage}
-\fancypagestyle{plain}{\fancyhf{}\renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0.3pt}\fancyfoot[C]{\footmarkers}\fancyfoot[R]{\small\thepage}}
 % ---- guard every coloured box so it never breaks with an orphaned title line ----
 \BeforeBeginEnvironment{keybox}{\needspace{8\baselineskip}}
 \BeforeBeginEnvironment{winbox}{\needspace{8\baselineskip}}
@@ -111,7 +103,7 @@
 \renewcommand{\arraystretch}{1.15}
 
 \title{\vspace{-1.2cm}\textbf{TFPT --- $E_8$ Audit, Cascade Bridge and Bootstrap}\\[2mm]\large The seven $E_8$ slices as an audit raster, the old cascade as the same even-integer spine, and the M\"obius self-consistency loop}
-\author{}\date{\today}
+\author{\TFPTauthors}\date{\TFPTdatestamp}
 \def\TFPTdoctitle{$E_8$ Audit \& Bootstrap}
 \begin{document}
 \maketitle
@@ -138,10 +130,10 @@ $a=(1,1,2)$ into the $E_8$ audit hull} --- a discrete classifier, attacked on it
 terms, not on gauge-theoretic ones.
 \end{gapbox}
 
-\input{tfpt_docset}
+\input{tex-artefacts/tfpt_docset}
 \noindent\textbf{You are reading \textbf{document~3} ($E_8$ Audit \& Bootstrap).}
 
-\input{tfpt_status}
+\input{tex-artefacts/tfpt_status}
 \TFPTbadges
 \TFPTclaimstack[compiler]
 
@@ -149,14 +141,13 @@ terms, not on gauge-theoretic ones.
 \tableofcontents
 \clearpage
 \part{The $E_8$ secondary-branching atlas}
-\begin{keybox}[Purpose and discipline]
+\par\smallskip\noindent\textbf{Purpose and discipline.}
 This note does \emph{not} introduce new physics. It builds an \emph{audit raster}: the claim that
 \emph{every load-bearing TFPT number should appear in at least one $E_8$ branching projection}. A number
 that appears in none is suspect; a number appearing in several independent projections becomes
-structurally strong. All arithmetic identities below are exact \tI; the \emph{physical readings} are
-audit-level \tA\ unless tied to a derivation. (All 77 numeric claims were machine-checked with exact
+structurally strong. All arithmetic identities below are exact \mE; the \emph{physical readings} are
+audit-level \mO\ unless tied to a derivation. (All 77 numeric claims were machine-checked with exact
 integer/rational arithmetic.)
-\end{keybox}
 
 % =====================================================================
 \section{The compiler core (where this note sits)}
@@ -213,7 +204,7 @@ $n$ & $p_n=2+2^n$ & \textbf{TFPT reading (verified)} \\
 The first three power sums alone reach $E_8$: $p_1p_2p_3=4\cdot6\cdot10=240=|R(E_8)|$, and
 $p_1p_2p_3+(p_4-p_3)=240+8=248=\dim E_8$.
 
-\begin{winbox}[The anchor difference ladder: the binary carrier spine \tI]
+\begin{winbox}[The anchor difference ladder: the binary carrier spine \mE]
 While the \emph{products} of the power sums give the large budgets, the \emph{differences} give the
 binary carrier spine in one line:
 \[
@@ -236,10 +227,10 @@ also $a\Rightarrow\gcar$. Moreover $3^2+4^2=5^2$ sits as $(p_0,e_1,e_2)=(3,4,5)$
 \[
   \boxed{\ 10\,b_1=e_1(a)^2+e_2(a)^2=4^2+5^2=41\ }
 \]
-alongside the known $41=40+1=\sum L+N_\Phi$. \tI
+alongside the known $41=40+1=\sum L+N_\Phi$. \mE
 \end{winbox}
 
-\begin{keybox}[Pascal closure: $\gcar=5$ is the unique solution (kills alternatives) \tI]
+\begin{keybox}[Pascal closure: $\gcar=5$ is the unique solution (kills alternatives) \mE]
 The carrier rank is not merely a good fit --- it is the \emph{unique} root of an exact closure. The
 even-exterior carrier dimension $2^{g-1}$ must equal the truncated Pascal sum $\binom g0+\binom g1+\binom g2$
 (the $1{+}g{+}\binom g2$ that builds $\dim S^+$):
@@ -265,7 +256,7 @@ certifies code degrees $\le2$; Paper~1). Neighbour worlds on the ladder: $K{=}1\
 \emph{one}-family world), $K{=}2\to g{=}5$ (three families), $K{=}3\to g{=}7$ (\emph{nine} families),
 $K{=}4\to g{=}9$ \emph{inconsistent} ($N_{\mathrm{fam}}=255/9\notin\Z$). Overdetermination: among the
 ladder worlds, only $K=2$ also satisfies the independent rank closure $g+N_{\mathrm{fam}}=8=\operatorname{rank}E_8$
---- two independent selections agree on the same world. The hypothesis itself stays \tP.
+--- two independent selections agree on the same world. The hypothesis itself stays \mC.
 \end{keybox}
 
 \begin{winbox}[The seed is an anchor expression]
@@ -275,7 +266,7 @@ The retained seed is exactly the two-term anchor combination of $\cthree$:
   =\frac1{6\pi}+\frac{3}{256\pi^4}\ }
 \]
 (verified to $30$ digits). The Cabibbo base is $\lambda_Y=\sqrt{\phiz(1-\phiz)}$, the hierarchy engine
-of the whole fermion spectrum. \tI
+of the whole fermion spectrum. \mE
 \end{winbox}
 
 % =====================================================================
@@ -326,9 +317,9 @@ $E_8$ branching. And the rank-one winding update shows up in the inverses:
   \boxed{\ R^{-1}\onev=\tfrac14(1,1,-1)^\top,\qquad L^{-1}\onev=\tfrac1{10}(1,1,-1)^\top\ }
 \]
 i.e.\ the residue response reads the glue denominator $|\mu_4|=4$, the full-length response reads the
-decuple denominator $\AL=10$. \tI
+decuple denominator $\AL=10$. \mE
 
-\begin{winbox}[Anchor-plane Plücker coordinates: scattered hits become oriented areas \tI]
+\begin{winbox}[Anchor-plane Plücker coordinates: scattered hits become oriented areas \mE]
 The strongest anti-numerology tool is to read \emph{orientation invariants} of the anchor plane
 $\langle\onev,a\rangle$ rather than loose integers. For $M\in\{R,Q,K,L\}$ the left block
 $B_M=\bigl(\onev^\top M;\,a^\top M\bigr)$ (a $2{\times}3$) and the right block $C_M=(M\onev\ \ Ma)$ (a
@@ -354,11 +345,11 @@ The left-null-space response complements the right one above: the column sums of
 $\det R\cdot R^{-1}$ are $(-5,1,6)$ and $(1,-5,6)$, the same magnitudes
 $\{N_\Phi,\gcar,|R^+\!(A_3)|\}=\{1,5,6\}$. Finally the sector rows themselves are anchor-shifted:
 $K_e{-}K_u=(1,1,2)=a$ and $L_e{-}L_u=(1,2,3)=\operatorname{Exp}(A_3)$ --- leptons are up-quarks displaced by
-the family roots. All entries are exact \tI; this is an audit layer, not a closure (the physical quark
-amplitudes stay \tP). \veri{v37\_plucker\_anchor.py}
+the family roots. All entries are exact \mE; this is an audit layer, not a closure (the physical quark
+amplitudes stay \mC). \veri{v37\_plucker\_anchor.py}
 \end{winbox}
 
-\begin{winbox}[The numerology null test: the look-elsewhere burden quantified \tN]
+\begin{winbox}[The numerology null test: the look-elsewhere burden quantified \mE]
 The raster above disciplines \emph{which} integers may appear; the complementary statistical question ---
 \emph{could a random ``theory'' of equal formula complexity land this many data hits?} --- is answered by an
 explicit, fully declared null model. For each of the $13$ scored frozen-registry observables the
@@ -385,7 +376,7 @@ lands inside the achieved $4{\cdot}10^{-8}$ CODATA window, so $p_\alpha\le1.1{\c
   \;\le\;10^{-30.7}\ \ (\approx102\ \text{bits})\ }
 \]
 \emph{conditional on the declared grammar} --- a look-elsewhere-corrected null-model rejection, never
-``certainty''. Complementary to the frozen registry: the freeze (v84) prevents \emph{future}
+``certainty''. Complementary to the frozen registry: the freeze (\vref{v84}) prevents \emph{future}
 look-elsewhere drift, this test quantifies the \emph{retrospective} look-elsewhere burden.
 \veri{v100\_numerology\_null\_mc.py}
 \end{winbox}
@@ -393,8 +384,8 @@ look-elsewhere drift, this test quantifies the \emph{retrospective} look-elsewhe
 % =====================================================================
 \section{The secondary branching atlas}
 % =====================================================================
-Each maximal subalgebra of $E_8$ mirrors a TFPT module. The dimension identities are exact \tI; the
-readings are audit-level \tA. The seven \emph{slices} of $\dim E_8=248$ are shown below: the same total
+Each maximal subalgebra of $E_8$ mirrors a TFPT module. The dimension identities are exact \mE; the
+readings are audit-level \mO. The seven \emph{slices} of $\dim E_8=248$ are shown below: the same total
 cut seven ways, each cut a different TFPT module.
 
 \begin{figure}[h]\centering
@@ -447,7 +438,7 @@ $A_8$ & $80+84+84$ & rank-decuple $+$ scalaron: $80{=}8\cdot10$, $84{=}7\cdot12$
 \end{tabularx}
 \end{center}
 
-\begin{theorem}[$E_6\times A_2$ flavor-residue shadow \tA]
+\begin{theorem}[$E_6\times A_2$ flavor-residue shadow \mO]
 The principal flavor branching reads the residue matrix:
 \[
   \|R\|_F^2=78=\dim E_6,\qquad \det R=8=\dim A_2=h(D_5),\qquad \onev^\top R\,a=27,
@@ -460,7 +451,7 @@ Here $E_6$ reads the Frobenius norm of the residue matrix, $A_2$ the pure three-
 $\mathbf{27}$ the cubic family block. (Strongest new $E_8$ flavor fingerprint.)
 \end{theorem}
 
-\begin{theorem}[$E_7\times A_1$ scalaron shadow \tA]
+\begin{theorem}[$E_7\times A_1$ scalaron shadow \mO]
 With the scalaron exponent $7=\Oadm-10b_1=-\deg E+\operatorname{rk}E$,
 \[
   248=133+3+112,\qquad 112=7\cdot\dim S^+=7\cdot16,\qquad |R(E_7)|=126=7\cdot18,
@@ -471,7 +462,7 @@ $\sum_{m\in\mathrm{Exp}(E_8)}|m-15|=56=\dim\mathbf{56}_{E_7}$ (exponents $\{1,7,
 the primitive residues mod $30$).
 \end{theorem}
 
-\begin{proposition}[$A_4\times A_4$ action-ladder and $F_4\times G_2$ occupancy \tA]
+\begin{proposition}[$A_4\times A_4$ action-ladder and $F_4\times G_2$ occupancy \mO]
 $248=24+24+4(5\cdot10)$ with $24+24=48=\Oadm$ and off-diagonal reps $(\mathbf 5,\mathbf{10})=(\AH,\AL)$
 --- the action ladder appears inside $E_8$ (an audit, \emph{not} an $SU(5)$ GUT). And
 $F_4\times G_2$: $|R(F_4)|=48=\Oadm$, $|R(G_2)|=12=\dim\mathfrak g_{\mathrm{SM}}$,
@@ -508,14 +499,14 @@ Over the main stabiliser,
   \frac{|W(E_8)|}{|W(D_5)|\,|W(A_3)|}=\frac{696729600}{1920\cdot24}=15120=63\cdot240=(2^6-1)\,|R(E_8)| .
 \]
 A group-theory machine-check, not physics: it quantifies the Weyl symmetry created beyond the
-$D_5\times A_3$ stabiliser. \tI\ (arithmetic) / \tA\ (reading)
+$D_5\times A_3$ stabiliser. \mE\ (arithmetic) / \mO\ (reading)
 \par\smallskip
 
 \par\smallskip\noindent\textbf{$E_8$ theta series as a higher-shell raster.}
 $\Theta_{E_8}=E_4=1+240\sum_{n\ge1}\sigma_3(n)q^n$ has shell degeneracies
 $240,\ 2160,\ 6720,\ 17520,\dots$ The first is $|R(E_8)|=240$; the second is
 $2160=9\cdot240=\Nfam^2|R(E_8)|$. If later one-loop or CMB shell degeneracies touch these multiplicities,
-the theta series is the right place to type them --- as an audit raster, not a claim. \tA
+the theta series is the right place to type them --- as an audit raster, not a claim. \mO
 \par\smallskip
 
 % =====================================================================
@@ -524,50 +515,37 @@ the theta series is the right place to type them --- as an audit raster, not a c
 Five more exact identities tie the flavor matrices and the $E_8$ exponents to the compiler. All checked
 with exact integer arithmetic.
 
-\begin{winbox}[(i) Full-length Frobenius norm is three $E_6$ blocks]
-\[
-  \|L\|_F^2=234=\Nfam\,\|R\|_F^2=3\dim E_6,\qquad
-  \|L\|_F^2=\|R\|_F^2+12\langle R,W\rangle+36\|W\|_F^2=78+48+108,
-\]
+\par\smallskip\noindent\textbf{(i) Full-length Frobenius norm is three $E_6$ blocks.}
+$\|L\|_F^2=234=\Nfam\,\|R\|_F^2=3\dim E_6$, and
+$\|L\|_F^2=\|R\|_F^2+12\langle R,W\rangle+36\|W\|_F^2=78+48+108$,
 with $\langle R,W\rangle=4=|\mu_4|$ and $\|W\|_F^2=3=\Nfam$. The full word-length load is exactly the
-residue $E_6$ norm $+$ the $A_3$-winding over $\mu_4$ $+$ the family-winding square. \tI
-\end{winbox}
+residue $E_6$ norm $+$ the $A_3$-winding over $\mu_4$ $+$ the family-winding square. \mE
 
-\begin{winbox}[(ii) $A_3$-winding determinant lemma]
+\par\smallskip\noindent\textbf{(ii) $A_3$-winding determinant lemma.}
 The rank-one winding $L=R+6\,\mathbf 1 e_1^\top$ and the matrix-determinant lemma with
 $e_1^\top R^{-1}\mathbf 1=\tfrac14$ give
-\[
-  \det L=\det R\Bigl(1+\tfrac{|R^+(A_3)|}{|\mu_4|}\Bigr)=8\Bigl(1+\tfrac64\Bigr)=8\cdot\tfrac52=20=2\AL .
-\]
+$\det L=\det R\bigl(1+\tfrac{|R^+(A_3)|}{|\mu_4|}\bigr)=8(1+\tfrac64)=20=2\AL$.
 So $h(D_5)=8\xrightarrow{\,A_3^+/\mu_4\,}20=|R(A_4)|$: the winding injects the carrier factor $5$ into
-the cokernel ($\operatorname{coker}R\simeq\Z_8$, $\operatorname{coker}L\simeq\Z_{20}$). \tI
-\end{winbox}
+the cokernel ($\operatorname{coker}R\simeq\Z_8$, $\operatorname{coker}L\simeq\Z_{20}$). \mE
 
-\begin{winbox}[(iii) The scalaron $7$ is the $E_8$ exponent variance per decuple]
-Centring the exponents at $h/2=15$,
-\[
-  \sum_m(m-15)^2=560,\quad \operatorname{Var}=\tfrac{560}{8}=70=7\cdot\AL=(\text{scalaron }7)\cdot(\text{decuple }10).
-\]
+\par\smallskip\noindent\textbf{(iii) The scalaron $7$ is the $E_8$ exponent variance per decuple.}
+Centring the exponents at $h/2=15$, $\sum_m(m-15)^2=560$ and
+$\operatorname{Var}=\tfrac{560}{8}=70=7\cdot\AL=(\text{scalaron }7)\cdot(\text{decuple }10)$.
 The halved positive offsets $\{1,2,4,7\}$ satisfy $\sum=14=2\cdot7$, $\sum{}^2=70$, $\prod=56=\dim\mathbf{56}_{E_7}$
 --- a micro-code carrying the scalaron, the decuple and the $E_7$ minuscule at once.
-Also $\sum_{\text{pairs}}m(30-m)=620=\tfrac{h\dim E_8}{12}=2\cdot10\cdot31$. \tI
-\end{winbox}
+Also $\sum_{\text{pairs}}m(30-m)=620=\tfrac{h\dim E_8}{12}=2\cdot10\cdot31$. \mE
 
-\begin{winbox}[(iv) Exponents $+$ degrees give the $120{+}128$ split]
+\par\smallskip\noindent\textbf{(iv) Exponents $+$ degrees give the $120{+}128$ split.}
 The invariant degrees $d_i=m_i+1=\{2,8,12,14,18,20,24,30\}$ obey
-\[
-  \sum_i m_i=120,\qquad \sum_i d_i=128,\qquad 248=120+128,\qquad \prod_i d_i=|W(E_8)| ,
-\]
+$\sum_i m_i=120$, $\sum_i d_i=128$, $248=120+128$, $\prod_i d_i=|W(E_8)|$,
 matching the $D_8$ branching $248=120+128$; the degrees are a TFPT dictionary
-($2,8,12,14,18,20,24,30$ $=$ sheet, $h(D_5)$, $|R(A_3)|$, $\dim G_2$, $p_4$, $\det L$, $\dim A_4$, $h(E_8)$). \tI
-\end{winbox}
+($2,8,12,14,18,20,24,30$ $=$ sheet, $h(D_5)$, $|R(A_3)|$, $\dim G_2$, $p_4$, $\det L$, $\dim A_4$, $h(E_8)$). \mE
 
-\begin{winbox}[(v) Root shell $=$ local $E_7\times A_1$]
+\par\smallskip\noindent\textbf{(v) Root shell $=$ local $E_7\times A_1$.}
 Around any $E_8$ root the inner-product multiplicities are
 $\{+2{:}1,\ +1{:}56,\ 0{:}126,\ -1{:}56,\ -2{:}1\}$, i.e.\ the local
 $248=(133,1){+}(1,3){+}(56,2)$. A distinguished root (seam/Higgs direction) leaves an orthogonal $E_7$
-and an active coupling shell $56{+}56$. \tI
-\end{winbox}
+and an active coupling shell $56{+}56$. \mE
 
 % =====================================================================
 \section{What this changes, and what stays open}
@@ -594,31 +572,29 @@ discipline rule --- every load-bearing number appears in $\ge1$ projection --- m
 falsifiable.}
 \end{figure}
 
-\begin{keybox}[Net]
+\par\smallskip\noindent\textbf{Net.}
 The atlas turns isolated fingerprints (e.g.\ $\|R\|_F^2=78=\dim E_6$, the scalaron $7$) into
 \emph{branching projections} of one container. The discipline rule --- ``every load-bearing number must
 appear in $\ge1$ projection'' --- makes the structure falsifiable: a number in no projection is suspect.
-This is a \emph{program}, not a proof of new physics: all readings are \tA. The two genuinely
-load-bearing, derived results remain the $\mu_4$ glue ($E_8=(D_5\oplus A_3)+\mu_4$, \tL\ \veri{v1\_e8\_glue.py}) and the
-spectral selector of the flavor matrix ($\det R=h(D_5)$, $\operatorname{PrinMin}_2=(2,3,5)$, \tI\ \veri{v4\_flavor\_matrix.py}).
-\end{keybox}
+This is a \emph{program}, not a proof of new physics: all readings are \mO. The two genuinely
+load-bearing, derived results remain the $\mu_4$ glue ($E_8=(D_5\oplus A_3)+\mu_4$, \mE\ \veri{v1\_e8\_glue.py}) and the
+spectral selector of the flavor matrix ($\det R=h(D_5)$, $\operatorname{PrinMin}_2=(2,3,5)$, \mE\ \veri{v4\_flavor\_matrix.py}).
 
 \noindent The remaining flavor-geometry step (historically ``H2'') is sharpened in the parabolic note to:
 \emph{the $D_4$-equivariant stable parabolic structure on $\mathcal O(-2)\oplus\mathcal O(-1)^2$ realises
 the unique branch with $\det R=8$ and $\operatorname{PrinMin}_2(R)=(2,3,5)$} --- no longer ``find the
-matrix'', but ``prove this one geometric realisation''. (Status: since v118--v122 the dictionary
+matrix'', but ``prove this one geometric realisation''. (Status: since \vref{v118}--\vref{v122} the dictionary
 \emph{values} are exact theorems --- hexagon $=$ sign-twisted family spectrum, addresses pinned, margins
 forced; what remains is exactly the realisation statement above, the selector establishment R4$'$.)
 
 \clearpage
 \part{The $E_8$ cascade bridge}
-\begin{keybox}[The connection in one sentence]
+\noindent\textbf{The connection in one sentence.}
 The old E$_8$ cascade (Paper V1.06: the nilpotent-orbit chain $D_n=60-2n$, $n=0\ldots26$) and the new
 compiler/atlas are \emph{the same even-integer $E_8$ spine}, read three ways: the cascade \emph{orders}
 the numbers $\{8,10,\dots,60\}$ as a scale ladder, the atlas \emph{reads} them as $E_8$ subalgebra
 branchings, and the compiler \emph{generates} them from the $(1,1,2)$ anchor. The cascade \emph{starts}
 at $D_{\mathrm{start}}=60=p_2p_3$ and \emph{ends} at $8=h(D_5)=\det R$ --- the flavor selector.
-\end{keybox}
 
 % =====================================================================
 \section{The old cascade, recalled}
@@ -666,7 +642,7 @@ $n$ & $D$ & \textbf{current meaning} & $n$ & $D$ & \textbf{current meaning} \\
 \end{tabularx}
 \end{center}
 
-\noindent Three structural facts jump out (all \tI\ arithmetic):
+\noindent Three structural facts jump out (all \mE\ arithmetic):
 \begin{itemize}[leftmargin=1.4em]
 \item \textbf{Endpoints are the compiler boundary.} The cascade \emph{starts} at $60=p_2p_3=D_{\mathrm{start}}$
       and \emph{ends} at $8=h(D_5)=\det R$ --- the flavor spectral selector is literally the deepest
@@ -693,7 +669,7 @@ The $27$ rungs encode $E_8$ in their endpoints, and their centre is the anchor:
   \#\text{steps}=26=\dim\mathbf{26}_{F_4}.
 \end{align*}
 So the cascade is an $E_8$ Coxeter ladder centred on $p_5(a)$ with a per-node $|\mu_4|$ glue shift; its
-length ($27$ nodes, $26$ steps) carries the $E_6$ cube and the $F_4$ fundamental. \tI
+length ($27$ nodes, $26$ steps) carries the $E_6$ cube and the $F_4$ fundamental. \mE
 \end{winbox}
 
 \begin{keybox}[The IR tail $n=24\ldots30$: the compiler atoms]
@@ -705,7 +681,7 @@ Continuing $D=60-2n$ past the last orbit ($D{=}8$, $n{=}26$) is no longer a nilp
   \underbrace{6}_{|R^+(A_3)|},\ \underbrace{4}_{|\mu_4|},\ \underbrace{2}_{\text{sheet}},\ \underbrace{0}_{\text{closure}} .
 \]
 This is exactly what the old ``$n=0\ldots30$ clock'' was scanning: $n{=}0\ldots26$ the $E_8$ orbit spine,
-$n{=}27\ldots30$ the compiler atoms. (Mark the tail as the \emph{compiler tail}, not orbits.) \tI
+$n{=}27\ldots30$ the compiler atoms. (Mark the tail as the \emph{compiler tail}, not orbits.) \mE
 \end{keybox}
 
 \begin{winbox}[Three further cascade lemmas (all machine-verified)]
@@ -729,7 +705,7 @@ $60,\dots,8$ have mean $34=p_5(a)$ and
   \sum_{n=0}^{26}(D_n-34)^2=6552=78\cdot84=\dim E_6\cdot(7\,\dim\mathfrak g_{\mathrm{SM}}) ,
 \]
 tying the cascade simultaneously to the $E_6{\times}A_2$ flavour shadow and the $A_8$ scalaron-gauge
-shadow. \tI\ (audit level)
+shadow. \mE\ (audit level)
 \end{itemize}
 \end{winbox}
 
@@ -757,14 +733,13 @@ shadow. \tI\ (audit level)
 \end{tikzpicture}
 \end{center}
 
-\begin{winbox}[The unification]
+\par\smallskip\noindent\textbf{The unification.}
 The same numbers $\{8,10,\dots,60\}$ are: (a) the \emph{scale ladder} $\varphi_n$ of the old cascade
 (orbit dimensions, ordered by $e^{-\gamma}$); (b) the \emph{branching blocks} of the secondary-atlas
 ($\dim F_4{=}52$, $\dim\mathbf{56}_{E_7}$, $5{\cdot}10$, \dots); (c) the \emph{anchor power sums and
 matrix invariants} of the compiler ($p_n=2+2^n$, $\det R{=}8$, $\sum L{=}40$). The cascade is the
 \emph{UV$\to$IR ordering}; the compiler is its \emph{IR endpoint}, where the small numbers
 $8,10,12,16$ are the flavor/family/carrier data.
-\end{winbox}
 
 % =====================================================================
 \section{Direct $\phiz$ relations: old vs current}
@@ -778,9 +753,9 @@ The old cascade's ``fundamental relations near $n=0$'' connect directly to the c
 \toprule
 \textbf{Quantity} & \textbf{old (V1.06)} & \textbf{current} & \textbf{relation} \\
 \midrule
-$\Omega_b$ & $\phiz(1-2\cthree)=0.04894$ & $(1-\tfrac1{4\pi})\phiz=0.04894$ & \textbf{identical} ($2\cthree=\tfrac1{4\pi}$) \tI \\
-$V_{us}/V_{ud}$ & $\sqrt{\phiz}=0.2306$ & $\lambda_C=\sqrt{\phiz(1-\phiz)}=0.2244$ & refined (the $(1-\phiz)$ factor) \tI \\
-$r$ (tensor) & $(\phiz)^2=0.00283$ & $12/N_\star^2=0.00397$ & two branches, same order \tP \\
+$\Omega_b$ & $\phiz(1-2\cthree)=0.04894$ & $(1-\tfrac1{4\pi})\phiz=0.04894$ & \textbf{identical} ($2\cthree=\tfrac1{4\pi}$) \mE \\
+$V_{us}/V_{ud}$ & $\sqrt{\phiz}=0.2306$ & $\lambda_C=\sqrt{\phiz(1-\phiz)}=0.2244$ & refined (the $(1-\phiz)$ factor) \mE \\
+$r$ (tensor) & $(\phiz)^2=0.00283$ & $12/N_\star^2=0.00397$ & two branches, same order \mC \\
 \bottomrule
 \end{tabularx}
 \end{center}
@@ -806,10 +781,10 @@ compiler re-derived each of these, or only some?} The full inventory, with the c
 \toprule
 \textbf{Old block (rung)} & \textbf{Old observable \& calibration} & \textbf{Current-model status} & \textbf{Mark} \\
 \midrule
-near $n{=}0$ & $\Omega_b=\phiz(1{-}2\cthree)$, $V_{us}/V_{ud}=\sqrt{\phiz}$, $r=(\phiz)^2$ & \textbf{covered} --- dimensionless, derived from $\{\cthree,\phiz\}$; see the $\phiz$-table above. $\Omega_b$ is \emph{identical}. & \tN \\
-EW, $n{=}12$ & $v_H=\zeta_{\rm EW}M_{\mathrm{Pl}}\varphi_{12}$, $M_W{=}\tfrac12 g_2 v_H$, $M_Z$ & \textbf{scale covered, absolute scheme-level} --- the EW scale enters the current note via the action-grammar exponent and the two-loop flow; $M_W,M_Z$ are dimensionful and remain RG/scheme outputs (one $\zeta_{\rm EW}$), \emph{not} new compiler powers. & \tP \\
-hadronic, $n{=}15,17$ & $\mathbf{m_p}{=}\zeta_p M_{\mathrm{Pl}}\varphi_{15}$, $m_b{=}\zeta_b M_{\mathrm{Pl}}\varphi_{15}$, $m_u{=}\zeta_u M_{\mathrm{Pl}}\varphi_{17}$ & \textbf{ratios closed, absolute scale an anchor.} The quark mass \emph{ratios} sit on the $\phiz$-word-length ladder and are closed (integer Pl\"ucker readouts, v49/v71); the \emph{absolute} values need the per-sector $\Lambda$/$U_f^\star$ normalisation, an anchor (\tA). The \textbf{proton mass} is QCD-confinement, $m_p\sim\Lambda_{\rm QCD}$ by dimensional transmutation --- a \emph{cross-sector} ratio, listed as a genuine frontier item ($m_p/m_e$, tfpt\_4). & \tA \\
-cosmo, $n{=}25$ & $T_{\gamma0}{=}\zeta_\gamma M_{\mathrm{Pl}}\varphi_{25}$, $T_\nu{=}(\tfrac4{11})^{1/3}T_{\gamma0}$, $\rho_\Lambda$ & \textbf{partly.} $\rho_\Lambda$/$\Lambda$ is \emph{typed} by the action grammar and the seam ($\Lambda$-typing, tfpt\_2); $T_\nu/T_{\gamma0}$ is standard QFT (not cascade). The \textbf{absolute CMB temperature} $T_{\gamma0}$ is a downstream readout of the reheating pipeline (Paper~6/7), conditional --- not re-derived as a compiler number. & \tP \\
+near $n{=}0$ & $\Omega_b=\phiz(1{-}2\cthree)$, $V_{us}/V_{ud}=\sqrt{\phiz}$, $r=(\phiz)^2$ & \textbf{covered} --- dimensionless, derived from $\{\cthree,\phiz\}$; see the $\phiz$-table above. $\Omega_b$ is \emph{identical}. & \mE \\
+EW, $n{=}12$ & $v_H=\zeta_{\rm EW}M_{\mathrm{Pl}}\varphi_{12}$, $M_W{=}\tfrac12 g_2 v_H$, $M_Z$ & \textbf{scale covered, absolute scheme-level} --- the EW scale enters the current note via the action-grammar exponent and the two-loop flow; $M_W,M_Z$ are dimensionful and remain RG/scheme outputs (one $\zeta_{\rm EW}$), \emph{not} new compiler powers. & \mC \\
+hadronic, $n{=}15,17$ & $\mathbf{m_p}{=}\zeta_p M_{\mathrm{Pl}}\varphi_{15}$, $m_b{=}\zeta_b M_{\mathrm{Pl}}\varphi_{15}$, $m_u{=}\zeta_u M_{\mathrm{Pl}}\varphi_{17}$ & \textbf{ratios closed, absolute scale an anchor.} The quark mass \emph{ratios} sit on the $\phiz$-word-length ladder and are closed (integer Pl\"ucker readouts, \vref{v49}/\vref{v71}); the \emph{absolute} values need the per-sector $\Lambda$/$U_f^\star$ normalisation, an anchor (\mO). The \textbf{proton mass} is QCD-confinement, $m_p\sim\Lambda_{\rm QCD}$ by dimensional transmutation --- a \emph{cross-sector} ratio, listed as a genuine frontier item ($m_p/m_e$, tfpt\_4). & \mO \\
+cosmo, $n{=}25$ & $T_{\gamma0}{=}\zeta_\gamma M_{\mathrm{Pl}}\varphi_{25}$, $T_\nu{=}(\tfrac4{11})^{1/3}T_{\gamma0}$, $\rho_\Lambda$ & \textbf{partly.} $\rho_\Lambda$/$\Lambda$ is \emph{typed} by the action grammar and the seam ($\Lambda$-typing, tfpt\_2); $T_\nu/T_{\gamma0}$ is standard QFT (not cascade). The \textbf{absolute CMB temperature} $T_{\gamma0}$ is a downstream readout of the reheating pipeline (Paper~6/7), conditional --- not re-derived as a compiler number. & \mC \\
 \bottomrule
 \end{tabularx}
 \end{center}
@@ -822,9 +797,9 @@ cosmo, $n{=}25$ & $T_{\gamma0}{=}\zeta_\gamma M_{\mathrm{Pl}}\varphi_{25}$, $T_\
 absolute scales $T_{\gamma0}$ --- exactly as in the current SM/cosmology notes; these were \emph{never}
 pure predictions, not even in V1.06 (each needed a block unit). \textbf{Genuinely open:} the
 \textbf{proton mass} $m_p$ (and $m_p/m_e$) is QCD-confinement across two sectors and is \emph{not} claimed
-as a compiler power --- it stays a frontier item (\tA, tfpt\_4); the quark mass \emph{ratios} are closed
-(integer Pl\"ucker, v49/v71) and only the \emph{absolute} quark scale $m_b,m_u$ needs the per-sector
-$\Lambda$/$U_f^\star$ normalisation, an anchor (\tA). So: yes, the \emph{spine} is fully audited and the
+as a compiler power --- it stays a frontier item (\mO, tfpt\_4); the quark mass \emph{ratios} are closed
+(integer Pl\"ucker, \vref{v49}/\vref{v71}) and only the \emph{absolute} quark scale $m_b,m_u$ needs the per-sector
+$\Lambda$/$U_f^\star$ normalisation, an anchor (\mO). So: yes, the \emph{spine} is fully audited and the
 \emph{dimensionless} sectors are derived; the \emph{dimensionful} hadronic/cosmo absolute scales are
 honestly still scheme-level, with the proton mass the one explicitly open cross-sector number --- nothing
 is silently claimed.
@@ -836,18 +811,18 @@ is silently claimed.
 \begin{keybox}[New structures found via the bridge]
 \begin{enumerate}[leftmargin=1.5em]
 \item The flavor selector $\det R=h(D_5)=8$ is the \emph{terminal orbit} of the $E_8$ cascade; the
-      compiler is the cascade's IR endpoint. \tI
+      compiler is the cascade's IR endpoint. \mE
 \item The atlas branching blocks ($52,56,60$) are the cascade's \emph{UV head} ($n=0,2,4$); the secondary
-      atlas and the orbit cascade are the same spine read top-down vs.\ as subalgebras. \tI
+      atlas and the orbit cascade are the same spine read top-down vs.\ as subalgebras. \mE
 \item The anchor power sums sit on doubled-exponent rungs: $p_5=34$ ($n{=}13$), $\sum R=22$ ($n{=}19$),
-      $\dim G_2=14$ ($n{=}23$). \tI
+      $\dim G_2=14$ ($n{=}23$). \mE
 \item The cascade Coxeter rung $D=30=h(E_8)$ ($n{=}15$) ties to the exponent-centering audit
-      $\sum|m{-}15|=56$. \tI
+      $\sum|m{-}15|=56$. \mE
 \end{enumerate}
 \end{keybox}
 
 \begin{gapbox}[Honest separation]
-The \emph{dimension/rung coincidences} are exact arithmetic \tI\ --- they show the old and new
+The \emph{dimension/rung coincidences} are exact arithmetic \mE\ --- they show the old and new
 constructions live on one $E_8$ spine. The old cascade's \emph{scale assignments} $\varphi_n$ (EW at
 $n{=}12$, hadronic at $n{=}15,17$, cosmo at $n{=}25$) are a \emph{different} mechanism from the current
 $\phiz$-power mass ladder: the cascade orders \emph{orders of magnitude} (which sector sits where) via
@@ -865,7 +840,7 @@ $\det R=8$). Old and new are the same structure at different resolution.
 
 \clearpage
 \part{The self-consistency loop}
-\begin{keybox}[The question, and the honest answer]
+\noindent\textbf{The question, and the honest answer.}
 The theory rests on two inputs, $\cthree=\tfrac1{8\pi}$ and $\gcar=5$. The old theory had a Möbius seam
 and the seed was the \emph{start} of the $E_8$ cascade. Run it \emph{backwards}: can the cascade/$E_8$
 \emph{return} $\cthree$ and $\gcar$, closing a self-consistent loop? \textbf{Answer:} the \emph{discrete}
@@ -873,7 +848,6 @@ content is a closed, overdetermined fixed point --- $\gcar=5$ and the ``$8$'' in
 the $E_8$ closure. The \emph{only} irreducible primitive left is the geometric $\pi$ (the Möbius/boundary
 Gauss--Bonnet). So ``two axioms'' collapses to ``\emph{one} continuous primitive $\pi$ $+$ \emph{one}
 discrete self-consistency fixed point.''
-\end{keybox}
 
 % =====================================================================
 \section{The loop for $\gcar$ --- an overdetermined fixed point}
@@ -890,7 +864,7 @@ closure object and $A_3$ is the four-puncture family geometry:
   $h(D_{\gcar})=2\gcar-2=8\Rightarrow\gcar=5$.
 \end{description}
 Both give $\gcar=5$, and the loop \emph{closes}: $\gcar=5\Rightarrow D_5\oplus A_3\xrightarrow{\mu_4}E_8
-\Rightarrow h(E_8)=30=2\cdot3\cdot5\Rightarrow$ largest prime $=5=\gcar$. \tI
+\Rightarrow h(E_8)=30=2\cdot3\cdot5\Rightarrow$ largest prime $=5=\gcar$. \mE
 \end{keybox}
 
 \begin{keybox}[Reverse glue selection --- $D_5$ \emph{and} $A_3$ from unimodular closure]
@@ -903,7 +877,7 @@ $\dim D_{\mu+1}+\dim A_{\mu-1}=\dim V_{D_{\mu+1}}\cdot|R^+(A_{\mu-1})|$, i.e.\ $
 \[
   \boxed{\ \text{common }\Z_4\text{ glue }+\text{ root norm }2\ \Longrightarrow\ D_5+A_3\ }
 \]
---- $\gcar=5$ is recovered from the closure, not just posited. \tI
+--- $\gcar=5$ is recovered from the closure, not just posited. \mE
 \end{keybox}
 
 \begin{keybox}[Familyful $E_8$-closure fixed-point theorem]
@@ -926,10 +900,10 @@ $D_4{+}A_4$ & $8$ & $20$ & --- & no integer glue \\
 \end{center}
 Equivalently, with $q(A_{\mu-1})=\tfrac{\mu-1}{\mu}$ and $g=9-\mu$ the norm closure
 $q(D_g)+q(A_{\mu-1})=2$ becomes $\mu^2-5\mu+4=0$, whose nontrivial root is $\mu=4$ ($A_3$, $g=5$). So
-$\gcar=5$ is forced \emph{three} ways: rank-fill, Coxeter-match, and integer-glue/norm closure. \tL\ \veri{v6\_bootstrap.py}
+$\gcar=5$ is forced \emph{three} ways: rank-fill, Coxeter-match, and integer-glue/norm closure. \mE\ \veri{v6\_bootstrap.py}
 \end{keybox}
 
-\begin{keybox}[Bootstrap classification: $D_5\oplus A_3$ is the \emph{unique} familyful $E_8$ glue \tL]
+\begin{keybox}[Bootstrap classification: $D_5\oplus A_3$ is the \emph{unique} familyful $E_8$ glue \mE]
 $E_8$ is the unique even unimodular rank-$8$ lattice. Its two-factor root-lattice gluings $L_1\oplus L_2$
 ($\operatorname{rank}=8$) that admit a \emph{cyclic} glue are exactly those whose discriminant groups are
 isomorphic and cyclic:
@@ -1005,31 +979,30 @@ and the $\Z_2$ identification \emph{is} the sheet ``$2$'' of $30=2\cdot3\cdot5$.
 supplies precisely the two things the discrete loop cannot: the continuous $\pi$ and the sheet parity
 $\Z_2$.
 
-\begin{winbox}[Net: two axioms $\to$ one primitive $+$ one fixed point]
-\[
-  \{\cthree,\gcar\}\ \longrightarrow\
+\par\smallskip\noindent\textbf{Net: two axioms $\to$ one primitive $+$ one fixed point.}
+\begin{keyeq}
+$\displaystyle \{\cthree,\gcar\}\ \longrightarrow\
   \underbrace{\pi\ (\text{Möbius/Gauss--Bonnet})}_{\text{one continuous primitive}}\ +\
-  \underbrace{E_8\text{ closure}}_{\text{one discrete fixed point}} .
-\]
-The discrete data $\{2,3,4,5,6,8,30\}$ are \emph{all} self-consistent outputs of the $E_8$ closure
+  \underbrace{E_8\text{ closure}}_{\text{one discrete fixed point}}$
+\end{keyeq}
+\noindent The discrete data $\{2,3,4,5,6,8,30\}$ are \emph{all} self-consistent outputs of the $E_8$ closure
 ($\gcar=5$, $h(D_5)=8$, $h(A_3)=4=|\mu_4|$, $h(E_8)=30=2{\cdot}3{\cdot}5$, $|R^+(A_3)|=6$). The only
-irreducible input on the \emph{dimensionless} axis is $\pi$. \tI\ (discrete loop) / \tA\ ($\pi$ is primitive)
-\smallskip\\
+irreducible input on the \emph{dimensionless} axis is $\pi$. \mE\ (discrete loop) / \mO\ ($\pi$ is primitive)
+\par\smallskip
 \noindent On the \emph{dimensionful} axis there is exactly \emph{one} more irreducible: a single mass scale.
 But even that is no longer a \emph{free} constant --- fixing the physical $\Lambda$ branch pins $\bar M_{\rm Pl}$,
 so $G_N$ is a $\Lambda$-metrology \emph{output} (\texttt{origin\_theory}, $\Lambda$-typing); the one
 genuinely irreducible scale is the induced-gravity (Sakharov) anchor. So the complete honest reduction is
 ``$\pi$ $+$ the $E_8$-closure fixed point $+$ \emph{one} dimensionful scale''.
-\end{winbox}
 
 \noindent\emph{One sharpening of the ``$8$''.} Both $\pi$-coefficients are $2\pi$ times a compiler integer:
 $\varphi_{\mathrm{tree}}=1/(6\pi)$ with $6=2\Nfam$ (three Gauss--Bonnet boundary circles) and
 $\cthree=1/(8\pi)$ with $8=2|\mu_4|$ (seam winding), so $\varphi_{\mathrm{tree}}=(|\mu_4|/\Nfam)\cthree=\tfrac43\cthree$.
 The \emph{same} integer $8$ is the Hawking/Einstein coefficient ($G_{\mu\nu}=8\pi T_{\mu\nu}$, Appendix~H):
 the seam normaliser, the $E_8$ rank and the universal horizon factor are one number, overdetermined
-($8=2|\mu_4|=\operatorname{rank}E_8=h(D_5)=\varphi(30)=\det R$). \tI\ \veri{v54\_seam\_horizon\_keystones.py}
+($8=2|\mu_4|=\operatorname{rank}E_8=h(D_5)=\varphi(30)=\det R$). \mE\ \veri{v54\_seam\_horizon\_keystones.py}
 
-\begin{keybox}[A cyclic element \emph{inside} the hull: the order-$30$ Coxeter rotation \tL\ (\veri{v55\_coxeter\_cycle.py})]
+\begin{keybox}[A cyclic element \emph{inside} the hull: the order-$30$ Coxeter rotation \mE\ (\veri{v55\_coxeter\_cycle.py})]
 The compiler hull carries a \emph{literal} cyclic symmetry. Built from the $E_8$ Cartan matrix, the Coxeter
 element $c=s_1\cdots s_8$ has \textbf{order exactly $h(E_8)=30=|\Z_2|\cdot\Nfam\cdot\gcar=2\!\cdot\!3\!\cdot\!5$}
 (verified by direct matrix powers), and its eigenvalues are the primitive $30$th roots
@@ -1043,7 +1016,7 @@ the hull, whose period $30=|\Z_2|\cdot\Nfam\cdot\gcar$ is the product of the thr
 structure is \emph{present in the mathematics}, not interposed.
 \end{keybox}
 
-\begin{keybox}[The compiler atoms \emph{are} the $E_8$ Casimir degrees \tL\,(\veri{v66\_e8\_casimir\_degrees.py})]
+\begin{keybox}[The compiler atoms \emph{are} the $E_8$ Casimir degrees \mE\,(\veri{v66\_e8\_casimir\_degrees.py})]
 The load-bearing integers are not an ad-hoc list: they are the fundamental \emph{invariant degrees} of $E_8$
 (exponents $+1$),
 \[
@@ -1080,18 +1053,18 @@ $\phiz$ & derived readout & $\tfrac43\cthree+48\cthree^4$ \\
 \end{tabularx}
 \end{center}
 \textbf{Correct one-liner:} \emph{TFPT has no freely tunable fundamental numbers left; the only remaining
-continuous origin is $\pi$ from the Möbius boundary geometry.} (Not ``zero axioms''.) \tI/\tA
+continuous origin is $\pi$ from the Möbius boundary geometry.} (Not ``zero axioms''.) \mE/\mO
 \end{keybox}
 
 % =====================================================================
 \section{Honest status: bootstrap, not creation from nothing}
 % =====================================================================
 \begin{itemize}[leftmargin=1.4em]
-\item \textbf{What is genuinely shown \tI:} $\gcar=5$ is an \emph{overdetermined} fixed point of the
+\item \textbf{What is genuinely shown \mE:} $\gcar=5$ is an \emph{overdetermined} fixed point of the
   $E_8$ closure (two independent Lie-theory conditions); the integer ``$8$'' in $\cthree$ is the carrier
   Coxeter $=$ $E_8$ rank; the discrete data closes a loop. The earlier landscape scan confirms
   $\gcar=5$ is the \emph{unique} value at which all hierarchies/family/gauge close --- so the fixed point
-  is unique, not one of many. \textbf{This uniqueness is now machine-formalised \tF\ in Lean 4} (Theorem A,
+  is unique, not one of many. \textbf{This uniqueness is now machine-formalised \mE\ in Lean 4} (Theorem A,
   \texttt{lean4-carrier-rigidity}): the division-free Pascal condition $2^{g}=g^2+g+2$ has the \emph{unique}
   solution $g=5$ (\texttt{carrier\_rank\_pascal\_unique}; growth lemma for $g\ge6$; $\Nfam=(2^{4}{-}1)/5=3$,
   $g{+}\Nfam=8$), audited to use only the standard kernel axioms. The 2026-06-11 hardening round adds two
@@ -1100,7 +1073,7 @@ continuous origin is $\pi$ from the Möbius boundary geometry.} (Not ``zero axio
   theorems) and \texttt{PascalLadder.lean} (the odd-midpoint ladder identity
   $\sum_{k\le K}\binom{2K+1}k=2^{2K}$ for \emph{all} $K$ via Mathlib, plus the kernel-decidable bounded
   uniqueness of the $K{=}2$ carrier case) --- the solves-side of the Pascal Ladder Theorem
-  (\veri{v108\_pascal\_ladder.py}) is thereby \tF.
+  (\veri{v108\_pascal\_ladder.py}) is thereby \mE.
 \item \textbf{What this is \emph{not}:} a derivation from zero inputs. A self-consistency loop is
   consistent \emph{at} a value; uniqueness is what makes it predictive (and that is supplied by the
   landscape scan). The continuous $\pi$ is not produced by the loop --- it is the Möbius/boundary
@@ -1125,26 +1098,26 @@ This is the complete current ledger of what is \emph{not} fully closed, graded b
 \# & \textbf{Open item} & \textbf{Grade} & \textbf{Hardening path / what closes it} \\
 \midrule
 \multicolumn{4}{@{}l}{\textit{1. SM core --- finite computations, no new physics}}\\
-1a & absolute quark $c$-scale (ratios closed) & \tA & quark \emph{ratios} are integer Pl\"ucker readouts on the derived selector stratum (v49/v69/v71); only the \emph{absolute} $U_f^\star$ normalisation remains --- an anchor \\
-1b & $\theta_{12}$ solar angle & \tN & \textbf{texture closed (below):} explicit $\mu\tau$-symmetric texture verified; only $\varepsilon{=}\tfrac34\phiz{\approx}\cthree$ ($0.23\%$) stays conditional \\
+1a & absolute quark $c$-scale (ratios closed) & \mO & quark \emph{ratios} are integer Pl\"ucker readouts on the derived selector stratum (\vref{v49}/\vref{v69}/\vref{v71}); only the \emph{absolute} $U_f^\star$ normalisation remains --- an anchor \\
+1b & $\theta_{12}$ solar angle & \mE & \textbf{texture closed (below):} explicit $\mu\tau$-symmetric texture verified; only $\varepsilon{=}\tfrac34\phiz{\approx}\cthree$ ($0.23\%$) stays conditional \\
 \midrule
 \multicolumn{4}{@{}l}{\textit{2. Scheme layer --- standard RG, no new input}}\\
-2a & $m_W,m_Z,m_H,\sin^2\theta_W,\alpha_s$ & \tP & RG threshold matching $R_{\mathrm{SM}}$; $m_H$ on the closed UV quartic $1/16\pi^2$ \\
-2b & hadron pole spectrum (singlet) & \tP & singlet algebra $\mathcal A_{\mathrm{sing}}$ explicit; dynamics already closed (gap $6\log\tfrac32$) \\
+2a & $m_W,m_Z,m_H,\sin^2\theta_W,\alpha_s$ & \mC & RG threshold matching $R_{\mathrm{SM}}$; $m_H$ on the closed UV quartic $1/16\pi^2$ \\
+2b & hadron pole spectrum (singlet) & \mC & singlet algebra $\mathcal A_{\mathrm{sing}}$ explicit; dynamics already closed (gap $6\log\tfrac32$) \\
 \midrule
 \multicolumn{4}{@{}l}{\textit{3. Conditional --- named analytic hypotheses}}\\
-3a & gravity (Hodge/$R^2$ branch) & \tP & APS-Fredholm $+$ truncation written out; full spectral UV completion remains \\
-3b & strong CP / QFT closure & \tP & reflection positivity (RP) is the one remaining input \\
-3c & $\Lambda$ branch label (rec vs car) & \tP & one discrete choice; typed via $(8\pi)^2$, value not fixed \\
+3a & gravity (Hodge/$R^2$ branch) & \mC & APS-Fredholm $+$ truncation written out; full spectral UV completion remains \\
+3b & strong CP / QFT closure & \mC & reflection positivity (RP) is the one remaining input \\
+3c & $\Lambda$ branch label (rec vs car) & \mC & one discrete choice; typed via $(8\pi)^2$, value not fixed \\
 \midrule
 \multicolumn{4}{@{}l}{\textit{4. Axioms --- not eliminable, only hardenable}}\\
-4 & P1 ($\cthree$), P2 ($\gcar{=}5$) & \tA & more Lean; P2 algebra already machine-verified; remain inputs \\
+4 & P1 ($\cthree$), P2 ($\gcar{=}5$) & \mO & more Lean; P2 algebra already machine-verified; remain inputs \\
 \midrule
 \multicolumn{4}{@{}l}{\textit{5. Frontier --- honestly not on a clean ladder (see frontier doc)}}\\
-5 & $\eta_B$, $m_p/m_e$, Koide, dark matter, full QG & \tA & genuine handles only; not forced (scan results below) \\
+5 & $\eta_B$, $m_p/m_e$, Koide, dark matter, full QG & \mO & genuine handles only; not forced (scan results below) \\
 \midrule
 \multicolumn{4}{@{}l}{\textit{6. Cosmology late-time pipeline --- not simplified by the compiler}}\\
-6 & $C_\ell$ transfer, $a_{\ell m}$ seam, baryogenesis & \tP & Paper-7 machinery; $a_{\ell m}$ ``good CMB world, not yet this CMB world'' (SMICA test) \\
+6 & $C_\ell$ transfer, $a_{\ell m}$ seam, baryogenesis & \mC & Paper-7 machinery; $a_{\ell m}$ ``good CMB world, not yet this CMB world'' (SMICA test) \\
 \bottomrule
 \end{tabularx}
 \end{center}
@@ -1155,7 +1128,7 @@ This is the complete current ledger of what is \emph{not} fully closed, graded b
 The inflation sector (the only cosmology piece the compiler \emph{does} sharpen) is now a parameter-free
 prediction ($M{=}\cthree^{7/2}\Mbar$, document~2).
 
-\begin{winbox}[Item 1b closed: the explicit solar-angle Majorana texture \tN]
+\begin{winbox}[Item 1b closed: the explicit solar-angle Majorana texture \mE]
 The last open SM angle is now realised by an \emph{explicit} texture, not a fitted number. Take the
 $\mu\tau$-symmetric Majorana matrix (tri-bimaximal at $\varepsilon{=}0$)
 \begin{equation}
@@ -1167,7 +1140,7 @@ $\mu\tau$-symmetry forces $\theta_{23}=45^\circ$ and $\theta_{13}=0$ \emph{exact
 TFPT solar deviation $\varepsilon=\tfrac34\phiz$ gives
 \begin{equation}
   \boxed{\ \sin^2\theta_{12}=\tfrac13-\tfrac{\phiz}{2}=0.306747,\quad
-  \theta_{23}=45^\circ,\quad \theta_{13}=0\ }\quad\tN
+  \theta_{23}=45^\circ,\quad \theta_{13}=0\ }\quad\mE
 \end{equation}
 \textbf{Honest residual} (\veri{v9\_neutrino\_texture.py}). The texture and the angle are exact. The seam identification is
 $\varepsilon=\tfrac34\phiz=\tfrac34\bigl(\tfrac1{6\pi}+\tfrac3{256\pi^4}\bigr)=\cthree+\tfrac{9}{1024\pi^4}$:
@@ -1195,9 +1168,9 @@ are reported as \emph{misses}.
 \toprule
 \textbf{Slice / target} & \textbf{Result} & \textbf{Verdict} \\
 \midrule
-$A_4{\times}A_4=SU(5)^2$ & $\sin^2\theta_W|_{\mathrm{GUT}}=3/8$ sits in the $SU(5)$ hypercharge embedding; the $12$ coset states are the proton-decay $X,Y$ bosons & \tI\ (known) \\
-$F_4{\times}G_2$ / Koide & Koide $Q=2/3=|\Z_2|/\Nfam$ (sheet over families); $J_3(\mathbb O)$ has $\dim 27{=}26{+}1$, $3{\times}3$ octonionic ``generations'' on the diagonal & \tP\ structural \\
-$D_8=SO(16)$ & $128=(16,4)\oplus(\overline{16},\overline4)$ --- \emph{same} spinor as $D_5{\times}A_3$; $\nu_R$ (seesaw) lives in the $16$; \textbf{no new dark-matter state} (only the 4th $\mu_4$ direction) & \tI \\
+$A_4{\times}A_4=SU(5)^2$ & $\sin^2\theta_W|_{\mathrm{GUT}}=3/8$ sits in the $SU(5)$ hypercharge embedding; the $12$ coset states are the proton-decay $X,Y$ bosons & \mE\ (known) \\
+$F_4{\times}G_2$ / Koide & Koide $Q=2/3=|\Z_2|/\Nfam$ (sheet over families); $J_3(\mathbb O)$ has $\dim 27{=}26{+}1$, $3{\times}3$ octonionic ``generations'' on the diagonal & \mC\ structural \\
+$D_8=SO(16)$ & $128=(16,4)\oplus(\overline{16},\overline4)$ --- \emph{same} spinor as $D_5{\times}A_3$; $\nu_R$ (seesaw) lives in the $16$; \textbf{no new dark-matter state} (only the 4th $\mu_4$ direction) & \mE \\
 $A_8=SU(9)$, $9{=}3{\times}3$ & $\Lambda^3(3,3)=(10,1){\oplus}(8,8){\oplus}(1,10)$: the $(8,8){=}64$ dominates --- naive family$\times$colour \textbf{fails} & miss \\
 $A_8\supset SU(5){\times}SU(4)$ & $\Lambda^3(5{+}4)$ contains the SM $\mathbf{10}$: a genuine chiral-family-unification \emph{lead}, but not TFPT-forced & lead \\
 $E_6{\times}A_2$ / Jarlskog & cross term $2(\mathbf1^\top Ra)\Nfam=162=248{-}78{-}8$ exact; $J\sim\lamY^6$ only to right \emph{order}, no clean hit & weak \\
@@ -1253,7 +1226,7 @@ $\overline{84}$ & $(\overline{10},1){+}(\overline{10},\bar4){+}(\bar5,6){+}(1,\b
 
 \noindent (Dimension checks: $24{+}15{+}20{+}20{+}1=80$; $10{+}40{+}30{+}4=84$; total $248$.)
 
-\begin{winbox}[The genuine content: $A_8$ and $D_5{\times}A_3$ agree on the family \tI]
+\begin{winbox}[The genuine content: $A_8$ and $D_5{\times}A_3$ agree on the family \mE]
 The $SU(4)$ here is \emph{the same} $A_3$ family group as in the construction slice $D_5\times A_3$ --- the
 four punctures $\mu_4$ of $\PP^1\setminus\mu_4$. The $SU(5)$ is the Georgi--Glashow GUT sitting inside the
 carrier $SO(10)=D_5$ ($SU(5)\subset SO(10)$). So the two maximal slices are \emph{consistent}: both read
@@ -1267,14 +1240,14 @@ $84\oplus\overline{84}$ is \emph{vectorlike} ($10\oplus\overline{10}$ etc.): $E_
 slice cannot by itself produce three \emph{chiral} generations. The chirality is the boundary index
 $\operatorname{Ind}(D^+_{\rm fam})=3$ --- the \emph{same} input TFPT already uses. So $SU(9)$ is a
 consistent re-reading (matter in $SU(5)$, family in $A_3$), not an independent derivation of $\Nfam=3$.
-Each $SU(5)$ pair $(\mathbf{10}+\bar{\mathbf5})$ is anomaly-free, so the embedding is clean. \tP
+Each $SU(5)$ pair $(\mathbf{10}+\bar{\mathbf5})$ is anomaly-free, so the embedding is clean. \mC
 \end{gapbox}
 
 % =====================================================================
 \section*{Appendix: computational verification}
 \addcontentsline{toc}{section}{Appendix: computational verification}
 % =====================================================================
-The audit/bridge identities of this document (marked \tI, \tL) are re-derived from $\{\cthree,\gcar\}$ and
+The audit/bridge identities of this document (marked \mE, \mE) are re-derived from $\{\cthree,\gcar\}$ and
 machine-checked by the suite in the repository folder \texttt{verification/}; the inline tags
 \texttt{[verification/$\dots$]} point to the exact script. Relevant here:
 \begin{itemize}[leftmargin=1.4em,itemsep=1pt]
@@ -1283,7 +1256,7 @@ machine-checked by the suite in the repository folder \texttt{verification/}; th
 \item \texttt{v5\_e8\_cascade.py} --- the cascade $D_n{=}60{-}2n$: endpoints, exponent rungs, IR tail, variance.
 \item \texttt{v6\_bootstrap.py} --- the self-consistency loop: $\mu^2{-}5\mu{+}4{=}0$, $\gcar{=}5$ three ways, $8{=}\operatorname{rank}E_8$.
 \end{itemize}
-The $E_8$-slice/atlas readings are explicitly \tA\ (audit-level), not part of the pass/fail suite. Run
+The $E_8$-slice/atlas readings are explicitly \mO\ (audit-level), not part of the pass/fail suite. Run
 \texttt{python verification/run\_all.py}; full map in \texttt{verification/README.md}.
 
 \end{document}

@@ -23,19 +23,23 @@
 \setlist{itemsep=1.5pt,topsep=2pt}
 \emergencystretch=2.5em
 % standalone fallbacks for the status markers (defined by tfpt_style when imported)
-\providecommand{\tI}{\textbf{[I]}}\providecommand{\tL}{\textbf{[L]}}
-\providecommand{\tF}{\textbf{[F]}}\providecommand{\tN}{\textbf{[N]}}
-\providecommand{\tP}{\textbf{[P]}}\providecommand{\tA}{\textbf{[A]}}
-\providecommand{\tB}{\textbf{[B]}}\providecommand{\tX}{\textbf{[X]}}
-\providecommand{\tIalg}{\textbf{[I$_{\mathrm{alg}}$]}}\providecommand{\tInum}{\textbf{[I$_{\mathrm{num}}$]}}
-\providecommand{\tR}{\textbf{[R]}}
+% 4-class display system: [E] exact/proven, [C] conditional, [O] open/axiom, [X] kill test.
+\providecommand{\mE}{\textbf{[E]}}\providecommand{\mC}{\textbf{[C]}}
+\providecommand{\mO}{\textbf{[O]}}\providecommand{\mX}{\textbf{[X]}}
+% legacy fine-grained names kept as aliases so older entries still compile standalone
+\providecommand{\tI}{\mE}\providecommand{\tL}{\mE}\providecommand{\tF}{\mE}\providecommand{\tN}{\mE}
+\providecommand{\tIalg}{\mE}\providecommand{\tInum}{\mE}
+\providecommand{\tP}{\mC}\providecommand{\tB}{\mC}\providecommand{\tR}{\mC}
+\providecommand{\tA}{\mO}\providecommand{\tX}{\mX}
+\providecommand{\vref}[1]{\texttt{#1}}
+\providecommand{\TFPTversion}{5.1}\providecommand{\TFPTrev}{dev}
 % standalone fallbacks for doc-specific math macros used in entries
 \providecommand{\cthree}{c_3}\providecommand{\phiz}{\varphi_0^{\mathrm{ret}}}
 \providecommand{\gcar}{g_{\mathrm{car}}}\providecommand{\Nfam}{N_{\mathrm{fam}}}
 \providecommand{\Oadm}{\Omega_{\mathrm{adm}}}\providecommand{\ainv}{\alpha^{-1}}
 \providecommand{\Mbar}{\bar M_{\mathrm{Pl}}}\providecommand{\Z}{\mathbb{Z}}\providecommand{\PP}{\mathbb{P}}
 \title{\textbf{TFPT --- Changelog}\\[1mm]\large All changes and new results, by date}
-\author{}
+\author{Stefan Hamann \and Alessandro Rizzo}
 \date{\today}
 \begin{document}
 \maketitle
@@ -54,6 +58,135 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 \noindent The dated record of every change (canonical source: \texttt{changelog.tex}, also
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
+
+\subsection*{2026-06-12 (tfpt\_3 / tfpt\_4 style alignment + box reduction)}
+\begin{itemize}
+\item \textbf{Shared header/footer on tfpt\_3.} \texttt{tfpt\_3\_e8\_audit\_bootstrap} dropped its custom
+  \texttt{\textbackslash footmarkers} footer (the post-collapse four-\mE\ artefact) and inherits the
+  shared \texttt{tfpt\_style} header/footer with the version stamp; the box-orphan \texttt{needspace}
+  guards are kept.
+\item \textbf{Fewer boxes, embedded in text.} Narrative/commentary callouts converted to run-in bold
+  paragraphs (boxed one-line formulas to \texttt{keyeq}): tfpt\_3 from $39$ to $27$ boxes (e.g.\
+  ``Purpose and discipline'', the five ``(i)--(v)'' audit-lemma boxes, ``Net'', ``The connection in one
+  sentence'', ``The unification'', ``The question and the honest answer'', ``Net: two axioms''); tfpt\_4
+  from $18$ to $7$ (the seven-box Koide stack and the two dark-matter conjecture boxes become prose). The
+  per-item ``Honest status of \ldots'' keyboxes are kept --- tfpt\_4 is the status authority for the
+  frontier.
+\item \textbf{Colour-marked module references.} \texttt{\textbackslash vref} applied to the inline
+  \texttt{vN} references in tfpt\_3 and tfpt\_4 (TikZ node names excluded).
+\item \textbf{Marker hygiene.} A stale literal \texttt{[P]} in tfpt\_4 (Koide flow-time) replaced by the
+  4-class \mC; status tables checked against the ledger.
+\end{itemize}
+
+\subsection*{2026-06-12 (tfpt\_1 / tfpt\_2 style alignment + box reduction)}
+\begin{itemize}
+\item \textbf{Shared header/footer everywhere.} \texttt{tfpt\_1\_architecture\_e8} dropped its custom
+  \texttt{\textbackslash footmarkers} footer (which after the marker collapse showed four redundant
+  \mE) and now inherits the shared \texttt{tfpt\_style} header/footer with the version stamp, identical
+  to every other document.
+\item \textbf{Fewer boxes, embedded in text.} The narrative/commentary callouts of both documents are
+  converted to run-in bold paragraphs (and the boxed one-line formulas to the colour-marked
+  \texttt{keyeq}): tfpt\_1 from $21$ to $14$ loud boxes ($+3$ \texttt{keyeq}); tfpt\_2 from $52$ to $43$
+  (e.g.\ ``In one sentence'', ``The one-paragraph version'', the four ``Sharpening'' notes, ``What the
+  simplification means net'', ``The disciplined main statement'', ``What improves\ldots'', ``Scope and
+  honesty''). Only genuine results / theorems / gates keep a box.
+\item \textbf{Colour-marked module references.} \texttt{\textbackslash vref} now also colours the inline
+  \texttt{vN} references throughout tfpt\_1 and tfpt\_2 (TikZ node names accidentally matching the
+  pattern were excluded).
+\item \textbf{Status currency.} tfpt\_2's inflation-pivot table gains the \vref{v86} scalaron-reheating
+  point ($N_\star{=}51.4\Rightarrow n_s{=}0.9611$, $r{=}0.0045$, $A_s$-disfavoured) and states the
+  band-of-record explicitly, matching \texttt{COSMO.NSTAR.01} and the introduction; the box is re-typed
+  \mC. The other status tables were checked against the ledger and are current under the 4-class markers.
+\end{itemize}
+
+\subsection*{2026-06-12 (marker simplification to 4 classes + status reconciliation)}
+\begin{itemize}
+\item \textbf{Four-class display markers.} The reader-facing marker system is collapsed from eleven
+  symbols to four: \mE\ exact / machine-proven (identity, Lie/lattice, formalised, numerical FP),
+  \mC\ conditional (physical / bridge / readout under named hypotheses), \mO\ open / axiom, and \mX\
+  kill test. \texttt{tex-artefacts/tfpt\_style.tex} defines \texttt{\textbackslash mE/\textbackslash
+  mC/\textbackslash mO/\textbackslash mX} and keeps the legacy \texttt{\textbackslash tI \ldots
+  \textbackslash tX} names as aliases that render their class. All marker call-sites across the nine
+  documents and the shared fragments were rewritten, collapsing same-class combinations (e.g.\
+  \texttt{[I]/[L]}\,$\to$\,\mE, \texttt{[N]/[P]}\,$\to$\,\mE/\mC). The fine-grained per-claim type
+  (Axiom / Formal / Lattice / Numerical / Identity / Physical) is unchanged in
+  \texttt{status\_ledger.csv} --- the single source of truth --- so no fidelity is lost. The marker key,
+  badge bar, README marker table and the workflow rule were updated to match.
+\item \textbf{Status tables reconciled against the ledger.} The introduction's inflation/$N_\star$ rows
+  are made consistent with \vref{v86}/\texttt{COSMO.NSTAR.01}: $r$ and $n_s$ are shown as the frozen
+  \emph{bands} over $N_\star\in[50,60]$ with the scalaron-reheating conditional point $N_\star{=}51.4$
+  ($n_s{=}0.9611$, $r{=}0.0045$), replacing the stale point values $N_\star{=}55$ (predictions table)
+  and $N_\star\simeq57$ (residual card); the closure-ledger inflation row is re-typed \mE\,$\to$\,\mC
+  (conditional on $M_{\rm Star}{=}M_{\rm scal}$ $+$ reheating), matching the other two tables and the
+  ledger \texttt{[P]} typing.
+\end{itemize}
+
+\subsection*{2026-06-12 (version system, predictions/K5, readability pass B3)}
+\begin{itemize}
+\item \textbf{Authors, auto-date and auto-version on every paper.} New single source
+  \texttt{tex-artefacts/version.tex} defines \texttt{\textbackslash TFPTauthors} (Stefan Hamann,
+  Alessandro Rizzo), a curated \texttt{\textbackslash TFPTversion}, and a title/footer date stamp
+  (\texttt{\textbackslash today} $+$ version $+$ revision). \texttt{build.sh} writes the auto build
+  revision (git commit count) into the gitignored \texttt{tex-artefacts/version-auto.tex}, so every
+  document's title page and page footer carry author, date and \texttt{v\TFPTversion\,(rev~N)}
+  automatically. All nine active documents and \texttt{changelog.tex} now set
+  \texttt{\textbackslash author\{\textbackslash TFPTauthors\}}.
+\item \textbf{Builder keeps build artefacts.} \texttt{build.sh} no longer deletes the
+  \texttt{.aux/.log/.out/.toc} after a successful build (the \texttt{.log} is needed for the
+  overfull-box audit and the \texttt{.aux/.toc} for correct cross-references on the next incremental
+  build).
+\item \textbf{Predictions table outsourced.} The running/upcoming-experiment predictions table is moved
+  from \texttt{introduction.tex} into the shared fragment \texttt{tex-artefacts/predictions.tex}
+  (\texttt{\textbackslash input} in the predictions section).
+\item \textbf{K5 figure fixed.} The \texttt{\textbackslash TFPTactionkfive} mnemonic ($K_5$ on the five
+  carrier slots) is redrawn so the complete graph and the Pascal-row reading list sit side by side
+  instead of overlapping.
+\item \textbf{Colour-marked script references.} New \texttt{\textbackslash vref} macro colours inline
+  module references (e.g.\ \vref{v108}--\vref{v113}, \vref{v49}/\vref{v71}) in the introduction,
+  predictions and verification fragments, matching the blue of the \texttt{\textbackslash veri}
+  citation, so machine-checked references are visible at a glance.
+\item \textbf{Lighter, non-breaking, embedded boxes.} The \texttt{tcolorbox} families are restyled to a
+  light tint $+$ thin frame $+$ light title band with dark coloured title (no heavy
+  white-on-saturated bars); a neutral \texttt{navbox} carries the document map and a colour-marked
+  \texttt{keyeq} sets off load-bearing display formulas. The introduction's callouts use the
+  non-breaking variants (\texttt{keyboxnb}/\texttt{winboxnb}/\texttt{gapboxnb}) so no box splits across
+  a page, and the shared status card is non-breaking.
+\item \textbf{Readability / sectioning.} The dense run-in prose of the introduction is broken into
+  \texttt{\textbackslash subsection*} headings (In plain words; one anchor and $E_8$ as a compiler
+  hull; the companion documents; the compact status formula; the hard reduction; the Pascal action
+  grammar; the closure ledger) with added whitespace.
+\item \textbf{Orphan results linked to scripts.} The Glue theorem, the ``Reduction in one line'' and the
+  fermion-spectrum callouts now carry inline \texttt{\textbackslash veri\{\}} citations
+  (\vref{v1}, \vref{v6}/\vref{v14}/\vref{v23}, \vref{v18}/\vref{v20}/\vref{v46}).
+\end{itemize}
+
+\subsection*{2026-06-12 (tex-artefacts refactor + introduction visual pass B2)}
+\begin{itemize}
+\item \textbf{Shared imports moved to \texttt{tex-artefacts/}.} The shared, imported-only TeX
+  fragments (\texttt{tfpt\_style.tex}, \texttt{tfpt\_figures.tex}, \texttt{tfpt\_docset.tex},
+  \texttt{tfpt\_status.tex}) now live in a dedicated \texttt{tex-artefacts/} folder; all nine active
+  documents \texttt{\textbackslash input} them via \texttt{tex-artefacts/<name>} (and
+  \texttt{tfpt\_style} loads \texttt{tex-artefacts/tfpt\_figures}). \texttt{changelog.tex} stays at the
+  repo root because it is also a standalone \texttt{build.sh notes} deliverable. The
+  \texttt{make\_manifest.py} \texttt{TEX} list and the workflow rule were updated to the new paths.
+\item \textbf{Master script index outsourced (\texttt{tex-artefacts/verification.tex}).} The long
+  \texttt{vN}$\to$check table is moved out of \texttt{introduction.tex} into the shared fragment
+  \texttt{tex-artefacts/verification.tex} (\texttt{\textbackslash input} in the verification appendix);
+  the paper-consistency audit now also reads that file, so every registered script stays cited exactly
+  once.
+\item \textbf{Introduction box reduction (B2).} The introduction's eleven \texttt{keybox}es are reduced
+  to the single headline ``In one sentence'' card; the explanatory keyboxes (\emph{In plain words},
+  \emph{Sharper still}, \emph{compact status formula}, \emph{hard reduction}, \emph{Cosmology Pascal},
+  \emph{$E_6{\times}A_2$}, \emph{closure ledger}, \emph{Plausibility balance}) are converted to inline
+  run-in paragraphs, the \emph{Glue theorem} is re-typed as a \texttt{winbox} (a result, not a claim),
+  and the explanatory \emph{plausible}/\emph{follows next} \texttt{winbox}es become prose. The loud
+  boxes now carry only genuinely load-bearing callouts (one \texttt{keybox}, five \texttt{winbox}es,
+  one \texttt{gapbox}) plus the two shared orientation cards.
+\item \textbf{Document-count consistency.} The introduction's document map gained the missing
+  \texttt{tfpt\_5\_redteam} row; ``seven/eight companion documents'' and the ledger ``six documents''
+  wording are corrected to the true count (nine active documents); \texttt{README.md} (``10 ok'', 140
+  scripts) and the workflow rule (``9 docs'') are reconciled.
+\end{itemize}
 
 \subsection*{2026-06-12 (visual pass: box reduction B1)}
 \begin{itemize}
@@ -75,9 +208,9 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
   document, each highlighting that document's layer; the topical figures are placed in their natural
   homes (cockpit + $K_5$ in the introduction, cockpit + glue in tfpt\_1, motif in the horizon note).
 \item \textbf{Marker typology (A2).} \texttt{tfpt\_style} adds the sharper sub-types
-  \tIalg\ (exact algebra), \tInum\ (exact number), \tR\ (readout / standard physics in TFPT units) to the
-  existing \tB\ (bridge) and \tX\ (kill test); the marker key and the new \texttt{\textbackslash TFPTbadges}
-  bar show the full typology. (Inline body markers retain \tI\ where they are genuine exact identities.)
+  \mE\ (exact algebra), \mE\ (exact number), \mC\ (readout / standard physics in TFPT units) to the
+  existing \mC\ (bridge) and \mX\ (kill test); the marker key and the new \texttt{\textbackslash TFPTbadges}
+  bar show the full typology. (Inline body markers retain \mE\ where they are genuine exact identities.)
 \end{itemize}
 
 \subsection*{2026-06-12 (review pass on list.txt)}
@@ -85,7 +218,7 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
 \item \textbf{Claim hygiene (review section A).} The introduction's one-sentence claim is softened from
   ``derives all constants'' to ``constructs a discrete compiler; physical readouts run through named,
   status-typed bridges''; the ledger zombie in \texttt{FLAV.QRATIO.01} is removed (the statement no longer
-  says ``stays [P]'' --- ratios are \tI\ closed on the derived stratum, only the absolute scale stays \tA,
+  says ``stays [P]'' --- ratios are \mE\ closed on the derived stratum, only the absolute scale stays \mO,
   with an explicit forbidden-wording note); the seam misalignment is written explicitly as
   $\varepsilon=\tfrac34\phiz=\cthree+36\cthree^4$ (leading $\cthree$, fourth-order puncture correction
   exact); $\theta_{12}$ has a single prediction of record $0.306747$ with the seam/non-linear values typed

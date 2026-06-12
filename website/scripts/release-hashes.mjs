@@ -6,10 +6,13 @@
  *   node scripts/release-hashes.mjs              # writes to stdout
  *   node scripts/release-hashes.mjs --write      # rewrites lib/release.ts in place
  *
- * The script preserves the existing `version`, `releaseDate`, and `changelog`
- * fields per asset and only touches `bytes` and `sha256`. New PDFs added
- * under `public/papers/` or `public/predictions/` are appended with the
- * defaults from COMMON.
+ * The script preserves the existing `changelog` field per asset and only
+ * touches `bytes` and `sha256`. New PDFs without an entry are reported as a
+ * warning (add the entry by hand; the audit also flags them).
+ *
+ * Optional flags (used by `bash build.sh website`):
+ *   --version "TFPT 5.1"   rewrite the COMMON.version field
+ *   --date    "2026-06-12" rewrite the COMMON.releaseDate field
  */
 import { createHash } from "node:crypto";
 import { readFile, readdir, stat, writeFile } from "node:fs/promises";
@@ -73,6 +76,21 @@ async function main() {
 
   const src = await readFile(releaseFile, "utf8");
   let next = src;
+
+  const argValue = (flag) => {
+    const i = process.argv.indexOf(flag);
+    return i >= 0 && process.argv[i + 1] ? process.argv[i + 1] : undefined;
+  };
+  const version = argValue("--version");
+  const date = argValue("--date");
+  if (version || date) {
+    next = next.replace(
+      /const COMMON = \{\s*version: "([^"]*)",\s*releaseDate: "([^"]*)",\s*\};/,
+      (_, v0, d0) =>
+        `const COMMON = {\n  version: "${version ?? v0}",\n  releaseDate: "${date ?? d0}",\n};`,
+    );
+  }
+
   for (const { rel, size, sha } of rows) {
     const blockRegex = new RegExp(
       `("${rel}":\\s*\\{[\\s\\S]*?bytes:\\s*)\\d+(,\\s*[\\s\\S]*?sha256:\\s*\\n?\\s*")[0-9a-f]+(",[\\s\\S]*?\\})`,
