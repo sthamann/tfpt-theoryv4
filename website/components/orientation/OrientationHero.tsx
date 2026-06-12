@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowLeft, Download, FileText, Sigma } from "lucide-react";
 import { Math } from "@/components/Math";
 import { trackPdfInteraction } from "@/lib/track";
+import { SITE_VERSION } from "@/lib/version";
 
 const ORIENTATION_PDF = "/papers/introduction.pdf";
 const ORIENTATION_TITLE = "Topological Fixed-Point Theory (TFPT) — Introduction & Reading Guide";
@@ -58,7 +59,7 @@ export function OrientationHero() {
           </p>
 
           <p className="mt-6 max-w-3xl text-base leading-relaxed text-slate-300 sm:text-lg">
-            The entry document for the TFPT 5.0 set. It does not introduce new
+            The entry document for the TFPT {SITE_VERSION} set. It does not introduce new
             physics — it is the reading guide. Its purpose is to state{" "}
             <span className="font-semibold text-slate-100">what TFPT claims</span>,{" "}
             <span className="font-semibold text-slate-100">what it does not claim</span>,

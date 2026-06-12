@@ -1,8 +1,9 @@
 import { ImageResponse } from "next/og";
 import { papers, STATUS_META } from "@/lib/papers";
+import { SITE_VERSION } from "@/lib/version";
 
 export const runtime = "edge";
-export const alt = "TFPT 5.0 document preview";
+export const alt = `TFPT ${SITE_VERSION} document preview`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -75,7 +76,7 @@ export default async function PaperOgImage(
                 color: "#f1f5f9",
               }}
             >
-              TFPT 5.0 document set
+              TFPT {SITE_VERSION} document set
             </div>
             <div
               style={{

@@ -5,6 +5,7 @@ import { Github } from "lucide-react";
 import { Logo } from "./Logo";
 import { REPO_URL } from "@/lib/utils";
 import { trackPdfInteraction, type DownloadKind } from "@/lib/track";
+import { SITE_VERSION } from "@/lib/version";
 
 interface FooterLink {
   href: string;
@@ -192,7 +193,7 @@ export function Footer() {
             <span>All papers and predictions distributed for academic use.</span>
           </p>
           <p className="text-slate-600">
-            TFPT 5.0 — two axioms · one E₈ compiler · the Standard Model
+            TFPT {SITE_VERSION} — two axioms · one E₈ compiler · the Standard Model
           </p>
         </div>
         <div className="mx-auto mt-3 max-w-7xl text-[11px] leading-relaxed text-slate-600">

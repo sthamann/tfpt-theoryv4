@@ -30,16 +30,26 @@ build_one() {  # $1 = working dir, $2 = tex basename (no extension)
   local dir="$1" base="$2"
   ( cd "$dir" && pdflatex -interaction=nonstopmode -halt-on-error "$base.tex" >/dev/null 2>&1 \
                 && pdflatex -interaction=nonstopmode -halt-on-error "$base.tex" >/dev/null 2>&1 )
+  if ! { [ -f "$dir/$base.pdf" ] && [ "$dir/$base.tex" -ot "$dir/$base.pdf" ]; }; then
+    # corrupt/stale aux files (e.g. from an interrupted run) poison the build --
+    # clean the auxiliaries once and retry before declaring failure
+    rm -f "$dir/$base.aux" "$dir/$base.toc" "$dir/$base.out"
+    ( cd "$dir" && pdflatex -interaction=nonstopmode -halt-on-error "$base.tex" >/dev/null 2>&1 \
+                  && pdflatex -interaction=nonstopmode -halt-on-error "$base.tex" >/dev/null 2>&1 )
+  fi
   if [ -f "$dir/$base.pdf" ] && [ "$dir/$base.tex" -ot "$dir/$base.pdf" ]; then
     local pages=""
     command -v pdfinfo >/dev/null 2>&1 && pages=$(pdfinfo "$dir/$base.pdf" 2>/dev/null | awk '/^Pages/{print $2" pages"}')
     printf "  [OK]   %-52s %s\n" "$base" "${pages:+($pages)}"; PASS=$((PASS+1))
   else
     printf "  [FAIL] %-52s\n" "$base"; FAIL=$((FAIL+1)); FAILED+=("$base")
+    # On failure, drop the .aux so a half-written/corrupt cross-reference file
+    # cannot poison the next build (the .log is kept for diagnosis).
+    rm -f "$dir/$base.aux" "$dir/$base.toc" "$dir/$base.out"
   fi
-  # NOTE: intermediate LaTeX artefacts (.aux/.log/.out/.toc) are deliberately
-  # kept -- the .log is needed for the overfull-box audit and the .aux/.toc for
-  # correct cross-references on the next incremental build.
+  # NOTE: on SUCCESS the intermediate LaTeX artefacts (.aux/.log/.out/.toc) are
+  # deliberately kept -- the .log is needed for the overfull-box audit and the
+  # .aux/.toc for correct cross-references on the next incremental build.
 }
 
 NOTES=(

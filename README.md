@@ -124,6 +124,9 @@ Sakharov-type induced gravity) — not a diffuse gap.
 | `tfpt_constants.py` | Shared constants + `check()` harness. |
 | `predictions_frozen.json` | **Blind-prediction registry** (frozen 2026-06-09): every dimensionless prediction of record at 25 digits, locked to its formula by `v84_frozen_registry.py` on every run; exactly one `θ12` prediction of record (seed `0.306747`), `r`/`n_s` only as `N_star` bands. |
 | `status_ledger.csv` | **Single source of truth.** Every claim with id, status, location, dependency, script — *versioned* (`active`, `canonical_status`, `supersedes`). |
+| `script_registry.csv` + `script_clusters.csv` | **Single source for the script index** — generates both the master TeX index table and the website `ScriptIndex` via `make_script_index.py`. |
+| `make_docs_map.py` | Generates `docs_map.csv` (paper → section → scripts cited → last changed) and `website_map.csv` (website file → scripts/docs mentioned) — the machine-readable sync surfaces. |
+| `audit_sync.py` | **The sync audit** (papers ↔ suite ↔ ledger ↔ changelog ↔ website, both directions); must end `AUDIT OK`. |
 | `make_figures.py` | Regenerates the figures (status heatmap, attractor, Coxeter circle, …). |
 | `make_manifest.py` | Writes `manifest.sha256` + `lean_manifest.sha256` (content digests). |
 | `wolfram/tfpt_readouts.wl` | Independent second path on Wolfram Engine (`101/101` checks); `wolfram/tfpt_readouts_extension.wl` mirrors v84–v93 (authored, awaiting first engine run). |
@@ -135,8 +138,12 @@ Sakharov-type induced gravity) — not a diffuse gap.
   anomaly-freedom, integer rigidity), machine-formalised `[F]`.
 - `experiments/` — research-level explorations (e.g. `eht-achromatic-residual`, discovery scripts).
 - `figures/` — generated PDFs used by the documents.
+- `website/` — the public Next.js mirror (papers, interactive verification DAG, in-browser
+  script reproducer); kept byte-identical to the repo by `bash build.sh website` + the audit.
 - `manifest.sha256`, `lean_manifest.sha256` — reproducibility digests.
-- `build.sh` — compiles all documents.
+- `build.sh` — the build + sync pipeline: `notes` (compile), `gen` (regenerate the
+  single-source surfaces), `website` (mirror sync + version stamp), `audit` (sync audit),
+  `release` (all of the above + `npm run build`).
 
 ---
 
@@ -161,17 +168,21 @@ cd experiments/lean4-carrier-rigidity && lake exe cache get && bash scripts/audi
 # 5. Red Team / Stress Test layer (adversarial; prints a status per target A-E)
 cd verification/redteam && python run_redteam.py
 
-# 6. Regenerate reproducibility manifests (ALWAYS the last step before export)
+# 6. The sync audit: papers <-> suite <-> ledger <-> changelog <-> website  ->  "AUDIT OK"
+bash build.sh audit
+
+# 7. Regenerate reproducibility manifests (ALWAYS the last step before export)
 python verification/make_manifest.py
 
-# 7. Verify the shipped manifests against the tree (must pass on any export;
+# 8. Verify the shipped manifests against the tree (must pass on any export;
 #    guards against the stale-row class of error found in the v83 review)
 python verification/make_manifest.py --check
 ```
 
-Every script cited in `run_all.py` is also cited inline in the documents via `\veri{vN_*.py}`,
-and the status heatmap is generated directly from `status_ledger.csv`, so the papers, the suite,
-and the ledger stay in lock-step.
+Every script cited in `run_all.py` is also cited inline in the documents via `\veri{vN_*.py}`
+(enforced in both directions by `verification/audit_sync.py`), and the status heatmap is
+generated directly from `status_ledger.csv`, so the papers, the suite, the ledger and the
+website stay in lock-step. `bash build.sh release` runs the whole pipeline in one command.
 
 ---
 

@@ -1,8 +1,9 @@
 import { ImageResponse } from "next/og";
+import { SITE_VERSION } from "@/lib/version";
 
 export const runtime = "edge";
 export const alt =
-  "TFPT in One Map — the compiler closure. The reading guide of the TFPT 5.0 document set.";
+  `TFPT in One Map — the compiler closure. The reading guide of the TFPT ${SITE_VERSION} document set.`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

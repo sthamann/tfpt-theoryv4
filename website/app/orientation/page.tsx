@@ -7,6 +7,7 @@ import { StatusMatrix } from "@/components/orientation/StatusMatrix";
 import { SeriesMap } from "@/components/orientation/SeriesMap";
 import { PublicationOrder } from "@/components/orientation/PublicationOrder";
 import { OrientationDownload } from "@/components/orientation/OrientationDownload";
+import { SITE_VERSION } from "@/lib/version";
 
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://tfpt-theory.vercel.app";
@@ -14,7 +15,7 @@ const SITE_URL =
 export const metadata: Metadata = {
   title: "TFPT in One Map — The Compiler Closure (Introduction)",
   description:
-    "The TFPT 5.0 reading guide. What Topological Fixed-Point Theory claims and does not claim, the compiler closure from two axioms {c₃ = 1/(8π), g_car = 5} to E₈, the two engines, the bootstrap loop, the status matrix, and the document map. By Stefan Hamann & Alessandro Rizzo.",
+    `The TFPT ${SITE_VERSION} reading guide. What Topological Fixed-Point Theory claims and does not claim, the compiler closure from two axioms {c₃ = 1/(8π), g_car = 5} to E₈, the two engines, the bootstrap loop, the status matrix, and the document map. By Stefan Hamann & Alessandro Rizzo.`,
   keywords: [
     "TFPT introduction",
     "TFPT in one map",
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     type: "article",
     title: "TFPT in One Map — The Compiler Closure (Introduction)",
     description:
-      "The entry document for the TFPT 5.0 set: the compiler closure from two axioms to E₈, the two engines, the bootstrap loop, the status matrix, and the document map.",
+      `The entry document for the TFPT ${SITE_VERSION} set: the compiler closure from two axioms to E₈, the two engines, the bootstrap loop, the status matrix, and the document map.`,
     url: `${SITE_URL}/orientation`,
     siteName: "TFPT — Topological Fixed-Point Theory",
     locale: "en_US",
@@ -65,14 +66,14 @@ const articleJsonLd = {
   isPartOf: {
     "@type": "PublicationIssue",
     issueNumber: "0",
-    name: "TFPT 5.0 compiler-closure document set",
+    name: `TFPT ${SITE_VERSION} compiler-closure document set`,
   },
   author: [
     { "@type": "Person", name: "Stefan Hamann" },
     { "@type": "Person", name: "Alessandro Rizzo" },
   ],
   abstract:
-    "The entry document for the TFPT 5.0 set. It states what TFPT claims and does not claim, the compiler closure from two axioms to E₈, the two engines, the bootstrap loop, and where each load-bearing argument is isolated in the document set.",
+    `The entry document for the TFPT ${SITE_VERSION} set. It states what TFPT claims and does not claim, the compiler closure from two axioms to E₈, the two engines, the bootstrap loop, and where each load-bearing argument is isolated in the document set.`,
   about: [
     "Compiler closure",
     "Topological Fixed-Point Theory",

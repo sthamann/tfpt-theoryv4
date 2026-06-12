@@ -10,7 +10,7 @@ export type DependencyClass =
   | "Frontier interface";
 
 /**
- * Status markers follow the TFPT 5.0 ledger grades:
+ * Status markers follow the TFPT ledger grades:
  *   [I] exact identity · [L] Lie/lattice theorem · [N] numerical fixed point
  *   [P] physical/conditional · [A] axiom/open.
  */

@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { SITE_VERSION } from "@/lib/version";
 
 export const runtime = "edge";
 export const alt =
@@ -142,7 +143,7 @@ export default function OpengraphImage() {
                 opacity: 0.8,
               }}
             />
-            TFPT 5.0 · the compiler closure · 2026
+            TFPT {SITE_VERSION} · the compiler closure · 2026
           </div>
           <div
             style={{

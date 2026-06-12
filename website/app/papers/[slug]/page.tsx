@@ -6,6 +6,7 @@ import { papers, STATUS_META } from "@/lib/papers";
 import { getReleaseAsset, formatBytes } from "@/lib/release";
 import { Math } from "@/components/Math";
 import { PaperSection } from "@/components/PaperSection";
+import { SITE_VERSION } from "@/lib/version";
 
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://tfpt-theory.vercel.app";
@@ -31,7 +32,7 @@ export async function generateMetadata(
   const oneSentence = [
     paper.contribution[0]
       ? paper.contribution[0]
-      : "A document of the TFPT 5.0 compiler-closure set.",
+      : `A document of the TFPT ${SITE_VERSION} compiler-closure set.`,
     paper.notClaimed[0] ? `Not claimed: ${paper.notClaimed[0]}` : null,
   ]
     .filter(Boolean)
@@ -67,7 +68,7 @@ export async function generateMetadata(
       siteName: "TFPT — Topological Fixed-Point Theory",
       locale: "en_US",
       authors: ["Stefan Hamann", "Alessandro Rizzo"],
-      tags: [paper.title, meta.label, "TFPT 5.0"],
+      tags: [paper.title, meta.label, `TFPT ${SITE_VERSION}`],
     },
     twitter: {
       card: "summary_large_image",
@@ -110,7 +111,7 @@ export default async function PaperPage({ params }: PaperPageProps) {
     isPartOf: {
       "@type": "PublicationIssue",
       issueNumber: String(paper.number),
-      name: "TFPT 5.0 compiler-closure document set",
+      name: `TFPT ${SITE_VERSION} compiler-closure document set`,
     },
     author: [
       { "@type": "Person", name: "Stefan Hamann" },
@@ -179,7 +180,7 @@ export default async function PaperPage({ params }: PaperPageProps) {
           </nav>
           <div className="flex flex-wrap items-center gap-2">
             <span className="rounded-full border border-slate-600/40 bg-slate-900/50 px-2.5 py-0.5 font-mono text-[10px] font-semibold uppercase tracking-widest text-slate-300">
-              Document {paper.number} of the TFPT 5.0 set
+              Document {paper.number} of the TFPT {SITE_VERSION} set
             </span>
             <span
               className={`rounded-full px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-widest ring-1 ${meta.bg} ${meta.color} ${meta.ring}`}

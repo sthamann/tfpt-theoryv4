@@ -8,6 +8,7 @@ import { cn, REPO_URL } from "@/lib/utils";
 import { ThreeDecoderMap } from "./ThreeDecoderMap";
 import { TheoryUnpacking } from "./TheoryUnpacking";
 import { GlossTerm } from "./GlossTerm";
+import { SITE_VERSION } from "@/lib/version";
 
 const READING_GUIDE = "/papers/introduction.pdf";
 
@@ -36,7 +37,7 @@ export function Hero() {
         >
           <span className="inline-flex items-center gap-2 rounded-full border border-blue-400/20 bg-blue-500/10 px-4 py-1.5 text-xs font-medium tracking-wider text-blue-200">
             <Sigma size={14} className="opacity-80" />
-            <span className="uppercase">TFPT 5.0 · the compiler closure · 2026</span>
+            <span className="uppercase">TFPT {SITE_VERSION} · the compiler closure · 2026</span>
           </span>
 
           <h1

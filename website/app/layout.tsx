@@ -8,6 +8,7 @@ import { ReproducerProvider } from "@/components/Reproducer";
 import { papers } from "@/lib/papers";
 import { predictions } from "@/lib/predictions";
 import { REPO_URL } from "@/lib/utils";
+import { SITE_VERSION } from "@/lib/version";
 
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://tfpt-theory.vercel.app";
@@ -56,7 +57,7 @@ export const metadata: Metadata = {
     "Mathematical physics",
     "α = 137.0359992",
     "Quantum field theory",
-    "TFPT 5.0",
+    `TFPT ${SITE_VERSION}`,
   ],
   authors: [
     { name: "Stefan Hamann" },
@@ -175,10 +176,10 @@ const researchProjectJsonLd = {
 const collectionJsonLd = {
   "@context": "https://schema.org",
   "@type": "Collection",
-  name: "TFPT 5.0 Compiler-Closure Document Set",
+  name: `TFPT ${SITE_VERSION} Compiler-Closure Document Set`,
   url: `${SITE_URL}#papers`,
   description:
-    "The TFPT 5.0 document set: the introduction reading guide, the architecture and E₈ compiler, the Standard Model, the E₈ audit and bootstrap, the honest frontier, Appendix H (horizon), the Origin Theory synthesis, and the research contracts.",
+    `The TFPT ${SITE_VERSION} document set: the introduction reading guide, the architecture and E₈ compiler, the Standard Model, the E₈ audit and bootstrap, the honest frontier, Appendix H (horizon), the Origin Theory synthesis, and the research contracts.`,
   hasPart: papers.map((p) => ({
     "@type": "ScholarlyArticle",
     name: p.title,
@@ -193,7 +194,7 @@ const collectionJsonLd = {
     ],
     isPartOf: {
       "@type": "PublicationIssue",
-      name: "TFPT 5.0 compiler-closure document set",
+      name: `TFPT ${SITE_VERSION} compiler-closure document set`,
       issueNumber: String(p.number),
     },
     encoding: {

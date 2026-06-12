@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "motion/react";
 import { Download, FileText, ArrowRight } from "lucide-react";
 import { trackPdfInteraction, type DownloadKind } from "@/lib/track";
+import { SITE_VERSION } from "@/lib/version";
 
 const ORIENTATION_PDF = "/papers/introduction.pdf";
 const ORIENTATION_TITLE = "Topological Fixed-Point Theory (TFPT) — Introduction & Reading Guide";
@@ -69,7 +70,7 @@ export function OrientationDownload() {
                 Read the full reading guide.
               </h2>
               <p className="mt-3 max-w-xl text-base leading-relaxed text-slate-300">
-                The introduction is the entry document of the TFPT 5.0 set. It
+                The introduction is the entry document of the TFPT {SITE_VERSION} set. It
                 states the compiler closure, the two-engine picture, the
                 dependency DAG, the proof ledger, and the live experimental
                 tests — with every claim graded and resolving to the ledger.
@@ -117,7 +118,7 @@ export function OrientationDownload() {
               <ul className="mt-8 grid gap-2 text-xs text-slate-400 sm:grid-cols-3">
                 <li>· Stefan Hamann</li>
                 <li>· Alessandro Rizzo</li>
-                <li>· TFPT 5.0 document set</li>
+                <li>· TFPT {SITE_VERSION} document set</li>
               </ul>
             </div>
 

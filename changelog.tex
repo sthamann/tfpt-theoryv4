@@ -59,6 +59,65 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-12 (tfpt\_5 / horizon / research-contracts pass + build hardening)}
+\begin{itemize}
+\item \textbf{Forked document-set box removed (horizon).} \texttt{tfpt\_horizon\_readouts} carried a
+  hand-written, \emph{stale} copy of the document-set card (``five short documents'', missing
+  \texttt{tfpt\_5}) \emph{and} the canonical \texttt{\textbackslash input\{tex-artefacts/tfpt\_docset\}};
+  the fork is deleted so the single-source card (all five papers $+$ three companions) appears once.
+\item \textbf{Fewer boxes, embedded in text.} Narrative/result callouts converted to run-in bold prose
+  (with the \texttt{\textbackslash veri\{\}} citation moved out of the bold title into the body):
+  \texttt{tfpt\_horizon\_readouts} from $22$ to $7$ boxes (the ten-box ``clock'' wall becomes prose);
+  \texttt{tfpt\_research\_contracts} from $19$ to $10$ (the nine progress/result winboxes become prose,
+  the named-theorem keyboxes kept); \texttt{tfpt\_5\_redteam} from $10$ to $9$ (the outcome summary; the
+  per-target verdict boxes are kept as the structured red-team output).
+\item \textbf{Colour-marked module references + marker hygiene.} \texttt{\textbackslash vref} applied to
+  the inline \texttt{vN} references in all three documents; the horizon ``Scope/typing'' marker line and a
+  stale literal \texttt{[A]} in the research contracts updated to the 4-class markers.
+\item \textbf{Build hardening.} \texttt{build.sh} now removes a document's \texttt{.aux}/\texttt{.toc}/%
+  \texttt{.out} \emph{on failure}, so a half-written cross-reference file from a crashed compile cannot
+  poison the next build; artefacts are still kept on success.
+\end{itemize}
+
+\subsection*{2026-06-12 (sync infrastructure: single-source script index, content maps, one audit)}
+\begin{itemize}
+\item \textbf{Single-source script index.} The master script$\to$check table
+  (\texttt{tex-artefacts/verification.tex}) and the website
+  \texttt{ScriptIndex.tsx} are now \emph{generated} from one registry
+  (\texttt{script\_registry.csv} $+$ \texttt{script\_clusters.csv} in
+  \texttt{verification/}) by \texttt{make\_script\_index.py}; both targets carry a
+  generated-file header and are never edited by hand.
+\item \textbf{Content maps without splitting the papers.}
+  \texttt{verification/make\_docs\_map.py} generates \texttt{docs\_map.csv} (every
+  paper section with line range, the \texttt{vN} scripts cited there, a content hash
+  and a last-changed date) and \texttt{website\_map.csv} (which website file mentions
+  which scripts/documents) --- the machine-readable enumeration of all sync surfaces.
+\item \textbf{One sync audit.} \texttt{verification/audit\_sync.py} bundles and
+  extends the previous loose shell checks, now in \emph{both} directions: suite
+  $\leftrightarrow$ \texttt{run\_all.py} $\leftrightarrow$ registry
+  $\leftrightarrow$ ledger; every script cited in a paper \emph{body} (the master
+  index alone no longer counts); no stale \texttt{\textbackslash veri}/\texttt{\textbackslash vref}
+  targets; every new module mentioned in this changelog; website mirror byte-identical
+  (PDFs, scripts, \texttt{release.ts} hashes, version stamps); wolfram counts; overfull
+  boxes. Frozen exceptions live in \texttt{audit\_baseline.json} (remove-only).
+\item \textbf{Build pipeline.} \texttt{build.sh} gains \texttt{gen} /
+  \texttt{website} / \texttt{audit} / \texttt{release} steps; \texttt{notes} now
+  regenerates the single-source surfaces first; \texttt{website} copies all active
+  PDFs (now incl.\ \texttt{tfpt\_5\_redteam.pdf} and \texttt{changelog.pdf}, with new
+  \texttt{release.ts} entries) and the \texttt{vN} scripts, and stamps version, date
+  and git revision into \texttt{website/lib/version.ts} (shown in the site header) and
+  \texttt{release.ts}.
+\item \textbf{Citation gaps closed.} The audit immediately found three scripts cited
+  only in the master index: \vref{v17} and \vref{v85} are now cited in their
+  \texttt{tfpt\_2} sections (hexagonal resolvent; master cover), and two short
+  \texttt{\textbackslash veri\{v19\}} citations were expanded to the full script name;
+  \vref{v91} (spine tetrahedron) is recorded in \texttt{audit\_baseline.json} as a known
+  open integration gap.
+\item \textbf{Rules.} \texttt{.cursor/rules} updated (\texttt{tfpt-workflow},
+  \texttt{website-sync}) and a new \texttt{sync-maps} rule added describing the agentic
+  procedure: enumerate affected surfaces from the maps first, audit as the exit gate.
+\end{itemize}
+
 \subsection*{2026-06-12 (tfpt\_3 / tfpt\_4 style alignment + box reduction)}
 \begin{itemize}
 \item \textbf{Shared header/footer on tfpt\_3.} \texttt{tfpt\_3\_e8\_audit\_bootstrap} dropped its custom

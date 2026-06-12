@@ -4,6 +4,7 @@ import { ArrowLeft } from "lucide-react";
 import { SectionHeader } from "@/components/SectionHeader";
 import { KillCriteria } from "@/components/falsification/KillCriteria";
 import { NoKnobsAudit } from "@/components/falsification/NoKnobsAudit";
+import { SITE_VERSION } from "@/lib/version";
 
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://tfpt-theory.vercel.app";
@@ -11,7 +12,7 @@ const SITE_URL =
 export const metadata: Metadata = {
   title: "How to kill TFPT — Falsification Surface and No-Knobs Audit",
   description:
-    "An explicit falsification surface for the TFPT 5.0 compiler closure, paired with a no-knobs audit. The freeze file commits the decisive kill criteria — JUNO θ₁₂, the tensor ratio r, neutrino ordering, the strong-CP null, and w = −1 — in advance. The construction is killed by any single satisfied criterion.",
+    `An explicit falsification surface for the TFPT ${SITE_VERSION} compiler closure, paired with a no-knobs audit. The freeze file commits the decisive kill criteria — JUNO θ₁₂, the tensor ratio r, neutrino ordering, the strong-CP null, and w = −1 — in advance. The construction is killed by any single satisfied criterion.`,
   keywords: [
     "TFPT falsification",
     "How to kill TFPT",
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
     type: "article",
     title: "How to kill TFPT — Falsification Surface and No-Knobs Audit",
     description:
-      "Explicit falsification surface for the TFPT 5.0 compiler closure, with a no-knobs audit. Every output has a committed kill criterion.",
+      `Explicit falsification surface for the TFPT ${SITE_VERSION} compiler closure, with a no-knobs audit. Every output has a committed kill criterion.`,
     url: `${SITE_URL}/falsification`,
     siteName: "TFPT — Topological Fixed-Point Theory",
     locale: "en_US",
@@ -49,19 +50,19 @@ const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "ScholarlyArticle",
   headline: "How to kill TFPT — Falsification Surface and No-Knobs Audit",
-  alternateName: "TFPT 5.0 Falsification Map",
+  alternateName: `TFPT ${SITE_VERSION} Falsification Map`,
   url: `${SITE_URL}/falsification`,
   inLanguage: "en",
   isPartOf: {
     "@type": "PublicationIssue",
-    name: "TFPT 5.0 compiler-closure document set",
+    name: `TFPT ${SITE_VERSION} compiler-closure document set`,
   },
   author: [
     { "@type": "Person", name: "Stefan Hamann" },
     { "@type": "Person", name: "Alessandro Rizzo" },
   ],
   abstract:
-    "An explicit falsification surface for the TFPT 5.0 compiler closure. For every output the page lists allowed inputs, forbidden inputs, free-knob count, and a committed kill criterion that, if satisfied, falsifies the construction.",
+    `An explicit falsification surface for the TFPT ${SITE_VERSION} compiler closure. For every output the page lists allowed inputs, forbidden inputs, free-knob count, and a committed kill criterion that, if satisfied, falsifies the construction.`,
   about: [
     "Falsification",
     "No-knobs audit",
@@ -108,7 +109,7 @@ export default function FalsificationPage() {
           </h1>
           <p className="mt-3 max-w-2xl text-base leading-relaxed text-slate-300">
             A theory that cannot fail explains nothing. This page lists the
-            committed kill criteria of the TFPT 5.0 compiler closure — frozen in
+            committed kill criteria of the TFPT {SITE_VERSION} compiler closure — frozen in
             advance in the freeze file — together with the experiment or
             structural argument that would{" "}
             <span className="font-semibold text-slate-100">

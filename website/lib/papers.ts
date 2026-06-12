@@ -1,3 +1,5 @@
+import { SITE_VERSION } from "@/lib/version";
+
 export type PaperStatus =
   | "orientation"
   | "core"
@@ -140,7 +142,7 @@ export const papers: Paper[] = [
       },
       {
         title: "The compact status formula",
-        body: "TFPT 5.0 closes the discrete compiler, the algebraic SM readout, the EM fixed point, the admissible gapped IR sector and the R + R² spectral-action shadow. It does not yet certify a strict physical TOE. The residual is one flavor wall-selection, one quantum-gravity measure, and a set of deliberately typed interfaces.",
+        body: `TFPT ${SITE_VERSION} closes the discrete compiler, the algebraic SM readout, the EM fixed point, the admissible gapped IR sector and the R + R² spectral-action shadow. It does not yet certify a strict physical TOE. The residual is one flavor wall-selection, one quantum-gravity measure, and a set of deliberately typed interfaces.`,
         formulas: [
           "\\underbrace{\\text{compiler}}_{\\text{closed}}\\ \\Big|\\ \\underbrace{\\text{admissible IR physics}}_{\\text{conditional (RP, gap)}}\\ \\Big|\\ \\underbrace{\\text{strict physical TOE}}_{\\text{open}}",
           "\\text{Rest} = (U_{\\mathrm{wall}}) \\oplus (G_{\\mathrm{metric}}) \\oplus (F_{\\mathrm{frontier}})",

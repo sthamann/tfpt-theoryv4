@@ -12,6 +12,7 @@ import {
   formatBytes,
   formatHashShort,
 } from "@/lib/release";
+import { SITE_VERSION } from "@/lib/version";
 
 export function DownloadsSection() {
   return (
@@ -24,7 +25,7 @@ export function DownloadsSection() {
         <SectionHeader
           eyebrow="Downloads"
           title="Every document, in one place"
-          description="The full TFPT 5.0 document set — the introduction reading guide, the four core documents, and the three companions (Appendix H, the Origin Theory synthesis, and the research contracts). All distributed for academic use."
+          description={`The full TFPT ${SITE_VERSION} document set — the introduction reading guide, the four core documents, and the three companions (Appendix H, the Origin Theory synthesis, and the research contracts). All distributed for academic use.`}
         />
 
         <div className="mt-12">

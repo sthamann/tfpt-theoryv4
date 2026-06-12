@@ -196,7 +196,7 @@ the generic Higgs locus}. \textbf{Refinement (U4$''$, \veri{v40\_harmonic\_metri
 \emph{polystable} point TFPT actually selects this pessimism does not apply --- see the box below.
 \end{lemma}
 
-\begin{winbox}[Progress: the \emph{selector side} of U4 is closed on the explicit point \mE]
+\par\smallskip\noindent\textbf{Progress: the \emph{selector side} of U4 is closed on the explicit point} (\mE).
 While $R(\rho)$ as a function on the whole locus needs the Hitchin solve, the two U4 \emph{selectors} are
 \emph{algebraically} accessible on the explicit flat bundle of \veri{v33\_explicit\_flat\_bundle.py} --- no
 PDE. Computed exactly from $A_0$: the exponents at infinity $\operatorname{eig}(\sum_kA_k)=\{2,1,1\}$ give
@@ -216,9 +216,9 @@ $c_u/c_d$ turns out \emph{not} to need the Hitchin datum at all --- it is \emph{
 selector stratum (\vref{v49}), hence an integer Pl\"ucker readout. The only genuinely transcendental input left is
 the \emph{absolute} amplitude normalisation ($U_{\mathrm{point}}$), which is an anchor, not a missing PDE.
 \veri{v39\_uwall\_selectors.py}
-\end{winbox}
 
-\begin{winbox}[Breakthrough: the harmonic metric is \emph{finite linear algebra}, not a PDE \mE]
+
+\par\smallskip\noindent\textbf{Breakthrough: the harmonic metric is \emph{finite linear algebra}, not a PDE} (\mE).
 The U4 ``transcendental Hitchin solve'' is the worst case for a \emph{generic} Higgs bundle, but the point
 TFPT selects is \emph{polystable}, and by Mehta--Seshadri a parabolic-degree-$0$ polystable bundle is
 \emph{unitary} --- a unitary representation has the \emph{constant} invariant Hermitian harmonic metric and
@@ -233,9 +233,9 @@ PDE to: this finite unitarisation (done) $+$ the combinatorial word-length $R$ (
 \emph{Residual:} the feared PDE is gone; the quark \emph{ratio} $c_u/c_d$ is then fixed combinatorially by
 Readout Rigidity (below), and only the \emph{absolute} amplitude scale remains as an anchor.
 \veri{v40\_harmonic\_metric.py}
-\end{winbox}
 
-\begin{winbox}[The final leg-assignment test (honest result) \mE]
+
+\par\smallskip\noindent\textbf{The final leg-assignment test (honest result)} (\mE).
 Does the harmonic-frame holonomy $\{0,\tfrac12,\tfrac1{\sqrt2}\}$ feed the $\delta=\tfrac12$ resolvent to
 give the lepton amplitudes $\Lambda=(0.475,1.107,0.917)$? \textbf{(i) Ruled out as a literal identity:}
 $\Lambda_\mu=1.107>1$, while unitary holonomy entries have modulus $\le1$, so the amplitudes \emph{cannot}
@@ -251,9 +251,9 @@ selection, not the amplitude magnitude. $c_u/c_d$ is \emph{not} obtained from th
 honest negative on the literal reproduction, with one suggestive geometric link ($\delta=\tfrac12$). The
 negative is now \emph{explained}: the scalar leg is wrongly typed --- see the Exterior Leg Lemma.
 \veri{v41\_leg\_assignment.py}
-\end{winbox}
 
-\begin{winbox}[The torsion normal form and the $\delta=\tfrac12$ theorem \mE\ (\veri{v114\_torsion\_delta.py})]
+
+\par\smallskip\noindent\textbf{The torsion normal form and the $\delta=\tfrac12$ theorem} (\mE).
 The \vref{v41} ``genericity is future work'' item is now executed --- and yields a theorem. \emph{(i) Flatness
 $=$ $\mu_4$ torsion \mE:} for \emph{any} $M$ (symbolic), $\prod_k U^kMU^{-k}=(MU)^4$ --- the $\Z_4$-family
 flatness constraint \emph{is} the torsion statement ``$T=MU$ is a fourth root of unity'': the $\mu_4$
@@ -276,10 +276,10 @@ $(0,\tfrac12,\tfrac12)$ to machine precision, while on the $\{1,i,-i\}$ branch $
 --- and the explicit \vref{v33}/\vref{v40} point sits exactly in its $d_1=0$ slice, the \emph{same} $\delta$ value.
 \emph{Residue \mC\ (recorded):} whether the anchor splitting $\mathcal O(-2)\oplus\mathcal O(-1)^2$
 (Mehta--Seshadri side) forces the $d_1=0$ slice --- or selects the involutive branch --- is the remaining
-question; $\delta=\tfrac12$ itself is no longer the open item.
-\end{winbox}
+question; $\delta=\tfrac12$ itself is no longer the open item. \veri{v114\_torsion\_delta.py}
 
-\begin{winbox}[The anchor pins the residue: an exact normal form for the $(U_{\mathrm{wall}})$ bundle \mE\ (\veri{v115\_anchor\_residue.py})]
+
+\par\smallskip\noindent\textbf{The anchor pins the residue: an exact normal form for the $(U_{\mathrm{wall}})$ bundle} (\mE).
 The \vref{v114} branch question is answered --- and the \vref{v33} \emph{numerical} Riemann--Hilbert point acquires an
 \emph{exact closed form}. \emph{(i) $\mu_4$-average lemma \mE:} $\sum_kU^kXU^{-k}=4\operatorname{diag}X$
 for any $X$ --- $\mu_4$ conjugation-averaging \emph{is} the diagonal projection, so the exponents at
@@ -308,8 +308,8 @@ multi-seed RH scan over the anchor-pinned spectral manifold lands at \emph{every
 with \vref{v114}, the whole harmonic diagonal is \textbf{anchor $+$ torsion forced}; $\delta=\tfrac12$ needs no
 selection. \emph{Residue \mC:} $a_{13}=0$ and the gauge-orbit uniqueness are numerical (one component
 across all seeds); promoting them to \mE\ via Gr\"obner on the RH constraints is the remaining
-$U_{\mathrm{point}}$ step.
-\end{winbox}
+$U_{\mathrm{point}}$ step. \veri{v115\_anchor\_residue.py}
+
 
 \begin{keybox}[The resonance theorem: $M_\infty=\mathbf1\iff a_{13}=0$ --- one gauge orbit \mE\ (\veri{v116\_resonance\_uniqueness.py})]
 The anticipated Gr\"obner promotion turned out to be a \emph{linear} computation. Writing the
@@ -561,7 +561,7 @@ $R,Q,c_u/c_d$ are read off the (derived) selector stratum (closed, \vref{v49}/\v
 $U_f^\star,c_q$ normalisation is the anchor.
 \end{lemma}
 
-\begin{winbox}[Progress: an explicit valid flat bundle is realised (RH solve) \mE]
+\par\smallskip\noindent\textbf{Progress: an explicit valid flat bundle is realised (RH solve)} (\mE).
 A numerical Riemann--Hilbert solve produced an \emph{explicit} Hermitian residue $A_0$ (eigenvalues
 $\{0,\tfrac13,\tfrac23\}$, $\operatorname{diag}=(\tfrac12,\tfrac14,\tfrac14)$) for which the Fuchsian system
 $A(z)=\sum_kU^{k-1}A_0U^{-(k-1)}/(z-i^k)$ simultaneously satisfies: the cusp class at each puncture; the
@@ -583,7 +583,7 @@ $3$-dim family $\rho^\star$) was the genuine remaining analytic input --- it is 
 natural guess, and we do \emph{not} fish for $55/117$. \emph{Resolved since (\vref{v118}): the correct
 extraction is the resolvent determinant of the $W(A_3)$ monodromy, not the diagonal dressing --- the
 probe's failure is thereby explained, and the dictionary is exact.}
-\end{winbox}
+
 
 \begin{keybox}[Theorem U --- the four-way split (sharper than one monster gate) \mE/\mO]
 $D_4$ \emph{fixes the admissible chamber, not the physical point} (the $D_4$-fixed locus is
@@ -627,7 +627,7 @@ $\tfrac{16}7\!\cdot\!\tfrac43\!\cdot\!\tfrac76=\tfrac{32}9=2^{\gcar}/\Nfam^2$). 
 ratios})+(\text{product})\Leftrightarrow(\text{individuals})$ is a bijection, the nine charged-fermion
 amplitudes are \emph{fixed up to one overall scale} $v_{\mathrm{geo}}$. \textbf{So $U_{\mathrm{point}}$ is not an
 independent gate: it reduces to $v_{\mathrm{geo}}$, the \emph{same} one irreducible dimensionful anchor as
-gravity's $1/G$ (\vref{v68}) --- the two $[A]$ anchors collapse to one.}
+gravity's $1/G$ (\vref{v68}) --- the two \mO\ anchors collapse to one.}
 \end{keybox}
 
 % =====================================================================
@@ -675,7 +675,7 @@ $n_s\simeq1-\tfrac2N$, $r\simeq\tfrac{12}{N^2}$. The $R+R^2$ \emph{structure} is
 here (\veri{v36\_spectral\_action\_g2.py}, \veri{v28\_gravity\_fR.py}).
 \end{lemma}
 
-\begin{winbox}[The simpler resolution: ``full QG'' for physics is the gap-decoupled admissible sector \mE]
+\par\smallskip\noindent\textbf{The simpler resolution: ``full QG'' for physics is the gap-decoupled admissible sector} (\mE).
 The infinite-dimensional ambient measure (G6) is the summit, but the admissible IR sector does not wait for
 it. The metric coupling is gap-dominated (G5): $2\|V_{\mathrm{metric}}\|=0.785<\Delta=6\log\tfrac32=2.433$,
 so the admissible sector keeps a \emph{strictly positive} effective gap $\Delta_{\mathrm{eff}}=1.648>0$
@@ -695,9 +695,9 @@ together they reduce $(G_{\mathrm{metric}})$ to the ambient projective limit (G6
 assumptions; the ambient metric projective measure remains a \emph{strict TOE completion target}. Its
 absence does \emph{not} affect the bounded IR claim, but it \emph{does block certification as a strict
 physical TOE} --- so we do not call it ``mere mathematical completeness''. \veri{v36\_spectral\_action\_g2.py}
-\end{winbox}
 
-\begin{winbox}[The glue Q-system: the index-$4$ object of the $G_{\mathrm{net}}$ statement exists explicitly \mE/\mC\ (\veri{v125\_glue\_qsystem.py})]
+
+\par\smallskip\noindent\textbf{The glue Q-system: the index-$4$ object of the $G_{\mathrm{net}}$ statement exists explicitly} (\mE/\mC).
 The $G_{\mathrm{net}}$ target --- \emph{``the seam--Calder\'on inclusion has Jones index $4=|\mu_4|$''}
 --- no longer refers to an unknown object. On the glue group algebra $A=\mathbb C[\Z_4]$ (multiplication
 $\delta_a\otimes\delta_b\mapsto\delta_{a+b}$, unit $\delta_0$) \emph{all} Longo Q-system axioms hold
@@ -730,8 +730,8 @@ pairs whose sum is again a root, $\operatorname{coset}(r_1{+}r_2)=\operatorname{
 \]
 --- the checksum hull is the Q-system's graded module, realised in $248$ dimensions. The R2
 identification thus matches the Calder\'on inclusion against a structure that $E_8$ already
-\emph{carries}.
-\end{winbox}
+\emph{carries}. \veri{v125\_glue\_qsystem.py}
+
 
 \begin{lemma}[G3--G4 --- reflection positivity, fixed and integrated]
 For each $\Theta$-invariant $g$ in the Calderón ball the physical boundary kernel
@@ -833,7 +833,7 @@ Ward identities (G7) & BV/BRST formal $+$ checks & hard \\
 \end{tabularx}
 \end{center}
 
-\begin{winbox}[Recommended order]
+\par\smallskip\noindent\textbf{Recommended order}.
 \[
   \boxed{\ \text{Selector-triangle pairings}\ \rightarrow\ v_{\mathrm{geo}}\ \text{scale anchor}\ \rightarrow\ G_{\mathrm{net}}\ \text{inclusion theorem}\ }
 \]
@@ -844,6 +844,6 @@ input (same nature as $1/G$). $G_{\mathrm{net}}$ --- the index-4 seam-net inclus
 sector --- is more fundamental but a \emph{programme}, not a single proof: heavy machinery, with the
 projective limit the genuine summit. $F_{\mathrm{transfer}}$ (source$\to$pole / relic / cosmology) is the
 remaining downstream interface.
-\end{winbox}
+
 
 \end{document}
