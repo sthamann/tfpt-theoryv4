@@ -1092,4 +1092,31 @@ DIE DET-RATIO-ANOMALIE IST DIE KOIDE-KONSTANTE (v132, Ledger
        verschwindet oder ins etablierte Potenzgesetz absorbiert
        wird; der S^2-Anteil ist exakt gepinnt -- ueber die Summe
        wird nichts behauptet.
+
+DAS ZETA-BUDGET, BEIDE ROUTEN EXAKT (v133, Ledger HOR.CLOCK.10) --
+    euklidisches Nariai = S^2 x S^2 (der Zeitsektor setzt zur
+    SELBEN Einheits-Sphaere fort), beide Kandidaten-Routen exakt
+    berechenbar:
+    (1) REDUZIERTE ROUTE [I]: jeder 2d-Sektor traegt den v132-
+        Operator mit zeta(0)|det' = -2/3; zwei Sektoren =>
+        Budget = -4/3 = -e1/p0 = MINUS DER SEED-GAIN (der zweite
+        v119-Triad-Wert; der erste, -2/3, ist der Sektor-Anteil);
+        die sechs Nullmoden splitten 3+3 ueber die zwei Sphaeren --
+        die Blatt-Verdopplung IST die Zwei-Sphaeren-Struktur
+        (= Horizont-Paar, v101).
+    (2) NAIVE 4D-ROUTE [I]: Standard-S^2-Waermeentwicklung
+        1/t + 1/3 + t/15 (numerisch verifiziert); symmetrischer
+        Split L4 = (-Lap1 - 1) + (-Lap2 - 1): Faktor-Spur
+        1/t + 4/3 + (9/10)t => a2(4d) = 161/45; Nullmoden 6;
+        zeta(0)|det',4d = 161/45 - 6 = -109/45 (Kontinuation
+        ~1e-8) -- KEINE Atom-Lesart.
+    (3) ROUTEN-DISKRIMINIERUNG [I + P]: reduzierte Route =
+        reine Anker-Quotienten (-2/3, -4/3: zwei der drei
+        Triad-Werte); 4d-Route = -109/45, kein Atom => das
+        zeta-Budget favorisiert strukturell die REDUZIERTE
+        Seam-Lesart -- konsistent mit der 2d-Seam-Architektur;
+        Routen-Selektions-Evidenz, kein Beweis.
+    => REST [P]: Graviton/Geist-Anteile auf S^2 x S^2
+       (Volkov-Wipf-Klasse, extern Standard) -- eine endliche
+       Liste bekannter Waermekoeffizienten.
 ================================================================================

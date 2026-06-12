@@ -249,6 +249,7 @@ const NODES: DagNode[] = [
       "v130_born_square.py",
       "v131_measure_is_area.py",
       "v132_detratio_anomaly.py",
+      "v133_zeta_budget.py",
     ],
   },
   {

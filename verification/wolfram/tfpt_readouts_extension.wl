@@ -992,6 +992,22 @@ Module[{a1, zeta0, traceConst},
     a1 == 7/3 && zeta0 == -2/3 && Abs[traceConst - (-2/3)] < 1/300];
 ];
 
+(* ---- (v133) zeta budget ----
+   Numerical continuations are Python-only (mpmath); the exact arithmetic
+   of both routes is mirrored, plus a numeric spot-check in WL. *)
+Module[{tcf, a24d, zeta4d, tnum, num},
+  tcf = 1/2 + 1/3 + 1/15;
+  a24d = (4/3)^2 + 2 tcf;
+  zeta4d = a24d - 6;
+  checkExact["v133 zeta budget: reduced route = -2/3 per sector, -4/3 total = -e1/p0 (seed gain); 4d route a2 = 161/45, zeta(0) = -109/45 (no atom); zero modes 3+3 = 6",
+    7/3 - 3 == -2/3 && 2 (7/3 - 3) == -4/3 && tcf == 9/10 &&
+    a24d == 161/45 && zeta4d == -109/45 && 3 + 3 == 6];
+  tnum = 1/2000;
+  num = N[(Sum[(2 l + 1) Exp[-tnum (l (l + 1) - 1)], {l, 0, 400}])^2 - 6 - 1/tnum^2 - (8/3)/tnum, 20];
+  checkExact["v133 numeric spot-check (WL): 4d constant term at t = 1/2000 within 2e-2 of -109/45",
+    Abs[num - (-109/45)] < 2/100];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v132: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v133: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

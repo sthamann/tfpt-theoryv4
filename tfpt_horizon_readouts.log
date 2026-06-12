@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 05:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 06:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1255,23 +1255,34 @@ mr/bx/n/10 (+20) [I][]\T1/lmr/bx/n/10.95 (+20) /[]\T1/lmr/bx/n/10 (+20) [P][]
 
 
 [10]
+Underfull \hbox (badness 1521) in paragraph at lines 525--525
+[]\T1/lmr/bx/n/10.95 (+20) The zeta bud-get: the re-duced route car-ries the an
+-chor ra-tios []\T1/lmr/bx/n/10 (+20) [I][]\T1/lmr/bx/n/10.95 (+20) /[]\T1/lmr/
+bx/n/10 (+20) [P][]
+ []
+
 <figures/seam_units.pdf, id=535, 621.52202pt x 445.18318pt>
 File: figures/seam_units.pdf Graphic file (type pdf)
 <use figures/seam_units.pdf>
-Package pdftex.def Info: figures/seam_units.pdf  used on input line 527.
+Package pdftex.def Info: figures/seam_units.pdf  used on input line 547.
 (pdftex.def)             Requested size: 419.95967pt x 300.81174pt.
 
-
-[11 <./figures/seam_units.pdf>]
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 544.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 553.
+LaTeX Font Warning: Command \small invalid in math mode on input line 564.
 
 
 
-[12] (./tfpt_horizon_readouts.aux)
+[11]
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 573.
+
+
+
+[12 <./figures/seam_units.pdf>]
+
+[13] (./tfpt_horizon_readouts.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1280,11 +1291,11 @@ Package rerunfilecheck Info: File `tfpt_horizon_readouts.out' has not changed.
 (rerunfilecheck)             Checksum: B4F047632898351A3B2E38CB6FDE3B2C;1955.
  ) 
 Here is how much of TeX's memory you used:
- 32365 strings out of 473190
- 639383 string characters out of 5715801
+ 32378 strings out of 473190
+ 639534 string characters out of 5715801
  1108381 words of memory out of 5000000
- 54669 multiletter control sequences out of 15000+600000
- 699774 words of font info for 294 fonts, out of 8000000 for 9000
+ 54671 multiletter control sequences out of 15000+600000
+ 700358 words of font info for 299 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  116i,12n,121p,1018b,1048s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/lo
@@ -1313,10 +1324,10 @@ mf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/local/texlive/2025/texmf-dist/fon
 ts/type1/public/lm/lmtti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/
 public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/ty
 pe1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tfpt_horizon_readouts.pdf (12 pages, 680563 bytes).
+Output written on tfpt_horizon_readouts.pdf (13 pages, 684123 bytes).
 PDF statistics:
- 807 PDF objects out of 1000 (max. 8388607)
- 314 compressed objects within 4 object streams
- 33 named destinations out of 1000 (max. 500000)
+ 812 PDF objects out of 1000 (max. 8388607)
+ 318 compressed objects within 4 object streams
+ 34 named destinations out of 1000 (max. 500000)
  76019 words of extra memory for PDF output out of 89155 (max. 10000000)
 
