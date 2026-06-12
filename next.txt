@@ -992,4 +992,30 @@ GRADED HULL + NULLMODEN-MULTIPLIZITAET (v128, Ledger E8.GRADE.01) --
        verdoppelten l=1-Nullmoden berechnen; R2 = Seam-Calderon-
        Inklusion mit der jetzt IN E8 selbst exhibierten Z4-Graduierung
        identifizieren. Beide Anker fixiert.
+
+DIE UHR IST EIN ENTROPIE-POTENZGESETZ (v129, Ledger HOR.CLOCK.06) --
+    was das Resummations-Argument 1 - n/N_fam physikalisch IST:
+    (1) DIE DREI ENTROPIE-NIVEAUS [I]: die etablierte Nariai-
+        Buchhaltung (v101) hat S/S_dS in {1, 2/3, 1/3} (reines dS;
+        Zwei-Horizont-Total; Einzelhorizont -- Defizit S_dS/3 pro
+        Schritt) -- EXAKT die komplementaeren Cusp-Gewichte.
+    (2) ENTROPIE-POTENZGESETZ [I]: lambda_n = (S_n/S_dS)^{p2} =
+        das eingefrorene Transferspektrum; rate(n) = p2 ln(S_dS/S_n)
+        -- hexagon-gewichtete Log-Entropie-Defizite. Audit: Exponent
+        p2 = 6 = 2h liest sich als Zweipunkt-Form eines Operators
+        vom Gewicht h = 3 = N_fam (notiert, nicht beansprucht).
+    (3) DIE KOPPLUNG IST DAS ENTROPIE-DEFIZIT [I] (Dreifach-
+        Identitaet): alpha = n/N_fam = MS-parabolisches Gewicht
+        (v115/v126) = 1 - S_n/S_dS = DeltaS_n/S_dS -- die RPA-
+        Insertionsstaerke ist der fraktionale Entropie-Defizit;
+        die Kopplung ist in KEINER ihrer drei Lesarten frei.
+    (4) ORIENTIERUNG KONSISTENT [I]: Gewicht 0 <-> reines dS (max.
+        Entropie, Rate 0 = stationaerer Attraktor); Gewicht 2 <->
+        Einzelhorizont (schnellster Zerfall) -- monoton, die
+        etablierte Repeller->Attraktor-Orientierung.
+    => R1 THERMODYNAMISCH [P]: leite Gamma_n ~ (S_n/S_dS)^{p2} aus
+       dem near-Nariai-Ein-Loop her -- ein Gibbons-Hawking-artiges
+       Entropie-Potenzgesetz mit Exponent = Hexagon-Groesse; der
+       Exponent (Gewicht h = N_fam) ist der verbleibende
+       Quanten-Inhalt.
 ================================================================================

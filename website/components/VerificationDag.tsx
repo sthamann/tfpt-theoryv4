@@ -245,6 +245,7 @@ const NODES: DagNode[] = [
       "v126_clock_wall_bridge.py",
       "v127_ring_resummation.py",
       "v128_graded_hull.py",
+      "v129_entropy_power_law.py",
     ],
   },
   {

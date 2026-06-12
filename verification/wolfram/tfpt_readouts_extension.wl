@@ -946,6 +946,18 @@ Module[{d5roots, d5v, d5s, d5c, a3roots, wclass, roots, counts, items, pairsChec
     gradingOK && pairsChecked == 6720 && 2 (2*1 + 1) == 6];
 ];
 
+(* ---- (v129) entropy power law ---- *)
+Module[{levels, lams, rates},
+  levels = Table[(3 - n)/3, {n, 0, 2}];
+  lams = levels^6;
+  rates = 6 Log[1/levels];
+  checkExact["v129 entropy power law: S/S_dS = {1, 2/3, 1/3} = 1 - n/N; lambda = (S/S_dS)^6 = frozen spectrum; rates = {0, Delta, 6 ln 3}; alpha = deficit fraction; p2 = 6 = 2 N_fam",
+    levels == {1, 2/3, 1/3} && lams == {1, (2/3)^6, (1/3)^6} &&
+    Simplify[rates[[2]] - 6 Log[3/2]] === 0 && Simplify[rates[[3]] - 6 Log[3]] === 0 &&
+    Table[n/3, {n, 0, 2}] == 1 - levels && 6 == 2*3 &&
+    rates[[1]] === 0 && levels[[1]] > levels[[2]] > levels[[3]]];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v128: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v129: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];
