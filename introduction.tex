@@ -2,7 +2,7 @@
 
 % ---------------------------------------------------------------------
 %  TFPT --- Introduction / status assessment (English, with visualisations)
-%  Comparison: previous state (tfpt-45, Papers 1-7) vs. the compiler closure
+%  The compiler closure of TFPT: status assessment and reading guide
 % ---------------------------------------------------------------------
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -16,6 +16,7 @@
 \usepackage{enumitem}
 \usepackage{xcolor}
 \usepackage{tikz}
+\usepackage{xltabular}
 \usetikzlibrary{positioning,arrows.meta,fit,backgrounds,calc,shapes.geometric,shapes.misc}
 \usepackage[most]{tcolorbox}
 \usepackage{microtype}
@@ -66,8 +67,8 @@
 \emergencystretch=2.5em
 
 \title{\vspace{-1.2cm}\textbf{The Compiler Closure of TFPT}\\[2mm]
-\large What concretely simplifies, reduces and closes relative to the\\
-seven original papers --- a status assessment and reading guide}
+\large The discrete compiler, its status, and how to read the document set ---\\
+a status assessment and reading guide}
 \author{}
 \date{\today}
 
@@ -76,10 +77,9 @@ seven original papers --- a status assessment and reading guide}
 \vspace{-0.8cm}
 
 \begin{keybox}[In one sentence]
-The theory tips from ``many sectors with surprising hits'' (the state of Papers 1--7) to
-``\emph{one small discrete compiler generates those sectors}'': $E_8$ --- which in v4.5 appeared only
-\emph{peripherally} (the orbit cascade for scale ordering) --- is now \emph{built} from two TFPT atoms and
-moved to the centre; the flavor matrix, the fine-structure constant and the scale grammar follow as
+The theory tips from ``many sectors with surprising hits'' to ``\emph{one small discrete compiler
+generates those sectors}'': $E_8$ is \emph{built} from two TFPT atoms and sits at the centre as the
+audit hull; the flavor matrix, the fine-structure constant and the scale grammar follow as
 \emph{fixed points} from exactly two inputs $\cthree=\tfrac1{8\pi}$ and $\gcar=5$.
 \end{keybox}
 
@@ -89,7 +89,7 @@ $\cthree=\tfrac1{8\pi}$ and the carrier rank $\gcar=5$ --- build $D_5\oplus A_3+
 read off the Standard Model, the constants and the scale grammar. The development is \textbf{five short
 documents plus Appendix~H}, best read in order (this is the entry point; a detailed map is in \S\ref{sec:docmap}):
 \begin{enumerate}[leftmargin=1.7em,itemsep=1pt]
-\item \texttt{introduction} --- reading guide, compiler closure, paper-by-paper comparison, predictions, the dependency DAG and proof ledger.
+\item \texttt{introduction} --- reading guide, compiler closure, predictions, the dependency DAG and proof ledger.
 \item \texttt{tfpt\_1\_architecture\_e8} --- the two axioms, the derivation map, the EM fixed point $\ainv$, the $D_5\oplus A_3+\mu_4\Rightarrow E_8$ construction.
 \item \texttt{tfpt\_2\_standard\_model} --- the SM in one $\varphi_0$-ladder formula, flavor from parabolic transport, the worked closures, and gravity/QG as the seam response.
 \item \texttt{tfpt\_3\_e8\_audit\_bootstrap} --- the seven $E_8$ slices as an audit raster, the cascade bridge, the M\"obius bootstrap.
@@ -166,92 +166,27 @@ ledger. \textbf{If the text and the ledger ever disagree, the ledger wins.}
 % =====================================================================
 
 \begin{keybox}[In plain words --- what we found, and why it matters]
-\textbf{What we found.} The older version of the theory already reproduced dozens of real numbers of
-physics (particle masses, the fine-structure constant, dark-energy and inflation values) from a small set
-of inputs. What it could \emph{not} say was \emph{why} the same handful of small integers
-($2,3,5,16,\dots$) kept reappearing in every sector. The new result closes exactly that gap: those
-numbers are not separate lucky hits. A single tiny ``machine'' --- fed by just \textbf{two inputs} (a
-boundary number $\tfrac1{8\pi}$ and a five-slot carrier) --- builds the exceptional symmetry $E_8$, and
-$E_8$ is the unimodular ``audit hull'' that classifies the discrete Standard-Model readout: the constants,
-the flavor skeleton and the gravity/cosmology regime are then read off by projection and boundary dressing
-(not ``printed'' for free --- where a scheme or analytic interface is needed, it is named).
+\textbf{What we found.} TFPT reproduces dozens of real numbers of physics (particle masses, the
+fine-structure constant, dark-energy and inflation values) from a small set of inputs --- and the
+compiler closure says \emph{why} the same handful of small integers ($2,3,5,16,\dots$) reappears in
+every sector: those numbers are not separate lucky hits. A single tiny ``machine'' --- fed by just
+\textbf{two inputs} (a boundary number $\tfrac1{8\pi}$ and a five-slot carrier) --- builds the
+exceptional symmetry $E_8$, and $E_8$ is the unimodular ``audit hull'' that classifies the discrete
+Standard-Model readout: the constants, the flavor skeleton and the gravity/cosmology regime are then
+read off by projection and boundary dressing (not ``printed'' for free --- where a scheme or analytic
+interface is needed, it is named).
 
 \smallskip
-\textbf{How this drastically simplifies the theory.} Instead of seven separate derivations that happen to
-share numbers, there is now \emph{one generator and a handful of corollaries}. Roughly $250$ pages of
-sector-by-sector work collapse to ``two inputs $+$ one machine''; the number of independent structural
-assumptions drops to \textbf{two}.
+\textbf{Why this is simple.} There are not many separate derivations that happen to share numbers ---
+there is \emph{one generator and a handful of corollaries}, and the number of independent structural
+assumptions is \textbf{two}.
 
 \smallskip
 \textbf{How plausible it is.} A theory becomes more believable when it \emph{explains more from less}.
-Here the two inputs are even \emph{over-determined}: the machine reproduces the very two numbers it started
-from (the dashed loop below), so there is \emph{no free dial left to tune}. The only genuinely free,
-continuous ingredient that remains is the number $\pi$.
+Here the two inputs are even \emph{over-determined}: the machine reproduces the very two numbers it
+started from (the dashed bootstrap loop in the architecture diagram, \S2), so there is \emph{no free
+dial left to tune}. The only genuinely free, continuous ingredient that remains is the number $\pi$.
 \end{keybox}
-
-\begin{center}
-\begin{tikzpicture}[font=\sffamily,
-  knob/.style={rectangle,rounded corners=2pt,draw=tfred!75!black,fill=tfred!8,thick,align=center,inner sep=4pt,text width=29mm,minimum height=12mm},
-  machine/.style={rectangle,rounded corners=3pt,draw=tfgold!80!black,fill=tfgold!16,line width=1pt,align=center,inner sep=6pt,text width=24mm,minimum height=20mm},
-  outp/.style={rectangle,rounded corners=2pt,draw=tfgreen!70!black,fill=tfgreen!9,align=center,inner sep=4pt,text width=34mm},
-  fat/.style={-{Stealth[length=3mm]},line width=1.3pt,tfgray}]
-  \node[knob] (k1) at (0,1.15) {\textbf{input 1}\\boundary number $\tfrac1{8\pi}$};
-  \node[knob] (k2) at (0,-1.15) {\textbf{input 2}\\a 5-slot carrier ($3{+}2$)};
-  \node[machine] (m) at (4.3,0) {\textbf{ONE}\\\textbf{machine}\\$E_8$};
-  \node[outp] (o1) at (8.9,1.7)  {all particle masses};
-  \node[outp] (o2) at (8.9,0.0)  {$\alpha=\tfrac1{137.0}$, mixings};
-  \node[outp] (o3) at (8.9,-1.7) {dark energy, inflation, $H_0$};
-  \draw[fat] (k1) -- (m); \draw[fat] (k2) -- (m);
-  \draw[fat] (m) -- (o1); \draw[fat] (m) -- (o2); \draw[fat] (m) -- (o3);
-  \draw[-{Stealth[length=2mm]},very thick,dashed,tfred!70!black] (m.south) to[bend left=26]
-     node[below,font=\footnotesize\sffamily,text width=46mm,align=center]{the machine even re-derives its own two inputs} (k2.south);
-\end{tikzpicture}\\[4pt]
-{\small\itshape Two numbers go in on the left; the discrete Standard-Model core, the dimensionless
-constants and several scale readouts come out on the right --- and the dashed loop is the point: the
-machine reproduces the very two numbers it started from, so the discrete core is \emph{overdetermined}
-rather than fitted. (Dimensionful EW/QCD masses, the full quantum-gravity measure and the frontier items
-stay typed-open --- see the status ledger.)}
-\end{center}
-
-\medskip
-The seven original papers (\texttt{tfpt-45}, Papers 1--7) deliver a long chain of physical closures:
-boundary kernel $\to$ carrier $\to$ Standard-Model packet $\to$ EM fixed point $\to$ flavor transport
-$\to$ admissibility/strong CP $\to$ geometric gravity/metrology $\to$ cosmology/CMB. Each stage stands on
-its own and hits a remarkable number of values. What was missing was a \emph{meta-statement} explaining
-\emph{why} so many independent sectors use the same small stock of numbers
-($2,3,5,16,40,41,48,240,248$).
-
-\begin{center}
-\begin{tikzpicture}[font=\footnotesize,
-  pap/.style={rectangle,rounded corners=1pt,draw=tfgray!60,fill=tfgray!8,align=center,inner sep=2pt,minimum width=20mm,minimum height=5.5mm},
-  cmp/.style={rectangle,rounded corners,draw=tfgold!80!black,fill=tfgold!12,very thick,align=center,inner sep=4pt},
-  ob/.style={rectangle,rounded corners=1pt,draw=tfgreen!70!black,fill=tfgreen!8,align=center,inner sep=2pt,minimum width=18mm},
-  ar/.style={-{Stealth[length=1.8mm]},tfgray}]
-% ---- left panel: v4.5 ----
-\node[font=\bfseries\small,tfgray!50!black] at (-4.3,3.1) {Version 4.5 --- seven papers};
-\foreach \y/\lab in {2.3/{P1 boundary},1.55/{P2 carrier},0.8/{P3 EM/flavor},0.05/{P4 strong CP},-0.7/{P5 metrology},-1.45/{P6 cosmology},-2.2/{P7 CMB}}{
-  \node[pap] at (-4.3,\y) {\lab};}
-\node[font=\itshape,tfgray!55!black,align=center,text width=34mm] at (-4.3,-3.55) {\emph{many parallel sector closures;\\ $E_8$ only a \textbf{peripheral} backdrop}};
-% ---- arrow ----
-\node[font=\Large\bfseries,tfred!75!black] at (-1.4,0) {$\Longrightarrow$};
-% ---- right panel: compiler ----
-\node[font=\bfseries\small,tfblue] at (3.2,3.1) {New --- one compiler};
-\node[rectangle,rounded corners=1pt,draw=tfred!80!black,fill=tfred!8,align=center,inner sep=2pt] (in) at (0.7,0.6) {$\cthree$\\$\gcar$};
-\node[cmp] (c) at (3.2,0.6) {$D_5{\oplus}A_3$\\$\xrightarrow{\mu_4}E_8$};
-\node[ob] (o1) at (6.0,1.5) {SM};
-\node[ob] (o2) at (6.0,0.6) {constants};
-\node[ob] (o3) at (6.0,-0.3) {gravity/cosmos};
-\draw[ar] (in)--(c); \draw[ar] (c)--(o1); \draw[ar] (c)--(o2); \draw[ar] (c)--(o3);
-\draw[-{Stealth[length=1.8mm]},very thick,dashed,tfred!70!black] (c.south) to[bend left=30] node[below,font=\scriptsize]{bootstrap} (in.south);
-\node[font=\itshape,tfblue!70!black,align=center,text width=42mm] at (3.4,-2.6) {\emph{two inputs build $E_8$; $E_8$ feeds back and fixes the inputs (closed loop)}};
-\end{tikzpicture}
-\end{center}
-
-\noindent\textbf{The difference in one picture.} v4.5 is a \emph{stack of seven independent closures} that
-happen to share numbers, with $E_8$ assumed in the background. The new approach is \emph{one discrete
-compiler}: two inputs build $E_8$, $E_8$ outputs the sectors, \emph{and} $E_8$ feeds back to fix the two
-inputs (the red loop). What were seven parallel results become one generator with corollaries; what was a
-posited $E_8$ becomes a constructed-and-self-checking closure.
 
 \begin{keybox}[Sharper still: one anchor $a=(1,1,2)$, and $E_8$ as a \emph{compiler hull} \tI/\tL]
 The two axioms are not even independent: they are the \emph{elementary symmetric polynomials} of the
@@ -378,9 +313,10 @@ structures in the background. Now they are \emph{intermediate products} of the t
 the red back-channel is the new part}: the $E_8$ closure feeds back and \emph{fixes the inputs}.
 $\gcar=5$ is the unique rank-fill/Coxeter/Pascal solution ($2^{g-1}=\binom g0{+}\binom g1{+}\binom g2$), and
 the integer $8$ in $\cthree=\tfrac1{8\pi}$ is $\operatorname{rank}E_8=h(D_5)=\det R$. \textbf{Inputs and
-output are mutually locked --- they prove each other}; the only thing \emph{not} produced by the loop is
-the continuous $\pi$ (Möbius/Gauss--Bonnet), the lone irreducible primitive. So it is not a one-way arrow
-chain but a closed self-consistency loop.
+output form an overdetermined fixed point} --- the structure does not ``prove itself''; it has fewer
+degrees of freedom than independent consistency conditions. The only thing \emph{not} produced by the loop
+is the continuous $\pi$ (Möbius/Gauss--Bonnet), the lone irreducible primitive. So it is not a one-way
+arrow chain but a closed, overdetermined self-consistency loop.
 
 \medskip
 \noindent\textbf{The master story is two engines.} Read from the two axioms, the whole theory factorises
@@ -568,32 +504,9 @@ block certification as a strict physical TOE. Both are written up as numbered \e
 \veri{v36\_spectral\_action\_g2.py}
 \end{keybox}
 
-% =====================================================================
-\section{Before / after: what concretely changes}
-% =====================================================================
-\begin{center}\small
-\renewcommand{\arraystretch}{1.25}
-\begin{tabularx}{\linewidth}{@{}p{3.5cm}YY@{}}
-\toprule
-\textbf{Aspect} & \textbf{State of Papers 1--7} & \textbf{After the compiler closure} \\
-\midrule
-$E_8$ & \emph{peripheral}: only an $11D{\to}4D$ reduction aside and the nilpotent-orbit \emph{cascade} (scale ordering) & \textbf{central, constructed}: $C^+{=}D_5$ spinor, $\PP^1\!\setminus\!\mu_4{=}A_3$, $\mu_4$ glue $\Rightarrow E_8$ \tL \\
-$E_8$ numbers & $240,248$ read off tables when needed & $240{=}16{\cdot}5{\cdot}3$, $248{=}240{+}8$ \emph{derived} as carrier traces \tI \\
-fine structure $\ainv$ & \emph{already} a parameter-free cubic fixed point $\alpha^3{-}2\cthree\alpha^2{-}8bc_6\ln(\cdot){=}0$, $\ainv{\approx}137.0365$ & \emph{same} equation, now \textbf{existence \& uniqueness proved} and refined to $137.0359992$; dev.\ $2.9\!\times\!10^{-10}$ vs CODATA-2022 ($1.9\sigma$) \tI/\tN \\
-flavor residues & partly audit-flagged & anchor $\{1,1,2\}$ \& matrix forced by 3 hypotheses \tI/\tP \\
-many sectors & side by side, each its own closure & \emph{one} compiler $\Z_{30}{=}2{\cdot}3{\cdot}5$ generates them \tI \\
-inputs & $\cthree,\gcar$ (+ implicit structure) & exactly $2$ axioms (P1, P2), clearly declared \tA \\
-$A_s$, $n_s$, $r$ (inflation) & scale present & scalaron mass fixed by $\cthree^7$ ($3.06{\times}10^{13}$ GeV); $A_s,n_s,r$ become \emph{predictions} \tP \\
-$\theta_{12}$ (solar) & open (leading $\tfrac13$) & \textbf{cond.\ derived} $\tfrac13-\tfrac{\phiz}{2}=0.307$, given seam $\varepsilon{=}\cthree$ \tN/\tP \\
-\bottomrule
-\end{tabularx}
-\end{center}
-\markerkey
-
 \begin{winbox}[Reduction in one line]
-The number of \emph{structural} assumptions drops from ``a fixed-point seed $\cthree$, a carrier, the
-orbit cascade, plus a per-sector calibration in each block'' to \textbf{two axioms}. Everything else
-($\Nfam,\Oadm,b_1,\ainv$, the flavor matrix, the $E_8$ glue, the scale grammar) becomes a
+The number of \emph{structural} assumptions is \textbf{two axioms}. Everything else
+($\Nfam,\Oadm,b_1,\ainv$, the flavor matrix, the $E_8$ glue, the scale grammar) is a
 \emph{consequence}. \emph{And even those two tighten:} the
 bootstrap note shows $\gcar=5$ and the integer $8$ in $\cthree$ are \emph{overdetermined $E_8$-closure
 fixed points} (rank-fill, Coxeter-match, integer-glue/norm all give $5$; $8=h(D_5)=\operatorname{rank}E_8=\det R=\varphi(30)$),
@@ -602,66 +515,6 @@ core has no freely tunable fundamental numbers --- the bootstrap is \emph{not cr
 inputs remain), but an overdetermination of those inputs. (This concerns the discrete core only;
 dimensionful masses, the QG measure and frontier items remain typed-open.)
 \end{winbox}
-
-% =====================================================================
-\section{Paper by paper: what each original paper did, and how it works now}
-% =====================================================================
-The seven original papers (plus the orientation note) total roughly \textbf{247 pages}. The table
-below puts each one next to its compiler-era replacement: \emph{what} it treated and computed, \emph{how
-many pages} it took, \emph{where} that now lives and how much it compresses, and whether the
-\emph{accuracy} of the result improves on top. The honest summary up front: in most sectors the
-\emph{numbers are the same} --- what shrinks dramatically is the \emph{derivation length} and the number
-of independent assumptions; in three places (the solar angle, the inflation amplitude, the scalaron
-mass) there is a \emph{genuinely new or sharper} result.
-
-\begin{center}\footnotesize
-\renewcommand{\arraystretch}{1.3}
-\begin{tabularx}{\linewidth}{@{}p{0.7cm}p{3.5cm}cYc@{}}
-\toprule
-\textbf{P} & \textbf{Treated \& computed} & \textbf{Old} & \textbf{How it works now (note; compression)} & \textbf{Acc.} \\
-\midrule
-0 & orientation: architecture, decoder core $Y,[u_\Sigma],u$, theorem stack & 20\,p &
-  \emph{one} compiler diagram: $\{\cthree,\gcar\}\!\to\!D_5{\oplus}A_3{\to}E_8$ (intro $+$ action\_grammar) & $=$ \\
-1 & boundary kernel: $\cthree{=}\tfrac1{8\pi}$, Calder\'on polarization, carrier decoder $6Y^2{-}Y{-}\mathbf1{=}0$ & 20\,p &
-  the two axioms P1 ($\cthree$) $+$ P2 ($\gcar{=}5$); carrier $=3{+}2$ atom (compiler) & $=$ \\
-2 & carrier/SM packet: $S^+{=}16$, $G_{\mathrm{phys}}$, $\Nfam{=}3$, $\Oadm{=}48$, hypercharge, $b_1$ & 48\,p &
-  compiler reads $16{=}1{+}5{+}10$, $\Nfam$, $\Oadm$, $b_1{=}\tfrac{41}{10}$ as carrier traces; $C^+{=}D_5$ spinor ($\sim$5\,p) & $=$ \\
-3 & EM closure: $\ainv$ via $\sum L{+}N_\Phi{=}41$; flavor transport, CKM/PMNS, $\theta_{13}$ & 38\,p &
-  $\ainv$ as unique root of $F_{U(1)}(\alpha){=}0$; flavor from transport theorem (parabolic $+$ sm) & $\uparrow$ \\
-4 & admissibility/strong CP/QFT: $\theta_{\mathrm{eff}}{=}0$, OS reconstruction, mass gap & 40\,p &
-  explicit gap $6\log\tfrac32$ $\Rightarrow$ Dobrushin/OS; strong CP from structure$+$RP (closing\_comp.) & $=$ \\
-5 & geometric Hodge/metrology: $\Mpl$, $v_{\mathrm{geo}}$, $\Lambda$, spectral Einstein & 30\,p &
-  Hodge/$R^2$ branch; $\Lambda$ \emph{typed} (one branch label); boundary-normalised (closing\_comp.) & $=$ \\
-6 & cosmology interface: FRW, $\Lambda_{\mathrm{IR}}$, scalaron, reheating, leptogenesis, axion & 15\,p &
-  Starobinsky $M{=}\cthree^{7/2}\Mbar{=}3.06{\times}10^{13}$ GeV; $A_s$ \emph{parameter-free} (closing\_comp.) & $\uparrow$new \\
-7 & CMB operational closure: $C_\ell$, $a_{\ell m}$, seam mixer, Planck pipeline & 36\,p &
-  $n_s{=}0.964$, $r{=}0.0040$ from the $R^2$ attractor, no free amplitude (closing\_comp.) & $\uparrow$new \\
-\bottomrule
-\end{tabularx}
-\end{center}
-
-\begin{winbox}[Three places where accuracy genuinely improves ``on top'']
-\begin{enumerate}[leftmargin=1.6em]
-\item \textbf{Solar angle $\theta_{12}$.} Paper 3 left it as the only open SM number (leading $\tfrac13$).
-      It is now \emph{conditionally derived} (modulo the seam-misalignment lemma): TBM gives $\tfrac13$, the
-      charged-lepton $1$--$2$ misalignment is the seam $\varepsilon=\tfrac{\Nfam}{|\mu_4|}\phiz=\tfrac34\phiz$
-      (leading term exactly $\cthree{=}\tfrac1{8\pi}$), and TBM geometry gives
-      $\sin^2\theta_{12}=\tfrac13-\tfrac23\varepsilon=\tfrac13-\tfrac{\phiz}{2}=0.3067$ --- $0.1\%$ from NuFIT.
-\item \textbf{Inflation amplitude $A_s$.} Generic Starobinsky fits the scalaron mass to $A_s$. TFPT fixes
-      it by the seam, $(M/\Mbar)^2=\cthree^7$, so $A_s=\tfrac{N_\star^2}{24\pi^2}\cthree^7=2.0\times10^{-9}$
-      is a \emph{prediction} (Planck $2.1\times10^{-9}$), and the measured $A_s$ even \emph{predicts}
-      $N_\star=56$.
-\item \textbf{Scalaron mass.} $M=\cthree^{7/2}\Mbar=3.06\times10^{13}$ GeV comes out \emph{exactly} at the
-      canonical Starobinsky value --- a number that was an input before is now an output.
-\end{enumerate}
-\end{winbox}
-
-\noindent\textbf{What ``simpler'' means concretely.} The compression is not cosmetic. Paper 2 spent
-$48$ pages establishing the carrier/SM packet by rigidity arguments; the compiler reads the same
-$16{=}1{+}5{+}10$, $\Nfam{=}3$, $\Oadm{=}48$, $b_1{=}\tfrac{41}{10}$ off the Pascal row of a $5$-slot
-carrier in a page. Paper 3's flavor transport ($38$\,p) becomes one transport theorem plus a fixed
-residue matrix whose characteristic polynomial $t^3-9t^2+10t-8$ carries only compiler numbers. The
-``many independent closures'' of Papers 1--7 become \emph{one} generator with a handful of corollaries.
 
 % =====================================================================
 \section{The compiler: why $30=2\cdot3\cdot5$}
@@ -790,26 +643,18 @@ document~2, \texttt{tfpt\_2\_standard\_model}.)}
 \end{winbox}
 
 % =====================================================================
-\section{Physical, geometric, topological: which solution is more plausible?}
+\section{Physical, geometric, topological: why the architecture is plausible}
 % =====================================================================
-\begin{center}\small
-\renewcommand{\arraystretch}{1.22}
-\begin{tabularx}{\linewidth}{@{}p{2.6cm}YY@{}}
-\toprule
-\textbf{Level} & \textbf{$E_8$ peripheral (v4.5)} & \textbf{$E_8$ compiled (new)} \\
-\midrule
-physical & $\ainv$ already a cubic fixed point, but each sector closed on its own & $\ainv$ as the fixed point of \emph{one} equation; one generator for many scales \\
-geometric & Lie algebra external; $E_8$ only orders the cascade & the $C^+$ spinor $+$ puncture geometry $\PP^1\!\setminus\!\mu_4$ give $D_5,A_3$, glued to $E_8$ \\
-topological & --- & the common discriminant $\Z_4$ ($\mu_4$ winding) forces the glue; $\Phi_{30}$/Coxeter drives the sectors \\
-parsimony & many structures & $2$ axioms, the rest a consequence \\
-\bottomrule
-\end{tabularx}
-\end{center}
+The closure works on three levels at once: \emph{physically}, $\ainv$ is the fixed point of \emph{one}
+equation and one generator drives many scales; \emph{geometrically}, the $C^+$ spinor and the puncture
+geometry $\PP^1\!\setminus\!\mu_4$ produce $D_5$ and $A_3$, glued to $E_8$; \emph{topologically}, the
+common discriminant $\Z_4$ (the $\mu_4$ winding) forces the glue and $\Phi_{30}$/Coxeter drives the
+sectors --- with exactly $2$ axioms and the rest a consequence.
 
-\begin{winbox}[Why the compiled solution is more plausible]
-It is (i) \emph{more parsimonious} (fewer independent assumptions $\Rightarrow$ less overfitting risk),
-(ii) \emph{more rigid} (the glue condition $5/4+3/4=2$ and the discriminant $\Z_4$ leave little freedom),
-and (iii) \emph{more checkable} (machine-checkable $E_8$ appendix, explicit fixed-point equation for
+\begin{winbox}[Why the compiled architecture is plausible]
+It is (i) \emph{parsimonious} (few independent assumptions $\Rightarrow$ low overfitting risk),
+(ii) \emph{rigid} (the glue condition $5/4+3/4=2$ and the discriminant $\Z_4$ leave little freedom),
+and (iii) \emph{checkable} (machine-checkable $E_8$ appendix, explicit fixed-point equation for
 $\ainv$). More explained from less --- exactly the criterion that makes a theory more probable.
 \end{winbox}
 
@@ -1054,7 +899,7 @@ declared external $N_\star\in[50,60]$, never as point predictions.
 \section*{Conclusion}
 % =====================================================================
 \addcontentsline{toc}{section}{Conclusion}
-The state of Papers 1--7 was an impressive collection of closures sharing common numbers. The compiler
+TFPT's sectors form an impressive collection of closures sharing common numbers. The compiler
 closure explains \emph{why} they are the same numbers: a small discrete generator $\Z_{30}=2\cdot3\cdot5$
 builds, from two inputs $\{\cthree,\gcar\}$ via $D_5\oplus A_3+\mu_4$, the $E_8$ container and outputs
 the Standard Model, the constants and the scale grammar from there. The theory thereby becomes
@@ -1071,12 +916,22 @@ fixed point) is re-derived from the two axioms $\{\cthree,\gcar\}$ alone by a sm
 suite in the repository folder \texttt{verification/}. The inline references \texttt{[verification/$\dots$]}
 throughout the documents point to the exact script; the table below is the master map.
 
-\begin{center}\small
+{\small
 \renewcommand{\arraystretch}{1.25}
-\begin{tabularx}{\linewidth}{@{}p{3.5cm}Y@{}}
+\begin{xltabular}{\linewidth}{@{}p{3.5cm}Y@{}}
 \toprule
 \textbf{Script} & \textbf{What it machine-checks} \\
 \midrule
+\endfirsthead
+\toprule
+\textbf{Script} & \textbf{What it machine-checks \emph{(continued)}} \\
+\midrule
+\endhead
+\midrule
+\multicolumn{2}{r@{}}{\scriptsize\itshape continued on next page}\\
+\endfoot
+\bottomrule
+\endlastfoot
 \texttt{v1\_e8\_glue.py} & glue theorem $E_8{=}(D_5{\oplus}A_3){+}\mu_4$: $\operatorname{disc}{=}\Z_4$, $q(D_5){+}q(A_3){=}\tfrac54{+}\tfrac34{=}2$, $240{=}16{\cdot}5{\cdot}3$, $248{=}240{+}8$ \\
 \texttt{v2\_carrier\_pascal.py} & $\gcar{=}5$ unique Pascal solution; $16{=}1{+}5{+}10$, $\Nfam{=}3$, $\operatorname{rank}E_8{=}8$, $\Oadm{=}48$, $b_1{=}\tfrac{41}{10}$ \\
 \texttt{v3\_em\_alpha.py} & EM closure: unique root of $F_{U(1)}(\alpha){=}0$, $\ainv{=}137.0359992168$, existence/uniqueness, inverse test, ablation \\
@@ -1217,9 +1072,8 @@ throughout the documents point to the exact script; the table below is the maste
 \texttt{v139\_\allowbreak selector\_\allowbreak triangle.py} & Selector triangle: $d{=}\tfrac32a{-}2\cdot\mathbf1$ exactly (pure anchor data, no $R$) $\Rightarrow$ the first selector is \emph{derived}; the frame $(\mathbf1,a,\sigma)$ has $\det{=}11{=}\|\operatorname{Pl}(K)\|_1$, and $n$ is the \emph{unique} covector with atom pairings $(2,8,121){=}(|\Z_2|,\operatorname{rank}E_8,11^2)$; on the constrained line the pairing is $11(11{+}t)$, a square only at the true $n$; review lift exact (audit): $n{=}\operatorname{reverse}(\sigma){+}|\mu_4|e_3$; R4$'$ residue $=$ three pairings \tI\,$+$\,\tP \\
 \texttt{v140\_\allowbreak canonical\_\allowbreak map.py} & The canonical map exists and is rigid: the plain deck $U$ (characters $(0,1,3)$) cannot match $H^1$; the \emph{sheet-twisted} $-U$ ($(2,3,1)$) and the cusp exponential $i^{Q_+}$ ($(1,2,3)$) both carry the $H^1$ character set $\{1,2,3\}$ (the v118 sign twist); multiplicity-freeness $\Rightarrow$ Schur-rigid equivariant isomorphism (unique up to scalars); $i^{Q_+}$ pulls the Euler degree back to $Q_+$, $-U$ to $Q_+\!\circ\rho$ --- the QGEO residue collapses to \emph{one} $\Z_3$ choice \tI\,$+$\,\tP \\
 \texttt{v100\_\allowbreak numerology\_\allowbreak null\_\allowbreak mc.py} & Numerology null test (look-elsewhere corrected): exact census of the full declared formula grammar over the $13$ scored frozen-registry observables (conservative data windows) gives joint formula-fishing probability $\prod p_i=10^{-25.8}$, robust to budget/window variation; $2{\times}2{\cdot}10^5$ Monte-Carlo pseudo-theories reach at most $5/13$ hits vs.\ TFPT $13/13$; power controls (seed perturbation, data shuffle) collapse the scorecard; all $94\,500$ $F_{U(1)}$ variants solved, exactly \emph{one} hits CODATA $\Rightarrow$ total $\le10^{-30.7}$, \emph{conditional on the declared grammar} \tN \\
-\bottomrule
-\end{tabularx}
-\end{center}
+\end{xltabular}
+}
 
 \noindent\textbf{How to run.} From the repository root,
 \texttt{python verification/run\_all.py} (dependencies \texttt{mpmath}, \texttt{numpy}, \texttt{sympy});

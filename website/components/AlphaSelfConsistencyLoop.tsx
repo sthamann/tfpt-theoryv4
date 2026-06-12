@@ -96,7 +96,7 @@ export function AlphaSelfConsistencyLoop() {
 
       <div className="mt-4 rounded-md border border-slate-700/40 bg-slate-950/60 p-3 text-[11px] leading-relaxed text-slate-300">
         <strong className="text-slate-100">Why this is not a fit.</strong>{" "}
-        The carrier packet, c₃, b₁, and ΣL+N_Φ are fixed by Papers 1 and 2{" "}
+        The carrier packet, c₃, b₁, and ΣL+N_Φ are fixed by documents 1 and 2{" "}
         <em>before</em> the closure equation is touched. There is no degree
         of freedom left to absorb the CODATA value.
       </div>

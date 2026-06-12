@@ -207,8 +207,7 @@ export function PredictionsSection() {
           </h3>
           <p className="max-w-xl text-sm text-slate-400">
             The introduction states the compiler closure, the dependency DAG,
-            the before/after against the seven original papers, the predictions,
-            and the single proof ledger.
+            the predictions, and the single proof ledger.
           </p>
           <Link
             href={READING_GUIDE}

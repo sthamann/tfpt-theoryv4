@@ -44,7 +44,7 @@ export function Overview() {
         <SectionHeader
           eyebrow="What TFPT claims"
           title="One discrete compiler, not many coincidences"
-          description="The seven original papers reproduced dozens of numbers but could not say why the same small integers (2, 3, 5, 16, 240, 248) kept reappearing. The compiler closure answers exactly that: one tiny machine, fed by two inputs, builds E₈ and reads off the Standard Model, the constants, and the scale grammar."
+          description="TFPT reproduces dozens of real numbers of physics — and the compiler closure says why the same small integers (2, 3, 5, 16, 240, 248) keep reappearing in every sector: one tiny machine, fed by two inputs, builds E₈ and reads off the Standard Model, the constants, and the scale grammar."
         />
 
         <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-4">

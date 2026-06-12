@@ -34,9 +34,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/introduction.pdf": {
     href: "/papers/introduction.pdf",
     ...COMMON,
-    bytes: 1016296,
+    bytes: 940570,
     sha256:
-      "ecd63ce6a02d9b9d7811393207514fad9766ff72300e2c481d11866704d44da7",
+      "b8519a2cead6fd8190c8947d559d7f2d1bbb1825b76593bb8719a03d605bb5d0",
     changelog:
       "Compiler-closure reading guide: two axioms, the dependency DAG, the predictions and the proof ledger.",
   },
@@ -45,7 +45,7 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
     ...COMMON,
     bytes: 970378,
     sha256:
-      "e08d048be6751c39df82cbd3718cdc7c270113f3a92a8591654739106cbd14a4",
+      "5de664a3552de6d28871f61e8d4be024bcfa516afd76ea77d760974e7c0b5f09",
     changelog:
       "Architecture: the two axioms, the D₅ × A₃ → E₈ construction, and the EM fixed point with existence + uniqueness.",
   },
@@ -54,7 +54,7 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
     ...COMMON,
     bytes: 1028880,
     sha256:
-      "ee969ead32759f2d6efed6ac35a08ccacc4a7a3fda38faf639f4a95ce5a6cef9",
+      "81d20e8499f0b2389c514211e76d23ff336762fd3d6841a73a785e2dec295092",
     changelog:
       "The Standard Model in one φ₀-ladder, the flavor residue matrix, and the derived solar angle θ₁₂.",
   },
@@ -63,7 +63,7 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
     ...COMMON,
     bytes: 779375,
     sha256:
-      "00a8ebb9c0f535d1ffce1a24223fb8607fde49fc2cbab59efd33b7a1cf6d20ce",
+      "dc1471edaf227425c32e52bc1ea83139982ac2a19e7fa8a43affedf3bcb00919",
     changelog:
       "The seven E₈ slices as an audit raster, the cascade bridge, and the Möbius bootstrap.",
   },
@@ -72,7 +72,7 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
     ...COMMON,
     bytes: 503691,
     sha256:
-      "718932ecccd8d38bfc0f1717b73c469e56841a9f5e4888ab080cdbf2d0fab88f",
+      "e81d1b75057ec092e6549cf97e4a60239c1995cc5a18a5aede8e821cb694439c",
     changelog:
       "Honest status of η_B, m_p/m_e, Koide, dark matter and full quantum gravity — not forced onto the ladder.",
   },
@@ -81,7 +81,7 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
     ...COMMON,
     bytes: 691803,
     sha256:
-      "5c3cb219512e9379b46b225162d6d3da33439da4e4bb749eca3759429869fc42",
+      "85232fb164d8a30e9046058f4e783943293fa92d85167bed1994b47ed868b361",
     changelog:
       "Appendix H — the horizon unit system: c₃ = 1/(8π) as the universal horizon thermal code.",
   },
@@ -90,7 +90,7 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
     ...COMMON,
     bytes: 701650,
     sha256:
-      "bfd2361d1ae87a35c0a2b3d8dce5208667f06dcb0dd02812314eb3459704bc3c",
+      "950ee4a1563b7d3e5c171d28b1a89523857d0562ff39a5277b30b0ba6fb595d9",
     changelog:
       "Origin Theory: the (5,3) skeleton, the triply-forced 8, the order-30 Coxeter cycle, and the gapped unique attractor.",
   },
@@ -99,7 +99,7 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
     ...COMMON,
     bytes: 643072,
     sha256:
-      "a3b960f94ea50ccd2dfa3f8282f7b36ae3159a5749708f875bdfced7df843551",
+      "17e222a9422fc2bebf79f92441b57047bb144bc3a2032b26c8837f2ae690f38a",
     changelog:
       "Research contracts for the two open gates: (U_wall) flavor wall-selection and (G_metric) the QG measure.",
   },

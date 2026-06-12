@@ -108,7 +108,7 @@ export const papers: Paper[] = [
     title: "The Compiler Closure of TFPT",
     subtitle: "Reading guide, status assessment, and the dependency DAG",
     abstract:
-      "The entry document. TFPT tips from 'many sectors with surprising hits' to 'one small discrete compiler generates those sectors': from two axioms — the seam constant c₃ = 1/(8π) and the carrier rank g_car = 5 — it builds D₅ ⊕ A₃ + μ₄ ⇒ E₈ and reads off the Standard Model, the constants, and the scale grammar. This note is the reading guide: the architecture, the before/after against the seven original papers, the predictions, the dependency DAG, and the single proof ledger.",
+      "The entry document. TFPT tips from 'many sectors with surprising hits' to 'one small discrete compiler generates those sectors': from two axioms — the seam constant c₃ = 1/(8π) and the carrier rank g_car = 5 — it builds D₅ ⊕ A₃ + μ₄ ⇒ E₈ and reads off the Standard Model, the constants, and the scale grammar. This note is the reading guide: the architecture, the predictions, the dependency DAG, and the single proof ledger.",
     status: "orientation",
     statusLabel: "Reading guide",
     pdf: "/papers/introduction.pdf",
