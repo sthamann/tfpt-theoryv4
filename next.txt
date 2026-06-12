@@ -854,4 +854,28 @@ DIE RAENDER SIND THEOREME (v122, Ledger FLAV.H2.05) -- auch die
        inventarisierte Objekte); die Adress-Frage fuehrt KEINE neue
        Restklasse ein. FIREWALL: alles seit v4/v18/v20/v71/v94
        eingefroren -- nichts gefittet.
+
+RESIDUAL-INVENTAR AKTUALISIERT (v123, Ledger SYNTH.INVENTORY.02) --
+    das v105-Inventar nach der v110-v122-Runde neu gepinnt (gleiche
+    Kardinalitaet, schaerfere Inhalte):
+    (1) Dreizehn neue Ledger-Zeilen maschinell geprueft (CAR.PAIR.02,
+        CAR.QTRANS.01, CAR.COUNT.01, CAR.QFREE.01, GATE.UWALL.06-09,
+        FLAV.H2.02-05, ARCH.TRIAD.01).
+    (2) R2 TRAEGT DREI LASTEN: der eine Index-4-Boundary-Net-Satz
+        schliesst (a) das Metrik-Tor (GATE.METRIC.06), (b) die
+        Carrier-Wahl (CAR.QFREE.01-Upgrade-Vertrag), (c) das
+        QBL-Programm (ARCH.QUAD.01) -- EIN SATZ, DREI TUEREN.
+    (3) AKTUALISIERTE TABELLE, genau FUENF Klassen:
+        R1  Seam-Quantenuhr (Bend log_{3/2}3 bei ~1/3pi)   [P]
+        R2  Index-4-Seam-Netz (3 Lasten)                   [P]/[A]
+        R3  Seam-Determinante => EH                        [A]
+        R4' SELEKTOR-ETABLIERUNG (n = (5,-9,6) + Diamant-
+            Determinanten; ersetzt das ERLEDIGTE
+            H2-Woerterbuch)                                [A]/[P]
+        R5  parabolische Q-Realisierung (GATE.QGEO; P1)    [P]
+        + die zwei Irreduziblen (v_geo, pi) + Daten-Surfaces.
+        Eine SECHSTE Klasse laesst das Skript scheitern.
+    (4) DIE FLAVOR-SEITE HAT KEINE EIGENE OFFENE ANALYSIS-KLASSE
+        MEHR: H2-Werte exakt, Adressen gepinnt, Raender Theoreme;
+        Rest = fuenf eingefrorene Selektor-Integer.
 ================================================================================

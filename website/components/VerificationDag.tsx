@@ -239,6 +239,7 @@ const NODES: DagNode[] = [
       "v120_address_table.py",
       "v121_address_pinning.py",
       "v122_margin_theorem.py",
+      "v123_inventory_update.py",
     ],
   },
   {

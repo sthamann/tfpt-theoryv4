@@ -850,6 +850,10 @@ Module[{rmat, qmat, sig, uax, colsT, c8, c0, cands, final},
     final[[1]][[All, 1]] == {1, 1, 2} && AllTrue[cands, Det[# + 2 uax] == 20 &]];
 ];
 
+(* ---- (v123) inventory update: ledger-bookkeeping module (CSV parsing of
+   status_ledger.csv, typing contract) -- Python-only by nature, like the
+   statistical v100; no algebraic content to mirror. ---- *)
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v122: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v123: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

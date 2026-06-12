@@ -34,9 +34,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/introduction.pdf": {
     href: "/papers/introduction.pdf",
     ...COMMON,
-    bytes: 1003022,
+    bytes: 1003540,
     sha256:
-      "9d70df0a9d6103dc1401c405b4e883e4a3eace056b4ad31d59c5b75aa8c32062",
+      "18370d49a09466a6151f491ab44bbbe9b3bfb39f3a5143cdccc1b06303b5a785",
     changelog:
       "Compiler-closure reading guide: two axioms, the dependency DAG, the predictions and the proof ledger.",
   },
@@ -88,9 +88,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/origin_theory.pdf": {
     href: "/papers/origin_theory.pdf",
     ...COMMON,
-    bytes: 697179,
+    bytes: 699360,
     sha256:
-      "2b87110213c7392b6f9021d8265eb6d1c07299c19b3dd6df08f84e8ae44c8eed",
+      "711857f5a3126ffc6b6b8f6c03425ecaf47d1e3b39da660b4ae5b0106eca493a",
     changelog:
       "Origin Theory: the (5,3) skeleton, the triply-forced 8, the order-30 Coxeter cycle, and the gapped unique attractor.",
   },
