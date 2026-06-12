@@ -6,7 +6,7 @@ import { Download, FileText, ArrowRight } from "lucide-react";
 import { trackPdfInteraction, type DownloadKind } from "@/lib/track";
 
 const ORIENTATION_PDF = "/papers/introduction.pdf";
-const ORIENTATION_TITLE = "The Compiler Closure of TFPT (Introduction)";
+const ORIENTATION_TITLE = "Topological Fixed-Point Theory (TFPT) — Introduction & Reading Guide";
 
 interface SidebarLink {
   href: string;

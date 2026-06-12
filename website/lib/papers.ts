@@ -105,7 +105,7 @@ export const papers: Paper[] = [
     id: "00",
     number: 0,
     slug: "introduction",
-    title: "The Compiler Closure of TFPT",
+    title: "Topological Fixed-Point Theory (TFPT) — A Discrete Compiler for the Constants of Physics",
     subtitle: "Reading guide, status assessment, and the dependency DAG",
     abstract:
       "The entry document. TFPT tips from 'many sectors with surprising hits' to 'one small discrete compiler generates those sectors': from two axioms — the seam constant c₃ = 1/(8π) and the carrier rank g_car = 5 — it builds D₅ ⊕ A₃ + μ₄ ⇒ E₈ and reads off the Standard Model, the constants, and the scale grammar. This note is the reading guide: the architecture, the predictions, the dependency DAG, and the single proof ledger.",

@@ -7,7 +7,7 @@ import { Math } from "@/components/Math";
 import { trackPdfInteraction } from "@/lib/track";
 
 const ORIENTATION_PDF = "/papers/introduction.pdf";
-const ORIENTATION_TITLE = "The Compiler Closure of TFPT (Introduction)";
+const ORIENTATION_TITLE = "Topological Fixed-Point Theory (TFPT) — Introduction & Reading Guide";
 
 export function OrientationHero() {
   return (

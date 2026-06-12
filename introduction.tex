@@ -31,11 +31,11 @@
 \definecolor{tfgray}{HTML}{555555}
 
 \newtcolorbox{keybox}[1][]{enhanced,breakable,colback=tfblue!5!white,colframe=tfblue,
-  fonttitle=\bfseries,coltitle=white,title={#1},left=2mm,right=2mm,top=1mm,bottom=1mm}
+  fonttitle=\bfseries\small,coltitle=white,title={#1},fontupper=\small,left=2mm,right=2mm,top=1mm,bottom=1mm}
 \newtcolorbox{winbox}[1][]{enhanced,breakable,colback=tfgreen!6!white,colframe=tfgreen!75!black,
-  fonttitle=\bfseries,coltitle=white,title={#1},left=2mm,right=2mm,top=1mm,bottom=1mm}
+  fonttitle=\bfseries\small,coltitle=white,title={#1},fontupper=\small,left=2mm,right=2mm,top=1mm,bottom=1mm}
 \newtcolorbox{gapbox}[1][]{enhanced,breakable,colback=tfred!5!white,colframe=tfred!80!black,
-  fonttitle=\bfseries,coltitle=white,title={#1},left=2mm,right=2mm,top=1mm,bottom=1mm}
+  fonttitle=\bfseries\small,coltitle=white,title={#1},fontupper=\small,left=2mm,right=2mm,top=1mm,bottom=1mm}
 
 % ---- status markers ----
 % --- status markers: refined six-grade system ---
@@ -66,9 +66,10 @@
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 \emergencystretch=2.5em
 
-\title{\vspace{-1.2cm}\textbf{The Compiler Closure of TFPT}\\[2mm]
-\large The discrete compiler, its status, and how to read the document set ---\\
-a status assessment and reading guide}
+\title{\vspace{-1.2cm}\textbf{Topological Fixed-Point Theory (TFPT)}\\[1.5mm]
+\Large A discrete compiler for the constants of physics\\[2.5mm]
+\large Two inputs --- the boundary constant $c_3=\tfrac1{8\pi}$ and a five-slot carrier --- build $E_8$\\
+and read off the Standard Model: status assessment and reading guide}
 \author{}
 \date{\today}
 
@@ -77,24 +78,28 @@ a status assessment and reading guide}
 \vspace{-0.8cm}
 
 \begin{keybox}[In one sentence]
-The theory tips from ``many sectors with surprising hits'' to ``\emph{one small discrete compiler
-generates those sectors}'': $E_8$ is \emph{built} from two TFPT atoms and sits at the centre as the
-audit hull; the flavor matrix, the fine-structure constant and the scale grammar follow as
-\emph{fixed points} from exactly two inputs $\cthree=\tfrac1{8\pi}$ and $\gcar=5$.
+\textbf{Topological Fixed-Point Theory (TFPT)} derives the discrete structure of the Standard Model ---
+gauge group, three families, hypercharges, the flavor skeleton --- and its dimensionless constants from
+exactly \textbf{two inputs}: a boundary constant $\cthree=\tfrac1{8\pi}$ and a five-slot carrier
+$\gcar=5$. The two inputs build the exceptional lattice $E_8$ as a consistency checksum
+($D_5\oplus A_3+\mu_4\Rightarrow E_8$), and the physics is read off as \emph{fixed points}: the
+fine-structure constant $\ainv=137.0359992$, the mass ladder, the mixing angles and the scale grammar
+--- every load-bearing claim machine-checked.
 \end{keybox}
 
 \begin{keybox}[The TFPT document set --- what is treated where]
 \textbf{Plain language:} TFPT is a small discrete compiler. Two inputs --- the seam constant
 $\cthree=\tfrac1{8\pi}$ and the carrier rank $\gcar=5$ --- build $D_5\oplus A_3+\mu_4\Rightarrow E_8$ and
-read off the Standard Model, the constants and the scale grammar. The development is \textbf{five short
-documents plus Appendix~H}, best read in order (this is the entry point; a detailed map is in \S\ref{sec:docmap}):
+read off the Standard Model, the constants and the scale grammar. The development is \textbf{eight
+documents}, best read in order (this is the entry point; a detailed map is in \S\ref{sec:docmap}):
 \begin{enumerate}[leftmargin=1.7em,itemsep=1pt]
 \item \texttt{introduction} --- reading guide, compiler closure, predictions, the dependency DAG and proof ledger.
-\item \texttt{tfpt\_1\_architecture\_e8} --- the two axioms, the derivation map, the EM fixed point $\ainv$, the $D_5\oplus A_3+\mu_4\Rightarrow E_8$ construction.
-\item \texttt{tfpt\_2\_standard\_model} --- the SM in one $\varphi_0$-ladder formula, flavor from parabolic transport, the worked closures, and gravity/QG as the seam response.
+\item \texttt{tfpt\_1\_architecture\_e8} --- the two axioms, the derivation map, the EM fixed point $\ainv$, the $D_5\oplus A_3+\mu_4\Rightarrow E_8$ construction, the QBL theorem chain.
+\item \texttt{tfpt\_2\_standard\_model} --- the SM in one $\varphi_0$-ladder formula, flavor from parabolic transport (sheet diamond, dual anchor, $Q_+$ cohomology), the worked closures, and gravity/QG as the seam response.
 \item \texttt{tfpt\_3\_e8\_audit\_bootstrap} --- the seven $E_8$ slices as an audit raster, the cascade bridge, the M\"obius bootstrap.
 \item \texttt{tfpt\_4\_frontier} --- honest status of $\eta_B$, $m_p/m_e$, Koide, dark matter, full QG.
-\item[H.] \texttt{tfpt\_horizon\_readouts} --- \textbf{Appendix~H} (unit-system reframe, \emph{not} new physics): one seam constant as the universal horizon thermal code.
+\item[R.] \texttt{tfpt\_research\_contracts} --- the \textbf{open gates as numbered contracts}: lemma chains, closing theorems and machine-certifiability for $(U_{\mathrm{wall}})$ and $G_{\mathrm{metric}}$/$G_{\mathrm{net}}$, with the current reduction state (selector triangle, index-$4$ identification).
+\item[H.] \texttt{tfpt\_horizon\_readouts} --- \textbf{Appendix~H} (unit-system reframe, \emph{not} new physics): one seam constant as the universal horizon thermal code, the Nariai/anchor surface, the resummed seam clock.
 \item[O.] \texttt{origin\_theory} --- \textbf{Origin Theory}: why no free fundamental number remains. The $(\gcar,\Nfam){=}(5,3)$ skeleton, the triply-forced $8$ (geometry $=$ lattice $=$ gravity), the order-$30$ Coxeter cycle, one boundary transport for flavor and horizon, and the gapped \emph{unique attractor}. \tI/\tL\ core ($\mathtt{v53}$--$\mathtt{v56}$) plus one honestly-typed \tP\ cyclic interpretation.
 \end{enumerate}
 \textbf{You are reading document \#1.}
@@ -131,7 +136,7 @@ conditional:
 \noindent\emph{The claim stack} (bottom $=$ most certain/fewest, top $=$ conditional). Each claim sits on
 exactly one level; the bottom two are inputs, the middle two are proved/reproduced, only the top is
 conditional. The single source of truth for which claim sits where is
-\texttt{verification/status\_ledger.csv} (Fig.~\ref{fig:statusheat}).
+\texttt{verification/status\_ledger.csv}.
 
 \smallskip
 \noindent\textbf{No-free-pattern rule.} To keep the structure from drowning in decorative coincidences, an
@@ -155,7 +160,7 @@ into a typed compiler: \emph{fewer admissible kinds of explanation}, not more ma
 \item the $E_8$ glue $E_8{=}(D_5{\oplus}A_3){+}\mu_4$ --- document~1, Part~II, machine-checked (\texttt{verification/v1\_e8\_glue.py});
 \item the $\alpha^{-1}$ fixed point plus ablation (\texttt{v3\_em\_alpha.py});
 \item the \textbf{single status ledger} \texttt{verification/status\_ledger.csv} --- the source of truth for every claim's grade, location, dependency and script;
-\item the honest frontier list (document~4).
+\item the \textbf{open gates} as numbered research contracts (\texttt{tfpt\_research\_contracts}: the residual classes R1--R5 and their current reductions) and the honest frontier list (document~4).
 \end{enumerate}
 Everything carries a claim ID (e.g.\ \texttt{E8.GLU.01}, \texttt{EM.FP.01}) that resolves to a row of the
 ledger. \textbf{If the text and the ledger ever disagree, the ledger wins.}
@@ -241,9 +246,9 @@ $\Delta_Y=e_2^2=p_0^2+2\operatorname{rank}E_8=25$, $h(E_8)=e_3p_0e_2=30$,
 $\operatorname{rank}E_8=p_0+e_2$.
 \end{keybox}
 
-That is now the case. The whole development is consolidated into \textbf{five companion documents} (plus
+That is now the case. The whole development is consolidated into \textbf{seven companion documents} (plus
 this introduction), organised in layers that build on one another; this introduction is the entry point
-and reading guide. Each document collects the earlier notes of its layer into self-contained parts:
+and reading guide. Each document collects the material of its layer into self-contained parts:
 
 \begin{center}\scriptsize
 \renewcommand{\arraystretch}{1.25}
@@ -255,7 +260,9 @@ and reading guide. Each document collects the earlier notes of its layer into se
 \texttt{tfpt\_2\_standard\_model} & \textbf{Standard Model.} The full SM in one $\phiz$-ladder formula (Part~I); the flavor block from parabolic weights and the transport theorem, H2 as a spectral selector (Part~II); the worked closures --- explicit gap, APS--Fredholm, truncation/$n_s,r$, Starobinsky $M$, derived $\theta_{12}$, quark $c$, the H2 splitting type, $\Lambda$-typing (Part~III). \\
 \texttt{tfpt\_3\_e8\_audit\_bootstrap} & \textbf{$E_8$ audit \& bootstrap.} The seven $E_8$ slices as an audit raster ($E_6{\times}A_2$ reads the flavor matrix) (Part~I); the old cascade $D{=}60{-}2n$ as the same even-integer spine (Part~II); the M\"obius bootstrap --- $\gcar{=}5$ and the ``$8$'' in $\cthree$ as overdetermined fixed points, only $\pi$ irreducible (Part~III). \\
 \texttt{tfpt\_4\_frontier} & \textbf{Frontier.} The honest status of $\eta_B$, $m_p/m_e$, Koide, dark matter and quantum gravity --- the genuine handle, the precision, and what is \emph{not} forced onto the ladder. \\
-\texttt{tfpt\_horizon\_readouts} \textbf{(App.~H)} & \textbf{Appendix~H --- horizon unit system (reframe, not new physics).} One seam constant $\cthree{=}\tfrac1{8\pi}$ as the universal horizon thermal code: Hawking/de Sitter/Unruh, BH thermodynamics, Page, scrambling, Nariai bound, $v_{\rm GW}{=}c$ --- standard physics in seam units, two compiler fingerprints ($1920{=}|W(D_5)|$, $|\mu_4|{=}4$). \\
+\texttt{tfpt\_research\_contracts} & \textbf{Research contracts.} The open gates as numbered contracts with lemma chains and closing theorems: $(U_{\mathrm{wall}})$ (now reduced to the selector triangle: $(d,n)\Rightarrow R$ columnwise, residue $=$ three atom pairings) and $G_{\mathrm{metric}}/G_{\mathrm{net}}$ (the index-$4$ seam-net identification --- one theorem, three doors). \\
+\texttt{tfpt\_horizon\_readouts} \textbf{(App.~H)} & \textbf{Appendix~H --- horizon unit system (reframe, not new physics).} One seam constant $\cthree{=}\tfrac1{8\pi}$ as the universal horizon thermal code: Hawking/de Sitter/Unruh, BH thermodynamics, Page, scrambling, Nariai bound, $v_{\rm GW}{=}c$ --- standard physics in seam units, two compiler fingerprints ($1920{=}|W(D_5)|$, $|\mu_4|{=}4$); plus the Nariai/anchor surface, the dual anchor and the resummed seam clock (v101--v138). \\
+\texttt{origin\_theory} & \textbf{Origin Theory.} Why no free fundamental number remains: the $(\gcar,\Nfam)$ skeleton, the triply-forced $8$, the order-$30$ Coxeter cycle, one boundary transport for flavor and horizon, the gapped unique attractor; \tI/\tL\ core plus one honestly-typed \tP\ cyclic interpretation. \\
 \bottomrule
 \end{tabularx}
 \end{center}
@@ -265,7 +272,7 @@ documents where they belong --- the group-level closure $(\mathrm{Spin}(10){\tim
 document~1 (closed), and the H2 splitting type, the Starobinsky scalaron mass, the $\theta_{12}$ texture and
 the quark $c$ in document~2 (the first two closed; the quark \emph{ratios} now closed combinatorially
 (v49/v71), only the \emph{absolute} scale a $U_{\mathrm{point}}$ anchor; $\theta_{12}$ the
-seam-misalignment residual). Five companion files (plus this introduction) instead of a dozen, each result
+seam-misalignment residual). Seven companion files (plus this introduction), each result
 where it logically lives.
 
 % =====================================================================
@@ -401,18 +408,11 @@ $\Lambda,A_s$ & seam det.\ / $R^2$ scalaron & $\cthree$ & \tP & $\Lambda$, $A_s,
 \noindent Reading the table top-to-bottom is reading the
 theory: two red axioms in, everything else a consequence with exactly one failure mode each.
 
-\begin{figure}[ht]
-\centering
-\includegraphics[width=0.92\linewidth]{figures/status_heatmap.pdf}
-\caption{Status heatmap, generated directly from the single source of truth
-\texttt{verification/status\_ledger.csv}. Grey $=$ axiom, blue $=$ formal/lattice, green $=$ numerical,
-gold $=$ physical/conditional, red $=$ open. Each row carries a claim ID (\texttt{E8.GLU.01}, \dots) that
-resolves to a ledger row with its dependencies and verification script. The ledger is \emph{versioned}: each
-row has \texttt{active} and \texttt{canonical\_status}/\texttt{supersedes} fields, so claims that were later
-superseded (e.g.\ the early ``flavor gate open'' rows, now \emph{ratios closed} via \texttt{FLAV.RIGID}) are
-marked inactive and drawn dimmed --- the canonical status is the only one read as current.}
-\label{fig:statusheat}
-\end{figure}
+\noindent\emph{The ledger itself is versioned:} each row of \texttt{verification/status\_ledger.csv}
+carries a claim ID, its dependencies, its verification script, and \texttt{active}/%
+\texttt{canonical\_status}/\texttt{supersedes} fields, so claims that were later superseded (e.g.\ the
+early ``flavor gate open'' rows, now \emph{ratios closed} via \texttt{FLAV.RIGID}) are marked inactive ---
+the canonical status is the only one read as current.
 
 \begin{keybox}[The compact status formula (three honest layers)]
 \[
@@ -466,7 +466,13 @@ transport is minimally complete (v111), and the one quasi-free kernel --- rank $
 block, $8$ seam hull --- is the defining datum of the free net the gate already posits (v113), so
 closing $G_{\mathrm{net}}$ also closes the carrier selection \tL; $(F_{\mathrm{frontier}})\to F_{\mathrm{transfer}}$
 --- named QFT/cosmology \emph{transfer} interfaces (Koide source$\to$pole, $\eta_B$ Boltzmann, axion relic,
-$m_p/m_e$), never compiler powers. The status card:
+$m_p/m_e$), never compiler powers. \emph{Latest reductions (v134--v140):} the flavor selector residue
+R4$'$ is now ``derive \emph{three atom pairings}'' --- $d=\tfrac32a-2\cdot\mathbf1$ is pure anchor data
+and $(d,n)$ forces $R$ \emph{columnwise} (v136/v139); the sheet/parity question \texttt{GATE.QGEO}
+collapses to \emph{one} $\Z_3$ choice (the canonical map exists and is Schur-rigid, v137/v140); and the
+seam quantum clock R1 is \emph{typed closed} --- the reduced clock is an edge-sector object whose budget
+matches the external Volkov--Wipf edge exactly ($-\tfrac83=2\times(-\tfrac43)$), while the full 4d
+determinant is the gravity firewall (v138). The status card:
 \begin{center}\footnotesize
 \renewcommand{\arraystretch}{1.18}
 \begin{tabularx}{\linewidth}{@{}lcY@{}}
@@ -487,6 +493,9 @@ $m_p/m_e$ & \tA & cross-sector QCD/EW ratio \\
 $N_\star$ & \tP & reheating input, $N_\star\simeq57$ (continuous) \\
 $a=(1,1,2)$ & \tL/\tP & forced by $4=2+1+1$, conditional on the carrier \\
 carrier selection $g{=}5$ (QBL) & \tI/\tL\,$+$\,\tP & theorem chain v108--v113: sheet-odd kernel, self-counting channel, transport degree $2$, one quasi-free kernel (rank $=c$); residue $=$ the $G_{\mathrm{net}}$ premise itself --- gate closes $\Rightarrow$ carrier \tL \\
+selector establishment R4$'$ & \tI\,$+$\,\tP & $(d,n)\Rightarrow R$ columnwise (v136); $d$ pure anchor data, $n$ unique from pairings $(2,8,121)$ on the frame $(\mathbf1,a,\sigma)$, $\det{=}11$ (v139); residue $=$ derive the three pairings \\
+sheet/parity \texttt{GATE.QGEO} & \tI\,$+$\,\tP & $H^1$ characters $=$ $\operatorname{Spec}(Q_+)$ $=$ $A_3$ exponents (v137); canonical map Schur-rigid; residue $=$ \emph{one} $\Z_3$ choice (v140) \\
+seam quantum clock R1 & \tI\,$+$\,\tP & typed closed: resummed clock $=$ entropy power law (v124--v133); external VW edge $=2\times$ reduced budget; full 4d det $=$ firewall (v138) \\
 $E_8$ Lean & \tF$\to$\tL & hardening, not a blocker (script-certified) \\
 \bottomrule
 \end{tabularx}
@@ -694,8 +703,11 @@ numerological. (Audit level; all identities machine-verified.)
 \item \textbf{Flavor residual --- ratios closed; only the absolute scale is the wall-selection.}
       Mehta--Seshadri supplies the equivalence-class framework (stable parabolic $\leftrightarrow$ unitary
       representation); the algebraic selector $R$, the $Q$ spectrum and the splitting type are fixed (now
-      \emph{derived}: $\det R=8$ lattice, $\operatorname{Spec}(Q_+)$ from $D_4$, v69/v70), and the
-      charged-lepton amplitudes are closed. The quark mass \emph{ratios} ($c_u/c_d=\tfrac{55}{117}$ etc.) are
+      \emph{derived}: $\det R=8$ lattice, $\operatorname{Spec}(Q_+)$ from $D_4$, v69/v70; since
+      v136/v139 the dual pair $(d,n)$ forces $R$ \emph{columnwise}, $d$ is pure anchor data, and
+      $\operatorname{Spec}(Q_+)=(1,2,3)$ is the $A_3$-exponent grading on the seam curve's cohomology,
+      v137), and the charged-lepton amplitudes are closed. The quark mass \emph{ratios}
+      ($c_u/c_d=\tfrac{55}{117}$ etc.) are
       then \emph{constant} on this discrete selector stratum (Readout Rigidity, v49/v71) --- integer Pl\"ucker
       readouts, no transcendental solve. Only the \emph{absolute} amplitude scale reduces to the selected
       \emph{polystable} point on the parabolic stability wall ($U_{\mathrm{point}}$, an anchor; Research
@@ -722,8 +734,8 @@ now \emph{closed, reduced or typed} rather than open-ended --- a qualitative jum
 of completion. \emph{(Details and proof chains: document~2, \texttt{tfpt\_2\_standard\_model}, Part~III.)}
 
 \needspace{0.5\textheight}
-\begin{keybox}[The TOE-completion ledger --- what is done, and what genuinely remains]
-A theory-of-everything must close the discrete structure, the dimensionless constants, the mass
+\begin{keybox}[The closure ledger --- what is done, and what genuinely remains]
+A complete theory must close the discrete structure, the dimensionless constants, the mass
 spectrum, gravity, and the quantum measure. The current state, graded honestly:
 \begin{center}\footnotesize
 \renewcommand{\arraystretch}{1.2}
@@ -737,7 +749,8 @@ bootstrap $(g,\mu){=}(5,4)$, ``$8$'' in $\cthree$ & \tL & --- complete (reverse 
 fine structure $\ainv$ & \tN & --- \textbf{existence+uniqueness proved}; value is a numerical fixed point (ledger \texttt{EM.FP.01}), Ward origin \tP \\
 fermion masses ($\phiz$-ladder) & \tI/\tA & leptons exact; quark \emph{ratios} closed (Pl\"ucker, v49/v71); absolute scale $=$ anchor \\
 mixings $\theta_{13},\theta_{23},\theta_{12}$ & \tN/\tP & $\theta_{12}$ cond.\ derived; $\theta_{23}$ maximal \\
-flavour matrix / H2 & \tI & up to Mehta--Seshadri unitarity (U), a Paper-3 input \\
+flavour matrix / H2 & \tI & dictionary \emph{exact} (hexagon $=$ twisted family spectrum, addresses pinned, margins forced, v118--v122); $R$ forced columnwise by $(d,n)$ (v136/v139); residue $=$ three atom pairings \\
+seam quantum clock (R1) & \tI/\tP & typed closed: reduced edge-sector clock (v124--v133); external VW edge $=2\times$ reduced budget, full 4d det $=$ firewall (v138) \\
 inflation $A_s,n_s,r$, scalaron $M$ & \tN & parameter-free given $M_{\rm Star}{=}M_{\rm scal}$ \\
 \midrule
 \multicolumn{3}{@{}l}{\textit{genuinely open --- the actual TOE remainder}}\\
@@ -821,6 +834,12 @@ amplitude $A_s$ &
 neutron EDM &
   $\theta_{\mathrm{eff}}=0\Rightarrow d_n$ essentially null (structure $+$ RP) &
   \textbf{PSI~nEDM} / SNS (running) & \tI \\
+CP phase $\delta_{\mathrm{CKM}}$ &
+  $\delta=\tfrac\pi3+3\lambda^2=66.96^\circ$ (frozen of record, v88); survives at $+0.98\sigma$ vs $\gamma_{\mathrm{PDG}}$ &
+  \textbf{LHCb} / Belle~II $\gamma$ combination; decision at $\sigma_\gamma\le0.96^\circ$ & \tN \\
+cosmic birefringence $\beta$ &
+  $\beta=\tfrac{\phiz}{4\pi}=0.2424^\circ$ (seam readout) &
+  ACT~DR6 ($0.4\sigma$ agreement); \textbf{Simons Observatory} / LiteBIRD sharpen & \tP \\
 $0\nu\beta\beta$ / ordering &
   Majorana branch; normal-ordering preference &
   \textbf{LEGEND / nEXO}, DUNE, KATRIN & \tP \\
