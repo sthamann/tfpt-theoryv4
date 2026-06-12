@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 09:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 09:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -917,7 +917,49 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthC=\skip78
 \f@nch@widthR=\skip79
 \@temptokenb=\toks52
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowinset=\dimen312
+\pgfarrowlength=\dimen313
+\pgfarrowwidth=\dimen314
+\pgfarrowlinewidth=\dimen315
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryfit.code.tex
+File: tikzlibraryfit.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarybackgrounds.code.tex
+File: tikzlibrarybackgrounds.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@layerbox@background=\box85
+\pgf@layerboxsaved@background=\box86
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.misc.code.tex
+File: tikzlibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.misc.code.tex
+File: pgflibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (./tfpt_figures.tex))
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 36
 .
 
@@ -927,7 +969,7 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 (/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count350
-\l__pdf_internal_box=\box85
+\l__pdf_internal_box=\box87
 )
 (./tfpt_5_redteam.aux)
 \openout1 = `tfpt_5_redteam.aux'.
@@ -988,13 +1030,13 @@ LaTeX Font Info:    ... okay on input line 36.
 (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count351
-\scratchdimen=\dimen312
-\scratchbox=\box86
+\scratchdimen=\dimen316
+\scratchbox=\box88
 \nofMPsegments=\count352
 \nofMParguments=\count353
 \everyMPshowfont=\toks53
 \MPscratchCnt=\count354
-\MPscratchDim=\dimen313
+\MPscratchDim=\dimen317
 \MPnumerator=\count355
 \makeMPintoPDFobject=\count356
 \everyMPtoPDFconversion=\toks54
@@ -1110,11 +1152,13 @@ al/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/202
 st/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/d
 vips/lm/lm-mathsy.enc}]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 83.
+(Font)              <9> on input line 44.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 86.
+(Font)              <14.4> on input line 86.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 89.
 
-Underfull \hbox (badness 1817) in paragraph at lines 85--88
+Underfull \hbox (badness 1817) in paragraph at lines 88--91
 \T1/lmr/m/n/10.95 (+20) seam--Calderón bound-ary mea-sure with the $\OT1/lmr/m/
 n/10.95 (+20) (\OML/lmm/m/it/10.95 E\OT1/lmr/m/n/10.95 (+20) 8)[]$ \T1/lmr/m/n/
 10.95 (+20) lat-tice net, car-rier sub-net $\OT1/lmr/m/n/10.95 (+20) (\OML/lmm/
@@ -1123,23 +1167,25 @@ m/it/10.95 D\OT1/lmr/m/n/10.95 (+20) 5)[] \OMS/lmsy/m/n/10.95 ^^B
 
 
 
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-14.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 9
+2.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [2{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
 
 [3{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <9> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 203.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 206.
 
-Underfull \hbox (badness 10000) in paragraph at lines 203--203
+Underfull \hbox (badness 10000) in paragraph at lines 206--206
 []\T1/lmr/bx/n/10 (+20) Follow-up --- the ver-dicts were then used as a work-li
 st [][L][]/[][I][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 229--229
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 232--232
 []\T1/lmr/bx/n/10 (+20) Second follow-up round [][L][]/[][N][] ([]\T1/lmr/bx/n/
 9 (+20) [\T1/lmtt/b/n/9 verification/v87_bulk_uniqueness_reduction.py\T1/lmr/bx
 /n/9 (+20) ][]\T1/lmr/bx/n/10 (+20) ,
@@ -1147,9 +1193,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 229--229
 
 
 
-[4]
+[5]
 
-[5] (./tfpt_5_redteam.aux)
+[6] (./tfpt_5_redteam.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1158,13 +1204,13 @@ Package rerunfilecheck Info: File `tfpt_5_redteam.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 32603 strings out of 473190
- 643300 string characters out of 5715801
- 1117681 words of memory out of 5000000
- 54974 multiletter control sequences out of 15000+600000
- 684311 words of font info for 259 fonts, out of 8000000 for 9000
+ 33917 strings out of 473190
+ 677331 string characters out of 5715801
+ 1166157 words of memory out of 5000000
+ 56252 multiletter control sequences out of 15000+600000
+ 688221 words of font info for 264 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 116i,13n,121p,1011b,1049s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 116i,13n,121p,1011b,1053s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/lo
 cal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texliv
 e/2025/texmf-dist/fonts/type1/public/lm/lmbx7.pfb></usr/local/texlive/2025/texm
@@ -1172,27 +1218,30 @@ f-dist/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive/2025/texmf-dist/font
 s/type1/public/lm/lmbxi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/p
 ublic/lm/lmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/l
 mmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb>
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local
-/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/20
-25/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-di
-st/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/ty
-pe1/public/lm/lmr5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/l
-m/lmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb><
-/usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/t
-exlive/2025/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/202
-5/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2025/texmf-di
-st/fonts/type1/public/lm/lmri8.pfb></usr/local/texlive/2025/texmf-dist/fonts/ty
-pe1/public/lm/lmri9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/
-lm/lmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy7.p
-fb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/lo
-cal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/local/texliv
-e/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2025/tex
-mf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/local/texlive/2025/texmf-dist/fon
-ts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tfpt_5_redteam.pdf (5 pages, 523811 bytes).
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local
+/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/20
+25/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2025/texmf-di
+st/fonts/type1/public/lm/lmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/ty
+pe1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/
+lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr5.pfb
+></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local
+/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/202
+5/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2025/texmf-dist
+/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1
+/public/lm/lmri10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm
+/lmri12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri8.pfb
+></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri9.pfb></usr/loca
+l/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/
+2025/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2025/texmf-
+dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/
+type1/public/lm/lmsy9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/publi
+c/lm/lmtk10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt1
+0.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr
+/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on tfpt_5_redteam.pdf (6 pages, 585504 bytes).
 PDF statistics:
- 239 PDF objects out of 1000 (max. 8388607)
- 148 compressed objects within 2 object streams
- 19 named destinations out of 1000 (max. 500000)
- 67229 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 269 PDF objects out of 1000 (max. 8388607)
+ 167 compressed objects within 2 object streams
+ 20 named destinations out of 1000 (max. 500000)
+ 69277 words of extra memory for PDF output out of 74296 (max. 10000000)
 

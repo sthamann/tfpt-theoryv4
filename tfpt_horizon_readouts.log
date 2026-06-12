@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 09:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 09:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -917,7 +917,49 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthC=\skip78
 \f@nch@widthR=\skip79
 \@temptokenb=\toks52
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowinset=\dimen312
+\pgfarrowlength=\dimen313
+\pgfarrowwidth=\dimen314
+\pgfarrowlinewidth=\dimen315
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryfit.code.tex
+File: tikzlibraryfit.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarybackgrounds.code.tex
+File: tikzlibrarybackgrounds.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@layerbox@background=\box85
+\pgf@layerboxsaved@background=\box86
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.misc.code.tex
+File: tikzlibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.misc.code.tex
+File: pgflibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (./tfpt_figures.tex))
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 36
 .
 
@@ -927,7 +969,7 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 (/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count350
-\l__pdf_internal_box=\box85
+\l__pdf_internal_box=\box87
 )
 (./tfpt_horizon_readouts.aux)
 \openout1 = `tfpt_horizon_readouts.aux'.
@@ -988,13 +1030,13 @@ LaTeX Font Info:    ... okay on input line 36.
 (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count351
-\scratchdimen=\dimen312
-\scratchbox=\box86
+\scratchdimen=\dimen316
+\scratchbox=\box88
 \nofMPsegments=\count352
 \nofMParguments=\count353
 \everyMPshowfont=\toks53
 \MPscratchCnt=\count354
-\MPscratchDim=\dimen313
+\MPscratchDim=\dimen317
 \MPnumerator=\count355
 \makeMPintoPDFobject=\count356
 \everyMPtoPDFconversion=\toks54
@@ -1117,107 +1159,111 @@ al/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/202
 5/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2025/texmf-di
 st/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/d
 vips/lm/lm-mathsy.enc}]) (./tfpt_status.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 95--95
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 71.
+
+
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 7
+1.
+(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [2{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 98--98
 []|$[] \OT1/lmr/m/n/10 (+20) = \OML/lmm/m/it/10 M[]=[]$\T1/lmr/m/n/10 (+20) ,
  []
 
 
-
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 9
-8.
-(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [2{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 112.
+LaTeX Font Warning: Command \small invalid in math mode on input line 115.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 118.
+(Font)              <14.4> on input line 121.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 118.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 118.
+(hyperref)                removing `math shift' on input line 121.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 118.
+(hyperref)                removing `subscript' on input line 121.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 123.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 121.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 151.
+LaTeX Font Warning: Command \small invalid in math mode on input line 126.
 
 
 
 [3]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 162.
+LaTeX Font Warning: Command \small invalid in math mode on input line 154.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 165.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 166.
+(hyperref)                removing `math shift' on input line 169.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Lambda' on input line 166.
+(hyperref)                removing `\Lambda' on input line 169.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 166.
+(hyperref)                removing `math shift' on input line 169.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 172.
+LaTeX Font Warning: Command \small invalid in math mode on input line 175.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 177.
+LaTeX Font Warning: Command \small invalid in math mode on input line 180.
 
+
+
+[4{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <9> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 188.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 193.
 
-Underfull \hbox (badness 10000) in paragraph at lines 188--188
+Underfull \hbox (badness 10000) in paragraph at lines 193--193
 []\T1/lmr/bx/n/10 (+20) Nariai $\OT1/lmr/m/n/10 (+20) =$ \T1/lmr/bx/n/10 (+20) 
 the an-chor; the Koide $\OT1/lmr/m/n/10 (+20) 2\OML/lmm/m/it/10 =\OT1/lmr/m/n/1
 0 (+20) 3$ \T1/lmr/bx/n/10 (+20) is the en-tropy bound [][I][]
  []
 
 
-
-[4{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 232--232
+Underfull \hbox (badness 10000) in paragraph at lines 237--237
 []\T1/lmr/bx/n/10 (+20) The dual an-chor: the in-verse fla-vor re-sponse \T1/lm
 r/bx/it/10 (+20) is \T1/lmr/bx/n/10 (+20) the Nar-iai root [][I][]
  []
 
-<figures/sds_cover.pdf, id=145, 491.436pt x 274.626pt>
+
+
+[5]
+<figures/sds_cover.pdf, id=154, 491.436pt x 274.626pt>
 File: figures/sds_cover.pdf Graphic file (type pdf)
 <use figures/sds_cover.pdf>
-Package pdftex.def Info: figures/sds_cover.pdf  used on input line 254.
+Package pdftex.def Info: figures/sds_cover.pdf  used on input line 259.
 (pdftex.def)             Requested size: 363.96695pt x 203.40443pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<figures/nariai_entropy.pdf, id=146, 621.52202pt x 252.945pt>
+<figures/nariai_entropy.pdf, id=155, 621.52202pt x 252.945pt>
 File: figures/nariai_entropy.pdf Graphic file (type pdf)
 <use figures/nariai_entropy.pdf>
-Package pdftex.def Info: figures/nariai_entropy.pdf  used on input line 263.
+Package pdftex.def Info: figures/nariai_entropy.pdf  used on input line 268.
 (pdftex.def)             Requested size: 438.62866pt x 178.51537pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/cover_twins.pdf, id=147, 635.97598pt x 267.39899pt>
+<figures/cover_twins.pdf, id=156, 635.97598pt x 267.39899pt>
 File: figures/cover_twins.pdf Graphic file (type pdf)
 <use figures/cover_twins.pdf>
-Package pdftex.def Info: figures/cover_twins.pdf  used on input line 272.
+Package pdftex.def Info: figures/cover_twins.pdf  used on input line 277.
 (pdftex.def)             Requested size: 438.62866pt x 184.42389pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 1521) in paragraph at lines 279--279
+Underfull \hbox (badness 1521) in paragraph at lines 284--284
 []\T1/lmr/bx/n/10 (+20) One ori-en-ta-tion: the an-chor is the \T1/lmr/bx/it/10
  (+20) sta-tion-ary re-peller \T1/lmr/bx/n/10 (+20) in both sec-tors [][I][]/[]
 [P][]
@@ -1225,35 +1271,36 @@ Underfull \hbox (badness 1521) in paragraph at lines 279--279
 
 
 
-[5]
-<figures/orientation.pdf, id=155, 635.97598pt x 267.39899pt>
+[6 <./figures/sds_cover.pdf>]
+<figures/orientation.pdf, id=232, 635.97598pt x 267.39899pt>
 File: figures/orientation.pdf Graphic file (type pdf)
 <use figures/orientation.pdf>
-Package pdftex.def Info: figures/orientation.pdf  used on input line 307.
+Package pdftex.def Info: figures/orientation.pdf  used on input line 312.
 (pdftex.def)             Requested size: 438.62866pt x 184.42389pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--314
+Underfull \hbox (badness 10000) in paragraph at lines 319--319
 []\T1/lmr/bx/n/10 (+20) The tri-sec-tion nor-mal form: the canon-i-cal co-or-di
 -nate ex-ists [][I][]
  []
 
-<figures/trisection.pdf, id=157, 534.79799pt x 274.626pt>
+
+
+[7 <./figures/nariai_entropy.pdf> <./figures/cover_twins.pdf>]
+<figures/trisection.pdf, id=385, 534.79799pt x 274.626pt>
 File: figures/trisection.pdf Graphic file (type pdf)
 <use figures/trisection.pdf>
-Package pdftex.def Info: figures/trisection.pdf  used on input line 344.
+Package pdftex.def Info: figures/trisection.pdf  used on input line 349.
 (pdftex.def)             Requested size: 401.2978pt x 206.07375pt.
 
-
-[6 <./figures/sds_cover.pdf>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 351--351
+Underfull \hbox (badness 10000) in paragraph at lines 356--356
 []\T1/lmr/bx/n/10 (+20) The clas-si-cal clock speaks an-chor --- and the hon-es
 t $\OT1/lmr/m/n/10 (+20) (2\OML/lmm/m/it/10 =\OT1/lmr/m/n/10 (+20) 3)$\T1/lmr/b
 x/n/10 (+20) -test [][I][]/[][P][]
@@ -1261,59 +1308,60 @@ x/n/10 (+20) -test [][I][]/[][P][]
 
 
 
-[7 <./figures/nariai_entropy.pdf> <./figures/cover_twins.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 376--376
+[8 <./figures/orientation.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 381--381
 []\T1/lmr/bx/n/10 (+20) The quantum-clock tar-get, made quan-ti-ta-tive [][I][]
 /[][P][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 397--397
+Underfull \hbox (badness 10000) in paragraph at lines 402--402
 []\T1/lmr/bx/n/10 (+20) The re-summed clock: the bend has a closed form [][I][]
 /[][P][]
  []
 
 
 
-[8 <./figures/orientation.pdf>]
-
 [9 <./figures/trisection.pdf>]
-Overfull \hbox (1.03285pt too wide) in paragraph at lines 522--532
+
+[10]
+Overfull \hbox (1.03285pt too wide) in paragraph at lines 527--537
 \T1/lmr/m/n/10 (-20) --- confirmed independently by numerical continuation of t
 he heat trace ($\OMS/lmsy/m/n/10 ^^X \OT1/lmr/m/n/10 (-20) 10[]$\T1/lmr/m/n/10 
 (-20) ): \T1/lmr/bx/n/10 (-20) the det-ratio anomaly
  []
 
 
-
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 534--534
+Underfull \hbox (badness 10000) in paragraph at lines 539--539
 []\T1/lmr/bx/n/10 (+20) The zeta bud-get: the re-duced route car-ries the an-ch
 or ra-tios [][I][]/[][P][]
  []
 
-<figures/seam_units.pdf, id=545, 621.52202pt x 445.18318pt>
+
+
+[11]
+<figures/seam_units.pdf, id=554, 621.52202pt x 445.18318pt>
 File: figures/seam_units.pdf Graphic file (type pdf)
 <use figures/seam_units.pdf>
-Package pdftex.def Info: figures/seam_units.pdf  used on input line 580.
+Package pdftex.def Info: figures/seam_units.pdf  used on input line 585.
 (pdftex.def)             Requested size: 419.95967pt x 300.81174pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-
-[11]
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 597.
+LaTeX Font Warning: Command \small invalid in math mode on input line 602.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 606.
+LaTeX Font Warning: Command \small invalid in math mode on input line 611.
 
 
 
-[12 <./figures/seam_units.pdf>]
+[12]
 
-[13] (./tfpt_horizon_readouts.aux)
+[13 <./figures/seam_units.pdf>]
+
+[14] (./tfpt_horizon_readouts.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1322,11 +1370,11 @@ Package rerunfilecheck Info: File `tfpt_horizon_readouts.out' has not changed.
 (rerunfilecheck)             Checksum: B4F047632898351A3B2E38CB6FDE3B2C;1955.
  ) 
 Here is how much of TeX's memory you used:
- 32855 strings out of 473190
- 647487 string characters out of 5715801
- 1121909 words of memory out of 5000000
- 55069 multiletter control sequences out of 15000+600000
- 709676 words of font info for 332 fonts, out of 8000000 for 9000
+ 34218 strings out of 473190
+ 682248 string characters out of 5715801
+ 1171385 words of memory out of 5000000
+ 56396 multiletter control sequences out of 15000+600000
+ 713586 words of font info for 337 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  116i,13n,121p,1018b,1050s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/lo
@@ -1339,29 +1387,31 @@ lmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi5.pfb>
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local
 /texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/20
 25/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2025/texmf-di
-st/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/ty
-pe1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/
-lm/lmr5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb>
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/
-texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2025
-/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2025/texmf-dist/
-fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type
-1/public/lm/lmri12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/l
-m/lmri8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri9.pfb
-></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/loc
-al/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/
-2025/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2025/texmf-
-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/
-type1/public/lm/lmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/publi
-c/lm/lmtk10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt1
-0.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr
-/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtti10.pfb></usr/local/te
-xlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loca
-l/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tfpt_horizon_readouts.pdf (13 pages, 758112 bytes).
+st/fonts/type1/public/lm/lmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/ty
+pe1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/
+lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr5.pfb
+></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local
+/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/202
+5/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2025/texmf-dist
+/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1
+/public/lm/lmri10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm
+/lmri12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri8.pfb
+></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri9.pfb></usr/loca
+l/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/
+2025/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2025/texmf-
+dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/
+type1/public/lm/lmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/publi
+c/lm/lmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy9.
+pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/
+local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texl
+ive/2025/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/local/texlive/2025/te
+xmf-dist/fonts/type1/public/lm/lmtti10.pfb></usr/local/texlive/2025/texmf-dist/
+fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-d
+ist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on tfpt_horizon_readouts.pdf (14 pages, 806614 bytes).
 PDF statistics:
- 844 PDF objects out of 1000 (max. 8388607)
- 341 compressed objects within 4 object streams
- 40 named destinations out of 1000 (max. 500000)
- 84723 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 864 PDF objects out of 1000 (max. 8388607)
+ 354 compressed objects within 4 object streams
+ 41 named destinations out of 1000 (max. 500000)
+ 86771 words of extra memory for PDF output out of 89155 (max. 10000000)
 

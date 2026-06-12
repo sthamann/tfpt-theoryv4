@@ -46,7 +46,7 @@ def _lean_read_dir():
 LEAN_DIR = _lean_read_dir()                        # repo path (where the files actually live)
 
 TEX = [
-    "introduction.tex", "tfpt_docset.tex", "tfpt_style.tex", "tfpt_status.tex", "changelog.tex",
+    "introduction.tex", "tfpt_docset.tex", "tfpt_style.tex", "tfpt_status.tex", "tfpt_figures.tex", "changelog.tex",
     "tfpt_1_architecture_e8.tex", "tfpt_2_standard_model.tex",
     "tfpt_3_e8_audit_bootstrap.tex", "tfpt_4_frontier.tex", "tfpt_5_redteam.tex",
     "tfpt_horizon_readouts.tex", "tfpt_research_contracts.tex",

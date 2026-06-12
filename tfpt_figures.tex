@@ -1,0 +1,120 @@
+% ---------------------------------------------------------------------
+%  tfpt_figures.tex -- shared, reusable TikZ figure macros for every
+%  TFPT document.  \input by tfpt_style.tex (which loads tikz + the
+%  needed libraries + etoolbox).  Each macro draws a self-contained
+%  centred figure; nothing is drawn until the macro is called.
+%
+%    \TFPTclaimstack[zone]  -- the architecture claim stack (B3); the
+%                              optional zone in {axioms,anchor,compiler,
+%                              sm,bridges,frontier} is highlighted.
+%    \TFPTanchorcockpit      -- the anchor a=(1,1,2) cockpit (B4)
+%    \TFPTeightglue          -- the D5 (+) A3 +mu4 => E8 glue (B5)
+%    \TFPTmotif              -- the 2/3 motif map (B6)
+%    \TFPTactionkfive        -- the K5 action-lattice mnemonic (B7)
+% ---------------------------------------------------------------------
+
+% ===== B3: the architecture claim stack =========================
+\newcommand{\tfhl}[1]{\ifdefstring{\tfcur}{#1}{cbhi}{cbnl}}
+\newcommand{\TFPTclaimstack}[1][none]{%
+\def\tfcur{#1}%
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,
+  cb/.style={rounded corners=2pt,inner sep=4pt,text width=118mm,align=center,minimum height=8.5mm},
+  cbnl/.style={line width=0.5pt}, cbhi/.style={line width=1.5pt},
+  ar/.style={-{Stealth[length=2.2mm]},tfgray,semithick}]
+  \node[cb,fill=tfred!8,draw=tfred!75!black,\tfhl{axioms}] (axioms)
+    {\textbf{P1}\,$c_3=\tfrac1{8\pi}$ \quad \textbf{P2}\,$g_{\mathrm{car}}=5$ \ \textcolor{tfgray}{\itshape(two inputs, [A])}};
+  \node[cb,fill=tfblue!8,draw=tfblue,\tfhl{anchor},below=3.5mm of axioms] (anchor)
+    {Anchor $a=(1,1,2)$:\ $e_1,e_2,e_3=4,5,2$ \ \textcolor{tfgray}{\itshape([I$_{\mathrm{alg}}$])}};
+  \node[cb,fill=tfgreen!10,draw=tfgreen!70!black,\tfhl{compiler},below=3.5mm of anchor] (compiler)
+    {Discrete compiler:\ $D_5\oplus A_3+\mu_4\Rightarrow E_8$,\ $h=30$,\ $\varphi_0$ \ \textcolor{tfgray}{\itshape([I]/[L])}};
+  \node[cb,fill=tfgreen!7,draw=tfgreen!60!black,\tfhl{sm},below=3.5mm of compiler] (sm)
+    {SM skeleton:\ three families, hypercharges, flavor matrix $R$ \ \textcolor{tfgray}{\itshape([I])}};
+  \node[cb,fill=tfgold!12,draw=tfgold!80!black,\tfhl{bridges},below=3.5mm of sm] (bridges)
+    {Physical bridges:\ $v_{\mathrm{geo}}$,\ $G_{\mathrm{net}}$,\ $F_{\mathrm{transfer}}$ \ \textcolor{tfgray}{\itshape([B])}};
+  \node[cb,fill=tfgray!12,draw=tfgray!70!black,\tfhl{frontier},below=3.5mm of bridges] (frontier)
+    {Frontier readouts:\ $\Lambda$, inflation, $\eta_B$, dark matter, QG \ \textcolor{tfgray}{\itshape([P]/[A])}};
+  \draw[ar] (axioms)--(anchor); \draw[ar] (anchor)--(compiler);
+  \draw[ar] (compiler)--(sm);   \draw[ar] (sm)--(bridges); \draw[ar] (bridges)--(frontier);
+\end{tikzpicture}
+\end{center}}
+
+% ===== B4: the anchor cockpit ====================================
+\newcommand{\TFPTanchorcockpit}{%
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,
+  pan/.style={rounded corners=2pt,draw=tfblue!60,fill=tfblue!4,inner sep=5pt,
+    text width=46mm,align=left},
+  hd/.style={font=\bfseries\small,tfblue}]
+  \node[pan] (e) {\textbf{elementary} $e_k(a)$\\[2pt]
+     $e_1=4\to|\mu_4|$\\ $e_2=5\to g_{\mathrm{car}}$\\ $e_3=2\to|\mathbb Z_2|$\\[2pt]
+     $c_3=\tfrac1{2e_1\pi}=\tfrac1{8\pi}$};
+  \node[pan,right=4mm of e] (p) {\textbf{power sums} $p_n=2+2^n$\\[2pt]
+     $p_0,p_1,p_2,p_3=3,4,6,10$\\ $p_1p_2p_3=240=|R(E_8)|$\\ $p_4-p_3=8=\operatorname{rank}E_8$\\
+     $\Rightarrow\dim E_8=248$};
+  \node[pan,right=4mm of p] (m) {\textbf{derived motifs}\\[2pt]
+     $4,5,8,16,25,$\\ $30,41,120,240$\\[2pt]
+     \textcolor{tfgray}{\itshape one anchor,}\\ \textcolor{tfgray}{\itshape many projections}};
+  \node[hd,above=1mm of p.north] {$a=(1,1,2)$ \ \textcolor{tfgray}{\footnotesize\itshape[I$_{\mathrm{alg}}$]}};
+\end{tikzpicture}
+\end{center}}
+
+% ===== B5: the E8 glue ===========================================
+\newcommand{\TFPTeightglue}{%
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,
+  d/.style={rounded corners=2pt,draw=tfblue,fill=tfblue!6,inner sep=4pt,align=center,text width=36mm},
+  mid/.style={rounded corners=2pt,draw=tfgold!80!black,fill=tfgold!12,inner sep=4pt,align=center,text width=52mm},
+  e8/.style={rounded corners=2pt,draw=tfgreen!70!black,fill=tfgreen!10,inner sep=4pt,align=center,text width=52mm,font=\bfseries},
+  rt/.style={rounded corners=2pt,draw=tfgreen!55!black,fill=tfgreen!6,inner sep=3pt,align=center,text width=52mm},
+  side/.style={rounded corners=2pt,draw=tfgray!55,fill=tfgray!6,inner sep=4pt,align=left,text width=34mm,font=\scriptsize},
+  ar/.style={-{Stealth[length=2mm]},tfgray,semithick}]
+  \node[d] (d5) {$D_5$ discriminant\\ $\mathbb Z_4$, $q=5/4$};
+  \node[d,right=10mm of d5] (a3) {$A_3$ discriminant\\ $\mathbb Z_4$, $q=3/4$};
+  \node[mid,below=5mm of $(d5)!0.5!(a3)$] (glue) {$\mu_4$ anti-isometry\ ($q$-sum $=2$)};
+  \node[e8,below=4mm of glue] (e8) {even unimodular $E_8$ lattice};
+  \node[rt,below=4mm of e8] (rt) {$240$ roots,\ rank $8$,\ $\dim=248$};
+  \node[side,right=8mm of glue] (why) {\textbf{why unique?}\\ rank $8$\\ even\\ unimodular\\ positive definite};
+  \draw[ar] (d5)--(glue); \draw[ar] (a3)--(glue);
+  \draw[ar] (glue)--(e8); \draw[ar] (e8)--(rt);
+\end{tikzpicture}\\[2pt]
+{\scriptsize\itshape $D_5\oplus A_3+\mu_4\Rightarrow E_8$ --- the unique even unimodular rank-$8$ glue \ [I$_{\mathrm{alg}}$]/[L].}
+\end{center}}
+
+% ===== B6: the 2/3 motif map =====================================
+\newcommand{\TFPTmotif}{%
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,
+  ex/.style={rounded corners=2pt,draw=tfgreen!70!black,fill=tfgreen!8,inner sep=4pt,align=center,text width=92mm},
+  br/.style={rounded corners=2pt,draw=tfgold!80!black,fill=tfgold!12,inner sep=4pt,align=center,text width=92mm},
+  ar/.style={-{Stealth[length=2mm]},tfgray,semithick}]
+  \node[ex] (a) {$|\mathbb Z_2|/N_{\mathrm{fam}}=2/3$ \ \textcolor{tfgray}{\itshape(anchor ratio)}};
+  \node[ex,below=3mm of a] (b) {parabolic weights $\{0,\tfrac13,\tfrac23\}=\operatorname{spec}A_0^\star$};
+  \node[ex,below=3mm of b] (c) {transfer spectrum $\{1,(2/3)^6,(1/3)^6\}$,\ gap $6\log\tfrac32$};
+  \node[br,below=3mm of c] (d) {Koide target $2/3$ \ \textcolor{tfgray}{\itshape(source$\to$pole bridge [B])}};
+  \node[br,below=3mm of d] (e) {Nariai / horizon entropy bound $2/3$ \ \textcolor{tfgray}{\itshape([R]/[B])}};
+  \draw[ar] (a)--(b); \draw[ar] (b)--(c); \draw[ar] (c)--(d); \draw[ar] (d)--(e);
+\end{tikzpicture}\\[2pt]
+{\scriptsize\itshape Green: exact motif ([I]).\quad Gold: physical bridge ([B]/[R]) --- the same ratio, two epistemic types.}
+\end{center}}
+
+% ===== B7: the K5 action-lattice mnemonic ========================
+\newcommand{\TFPTactionkfive}{%
+\begin{center}
+\begin{tikzpicture}[font=\scriptsize]
+  \foreach \i in {1,...,5}{\coordinate (k\i) at ({90+72*(\i-1)}:14mm);}
+  \begin{scope}[on background layer]
+    \foreach \i in {1,...,5}{\foreach \j in {1,...,5}{\ifnum\i<\j
+      \draw[tfgray!55] (k\i)--(k\j);\fi}}
+  \end{scope}
+  \foreach \i in {1,...,5}{\fill[tfblue!70!black] (k\i) circle (1.6pt);}
+  \node[right=12mm of k1,align=left,font=\scriptsize] {%
+    $\binom51=5$\ vertices --- action $x^1$ (Hubble slot)\\
+    $\binom52=10$\ edges --- $\Lambda$ density pair $x^{10}$\\
+    $\binom53=10$\ triangles --- dual sector\\
+    $\binom54=5$\ complements --- inverse sector\\
+    $\binom55=1$\ determinant --- closure};
+\end{tikzpicture}\\[2pt]
+{\scriptsize\itshape $K_5$ on the five carrier slots; the action powers $x^{1},x^{5},x^{10}$ are its
+$\binom5k$ faces \ \textcolor{tfgray}{(mnemonic; the physical scale map stays [P]).}}
+\end{center}}

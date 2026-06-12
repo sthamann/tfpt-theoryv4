@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 09:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 09:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -917,7 +917,49 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthC=\skip78
 \f@nch@widthR=\skip79
 \@temptokenb=\toks52
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowinset=\dimen312
+\pgfarrowlength=\dimen313
+\pgfarrowwidth=\dimen314
+\pgfarrowlinewidth=\dimen315
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryfit.code.tex
+File: tikzlibraryfit.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarybackgrounds.code.tex
+File: tikzlibrarybackgrounds.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@layerbox@background=\box85
+\pgf@layerboxsaved@background=\box86
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.misc.code.tex
+File: tikzlibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.misc.code.tex
+File: pgflibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (./tfpt_figures.tex))
 \c@lemma=\count350
 \c@theorem=\count351
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 41
@@ -929,7 +971,7 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 (/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count352
-\l__pdf_internal_box=\box85
+\l__pdf_internal_box=\box87
 )
 (./tfpt_research_contracts.aux)
 \openout1 = `tfpt_research_contracts.aux'.
@@ -990,13 +1032,13 @@ LaTeX Font Info:    ... okay on input line 41.
 (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count353
-\scratchdimen=\dimen312
-\scratchbox=\box86
+\scratchdimen=\dimen316
+\scratchbox=\box88
 \nofMPsegments=\count354
 \nofMParguments=\count355
 \everyMPshowfont=\toks53
 \MPscratchCnt=\count356
-\MPscratchDim=\dimen313
+\MPscratchDim=\dimen317
 \MPnumerator=\count357
 \makeMPintoPDFobject=\count358
 \everyMPtoPDFconversion=\toks54
@@ -1115,23 +1157,25 @@ al/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/202
 st/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/d
 vips/lm/lm-mathsy.enc}])
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 83.
+(Font)              <9> on input line 49.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 87.
+(Font)              <14.4> on input line 86.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 90.
 
 
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-20.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 9
+9.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [2{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/loc
 al/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
 
 LaTeX Font Warning: Font shape `T1/lmtt/bx/it' in size <9> not available
-(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 122.
+(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 125.
 
 
-Underfull \hbox (badness 1735) in paragraph at lines 154--164
+Underfull \hbox (badness 1735) in paragraph at lines 157--167
 [][]\T1/lmr/bx/n/10.95 (+20) Lemma 4 \T1/lmr/m/n/10.95 (+20) (U3 --- $\OML/lmm/
 m/it/10.95 D[]$ \T1/lmr/m/n/10.95 (+20) fixed lo-cus as an ex-plicit va-ri-ety,
  \T1/lmr/m/it/10.95 (+20) pos-i-tive-di-men-sional\T1/lmr/m/n/10.95 (+20) )\T1/
@@ -1144,9 +1188,11 @@ lmr/bx/n/10.95 (+20) . []\T1/lmr/m/it/10.95 (+20) With
 
 [4]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <9> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 253.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 256.
 
-Underfull \hbox (badness 1902) in paragraph at lines 311--311
+
+[5]
+Underfull \hbox (badness 1902) in paragraph at lines 314--314
 []\T1/lmr/bx/n/10 (+20) The res-o-nance the-o-rem: $\OML/lmm/m/it/10 M[] \OT1/l
 mr/m/n/10 (+20) = \OT1/lmr/bx/n/10 (+20) 1  \OMS/lmsy/m/n/10 ([])  \OML/lmm/m/i
 t/10 a[] \OT1/lmr/m/n/10 (+20) = 0$ \T1/lmr/bx/n/10 (+20) --- one gauge or-bit 
@@ -1154,36 +1200,34 @@ t/10 a[] \OT1/lmr/m/n/10 (+20) = 0$ \T1/lmr/bx/n/10 (+20) --- one gauge or-bit
  []
 
 
-
-[5]
-Underfull \hbox (badness 2165) in paragraph at lines 337--337
+Underfull \hbox (badness 2165) in paragraph at lines 340--340
 []\T1/lmr/bx/n/10 (+20) The mon-odromy is the Weyl group of $\OML/lmm/m/it/10 A
 []$ \T1/lmr/bx/n/10 (+20) --- the holon-omy is ex-act [][I][]/[][N][]
  []
 
 
-Underfull \hbox (badness 2042) in paragraph at lines 364--364
+
+[6]
+Underfull \hbox (badness 2042) in paragraph at lines 367--367
 []\T1/lmr/bx/n/10 (+20) The hexagon is the sign-twisted fam-ily spec-trum --- f
 irst ex-act H2 piece [][I][]
  []
 
 
-
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 385--385
+Underfull \hbox (badness 10000) in paragraph at lines 388--388
 []\T1/lmr/bx/n/10 (+20) The ad-dress ta-ble: the lep-ton words are the com-pile
 r atoms [][I][]/[][P][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 419--463
+Underfull \hbox (badness 10000) in paragraph at lines 422--466
 \T1/lmr/bx/n/10 (+20) The dual-normal se-lec-tor: $\OT1/lmr/m/n/10 (+20) (\OML/
 lmm/m/it/10 d; n\OT1/lmr/m/n/10 (+20) )$ \T1/lmr/bx/n/10 (+20) pins $\OML/lmm/m
 /it/10 R$ \T1/lmr/bx/n/10 (+20) colum-n-wise
  []
 
 
-Underfull \hbox (badness 1102) in paragraph at lines 419--463
+Underfull \hbox (badness 1102) in paragraph at lines 422--466
 \T1/lmr/bx/n/10 (+20) ([]\T1/lmr/bx/n/9 (+20) [\T1/lmtt/b/n/9 verification/v136
 _dual_normal_selector.py\T1/lmr/bx/n/9 (+20) ][]\T1/lmr/bx/n/10 (+20) ). \T1/lm
 r/m/n/10 (+20) The se-lec-tor list shrinks once more. With
@@ -1192,7 +1236,7 @@ r/m/n/10 (+20) The se-lec-tor list shrinks once more. With
 
 
 [7]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 539
+LaTeX Font Info:    Trying to load font information for U+euf on input line 542
 .
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
@@ -1203,7 +1247,9 @@ File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
 )
 
 [8]
-Underfull \hbox (badness 7064) in paragraph at lines 596--602
+
+[9]
+Underfull \hbox (badness 7064) in paragraph at lines 599--605
 []$\OML/lmm/m/it/10 U[]$ []\T1/lmr/bx/n/10 (+20) [I][]\T1/lmr/m/n/10 (+20) : \T
 1/lmr/bx/n/10 (+20) Read-out Rigid-ity \T1/lmr/m/n/10 (+20) --- on the dis-cret
 e stra-tum $\OMS/lmsy/m/n/10 S[] \OT1/lmr/m/n/10 (+20) = \OMS/lmsy/m/n/10 f[] \
@@ -1211,7 +1257,7 @@ OML/lmm/m/it/10 R \OT1/lmr/m/n/10 (+20) =
  []
 
 
-Underfull \hbox (badness 3229) in paragraph at lines 596--602
+Underfull \hbox (badness 3229) in paragraph at lines 599--605
 \OT1/lmr/m/n/10 (+20) 8\OML/lmm/m/it/10 ; []\OT1/lmr/m/n/10 (+20) (\OML/lmm/m/i
 t/10 R\OT1/lmr/m/n/10 (+20) ) = (1\OML/lmm/m/it/10 ; \OT1/lmr/m/n/10 (+20) 1\OM
 L/lmm/m/it/10 ; \OT1/lmr/m/n/10 (+20) 8)\OML/lmm/m/it/10 ; []\OT1/lmr/m/n/10 (+
@@ -1222,7 +1268,7 @@ ad-out is \T1/lmr/m/it/10 (+20) con-stant\T1/lmr/m/n/10 (+20) ,
  []
 
 
-Underfull \hbox (badness 1931) in paragraph at lines 596--602
+Underfull \hbox (badness 1931) in paragraph at lines 599--605
 \OMS/lmsy/m/n/10 C[]\OT1/lmr/m/n/10 (+20) (\OML/lmm/m/it/10 ^^Z\OT1/lmr/m/n/10 
 (+20) ) = \OML/lmm/m/it/10 g[]\OMS/lmsy/m/n/10 k [][]\OT1/lmr/m/n/10 (+20) (\OM
 L/lmm/m/it/10 K\OT1/lmr/m/n/10 (+20) )\OMS/lmsy/m/n/10 k[]\OML/lmm/m/it/10 =\OT
@@ -1232,7 +1278,7 @@ the con-tin-u-ous $\OML/lmm/m/it/10 D[]$ \T1/lmr/m/n/10 (+20) po-
  []
 
 
-Underfull \hbox (badness 1577) in paragraph at lines 596--602
+Underfull \hbox (badness 1577) in paragraph at lines 599--605
 \T1/lmr/m/n/10 (+20) si-tion --- so $\OML/lmm/m/it/10 c[]=c[]$ \T1/lmr/m/n/10 (
 +20) needs no point unique-ness ([]\T1/lmr/m/n/9 (+20) [\T1/lmtt/m/n/9 verifica
 tion/v49_readout_rigidity.py\T1/lmr/m/n/9 (+20) ][]\T1/lmr/m/n/10 (+20) ,
@@ -1240,8 +1286,8 @@ tion/v49_readout_rigidity.py\T1/lmr/m/n/9 (+20) ][]\T1/lmr/m/n/10 (+20) ,
 
 
 
-[9]
-Overfull \hbox (1.44386pt too wide) detected at line 664
+[10]
+Overfull \hbox (1.44386pt too wide) detected at line 667
 \OML/lmm/m/it/10.95 a[] \OT1/lmr/m/n/10.95 = [] [](6\OML/lmm/m/it/10.95 E \OT1/
 lmr/m/n/10.95 + \OML/lmm/m/it/10.95 R \OT1/lmr/bx/n/10.95 1\OT1/lmr/m/n/10.95 )
  = \OMS/lmsy/m/n/10.95 ^^@[] \OT1/lmr/m/n/10.95 ([] []  \OML/lmm/m/it/10.95 R\O
@@ -1253,16 +1299,14 @@ m/n/10.95 5\OML/lmm/m/it/10.95 R[]\OT1/lmr/bx/n/10.95 1\OT1/lmr/m/n/10.95 ) = [
 
 
 
-[10]
-
 [11]
-Underfull \hbox (badness 6047) in paragraph at lines 772--772
+Underfull \hbox (badness 6047) in paragraph at lines 775--775
 []\T1/lmr/bx/n/10 (+20) Gate 2 re-duc-tion: G6 is a \T1/lmr/bx/it/10 (+20) boun
 d-ary \T1/lmr/bx/n/10 (+20) pro-jec-tive limit, not a bulk one
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 786--796
+Underfull \hbox (badness 10000) in paragraph at lines 789--799
 \T1/lmr/bx/n/10 (+20) And that bound-ary mea-sure is a \T1/lmr/bx/it/10 (+20) r
 ig-or-ously con-structed \T1/lmr/bx/n/10 (+20) net
  []
@@ -1271,7 +1315,9 @@ ig-or-ously con-structed \T1/lmr/bx/n/10 (+20) net
 
 [12]
 
-[13] (./tfpt_research_contracts.aux)
+[13]
+
+[14] (./tfpt_research_contracts.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1281,13 +1327,13 @@ Package rerunfilecheck Info: File `tfpt_research_contracts.out' has not changed
 (rerunfilecheck)             Checksum: EA0F840AA5FE10FE18FBCF540447189D;594.
  ) 
 Here is how much of TeX's memory you used:
- 33037 strings out of 473190
- 649557 string characters out of 5715801
- 1121592 words of memory out of 5000000
- 55105 multiletter control sequences out of 15000+600000
- 732792 words of font info for 420 fonts, out of 8000000 for 9000
+ 34334 strings out of 473190
+ 683345 string characters out of 5715801
+ 1174068 words of memory out of 5000000
+ 56371 multiletter control sequences out of 15000+600000
+ 732661 words of font info for 419 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 116i,13n,121p,1020b,1051s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 116i,13n,121p,1020b,1055s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.
 pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/
 local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texl
@@ -1313,16 +1359,17 @@ al/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive
 /2025/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2025/texmf
 -dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts
 /type1/public/lm/lmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/publ
-ic/lm/lmtk10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtk
-o10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></
-usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/local/t
-exlive/2025/texmf-dist/fonts/type1/public/lm/lmtti10.pfb></usr/local/texlive/20
-25/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texliv
-e/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tfpt_research_contracts.pdf (13 pages, 739398 bytes).
+ic/lm/lmsy9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtk1
+0.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtko10.pfb></u
+sr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/t
+exlive/2025/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/local/texlive/2025
+/texmf-dist/fonts/type1/public/lm/lmtti10.pfb></usr/local/texlive/2025/texmf-di
+st/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texm
+f-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on tfpt_research_contracts.pdf (14 pages, 762376 bytes).
 PDF statistics:
- 342 PDF objects out of 1000 (max. 8388607)
- 224 compressed objects within 3 object streams
- 36 named destinations out of 1000 (max. 500000)
+ 357 PDF objects out of 1000 (max. 8388607)
+ 235 compressed objects within 3 object streams
+ 37 named destinations out of 1000 (max. 500000)
  88757 words of extra memory for PDF output out of 89155 (max. 10000000)
 

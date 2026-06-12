@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 09:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 09:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1029,7 +1029,8 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthC=\skip84
 \f@nch@widthR=\skip85
 \@temptokenb=\toks53
-))
+)
+(./tfpt_figures.tex))
 \c@theorem=\count357
 \c@proposition=\count358
 \c@lemma=\count359
@@ -1038,16 +1039,13 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \c@definition=\count362
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 95
 .
-
-(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmr.fd
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-(/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count363
 \l__pdf_internal_box=\box93
-)
-(./tfpt_2_standard_model.aux)
+) (./tfpt_2_standard_model.aux)
 \openout1 = `tfpt_2_standard_model.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 95.
@@ -1227,13 +1225,16 @@ Package microtype Info: Loading generic protrusion settings for font family
 al/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/202
 5/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2025/texmf-di
 st/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/d
-vips/lm/lm-mathsy.enc}]) (./tfpt_2_standard_model.toc
+vips/lm/lm-mathsy.enc}])
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 113.
+ (./tfpt_2_standard_model.toc
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 4.
 
 
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
-4.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
+5.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [2{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}])
@@ -1244,36 +1245,34 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 
 [3]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 151.
+(Font)              <14.4> on input line 154.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 151.
+(hyperref)                removing `math shift' on input line 154.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\varphi' on input line 151.
+(hyperref)                removing `\varphi' on input line 154.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 151.
+(hyperref)                removing `subscript' on input line 154.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 151.
+(hyperref)                removing `superscript' on input line 154.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 151.
+(hyperref)                removing `math shift' on input line 154.
 
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 161.
 
 
 [4
 
 {/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 253
+LaTeX Font Info:    Trying to load font information for U+euf on input line 256
 .
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd
@@ -1287,35 +1286,35 @@ File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
 [5]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 295.
+(hyperref)                removing `math shift' on input line 298.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\varphi' on input line 295.
+(hyperref)                removing `\varphi' on input line 298.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 295.
+(hyperref)                removing `subscript' on input line 298.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 295.
+(hyperref)                removing `superscript' on input line 298.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 295.
+(hyperref)                removing `math shift' on input line 298.
 
 
 
 [6]
-Underfull \hbox (badness 10000) in alignment at lines 375--375
+Underfull \hbox (badness 10000) in alignment at lines 378--378
 [][][][] 
  []
 
 
 
 [7]
-Underfull \hbox (badness 10000) in alignment at lines 399--399
+Underfull \hbox (badness 10000) in alignment at lines 402--402
 [][][][] 
  []
 
@@ -1323,47 +1322,47 @@ Underfull \hbox (badness 10000) in alignment at lines 399--399
 
 [8]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <9> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 483.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 486.
 
 
 [9]
 <figures/mass_ladder.pdf, id=336, 520.34402pt x 260.17201pt>
 File: figures/mass_ladder.pdf Graphic file (type pdf)
 <use figures/mass_ladder.pdf>
-Package pdftex.def Info: figures/mass_ladder.pdf  used on input line 532.
+Package pdftex.def Info: figures/mass_ladder.pdf  used on input line 535.
 (pdftex.def)             Requested size: 401.2978pt x 200.65858pt.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 553.
+LaTeX Font Warning: Command \small invalid in math mode on input line 556.
 
 
 LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 55
-3.
+6.
 
 
 
 [10 <./figures/mass_ladder.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 561--561
+Underfull \hbox (badness 10000) in paragraph at lines 564--564
 []\T1/lmr/bx/n/10 (+20) The Sheet Di-a-mond: all four op-er-a-tors are points o
 f \T1/lmr/bx/it/10 (+20) one \T1/lmr/bx/n/10 (+20) sur-face [][I][]
  []
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 585.
+LaTeX Font Warning: Command \small invalid in math mode on input line 588.
 
 
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 649--649
+Underfull \hbox (badness 10000) in paragraph at lines 652--652
 []\T1/lmr/bx/n/10 (+20) The $\OML/lmm/m/it/10 Q[]$ \T1/lmr/bx/n/10 (+20) grad-i
 ng is co-ho-mol-ogy: one spec-trum in four read-outs [][I][]
  []
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 697.
+LaTeX Font Warning: Command \small invalid in math mode on input line 700.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 699--711
+Underfull \hbox (badness 10000) in paragraph at lines 702--714
 \T1/lmr/bx/n/10 (+20) Mass vol-ume and the EM bud-get are \T1/lmr/bx/it/10 (+20
 ) one \T1/lmr/bx/n/10 (+20) an-chor op-er-a-tion
  []
@@ -1371,19 +1370,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 699--711
 
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 725--735
+Underfull \hbox (badness 10000) in paragraph at lines 728--738
 \T1/lmr/bx/n/10 (+20) And the con-sec-u-tive \T1/lmr/bx/it/10 (+20) dif-fer-enc
 es \T1/lmr/bx/n/10 (+20) are the sheet$\OMS/lmsy/m/n/10 !$\T1/lmr/bx/n/10 (+20)
  matter chain
  []
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 750.
+LaTeX Font Warning: Command \small invalid in math mode on input line 753.
 
 
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 770--770
+Underfull \hbox (badness 10000) in paragraph at lines 773--773
 []\T1/lmr/bx/n/10 (+20) The Koide point is one branch of a dou-ble cover [][I][
 ]/[][L][]
  []
@@ -1391,12 +1390,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 770--770
 
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 841--841
+Underfull \hbox (badness 10000) in paragraph at lines 844--844
 []\T1/lmr/bx/n/10 (+20) Branch ker-nels se-lect the sec-tors; one deck in-vo-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 841--841
+Underfull \hbox (badness 10000) in paragraph at lines 844--844
 \T1/lmr/bx/n/10 (+20) lu-tion [][I][]/[][L][] ([]\T1/lmr/bx/n/9 (+20) [\T1/lmtt
 /b/n/9 verification/v96_branch_kernel_selection.py\T1/lmr/bx/n/9 (+20) ][]\T1/l
 mr/bx/n/10 (+20) ,
@@ -1412,36 +1411,36 @@ Package microtype Info: Character `029' is missing
 [16]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1000.
+(hyperref)                removing `math shift' on input line 1003.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1000.
+(hyperref)                removing `math shift' on input line 1003.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1000.
+(hyperref)                removing `math shift' on input line 1003.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1000.
+(hyperref)                removing `math shift' on input line 1003.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1000.
+(hyperref)                removing `math shift' on input line 1003.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1000.
+(hyperref)                removing `math shift' on input line 1003.
 
 
 
 [17]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1050.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1053.
 
 
-Underfull \hbox (badness 1859) in paragraph at lines 1069--1076
+Underfull \hbox (badness 1859) in paragraph at lines 1072--1079
 \T1/lmr/m/n/10 (+20) with $[][] \OML/lmm/m/it/10 ^^R[] \OT1/lmr/m/n/10 (+20) = 
 \OML/lmm/m/it/10 e[]'[]$\T1/lmr/m/n/10 (+20) , $\OML/lmm/m/it/10 ^^N[] \OT1/lmr
 /m/n/10 (+20) = 4\OML/lmm/m/it/10 ^^Y=\OT1/lmr/m/n/10 (+20) 3$\T1/lmr/m/n/10 (+
@@ -1450,14 +1449,14 @@ ric sec-tor $\OML/lmm/m/it/10 ^^R[] \OMS/lmsy/m/n/10 !
  []
 
 
-Underfull \hbox (badness 1881) in paragraph at lines 1069--1076
+Underfull \hbox (badness 1881) in paragraph at lines 1072--1079
 \OT1/lmr/m/n/10 (+20) 45[]$ \T1/lmr/m/n/10 (+20) (the oc-tant is \T1/lmr/m/it/1
 0 (+20) not \T1/lmr/m/n/10 (+20) se-lected; cur-rent global fits leave it open)
 . The so-lar an-gle is
  []
 
 
-Underfull \hbox (badness 1635) in paragraph at lines 1069--1076
+Underfull \hbox (badness 1635) in paragraph at lines 1072--1079
 \T1/lmr/m/n/10 (+20) thus a \T1/lmr/m/it/10 (+20) re-duced \T1/lmr/m/n/10 (+20)
  read-out whose co-ef-fi-cient is now \T1/lmr/m/it/10 (+20) ge-o-met-ric\T1/lmr
 /m/n/10 (+20) : $\OML/lmm/m/it/10 " \OT1/lmr/m/n/10 (+20) = \OML/lmm/m/it/10 q\
@@ -1469,25 +1468,25 @@ lue-
 
 
 [18]
-Underfull \hbox (badness 10000) in alignment at lines 1110--1110
+Underfull \hbox (badness 10000) in alignment at lines 1113--1113
 [][][][] 
  []
 
 
 
 [19]
-Underfull \hbox (badness 10000) in alignment at lines 1165--1165
+Underfull \hbox (badness 10000) in alignment at lines 1168--1168
 [][][] 
  []
 
 
-Underfull \hbox (badness 2486) in paragraph at lines 1197--1197
+Underfull \hbox (badness 2486) in paragraph at lines 1200--1200
 []|\T1/lmr/m/n/10 (+20) carrier, $\OT1/lmr/m/n/10 (+20) 16$\T1/lmr/m/n/10 (+20)
  , $\OML/lmm/m/it/10 N[][]\OT1/lmr/m/n/10 (+20) 3$\T1/lmr/m/n/10 (+20) ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1197--1197
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
 []|\T1/lmr/m/n/10 (+20) admissibility, strong
  []
 
@@ -1500,7 +1499,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1197--1197
 [22]
 
 [23]
-Underfull \hbox (badness 10000) in paragraph at lines 1455--1457
+Underfull \hbox (badness 10000) in paragraph at lines 1458--1460
 []\T1/lmr/bx/n/10 (+20) Provenance. \T1/lmr/m/n/10 (+20) Canon-i-cal shipped fo
 lder \T1/lmtt/m/n/10 lean4-carrier-rigidity/ \T1/lmr/m/n/10 (+20) (source repo:
 
@@ -1509,17 +1508,17 @@ lder \T1/lmtt/m/n/10 lean4-carrier-rigidity/ \T1/lmr/m/n/10 (+20) (source repo:
 
 
 [24]
-Underfull \hbox (badness 10000) in paragraph at lines 1525--1525
+Underfull \hbox (badness 10000) in paragraph at lines 1528--1528
 []|\T1/lmr/bx/n/10 (+20) Original pa-per (dis-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1525--1525
+Underfull \hbox (badness 10000) in paragraph at lines 1528--1528
 []|\T1/lmr/m/n/10 (+20) transport bud-get
  []
 
 
-Underfull \hbox (badness 5064) in paragraph at lines 1525--1525
+Underfull \hbox (badness 5064) in paragraph at lines 1528--1528
 []|\T1/lmr/m/n/10 (+20) separate re-sol-vent eval-u-a-
  []
 
@@ -1529,7 +1528,7 @@ Underfull \hbox (badness 5064) in paragraph at lines 1525--1525
 
 [26]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1616.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1619.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1540,49 +1539,49 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 ]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1664.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1667.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1679.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1682.
 
 
 
 [28]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1755.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1758.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1768.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1771.
 
 
 
 [29]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1787.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1790.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1805.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1808.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1831.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1834.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1831.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1834.
 
 
 
 [30]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1850.
+(hyperref)                removing `math shift' on input line 1853.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 1850.
+(hyperref)                removing `subscript' on input line 1853.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1850.
+(hyperref)                removing `math shift' on input line 1853.
 
 
 
@@ -1591,31 +1590,31 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.15})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1915 \begin{equation}
+l.1918 \begin{equation}
                        
 pdfTeX warning (ext4): destination with the same identifier (name{equation.15})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1915 \begin{equation}
+l.1918 \begin{equation}
                        
 pdfTeX warning (ext4): destination with the same identifier (name{equation.15})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1915 \begin{equation}
+l.1918 \begin{equation}
                        
 pdfTeX warning (ext4): destination with the same identifier (name{equation.15})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1915 \begin{equation}
+l.1918 \begin{equation}
                        
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1964.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1967.
 
 
-Overfull \hbox (12.41829pt too wide) detected at line 1965
+Overfull \hbox (12.41829pt too wide) detected at line 1968
 [][][][] []\OML/lmm/m/it/10.95 :
  []
 
@@ -1624,64 +1623,64 @@ Overfull \hbox (12.41829pt too wide) detected at line 1965
 [32]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1969.
+(hyperref)                removing `math shift' on input line 1972.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 1969.
+(hyperref)                removing `subscript' on input line 1972.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\deg' on input line 1969.
+(hyperref)                removing `\deg' on input line 1972.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1969.
+(hyperref)                removing `math shift' on input line 1972.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1977.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1980.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1986.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1989.
 
 
-Overfull \hbox (1.20189pt too wide) detected at line 1987
+Overfull \hbox (1.20189pt too wide) detected at line 1990
 [][][][] []\OML/lmm/m/it/10.95 :
  []
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1999.
+LaTeX Font Warning: Command \small invalid in math mode on input line 2002.
 
 
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 19
-99.
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 20
+02.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 2035.
+LaTeX Font Warning: Command \small invalid in math mode on input line 2038.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 2040.
+LaTeX Font Warning: Command \small invalid in math mode on input line 2043.
 
 
 
 [33]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 2063.
+LaTeX Font Warning: Command \small invalid in math mode on input line 2066.
 
 
-Overfull \hbox (14.37666pt too wide) detected at line 2064
+Overfull \hbox (14.37666pt too wide) detected at line 2067
 [][][]\OML/lmm/m/it/10.95 R \OT1/lmr/m/n/10.95 = [] :  [] []\OML/lmm/m/it/10.95
  ;
  []
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 2067.
+LaTeX Font Warning: Command \small invalid in math mode on input line 2070.
 
 
-Overfull \hbox (22.64693pt too wide) detected at line 2068
+Overfull \hbox (22.64693pt too wide) detected at line 2071
 [][][][] []\OML/lmm/m/it/10.95 ;
  []
 
@@ -1702,39 +1701,39 @@ Overfull \hbox (22.64693pt too wide) detected at line 2068
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2397.
+(hyperref)                removing `math shift' on input line 2400.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 2397.
+(hyperref)                removing `superscript' on input line 2400.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\ge' on input line 2397.
+(hyperref)                removing `\ge' on input line 2400.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2397.
+(hyperref)                removing `math shift' on input line 2400.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2397.
+(hyperref)                removing `math shift' on input line 2400.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 2397.
+(hyperref)                removing `subscript' on input line 2400.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\star' on input line 2397.
+(hyperref)                removing `\star' on input line 2400.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 2397.
+(hyperref)                removing `superscript' on input line 2400.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2397.
+(hyperref)                removing `math shift' on input line 2400.
 
 
 
@@ -1747,46 +1746,46 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 [43]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2657.
+(hyperref)                removing `math shift' on input line 2660.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\theta' on input line 2657.
+(hyperref)                removing `\theta' on input line 2660.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 2657.
+(hyperref)                removing `subscript' on input line 2660.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2657.
+(hyperref)                removing `math shift' on input line 2660.
 
 
 
 [44]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2719.
+(hyperref)                removing `math shift' on input line 2722.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2719.
+(hyperref)                removing `math shift' on input line 2722.
 
 
-Underfull \hbox (badness 10000) in alignment at lines 2734--2734
+Underfull \hbox (badness 10000) in alignment at lines 2737--2737
 [][][][][][][][][][] 
  []
 
 
 
 [45]
-Underfull \hbox (badness 1221) in paragraph at lines 2832--2839
+Underfull \hbox (badness 1221) in paragraph at lines 2835--2842
 \T1/lmr/bx/n/10 (+20) Update --- the ra-tios no longer re-duce to this gate. \T
 1/lmr/m/n/10 (+20) Since v49/v69/v70/v71 the
  []
 
 
-Underfull \hbox (badness 3407) in paragraph at lines 2841--2843
+Underfull \hbox (badness 3407) in paragraph at lines 2844--2846
 []\T1/lmr/m/n/10 (+20) An ex-plicit bal-anced wall rep-re-sen-ta-tive (weights 
 in units of $[]$, rows $\OT1/lmr/m/n/10 (+20) =$ \T1/lmr/m/n/10 (+20) the lines
 
@@ -1807,10 +1806,10 @@ Package rerunfilecheck Info: File `tfpt_2_standard_model.out' has not changed.
 (rerunfilecheck)             Checksum: 47857756798436AF1193C4059CC2C95A;11574.
  ) 
 Here is how much of TeX's memory you used:
- 36193 strings out of 473190
- 725475 string characters out of 5715801
- 1196588 words of memory out of 5000000
- 57831 multiletter control sequences out of 15000+600000
+ 36285 strings out of 473190
+ 727045 string characters out of 5715801
+ 1203155 words of memory out of 5000000
+ 57920 multiletter control sequences out of 15000+600000
  763056 words of font info for 542 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,15n,107p,1018b,1526s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1847,7 +1846,7 @@ xlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2025
 /fonts/type1/public/lm/lmtti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/ty
 pe1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/font
 s/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tfpt_2_standard_model.pdf (48 pages, 1032368 bytes).
+Output written on tfpt_2_standard_model.pdf (48 pages, 1045269 bytes).
 PDF statistics:
  884 PDF objects out of 1000 (max. 8388607)
  657 compressed objects within 7 object streams

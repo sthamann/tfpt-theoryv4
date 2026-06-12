@@ -22,6 +22,18 @@
 \usepackage[hidelinks]{hyperref}
 \setlist{itemsep=1.5pt,topsep=2pt}
 \emergencystretch=2.5em
+% standalone fallbacks for the status markers (defined by tfpt_style when imported)
+\providecommand{\tI}{\textbf{[I]}}\providecommand{\tL}{\textbf{[L]}}
+\providecommand{\tF}{\textbf{[F]}}\providecommand{\tN}{\textbf{[N]}}
+\providecommand{\tP}{\textbf{[P]}}\providecommand{\tA}{\textbf{[A]}}
+\providecommand{\tB}{\textbf{[B]}}\providecommand{\tX}{\textbf{[X]}}
+\providecommand{\tIalg}{\textbf{[I$_{\mathrm{alg}}$]}}\providecommand{\tInum}{\textbf{[I$_{\mathrm{num}}$]}}
+\providecommand{\tR}{\textbf{[R]}}
+% standalone fallbacks for doc-specific math macros used in entries
+\providecommand{\cthree}{c_3}\providecommand{\phiz}{\varphi_0^{\mathrm{ret}}}
+\providecommand{\gcar}{g_{\mathrm{car}}}\providecommand{\Nfam}{N_{\mathrm{fam}}}
+\providecommand{\Oadm}{\Omega_{\mathrm{adm}}}\providecommand{\ainv}{\alpha^{-1}}
+\providecommand{\Mbar}{\bar M_{\mathrm{Pl}}}\providecommand{\Z}{\mathbb{Z}}\providecommand{\PP}{\mathbb{P}}
 \title{\textbf{TFPT --- Changelog}\\[1mm]\large All changes and new results, by date}
 \author{}
 \date{\today}
@@ -42,6 +54,21 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 \noindent The dated record of every change (canonical source: \texttt{changelog.tex}, also
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
+
+\subsection*{2026-06-12 (visual pass: shared figures, badges, marker typology)}
+\begin{itemize}
+\item \textbf{Shared figure library \texttt{tfpt\_figures.tex}} (\texttt{\textbackslash input} by
+  \texttt{tfpt\_style}): reusable TikZ macros for the architecture \emph{claim stack}
+  (\texttt{\textbackslash TFPTclaimstack[zone]}, B3), the \emph{anchor cockpit} $a=(1,1,2)$ (B4), the
+  \emph{$E_8$ glue} diagram (B5), the \emph{$2/3$ motif map} (B6) and the \emph{$K_5$ action lattice}
+  (B7). The claim stack and a marker \emph{badge bar} are now shown near the front of \emph{every}
+  document, each highlighting that document's layer; the topical figures are placed in their natural
+  homes (cockpit + $K_5$ in the introduction, cockpit + glue in tfpt\_1, motif in the horizon note).
+\item \textbf{Marker typology (A2).} \texttt{tfpt\_style} adds the sharper sub-types
+  \tIalg\ (exact algebra), \tInum\ (exact number), \tR\ (readout / standard physics in TFPT units) to the
+  existing \tB\ (bridge) and \tX\ (kill test); the marker key and the new \texttt{\textbackslash TFPTbadges}
+  bar show the full typology. (Inline body markers retain \tI\ where they are genuine exact identities.)
+\end{itemize}
 
 \subsection*{2026-06-12 (review pass on list.txt)}
 \begin{itemize}

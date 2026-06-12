@@ -8,6 +8,9 @@
 %        \def\TFPTdoctitle{Architecture and the E8 Compiler}
 %  ---------------------------------------------------------------------
 \usepackage{fancyhdr}
+\usepackage{etoolbox}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,fit,backgrounds,calc,shapes.geometric,shapes.misc}
 
 % ---- colours (canonical TFPT palette) ----
 \definecolor{tfblue}{HTML}{1F4E79}
@@ -16,22 +19,36 @@
 \definecolor{tfgold}{HTML}{B8860B}
 \definecolor{tfgray}{HTML}{555555}
 
-% ---- status markers (six-grade system; never silently upgrade) ----
-\newcommand{\tI}{{\small\textcolor{tfgreen}{\textbf{[I]}}}}          % exact identity
+% ---- status markers (typed grading system; never silently upgrade) ----
+% Core grades:
+\newcommand{\tI}{{\small\textcolor{tfgreen}{\textbf{[I]}}}}          % exact identity (algebraic or numeric)
 \newcommand{\tL}{{\small\textcolor{tfblue}{\textbf{[L]}}}}           % Lie / lattice theorem
 \newcommand{\tF}{{\small\textcolor{tfgreen!45!black}{\textbf{[F]}}}} % formalised (Lean / script)
 \newcommand{\tN}{{\small\textcolor{tfgreen}{\textbf{[N]}}}}          % numerical fixed point
-\newcommand{\tP}{{\small\textcolor{tfgold}{\textbf{[P]}}}}           % physical / conditional
+\newcommand{\tP}{{\small\textcolor{tfgold}{\textbf{[P]}}}}           % physical / conditional (pending)
 \newcommand{\tA}{{\small\textcolor{tfred}{\textbf{[A]}}}}            % axiom / open
-% optional sharper sub-types (reviewer typing; used in new material)
+% Sharper sub-types (reviewer typology A2):
+\newcommand{\tIalg}{{\small\textcolor{tfgreen}{\textbf{[I$_{\mathrm{alg}}$]}}}} % exact algebraic identity
+\newcommand{\tInum}{{\small\textcolor{tfgreen}{\textbf{[I$_{\mathrm{num}}$]}}}} % exact numeric identity (declared grammar)
+\newcommand{\tR}{{\small\textcolor{tfblue!60!black}{\textbf{[R]}}}}  % readout / unit conversion / standard physics in TFPT units
 \newcommand{\tB}{{\small\textcolor{tfgold!70!black}{\textbf{[B]}}}}  % bridge: physical identification
 \newcommand{\tX}{{\small\textcolor{tfred!75!black}{\textbf{[X]}}}}   % falsifiable kill test
 
 % compact marker legend, placed under a marker-bearing table
 \newcommand{\markerkey}{\par\vspace{1.5pt}\noindent{\scriptsize\itshape
-  \textcolor{black!58}{Marker key:\ \tI~exact identity\,$\cdot$\,\tL~Lie/lattice theorem\,$\cdot$\,%
-  \tF~formalised\,$\cdot$\,\tN~numerical fixed point\,$\cdot$\,\tP~physical/conditional\,$\cdot$\,%
-  \tA~axiom\,/\,open\,$\cdot$\,\tB~bridge\,$\cdot$\,\tX~kill test.}}\par\vspace{2pt}}
+  \textcolor{black!58}{Marker key:\ \tIalg~exact algebra\,$\cdot$\,\tInum~exact number\,$\cdot$\,%
+  \tI~exact identity\,$\cdot$\,\tL~Lie/lattice\,$\cdot$\,\tF~formalised\,$\cdot$\,\tN~numerical FP\,$\cdot$\,%
+  \tR~readout\,$\cdot$\,\tB~bridge\,$\cdot$\,\tP~pending\,$\cdot$\,\tA~axiom/open\,$\cdot$\,\tX~kill test.}}\par\vspace{2pt}}
+
+% horizontal badge bar (place once near the front of a document)
+\newcommand{\TFPTbadges}{\par\noindent
+  \fcolorbox{tfgreen!55!black}{tfgreen!8}{\scriptsize\tIalg\,exact algebra}\hfill
+  \fcolorbox{tfgreen!55!black}{tfgreen!8}{\scriptsize\tInum\,exact number}\hfill
+  \fcolorbox{tfblue!55!black}{tfblue!8}{\scriptsize\tR\,readout}\hfill
+  \fcolorbox{tfgold!70!black}{tfgold!10}{\scriptsize\tB\,bridge}\hfill
+  \fcolorbox{tfgold!70!black}{tfgold!6}{\scriptsize\tP\,pending}\hfill
+  \fcolorbox{tfred!75!black}{tfred!8}{\scriptsize\tA\,axiom/open}\hfill
+  \fcolorbox{tfred!75!black}{tfred!6}{\scriptsize\tX\,kill test}\par\vspace{3pt}}
 
 % inline reference to the script that machine-checks a claim (see verification/)
 \newcommand{\veri}[1]{\,{\footnotesize\textcolor{tfblue!70!black}{[\,\texttt{verification/#1}\,]}}}
@@ -69,3 +86,6 @@
 \renewcommand{\headrulewidth}{0.3pt}
 \renewcommand{\footrulewidth}{0pt}
 \fancypagestyle{plain}{\fancyhf{}\renewcommand{\headrulewidth}{0pt}\fancyfoot[C]{\footnotesize\textcolor{tfgray}{\thepage}}}
+
+% ---- shared figure macros (claim stack, anchor cockpit, E8 glue, 2/3 motif, K5) ----
+\input{tfpt_figures}
