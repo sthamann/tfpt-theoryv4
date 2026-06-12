@@ -252,6 +252,9 @@ const NODES: DagNode[] = [
       "v133_zeta_budget.py",
       "v134_dual_anchor.py",
       "v135_det_surface.py",
+      "v136_dual_normal_selector.py",
+      "v137_qplus_cohomology.py",
+      "v138_vw_firewall.py",
     ],
   },
   {

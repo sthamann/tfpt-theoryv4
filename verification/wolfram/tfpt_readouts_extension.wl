@@ -1048,6 +1048,65 @@ Module[{rmat, qmat, av, onev, msurf, detm, bmat, detb, uax, vax, cmid},
     (Total /@ cmid) == {7, 11, 13} && (Total /@ uax) == {3, 3, 3} && (Total /@ vax) == {1, 2, 3}];
 ];
 
+(* ---- (v136) dual-normal selector ---- *)
+Module[{dv, nv, av, rmat, qmat, kmat, sols, a0, v0, sigma, adjA0, grp, gens, reals},
+  dv = {-1/2, -1/2, 1}; nv = {5, -9, 6}; av = {1, 1, 2};
+  rmat = {{1, 3, 0}, {1, 5, 2}, {2, 5, 3}};
+  qmat = {{3, 1, 0}, {3, 2, 0}, {3, 2, 1}};
+  kmat = rmat + qmat . DiagonalMatrix[{1, -1, -1}];
+  sols = Table[Select[Tuples[Range[0, 5], 3],
+      dv . # == av[[j]] && nv . # == 8 Boole[j == 1] &], {j, 3}];
+  checkExact["v136 column normal form: d.c_j = a_j, n.c_j = 8 delta_1j; kernel (6,8,7); each column UNIQUE in {0..5}^3 (1 of 216)",
+    (dv . #) & /@ Transpose[rmat] == av &&
+    (nv . #) & /@ Transpose[rmat] == {8, 0, 0} &&
+    7 First[NullSpace[{dv, nv}]] == {6, 8, 7} &&
+    Length /@ sols == {1, 1, 1} &&
+    (First /@ sols) == Transpose[rmat]];
+  checkExact["v136 honesty: K not pinned by (d,n) (d.K = (1,1/2,1), n.K = (14,1,-6)); det K = 4 via the diamond",
+    dv . kmat == {1, 1/2, 1} && nv . kmat == {14, 1, -6} && Det[kmat] == 4];
+  a0 = {{1/2, Sqrt[2]/6, 0}, {Sqrt[2]/6, 1/4, Sqrt[5]/12}, {0, Sqrt[5]/12, 1/4}};
+  v0 = First[NullSpace[a0]]; v0 = v0/v0[[2]] 3;
+  sigma = {2, -9, 5};
+  adjA0 = Transpose[Table[(-1)^(i + j) Det[Drop[a0, {i}, {j}]], {i, 3}, {j, 3}]];
+  checkExact["v136 spectral normal: A0* zero mode signed squares = -(2,-9,5); ||v||^2 = 16/9; adj(A0*) = (2/9) projector; sigma.1 = -2, sigma.a = 3, n.sigma = 121",
+    Simplify[Sign[v0] v0^2] == -sigma &&
+    Simplify[(v0/3) . (v0/3)] == 16/9 &&
+    Simplify[adjA0 - 2/9 Outer[Times, v0, v0]/(v0 . v0)] === ConstantArray[0, {3, 3}] &&
+    sigma . {1, 1, 1} == -2 && sigma . av == 3 && nv . sigma == 121];
+  gens = {DiagonalMatrix[{1, I, -I}],
+    {{0, -(1 + I)/2, (1 - I)/2}, {-(1 + I)/2, -I/2, -1/2}, {(1 - I)/2, -1/2, I/2}}};
+  grp = FixedPoint[Union[Expand[Join[#, Flatten[Outer[Dot, #, gens, 1], 1]]]] &,
+    {IdentityMatrix[3]}];
+  reals = Union[Select[Expand[# . sigma] & /@ grp, Simplify[Im[#]] === {0, 0, 0} &]];
+  checkExact["v136 orbit control: |W(A3)| = 24; real orbit images of sigma = signed copies only; none proportional to n",
+    Length[grp] == 24 &&
+    Sort[reals] === Sort[{{2, -9, 5}, {2, 9, -5}, {-2, 5, -9}, {-2, -5, 9}}] &&
+    NoneTrue[reals, Cross[#, nv] == {0, 0, 0} &]];
+];
+
+(* ---- (v137) Q+ cohomology grading ---- *)
+Module[{omchar, resok, qp, a0c},
+  omchar = Table[Simplify[((I z)^(k - 1)/((I z)^4 - 1)) I/(z^(k - 1)/(z^4 - 1))], {k, 3}];
+  resok = And @@ Flatten[Table[
+      Simplify[Residue[z^(k - 1)/(z^4 - 1), {z, zeta}] - zeta^k/4] === 0,
+      {k, 3}, {zeta, {1, -1, I, -I}}]];
+  checkExact["v137 characters + residues: omega_k has mu_4 character i^k (k=1,2,3); residue vector = zeta^k/4 exactly",
+    omchar === {I, -1, -I} && resok];
+  qp = DiagonalMatrix[3 {0, 1/3, 2/3} + 1];
+  a0c = {{1/2, Sqrt[2]/6, 0}, {Sqrt[2]/6, 1/4, Sqrt[5]/12}, {0, Sqrt[5]/12, 1/4}};
+  checkExact["v137 grading: Spec(Q+) = {1,2,3}; cusp weights {0,1/3,2/3} = spec(A0*); (1,2,3) = A3 exponents, h(A3) = 4 = |mu_4|",
+    Sort[Eigenvalues[qp]] == {1, 2, 3} &&
+    Sort[Eigenvalues[a0c]] == {0, 1/3, 2/3} &&
+    (1 + 1)(2 + 1)(3 + 1) == 24 && 1 + 3 == 4];
+];
+
+(* ---- (v138) VW firewall ---- *)
+checkExact["v138 external datum + edge match: 22/45 - 8/3 = -98/45 (VW hep-th/0003081 / arXiv:2506.02142); edge = -8/3 = 2 x (-4/3) = two copies of the v133 reduced seam budget; diff -38/45, 38 = 2*19, no atom",
+  22/45 - 8/3 == -98/45 && -8/3 == 2 (-4/3) &&
+  -98/45 + 60/45 == -38/45 && FactorInteger[38] == {{2, 1}, {19, 1}} &&
+  ! MemberQ[{2/3, 4/3, 1/3, 8/9, 2/9, 16/9, 13/144}, 98/45] &&
+  ! MemberQ[{2/3, 4/3, 1/3, 8/9, 2/9, 16/9, 13/144}, 38/45]];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v135: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v138: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

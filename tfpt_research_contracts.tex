@@ -445,6 +445,22 @@ status is revoked. \emph{Bonus lemma \tI:} on the $(S1)+(S2)$ locus $\det(M+2U)=
 overdetermination. \emph{Residue \tP:} H2 reduces to the establishment of the selectors themselves
 ($n$ and the diamond determinants --- pre-existing inventoried objects); the address question
 introduces \emph{no new residual class}.
+\smallskip\\
+\noindent\textbf{The dual-normal selector: $(d,n)$ pins $R$ columnwise (\veri{v136\_dual\_normal\_selector.py}).}
+The selector list shrinks once more. With the dual anchor $d=a^\top R^{-1}$ (\veri{v134\_dual\_anchor.py})
+and the torsion normal $n$, each \emph{column} of $R$ obeys $d\cdot c_j=a_j$ and $n\cdot c_j=8\delta_{1j}$;
+the common kernel of $(d,n)$ is the primitive vector $(6,8,7)$ (audit: $p_2$, $\operatorname{rank}E_8$,
+scalaron-$7$), so within the address box $\{0..5\}^3$ each column is the \emph{unique} lattice point
+(census: $1$ of $216$ each) --- $(d,n)\Rightarrow R$, and the $6^9$ census above collapses to three
+column problems \tI. \emph{Honesty:} $K$ is \emph{not} pinned directly ($d^\top K=(1,\tfrac12,1)$); $\det
+K=4$ comes via the $\mu_4$ wall (\veri{v135\_det\_surface.py}). \emph{The mechanism is bounded:} the zero
+mode of $A_0^\star$ carries the exact spectral normal $\sigma=(2,-9,5)=(|\Z_2|,-\Nfam^2,\gcar)$ (signed
+squares; $\|v\|^2=\tfrac{16}9$ with $16=\dim S^+$, $\operatorname{adj}A_0^\star=\tfrac29P_v$ with
+$\tfrac29=$ the SdS entropy curvature), $\sigma\cdot\mathbf 1=-|\Z_2|$, $\sigma\cdot a=\Nfam$,
+$n\cdot\sigma=121=\|\operatorname{Pl}(K)\|_1^2$; and the exact $W(A_3)$ orbit control shows \emph{no}
+group image of $\sigma$ is proportional to $n$ --- the naive cofactor/orbit lift fails, the step
+$\sigma\to n$ is a genuine mechanism beyond the monodromy group. \emph{R4$'$ restated \tP:} derive the
+\emph{pair} $(d,n)$; then $R$ is forced columnwise.
 \end{keybox}
 
 \begin{keybox}[Exterior Leg Lemma --- the quark $u/d$ leg is a $\Lambda^2F$ area, not a scalar \tI/\tP]

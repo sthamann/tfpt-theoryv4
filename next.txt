@@ -1160,4 +1160,72 @@ DIE DETERMINANTEN-FLAECHE (v135, Ledger FLAV.SURF.01) -- das
     => LESART [P]: Flavor lebt auf einer 2d-Flaeche, Waende = Atome,
        Achsen = (Winding, Q+-Progression) -- Compiler-Semantik statt
        Matrix-Liste; keine Gate-Aenderung.
+
+DER DUAL-NORMALEN-SELEKTOR (v136, Ledger GATE.UWALL.10) -- (d,n)
+    pinnt R SPALTENWEISE; R4' auf den Mechanismus n eingegrenzt
+    (Review 2026-06-12, validiert + verschaerft):
+    (1) SPALTEN-NORMALFORM [I]: d.c_j = a_j, n.c_j = 8*delta_1j;
+        gemeinsamer Kern von (d,n) = primitiv (6,8,7) (Audit: p2,
+        rank E8, Skalaron-7); Zensus ueber die Adress-Box {0..5}^3:
+        jede Spalte EINDEUTIG (1 von 216) => (d,n) => R; der alte
+        6^9-Zensus (v121) kollabiert auf drei Spaltenprobleme.
+    (2) EHRLICHKEIT [I]: K wird NICHT direkt gepinnt (d^T K =
+        (1,1/2,1)); det K = 4 kommt via mu4-Wand (v135).
+    (3) SPEKTRAL-NORMALE [I]: A0*-Nullmode v = (-sqrt2,3,-sqrt5)/3;
+        signierte Quadrate = -(2,-9,5) = -(|Z2|,-N_fam^2,g_car);
+        NEUE ATOME: ||v||^2 = 16/9 (16 = dim S+), adj(A0*) =
+        (2/9) P_v mit 2/9 = SdS-Entropie-Kruemmung.
+    (4) SIGMA-RELATIONEN [I]: sigma.1 = -|Z2|, sigma.a = N_fam,
+        n.sigma = 121 = ||Pl(K)||_1^2 (v119-Audit-Konstante).
+    (5) ORBIT-KONTROLLE [I]: |W(A3)| = 24 exakt; reelle Orbit-Bilder
+        von sigma = nur Vorzeichen-Kopien; KEINES proportional zu n
+        -- der naive Cofactor/Orbit-Lift scheitert (wie die Review
+        vorhersagte): sigma -> n ist ein echter Mechanismus
+        jenseits der Monodromie-Gruppe.
+    => R4' NEU [P]: leite das PAAR (d,n) her; dann ist R erzwungen.
+       d ist strukturell da (v134); Rest = Herleitung von n,
+       eingegrenzt durch sigma-Relationen + Orbit-Kontrolle.
+
+DIE Q+-GRADUIERUNG IST KOHOMOLOGIE (v137, Ledger FLAV.QGEO.04) --
+    R5/GATE.QGEO auf Spektrum-Ebene (Review 2026-06-12):
+    (1) BASIS + CHARAKTERE [I]: b1(P^1 \\ mu4) = 3 = N_fam; Basis
+        omega_k = z^(k-1)dz/(z^4-1), k = 1,2,3 (regulaer bei
+        unendlich; trivialer Charakter ABWESEND); mu4-Charakter =
+        i^k => H^1 = chi1 + chi2 + chi3; Residuen-Vektor ueber den
+        Punkturen = Charakter-Vektor zeta^k/4 exakt.
+    (2) GRADUIERUNG = Spec(Q+) [I]: Grade (1,2,3) = Spec(Q+)
+        (Q+ = 3*cusp+1, v69/v72); NEU: Cusp-Gewichte {0,1/3,2/3} =
+        spec(A0*) (v115) => MS-Gewichte = Cusp-Klassen =
+        H^1-Charaktere = Q+: EIN Spektrum, vier Lesarten.
+    (3) A3-EXPONENTEN [I]: (1,2,3) = Exponenten von A3 (W(A3) = S4,
+        v117), h(A3) = 4 = |mu4| -- die Q+-Generationen-Graduierung
+        IST die A3-Exponenten-Graduierung auf der Seam-Kurven-
+        Kohomologie: das R5-Woerterbuch auf Spektrum-Ebene.
+    => REST [P]: NATUERLICHKEIT der Identifikation -- die kanonische
+       Abbildung H^1-Charakter-Basis -> V-Achsen-Generationen-Basis
+       (rowsum(V) = (1,2,3) woertlich, v135); Spektren-Gleichheit
+       ist [I], die kanonische Abbildung ist der Rest.
+
+DIE VOLKOV-WIPF-FIREWALL (v138, Ledger HOR.CLOCK.11) -- R1
+    typisiert geschlossen; externe Werte verifiziert gegen
+    arXiv:2506.02142 Tab. 4.1 (= VW hep-th/0003081; die in der
+    Review zitierte Nummer 0204021 war falsch):
+    (1) EXTERNES DATUM [I, extern]: alpha_bulk = 22/45, alpha_edge
+        = -8/3, alpha_PI = -98/45 fuer d = 3 (S^2 x S^2, 4d).
+    (2) EDGE-MATCH [I] (der strukturelle Fund): alpha_edge = -8/3 =
+        2 x (-4/3) -- der externe Edge-Faktor besteht aus ZWEI
+        IDENTISCHEN KOPIEN (eine pro Horizont), und der Betrag pro
+        Kopie 4/3 = e1/p0 ist EXAKT das reduzierte Seam-Budget
+        (v133, der Seed-Gain; -2/3 pro Sektor); die reduzierte
+        TFPT-Route landet im EDGE-Sektor des externen Bulk/Edge-
+        Splits; der Bulk 22/45 = ideales Graviton-Gas (nicht die
+        Uhr); zwei Kopien = Horizont-Paar = Blatt-Verdopplung.
+    (3) FIREWALL-ARITHMETIK [I]: -98/45 + 60/45 = -38/45 (38 =
+        2*19); weder -98/45 noch -38/45 noch 22/45 ist ein Atom --
+        konsistent mit v133 (naive Skalar-Route -109/45 ebenfalls
+        nicht atomar; anderer Operator-Inhalt, notiert).
+    => TYPISIERUNG [P] (Entscheidung): R1 = reduzierte Nullmoden/
+       RPA-Seam-Uhr = EDGE-Objekt; der volle 4d-VW-Determinant =
+       Gravitations-FIREWALL (absorbiert in mu0/(Lambda G)^3),
+       kein TFPT-Atom. Review-Varianten 2+3.
 ================================================================================

@@ -680,6 +680,30 @@ for the abelian coefficient, companion to $\Delta_Y=25=9{+}16$) and $p_1^2+p_2^2
 root count ($40{+}12$, \veri{v128\_graded\_hull.py}). All \tI; the ``2d surface with atom walls'' reading \tP.
 \end{winbox}
 
+\begin{keybox}[The $Q_+$ grading is cohomology: one spectrum in four readouts \tI\ (\veri{v137\_qplus\_cohomology.py})]
+The sheet axis is not just numerology on $V$: it is the cohomology of the seam curve.
+$b_1(\PP\setminus\mu_4)=3=\Nfam$, with holomorphic basis $\omega_k=z^{k-1}dz/(z^4-1)$, $k=1,2,3$
+(regular at infinity; the trivial character is absent), and under the $\mu_4$ deck $z\mapsto iz$
+\[
+  \omega_k\ \longmapsto\ i^k\,\omega_k,\qquad
+  \operatorname{res}_{\zeta}\omega_k=\tfrac{\zeta^k}4 :
+\]
+$H^1=\chi_1\oplus\chi_2\oplus\chi_3$ --- each nontrivial $\mu_4$ character exactly once, and the residue
+vector over the punctures \emph{is} the character vector. The character degrees $(1,2,3)$ are exactly
+$\operatorname{Spec}(Q_+)$ ($Q_+=3\,\mathrm{cusp}+1$, v69/v72), and the cusp weights $\{0,\tfrac13,
+\tfrac23\}$ underneath are $\operatorname{spec}(A_0^\star)$ (v115):
+\[
+  \boxed{\ \text{MS weights}\ =\ \text{cusp classes}\ =\ H^1\text{ characters}\ =\
+  \operatorname{Spec}(Q_+)-1\ \text{over } \Nfam\ }
+\]
+--- one spectrum in four readouts; and $(1,2,3)$ are the \emph{exponents of $A_3$} ($W(A_3)=S_4$, v117;
+$h(A_3)=4=|\mu_4|$): the $Q_+$ generation grading \emph{is} the $A_3$ exponent grading, realised on the
+seam curve's cohomology. \emph{Typing:} all spectrum statements \tI; what remains of \texttt{GATE.QGEO}
+is the \emph{naturality} of the identification --- the canonical map from the $H^1$ character basis to
+the $V$-axis generation basis ($\operatorname{rowsum}(V)=(1,2,3)$ verbatim, \veri{v135\_det\_surface.py})
+--- typed \tP.
+\end{keybox}
+
 \begin{winbox}[Spectra and the determinant ladder $\to|W(D_5)|$ \tI]
 The two operators carry the compiler atoms in their characteristic polynomials,
 \begin{equation}

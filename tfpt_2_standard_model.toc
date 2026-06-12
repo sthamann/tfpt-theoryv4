@@ -6,38 +6,38 @@
 \contentsline {section}{\numberline {4}Charged leptons: completely closed in $\varphi _0^{\mathrm {ret}}$}{7}{section.4}%
 \contentsline {section}{\numberline {5}Quarks: hierarchy from the same word-lengths}{8}{section.5}%
 \contentsline {section}{\numberline {6}The Sheet Diamond and the Winding Line: masses and transport from one surface}{11}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Closing the audit gates: is $M{=}41$, $K$, $Q$ derived or imported?}{19}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.1}Closing the audit gates: is $M{=}41$, $K$, $Q$ derived or imported?}{20}{subsection.6.1}%
 \contentsline {section}{\numberline {7}Mixing: CKM and PMNS from holonomy}{21}{section.7}%
-\contentsline {paragraph}{Honest note on the search.}{21}{section*.2}%
+\contentsline {paragraph}{Honest note on the search.}{22}{section*.2}%
 \contentsline {section}{\numberline {8}Neutrinos}{22}{section.8}%
-\contentsline {section}{\numberline {9}How each of the seven papers simplifies}{22}{section.9}%
+\contentsline {section}{\numberline {9}How each of the seven papers simplifies}{23}{section.9}%
 \contentsline {section}{\numberline {10}Is the entire Standard Model thereby derived?}{23}{section.10}%
 \contentsline {section}{\numberline {11}Complete solutions of the five open questions}{24}{section.11}%
 \contentsline {section}{\numberline {12}How the original-paper predictions simplify}{28}{section.12}%
-\contentsline {section}{Conclusion}{28}{section*.8}%
-\contentsline {part}{II\hspace {1em}The flavor block: parabolic weights and the transport theorem}{29}{part.2}%
-\contentsline {section}{\numberline {13}The setup: parabolic data on the family curve}{29}{section.13}%
-\contentsline {section}{\numberline {14}Exact scaffolding (proved)}{30}{section.14}%
-\contentsline {section}{\numberline {15}The Riemann--Hilbert side (what the monodromy fixes)}{30}{section.15}%
-\contentsline {section}{\numberline {16}The parabolic-weight computation (resolved this round)}{31}{section.16}%
-\contentsline {section}{\numberline {17}Global computation: the anchor multiset is derived}{32}{section.17}%
-\contentsline {subsection}{\numberline {17.1}Part (ii): the $\mathbb Z_6$ structure of the residues, and the frontier}{33}{subsection.17.1}%
-\contentsline {subsection}{\numberline {17.2}The flavor transport theorem}{34}{subsection.17.2}%
-\contentsline {section}{\numberline {18}The Parabolic Anchor Compiler}{35}{section.18}%
-\contentsline {subsection}{\numberline {18.1}Budget master table: everything is $d_p=-\deg E=4$ times a Coxeter datum}{35}{subsection.18.1}%
-\contentsline {subsection}{\numberline {18.2}Flavor budget split, row sums, scalaron deficit}{35}{subsection.18.2}%
-\contentsline {subsection}{\numberline {18.3}The anchor power compiler}{36}{subsection.18.3}%
-\contentsline {subsection}{\numberline {18.4}Residue-matrix spectral selector --- sharpening (H2)}{36}{subsection.18.4}%
-\contentsline {section}{\numberline {19}Closing the flavor block: two theorems}{37}{section.19}%
-\contentsline {section}{Status}{40}{section*.10}%
-\contentsline {part}{III\hspace {1em}Closing computations and proofs}{41}{part.3}%
-\contentsline {section}{\numberline {20}The explicit mass gap closes dynamics and clustering}{41}{section.20}%
-\contentsline {section}{\numberline {21}The seam elliptic complex is Fredholm (APS)}{42}{section.21}%
-\contentsline {section}{\numberline {22}The $R^{n\ge 3}$ truncation is $O(1/N_\star ^2)$-bounded}{42}{section.22}%
-\contentsline {section}{\numberline {23}The ambient closure: one spectral-action measure, IR-complete by decoupling}{44}{section.23}%
-\contentsline {subsection}{\numberline {23.1}Seam response grammar: gravity is the inverse seed gain}{45}{subsection.23.1}%
-\contentsline {section}{\numberline {24}The solar angle $\theta _{12}$: derived from the seam}{46}{section.24}%
-\contentsline {section}{\numberline {25}Quark $c$-rationals: best values at current precision}{47}{section.25}%
-\contentsline {section}{\numberline {26}H2: the moduli computation, set up explicitly}{48}{section.26}%
-\contentsline {section}{Status}{50}{section*.11}%
-\contentsline {section}{Appendix: computational verification}{51}{section*.12}%
+\contentsline {section}{Conclusion}{29}{section*.8}%
+\contentsline {part}{II\hspace {1em}The flavor block: parabolic weights and the transport theorem}{30}{part.2}%
+\contentsline {section}{\numberline {13}The setup: parabolic data on the family curve}{30}{section.13}%
+\contentsline {section}{\numberline {14}Exact scaffolding (proved)}{31}{section.14}%
+\contentsline {section}{\numberline {15}The Riemann--Hilbert side (what the monodromy fixes)}{31}{section.15}%
+\contentsline {section}{\numberline {16}The parabolic-weight computation (resolved this round)}{32}{section.16}%
+\contentsline {section}{\numberline {17}Global computation: the anchor multiset is derived}{33}{section.17}%
+\contentsline {subsection}{\numberline {17.1}Part (ii): the $\mathbb Z_6$ structure of the residues, and the frontier}{34}{subsection.17.1}%
+\contentsline {subsection}{\numberline {17.2}The flavor transport theorem}{35}{subsection.17.2}%
+\contentsline {section}{\numberline {18}The Parabolic Anchor Compiler}{36}{section.18}%
+\contentsline {subsection}{\numberline {18.1}Budget master table: everything is $d_p=-\deg E=4$ times a Coxeter datum}{36}{subsection.18.1}%
+\contentsline {subsection}{\numberline {18.2}Flavor budget split, row sums, scalaron deficit}{36}{subsection.18.2}%
+\contentsline {subsection}{\numberline {18.3}The anchor power compiler}{37}{subsection.18.3}%
+\contentsline {subsection}{\numberline {18.4}Residue-matrix spectral selector --- sharpening (H2)}{37}{subsection.18.4}%
+\contentsline {section}{\numberline {19}Closing the flavor block: two theorems}{38}{section.19}%
+\contentsline {section}{Status}{41}{section*.10}%
+\contentsline {part}{III\hspace {1em}Closing computations and proofs}{42}{part.3}%
+\contentsline {section}{\numberline {20}The explicit mass gap closes dynamics and clustering}{42}{section.20}%
+\contentsline {section}{\numberline {21}The seam elliptic complex is Fredholm (APS)}{43}{section.21}%
+\contentsline {section}{\numberline {22}The $R^{n\ge 3}$ truncation is $O(1/N_\star ^2)$-bounded}{43}{section.22}%
+\contentsline {section}{\numberline {23}The ambient closure: one spectral-action measure, IR-complete by decoupling}{45}{section.23}%
+\contentsline {subsection}{\numberline {23.1}Seam response grammar: gravity is the inverse seed gain}{46}{subsection.23.1}%
+\contentsline {section}{\numberline {24}The solar angle $\theta _{12}$: derived from the seam}{47}{section.24}%
+\contentsline {section}{\numberline {25}Quark $c$-rationals: best values at current precision}{48}{section.25}%
+\contentsline {section}{\numberline {26}H2: the moduli computation, set up explicitly}{49}{section.26}%
+\contentsline {section}{Status}{51}{section*.11}%
+\contentsline {section}{Appendix: computational verification}{52}{section*.12}%

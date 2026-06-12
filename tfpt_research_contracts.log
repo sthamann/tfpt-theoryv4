@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 06:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 07:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1137,7 +1137,23 @@ n/10 (+20) [P][]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 426.
 
-Overfull \hbox (3.90785pt too wide) detected at line 461
+Underfull \hbox (badness 10000) in paragraph at lines 427--464
+\T1/lmr/bx/n/10.95 (+20) The dual-normal se-lec-tor: $\OT1/lmr/m/n/10.95 (+20) 
+(\OML/lmm/m/it/10.95 d; n\OT1/lmr/m/n/10.95 (+20) )$ \T1/lmr/bx/n/10.95 (+20) p
+ins $\OML/lmm/m/it/10.95 R$ \T1/lmr/bx/n/10.95 (+20) colum-n-wise
+ []
+
+
+Underfull \hbox (badness 2426) in paragraph at lines 427--464
+\T1/lmr/bx/n/10.95 (+20) ([]\T1/lmr/bx/n/9 (+20) [\T1/lmtt/b/n/9 verification/v
+136_dual_normal_selector.py\T1/lmr/bx/n/9 (+20) ][]\T1/lmr/bx/n/10.95 (+20) ). 
+\T1/lmr/m/n/10.95 (+20) The se-lec-tor list shrinks once more.
+ []
+
+
+
+[7]
+Overfull \hbox (3.90785pt too wide) detected at line 477
 \OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 K; \OT1/lmr/bx/n/10.95 1\OML/lmm/m/it/1
 0.95 ; a\OT1/lmr/m/n/10.95 ) \OMS/lmsy/m/n/10.95 ! \OML/lmm/m/it/10.95 B[] \OT1
 /lmr/m/n/10.95 = [][] \OMS/lmsy/m/n/10.95 ! []\OT1/lmr/m/n/10.95 (\OML/lmm/m/it
@@ -1151,7 +1167,7 @@ it/10.95 ^^V[]\OMS/lmsy/m/n/10.95 j\OT1/lmr/m/n/10.95 ) \OMS/lmsy/m/n/10.95 ! k
 0.95 k[] \OT1/lmr/m/n/10.95 = 11\OML/lmm/m/it/10.95 ;
  []
 
-LaTeX Font Info:    Trying to load font information for U+euf on input line 514
+LaTeX Font Info:    Trying to load font information for U+euf on input line 530
 .
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
@@ -1161,15 +1177,15 @@ File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
 
 )
 
-[7]
-
 [8]
+
+[9]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 5
-66.
+82.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Underfull \hbox (badness 1102) in paragraph at lines 571--577
+Underfull \hbox (badness 1102) in paragraph at lines 587--593
 []$\OML/lmm/m/it/10.95 U[]$ []\T1/lmr/bx/n/10 (+20) [I][]\T1/lmr/m/n/10.95 (+20
 ) : \T1/lmr/bx/n/10.95 (+20) Read-out Rigid-ity \T1/lmr/m/n/10.95 (+20) --- on 
 the dis-crete stra-tum $\OMS/lmsy/m/n/10.95 S[] \OT1/lmr/m/n/10.95 (+20) = \OMS
@@ -1178,8 +1194,8 @@ the dis-crete stra-tum $\OMS/lmsy/m/n/10.95 S[] \OT1/lmr/m/n/10.95 (+20) = \OMS
 
 
 
-[9{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
-Overfull \hbox (1.44386pt too wide) detected at line 639
+[10{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
+Overfull \hbox (1.44386pt too wide) detected at line 655
 \OML/lmm/m/it/10.95 a[] \OT1/lmr/m/n/10.95 = [] [](6\OML/lmm/m/it/10.95 E \OT1/
 lmr/m/n/10.95 + \OML/lmm/m/it/10.95 R \OT1/lmr/bx/n/10.95 1\OT1/lmr/m/n/10.95 )
  = \OMS/lmsy/m/n/10.95 ^^@[] \OT1/lmr/m/n/10.95 ([] []  \OML/lmm/m/it/10.95 R\O
@@ -1191,24 +1207,24 @@ m/n/10.95 5\OML/lmm/m/it/10.95 R[]\OT1/lmr/bx/n/10.95 1\OT1/lmr/m/n/10.95 ) = [
 
 
 
-[10]
-Overfull \hbox (22.22044pt too wide) detected at line 702
+[11]
+Overfull \hbox (22.22044pt too wide) detected at line 718
 []
  []
 
 
 
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 761--771
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 777--787
 \T1/lmr/bx/n/10.95 (+20) And that bound-ary mea-sure is a \T1/lmr/bx/it/10.95 (
 +20) rig-or-ously con-structed \T1/lmr/bx/n/10.95 (+20) net
  []
 
 
 
-[12]
+[13]
 
-[13] (./tfpt_research_contracts.aux)
+[14] (./tfpt_research_contracts.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1218,11 +1234,11 @@ Package rerunfilecheck Info: File `tfpt_research_contracts.out' has not changed
 (rerunfilecheck)             Checksum: EA0F840AA5FE10FE18FBCF540447189D;594.
  ) 
 Here is how much of TeX's memory you used:
- 32503 strings out of 473190
- 640748 string characters out of 5715801
- 1111024 words of memory out of 5000000
- 54693 multiletter control sequences out of 15000+600000
- 720356 words of font info for 363 fonts, out of 8000000 for 9000
+ 32501 strings out of 473190
+ 640698 string characters out of 5715801
+ 1109024 words of memory out of 5000000
+ 54692 multiletter control sequences out of 15000+600000
+ 720313 words of font info for 362 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  116i,14n,121p,1020b,1048s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.
@@ -1251,10 +1267,10 @@ exlive/2025/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/local/texlive/2025
 /texmf-dist/fonts/type1/public/lm/lmtti10.pfb></usr/local/texlive/2025/texmf-di
 st/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texm
 f-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tfpt_research_contracts.pdf (13 pages, 637188 bytes).
+Output written on tfpt_research_contracts.pdf (14 pages, 641198 bytes).
 PDF statistics:
- 301 PDF objects out of 1000 (max. 8388607)
- 197 compressed objects within 2 object streams
- 30 named destinations out of 1000 (max. 500000)
+ 307 PDF objects out of 1000 (max. 8388607)
+ 201 compressed objects within 3 object streams
+ 31 named destinations out of 1000 (max. 500000)
  82613 words of extra memory for PDF output out of 89155 (max. 10000000)
 
