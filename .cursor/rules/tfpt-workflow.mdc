@@ -17,6 +17,15 @@ constants and scale grammar. Every load-bearing claim must be machine-checked.
   `tfpt_research_contracts.tex`, `origin_theory.tex` (the "Origin Theory" synthesis:
   seam=horizon keystones, order-30 Coxeter cycle, gapped unique attractor; `[I]/[L]`
   core `v53`–`v56` + one `[P]` cyclic interpretation, kept strictly apart).
+- **Shared TeX fragments (single sources — never fork them):**
+  `tfpt_docset.tex` — THE canonical document-set box, `\input` by the introduction and
+  papers 1–4; any change to the document list happens ONLY here.
+  `changelog.tex` — THE canonical dated changelog; dual-mode (compiles standalone via
+  `build.sh notes` AND is imported at the end of `introduction.tex` via
+  `\def\ChangelogImported{1}\input{changelog}`). **Every committed change** (new `vN`
+  module, status change, paper/website edit, infrastructure) **adds a dated entry to
+  `changelog.tex` in the same change** — newest first, plain LaTeX only (no
+  doc-specific macros).
 - **Verification suite** — `verification/`: `vN_*.py` (numbered claims), `run_all.py`
   (runner), `tfpt_constants.py` (shared primitives + `check()` harness),
   `status_ledger.csv` (**source of truth**), `freeze_file.csv` (kill criteria),
@@ -82,6 +91,9 @@ and the `GATE.*` rows in the ledger.
    its README count, and the ledger count must always agree.
 6. **Ledger**: add/update a row in `status_ledger.csv` (7 cols:
    `claim,statement,type,location,depends_on,script,external`). Quote fields with commas.
+6b. **Changelog**: add a dated entry to `changelog.tex` (newest first) describing the
+   finding/change in the same change. The changelog is part of `build.sh notes` and is
+   imported at the end of `introduction.tex` — it must always compile in both modes.
 7. **Recompile** touched docs and check no overfull > 30pt (see command below).
 8. **Consistency audit** — run the audit command below; it must print nothing.
 9. **Mirror into the website** (mandatory — see the **`website-sync` rule**): copy the new
@@ -132,6 +144,42 @@ done
 If it prints a script, that finding is not yet in the papers — integrate it (step 4)
 before refreshing manifests.
 
+## Deep-sync rules (updates must be COMPLETE, never superficial)
+
+A change is **not done** when one box or one file mentions it — it is done when **every
+surface that states the affected fact agrees**. Concretely:
+
+- **Trace every affected statement.** When a result upgrades/supersedes an earlier claim,
+  grep ALL active docs + website for the superseded wording before finishing, e.g.:
+  `grep -rn "single remaining\|one missing\|genuine remaining\|stays open" *.tex website/lib website/components`
+  Every hit that the new result touches must be rewritten (or explicitly marked with a
+  dated "status update" note) — leaving a stale "X is the remaining input" sentence
+  anywhere is a defect, not a style issue.
+- **Status surfaces move together** (one finding ⇒ all of these in the SAME change):
+  the affected paper section(s) with `\veri{}`, the intro script index, the intro status
+  card + "sharper aliases" prose, `tfpt_4_frontier` status, `tfpt_research_contracts`
+  (if a gate/residual moved), `origin_theory` (if the gap list moved), `next.txt`,
+  `changelog.tex`, the ledger, and the website (`ScriptIndex.tsx`, `VerificationDag.tsx`,
+  `papers.ts` abstract+sections of the affected paper, `StatusPyramid.tsx` /
+  `orientation/StatusMatrix.tsx` on status changes, `predictions.ts` on prediction changes).
+- **`papers.ts` mirrors paper content, not just titles.** When a paper gains/loses a
+  section or a section's claim changes status, the corresponding `sections` entry in
+  `website/lib/papers.ts` must be updated in the same change.
+- **No old-version framing.** The active docs and website never compare against or cite
+  "TFPT 4.5", "Papers 1–7", `tfpt-45` or per-old-paper attributions ("Paper 3 shows…").
+  Results are attributed to the current documents/axioms/scripts. (The only exception:
+  `tfpt_3`'s cascade *bridge*, which is a theorem about the old cascade as an object.)
+- **Single sources stay single.** Document list ⇒ `tfpt_docset.tex` only; changelog ⇒
+  `changelog.tex` only; status ⇒ ledger only. Never re-type these per document.
+- **Papers are English.** All paper/website prose is English (`next.txt` is the only
+  German-allowed file). Check any new text before committing.
+- **Visual sanity is part of the update.** After substantive TeX edits, check the page
+  output (render a few pages) for: boxes breaking badly across pages, tables that cannot
+  break (`tabularx` > ~35 rows ⇒ use `xltabular`), unreadable figures, orphaned section
+  heads. `grep "Overfull \\vbox" <doc>.log` must be empty.
+- **Browser-check website changes.** Any touched website page is verified in the browser
+  (not only `npm run build`).
+
 ## Invariants (do not break)
 
 - The suite must stay green (`run_all.py` exits 0). Add `vN` checks, never delete.
@@ -158,4 +206,7 @@ before refreshing manifests.
   `verification/wolfram/README.md` count, and the `GATE.WOLFRAM.01` ledger count must
   always be equal. Numerical-only (scipy ODE/PDE) results are exempt but must be
   flagged as Python-only in both the `.wl` comments and the README table.
+- **`changelog.tex` never falls behind.** Every commit that changes theory, suite, papers
+  or website carries its dated changelog entry; the changelog compiles standalone AND
+  imported (it is part of `build.sh notes`).
 - Only write summary `.md` files when explicitly asked.

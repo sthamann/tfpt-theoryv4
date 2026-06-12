@@ -35,6 +35,7 @@ NOTES=(
   tfpt_horizon_readouts
   tfpt_research_contracts
   origin_theory
+  changelog
 )
 PAPERS=(
   00_orientation_note

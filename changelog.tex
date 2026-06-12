@@ -1,0 +1,180 @@
+% ---------------------------------------------------------------------
+%  changelog.tex -- THE canonical TFPT changelog.
+%  Dual-mode file:
+%    * standalone:  pdflatex changelog.tex   (own preamble below)
+%    * imported:    \def\ChangelogImported{1}\input{changelog}
+%                   (at the END of introduction.tex)
+%  Maintenance rule (.cursor/rules): every committed change to the
+%  theory, the verification suite, the papers or the website adds a
+%  dated entry here IN THE SAME CHANGE.  Newest first.
+%  Content uses only plain LaTeX (no document-specific macros).
+% ---------------------------------------------------------------------
+\ifdefined\ChangelogImported\else
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage[a4paper,margin=2.3cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\setlist{itemsep=1.5pt,topsep=2pt}
+\emergencystretch=2.5em
+\title{\textbf{TFPT --- Changelog}\\[1mm]\large All changes and new results, by date}
+\author{}
+\date{\today}
+\begin{document}
+\maketitle
+\noindent This file is the canonical, dated record of every change to the TFPT theory
+development: new verification modules (\texttt{vN}), status changes, editorial passes and
+infrastructure. It is maintained \emph{in the same change} as the work it records, and it is
+also imported at the end of the \texttt{introduction} document. Module numbers \texttt{vN}
+refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
+\texttt{verification/status\_ledger.csv}.
+\fi
+
+\ifdefined\ChangelogImported
+\clearpage
+\section*{Appendix: changelog}
+\addcontentsline{toc}{section}{Appendix: changelog}
+\noindent The dated record of every change (canonical source: \texttt{changelog.tex}, also
+compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
+\fi
+
+\subsection*{2026-06-12}
+\begin{itemize}
+\item \textbf{Margin theorem (v122).} The established frozen selectors ($D_4$ annihilator
+  $n=(5,-9,6)$, $\det R=8$, $\det K=4$) pin $R$ uniquely among hexagon matrices
+  ($64\to12\to1$); the atom margins become theorems --- H2 introduces no new residual class.
+\item \textbf{Inventory update (v123).} Residual table re-pinned post v110--v122: exactly five
+  structural classes (R1 clock, R2 index-4 net, R3 EH step, R4$'$ selector establishment ---
+  replacing the discharged H2 dictionary --- and R5 $Q$ realisation); R2 carries three loads
+  (metric $+$ carrier $+$ QBL: one theorem, three doors).
+\item \textbf{Resummed clock $+$ glue Q-system (v124/v125).} R1's bend in closed form:
+  $\mathrm{rate}(n)=-p_2\ln(1-n/N_{\mathrm{fam}})$ (pole at $N_{\mathrm{fam}}$ forces the
+  three-level spectrum); the index-4 $\mu_4$ extension exists explicitly as a Longo Q-system
+  on $\mathbb C[\mathbb Z_4]$ (all Frobenius axioms exact) --- R2 sharpens from ``find'' to
+  ``identify''.
+\item \textbf{Clock--wall bridge (v126) and ring resummation (v127).} The resummed-clock
+  weights are the Mehta--Seshadri parabolic weights ($\operatorname{spec}A_0^\star$);
+  $\det(\mathbf 1-A_0^\star)=\tfrac29$ $=$ the entropy curvature; the clock is a
+  log-determinant (RPA rings, one tower per hexagon site, coupling $=$ parabolic weight).
+\item \textbf{Graded hull (v128).} $E_8$ is a $\mathbb Z_4$-graded Lie algebra over the
+  carrier (grading $=$ glue Q-system; exact on all $6720$ root-pair sums); ring multiplicity
+  $6$ $=$ sheet-doubled Ginsparg--Perry zero modes. \emph{Notation fix in the same round:}
+  the clock factor $6$ is $p_2(a)$, not $2p_2$ --- labels corrected across modules, ledger,
+  papers, website (numbers unchanged).
+\item \textbf{Entropy power law $\to$ zeta budget (v129--v133).} The clock is
+  $\Gamma_n\propto(S_n/S_{dS})^{p_2}$ (Gibbons--Hawking form); $p_2=2h$ with
+  $h=N_{\mathrm{fam}}$ from mode counting $+$ the Born rule (v130); the zero-mode norm is the
+  area, $\|Y_{1m}\|^2=A/(4\pi)$ exactly (v131); the det-ratio anomaly is the Koide constant,
+  $\zeta(0)|_{\det'}=-\tfrac23$ (v132); both $\zeta(0)$ budget routes computed exactly --- the
+  reduced seam route carries pure anchor ratios ($-\tfrac43$ $=$ minus the seed gain), the
+  naive 4d route ($-\tfrac{109}{45}$) carries no atom (v133).
+\item \textbf{Dual anchor $+$ determinant surface (v134/v135).} $d:=a^\top R^{-1}=a^\top
+  L^{-1}=(-\tfrac12,-\tfrac12,1)$ with $(1,1,-2)=-2d$ --- the inverse flavor response is the
+  Nariai root, invariance exact via Sherman--Morrison (third algebraic flavor--horizon bridge
+  leg); $\det M(s,t)=3s(t{+}1)(t{+}2)+t^2+5t+8$ with iso-volume walls at the $\mathbb
+  Z_2$/$\mu_4$ atoms, winding line $(8,14,20)$, $\det F=32$, row-budget axes with
+  $\mathrm{rowsum}(V)=\operatorname{Spec}(Q_+)$; micro-identities $41=16+25$, $52=16+36$.
+\item \textbf{Dual-normal selector, $Q_+$ cohomology, Volkov--Wipf firewall (v136--v138).}
+  $(d,n)$ pins $R$ \emph{columnwise} (each column the unique lattice point of the address
+  box; kernel $(6,8,7)$); the $A_0^\star$ zero mode carries the spectral normal
+  $\sigma=(2,-9,5)$ with a $W(A_3)$ orbit control excluding the naive lift;
+  $H^1(\mathbb P^1\setminus\mu_4)=\chi_1\oplus\chi_2\oplus\chi_3$ with degrees
+  $(1,2,3)=\operatorname{Spec}(Q_+)=$ the $A_3$ exponents and cusp weights
+  $=\operatorname{spec}A_0^\star$; the external full-4d graviton/ghost value $-\tfrac{98}{45}$
+  is pinned (arXiv:2506.02142 $=$ Volkov--Wipf hep-th/0003081) and its \emph{edge} part is
+  exactly two copies of the reduced seam budget --- R1 typed closed as an edge-sector object.
+\item \textbf{Selector triangle $+$ canonical map (v139/v140).} $d=\tfrac32a-2\cdot\mathbf 1$
+  is pure anchor data (first selector \emph{derived}); the frame $(\mathbf 1,a,\sigma)$ has
+  volume $11$ and $n$ is the unique covector with atom pairings $(2,8,121)$ --- the R4$'$
+  residue is three pairings; the $H^1\to$ generation equivariant map exists and is
+  Schur-rigid (only sign-twisted $\mu_4$ actions match), so the \texttt{GATE.QGEO} residue
+  collapses to one $\mathbb Z_3$ choice.
+\item \textbf{Editorial and consistency passes.} Content-currency sweep (superseded
+  ``single remaining input'' claims retired across contracts, paper 3, intro, website);
+  introduction: self-explanatory title (spells out Topological Fixed-Point Theory), the
+  old-version comparison removed throughout, redundant diagrams dropped, the unreadable
+  status heatmap removed, the script-index master table converted to a page-breaking
+  \texttt{xltabular} (it had silently truncated $\sim$110 rows), status card extended with
+  the v134--v140 reductions, predictions table completed (CP phase, cosmic birefringence);
+  the canonical document-set box extracted into the shared \texttt{tfpt\_docset.tex}; paper 1
+  cleaned of all 35 old-series references, every section now opens with its machine-check
+  script references; smaller box fonts across all eight documents; this \texttt{changelog.tex}
+  introduced as a dual-mode (standalone $+$ imported) document.
+\end{itemize}
+
+\subsection*{2026-06-11}
+\begin{itemize}
+\item \textbf{External-review integration (v83) and release hygiene.} Manifest
+  \texttt{--check} mode and the release rule; holomorphy pins $(E_8)_1$ (the unique even
+  unimodular rank-8 lattice theory).
+\item \textbf{Sheet diamond and centered form (v94/v95).} All four flavor operators are
+  points of one two-parameter surface $M(s,t)$; centered cross $R,L=C\mp U$, $K,F=C\mp V$
+  with the cofactor seam normal $n=(5,-9,6)$; documentation pass (``The Sheet Diamond and
+  the Winding Line'' in paper 3).
+\item \textbf{Horizon/anchor round (v101--v103).} The maximal (Nariai) black hole is the
+  anchor: roots $(1,1,-2)$, entropy bound $\tfrac23=|\mathbb Z_2|/N_{\mathrm{fam}}$; one
+  repeller/attractor orientation in both sectors; trisection normal form (the canonical
+  cosine coordinate).
+\item \textbf{Clock/ladder round (v104--v108) $+$ Lean hardening.} The classical Nariai
+  clock speaks anchor ($\chi_{\mathrm{clock}}=(\lambda-1)(\lambda+2)$); machine-pinned
+  residual inventory; first review validation; quantum-clock target made quantitative;
+  Pascal Ladder Theorem ($g=2K+1$ $\Leftrightarrow$ the closure).
+\item \textbf{QBL theorem chain (v109--v113).} Sheet-Pairing Lemma; Calder\'on-sheet
+  selection (a scalar seam datum exists iff the involution is sheet-odd); Quadratic-Transport
+  Theorem (degree exactly 2); Self-Counting Channel (the Pascal closure as an identity);
+  quasi-free kernel (one 2-point kernel determines the whole net, rank $=c$) --- the QBL
+  input merges with the R2/holomorphy premise; communicated across all status surfaces.
+\item \textbf{$U_{\mathrm{wall}}$ made exact (v114--v118).} Torsion normal form and
+  $\delta=\tfrac12$ theorem; exact anchor residue $A_0^\star$ (diag $=a/|\mu_4|$,
+  off-weights $(8,0,5)/144$); resonance theorem ($M_\infty=\mathbf 1\iff a_{13}=0$, one gauge
+  orbit); the holonomy is the exact 24-element $W(A_3)=S_4$; the hypercharge hexagon is the
+  sign-twisted family spectrum with the lepton coefficients as resolvent determinants.
+\item \textbf{Second review validation $+$ address pinning (v119--v121).} Anchor ratio triad
+  $(\tfrac23,\tfrac43,\tfrac53)$; the $121$ audit lemma; the lepton words are the compiler
+  atoms $(8,5,3)$ with divmod-hexagon addresses; $R$ is the unique hexagon matrix with atom
+  margins and $\det 8$ --- the address table carries zero residual information.
+\end{itemize}
+
+\subsection*{2026-06-10}
+\begin{itemize}
+\item \textbf{B/C/D round closed.} Koide attractor toy model (v93), glue uniqueness (v92),
+  the Wolfram extension as the independent second verification path, Lean hardening; papers
+  and website synced with the round.
+\item \textbf{Content rounds v96--v100.} Sheet conjugation bridge, discriminant dictionary,
+  Koide flow time, and the look-elsewhere-corrected numerology null test (v100: joint null
+  probability $\le10^{-30.7}$, conditional on the declared grammar).
+\end{itemize}
+
+\subsection*{2026-06-09}
+\begin{itemize}
+\item \textbf{Blind registry frozen (v84).} Machine-enforced prediction registry
+  (\texttt{predictions\_frozen.json}): exactly one $\theta_{12}$ number of record before
+  JUNO; conditional entries carry their hypotheses by name. Research-contracts document
+  added to the set.
+\end{itemize}
+
+\subsection*{2026-06-07 / 2026-06-08}
+\begin{itemize}
+\item \textbf{Compiler-closure consolidation.} The TFPT development is consolidated into the
+  current document set with the verification suite (modules v1--v82: $E_8$ glue, carrier
+  Pascal, EM fixed point, flavor matrix, cascade, bootstrap, gravity/cosmology, transport,
+  masses, registry and gate audits) as the single proof layer; manifests
+  (\texttt{manifest.sha256}, \texttt{lean\_manifest.sha256}) as content identity; website
+  mirrors the suite (interactive DAG, in-browser script reproducer, script index).
+\end{itemize}
+
+\subsection*{2026-04-27}
+\begin{itemize}
+\item \textbf{Initial commit.} TFPT papers and website baseline: electromagnetic closure and
+  flavor transport (UFE bridge, birefringence seed, dyonic intercept), PDF-download
+  tracking, accessibility and metadata passes.
+\end{itemize}
+
+\ifdefined\ChangelogImported\else
+\end{document}
+\fi
