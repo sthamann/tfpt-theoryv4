@@ -832,4 +832,26 @@ DIE ADRESS-TABELLE IST GEPINNT (v121, Ledger FLAV.H2.04) -- die
     => REST [P]: H2 schrumpft von "leite 9 Integer her" auf "leite
        die sechs Atom-Raender + det = rank her". FIREWALL: R, L und
        alle Wortlaengen seit v4/v18/v20/v71 eingefroren.
+
+DIE RAENDER SIND THEOREME (v122, Ledger FLAV.H2.05) -- auch die
+    Atom-Raender sind kein Input: drei ETABLIERTE, vor v120
+    eingefrorene Selektoren pinnen R allein --
+    (S1) D4-Annihilator n = (5,-9,6) mit n^T R = (8,0,0) (v94;
+         killt die (c2,c3)-Ebene; n.a = 8);
+    (S2) det R = 8 = rank E8 (v71-Quartett (3,4,8,20));
+    (S3) det K = 4 = |mu4| mit K = R + Q Sigma (Diamant);
+    + definitorischer Hexagon-Wertebereich {0..5}.
+    (1) ZENSUS [I]: 4 x 4 x 4 = 64 (S1)-Kandidaten; (S2) laesst 12;
+        (S3) laesst GENAU EINEN -- und es ist R.
+    (2) KOROLLAR [I]: Atom-Raender (4,8,10)/(4,13,5), Anker-Spalte
+        R e_1 = a und ALLE v120/v121-Summenregeln (16,10,14,24,40)
+        sind FOLGEN von (S1)-(S3) -- Input-Status aufgehoben.
+    (3) BONUS-LEMMA [I]: auf dem (S1)+(S2)-Locus gilt det(M+2U) =
+        20 = det L fuer ALLE 12 Kandidaten -- die vierte Quartett-
+        Determinante ist redundant (Ueberbestimmungs-Muster).
+    => REST [P]: H2 reduziert sich auf die Etablierung der
+       Selektoren selbst (n + Diamant-Determinanten -- bereits
+       inventarisierte Objekte); die Adress-Frage fuehrt KEINE neue
+       Restklasse ein. FIREWALL: alles seit v4/v18/v20/v71/v94
+       eingefroren -- nichts gefittet.
 ================================================================================

@@ -238,6 +238,7 @@ const NODES: DagNode[] = [
       "v119_review_validation_2.py",
       "v120_address_table.py",
       "v121_address_pinning.py",
+      "v122_margin_theorem.py",
     ],
   },
   {

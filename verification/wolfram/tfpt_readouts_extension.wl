@@ -832,6 +832,24 @@ Module[{rmat, lmat, uax, rows4, rows8, candidates, det8, dets},
     Count[dets, 8] == 1 && Length[DeleteDuplicates[dets]] == 17];
 ];
 
+(* ---- (v122) margin theorem ---- *)
+Module[{rmat, qmat, sig, uax, colsT, c8, c0, cands, final},
+  rmat = {{1, 3, 0}, {1, 5, 2}, {2, 5, 3}};
+  qmat = {{3, 1, 0}, {3, 2, 0}, {3, 2, 1}};
+  sig = DiagonalMatrix[{1, -1, -1}];
+  uax = 3 Outer[Times, {1, 1, 1}, {1, 0, 0}];
+  colsT[t_] := Select[Tuples[Range[0, 5], 3], 5 #[[1]] - 9 #[[2]] + 6 #[[3]] == t &];
+  c8 = colsT[8]; c0 = colsT[0];
+  cands = Select[Flatten[Table[Transpose[{a, b, c}], {a, c8}, {b, c0}, {c, c0}], 2], Det[#] == 8 &];
+  final = Select[cands, Det[# + qmat . sig] == 4 &];
+  checkExact["v122 census: 4 x 4 x 4 = 64 annihilator candidates, det 8 leaves 12, det K = 4 leaves exactly ONE = R",
+    Length[c8] == 4 && Length[c0] == 4 && Length[cands] == 12 &&
+    Length[final] == 1 && final[[1]] == rmat];
+  checkExact["v122 corollary: margins are theorems - rows (4,8,10), cols (4,13,5), anchor column (1,1,2); bonus: det(M+2U) = 20 on ALL 12 candidates",
+    (Total /@ final[[1]]) == {4, 8, 10} && Total[final[[1]]] == {4, 13, 5} &&
+    final[[1]][[All, 1]] == {1, 1, 2} && AllTrue[cands, Det[# + 2 uax] == 20 &]];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v121: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v122: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];
