@@ -15,6 +15,17 @@ jobs:
       - name: Checkout main repository
         uses: actions/checkout@v4
 
+      - name: Validate shadow token
+        env:
+          SHADOW_TOKEN: ${{ secrets.SHADOW_REPO_TOKEN }}
+        run: |
+          if [ -z "${SHADOW_TOKEN}" ]; then
+            echo "::error::Secret SHADOW_REPO_TOKEN is missing."
+            echo "Add a PAT with Contents: Read and write on sthamann/tfpt5-shadow"
+            echo "to the main repo secrets (Settings → Secrets → Actions)."
+            exit 1
+          fi
+
       - name: Prepare shadow repository checkout
         env:
           SHADOW_TOKEN: ${{ secrets.SHADOW_REPO_TOKEN }}
@@ -43,6 +54,9 @@ jobs:
           SOURCE_REPO: ${{ github.repository }}
           SOURCE_SHA: ${{ github.sha }}
         run: |
+          set -euo pipefail
+          remote="https://x-access-token:${SHADOW_TOKEN}@github.com/sthamann/tfpt5-shadow.git"
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
@@ -56,4 +70,10 @@ jobs:
           git commit -m "Sync from ${SOURCE_REPO}@${short_sha}
 
           One-way mirror for Overleaf GitHub sync (no _archive, website, or PDFs)."
-          git push -u "https://x-access-token:${SHADOW_TOKEN}@github.com/sthamann/tfpt5-shadow.git" HEAD:main
+
+          if ! git push -u "$remote" HEAD:main; then
+            echo "::error::Push to sthamann/tfpt5-shadow failed (HTTP 403 = token lacks write access)."
+            echo "Fine-grained PAT: grant this token Contents Read+Write on tfpt5-shadow only."
+            echo "Classic PAT: needs the 'repo' scope."
+            exit 1
+          fi

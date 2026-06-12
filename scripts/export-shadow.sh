@@ -21,7 +21,7 @@ DEST="${1:?Usage: bash scripts/export-shadow.sh <destination-directory>}"
 should_export() {
   local f="$1"
   case "$f" in
-    _archive/*|website/*|.cursor/*) return 1 ;;
+    _archive/*|website/*|.cursor/*|.github/*) return 1 ;;
   esac
   case "$f" in
     *.pdf) return 1 ;;
