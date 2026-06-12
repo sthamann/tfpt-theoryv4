@@ -486,8 +486,21 @@ with a square $\sigma$-pairing for $|t|<88$ (the global pick keeps the square se
 honestly). Both line pairings are Cramer-reducible to inventoried identities ($n\cdot a=\det R$ by
 Laplace along the anchor column; $n\cdot\mathbf1=8(R^{-1}\mathbf1)_1$ with $R^{-1}\mathbf1=\tfrac14(1,1,-1)$,
 \vref{v134}) --- restructuring, not establishment.
-\emph{R4$'$ residue \mC\ (final form):} derive the \emph{two} line pairings $(|\Z_2|,\operatorname{rank}E_8)$
---- the $\sigma$-pairing is integrality-forced; everything else in the chain anchor $\to(d,n)\to R$ is exact.
+\smallskip\\
+\noindent\textbf{The pairing values are atom identities (\veri{v145\_pairing\_atoms.py}).} Even the two
+line-pairing \emph{values} carry no independent information. Reading the \vref{v139} lift structurally ---
+$n=w_0(\sigma)+|\mu_4|e_3$ with $w_0$ the \emph{$A_3$ exponent duality} $m\leftrightarrow h{-}m$ (an
+established Lie involution; lift slot $=$ the top-exponent line, lift size $=$ the glue order) --- all
+three pairings become atom arithmetic:
+\[
+  n\cdot\mathbf1=|\mu_4|-|\Z_2|=|\Z_2|,\qquad
+  n\cdot a=|\mu_4|\,a_3=8=\operatorname{rank}E_8\ \ \text{via}\ \
+  \boxed{\ |\mu_4|+\gcar=\Nfam^2\ \ (4+5=9,\ \sigma\perp w_0(a))\ },
+\]
+and $n\cdot\sigma=\|\sigma\|^2-\Nfam^2+|\mu_4|\gcar=110-9+20=121$ with
+$\|\sigma\|^2=|\Z_2|^2+\Nfam^4+\gcar^2=110=|\Z_2|\gcar\|\operatorname{Pl}(K)\|_1$.
+\emph{R4$'$ residue \mC\ (final form):} derive the \emph{one} map $n=w_0(\sigma)+|\mu_4|e_3$ --- no
+independent number remains; everything else in the chain anchor $\to(d,n)\to R$ is exact.
 \end{keybox}
 
 \begin{keybox}[Exterior Leg Lemma --- the quark $u/d$ leg is a $\Lambda^2F$ area, not a scalar \mE/\mC]
@@ -759,6 +772,18 @@ $64=16\cdot4=(\mathbf{16},\bar{\mathbf4})$, $60=10\cdot6=(\mathbf{10},\mathbf6)$
 sector ring $=\Z_4=$ the $\mathbb C[\Z_4]$ fusion, halfway subgroup $\{0,2\}=SO(16)_1$. \emph{R2 residue
 \mC\ (final form):} exactly \emph{one} conformal-net statement remains --- the seam--Calder\'on inclusion
 of the $16$-Majorana \emph{net} carries this Q-system --- with no remaining finite freedom.
+\smallskip\\
+\noindent\textbf{Where that statement lives: the Fock sector census (\veri{v148\_fock\_census.py}).}
+The remaining work is scoped exactly. The \emph{untwisted} Fock module of the $16$ Majoranas ($2^8=256$
+states) carries only the \emph{even} diagonal-glue charges: charge $0=(\mathbf s,\bar{\mathbf 4})\oplus
+(\mathbf c,\mathbf 4)=128$, charge $2=(\mathbf s,\mathbf 4)\oplus(\mathbf c,\bar{\mathbf 4})=128$, in
+four equal blocks of $64=16\times4$ (the sector dimensions above). The \emph{odd} glue classes
+$k(1,1)$, $k$ odd --- the actual $\mu_4$ simple currents of the extension --- have \textbf{zero support}:
+they are twisted (Ramond-type) modules of the carrier net. \emph{Consequence \mC:} the index-$4$
+extension cannot even be \emph{stated} on the untwisted module alone; R2's one remaining statement is
+irreducibly about the twisted-sector structure of the seam--Calder\'on net, and the finite untwisted
+shadow is exhausted (\vref{v113}/\vref{v125}/\vref{v143}). This pins \emph{where} the remaining work
+lives --- honestly.
 
 
 \begin{lemma}[G3--G4 --- reflection positivity, fixed and integrated]

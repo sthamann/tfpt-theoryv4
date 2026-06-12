@@ -119,6 +119,37 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
   poison the next build; artefacts are still kept on success.
 \end{itemize}
 
+\subsection*{2026-06-12 (R1--R5 second round: every class at its floor, \vref{v145}--\vref{v148})}
+\begin{itemize}
+\item \textbf{R4$'$: the pairing values are atom identities (\vref{v145}).} Reading the
+  \vref{v139} lift structurally ($n=w_0(\sigma)+|\mu_4|e_3$, $w_0=$ the $A_3$ exponent
+  duality), all three pairings become atom arithmetic --- including the \emph{new}
+  closure $|\mu_4|+\gcar=\Nfam^2$ ($4{+}5{=}9$, $\sigma\perp w_0(a)$) and
+  $\|\sigma\|^2=110=|\Z_2|\gcar\|\mathrm{Pl}(K)\|_1$. R4$'$ $=$ derive \emph{one} map
+  (ledger \texttt{GATE.UWALL.13}).
+\item \textbf{R5: the M\"obius $D_4$ realisation (\vref{v146}).} The \emph{full}
+  dihedral symmetry $\langle z{\mapsto}iz,\,z{\mapsto}1/z\rangle$ of the seam curve acts
+  on $H^1$ exactly as the integer model: $\iota^*$ is the exponent duality with parity
+  $+1$ on the self-conjugate line ($=T_A$ in the cusp basis, glue-swap parity), and
+  $\Sigma$ is the $\delta\iota$ class --- the premise reduces to the module
+  identification itself (ledger \texttt{FLAV.QGEO.07}).
+\item \textbf{R1: the clock is a Gaussian zero-mode integral, and the bend is
+  det$'$-clean (\vref{v147}).} Variance ratio $(1-\alpha)$ (forced by norm $=$ area)
+  gives the Born-squared ratio $(1-\alpha)^{p_2}$, the $\ln$ series \emph{is} the
+  \vref{v127} ring sum; the two quantum weights share \emph{one} Nariai geometry, so the
+  bend $\log_{3/2}3$ carries no determinant correction --- the \vref{v144} obstruction is
+  localised to the $\alpha=0$ reference (ledger \texttt{HOR.CLOCK.13}).
+\item \textbf{R2: the Fock sector census (\vref{v148}).} The untwisted $16$-Majorana
+  module carries only even glue charges $\{0,2\}$ ($128{+}128$, four $64$-blocks); the
+  odd $\mu_4$ simple currents have zero support $\Rightarrow$ the one remaining net
+  statement is irreducibly twisted-sector; the finite untwisted shadow is exhausted
+  (ledger \texttt{GATE.METRIC.10}).
+\item \textbf{Bookkeeping.} Suite at $148$ modules, all green; Wolfram extension
+  $215/215$ (README $+$ \texttt{GATE.WOLFRAM.02} $+$ website counter in lock-step);
+  status surfaces (intro card, \texttt{tfpt\_1}, \texttt{origin\_theory} third update,
+  \texttt{next.txt}) moved together.
+\end{itemize}
+
 \subsection*{2026-06-12 (external review integrated: $\Lambda$ typing, marker migration, website parity)}
 \begin{itemize}
 \item \textbf{$\Lambda$ normalisation made unambiguous.} The external review flagged the

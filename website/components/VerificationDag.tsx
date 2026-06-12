@@ -261,6 +261,10 @@ const NODES: DagNode[] = [
       "v142_frame_integrality.py",
       "v143_graded_frobenius.py",
       "v144_detratio_family.py",
+      "v145_pairing_atoms.py",
+      "v146_moebius_d4.py",
+      "v147_clock_gaussian.py",
+      "v148_fock_census.py",
     ],
   },
   {

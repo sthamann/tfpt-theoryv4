@@ -21,6 +21,19 @@ NACHTRAG 2026-06-12 (R1-R5-Angriffsrunde, v141-v144):
   - R3: angegriffen, NICHTS gelandet -- SEAM.THEOREM.01 unveraendert offen [O].
   - Suite 144 Module gruen; Wolfram-Extension 211/211.
 
+NACHTRAG 2026-06-12, Runde 2 (v145-v148): jede Klasse am Boden.
+  - R4' (v145): Paarungs-WERTE = Atom-Identitaeten (neue Closure |mu4|+g_car = N_fam^2,
+    4+5=9; ||sigma||^2 = 110 = |Z2|*g*11); Rest = EINE Lift-Map n = w0(sigma)+|mu4|e3.
+  - R5 (v146): volle Moebius-D4 des Seam-Kurve = Integer-Modell, Paritaet fuer
+    Paritaet (iota = T_A exakt, delta*iota = Sigma); Rest = Modul-Identifikation.
+  - R1 (v147): Ring-Summe = Born^2-Gauss-Zeromoden-Integral (Varianz = Flaeche);
+    der BEND log_{3/2}3 ist det'-SAUBER (beide Quantengewichte teilen EINE
+    Nariai-Geometrie); Obstruktion nur noch in der alpha=0-Referenz.
+  - R2 (v148): ehrlicher Zensus -- ungetwistetes Fock-Modul traegt nur gerade
+    Glue-Ladungen {0,2}; die ungeraden mu4-Simple-Currents sind getwistete
+    (Ramond-)Moduln => die Netz-Aussage ist irreduzibel twisted-sector.
+  - Suite 148 Module; Wolfram-Extension erweitert.
+
 KURZFASSUNG (ein Satz)
 ----------------------
 Die Anchorblock-Determinante des Massentransport-Pencils, det B(K+xQ) = (3x+2)(3x+5),

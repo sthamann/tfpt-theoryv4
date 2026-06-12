@@ -1224,6 +1224,75 @@ Module[{s, p, rb, rc, ro, poly, ratio, ser, cpar, epsSer},
     (-4/9)/(3/8) == -32/27 == -4 (2/3)^3];
 ];
 
+(* ---- (v145) pairing atoms ---- *)
+Module[{onev, av, sigma, nv, w0},
+  onev = {1, 1, 1}; av = {1, 1, 2}; sigma = {2, -9, 5}; nv = {5, -9, 6};
+  w0[v_] := Reverse[v];
+  checkExact["v145 pairing atoms: n = w0(sigma) + 4 e3; n.1 = -|Z2|+|mu4| = 2; sigma.w0(a) = 0 <=> |mu4|+g = N^2 (4+5=9) => n.a = 4*2 = 8; ||sigma||^2 = 110 = 2*5*11; n.sigma = 110-9+20 = 121 = 11^2",
+    w0[sigma] + 4 {0, 0, 1} == nv &&
+    nv . onev == -2 + 4 == 2 &&
+    sigma . w0[av] == 0 && 4 + 5 == 9 &&
+    nv . av == 4*2 == 8 &&
+    sigma . sigma == 110 == 2*5*11 &&
+    nv . sigma == 110 - 9 + 20 == 121];
+];
+
+(* ---- (v146) Moebius D4 realisation ---- *)
+Module[{om, deckOK, invOK, ta, sig, p, tac, sigc, delta, iota},
+  om[k_] := z^(k - 1)/(z^4 - 1);
+  deckOK = And @@ Table[
+    Simplify[(om[k] /. z -> I w) I - I^k (om[k] /. z -> w)] === 0, {k, 1, 3}];
+  invOK = Simplify[(om[1] /. z -> 1/w) (-1/w^2) - (om[3] /. z -> w)] === 0 &&
+          Simplify[(om[2] /. z -> 1/w) (-1/w^2) - (om[2] /. z -> w)] === 0 &&
+          Simplify[(om[3] /. z -> 1/w) (-1/w^2) - (om[1] /. z -> w)] === 0;
+  ta = {{0, 1, 0}, {1, 0, 0}, {2, -2, 1}};
+  sig = DiagonalMatrix[{1, -1, -1}];
+  p = Transpose[{{0, 0, 1}, {0, 1, 2}, {1, 0, 0}}];
+  tac = Inverse[p] . ta . p;
+  sigc = Inverse[p] . sig . p;
+  delta = DiagonalMatrix[{I, -1, -I}];
+  iota = {{0, 0, 1}, {0, 1, 0}, {1, 0, 0}};
+  checkExact["v146 Moebius D4: delta* omega_k = i^k omega_k; iota* omega_(1,2,3) = omega_(3,2,1) (+1 on chi2, det -1); dihedral relations; T_A (cusp basis, char-2 line first) = the same reflection class as iota (fixes the self-conjugate line with +1, swaps the pair, det -1); Sigma = the delta-iota class",
+    deckOK && invOK &&
+    iota . iota == IdentityMatrix[3] &&
+    Simplify[iota . delta . Inverse[iota] - Inverse[delta]] == ConstantArray[0, {3, 3}] &&
+    tac == {{1, 0, 0}, {0, 0, 1}, {0, 1, 0}} && Det[tac] == -1 &&
+    tac[[1, 1]] == 1 == iota[[2, 2]] &&
+    sigc == DiagonalMatrix[{-1, -1, 1}] &&
+    Simplify[(delta . iota)[[2, 2]]] == -1 && Simplify[Det[delta . iota]] == 1];
+];
+
+(* ---- (v147) clock Gaussian model ---- *)
+Module[{p2 = 6, born, rate, ser, ring, bend},
+  born = ((1 - \[Alpha])^(p2/2))^2;
+  rate = -p2 Log[1 - \[Alpha]];
+  ser = Normal[Series[rate, {\[Alpha], 0, 4}]];
+  ring = Sum[p2 \[Alpha]^k/k, {k, 1, 4}];
+  bend = (-p2 Log[1/3])/(-p2 Log[2/3]);
+  checkExact["v147 clock Gaussian: Born^2 ratio = (1-alpha)^6, rate = -6 ln(1-alpha), ln series = ring sum; bend = ln3/ln(3/2) with (1/3)^6 = ((2/3)^6)^bend; kappa = 8/(24 pi) = 1/(3 pi); spectrum {1,(2/3)^6,(1/3)^6}",
+    Simplify[born - (1 - \[Alpha])^p2] === 0 &&
+    Expand[ser - ring] === 0 &&
+    Simplify[bend Log[3/2] - Log[3]] === 0 &&
+    Simplify[PowerExpand[bend Log[(2/3)^6] - Log[(1/3)^6]]] === 0 &&
+    8/(24 Pi) == 1/(3 Pi) &&
+    Table[((3 - n)/3)^p2, {n, 0, 2}] == {1, (2/3)^6, (1/3)^6}];
+];
+
+(* ---- (v148) Fock sector census ---- *)
+Module[{counts, fine},
+  counts = <|0 -> 0, 2 -> 0|>; fine = <||>;
+  Do[Module[{qd = If[EvenQ[Count[signs, -1]], 1, 3]},
+      Do[Module[{tot = Mod[qd + qa, 4]},
+          counts[tot] = Lookup[counts, tot, 0] + 4;
+          fine[{qd, qa}] = Lookup[fine, Key[{qd, qa}], 0] + 4],
+        {qa, {1, 3}}]],
+    {signs, Tuples[{1, -1}, 5]}];
+  checkExact["v148 Fock census: untwisted 256-dim module carries glue charges {0,2} only (128+128, four 64-blocks); odd mu4 simple currents have zero support",
+    counts == <|0 -> 128, 2 -> 128|> &&
+    Values[KeySort[fine]] == {64, 64, 64, 64} &&
+    Total[Values[counts]] == 256];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v144: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v148: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

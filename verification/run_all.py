@@ -152,6 +152,10 @@ MODULES = [
     ("v142_frame_integrality", "frame integrality: R4' three pairings -> two (index-11 congruence)"),
     ("v143_graded_frobenius", "graded Frobenius: R2 identification at the finite Lie level"),
     ("v144_detratio_family", "det-ratio cancellation exact within the SdS family (R1's v131 step)"),
+    ("v145_pairing_atoms", "R4' pairing values are atom identities; residue = one lift map"),
+    ("v146_moebius_d4", "Moebius D4 on H^1 = the integer model, parity by parity (R5 floor)"),
+    ("v147_clock_gaussian", "clock = Gaussian zero-mode integral; the bend is det'-clean (R1)"),
+    ("v148_fock_census", "Fock sector census: odd glue sectors are twisted (R2 scoped)"),
 
 ]
 

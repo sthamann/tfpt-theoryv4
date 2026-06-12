@@ -700,6 +700,23 @@ space by exactly the one family rotation $\rho=$ the $\operatorname{coker}Q$ tri
 \emph{Typing:} selection, conjugacy and obstruction \mE\ (lattice-level theorem); what remains of
 \texttt{GATE.QGEO} is only the realisation premise the gate always carried (the integer $D_4$ model
 \emph{is} the parabolic geometry, \vref{v69}/\vref{v98}) \mC\ --- with \emph{no} discrete freedom left.
+\smallskip\\
+\noindent\textbf{The M\"obius $D_4$ realisation: the premise at its floor
+(\veri{v146\_moebius\_d4.py}).} The realisation premise itself now has every checkable part checked.
+The \emph{full} dihedral symmetry group of the seam curve, $\langle\delta\!:z\mapsto iz,\ \iota\!:z\mapsto
+1/z\rangle=D_4$, acts on the explicit cohomology basis $\omega_k=z^{k-1}dz/(z^4{-}1)$ exactly as the
+integer model: $\delta^*\omega_k=i^k\omega_k$ (the deck, \vref{v137}), and
+\[
+  \boxed{\ \iota^*\omega_1=\omega_3,\quad \iota^*\omega_2=\omega_2,\quad \iota^*\omega_3=\omega_1\ }
+\]
+--- the exponent duality with parity $+1$ on the self-conjugate line and $\det=-1$, \emph{no extra
+phases}. In the cusp basis the anchor-forced conjugation $T_A$ \emph{is} this permutation (fixes the
+character-$2$ line with $+1$, $\det=-1$ $=$ the glue-swap parity), and $\Sigma$ \emph{is} the
+$\delta\iota$ class ($-1$ on the character-$2$ line, $\det=+1$ $=$ glue-fix): the \vref{v98}
+reflection-class split lands exactly on the geometric reflection classes. \emph{Typing:} the dihedral
+match \mE; with spectra (\vref{v137}), cyclic part (\vref{v141}) and reflections now all matched, the
+premise reduces to the module identification itself --- ``generation space \emph{is} $H^1$ of the seam
+curve with its parabolic weights'' \mC\ --- with no remaining checkable mismatch.
 \end{keybox}
 
 \begin{winbox}[Spectra and the determinant ladder $\to|W(D_5)|$ \mE]
