@@ -895,7 +895,7 @@ Module[{a0, spec, lams},
   checkExact["v126 the weights are the parabolic weights: spec A0* = {0, 1/3, 2/3} = n/N_fam; bridge (1-alpha)^6 = {1, (2/3)^6, (1/3)^6}",
     spec == {0, 1/3, 2/3} &&
     Sort[((1 - #)^6 &) /@ spec, Greater] == {1, (2/3)^6, (1/3)^6}];
-  checkExact["v126 checkpoint 1 + determinant: linear coefficient 2p2/N = 2 = |Z2| (= v104 entropy rate 2H); det(1 - A0*) = 2/9 = |Z2|/N^2 (v102 curvature); tr(1 - A0*) = 2; det A0* = 0",
+  checkExact["v126 checkpoint 1 + determinant: linear coefficient p2/N = 2 = |Z2| (= v104 entropy rate 2H); det(1 - A0*) = 2/9 = |Z2|/N^2 (v102 curvature); tr(1 - A0*) = 2; det A0* = 0",
     SeriesCoefficient[-6 Log[1 - x/3], {x, 0, 1}] == 2 &&
     Simplify[Det[IdentityMatrix[3] - a0]] == 2/9 &&
     Simplify[Tr[IdentityMatrix[3] - a0]] == 2 && Simplify[Det[a0]] == 0];
@@ -942,7 +942,7 @@ Module[{d5roots, d5v, d5s, d5c, a3roots, wclass, roots, counts, items, pairsChec
         pairsChecked++;
         If[lookup[s] != Mod[roots[[i, 2]] + roots[[j, 2]], 4], gradingOK = False]]],
     {i, 239}, {j, i + 1, 240}];
-  checkExact["v128 the grading is exact on all 6720 root-pair sums: E8 is a Z4-graded Lie algebra over the carrier (grading = the glue Q-system); zero-mode multiplicity 2(2l+1) = 6 = 2p2 at l = 1",
+  checkExact["v128 the grading is exact on all 6720 root-pair sums: E8 is a Z4-graded Lie algebra over the carrier (grading = the glue Q-system); zero-mode multiplicity 2(2l+1) = 6 = p2 at l = 1",
     gradingOK && pairsChecked == 6720 && 2 (2*1 + 1) == 6];
 ];
 

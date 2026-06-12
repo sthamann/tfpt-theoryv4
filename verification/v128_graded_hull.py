@@ -1,6 +1,6 @@
 """v128 -- The graded hull and the zero-mode multiplicity: E8 itself
 realises the glue Q-system as a Z4-grading over the carrier (exact on all
-240 roots), and the ring multiplicity 2p_2 = 6 is the sheet-doubled
+240 roots), and the ring multiplicity p_2 = 6 is the sheet-doubled
 Ginsparg-Perry zero-mode count.  [I] exact constructions; the two named
 computations (R1/R2) each gain their structural anchor.
 
@@ -23,7 +23,7 @@ computations (R1/R2) each gain their structural anchor.
   [I] 3. The Ginsparg-Perry l = 1 sector (the ZERO modes, lambda in
          {0, -1}, v104/v107) has 2l + 1 = 3 modes; sheet doubling
          (|Z2|, the double cover) gives
-             2 x 3 = 6 = 2 p_2 = |R+(A3)|
+             2 x 3 = 6 = p_2 = |R+(A3)|
          -- the ring multiplicity of the v127 log-det clock equals the
          sheet-doubled zero-mode count.  [P] reading (recorded, not
          claimed): zero modes are exactly the modes that force a
@@ -138,7 +138,7 @@ def run():
     # 3. zero-mode multiplicity
     check("THE MULTIPLICITY IS THE ZERO-MODE COUNT: the GP l = 1 "
           "sector (the zero modes, lambda in {0,-1}, v104/v107) has "
-          "2l+1 = 3 modes; sheet doubling gives 2 x 3 = 6 = 2p2 = "
+          "2l+1 = 3 modes; sheet doubling gives 2 x 3 = 6 = p2 = "
           "|R+(A3)| -- the ring multiplicity of the v127 log-det "
           "clock equals the sheet-doubled zero-mode count; [P] "
           "reading: zero modes are exactly the modes that force "

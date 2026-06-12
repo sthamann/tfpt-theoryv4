@@ -10,8 +10,8 @@ sum_{k>=2} alpha^k/k.  This module identifies the tail's structure:
   [I] 1. LOG-DET IDENTITY.  For a rank-1 insertion P (tr P^k = 1):
              -ln det(1 - alpha P) = -ln(1 - alpha) = sum_k alpha^k / k,
          so the v124 clock is EXACTLY
-             rate(alpha) = -2 p_2 Tr ln(1 - alpha P)
-         -- 2p_2 = 6 identical copies (ONE PER HEXAGON SITE = positive
+             rate(alpha) = -p_2 Tr ln(1 - alpha P)
+         -- p_2 = 6 identical copies (ONE PER HEXAGON SITE = positive
          root of A_3) of the one-loop ring (RPA) resummation of a
          single mode with insertion strength alpha = parabolic weight.
   [I] 2. RING LADDER.  The k-th ring contributes alpha^k / k per site:
@@ -33,8 +33,8 @@ sum_{k>=2} alpha^k/k.  This module identifies the tail's structure:
   [P] 5. R1 FINAL FORM (recorded, not claimed).  The semiclassical job
          is now fully specified: show that the near-Nariai one-loop
          effective action of the seam mode, with insertion strength =
-         parabolic weight alpha and multiplicity 2p_2 (the hexagon),
-         is the ring sum -2p_2 Tr ln(1 - alpha P).  R1 = 'the seam
+         parabolic weight alpha and multiplicity p_2 (the hexagon),
+         is the ring sum -p_2 Tr ln(1 - alpha P).  R1 = 'the seam
          clock is the RPA determinant of one mode on six sites'.  The
          resummation TYPE demanded by v107 is identified; the
          derivation itself remains open.
@@ -43,7 +43,7 @@ import sympy as sp
 
 from tfpt_constants import check, summary, reset
 
-TWO_P2 = 6
+P2 = 6
 
 
 def run():
@@ -57,7 +57,7 @@ def run():
     check("LOG-DET IDENTITY: det(1 - alpha P) = 1 - alpha for a rank-1 "
           "insertion P (tr P^k = 1), so -ln det(1 - alpha P) = "
           "-ln(1 - alpha) = sum_k alpha^k/k -- the v124 clock is "
-          "EXACTLY rate = -2p2 Tr ln(1 - alpha P): 2p2 = 6 identical "
+          "EXACTLY rate = -p2 Tr ln(1 - alpha P): p2 = 6 identical "
           "ring (RPA) towers, one per hexagon site (= positive root "
           "of A3), coupling = parabolic weight",
           sp.simplify(sp.det(sp.eye(3) - alpha * proj)
@@ -67,11 +67,11 @@ def run():
 
     # 2. ring ladder
     a1, a2 = sp.Rational(1, 3), sp.Rational(2, 3)
-    exact1 = -TWO_P2 * sp.log(1 - a1)
-    exact2 = -TWO_P2 * sp.log(1 - a2)
+    exact1 = -P2 * sp.log(1 - a1)
+    exact2 = -P2 * sp.log(1 - a2)
 
     def partial(al, kmax):
-        return TWO_P2 * sum(al ** j / j for j in range(1, kmax + 1))
+        return P2 * sum(al ** j / j for j in range(1, kmax + 1))
 
     check("RING LADDER: k = 1 ring = classical term (6 alpha = 2n = "
           "|Z2| n, the v104/v126 entropy rate); k = 2 ring = first "
@@ -79,7 +79,7 @@ def run():
           "converge to the exact rates monotonically from below "
           "(K = 1, 2, 3, 8 checked exactly)",
           partial(a1, 1) == 2 and partial(a2, 1) == 4
-          and TWO_P2 * a1 ** 2 / 2 == sp.Rational(1, 3)
+          and P2 * a1 ** 2 / 2 == sp.Rational(1, 3)
           and all(partial(a1, k) < partial(a1, k + 1) for k in (1, 2, 3))
           and partial(a1, 8) < exact1 and partial(a2, 8) < exact2
           and float(exact1 - partial(a1, 8)) < 1e-3
@@ -104,7 +104,7 @@ def run():
     check("R1 FINAL FORM [P] (recorded, not claimed): show that the "
           "near-Nariai one-loop effective action of the seam mode, "
           "with insertion = parabolic weight alpha and multiplicity "
-          "2p2 (the hexagon), is the ring sum -2p2 Tr ln(1 - alpha P) "
+          "p2 (the hexagon), is the ring sum -p2 Tr ln(1 - alpha P) "
           "-- 'the seam clock is the RPA determinant of one mode on "
           "six sites'. The resummation TYPE demanded by v107 is "
           "identified; the derivation itself remains open", True)

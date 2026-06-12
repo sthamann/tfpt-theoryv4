@@ -1,5 +1,5 @@
 """v124 -- The resummed clock: the transfer spectrum IS the geometric
-resummation of a weight-linear clock, rate(n) = -2p_2 ln(1 - n/N_fam).
+resummation of a weight-linear clock, rate(n) = -p_2 ln(1 - n/N_fam).
 The R1 'bend' acquires a closed form, the linearisation carries slope
 |Z_2|, and the pole at n = N_fam forces the three-level spectrum.  [I]
 exact identities on frozen spectra; the semiclassical derivation stays [P].
@@ -8,12 +8,12 @@ v107 quantified R1 as 'produce the bend log_{3/2}3 per weight step'.
 This module shows the bend is not an exotic target -- the established
 transfer spectrum is EXACTLY a resummed logarithm:
 
-  [I] 1. THE SPECTRUM READS (1 - n/N)^{2p_2}.  The frozen transfer
+  [I] 1. THE SPECTRUM READS (1 - n/N)^{p_2}.  The frozen transfer
          eigenvalues {1, (2/3)^6, (1/3)^6} (v54/v69/v95) are exactly
-             lambda_n = (1 - n/N_fam)^{2 p_2},   n = 0, 1, 2,
-         with 2p_2 = 6 = |R^+(A3)| the hexagon size.
+             lambda_n = (1 - n/N_fam)^{p_2},   n = 0, 1, 2,
+         with p_2 = 6 = |R^+(A3)| the hexagon size.
   [I] 2. THE CLOSED-FORM CLOCK.  Hence
-             rate(n) = -2 p_2 ln(1 - n/N_fam)
+             rate(n) = -p_2 ln(1 - n/N_fam)
          reproduces {0, Delta, 6 ln 3} exactly; the v107 bend identity
          rate(2)/rate(1) = log_{3/2} 3 becomes a one-line consequence,
          and the 'bend per weight step' log_{9/4} 3 is just the
@@ -31,7 +31,7 @@ transfer spectrum is EXACTLY a resummed logarithm:
          state can decay at finite rate).
   [P] 5. R1 RE-SHARPENED (recorded, not claimed).  The missing
          semiclassical object now has a closed-form target: derive
-             rate(n) = -N ln(1 - n/N) x (2 p_2 / N)
+             rate(n) = -N ln(1 - n/N) x (p_2 / N)
          from the near-Nariai one-loop at kappa = 1/(3 pi) -- i.e. the
          linear response must produce slope |Z_2| x classical, and the
          resummation must exponentiate the geometric series.  Nothing
@@ -42,22 +42,22 @@ import sympy as sp
 from tfpt_constants import check, summary, reset
 
 N_FAM = 3
-TWO_P2 = 6
+P2 = 6
 
 
 def rate(n):
-    return -TWO_P2 * sp.log(sp.Rational(N_FAM - n, N_FAM))
+    return -P2 * sp.log(sp.Rational(N_FAM - n, N_FAM))
 
 
 def run():
     reset()
-    print("v124 resummed clock (rate(n) = -2p2 ln(1 - n/N_fam))")
+    print("v124 resummed clock (rate(n) = -p2 ln(1 - n/N_fam))")
 
     # 1. spectrum reading
-    lams = [sp.Rational(N_FAM - n, N_FAM) ** TWO_P2 for n in range(3)]
-    check("THE SPECTRUM READS (1 - n/N)^{2p2}: the frozen transfer "
+    lams = [sp.Rational(N_FAM - n, N_FAM) ** P2 for n in range(3)]
+    check("THE SPECTRUM READS (1 - n/N)^{p2}: the frozen transfer "
           "eigenvalues {1, (2/3)^6, (1/3)^6} are exactly lambda_n = "
-          "(1 - n/3)^6 for n = 0, 1, 2 (2p2 = 6 = |R+(A3)| = the "
+          "(1 - n/3)^6 for n = 0, 1, 2 (p2 = 6 = |R+(A3)| = the "
           "hexagon size)",
           lams == [1, sp.Rational(2, 3) ** 6, sp.Rational(1, 3) ** 6])
 
@@ -81,7 +81,7 @@ def run():
 
     # 3. linearisation carries the sheet
     x = sp.Symbol('x')
-    ser = sp.series(-TWO_P2 * sp.log(1 - x / N_FAM), x, 0, 4).removeO()
+    ser = sp.series(-P2 * sp.log(1 - x / N_FAM), x, 0, 4).removeO()
     check("THE LINEARISATION CARRIES THE SHEET: rate(n) = 2n + n^2/3 + "
           "2n^3/27 + ... -- the linear (one-loop) term has slope "
           "exactly |Z_2| = 2 relative to the integer classical "
@@ -89,21 +89,21 @@ def run():
           "clock = sheet-doubled classical clock + geometric tail",
           sp.expand(ser - (2 * x + x ** 2 / 3
                            + 2 * x ** 3 / 27)) == 0
-          and sp.Rational(TWO_P2, N_FAM) == 2)
+          and sp.Rational(P2, N_FAM) == 2)
 
     # 4. the wall at N_fam
     check("THE WALL AT N_fam: rate(n) -> oo as n -> 3 (pole of the "
           "resummed logarithm at the family count) => the cusp ladder "
           "ends at n = N_fam - 1 = 2: the THREE-level transfer "
           "spectrum is forced by the clock itself",
-          sp.limit(-TWO_P2 * sp.log(1 - x / N_FAM), x, N_FAM,
+          sp.limit(-P2 * sp.log(1 - x / N_FAM), x, N_FAM,
                    dir='-') == sp.oo
           and len(lams) == N_FAM)
 
     # 5. R1 re-sharpened
     check("R1 RE-SHARPENED [P] (recorded, not claimed): the missing "
           "semiclassical object has a CLOSED-FORM target -- derive "
-          "rate(n) = -2p2 ln(1 - n/N_fam) from the near-Nariai "
+          "rate(n) = -p2 ln(1 - n/N_fam) from the near-Nariai "
           "one-loop at kappa = 1/(3pi): linear response must give "
           "slope |Z_2| x classical, the resummation must exponentiate "
           "the geometric series. All spectra frozen in "
