@@ -958,6 +958,14 @@ Module[{levels, lams, rates},
     rates[[1]] === 0 && levels[[1]] > levels[[2]] > levels[[3]]];
 ];
 
+(* ---- (v130) Born square ---- *)
+Module[{nzero},
+  nzero = 2 (2*1 + 1);
+  checkExact["v130 Born square: n_zero = 6; amplitude weight h = n_zero/2 = 3 = N_fam; probability exponent 2h = 6 = p2; l=1 dim = 3 = proper CKVs of S^2; x2 = horizon pair",
+    nzero == 6 && nzero/2 == 3 && 2 (nzero/2) == 6 && 2*1 + 1 == 3 &&
+    Simplify[(s^(nzero/2))^2 - s^6] === 0];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v129: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v130: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

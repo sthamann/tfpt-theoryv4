@@ -34,9 +34,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/introduction.pdf": {
     href: "/papers/introduction.pdf",
     ...COMMON,
-    bytes: 1007679,
+    bytes: 1009095,
     sha256:
-      "cc745ddb680b6e87401617861b6aad8a5729794afeac90df8073116d99fdb07b",
+      "4dc5cee3fcc161e0b44c0ffd7b4e0d918d3e78efcd472338d1920d82706c1d94",
     changelog:
       "Compiler-closure reading guide: two axioms, the dependency DAG, the predictions and the proof ledger.",
   },
@@ -79,9 +79,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/tfpt_horizon_readouts.pdf": {
     href: "/papers/tfpt_horizon_readouts.pdf",
     ...COMMON,
-    bytes: 667146,
+    bytes: 673993,
     sha256:
-      "2b3124f2d0481c60076bbce92234e3fcc6339e53f6eab4a4075c2bb064ad3c0d",
+      "70827e18d5b89416b51da46ddc2c36098b91e76939254db63e674f97540436b2",
     changelog:
       "Appendix H — the horizon unit system: c₃ = 1/(8π) as the universal horizon thermal code.",
   },

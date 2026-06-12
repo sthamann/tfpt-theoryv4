@@ -1018,4 +1018,30 @@ DIE UHR IST EIN ENTROPIE-POTENZGESETZ (v129, Ledger HOR.CLOCK.06) --
        Entropie-Potenzgesetz mit Exponent = Hexagon-Groesse; der
        Exponent (Gewicht h = N_fam) ist der verbleibende
        Quanten-Inhalt.
+
+DAS BORN-QUADRAT (v130, Ledger HOR.CLOCK.07) -- das v129-Gewichts-
+    Audit ist aus Modenzaehlung HERGELEITET; v128-Multiplizitaet und
+    v129-Gewicht sind EIN Objekt:
+    (1) EXPONENTEN-BUCHHALTUNG [I]: pro Nullmode ein Moduli-Faktor
+        ~ S^{1/2} (Standard-Kollektivkoordinaten); mit n_zero = 6:
+        AMPLITUDE A ~ (S/S_dS)^{n_zero/2} = (S/S_dS)^3;
+        WAHRSCHEINLICHKEIT = Born-Quadrat |A|^2 = (S/S_dS)^6 =
+        das v129-Potenzgesetz.
+        => h = n_zero/2 = 3 = N_fam, p2 = 2h: der Faktor 2 zwischen
+           Gewicht und Exponent ist die BORN-REGEL, sonst nichts.
+    (2) DIE DREI SIND DIE KONFORMEN RICHTUNGEN DER SPHAERE [I]:
+        dim des l=1-Raums auf S^2 = 2l+1 = 3 = Zahl der eigentlichen
+        konformen Killing-Vektoren (Gradienten der l=1-Harmonischen;
+        die klassischen near-Nariai-Nullmoden, Ginsparg-Perry/
+        Bousso-Hawking-Klasse, extern Standard); das x2 ist das
+        HORIZONT-PAAR = das SdS-Massenlinien-Deck (v101):
+        n_zero = |Z2| x 3 = 6 = p2 -- jeder Faktor etabliert.
+    (3) KONSISTENZ [I]: Multiplizitaet (v128) = Exponent (v129) =
+        Born-Quadrat des Amplituden-Gewichts; h = N_fam: dieselbe 3
+        zaehlt Generationen und konforme Sphaeren-Richtungen.
+    => REST [P]: das S^{1/2}-Mass pro Nullmode auf dem Nariai-
+       Instanton fuer genau diese sechs Moden rechtfertigen --
+       Lehrbuch-Klasse; in R1 bleibt KEIN exotisches Objekt mehr
+       (Log = Ringsumme, Potenzgesetz = Entropie-Anteile,
+       Exponent = born-quadrierte Modenzahl).
 ================================================================================
