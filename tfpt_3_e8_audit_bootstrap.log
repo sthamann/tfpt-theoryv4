@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 06:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 06:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1326,18 +1326,18 @@ m/n/10.95 k[] \OT1/lmr/m/n/10.95 = 78 + 48 + 108\OML/lmm/m/it/10.95 ;
 [10]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 643.
+(hyperref)                removing `math shift' on input line 645.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 643.
+(hyperref)                removing `subscript' on input line 645.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 643.
+(hyperref)                removing `math shift' on input line 645.
 
 
-Underfull \hbox (badness 7907) in paragraph at lines 661--667
+Underfull \hbox (badness 7907) in paragraph at lines 663--669
 \T1/lmr/m/n/10.95 (+20) checked.[]\T1/lmr/m/n/9 (+20) [\T1/lmtt/m/n/9 verificat
 ion/v5_e8_cascade.py\T1/lmr/m/n/9 (+20) ][] \T1/lmr/m/n/10.95 (+20) with the si
 n-gle struc-tural nor-mal-i-sa-tion $\OML/lmm/m/it/10.95 ^^U \OT1/lmr/m/n/10.95
@@ -1345,7 +1345,7 @@ n-gle struc-tural nor-mal-i-sa-tion $\OML/lmm/m/it/10.95 ^^U \OT1/lmr/m/n/10.95
  []
 
 
-Underfull \hbox (badness 1097) in paragraph at lines 661--667
+Underfull \hbox (badness 1097) in paragraph at lines 663--669
 \OML/lmm/m/it/10.95 ^^M\OT1/lmr/m/n/10.95 (+20) (0)\OML/lmm/m/it/10.95 =\OT1/lm
 r/m/n/10.95 (+20) ([] 248 \OMS/lmsy/m/n/10.95 ^^@ [] \OT1/lmr/m/n/10.95 (+20) 6
 0) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 (+20) 58770$\T1/lmr/m/n/10.95 (+2
@@ -1353,7 +1353,7 @@ r/m/n/10.95 (+20) ([] 248 \OMS/lmsy/m/n/10.95 ^^@ [] \OT1/lmr/m/n/10.95 (+20) 6
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 695--695
+Underfull \hbox (badness 10000) in alignment at lines 697--697
 [][][][][][] 
  []
 
@@ -1362,7 +1362,7 @@ Underfull \hbox (badness 10000) in alignment at lines 695--695
 [11
 
 ]
-Overfull \hbox (13.64317pt too wide) detected at line 723
+Overfull \hbox (13.64317pt too wide) detected at line 725
 []
  []
 
@@ -1371,66 +1371,66 @@ Overfull \hbox (13.64317pt too wide) detected at line 723
 [12]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 799.
+(hyperref)                removing `math shift' on input line 801.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\varphi' on input line 799.
+(hyperref)                removing `\varphi' on input line 801.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 799.
+(hyperref)                removing `subscript' on input line 801.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 799.
+(hyperref)                removing `superscript' on input line 801.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 799.
+(hyperref)                removing `math shift' on input line 801.
 
 
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 843--843
+Underfull \hbox (badness 10000) in paragraph at lines 845--845
 []|$\OT1/lmr/m/n/8 (+20) 
 [] = \OML/lmm/m/it/8 '[]\OT1/lmr/m/n/8 (+20) (1[]2\OML/lmm/m/it/8 c[]\OT1/lmr/m
 /n/8 (+20) )$\T1/lmr/m/n/8 (+20) ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 843--843
+Underfull \hbox (badness 10000) in paragraph at lines 845--845
 \OML/lmm/m/it/8 V[]=V[] \OT1/lmr/m/n/8 (+20) = []$\T1/lmr/m/n/8 (+20) ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 843--843
+Underfull \hbox (badness 10000) in paragraph at lines 845--845
 []|$\OML/lmm/m/it/8 v[] \OT1/lmr/m/n/8 (+20) = \OML/lmm/m/it/8 ^^P[]M[]'[]$\T1/
 lmr/m/n/8 (+20) ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 843--843
+Underfull \hbox (badness 10000) in paragraph at lines 845--845
 []|\T1/lmr/m/n/8 (+20) hadronic,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 843--843
+Underfull \hbox (badness 10000) in paragraph at lines 845--845
 []|$[][]\OML/lmm/m/it/8 ^^P[]M[]'[]$\T1/lmr/m/n/8 (+20) ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 843--843
+Underfull \hbox (badness 10000) in paragraph at lines 845--845
 \OML/lmm/m/it/8 m[][]^^P[]M[]'[]$\T1/lmr/m/n/8 (+20) ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 843--843
+Underfull \hbox (badness 10000) in paragraph at lines 845--845
 []|\T1/lmr/m/n/8 (+20) cosmo,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 843--843
+Underfull \hbox (badness 10000) in paragraph at lines 845--845
 []|$\OML/lmm/m/it/8 T[][]^^P[]M[]'[]$\T1/lmr/m/n/8 (+20) ,
  []
 
@@ -1441,22 +1441,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 843--843
 [15]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 908.
+(hyperref)                removing `math shift' on input line 910.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 908.
+(hyperref)                removing `subscript' on input line 910.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 908.
+(hyperref)                removing `math shift' on input line 910.
 
 
 
 [16
 
 ]
-Underfull \hbox (badness 1205) in paragraph at lines 972--976
+Underfull \hbox (badness 1205) in paragraph at lines 974--978
 $\OML/lmm/m/it/10.95 E[][]A[]$ \T1/lmr/m/n/10.95 (+20) gives only $\OT1/lmr/m/n
 /10.95 (+20) 2$ \T1/lmr/m/n/10.95 (+20) fam-i-lies, $\OML/lmm/m/it/10.95 E[][]A
 []$ \T1/lmr/m/n/10.95 (+20) only $\OT1/lmr/m/n/10.95 (+20) 1$\T1/lmr/m/n/10.95 
@@ -1466,7 +1466,7 @@ $\OML/lmm/m/it/10.95 E[][]A[]$ \T1/lmr/m/n/10.95 (+20) gives only $\OT1/lmr/m/n
  []
 
 
-Underfull \hbox (badness 2772) in paragraph at lines 972--976
+Underfull \hbox (badness 2772) in paragraph at lines 974--978
 \OML/lmm/m/it/10.95 A[]$ \T1/lmr/m/n/10.95 (+20) is a sin-gle rank-$\OT1/lmr/m/
 n/10.95 (+20) 8$ \T1/lmr/m/n/10.95 (+20) fac-tor. So the carrier$\OT1/lmr/m/n/1
 0.95 (+20) +$\T1/lmr/m/n/10.95 (+20) family de-com-po-si-tion is forced.
@@ -1474,62 +1474,62 @@ n/10.95 (+20) 8$ \T1/lmr/m/n/10.95 (+20) fac-tor. So the carrier$\OT1/lmr/m/n/1
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1006.
+(hyperref)                removing `math shift' on input line 1008.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 1006.
+(hyperref)                removing `subscript' on input line 1008.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1006.
+(hyperref)                removing `math shift' on input line 1008.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1006.
+(hyperref)                removing `math shift' on input line 1008.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1006.
+(hyperref)                removing `math shift' on input line 1008.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1006.
+(hyperref)                removing `math shift' on input line 1008.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 1006.
+(hyperref)                removing `subscript' on input line 1008.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1006.
+(hyperref)                removing `math shift' on input line 1008.
 
 
 
 [17]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1028.
+(hyperref)                removing `math shift' on input line 1030.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\pi' on input line 1028.
+(hyperref)                removing `\pi' on input line 1030.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1028.
+(hyperref)                removing `math shift' on input line 1030.
 
 
 
 [18]
-Underfull \hbox (badness 2277) in paragraph at lines 1061--1061
+Underfull \hbox (badness 2277) in paragraph at lines 1063--1063
 []\T1/lmr/bx/n/10.95 (+20) A cyclic el-e-ment \T1/lmr/bx/it/10.95 (+20) in-side
  \T1/lmr/bx/n/10.95 (+20) the hull: the order-$\OT1/lmr/m/n/10.95 (+20) 30$ \T1
 /lmr/bx/n/10.95 (+20) Cox-eter ro-ta-tion []\T1/lmr/bx/n/10 (+20) [L][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1075--1075
+Underfull \hbox (badness 10000) in paragraph at lines 1077--1077
 []\T1/lmr/bx/n/10.95 (+20) The com-piler atoms \T1/lmr/bx/it/10.95 (+20) are \T
 1/lmr/bx/n/10.95 (+20) the $\OML/lmm/m/it/10.95 E[]$ \T1/lmr/bx/n/10.95 (+20) C
 asimir de-grees
@@ -1542,18 +1542,18 @@ asimir de-grees
 [20]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1143.
+(hyperref)                removing `math shift' on input line 1145.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 1143.
+(hyperref)                removing `subscript' on input line 1145.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1143.
+(hyperref)                removing `math shift' on input line 1145.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1199.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1201.
 
 
 
@@ -1562,26 +1562,26 @@ LaTeX Font Warning: Command \small invalid in math mode on input line 1199.
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1215.
+(hyperref)                removing `math shift' on input line 1217.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 1215.
+(hyperref)                removing `subscript' on input line 1217.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1215.
+(hyperref)                removing `math shift' on input line 1217.
 
 
 
 [22]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1265.
+(hyperref)                removing `math shift' on input line 1267.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1265.
+(hyperref)                removing `math shift' on input line 1267.
 
 
 
@@ -1633,7 +1633,7 @@ ic/lm/lmsy9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtk1
 0.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></us
 r/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/local/tex
 live/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tfpt_3_e8_audit_bootstrap.pdf (24 pages, 778952 bytes).
+Output written on tfpt_3_e8_audit_bootstrap.pdf (24 pages, 779375 bytes).
 PDF statistics:
  507 PDF objects out of 1000 (max. 8388607)
  379 compressed objects within 4 object streams

@@ -732,7 +732,7 @@ export const papers: Paper[] = [
       },
       {
         title: "The trisection normal form — the canonical coordinate exists",
-        body: "The SdS horizon cubic is uniformized by angle trisection (r = 2cos θ turns it into cos 3θ = −3m; the ℤ₃ trisection deck is the triality of coker Q = ℤ/N_fam). In the centered angle the mass is a pure cosine, m = cos(ψ)/N_fam, and the entropy collapses to ONE cosine of glue atoms with canonical curvature (2/3)³ at the anchor — the Koide constant to the family power. The invariant slope dσ/dm at Nariai is −8/9 = −rank E₈/N_fam². The flavor invariant is a rate, (2/3)^{2N_fam} per transport step; the gravity invariant is a curvature, (2/3)^{N_fam}: same base, exponent ratio |ℤ₂|. The one missing object for full identification is the gravity-side clock (the near-Nariai evaporation generator) — the same class as the Koide transfer generator: one clock, two known geometries [P].",
+        body: "The SdS horizon cubic is uniformized by angle trisection (r = 2cos θ turns it into cos 3θ = −3m; the ℤ₃ trisection deck is the triality of coker Q = ℤ/N_fam). In the centered angle the mass is a pure cosine, m = cos(ψ)/N_fam, and the entropy collapses to ONE cosine of glue atoms with canonical curvature (2/3)³ at the anchor — the Koide constant to the family power. The invariant slope dσ/dm at Nariai is −8/9 = −rank E₈/N_fam². The flavor invariant is a rate, (2/3)^{2N_fam} per transport step; the gravity invariant is a curvature, (2/3)^{N_fam}: same base, exponent ratio |ℤ₂|. The gravity-side clock asked for here has since been constructed (v124–v133, sections below): one clock, two known geometries — the identification reading stays [P].",
         formulas: [
           "\\frac{S_{\\mathrm{tot}}}{S_{dS}} = \\frac{4}{3} - \\frac{2}{3}\\cos\\frac{2\\psi}{3}, \\qquad m = \\frac{\\cos\\psi}{N_{\\mathrm{fam}}}",
           "\\sigma''(0) = \\Bigl(\\frac{2}{3}\\Bigr)^{3}, \\qquad \\frac{d\\sigma}{dm}\\Big|_{N} = -\\frac{8}{9} = -\\frac{\\mathrm{rank}\\,E_8}{N_{\\mathrm{fam}}^2}",
@@ -740,10 +740,26 @@ export const papers: Paper[] = [
       },
       {
         title: "The classical clock speaks anchor — and the honest (2/3)-test",
-        body: "The classical half of the clock question is pure GR: linearizing around the Nariai geometry dS₂×S², the static mode φ(ρ) = ρ solves the static-patch equation exactly with m² = −2Λ = −|ℤ₂|Λ — the exact SdS family itself pins the modulus mass (Ginsparg–Perry tower: exactly one negative mode). In Hubble units the clock's characteristic polynomial is (λ−1)(λ+2) — the anchor quadratic: its eigenvalues are the distinct anchor roots, and the Nariai cubic factors as (t−1)·χ_clock. The anchor appears a third time: configuration roots, curvature base, clock spectrum. The honest (2/3)-test is negative for the classical clock (integer eigenvalues); the quantum clock — the one-loop conversion of curvature into rate — is the single remaining [P] of the seam variational principle.",
+        body: "The classical half of the clock question is pure GR: linearizing around the Nariai geometry dS₂×S², the static mode φ(ρ) = ρ solves the static-patch equation exactly with m² = −2Λ = −|ℤ₂|Λ — the exact SdS family itself pins the modulus mass (Ginsparg–Perry tower: exactly one negative mode). In Hubble units the clock's characteristic polynomial is (λ−1)(λ+2) — the anchor quadratic: its eigenvalues are the distinct anchor roots, and the Nariai cubic factors as (t−1)·χ_clock. The anchor appears a third time: configuration roots, curvature base, clock spectrum. The honest (2/3)-test is negative for the classical clock (integer eigenvalues); the quantum clock — the one-loop conversion of curvature into rate — was the remaining [P] and is resolved by the resummed-clock chain below.",
         formulas: [
           "\\chi_{\\mathrm{clock}}(\\lambda) = \\lambda^2 + \\lambda - 2 = (\\lambda-1)(\\lambda+2)",
           "m^2 = -2\\Lambda = -|\\mathbb{Z}_2|\\Lambda, \\qquad \\frac{d}{dt}\\log(\\sigma - \\tfrac{2}{3}) = 2H = |\\mathbb{Z}_2| H",
+        ],
+      },
+      {
+        title: "The resummed quantum clock (v124–v133)",
+        body: "The quantum clock now has a closed form: rate(n) = −p₂ ln(1 − n/N_fam) — the three-level spectrum is forced by the pole at N_fam, and the bend log₃∕₂3 is its n = 2 value. Its weights are the Mehta–Seshadri parabolic weights of the exact anchor residue A₀* (v126); the geometric tail is the standard log-determinant/RPA ring resummation, one tower per hexagon site (v127); the rate is an entropy power law Γ ∝ (S/S_dS)^{p₂} in Gibbons–Hawking form (v129); the exponent p₂ = 2h follows from mode counting plus the Born rule, h = N_fam = half the zero-mode count (v130); the per-mode S^{1/2} is the zero-mode area norm ‖Y₁ₘ‖² = A/(4π) exactly (v131); and the scaling anomaly of the non-zero-mode S² determinant is exactly −2/3 = −|ℤ₂|/N_fam — the Koide constant as a spectral anomaly (v132). The ζ(0) budget computed both ways selects the reduced seam reading: per sector −2/3, total −4/3 = minus the seed gain, while the naive 4d route gives −109/45, no atom (v133). The residue of the clock question is one finite budget — the graviton/ghost heat coefficients on S²×S² [P].",
+        formulas: [
+          "\\mathrm{rate}(n) = -p_2\\ln\\bigl(1 - \\tfrac{n}{N_{\\mathrm{fam}}}\\bigr), \\qquad \\Gamma_n \\propto \\Bigl(\\frac{S_n}{S_{dS}}\\Bigr)^{p_2}",
+          "\\zeta(0)\\big|_{\\det'} = -\\tfrac{2}{3} = -\\tfrac{|\\mathbb{Z}_2|}{N_{\\mathrm{fam}}} \\;\\text{per sector}, \\qquad \\text{total} = -\\tfrac{4}{3}",
+        ],
+      },
+      {
+        title: "The dual anchor: the inverse flavor response is the Nariai root (v134)",
+        body: "The Nariai pattern is stored inside the flavor compiler as a dual invariant: d := aᵀR⁻¹ = aᵀL⁻¹ = (−1/2, −1/2, 1), with d·1 = 0, d·a = 1 and (1,1,−2) = −2d. The invariance is structural (Sherman–Morrison): a covector is winding-invariant iff it annihilates R⁻¹1 = (1,1,−1)/4 — the anchor does, while 1, e₁ and the torsion normal n do not (the membership is special). Together (d, n) form the dual normal pair of the flavor boundary: d reads the traceless horizon structure, n reads first-generation torsion. A third, purely algebraic leg of the flavor↔horizon bridge, beside the shared clock spectrum (v126) and the entropy power law (v129) [I]; the bridge reading stays [P].",
+        formulas: [
+          "d := a^{\\top}R^{-1} = a^{\\top}L^{-1} = \\bigl(-\\tfrac12, -\\tfrac12, 1\\bigr), \\qquad (1,1,-2) = -2d",
+          "v^{\\top}L^{-1} = v^{\\top}R^{-1} \\iff v\\cdot R^{-1}\\mathbf{1} = 0, \\qquad R^{-1}\\mathbf{1} = \\tfrac14(1,1,-1)",
         ],
       },
     ],

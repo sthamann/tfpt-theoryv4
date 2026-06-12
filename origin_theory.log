@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 06:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 06:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1449,12 +1449,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 801--801
 [15]
 
 [16]
-Overfull \hbox (18.5217pt too wide) in paragraph at lines 876--876
+Overfull \hbox (18.5217pt too wide) in paragraph at lines 879--879
 []|\T1/lmtt/m/n/10 v54_seam_horizon_keystones.py| 
  []
 
 
-Underfull \hbox (badness 1735) in paragraph at lines 878--881
+Underfull \hbox (badness 1735) in paragraph at lines 881--884
 \T1/lmtt/m/n/10.95 wolframscript -file verification/wolfram/tfpt_readouts.wl \T
 1/lmr/m/n/10.95 (+20) (all pass). Fig-ures are
  []
@@ -1506,7 +1506,7 @@ ublic/lm/lmtt9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lm
 tti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbo
 ls/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/s
 ymbols/msbm10.pfb>
-Output written on origin_theory.pdf (17 pages, 699360 bytes).
+Output written on origin_theory.pdf (17 pages, 701650 bytes).
 PDF statistics:
  606 PDF objects out of 1000 (max. 8388607)
  344 compressed objects within 4 object streams

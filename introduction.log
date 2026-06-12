@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 06:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 06:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2068,7 +2068,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1216--1216
 
 
 [19]
-Overfull \vbox (5577.76817pt too high) has occurred while \output is active []
+Overfull \vbox (5589.76817pt too high) has occurred while \output is active []
 
 
 
@@ -2085,7 +2085,7 @@ Package rerunfilecheck Info: File `introduction.out' has not changed.
 Here is how much of TeX's memory you used:
  34012 strings out of 473190
  676220 string characters out of 5715801
- 1501491 words of memory out of 5000000
+ 1501549 words of memory out of 5000000
  56006 multiletter control sequences out of 15000+600000
  739455 words of font info for 438 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2128,7 +2128,7 @@ ocal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/local/texliv
 e/2025/texmf-dist/fonts/type1/public/lm/lmtti10.pfb></usr/local/texlive/2025/te
 xmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/202
 5/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on introduction.pdf (21 pages, 1012592 bytes).
+Output written on introduction.pdf (21 pages, 1012654 bytes).
 PDF statistics:
  607 PDF objects out of 1000 (max. 8388607)
  360 compressed objects within 4 object streams

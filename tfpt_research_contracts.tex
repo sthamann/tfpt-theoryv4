@@ -183,7 +183,11 @@ in the polystable quotient. If more than one survives, the theory needs a furthe
 positive-dimensional, the \emph{selector} must do all the cutting --- and evaluating $\det R(\rho)$,
 $\operatorname{Spec}(Q_+(\rho))$ as functions on $\mathcal X_{\mathrm{cusp}}^{D_4}$ requires the
 \emph{parabolic-degree\,$\leftrightarrow$\,residue dictionary} $R(\rho)$, i.e.\ the H2 equivalence. That
-dictionary is the single remaining analytic input of the $(U_{\mathrm{wall}})$ gate.
+dictionary was the single remaining analytic input of the $(U_{\mathrm{wall}})$ gate. \emph{Status update:
+since v118--v122 the dictionary itself is exact} --- hexagon $=$ sign-twisted family spectrum, lepton
+coefficients $=$ resolvent determinants of the $W(A_3)$ monodromy, addresses pinned, margins theorems
+(boxes below); what remains is the strictly smaller R4$'$, the \emph{establishment of the selectors}
+($n=(5,-9,6)$ $+$ the diamond determinants; since \veri{v134\_dual\_anchor.py}: the pair $(d,n)$).
 
 \textbf{What $R(\rho)$ is (\veri{v31\_R\_dictionary.py}).} Two facts pin its nature. \emph{(i) Case A is
 alive:} every $D_4$-fixed cusp monodromy found is \emph{irreducible}, so the wall point carries
@@ -547,8 +551,10 @@ monodromies $M_k$ (cusp class, $\prod M_k=\mathbf1$ to $10^{-5}$) were computed;
 resolvent-dressed diagonal extraction ($|\mathrm{diag}\,M_k|=(0,\tfrac12,\tfrac12)$ times the $C_6$
 resolvent factor) does \emph{not} reproduce the lepton amplitudes $(0.475,1.107,0.917)$. So the precise
 $\Gamma^{\min}_{ij}$ geodesic-to-word dictionary (how the $6$-site hypercharge hexagon combines with the
-$3$-dim family $\rho^\star$) is the genuine remaining analytic input --- it is \emph{not} fixed by a
-natural guess, and we do \emph{not} fish for $55/117$.
+$3$-dim family $\rho^\star$) was the genuine remaining analytic input --- it is \emph{not} fixed by a
+natural guess, and we do \emph{not} fish for $55/117$. \emph{Resolved since (v118): the correct
+extraction is the resolvent determinant of the $W(A_3)$ monodromy, not the diagonal dressing --- the
+probe's failure is thereby explained, and the dictionary is exact.}
 \end{winbox}
 
 \begin{keybox}[Theorem U --- the four-way split (sharper than one monster gate) \tF/\tA]
