@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 06:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 06:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1159,61 +1159,69 @@ T1/lmr/bx/n/10 (+20) [I][]
 
 [3{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local
 /texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
-<figures/sds_cover.pdf, id=126, 491.436pt x 274.626pt>
-File: figures/sds_cover.pdf Graphic file (type pdf)
-<use figures/sds_cover.pdf>
-Package pdftex.def Info: figures/sds_cover.pdf  used on input line 245.
-(pdftex.def)             Requested size: 363.96695pt x 203.40443pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<figures/nariai_entropy.pdf, id=127, 621.52202pt x 252.945pt>
-File: figures/nariai_entropy.pdf Graphic file (type pdf)
-<use figures/nariai_entropy.pdf>
-Package pdftex.def Info: figures/nariai_entropy.pdf  used on input line 254.
-(pdftex.def)             Requested size: 438.62866pt x 178.51537pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<figures/cover_twins.pdf, id=128, 635.97598pt x 267.39899pt>
-File: figures/cover_twins.pdf Graphic file (type pdf)
-<use figures/cover_twins.pdf>
-Package pdftex.def Info: figures/cover_twins.pdf  used on input line 263.
-(pdftex.def)             Requested size: 438.62866pt x 184.42389pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \hbox (badness 1924) in paragraph at lines 243--243
+[]\T1/lmr/bx/n/10.95 (+20) The dual an-chor: the in-verse fla-vor re-sponse \T1
+/lmr/bx/it/10.95 (+20) is \T1/lmr/bx/n/10.95 (+20) the Nar-iai root []\T1/lmr/b
+x/n/10 (+20) [I][]
+ []
 
 
 
 [4]
-<figures/orientation.pdf, id=141, 635.97598pt x 267.39899pt>
+<figures/sds_cover.pdf, id=136, 491.436pt x 274.626pt>
+File: figures/sds_cover.pdf Graphic file (type pdf)
+<use figures/sds_cover.pdf>
+Package pdftex.def Info: figures/sds_cover.pdf  used on input line 265.
+(pdftex.def)             Requested size: 363.96695pt x 203.40443pt.
+<figures/nariai_entropy.pdf, id=137, 621.52202pt x 252.945pt>
+File: figures/nariai_entropy.pdf Graphic file (type pdf)
+<use figures/nariai_entropy.pdf>
+Package pdftex.def Info: figures/nariai_entropy.pdf  used on input line 274.
+(pdftex.def)             Requested size: 438.62866pt x 178.51537pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figures/cover_twins.pdf, id=138, 635.97598pt x 267.39899pt>
+File: figures/cover_twins.pdf Graphic file (type pdf)
+<use figures/cover_twins.pdf>
+Package pdftex.def Info: figures/cover_twins.pdf  used on input line 283.
+(pdftex.def)             Requested size: 438.62866pt x 184.42389pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[5 <./figures/sds_cover.pdf>]
+<figures/orientation.pdf, id=214, 635.97598pt x 267.39899pt>
 File: figures/orientation.pdf Graphic file (type pdf)
 <use figures/orientation.pdf>
-Package pdftex.def Info: figures/orientation.pdf  used on input line 298.
+Package pdftex.def Info: figures/orientation.pdf  used on input line 318.
 (pdftex.def)             Requested size: 438.62866pt x 184.42389pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 305--305
+Underfull \hbox (badness 10000) in paragraph at lines 325--325
 []\T1/lmr/bx/n/10.95 (+20) The tri-sec-tion nor-mal form: the canon-i-cal co-or
 -di-nate ex-ists []\T1/lmr/bx/n/10 (+20) [I][]
  []
 
 
 
-[5 <./figures/sds_cover.pdf>]
-
 [6 <./figures/nariai_entropy.pdf> <./figures/cover_twins.pdf>]
-<figures/trisection.pdf, id=367, 534.79799pt x 274.626pt>
+<figures/trisection.pdf, id=366, 534.79799pt x 274.626pt>
 File: figures/trisection.pdf Graphic file (type pdf)
 <use figures/trisection.pdf>
-Package pdftex.def Info: figures/trisection.pdf  used on input line 335.
+Package pdftex.def Info: figures/trisection.pdf  used on input line 355.
 (pdftex.def)             Requested size: 401.2978pt x 206.07375pt.
 
-Underfull \hbox (badness 1728) in paragraph at lines 342--342
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 1728) in paragraph at lines 362--362
 []\T1/lmr/bx/n/10.95 (+20) The clas-si-cal clock speaks an-chor --- and the hon
 -est $\OT1/lmr/m/n/10.95 (+20) (2\OML/lmm/m/it/10.95 =\OT1/lmr/m/n/10.95 (+20) 
 3)$\T1/lmr/bx/n/10.95 (+20) -test []\T1/lmr/bx/n/10 (+20) [I][]\T1/lmr/bx/n/10.
@@ -1222,24 +1230,24 @@ Underfull \hbox (badness 1728) in paragraph at lines 342--342
 
 
 
-[7 <./figures/orientation.pdf> <./figures/trisection.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 367--367
+[7 <./figures/orientation.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 387--387
 []\T1/lmr/bx/n/10.95 (+20) The quantum-clock tar-get, made quan-ti-ta-tive []\T
 1/lmr/bx/n/10 (+20) [I][]\T1/lmr/bx/n/10.95 (+20) /[]\T1/lmr/bx/n/10 (+20) [P][
 ]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 388--388
+
+[8 <./figures/trisection.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 408--408
 []\T1/lmr/bx/n/10.95 (+20) The re-summed clock: the bend has a closed form []\T
 1/lmr/bx/n/10 (+20) [I][]\T1/lmr/bx/n/10.95 (+20) /[]\T1/lmr/bx/n/10 (+20) [P][
 ]
  []
 
 
-
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 408--408
+Underfull \hbox (badness 10000) in paragraph at lines 428--428
 []\T1/lmr/bx/n/10.95 (+20) The clock and the wall share a spec-trum []\T1/lmr/b
 x/n/10 (+20) [I][]\T1/lmr/bx/n/10.95 (+20) /[]\T1/lmr/bx/n/10 (+20) [P][]
  []
@@ -1247,36 +1255,34 @@ x/n/10 (+20) [I][]\T1/lmr/bx/n/10.95 (+20) /[]\T1/lmr/bx/n/10 (+20) [P][]
 
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 505--505
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 525--525
 []\T1/lmr/bx/n/10.95 (+20) The det-ratio anomaly is the Koide con-stant []\T1/l
 mr/bx/n/10 (+20) [I][]\T1/lmr/bx/n/10.95 (+20) /[]\T1/lmr/bx/n/10 (+20) [P][]
  []
 
 
-
-[10]
-Underfull \hbox (badness 1521) in paragraph at lines 525--525
+Underfull \hbox (badness 1521) in paragraph at lines 545--545
 []\T1/lmr/bx/n/10.95 (+20) The zeta bud-get: the re-duced route car-ries the an
 -chor ra-tios []\T1/lmr/bx/n/10 (+20) [I][]\T1/lmr/bx/n/10.95 (+20) /[]\T1/lmr/
 bx/n/10 (+20) [P][]
  []
 
-<figures/seam_units.pdf, id=535, 621.52202pt x 445.18318pt>
-File: figures/seam_units.pdf Graphic file (type pdf)
-<use figures/seam_units.pdf>
-Package pdftex.def Info: figures/seam_units.pdf  used on input line 547.
-(pdftex.def)             Requested size: 419.95967pt x 300.81174pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 564.
-
 
 
 [11]
+<figures/seam_units.pdf, id=539, 621.52202pt x 445.18318pt>
+File: figures/seam_units.pdf Graphic file (type pdf)
+<use figures/seam_units.pdf>
+Package pdftex.def Info: figures/seam_units.pdf  used on input line 567.
+(pdftex.def)             Requested size: 419.95967pt x 300.81174pt.
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 573.
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 584.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 593.
 
 
 
@@ -1291,13 +1297,13 @@ Package rerunfilecheck Info: File `tfpt_horizon_readouts.out' has not changed.
 (rerunfilecheck)             Checksum: B4F047632898351A3B2E38CB6FDE3B2C;1955.
  ) 
 Here is how much of TeX's memory you used:
- 32378 strings out of 473190
- 639534 string characters out of 5715801
- 1108381 words of memory out of 5000000
- 54671 multiletter control sequences out of 15000+600000
- 700358 words of font info for 299 fonts, out of 8000000 for 9000
+ 32383 strings out of 473190
+ 639595 string characters out of 5715801
+ 1107381 words of memory out of 5000000
+ 54672 multiletter control sequences out of 15000+600000
+ 700539 words of font info for 301 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 116i,12n,121p,1018b,1048s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 116i,12n,121p,1018b,1047s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/lo
 cal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texliv
 e/2025/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive/2025/texm
@@ -1324,7 +1330,7 @@ mf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/local/texlive/2025/texmf-dist/fon
 ts/type1/public/lm/lmtti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/
 public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/ty
 pe1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tfpt_horizon_readouts.pdf (13 pages, 684123 bytes).
+Output written on tfpt_horizon_readouts.pdf (13 pages, 688351 bytes).
 PDF statistics:
  812 PDF objects out of 1000 (max. 8388607)
  318 compressed objects within 4 object streams

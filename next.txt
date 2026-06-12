@@ -1119,4 +1119,45 @@ DAS ZETA-BUDGET, BEIDE ROUTEN EXAKT (v133, Ledger HOR.CLOCK.10) --
     => REST [P]: Graviton/Geist-Anteile auf S^2 x S^2
        (Volkov-Wipf-Klasse, extern Standard) -- eine endliche
        Liste bekannter Waermekoeffizienten.
+
+DAS DUAL-ANCHOR-LEMMA (v134, Ledger FLAV.DUAL.01) -- die inverse
+    Flavor-Antwort des Ankers IST die Nariai-Wurzel (Review
+    2026-06-12, validiert + verschaerft):
+    (1) d := a^T R^-1 = a^T L^-1 = (-1/2,-1/2,1) [I]; d.1 = 0,
+        d.a = 1, d = (3/2)(a - (4/3)1) = normalisierter SPURFREIER
+        Anker; (1,1,-2) = -2d -- der Horizont wird nicht angeklebt,
+        er sitzt als duale Invariante IM Flavor-Compiler.
+    (2) WARUM invariant [I]: Sherman-Morrison auf L = R + 6*1 e1^T:
+        v^T L^-1 = v^T R^-1 <=> v.(R^-1 1) = 0; R^-1 1 = (1,1,-1)/4;
+        der Anker liegt auf der 2-Ebene invarianter Kovektoren
+        (Winding lebt in der demokratischen Richtung, d toetet sie).
+    (3) KONTROLLE [I]: 1, e1, n liegen NICHT auf der Ebene
+        (1/4, 1/4, -5/2) -- die Mitgliedschaft ist speziell.
+    (4) DUALES NORMALEN-PAAR [I]: d (Sheet-Normale, ~ Nariai) +
+        n = (5,-9,6) (Torsions-Normale, Generation-1-Kanal) =
+        Dualbasis der Flavor-Boundary.
+    => DRITTER ALGEBRAISCHER Brueckenschenkel Flavor<->Horizont
+       (neben Spektrum v126 und Entropie-Potenzgesetz v129) [P];
+       R4'-Selektor-Programm bekommt geometrisches Ziel: das PAAR
+       (d,n) herleiten, nicht n allein.
+
+DIE DETERMINANTEN-FLAECHE (v135, Ledger FLAV.SURF.01) -- das
+    Sheet-Diamond ist eine 2d-Flaeche mit Iso-Volumen-WAENDEN an
+    den Atomen (Review 2026-06-12, validiert):
+    (1) det M(s,t) = 3s(t+1)(t+2) + t^2+5t+8 [I]; WAENDE
+        s-unabhaengig: t=-2 => det = 2 = |Z2|; t=-1 => det = 4 =
+        |mu4| (det K = 4 ist eine SCHICHT, kein Einzeltreffer);
+        Winding-Linie t=0: det = 6s+8 => (8,14,20); det F = 32 =
+        2^g_car schliesst die vier kanonischen Punkte.
+    (2) ANKER-BLOCK [I]: det B = 6s(t+2)+3t^2+15t+16;
+        det B(s,0) = 2 det M(s,0) EXAKT; eigene Z2-Wand
+        det B(s,-2) = -2; t=-1 ist KEINE B-Wand (ehrlich notiert).
+    (3) ROWSUM-ACHSEN [I]: C = (7,11,13), U = (3,3,3), V = (1,2,3)
+        = Spec(Q+) woertlich; Budget (7,11,13) = (Skalaron,
+        ||Pl(K)||_1, Delta_Q) als Audit.
+    (4) MIKRO-IDENTITAETEN [I]: e1^2+e2^2 = 41 = 10 b1 (Anker-
+        Pythagoras); p1^2+p2^2 = 52 = Carrier-Coset-Wurzeln (v128).
+    => LESART [P]: Flavor lebt auf einer 2d-Flaeche, Waende = Atome,
+       Achsen = (Winding, Q+-Progression) -- Compiler-Semantik statt
+       Matrix-Liste; keine Gate-Aenderung.
 ================================================================================

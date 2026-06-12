@@ -1008,6 +1008,46 @@ Module[{tcf, a24d, zeta4d, tnum, num},
     Abs[num - (-109/45)] < 2/100];
 ];
 
+(* ---- (v134) dual anchor ---- *)
+Module[{rmat, lmat, qmat, av, onev, e1v, nv, d, rinv1},
+  rmat = {{1, 3, 0}, {1, 5, 2}, {2, 5, 3}};
+  lmat = {{7, 3, 0}, {7, 5, 2}, {8, 5, 3}};
+  av = {1, 1, 2}; onev = {1, 1, 1}; e1v = {1, 0, 0}; nv = {5, -9, 6};
+  d = av . Inverse[rmat];
+  rinv1 = Inverse[rmat] . onev;
+  checkExact["v134 dual anchor: a.R^-1 = a.L^-1 = (-1/2,-1/2,1); d.1 = 0, d.a = 1; (1,1,-2) = -2d; d = (3/2)(a - (4/3)1)",
+    d == av . Inverse[lmat] && d == {-1/2, -1/2, 1} && d . onev == 0 && d . av == 1 &&
+    {1, 1, -2} == -2 d && d == 3/2 (av - 4/3 onev)];
+  checkExact["v134 Sherman-Morrison: L = R + 6*1 e1^T; R^-1 1 = (1,1,-1)/4; a on the invariance plane, 1/e1/n not (1/4, 1/4, -5/2); n.1 = 2",
+    lmat == rmat + 6 Outer[Times, onev, e1v] && rinv1 == {1/4, 1/4, -1/4} &&
+    av . rinv1 == 0 && onev . rinv1 == 1/4 && e1v . rinv1 == 1/4 && nv . rinv1 == -5/2 &&
+    nv . onev == 2];
+];
+
+(* ---- (v135) determinant surface ---- *)
+Module[{rmat, qmat, av, onev, msurf, detm, bmat, detb, uax, vax, cmid},
+  rmat = {{1, 3, 0}, {1, 5, 2}, {2, 5, 3}};
+  qmat = {{3, 1, 0}, {3, 2, 0}, {3, 2, 1}};
+  av = {1, 1, 2}; onev = {1, 1, 1};
+  msurf = rmat + qmat . DiagonalMatrix[{s, t, t}];
+  detm = Expand[Det[msurf]];
+  bmat = {{onev . msurf . onev, onev . msurf . av}, {av . msurf . onev, av . msurf . av}};
+  detb = Expand[Det[bmat]];
+  checkExact["v135 surface: det M = 3s(t+1)(t+2) + t^2+5t+8; walls t=-2 -> 2, t=-1 -> 4 (s-independent); winding line 6s+8 -> (8,14,20); det F = 32 = 2^5",
+    Expand[3 s (t + 1) (t + 2) + t^2 + 5 t + 8 - detm] === 0 &&
+    Simplify[detm /. t -> -2] === 2 && Simplify[detm /. t -> -1] === 4 &&
+    Expand[detm /. t -> 0] === 6 s + 8 && Det[rmat + qmat] == 32];
+  checkExact["v135 anchor block: det B = 6s(t+2)+3t^2+15t+16; det B(s,0) = 2 det M(s,0); B-wall at t=-2 -> -2; micro-identities 41 = 16+25, 52 = 16+36",
+    Expand[6 s (t + 2) + 3 t^2 + 15 t + 16 - detb] === 0 &&
+    Expand[(detb /. t -> 0) - 2 (detm /. t -> 0)] === 0 &&
+    Simplify[detb /. t -> -2] === -2 && 16 + 25 == 41 && 16 + 36 == 52];
+  uax = 3 Outer[Times, onev, {1, 0, 0}];
+  vax = qmat . DiagonalMatrix[{0, 1, 1}];
+  cmid = rmat + uax;
+  checkExact["v135 row budgets: C = (7,11,13), U = (3,3,3), V = (1,2,3) = Spec(Q+)",
+    (Total /@ cmid) == {7, 11, 13} && (Total /@ uax) == {3, 3, 3} && (Total /@ vax) == {1, 2, 3}];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v133: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v135: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

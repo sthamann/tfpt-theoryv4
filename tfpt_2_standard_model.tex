@@ -649,6 +649,35 @@ the $+6$ winding is not sorted by hand. \emph{Honest scope:} the winding line cr
 physical point --- $\operatorname{disc}\chi_L=39200=2(10\cdot14)^2$, spectrum real positive --- not its
 selector; and the corner $F=R{+}Q$ is an \emph{audit} operator (the $F_4{\times}G_2$ shadow:
 $\det B_F=52=\dim F_4$, $\sum B_F=196=(\dim G_2)^2$), not a physical transport.
+\smallskip\\
+\noindent\textbf{The dual anchor (\veri{v134\_dual\_anchor.py}).} The anchor's \emph{inverse} response is the
+same on both ends of the winding line, and it is the Nariai root of the horizon paper:
+\[
+  \boxed{\ d:=a^\top R^{-1}=a^\top L^{-1}=\bigl(-\tfrac12,-\tfrac12,1\bigr)\ },\qquad
+  d\cdot\mathbf 1=0,\quad d\cdot a=1,\quad (1,1,-2)=-2d .
+\]
+The invariance is structural (Sherman--Morrison): $L=R+6\,\mathbf 1e_1^\top$ makes a covector
+winding-invariant iff it kills $R^{-1}\mathbf 1=\tfrac14(1,1,-1)$; the anchor does, while $\mathbf 1$,
+$e_1$ and $n$ do not ($\tfrac14,\tfrac14,-\tfrac52$ --- the membership is special). $(d,n)$ is the dual
+normal pair of the flavor boundary: $d$ the \emph{sheet} normal (kills $\mathbf 1$, dual to $a$,
+$\propto$ Nariai), $n$ the \emph{torsion} normal (first-generation channel). \tI; bridge reading \tP.
+\smallskip\\
+\noindent\textbf{Walls of the surface (\veri{v135\_det\_surface.py}).} The surface determinant factorises,
+\[
+  \boxed{\ \det M(s,t)=3s(t{+}1)(t{+}2)+t^2+5t+8\ },
+\]
+exposing two \emph{iso-volume walls independent of $s$}: $t=-2\Rightarrow\det=2=|\Z_2|$ and
+$t=-1\Rightarrow\det=4=|\mu_4|$ --- so $\det K=4$ is a whole \emph{layer} of the surface ($K=M(1,-1)$ lies
+on the $\mu_4$ wall), not an isolated hit --- while the winding line $t=0$ carries $\det=6s+8$, i.e.\
+$(\det R,\det C,\det L)=(8,14,20)$, and the fourth corner closes the pattern with
+$\det F=\det M(1,1)=32=2^{\gcar}$. The anchor block obeys $\det B_{M(s,0)}=2\det M(s,0)$ \emph{exactly} on
+the winding line and has its own $\Z_2$ wall, $\det B_{M(s,-2)}=-2$ ($t=-1$ is \emph{not} a $B$-wall:
+$6s+4$, recorded honestly). Row-budget axes: $\operatorname{rowsum}(C)=(7,11,13)$,
+$\operatorname{rowsum}(U)=(3,3,3)$ (democratic winding), $\operatorname{rowsum}(V)=(1,2,3)=
+\operatorname{Spec}(Q_+)$ verbatim; the centre budget $(7,11,13)=(\text{scalaron},\|\operatorname{Pl}(K)\|_1,
+\Delta_Q)$ is an audit match. Two anchor micro-identities: $e_1^2+e_2^2=41=10\,b_1$ (the anchor Pythagoras
+for the abelian coefficient, companion to $\Delta_Y=25=9{+}16$) and $p_1^2+p_2^2=52=$ the carrier coset
+root count ($40{+}12$, \veri{v128\_graded\_hull.py}). All \tI; the ``2d surface with atom walls'' reading \tP.
 \end{winbox}
 
 \begin{winbox}[Spectra and the determinant ladder $\to|W(D_5)|$ \tI]

@@ -240,6 +240,26 @@ stays \tP. No new data test ($M_N$ today $\sim10^{22}M_\odot$): a structure surf
 surface.
 \end{keybox}
 
+\begin{keybox}[The dual anchor: the inverse flavor response \emph{is} the Nariai root \tI\ (\veri{v134\_dual\_anchor.py})]
+The Nariai pattern is not only the traceless anchor --- it is stored \emph{inside the flavor compiler} as a
+dual invariant. For the residue/winding operators $R,L$ of Paper~2 and the anchor $a=(1,1,2)$,
+\[
+  \boxed{\ d:=a^\top R^{-1}=a^\top L^{-1}=\bigl(-\tfrac12,-\tfrac12,1\bigr)\ },\qquad
+  d\cdot\mathbf 1=0,\quad d\cdot a=1,\quad (1,1,-2)=-2d ,
+\]
+i.e.\ $d=\tfrac32\bigl(a-\tfrac43\mathbf 1\bigr)$ is the \emph{normalised traceless anchor}, proportional to
+the Nariai double-root pattern above. The invariance is exact and structural (Sherman--Morrison): with
+$L=R+6\,\mathbf 1e_1^\top$, a covector is winding-invariant iff it annihilates $R^{-1}\mathbf
+1=\tfrac14(1,1,-1)$ --- the winding deformation lives in the democratic direction $\mathbf 1$, which $d$
+kills. Controls: $\mathbf 1$, $e_1$ and the torsion normal $n=(5,-9,6)$ do \emph{not} lie on the invariance
+plane ($\tfrac14,\tfrac14,-\tfrac52$), so the anchor's membership is special. Together $(d,n)$ form the dual
+normal pair of the flavor boundary: $d$ reads the traceless horizon structure, $n$ reads first-generation
+torsion ($n^\top R=(8,0,0)$, $n^\top L=(20,0,0)$). \emph{Typing:} all identities \tI; the reading --- a
+third, purely \emph{algebraic} leg of the flavor$\,\leftrightarrow\,$horizon bridge, beside the shared clock
+spectrum (\veri{v126\_clock\_wall\_bridge.py}) and the entropy power law (\veri{v129\_entropy\_power\_law.py})
+--- stays \tP.
+\end{keybox}
+
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.78\linewidth]{figures/sds_cover.pdf}
