@@ -55,17 +55,18 @@ and read off the Standard Model: status assessment and reading guide}
 \vspace{-0.8cm}
 
 \begin{keybox}[In one sentence]
-\textbf{Topological Fixed-Point Theory (TFPT)} derives the discrete structure of the Standard Model ---
-gauge group, three families, hypercharges, the flavor skeleton --- and its dimensionless constants from
-exactly \textbf{two inputs}: a boundary constant $\cthree=\tfrac1{8\pi}$ and a five-slot carrier
-$\gcar=5$. The two inputs build the exceptional lattice $E_8$ as a consistency checksum
-($D_5\oplus A_3+\mu_4\Rightarrow E_8$), and the physics is read off as \emph{fixed points}: the
-fine-structure constant $\ainv=137.0359992$, the mass ladder, the mixing angles and the scale grammar
---- every load-bearing claim machine-checked.
+\textbf{Topological Fixed-Point Theory (TFPT)} constructs, from exactly \textbf{two inputs} --- a boundary
+constant $\cthree=\tfrac1{8\pi}$ (P1) and a five-slot carrier $\gcar=5$ (P2) --- a discrete compiler for
+the Standard-Model skeleton: the gauge group, three families, hypercharges and the flavor matrix, with
+$E_8$ ($D_5\oplus A_3+\mu_4\Rightarrow E_8$) as the consistency checksum. The \emph{algebraic core is
+machine-checkable} and the dimensionless constants follow as fixed points ($\ainv=137.0359992$);
+\emph{physical readouts} --- absolute scales, masses, inflation, gravity and cosmological transfers ---
+run through explicitly \emph{named, status-typed bridges} ($v_{\mathrm{geo}}$, $G_{\mathrm{net}}$,
+$F_{\mathrm{transfer}}$), not as free outputs. The honest one-line claim is on the status card below.
 \end{keybox}
 
 \input{tfpt_docset}
-\noindent\textbf{You are reading document \#1 --- the entry point and reading guide.}
+\noindent\textbf{You are reading the \textbf{introduction} --- the entry point and reading guide.}
 
 \input{tfpt_status}
 
@@ -473,7 +474,8 @@ closed admissible sector from the un-built ambient), so its residual --- the amb
 --- is a \emph{strict-TOE completion target}: its absence does not affect the bounded IR claim, but it does
 block certification as a strict physical TOE. Both are written up as numbered \emph{research contracts}
 (lemma chains $+$ closing theorem $+$ machine-certifiability) in the companion
-\texttt{tfpt\_research\_contracts}, with priority $(U_{\mathrm{wall}})$ first.
+\texttt{tfpt\_research\_contracts}, with priority on the selector-triangle pairings (the
+$v_{\mathrm{geo}}$ scale anchor) and the $G_{\mathrm{net}}$ inclusion theorem.
 \veri{v36\_spectral\_action\_g2.py}
 \end{keybox}
 
@@ -775,17 +777,17 @@ the \emph{new} derivation behind it, the experiment, and an honest status.
 \textbf{Observable} & \textbf{TFPT value \& derivation} & \textbf{Experiment (running / upcoming)} & \textbf{St.} \\
 \midrule
 solar angle $\sin^2\theta_{12}$ &
-  $\tfrac13-\tfrac{\phiz}{2}=0.3067$; TBM $+$ seam misalignment $\varepsilon=\tfrac34\phiz{\approx}\cthree$ (cond.) &
-  \textbf{JUNO} (taking data since Aug 2025; sub-percent $\theta_{12}$) --- the sharpest live test & \tN/\tP \\
+  prediction of record $\tfrac13-\tfrac{\phiz}{2}=0.306747$; TBM $+$ seam misalignment $\varepsilon=\tfrac34\phiz=\cthree+36\cthree^4$ (cond.) &
+  \textbf{JUNO}: first $59.1$\,d run $0.3092{\pm}0.0087$ (compatible), precision phase pending & \tN/\tP \\
 reactor angle $\sin^2\theta_{13}$ &
   $\phiz e^{-5/6}=0.0231$; seed $\times$ carrier-trace $e^{-\gamma}$, $\gamma{=}\tfrac56$ &
   Daya~Bay / RENO / JUNO (PDG $0.0220$) & \tI \\
 atmospheric $\sin^2\theta_{23}$ &
   $\approx\tfrac12$ ($\mu\tau$-symmetric limit; octant not selected) &
-  NOvA / T2K / \textbf{DUNE} (octant ambiguity, NuFIT~6.0) & \tP \\
+  NOvA / T2K / \textbf{DUNE} (octant ambiguity; NuFIT~6.0 pre-JUNO baseline) & \tP \\
 fine structure $\ainv$ &
   $137.0359992$ as the unique root of $F_{U(1)}(\alpha){=}0$ (no fit, no second branch) &
-  CODATA-2022 $137.035999177(21)$: dev.\ $2.9\times10^{-10}$ from the recommended adjustment ($1.9\sigma$ of its uncertainty) & \tI/\tN \\
+  CODATA-2022 (data through 2022) $137.035999177(21)$: dev.\ $2.9\times10^{-10}$ ($1.9\sigma$ of its uncertainty) & \tI/\tN \\
 tensor ratio $r$ &
   $r=\tfrac{12}{N_\star^2}=0.0040$ ($N_\star{=}55$); $R^2$ attractor, $M{=}\cthree^{7/2}\Mbar$ &
   now $r{<}0.036$ (BICEP/Keck BK18); \textbf{CMB-S4} ($\sigma_r\!\le\!5{\times}10^{-4}$, obs.\ $\sim$2033) & \tP \\
@@ -803,7 +805,7 @@ CP phase $\delta_{\mathrm{CKM}}$ &
   \textbf{LHCb} / Belle~II $\gamma$ combination; decision at $\sigma_\gamma\le0.96^\circ$ & \tN \\
 cosmic birefringence $\beta$ &
   $\beta=\tfrac{\phiz}{4\pi}=0.2424^\circ$ (seam readout) &
-  ACT~DR6 ($0.4\sigma$ agreement); \textbf{Simons Observatory} / LiteBIRD sharpen & \tP \\
+  ACT~DR6 hint $0.215^\circ{\pm}0.074^\circ$ (systematics not yet understood --- not a validation target); \textbf{Simons Obs.} / LiteBIRD & \tP \\
 $0\nu\beta\beta$ / ordering &
   Majorana branch; normal-ordering preference &
   \textbf{LEGEND / nEXO}, DUNE, KATRIN & \tP \\
@@ -820,9 +822,11 @@ $H_0$ vs.\ $\Lambda$ &
 
 \begin{winbox}[The two decisive near-term tests]
 \textbf{(1) JUNO and $\theta_{12}$.} JUNO is \emph{taking data since August 2025} and targets sub-percent
-$\sin^2\theta_{12}$. TFPT commits to the conditional $\tfrac13-\tfrac{\phiz}{2}=0.3067$ (seam
-$\varepsilon=\cthree$). A measured central value away from $\sim0.307$ at high significance falsifies the
-seam mechanism --- a \emph{live} test.\\[2pt]
+$\sin^2\theta_{12}$. TFPT commits to the single prediction of record
+$\tfrac13-\tfrac{\phiz}{2}=0.306747$ (misalignment $\varepsilon=\tfrac34\phiz=\cthree+36\cthree^4$). The
+first $59.1$-day JUNO run reports $\sin^2\theta_{12}=0.3092\pm0.0087$ --- \emph{compatible}, but the
+precision phase is still pending; this is a first compatibility check, not yet the decisive test. A
+converged central value away from $\sim0.307$ at high significance falsifies the seam mechanism.\\[2pt]
 \textbf{(2) $r$.} The $R^2$ scalaron with $M$ fixed by $\cthree^7$ predicts $r=0.0040$ ($N_\star{=}55$),
 already below the current bound $r<0.036$ (BICEP/Keck BK18) and within reach of CMB-S4
 ($\sigma_r\!\le\!5\times10^{-4}$, first observations $\sim$2033--34). A detection of $r\gtrsim0.01$ would be
@@ -833,11 +837,11 @@ incompatible with the $R^2$ branch on which $\Mpl$ and $A_s$ rest.
 machine-checkable $E_8$ appendix (all $240$ roots, Gram matrices, discriminant groups) lets anyone verify
 that the two TFPT atoms really generate $E_8$; and the discipline rule ``\emph{every load-bearing number
 appears in at least one $E_8$ projection}'' (atlas note) turns the number stock into a falsifiable raster
-rather than numerology. The numerology charge itself is additionally \emph{quantified} by an explicit null
-model: exhaustively enumerating a declared formula grammar (provably containing every scored TFPT formula)
-against conservative data windows gives a joint look-elsewhere-corrected null probability $\le10^{-30.7}$
-that a random theory of equal formula complexity reproduces the scorecard --- a statistical statement
-conditional on the declared grammar, not a claim of certainty \tN\ \veri{v100\_numerology\_null\_mc.py}.
+rather than numerology. The numerology charge is additionally \emph{quantified} by an explicit null model:
+under the declared formula grammar the alignment density is anomalously high --- a random theory of equal
+formula complexity essentially does not reproduce the scorecard. This is a \emph{grammar-internal null-model
+bound}, not a Bayesian probability that TFPT is true; the explicit figure and its controls are stated in the
+verification appendix \tN\ \veri{v100\_numerology\_null\_mc.py}.
 
 \begin{winbox}[Freeze file: committed kill criteria]
 To prevent post-hoc rescue, the predictions above are frozen with explicit kill criteria in the

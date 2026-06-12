@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 08:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 09:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1108,7 +1108,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 \tf@toc=\write5
 \openout5 = `tfpt_horizon_readouts.toc'.
 
- (./tfpt_status.tex
+ (./tfpt_docset.tex
 
 [1
 
@@ -1116,70 +1116,69 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 al/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/202
 5/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2025/texmf-di
 st/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/d
-vips/lm/lm-mathsy.enc}])
-Underfull \hbox (badness 10000) in paragraph at lines 92--92
+vips/lm/lm-mathsy.enc}]) (./tfpt_status.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 95--95
 []|$[] \OT1/lmr/m/n/10 (+20) = \OML/lmm/m/it/10 M[]=[]$\T1/lmr/m/n/10 (+20) ,
  []
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 109.
 
-
-
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-10.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 9
+8.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [2{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 112.
+
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 115.
+(Font)              <14.4> on input line 118.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 118.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 115.
+(hyperref)                removing `subscript' on input line 118.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 115.
+(hyperref)                removing `math shift' on input line 118.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 123.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 151.
+
+
+
+[3]
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 162.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 115.
-
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 120.
-
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 148.
-
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 159.
+(hyperref)                removing `math shift' on input line 166.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 163.
+(hyperref)                removing `\Lambda' on input line 166.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Lambda' on input line 163.
+(hyperref)                removing `math shift' on input line 166.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 163.
+LaTeX Font Warning: Command \small invalid in math mode on input line 172.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 169.
+LaTeX Font Warning: Command \small invalid in math mode on input line 177.
 
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 174.
-
-
-
-[3{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <9> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 185.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 188.
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--185
+Underfull \hbox (badness 10000) in paragraph at lines 188--188
 []\T1/lmr/bx/n/10 (+20) Nariai $\OT1/lmr/m/n/10 (+20) =$ \T1/lmr/bx/n/10 (+20) 
 the an-chor; the Koide $\OT1/lmr/m/n/10 (+20) 2\OML/lmm/m/it/10 =\OT1/lmr/m/n/1
 0 (+20) 3$ \T1/lmr/bx/n/10 (+20) is the en-tropy bound [][I][]
@@ -1187,35 +1186,38 @@ the an-chor; the Koide $\OT1/lmr/m/n/10 (+20) 2\OML/lmm/m/it/10 =\OT1/lmr/m/n/1
 
 
 
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 229--229
+[4{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 232--232
 []\T1/lmr/bx/n/10 (+20) The dual an-chor: the in-verse fla-vor re-sponse \T1/lm
 r/bx/it/10 (+20) is \T1/lmr/bx/n/10 (+20) the Nar-iai root [][I][]
  []
 
-<figures/sds_cover.pdf, id=140, 491.436pt x 274.626pt>
+<figures/sds_cover.pdf, id=145, 491.436pt x 274.626pt>
 File: figures/sds_cover.pdf Graphic file (type pdf)
 <use figures/sds_cover.pdf>
-Package pdftex.def Info: figures/sds_cover.pdf  used on input line 251.
+Package pdftex.def Info: figures/sds_cover.pdf  used on input line 254.
 (pdftex.def)             Requested size: 363.96695pt x 203.40443pt.
-<figures/nariai_entropy.pdf, id=141, 621.52202pt x 252.945pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figures/nariai_entropy.pdf, id=146, 621.52202pt x 252.945pt>
 File: figures/nariai_entropy.pdf Graphic file (type pdf)
 <use figures/nariai_entropy.pdf>
-Package pdftex.def Info: figures/nariai_entropy.pdf  used on input line 260.
+Package pdftex.def Info: figures/nariai_entropy.pdf  used on input line 263.
 (pdftex.def)             Requested size: 438.62866pt x 178.51537pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/cover_twins.pdf, id=142, 635.97598pt x 267.39899pt>
+<figures/cover_twins.pdf, id=147, 635.97598pt x 267.39899pt>
 File: figures/cover_twins.pdf Graphic file (type pdf)
 <use figures/cover_twins.pdf>
-Package pdftex.def Info: figures/cover_twins.pdf  used on input line 269.
+Package pdftex.def Info: figures/cover_twins.pdf  used on input line 272.
 (pdftex.def)             Requested size: 438.62866pt x 184.42389pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 1521) in paragraph at lines 276--276
+Underfull \hbox (badness 1521) in paragraph at lines 279--279
 []\T1/lmr/bx/n/10 (+20) One ori-en-ta-tion: the an-chor is the \T1/lmr/bx/it/10
  (+20) sta-tion-ary re-peller \T1/lmr/bx/n/10 (+20) in both sec-tors [][I][]/[]
 [P][]
@@ -1223,36 +1225,35 @@ Underfull \hbox (badness 1521) in paragraph at lines 276--276
 
 
 
-[5 <./figures/sds_cover.pdf>]
-<figures/orientation.pdf, id=218, 635.97598pt x 267.39899pt>
+[5]
+<figures/orientation.pdf, id=155, 635.97598pt x 267.39899pt>
 File: figures/orientation.pdf Graphic file (type pdf)
 <use figures/orientation.pdf>
-Package pdftex.def Info: figures/orientation.pdf  used on input line 304.
+Package pdftex.def Info: figures/orientation.pdf  used on input line 307.
 (pdftex.def)             Requested size: 438.62866pt x 184.42389pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 311--311
+Underfull \hbox (badness 10000) in paragraph at lines 314--314
 []\T1/lmr/bx/n/10 (+20) The tri-sec-tion nor-mal form: the canon-i-cal co-or-di
 -nate ex-ists [][I][]
  []
 
-
-
-[6 <./figures/nariai_entropy.pdf> <./figures/cover_twins.pdf>]
-<figures/trisection.pdf, id=370, 534.79799pt x 274.626pt>
+<figures/trisection.pdf, id=157, 534.79799pt x 274.626pt>
 File: figures/trisection.pdf Graphic file (type pdf)
 <use figures/trisection.pdf>
-Package pdftex.def Info: figures/trisection.pdf  used on input line 341.
+Package pdftex.def Info: figures/trisection.pdf  used on input line 344.
 (pdftex.def)             Requested size: 401.2978pt x 206.07375pt.
 
+
+[6 <./figures/sds_cover.pdf>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--348
+Underfull \hbox (badness 10000) in paragraph at lines 351--351
 []\T1/lmr/bx/n/10 (+20) The clas-si-cal clock speaks an-chor --- and the hon-es
 t $\OT1/lmr/m/n/10 (+20) (2\OML/lmm/m/it/10 =\OT1/lmr/m/n/10 (+20) 3)$\T1/lmr/b
 x/n/10 (+20) -test [][I][]/[][P][]
@@ -1260,24 +1261,24 @@ x/n/10 (+20) -test [][I][]/[][P][]
 
 
 
-[7 <./figures/orientation.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 373--373
+[7 <./figures/nariai_entropy.pdf> <./figures/cover_twins.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 376--376
 []\T1/lmr/bx/n/10 (+20) The quantum-clock tar-get, made quan-ti-ta-tive [][I][]
 /[][P][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 394--394
+Underfull \hbox (badness 10000) in paragraph at lines 397--397
 []\T1/lmr/bx/n/10 (+20) The re-summed clock: the bend has a closed form [][I][]
 /[][P][]
  []
 
 
 
-[8 <./figures/trisection.pdf>]
+[8 <./figures/orientation.pdf>]
 
-[9]
-Overfull \hbox (1.03285pt too wide) in paragraph at lines 519--529
+[9 <./figures/trisection.pdf>]
+Overfull \hbox (1.03285pt too wide) in paragraph at lines 522--532
 \T1/lmr/m/n/10 (-20) --- confirmed independently by numerical continuation of t
 he heat trace ($\OMS/lmsy/m/n/10 ^^X \OT1/lmr/m/n/10 (-20) 10[]$\T1/lmr/m/n/10 
 (-20) ): \T1/lmr/bx/n/10 (-20) the det-ratio anomaly
@@ -1286,27 +1287,27 @@ he heat trace ($\OMS/lmsy/m/n/10 ^^X \OT1/lmr/m/n/10 (-20) 10[]$\T1/lmr/m/n/10
 
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 531--531
+Underfull \hbox (badness 10000) in paragraph at lines 534--534
 []\T1/lmr/bx/n/10 (+20) The zeta bud-get: the re-duced route car-ries the an-ch
 or ra-tios [][I][]/[][P][]
  []
 
-<figures/seam_units.pdf, id=540, 621.52202pt x 445.18318pt>
+<figures/seam_units.pdf, id=545, 621.52202pt x 445.18318pt>
 File: figures/seam_units.pdf Graphic file (type pdf)
 <use figures/seam_units.pdf>
-Package pdftex.def Info: figures/seam_units.pdf  used on input line 577.
+Package pdftex.def Info: figures/seam_units.pdf  used on input line 580.
 (pdftex.def)             Requested size: 419.95967pt x 300.81174pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 594.
-
-
 
 [11]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 603.
+LaTeX Font Warning: Command \small invalid in math mode on input line 597.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 606.
 
 
 
@@ -1321,11 +1322,11 @@ Package rerunfilecheck Info: File `tfpt_horizon_readouts.out' has not changed.
 (rerunfilecheck)             Checksum: B4F047632898351A3B2E38CB6FDE3B2C;1955.
  ) 
 Here is how much of TeX's memory you used:
- 32837 strings out of 473190
- 647228 string characters out of 5715801
- 1123909 words of memory out of 5000000
- 55062 multiletter control sequences out of 15000+600000
- 709593 words of font info for 331 fonts, out of 8000000 for 9000
+ 32855 strings out of 473190
+ 647487 string characters out of 5715801
+ 1121909 words of memory out of 5000000
+ 55069 multiletter control sequences out of 15000+600000
+ 709676 words of font info for 332 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  116i,13n,121p,1018b,1050s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/lo
@@ -1357,10 +1358,10 @@ c/lm/lmtk10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt1
 /local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtti10.pfb></usr/local/te
 xlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loca
 l/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tfpt_horizon_readouts.pdf (13 pages, 755285 bytes).
+Output written on tfpt_horizon_readouts.pdf (13 pages, 758112 bytes).
 PDF statistics:
- 835 PDF objects out of 1000 (max. 8388607)
- 332 compressed objects within 4 object streams
- 34 named destinations out of 1000 (max. 500000)
+ 844 PDF objects out of 1000 (max. 8388607)
+ 341 compressed objects within 4 object streams
+ 40 named destinations out of 1000 (max. 500000)
  84723 words of extra memory for PDF output out of 89155 (max. 10000000)
 

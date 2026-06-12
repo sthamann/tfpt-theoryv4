@@ -95,16 +95,22 @@ export const GLOSSARY: GlossaryEntry[] = [
       "The theory factorises into two engines: Engine 1 (discrete closure from g_car = 5) builds E₈ and the SM packet; Engine 2 (boundary dressing from c₃) gives the seed, α⁻¹ and the scale grammar. Gravity is Engine 2's geometry channel.",
   },
   {
-    term: "U_wall",
-    alias: ["(U_wall)", "wall selection", "parabolic wall"],
+    term: "v_geo",
+    alias: ["v_geo", "scale anchor", "U_point", "(U_wall)", "U_wall"],
     short:
-      "The flavor research gate: pinning the one D₄-symmetric parabolic realisation. The quark ratios are closed (Readout Rigidity, 55/117); only the absolute amplitude scale U_point stays open [A].",
+      "The flavor/scale interface (historically labelled U_wall): the quark ratios are closed (Readout Rigidity, 55/117) and the selector triangle pins R columnwise; the only remainder is the single dimensionful amplitude scale v_geo — the same nature as gravity's 1/G [A].",
   },
   {
-    term: "G_metric",
-    alias: ["(G_metric)", "ambient measure", "quantum-gravity measure"],
+    term: "G_net",
+    alias: ["G_net", "(G_metric)", "G_metric", "ambient measure", "quantum-gravity measure", "seam-net inclusion"],
     short:
-      "The quantum-gravity research gate: a reflection-positive projective-limit metric measure. R + R² is heat-kernel grounded (G2) and gap-decoupled (G5); the ambient limit (G6) is the strict-TOE target [A].",
+      "The metric-sector interface (historically labelled G_metric): R + R² is heat-kernel grounded (G2) and gap-decoupled (G5); the closing statement is the index-4 μ₄ seam-net inclusion ⇒ holomorphic (E₈)₁. Full QG closure is a certification layer, not a prerequisite for testing the readouts [B]/[A].",
+  },
+  {
+    term: "F_transfer",
+    alias: ["F_transfer", "(F_frontier)", "F_frontier", "transfer functor"],
+    short:
+      "The downstream interface: the continuous transport from compiler source data to measured observables. Koide source→pole, η_B source→Boltzmann relic, axion scale→abundance and m_p/m_e→QCD/EW matching are four instances of this one missing functor — not primitive compiler predictions [B]/[P].",
   },
 ];
 

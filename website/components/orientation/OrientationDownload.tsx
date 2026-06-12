@@ -31,7 +31,7 @@ const SIDEBAR_LINKS: SidebarLink[] = [
   {
     href: "/papers/tfpt_research_contracts.pdf",
     label: "Research contracts",
-    desc: "The two open gates, as contracts",
+    desc: "The open interfaces v_geo, G_net, F_transfer, as contracts",
     kind: "paper",
   },
 ];

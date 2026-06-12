@@ -214,12 +214,12 @@ export const predictions: Prediction[] = [
     killTest:
       "A JUNO central value clearly away from 0.307 at high significance kills the seam-misalignment mechanism.",
     derivationFormulas: [
-      "\\varepsilon = q(A_3)\\,\\varphi_0 = \\tfrac{3}{4}\\varphi_0",
-      "\\sin^2\\theta_{12} = \\tfrac{1}{3} - \\tfrac{2}{3}\\varepsilon = \\tfrac{1}{3} - \\tfrac{\\varphi_0}{2} = 0.3067",
+      "\\varepsilon = q(A_3)\\,\\varphi_0 = \\tfrac{3}{4}\\varphi_0 = c_3 + 36\\,c_3^4",
+      "\\sin^2\\theta_{12}^{\\mathrm{seed}} = \\tfrac{1}{3} - \\tfrac{2}{3}\\varepsilon = \\tfrac{1}{3} - \\tfrac{\\varphi_0}{2} = 0.306747",
     ],
     pdf: "/papers/tfpt_2_standard_model.pdf",
     description:
-      "Previously the only open SM angle. Tri-bimaximal 1/3 plus the seam misalignment ε = (3/4)φ₀ gives 0.306747 — 0.1% from NuFIT 6.0. The value is the frozen prediction of record (blind registry predictions_frozen.json, 2026-06-09, machine-enforced by v84): exactly one θ₁₂ number is committed before JUNO, the seam/non-linear variants are typed as derived variants, never as alternatives.",
+      "Previously the only open SM angle. Tri-bimaximal 1/3 plus the seam misalignment ε = (3/4)φ₀ = c₃ + 36 c₃⁴ (leading term c₃, fourth-order puncture correction exact) gives the prediction of record sin²θ₁₂_seed = 0.306747. This single seed value is the frozen prediction (blind registry predictions_frozen.json, 2026-06-09, machine-enforced by v84); the seam-corrected 0.306808 and non-linear 0.307020 are scheme diagnostics of the same texture along the F_transfer orbit, not rescue branches. Live status: JUNO's first 59.1-day run reports sin²θ₁₂ = 0.3092 ± 0.0087 — compatible, precision phase pending; NuFIT 6.0 (0.307) is the pre-JUNO global-fit baseline.",
     category: "Neutrino",
   },
   {

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 08:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 09:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1084,15 +1084,15 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-(./tfpt_status.tex
+(./tfpt_docset.tex
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 11.
+(Font)              <10> on input line 13.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 11.
+(Font)              <7> on input line 13.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 11.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
-2.
+(Font)              <5> on input line 13.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
+9.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1100,7 +1100,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-)
+) (./tfpt_status.tex)
 
 [1
 
@@ -1110,11 +1110,11 @@ al/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/202
 st/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/d
 vips/lm/lm-mathsy.enc}]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 80.
+(Font)              <14.4> on input line 83.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 83.
+(Font)              <10.95> on input line 86.
 
-Underfull \hbox (badness 1817) in paragraph at lines 82--85
+Underfull \hbox (badness 1817) in paragraph at lines 85--88
 \T1/lmr/m/n/10.95 (+20) seam--Calderón bound-ary mea-sure with the $\OT1/lmr/m/
 n/10.95 (+20) (\OML/lmm/m/it/10.95 E\OT1/lmr/m/n/10.95 (+20) 8)[]$ \T1/lmr/m/n/
 10.95 (+20) lat-tice net, car-rier sub-net $\OT1/lmr/m/n/10.95 (+20) (\OML/lmm/
@@ -1124,23 +1124,22 @@ m/it/10.95 D\OT1/lmr/m/n/10.95 (+20) 5)[] \OMS/lmsy/m/n/10.95 ^^B
 
 
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-42.
+14.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [2{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/loc
-al/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
+) [2{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
 
-[3]
+[3{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <9> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 200.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 203.
 
-Underfull \hbox (badness 10000) in paragraph at lines 200--200
+Underfull \hbox (badness 10000) in paragraph at lines 203--203
 []\T1/lmr/bx/n/10 (+20) Follow-up --- the ver-dicts were then used as a work-li
 st [][L][]/[][I][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 226--226
+Underfull \hbox (badness 10000) in paragraph at lines 229--229
 []\T1/lmr/bx/n/10 (+20) Second follow-up round [][L][]/[][N][] ([]\T1/lmr/bx/n/
 9 (+20) [\T1/lmtt/b/n/9 verification/v87_bulk_uniqueness_reduction.py\T1/lmr/bx
 /n/9 (+20) ][]\T1/lmr/bx/n/10 (+20) ,
@@ -1159,13 +1158,13 @@ Package rerunfilecheck Info: File `tfpt_5_redteam.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 32578 strings out of 473190
- 642848 string characters out of 5715801
- 1118681 words of memory out of 5000000
- 54960 multiletter control sequences out of 15000+600000
- 684217 words of font info for 258 fonts, out of 8000000 for 9000
+ 32603 strings out of 473190
+ 643300 string characters out of 5715801
+ 1117681 words of memory out of 5000000
+ 54974 multiletter control sequences out of 15000+600000
+ 684311 words of font info for 259 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 116i,12n,121p,1011b,1049s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 116i,13n,121p,1011b,1049s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/lo
 cal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texliv
 e/2025/texmf-dist/fonts/type1/public/lm/lmbx7.pfb></usr/local/texlive/2025/texm
@@ -1190,10 +1189,10 @@ cal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/local/texliv
 e/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2025/tex
 mf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/local/texlive/2025/texmf-dist/fon
 ts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tfpt_5_redteam.pdf (5 pages, 519029 bytes).
+Output written on tfpt_5_redteam.pdf (5 pages, 523811 bytes).
 PDF statistics:
- 232 PDF objects out of 1000 (max. 8388607)
- 141 compressed objects within 2 object streams
- 13 named destinations out of 1000 (max. 500000)
+ 239 PDF objects out of 1000 (max. 8388607)
+ 148 compressed objects within 2 object streams
+ 19 named destinations out of 1000 (max. 500000)
  67229 words of extra memory for PDF output out of 74296 (max. 10000000)
 

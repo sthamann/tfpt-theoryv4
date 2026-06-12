@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 08:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 09:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1216,7 +1216,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 (./tfpt_docset.tex
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-5.
+9.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1224,7 +1224,10 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-) (./tfpt_status.tex
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 142.
+(./tfpt_status.tex
 
 [1
 
@@ -1233,9 +1236,6 @@ al/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/202
 5/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2025/texmf-di
 st/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/d
 vips/lm/lm-mathsy.enc}]) (./tfpt_3_e8_audit_bootstrap.toc
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 4.
-
 
 [2])
 \tf@toc=\write5
@@ -1556,10 +1556,10 @@ ed.
  ) 
 Here is how much of TeX's memory you used:
  35807 strings out of 473190
- 721960 string characters out of 5715801
+ 721971 string characters out of 5715801
  1193773 words of memory out of 5000000
- 57785 multiletter control sequences out of 15000+600000
- 749931 words of font info for 422 fonts, out of 8000000 for 9000
+ 57786 multiletter control sequences out of 15000+600000
+ 749848 words of font info for 421 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,13n,107p,1022b,1120s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.
@@ -1593,10 +1593,10 @@ lic/lm/lmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy
 r/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/te
 xlive/2025/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/local/texlive/2025/
 texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tfpt_3_e8_audit_bootstrap.pdf (25 pages, 802857 bytes).
+Output written on tfpt_3_e8_audit_bootstrap.pdf (25 pages, 803191 bytes).
 PDF statistics:
- 524 PDF objects out of 1000 (max. 8388607)
- 390 compressed objects within 4 object streams
- 70 named destinations out of 1000 (max. 500000)
+ 525 PDF objects out of 1000 (max. 8388607)
+ 391 compressed objects within 4 object streams
+ 71 named destinations out of 1000 (max. 500000)
  102757 words of extra memory for PDF output out of 106986 (max. 10000000)
 

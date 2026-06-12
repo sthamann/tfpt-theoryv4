@@ -32,7 +32,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     q: "What is still open?",
-    a: "Two genuine research gates plus typed interfaces. (U_wall): the absolute flavor amplitude scale U_point (the quark ratios are already closed). (G_metric): the ambient projective quantum-gravity measure G6 — so a strict physical TOE is not certified. The frontier interfaces (Koide, η_B, the axion relic scale, m_p/m_e) are explicitly not claimed as compiler powers.",
+    a: "The live residual is three named interfaces: v_geo — the single dimensionful scale anchor (the same nature as 1/G; the quark ratios are already closed, only the absolute amplitude remains); G_net — the index-4 seam-net inclusion that certifies the metric sector (so a strict physical TOE is a certification layer, not yet certified); and F_transfer — the source→pole/relic/cosmology transport (Koide, η_B, the axion relic scale, m_p/m_e are four instances of this one missing functor, explicitly not claimed as compiler powers). The historical labels U_wall / G_metric / F_frontier are kept only for ledger continuity.",
   },
   {
     q: "Why call α⁻¹ a prediction at 1.9σ from CODATA?",

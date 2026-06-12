@@ -114,7 +114,7 @@ const DECODERS: StepNode[] = [
     input: "E₈ projection + carrier traces",
     fixed:
       "The gauge group, 3 families, hypercharge, b₁ = 41/10, and the residue matrix R (det 8)",
-    notClaimed: "No absolute quark amplitude scale (the U_wall anchor)",
+    notClaimed: "No absolute quark amplitude scale (the v_geo anchor)",
     fail: "Hierarchy mismatch, or a robust fourth generation",
     status: "decoder",
   },

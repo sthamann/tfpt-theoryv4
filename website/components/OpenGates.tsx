@@ -17,26 +17,26 @@ interface Gate {
 
 const GATES: Gate[] = [
   {
-    tag: "Research gate 1",
+    tag: "Interface 1",
     marker: "[A]",
-    title: "(U_wall) — the flavor amplitude scale",
-    body: "The quark mass ratios are closed (Readout Rigidity, c_u/c_d = 55/117 on the discrete selector stratum). Only the absolute amplitude normalisation U_point stays open — finite, algebraic and falsifiable.",
-    formula: "\\det R = 8, \\ \\operatorname{Spec}(Q_+)=\\{1,2,3\\} \\ \\text{fixed};\\ U_{\\mathrm{point}}\\ \\text{open}",
+    title: "v_geo — the one scale anchor",
+    body: "The quark mass ratios are closed (Readout Rigidity, c_u/c_d = 55/117 on the discrete selector stratum) and the selector triangle pins R columnwise (the dual pair (d,n), v136/v139). Only the absolute amplitude scale v_geo remains — the same dimensionful anchor as gravity's 1/G; finite, algebraic and falsifiable. (Historical label: U_wall.)",
+    formula: "\\det R = 8, \\ \\operatorname{Spec}(Q_+)=\\{1,2,3\\} \\ \\text{fixed};\\ U_{\\mathrm{point}} \\to v_{\\mathrm{geo}}",
     tone: "border-amber-400/30 bg-amber-500/5",
   },
   {
-    tag: "Research gate 2",
-    marker: "[A]",
-    title: "(G_metric) — the quantum-gravity measure",
-    body: "R + R² is heat-kernel grounded (G2) and the admissible IR sector is gap-decoupled (G5, Δ_eff = 1.648 > 0). The ambient gate G6 remains open — but after v83/v87 it is exactly ONE theorem: prove the seam–Calderón boundary net is holomorphic with c = 8. Then (E₈)₁ and the unique 2D bulk both follow (LR/KLM/BKLR). A strict physical TOE is still not certified.",
-    formula: "2\\|V\\| = 0.785 < \\Delta = 6\\log\\tfrac{3}{2};\\ \\ G_6 = \\text{one theorem: holomorphy} + c = 8",
+    tag: "Interface 2",
+    marker: "[B]/[A]",
+    title: "G_net — the metric-sector inclusion",
+    body: "R + R² is heat-kernel grounded (G2) and the admissible IR sector is gap-decoupled (G5, Δ_eff = 1.648 > 0). The closing statement is exactly ONE theorem: the seam–Calderón inclusion has Jones index 4 = |μ₄| (the μ₄ simple-current extension of the carrier net), from which holomorphy and the unique (E₈)₁ bulk follow (LR/KLM/BKLR). Full QG closure is a certification layer, not a prerequisite for testing the readouts. (Historical label: G_metric.)",
+    formula: "[\\,(E_8)_1 : (D_5)_1\\times(A_3)_1\\,] = 4 = |\\mu_4| \\ \\Rightarrow\\ \\text{holomorphic } c = 8",
     tone: "border-amber-400/30 bg-amber-500/5",
   },
   {
-    tag: "Not a gate",
-    marker: "[P]/[A]",
-    title: "Frontier interfaces — explicitly not compiler powers",
-    body: "Koide is no longer a bare near-miss but an attractor boundary condition: every physical configuration lies in the attractor basin, the rate (2/3)⁶ is forced, the source sits one seed quantum φ₀/24 before the branch point — open is only the continuous transfer generator (v93). η_B (downstream readout), the axion relic scale, and m_p/m_e remain honestly typed interfaces, deliberately not claimed as forced compiler outputs.",
+    tag: "Interface 3",
+    marker: "[B]/[P]",
+    title: "F_transfer — source→pole / relic / cosmology",
+    body: "Koide, η_B, the axion relic scale and m_p/m_e are four instances of one missing functor F_transfer — the continuous transport from compiler source data to measured observables (Koide source→pole; η_B source→Boltzmann relic; axion scale→abundance; m_p/m_e→QCD/EW matching). Each has a genuine handle but is a transfer target, deliberately not claimed as a primitive compiler output.",
     tone: "border-slate-500/30 bg-slate-500/5",
   },
 ];
@@ -57,7 +57,7 @@ export function OpenGates() {
         <SectionHeader
           eyebrow="Honest boundaries"
           title="What is still open?"
-          description="After the compiler closure the entire residual is Rest = (U_wall) ⊕ (G_metric) ⊕ (F_frontier): one flavor wall-selection, one quantum-gravity measure, and a set of deliberately typed frontier interfaces. None of these is hidden, and none is overclaimed."
+          description="After the compiler closure the live residual is Rest = v_geo ⊕ G_net ⊕ F_transfer: one dimensionful scale anchor, one metric-sector inclusion theorem, and one downstream transfer functor. None of these is hidden, and none is overclaimed. (The historical labels U_wall / G_metric / F_frontier are kept only for ledger continuity.)"
         />
 
         <div className="mt-10 grid gap-5 lg:grid-cols-3">

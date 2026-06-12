@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 08:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 09:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1085,71 +1085,71 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 \openout5 = `tfpt_4_frontier.toc'.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 85.
+(Font)              <14.4> on input line 87.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 85.
+(hyperref)                removing `math shift' on input line 87.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\eta' on input line 85.
+(hyperref)                removing `\eta' on input line 87.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 85.
+(hyperref)                removing `subscript' on input line 87.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 85.
+(hyperref)                removing `math shift' on input line 87.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 85.
+(hyperref)                removing `math shift' on input line 87.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Omega' on input line 85.
+(hyperref)                removing `\Omega' on input line 87.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 85.
+(hyperref)                removing `subscript' on input line 87.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 85.
+(hyperref)                removing `superscript' on input line 87.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 85.
+(hyperref)                removing `math shift' on input line 87.
 
 
 
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 9
-4.
+1.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [2{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 129.
+(hyperref)                removing `math shift' on input line 131.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 129.
+(hyperref)                removing `subscript' on input line 131.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 129.
+(hyperref)                removing `subscript' on input line 131.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 129.
+(hyperref)                removing `math shift' on input line 131.
 
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <9> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 146.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 148.
 
-Underfull \hbox (badness 10000) in paragraph at lines 142--154
+Underfull \hbox (badness 10000) in paragraph at lines 144--156
 \T1/lmr/bx/n/10 (+20) A re-jected near-formula (recorded as a dis-ci-pline boun
 d-ary,
  []
@@ -1159,36 +1159,38 @@ d-ary,
 [3{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 157.
+(hyperref)                removing `math shift' on input line 159.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 157.
+(hyperref)                removing `math shift' on input line 159.
 
 
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 229--229
+Underfull \hbox (badness 10000) in paragraph at lines 231--231
 []\T1/lmr/bx/n/10 (+20) Sharpening: the source$\OMS/lmsy/m/n/10 !$\T1/lmr/bx/n/
 10 (+20) pole map is \T1/lmr/bx/it/10 (+20) forced \T1/lmr/bx/n/10 (+20) by tha
 t gap [][I][]/[][P][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 230--240
+Underfull \hbox (badness 10000) in paragraph at lines 232--242
 []\T1/lmr/m/n/10 (+20) The pre-vi-ous box pairs the Koide tar-get with $\OML/lm
 m/m/it/10 ^^U[] \OT1/lmr/m/n/10 (+20) = (2\OML/lmm/m/it/10 =\OT1/lmr/m/n/10 (+2
 0) 3)[]$\T1/lmr/m/n/10 (+20) ;
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 242--242
+Underfull \hbox (badness 10000) in paragraph at lines 244--244
 []\T1/lmr/bx/n/10 (+20) Relaxation toy: basin, ex-act rate, and two hon-est neg
 -a-tives [][I][]/[][N][]
  []
 
 
-Underfull \hbox (badness 1048) in paragraph at lines 261--261
+
+[5]
+Underfull \hbox (badness 1048) in paragraph at lines 263--263
 []\T1/lmr/bx/n/10 (+20) Flow time: canon-i-cal gen-er-a-tor, data-fragility, an
 d a con-di-tional $\OML/lmm/m/it/10 m[]$ []\T1/lmr/bx/n/10 (+20) [I][]/[][N][]/
 [][P][]
@@ -1196,11 +1198,9 @@ d a con-di-tional $\OML/lmm/m/it/10 m[]$ []\T1/lmr/bx/n/10 (+20) [I][]/[][N][]/
 
 
 
-[5]
-
 [6]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 353.
+(Font)              <9> on input line 361.
 
 
 [7]
@@ -1214,13 +1214,13 @@ Package rerunfilecheck Info: File `tfpt_4_frontier.out' has not changed.
 (rerunfilecheck)             Checksum: EDFC116B38EA4909AB05596E8302307A;2025.
  ) 
 Here is how much of TeX's memory you used:
- 32399 strings out of 473190
- 642701 string characters out of 5715801
+ 32410 strings out of 473190
+ 642835 string characters out of 5715801
  1113364 words of memory out of 5000000
  54734 multiletter control sequences out of 15000+600000
- 688975 words of font info for 281 fonts, out of 8000000 for 9000
+ 689531 words of font info for 286 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,13n,107p,1012b,1054s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,12n,107p,1012b,1054s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/lo
 cal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texliv
 e/2025/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive/2025/texm
@@ -1248,10 +1248,10 @@ type1/public/lm/lmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/publ
 ic/lm/lmtt9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts
 /symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsf
 onts/symbols/msbm7.pfb>
-Output written on tfpt_4_frontier.pdf (8 pages, 555162 bytes).
+Output written on tfpt_4_frontier.pdf (8 pages, 557391 bytes).
 PDF statistics:
- 303 PDF objects out of 1000 (max. 8388607)
- 201 compressed objects within 3 object streams
- 24 named destinations out of 1000 (max. 500000)
+ 305 PDF objects out of 1000 (max. 8388607)
+ 203 compressed objects within 3 object streams
+ 25 named destinations out of 1000 (max. 500000)
  67797 words of extra memory for PDF output out of 74296 (max. 10000000)
 

@@ -190,8 +190,8 @@ const STATS: Array<{
     note: "In the closed branch; only π stays irreducible after the bootstrap",
   },
   {
-    label: "Open gates",
-    value: "2",
-    note: "(U_wall) flavor scale + (G_metric) QG measure — explicitly open",
+    label: "Open interfaces",
+    value: "3",
+    note: "v_geo scale anchor + G_net metric inclusion + F_transfer — explicitly open",
   },
 ];

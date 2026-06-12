@@ -11,7 +11,7 @@ const PUBLIC_ORDER = [
   { n: 3, label: "E₈ audit & bootstrap", note: "Audit raster, the loop" },
   { n: 4, label: "Frontier", note: "Honest open items" },
   { n: 6, label: "Origin Theory", note: "Why no free number remains" },
-  { n: 7, label: "Research contracts", note: "The two open gates" },
+  { n: 7, label: "Research contracts", note: "The open interfaces v_geo, G_net, F_transfer" },
 ];
 
 const MATH_ORDER = [

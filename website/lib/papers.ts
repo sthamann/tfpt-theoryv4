@@ -108,7 +108,7 @@ export const papers: Paper[] = [
     title: "Topological Fixed-Point Theory (TFPT) — A Discrete Compiler for the Constants of Physics",
     subtitle: "Reading guide, status assessment, and the dependency DAG",
     abstract:
-      "The entry document. TFPT tips from 'many sectors with surprising hits' to 'one small discrete compiler generates those sectors': from two axioms — the seam constant c₃ = 1/(8π) and the carrier rank g_car = 5 — it builds D₅ ⊕ A₃ + μ₄ ⇒ E₈ and reads off the Standard Model, the constants, and the scale grammar. This note is the reading guide: the architecture, the predictions, the dependency DAG, and the single proof ledger.",
+      "The entry document. From two axioms — the seam constant c₃ = 1/(8π) (P1) and the carrier rank g_car = 5 (P2) — TFPT constructs a discrete compiler for the Standard-Model skeleton (gauge group, three families, hypercharges, the flavor matrix), with E₈ (D₅ ⊕ A₃ + μ₄ ⇒ E₈) as the consistency checksum. The algebraic core is machine-checkable and the dimensionless constants follow as fixed points; physical readouts (scales, masses, inflation, gravity, cosmological transfers) run through explicitly named, status-typed bridges (v_geo, G_net, F_transfer), not as free outputs. This note is the reading guide: the architecture, the predictions, the dependency DAG, and the single proof ledger.",
     status: "orientation",
     statusLabel: "Reading guide",
     pdf: "/papers/introduction.pdf",
@@ -382,8 +382,8 @@ export const papers: Paper[] = [
         title: "The solar angle θ₁₂ from the seam",
         body: "Tri-bimaximal gives 1/3; the charged-lepton 1–2 misalignment is the seam ε = q(A₃)φ₀ = (3/4)φ₀, and TBM geometry gives the only previously open SM angle as a conditional derivation — 0.1% from NuFIT 6.0.",
         formulas: [
-          "\\varepsilon = q(A_3)\\,\\varphi_0 = \\tfrac{3}{4}\\varphi_0, \\qquad q(A_3) = \\frac{N_{\\mathrm{fam}}}{|\\mu_4|}",
-          "\\sin^2\\theta_{12} = \\tfrac{1}{3} - \\tfrac{2}{3}\\varepsilon = \\tfrac{1}{3} - \\tfrac{\\varphi_0}{2} = 0.3067",
+          "\\varepsilon = q(A_3)\\,\\varphi_0 = \\tfrac{3}{4}\\varphi_0 = c_3 + 36\\,c_3^4, \\qquad q(A_3) = \\frac{N_{\\mathrm{fam}}}{|\\mu_4|}",
+          "\\sin^2\\theta_{12}^{\\mathrm{seed}} = \\tfrac{1}{3} - \\tfrac{2}{3}\\varepsilon = \\tfrac{1}{3} - \\tfrac{\\varphi_0}{2} = 0.306747",
         ],
       },
       {
@@ -878,64 +878,64 @@ export const papers: Paper[] = [
     id: "07",
     number: 7,
     slug: "research-contracts",
-    title: "Research Contracts for the Two Open Gates",
-    subtitle: "(U_wall) the parabolic flavor wall-selection · (G_metric) the full QG measure",
+    title: "Research Contracts for the Remaining Interfaces",
+    subtitle: "v_geo · G_net · F_transfer — the live residual as numbered contracts",
     abstract:
-      "After the compiler closure the entire residual is Rest = (U_wall) ⊕ (G_metric) ⊕ (F_frontier). This note turns the two genuine research gates into contracts: a numbered chain of lemmas, the single theorem that closes each gate, and — for every step — whether it is machine-certifiable today. F_frontier is not a gate. Priority: (U_wall) first (finite, algebraic, falsifiable), then (G_metric) (deep analytic programme).",
+      "After the compiler closure the live residual is Rest = v_geo ⊕ G_net ⊕ F_transfer (the historical labels U_wall / G_metric / F_frontier are kept only for ledger continuity). This note turns the open interfaces into contracts: a numbered chain of lemmas, the single theorem that closes each, and — for every step — whether it is machine-certifiable today. Priority: the selector-triangle pairings and the v_geo scale anchor first (finite, algebraic, falsifiable), then the G_net inclusion theorem (deep analytic programme); F_transfer is the downstream interface.",
     status: "contracts",
-    statusLabel: "Open research gates",
+    statusLabel: "Open research interfaces",
     pdf: "/papers/tfpt_research_contracts.pdf",
     inputs: [
-      "The closed compiler and the two named residual gates from the introduction's status card.",
+      "The closed compiler and the three named residual interfaces (v_geo, G_net, F_transfer) from the central status card.",
     ],
     contribution: [
-      "Contract 1 (U_wall) — now complete: the quark ratios are closed (Readout Rigidity) and the absolute amplitude U_point reduces to one overall scale v_geo (ratios + Grand Mass Volume) — the same dimensionful anchor as gravity's 1/G. The two [A] anchors collapse to one.",
-      "Contract 2 (G_metric): IR tier closed under RP + gap (Decoupling Theorem, Δ_eff = 1.648 > 0); the ambient measure G6 is holographically reduced to a finite seam-boundary measure that is the rigorously-constructed (E₈)₁ lattice net (c = 8 = 5 + 3, conformal embedding (D₅)₁×(A₃)₁, coset c = 0) — so G6 is imported into existing RCFT/conformal-net rigor, not built anew.",
+      "Flavor interface (historically U_wall) — reduced to the selector triangle: the dual normal pair (d,n) forces R columnwise (v136/v139), the quark ratios are closed (Readout Rigidity), and the only remainder is the absolute amplitude U_point = the one overall scale v_geo (the same dimensionful anchor as gravity's 1/G).",
+      "G_net: IR tier closed under RP + gap (Decoupling Theorem, Δ_eff = 1.648 > 0); the ambient measure is holographically reduced to a finite seam-boundary measure that is the rigorously-constructed (E₈)₁ lattice net (c = 8 = 5 + 3, conformal embedding (D₅)₁×(A₃)₁, coset c = 0). The closing statement is the index-4 seam-net inclusion.",
       "The quark ratio c_u/c_d = 55/117 is closed (Readout Rigidity); the '11' is the Pascal sum 16 − g_car.",
     ],
     notClaimed: [
       "U_point is not a free transcendental input but the single overall scale v_geo (shared with 1/G); the strict claim is only that one dimensionful anchor remains.",
-      "The ambient boundary projective measure (G6) is reduced but not closed; it blocks certification as a strict physical TOE, but its absence does not affect the bounded IR claim.",
+      "G_net (the ambient boundary projective measure) is reduced but not closed; it blocks certification as a strict physical TOE, but its absence does not affect the bounded IR claim — full QG closure is a certification layer, not a prerequisite for testing the SM and cosmology readouts.",
     ],
     falsification: [
       "Each contract names its closing theorem and certifiability; fails if a lemma certified [F] does not in fact machine-check, or if the closing theorem is asserted before its chain completes.",
     ],
     sections: [
       {
-        title: "Contract 1 — (U_wall), the flavor wall",
-        body: "The goal is to select the one D₄-symmetric realisation on the family curve. The selectors det R = 8 and Spec(Q₊) = {1,2,3} are read off the bundle; the quark ratio is closed by Readout Rigidity, leaving only the absolute amplitude scale.",
+        title: "v_geo — the flavor interface and the one scale anchor",
+        body: "The flavor interface (historically U_wall) is reduced to the selector triangle: with the dual anchor d = a·R⁻¹ and the torsion normal n, each column of R is the unique lattice point of the address box (v136/v139). The selectors det R = 8 and Spec(Q₊) = {1,2,3} are read off the bundle; the quark ratios are closed by Readout Rigidity, leaving only the absolute amplitude scale = v_geo.",
         formulas: [
           "\\det R = 8 = n\\cdot a, \\qquad \\operatorname{Spec}(Q_+) = \\{1,2,3\\} = 3\\alpha + 1",
           "\\frac{c_u}{c_d} = \\frac{g_{\\mathrm{car}}\\,\\|\\mathrm{Pl}(K)\\|_1}{N_{\\mathrm{fam}}^2\\,\\Delta_Q} = \\frac{5\\cdot 11}{9\\cdot 13} = \\frac{55}{117}",
         ],
       },
       {
-        title: "Theorem U — the four-way split",
-        body: "The remaining flavor bridge splits into four pieces: unitarity (polystable ⇒ unitary, finite linear algebra), the H2 readoff, the Λ² readout rigidity, and U_point (the full amplitude normalisation) — which now reduces to the single overall scale v_geo (the same anchor as 1/G). Gate 1 is complete.",
+        title: "The selector triangle",
+        body: "The dual normal pair (d, n) pins R columnwise; d = (3/2)a − 2·1 is pure anchor data (the first selector is derived), and n is the unique covector with atom pairings (2, 8, 121) on the frame (1, a, σ) of determinant 11. The residue is exactly three atom pairings — the historical U_wall machinery is over-engineering for the ratios.",
         formulas: [
-          "(U_{\\mathrm{wall}}) = U_{\\mathrm{unitary}} + U_{\\mathrm{H2}} + U_{\\Lambda^2} + U_{\\mathrm{point}}",
-          "\\|\\mathrm{Pl}(K)\\|_1 = \\textstyle\\sum_{k=0}^{2}\\binom{4}{k} = 11 = 16 - g_{\\mathrm{car}}",
+          "d = a^{\\top}R^{-1} = \\bigl(-\\tfrac12,-\\tfrac12,1\\bigr), \\qquad n = (5,-9,6)",
+          "n\\cdot\\mathbf{1} = 2, \\quad n\\cdot a = 8, \\quad n\\cdot\\sigma = 121 = 11^2",
         ],
       },
       {
-        title: "Contract 2 — (G_metric), the QG measure",
-        body: "The goal is the reflection-positive projective-limit measure over the diffeomorphism-quotiented metric sector. G2 (Seeley–DeWitt R + R²) and G5 (gap dominance, Decoupling Theorem) are certified; the projective limit G6 is now holographically reduced — because the seam is a finite causal boundary, the bulk measure is reconstructed from a finite seam-boundary (Calderón) measure, so G6 is a boundary projective limit (conditional on RP + tightness), not a diffuse bulk problem.",
+        title: "G_net — the metric-sector inclusion",
+        body: "The goal is the reflection-positive projective-limit measure over the diffeomorphism-quotiented metric sector. G2 (Seeley–DeWitt R + R²) and G5 (gap dominance, Decoupling Theorem) are certified; the ambient measure is holographically reduced to a finite seam-boundary (Calderón) measure. The single closing statement is: the seam-Calderón inclusion has Jones index 4 = |μ₄| (the μ₄ simple-current extension of the carrier net), from which holomorphy and the unique (E₈)₁ bulk follow.",
         formulas: [
           "a_2 = -\\tfrac{R}{3}, \\qquad a_4\\big|_{R^2} = \\tfrac{R^2}{72}",
-          "2\\|V_{\\mathrm{metric}}\\| = 0.785 < \\Delta = 6\\log\\tfrac{3}{2} = 2.433, \\qquad \\Delta_{\\mathrm{eff}} = 1.648 > 0",
+          "[\\,(E_8)_1 : (D_5)_1\\times(A_3)_1\\,] = 4 = |\\mu_4|",
         ],
       },
       {
         title: "Certifiability and order",
-        body: "(U_wall) is finite, algebraic and falsifiable today; (G_metric) is a deep analytic programme. The recommended order freezes the frontier status in between.",
+        body: "The selector-triangle pairings and the v_geo scale anchor are finite, algebraic and falsifiable today; G_net is a deep analytic programme; F_transfer is the downstream interface. The recommended order freezes the frontier status in between.",
         formulas: [
-          "(U_{\\mathrm{wall}}) \\rightarrow \\text{freeze frontier status} \\rightarrow (G_{\\mathrm{metric}})",
+          "\\text{selector pairings} \\rightarrow v_{\\mathrm{geo}} \\rightarrow G_{\\mathrm{net}}",
         ],
       },
     ],
     keyFormulas: [
       {
-        label: "Gate 1 closed",
+        label: "Flavor interface reduced",
         latex: "U_{\\mathrm{point}} \\to v_{\\mathrm{geo}} = \\text{the } 1/G \\text{ anchor}",
         description: "Ratios + Grand Mass Volume ⇒ one overall scale. [I]/[A]",
       },
@@ -951,10 +951,10 @@ export const papers: Paper[] = [
       },
     ],
     highlights: [
-      { label: "Gates", value: "2", description: "(U_wall) flavor + (G_metric) quantum gravity" },
-      { label: "U_point", value: "→ v_geo", description: "Gate 1 closed: the single overall scale (= 1/G anchor)" },
+      { label: "Interfaces", value: "3", description: "v_geo (scale) · G_net (metric) · F_transfer (downstream)" },
+      { label: "U_point", value: "→ v_geo", description: "Flavor interface reduced: the single overall scale (= 1/G anchor)" },
       { label: "c_u/c_d", value: "55/117", description: "Closed by Readout Rigidity" },
-      { label: "G6", value: "→ (E₈)₁ net", description: "Reduced to the rigorously-constructed E₈ level-1 lattice net (c = 8 = 5 + 3)" },
+      { label: "G_net", value: "index 4", description: "Closing statement: the μ₄ index-4 seam-net inclusion ⇒ (E₈)₁" },
       { label: "v_geo", value: "1 scale", description: "Dimensional-analysis floor: one scale + π; shared by flavor & gravity" },
     ],
   },

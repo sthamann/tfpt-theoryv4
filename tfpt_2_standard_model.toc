@@ -12,7 +12,7 @@
 \contentsline {section}{\numberline {8}Neutrinos}{20}{section.8}%
 \contentsline {section}{\numberline {9}How each of the seven papers simplifies}{20}{section.9}%
 \contentsline {section}{\numberline {10}Is the entire Standard Model thereby derived?}{20}{section.10}%
-\contentsline {section}{\numberline {11}Complete solutions of the five open questions}{21}{section.11}%
+\contentsline {section}{\numberline {11}Closure status of the five former open questions}{21}{section.11}%
 \contentsline {section}{\numberline {12}How the original-paper predictions simplify}{25}{section.12}%
 \contentsline {section}{Conclusion}{26}{section*.8}%
 \contentsline {part}{II\hspace {1em}The flavor block: parabolic weights and the transport theorem}{27}{part.2}%

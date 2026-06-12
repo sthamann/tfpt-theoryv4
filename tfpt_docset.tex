@@ -1,35 +1,37 @@
 % ---------------------------------------------------------------------
 %  tfpt_docset.tex -- THE canonical TFPT document-set box.
 %  Single source of truth for the document list; \input by the
-%  introduction and the papers. Uses only universally available
+%  introduction and every paper. Uses only universally available
 %  macros (keybox + plain LaTeX math) so it compiles in every doc.
-%  Each document adds its own "You are reading document #N." line
-%  directly after the \input.
+%  Each document adds its own "You are reading ..." line directly
+%  after the \input.  Numbering is aligned with the file names:
+%  document N == tfpt_N_*, the introduction is the entry point, and
+%  R/H/O are the appendix-style companions.
 % ---------------------------------------------------------------------
 \begin{keybox}[The TFPT document set --- what is treated where]
 \textbf{Plain language:} TFPT (Topological Fixed-Point Theory) is a small discrete compiler. Two
 inputs --- the seam constant $c_3=\tfrac1{8\pi}$ and the carrier rank $g_{\mathrm{car}}=5$ --- build
-$D_5\oplus A_3+\mu_4\Rightarrow E_8$ and read off the Standard Model, the constants and the scale
-grammar. The development is \textbf{eight documents}, best read in order:
-\begin{enumerate}[leftmargin=1.7em,itemsep=1pt]
-\item \texttt{introduction} --- reading guide, compiler closure, predictions, the dependency DAG and
-      the single proof ledger (\texttt{verification/status\_ledger.csv}).
+$D_5\oplus A_3+\mu_4\Rightarrow E_8$ and read off the Standard-Model skeleton, the constants and the
+scale grammar. The series is \textbf{the introduction plus five numbered papers and three companions},
+best read in order:
+\begin{enumerate}[leftmargin=2.0em,itemsep=1pt,label=\textbf{\arabic*.}]
+\setcounter{enumi}{-1}
+\item \texttt{introduction} --- reading guide, compiler closure, predictions, the dependency DAG and the
+      single proof ledger (\texttt{verification/status\_ledger.csv}). \emph{(entry point)}
 \item \texttt{tfpt\_1\_architecture\_e8} --- the two axioms, the derivation map, the EM fixed point
       $\alpha^{-1}$, the $D_5\oplus A_3+\mu_4\Rightarrow E_8$ construction, the QBL theorem chain.
 \item \texttt{tfpt\_2\_standard\_model} --- the SM in one $\varphi_0$-ladder formula, flavor from
-      parabolic transport (sheet diamond, dual anchor, $Q_+$ cohomology), the worked closures, and
-      gravity/QG as the seam response.
-\item \texttt{tfpt\_3\_e8\_audit\_bootstrap} --- the seven $E_8$ slices as an audit raster, the
-      cascade bridge, the M\"obius bootstrap.
-\item \texttt{tfpt\_4\_frontier} --- honest status of $\eta_B$, $m_p/m_e$, Koide, dark matter,
-      full QG.
-\item[R.] \texttt{tfpt\_research\_contracts} --- the open gates as numbered contracts: lemma chains,
-      closing theorems and machine-certifiability for $(U_{\mathrm{wall}})$ and
-      $G_{\mathrm{metric}}/G_{\mathrm{net}}$, with the current reduction state.
-\item[H.] \texttt{tfpt\_horizon\_readouts} --- Appendix~H (unit-system reframe, \emph{not} new
-      physics): one seam constant as the universal horizon thermal code, the Nariai/anchor surface,
-      the resummed seam clock.
-\item[O.] \texttt{origin\_theory} --- Origin Theory: why no free fundamental number remains; the
-      exact core plus one honestly-typed cyclic interpretation.
+      parabolic transport (sheet diamond, dual anchor, $Q_+$ cohomology), the worked closures.
+\item \texttt{tfpt\_3\_e8\_audit\_bootstrap} --- the seven $E_8$ slices as an audit raster, the cascade
+      bridge, the M\"obius bootstrap.
+\item \texttt{tfpt\_4\_frontier} --- honest status of $\eta_B$, $m_p/m_e$, Koide, dark matter, full QG.
+\item \texttt{tfpt\_5\_redteam} --- the adversarial audit: declared attacks, what survives, what each
+      reduces to, and the kill tests.
 \end{enumerate}
+\noindent\textbf{Companions:} \textbf{R.} \texttt{tfpt\_research\_contracts} --- the open interfaces
+$(v_{\mathrm{geo}}, G_{\mathrm{net}}, F_{\mathrm{transfer}})$ as numbered contracts;
+\textbf{H.} \texttt{tfpt\_horizon\_readouts} --- Appendix~H (unit-system reframe): one seam constant as
+the universal horizon thermal code, the Nariai/anchor surface, the resummed seam clock;
+\textbf{O.} \texttt{origin\_theory} --- why no free fundamental number remains (exact core $+$ one
+honestly-typed cyclic interpretation).
 \end{keybox}

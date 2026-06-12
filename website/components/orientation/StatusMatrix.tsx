@@ -48,8 +48,8 @@ const ROWS: Row[] = [
     tone: "conditional",
   },
   {
-    layer: "Open gates (U_wall), (G_metric)",
-    status: "Two research contracts — the flavor wall-selection and the QG measure",
+    layer: "Open interfaces v_geo, G_net, F_transfer",
+    status: "Numbered research contracts — the scale anchor, the metric inclusion, and the transfer functor",
     paper: "Doc 7",
     tone: "downstream",
   },
