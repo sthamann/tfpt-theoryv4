@@ -242,6 +242,7 @@ const NODES: DagNode[] = [
       "v123_inventory_update.py",
       "v124_resummed_clock.py",
       "v125_glue_qsystem.py",
+      "v126_clock_wall_bridge.py",
     ],
   },
   {

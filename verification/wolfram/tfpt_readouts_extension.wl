@@ -888,6 +888,19 @@ Module[{g = 4, m, mstar, eyeg, mx1, onexm, unit, frob1, frob2, qf},
     AllTrue[Flatten[Table[Mod[a + b, 4], {a, {0, 2}}, {b, {0, 2}}]], MemberQ[{0, 2}, #] &] && 2*2 == 4];
 ];
 
+(* ---- (v126) clock-wall bridge ---- *)
+Module[{a0, spec, lams},
+  a0 = {{1/2, Sqrt[2]/6, 0}, {Sqrt[2]/6, 1/4, Sqrt[5]/12}, {0, Sqrt[5]/12, 1/4}};
+  spec = Sort[Eigenvalues[a0]];
+  checkExact["v126 the weights are the parabolic weights: spec A0* = {0, 1/3, 2/3} = n/N_fam; bridge (1-alpha)^6 = {1, (2/3)^6, (1/3)^6}",
+    spec == {0, 1/3, 2/3} &&
+    Sort[((1 - #)^6 &) /@ spec, Greater] == {1, (2/3)^6, (1/3)^6}];
+  checkExact["v126 checkpoint 1 + determinant: linear coefficient 2p2/N = 2 = |Z2| (= v104 entropy rate 2H); det(1 - A0*) = 2/9 = |Z2|/N^2 (v102 curvature); tr(1 - A0*) = 2; det A0* = 0",
+    SeriesCoefficient[-6 Log[1 - x/3], {x, 0, 1}] == 2 &&
+    Simplify[Det[IdentityMatrix[3] - a0]] == 2/9 &&
+    Simplify[Tr[IdentityMatrix[3] - a0]] == 2 && Simplify[Det[a0]] == 0];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v125: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v126: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

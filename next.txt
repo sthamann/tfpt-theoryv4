@@ -918,4 +918,26 @@ DAS GLUE-Q-SYSTEM (v125, Ledger GATE.METRIC.08) -- das Index-4-Objekt
        Q-System" -- zwei konstruierte Objekte matchen, keine Suche;
        die drei Lasten (Metrik + Carrier + QBL) haengen an dieser
        einen Identifikation.
+
+UHR UND WAND TEILEN EIN SPEKTRUM (v126, Ledger HOR.CLOCK.04) -- die
+    Resummations-Gewichte SIND die parabolischen MS-Gewichte; der
+    erste R1-Checkpoint ist klassisch bestanden:
+    (1) DIE GEWICHTE SIND DIE PARABOLISCHEN GEWICHTE [I]: die
+        Argumente n/N_fam = {0, 1/3, 2/3} des resummierten
+        Logarithmus sind EXAKT spec A0* (das exakte U_wall-Residuum,
+        v115); Spektral-Bruecke lambda_n = (1 - alpha_n)^{2p2}
+        reproduziert das eingefrorene Transferspektrum -- Horizont-
+        Uhr und Flavor-Wand teilen ihr Spektrum via alpha -> 1-alpha.
+    (2) CHECKPOINT 1 KLASSISCH BESTANDEN [I]: der lineare Koeffizient
+        2p2/N_fam = 2 = |Z2| IST die etablierte klassische
+        Entropie-Abweichungsrate 2H = |Z2| x Hubble (v104) -- der
+        Quanten-Inhalt von R1 isoliert auf den geometrischen Schwanz
+        sum_{k>=2} alpha^k/k.
+    (3) DIE DETERMINANTE IST DIE ENTROPIE-KRUEMMUNG [I]:
+        det(1 - A0*) = 2/9 = |Z2|/N_fam^2 (v102-Kruemmung, vierter
+        unabhaengiger Auftritt); tr(1 - A0*) = 2 = |Z2|; det A0* = 0.
+    => R1 NEU ADRESSIERT [P]: leite "rate = -2p2 ln(1 - alpha)" mit
+       alpha = parabolisches Gewicht her -- erste Ordnung klassisch
+       (v104-Entropie-Rate), Schwanz quantisch. EIN SPEKTRUM, ZWEI
+       TORE, EIN OBJEKT A0*.
 ================================================================================
