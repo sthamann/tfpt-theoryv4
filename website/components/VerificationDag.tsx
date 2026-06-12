@@ -243,6 +243,7 @@ const NODES: DagNode[] = [
       "v124_resummed_clock.py",
       "v125_glue_qsystem.py",
       "v126_clock_wall_bridge.py",
+      "v127_ring_resummation.py",
     ],
   },
   {

@@ -426,6 +426,27 @@ Mehta--Seshadri parabolic weight --- first order classical, tail quantum: \textb
 gates, one object $A_0^\star$}.
 \end{winbox}
 
+\begin{winbox}[The clock is a log-determinant: the tail is the ring (RPA) resummation \tI/\tP\ (\veri{v127\_ring\_resummation.py})]
+The ``$O(1)$ resummation'' demanded by v107 is now \emph{typed}. For a rank-one insertion $P$
+($\operatorname{tr}P^k=1$), $-\ln\det(\mathbf1-\alpha P)=-\ln(1-\alpha)=\sum_k\alpha^k/k$, so the
+resummed clock is exactly
+\[
+  \boxed{\ \mathrm{rate}=-2p_2\,\operatorname{Tr}\ln(\mathbf1-\alpha P)\ }
+\]
+--- $2p_2=6$ \emph{identical} one-loop ring (RPA) towers, \textbf{one per hexagon site} ($=$ positive
+root of $A_3$), with coupling $\alpha$ $=$ the parabolic weight. \emph{Ring ladder \tI:} the $k{=}1$
+ring is the \emph{classical} term ($6\alpha=|\Z_2|n$, the v104/v126 entropy rate); the $k{=}2$ ring is
+the first quantum correction ($\tfrac13$ at weight $1$); the partial sums converge to
+$\{\Delta,6\ln3\}$ monotonically from below. \emph{Coupling cross-link \tI\ (audit):} the established
+seam coupling is $\kappa=\tfrac c{24\pi}=\tfrac8{24\pi}=\tfrac1{3\pi}=\alpha_1/\pi$ --- the
+\emph{first parabolic weight over $\pi$}. \emph{The wall \tI:} the ring series diverges at
+$\alpha\to1$ ($n\to\Nfam$) --- the v124 wall is the standard RPA instability. \emph{R1 final form
+\tP:} show that the near-Nariai one-loop effective action of the seam mode, with insertion $=$
+parabolic weight and multiplicity $2p_2$, is this ring sum --- ``\textbf{the seam clock is the RPA
+determinant of one mode on six sites}''. The resummation type is identified; the derivation itself
+remains open.
+\end{winbox}
+
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.9\linewidth]{figures/seam_units.pdf}

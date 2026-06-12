@@ -940,4 +940,28 @@ UHR UND WAND TEILEN EIN SPEKTRUM (v126, Ledger HOR.CLOCK.04) -- die
        alpha = parabolisches Gewicht her -- erste Ordnung klassisch
        (v104-Entropie-Rate), Schwanz quantisch. EIN SPEKTRUM, ZWEI
        TORE, EIN OBJEKT A0*.
+
+DIE UHR IST EINE LOG-DETERMINANTE (v127, Ledger HOR.CLOCK.05) -- der
+    geometrische Schwanz ist die Standard-Ring-(RPA-)Resummation;
+    v107s geforderte "O(1)-Resummation" ist damit TYPISIERT:
+    (1) LOG-DET-IDENTITAET [I]: fuer Rang-1-Insertion P gilt
+        -ln det(1 - alpha P) = -ln(1-alpha) = sum_k alpha^k/k
+        => rate = -2p2 Tr ln(1 - alpha P): SECHS identische
+        Ring-Tuerme, EINER PRO HEXAGON-SITE (= positive Wurzel
+        von A3), Kopplung = parabolisches Gewicht.
+    (2) RING-LEITER [I]: k=1-Ring = klassischer Term (|Z2| n =
+        Entropie-Rate, v104/v126); k=2-Ring = erste Quanten-
+        korrektur (1/3 bei Gewicht 1); Partialsummen konvergieren
+        monoton von unten gegen {Delta, 6 ln 3}.
+    (3) KOPPLUNGS-CROSS-LINK [I, Audit]: kappa_seam = 8/(24pi) =
+        1/(3pi) = alpha_1/pi -- die Seam-Kopplung ist das ERSTE
+        PARABOLISCHE GEWICHT ueber pi.
+    (4) WAND = RING-DIVERGENZ [I]: Konvergenzradius |alpha| < 1;
+        bei alpha -> 1 (n -> N_fam) divergiert die Summe -- die
+        v124-Wand ist die Standard-RPA-Instabilitaet.
+    => R1 ENDFORM [P]: zeige, dass die near-Nariai-Ein-Loop-
+       Effektivwirkung der Seam-Mode mit Insertion = parabolisches
+       Gewicht und Multiplizitaet 2p2 die Ring-Summe ist -- "die
+       Seam-Uhr ist die RPA-Determinante EINER Mode auf SECHS
+       Sites". Typ identifiziert; Herleitung offen.
 ================================================================================

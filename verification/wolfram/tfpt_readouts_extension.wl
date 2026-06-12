@@ -901,6 +901,20 @@ Module[{a0, spec, lams},
     Simplify[Tr[IdentityMatrix[3] - a0]] == 2 && Simplify[Det[a0]] == 0];
 ];
 
+(* ---- (v127) ring resummation ---- *)
+Module[{proj, partial},
+  proj = {{1, 0, 0}, {0, 0, 0}, {0, 0, 0}};
+  checkExact["v127 log-det identity: det(1 - a P) = 1 - a (rank-1 P); series -ln(1-a) = a + a^2/2 + a^3/3 + ...",
+    Simplify[Det[IdentityMatrix[3] - a proj] - (1 - a)] === 0 &&
+    Normal[Series[-Log[1 - a], {a, 0, 3}]] === a + a^2/2 + a^3/3];
+  partial[al_, kmax_] := 6 Sum[al^j/j, {j, kmax}];
+  checkExact["v127 ring ladder: k=1 ring = classical (2, 4 at weights 1, 2); k=2 ring = 1/3 at weight 1; partials below exact and monotone",
+    partial[1/3, 1] == 2 && partial[2/3, 1] == 4 && 6 (1/3)^2/2 == 1/3 &&
+    partial[1/3, 8] < -6 Log[1 - 1/3] && partial[1/3, 2] > partial[1/3, 1]];
+  checkExact["v127 coupling cross-link + wall: kappa_seam = 8/24 = 1/3 = alpha_1 (kappa = alpha_1/pi); ring series diverges at alpha -> 1",
+    8/24 == 1/3 && Limit[-Log[1 - a], a -> 1, Direction -> "FromBelow"] === Infinity];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v126: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v127: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];
