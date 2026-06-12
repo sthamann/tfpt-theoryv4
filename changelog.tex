@@ -59,6 +59,19 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-12 (origin\_theory style alignment + box reduction)}
+\begin{itemize}
+\item \textbf{Fewer boxes, embedded in text.} \texttt{origin\_theory} from $22$ to $16$ boxes: the
+  narrative/interpretation callouts (``Why the interpretation is internally consistent'', ``Dependency
+  chain of the birefringence test'', ``The precise reformulation'', ``The three theses honestly graded'',
+  ``The whole story'', ``One-line summary'') become run-in bold prose; the boxed reformulation becomes a
+  \texttt{keyeq}. The exact result keyboxes (\vref{v53}--\vref{v56}, \vref{v101}, \vref{v105},
+  \vref{v113}, \ldots) and the master-principle / Seam--Horizon target boxes are kept.
+\item \textbf{Colour-marked module references + marker hygiene.} \texttt{\textbackslash vref} applied to
+  the inline \texttt{vN} references; stale literal \texttt{[A]}/\texttt{[I]/[L]} markers in running text
+  replaced by the 4-class \mO/\mE.
+\end{itemize}
+
 \subsection*{2026-06-12 (tfpt\_5 / horizon / research-contracts pass + build hardening)}
 \begin{itemize}
 \item \textbf{Forked document-set box removed (horizon).} \texttt{tfpt\_horizon\_readouts} carried a

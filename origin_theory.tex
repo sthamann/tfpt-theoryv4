@@ -2,7 +2,7 @@
 %  TFPT --- Origin Theory
 %  The seam as a horizon, the cyclic compiler hull, and the
 %  self-reproducing parameter-free fixed point.
-%  [I]/[L] structural core (v53-v56) + honestly-typed [P] interpretation.
+%  [E] structural core (v53-v56) + honestly-typed [C] interpretation.
 % =====================================================================
 \documentclass[11pt,a4paper]{article}
 \usepackage[T1]{fontenc}
@@ -55,7 +55,7 @@ and how the entire integer skeleton, the seam constant $\cthree=\tfrac1{8\pi}$ a
 structure all flow from one boundary pair. \textbf{Two layers, kept strictly apart:}
 \begin{itemize}[leftmargin=1.3em]
 \item \textbf{Structural core \mE} (\S\ref{sec:core}--\S\ref{sec:alpha}): exact, machine-checked
-identities ($\mathtt{v53}$--$\mathtt{v56}$, plus $\mathtt{v6/v8/v3}$). These stand on their own,
+identities ($\mathtt{v53}$--$\mathtt{v56}$, plus $\mathtt{v6/\vref{v8}/v3}$). These stand on their own,
 independently of any cosmology.
 \item \textbf{One interpretation \mC} (\S\ref{sec:cycle}): the \emph{cyclic self-reproduction} reading
 --- collapse $\to$ horizon$=$seam $\to$ next cycle. This is a physical hypothesis, \emph{not} derived and
@@ -322,7 +322,7 @@ sheet parity is the M\"obius/two-sided (thermofield-double) gluing across the ho
 $=$ the attractor's fixed point, hence parameter-free.}
 \end{figure}
 
-\begin{keybox}[Why the interpretation is internally consistent \mC]
+\par\smallskip\noindent\textbf{Why the interpretation is internally consistent} (\mC).
 \begin{description}[leftmargin=2.0em,style=nextline]
 \item[\textnormal{Information.}] Collapse$\to$horizon keeps information on the boundary (unitarity); the
 Page recovery rate $(2/3)^6$ is the \emph{same} boundary transport that builds the SM (\S\ref{sec:eight}).
@@ -342,7 +342,6 @@ boundary-phase rotation shared by flavor and the CMB. \textbf{ACT DR6} (Diego-Pa
 measures $\beta=0.215^\circ\pm0.074^\circ$ ($2.9\sigma$): TFPT sits $\sim0.4\sigma$ from the central value.
 A sharpened value $\neq0.2424^\circ$ would break the shared-seam reading. (\veri{v60\_lambda\_metrology\_branch.py})
 \end{description}
-\end{keybox}
 
 % =====================================================================
 \section{Falsifiers}\label{sec:falsify}
@@ -386,7 +385,7 @@ gravity sector; note the DESI-driven upward shift is itself under discussion (CM
 Starobinsky range).
 \end{keybox}
 
-\begin{keybox}[Dependency chain of the birefringence test \fobs\ (explicit, per Alessandro)]
+\par\smallskip\noindent\textbf{Dependency chain of the birefringence test} (\fobs, explicit, per Alessandro).
 \textbf{What fixes $\phiz$:} $\phiz=\tfrac43\cthree+48\cthree^4$, a pure function of the seam constant
 $\cthree=\tfrac1{8\pi}$ (\mE). \textbf{Conversion to $\beta$:} the retarded seed $u=\phiz$ enters the
 boundary polarisation rotation as $\beta_{\mathrm{rad}}=u/(4\pi)$; the assumption is that the CMB
@@ -395,23 +394,19 @@ parameter). \textbf{Prediction:} $\beta_{\mathrm{rad}}=0.2424^\circ$. \textbf{Cu
 $\beta=0.215^\circ\pm0.074^\circ$ ($0.37\sigma$ away). \textbf{Failure threshold:} a systematics-controlled
 $\beta$ that excludes $0.2424^\circ$ at $\gtrsim3\sigma$ (e.g.\ a central value outside
 $0.2424^\circ\pm3\times$ its error) would falsify the shared-seed reading. \veri{v60\_lambda\_metrology\_branch.py}
-\end{keybox}
 
 % =====================================================================
 \section{The seam and the horizon: the precise statement}\label{sec:crosslinks}
 % =====================================================================
-\begin{keybox}[The precise reformulation \mC]
-\[
-  \boxed{\ \text{The seam is \emph{not} identical to an event horizon. It is the abstract boundary}}
-\]
-\[
-  \boxed{\ \text{normaliser whose \emph{local gravitational realisation} is a horizon.}}
-\]
-A black hole is then not ``the seam'' but a \emph{local instance of the seam grammar}; de Sitter is its
+\par\smallskip\noindent\textbf{The precise reformulation} (\mC).
+\begin{keyeq}
+The seam is \emph{not} identical to an event horizon. It is the abstract boundary normaliser whose
+\emph{local gravitational realisation} is a horizon.
+\end{keyeq}
+\noindent A black hole is then not ``the seam'' but a \emph{local instance of the seam grammar}; de Sitter is its
 \emph{global} instance. This is stronger and cleaner than a direct identification --- it avoids importing
 Schwarzschild analogies wholesale, and it makes $\cthree$ a boundary normaliser with several gravitational
 realisations rather than one black-hole parameter.
-\end{keybox}
 
 \noindent\textbf{The four realisations of one boundary normaliser.}
 \begin{enumerate}[leftmargin=1.7em,itemsep=1pt]
@@ -492,12 +487,12 @@ Einstein normalisation with $8\pi G$. \textbf{Status of the chain:}
   \underbrace{\cthree=\tfrac1{8\pi}}_{\mE}\Rightarrow
   \underbrace{\text{KMS }T=4\cthree\kappa}_{\mE}\\[3pt]
   \Rightarrow
-  \underbrace{S=A/(4G_\Sigma)}_{\substack{\textbf{coeff. }k=\cthree/2\textbf{ forced (v73);}\\\textbf{absolute scale }=\textbf{anchor}}}\Rightarrow
+  \underbrace{S=A/(4G_\Sigma)}_{\substack{\textbf{coeff. }k=\cthree/2\textbf{ forced (\vref{v73});}\\\textbf{absolute scale }=\textbf{anchor}}}\Rightarrow
   \underbrace{\text{Einstein }8\pi G}_{\mC\,(\text{Jacobson})}.
   \end{gathered}
 \]
 Links 1--3 (and RT in seam units) are exact; the area-law \emph{coefficient} $k=\cthree/2$ is now forced by
-topology $\times$ variation (v73, below), so the \emph{dimensionless} content is closed --- the only residual
+topology $\times$ variation (\vref{v73}, below), so the \emph{dimensionless} content is closed --- the only residual
 is the absolute $4$D Newton scale (anchor). $\cthree=\tfrac1{8\pi}$ thereby stops being ``the known GR number
 in a new hat'' and becomes the visible imprint of the boundary geometry from which gravity is read
 thermodynamically.
@@ -545,7 +540,7 @@ the seam cutoff $\Lambda$ and the moment $f_2$). So the \emph{absolute} $1/G$ is
 (Sakharov/Connes induced gravity) --- it is the $\Lambda^2 f_2$ prefactor, and the physical identification
 ``seam scale $=$ observed Planck scale'' is the \emph{one} irreducible dimensionful anchor
 ($v_{\mathrm{geo}}$; no metre from pure mathematics). \emph{Crucially this anchor is only the absolute scale:}
-the \emph{dimensionless} coefficient $k=\cthree/2$ that multiplies $\Lambda^2 f_2$ is forced (v73), not a free
+the \emph{dimensionless} coefficient $k=\cthree/2$ that multiplies $\Lambda^2 f_2$ is forced (\vref{v73}), not a free
 normalisation. What \emph{is} cutoff-independent --- the $R^2$
 coefficient, the scalaron $M_{\mathrm{scal}}=\cthree^{7/2}\bar M_{\mathrm{Pl}}\approx3.06\times10^{13}$ GeV,
 $v_{\mathrm{GW}}=c$ --- is already derived (\veri{v36\_spectral\_action\_g2.py}). \textbf{So the central theorem
@@ -554,7 +549,7 @@ residual is the single irreducible anchor every theory must carry, \emph{not} a 
 
 \smallskip\noindent\textbf{The flavor anchor is the \emph{same} anchor (\veri{v75\_upoint\_to\_vgeo.py}).} The
 absolute flavor amplitude $U_{\mathrm{point}}$ --- the only other thing that looked like an independent
-$[A]$ input --- also reduces to $v_{\mathrm{geo}}$: the quark ratios are closed (Pl\"ucker), the lepton
+\mO\ input --- also reduces to $v_{\mathrm{geo}}$: the quark ratios are closed (Pl\"ucker), the lepton
 amplitudes are exact ($\tfrac{16}7,\tfrac43,\tfrac76$), and each sector product is a clean $\phiz$-power
 (Grand Mass Volume; lepton product $\tfrac{32}9=2^{\gcar}/\Nfam^2$), so by the
 $(\text{ratios})+(\text{product})\Leftrightarrow(\text{individuals})$ bijection the nine charged-fermion
@@ -592,7 +587,7 @@ normal slice $S^2$ ($\chi(S^2)=2$, hence $\int K=4\pi$ \emph{topological}, cutof
 $k$, Fursaev--Solodukhin gives $S=4\pi k A=2\pi\cthree A=\tfrac14 A$ exactly. \textbf{So Alessandro's
 target is met at the level it can be:} the coefficient $k=\tfrac{\cthree}2$ is forced by topology $\times$
 variation; the \emph{only} UV-sensitive piece left is the absolute $4$D Newton scale (the $\Lambda^2 f_2$
-prefactor of the carrier-Dirac $a_2$, v68) --- the one irreducible \emph{dimensionful} anchor, exactly where
+prefactor of the carrier-Dirac $a_2$, \vref{v68}) --- the one irreducible \emph{dimensionful} anchor, exactly where
 it should sit.
 
 \smallskip\noindent\textbf{The necessary condition is met (\veri{v59\_area\_law\_evidence.py}).} A
@@ -605,13 +600,12 @@ area-law form. This is the structural necessary condition for the $S=A/(4G_\Sigm
 $\cthree=\tfrac1{8\pi}$ \emph{coefficient} still requires the specific seam kernel (the open part).
 \end{gapbox}
 
-\begin{keybox}[The three theses, honestly graded]
+\par\smallskip\noindent\textbf{The three theses, honestly graded.}
 \begin{description}[leftmargin=2.0em,style=nextline]
 \item[\textnormal{Weak \mE\ (established).}] $\cthree=\tfrac1{8\pi}$ is a natural horizon-readout factor in TFPT (Gauss--Bonnet origin, Hawking/de Sitter/Unruh in one seam unit).
 \item[\textnormal{Medium \mC\ (very plausible).}] Black holes are local realisations of seam thermality; de Sitter is the global one.
 \item[\textnormal{Strong \mO\ (open, right direction).}] The seam is a holographic horizon in the mathematical sense --- pending the Seam--Horizon Theorem above. \emph{Not} more numerical matches; one analytic area-law.
 \end{description}
-\end{keybox}
 
 % =====================================================================
 \section{Consequences, and the whole story \mC}\label{sec:consequences}
@@ -643,7 +637,7 @@ objection answered).
 photon dispersion, horizon information loss, or birefringence $\neq0.2424^\circ$ would break it.
 \end{enumerate}
 
-\begin{keybox}[The whole story \mC]
+\par\smallskip\noindent\textbf{The whole story} (\mC).
 A universe ends in gravitational collapse $\to$ a horizon. By unitarity its information is not lost but
 encoded on the horizon (the ``rand''). \emph{That horizon is the local gravitational realisation of the
 TFPT seam}, carrying $\cthree=\tfrac1{8\pi}$ (the universal horizon temperature $=$ the Einstein/Jacobson
@@ -655,7 +649,6 @@ compiler. The gapped boundary transport contracts the incoming state to the uniq
 order-$30$ cyclic rotation ($30=|\Z_2|\Nfam\gcar$). Repeat without end. The constants are parameter-free
 because they are the \emph{self-reproducing fixed point of the cosmic cycle} --- the M\"obius
 self-consistency, made precise as Perron--Frobenius on the boundary operator.
-\end{keybox}
 
 \noindent\emph{References for the reframed standard results:} Jacobson, \textit{Thermodynamics of Spacetime}
 (1995); Hod (1998) and Motl (2003) for the asymptotic Schwarzschild quasinormal $\ln3$; Page (1993) for the
@@ -705,7 +698,7 @@ prediction layer with numerical failure thresholds. The distance is now concentr
 \smallskip\noindent\textbf{$N_\star$ --- explicit demotion (Alessandro \#5).} The inflationary e-fold number
 $N_\star$ is \emph{not} a compiler output: it is a physical reheating/observational input, marker \mC, with
 the standard range $N_\star\in[50,60]$ set by the reheating history. It enters only the inflationary
-read-offs ($n_s=1-2/N_\star$, $r=12/N_\star^2$) and \emph{nothing} in the $[I]/[L]$ core. We state it as an
+read-offs ($n_s=1-2/N_\star$, $r=12/N_\star^2$) and \emph{nothing} in the \mE\ core. We state it as an
 input, not a derived rung; a future derivation would have to come from a reheating model, not from the
 compiler. \textbf{Prediction layer (Alessandro \#6)} with explicit failure thresholds is now machine-recorded
 (\veri{v65\_falsification\_layer.py}).
@@ -792,13 +785,12 @@ horizon cross-links (Jacobson/Einstein $8\pi{=}1/\cthree$, Hod $\ln3$, $1920{=}|
 \end{tabularx}
 \end{center}
 
-\begin{keybox}[One-line summary]
+\par\smallskip\noindent\textbf{One-line summary.}
 The structural core is exact: the integer skeleton, the seam constant and a built-in order-$30$ cycle all
 flow from one boundary pair, and a gapped boundary transport selects a \emph{unique} fixed point --- so
 TFPT has no free fundamental number (only $\pi$ is primitive). The \emph{cyclic self-reproduction} that
 makes this a physical ``why'' is a falsifiable interpretation \mC, consistent with every exact fact above
 but not derived from them.
-\end{keybox}
 
 \begin{keybox}[The residual inventory: one constant, one anchor, one clock to find \mE/\mC\ (\veri{v105\_residual\_inventory.py})]
 The 2026-06-11 horizon round collapses the synthesis to three machine-checked statements.
@@ -814,7 +806,7 @@ $\varepsilon=(c/24\pi)\Lambda/\bar M_{\mathrm{Pl}}^2=7.6\times10^{-122}$ ($c{=}8
 $121.5$ orders, and the deficit \emph{is} the $\Lambda$ hierarchy $2\ainv/\ln10=119.0$. So the clock must
 live at the \emph{seam} scale, where the only gapped generator is the established boundary transport ---
 the bridge reaches its final form: \emph{one} \mC\ identification, ``the transfer operator is the seam's
-own Nariai clock''. \emph{(Since constructed, v124--v133: the resummed clock has the closed form
+own Nariai clock''. \emph{(Since constructed, \vref{v124}--\vref{v133}: the resummed clock has the closed form
 $\mathrm{rate}(n)=-p_2\ln(1-n/N_{\mathrm{fam}})$, its weights are the Mehta--Seshadri parabolic weights of
 $A_0^\star$, and the rate is the entropy power law $\Gamma\propto(S/S_{dS})^{p_2}$; the residue of R1 is
 one finite $\zeta(0)$ budget.)} \textbf{(C) The complete gap list (machine-pinned).} Exactly \emph{five} structural
@@ -824,9 +816,9 @@ the parabolic realisation of $Q$ (which now also carries the sheet question) \mC
 irreducibles (one scale $v_{\mathrm{geo}}$, the primitive $\pi$) and the frozen data surfaces. Nothing is
 closed by this box; its claim is \emph{completeness} --- a sixth structural gap would fail the script.
 \smallskip\\
-\noindent\emph{Update (post v110--v122, \veri{v123\_inventory\_update.py}):} the list keeps its
+\noindent\emph{Update (post \vref{v110}--\vref{v122}, \veri{v123\_inventory\_update.py}):} the list keeps its
 cardinality but its \emph{contents} sharpened. The old R4 (``H2 dictionary'') is \textbf{discharged}
---- its values, addresses and margins are now exact theorems (v118--v122); what replaces it is the far
+--- its values, addresses and margins are now exact theorems (\vref{v118}--\vref{v122}); what replaces it is the far
 smaller R4$'$, the \emph{establishment of the selectors} ($n=(5,-9,6)$ and the diamond determinants
 --- five frozen integers). And R2 now carries \textbf{three loads}: the one index-$4$ boundary-net
 statement closes, when proven, the metric gate, the carrier choice \emph{and} the QBL programme ---
@@ -834,7 +826,7 @@ one theorem, three doors. The flavor side has no open analysis class of its own 
 \end{keybox}
 
 \begin{keybox}[The carrier chapter: the interior is free, the structure is the certificate \mE/\mC\ (\veri{v113\_quasifree\_kernel.py})]
-The QBL round (v108--v113) adds the missing chapter of the origin story --- \emph{why this carrier}. The
+The QBL round (\vref{v108}--\vref{v113}) adds the missing chapter of the origin story --- \emph{why this carrier}. The
 seam owns exactly \emph{one} measuring device: a single scalar two-point kernel. Four theorems pin what
 such a device can do. \emph{(i)} A scalar kernel exists \emph{iff} it pairs the two sheets; there are
 exactly $2=|\Z_2|$ such kernels --- the glue ambiguity, resolved by the same sheet choice as everywhere
