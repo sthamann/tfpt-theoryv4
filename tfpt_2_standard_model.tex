@@ -702,6 +702,19 @@ seam curve's cohomology. \emph{Typing:} all spectrum statements \tI; what remain
 is the \emph{naturality} of the identification --- the canonical map from the $H^1$ character basis to
 the $V$-axis generation basis ($\operatorname{rowsum}(V)=(1,2,3)$ verbatim, \veri{v135\_det\_surface.py})
 --- typed \tP.
+\smallskip\\
+\noindent\textbf{The canonical map exists and is rigid (\veri{v140\_canonical\_map.py}).} The naturality
+residue collapses. Of the established $\mu_4$ actions on generation space, the plain deck
+$U=\operatorname{diag}(1,i,-i)$ has characters $(0,1,3)$ --- an invariant line, missing $2$ --- and
+\emph{cannot} match $H^1$; but the \textbf{sheet-twisted} deck $-U$ (characters $(2,3,1)$) and the cusp
+exponential $i^{Q_+}$ (characters $(1,2,3)$) both carry the character \emph{set} $\{1,2,3\}$ --- exactly
+the $H^1$ set, by the same sign twist that builds the v118 hexagon. Both sides are multiplicity-free, so
+by Schur the equivariant isomorphism \emph{exists and is unique} up to one scalar per character: the
+canonical map is well-defined --- existence and uniqueness are no longer open. Under the $i^{Q_+}$-map
+the $H^1$ Euler degree pulls back to $Q_+$ itself; under the $-U$-map to $Q_+\!\circ\rho$ with $\rho$ the
+$(123)$ family rotation: the two candidates differ by \emph{exactly one} $\Z_3$ rotation. \emph{Typing:}
+character algebra, rigidity and grading transport \tI; the residue of \texttt{GATE.QGEO} is the \emph{one}
+discrete choice of which sign-twisted action is the geometric boundary deck \tP.
 \end{keybox}
 
 \begin{winbox}[Spectra and the determinant ladder $\to|W(D_5)|$ \tI]

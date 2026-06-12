@@ -1107,6 +1107,31 @@ checkExact["v138 external datum + edge match: 22/45 - 8/3 = -98/45 (VW hep-th/00
   ! MemberQ[{2/3, 4/3, 1/3, 8/9, 2/9, 16/9, 13/144}, 98/45] &&
   ! MemberQ[{2/3, 4/3, 1/3, 8/9, 2/9, 16/9, 13/144}, 38/45]];
 
+(* ---- (v139) selector triangle ---- *)
+Module[{onev, av, sigma, nv, dv, frame, sol, sq},
+  onev = {1, 1, 1}; av = {1, 1, 2}; sigma = {2, -9, 5}; nv = {5, -9, 6};
+  dv = {-1/2, -1/2, 1};
+  frame = Transpose[{onev, av, sigma}];
+  sol = LinearSolve[Transpose[frame], {2, 8, 121}];
+  sq = Select[Range[-20, 20], IntegerQ[Sqrt[11 (11 + #)]] && 11 (11 + #) > 0 &];
+  checkExact["v139 selector triangle: d = (3/2)a - 2*1; det(1|a|sigma) = 11; n unique from pairings (2, 8, 121); pairing line 11(11+t) square only at t = 0; review lift n = reverse(sigma) + 4 e3",
+    dv == 3/2 av - 2 onev && Det[frame] == 11 && sol == nv &&
+    Expand[(nv + t {1, -1, 0}) . sigma] === 11 t + 121 && sq == {0} &&
+    nv == Reverse[sigma] + {0, 0, 4} && nv - sigma == {3, 0, 1}];
+];
+
+(* ---- (v140) canonical map ---- *)
+Module[{charf, cu, cmu, cw},
+  charf[m_] := Mod[Round[Arg[#]/(Pi/2)], 4] & /@ Diagonal[m];
+  cu = charf[DiagonalMatrix[{1, I, -I}]];
+  cmu = charf[-DiagonalMatrix[{1, I, -I}]];
+  cw = charf[DiagonalMatrix[{I, I^2, I^3}]];
+  checkExact["v140 canonical map: deck U chars (0,1,3) miss 2; -U = (2,3,1) and i^Q+ = (1,2,3) both have SET {1,2,3} = H^1; i^Q+ assignment = Q+, -U assignment = Q+ o rho (one Z3 rotation apart)",
+    cu == {0, 1, 3} && cmu == {2, 3, 1} && cw == {1, 2, 3} &&
+    Sort[cmu] == {1, 2, 3} == Sort[cw] &&
+    cmu == (cw[[#]] & /@ {2, 3, 1})];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v138: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v140: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

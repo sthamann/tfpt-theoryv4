@@ -255,6 +255,8 @@ const NODES: DagNode[] = [
       "v136_dual_normal_selector.py",
       "v137_qplus_cohomology.py",
       "v138_vw_firewall.py",
+      "v139_selector_triangle.py",
+      "v140_canonical_map.py",
     ],
   },
   {

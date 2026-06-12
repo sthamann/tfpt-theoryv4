@@ -1228,4 +1228,51 @@ DIE VOLKOV-WIPF-FIREWALL (v138, Ledger HOR.CLOCK.11) -- R1
        RPA-Seam-Uhr = EDGE-Objekt; der volle 4d-VW-Determinant =
        Gravitations-FIREWALL (absorbiert in mu0/(Lambda G)^3),
        kein TFPT-Atom. Review-Varianten 2+3.
+
+DAS SELEKTOR-DREIECK (v139, Ledger GATE.UWALL.11) -- Anker + A0*-
+    Nullmode + drei Atome => R; der R4'-Rest schrumpft auf drei
+    Pairings:
+    (1) d IST ANKER-GROESSE [I]: d = (3/2)a - 2*1 exakt -- die
+        geschlossene Form erwaehnt R nie; der erste Selektor des
+        Paars (d,n) ist HERGELEITET, nicht residual.
+    (2) DER RAHMEN [I]: (1, a, sigma) ist Z^3-Basis mit
+        det(1|a|sigma) = 11 = ||Pl(K)||_1 (die Quark-Konstante als
+        Rahmen-Volumen).
+    (3) n AUS DREI ATOMEN [I]: n = (5,-9,6) ist die EINDEUTIGE
+        Loesung von n.1 = 2 = |Z2|, n.a = 8 = rank E8, n.sigma =
+        121 = 11^2 -- die Cofaktor-Definition (v95) ist ersetzt.
+    (4) DAS QUADRAT SELEKTIERT [I]: auf der (1,a)-Linie ist das
+        sigma-Pairing 11(11+t) -- durch 11 teilbar fuer JEDES t,
+        Quadrat genau bei t = 0 (dem echten n).
+    (5) REVIEW-LIFT EXAKT (Audit) [I]: n = reverse(sigma) + |mu4|e3
+        (Generationen-Flip + mu4-Lift am dritten Slot, wie die
+        Review vorhersagte); n - sigma = N_fam e1 + e3.
+    => R4'-REST [P] (finale Form): leite die drei Pairings
+       (|Z2|, rank E8, ||Pl(K)||_1^2) her -- alles andere in der
+       Kette Anker -> (d,n) -> R (v136) ist exakt.
+
+DIE KANONISCHE ABBILDUNG EXISTIERT UND IST RIGIDE (v140, Ledger
+    FLAV.QGEO.05) -- der QGEO-Naturalitaets-Rest kollabiert auf
+    EINE Z3-Wahl:
+    (1) DREI mu4-AKTIONEN, EIN MATCH [I]: Deck U = diag(1,i,-i) hat
+        Charaktere (0,1,3) (invariante Linie, verfehlt 2 -- kann
+        H^1 NICHT matchen); der blatt-getwistete Deck -U hat
+        (2,3,1), die Cusp-Exponentiale i^Q+ hat (1,2,3) -- beide
+        mit Charakter-MENGE {1,2,3} = H^1 (v137): nur die SIGN-
+        getwisteten Aktionen passen (derselbe Twist wie das v118-
+        Hexagon).
+    (2) RIGIDITAET (Schur) [I]: beide Seiten multiplizitaetsfrei
+        mit gleicher Charakter-Menge => aequivariante Isomorphie
+        existiert und ist eindeutig bis auf einen Skalar pro
+        Charakter -- die kanonische Abbildung IST wohldefiniert;
+        Existenz und Eindeutigkeit sind nicht mehr offen.
+    (3) GRADUIERUNGS-TRANSPORT [I]: unter der i^Q+-Abbildung zieht
+        der H^1-Euler-Grad auf Q+ selbst zurueck; unter der -U-
+        Abbildung auf Q+ o rho (rho = (123)-Familienrotation) --
+        die zwei Kandidaten unterscheiden sich um GENAU eine
+        Z3-Rotation.
+    => REST [P]: GATE.QGEO kollabiert von "beweise Naturalitaet"
+       auf EINE diskrete Wahl -- welche sign-getwistete Aktion der
+       geometrische Boundary-Deck ist (-U Monodromie-Blatt-Twist
+       vs i^Q+ Cusp-Exponentiale).
 ================================================================================
