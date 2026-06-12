@@ -496,7 +496,26 @@ Born $\to$ $S^6$ --- every exponent factor carries a derivation-level origin. Th
 Gauss--Bonnet primitive that builds $\cthree=\tfrac12(4\pi)^{-1}$, and it \emph{cancels} in all
 ratios --- exactly why the clock sees only entropy fractions. \emph{The last step \mC:} show
 $\det'_n/\det'_{dS}=1+O(\text{deficit})$ (non-zero-mode determinant cancellation; same local
-near-Nariai geometry) --- the one remaining computation of R1. \veri{v129\_entropy\_power\_law.py}
+near-Nariai geometry). \veri{v129\_entropy\_power\_law.py}
+\smallskip\\
+\noindent\emph{The cancellation, exact within the family (\veri{v144\_detratio\_family.py}):} that step
+is now \emph{derived} in the within-family sense \mE. The traceless SdS cubic forces
+\[
+  \boxed{\ r_b\,r_c=1-\frac{\Delta^2}{3}\quad(\Delta=r_b-r_c\ \text{the horizon split; exact, no higher
+  corrections})\ }
+\]
+($e_2$-rigidity), and with the \vref{v132} anomaly $\zeta(0)|_{\det'}=-\tfrac23$ per sphere the
+two-sphere non-zero-mode determinant ratio against Nariai is the closed form
+$\det'_n/\det'_N=(1-\Delta^2/3)^{4/3}$: \textbf{no first-order term in the split} --- the hoped-for
+cancellation is a consequence of $e_2$-rigidity plus the established anomaly, not an assumption. In
+deficit form, $\varepsilon=1-c=\tfrac38\Delta^2+O(\Delta^4)$ gives
+$\det'_n/\det'_N=1-\tfrac{32}{27}\varepsilon+O(\varepsilon^2)$ with
+$\tfrac{32}{27}=|\mu_4|(\tfrac{|\Z_2|}{\Nfam})^3$ (the \vref{v103} canonical curvature times the glue
+order; audit-typed). \emph{Honest scope \mC:} the finite-weight comparison
+($S_n/S_{dS}\in\{1,\tfrac23,\tfrac13\}$) still runs through the \vref{v132}/\vref{v133} budget --- a naive
+global-rescaling reading would shift the Born exponent $6\to\tfrac{14}3$ (not an atom), so the absorption
+must proceed via the Hubble-unit conversion; the frozen transfer spectrum is untouched, and the remaining
+\mC\ now has its obstruction stated sharply.
 
 
 \par\smallskip\noindent\textbf{The det-ratio anomaly is the Koide constant} (\mE/\mC).

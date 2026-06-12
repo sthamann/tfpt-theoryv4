@@ -11,7 +11,7 @@ import { SectionHeader } from "./SectionHeader";
  * bound is exactly the Koide branch value 2/3, and the dynamics in both
  * sectors flows away from the anchor configuration (stationary repeller).
  * Everything shown is machine-checked in v101_horizon_anchor.py and
- * v102_seam_orientation.py; the carrier-in-the-bulk reading is typed [P].
+ * v102_seam_orientation.py; the carrier-in-the-bulk reading is typed [C].
  */
 
 function BulkDiagram() {
@@ -106,7 +106,7 @@ const FACTS = [
         <Math>{"a=(1,1,2)"}</Math> that generates the whole compiler grammar.
       </>
     ),
-    marker: "[I]",
+    marker: "[E]",
   },
   {
     title: "The Koide 2/3 is the entropy bound",
@@ -118,7 +118,7 @@ const FACTS = [
         point of the flavor sector. Zero adjustable parameters on either side.
       </>
     ),
-    marker: "[I]",
+    marker: "[E]",
   },
   {
     title: "One orientation in both sectors",
@@ -128,10 +128,10 @@ const FACTS = [
         <em>away</em> from the anchor configuration — a stationary repeller
         with grammar-constant curvature (<Math>{"\\pm\\Delta"}</Math> in
         flavor, <Math>{"2/9=|\\mathbb{Z}_2|/N_{\\mathrm{fam}}^2"}</Math> in
-        gravity). Reading it as one variational principle stays [P].
+        gravity). Reading it as one variational principle stays [C].
       </>
     ),
-    marker: "[I] + [P]",
+    marker: "[E] + [C]",
   },
 ];
 
@@ -146,7 +146,7 @@ export function HorizonStory() {
           id="horizon-story-heading"
           eyebrow="Seam = horizon"
           title="Put a black hole into the bulk — the grammar answers"
-          description="A structure test with zero free parameters: write classical black-hole mechanics inside the de Sitter bulk in seam units, and every coefficient lands on a compiler atom that is already load-bearing elsewhere. Machine-checked in v101/v102; the carrier-in-the-bulk reading is typed [P]."
+          description="A structure test with zero free parameters: write classical black-hole mechanics inside the de Sitter bulk in seam units, and every coefficient lands on a compiler atom that is already load-bearing elsewhere. Machine-checked in v101/v102; the carrier-in-the-bulk reading is typed [C]."
         />
         <div className="mt-10 grid gap-6 lg:grid-cols-2">
           <motion.div

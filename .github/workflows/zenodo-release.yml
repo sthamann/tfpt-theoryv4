@@ -1,0 +1,45 @@
+name: Zenodo release upload
+
+on:
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: Publish on Zenodo (false = draft only for review)
+        required: true
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+
+permissions:
+  contents: read
+
+jobs:
+  zenodo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main repository
+        uses: actions/checkout@v4
+
+      - name: Validate Zenodo token
+        env:
+          ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+        run: |
+          if [ -z "${ZENODO_TOKEN}" ]; then
+            echo "::error::Secret ZENODO_TOKEN is missing."
+            echo "Add your Zenodo personal access token (deposit:write + deposit:actions)"
+            echo "to Settings → Secrets → Actions in this repository."
+            exit 1
+          fi
+
+      - name: Build PDFs and upload to Zenodo
+        env:
+          ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ "${{ inputs.publish }}" = "true" ]; then
+            bash build.sh zenodo-publish
+          else
+            bash build.sh zenodo
+          fi

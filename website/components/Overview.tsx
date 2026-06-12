@@ -28,7 +28,7 @@ const PILLARS = [
   {
     icon: Shield,
     title: "Status discipline",
-    body: "Every claim carries a grade — [I] identity, [L] lattice theorem, [F] formalised, [N] numerical fixed point, [P] conditional, [A] open — and resolves to a single machine-checked ledger. The ledger wins on any disagreement.",
+    body: "Every claim carries a grade — [E] identity, [E] lattice theorem, [E] formalised, [E] numerical fixed point, [C] conditional, [O] open — and resolves to a single machine-checked ledger. The ledger wins on any disagreement.",
     accent: "from-orange-500 to-amber-500",
   },
 ];

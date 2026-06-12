@@ -16,7 +16,7 @@
   "date": "2026-06-12"
  },
  "introduction::subsection::The companion documents::1": {
-  "hash": "9a898ef1511c",
+  "hash": "177e5a532fca",
   "date": "2026-06-12"
  },
  "introduction::section::The architecture at a glance::1": {
@@ -32,7 +32,7 @@
   "date": "2026-06-12"
  },
  "introduction::subsection::The hard reduction: two research gates plus typed interfaces::1": {
-  "hash": "a71ec7a73c3d",
+  "hash": "2c34d70fe5e9",
   "date": "2026-06-12"
  },
  "introduction::section::The compiler: why $30=2\\cdot3\\cdot5$::1": {
@@ -64,7 +64,7 @@
   "date": "2026-06-12"
  },
  "introduction::subsection::The closure ledger: what is done, and what genuinely remains::1": {
-  "hash": "33a94d7877ff",
+  "hash": "b1c2e59fc4f6",
   "date": "2026-06-12"
  },
  "introduction::section::Does this make the theory more probable?::1": {
@@ -124,7 +124,7 @@
   "date": "2026-06-12"
  },
  "tfpt_1_architecture_e8::subsection::Glue-norm arithmetic, and three readings of $41$, $60$, $120$::1": {
-  "hash": "82a95e583f84",
+  "hash": "e3a850cf7414",
   "date": "2026-06-12"
  },
  "tfpt_1_architecture_e8::subsection::What the compiler outputs for the Standard Model and our reality::1": {
@@ -260,7 +260,7 @@
   "date": "2026-06-12"
  },
  "tfpt_1_architecture_e8::section::Status summary and open audit points::1": {
-  "hash": "ccb20018d4ec",
+  "hash": "fd431f8cd274",
   "date": "2026-06-12"
  },
  "tfpt_1_architecture_e8::section::Consolidated picture::1": {
@@ -336,7 +336,7 @@
   "date": "2026-06-12"
  },
  "tfpt_2_standard_model::section::The Sheet Diamond and the Winding Line: masses and transport from one surface::1": {
-  "hash": "eb35e2f79144",
+  "hash": "409c709ca02e",
   "date": "2026-06-12"
  },
  "tfpt_2_standard_model::subsection::Closing the audit gates: is $M{=}41$, $K$, $Q$ derived or imported?::1": {
@@ -348,11 +348,11 @@
   "date": "2026-06-12"
  },
  "tfpt_2_standard_model::section::Neutrinos::1": {
-  "hash": "dc0a3313e150",
+  "hash": "4574cc289eb3",
   "date": "2026-06-12"
  },
- "tfpt_2_standard_model::section::How each of the seven papers simplifies::1": {
-  "hash": "a794b511f65d",
+ "tfpt_2_standard_model::section::How the legacy layers simplify (bridge map)::1": {
+  "hash": "9eeb68ad4a79",
   "date": "2026-06-12"
  },
  "tfpt_2_standard_model::section::Is the entire Standard Model thereby derived?::1": {
@@ -440,7 +440,7 @@
   "date": "2026-06-12"
  },
  "tfpt_2_standard_model::section::Closing the flavor block: two theorems::1": {
-  "hash": "4aa952a8e1b8",
+  "hash": "1753d641fa65",
   "date": "2026-06-12"
  },
  "tfpt_2_standard_model::section::Status::1": {
@@ -536,7 +536,7 @@
   "date": "2026-06-12"
  },
  "tfpt_3_e8_audit_bootstrap::section::Sector inventory: have all the old-cascade sectors been computed?::1": {
-  "hash": "1f70c41e8d90",
+  "hash": "fe5ae611804b",
   "date": "2026-06-12"
  },
  "tfpt_3_e8_audit_bootstrap::section::What is new, what is old, what stays open::1": {
@@ -608,7 +608,7 @@
   "date": "2026-06-12"
  },
  "tfpt_5_redteam::front::(front matter)::1": {
-  "hash": "058a8a7b05a6",
+  "hash": "3cde30d9e57e",
   "date": "2026-06-12"
  },
  "tfpt_5_redteam::section::Method::1": {
@@ -660,7 +660,7 @@
   "date": "2026-06-12"
  },
  "tfpt_horizon_readouts::section::The maximal black hole is the anchor: SdS in seam units::1": {
-  "hash": "9daf0f42094c",
+  "hash": "17ae5b719fee",
   "date": "2026-06-12"
  },
  "tfpt_horizon_readouts::section::Turnaround radius, gravitational waves, light::1": {
@@ -680,11 +680,11 @@
   "date": "2026-06-12"
  },
  "tfpt_research_contracts::section::Research Contract 1 --- $(U_{\\mathrm{wall}})$::1": {
-  "hash": "3fde3419659b",
+  "hash": "a7e140cffb7e",
   "date": "2026-06-12"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {
-  "hash": "84b91684aa53",
+  "hash": "5e3c5290a5ec",
   "date": "2026-06-12"
  },
  "tfpt_research_contracts::section::Certifiability and recommended order::1": {
@@ -712,7 +712,7 @@
   "date": "2026-06-12"
  },
  "origin_theory::section::One $\\ainv$ for electromagnetism, the cosmic horizon and $\\Lambda$::1": {
-  "hash": "47ef057fc1c1",
+  "hash": "915ef1e6f23a",
   "date": "2026-06-12"
  },
  "origin_theory::section::Interpretation \\mC: the self-reproducing cosmic cycle::1": {
@@ -736,7 +736,7 @@
   "date": "2026-06-12"
  },
  "origin_theory::section::Honest status::1": {
-  "hash": "4587a90aa4aa",
+  "hash": "1eb3d9061b84",
   "date": "2026-06-12"
  },
  "origin_theory::section::Appendix: computational verification::1": {

@@ -10,6 +10,8 @@
 %                       build.sh into tex-artefacts/version-auto.tex
 %                       (gitignored); falls back to "dev" for standalone runs
 %     \TFPTdatestamp -- the title-page date line: \today + version + revision
+%  build.sh also writes tex-artefacts/release-version.txt (gitignored):
+%     "{TFPTversion} (rev {git commit count})" for Zenodo + release tooling.
 %  Bump \TFPTversion here ONCE; it then updates in all papers at the next build.
 % ---------------------------------------------------------------------
 \def\TFPTauthors{Stefan Hamann \and Alessandro Rizzo}

@@ -733,8 +733,11 @@ $\operatorname{spec}=\{0,\tfrac13,\tfrac23\}$ is pinned algebraically
 (\veri{v115\_anchor\_residue.py}, \veri{v116\_resonance\_uniqueness.py}), the unitarised holonomy is the
 exact $24$-element $W(A_3)=S_4$ (\veri{v117\_monodromy\_weyl\_a3.py}), and the parabolic weights are the
 $\mu_4$-character degrees of $H^1(\mathbb P^1\setminus\mu_4)$ --- one spectrum in four readouts
-(\veri{v137\_qplus\_cohomology.py}). What remains of the old residual is the much smaller selector
-establishment R4$'$ (research contracts): derive the three atom pairings of the torsion normal. \mE/\mC
+(\veri{v137\_qplus\_cohomology.py}); the deck itself is \emph{derived} --- the integer model selects the
+sheet-twisted class, no discrete freedom left (\veri{v141\_deck\_selection.py}). What remains of the old
+residual is the much smaller selector establishment R4$'$ (research contracts): derive the \emph{two}
+line pairings of the torsion normal (the third is integrality-forced,
+\veri{v142\_frame\_integrality.py}). \mE/\mC
 \par\smallskip
 
 \begin{figure}[ht]
@@ -1804,12 +1807,15 @@ $240$-metrisation'' is closed. The flavor status (companion parabolic-weight not
 the \emph{anchor multiset} $\{1,1,2\}$ is derived (Schur--Horn $+$ stability) \mE; the \emph{sector
 assignment} $(1,1,2)$ follows from the $D_5$ cusp ordering \mE/\mC; the \emph{first-generation $+6$
 winding} is the hierarchy convention \mC; the six \emph{non-anchor residues} are then forced (residue
-sets $=D_6$ orbit of $\{0,1,3\}$, minus anchor, monotone) \mE. The single remaining geometric input is
-(H2), the specific $D_6$ cusp labelling on $\mathbb P^1\setminus\mu_4$ --- sharply characterised by the
-residue-matrix spectral selector ($\det R=h(D_5)$, principal minors $(2,3,5)$), with a naive
-cusp-position shortcut explicitly ruled out \mC. The explicit Riemann--Hilbert construction confirms
-the rigid $SU(3)$ system and its $A_3$ Coxeter rotation; the genuine open step is the global
-parabolic-weight (Hodge) realisation of that selector.
+sets $=D_6$ orbit of $\{0,1,3\}$, minus anchor, monotone) \mE. The remaining geometric input at the time
+of writing was (H2), the specific $D_6$ cusp labelling on $\mathbb P^1\setminus\mu_4$ --- sharply
+characterised by the residue-matrix spectral selector ($\det R=h(D_5)$, principal minors $(2,3,5)$),
+with a naive cusp-position shortcut explicitly ruled out \mC. The explicit Riemann--Hilbert construction
+confirms the rigid $SU(3)$ system and its $A_3$ Coxeter rotation. \emph{Status update:} the H2
+dictionary has since been made \emph{exact} (hexagon $=$ sign-twisted family spectrum, addresses pinned,
+margins forced, \vref{v118}--\vref{v122}), the deck is \emph{derived} (\vref{v141}), and the residue is
+the R4$'$ selector establishment --- two line pairings (\vref{v139}/\vref{v142}); what stays geometric is
+only the parabolic realisation premise (\texttt{GATE.QGEO}, research contracts).
 
 \medskip
 \noindent\textbf{Honest negatives (reported to keep the discipline visible).} The TFPT lepton ladder

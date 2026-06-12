@@ -17,7 +17,7 @@ export function PapersSection() {
         <SectionHeader
           eyebrow="The document set"
           title="8 documents: 1 reading guide, 4 core papers, 3 companions"
-          description="Doc 0 is the reading guide (introduction). Docs 1–4 are the core papers — architecture & E₈, the Standard Model, the E₈ audit & bootstrap, the honest frontier. Docs 5–7 are the companions — Appendix H (horizon unit system), the Origin Theory synthesis, and the research contracts. Each opens with its inputs, contribution, what it does not claim, and its falsification surface."
+          description="Doc 0 is the reading guide (introduction). Papers 1–5 are the numbered documents — architecture & E₈, the Standard Model, the E₈ audit & bootstrap, the honest frontier, and the adversarial Red Team audit. Three companions complete the set — Appendix H (horizon unit system), the Origin Theory synthesis, and the research contracts. Each opens with its inputs, contribution, what it does not claim, and its falsification surface."
         />
       </div>
 

@@ -4,6 +4,7 @@ import { ArrowLeft, Github, TerminalSquare } from "lucide-react";
 import { SectionHeader } from "@/components/SectionHeader";
 import { VerificationDag } from "@/components/VerificationDag";
 import { ScriptIndex } from "@/components/ScriptIndex";
+import { SCRIPT_TOTAL } from "@/lib/suite";
 import { REPO_URL } from "@/lib/utils";
 
 const SITE_URL =
@@ -59,13 +60,13 @@ const jsonLd = {
 const PATHS: { label: string; value: string; body: string }[] = [
   {
     label: "Python suite",
-    value: "73 checks",
+    value: `${SCRIPT_TOTAL} checks`,
     body: "One file per claim cluster; run_all.py ends ALL CHECKS PASSED. Exact sympy where possible, mpmath/numpy otherwise.",
   },
   {
     label: "Wolfram mirror",
-    value: "101/101",
-    body: "An independent second path for the exact algebraic / identity / lattice results, on the Wolfram Engine.",
+    value: "116/116 + 211/211",
+    body: "An independent second path for the exact algebraic / identity / lattice results, on the Wolfram Engine: the verified base file plus the v84+ extension file.",
   },
   {
     label: "Lean carrier",
@@ -80,27 +81,28 @@ const PATHS: { label: string; value: string; body: string }[] = [
 ];
 
 const MARKERS: { m: string; meaning: string; tone: string }[] = [
-  { m: "[I]", meaning: "exact identity", tone: "text-emerald-200 bg-emerald-500/15 ring-emerald-400/30" },
-  { m: "[L]", meaning: "Lie / lattice theorem", tone: "text-cyan-200 bg-cyan-500/15 ring-cyan-400/30" },
-  { m: "[F]", meaning: "formalised (Lean)", tone: "text-blue-200 bg-blue-500/15 ring-blue-400/30" },
-  { m: "[N]", meaning: "numerical fixed point", tone: "text-violet-200 bg-violet-500/15 ring-violet-400/30" },
-  { m: "[P]", meaning: "physical / conditional", tone: "text-amber-200 bg-amber-500/15 ring-amber-400/30" },
-  { m: "[A]", meaning: "axiom / anchor / open", tone: "text-rose-200 bg-rose-500/15 ring-rose-400/30" },
+  { m: "[E]", meaning: "exact / machine-proven (fine types: identity, lattice/Lie, Lean-formalised, numerical fixed point)", tone: "text-emerald-200 bg-emerald-500/15 ring-emerald-400/30" },
+  { m: "[C]", meaning: "conditional — holds under named hypotheses (fine type: physical bridge / readout)", tone: "text-amber-200 bg-amber-500/15 ring-amber-400/30" },
+  { m: "[O]", meaning: "open / axiom — declared input or genuine gap", tone: "text-rose-200 bg-rose-500/15 ring-rose-400/30" },
+  { m: "[X]", meaning: "falsifiable kill test (committed in advance)", tone: "text-blue-200 bg-blue-500/15 ring-blue-400/30" },
 ];
 
-const REPRODUCE = `# 1. Compile the 8 active documents      ->  "8 ok, 0 failed"
+const REPRODUCE = `# 1. Compile the active document set      ->  "10 ok, 0 failed"
 bash build.sh notes
 
 # 2. Run the Python verification suite    ->  "ALL CHECKS PASSED"
 cd verification && python run_all.py
 
-# 3. Independent Wolfram path (optional)  ->  "101/101 passed"
+# 3. Independent Wolfram path (optional)  ->  "ALL WOLFRAM CHECKS PASSED"
 wolframscript -file verification/wolfram/tfpt_readouts.wl
 
 # 4. Lean carrier-rigidity proof (optional) ->  "AUDIT: PASS"
 cd experiments/lean4-carrier-rigidity && lake exe cache get && bash scripts/audit.sh
 
-# 5. Regenerate the reproducibility manifests (run last)
+# 5. The sync audit (papers <-> suite <-> ledger <-> website)  ->  "AUDIT OK"
+bash build.sh audit
+
+# 6. Regenerate the reproducibility manifests (run last)
 python verification/make_manifest.py`;
 
 export default function VerificationPage() {

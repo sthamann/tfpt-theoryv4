@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { papers, STATUS_META } from "@/lib/papers";
+import { papers, STATUS_META, paperLabel } from "@/lib/papers";
 import { getReleaseAsset, formatBytes } from "@/lib/release";
 import { Math } from "@/components/Math";
 import { PaperSection } from "@/components/PaperSection";
@@ -38,7 +38,7 @@ export async function generateMetadata(
     .filter(Boolean)
     .join(" ");
 
-  const title = `Paper ${paper.number} — ${paper.title}`;
+  const title = `${paperLabel(paper)} — ${paper.title}`;
 
   return {
     title,
@@ -46,7 +46,7 @@ export async function generateMetadata(
     keywords: [
       "TFPT",
       "Topological Fixed-Point Theory",
-      `TFPT Paper ${paper.number}`,
+      `TFPT ${paperLabel(paper)}`,
       paper.title,
       paper.subtitle,
       meta.label,
@@ -141,7 +141,7 @@ export default async function PaperPage({ params }: PaperPageProps) {
       {
         "@type": "ListItem",
         position: 3,
-        name: `Paper ${paper.number}`,
+        name: paperLabel(paper),
         item: `${SITE_URL}/papers/${paper.slug}`,
       },
     ],
@@ -242,7 +242,7 @@ export default async function PaperPage({ params }: PaperPageProps) {
           >
             <span className="inline-flex items-center gap-1 text-[10px] font-semibold uppercase tracking-widest text-blue-300/80">
               <ArrowLeft size={11} />
-              Previous · Paper {prev.number}
+              Previous · {paperLabel(prev)}
             </span>
             <span className="text-sm font-semibold text-slate-100">
               {prev.title}
@@ -257,7 +257,7 @@ export default async function PaperPage({ params }: PaperPageProps) {
             className="ml-auto inline-flex flex-col gap-1 rounded-xl border border-slate-700/40 bg-slate-950/40 p-4 text-right transition-colors hover:bg-slate-900/40"
           >
             <span className="inline-flex items-center gap-1 self-end text-[10px] font-semibold uppercase tracking-widest text-blue-300/80">
-              Next · Paper {next.number}
+              Next · {paperLabel(next)}
               <ArrowRight size={11} />
             </span>
             <span className="text-sm font-semibold text-slate-100">

@@ -59,6 +59,24 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-12 (Zenodo version label: semantic + git rev)}
+\begin{itemize}
+\item \textbf{Release version string.} \texttt{build.sh} now writes
+  \texttt{tex-artefacts/release-version.txt} as \texttt{\{TFPTversion\} (rev \{git count\})}
+  (matches \texttt{\textbackslash TFPTdatestamp} without the date). \texttt{scripts/zenodo\_upload.py}
+  and \texttt{build.sh zenodo}/\texttt{zenodo-publish} use this label on Zenodo; cursor rules extended
+  for when \texttt{zenodo\_description.html} must move with deposit-facing changes.
+\end{itemize}
+
+\subsection*{2026-06-12 (Zenodo API upload workflow)}
+\begin{itemize}
+\item \textbf{Automated Zenodo versioning.} Added \texttt{scripts/zenodo\_upload.py} and
+  \texttt{.github/workflows/\allowbreak zenodo-release.yml}: creates a new draft version of record
+  \texttt{20579275} (DOI \texttt{10.5281/\allowbreak zenodo.\allowbreak 20579275}), uploads the ten active paper PDFs,
+  refreshes \texttt{zenodo\_description.html}, bumps the version from \texttt{tex-artefacts/version.tex},
+  and optionally publishes via GitHub Actions (\texttt{ZENODO\_TOKEN} secret).
+\end{itemize}
+
 \subsection*{2026-06-12 (Overleaf shadow mirror: tfpt5-shadow)}
 \begin{itemize}
 \item \textbf{One-way GitHub mirror for Overleaf sync.} Added \texttt{scripts/export-shadow.sh} and
@@ -99,6 +117,85 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
 \item \textbf{Build hardening.} \texttt{build.sh} now removes a document's \texttt{.aux}/\texttt{.toc}/%
   \texttt{.out} \emph{on failure}, so a half-written cross-reference file from a crashed compile cannot
   poison the next build; artefacts are still kept on success.
+\end{itemize}
+
+\subsection*{2026-06-12 (external review integrated: $\Lambda$ typing, marker migration, website parity)}
+\begin{itemize}
+\item \textbf{$\Lambda$ normalisation made unambiguous.} The external review flagged the
+  adjacent reduced/unreduced displays in \texttt{origin\_theory} as a type trap (the
+  formulas were individually correct --- $\bar M_{\mathrm{Pl}}$ vs $M_{\mathrm{Pl}}$ ---
+  but easy to misread). Both normalisations are now shown explicitly side by side with
+  their order counts ($3/(4\pi^2)\Rightarrow120.147$ reduced;
+  $3/(256\pi^4)\Rightarrow122.948=119.028+3.920$ unreduced) plus a typing note.
+\item \textbf{Stale references cleaned.} ``How each of the seven papers simplifies''
+  $\to$ ``How the legacy layers simplify (bridge map)'' with the lead-in ``(Paper 6)''
+  reference replaced by the scalaron-reheating chain (\vref{v86});
+  ``(Paper\textasciitilde6/7)'' in the \texttt{tfpt\_3} bridge table reworded; the
+  \texttt{tfpt\_1} ``single remaining geometric input (H2)'' passage and the
+  \texttt{tfpt\_2} ``single remaining input (U)'' passage carry dated status updates
+  pointing at the current decomposition (\vref{v118}--\vref{v122}, \vref{v139},
+  \vref{v141}, \vref{v142}, \vref{v75}).
+\item \textbf{Marker migration completed in the shared figures.} The claim stack,
+  anchor cockpit, $E_8$ glue, $2/3$ motif and $K_5$ figures
+  (\texttt{tex-artefacts/tfpt\_figures.tex}) now show the four public classes
+  \mE/\mC/\mO\ instead of the legacy $[A]/[I]/[L]/[B]/[P]/[R]$ badges.
+\item \textbf{Red-team front table pulled to the final state.} The Target-A residual
+  column now states the one remaining statement (boundary-net holomorphy $+$ $c{=}8$
+  $\Leftrightarrow$ index-$4$ inclusion; \vref{v83}/\vref{v87}/\vref{v89}, Lie-level
+  realisation \vref{v143}); the historical three-residual form is kept below, dated.
+\item \textbf{Website parity.} The Red Team document is now a first-class entry
+  (\texttt{papers.ts} number 5, slug \texttt{redteam}) and the changelog PDF a download
+  row; Appendix H / Origin Theory / Research Contracts are labelled \emph{companions}
+  (never ``Paper 5--7''); the marker system on every website surface migrated to
+  $[E]/[C]/[O]/[X]$ (fine types named in prose; the script index keeps quoting the
+  scripts' internal fine-grained typing); the verification page counters are live
+  ($144$ checks generated from the registry via \texttt{lib/suite.ts}, Wolfram
+  $116/116+211/211$ --- now guarded by the sync audit) and the reproduce block matches
+  the current pipeline. The \texttt{papers.ts} section bodies of the affected papers
+  carry the \vref{v141}--\vref{v144} outcomes (sheet question: deck derived; $G_{net}$:
+  Lie-level realisation; resummed clock: in-family det-ratio cancellation; selector
+  triangle: two line pairings).
+\item \textbf{Not adopted} (recorded for transparency): the review's narrative
+  reframings (anchor-algebra trilogy, ``one seam clock'' framing, one-page structure)
+  and the front-matter/status-card layout changes are editorial decisions left to the
+  authors; the claimed $\Lambda$ \emph{error} was in fact a correct-but-treacherous
+  notation switch (see above).
+\end{itemize}
+
+\subsection*{2026-06-12 (R1--R5 attack round: four residual classes sharpened, \vref{v141}--\vref{v144})}
+\begin{itemize}
+\item \textbf{R5 closed at the discrete level (\vref{v141}, deck selection theorem).} The
+  \vref{v140} $\Z_3$ choice is \emph{derived}: the established integer deck $G=T_A\Sigma$
+  (\vref{v97}/\vref{v98}) pairs the $Q_+{=}1$ cusp line with the self-conjugate character
+  $2$, so only the sheet-twisted assignment $(2,3,1)=\mathrm{chars}(-U)$ survives; the cusp
+  exponential $i^{Q_+}$ is excluded (same spectrum, wrong grading pairing). Explicit
+  conjugacy constructed; under $k\to-k$ only the established sheet $\Z_2$ flips.
+  Consequence: Euler grading $=Q_+\!\circ\rho$. \texttt{GATE.QGEO} keeps only its
+  realisation premise --- no discrete freedom left (ledger \texttt{FLAV.QGEO.06}).
+\item \textbf{R4$'$ narrowed: three pairings $\to$ two (\vref{v142}, frame integrality).}
+  Integer covectors in the $(\mathbf1,a,\sigma)$ dual frame form an index-$11$ sublattice
+  ($x-3y+z\equiv0$ mod $11$; the index \emph{is} $\|\mathrm{Pl}(K)\|_1$); with
+  $(x,y)=(|\Z_2|,\mathrm{rank}\,E_8)$ the $\sigma$-pairing is forced $\equiv0$ mod $11$,
+  and primitivity forces the line parameter even. Cramer reductions for both line pairings
+  recorded as restructuring (ledger \texttt{GATE.UWALL.12}).
+\item \textbf{R2 realised at the finite Lie level (\vref{v143}, graded Frobenius).} The
+  $\Z_4$-graded hull carries exact coset duality ($-C_1=C_3$; Killing pairing nondegenerate
+  per $g_k\times g_{-k}$), the glue average is exactly the carrier projector (index $4$),
+  and each glue sector is one Weyl orbit (simple currents, fusion $=\mathbb C[\Z_4]$) ---
+  the \vref{v125} Q-system realised by the hull; residue $=$ one conformal-net statement
+  (ledger \texttt{GATE.METRIC.09}).
+\item \textbf{R1's det-ratio step derived in-family (\vref{v144}).} $e_2$-rigidity of the
+  traceless SdS cubic gives $r_br_c=1-\Delta^2/3$ exactly; with the \vref{v132} anomaly the
+  non-zero-mode determinant ratio is $(1-\Delta^2/3)^{4/3}$ --- no first-order term in the
+  horizon split (the \vref{v131} cancellation derived, not assumed); deficit coefficient
+  $\tfrac{32}{27}=|\mu_4|(\tfrac23)^3$ (audit). Finite-weight absorption stays \mC\ with the
+  $6\to\tfrac{14}3$ obstruction stated sharply (ledger \texttt{HOR.CLOCK.12}).
+\item \textbf{R3 attempted, honestly unchanged.} No defensible computation landed for the
+  seam-determinant$\to$EH step (\texttt{SEAM.THEOREM.01}); the gate keeps its \mO\ typing
+  untouched.
+\item \textbf{Wolfram mirror extended} to \vref{v141}--\vref{v144}: extension file now
+  $211/211$ (\texttt{GATE.WOLFRAM.02} and the wolfram README updated in lock-step); Python
+  suite at $144$ modules, all green.
 \end{itemize}
 
 \subsection*{2026-06-12 (sync infrastructure: single-source script index, content maps, one audit)}

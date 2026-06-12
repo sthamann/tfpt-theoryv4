@@ -682,8 +682,24 @@ by Schur the equivariant isomorphism \emph{exists and is unique} up to one scala
 canonical map is well-defined --- existence and uniqueness are no longer open. Under the $i^{Q_+}$-map
 the $H^1$ Euler degree pulls back to $Q_+$ itself; under the $-U$-map to $Q_+\!\circ\rho$ with $\rho$ the
 $(123)$ family rotation: the two candidates differ by \emph{exactly one} $\Z_3$ rotation. \emph{Typing:}
-character algebra, rigidity and grading transport \mE; the residue of \texttt{GATE.QGEO} is the \emph{one}
-discrete choice of which sign-twisted action is the geometric boundary deck \mC.
+character algebra, rigidity and grading transport \mE.
+\smallskip\\
+\noindent\textbf{The deck selection theorem: the $\Z_3$ choice is \emph{derived}
+(\veri{v141\_deck\_selection.py}).} The discrete choice does not survive contact with the integer model
+the suite already owns: the derived integer deck $G=T_A\Sigma$ (\veri{v97\_sheet\_conjugation\_bridge.py}/%
+\veri{v98\_discriminant\_dictionary.py}) has the $Q_+{=}1$ cusp line as an \emph{exact} eigenline with
+eigenvalue $-1=i^2$ --- the self-conjugate character $2$ --- and the conjugate pair $\{1,3\}$ on the
+$E$-plane. Of the three $\Z_3$ rotations only the sheet-twisted assignment $(2,3,1)=\mathrm{chars}(-U)$
+puts character $2$ on the $Q_+{=}1$ line: \textbf{the geometric boundary deck is the sheet-twisted class;
+the cusp exponential $i^{Q_+}$ is excluded} (same eigenvalue multiset $\{-1,\pm i\}$, wrong grading
+pairing --- the $(-1)$-eigenlines sit on $Q_+$ degrees $1$ vs $2$). An explicit $Q_+{=}1$-line-preserving
+conjugacy $SGS^{-1}=-U$ exists; under the relabeling $k\to-k$ only the plane orientation flips $=$ the
+established sheet $\Z_2$ (the two Lagrangian glues, \vref{v92}) --- no new residual. Consequence: the
+$H^1$ Euler degree pulls back to $Q_+\!\circ\rho$; cusp grading and Euler grading differ on generation
+space by exactly the one family rotation $\rho=$ the $\operatorname{coker}Q$ triality (\vref{v72}).
+\emph{Typing:} selection, conjugacy and obstruction \mE\ (lattice-level theorem); what remains of
+\texttt{GATE.QGEO} is only the realisation premise the gate always carried (the integer $D_4$ model
+\emph{is} the parabolic geometry, \vref{v69}/\vref{v98}) \mC\ --- with \emph{no} discrete freedom left.
 \end{keybox}
 
 \begin{winbox}[Spectra and the determinant ladder $\to|W(D_5)|$ \mE]
@@ -1178,16 +1194,16 @@ older democratic $\tfrac13$ and QLC $\tfrac\pi4{-}\theta_{12}^{\mathrm{CKM}}$ re
 seed closure. The ratio
 $m_2/m_3\sim\pi\phiz$ carries the carrier complement $1-\gamma=1/6$ --- neutrino and charged sectors read
 the same seed. The heavy scale $M_R\sim10^{15}$ GeV links the seesaw bridge to the
-inflation/reheating scale (Paper 6).
+inflation/reheating scale (the scalaron-reheating chain, \vref{v86}).
 
 % =====================================================================
-\section{How each of the seven papers simplifies}
+\section{How the legacy layers simplify (bridge map)}
 % =====================================================================
 \begin{center}\small
 \renewcommand{\arraystretch}{1.25}
 \begin{tabularx}{\linewidth}{@{}p{0.7cm}p{3.5cm}Y@{}}
 \toprule
-\textbf{P} & \textbf{before} & \textbf{in the compiler picture} \\
+\textbf{layer} & \textbf{before} & \textbf{in the compiler picture} \\
 \midrule
 1 & boundary $\to c_3=\tfrac1{8\pi}$ & axiom (P1), unchanged; hardenable via Calder\'on/Lean \mO \\
 2 & carrier, $16$, $\Nfam{=}3$, $\Oadm{=}48$, $b_1$ & all \emph{one} Pascal row $1,5,10$ on $\gcar{=}5$; $16=\dim S^+$ is the $D_5$ half-spinor \mE \\
@@ -2212,9 +2228,13 @@ hence $\deg_{\mathrm{par}}=L^{\mathrm{transp}}_{\min}$ term by term. \qedhere
 With Lemma~\ref{lem:dd} (H1, proved), Proposition~\ref{prop:equiv} (residues $+$ windings, proved) and
 Theorem~\ref{thm:ms} (stable $=$ minimal), the parabolic and transport derivations of the full flavor
 matrix \emph{coincide}. The single remaining input is \emph{(U)}, the unitarity of $\nabla_F^\star$ ---
-a structural property asserted by Paper 3 (the family connection is metric, holonomy in $U(\Nfam)$), not
-a new conjecture. The flavor block is therefore \emph{reduced} to (U) --- closed given (U), open without it. \mE\
-(given (U)).
+a structural property asserted by the flavor-transport theorem (Part~II: the family connection is metric,
+holonomy in $U(\Nfam)$), not a new conjecture. The flavor block is therefore \emph{reduced} to (U) ---
+closed given (U), open without it. \mE\ (given (U)). \emph{Status update:} the $(U)$ gate has since been
+decomposed and largely discharged --- the quark \emph{ratios} are closed without it
+(\vref{v49}/\vref{v71}), Gate~1 reduces $U_{\mathrm{point}}\to v_{\mathrm{geo}}$ (\vref{v75}), and the
+selector establishment is narrowed to two line pairings (\vref{v139}/\vref{v142}); see the research
+contracts for the current decomposition.
 \par\smallskip
 
 \begin{theorem}[H2 as a spectral-selector realisation --- the sharp statement]

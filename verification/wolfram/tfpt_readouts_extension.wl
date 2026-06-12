@@ -1132,6 +1132,98 @@ Module[{charf, cu, cmu, cw},
     cmu == (cw[[#]] & /@ {2, 3, 1})];
 ];
 
+(* ---- (v141) deck selection ---- *)
+Module[{ta, sig, g, e1, e2, e3, p, gc, plane, rotations, compatible},
+  ta = {{0, 1, 0}, {1, 0, 0}, {2, -2, 1}};
+  sig = DiagonalMatrix[{1, -1, -1}];
+  g = ta . sig;
+  e1 = {0, 0, 1}; e2 = {0, 1, 2}; e3 = {1, 0, 0};
+  p = Transpose[{e1, e2, e3}];
+  gc = Inverse[p] . g . p;
+  plane = gc[[2 ;; 3, 2 ;; 3]];
+  rotations = <|"iQ" -> {1, 2, 3}, "mU" -> {2, 3, 1}, "rho2" -> {3, 1, 2}|>;
+  compatible = (#[[1]] == 2 && Sort[#[[2 ;; 3]]] == {1, 3}) & /@ rotations;
+  checkExact["v141 deck selection: integer deck G = TA.Sigma has the Q+=1 line as exact (-1)-eigenline (character 2, self-conjugate) and {+i,-i} on the E-plane; only the sheet-twisted rotation (2,3,1) is compatible -- i^{Q+} excluded; G^4 = 1",
+    gc == {{-1, 0, 0}, {0, 0, 1}, {0, -1, 0}} &&
+    Sort[Eigenvalues[plane]] == Sort[{I, -I}] &&
+    compatible == <|"iQ" -> False, "mU" -> True, "rho2" -> False|> &&
+    MatrixPower[g, 4] == IdentityMatrix[3] &&
+    Sort[Eigenvalues[gc]] === Sort[Eigenvalues[DiagonalMatrix[{I, -1, -I}]]]];
+  checkExact["v141 sheet robustness: under k -> -k the assignment (2,3,1) -> (2,1,3): B1 pairing (1->2) and plane set {1,3} invariant; (1,2,3) -> (3,2,1) is not a Z3 rotation",
+    Mod[-{2, 3, 1}, 4] == {2, 1, 3} && Mod[-{1, 2, 3}, 4] == {3, 2, 1} &&
+    ! MemberQ[Values[rotations], {3, 2, 1}]];
+];
+
+(* ---- (v142) frame integrality ---- *)
+Module[{onev, av, sigma, nv, axs, sx1, oxa, congOK, mref, rmat, rinv},
+  onev = {1, 1, 1}; av = {1, 1, 2}; sigma = {2, -9, 5}; nv = {5, -9, 6};
+  axs = Cross[av, sigma]; sx1 = Cross[sigma, onev]; oxa = Cross[onev, av];
+  mref = {2, -5, 7};
+  congOK = And @@ Flatten[Table[
+      (AllTrue[x axs + y sx1 + z oxa, Mod[#, 11] == 0 &]) ==
+        (Mod[x - 3 y + z, 11] == 0),
+      {x, 0, 10}, {y, 0, 10}, {z, 0, 10}]];
+  rmat = {{1, 3, 0}, {1, 5, 2}, {2, 5, 3}};
+  rinv = Inverse[rmat];
+  checkExact["v142 frame integrality: 11 m = (m.1)(a x s) + (m.a)(s x 1) + (m.s)(1 x a); integer covectors <=> x - 3y + z = 0 mod 11 (index 11 = ||Pl(K)||_1); with (2,8) the third pairing is forced = 0 mod 11; odd t non-primitive; Cramer: n.a = det R = 8, n.1 = 8 (R^-1 1)_1 = 2",
+    11 mref == (mref . onev) axs + (mref . av) sx1 + (mref . sigma) oxa &&
+    congOK && Mod[2 - 3*8 + 121, 11] == 0 &&
+    AllTrue[Range[-21, 21, 2], GCD @@ ({5 + #, -9 - #, 6}) > 1 &] &&
+    Det[rmat] == 8 && rinv . onev == {1/4, 1/4, -1/4} &&
+    8 (rinv . onev)[[1]] == 2 == nv . onev && nv . av == 8];
+];
+
+(* ---- (v143) graded Frobenius ---- *)
+Module[{d5roots, d5v, d5s, d5c, a3roots, wclass, roots, lookup, dualOK, c1, c2, d5tag, a3tag},
+  d5roots = Flatten[Table[Module[{v = ConstantArray[0, 5]}, v[[i]] = si; v[[j]] = sj; v],
+    {i, 4}, {j, i + 1, 5}, {si, {1, -1}}, {sj, {1, -1}}], 3];
+  d5v = Flatten[Table[Module[{v = ConstantArray[0, 5]}, v[[i]] = s; v], {i, 5}, {s, {1, -1}}], 1];
+  d5s = Select[Tuples[{1/2, -1/2}, 5], EvenQ[Count[#, -1/2]] &];
+  d5c = Select[Tuples[{1/2, -1/2}, 5], OddQ[Count[#, -1/2]] &];
+  a3roots = Flatten[Table[If[i != j, Module[{v = ConstantArray[0, 4]}, v[[i]] = 1; v[[j]] = -1; v], Nothing],
+    {i, 4}, {j, 4}], 1];
+  wclass[k_] := (Module[{v = ConstantArray[-k/4, 4]}, Do[v[[i]] += 1, {i, #}]; v]) & /@ Subsets[Range[4], {k}];
+  roots = Join[
+    ({Join[#, ConstantArray[0, 4]], 0} &) /@ d5roots,
+    ({Join[ConstantArray[0, 5], #], 0} &) /@ a3roots,
+    Flatten[Table[{Join[d, w], 1}, {d, d5s}, {w, wclass[1]}], 1],
+    Flatten[Table[{Join[d, w], 2}, {d, d5v}, {w, wclass[2]}], 1],
+    Flatten[Table[{Join[d, w], 3}, {d, d5c}, {w, wclass[3]}], 1]];
+  lookup = Association[(#[[1]] -> #[[2]]) & /@ roots];
+  dualOK = AllTrue[roots, lookup[-#[[1]]] == Mod[-#[[2]], 4] &];
+  c1 = Select[roots, #[[2]] == 1 &][[All, 1]];
+  c2 = Select[roots, #[[2]] == 2 &][[All, 1]];
+  d5tag[v_] := {Sort[Abs[v]], If[AllTrue[v, # != 0 &], Mod[Count[v, x_ /; x < 0], 2], 0]};
+  a3tag[w_] := Sort[w];
+  checkExact["v143 graded Frobenius: coset(-r) = -coset(r) mod 4 for all 240 roots (-C1 = C3, C0/C2 self-dual) => Killing pairing nondegenerate per g_k x g_-k; glue average = carrier projector (Sum_k i^(k d)/4 = KroneckerDelta); sectors single Weyl orbits with 64 = 16*4, 60 = 10*6",
+    dualOK &&
+    AllTrue[Range[0, 3], Simplify[Sum[I^(k #), {k, 0, 3}]/4] == If[# == 0, 1, 0] &] &&
+    Length[Union[d5tag /@ (c1[[All, 1 ;; 5]])]] == 1 &&
+    Length[Union[a3tag /@ (c1[[All, 6 ;; 9]])]] == 1 &&
+    Length[Union[d5tag /@ (c2[[All, 1 ;; 5]])]] == 1 &&
+    Length[Union[a3tag /@ (c2[[All, 6 ;; 9]])]] == 1 &&
+    Length[c1] == 64 && Length[c2] == 60];
+];
+
+(* ---- (v144) det-ratio family cancellation ---- *)
+Module[{s, p, rb, rc, ro, poly, ratio, ser, cpar, epsSer},
+  s = 2 Sqrt[1 - \[CapitalDelta]^2/12];
+  p = 1 - \[CapitalDelta]^2/3;
+  rb = (s + \[CapitalDelta])/2; rc = (s - \[CapitalDelta])/2; ro = -s;
+  poly = Collect[Expand[(t - rb)(t - rc)(t - ro)], t, Simplify];
+  ratio = (rb rc)^(4/3);
+  ser = Normal[Series[ratio, {\[CapitalDelta], 0, 3}]];
+  cpar = Simplify[p s/2];
+  epsSer = Normal[Series[1 - cpar, {\[CapitalDelta], 0, 3}]];
+  checkExact["v144 det-ratio family cancellation: e2-rigidity r_b r_c = 1 - Delta^2/3 exact (traceless cubic, e2 = -3); ratio = (1 - Delta^2/3)^(4/3) has NO first-order term, quadratic coefficient -4/9; eps = (3/8) Delta^2 => coefficient -32/27 = -|mu4| (2/3)^3",
+    Simplify[rb rc - p] == 0 &&
+    Simplify[Coefficient[poly, t, 2]] == 0 && Simplify[Coefficient[poly, t, 1]] == -3 &&
+    Coefficient[ser, \[CapitalDelta], 1] == 0 &&
+    Coefficient[ser, \[CapitalDelta], 2] == -4/9 &&
+    Coefficient[epsSer, \[CapitalDelta], 2] == 3/8 &&
+    (-4/9)/(3/8) == -32/27 == -4 (2/3)^3];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v140: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v144: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

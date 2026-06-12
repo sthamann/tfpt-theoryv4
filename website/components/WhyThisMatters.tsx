@@ -7,13 +7,13 @@ import { SectionHeader } from "./SectionHeader";
 import { cn } from "@/lib/utils";
 
 const MARKER_TONE: Record<string, string> = {
-  "[I]": "text-emerald-200 bg-emerald-500/15 ring-emerald-400/30",
-  "[N]": "text-violet-200 bg-violet-500/15 ring-violet-400/30",
-  "[P]": "text-amber-200 bg-amber-500/15 ring-amber-400/30",
+  "[E]": "text-emerald-200 bg-emerald-500/15 ring-emerald-400/30",
+  "[C]": "text-amber-200 bg-amber-500/15 ring-amber-400/30",
+  "[O]": "text-rose-200 bg-rose-500/15 ring-rose-400/30",
 };
 
 function markerTone(marker: string) {
-  return MARKER_TONE[marker.split("/")[0].trim()] ?? MARKER_TONE["[I]"];
+  return MARKER_TONE[marker.split("/")[0].trim()] ?? MARKER_TONE["[E]"];
 }
 
 interface Row {
@@ -30,56 +30,56 @@ const ROWS: Row[] = [
     sm: "measured input",
     smKind: "input",
     tfpt: "unique root of F_U(1)(α) = 0",
-    marker: "[N]",
+    marker: "[E]",
   },
   {
     q: "Number of fermion families",
     sm: "input (= 3, observed)",
     smKind: "input",
     tfpt: "N_fam = 3 from ℙ¹∖μ₄ = A₃",
-    marker: "[I]",
+    marker: "[E]",
   },
   {
     q: "Hypercharge assignments",
     sm: "input (anomaly-chosen)",
     smKind: "input",
     tfpt: "roots of x² − x − 6 = 0 on the 3+2 carrier",
-    marker: "[I]",
+    marker: "[E]",
   },
   {
     q: "Higgs doublet count",
     sm: "input (= 1)",
     smKind: "input",
     tfpt: "N_Φ = g_car − |μ₄| = 1",
-    marker: "[I]",
+    marker: "[E]",
   },
   {
     q: "Flavor / CKM / PMNS structure",
     sm: "fitted by hand",
     smKind: "fitted",
     tfpt: "one φ₀-ladder + residue matrix R (det 8)",
-    marker: "[I]/[N]",
+    marker: "[E]",
   },
   {
     q: "Solar mixing angle θ₁₂",
     sm: "fitted",
     smKind: "fitted",
     tfpt: "1/3 − φ₀/2 = 0.3067 (conditional)",
-    marker: "[N]/[P]",
+    marker: "[E]/[C]",
   },
   {
     q: "Strong-CP phase θ̄",
     sm: "unexplained (tuned ≈ 0)",
     smKind: "unexplained",
     tfpt: "structural null θ_eff = 0",
-    marker: "[I]",
+    marker: "[E]",
   },
   {
     q: "Inflation / scalaron scale",
     sm: "free parameter",
     smKind: "fitted",
     tfpt: "seam-fixed M = c₃^(7/2) M̄",
-    marker: "[I]",
+    marker: "[E]",
   },
 ];
 
@@ -157,9 +157,9 @@ export function WhyThisMatters() {
             ))}
           </ul>
           <div className="border-t border-slate-800/60 px-4 py-3 text-[11px] leading-relaxed text-slate-400 sm:px-5">
-            Status grades: <span className="font-mono text-emerald-300">[I]</span> exact
-            identity · <span className="font-mono text-violet-300">[N]</span> numerical
-            fixed point · <span className="font-mono text-amber-300">[P]</span> conditional.
+            Status grades: <span className="font-mono text-emerald-300">[E]</span> exact /
+            machine-proven · <span className="font-mono text-amber-300">[C]</span> conditional
+            (named hypotheses) · <span className="font-mono text-rose-300">[O]</span> open / axiom.
             Nothing in the TFPT column is fitted to the Standard-Model value — each is
             re-derived from the two axioms and machine-checked.
           </div>

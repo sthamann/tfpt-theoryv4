@@ -3,7 +3,7 @@
 import { motion } from "motion/react";
 import Link from "next/link";
 import { ArrowUpRight, Copy, Download, FileText, Github } from "lucide-react";
-import { papers, STATUS_META } from "@/lib/papers";
+import { papers, STATUS_META, paperLabel } from "@/lib/papers";
 import { cn, REPO_URL } from "@/lib/utils";
 import { SectionHeader } from "./SectionHeader";
 import { trackPdfInteraction } from "@/lib/track";
@@ -25,7 +25,7 @@ export function DownloadsSection() {
         <SectionHeader
           eyebrow="Downloads"
           title="Every document, in one place"
-          description={`The full TFPT ${SITE_VERSION} document set — the introduction reading guide, the four core documents, and the three companions (Appendix H, the Origin Theory synthesis, and the research contracts). All distributed for academic use.`}
+          description={`The full TFPT ${SITE_VERSION} document set — the introduction reading guide, the five numbered documents (architecture, Standard Model, audit & bootstrap, frontier, Red Team), and the three companions (Appendix H, the Origin Theory synthesis, and the research contracts). All distributed for academic use.`}
         />
 
         <div className="mt-12">
@@ -54,7 +54,7 @@ export function DownloadsSection() {
                   <div className="flex flex-1 flex-col p-5">
                     <div className="flex flex-wrap items-center gap-2">
                       <span className="rounded-full border border-slate-600/40 bg-slate-900/50 px-2.5 py-0.5 font-mono text-[10px] font-semibold uppercase tracking-widest text-slate-300">
-                        Paper {p.number}
+                        {paperLabel(p)}
                       </span>
                       <span
                         className={cn(
@@ -119,6 +119,45 @@ export function DownloadsSection() {
               );
             })}
           </div>
+
+          {(() => {
+            const changelog = getReleaseAsset("/papers/changelog.pdf");
+            if (!changelog) return null;
+            return (
+              <div className="mt-6 flex flex-col gap-3 rounded-xl border border-slate-700/40 bg-slate-900/40 p-4 sm:flex-row sm:items-center sm:justify-between sm:p-5">
+                <div className="min-w-0">
+                  <div className="flex items-center gap-2">
+                    <FileText size={16} className="flex-none text-slate-300" aria-hidden />
+                    <h4 className="font-serif text-sm font-semibold text-slate-100">
+                      Changelog — the dated record of every change
+                    </h4>
+                  </div>
+                  <p className="mt-1 text-xs leading-relaxed text-slate-400">
+                    {changelog.changelog}
+                  </p>
+                  <ReleaseLine release={changelog} compact />
+                </div>
+                <Link
+                  href="/papers/changelog.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() =>
+                    trackPdfInteraction({
+                      file: "/papers/changelog.pdf",
+                      source: "downloads-papers",
+                      kind: "paper",
+                      interaction: "download",
+                      title: "Changelog",
+                    })
+                  }
+                  className="inline-flex flex-none items-center gap-2 rounded-full border border-slate-600/50 bg-slate-900/60 px-4 py-2 text-xs font-semibold text-slate-200 transition-colors hover:border-slate-400/60 hover:text-white"
+                >
+                  <Download size={14} aria-hidden />
+                  Changelog (PDF)
+                </Link>
+              </div>
+            );
+          })()}
         </div>
 
         <div className="mt-14 overflow-hidden rounded-2xl border border-blue-400/25 bg-gradient-to-br from-blue-500/10 to-violet-500/5 p-6 sm:p-8">

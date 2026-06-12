@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 import Link from "next/link";
 import { Download, FileText } from "lucide-react";
 import { Math } from "./Math";
-import { Paper, STATUS_META } from "@/lib/papers";
+import { Paper, STATUS_META, paperLabel } from "@/lib/papers";
 import { cn } from "@/lib/utils";
 import { trackPdfInteraction } from "@/lib/track";
 
@@ -50,7 +50,7 @@ export function PaperSection({ paper }: { paper: Paper }) {
                   meta.ring,
                 )}
               >
-                Paper {paper.number}
+                {paperLabel(paper)}
               </span>
               <span
                 className={cn(
@@ -116,7 +116,7 @@ export function PaperSection({ paper }: { paper: Paper }) {
                 className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition-transform hover:scale-105"
               >
                 <Download size={16} />
-                Download Paper {paper.number}
+                Download {paperLabel(paper)}
               </Link>
               <Link
                 href={paper.pdf}

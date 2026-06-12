@@ -84,9 +84,9 @@ export const GLOSSARY: GlossaryEntry[] = [
   },
   {
     term: "status markers",
-    alias: ["[I]", "[L]", "[F]", "[N]", "[P]", "[A]", "marker key"],
+    alias: ["[E]", "[C]", "[O]", "[X]", "marker key", "fine types"],
     short:
-      "The proof grades: [I] exact identity, [L] Lie/lattice theorem, [F] formalised (Lean/script), [N] numerical fixed point, [P] physical/conditional, [A] axiom/open. The ledger is the source of truth.",
+      "The four public display classes: [E] exact/machine-proven, [C] conditional (named hypotheses), [O] open/axiom, [X] falsifiable kill test. The ledger keeps the fine per-claim types (Identity, Lattice, Formal, Numerical, Physical, Axiom) — it is the source of truth.",
   },
   {
     term: "two engines",
@@ -98,19 +98,19 @@ export const GLOSSARY: GlossaryEntry[] = [
     term: "v_geo",
     alias: ["v_geo", "scale anchor", "U_point", "(U_wall)", "U_wall"],
     short:
-      "The flavor/scale interface (historically labelled U_wall): the quark ratios are closed (Readout Rigidity, 55/117) and the selector triangle pins R columnwise; the only remainder is the single dimensionful amplitude scale v_geo — the same nature as gravity's 1/G [A].",
+      "The flavor/scale interface (historically labelled U_wall): the quark ratios are closed (Readout Rigidity, 55/117) and the selector triangle pins R columnwise; the only remainder is the single dimensionful amplitude scale v_geo — the same nature as gravity's 1/G [O].",
   },
   {
     term: "G_net",
     alias: ["G_net", "(G_metric)", "G_metric", "ambient measure", "quantum-gravity measure", "seam-net inclusion"],
     short:
-      "The metric-sector interface (historically labelled G_metric): R + R² is heat-kernel grounded (G2) and gap-decoupled (G5); the closing statement is the index-4 μ₄ seam-net inclusion ⇒ holomorphic (E₈)₁. Full QG closure is a certification layer, not a prerequisite for testing the readouts [B]/[A].",
+      "The metric-sector interface (historically labelled G_metric): R + R² is heat-kernel grounded (G2) and gap-decoupled (G5); the closing statement is the index-4 μ₄ seam-net inclusion ⇒ holomorphic (E₈)₁. Full QG closure is a certification layer, not a prerequisite for testing the readouts [C]/[O].",
   },
   {
     term: "F_transfer",
     alias: ["F_transfer", "(F_frontier)", "F_frontier", "transfer functor"],
     short:
-      "The downstream interface: the continuous transport from compiler source data to measured observables. Koide source→pole, η_B source→Boltzmann relic, axion scale→abundance and m_p/m_e→QCD/EW matching are four instances of this one missing functor — not primitive compiler predictions [B]/[P].",
+      "The downstream interface: the continuous transport from compiler source data to measured observables. Koide source→pole, η_B source→Boltzmann relic, axion scale→abundance and m_p/m_e→QCD/EW matching are four instances of this one missing functor — not primitive compiler predictions [C].",
   },
 ];
 

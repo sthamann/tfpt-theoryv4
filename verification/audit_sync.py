@@ -238,6 +238,15 @@ def check_wolfram() -> None:
     if not (m.group(1) == m2.group(1) == m2.group(2)):
         err("F.wolfram", f"wolfram counts disagree: README {m.group(1)} vs ledger "
                          f"{m2.group(1)}/{m2.group(2)} -- update both + re-run the .wl")
+    # the website stats card must carry the same counts (base + extension)
+    m3 = re.search(r"current total (\d+)/(\d+)", ledger)
+    page = (WEB / "app" / "verification" / "page.tsx").read_text()
+    base = m.group(1)
+    if f"{base}/{base}" not in page:
+        err("F.wolfram", f"website verification page misses the base count {base}/{base}")
+    if m3 and f"{m3.group(1)}/{m3.group(2)}" not in page:
+        err("F.wolfram", f"website verification page misses the extension count "
+                         f"{m3.group(1)}/{m3.group(2)}")
 
 
 def check_overfull() -> None:

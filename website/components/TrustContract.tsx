@@ -5,12 +5,12 @@ import Link from "next/link";
 import { ListChecks, Play, ShieldAlert, Unlock } from "lucide-react";
 
 const MARKERS: { m: string; label: string; tone: string }[] = [
-  { m: "[F]", label: "Formalised", tone: "text-blue-200 ring-blue-400/30 bg-blue-500/10" },
-  { m: "[L]", label: "Lattice", tone: "text-cyan-200 ring-cyan-400/30 bg-cyan-500/10" },
-  { m: "[I]", label: "Identity", tone: "text-emerald-200 ring-emerald-400/30 bg-emerald-500/10" },
-  { m: "[N]", label: "Numerical", tone: "text-violet-200 ring-violet-400/30 bg-violet-500/10" },
-  { m: "[P]", label: "Conditional", tone: "text-amber-200 ring-amber-400/30 bg-amber-500/10" },
-  { m: "[A]", label: "Open", tone: "text-rose-200 ring-rose-400/30 bg-rose-500/10" },
+  { m: "[E]", label: "Formalised", tone: "text-blue-200 ring-blue-400/30 bg-blue-500/10" },
+  { m: "[E]", label: "Lattice", tone: "text-cyan-200 ring-cyan-400/30 bg-cyan-500/10" },
+  { m: "[E]", label: "Identity", tone: "text-emerald-200 ring-emerald-400/30 bg-emerald-500/10" },
+  { m: "[E]", label: "Numerical", tone: "text-violet-200 ring-violet-400/30 bg-violet-500/10" },
+  { m: "[C]", label: "Conditional", tone: "text-amber-200 ring-amber-400/30 bg-amber-500/10" },
+  { m: "[O]", label: "Open", tone: "text-rose-200 ring-rose-400/30 bg-rose-500/10" },
 ];
 
 const ACTIONS: {

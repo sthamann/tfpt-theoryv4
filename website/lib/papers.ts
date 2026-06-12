@@ -6,12 +6,15 @@ export type PaperStatus =
   | "synthesis"
   | "audit"
   | "frontier"
+  | "redteam"
   | "horizon"
   | "contracts";
 
 export interface Paper {
   id: string;
   number: number;
+  /** Display label; companions show this instead of "Paper N". */
+  label?: string;
   slug: string;
   title: string;
   subtitle: string;
@@ -78,6 +81,13 @@ export const STATUS_META: Record<
     bg: "bg-cyan-500/10",
     ring: "ring-cyan-500/30",
     gradient: "from-cyan-500 to-blue-500",
+  },
+  redteam: {
+    label: "Adversarial audit",
+    color: "text-rose-300",
+    bg: "bg-rose-500/10",
+    ring: "ring-rose-500/30",
+    gradient: "from-rose-500 to-red-600",
   },
   frontier: {
     label: "Honest frontier",
@@ -279,12 +289,12 @@ export const papers: Paper[] = [
       {
         label: "Glue theorem",
         latex: "E_8 = (D_5 \\oplus A_3) + \\mu_4",
-        description: "disc = ℤ₄, glue index 4, q(D₅)+q(A₃) = 2. [L]",
+        description: "disc = ℤ₄, glue index 4, q(D₅)+q(A₃) = 2. [E]",
       },
       {
         label: "Carrier traces",
         latex: "240 = 16\\cdot 5\\cdot 3, \\qquad 248 = 240 + 8",
-        description: "E₈ numbers as traces over the 3+2 carrier, not inputs. [I]",
+        description: "E₈ numbers as traces over the 3+2 carrier, not inputs. [E]",
       },
       {
         label: "EM fixed point",
@@ -374,7 +384,7 @@ export const papers: Paper[] = [
       },
       {
         title: "Quark ratios from the same word-lengths",
-        body: "The quark mass ratios are pure integer Plücker readouts on the derived selector stratum — no transcendental solve. The absolute amplitude reduces to one overall scale v_geo (ratios + Grand Mass Volume), the same dimensionful anchor as gravity's 1/G.",
+        body: "The quark mass ratios are pure integer Plücker readouts on the derived selector stratum — no transcendental solve. The absolute amplitude reduces to one overall scale v_geo (ratios + Grand Mass Volume), the same dimensionful anchor as gravity's 1/G. The remaining ℤ₃ deck choice is since derived: the integer deck pairs the Q₊=1 line with the self-conjugate character 2, so the geometric boundary deck is the sheet-twisted class and the cusp exponential is excluded (v141) — GATE.QGEO keeps only its realisation premise, with no discrete freedom left.",
         formulas: [
           "\\frac{c_u}{c_d} = \\frac{g_{\\mathrm{car}}\\cdot 11}{N_{\\mathrm{fam}}^2\\,\\Delta_Q} = \\frac{55}{117}, \\quad \\frac{c_c}{c_s} = \\frac{34}{47}, \\quad \\frac{c_t}{c_b} = \\frac{3}{26}",
           "\\hat m_t/\\hat m_b = \\tfrac{3}{26}(\\varphi_0)^{-2} = 40.81",
@@ -390,7 +400,7 @@ export const papers: Paper[] = [
       },
       {
         title: "Branch kernels select the sectors (the sheet question, closed modulo one gate)",
-        body: "At the two branch points of the anchor-block double cover the block is rank 1, with integer kernels — at the carrier point the kernel is the democratic vector itself. Rank 1 forces the kernel image onto the antisymmetric direction (−1,1,0): up and down are the deck-odd pair, and the lepton pairing vanishes — the leptons sit on the ramification (Koide is leptonic). The anchor-forced cusp conjugation T_A (with a = e₂+e₃, the conjugation-symmetric vector) realises the same deck action, and the dictionary 'Q₊ grading = A₃ discriminant grading' is now derived (G = T_A·Σ acts integrally as the B₁⊕E decomposition on the cusp basis): the sheet question carries no separate [P] — its residual coincides with the one existing Q-geometry gate.",
+        body: "At the two branch points of the anchor-block double cover the block is rank 1, with integer kernels — at the carrier point the kernel is the democratic vector itself. Rank 1 forces the kernel image onto the antisymmetric direction (−1,1,0): up and down are the deck-odd pair, and the lepton pairing vanishes — the leptons sit on the ramification (Koide is leptonic). The anchor-forced cusp conjugation T_A (with a = e₂+e₃, the conjugation-symmetric vector) realises the same deck action, and the dictionary 'Q₊ grading = A₃ discriminant grading' is now derived (G = T_A·Σ acts integrally as the B₁⊕E decomposition on the cusp basis): the sheet question carries no separate [C] — its residual coincides with the one existing Q-geometry gate.",
         formulas: [
           "P(-\\tfrac23)\\,w = \\tfrac{20}{3}(1,-1,0), \\qquad P(-\\tfrac53)\\,w = \\tfrac{2}{3}(-1,1,0)",
           "T_A = \\begin{pmatrix} 0 & 1 & 0 \\\\ 1 & 0 & 0 \\\\ 2 & -2 & 1 \\end{pmatrix}, \\qquad a = e_2 + e_3, \\qquad \\det T_A = -1",
@@ -406,7 +416,7 @@ export const papers: Paper[] = [
       {
         label: "Flavor invariants",
         latex: "\\det R = 8,\\quad \\mathrm{minors}=(2,3,5),\\quad \\chi_R = t^3 - 9t^2 + 10t - 8",
-        description: "Exact compiler signature any future fit must satisfy. [I]",
+        description: "Exact compiler signature any future fit must satisfy. [E]",
       },
       {
         label: "Solar angle",
@@ -473,7 +483,7 @@ export const papers: Paper[] = [
       "The Möbius bootstrap: g_car = 5 forced three ways and the '8' in c₃ = rank E₈ = h(D₅) = φ(30) = det R.",
     ],
     notClaimed: [
-      "The atlas slice readings are audit-level [A] — a program, not a proof of new physics.",
+      "The atlas slice readings are audit-level [O] — a program, not a proof of new physics.",
       "The bootstrap is not creation from nothing: two inputs remain, and π is not produced by the loop.",
     ],
     falsification: [
@@ -525,17 +535,17 @@ export const papers: Paper[] = [
       {
         label: "E₆ × A₂ flavor read",
         latex: "248 = 78 + 8 + 2\\cdot 27\\cdot 3",
-        description: "‖R‖_F² = 78 = dim E₆, det R = 8 = dim A₂. Audit-level [A].",
+        description: "‖R‖_F² = 78 = dim E₆, det R = 8 = dim A₂. Audit-level [O].",
       },
       {
         label: "Cascade endpoints",
         latex: "\\tfrac{1}{2}D_{\\mathrm{start}}D_{\\mathrm{end}} = \\tfrac{60\\cdot 8}{2} = 240",
-        description: "The old cascade is the same even-integer spine. [I]",
+        description: "The old cascade is the same even-integer spine. [E]",
       },
       {
         label: "Reverse glue",
         latex: "\\mu^2 - 5\\mu + 4 = 0",
-        description: "Singles out μ = 4 (A₃), g_car = 5. [L]",
+        description: "Singles out μ = 4 (A₃), g_car = 5. [E]",
       },
       {
         label: "Five readings of 8",
@@ -595,7 +605,7 @@ export const papers: Paper[] = [
       "Hard rule: Koide, η_B, the axion relic scale and m_p/m_e are not compiler powers unless their missing QFT/cosmology transfer is supplied.",
     ],
     falsification: [
-      "Fails if a frontier item is silently asserted as a forced compiler power; m_p/m_e is explicitly left open [A] and only fails if mis-asserted.",
+      "Fails if a frontier item is silently asserted as a forced compiler power; m_p/m_e is explicitly left open [O] and only fails if mis-asserted.",
     ],
     sections: [
       {
@@ -635,34 +645,102 @@ export const papers: Paper[] = [
       {
         label: "η_B (downstream)",
         latex: "\\eta_B = 6.1\\times 10^{-10}",
-        description: "From closed Ω_b h² = 0.0222; not a compiler power. [P]",
+        description: "From closed Ω_b h² = 0.0222; not a compiler power. [C]",
       },
       {
         label: "Koide",
         latex: "Q = 0.664 \\to Q_\\star = \\tfrac{2}{3} = \\tfrac{|\\mathbb{Z}_2|}{N_{\\mathrm{fam}}}",
-        description: "Near-miss, 0.33% below 2/3; not exact at source. [P]",
+        description: "Near-miss, 0.33% below 2/3; not exact at source. [C]",
       },
       {
         label: "Axion DM",
         latex: "f_a = M_{\\mathrm{scal}}/128, \\quad m_a \\approx 23.8\\,\\mu\\text{eV}",
-        description: "Candidate fixed, θ_i = 170° closed; f_a conjectural. [P/A]",
+        description: "Candidate fixed, θ_i = 170° closed; f_a conjectural. [C]/[O]",
       },
       {
         label: "QG gap-decoupling",
         latex: "\\Delta_{\\mathrm{eff}} = \\Delta - 2\\|V\\| = 1.648 > 0",
-        description: "R + R² grounded (G2); ambient measure (G6) open. [F/A]",
+        description: "R + R² grounded (G2); ambient measure (G6) open. [E]/[O]",
       },
     ],
     highlights: [
-      { label: "η_B", value: "6.1×10⁻¹⁰", description: "Downstream readout from Ω_b h² [P]" },
-      { label: "Koide Q", value: "0.664", description: "0.33% below 2/3 = |ℤ₂|/N_fam [P]" },
-      { label: "m_a", value: "≈ 23.8 µeV", description: "Axion candidate; f_a = M_scal/128 [P]" },
-      { label: "m_p/m_e", value: "open [A]", description: "Cross-sector ratio, not a compiler power" },
+      { label: "η_B", value: "6.1×10⁻¹⁰", description: "Downstream readout from Ω_b h² [C]" },
+      { label: "Koide Q", value: "0.664", description: "0.33% below 2/3 = |ℤ₂|/N_fam [C]" },
+      { label: "m_a", value: "≈ 23.8 µeV", description: "Axion candidate; f_a = M_scal/128 [C]" },
+      { label: "m_p/m_e", value: "open [O]", description: "Cross-sector ratio, not a compiler power" },
     ],
   },
   {
     id: "05",
     number: 5,
+    slug: "redteam",
+    title: "Red Team — The Adversarial Audit",
+    subtitle: "Targets A–E: attacking the five load-bearing reductions at their weakest transitions",
+    abstract:
+      "The deliberately adversarial layer: instead of confirming TFPT, this document attacks the five load-bearing reductions (Targets A–E) at their weakest logical transitions. Each target runs through one fixed protocol — minimal statement, assumptions, logical chain, counterexample search, limiting cases, alternative structures, verdict. A red-team check asserts an adversarial fact (a counterexample really exists, a hidden assumption is really needed, a firewall really holds); the honest outcome lives in the status of each target, never in a green pass. Verdicts: A reduced (one residual), B/D/E survive narrowed, C survives; none broken.",
+    status: "redteam",
+    statusLabel: "Adversarial audit",
+    pdf: "/papers/tfpt_5_redteam.pdf",
+    inputs: [
+      "The five load-bearing reductions of the document set, treated as hostile witnesses.",
+      "The red-team scripts redteam/rt_A_e8net.py … rt_E_vgeo.py + run_redteam.py.",
+    ],
+    contribution: [
+      "Target A (seam–Calderón = (E8)₁ net): reduced to ONE residual — boundary-net holomorphy + c = 8 (⇔ the index-4 inclusion); E₈ and bulk uniqueness then follow (v83/v87/v89; Lie-level realisation v143).",
+      "Target B (g_car = 5 Pascal selection): survives narrowed — residual = the degree-2 truncation (Quadratic Boundary Locality), since tied to the boundary-net premise (v108–v113).",
+      "Target C (k = c₃/2, S = A/4): survives — the only anchor is the UV-sensitive absolute 1/G.",
+      "Targets D/E (one scale v_geo): survive narrowed — CP phases and the EW/reheating/leptogenesis scales are explicitly outside v_geo.",
+    ],
+    notClaimed: [
+      "No target is closed by this layer; 'survives' means the statement stands as worded, not that its residual is gone.",
+      "A fourth verdict, 'broken', is reserved for an actual failure — none occurred, and that is reported as a fact, not a proof.",
+    ],
+    falsification: [
+      "Each target carries explicit kill tests; the layer is built so it MAY downgrade a claim on re-run when data or counterexamples move.",
+    ],
+    sections: [
+      {
+        title: "Method — three honest verdicts",
+        body: "Each reduction is treated as a hostile witness under one fixed protocol. Allowed outcomes: survives (stands as worded), survives narrowed (stands only after a silent assumption is made explicit), reduced not closed (the conservative wording is correct). A confirmatory script that always passes is worthless here.",
+      },
+      {
+        title: "Target A — the (E8)₁ boundary-net identification",
+        body: "Level-1 primary counting (det Cartan: D₈ has 4, E₈ has 1) makes holomorphy necessary AND sufficient — a holomorphic c = 8 chiral CFT is the lattice theory of the unique even unimodular rank-8 lattice. Bulk uniqueness is not independent: for a holomorphic net Rep(A) = Vect, so the bulk pairing is unique (machine contrast: SO(16)₁ admits six modular invariants). Target A therefore collapses to one residual statement.",
+        formulas: [
+          "c(E_8)_1 = \\tfrac{248}{31} = 8, \\quad c(D_5)_1 = 5, \\quad c(A_3)_1 = 3, \\quad c_{\\mathrm{coset}} = 0",
+        ],
+      },
+      {
+        title: "Targets B–E — narrowed, with named residuals",
+        body: "B: the Pascal ladder 2^{g−1} = Σ_{k≤2} C(g,k) is exactly equivalent to the degree-2 truncation; the residual is the QBL premise, since merged with the boundary-net gate. C: the replica chain is derived; the absolute 1/G stays the one anchor. D: the frozen CP phase survives at +0.98σ with a decision threshold σ_γ ≤ 0.96°. E: v_geo carries the dimensionless theory; EW/reheating scales are typed interfaces.",
+      },
+      {
+        title: "Follow-up rounds — the residual count is monotone",
+        body: "Two machine-checked follow-up rounds (v83–v100, v141–v144) moved Target A from three residuals to one and hardened the firewalls (numerology null test: P ≤ 10⁻³⁰·⁷ conditional on the declared grammar). The front summary table states the final reduction; the historical development is kept below it, honestly dated.",
+      },
+    ],
+    keyFormulas: [
+      {
+        label: "Target A residual",
+        latex: "\\text{holomorphy} + c = 8 \\;\\Leftrightarrow\\; [\\mathcal{B} : \\mathcal{A}] = 4 = |\\mu_4|",
+        description: "One statement; E₈ and the unique 2D bulk then follow. [C/O]",
+      },
+      {
+        label: "Same-c rival excluded",
+        latex: "(D_8)_1 = SO(16)_1: \\; 4 \\text{ primaries}, \\quad E_8: \\; 1",
+        description: "Holomorphy excludes the only same-c competitor. [E]",
+      },
+    ],
+    highlights: [
+      { label: "Targets", value: "A–E", description: "Five load-bearing reductions, attacked" },
+      { label: "Broken", value: "0", description: "No target failed; verdicts are typed, not green" },
+      { label: "Target A", value: "1 residual", description: "Down from three (v83/v87/v89, v143)" },
+    ],
+  },
+  {
+    id: "06",
+    number: 6,
+    label: "Appendix H",
     slug: "horizon-readouts",
     title: "Appendix H — The Horizon Unit System",
     subtitle: "One seam constant c₃ = 1/(8π) as the universal horizon thermal code",
@@ -678,7 +756,7 @@ export const papers: Paper[] = [
       "The boundary transport sub-leading eigenvalue λ₂ = (2/3)⁶ governs both the SM flavor gap and the horizon Page recovery.",
     ],
     notClaimed: [
-      "Nothing here is new gravitational physics — it is a reframe that exposes shared structure. The search ansätze are explicitly [A], not results.",
+      "Nothing here is new gravitational physics — it is a reframe that exposes shared structure. The search ansätze are explicitly [O], not results.",
     ],
     falsification: [
       "As a reframe it cannot be falsified by new gravity; the compiler fingerprints (1920, |μ₄|) and the shared λ₂ fail only if the underlying lattice numbers are wrong.",
@@ -718,7 +796,7 @@ export const papers: Paper[] = [
       },
       {
         title: "The maximal black hole is the anchor (SdS in seam units)",
-        body: "Put a black hole into the de Sitter bulk: at the maximal (Nariai) mass the horizon cubic has roots (1,1,−2) — exactly the traceless projection of the anchor a = (1,1,2) — and the total entropy bound is exactly the Koide branch value 2/3 = |ℤ₂|/N_fam (each horizon carries S_dS/3). The interpolation is (x²+1)/Φ₃(x) with the N_fam cyclotomic; the three-root entropy total |ℤ₂|·S_dS is conserved for every mass; the mass line is itself a split double cover whose deck involution is the horizon swap; and evaporation always flows away from the anchor point — the same repeller/attractor orientation as the flavor relaxation. Six independent landings on already-load-bearing atoms, zero free parameters; the carrier-in-the-bulk reading stays [P].",
+        body: "Put a black hole into the de Sitter bulk: at the maximal (Nariai) mass the horizon cubic has roots (1,1,−2) — exactly the traceless projection of the anchor a = (1,1,2) — and the total entropy bound is exactly the Koide branch value 2/3 = |ℤ₂|/N_fam (each horizon carries S_dS/3). The interpolation is (x²+1)/Φ₃(x) with the N_fam cyclotomic; the three-root entropy total |ℤ₂|·S_dS is conserved for every mass; the mass line is itself a split double cover whose deck involution is the horizon swap; and evaporation always flows away from the anchor point — the same repeller/attractor orientation as the flavor relaxation. Six independent landings on already-load-bearing atoms, zero free parameters; the carrier-in-the-bulk reading stays [C].",
         formulas: [
           "t^3 - 3t + 2 = (t-1)^2(t+2), \\qquad \\frac{S_{\\mathrm{Nariai}}}{S_{dS}} = \\frac{2}{3} = \\frac{|\\mathbb{Z}_2|}{N_{\\mathrm{fam}}}",
           "\\frac{S_{\\mathrm{tot}}}{S_{dS}} = \\frac{x^2+1}{x^2+x+1}, \\qquad \\mathrm{disc} \\propto (1-3m)(1+3m)",
@@ -726,7 +804,7 @@ export const papers: Paper[] = [
       },
       {
         title: "One orientation: the anchor is the stationary repeller (both sectors)",
-        body: "The flavor relaxation is the gradient flow of a cubic potential whose critical points are exactly the two branch points, with stationary curvatures ±Δ (the transfer gap) and a constant Lyapunov rate Δ. The SdS entropy functional has the Nariai/anchor point as its unique stationary point with curvature 2/9 = |ℤ₂|/N_fam², and evaporation ascends the entropy away from it. Both sectors flow away from an anchor-stationary configuration with grammar-constant curvatures; reading this as one variational principle of the seam stays [P], with the disanalogies recorded honestly.",
+        body: "The flavor relaxation is the gradient flow of a cubic potential whose critical points are exactly the two branch points, with stationary curvatures ±Δ (the transfer gap) and a constant Lyapunov rate Δ. The SdS entropy functional has the Nariai/anchor point as its unique stationary point with curvature 2/9 = |ℤ₂|/N_fam², and evaporation ascends the entropy away from it. Both sectors flow away from an anchor-stationary configuration with grammar-constant curvatures; reading this as one variational principle of the seam stays [C], with the disanalogies recorded honestly.",
         formulas: [
           "V''(q{=}2) = +\\Delta, \\quad V''(q{=}5) = -\\Delta, \\qquad \\frac{d(-\\ln\\rho)}{dt} = \\Delta",
           "\\Bigl(\\frac{S_{\\mathrm{tot}}}{S_{dS}}\\Bigr)''(x{=}1) = \\frac{2}{9} = \\frac{|\\mathbb{Z}_2|}{N_{\\mathrm{fam}}^2}",
@@ -734,7 +812,7 @@ export const papers: Paper[] = [
       },
       {
         title: "The trisection normal form — the canonical coordinate exists",
-        body: "The SdS horizon cubic is uniformized by angle trisection (r = 2cos θ turns it into cos 3θ = −3m; the ℤ₃ trisection deck is the triality of coker Q = ℤ/N_fam). In the centered angle the mass is a pure cosine, m = cos(ψ)/N_fam, and the entropy collapses to ONE cosine of glue atoms with canonical curvature (2/3)³ at the anchor — the Koide constant to the family power. The invariant slope dσ/dm at Nariai is −8/9 = −rank E₈/N_fam². The flavor invariant is a rate, (2/3)^{2N_fam} per transport step; the gravity invariant is a curvature, (2/3)^{N_fam}: same base, exponent ratio |ℤ₂|. The gravity-side clock asked for here has since been constructed (v124–v133, sections below): one clock, two known geometries — the identification reading stays [P].",
+        body: "The SdS horizon cubic is uniformized by angle trisection (r = 2cos θ turns it into cos 3θ = −3m; the ℤ₃ trisection deck is the triality of coker Q = ℤ/N_fam). In the centered angle the mass is a pure cosine, m = cos(ψ)/N_fam, and the entropy collapses to ONE cosine of glue atoms with canonical curvature (2/3)³ at the anchor — the Koide constant to the family power. The invariant slope dσ/dm at Nariai is −8/9 = −rank E₈/N_fam². The flavor invariant is a rate, (2/3)^{2N_fam} per transport step; the gravity invariant is a curvature, (2/3)^{N_fam}: same base, exponent ratio |ℤ₂|. The gravity-side clock asked for here has since been constructed (v124–v133, sections below): one clock, two known geometries — the identification reading stays [C].",
         formulas: [
           "\\frac{S_{\\mathrm{tot}}}{S_{dS}} = \\frac{4}{3} - \\frac{2}{3}\\cos\\frac{2\\psi}{3}, \\qquad m = \\frac{\\cos\\psi}{N_{\\mathrm{fam}}}",
           "\\sigma''(0) = \\Bigl(\\frac{2}{3}\\Bigr)^{3}, \\qquad \\frac{d\\sigma}{dm}\\Big|_{N} = -\\frac{8}{9} = -\\frac{\\mathrm{rank}\\,E_8}{N_{\\mathrm{fam}}^2}",
@@ -742,15 +820,15 @@ export const papers: Paper[] = [
       },
       {
         title: "The classical clock speaks anchor — and the honest (2/3)-test",
-        body: "The classical half of the clock question is pure GR: linearizing around the Nariai geometry dS₂×S², the static mode φ(ρ) = ρ solves the static-patch equation exactly with m² = −2Λ = −|ℤ₂|Λ — the exact SdS family itself pins the modulus mass (Ginsparg–Perry tower: exactly one negative mode). In Hubble units the clock's characteristic polynomial is (λ−1)(λ+2) — the anchor quadratic: its eigenvalues are the distinct anchor roots, and the Nariai cubic factors as (t−1)·χ_clock. The anchor appears a third time: configuration roots, curvature base, clock spectrum. The honest (2/3)-test is negative for the classical clock (integer eigenvalues); the quantum clock — the one-loop conversion of curvature into rate — was the remaining [P] and is resolved by the resummed-clock chain below.",
+        body: "The classical half of the clock question is pure GR: linearizing around the Nariai geometry dS₂×S², the static mode φ(ρ) = ρ solves the static-patch equation exactly with m² = −2Λ = −|ℤ₂|Λ — the exact SdS family itself pins the modulus mass (Ginsparg–Perry tower: exactly one negative mode). In Hubble units the clock's characteristic polynomial is (λ−1)(λ+2) — the anchor quadratic: its eigenvalues are the distinct anchor roots, and the Nariai cubic factors as (t−1)·χ_clock. The anchor appears a third time: configuration roots, curvature base, clock spectrum. The honest (2/3)-test is negative for the classical clock (integer eigenvalues); the quantum clock — the one-loop conversion of curvature into rate — was the remaining [C] and is resolved by the resummed-clock chain below.",
         formulas: [
           "\\chi_{\\mathrm{clock}}(\\lambda) = \\lambda^2 + \\lambda - 2 = (\\lambda-1)(\\lambda+2)",
           "m^2 = -2\\Lambda = -|\\mathbb{Z}_2|\\Lambda, \\qquad \\frac{d}{dt}\\log(\\sigma - \\tfrac{2}{3}) = 2H = |\\mathbb{Z}_2| H",
         ],
       },
       {
-        title: "The resummed quantum clock (v124–v133)",
-        body: "The quantum clock now has a closed form: rate(n) = −p₂ ln(1 − n/N_fam) — the three-level spectrum is forced by the pole at N_fam, and the bend log₃∕₂3 is its n = 2 value. Its weights are the Mehta–Seshadri parabolic weights of the exact anchor residue A₀* (v126); the geometric tail is the standard log-determinant/RPA ring resummation, one tower per hexagon site (v127); the rate is an entropy power law Γ ∝ (S/S_dS)^{p₂} in Gibbons–Hawking form (v129); the exponent p₂ = 2h follows from mode counting plus the Born rule, h = N_fam = half the zero-mode count (v130); the per-mode S^{1/2} is the zero-mode area norm ‖Y₁ₘ‖² = A/(4π) exactly (v131); and the scaling anomaly of the non-zero-mode S² determinant is exactly −2/3 = −|ℤ₂|/N_fam — the Koide constant as a spectral anomaly (v132). The ζ(0) budget computed both ways selects the reduced seam reading: per sector −2/3, total −4/3 = minus the seed gain, while the naive 4d route gives −109/45, no atom (v133). The residue of the clock question is one finite budget — the graviton/ghost heat coefficients on S²×S² [P].",
+        title: "The resummed quantum clock (v124–v133, v144)",
+        body: "The quantum clock now has a closed form: rate(n) = −p₂ ln(1 − n/N_fam) — the three-level spectrum is forced by the pole at N_fam, and the bend log₃∕₂3 is its n = 2 value. Its weights are the Mehta–Seshadri parabolic weights of the exact anchor residue A₀* (v126); the geometric tail is the standard log-determinant/RPA ring resummation, one tower per hexagon site (v127); the rate is an entropy power law Γ ∝ (S/S_dS)^{p₂} in Gibbons–Hawking form (v129); the exponent p₂ = 2h follows from mode counting plus the Born rule, h = N_fam = half the zero-mode count (v130); the per-mode S^{1/2} is the zero-mode area norm ‖Y₁ₘ‖² = A/(4π) exactly (v131); and the scaling anomaly of the non-zero-mode S² determinant is exactly −2/3 = −|ℤ₂|/N_fam — the Koide constant as a spectral anomaly (v132). The ζ(0) budget computed both ways selects the reduced seam reading: per sector −2/3, total −4/3 = minus the seed gain, while the naive 4d route gives −109/45, no atom (v133). The residue of the clock question is one finite budget — the graviton/ghost heat coefficients on S²×S² [C]. The det-ratio step is since derived within the SdS family: e₂-rigidity gives r_b·r_c = 1 − Δ²/3 exactly, so the non-zero-mode determinant ratio is (1 − Δ²/3)^{4/3} with no first-order term in the horizon split (v144); the finite-weight absorption stays [C] with its obstruction stated sharply.",
         formulas: [
           "\\mathrm{rate}(n) = -p_2\\ln\\bigl(1 - \\tfrac{n}{N_{\\mathrm{fam}}}\\bigr), \\qquad \\Gamma_n \\propto \\Bigl(\\frac{S_n}{S_{dS}}\\Bigr)^{p_2}",
           "\\zeta(0)\\big|_{\\det'} = -\\tfrac{2}{3} = -\\tfrac{|\\mathbb{Z}_2|}{N_{\\mathrm{fam}}} \\;\\text{per sector}, \\qquad \\text{total} = -\\tfrac{4}{3}",
@@ -758,7 +836,7 @@ export const papers: Paper[] = [
       },
       {
         title: "The dual anchor: the inverse flavor response is the Nariai root (v134)",
-        body: "The Nariai pattern is stored inside the flavor compiler as a dual invariant: d := aᵀR⁻¹ = aᵀL⁻¹ = (−1/2, −1/2, 1), with d·1 = 0, d·a = 1 and (1,1,−2) = −2d. The invariance is structural (Sherman–Morrison): a covector is winding-invariant iff it annihilates R⁻¹1 = (1,1,−1)/4 — the anchor does, while 1, e₁ and the torsion normal n do not (the membership is special). Together (d, n) form the dual normal pair of the flavor boundary: d reads the traceless horizon structure, n reads first-generation torsion. A third, purely algebraic leg of the flavor↔horizon bridge, beside the shared clock spectrum (v126) and the entropy power law (v129) [I]; the bridge reading stays [P].",
+        body: "The Nariai pattern is stored inside the flavor compiler as a dual invariant: d := aᵀR⁻¹ = aᵀL⁻¹ = (−1/2, −1/2, 1), with d·1 = 0, d·a = 1 and (1,1,−2) = −2d. The invariance is structural (Sherman–Morrison): a covector is winding-invariant iff it annihilates R⁻¹1 = (1,1,−1)/4 — the anchor does, while 1, e₁ and the torsion normal n do not (the membership is special). Together (d, n) form the dual normal pair of the flavor boundary: d reads the traceless horizon structure, n reads first-generation torsion. A third, purely algebraic leg of the flavor↔horizon bridge, beside the shared clock spectrum (v126) and the entropy power law (v129) [E]; the bridge reading stays [C].",
         formulas: [
           "d := a^{\\top}R^{-1} = a^{\\top}L^{-1} = \\bigl(-\\tfrac12, -\\tfrac12, 1\\bigr), \\qquad (1,1,-2) = -2d",
           "v^{\\top}L^{-1} = v^{\\top}R^{-1} \\iff v\\cdot R^{-1}\\mathbf{1} = 0, \\qquad R^{-1}\\mathbf{1} = \\tfrac14(1,1,-1)",
@@ -769,35 +847,36 @@ export const papers: Paper[] = [
       {
         label: "Universal factor",
         latex: "\\tfrac{1}{2\\pi} = 4c_3, \\qquad T_H = c_3/M",
-        description: "One seam constant behind every horizon temperature. [I]",
+        description: "One seam constant behind every horizon temperature. [E]",
       },
       {
         label: "Hawking fingerprint",
         latex: "P_H = \\frac{c_3}{1920\\,M^2}, \\quad 1920 = |W(D_5)|",
-        description: "Compiler Weyl-group order in the Hawking power. [I]",
+        description: "Compiler Weyl-group order in the Hawking power. [E]",
       },
       {
         label: "Shared transport",
         latex: "\\lambda_2 = (2/3)^6",
-        description: "Same eigenvalue fixes flavor gap and Page recovery. [I]",
+        description: "Same eigenvalue fixes flavor gap and Page recovery. [E]",
       },
     ],
     highlights: [
       { label: "Factor", value: "1/(2π) = 4c₃", description: "Universal horizon temperature factor" },
       { label: "Hawking", value: "1920 = |W(D₅)|", description: "Compiler fingerprint in the power" },
       { label: "S_dS", value: "≈ 3.32×10¹²²", description: "De Sitter entropy from the Λ closure" },
-      { label: "Nariai", value: "2/3 · S_dS", description: "Max-BH entropy bound = the Koide branch value; roots = the anchor (1,1,−2) [I]" },
+      { label: "Nariai", value: "2/3 · S_dS", description: "Max-BH entropy bound = the Koide branch value; roots = the anchor (1,1,−2) [E]" },
       { label: "β_rad", value: "0.2424°", description: "Cosmic birefringence (ACT DR6: 0.4σ)" },
     ],
   },
   {
-    id: "06",
-    number: 6,
+    id: "07",
+    number: 7,
+    label: "Origin Theory",
     slug: "origin-theory",
     title: "Origin Theory",
     subtitle: "The seam as a horizon, the cyclic compiler hull, and the parameter-free attractor",
     abstract:
-      "Why the two TFPT inputs leave no free fundamental number. Two layers, kept strictly apart: a structural [I]/[L] core (exact, machine-checked identities) — the (g_car, N_fam) = (5,3) skeleton, the triply-forced 8 (geometry = lattice = gravity), the order-30 Coxeter cycle, one boundary transport for both flavor and horizon, and a gapped unique attractor — plus one honestly-typed [P] interpretation: the cyclic self-reproduction reading.",
+      "Why the two TFPT inputs leave no free fundamental number. Two layers, kept strictly apart: a structural [E] core (exact, machine-checked identities) — the (g_car, N_fam) = (5,3) skeleton, the triply-forced 8 (geometry = lattice = gravity), the order-30 Coxeter cycle, one boundary transport for both flavor and horizon, and a gapped unique attractor — plus one honestly-typed [C] interpretation: the cyclic self-reproduction reading.",
     status: "synthesis",
     statusLabel: "Origin synthesis",
     pdf: "/papers/origin_theory.pdf",
@@ -808,8 +887,8 @@ export const papers: Paper[] = [
       "A gapped boundary transport (gap 6 log(3/2) > 0) ⇒ a unique Perron–Frobenius attractor: the constants are selected, not tuned.",
     ],
     notClaimed: [
-      "The seam is not identical to an event horizon — it is the abstract normaliser whose local gravitational realisation is a horizon; that identification stays [P].",
-      "The cyclic self-reproduction (§6) is a falsifiable interpretation [P], not derived and not machine-checkable.",
+      "The seam is not identical to an event horizon — it is the abstract normaliser whose local gravitational realisation is a horizon; that identification stays [C].",
+      "The cyclic self-reproduction (§6) is a falsifiable interpretation [C], not derived and not machine-checkable.",
     ],
     falsification: [
       "The exact core fails if (5,3) does not generate the skeleton or the transport gap is not positive; the cyclic interpretation is falsified by a robust β = 0 or w ≠ −1.",
@@ -851,12 +930,12 @@ export const papers: Paper[] = [
       {
         label: "Pythagorean volume",
         latex: "\\Delta_Y = g^2 = N^2 + |\\mathbb{Z}_2|\\cdot\\operatorname{rank}E_8 = 9 + 16 = 25",
-        description: "The whole skeleton from (5,3). [I]",
+        description: "The whole skeleton from (5,3). [E]",
       },
       {
         label: "Triply-forced 8",
         latex: "8 = 2|\\mu_4| = \\operatorname{rank}E_8 = h(D_5)",
-        description: "Geometry = lattice = gravity. [I]",
+        description: "Geometry = lattice = gravity. [E]",
       },
       {
         label: "Gapped attractor",
@@ -877,8 +956,9 @@ export const papers: Paper[] = [
     ],
   },
   {
-    id: "07",
-    number: 7,
+    id: "08",
+    number: 8,
+    label: "Research Contracts",
     slug: "research-contracts",
     title: "Research Contracts for the Remaining Interfaces",
     subtitle: "v_geo · G_net · F_transfer — the live residual as numbered contracts",
@@ -900,7 +980,7 @@ export const papers: Paper[] = [
       "G_net (the ambient boundary projective measure) is reduced but not closed; it blocks certification as a strict physical TOE, but its absence does not affect the bounded IR claim — full QG closure is a certification layer, not a prerequisite for testing the SM and cosmology readouts.",
     ],
     falsification: [
-      "Each contract names its closing theorem and certifiability; fails if a lemma certified [F] does not in fact machine-check, or if the closing theorem is asserted before its chain completes.",
+      "Each contract names its closing theorem and certifiability; fails if a lemma certified [E] does not in fact machine-check, or if the closing theorem is asserted before its chain completes.",
     ],
     sections: [
       {
@@ -913,7 +993,7 @@ export const papers: Paper[] = [
       },
       {
         title: "The selector triangle",
-        body: "The dual normal pair (d, n) pins R columnwise; d = (3/2)a − 2·1 is pure anchor data (the first selector is derived), and n is the unique covector with atom pairings (2, 8, 121) on the frame (1, a, σ) of determinant 11. The residue is exactly three atom pairings — the historical U_wall machinery is over-engineering for the ratios.",
+        body: "The dual normal pair (d, n) pins R columnwise; d = (3/2)a − 2·1 is pure anchor data (the first selector is derived), and n is the unique covector with atom pairings (2, 8, 121) on the frame (1, a, σ) of determinant 11. Frame integrality cuts this further: integer covectors form an index-11 sublattice, so the σ-pairing is forced mod 11 — the residue is exactly two line pairings (|Z₂|, rank E₈); the historical U_wall machinery is over-engineering for the ratios.",
         formulas: [
           "d = a^{\\top}R^{-1} = \\bigl(-\\tfrac12,-\\tfrac12,1\\bigr), \\qquad n = (5,-9,6)",
           "n\\cdot\\mathbf{1} = 2, \\quad n\\cdot a = 8, \\quad n\\cdot\\sigma = 121 = 11^2",
@@ -921,7 +1001,7 @@ export const papers: Paper[] = [
       },
       {
         title: "G_net — the metric-sector inclusion",
-        body: "The goal is the reflection-positive projective-limit measure over the diffeomorphism-quotiented metric sector. G2 (Seeley–DeWitt R + R²) and G5 (gap dominance, Decoupling Theorem) are certified; the ambient measure is holographically reduced to a finite seam-boundary (Calderón) measure. The single closing statement is: the seam-Calderón inclusion has Jones index 4 = |μ₄| (the μ₄ simple-current extension of the carrier net), from which holomorphy and the unique (E₈)₁ bulk follow.",
+        body: "The goal is the reflection-positive projective-limit measure over the diffeomorphism-quotiented metric sector. G2 (Seeley–DeWitt R + R²) and G5 (gap dominance, Decoupling Theorem) are certified; the ambient measure is holographically reduced to a finite seam-boundary (Calderón) measure. The single closing statement is: the seam-Calderón inclusion has Jones index 4 = |μ₄| (the μ₄ simple-current extension of the carrier net), from which holomorphy and the unique (E₈)₁ bulk follow. The identification now holds at the finite Lie level: the ℤ₄-graded hull carries exact coset duality, the glue average is the carrier projector (index 4), and each sector is a single Weyl orbit — the ℂ[ℤ₄] Q-system realised in 248 dimensions (v143); exactly one conformal-net statement remains.",
         formulas: [
           "a_2 = -\\tfrac{R}{3}, \\qquad a_4\\big|_{R^2} = \\tfrac{R^2}{72}",
           "[\\,(E_8)_1 : (D_5)_1\\times(A_3)_1\\,] = 4 = |\\mu_4|",
@@ -939,17 +1019,17 @@ export const papers: Paper[] = [
       {
         label: "Flavor interface reduced",
         latex: "U_{\\mathrm{point}} \\to v_{\\mathrm{geo}} = \\text{the } 1/G \\text{ anchor}",
-        description: "Ratios + Grand Mass Volume ⇒ one overall scale. [I]/[A]",
+        description: "Ratios + Grand Mass Volume ⇒ one overall scale. [E]/[O]",
       },
       {
         label: "Quark ratio closed",
         latex: "\\frac{c_u}{c_d} = \\frac{5\\cdot 11}{9\\cdot 13} = \\frac{55}{117}",
-        description: "Readout Rigidity on the discrete stratum. [I]",
+        description: "Readout Rigidity on the discrete stratum. [E]",
       },
       {
         label: "Gate 2 reduction",
         latex: "2\\|V\\| = \\tfrac{31}{4\\pi^2} < \\Delta = 6\\log\\tfrac32 \\Rightarrow \\Delta_{\\mathrm{eff}} = 1.648",
-        description: "IR closed (decoupling); G6 reduced to a seam-boundary measure. [I]/[P]",
+        description: "IR closed (decoupling); G6 reduced to a seam-boundary measure. [E]/[C]",
       },
     ],
     highlights: [
@@ -961,3 +1041,7 @@ export const papers: Paper[] = [
     ],
   },
 ];
+
+export function paperLabel(p: Paper): string {
+  return p.label ?? `Paper ${p.number}`;
+}

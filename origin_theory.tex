@@ -262,10 +262,15 @@ So the smallness of $\Lambda$ ($\sim10^{-122}$ in Planck units) is $e^{-2\ainv}$
 the \emph{same} EM fixed point. \textbf{Sharper (\veri{v60\_lambda\_metrology\_branch.py}):} with
 $\delta_{\mathrm{top}}=48\cthree^4=\tfrac{3}{256\pi^4}$ the physical branch prefactor is
 $(8\pi)^2\delta_{\mathrm{top}}=\tfrac{3}{4\pi^2}$, so
-\[
-  \boxed{\ \frac{\rho_\Lambda}{\bar M_{\mathrm{Pl}}^4}=\frac{3}{4\pi^2}\,e^{-2\ainv}\ },\qquad
-  |\log_{10}\tfrac{\rho_\Lambda}{M_{\mathrm{Pl}}^4}|=122.948=\underbrace{119.028}_{2\ainv/\ln10}+\underbrace{3.920}_{\log_{10}(256\pi^4/3)} .
-\]
+\begin{gather*}
+  \boxed{\ \frac{\rho_\Lambda}{\bar M_{\mathrm{Pl}}^4}=\frac{3}{4\pi^2}\,e^{-2\ainv}\ \Rightarrow\ 120.147\ \text{orders}\ },\\[2pt]
+  \boxed{\ \frac{\rho_\Lambda}{M_{\mathrm{Pl}}^4}=\frac{3}{256\pi^4}\,e^{-2\ainv}\ \Rightarrow\
+  122.948=\underbrace{119.028}_{2\ainv/\ln10}+\underbrace{3.920}_{\log_{10}(256\pi^4/3)}\ }.
+\end{gather*}
+\emph{Typing note (do not mix the two normalisations):} the two displays are the \emph{same} statement,
+related by $\bar M_{\mathrm{Pl}}^2=M_{\mathrm{Pl}}^2/(8\pi)$ ($(8\pi)^2=64\pi^2$ converts
+$\tfrac3{4\pi^2}\to\tfrac3{256\pi^4}$); the headline ``$\approx123$ orders'' belongs to the
+\emph{unreduced} $M_{\mathrm{Pl}}^4$ normalisation, the reduced one gives $120.147$.
 The famous ``$123$ orders'' are a \emph{double overlap} of one boundary compiler, not a fine-tuning; and the
 alternative branch $2\cthree e^{-2\ainv}$ is mis-scaled by $2\cthree/\delta_{\mathrm{top}}=\tfrac{64\pi^3}{3}=661.47$.
 \textbf{Selecting the physical branch therefore pins $\bar M_{\mathrm{Pl}}$ relative to $\Lambda$: $G_N$ is no
@@ -823,6 +828,15 @@ smaller R4$'$, the \emph{establishment of the selectors} ($n=(5,-9,6)$ and the d
 --- five frozen integers). And R2 now carries \textbf{three loads}: the one index-$4$ boundary-net
 statement closes, when proven, the metric gate, the carrier choice \emph{and} the QBL programme ---
 one theorem, three doors. The flavor side has no open analysis class of its own anymore.
+\smallskip\\
+\noindent\emph{Second update (\vref{v141}--\vref{v144}):} four of the five classes sharpened again, none
+removed. R5's \emph{discrete} freedom is gone --- the $\Z_3$ deck choice is \emph{derived} from the
+integer model (geometric deck $=$ sheet-twisted class, \vref{v141}); R4$'$ shrinks from three pairings to
+\emph{two} (the $\sigma$-pairing is integrality-forced mod $11$, \vref{v142}); R2's Q-system
+identification holds at the finite Lie level (graded Frobenius hull, \vref{v143}) --- the residue is
+\emph{one} conformal-net statement; and R1's det-ratio cancellation is derived within the SdS family
+($e_2$-rigidity, \vref{v144}), with the finite-weight absorption obstruction stated sharply. R3 is
+untouched.
 \end{keybox}
 
 \begin{keybox}[The carrier chapter: the interior is free, the structure is the certificate \mE/\mC\ (\veri{v113\_quasifree\_kernel.py})]

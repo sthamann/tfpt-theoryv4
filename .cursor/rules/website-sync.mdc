@@ -14,11 +14,15 @@ documents and the ledger (the ledger wins on any disagreement).
 
 ## What drives the site (data layer)
 
-- `website/lib/papers.ts` — the **8 documents** (number 0 = `introduction`, 1 =
-  `tfpt_1_architecture_e8`, 2 = `tfpt_2_standard_model`, 3 = `tfpt_3_e8_audit_bootstrap`,
-  4 = `tfpt_4_frontier`, 5 = `tfpt_horizon_readouts`, 6 = `origin_theory`,
-  7 = `tfpt_research_contracts`): abstract, sections, `keyFormulas`, `highlights`, status.
-- `website/lib/predictions.ts` — the prediction surface (status = `[I]/[L]/[N]/[P]/[A]` grades).
+- `website/lib/papers.ts` — the **9 documents** (number 0 = `introduction`, 1–5 = the
+  numbered papers `tfpt_1_architecture_e8` … `tfpt_5_redteam`, 6–8 = the companions
+  `tfpt_horizon_readouts` ("Appendix H"), `origin_theory`, `tfpt_research_contracts` —
+  companions carry a `label` and are never shown as "Paper N"): abstract, sections,
+  `keyFormulas`, `highlights`, status.
+- `website/lib/predictions.ts` — the prediction surface. **Markers on the website use the
+  public four-class display system `[E]/[C]/[O]/[X]`** (same as the PDFs); the fine
+  per-claim types (Identity, Lattice, Formal, Numerical, Physical, Axiom) live in the
+  ledger and may be named in prose, but never as bare bracket badges.
 - `website/lib/glossary.ts` — `GlossTerm` vocabulary.
 - `website/lib/release.ts` — per-PDF version / bytes / SHA-256 (refreshed by
   `bash build.sh website`; new PDFs still need their entry added by hand once).

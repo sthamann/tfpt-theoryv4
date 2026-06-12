@@ -60,28 +60,28 @@ const TONE: Record<
   { label: string; bg: string; text: string; ring: string; bar: string }
 > = {
   core: {
-    label: "[I] / [L]",
+    label: "[E]",
     bg: "bg-blue-500/15",
     text: "text-blue-200",
     ring: "ring-blue-400/30",
     bar: "from-blue-500 to-violet-500",
   },
   bridge: {
-    label: "[N]",
+    label: "[E]",
     bg: "bg-emerald-500/15",
     text: "text-emerald-200",
     ring: "ring-emerald-400/30",
     bar: "from-emerald-500 to-teal-500",
   },
   conditional: {
-    label: "[P]",
+    label: "[C]",
     bg: "bg-orange-500/15",
     text: "text-orange-200",
     ring: "ring-orange-400/30",
     bar: "from-orange-500 to-red-500",
   },
   downstream: {
-    label: "[A]",
+    label: "[O]",
     bg: "bg-fuchsia-500/15",
     text: "text-fuchsia-200",
     ring: "ring-fuchsia-400/30",

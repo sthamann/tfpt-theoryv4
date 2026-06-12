@@ -3,6 +3,24 @@
  Stand: 2026-06-08  |  verankert in v81_singular_pencil_matrices.py (11/11), Wolfram 116/116
 ================================================================================
 
+NACHTRAG 2026-06-12 (R1-R5-Angriffsrunde, v141-v144):
+  - R5: die Z3-Deck-Wahl ist ABGELEITET (v141): der Integer-Deck G=TA*Sigma legt
+    Charakter 2 auf die Q+=1-Linie -> geometrischer Deck = sheet-getwistete Klasse,
+    i^{Q+} ausgeschlossen; nur die etablierte Sheet-Z2 bleibt. GATE.QGEO hat keine
+    diskrete Freiheit mehr (FLAV.QGEO.06).
+  - R4': drei Paarungen -> ZWEI (v142): Integer-Kovektoren im (1,a,sigma)-Frame =
+    Index-11-Untergitter (x-3y+z = 0 mod 11); sigma-Paarung erzwungen, Paritaet
+    erzwingt gerades t. Rest: (|Z2|, rank E8) etablieren (GATE.UWALL.12).
+  - R2: Q-System-Identifikation gilt auf dem ENDLICHEN Lie-Level (v143): Koset-
+    Dualitaet + Killing-Paarung + Simple-Current-Orbits = C[Z4]-Fusion; Rest = EINE
+    Conformal-Net-Aussage (GATE.METRIC.09).
+  - R1: Det-Ratio-Cancellation in-family ABGELEITET (v144): r_b*r_c = 1 - Delta^2/3
+    exakt (e2-Rigiditaet) -> Ratio (1-Delta^2/3)^(4/3), kein Term erster Ordnung;
+    Defizit-Koeffizient 32/27 = |mu4|(2/3)^3 (Audit). Absorption der endlichen
+    Gewichte bleibt [C], Obstruktion (6 -> 14/3) scharf benannt (HOR.CLOCK.12).
+  - R3: angegriffen, NICHTS gelandet -- SEAM.THEOREM.01 unveraendert offen [O].
+  - Suite 144 Module gruen; Wolfram-Extension 211/211.
+
 KURZFASSUNG (ein Satz)
 ----------------------
 Die Anchorblock-Determinante des Massentransport-Pencils, det B(K+xQ) = (3x+2)(3x+5),

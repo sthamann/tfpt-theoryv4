@@ -17,9 +17,9 @@ interface Layer {
 const LAYERS: Layer[] = [
   {
     level: 1,
-    label: "[A] Axioms — declared inputs",
+    label: "[O] Axioms — declared inputs",
     short: "Axiom",
-    examples: "c₃ = 1/(8π) (P1) · five-slot carrier g_car = 5 (P2 — since v108–v113 reduced to the boundary-net premise: gate closes ⇒ carrier becomes [L])",
+    examples: "c₃ = 1/(8π) (P1) · five-slot carrier g_car = 5 (P2 — since v108–v113 reduced to the boundary-net premise: gate closes ⇒ carrier becomes [E])",
     tone: "from-slate-600 to-slate-500",
     ring: "ring-slate-400/40",
     text: "text-slate-100",
@@ -27,7 +27,7 @@ const LAYERS: Layer[] = [
   },
   {
     level: 2,
-    label: "[F] Formalised — Lean / exact script",
+    label: "[E] Formalised — Lean / exact script",
     short: "Formal",
     examples: "P2 algebra (Lean, 0 sorry) · E₈ glue machine-checked",
     tone: "from-blue-600 to-blue-500",
@@ -37,7 +37,7 @@ const LAYERS: Layer[] = [
   },
   {
     level: 3,
-    label: "[L] Lattice / Lie theorem",
+    label: "[E] Lattice / Lie theorem",
     short: "Lattice",
     examples: "E₈ = (D₅ ⊕ A₃) + μ₄ · bootstrap μ² − 5μ + 4 = 0 · order-30 Coxeter",
     tone: "from-cyan-500 to-blue-500",
@@ -47,7 +47,7 @@ const LAYERS: Layer[] = [
   },
   {
     level: 4,
-    label: "[I] Exact identity",
+    label: "[E] Exact identity",
     short: "Identity",
     examples: "240 = 16·5·3 · 248 = 240+8 · b₁ = 41/10 · det R = 8 · χ_R",
     tone: "from-emerald-500 to-teal-500",
@@ -57,7 +57,7 @@ const LAYERS: Layer[] = [
   },
   {
     level: 5,
-    label: "[N] Numerical fixed point",
+    label: "[E] Numerical fixed point",
     short: "Numerical",
     examples: "α⁻¹ = 137.0359992 · sin²θ₁₂ = 0.3067 · sin²θ₁₃ = 0.0231 · β_rad",
     tone: "from-violet-500 to-fuchsia-500",
@@ -67,7 +67,7 @@ const LAYERS: Layer[] = [
   },
   {
     level: 6,
-    label: "[P]/[A] Conditional & open",
+    label: "[C]/[O] Conditional & open",
     short: "Conditional / open",
     examples: "masses · A_s, n_s, r · η_B · Koide · (U_wall) flavor · (G_metric) QG",
     tone: "from-amber-500 to-orange-600",

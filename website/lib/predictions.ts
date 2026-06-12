@@ -11,8 +11,8 @@ export type DependencyClass =
 
 /**
  * Status markers follow the TFPT ledger grades:
- *   [I] exact identity · [L] Lie/lattice theorem · [N] numerical fixed point
- *   [P] physical/conditional · [A] axiom/open.
+ *   [E] exact identity · [E] Lie/lattice theorem · [E] numerical fixed point
+ *   [C] physical/conditional · [O] axiom/open.
  */
 export type PredictionStatus =
   | "Exact identity"
@@ -135,7 +135,7 @@ export const predictions: Prediction[] = [
     ],
     pdf: "/papers/tfpt_1_architecture_e8.pdf",
     description:
-      "The fine-structure constant is the unique positive root of the cubic closure built from c₃ and the abelian coefficient 41 = 10 b₁. Existence and uniqueness are proved; the value lands 2.9×10⁻¹⁰ (1.9σ) from CODATA-2022. Typed [N]: the coefficients are exact identities, the Ward-origin reading of the equation is conditional [P] (ledger EM.FP.01).",
+      "The fine-structure constant is the unique positive root of the cubic closure built from c₃ and the abelian coefficient 41 = 10 b₁. Existence and uniqueness are proved; the value lands 2.9×10⁻¹⁰ (1.9σ) from CODATA-2022. Typed [E]: the coefficients are exact identities, the Ward-origin reading of the equation is conditional [C] (ledger EM.FP.01).",
     category: "Coupling",
   },
   {
@@ -559,11 +559,11 @@ export const CLAIM_ID: Record<string, string> = {
 
 /** Compact status marker per prediction status grade. */
 export const STATUS_MARKER: Record<PredictionStatus, string> = {
-  "Exact identity": "[I]",
-  "Lattice theorem": "[L]",
-  "Numerical fixed point": "[N]",
-  Conditional: "[P]",
-  "Open / not forced": "[A]",
+  "Exact identity": "[E]",
+  "Lattice theorem": "[E]",
+  "Numerical fixed point": "[E]",
+  Conditional: "[C]",
+  "Open / not forced": "[O]",
 };
 
 /** Status × testability reading guide shown at the top of the surface. */

@@ -471,8 +471,23 @@ atom pairings
 line the $\sigma$-pairing is $11(11{+}t)$: divisible by $11$ for \emph{every} $t$, a perfect square
 exactly at the true $n$ ($t{=}0$). The review's predicted lift is exact as an audit identity:
 $n=\operatorname{reverse}(\sigma)+|\mu_4|e_3$ (generation flip $+$ $\mu_4$ lift at the third slot).
-\emph{R4$'$ residue \mC\ (final form):} derive the three pairings --- everything else in the chain
-anchor $\to(d,n)\to R$ is exact.
+\smallskip\\
+\noindent\textbf{Frame integrality: three pairings $\to$ two (\veri{v142\_frame\_integrality.py}).}
+The third pairing is \emph{not} independent. The pairing triples $(m\cdot\mathbf1, m\cdot a,
+m\cdot\sigma)$ of \emph{integer} covectors form an index-$11$ sublattice of $\Z^3$, cut out by the single
+congruence
+\[
+  \boxed{\ x-3y+z\equiv0 \pmod{11}\ }\qquad\text{(index $11=\|\operatorname{Pl}(K)\|_1=\det(\mathbf1|a|\sigma)$)},
+\]
+so with the two line pairings at their atoms $(x,y)=(|\Z_2|,\operatorname{rank}E_8)=(2,8)$, integrality
+\emph{forces} $z\equiv0\pmod{11}$ --- the $11(11{+}t)$ line \emph{is} the integer line. Primitivity
+forces $t$ \emph{even} (odd $t$ makes every entry of $n(t)$ even), and $t{=}0$ is the unique even $t$
+with a square $\sigma$-pairing for $|t|<88$ (the global pick keeps the square selector --- recorded
+honestly). Both line pairings are Cramer-reducible to inventoried identities ($n\cdot a=\det R$ by
+Laplace along the anchor column; $n\cdot\mathbf1=8(R^{-1}\mathbf1)_1$ with $R^{-1}\mathbf1=\tfrac14(1,1,-1)$,
+\vref{v134}) --- restructuring, not establishment.
+\emph{R4$'$ residue \mC\ (final form):} derive the \emph{two} line pairings $(|\Z_2|,\operatorname{rank}E_8)$
+--- the $\sigma$-pairing is integrality-forced; everything else in the chain anchor $\to(d,n)\to R$ is exact.
 \end{keybox}
 
 \begin{keybox}[Exterior Leg Lemma --- the quark $u/d$ leg is a $\Lambda^2F$ area, not a scalar \mE/\mC]
@@ -731,6 +746,19 @@ pairs whose sum is again a root, $\operatorname{coset}(r_1{+}r_2)=\operatorname{
 --- the checksum hull is the Q-system's graded module, realised in $248$ dimensions. The R2
 identification thus matches the Calder\'on inclusion against a structure that $E_8$ already
 \emph{carries}. \veri{v125\_glue\_qsystem.py}
+\smallskip\\
+\noindent\textbf{Graded Frobenius (\veri{v143\_graded\_frobenius.py}).} The identification holds at the
+finite Lie level: the graded module is in fact a graded \emph{Frobenius} structure,
+i.e.\ everything the Q-system demands of its module is already exact inside $E_8$ \mE: (i) \emph{coset
+duality} --- $\operatorname{coset}(-r)=-\operatorname{coset}(r)\bmod4$ for all $240$ roots ($-C_1=C_3$
+bijectively, $C_0,C_2$ self-dual), so the Killing form restricts to a \emph{nondegenerate} invariant
+pairing $g_k\times g_{-k}\to\mathbb C$; (ii) the glue character average $\tfrac14\sum_k i^{k\deg}$ is
+\emph{exactly} the carrier projector (the conditional-expectation shadow, quasi-basis index $|\Z_4|=4$);
+(iii) each glue sector is \emph{one} $W(D_5){\times}W(A_3)$ orbit with multiplicity-one dimensions
+$64=16\cdot4=(\mathbf{16},\bar{\mathbf4})$, $60=10\cdot6=(\mathbf{10},\mathbf6)$ --- simple currents,
+sector ring $=\Z_4=$ the $\mathbb C[\Z_4]$ fusion, halfway subgroup $\{0,2\}=SO(16)_1$. \emph{R2 residue
+\mC\ (final form):} exactly \emph{one} conformal-net statement remains --- the seam--Calder\'on inclusion
+of the $16$-Majorana \emph{net} carries this Q-system --- with no remaining finite freedom.
 
 
 \begin{lemma}[G3--G4 --- reflection positivity, fixed and integrated]

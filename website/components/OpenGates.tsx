@@ -18,7 +18,7 @@ interface Gate {
 const GATES: Gate[] = [
   {
     tag: "Interface 1",
-    marker: "[A]",
+    marker: "[O]",
     title: "v_geo — the one scale anchor",
     body: "The quark mass ratios are closed (Readout Rigidity, c_u/c_d = 55/117 on the discrete selector stratum) and the selector triangle pins R columnwise (the dual pair (d,n), v136/v139). Only the absolute amplitude scale v_geo remains — the same dimensionful anchor as gravity's 1/G; finite, algebraic and falsifiable. (Historical label: U_wall.)",
     formula: "\\det R = 8, \\ \\operatorname{Spec}(Q_+)=\\{1,2,3\\} \\ \\text{fixed};\\ U_{\\mathrm{point}} \\to v_{\\mathrm{geo}}",
@@ -26,7 +26,7 @@ const GATES: Gate[] = [
   },
   {
     tag: "Interface 2",
-    marker: "[B]/[A]",
+    marker: "[C]/[O]",
     title: "G_net — the metric-sector inclusion",
     body: "R + R² is heat-kernel grounded (G2) and the admissible IR sector is gap-decoupled (G5, Δ_eff = 1.648 > 0). The closing statement is exactly ONE theorem: the seam–Calderón inclusion has Jones index 4 = |μ₄| (the μ₄ simple-current extension of the carrier net), from which holomorphy and the unique (E₈)₁ bulk follow (LR/KLM/BKLR). Full QG closure is a certification layer, not a prerequisite for testing the readouts. (Historical label: G_metric.)",
     formula: "[\\,(E_8)_1 : (D_5)_1\\times(A_3)_1\\,] = 4 = |\\mu_4| \\ \\Rightarrow\\ \\text{holomorphic } c = 8",
@@ -34,7 +34,7 @@ const GATES: Gate[] = [
   },
   {
     tag: "Interface 3",
-    marker: "[B]/[P]",
+    marker: "[C]/[C]",
     title: "F_transfer — source→pole / relic / cosmology",
     body: "Koide, η_B, the axion relic scale and m_p/m_e are four instances of one missing functor F_transfer — the continuous transport from compiler source data to measured observables (Koide source→pole; η_B source→Boltzmann relic; axion scale→abundance; m_p/m_e→QCD/EW matching). Each has a genuine handle but is a transfer target, deliberately not claimed as a primitive compiler output.",
     tone: "border-slate-500/30 bg-slate-500/5",
