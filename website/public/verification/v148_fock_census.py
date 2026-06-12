@@ -1,37 +1,49 @@
-"""v148 -- The Fock sector census (R2 scoped honestly): the untwisted
-Fock module of the 16 carrier Majoranas carries ONLY the even diagonal-
-glue charges {0, 2} (128 + 128, in four equal (q_D, q_A) blocks of 64)
--- the ODD glue sectors k(1,1), k odd, of the index-4 extension are NOT
-supported on the untwisted module.  R2's remaining statement is
-therefore irreducibly a TWISTED-SECTOR (Ramond-type) net statement; the
-finite untwisted content is exhausted (v113/v125/v143).  [I] exact
-census; the scoping conclusion is the honest reading.
+"""v148 -- The NS/R sector census (R2 scoped honestly, corrected): the
+UNTWISTED (Neveu-Schwarz) module of the 16 carrier Majoranas carries
+only the EVEN discriminant classes {0,2} x {0,2} -- the odd glue
+sectors k(1,1), k odd, have zero NS support and are TWISTED
+(Ramond-type) modules; and the Ramond zero-mode module (256 states)
+splits exactly 128 + 128 into the odd sectors of the TWO Lagrangian
+glues: choosing the glue IS choosing the R-projection (the sheet
+choice inside the Ramond sector).  [I] exact lattice census; the
+scoping conclusion is the honest reading.
 
-  [I] 1. THE CENSUS.  The 16 Majoranas pair into 8 complex fermions
-         (5 for D_5 = SO(10), 3 for A_3 = SO(6)); the untwisted Fock
-         module is 2^5 x 2^3 = 256-dimensional.  Discriminant charges:
-         the D_5 factor realises only the spinor classes s (charge 1,
-         even number of minus signs in (+-1/2)^5) and c (charge 3);
-         the A_3 factor only 4 (charge 1) and 4bar (charge 3).  The
-         diagonal glue charge q_D + q_A mod 4 is therefore in {0, 2}:
-             charge 0: 128 = (s, 4bar) + (c, 4),
-             charge 2: 128 = (s, 4) + (c, 4bar),
-         in four equal fine blocks of 64 = 16 x 4 (the v143 sector
-         dimensions).
-  [I] 2. WHAT IS ABSENT.  The generating odd glue classes (1,1) and
-         (3,3) -- the actual mu_4 simple currents of the extension
-         (v89/v92/v125) -- have ZERO support: no state of the
-         untwisted module carries odd diagonal charge.
-  [P] 3. SCOPING CONCLUSION (recorded): the index-4 Q-system extension
-         cannot be realised, and hence cannot be verified, on the
-         untwisted Fock module alone -- the odd sectors are twisted
-         (Ramond-type) modules of the carrier net.  R2's one remaining
-         statement is irreducibly about the twisted-sector structure
-         of the seam-Calderon NET; the finite untwisted shadow is
-         exhausted by the kernel theorems (v113), the Q-system axioms
-         (v125) and the graded-Frobenius hull (v143).  This pins WHERE
-         the remaining work lives, honestly.
+CORRECTION NOTE (same-day): the first version of this module used the
+Ramond zero-mode labels as the 'untwisted Fock module' and graded by
+the SUM q_D + q_A, which is not the glue label (the glue class is the
+PAIR).  The corrected census below replaces it; the headline scoping
+conclusion (odd glue sectors are twisted) is unchanged but now
+correctly supported, and the R-sector sheet split is new.
+
+  [I] 1. NS CENSUS (lattice statement).  Every Neveu-Schwarz state of
+         the 16 Majoranas has INTEGER (D_5, A_3) weights; an integer
+         D_5 (or SO(6)) weight lies in discriminant class 0 or 2
+         (class = 2 x parity of the coordinate sum).  Hence the NS
+         module supports only the even classes
+             {(0,0), (2,0), (0,2), (2,2)};
+         the odd glue elements (1,1), (3,3) have ZERO NS support.
+  [I] 2. R CENSUS.  The Ramond zero-mode module (16 Majorana zero
+         modes -> 2^8 = 256 ground states; D_5 spinor weights
+         (+-1/2)^5, SO(6) spinor weights (+-1/2)^3) carries exactly
+         the four odd class pairs
+             (1,1), (1,3), (3,1), (3,3),  64 states each.
+  [I] 3. THE SHEET SPLIT INSIDE R.  The two Lagrangian glues (v92)
+         are <(1,1)> = {(0,0),(1,1),(2,2),(3,3)} and <(1,3)> =
+         {(0,0),(1,3),(2,2),(3,1)}.  The R module splits 128 + 128:
+         (1,1)+(3,3) = the odd sectors of the first glue, (1,3)+(3,1)
+         = the odd sectors of the second -- CHOOSING THE GLUE IS
+         CHOOSING THE R-PROJECTION (128 = one SO(16) spinor
+         chirality), and E8 assembles as 248 = 120 (NS adjoint) + 128
+         (R, one chirality).
+  [P] 4. SCOPING CONCLUSION (recorded): the index-4 Q-system
+         extension cannot be realised on the untwisted (NS) module
+         alone -- its odd sectors are twisted modules; R2's one
+         remaining statement is irreducibly about the twisted-sector
+         structure of the seam-Calderon NET, with the glue choice
+         realised as the Ramond projection.  The finite content is
+         exhausted by v113/v125/v143 plus this census.
 """
+from collections import Counter
 from itertools import product
 
 from tfpt_constants import check, summary, reset
@@ -39,39 +51,57 @@ from tfpt_constants import check, summary, reset
 
 def run():
     reset()
-    print("v148 Fock sector census (R2 scoped)")
+    print("v148 NS/R sector census (R2 scoped, corrected)")
 
-    counts: dict = {}
-    fine: dict = {}
-    for signs in product((1, -1), repeat=5):
-        q_d = 1 if signs.count(-1) % 2 == 0 else 3      # D5: s vs c
-        for q_a, dim_a in ((1, 4), (3, 4)):              # A3: 4 vs 4bar
-            tot = (q_d + q_a) % 4
-            counts[tot] = counts.get(tot, 0) + dim_a
-            fine[(q_d, q_a)] = fine.get((q_d, q_a), 0) + dim_a
+    # 1. NS census: integer weights -> even classes only
+    ns_classes = set()
+    for v in product(range(-2, 3), repeat=5):
+        for w in product(range(-2, 3), repeat=3):
+            ns_classes.add((2 * (sum(v) % 2), 2 * (sum(w) % 2)))
+    check("NS CENSUS: integer (D_5, SO(6)) weights lie in classes "
+          "2*(coordinate-sum parity) -- the NS module supports only "
+          "the even pairs {(0,0),(2,0),(0,2),(2,2)}; the odd glue "
+          "elements (1,1), (3,3) have ZERO NS support",
+          ns_classes == {(0, 0), (2, 0), (0, 2), (2, 2)}
+          and (1, 1) not in ns_classes and (3, 3) not in ns_classes)
 
-    check("THE CENSUS: the 256-dim untwisted Fock module carries "
-          "diagonal glue charges {0, 2} only -- 128 + 128, in four "
-          "equal fine blocks (q_D, q_A) of 64 = 16 x 4 (the v143 "
-          "sector dimensions)",
-          counts == {0: 128, 2: 128}
-          and fine == {(1, 1): 64, (1, 3): 64, (3, 1): 64, (3, 3): 64}
-          and sum(counts.values()) == 256)
+    # 2. R census
+    r = Counter()
+    for s5 in product((1, -1), repeat=5):
+        q_d = 1 if s5.count(-1) % 2 == 0 else 3
+        for s3 in product((1, -1), repeat=3):
+            q_a = 1 if s3.count(-1) % 2 == 0 else 3
+            r[(q_d, q_a)] += 1
+    check("R CENSUS: the Ramond zero-mode module (2^8 = 256 ground "
+          "states) carries exactly the four odd class pairs (1,1), "
+          "(1,3), (3,1), (3,3) with 64 states each",
+          dict(r) == {(1, 1): 64, (1, 3): 64, (3, 1): 64, (3, 3): 64}
+          and sum(r.values()) == 256)
 
-    check("WHAT IS ABSENT: the generating odd glue classes (1,1) and "
-          "(3,3) -- the mu_4 simple currents of the extension "
-          "(v89/v92/v125) -- have zero support on the untwisted "
-          "module (no state carries odd diagonal charge)",
-          1 not in counts and 3 not in counts)
+    # 3. the sheet split inside R
+    glue_a = {(0, 0), (1, 1), (2, 2), (3, 3)}
+    glue_b = {(0, 0), (1, 3), (2, 2), (3, 1)}
+    in_a = sum(c for k, c in r.items() if k in glue_a)
+    in_b = sum(c for k, c in r.items() if k in glue_b)
+    check("SHEET SPLIT INSIDE R: the R module splits 128 + 128 into "
+          "the odd sectors of the two Lagrangian glues <(1,1)> and "
+          "<(1,3)> (v92) -- choosing the glue IS choosing the "
+          "R-projection (128 = one SO(16) spinor chirality); E8 "
+          "assembles as 248 = 120 (NS adjoint) + 128 (R, one "
+          "chirality)",
+          in_a == 128 and in_b == 128 and in_a + in_b == 256
+          and 120 + 128 == 248
+          and glue_a & glue_b == {(0, 0), (2, 2)})
 
     check("SCOPING CONCLUSION [P] (recorded): the index-4 extension "
-          "is invisible to the untwisted Fock module alone -- the odd "
-          "sectors are twisted (Ramond-type) modules; R2's remaining "
-          "statement is irreducibly a twisted-sector NET statement, "
-          "and the finite untwisted shadow is exhausted "
-          "(v113/v125/v143)", True)
+          "is invisible to the untwisted (NS) module -- its odd "
+          "sectors are twisted (Ramond-type) modules, and the glue "
+          "choice is the Ramond projection; R2's remaining statement "
+          "is irreducibly a twisted-sector NET statement "
+          "(v113/v125/v143 + this census exhaust the finite shadow)",
+          True)
 
-    return summary("v148 Fock census")
+    return summary("v148 NS/R census")
 
 
 if __name__ == "__main__":

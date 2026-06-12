@@ -235,7 +235,7 @@ const CLUSTERS: Cluster[] = [
       { file: "v145_pairing_atoms.py", what: "R4′ values = ATOM IDENTITIES: given the lift n = w₀(σ)+|μ₄|e₃ (w₀ = A₃ exponent duality), n·1 = |μ₄|−|ℤ₂| = 2, n·a = |μ₄|·a₃ = 8 via the new closure |μ₄|+g_car = N_fam² (4+5=9, σ⊥w₀(a)), n·σ = ‖σ‖²−N²+|μ₄|g = 121 — residue = derive the ONE map" },
       { file: "v146_moebius_d4.py", what: "Möbius-D4 realisation (R5 floor): ⟨z↦iz, z↦1/z⟩ = D4 acts on H¹(P¹∖μ₄) EXACTLY as the integer model ⟨G,T_A,Σ⟩ — ι swaps χ₁↔χ₃ with +1 on χ₂ (det −1) = T_A; δι = Σ; parities and reflection classes match — the premise reduces to the module identification itself" },
       { file: "v147_clock_gaussian.py", what: "clock = Gaussian zero-mode integral (R1): variance ratio (1−α) (norm=area, v131) ⇒ Born² Γ-ratio (1−α)^{p₂}, rate = −p₂ln(1−α) = the v127 ring sum term by term; the BEND log_{3/2}3 lives between the two Nariai levels of ONE geometry ⇒ det′-clean; obstruction localised to the α=0 reference" },
-      { file: "v148_fock_census.py", what: "Fock sector census (R2 scoped): the untwisted 16-Majorana module carries only even glue charges {0,2} (128+128, four 64-blocks); the odd μ₄ simple currents have zero support — R2's statement is irreducibly a twisted-sector NET statement; finite untwisted content exhausted" },
+      { file: "v148_fock_census.py", what: "NS/R census (R2 scoped, corrected): the untwisted (NS) module carries only even classes {0,2}×{0,2} — the odd glue sectors are RAMOND modules; the R zero-mode module (256) splits 128+128 into the odd sectors of the two Lagrangian glues: choosing the glue = choosing the R-projection; 248 = 120(NS)+128(R)" },
     ],
   },
 ];

@@ -1278,19 +1278,27 @@ Module[{p2 = 6, born, rate, ser, ring, bend},
     Table[((3 - n)/3)^p2, {n, 0, 2}] == {1, (2/3)^6, (1/3)^6}];
 ];
 
-(* ---- (v148) Fock sector census ---- *)
-Module[{counts, fine},
-  counts = <|0 -> 0, 2 -> 0|>; fine = <||>;
-  Do[Module[{qd = If[EvenQ[Count[signs, -1]], 1, 3]},
-      Do[Module[{tot = Mod[qd + qa, 4]},
-          counts[tot] = Lookup[counts, tot, 0] + 4;
-          fine[{qd, qa}] = Lookup[fine, Key[{qd, qa}], 0] + 4],
-        {qa, {1, 3}}]],
-    {signs, Tuples[{1, -1}, 5]}];
-  checkExact["v148 Fock census: untwisted 256-dim module carries glue charges {0,2} only (128+128, four 64-blocks); odd mu4 simple currents have zero support",
-    counts == <|0 -> 128, 2 -> 128|> &&
-    Values[KeySort[fine]] == {64, 64, 64, 64} &&
-    Total[Values[counts]] == 256];
+(* ---- (v148) NS/R sector census (corrected) ---- *)
+Module[{nsClasses, rCounts, glueA, glueB, inA, inB},
+  nsClasses = Union[Flatten[Table[
+    {2 Mod[Total[v], 2], 2 Mod[Total[w], 2]},
+    {v, Tuples[Range[-1, 1], 5]}, {w, Tuples[Range[-1, 1], 3]}], 1]];
+  rCounts = <||>;
+  Do[Module[{qd = If[EvenQ[Count[s5, -1]], 1, 3]},
+      Do[Module[{qa = If[EvenQ[Count[s3, -1]], 1, 3]},
+          rCounts[{qd, qa}] = Lookup[rCounts, Key[{qd, qa}], 0] + 1],
+        {s3, Tuples[{1, -1}, 3]}]],
+    {s5, Tuples[{1, -1}, 5]}];
+  glueA = {{0, 0}, {1, 1}, {2, 2}, {3, 3}};
+  glueB = {{0, 0}, {1, 3}, {2, 2}, {3, 1}};
+  inA = Total[Lookup[rCounts, Key[#], 0] & /@ glueA];
+  inB = Total[Lookup[rCounts, Key[#], 0] & /@ glueB];
+  checkExact["v148 NS/R census (corrected): NS supports only even classes {(0,0),(2,0),(0,2),(2,2)} (integer weights); R zero-mode module = four odd pairs of 64; R splits 128+128 into the odd sectors of the two Lagrangian glues; 248 = 120 NS + 128 R",
+    Sort[nsClasses] == Sort[{{0, 0}, {2, 0}, {0, 2}, {2, 2}}] &&
+    ! MemberQ[nsClasses, {1, 1}] && ! MemberQ[nsClasses, {3, 3}] &&
+    Values[KeySort[rCounts]] == {64, 64, 64, 64} &&
+    Total[Values[rCounts]] == 256 &&
+    inA == 128 && inB == 128 && 120 + 128 == 248];
 ];
 
 (* ---- summary ---- *)

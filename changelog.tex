@@ -139,11 +139,17 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
   \vref{v127} ring sum; the two quantum weights share \emph{one} Nariai geometry, so the
   bend $\log_{3/2}3$ carries no determinant correction --- the \vref{v144} obstruction is
   localised to the $\alpha=0$ reference (ledger \texttt{HOR.CLOCK.13}).
-\item \textbf{R2: the Fock sector census (\vref{v148}).} The untwisted $16$-Majorana
-  module carries only even glue charges $\{0,2\}$ ($128{+}128$, four $64$-blocks); the
-  odd $\mu_4$ simple currents have zero support $\Rightarrow$ the one remaining net
-  statement is irreducibly twisted-sector; the finite untwisted shadow is exhausted
-  (ledger \texttt{GATE.METRIC.10}).
+\item \textbf{R2: the NS/R sector census (\vref{v148}).} The untwisted (Neveu--Schwarz)
+  module carries only the \emph{even} discriminant classes (integer weights), so the odd
+  $\mu_4$ simple currents have zero NS support --- they are Ramond modules; the R
+  zero-mode module ($256$) splits $128{+}128$ into the odd sectors of the \emph{two}
+  Lagrangian glues: choosing the glue \emph{is} choosing the R-projection
+  ($248=120_{\mathrm{NS}}{+}128_{\mathrm R}$); the one remaining net statement is
+  irreducibly twisted-sector (ledger \texttt{GATE.METRIC.10}). \emph{Correction note
+  (same day):} the first version of \vref{v148} graded the Ramond labels by the sum
+  $q_D{+}q_A$ (not the glue label) and called that module untwisted; the census was
+  rewritten as above --- conclusion unchanged, support corrected, the R-sector sheet
+  split is new.
 \item \textbf{Bookkeeping.} Suite at $148$ modules, all green; Wolfram extension
   $215/215$ (README $+$ \texttt{GATE.WOLFRAM.02} $+$ website counter in lock-step);
   status surfaces (intro card, \texttt{tfpt\_1}, \texttt{origin\_theory} third update,
