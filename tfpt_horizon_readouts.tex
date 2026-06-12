@@ -502,6 +502,26 @@ $\det'_n/\det'_{dS}=1+O(\text{deficit})$ (non-zero-mode determinant cancellation
 near-Nariai geometry) --- the one remaining computation of R1.
 \end{winbox}
 
+\begin{winbox}[The det-ratio anomaly is the Koide constant \tI/\tP\ (\veri{v132\_detratio\_anomaly.py})]
+The det-ratio question acquires its first \emph{exact} invariant. The Ginsparg--Perry sphere operator
+on the unit $S^2$ is $L=-\Delta-2$ (the $-2=-|\Z_2|$ is the v104 modulus mass), with eigenvalues
+$(l{+}2)(l{-}1)$ and kernel the three $l{=}1$ zero modes. Its heat coefficient is made of atoms \tI:
+$a_1=\tfrac R6-E=\tfrac13+2=\tfrac1{\Nfam}+|\Z_2|=\tfrac73$, and the scaling anomaly of the
+non-zero-mode determinant is
+\[
+  \boxed{\ \zeta(0)\big|_{\det'}=a_1-\dim\ker=\tfrac73-3=-\tfrac23=-\frac{|\Z_2|}{\Nfam}\ }
+\]
+--- confirmed independently by numerical continuation of the heat trace ($\sim10^{-7}$): \textbf{the
+det-ratio anomaly is the Koide constant}, the eighth appearance of $2/3$ and the first as a
+\emph{spectral} anomaly. \emph{Consequence \tI:} $\det'(cL)=c^{\zeta(0)}\det'(L)$ --- the determinant
+ratio between configurations is \emph{not} automatically $1$; the $S^2$-sector share of the scaling
+budget is exactly $-\tfrac23$ per Hubble-unit conversion, while the dimensionless tower itself is
+configuration-independent (pure-number GP spectrum). \emph{The budget statement \tP\ (the remaining
+step, made precise):} show the \emph{full} $\zeta(0)$ budget of the 4d Nariai fluctuation problem
+($dS_2$ $+$ gauge/ghost $+$ this $S^2$ sector) vanishes or is absorbed into the established power law
+--- the $S^2$ share is pinned exactly; nothing is claimed about the total.
+\end{winbox}
+
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.9\linewidth]{figures/seam_units.pdf}

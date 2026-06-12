@@ -248,6 +248,7 @@ const NODES: DagNode[] = [
       "v129_entropy_power_law.py",
       "v130_born_square.py",
       "v131_measure_is_area.py",
+      "v132_detratio_anomaly.py",
     ],
   },
   {

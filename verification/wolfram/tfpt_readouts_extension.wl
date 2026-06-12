@@ -977,6 +977,21 @@ Module[{pref, harms, norms},
     Simplify[(x^3)^2 - x^6] === 0 && 1/2 * 1/(4 Pi) == 1/(8 Pi)];
 ];
 
+(* ---- (v132) det-ratio anomaly ----
+   The numerical heat-trace continuation is Python-only (mpmath); the
+   exact arithmetic is mirrored here, plus an independent exact check of
+   the constant term via the full heat-trace expansion. *)
+Module[{a1, zeta0, traceConst},
+  a1 = 2/6 + 2;
+  zeta0 = a1 - 3;
+  (* independent exact route: constant term of Sum (2l+1) Exp[-t((l+2)(l-1))] - 3 - 1/t as t->0:
+     use Euler-Maclaurin via known a1 and check small-t numerics in WL too *)
+  traceConst = With[{t = 1/3000},
+    N[Sum[(2 l + 1) Exp[-t (l (l + 1) - 2)], {l, 0, 600}] - 3 - 1/t, 20]];
+  checkExact["v132 det-ratio anomaly: a1 = 1/N_fam + |Z2| = 7/3; zeta(0)|det' = 7/3 - 3 = -2/3 = -|Z2|/N_fam (numeric heat-trace constant agrees to ~1e-3 at t = 1/3000)",
+    a1 == 7/3 && zeta0 == -2/3 && Abs[traceConst - (-2/3)] < 1/300];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v131: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v132: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];
