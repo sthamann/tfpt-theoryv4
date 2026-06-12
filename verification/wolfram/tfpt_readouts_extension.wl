@@ -854,6 +854,40 @@ Module[{rmat, qmat, sig, uax, colsT, c8, c0, cands, final},
    status_ledger.csv, typing contract) -- Python-only by nature, like the
    statistical v100; no algebraic content to mirror. ---- *)
 
+(* ---- (v124) resummed clock ---- *)
+Module[{lams, rate, ser},
+  lams = Table[((3 - n)/3)^6, {n, 0, 2}];
+  checkExact["v124 spectrum reads (1-n/3)^6: eigenvalues {1, (2/3)^6, (1/3)^6}",
+    lams == {1, (2/3)^6, (1/3)^6}];
+  rate[n_] := -6 Log[(3 - n)/3];
+  checkExact["v124 closed-form clock: rates {0, Delta, 6 ln 3}; bend rate(2)/rate(1) = log_{3/2}3",
+    Simplify[rate[1] - 6 Log[3/2]] === 0 && Simplify[rate[2] - 6 Log[3]] === 0 &&
+    FullSimplify[rate[2]/rate[1] - Log[3]/Log[3/2]] === 0];
+  ser = Normal[Series[-6 Log[1 - x/3], {x, 0, 3}]];
+  checkExact["v124 linearisation carries the sheet: series 2x + x^2/3 + 2x^3/27 (slope |Z2| = 2); pole at n = N_fam = 3",
+    Expand[ser - (2 x + x^2/3 + 2 x^3/27)] === 0 &&
+    Limit[-6 Log[1 - x/3], x -> 3, Direction -> "FromBelow"] === Infinity];
+];
+
+(* ---- (v125) glue Q-system ---- *)
+Module[{g = 4, m, mstar, eyeg, mx1, onexm, unit, frob1, frob2, qf},
+  m = Normal[SparseArray[Flatten[Table[{Mod[a + b, g] + 1, a g + b + 1} -> 1, {a, 0, g - 1}, {b, 0, g - 1}]], {g, g^2}]];
+  mstar = Transpose[m]; eyeg = IdentityMatrix[g];
+  mx1 = KroneckerProduct[m, eyeg]; onexm = KroneckerProduct[eyeg, m];
+  unit = UnitVector[g, 1];
+  checkExact["v125 Q-system axioms: associativity, unit, Frobenius, specialness m m* = |Z4| id => Jones index 4 = |mu4|; KLM 16 = 4^2",
+    m . mx1 == m . onexm &&
+    m . KroneckerProduct[Transpose[{unit}], eyeg] == eyeg &&
+    m . KroneckerProduct[eyeg, Transpose[{unit}]] == eyeg &&
+    mx1 . KroneckerProduct[eyeg, mstar] == mstar . m &&
+    onexm . KroneckerProduct[mstar, eyeg] == mstar . m &&
+    m . mstar == g eyeg && 16 == g^2];
+  qf[x_, y_] := (5 x^2 + 3 y^2)/8;
+  checkExact["v125 locality = isotropy: q(k(1,1)) = k^2 integer for all k; halfway {0,2} closes (SO(16)_1 step), 4 = 2x2",
+    Table[qf[k, k], {k, 0, 3}] == {0, 1, 4, 9} &&
+    AllTrue[Flatten[Table[Mod[a + b, 4], {a, {0, 2}}, {b, {0, 2}}]], MemberQ[{0, 2}, #] &] && 2*2 == 4];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v123: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v125: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

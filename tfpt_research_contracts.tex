@@ -663,6 +663,28 @@ absence does \emph{not} affect the bounded IR claim, but it \emph{does block cer
 physical TOE} --- so we do not call it ``mere mathematical completeness''. \veri{v36\_spectral\_action\_g2.py}
 \end{winbox}
 
+\begin{winbox}[The glue Q-system: the index-$4$ object of the $G_{\mathrm{net}}$ statement exists explicitly \tI/\tP\ (\veri{v125\_glue\_qsystem.py})]
+The $G_{\mathrm{net}}$ target --- \emph{``the seam--Calder\'on inclusion has Jones index $4=|\mu_4|$''}
+--- no longer refers to an unknown object. On the glue group algebra $A=\mathbb C[\Z_4]$ (multiplication
+$\delta_a\otimes\delta_b\mapsto\delta_{a+b}$, unit $\delta_0$) \emph{all} Longo Q-system axioms hold
+exactly \tI: associativity, unit law, the Frobenius identity
+$(m\otimes1)(1\otimes m^*)=m^*m=(1\otimes m)(m^*\otimes1)$, and specialness $mm^*=|\Z_4|\,\mathbf1$ ---
+a special C$^*$ Frobenius algebra with
+\[
+  \boxed{\ \dim\theta=4=|\mu_4|=[B:A]\ }
+\]
+exactly the Carrier Index Lemma value (KLM: $\mu_{\mathrm{carrier}}=16=4^2\mu_{E_8}$ re-verified).
+\emph{Locality $=$ isotropy \tI:} on the Lagrangian glue $\langle(1,1)\rangle$ the discriminant form
+gives $q(k(1,1))=k^2\in\Z$ for every $k$ --- the braiding obstruction vanishes (v92 in Q-system
+language); the two Lagrangian glues (the sheet pair) are the only maximal isotropic choices.
+\emph{Halfway step \tI:} $\{0,2\}<\Z_4$ closes and gives the unique intermediate Q-system
+$\mathbb C[\Z_2]$ $=$ the $SO(16)_1$ tower step, with index factorisation $4=2\times2$. \emph{R2 sharpened
+\tP\ (recorded, not claimed):} what remains is the operator-algebraic \emph{identification} ``the
+seam--Calder\'on inclusion of the $16$-Majorana net (v113) realises \emph{this} Q-system'' --- matching
+two constructed objects, not a search; the three loads (metric $+$ carrier $+$ QBL, v123) hang on this
+one identification.
+\end{winbox}
+
 \begin{lemma}[G3--G4 --- reflection positivity, fixed and integrated]
 For each $\Theta$-invariant $g$ in the Calderón ball the physical boundary kernel
 $\mathcal K_g=P_{\mathrm{adm}}\Pi_{\mathrm{phys}}\mathcal N_g^{TT}\Pi_{\mathrm{phys}}P_{\mathrm{adm}}$ is

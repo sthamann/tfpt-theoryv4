@@ -878,4 +878,44 @@ RESIDUAL-INVENTAR AKTUALISIERT (v123, Ledger SYNTH.INVENTORY.02) --
     (4) DIE FLAVOR-SEITE HAT KEINE EIGENE OFFENE ANALYSIS-KLASSE
         MEHR: H2-Werte exakt, Adressen gepinnt, Raender Theoreme;
         Rest = fuenf eingefrorene Selektor-Integer.
+
+DIE RESUMMIERTE UHR (v124, Ledger HOR.CLOCK.03) -- der R1-Bend hat
+    eine geschlossene Form; die Job-Beschreibung transformiert:
+    (1) SPEKTRUM-LESART [I]: die eingefrorenen Transfer-Eigenwerte
+        {1, (2/3)^6, (1/3)^6} sind EXAKT lambda_n = (1 - n/N_fam)^{2p2}
+        fuer n = 0,1,2 (2p2 = 6 = Hexagon-Groesse).
+    (2) GESCHLOSSENE UHR [I]: rate(n) = -2p2 ln(1 - n/N_fam)
+        reproduziert {0, Delta, 6 ln 3}; der v107-Bend log_{3/2}3
+        wird einzeilig.
+    (3) DIE LINEARISIERUNG TRAEGT DAS BLATT [I]: rate(n) = |Z2| n +
+        n^2/3 + ... -- der Ein-Loop-Term hat Steigung EXAKT |Z2| = 2
+        relativ zur ganzzahligen klassischen GP-Uhr {0,-1,-2}:
+        Quantenuhr = blatt-verdoppelte klassische Uhr + geometrischer
+        Schwanz sum_k (n/N)^k / k.
+    (4) DIE WAND BEI N_fam [I]: rate -> oo bei n -> 3 (Pol bei der
+        Familienzahl) => die Cusp-Leiter endet bei n = 2: das
+        DREI-Niveau-Spektrum wird von der Uhr selbst erzwungen.
+    => R1 NEU GESCHAERFT [P]: leite -2p2 ln(1 - n/N_fam) aus dem
+       near-Nariai-Ein-Loop bei kappa = 1/(3pi) her; erster
+       Checkpoint: Linear-Response-Steigung |Z2| x klassisch.
+
+DAS GLUE-Q-SYSTEM (v125, Ledger GATE.METRIC.08) -- das Index-4-Objekt
+    des G_net-Satzes existiert jetzt explizit:
+    (1) Q-SYSTEM-AXIOME [I] auf A = C[Z4] (Glue-Gruppenalgebra):
+        Assoziativitaet, Unit, FROBENIUS (m x 1)(1 x m*) = m* m =
+        (1 x m)(m* x 1), SPECIALNESS m m* = |Z4| id -- alles exakt
+        => spezielle C*-Frobenius-Algebra = Longo-Q-System mit
+        dim theta = 4: JONES-INDEX [B:A] = 4 = |mu4| (v89-Wert);
+        KLM 16 = 4^2 x 1 re-verifiziert.
+    (2) LOKALITAET = ISOTROPIE [I] (v92 in Q-System-Sprache):
+        q(k(1,1)) = k^2 = (0,1,4,9), alle ganz -- Braiding-
+        Obstruktion verschwindet; die zwei Lagrange-Glues =
+        das Sheet-Paar sind die einzigen maximal isotropen Wahlen.
+    (3) HALFWAY-SUB-Q-SYSTEM [I]: {0,2} < Z4 schliesst => eindeutiges
+        Zwischen-Q-System C[Z2] = der SO(16)_1-Turmschritt, 4 = 2x2.
+    => R2 GESCHAERFT [P]: vom "finde ein Q-System" zum "identifiziere
+       die Seam-Calderon-Inklusion des 16-Majorana-Netzes mit DIESEM
+       Q-System" -- zwei konstruierte Objekte matchen, keine Suche;
+       die drei Lasten (Metrik + Carrier + QBL) haengen an dieser
+       einen Identifikation.
 ================================================================================

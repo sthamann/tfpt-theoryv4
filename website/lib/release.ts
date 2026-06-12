@@ -34,9 +34,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/introduction.pdf": {
     href: "/papers/introduction.pdf",
     ...COMMON,
-    bytes: 1003540,
+    bytes: 1005017,
     sha256:
-      "18370d49a09466a6151f491ab44bbbe9b3bfb39f3a5143cdccc1b06303b5a785",
+      "5693c76942544dee5adfafdb643cdb12fe4f7a28df69123976a2b23b56232e9a",
     changelog:
       "Compiler-closure reading guide: two axioms, the dependency DAG, the predictions and the proof ledger.",
   },
@@ -79,9 +79,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/tfpt_horizon_readouts.pdf": {
     href: "/papers/tfpt_horizon_readouts.pdf",
     ...COMMON,
-    bytes: 632338,
+    bytes: 636442,
     sha256:
-      "f37cb1542340919cdbd9941e5ff347783054d68cb5eab0459fa818af11abcd12",
+      "8a1240cb377aca5936d801d608df7c41e1a8805cd22c64287bb6cd68c7e85659",
     changelog:
       "Appendix H — the horizon unit system: c₃ = 1/(8π) as the universal horizon thermal code.",
   },
@@ -97,9 +97,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/tfpt_research_contracts.pdf": {
     href: "/papers/tfpt_research_contracts.pdf",
     ...COMMON,
-    bytes: 631486,
+    bytes: 635275,
     sha256:
-      "64106a784ee736e3eb901a0602ca3d3a8355a594bfeb8d559f22db87e209b7bd",
+      "8bda202aaa1ea1349d71c3b2b63eb81f32cc54362cb1f548c8c950a0521d06f3",
     changelog:
       "Research contracts for the two open gates: (U_wall) flavor wall-selection and (G_metric) the QG measure.",
   },
