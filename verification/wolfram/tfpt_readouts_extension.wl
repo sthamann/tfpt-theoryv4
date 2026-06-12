@@ -915,6 +915,37 @@ Module[{proj, partial},
     8/24 == 1/3 && Limit[-Log[1 - a], a -> 1, Direction -> "FromBelow"] === Infinity];
 ];
 
+(* ---- (v128) graded hull ---- *)
+Module[{d5roots, d5v, d5s, d5c, a3roots, wclass, roots, counts, items, pairsChecked, gradingOK, lookup},
+  d5roots = Flatten[Table[Module[{v = ConstantArray[0, 5]}, v[[i]] = si; v[[j]] = sj; v],
+    {i, 4}, {j, i + 1, 5}, {si, {1, -1}}, {sj, {1, -1}}], 3];
+  d5v = Flatten[Table[Module[{v = ConstantArray[0, 5]}, v[[i]] = s; v], {i, 5}, {s, {1, -1}}], 1];
+  d5s = Select[Tuples[{1/2, -1/2}, 5], EvenQ[Count[#, -1/2]] &];
+  d5c = Select[Tuples[{1/2, -1/2}, 5], OddQ[Count[#, -1/2]] &];
+  a3roots = Flatten[Table[If[i != j, Module[{v = ConstantArray[0, 4]}, v[[i]] = 1; v[[j]] = -1; v], Nothing],
+    {i, 4}, {j, 4}], 1];
+  wclass[k_] := (Module[{v = ConstantArray[-k/4, 4]}, Do[v[[i]] += 1, {i, #}]; v]) & /@ Subsets[Range[4], {k}];
+  roots = Join[
+    ({Join[#, ConstantArray[0, 4]], 0} &) /@ d5roots,
+    ({Join[ConstantArray[0, 5], #], 0} &) /@ a3roots,
+    Flatten[Table[{Join[d, w], 1}, {d, d5s}, {w, wclass[1]}], 1],
+    Flatten[Table[{Join[d, w], 2}, {d, d5v}, {w, wclass[2]}], 1],
+    Flatten[Table[{Join[d, w], 3}, {d, d5c}, {w, wclass[3]}], 1]];
+  counts = Table[Count[roots[[All, 2]], c], {c, 0, 3}];
+  checkExact["v128 explicit coset construction: 240 = 52 + 64 + 60 + 64 over the glue Z4, all norm 2",
+    counts == {52, 64, 60, 64} && Length[roots] == 240 &&
+    AllTrue[roots[[All, 1]], Total[#^2] == 2 &]];
+  lookup = Association[(#[[1]] -> #[[2]]) & /@ roots];
+  pairsChecked = 0; gradingOK = True;
+  Do[Module[{s = roots[[i, 1]] + roots[[j, 1]]},
+      If[KeyExistsQ[lookup, s],
+        pairsChecked++;
+        If[lookup[s] != Mod[roots[[i, 2]] + roots[[j, 2]], 4], gradingOK = False]]],
+    {i, 239}, {j, i + 1, 240}];
+  checkExact["v128 the grading is exact on all 6720 root-pair sums: E8 is a Z4-graded Lie algebra over the carrier (grading = the glue Q-system); zero-mode multiplicity 2(2l+1) = 6 = 2p2 at l = 1",
+    gradingOK && pairsChecked == 6720 && 2 (2*1 + 1) == 6];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v127: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v128: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

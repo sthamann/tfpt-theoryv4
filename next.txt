@@ -964,4 +964,32 @@ DIE UHR IST EINE LOG-DETERMINANTE (v127, Ledger HOR.CLOCK.05) -- der
        Gewicht und Multiplizitaet 2p2 die Ring-Summe ist -- "die
        Seam-Uhr ist die RPA-Determinante EINER Mode auf SECHS
        Sites". Typ identifiziert; Herleitung offen.
+
+GRADED HULL + NULLMODEN-MULTIPLIZITAET (v128, Ledger E8.GRADE.01) --
+    beide benannten Rechnungen (R1/R2) bekommen ihre strukturellen
+    Anker:
+    R2-HAELFTE:
+    (1) EXPLIZITE COSET-KONSTRUKTION [I]: die 240 E8-Wurzeln als
+        explizite Norm-2-Vektoren in D5 (+) A3 + Glue-Koordinaten;
+        Zerlegung 240 = 52 + 64 + 60 + 64 ueber die Glue-Z4
+        (C0 = Carrier 40+12; C1 = (16,4b); C2 = (10,6); C3 = (16b,4))
+        -- das v89-Branching als Vektoren.
+    (2) DIE GRADUIERUNG IST EXAKT [I]: fuer ALLE 6720 Wurzelpaare,
+        deren Summe wieder Wurzel ist, gilt coset(r1+r2) =
+        coset(r1) + coset(r2) mod 4 -- E8 IST EINE Z4-GRADUIERTE
+        LIE-ALGEBRA ueber dem Carrier; die Graduierungsgruppe IST
+        der Glue = das v125-Q-System: die Pruefsummen-Huelle ist
+        das graduierte Modul des Q-Systems (248-dim realisiert).
+    R1-HAELFTE:
+    (3) DIE MULTIPLIZITAET IST DIE NULLMODEN-ZAHL [I]: der GP-l=1-
+        Sektor (die Nullmoden, lambda in {0,-1}) hat 2l+1 = 3 Moden;
+        Blatt-Verdopplung gibt 2x3 = 6 = 2p2 = |R+(A3)| -- die
+        Ring-Multiplizitaet der v127-Uhr = die blatt-verdoppelte
+        Nullmoden-Zahl. [P]-Lesart: Nullmoden sind genau die Moden,
+        die in dS-Ein-Loop-Physik nichtperturbative Resummation
+        erzwingen -- das natuerliche Zuhause der sechs RPA-Tuerme.
+    => REST [P]: R1 = RPA-Determinante auf den sechs blatt-
+       verdoppelten l=1-Nullmoden berechnen; R2 = Seam-Calderon-
+       Inklusion mit der jetzt IN E8 selbst exhibierten Z4-Graduierung
+       identifizieren. Beide Anker fixiert.
 ================================================================================

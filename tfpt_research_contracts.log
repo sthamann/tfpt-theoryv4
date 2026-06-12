@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 05:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.8)  12 JUN 2026 05:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1192,9 +1192,14 @@ m/n/10.95 5\OML/lmm/m/it/10.95 R[]\OT1/lmr/bx/n/10.95 1\OT1/lmr/m/n/10.95 ) = [
 
 
 [10]
+Overfull \hbox (22.22044pt too wide) detected at line 696
+[]
+ []
+
+
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 741--751
+Underfull \hbox (badness 10000) in paragraph at lines 755--765
 \T1/lmr/bx/n/10.95 (+20) And that bound-ary mea-sure is a \T1/lmr/bx/it/10.95 (
 +20) rig-or-ously con-structed \T1/lmr/bx/n/10.95 (+20) net
  []
@@ -1213,11 +1218,11 @@ Package rerunfilecheck Info: File `tfpt_research_contracts.out' has not changed
 (rerunfilecheck)             Checksum: EA0F840AA5FE10FE18FBCF540447189D;594.
  ) 
 Here is how much of TeX's memory you used:
- 32503 strings out of 473190
- 640776 string characters out of 5715801
+ 32505 strings out of 473190
+ 640783 string characters out of 5715801
  1111024 words of memory out of 5000000
- 54697 multiletter control sequences out of 15000+600000
- 720167 words of font info for 361 fonts, out of 8000000 for 9000
+ 54695 multiletter control sequences out of 15000+600000
+ 720356 words of font info for 363 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  116i,14n,121p,1020b,1048s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.
@@ -1246,7 +1251,7 @@ exlive/2025/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/local/texlive/2025
 /texmf-dist/fonts/type1/public/lm/lmtti10.pfb></usr/local/texlive/2025/texmf-di
 st/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texm
 f-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tfpt_research_contracts.pdf (13 pages, 635275 bytes).
+Output written on tfpt_research_contracts.pdf (13 pages, 636113 bytes).
 PDF statistics:
  301 PDF objects out of 1000 (max. 8388607)
  197 compressed objects within 2 object streams
