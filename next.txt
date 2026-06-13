@@ -270,6 +270,31 @@ Resttore auf den Boden gepinnt, NULL eigenstaendige offene Tore):
   (A) traegt NULL eigenstaendigen offenen Inhalt mehr; was bleibt, ist genau die schon
   benannte GATE.QGEO-Realisierung plus der bewusst benannte irreduzible Kern.
 
+NACHTRAG 2026-06-13, Runde 16 (v167, TERMINAL-INVENTAR nach der (A)-Schliessung -
+die Resttore tier-weise auf den Boden gepinnt, ehrlich):
+  - Inventar v3 (v167, Linie v105->v123->v167): nach der (A)-Kette ist (A) KEINE
+    eigenstaendige Strukturklasse mehr (GATE.METRIC.16-19). Die v123-FUENF Klassen
+    kollabieren: R1 Clock, R2 Netz und R5 Q-Realisierung verschmelzen zu EINEM Tier-1-
+    Angelpunkt (Seam=Flavor=Horizont = A2-Netz-Existenz [Assembly etablierter Netz-
+    Konstruktionen] + GATE.QGEO [Seam-Rand = P^1\mu4, Kohomologie b1=N_fam=3]); R3 (EH)
+    faellt in v_geo (v152), die ambiente Messung in G_net (v76).
+  - TERMINAL-STRUKTUR (tier-weise, ehrlich):
+    * Tier 0: irreduzibler Kern {pi, v_geo} - ein THEOREM (No-Unit, v153), NICHTS zu
+      schliessen (Null Inputs ist beweisbar unerreichbar).
+    * Tier 1: EIN Angelpunkt (die Seam-Netz-Identifikation = A2-Assembly + GATE.QGEO);
+      A2 ist Lehrbuch-Mathematik (Frenkel-Kac-Segal/Kawahigashi-Longo), GATE.QGEO an
+      seinem Boden (v137/v140/v141/v146).
+    * Tier 2: GEFALTET (EH->v_geo, ambient->G_net), kein eigener Inhalt.
+    * Tier 3: F_transfer, EIN Funktor, vier getypte KONDITIONALE Schnittstellen
+      (Koide FR.KOIDE, eta_B FR.ETAB.01, m_p/m_e QCD.LAMBDA.01 [Ratio bleibt
+      open/not forced], Axion = Szenario); eta_B hat den meisten echten offenen
+      Rechenraum (thermische Leptogenese-Boltzmann).
+  - VOLLSTAENDIGKEIT: Strukturrest = EIN Angelpunkt + EIN Transfer-Funktor + Kern
+    {pi,v_geo}; eine sechste unabhaengige Klasse - oder ein neues Irreduzibles - laesst
+    das Skript scheitern. Ehrlich: Vereinheitlichung + Umtypisierung, KEIN unbedingter
+    Beweis (Ledger SYNTH.INVENTORY.03).
+  - Suite 167 Module; Wolfram-Extension unveraendert 224/224 (v167 stdlib, Python-only).
+
 KURZFASSUNG (ein Satz)
 ----------------------
 Die Anchorblock-Determinante des Massentransport-Pencils, det B(K+xQ) = (3x+2)(3x+5),

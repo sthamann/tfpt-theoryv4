@@ -88,9 +88,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/origin_theory.pdf": {
     href: "/papers/origin_theory.pdf",
     ...COMMON,
-    bytes: 864500,
+    bytes: 866398,
     sha256:
-      "d9225c98bdfdf7e5170b186d9973dd49029212b14c9b2e24f220ade2a7b7ec84",
+      "382711e50466928323368e29ba56fc1b05c425d6f878ce79a1f33109d9b994d8",
     changelog:
       "Origin Theory: the (5,3) skeleton, the triply-forced 8, the order-30 Coxeter cycle, and the gapped unique attractor.",
   },
@@ -115,9 +115,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/changelog.pdf": {
     href: "/papers/changelog.pdf",
     ...COMMON,
-    bytes: 433123,
+    bytes: 434818,
     sha256:
-      "fdae653388813ba8baca0a63e7c090835cac36ed939ad670d2f8e181c3021359",
+      "68b234d613e85de53e6992ab45c155f367b8b408fe0a7a56e93f27565d850b36",
     changelog:
       "The canonical dated changelog of every change to the theory, the suite, the papers and the website.",
   },
