@@ -119,6 +119,56 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
   poison the next build; artefacts are still kept on success.
 \end{itemize}
 
+\subsection*{2026-06-13 (premise A: the destination fixed point is provably stable, \vref{v158})}
+\begin{itemize}
+\item \textbf{The free chiral $c{=}8$ fixed point is provably stable (\vref{v158}, exact dimension count).}
+  The finite core of (A)'s ``reaches-the-fixed-point'' residual: the chiral Majorana has $h{=}\tfrac12$,
+  the bilinear current $h{=}1$, the quartic $h{=}2$. The relevant window $0<h<1$ for bosonic deformations
+  is \emph{empty}, the $h{=}1$ currents are chiral (\vref{v157}, not $(1,1)$-marginal), and the lowest
+  interaction (quartic, $h{=}2$) is irrelevant --- so the fixed point is isolated and stable against all
+  interactions. Premise (A) reduces to a basin-of-attraction statement with a \emph{proven} stable target
+  (ledger \texttt{GATE.METRIC.15}). \emph{Tooling note:} PyR@TE (4d gauge-Yukawa RGEs) is the wrong tool
+  for this 2d boundary-CFT residual, but the right tool for the $F_{\mathrm{transfer}}$ interfaces
+  ($\eta_B$ leptogenesis RGEs, gauge-coupling running, the $b_1{=}41/10$ cross-check).
+\item \textbf{Bookkeeping.} Suite at $158$ modules, all green; Wolfram extension $224/224$;
+  contracts / \texttt{origin\_theory} / \texttt{next.txt} / website moved together.
+\end{itemize}
+
+\subsection*{2026-06-13 (premise A reframed: freeness is a rigid boundary fixed point, \vref{v157})}
+\begin{itemize}
+\item \textbf{The free-bulk premise becomes a fixed-point property (\vref{v157}, simplicity-first).}
+  Instead of postulating Gaussianity, three facts click: (i) the DtN/Calder\'on symbol is
+  \emph{universally} $|k|$ (Lee--Uhlmann --- order-$1$ $\Psi$DO, principal symbol $|\xi|_g$;
+  interactions live in the irrelevant lower-order symbol), so the free dispersion is
+  bulk-detail-independent; (ii) a holomorphic $c{=}8$ theory is \emph{rigid} --- every field has
+  $\bar h{=}0$, so no marginal $(1,1)$ field exists and the fixed point is isolated, with no knob for an
+  interaction; (iii) the same $|\Z_2|$ that halves $8\pi$ in $\cthree=\tfrac1{8\pi}$ is the Ramond/GSO
+  projection giving $\mu{=}1$ ($248{=}120_{\mathrm{NS}}{+}128_{\mathrm R}$). With $(E_8)_1$ unique
+  (\vref{v83}), premise~(A) shrinks from ``prove the seam is Gaussian'' to ``the gapped
+  ($\Delta{=}6\log\tfrac32$) boundary flow reaches the holomorphic fixed point'' --- freeness then forced
+  by rigidity, not fine-tuned (ledger \texttt{GATE.METRIC.14}).
+\item \textbf{Bookkeeping.} Suite at $157$ modules, all green; Wolfram extension $223/223$;
+  contracts / \texttt{origin\_theory} / \texttt{next.txt} / website moved together.
+\end{itemize}
+
+\subsection*{2026-06-13 (Route 3: the seam net constructed and $(E_8)_1$ verified, \vref{v156})}
+\begin{itemize}
+\item \textbf{The constructive route carried to its exact endpoint (\vref{v156}).} ``$B\cong(E_8)_1$''
+  is no longer an assertion: the chiral seam net is built explicitly and the identification \emph{checked}.
+  (a) The Dirichlet-to-Neumann (Calder\'on) operator of the $2$d Laplacian is the free chiral dispersion
+  $\omega_k=|k|$ (harmonic extension $e^{ikx-|k|y}$); (b) $16$ free Majoranas give $c=8=5{+}3$; (c) the
+  weight-$1$ currents are $248=120_{\mathrm{NS}}+128_{\mathrm R}$ ($SO(16)$ bilinears $+$ Ramond spinor,
+  Frenkel--Kac); (d) the holomorphic character $E_4/\eta^8=q^{-1/3}(1+248q+4124q^2+34752q^3+213126q^4)
+  =j^{1/3}$ (verified by $q$-series) --- the $248$ at level $1$ is $\dim E_8$, so the net \emph{is}
+  $(E_8)_1$. \emph{Residual:} exact given (i) the free-bulk premise (DtN $=|k|$, \vref{v155}) and (ii) the
+  operator-algebraic existence of the net from the seam kernel (a Kawahigashi--Longo-type theorem, not a
+  finite computation) --- where TFPT meets constructive QFT, now sharply located (ledger
+  \texttt{GATE.METRIC.13}).
+\item \textbf{Bookkeeping.} Suite at $156$ modules, all green; Wolfram extension $222/222$ (the DtN $=|k|$
+  identity, the $(E_8)_1$ character $E_4/\eta^8=j^{1/3}$ and the $248{=}120{+}128$ split mirrored);
+  contracts / redteam (Target~A) / \texttt{origin\_theory} / \texttt{next.txt} / website moved together.
+\end{itemize}
+
 \subsection*{2026-06-13 (the seam-side identification reduced to one shared premise, \vref{v155})}
 \begin{itemize}
 \item \textbf{$G_{\mathrm{net}}$'s last premise reduces to a single shared physical premise

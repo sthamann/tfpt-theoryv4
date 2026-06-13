@@ -167,7 +167,7 @@ const CLUSTERS: Cluster[] = [
     ],
   },
   {
-    title: "Blind registry & red-team follow-ups (v84–v155)",
+    title: "Blind registry & red-team follow-ups (v84–v158)",
     purpose: "The frozen prediction registry and the second follow-up round: Target A merged to one residual, the CP residual quantified, N★ computed from reheating — every freeze machine-enforced.",
     accent: "from-emerald-500 to-cyan-500",
     scripts: [
@@ -243,6 +243,9 @@ const CLUSTERS: Cluster[] = [
       { file: "v153_no_unit_theorem.py", what: "No-Unit Theorem (v_geo re-typed): dimensionless data are scale-invariant under L→λL, a mass/1/G is not, so a dimensionless compiler cannot select an absolute scale; the three residuals collapse — U_point ~ v_geo, 1/G ~ v_geo², m/μ = e^{3/4} (a ratio); v_geo is an irreducible metrology primitive, not an open gap; irreducibles stay {one unit, π}" },
       { file: "v154_simple_current_theorem.py", what: "Simple-Current Extension Theorem (the central G_net theorem): A = (D5)1(x)(A3)1 extended by the isotropic glue L=<(1,1)> has index |L|=4, c=5+3=8, μ(B)=μ(A)/|L|²=16/16=1 ⇒ holomorphic ⇒ B=(E8)1 (unique even-unimodular rank-8); SO(16)1 excluded; finite realisation in hand (v125/v128/v143/v148); residue = the seam-side identification 'seam net = A'" },
       { file: "v155_quasifree_boundary.py", what: "quasi-free in ⇒ quasi-free out (Python-only): the boundary marginal of a Gaussian bulk is the compression PΓP — a contraction, hence a valid covariance — so the G_net analytic premise (v110(b)/v113 'one kernel') FOLLOWS from 'the seam bulk is a RP free field', the same premise as v59 (area law) and v150/v151 (EH); the seam-side identification reduces to ONE shared physical premise" },
+      { file: "v156_seam_net_construction.py", what: "constructive route (Route 3), exact endpoint: DtN of the 2d Laplacian = |k| (free chiral dispersion); 16 free Majoranas c=8=5+3; E8 currents 248 = 120 (NS bilinears) + 128 (R spinor); the (E8)1 character E4/eta^8 = q^{-1/3}(1+248q+4124q²+...) = j^{1/3} verified to order 4 ⇒ B=(E8)1 CHECKED not asserted; residual = free-bulk premise (v155) + net existence" },
+      { file: "v157_rigid_fixed_point.py", what: "freeness as a rigid fixed point (simplicity-first reframing of premise A): (i) the DtN/Calderón symbol is universally |k| (Lee-Uhlmann, bulk-detail-independent — the free dispersion is not a premise); (ii) a holomorphic c=8 theory has NO marginal (1,1) field (all fields h̄=0) ⇒ rigid, isolated, no room for an interaction; (iii) the same |Z2| that halves 8π in c3 IS the Ramond projection giving μ=1 (holomorphic); (iv) holomorphic c=8 unique = (E8)1 = free. Premise (A) shrinks from 'prove Gaussianity' to 'the gapped flow reaches the holomorphic fixed point'" },
+      { file: "v158_fixed_point_stable.py", what: "the free chiral c=8 fixed point is STABLE (exact dimension count, finite core of A): chiral Majorana h=1/2, bilinear current h=1, quartic h=2; the relevant window (0,1) for bosonic ops is EMPTY, the h=1 currents are chiral (not (1,1)-marginal, v157), the lowest interaction (quartic) is h=2 > 1 irrelevant ⇒ isolated stable fixed point; (A) reduces to a basin-of-attraction statement" },
     ],
   },
 ];

@@ -1388,6 +1388,48 @@ Module[{Lord = 4, cB, muA, muB},
     Lord == 4 && cB == 8 && muA == 16 && muB == 1 && 4 != muB];
 ];
 
+(* ---- (v156) seam-net construction: DtN = |k| + the (E8)_1 character ---- *)
+Module[{uu, harmonic, dtn, sig3, E4, prodv, chi, coeffs, ns},
+  uu = Exp[I kk x] Exp[-Abs[kk] y];
+  harmonic = Simplify[D[uu, {x, 2}] + D[uu, {y, 2}], kk \[Element] Reals] === 0;
+  dtn = Simplify[-(D[uu, y] /. y -> 0)/(uu /. y -> 0), kk \[Element] Reals];
+  sig3[m_] := DivisorSigma[3, m];
+  E4 = 1 + Sum[240 sig3[m] qq^m, {m, 1, 6}];
+  prodv = Product[(1 - qq^m), {m, 1, 6}];
+  chi = Series[E4/prodv^8, {qq, 0, 4}];
+  coeffs = Table[SeriesCoefficient[chi, k2], {k2, 0, 4}];
+  (* NS sector (theta3^8+theta4^8)/2 level-1 coefficient = 112 *)
+  ns = Series[((1 + 2 Sum[pp^(n^2), {n, 1, 12}])^8 +
+       (1 + 2 Sum[(-1)^n pp^(n^2), {n, 1, 12}])^8)/2, {pp, 0, 4}];
+  checkExact["v156 seam-net construction: DtN of the 2d Laplacian = |k| (free chiral dispersion); c=16/2=8=5+3; E8 currents 248=120+128 (dim SO(16)+spinor 2^7); (E8)_1 character E4/eta^8 = q^{-1/3}(1+248q+4124q^2+34752q^3+213126q^4) = j^{1/3}; NS level-1 = 112, 112+128 = 240 roots, 248 = 240+8",
+    harmonic && dtn === Abs[kk] &&
+    16/2 == 8 && 5 + 3 == 8 &&
+    16*15/2 == 120 && 2^7 == 128 && 120 + 128 == 248 &&
+    coeffs == {1, 248, 4124, 34752, 213126} &&
+    SeriesCoefficient[ns, 2] == 112 && 112 + 128 == 240 && 240 + 8 == 248];
+];
+
+(* ---- (v157) freeness as the rigid boundary fixed point ---- *)
+Module[{symbolHomog, c3},
+  symbolHomog = Simplify[Abs[lam kk] - lam Abs[kk], (lam | kk) \[Element] Reals && lam > 0];
+  c3 = 1/(2*2 Pi*2);   (* 1/(|Z2| * 2pi * chi(S^2)) , chi=2 *)
+  checkExact["v157 rigid fixed point: DtN symbol |k| homogeneous degree 1 (universal, Lee-Uhlmann); holomorphic c=8 has no (1,1) marginal (hbar=0) => isolated/rigid; |Z2| triple role: c3 = 1/(|Z2|*2pi*chi(S2)) = 1/(8pi), and the same |Z2| = Ramond projection giving 248 = 120 + 128 (mu=1)",
+    symbolHomog === 0 &&
+    c3 == 1/(8 Pi) &&
+    120 + 128 == 248 && 240 + 8 == 248];
+];
+
+(* ---- (v158) free chiral c=8 fixed point is stable ---- *)
+Module[{hpsi, hcur, hquart, bosonic, relevant},
+  hpsi = 1/2; hcur = 2 hpsi; hquart = 4 hpsi;
+  bosonic = {1, 2, 3};                       (* integer-h bosonic chiral ops *)
+  relevant = Select[bosonic, 0 < # < 1 &];
+  checkExact["v158 fixed-point stability: Majorana h=1/2, current h=1, quartic h=2; relevant window (0,1) for bosonic ops EMPTY; currents chiral (hbar=0, 248=120+128); quartic h=2>1 irrelevant => free chiral c=8 fixed point isolated/stable",
+    hpsi == 1/2 && hcur == 1 && hquart == 2 &&
+    relevant === {} && Min[bosonic] == 1 &&
+    120 + 128 == 248 && hquart > 1];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v154: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v158: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

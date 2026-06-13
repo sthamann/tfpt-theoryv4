@@ -163,6 +163,9 @@ MODULES = [
     ("v153_no_unit_theorem", "No-Unit Theorem: a dimensionless compiler cannot make an absolute scale; v_geo = irreducible metrology primitive"),
     ("v154_simple_current_theorem", "Simple-Current Extension Theorem: (D5)1(x)(A3)1 |x <(1,1)> = (E8)1; the central G_net closing theorem"),
     ("v155_quasifree_boundary", "quasi-free in => quasi-free out: G_net's analytic premise = the Gaussian-bulk premise of v59/v150 (Python-only)"),
+    ("v156_seam_net_construction", "Route 3: DtN = |k| free dispersion + the (E8)1 character E4/eta^8 = j^{1/3} (248 at level 1); B=(E8)1 verified, not asserted"),
+    ("v157_rigid_fixed_point", "freeness as the RIGID holomorphic c=8 boundary fixed point: universal DtN |k| + no (1,1) marginal + |Z2| triple role; reframes premise (A)"),
+    ("v158_fixed_point_stable", "exact operator-dimension count: the free chiral c=8 fixed point is stable (no relevant deformation, quartics irrelevant); the finite core of (A)"),
 
 ]
 

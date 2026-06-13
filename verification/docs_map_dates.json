@@ -636,7 +636,7 @@
   "date": "2026-06-12"
  },
  "tfpt_5_redteam::section::Outcome::1": {
-  "hash": "3f4f1b87dea4",
+  "hash": "087ea9322af7",
   "date": "2026-06-13"
  },
  "tfpt_horizon_readouts::front::(front matter)::1": {
@@ -684,7 +684,7 @@
   "date": "2026-06-12"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {
-  "hash": "1c7df65af121",
+  "hash": "8fe741ba9418",
   "date": "2026-06-13"
  },
  "tfpt_research_contracts::section::Certifiability and recommended order::1": {
@@ -736,7 +736,7 @@
   "date": "2026-06-12"
  },
  "origin_theory::section::Honest status::1": {
-  "hash": "98d7d10af18b",
+  "hash": "6dc1e87bbb72",
   "date": "2026-06-13"
  },
  "origin_theory::section::Appendix: computational verification::1": {

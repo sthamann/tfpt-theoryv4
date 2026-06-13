@@ -272,6 +272,9 @@ const NODES: DagNode[] = [
       "v153_no_unit_theorem.py",
       "v154_simple_current_theorem.py",
       "v155_quasifree_boundary.py",
+      "v156_seam_net_construction.py",
+      "v157_rigid_fixed_point.py",
+      "v158_fixed_point_stable.py",
     ],
   },
   {
