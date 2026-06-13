@@ -723,7 +723,7 @@ export const papers: Paper[] = [
       {
         label: "Target A residual",
         latex: "\\text{holomorphy} + c = 8 \\;\\Leftrightarrow\\; [\\mathcal{B} : \\mathcal{A}] = 4 = |\\mu_4|",
-        description: "One statement; E₈ and the unique 2D bulk then follow. [C/O]",
+        description: "One statement; E₈ and the unique 2D bulk follow. Since reduced to zero new gates: (A) factors into the already-open A2 + GATE.QGEO (v160–v165). [C/O]",
       },
       {
         label: "Same-c rival excluded",
@@ -1036,7 +1036,7 @@ export const papers: Paper[] = [
       { label: "Interfaces", value: "3", description: "v_geo (scale) · G_net (metric) · F_transfer (downstream)" },
       { label: "U_point", value: "→ v_geo", description: "Flavor interface reduced: the single overall scale (= 1/G anchor)" },
       { label: "c_u/c_d", value: "55/117", description: "Closed by Readout Rigidity" },
-      { label: "G_net", value: "index 4", description: "Closing statement: the μ₄ index-4 seam-net inclusion ⇒ (E₈)₁" },
+      { label: "G_net", value: "index 4", description: "Closing statement: the μ₄ index-4 seam-net inclusion ⇒ (E₈)₁; the free-bulk premise (A) factors into A2 + GATE.QGEO, zero new gates (v160–v165)" },
       { label: "v_geo", value: "1 scale", description: "Dimensional-analysis floor: one scale + π; shared by flavor & gravity" },
     ],
   },

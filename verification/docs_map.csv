@@ -146,12 +146,12 @@ tfpt_3_e8_audit_bootstrap,section,Appendix: computational verification,1263,1278
 tfpt_4_frontier,front,(front matter),1,87,v35_quark_qcd_boundary.py,e933f3d7dbc0,2026-06-12
 tfpt_4_frontier,section,Baryon asymmetry $\eta_B$ --- a downstream readout from the closed $\Omega_b h^2$,88,131,,0156e537e23c,2026-06-13
 tfpt_4_frontier,section,Proton/electron ratio $m_p/m_e$ --- a cross-sector ratio,132,167,v159_pyrate_gauge_crosscheck.py;v164_qcd_scale.py;v79_review_identities.py,e55f6430961c,2026-06-13
-tfpt_4_frontier,section,The Higgs quartic --- near-criticality from the free seam,168,192,v158_fixed_point_stable.py;v166_higgs_free_seam.py,e2ad0930015c,2026-06-13
-tfpt_4_frontier,section,"The Koide relation --- near $2/3$, computed exactly",193,317,v25_frontier_conjectures.py;v37_plucker_anchor.py;v82_koide_attractor_splitting.py;v93_koide_relaxation_toy.py;v99_koide_flow_time.py,0032346d157d,2026-06-13
-tfpt_4_frontier,section,"Dark matter --- the candidate is fixed, the scale is pending",318,362,v25_frontier_conjectures.py,3f588add85d8,2026-06-13
-tfpt_4_frontier,section,Full quantum gravity --- induced from the boundary kernel,363,427,v113_quasifree_kernel.py;v165_premise_a_closure.py;v36_spectral_action_g2.py;v60_lambda_metrology_branch.py,ef43a4d7b76d,2026-06-13
-tfpt_4_frontier,section,Summary,428,456,,aa45fa36a8a3,2026-06-12
-tfpt_4_frontier,section,Appendix: computational verification,457,470,v28_gravity_fR.py;v36_spectral_action_g2.py;v7_gravity_cosmo.py,e0c58709c50b,2026-06-12
+tfpt_4_frontier,section,The Higgs quartic --- near-criticality from the free seam,168,206,v158_fixed_point_stable.py;v159_pyrate_gauge_crosscheck.py;v164_qcd_scale.py;v166_higgs_free_seam.py,7f638e3bebef,2026-06-13
+tfpt_4_frontier,section,"The Koide relation --- near $2/3$, computed exactly",207,331,v25_frontier_conjectures.py;v37_plucker_anchor.py;v82_koide_attractor_splitting.py;v93_koide_relaxation_toy.py;v99_koide_flow_time.py,0032346d157d,2026-06-13
+tfpt_4_frontier,section,"Dark matter --- the candidate is fixed, the scale is pending",332,376,v25_frontier_conjectures.py,3f588add85d8,2026-06-13
+tfpt_4_frontier,section,Full quantum gravity --- induced from the boundary kernel,377,441,v113_quasifree_kernel.py;v165_premise_a_closure.py;v36_spectral_action_g2.py;v60_lambda_metrology_branch.py,ef43a4d7b76d,2026-06-13
+tfpt_4_frontier,section,Summary,442,470,,aa45fa36a8a3,2026-06-12
+tfpt_4_frontier,section,Appendix: computational verification,471,484,v28_gravity_fR.py;v36_spectral_action_g2.py;v7_gravity_cosmo.py,e0c58709c50b,2026-06-12
 tfpt_5_redteam,front,(front matter),1,76,,a5684d2b15f6,2026-06-13
 tfpt_5_redteam,section,Method,77,85,,aa670d017bc0,2026-06-12
 tfpt_5_redteam,section,Target A --- the $(E8)_1$ boundary-net identification,86,111,,a2a8182c2254,2026-06-12

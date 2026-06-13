@@ -28,7 +28,7 @@ const GATES: Gate[] = [
     tag: "Interface 2",
     marker: "[C]/[O]",
     title: "G_net — the metric-sector inclusion",
-    body: "R + R² is heat-kernel grounded (G2) and the admissible IR sector is gap-decoupled (G5, Δ_eff = 1.648 > 0). The closing statement is exactly ONE theorem: the seam–Calderón inclusion has Jones index 4 = |μ₄| (the μ₄ simple-current extension of the carrier net), from which holomorphy and the unique (E₈)₁ bulk follow (LR/KLM/BKLR). Full QG closure is a certification layer, not a prerequisite for testing the readouts. (Historical label: G_metric.)",
+    body: "R + R² is heat-kernel grounded (G2) and the admissible IR sector is gap-decoupled (G5, Δ_eff = 1.648 > 0). The closing statement is exactly ONE theorem: the seam–Calderón inclusion has Jones index 4 = |μ₄| (the μ₄ simple-current extension of the carrier net), from which holomorphy and the unique (E₈)₁ bulk follow (LR/KLM/BKLR). The free-bulk premise (A) behind it is itself no longer free-standing: it is a fixed-point theorem with the infinite Schwinger cone eliminated (cone gap = one-particle gap (2/3)⁶ by Bogoliubov second quantisation), factoring into the already-open A2 net-existence + GATE.QGEO with the irreducible core {π, v_geo} a theorem — zero new open content (v160–v165). Full QG closure is a certification layer, not a prerequisite for testing the readouts. (Historical label: G_metric.)",
     formula: "[\\,(E_8)_1 : (D_5)_1\\times(A_3)_1\\,] = 4 = |\\mu_4| \\ \\Rightarrow\\ \\text{holomorphic } c = 8",
     tone: "border-amber-400/30 bg-amber-500/5",
   },

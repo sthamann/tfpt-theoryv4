@@ -23,6 +23,8 @@ from v3_em_alpha import make_F
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "..", "figures")
 os.makedirs(OUT, exist_ok=True)
+WEB = os.path.join(HERE, "..", "website", "public", "figures")   # PNG copies for the site
+os.makedirs(WEB, exist_ok=True)
 
 C = {"blue": "#1F4E79", "green": "#1E7B45", "red": "#9B2226",
      "gold": "#B8860B", "gray": "#555555"}
@@ -540,6 +542,142 @@ def fig_trisection():
     plt.close(fig)
 
 
+def fig_rg_running():
+    """The F_transfer running: gauge couplings (b1=41/10, confinement) and the
+    Higgs near-criticality (free-seam lambda -> 0).  Backs v159/v164/v166;
+    two-loop SM betas are PyR@TE-sourced (verification/v166_higgs_free_seam.py)."""
+    from v166_higgs_free_seam import _betas, G1_MZ, G2_MZ, G3_MZ, M_Z, V_EW
+
+    Mbar = 2.435323203e18
+    scal = (1.0 / (8 * np.pi))**3.5 * Mbar         # scalaron c3^{7/2} Mbar
+    yt0, lam0 = 0.95, 125.25**2 / (2 * V_EW**2)
+    # integrate M_Z -> Mbar
+    n = 6000
+    t0, t1 = np.log(M_Z), np.log(Mbar)
+    dt = (t1 - t0) / n
+    g1, g2, g3, yt, lam = G1_MZ, G2_MZ, G3_MZ, yt0, lam0
+    xs, a1, a2, a3, lams, bls = [], [], [], [], [], []
+    for i in range(n + 1):
+        mu = np.exp(t0 + i * dt)
+        xs.append(np.log10(mu))
+        a1.append(4 * np.pi / g1**2); a2.append(4 * np.pi / g2**2); a3.append(4 * np.pi / g3**2)
+        lams.append(lam); bls.append(_betas(g1, g2, g3, yt, lam)[4])
+        b = _betas(g1, g2, g3, yt, lam)
+        g1 += b[0]*dt; g2 += b[1]*dt; g3 += b[2]*dt; yt += b[3]*dt; lam += b[4]*dt
+
+    fig, (axg, axl) = plt.subplots(1, 2, figsize=(8.6, 3.4))
+
+    # alpha_3 confinement leg below M_Z (n_f thresholds, one-loop; v164)
+    xd, a3d = [], []
+    inv3, mu = 4 * np.pi / G3_MZ**2, M_Z
+    fac = 0.985
+    while mu > 0.35:
+        nf = 5 if mu > 4.18 else (4 if mu > 1.27 else 3)
+        inv3 += (11 - 2*nf/3) / (2*np.pi) * np.log(fac)    # d(1/a3)=+(b0/2pi) dln mu
+        mu *= fac
+        if inv3 <= 0:
+            xd.append(np.log10(mu)); a3d.append(0.0); break
+        xd.append(np.log10(mu)); a3d.append(inv3)
+
+    # -- panel 1: gauge couplings --
+    axg.plot(xs, a1, color=C["blue"], lw=2, label=r"$\alpha_1^{-1}$ (U(1)$_Y$, GUT)")
+    axg.plot(xs, a2, color=C["green"], lw=2, label=r"$\alpha_2^{-1}$ (SU(2)$_L$)")
+    axg.plot(xs, a3, color=C["red"], lw=2, label=r"$\alpha_3^{-1}$ (SU(3)$_c$)")
+    axg.plot(xd, a3d, color=C["red"], lw=1.4, ls="--")
+    axg.annotate(r"slope $b_1=\frac{41}{10}$", xy=(xs[len(xs)//2], a1[len(a1)//2]),
+                 xytext=(6, -28), textcoords="offset points", fontsize=9, color=C["blue"])
+    if xd:
+        axg.annotate(r"$\alpha_3^{-1}\!\to\!0$: $\Lambda_{\rm QCD}\!\approx\!0.4$ GeV"
+                     "\n(confinement, v164)", xy=(xd[-1], 0), xytext=(8, 30),
+                     textcoords="offset points", fontsize=7.5, color=C["red"],
+                     arrowprops=dict(arrowstyle="->", color=C["red"], lw=0.8))
+    for x, lab in ((np.log10(scal), "scalaron"), (np.log10(Mbar), r"$\bar M_{\rm Pl}$")):
+        axg.axvline(x, color=C["gray"], ls=":", lw=1)
+        axg.text(x, 62, lab, rotation=90, va="top", ha="right", fontsize=7, color=C["gray"])
+    axg.set_xlabel(r"$\log_{10}(\mu/\mathrm{GeV})$")
+    axg.set_ylabel(r"$\alpha_i^{-1}(\mu)$")
+    axg.set_title("Gauge running: $b_1=41/10$, confinement, no SM unification", fontsize=9.5)
+    axg.legend(fontsize=8, loc="upper center"); axg.grid(alpha=0.25)
+
+    # -- panel 2: Higgs quartic --
+    imin = int(np.argmin(lams))
+    axl.plot(xs, lams, color=C["gold"], lw=2, label=r"$\lambda(\mu)$")
+    axl.axhline(0, color=C["gray"], lw=0.8)
+    axl.axhspan(-0.01, 0.01, color=C["green"], alpha=0.12)
+    axl.plot(xs[imin], lams[imin], "o", color=C["red"], ms=5)
+    axl.annotate(r"$\beta_\lambda=0$, $\lambda\!\approx\!0.002$"
+                 "\n(free-seam near-criticality, v166)",
+                 xy=(xs[imin], lams[imin]), xytext=(-150, 34),
+                 textcoords="offset points", fontsize=8, color=C["red"],
+                 arrowprops=dict(arrowstyle="->", color=C["red"], lw=0.8))
+    for x, lab in ((np.log10(scal), "scalaron"), (np.log10(Mbar), r"$\bar M_{\rm Pl}$")):
+        axl.axvline(x, color=C["gray"], ls=":", lw=1)
+        axl.text(x, 0.125, lab, rotation=90, va="top", ha="right", fontsize=7, color=C["gray"])
+    axl.set_xlabel(r"$\log_{10}(\mu/\mathrm{GeV})$")
+    axl.set_ylabel(r"$\lambda(\mu)$")
+    axl.set_title(r"Higgs quartic: free seam $\Rightarrow\lambda(\bar M_{\rm Pl})\!\approx\!0$",
+                  fontsize=10)
+    axl.legend(fontsize=8, loc="upper right"); axl.grid(alpha=0.25)
+
+    fig.tight_layout()
+    fig.savefig(os.path.join(OUT, "rg_running.pdf"))
+    fig.savefig(os.path.join(WEB, "rg_running.png"), dpi=150)   # standalone for the website
+    plt.close(fig)
+
+
+def fig_gauge_running():
+    """Gauge-only single panel for tfpt_2 (b1=41/10, confinement, non-unification).
+    Backs v159/v164; the two-loop SM gauge betas are PyR@TE-confirmed."""
+    from v166_higgs_free_seam import _betas, G1_MZ, G2_MZ, G3_MZ, M_Z, V_EW
+
+    Mbar = 2.435323203e18
+    scal = (1.0 / (8 * np.pi))**3.5 * Mbar
+    yt, lam = 0.95, 125.25**2 / (2 * V_EW**2)
+    n = 6000
+    t0, t1 = np.log(M_Z), np.log(Mbar)
+    dt = (t1 - t0) / n
+    g1, g2, g3 = G1_MZ, G2_MZ, G3_MZ
+    xs, a1, a2, a3 = [], [], [], []
+    for i in range(n + 1):
+        xs.append(np.log10(np.exp(t0 + i * dt)))
+        a1.append(4*np.pi/g1**2); a2.append(4*np.pi/g2**2); a3.append(4*np.pi/g3**2)
+        b = _betas(g1, g2, g3, yt, lam)
+        g1 += b[0]*dt; g2 += b[1]*dt; g3 += b[2]*dt; yt += b[3]*dt; lam += b[4]*dt
+    # confinement leg below M_Z (n_f thresholds, one-loop; v164)
+    xd, a3d, inv3, mu, fac = [], [], 4*np.pi/G3_MZ**2, M_Z, 0.985
+    while mu > 0.35:
+        nf = 5 if mu > 4.18 else (4 if mu > 1.27 else 3)
+        inv3 += (11 - 2*nf/3) / (2*np.pi) * np.log(fac)
+        mu *= fac
+        xd.append(np.log10(mu)); a3d.append(max(inv3, 0.0))
+        if inv3 <= 0:
+            break
+
+    fig, ax = plt.subplots(figsize=(6.2, 3.6))
+    ax.plot(xs, a1, color=C["blue"], lw=2, label=r"$\alpha_1^{-1}$ (U(1)$_Y$, GUT)")
+    ax.plot(xs, a2, color=C["green"], lw=2, label=r"$\alpha_2^{-1}$ (SU(2)$_L$)")
+    ax.plot(xs, a3, color=C["red"], lw=2, label=r"$\alpha_3^{-1}$ (SU(3)$_c$)")
+    ax.plot(xd, a3d, color=C["red"], lw=1.4, ls="--")
+    ax.annotate(r"slope $b_1=\dfrac{41}{10}$", xy=(xs[len(xs)//2], a1[len(a1)//2]),
+                xytext=(8, -30), textcoords="offset points", fontsize=9, color=C["blue"])
+    if xd:
+        ax.annotate(r"$\alpha_3^{-1}\!\to\!0$: $\Lambda_{\rm QCD}\!\approx\!0.4$ GeV (v164)",
+                    xy=(xd[-1], 0), xytext=(10, 26), textcoords="offset points",
+                    fontsize=7.5, color=C["red"],
+                    arrowprops=dict(arrowstyle="->", color=C["red"], lw=0.8))
+    for x, lab in ((np.log10(scal), "scalaron"), (np.log10(Mbar), r"$\bar M_{\rm Pl}$")):
+        ax.axvline(x, color=C["gray"], ls=":", lw=1)
+        ax.text(x, 62, lab, rotation=90, va="top", ha="right", fontsize=7, color=C["gray"])
+    ax.set_xlabel(r"$\log_{10}(\mu/\mathrm{GeV})$")
+    ax.set_ylabel(r"$\alpha_i^{-1}(\mu)$")
+    ax.set_title(r"Gauge running from the carrier content: $b_1=41/10$ (v159), "
+                 r"$\Lambda_{\rm QCD}$ (v164)", fontsize=9)
+    ax.legend(fontsize=8, loc="upper center"); ax.grid(alpha=0.25)
+    fig.tight_layout()
+    fig.savefig(os.path.join(OUT, "gauge_running.pdf"))
+    plt.close(fig)
+
+
 if __name__ == "__main__":
     fig_alpha_ablation()
     fig_mass_ladder()
@@ -553,4 +691,6 @@ if __name__ == "__main__":
     fig_orientation()
     fig_seam_units()
     fig_trisection()
+    fig_rg_running()
+    fig_gauge_running()
     print("figures written to", os.path.normpath(OUT))
