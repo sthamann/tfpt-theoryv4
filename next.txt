@@ -186,6 +186,62 @@ NACHTRAG 2026-06-13, Runde 12 (v160, (A) als bedingter Fixpunktsatz - der vorges
     in seiner jetzigen Form liefert das nicht (Ledger GATE.METRIC.16).
   - Suite 160 Module; Wolfram-Extension unveraendert 224/224 (v160 numerisch, Python-only).
 
+NACHTRAG 2026-06-13, Runde 13 (v161, der Kegel reduziert sich auf EIN Teilchen -
+die Scope-Praemisse von v160 wird ENTLASTET, nicht postuliert):
+  - (A)/Reduktion (v161): Hebel ist die Bogoliubov-Zweitquantisierung. Ein quasi-freier
+    Transport ist T_Sigma = Gamma(t), die Zweitquantisierung einer Einteilchen-Kontraktion
+    t auf dem 16-dim Majorana-Raum H_Sigma; der Fock-Raum graduiert nach Korrelator-Grad,
+    Gamma(t) wirkt auf Grad m als die aeussere Potenz Lambda^m(t). MASCHINELL [I]:
+    (1) spec(Gamma(t)|Grad m) = Produkte von m Einteilchen-Eigenwerten (Compound-Matrix-
+    Satz, m=0..6); (2) DER KEGEL-GAP IST DER EINTEILCHEN-GAP - der subleading-Eigenwert
+    ueber den GANZEN Kegel = (2/3)^6 exakt, also ist Praemisse 5 auf dem Kumulanten-Raum
+    DIESELBE wie auf dem 16-dim Raum (gleiche Zahl); (3) der Eigenwert-1-Sektor = Wedges
+    des Fixraums (DISKONNEKTIERTE Wick-Potenzen von K_Sigma), kein unabhaengiger fixer
+    hoeherer Kumulant; Eindeutigkeit via v113 (ein Polarisator <=> ein Vakuum, Rang=c=8).
+    (4) QUASI-FREIHEIT ERZWUNGEN [C]: die 120 = dim so(16) Grad-1-Stroeme SIND die
+    Bogoliubov-Generatoren, und v158 macht jede nicht-gaussssche Deformation irrelevant
+    => Praemisse 1 folgt aus Rigiditaet, kein Zusatz-Postulat.
+  - KONSEQUENZ: v160s DREI Voll-Kegel-Praemissen kollabieren auf EINE endliche (16-dim)
+    Einteilchen-Aussage. RESIDUUM [P]/[A]: "das Einteilchen-Symbol des Seam-RG-Transports
+    IST die gegapte Calderon-Bogoliubov-Abbildung - Fixraum = rang-8 K_Sigma (v113),
+    subleading-Gap = (2/3)^6 (v56)". ALLE Zahlen sind geliefert; offen bleibt nur die
+    physikalische Identifikation, dass der echte Seam-RG-Generator GLEICH dieser
+    Bogoliubov-Abbildung ist (Kawahigashi-Longo-Klasse = das A2-Netz-Residuum). KEINE
+    Kegel-Aussage mehr, KEIN "beweise Gaussianitaet" - eine endliche Spektral-
+    Identifikation (Ledger GATE.METRIC.17).
+  - Suite 161 Module; Wolfram-Extension unveraendert 224/224 (v161 numerisch, Python-only).
+
+NACHTRAG 2026-06-13, Runde 14 (v162, die finale Identifikation - (A) faellt auf die
+schon offenen A2 + R1 zusammen, KEIN neuer offener Punkt):
+  - (A)/Final (v162): das v161-Einteilchen-Residuum wird so weit wie moeglich erzwungen.
+    Das Symbol zerfaellt in Gap-Wert (beta) und Fixraum (alpha). (beta) IST ERZWUNGEN:
+    ein mu4-aequivarianter Generator ist in der Cusp-Basis DIAGONAL (Deck-Mittel =
+    Diagonalprojektion, sum_k U^k X U^{-k} = |mu4| diag(X) fuer U=diag(1,i,-i); Kommutant
+    von U = Diagonalalgebra), also Spektrum = Cusp-Gewichte = spec(A0*) = {0,1/3,2/3}
+    (v115), Transfer-Eigenwert (1-alpha)^{p2}, p2=6=|R+(A3)| => {1,(2/3)^6,(1/3)^6},
+    Gap 6 log(3/2) - alles Carrier-Daten; Lift auf die 16 Majoranas = A3-Subnetz-
+    Graduierung (v137). (alpha) = rang-8 Calderon-Polarisation von omega_k=|k| (v113/v156).
+  - SCHLIESSUNG [P]/[A]: mit v160 (eindeutiger quasi-freier Fixpunkt => kappa_{2n}=0) und
+    v161 (Kegel-Gap = Einteilchen-Gap) schliesst (A), GEGEBEN nur mu4-Aequivarianz +
+    Zulaessigkeit des Seam-RG-Generators. Die zwei nicht-abgeleiteten Inputs sind (i)
+    "der Seam-RG-Generator ist mu4-aequivariant + zulaessig" = die R1-Seam-Clock-
+    Identifikation (HOR.CLOCK) und (ii) operatoralgebraische Netz-Existenz = das
+    A2-Residuum (Kawahigashi-Longo). BEIDE sind schon offen => (A) traegt KEINEN
+    unabhaengigen offenen Inhalt; sie faktorisiert exakt in A2 + R1, mit allen Zahlen
+    erzwungen. Die Zahl der unabhaengigen offenen Punkte steigt NICHT; (A) ist
+    KONDITIONAL auf A2 + R1 geschlossen (eine Vereinheitlichung, ehrlich KEIN
+    unbedingter Beweis). "Free-bulk-Wolke" endgueltig weg; uebrig: zwei bereits
+    benannte Identifikationen (Ledger GATE.METRIC.18).
+  - Suite 162 Module; Wolfram-Extension unveraendert 224/224 (v162 numerisch, Python-only).
+
+  ZUSAMMENFASSUNG DER (A)-KETTE (v160-v162): (A) "die Seam ist ein freies RP-Feld" wurde
+  in drei Schritten von einer diffusen Constructive-QFT-Praemisse auf NULL neuen offenen
+  Inhalt reduziert: v160 = Fixpunktsatz (Last = Transport auf dem vollen Schwinger-Kegel);
+  v161 = Bogoliubov-Zweitquantisierung (Kegel-Gap = Einteilchen-Gap, Kegel eliminiert,
+  16-dim Rest); v162 = der 16-dim Rest faktorisiert in die schon offenen A2 (Netz) + R1
+  (Clock), alle Zahlen erzwungen. Ehrliche Endform: (A) ist KONDITIONAL geschlossen, kein
+  eigenstaendiges Tor mehr.
+
 KURZFASSUNG (ein Satz)
 ----------------------
 Die Anchorblock-Determinante des Massentransport-Pencils, det B(K+xQ) = (3x+2)(3x+5),

@@ -340,7 +340,7 @@
   "date": "2026-06-12"
  },
  "tfpt_2_standard_model::subsection::Closing the audit gates: is $M{=}41$, $K$, $Q$ derived or imported?::1": {
-  "hash": "b5681ebe3dde",
+  "hash": "72cc437073d6",
   "date": "2026-06-13"
  },
  "tfpt_2_standard_model::section::Mixing: CKM and PMNS from holonomy::1": {
@@ -584,8 +584,8 @@
   "date": "2026-06-13"
  },
  "tfpt_4_frontier::section::Proton/electron ratio $m_p/m_e$ --- a cross-sector ratio::1": {
-  "hash": "15845044bee1",
-  "date": "2026-06-12"
+  "hash": "e55f6430961c",
+  "date": "2026-06-13"
  },
  "tfpt_4_frontier::section::The Koide relation --- near $2/3$, computed exactly::1": {
   "hash": "0032346d157d",
@@ -684,7 +684,7 @@
   "date": "2026-06-12"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {
-  "hash": "fe5d28d6e094",
+  "hash": "88b0d8851397",
   "date": "2026-06-13"
  },
  "tfpt_research_contracts::section::Certifiability and recommended order::1": {

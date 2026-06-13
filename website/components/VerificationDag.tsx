@@ -275,6 +275,8 @@ const NODES: DagNode[] = [
       "v156_seam_net_construction.py",
       "v157_rigid_fixed_point.py",
       "v158_fixed_point_stable.py",
+      "v163_rg_stability_flavor.py",
+      "v164_qcd_scale.py",
     ],
   },
   {
@@ -295,6 +297,7 @@ const NODES: DagNode[] = [
       "v16_solar_dual_anchor.py",
       "v21_solar_product_quark.py",
       "v84_frozen_registry.py",
+      "v163_rg_stability_flavor.py",
     ],
   },
   {

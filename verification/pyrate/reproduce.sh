@@ -44,19 +44,24 @@ cd "$pyrate"
 rm -rf results/SM
 python3 "pyR@TE.py" -m models/SM.model -l 2 --no-LatexOutput --no-MathematicaOutput -q
 
-# 5. extract the gauge beta functions
-python3 - "$pyrate/results/SM/PythonOutput/RGEs.py" "$out" <<'PY'
+# 5. extract the gauge AND Yukawa beta functions
+python3 - "$pyrate/results/SM/PythonOutput/RGEs.py" "$out" "$here/sm_yukawa_betas.generated.txt" <<'PY'
 import re, sys
 src = open(sys.argv[1]).read()
-lines = ["PyR@TE 3 -- regenerated gauge beta functions (SM, GUT normalization)", ""]
-for g in ("g1", "g2", "g3"):
-    m = re.search(rf"def beta_{g}\(.*?\):(.*?)(?=\ndef |\Z)", src, re.S)
-    lines.append(f"### beta_{g}")
-    lines.append(m.group(1).strip())
-    lines.append("")
-open(sys.argv[2], "w").write("\n".join(lines))
-print("[reproduce] wrote", sys.argv[2])
-print("\n".join(lines))
+def dump(couplings, header):
+    lines = [header, ""]
+    for c in couplings:
+        m = re.search(rf"def beta_{c}\(.*?\):(.*?)(?=\ndef |\Z)", src, re.S)
+        lines.append(f"### beta_{c}")
+        lines.append(m.group(1).strip())
+        lines.append("")
+    return "\n".join(lines)
+gauge = dump(("g1", "g2", "g3"), "PyR@TE 3 -- regenerated gauge beta functions (SM, GUT normalization)")
+yuk = dump(("Yu", "Yd", "Ye"), "PyR@TE 3 -- regenerated Yukawa beta functions (SM)")
+open(sys.argv[2], "w").write(gauge)
+open(sys.argv[3], "w").write(yuk)
+print("[reproduce] wrote", sys.argv[2], "and", sys.argv[3])
+print(gauge)
 PY
 
 echo "[reproduce] compare with the committed evidence:"

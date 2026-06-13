@@ -1,0 +1,31 @@
+PyR@TE 3 -- SM Yukawa beta functions (one-loop), GUT normalization
+==================================================================================
+Tool      : PyR@TE 3.0  (github.com/LSartore/pyrate), model models/SM.model
+Reproduce : verification/pyrate/reproduce.sh  (re-extracts gauge AND Yukawa betas)
+Used by    : verification/v161_rg_stability_flavor.py
+
+KEY STRUCTURE (the load-bearing point for the F_transfer scale-tagging):
+every Yukawa beta is PROPORTIONAL to its own coupling, and the only term that
+ROTATES the mixing (is not flavor-universal) is the (3/2) Y Y^dagger Y piece,
+whose size is set by the LARGEST Yukawa eigenvalue squared:
+  - leptons:  driven by y_tau^2 ~ 1.0e-4   ==> PMNS running is tiny (RG-stable)
+  - up-quarks: driven by y_t^2   ~ 0.9     ==> mass-ratio running is O(10-15%)
+
+### beta_Yu (1-loop)
+    -17/20*g1**2*Yu - 9/4*g2**2*Yu - 8*g3**2*Yu
+    + 3*tr(Yd^+ Yd)*Yu + tr(Ye^+ Ye)*Yu + 3*tr(Yu^+ Yu)*Yu
+    - 3/2*Yd*Yd^+*Yu + (3/2)*Yu*Yu^+*Yu          <-- mixing-rotating term ~ y_t^2
+
+### beta_Yd (1-loop)
+    -1/4*g1**2*Yd - 9/4*g2**2*Yd - 8*g3**2*Yd
+    + 3*tr(Yd^+ Yd)*Yd + tr(Ye^+ Ye)*Yd + 3*tr(Yu^+ Yu)*Yd
+    + (3/2)*Yd*Yd^+*Yd - 3/2*Yu*Yu^+*Yd          <-- mixing-rotating term ~ y_b^2
+
+### beta_Ye (1-loop)
+    -9/4*g1**2*Ye - 9/4*g2**2*Ye
+    + 3*tr(Yd^+ Yd)*Ye + tr(Ye^+ Ye)*Ye + 3*tr(Yu^+ Yu)*Ye
+    + (3/2)*Ye*Ye^+*Ye                            <-- mixing-rotating term ~ y_tau^2
+
+The flavor-universal terms (gauge + traces) do NOT rotate the CKM/PMNS angles;
+only the Y Y^+ Y term does, and it carries the eigenvalue y_max^2. This is the
+PyR@TE-level statement behind v161.
