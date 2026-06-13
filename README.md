@@ -121,7 +121,7 @@ anchor (`1/G` is UV-sensitive, Sakharov-type induced gravity) — not a diffuse 
 
 | Item | What it is |
 |---|---|
-| `v1_*.py … v140_*.py` | 140 numbered claim checks (one file per claim cluster). |
+| `v1_*.py … v175_*.py` | 175 numbered claim checks (one file per claim cluster). |
 | `run_all.py` | Runs the whole suite; ends `ALL CHECKS PASSED`. |
 | `tfpt_constants.py` | Shared constants + `check()` harness. |
 | `predictions_frozen.json` | **Blind-prediction registry** (frozen 2026-06-09): every dimensionless prediction of record at 25 digits, locked to its formula by `v84_frozen_registry.py` on every run; exactly one `θ12` prediction of record (seed `0.306747`), `r`/`n_s` only as `N_star` bands. |
@@ -131,7 +131,7 @@ anchor (`1/G` is UV-sensitive, Sakharov-type induced gravity) — not a diffuse 
 | `audit_sync.py` | **The sync audit** (papers ↔ suite ↔ ledger ↔ changelog ↔ website, both directions); must end `AUDIT OK`. |
 | `make_figures.py` | Regenerates the figures (status heatmap, attractor, Coxeter circle, …). |
 | `make_manifest.py` | Writes `manifest.sha256` + `lean_manifest.sha256` (content digests). |
-| `wolfram/tfpt_readouts.wl` | Independent second path on Wolfram Engine (`101/101` checks); `wolfram/tfpt_readouts_extension.wl` mirrors v84–v93 (authored, awaiting first engine run). |
+| `wolfram/tfpt_readouts.wl` | Independent second path on Wolfram Engine (`116/116` checks); `wolfram/tfpt_readouts_extension.wl` mirrors the exact algebraic/identity/lattice results v84–v175 (`231/231`, verified on Wolfram Engine 14.3). |
 | `redteam/run_redteam.py` | **Adversarial layer.** Tries to *break* the five reductions (Targets A–E); verdicts in `REDTEAM.*` ledger rows + `tfpt_5_redteam.tex`. |
 
 ### Other directories
@@ -161,8 +161,10 @@ bash build.sh notes
 # 2. Run the Python verification suite  ->  "ALL CHECKS PASSED"
 cd verification && python run_all.py
 
-# 3. Independent Wolfram path  ->  "101/101 passed"  (optional, needs Wolfram Engine)
+# 3. Independent Wolfram path  ->  "116/116 passed"  (optional, needs Wolfram Engine)
+#    (the v84+ extension mirrors the exact results, 231/231)
 wolframscript -file verification/wolfram/tfpt_readouts.wl
+wolframscript -file verification/wolfram/tfpt_readouts_extension.wl
 
 # 4. Lean carrier-rigidity proof  ->  "AUDIT: PASS"  (optional)
 cd experiments/lean4-carrier-rigidity && lake exe cache get && bash scripts/audit.sh
@@ -225,17 +227,27 @@ The ledger is *append-only and versioned*: superseded rows are marked `active=fa
   holomorphy then follows from μ-additivity instead of being assumed. And *which* extension carries
   no freedom (`v92`): the carrier extension tower is completely rigid — carrier `(μ=16)` →
   `SO(16)₁` `(μ=4`, the unique intermediate`)` → `(E8)₁` `(μ=1`, two chiralities = sheet`)` —
-  so Gate A is the *bare* index statement.
+  so Gate A is the *bare* index statement. The two structural residuals are now **discharged to a
+  theorem** (`v175`): the CAR second-quantisation functor `Γ(t)=⊕ₘΛᵐ(t)` makes full-cone reflection
+  positivity reduce *for every `m`* to the one-particle contraction (verified on the complete
+  `2¹⁶=65536`-dim Fock space), and net existence is an assembled, verified `(E8)₁` certificate
+  (character `1+248q+4124q²+…`, embedding `248=120+128`, `E8` Cartan even unimodular) — so net
+  existence and full-cone RP are `[E]`, and the single open structural premise is the seam-collar
+  realisation `QGEO.REALIZE.01` (its finite half — cross-ratio 2, faithful Möbius `D4`, `b₁=N_fam=3`,
+  characters = `A3` exponents — is proven exactly, `v168`).
 - **Absolute amplitude normalisation** (`U_point`) — an anchor; the quark *ratios* are closed.
 - **Frontier interfaces** (`m_p/m_e`, `η_B`, Koide, axion relic) — deliberately typed as
   interfaces, never quoted as compiler outputs.
 
-The remaining distance is therefore not a list but **one identification** (the seam–Calderón net) plus
-**one declared metrology unit**. The central theorem now reads as a clean simple-current extension,
+The remaining distance is therefore not a list but **one geometric identification** (the seam-collar
+realisation `QGEO.REALIZE.01` — net existence and full-cone RP are now `[E]`, `v175`) plus **one declared
+metrology unit**. The central theorem now reads as a clean simple-current extension,
 `(D₅)₁⊗(A₃)₁ ⋊ ⟨(1,1)⟩ ≅ (E₈)₁` (index 4, c = 8, μ = 1 ⇒ holomorphic ⇒ E₈, `v154`), and `v_geo` is an
 *irreducible metrology primitive* by the No-Unit Theorem (`v153`): a dimensionless boundary compiler
 provably cannot produce an absolute scale, so `U_point ~ v_geo`, `1/G ~ v_geo²` and `m/μ = e^{3/4}` are
-one unit in three readings — the only irreducibles are `v_geo` and `π`.
+one unit in three readings — the only irreducibles are `v_geo` and `π`. That geometric realisation is
+not closeable by a finite computation; it is the one item that needs a human constructive-QFT/geometry
+argument (or a proof assistant).
 
 ---
 
