@@ -289,6 +289,7 @@ const NODES: DagNode[] = [
       "v173_pfaffian_cp_car.py",
       "v174_seam_fock_readings.py",
       "v175_net_existence_full_cone.py",
+      "v176_seam_collar_realisation.py",
     ],
   },
   {

@@ -118,6 +118,45 @@ $\PP\setminus\mu_4$ with the $(1,2,3)$ grading (\texttt{QGEO.RIGID.01}, \mE,
 \veri{v168\_qgeo\_rigidity.py}). The single residual is the seam-side \emph{realisation} --- that
 these hypotheses follow from the seam collar itself --- which stays \texttt{QGEO.REALIZE.01} (\mC).
 
+\begin{keybox}[Seam Collar Realisation Theorem --- the one central proof obligation \mE/\mO\ (\veri{v176\_seam\_collar\_realisation.py})]
+\emph{Stated as one theorem and certified as a reduction --- not a fabricated proof.}
+\par\smallskip\noindent\textbf{Theorem (target).} \emph{Given} (1)~an oriented one-sided RP seam
+collar $\Sigma$; (2)~a sheet-odd Calder\'on involution; (3)~quasi-free one-particle seam data with
+gap $(2/3)^6$; (4)~a faithful $D_4$ action on the boundary marks; (5)~four parabolic marked points
+with $\mu_4$-character decomposition; (6)~an admissible $c{=}8$ boundary net --- \emph{then} the
+conformal boundary of $\Sigma$ is M\"obius-equivalent to $\PP\setminus\mu_4$, its $H^1$ character
+basis is canonically the generation basis with grading $(1,2,3)$, the seam Calder\'on contraction is
+the rank-$8$ $K_\Sigma$ polarisation, and the index-$4$ simple-current extension is $(E_8)_1$.
+\par\smallskip\noindent\textbf{The proof decomposes into six steps, five already \mE:}
+\begin{enumerate}[leftmargin=2.2em,itemsep=1pt]
+\item[\textbf{1--2}] \emph{Geometry / uniformisation} \mE\ (\vref{v168}): $\mu_4$ has cross-ratio $2$
+  and a faithful M\"obius $D_4$ stabiliser of order $8$; four genus-$0$ marks with faithful $D_4$
+  force the $\mu_4$ square up to M\"obius; $H^1(\PP\setminus\mu_4)$ has rank $4-1=\Nfam=3$.
+\item[\textbf{3}] \emph{Calder\'on data} \mE\ (\vref{v156}): the Dirichlet-to-Neumann operator of the
+  $2$d Laplacian on the half-space has symbol $|k|$ (harmonic extension $e^{ikx-|k|y}$), the free
+  chiral dispersion --- bulk-detail-independent.
+\item[\textbf{4}] \emph{$H^1$ character $=$ generation grading} \mE\ (\vref{v137}/\vref{v168}):
+  $\omega_k=z^{k-1}dz/(z^4-1)$ carry $\mu_4$ characters $i^k$ with weights $(1,2,3)=$ the $A_3$
+  exponents $=\operatorname{Spec}(Q_+)$ --- natural, not merely isomorphic.
+\item[\textbf{5}] \emph{One-particle contraction} \mE\ (\vref{v162}): a $\mu_4$-equivariant operator
+  is diagonal in the cusp basis ($\tfrac1{|\mu_4|}\sum_j U^jXU^{-j}=\operatorname{diag}X$ for
+  $U=\operatorname{diag}(1,i,-1,-i)$); its spectrum is the cusp weights $\{0,\tfrac13,\tfrac23\}$, so
+  the transfer eigenvalues $(1-\alpha)^{p_2}$ ($p_2{=}6$) are $\{1,(2/3)^6,(1/3)^6\}$, gap $(2/3)^6$
+  --- forced, no free knob.
+\item[\textbf{6}] \emph{AQFT closure} \mE\ (\vref{v154}/\vref{v175}): $(D_5)_1{\otimes}(A_3)_1$ with
+  the isotropic $\mu_4$ glue has index $4=|\mu_4|$, $c=5{+}3=8$, $\mu$-index $16/16=1\Rightarrow$
+  holomorphic $\Rightarrow(E_8)_1$ ($248=120{+}128$); full-cone RP holds for all $m$ via the CAR
+  second-quantisation functor.
+\end{enumerate}
+\noindent\textbf{The one open premise \mO\ (\texttt{QGEO.REALIZE.01}).} The theorem reduces to
+\emph{exactly one} structural input: that the \emph{physical} seam collar's conformal boundary
+\emph{is} this $\PP\setminus\mu_4$ --- i.e.\ hypotheses (1),(4),(5) follow from the seam construction
+(P1) itself. This is a constructive-geometry/AQFT statement, \emph{not} a finite computation; the
+five other steps are \mE, so \textbf{the whole structural residual of the theory is this single
+realisation premise}, left honestly open (it needs a human constructive-QFT/geometry argument or a
+proof assistant, not more arithmetic).
+\end{keybox}
+
 \begin{lemma}[U1 --- wall landscape, \emph{corrected}]
 Parabolic degree zero forces the line weight-sums onto the wall $(w_1,w_2,w_3)=(2,1,1)$. An explicit
 balanced representative (weights in $\tfrac13$) is

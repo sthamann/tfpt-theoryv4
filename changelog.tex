@@ -59,6 +59,31 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-13 (Seam Collar Realisation Theorem v176 --- the one central proof obligation)}
+\begin{itemize}
+\item \textbf{\texttt{v176\_seam\_collar\_realisation.py} \mE/\mO\ (claim \texttt{QGEO.REALIZE.02}).}
+  Following an external residual-class audit, the single remaining structural item is formulated as
+  one central theorem and certified as a \emph{reduction} (not a fabricated proof). \emph{Theorem:}
+  given an oriented one-sided RP seam collar with a sheet-odd Calder\'on involution, faithful $D_4$
+  marks, four parabolic marks with $\mu_4$ decomposition and admissible $c{=}8$ data, its conformal
+  boundary is M\"obius-equivalent to $\PP\setminus\mu_4$ with $H^1$ grading $(1,2,3)$, the Calder\'on
+  contraction is the rank-$8$ $K_\Sigma$ polarisation and the index-$4$ extension is $(E_8)_1$. The
+  proof decomposes into six steps, \emph{five already} \mE: geometry/uniformisation (\vref{v168}),
+  Calder\'on DtN symbol $|k|$ (\vref{v156}), $H^1$ character $=$ generation grading
+  $(1,2,3)=A_3$ exponents (\vref{v137}/\vref{v168}), $\mu_4$-equivariant contraction with gap
+  $(2/3)^6$ (\vref{v162}), AQFT closure $(D_5)_1{\otimes}(A_3)_1{\rtimes}\mu_4=(E_8)_1$ $+$ full-cone
+  RP all $m$ (\vref{v154}/\vref{v175}). The whole structural residual thus reduces to the \emph{one}
+  open premise \texttt{QGEO.REALIZE.01}: that the physical seam collar's boundary \emph{is} this
+  $\PP\setminus\mu_4$ --- a constructive-geometry statement, left honestly \mO. Cited in
+  \texttt{tfpt\_research\_contracts} (the central theorem keybox); assembly/reduction certificate,
+  Python-only (its exact identities are mirrored via \vref{v168}/\vref{v156}/\vref{v162}/\vref{v154}/%
+  \vref{v175}). Suite now 176 modules. \emph{Audit note:} the metrology residual the same review
+  flags is already discharged --- \vref{v153} (No-Unit Theorem) is the metrology-line typing
+  ($v_{\mathrm{geo}}\mapsto\lambda^{-1}v_{\mathrm{geo}}$, $1/G\mapsto v_{\mathrm{geo}}^2$,
+  dimensionless data invariant), and the Koide $u\to\tfrac{53}{54}u$ source$\to$pole transfer is
+  already typed \mC\ (\texttt{FR.KOIDE.03}); neither is re-derived.
+\end{itemize}
+
 \subsection*{2026-06-13 (Zenodo release 5.1 (rev 105) --- v174 + v175 + doc refresh)}
 \begin{itemize}
 \item \textbf{Published to Zenodo.} Version \texttt{5.1 (rev 105)} of the ten-PDF document set
