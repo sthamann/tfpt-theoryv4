@@ -2,7 +2,7 @@ file,scripts,docs
 website/app/sitemap.ts,,introduction
 website/app/layout.tsx,,introduction
 website/app/orientation/page.tsx,,introduction
-website/app/verification/page.tsx,v84_frozen_registry.py,
+website/app/verification/page.tsx,v159_pyrate_gauge_crosscheck.py;v164_qcd_scale.py;v166_higgs_free_seam.py;v84_frozen_registry.py,
 website/components/DownloadsSection.tsx,,changelog;introduction
 website/components/Footer.tsx,,introduction;origin_theory;tfpt_horizon_readouts;tfpt_research_contracts
 website/components/Hero.tsx,,introduction

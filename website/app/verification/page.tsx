@@ -216,6 +216,35 @@ export default function VerificationPage() {
         </div>
       </section>
 
+      {/* External cross-check figure (PyR@TE) */}
+      <section className="relative border-t border-slate-800/60 py-12 sm:py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            eyebrow="External cross-check"
+            title="The F_transfer running — confirmed by an independent tool"
+            description="The renormalization-group running that carries the boundary data to the observables, computed at two loops. The gauge β-functions are reproduced verbatim by the third-party generator PyR@TE 3 (v159); the strong coupling reaches confinement at Λ_QCD ≈ 0.4 GeV (v164); and the Higgs quartic falls to ≈0 with β_λ ≈ 0 at the Planck scale — the free-seam near-criticality that ties the Higgs mass to the boundary fixed point (v166)."
+          />
+          <figure className="mt-8 overflow-hidden rounded-2xl border border-slate-700/40 bg-slate-950/40 p-4 sm:p-6">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/figures/rg_running.png"
+              alt="Two-panel plot. Left: the inverse gauge couplings versus log10(energy) from the QCD confinement scale to the Planck mass — the U(1) line has slope b1 = 41/10, the strong coupling inverse goes to zero at about 0.4 GeV, and the three couplings do not unify. Right: the Higgs quartic coupling falls from 0.13 at the electroweak scale to about 0.002 near the reduced Planck mass with vanishing beta function — the Standard-Model near-criticality."
+              className="mx-auto w-full max-w-4xl rounded-lg bg-white"
+            />
+            <figcaption className="mt-4 text-sm leading-relaxed text-slate-400">
+              Two-loop Standard-Model running. <span className="text-slate-200">Left:</span>{" "}
+              gauge couplings — the U(1)<sub>Y</sub> slope is the abelian index{" "}
+              <span className="font-mono">b₁ = 41/10</span> (v159), confinement{" "}
+              <span className="font-mono">α₃⁻¹ → 0</span> at{" "}
+              <span className="font-mono">Λ_QCD ≈ 0.4 GeV</span> (v164), no SM unification.{" "}
+              <span className="text-slate-200">Right:</span> the Higgs quartic reaches{" "}
+              <span className="font-mono">λ(M̄_Pl) ≈ 0.002</span>,{" "}
+              <span className="font-mono">β_λ ≈ 0</span> — the free-seam near-criticality (v166).
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
       {/* The interactive DAG */}
       <section
         id="dag"

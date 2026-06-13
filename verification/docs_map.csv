@@ -84,43 +84,43 @@ tfpt_2_standard_model,section,The flavor residue matrix is the compiler signatur
 tfpt_2_standard_model,section,Charged leptons: completely closed in $\phiz$,296,383,v118_hexagon_family_dictionary.py;v20_lepton_c_derivation.py;v21_solar_product_quark.py;v37_plucker_anchor.py;v51_boundary_half_step.py,c2e9a38b6339,2026-06-13
 tfpt_2_standard_model,section,Quarks: hierarchy from the same word-lengths,384,542,v17_hexagonal_resolvent.py;v24_quark_ratio_closure.py;v26_flavor_frontier_unification.py;v37_plucker_anchor.py;v42_exterior_leg.py;v49_readout_rigidity.py;v71_simple_r_bridge.py;v94_sheet_diamond.py,6722db5b90c0,2026-06-12
 tfpt_2_standard_model,section,The Sheet Diamond and the Winding Line: masses and transport from one surface,543,1035,v101_horizon_anchor.py;v10_projection_involution.py;v11_unique_KQ.py;v128_graded_hull.py;v12_mass_generation_polynomials.py;v134_dual_anchor.py;v135_det_surface.py;v137_qplus_cohomology.py;v140_canonical_map.py;v141_deck_selection.py;v146_moebius_d4.py;v37_plucker_anchor.py;v46_grand_mass_volume.py;v50_q_geometry.py;v52_pencil_endpoints.py;v54_seam_horizon_keystones.py;v56_unique_attractor.py;v69_d4_q_geometry.py;v70_q_integer_lift.py;v72_q_det_from_cusp.py;v74_compiler_micro_lemmas.py;v80_operator_pencil_geometry.py;v81_singular_pencil_matrices.py;v82_koide_attractor_splitting.py;v85_master_cover.py;v92_glue_uniqueness.py;v94_sheet_diamond.py;v95_centered_diamond.py;v96_branch_kernel_selection.py;v97_sheet_conjugation_bridge.py;v98_discriminant_dictionary.py,dbfee45bb663,2026-06-12
-tfpt_2_standard_model,subsection,"Closing the audit gates: is $M{=}41$, $K$, $Q$ derived or imported?",1036,1146,v11_unique_KQ.py;v13_open_gates.py;v159_pyrate_gauge_crosscheck.py;v163_rg_stability_flavor.py;v16_solar_dual_anchor.py;v21_solar_product_quark.py;v74_compiler_micro_lemmas.py;v79_review_identities.py,72cc437073d6,2026-06-13
-tfpt_2_standard_model,section,Mixing: CKM and PMNS from holonomy,1147,1197,,7711b7bf61ea,2026-06-12
-tfpt_2_standard_model,section,Neutrinos,1198,1231,,4574cc289eb3,2026-06-12
-tfpt_2_standard_model,section,How the legacy layers simplify (bridge map),1232,1258,,9eeb68ad4a79,2026-06-12
-tfpt_2_standard_model,section,Is the entire Standard Model thereby derived?,1259,1309,,a95844bb2e03,2026-06-12
-tfpt_2_standard_model,section,Closure status of the five former open questions,1310,1316,,d81c4f2bc8c5,2026-06-12
-tfpt_2_standard_model,subsection,(1) Flavor residual --- ratios closed combinatorially; only the absolute scale is the wall-selection $(U_{\mathrm{wall}})$ \mE/\mO,1317,1346,v27_wall_representative.py;v30_d4_character_variety.py;v31_R_dictionary.py;v33_explicit_flat_bundle.py;v34_h2_bridge_attempt.py,ab9fd38ab334,2026-06-12
-tfpt_2_standard_model,subsection,"(2) Gravity --- exact in the $R^2$ regime, one named truncation remainder \mC",1347,1391,v36_spectral_action_g2.py,bd7617e15b5c,2026-06-13
-tfpt_2_standard_model,subsection,(3) Strong CP --- decoupled from the mass-gap problem \mE/\mC,1392,1423,,c29773466a57,2026-06-13
-tfpt_2_standard_model,subsection,(4) Full quantum dynamics --- solvable on the physical sector \mE/\mC,1424,1478,,50150318e7ef,2026-06-13
-tfpt_2_standard_model,subsection,"(5) Axioms P1/P2 --- P2 machine-verified, P1 as an interface \mE/\mO",1479,1541,,de183afa60a7,2026-06-12
-tfpt_2_standard_model,section,How the original-paper predictions simplify,1542,1576,,b49be45910b9,2026-06-12
-tfpt_2_standard_model,section,Conclusion,1577,1646,,189e59f8e638,2026-06-13
-tfpt_2_standard_model,section,The setup: parabolic data on the family curve,1647,1695,,da2a8b23c886,2026-06-13
-tfpt_2_standard_model,section,Exact scaffolding (proved),1696,1732,,4a2c6f9f0067,2026-06-12
-tfpt_2_standard_model,section,The Riemann--Hilbert side (what the monodromy fixes),1733,1760,,c8f08856fa97,2026-06-13
-tfpt_2_standard_model,section,The parabolic-weight computation (resolved this round),1761,1818,v4_flavor_matrix.py;v9_neutrino_texture.py,6a586ab59d15,2026-06-12
-tfpt_2_standard_model,section,Global computation: the anchor multiset is derived,1819,1888,,b4aa2b939e86,2026-06-12
-tfpt_2_standard_model,subsection,"Part (ii): the $\mathbb Z_6$ structure of the residues, and the frontier",1889,1932,,460dabfecef9,2026-06-12
-tfpt_2_standard_model,subsection,The flavor transport theorem,1933,1994,,7c6bb9501156,2026-06-13
-tfpt_2_standard_model,section,The Parabolic Anchor Compiler,1995,2007,,94764ed306ed,2026-06-12
-tfpt_2_standard_model,subsection,Budget master table: everything is $d_p=-\deg E=4$ times a Coxeter datum,2008,2021,,b1e4b1c6b38d,2026-06-12
-tfpt_2_standard_model,subsection,"Flavor budget split, row sums, scalaron deficit",2022,2044,v7_gravity_cosmo.py,becad1e78641,2026-06-12
-tfpt_2_standard_model,subsection,The anchor power compiler,2045,2093,,814d0f23b42b,2026-06-12
-tfpt_2_standard_model,subsection,Residue-matrix spectral selector --- sharpening (H2),2094,2168,,8af2543c2f6a,2026-06-13
-tfpt_2_standard_model,section,Closing the flavor block: two theorems,2169,2287,,c76f02659f89,2026-06-13
-tfpt_2_standard_model,section,Status,2288,2342,,f56ff44b4a5b,2026-06-13
-tfpt_2_standard_model,section,The explicit mass gap closes dynamics and clustering,2343,2415,,9cacf6d78782,2026-06-13
-tfpt_2_standard_model,section,The seam elliptic complex is Fredholm (APS),2416,2438,,0b980ed498f3,2026-06-13
-tfpt_2_standard_model,section,The $R^{n\ge3}$ truncation is $O(1/N_\star^2)$-bounded,2439,2522,v86_nstar_reheating.py,039c4dd5795c,2026-06-12
-tfpt_2_standard_model,section,"The ambient closure: one spectral-action measure, IR-complete by decoupling",2523,2636,v28_gravity_fR.py,aec960384ae4,2026-06-12
-tfpt_2_standard_model,subsection,Seam response grammar: gravity is the inverse seed gain,2637,2704,,7cd027f0fd95,2026-06-13
-tfpt_2_standard_model,section,The solar angle $\theta_{12}$: derived from the seam,2705,2766,v84_frozen_registry.py;v9_neutrino_texture.py,47a208ca1aea,2026-06-12
-tfpt_2_standard_model,section,Quark $c$-rationals: best values at current precision,2767,2813,,8868ee5c77eb,2026-06-12
-tfpt_2_standard_model,section,"H2: the moduli computation, set up explicitly",2814,2916,v19_monodromy_moduli.py;v26_flavor_frontier_unification.py;v27_wall_representative.py;v49_readout_rigidity.py;v69_d4_q_geometry.py;v70_q_integer_lift.py,c4405eeb0ca3,2026-06-12
-tfpt_2_standard_model,section,"Status: what is now written out, and what is honestly left",2917,2956,v19_monodromy_moduli.py,f27b64a5a79f,2026-06-12
-tfpt_2_standard_model,section,Appendix: computational verification,2957,2972,v2_carrier_pascal.py;v3_em_alpha.py;v4_flavor_matrix.py;v7_gravity_cosmo.py,d9af3eae285d,2026-06-12
+tfpt_2_standard_model,subsection,"Closing the audit gates: is $M{=}41$, $K$, $Q$ derived or imported?",1036,1158,v11_unique_KQ.py;v13_open_gates.py;v159_pyrate_gauge_crosscheck.py;v163_rg_stability_flavor.py;v164_qcd_scale.py;v16_solar_dual_anchor.py;v21_solar_product_quark.py;v74_compiler_micro_lemmas.py;v79_review_identities.py,2d67ed11e25a,2026-06-13
+tfpt_2_standard_model,section,Mixing: CKM and PMNS from holonomy,1159,1209,,7711b7bf61ea,2026-06-12
+tfpt_2_standard_model,section,Neutrinos,1210,1243,,4574cc289eb3,2026-06-12
+tfpt_2_standard_model,section,How the legacy layers simplify (bridge map),1244,1270,,9eeb68ad4a79,2026-06-12
+tfpt_2_standard_model,section,Is the entire Standard Model thereby derived?,1271,1321,,a95844bb2e03,2026-06-12
+tfpt_2_standard_model,section,Closure status of the five former open questions,1322,1328,,d81c4f2bc8c5,2026-06-12
+tfpt_2_standard_model,subsection,(1) Flavor residual --- ratios closed combinatorially; only the absolute scale is the wall-selection $(U_{\mathrm{wall}})$ \mE/\mO,1329,1358,v27_wall_representative.py;v30_d4_character_variety.py;v31_R_dictionary.py;v33_explicit_flat_bundle.py;v34_h2_bridge_attempt.py,ab9fd38ab334,2026-06-12
+tfpt_2_standard_model,subsection,"(2) Gravity --- exact in the $R^2$ regime, one named truncation remainder \mC",1359,1403,v36_spectral_action_g2.py,bd7617e15b5c,2026-06-13
+tfpt_2_standard_model,subsection,(3) Strong CP --- decoupled from the mass-gap problem \mE/\mC,1404,1435,,c29773466a57,2026-06-13
+tfpt_2_standard_model,subsection,(4) Full quantum dynamics --- solvable on the physical sector \mE/\mC,1436,1490,,50150318e7ef,2026-06-13
+tfpt_2_standard_model,subsection,"(5) Axioms P1/P2 --- P2 machine-verified, P1 as an interface \mE/\mO",1491,1553,,de183afa60a7,2026-06-12
+tfpt_2_standard_model,section,How the original-paper predictions simplify,1554,1588,,b49be45910b9,2026-06-12
+tfpt_2_standard_model,section,Conclusion,1589,1658,,189e59f8e638,2026-06-13
+tfpt_2_standard_model,section,The setup: parabolic data on the family curve,1659,1707,,da2a8b23c886,2026-06-13
+tfpt_2_standard_model,section,Exact scaffolding (proved),1708,1744,,4a2c6f9f0067,2026-06-12
+tfpt_2_standard_model,section,The Riemann--Hilbert side (what the monodromy fixes),1745,1772,,c8f08856fa97,2026-06-13
+tfpt_2_standard_model,section,The parabolic-weight computation (resolved this round),1773,1830,v4_flavor_matrix.py;v9_neutrino_texture.py,6a586ab59d15,2026-06-12
+tfpt_2_standard_model,section,Global computation: the anchor multiset is derived,1831,1900,,b4aa2b939e86,2026-06-12
+tfpt_2_standard_model,subsection,"Part (ii): the $\mathbb Z_6$ structure of the residues, and the frontier",1901,1944,,460dabfecef9,2026-06-12
+tfpt_2_standard_model,subsection,The flavor transport theorem,1945,2006,,7c6bb9501156,2026-06-13
+tfpt_2_standard_model,section,The Parabolic Anchor Compiler,2007,2019,,94764ed306ed,2026-06-12
+tfpt_2_standard_model,subsection,Budget master table: everything is $d_p=-\deg E=4$ times a Coxeter datum,2020,2033,,b1e4b1c6b38d,2026-06-12
+tfpt_2_standard_model,subsection,"Flavor budget split, row sums, scalaron deficit",2034,2056,v7_gravity_cosmo.py,becad1e78641,2026-06-12
+tfpt_2_standard_model,subsection,The anchor power compiler,2057,2105,,814d0f23b42b,2026-06-12
+tfpt_2_standard_model,subsection,Residue-matrix spectral selector --- sharpening (H2),2106,2180,,8af2543c2f6a,2026-06-13
+tfpt_2_standard_model,section,Closing the flavor block: two theorems,2181,2299,,c76f02659f89,2026-06-13
+tfpt_2_standard_model,section,Status,2300,2354,,f56ff44b4a5b,2026-06-13
+tfpt_2_standard_model,section,The explicit mass gap closes dynamics and clustering,2355,2427,,9cacf6d78782,2026-06-13
+tfpt_2_standard_model,section,The seam elliptic complex is Fredholm (APS),2428,2450,,0b980ed498f3,2026-06-13
+tfpt_2_standard_model,section,The $R^{n\ge3}$ truncation is $O(1/N_\star^2)$-bounded,2451,2534,v86_nstar_reheating.py,039c4dd5795c,2026-06-12
+tfpt_2_standard_model,section,"The ambient closure: one spectral-action measure, IR-complete by decoupling",2535,2648,v28_gravity_fR.py,aec960384ae4,2026-06-12
+tfpt_2_standard_model,subsection,Seam response grammar: gravity is the inverse seed gain,2649,2716,,7cd027f0fd95,2026-06-13
+tfpt_2_standard_model,section,The solar angle $\theta_{12}$: derived from the seam,2717,2778,v84_frozen_registry.py;v9_neutrino_texture.py,47a208ca1aea,2026-06-12
+tfpt_2_standard_model,section,Quark $c$-rationals: best values at current precision,2779,2825,,8868ee5c77eb,2026-06-12
+tfpt_2_standard_model,section,"H2: the moduli computation, set up explicitly",2826,2928,v19_monodromy_moduli.py;v26_flavor_frontier_unification.py;v27_wall_representative.py;v49_readout_rigidity.py;v69_d4_q_geometry.py;v70_q_integer_lift.py,c4405eeb0ca3,2026-06-12
+tfpt_2_standard_model,section,"Status: what is now written out, and what is honestly left",2929,2968,v19_monodromy_moduli.py,f27b64a5a79f,2026-06-12
+tfpt_2_standard_model,section,Appendix: computational verification,2969,2984,v2_carrier_pascal.py;v3_em_alpha.py;v4_flavor_matrix.py;v7_gravity_cosmo.py,d9af3eae285d,2026-06-12
 tfpt_3_e8_audit_bootstrap,front,(front matter),1,152,,28184b45056a,2026-06-12
 tfpt_3_e8_audit_bootstrap,section,The compiler core (where this note sits),153,175,,8e3d9559b8f4,2026-06-12
 tfpt_3_e8_audit_bootstrap,section,"The $(1,1,2)$ anchor microcode",176,272,v108_pascal_ladder.py,651bb311833e,2026-06-13
