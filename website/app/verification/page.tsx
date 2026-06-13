@@ -245,6 +245,35 @@ export default function VerificationPage() {
         </div>
       </section>
 
+      {/* E8 slice compression figure */}
+      <section className="relative border-t border-slate-800/60 py-12 sm:py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            eyebrow="Structural compression"
+            title="The E₈ audit atlas is one projection of two alphabets"
+            description="The seven maximal E₈ slices (each a way of cutting 248) are not seven separate hits: every block is built from just two typed alphabets — the anchor power sums P = (3,4,6,10) and the Sheet-Diamond operator determinants (3,4,8,14,20,32), which sum to 81 = N_fam⁴. The atlas is therefore a closed grammar over admissible invariants, exactly what the No-Free-Pattern discipline demands (v170)."
+          />
+          <figure className="mt-8 overflow-hidden rounded-2xl border border-slate-700/40 bg-slate-950/40 p-4 sm:p-6">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/figures/slice_compression.png"
+              alt="Seven horizontal stacked bars, one per maximal E8 subalgebra (D8, D5xA3, E6xA2, E7xA1, F4xG2, A4xA4, A8), each summing to 248. Blocks are coloured by their alphabet source: blue for anchor power-sum blocks, gold for Sheet-Diamond determinant blocks (which sum to 81 = N_fam^4), green for symmetric or glue blocks."
+              className="mx-auto w-full max-w-4xl rounded-lg bg-white"
+            />
+            <figcaption className="mt-4 text-sm leading-relaxed text-slate-400">
+              Each of the seven E₈ slices is one projection of two alphabets —{" "}
+              <span className="text-slate-200">blue</span> power-sum blocks{" "}
+              <span className="font-mono">P=(3,4,6,10)</span> and{" "}
+              <span className="text-slate-200">gold</span> determinant blocks{" "}
+              <span className="font-mono">(3,4,8,14,20,32)</span> with{" "}
+              <span className="font-mono">Σdet = 81 = N_fam⁴</span>; green = symmetric/glue.
+              The full lemma (K₄ edge graph, row-budget cross, dim E₆ = 78 = p₂·Δ) is in
+              the E₈-audit paper (v170).
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
       {/* The interactive DAG */}
       <section
         id="dag"

@@ -499,6 +499,14 @@ export const papers: Paper[] = [
         ],
       },
       {
+        title: "E₈ slice compression: seven slices, two alphabets",
+        body: "Sharper than seven separate hits: all seven 248-slices are ONE projection of just two alphabets — the anchor power sums P = (3,4,6,10) (p_n = 2+2ⁿ) and the Sheet-Diamond operator determinants (det Q,…,det F) = (3,4,8,14,20,32), which sum to 81 = N_fam⁴ (the total determinant charge of the flavour space). The K₄ edge products of P are the carrier blocks (12,18,30,24,40,60); one affine map (7,11,13)+s(3,3,3)+t(1,2,3) generates every flavour row budget; and dim E₆ = 78 = p₂(p₀+p₃). The atlas is a closed grammar over admissible invariant classes, not a shelf of trophies — exactly what the No-Free-Pattern discipline demands (v170).",
+        formulas: [
+          "P = (3,4,6,10),\\quad (\\det Q,\\dots,\\det F) = (3,4,8,14,20,32),\\quad \\textstyle\\sum\\det = 81 = N_{\\mathrm{fam}}^4",
+          "248 = p_2\\Delta + \\det R + 81 + 81 = 78 + 8 + 81 + 81 \\quad (E_6\\times A_2)",
+        ],
+      },
+      {
         title: "The numerology null test (look-elsewhere quantified)",
         body: "An explicit, fully declared null model: the entire complexity-matched formula grammar (provably containing every scored TFPT formula) is enumerated exactly against conservative data windows over the 13 scored frozen-registry observables; Monte-Carlo pseudo-theories and negative controls (seed perturbation, data shuffle) demonstrate the test's power; all 94 500 variants of the F_U(1) equation are root-solved with exactly one CODATA hit. The result is a null-model rejection conditional on the declared grammar — never 'certainty'.",
         formulas: [

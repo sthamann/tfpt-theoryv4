@@ -125,24 +125,24 @@ tfpt_3_e8_audit_bootstrap,front,(front matter),1,152,,28184b45056a,2026-06-12
 tfpt_3_e8_audit_bootstrap,section,The compiler core (where this note sits),153,175,,8e3d9559b8f4,2026-06-12
 tfpt_3_e8_audit_bootstrap,section,"The $(1,1,2)$ anchor microcode",176,272,v108_pascal_ladder.py,651bb311833e,2026-06-13
 tfpt_3_e8_audit_bootstrap,section,The residue and length matrices as spectral objects,273,384,v100_numerology_null_mc.py;v37_plucker_anchor.py,8bd636bf0ca3,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,The secondary branching atlas,385,509,v170_diamond_slice_compression.py,fb2e2f65953d,2026-06-13
-tfpt_3_e8_audit_bootstrap,section,Group-theoretic audits (optional),510,528,,021e0730e513,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,Further audit lemmas (machine-verified this round),529,566,,f779e820e593,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,"What this changes, and what stays open",567,615,v1_e8_glue.py;v4_flavor_matrix.py,513d7469af4e,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,"The old cascade, recalled",616,631,v5_e8_cascade.py,d018bbe54914,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,The spine: every rung is a current number,632,728,,25ca0af8a1c6,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,Three views of one spine,729,776,v91_spine_tetrahedron.py,199ce2157442,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,Direct $\phiz$ relations: old vs current,777,801,,8e6b7d7185f2,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,Sector inventory: have all the old-cascade sectors been computed?,802,840,,fe5ae611804b,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,"What is new, what is old, what stays open",841,884,,d2d8039096c1,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,The loop for $\gcar$ --- an overdetermined fixed point,885,982,v15_bootstrap_classification.py;v6_bootstrap.py,83431665abeb,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,The loop for $\cthree$ --- the ``$8$'' is the $E_8$ rank,983,1004,,09d2a99e39c6,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,The Möbius origin of the irreducible $\pi$,1005,1091,v54_seam_horizon_keystones.py;v55_coxeter_cycle.py;v66_e8_casimir_degrees.py,4c20472669b7,2026-06-13
-tfpt_3_e8_audit_bootstrap,section,"Honest status: bootstrap, not creation from nothing",1092,1121,v108_pascal_ladder.py,7fa3623dd2c8,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,The honest open-items list,1122,1190,v9_neutrino_texture.py,901e7dcad1ec,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,The $E_8$-slice scan: results (honest hit / miss),1191,1240,,9bb6cf827ee4,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,Following the $SU(9)$ lead: cross-slice consistency,1241,1278,,6527de5ba23c,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,Appendix: computational verification,1279,1294,v1_e8_glue.py;v4_flavor_matrix.py;v5_e8_cascade.py;v6_bootstrap.py,b08c71e486fc,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,The secondary branching atlas,385,519,v170_diamond_slice_compression.py,c8d8836cba5c,2026-06-13
+tfpt_3_e8_audit_bootstrap,section,Group-theoretic audits (optional),520,538,,021e0730e513,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,Further audit lemmas (machine-verified this round),539,576,,f779e820e593,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,"What this changes, and what stays open",577,625,v1_e8_glue.py;v4_flavor_matrix.py,513d7469af4e,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,"The old cascade, recalled",626,641,v5_e8_cascade.py,d018bbe54914,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,The spine: every rung is a current number,642,738,,25ca0af8a1c6,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,Three views of one spine,739,786,v91_spine_tetrahedron.py,199ce2157442,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,Direct $\phiz$ relations: old vs current,787,811,,8e6b7d7185f2,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,Sector inventory: have all the old-cascade sectors been computed?,812,850,,fe5ae611804b,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,"What is new, what is old, what stays open",851,894,,d2d8039096c1,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,The loop for $\gcar$ --- an overdetermined fixed point,895,992,v15_bootstrap_classification.py;v6_bootstrap.py,83431665abeb,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,The loop for $\cthree$ --- the ``$8$'' is the $E_8$ rank,993,1014,,09d2a99e39c6,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,The Möbius origin of the irreducible $\pi$,1015,1101,v54_seam_horizon_keystones.py;v55_coxeter_cycle.py;v66_e8_casimir_degrees.py,4c20472669b7,2026-06-13
+tfpt_3_e8_audit_bootstrap,section,"Honest status: bootstrap, not creation from nothing",1102,1131,v108_pascal_ladder.py,7fa3623dd2c8,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,The honest open-items list,1132,1200,v9_neutrino_texture.py,901e7dcad1ec,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,The $E_8$-slice scan: results (honest hit / miss),1201,1250,,9bb6cf827ee4,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,Following the $SU(9)$ lead: cross-slice consistency,1251,1288,,6527de5ba23c,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,Appendix: computational verification,1289,1304,v1_e8_glue.py;v4_flavor_matrix.py;v5_e8_cascade.py;v6_bootstrap.py,b08c71e486fc,2026-06-12
 tfpt_4_frontier,front,(front matter),1,87,v35_quark_qcd_boundary.py,e933f3d7dbc0,2026-06-12
 tfpt_4_frontier,section,Baryon asymmetry $\eta_B$ --- a downstream readout from the closed $\Omega_b h^2$,88,144,v169_etaB_boltzmann_interface.py,ee2a8b32e3c2,2026-06-13
 tfpt_4_frontier,section,Proton/electron ratio $m_p/m_e$ --- a cross-sector ratio,145,180,v159_pyrate_gauge_crosscheck.py;v164_qcd_scale.py;v79_review_identities.py,e55f6430961c,2026-06-13

@@ -625,6 +625,56 @@ def fig_rg_running():
     plt.close(fig)
 
 
+def fig_slice_compression():
+    """E8 slice compression (v170): the seven 248-slices as one projection of two
+    alphabets -- anchor power sums P (blue) and Sheet-Diamond determinants D (gold);
+    green = symmetric/mixed data. Each block is coloured by its ALPHABET source
+    (distinct from the physics-module colouring of the tfpt_3 TikZ atlas)."""
+    P = "P"; D = "D"; S = "S"          # alphabet tags: power sums, determinants, symmetric
+    col = {P: C["blue"], D: C["gold"], S: C["green"]}
+    # each slice: list of (value, alphabet-tag, label)
+    slices = {
+        r"$D_8$": [(120, P, r"$p_0p_1p_3$"), (128, D, r"$p_1\det F$")],
+        r"$D_5{\times}A_3$": [(45, P, "45"), (15, P, "15"), (60, P, r"$p_2p_3$"),
+                              (64, S, r"$e_1\dim S^+$"), (64, S, "")],
+        r"$E_6{\times}A_2$": [(78, P, r"$p_2\Delta$"), (8, D, r"$\det R$"),
+                              (81, D, r"$\sum\det$"), (81, S, "sheet")],
+        r"$E_7{\times}A_1$": [(133, P, r"$p_0p_1p_3{+}\Delta$"), (3, P, r"$p_0$"),
+                              (112, D, r"$\det R\det C$")],
+        r"$F_4{\times}G_2$": [(52, P, r"$p_1^2{+}p_2^2$"), (14, D, r"$\det C$"),
+                              (182, D, r"$\Delta\det C$")],
+        r"$A_4{\times}A_4$": [(24, P, r"$2p_1p_2$"), (224, S, r"$4e_2p_3{+}24$")],
+        r"$A_8$": [(80, D, r"$\det K\det L$"), (168, D, r"$2p_2\det C$")],
+    }
+    fig, ax = plt.subplots(figsize=(8.6, 4.0))
+    names = list(slices.keys())
+    for row, nm in enumerate(names):
+        x = 0
+        for val, tag, lab in slices[nm]:
+            ax.barh(row, val, left=x, height=0.66, color=col[tag],
+                    edgecolor="white", linewidth=0.6)
+            if val >= 12:
+                ax.text(x + val/2, row, f"{val}", ha="center", va="center",
+                        color="white", fontsize=7.5, fontweight="bold")
+            x += val
+    ax.set_yticks(range(len(names)))
+    ax.set_yticklabels(names, fontsize=9)
+    ax.set_xlim(0, 248)
+    ax.set_xlabel(r"$\dim E_8 = 248$ (each slice sums to 248)")
+    ax.invert_yaxis()
+    ax.set_title("E$_8$ slice compression: seven slices, two alphabets "
+                 r"$P=(3,4,6,10)$, $D=(3,4,8,14,20,32)$", fontsize=10)
+    handles = [Patch(color=col[P], label="power-sum block $P$"),
+               Patch(color=col[D], label=r"determinant block $D$ ($\sum\det=81=N_{\rm fam}^4$)"),
+               Patch(color=col[S], label="symmetric / glue block")]
+    ax.legend(handles=handles, fontsize=8, loc="lower right", framealpha=0.95)
+    ax.grid(axis="x", alpha=0.2)
+    fig.tight_layout()
+    fig.savefig(os.path.join(OUT, "slice_compression.pdf"))
+    fig.savefig(os.path.join(WEB, "slice_compression.png"), dpi=150)
+    plt.close(fig)
+
+
 def fig_gauge_running():
     """Gauge-only single panel for tfpt_2 (b1=41/10, confinement, non-unification).
     Backs v159/v164; the two-loop SM gauge betas are PyR@TE-confirmed."""
@@ -693,4 +743,5 @@ if __name__ == "__main__":
     fig_trisection()
     fig_rg_running()
     fig_gauge_running()
+    fig_slice_compression()
     print("figures written to", os.path.normpath(OUT))

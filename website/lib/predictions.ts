@@ -301,7 +301,7 @@ export const predictions: Prediction[] = [
     ],
     pdf: "/papers/tfpt_2_standard_model.pdf",
     description:
-      "θ_eff = 0 follows from three structural facts (γ₅-Hermiticity, polar structure, sheet involution) plus reflection positivity — without a mass gap. PSI nEDM / SNS test it.",
+      "θ_eff = 0 follows from three structural facts (γ₅-Hermiticity, polar structure, sheet involution) plus reflection positivity — without a mass gap. Now formalised as Pfaffian reality in the self-dual 16-Majorana CAR model (v173): the sheet-odd Calderón involution pairs the spectrum (±λ), γ₅-Hermiticity makes the fermion-measure Pfaffian real (arg ∈ {0,π}), and reflection positivity (Z > 0) selects the positive branch — a topological null theorem. PSI nEDM / SNS test it.",
     category: "QCD/EDM",
   },
   {
