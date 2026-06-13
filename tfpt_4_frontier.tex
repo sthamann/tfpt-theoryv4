@@ -165,6 +165,31 @@ prefactor fit to a washout-dependent leptogenesis output --- $\eta_B$ stays \mC,
 \end{keybox}
 
 % =====================================================================
+\section{The Higgs quartic --- near-criticality from the free seam}
+% =====================================================================
+The seam UV is the free chiral $c{=}8$ fixed point (\veri{v158\_fixed\_point\_stable.py}):
+Gaussian, with no relevant and no marginal interactions. The Higgs self-coupling
+$\lambda$ is the one marginal scalar coupling, so a free seam forces it to the
+Gaussian point there:
+\[
+  \boxed{\ \lambda(M_{\mathrm{seam}})=0\quad\text{and}\quad\beta_\lambda(M_{\mathrm{seam}})=0\ }
+\]
+the Shaposhnikov--Wetterich double-criticality condition --- here \emph{derived} from
+the free seam rather than postulated. Integrating the PyR@TE-confirmed two-loop SM
+RGEs from $M_Z$ upward with the measured $(m_H,m_t)$ gives $\lambda(\Mpl)\approx0.002$
+and $\beta_\lambda(\Mpl)\approx0$ at the reduced Planck mass: the celebrated SM
+\emph{near-criticality} is thus a \emph{consequence} of the free seam (the two-loop
+value is an order of magnitude closer to zero than the one-loop estimate $\sim0.022$).
+Imposing the double condition predicts $m_H\sim129$--$134$ GeV (a band, sensitive to
+$m_t$ and $\alpha_s$); the measured $125.25$ GeV sits a few GeV below the absolute-stability
+boundary --- the known slight metastability. The \emph{same} condition imposed at the
+scalaron scale ($\cthree^{7/2}\Mpl\sim3\times10^{13}$ GeV) gives $m_H\sim107$ GeV (too
+low), so the boundary condition lives at $\Mpl$, consistent with seam $=$ horizon $=$
+Planck. This ties the Higgs mass to premise~(A) and fills the Higgs-sector gap (which
+was only $N_\Phi=1$); it is typed \mE\ (the freeness signature and scale selection) and
+\mC\ (the $m_H$ band) (\veri{v166\_higgs\_free\_seam.py}).
+
+% =====================================================================
 \section{The Koide relation --- near $2/3$, computed exactly}
 % =====================================================================
 With the closed lepton source masses $\hat m_\ell\propto(\tfrac{16}{7}(\phiz)^5,\tfrac43(\phiz)^3,\tfrac76(\phiz)^2)$
@@ -388,6 +413,15 @@ closure $=$ channel identity), pair transport is minimally complete, and the sin
 (rank $=c$: $5$ carrier block, $8$ seam hull) is the defining datum of the free $c=8$ net this gate
 already posits. Closing the index-$4$ statement therefore also closes the carrier selection \mE\
 (see \texttt{tfpt\_1} and \texttt{tfpt\_research\_contracts}). \veri{v113\_quasifree\_kernel.py}
+\smallskip\\
+\noindent\emph{Update (free-bulk premise discharged, \vref{v160}--\vref{v165}):} that ``free $c{=}8$ net''
+premise is no longer free-standing. It is a fixed-point theorem (quasi-free $\Rightarrow$ all higher
+cumulants $\kappa_{2n}{=}0$, \vref{v160}); the infinite Schwinger cone is \emph{eliminated} --- by
+Bogoliubov second quantisation the cone gap equals the one-particle gap $(2/3)^6$ (\vref{v161}), forced by
+$\mu_4$-equivariance (\vref{v162}); and the residual factors into the already-open $A_2$ net-existence (an
+assembly of established net constructions, \mC) and $R_1=$ \texttt{GATE.QGEO}, with the irreducible core
+$\{\pi,v_{\mathrm{geo}}\}$ a theorem (\vref{v165}). So the metric-sector gate carries \emph{zero new}
+independent open content. \veri{v165\_premise\_a\_closure.py}
 \end{keybox}
 
 % =====================================================================

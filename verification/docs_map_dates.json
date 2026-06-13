@@ -32,7 +32,7 @@
   "date": "2026-06-12"
  },
  "introduction::subsection::The hard reduction: two research gates plus typed interfaces::1": {
-  "hash": "3935471a2323",
+  "hash": "3ceb6cb013c0",
   "date": "2026-06-13"
  },
  "introduction::section::The compiler: why $30=2\\cdot3\\cdot5$::1": {
@@ -587,6 +587,10 @@
   "hash": "e55f6430961c",
   "date": "2026-06-13"
  },
+ "tfpt_4_frontier::section::The Higgs quartic --- near-criticality from the free seam::1": {
+  "hash": "e2ad0930015c",
+  "date": "2026-06-13"
+ },
  "tfpt_4_frontier::section::The Koide relation --- near $2/3$, computed exactly::1": {
   "hash": "0032346d157d",
   "date": "2026-06-13"
@@ -596,8 +600,8 @@
   "date": "2026-06-13"
  },
  "tfpt_4_frontier::section::Full quantum gravity --- induced from the boundary kernel::1": {
-  "hash": "ecbb34518929",
-  "date": "2026-06-12"
+  "hash": "ef43a4d7b76d",
+  "date": "2026-06-13"
  },
  "tfpt_4_frontier::section::Summary::1": {
   "hash": "aa45fa36a8a3",
@@ -608,8 +612,8 @@
   "date": "2026-06-12"
  },
  "tfpt_5_redteam::front::(front matter)::1": {
-  "hash": "3cde30d9e57e",
-  "date": "2026-06-12"
+  "hash": "a5684d2b15f6",
+  "date": "2026-06-13"
  },
  "tfpt_5_redteam::section::Method::1": {
   "hash": "aa670d017bc0",
@@ -636,7 +640,7 @@
   "date": "2026-06-12"
  },
  "tfpt_5_redteam::section::Outcome::1": {
-  "hash": "087ea9322af7",
+  "hash": "844986590ad8",
   "date": "2026-06-13"
  },
  "tfpt_horizon_readouts::front::(front matter)::1": {
@@ -684,7 +688,7 @@
   "date": "2026-06-12"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {
-  "hash": "88b0d8851397",
+  "hash": "6872e81ccbc5",
   "date": "2026-06-13"
  },
  "tfpt_research_contracts::section::Certifiability and recommended order::1": {
@@ -692,8 +696,8 @@
   "date": "2026-06-12"
  },
  "origin_theory::front::(front matter)::1": {
-  "hash": "654ec39ee0ac",
-  "date": "2026-06-12"
+  "hash": "2345999f4984",
+  "date": "2026-06-13"
  },
  "origin_theory::section::The whole integer skeleton from one pair $(\\gcar,\\Nfam)=(5,3)$::1": {
   "hash": "35197b51af6f",
@@ -736,7 +740,7 @@
   "date": "2026-06-12"
  },
  "origin_theory::section::Honest status::1": {
-  "hash": "6dc1e87bbb72",
+  "hash": "86249848d2e2",
   "date": "2026-06-13"
  },
  "origin_theory::section::Appendix: computational verification::1": {

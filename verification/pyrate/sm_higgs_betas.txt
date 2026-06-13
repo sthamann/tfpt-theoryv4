@@ -1,0 +1,34 @@
+PyR@TE 3 -- SM Higgs-quartic and top-Yukawa beta functions, reduced to top-only
+==================================================================================
+Tool      : PyR@TE 3.0 (github.com/LSartore/pyrate), model models/SM.model
+Reduction : Yd = Ye = 0, Yu = diag(0,0,y_t) (top-only), y_t real
+            (symbolic reduction of the full PyR@TE RGEs.py 2-loop expressions)
+Used by    : verification/v166_higgs_free_seam.py
+Convention: dX/dt = beta1/(16 pi^2) + beta2/(16 pi^2)^2 + ...
+
+### beta_lambda  (one-loop, top-only)
+    24 lam^2 + 12 lam y_t^2 - 6 y_t^4
+    - (9/5) g1^2 lam - 9 g2^2 lam
+    + (27/200) g1^4 + (9/20) g1^2 g2^2 + (9/8) g2^4
+
+### beta_lambda  (two-loop, top-only)
+    -1.7055 g1^6 - 4.1925 g1^4 g2^2 + 9.435 g1^4 lam - 1.71 g1^4 y_t^2
+    - 3.6125 g1^2 g2^4 + 5.85 g1^2 g2^2 lam + 6.3 g1^2 g2^2 y_t^2
+    + 21.6 g1^2 lam^2 + 8.5 g1^2 lam y_t^2 - 1.6 g1^2 y_t^4
+    + 19.0625 g2^6 - 9.125 g2^4 lam - 2.25 g2^4 y_t^2
+    + 108 g2^2 lam^2 + 22.5 g2^2 lam y_t^2
+    + 80 g3^2 lam y_t^2 - 32 g3^2 y_t^4
+    - 312 lam^3 - 144 lam^2 y_t^2 - 3 lam y_t^4 + 30 y_t^6
+
+### beta_yt / y_t  (one-loop, top-only)
+    9/2 y_t^2 - 17/20 g1^2 - 9/4 g2^2 - 8 g3^2
+
+### beta_yt / y_t  (two-loop, top-only)
+    1.978333 g1^4 - 0.45 g1^2 g2^2 + 1.266667 g1^2 g3^2 + 4.9125 g1^2 y_t^2
+    - 5.75 g2^4 + 9 g2^2 g3^2 + 14.0625 g2^2 y_t^2
+    - 108 g3^4 + 36 g3^2 y_t^2
+    + 6 lam^2 - 12 lam y_t^2 - 12 y_t^4
+
+Gauge two-loop (top-only) are in sm_gauge_betas.txt. These are the beta functions
+that, integrated from M_Z up, drive lambda(mu) to ~0 with beta_lambda~0 near the
+reduced Planck mass -- the free-seam double-criticality of v166.

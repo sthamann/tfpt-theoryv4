@@ -59,6 +59,27 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-13 (Higgs quartic from the free seam: SM near-criticality explained, v166)}
+\begin{itemize}
+\item \textbf{\texttt{v166\_higgs\_free\_seam.py} \mE/\mC{} (claim \texttt{HIGGS.FREESEAM.01}).}
+  A new prediction tying the Higgs mass to premise~(A). The seam UV is the free chiral
+  $c{=}8$ fixed point (v158, Gaussian, no relevant/marginal interactions), so the one
+  marginal SM scalar coupling vanishes there: $\lambda(M_{\mathrm{seam}})=0$ and
+  $\beta_\lambda(M_{\mathrm{seam}})=0$ --- the Shaposhnikov--Wetterich double-criticality,
+  here \emph{derived} from the free seam, not assumed. Integrating the PyR@TE-confirmed
+  \emph{two-loop} SM RGEs from $M_Z$ up with the measured $(m_H,m_t)$ gives
+  $\lambda(\bar M_{\mathrm{Pl}})\approx0.002$ and $\beta_\lambda(\bar M_{\mathrm{Pl}})\approx0$:
+  the famous SM near-criticality is a \emph{consequence} of the free seam (2-loop sharpens
+  $\lambda(\bar M_{\mathrm{Pl}})$ from ${\sim}0.022$ at one loop to ${\sim}0.002$). The double
+  condition predicts $m_H\sim129$--$134$ GeV; the same condition at the scalaron scale gives
+  ${\sim}107$ GeV (too low), so the boundary condition lives at the reduced Planck scale
+  (seam $=$ horizon $=$ Planck). Fills the Higgs-sector gap (was only $N_\Phi=1$); cited in
+  \texttt{tfpt\_4\_frontier}.
+\item PyR@TE-sourced: the reproducer's SM run supplies the two-loop $\beta_\lambda$, reduced
+  to top-only (\texttt{verification/pyrate/sm\_higgs\_betas.txt}). Suite now 166 modules.
+  Python-only (numerical 2-loop ODE).
+\end{itemize}
+
 \subsection*{2026-06-13 (PyR@TE $F_{\mathrm{transfer}}$ follow-ups: flavor scale-tagging v163, QCD scale v164)}
 \begin{itemize}
 \item \textbf{\texttt{v163\_rg\_stability\_flavor.py} \mE/\mC{} (claim \texttt{FLAV.RGSTAB.01}).}
@@ -107,6 +128,28 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
   the transfer/RGE gates (gauge running, and --- with a seesaw model --- the
   neutrino-Yukawa running behind $\eta_B$); it is \emph{not} a tool for premise~(A) (a
   2d boundary-CFT question). Mirrored in the Wolfram extension; suite now 159 modules.
+\end{itemize}
+
+\subsection*{2026-06-13 (premise A maximal honest closure: A2 by assembly, R1 = GATE.QGEO, zero independent open gates, \vref{v165})}
+\begin{itemize}
+\item \textbf{New module \texttt{v165\_premise\_a\_closure.py} \mC/\mO.} Pins the two residual gates of the
+  \vref{v160}--\vref{v162} (A)-chain to their floor. \textbf{$A_2$ (net existence) closes by assembly} of
+  established mathematics \mC: the $16$ free Majoranas give a free-fermion conformal net
+  (Buchholz--Mack--Todorov), the holomorphic $c{=}8$ lattice net is $(E_8)_1$ (Frenkel--Kac--Segal /
+  Dong--Xu / Kawahigashi--Longo), the $\mu_4$ extension is a Longo Q-system of index $4$ (\vref{v125}),
+  $\mu(B){=}16/16{=}1$, $248{=}120{+}128$, character $E_4/\eta^8{=}j^{1/3}$ (\vref{v156}); the one
+  TFPT-specific input (seam Calder\'on kernel $=$ free-fermion two-point function) is done via DtN $=|k|$
+  (\vref{v156}/\vref{v157}). \textbf{$R_1$ (seam clock) reduces to \texttt{GATE.QGEO}} \mC: a
+  $\mu_4$-equivariant flat gapped generator is \emph{unique} ($=A_0^\star$, \vref{v115}/\vref{v116}), so the
+  gap $(2/3)^6$ is forced and the residual is the one geometric identification ``seam boundary $=
+  \PP\setminus\mu_4$'' $=$ \texttt{GATE.QGEO} (cohomology established, \vref{v137}, $b_1{=}3{=}\Nfam$).
+  \textbf{Final accounting:} by the No-Unit Theorem (\vref{v153}) the irreducibles stay $\{\pi,
+  v_{\mathrm{geo}}\}$; premise~(A) $=$ ($A_2$ assembly) $+$ ($R_1{=}$\texttt{GATE.QGEO}) $+$ the
+  $\{\pi,v_{\mathrm{geo}}\}$ core, so it carries \emph{zero independent open gates} and ceases to be its own
+  gate --- a unification and re-typing, \emph{not} an unconditional proof (ledger \texttt{GATE.METRIC.19}).
+  Python-only (numpy/sympy $+$ stdlib).
+\item \textbf{Bookkeeping.} Suite at $165$ modules, all green; Wolfram extension unchanged at $224/224$;
+  \texttt{tfpt\_research\_contracts} (premise-A keybox) and \texttt{next.txt} moved together.
 \end{itemize}
 
 \subsection*{2026-06-13 (the final identification: premise A factors into the already-open A2 + R1, no new open content, \vref{v162})}

@@ -277,6 +277,7 @@ const NODES: DagNode[] = [
       "v158_fixed_point_stable.py",
       "v163_rg_stability_flavor.py",
       "v164_qcd_scale.py",
+      "v166_higgs_free_seam.py",
     ],
   },
   {
