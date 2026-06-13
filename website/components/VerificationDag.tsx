@@ -163,6 +163,7 @@ const NODES: DagNode[] = [
       "v6_bootstrap.py",
       "v15_bootstrap_classification.py",
       "v47_selection_theorem.py",
+      "v170_diamond_slice_compression.py",
     ],
   },
   {
@@ -284,6 +285,8 @@ const NODES: DagNode[] = [
       "v165_premise_a_closure.py",
       "v166_higgs_free_seam.py",
       "v168_qgeo_rigidity.py",
+      "v172_trace_anomaly_seed.py",
+      "v173_pfaffian_cp_car.py",
     ],
   },
   {
@@ -360,6 +363,7 @@ const NODES: DagNode[] = [
       "v54_seam_horizon_keystones.py",
       "v55_coxeter_cycle.py",
       "v56_unique_attractor.py",
+      "v171_os_moment_cluster.py",
     ],
   },
 ];

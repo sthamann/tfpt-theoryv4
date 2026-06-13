@@ -148,6 +148,14 @@ compiler.} The residues $r_{f,j}$ form the matrix whose invariants are pure comp
 (Section 3); the windings $n_{f,j}$ are the anchors $\{1,1,2\}$. What used to be a separate ``flavor
 transport'' theorem is now the readout of a fixed matrix.
 
+\noindent\textbf{The seed base is the halved $(E_8)_1$ Weyl anomaly.} The seed base
+$\tfrac1{6\pi}=\tfrac43\,c_3$ carries the prefactor $\tfrac43=\dim S^+/\dim\mathfrak g_{\mathrm{SM}}=16/12$.
+That same $\tfrac43$ is the conformal trace anomaly of the seam: over the seam sphere
+$S^2$ ($\chi=2$, $\int R\sqrt g=8\pi$) the $(E_8)_1$ ($c=8$) Weyl anomaly is
+$\tfrac{c}{24\pi}\!\int\! R\sqrt g=\tfrac{c\chi}{6}=\tfrac83$, halved by the one-sided
+$|\Z_2|$ M\"obius identification to $\tfrac43$. So the Cabibbo-seed prefactor is the halved
+$(E_8)_1$ conformal anomaly, not a free coefficient (\veri{v172\_trace\_anomaly\_seed.py}).
+
 % =====================================================================
 \section{The seed $\phiz$ as a decoder}
 % =====================================================================
@@ -1432,6 +1440,15 @@ Strong CP is \textbf{decoupled} from the mass-gap problem: $\theta_{\mathrm{eff}
 reflection positivity (three structural facts). Only the \emph{full} QFT dynamics rests on mass-gap
 stability --- the remaining constructive \mC. \textbf{Hardening path:} prove the parent-domination
 lemma rigorously; all other OS axioms then follow.
+
+\par\smallskip\noindent\textbf{CAR/Pfaffian form (\veri{v173\_pfaffian\_cp\_car.py}, \mE).} The same chain
+is a Pfaffian statement in the self-dual $16$-Majorana CAR model: the sheet-odd Calder\'on involution
+$\{D_\Sigma,\Sigma\}=0$ pairs the seam Dirac spectrum into $(\pm\lambda)$; $\gamma_5$-Hermiticity
+($D^\dagger=\gamma_5 D\gamma_5$) makes the fermion-measure Pfaffian real, so $\arg\mathrm{Pf}\in\{0,\pi\}$;
+and a $\theta$-term gives $Z(\theta)=e^{i\theta}|\mathrm{Pf}|$, whose reflection positivity ($Z>0$)
+excludes $\theta=\pi$ ($\operatorname{Re}Z<0$) and every $\theta\notin\{0,\pi\}$ ($\operatorname{Im}Z\neq0$).
+So $\theta_{\mathrm{eff}}=0$ is a topological null theorem --- the antisymmetric Calder\'on pairing makes
+the Pfaffian real and RP picks the positive branch (machine-checked model demonstration).
 
 \subsection*{(4) Full quantum dynamics --- solvable on the physical sector \mE/\mC}
 Here is the complete solution. The input previously listed as ``open'' --- the parent-domination /

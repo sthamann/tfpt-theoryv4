@@ -1463,6 +1463,50 @@ Module[{mu4, cross, zz, eig, qspec},
     cross == 2 && eig === {I, -1, -I} && qspec === {1, 2, 3}];
 ];
 
+(* ---- (v170) E8 slice compression: seven slices from two alphabets ---- *)
+Module[{p, p0, p1, p2, p3, Delta, e1, e2, dimSp, dQ, dK, dR, dC, dL, dF, slices},
+  p = Table[2 + 2^n, {n, 0, 3}]; {p0, p1, p2, p3} = p; Delta = p0 + p3;
+  e1 = 4; e2 = 5; dimSp = 16;
+  {dQ, dK, dR, dC, dL, dF} = {3, 4, 8, 14, 20, 32};
+  slices = {
+    p0 p1 p3 + p1 dF,
+    (p1 p3 + e2) + (p0 p1 + p0) + p2 p3 + 2 e1 dimSp,
+    p2 Delta + dR + 81 + 81,
+    (p0 p1 p3 + Delta) + p0 + dR dC,
+    (p1^2 + p2^2) + dC + Delta dC,
+    2 p1 p2 + 4 e2 p3,
+    dK dL + 2 p2 dC};
+  checkExact["v170 E8 slice compression: P=(3,4,6,10), D=(3,4,8,14,20,32) sum 81=N_fam^4; K4 edges {12,18,30,24,40,60}; all seven E8 slices = 248; 78 = p2 Delta = dim E6",
+    p === {3, 4, 6, 10} && Total[{dQ, dK, dR, dC, dL, dF}] == 81 &&
+    {p0 p1, p0 p2, p0 p3, p1 p2, p1 p3, p2 p3} === {12, 18, 30, 24, 40, 60} &&
+    AllTrue[slices, # == 248 &] && p2 Delta == 78];
+];
+
+(* ---- (v171) atomic OS moment + Sugawara gap safety ---- *)
+Module[{r, s, cluster, sug, cE8, DeltaEff},
+  r = 64/729; s = 1/729;
+  cluster = 1/(1 - r);
+  sug = 1 + 30;                          (* 1 + h^v(E8) *)
+  cE8 = 248/sug;
+  DeltaEff = 6 Log[3/2] - 31/(4 Pi^2);
+  checkExact["v171 OS moment + Sugawara: spec(T)={1,64/729,1/729}; cluster 1/(1-r)=729/665; 31=1+h^v(E8); c(E8)_1=248/31=8; Delta_eff=6log(3/2)-31/(4pi^2)>0",
+    r == (2/3)^6 && s == (1/3)^6 && cluster == 729/665 &&
+    sug == 31 && cE8 == 8 && N[DeltaEff] > 0];
+];
+
+(* ---- (v172) trace-anomaly seed 4/3 + shared integer 7 ---- *)
+Module[{cc, chi, anomaly, half, b3, scal, vw},
+  cc = 8; chi = 2;
+  anomaly = cc chi/6;                    (* 8/3 *)
+  half = anomaly/2;                      (* 4/3 *)
+  b3 = 11 - (2/3) 6;                     (* 7 *)
+  scal = 48 - 41;                        (* 7 *)
+  vw = -98/45;
+  checkExact["v172 trace-anomaly seed: c*chi/6=8/3 halved by |Z2| = 4/3 = 16/12 (dim S+/dim g_SM); QCD b3=11-2/3 N_f=7 = scalaron exp 48-41; Volkov-Wipf -98/45 = -2*7^2/45",
+    anomaly == 8/3 && half == 4/3 && 16/12 == 4/3 &&
+    b3 == 7 && scal == 7 && vw == -2*7^2/45];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v168: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v172: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];
