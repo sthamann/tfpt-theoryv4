@@ -121,7 +121,8 @@ run_zenodo() {  # $1 = optional "publish"
     exit 1
   fi
   echo "== Zenodo upload ($(cat "$ROOT/tex-artefacts/release-version.txt")) =="
-  python3 "$ROOT/scripts/zenodo_upload.py" "${publish_args[@]}"
+  # bash 3.2 (macOS) under `set -u`: expanding an empty array errors, so guard it
+  python3 "$ROOT/scripts/zenodo_upload.py" ${publish_args[@]+"${publish_args[@]}"}
 }
 
 WHAT="${1:-all}"
