@@ -32,8 +32,8 @@
   "date": "2026-06-12"
  },
  "introduction::subsection::The hard reduction: two research gates plus typed interfaces::1": {
-  "hash": "3c3016ce5975",
-  "date": "2026-06-12"
+  "hash": "aed9c6284f14",
+  "date": "2026-06-13"
  },
  "introduction::section::The compiler: why $30=2\\cdot3\\cdot5$::1": {
   "hash": "0827633d0220",
@@ -328,8 +328,8 @@
   "date": "2026-06-12"
  },
  "tfpt_2_standard_model::section::Charged leptons: completely closed in $\\phiz$::1": {
-  "hash": "0a4991875ff4",
-  "date": "2026-06-12"
+  "hash": "c2e9a38b6339",
+  "date": "2026-06-13"
  },
  "tfpt_2_standard_model::section::Quarks: hierarchy from the same word-lengths::1": {
   "hash": "6722db5b90c0",
@@ -368,16 +368,16 @@
   "date": "2026-06-12"
  },
  "tfpt_2_standard_model::subsection::(2) Gravity --- exact in the $R^2$ regime, one named truncation remainder \\mC::1": {
-  "hash": "a891b6f4eccb",
-  "date": "2026-06-12"
+  "hash": "bd7617e15b5c",
+  "date": "2026-06-13"
  },
  "tfpt_2_standard_model::subsection::(3) Strong CP --- decoupled from the mass-gap problem \\mE/\\mC::1": {
-  "hash": "2406877d5bf9",
-  "date": "2026-06-12"
+  "hash": "c29773466a57",
+  "date": "2026-06-13"
  },
  "tfpt_2_standard_model::subsection::(4) Full quantum dynamics --- solvable on the physical sector \\mE/\\mC::1": {
-  "hash": "5845799aa2b2",
-  "date": "2026-06-12"
+  "hash": "50150318e7ef",
+  "date": "2026-06-13"
  },
  "tfpt_2_standard_model::subsection::(5) Axioms P1/P2 --- P2 machine-verified, P1 as an interface \\mE/\\mO::1": {
   "hash": "de183afa60a7",
@@ -388,20 +388,20 @@
   "date": "2026-06-12"
  },
  "tfpt_2_standard_model::section::Conclusion::1": {
-  "hash": "e50600808c26",
-  "date": "2026-06-12"
+  "hash": "189e59f8e638",
+  "date": "2026-06-13"
  },
  "tfpt_2_standard_model::section::The setup: parabolic data on the family curve::1": {
-  "hash": "162ba88cf0c3",
-  "date": "2026-06-12"
+  "hash": "da2a8b23c886",
+  "date": "2026-06-13"
  },
  "tfpt_2_standard_model::section::Exact scaffolding (proved)::1": {
   "hash": "4a2c6f9f0067",
   "date": "2026-06-12"
  },
  "tfpt_2_standard_model::section::The Riemann--Hilbert side (what the monodromy fixes)::1": {
-  "hash": "762b74e91166",
-  "date": "2026-06-12"
+  "hash": "c8f08856fa97",
+  "date": "2026-06-13"
  },
  "tfpt_2_standard_model::section::The parabolic-weight computation (resolved this round)::1": {
   "hash": "6a586ab59d15",
@@ -416,8 +416,8 @@
   "date": "2026-06-12"
  },
  "tfpt_2_standard_model::subsection::The flavor transport theorem::1": {
-  "hash": "7cf186abc983",
-  "date": "2026-06-12"
+  "hash": "7c6bb9501156",
+  "date": "2026-06-13"
  },
  "tfpt_2_standard_model::section::The Parabolic Anchor Compiler::1": {
   "hash": "94764ed306ed",
@@ -436,24 +436,24 @@
   "date": "2026-06-12"
  },
  "tfpt_2_standard_model::subsection::Residue-matrix spectral selector --- sharpening (H2)::1": {
-  "hash": "09e94f7af4b9",
-  "date": "2026-06-12"
+  "hash": "8af2543c2f6a",
+  "date": "2026-06-13"
  },
  "tfpt_2_standard_model::section::Closing the flavor block: two theorems::1": {
-  "hash": "1753d641fa65",
-  "date": "2026-06-12"
+  "hash": "c76f02659f89",
+  "date": "2026-06-13"
  },
  "tfpt_2_standard_model::section::Status::1": {
-  "hash": "bc6b380be767",
-  "date": "2026-06-12"
+  "hash": "f56ff44b4a5b",
+  "date": "2026-06-13"
  },
  "tfpt_2_standard_model::section::The explicit mass gap closes dynamics and clustering::1": {
-  "hash": "5f97864db735",
-  "date": "2026-06-12"
+  "hash": "9cacf6d78782",
+  "date": "2026-06-13"
  },
  "tfpt_2_standard_model::section::The seam elliptic complex is Fredholm (APS)::1": {
-  "hash": "e7e5817a3a6e",
-  "date": "2026-06-12"
+  "hash": "0b980ed498f3",
+  "date": "2026-06-13"
  },
  "tfpt_2_standard_model::section::The $R^{n\\ge3}$ truncation is $O(1/N_\\star^2)$-bounded::1": {
   "hash": "039c4dd5795c",
@@ -464,8 +464,8 @@
   "date": "2026-06-12"
  },
  "tfpt_2_standard_model::subsection::Seam response grammar: gravity is the inverse seed gain::1": {
-  "hash": "81bd551bd150",
-  "date": "2026-06-12"
+  "hash": "7cd027f0fd95",
+  "date": "2026-06-13"
  },
  "tfpt_2_standard_model::section::The solar angle $\\theta_{12}$: derived from the seam::1": {
   "hash": "47a208ca1aea",
@@ -496,8 +496,8 @@
   "date": "2026-06-12"
  },
  "tfpt_3_e8_audit_bootstrap::section::The $(1,1,2)$ anchor microcode::1": {
-  "hash": "3d3ca2545731",
-  "date": "2026-06-12"
+  "hash": "651bb311833e",
+  "date": "2026-06-13"
  },
  "tfpt_3_e8_audit_bootstrap::section::The residue and length matrices as spectral objects::1": {
   "hash": "8bd636bf0ca3",
@@ -552,8 +552,8 @@
   "date": "2026-06-12"
  },
  "tfpt_3_e8_audit_bootstrap::section::The M\u00f6bius origin of the irreducible $\\pi$::1": {
-  "hash": "77176ed12c64",
-  "date": "2026-06-12"
+  "hash": "4c20472669b7",
+  "date": "2026-06-13"
  },
  "tfpt_3_e8_audit_bootstrap::section::Honest status: bootstrap, not creation from nothing::1": {
   "hash": "7fa3623dd2c8",
@@ -580,20 +580,20 @@
   "date": "2026-06-12"
  },
  "tfpt_4_frontier::section::Baryon asymmetry $\\eta_B$ --- a downstream readout from the closed $\\Omega_b h^2$::1": {
-  "hash": "fab4331cbc04",
-  "date": "2026-06-12"
+  "hash": "0156e537e23c",
+  "date": "2026-06-13"
  },
  "tfpt_4_frontier::section::Proton/electron ratio $m_p/m_e$ --- a cross-sector ratio::1": {
   "hash": "15845044bee1",
   "date": "2026-06-12"
  },
  "tfpt_4_frontier::section::The Koide relation --- near $2/3$, computed exactly::1": {
-  "hash": "52cdf4f97377",
-  "date": "2026-06-12"
+  "hash": "0032346d157d",
+  "date": "2026-06-13"
  },
  "tfpt_4_frontier::section::Dark matter --- the candidate is fixed, the scale is pending::1": {
-  "hash": "159b42d5340a",
-  "date": "2026-06-12"
+  "hash": "3f588add85d8",
+  "date": "2026-06-13"
  },
  "tfpt_4_frontier::section::Full quantum gravity --- induced from the boundary kernel::1": {
   "hash": "ecbb34518929",
@@ -652,16 +652,16 @@
   "date": "2026-06-12"
  },
  "tfpt_horizon_readouts::section::Page time and scrambling::1": {
-  "hash": "e71394e4435b",
-  "date": "2026-06-12"
+  "hash": "1a6fdadc367d",
+  "date": "2026-06-13"
  },
  "tfpt_horizon_readouts::section::De Sitter and the Nariai bound from the $\\Lambda$ closure::1": {
   "hash": "526df4bfe631",
   "date": "2026-06-12"
  },
  "tfpt_horizon_readouts::section::The maximal black hole is the anchor: SdS in seam units::1": {
-  "hash": "5e9f734f967b",
-  "date": "2026-06-12"
+  "hash": "42a1ae318dae",
+  "date": "2026-06-13"
  },
  "tfpt_horizon_readouts::section::Turnaround radius, gravitational waves, light::1": {
   "hash": "5462b90a34b1",
@@ -680,7 +680,7 @@
   "date": "2026-06-12"
  },
  "tfpt_research_contracts::section::Research Contract 1 --- $(U_{\\mathrm{wall}})$::1": {
-  "hash": "55735d3fc434",
+  "hash": "9d7f4c27c8ec",
   "date": "2026-06-12"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {
@@ -724,8 +724,8 @@
   "date": "2026-06-12"
  },
  "origin_theory::section::The seam and the horizon: the precise statement::1": {
-  "hash": "81187a67d706",
-  "date": "2026-06-12"
+  "hash": "04300eddef40",
+  "date": "2026-06-13"
  },
  "origin_theory::section::Consequences, and the whole story \\mC::1": {
   "hash": "85c6d59a1287",
@@ -736,7 +736,7 @@
   "date": "2026-06-12"
  },
  "origin_theory::section::Honest status::1": {
-  "hash": "1b64210110bb",
+  "hash": "562b3d85fa61",
   "date": "2026-06-12"
  },
  "origin_theory::section::Appendix: computational verification::1": {

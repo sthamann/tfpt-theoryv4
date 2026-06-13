@@ -119,6 +119,77 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
   poison the next build; artefacts are still kept on success.
 \end{itemize}
 
+\subsection*{2026-06-13 (currency sweep: remaining old-series ``Paper N'' cross-references removed)}
+\begin{itemize}
+\item \textbf{No old-version framing left in the active docs.} A consistency sweep
+  found a residual layer of old-series ``Paper N'' attributions and removed them: four
+  literal ``Paper 6'' references (\texttt{tfpt\_4\_frontier} leptogenesis/axion,
+  \texttt{tfpt\_2} seam determinant), the old ``Paper 4'' (OS/admissibility) and
+  ``Paper 5'' (APS/Hodge) references in \texttt{tfpt\_2}, the old ``Paper 3''
+  transport-kernel attributions in \texttt{tfpt\_2}, and the internal ``Paper 1/2/4''
+  cross-references in \texttt{tfpt\_3}, \texttt{tfpt\_4} and
+  \texttt{tfpt\_horizon\_readouts} --- all rewritten as content-based phrasing (the
+  flavor sector, the architecture document, the $E_8$ decoder, the anchor characteristic
+  polynomial, etc.). The active documents now attribute results to the current
+  documents / axioms / scripts only, as the workflow rule requires; the machine-checked
+  sync (scripts $\leftrightarrow$ papers $\leftrightarrow$ ledger $\leftrightarrow$
+  website) was already current ($152$ scripts, AUDIT OK).
+\end{itemize}
+
+\subsection*{2026-06-13 (fifth round: the R3 normalisation is the dimensionful anchor, \vref{v152})}
+\begin{itemize}
+\item \textbf{R3: the $q(A_3)$ normalisation merges into the one anchor (\vref{v152}).} The
+  replica EH coefficient is a \emph{log-ratio} $k=\ln(m/\mu)/(12\pi)$ ($\ln m$ alone is
+  scale-ambiguous, only $m/\mu$ is physical); pinning $k=\cthree/2$ fixes the
+  dimensionless ratio $m/\mu=e^{3/4}$, and in $d{=}2$ that ratio \emph{is} the induced
+  Newton constant $1/G$ (\vref{v68}). So $v_{\mathrm{geo}}$ (\vref{v78}), $1/G$
+  (\vref{v68}) and $m/\mu$ are \emph{one} dimensionful anchor in three readings --- the
+  irreducibles stay $\{$one scale, $\pi\}$, and \texttt{SEAM.THEOREM.01}'s residual
+  reduces to the kernel-identification premise alone. \emph{Audit (not promoted):} the
+  log-ratio is numerically $\tfrac34=q(A_3)$, the target value the anchor takes in seam
+  units --- not a derivation (ledger \texttt{SEAM.EHMODEL.03}).
+\item \textbf{Bookkeeping.} Suite at $152$ modules, all green; Wolfram extension
+  $219/219$; intro/README/\texttt{origin\_theory}/\texttt{next.txt}/website moved together.
+\end{itemize}
+
+\subsection*{2026-06-12 (fourth round: the Calder\'on transfer answered --- the BFK split, \vref{v151})}
+\begin{itemize}
+\item \textbf{R3: the Calder\'on/DtN kernel is conically clean (\vref{v151}).} Reflection
+  doubling derives that the Kac corner constant is boundary-condition independent
+  ($C_N=C_D$), so by the Burghelea--Friedlander--Kappeler gluing ledger the conical
+  deficit of the two-sided Calder\'on jump determinant \emph{vanishes identically}
+  ($C_{\mathrm{cone}}(\gamma)-2C_D(\gamma/2)=0$): the seam-reduced effective action
+  inherits the \vref{v150} EH form \emph{verbatim}, with all of it localised in the
+  \emph{local} half-space determinants --- the ``Calder\'on version'' demanded by
+  \vref{v150} needs no separate derivation. \texttt{SEAM.THEOREM.01} narrows to the
+  $q(A_3)$ normalisation plus the standing kernel premise; the gate stays \mO\ (ledger
+  \texttt{SEAM.EHMODEL.02}).
+\item \textbf{Bookkeeping.} Suite at $151$ modules, all green; Wolfram extension
+  $218/218$; intro/README/\texttt{origin\_theory}/\texttt{next.txt} moved together.
+\end{itemize}
+
+\subsection*{2026-06-12 (third round: both normals anchor data; the R3 mechanism exists, \vref{v149}--\vref{v150})}
+\begin{itemize}
+\item \textbf{R4$'$: both dual normals are anchor data (\vref{v149}).} In the cusp frame
+  the torsion normal pairs to $(6,3,5)=(p_2,p_0,e_2)(a)$ --- one anchor invariant per
+  $Q_+$ line (the cusp matrix is unimodular, so this determines $n$ uniquely); with
+  $d=\tfrac32a-2\cdot\mathbf1$ the dual normal pair is anchor data through and through.
+  Equivalences to the $(2,8,121)$ frame data and the $w_0$-lift exact. R4$'$ residue $=$
+  \emph{one} discrete assignment (ledger \texttt{GATE.UWALL.14}).
+\item \textbf{R3: the mechanism exists at the gapped-model level (\vref{v150}) --- the
+  first movement on \texttt{SEAM.THEOREM.01}.} The conical heat-trace deficit is exact
+  and $t$-independent (Cheeger image sum $(N^2{-}1)/(12N)$); for a \emph{gapped}
+  operator the $\zeta$-regularised replica variation is \emph{finite and
+  cutoff-independent}, $\Delta\log\det'=2C(\gamma)\ln m$, and its linearisation is the
+  Einstein--Hilbert form $(\ln m/12\pi)\int\!\sqrt gR$. The \vref{v73} normalisation
+  becomes one exact target equation: $k=\cthree/2\Leftrightarrow\ln m=\tfrac34=q(A_3)$
+  (audit, not asserted). Remaining: the Calder\'on (boundary) version and that
+  normalisation --- the gate narrows but stays \mO\ (ledger \texttt{SEAM.EHMODEL.01}).
+\item \textbf{Bookkeeping.} Suite at $150$ modules, all green; Wolfram extension
+  $217/217$; status surfaces (intro reductions $+$ card, \texttt{origin\_theory},
+  contracts, \texttt{next.txt}, website) moved together.
+\end{itemize}
+
 \subsection*{2026-06-12 (R1--R5 second round: every class at its floor, \vref{v145}--\vref{v148})}
 \begin{itemize}
 \item \textbf{R4$'$: the pairing values are atom identities (\vref{v145}).} Reading the

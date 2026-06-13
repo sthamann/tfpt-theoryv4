@@ -526,6 +526,52 @@ smoothing-independent), lifted codim-$2$ to $4\pi(1{-}\alpha)A$, and the replica
 $S=4\pi kA$ with the smooth part dropping out; $S=A/4\Leftrightarrow\cthree=1/(8\pi)$ is sympy-solved as
 unique. The single remaining step of the whole chain is thereby isolated: ``seam determinant $\Rightarrow$
 EH form $k\!\int\!\sqrt g\,R$'' --- nothing else is open, and no Bekenstein--Hawking import remains.}
+\smallskip\\
+\noindent\textbf{The mechanism exists: the EH form at the gapped-model level
+(\veri{v150\_replica\_eh\_model.py}).} The isolated step now has its mechanism exhibited exactly, at the
+level of a gapped 2d model. The conical heat-trace deficit is the classical $t$-\emph{independent}
+constant ($C(\gamma)=\tfrac1{12}(2\pi/\gamma-\gamma/2\pi)$; image sum $(N^2{-}1)/(12N)$ on
+$\mathbb C/\Z_N$, exact), and for a \emph{gapped} operator $-\Delta+m^2$ the $\zeta$-regularised replica
+variation is the exact Mellin transform
+\[
+  \boxed{\ \Delta\log\det{}'=2\,C(\gamma)\,\ln m\ \ \text{(finite, \emph{cutoff-independent})}\ },\qquad
+  \Delta\log\det{}'=\frac{\ln m}{12\pi}\int\!\sqrt g\,R+O(\text{def}^2)
+\]
+--- \textbf{the replica variation of a gapped determinant \emph{is} of Einstein--Hilbert form}, with the
+gap supplying the scale (the massless case would give the familiar cutoff logarithm). The \vref{v73}
+normalisation becomes \emph{one} exact target equation: $k=\cthree/2\Leftrightarrow\ln m=\tfrac34=q(A_3)$
+--- the $A_3$ glue norm as the required seam gap parameter (recorded as the target, \emph{not} asserted).
+\emph{Honest scope:} this is the 2d bulk-scalar model; \texttt{SEAM.THEOREM.01} stays open \mO\ ---
+remaining are the Calder\'on (boundary) version and the $q(A_3)$ normalisation. What is established: the
+mechanism the theorem requires --- gap $\Rightarrow$ cutoff-independent EH coefficient under replica ---
+exists and is exact at model level (ledger \texttt{SEAM.EHMODEL.01}). \mE/\mO
+\smallskip\\
+\noindent\textbf{The Calder\'on transfer, answered: the BFK split (\veri{v151\_bfk\_split.py}).} The
+boundary version demands \emph{no new derivation}. By reflection doubling, the Kac corner constant is
+boundary-condition \emph{independent} ($C_N(\theta)=C_D(\theta)=(\pi^2{-}\theta^2)/(24\pi\theta)$,
+derived), and by the Burghelea--Friedlander--Kappeler gluing ledger the conical deficit of the two-sided
+Calder\'on/DtN jump determinant on a cut through the tip is
+\[
+  \boxed{\ C_{\mathrm{DtN}}(\gamma)=C_{\mathrm{cone}}(\gamma)-2C_D(\gamma/2)=C_N-C_D=0\ \ \text{identically}\ }
+\]
+--- \textbf{the nonlocal Calder\'on kernel is conically clean}; it carries no curvature term of its own.
+Since $\log Z_{\mathrm{boundary}}=-\tfrac12\log\det(\mathrm{bulk})$ (BFK consistency), the seam-reduced
+effective action inherits the gapped EH variation \emph{verbatim}, with all of it localised in the
+\emph{local} half-space determinants. \emph{What remains of \texttt{SEAM.THEOREM.01}:} the $q(A_3)$
+normalisation and the standing premise that the RP seam kernel is this BFK Calder\'on datum --- the gate
+narrows again, and stays \mO\ (ledger \texttt{SEAM.EHMODEL.02}). \mE/\mO
+\smallskip\\
+\noindent\textbf{The normalisation is the anchor, not a separate gap (\veri{v152\_norm\_is\_anchor.py}).}
+The coefficient is a \emph{log-ratio}: $\Delta\log\det'=2C(\gamma)\ln(m/\mu)$ with $\mu$ the $\zeta$-scale,
+so $\ln m$ alone is scale-ambiguous and $k=\ln(m/\mu)/(12\pi)$. Pinning $k=\cthree/2$ therefore fixes a
+\emph{dimensionless ratio} $m/\mu=e^{3/4}$, and in $d{=}2$ that ratio \emph{is} the induced Newton constant
+($1/(16\pi G)=k$, $1/(16\pi G)|_{G=1}=\cthree/2$ exact) --- the \vref{v68} anchor verbatim. So the
+$q(A_3)$ normalisation is not a separate open item: $v_{\mathrm{geo}}$ (flavour, \vref{v78}), $1/G$
+(gravity, \vref{v68}) and $m/\mu$ (the seam EH normalisation) are \emph{one} dimensionful anchor in three
+readings; the irreducibles stay $\{$one scale, $\pi\}$. \emph{Audit (not promoted):} the required log-ratio
+is numerically $\tfrac34=q(A_3)$ --- the target \emph{value} the anchor takes in seam units, not a
+derivation. \texttt{SEAM.THEOREM.01} stays \mO, but its residual is now precisely the
+kernel-identification premise alone (ledger \texttt{SEAM.EHMODEL.03}). \mE/\mO
 With the Einstein--Hilbert coefficient at the seam unit
 $k=\tfrac1{16\pi G}\big|_{G=1}=\tfrac{\cthree}2$,
 \[
@@ -846,8 +892,12 @@ ring sum \emph{is} the Born-squared Gaussian zero-mode integral and the quantum 
 det$'$-clean; residue $=$ the measure identification $+$ one reference normalisation (\vref{v147}).
 R2: the odd glue sectors are \emph{Ramond} modules (zero NS support), the glue choice is the
 R-projection ($248=120_{\mathrm{NS}}+128_{\mathrm R}$) --- the one net statement is scoped to the
-twisted-sector structure (\vref{v148}). R3 remains the genuine
-theorem target.
+twisted-sector structure (\vref{v148}). R3 remains the genuine theorem target ---
+\emph{but its mechanism now exists}: the replica variation of a \emph{gapped} 2d determinant is of
+EH form with a cutoff-independent coefficient, and the \vref{v73} normalisation is one exact target
+equation $\ln m=\tfrac34=q(A_3)$ (\vref{v150}); remaining: the Calder\'on version $+$ that
+normalisation. And R4$'$ dissolves further: \emph{both} dual normals are anchor data
+($n=(p_2,p_0,e_2)(a)$ in the cusp frame, \vref{v149}) --- residue $=$ one assignment.
 \end{keybox}
 
 \begin{keybox}[The carrier chapter: the interior is free, the structure is the certificate \mE/\mC\ (\veri{v113\_quasifree\_kernel.py})]

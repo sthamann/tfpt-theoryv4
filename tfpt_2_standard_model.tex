@@ -317,7 +317,7 @@ They come from the \emph{distinguished} transport value $\delta=\tfrac12$ (ratio
 lepton leg $y=1$ ($=|Y(e^c)|$). \textbf{The value $\delta=\tfrac12$ itself is a glue-norm readout:} the two $E_8$-glue norms are
 $q(D_5)=\gcar/|\mu_4|=\tfrac54$ and $q(A_3)=\Nfam/|\mu_4|=\tfrac34$, so
 $\delta=q(D_5)-q(A_3)=(\gcar-\Nfam)/|\mu_4|=|\Z_2|/|\mu_4|=\tfrac12$ --- the carrier-minus-family count over
-the glue index (the same pair whose \emph{sum} is the $E_8$ root norm $2$, Paper~1), matching the
+the glue index (the same pair whose \emph{sum} is the $E_8$ root norm $2$, architecture document), matching the
 harmonic-frame holonomy diagonal modulus $\tfrac12$. So $\delta$ is fixed, not chosen
 (\veri{v51\_boundary\_half\_step.py}). With that value,
 \[
@@ -1354,7 +1354,7 @@ The gravity closure is \emph{not} a single hypothesis but a chain of three stand
       \veri{v36\_spectral\_action\_g2.py}
 \item \textbf{Hodge/BRST closure:} the geometric BRST/Hodge differential quotients diffeomorphisms $+$
       local-frame gauge; the physical sector is its cohomology. A theorem as soon as the elliptic
-      complex on the \emph{compactified} normal slice $S^2$ (APS boundary conditions, Paper 5) is
+      complex on the \emph{compactified} normal slice $S^2$ (APS boundary conditions) is
       Fredholm --- again standard index theory. \mE\ (given Fredholm)
 \item \textbf{FRW reduction:} minisuperspace symmetry reduction onto the scale factor $+$ scalaron;
       yields the Starobinsky potential. Standard. \mE
@@ -1392,8 +1392,8 @@ admissible branch:
 \end{tikzpicture}
 \end{center}
 
-\noindent The three facts are algebraic and proved on $\operatorname{Ran}(P_{\mathrm{adm}})$ (Paper 4,
-``admissibility as a three-sector motif''). \textbf{Separately}, Paper 4 builds the \emph{full} OS
+\noindent The three facts are algebraic and proved on $\operatorname{Ran}(P_{\mathrm{adm}})$ (the
+admissibility three-sector motif). \textbf{Separately}, the admissibility / OS-reconstruction layer builds the \emph{full} OS
 closure as its own chain: admissible reflection positivity (theorem) $+$ mass-gap stability in the
 thermodynamic limit (Block 4, ``parent domination'') $+$ clustering $\Rightarrow$ OS reconstruction
 (theorem). Reflection positivity, covariance, clustering and OS reconstruction are there \emph{theorems
@@ -1440,7 +1440,7 @@ ratio $B$). \mE
       this is the ``parent gapped quasilocal'' object of parent domination, written out. \mE
 \item \emph{Thermodynamic limit.} A \emph{uniform} gap of a finite-range transfer operator gives, by the
       standard cluster expansion, exponential clustering and stability in the limit. \mE\ (standard)
-\item \emph{OS package.} With admissible reflection positivity (Paper 4 theorem) $+$ gap $+$ clustering
+\item \emph{OS package.} With admissible reflection positivity (the OS-reconstruction theorem) $+$ gap $+$ clustering
       all Osterwalder--Schrader axioms hold $\Rightarrow$ OS reconstruction: Hilbert space, Hamiltonian
       and a \emph{measure} on the admissible sector. \mE
 \item \emph{Bridge values $=$ correlators.} The fixed values (masses, mixings, $\alpha$) are the
@@ -1612,7 +1612,7 @@ This is packaged as the \textbf{flavor transport theorem} (Thm.~\ref{thm:flavor}
 hypotheses (H1) non-degeneracy, (H2) cusp $D_6$-labelling, (H3) anchor$+$winding --- of which (H3) is
 derived and (H1) is a genericity statement --- the full matrix $\{(7,3,0),(7,5,2),(8,5,3)\}$ is forced,
 with the combinatorial core proved by complete enumeration. (H2)'s answer is moreover \emph{not} free:
-Paper 3's transport-kernel theorem derives the down branch $\{1,2,5\}$ (the spectral-selector branch,
+The transport-kernel theorem derives the down branch $\{1,2,5\}$ (the spectral-selector branch,
 $\det R=h(D_5)$, principal minors $(2,3,5)$) from the uniquely-fixed family holonomy; only the
 parabolic$\leftrightarrow$transport equivalence remains open. Status flags: \mE\ exact identity, \mE\
 lattice/Lie theorem, \mE\ numerical, \mC\ conditional/project, \mO\ open.
@@ -1632,7 +1632,7 @@ flavor input of the compiler.
 \section{The setup: parabolic data on the family curve}
 % =====================================================================
 The family curve is the rigid four-punctured sphere $X_f^\circ\cong\mathbb P^1\setminus\mu_4$,
-$\mu_4=\{1,i,-1,-i\}$ (Paper 2). The flavor bundle is a rank-$\Nfam=3$ parabolic bundle $E_\bullet$ on
+$\mu_4=\{1,i,-1,-i\}$ (the flavor construction above). The flavor bundle is a rank-$\Nfam=3$ parabolic bundle $E_\bullet$ on
 $(\mathbb P^1,\mu_4)$. At each puncture the local monodromy is the order-$3$ cusp class with eigenvalues
 $\{1,\omega,\omega^2\}$, $\omega=e^{2\pi i/3}$; by the Mehta--Seshadri dictionary the corresponding
 \emph{parabolic weights} are the cusp exponents
@@ -1730,7 +1730,7 @@ orbifold image, plus the two rotation fixed points) gives a three-point system, 
 $\dim\mathcal M=-16+3\cdot 6=2$ for three regular classes --- \emph{not} cohomologically rigid on its
 own (a hypergeometric/pseudo-reflection point would be needed for $\dim=0$). Full rigidity is therefore
 the \emph{full} $D_4$ (including the reflection $z\mapsto 1/z$) together with the determinant-trivial
-branch, i.e.\ Paper 2's classification, which the explicit solution above is consistent with. We do not
+branch, i.e.\ the flavor classification above, which the explicit solution above is consistent with. We do not
 claim Katz rigidity for the bare $\mathbb Z_4$ system.
 \par\smallskip
 
@@ -1968,7 +1968,7 @@ transport gaps); it is physically forced but stated here as a hypothesis. \mC
 type (Section above), and the per-sector assignment $(1,1,2)$ is the $D_5$ cusp ordering. \mE/\mC
 \item (H2) is now \emph{small and not a free choice}: with (H1),(H3) the up and lepton sectors are fixed
 (sum $4$ unique; sum $10$ with anchor $2$ unique), leaving only the down branch $\{1,2,5\}$ vs
-$\{1,3,4\}$. Paper 3's transport-kernel theorem \emph{derives} the former (down $=\{1,2,5\}$) from the
+$\{1,3,4\}$. The transport-kernel theorem \emph{derives} the former (down $=\{1,2,5\}$) from the
 uniquely-fixed family-connection holonomy, and it satisfies the spectral selector ($\det R=h(D_5)$,
 principal minors $(2,3,5)$); the sibling $\{1,3,4\}$ does not arise. So (H2)'s answer is determined; only
 the parabolic$\leftrightarrow$transport equivalence remains. \mE/\mC
@@ -2136,8 +2136,8 @@ three. The correct $D_6$ elements are $u=\mathrm{id}$, $e=\text{rot}+2$, $d=\tex
 sectors are not one clean cusp-rotation orbit. Hence H2 has \emph{no one-line cusp-position shortcut}.
 
 \smallskip
-\noindent\textbf{But H2 is not a free input: Paper 3 derives it.} The transport-kernel theorem of
-Paper 3 (``canonical transport kernel and single-winding closure'') fixes the residue packets from the
+\noindent\textbf{But H2 is not a free input: the transport-kernel theorem derives it.} The transport-kernel theorem
+(``canonical transport kernel and single-winding closure'') fixes the residue packets from the
 \emph{uniquely determined} rigid family connection $[\nabla_F^\star]$, its intrinsic holonomy
 $\operatorname{Hol}_{\mathcal G_{D_4}}(\nabla_F^\star)$ on the $D_4$-invariant geodesic spine, the
 structural transport kernel $K_f^{\mathrm{str}}$, and the resonance pole $\dph\in(\tfrac13,\tfrac23)$.
@@ -2146,7 +2146,7 @@ Its output is exactly $R_u=\{0,1,3\}$, $R_d=\{1,2,5\}$, $R_e=\{2,3,5\}$ --- the 
 is \emph{determined} (theorem-level) by the holonomy, and the parabolic spectral selector is its correct
 independent characterisation. What genuinely remains is only the \emph{equivalence} of the two
 descriptions of the same connection --- the parabolic Hecke degrees on $\mathbb P^1\setminus\mu_4$ equal
-the transport-holonomy word-lengths of Paper 3. H2's \emph{answer} is fixed; only this parabolic
+the transport-holonomy word-lengths of the transport kernel. H2's \emph{answer} is fixed; only this parabolic
 $\leftrightarrow$ transport bridge is open. \mE\ (transport derivation) / \mC\ (parabolic equivalence)
 \par\smallskip
 
@@ -2207,7 +2207,7 @@ Proposition~\ref{prop:equiv} reduces the last open piece to the single technical
 \label{thm:ms}
 Let $X=\mathbb P^1\setminus\mu_4$ carry the rank-$\Nfam$ family bundle with the Paper-3 family
 connection $\nabla_F^\star$, and assume \emph{(U)} that $\nabla_F^\star$ is unitary (its holonomy lies in
-$U(\Nfam)$, generated by the cyclic $U_6$ shift and the cusp data --- Paper 3, metric family connection).
+$U(\Nfam)$, generated by the cyclic $U_6$ shift and the cusp data --- the metric family connection).
 Equip the Deligne parabolic extension with weights equal to the cusp exponents
 $\{0,\tfrac13,\tfrac23\}$ (Mehta--Seshadri weights $=$ local monodromy eigenphases, established).
 Then the parabolic-stable saturation of the generation sub-line-bundles has parabolic degree equal,
@@ -2284,7 +2284,7 @@ balanced bundle $\mathcal O(-2)\oplus\mathcal O(-1)^2$ & \mE & stable splitting 
 $L=6n+r$, $n=$ degree, $r=6w+3s\in\mathbb Z_6$ & \mE & winding/residue split \\
 $\sum L=22+18=40=|R(D_5)|$, $\sum n=\Nfam=3$ & \mE & budget bookkeeping \\
 rigid $SU(3)$ system exists; rotation $=A_3$ Coxeter & \mE & Riemann--Hilbert (numeric) \\
-bare $\mathbb Z_4$ moduli $\dim=2$ (not Katz-rigid) & \mE & rigidity via full $D_4$ (Paper 2) \\
+bare $\mathbb Z_4$ moduli $\dim=2$ (not Katz-rigid) & \mE & rigidity via full $D_4$ (above) \\
 single-fibre reduction $\mu_j=d_j+4\alpha_j$ & \mE & $R$-eigenline weights puncture-independent \\
 single-fibre weights degenerate $\Rightarrow$ global computation & \mE & residues are global parabolic degrees \\
 $\sum_k R^kA_0R^{-k}=4\operatorname{diag}(A_0)$ (exact collapse) & \mE & exponents at $\infty$ $=4\operatorname{diag}$ \\
@@ -2345,10 +2345,10 @@ $\lambda_2$ has, by Perron--Frobenius plus the standard transfer-matrix cluster 
 correlations $\langle A_0 A_n\rangle_c=O((\lambda_2/\lambda_1)^{|n|})$, i.e.\ exponential decay with rate
 $-\log(\lambda_2/\lambda_1)=\Delta_{\mathrm{gap}}$. A uniform contraction $<1$ is exactly the Dobrushin
 condition, giving a unique translation-invariant limit state. The gap here is \emph{explicit} (not an
-assumption), so the parent-domination input left open in Paper~4 is discharged on the transport sector.
+assumption), so the parent-domination input left open by the OS-reconstruction layer is discharged on the transport sector.
 \end{proof}
 
-\noindent\textbf{Consequence.} Together with admissible reflection positivity (Paper 4) this completes the
+\noindent\textbf{Consequence.} Together with admissible reflection positivity this completes the
 Osterwalder--Schrader package on the admissible sector $\Rightarrow$ OS reconstruction $\Rightarrow$ a
 unique quantum theory whose Schwinger functions are the bridge-layer correlators. The full-dynamics item
 (4) is thus closed on the physical sector \mE, and strong CP (3) needs only RP. The gap is a compiler
@@ -2402,7 +2402,7 @@ with no hidden cluster-expansion assumption. \mE
 % =====================================================================
 \begin{lemma}[APS Fredholm property of the seam complex]
 \label{lem:aps}
-Compactify the oriented two-dimensional normal slice $N_\Sigma$ to $S^2=D_N\cup_{S^1}D_S$ (Paper 5).
+Compactify the oriented two-dimensional normal slice $N_\Sigma$ to $S^2=D_N\cup_{S^1}D_S$.
 The geometric BRST/Hodge differential, restricted to the seam-even sector with Atiyah--Patodi--Singer
 boundary conditions on $\Sigma$, is an elliptic operator on a compact manifold; hence it is
 \emph{Fredholm}, with finite-dimensional kernel and cokernel and an integer index. The compact bosonic
@@ -2412,7 +2412,7 @@ Higgs index selects $\dim E_+=2$ (one weak doublet) and the Yukawa index $\dim E
 Ellipticity of the BRST/Hodge Laplacian is standard; on the compact $S^2$ with self-adjoint APS
 boundary conditions the operator has discrete spectrum and a well-defined index (Atiyah--Patodi--Singer).
 The seam-even projection commutes with the operator, so the index restricts to the physical sector and
-equals the compact bosonic/fermionic index already computed in Paper 5 ($2$ and $3$ respectively).
+equals the compact bosonic/fermionic index already computed on the compactified slice ($2$ and $3$ respectively).
 \end{proof}
 
 \noindent This discharges the ``Fredholm'' step on which the geometric gravity ($R^2$) branch rests:
@@ -2660,7 +2660,7 @@ objects must be kept apart:
 \begin{proposition}[$\Lambda$ metrology typing]
 \label{prop:lambda}
 \begin{enumerate}[leftmargin=1.6em]
-\item \emph{Seam determinant} (Paper 6): $\dfrac{\Lambda_{\mathrm{IR}}}{\Mpl^4}=-\log\det\nolimits_{\mathrm{adm}}(1-U_\Sigma)$,
+\item \emph{Seam determinant}: $\dfrac{\Lambda_{\mathrm{IR}}}{\Mpl^4}=-\log\det\nolimits_{\mathrm{adm}}(1-U_\Sigma)$,
   normalised by the \emph{unreduced} $\Mpl$, in two versioned branches
   $\Lambda^{\mathrm{rec}}_{\mathrm{IR}}/\Mpl^4=-\log(1-\delta_{\mathrm{top}}e^{-2/\alpha})$ and
   $\Lambda^{\mathrm{car}}_{\mathrm{IR}}/\Mpl^4=-\log(1-\varphi_{\mathrm{base}}(\delta_{\mathrm{top}}e^{-2\alpha})^{31})$,

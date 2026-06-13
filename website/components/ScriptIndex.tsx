@@ -167,7 +167,7 @@ const CLUSTERS: Cluster[] = [
     ],
   },
   {
-    title: "Blind registry & red-team follow-ups (v84–v148)",
+    title: "Blind registry & red-team follow-ups (v84–v152)",
     purpose: "The frozen prediction registry and the second follow-up round: Target A merged to one residual, the CP residual quantified, N★ computed from reheating — every freeze machine-enforced.",
     accent: "from-emerald-500 to-cyan-500",
     scripts: [
@@ -236,6 +236,10 @@ const CLUSTERS: Cluster[] = [
       { file: "v146_moebius_d4.py", what: "Möbius-D4 realisation (R5 floor): ⟨z↦iz, z↦1/z⟩ = D4 acts on H¹(P¹∖μ₄) EXACTLY as the integer model ⟨G,T_A,Σ⟩ — ι swaps χ₁↔χ₃ with +1 on χ₂ (det −1) = T_A; δι = Σ; parities and reflection classes match — the premise reduces to the module identification itself" },
       { file: "v147_clock_gaussian.py", what: "clock = Gaussian zero-mode integral (R1): variance ratio (1−α) (norm=area, v131) ⇒ Born² Γ-ratio (1−α)^{p₂}, rate = −p₂ln(1−α) = the v127 ring sum term by term; the BEND log_{3/2}3 lives between the two Nariai levels of ONE geometry ⇒ det′-clean; obstruction localised to the α=0 reference" },
       { file: "v148_fock_census.py", what: "NS/R census (R2 scoped, corrected): the untwisted (NS) module carries only even classes {0,2}×{0,2} — the odd glue sectors are RAMOND modules; the R zero-mode module (256) splits 128+128 into the odd sectors of the two Lagrangian glues: choosing the glue = choosing the R-projection; 248 = 120(NS)+128(R)" },
+      { file: "v149_cusp_normal.py", what: "both dual normals are ANCHOR DATA (R4′): in the cusp frame n pairs to (6,3,5) = (p₂,p₀,e₂)(a) — one anchor invariant per Q₊ line (d = (3/2)a−2·1 in the generation frame); equivalent to (2,8,121) and the w₀-lift; residue = ONE assignment (which invariant on which line)" },
+      { file: "v150_replica_eh_model.py", what: "EH form from replica (R3, model level): conical deficit exact + t-independent (Cheeger image sum (N²−1)/(12N)); gap ⇒ Δlogdet′ = 2C(γ)ln m FINITE, cutoff-independent; linearisation = (ln m/12π)·∫√gR — the EH form; target equation k = c₃/2 ⟺ ln m = 3/4 = q(A₃); Calderón transfer + normalisation stay open (Calderón transfer since answered: the DtN kernel is conically clean, v151)" },
+      { file: "v151_bfk_split.py", what: "BFK split (R3): Kac corner constant is boundary-condition independent (C_N = C_D, via doubling) ⇒ the conical deficit of the Calderón/DtN jump determinant VANISHES identically — the seam-reduced action inherits the v150 EH form via BFK; the EH content sits in the local half determinants; residue = q(A₃) normalisation + kernel premise" },
+      { file: "v152_norm_is_anchor.py", what: "R3 normalisation IS the dimensionful anchor: k = ln(m/μ)/(12π) — ln m is scale-ambiguous, only m/μ is physical; k = c₃/2 ⟺ m/μ = e^{3/4} is the induced-gravity anchor 1/G (v68), not a separate gap; the irreducibles stay {one scale, π}; audit: the log-ratio = 3/4 = q(A₃) is the target value, NOT a derivation" },
     ],
   },
 ];

@@ -34,6 +34,37 @@ NACHTRAG 2026-06-12, Runde 2 (v145-v148): jede Klasse am Boden.
     (Ramond-)Moduln => die Netz-Aussage ist irreduzibel twisted-sector.
   - Suite 148 Module; Wolfram-Extension erweitert.
 
+NACHTRAG 2026-06-12, Runde 4 (v149-v150):
+  - R4' (v149): BEIDE Dualnormalen sind Anker-Daten -- im Cusp-Frame ist
+    n = (p2,p0,e2)(a) = (6,3,5), ein Anker-Invariant pro Q+-Linie (d war schon
+    (3/2)a-2*1); Rest = EINE diskrete Zuordnung (welcher Invariant auf welcher Linie).
+  - R3 (v150): ERSTE BEWEGUNG -- der Mechanismus existiert: konischer Defekt exakt
+    t-unabhaengig (Cheeger); Gap => zeta-Replica-Variation ENDLICH und cutoff-frei,
+    Delta log det' = 2C(gamma) ln m; Linearisierung = (ln m/12pi) Int sqrt(g) R =
+    EH-FORM. Zielgleichung: k = c3/2 <=> ln m = 3/4 = q(A3) (Audit, nicht behauptet).
+    Offen: Calderon-Version + q(A3)-Normalisierung; SEAM.THEOREM.01 bleibt [O].
+  - Suite 150 Module; Wolfram-Spiegel folgt.
+
+NACHTRAG 2026-06-12, Runde 5 (v151):
+  - R3 (v151): Calderon-Transfer BEANTWORTET -- der Kac-Eckterm ist
+    randbedingungs-UNABHAENGIG (C_N = C_D, via Verdopplung), daher verschwindet der
+    konische Defekt der DtN-/Jump-Determinante IDENTISCH (BFK-Split): der nichtlokale
+    Calderon-Kernel ist konisch sauber; die seam-reduzierte Wirkung erbt die
+    EH-Form aus v150 woertlich (Inhalt sitzt in den LOKALEN Halbraum-Determinanten).
+    Rest von SEAM.THEOREM.01: q(A3)-Normalisierung + Kernel-Praemisse. [O] bleibt.
+  - Suite 151 Module; Wolfram 218/218.
+
+NACHTRAG 2026-06-13, Runde 6 (v152):
+  - R3 (v152): die q(A3)-NORMALISIERUNG IST der dimensionsbehaftete Anker, keine
+    eigene Luecke. Der EH-Koeffizient ist ein LOG-VERHAELTNIS k = ln(m/mu)/(12pi);
+    ln m allein ist skalen-mehrdeutig, nur m/mu ist physikalisch. k = c3/2 <=>
+    m/mu = e^{3/4} = die induzierte Newton-Konstante 1/G (v68). Also sind v_geo
+    (v78), 1/G (v68) und m/mu EIN Anker in drei Lesarten - die Irreduziblen
+    bleiben {eine Skala, pi}. Audit (NICHT promotet): das Log-Verhaeltnis = 3/4
+    = q(A3) ist der Zielwert, keine Ableitung. SEAM.THEOREM.01 bleibt [O], Rest =
+    nur noch die Kernel-Identifikations-Praemisse.
+  - Suite 152 Module; Wolfram 219/219.
+
 KURZFASSUNG (ein Satz)
 ----------------------
 Die Anchorblock-Determinante des Massentransport-Pencils, det B(K+xQ) = (3x+2)(3x+5),

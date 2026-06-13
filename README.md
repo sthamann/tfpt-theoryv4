@@ -93,9 +93,11 @@ layers (this separation is the discipline of the whole package):
 
 The single remaining **central theorem target** is to derive the
 `1/(8π)` area-law coefficient from the replica variation of the seam determinant. Its *structure*
-is closed (Fursaev–Solodukhin ⟹ `c₃ = 1/(8π)` is the unique value giving `S = A/4`), and the
-residual is identified as the one irreducible dimensionful anchor (`1/G` is UV-sensitive,
-Sakharov-type induced gravity) — not a diffuse gap.
+is closed (Fursaev–Solodukhin ⟹ `c₃ = 1/(8π)` is the unique value giving `S = A/4`), its
+*mechanism* is now exhibited at the gapped-model level (replica variation of a gapped 2d
+determinant **is** of EH form with a cutoff-independent coefficient; target equation
+`ln m = 3/4 = q(A₃)`, `v150`), and the residual is identified as the one irreducible dimensionful
+anchor (`1/G` is UV-sensitive, Sakharov-type induced gravity) — not a diffuse gap.
 
 ---
 
@@ -208,8 +210,13 @@ The ledger is *append-only and versioned*: superseded rows are marked `active=fa
 ## 5. What is genuinely open
 
 - **The central theorem**: `1/(8π)` from the seam-determinant replica — structure closed, the
-  Fursaev–Solodukhin factor now machine-derived (`v90`, no Bekenstein–Hawking import); the single
-  isolated residual is "seam determinant ⇒ EH form", plus the one dimensionful induced-gravity anchor.
+  Fursaev–Solodukhin factor machine-derived (`v90`), and the mechanism now exhibited at the
+  gapped-model level (gap ⇒ cutoff-independent EH coefficient under replica, `v150`), with the
+  Calderón transfer answered (the DtN kernel is conically clean; the seam-reduced action inherits
+  the EH form via the BFK split, `v151`); the `q(A₃)`
+  normalisation is itself the one dimensionful anchor in disguise (the EH coefficient is a log-ratio
+  `k = ln(m/μ)/12π`, and `m/μ` is `1/G`, `v152`), so the isolated residual is just the
+  kernel-identification premise plus that single declared anchor.
 - **Full covariant metric-sector / ambient QG measure** (`G_metric`) — kept open by design;
   gap-decoupled from the admissible IR sector (`Δ_eff = 1.648 > 0`). After `v83`/`v87` the whole
   Target-A gate is **one** theorem: *the seam–Calderón boundary net is holomorphic with `c = 8`*

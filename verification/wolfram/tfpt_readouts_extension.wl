@@ -1301,6 +1301,71 @@ Module[{nsClasses, rCounts, glueA, glueB, inA, inB},
     inA == 128 && inB == 128 && 120 + 128 == 248];
 ];
 
+(* ---- (v149) cusp normal ---- *)
+Module[{nv, dv, sigma, av, onev, p, cusp},
+  nv = {5, -9, 6}; dv = {-1/2, -1/2, 1}; sigma = {2, -9, 5};
+  av = {1, 1, 2}; onev = {1, 1, 1};
+  p = Transpose[{{0, 0, 1}, {0, 1, 2}, {1, 0, 0}}];
+  cusp = Transpose[p] . nv;
+  checkExact["v149 cusp normal: n pairs with the cusp eigenbasis to (6,3,5) = (p2,p0,e2)(a); cusp matrix unimodular => unique; d = (3/2)a - 2*1; equivalences (2,8,121) + w0-lift; sigma -> (5,1,2); 6+3+5 = 14 = dim G2",
+    cusp == {6, 3, 5} &&
+    {Total[av^2], 3, av[[1]] av[[2]] + av[[1]] av[[3]] + av[[2]] av[[3]]} == {6, 3, 5} &&
+    Abs[Det[p]] == 1 &&
+    LinearSolve[Transpose[p], {6, 3, 5}] == Inverse[Transpose[p]] . {6, 3, 5} &&
+    Inverse[Transpose[p]] . {6, 3, 5} == nv &&
+    dv == 3/2 av - 2 onev &&
+    {nv . onev, nv . av, nv . sigma} == {2, 8, 121} &&
+    Reverse[sigma] + 4 {0, 0, 1} == nv &&
+    Transpose[p] . sigma == {5, 1, 2} && 6 + 3 + 5 == 14];
+];
+
+(* ---- (v150) replica EH model ---- *)
+Module[{cdef, imgOK, convOK, mellin, dz0, dC, target},
+  cdef[g_] := (1/12) (2 Pi/g - g/(2 Pi));
+  imgOK = And @@ Table[
+    FullSimplify[Sum[1/Sin[Pi k/n]^2, {k, 1, n - 1}] - (n^2 - 1)/3] === 0,
+    {n, 2, 8}];
+  convOK = Simplify[(1/(4 nn)) (nn^2 - 1)/3 - cdef[2 Pi/nn]] === 0;
+  mellin = Integrate[tt^(ss - 1) Exp[-mm^2 tt], {tt, 0, Infinity},
+    Assumptions -> ss > 0 && mm > 0];
+  dz0 = D[mm^(-2 ss), ss] /. ss -> 0;
+  dC = D[cdef[gg], gg] /. gg -> 2 Pi;
+  target = Simplify[12 Pi (1/2) (1/(8 Pi))];
+  checkExact["v150 replica EH model: image sum exact (N=2..8); orbifold deficit = C(2pi/N); Mellin Delta-zeta(s) = C m^-2s => Delta log det' = 2C ln m (cutoff-independent); dC/dgamma|_{2pi} = -1/(12pi) => EH form with k = ln m/(12pi); target k = c3/2 <=> ln m = 3/4 = q(A3)",
+    imgOK && convOK &&
+    Simplify[mellin - Gamma[ss] mm^(-2 ss)] === 0 &&
+    Simplify[dz0 + 2 Log[mm]] === 0 &&
+    Simplify[dC + 1/(12 Pi)] === 0 &&
+    target == 3/4];
+];
+
+(* ---- (v151) BFK split ---- *)
+Module[{cCone, cDir, cNeu, cDtn},
+  cCone[g_] := (4 Pi^2 - g^2)/(24 Pi g);
+  cDir[t_] := (Pi^2 - t^2)/(24 Pi t);
+  cNeu = Simplify[cCone[2 th] - cDir[th]];
+  cDtn = Simplify[cCone[gg] - 2 cDir[gg/2]];
+  checkExact["v151 BFK split: Cheeger form match; doubling => C_N(theta) = C_D(theta) (Kac corner boundary-condition independent); conical deficit of the Calderon/DtN jump determinant = C_cone(g) - 2 C_D(g/2) = 0 IDENTICALLY; dC/dg|_{2pi} = -1/(12pi); target ln m = 3/4 = q(A3) unchanged",
+    Simplify[(1/12) (2 Pi/gg - gg/(2 Pi)) - cCone[gg]] === 0 &&
+    Simplify[cNeu - cDir[th]] === 0 &&
+    cDtn === 0 &&
+    Simplify[(D[cCone[g2], g2] /. g2 -> 2 Pi) + 1/(12 Pi)] === 0 &&
+    Simplify[12 Pi (1/2) (1/(8 Pi))] == 3/4];
+];
+
+(* ---- (v152) R3 normalisation = the anchor ---- *)
+Module[{c3, k, lnratio, dlogdet},
+  c3 = 1/(8 Pi);
+  k = c3/2;
+  lnratio = Simplify[12 Pi k];
+  dlogdet = -D[(mm/muu)^(-2 ss), ss] /. ss -> 0;
+  checkExact["v152 R3 normalisation = anchor: Delta log det' = 2 C ln(m/mu) (scale-ambiguous ln m; only m/mu physical); k = c3/2 <=> ln(m/mu) = 3/4 => m/mu = e^{3/4}; 1/(16 pi G)|_{G=1} = c3/2 (induced 1/G = the v68 anchor); audit: 3/4 = q(A3) is the target value, not a derivation",
+    Simplify[dlogdet - 2 Log[mm/muu]] === 0 &&
+    k == 1/(16 Pi) && lnratio == 3/4 &&
+    Simplify[1/(16 Pi) - c3/2] === 0 &&
+    3/4 == 3/4];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v148: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v152: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

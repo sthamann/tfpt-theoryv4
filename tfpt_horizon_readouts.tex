@@ -140,7 +140,7 @@ In TFPT the Page curve is \emph{boundary recoverability}: the physical sector is
 gapped, and the recovered mutual information decays at the transfer rate,
 $I(A{:}C|B)_n\sim\lambda_2^{\,n}=(2/3)^{6n}$. \textbf{This is the same operator that builds the Standard
 Model:} the boundary transport spectrum is $\{1,(2/3)^6,(1/3)^6\}$ and its sub-leading eigenvalue
-$\lambda_2=(2/3)^6$ is exactly the flavor-gap eigenvalue of Paper~2 ($\Delta_{\mathrm{gap}}=-\log(2/3)^6=6\log\tfrac32$).
+$\lambda_2=(2/3)^6$ is exactly the flavor-gap eigenvalue ($\Delta_{\mathrm{gap}}=-\log(2/3)^6=6\log\tfrac32$).
 One boundary transport thus governs \emph{both} the SM flavor hierarchy and the horizon information recovery.
 \mE\ \veri{v54\_seam\_horizon\_keystones.py} The scrambling prefactor carries a $\mu_4$ signature: with
 $\beta=1/T_H=8\pi M$, $\beta/2\pi=4M$, so
@@ -181,7 +181,7 @@ $M_N=1/(3\sqrt\Lambda)=1/(N_{\mathrm{fam}}\sqrt\Lambda)$ is, in units $1/\sqrt\L
 \]
 with coefficients $(-3,2)=(-N_{\mathrm{fam}},|\Z_2|)$ --- and the root pattern is exactly the
 \textbf{traceless projection of the anchor}: $a-\tfrac{p_1(a)}{3}\mathbf 1=-\tfrac13(1,1,-2)$ for
-$a=(1,1,2)$ (compare $\chi_a=(t-1)^2(t-2)$, Paper~1). Five exact companions:
+$a=(1,1,2)$ (compare $\chi_a=(t-1)^2(t-2)$, the anchor characteristic polynomial). Five exact companions:
 \begin{itemize}\setlength\itemsep{2pt}
 \item \textbf{Entropy bound $=$ the Koide branch value.} Each Nariai horizon carries $S_{dS}/3=S_{dS}/N_{\mathrm{fam}}$
 and the total is $\boxed{S_{\mathrm{Nariai}}/S_{dS}=2/3=|\Z_2|/N_{\mathrm{fam}}}$ (deficit exactly $S_{dS}/3$). The
@@ -198,11 +198,11 @@ Nariai gives $\tfrac38=p_2(a)/e_1(a)^2$ --- exactly the two nonzero $SU(4)_1$ co
 \item \textbf{The mass line is a double cover.} $\operatorname{disc}_r\propto(1-3m)(1+3m)$ in
 $m=M\sqrt\Lambda$: branch points $m=\pm1/N_{\mathrm{fam}}$, separation $2/3=|\Z_2|/N_{\mathrm{fam}}$, deck involution
 $=$ the black-hole$\,\leftrightarrow\,$cosmological horizon swap --- the gravitational twin of the flavor
-sheet $\Z_2$ and of the split $N_{\mathrm{fam}}$-linear cover $(3x{+}2)(3x{+}5)$ of Paper~2 (Fig.~\ref{fig:sdscover}).
+sheet $\Z_2$ and of the split $N_{\mathrm{fam}}$-linear cover $(3x{+}2)(3x{+}5)$ of the flavor sector (Fig.~\ref{fig:sdscover}).
 \item \textbf{Temperature lemma / orientation.} $|\kappa_b/\kappa_c|=(2x{+}1)/(x(x{+}2))>1$ for $x<1$
 (equality iff $x=1$): the black-hole sheet is \emph{always} hotter, so evaporation flows \emph{away} from
 the merge --- the anchor configuration is the \textbf{repeller} and the democratic endpoint the attractor,
-the same orientation as the flavor flow (Koide attractor / carrier repeller, Paper~4). \emph{Audit reading.}
+the same orientation as the flavor flow (Koide attractor / carrier repeller, the frontier note). \emph{Audit reading.}
 \end{itemize}
 Completing the seam-unit table: $dM=\cthree\,\kappa\,dA$ (first law), $M=2\cthree\,\kappa A$ (Smarr),
 $S\le ER/(4\cthree)$ (Bekenstein), $P_H=\cthree/(1920\,M^2)$, lifetime
@@ -219,7 +219,7 @@ surface.
 
 \begin{keybox}[The dual anchor: the inverse flavor response \emph{is} the Nariai root \mE\ (\veri{v134\_dual\_anchor.py})]
 The Nariai pattern is not only the traceless anchor --- it is stored \emph{inside the flavor compiler} as a
-dual invariant. For the residue/winding operators $R,L$ of Paper~2 and the anchor $a=(1,1,2)$,
+dual invariant. For the residue/winding operators $R,L$ of the flavor sector and the anchor $a=(1,1,2)$,
 \[
   \boxed{\ d:=a^\top R^{-1}=a^\top L^{-1}=\bigl(-\tfrac12,-\tfrac12,1\bigr)\ },\qquad
   d\cdot\mathbf 1=0,\quad d\cdot a=1,\quad (1,1,-2)=-2d ,
@@ -258,7 +258,7 @@ $SU(4)_1$ weights $[\tfrac38,\tfrac12]$. \veri{v101\_horizon\_anchor.py}}
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.94\linewidth]{figures/cover_twins.pdf}
-\caption{Twin double covers: the flavor anchor-block cover $y^2=(3x{+}2)(3x{+}5)$ (Paper~2) and the SdS
+\caption{Twin double covers: the flavor anchor-block cover $y^2=(3x{+}2)(3x{+}5)$ and the SdS
 mass-line cover $w^2\propto(1{-}3m)(1{+}3m)$ share the split $N_{\mathrm{fam}}$-linear form with rational
 branch points at spine-over-family values. \veri{v101\_horizon\_anchor.py}}
 \label{fig:covertwins}
@@ -322,7 +322,7 @@ atoms over the family count (Fig.~\ref{fig:trisection}). Three exact consequence
   per transport step; the gravity invariant is a \emph{curvature}, $(2/3)^{\Nfam}$ in the canonical angle
   --- same base $2/3=|\Z_2|/\Nfam$, exponent ratio $2=|\Z_2|$. What is still missing for a full
   identification is the gravity-side \emph{clock} (the near-Nariai evaporation generator that converts
-  curvature into a rate) --- the same class of missing object as the Koide transfer generator of Paper~4:
+  curvature into a rate) --- the same class of missing object as the Koide transfer generator (frontier note):
   \textbf{one clock, two known geometries}. That identification stays \mC.
 \end{itemize}
 \end{keybox}

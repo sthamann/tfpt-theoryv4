@@ -265,6 +265,10 @@ const NODES: DagNode[] = [
       "v146_moebius_d4.py",
       "v147_clock_gaussian.py",
       "v148_fock_census.py",
+      "v149_cusp_normal.py",
+      "v150_replica_eh_model.py",
+      "v151_bfk_split.py",
+      "v152_norm_is_anchor.py",
     ],
   },
   {

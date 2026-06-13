@@ -993,7 +993,7 @@ export const papers: Paper[] = [
       },
       {
         title: "The selector triangle",
-        body: "The dual normal pair (d, n) pins R columnwise; d = (3/2)a − 2·1 is pure anchor data (the first selector is derived), and n is the unique covector with atom pairings (2, 8, 121) on the frame (1, a, σ) of determinant 11. Frame integrality cuts this further: integer covectors form an index-11 sublattice, so the σ-pairing is forced mod 11 — and the pairing values themselves are atom identities given the exponent-duality lift — including the new closure |μ₄| + g_car = N_fam² (4+5=9) — so the residue is exactly one lift map (v145); the historical U_wall machinery is over-engineering for the ratios.",
+        body: "The dual normal pair (d, n) pins R columnwise; d = (3/2)a − 2·1 is pure anchor data (the first selector is derived), and n is the unique covector with atom pairings (2, 8, 121) on the frame (1, a, σ) of determinant 11. Frame integrality cuts this further: integer covectors form an index-11 sublattice, so the σ-pairing is forced mod 11 — and the pairing values themselves are atom identities — in the cusp frame n pairs to (6,3,5) = (p₂,p₀,e₂)(a), so BOTH dual normals are anchor data (v145/v149); the residue is one discrete assignment; the historical U_wall machinery is over-engineering for the ratios.",
         formulas: [
           "d = a^{\\top}R^{-1} = \\bigl(-\\tfrac12,-\\tfrac12,1\\bigr), \\qquad n = (5,-9,6)",
           "n\\cdot\\mathbf{1} = 2, \\quad n\\cdot a = 8, \\quad n\\cdot\\sigma = 121 = 11^2",

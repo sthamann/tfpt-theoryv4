@@ -156,6 +156,10 @@ MODULES = [
     ("v146_moebius_d4", "Moebius D4 on H^1 = the integer model, parity by parity (R5 floor)"),
     ("v147_clock_gaussian", "clock = Gaussian zero-mode integral; the bend is det'-clean (R1)"),
     ("v148_fock_census", "NS/R sector census: odd glue sectors are Ramond modules; glue choice = R-projection (R2 scoped)"),
+    ("v149_cusp_normal", "both dual normals are anchor data: n = (p2,p0,e2)(a) in the cusp frame (R4')"),
+    ("v150_replica_eh_model", "EH form from replica variation at the gapped-model level; target ln m = q(A3) (R3)"),
+    ("v151_bfk_split", "BFK split: the Calderon/DtN kernel is conically clean; seam action inherits the EH form (R3)"),
+    ("v152_norm_is_anchor", "R3 normalisation = the dimensionful anchor (ln(m/mu) ratio = 1/G); not a separate gap"),
 
 ]
 
