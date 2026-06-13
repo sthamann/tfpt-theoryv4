@@ -32,5 +32,9 @@ alessandro*.html
 # Local problem / working notes (not shipped)
 problem_*
 
+# External tools cloned locally (reproduced on demand by verification/pyrate/reproduce.sh)
+experiments/pyrate/
+verification/pyrate/*.generated.txt
+
 # Local secrets (Zenodo token, etc.)
 .env

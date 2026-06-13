@@ -59,64 +59,39 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
-\subsection*{2026-06-12 (Zenodo version label: semantic + git rev)}
+\subsection*{2026-06-13 (PyR@TE external cross-check of the $F_{\mathrm{transfer}}$ gauge inputs --- v159)}
 \begin{itemize}
-\item \textbf{Release version string.} \texttt{build.sh} now writes
-  \texttt{tex-artefacts/release-version.txt} as \texttt{\{TFPTversion\} (rev \{git count\})}
-  (matches \texttt{\textbackslash TFPTdatestamp} without the date). \texttt{scripts/zenodo\_upload.py}
-  and \texttt{build.sh zenodo}/\texttt{zenodo-publish} use this label on Zenodo; cursor rules extended
-  for when \texttt{zenodo\_description.html} must move with deposit-facing changes.
+\item \textbf{New module \texttt{v159\_pyrate\_gauge\_crosscheck.py} \mE/\mC{} (claim
+  \texttt{EM.BUDGET.02}).} The one-loop gauge coefficients used by the transfer functor
+  are confirmed by an \emph{independent} third-party RGE generator. Feeding the carrier
+  / Standard-Model field content into the textbook one-loop formula (GUT normalisation)
+  gives $(b_1,b_2,b_3)=(\tfrac{41}{10},-\tfrac{19}{6},-7)$, and \textbf{PyR@TE\,3}
+  (\texttt{arXiv:2007.12700}, \texttt{github.com/LSartore/pyrate}) writes
+  $\beta_{g_1}=(\tfrac{41}{10})g_1^3$, $\beta_{g_2}=-\tfrac{19}{6}g_2^3$,
+  $\beta_{g_3}=-7g_3^3$ verbatim (plus the full standard 2-loop matrix). So $b_1=41/10$
+  is pinned \emph{three} independent ways --- carrier algebra
+  $10b_1=\gcar 2^{\gcar-2}{+}1=41$, the $U(1)$ hypercharge index $\sum\tfrac35 Y^2$, and
+  PyR@TE --- and the split $10b_1=40_{\text{(ferm.)}}+1_{\text{(Higgs)}}=41$ reproduces
+  the EM-budget Gate~1 of \texttt{tfpt\_2}. Cited there with \texttt{\textbackslash veri};
+  the gauge sector of $F_{\mathrm{transfer}}$ is thus not a free knob.
+\item \textbf{PyR@TE reproducer (not vendored).} \texttt{verification/pyrate/reproduce.sh}
+  clones PyR@TE on demand into \texttt{experiments/pyrate} (git-ignored), neutralises its
+  interactive \texttt{pdflatex} end-command, runs the SM at one and two loops, and
+  re-extracts the gauge $\beta$ functions; the committed evidence is
+  \texttt{verification/pyrate/sm\_gauge\_betas.txt}. PyR@TE is the right external tool for
+  the transfer/RGE gates (gauge running, and --- with a seesaw model --- the
+  neutrino-Yukawa running behind $\eta_B$); it is \emph{not} a tool for premise~(A) (a
+  2d boundary-CFT question). Mirrored in the Wolfram extension; suite now 159 modules.
 \end{itemize}
 
-\subsection*{2026-06-12 (Zenodo API upload workflow)}
+\subsection*{2026-06-13 (changelog date-order audit + reorder pass)}
 \begin{itemize}
-\item \textbf{Automated Zenodo versioning.} Added \texttt{scripts/zenodo\_upload.py} and
-  \texttt{.github/workflows/\allowbreak zenodo-release.yml}: creates a new draft version of record
-  \texttt{20579275} (DOI \texttt{10.5281/\allowbreak zenodo.\allowbreak 20579275}), uploads the ten active paper PDFs,
-  refreshes \texttt{zenodo\_description.html}, bumps the version from \texttt{tex-artefacts/version.tex},
-  and optionally publishes via GitHub Actions (\texttt{ZENODO\_TOKEN} secret).
-\end{itemize}
-
-\subsection*{2026-06-12 (Overleaf shadow mirror: tfpt5-shadow)}
-\begin{itemize}
-\item \textbf{One-way GitHub mirror for Overleaf sync.} Added \texttt{scripts/export-shadow.sh} and
-  \texttt{.github/workflows/shadow-sync.yml}: on every push to \texttt{main}, a filtered copy is pushed to
-  \texttt{sthamann/tfpt5-shadow} (papers, \texttt{tex-artefacts/}, \texttt{figures/},
-  \texttt{verification/}, \texttt{experiments/}; excludes \texttt{\_archive/}, \texttt{website/}, all
-  \texttt{*.pdf}, \texttt{.cursor/}). $\sim$270 files / $\sim$3\,MB --- within Overleaf GitHub-sync limits.
-\end{itemize}
-
-\subsection*{2026-06-12 (origin\_theory style alignment + box reduction)}
-\begin{itemize}
-\item \textbf{Fewer boxes, embedded in text.} \texttt{origin\_theory} from $22$ to $16$ boxes: the
-  narrative/interpretation callouts (``Why the interpretation is internally consistent'', ``Dependency
-  chain of the birefringence test'', ``The precise reformulation'', ``The three theses honestly graded'',
-  ``The whole story'', ``One-line summary'') become run-in bold prose; the boxed reformulation becomes a
-  \texttt{keyeq}. The exact result keyboxes (\vref{v53}--\vref{v56}, \vref{v101}, \vref{v105},
-  \vref{v113}, \ldots) and the master-principle / Seam--Horizon target boxes are kept.
-\item \textbf{Colour-marked module references + marker hygiene.} \texttt{\textbackslash vref} applied to
-  the inline \texttt{vN} references; stale literal \texttt{[A]}/\texttt{[I]/[L]} markers in running text
-  replaced by the 4-class \mO/\mE.
-\end{itemize}
-
-\subsection*{2026-06-12 (tfpt\_5 / horizon / research-contracts pass + build hardening)}
-\begin{itemize}
-\item \textbf{Forked document-set box removed (horizon).} \texttt{tfpt\_horizon\_readouts} carried a
-  hand-written, \emph{stale} copy of the document-set card (``five short documents'', missing
-  \texttt{tfpt\_5}) \emph{and} the canonical \texttt{\textbackslash input\{tex-artefacts/tfpt\_docset\}};
-  the fork is deleted so the single-source card (all five papers $+$ three companions) appears once.
-\item \textbf{Fewer boxes, embedded in text.} Narrative/result callouts converted to run-in bold prose
-  (with the \texttt{\textbackslash veri\{\}} citation moved out of the bold title into the body):
-  \texttt{tfpt\_horizon\_readouts} from $22$ to $7$ boxes (the ten-box ``clock'' wall becomes prose);
-  \texttt{tfpt\_research\_contracts} from $19$ to $10$ (the nine progress/result winboxes become prose,
-  the named-theorem keyboxes kept); \texttt{tfpt\_5\_redteam} from $10$ to $9$ (the outcome summary; the
-  per-target verdict boxes are kept as the structured red-team output).
-\item \textbf{Colour-marked module references + marker hygiene.} \texttt{\textbackslash vref} applied to
-  the inline \texttt{vN} references in all three documents; the horizon ``Scope/typing'' marker line and a
-  stale literal \texttt{[A]} in the research contracts updated to the 4-class markers.
-\item \textbf{Build hardening.} \texttt{build.sh} now removes a document's \texttt{.aux}/\texttt{.toc}/%
-  \texttt{.out} \emph{on failure}, so a half-written cross-reference file from a crashed compile cannot
-  poison the next build; artefacts are still kept on success.
+\item \textbf{Changelog sort enforced.} \texttt{audit\_sync.py} now checks that every
+  dated \texttt{\textbackslash subsection\*\{YYYY-MM-DD...\}} block in this file is
+  non-increasing (newest first; range titles such as \texttt{2026-06-07 / 2026-06-08}
+  sort by the later date). A manual prepend had left five \texttt{2026-06-12} entries
+  above seven \texttt{2026-06-13} blocks --- reordered; future mis-sorts fail
+  \texttt{build.sh audit} as \texttt{[B.changelog]}.
 \end{itemize}
 
 \subsection*{2026-06-13 (premise A: the destination fixed point is provably stable, \vref{v158})}
@@ -246,6 +221,66 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
   units --- not a derivation (ledger \texttt{SEAM.EHMODEL.03}).
 \item \textbf{Bookkeeping.} Suite at $152$ modules, all green; Wolfram extension
   $219/219$; intro/README/\texttt{origin\_theory}/\texttt{next.txt}/website moved together.
+\end{itemize}
+
+\subsection*{2026-06-12 (Zenodo version label: semantic + git rev)}
+\begin{itemize}
+\item \textbf{Release version string.} \texttt{build.sh} now writes
+  \texttt{tex-artefacts/release-version.txt} as \texttt{\{TFPTversion\} (rev \{git count\})}
+  (matches \texttt{\textbackslash TFPTdatestamp} without the date). \texttt{scripts/zenodo\_upload.py}
+  and \texttt{build.sh zenodo}/\texttt{zenodo-publish} use this label on Zenodo; cursor rules extended
+  for when \texttt{zenodo\_description.html} must move with deposit-facing changes.
+\end{itemize}
+
+\subsection*{2026-06-12 (Zenodo API upload workflow)}
+\begin{itemize}
+\item \textbf{Automated Zenodo versioning.} Added \texttt{scripts/zenodo\_upload.py} and
+  \texttt{.github/workflows/\allowbreak zenodo-release.yml}: creates a new draft version of record
+  \texttt{20579275} (DOI \texttt{10.5281/\allowbreak zenodo.\allowbreak 20579275}), uploads the ten active paper PDFs,
+  refreshes \texttt{zenodo\_description.html}, bumps the version from \texttt{tex-artefacts/version.tex},
+  and optionally publishes via GitHub Actions (\texttt{ZENODO\_TOKEN} secret).
+\end{itemize}
+
+\subsection*{2026-06-12 (Overleaf shadow mirror: tfpt5-shadow)}
+\begin{itemize}
+\item \textbf{One-way GitHub mirror for Overleaf sync.} Added \texttt{scripts/export-shadow.sh} and
+  \texttt{.github/workflows/shadow-sync.yml}: on every push to \texttt{main}, a filtered copy is pushed to
+  \texttt{sthamann/tfpt5-shadow} (papers, \texttt{tex-artefacts/}, \texttt{figures/},
+  \texttt{verification/}, \texttt{experiments/}; excludes \texttt{\_archive/}, \texttt{website/}, all
+  \texttt{*.pdf}, \texttt{.cursor/}). $\sim$270 files / $\sim$3\,MB --- within Overleaf GitHub-sync limits.
+\end{itemize}
+
+\subsection*{2026-06-12 (origin\_theory style alignment + box reduction)}
+\begin{itemize}
+\item \textbf{Fewer boxes, embedded in text.} \texttt{origin\_theory} from $22$ to $16$ boxes: the
+  narrative/interpretation callouts (``Why the interpretation is internally consistent'', ``Dependency
+  chain of the birefringence test'', ``The precise reformulation'', ``The three theses honestly graded'',
+  ``The whole story'', ``One-line summary'') become run-in bold prose; the boxed reformulation becomes a
+  \texttt{keyeq}. The exact result keyboxes (\vref{v53}--\vref{v56}, \vref{v101}, \vref{v105},
+  \vref{v113}, \ldots) and the master-principle / Seam--Horizon target boxes are kept.
+\item \textbf{Colour-marked module references + marker hygiene.} \texttt{\textbackslash vref} applied to
+  the inline \texttt{vN} references; stale literal \texttt{[A]}/\texttt{[I]/[L]} markers in running text
+  replaced by the 4-class \mO/\mE.
+\end{itemize}
+
+\subsection*{2026-06-12 (tfpt\_5 / horizon / research-contracts pass + build hardening)}
+\begin{itemize}
+\item \textbf{Forked document-set box removed (horizon).} \texttt{tfpt\_horizon\_readouts} carried a
+  hand-written, \emph{stale} copy of the document-set card (``five short documents'', missing
+  \texttt{tfpt\_5}) \emph{and} the canonical \texttt{\textbackslash input\{tex-artefacts/tfpt\_docset\}};
+  the fork is deleted so the single-source card (all five papers $+$ three companions) appears once.
+\item \textbf{Fewer boxes, embedded in text.} Narrative/result callouts converted to run-in bold prose
+  (with the \texttt{\textbackslash veri\{\}} citation moved out of the bold title into the body):
+  \texttt{tfpt\_horizon\_readouts} from $22$ to $7$ boxes (the ten-box ``clock'' wall becomes prose);
+  \texttt{tfpt\_research\_contracts} from $19$ to $10$ (the nine progress/result winboxes become prose,
+  the named-theorem keyboxes kept); \texttt{tfpt\_5\_redteam} from $10$ to $9$ (the outcome summary; the
+  per-target verdict boxes are kept as the structured red-team output).
+\item \textbf{Colour-marked module references + marker hygiene.} \texttt{\textbackslash vref} applied to
+  the inline \texttt{vN} references in all three documents; the horizon ``Scope/typing'' marker line and a
+  stale literal \texttt{[A]} in the research contracts updated to the 4-class markers.
+\item \textbf{Build hardening.} \texttt{build.sh} now removes a document's \texttt{.aux}/\texttt{.toc}/%
+  \texttt{.out} \emph{on failure}, so a half-written cross-reference file from a crashed compile cannot
+  poison the next build; artefacts are still kept on success.
 \end{itemize}
 
 \subsection*{2026-06-12 (fourth round: the Calder\'on transfer answered --- the BFK split, \vref{v151})}

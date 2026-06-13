@@ -167,8 +167,8 @@ const CLUSTERS: Cluster[] = [
     ],
   },
   {
-    title: "Blind registry & red-team follow-ups (v84–v158)",
-    purpose: "The frozen prediction registry and the second follow-up round: Target A merged to one residual, the CP residual quantified, N★ computed from reheating — every freeze machine-enforced.",
+    title: "Blind registry & red-team follow-ups (v84–v159)",
+    purpose: "The frozen prediction registry and the second follow-up round: Target A merged to one residual, the CP residual quantified, N★ computed from reheating, and the F_transfer gauge inputs cross-checked with an external RGE tool — every freeze machine-enforced.",
     accent: "from-emerald-500 to-cyan-500",
     scripts: [
       { file: "v84_frozen_registry.py", what: "blind-prediction registry FROZEN 2026-06-09: every dimensionless prediction of record at 25 digits, re-derived from the two axioms each run (formula↔value lock); exactly ONE θ₁₂ prediction of record = 1/3−φ₀/2 = 0.306747, variants typed as derived (look-elsewhere machine-excluded); r/n_s only as N★ bands" },
@@ -246,6 +246,7 @@ const CLUSTERS: Cluster[] = [
       { file: "v156_seam_net_construction.py", what: "constructive route (Route 3), exact endpoint: DtN of the 2d Laplacian = |k| (free chiral dispersion); 16 free Majoranas c=8=5+3; E8 currents 248 = 120 (NS bilinears) + 128 (R spinor); the (E8)1 character E4/eta^8 = q^{-1/3}(1+248q+4124q²+...) = j^{1/3} verified to order 4 ⇒ B=(E8)1 CHECKED not asserted; residual = free-bulk premise (v155) + net existence" },
       { file: "v157_rigid_fixed_point.py", what: "freeness as a rigid fixed point (simplicity-first reframing of premise A): (i) the DtN/Calderón symbol is universally |k| (Lee-Uhlmann, bulk-detail-independent — the free dispersion is not a premise); (ii) a holomorphic c=8 theory has NO marginal (1,1) field (all fields h̄=0) ⇒ rigid, isolated, no room for an interaction; (iii) the same |Z2| that halves 8π in c3 IS the Ramond projection giving μ=1 (holomorphic); (iv) holomorphic c=8 unique = (E8)1 = free. Premise (A) shrinks from 'prove Gaussianity' to 'the gapped flow reaches the holomorphic fixed point'" },
       { file: "v158_fixed_point_stable.py", what: "the free chiral c=8 fixed point is STABLE (exact dimension count, finite core of A): chiral Majorana h=1/2, bilinear current h=1, quartic h=2; the relevant window (0,1) for bosonic ops is EMPTY, the h=1 currents are chiral (not (1,1)-marginal, v157), the lowest interaction (quartic) is h=2 > 1 irrelevant ⇒ isolated stable fixed point; (A) reduces to a basin-of-attraction statement" },
+      { file: "v159_pyrate_gauge_crosscheck.py", what: "PyR@TE cross-check of the F_transfer gauge inputs: the carrier/SM content gives (b1,b2,b3)=(41/10,−19/6,−7) by the textbook one-loop formula; b1=41/10 holds THREE independent ways — carrier algebra 10 b1 = g_car·2^(g_car−2)+1 = 41, the SM U(1) hypercharge index Σ(3/5)Y², and the external RGE generator PyR@TE 3 (arXiv:2007.12700) which writes β_g1=(41/10)g1³ verbatim; the M=41 split 10 b1 = 40 (fermion index) + 1 (Higgs) reproduces tfpt_2 Gate 1; evidence in verification/pyrate (reproduce.sh regenerates it). The transfer functor's gauge inputs are not free knobs." },
     ],
   },
 ];

@@ -1430,6 +1430,26 @@ Module[{hpsi, hcur, hquart, bosonic, relevant},
     120 + 128 == 248 && hquart > 1];
 ];
 
+(* ---- (v159) PyR@TE gauge cross-check: carrier content -> SM 1-loop b_i ---- *)
+Module[{fields, pre, u1, su2, su3, b1, b2, b3, fermIdx, scalIdx},
+  (* {Y, dimSU2, dimSU3, nGen, kind}: kind 1 = Weyl fermion, 2 = complex scalar *)
+  fields = {
+    {1/6, 2, 3, 3, 1}, {-1/2, 2, 1, 3, 1}, {2/3, 1, 3, 3, 1},
+    {-1/3, 1, 3, 3, 1}, {-1, 1, 1, 3, 1}, {1/2, 2, 1, 1, 2}};
+  pre[1] = 2/3; pre[2] = 1/3;          (* one-loop matter prefactors *)
+  u1[{Y_, d2_, d3_, ng_, _}] := (3/5) Y^2 d2 d3 ng;   (* GUT-normalized U(1) index *)
+  su2[{_, d2_, d3_, ng_, _}] := If[d2 == 2, (1/2) d3 ng, 0];
+  su3[{_, d2_, d3_, ng_, _}] := If[d3 == 3, (1/2) d2 ng, 0];
+  b1 = Total[(pre[#[[5]]] u1[#]) & /@ fields];
+  b2 = -(11/3) 2 + Total[(pre[#[[5]]] su2[#]) & /@ fields];
+  b3 = -(11/3) 3 + Total[(pre[#[[5]]] su3[#]) & /@ fields];
+  fermIdx = Total[(pre[1] u1[#]) & /@ Select[fields, #[[5]] == 1 &]];
+  scalIdx = Total[(pre[2] u1[#]) & /@ Select[fields, #[[5]] == 2 &]];
+  checkExact["v159 PyR@TE gauge cross-check: carrier/SM content -> (b1,b2,b3)=(41/10,-19/6,-7) [GUT norm]; 10 b1 = g_car 2^(g_car-2)+1 = 41 = 40(ferm)+1(Higgs); matches PyR@TE 3 beta_g{1,2,3} verbatim",
+    b1 == 41/10 && b2 == -19/6 && b3 == -7 &&
+    10 b1 == 5*2^(5 - 2) + 1 && 10 fermIdx == 40 && 10 scalIdx == 1];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v158: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v159: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

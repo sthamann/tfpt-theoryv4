@@ -1,0 +1,38 @@
+PyR@TE 3 (arXiv:2007.12700, core 1906.04625) -- independent cross-check evidence
+==================================================================================
+Tool      : PyR@TE 3.0  (github.com/LSartore/pyrate)
+Model     : models/SM.model  (3 generations, one Higgs doublet)
+U(1) norm : GUT, g1 -> sqrt(5/3) g1   (model-file Substitution)
+Convention: beta(g) = g^3/(16 pi^2) * b^(1)  +  g/(16 pi^2)^2 * b^(2) + ...
+Reproduce : verification/pyrate/reproduce.sh   (clones + runs PyR@TE, re-extracts this)
+
+These are the verbatim gauge-coupling beta functions PyR@TE writes to
+results/SM/PythonOutput/RGEs.py, given the SM (= TFPT carrier) field content.
+
+### beta_g1
+    if nLoop == 1:
+        return (41/10)*g1**3
+    if nLoop == 2:
+        return (199/50)*g1**5 + (27/10)*g1**3*g2**2 + (44/5)*g1**3*g3**2 - 1/2*g1**3*tr(adjoint(Yd)*Yd) - 3/2*g1**3*tr(adjoint(Ye)*Ye) - 17/10*g1**3*tr(adjoint(Yu)*Yu)
+
+### beta_g2
+    if nLoop == 1:
+        return -19/6*g2**3
+    if nLoop == 2:
+        return (9/10)*g1**2*g2**3 + (35/6)*g2**5 + 12*g2**3*g3**2 - 3/2*g2**3*tr(adjoint(Yd)*Yd) - 1/2*g2**3*tr(adjoint(Ye)*Ye) - 3/2*g2**3*tr(adjoint(Yu)*Yu)
+
+### beta_g3
+    if nLoop == 1:
+        return -7*g3**3
+    if nLoop == 2:
+        return (11/10)*g1**2*g3**3 + (9/2)*g2**2*g3**3 - 26*g3**5 - 2*g3**3*tr(adjoint(Yd)*Yd) - 2*g3**3*tr(adjoint(Yu)*Yu)
+
+----------------------------------------------------------------------------------
+Extracted 1-loop coefficients (the load-bearing TFPT F_transfer inputs):
+    (b1, b2, b3) = (41/10, -19/6, -7)        [GUT normalization]
+Extracted 2-loop matrix B^(2) (pure-gauge part), rows = d g_i:
+    [ 199/50   27/10   44/5 ]
+    [  9/10    35/6    12   ]
+    [  11/10    9/2   -26   ]
+Both rows agree with the standard SM result (Machacek-Vaughn 1983/84).
+Checked against the TFPT derivation by verification/v159_pyrate_gauge_crosscheck.py.

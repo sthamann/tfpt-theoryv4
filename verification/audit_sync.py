@@ -18,7 +18,8 @@ Checks (sections A-F):
   B  papers, reverse   : every \\veri{...} / \\vref{vN} target in the active
                          docs is a registered script (catches stale citations)
   B  changelog         : every registered script's module id appears in
-                         changelog.tex (minus the frozen grandfathered list)
+                         changelog.tex (minus the frozen grandfathered list);
+                         dated subsections are newest-first (non-increasing)
   C  ledger            : registry <-> status_ledger.csv script column agree
   D  website mirror    : public/verification == verification (sha256);
                          public/papers == root PDFs (sha256); release.ts
@@ -70,6 +71,20 @@ def normalise_tex(text: str) -> str:
 
 def module_id(script: str) -> str:
     return script.split("_")[0]
+
+
+def changelog_entry_dates(text: str) -> list[tuple[int, int, str]]:
+    """Return (date_sort_key, line_no, title) for each dated \\subsection*."""
+    out: list[tuple[int, int, str]] = []
+    for m in re.finditer(r"^\\subsection\*\{(20\d\d-\d\d-\d\d[^}]*)\}", text, re.M):
+        title = m.group(1)
+        dates = re.findall(r"20\d\d-\d\d-\d\d", title)
+        if not dates:
+            continue
+        date_key = int(max(dates).replace("-", ""))
+        line_no = text[: m.start()].count("\n") + 1
+        out.append((date_key, line_no, title))
+    return out
 
 
 def load_baseline() -> dict:
@@ -134,6 +149,17 @@ def check_papers(registered: list[str], baseline: dict) -> None:
             continue
         if not re.search(r"\b" + mid + r"(?![0-9])", chl):
             err("B.changelog", f"{s}.py ({mid}) has no changelog.tex entry")
+
+    entries = changelog_entry_dates(chl)
+    for i in range(len(entries) - 1):
+        cur_date, cur_line, cur_title = entries[i]
+        nxt_date, nxt_line, nxt_title = entries[i + 1]
+        if cur_date < nxt_date:
+            err(
+                "B.changelog",
+                f"date order broken at line {cur_line}: {cur_title!r} (newer) "
+                f"appears before line {nxt_line}: {nxt_title!r} (older) -- newest first",
+            )
 
 
 # -------------------------------------------------------------- C: ledger

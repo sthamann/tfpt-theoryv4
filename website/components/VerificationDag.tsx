@@ -207,7 +207,7 @@ const NODES: DagNode[] = [
     inputs: ["c₃ (P1)", "M = 41 = 10 b₁ (from R, L)"],
     outputs: ["α⁻¹ = 137.0359992168"],
     failure: "No root, or a second admissible root.",
-    scripts: ["v3_em_alpha.py", "v48_em_ward.py"],
+    scripts: ["v3_em_alpha.py", "v48_em_ward.py", "v159_pyrate_gauge_crosscheck.py"],
   },
   {
     id: "masses",
