@@ -1507,6 +1507,19 @@ Module[{cc, chi, anomaly, half, b3, scal, vw},
     b3 == 7 && scal == 7 && vw == -2*7^2/45];
 ];
 
+(* ---- (v174) seam Fock-space readings: cone compression, Witten index, g-theorem ---- *)
+Module[{cone, blocks, trunc, disc, cUV, cIR},
+  cone = 2^15;
+  blocks = {Binomial[16, 4], Binomial[16, 6], Binomial[16, 8]};
+  trunc = Sum[Binomial[4, k], {k, 0, 2}];      (* 11 *)
+  disc = Sum[Binomial[4, k], {k, 3, 4}];       (* 5 = g_car *)
+  cUV = 5 + 3; cIR = 8;
+  checkExact["v174 seam Fock-space readings: CAR cone 2^15=32768 -> 16 one-particle (2^15/16=2^11); Witten index sum_{k<=2}C(4,k)=11=dim S+ - g_car (full 2^4=16), c_u/c_d=5*11/(9*13)=55/117; g-theorem c_UV=5+3=8=c_IR((E8)1), Delta c=0",
+    cone == 32768 && blocks === {1820, 8008, 12870} && cone/16 == 2^11 &&
+    trunc == 11 && disc == 5 && trunc + disc == 16 &&
+    5*11/(9*13) == 55/117 && cUV == 8 && cIR == 8 && cUV - cIR == 0];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v172: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v174: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

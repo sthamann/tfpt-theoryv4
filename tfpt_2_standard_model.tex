@@ -511,6 +511,11 @@ hexagon-radial data $(r,w)=(1,1)$, and the $C_6$ resolvent reads only $(r,w)$ --
 forces $c_u/c_d\equiv1$. A scalar sees radius, not orientation; the $u/d$ separation is intrinsically the
 oriented anchor-plane \emph{area} $\operatorname{Pl}_{\mathbf1,a}(K)$ (the exterior square $\Lambda^2F$ of
 the $SU(3)_F$ composition), whose $L^1$ norm \emph{generates} the ``$11$''. \veri{v42\_exterior\_leg.py}
+The norm $\|\operatorname{Pl}(K)\|_1=11$ also carries a topological reading: it is the dimension of the
+QBL-truncated ($\deg\le2$) Fock space of the four $\mu_4$-corner fermions,
+$\sum_{k\le2}\binom4k=1{+}4{+}6=11=\dim S^+-\gcar$ (a Witten index; the discarded high-degree complement is
+$\binom43{+}\binom44=5=\gcar$, the full corner Fock space $2^4=16=\dim S^+$), so $c_u/c_d=55/117$ reads the
+QBL-protected boundary state-space dimension (\veri{v174\_seam\_fock\_readings.py}).
 \end{keybox}
 
 \begin{keybox}[Readout Rigidity --- the quark \emph{ratios} are closed combinatorially \mE\ (residual: absolute scale \mO)]
