@@ -59,6 +59,34 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-13 (the heavy artillery v175: net existence + full-cone RP discharged to [E])}
+\begin{itemize}
+\item \textbf{\texttt{v175\_net\_existence\_full\_cone.py} \mE/\mO\ (claim \texttt{QFT.NETRP.01}).}
+  The two structural residuals that the premise-(A) chain had relocated to \emph{already-open}
+  items --- $A_2$ net existence and full-cone reflection positivity --- are now \emph{discharged
+  to a theorem}, leaving the seam realisation as the single irreducible open premise (nothing
+  fabricated). (1) \emph{Full-cone RP for all $m$}: the CAR second-quantisation functor
+  $\Gamma(t)=\bigoplus_m\Lambda^m(t)$ lifts the one-particle seam contraction $t$ to the complete
+  Fock space $\Lambda^\bullet(\mathbb R^{16})$ ($\dim 2^{16}=65536$); by the exterior-power
+  spectrum theorem every eigenvalue is a subset product of $\mathrm{spec}(t)$, so all $2^{16}$
+  products lie in $[0,1]$ (a contraction $=$ full-cone RP), with eigenvalue-$1$ multiplicity
+  $2^8=256$ (wedges of the rank-$8$ $K_\Sigma$ polarisation) and sub-leading $=$ the one-particle
+  gap $(2/3)^6$ --- so full-cone RP reduces \emph{for every $m$} (not only $m\le6$, \vref{v161}) to
+  the one-particle contraction (Shale--Stinespring), discharging the \vref{v160} scope premise.
+  (2) \emph{$A_2$ assembled $+$ verified}: the $(E_8)_1$ character
+  $E_4/\eta^8=1+248q+4124q^2+34752q^3+213126q^4+1057504q^5$ (level-$1=248$, extends the order-4
+  \vref{v156} check by one order), the embedding $248=120+128$, and the $E_8$ Cartan matrix even
+  with $\det 1$ (the unique rank-$8$ even unimodular lattice, \vref{v83}); the net \emph{exists} by
+  cited theorems (free-fermion net, lattice VOA, index-$4$ Q-system, \vref{v125}). (3) Both then
+  need the \emph{same} input --- the seam realisation \texttt{QGEO.REALIZE.01} (finite half proven,
+  \vref{v168}) --- which is a constructive-geometry/AQFT statement, \emph{not} closeable by a finite
+  computation, and is left honestly \mO. \textbf{Net:} net existence and full-cone RP become \mE;
+  the one irreducible structural premise is the seam realisation. Cited in
+  \texttt{tfpt\_research\_contracts} (premise (A) closure) and \texttt{tfpt\_5\_redteam} (Target A);
+  the exact parts (Cartan unimodular, character order 5, functoriality integers) mirrored in the
+  Wolfram extension (231/231). Suite now 175 modules.
+\end{itemize}
+
 \subsection*{2026-06-13 (seam Fock-space readings v174: CAR cone, Witten index, g-theorem)}
 \begin{itemize}
 \item \textbf{\texttt{v174\_seam\_fock\_readings.py} \mE\ (claim \texttt{QFT.FOCK.01}).} Three more

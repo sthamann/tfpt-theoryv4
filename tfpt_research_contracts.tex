@@ -1042,6 +1042,25 @@ By the No-Unit Theorem (\vref{v153}) the irreducibles stay exactly $\{\pi,v_{\ma
 (A) adds none. \textbf{Final accounting:} premise~(A) $=$ ($A_2$ assembly, \mC) $+$ ($R_1{=}$%
 \texttt{GATE.QGEO}, already open) $+$ the $\{\pi,v_{\mathrm{geo}}\}$ irreducible core (a theorem) --- it
 carries \emph{zero} independent open gates and ceases to be its own gate \mE/\mO.
+\smallskip\\
+\noindent\textbf{And the two structural residuals --- net existence and full-cone reflection positivity ---
+are now \emph{discharged to a theorem}, leaving the seam realisation as the one irreducible open premise
+(\veri{v175\_net\_existence\_full\_cone.py}).} The CAR second-quantisation functor
+$\Gamma(t){=}\bigoplus_m\Lambda^m(t)$ lifts the one-particle seam contraction $t$ to the \emph{complete}
+Fock space $\Lambda^\bullet(\mathbb R^{16})$ ($\dim 2^{16}{=}65536$); by the exterior-power spectrum theorem
+every eigenvalue of $\Gamma(t)$ is a subset product of $\operatorname{spec}(t)$, so checking all $2^{16}$
+products shows $\Gamma(t)$ is a \emph{contraction} (full-cone RP), with eigenvalue-$1$ multiplicity
+$2^8{=}256$ (the wedges of the rank-$8$ $K_\Sigma$ polarisation) and sub-leading eigenvalue exactly the
+one-particle gap $(2/3)^6$ --- so full-cone RP/gap reduce \emph{for every $m$} (not only $m\le6$, \vref{v161})
+to the one-particle contraction (Shale--Stinespring), \emph{discharging the v160 scope premise by a theorem}.
+And $A_2$ is now an \emph{assembled and verified} certificate: the $(E_8)_1$ character
+$E_4/\eta^8{=}1{+}248q{+}4124q^2{+}34752q^3{+}213126q^4{+}1057504q^5$ (level-$1{=}248$), the embedding
+$248{=}120{+}128$, and the $E_8$ Cartan matrix even with $\det 1$ (the unique rank-$8$ even unimodular
+lattice, \vref{v83}) --- the net \emph{exists} by cited theorems. \textbf{Both residuals then collapse to the
+\emph{same} input}: that the actual seam Calder\'on kernel is this gapped one-particle contraction on
+$\PP\setminus\mu_4$, i.e.\ \texttt{QGEO.REALIZE.01}, whose finite half is proven (\vref{v168}). That
+realisation half is a constructive-geometry/AQFT statement, \emph{not} closeable by a finite computation, and
+is left honestly \mO --- the single irreducible structural premise; net existence and full-cone RP are \mE.
 \end{keybox}
 
 \begin{keybox}[The No-Unit Theorem --- $v_{\mathrm{geo}}$ is an irreducible metrology primitive \mE/\mO\ (\veri{v153\_no\_unit\_theorem.py})]

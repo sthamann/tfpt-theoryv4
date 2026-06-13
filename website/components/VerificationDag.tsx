@@ -288,6 +288,7 @@ const NODES: DagNode[] = [
       "v172_trace_anomaly_seed.py",
       "v173_pfaffian_cp_car.py",
       "v174_seam_fock_readings.py",
+      "v175_net_existence_full_cone.py",
     ],
   },
   {

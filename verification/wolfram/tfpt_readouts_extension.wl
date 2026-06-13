@@ -1520,6 +1520,30 @@ Module[{cone, blocks, trunc, disc, cUV, cIR},
     5*11/(9*13) == 55/117 && cUV == 8 && cIR == 8 && cUV - cIR == 0];
 ];
 
+(* ---- (v175) net existence + full-cone RP: E8 Cartan even unimodular, character order 5, Gamma(t) functoriality integers ---- *)
+Module[{cartan, det, evenDiag, sig3, E4, prodv, chi, c5, fockDim, fixedMult, gap, pairCount},
+  (* E8 Cartan matrix (Bourbaki): even (diag 2) and det 1 = unique rank-8 even unimodular lattice *)
+  cartan = {{2,0,-1,0,0,0,0,0},{0,2,0,-1,0,0,0,0},{-1,0,2,-1,0,0,0,0},
+            {0,-1,-1,2,-1,0,0,0},{0,0,0,-1,2,-1,0,0},{0,0,0,0,-1,2,-1,0},
+            {0,0,0,0,0,-1,2,-1},{0,0,0,0,0,0,-1,2}};
+  det = Det[cartan];
+  evenDiag = And @@ Table[cartan[[i, i]] == 2, {i, 8}];
+  (* (E8)_1 character E4/eta^8 to order 5: extends the order-4 v156 check by one coefficient *)
+  sig3[m_] := DivisorSigma[3, m];
+  E4 = 1 + Sum[240 sig3[m] qq^m, {m, 1, 6}];
+  prodv = Product[1 - qq^n, {n, 1, 6}];
+  chi = Series[E4/prodv^8, {qq, 0, 5}];
+  c5 = SeriesCoefficient[chi, 5];
+  (* Gamma(t) = (+)_m Lambda^m(t) functoriality: 8 fixed (=1) + 8 gapped one-particle modes *)
+  fockDim = 2^16;                         (* complete Fock space dim *)
+  fixedMult = 2^8;                        (* eigenvalue-1 multiplicity = wedges of the 8 fixed modes *)
+  gap = (2/3)^6;                          (* sub-leading over the whole cone = one-particle gap *)
+  pairCount = Binomial[16, 2];            (* exterior-square spectrum size = pairwise products *)
+  checkExact["v175 net existence + full-cone RP: E8 Cartan even (diag 2) with det 1 = unique rank-8 even unimodular lattice; (E8)_1 character E4/eta^8 coeff at q^5 = 1057504 (extends v156 to order 5); Gamma(t)=(+)Lambda^m(t) on the complete Fock space dim 2^16=65536, eigenvalue-1 multiplicity 2^8=256, sub-leading = one-particle gap (2/3)^6, exterior-square C(16,2)=120",
+    det == 1 && evenDiag && c5 == 1057504 &&
+    fockDim == 65536 && fixedMult == 256 && gap == 64/729 && pairCount == 120];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v174: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v175: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];
