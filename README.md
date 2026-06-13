@@ -230,8 +230,12 @@ The ledger is *append-only and versioned*: superseded rows are marked `active=fa
 - **Frontier interfaces** (`m_p/m_e`, `η_B`, Koide, axion relic) — deliberately typed as
   interfaces, never quoted as compiler outputs.
 
-The remaining distance is therefore not a list but **one central physical theorem plus a single
-irreducible dimensionful anchor**.
+The remaining distance is therefore not a list but **one identification** (the seam–Calderón net) plus
+**one declared metrology unit**. The central theorem now reads as a clean simple-current extension,
+`(D₅)₁⊗(A₃)₁ ⋊ ⟨(1,1)⟩ ≅ (E₈)₁` (index 4, c = 8, μ = 1 ⇒ holomorphic ⇒ E₈, `v154`), and `v_geo` is an
+*irreducible metrology primitive* by the No-Unit Theorem (`v153`): a dimensionless boundary compiler
+provably cannot produce an absolute scale, so `U_point ~ v_geo`, `1/G ~ v_geo²` and `m/μ = e^{3/4}` are
+one unit in three readings — the only irreducibles are `v_geo` and `π`.
 
 ---
 

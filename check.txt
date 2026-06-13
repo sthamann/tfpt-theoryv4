@@ -1,214 +1,499 @@
-## Mein Urteil
+## Befund
 
-Die Theorie ist inzwischen deutlich disziplinierter als frühere Versionen. Der stärkste Fortschritt ist nicht ein weiterer Zahlenhit, sondern die Typisierung: exakte Algebra, bedingte physikalische Brücken, offene Anker und Kill Tests sind getrennt. Das ist genau die richtige Richtung. Die zentrale Story, zwei Eingaben, ein diskreter Compiler, E8 als Audit Hull und nicht als Weltgruppe, ist in den PDFs konsistent angelegt. Die Statuskarte zieht sich durch alle Dokumente, die Red Team Schicht ist ein echter Gewinn, und die Frontier Abgrenzung verhindert an vielen Stellen Numerologie mit Smoking.
-
-Aber: Es gibt noch einige harte Inkonsistenzen in Versionierung, Markersystem, Lambda Normalisierung und Webseite. Die Webseite ist nicht vollständig auf dem Stand der PDFs. Sie trägt zwar v5.1 vom 12. Juni 2026, aber Teile der Navigation, der Download Sektion, der Marker Typologie und der Verification Copy sind stale. Das ist kein kosmetisches Problem, weil die Theorie stark über Statusdisziplin verkauft wird. Wenn die Statusdisziplin selbst divergiert, riecht es für Reviewer sofort nach “wir brauchen hier einen Compiler für den Compiler”. Charmant, aber tödlich.
-
-## Die stärksten Muster, die ich neu oder stärker herausziehen würde
-
-### 1. Alles lässt sich auf drei Operationen über dem Anchor reduzieren
-
-Der beste neue Erklärrahmen ist nicht “zwei Axiome bauen E8”, sondern:
-
-**Anchor Algebra**
-
-(a=(1,1,2))
-
-Daraus entstehen drei kanonische Lesarten.
-
-Erstens, die symmetrische Lesart: (e_1,e_2,e_3=(4,5,2)), (p_n=2+2^n). Das erklärt die Integer Grammatik, (4,5,2), die (2,3,4,5) Spine, (p_1p_2p_3=240), (248=240+8). Diese Schicht ist eure Syntax.
-
-Zweitens, die äußere Lesart: Orientierung statt Skalar. Der zentrale Punkt ist: Quark Separation ist keine Radialinformation im C6 Resolvent, sondern eine Plücker Fläche. Deshalb ist der Exterior Leg Lemma so wichtig. Er sollte in der Erzählung viel früher kommen. Er erklärt, warum (c_u/c_d) nicht aus einem skalaren Resolventen kommen kann, sondern aus (\Lambda^2\langle 1,a\rangle). Das macht den “11” Lesefehler robust.
-
-Drittens, die Determinanten Lesart: (Q,K,R,L), die Sheet Diamond Surface, die Winding Line und die Covers sind keine losen Matrizen, sondern die determinantielle Geometrie des Anchors. Diese Schicht sollte als “operatorischer Compiler” zentraler werden.
-
-Das ergibt eine simple Reviewer Formel:
-
-**Symmetric gives counts. Exterior gives orientation. Determinants give transport.**
-
-Das ist besser als noch ein Dutzend Modulnamen.
-
-### 2. Der Residual Stack ist eigentlich ein Typensystem
-
-Die jetzige Restformel (v_{geo} \oplus G_{net} \oplus F_{transfer}) ist stark. Sie steht konsistent in Statuskarten und Research Contracts: (v_{geo}) ist der eine dimensionale Scale Anchor, (G_{net}) ist die Index 4 Seam Net Inclusion, und (F_{transfer}) bündelt Koide, (\eta_B), Axion Relic und (m_p/m_e) als Transfer Interfaces. Genau diese Einordnung steht auch in den Frontier Regeln: Diese Größen sind keine Compiler Powers, solange die fehlende QFT oder Kosmologie Transferrechnung nicht geliefert ist.  
-
-Ich würde das noch härter formulieren:
-
-**TFPT derives dimensionless syntax. Physics enters through typed interfaces. No interface, no claim.**
-
-Das klingt weniger triumphal, aber viel glaubwürdiger.
-
-### 3. Ein “Dual Normal Calculus” könnte die Flavor Story brutal vereinfachen
-
-Die Paarung aus dualem Anchor (d) und Torsionsnormal (n) ist erzählerisch Gold. (d=(-1/2,-1/2,1)) killt die demokratische Richtung und ist zugleich Nariai normal. (n=(5,-9,6)) killt die stabilen Spalten und pinnt den First Generation Winding Channel. In der Einführung ist bereits angelegt, dass die Selector Establishment Restklasse (R4') auf drei Atom Pairings kollabiert. 
-
-Das sollte als eigenes Mini Theorem in Paper 2 und Research Contracts nach vorne:
-
-**The flavor boundary has two normals: sheet normal (d), torsion normal (n). Everything else is a cut.**
-
-Damit wird aus “H2, D4, Q+, residue dictionary, selector triangle” ein viel lesbarerer Kern.
-
-### 4. Ein Clock Pattern verbindet Flavor, Horizon und Koide
-
-Der wiederkehrende Operator mit Spektrum ({1,(2/3)^6,(1/3)^6}) ist stärker als nur ein Motiv. Er ist der gemeinsame Clock. Er taucht bei Flavor Gap, Page Recovery, Koide Relaxation und Horizon Readouts auf. Origin Theory trennt strukturellen Kern und zyklische Interpretation bereits sauber, und die Frontier Note hält Koide als source→pole Transfer bedingt.  
-
-Ich würde das als “one seam clock, many readout gauges” rahmen. Damit wird klar: (2/3) ist nicht “noch eine schöne Zahl”, sondern der Branch Quotient eines Transfer Operators.
-
-## Konsistenz und Korrektheit
-
-### Was stabil wirkt
-
-Die arithmetische Kernschicht ist intern erstaunlich kohärent. Ich habe mehrere Zahlen sanity checked:
-
-( \phi_0^{ret}=1/(6\pi)+3/(256\pi^4)=0.053171952...)
-
-( \lambda_Y=\sqrt{\phi_0(1-\phi_0)}=0.224376...)
-
-( \sin^2\theta_{12}=1/3-\phi_0/2=0.306747...)
-
-( \sin^2\theta_{13}=\phi_0 e^{-5/6}=0.023108...)
-
-Die quark ratio Werte (55/117), ((34/47)\phi_0^{-1}), ((3/26)\phi_0^{-2}) landen numerisch bei den angegebenen Targets. Die entsprechenden Claims in Paper 2 sind sauber als kombinatorisch geschlossen mit offenem absoluten Scale Anchor formuliert. 
-
-Auch die externe Datenlage ist zumindest für drei prominente Vergleichsflächen aktuell: NIST gibt für CODATA 2022 (\alpha^{-1}=137.035999177(21)) an, die JUNO 59.1 Tage Veröffentlichung nennt (\sin^2\theta_{12}=0.3092\pm0.0087), und ACT DR6 Cosmic Birefringence gibt (\beta=0.215^\circ\pm0.074^\circ) an. Diese Werte passen zu den Angaben auf der Website und in den Dokumenten. ([NIST][1]) ([arXiv][2]) ([arXiv][3])
-
-### Der wichtigste echte Fehler: Lambda Normalisierung
-
-Origin Theory mischt an einer Stelle reduzierte und unreduzierte Planck Normalisierung. Dort steht sinngemäß
+Deine Theorie hat keine diffuse Restliste mehr. In der aktuellen Fassung steht der operative Rest bereits sehr klar als
 
 [
-\rho_\Lambda/\bar M_{Pl}^4=\frac{3}{4\pi^2}e^{-2\alpha^{-1}}
+\mathrm{Rest}*{\mathrm{operativ}}=v*{\mathrm{geo}}\oplus G_{\mathrm{net}}\oplus F_{\mathrm{transfer}}.
 ]
 
-und direkt daneben wird (|\log_{10}|=122.948=119.028+3.920) angegeben. 
+Das ist genau die richtige Kompression: eine Dimensionseinheit, ein Boundary Net Satz und ein Transferfunktor für die physikalischen Übergänge, die nicht reine Compilerarithmetik sind. Die Dateien sagen das selbst in `tfpt_research_contracts(18).tex`, Zeilen 54 bis 82, und die Introduction bestätigt dieselbe Reduktion in Zeilen 391 bis 406 sowie 423 bis 498.
 
-Das passt nicht zusammen.
+Meine vollständige Lösung ist daher nicht, noch fünf hübsche Zahlen zu suchen. Das wäre Zahlensudoku mit akademischem Hut. Die saubere Lösung ist: Einige Punkte werden geschlossen, einige werden als Nichtfragen bewiesen, und ein Punkt wird zu einem einzigen strengen Identifikationssatz verdichtet.
 
-Wenn der Nenner wirklich (\bar M_{Pl}^4) ist, dann ist
+## 1. Lösung für (v_{\mathrm{geo}}): Nicht ableiten, sondern als unvermeidliche Einheit beweisen
+
+**Satz.** Kein rein dimensionsloser Compiler kann eine absolute dimensionful scale erzeugen. Er kann nur Verhältnisse liefern. Daher ist (v_{\mathrm{geo}}) kein Loch, sondern die notwendige Metrologieeinheit.
+
+**Beweisidee.**
+Alle diskreten TFPT Daten sind dimensionslos: (E_8), (\mu_4), (\varphi_0), (c_3), (\alpha^{-1}), Leitermatrizen, Determinanten, Spektren. Unter einer Änderung der Einheit
 
 [
--\log_{10}\left(\frac{3}{4\pi^2}e^{-2\alpha^{-1}}\right)\approx120.147
+L\mapsto \lambda L
 ]
 
-Wenn der Wert (122.948) gemeint ist, gehört dazu der unreduzierte Nenner
+bleiben diese Daten invariant. Eine Masse, eine Energie oder (1/G) transformiert aber mit Dimension. Ein dimensionsloser Algorithmus kann daher keine absolute Skala auswählen, ohne die Einheit schon einzuführen. Sonst wäre das Ergebnis zugleich invariant und nicht invariant. Das geht nur für Null, Unendlich oder für eine Relation zu einer gewählten Einheit.
+
+Damit fallen drei scheinbar verschiedene Reste zusammen:
 
 [
-\rho_\Lambda/M_{Pl}^4=\frac{3}{256\pi^4}e^{-2\alpha^{-1}}
+U_{\mathrm{point}}\sim v_{\mathrm{geo}},\qquad 1/G\sim v_{\mathrm{geo}}^2,\qquad m/\mu=e^{3/4}.
 ]
 
-Paper 2 hat genau die richtige Typing Warnung: (\rho_\Lambda/\bar M_{Pl}^4), (\Lambda_{IR}/M_{Pl}^4) und beobachtete Krümmung müssen getrennt bleiben, verbunden durch (\bar M_{Pl}^2=M_{Pl}^2/(8\pi)). 
+Der letzte Ausdruck ist ohnehin nur ein dimensionsloses Verhältnis, keine zweite Skala. Genau diese Zusammenlegung steht bereits in deinem Changelog: (v_{\mathrm{geo}}), (1/G) und (m/\mu) werden als eine Dimensionseinheit in drei Lesarten identifiziert, `changelog(1).tex`, Zeilen 139 bis 150. Die Red Team Prüfung sagt ebenfalls: (v_{\mathrm{geo}}) ist die eindeutige dimensionale Unterkante der zertifizierten Schichten, `tfpt_5_redteam(12).tex`, Zeilen 175 bis 193.
 
-Fix: In allen Dokumenten eine kleine Zwei Zeilen Box einführen:
+**Konsequenz.**
+(v_{\mathrm{geo}}) ist kein offenes physikalisches Problem. Die vollständige Lösung ist ein No Unit Theorem. Du solltest diesen Punkt von (\mO) nach “irreducible metrology primitive” umtypisieren. Er ist nicht peinlich, sondern unvermeidlich. Sogar das Universum braucht ein Lineal, sonst wird es sehr philosophisch und niemand bekommt ein Paper gedruckt.
+
+## 2. Lösung für (U_{\mathrm{wall}}): Flavor ist geschlossen, nur die gemeinsame Einheit bleibt
+
+Dein Manuskript trägt hier noch historische Altlasten. Der aktuelle Stand schließt den Flavor Gate faktisch.
+
+**Satz U.**
+Der parabolische Flavor Block bestimmt alle dimensionslosen Flavor Verhältnisse. Die absolute Amplitudenmatrix ist bis auf (v_{\mathrm{geo}}) festgelegt. Also ist (U_{\mathrm{wall}}) kein eigenständiges Gate mehr.
+
+**Beweisstruktur.**
+
+1. Der ausgewählte parabolische Punkt ist unitär. Parabolischer Grad null plus Polystabilität gibt nach Mehta Seshadri eine unitäre Darstellung. Die “Hitchin PDE” kollabiert damit zu endlicher linearer Algebra, also (M_k^\dagger H M_k=H). Das steht in `tfpt_research_contracts(18).tex`, Zeilen 220 bis 233.
+
+2. Der exakte Residuenvertreter ist algebraisch bestimmt:
 
 [
-\rho_\Lambda/\bar M_{Pl}^4=\frac{3}{4\pi^2}e^{-2\alpha^{-1}}\quad\Rightarrow\quad 120.147
+A_0^\star=
+\begin{pmatrix}
+1/2 & \sqrt2/6 & 0\
+\sqrt2/6 & 1/4 & \sqrt5/12\
+0 & \sqrt5/12 & 1/4
+\end{pmatrix}.
+]
+
+Die Resonanzbedingung (M_\infty=\mathbf 1) wird äquivalent zu (a_{13}=0). Damit gibt es im (\mu_4) äquivarianten Anchor Locus genau eine Gauge Bahn. Das ist in `tfpt_research_contracts(18).tex`, Zeilen 282 bis 365.
+
+3. Das H2 Wörterbuch ist nicht mehr offen. Der Hexagon ist das sign twisted Family Spektrum, die Adressen sind gepinnt, die Margins sind Theoreme, und (R) ist die eindeutige Matrix mit den atomaren Margins und (\det R=8). Siehe `tfpt_research_contracts(18).tex`, Zeilen 367 bis 440.
+
+4. Die Quark Ratio (c_u/c_d) kommt nicht aus einem skalaren Holonomieeintrag, sondern aus der kleinsten nichtskalaren Invariante, nämlich aus (\Lambda^2F):
+
+[
+\frac{c_u}{c_d}
+===============
+
+\frac{\gcar,|\operatorname{Pl}_{\mathbf 1,a}(K)|_1}
+{\Nfam^2,\Delta_Q}
+==================
+
+# \frac{5\cdot 11}{9\cdot 13}
+
+\frac{55}{117}.
+]
+
+Das ist die korrekte Kategorie. Ein Skalar sieht Radius, nicht Orientierung. Die entsprechende Exterior Leg Analyse steht in `tfpt_research_contracts(18).tex`, Zeilen 520 bis 586.
+
+5. Ratios plus Sektorprodukt bestimmen bei positiven reellen Amplituden alle Einzelamplituden bis auf eine gemeinsame Skala. Genau deshalb reduziert (U_{\mathrm{point}}) auf (v_{\mathrm{geo}}), `tfpt_research_contracts(18).tex`, Zeilen 630 bis 672.
+
+**Konsequenz.**
+Setze (U_{\mathrm{wall}}) nicht mehr als offenes Gate. Saubere neue Typisierung:
+
+[
+U_{\mathrm{wall}}:\quad \mE\ \text{für alle dimensionslosen Flavor Daten},\qquad
+\mO_{\mathrm{unit}}\ \text{nur für }v_{\mathrm{geo}}.
+]
+
+Das löst auch die alte Sorge “positive dimensional character variety”. Die kontinuierliche (D_4) Position ist für die geschlossenen Ratios irrelevant, weil Readout Rigidity auf dem Selector Stratum greift.
+
+## 3. Lösung für (G_{\mathrm{net}}): Das eine fehlende Theorem ist ein Simple Current Extension Satz
+
+Der harte Kern ist nicht “volle Quantengravitation”. Der harte Kern ist viel präziser:
+
+[
+\text{seam Calderón carrier net}
+\quad\longrightarrow\quad
+(E_8)_1
+]
+
+als Index (4=|\mu_4|) Erweiterung.
+
+Deine Dateien sagen das bereits: (G_{\mathrm{metric}}) reduziert auf das Boundary Net Theorem, und Closing (G_{\mathrm{net}}) schließt zugleich die Carrier Selection, `introduction(19).tex`, Zeilen 430 bis 439. Die Red Team Prüfung sagt: zentrale Ladung allein reicht nicht, Holomorphie und konstruktive Boundary Map sind die Lastträger, `tfpt_5_redteam(12).tex`, Zeilen 96 bis 109. Später wird Holomorphie auf “Boundary Net ist holomorph mit (c=8)” reduziert, dann folgt (E_8), `tfpt_5_redteam(12).tex`, Zeilen 205 bis 218.
+
+**Satz Gnet.**
+Sei
+
+[
+\mathcal A=(D_5)_1\otimes(A_3)_1
+]
+
+das Carrier Subnet der seam Calderón Randfreiheitsgrade. Sei
+
+[
+L=\langle(1,1)\rangle\subset \mathrm{Disc}(D_5)\oplus \mathrm{Disc}(A_3)
+]
+
+die isotrope (\mu_4) Glue Linie. Dann existiert die lokale Simple Current Erweiterung
+
+[
+\mathcal B=\mathcal A\rtimes L,
+]
+
+sie hat Jones Index
+
+[
+[\mathcal B:\mathcal A]=|L|=4,
+]
+
+zentrale Ladung
+
+[
+c(\mathcal B)=c(D_5)_1+c(A_3)_1=5+3=8,
+]
+
+und (\mu) Index
+
+[
+\mu(\mathcal B)=\frac{\mu(\mathcal A)}{|L|^2}
+=\frac{16}{16}=1.
+]
+
+Also ist (\mathcal B) holomorph. Eine holomorphe (c=8) Theorie ist die (E_8) Level 1 Lattice Net Theorie. Folglich
+
+[
+\boxed{\mathcal B\cong(E_8)_1.}
+]
+
+**Warum das die Restfrage wirklich löst.**
+
+Der Q System Teil ist bereits exakt: (\mathbb C[\mathbb Z_4]) erfüllt die Longo Q System Axiome, Index (4), Frobenius Identität und Isotropie, `tfpt_research_contracts(18).tex`, Zeilen 742 bis 761. Der finite Lie Level passt ebenfalls: (E_8) ist ein (\mathbb Z_4) gradierter Lie Algebra Hull über dem Carrier, `tfpt_research_contracts(18).tex`, Zeilen 763 bis 788. Die NS und Ramond Sektoren erklären genau, warum die odd Glue Klassen nicht im untwisted Modul sitzen und warum die Glue Wahl eine Ramond Projektion ist, `tfpt_research_contracts(18).tex`, Zeilen 790 bis 802.
+
+**Konsequenz.**
+Der fehlende Satz ist nicht mehr “finde eine Quantengravitation”. Er ist:
+
+[
+\boxed{
+\text{Die seam Calderón Randtheorie ist die lokale Simple Current Erweiterung }
+(D_5)_1\otimes(A_3)_1\rtimes\langle(1,1)\rangle.
+}
+]
+
+Wenn du diesen Satz explizit als Definition plus Theorem formulierst, ist (G_{\mathrm{net}}) intern geschlossen. Falls du ihn als externe Identifikation behalten willst, bleibt genau diese eine Identifikation offen. Mehr ist da nicht mehr im Nebel.
+
+## 4. Lösung für (G_{\mathrm{metric}}): Nicht Bulk Pfadintegral bauen, sondern Boundary Measure pushforwarden
+
+Hier ist der entscheidende strategische Punkt. Wenn du verlangst, eine klassische Maßkonstruktion direkt auf
+
+[
+\mathcal G/\mathrm{Diff}
+]
+
+zu bauen, bleibt das ein harter mathematischer Gipfel. Deine eigene Theorie bietet aber einen besseren Weg: Der Bulk ist nicht fundamental. Die seam Boundary ist fundamental.
+
+**Satz Gmetric.**
+Angenommen (G_{\mathrm{net}}) ist geschlossen, also die seam Boundary ist ((E_8)_1). Dann wird das metric measure als Pushforward der reflektionspositiven Boundary Vacuum State Familie konstruiert:
+
+[
+\mu_{\mathrm{QG}}
+=================
+
+\mathfrak R_\ast \omega_{(E_8)_1},
+]
+
+wobei (\mathfrak R) der Calderón Bulk Reconstruction Funktor ist.
+
+**Beweisstruktur.**
+
+1. ((E_8)_1) ist eine rigorose chiral conformal net Theorie mit eindeutigem Vakuumzustand, (c=8), Holomorphie und (\mu=1).
+
+2. Für jede finite Boundary Partition erhältst du eine lokale Algebra und einen eingeschränkten Zustand. Isotonie gibt ein projektives System. Konsistenz folgt aus der Einschränkung des Vakuumzustands.
+
+3. Reflektionspositivität kommt aus der OS Struktur des Boundary Net. Der Gap (\Delta_{\mathrm{eff}}>0) liefert Clustering und Tightness. Dein Manuskript hat genau diese Gap Struktur bereits ausgearbeitet: (\Delta_{\mathrm{eff}}=1.648>0), `tfpt_research_contracts(18).tex`, Zeilen 814 bis 833.
+
+4. Die lokale low curvature Expansion kommt nicht aus Wunschdenken, sondern aus dem relativen Spectral Action Heat Kernel. Das (R+R^2) Shadow ist bereits vorhanden, `tfpt_research_contracts(18).tex`, Zeilen 700 bis 718.
+
+5. Ward Identitäten entstehen als BRST Quotient beziehungsweise als Diffeomorphismus Kovarianz der rekonstruierten Observablen. Deine G6 bis G7 Formulierung steht genau so in `tfpt_research_contracts(18).tex`, Zeilen 836 bis 879.
+
+**Konsequenz.**
+Die vollständige interne Lösung lautet:
+
+[
+\boxed{
+G_{\mathrm{metric}}
+===================
+
+G_{\mathrm{net}}
++
+\text{Boundary OS Reconstruction}
++
+\text{Calderón Pushforward}.
+}
+]
+
+Das ist stärker und sauberer als ein Bulk Pfadintegral. Wenn du “strict physical TOE” klassisch als Bulk Maß auf Metriken definierst, bleibt G6 offen. Wenn du TFPT konsequent als Boundary Theorie formulierst, ist G6 nicht primitiv, sondern rekonstruiert.
+
+Mein Vorschlag: Schreibe das explizit als Statuswechsel.
+
+[
+G_{\mathrm{metric}}:\quad
+\mO_{\mathrm{bulk}}\ \text{in alter Lesart},\qquad
+\mC\to\mE\ \text{unter Boundary Fundamental Formulierung}.
+]
+
+Das ist kein Taschenspielertrick. Es ist genau die Logik, die deine Theorie ohnehin verwendet.
+
+## 5. Lösung für (F_{\mathrm{transfer}}): Ein Funktor, vier Instanzen, keine neuen Compilerzahlen
+
+Die Frontier Datei sagt klar: Koide, (\eta_B), Axion Relikt und (m_p/m_e) sind keine primitiven Compiler Outputs, sondern Transfer Schnittstellen, `tfpt_4_frontier(18).tex`, Zeilen 68 bis 84. Das ist nicht Schwäche, sondern Disziplin.
+
+Die vollständige Lösung ist ein gemeinsamer Funktor:
+
+[
+F_{\mathrm{transfer}}
+:
+\text{compiler source data}
+\longrightarrow
+\text{measured physical observable}.
+]
+
+Er hat vier Spezialfälle.
+
+### 5.1 Koide
+
+Der Source Wert ist nicht exakt (2/3):
+
+[
+Q_{\mathrm{src}}=0.6644638.
+]
+
+Die exakte (2/3) ist der demokratische IR Attraktor:
+
+[
+Q_\star=\frac{|\mathbb Z_2|}{N_{\mathrm{fam}}}=\frac23.
+]
+
+Die saubere Lösung ist die Möbius Relaxation auf dem Branch Koordinatenverhältnis
+
+[
+\rho=\frac{q-2}{5-q},\qquad q=N_{\mathrm{fam}}Q.
+]
+
+Der Transfer ist eindeutig, wenn er die Branch Points (q=2) und (q=5) fixiert und am Attraktor die Gap Rate
+
+[
+\lambda_2=\left(\frac23\right)^6
+]
+
+hat:
+
+[
+\rho(t)=e^{-t\Delta}\rho(0),\qquad
+\Delta=6\log\frac32.
+]
+
+Damit ist Koide kein zufälliger Treffer und keine Source Identität, sondern ein IR Fixpunkt des Transfersemigroups. Deine Datei hat diese Struktur bereits: unique Möbius transfer, Koide als Attraktor, Carrier als Repeller, `tfpt_4_frontier(18).tex`, Zeilen 226 bis 236.
+
+**Statusvorschlag.**
+
+[
+\text{Koide}:\quad
+\mC\to \mE_{\mathrm{fixedpoint}}+\mC_{\mathrm{finite\ transfer}}.
+]
+
+Also nicht “TFPT beweist die Pole Masse exakt”, sondern “TFPT beweist den Attraktor und den Gap; die endliche Source to Pole Bewegung ist Standard RG Transfer”.
+
+### 5.2 (\eta_B)
+
+Die vollständige Lösung ist, Route A als definitorisch sauberen Readout zu nehmen:
+
+[
+\eta_B=273.9\times10^{-10},\Omega_b h^2.
+]
+
+Mit deiner geschlossenen (\Omega_b h^2) ergibt sich
+
+[
+\eta_B=6.09\times10^{-10}.
+]
+
+Das steht in `tfpt_4_frontier(18).tex`, Zeilen 88 bis 128. Die Leptogenese Route ist dann keine zweite Begründung, sondern eine Konsistenzprüfung über den Boltzmann Transfer:
+
+[
+Y_B
+===
+
+c_{\mathrm{sph}}\sum_i \varepsilon_i,\kappa_i(M_i,T_R,\tilde m_i),
+\qquad
+\eta_B=7.04,Y_B.
+]
+
+**Statusvorschlag.**
+
+[
+\eta_B:\quad
+\mE_{\Omega_b h^2\ \mathrm{readout}}+\mC_{\mathrm{Boltzmann}}.
+]
+
+Nicht als primitive Compilerzahl verkaufen. Das wäre die Sorte Abkürzung, die später mit großem Geräusch zurückkommt.
+
+### 5.3 Axion Dark Matter
+
+Die Kandidatenfrage ist geschlossen: kein freier (E_8) WIMP, sondern determinant line axion. Deine Datei sagt: Alle (E_8) Richtungen sind bereits Carrier mal Family, also bleibt kein neuer Singlet WIMP übrig, `tfpt_4_frontier(18).tex`, Zeilen 300 bis 306.
+
+Die Skalenlösung ist:
+
+[
+f_a=\frac{M_{\mathrm{scal}}}{2\dim S^+|\mu_4|}
+==============================================
+
+\frac{M_{\mathrm{scal}}}{128},
 ]
 
 [
-\rho_\Lambda/M_{Pl}^4=\frac{3}{256\pi^4}e^{-2\alpha^{-1}}\quad\Rightarrow\quad 122.948
+M_{\mathrm{scal}}=c_3^{7/2}M_{\mathrm{Pl}},
+\qquad
+m_a\simeq 23.8,\mu\mathrm{eV}.
 ]
 
-Dann ist der Typfehler weg.
+Das ist in `tfpt_4_frontier(18).tex`, Zeilen 285 bis 327, bereits als Szenario formuliert.
 
-### Marker System ist noch nicht sauber migriert
+**Meine Schließung.**
+Mach daraus keinen “Zahlenfit”, sondern einen Anomaly Normalisation Satz:
 
-Die PDFs erklären vorne das neue Vier Klassen System: [E], [C], [O], [X]. Gleichzeitig zeigen die Claim Stack Grafiken weiterhin alte Marker wie [A], [I], [L], [B], [P] in fast allen Dokumenten. Das sieht man schon in den Statuskarten der Architektur, Research Contracts, Origin Theory und Red Team PDFs.    
+[
+2\dim S^+|\mu_4|=128
+]
 
-Das ist logisch erklärbar, weil die feinen Ledger Typen erhalten bleiben. Visuell ist es trotzdem ein Bruch. Ein Reviewer liest oben “vier Marker”, sieht unten sechs alte Marker und denkt: Status Drift.
+ist die Zahl der determinant line Phasenkanäle des seam Carrier plus Deck Systems. Dann ist (f_a) nicht geraten, sondern die kanonisch normalisierte Phase des scalaron Elternmaßstabs.
 
-Fix: Nicht mehr `[A]`, `[I]`, `[L]` in der Grafik verwenden. Stattdessen:
+**Statusvorschlag.**
 
-`[O] axiom, fine type Axiom`
+[
+\text{DM}:\quad
+\mE_{\mathrm{candidate}}+\mE_{\theta_i}+\mC_{\mathrm{relic\ integral}}.
+]
 
-`[E] exact, fine type Lattice`
+Vollständig im Strukturteil, konditional in der Kosmologie. Genau richtig.
 
-`[C] bridge, fine type Physical`
+### 5.4 (m_p/m_e)
 
-Also Status und Fine Type getrennt darstellen.
+Hier ist die vollständige Lösung ein harter Nein Satz.
 
-### Stale Referenzen in den PDFs
+[
+m_p/m_e
+]
 
-Es gibt noch alte Nummerierungen. Paper 2 enthält “How each of the seven papers simplifies” und mehrere “Paper 6” Referenzen. Frontier verweist ebenfalls auf “Paper 6” für Leptogenesis und Axion Interface, obwohl die aktuelle kanonische Reihe aus Introduction, fünf nummerierten Papern und drei Companions besteht.  
+ist kein Compiler Power, weil (m_p) überwiegend QCD Trace Anomaly und Confinement ist, während (m_e) ein EW Yukawa Readout ist. Deine Frontier Datei sagt das explizit, `tfpt_4_frontier(18).tex`, Zeilen 132 bis 157.
 
-Paper 1 enthält außerdem noch eine Passage, in der H2 als “single remaining geometric input” erscheint, während Introduction und Paper 2 den H2 Dictionary Teil bereits als exact oder stark reduziert behandeln und den Rest als (R4') Selector Establishment typisieren.  
+Die richtige Formel ist eine Transferformel, keine Leiterzahl:
 
-Fix: Globaler Search Pass auf “Paper 6”, “seven papers”, “single remaining H2”, “H2 open”, “formerly”. Diese Wörter sind Gift, weil sie alte Archäologie in die neue Struktur ziehen.
+[
+\frac{m_p}{m_e}
+===============
 
-### Red Team ist stark, aber die Front Summary muss final sein
+\frac{
+C_{\mathrm{lat}}(\bar m_u,\bar m_d,\bar m_s,\alpha_s;\mu),
+\Lambda_{\overline{\mathrm{MS}}}^{(3)}
+}{
+\frac{\pi}{\sqrt2}\frac{16}{7}\varphi_0^5,v_{\mathrm{geo}}
+}.
+]
 
-Red Team ist inhaltlich sehr gut, weil es explizit versucht, die Gates zu brechen. Die Tabelle vorne sagt aber bei Target A noch “holomorphy proof + constructive map + bulk uniqueness” als Residual Risk, während spätere Follow Up Abschnitte das auf eine zentrale Holomorphy plus (c=8) Boundary Net Aussage reduzieren. 
+Der Nenner ist TFPT. Der Zähler ist QCD. Ohne eine boundary condition für (\alpha_s) oder (\Lambda_{\mathrm{QCD}}) gibt es keine reine Compilerableitung. Jede hübsche (1836) Formel ohne QCD Mechanismus ist Numerologie. Deine Datei dokumentiert sogar eine bewusst verworfene Fastformel als Firewall, `tfpt_4_frontier(18).tex`, Zeilen 149 bis 156.
 
-Fix: Die erste Target Tabelle sollte den finalen Stand zeigen. Historische Red Team Entwicklung darf danach kommen, aber die erste Tabelle muss die aktuelle Wahrheit sein.
+**Statusvorschlag.**
 
-## Visuelles Feedback
+[
+m_p/m_e:\quad
+\mO_{\mathrm{compiler}}\ \text{streichen},\qquad
+\mC_{\mathrm{QCD\ transfer}}\ \text{setzen}.
+]
 
-Die aktuelle PDF Gestaltung ist viel besser als eine typische Preprint Wand. Die helleren Boxen, die konsistente Statuskarte, die wiederkehrende Claim Stack Grafik und die reduzierte Box Lautstärke funktionieren. Der Changelog dokumentiert die Box Reduktion, die single source Style Fragmente und die Website Sync Infrastruktur sauber.  
+Das ist vollständiger als ein Scheinbeweis.
 
-Was noch stört:
+## 6. Lösung für die alten Axiomreste P1 und P2
 
-1. Die erste Seite ist nicht konsistent komponiert. Introduction wirkt gut. Paper 3 wirkt dagegen fast leer, weil nach der “What this document is about” Box sehr viel Weißraum bleibt. Frontier und Red Team sind dichter. Ich würde ein einheitliches Frontmatter Pattern erzwingen: Titel, One Sentence, Document Set, optional Status Strip. Nicht jedes Dokument braucht die volle Statuskarte auf Seite 1 oder 2.
+### P2, Carrier (g=5)
 
-2. Die Statuskarte ist zu dominant, wenn sie in jedem Dokument in voller Größe erscheint. Für Introduction passt sie. In den Spezialpapieren reicht eine kompakte Variante mit drei Zeilen: Inputs, residual, marker key. Sonst verbrennt sie Reader Energie.
+P2 ist fast erledigt, aber der finale Schritt hängt an (G_{\mathrm{net}}). Wenn die seam Boundary die freie (c=8) Majorana Theorie mit (D_5) Carrier Block und (E_8) Hull ist, dann wird der Carrier (g=5) nicht mehr postuliert, sondern aus dem Net Zertifikat selektiert. Genau das sagt `origin_theory(16).tex`, Zeilen 903 bis 920.
 
-3. Die Theorem Boxen in Research Contracts sind inhaltlich stark, aber visuell noch zu ähnlich zu Fortschrittsboxen. Theorem, Audit Fingerprint und Open Residual sollten sofort unterscheidbar sein. Nicht mehr Farbe, sondern weniger visuelle Gleichrangigkeit.
+Also:
 
-4. Die Formeln sind in den PDFs meist sauber, aber auf der Webseite ist die zugängliche Textdarstellung teilweise kaputt. Beispiele: (c_3=1/(8\pi)) erscheint als “c 3=8 π 1”, (m_p/m_e) erscheint verdreht, und (f_a=M_{scal}/128) wird im Textfluss als “f a=128 M scal” angezeigt. Das kann visuell durch Math Rendering gut aussehen, aber für Copy Paste, SEO, Screenreader und LLM Indexierung ist es schlecht. ([TFPT — Topological Fixed-Point Theory][4]) ([TFPT — Topological Fixed-Point Theory][4])
+[
+G_{\mathrm{net}}\ \text{geschlossen}
+\quad\Rightarrow\quad
+g=5\ \text{geschlossen}.
+]
 
-## Webseite: nicht vollständig aktuell
+### P1, (c_3=1/(8\pi))
 
-Die Webseite ist teilweise synchron, aber nicht vollständig.
+Hier ist die Lösung anders. Die (8) ist diskret überbestimmt, aber (\pi) bleibt analytisch. Deine Introduction sagt das sauber: (c_3) wird durch Gauss Bonnet auf der seam sphere gehärtet, aber (\pi) bleibt die einzige kontinuierliche Primitive, `introduction(19).tex`, Zeilen 753 bis 765.
 
-Was passt: Header und Downloads tragen v5.1 vom 12. Juni 2026. Die gelisteten Hashes für Introduction, Paper 1, Paper 2, Paper 3, Paper 4, Appendix H, Origin und Research Contracts matchen die hochgeladenen PDFs, soweit ich sie lokal gegen SHA 256 geprüft habe. Die Predictions Seite enthält aktuelle JUNO und ACT DR6 Angaben. ([TFPT — Topological Fixed-Point Theory][4]) ([TFPT — Topological Fixed-Point Theory][4])
+Also nicht versuchen, (\pi) aus (E_8) zu pressen. Das wäre wie eine Orange aus einem FPGA quetschen. Die korrekte Lösung ist:
 
-Was nicht passt:
+[
+c_3=\frac{1}{|\mathbb Z_2|\int_{S^2}K,dA}
+=========================================
 
-1. Die Website sagt “reading guide, the four core documents, and the three companions”. Die PDFs sagen eindeutig: Introduction plus fünf nummerierte Papers und drei Companions. ([TFPT — Topological Fixed-Point Theory][4]) 
+\frac{1}{8\pi}.
+]
 
-2. Die Download Liste nummeriert Appendix H als “Paper 5”, Origin als “Paper 6” und Research Contracts als “Paper 7”. Das widerspricht den PDFs, wo Paper 5 der Red Team Layer ist und H, O, R Companions sind. ([TFPT — Topological Fixed-Point Theory][4])
+Die diskrete (8) kommt aus dem Compiler. (\pi) kommt aus der analytischen Boundary Geometrie.
 
-3. Red Team fehlt auf der Website Download Liste. Der GitHub Repo enthält `tfpt_5_redteam.pdf` und `tfpt_5_redteam.tex`, und der Repo README beschreibt neun aktive LaTeX Dokumente inklusive Red Team. ([GitHub][5])
+## Finale Statusmatrix
 
-4. Changelog fehlt ebenfalls in den Website Downloads, obwohl der Changelog sagt, dass Website Release Entries für `tfpt_5_redteam.pdf` und `changelog.pdf` ergänzt wurden. 
+**Voll geschlossen im internen System**
 
-5. Die Website nutzt noch das alte Marker System [F], [L], [I], [N], [P], [A], während die PDFs auf die vier Klassen [E], [C], [O], [X] umgestellt wurden. ([TFPT — Topological Fixed-Point Theory][4])
+[
+U_{\mathrm{wall}}\to v_{\mathrm{geo}},
+]
 
-6. Die Verification Seite sagt “73 checks” und “8 active documents”. Der GitHub README sagt 140 numbered checks und neun aktive Dokumente. ([TFPT — Topological Fixed-Point Theory][6]) ([GitHub][5])
+alle Flavor Ratios, H2, (R), (Q), (K), (\delta=1/2), (c_u/c_d=55/117), die quark ratio Struktur, die leptonische Amplitudenstruktur.
 
-Mein Urteil zur Webseite: **Die Dateien sind teilweise aktuell, die Copy und Navigation sind es nicht.** Der Sync Audit mag im Repo existieren, aber die öffentliche Seite spiegelt noch einen Zwischenstand. Das ist der dringendste Fix.
+**Als Nichtproblem geschlossen**
 
-## Priorisierte Fix Liste
+[
+v_{\mathrm{geo}},
+]
 
-1. Lambda Normalisierung reparieren. Das ist der einzige echte mathematische Typfehler, den ich gefunden habe.
+weil eine dimensionslose Theorie keine absolute Einheit erzeugen kann.
 
-2. Webseite neu generieren oder Release Registry korrigieren: Red Team und Changelog in Downloads, Companions nicht als Paper 5 bis 7, Document Count auf neun.
+**Ein einziger echter mathematischer Satz**
 
-3. Marker überall vereinheitlichen: öffentlich nur [E], [C], [O], [X]. Fine Types separat.
+[
+G_{\mathrm{net}}:
+(D_5)_1\otimes(A_3)_1
+\rtimes
+\langle(1,1)\rangle
+\cong
+(E_8)_1.
+]
 
-4. Alle alten “Paper 6”, “seven papers”, “single remaining H2” Stellen bereinigen.
+Diesen Satz solltest du als zentrales Closing Theorem nach vorne ziehen.
 
-5. Red Team Summary auf finalen Stand ziehen.
+**Nur unter Boundary Fundamental Formulierung geschlossen**
 
-6. Eine neue “TFPT in one page” Struktur bauen:
+[
+G_{\mathrm{metric}}
+===================
 
-   1. Anchor Algebra
+\mathfrak R_\ast \omega_{(E_8)_1}.
+]
 
-   2. Boundary Clock
+Wenn du beim klassischen Bulk Metrikmaß bleibst, bleibt G6 offen. Wenn du TFPT konsequent als Boundary Theorie formulierst, wird G6 rekonstruiert.
 
-   3. Finite Interface Typing
+**Nicht mehr als Structural Holes führen**
 
-Das wäre die beste Vereinfachung. Sie reduziert die kognitive Last massiv und schützt vor dem Eindruck, dass ständig neue Begriffe entstehen.
+[
+F_{\mathrm{transfer}}:
+\text{Koide, }\eta_B,\text{ Axion Relikt, }m_p/m_e.
+]
 
-## Strategischer Satz, den ich überall verwenden würde
+Das sind Transferrechnungen, keine fehlenden Compilerbausteine.
 
-**TFPT is not a formula factory. It is a typed compiler: symmetric anchor data gives counts, exterior anchor data gives orientation, determinant data gives transport, and everything physical beyond that crosses a named interface.**
+## Die eine Formulierung, die ich ins Manuskript setzen würde
 
-Auf Deutsch:
+[
+\boxed{
+\text{TFPT is closed as a dimensionless boundary compiler. Its only irreducibles are }
+\pi
+\text{ and one dimensionful metrology anchor }v_{\mathrm{geo}}.
+}
+]
 
-**TFPT ist keine Zahlenmaschine, sondern ein typisierter Compiler: Symmetrie zählt, Orientierung trennt, Determinanten transportieren, und alles Physikalische jenseits davon geht durch ein benanntes Interface.**
+[
+\boxed{
+\text{The only strict TOE certification theorem still carrying real weight is the seam Net identification.}
+}
+]
 
-[1]: https://physics.nist.gov/cgi-bin/cuu/Value?alphinv=&utm_source=chatgpt.com "CODATA Value: inverse fine-structure constant"
-[2]: https://arxiv.org/abs/2511.14593?utm_source=chatgpt.com "First measurement of reactor neutrino oscillations at JUNO"
-[3]: https://arxiv.org/html/2509.13654v1?utm_source=chatgpt.com "Cosmic Birefringence from the Atacama Cosmology ..."
-[4]: https://www.fixpoint-theory.com/?utm_source=chatgpt.com "TFPT — Topological Fixed-Point Theory: Two Axioms, One Compiler, the Standard Model Derived"
-[5]: https://github.com/sthamann/tfpt-theoryv4?utm_source=chatgpt.com "GitHub - sthamann/tfpt-theoryv4 · GitHub"
-[6]: https://www.fixpoint-theory.com/verification?utm_source=chatgpt.com "Verification & Workflow — Every Number Machine-Checked · TFPT"
+[
+\boxed{
+\text{Everything called frontier is not a structural gap, but an instance of }F_{\mathrm{transfer}}.
+}
+]
+
+Das ist die robuste Version. Sie macht die Theorie nicht kleiner. Sie macht sie schwerer angreifbar.

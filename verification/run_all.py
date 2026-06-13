@@ -160,6 +160,9 @@ MODULES = [
     ("v150_replica_eh_model", "EH form from replica variation at the gapped-model level; target ln m = q(A3) (R3)"),
     ("v151_bfk_split", "BFK split: the Calderon/DtN kernel is conically clean; seam action inherits the EH form (R3)"),
     ("v152_norm_is_anchor", "R3 normalisation = the dimensionful anchor (ln(m/mu) ratio = 1/G); not a separate gap"),
+    ("v153_no_unit_theorem", "No-Unit Theorem: a dimensionless compiler cannot make an absolute scale; v_geo = irreducible metrology primitive"),
+    ("v154_simple_current_theorem", "Simple-Current Extension Theorem: (D5)1(x)(A3)1 |x <(1,1)> = (E8)1; the central G_net closing theorem"),
+    ("v155_quasifree_boundary", "quasi-free in => quasi-free out: G_net's analytic premise = the Gaussian-bulk premise of v59/v150 (Python-only)"),
 
 ]
 

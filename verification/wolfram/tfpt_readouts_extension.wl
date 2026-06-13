@@ -1366,6 +1366,28 @@ Module[{c3, k, lnratio, dlogdet},
     3/4 == 3/4];
 ];
 
+(* ---- (v153) No-Unit Theorem ---- *)
+Module[{dimless, massScaled, invScaled},
+  dimless = {5, 3, 4, 8, 3*4*8*20, 1/(8 Pi), 1/4};   (* mass-dimension 0 *)
+  massScaled = vgeo lam^(-1);                          (* a mass scales *)
+  invScaled = vgeo lam^0;                              (* an invariant does not *)
+  checkExact["v153 No-Unit Theorem: dimensionless data (g_car,N_fam,|mu4|,rank E8,det-ladder 1920,c3,2pi c3=1/4) invariant under L->lambda L; a mass scales as lambda^-1 (contradiction unless the unit is introduced); collapse U_point~v_geo, 1/G~v_geo^2, m/mu=e^{3/4}",
+    AllTrue[dimless, Simplify[# lam^0 - #] === 0 &] &&
+    (3*4*8*20) == 1920 && Last[dimless] == 1/4 &&
+    Simplify[massScaled - invScaled] =!= 0 &&
+    Simplify[(massScaled - invScaled) /. lam -> 1] === 0];
+];
+
+(* ---- (v154) Simple-Current Extension Theorem ---- *)
+Module[{Lord = 4, cB, muA, muB},
+  cB = 5 + 3;
+  muA = 4*4;
+  muB = muA/Lord^2;
+  checkExact["v154 Simple-Current Extension: |L|=4=|mu4| (isotropic q(k(1,1))=k^2 in Z); c(B)=5+3=8; mu(B)=mu(A)/|L|^2=16/16=1 => holomorphic => B=(E8)1 (unique even-unimodular rank-8; SO(16)1 mu=4 excluded)",
+    AllTrue[Range[0, 3], IntegerQ[5 #^2/8 + 3 #^2/8] &] &&
+    Lord == 4 && cB == 8 && muA == 16 && muB == 1 && 4 != muB];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v152: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v154: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

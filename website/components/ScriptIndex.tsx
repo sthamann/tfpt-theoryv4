@@ -167,7 +167,7 @@ const CLUSTERS: Cluster[] = [
     ],
   },
   {
-    title: "Blind registry & red-team follow-ups (v84–v152)",
+    title: "Blind registry & red-team follow-ups (v84–v155)",
     purpose: "The frozen prediction registry and the second follow-up round: Target A merged to one residual, the CP residual quantified, N★ computed from reheating — every freeze machine-enforced.",
     accent: "from-emerald-500 to-cyan-500",
     scripts: [
@@ -240,6 +240,9 @@ const CLUSTERS: Cluster[] = [
       { file: "v150_replica_eh_model.py", what: "EH form from replica (R3, model level): conical deficit exact + t-independent (Cheeger image sum (N²−1)/(12N)); gap ⇒ Δlogdet′ = 2C(γ)ln m FINITE, cutoff-independent; linearisation = (ln m/12π)·∫√gR — the EH form; target equation k = c₃/2 ⟺ ln m = 3/4 = q(A₃); Calderón transfer + normalisation stay open (Calderón transfer since answered: the DtN kernel is conically clean, v151)" },
       { file: "v151_bfk_split.py", what: "BFK split (R3): Kac corner constant is boundary-condition independent (C_N = C_D, via doubling) ⇒ the conical deficit of the Calderón/DtN jump determinant VANISHES identically — the seam-reduced action inherits the v150 EH form via BFK; the EH content sits in the local half determinants; residue = q(A₃) normalisation + kernel premise" },
       { file: "v152_norm_is_anchor.py", what: "R3 normalisation IS the dimensionful anchor: k = ln(m/μ)/(12π) — ln m is scale-ambiguous, only m/μ is physical; k = c₃/2 ⟺ m/μ = e^{3/4} is the induced-gravity anchor 1/G (v68), not a separate gap; the irreducibles stay {one scale, π}; audit: the log-ratio = 3/4 = q(A₃) is the target value, NOT a derivation" },
+      { file: "v153_no_unit_theorem.py", what: "No-Unit Theorem (v_geo re-typed): dimensionless data are scale-invariant under L→λL, a mass/1/G is not, so a dimensionless compiler cannot select an absolute scale; the three residuals collapse — U_point ~ v_geo, 1/G ~ v_geo², m/μ = e^{3/4} (a ratio); v_geo is an irreducible metrology primitive, not an open gap; irreducibles stay {one unit, π}" },
+      { file: "v154_simple_current_theorem.py", what: "Simple-Current Extension Theorem (the central G_net theorem): A = (D5)1(x)(A3)1 extended by the isotropic glue L=<(1,1)> has index |L|=4, c=5+3=8, μ(B)=μ(A)/|L|²=16/16=1 ⇒ holomorphic ⇒ B=(E8)1 (unique even-unimodular rank-8); SO(16)1 excluded; finite realisation in hand (v125/v128/v143/v148); residue = the seam-side identification 'seam net = A'" },
+      { file: "v155_quasifree_boundary.py", what: "quasi-free in ⇒ quasi-free out (Python-only): the boundary marginal of a Gaussian bulk is the compression PΓP — a contraction, hence a valid covariance — so the G_net analytic premise (v110(b)/v113 'one kernel') FOLLOWS from 'the seam bulk is a RP free field', the same premise as v59 (area law) and v150/v151 (EH); the seam-side identification reduces to ONE shared physical premise" },
     ],
   },
 ];

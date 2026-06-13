@@ -65,6 +65,37 @@ NACHTRAG 2026-06-13, Runde 6 (v152):
     nur noch die Kernel-Identifikations-Praemisse.
   - Suite 152 Module; Wolfram 219/219.
 
+NACHTRAG 2026-06-13, Runde 7 (v153-v154, externes Review formalisiert):
+  - v_geo (v153): NO-UNIT-THEOREM. Dimensionslose Daten sind skaleninvariant (L->λL),
+    eine Masse/1/G nicht => ein dimensionsloser Compiler kann KEINE absolute Skala
+    erzeugen. v_geo ist kein offenes Loch, sondern eine unvermeidliche Metrologie-
+    Einheit; U_point ~ v_geo, 1/G ~ v_geo^2, m/mu = e^{3/4} = EINE Einheit in drei
+    Massendimensionen. Umtypisiert: [O] Loch -> irreducible metrology primitive.
+  - G_net (v154): SIMPLE-CURRENT-EXTENSION-SATZ als zentrales Closing-Theorem nach
+    vorne gezogen: A = (D5)1(x)(A3)1, Glue L=<(1,1)> isotrop, B = A|xL hat Index
+    |L|=4, c=5+3=8, mu(B)=mu(A)/|L|^2=16/16=1 => holomorph => B = (E8)1 (eindeutig,
+    SO(16)1 ausgeschlossen). Alle algebraischen Bausteine maschinengeprueft
+    (v89/v92/v125/v143/v148); Rest = die EINE Seam-seitige Identifikation.
+  - Status-Umtypisierungen (Review): U_wall kein eigenes Gate mehr (E fuer alle
+    dimensionslosen Flavor-Daten, O_unit nur v_geo); G_metric = Boundary-Pushforward
+    (rekonstruiert, nicht Bulk-Pfadintegral); m_p/m_e als QCD-Transfer [C], nicht
+    Compiler [O]; F_transfer = ein Funktor, vier Instanzen.
+  - Suite 154 Module; Wolfram-Spiegel folgt; finale Formulierung: TFPT ist als
+    dimensionsloser Boundary-Compiler geschlossen, Irreduzible = {pi, v_geo}, das
+    eine TOE-Theorem ist die Seam-Net-Identifikation, alles 'Frontier' ist F_transfer.
+
+NACHTRAG 2026-06-13, Runde 8 (v155, Seam-seitige Identifikation reduziert):
+  - G_net (v155): die EINE verbleibende Seam-seitige Identifikation reduziert sich auf
+    EINE geteilte physikalische Praemisse. v110 spaltet sie in (a) Calderon-Involution
+    sheet-odd (Doppelueberlagerungs-Deck, strukturell) und (b) Kern quasi-frei. Teil (b)
+    ist NICHT unabhaengig: die Rand-Marginale eines Gauss-Bulks ist die Kompression
+    P*Gamma*P der Kovarianz, und die Kompression einer Kontraktion ist eine Kontraktion
+    => der Rand-Zustand ist automatisch quasi-frei (Wick vererbt). Also folgt (b) aus
+    'der Seam-Bulk ist ein reflexionspositives freies Feld' - DIESELBE Praemisse wie
+    v59 (Area Law) und v150/v151 (EH). Der gesamte Seam-seitige Rest = EINE physikalische
+    Praemisse, geteilt von G_net, Area Law und R3. (numpy, Python-only)
+  - Suite 155 Module; Wolfram unveraendert 221/221 (v155 numerisch, Python-only).
+
 KURZFASSUNG (ein Satz)
 ----------------------
 Die Anchorblock-Determinante des Massentransport-Pencils, det B(K+xQ) = (3x+2)(3x+5),

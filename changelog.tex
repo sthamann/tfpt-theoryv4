@@ -119,6 +119,52 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
   poison the next build; artefacts are still kept on success.
 \end{itemize}
 
+\subsection*{2026-06-13 (the seam-side identification reduced to one shared premise, \vref{v155})}
+\begin{itemize}
+\item \textbf{$G_{\mathrm{net}}$'s last premise reduces to a single shared physical premise
+  (\vref{v155}, Python-only).} The seam-side identification of the Simple-Current Extension Theorem
+  (\vref{v154}) splits (\vref{v110}) into (a) ``the Calder\'on involution is sheet-odd'' (the
+  double-cover deck, structural) and (b) ``the seam $2$-point kernel is quasi-free''. Part~(b) is
+  \emph{not} independent: the boundary marginal of a reflection-positive \emph{Gaussian} bulk is the
+  compression $P\Gamma P$ of the covariance, and the compression of a contraction is a contraction ---
+  so the seam state is automatically quasi-free (Wick inherited). Hence (b) \emph{follows} from ``the
+  seam bulk is a reflection-positive free field'', the \emph{same} premise already load-bearing in the
+  area law (\vref{v59}) and the EH mechanism (\vref{v150}/\vref{v151}). \textbf{The entire seam-side
+  residual is therefore one physical premise}, shared by $G_{\mathrm{net}}$, the area law and R3 ---
+  not reducible by a finite computation, but no longer three separate items (ledger
+  \texttt{GATE.METRIC.12}).
+\item \textbf{Bookkeeping.} Suite at $155$ modules, all green; Wolfram unchanged at $221/221$
+  (\vref{v155} is numerical/numpy, Python-only); contracts / \texttt{origin\_theory} /
+  \texttt{next.txt} / website moved together.
+\end{itemize}
+
+\subsection*{2026-06-13 (external review formalised: No-Unit Theorem + Simple-Current Extension Theorem, \vref{v153}--\vref{v154})}
+\begin{itemize}
+\item \textbf{$v_{\mathrm{geo}}$ re-typed: the No-Unit Theorem (\vref{v153}).} Every load-bearing
+  compiler datum is mass-dimension $0$ and invariant under a unit rescaling $L\mapsto\lambda L$,
+  whereas a mass / $1/G$ is not --- so a dimensionless boundary compiler \emph{provably cannot}
+  select an absolute scale. $v_{\mathrm{geo}}$ is therefore an \emph{irreducible metrology
+  primitive}, not an open gap, and the three apparent residuals collapse onto it
+  ($U_{\mathrm{point}}\sim v_{\mathrm{geo}}$, $1/G\sim v_{\mathrm{geo}}^2$, $m/\mu=e^{3/4}$ a pure
+  ratio); the irreducibles stay $\{$one unit, $\pi\}$ (ledger \texttt{ANCHOR.VGEO.02}).
+\item \textbf{$G_{\mathrm{net}}$ stated as the central closing theorem (\vref{v154}).} The Simple-Current
+  Extension Theorem: $A{=}(D_5)_1{\otimes}(A_3)_1$ extended by the isotropic glue
+  $L{=}\langle(1,1)\rangle$ has $[B{:}A]{=}|L|{=}4$, $c{=}5{+}3{=}8$,
+  $\mu(B){=}\mu(A)/|L|^2{=}16/16{=}1\Rightarrow$ holomorphic $\Rightarrow B\cong(E_8)_1$ ($SO(16)_1$
+  excluded). Every algebraic ingredient is machine-checked (\vref{v89}/\vref{v92}/\vref{v125}/%
+  \vref{v143}/\vref{v148}); the only residue is the seam-side identification. Pulled to the front of
+  \texttt{tfpt\_research\_contracts}, \texttt{tfpt\_5\_redteam} (Target~A final form) and
+  \texttt{origin\_theory} (ledger \texttt{GATE.METRIC.11}).
+\item \textbf{Status surfaces re-typed} (review): the canonical status card now reads
+  $v_{\mathrm{geo}}$ as a metrology \emph{primitive}, $G_{\mathrm{net}}$ as the simple-current
+  extension $\cong(E_8)_1$ (\mE/\mC), and $F_{\mathrm{transfer}}$ as one functor with four typed
+  interfaces --- ``not structural gaps''. The final one-line framing (dimensionless boundary compiler;
+  irreducibles $\{\pi, v_{\mathrm{geo}}\}$; one seam-net theorem; frontier $=$ $F_{\mathrm{transfer}}$)
+  is in \texttt{origin\_theory}, the introduction, the README and \texttt{next.txt}.
+\item \textbf{Bookkeeping.} Suite at $154$ modules, all green; Wolfram extension $221/221$;
+  intro/README/\texttt{origin\_theory}/contracts/redteam/status-card/website moved together.
+\end{itemize}
+
 \subsection*{2026-06-13 (currency sweep: remaining old-series ``Paper N'' cross-references removed)}
 \begin{itemize}
 \item \textbf{No old-version framing left in the active docs.} A consistency sweep

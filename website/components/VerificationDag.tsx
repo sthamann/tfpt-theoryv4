@@ -269,6 +269,9 @@ const NODES: DagNode[] = [
       "v150_replica_eh_model.py",
       "v151_bfk_split.py",
       "v152_norm_is_anchor.py",
+      "v153_no_unit_theorem.py",
+      "v154_simple_current_theorem.py",
+      "v155_quasifree_boundary.py",
     ],
   },
   {

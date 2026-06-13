@@ -867,6 +867,55 @@ existing RCFT/conformal-net rigor rather than built from scratch. Residual $=$ t
 reconstruction. \mE\ (charges, embedding) $+$ \mC\ (identification)
 \end{keybox}
 
+\begin{keybox}[The Simple-Current Extension Theorem --- the central $G_{\mathrm{net}}$ closing statement \mE/\mC\ (\veri{v154\_simple\_current\_theorem.py})]
+The conditional theorem can now be stated as one clean \emph{simple-current extension}. Let
+$A=(D_5)_1\otimes(A_3)_1$ be the carrier net and $L=\langle(1,1)\rangle\subset\operatorname{Disc}(D_5)\oplus
+\operatorname{Disc}(A_3)=\Z_4\oplus\Z_4$ the isotropic $\mu_4$ glue line ($q(k(1,1))=k^2\in\Z$). Then the
+local extension $B=A\rtimes L$ has
+\[
+  \boxed{\ [B:A]=|L|=4=|\mu_4|,\quad c(B)=5{+}3=8,\quad \mu(B)=\frac{\mu(A)}{|L|^2}=\frac{16}{16}=1\ }
+\]
+so $B$ is \emph{holomorphic} (KLM $\mu$-additivity), and a holomorphic $c{=}8$ chiral net is the lattice net of
+the \emph{unique} even-unimodular rank-$8$ lattice --- hence $\boxed{B\cong(E_8)_1}$ (the same-$c$ rival
+$SO(16)_1$, $\mu{=}4$, is excluded). Every algebraic ingredient is machine-checked: the $\mathbb C[\Z_4]$ Longo
+Q-system (\veri{v125\_glue\_qsystem.py}), the $\Z_4$-graded Frobenius $E_8$ hull (\veri{v143\_graded\_frobenius.py}),
+the Ramond glue sectors (\veri{v148\_fock\_census.py}). \textbf{Consequence:} $G_{\mathrm{net}}$ is internally
+\emph{closed} if the seam--Calder\'on boundary net is \emph{defined} to be $A$; it stays the \emph{one} external
+identification ``the RP seam--Calder\'on net is $A$'' if the boundary net is to be \emph{derived} from the seam
+kernel. Either way this is the single strict-TOE certification theorem still carrying weight --- a clean
+extension statement, not ``find a quantum gravity''.
+\smallskip\\
+\noindent\textbf{And that one identification reduces to a single shared premise (\veri{v155\_quasifree\_boundary.py}).}
+The identification splits (\vref{v110}) into (a) ``the seam Calder\'on involution is sheet-odd'' --- the
+double-cover deck, the same $|\Z_2|$ that halves $\cthree=\tfrac1{2\cdot4\pi}$ (structural) --- and (b) ``the
+seam $2$-point kernel is quasi-free''. Part~(b) is \emph{not independent}: the boundary marginal of a
+reflection-positive \emph{Gaussian} bulk is the compression $P\Gamma P$ of the bulk covariance, and the
+compression of a contraction ($i\Gamma$ with spectrum in $[-1,1]$) is a contraction --- so the boundary/seam
+state is automatically quasi-free, with Wick inherited (every boundary correlator a Pfaffian of $\Gamma_d$).
+Hence (b) \emph{follows} from ``the seam bulk is a reflection-positive free field'' --- the \emph{same}
+premise already load-bearing in the area law (\veri{v59\_area\_law\_evidence.py}) and the EH mechanism
+(\veri{v150\_replica\_eh\_model.py}/\veri{v151\_bfk\_split.py}). \textbf{So the entire seam-side residual is one
+physical premise} --- the seam bulk is a free RP field --- shared by $G_{\mathrm{net}}$, the area law and R3,
+and given it the chain Gaussian bulk $\Rightarrow$ quasi-free boundary $\Rightarrow$ one kernel $=$ net
+(\vref{v113}) $\Rightarrow$ carrier $A\Rightarrow(E_8)_1$ is exact. It is not reducible by a finite computation
+--- it is the one place TFPT meets functional analysis.
+\end{keybox}
+
+\begin{keybox}[The No-Unit Theorem --- $v_{\mathrm{geo}}$ is an irreducible metrology primitive \mE/\mO\ (\veri{v153\_no\_unit\_theorem.py})]
+$v_{\mathrm{geo}}$ is not an open gap. Every load-bearing compiler datum --- $\gcar,|\mu_4|,\Nfam,\operatorname{rank}E_8,
+\alpha^{-1}$, the determinant ladder $(3,4,8,20)$, $\cthree=\tfrac1{8\pi}$, $\phiz$ --- is mass-dimension $0$ and
+\emph{invariant} under a unit rescaling $L\mapsto\lambda L$, whereas a mass / energy / $1/G$ carries nonzero
+dimension. A map from dimension-$0$ inputs to a dimension-$d{\neq}0$ output is simultaneously invariant and
+covariant: impossible unless the unit is introduced. \textbf{So a dimensionless boundary compiler provably
+cannot select an absolute scale} --- $v_{\mathrm{geo}}$ is a \emph{forced input}. The three apparent residuals
+then collapse onto the one unit, differing only in mass-dimension:
+\[
+  U_{\mathrm{point}}\sim v_{\mathrm{geo}},\qquad \tfrac1G\sim v_{\mathrm{geo}}^2,\qquad m/\mu=e^{3/4}\ \text{(a pure ratio)},
+\]
+so the irreducibles stay exactly $\{$one dimensionful unit, $\pi\}$. \emph{Re-typing:} $v_{\mathrm{geo}}$ is an
+\emph{irreducible metrology primitive} (a declared unit, like choosing a metre), not a missing derivation.
+\end{keybox}
+
 \begin{keybox}[Theorem G --- the closure statement \mO\ (target)]
 The relative spectral boundary kernel over the diffeomorphism-quotiented metric sector admits a
 regulator-independent, reflection-positive projective-limit measure $\mu_{\mathrm{QG}}$. Its Ward
