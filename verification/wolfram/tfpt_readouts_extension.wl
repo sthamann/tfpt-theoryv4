@@ -1450,6 +1450,19 @@ Module[{fields, pre, u1, su2, su3, b1, b2, b3, fermIdx, scalIdx},
     10 b1 == 5*2^(5 - 2) + 1 && 10 fermIdx == 40 && 10 scalIdx == 1];
 ];
 
+(* ---- (v168) QGEO rigidity: mu4 square cross-ratio, mu4 characters = A3 exponents ---- *)
+Module[{mu4, cross, zz, eig, qspec},
+  mu4 = {1, I, -1, -I};
+  cross = Simplify[(mu4[[1]] - mu4[[3]]) (mu4[[2]] - mu4[[4]]) /
+                   ((mu4[[1]] - mu4[[4]]) (mu4[[2]] - mu4[[3]])) ];
+  (* omega_k = z^{k-1}/(z^4-1); pullback z->i z eigenvalue should be i^k *)
+  eig = Table[Simplify[ ((I zz)^(k - 1)/((I zz)^4 - 1)) I / (zz^(k - 1)/(zz^4 - 1)) ],
+              {k, 1, 3}];
+  qspec = Sort[Eigenvalues[{{3, 0, 0}, {0, 2, 0}, {0, 2, 1}}]];
+  checkExact["v168 QGEO rigidity: mu4={1,i,-1,-i} cross-ratio 2; omega_k=z^{k-1}dz/(z^4-1) (k=1,2,3) are mu4-eigenforms with character i^k = chi_1,chi_2,chi_3; Spec(Q+)={1,2,3}=A3 exponents (b1=N_fam=3)",
+    cross == 2 && eig === {I, -1, -I} && qspec === {1, 2, 3}];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v159: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v168: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

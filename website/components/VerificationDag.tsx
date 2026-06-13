@@ -283,6 +283,7 @@ const NODES: DagNode[] = [
       "v164_qcd_scale.py",
       "v165_premise_a_closure.py",
       "v166_higgs_free_seam.py",
+      "v168_qgeo_rigidity.py",
     ],
   },
   {
@@ -336,6 +337,7 @@ const NODES: DagNode[] = [
       "v104_nariai_clock.py",
       "v105_residual_inventory.py",
       "v107_quantum_clock_target.py",
+      "v169_etaB_boltzmann_interface.py",
     ],
   },
 

@@ -107,6 +107,17 @@ Hodge realisation. \emph{Machine: the group presentation and $D_4$-action are fi
 (Sage/Wolfram).}
 \end{lemma}
 
+\noindent\textbf{Finite rigidity --- now proven \mE.} The finite half of U0 is closed exactly:
+$\mu_4$ has cross-ratio $2$ and M\"obius stabiliser $\langle z\mapsto iz,\,z\mapsto1/z\rangle$ of
+order $8=|D_4|$ (a $4$-cycle of the marks $+$ a reflection, faithful); $H^1(\PP\setminus\mu_4)$ has
+rank $4-1=\Nfam=3$; and the forms $\omega_k=z^{k-1}dz/(z^4-1)$, $k=1,2,3$, are $\mu_4$-eigenforms
+($z\mapsto iz:\ \omega_k\mapsto i^k\omega_k$) carrying the three nontrivial characters
+$\chi_1,\chi_2,\chi_3$ with weights $(1,2,3)=\operatorname{Spec}(Q_+)$. Hence a genus-zero boundary
+with faithful $D_4$, four parabolic marks and this $\mu_4$-decomposition is M\"obius-equivalent to
+$\PP\setminus\mu_4$ with the $(1,2,3)$ grading (\texttt{QGEO.RIGID.01}, \mE,
+\veri{v168\_qgeo\_rigidity.py}). The single residual is the seam-side \emph{realisation} --- that
+these hypotheses follow from the seam collar itself --- which stays \texttt{QGEO.REALIZE.01} (\mC).
+
 \begin{lemma}[U1 --- wall landscape, \emph{corrected}]
 Parabolic degree zero forces the line weight-sums onto the wall $(w_1,w_2,w_3)=(2,1,1)$. An explicit
 balanced representative (weights in $\tfrac13$) is

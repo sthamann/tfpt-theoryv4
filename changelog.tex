@@ -59,6 +59,32 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-13 (QGEO rigidity theorem v168 + $\eta_B$ leptogenesis interface v169)}
+\begin{itemize}
+\item \textbf{\texttt{v168\_qgeo\_rigidity.py} \mE/\mC{} (claims \texttt{QGEO.RIGID.01},
+  \texttt{QGEO.REALIZE.01}).} Hardens the \emph{finite} half of the one remaining Tier-1 hinge
+  \texttt{GATE.QGEO} (the seam $=$ flavour $=$ horizon identification). Exact, machine-checked:
+  $\mu_4=\{1,i,-1,-i\}$ has cross-ratio $2$ and a faithful M\"obius stabiliser of order $8=|D_4|$;
+  $H^1(\mathbb P^1\!\setminus\!\mu_4)$ has rank $4-1=N_{\mathrm{fam}}=3$; and the forms
+  $\omega_k=z^{k-1}dz/(z^4-1)$ ($k=1,2,3$) are $\mu_4$-eigenforms with characters
+  $\chi_1,\chi_2,\chi_3$ of weights $(1,2,3)=$ A$_3$ exponents $=\operatorname{Spec}(Q_+)$. So a
+  genus-0 boundary with faithful $D_4$, four parabolic marks and this $\mu_4$-decomposition is
+  M\"obius-equivalent to $\mathbb P^1\!\setminus\!\mu_4$ --- the QGEO Rigidity Theorem
+  (\texttt{QGEO.RIGID.01}, \mE). The seam-collar realisation stays the one premise
+  (\texttt{QGEO.REALIZE.01}, \mC). Mirrored in the Wolfram extension (226/226). Cited in
+  \texttt{tfpt\_research\_contracts} (U0). \emph{Not} a new structural class --- it hardens the
+  existing hinge (consistent with v167's completeness claim).
+\item \textbf{\texttt{v169\_etaB\_boltzmann\_interface.py} \mC{} (claim \texttt{FR.ETAB.02}).}
+  Operationalises the Tier-3 $F_{\mathrm{transfer}}$ leptogenesis path. Type-I thermal
+  leptogenesis $\eta_B\sim0.96\times10^{-2}\varepsilon_1\kappa_f$ (sphaleron $28/79$), fed by
+  TFPT's normal-ordered neutrino spectrum and the predicted $\delta_{CP}=240^\circ$. Over natural
+  $M_1\in[3\times10^9,3\times10^{10}]$ GeV and washout, $\eta_B$ brackets the observed
+  $6.1\times10^{-10}$ (a canonical point gives $6.0\times10^{-10}$, untuned) --- the route is
+  \emph{viable}. But $M_1$/washout are scenario inputs, so $\eta_B$ stays \mC; if a precise solve
+  excluded the window the leptogenesis \emph{route} falls, not the theory (the downstream
+  $\Omega_b$ readout is independent). Cited in \texttt{tfpt\_4\_frontier} (Route B). Python-only.
+\end{itemize}
+
 \subsection*{2026-06-13 (Higgs quartic from the free seam: SM near-criticality explained, v166)}
 \begin{itemize}
 \item \textbf{\texttt{v166\_higgs\_free\_seam.py} \mE/\mC{} (claim \texttt{HIGGS.FREESEAM.01}).}
