@@ -270,7 +270,7 @@ export const papers: Paper[] = [
       },
       {
         title: "The electromagnetic fixed point",
-        body: "The fine-structure constant is the unique positive root of a parameter-free cubic built only from c₃, the abelian coefficient (Σ L + N_Φ = 41 = 10 b₁) and the exact seam generating function. Existence and uniqueness are proved; the value lands 1.9σ from CODATA-2022.",
+        body: "The fine-structure constant is the unique positive root of a parameter-free cubic built only from c₃, the abelian coefficient (Σ L + N_Φ = 41 = 10 b₁) and the exact seam generating function. Existence and uniqueness are proved; the value lands 1.9σ from CODATA-2022. The abelian coefficient is pinned three independent ways — carrier algebra 10 b₁ = g_car·2^(g_car−2)+1 = 41, the U(1) hypercharge index, and the external RGE generator PyR@TE 3, which reproduces β_g₁ = (41/10)g₁³ verbatim (v159) — so the EM input is not a free knob.",
         formulas: [
           "F_{U(1)}(\\alpha) = \\alpha^3 - 2c_3^3\\,\\alpha^2 - \\tfrac{4}{5}c_3^6\\Big(\\textstyle\\sum_{f,j}L_{f,j} + N_\\Phi\\Big)\\log\\tfrac{1}{\\varphi_{\\mathrm{seam}}(\\alpha)} = 0",
           "\\alpha^{-1} = 137.035\\,999\\,216\\,8\\ldots",
@@ -384,7 +384,7 @@ export const papers: Paper[] = [
       },
       {
         title: "Quark ratios from the same word-lengths",
-        body: "The quark mass ratios are pure integer Plücker readouts on the derived selector stratum — no transcendental solve. The absolute amplitude reduces to one overall scale v_geo (ratios + Grand Mass Volume), the same dimensionful anchor as gravity's 1/G. The remaining ℤ₃ deck choice is since derived: the integer deck pairs the Q₊=1 line with the self-conjugate character 2, so the geometric boundary deck is the sheet-twisted class and the cusp exponential is excluded (v141) — GATE.QGEO keeps only its realisation premise, with no discrete freedom left — and that premise sits at its floor: the full Möbius D₄ of the seam curve matches the integer model parity by parity (ι = T_A exactly, δι = Σ; v146).",
+        body: "The quark mass ratios are pure integer Plücker readouts on the derived selector stratum — no transcendental solve. The absolute amplitude reduces to one overall scale v_geo (ratios + Grand Mass Volume), the same dimensionful anchor as gravity's 1/G. The remaining ℤ₃ deck choice is since derived: the integer deck pairs the Q₊=1 line with the self-conjugate character 2, so the geometric boundary deck is the sheet-twisted class and the cusp exponential is excluded (v141) — GATE.QGEO keeps only its realisation premise, with no discrete freedom left — and that premise sits at its floor: the full Möbius D₄ of the seam curve matches the integer model parity by parity (ι = T_A exactly, δι = Σ; v146). The finite rigidity is now proven exactly [E]: μ₄ has cross-ratio 2 and a faithful Möbius D₄ stabiliser, H¹(ℙ¹∖μ₄) has rank N_fam = 3, and the eigenforms ω_k carry the μ₄ characters of weights (1,2,3) = the A₃ exponents = Spec(Q₊) — so only the seam-collar realisation stays open (v168).",
         formulas: [
           "\\frac{c_u}{c_d} = \\frac{g_{\\mathrm{car}}\\cdot 11}{N_{\\mathrm{fam}}^2\\,\\Delta_Q} = \\frac{55}{117}, \\quad \\frac{c_c}{c_s} = \\frac{34}{47}, \\quad \\frac{c_t}{c_b} = \\frac{3}{26}",
           "\\hat m_t/\\hat m_b = \\tfrac{3}{26}(\\varphi_0)^{-2} = 40.81",
@@ -586,7 +586,7 @@ export const papers: Paper[] = [
     number: 4,
     slug: "frontier",
     title: "Frontier Items",
-    subtitle: "η_B, m_p/m_e, Koide, dark matter and quantum gravity — honest status",
+    subtitle: "η_B, the Higgs quartic, m_p/m_e, Koide, dark matter and quantum gravity — honest status",
     abstract:
       "The honest frontier: which physics has a genuine TFPT handle and which does not. For each of η_B, m_p/m_e, the Koide relation, dark matter and full quantum gravity, this note states the genuine structural handle, the precision it currently lands at, and — crucially — what is not a clean compiler power and is deliberately not forced onto the ladder. This document is the status authority for the frontier items.",
     status: "frontier",
@@ -609,11 +609,20 @@ export const papers: Paper[] = [
     ],
     sections: [
       {
-        title: "Baryon asymmetry η_B — downstream readout",
-        body: "From the closed baryon fraction Ω_b = (4π − 1)β_rad, the asymmetry follows as a cosmological readout. As a fundamental compiler power it is not closed — the leptogenesis Boltzmann solve is not carried out.",
+        title: "Baryon asymmetry η_B — downstream readout + viable transfer route",
+        body: "From the closed baryon fraction Ω_b = (4π − 1)β_rad, the asymmetry follows as a cosmological readout. The fundamental leptogenesis route is now operationalised as a falsifiable interface (v169): fed by TFPT's normal-ordered neutrino spectrum and the predicted δ_CP = 240°, the thermal-leptogenesis estimate η_B ~ 0.96×10⁻²·ε₁·κ_f brackets the observed 6.1×10⁻¹⁰ over natural M₁ ∈ [3×10⁹, 3×10¹⁰] GeV and washout (a canonical point M₁ = 10¹⁰ GeV gives 6.0×10⁻¹⁰, untuned) — so the route is viable. But M₁ and the washout are scenario inputs, so η_B stays [C]: if a precise Boltzmann solve excluded the window the route falls, not the theory (the downstream Ω_b readout is independent).",
         formulas: [
           "\\Omega_b = (4\\pi - 1)\\beta_{\\mathrm{rad}} = 0.04894, \\qquad \\Omega_b h^2 = 0.0222",
           "\\eta_B = 6.09\\times 10^{-10} \\quad (\\text{observed } 6.1\\times 10^{-10})",
+          "\\eta_B \\sim 0.96\\times 10^{-2}\\,\\varepsilon_1\\,\\kappa_f, \\qquad \\varepsilon_1 = \\tfrac{3}{16\\pi}\\tfrac{M_1 m_3}{v^2}",
+        ],
+      },
+      {
+        title: "Higgs quartic — near-criticality from the free seam",
+        body: "The seam UV is the free chiral c=8 fixed point, so the one marginal SM scalar coupling vanishes there: λ(M_seam) = 0 and β_λ(M_seam) = 0 — the Shaposhnikov–Wetterich double criticality, here derived from the free seam, not assumed. Running the PyR@TE-confirmed two-loop SM RGEs from M_Z up with the measured (m_H, m_t) gives λ(M̄_Pl) ≈ 0.002 with β_λ ≈ 0 — the celebrated Standard-Model near-criticality, now explained as a consequence of the free seam. The double condition predicts m_H ≈ 129–134 GeV (measured 125.25 sits a few GeV below, the known slight metastability); the same condition at the scalaron scale gives ≈107 GeV (too low), so the boundary condition lives at the Planck scale — consistent with seam = horizon = Planck (v166).",
+        formulas: [
+          "\\lambda(M_{\\mathrm{seam}}) = 0, \\qquad \\beta_\\lambda(M_{\\mathrm{seam}}) = 0 \\ \\text{(free seam)}",
+          "\\lambda(\\bar M_{\\mathrm{Pl}}) \\approx 0.002, \\qquad m_H \\approx 129\\text{–}134\\ \\mathrm{GeV}",
         ],
       },
       {
