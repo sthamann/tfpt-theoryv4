@@ -84,6 +84,29 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
   2d boundary-CFT question). Mirrored in the Wolfram extension; suite now 159 modules.
 \end{itemize}
 
+\subsection*{2026-06-13 (premise A as a conditional fixed-point theorem; the load relocates to one scope premise, \vref{v160})}
+\begin{itemize}
+\item \textbf{New module \texttt{v160\_seam\_gaussianity\_from\_pf.py} \mE/\mO.} Formalises the proposed
+  closure of premise~(A) (``the seam bulk is a reflection-positive free field'') as a fixed-point theorem
+  and types it honestly. The \emph{exact} parts: (1) a quasi-free state has \emph{all} higher connected
+  cumulants $\kappa_{2n}{=}0$ --- verified by the \emph{signed} set-partition/Pfaffian moment$\leftrightarrow$%
+  cumulant inversion on a concrete pure Majorana covariance (the \vref{v113} ``one kernel $=$ net'' property
+  at the cumulant level); (2) a kernel-preserving transport fixes the whole quasi-free state by Wick
+  functoriality; (3) the Perron--Frobenius dichotomy (a \emph{fixed} $\kappa_{2n}$ is a second fixed ray
+  $\Rightarrow$ breaks uniqueness; a \emph{non-fixed} one decays by the gap) forces Gaussianity; (4) the
+  qualitative claim needs only $\mathrm{gap}{>}0$, the value $(2/3)^6$ only sets the rate. \textbf{The
+  honest residual:} \vref{v56}'s gapped PF uniqueness lives on the \emph{three-dimensional} scalar transfer
+  spectrum $\{1,(2/3)^6,(1/3)^6\}$, while the $16$-Majorana seam already carries $\binom{16}{4}{=}1820$ and
+  $\binom{16}{6}{=}8008$ higher-cumulant directions --- so (A) reduces to the single internal, exact-testable
+  statement ``the admissible TFPT seam transport is primitive $+$ spectrally gapped on the \emph{full}
+  Schwinger cone, not only the readout spectrum of \vref{v56}'', which the suite does \emph{not} yet
+  establish (ledger \texttt{GATE.METRIC.16}). Python-only (numpy $+$ stdlib); no new exact-identity content
+  for the Wolfram mirror.
+\item \textbf{Bookkeeping.} Suite at $160$ modules, all green; Wolfram extension unchanged at $224/224$
+  (\vref{v160} is numerical, Python-only); \texttt{tfpt\_research\_contracts} (the premise-A keybox) and
+  \texttt{next.txt} moved together.
+\end{itemize}
+
 \subsection*{2026-06-13 (changelog date-order audit + reorder pass)}
 \begin{itemize}
 \item \textbf{Changelog sort enforced.} \texttt{audit\_sync.py} now checks that every

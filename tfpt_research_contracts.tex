@@ -943,6 +943,25 @@ chiral $c{=}8$ fixed point is \emph{isolated and stable} against all interaction
 reduces to a \emph{basin-of-attraction} statement with a proven stable target --- the gapped
 ($\Delta{=}6\log\tfrac32$) flow lands here; the convergence is conformal-perturbation analysis, the
 destination is settled.
+\smallskip\\
+\noindent\textbf{And the closure can be stated as one fixed-point theorem --- which relocates (A) to a
+single internal premise (\veri{v160\_seam\_gaussianity\_from\_pf.py}).} Phrase the argument internally:
+(i) a quasi-free state has \emph{all} higher connected cumulants $\kappa_{2n}{=}0$ (the signed
+set-partition/Pfaffian inversion of $\langle\psi_1\cdots\psi_{2n}\rangle=\operatorname{Pf}(\Gamma)$ leaves
+only the degree-$2$ kernel --- the \vref{v113} ``one kernel $=$ the net'' property at the cumulant level);
+(ii) a kernel-preserving transport fixes the whole quasi-free state by Wick functoriality; (iii) a gapped
+primitive Perron--Frobenius transport has a \emph{unique} fixed ray, so a non-Gaussian piece is impossible
+--- if $\kappa_{2n}$ were fixed it would be a \emph{second} fixed ray (killing uniqueness), and if not
+fixed it sits in the gapped complement and decays to $0$ (any gap $>0$ suffices; the value $(2/3)^6$ only
+sets the rate). \emph{The honest residual:} \vref{v56}'s gapped PF uniqueness is established on the
+\emph{three-dimensional} scalar transfer spectrum $\{1,(2/3)^6,(1/3)^6\}$ (the flavour gap / horizon
+Page-recovery rates), whereas the $16$-Majorana seam state already carries $\binom{16}{4}{=}1820$ and
+$\binom{16}{6}{=}8008$ higher-cumulant directions --- the Schwinger cone the transport must contract has
+dimension $\gg3$, and uniqueness must hold there (not merely on the quasi-free sub-cone) for the argument
+to be non-circular. \textbf{So (A) is equivalent to one strictly smaller, internal, exact-testable
+statement:} the admissible TFPT seam transport is a \emph{primitive, spectrally gapped, RP-cone-preserving}
+map on the \emph{full} Schwinger cone, not only on the scalar readout spectrum of \vref{v56} --- which the
+suite does \emph{not} yet establish \mE/\mO.
 \end{keybox}
 
 \begin{keybox}[The No-Unit Theorem --- $v_{\mathrm{geo}}$ is an irreducible metrology primitive \mE/\mO\ (\veri{v153\_no\_unit\_theorem.py})]

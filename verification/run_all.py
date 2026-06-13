@@ -167,6 +167,7 @@ MODULES = [
     ("v157_rigid_fixed_point", "freeness as the RIGID holomorphic c=8 boundary fixed point: universal DtN |k| + no (1,1) marginal + |Z2| triple role; reframes premise (A)"),
     ("v158_fixed_point_stable", "exact operator-dimension count: the free chiral c=8 fixed point is stable (no relevant deformation, quartics irrelevant); the finite core of (A)"),
     ("v159_pyrate_gauge_crosscheck", "F_transfer gauge inputs: the carrier content gives (b1,b2,b3)=(41/10,-19/6,-7); 10 b1 = g_car 2^{g_car-2}+1 = 41; PyR@TE 3 (external) reproduces beta_g{1,2,3} verbatim"),
+    ("v160_seam_gaussianity_from_pf", "seam Gaussianity as a CONDITIONAL fixed-point theorem: quasi-free => all higher connected cumulants vanish (signed Pfaffian inversion), Wick functoriality => the quasi-free state is a transport fixed point, the PF dichotomy forces it; the load is the SCOPE premise that v56's gap acts on the full Schwinger cone (dim >> 3), not only the 3-level scalar readout"),
 
 ]
 
