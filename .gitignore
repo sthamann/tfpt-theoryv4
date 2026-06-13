@@ -29,5 +29,8 @@ list.txt
 experiments/older_tests/befund*
 alessandro*.html
 
+# Local problem / working notes (not shipped)
+problem_*
+
 # Local secrets (Zenodo token, etc.)
 .env
