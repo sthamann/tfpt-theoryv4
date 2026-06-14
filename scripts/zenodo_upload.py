@@ -6,7 +6,7 @@ updates description from zenodo_description.html, and optionally publishes.
 
 Environment:
   ZENODO_TOKEN   Personal access token (deposit:write + deposit:actions)
-  ZENODO_RECORD  Latest published record id (default: 20681451)
+  ZENODO_RECORD  Latest published record id (default: 20686284)
 
 Usage:
   python3 scripts/zenodo_upload.py --dry-run
@@ -36,7 +36,7 @@ from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_RECORD_ID = "20681451"  # 5.1 (rev 105), published 2026-06-13; DOI 10.5281/zenodo.20681451
+DEFAULT_RECORD_ID = "20686284"  # 5.1 (rev 114), published 2026-06-14; DOI 10.5281/zenodo.20686284
 ZENODO_API = "https://zenodo.org/api"
 REPO_URL = "https://github.com/sthamann/tfpt-theoryv4"
 
