@@ -53,6 +53,56 @@ any time with `python scripts/fetch_data.py`.
   *sequence*) cannot be run. A repeater RM/PA time series (e.g. FRB 20201124A,
   FRB 20190520B) would activate `rm_staircase` / `pa_angle_classes` directly.
 
+## `frb20121102_fast_li2021_1652.tsv` — FAST 1652-burst FRB 20121102A
+
+- 1652 bursts of FRB 20121102A from a single FAST campaign, **with per-burst
+  energy** (erg), plus MJD, DM, width, bandwidth, peak flux, fluence.
+- Source: **Li et al. 2021, Nature 598, 267** (VizieR `J/other/Nat/598.267`,
+  table s1). Same source ⇒ energy is distance-independent.
+- Enables the real **FRB.02** session-aware echo test and the energy spacing
+  ladder (the 144-burst Aggarwal set was too thin).
+
+## `FAST_FRB20240114A_pol_catalog*.csv` — FAST polarimetry of FRB 20240114A
+
+- **6134 bursts** of the hyper-active repeater FRB 20240114A with per-burst
+  `MJD_topo, RM, DM, Weff, Bandwidth, S/N, DOL (=L/I), DOC (=V/I), PA_mean`,
+  spanning 488 days / 95 nights; RM evolves smoothly from ~330 to ~230 rad/m²
+  (span ~213). **Activates FRB.04** (PA/RM Markov spectrum) and `rm_staircase`.
+- Source: **Wang et al. 2026, FAST Polarization Catalog of FRB 20240114A**
+  (arXiv:2603.20663; ScienceDB DOI `10.57760/sciencedb.Fastro.00040`,
+  CC BY-NC-ND). User-supplied (ScienceDB requires a free login, see audit below).
+- Three files were provided; `load_fast_20240114A_pol` prefers
+  `..._v5.csv` (cleanest header + full-precision MJD), then the base CSV, then
+  `..._v4.csv` (has an extra index column).
+
+## Drop-in repeater catalogue still pending
+
+- `frb20240619D_wideband.tsv` — **FRB 20240619D** wideband burst table
+  (1539 bursts; arXiv:2505.08372). Needs columns `MJD, fluence, DM, RM,
+  freq_low/high`. Drop in `data/` (aliases in `data_io._COL_ALIASES`) to activate
+  the RM-memory / session-decay / frequency-window stress tests.
+
+## Data-acquisition audit (2026-06)
+
+The **FAST FRB 20240114A polarisation catalog** is on ScienceDB and **login-walled**
+for anonymous download (now resolved: user supplied the CSVs after a free login).
+For the record, the blocked anonymous routes (all verified):
+
+- ScienceDB DOI `10.57760/sciencedb.Fastro.00040`, dataset id
+  `3fe21485a0b84f328f63a5ca8807b3e5` (6 files, 3.31 MB).
+- arXiv source `2603.20663` = LaTeX + figures only, no CSV; DataCite metadata has
+  no `contentUrl`; Croissant / JSON-LD exports are client-side JS (return the SPA
+  shell); the ScienceDB file-tree API returns `User Not Login` **even from the
+  page's own origin with cookies**; the open `download.scidb.cn/download?fileId=…`
+  endpoint works but the 6 file ids are not exposed anonymously.
+- Path used: a free ScienceDB account → download the CSVs. (Authors are also
+  reachable: wangpei@nao.cas.cn, gaohe@bnu.edu.cn, zhuww@nao.cas.cn.)
+
+**Non-login alternatives found but insufficient** (not bundled): `SukiYume/RMS`
+(FRB 20201124A RM, ~23+9 bursts, single-epoch, RM≈const, no MJD); FRB 20190520B
+(Anna-Thomas; code-only on Zenodo, RM table in paywalled Science supplement);
+FRB 20240619D (journal/CDS supplement, absent from the arXiv source).
+
 ## Curated (in code, with citations): periodic-repeater activity windows
 
 `activity_windows.PERIODIC_REPEATERS` encodes the only two robustly periodic

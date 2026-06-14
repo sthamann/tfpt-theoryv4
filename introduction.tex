@@ -191,6 +191,25 @@ is \texttt{QGEO.SYM.01} (the carrier $\mu_4$ clock is the seam's conformal deck,
 tripartition $4=2{+}1{+}1$, of which $c_3$ and $\gcar$ are the two elementary readouts. ``Two inputs''
 (the working axioms) and ``one postulate'' (the geometric bedrock) are the same statement at two layers.
 \par\smallskip
+\noindent\emph{One source, four readings (the cleanest origin).} The four-point seam divisor $\mu_4$ on
+$\PP^1$ generates the whole discrete skeleton by four canonical functors:
+\[
+  \underbrace{\cthree=\tfrac1{8\pi}}_{\text{thermal}}
+  \quad
+  \underbrace{\operatorname{rank}H_1(\PP^1\!\setminus\!\mu_4)=3=\Nfam}_{\text{cycles}\to A_3}
+  \quad
+  \underbrace{h^0(\PP^1,\mathcal O(\mu_4))=5=\gcar}_{\text{functions}\to D_5}
+\]
+\vspace{-3mm}
+\[
+  \underbrace{(D_5)_1\otimes(A_3)_1\rtimes\mu_4\cong(E_8)_1}_{\text{net}}
+\]
+and the function side even generates $D_5$ itself (\veri{v197\_rr\_carrier\_clifford\_d5.py}):
+$\Lambda^{\mathrm{even}}(\mathbb C^5)=\binom50+\binom52+\binom54=16=\dim S^+$, the $\mathfrak{so}(10)=D_5$
+half-spinor. So $\mu_4$ is not merely glue: it is the \emph{common source} of $A_3$, $D_5$, $\cthree$ and
+$E_8$ (\veri{v189\_riemann\_roch\_carrier.py}) --- the arithmetic is exact \mE, the physical reading of the
+carrier as the seam mode space stays \mC.
+\par\smallskip
 \noindent\textbf{What $E_8$ is (and is not).} In TFPT $E_8$ is \emph{not} an unbroken physical gauge group:
 it is the unimodular \emph{audit / compiler hull} that classifies the admissible discrete charge and
 residue structures. The Standard Model is a \emph{readout} after projection, not a direct $E_8$ gauge

@@ -59,6 +59,29 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-14 (work packages A+B: attacking $\omega\circ\rho=\omega$ + the variational scan --- v199, v200)}
+\begin{itemize}
+\item \textbf{\texttt{v199\_seam\_state\_invariance.py} \mE/\mO\ (claim \texttt{QGEO.STATE.01}, work package A).}
+  Attacking $\omega\circ\rho=\omega$ directly on the \emph{raw} seam. (1) \mE\ the setup is non-circular:
+  $\rho$ is the Coxeter element of $W(A_3)=S_4$ ($\rho^4=1$, \vref{v117}), an automorphism of the raw CAR
+  algebra (16 Majoranas) --- both carrier-side, no seam geometry. (2) \mE\ for a quasi-free RP state
+  $C_\Sigma=\tfrac12(1{+}\operatorname{sgn}H_1)$, so $\omega\circ\rho=\omega\Leftrightarrow[\rho,H_1]=0$.
+  (3) \mE\ $[\rho,H_1]=0\Leftrightarrow H_1$ is block-diagonal in the four $\mu_4$-character classes
+  $\{n{=}r\bmod4\}$ (verified). (4) \mO\ the residual is sharpened to ``the bounded sub-principal symbol has
+  no off-character matrix elements'' --- a bounded, finite-character condition, not a diffuse geometry; not
+  a closure. Cited in \texttt{tfpt\_research\_contracts}; Wolfram-mirrored.
+\item \textbf{\texttt{v200\_seam\_variational\_scan.py} \mC/\mO\ (claim \texttt{QGEO.VARI.02}, work package B).}
+  The discretised variational test: with the clock angle free, $E_{\mathrm{fail}}(\theta)$ has its unique
+  minimum at $\theta=\pi/2$ (the $\mu_4$ clock $z\mapsto iz$) --- order-4 \emph{and} the three distinct
+  characters $i,-1,-i$ = the $(1,2,3)$ grading; decoys ($0,\pi,\pi/3,2\pi/3$) all lose. A numerical sign
+  that the variational principle selects $\mu_4$; the full operator-valued minimisation stays the
+  \vref{v199} residual \mO. Cited in \texttt{tfpt\_research\_contracts}.
+\item \emph{Also (this pass, \texttt{experiments/} only, not the ledger): the $F_{\mathrm{transfer}}$
+  four-pipeline scaffold (\texttt{experiments/ftransfer/}) with one CONTRACT per interface, and confirmation
+  that the FRB preregistration (\texttt{frb\_tfpt\_v1.yaml}) and its status semantics already exist.}
+  Suite now 199 modules, highest ID \texttt{v200}; Wolfram extension $241/241$.
+\end{itemize}
+
 \subsection*{2026-06-14 (cracking the bedrock to a state-invariance: principal symbol $+$ Tomita--Takesaki --- v198)}
 \begin{itemize}
 \item \textbf{\texttt{v198\_modular\_commutator\_reduction.py} \mO\ (claim \texttt{QGEO.MODULAR.01}).} The
