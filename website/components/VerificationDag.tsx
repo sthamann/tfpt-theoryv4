@@ -310,6 +310,7 @@ const NODES: DagNode[] = [
       "v195_marks_lefschetz_character.py",
       "v196_seam_energy_functional.py",
       "v197_rr_carrier_clifford_d5.py",
+      "v198_modular_commutator_reduction.py",
     ],
   },
   {

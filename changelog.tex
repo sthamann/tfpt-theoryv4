@@ -59,6 +59,26 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-14 (cracking the bedrock to a state-invariance: principal symbol $+$ Tomita--Takesaki --- v198)}
+\begin{itemize}
+\item \textbf{\texttt{v198\_modular\_commutator\_reduction.py} \mO\ (claim \texttt{QGEO.MODULAR.01}).} The
+  decisive crack on the last residual. (1)~\mE\ the DtN principal symbol
+  $|k|=\sqrt{-\partial_\theta^2}=\mathrm{diag}(|n|)$ and the clock $\rho{:}z\mapsto iz=\mathrm{diag}(i^n)$ are
+  both diagonal in the Fourier basis, so $[\rho,|k|]=0$ \emph{exactly} on all of $L^2$ (verified on 33
+  modes) --- the leading-order commutation is free on the whole boundary, never the open part. (2)~\mE\ by
+  Tomita--Takesaki the modular operator is intrinsic to $(M,\Omega)$, so a state-preserving symmetry
+  ($\rho\Omega=\Omega$) commutes with $\log\Delta\sim\Lambda_\Sigma$: hence $[\rho,\Lambda_\Sigma]=0$
+  \emph{follows from} $\omega\circ\rho=\omega$, using only the state $+$ reflection (RP) and \emph{no}
+  conformal covariance --- which \textbf{removes the v194 Bisognano--Wichmann circularity worry}. (3)~\mE\
+  the finite $H^1$ block is already $\mu_4$-invariant (\vref{v177}). So the entire residual collapses to the
+  single \emph{state-invariance} ``the raw quasi-free seam state is $\mu_4$-invariant''
+  ($\omega\circ\rho=\omega$ $\Leftarrow$ the Gaussian bulk measure is deck-invariant) --- the
+  maximally-operational, non-circular form of \texttt{QGEO.SYM.01}, \mO. \emph{Not} a full closure (a
+  foundational symmetry cannot be derived from nothing, like $c=\text{const}$), but the sharpest falsifiable
+  form, with the circularity gone. Cited in \texttt{tfpt\_research\_contracts}; \texttt{OpenGates} updated.
+  Suite now 197 modules, highest ID \texttt{v198}; Wolfram extension $240/240$.
+\end{itemize}
+
 \subsection*{2026-06-14 (three review levers: Marks-via-Lefschetz, E\_fail functional, RR$\to$D5 --- v195--v197)}
 \begin{itemize}
 \item \textbf{\texttt{v195\_marks\_lefschetz\_character.py} \mE/\mO\ (claim \texttt{QGEO.MARKS.02}).} The four

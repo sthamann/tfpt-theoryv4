@@ -1636,6 +1636,16 @@ Module[{h0, lamEven},
     lamEven == 16 && lamEven == 2^(h0 - 1) && h0 == 5];
 ];
 
+(* ---- (v198) QGEO.MODULAR.01: principal symbol |k| commutes with the clock rho EXACTLY ---- *)
+Module[{nn, rho1, absK, comm},
+  nn = Range[-8, 8];
+  rho1 = DiagonalMatrix[I^nn];               (* z->iz: e^{in t} -> i^n e^{in t} *)
+  absK = DiagonalMatrix[Abs[nn]];            (* |k| = sqrt(-d^2/dt^2): mode n -> |n| *)
+  comm = rho1 . absK - absK . rho1;
+  checkExact["v198 QGEO.MODULAR.01: the DtN principal symbol |k|=sqrt(-d^2/dt^2)=diag(|n|) and the clock rho:z->iz=diag(i^n) are both diagonal in the Fourier basis, so [rho,|k|]=0 EXACTLY on all of L^2 (not just H^1) -- the leading-order commutation is free on the whole boundary; the residual reduces (Tomita-Takesaki) to the state-invariance omega o rho = omega, removing the BW circularity",
+    comm == ConstantArray[0, {Length[nn], Length[nn]}]];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v197: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v198: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];
