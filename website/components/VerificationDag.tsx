@@ -291,6 +291,7 @@ const NODES: DagNode[] = [
       "v175_net_existence_full_cone.py",
       "v176_seam_collar_realisation.py",
       "v177_seam_marking_kernel.py",
+      "v178_marks_kernel_attempt.py",
     ],
   },
   {
