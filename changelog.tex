@@ -59,6 +59,26 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-14 (the two obligations collapse to ONE geometric premise v179)}
+\begin{itemize}
+\item \textbf{\texttt{v179\_conformal\_realisation.py} \mE/\mO\ (claim \texttt{QGEO.CONF.01}).}
+  Investigating the two residual premises left by \vref{v178} shows they are \emph{not} independent ---
+  they collapse onto a single geometric premise (honest unification; the premise itself stays \mO).
+  \textsc{Marks}'s residual is not three independent assumptions: (1)~genus-$0$ \emph{is} P1 --- the
+  one-sided Gauss--Bonnet $c_3=1/(|\Z_2|\,2\pi\,\chi(S^2))=1/(8\pi)$ uses $\chi(S^2)=2$ and
+  $\chi=2-2g\Rightarrow g=0$, so ``genus-$0$'' is the same $\chi=2$ that gives the ``$8$'' in $c_3$
+  (\vref{v58}/\vref{v73}); (2)~the order-$4$ clock \emph{is} the carrier --- the Coxeter element of
+  $W(A_3)=S_4$ (\vref{v117}), order $h(A_3)=4=|\mu_4|$; (3)~marks $=$ one orbit is \emph{forced} (the
+  parabolic marks are not the two elliptic fixed points, a free order-$4$ orbit has exactly $4=e_1(a)$
+  points). \textsc{Kernel} then \emph{follows} from the same geometry (DtN symbol $|k|$, Lee--Uhlmann
+  \vref{v156}; $c=8$ rigidity \vref{v158}; the cusped-surface residual $=H^1=\mathbb C^3=\Nfam$). So
+  the \emph{entire} structural residual of the theory is the \emph{single} geometric premise
+  \texttt{QGEO.CONF.01}: ``the raw RP seam normal double is conformally $(\PP,\mu_4)$ with the carrier
+  clock as the order-$4$ M\"obius automorphism''. The two doors of \vref{v177}/\vref{v178} are one
+  geometric realisation, left honestly \mO. Cited in \texttt{tfpt\_research\_contracts}; Python-only.
+  Suite now 179 modules.
+\end{itemize}
+
 \subsection*{2026-06-14 (an honest attempt at the two obligations v178 --- deeper reduction, not closure)}
 \begin{itemize}
 \item \textbf{\texttt{v178\_marks\_kernel\_attempt.py} \mE/\mO\ (claim \texttt{QGEO.REDUCE.01}).} An
