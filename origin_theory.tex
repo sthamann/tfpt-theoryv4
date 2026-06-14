@@ -96,6 +96,12 @@ carrier is the $\mathfrak{so}(10)$ half-spinor). Reading the carrier as this mer
 (at most simple poles on $\mu_4$) is geometrically natural \mE\ in its arithmetic, though the physical
 identification stays \mC\ and does not displace the over-determined $\gcar=5$ (Pascal/bootstrap/Lean)
 \veri{v189\_riemann\_roch\_carrier.py}.
+\par\smallskip
+\noindent\emph{And the function side generates $D_5$ itself, not just $\gcar$.} The even Clifford algebra of
+the $5$-dimensional mode space closes the chain $\mu_4\to\gcar\to D_5$: $\Lambda^{\mathrm{even}}(C_{\mathrm{car}})
+=\binom50+\binom52+\binom54=1+10+5=16=2^{\gcar-1}=\dim S^+$, which is exactly the $\mathfrak{so}(10)=D_5$
+half-spinor. So the carrier is not merely ``rank $5$ like $D_5$'' --- it \emph{is} the Clifford spinor of the
+Riemann--Roch mode space \mE, with the physical identification again \mC\ \veri{v197\_rr\_carrier\_clifford\_d5.py}.
 
 \begin{keybox}[The $(5,3)$ generator and the Pythagorean mass volume \mE\ (\veri{v53\_compiler\_core.py})]
 By sum, difference and halving,

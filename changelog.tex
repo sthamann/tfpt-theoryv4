@@ -59,6 +59,31 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-14 (three review levers: Marks-via-Lefschetz, E\_fail functional, RR$\to$D5 --- v195--v197)}
+\begin{itemize}
+\item \textbf{\texttt{v195\_marks\_lefschetz\_character.py} \mE/\mO\ (claim \texttt{QGEO.MARKS.02}).} The four
+  seam marks are \emph{forced} (not posited): $\rho{:}z\mapsto iz$ fixes only $\{0,\infty\}$, $H^1=
+  \chi_1{\oplus}\chi_2{\oplus}\chi_3$ (the $A_3$ exponents, $\operatorname{Tr}(\rho|H^1)=i{+}i^2{+}i^3={-}1$)
+  has no trivial component $\Rightarrow$ no puncture at a fixed point, and $\operatorname{rank}H^1=n{-}1=3
+  \Rightarrow n=4 \Rightarrow$ a single free $\mu_4$ orbit (cross-ratio $2$). So \textsc{Marks} reduces from
+  the geometric posit ``$D_4$ marks'' to the milder premise ``$H^1$ carries the $A_3$-exponent rep'' ---
+  less circular, still \mO. Cited in \texttt{tfpt\_research\_contracts}.
+\item \textbf{\texttt{v196\_seam\_energy\_functional.py} \mE/\mO\ (claim \texttt{QGEO.VARI.01}).} The
+  failure functional $E_{\mathrm{fail}}=\|[\rho,\Lambda_\Sigma]\|^2_{HS}+\|\rho^4{-}1\|^2+\|\Theta\rho\Theta-\rho^{-1}\|^2$,
+  zero locus $=$ the \texttt{QGEO.SYM.01} conditions; on the finite $H^1$ block it vanishes at the $\mu_4$
+  config \mE\ and is $>0$ for any $\mu_4$-breaking perturbation, so $\mu_4$ is a true minimiser. The
+  full-operator minimisation is the \vref{v194} Bisognano--Wichmann residual --- a concrete discretisable
+  \emph{target} on the open bedrock, \mO. Cited in \texttt{tfpt\_research\_contracts}.
+\item \textbf{\texttt{v197\_rr\_carrier\_clifford\_d5.py} \mE/\mC\ (claim \texttt{ARCH.RRCAR.02}).} Hardens
+  the Riemann--Roch carrier from $g_{\mathrm{car}}$ to $D_5$ itself: $\Lambda^{\mathrm{even}}(C_{\mathrm{car}})
+  =\binom50{+}\binom52{+}\binom54=16=2^{g_{\mathrm{car}}-1}=\dim S^+$, the $\mathfrak{so}(10)=D_5$
+  half-spinor --- so $D_5$ is the Clifford spinor of the $5$-dim mode space, closing $\mu_4{\to}g_{\mathrm{car}}{\to}D_5$.
+  \mE\ arithmetic, \mC\ identification (as \vref{v189}). Cited in \texttt{origin\_theory}.
+\item All three are validated external-review levers (the axion-hilltop ``$\pi-3\phi_0$'' proposal was
+  \emph{rejected} as a $\pi\approx3$ coincidence, not built). Suite now 196 modules, highest ID
+  \texttt{v197}; Wolfram extension $239/239$.
+\end{itemize}
+
 \subsection*{2026-06-14 (subclaim 2 of ENERGY.02 tackled: raw-seam-DtN RP-definability --- v194)}
 \begin{itemize}
 \item \textbf{\texttt{v194\_raw\_seam\_dtn\_rp.py} \mO\ (claim \texttt{QGEO.DTN.01}).} The next hard lever ---

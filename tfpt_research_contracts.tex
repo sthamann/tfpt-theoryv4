@@ -186,6 +186,17 @@ operators}, not merely isospectral; the ``spectrum vs operator'' distinction \em
 finite block. So \textsc{Kernel} reduces to the \emph{single} premise ``the full DtN on $L^2$ reduces
 to this $3$-dim gapped transfer block $+$ the fixed rank-$8$ polarisation'' (principal symbol $|k|$,
 Lee--Uhlmann \vref{v156}; no drift \vref{v158}). The two doors are thereby \emph{milder}, but still open.
+\par\smallskip\noindent\textbf{\textsc{Marks} without a geometric posit: a Lefschetz/character argument
+(\veri{v195\_marks\_lefschetz\_character.py}).} The marks need not be \emph{assumed} as $D_4$ boundary
+points: they follow from the $H^1$ character alone. The order-$4$ clock $\rho{:}z\mapsto iz$ fixes exactly
+$\{0,\infty\}$, so a puncture at a fixed point would contribute a \emph{trivial} character to $H^1$; but the
+carrier datum is $H^1=\chi_1\oplus\chi_2\oplus\chi_3$ (the $A_3$ exponents $(1,2,3)$, with
+$\operatorname{Tr}(\rho|H^1)=i+i^2+i^3=-1$), which has \emph{no} trivial component --- so no puncture sits
+at a fixed point. With $\operatorname{rank}H^1=n-1=3\Rightarrow n=4$ punctures, all off the fixed locus and
+each in a free order-$4$ orbit, the only possibility is a \emph{single} free $\mu_4$ orbit (cross-ratio $2$),
+and the closed-surface Lefschetz number $L(\rho)=1+1=2=|\{0,\infty\}|$ is consistent. So \textsc{Marks}
+reduces from the geometric posit ``$D_4$ marks'' to the milder \emph{representation} premise ``the raw seam
+$H^1$ carries the $A_3$-exponent rep'' --- a carrier-algebra statement, strictly less circular, still \mO.
 \par\smallskip\noindent\textbf{And the two doors are in fact ONE
 (\veri{v179\_conformal\_realisation.py}).} \textsc{Marks}'s residual is not even three independent
 assumptions: (1)~genus-$0$ \emph{is} P1 --- the one-sided Gauss--Bonnet $c_3=1/(|\Z_2|\,2\pi\,\chi(S^2))
@@ -273,6 +284,15 @@ state's modular flow is \emph{geometric} (Bisognano--Wichmann). So the bedrock \
 definitional postulate to ``intrinsic BW geometric modular covariance of the quasi-free seam state'' --- a
 named, standard (hard) AQFT property, one notch sharper, but still \mO\ (and the BW step must be established
 \emph{intrinsically}, else it re-presupposes the conformal covariance it should produce).
+\par\smallskip\noindent\textbf{A concrete variational handle on the residual (\veri{v196\_seam\_energy\_functional.py}).}
+The open BW statement can be made a discretisable extremum problem via the failure functional
+$E_{\mathrm{fail}}(\Sigma,\rho)=\|[\rho,\Lambda_\Sigma]\|_{HS}^2+\|\rho^4-1\|^2+\|\Theta\rho\Theta-\rho^{-1}\|^2$,
+whose zero locus is exactly the \texttt{QGEO.SYM.01} conditions (the energy commutator, the order-$4$ clock,
+and the RP-reflection twist). On the finite $H^1$ block $E_{\mathrm{fail}}=0$ at the $\mu_4$ configuration
+($\rho=\mathrm{diag}(i,-1,-i)$, $\Lambda$ $\mu_4$-equivariant, $\Theta=$ conjugation) and $>0$ for any
+$\mu_4$-breaking perturbation, so $\mu_4$ is a genuine minimiser \mE; minimising $E_{\mathrm{fail}}$ over
+the \emph{full} raw-seam DtN is precisely the BW residual above. So the bedrock is now a sharply-posed
+\emph{variational target}, not a bare definition --- but still \mO.
 \end{keybox}
 
 \begin{figure}[t]

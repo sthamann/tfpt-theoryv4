@@ -307,6 +307,9 @@ const NODES: DagNode[] = [
       "v192_qgeo_energy_clock.py",
       "v193_qgeo_energy_commutator.py",
       "v194_raw_seam_dtn_rp.py",
+      "v195_marks_lefschetz_character.py",
+      "v196_seam_energy_functional.py",
+      "v197_rr_carrier_clifford_d5.py",
     ],
   },
   {

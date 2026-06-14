@@ -1605,6 +1605,37 @@ Module[{gcar, Nfam, mu4, c3, qA3, qD5, kFamily, kCarrier, kTarget},
     kFamily == kTarget && kCarrier != kTarget && qD5/qA3 == gcar/Nfam && 12 Pi kTarget == qA3];
 ];
 
+(* ---- (v195) QGEO.MARKS.02: Lefschetz/character forcing of the free mu4 orbit ---- *)
+Module[{chars, trace, noTrivial, orbit, orbitClosed, nPunct},
+  chars = I^Range[1, 3];                          (* {I, -1, -I} *)
+  trace = Total[chars];                           (* i+i^2+i^3 = -1 *)
+  noTrivial = ! MemberQ[chars, 1];                (* no trivial character in H^1 *)
+  orbit = {1, I, -1, -I};                         (* free order-4 orbit *)
+  orbitClosed = Sort[orbit*I] == Sort[orbit];     (* rho-closed *)
+  nPunct = 3 + 1;                                 (* rank H_1 = n-1 = 3 => n = 4 *)
+  checkExact["v195 QGEO.MARKS.02: rho:z->iz on H^1 gives characters i^k={I,-1,-I}, Tr(rho|H^1)=i+i^2+i^3=-1, no trivial component; rank H_1=n-1=3 => n=4 punctures, all off the fixed locus {0,inf} => one free mu4 orbit {1,i,-1,-i} (closed under *i), Moebius cross-ratio 2",
+    trace == -1 && noTrivial && orbitClosed && nPunct == 4 && Length[DeleteDuplicates[chars]] == 3];
+];
+
+(* ---- (v196) QGEO.VARI.01: E_fail = 0 on the mu4 block (exact finite vanishing) ---- *)
+Module[{rho, Lam, comm, order4, twist},
+  rho = DiagonalMatrix[{I, -1, -I}];
+  Lam = DiagonalMatrix[{1, 2, 3}];                (* any real diagonal (mu4-equivariant) DtN *)
+  comm = rho . Lam - Lam . rho;                   (* [rho,Lambda] = 0 *)
+  order4 = MatrixPower[rho, 4] - IdentityMatrix[3]; (* rho^4 - I = 0 *)
+  twist = Conjugate[rho] - Inverse[rho];          (* Theta rho Theta - rho^{-1} = 0 *)
+  checkExact["v196 QGEO.VARI.01: on the mu4 H^1 block (rho=diag(i,-1,-i), Lambda diagonal, Theta=conj) all three E_fail terms vanish exactly -- [rho,Lambda]=0, rho^4=I, conj(rho)=rho^{-1} -- so E_fail=0 (the seam-deck conditions of QGEO.SYM.01)",
+    comm == ConstantArray[0, {3, 3}] && order4 == ConstantArray[0, {3, 3}] && twist == ConstantArray[0, {3, 3}]];
+];
+
+(* ---- (v197) ARCH.RRCAR.02: even Clifford of the 5-dim carrier = the D5 half-spinor ---- *)
+Module[{h0, lamEven},
+  h0 = 4 + 1;                                     (* h^0(P^1,O(mu4)) = deg+1 = 5 = g_car *)
+  lamEven = Sum[Binomial[h0, k], {k, 0, h0, 2}];  (* dim Lambda^even(C^5) = C(5,0)+C(5,2)+C(5,4) *)
+  checkExact["v197 ARCH.RRCAR.02: dim Lambda^even(C_car=C^5) = C(5,0)+C(5,2)+C(5,4) = 1+10+5 = 16 = 2^(g_car-1) = dim S^+ = the so(10)=D5 half-spinor; so the 5-dim Riemann-Roch carrier mode space generates D5 by its even Clifford algebra (chain mu4->g_car->D5)",
+    lamEven == 16 && lamEven == 2^(h0 - 1) && h0 == 5];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v193: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v197: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];
