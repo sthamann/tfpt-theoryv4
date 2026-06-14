@@ -121,7 +121,7 @@ anchor (`1/G` is UV-sensitive, Sakharov-type induced gravity) — not a diffuse 
 
 | Item | What it is |
 |---|---|
-| `v1_*.py … v175_*.py` | 175 numbered claim checks (one file per claim cluster). |
+| `v1_*.py … v181_*.py` | 181 numbered claim checks (one file per claim cluster). |
 | `run_all.py` | Runs the whole suite; ends `ALL CHECKS PASSED`. |
 | `tfpt_constants.py` | Shared constants + `check()` harness. |
 | `predictions_frozen.json` | **Blind-prediction registry** (frozen 2026-06-09): every dimensionless prediction of record at 25 digits, locked to its formula by `v84_frozen_registry.py` on every run; exactly one `θ12` prediction of record (seed `0.306747`), `r`/`n_s` only as `N_star` bands. |
@@ -233,21 +233,32 @@ The ledger is *append-only and versioned*: superseded rows are marked `active=fa
   `2¹⁶=65536`-dim Fock space), and net existence is an assembled, verified `(E8)₁` certificate
   (character `1+248q+4124q²+…`, embedding `248=120+128`, `E8` Cartan even unimodular) — so net
   existence and full-cone RP are `[E]`, and the single open structural premise is the seam-collar
-  realisation `QGEO.REALIZE.01` (its finite half — cross-ratio 2, faithful Möbius `D4`, `b₁=N_fam=3`,
-  characters = `A3` exponents — is proven exactly, `v168`).
+  realisation (its finite half — cross-ratio 2, faithful Möbius `D4`, `b₁=N_fam=3`,
+  characters = `A3` exponents — is proven exactly, `v168`). That residual is then driven to **bedrock**
+  (`v176`–`v181`): assembled as one central theorem (`v176`), split into the marks + kernel
+  obligations whose finite cores close (`v177`/`v178`), unified into one conformal-realisation premise
+  (`v179`), and reduced — via uniformisation, Kerékjártó and the order-4 Möbius classification — to a
+  seam-*isometry* premise (`v180`) and finally to the strictly weaker conformal-*symmetry* / deck
+  premise `QGEO.SYM.01` (`v181`): *the carrier `μ₄` clock is the conformal deck of the seam*. Below
+  that the residual is **definitional** (the seam's conformal structure *is* the `μ₄`-deck structure of
+  the carrier), not a missing theorem — the single irreducible structural residual of the whole theory.
 - **Absolute amplitude normalisation** (`U_point`) — an anchor; the quark *ratios* are closed.
 - **Frontier interfaces** (`m_p/m_e`, `η_B`, Koide, axion relic) — deliberately typed as
   interfaces, never quoted as compiler outputs.
 
-The remaining distance is therefore not a list but **one geometric identification** (the seam-collar
-realisation `QGEO.REALIZE.01` — net existence and full-cone RP are now `[E]`, `v175`) plus **one declared
-metrology unit**. The central theorem now reads as a clean simple-current extension,
-`(D₅)₁⊗(A₃)₁ ⋊ ⟨(1,1)⟩ ≅ (E₈)₁` (index 4, c = 8, μ = 1 ⇒ holomorphic ⇒ E₈, `v154`), and `v_geo` is an
-*irreducible metrology primitive* by the No-Unit Theorem (`v153`): a dimensionless boundary compiler
-provably cannot produce an absolute scale, so `U_point ~ v_geo`, `1/G ~ v_geo²` and `m/μ = e^{3/4}` are
-one unit in three readings — the only irreducibles are `v_geo` and `π`. That geometric realisation is
-not closeable by a finite computation; it is the one item that needs a human constructive-QFT/geometry
-argument (or a proof assistant).
+The remaining distance is therefore not a list but **one definitional geometric premise**
+(`QGEO.SYM.01`, `v181`: *the carrier `μ₄` clock is the conformal deck of the seam* — net existence and
+full-cone RP are `[E]`, `v175`, and the conformal/isometry layers reduce to it via uniformisation +
+Kerékjártó) plus **one declared metrology unit**. The central theorem reads as a clean simple-current
+extension, `(D₅)₁⊗(A₃)₁ ⋊ ⟨(1,1)⟩ ≅ (E₈)₁` (index 4, c = 8, μ = 1 ⇒ holomorphic ⇒ E₈, `v154`), and
+`v_geo` is an *irreducible metrology primitive* by the No-Unit Theorem (`v153`): a dimensionless
+boundary compiler provably cannot produce an absolute scale, so `U_point ~ v_geo`, `1/G ~ v_geo²` and
+`m/μ = e^{3/4}` are one unit in three readings — the only irreducibles are `v_geo` and `π`. Likewise the
+two axioms `{c₃, g_car}` are not free knobs: they reduce to the single parabolic anchor `a = (1,1,2)`
+plus `π` (`v23`), with `g_car = 5` an over-determined bootstrap fixed point (forced three ways `v6`,
+Pascal-unique and Lean-formalised). The bedrock premise is not closeable by a finite computation; it is
+the one item that needs a human constructive-geometry argument (or a proof assistant). A development
+timeline of all `181` scripts is in `introduction.tex` (and on the website verification page).
 
 ---
 
