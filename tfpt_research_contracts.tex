@@ -148,13 +148,29 @@ the rank-$8$ $K_\Sigma$ polarisation, and the index-$4$ simple-current extension
   holomorphic $\Rightarrow(E_8)_1$ ($248=120{+}128$); full-cone RP holds for all $m$ via the CAR
   second-quantisation functor.
 \end{enumerate}
-\noindent\textbf{The one open premise \mO\ (\texttt{QGEO.REALIZE.01}).} The theorem reduces to
-\emph{exactly one} structural input: that the \emph{physical} seam collar's conformal boundary
-\emph{is} this $\PP\setminus\mu_4$ --- i.e.\ hypotheses (1),(4),(5) follow from the seam construction
-(P1) itself. This is a constructive-geometry/AQFT statement, \emph{not} a finite computation; the
-five other steps are \mE, so \textbf{the whole structural residual of the theory is this single
-realisation premise}, left honestly open (it needs a human constructive-QFT/geometry argument or a
-proof assistant, not more arithmetic).
+\noindent\textbf{The proof tree --- and the \emph{two} genuine open doors \mO\
+(\veri{v177\_seam\_marking\_kernel.py}).} Taking the marks/$D_4$ as a \emph{hypothesis} (as the
+six-step form above does) is a near-circular trap; the honest decomposition factors the theorem as
+\[
+  \textsc{Realize}=\textsc{Marks}\cdot\textsc{Uniform}\cdot\textsc{Cohom}\cdot\textsc{Module}\cdot
+  \textsc{Kernel}\cdot\textsc{Net},
+\]
+of which \emph{four nodes are now closed constructively}: \textsc{Uniform} \mE\ (an order-$4$
+M\"obius map conjugates to $z\mapsto iz$, a non-fixed orbit scales to $\mu_4$, and
+$\sigma\rho\sigma=\rho^{-1}$ for $\sigma:z\mapsto1/z$ gives a faithful $D_4$ --- so a genus-$0$
+four-marked faithful-$D_4$ boundary \emph{is} $(\PP,\mu_4)$, strengthening \vref{v168}'s cross-ratio
+to the full uniformisation); \textsc{Cohom} \mE\ ($\rho^*\omega_k=i^k\omega_k$, grading
+$(1,2,3)$); \textsc{Module} \mE\ (a \emph{unique} $\mu_4$-equivariant iso --- multiplicity-free $+$
+residue normalisation, reflection $\omega_1\!\leftrightarrow\!\omega_3$, $\omega_2$ fixed); and
+\textsc{Net} \mE\ (\vref{v154}/\vref{v175}). The residual is therefore \emph{exactly two} named
+obligations, neither a finite computation: \textbf{\texttt{QGEO.MARKS.01}} --- the \emph{raw} RP seam
+collar canonically produces the genus-$0$ four-parabolic-marked $D_4$ boundary (the four marks from
+the anchor atom $e_1(a){=}4{=}|\mu_4|$, collisions excluded, $\tau\rho\tau{=}\rho^{-1}$) --- and
+\textbf{\texttt{QGEO.KERNEL.01}} --- the \emph{raw} seam Calder\'on operator equals the
+$\mu_4$-equivariant free $c{=}8$ gapped one-particle contraction \emph{as an operator}
+($C_\Sigma=U^{-1}C_{\mu_4}U$), not merely the same spectral list. \textbf{The whole structural
+residual of the theory is these two doors}; everything between them is \mE. They need a human
+constructive-geometry/AQFT argument (or a proof assistant), not more arithmetic.
 \end{keybox}
 
 \begin{lemma}[U1 --- wall landscape, \emph{corrected}]

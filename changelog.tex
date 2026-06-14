@@ -59,6 +59,31 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-14 (QGEO proof tree v177 --- the residual sharpened into two named obligations)}
+\begin{itemize}
+\item \textbf{\texttt{v177\_seam\_marking\_kernel.py} \mE/\mO\ (claims \texttt{QGEO.TREE.01},
+  \texttt{QGEO.MARKS.01}, \texttt{QGEO.KERNEL.01}).} A second external residual-class audit pointed
+  out that the \vref{v176} statement takes the marks/$D_4$ as a \emph{hypothesis} --- a near-circular
+  trap. This module factors the central theorem honestly as
+  $\textsc{Realize}=\textsc{Marks}\cdot\textsc{Uniform}\cdot\textsc{Cohom}\cdot\textsc{Module}\cdot
+  \textsc{Kernel}\cdot\textsc{Net}$ and closes \emph{four} nodes \emph{constructively} (all validated
+  symbolically before adoption): \textsc{Uniform} \mE\ --- an order-$4$ M\"obius map conjugates to
+  $z\mapsto iz$, a non-fixed orbit scales to $\mu_4$, and $\sigma\rho\sigma=\rho^{-1}$ for
+  $\sigma:z\mapsto1/z$ gives a faithful $D_4$ (order $8$), so a genus-$0$ four-marked faithful-$D_4$
+  boundary \emph{is} $(\PP,\mu_4)$ (strengthening \vref{v168}'s cross-ratio to the full
+  uniformisation); \textsc{Cohom} \mE\ --- $\rho^*\omega_k=i^k\omega_k$, grading $(1,2,3)=A_3$
+  exponents; \textsc{Module} \mE\ --- a \emph{unique} $\mu_4$-equivariant iso (multiplicity-free $+$
+  residue normalisation; reflection $\omega_1\!\leftrightarrow\!\omega_3$, $\omega_2$ fixed);
+  \textsc{Net} \mE\ (\vref{v154}/\vref{v175}). The structural residual is thereby sharpened from one
+  diffuse premise into \emph{exactly two} named open obligations, neither a finite computation:
+  \texttt{QGEO.MARKS.01} (the raw RP seam collar canonically produces the genus-$0$ four-marked $D_4$
+  boundary) and \texttt{QGEO.KERNEL.01} (the raw seam Calder\'on operator \emph{is} the
+  $\mu_4$-equivariant free gapped contraction, as an operator). Cited in
+  \texttt{tfpt\_research\_contracts} (the central-theorem keybox); Python-only (M\"obius/cohomology
+  symbolic; numbers mirrored via \vref{v168}/\vref{v137}/\vref{v162}/\vref{v154}/\vref{v175}). Suite
+  now 177 modules.
+\end{itemize}
+
 \subsection*{2026-06-13 (Seam Collar Realisation Theorem v176 --- the one central proof obligation)}
 \begin{itemize}
 \item \textbf{\texttt{v176\_seam\_collar\_realisation.py} \mE/\mO\ (claim \texttt{QGEO.REALIZE.02}).}
