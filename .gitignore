@@ -38,3 +38,6 @@ verification/pyrate/*.generated.txt
 
 # Local secrets (Zenodo token, etc.)
 .env
+
+# Local scratch / explanations (not part of the published record)
+temp/
