@@ -306,6 +306,7 @@ const NODES: DagNode[] = [
       "v191_universal_branch_line.py",
       "v192_qgeo_energy_clock.py",
       "v193_qgeo_energy_commutator.py",
+      "v194_raw_seam_dtn_rp.py",
     ],
   },
   {
