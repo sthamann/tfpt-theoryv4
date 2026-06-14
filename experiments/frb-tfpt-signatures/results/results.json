@@ -1,0 +1,577 @@
+{
+  "firewall": "search targets, not claims",
+  "kernel_frozen": true,
+  "search_targets": {
+    "FRB05_baryon": {
+      "adb84d": {
+        "source": "Localized FRBs (ApJ adb84d, full DM budget)",
+        "n": 36,
+        "omega_b_fit": 0.048323070683806264,
+        "omega_b_err": 0.007249241694059468,
+        "omega_b_tfpt": 0.048940662665450115,
+        "omega_b_planck": 0.0493,
+        "tension_tfpt_sigma": 0.08519401169227782,
+        "c_baryon": 0.9963775670837225,
+        "note": "Omega_b(FRB) = 0.0483 +/- 0.0072 (syst-dominated; stat 0.0001); TFPT 0.0489 at 0.1 sigma; Planck 0.0493 at 0.1 sigma"
+      },
+      "sharma2024": {
+        "source": "Localized FRBs (Sharma+2024, DM_exc - host prior)",
+        "n": 117,
+        "omega_b_fit": 0.06629052923253374,
+        "omega_b_err": 0.010310187411597274,
+        "omega_b_tfpt": 0.048940662665450115,
+        "omega_b_planck": 0.0493,
+        "tension_tfpt_sigma": 1.6827886705112525,
+        "c_baryon": 0.2427097837858865,
+        "note": "Omega_b(FRB) = 0.0663 +/- 0.0103 (syst-dominated; stat 0.0027); TFPT 0.0489 at 1.7 sigma; Planck 0.0493 at 1.6 sigma"
+      }
+    },
+    "FRB03_activity_windows": {
+      "per_source": {
+        "matches": [
+          {
+            "name": "FRB 20180916B",
+            "period_d": 16.35,
+            "w_broad_over_p": 0.3058103975535168,
+            "broad_target": 0.2962962962962963,
+            "broad_rel_err": 0.032110091743119254,
+            "w_core_over_p": 0.03669724770642201,
+            "core_target": 0.037037037037037035,
+            "core_rel_err": 0.009174311926605581,
+            "reference": "CHIME/FRB Collab. 2020 (Nature 582, 351; arXiv:2001.10275): P=16.35+/-0.15 d, ~5 d activity window, ~50% within ~0.6 d"
+          },
+          {
+            "name": "FRB 20121102A",
+            "period_d": 157.0,
+            "w_broad_over_p": 0.5286624203821656,
+            "broad_target": 0.2962962962962963,
+            "broad_rel_err": 0.784235668789809,
+            "w_core_over_p": NaN,
+            "core_target": 0.037037037037037035,
+            "core_rel_err": NaN,
+            "reference": "Rajwade et al. 2020 (MNRAS 495, 3551): P~157 d, active duty cycle ~53% (=> W_broad ~ 0.53 P); no well-defined narrow core window"
+          }
+        ],
+        "c_window": 0.662044041905026,
+        "note": "2 periodic repeaters; 1 match W_broad/P~8/27 within 5%. n is too small for a population claim -- a candidate match, not evidence."
+      },
+      "population": {
+        "n_sources": 2,
+        "per_source": [
+          {
+            "name": "FRB 20180916B",
+            "broad_ratio": 0.3058103975535168,
+            "broad_ratio_err": 0.06122639431901619,
+            "broad_rel_err": 0.032110091743119254,
+            "core_ratio": 0.03669724770642201,
+            "core_rel_err": 0.009174311926605581
+          },
+          {
+            "name": "FRB 20121102A",
+            "broad_ratio": 0.5286624203821656,
+            "broad_ratio_err": 0.0984060383233353,
+            "broad_rel_err": 0.784235668789809,
+            "core_ratio": NaN,
+            "core_rel_err": NaN
+          }
+        ],
+        "median_broad_rel_err": 0.40817288026646414,
+        "n_broad_within_tol": 1,
+        "n_core_within_tol": 1,
+        "leave_one_out_stable": false,
+        "null_p": 0.11157768446310738,
+        "enough_sources": false,
+        "verdict": "candidate only: 1/2 broad matches but n=2 < 5 required periodic repeaters",
+        "c_window_population": 0.0
+      }
+    },
+    "FRB02_echo_ratio": {
+      "source": "FRB 20121102A (FAST, Li+2021, 1652 bursts)",
+      "n_bursts": 1652,
+      "n_pairs": 1611,
+      "n_sessions": 41,
+      "targets": {
+        "lambda2_energy": {
+          "ratio": 0.0877914951989026,
+          "enrichment": 0.7466865783087548,
+          "p": 0.9800099950024987,
+          "q": 1.0
+        },
+        "lambda2_energy^-1": {
+          "ratio": 11.390625,
+          "enrichment": 0.6761404040521793,
+          "p": 0.9945027486256871,
+          "q": 1.0
+        },
+        "lambda3_energy": {
+          "ratio": 0.0013717421124828531,
+          "enrichment": 0.0,
+          "p": 1.0,
+          "q": 1.0
+        },
+        "lambda3_energy^-1": {
+          "ratio": 729.0,
+          "enrichment": 0.0,
+          "p": 1.0,
+          "q": 1.0
+        },
+        "sqrt_lambda2_amp": {
+          "ratio": 0.2962962962962963,
+          "enrichment": 1.2460132226179295,
+          "p": 0.00399800099950025,
+          "q": 0.047976011994003
+        },
+        "sqrt_lambda2_amp^-1": {
+          "ratio": 3.375,
+          "enrichment": 0.9312027414608708,
+          "p": 0.8020989505247377,
+          "q": 1.0
+        },
+        "sqrt_lambda3_amp": {
+          "ratio": 0.037037037037037035,
+          "enrichment": 0.5359954440387257,
+          "p": 0.9870064967516242,
+          "q": 1.0
+        },
+        "sqrt_lambda3_amp^-1": {
+          "ratio": 27.0,
+          "enrichment": 0.6087456457776725,
+          "p": 0.9685157421289355,
+          "q": 1.0
+        },
+        "two_thirds_sub": {
+          "ratio": 0.6666666666666666,
+          "enrichment": 1.032251821057534,
+          "p": 0.2913543228385807,
+          "q": 1.0
+        },
+        "two_thirds_sub^-1": {
+          "ratio": 1.5,
+          "enrichment": 0.9521081530312138,
+          "p": 0.8225887056471765,
+          "q": 1.0
+        },
+        "one_third_sub": {
+          "ratio": 0.3333333333333333,
+          "enrichment": 1.1588800194497346,
+          "p": 0.026986506746626688,
+          "q": 0.16191904047976013
+        },
+        "one_third_sub^-1": {
+          "ratio": 3.0,
+          "enrichment": 0.915076080883008,
+          "p": 0.879560219890055,
+          "q": 1.0
+        }
+      },
+      "c_echo": 0.040479760119940145,
+      "verdict": "support: ['sqrt_lambda2_amp']"
+    },
+    "FRB04_markov_spectrum": {
+      "pa": {
+        "source": "FRB 20240114A (FAST pol, 6131 bursts)",
+        "channel": "pa",
+        "available": false,
+        "n": 0,
+        "eigs": [],
+        "kernel": [
+          0.0877914951989026,
+          0.0013717421124828531
+        ],
+        "distance": NaN,
+        "ci_contains_kernel": false,
+        "null_p": NaN,
+        "c_markov": 0.0,
+        "note": "data-limited: no repeater PA/RM sequence loaded"
+      },
+      "rm": {
+        "source": "FRB 20240114A (FAST pol, 6131 bursts)",
+        "channel": "rm",
+        "available": false,
+        "n": 0,
+        "eigs": [],
+        "kernel": [
+          0.0877914951989026,
+          0.0013717421124828531
+        ],
+        "distance": NaN,
+        "ci_contains_kernel": false,
+        "null_p": NaN,
+        "c_markov": 0.0,
+        "note": "data-limited: no repeater PA/RM sequence loaded"
+      }
+    },
+    "FRB01_dispersion": {
+      "available": false,
+      "a_tfpt": NaN,
+      "a_tfpt_err": NaN,
+      "consistent_with_zero": true,
+      "note": "raw_data_required: per-burst sub-band (nu, t) timing not available in catalogue data"
+    }
+  },
+  "generic": {
+    "fast_spacing_ladder": {
+      "n": 1652,
+      "best_k": 3,
+      "centers_log10": [
+        37.626534118817354,
+        37.75012109336353,
+        38.5197227929994
+      ],
+      "adjacent_spacings_dex": [
+        0.1235869745461784,
+        0.7696016996358708
+      ],
+      "best_candidate": "(3/2)^3=27/8",
+      "best_candidate_dex": 0.5282737771670437,
+      "match_rel_err": 0.7660550648397992,
+      "p_value": 0.0024937655860349127,
+      "c_ladder": 0.0,
+      "verdict": "3 clusters but no uniform kernel spacing (closest (3/2)^3=27/8 at 77%)"
+    },
+    "fast_energy_cluster": {
+      "source": "FRB20121102A FAST",
+      "lognormal": {
+        "n": 1652,
+        "mu": 37.96739224141244,
+        "sigma": 0.4901925095517201,
+        "ks_stat": 0.12630527153187288,
+        "ks_pvalue": 1.9697093467111743e-23
+      },
+      "gmm": {
+        "best_k": 3,
+        "delta_bic": 315.22334093183736,
+        "weights": [
+          0.2502065571889038,
+          0.42729750812057776,
+          0.3224959346905185
+        ],
+        "means_log10": [
+          37.626534118817354,
+          37.75012109336353,
+          38.5197227929994
+        ]
+      },
+      "logperiodic": {
+        "n": 1652,
+        "best_ratio": 6.0,
+        "best_freq": 1.2850972089384687,
+        "z_max": 58.16398873891196,
+        "p_value": 0.0024937655860349127,
+        "nearest": {
+          "name": "exp_delta_gap",
+          "value": 11.390625,
+          "provenance": "e^{6 ln 3/2} = (3/2)^6 transfer gap"
+        },
+        "nearest_rel_err": 0.4732510288065844
+      },
+      "c_e": 0.7375311720698254,
+      "verdict": "discrete log-periodic cascade (p=0.002, ratio 6.00~exp_delta_gap @ 47%)"
+    },
+    "shared_kernel": {
+      "source": "FRB 20121102A (FAST, Li+2021, 1652 bursts)",
+      "available": true,
+      "channels": [
+        {
+          "name": "log_energy",
+          "a": 0.34269206771008354,
+          "ci_lo": -0.04900930200119264,
+          "ci_hi": 0.04681096154455435,
+          "nearest_kernel": "step_1/3",
+          "nearest_value": 0.3333333333333333,
+          "ci_contains_kernel": false
+        },
+        {
+          "name": "log_waiting",
+          "a": -0.043145658487421114,
+          "ci_lo": -0.04720536190262293,
+          "ci_hi": 0.04701669961219076,
+          "nearest_kernel": "energy_64/729",
+          "nearest_value": 0.0877914951989026,
+          "ci_contains_kernel": false
+        }
+      ],
+      "shared_kernel": null,
+      "n_sharing": 0,
+      "c_shared": 0.0,
+      "verdict": "no shared kernel eigenvalue (max 0 channel); memory coefficients consistent with weak/no AR(1) recovery"
+    },
+    "chime_drift": {
+      "n_multi_component": 42,
+      "frac_downward": 0.7619047619047619,
+      "drift_rates": [
+        0.0,
+        -3.636400831549297,
+        -0.8696181281651557,
+        -1.1257554523357733,
+        3.592140818534725,
+        -11.656739489177765,
+        -2.442887059854488,
+        -0.8352320129359929,
+        -13.709221194728451,
+        0.8057660208891724,
+        -2.871460940571193,
+        0.9777257726872565,
+        -5.048333060972612,
+        -1.036122994198507e-14,
+        -8.641785303822946,
+        5.115720299771405,
+        -15.972778311002676,
+        -7.724761323741012,
+        -30.41632203496318,
+        -3.4043266428078702,
+        0.7985365826902296,
+        8.986369949017924,
+        -6.781050455925422,
+        -7.17418955931624,
+        -3.06082475138865,
+        -0.5057229742667497,
+        -7.657234079595159,
+        0.7387284650842373,
+        -3.030499327230915,
+        -1.9549612298256875,
+        -24.99583341126799,
+        -1.5672203232986819,
+        -1.8532989076389364e-14,
+        -8.025617350394139,
+        -7.113249446441004,
+        -1.8559890915729584,
+        -4.20857770764975,
+        -13.682857246123547,
+        1.1512446936278373,
+        2.759918726306646,
+        -0.5084429683852897,
+        -1.3002532887385554
+      ],
+      "discrete_best_k": 2,
+      "discrete_delta_bic": 5.707819098445221,
+      "c_nu": 0.19298543959647374,
+      "note": "42 multi-component bursts; signed-drift GMM best_k=2 (dBIC=5.7); downward 76% is the standard sad-trombone"
+    },
+    "frb20180916B_fold": {
+      "period_days": 16.33,
+      "rayleigh_z": 28.738665289385153,
+      "p_value": 0.0,
+      "note": "folded 33 bursts at 16.33 d"
+    },
+    "aggarwal_waiting": {
+      "n_intervals": 142,
+      "log10_seconds": [
+        1.7565206770729669,
+        0.9618974636453398,
+        -1.9142871455184385,
+        1.5375399697441083,
+        0.865651566781391,
+        1.8975169529281937,
+        -2.7310386118711367,
+        2.0040452574707355,
+        -1.7290297846144445,
+        2.2114097262433448,
+        1.4780705231804696,
+        -0.4858793152960222,
+        1.5422625544182618,
+        1.634864002404946,
+        1.908089225214083,
+        2.235803948528697,
+        -0.6714937737555589,
+        -2.237383624118592,
+        2.278799598350923,
+        1.7123934924816375,
+        2.652384439007406,
+        1.8937224655476068,
+        1.1587852858550465,
+        1.6874084351370167,
+        1.7517088256612685,
+        2.1341763114720393,
+        -1.9396436642442794,
+        -1.0158217007046033,
+        1.9872576422364174,
+        1.9094285550472785,
+        -0.17016824151609553,
+        2.1923829911706925,
+        2.3021052346428243,
+        2.3219798756773606,
+        0.6373385223569685,
+        1.5019778502934482,
+        2.105528888454446,
+        2.2999594923560465,
+        1.708432515726683,
+        -1.1345810665437157,
+        2.1500392031535465,
+        2.130491058340741,
+        1.8284401621096313,
+        1.1397588424119756,
+        2.27657455713383,
+        2.1643685806465083,
+        1.8309782369515173,
+        2.1262176415909977,
+        1.6688520021364577,
+        2.4687358166438624,
+        2.757651178368028,
+        -2.984375441443892,
+        1.3369308369559063,
+        -1.075373747624879,
+        -0.6090984579954223,
+        1.922017906732325,
+        1.628801792951995,
+        2.209069143023433,
+        2.4253893527671346,
+        2.485547428454054,
+        2.3101838106418024,
+        4.9068638364280845,
+        1.6867844067385367,
+        1.3120548218675274,
+        1.5306697441727042,
+        -1.991598801006042,
+        1.7049298306843326,
+        1.8264034463710483,
+        2.325786171166414,
+        1.4134467623713842,
+        1.1659600751236852,
+        1.8919551776215755,
+        1.5701407377739152,
+        1.981225539921632,
+        1.240892248031491,
+        1.7745917456200209,
+        1.504369072658694,
+        1.4609202469404834,
+        0.8346078760088114,
+        0.7988777202055796,
+        1.6621746822275894,
+        -0.24112198981728913,
+        1.4447753940725458,
+        1.308430882369198,
+        0.3164173262015364,
+        1.7018342704983505,
+        1.6804262587602068,
+        1.9920373242729716,
+        1.610564302266403,
+        1.871151045867945,
+        2.039729913146073,
+        0.5978720334787364,
+        1.050904527174985,
+        1.556024461604327,
+        -1.672550926322642,
+        2.131198715797867,
+        1.9346191329094033,
+        1.5839749535448373,
+        0.9498145448886854,
+        1.179196763881489,
+        -2.046472703377699,
+        1.7713685235168144,
+        1.17229209933121,
+        1.9646525195286144,
+        1.6700199563887095,
+        2.0312496299489347,
+        2.6951527153252015,
+        1.810295719666571,
+        2.010336165693561,
+        0.9375504597925517,
+        1.6633110199271348,
+        0.9701385159602558,
+        2.176976871016719,
+        1.5785001799857314,
+        1.6555117205098042,
+        2.4628288490336083,
+        2.0099211936227275,
+        2.0207435186495672,
+        1.833515881492798,
+        2.093749227380559,
+        1.2646261537379004,
+        -1.0031644619810867,
+        1.7274220965550608,
+        1.307282116126645,
+        2.3941731384874028,
+        2.0064591972734096,
+        1.690201725411145,
+        1.9141975716876367,
+        -2.297800954347376,
+        -2.1566253917956417,
+        2.248954728745045,
+        1.5892076862777782,
+        2.1116252880354964,
+        1.069467867785438,
+        1.4352377129289307,
+        1.7354322005752845,
+        1.9222616631427751,
+        1.3821770963539137,
+        2.228653025328504,
+        2.5410259905353896,
+        2.186059395262657,
+        1.4274395215541145
+      ],
+      "best_k": 3,
+      "delta_bic": 107.56697532625083,
+      "bimodal": true,
+      "note": "GMM best_k=3, dBIC=107.6"
+    }
+  },
+  "axes": [
+    {
+      "name": "FRB05_baryon",
+      "score": 0.9963775670837225,
+      "status": "consistency",
+      "p_value": null,
+      "q_value": null,
+      "discriminating": false,
+      "replicated": true,
+      "note": "Omega_b consistent; cannot discriminate TFPT vs Planck"
+    },
+    {
+      "name": "FRB03_activity_window",
+      "score": 0.662044041905026,
+      "status": "candidate",
+      "p_value": 0.11157768446310738,
+      "q_value": 0.11157768446310738,
+      "discriminating": true,
+      "replicated": false,
+      "note": "candidate only: 1/2 broad matches but n=2 < 5 required periodic repeaters"
+    },
+    {
+      "name": "FRB02_echo_ratio",
+      "score": 0.040479760119940145,
+      "status": "support",
+      "p_value": null,
+      "q_value": 0.047976011994003,
+      "discriminating": true,
+      "replicated": false,
+      "note": "support: ['sqrt_lambda2_amp']"
+    },
+    {
+      "name": "FRB04_polarisation",
+      "score": 0.0,
+      "status": "data_limited",
+      "p_value": NaN,
+      "q_value": NaN,
+      "discriminating": true,
+      "replicated": false,
+      "note": "data-limited: no repeater PA/RM sequence loaded"
+    },
+    {
+      "name": "FRB01_dispersion",
+      "score": 0.0,
+      "status": "data_limited",
+      "p_value": null,
+      "q_value": null,
+      "discriminating": false,
+      "replicated": false,
+      "note": "raw_data_required: per-burst sub-band (nu, t) timing not available in catalogue data"
+    }
+  ],
+  "overall": {
+    "verdict": "not_confirmed_not_refuted",
+    "support_axes": [],
+    "candidate_axes": [
+      "FRB03_activity_window"
+    ],
+    "null_axes": [],
+    "consistency_axes": [
+      "FRB05_baryon"
+    ],
+    "data_limited_axes": [
+      "FRB02_echo_ratio",
+      "FRB04_polarisation",
+      "FRB01_dispersion"
+    ]
+  }
+}

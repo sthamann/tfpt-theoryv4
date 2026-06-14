@@ -1,0 +1,127 @@
+Table 1 
+Properties of FRBs and Host Galaxies
+
+
+FRB Name	Redshift	DM	DM_exc	tau_exc	i	Offset	Area	${\rm{log}}(M/{M}_{\odot })$	SFR	${\rm{log}}({{\rm{sSFR}}/{\rm{yr}}}^{-1})$	References	Quality	
+		(pc cm^-3)	(pc cm^-3)	(ms)	(deg)	(kpc)	(kpc^2)		(M_sun yr^-1)				
+		(1)	(2)	(3)	(4)	(5)	(6)	(7)	(8)	(9)	(10)	(11)	
+20231229A	0.019	198.50	140.32	cdots	cdots	cdots	cdots	9.50 +or- 0.10	0.25 +or- 0.15	-10.11 +or- 0.36	(4)	1	
+20231230A	0.0298	131.40	69.82	cdots	27.23	8.15	cdots	9.57 +or- 0.04	0.54 +or- 0.34	-9.84 +or- 0.27	(4)	1, 43	
+20231206A	0.0659	457.70	398.56	cdots	69.84	cdots	144.38 +or- 0.45	10.56 +or- 0.07	8.19 +or- 2.90	-9.66 +or- 0.21	(0)	1	
+20230926A	0.0553	222.80	170.18	cdots	64.12	cdots	163.72 +or- 0.93	10.64 +or- 0.05	0.63 +or- 0.18	-10.83 +or- 0.14	(0)	1	
+20231223C	0.1059	165.80	117.93	cdots	30.94	cdots	201.92 +or- 1.24	10.54 +or- 0.06	1.07 +or- 0.43	-10.48 +or- 0.20	(4)	1	
+20231128A	0.1079	331.60	306.59	cdots	40.43	cdots	82.06 +or- 0.07	10.43 +or- 0.09	16.28 +or- 4.24	-9.21 +or- 0.18	(0)	1	
+20230703A	0.1184	291.30	264.37	cdots	36.57	cdots	68.16 +or- 0.07	10.12 +or- 0.09	3.25 +or- 1.20	-9.59 +or- 0.21	(0)	1	
+20230222B	0.11	187.80	160.07	cdots	22.47	cdots	180.55 +or- 1.03	10.37 +or- 0.08	1.81 +or- 0.57	-10.12 +or- 0.19	(0)	1	
+20231204A	0.0644	221.00	191.17	cdots	26.80	cdots	279.63 +or- 3.02	10.69 +or- 0.07	4.32 +or- 2.63	-10.04 +or- 0.29	(0)	1	
+20230222A	0.1223	706.10	571.90	cdots	35.56	cdots	45.98 +or- 0.81	10.16 +or- 0.17	13.16 +or- 8.34	-9.04 +or- 0.41	(0)	1	
+20231005A	0.0713	189.40	155.93	cdots	71.22	cdots	44.94 +or- 0.09	10.11 +or- 0.10	0.67 +or- 1.41	-10.32 +or- 1.54	(0)	1	
+20230203A	0.1464	420.10	383.84	cdots	62.50	cdots	158.26 +or- 0.35	10.63 +or- 0.10	5.24 +or- 3.49	-9.91 +or- 0.31	(0)	1	
+20231011A	0.0783	186.30	115.95	cdots	75.33	cdots	120.90 +or- 2.77	9.50 +or- 0.18	1.20 +or- 0.57	-9.42 +or- 0.39	(0)	1	
+20231017A	0.245	344.20	279.65	cdots	59.03	6.60	200.33 +or- 18.13	9.99 +or- 0.18	0.00 +or- 0.29	-12.94 +or- 5.76	(0)	1	
+20231201A	0.1119	169.40	99.45	cdots	37.47	cdots	159.35 +or- 13.04	9.44 +or- 0.18	0.75 +or- 0.34	-9.55 +or- 0.30	(0)	1	
+20231025B	0.3238	368.70	320.11	cdots	28.57	cdots	185.11 +or- 1.48	9.74 +or- 0.12	2.06 +or- 0.81	-9.43 +or- 0.24	(0)	1	
+20231123A	0.0729	302.10	212.35	cdots	34.33	cdots	71.32 +or- 1.71	9.56 +or- 0.24	0.83 +or- 0.76	-9.62 +or- 1.00	(0)	1	
+20230311A	0.1918	364.30	271.84	cdots	27.08	11.00	372.23 +or- 3.04	10.07 +or- 0.12	4.07 +or- 1.87	-9.47 +or- 0.25	(0)	1	
+20230730A	0.2115	312.50	227.34	cdots	cdots	cdots	cdots	cdots	cdots	cdots	cdots	1	
+20180924B	0.3214	361.42	319.54	9.28	34.07	3.40	145.95 +or- 0.49	10.25 +or- 0.10	4.31 +or- 1.72	-9.61 +or- 0.24	(0)	2	
+20190102C	0.2913	364.50	307.69	0.83	45.66	2.00	166.56 +or- 1.35	9.57 +or- 0.14	1.46 +or- 0.92	-9.41 +or- 0.32	(1)	3	
+20180301A	0.3304	536.00	384.28	1.51	cdots	10.80	cdots	cdots	cdots	cdots	cdots	4, 5	
+20191228A	0.2432	297.50	263.56	136.95	cdots	5.70	cdots	cdots	cdots	cdots	cdots	4, 6	
+20200906A	0.3688	577.80	544.16	cdots	63.00	5.90	260.69 +or- 0.77	10.29 +or- 0.11	8.09 +or- 4.18	-9.36 +or- 0.25	(0)	7	
+20210117A	0.214	728.95	693.85	5.28	cdots	2.80	cdots	cdots	cdots	cdots	cdots	8	
+20181030A	0.0039	103.50	63.06	1.60	cdots	14.00	cdots	cdots	cdots	cdots	cdots	8	
+20181220A	0.0275	209.40	83.40	0.44	81.53	cdots	39.82 +or- 0.61	10.15 +or- 0.11	1.81 +or- 0.92	-9.89 +or- 0.34	(0)	9	
+20190418A	0.0715	184.50	113.50	0.78	52.81	cdots	20.28 +or- 0.43	10.16 +or- 0.09	1.33 +or- 0.87	-10.05 +or- 0.32	(0)	9	
+20190425A	0.03122	128.20	79.20	0.38	58.38	cdots	1002.76 +or- 6.63	10.21 +or- 0.06	1.56 +or- 0.60	-10.02 +or- 0.20	(0)	9	
+20181223C	0.0302	112.50	92.50	0.11	40.95	cdots	23.39 +or- 0.04	9.25 +or- 0.06	0.18 +or- 0.04	-10.00 +or- 0.11	(0)	9	
+20210410D	0.1415	578.78	522.58	226.90	42.48	2.90	76.83 +or- 1.03	9.37 +or- 0.13	0.14 +or- 0.38	-10.20 +or- 3.72	(1)	10	
+20210603A	0.1772	500.15	460.15	0.16	64.84	7.20	195.96 +or- 0.64	10.97 +or- 0.10	0.00 +or- 0.22	-15.28 +or- 6.84	(0)	11	
+20190608B	0.1178	339.50	301.44	66.76	36.81	6.60	78.03 +or- 0.13	10.21 +or- 0.10	6.37 +or- 2.27	-9.41 +or- 0.25	(0)	12, 3	
+20230930A	0.0925	456.00	422.27	cdots	30.60	cdots	cdots	cdots	cdots	cdots	cdots	13	
+20230506C	0.3896	761.00	740.52	cdots	cdots	cdots	cdots	cdots	cdots	cdots	cdots	13	
+20240213A	0.1185	357.40	317.30	cdots	70.12	cdots	93.64 +or- 0.15	10.13 +or- 0.11	4.94 +or- 2.65	-9.44 +or- 0.29	(0)	14	
+20240215A	0.21	549.50	501.50	cdots	40.97	cdots	121.18 +or- 0.34	9.34 +or- 0.10	2.60 +or- 1.39	-8.91 +or- 0.28	(1)	14	
+20240229A	0.287	491.15	453.25	cdots	23.77	cdots	196.57 +or- 1.49	10.08 +or- 0.20	1.80 +or- 2.08	-9.79 +or- 1.55	(0)	14	
+20231220A	0.3355	491.20	441.30	cdots	47.87	cdots	261.75 +or- 1.05	10.35 +or- 0.10	5.88 +or- 3.06	-9.57 +or- 0.26	(0)	14	
+20240119A	0.376	483.10	445.20	cdots	31.73	cdots	444.51 +or- 5.91	9.56 +or- 0.14	2.51 +or- 1.54	-9.14 +or- 0.32	(0)	14	
+20220831A	0.262	1146.25	1019.55	cdots	cdots	cdots	cdots	cdots	cdots	cdots	cdots	14	
+20230814A	0.553	696.40	591.50	cdots	cdots	cdots	cdots	cdots	cdots	cdots	cdots	14	
+20240123A	0.968	1462.00	1371.70	cdots	cdots	cdots	cdots	cdots	cdots	cdots	cdots	14	
+20230521A	1.354	1342.90	1204.06	cdots	cdots	cdots	cdots	cdots	cdots	cdots	cdots	14	
+20210405I	0.066	565.17	565.17	70.50	cdots	10.65	cdots	cdots	cdots	cdots	cdots	15	
+20220105A	0.2784	580.00	557.96	cdots	56.26	8.45	100.73 +or- 0.87	9.95 +or- 0.11	0.50 +or- 0.74	-10.23 +or- 1.10	(0)	16	
+20211203C	0.3437	635.00	571.27	cdots	13.37	5.04	96.84 +or- 0.29	10.04 +or- 0.13	5.67 +or- 1.39	-9.27 +or- 0.20	(3)	16	
+20200430A	0.16	380.25	353.24	43.20	43.88	3.00	67.32 +or- 0.64	9.19 +or- 0.13	0.39 +or- 0.38	-9.64 +or- 0.59	(4)	17	
+20191001A	0.234	507.90	463.19	11.74	53.47	11.00	185.68 +or- 2.18	10.69 +or- 0.16	15.11 +or- 11.17	-9.51 +or- 0.31	(1)	17	
+20190714A	0.2365	504.13	466.15	17.20	51.10	1.90	99.48 +or- 6.43	10.03 +or- 0.11	3.68 +or- 1.43	-9.45 +or- 0.25	(0)	17	
+20190611B	0.378	321.40	264.19	3.64	cdots	11.00	cdots	cdots	cdots	cdots	cdots	17	
+20190711A	0.522	593.10	537.18	24.70	cdots	3.20	cdots	cdots	cdots	cdots	cdots	17	
+20200223B	0.0602	201.80	156.20	2.70	cdots	cdots	cdots	cdots	cdots	cdots	cdots	18	
+20191106C	0.10775	332.20	307.20	10.00	cdots	cdots	cdots	cdots	cdots	cdots	cdots	18	
+20190110C	0.12244	221.60	184.50	1.50	cdots	cdots	cdots	cdots	cdots	cdots	cdots	18	
+20190614D	0.63	959.20	875.67	cdots	cdots	cdots	cdots	cdots	cdots	cdots	cdots	19	
+20220207C	0.04304	262.38	183.08	cdots	79.94	2.21	50.11 +or- 1.29	10.39 +or- 0.21	0.01 +or- 1.08	-12.42 +or- 5.90	(0)	20	
+20220920A	0.15824	314.99	274.69	cdots	26.47	7.32	203.18 +or- 0.24	10.24 +or- 0.11	4.67 +or- 1.88	-9.57 +or- 0.25	(0)	20	
+20220825A	0.2414	651.24	571.54	cdots	45.15	2.25	222.44 +or- 23.79	10.23 +or- 0.17	5.45 +or- 2.82	-9.49 +or- 0.35	(0)	20	
+20220307B	0.24812	499.27	363.57	cdots	43.37	7.09	206.12 +or- 21.61	10.73 +or- 4.14	21.63 +or- 257.21	-9.50 +or- 1.34	(1)	20	
+20221012A	0.28467	441.08	386.68	cdots	44.81	14.14	267.17 +or- 0.38	11.17 +or- 0.08	0.00 +or- 0.02	-16.89 +or- 6.45	(0)	20	
+20220310F	0.47796	462.24	416.84	cdots	36.50	4.39	454.11 +or- 3.43	10.24 +or- 0.10	5.20 +or- 1.93	-9.53 +or- 0.25	(0)	20	
+20220506D	0.30039	396.97	307.87	cdots	cdots	2.08	cdots	cdots	cdots	cdots	cdots	20	
+20220418A	0.622	623.25	585.65	cdots	cdots	15.15	cdots	cdots	cdots	cdots	cdots	20	
+20220509G	0.0894	269.53	214.33	2.37	59.39	3.80	41.57 +or- 0.96	10.64 +or- 0.08	1.75 +or- 0.90	-10.38 +or- 0.22	(3)	20	
+20220914A	0.1139	631.28	576.08	2.37	45.35	9.87	39.10 +or- 2.41	9.45 +or- 0.12	0.76 +or- 0.31	-9.60 +or- 0.24	(0)	20	
+20171020A	0.00867	114.10	77.46	cdots	68.75	cdots	11.27 +or- 0.06	8.44 +or- 0.21	0.30 +or- 0.25	-8.96 +or- 0.44	(4)	21	
+20180916B	0.0337	348.76	149.80	0.88	cdots	5.50	cdots	cdots	cdots	cdots	cdots	22	
+20190303A	0.064	222.40	193.09	2.96	cdots	cdots	cdots	cdots	cdots	cdots	cdots	23	
+20180814A	0.06835	189.40	106.30	3.09	cdots	cdots	cdots	cdots	cdots	cdots	cdots	23	
+20190520B	0.241	1210.30	1152.11	188.00	17.46	1.30	60.58 +or- 2.28	cdots	cdots	cdots	cdots	24	
+20181112A	0.4755	589.27	546.86	0.45	cdots	1.70	cdots	cdots	cdots	cdots	cdots	25	
+20201123A	0.0507	433.55	180.47	cdots	cdots	cdots	cdots	cdots	cdots	cdots	cdots	26	
+20220717A	0.36295	637.00	519.00	63.27	cdots	cdots	141.50 +or- 17.56	10.84 +or- 0.60	3.23 +or- 11.08	-10.13 +or- 4.01	(1)	27	
+20190523A	0.66	760.80	723.93	10.80	cdots	27.00	cdots	10.76 +or- 0.20	30.84 +or- 48.40	-9.32 +or- 0.53	(1)	28	
+20201124A	0.098	413.52	290.36	8.05	cdots	1.32	cdots	cdots	cdots	cdots	cdots	29	
+20220319D	0.01123	110.95	110.95	cdots	24.66	2.14	12.29 +or- 0.65	9.91 +or- 0.06	0.21 +or- 0.10	-10.58 +or- 0.25	(4)	30	
+20220912A	0.0771	219.46	99.03	2.94	42.78	cdots	22.74 +or- 1.30	9.60 +or- 0.19	0.92 +or- 0.56	-9.63 +or- 0.41	(0)	31	
+20220610A	1.016	1457.62	1425.25	6.84	cdots	cdots	cdots	cdots	cdots	cdots	cdots	32	
+20230708A	0.105	411.51	361.51	0.94	cdots	1.10	cdots	7.78 +or- 0.14	0.04 +or- 0.03	-9.14 +or- 0.38	(1)	33, 34, 43	
+20230718A	0.035	477.00	81.00	cdots	cdots	cdots	cdots	cdots	cdots	cdots	cdots	33, 35	
+20210320C	0.2797	384.80	342.60	0.88	27.62	3.22	272.33 +or- 20.48	10.22 +or- 0.14	7.13 +or- 3.10	-9.36 +or- 0.26	(0)	33, 6	
+20240210A	0.023686	283.73	252.73	cdots	51.95	4.38	72.54 +or- 0.38	9.71 +or- 0.05	0.81 +or- 0.13	-9.79 +or- 0.10	(0)	33, 43	
+20240201A	0.042729	374.50	336.50	cdots	82.45	4.38	29.17 +or- 0.04	9.99 +or- 0.07	1.18 +or- 0.83	-9.92 +or- 0.42	(0)	33, 43	
+20240310A	0.127	601.80	565.80	cdots	56.27	2.18	30.76 +or- 0.09	9.14 +or- 0.12	0.38 +or- 0.18	-9.56 +or- 0.28	(0)	33, 43	
+20230526A	0.157	361.40	311.40	cdots	20.63	1.76	30.28 +or- 0.21	9.44 +or- 0.13	0.59 +or- 0.62	-9.67 +or- 0.71	(1)	33, 43	
+20220725A	0.1926	290.40	259.40	cdots	cdots	2.03	cdots	10.70 +or- 0.10	10.73 +or- 4.13	-9.67 +or- 0.22	(0)	30, 43	
+20221106A	0.2044	343.80	308.80	cdots	39.69	4.52	197.09 +or- 0.68	10.78 +or- 0.10	2.37 +or- 2.20	-10.39 +or- 0.51	(0)	33, 43	
+20230902A	0.3619	440.10	406.10	cdots	34.67	4.44	108.45 +or- 0.62	9.58 +or- 0.13	1.77 +or- 1.16	-9.34 +or- 0.34	(1)	33, 43	
+20231226A	0.1569	329.90	184.90	cdots	35.63	4.84	216.13 +or- 0.73	9.71 +or- 0.08	2.43 +or- 0.74	-9.33 +or- 0.19	(0)	33, 43	
+20220501C	0.381	449.50	418.50	cdots	cdots	cdots	cdots	cdots	cdots	cdots	cdots	33	
+20220918A	0.491	656.80	615.80	cdots	cdots	5.83	cdots	cdots	cdots	cdots	cdots	33, 43	
+20221219A	0.553	706.70	662.32	569.13	46.25	5.92	568.09 +or- 5.90	10.53 +or- 0.16	1.96 +or- 2.49	-10.22 +or- 0.52	(0)	36, 37	
+20231120A	0.0368	438.90	395.10	cdots	71.74	0.87	45.13 +or- 0.15	10.58 +or- 0.06	0.00 +or- 0.00	-18.98 +or- 9.42	(0)	36	
+20230124A	0.0939	590.60	551.99	cdots	10.17	1.14	43.23 +or- 0.09	9.69 +or- 0.11	0.91 +or- 0.48	-9.72 +or- 0.26	(0)	36	
+20230628A	0.127	345.15	306.05	cdots	30.70	cdots	77.25 +or- 0.35	9.43 +or- 0.13	1.40 +or- 0.55	-9.29 +or- 0.27	(0)	36	
+20221101B	0.2395	490.70	359.45	cdots	cdots	10.16	cdots	11.25 +or- 0.15	0.01 +or- 3.17	-13.40 +or- 5.56	(0)	36	
+20231123B	0.2621	396.70	356.50	cdots	65.18	14.40	574.05 +or- 1.18	10.99 +or- 0.12	9.15 +or- 6.64	-10.03 +or- 0.37	(0)	36	
+20230307A	0.2706	608.90	571.32	cdots	31.95	7.93	538.26 +or- 1.78	10.59 +or- 0.09	7.07 +or- 4.20	-9.71 +or- 0.25	(0)	36	
+20221116A	0.2764	640.60	508.34	cdots	cdots	18.41	cdots	10.92 +or- 0.21	0.95 +or- 8.36	-11.03 +or- 4.11	(0)	36	
+20230626A	0.327	451.20	411.95	cdots	27.51	3.71	83.52 +or- 0.30	10.62 +or- 0.13	0.70 +or- 2.44	-10.78 +or- 2.86	(0)	36	
+20220330D	0.3714	468.10	429.56	cdots	25.44	16.72	113.15 +or- 1.87	10.40 +or- 0.10	0.00 +or- 0.00	-17.82 +or- 7.14	(0)	36	
+20230216A	0.531	828.00	789.57	cdots	30.87	23.10	159.78 +or- 1.93	9.78 +or- 0.13	28.06 +or- 10.66	-8.34 +or- 0.26	(0)	36	
+20221029A	0.975	1391.05	1347.21	cdots	47.00	26.97	405.65 +or- 20.42	10.33 +or- 0.36	22.21 +or- 40.89	-9.10 +or- 0.36	(2)	36	
+20221113A	0.2505	411.40	319.67	cdots	cdots	3.62	cdots	cdots	cdots	cdots	cdots	36	
+20230501A	0.3015	532.50	406.80	cdots	cdots	3.74	cdots	cdots	cdots	cdots	cdots	36	
+20220208A	0.351	437.00	335.44	cdots	cdots	25.88	cdots	cdots	cdots	cdots	cdots	36	
+20220726A	0.3619	686.55	597.03	cdots	cdots	8.33	cdots	cdots	cdots	cdots	cdots	36	
+20220204A	0.4012	612.20	561.50	cdots	cdots	12.07	cdots	cdots	cdots	cdots	cdots	36	
+20230712A	0.4525	586.96	547.76	cdots	cdots	12.24	cdots	cdots	cdots	cdots	cdots	36	
+20221027A	0.5422	452.50	405.19	cdots	68.64	8.80	279.68 +or- 5.98	cdots	cdots	cdots	cdots	36	
+20240114A	0.1306	527.70	478.03	1.89	30.57	cdots	30.78 +or- 0.63	8.36 +or- 0.14	0.10 +or- 0.05	-9.34 +or- 0.28	(1)	37, 38	
+20211212A	0.0707	206.00	178.90	cdots	33.26	2.68	118.94 +or- 0.29	10.22 +or- 0.07	3.64 +or- 1.28	-9.66 +or- 0.21	(0)	39	
+20210807D	0.1293	251.30	130.13	cdots	44.50	11.89	1024.79 +or- 64.95	10.41 +or- 0.16	11.33 +or- 4.15	-9.38 +or- 0.26	(0)	39	
+20211127I	0.0469	234.83	192.33	cdots	13.99	1.59	963.25 +or- 23.20	10.03 +or- 0.02	1.33 +or- 0.27	-9.91 +or- 0.09	(4)	39	
+20220529A	0.1839	246.00	206.05	cdots	cdots	cdots	cdots	cdots	cdots	cdots	cdots	40	
+20121102A	0.19273	557.00	368.58	11.40	cdots	0.60	cdots	cdots	cdots	cdots	cdots	41, 42	
+	
+Notes. Column (1): the DM is derived from the first detected burst for repeaters. Column (2): DM_exc = DM_obs - DM_MW, where DM_MW is estimated using the NE2001 model (J. M. Cordes & T. J. W. Lazio 2002). Column (3): the scattering time tau_exc is scaled to 600 MHz, assuming tau_exc vprop nu^-4. Column (4): the inclination angle is derived from the Sersic model. For details of the fitting methods, see Section 2.2. Column (5): offset is defined as the distance from the location of an FRB to the optical center of its host galaxy. Column (6): the galaxy area is estimated using the lengths of the major axis (a) and minor axis (b) obtained by fitting the Sersic model to the assumed elliptical 2D projected shape of the galaxy. Column (7): the stellar mass of the host galaxy is given on a logarithmic scale. Column (8): we provide only upper limits for galaxies with SFR < 0.01 M_sun yr^-1. Column (9): the specific star formation rate is defined as sSFR = SFR/M. The error is calculated using the error propagation formula. Column (10): references. Column (11): the SED fitting results are visually evaluated and classified into five quality levels: 0, 1, 2, 3, and 4. In this work, only FRBs with Quality levels 0, 1, and 3 are included in the analysis.
+References. (1) M. Amiri et al. (2025); (2) K. W. Bannister et al. (2019); (3) S. Bhandari et al. (2020); (4) S. Bhandari et al. (2020); (5) P. Kumar et al. (2023); (6) M. W. Sammons et al. (2023); (7) S. Bhandari et al. (2022); (8) M. Bhardwaj et al. (2021b); (9) M. Bhardwaj et al. (2024b); (10) M. Caleb et al. (2023); (11) T. Cassanelli et al. (2024); (12) J. S. Chittidi et al. (2021); (13) R. Anna-Thomas et al. (2025); (14) L. Connor et al. (2025); (15) L. N. Driessen et al. (2024); (16) A. C. Gordon et al. (2023); (17) K. E. Heintz et al. (2020); (18) A. L. Ibik et al. (2024); (19) C. J. Law et al. (2020); (20) C. J. Law et al. (2024); (21) E. K. Mahony et al. (2018); (22) B. Marcote et al. (2020); (23) D. Michilli et al. (2023); (24) C. H. Niu et al. (2022); (25) J. X. Prochaska et al. (2019); (26) K. M. Rajwade et al. (2022); (27) K. M. Rajwade et al. (2024); (28) V. Ravi et al. (2019); (29) V. Ravi et al. (2022); (30) V. Ravi et al. (2025); (31) V. Ravi et al. (2023); (32) S. D. Ryder et al. (2023); (33) R. M. Shannon et al. (2025); (34) T. Dial et al. (2025); (35) M. Glowacki et al. (2024); (36) K. Sharma et al. (2024); (37) X.-L. Chen et al. (2025); (38) U. Panda et al. (2024); (39) A. T. Deller et al. (2025, in preparation); (40) Y. Li et al. (2025); (41) S. P. Tendulkar et al. (2017); (42) S. Chatterjee et al. (2017). (43) A. C. Gordon et al. (2025).
