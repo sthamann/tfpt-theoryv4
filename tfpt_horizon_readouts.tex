@@ -188,6 +188,8 @@ and the total is $\boxed{S_{\mathrm{Nariai}}/S_{dS}=2/3=|\Z_2|/N_{\mathrm{fam}}}
 interpolation in $x=r_b/r_c$ is the closed form
 $S_{\mathrm{tot}}/S_{dS}=(x^2{+}1)/(x^2{+}x{+}1)$ --- denominator $=\Phi_3(x)$, the $N_{\mathrm{fam}}$
 cyclotomic --- monotone from $1$ to $2/3$ with its minimum exactly at the merge (Fig.~\ref{fig:nariai}a).
+The floor admits a \emph{variation-free} one-line proof: $3(x^2{+}1)-2\Phi_3(x)=(x{-}1)^2\ge0$, so
+$S_{\mathrm{tot}}\ge\tfrac23 S_{dS}$ with equality \emph{iff} $x=1$ (the Nariai merge) \mE\ (\veri{v190\_nariai\_entropy\_bound.py}).
 \item \textbf{Three-sheet conservation.} The cubic is traceless with fixed $e_2$, so
 $\pi\sum_i r_i^2=6\pi/\Lambda=|\Z_2|\,S_{dS}$ for \emph{every} $M$: the black hole redistributes entropy
 between the two physical sheets and the virtual third root; the three-sheet total never moves.
@@ -199,6 +201,11 @@ Nariai gives $\tfrac38=p_2(a)/e_1(a)^2$ --- exactly the two nonzero $SU(4)_1$ co
 $m=M\sqrt\Lambda$: branch points $m=\pm1/N_{\mathrm{fam}}$, separation $2/3=|\Z_2|/N_{\mathrm{fam}}$, deck involution
 $=$ the black-hole$\,\leftrightarrow\,$cosmological horizon swap --- the gravitational twin of the flavor
 sheet $\Z_2$ and of the split $N_{\mathrm{fam}}$-linear cover $(3x{+}2)(3x{+}5)$ of the flavor sector (Fig.~\ref{fig:sdscover}).
+The two branch structures share one $N_{\mathrm{fam}}$-linear ramification: the affine map
+$q=\tfrac72+\tfrac{N_{\mathrm{fam}}^2}{2}m$ carries the SdS branch points $m={\pm}1/N_{\mathrm{fam}}$ onto the
+flavor branch labels $\{2,5\}=\{|\Z_2|,g_{\mathrm{car}}\}$ (midpoint $7/2$). This is an exact \emph{relabeling} --- the
+shared invariant is the $2/3$ ramification, not the map, which exists for any two pairs of points --- so it
+is recorded as a \mC\ structural alignment, not a theorem (\veri{v191\_universal\_branch\_line.py}).
 \item \textbf{Temperature lemma / orientation.} $|\kappa_b/\kappa_c|=(2x{+}1)/(x(x{+}2))>1$ for $x<1$
 (equality iff $x=1$): the black-hole sheet is \emph{always} hotter, so evaporation flows \emph{away} from
 the merge --- the anchor configuration is the \textbf{repeller} and the democratic endpoint the attractor,

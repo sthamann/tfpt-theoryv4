@@ -301,6 +301,10 @@ const NODES: DagNode[] = [
       "v185_axion_relic_solver.py",
       "v187_ftransfer_laws.py",
       "v188_frontier_wording_guard.py",
+      "v189_riemann_roch_carrier.py",
+      "v190_nariai_entropy_bound.py",
+      "v191_universal_branch_line.py",
+      "v192_qgeo_energy_clock.py",
     ],
   },
   {

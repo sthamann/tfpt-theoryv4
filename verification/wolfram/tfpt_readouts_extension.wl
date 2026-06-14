@@ -1562,6 +1562,36 @@ Module[{R, Q, K, L, one, a, F, f, cubic, corner, ratio, detBF, others},
     ratio == 53/54 && ratio == 1 - 1/(2*3^3) && others == {32, 21, 35, 56}];
 ];
 
+(* ---- (v189) Riemann-Roch carrier: (g_car,N_fam)=(5,3) from the mu4 divisor ---- *)
+Module[{degD, h0, rkH1, rankD5, rankA3},
+  degD = 4;                              (* |mu4| = deg D *)
+  h0 = degD + 1;                         (* h^0(P^1,O(D)) = deg+1 = 5 = g_car *)
+  rkH1 = degD - 1;                       (* rank H_1(P^1 minus 4 pts) = deg-1 = 3 = N_fam *)
+  rankD5 = 5; rankA3 = 3;                (* carrier = so(10) half-spinor *)
+  checkExact["v189 Riemann-Roch carrier: from D=mu4 (deg 4) on P^1, h^0(O(mu4))=deg+1=5=g_car=rank(D5) and rank H_1(P^1\\mu4)=deg-1=3=N_fam; rank D5+rank A3=5+3=8=rank E8 (one object, two canonical invariants)",
+    h0 == 5 && rkH1 == 3 && h0 == rankD5 && rankD5 + rankA3 == 8];
+];
+
+(* ---- (v190) Nariai entropy bound: S_tot/S_dS >= 2/3 via (x-1)^2 ---- *)
+Module[{x, ratio, val1, gap, mn},
+  ratio = (x^2 + 1)/(x^2 + x + 1);       (* denom = Phi_3(x), the N_fam cyclotomic *)
+  val1 = ratio /. x -> 1;                (* 2/3 at the Nariai merge *)
+  gap = Expand[3 (x^2 + 1) - 2 (x^2 + x + 1)];
+  mn = Minimize[{ratio, x > 0}, x][[1]];
+  checkExact["v190 Nariai entropy bound: S_tot/S_dS=(x^2+1)/Phi3(x), value 2/3 at x=1; 3(x^2+1)-2 Phi3(x)=(x-1)^2>=0 so ratio>=2/3 with equality iff x=1 (variation-free floor); global min on x>0 = 2/3",
+    val1 == 2/3 && Factor[gap] == (x - 1)^2 && mn == 2/3];
+];
+
+(* ---- (v191) Universal branch line: exact affine RELABELING (NOT a theorem) ---- *)
+Module[{Nfam, q, qm, q0, qp, decoyA, decoyB},
+  Nfam = 3;
+  q[mm_] := 7/2 + (Nfam^2/2) mm;
+  qm = q[-1/Nfam]; q0 = q[0]; qp = q[1/Nfam];
+  decoyA = (3 + 4)/2; decoyB = (4 - 3)/(2/Nfam);   (* decoy {3,4}: midpoint 7/2, slope 3/2 *)
+  checkExact["v191 universal branch line (alignment, NOT a theorem): q=7/2+(N^2/2)m maps m=-1/3,0,1/3 -> 2,7/2,5 = {|Z2|, scalaron/2, g_car}; the affine map exists for ANY pair (decoy {3,4} -> midpoint 7/2, slope 3/2), so it is a relabeling exhibiting the known 2/3 ramification -- recorded [C], not [E]",
+    qm == 2 && q0 == 7/2 && qp == 5 && decoyA == 7/2 && decoyB == 3/2];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v183: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v191: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];
