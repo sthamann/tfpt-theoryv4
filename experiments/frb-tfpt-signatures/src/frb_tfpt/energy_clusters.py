@@ -174,7 +174,7 @@ def _candidate_spacings() -> dict[str, float]:
 
 
 def fit_spacing_ladder(fluence: np.ndarray, tol: float = 0.10, max_k: int = 6,
-                       n_surrogate: int = 400, seed: int = 0) -> SpacingLadderResult:
+                       n_surrogate: int = 150, seed: int = 0) -> SpacingLadderResult:
     """Fit a GMM, and if >=3 clusters are preferred, test whether the adjacent
     log-energy spacings match a single preregistered ratio (surrogate-calibrated)."""
     x = _clean_log10(fluence)

@@ -23,6 +23,9 @@ VIZIER_SOURCES = {
     "chime_catalog1.tsv": "?-source=J/ApJS/257/59/table2&-out.all&-out.max=unlimited",
     # FRB 20121102A burst components (Aggarwal et al. 2021, ApJ 922, 115), 144 bursts
     "frb20121102_aggarwal2021.tsv": "?-source=J/ApJ/922/115/table5&-out.all&-out.max=unlimited",
+    # FRB 20121102A 1652 FAST bursts with per-burst energy (Li et al. 2021, Nature 598, 267)
+    "frb20121102_fast_li2021_1652.tsv":
+        "?-source=J/other/Nat/598.267/tables1&-out.all&-out.max=unlimited",
 }
 
 # IOPscience machine-readable supplements (localized-FRB DM-z + polarimetry)

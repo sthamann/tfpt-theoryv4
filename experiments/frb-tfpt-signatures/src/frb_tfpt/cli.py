@@ -136,8 +136,10 @@ def cmd_analyze(args: argparse.Namespace) -> int:
     for name, d in best:
         print(f"    {name:22s} ratio={d['ratio']:.4f} enrich={d['enrichment']:.2f} "
               f"p={d['p']:.3f} q={d['q']:.3f}")
-    echo_status = "support" if echo.c_echo > 0 else "null"
+    # a single-source excess is a CANDIDATE (prereg requires >=2 sources + q<0.01
+    # for support); only "null" if no kernel-ratio excess survives BH.
     min_q = min((d["q"] for d in echo.targets.values()), default=1.0)
+    echo_status = "candidate" if echo.c_echo > 0 else "null"
     axes.append(EvidenceAxis("FRB02_echo_ratio", echo.c_echo, echo_status,
                              q_value=min_q, discriminating=True, replicated=False,
                              note=echo.verdict))

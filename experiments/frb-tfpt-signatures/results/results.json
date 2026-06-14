@@ -165,40 +165,46 @@
         }
       },
       "c_echo": 0.040479760119940145,
-      "verdict": "support: ['sqrt_lambda2_amp']"
+      "verdict": "kernel-ratio excess (BH q<0.05, single source): ['sqrt_lambda2_amp']"
     },
     "FRB04_markov_spectrum": {
       "pa": {
         "source": "FRB 20240114A (FAST pol, 6131 bursts)",
         "channel": "pa",
-        "available": false,
-        "n": 0,
-        "eigs": [],
+        "available": true,
+        "n": 6134,
+        "eigs": [
+          0.09432901836023146,
+          0.039825580164660854
+        ],
         "kernel": [
           0.0877914951989026,
           0.0013717421124828531
         ],
-        "distance": NaN,
+        "distance": 0.039005600495672976,
         "ci_contains_kernel": false,
-        "null_p": NaN,
+        "null_p": 0.0004997501249375312,
         "c_markov": 0.0,
-        "note": "data-limited: no repeater PA/RM sequence loaded"
+        "note": "eigs=[0.0943, 0.0398] vs kernel; CI_contains_kernel=False, null p=0.000"
       },
       "rm": {
         "source": "FRB 20240114A (FAST pol, 6131 bursts)",
         "channel": "rm",
-        "available": false,
-        "n": 0,
-        "eigs": [],
+        "available": true,
+        "n": 6134,
+        "eigs": [
+          0.6177295091535684,
+          0.3100971423652536
+        ],
         "kernel": [
           0.0877914951989026,
           0.0013717421124828531
         ],
-        "distance": NaN,
+        "distance": 0.6133071590935891,
         "ci_contains_kernel": false,
-        "null_p": NaN,
+        "null_p": 0.9960019990004998,
         "c_markov": 0.0,
-        "note": "data-limited: no repeater PA/RM sequence loaded"
+        "note": "eigs=[0.6177, 0.3101] vs kernel; CI_contains_kernel=False, null p=0.996"
       }
     },
     "FRB01_dispersion": {
@@ -225,7 +231,7 @@
       "best_candidate": "(3/2)^3=27/8",
       "best_candidate_dex": 0.5282737771670437,
       "match_rel_err": 0.7660550648397992,
-      "p_value": 0.0024937655860349127,
+      "p_value": 0.006622516556291391,
       "c_ladder": 0.0,
       "verdict": "3 clusters but no uniform kernel spacing (closest (3/2)^3=27/8 at 77%)"
     },
@@ -530,22 +536,22 @@
     {
       "name": "FRB02_echo_ratio",
       "score": 0.040479760119940145,
-      "status": "support",
+      "status": "candidate",
       "p_value": null,
       "q_value": 0.047976011994003,
       "discriminating": true,
       "replicated": false,
-      "note": "support: ['sqrt_lambda2_amp']"
+      "note": "kernel-ratio excess (BH q<0.05, single source): ['sqrt_lambda2_amp']"
     },
     {
       "name": "FRB04_polarisation",
       "score": 0.0,
-      "status": "data_limited",
-      "p_value": NaN,
-      "q_value": NaN,
+      "status": "null",
+      "p_value": 0.0004997501249375312,
+      "q_value": 0.0004997501249375312,
       "discriminating": true,
       "replicated": false,
-      "note": "data-limited: no repeater PA/RM sequence loaded"
+      "note": "eigs=[0.0943, 0.0398] vs kernel; CI_contains_kernel=False, null p=0.000"
     },
     {
       "name": "FRB01_dispersion",
@@ -562,15 +568,16 @@
     "verdict": "not_confirmed_not_refuted",
     "support_axes": [],
     "candidate_axes": [
-      "FRB03_activity_window"
+      "FRB03_activity_window",
+      "FRB02_echo_ratio"
     ],
-    "null_axes": [],
+    "null_axes": [
+      "FRB04_polarisation"
+    ],
     "consistency_axes": [
       "FRB05_baryon"
     ],
     "data_limited_axes": [
-      "FRB02_echo_ratio",
-      "FRB04_polarisation",
       "FRB01_dispersion"
     ]
   }

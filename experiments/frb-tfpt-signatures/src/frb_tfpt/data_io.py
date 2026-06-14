@@ -304,8 +304,9 @@ _COL_ALIASES = {
     "dm": ["dm", "dm_obs", "dmeff", "dm_eff"],
     "rm": ["rm", "rm_obs", "rm_radm2"],
     "rm_err": ["rm_err", "e_rm", "rm_error"],
-    "pa_deg": ["pa", "pa_deg", "pa0", "pa_0", "pa_intrinsic"],
-    "pa_err": ["pa_err", "e_pa", "pa_error"],
+    "pa_deg": ["pa", "pa_deg", "pa0", "pa_0", "pa_intrinsic", "pa_mean(deg)",
+               "pa_mean", "pa(deg)"],
+    "pa_err": ["pa_err", "e_pa", "pa_error", "pa_mean_err(deg)"],
     "linear_frac": ["linear_fraction", "l/i", "li", "dol", "lfrac"],
     "circular_frac": ["circular_fraction", "v/i", "vi", "doc", "vfrac"],
     "freq_low": ["freq_low", "frequency_low", "f_low", "flow"],
@@ -357,13 +358,28 @@ def _load_dropin_repeater(source: str, filename: str,
     )
 
 
-def load_fast_20240114A_pol(path: str | Path | None = None) -> RepeaterSeries:
-    """FAST polarisation catalogue of FRB 20240114A (Pandhi-style; 6131 bursts).
+_FRB20240114A_FILES = (
+    "FAST_FRB20240114A_pol_catalog_v5.csv",   # cleanest: clean header + full-precision MJD
+    "FAST_FRB20240114A_pol_catalog.csv",
+    "FAST_FRB20240114A_pol_catalog_v4.csv",
+    "frb20240114A_fast_pol_catalog.tsv",
+)
 
-    Drop-in: place the ScienceDB CSV (DOI 10.57760/sciencedb.Fastro.00040) at
-    ``data/frb20240114A_fast_pol_catalog.tsv`` with columns including MJD, DM,
-    RM, PA0, L/I, V/I. Activates FRB.04 (RM/PA Markov spectrum) and rm_staircase.
+
+def load_fast_20240114A_pol(path: str | Path | None = None) -> RepeaterSeries:
+    """FAST polarisation catalogue of FRB 20240114A (6131 bursts; ScienceDB
+    DOI 10.57760/sciencedb.Fastro.00040, arXiv:2603.20663).
+
+    Columns: BurstID, MJD_topo, RM, DM, Weff, Bandwidth, S/N, DOL (=L/I),
+    DOC (=V/I), PA_mean(deg). Activates FRB.04 (RM/PA Markov spectrum) and
+    rm_staircase. Tries the released CSV filenames first, then the generic
+    drop-in name.
     """
+    if path is None:
+        for cand in _FRB20240114A_FILES:
+            if (DATA_DIR / cand).exists():
+                path = DATA_DIR / cand
+                break
     return _load_dropin_repeater("FRB 20240114A (FAST pol, 6131 bursts)",
                                  "frb20240114A_fast_pol_catalog.tsv", path)
 

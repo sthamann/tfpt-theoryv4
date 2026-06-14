@@ -51,7 +51,8 @@ def aggregate_axes(axes: list[EvidenceAxis], q_threshold: float = 0.01) -> dict:
     for a in axes:
         if a.qualifies_as_support(q_threshold):
             buckets["support_axes"].append(a.name)
-        elif a.status == "candidate":
+        elif a.status in ("candidate", "support"):
+            # a 'support'-status axis that fails replication/q falls back to candidate
             buckets["candidate_axes"].append(a.name)
         elif a.status == "null":
             buckets["null_axes"].append(a.name)

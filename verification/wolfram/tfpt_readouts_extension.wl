@@ -1646,6 +1646,23 @@ Module[{nn, rho1, absK, comm},
     comm == ConstantArray[0, {Length[nn], Length[nn]}]];
 ];
 
+(* ---- (v199) QGEO.STATE.01: [rho,H]=0 <=> H is mu4-character-block-diagonal ---- *)
+Module[{nn, rho, idx, Hbd, Hoff, classOf},
+  nn = Range[-6, 6];
+  rho = DiagonalMatrix[I^nn];                 (* carrier clock, order 4 *)
+  classOf[k_] := Mod[k, 4];
+  (* a character-block-diagonal H: nonzero only between equal mu4 classes *)
+  Hbd = Table[If[classOf[nn[[a]]] == classOf[nn[[b]]], 1, 0], {a, Length[nn]}, {b, Length[nn]}];
+  (* an off-character H: connect mode 0 (class 0) <-> mode 1 (class 1) *)
+  Hoff = Hbd; 
+  Hoff[[Position[nn, 0][[1, 1]], Position[nn, 1][[1, 1]]]] = 1;
+  Hoff[[Position[nn, 1][[1, 1]], Position[nn, 0][[1, 1]]]] = 1;
+  checkExact["v199 QGEO.STATE.01: rho^4=1 (carrier clock), and [rho,H]=0 <=> H is block-diagonal in the four mu4-character classes {n=r mod 4} -- a character-block-diagonal H commutes with rho, an off-character entry (class 0<->1) breaks it; so omega o rho=omega reduces to 'H has no off-character matrix elements'",
+    MatrixPower[rho, 4] == IdentityMatrix[Length[nn]] &&
+    rho . Hbd - Hbd . rho == ConstantArray[0, {Length[nn], Length[nn]}] &&
+    rho . Hoff - Hoff . rho != ConstantArray[0, {Length[nn], Length[nn]}]];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v198: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v200: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

@@ -311,6 +311,8 @@ const NODES: DagNode[] = [
       "v196_seam_energy_functional.py",
       "v197_rr_carrier_clifford_d5.py",
       "v198_modular_commutator_reduction.py",
+      "v199_seam_state_invariance.py",
+      "v200_seam_variational_scan.py",
     ],
   },
   {

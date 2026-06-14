@@ -12,7 +12,7 @@
   "date": "2026-06-12"
  },
  "introduction::subsection::Sharper still: one anchor $a=(1,1,2)$, and $E_8$ as a compiler hull \\texorpdfstring{(\\mE)}{}::1": {
-  "hash": "9c92de1cef86",
+  "hash": "a0dd630b345d",
   "date": "2026-06-14"
  },
  "introduction::subsection::The companion documents::1": {
@@ -376,8 +376,8 @@
   "date": "2026-06-13"
  },
  "tfpt_2_standard_model::subsection::(4) Constructive QFT closure of the admissible physical sector \\mE/\\mC::1": {
-  "hash": "b607e759ec51",
-  "date": "2026-06-13"
+  "hash": "f8a792183036",
+  "date": "2026-06-14"
  },
  "tfpt_2_standard_model::subsection::(5) Axioms P1/P2 --- P2 machine-verified, P1 as an interface \\mE/\\mO::1": {
   "hash": "de183afa60a7",
@@ -672,8 +672,8 @@
   "date": "2026-06-12"
  },
  "tfpt_horizon_readouts::section::Search targets (not claims)::1": {
-  "hash": "b63d6885ac89",
-  "date": "2026-06-12"
+  "hash": "1dfc761d4281",
+  "date": "2026-06-14"
  },
  "tfpt_horizon_readouts::section::Appendix: computational verification::1": {
   "hash": "0cf5187a0412",
@@ -684,7 +684,7 @@
   "date": "2026-06-12"
  },
  "tfpt_research_contracts::section::Research Contract 1 --- $(U_{\\mathrm{wall}})$::1": {
-  "hash": "7ce43eb7878c",
+  "hash": "647679e7deab",
   "date": "2026-06-14"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {

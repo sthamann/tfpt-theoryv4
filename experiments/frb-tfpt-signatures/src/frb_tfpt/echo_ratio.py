@@ -180,5 +180,8 @@ def evaluate_echo_ratios_by_session(series: RepeaterSeries, half_window_dex: flo
 
     sig = [n for n in names if targets[n]["q"] < q_threshold and targets[n]["enrichment"] > 1.2]
     c = float(np.clip(max((1 - targets[n]["q"] / q_threshold) for n in sig), 0, 1)) if sig else 0.0
-    verdict = (f"support: {sig}" if sig else "clean null (no q<%.2f kernel-ratio excess)" % q_threshold)
+    # "support" is reserved for the gated axis classification (>=2 sources, q<0.01);
+    # here we only report the single-source kernel-ratio excesses that survive BH.
+    verdict = (f"kernel-ratio excess (BH q<{q_threshold}, single source): {sig}" if sig
+               else f"clean null (no BH q<{q_threshold} kernel-ratio excess)")
     return SessionEchoResult(series.source, len(val), n_pairs, n_sessions, targets, c, verdict)
