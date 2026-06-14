@@ -2,6 +2,7 @@ import { Hero } from "@/components/Hero";
 import { TrustContract } from "@/components/TrustContract";
 import { WhyThisMatters } from "@/components/WhyThisMatters";
 import { Overview } from "@/components/Overview";
+import { RosettaLexicon } from "@/components/RosettaLexicon";
 import { OpenGates } from "@/components/OpenGates";
 import { ReconstructionChain } from "@/components/ReconstructionChain";
 import { HorizonStory } from "@/components/HorizonStory";
@@ -16,6 +17,7 @@ export default function HomePage() {
       <TrustContract />
       <WhyThisMatters />
       <Overview />
+      <RosettaLexicon />
       <OpenGates />
       <ReconstructionChain />
       <HorizonStory />

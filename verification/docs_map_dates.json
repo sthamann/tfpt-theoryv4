@@ -612,8 +612,8 @@
   "date": "2026-06-12"
  },
  "tfpt_5_redteam::front::(front matter)::1": {
-  "hash": "a5684d2b15f6",
-  "date": "2026-06-13"
+  "hash": "db47236985f9",
+  "date": "2026-06-14"
  },
  "tfpt_5_redteam::section::Method::1": {
   "hash": "aa670d017bc0",
@@ -640,7 +640,7 @@
   "date": "2026-06-12"
  },
  "tfpt_5_redteam::section::Outcome::1": {
-  "hash": "9e49cad27333",
+  "hash": "df2fb022e861",
   "date": "2026-06-14"
  },
  "tfpt_horizon_readouts::front::(front matter)::1": {
@@ -684,7 +684,7 @@
   "date": "2026-06-12"
  },
  "tfpt_research_contracts::section::Research Contract 1 --- $(U_{\\mathrm{wall}})$::1": {
-  "hash": "b0c134fbb05e",
+  "hash": "3cf21589e941",
   "date": "2026-06-14"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {

@@ -25,6 +25,7 @@
 \newcommand{\Mpl}{\bar M_{\mathrm{Pl}}}
 \newcommand{\Nfam}{N_{\mathrm{fam}}}
 \newcommand{\gcar}{g_{\mathrm{car}}}
+\providecommand{\PP}{\mathbb{P}}
 \setlist{itemsep=2pt,topsep=3pt}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 
@@ -325,6 +326,26 @@ limit, stated as such everywhere: this is a null-model rejection \emph{condition
 --- no statistical test certifies a theory; the tension observables keep their large windows and contribute
 nothing to the number. Details and the grammar definition: the audit note (\texttt{tfpt\_3}) and the module
 docstring.
+\end{winbox}
+
+\begin{winbox}[External-review residual map \mE/\mC\ (\veri{v182\_reviewer\_residual\_map.py})]
+A careful external review (2026-06-14) raised four concerns at the \mC/\mO\ seams: \textbf{(A)} the
+mapping $2D\!\to\!4D$ (``why does the dynamics read the masses as the Pl\"ucker norm $11$?''),
+\textbf{(B)} the abstractness of UV gravity, \textbf{(C)} the meta-look-elsewhere of the grammar choice,
+and \textbf{(D)} the Koide M\"obius flow (non-integer flow time $t\!\sim\!2.84$, missing QFT generator).
+None adds an \emph{independent} open gap. \textbf{A} \mE/\mC: the readout integer is exact ($11=
+\sum_{k\le2}\binom4k=\dim S^+{-}\gcar$, the QBL boundary count, \vref{v174}) and the $2D\!\to\!4D$ step
+is the holographic reduction, so $A=\texttt{QGEO.SYM.01}+F_{\mathrm{transfer}}$. \textbf{B} \mE:
+``gravity is the geometric readout of the boundary'' \emph{is} \texttt{QGEO.SYM.01}. \textbf{D} \mE/\mC:
+$\mathrm{Aut}(\PP)=\mathrm{PSL}(2,\mathbb C)$ is the M\"obius group and the cusp flow lives on the
+deck $\PP\setminus\mu_4$, so the M\"obius \emph{nature} is forced by the geometry; the non-integer
+$t\!\sim\!2.84$ only locates the physical point and the missing generator \emph{is} $F_{\mathrm{transfer}}$,
+so $D=\texttt{QGEO.SYM.01}+F_{\mathrm{transfer}}$. So A, B, D collapse onto the \emph{two already-named}
+residuals; only \textbf{C} is genuinely \emph{experiment-only}: the grammar is frozen (\vref{v84}),
+minimal and over-determined (the anchor $a=(1,1,2)$ lands in $\ge6$ mutually-independent,
+not-selected-for structures), a look-elsewhere-resistant signature whose residual --- correctly ---
+falls only to out-of-sample data (JUNO, CMB-S4), never to argument. The four concerns are a unification
+of the residual \emph{structure}, not a closure of the underlying premises, which stay \mO/\mC.
 \end{winbox}
 
 \end{document}

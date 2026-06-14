@@ -56,6 +56,15 @@ export function TrustContract() {
                 Each result is typed, machine-verified, or explicitly open — and
                 a single versioned ledger is the source of truth.
               </p>
+              <p className="mt-3 flex flex-col gap-1 rounded-xl border border-blue-400/25 bg-blue-500/5 px-3 py-2 text-xs leading-relaxed text-slate-300 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-3">
+                <span className="font-semibold text-blue-200">Falsifiable by design:</span>
+                <span>predictions frozen pre-data — sin²θ₁₂ = 0.3067 (JUNO), r ≈ 0.004 (CMB-S4)</span>
+                <span className="hidden text-slate-500 sm:inline">·</span>
+                <span>
+                  null model: <span className="font-mono">P ≤ 10⁻³⁰·⁷</span> that a random theory of
+                  equal complexity reproduces the scorecard
+                </span>
+              </p>
               <div className="mt-3 flex flex-wrap gap-1.5">
                 {MARKERS.map((x) => (
                   <span
