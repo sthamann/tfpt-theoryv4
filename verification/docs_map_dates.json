@@ -32,8 +32,8 @@
   "date": "2026-06-12"
  },
  "introduction::subsection::The hard reduction: two research gates plus typed interfaces::1": {
-  "hash": "3ceb6cb013c0",
-  "date": "2026-06-13"
+  "hash": "c6d888bc1c8e",
+  "date": "2026-06-14"
  },
  "introduction::section::The compiler: why $30=2\\cdot3\\cdot5$::1": {
   "hash": "0827633d0220",
@@ -640,8 +640,8 @@
   "date": "2026-06-12"
  },
  "tfpt_5_redteam::section::Outcome::1": {
-  "hash": "7b84f411bc76",
-  "date": "2026-06-13"
+  "hash": "9e49cad27333",
+  "date": "2026-06-14"
  },
  "tfpt_horizon_readouts::front::(front matter)::1": {
   "hash": "091987bff9bb",
@@ -684,7 +684,7 @@
   "date": "2026-06-12"
  },
  "tfpt_research_contracts::section::Research Contract 1 --- $(U_{\\mathrm{wall}})$::1": {
-  "hash": "0e0c1881e5ea",
+  "hash": "e1f69cb93eb1",
   "date": "2026-06-14"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {
@@ -740,7 +740,7 @@
   "date": "2026-06-12"
  },
  "origin_theory::section::Honest status::1": {
-  "hash": "e91eb57da80e",
+  "hash": "3faeb3057f70",
   "date": "2026-06-14"
  },
  "origin_theory::section::Appendix: computational verification::1": {

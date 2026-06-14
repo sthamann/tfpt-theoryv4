@@ -59,6 +59,29 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-14 (the final reduction to bedrock v181 + full non-changelog status sweep)}
+\begin{itemize}
+\item \textbf{\texttt{v181\_clock\_is\_conformal\_symmetry.py} \mE/\mO\ (claim \texttt{QGEO.SYM.01}).}
+  The isometry premise \texttt{QGEO.ISO.01} (\vref{v180}) is weakened one more genuine step --- to a
+  conformal-\emph{symmetry} premise --- via \emph{equivariant uniformisation} (Nielsen realisation; for
+  cyclic groups Ker\'ekj\'art\'o $+$ uniformisation): a \emph{conformal} automorphism (strictly weaker
+  than an isometry --- every isometry is conformal, conformal allows any positive scale) already suffices
+  to put the order-$4$ clock in the form $z\mapsto iz$. Since the clock is the Coxeter element of
+  $W(A_3)=S_4$ (\vref{v117}), the $\mu_4$ deck, and a deck transformation preserves the pulled-back
+  conformal structure by definition, the residual collapses to the \emph{definitional} identification
+  \texttt{QGEO.SYM.01}: ``the seam's conformal structure \emph{is} the $\mu_4$-deck structure of the
+  carrier clock''. This is bedrock --- a physical/definitional statement tying P2 to the seam's conformal
+  geometry, \emph{not} a finite computation and not reducible further without relabeling. The chain
+  \texttt{REALIZE}(\vref{v175})$\to\dots\to$\texttt{SYM.01}(\vref{v181}) ends here; we stop honestly.
+  Python-only. Suite now 181 modules.
+\item \textbf{Full non-changelog status sweep.} The current bedrock framing was propagated to every
+  live status surface (not just the changelog): the \texttt{introduction} ``latest reductions'' prose,
+  \texttt{tfpt\_5\_redteam} Target~A, the \texttt{tfpt\_research\_contracts} central-theorem keybox,
+  \texttt{origin\_theory}; and on the website \texttt{OpenGates}, \texttt{VerificationDag},
+  \texttt{papers.ts} (Target~A $\times2$, $G_{\mathrm{net}}$), the \texttt{glossary} $G_{\mathrm{net}}$
+  entry and the \texttt{faq} live-residual answer --- all now end at \texttt{QGEO.SYM.01}.
+\end{itemize}
+
 \subsection*{2026-06-14 (the conformal premise reduces to a milder isometry premise v180)}
 \begin{itemize}
 \item \textbf{\texttt{v180\_clock\_is\_mobius.py} \mE/\mO\ (claim \texttt{QGEO.ISO.01}).} Cracks

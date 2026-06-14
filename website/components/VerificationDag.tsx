@@ -294,6 +294,7 @@ const NODES: DagNode[] = [
       "v178_marks_kernel_attempt.py",
       "v179_conformal_realisation.py",
       "v180_clock_is_mobius.py",
+      "v181_clock_is_conformal_symmetry.py",
     ],
   },
   {
