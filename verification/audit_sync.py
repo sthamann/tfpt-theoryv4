@@ -20,6 +20,8 @@ Checks (sections A-F):
   B  changelog         : every registered script's module id appears in
                          changelog.tex (minus the frozen grandfathered list);
                          dated subsections are newest-first (non-increasing)
+  C  csv well-formed    : every machine CSV (ledger, registry, clusters, freeze)
+                         parses to a constant column width (no unquoted commas)
   C  ledger            : registry <-> status_ledger.csv script column agree
   D  website mirror    : public/verification == verification (sha256);
                          public/papers == root PDFs (sha256); release.ts
@@ -163,6 +165,28 @@ def check_papers(registered: list[str], baseline: dict) -> None:
 
 
 # -------------------------------------------------------------- C: ledger
+def check_csv_wellformed() -> None:
+    """Every machine-read CSV must parse to a constant column width -- guards the
+    'single source of truth' against unquoted-comma corruption (a stray comma in
+    a status/external field silently shifts every later column)."""
+    for name in ("status_ledger.csv", "script_registry.csv",
+                 "script_clusters.csv", "freeze_file.csv"):
+        path = VERIF / name
+        if not path.exists():
+            continue
+        with path.open(newline="", encoding="utf-8") as f:
+            rows = list(csv.reader(f))
+        if not rows:
+            err("C.csv", f"{name} is empty")
+            continue
+        width = len(rows[0])
+        for i, row in enumerate(rows, 1):
+            if len(row) != width:
+                first = row[0][:40] if row else ""
+                err("C.csv", f"{name} line {i} has {len(row)} fields, expected "
+                             f"{width} (unquoted comma in '{first}'? quote the field)")
+
+
 def check_ledger(registered: list[str]) -> None:
     ledger_scripts = make_script_index.load_ledger_scripts()
     for s in sorted(set(registered) - ledger_scripts):
@@ -294,6 +318,7 @@ def main() -> None:
     baseline = load_baseline()
     check_suite(registered)
     check_papers(registered, baseline)
+    check_csv_wellformed()
     check_ledger(registered)
     check_website(registered)
     check_versions()

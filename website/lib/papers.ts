@@ -893,7 +893,7 @@ export const papers: Paper[] = [
     title: "Origin Theory",
     subtitle: "The seam as a horizon, the cyclic compiler hull, and the parameter-free attractor",
     abstract:
-      "Why the two TFPT inputs leave no free fundamental number. Two layers, kept strictly apart: a structural [E] core (exact, machine-checked identities) — the (g_car, N_fam) = (5,3) skeleton, the triply-forced 8 (geometry = lattice = gravity), the order-30 Coxeter cycle, one boundary transport for both flavor and horizon, and a gapped unique attractor — plus one honestly-typed [C] interpretation: the cyclic self-reproduction reading.",
+      "Why the two TFPT inputs leave no free dimensionless compiler dial beyond the anchor structure and π — the one dimensionful scale v_geo and the continuous transfer physics F_transfer remain explicitly typed, not derived. Two layers, kept strictly apart: a structural [E] core (exact, machine-checked identities) — the (g_car, N_fam) = (5,3) skeleton, the triply-forced 8 (geometry = lattice = gravity), the order-30 Coxeter cycle, one boundary transport for both flavor and horizon, and a gapped unique attractor — plus one honestly-typed [C] interpretation: the cyclic self-reproduction reading.",
     status: "synthesis",
     statusLabel: "Origin synthesis",
     pdf: "/papers/origin_theory.pdf",

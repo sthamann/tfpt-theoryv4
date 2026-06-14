@@ -30,7 +30,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME}: Two Axioms, One Compiler, the Standard Model Derived`,
+    default: `${SITE_NAME}: Two Axioms, One Compiler, the Standard-Model Skeleton Derived`,
     template: "%s · TFPT",
   },
   description: SITE_DESCRIPTION,
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: SITE_NAME,
-    title: `${SITE_NAME}: Two Axioms, One Compiler, the Standard Model Derived`,
+    title: `${SITE_NAME}: Two Axioms, One Compiler, the Standard-Model Skeleton Derived`,
     description:
       "From two numbers, c₃ = 1/(8π) and g_car = 5, a discrete compiler reads off the Standard Model, α⁻¹ = 137.0359992 (1.9σ from CODATA-2022), the flavor sector, strong-CP closure, and the scale grammar. 20 falsifiable predictions, zero fitted constants.",
     locale: "en_US",
@@ -109,7 +109,7 @@ export const metadata: Metadata = {
     // `citation_author_2` — using it makes the second author invisible to
     // Scholar. Next.js renders an array as repeated <meta> elements.
     citation_title:
-      "TFPT — Topological Fixed-Point Theory: Two Axioms, One Compiler, the Standard Model Derived",
+      "TFPT — Topological Fixed-Point Theory: Two Axioms, One Compiler, the Standard-Model Skeleton Derived",
     citation_author: ["Hamann, Stefan", "Rizzo, Alessandro"],
     citation_publication_date: "2026",
     citation_language: "en",

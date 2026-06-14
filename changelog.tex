@@ -59,6 +59,33 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-14 (external-review response: CSV fix, G\_net 3-level, QGEO.SYM.01 page, claim detox)}
+\begin{itemize}
+\item \textbf{Ledger CSV bug fixed + guarded.} Three rows (\texttt{AX.P1.01}, \texttt{AX.P2.01},
+  \texttt{QGEO.ISO.01}) had \emph{unquoted commas} in a status/external field (e.g.\ ``a=(1,1,2)'',
+  ``PSL(2,C)''), so a strict CSV parser read 11--12 columns instead of 10 --- a real
+  machine-readability defect in the single source of truth. All offending fields are now quoted (every
+  row parses to exactly 10 columns), and \texttt{audit\_sync.py} gained a \texttt{check\_csv\_wellformed}
+  guard (ledger, registry, clusters, freeze must all parse to constant width) so it cannot regress.
+\item \textbf{$G_{\mathrm{net}}$ typed in three explicit levels} (website ``What is open'' card): (1)
+  \emph{algebra} \mE\ $(D_5)_1{\otimes}(A_3)_1{\rtimes}\langle(1,1)\rangle\cong(E_8)_1$; (2) \emph{AQFT
+  machinery} \mE\ (net existence $+$ full-cone RP, CAR functor, \vref{v175}); (3) \emph{seam
+  instantiation} \mO\ (\texttt{QGEO.SYM.01}). The target object's mathematics is closed; only the
+  physical coupling of the raw seam is open.
+\item \textbf{\texttt{QGEO.SYM.01} now has its own one-page box} in \texttt{tfpt\_research\_contracts}:
+  what is identified, why it is weaker than \texttt{CONF}/\texttt{ISO}, what follows automatically (the
+  conditional theorem), and \emph{what would falsify it} (genus $>0$ double; non-deck transport;
+  $\Nfam\neq3$); with the explicit conditional framing ``\emph{given} \texttt{QGEO.SYM.01}, the closure
+  follows'' rather than ``the theory derives the seam geometry''.
+\item \textbf{Claim-language detox.} ``no free fundamental number'' softened to ``no free
+  \emph{dimensionless compiler dial} beyond the anchor and $\pi$ (dimensionful scale $+$ transfer
+  physics stay typed)'' (\texttt{origin\_theory}, \texttt{introduction}, website); the site title
+  softened from ``the Standard Model Derived'' to ``the Standard-Model \emph{Skeleton} Derived''.
+\item \textbf{External-reviewer map} added to the website verification page: four boxes (exact kernel
+  \mE, conditional physics \mC, open premises \mO, kill tests \mX) so a reviewer sees the attack
+  surface without reading 181 scripts. Suite unchanged at 181.
+\end{itemize}
+
 \subsection*{2026-06-14 (Zenodo release 5.1 (rev 114) --- v175--v181 bedrock + figures + P1/P2)}
 \begin{itemize}
 \item \textbf{Published to Zenodo.} Version \texttt{5.1 (rev 114)} of the ten-PDF document set was

@@ -87,6 +87,53 @@ const MARKERS: { m: string; meaning: string; tone: string }[] = [
   { m: "[X]", meaning: "falsifiable kill test (committed in advance)", tone: "text-blue-200 bg-blue-500/15 ring-blue-400/30" },
 ];
 
+const REVIEWER_MAP: { label: string; marker: string; tone: string; items: string[] }[] = [
+  {
+    label: "Exact kernel",
+    marker: "[E]",
+    tone: "border-emerald-400/30 bg-emerald-500/5",
+    items: [
+      "Anchor a = (1,1,2); the E₈ glue D₅⊕A₃+μ₄ ⇒ E₈",
+      "Gauge group, 3 families, hypercharge (Lean-formalised)",
+      "α⁻¹ = 137.0359992 — unique root of the explicit cubic F_U(1)=0",
+      "Flavor operator ladder (Q,K,R,L), quark/lepton ratios",
+      "θ_QCD = 0, Higgs uniqueness, the order-30 Coxeter cycle",
+    ],
+  },
+  {
+    label: "Conditional physics",
+    marker: "[C]",
+    tone: "border-amber-400/30 bg-amber-500/5",
+    items: [
+      "Reflection positivity + gap (Decoupling Theorem, Δ_eff = 1.648)",
+      "G_net algebra + AQFT machinery [E]; seam coupling [O]",
+      "F_transfer: Koide, η_B, axion relic, m_p/m_e (typed interfaces)",
+      "Scheme layer / QCD + EW matching for absolute masses",
+    ],
+  },
+  {
+    label: "Open premises",
+    marker: "[O]",
+    tone: "border-rose-400/30 bg-rose-500/5",
+    items: [
+      "P1, P2 — declared inputs, reduced to the anchor a=(1,1,2)+π (not free dials)",
+      "v_geo — the one dimensionful scale (metrology primitive, No-Unit Theorem)",
+      "QGEO.SYM.01 — the carrier μ₄ clock is the seam's conformal deck (definitional)",
+    ],
+  },
+  {
+    label: "Kill tests",
+    marker: "[X]",
+    tone: "border-blue-400/30 bg-blue-500/5",
+    items: [
+      "JUNO: sin²θ₁₂ ≈ 0.3067 (prediction of record, frozen)",
+      "CMB tensor-to-scalar r ≈ 0.004 (Starobinsky); n_s vs DESI",
+      "Normal neutrino ordering with small m_ββ; θ_eff = 0 (nEDM)",
+      "A fourth chiral generation (N_fam ≠ 3) or w ≠ −1 breaks the core",
+    ],
+  },
+];
+
 const REPRODUCE = `# 1. Compile the active document set      ->  "10 ok, 0 failed"
 bash build.sh notes
 
@@ -213,6 +260,50 @@ export default function VerificationPage() {
               </span>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* External reviewer map: the attack surface at a glance */}
+      <section className="relative border-t border-slate-800/60 py-12 sm:py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            eyebrow="For the external reviewer"
+            title="The attack surface, at a glance"
+            description="What is exact, what is conditional, what is an open premise, and how to kill it — so a reviewer can decide where to push without reading 180 scripts first. Nothing here is hidden: the exact kernel stands on its own; the conditional and open layers are explicitly typed."
+          />
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {REVIEWER_MAP.map((box) => (
+              <div
+                key={box.label}
+                className={`flex flex-col rounded-2xl border p-5 ${box.tone}`}
+              >
+                <div className="flex items-center gap-2">
+                  <span className="font-mono text-sm font-semibold text-slate-100">
+                    {box.marker}
+                  </span>
+                  <span className="text-[11px] font-semibold uppercase tracking-widest text-slate-300">
+                    {box.label}
+                  </span>
+                </div>
+                <ul className="mt-3 space-y-2">
+                  {box.items.map((it) => (
+                    <li key={it} className="text-xs leading-relaxed text-slate-300">
+                      {it}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <p className="mt-5 text-sm leading-relaxed text-slate-400">
+            The honest one-line claim is conditional, not messianic:{" "}
+            <span className="text-slate-200">
+              a two-input discrete compiler whose algebraic kernel derives the Standard-Model skeleton
+              and several dimensionless readouts, with every physical transfer layer explicitly typed
+            </span>{" "}
+            — and, given the single seam premise QGEO.SYM.01, the AQFT closure to (E₈)₁ follows through
+            the verified chain v175–v181.
+          </p>
         </div>
       </section>
 

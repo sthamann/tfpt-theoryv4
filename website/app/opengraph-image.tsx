@@ -3,7 +3,7 @@ import { SITE_VERSION } from "@/lib/version";
 
 export const runtime = "edge";
 export const alt =
-  "TFPT — Topological Fixed-Point Theory: two axioms, one compiler, the Standard Model derived.";
+  "TFPT — Topological Fixed-Point Theory: two axioms, one compiler, the Standard-Model skeleton derived.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
