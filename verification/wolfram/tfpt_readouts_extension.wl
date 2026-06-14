@@ -1544,6 +1544,24 @@ Module[{cartan, det, evenDiag, sig3, E4, prodv, chi, c5, fockDim, fixedMult, gap
     fockDim == 65536 && fixedMult == 256 && gap == 64/729 && pairCount == 120];
 ];
 
+(* ---- (v183) Koide 53/54 = a^T(R+Q)1 / (2 1^T R a): missing Sheet-Diamond corner ---- *)
+Module[{R, Q, K, L, one, a, F, f, cubic, corner, ratio, detBF, others},
+  R = {{1, 3, 0}, {1, 5, 2}, {2, 5, 3}};
+  Q = {{3, 1, 0}, {3, 2, 0}, {3, 2, 1}};
+  K = {{4, 2, 0}, {4, 3, 2}, {5, 3, 2}};
+  L = {{7, 3, 0}, {7, 5, 2}, {8, 5, 3}};
+  one = {1, 1, 1}; a = {1, 1, 2}; F = R + Q;
+  f[m_, u_, v_] := u . m . v;
+  cubic = f[R, one, a];                 (* 1^T R a = 27 *)
+  corner = f[F, a, one];                (* a^T (R+Q) 1 = 53 *)
+  ratio = corner/(2 cubic);             (* 53/54 *)
+  detBF = Det[{{f[F, one, one], f[F, one, a]}, {f[F, a, one], f[F, a, a]}}];
+  others = {f[R, a, one], f[Q, a, one], f[K, a, one], f[L, a, one]};
+  checkExact["v183 Koide 53/54 operator origin: 1^T R a = 27 (E6xA2 cubic block, 248=78+8+2*27*3); F=R+Q missing Sheet-Diamond corner, det B_F=52=dim F4, a^T(R+Q)1=53=52+1; ratio a^T(R+Q)1/(2 1^T R a)=53/54=1-1/(2*3^3); negative control: a^T M 1 for {R,Q,K,L}={32,21,35,56}, only F gives 53",
+    cubic == 27 && 78 + 8 + 2*27*3 == 248 && corner == 53 && detBF == 52 &&
+    ratio == 53/54 && ratio == 1 - 1/(2*3^3) && others == {32, 21, 35, 56}];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v175: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v183: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

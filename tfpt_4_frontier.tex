@@ -270,6 +270,22 @@ number and no tuning. This sharpens the research gate to a concrete QFT task: \e
 leptonic source$\to$pole transfer of the seed is $u\mapsto u\,(1-\tfrac{1}{2\Nfam^3})$} (a renormalised-seed
 effect from the leptonic self-energy or the $A_3$ family-Weyl averaging). Status remains \mC\ until that
 transfer is derived. \veri{v37\_plucker\_anchor.py}
+\par\smallskip\noindent\textbf{The factor $\tfrac{53}{54}$ now has an \emph{operator} origin
+(\veri{v183\_koide\_f\_corner\_transfer.py}).} It is not a bare arithmetic guess: it is the anchor
+response of the \emph{missing} Sheet-Diamond corner $F=R+Q=M(1,1)$ over the sheet-doubled $E_6{\times}A_2$
+cubic family block,
+\[
+  \frac{u_{\mathrm{pole}}}{u_{\mathrm{source}}}=\frac{a^T(R+Q)\mathbf1}{2\,\mathbf1^T R\,a}
+  =\frac{53}{2\cdot27}=\frac{53}{54},
+\]
+where $\mathbf1^T R\,a=27$ is the cubic family block ($248=\dim E_6+\det R+2(\mathbf1^T R a)\Nfam
+=78+8+2{\cdot}27{\cdot}3$) and $a^T(R+Q)\mathbf1=53=52+1$ with $\det B_F=52=\dim F_4$
+(\vref{v80}). A hard negative control fixes the corner: $a^T M\mathbf1$ for $M\in\{R,Q,K,L\}$ is
+$\{32,21,35,56\}$ --- only the absent corner $F$ gives $53$. So the \emph{factor} is exact and
+structural (\mE), and the remaining \mC\ is precisely the mechanism --- that the leptonic
+source$\to$pole transfer reads the $F$ corner --- an $F_{\mathrm{transfer}}$ special case
+($F_{\mathrm{pole}}$). Koide thereby moves from ``near miss $+$ conjecture'' to
+``operator-sourced source$\to$pole transfer''; the prediction stays \mC.
 
 \par\smallskip\noindent\textbf{The Koide target and the QFT transfer gap are the \emph{same} quotient} (\mE/\mC).
 The same $Q_\star$ controls a second, independent object --- the first non-trivial eigenvalue of the

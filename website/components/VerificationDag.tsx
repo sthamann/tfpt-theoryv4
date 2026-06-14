@@ -296,6 +296,7 @@ const NODES: DagNode[] = [
       "v180_clock_is_mobius.py",
       "v181_clock_is_conformal_symmetry.py",
       "v182_reviewer_residual_map.py",
+      "v183_koide_f_corner_transfer.py",
     ],
   },
   {

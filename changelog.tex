@@ -59,6 +59,27 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-14 (operator origin of the Koide 53/54 factor: the missing Sheet-Diamond corner, v183)}
+\begin{itemize}
+\item \textbf{\texttt{v183\_koide\_f\_corner\_transfer.py} \mE/\mC\ (claim \texttt{FR.KOIDE.07}).} An
+  external-review proposal, validated exactly: the Koide source$\to$pole factor $\tfrac{53}{54}$ is not
+  a bare arithmetic guess but an \emph{operator} identity on the carrier,
+  $u_{\mathrm{pole}}/u_{\mathrm{source}} = a^T(R+Q)\mathbf1 / (2\,\mathbf1^T R a) = 53/(2{\cdot}27) =
+  \tfrac{53}{54}$. Here $\mathbf1^T R a = 27$ is the $E_6{\times}A_2$ cubic family block
+  ($248 = \dim E_6 + \det R + 2(\mathbf1^T R a)\Nfam = 78+8+2{\cdot}27{\cdot}3$) and
+  $a^T(R+Q)\mathbf1 = 53 = 52+1$, where $F = R+Q$ is the \emph{missing} Sheet-Diamond corner with
+  $\det B_F = 52 = \dim F_4$ (\vref{v80}). Hard negative control: $a^T M\mathbf1$ for $M\in\{R,Q,K,L\}$
+  is $\{32,21,35,56\}$ --- only the absent corner $F$ gives $53$. This upgrades \texttt{FR.KOIDE.03}
+  from ``near miss $+$ conjecture'' to ``operator-sourced source$\to$pole transfer'': the \emph{factor}
+  is \mE\ (exact, mirrored in Wolfram, $232/232$); the \emph{mechanism} (the leptonic source$\to$pole
+  transfer reads the $F$ corner) stays \mC, an $F_{\mathrm{transfer}}$ special case. The prediction
+  itself stays \mC. Cited in \texttt{tfpt\_4\_frontier} (Koide section). Suite now 183 modules.
+\item \textbf{Review point 2 noted as already-present:} the claim that flavor and Nariai share one
+  double-cover ClockFunctor (flavor rate $(2/3)^{2\Nfam}$ vs gravity curvature $(2/3)^{\Nfam}$, exponent
+  ratio $|\Z_2|$, ``one clock, two geometries'') is exactly \texttt{HOR.TRISECT.01}/\vref{v103} --- a
+  rediscovery of an existing result, no new module.
+\end{itemize}
+
 \subsection*{2026-06-14 (review recommendations 1/3/4 + the four concerns A--D mapped to the named residuals)}
 \begin{itemize}
 \item \textbf{\texttt{v182\_reviewer\_residual\_map.py} \mE/\mC\ (claim \texttt{REVIEW.MAP.01}).} A
