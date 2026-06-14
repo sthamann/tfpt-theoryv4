@@ -59,6 +59,28 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-14 (the conformal premise reduces to a milder isometry premise v180)}
+\begin{itemize}
+\item \textbf{\texttt{v180\_clock\_is\_mobius.py} \mE/\mO\ (claim \texttt{QGEO.ISO.01}).} Cracks
+  \texttt{QGEO.CONF.01} one level further: the conformal-realisation premise is \emph{replaced}, via
+  three classical theorems, by a strictly \emph{milder, non-circular} premise. (1)~\emph{Uniformisation}
+  (Poincar\'e--Koebe): a genus-$0$ Riemann surface is conformally $\PP$, so the genus-$0$ seam double
+  (P1, \vref{v179}) with its RP-metric conformal structure \emph{is} $\PP$ --- the target is
+  \emph{produced}, not assumed; (2)~\emph{Ker\'ekj\'art\'o} (1919; Constantin--Kolev 2003): a
+  finite-order orientation-preserving homeomorphism of $S^2$ is conjugate to a rotation, so the
+  order-$4$ clock ($h(A_3){=}4$) is topologically $z\mapsto iz$; (3)~\emph{isometry$\Rightarrow$
+  conformal$\Rightarrow$M\"obius}: an orientation-preserving isometry of a Riemannian surface is
+  holomorphic, $\mathrm{Aut}(\PP)=\mathrm{PSL}(2,\mathbb C)$; (4)~an order-$4$ M\"obius map is
+  $z\mapsto iz$ (verified: projective order $4$, fixed $\{0,\infty\}$, multiplier $i$, free orbit
+  $\mu_4$). Hence \texttt{QGEO.CONF.01} is \emph{implied} by the milder premise \texttt{QGEO.ISO.01}:
+  ``the carrier clock is an order-$4$ orientation-preserving \emph{isometry} of the RP seam metric'' ---
+  which does not name $\PP/\mu_4$ (uniformisation produces them) and is the natural statement that the
+  seam transport is metric-compatible (a holonomy preserving the RP inner product). That milder premise
+  is the single, now milder, structural residual of the whole theory; its surface realisation from the
+  raw seam stays honestly \mO. Cited in \texttt{tfpt\_research\_contracts}; Python-only. Suite now 180
+  modules.
+\end{itemize}
+
 \subsection*{2026-06-14 (the two obligations collapse to ONE geometric premise v179)}
 \begin{itemize}
 \item \textbf{\texttt{v179\_conformal\_realisation.py} \mE/\mO\ (claim \texttt{QGEO.CONF.01}).}

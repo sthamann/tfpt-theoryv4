@@ -293,6 +293,7 @@ const NODES: DagNode[] = [
       "v177_seam_marking_kernel.py",
       "v178_marks_kernel_attempt.py",
       "v179_conformal_realisation.py",
+      "v180_clock_is_mobius.py",
     ],
   },
   {
