@@ -1,0 +1,63 @@
+# Preregistration of the TFPT FRB boundary-recovery search (v1).
+#
+# This file is the FROZEN hypothesis. The kernel ratios below are EXACT rationals
+# derived from the TFPT axioms (2/3 = |Z2|/N_fam, transport exponent 6); they
+# must equal frb_tfpt.recovery_kernel.kernel_fractions() byte-for-byte. No
+# refitted exponents are permitted. Edits to the kernel after data inspection
+# invalidate the preregistration.
+version: 1
+frozen_on: 2026-06-14
+
+kernel:
+  energy: ["64/729", "1/729"]      # (2/3)^6, (1/3)^6
+  field:  ["8/27", "1/27"]         # (2/3)^3, (1/3)^3   (amplitude / visibility)
+  step:   ["2/3", "1/3"]           # unpowered sub-burst step
+  tolerance_dex_echo: 0.10
+  tolerance_window_relative: 0.10
+
+rules:
+  no_refitted_exponents: true
+  require_surrogate_calibration: true
+  require_multi_source_replication: true
+  single_source_match_is_candidate_only: true
+  q_threshold: 0.01
+
+targets:
+  FRB01_no_native_dispersion:
+    status: raw_data_required
+    observable: residual_frequency_delay_after_DM_RM_scattering_removal
+    success: no_universal_non_plasma_delay
+
+  FRB02_echo_ratios:
+    observable: consecutive_fluence_or_energy_ratios
+    ratios: ["64/729", "729/64", "8/27", "27/8", "2/3", "3/2"]
+    nulls: [time_shuffle, phase_preserving_shuffle, fluence_censoring_resample]
+    success: enrichment_q_less_0_01_in_at_least_two_sources
+
+  FRB03_activity_windows:
+    observable: W_broad_over_P_and_W_core_over_P
+    ratios: ["8/27", "1/27"]
+    nulls: [population_random_windows, phase_scramble, leave_one_out]
+    success: at_least_five_periodic_repeaters_with_leave_one_out_stability
+
+  FRB04_polarisation_mu4:
+    observable: PA_or_RM_state_transition_matrix
+    expected_spectrum: ["1", "64/729", "1/729"]
+    nulls: [same_stationary_distribution_markov, time_shuffle, block_shuffle, ar1_drift]
+    success: bootstrap_CI_contains_kernel_and_null_q_less_0_01_in_two_sources
+
+  FRB05_baryon_DM_z:
+    observable: Omega_b_from_Macquart_relation
+    success: consistency_only_never_discriminating_vs_Planck
+
+language:
+  forbidden:
+    - "FRBs confirm TFPT"
+    - "FRBs show the boundary kernel"
+    - "FRB 20180916B proves the recovery formula"
+    - "the DM(z) measurement confirms TFPT Omega_b"
+  allowed:
+    - "FRBs provide a preregistered search space for residual boundary-recovery signatures"
+    - "FRB 20180916B is a single window candidate, not replicated"
+    - "FRB.02 is a clean null in the current data"
+    - "FRB.05 is consistent but not discriminating vs Planck"
