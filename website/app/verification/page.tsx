@@ -274,6 +274,49 @@ export default function VerificationPage() {
         </div>
       </section>
 
+      {/* The journey + the structural residual */}
+      <section className="relative border-t border-slate-800/60 py-12 sm:py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            eyebrow="The journey & what remains"
+            title="From two axioms to one geometric premise"
+            description="The verification suite grew in eight phases — foundations, the Standard-Model readouts, the seam=horizon geometry, the horizon/flavor geometry, the R1–R5 and premise-(A) reductions, the external PyR@TE RGE cross-checks, the AQFT bridges, and the AQFT closure. The closure round drives the whole remaining structural question down, step by machine-checked step, to a single definitional premise."
+          />
+          <figure className="mt-8 overflow-hidden rounded-2xl border border-slate-700/40 bg-slate-950/40 p-4 sm:p-6">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/figures/script_timeline.png"
+              alt="A vertical timeline of the verification suite in eight phases: v1–v23 foundations (carrier, E8 glue, alpha^-1, the anchor a=(1,1,2) to which c3 and g_car reduce); v24–v53 Standard-Model readouts; v54–v100 seam=horizon (one-sided Gauss-Bonnet c3=1/(8pi), Coxeter-30 cycle, gapped attractor, frozen registry, null Monte Carlo); v101–v140 horizon and flavor geometry; v141–v158 the R1–R5 reductions and premise (A); v159–v169 PyR@TE RGE cross-checks; v170–v174 AQFT bridges; v175–v181 AQFT closure to the geometric bedrock."
+              className="mx-auto w-full max-w-4xl rounded-lg bg-white"
+            />
+            <figcaption className="mt-4 text-sm leading-relaxed text-slate-400">
+              The eight phases of the ~181-script journey — what each did, mathematically and
+              physically. The two axioms <span className="font-mono">c₃ = 1/(8π)</span> and{" "}
+              <span className="font-mono">g_car = 5</span> are not free knobs: they reduce to the single
+              parabolic anchor <span className="font-mono">a = (1,1,2)</span> plus π, and{" "}
+              <span className="font-mono">g_car = 5</span> is a bootstrap fixed point (forced three ways,
+              Lean-formalised).
+            </figcaption>
+          </figure>
+          <figure className="mt-8 overflow-hidden rounded-2xl border border-slate-700/40 bg-slate-950/40 p-4 sm:p-6">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/figures/residual_chain.png"
+              alt="A descending staircase of eight boxes showing the structural-residual reduction chain. From the naive 'build a quantum-gravity measure', then v175 net existence and full-cone reflection positivity discharged to [E], v176 one central theorem, v177 split into the MARKS and KERNEL obligations, v178 finite cores closed, v179 unify to one conformal-realisation premise QGEO.CONF.01, v180 milder isometry premise QGEO.ISO.01, down to v181 the bedrock QGEO.SYM.01: the carrier mu4 clock is the seam's conformal deck."
+              className="mx-auto w-full max-w-4xl rounded-lg bg-white"
+            />
+            <figcaption className="mt-4 text-sm leading-relaxed text-slate-400">
+              The structural-residual reduction chain (v175–v181). The whole remaining
+              &ldquo;quantum gravity&rdquo; question collapses, one machine-checked step at a time, to a
+              single <span className="text-slate-200">definitional</span> geometric premise{" "}
+              <span className="font-mono">QGEO.SYM.01</span> — the carrier μ₄ clock is the seam&rsquo;s
+              conformal deck. Everything above the bedrock is a theorem or an established citation; the
+              bedrock is a definition, left honestly <span className="font-mono">[O]</span>.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
       {/* The interactive DAG */}
       <section
         id="dag"

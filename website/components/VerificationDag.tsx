@@ -80,8 +80,8 @@ const NODES: DagNode[] = [
     marker: "[O] axiom",
     title: "P1 — the seam constant",
     summary:
-      "The reflection-positive boundary kernel. The seam normaliser, Gauss–Bonnet-hardenable as c₃ = 1/(|ℤ₂|·∮ K) = 1/(8π). One of the two declared inputs.",
-    inputs: ["— declared axiom"],
+      "The reflection-positive boundary kernel. A declared input but NOT a free knob: it reduces to the parabolic anchor a = (1,1,2) via c₃ = 1/(2·e₁(a)·π) = 1/(8π) (e₁(a) = 4 = |ℤ₄|; v23), and the '8' is the one-sided Gauss–Bonnet of the seam normal slice (|ℤ₂|·2π·χ(S²) = 8π, χ = 2; v58/v73). On the dimensionless axis the only transcendental primitive is π.",
+    inputs: ["anchor a = (1,1,2) + π"],
     outputs: ["c₃ = 1/(8π)"],
     failure: "No reflection-positive seam.",
     scripts: [
@@ -99,8 +99,8 @@ const NODES: DagNode[] = [
     marker: "[O] axiom · [E] Lean",
     title: "P2 — the five-slot carrier",
     summary:
-      "The carrier rank g_car = 5 (3 colour + 2 weak). The P2 algebra — hypercharge, anomaly-freedom, integer rigidity — is Lean-formalised (0 sorry). Theorem A is now also Lean-formalised: the Pascal carrier condition 2^g = g²+g+2 has the unique solution g = 5 (audited to the standard kernel axioms). Since the QBL theorem chain (v108–v113) the axiom is reduced to the boundary-net premise: the seam's one scalar kernel must pair the sheets (v110), the certified channel counts the code identically (v112), pair transport is minimally complete (v111), and the one quasi-free kernel — rank = c: 5 carrier block, 8 seam hull — is the defining datum of the free c=8 net (v113); closing the index-4 net statement closes this axiom to [E].",
-    inputs: ["— declared axiom"],
+      "The carrier rank g_car = 5 (3 colour + 2 weak). A declared input but an OVER-DETERMINED bootstrap fixed point, not a free choice: forced three independent ways by the E8 closure (bootstrap μ²−5μ+4 = 0, v6), uniquely solved by the Pascal carrier condition 2^g = g²+g+2 ⇒ g = 5 (Lean-formalised, 0 sorry, audited to the standard kernel axioms), and the (g_car, N_fam) = (5,3) pair is the anchor moment data e₂(a) = g_car (a = (1,1,2) the unique multiset with elem-symm (4,5,2); v53). The P2 algebra — hypercharge, anomaly-freedom, integer rigidity — is Lean-formalised. Since the QBL theorem chain (v108–v113) the axiom is also reduced to the boundary-net premise: the one scalar kernel must pair the sheets (v110), the certified channel counts the code identically (v112), pair transport is minimally complete (v111), and the one quasi-free kernel — rank = c: 5 carrier block, 8 seam hull — is the defining datum of the free c=8 net (v113); closing the index-4 net statement closes this axiom to [E].",
+    inputs: ["anchor a = (1,1,2) (g_car = e₂)"],
     outputs: ["g_car = 5"],
     failure: "Wrong family / charge lattice.",
     scripts: ["v2_carrier_pascal.py", "v14_carrier_uniqueness.py"],

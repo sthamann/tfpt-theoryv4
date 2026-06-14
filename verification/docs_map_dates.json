@@ -80,8 +80,8 @@
   "date": "2026-06-12"
  },
  "introduction::section::Appendix: computational verification (reproducibility)::1": {
-  "hash": "c07f8f8ed98c",
-  "date": "2026-06-12"
+  "hash": "18d85e846635",
+  "date": "2026-06-14"
  },
  "tfpt_1_architecture_e8::front::(front matter)::1": {
   "hash": "31add055d84c",
@@ -684,7 +684,7 @@
   "date": "2026-06-12"
  },
  "tfpt_research_contracts::section::Research Contract 1 --- $(U_{\\mathrm{wall}})$::1": {
-  "hash": "e1f69cb93eb1",
+  "hash": "0fdb3636e74b",
   "date": "2026-06-14"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {

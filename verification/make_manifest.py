@@ -65,7 +65,8 @@ FIG = ["figures/action_tower.pdf", "figures/alpha_ablation.pdf",
        "figures/cover_twins.pdf", "figures/orientation.pdf",
        "figures/seam_units.pdf", "figures/trisection.pdf",
        "figures/rg_running.pdf", "figures/gauge_running.pdf",
-       "figures/slice_compression.pdf"]
+       "figures/slice_compression.pdf", "figures/residual_chain.pdf",
+       "figures/script_timeline.pdf"]
 
 
 def collect():

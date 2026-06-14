@@ -728,6 +728,101 @@ def fig_gauge_running():
     plt.close(fig)
 
 
+def fig_residual_chain():
+    """The structural-residual reduction chain v175 -> v181: how the whole
+    'quantum gravity' residual collapses, step by machine-checked step, to one
+    definitional geometric premise. PDF for tfpt_research_contracts + PNG for the site."""
+    from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
+
+    steps = [
+        ("start", "Naive residual", "''build a quantum-gravity measure''", C["gray"]),
+        ("v175", "Net existence + full-cone RP", "discharged to [E] (CAR functor)", C["green"]),
+        ("v176", "One central theorem", "Seam Collar Realisation Thm", C["green"]),
+        ("v177", "Split into two obligations", "MARKS + KERNEL", C["green"]),
+        ("v178", "Finite cores closed [E]", "Mobius + Schur (spectrum=operator)", C["green"]),
+        ("v179", "Unify to one premise", "QGEO.CONF.01 (conformal realisation)", C["green"]),
+        ("v180", "Milder isometry premise", "QGEO.ISO.01 (uniformisation+Kerekjarto)", C["green"]),
+        ("v181", "BEDROCK", "QGEO.SYM.01: carrier mu4 clock = seam conformal deck", C["gold"]),
+    ]
+    n = len(steps)
+    fig, ax = plt.subplots(figsize=(7.4, 5.4))
+    ax.set_xlim(0, 10); ax.set_ylim(0, n + 0.5); ax.axis("off")
+    ax.set_title("Structural-residual reduction chain: the whole remaining\n"
+                 "''quantum gravity'' question collapses to one definitional premise",
+                 fontsize=10.5, color=C["blue"])
+    bw, bh = 8.4, 0.62
+    centers = []
+    for i, (tag, head, sub, col) in enumerate(steps):
+        y = n - i - 0.1
+        x = 0.5 + i * 0.12                      # slight diagonal descent
+        box = FancyBboxPatch((x, y - bh / 2), bw, bh,
+                             boxstyle="round,pad=0.04,rounding_size=0.12",
+                             linewidth=1.6, edgecolor=col,
+                             facecolor=col, alpha=0.10 if tag != "v181" else 0.20)
+        ax.add_patch(box)
+        ax.text(x + 0.18, y, tag, fontsize=9, fontweight="bold", va="center", color=col)
+        ax.text(x + 1.35, y + 0.10, head, fontsize=8.6, va="center", fontweight="bold",
+                color="#222")
+        ax.text(x + 1.35, y - 0.16, sub, fontsize=7.4, va="center", color=C["gray"])
+        centers.append((x + bw / 2, y))
+    for i in range(n - 1):
+        x0, y0 = centers[i]; x1, y1 = centers[i + 1]
+        ax.add_patch(FancyArrowPatch((x0 - 2.4, y0 - bh / 2), (x1 - 2.4, y1 + bh / 2),
+                                     arrowstyle="-|>", mutation_scale=11,
+                                     color=C["gray"], lw=1.0))
+    ax.text(5.0, 0.18, "Everything above the bedrock is a theorem or an established "
+            "citation; the bedrock is a definition, left honestly [O].",
+            fontsize=7.6, ha="center", style="italic", color=C["gray"])
+    fig.tight_layout()
+    fig.savefig(os.path.join(OUT, "residual_chain.pdf"))
+    fig.savefig(os.path.join(WEB, "residual_chain.png"), dpi=150)
+    plt.close(fig)
+
+
+def fig_script_timeline():
+    """The development timeline of the ~181 verification scripts: the phases of
+    the journey, what each did mathematically and physically. PDF + PNG."""
+    from matplotlib.patches import FancyBboxPatch
+
+    phases = [
+        ("v1-v23", "Foundations", "carrier D5+A3+mu4, E8 glue, alpha^-1 fixed point,\n"
+         "anchor a=(1,1,2) -> {c3,g_car} reduce to {a,pi}", C["blue"]),
+        ("v24-v53", "Standard-Model readouts", "phi0 mass ladder, flavor (Q,K,R,L), lepton/quark\n"
+         "ratios, hypercharge, compiler core (5,3)", C["green"]),
+        ("v54-v100", "Seam = horizon", "one-sided Gauss-Bonnet c3=1/(8pi), Coxeter-30 cycle,\n"
+         "gapped attractor (2/3)^6, frozen registry + null-MC", C["gold"]),
+        ("v101-v140", "Horizon + flavor geometry", "Nariai=anchor, monodromy=W(A3)=S4, cusp\n"
+         "weights {0,1/3,2/3}, H^1 cohomology, canonical map", C["blue"]),
+        ("v141-v158", "R1-R5 + premise (A)", "deck selection, EH mechanism, No-Unit Theorem,\n"
+         "simple-current (E8)1, free c=8 fixed point isolated/stable", C["green"]),
+        ("v159-v169", "PyR@TE cross-checks", "SM gauge/Yukawa/Higgs RGEs confirmed (b1=41/10),\n"
+         "Lambda_QCD, m_H near-criticality, eta_B leptogenesis", C["red"]),
+        ("v170-v174", "AQFT bridges", "E8 slice compression, OS moment/Sugawara, trace\n"
+         "anomaly seed 4/3, strong-CP Pfaffian, Fock readings", C["gold"]),
+        ("v175-v181", "AQFT closure -> geometric bedrock", "net existence + full-cone RP [E];\n"
+         "residual -> one premise: carrier mu4 clock = seam conformal deck", C["blue"]),
+    ]
+    fig, ax = plt.subplots(figsize=(7.6, 6.4))
+    ax.set_xlim(0, 10); ax.set_ylim(0, len(phases) + 0.4); ax.axis("off")
+    ax.set_title("TFPT verification suite: the journey of ~181 machine-checked scripts",
+                 fontsize=10.5, color=C["blue"])
+    ax.plot([0.7, 0.7], [0.3, len(phases) + 0.1], color=C["gray"], lw=1.4, zorder=0)
+    for i, (rng, head, sub, col) in enumerate(phases):
+        y = len(phases) - i - 0.1
+        ax.plot(0.7, y, "o", color=col, ms=9, zorder=3)
+        box = FancyBboxPatch((1.15, y - 0.34), 8.4, 0.68,
+                             boxstyle="round,pad=0.04,rounding_size=0.10",
+                             linewidth=1.4, edgecolor=col, facecolor=col, alpha=0.09)
+        ax.add_patch(box)
+        ax.text(1.35, y + 0.13, f"{rng}  -  {head}", fontsize=8.7, fontweight="bold",
+                va="center", color=col)
+        ax.text(1.35, y - 0.16, sub, fontsize=7.0, va="center", color="#333")
+    fig.tight_layout()
+    fig.savefig(os.path.join(OUT, "script_timeline.pdf"))
+    fig.savefig(os.path.join(WEB, "script_timeline.png"), dpi=150)
+    plt.close(fig)
+
+
 if __name__ == "__main__":
     fig_alpha_ablation()
     fig_mass_ladder()
@@ -744,4 +839,6 @@ if __name__ == "__main__":
     fig_rg_running()
     fig_gauge_running()
     fig_slice_compression()
+    fig_residual_chain()
+    fig_script_timeline()
     print("figures written to", os.path.normpath(OUT))
