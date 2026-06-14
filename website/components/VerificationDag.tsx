@@ -297,6 +297,10 @@ const NODES: DagNode[] = [
       "v181_clock_is_conformal_symmetry.py",
       "v182_reviewer_residual_map.py",
       "v183_koide_f_corner_transfer.py",
+      "v184_etaB_anchored_boltzmann.py",
+      "v185_axion_relic_solver.py",
+      "v187_ftransfer_laws.py",
+      "v188_frontier_wording_guard.py",
     ],
   },
   {

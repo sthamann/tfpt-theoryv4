@@ -1286,5 +1286,26 @@ sector --- is more fundamental but a \emph{programme}, not a single proof: heavy
 projective limit the genuine summit. $F_{\mathrm{transfer}}$ (source$\to$pole / relic / cosmology) is the
 remaining downstream interface.
 
+\par\medskip\noindent\textbf{$F_{\mathrm{transfer}}$ is a typed functor, not a bag of open topics.}
+It is standard physics fed TFPT \emph{source} data, $F_{\mathrm{transfer}}=F_{\mathrm{observable}}\circ
+F_{\mathrm{threshold}}\circ F_{\mathrm{RG}}$, with exactly four interfaces:
+\begin{center}\footnotesize
+\renewcommand{\arraystretch}{1.25}
+\begin{tabularx}{\linewidth}{@{}llcX@{}}
+\toprule
+\textbf{Interface} & \textbf{Map} & \textbf{Status} & \textbf{Source data $\to$ observable} \\
+\midrule
+$F_{\mathrm{pole}}$ & source$\to$pole masses & \mE\,/\,\mC & Koide $53/54 = a^T(R{+}Q)\mathbf1/(2\,\mathbf1^TRa)$ is an exact operator factor \mE\ (the missing Sheet-Diamond corner); the pole-transfer interpretation is \mC\ (\veri{v183\_koide\_f\_corner\_transfer.py}) \\
+$F_{\mathrm{Boltzmann}}$ & CP source$\to\eta_B$ & \mC & $\tilde m_1{=}m_3/A_\Lambda$ anchors the washout, but $M_1{=}M_R\varphi_0^4$ only relocates the free input ($M_R$ is the seesaw scale, not a compiler power), so $\eta_B$ stays a \emph{sharper scenario}, not a closure (\veri{v184\_etaB\_anchored\_boltzmann.py}) \\
+$F_{\mathrm{relic}}$ & $(f_a,m_a,\theta_i,N_{\mathrm{DW}})\to\Omega_a$ & \mC & the determinant-line axion can be all of DM, but only on the $\theta_i\!\approx\!170^\circ$ hilltop where the relic is exponentially sensitive --- a viable scenario (\veri{v185\_axion\_relic\_solver.py}) \\
+$F_{\mathrm{QCD}}$ & $(\alpha_s,b_3,\Lambda_{\mathrm{QCD}},\text{lattice})\to m_p/m_e$ & \mO & a QCD matching contract ($b_3{=}-7$ a carrier output), \emph{not} a compiler number --- the rejected $1836$ near-formula is the discipline working \\
+\bottomrule
+\end{tabularx}
+\end{center}
+\noindent A machine guard enforces the typing: the four families must always carry a \mC/\mO\ marker and
+must never be promoted to a primitive \mE\ compiler prediction (\veri{v187\_ftransfer\_laws.py}). Exact
+\emph{algebraic} sub-parts (the Koide factor, $b_3{=}-7$) may be \mE; the \emph{physical} prediction never
+is. So the visible residual is one geometric postulate (\texttt{QGEO.SYM.01}), one unit gauge
+($v_{\mathrm{geo}}$), and this one typed transfer functor --- everything else is out-of-sample data.
 
 \end{document}

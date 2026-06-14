@@ -59,6 +59,47 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-14 (F\_transfer round: eta\_B honest test v184, axion relic v185, discipline guard v187)}
+\begin{itemize}
+\item \textbf{\texttt{v184\_etaB\_anchored\_boltzmann.py} \mC\ (claim \texttt{FR.ETAB.03}).} An honest
+  test of the external-review $\eta_B$ proposal ($M_1=M_R\varphi_0^4$, $\tilde m_1=m_3/A_\Lambda$).
+  Firewall verdict: \emph{sharper scenario, not a closure}. The washout anchors plausibly
+  ($\tilde m_1=m_3/10\approx5$ meV, $A_\Lambda=10$ atom, in the strong-washout window) \mC; but $M_1$
+  does \emph{not} --- $M_R$ is the seesaw scale $\sim v^2/m_3$ and the nearest clean TFPT powers of
+  $\bar M_{\mathrm{Pl}}$ both miss it ($c_3$-/$\varphi_0$-powers off ${\sim}75\%$/${\sim}40\%$), so
+  $M_1=M_R\varphi_0^4$ merely relocates the free input. $\eta_B$ stays \mC, the route viable but with one
+  (not zero) free input. Cited in \texttt{tfpt\_4\_frontier}.
+\item \textbf{\texttt{v185\_axion\_relic\_solver.py} \mC\ (claim \texttt{FR.DM.03}).} Honest misalignment
+  estimate: the determinant-line axion $f_a=M_{\mathrm{scal}}/128\approx2.39{\times}10^{11}$ GeV
+  ($m_a\approx23.8\,\mu$eV) CAN be all dark matter, but the harmonic misalignment under-produces
+  (${\sim}21\%$ at $\theta\sim O(1)$), so the $\theta_i\approx170^\circ$ hilltop anharmonic enhancement is
+  \emph{required} --- where the relic is exponentially sensitive. Hence a \mC\ scenario, not a sharp
+  prediction; the relic contract is a kill test for the BRANCH, not the theory. Cited in
+  \texttt{tfpt\_4\_frontier}.
+\item \textbf{\texttt{v187\_ftransfer\_laws.py} \mE\ (claim \texttt{FR.TRANSFER.01}).} A CI-style
+  firewall guard: the four continuous-transfer frontier observables (Koide, $\eta_B$, axion,
+  $m_p/m_e$) are read from the ledger and required to carry a \mC/\mO\ marker --- never a primitive
+  \mE\ compiler prediction (exact sub-parts like the Koide $53/54$ factor or $b_3=-7$ may be \mE, the
+  physical prediction never is). Records the four interfaces $F_{\mathrm{pole}}/F_{\mathrm{Boltzmann}}/
+  F_{\mathrm{relic}}/F_{\mathrm{QCD}}$; prevents any future edit from quietly promoting a frontier
+  number to a closed output. Cited in \texttt{tfpt\_4\_frontier}.
+\item \textbf{\texttt{v188\_frontier\_wording\_guard.py} \mE\ (claim \texttt{AUDIT.WORDING.01}).} A prose
+  sentinel (no new physics): \texttt{v187} protects the ledger \emph{typing}, this guard protects the
+  \emph{prose}. It scans the 10 active documents and forbids five stale phrasings whose semantics earlier
+  rounds superseded (the old \mE-typed Route~B leptogenesis claim and its heavy-scale wording $\to$ v184
+  \mC; the old ``open relic scale'' dark-matter line $\to$ v185; the old ``near, not exact'' Koide line
+  $\to$ v183; and the module-count/ID conflation), so a frozen Zenodo release can never re-introduce
+  wording that was true yesterday and is half-true today. The same pass updated the
+  \texttt{tfpt\_4\_frontier} Route~B (to \mC), the Koide and dark-matter summary lines, and added the
+  P1/P2-vs-\texttt{QGEO.SYM.01} two-layer clarification to the introduction. Suite now has \textbf{187
+  modules}, highest verification ID \texttt{v188} (v186 was intentionally skipped as redundant ---
+  $m_p/m_e$ is already typed \mO\ as a QCD matching contract, \texttt{QCD.LAMBDA.01}).
+\item \emph{Review framing points (P1/P2 as projections of the seam-deck postulate, $v_{\mathrm{geo}}$
+  as unit gauge, $G_{\mathrm{net}}$ a corollary of \texttt{QGEO.SYM.01}, grammar tuning $=$ data) were
+  validated as already implemented in the prior rounds; $m_p/m_e$ is already typed \mO\ as a QCD
+  matching contract (\texttt{QCD.LAMBDA.01}), so no redundant module was added.}
+\end{itemize}
+
 \subsection*{2026-06-14 (operator origin of the Koide 53/54 factor: the missing Sheet-Diamond corner, v183)}
 \begin{itemize}
 \item \textbf{\texttt{v183\_koide\_f\_corner\_transfer.py} \mE/\mC\ (claim \texttt{FR.KOIDE.07}).} An

@@ -82,6 +82,15 @@ continuous boundary} of the theory --- the points where the discrete compiler ha
 continuous physics (QCD confinement, cosmological Boltzmann transport, relic integrals). The cleanness of a
 quantity tracks how far it sits from that handoff: pure compiler ratios are exact, QCD/cosmology-dressed
 quantities are typed interfaces. \veri{v35\_quark\_qcd\_boundary.py}
+\par\smallskip\noindent\emph{Machine-enforced.} This rule is a CI-style guard
+(\veri{v187\_ftransfer\_laws.py}): the four frontier families
+($F_{\mathrm{pole}}$ Koide, $F_{\mathrm{Boltzmann}}$ $\eta_B$, $F_{\mathrm{relic}}$ axion,
+$F_{\mathrm{QCD}}$ $m_p/m_e$) are read from the ledger and required to carry a \mC/\mO\ marker --- exact
+algebraic sub-parts (the Koide $53/54$ factor, $b_3=-7$) may be \mE, but the \emph{physical} prediction
+never is. No future edit can quietly promote a frontier number to a closed compiler output. A companion
+\emph{prose} sentinel (\veri{v188\_frontier\_wording\_guard.py}) forbids stale sentences whose semantics an
+earlier round superseded, so a frozen release can never re-introduce wording that was true yesterday and is
+half-true today.
 \end{gapbox}
 
 % =====================================================================
@@ -104,11 +113,14 @@ cosmological readout $\eta_B=273.9\times10^{-10}\,\Omega_b h^2$. With the TFPT H
 So $\eta_B$ is a \emph{downstream cosmological readout} from the closed $\Omega_b h^2$ handle --- not an
 independent compiler rung, and the fundamental leptogenesis route remains an interface.
 
-\paragraph{Route B --- leptogenesis interface (\mE).} The closed branch also fixes the
-leptogenesis inputs: the heavy scale $M_R\approx1.3\times10^{15}$ GeV, the CP phases ($\delta_{\mathrm{CKM}}$,
-$\delta^\nu_{\mathrm{CP}}$, both closed), the reheating $T_R$, and the seam-fixed initial phase. The
-numerical $\eta_B$ then follows from the \emph{standard} flavored-leptogenesis Boltzmann solve --- an
-independent cross-check of Route A. \textbf{Honest caveat:} that Boltzmann network (the
+\paragraph{Route B --- leptogenesis interface (\mC).} The TFPT branch fixes the neutrino
+spectrum, the CP phase structure ($\delta_{\mathrm{CKM}}$, $\delta^\nu_{\mathrm{CP}}$, both closed) and a
+\emph{plausible washout anchor} $\tilde m_1=m_3/A_\Lambda\approx5$ meV. The heavy-mass input, however,
+remains scenario-level: $M_1=M_R\varphi_0^4$ is viable but does \emph{not} close $M_R$ --- $M_R$ is the
+seesaw scale $\sim v^2/m_3$, not a compiler power, so the relation \emph{relocates} the free scale rather
+than pinning it (\veri{v184\_etaB\_anchored\_boltzmann.py}). The numerical $\eta_B$ then follows from the
+\emph{standard} flavored-leptogenesis Boltzmann solve --- an independent consistency route, sharpened from
+two free inputs to one, not to zero. \textbf{Honest caveat:} that Boltzmann network (the
 washout/efficiency $\kappa_f$, the flavored density-matrix equations) is the standard leptogenesis
 machinery (Davidson--Nardi--Nir, \emph{Phys.\ Rep.}\ 466 (2008) 105; Buchm\"uller--Di~Bari--Pl\"umacher,
 \emph{Ann.\ Phys.}\ 315 (2005) 305); it is \emph{not} carried out or attached here. Route~B is therefore a
@@ -140,6 +152,18 @@ The leptogenesis route requires a standard (washout-dependent) Boltzmann solve. 
 determined as a downstream readout, but \emph{not} a clean compiler rung; it must never be quoted as a
 fundamental TFPT output.
 \end{keybox}
+
+\par\smallskip\noindent\textbf{An anchored-Boltzmann proposal, honestly tested}
+(\veri{v184\_etaB\_anchored\_boltzmann.py}).
+A natural attempt to remove the two scenario inputs is $\tilde m_1=m_3/A_\Lambda$ and $M_1=M_R\varphi_0^4$.
+The first \emph{works} as a \mC\ anchor: $\tilde m_1=m_3/10\approx5\times10^{-3}$ eV ($A_\Lambda=10=|E(K_5)|$
+the action-grammar atom) lands in the strong-washout window --- a TFPT-flavoured value for the washout.
+The second does \emph{not}: $M_R\sim v^2/m_3$ is the seesaw scale (depending on the un-fixed neutrino Dirac
+Yukawa), and the nearest clean TFPT powers of $\bar M_{\mathrm{Pl}}$ both miss it (the $c_3$- and
+$\varphi_0$-powers are off by ${\sim}75\%$/${\sim}40\%$), so $M_1=M_R\varphi_0^4$ merely \emph{relocates}
+the free input $M_1\!\to\!M_R$. Feeding both into the standard estimate lands $\eta_B$ in the observed
+band $O(10^{-10})$, so the route stays viable --- but the proposal cuts the free inputs from two to one,
+\emph{not} to zero. \textbf{$\eta_B$ stays \mC, a sharper scenario, not a derivation.}
 
 % =====================================================================
 \section{Proton/electron ratio $m_p/m_e$ --- a cross-sector ratio}
@@ -401,6 +425,16 @@ $m_a\simeq5.70\,\mu\mathrm{eV}\,(10^{12}\,\mathrm{GeV}/f_a)$, a mass $m_a\approx
 This is consistent with the closed near-hilltop misalignment $\theta_i=170.4^\circ$, but it is a
 \emph{cosmological scenario} (sensitive to anharmonic / string corrections near the hilltop), not a closed
 hit. \veri{v25\_frontier\_conjectures.py}
+\par\smallskip\noindent\textbf{Why it stays a scenario, quantified (\veri{v185\_axion\_relic\_solver.py}).}
+The harmonic misalignment \emph{under-produces} at this $f_a$: $\Omega_a h^2\sim0.12\,(f_a/9{\times}10^{11})^{7/6}\langle\theta^2\rangle$
+gives a prefactor ${\sim}0.026$ per $\theta^2$, so $\theta_i\sim O(1)$ would make only ${\sim}21\%$ of
+$\Omega_{\mathrm{DM}}$; reaching the observed $\Omega_{\mathrm{DM}}h^2=0.12$ \emph{requires}
+$\theta_{\mathrm{eff}}^2\sim4.7$, i.e.\ exactly the large-angle (anharmonic) enhancement at the
+$\theta_i\approx170^\circ$ hilltop. So the determinant-line axion \emph{can} be all of dark matter, but
+only on the hilltop, where the relic is exponentially sensitive to $\theta_i$ and to QCD/string
+corrections --- hence a viable \mC\ scenario, not a sharp prediction. The contract
+$F_{\mathrm{relic}}(f_a{=}M_{\mathrm{scal}}/128,\theta_i{\approx}170^\circ,N_{\mathrm{DW}}{=}1)\stackrel{?}{=}\Omega_{\mathrm{DM}}$
+is a kill test for the \emph{branch}, not the theory.
 
 % =====================================================================
 \section{Full quantum gravity --- induced from the boundary kernel}
@@ -479,8 +513,8 @@ independent open content. \veri{v165\_premise\_a\_closure.py}
 \midrule
 $\eta_B$ & \mC & downstream readout $=6.1{\times}10^{-10}$ from closed $\Omega_b h^2$; leptogenesis is an interface (Boltzmann) \\
 $m_p/m_e$ & \mO & cross-sector (QCD scale / closed $m_e$); scheme-level, not a compiler power \\
-Koide $Q$ & \mC & computed $Q=0.664$, $0.33\%$ from $2/3$; near, not exact --- not tuned \\
-dark matter & \mC/\mO & determinant-line axion candidate fixed, $\theta_i=170^\circ$ closed; relic scale $f_a,m_a$ open \\
+Koide $Q$ & \mC & source ratio $Q=0.664$ near $2/3$; the source$\to$pole factor $53/54$ is an \emph{exact operator readout} of the missing $F{=}R{+}Q$ Sheet-Diamond corner \mE; the physical pole transfer ($F_{\mathrm{pole}}$) stays \mC \\
+dark matter & \mC/\mO & determinant-line axion fixed: $\theta_i\approx170^\circ$, $f_a{=}M_{\mathrm{scal}}/128$, $m_a\approx23.8\,\mu$eV define the branch; relic needs the hilltop anharmonic enhancement --- a branch-level kill test, not a theory closure \\
 quantum gravity & \mE/\mO & $R+R^2$ heat-kernel grounded (G2); physical sector gap-decoupled; only ambient limit (G6) open \\
 \bottomrule
 \end{tabularx}

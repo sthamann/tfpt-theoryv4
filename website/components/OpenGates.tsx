@@ -35,8 +35,8 @@ const GATES: Gate[] = [
   {
     tag: "Interface 3",
     marker: "[C]/[C]",
-    title: "F_transfer — source→pole / relic / cosmology",
-    body: "Koide, η_B, the axion relic scale and m_p/m_e are four instances of one missing functor F_transfer — the continuous transport from compiler source data to measured observables (Koide source→pole; η_B source→Boltzmann relic; axion scale→abundance; m_p/m_e→QCD/EW matching). Each has a genuine handle but is a transfer target, deliberately not claimed as a primitive compiler output.",
+    title: "F_transfer — one typed functor, four interfaces",
+    body: "Not a bag of open topics: F_transfer = F_observable ∘ F_threshold ∘ F_RG, standard physics fed TFPT source data, with exactly four interfaces. F_pole (Koide source→pole): the 53/54 factor is an exact operator readout [E], the pole interpretation [C] (v183). F_Boltzmann (CP source→η_B): the washout anchors (m̃₁ = m_3/A_Λ), but M₁ = M_R·φ₀⁴ only relocates the free input — M_R is the seesaw scale, not a compiler power — so η_B stays a sharper scenario [C] (v184). F_relic (axion → Ω_a): all-of-DM is possible only on the θ_i ≈ 170° hilltop, where the relic is exponentially sensitive [C] (v185). F_QCD (m_p/m_e via Λ_QCD, b₃ = −7, lattice): a QCD matching contract [O], not a compiler number (the rejected 1836 near-formula is the discipline working). A machine guard (v187) enforces that all four stay [C]/[O] and are never promoted to a primitive [E] compiler prediction — exact algebraic sub-parts (53/54, b₃ = −7) may be [E], the physical prediction never is.",
     tone: "border-slate-500/30 bg-slate-500/5",
   },
 ];

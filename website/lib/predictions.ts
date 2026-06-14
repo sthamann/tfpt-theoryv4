@@ -445,7 +445,7 @@ export const predictions: Prediction[] = [
     ],
     pdf: "/papers/tfpt_4_frontier.pdf",
     description:
-      "A downstream cosmological readout from the closed Ω_b h² (observed 6.1×10⁻¹⁰). As a fundamental compiler power it is not closed — the leptogenesis Boltzmann solve is an interface.",
+      "A downstream cosmological readout from the closed Ω_b h² (observed 6.1×10⁻¹⁰). As a fundamental compiler power it is not closed — the leptogenesis Boltzmann solve is an interface. An anchored-Boltzmann attempt (v184) was tested honestly: the washout anchors plausibly (m̃₁ = m_3/A_Λ ≈ 5 meV, A_Λ = 10), but M₁ = M_R·φ₀⁴ only relocates the free input (M_R is the seesaw scale ~v²/m_3, not a compiler power), so η_B stays a sharper scenario, not a derivation.",
     category: "Cosmology",
   },
   {
@@ -528,7 +528,7 @@ export const predictions: Prediction[] = [
     ],
     pdf: "/papers/tfpt_4_frontier.pdf",
     description:
-      "The candidate is the determinant-line axion of the strong-CP sector (WIMPs ruled out — no spare E₈ singlet). The misalignment angle is closed; f_a = M_scal/128 is a conjecture.",
+      "The candidate is the determinant-line axion of the strong-CP sector (WIMPs ruled out — no spare E₈ singlet). The misalignment angle is closed; f_a = M_scal/128 is a conjecture. A misalignment estimate (v185) quantifies why it stays a scenario: the harmonic relic under-produces at this f_a (~21% at θ ~ O(1)), so reaching Ω_DM requires the θ_i ≈ 170° hilltop — where the relic is exponentially sensitive. All-of-DM is possible, but a viable scenario, not a sharp prediction.",
     category: "Astrophysics",
   },
 ];

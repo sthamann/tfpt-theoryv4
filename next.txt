@@ -3,6 +3,32 @@
  Stand: 2026-06-08  |  verankert in v81_singular_pencil_matrices.py (11/11), Wolfram 116/116
 ================================================================================
 
+NACHTRAG 2026-06-14 (F_transfer-Runde: ehrlicher eta_B-Test, Axion-Relic, Disziplin-Guard):
+  Externes Review schlug vor, eta_B/Axion/m_p_me als getypte Standardtransfers
+  "vollstaendig zu schliessen". Punkt fuer Punkt validiert, NUR das ehrlich
+  Belastbare gebaut (Firewall):
+  - v184_etaB_anchored_boltzmann.py [C]: der "staerkste Hebel" des Reviews
+    (M_1=M_R*phi0^4, m~1=m_3/A_Lambda) SCHLIESST NICHT. m~1=m_3/A_Lambda=5 meV
+    ankert den Washout plausibel (A_Lambda=10=|E(K5)|-Atom). ABER M_1=M_R*phi0^4
+    VERSCHIEBT den freien Input nur: M_R ist die Seesaw-Skala ~v^2/m_3 (~6e14,
+    haengt vom ungefixten Dirac-Yukawa ab) und KEIN sauberer TFPT-Power von Mbar
+    (c3-/phi0-Power verfehlen um ~75%/~40%). Reviewer-"6.0e-10" entstehen nur mit
+    M_R=1.3e15; Seesaw-Wert gibt 3.4e-10 -- der Treffer wandert mit M_R = Beweis,
+    dass M_1 ungepinnt ist. => eta_B bleibt [C], schaerferes Szenario, keine
+    Ableitung (zwei freie Inputs -> einer, nicht null).
+  - v185_axion_relic_solver.py [C]: harmonisches Misalignment UNTERPRODUZIERT bei
+    f_a=M_scal/128 (~21% bei theta~O(1)); Omega_DM nur am theta_i~170-Hilltop
+    erreichbar, dort exponentiell empfindlich. All-DM moeglich, aber Szenario.
+  - v187_ftransfer_laws.py [I/E]: CI-Guard, der die vier Frontier-Transfers
+    (Koide/eta_B/Axion/m_p_me) ledger-erzwungen auf [C]/[O] haelt, nie primitiv
+    [E]/[N]. Vier Interfaces F_pole/F_Boltzmann/F_relic/F_QCD explizit getypt.
+  - v186 (m_p/m_e) BEWUSST WEGGELASSEN -- bereits [A] QCD-Contract (QCD.LAMBDA.01),
+    redundant.
+  Framing-Punkte des Reviews (P1/P2 als Projektionen, v_geo als Eichung,
+  QGEO.SYM.01 als Postulat, G_net als Korollar, Grammar=Daten) waren bereits
+  umgesetzt. Suite jetzt 186 Module.
+================================================================================
+
 NACHTRAG 2026-06-13 (Pyrate3-Archaeologie + log-periodische Signatur: ehrliche Negativbefunde):
   KONTEXT: die alte experiments/pyrate/Pyrate3 (Aug 2025) nutzte c3=1/(8pi) und
   phi0=1/(6pi)+48 c3^4 (BYTE-IDENTISCH zu heute) als RG-ZIELWERTE in einem E8-Cascade-

@@ -618,7 +618,7 @@ export const papers: Paper[] = [
     sections: [
       {
         title: "Baryon asymmetry η_B — downstream readout + viable transfer route",
-        body: "From the closed baryon fraction Ω_b = (4π − 1)β_rad, the asymmetry follows as a cosmological readout. The fundamental leptogenesis route is now operationalised as a falsifiable interface (v169): fed by TFPT's normal-ordered neutrino spectrum and the predicted δ_CP = 240°, the thermal-leptogenesis estimate η_B ~ 0.96×10⁻²·ε₁·κ_f brackets the observed 6.1×10⁻¹⁰ over natural M₁ ∈ [3×10⁹, 3×10¹⁰] GeV and washout (a canonical point M₁ = 10¹⁰ GeV gives 6.0×10⁻¹⁰, untuned) — so the route is viable. But M₁ and the washout are scenario inputs, so η_B stays [C]: if a precise Boltzmann solve excluded the window the route falls, not the theory (the downstream Ω_b readout is independent).",
+        body: "From the closed baryon fraction Ω_b = (4π − 1)β_rad, the asymmetry follows as a cosmological readout. The fundamental leptogenesis route is now operationalised as a falsifiable interface (v169): fed by TFPT's normal-ordered neutrino spectrum and the predicted δ_CP = 240°, the thermal-leptogenesis estimate η_B ~ 0.96×10⁻²·ε₁·κ_f brackets the observed 6.1×10⁻¹⁰ over natural M₁ ∈ [3×10⁹, 3×10¹⁰] GeV and washout (a canonical point M₁ = 10¹⁰ GeV gives 6.0×10⁻¹⁰, untuned) — so the route is viable. But M₁ and the washout are scenario inputs, so η_B stays [C]: if a precise Boltzmann solve excluded the window the route falls, not the theory (the downstream Ω_b readout is independent). An anchored-Boltzmann proposal was tested honestly (v184): the washout anchors plausibly (m̃₁ = m_3/A_Λ ≈ 5 meV, A_Λ = 10 = |E(K₅)|), but M₁ = M_R·φ₀⁴ only relocates the free input — M_R is the seesaw scale ~v²/m_3 (the nearest clean TFPT powers of M̄_Pl miss it by ~40–75%), not a compiler power — so the proposal cuts the free inputs from two to one, not to zero. η_B stays a sharper scenario, not a derivation.",
         formulas: [
           "\\Omega_b = (4\\pi - 1)\\beta_{\\mathrm{rad}} = 0.04894, \\qquad \\Omega_b h^2 = 0.0222",
           "\\eta_B = 6.09\\times 10^{-10} \\quad (\\text{observed } 6.1\\times 10^{-10})",
@@ -643,7 +643,7 @@ export const papers: Paper[] = [
       },
       {
         title: "Dark matter — candidate fixed, scale pending",
-        body: "The candidate is the determinant-line axion of the strong-CP sector; WIMPs are ruled out (no spare E₈ singlet). The misalignment angle is closed; the decay constant is a conjecture.",
+        body: "The candidate is the determinant-line axion of the strong-CP sector; WIMPs are ruled out (no spare E₈ singlet). The misalignment angle is closed; the decay constant is a conjecture. A misalignment estimate (v185) quantifies why the relic stays a scenario: the harmonic abundance under-produces at f_a = M_scal/128 ≈ 2.39×10¹¹ GeV (only ~21% of Ω_DM at θ ~ O(1)), so reaching the observed Ω_DM h² = 0.12 requires the anharmonic enhancement at the θ_i ≈ 170° hilltop — where the relic is exponentially sensitive to θ_i and to QCD/string corrections. All-of-DM is therefore possible, but a viable scenario, not a sharp prediction; the relic contract is a kill test for the branch, not the theory.",
         formulas: [
           "\\theta_i = \\pi(1 - \\varphi_{\\mathrm{seam}}(\\alpha_\\star)) = 170.4^\\circ",
           "f_a = \\frac{M_{\\mathrm{scal}}}{2\\dim S^+ |\\mu_4|} = \\frac{M_{\\mathrm{scal}}}{128} \\approx 2.39\\times 10^{11}\\,\\text{GeV}, \\quad m_a \\approx 23.8\\,\\mu\\text{eV}",
@@ -1029,6 +1029,14 @@ export const papers: Paper[] = [
         body: "The selector-triangle pairings and the v_geo scale anchor are finite, algebraic and falsifiable today; G_net is a deep analytic programme; F_transfer is the downstream interface. The recommended order freezes the frontier status in between.",
         formulas: [
           "\\text{selector pairings} \\rightarrow v_{\\mathrm{geo}} \\rightarrow G_{\\mathrm{net}}",
+        ],
+      },
+      {
+        title: "F_transfer is a typed functor, not a bag of open topics",
+        body: "F_transfer = F_observable ∘ F_threshold ∘ F_RG — standard physics fed TFPT source data — with exactly four interfaces. F_pole (Koide): the 53/54 factor is an exact operator readout [E], the pole interpretation [C] (v183). F_Boltzmann (η_B): the washout anchors (m̃₁ = m_3/A_Λ) but M₁ = M_R·φ₀⁴ only relocates the free input (M_R is the seesaw scale, not a compiler power), so η_B stays a sharper scenario [C] (v184). F_relic (axion): all-of-DM only on the θ_i ≈ 170° hilltop, exponentially sensitive [C] (v185). F_QCD (m_p/m_e): a QCD matching contract [O], not a compiler number. A machine guard (v187) enforces that all four stay [C]/[O] and are never promoted to a primitive [E] compiler prediction — exact algebraic sub-parts (53/54, b₃ = −7) may be [E], the physical prediction never is.",
+        formulas: [
+          "F_{\\mathrm{transfer}} = F_{\\mathrm{observable}} \\circ F_{\\mathrm{threshold}} \\circ F_{\\mathrm{RG}}",
+          "\\{F_{\\mathrm{pole}},\\ F_{\\mathrm{Boltzmann}},\\ F_{\\mathrm{relic}},\\ F_{\\mathrm{QCD}}\\}",
         ],
       },
     ],
