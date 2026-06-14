@@ -1592,6 +1592,19 @@ Module[{Nfam, q, qm, q0, qp, decoyA, decoyB},
     qm == 2 && q0 == 7/2 && qp == 5 && decoyA == 7/2 && decoyB == 3/2];
 ];
 
+(* ---- (v193) QGEO.ENERGY.02 EH-rigidity rider: the EH coeff selects q(A3), not q(D5) ---- *)
+Module[{gcar, Nfam, mu4, c3, qA3, qD5, kFamily, kCarrier, kTarget},
+  gcar = 5; Nfam = 3; mu4 = 4;
+  c3 = 1/(8 Pi);
+  qA3 = Nfam/mu4;                         (* 3/4 family glue norm *)
+  qD5 = gcar/mu4;                         (* 5/4 carrier glue norm *)
+  kTarget = c3/2;                         (* 1/(16 pi) seam EH coefficient *)
+  kFamily = qA3/(12 Pi);                  (* q(A3) reproduces it *)
+  kCarrier = qD5/(12 Pi);                 (* q(D5) does NOT *)
+  checkExact["v193 QGEO.ENERGY.02 EH-rigidity: induced k=(ln m)/(12 pi) reproduces c3/2=1/(16 pi) iff ln m = q(A3)=3/4 (FAMILY norm); the carrier norm q(D5)=5/4 gives k=5/(48 pi) != 1/(16 pi), off by q(D5)/q(A3)=g_car/N_fam=5/3 -- the energy form must reproduce the family norm (gravity family-geometry-induced)",
+    kFamily == kTarget && kCarrier != kTarget && qD5/qA3 == gcar/Nfam && 12 Pi kTarget == qA3];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v191: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v193: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

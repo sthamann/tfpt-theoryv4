@@ -16,6 +16,10 @@ none of the stale phrasings appear in the active documents.
        exact operator origin; the summary must show that.
     5. "Suite now 187 modules" -> conflates count with ID; the count is 187 and
        the highest ID is v188 (v186 skipped).
+    6. "Full quantum dynamics" -> standalone over-claim; the closure is the
+       ADMISSIBLE physical sector, not the full ambient 4D theory.
+    7. "Here is the complete solution" -> standalone over-claim; scope it to the
+       admissible sector and state the ambient measure is not constructed.
 
   Python-only (text sentinel over the active documents).
 """
@@ -47,6 +51,12 @@ FORBIDDEN = {
     r"Suite now 187 modules":
         "conflates count with ID: the count is 187 and the highest ID is v188 (v186 skipped); "
         "use 'has 187 modules, highest ID v188'",
+    r"Full quantum dynamics":
+        "standalone over-claim: the closure is the ADMISSIBLE physical sector, not the full "
+        "ambient 4D theory; use 'Constructive QFT closure of the admissible physical sector'",
+    r"Here is the complete solution":
+        "standalone over-claim (gives reviewers free ammunition): scope it to the admissible "
+        "sector and state the ambient measure is not constructed (G_metric frontier)",
 }
 
 

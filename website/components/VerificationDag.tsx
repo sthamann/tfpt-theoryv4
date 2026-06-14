@@ -305,6 +305,7 @@ const NODES: DagNode[] = [
       "v190_nariai_entropy_bound.py",
       "v191_universal_branch_line.py",
       "v192_qgeo_energy_clock.py",
+      "v193_qgeo_energy_commutator.py",
     ],
   },
   {

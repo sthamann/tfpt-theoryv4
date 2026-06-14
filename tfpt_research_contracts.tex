@@ -246,6 +246,19 @@ so \texttt{QGEO.ENERGY.01} \emph{relocates} the bedrock to a more falsifiable su
 eliminate it --- it becomes a theorem only if $\rho$ is defined \emph{independently} (from the carrier
 algebra) and the invariance is then \emph{proven}, which is open. The bedrock therefore stays \mO; the gain
 is a sharper operator-analytic target, not a closure.
+\par\smallskip\noindent\textbf{The non-circular sharpening: \texttt{QGEO.ENERGY.02}
+(\veri{v193\_qgeo\_energy\_commutator.py}).} The way to make ``$\rho$ defined independently'' precise is the
+\emph{energy commutator} $[\rho,\Lambda_\Sigma]=0$ on the rank-$8$ Calder\'on polarisation, with three
+sub-claims: (1)~$\rho$ is the Coxeter element of $W(A_3)=S_4$ (order $4=|\mu_4|$, \vref{v117}), defined from
+the \emph{carrier} algebra, not the seam; (2)~\emph{the non-circularity hinge} --- $\Lambda_\Sigma$ must be
+the DtN of the \emph{raw} RP seam (definable from the RP data alone), not the $\mu_4$ normal-form operator;
+(3)~$[\rho,\Lambda_\Sigma]=0$ forces the $\mu_4$ character grading $(1,2,3)$ on $H^1$, already established
+(\texttt{QGEO.COHOM.01}). An exact consistency rider pins the direction: the induced EH coefficient
+$k=(\ln m)/(12\pi)$ (\vref{v150}) reproduces $c_3/2$ \emph{iff} $\ln m=q(A_3)=\tfrac34$ (the \emph{family}
+glue norm), while $q(D_5)=\tfrac54$ (the carrier norm) misses by $g_{\mathrm{car}}/\Nfam=\tfrac53$ --- so
+the seam energy form must reproduce the \emph{family} norm (gravity is family-geometry-induced). If
+sub-claim (2) holds, $[\rho,\Lambda_\Sigma]=0$ turns \texttt{QGEO.SYM.01} from definitional bedrock into an
+\emph{energy-rigidity theorem}; until then it is a sharp, falsifiable \emph{proof target}, \mO.
 \end{keybox}
 
 \begin{figure}[t]

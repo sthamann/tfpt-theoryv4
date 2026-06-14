@@ -59,6 +59,26 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-14 (QGEO.ENERGY.02 energy-commutator + QFT-wording hardening --- v193)}
+\begin{itemize}
+\item \textbf{\texttt{v193\_qgeo\_energy\_commutator.py} \mO\ (claim \texttt{QGEO.ENERGY.02}).} The
+  non-circular sharpening of \texttt{QGEO.ENERGY.01}: the energy commutator
+  $[\rho,\Lambda_\Sigma]=0$ on the rank-$8$ Calder\'on polarisation, with three sub-claims --- (1) \mE\
+  $\rho$ is carrier-defined (Coxeter of $W(A_3){=}S_4$, \vref{v117}), not imported from the seam; (2) \mO\
+  the non-circularity hinge: $\Lambda_\Sigma$ must be the \emph{raw} RP-seam DtN, not the $\mu_4$ normal
+  form; (3) \mE\ the commutator forces the $(1,2,3)$ grading on $H^1$ (\texttt{QGEO.COHOM.01}). Exact \mE\
+  rider (Wolfram-mirrored): the induced EH coefficient $k=(\ln m)/(12\pi)$ (\vref{v150}) reproduces
+  $c_3/2$ iff $\ln m=q(A_3)=\tfrac34$ (\emph{family}), not $q(D_5)=\tfrac54$ (carrier, off by $5/3$) ---
+  gravity is family-geometry-induced. A \emph{proof target}; if sub-claim (2) holds, \texttt{QGEO.SYM.01}
+  becomes an energy-rigidity theorem. Cited in \texttt{tfpt\_research\_contracts}. Suite now 192 modules,
+  highest ID \texttt{v193}; Wolfram extension $236/236$.
+\item \textbf{QFT-wording hardening (review point 7).} \texttt{tfpt\_2\_standard\_model} \S(4) was
+  retitled to ``Constructive QFT closure of the admissible physical sector'', and its standalone
+  opening over-claim replaced by an explicitly scoped sentence (the unprojected ambient metric measure is
+  not constructed; $G_{\mathrm{metric}}$ frontier). The two superseded standalone phrasings were added to
+  the \texttt{v188} prose guard so a frozen release cannot re-introduce them.
+\end{itemize}
+
 \subsection*{2026-06-14 (geometry round: Riemann-Roch carrier, Nariai bound, branch line, energy clock --- v189--v192)}
 \begin{itemize}
 \item \textbf{\texttt{v189\_riemann\_roch\_carrier.py} \mE/\mC\ (claim \texttt{ARCH.RRCAR.01}).} The pair

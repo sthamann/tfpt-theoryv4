@@ -375,8 +375,8 @@
   "hash": "9e8863919ffb",
   "date": "2026-06-13"
  },
- "tfpt_2_standard_model::subsection::(4) Full quantum dynamics --- solvable on the physical sector \\mE/\\mC::1": {
-  "hash": "50150318e7ef",
+ "tfpt_2_standard_model::subsection::(4) Constructive QFT closure of the admissible physical sector \\mE/\\mC::1": {
+  "hash": "b607e759ec51",
   "date": "2026-06-13"
  },
  "tfpt_2_standard_model::subsection::(5) Axioms P1/P2 --- P2 machine-verified, P1 as an interface \\mE/\\mO::1": {
@@ -684,7 +684,7 @@
   "date": "2026-06-12"
  },
  "tfpt_research_contracts::section::Research Contract 1 --- $(U_{\\mathrm{wall}})$::1": {
-  "hash": "1f7e2295dbc2",
+  "hash": "d795b5d4f971",
   "date": "2026-06-14"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {
