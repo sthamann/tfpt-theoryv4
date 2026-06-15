@@ -596,7 +596,7 @@
   "date": "2026-06-14"
  },
  "tfpt_4_frontier::section::Dark matter --- the candidate is fixed, the scale is pending::1": {
-  "hash": "a943aa9eedf7",
+  "hash": "224877eaa28b",
   "date": "2026-06-15"
  },
  "tfpt_4_frontier::section::Full quantum gravity --- induced from the boundary kernel::1": {
@@ -684,8 +684,8 @@
   "date": "2026-06-12"
  },
  "tfpt_research_contracts::section::Research Contract 1 --- $(U_{\\mathrm{wall}})$::1": {
-  "hash": "647679e7deab",
-  "date": "2026-06-14"
+  "hash": "7872dc8d1a34",
+  "date": "2026-06-15"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {
   "hash": "61357e9e0506",
@@ -740,8 +740,8 @@
   "date": "2026-06-12"
  },
  "origin_theory::section::Honest status::1": {
-  "hash": "cb139a62a455",
-  "date": "2026-06-14"
+  "hash": "338593825589",
+  "date": "2026-06-15"
  },
  "origin_theory::section::Appendix: computational verification::1": {
   "hash": "48687b83b93b",

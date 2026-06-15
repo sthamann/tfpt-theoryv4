@@ -19,3 +19,11 @@ the leptogenesis *branch* falls (the downstream `Ω_b` readout `FR.ETAB.01` is i
 
 **status** — `[C]` with one scenario input (`M_R`). The washout is anchored; `M₁=M_R φ₀⁴` only *relocates*
 the free scale. Never quote `η_B` as a compiler power.
+
+**computed (`fboltzmann_strip.py`, 2026-06-15)** — turns `v184`'s single point into the honest strip: with the
+anchored washout (`κ_f ≈ 0.073`) and the predicted `δ_CP=240°` (`|sin|=0.866`), `η_B^obs = 6.1×10⁻¹⁰` is
+reproduced along an `M₁` strip from `≈8.8×10⁹ GeV` upward, i.e. `M_R ≳ 1.1×10¹⁵ GeV` — the lower edge sits
+within a factor `~2` of the *natural* seesaw scale `v²/m₃ ≈ 6×10¹⁴ GeV`, so the required heavy scale is
+physically reasonable, not tuned. The strip is bounded below (need `M₁` large enough) and above by
+`T_RH > M₁` + perturbativity. Stays `[C]`: the washout is TFPT-anchored, but `M_R` is the one free dial
+(`M₁=M_R φ₀⁴` relocates it; `M_R` is not a clean `Mbar` power).

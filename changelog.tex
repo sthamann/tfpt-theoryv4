@@ -59,6 +59,24 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-15 (bedrock: the $\omega\circ\rho=\omega$ residual reduced once more --- v201)}
+\begin{itemize}
+\item \textbf{\texttt{QGEO.SUBPRIN.01} (\vref{v201}, \mE/\mO).} The \vref{v199} bedrock residual --- ``the
+  bounded sub-principal symbol of the raw seam DtN has no off-character (mod 4) matrix elements'' --- is
+  reduced one genuine step further: block-diagonality is \emph{not} an independent postulate. Writing the
+  DtN as $\Lambda=|k|+M_f$ with $M_f$ the bounded sub-principal piece $=$ multiplication by a curvature
+  $f(\theta)$ (standard Steklov structure), $M_f$ is $\mu_4$-character-block-diagonal iff $f$ is
+  $\Z_4$-invariant (\mE; principal $|k|$ already commutes, \vref{v198}); and a $\mu_4$-mark sum
+  $f=\sum_{j=0}^3 g(\theta-2\pi j/4)$ has $f_m=4g_m[m\equiv0\bmod4]$ for any profile $g$, hence is
+  automatically $\Z_4$-invariant (\mE). So the $\mu_4$-mark orbit (forced by \vref{v195}) \emph{forces} the
+  sub-principal symbol block-diagonal; $3$ marks ($\Z_3$) and $4$ generic marks break it (negative
+  controls). The residual collapses to ``the DtN sub-principal symbol is mark-local (seam flat away from the
+  $\mu_4$ marks $=$ conformal deck, \vref{v177})'', structurally definitional --- the narrowest form yet of
+  \texttt{QGEO.SYM.01}, \mO. Registered in \texttt{run\_all.py}, the ledger, \texttt{tfpt\_research\_contracts},
+  \texttt{origin\_theory}; Wolfram-mirrored (the mark-sum Fourier identity is exact; extension now
+  $242/242$). Suite $200$ modules.
+\end{itemize}
+
 \subsection*{2026-06-15 (F\_transfer workshop: the axion relic solver --- an honest over-production tension)}
 \begin{itemize}
 \item \textbf{Axion relic solver (\texttt{experiments/ftransfer/axion\_relic/relic\_solver.py}, \mC).} The
@@ -73,6 +91,14 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
   compiler. Reflected in \texttt{tfpt\_4\_frontier} (dark-matter section) and the \vref{v185} docstring;
   experiments-only, not a suite/ledger claim. No refitted exponents; $\theta_i=\pi(1-\varphi_{\mathrm{seam}})$
   only.
+\item \textbf{Full finite-$T$ solve confirms it (\texttt{axion\_relic/full\_finiteT\_solve.py}).} A converged
+  nonlinear misalignment solve ($\theta''+(3+\mathrm{d}\ln H/\mathrm{d}N)\theta'+(m_a(T)/H)^2\sin\theta=0$,
+  lattice $\chi(T)\propto T^{-8.16}$, realistic $g_*(T)$; normalised so $\theta_i{=}1\to\Omega_a h^2\approx0.03$,
+  the standard value) gives $\Omega_a h^2\approx0.66$ at the predicted $\theta_i\approx170^\circ$ ---
+  $\sim$5.5$\times$ above $\Omega_{\mathrm{DM}}=0.12$, reached only at $\theta_i\approx106^\circ$. The
+  over-production is thus \emph{confirmed} (not the optimistic ``all-DM''); \texttt{tfpt\_4\_frontier},
+  \vref{v185} docstring and the website updated accordingly. Stays \mC; kills only the
+  axion-as-dominant-DM branch.
 \end{itemize}
 
 \subsection*{2026-06-14 (work packages A+B: attacking $\omega\circ\rho=\omega$ + the variational scan --- v199, v200)}

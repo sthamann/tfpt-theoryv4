@@ -313,6 +313,7 @@ const NODES: DagNode[] = [
       "v198_modular_commutator_reduction.py",
       "v199_seam_state_invariance.py",
       "v200_seam_variational_scan.py",
+      "v201_seam_subprincipal_marks.py",
     ],
   },
   {

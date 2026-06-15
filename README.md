@@ -121,7 +121,7 @@ anchor (`1/G` is UV-sensitive, Sakharov-type induced gravity) — not a diffuse 
 
 | Item | What it is |
 |---|---|
-| `v1_*.py … v200_*.py` | 199 numbered claim checks (one file per claim cluster; highest ID `v200`, `v186` skipped as redundant). |
+| `v1_*.py … v201_*.py` | 200 numbered claim checks (one file per claim cluster; highest ID `v201`, `v186` skipped as redundant). |
 | `run_all.py` | Runs the whole suite; ends `ALL CHECKS PASSED`. |
 | `tfpt_constants.py` | Shared constants + `check()` harness. |
 | `predictions_frozen.json` | **Blind-prediction registry** (frozen 2026-06-09): every dimensionless prediction of record at 25 digits, locked to its formula by `v84_frozen_registry.py` on every run; exactly one `θ12` prediction of record (seed `0.306747`), `r`/`n_s` only as `N_star` bands. |
@@ -131,7 +131,7 @@ anchor (`1/G` is UV-sensitive, Sakharov-type induced gravity) — not a diffuse 
 | `audit_sync.py` | **The sync audit** (papers ↔ suite ↔ ledger ↔ changelog ↔ website, both directions); must end `AUDIT OK`. |
 | `make_figures.py` | Regenerates the figures (status heatmap, attractor, Coxeter circle, …). |
 | `make_manifest.py` | Writes `manifest.sha256` + `lean_manifest.sha256` (content digests). |
-| `wolfram/tfpt_readouts.wl` | Independent second path on Wolfram Engine (`116/116` checks); `wolfram/tfpt_readouts_extension.wl` mirrors the exact algebraic/identity/lattice results v84–v200 (`241/241`, verified on Wolfram Engine 14.3). |
+| `wolfram/tfpt_readouts.wl` | Independent second path on Wolfram Engine (`116/116` checks); `wolfram/tfpt_readouts_extension.wl` mirrors the exact algebraic/identity/lattice results v84–v201 (`242/242`, verified on Wolfram Engine 14.3). |
 | `redteam/run_redteam.py` | **Adversarial layer.** Tries to *break* the five reductions (Targets A–E); verdicts in `REDTEAM.*` ledger rows + `tfpt_5_redteam.tex`. |
 
 ### Other directories
@@ -162,7 +162,7 @@ bash build.sh notes
 cd verification && python run_all.py
 
 # 3. Independent Wolfram path  ->  "116/116 passed"  (optional, needs Wolfram Engine)
-#    (the v84+ extension mirrors the exact results, 241/241)
+#    (the v84+ extension mirrors the exact results, 242/242)
 wolframscript -file verification/wolfram/tfpt_readouts.wl
 wolframscript -file verification/wolfram/tfpt_readouts_extension.wl
 
@@ -247,10 +247,14 @@ The ledger is *append-only and versioned*: superseded rows are marked `active=fa
   Lefschetz/character argument rather than posited (`v195`), and the bedrock is cracked to a clean
   **state-invariance** — the DtN principal symbol `|k|=diag(|n|)` commutes *exactly* with the clock
   `diag(iⁿ)` on all of `L²`, and by Tomita–Takesaki `[ρ,Λ_Σ]=0` *follows from* `ω∘ρ=ω` with no conformal
-  covariance (removing the Bisognano–Wichmann circularity, `v198`). So the entire residual is now the
-  single, checkable, non-circular statement *“the raw quasi-free seam state is `μ₄`-invariant”* — a
-  foundational symmetry postulate in its sharpest falsifiable form (the role `c=const` plays in relativity),
-  not a missing theorem.
+  covariance (removing the Bisognano–Wichmann circularity, `v198`). The bounded residual is then reduced
+  once more (`v201`): writing the DtN as `Λ=|k|+M_f` with `M_f` multiplication by the boundary curvature
+  `f(θ)`, block-diagonality holds iff `f` is `Z₄`-invariant, and a curvature sourced by the four `μ₄` marks
+  `f=Σⱼ g(θ−2πj/4)` *is* automatically `Z₄`-invariant — so the `μ₄`-mark orbit (forced by `v195`) *forces*
+  the sub-principal symbol block-diagonal. The entire residual thus collapses to the **mark-locality** of
+  the DtN (the seam flat away from the `μ₄` marks `=` the conformal-deck structure) — a foundational
+  symmetry postulate in its sharpest, structurally-definitional form (the role `c=const` plays in
+  relativity), not a missing theorem.
 - **Absolute amplitude normalisation** (`U_point`) — an anchor; the quark *ratios* are closed.
 - **Frontier interfaces** (`m_p/m_e`, `η_B`, Koide, axion relic) — deliberately typed as
   interfaces, never quoted as compiler outputs.

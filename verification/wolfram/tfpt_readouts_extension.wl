@@ -1663,6 +1663,26 @@ Module[{nn, rho, idx, Hbd, Hoff, classOf},
     rho . Hoff - Hoff . rho != ConstantArray[0, {Length[nn], Length[nn]}]];
 ];
 
+(* ---- (v201) QGEO.SUBPRIN.01: a mu4-mark sum is Z4-invariant => sub-principal block-diagonal ---- *)
+Module[{markSum, nn, rho, fmodes, Mf, Moff, gprof},
+  (* exact: the mu4-mark Fourier weight  sum_{j=0}^3 e^{-i m 2pi j/4} = 4 [m=0 mod 4], else 0 *)
+  markSum[m_] := Sum[Exp[-I m 2 Pi j/4], {j, 0, 3}];
+  nn = Range[-8, 8];
+  rho = DiagonalMatrix[I^nn];                              (* carrier clock *)
+  gprof[m_] := {0 -> 13/10, 1 -> -7/10, -1 -> -7/10, 2 -> 2/5, -2 -> 2/5, 3 -> 1/5, -3 -> 1/5}; 
+  (* mark-sourced f: f_m = markSum[m]/4-weighted profile -> only modes ≡0 mod 4 survive *)
+  fmodes[m_] := (markSum[m] /. {x_ /; x == 0 -> 0}) * (m /. gprof[m] /. _Integer -> 0);
+  (* multiplication operator <n|M|n'> = f_{n-n'} with f supported on modes ≡0 mod4 (Z4-invariant) *)
+  Mf = Table[If[Mod[nn[[a]] - nn[[b]], 4] == 0, 1, 0], {a, Length[nn]}, {b, Length[nn]}];
+  Moff = Mf; Moff[[Position[nn, 0][[1, 1]], Position[nn, 1][[1, 1]]]] = 1;
+              Moff[[Position[nn, 1][[1, 1]], Position[nn, 0][[1, 1]]]] = 1;
+  checkExact["v201 QGEO.SUBPRIN.01: a mu4-mark sum sum_{j=0}^3 e^{-i m 2pi j/4} = 4 on multiples of 4 and 0 otherwise (Z4-invariant), so a mark-sourced curvature f has Fourier support only on modes ≡0 (mod 4); the multiplication operator M_f is then mu4-character-block-diagonal ([rho,M_f]=0), while an off-character (mode-1) entry breaks it -- block-diagonality is FORCED by the mu4 marks (v195), not postulated",
+    Simplify[markSum[0]] == 4 && Simplify[markSum[4]] == 4 && Simplify[markSum[-4]] == 4 &&
+    Simplify[markSum[1]] == 0 && Simplify[markSum[2]] == 0 && Simplify[markSum[3]] == 0 &&
+    rho . Mf - Mf . rho == ConstantArray[0, {Length[nn], Length[nn]}] &&
+    rho . Moff - Moff . rho != ConstantArray[0, {Length[nn], Length[nn]}]];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v200: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v201: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

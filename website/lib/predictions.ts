@@ -528,7 +528,7 @@ export const predictions: Prediction[] = [
     ],
     pdf: "/papers/tfpt_4_frontier.pdf",
     description:
-      "The candidate is the determinant-line axion of the strong-CP sector (WIMPs ruled out — no spare E₈ singlet). The misalignment angle is closed; f_a = M_scal/128 is a conjecture. A misalignment estimate (v185) and a fuller relic solve (experiments/ftransfer/axion_relic) keep it honest: at the predicted θ_i ≈ 170° hilltop the anharmonic factor F ≈ 4 times θ_i² ≈ 8.8 OVER-shoots — Ω_a h² ~ 0.6–2.3, above Ω_DM h² = 0.12. So as the dominant DM it is in mild tension (would prefer θ_i ~ 120–130° or dilution); the near-hilltop estimate is O(1)-uncertain, a full finite-T solve decides. A scenario, not a sharp prediction.",
+      "The candidate is the determinant-line axion of the strong-CP sector (WIMPs ruled out — no spare E₈ singlet). The misalignment angle is closed; f_a = M_scal/128 is a conjecture. A misalignment estimate (v185) and a converged full finite-T solve (experiments/ftransfer/axion_relic) decide it: at the predicted θ_i ≈ 170° hilltop the relic is Ω_a h² ≈ 0.66 — ~5.5× above Ω_DM h² = 0.12 (the observed value needs θ_i ≈ 106°). So as the dominant DM it OVER-closes the universe unless there is extra dilution or a lower f_a — a confirmed tension. A scenario, not a sharp prediction.",
     category: "Astrophysics",
   },
 ];

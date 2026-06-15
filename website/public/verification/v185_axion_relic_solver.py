@@ -33,14 +33,15 @@ under-produces at this f_a, so the hilltop enhancement is required).
   Python-only (analytic misalignment estimate; the full finite-T ODE with chi(T)
   is a standard cosmology computation, flagged, not a compiler claim).
 
-  UPDATE (relic solve, experiments/ftransfer/axion_relic): a fuller misalignment
-  computation (anharmonic factor F(theta_i)~4 at the hilltop) finds the PREDICTED
-  theta_i ~ 170 deg tends to OVER-produce (Omega_a h^2 ~ 0.6-2.3 > 0.12) -- so as the
-  DOMINANT dark matter the branch is in mild TENSION (it would prefer theta_i ~
-  120-130 deg, or dilution), refining the optimistic 'can be all-DM' here toward an
-  over-production tension. The near-hilltop regime is O(1)-uncertain, so a full
-  finite-T solve decides. Stays [C] either way; over-production kills the
-  axion-as-dominant-DM reading, not the compiler.
+  UPDATE (full finite-T solve, experiments/ftransfer/axion_relic): a CONVERGED
+  nonlinear misalignment solve (exact theta'' + (3+dlnH/dN)theta' + (m_a(T)/H)^2
+  sin theta = 0, lattice chi(T)~T^-8.16, realistic g_*(T); normalised so theta_i=1
+  gives the standard Omega_a h^2 ~ 0.03) now DECIDES it: at the PREDICTED theta_i ~
+  170 deg the relic is Omega_a h^2 ~ 0.66, ~5.5x ABOVE 0.12 (Omega_DM is reached
+  only at theta_i ~ 106 deg). So the determinant-line axion as the DOMINANT dark
+  matter OVER-produces -- a confirmed tension, not the optimistic 'all-DM'. Stays
+  [C]; over-production kills the axion-as-dominant-DM reading (needs dilution or a
+  lower f_a), not the compiler.
 """
 import math
 
