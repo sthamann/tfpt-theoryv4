@@ -1,0 +1,55 @@
+{
+  "muon_g2": {
+    "unit": "1e-11",
+    "a_exp_worldavg": {"value": 116592071.5, "sigma": 14.5,
+      "reference": "Fermilab Muon g-2 final, PRL 135 101802 (2025); BNL+FNAL world avg, 124 ppb"},
+    "sm_baselines": {
+      "SM_WP2020_dispersive": {"value": 116591810.0, "sigma": 43.0,
+        "reference": "Theory Initiative White Paper 2020 (data-driven e+e- HVP)",
+        "note": "the dispersive baseline that produced the historical 4-5 sigma anomaly"},
+      "SM_lattice_2025": {"value": 116592033.0, "sigma": 63.0,
+        "reference": "Theory Initiative update 2025, arXiv:2505.21476 (lattice-dominated HVP)",
+        "note": "lattice HVP; brings SM up, residual ~0 ('g-2 puzzle resolved')"},
+      "SM_CMD3_related": {"value": null, "sigma": null,
+        "reference": "CMD-3 2023 (Phys.Rev.D 109 112002) pi+pi- cross section",
+        "note": "CMD-3 raises the pi+pi- HVP toward the lattice; no single standardized CMD-3-only SM amu exists -> placeholder (data_limited)"},
+      "SM_future_consensus": {"value": null, "sigma": null,
+        "reference": "pending dispersive-vs-lattice reconciliation",
+        "note": "placeholder for a future consolidated SM HVP"}
+    }
+  },
+  "rare_kaons": {
+    "Kp_pinunu": {
+      "NA62_2016_2022_published": {"value": 13.0e-11, "sigma_plus": 3.3e-11, "sigma_minus": 3.0e-11,
+        "sigma": 3.15e-11,
+        "reference": "NA62 2016-2022, JHEP 02 (2025) 191, arXiv:2412.12015"},
+      "NA62_2016_2024_preliminary": {"value": 9.6e-11, "sigma_plus": 1.9e-11, "sigma_minus": 1.8e-11,
+        "sigma": 1.85e-11,
+        "reference": "NA62 2016-2024 combined, arXiv:2604.12649 (La Thuile 2026), >6 sigma"}
+    },
+    "kill_window_1e-11": [7.0, 12.0],
+    "kill_window_note": "TFPT downstream-bridge kill window from the introduction; BR(K+) outside [7,12]e-11 would break the bridge",
+    "KL_pi0nunu_limit_90CL": {"value": 2.2e-9,
+       "reference": "KOTO 2024 upper limit (90% CL); SM ~3e-11, far below current reach"}
+  },
+  "axion": {
+    "haloscope_marker": {
+      "mass_ueV": 23.8, "freq_GHz": 5.755,
+      "coverage": [
+        {"experiment": "ADMX", "range_ueV": [2.66, 4.2], "sensitivity": "DFSZ"},
+        {"experiment": "HAYSTAC", "range_ueV": [16.0, 23.0], "sensitivity": "~2x KSVZ"},
+        {"experiment": "CAPP", "range_ueV": [10.0, 30.0], "sensitivity": "KSVZ-DFSZ patches"}
+      ],
+      "note": "23.8 ueV (~5.76 GHz) inside the HAYSTAC/CAPP band but NOT excluded at DFSZ; exclusion status depends on the specific haloscope dataset and coupling model"
+    },
+    "relic_branches": {
+      "DM.AXION.HILLTOP.01": {"theta_i_deg": 170.0, "omega_a_h2": 0.66,
+        "status": "tension",
+        "note": "full finite-T solve overcloses DM by ~5.5x unless dilution; observed level needs theta_i ~ 106 deg"},
+      "DM.AXION.SPINE.01": {"theta_i_deg": 108.0, "theta_i_expr": "3*pi/5 = pi*N_fam/g_car",
+        "acceptance_band_omega_a_h2": [0.08, 0.16], "status": "exploratory_frozen",
+        "note": "FROZEN before any run: theta_i = 3pi/5 from the spine quotient N_fam/g_car = 3/5; full finite-T solve (fa=Mscal/128, NDW=1) lives in experiments/ftransfer/axion_relic; not a prediction of record"}
+    }
+  },
+  "downloaded": "2026-06-15 (values confirmed against live FNAL/NA62/Theory-Initiative/CMD-3 sources)"
+}

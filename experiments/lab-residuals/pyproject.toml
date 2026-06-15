@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[project]
+name = "tfpt-lab-residuals"
+version = "0.1.0"
+description = "TFPT F_transfer lab-channel confrontations: muon g-2, rare kaons K->pi nu nu, axion 23.8 ueV"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Stefan Hamann" }]
+keywords = ["TFPT", "muon g-2", "NA62", "kaon", "axion", "F_transfer"]
+dependencies = ["numpy>=1.26"]
+
+[project.optional-dependencies]
+dev = ["ruff>=0.5"]
+
+[project.scripts]
+tfpt-lab = "tfpt_lab.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tfpt_lab"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "NPY"]

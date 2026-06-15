@@ -1,0 +1,43 @@
+{
+  "beta_birefringence_deg": [
+    {
+      "experiment": "ACT DR6 (Diego-Palazuelos & Komatsu 2025)",
+      "value": 0.215,
+      "sigma": 0.074,
+      "unit": "deg",
+      "reference": "arXiv:2509.13654",
+      "note": "EB+TB Bayesian, optics-model miscalibration priors; 2.9 sigma from 0; unresolved systematics flagged by the authors"
+    },
+    {
+      "experiment": "Planck PR4 (Eskilt & Komatsu 2022)",
+      "value": 0.30,
+      "sigma": 0.11,
+      "unit": "deg",
+      "reference": "arXiv:2205.13962",
+      "note": "independent CMB birefringence, same sign"
+    }
+  ],
+  "omega_b": [
+    {
+      "experiment": "Planck 2018 TT,TE,EE+lowE+lensing",
+      "omega_b_h2": 0.02237,
+      "omega_b_h2_sigma": 0.00015,
+      "h": 0.6736,
+      "h_sigma": 0.0054,
+      "primary": "omega_b_h2",
+      "reference": "Planck 2018 VI, A&A 641 A6",
+      "note": "Omega_b derived as Omega_b_h2 / h^2 (CMB-internal h)"
+    },
+    {
+      "experiment": "BBN + primordial D/H (Cooke+ 2018 / PDG)",
+      "omega_b_h2": 0.02218,
+      "omega_b_h2_sigma": 0.00055,
+      "h": 0.6736,
+      "h_sigma": 0.0054,
+      "primary": "omega_b_h2",
+      "reference": "PDG 2024 BBN review; Omega_b h^2 = 0.02218 +/- 0.00055",
+      "note": "BBN constrains Omega_b h^2; converted with Planck h (h assumption declared)"
+    }
+  ],
+  "downloaded": "2026-06-15 (values transcribed from the cited refereed/preprint sources)"
+}
