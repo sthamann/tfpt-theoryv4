@@ -11,10 +11,12 @@ the FRB trace cleanly** — not to "find more numbers".
 - **Firewall:** every result is a **search target, not a claim** (§1).
 - **Frozen kernel:** the recovery ratios are exact rationals derived from the two
   axioms; no fitted exponents (guarded by `tests/`, §4).
-- **Current verdict (v1.1, deterministic at `--seed 0`):** `not_confirmed_not_refuted`.
-  One **candidate** (FRB.03 activity window), two **nulls** (FRB.02 echo ratio,
-  FRB.04 polarisation), one **consistency** axis (FRB.05 Ω_b), one **data-limited**
-  axis (FRB.01). No replicated, discriminating support.
+- **Current verdict (v1.8, deterministic at `--seed 0`):** `not_confirmed_not_refuted`.
+  One **candidate** (FRB.03 activity window); seven **nulls** (FRB.02 echo ratio,
+  FRB.02b free-quotient, FRB.04 polarisation, FRB.06 pol-fraction, FRB.07 width-echo,
+  FRB.08 PA classes, FRB.09 recovery-clock dynamics); two **consistency** axes
+  (FRB.05 Ω_b; FRB.01 no-native-dispersion, replicated across 2 sources / 119 bursts).
+  **No data-limited axis remains.** No replicated, discriminating *support*.
 - **v1.1 correction (important):** the earlier FRB.02 "8/27 candidate" was an
   **observable-semantics error** — `8/27` is the *amplitude* root, but the FAST
   column is *energy* in erg. Under the correct split (energy ratio → `64/729`;
@@ -28,6 +30,58 @@ the FRB trace cleanly** — not to "find more numbers".
   hint has **AR(1)-drift null p=0.92** ⇒ a smooth magneto-ionic drift, not a
   discrete spectrum. A data-derived FRB.03 window (HDI of folded CHIME phases)
   and a full VAR(1) shared model were also added (§7–§8).
+- **v1.3 multi-source replication (Blinkverse DB):** a 10,890-burst multi-source
+  database lets the frozen tests run across many repeaters. **FRB.02 is now a clean
+  multi-source null across 4 repeaters** (FRB20121102A, 20201124A, 20220912A,
+  20230607A — no theory *or* audit excess anywhere), and the **FRB.04 RM spectrum
+  is null across 3 sources** (0/3 for both the v1 μ4 spectrum and the v2
+  step-relaxation; the AR(1)-drift null reproduces the RM proximity in every
+  source). The two single-source candidates are now robust multi-source nulls.
+- **v1.7 FRB.09 — the recovery-clock dynamics (the one untested black-hole structure):**
+  a gap analysis of the Origin Theory found that every prior axis tests the recovery
+  kernel's *eigenvalues* (the ratios), but none tests its **dynamics** — the resummed
+  clock `rate(n) = −6 ln(1−n/N_fam)` (verification `v124`). FRB.09 adds the two
+  firewall-compliant predictions that follow: **(A) the wall** — a recovery cascade
+  diverges at `n=N_fam=3`, so monotone-decay burst runs must be **capped at length 3**
+  (long cascades suppressed vs a within-session energy shuffle); **(B) the
+  acceleration** — within a 3-burst cascade the gaps obey `g1/g2 = ln3/ln(3/2) =
+  2.7095`. Across 4 sources (FAST 1652 + Blinkverse FRB 20121102A/20201124A/20220912A)
+  both are a **clean null** (wall 0/4, acceleration 0/4), with a placebo of arbitrary
+  gap ratios confirming the clock value is not special. The horizon-*direct*
+  structures (Hod QNM `ln3`, Hawking power `1920`) are deliberately **outside the
+  firewall** — the theory says FRBs are not direct Hawking emission, so they are not
+  expected and not tested here.
+- **v1.6 FRB.01 scaled to many bursts / multiple sources (large archives):** the two
+  multi-GB raw archives in `new-data/` are streamed **member-by-member in-memory**
+  (no 14 GB unpack) by `scripts/extract_ar_toas.py`: the **FRB 20201124A** tar.gz
+  (1863 PSRCHIVE `.ar`) and the **FRB 20240114A** morphology zip (2729 `.ar`). This
+  turns FRB.01 from 2 bursts into **119 usable bursts across 2 sources**
+  (FRB 20121102A ×2 from the `.calibP`, FRB 20201124A ×117; the FRB 20240114A
+  morphology archives are curated narrow-band/drift cut-outs and yield **0** bursts
+  with ≥5 broadband sub-bands — an honest data limit, documented below). The test is
+  also re-framed around the **physical arbiter**: the fitted non-plasma term
+  `A_TFPT·ν⁻³` implies an extra **cross-band delay**, which is compared to the
+  per-burst **ToA precision**. In *both* sources the implied delay is ~10⁻¹⁹–10⁻²⁰ s
+  vs a ~5×10⁻⁵ s ToA floor (worst delay/precision ≈ 3×10⁻¹⁵) ⇒ **no native dispersion
+  is required** ⇒ **consistency**, now **replicated across 2 sources**. (The bare
+  `A_TFPT` coefficient is units-sensitive over the narrow FAST band, where ν⁻², ν⁻³,
+  ν⁻⁴ are near-collinear; the implied-delay test is robust to that degeneracy.)
+- **v1.5 FRB.01 on real waterfalls (no more `data_limited`):** raw PSRCHIVE/PSRFITS
+  archives (read with astropy, no PSRCHIVE needed) yield bright single-burst
+  dynamic spectra. The no-native-dispersion kill test is run as a **cross-burst /
+  cross-source universality** test: a real propagation term would give the *same*
+  A_TFPT (and a measurable common delay) in every source, but the per-source values
+  imply delays far below the ToA precision ⇒ the residual is **intrinsic
+  drift / DM-fit leakage, not a universal non-plasma delay** ⇒ **consistent** with
+  TFPT's shared Lorentz cone. **Every axis is now tested on real data**
+  (`data_limited_axes` is empty).
+- **v1.4 overlooked-signature sweep (3 new tests, all null):** previously unused
+  channels were tested — **FRB.06** polarisation-degree vs the kernel fractions
+  {2/3,1/3,8/27,1/27} (a placebo-control kills a thin-tailed-null artifact at
+  |V|/I≈2/3); **FRB.07** width-relaxation echo vs the step kernel {2/3,1/3}; and
+  **FRB.08** static PA μ4 angle-classes. All three are nulls — though FRB.08 finds
+  *significant* PA structure at the **m=2 (orthogonal-mode) fundamental, not the
+  μ4 m=4** prediction. Net: more channels searched, no new TFPT signature.
 
 ---
 
@@ -188,6 +242,7 @@ Full provenance + acquisition audit in `data/README.md`.
 |---|---|---|---|
 | `frb20121102_fast_li2021_1652.tsv` | Li et al. 2021, Nature 598, 267 — VizieR `J/other/Nat/598.267/tables1` (asu-tsv) | 1652 | `Burst`, `MJD`, `DM`, `Width`, `Bandwidth`, `Fp`, `Fluence`, **`E` (erg)** |
 | `FAST_FRB20240114A_pol_catalog_v5.csv` | Wang et al. 2026, arXiv:2603.20663 — ScienceDB `10.57760/sciencedb.Fastro.00040` (free login; user-supplied) | 6134 | `MJD_topo` (d), `RM` (rad m⁻²), `DM`, `Weff` (ms), `Bandwidth` (MHz), `S/N`, `DOL`=L/I (%), `DOC`=V/I (%), `PA_mean` (deg) |
+| `blinkverse_bursts.csv` | **Blinkverse FRB DB** (user export) — multi-source | 10,890 | `source`, `mjd`, `energy`, `fluence`, `rm_qufit`/`rm_syn`, `polar_l`/`polar_c`, `width`, `freq_*` |
 | `frb_dmz_adb84d_table4.txt` | ApJ `10.3847/1538-4357/adb84d` Table A1 (IOP suppdata) | 36 | `z_spec`, `DM_obs`, `DM_MW(disk+halo)`, `DM_host^s` (pc cm⁻³) |
 | `frb_dmz_adeb72_table1.txt` | Sharma et al. 2024, ApJ `10.3847/1538-4357/adeb72` Table 1 | 117 | `Redshift`, `DM`, `DM_exc` (pc cm⁻³) |
 | `frb_pol_pandhi2024_table1.txt` | Pandhi et al. 2024, ApJ 968, 50 Table 1 (IOP suppdata) | 118 | `RM_obs,FDF`, `RM_MW`, `L/I` |
@@ -230,10 +285,15 @@ the unpowered step.
 |---|---|---|---|---|
 | **FRB.01** | no native (non-plasma) dispersion | `A_TFPT = 0` | — | residual `t(ν)` after DM, scattering removal |
 | **FRB.02** | recovery / echo ratios | `E_{n+1}/E_n ≈ 64/729`; amp `8/27`; step `2/3` (+ inverses) | energy / field / step | consecutive within-session energy ratios |
+| **FRB.02b** | free-quotient null (**anti-numerology**) | free `q*∈[0.01,0.5]` must land on `8/27`/`1/27` or lose to M0 | amplitude | LEE-corrected scan of the best free echo quotient + injection recovery |
 | **FRB.03** | activity-window eigenwidths | `W_broad/P ≈ 8/27`, `W_core/P ≈ 1/27` | field / visibility | periodic-repeater phase-window widths |
 | **FRB.04** | PA/RM Markov spectrum (strong μ4/D4) | `spec(T) = {1, 64/729, 1/729}` | energy | per-burst PA-class / RM-residual state transitions |
 | **FRB.04b** | RM step-relaxation (**v2 exploratory**) | `spec(T_RM) = {1, 2/3, 1/3}` | step | RM-residual state transitions (env. relaxation, not μ4) |
 | **FRB.05** | baryon fraction | `Ω_b = 0.0489` | seed block | Macquart `DM(z)` slope of localized FRBs |
+| **FRB.06** | polarisation-degree quantisation (**new**) | L/I, \|V\|/I near `{2/3,1/3,8/27,1/27}` | fraction | per-burst linear / circular fractions |
+| **FRB.07** | width-relaxation echo (**new**) | `W_{n+1}/W_n ≈ 2/3` or `1/3` | step | consecutive within-session widths |
+| **FRB.08** | static PA μ4 classes (**new**) | 4 PA classes 45° apart | μ4 angle | per-burst PA values (Rayleigh m=4) |
+| **FRB.09** | recovery-clock dynamics (**new**) | cascade length ≤ `N_fam=3`; gap ratio `g1/g2 = ln3/ln(3/2) ≈ 2.71` | time | within-session monotone-decay cascades: run length + gap ratio |
 | *generic* | energy cascade | adjacent log-E spacings = a single kernel ratio | energy | GMM cluster centres of one source's energies |
 | *shared* | multi-channel recovery memory | same eigenvalue in ≥2 observables | mixed | AR(1) memory of `log E`, `RM_resid`, `log Δt` |
 
@@ -316,6 +376,61 @@ All surrogate p-values use the `(1 + #{null ≥ obs}) / (n_surrogate + 1)` estim
   smooth AR(1) drift reproduces the proximity, the "match" is environmental
   relaxation, not a discrete spectrum.
 
+### FRB.06 — polarisation-degree quantisation (`pol_fraction.py`, NEW)
+- Do `L/I` or `|V|/I` pile up at a kernel fraction `{2/3,1/3,8/27,1/27}`? **Null:**
+  a smooth Beta fitted to the same fractions. **Placebo control (essential):** the
+  same test at a grid of 22 *non-kernel* control fractions; a kernel value counts
+  only if `p<0.05` **and** its enrichment exceeds the 90th-percentile control
+  enrichment — so a thin-tailed-null misfit (which inflates the count at *every*
+  high fraction, e.g. the rare-high-`|V|` tail near 2/3) cannot fake a signal.
+  Multi-source. (Firewall: `L/I` is propagation-affected.)
+
+### FRB.07 — width-relaxation echo (`width_echo.py`, NEW)
+- Consecutive within-session **width** ratios vs the **step kernel** `{2/3,1/3}`
+  (and inverses) — width is a timescale, so the channel is fixed up front (no
+  energy/amplitude ambiguity). Within-session + local-block shuffle nulls, BH q.
+  Multi-source.
+
+### FRB.08 — static PA μ4 classes (`polarization.pa_angle_classes`, NEW wiring)
+- A Rayleigh test (PA period 180°) for the *fundamental* number of equally-spaced
+  PA classes. μ4 predicts the fundamental `m=4` (45° spacing). Returns the
+  smallest significant `m`; counts as a μ4 match only if that fundamental is 4.
+
+### FRB.02b — free-quotient null (`free_quotient.py`, NEW, anti-numerology gate)
+- The central numerology guard for the echo channel. On within-session **amplitude**
+  ratios it compares three models: **M0** (no echo), **M_fixed** (echo at the frozen
+  `q∈{8/27,1/27}`), **M_free** (echo at a free `q*∈[0.01,0.5]`). The free quotient is
+  scanned on a log grid; the **look-elsewhere-corrected** max-`z` (vs within-session
+  shuffle surrogates) gives M_free's global p-value.
+- **Decision:** if M_free is significant but `q*` is *not* a kernel value → **NOT TFPT**
+  (the free template wins elsewhere); if `q*` coincides with `8/27`/`1/27` → consistent;
+  if nothing is significant → M0. An **injection-recovery** check confirms the scan
+  recovers `q*≈8/27` when a real echo at that quotient is injected.
+- **Result:** M0 in all 4 sources (best `q*` not at a kernel value; LEE p ≥ 0.31);
+  injection recovery validates the method (recovers `q≈0.290 ≈ 8/27`). No FRB echo
+  result is admissible unless the free quotient first fails to beat the fixed TFPT one.
+
+### FRB.09 — recovery-clock dynamics (`recovery_clock.py`, NEW)
+- Tests the recovery kernel's **dynamics** (the resummed clock
+  `rate(n) = −6 ln(1−n/N_fam)`, verification `v124`), not its eigenvalues. Two
+  firewall-compliant sub-tests on within-session, time-ordered burst sequences
+  (energy + MJD):
+  - **(A) the wall.** Maximal **strictly-decreasing-energy** runs (recovery
+    cascades) must be capped at `N_fam=3` elements. Statistic: number of cascades
+    longer than 3; a TFPT wall is a *deficit* vs a within-session energy shuffle
+    (`p_deficit = (1+#{null ≤ obs})/(n+1)`, support iff `p<0.05` and enrichment `<1`).
+  - **(B) the acceleration.** For monotone-decay **triplets** the gap ratio
+    `g1/g2` must pile up at the clock value `ln3/ln(3/2) = 2.7095`. Calibrated
+    against the same within-session energy shuffle **and a placebo** of arbitrary
+    non-clock ratios `{1.7, 2.2, 3.3, 4.5}`; an excess counts only if it beats both
+    the null (`p<0.05`, enrichment `>1.2`) *and* every placebo ratio.
+  - Multi-source (FAST 1652 + Blinkverse 20121102A/20201124A/20220912A); a sub-test
+    is "replicated" only if supported in ≥2 sources.
+- Deliberately **out of scope** (horizon-direct, outside the firewall): the Hod
+  quasinormal `ω_R/T_H = ln3` ringdown and the Hawking power `1920 = |W(D₅)|` — the
+  theory states FRBs are not direct Hawking emission, so these are not expected in
+  FRB data and are not tested here.
+
 ### Package E — data-derived windows (`window_extraction.py`)
 - Fold a repeater's raw arrival times at its period and compute the windows as
   preregistered **highest-density intervals**: `W_broad/P` = minimal phase arc
@@ -331,10 +446,40 @@ All surrogate p-values use the `(1 + #{null ≥ obs}) / (n_surrogate + 1)` estim
   eigenvalue in `spec(A)` is shared across channels *by construction*; reported
   descriptively (the row-shuffle null is permissive, so this is not promotable).
 
-### FRB.01 — no native dispersion (`no_native_dispersion.py`)
-- **Model:** `t(ν)=t₀ + K·DM·ν⁻² + A_scat·ν⁻⁴ + A_TFPT·ν^index`; weighted LSQ;
-  **kill test** = `A_TFPT` must be `≤2σ` from 0. Needs per-burst sub-band timing
-  (raw/baseband), absent from catalogues ⇒ `raw_data_required`.
+### FRB.01 — no native dispersion (`psrfits.py` + `dispersion.py`, NOW on real data, multi-source)
+- **Raw input:** PSRCHIVE `.calibP` / `.ar` / PSRFITS `.fits` single-burst archives
+  read with **astropy** (`read_archive`, no PSRCHIVE), calibrated to a Stokes-I
+  dynamic spectrum. `read_archive` accepts a path **or an in-memory file object**,
+  so the multi-GB repeater archives are streamed member-by-member without unpacking.
+- **Two extractors → one tiny table** (`data/frb01_subband_toas.csv`, reproducible
+  without the ~14 GB raw):
+  - `scripts/extract_subband_toas.py` — the bright `.calibP` FRB 20121102A bursts;
+  - `scripts/extract_ar_toas.py` — streams `FRB20201124A.tar.gz` (1863 `.ar`) and
+    `FRB20240114A_Morphology_*.zip` (2729 `.ar`), samples across each campaign,
+    keeps bursts with ≥5 sub-bands above S/N 5.5 (≤150/source), and **appends** the
+    `.ar` rows while preserving the `.calibP` rows.
+- **Sub-band ToAs:** the band is split into ≤12 sub-bands (window adaptive to the
+  archive length); each sub-band's peak time is measured with a parabolic refinement
+  and an S/N-based error; non-finite/zero-error sub-bands are rejected.
+- **Model:** `t(ν)=t₀ + K·ν⁻² + A_scat·ν⁻⁴ + D·ν(intrinsic drift) + A_TFPT·ν^index`,
+  fit per burst with floored inverse-variance weights (no infinite weights).
+- **Two complementary tests** in `frb01_universality`:
+  1. **Implied delay vs. precision (the physical arbiter):** the fitted
+     `A_TFPT·ν⁻³` term implies an extra **cross-band delay**
+     `|A_TFPT|·|ν_lo⁻³−ν_hi⁻³|`, compared to that source's median **ToA precision**.
+     If the implied delay is below precision in *every* source, no native dispersion
+     is *required*. This is robust to the narrow-band coefficient degeneracy (over
+     1000–1500 MHz, ν⁻², ν⁻³, ν⁻⁴ are near-collinear, so the bare `A_TFPT` value is
+     units-sensitive — the *delay* is not).
+  2. **Cross-source universality:** a real propagation term is the **same A_TFPT for
+     every source** (different DM, redshift, telescope). A_TFPT is aggregated per
+     source and tested for a common non-zero value. A common non-zero term whose
+     **delay exceeds precision in all sources** would be a genuine **kill** of this
+     firewall.
+- *Caveat:* the FRB 20240114A morphology release is a curated narrow-band / drifting
+  cut-out set (192 phase bins, signal in a few channels), so it yields **0** bursts
+  with enough broadband sub-bands — FRB.01 currently rests on FRB 20121102A +
+  FRB 20201124A.
 
 ### Generic cascade (`energy_clusters.py`)
 - **Null fit:** log-normal in energy + KS test. **Multimodality:** Gaussian-
@@ -385,6 +530,60 @@ consistency: `FRB05_baryon` · data-limited: `FRB01_dispersion`.
   *core* window survives at the 4 % level.
 - Population: `n=2 < 5` required, random-window null `p=0.112`, leave-one-out **not**
   stable ⇒ candidate, not support — and now weaker for the broad window.
+
+### Multi-source replication (v1.3, Blinkverse DB)
+- **FRB.02 — clean multi-source null across 4 repeaters.** The semantics-correct
+  echo test on FRB20121102A, FRB20201124A, FRB20220912A, FRB20230607A shows **no
+  theory-channel and no audit-channel excess in any source** (`multi_source_echo`).
+- **FRB.04 RM — null across 3 sources.** FRB20240114A, FRB20201124A, FRB20220912A:
+  **0/3** for the v1 μ4 spectrum and **0/3** for the v2 step-relaxation; per-source
+  AR(1)-drift null p = 0.92 / 1.0 / 0.85 ⇒ the RM≈`{2/3,1/3}` proximity is smooth
+  drift everywhere. The PA channel stays single-source (only FRB20240114A has PA).
+
+### FRB.01 — no native dispersion (v1.6) → consistency, **replicated across 2 sources**
+- **119 usable bursts / 2 sources** from the raw archives: FRB 20121102A (×2,
+  `.calibP`) and FRB 20201124A (×117, streamed from the 892 MB `.ar` tar). The
+  FRB 20240114A morphology zip (2729 `.ar`) yields 0 broadband-timing bursts (narrow
+  band) — an honest data limit.
+- **Implied non-plasma delay ≪ ToA precision in both sources:**
+
+  | source | bursts | A_TFPT (ν⁻³) | implied cross-band delay | ToA floor | delay/precision |
+  |---|---|---|---|---|---|
+  | FRB 20121102A | 2 | 3.7×10⁻¹⁰ | 1.7×10⁻¹⁹ s | 5.6×10⁻⁵ s | 3.1×10⁻¹⁵ |
+  | FRB 20201124A | 117 | 4.3×10⁻¹¹ | 2.7×10⁻²⁰ s | 5.2×10⁻⁵ s | 5.1×10⁻¹⁶ |
+
+  The fitted non-plasma term implies an extra delay **~15 orders of magnitude below
+  the measurement precision** in *both* sources ⇒ **no native dispersion is
+  required** ⇒ **consistent** with TFPT's shared Lorentz cone, now **replicated**.
+  A common non-zero term with an above-precision delay across sources would have
+  *failed* this kill test; it does not. (The per-source A_TFPT *coefficients* differ
+  and are individually tiny — within-source DM-fit leakage over the near-collinear
+  ν⁻²/ν⁻³/ν⁻⁴ FAST band — which is exactly why the **delay**, not the coefficient,
+  is the arbiter.)
+
+### FRB.09 — recovery-clock dynamics (v1.7) → null across 4 sources
+- **(A) the wall:** monotone-decay cascades are **not** suppressed (per-source
+  `enrichment ≈ 0.9–1.25`, `p_deficit = 0.29–0.98`) — if anything FAST 1652 has a
+  mild *excess* of long descending runs (slow within-storm drift), the opposite of a
+  wall. **0/4 sources.**
+- **(B) the acceleration:** the gap ratio `g1/g2` shows no excess at the clock value
+  `2.7095` that survives the placebo (e.g. FRB 20201124A reaches enrichment 1.40 but
+  an arbitrary ratio reaches 1.30 with `p=0.18`; FAST 1652 enrichment 1.34 vs placebo
+  1.51). **0/4 sources.**
+- ⇒ the recovery-clock leaves **no trace** in burst timing: `wall null (0/4),
+  acceleration null (0/4)`. A clean, firewall-expected negative.
+
+### Overlooked-signature sweep (v1.4) — all null
+- **FRB.06 (polarisation degree):** across FRB20240114A, 20201124A, 20220912A, **no
+  kernel fraction stands out above the control fractions**. A naive Beta-null run
+  flagged `|V|/I≈2/3` (enrichment ~4–5, replicated in 2 sources), but the placebo
+  control (arbitrary fractions reach even higher enrichment in the heavy `|V|`
+  tail) shows it is a **null-model artifact**, not a 2/3 signature. → null.
+- **FRB.07 (width relaxation):** clean null across FRB20121102A, 20201124A,
+  20220912A (no BH q<0.05 width-step excess; up to 2813 within-session pairs).
+- **FRB.08 (PA μ4 classes):** the PA of FRB20240114A is **significantly structured
+  (p≈0)** but the *fundamental is m=2* (orthogonal-mode, 90° PA jumps — a known
+  emission/propagation effect), **not the μ4 m=4** prediction. → null for μ4.
 
 ### FRB.02 — echo ratios on FAST 1652 → null, score 0.00
 - 1652 bursts, **1611 within-session pairs**, 41 sessions; raw column = `E` (erg);
@@ -508,30 +707,41 @@ src/frb_tfpt/
   echo_ratio.py          # FRB.02 semantic channels + session diag + BH q + 4 nulls
   markov_spectrum.py     # FRB.04 spectrum: 4 nulls + moving-block bootstrap (kernel arg)
   rm_relaxation_step.py  # FRB.04b v2 exploratory RM step-relaxation {2/3,1/3}
+  psrfits.py             # PSRCHIVE/PSRFITS archive reader (astropy; calibrated Stokes)
+  dispersion.py          # FRB.01 sub-band ToAs + cross-burst universality kill test
+  multi_source.py        # multi-source replication (FRB.02 echo, FRB.04 RM) across repeaters
+  pol_fraction.py        # FRB.06 polarisation-degree vs kernel fractions (+ placebo control)
+  recovery_clock.py      # FRB.09 recovery-clock dynamics (cascade wall + accelerating gaps)
+  free_quotient.py       # FRB.02b free-quotient null (M0/Mfixed/Mfree + injection recovery)
+  width_echo.py          # FRB.07 width-relaxation echo vs step kernel {2/3,1/3}
   window_extraction.py   # Package E: HDI activity windows from folded phases
   recovery_observable_model.py  # shared AR(1) (pair bootstrap) + VAR(1) (Package G)
   no_native_dispersion.py       # FRB.01 kill test
   energy_clusters.py     # GMM + log-periodicity + fit_spacing_ladder
   drift_freq.py, timing.py, polarization.py, rm_steps.py
   fingerprint.py         # EvidenceAxis (+observable_semantics_valid) + aggregate_axes
-  data_io.py             # all loaders + drop-in repeater column contracts
+  data_io.py             # all loaders incl. Blinkverse multi-source + drop-in contracts
   cli.py                 # `frb-tfpt audit` / `frb-tfpt analyze`
 scripts/fetch_data.py    # re-download the VizieR/IOP datasets
+scripts/extract_subband_toas.py  # FRB.01 sub-band ToAs from bright .calibP bursts
+scripts/extract_ar_toas.py       # FRB.01 sub-band ToAs streamed from the multi-GB .ar archives
 data/  results/          # real catalogues + provenance; generated outputs
+new-data/                # raw PSRCHIVE archives (gitignored; ToA CSV is the committed artifact)
 ```
 
 ---
 
 ## 13. What would change the verdict
 
-1. **FRB.02 → candidate/support:** a *theory-channel* excess (energy ratio near
-   `64/729`, or `√(energy ratio)` near `8/27`) — **not** the audit `8/27` — at
-   `q<0.01`, replicated in a second large single-source sample (a second FAST storm
-   or FRB 20240619D). The current `8/27` audit anomaly does **not** count.
-2. **FRB.04b (v2) → essentially closed:** the RM≈`{2/3,1/3}` proximity is
-   reproduced by an AR(1)-drift null (p=0.92), i.e. it is environmental relaxation.
-   It would only revive if a second repeater showed the proximity **and** it beat
-   the AR(1)-drift null (p<0.01) there — unlikely for a smooth-drift quantity.
+1. **FRB.02 → essentially closed (now a 4-source null):** a *theory-channel*
+   excess (energy ratio near `64/729`, or `√(energy ratio)` near `8/27`) would have
+   to appear at `q<0.01` and **replicate across ≥2 repeaters**; it currently
+   appears in **none** of the four tested. The audit `8/27` does not count and is
+   itself gone under the storm null.
+2. **FRB.04b (v2) → closed across 3 sources:** the RM≈`{2/3,1/3}` proximity is
+   reproduced by an AR(1)-drift null in **all three** repeaters (it is environmental
+   relaxation). Revival would need a repeater where it beats the AR(1)-drift null
+   (p<0.01) — not seen.
 3. **FRB.03 → testable:** ≥5 confirmed periodic repeaters with measured
    `P, W_broad, W_core`.
 4. **Shared eigenvalue:** the `log_energy` AR(1) ≈1/3 hint (CI contains 1/3)

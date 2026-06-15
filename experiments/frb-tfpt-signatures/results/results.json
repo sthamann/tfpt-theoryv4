@@ -327,12 +327,1296 @@
         "note": "eigs=[0.616, 0.3094] vs kernel [0.6667, 0.3333]; CI_contains_kernel=False; overall null p=0.922 (worst null: ar1_drift)"
       }
     },
+    "FRB02_multi_source": {
+      "sources": [
+        "FRB 20121102A (FAST, Li+2021, 1652 bursts)",
+        "FRB20201124A (Blinkverse, n=2883)",
+        "FRB20220912A (Blinkverse, n=2216)",
+        "FRB20230607A (Blinkverse, n=827)"
+      ],
+      "per_source": {
+        "FRB 20121102A (FAST, Li+2021, 1652 bursts)": {
+          "n_bursts": 1652,
+          "n_pairs": 1611,
+          "n_sessions": 41,
+          "raw_column": "E (erg)",
+          "theory_significant": [],
+          "audit_significant": []
+        },
+        "FRB20201124A (Blinkverse, n=2883)": {
+          "n_bursts": 2883,
+          "n_pairs": 877,
+          "n_sessions": 69,
+          "raw_column": "E (erg)",
+          "theory_significant": [],
+          "audit_significant": []
+        },
+        "FRB20220912A (Blinkverse, n=2216)": {
+          "n_bursts": 2216,
+          "n_pairs": 1059,
+          "n_sessions": 217,
+          "raw_column": "E (erg)",
+          "theory_significant": [],
+          "audit_significant": []
+        },
+        "FRB20230607A (Blinkverse, n=827)": {
+          "n_bursts": 827,
+          "n_pairs": 803,
+          "n_sessions": 24,
+          "raw_column": "fluence (Jy ms)",
+          "theory_significant": [],
+          "audit_significant": []
+        }
+      },
+      "replicated_targets": {},
+      "replicated": false,
+      "verdict": "clean multi-source null across 4 sources (no theory-channel kernel excess anywhere)"
+    },
+    "FRB02b_free_quotient": {
+      "sources": [
+        "FRB 20121102A (FAST, Li+2021, 1652 bursts)",
+        "FRB20201124A (Blinkverse, n=2883)",
+        "FRB20220912A (Blinkverse, n=2216)",
+        "FRB20230607A (Blinkverse, n=827)"
+      ],
+      "per_source": {
+        "FRB 20121102A (FAST, Li+2021, 1652 bursts)": {
+          "n_pairs": 1611,
+          "q_star": 0.06564869207692377,
+          "global_p": 0.3144758735440932,
+          "near_kernel": null,
+          "injection_ok": true,
+          "injection_recovered_q": 0.3201964108701593,
+          "verdict": "no significant echo at any quotient (LEE p=0.314); best q*=0.066 -> M0 (no echo structure; TFPT echo not required)"
+        },
+        "FRB20201124A (Blinkverse, n=2883)": {
+          "n_pairs": 877,
+          "q_star": 0.27599334575012463,
+          "global_p": 0.6173044925124792,
+          "near_kernel": "8/27",
+          "injection_ok": false,
+          "injection_recovered_q": 0.3364514535983817,
+          "verdict": "no significant echo at any quotient (LEE p=0.617); best q*=0.276 -> M0 (no echo structure; TFPT echo not required)"
+        },
+        "FRB20220912A (Blinkverse, n=2216)": {
+          "n_pairs": 1059,
+          "q_star": 0.06247699439706731,
+          "global_p": 0.5058236272878536,
+          "near_kernel": null,
+          "injection_ok": false,
+          "injection_recovered_q": 0.23789250695016678,
+          "verdict": "no significant echo at any quotient (LEE p=0.506); best q*=0.062 -> M0 (no echo structure; TFPT echo not required)"
+        },
+        "FRB20230607A (Blinkverse, n=827)": {
+          "n_pairs": 803,
+          "q_star": 0.01,
+          "global_p": 1.0,
+          "near_kernel": null,
+          "injection_ok": false,
+          "injection_recovered_q": 0.3364514535983817,
+          "verdict": "no significant echo at any quotient (LEE p=1.000); best q*=0.010 -> M0 (no echo structure; TFPT echo not required)"
+        }
+      },
+      "tfpt_consistent": [],
+      "nonkernel_wins": [],
+      "verdict": "no source shows a significant echo at any quotient (4 tested) -> M0"
+    },
+    "FRB04_multi_source_rm": {
+      "sources": [
+        "FRB 20240114A (FAST pol; n_raw=6134 catalogue rows)",
+        "FRB20201124A (Blinkverse, n=2883)",
+        "FRB20220912A (Blinkverse, n=2216)"
+      ],
+      "per_source": {
+        "FRB 20240114A (FAST pol; n_raw=6134 catalogue rows)": {
+          "n": 6134,
+          "v1_energy_eigs": [
+            0.615969120369337,
+            0.30943767804157796
+          ],
+          "v1_overall_null_p": 1.0,
+          "v1_ci_contains_kernel": false,
+          "v1_pass": false,
+          "v2_step_eigs": [
+            0.615969120369337,
+            0.30943767804157796
+          ],
+          "v2_overall_null_p": 0.922077922077922,
+          "v2_ar1_drift_p": 0.922077922077922,
+          "v2_ci_contains_kernel": false,
+          "v2_pass": false
+        },
+        "FRB20201124A (Blinkverse, n=2883)": {
+          "n": 1131,
+          "v1_energy_eigs": [
+            0.877270937864947,
+            0.7311633944327292
+          ],
+          "v1_overall_null_p": 1.0,
+          "v1_ci_contains_kernel": false,
+          "v1_pass": false,
+          "v2_step_eigs": [
+            0.877270937864947,
+            0.7311633944327292
+          ],
+          "v2_overall_null_p": 1.0,
+          "v2_ar1_drift_p": 1.0,
+          "v2_ci_contains_kernel": false,
+          "v2_pass": false
+        },
+        "FRB20220912A (Blinkverse, n=2216)": {
+          "n": 1076,
+          "v1_energy_eigs": [
+            0.04405424962776928,
+            0.009805440516347734
+          ],
+          "v1_overall_null_p": 0.2597402597402597,
+          "v1_ci_contains_kernel": false,
+          "v1_pass": false,
+          "v2_step_eigs": [
+            0.04405424962776928,
+            0.009805440516347734
+          ],
+          "v2_overall_null_p": 1.0,
+          "v2_ar1_drift_p": 0.8461538461538461,
+          "v2_ci_contains_kernel": false,
+          "v2_pass": false
+        }
+      },
+      "v1_replicated": false,
+      "v2_replicated": false,
+      "verdict": "v1 mu4 spectrum: null (0/3 sources); v2 step-relaxation: not replicated (0/3 survive the AR(1)-drift null)"
+    },
+    "FRB06_pol_fraction": {
+      "FRB 20240114A (FAST pol; n_raw=6134 catalogue rows)": {
+        "source": "FRB 20240114A (FAST pol; n_raw=6134 catalogue rows)",
+        "available": true,
+        "quantities": {
+          "L/I": {
+            "_control_enrichment_p90": 4.9,
+            "2/3": {
+              "obs_frac": 0.0041,
+              "enrichment": 1.11,
+              "p": 0.3287,
+              "exceeds_controls": false
+            },
+            "1/3": {
+              "obs_frac": 0.0,
+              "enrichment": 0.0,
+              "p": 1.0,
+              "exceeds_controls": false
+            },
+            "8/27": {
+              "obs_frac": 0.0,
+              "enrichment": 0.0,
+              "p": 1.0,
+              "exceeds_controls": false
+            },
+            "1/27": {
+              "obs_frac": 0.0,
+              "enrichment": 0.0,
+              "p": 1.0,
+              "exceeds_controls": false
+            }
+          },
+          "|V|/I": {
+            "_control_enrichment_p90": 30.65,
+            "2/3": {
+              "obs_frac": 0.0008,
+              "enrichment": 4.52,
+              "p": 0.005,
+              "exceeds_controls": false
+            },
+            "1/3": {
+              "obs_frac": 0.0192,
+              "enrichment": 0.85,
+              "p": 0.967,
+              "exceeds_controls": false
+            },
+            "8/27": {
+              "obs_frac": 0.0277,
+              "enrichment": 0.83,
+              "p": 0.995,
+              "exceeds_controls": false
+            },
+            "1/27": {
+              "obs_frac": 0.4266,
+              "enrichment": 1.04,
+              "p": 0.005,
+              "exceeds_controls": false
+            }
+          }
+        },
+        "significant": [],
+        "verdict": "no kernel fraction stands out above arbitrary control fractions (null)"
+      },
+      "FRB20201124A (Blinkverse, n=2883)": {
+        "source": "FRB20201124A (Blinkverse, n=2883)",
+        "available": true,
+        "quantities": {
+          "L/I": {
+            "_control_enrichment_p90": 2.08,
+            "2/3": {
+              "obs_frac": 0.0999,
+              "enrichment": 0.95,
+              "p": 0.7243,
+              "exceeds_controls": false
+            },
+            "1/3": {
+              "obs_frac": 0.0018,
+              "enrichment": 0.25,
+              "p": 0.995,
+              "exceeds_controls": false
+            },
+            "8/27": {
+              "obs_frac": 0.0027,
+              "enrichment": 0.64,
+              "p": 0.8332,
+              "exceeds_controls": false
+            },
+            "1/27": {
+              "obs_frac": 0.0,
+              "enrichment": 0.0,
+              "p": 1.0,
+              "exceeds_controls": false
+            }
+          },
+          "|V|/I": {
+            "_control_enrichment_p90": 1.52,
+            "2/3": {
+              "obs_frac": 0.0027,
+              "enrichment": 2.09,
+              "p": 0.1938,
+              "exceeds_controls": true
+            },
+            "1/3": {
+              "obs_frac": 0.0186,
+              "enrichment": 0.81,
+              "p": 0.8681,
+              "exceeds_controls": false
+            },
+            "8/27": {
+              "obs_frac": 0.0239,
+              "enrichment": 0.79,
+              "p": 0.9071,
+              "exceeds_controls": false
+            },
+            "1/27": {
+              "obs_frac": 0.4778,
+              "enrichment": 1.31,
+              "p": 0.001,
+              "exceeds_controls": false
+            }
+          }
+        },
+        "significant": [],
+        "verdict": "no kernel fraction stands out above arbitrary control fractions (null)"
+      },
+      "FRB20220912A (Blinkverse, n=2216)": {
+        "source": "FRB20220912A (Blinkverse, n=2216)",
+        "available": true,
+        "quantities": {
+          "L/I": {
+            "_control_enrichment_p90": 1.47,
+            "2/3": {
+              "obs_frac": 0.0076,
+              "enrichment": 0.42,
+              "p": 0.998,
+              "exceeds_controls": false
+            },
+            "1/3": {
+              "obs_frac": 0.0,
+              "enrichment": 0.0,
+              "p": 1.0,
+              "exceeds_controls": false
+            },
+            "8/27": {
+              "obs_frac": 0.001,
+              "enrichment": 1.33,
+              "p": 0.5215,
+              "exceeds_controls": false
+            },
+            "1/27": {
+              "obs_frac": 0.0,
+              "enrichment": 0.0,
+              "p": 1.0,
+              "exceeds_controls": false
+            }
+          },
+          "|V|/I": {
+            "_control_enrichment_p90": 5.46,
+            "2/3": {
+              "obs_frac": 0.0028,
+              "enrichment": 3.99,
+              "p": 0.039,
+              "exceeds_controls": false
+            },
+            "1/3": {
+              "obs_frac": 0.0223,
+              "enrichment": 0.73,
+              "p": 0.9481,
+              "exceeds_controls": false
+            },
+            "8/27": {
+              "obs_frac": 0.0279,
+              "enrichment": 0.67,
+              "p": 0.993,
+              "exceeds_controls": false
+            },
+            "1/27": {
+              "obs_frac": 0.4074,
+              "enrichment": 1.07,
+              "p": 0.039,
+              "exceeds_controls": false
+            }
+          }
+        },
+        "significant": [],
+        "verdict": "no kernel fraction stands out above arbitrary control fractions (null)"
+      }
+    },
+    "FRB07_width_echo": {
+      "FRB20121102A (Blinkverse, n=2370)": {
+        "source": "FRB20121102A (Blinkverse, n=2370)",
+        "available": true,
+        "n_pairs": 636,
+        "n_sessions": 95,
+        "targets": {
+          "2/3": {
+            "ratio": 0.6666666666666666,
+            "enrichment": 1.0,
+            "p": 0.5556,
+            "q": 0.9888
+          },
+          "2/3^-1": {
+            "ratio": 1.5,
+            "enrichment": 0.86,
+            "p": 0.9888,
+            "q": 0.9888
+          },
+          "1/3": {
+            "ratio": 0.3333333333333333,
+            "enrichment": 0.78,
+            "p": 0.985,
+            "q": 0.9888
+          },
+          "1/3^-1": {
+            "ratio": 3.0,
+            "enrichment": 1.15,
+            "p": 0.1074,
+            "q": 0.4295
+          }
+        },
+        "significant": [],
+        "verdict": "clean null (no BH q<0.05 width-step excess)"
+      },
+      "FRB20201124A (Blinkverse, n=2883)": {
+        "source": "FRB20201124A (Blinkverse, n=2883)",
+        "available": true,
+        "n_pairs": 2813,
+        "n_sessions": 69,
+        "targets": {
+          "2/3": {
+            "ratio": 0.6666666666666666,
+            "enrichment": 0.98,
+            "p": 0.7665,
+            "q": 0.7715
+          },
+          "2/3^-1": {
+            "ratio": 1.5,
+            "enrichment": 0.99,
+            "p": 0.6854,
+            "q": 0.7715
+          },
+          "1/3": {
+            "ratio": 0.3333333333333333,
+            "enrichment": 0.96,
+            "p": 0.7715,
+            "q": 0.7715
+          },
+          "1/3^-1": {
+            "ratio": 3.0,
+            "enrichment": 1.03,
+            "p": 0.2709,
+            "q": 0.7715
+          }
+        },
+        "significant": [],
+        "verdict": "clean null (no BH q<0.05 width-step excess)"
+      },
+      "FRB20220912A (Blinkverse, n=2216)": {
+        "source": "FRB20220912A (Blinkverse, n=2216)",
+        "available": true,
+        "n_pairs": 1716,
+        "n_sessions": 217,
+        "targets": {
+          "2/3": {
+            "ratio": 0.6666666666666666,
+            "enrichment": 1.01,
+            "p": 0.3908,
+            "q": 0.521
+          },
+          "2/3^-1": {
+            "ratio": 1.5,
+            "enrichment": 1.03,
+            "p": 0.2647,
+            "q": 0.521
+          },
+          "1/3": {
+            "ratio": 0.3333333333333333,
+            "enrichment": 0.87,
+            "p": 0.9875,
+            "q": 0.9875
+          },
+          "1/3^-1": {
+            "ratio": 3.0,
+            "enrichment": 1.03,
+            "p": 0.3271,
+            "q": 0.521
+          }
+        },
+        "significant": [],
+        "verdict": "clean null (no BH q<0.05 width-step excess)"
+      }
+    },
+    "FRB08_pa_classes": {
+      "n": 6133,
+      "best_m": 2,
+      "rayleigh_z": 95.96817260622028,
+      "p_value": 0.0004997501249375312,
+      "theta0_deg": 14.571078980735283,
+      "c_p": 0.9900049975012494,
+      "note": "2 PA classes spaced 90 deg, p=0.000"
+    },
+    "FRB09_recovery_clock": {
+      "sources": [
+        "FRB 20121102A (FAST, Li+2021, 1652 bursts)",
+        "FRB20121102A (Blinkverse, n=2370)",
+        "FRB20201124A (Blinkverse, n=2883)",
+        "FRB20220912A (Blinkverse, n=2216)"
+      ],
+      "per_source": {
+        "FRB 20121102A (FAST, Li+2021, 1652 bursts)": {
+          "n_bursts": 1647,
+          "n_sessions": 38,
+          "n_long_cascades": 64,
+          "wall_enrichment": 1.2467937270690608,
+          "wall_p_deficit": 0.978369384359401,
+          "wall_supported": false,
+          "n_triplets": 301,
+          "accel_enrichment": 1.344621513944223,
+          "accel_p": 0.13477537437603992,
+          "placebo_max_enrichment": 1.512200710276091,
+          "accel_supported": false,
+          "verdict": "clean null (no cascade wall, no accelerating-gap excess)"
+        },
+        "FRB20121102A (Blinkverse, n=2370)": {
+          "n_bursts": 2129,
+          "n_sessions": 53,
+          "n_long_cascades": 75,
+          "wall_enrichment": 1.148369315571888,
+          "wall_p_deficit": 0.9267886855241264,
+          "wall_supported": false,
+          "n_triplets": 360,
+          "accel_enrichment": 1.1924119241192412,
+          "accel_p": 0.22795341098169716,
+          "placebo_max_enrichment": 1.2503005530175522,
+          "accel_supported": false,
+          "verdict": "clean null (no cascade wall, no accelerating-gap excess)"
+        },
+        "FRB20201124A (Blinkverse, n=2883)": {
+          "n_bursts": 881,
+          "n_sessions": 4,
+          "n_long_cascades": 31,
+          "wall_enrichment": 1.0709350529709811,
+          "wall_p_deficit": 0.6722129783693843,
+          "wall_supported": false,
+          "n_triplets": 140,
+          "accel_enrichment": 1.402524544179523,
+          "accel_p": 0.17970049916805325,
+          "placebo_max_enrichment": 1.3037180106228874,
+          "accel_supported": false,
+          "verdict": "clean null (no cascade wall, no accelerating-gap excess)"
+        },
+        "FRB20220912A (Blinkverse, n=2216)": {
+          "n_bursts": 1076,
+          "n_sessions": 17,
+          "n_long_cascades": 31,
+          "wall_enrichment": 0.9002468418759982,
+          "wall_p_deficit": 0.2928452579034942,
+          "wall_supported": false,
+          "n_triplets": 172,
+          "accel_enrichment": 0.6964596633778294,
+          "accel_p": 0.9151414309484193,
+          "placebo_max_enrichment": 1.0130856901646264,
+          "accel_supported": false,
+          "verdict": "clean null (no cascade wall, no accelerating-gap excess)"
+        }
+      },
+      "wall_sources": [],
+      "accel_sources": [],
+      "replicated": false,
+      "verdict": "wall: null (0/4); acceleration: null (0/4)"
+    },
     "FRB01_dispersion": {
-      "available": false,
-      "a_tfpt": NaN,
-      "a_tfpt_err": NaN,
-      "consistent_with_zero": true,
-      "note": "raw_data_required: per-burst sub-band (nu, t) timing not available in catalogue data"
+      "available": true,
+      "n_bursts": 119,
+      "index": -3.0,
+      "per_burst": {
+        "burst1.calibP": {
+          "source": "FRB20121102A?",
+          "n_sub": 8,
+          "a_tfpt": 1.6215460374706006e-10,
+          "a_tfpt_err": 5.754138347568954e-13
+        },
+        "20191003_1032.calibP": {
+          "source": "FRB20121102A?",
+          "n_sub": 10,
+          "a_tfpt": 9.56881637836924e-10,
+          "a_tfpt_err": 9.786650062722176e-13
+        },
+        "FRB20201124A_2021MayApr_0680": {
+          "source": "FRB20201124A",
+          "n_sub": 8,
+          "a_tfpt": 3.306976131287205e-11,
+          "a_tfpt_err": 4.895883553872972e-13
+        },
+        "FRB20201124A_2021MayApr_0022": {
+          "source": "FRB20201124A",
+          "n_sub": 7,
+          "a_tfpt": 4.197080892517154e-11,
+          "a_tfpt_err": 7.530252294893289e-13
+        },
+        "FRB20201124A_2021MayApr_0383": {
+          "source": "FRB20201124A",
+          "n_sub": 10,
+          "a_tfpt": 3.023869799919164e-11,
+          "a_tfpt_err": 1.3470473766041617e-13
+        },
+        "FRB20201124A_2021MayApr_1413": {
+          "source": "FRB20201124A",
+          "n_sub": 8,
+          "a_tfpt": 5.2617900616037305e-11,
+          "a_tfpt_err": 2.541261954639032e-14
+        },
+        "FRB20201124A_2021MayApr_0906": {
+          "source": "FRB20201124A",
+          "n_sub": 11,
+          "a_tfpt": 3.136302092195069e-11,
+          "a_tfpt_err": 6.612391932329454e-13
+        },
+        "FRB20201124A_2021MayApr_0037": {
+          "source": "FRB20201124A",
+          "n_sub": 6,
+          "a_tfpt": 2.7411574812836425e-11,
+          "a_tfpt_err": 3.1528672676959317e-13
+        },
+        "FRB20201124A_2021MayApr_0491": {
+          "source": "FRB20201124A",
+          "n_sub": 8,
+          "a_tfpt": 4.306268091024402e-11,
+          "a_tfpt_err": 8.127129933836945e-13
+        },
+        "FRB20201124A_2021MayApr_1120": {
+          "source": "FRB20201124A",
+          "n_sub": 10,
+          "a_tfpt": 3.613203864904402e-11,
+          "a_tfpt_err": 8.266564700499335e-13
+        },
+        "FRB20201124A_2021MayApr_0611": {
+          "source": "FRB20201124A",
+          "n_sub": 7,
+          "a_tfpt": 5.942132129401558e-11,
+          "a_tfpt_err": 5.054728473181957e-13
+        },
+        "FRB20201124A_2021MayApr_0712": {
+          "source": "FRB20201124A",
+          "n_sub": 7,
+          "a_tfpt": 3.337494833628562e-11,
+          "a_tfpt_err": 8.421083071685599e-13
+        },
+        "FRB20201124A_2021MayApr_0722": {
+          "source": "FRB20201124A",
+          "n_sub": 9,
+          "a_tfpt": 4.705098579929005e-11,
+          "a_tfpt_err": 1.1997030617890748e-12
+        },
+        "FRB20201124A_2021MayApr_0905": {
+          "source": "FRB20201124A",
+          "n_sub": 11,
+          "a_tfpt": 3.136302092195069e-11,
+          "a_tfpt_err": 6.612391932329454e-13
+        },
+        "FRB20201124A_2021MayApr_1245": {
+          "source": "FRB20201124A",
+          "n_sub": 10,
+          "a_tfpt": 3.261032096917085e-11,
+          "a_tfpt_err": 1.1384439561408848e-13
+        },
+        "FRB20201124A_2021MayApr_0251": {
+          "source": "FRB20201124A",
+          "n_sub": 11,
+          "a_tfpt": 3.072031149448087e-11,
+          "a_tfpt_err": 1.321818813598567e-13
+        },
+        "FRB20201124A_2021MayApr_1185": {
+          "source": "FRB20201124A",
+          "n_sub": 9,
+          "a_tfpt": 5.755748424140116e-11,
+          "a_tfpt_err": 6.924172365433371e-13
+        },
+        "FRB20201124A_2021MayApr_1373": {
+          "source": "FRB20201124A",
+          "n_sub": 6,
+          "a_tfpt": 3.9484732278941866e-11,
+          "a_tfpt_err": 8.096789071776432e-13
+        },
+        "FRB20201124A_2021MayApr_0789": {
+          "source": "FRB20201124A",
+          "n_sub": 6,
+          "a_tfpt": 2.952644295967194e-11,
+          "a_tfpt_err": 1.3703627523849081e-12
+        },
+        "FRB20201124A_2021MayApr_0937": {
+          "source": "FRB20201124A",
+          "n_sub": 9,
+          "a_tfpt": 4.5683601992753474e-11,
+          "a_tfpt_err": 8.637810568918588e-13
+        },
+        "FRB20201124A_2021MayApr_1832": {
+          "source": "FRB20201124A",
+          "n_sub": 8,
+          "a_tfpt": 5.736747443927432e-11,
+          "a_tfpt_err": 1.2629870320041142e-12
+        },
+        "FRB20201124A_2021MayApr_1098": {
+          "source": "FRB20201124A",
+          "n_sub": 10,
+          "a_tfpt": 2.2490313641729573e-11,
+          "a_tfpt_err": 1.6266286729636457e-13
+        },
+        "FRB20201124A_2021MayApr_0735": {
+          "source": "FRB20201124A",
+          "n_sub": 6,
+          "a_tfpt": 5.148834911263754e-11,
+          "a_tfpt_err": 1.6847984633536455e-12
+        },
+        "FRB20201124A_2021MayApr_0721": {
+          "source": "FRB20201124A",
+          "n_sub": 12,
+          "a_tfpt": 3.4434028709138556e-11,
+          "a_tfpt_err": 1.3569770827274004e-13
+        },
+        "FRB20201124A_2021MayApr_0945": {
+          "source": "FRB20201124A",
+          "n_sub": 9,
+          "a_tfpt": 3.2136785263316305e-11,
+          "a_tfpt_err": 3.4289377178263357e-13
+        },
+        "FRB20201124A_2021MayApr_0453": {
+          "source": "FRB20201124A",
+          "n_sub": 12,
+          "a_tfpt": 5.090218010632548e-11,
+          "a_tfpt_err": 2.973686994730296e-13
+        },
+        "FRB20201124A_2021MayApr_1791": {
+          "source": "FRB20201124A",
+          "n_sub": 11,
+          "a_tfpt": 3.863321639676214e-11,
+          "a_tfpt_err": 3.347752620752764e-13
+        },
+        "FRB20201124A_2021MayApr_1691": {
+          "source": "FRB20201124A",
+          "n_sub": 7,
+          "a_tfpt": 6.974961714961094e-12,
+          "a_tfpt_err": 1.1627311305224856e-12
+        },
+        "FRB20201124A_2021MayApr_1016": {
+          "source": "FRB20201124A",
+          "n_sub": 8,
+          "a_tfpt": 4.6257396046386246e-11,
+          "a_tfpt_err": 8.915125676638535e-13
+        },
+        "FRB20201124A_2021MayApr_0314": {
+          "source": "FRB20201124A",
+          "n_sub": 6,
+          "a_tfpt": 1.658016086166603e-11,
+          "a_tfpt_err": 2.0294362862719707e-13
+        },
+        "FRB20201124A_2021MayApr_1081": {
+          "source": "FRB20201124A",
+          "n_sub": 7,
+          "a_tfpt": 2.446528247507213e-11,
+          "a_tfpt_err": 8.359279144541515e-13
+        },
+        "FRB20201124A_2021MayApr_0361": {
+          "source": "FRB20201124A",
+          "n_sub": 6,
+          "a_tfpt": 4.649170910177479e-11,
+          "a_tfpt_err": 1.5073138026302548e-12
+        },
+        "FRB20201124A_2021MayApr_1796": {
+          "source": "FRB20201124A",
+          "n_sub": 11,
+          "a_tfpt": 2.2207324160612315e-11,
+          "a_tfpt_err": 6.611214425712014e-14
+        },
+        "FRB20201124A_2021MayApr_0027": {
+          "source": "FRB20201124A",
+          "n_sub": 7,
+          "a_tfpt": 6.06464592751335e-11,
+          "a_tfpt_err": 1.6851646909981189e-12
+        },
+        "FRB20201124A_2021MayApr_0293": {
+          "source": "FRB20201124A",
+          "n_sub": 11,
+          "a_tfpt": 3.212838647709695e-11,
+          "a_tfpt_err": 4.965652125790196e-13
+        },
+        "FRB20201124A_2021MayApr_0116": {
+          "source": "FRB20201124A",
+          "n_sub": 7,
+          "a_tfpt": 5.238131250756331e-11,
+          "a_tfpt_err": 3.8676035136365097e-13
+        },
+        "FRB20201124A_2021MayApr_0895": {
+          "source": "FRB20201124A",
+          "n_sub": 10,
+          "a_tfpt": 3.5203146543994127e-11,
+          "a_tfpt_err": 2.0693777537103254e-13
+        },
+        "FRB20201124A_2021MayApr_0281": {
+          "source": "FRB20201124A",
+          "n_sub": 10,
+          "a_tfpt": 7.03959652695883e-11,
+          "a_tfpt_err": 4.460064255006468e-13
+        },
+        "FRB20201124A_2021MayApr_1251": {
+          "source": "FRB20201124A",
+          "n_sub": 9,
+          "a_tfpt": 3.0262613884999436e-11,
+          "a_tfpt_err": 4.0839038079609585e-13
+        },
+        "FRB20201124A_2021MayApr_0064": {
+          "source": "FRB20201124A",
+          "n_sub": 6,
+          "a_tfpt": 6.833334904707526e-11,
+          "a_tfpt_err": 1.4406960284903957e-12
+        },
+        "FRB20201124A_2021MayApr_1323": {
+          "source": "FRB20201124A",
+          "n_sub": 11,
+          "a_tfpt": 3.3345850010372446e-11,
+          "a_tfpt_err": 2.334669881968663e-13
+        },
+        "FRB20201124A_2021MayApr_1758": {
+          "source": "FRB20201124A",
+          "n_sub": 7,
+          "a_tfpt": 2.8288928843565214e-11,
+          "a_tfpt_err": 9.317254063759781e-13
+        },
+        "FRB20201124A_2021MayApr_0677": {
+          "source": "FRB20201124A",
+          "n_sub": 6,
+          "a_tfpt": 9.035670467365222e-11,
+          "a_tfpt_err": 4.990093210475992e-12
+        },
+        "FRB20201124A_2021MayApr_0436": {
+          "source": "FRB20201124A",
+          "n_sub": 8,
+          "a_tfpt": 4.925920159119032e-11,
+          "a_tfpt_err": 5.294963011175164e-13
+        },
+        "FRB20201124A_2021MayApr_0156": {
+          "source": "FRB20201124A",
+          "n_sub": 8,
+          "a_tfpt": 4.8203853870696846e-11,
+          "a_tfpt_err": 8.957730955988716e-13
+        },
+        "FRB20201124A_2021MayApr_0799": {
+          "source": "FRB20201124A",
+          "n_sub": 9,
+          "a_tfpt": 2.5593261331191434e-11,
+          "a_tfpt_err": 6.148161532650312e-13
+        },
+        "FRB20201124A_2021MayApr_0793": {
+          "source": "FRB20201124A",
+          "n_sub": 9,
+          "a_tfpt": 1.6335287247410385e-11,
+          "a_tfpt_err": 7.81525056962513e-14
+        },
+        "FRB20201124A_2021MayApr_0739": {
+          "source": "FRB20201124A",
+          "n_sub": 6,
+          "a_tfpt": 4.566839317350941e-11,
+          "a_tfpt_err": 1.0298328989927227e-12
+        },
+        "FRB20201124A_2021MayApr_0778": {
+          "source": "FRB20201124A",
+          "n_sub": 11,
+          "a_tfpt": 2.7675304766286864e-11,
+          "a_tfpt_err": 2.485744875087389e-13
+        },
+        "FRB20201124A_2021MayApr_1058": {
+          "source": "FRB20201124A",
+          "n_sub": 6,
+          "a_tfpt": 2.981837419760224e-11,
+          "a_tfpt_err": 2.728598074580555e-13
+        },
+        "FRB20201124A_2021MayApr_0420": {
+          "source": "FRB20201124A",
+          "n_sub": 9,
+          "a_tfpt": 5.4031342953898613e-11,
+          "a_tfpt_err": 7.440869446051425e-13
+        },
+        "FRB20201124A_2021MayApr_1839": {
+          "source": "FRB20201124A",
+          "n_sub": 10,
+          "a_tfpt": 2.826452162789138e-11,
+          "a_tfpt_err": 5.522515397562662e-13
+        },
+        "FRB20201124A_2021MayApr_1516": {
+          "source": "FRB20201124A",
+          "n_sub": 7,
+          "a_tfpt": 2.384233203497642e-11,
+          "a_tfpt_err": 1.1898637640108172e-12
+        },
+        "FRB20201124A_2021MayApr_1493": {
+          "source": "FRB20201124A",
+          "n_sub": 7,
+          "a_tfpt": 4.295597813121237e-11,
+          "a_tfpt_err": 3.262584842315994e-13
+        },
+        "FRB20201124A_2021MayApr_0574": {
+          "source": "FRB20201124A",
+          "n_sub": 11,
+          "a_tfpt": 3.357926686205649e-11,
+          "a_tfpt_err": 1.7238036415597255e-13
+        },
+        "FRB20201124A_2021MayApr_1297": {
+          "source": "FRB20201124A",
+          "n_sub": 6,
+          "a_tfpt": 6.326257835853944e-11,
+          "a_tfpt_err": 5.216241935320794e-13
+        },
+        "FRB20201124A_2021MayApr_0140": {
+          "source": "FRB20201124A",
+          "n_sub": 11,
+          "a_tfpt": 3.8849625196822674e-11,
+          "a_tfpt_err": 2.184297382315796e-13
+        },
+        "FRB20201124A_2021MayApr_0560": {
+          "source": "FRB20201124A",
+          "n_sub": 10,
+          "a_tfpt": 6.270529903311751e-11,
+          "a_tfpt_err": 1.40302436389789e-13
+        },
+        "FRB20201124A_2021MayApr_0050": {
+          "source": "FRB20201124A",
+          "n_sub": 8,
+          "a_tfpt": 3.224209656138634e-11,
+          "a_tfpt_err": 3.3200830728351365e-13
+        },
+        "FRB20201124A_2021MayApr_1026": {
+          "source": "FRB20201124A",
+          "n_sub": 6,
+          "a_tfpt": 1.8033083239798306e-11,
+          "a_tfpt_err": 1.2860849499296338e-12
+        },
+        "FRB20201124A_2021MayApr_0004": {
+          "source": "FRB20201124A",
+          "n_sub": 12,
+          "a_tfpt": 4.9383905646346536e-11,
+          "a_tfpt_err": 1.4918812074737955e-13
+        },
+        "FRB20201124A_2021MayApr_0519": {
+          "source": "FRB20201124A",
+          "n_sub": 6,
+          "a_tfpt": 3.0310264068636313e-11,
+          "a_tfpt_err": 1.2823813157476728e-12
+        },
+        "FRB20201124A_2021MayApr_1100": {
+          "source": "FRB20201124A",
+          "n_sub": 8,
+          "a_tfpt": 5.514725645094845e-11,
+          "a_tfpt_err": 6.7757305414874e-13
+        },
+        "FRB20201124A_2021MayApr_0098": {
+          "source": "FRB20201124A",
+          "n_sub": 7,
+          "a_tfpt": 5.271175234421544e-11,
+          "a_tfpt_err": 2.5590316054513028e-12
+        },
+        "FRB20201124A_2021MayApr_1682": {
+          "source": "FRB20201124A",
+          "n_sub": 8,
+          "a_tfpt": 3.077670980964609e-11,
+          "a_tfpt_err": 9.245284163010454e-13
+        },
+        "FRB20201124A_2021MayApr_0051": {
+          "source": "FRB20201124A",
+          "n_sub": 7,
+          "a_tfpt": 4.877439125475228e-11,
+          "a_tfpt_err": 1.0341732613800975e-12
+        },
+        "FRB20201124A_2021MayApr_0576": {
+          "source": "FRB20201124A",
+          "n_sub": 11,
+          "a_tfpt": 4.592928807288094e-11,
+          "a_tfpt_err": 4.481042654482486e-13
+        },
+        "FRB20201124A_2021MayApr_0200": {
+          "source": "FRB20201124A",
+          "n_sub": 6,
+          "a_tfpt": 3.9622635897029156e-11,
+          "a_tfpt_err": 1.7598104757814553e-12
+        },
+        "FRB20201124A_2021MayApr_1028": {
+          "source": "FRB20201124A",
+          "n_sub": 6,
+          "a_tfpt": 7.671491654151922e-11,
+          "a_tfpt_err": 1.8353698927405273e-12
+        },
+        "FRB20201124A_2021MayApr_1487": {
+          "source": "FRB20201124A",
+          "n_sub": 9,
+          "a_tfpt": 5.105515025700805e-11,
+          "a_tfpt_err": 9.941622074714408e-13
+        },
+        "FRB20201124A_2021MayApr_0927": {
+          "source": "FRB20201124A",
+          "n_sub": 9,
+          "a_tfpt": 3.1227809217689044e-11,
+          "a_tfpt_err": 6.76117749461894e-13
+        },
+        "FRB20201124A_2021MayApr_0464": {
+          "source": "FRB20201124A",
+          "n_sub": 8,
+          "a_tfpt": 3.12865618008216e-11,
+          "a_tfpt_err": 6.259689682755946e-13
+        },
+        "FRB20201124A_2021MayApr_0580": {
+          "source": "FRB20201124A",
+          "n_sub": 12,
+          "a_tfpt": 3.6523487839628644e-11,
+          "a_tfpt_err": 2.390247641457562e-13
+        },
+        "FRB20201124A_2021MayApr_0407": {
+          "source": "FRB20201124A",
+          "n_sub": 10,
+          "a_tfpt": 5.826506937518189e-11,
+          "a_tfpt_err": 7.240288691960461e-13
+        },
+        "FRB20201124A_2021MayApr_1652": {
+          "source": "FRB20201124A",
+          "n_sub": 6,
+          "a_tfpt": 4.7881405162401194e-11,
+          "a_tfpt_err": 3.923402882071539e-12
+        },
+        "FRB20201124A_2021MayApr_0199": {
+          "source": "FRB20201124A",
+          "n_sub": 10,
+          "a_tfpt": 4.629322319420149e-11,
+          "a_tfpt_err": 2.055456532036764e-13
+        },
+        "FRB20201124A_2021MayApr_0552": {
+          "source": "FRB20201124A",
+          "n_sub": 8,
+          "a_tfpt": 4.5239812628449034e-11,
+          "a_tfpt_err": 2.9723555586834805e-13
+        },
+        "FRB20201124A_2021MayApr_0546": {
+          "source": "FRB20201124A",
+          "n_sub": 6,
+          "a_tfpt": 9.008026988404988e-11,
+          "a_tfpt_err": 3.40585190825637e-12
+        },
+        "FRB20201124A_2021MayApr_1582": {
+          "source": "FRB20201124A",
+          "n_sub": 11,
+          "a_tfpt": 3.624486834326172e-11,
+          "a_tfpt_err": 5.792829429003696e-13
+        },
+        "FRB20201124A_2021MayApr_1605": {
+          "source": "FRB20201124A",
+          "n_sub": 7,
+          "a_tfpt": 3.5329001549827736e-11,
+          "a_tfpt_err": 1.03053046771765e-12
+        },
+        "FRB20201124A_2021MayApr_0676": {
+          "source": "FRB20201124A",
+          "n_sub": 6,
+          "a_tfpt": 3.73616150560686e-11,
+          "a_tfpt_err": 7.020763092386433e-13
+        },
+        "FRB20201124A_2021MayApr_1014": {
+          "source": "FRB20201124A",
+          "n_sub": 10,
+          "a_tfpt": 3.150794425495209e-11,
+          "a_tfpt_err": 6.480159043334075e-13
+        },
+        "FRB20201124A_2021MayApr_1688": {
+          "source": "FRB20201124A",
+          "n_sub": 8,
+          "a_tfpt": 5.0047446365975396e-11,
+          "a_tfpt_err": 7.238314500693733e-13
+        },
+        "FRB20201124A_2021MayApr_0214": {
+          "source": "FRB20201124A",
+          "n_sub": 12,
+          "a_tfpt": 5.6534311971742546e-11,
+          "a_tfpt_err": 1.2606519458172643e-13
+        },
+        "FRB20201124A_2021MayApr_0850": {
+          "source": "FRB20201124A",
+          "n_sub": 10,
+          "a_tfpt": 4.167550477026665e-11,
+          "a_tfpt_err": 1.716416803103253e-13
+        },
+        "FRB20201124A_2021MayApr_0878": {
+          "source": "FRB20201124A",
+          "n_sub": 12,
+          "a_tfpt": 2.8218423916130402e-11,
+          "a_tfpt_err": 1.0773189675536848e-13
+        },
+        "FRB20201124A_2021MayApr_0488": {
+          "source": "FRB20201124A",
+          "n_sub": 6,
+          "a_tfpt": 4.9834754046220024e-11,
+          "a_tfpt_err": 4.402921273011245e-13
+        },
+        "FRB20201124A_2021MayApr_0227": {
+          "source": "FRB20201124A",
+          "n_sub": 9,
+          "a_tfpt": 7.789236578362636e-11,
+          "a_tfpt_err": 3.269311172133389e-13
+        },
+        "FRB20201124A_2021MayApr_1485": {
+          "source": "FRB20201124A",
+          "n_sub": 7,
+          "a_tfpt": 6.883529971968761e-11,
+          "a_tfpt_err": 2.7048785227051255e-13
+        },
+        "FRB20201124A_2021MayApr_1425": {
+          "source": "FRB20201124A",
+          "n_sub": 6,
+          "a_tfpt": 5.6328072580265674e-11,
+          "a_tfpt_err": 2.3456508996878095e-12
+        },
+        "FRB20201124A_2021MayApr_1031": {
+          "source": "FRB20201124A",
+          "n_sub": 9,
+          "a_tfpt": 3.425770311798363e-11,
+          "a_tfpt_err": 3.4303565604106726e-13
+        },
+        "FRB20201124A_2021MayApr_1623": {
+          "source": "FRB20201124A",
+          "n_sub": 7,
+          "a_tfpt": 3.30652269481186e-11,
+          "a_tfpt_err": 4.047341351809139e-13
+        },
+        "FRB20201124A_2021MayApr_0337": {
+          "source": "FRB20201124A",
+          "n_sub": 8,
+          "a_tfpt": 4.241093629191073e-11,
+          "a_tfpt_err": 8.927729670465694e-13
+        },
+        "FRB20201124A_2021MayApr_0661": {
+          "source": "FRB20201124A",
+          "n_sub": 8,
+          "a_tfpt": 2.090198180826431e-11,
+          "a_tfpt_err": 5.611305275678676e-13
+        },
+        "FRB20201124A_2021MayApr_1675": {
+          "source": "FRB20201124A",
+          "n_sub": 8,
+          "a_tfpt": 5.2148753935254364e-11,
+          "a_tfpt_err": 1.141692929091097e-12
+        },
+        "FRB20201124A_2021MayApr_0194": {
+          "source": "FRB20201124A",
+          "n_sub": 12,
+          "a_tfpt": 2.9973730481933955e-11,
+          "a_tfpt_err": 2.613274684866791e-13
+        },
+        "FRB20201124A_2021MayApr_0838": {
+          "source": "FRB20201124A",
+          "n_sub": 10,
+          "a_tfpt": 3.6594689437206764e-11,
+          "a_tfpt_err": 4.617478764771107e-13
+        },
+        "FRB20201124A_2021MayApr_1087": {
+          "source": "FRB20201124A",
+          "n_sub": 9,
+          "a_tfpt": 4.245122683638477e-11,
+          "a_tfpt_err": 8.566989029849774e-13
+        },
+        "FRB20201124A_2021MayApr_1266": {
+          "source": "FRB20201124A",
+          "n_sub": 7,
+          "a_tfpt": 3.787348715319798e-11,
+          "a_tfpt_err": 4.961025985194819e-13
+        },
+        "FRB20201124A_2021MayApr_1304": {
+          "source": "FRB20201124A",
+          "n_sub": 9,
+          "a_tfpt": 5.553880557530241e-11,
+          "a_tfpt_err": 3.2399381959113676e-13
+        },
+        "FRB20201124A_2021MayApr_0527": {
+          "source": "FRB20201124A",
+          "n_sub": 9,
+          "a_tfpt": 5.2166542804336385e-11,
+          "a_tfpt_err": 4.756013115088961e-13
+        },
+        "FRB20201124A_2021MayApr_0493": {
+          "source": "FRB20201124A",
+          "n_sub": 7,
+          "a_tfpt": 3.430820360653012e-11,
+          "a_tfpt_err": 7.176508064909868e-13
+        },
+        "FRB20201124A_2021MayApr_0618": {
+          "source": "FRB20201124A",
+          "n_sub": 9,
+          "a_tfpt": 5.794980854984648e-11,
+          "a_tfpt_err": 4.107819954612584e-13
+        },
+        "FRB20201124A_2021MayApr_1344": {
+          "source": "FRB20201124A",
+          "n_sub": 9,
+          "a_tfpt": 2.1401574520739033e-11,
+          "a_tfpt_err": 2.477584428943426e-13
+        },
+        "FRB20201124A_2021MayApr_1109": {
+          "source": "FRB20201124A",
+          "n_sub": 6,
+          "a_tfpt": 3.12246151473521e-11,
+          "a_tfpt_err": 1.0127790779271647e-12
+        },
+        "FRB20201124A_2021MayApr_0714": {
+          "source": "FRB20201124A",
+          "n_sub": 8,
+          "a_tfpt": 4.081031734231229e-11,
+          "a_tfpt_err": 2.0656857460887525e-13
+        },
+        "FRB20201124A_2021MayApr_0830": {
+          "source": "FRB20201124A",
+          "n_sub": 7,
+          "a_tfpt": 8.173933392795677e-11,
+          "a_tfpt_err": 2.3785555563543183e-13
+        },
+        "FRB20201124A_2021MayApr_1060": {
+          "source": "FRB20201124A",
+          "n_sub": 11,
+          "a_tfpt": 3.355377417908623e-11,
+          "a_tfpt_err": 1.6185504911639796e-13
+        },
+        "FRB20201124A_2021MayApr_1371": {
+          "source": "FRB20201124A",
+          "n_sub": 7,
+          "a_tfpt": 1.8432936448656143e-11,
+          "a_tfpt_err": 8.82365621909216e-14
+        },
+        "FRB20201124A_2021MayApr_0112": {
+          "source": "FRB20201124A",
+          "n_sub": 8,
+          "a_tfpt": 3.56931541904921e-11,
+          "a_tfpt_err": 4.709778936463629e-13
+        },
+        "FRB20201124A_2021MayApr_0919": {
+          "source": "FRB20201124A",
+          "n_sub": 6,
+          "a_tfpt": 2.4164299512225834e-11,
+          "a_tfpt_err": 1.243258319912679e-12
+        },
+        "FRB20201124A_2021MayApr_0601": {
+          "source": "FRB20201124A",
+          "n_sub": 9,
+          "a_tfpt": 5.961484202594814e-11,
+          "a_tfpt_err": 2.1845251200893656e-13
+        },
+        "FRB20201124A_2021MayApr_1186": {
+          "source": "FRB20201124A",
+          "n_sub": 9,
+          "a_tfpt": 5.755748424140116e-11,
+          "a_tfpt_err": 6.924172365433371e-13
+        },
+        "FRB20201124A_2021MayApr_1727": {
+          "source": "FRB20201124A",
+          "n_sub": 9,
+          "a_tfpt": 5.2854141347705225e-11,
+          "a_tfpt_err": 1.049060571442944e-12
+        },
+        "FRB20201124A_2021MayApr_1099": {
+          "source": "FRB20201124A",
+          "n_sub": 6,
+          "a_tfpt": 6.175590731415673e-11,
+          "a_tfpt_err": 1.5017055297853072e-12
+        },
+        "FRB20201124A_2021MayApr_1101": {
+          "source": "FRB20201124A",
+          "n_sub": 7,
+          "a_tfpt": 5.4209249963805607e-11,
+          "a_tfpt_err": 1.7938620159786292e-12
+        },
+        "FRB20201124A_2021MayApr_0817": {
+          "source": "FRB20201124A",
+          "n_sub": 11,
+          "a_tfpt": 3.722251441702889e-11,
+          "a_tfpt_err": 6.312387489670821e-13
+        },
+        "FRB20201124A_2021MayApr_0549": {
+          "source": "FRB20201124A",
+          "n_sub": 9,
+          "a_tfpt": 2.9347936241803354e-11,
+          "a_tfpt_err": 7.29316128187762e-13
+        },
+        "FRB20201124A_2021MayApr_0129": {
+          "source": "FRB20201124A",
+          "n_sub": 6,
+          "a_tfpt": 5.7977451229226635e-11,
+          "a_tfpt_err": 1.4364632236929974e-12
+        }
+      },
+      "universal_mean": 4.296604604195614e-11,
+      "universal_err": 1.7620989892281583e-14,
+      "chi2_per_dof": 13372.577751026565,
+      "universal_consistent": false,
+      "common_is_zero": false,
+      "verdict": "no native dispersion required: the fitted non-plasma nu^-3 term implies an extra cross-band delay BELOW the ToA precision in all 2 source(s) (worst delay/precision = 3.1e-15) -> consistent with TFPT's shared Lorentz cone; FRB.01 not falsified",
+      "n_sources": 2,
+      "by_source": {
+        "FRB20121102A?": 2,
+        "FRB20201124A": 117
+      },
+      "robust_mean": 5.1075812950917435e-11,
+      "robust_err": 7.86950891021468e-12,
+      "robust_zero": false,
+      "source_info": {
+        "FRB20121102A?": {
+          "n": 2,
+          "atfpt": 3.6631146787399624e-10,
+          "err": 3.973635170449319e-10,
+          "delay_s": 1.7232127075135295e-19,
+          "floor_s": 5.564019e-05,
+          "ratio": 3.0970647431533384e-15,
+          "below": true
+        },
+        "FRB20201124A": {
+          "n": 117,
+          "atfpt": 4.255748061763035e-11,
+          "err": 1.4350217962142128e-12,
+          "delay_s": 2.6846315620320814e-20,
+          "floor_s": 5.224683e-05,
+          "ratio": 5.13836258014521e-16,
+          "below": true
+        }
+      },
+      "cross_source_chi2_dof": 0.6638173598410656,
+      "cross_source_consistent": true,
+      "cross_source_zero": false,
+      "all_below_precision": true,
+      "max_delay_ratio": 3.0970647431533384e-15
     }
   },
   "generic": {
@@ -743,15 +2027,70 @@
       "note": "eigs=[0.0563, 0.0224] vs kernel [0.0878, 0.0014]; CI_contains_kernel=False; overall null p=0.487 (worst null: block_shuffle)"
     },
     {
-      "name": "FRB01_dispersion",
+      "name": "FRB02b_free_quotient",
       "score": 0.0,
-      "status": "data_limited",
+      "status": "null",
       "p_value": null,
       "q_value": null,
-      "discriminating": false,
+      "discriminating": true,
       "replicated": false,
       "observable_semantics_valid": true,
-      "note": "raw_data_required: per-burst sub-band (nu, t) timing not available in catalogue data"
+      "note": "no source shows a significant echo at any quotient (4 tested) -> M0"
+    },
+    {
+      "name": "FRB06_pol_fraction",
+      "score": 0.0,
+      "status": "null",
+      "p_value": null,
+      "q_value": null,
+      "discriminating": true,
+      "replicated": false,
+      "observable_semantics_valid": true,
+      "note": "replicated=none; per-source single hits are low-V distribution-shape artifacts"
+    },
+    {
+      "name": "FRB07_width_echo",
+      "score": 0.0,
+      "status": "null",
+      "p_value": null,
+      "q_value": null,
+      "discriminating": true,
+      "replicated": false,
+      "observable_semantics_valid": true,
+      "note": "width-step excesses: none"
+    },
+    {
+      "name": "FRB08_pa_classes",
+      "score": 0.0,
+      "status": "null",
+      "p_value": 0.0004997501249375312,
+      "q_value": 0.0004997501249375312,
+      "discriminating": true,
+      "replicated": false,
+      "observable_semantics_valid": true,
+      "note": "fundamental m=2; mu4 match=False"
+    },
+    {
+      "name": "FRB09_recovery_clock",
+      "score": 0.0,
+      "status": "null",
+      "p_value": null,
+      "q_value": null,
+      "discriminating": true,
+      "replicated": false,
+      "observable_semantics_valid": true,
+      "note": "wall sources=none; accel sources=none"
+    },
+    {
+      "name": "FRB01_dispersion",
+      "score": 0.0,
+      "status": "consistency",
+      "p_value": null,
+      "q_value": null,
+      "discriminating": true,
+      "replicated": true,
+      "observable_semantics_valid": true,
+      "note": "no native dispersion required: the fitted non-plasma nu^-3 term implies an extra cross-band delay BELOW the ToA precision in all 2 source(s) (worst delay/precision = 3.1e-15) -> consistent with TFPT's shared Lorentz cone; FRB.01 not falsified"
     }
   ],
   "overall": {
@@ -762,13 +2101,17 @@
     ],
     "null_axes": [
       "FRB02_echo_ratio",
-      "FRB04_polarisation"
+      "FRB04_polarisation",
+      "FRB02b_free_quotient",
+      "FRB06_pol_fraction",
+      "FRB07_width_echo",
+      "FRB08_pa_classes",
+      "FRB09_recovery_clock"
     ],
     "consistency_axes": [
-      "FRB05_baryon"
-    ],
-    "data_limited_axes": [
+      "FRB05_baryon",
       "FRB01_dispersion"
-    ]
+    ],
+    "data_limited_axes": []
   }
 }

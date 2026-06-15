@@ -8,7 +8,10 @@ dist/
 .ipynb_checkpoints/
 
 # raw input data: public, re-downloadable, large (kept out of git)
-data/
+# ...but keep the tiny derived/provenance files so FRB.01 stays reproducible
+data/*
+!data/README.md
+!data/frb01_subband_toas.csv
 new-data/
 new_data/
 *.fil

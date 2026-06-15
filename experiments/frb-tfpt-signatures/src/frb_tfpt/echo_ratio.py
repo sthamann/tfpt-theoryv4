@@ -299,9 +299,12 @@ def evaluate_echo_semantic(series: RepeaterSeries, half_window_dex: float = 0.10
     if not series.available:
         return SemanticEchoResult(series.source, 0, 0, 0, "none", False, [], {}, {},
                                   0.0, None, "data-limited")
-    energy_like = bool(np.isfinite(series.energy).sum())
-    val = series.energy if energy_like else series.fluence
-    raw_col = "E (erg)" if energy_like else "fluence (Jy ms)"
+    have_energy = bool(np.isfinite(series.energy).sum())
+    val = series.energy if have_energy else series.fluence
+    raw_col = "E (erg)" if have_energy else "fluence (Jy ms)"
+    # fluence is energy-proportional for a single source, so it is energy-like
+    # for ratio purposes (energy channel = identity, amplitude channel = sqrt).
+    energy_like = bool(np.isfinite(val).sum())
     sess = series.session_id if series.session_id.size else np.zeros(len(series.mjd))
     mjd = series.mjd
 

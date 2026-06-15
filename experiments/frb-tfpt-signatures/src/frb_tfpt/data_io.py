@@ -16,6 +16,7 @@ Datasets
 
 from __future__ import annotations
 
+import csv
 import re
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -263,6 +264,7 @@ class RepeaterSeries:
     circular_frac: np.ndarray = field(default_factory=lambda: np.array([]))
     freq_low: np.ndarray = field(default_factory=lambda: np.array([]))
     freq_high: np.ndarray = field(default_factory=lambda: np.array([]))
+    width: np.ndarray = field(default_factory=lambda: np.array([]))         # ms
     session_id: np.ndarray = field(default_factory=lambda: np.array([]))
 
     def __len__(self) -> int:
@@ -393,6 +395,93 @@ def load_frb20240619D(path: str | Path | None = None) -> RepeaterSeries:
     """
     return _load_dropin_repeater("FRB 20240619D (wideband, 1539 bursts)",
                                  "frb20240619D_wideband.tsv", path)
+
+
+# --------------------------------------------------------------------------- #
+# Blinkverse multi-source burst database (per-burst energy, RM, polarisation)
+# --------------------------------------------------------------------------- #
+BLINKVERSE_FILE = "blinkverse_bursts.csv"
+
+
+def _bv_float(s) -> float:
+    s = str(s).strip()
+    if not s:
+        return np.nan
+    s = re.split(r"\+or-", s)[0]
+    s = re.sub(r"\([^)]*\)", "", s)
+    s = s.split()[0]                       # drop trailing "+a/-b" asym errors
+    try:
+        return float(s)                    # keeps scientific notation e.g. 9.4e+37
+    except ValueError:
+        return np.nan
+
+
+def _blinkverse_rows(path: str | Path | None = None) -> list[dict]:
+    p = Path(path) if path else DATA_DIR / BLINKVERSE_FILE
+    if not p.exists():
+        return []
+    with open(p, newline="", encoding="utf-8", errors="replace") as fh:
+        return list(csv.DictReader(fh))
+
+
+def blinkverse_sources(min_bursts: int = 200, path: str | Path | None = None) -> dict[str, int]:
+    """Per-source burst counts in the Blinkverse DB (sources with >= min_bursts)."""
+    rows = _blinkverse_rows(path)
+    out: dict[str, int] = {}
+    for r in rows:
+        s = (r.get("source") or "").strip()
+        if s:
+            out[s] = out.get(s, 0) + 1
+    return {k: v for k, v in sorted(out.items(), key=lambda kv: -kv[1]) if v >= min_bursts}
+
+
+def blinkverse_series(source: str, path: str | Path | None = None) -> RepeaterSeries:
+    """A single-source ``RepeaterSeries`` extracted from the Blinkverse DB.
+
+    energy/fluence in their catalogue units (ratio tests are unit-invariant); RM
+    is taken from ``rm_qufit`` where present else ``rm_syn``; polarisation
+    fractions from ``polar_l``/``polar_c``. Blinkverse carries no PA angle, so the
+    FRB.04 PA channel stays single-source (FRB 20240114A).
+    """
+    rows = [r for r in _blinkverse_rows(path) if (r.get("source") or "").strip() == source]
+    n = len(rows)
+    if n == 0:
+        return RepeaterSeries(f"{source} (Blinkverse)", available=False, mjd=np.array([]))
+    mjd = np.array([_bv_float(r.get("mjd")) for r in rows])
+    rm = np.array([_bv_float(r.get("rm_qufit")) if str(r.get("rm_qufit") or "").strip()
+                   else _bv_float(r.get("rm_syn")) for r in rows])
+    return RepeaterSeries(
+        source=f"{source} (Blinkverse, n={n})",
+        available=True,
+        mjd=mjd,
+        energy=np.array([_bv_float(r.get("energy")) for r in rows]),
+        fluence=np.array([_bv_float(r.get("fluence")) for r in rows]),
+        dm=np.array([_bv_float(r.get("dm_snr")) or _bv_float(r.get("dm_alig")) for r in rows]),
+        rm=rm,
+        linear_frac=np.array([_bv_float(r.get("polar_l")) for r in rows]),
+        circular_frac=np.array([_bv_float(r.get("polar_c")) for r in rows]),
+        width=np.array([_bv_float(r.get("width")) for r in rows]),
+        session_id=_daily_sessions(mjd),
+    )
+
+
+def load_subband_toas(path: str | Path | None = None) -> dict[str, dict]:
+    """Per-burst sub-band arrival times (from `scripts/extract_subband_toas.py`)
+    for FRB.01. Returns {burst_id: {source, freq, toa, toa_err}}."""
+    p = Path(path) if path else DATA_DIR / "frb01_subband_toas.csv"
+    if not p.exists():
+        return {}
+    out: dict[str, dict] = {}
+    with open(p, newline="", encoding="utf-8") as fh:
+        for r in csv.DictReader(fh):
+            b = out.setdefault(r["burst_id"], {"source": r["source"], "freq": [], "toa": [], "toa_err": []})
+            b["freq"].append(float(r["freq_mhz"]))
+            b["toa"].append(float(r["toa_s"]))
+            b["toa_err"].append(float(r["toa_err_s"]))
+    for b in out.values():
+        for k in ("freq", "toa", "toa_err"):
+            b[k] = np.array(b[k])
+    return out
 
 
 def repeater_subsets(tbl: BurstTable, min_bursts: int = 8) -> dict[str, np.ndarray]:

@@ -43,4 +43,8 @@ verification/pyrate/*.generated.txt
 temp/
 
 # FRB experiment datasets (local copies; see data/README.md)
-experiments/frb-tfpt-signatures/data/
+# keep the tiny derived/provenance files so FRB.01 stays reproducible
+experiments/frb-tfpt-signatures/data/*
+!experiments/frb-tfpt-signatures/data/README.md
+!experiments/frb-tfpt-signatures/data/frb01_subband_toas.csv
+experiments/frb-tfpt-signatures/new-data/

@@ -24,6 +24,8 @@ from . import recovery_kernel as kernel
 from . import tfpt_ladder
 from .activity_windows import activity_window_test
 from .data_io import (
+    blinkverse_series,
+    blinkverse_sources,
     load_chime_catalog1,
     load_dmz_sharma,
     load_dmz_table4,
@@ -31,16 +33,24 @@ from .data_io import (
     load_fast_121102_1652,
     load_frb20240619D,
     load_frb121102_aggarwal,
+    load_subband_toas,
     repeater_subsets,
 )
+from .dispersion import frb01_universality
 from .dmz_baryon import baryon_test
 from .drift_freq import drift_score
 from .echo_ratio import evaluate_echo_semantic
 from .energy_clusters import energy_cluster_score, fit_spacing_ladder, periodogram_curve
 from .fingerprint import EvidenceAxis, aggregate_axes
 from .markov_spectrum import markov_spectrum_test
+from .multi_source import multi_source_echo, multi_source_rm
 from .no_native_dispersion import no_native_dispersion_test
+from .free_quotient import multi_source_free_quotient
 from .periodic_population import evaluate_periodic_windows
+from .polarization import pa_angle_classes
+from .pol_fraction import pol_fraction_test
+from .recovery_clock import CLOCK_GAP_RATIO, multi_source_recovery_clock
+from .width_echo import width_step_echo
 from .recovery_observable_model import shared_kernel_search, var1_spectrum
 from .rm_relaxation_step import rm_step_relaxation_test
 from .timing import folded_rayleigh, waiting_time_structure
@@ -242,11 +252,158 @@ def cmd_analyze(args: argparse.Namespace) -> int:
             print("      -> the AR(1)-drift null reproduces the proximity: consistent with a "
                   "SMOOTH magneto-ionic drift, not a discrete step spectrum")
 
-    # ---- FRB.01: no native dispersion (kill test, raw data required) -------
-    disp = no_native_dispersion_test()
-    out["search_targets"]["FRB01_dispersion"] = _jsonable(disp)
-    print(f"\n[FRB.01] {disp.note}")
-    axes.append(EvidenceAxis("FRB01_dispersion", 0.0, "data_limited", note=disp.note))
+    # ---- MULTI-SOURCE replication (Blinkverse DB + FAST catalogues) --------
+    print("\n[multi-source] replication across repeaters (Blinkverse + FAST)")
+    bv = blinkverse_sources(min_bursts=200)
+    print(f"  Blinkverse sources (>=200 bursts): { {k: v for k, v in bv.items()} }")
+    echo_sources = [fast,
+                    blinkverse_series("FRB20201124A"),
+                    blinkverse_series("FRB20220912A"),
+                    blinkverse_series("FRB20230607A")]
+    me = multi_source_echo([s for s in echo_sources if s.available], seed=args.seed)
+    out["search_targets"]["FRB02_multi_source"] = _jsonable(me)
+    print(f"  FRB.02 across {len(me.sources)} sources: {me.verdict}")
+    for nm, d in me.per_source.items():
+        print(f"    {nm:34s} pairs={d['n_pairs']:5d} theory_sig={d['theory_significant']} "
+              f"audit_sig={d['audit_significant']}")
+
+    # ---- FRB.02b: the free-quotient null (anti-numerology control) ----------
+    print("\n[FRB.02b] free-quotient null (M0 / Mfixed q=8/27 / Mfree q*; LEE-corrected)")
+    fq = multi_source_free_quotient([s for s in echo_sources if s.available], seed=args.seed)
+    out["search_targets"]["FRB02b_free_quotient"] = _jsonable(fq)
+    for nm, d in fq.per_source.items():
+        print(f"    {nm:34s} q*={d['q_star']:.3f} LEE_p={d['global_p']:.3f} "
+              f"near_kernel={d['near_kernel']} inj_ok={d['injection_ok']}")
+    print(f"  {fq.verdict}")
+    # gate: a TFPT echo result is only admissible if the FREE quotient does NOT win at a
+    # non-kernel value; a non-kernel win is an explicit anti-TFPT outcome.
+    fq_status = ("null" if not fq.tfpt_consistent and not fq.nonkernel_wins
+                 else ("candidate" if fq.tfpt_consistent and not fq.nonkernel_wins else "null"))
+    axes.append(EvidenceAxis("FRB02b_free_quotient", 0.0, fq_status,
+                             discriminating=True, replicated=len(fq.tfpt_consistent) >= 2,
+                             note=fq.verdict))
+
+    rm_sources = [pol_series,
+                  blinkverse_series("FRB20201124A"),
+                  blinkverse_series("FRB20220912A")]
+    mr = multi_source_rm([s for s in rm_sources if s.available], seed=args.seed)
+    out["search_targets"]["FRB04_multi_source_rm"] = _jsonable(mr)
+    print(f"  FRB.04 RM across {len(mr.sources)} sources: {mr.verdict}")
+    for nm, d in mr.per_source.items():
+        print(f"    {nm:34s} v1_eigs={[round(x,3) for x in d['v1_energy_eigs']]} "
+              f"v1_p={d['v1_overall_null_p']:.2f} | v2_step_eigs={[round(x,3) for x in d['v2_step_eigs']]} "
+              f"v2_p={d['v2_overall_null_p']:.2f} ar1={d['v2_ar1_drift_p']}")
+    # update replication flags on the FRB.02 / FRB.04 axes
+    for ax in axes:
+        if ax.name == "FRB02_echo_ratio":
+            ax.replicated = me.replicated
+        if ax.name == "FRB04_polarisation":
+            ax.replicated = mr.v1_replicated
+
+    # ---- NEW overlooked signatures: FRB.06 / FRB.07 / FRB.08 ---------------
+    print("\n[FRB.06] polarisation-degree quantisation (vs kernel fractions, Beta null)")
+    f06 = {}
+    f06_target_sources: dict = {}
+    for s in ("FRB20240114A pol", "FRB20201124A", "FRB20220912A"):
+        ser = pol_series if s == "FRB20240114A pol" else blinkverse_series(s)
+        r = pol_fraction_test(ser, seed=args.seed)
+        f06[ser.source] = _jsonable(r)
+        if r.available:
+            print(f"    {ser.source:34s} {r.verdict}")
+            for t in r.significant:
+                f06_target_sources.setdefault(t, []).append(s)
+    out["search_targets"]["FRB06_pol_fraction"] = f06
+    f06_rep = {t: v for t, v in f06_target_sources.items() if len(v) >= 2}
+    # single-source |V|/I excesses (different targets per source) are low-V Beta-null
+    # artifacts, not a replicated signature.
+    print(f"    replicated targets (>=2 sources): {f06_rep or 'none — single-source artifacts only'}")
+    axes.append(EvidenceAxis("FRB06_pol_fraction", 0.0,
+                             "candidate" if f06_rep else "null",
+                             discriminating=True, replicated=bool(f06_rep),
+                             note=f"replicated={f06_rep or 'none'}; per-source single hits are "
+                                  f"low-V distribution-shape artifacts"))
+
+    print("\n[FRB.07] width-relaxation echo (vs step kernel {2/3,1/3})")
+    f07 = {}
+    f07_hits = {}
+    for s in ("FRB20121102A", "FRB20201124A", "FRB20220912A"):
+        ser = blinkverse_series(s)
+        r = width_step_echo(ser, seed=args.seed)
+        f07[ser.source] = _jsonable(r)
+        if r.available:
+            print(f"    {ser.source:34s} pairs={r.n_pairs:5d} -> {r.verdict}")
+            for t in r.significant:
+                f07_hits.setdefault(t, []).append(s)
+    out["search_targets"]["FRB07_width_echo"] = f07
+    f07_rep = any(len(v) >= 2 for v in f07_hits.values())
+    axes.append(EvidenceAxis("FRB07_width_echo", 0.0,
+                             "candidate" if f07_hits else "null",
+                             discriminating=True, replicated=f07_rep,
+                             note=f"width-step excesses: { {k: v for k, v in f07_hits.items()} or 'none'}"))
+
+    print("\n[FRB.08] static PA mu4 angle-classes (Rayleigh, FRB 20240114A)")
+    pac = pa_angle_classes(pol_series.pa_deg, seed=args.seed)
+    out["search_targets"]["FRB08_pa_classes"] = _jsonable(pac)
+    if pac is not None:
+        # the mu4 prediction is FOUR classes (m=4). A significant *fundamental* of
+        # m=2 is orthogonal-mode (90-deg) PA structure, NOT mu4.
+        mu4 = pac.best_m == 4 and pac.p_value < 0.05
+        print(f"    fundamental m={pac.best_m} (spacing {180 / pac.best_m:.0f} deg), "
+              f"p={pac.p_value:.3f}; mu4(m=4) match={mu4}")
+        if not mu4:
+            print(f"      -> significant PA structure but fundamental is m={pac.best_m} "
+                  f"(orthogonal-mode), not the mu4 4-class prediction")
+        axes.append(EvidenceAxis("FRB08_pa_classes", pac.c_p if mu4 else 0.0,
+                                 "candidate" if mu4 else "null",
+                                 p_value=pac.p_value, q_value=pac.p_value,
+                                 discriminating=True, replicated=False,
+                                 note=f"fundamental m={pac.best_m}; mu4 match={mu4}"))
+
+    # ---- FRB.09: recovery-clock dynamics (the time structure, not the ratios) --
+    print(f"\n[FRB.09] recovery-clock dynamics (wall at N_fam=3; gap ratio "
+          f"g1/g2={CLOCK_GAP_RATIO:.3f})")
+    clk_series = [load_fast_121102_1652()] + [
+        blinkverse_series(s) for s in ("FRB20121102A", "FRB20201124A", "FRB20220912A")]
+    f09 = multi_source_recovery_clock(clk_series, n_surrogate=600, seed=args.seed)
+    out["search_targets"]["FRB09_recovery_clock"] = _jsonable(f09)
+    for src, d in f09.per_source.items():
+        print(f"    {src:34s} wall p={d['wall_p_deficit']:.3f} (enr {d['wall_enrichment']:.2f}), "
+              f"accel p={d['accel_p']:.3f} (enr {d['accel_enrichment']:.2f} vs placebo "
+              f"{d['placebo_max_enrichment']:.2f}) -> {d['verdict']}")
+    print(f"    {f09.verdict}")
+    axes.append(EvidenceAxis("FRB09_recovery_clock", 0.0,
+                             "candidate" if f09.replicated else "null",
+                             discriminating=True, replicated=f09.replicated,
+                             note=f"wall sources={f09.wall_sources or 'none'}; "
+                                  f"accel sources={f09.accel_sources or 'none'}"))
+
+    # ---- FRB.01: no native dispersion -- now on REAL sub-band ToAs ---------
+    toas = load_subband_toas()
+    if toas:
+        f01 = frb01_universality(toas, index=-3.0, include_drift=True)
+        out["search_targets"]["FRB01_dispersion"] = _jsonable(f01)
+        print(f"\n[FRB.01] no-native-dispersion kill test on real bursts "
+              f"(n={f01.n_bursts} usable bursts, {f01.n_sources} sources)")
+        for src, d in f01.source_info.items():
+            print(f"    {src:16s} {d['n']:4d} bursts  A_TFPT={d['atfpt']:.2e}  "
+                  f"implied delay={d['delay_s']:.1e}s vs ToA floor={d['floor_s']:.1e}s "
+                  f"(ratio {d['ratio']:.1e})")
+        print(f"    worst implied-delay/precision = {f01.max_delay_ratio:.1e}; "
+              f"cross-source chi2/dof={f01.cross_source_chi2_dof:.0f}")
+        print(f"    -> {f01.verdict}")
+        # pass = no native dispersion required: implied delay below precision everywhere,
+        # OR cross-source A_TFPT mutually inconsistent / consistent-with-zero. A common
+        # non-zero term whose delay exceeds precision in all sources would FAIL.
+        passed = f01.all_below_precision or (not f01.cross_source_consistent) or f01.cross_source_zero
+        axes.append(EvidenceAxis("FRB01_dispersion", 0.0,
+                                 "consistency" if passed else "null",
+                                 discriminating=True, replicated=f01.n_sources >= 2,
+                                 note=f01.verdict))
+    else:
+        disp = no_native_dispersion_test()
+        out["search_targets"]["FRB01_dispersion"] = _jsonable(disp)
+        print(f"\n[FRB.01] {disp.note}")
+        axes.append(EvidenceAxis("FRB01_dispersion", 0.0, "data_limited", note=disp.note))
 
     # ---- extra stress dataset (drop-in) ------------------------------------
     d619 = load_frb20240619D()

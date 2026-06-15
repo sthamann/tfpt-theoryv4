@@ -19,6 +19,8 @@ from .data_io import (
     DMzTable,
     PolTable,
     RepeaterSeries,
+    blinkverse_series,
+    blinkverse_sources,
     load_chime_catalog1,
     load_dmz_sharma,
     load_dmz_table4,
@@ -27,10 +29,13 @@ from .data_io import (
     load_frb20240619D,
     load_frb121102_aggarwal,
     load_pandhi_pol,
+    load_subband_toas,
     repeater_subsets,
 )
+from .dispersion import frb01_universality, subband_toas
 from .dmz_baryon import baryon_test
 from .drift_freq import drift_score
+from .psrfits import read_archive
 from .echo_ratio import (
     echo_ratio_test,
     evaluate_echo_ratios_by_session,
@@ -38,7 +43,9 @@ from .echo_ratio import (
 )
 from .energy_clusters import energy_cluster_score, fit_spacing_ladder
 from .observable_semantics import energy_ratio_channels, is_theory_valid
+from .pol_fraction import pol_fraction_test
 from .rm_relaxation_step import rm_step_relaxation_test
+from .width_echo import width_step_echo
 from .window_extraction import extract_windows
 from .fingerprint import (
     EvidenceAxis,
@@ -47,9 +54,12 @@ from .fingerprint import (
     compute_fingerprint,
 )
 from .markov_spectrum import markov_spectrum_test
+from .multi_source import multi_source_echo, multi_source_rm
 from .no_native_dispersion import no_native_dispersion_test
 from .periodic_population import evaluate_periodic_windows
 from .polarization import pa_angle_classes
+from .free_quotient import free_quotient_test, multi_source_free_quotient
+from .recovery_clock import multi_source_recovery_clock, recovery_clock_test
 from .recovery_observable_model import shared_kernel_search, var1_spectrum
 from .rm_steps import rm_staircase
 from .timing import folded_rayleigh, waiting_time_structure
@@ -68,6 +78,10 @@ __all__ = [
     "load_pandhi_pol",
     "repeater_subsets",
     "RepeaterSeries",
+    "blinkverse_series",
+    "blinkverse_sources",
+    "multi_source_echo",
+    "multi_source_rm",
     "load_fast_121102_1652",
     "load_fast_20240114A_pol",
     "load_frb20240619D",
@@ -91,6 +105,16 @@ __all__ = [
     "shared_kernel_search",
     "var1_spectrum",
     "extract_windows",
+    "pol_fraction_test",
+    "width_step_echo",
+    "recovery_clock_test",
+    "multi_source_recovery_clock",
+    "free_quotient_test",
+    "multi_source_free_quotient",
+    "load_subband_toas",
+    "read_archive",
+    "subband_toas",
+    "frb01_universality",
     "no_native_dispersion_test",
     "EvidenceAxis",
     "aggregate_axes",

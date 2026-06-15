@@ -35,10 +35,13 @@ class DispersionResult:
 def no_native_dispersion_test(nu_mhz: np.ndarray | None = None,
                               t_s: np.ndarray | None = None,
                               t_err_s: np.ndarray | None = None,
-                              extra_index: float = -3.0) -> DispersionResult:
-    """Fit t(nu) = t0 + K nu^-2 + A_scat nu^-4 + A_TFPT nu^index and test A_TFPT=0.
+                              extra_index: float = -3.0,
+                              include_drift: bool = False) -> DispersionResult:
+    """Fit t(nu) = t0 + K nu^-2 + A_scat nu^-4 [+ D nu] + A_TFPT nu^index, test A_TFPT=0.
 
-    With no sub-band timing supplied, returns ``raw_data_required``.
+    ``include_drift`` adds a linear (nu^+1) intrinsic emission-drift term (the FRB
+    "sad trombone"), which is *source/burst-intrinsic* and otherwise leaks into
+    A_TFPT. With no sub-band timing supplied, returns ``raw_data_required``.
     """
     if nu_mhz is None or t_s is None:
         return DispersionResult(False, float("nan"), float("nan"), True,
@@ -48,17 +51,29 @@ def no_native_dispersion_test(nu_mhz: np.ndarray | None = None,
     t = np.asarray(t_s, float)
     ok = np.isfinite(nu) & np.isfinite(t) & (nu > 0)
     nu, t = nu[ok], t[ok]
-    if len(nu) < 6:
+    min_n = 6 if include_drift else 5      # n_params (5 or 4) + 1 dof
+    if len(nu) < min_n:
         return DispersionResult(False, float("nan"), float("nan"), True, "too few sub-bands")
-    w = (1.0 / np.asarray(t_err_s, float)[ok] ** 2) if t_err_s is not None else np.ones_like(t)
-    # design: [1, nu^-2, nu^-4, nu^index]
-    A = np.vstack([np.ones_like(nu), nu**-2, nu**-4, nu**extra_index]).T
-    W = np.diag(w)
-    cov = np.linalg.pinv(A.T @ W @ A)
+    if t_err_s is not None:
+        te = np.asarray(t_err_s, float)[ok]
+        good = te[np.isfinite(te) & (te > 0)]
+        floor = float(np.median(good)) if good.size else 1.0      # replace 0/NaN errors
+        te = np.where(np.isfinite(te) & (te > 0), te, floor)
+        te = np.maximum(te, 1e-6 * floor)                          # guard against inf weights
+        w = 1.0 / te ** 2
+    else:
+        w = np.ones_like(t)
+    cols = [np.ones_like(nu), nu**-2, nu**-4]
+    if include_drift:
+        cols.append(nu)                       # linear intrinsic drift
+    cols.append(nu**extra_index)              # the TFPT term (last column)
+    A = np.vstack(cols).T
+    cov = np.linalg.pinv(A.T @ (w[:, None] * A))
     coef = cov @ (A.T @ (w * t))
-    a_tfpt = float(coef[3])
-    a_err = float(np.sqrt(max(cov[3, 3], 0.0)))
+    a_tfpt = float(coef[-1])
+    a_err = float(np.sqrt(max(cov[-1, -1], 0.0)))
     consistent = abs(a_tfpt) <= 2 * a_err if a_err > 0 else True
-    note = (f"A_TFPT = {a_tfpt:.3e} +/- {a_err:.3e} (nu^{extra_index}); "
-            f"{'consistent with 0 (good for shared Lorentz cone)' if consistent else 'NONZERO -> tension'}")
+    note = (f"A_TFPT = {a_tfpt:.3e} +/- {a_err:.3e} (nu^{extra_index}"
+            f"{', +drift' if include_drift else ''}); "
+            f"{'consistent with 0' if consistent else 'NONZERO -> burst-specific (intrinsic)'}")
     return DispersionResult(True, a_tfpt, a_err, consistent, note)
