@@ -2,18 +2,38 @@
 
 import { motion } from "motion/react";
 import Link from "next/link";
-import { Download, Target, AlertTriangle, Clock, FileText } from "lucide-react";
+import {
+  Download,
+  Target,
+  AlertTriangle,
+  Clock,
+  FileText,
+  FlaskConical,
+  Github,
+} from "lucide-react";
 import { Math as Tex } from "./Math";
 import {
   Prediction,
+  PredictionExperiment,
   STATUS_BADGE,
   CATEGORY_META,
   LINK_STATUS_META,
   CLAIM_ID,
   STATUS_MARKER,
 } from "@/lib/predictions";
-import { cn } from "@/lib/utils";
+import { cn, REPO_URL } from "@/lib/utils";
 import { trackPdfInteraction } from "@/lib/track";
+
+const FINDING_META: Record<
+  PredictionExperiment["finding"],
+  { label: string; tone: string }
+> = {
+  consistent: { label: "consistent", tone: "text-emerald-200 bg-emerald-500/15 ring-emerald-400/30" },
+  robust: { label: "robust", tone: "text-teal-200 bg-teal-500/15 ring-teal-400/30" },
+  tension: { label: "tension", tone: "text-amber-200 bg-amber-500/15 ring-amber-400/30" },
+  null: { label: "null", tone: "text-slate-300 bg-slate-500/15 ring-slate-400/30" },
+  data_limited: { label: "data-limited", tone: "text-sky-200 bg-sky-500/15 ring-sky-400/30" },
+};
 
 export function PredictionCard({
   prediction,
@@ -115,6 +135,45 @@ export function PredictionCard({
           </div>
         </div>
       </div>
+
+      {prediction.experiment && (
+        <div className="border-t border-slate-800/60 bg-emerald-500/[0.03] px-5 py-3">
+          <div className="flex items-center gap-2">
+            <FlaskConical
+              size={14}
+              className="flex-none text-emerald-300/80"
+              aria-hidden="true"
+            />
+            <span className="text-[10px] font-semibold uppercase tracking-widest text-emerald-300/80">
+              Empirical audit
+            </span>
+            <span
+              className={cn(
+                "ml-auto inline-flex items-center rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider ring-1",
+                FINDING_META[prediction.experiment.finding].tone,
+              )}
+            >
+              {FINDING_META[prediction.experiment.finding].label}
+            </span>
+          </div>
+          <p className="mt-2 text-xs leading-relaxed text-slate-300">
+            {prediction.experiment.summary}
+          </p>
+          <p className="mt-1.5 text-xs leading-relaxed text-slate-200">
+            <span className="font-semibold text-slate-100">Result: </span>
+            {prediction.experiment.result}
+          </p>
+          <Link
+            href={`${REPO_URL}/tree/main/${prediction.experiment.repoPath}`}
+            target="_blank"
+            rel="noopener"
+            className="mt-2 inline-flex items-center gap-1.5 font-mono text-[11px] text-emerald-300/90 transition-colors hover:text-emerald-200"
+          >
+            <Github size={12} aria-hidden="true" />
+            {prediction.experiment.repoPath}
+          </Link>
+        </div>
+      )}
 
       <div className="mt-auto flex items-center justify-between gap-2 border-t border-slate-800/60 px-5 py-3">
         {(() => {

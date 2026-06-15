@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 import Link from "next/link";
-import { Download, LayoutGrid, Table2 } from "lucide-react";
+import { Download, LayoutGrid, Table2, FlaskConical, Github, FileText } from "lucide-react";
 import { SectionHeader } from "./SectionHeader";
 import { PredictionCard } from "./PredictionCard";
 import { PredictionMatrix } from "./PredictionMatrix";
@@ -12,9 +12,19 @@ import {
   Prediction,
   CATEGORY_META,
   TEST_SURFACE_GROUPS,
+  EXPERIMENTS_AUDIT,
 } from "@/lib/predictions";
-import { cn } from "@/lib/utils";
+import { cn, REPO_URL } from "@/lib/utils";
 import { trackPdfInteraction } from "@/lib/track";
+
+const AUDIT_COUNTS: { label: string; value: number; tone: string }[] = [
+  { label: "typed rows", value: EXPERIMENTS_AUDIT.rows, tone: "text-slate-100" },
+  { label: "consistent", value: EXPERIMENTS_AUDIT.consistent, tone: "text-emerald-300" },
+  { label: "tension", value: EXPERIMENTS_AUDIT.tension, tone: "text-amber-300" },
+  { label: "null", value: EXPERIMENTS_AUDIT.null, tone: "text-slate-300" },
+  { label: "data-limited", value: EXPERIMENTS_AUDIT.dataLimited, tone: "text-sky-300" },
+  { label: "parked", value: EXPERIMENTS_AUDIT.parked, tone: "text-slate-400" },
+];
 
 const READING_GUIDE = "/papers/introduction.pdf";
 
@@ -62,6 +72,76 @@ export function PredictionsSection() {
           title="Sharp, falsifiable readouts"
           description="Every row is a single readout with an explicit status marker, dependency class, and a stated kill or pressure criterion. Each links to the source document that derives it — and the freeze file commits the decisive kill criteria in advance. Some rows are closed numerical tests, some are structural kill tests, some are conditional, and a few are honestly-typed non-claims."
         />
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.5 }}
+          className="mt-8 rounded-2xl border border-emerald-400/20 bg-emerald-500/[0.04] p-5 sm:p-6"
+        >
+          <div className="flex flex-wrap items-center gap-2">
+            <FlaskConical size={16} className="flex-none text-emerald-300" aria-hidden />
+            <h3 className="font-serif text-base font-semibold text-slate-50">
+              Empirical audit — standalone <code className="font-mono text-sm">experiments/</code> tree
+            </h3>
+            <span className="ml-auto rounded-full border border-emerald-400/30 bg-emerald-500/10 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-widest text-emerald-200">
+              search targets · not load-bearing
+            </span>
+          </div>
+          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-slate-300">
+            <span className="font-semibold text-slate-100">{EXPERIMENTS_AUDIT.headline}</span>{" "}
+            {EXPERIMENTS_AUDIT.finding}
+          </p>
+          <div className="mt-4 grid grid-cols-3 gap-2 sm:grid-cols-6">
+            {AUDIT_COUNTS.map((c) => (
+              <div
+                key={c.label}
+                className="rounded-xl border border-slate-700/40 bg-slate-950/40 px-3 py-2 text-center"
+              >
+                <div className={cn("font-serif text-xl font-semibold", c.tone)}>{c.value}</div>
+                <div className="text-[10px] font-medium uppercase tracking-wider text-slate-400">
+                  {c.label}
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="mt-4 text-xs leading-relaxed text-slate-400">
+            <span className="font-semibold text-slate-300">Firewall:</span> FRB / EHT / GW are
+            search fields for residual boundary-recovery patterns, frontier observables (axion,
+            η_B, kaons, g−2) are <code className="font-mono">F_transfer</code> downstream bridges —
+            never primitive compiler outputs, and no row is upgraded to [E] by data proximity.
+          </p>
+          <div className="mt-4 flex flex-wrap gap-3">
+            <Link
+              href={`${REPO_URL}/tree/main/${EXPERIMENTS_AUDIT.repoPath}`}
+              target="_blank"
+              rel="noopener"
+              className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-3.5 py-1.5 text-xs font-semibold text-emerald-200 transition-colors hover:bg-emerald-500/20"
+            >
+              <Github size={13} aria-hidden />
+              experiments/ on GitHub
+            </Link>
+            <Link
+              href={`${REPO_URL}/blob/main/${EXPERIMENTS_AUDIT.readmePath}`}
+              target="_blank"
+              rel="noopener"
+              className="inline-flex items-center gap-1.5 rounded-full border border-slate-600/40 bg-slate-900/50 px-3.5 py-1.5 text-xs font-semibold text-slate-300 transition-colors hover:text-white"
+            >
+              <FileText size={13} aria-hidden />
+              Audit README
+            </Link>
+            <Link
+              href={`${REPO_URL}/blob/main/${EXPERIMENTS_AUDIT.scorecardPath}`}
+              target="_blank"
+              rel="noopener"
+              className="inline-flex items-center gap-1.5 rounded-full border border-slate-600/40 bg-slate-900/50 px-3.5 py-1.5 text-xs font-semibold text-slate-300 transition-colors hover:text-white"
+            >
+              <Table2 size={13} aria-hidden />
+              evidence_scorecard.json
+            </Link>
+          </div>
+        </motion.div>
 
         <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {TEST_SURFACE_GROUPS.map((g) => (
