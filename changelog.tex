@@ -59,6 +59,29 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-15 (QGEO: the pillowcase reduction --- two residuals become one canonical metric)}
+\begin{itemize}
+\item \textbf{Pillowcase reduction of \texttt{QGEO.SYM.01} (\texttt{v214\_seam\_pillowcase},
+  \texttt{tfpt\_research\_contracts}, \mE/\mO; ledger \texttt{QGEO.PILLOW.01}).} The two separately-tracked
+  open QGEO residuals --- \texttt{QGEO.ISO.01} (\texttt{v180}: the carrier clock is an order-$4$
+  \emph{isometry} of the seam metric) and \texttt{QGEO.SUBPRIN.01} (\texttt{v201}: the DtN sub-principal
+  symbol is \emph{mark-local}, the seam flat away from the $\mu_4$ marks) --- are shown to be \emph{one}
+  statement: the seam carries the uniformising flat orbifold (\emph{pillowcase}) metric. \textbf{(1)} The
+  four marks make the Euclidean orbifold $S^2(2,2,2,2)$ ($\chi_{\mathrm{orb}}=2-4(1-\tfrac12)=0$), so by
+  Troyanov uniformisation the metric is flat (unique up to scale) with curvature only at the cone points
+  (Gauss--Bonnet $4\pi=2\pi\chi$) --- this \emph{is} the \texttt{v201} ``flat away from the marks''.
+  \textbf{(2)} New link: cross-ratio$(\mu_4)=2$ (\texttt{v168}) $\Rightarrow j=1728$
+  ($j(\lambda)=256(\lambda^2-\lambda+1)^3/(\lambda^2(\lambda-1)^2)$; all six harmonic cross-ratios give
+  $1728$) $\Rightarrow$ the \emph{square} modulus $\tau=i$, whose CM by $\Z[i]$ \emph{derives} the order-$4$
+  clock $z\mapsto iz$ (explicit $(x,y)\mapsto(-x,iy)$ on $y^2=x^3-x$); generic cross-ratio gives
+  $j\notin\{0,1728\}$ and only $\Z/2$. \textbf{(3)} Unification: ``seam $=$ uniformising flat pillowcase
+  metric'' implies \emph{both} \texttt{v201} and \texttt{v180}, so two residuals collapse to one
+  canonical-metric premise. \mO\ It does \emph{not} close \texttt{QGEO.SYM.01}: the choice ``RP seam metric
+  $=$ the constant-curvature representative'' stays open, milder and more canonical than the bare isometry
+  premise. Wolfram-mirrored (the exact orbifold/$j$-invariant/CM arithmetic); Klein-$J$ values
+  mpmath-numerical. Suite $\to$ 214 modules.
+\end{itemize}
+
 \subsection*{2026-06-15 (the F\_transfer functor contract CONTRACT.F.01)}
 \begin{itemize}
 \item \textbf{$F_{\mathrm{transfer}}$ formalised as a typed functor with four axioms

@@ -1724,6 +1724,20 @@ Module[{c3, R, Ms, fR, A, G, M},
     Simplify[2 Pi - 1/(4 c3)] == 0 && Simplify[M^2/(2 c3) - 4 Pi M^2] == 0];
 ];
 
+(* ---- (v214) QGEO.PILLOW.01: pillowcase reduction -- cross-ratio 2 => j=1728 => order-4 CM ---- *)
+Module[{chiorb, jl, x, y, curve, auto, xx, yy},
+  chiorb = 2 - 4 (1 - 1/2);                               (* orbifold Euler char of S^2(2,2,2,2) *)
+  jl[l_] := 256 (l^2 - l + 1)^3/(l^2 (l - 1)^2);          (* j-invariant from the cross-ratio *)
+  curve = y^2 - (x^3 - x);                                (* lemniscatic double cover *)
+  auto = curve /. {x -> -x, y -> I y};                    (* CM by Z[i]: (x,y)->(-x,iy) *)
+  {xx, yy} = {x, y}; Do[{xx, yy} = {-xx, I yy}, {4}];     (* iterate the CM four times *)
+  checkExact["v214 QGEO.PILLOW.01: the pillowcase reduction of QGEO.SYM.01 -- (i) the orbifold S^2(2,2,2,2) is Euclidean, chi_orb = 2-4(1-1/2) = 0 (Troyanov flat metric; Gauss-Bonnet four cone deficits pi = 4pi = 2pi chi(S^2) => flat away from the marks = the v201 conformal-deck residual); (ii) NEW LINK cross-ratio(mu4)=2 (v168) => j(2)=1728 via j(l)=256(l^2-l+1)^3/(l^2(l-1)^2), and all six harmonic cross-ratios {2,-1,1/2} give 1728, so the square modulus (hence the order-4 clock) is FORCED by cross-ratio 2, not assumed; (iii) the lemniscatic CM (x,y)->(-x,iy) on y^2=x^3-x negates the defining polynomial (same zero locus) and has order 4 = the z->iz isometry; (iv) NEG CONTROL j(3)=21952/9 not in {0,1728} => a generic config has only Z/2. Unifies QGEO.ISO.01 (v180) + QGEO.SUBPRIN.01 (v201) into one canonical flat-pillowcase-metric premise; does NOT close QGEO.SYM.01. The Klein-J modular values (J(i)=1) are mpmath-numerical (Python-only)",
+    chiorb == 0 &&
+    Simplify[jl[2] - 1728] == 0 && Simplify[jl[-1] - 1728] == 0 && Simplify[jl[1/2] - 1728] == 0 &&
+    Simplify[auto + curve] == 0 && Simplify[xx - x] == 0 && Simplify[yy - y] == 0 &&
+    Simplify[jl[3] - 21952/9] == 0 && jl[3] =!= 1728 && jl[3] =!= 0];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v209: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v214: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];
