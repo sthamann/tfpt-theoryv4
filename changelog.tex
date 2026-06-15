@@ -59,6 +59,22 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-15 (F\_transfer workshop: the axion relic solver --- an honest over-production tension)}
+\begin{itemize}
+\item \textbf{Axion relic solver (\texttt{experiments/ftransfer/axion\_relic/relic\_solver.py}, \mC).} The
+  first real $F_{\mathrm{transfer}}$ pipeline computation (work package C / review \S6.2): a standard
+  misalignment relic with a numerically-computed anharmonic factor $F(\theta_i)\approx4$ at the hilltop.
+  Honest finding: at the \emph{predicted} $\theta_i\approx170^\circ$ the estimate \emph{over}-produces dark
+  matter, $\Omega_a h^2\sim0.6$--$2.3$ (robustly $>0.12$), because the large $\theta_i^2\approx8.8$ times $F$
+  overshoots. So the determinant-line axion as the \emph{dominant} DM is in \emph{mild tension} (it would
+  prefer $\theta_i\sim120$--$130^\circ$ or extra dilution) --- this \emph{refines} \vref{v185}'s optimistic
+  ``can be all-DM'' toward an over-production tension. The near-hilltop regime is O(1)-uncertain, so a full
+  finite-$T$ solve decides; over-production kills only the axion-as-dominant-DM \emph{branch}, not the
+  compiler. Reflected in \texttt{tfpt\_4\_frontier} (dark-matter section) and the \vref{v185} docstring;
+  experiments-only, not a suite/ledger claim. No refitted exponents; $\theta_i=\pi(1-\varphi_{\mathrm{seam}})$
+  only.
+\end{itemize}
+
 \subsection*{2026-06-14 (work packages A+B: attacking $\omega\circ\rho=\omega$ + the variational scan --- v199, v200)}
 \begin{itemize}
 \item \textbf{\texttt{v199\_seam\_state\_invariance.py} \mE/\mO\ (claim \texttt{QGEO.STATE.01}, work package A).}
