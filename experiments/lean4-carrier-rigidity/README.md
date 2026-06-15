@@ -132,6 +132,32 @@ Boundary Polarization*).
 > `TFPT.Carrier.MobiusUniformisation.*` (mirrors
 > `verification/v177_seam_marking_kernel.py`, ledger `FORM.QGEO.02`).
 
+> **Theorem (Cohomology grading — the `QGEO.COHOM.01` character node +
+> MODULE parity; added 2026-06-15).** The constructive `COHOM` node of
+> the QGEO proof tree (v177). Machine-proved
+> (`TfptCarrier/CohomologyGrading.lean`):
+>
+> * `omega1/2/3_pullback`: the three `H^1(P^1 \ mu4)` eigenforms
+>   `omega_k = z^(k-1)/(z^4-1)` have pullback character
+>   `rho^* omega_k = i^k omega_k` under the clock `rho : z ↦ i z`
+>   (`i^1 = i`, `i^2 = -1`, `i^3 = -i`) — each an exact rational-function
+>   identity (the denominator is clock-invariant, `(iz)^4-1 = z^4-1`);
+> * `character_grading`: the eigenvalues `(i, -1, -i)` are the characters
+>   of weights `(1,2,3)` = the `A_3` exponents = `Spec(Q_+)`, rank
+>   `3 = N_fam`;
+> * `omega1/2/3_reflection` (MODULE parity): the reflection
+>   `sigma : z ↦ 1/z` satisfies `sigma^* omega_1 = omega_3`,
+>   `sigma^* omega_2 = omega_2`, `sigma^* omega_3 = omega_1` — the
+>   integer-model parity `w_1 <-> w_3`, `w_2` fixed.
+>
+> The geometric `COHOM`/`MODULE`-parity nodes are thus `[F]`, given the
+> marked curve `(P^1, mu4)` and the clock; the `MARKS`/`KERNEL`
+> obligations and the MODULE *uniqueness* (multiplicity-free + residue
+> normalisation) stay `[O]`/symbolic. Bundled as `cohom_grading` and
+> signature-locked in `AuditContract.lean`. Formally verified:
+> `TFPT.Carrier.CohomologyGrading.*` (mirrors
+> `verification/v177_seam_marking_kernel.py`, ledger `FORM.QGEO.03`).
+
 ## Why this is interesting
 
 * The carrier polynomial `6 Y² − Y − 1 = 0` is in earlier TFPT drafts

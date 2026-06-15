@@ -61,6 +61,7 @@ import TfptCarrier.CarrierData
 import TfptCarrier.Hypercharge
 import TfptCarrier.SeamDeckClosure
 import TfptCarrier.MobiusUniformisation
+import TfptCarrier.CohomologyGrading
 
 namespace TFPT.Carrier.AuditContract
 
@@ -482,5 +483,25 @@ example (z : ℂ) :
 example (ζ : ℂ) :
     (ζ ^ 4 = 1 ∧ ζ ^ 2 ≠ 1) ↔ (ζ = Complex.I ∨ ζ = -Complex.I) :=
   TFPT.Carrier.MobiusUniformisation.mult_order_four_iff ζ
+
+/-! ## QGEO cohomology grading (QGEO.COHOM.01 character node + MODULE parity; v177) -/
+
+/-- The clock pullback character on `omega_2` is `i^2 = -1`. -/
+example (z : ℂ) :
+    TFPT.Carrier.CohomologyGrading.omega2 (Complex.I * z) * Complex.I
+      = (-1 : ℂ) * TFPT.Carrier.CohomologyGrading.omega2 z :=
+  TFPT.Carrier.CohomologyGrading.omega2_pullback z
+
+/-- The clock pullback character on `omega_3` is `i^3 = -i`. -/
+example (z : ℂ) :
+    TFPT.Carrier.CohomologyGrading.omega3 (Complex.I * z) * Complex.I
+      = (-Complex.I) * TFPT.Carrier.CohomologyGrading.omega3 z :=
+  TFPT.Carrier.CohomologyGrading.omega3_pullback z
+
+/-- The reflection parity: `sigma^* omega_1 = omega_3`. -/
+example (z : ℂ) (hz : z ≠ 0) (hz4 : z ^ 4 - 1 ≠ 0) :
+    TFPT.Carrier.CohomologyGrading.sigmaPull TFPT.Carrier.CohomologyGrading.omega1 z
+      = TFPT.Carrier.CohomologyGrading.omega3 z :=
+  TFPT.Carrier.CohomologyGrading.omega1_reflection z hz hz4
 
 end TFPT.Carrier.AuditContract

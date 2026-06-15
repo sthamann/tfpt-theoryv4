@@ -164,8 +164,12 @@ $\rho^4{=}\mathrm{id}$, $\rho^2{\neq}\mathrm{id}$, $\sigma^2{=}\mathrm{id}$,
 $\sigma\rho\sigma{=}\rho^{-1}$, the orbit scaling to $\mu_4$, the $\mu_4$ permutation, and the
 multiplier classification ``order-$4$ $\Leftrightarrow\zeta{=}\pm i$'' are machine-proved in
 \texttt{TfptCarrier/MobiusUniformisation.lean}, \textsc{audit: pass}); \textsc{Cohom} \mE\ ($\rho^*\omega_k=i^k\omega_k$, grading
-$(1,2,3)$); \textsc{Module} \mE\ (a \emph{unique} $\mu_4$-equivariant iso --- multiplicity-free $+$
-residue normalisation, reflection $\omega_1\!\leftrightarrow\!\omega_3$, $\omega_2$ fixed); and
+$(1,2,3)$ --- also \textbf{Lean-formalised} as \texttt{FORM.QGEO.03}: the pullback characters
+$i^1,i^2,i^3$ and the reflection parity $\sigma^*\omega_1{=}\omega_3$, $\sigma^*\omega_2{=}\omega_2$,
+$\sigma^*\omega_3{=}\omega_1$ are machine-proved in \texttt{TfptCarrier/CohomologyGrading.lean},
+\textsc{audit: pass}); \textsc{Module} \mE\ (a \emph{unique} $\mu_4$-equivariant iso --- multiplicity-free $+$
+residue normalisation, reflection $\omega_1\!\leftrightarrow\!\omega_3$, $\omega_2$ fixed; the parity is the
+Lean \texttt{FORM.QGEO.03} above, the \emph{uniqueness} stays symbolic); and
 \textsc{Net} \mE\ (\vref{v154}/\vref{v175}). The residual is therefore \emph{exactly two} named
 obligations, neither a finite computation: \textbf{\texttt{QGEO.MARKS.01}} --- the \emph{raw} RP seam
 collar canonically produces the genus-$0$ four-parabolic-marked $D_4$ boundary (the four marks from

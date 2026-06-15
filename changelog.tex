@@ -79,6 +79,23 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
   (\texttt{FR.ETAB.04}; Route~A independent).
 \end{itemize}
 
+\subsection*{2026-06-15 (Lean: QGEO.COHOM.01 character grading + MODULE parity machine-proved)}
+\begin{itemize}
+\item \textbf{The cohomology character grading is now Lean-formalised}
+  (\texttt{CohomologyGrading.lean}, ledger \texttt{FORM.QGEO.03}, \mO). A new module machine-proves the
+  \textsc{Cohom} node of the QGEO proof tree (\texttt{v177}; \textsc{audit: pass}, no
+  \texttt{sorry}/\texttt{admit}, axioms \texttt{propext, Classical.choice, Quot.sound} only): the three
+  $H^1(\PP\setminus\mu_4)$ eigenforms $\omega_k=z^{k-1}/(z^4-1)$ ($k{=}1,2,3$) have pullback character
+  $\rho^*\omega_k=i^k\omega_k$ under the clock $\rho:z\mapsto iz$ (each an exact rational-function identity,
+  the denominator clock-invariant since $i^4{=}1$), so the grading is $(i,-1,-i)$ with weights $(1,2,3)$ =
+  the $A_3$ exponents $=\operatorname{Spec}(Q_+)$, rank $3=\Nfam$. The \textsc{Module} \emph{parity} is also
+  proved: the reflection $\sigma:z\mapsto1/z$ satisfies $\sigma^*\omega_1=\omega_3$,
+  $\sigma^*\omega_2=\omega_2$, $\sigma^*\omega_3=\omega_1$ (swap $\omega_1\!\leftrightarrow\!\omega_3$,
+  $\omega_2$ fixed). Signature-locked in \texttt{AuditContract.lean}. The geometric \textsc{Cohom}/\textsc{Module}-parity
+  nodes are now \mE; the \textsc{Marks}/\textsc{Kernel} obligations and the \textsc{Module} \emph{uniqueness}
+  stay \mO.
+\end{itemize}
+
 \subsection*{2026-06-15 (Lean: QGEO.UNIFORM.01 geometric normal form machine-proved)}
 \begin{itemize}
 \item \textbf{The M\"obius uniformisation normal form is now Lean-formalised}

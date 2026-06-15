@@ -40,6 +40,7 @@ import TfptCarrier.Hypercharge
 import TfptCarrier.GlueUniqueness
 import TfptCarrier.SeamDeckClosure
 import TfptCarrier.MobiusUniformisation
+import TfptCarrier.CohomologyGrading
 
 -- Layer 1: Polarization (algebraic core)
 #print axioms TFPT.Carrier.Polarization.sixY_carrier_polynomial
@@ -182,3 +183,10 @@ import TfptCarrier.MobiusUniformisation
 #print axioms TFPT.Carrier.MobiusUniformisation.sigma_perm_mu4
 #print axioms TFPT.Carrier.MobiusUniformisation.mult_order_four_iff
 #print axioms TFPT.Carrier.MobiusUniformisation.uniformisation_normal_form
+
+-- Cohomology grading (QGEO.COHOM.01 character node + MODULE parity; v177)
+#print axioms TFPT.Carrier.CohomologyGrading.omega1_pullback
+#print axioms TFPT.Carrier.CohomologyGrading.omega2_pullback
+#print axioms TFPT.Carrier.CohomologyGrading.omega3_pullback
+#print axioms TFPT.Carrier.CohomologyGrading.omega1_reflection
+#print axioms TFPT.Carrier.CohomologyGrading.cohom_grading
