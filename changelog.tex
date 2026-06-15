@@ -59,6 +59,23 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-15 (the F\_transfer functor contract CONTRACT.F.01)}
+\begin{itemize}
+\item \textbf{$F_{\mathrm{transfer}}$ formalised as a typed functor with four axioms
+  (\texttt{v213\_ftransfer\_functor}, \texttt{tfpt\_research\_contracts}, \mC).} The four frontier transfers
+  are consolidated into ONE functor $F_{\mathrm{transfer}}=F_{\mathrm{observable}}\circ F_{\mathrm{threshold}}
+  \circ F_{\mathrm{RG}}$, each instance a discrete compiler kernel \mE\ composed with an external continuous
+  solver \mC: \textbf{(1)} $\mu_4$-deck equivariance (the Koide multiplier $\lambda_2{=}(2/3)^6{=}64/729$ is
+  the deck transfer eigenvalue); \textbf{(2)} Pl\"ucker preservation ($53{=}a^T(R{+}Q)\mathbf1$,
+  $\mathrm{Pl}(F){=}(1,22,30)$, $\|\mathrm{Pl}(K)\|_1{=}11$); \textbf{(3)} positivity/stochasticity
+  ($\operatorname{spec}T$ positive, $\kappa_f\in(0,1)$); \textbf{(4)} external modules explicit
+  ($b_3{=}{-}7$ a carrier output). The four instances are $F_{\mathrm{pole}}$ (\texttt{v183}),
+  $F_{\mathrm{Boltzmann}}$ (\texttt{v212}), $F_{\mathrm{relic}}$ (\texttt{v211}), $F_{\mathrm{QCD}}$
+  (\texttt{v164}). \texttt{CONTRACT.F.01} is the third research contract alongside $(U_{\mathrm{wall}})$ and
+  $(G_{\mathrm{metric}})$, the structural complement of the \texttt{v187} typing guard --- an architectural
+  consolidation, \emph{not} a closure of any frontier number. Ledger \texttt{CONTRACT.F.01}.
+\end{itemize}
+
 \subsection*{2026-06-15 (frontier: two sharper [C] scenario branches --- axion angle + leptogenesis)}
 \begin{itemize}
 \item \textbf{Axion DM spine-angle branch $\theta_i=\pi\Nfam/\gcar=3\pi/5$ (\texttt{v211\_axion\_spine\_angle},

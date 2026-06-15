@@ -303,6 +303,7 @@ const NODES: DagNode[] = [
       "v211_axion_spine_angle.py",
       "v212_leptogenesis_decuple.py",
       "v187_ftransfer_laws.py",
+      "v213_ftransfer_functor.py",
       "v188_frontier_wording_guard.py",
       "v189_riemann_roch_carrier.py",
       "v190_nariai_entropy_bound.py",

@@ -3,6 +3,25 @@
  Stand: 2026-06-08  |  verankert in v81_singular_pencil_matrices.py (11/11), Wolfram 116/116
 ================================================================================
 
+NACHTRAG 2026-06-15 (F_transfer-Funktor-Vertrag CONTRACT.F.01, v213):
+  Die vier Frontier-Transfers als EIN getypter Funktor konsolidiert:
+  F_transfer = F_observable o F_threshold o F_RG, jede Instanz = diskreter
+  Compiler-Kern [E/I] o externer kontinuierlicher Solver [C/O]. Vier Axiome
+  maschinen-geprueft (v213_ftransfer_functor.py):
+  (1) mu4-Deck-Aequivarianz: der Koide-Multiplikator lambda_2=(2/3)^6=64/729 IST
+      der mu4-Deck-Transfer-Eigenwert (Deck fixiert den Branch-Divisor, v82/v54);
+  (2) Pluecker-Erhaltung: 53=a^T(R+Q)1 ist die F-Ecke (Pl(F)=(1,22,30)),
+      ||Pl(K)||_1=11;
+  (3) Positivitaet/Stochastizitaet: spec(T)={1,(2/3)^6,(1/3)^6} positiv,
+      Washout kappa_f in (0,1);
+  (4) externe Module explizit: Pol-Transfer, Boltzmann-Netz, finite-T chi(T)-ODE,
+      Gitter-C_N -- nie eine Compiler-Zahl; b3=-7 ein Carrier-Output.
+  Instanzen: F_pole (v183), F_Boltzmann (v212), F_relic (v211), F_QCD (v164).
+  CONTRACT.F.01 = dritter Research-Contract neben U_wall/G_metric, das
+  strukturelle Komplement zum v187-Typing-Guard. ARCHITEKTUR-KONSOLIDIERUNG,
+  KEIN Schluss einer Frontier-Zahl. Suite jetzt 212 Module.
+================================================================================
+
 NACHTRAG 2026-06-14 (F_transfer-Runde: ehrlicher eta_B-Test, Axion-Relic, Disziplin-Guard):
   Externes Review schlug vor, eta_B/Axion/m_p_me als getypte Standardtransfers
   "vollstaendig zu schliessen". Punkt fuer Punkt validiert, NUR das ehrlich

@@ -110,7 +110,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     term: "F_transfer",
     alias: ["F_transfer", "(F_frontier)", "F_frontier", "transfer functor"],
     short:
-      "The downstream interface: the continuous transport from compiler source data to measured observables. Koide source→pole, η_B source→Boltzmann relic, axion scale→abundance and m_p/m_e→QCD/EW matching are four instances of this one missing functor — not primitive compiler predictions [C].",
+      "The downstream interface: the continuous transport from compiler source data to measured observables. Koide source→pole, η_B source→Boltzmann relic, axion scale→abundance and m_p/m_e→QCD/EW matching are four instances of this one missing functor — not primitive compiler predictions [C]. The functor contract CONTRACT.F.01 (v213) pins it with four axioms (μ₄-deck equivariant, Plücker-preserving, positive/stochastic, external-module-explicit); the third research contract alongside U_wall and G_metric.",
   },
 ];
 

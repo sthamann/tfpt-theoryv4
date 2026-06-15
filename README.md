@@ -121,7 +121,7 @@ anchor (`1/G` is UV-sensitive, Sakharov-type induced gravity) — not a diffuse 
 
 | Item | What it is |
 |---|---|
-| `v1_*.py … v201_*.py` | 200 numbered claim checks (one file per claim cluster; highest ID `v201`, `v186` skipped as redundant). |
+| `v1_*.py … v213_*.py` | 212 numbered claim checks (one file per claim cluster; highest ID `v213`, `v186` skipped as redundant). |
 | `run_all.py` | Runs the whole suite; ends `ALL CHECKS PASSED`. |
 | `tfpt_constants.py` | Shared constants + `check()` harness. |
 | `predictions_frozen.json` | **Blind-prediction registry** (frozen 2026-06-09): every dimensionless prediction of record at 25 digits, locked to its formula by `v84_frozen_registry.py` on every run; exactly one `θ12` prediction of record (seed `0.306747`), `r`/`n_s` only as `N_star` bands. |
