@@ -322,6 +322,19 @@ $E_{\mathrm{fail}}(\theta)=\|\rho(\theta)^4-1\|^2+\text{(faithfulness)}$ over a 
 its \emph{unique} minimum at $\theta=\pi/2$ --- the $\mu_4$ clock $z\mapsto iz$ (the only faithful order-$4$
 grading $i,-1,-i$) --- a numerical sign that the variational principle selects $\mu_4$. This is the
 ``next executable theorem'' a working mathematician can take up; it does not close the postulate, \mO.
+\par\smallskip\noindent\textbf{The bounded sub-principal residual is the image of the $\mu_4$ marks, not a
+free postulate (\veri{v201\_seam\_subprincipal\_marks.py}).} One genuine step further: the seam DtN is
+$\Lambda=|k|+M_f$ with $M_f$ the bounded sub-principal piece $=$ multiplication by a curvature function
+$f(\theta)$ on the seam circle (the standard Steklov/DtN structure), so $\langle n|M_f|n'\rangle=f_{n-n'}$.
+Then $M_f$ is $\mu_4$-character-block-diagonal \emph{iff} $f$ has Fourier support only on modes
+$\equiv0\ (\mathrm{mod}\,4)$, i.e.\ iff $f$ is $\Z_4$-invariant (the principal $|k|$ already commutes,
+\vref{v198}). But a curvature sourced by the four marks, $f(\theta)=\sum_{j=0}^{3}g(\theta-2\pi j/4)$ for
+\emph{any} profile $g$, has $f_m=4\,g_m\,[m\equiv0\bmod4]$ --- automatically $\Z_4$-invariant. So the
+$\mu_4$-mark orbit (forced by \vref{v195}) \emph{forces} the sub-principal symbol block-diagonal; $3$
+equally-spaced marks ($\Z_3$) or $4$ generic marks both break it (negative controls). The residual of
+$\omega\circ\rho=\omega$ thus collapses to ``the DtN sub-principal symbol is \emph{mark-local} (the seam is
+flat away from the $\mu_4$ marks $=$ the conformal-deck structure, \vref{v177})'' --- a locality/flatness
+property, structurally definitional, the narrowest form yet of \texttt{QGEO.SYM.01}, \mO.
 \end{keybox}
 
 \begin{figure}[t]

@@ -41,3 +41,6 @@ verification/pyrate/*.generated.txt
 
 # Local scratch / explanations (not part of the published record)
 temp/
+
+# FRB experiment datasets (local copies; see data/README.md)
+experiments/frb-tfpt-signatures/data/
