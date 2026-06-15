@@ -31,8 +31,15 @@ from .data_io import (
 )
 from .dmz_baryon import baryon_test
 from .drift_freq import drift_score
-from .echo_ratio import echo_ratio_test, evaluate_echo_ratios_by_session
+from .echo_ratio import (
+    echo_ratio_test,
+    evaluate_echo_ratios_by_session,
+    evaluate_echo_semantic,
+)
 from .energy_clusters import energy_cluster_score, fit_spacing_ladder
+from .observable_semantics import energy_ratio_channels, is_theory_valid
+from .rm_relaxation_step import rm_step_relaxation_test
+from .window_extraction import extract_windows
 from .fingerprint import (
     EvidenceAxis,
     FingerprintWeights,
@@ -43,7 +50,7 @@ from .markov_spectrum import markov_spectrum_test
 from .no_native_dispersion import no_native_dispersion_test
 from .periodic_population import evaluate_periodic_windows
 from .polarization import pa_angle_classes
-from .recovery_observable_model import shared_kernel_search
+from .recovery_observable_model import shared_kernel_search, var1_spectrum
 from .rm_steps import rm_staircase
 from .timing import folded_rayleigh, waiting_time_structure
 
@@ -76,8 +83,14 @@ __all__ = [
     "evaluate_periodic_windows",
     "echo_ratio_test",
     "evaluate_echo_ratios_by_session",
+    "evaluate_echo_semantic",
+    "energy_ratio_channels",
+    "is_theory_valid",
     "markov_spectrum_test",
+    "rm_step_relaxation_test",
     "shared_kernel_search",
+    "var1_spectrum",
+    "extract_windows",
     "no_native_dispersion_test",
     "EvidenceAxis",
     "aggregate_axes",

@@ -35,14 +35,16 @@ from .data_io import (
 )
 from .dmz_baryon import baryon_test
 from .drift_freq import drift_score
-from .echo_ratio import evaluate_echo_ratios_by_session
+from .echo_ratio import evaluate_echo_semantic
 from .energy_clusters import energy_cluster_score, fit_spacing_ladder, periodogram_curve
 from .fingerprint import EvidenceAxis, aggregate_axes
 from .markov_spectrum import markov_spectrum_test
 from .no_native_dispersion import no_native_dispersion_test
 from .periodic_population import evaluate_periodic_windows
-from .recovery_observable_model import shared_kernel_search
+from .recovery_observable_model import shared_kernel_search, var1_spectrum
+from .rm_relaxation_step import rm_step_relaxation_test
 from .timing import folded_rayleigh, waiting_time_structure
+from .window_extraction import extract_windows
 
 RESULTS = Path(__file__).resolve().parents[2] / "results"
 
@@ -119,40 +121,67 @@ def cmd_analyze(args: argparse.Namespace) -> int:
         print(f"  {m.name:16s} W_broad/P={m.w_broad_over_p:.4f} vs 8/27 "
               f"({100*m.broad_rel_err:.0f}%) | W_core/P={core}")
     print(f"  population: {pop.verdict} (null p={pop.null_p:.3f}, LOO stable={pop.leave_one_out_stable})")
+    # Package E: data-derived windows for FRB 20180916B (folded CHIME phases) --
+    chime_w = load_chime_catalog1()
+    m916w = [i for i, x in enumerate(chime_w.repeater) if x == "FRB20180916B"]
+    if len(m916w) >= 10:
+        ew = extract_windows("FRB 20180916B (CHIME folded)", chime_w.mjd[m916w], 16.33)
+        out["search_targets"]["FRB03_activity_windows"]["data_derived_FRB20180916B"] = _jsonable(ew)
+        print(f"  data-derived (folded {ew.n_bursts} CHIME bursts): "
+              f"W_broad/P={ew.w_broad_over_p:.3f} vs 8/27 ({100*ew.broad_rel_err:.0f}%), "
+              f"W_core/P={ew.w_core_over_p:.3f} vs 1/27 ({100*ew.core_rel_err:.0f}%)")
     axes.append(EvidenceAxis("FRB03_activity_window", aw.c_window, "candidate",
                              p_value=pop.null_p, q_value=pop.null_p,
                              discriminating=True, replicated=pop.enough_sources,
                              note=pop.verdict))
     _plot(lambda: _plot_pop_windows(plt, aw, RESULTS / "frb03_population_windows.png"))
 
-    # ---- FRB.02: session-aware echo ratios on the FAST 1652 sample ----------
-    print("\n[FRB.02] recovery echo ratios (session-aware, FAST 1652)")
+    # ---- FRB.02: semantics-correct echo ratios on the FAST 1652 sample ------
+    print("\n[FRB.02] recovery echo ratios (observable-semantics split, FAST 1652)")
     fast = load_fast_121102_1652()
-    echo = evaluate_echo_ratios_by_session(fast, seed=args.seed)
+    echo = evaluate_echo_semantic(fast, seed=args.seed)
     out["search_targets"]["FRB02_echo_ratio"] = _jsonable(echo)
     print(f"  {echo.source}: {echo.n_bursts} bursts, {echo.n_pairs} within-session pairs, "
-          f"{echo.n_sessions} sessions -> {echo.verdict}")
-    best = sorted(echo.targets.items(), key=lambda kv: kv[1]["q"])[:3] if echo.targets else []
-    for name, d in best:
-        print(f"    {name:22s} ratio={d['ratio']:.4f} enrich={d['enrichment']:.2f} "
-              f"p={d['p']:.3f} q={d['q']:.3f}")
-    # a single-source excess is a CANDIDATE (prereg requires >=2 sources + q<0.01
-    # for support); only "null" if no kernel-ratio excess survives BH.
-    min_q = min((d["q"] for d in echo.targets.values()), default=1.0)
-    echo_status = "candidate" if echo.c_echo > 0 else "null"
-    axes.append(EvidenceAxis("FRB02_echo_ratio", echo.c_echo, echo_status,
-                             q_value=min_q, discriminating=True, replicated=False,
-                             note=echo.verdict))
+          f"{echo.n_sessions} sessions; raw column = {echo.raw_column}; nulls={echo.nulls_used}")
+    for cname, ch in echo.channels.items():
+        flag = " [AUDIT, not theory]" if ch["audit"] else ""
+        tag = "energy ratio" if ch["transform"] == "identity" else "sqrt(energy) [amplitude]"
+        print(f"    channel {cname}{flag}: {tag}; best q={ch['best_q']:.3f}; "
+              f"significant={ch['significant']}")
+    if echo.audit_anomaly:
+        print(f"    AUDIT ANOMALY: {echo.audit_anomaly}")
+        for tgt, sd in echo.session_diagnostics.items():
+            print(f"      session-diag[{tgt}]: top-session frac="
+                  f"{sd['max_single_session_fraction']}, contributing={sd['n_sessions_contributing']}, "
+                  f"robust(no single storm)={sd['robust_no_single_storm']}")
+    # theory channels (energy + amplitude) drive the axis; the audit channel never does.
+    # The 8/27 excess lives ONLY in the audit channel under correct semantics.
+    theory_significant = any(not ch["audit"] and ch["significant"] for ch in echo.channels.values())
+    echo_status = "candidate" if theory_significant else "null"
+    theory_min_q = min((ch["best_q"] for ch in echo.channels.values() if not ch["audit"]),
+                       default=1.0)
+    axes.append(EvidenceAxis("FRB02_echo_ratio", echo.c_echo_theory, echo_status,
+                             q_value=theory_min_q, discriminating=True, replicated=False,
+                             observable_semantics_valid=True, note=echo.verdict))
     _plot(lambda: _plot_fast_echo(plt, fast, RESULTS / "frb02_fast_echo_ratio.png"))
 
-    # ---- generic: cascade spacing ladder on the FAST 1652 energies ---------
-    print("\n[generic] energy cascade spacing ladder (FAST 1652 energies)")
+    # ---- generic: structure vs kernel (kept strictly separate) -------------
+    print("\n[generic] energy structure vs TFPT kernel (FAST 1652 energies)")
     ladder = fit_spacing_ladder(fast.energy, seed=args.seed)
     ec = energy_cluster_score("FRB20121102A FAST", fast.energy, seed=args.seed)
+    # structure_score: is the distribution non-smooth / multimodal? (NOT TFPT-specific)
+    # kernel_score:    do the cluster spacings match a single frozen kernel ratio?
+    structure_score = float(ec.c_e)
+    kernel_score = float(ladder.c_ladder)
     out["generic"]["fast_spacing_ladder"] = _jsonable(ladder)
     out["generic"]["fast_energy_cluster"] = _jsonable(ec)
-    print(f"  spacing ladder: {ladder.verdict} (best_k={ladder.best_k})")
-    print(f"  energy cluster: {ec.verdict}")
+    out["generic"]["score_split"] = {
+        "structure_score": structure_score, "kernel_score": kernel_score,
+        "note": "structure_score (real but NOT TFPT-specific) is kept out of the kernel "
+                "verdict; only kernel_score reflects a frozen-ratio match."}
+    print(f"  structure_score={structure_score:.2f} (multimodal/non-smooth, not TFPT-specific)")
+    print(f"  kernel_score={kernel_score:.2f}  -> {ladder.verdict}")
+    print(f"  (energy cluster: {ec.verdict})")
     _plot(lambda: _plot_energy(plt, fast.energy, ec, "FRB 20121102A (FAST 1652)",
                                RESULTS / "frb121102_energy.png"))
     _plot(lambda: _plot_periodogram(plt, fast.energy, "FRB 20121102A (FAST 1652)", args.seed,
@@ -162,16 +191,36 @@ def cmd_analyze(args: argparse.Namespace) -> int:
     print("\n[shared] recovery-eigenvalue search across observables (FAST 1652)")
     shared = shared_kernel_search(fast, seed=args.seed)
     out["generic"]["shared_kernel"] = _jsonable(shared)
+    for c in shared.channels:
+        print(f"    {c.name:12s} a={c.a:.3f} a_ci=[{c.a_ci_lo:.3f},{c.a_ci_hi:.3f}] "
+              f"nearest={c.nearest_kernel} kernel_in_a_ci={c.kernel_in_a_ci}")
     print(f"  {shared.verdict}")
+    # Package G: full VAR(1) over available observables (per source) -----------
+    for label, ser in (("FAST 1652", fast), ("FRB 20240114A pol", load_fast_20240114A_pol())):
+        var = var1_spectrum(ser, seed=args.seed)
+        out["generic"].setdefault("var1", {})[label] = _jsonable(var)
+        print(f"  VAR(1) [{label}]: {var.note if var.available else var.note or 'data-limited'}")
 
-    # ---- FRB.04: polarisation Markov spectrum (data-limited) ---------------
-    print("\n[FRB.04] polarisation PA/RM Markov spectrum")
+    # ---- FRB.04: polarisation Markov spectrum (v1 strong test) -------------
+    print("\n[FRB.04] polarisation PA/RM Markov spectrum (v1 strong test, energy kernel)")
     pol_series = load_fast_20240114A_pol()
     mk_pa = markov_spectrum_test(pol_series, channel="pa", seed=args.seed)
     mk_rm = markov_spectrum_test(pol_series, channel="rm", seed=args.seed)
-    out["search_targets"]["FRB04_markov_spectrum"] = {"pa": _jsonable(mk_pa), "rm": _jsonable(mk_rm)}
+    # N accounting: one source of truth (n_raw vs n_used per channel)
+    n_raw = len(pol_series)
+    n_with_pa = int(np.isfinite(pol_series.pa_deg).sum())
+    n_with_rm = int(np.isfinite(pol_series.rm).sum())
+    out["search_targets"]["FRB04_markov_spectrum"] = {
+        "n_accounting": {"n_raw": n_raw, "n_used_pa": n_with_pa, "n_used_rm": n_with_rm,
+                         "note": "n_raw = rows in the v5 CSV (S/N>20 catalogue)"},
+        "pa": _jsonable(mk_pa), "rm": _jsonable(mk_rm)}
+    print(f"  n_raw={n_raw}, n_used_pa={n_with_pa}, n_used_rm={n_with_rm}")
     print(f"  PA: {mk_pa.note}")
+    if mk_pa.null_pvals:
+        print(f"      per-null p: { {k: round(v, 3) for k, v in mk_pa.null_pvals.items()} }")
     print(f"  RM: {mk_rm.note}")
+    if mk_rm.null_pvals:
+        print(f"      per-null p: { {k: round(v, 3) for k, v in mk_rm.null_pvals.items()} }")
     mk_best = max((mk_pa, mk_rm), key=lambda r: r.c_markov)
     axes.append(EvidenceAxis("FRB04_polarisation", mk_best.c_markov,
                              "support" if mk_best.c_markov > 0 else
@@ -180,6 +229,18 @@ def cmd_analyze(args: argparse.Namespace) -> int:
                              discriminating=True, replicated=False, note=mk_best.note))
     _plot(lambda: _plot_markov(plt, mk_pa, mk_rm, RESULTS / "frb04_markov_spectrum.png"))
     _plot(lambda: _plot_rm_staircase(plt, pol_series, RESULTS / "frb04_rm_staircase.png"))
+
+    # ---- FRB.04b: v2 EXPLORATORY RM step-relaxation (kernel {2/3,1/3}) ------
+    rm_step = rm_step_relaxation_test(pol_series, seed=args.seed)
+    out["search_targets"]["FRB04b_rm_step_relaxation_v2_exploratory"] = {
+        "status": "exploratory_not_preregistered_no_promotion_without_external_replication",
+        "result": _jsonable(rm_step)}
+    print(f"  [v2 exploratory] RM vs step kernel {{2/3,1/3}}: {rm_step.note}")
+    if rm_step.null_pvals:
+        print(f"      per-null p: { {k: round(v, 3) for k, v in rm_step.null_pvals.items()} }")
+        if rm_step.null_pvals.get("ar1_drift", 0) > 0.05:
+            print("      -> the AR(1)-drift null reproduces the proximity: consistent with a "
+                  "SMOOTH magneto-ionic drift, not a discrete step spectrum")
 
     # ---- FRB.01: no native dispersion (kill test, raw data required) -------
     disp = no_native_dispersion_test()
@@ -269,14 +330,24 @@ def _plot_fast_echo(plt, series, path):
         if len(v) >= 2:
             lr.append(np.log10(v[1:] / v[:-1]))
     lr = np.concatenate(lr) if lr else np.array([0.0])
-    fig, ax = plt.subplots(figsize=(7, 4))
+    fig, ax = plt.subplots(figsize=(7.4, 4))
     ax.hist(lr, bins=40, color="#cdb", edgecolor="#363")
-    for t in kernel.kernel_ratios():
-        ax.axvline(np.log10(t.value), color="#c33", lw=1, alpha=0.7)
-        ax.axvline(-np.log10(t.value), color="#39c", lw=1, alpha=0.5)
+    # legitimate ENERGY targets on an energy-ratio axis (green) ...
+    for v, lab in ((kernel.LAMBDA2, "64/729"), (kernel.LAMBDA3, "1/729")):
+        for s in (+1, -1):
+            ax.axvline(s * np.log10(v), color="#2a7", lw=1.6)
+        ax.text(np.log10(v), ax.get_ylim()[1] * 0.95, f"{lab}\n(energy✓)", color="#175",
+                fontsize=7, ha="center", va="top")
+    # ... vs the amplitude NUMBERS misapplied to an energy ratio (orange, audit)
+    for v, lab in ((kernel.SQRT_LAMBDA2, "8/27"), (kernel.SQRT_LAMBDA3, "1/27")):
+        for s in (+1, -1):
+            ax.axvline(s * np.log10(v), color="#e80", ls="--", lw=1.4)
+        ax.text(np.log10(v), ax.get_ylim()[1] * 0.62, f"{lab}\n(amp #, audit)", color="#a50",
+                fontsize=7, ha="center", va="top")
     ax.set_xlabel(r"$\log_{10}(E_{n+1}/E_n)$ within session")
     ax.set_ylabel("count")
-    ax.set_title(f"FRB.02 echo ratios FAST 1652 ({len(lr)} pairs; red=kernel, blue=inverse)")
+    ax.set_title(f"FRB.02 echo ratios FAST 1652 ({len(lr)} pairs): the excess sits at the "
+                 f"8/27 amplitude #, not the 64/729 energy target", fontsize=9)
     fig.tight_layout(); fig.savefig(path, dpi=130); plt.close(fig)
 
 

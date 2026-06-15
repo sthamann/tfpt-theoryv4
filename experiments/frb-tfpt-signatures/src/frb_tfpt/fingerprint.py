@@ -28,12 +28,14 @@ class EvidenceAxis:
     status: AxisStatus
     p_value: float | None = None
     q_value: float | None = None
-    discriminating: bool = False     # can the test single out TFPT (vs e.g. Planck)?
-    replicated: bool = False         # seen in >= 2 independent sources/channels?
+    discriminating: bool = False        # can the test single out TFPT (vs e.g. Planck)?
+    replicated: bool = False            # seen in >= 2 independent sources/channels?
+    observable_semantics_valid: bool = True  # tested the RIGHT quantity vs the RIGHT channel?
     note: str = ""
 
     def qualifies_as_support(self, q_threshold: float = 0.01) -> bool:
         return (self.status == "support" and self.discriminating and self.replicated
+                and self.observable_semantics_valid
                 and self.q_value is not None and self.q_value < q_threshold)
 
 

@@ -380,7 +380,7 @@ def load_fast_20240114A_pol(path: str | Path | None = None) -> RepeaterSeries:
             if (DATA_DIR / cand).exists():
                 path = DATA_DIR / cand
                 break
-    return _load_dropin_repeater("FRB 20240114A (FAST pol, 6131 bursts)",
+    return _load_dropin_repeater("FRB 20240114A (FAST pol; n_raw=6134 catalogue rows)",
                                  "frb20240114A_fast_pol_catalog.tsv", path)
 
 

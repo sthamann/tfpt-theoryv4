@@ -11,11 +11,23 @@ the FRB trace cleanly** — not to "find more numbers".
 - **Firewall:** every result is a **search target, not a claim** (§1).
 - **Frozen kernel:** the recovery ratios are exact rationals derived from the two
   axioms; no fitted exponents (guarded by `tests/`, §4).
-- **Current verdict (deterministic at `--seed 0`):** `not_confirmed_not_refuted`.
-  Two **candidates** (FRB.03 activity window, FRB.02 echo ratio), one
-  **consistency** axis (FRB.05 Ω_b), one **null** (FRB.04 polarisation, tested on
-  6134 real bursts), one **data-limited** axis (FRB.01). No replicated,
-  discriminating support.
+- **Current verdict (v1.1, deterministic at `--seed 0`):** `not_confirmed_not_refuted`.
+  One **candidate** (FRB.03 activity window), two **nulls** (FRB.02 echo ratio,
+  FRB.04 polarisation), one **consistency** axis (FRB.05 Ω_b), one **data-limited**
+  axis (FRB.01). No replicated, discriminating support.
+- **v1.1 correction (important):** the earlier FRB.02 "8/27 candidate" was an
+  **observable-semantics error** — `8/27` is the *amplitude* root, but the FAST
+  column is *energy* in erg. Under the correct split (energy ratio → `64/729`;
+  `√(energy ratio)` → `8/27`) **both theory channels are null**; the `8/27`
+  pile-up survived only in a flagged *audit* channel (channel mismatch).
+- **v1.2 completion (full null batteries):** with the four preregistered FRB.04
+  nulls (stationary-Markov, time-shuffle, block-shuffle, **AR(1)-drift**) and two
+  extra FRB.02 nulls (**AR(1)-energy storm**, censoring), the two remaining
+  seductive patterns are **explained away**: the FRB.02 `8/27` audit anomaly
+  disappears under the storm null (all channels q=1.0), and the v2 RM≈`{2/3,1/3}`
+  hint has **AR(1)-drift null p=0.92** ⇒ a smooth magneto-ionic drift, not a
+  discrete spectrum. A data-derived FRB.03 window (HDI of folded CHIME phases)
+  and a full VAR(1) shared model were also added (§7–§8).
 
 ---
 
@@ -79,10 +91,29 @@ The only admissible statement:
    polarimetry) and updated the axis statuses accordingly.
 
 The two pivotal data events: (a) obtaining the **FAST 1652-burst FRB 20121102A
-energy table** turned FRB.02 from a thin 144-burst null into a real test that
-surfaced a marginal 8/27 candidate; (b) obtaining the **FAST 6134-burst
-FRB 20240114A polarimetry** turned FRB.04 from `data_limited` into a real
-**null**.
+energy table** turned FRB.02 into a real test; (b) obtaining the **FAST
+6134-burst FRB 20240114A polarimetry** turned FRB.04 from `data_limited` into a
+real **null**.
+
+8. **v1.1 review response (after an external methodological review).** Added an
+   **observable-semantics layer** (`observable_semantics.py`) that forbids testing
+   an energy ratio against an amplitude number; this reclassified the FRB.02 8/27
+   result as an *audit anomaly* (the theory channels are null). Added: FRB.02
+   per-session / leave-one-session-out diagnostics and a second null (local-block
+   shuffle); a v2 exploratory RM step-relaxation channel
+   (`rm_relaxation_step.py`); a structure-vs-kernel score split; a fix to the
+   shared-eigenvalue CI (pair/block bootstrap instead of IID resampling, which had
+   collapsed the CI); explicit N-accounting (`n_raw=6134`); a YAML language patch
+   (flagged `language_patch_after_results`); and three new guard tests.
+9. **v1.2 null-battery completion.** Wired the **four preregistered FRB.04 nulls**
+   (stationary-Markov, time-shuffle, block-shuffle, AR(1)-drift; + a Dirichlet
+   diagnostic), with a conservative overall p = max over the four and a proper
+   **moving-block bootstrap** for the eigenvalue CI (the old IID bootstrap had
+   collapsed it). Added two FRB.02 storm/threshold nulls (AR(1)-energy, censoring).
+   Added **Package E** (`window_extraction.py`: data-derived HDI windows from
+   folded CHIME phases) and **Package G** (`recovery_observable_model.var1_spectrum`:
+   a true multivariate VAR(1)). The kernel and targets stayed frozen throughout —
+   only readouts, nulls and result-language changed.
 
 ---
 
@@ -201,6 +232,7 @@ the unpowered step.
 | **FRB.02** | recovery / echo ratios | `E_{n+1}/E_n ≈ 64/729`; amp `8/27`; step `2/3` (+ inverses) | energy / field / step | consecutive within-session energy ratios |
 | **FRB.03** | activity-window eigenwidths | `W_broad/P ≈ 8/27`, `W_core/P ≈ 1/27` | field / visibility | periodic-repeater phase-window widths |
 | **FRB.04** | PA/RM Markov spectrum (strong μ4/D4) | `spec(T) = {1, 64/729, 1/729}` | energy | per-burst PA-class / RM-residual state transitions |
+| **FRB.04b** | RM step-relaxation (**v2 exploratory**) | `spec(T_RM) = {1, 2/3, 1/3}` | step | RM-residual state transitions (env. relaxation, not μ4) |
 | **FRB.05** | baryon fraction | `Ω_b = 0.0489` | seed block | Macquart `DM(z)` slope of localized FRBs |
 | *generic* | energy cascade | adjacent log-E spacings = a single kernel ratio | energy | GMM cluster centres of one source's energies |
 | *shared* | multi-channel recovery memory | same eigenvalue in ≥2 observables | mixed | AR(1) memory of `log E`, `RM_resid`, `log Δt` |
@@ -235,15 +267,26 @@ All surrogate p-values use the `(1 + #{null ≥ obs}) / (n_surrogate + 1)` estim
   with a core window near `1/27`, LOO-stable, and `null q<0.01`. Only 2 robust
   periodic repeaters exist ⇒ best attainable status is **candidate**.
 
-### FRB.02 — session-aware echo ratios (`echo_ratio.evaluate_echo_ratios_by_session`)
-- **Statistic:** within each observing night, consecutive `log10(E_{n+1}/E_n)`
-  (energy when present, else fluence). For each of the 6 kernel ratios **and their
-  inverses** (12 targets), count log-ratios within `±0.10 dex`.
-- **Null:** shuffle the energies **within each session** (preserves the session
-  energy distribution and session structure), `n_surrogate=2000`; enrichment =
-  obs/mean-null; **Benjamini-Hochberg q-values** across the 12 targets.
-- **Success:** `q<0.01` and enrichment `>1.2` in **≥2 sources** (single-source =
-  candidate).
+### FRB.02 — semantics-correct echo ratios (`echo_ratio.evaluate_echo_semantic`)
+- **Observable split (the v1.1 fix, `observable_semantics.py`):** the raw column
+  is *energy* `E` (erg). The consecutive energy ratio `R_E = E_{n+1}/E_n` is tested
+  in three explicit channels: **energy** (`R_E` vs `{64/729, 1/729}`),
+  **amplitude** (`√R_E` vs `{8/27, 1/27}`, i.e. `R_E` vs `(8/27)²=64/729`), and a
+  flagged **audit** channel (`R_E` vs `{8/27, 1/27}` — a *channel mismatch*, never
+  theory). Only the energy + amplitude channels feed the axis score.
+- **Statistic:** per channel, count `log10`-ratios (and inverses) within
+  `±0.10 dex` of each target; enrichment = obs/mean-null; **BH q-values** within
+  the channel.
+- **Four nulls** (`n_surrogate=1000` each; the conservative max-p is kept):
+  within-session energy shuffle, **local-block shuffle** (blocks of 10), an
+  **AR(1)-energy "storm" null** (per-session AR(1) in log-energy with matched
+  mean/std/lag-1), and a **censoring null** (session lognormal truncated at the
+  detection floor).
+- **Session diagnostics:** per-session contribution + leave-one-session-out for
+  any excess (robust ⟺ no single session >25 % and ≥5 sessions contribute).
+- **Success:** `q<0.01`, enrichment `>1.2`, in a **theory** channel, in **≥2
+  sources**. A single-source theory-channel excess = candidate; an excess only in
+  the audit channel = **audit anomaly, not a candidate**.
 
 ### FRB.04 — PA/RM Markov spectrum (`markov_spectrum.py`)
 - **States (`n_states=4`):** PA → four D4 sectors `[0,45),[45,90),[90,135),[135,180)`
@@ -252,11 +295,41 @@ All surrogate p-values use the `(1 + #{null ≥ obs}) / (n_surrogate + 1)` estim
 - **Matrix:** row-stochastic transition matrix; take the two non-trivial
   `|eigenvalues|` (drop the ≈1 stationary one).
 - **Comparison:** Euclidean distance of `(λ₂,λ₃)` to the kernel `(64/729, 1/729)`;
-  **bootstrap CI** on the eigenvalues (block bootstrap of the state sequence,
-  `n_boot=1000`); **null** = random row-stochastic matrices `Dirichlet(2)`,
-  `n_null=2000` → `null_p = P(d_null ≤ d_obs)`.
-- **Success:** the bootstrap CI must **contain** the kernel pair **and** `null
-  p<0.01`. Score `= [CI∋kernel ∧ p<0.01]·exp(−(dist/0.05)²)`.
+  a **moving-block bootstrap CI** on the eigenvalues (`n_boot=800`, block=25 — the
+  earlier IID bootstrap scrambled the order and collapsed the CI to 0); and the
+  **four preregistered nulls** (`n_null=1000` each), with `null_p = P(d_null ≤
+  d_obs)`:
+  - *stationary_markov* — random reversible chain with the observed stationary
+    distribution; *time_shuffle* — permute the state sequence; *block_shuffle* —
+    shuffle blocks of states; *ar1_drift* — quantise a simulated AR(1) with the
+    observed lag-1 autocorrelation (the *memory-preserving* null).
+  The reported **overall null p = max over the four** (the most permissive null);
+  a Dirichlet matrix is kept as a 5th diagnostic.
+- **Success:** the bootstrap CI must **contain** the kernel pair **and** overall
+  `null p<0.01`. Score `= [CI∋kernel ∧ p<0.01]·exp(−(dist/0.05)²)`.
+
+### FRB.04b — RM step-relaxation (v2 exploratory, `rm_relaxation_step.py`)
+- Identical machinery (incl. all four nulls), but the RM-residual transition
+  spectrum is compared to the **unpowered step kernel `{2/3, 1/3}`**. **Not
+  preregistered against this kernel** → it can never rescue v1 and is promotion-
+  locked behind external replication. The **ar1_drift null is decisive**: if a
+  smooth AR(1) drift reproduces the proximity, the "match" is environmental
+  relaxation, not a discrete spectrum.
+
+### Package E — data-derived windows (`window_extraction.py`)
+- Fold a repeater's raw arrival times at its period and compute the windows as
+  preregistered **highest-density intervals**: `W_broad/P` = minimal phase arc
+  with 90 % of bursts, `W_core/P` = minimal arc with 50 %. Removes the "FRB
+  20180916B defines broad/core" circularity. Applied to CHIME FRB 20180916B
+  (33 bursts folded at 16.33 d).
+
+### Package G — multivariate VAR(1) (`recovery_observable_model.var1_spectrum`)
+- Build the time-ordered, standardised matrix of the available continuous
+  observables (e.g. `log_energy, dm_resid` for FAST 1652; `rm_resid, dm_resid,
+  pa_sin, pa_cos, linear_frac` for FRB 20240114A), fit `X_{n+1}=A X_n`, and
+  compare `|eig(A)|` to the kernel memory set with a row-shuffle null. A kernel
+  eigenvalue in `spec(A)` is shared across channels *by construction*; reported
+  descriptively (the row-shuffle null is permissive, so this is not promotable).
 
 ### FRB.01 — no native dispersion (`no_native_dispersion.py`)
 - **Model:** `t(ν)=t₀ + K·DM·ν⁻² + A_scat·ν⁻⁴ + A_TFPT·ν^index`; weighted LSQ;
@@ -274,8 +347,10 @@ All surrogate p-values use the `(1 + #{null ≥ obs}) / (n_surrogate + 1)` estim
 
 ### Shared eigenvalue (`recovery_observable_model.py`)
 - **Per observable** (`log_energy`, `rm_residual`, `log_waiting`): AR(1) memory
-  coefficient `a` (lag-1 regression), bootstrap CI (`n_boot=1000`), nearest kernel
-  memory value in `{2/3, 1/3, 8/27, 64/729}`. **Score rises only if ≥2 channels'
+  coefficient `a` (lag-1 regression), **pair/block-bootstrap** CI (`n_boot=1000`;
+  v1.1 fix — IID resampling had scrambled the lag-1 structure and collapsed the
+  CI toward 0), nearest kernel memory value in `{2/3, 1/3, 8/27, 64/729}`,
+  `delta_to_nearest`, and `kernel_in_a_ci`. **Score rises only if ≥2 channels'
   CIs contain the same kernel value** — coincidences are not stacked.
 
 ### Verdict gating (`fingerprint.py`)
@@ -288,9 +363,9 @@ All surrogate p-values use the `(1 + #{null ≥ obs}) / (n_surrogate + 1)` estim
 
 ## 8. Results — exact numbers (`--seed 0`)
 
-**OVERALL: `not_confirmed_not_refuted`** — support: none · candidates:
-`FRB03_activity_window`, `FRB02_echo_ratio` · consistency: `FRB05_baryon` ·
-null: `FRB04_polarisation` · data-limited: `FRB01_dispersion`.
+**OVERALL: `not_confirmed_not_refuted`** — support: none · candidate:
+`FRB03_activity_window` · null: `FRB02_echo_ratio`, `FRB04_polarisation` ·
+consistency: `FRB05_baryon` · data-limited: `FRB01_dispersion`.
 
 ### FRB.05 — baryon `Ω_b` → consistency (non-discriminating), score 1.00
 - adb84d (n=36): `Ω_b = 0.0483 ± 0.0072` (stat 0.0001, syst-floored). TFPT
@@ -301,41 +376,63 @@ null: `FRB04_polarisation` · data-limited: `FRB01_dispersion`.
   from Planck.
 
 ### FRB.03 — activity windows → candidate, score 0.66
-- FRB 20180916B: `W_broad/P = 0.3058` vs `8/27=0.2963` (**3.2 %**);
-  `W_core/P = 0.0367` vs `1/27=0.0370` (**0.9 %**). Double match.
-- FRB 20121102A: `W_broad/P = 0.5287` vs `8/27` (**78 %** off). No match.
-- Population: 1/2 broad matches, `n=2 < 5` required, random-window null
-  `p=0.112`, leave-one-out **not** stable ⇒ candidate, not support.
+- Curated FRB 20180916B: `W_broad/P = 0.3058` vs `8/27` (**3.2 %**);
+  `W_core/P = 0.0367` vs `1/27` (**0.9 %**). FRB 20121102A misses (78 %).
+- **Data-derived (Package E):** folding 33 CHIME bursts at 16.33 d with consistent
+  HDIs gives `W_broad/P = 0.137` (**54 %** off 8/27) and `W_core/P = 0.038`
+  (**4 %** off 1/27). So the *broad* match was definition-dependent (the 90 % HDI
+  is much narrower than the curated "5-day window") and **does not** hold; only the
+  *core* window survives at the 4 % level.
+- Population: `n=2 < 5` required, random-window null `p=0.112`, leave-one-out **not**
+  stable ⇒ candidate, not support — and now weaker for the broad window.
 
-### FRB.02 — echo ratios on FAST 1652 → candidate, score 0.04
-- 1652 bursts, **1611 within-session pairs**, 41 sessions.
-- `8/27` (`sqrt_lambda2_amp`): enrichment **1.246**, p=0.004, **BH q=0.048**.
-- All other targets: `1/3` q=0.16, `2/3` q=1.0, `64/729` q=1.0 (enrich<1),
-  `1/27` q=1.0.
-- The 8/27 excess survives BH at 0.05 but **fails the preregistered q<0.01** and
-  is single-source ⇒ candidate. This is the single most interesting result.
+### FRB.02 — echo ratios on FAST 1652 → null, score 0.00
+- 1652 bursts, **1611 within-session pairs**, 41 sessions; raw column = `E` (erg);
+  **four nulls** (within-session, local-block, AR(1)-energy storm, censoring).
+- **Energy channel** (`E_{n+1}/E_n` vs `{64/729, 1/729}`): best **q=1.0** → null.
+- **Amplitude channel** (`√(E_{n+1}/E_n)` vs `{8/27, 1/27}`): best **q=1.0** → null.
+- **Audit channel** (`E_{n+1}/E_n` vs `{8/27, 1/27}`, *channel mismatch*): under
+  the two weaker (v1.1) nulls the `8/27` pile-up reached q≈0.02, but it **does not
+  survive the AR(1)-energy storm null** (v1.2): best **q=1.0**. So the `8/27`
+  feature was a within-storm energy-memory artefact at the *wrong* channel number.
+  **FRB.02 axis = null, audit anomaly gone.**
 
 ### FRB.04 — PA/RM Markov spectrum on FRB 20240114A (6134 bursts) → null, score 0.00
-- **RM channel:** eigenvalues `(0.618, 0.310)`, kernel `(0.0878, 0.0014)`;
-  distance 0.613; `null p=0.996` (further from the kernel than random). RM(t) is a
-  smooth wandering drift (330→400→230 rad m⁻²), the opposite of a discrete
-  staircase. **Clean null.**
-- **PA channel:** eigenvalues `(0.0943, 0.0398)`. The **leading** non-trivial
-  eigenvalue `0.0943` is **7.4 %** from `64/729=0.0878` — intriguing — but the
-  second, `0.0398`, is ~29× the predicted `1/729=0.00137`, so the bootstrap CI
-  does **not** contain the kernel pair and the preregistered success fails. (The
-  PA `null p=0.000` reflects near-memorylessness of the PA-state sequence, not a
-  kernel match.) **Strong μ4/D4 prediction not supported.**
+- **4-null framework**, conservative overall p = max over the four; N-accounting
+  `n_raw=6134, n_used_pa=6133, n_used_rm=6134`.
+- **RM channel:** eigenvalues `(0.616, 0.309)` vs kernel `(0.0878, 0.0014)`;
+  overall **null p=1.0** (worst null: time_shuffle). RM(t) is a smooth wandering
+  drift (330→400→230 rad m⁻²). **Clean null.**
+- **PA channel:** eigenvalues `(0.056, 0.022)`; overall **null p=0.49** (worst
+  null: block_shuffle) — i.e. a block-shuffle reproduces the PA spectrum, so it is
+  **not** special; CI does not contain the kernel. **Null.** (Per-null p:
+  stationary 0.001, time 0.003, block 0.49, ar1 0.014.)
+- **Strong μ4/D4 prediction not supported.**
+
+### FRB.04b — RM step-relaxation (v2 exploratory) → killed by the AR(1)-drift null
+- RM-residual eigenvalues `(0.616, 0.309)` vs the **step kernel** `(0.667, 0.333)`
+  (≈7 % each). Memory-destroying nulls give p≈0.001 (the proximity beats them),
+  **but the AR(1)-drift null gives p=0.92** — a smooth autocorrelated drift
+  reproduces the proximity. Overall **null p=0.92** ⇒ the RM≈`{2/3,1/3}` pattern
+  is **environmental relaxation, not a discrete step spectrum**. The intriguing v2
+  hint is *explained away*; not promotable.
 
 ### Generic / shared (FAST 1652 energies)
-- Energy distribution: log-normal **rejected** (KS p=2e-23); GMM best `k=3`
-  (ΔBIC=315). Cluster centres `log10 E = [37.63, 37.75, 38.52]` → adjacent
-  spacings `[0.12, 0.77] dex` — **non-uniform**; closest single ratio `27/8` at
-  **77 %** off (ladder p=0.007). Log-periodogram peaks at the search boundary
-  (ratio 6.0). ⇒ real structure, but **no equal-spaced kernel cascade**.
-- Shared eigenvalue: only `log_energy` has appreciable memory (AR(1) `a=0.343`,
-  curiously near `1/3=0.333`); `log_waiting` `a=−0.04`. **No** kernel value shared
-  across ≥2 channels.
+- **Structure vs kernel are scored separately:** `structure_score=0.74`
+  (log-normal **rejected**, KS p=2e-23; GMM best `k=3`, ΔBIC=315) but
+  `kernel_score=0.00`. Cluster centres `log10 E = [37.63, 37.75, 38.52]` → adjacent
+  spacings `[0.12, 0.77] dex` (**non-uniform**); closest single ratio `27/8` at
+  **77 %** off. ⇒ real structure, **no equal-spaced kernel cascade**. The
+  structure_score is deliberately **kept out of** the kernel verdict.
+- Shared eigenvalue (pair-bootstrap CIs): `log_energy` AR(1) `a=0.343`,
+  CI `[0.289, 0.394]` — which **does contain `1/3=0.333`** (single-channel hint);
+  `log_waiting` `a=−0.04`. Only **1** channel ⇒ **no** shared kernel eigenvalue.
+- **VAR(1) (Package G):** FAST 1652 `|eig(A)|=[0.341, 0.072]` (leading 2 % from
+  `1/3`, echoing the `log_energy` memory); FRB 20240114A `|eig(A)|=[0.757, 0.133,
+  0.084, 0.049, 0.038]` (0.757 from the RM drift; `pa_sin` eig 0.084 is 4 % from
+  `64/729`). Row-shuffle null p=0.002 is permissive (shuffling kills memory), so
+  these are **descriptive, not promotable** — no clean kernel match across ≥2
+  sources.
 - CHIME sanity: drift downward fraction 0.76 (the ordinary "sad trombone");
   FRB 20180916B folds at 16.33 d with Rayleigh `z=28.7` (timing pipeline OK).
 
@@ -364,11 +461,15 @@ near-coincidence.
 ```bash
 cd experiments/frb-tfpt-signatures
 . ../tfpt-discovery/.venv/bin/activate            # numpy/scipy/sklearn/matplotlib/pyyaml
-python tests/test_recovery_kernel_constants.py    # kernel-freeze guard (7 tests, all pass)
+for t in tests/test_*.py; do python "$t"; done     # 4 guard files, 21 tests, all pass
 PYTHONPATH=src python -m frb_tfpt.cli audit        # print the frozen kernel + ratios
 PYTHONPATH=src python -m frb_tfpt.cli analyze --seed 0   # full search -> results/
 python scripts/fetch_data.py                       # refresh the VizieR + IOPscience tables
 ```
+
+Guard tests: `test_recovery_kernel_constants.py` (kernel freeze + no data leak, 7),
+`test_observable_semantics.py` (channel mapping, 6), `test_language_rules_current.py`
+(post-results language + verdict, 5), `test_n_accounting.py` (6134 accounting, 3).
 
 `analyze` is deterministic at fixed `--seed` (~50 s on the bundled data; all
 RNGs and `GaussianMixture(random_state=seed)` are seeded).
@@ -391,21 +492,28 @@ RNGs and `GaussianMixture(random_state=seed)` are seeded).
 
 ```
 hypotheses/frb_tfpt_v1.yaml     # frozen preregistration (kernel, nulls, success, language)
-tests/test_recovery_kernel_constants.py   # kernel-freeze + no-data-leak guards (7 tests)
+tests/                          # 4 guard files, 21 tests (run each: python tests/<f>.py)
+  test_recovery_kernel_constants.py   # kernel freeze + no-data-leak (7)
+  test_observable_semantics.py        # FRB.02 channel mapping (6)
+  test_language_rules_current.py      # post-results language + verdict (5)
+  test_n_accounting.py                # 6134 burst-count accounting (3)
 src/frb_tfpt/
   recovery_kernel.py     # FROZEN kernel (exact Fractions) + seed block (derived)
   tfpt_ladder.py         # generic cascade ratios (derived)
+  observable_semantics.py # FRB.02 channel mapping (energy/amplitude/audit) + guard
   cosmology.py           # Macquart relation E(z), I(z), DM_cosmic, Omega_b fit
   dmz_baryon.py          # FRB.05 Omega_b consistency
   activity_windows.py    # FRB.03 per-source windows (curated, cited, with errors)
   periodic_population.py # FRB.03 population test (LOO + nulls)
-  echo_ratio.py          # FRB.02 session-aware ratios + BH q-values
-  markov_spectrum.py     # FRB.04 PA/RM transition-matrix spectrum
-  recovery_observable_model.py  # shared multi-channel AR(1) eigenvalue search
+  echo_ratio.py          # FRB.02 semantic channels + session diag + BH q + 4 nulls
+  markov_spectrum.py     # FRB.04 spectrum: 4 nulls + moving-block bootstrap (kernel arg)
+  rm_relaxation_step.py  # FRB.04b v2 exploratory RM step-relaxation {2/3,1/3}
+  window_extraction.py   # Package E: HDI activity windows from folded phases
+  recovery_observable_model.py  # shared AR(1) (pair bootstrap) + VAR(1) (Package G)
   no_native_dispersion.py       # FRB.01 kill test
   energy_clusters.py     # GMM + log-periodicity + fit_spacing_ladder
   drift_freq.py, timing.py, polarization.py, rm_steps.py
-  fingerprint.py         # EvidenceAxis + aggregate_axes (gated verdict)
+  fingerprint.py         # EvidenceAxis (+observable_semantics_valid) + aggregate_axes
   data_io.py             # all loaders + drop-in repeater column contracts
   cli.py                 # `frb-tfpt audit` / `frb-tfpt analyze`
 scripts/fetch_data.py    # re-download the VizieR/IOP datasets
@@ -416,16 +524,18 @@ data/  results/          # real catalogues + provenance; generated outputs
 
 ## 13. What would change the verdict
 
-1. **FRB.02 → support:** replicate the 8/27 within-session energy-ratio excess in
-   a second large single-source sample at `q<0.01` (e.g. a second FAST storm of
-   FRB 20121102A, or FRB 20240619D).
-2. **FRB.04 → candidate:** test whether the PA leading-eigenvalue proximity to
-   `64/729` (7.4 %) replicates in a second repeater's per-burst PA/RM sequence;
-   the RM channel is already a clean null here.
+1. **FRB.02 → candidate/support:** a *theory-channel* excess (energy ratio near
+   `64/729`, or `√(energy ratio)` near `8/27`) — **not** the audit `8/27` — at
+   `q<0.01`, replicated in a second large single-source sample (a second FAST storm
+   or FRB 20240619D). The current `8/27` audit anomaly does **not** count.
+2. **FRB.04b (v2) → essentially closed:** the RM≈`{2/3,1/3}` proximity is
+   reproduced by an AR(1)-drift null (p=0.92), i.e. it is environmental relaxation.
+   It would only revive if a second repeater showed the proximity **and** it beat
+   the AR(1)-drift null (p<0.01) there — unlikely for a smooth-drift quantity.
 3. **FRB.03 → testable:** ≥5 confirmed periodic repeaters with measured
    `P, W_broad, W_core`.
-4. **Shared eigenvalue:** the same kernel value (e.g. the `log_energy` AR(1)
-   ≈1/3 hint) appearing across ≥2 observables of one source.
+4. **Shared eigenvalue:** the `log_energy` AR(1) ≈1/3 hint (CI contains 1/3)
+   appearing in a **second** observable or source (≥2 channels required).
 
 A clean multi-source null is itself a result: it would show FRBs are not a good
 carrier of the boundary-recovery kernel. *Nature owes us no drama.*

@@ -17,8 +17,10 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 
 import numpy as np
+from scipy.signal import lfilter
 
 from .data_io import RepeaterSeries
+from .observable_semantics import energy_ratio_channels
 from .recovery_kernel import KernelRatio, kernel_ratios
 
 
@@ -185,3 +187,197 @@ def evaluate_echo_ratios_by_session(series: RepeaterSeries, half_window_dex: flo
     verdict = (f"kernel-ratio excess (BH q<{q_threshold}, single source): {sig}" if sig
                else f"clean null (no BH q<{q_threshold} kernel-ratio excess)")
     return SessionEchoResult(series.source, len(val), n_pairs, n_sessions, targets, c, verdict)
+
+
+# --------------------------------------------------------------------------- #
+# Semantics-aware FRB.02 (energy / amplitude / audit channels) + session diag
+# --------------------------------------------------------------------------- #
+def _session_logratios_indexed(values, sess, mjd):
+    """Within-session consecutive log10 energy ratios + the session label of each
+    pair (for per-session diagnostics)."""
+    lr, lab = [], []
+    for s in np.unique(sess):
+        m = sess == s
+        v, t = values[m], mjd[m]
+        ok = np.isfinite(v) & (v > 0) & np.isfinite(t)
+        v, t = v[ok], t[ok]
+        if len(v) < 2:
+            continue
+        order = np.argsort(t)
+        v = v[order]
+        lr.append(np.log10(v[1:] / v[:-1]))
+        lab.append(np.full(len(v) - 1, s))
+    if not lr:
+        return np.array([]), np.array([])
+    return np.concatenate(lr), np.concatenate(lab)
+
+
+def _surrogate_logratios(values, sess, mjd, mode, rng, block=10):
+    """One surrogate within-session log-ratio array under a given null model.
+
+    ``within_session``: full per-session energy permutation (destroys ordering).
+    ``local_block``:     permute inside consecutive blocks of ``block`` bursts ->
+                         preserves slow within-storm energy drift.
+    ``ar1_energy``:      simulate a per-session AR(1) in log-energy with the same
+                         mean/std/lag-1 (a "storm" memory null).
+    ``censoring``:       draw log-energies from the session lognormal truncated at
+                         the session detection floor (threshold-artefact null).
+    """
+    v2 = values.copy()
+    for s in np.unique(sess):
+        idx = np.where(sess == s)[0]
+        x = values[idx]
+        xf = x[np.isfinite(x) & (x > 0)]
+        if mode == "within_session":
+            v2[idx] = rng.permutation(x)
+        elif mode == "local_block":
+            order = idx[np.argsort(mjd[idx])]
+            for b0 in range(0, len(order), block):
+                blk = order[b0:b0 + block]
+                v2[blk] = rng.permutation(values[blk])
+        elif mode == "ar1_energy":
+            if len(xf) >= 8:
+                lx = np.log10(xf)
+                mu, sd = lx.mean(), lx.std() or 1e-6
+                lxc = lx - mu
+                d = float(lxc[:-1] @ lxc[:-1])
+                rho = float(np.clip(lxc[:-1] @ lxc[1:] / d if d > 0 else 0.0, -0.99, 0.99))
+                sim = lfilter([np.sqrt(1 - rho**2)], [1.0, -rho], rng.standard_normal(len(idx)))
+                v2[idx] = 10.0 ** (mu + sd * sim)
+            else:
+                v2[idx] = rng.permutation(x)
+        elif mode == "censoring":
+            if len(xf) >= 8:
+                lx = np.log10(xf)
+                mu, sd, thr = lx.mean(), lx.std() or 1e-6, lx.min()
+                draws = rng.normal(mu, sd, len(idx) * 4)
+                draws = draws[draws >= thr]
+                while len(draws) < len(idx):
+                    extra = rng.normal(mu, sd, len(idx) * 4)
+                    draws = np.concatenate([draws, extra[extra >= thr]])
+                v2[idx] = 10.0 ** draws[:len(idx)]
+            else:
+                v2[idx] = rng.permutation(x)
+    lr, _ = _session_logratios_indexed(v2, sess, mjd)
+    return lr
+
+
+@dataclass
+class EchoChannelResult:
+    name: str
+    audit: bool
+    transform: str
+    targets: dict                  # label -> {ratio, enrichment, p, q}
+    significant: list[str]
+    best_q: float
+
+
+@dataclass
+class SemanticEchoResult:
+    source: str
+    n_bursts: int
+    n_pairs: int
+    n_sessions: int
+    raw_column: str
+    energy_like: bool
+    nulls_used: list[str]
+    channels: dict                 # channel name -> EchoChannelResult (as dict)
+    session_diagnostics: dict
+    c_echo_theory: float           # score from theory channels (energy+amplitude) only
+    audit_anomaly: str | None
+    verdict: str
+
+
+def evaluate_echo_semantic(series: RepeaterSeries, half_window_dex: float = 0.10,
+                           n_surrogate: int = 1000, q_threshold: float = 0.05,
+                           block: int = 10, seed: int = 0) -> SemanticEchoResult:
+    """Semantics-correct FRB.02: split the consecutive *energy* ratio into the
+    theory channels (energy: identity vs {64/729,1/729}; amplitude: sqrt vs
+    {8/27,1/27}) and a flagged audit channel (energy vs {8/27,1/27}). Calibrate
+    against two nulls (within-session and local-block shuffles) and run a
+    per-session / leave-one-session-out diagnostic on every excess."""
+    if not series.available:
+        return SemanticEchoResult(series.source, 0, 0, 0, "none", False, [], {}, {},
+                                  0.0, None, "data-limited")
+    energy_like = bool(np.isfinite(series.energy).sum())
+    val = series.energy if energy_like else series.fluence
+    raw_col = "E (erg)" if energy_like else "fluence (Jy ms)"
+    sess = series.session_id if series.session_id.size else np.zeros(len(series.mjd))
+    mjd = series.mjd
+
+    lr, lab = _session_logratios_indexed(val, sess, mjd)
+    n_pairs = len(lr)
+    n_sessions = int(len(np.unique(sess)))
+    if n_pairs < 20:
+        return SemanticEchoResult(series.source, len(val), n_pairs, n_sessions, raw_col,
+                                  energy_like, [], {}, {}, 0.0, None,
+                                  f"too few within-session pairs ({n_pairs})")
+
+    rng = np.random.default_rng(seed)
+    nulls = ["within_session", "local_block", "ar1_energy", "censoring"]
+    # fixed-length surrogate log-ratio matrices (n_surrogate x n_pairs) for fast,
+    # fully vectorised hit-counting
+    surr = {}
+    for m in nulls:
+        rows = [_surrogate_logratios(val, sess, mjd, m, rng, block) for _ in range(n_surrogate)]
+        rows = [r for r in rows if len(r) == n_pairs]
+        surr[m] = np.vstack(rows) if rows else np.empty((0, n_pairs))
+
+    channels = energy_ratio_channels(raw_is_energy=energy_like)
+    out_channels: dict[str, dict] = {}
+    theory_score = 0.0
+    audit_anomaly = None
+    session_diag: dict = {}
+
+    for ch in channels:
+        x = 0.5 * lr if ch.transform == "sqrt" else lr   # sqrt -> half the log
+        names, pvals, recs = [], [], {}
+        for lbl, val_t in ch.targets.items():
+            for sign, lt, label in ((+1, np.log10(val_t), lbl),
+                                    (-1, -np.log10(val_t), f"{lbl}^-1")):
+                obs = int(np.sum(np.abs(x - lt) <= half_window_dex))
+                # worst (max) p across the two nulls = the conservative null
+                pmax, enr_at_max = 0.0, 1.0
+                for m in nulls:
+                    sm = 0.5 * surr[m] if ch.transform == "sqrt" else surr[m]
+                    nh = (np.abs(sm - lt) <= half_window_dex).sum(axis=1)  # vectorised
+                    mean_null = float(nh.mean()) or 1e-9
+                    p = float((1 + np.sum(nh >= obs)) / (len(nh) + 1))
+                    if p > pmax:
+                        pmax, enr_at_max = p, obs / mean_null
+                recs[label] = {"ratio": val_t if sign > 0 else 1.0 / val_t,
+                               "enrichment": enr_at_max, "p": pmax}
+                names.append(label); pvals.append(pmax)
+        for label, q in zip(names, _bh_qvalues(pvals)):
+            recs[label]["q"] = q
+        sig = [n for n in names if recs[n]["q"] < q_threshold and recs[n]["enrichment"] > 1.2]
+        best_q = min((recs[n]["q"] for n in names), default=1.0)
+        out_channels[ch.name] = EchoChannelResult(ch.name, ch.audit, ch.transform,
+                                                   recs, sig, best_q).__dict__
+        if sig and not ch.audit:
+            theory_score = max(theory_score, 1.0 - best_q / q_threshold)
+        if sig and ch.audit:
+            audit_anomaly = (f"energy ratio piles up near {sig} (amplitude numbers applied "
+                             f"to an energy ratio = channel mismatch; not theory)")
+            # per-session diagnostic for the audit excess (the 8/27 anomaly)
+            for n in sig:
+                base = n.replace("^-1", "")
+                tv = ch.targets[base]
+                lt = -np.log10(tv) if n.endswith("^-1") else np.log10(tv)
+                hit = np.abs(lr - lt) <= half_window_dex
+                per = {float(s): int(hit[lab == s].sum()) for s in np.unique(lab)}
+                total = sum(per.values()) or 1
+                top = max(per.values()) if per else 0
+                contributing = sum(1 for v in per.values() if v > 0)
+                session_diag[n] = {
+                    "total_hits": total,
+                    "n_sessions_contributing": contributing,
+                    "max_single_session_fraction": round(top / total, 3),
+                    "robust_no_single_storm": bool(top / total < 0.25 and contributing >= 5),
+                }
+
+    verdict = ("theory channels null; " + (audit_anomaly or "no audit anomaly")) \
+        if theory_score == 0 else f"theory-channel excess (score {theory_score:.2f})"
+    return SemanticEchoResult(series.source, len(val), n_pairs, n_sessions, raw_col,
+                              energy_like, nulls, out_channels, session_diag,
+                              float(theory_score), audit_anomaly, verdict)

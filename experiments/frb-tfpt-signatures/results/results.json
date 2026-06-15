@@ -83,6 +83,16 @@
         "enough_sources": false,
         "verdict": "candidate only: 1/2 broad matches but n=2 < 5 required periodic repeaters",
         "c_window_population": 0.0
+      },
+      "data_derived_FRB20180916B": {
+        "source": "FRB 20180916B (CHIME folded)",
+        "n_bursts": 33,
+        "period_days": 16.33,
+        "w_broad_over_p": 0.13740588558357558,
+        "w_core_over_p": 0.03838172753194158,
+        "broad_rel_err": 0.5362551361554324,
+        "core_rel_err": 0.036306643362422675,
+        "note": "data-derived HDI windows from 33 folded bursts (90%/50% phase arcs); vs 8/27 (54%), 1/27 (4%)"
       }
     },
     "FRB02_echo_ratio": {
@@ -90,121 +100,231 @@
       "n_bursts": 1652,
       "n_pairs": 1611,
       "n_sessions": 41,
-      "targets": {
-        "lambda2_energy": {
-          "ratio": 0.0877914951989026,
-          "enrichment": 0.7466865783087548,
-          "p": 0.9800099950024987,
-          "q": 1.0
+      "raw_column": "E (erg)",
+      "energy_like": true,
+      "nulls_used": [
+        "within_session",
+        "local_block",
+        "ar1_energy",
+        "censoring"
+      ],
+      "channels": {
+        "energy": {
+          "name": "energy",
+          "audit": false,
+          "transform": "identity",
+          "targets": {
+            "64/729": {
+              "ratio": 0.0877914951989026,
+              "enrichment": 0.7462164494088566,
+              "p": 0.985014985014985,
+              "q": 1.0
+            },
+            "64/729^-1": {
+              "ratio": 11.390625,
+              "enrichment": 0.6781246346311236,
+              "p": 0.995004995004995,
+              "q": 1.0
+            },
+            "1/729": {
+              "ratio": 0.0013717421124828531,
+              "enrichment": 0.0,
+              "p": 1.0,
+              "q": 1.0
+            },
+            "1/729^-1": {
+              "ratio": 729.0,
+              "enrichment": 0.0,
+              "p": 1.0,
+              "q": 1.0
+            }
+          },
+          "significant": [],
+          "best_q": 1.0
         },
-        "lambda2_energy^-1": {
-          "ratio": 11.390625,
-          "enrichment": 0.6761404040521793,
-          "p": 0.9945027486256871,
-          "q": 1.0
+        "amplitude": {
+          "name": "amplitude",
+          "audit": false,
+          "transform": "sqrt",
+          "targets": {
+            "8/27": {
+              "ratio": 0.2962962962962963,
+              "enrichment": 0.774324777237163,
+              "p": 0.998001998001998,
+              "q": 1.0
+            },
+            "8/27^-1": {
+              "ratio": 3.375,
+              "enrichment": 0.993346885973018,
+              "p": 0.5504495504495505,
+              "q": 1.0
+            },
+            "1/27": {
+              "ratio": 0.037037037037037035,
+              "enrichment": 0.0,
+              "p": 1.0,
+              "q": 1.0
+            },
+            "1/27^-1": {
+              "ratio": 27.0,
+              "enrichment": 0.0,
+              "p": 1.0,
+              "q": 1.0
+            }
+          },
+          "significant": [],
+          "best_q": 1.0
         },
-        "lambda3_energy": {
-          "ratio": 0.0013717421124828531,
-          "enrichment": 0.0,
-          "p": 1.0,
-          "q": 1.0
-        },
-        "lambda3_energy^-1": {
-          "ratio": 729.0,
-          "enrichment": 0.0,
-          "p": 1.0,
-          "q": 1.0
-        },
-        "sqrt_lambda2_amp": {
-          "ratio": 0.2962962962962963,
-          "enrichment": 1.2460132226179295,
-          "p": 0.00399800099950025,
-          "q": 0.047976011994003
-        },
-        "sqrt_lambda2_amp^-1": {
-          "ratio": 3.375,
-          "enrichment": 0.9312027414608708,
-          "p": 0.8020989505247377,
-          "q": 1.0
-        },
-        "sqrt_lambda3_amp": {
-          "ratio": 0.037037037037037035,
-          "enrichment": 0.5359954440387257,
-          "p": 0.9870064967516242,
-          "q": 1.0
-        },
-        "sqrt_lambda3_amp^-1": {
-          "ratio": 27.0,
-          "enrichment": 0.6087456457776725,
-          "p": 0.9685157421289355,
-          "q": 1.0
-        },
-        "two_thirds_sub": {
-          "ratio": 0.6666666666666666,
-          "enrichment": 1.032251821057534,
-          "p": 0.2913543228385807,
-          "q": 1.0
-        },
-        "two_thirds_sub^-1": {
-          "ratio": 1.5,
-          "enrichment": 0.9521081530312138,
-          "p": 0.8225887056471765,
-          "q": 1.0
-        },
-        "one_third_sub": {
-          "ratio": 0.3333333333333333,
-          "enrichment": 1.1588800194497346,
-          "p": 0.026986506746626688,
-          "q": 0.16191904047976013
-        },
-        "one_third_sub^-1": {
-          "ratio": 3.0,
-          "enrichment": 0.915076080883008,
-          "p": 0.879560219890055,
-          "q": 1.0
+        "audit_energy_vs_amplitude_numbers": {
+          "name": "audit_energy_vs_amplitude_numbers",
+          "audit": true,
+          "transform": "identity",
+          "targets": {
+            "8/27": {
+              "ratio": 0.2962962962962963,
+              "enrichment": 0.9790598103254277,
+              "p": 0.6333666333666333,
+              "q": 1.0
+            },
+            "8/27^-1": {
+              "ratio": 3.375,
+              "enrichment": 0.73745768836513,
+              "p": 1.0,
+              "q": 1.0
+            },
+            "1/27": {
+              "ratio": 0.037037037037037035,
+              "enrichment": 0.5333688912594172,
+              "p": 0.989010989010989,
+              "q": 1.0
+            },
+            "1/27^-1": {
+              "ratio": 27.0,
+              "enrichment": 0.600640683395622,
+              "p": 0.975024975024975,
+              "q": 1.0
+            }
+          },
+          "significant": [],
+          "best_q": 1.0
         }
       },
-      "c_echo": 0.040479760119940145,
-      "verdict": "kernel-ratio excess (BH q<0.05, single source): ['sqrt_lambda2_amp']"
+      "session_diagnostics": {},
+      "c_echo_theory": 0.0,
+      "audit_anomaly": null,
+      "verdict": "theory channels null; no audit anomaly"
     },
     "FRB04_markov_spectrum": {
+      "n_accounting": {
+        "n_raw": 6134,
+        "n_used_pa": 6133,
+        "n_used_rm": 6134,
+        "note": "n_raw = rows in the v5 CSV (S/N>20 catalogue)"
+      },
       "pa": {
-        "source": "FRB 20240114A (FAST pol, 6131 bursts)",
+        "source": "FRB 20240114A (FAST pol; n_raw=6134 catalogue rows)",
         "channel": "pa",
         "available": true,
-        "n": 6134,
+        "n": 6133,
         "eigs": [
-          0.09432901836023146,
-          0.039825580164660854
+          0.05625121788530704,
+          0.022390885202666924
         ],
         "kernel": [
           0.0877914951989026,
           0.0013717421124828531
         ],
-        "distance": 0.039005600495672976,
+        "distance": 0.037902420361556645,
+        "ci_lo": [
+          0.03343822663410209,
+          0.009620595233316506
+        ],
+        "ci_hi": [
+          0.07991433822097158,
+          0.056271039550067306
+        ],
         "ci_contains_kernel": false,
-        "null_p": 0.0004997501249375312,
+        "null_pvals": {
+          "stationary_markov": 0.000999000999000999,
+          "time_shuffle": 0.002997002997002997,
+          "block_shuffle": 0.4865134865134865,
+          "ar1_drift": 0.013986013986013986,
+          "dirichlet": 0.000999000999000999
+        },
+        "null_p": 0.4865134865134865,
         "c_markov": 0.0,
-        "note": "eigs=[0.0943, 0.0398] vs kernel; CI_contains_kernel=False, null p=0.000"
+        "note": "eigs=[0.0563, 0.0224] vs kernel [0.0878, 0.0014]; CI_contains_kernel=False; overall null p=0.487 (worst null: block_shuffle)"
       },
       "rm": {
-        "source": "FRB 20240114A (FAST pol, 6131 bursts)",
+        "source": "FRB 20240114A (FAST pol; n_raw=6134 catalogue rows)",
         "channel": "rm",
         "available": true,
         "n": 6134,
         "eigs": [
-          0.6177295091535684,
-          0.3100971423652536
+          0.615969120369337,
+          0.30943767804157796
         ],
         "kernel": [
           0.0877914951989026,
           0.0013717421124828531
         ],
-        "distance": 0.6133071590935891,
+        "distance": 0.6114541884806656,
+        "ci_lo": [
+          0.5415257211211515,
+          0.24917069458384491
+        ],
+        "ci_hi": [
+          0.632230032883599,
+          0.33581587189899503
+        ],
         "ci_contains_kernel": false,
-        "null_p": 0.9960019990004998,
+        "null_pvals": {
+          "stationary_markov": 0.000999000999000999,
+          "time_shuffle": 1.0,
+          "block_shuffle": 1.0,
+          "ar1_drift": 0.003996003996003996,
+          "dirichlet": 0.994005994005994
+        },
+        "null_p": 1.0,
         "c_markov": 0.0,
-        "note": "eigs=[0.6177, 0.3101] vs kernel; CI_contains_kernel=False, null p=0.996"
+        "note": "eigs=[0.616, 0.3094] vs kernel [0.0878, 0.0014]; CI_contains_kernel=False; overall null p=1.000 (worst null: time_shuffle)"
+      }
+    },
+    "FRB04b_rm_step_relaxation_v2_exploratory": {
+      "status": "exploratory_not_preregistered_no_promotion_without_external_replication",
+      "result": {
+        "source": "FRB 20240114A (FAST pol; n_raw=6134 catalogue rows)",
+        "channel": "rm",
+        "available": true,
+        "n": 6134,
+        "eigs": [
+          0.615969120369337,
+          0.30943767804157796
+        ],
+        "kernel": [
+          0.6666666666666666,
+          0.3333333333333333
+        ],
+        "distance": 0.05604679778892165,
+        "ci_lo": [
+          0.5415257211211515,
+          0.24917069458384491
+        ],
+        "ci_hi": [
+          0.632230032883599,
+          0.33581587189899503
+        ],
+        "ci_contains_kernel": false,
+        "null_pvals": {
+          "stationary_markov": 0.000999000999000999,
+          "time_shuffle": 0.000999000999000999,
+          "block_shuffle": 0.000999000999000999,
+          "ar1_drift": 0.922077922077922,
+          "dirichlet": 0.000999000999000999
+        },
+        "null_p": 0.922077922077922,
+        "c_markov": 0.0,
+        "note": "eigs=[0.616, 0.3094] vs kernel [0.6667, 0.3333]; CI_contains_kernel=False; overall null p=0.922 (worst null: ar1_drift)"
       }
     },
     "FRB01_dispersion": {
@@ -274,6 +394,11 @@
       "c_e": 0.7375311720698254,
       "verdict": "discrete log-periodic cascade (p=0.002, ratio 6.00~exp_delta_gap @ 47%)"
     },
+    "score_split": {
+      "structure_score": 0.7375311720698254,
+      "kernel_score": 0.0,
+      "note": "structure_score (real but NOT TFPT-specific) is kept out of the kernel verdict; only kernel_score reflects a frozen-ratio match."
+    },
     "shared_kernel": {
       "source": "FRB 20121102A (FAST, Li+2021, 1652 bursts)",
       "available": true,
@@ -281,26 +406,86 @@
         {
           "name": "log_energy",
           "a": 0.34269206771008354,
-          "ci_lo": -0.04900930200119264,
-          "ci_hi": 0.04681096154455435,
+          "a_ci_lo": 0.2894602208100704,
+          "a_ci_hi": 0.39415281572234584,
           "nearest_kernel": "step_1/3",
           "nearest_value": 0.3333333333333333,
-          "ci_contains_kernel": false
+          "delta_to_nearest": 0.009358734376750222,
+          "kernel_in_a_ci": true
         },
         {
           "name": "log_waiting",
           "a": -0.043145658487421114,
-          "ci_lo": -0.04720536190262293,
-          "ci_hi": 0.04701669961219076,
+          "a_ci_lo": -0.08730887690375666,
+          "a_ci_hi": -0.0006549696332370844,
           "nearest_kernel": "energy_64/729",
           "nearest_value": 0.0877914951989026,
-          "ci_contains_kernel": false
+          "delta_to_nearest": 0.13093715368632372,
+          "kernel_in_a_ci": false
         }
       ],
-      "shared_kernel": null,
-      "n_sharing": 0,
+      "shared_kernel": "step_1/3",
+      "n_sharing": 1,
       "c_shared": 0.0,
-      "verdict": "no shared kernel eigenvalue (max 0 channel); memory coefficients consistent with weak/no AR(1) recovery"
+      "verdict": "no shared kernel eigenvalue (max 1 channel); memory coefficients consistent with weak/no AR(1) recovery"
+    },
+    "var1": {
+      "FAST 1652": {
+        "source": "FRB 20121102A (FAST, Li+2021, 1652 bursts)",
+        "available": true,
+        "channels": [
+          "log_energy",
+          "dm_resid"
+        ],
+        "eigs_abs": [
+          0.3414967024482792,
+          0.0721010881803878
+        ],
+        "nearest_kernel": [
+          "step_1/3",
+          "energy_64/729"
+        ],
+        "nearest_rel_err": [
+          0.024490107344837586,
+          0.1787235424452702
+        ],
+        "null_p_any_kernel": 0.001996007984031936,
+        "note": "VAR(1) on ['log_energy', 'dm_resid']: |eig(A)|=[0.341, 0.072]; nearest kernel rel-errs=[0.02, 0.18]; row-shuffle p=0.002"
+      },
+      "FRB 20240114A pol": {
+        "source": "FRB 20240114A (FAST pol; n_raw=6134 catalogue rows)",
+        "available": true,
+        "channels": [
+          "rm_resid",
+          "dm_resid",
+          "pa_sin",
+          "pa_cos",
+          "linear_frac"
+        ],
+        "eigs_abs": [
+          0.7567838666601778,
+          0.1326551518503275,
+          0.08447009524398942,
+          0.048881018235866436,
+          0.03787937529505975
+        ],
+        "nearest_kernel": [
+          "step_2/3",
+          "energy_64/729",
+          "energy_64/729",
+          "energy_64/729",
+          "energy_64/729"
+        ],
+        "nearest_rel_err": [
+          0.1351757999902668,
+          0.5110250890451368,
+          0.037832821361432935,
+          0.44321465165708385,
+          0.56853024077971
+        ],
+        "null_p_any_kernel": 0.001996007984031936,
+        "note": "VAR(1) on ['rm_resid', 'dm_resid', 'pa_sin', 'pa_cos', 'linear_frac']: |eig(A)|=[0.757, 0.133, 0.084, 0.049, 0.038]; nearest kernel rel-errs=[0.14, 0.51, 0.04, 0.44, 0.57]; row-shuffle p=0.002"
+      }
     },
     "chime_drift": {
       "n_multi_component": 42,
@@ -521,6 +706,7 @@
       "q_value": null,
       "discriminating": false,
       "replicated": true,
+      "observable_semantics_valid": true,
       "note": "Omega_b consistent; cannot discriminate TFPT vs Planck"
     },
     {
@@ -531,27 +717,30 @@
       "q_value": 0.11157768446310738,
       "discriminating": true,
       "replicated": false,
+      "observable_semantics_valid": true,
       "note": "candidate only: 1/2 broad matches but n=2 < 5 required periodic repeaters"
     },
     {
       "name": "FRB02_echo_ratio",
-      "score": 0.040479760119940145,
-      "status": "candidate",
+      "score": 0.0,
+      "status": "null",
       "p_value": null,
-      "q_value": 0.047976011994003,
+      "q_value": 1.0,
       "discriminating": true,
       "replicated": false,
-      "note": "kernel-ratio excess (BH q<0.05, single source): ['sqrt_lambda2_amp']"
+      "observable_semantics_valid": true,
+      "note": "theory channels null; no audit anomaly"
     },
     {
       "name": "FRB04_polarisation",
       "score": 0.0,
       "status": "null",
-      "p_value": 0.0004997501249375312,
-      "q_value": 0.0004997501249375312,
+      "p_value": 0.4865134865134865,
+      "q_value": 0.4865134865134865,
       "discriminating": true,
       "replicated": false,
-      "note": "eigs=[0.0943, 0.0398] vs kernel; CI_contains_kernel=False, null p=0.000"
+      "observable_semantics_valid": true,
+      "note": "eigs=[0.0563, 0.0224] vs kernel [0.0878, 0.0014]; CI_contains_kernel=False; overall null p=0.487 (worst null: block_shuffle)"
     },
     {
       "name": "FRB01_dispersion",
@@ -561,6 +750,7 @@
       "q_value": null,
       "discriminating": false,
       "replicated": false,
+      "observable_semantics_valid": true,
       "note": "raw_data_required: per-burst sub-band (nu, t) timing not available in catalogue data"
     }
   ],
@@ -568,10 +758,10 @@
     "verdict": "not_confirmed_not_refuted",
     "support_axes": [],
     "candidate_axes": [
-      "FRB03_activity_window",
-      "FRB02_echo_ratio"
+      "FRB03_activity_window"
     ],
     "null_axes": [
+      "FRB02_echo_ratio",
       "FRB04_polarisation"
     ],
     "consistency_axes": [

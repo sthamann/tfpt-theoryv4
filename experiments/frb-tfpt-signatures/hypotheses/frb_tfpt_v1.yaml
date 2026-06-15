@@ -51,13 +51,18 @@ targets:
     success: consistency_only_never_discriminating_vs_Planck
 
 language:
+  # NB: only `language.allowed` was updated after results came in (kernel + targets
+  # remain frozen); this is results-language, not a hypothesis change.
+  language_patch_after_results: true
   forbidden:
     - "FRBs confirm TFPT"
     - "FRBs show the boundary kernel"
     - "FRB 20180916B proves the recovery formula"
     - "the DM(z) measurement confirms TFPT Omega_b"
+    - "FRB.02 supports the recovery kernel"
   allowed:
     - "FRBs provide a preregistered search space for residual boundary-recovery signatures"
     - "FRB 20180916B is a single window candidate, not replicated"
-    - "FRB.02 is a clean null in the current data"
+    - "FRB.02 shows a single-source 8/27 audit anomaly on energy ratios; under correct observable semantics (amplitude = sqrt(E)) the theory channels are null and it fails q<0.01 and replication"
+    - "FRB.04 strong PA/RM Markov spectrum is null; RM eigenvalues near {2/3,1/3} motivate a separate v2 exploratory relaxation test"
     - "FRB.05 is consistent but not discriminating vs Planck"
