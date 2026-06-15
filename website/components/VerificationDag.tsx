@@ -321,6 +321,8 @@ const NODES: DagNode[] = [
       "v210_mark_local_dtn.py",
       "v214_seam_pillowcase.py",
       "v215_seam_deck_killtest.py",
+      "v216_marks_gauss_bonnet.py",
+      "v217_marks_emergence_scan.py",
     ],
   },
   {

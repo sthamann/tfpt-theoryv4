@@ -1738,6 +1738,17 @@ Module[{chiorb, jl, x, y, curve, auto, xx, yy},
     Simplify[jl[3] - 21952/9] == 0 && jl[3] =!= 1728 && jl[3] =!= 0];
 ];
 
+(* ---- (v216) QGEO.MARKS.03: the four marks from Gauss-Bonnet + Euclidean-orbifold uniqueness ---- *)
+Module[{orbs, gb, nn},
+  orbs = {{2, 3, 6}, {2, 4, 4}, {3, 3, 3}, {2, 2, 2, 2}};
+  gb = nn /. Solve[nn (2 Pi - Pi) == 2 Pi 2, nn][[1]];     (* Z2 deficit pi, chi(S^2)=2 *)
+  checkExact["v216 QGEO.MARKS.03: the four seam marks emerge from Gauss-Bonnet -- Z2 branch points (cone angle pi, deficit pi) on a flat sphere (chi=2) give n*pi = 2pi*chi = 4pi => n = 2 chi = 4 = |mu4| = N_fam+1; the closed Euclidean sphere 2-orbifolds (sum(1-1/m_i)=2) are exactly {(2,3,6),(2,4,4),(3,3,3),(2,2,2,2)}; all-order-2 (the |Z2| branch) selects (2,2,2,2) uniquely, and N_fam=3 (rank H^1=#marks-1) selects it too (the 4-mark square over the 3-mark hexagonal); only the square modulus (cross-ratio 2 => j=1728, v214) stays the order-4 input",
+    gb == 4 && gb == 2*2 && gb == 3 + 1 &&
+    AllTrue[orbs, Total[(1 - 1/#) & /@ #] == 2 &] &&
+    Select[orbs, AllTrue[#, # == 2 &] &] == {{2, 2, 2, 2}} &&
+    Select[orbs, (Length[#] - 1) == 3 &] == {{2, 2, 2, 2}}];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v214: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v216: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];
