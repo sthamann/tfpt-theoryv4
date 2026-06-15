@@ -148,10 +148,10 @@ tfpt_4_frontier,section,Baryon asymmetry $\eta_B$ --- a downstream readout from 
 tfpt_4_frontier,section,Proton/electron ratio $m_p/m_e$ --- a cross-sector ratio,169,204,v159_pyrate_gauge_crosscheck.py;v164_qcd_scale.py;v79_review_identities.py,e55f6430961c,2026-06-13
 tfpt_4_frontier,section,The Higgs quartic --- near-criticality from the free seam,205,243,v158_fixed_point_stable.py;v159_pyrate_gauge_crosscheck.py;v164_qcd_scale.py;v166_higgs_free_seam.py,7f638e3bebef,2026-06-13
 tfpt_4_frontier,section,"The Koide relation --- near $2/3$, computed exactly",244,384,v183_koide_f_corner_transfer.py;v25_frontier_conjectures.py;v37_plucker_anchor.py;v82_koide_attractor_splitting.py;v93_koide_relaxation_toy.py;v99_koide_flow_time.py,3f212b1b7495,2026-06-14
-tfpt_4_frontier,section,"Dark matter --- the candidate is fixed, the scale is pending",385,439,v185_axion_relic_solver.py;v25_frontier_conjectures.py,52d633ed172b,2026-06-14
-tfpt_4_frontier,section,Full quantum gravity --- induced from the boundary kernel,440,504,v113_quasifree_kernel.py;v165_premise_a_closure.py;v36_spectral_action_g2.py;v60_lambda_metrology_branch.py,ef43a4d7b76d,2026-06-13
-tfpt_4_frontier,section,Summary,505,533,,8e583589e877,2026-06-14
-tfpt_4_frontier,section,Appendix: computational verification,534,547,v28_gravity_fR.py;v36_spectral_action_g2.py;v7_gravity_cosmo.py,e0c58709c50b,2026-06-12
+tfpt_4_frontier,section,"Dark matter --- the candidate is fixed, the scale is pending",385,449,v185_axion_relic_solver.py;v25_frontier_conjectures.py,a943aa9eedf7,2026-06-15
+tfpt_4_frontier,section,Full quantum gravity --- induced from the boundary kernel,450,514,v113_quasifree_kernel.py;v165_premise_a_closure.py;v36_spectral_action_g2.py;v60_lambda_metrology_branch.py,ef43a4d7b76d,2026-06-13
+tfpt_4_frontier,section,Summary,515,543,,8e583589e877,2026-06-14
+tfpt_4_frontier,section,Appendix: computational verification,544,557,v28_gravity_fR.py;v36_spectral_action_g2.py;v7_gravity_cosmo.py,e0c58709c50b,2026-06-12
 tfpt_5_redteam,front,(front matter),1,77,,db47236985f9,2026-06-14
 tfpt_5_redteam,section,Method,78,86,,aa670d017bc0,2026-06-12
 tfpt_5_redteam,section,Target A --- the $(E8)_1$ boundary-net identification,87,112,,a2a8182c2254,2026-06-12
