@@ -108,6 +108,30 @@ Boundary Polarization*).
 > `verification/v201_seam_subprincipal_marks.py` and
 > `verification/v210_mark_local_dtn.py`, ledger `FORM.QGEO.01`).
 
+> **Theorem (Möbius uniformisation — the `QGEO.UNIFORM.01` normal form;
+> added 2026-06-15).** The constructive `UNIFORM` node of the QGEO proof
+> tree (v177): a genus-0 curve with four reduced marks and a faithful
+> order-4 clock rotating them is Möbius-equivalent to `(ℙ¹, μ₄)`.
+> Machine-proved (`TfptCarrier/MobiusUniformisation.lean`):
+>
+> * `rho_pow_four`, `rho_order_exactly_four`: the clock `ρ : z ↦ i z`
+>   satisfies `ρ⁴ = id` and `ρ² ≠ id` (order exactly 4);
+> * `sigma_invol`, `sigma_rho_sigma`: the reflection `σ : z ↦ 1/z` is an
+>   involution with `σρσ = ρ⁻¹` — so `⟨ρ, σ⟩` is the dihedral `D₄` of
+>   order 8 (the faithful `D₄` of v168);
+> * `orbit_scales_to_mu4`: a non-fixed point `a ≠ 0` has orbit
+>   `{a, ia, -a, -ia}`, scaling (`z ↦ z/a`) to `μ₄ = {1, i, -1, -i}`;
+> * `sigma_perm_mu4`: `σ` permutes `μ₄` (fixes `1, -1`, swaps `i, -i`);
+> * `mult_order_four_iff`: a multiplier map `z ↦ ζ z` has order exactly 4
+>   iff `ζ = i ∨ ζ = -i` — the canonical representative is `z ↦ i z`.
+>
+> The geometric half of the seam realisation is thus `[F]`, **given** the
+> four marks and the clock; the raw-seam marking obligation
+> `QGEO.MARKS.01` stays `[O]`. Bundled as `uniformisation_normal_form`
+> and signature-locked in `AuditContract.lean`. Formally verified:
+> `TFPT.Carrier.MobiusUniformisation.*` (mirrors
+> `verification/v177_seam_marking_kernel.py`, ledger `FORM.QGEO.02`).
+
 ## Why this is interesting
 
 * The carrier polynomial `6 Y² − Y − 1 = 0` is in earlier TFPT drafts

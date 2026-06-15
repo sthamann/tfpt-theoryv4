@@ -59,6 +59,8 @@ import TfptCarrier.BoundaryYukawaKernelInterface
 import TfptCarrier.SeamWindingInterface
 import TfptCarrier.CarrierData
 import TfptCarrier.Hypercharge
+import TfptCarrier.SeamDeckClosure
+import TfptCarrier.MobiusUniformisation
 
 namespace TFPT.Carrier.AuditContract
 
@@ -436,5 +438,49 @@ example : (TFPT.Carrier.Hypercharge.Y).trace = 0 :=
 example : (6 : ℚ) • (TFPT.Carrier.Hypercharge.Y * TFPT.Carrier.Hypercharge.Y)
             - TFPT.Carrier.Hypercharge.Y - 1 = 0 :=
   TFPT.Carrier.Hypercharge.Y_carrier_polynomial
+
+/-! ## QGEO seam-deck closure (the QGEO.SYM.01 conditional theorem; v201/v210) -/
+
+/-- 4th-root character orthogonality (the mark-sum kernel). -/
+example (ζ : ℂ) (h4 : ζ ^ 4 = 1) :
+    (∑ j ∈ Finset.range 4, ζ ^ j) = if ζ = 1 then 4 else 0 :=
+  TFPT.Carrier.SeamDeckClosure.geom_sum_fourth_root ζ h4
+
+/-- Mark-local ⇒ the clock connects only equal characters (`[ρ, M_f] = 0`). -/
+example {S : Finset ℤ} (h : TFPT.Carrier.SeamDeckClosure.MarkLocal S)
+    {n n' : ℤ} (hmem : (n - n') ∈ S) :
+    TFPT.Carrier.SeamDeckClosure.cls n = TFPT.Carrier.SeamDeckClosure.cls n' :=
+  TFPT.Carrier.SeamDeckClosure.markLocal_blockDiagonal h hmem
+
+/-- The conditional QGEO closure: given the seam-deck premise, the clock
+preserves the DtN at the character level (`ω∘ρ=ω`). -/
+example (P : TFPT.Carrier.SeamDeckClosure.SeamDeckPremise)
+    {n n' : ℤ} (h : (n - n') ∈ P.modes) :
+    TFPT.Carrier.SeamDeckClosure.cls n = TFPT.Carrier.SeamDeckClosure.cls n' :=
+  P.clock_invariant h
+
+/-! ## QGEO Möbius uniformisation (QGEO.UNIFORM.01 normal form; v177) -/
+
+/-- The clock `ρ : z ↦ i z` has order dividing 4. -/
+example (z : ℂ) :
+    TFPT.Carrier.MobiusUniformisation.rho
+      (TFPT.Carrier.MobiusUniformisation.rho
+        (TFPT.Carrier.MobiusUniformisation.rho
+          (TFPT.Carrier.MobiusUniformisation.rho z))) = z :=
+  TFPT.Carrier.MobiusUniformisation.rho_pow_four z
+
+/-- The dihedral relation `σρσ = ρ⁻¹` (so `⟨ρ,σ⟩ = D₄`). -/
+example (z : ℂ) :
+    TFPT.Carrier.MobiusUniformisation.sigma
+      (TFPT.Carrier.MobiusUniformisation.rho
+        (TFPT.Carrier.MobiusUniformisation.sigma z))
+      = TFPT.Carrier.MobiusUniformisation.rhoInv z :=
+  TFPT.Carrier.MobiusUniformisation.sigma_rho_sigma z
+
+/-- Order-4 multiplier classification: `z ↦ ζ z` has order exactly 4 iff
+`ζ = ±i`. -/
+example (ζ : ℂ) :
+    (ζ ^ 4 = 1 ∧ ζ ^ 2 ≠ 1) ↔ (ζ = Complex.I ∨ ζ = -Complex.I) :=
+  TFPT.Carrier.MobiusUniformisation.mult_order_four_iff ζ
 
 end TFPT.Carrier.AuditContract

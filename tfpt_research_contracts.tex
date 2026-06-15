@@ -159,7 +159,11 @@ of which \emph{four nodes are now closed constructively}: \textsc{Uniform} \mE\ 
 M\"obius map conjugates to $z\mapsto iz$, a non-fixed orbit scales to $\mu_4$, and
 $\sigma\rho\sigma=\rho^{-1}$ for $\sigma:z\mapsto1/z$ gives a faithful $D_4$ --- so a genus-$0$
 four-marked faithful-$D_4$ boundary \emph{is} $(\PP,\mu_4)$, strengthening \vref{v168}'s cross-ratio
-to the full uniformisation); \textsc{Cohom} \mE\ ($\rho^*\omega_k=i^k\omega_k$, grading
+to the full uniformisation --- and now \textbf{Lean-formalised} as \texttt{FORM.QGEO.02}:
+$\rho^4{=}\mathrm{id}$, $\rho^2{\neq}\mathrm{id}$, $\sigma^2{=}\mathrm{id}$,
+$\sigma\rho\sigma{=}\rho^{-1}$, the orbit scaling to $\mu_4$, the $\mu_4$ permutation, and the
+multiplier classification ``order-$4$ $\Leftrightarrow\zeta{=}\pm i$'' are machine-proved in
+\texttt{TfptCarrier/MobiusUniformisation.lean}, \textsc{audit: pass}); \textsc{Cohom} \mE\ ($\rho^*\omega_k=i^k\omega_k$, grading
 $(1,2,3)$); \textsc{Module} \mE\ (a \emph{unique} $\mu_4$-equivariant iso --- multiplicity-free $+$
 residue normalisation, reflection $\omega_1\!\leftrightarrow\!\omega_3$, $\omega_2$ fixed); and
 \textsc{Net} \mE\ (\vref{v154}/\vref{v175}). The residual is therefore \emph{exactly two} named

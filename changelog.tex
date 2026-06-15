@@ -59,6 +59,22 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-15 (Lean: QGEO.UNIFORM.01 geometric normal form machine-proved)}
+\begin{itemize}
+\item \textbf{The M\"obius uniformisation normal form is now Lean-formalised}
+  (\texttt{Mobius\allowbreak Uniformisation.lean}, ledger \texttt{FORM.QGEO.02}, \mO). A new module machine-proves the
+  constructive \textsc{Uniform} node of the QGEO proof tree (\texttt{v177}; \textsc{audit: pass}, no
+  \texttt{sorry}/\texttt{admit}, axioms \texttt{propext, Classical.choice, Quot.sound} only): the clock
+  $\rho:z\mapsto iz$ has $\rho^4{=}\mathrm{id}$ and $\rho^2{\neq}\mathrm{id}$ (order exactly $4$); the
+  reflection $\sigma:z\mapsto1/z$ is an involution with $\sigma\rho\sigma=\rho^{-1}$ (so $\langle\rho,\sigma
+  \rangle$ is the dihedral $D_4$ of order $8$); a non-fixed orbit $\{a,ia,-a,-ia\}$ scales to
+  $\mu_4=\{1,i,-1,-i\}$; $\sigma$ permutes $\mu_4$ (fixes $1,-1$, swaps $i,-i$); and the multiplier
+  classification ``$z\mapsto\zeta z$ has order exactly $4\Leftrightarrow\zeta=\pm i$''. Signature-locked in
+  \texttt{AuditContract.lean}. This formalises the geometric half of the seam realisation \emph{given} the
+  four marks and the clock; the raw-seam marking obligation \texttt{QGEO.MARKS.01} stays \mO, \emph{not}
+  closed.
+\end{itemize}
+
 \subsection*{2026-06-15 (Lean: the QGEO.SYM.01 conditional theorem machine-proved)}
 \begin{itemize}
 \item \textbf{The mark-local $\Rightarrow\omega\circ\rho=\omega$ implication is now Lean-formalised}

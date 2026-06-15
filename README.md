@@ -136,8 +136,13 @@ anchor (`1/G` is UV-sensitive, Sakharov-type induced gravity) — not a diffuse 
 
 ### Other directories
 
-- `experiments/lean4-carrier-rigidity/` — Lean 4 proof of the carrier algebra (P2: hypercharge,
-  anomaly-freedom, integer rigidity), machine-formalised `[F]`.
+- `experiments/lean4-carrier-rigidity/` — Lean 4 proofs, machine-formalised `[F]` (`AUDIT: PASS`,
+  no `sorry`/`admit`, only the three standard kernel axioms): the carrier algebra (P2: hypercharge,
+  anomaly-freedom, integer rigidity, Pascal/glue uniqueness) **and** the geometric/conditional cores of
+  the open `QGEO.SYM.01` premise — the Möbius uniformisation normal form `z↦iz` / `σρσ=ρ⁻¹` / orbit→`μ₄`
+  (`FORM.QGEO.02`, mirrors `v177`) and the conditional theorem *mark-local DtN ⇒ `ω∘ρ=ω`*
+  (`FORM.QGEO.01`, mirrors `v201`/`v210`). The *implication* is `[F]`; the seam-realisation *premise*
+  (`QGEO.SYM.01`) stays `[O]`, a typed target — not closed.
 - `experiments/` — research-level explorations (e.g. `eht-achromatic-residual`, discovery scripts).
 - `figures/` — generated PDFs used by the documents.
 - `website/` — the public Next.js mirror (papers, interactive verification DAG, in-browser

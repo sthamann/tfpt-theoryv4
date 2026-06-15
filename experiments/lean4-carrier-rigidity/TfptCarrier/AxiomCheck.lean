@@ -39,6 +39,7 @@ import TfptCarrier.CarrierData
 import TfptCarrier.Hypercharge
 import TfptCarrier.GlueUniqueness
 import TfptCarrier.SeamDeckClosure
+import TfptCarrier.MobiusUniformisation
 
 -- Layer 1: Polarization (algebraic core)
 #print axioms TFPT.Carrier.Polarization.sixY_carrier_polynomial
@@ -173,3 +174,11 @@ import TfptCarrier.SeamDeckClosure
 #print axioms TFPT.Carrier.SeamDeckClosure.mark_sum_residue_nonzero
 #print axioms TFPT.Carrier.SeamDeckClosure.markLocal_blockDiagonal
 #print axioms TFPT.Carrier.SeamDeckClosure.SeamDeckPremise.clock_invariant
+
+-- Möbius uniformisation (QGEO.UNIFORM.01 geometric normal form; v177)
+#print axioms TFPT.Carrier.MobiusUniformisation.rho_pow_four
+#print axioms TFPT.Carrier.MobiusUniformisation.sigma_rho_sigma
+#print axioms TFPT.Carrier.MobiusUniformisation.orbit_scales_to_mu4
+#print axioms TFPT.Carrier.MobiusUniformisation.sigma_perm_mu4
+#print axioms TFPT.Carrier.MobiusUniformisation.mult_order_four_iff
+#print axioms TFPT.Carrier.MobiusUniformisation.uniformisation_normal_form
