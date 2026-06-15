@@ -348,6 +348,15 @@ mark-local commutator stays $<10^{-10}$ as the truncation grows ($N\in\{16,32,64
 This \emph{numerically certifies the implication} ``mark-local DtN $\Rightarrow\omega\circ\rho=\omega$'' for
 real profiles; the premise that the physical seam \emph{is} mark-local stays \mO\ (it does not close
 \texttt{QGEO.SYM.01}).
+\par\smallskip\noindent\textbf{The implication is now Lean-formalised (\texttt{FORM.QGEO.01}).} The exact
+algebraic core --- the $4$th-root character orthogonality, the order-$4$ clock, and
+\texttt{markLocal\_blockDiagonal} ($f_{n-n'}\neq0\Rightarrow(n\equiv n'\bmod4)$, i.e.\ $[\rho,M_f]=0$) ---
+is machine-proved in the carrier-rigidity Lean project (\texttt{TfptCarrier/SeamDeckClosure.lean};
+\textsc{audit: pass}, axioms \texttt{propext, Classical.choice, Quot.sound} only). The premise itself is a
+typed \texttt{structure} \texttt{SeamDeckPremise} --- consumed, not proved, exactly as
+\texttt{CalderonProjector} encodes the Paper-1 analytic input --- so the conditional theorem
+``\texttt{SeamDeckPremise} $\Rightarrow\omega\circ\rho=\omega$'' is now \mE\ while
+\texttt{QGEO.SYM.01} stays the one open \mO\ postulate.
 \end{keybox}
 
 \begin{figure}[t]

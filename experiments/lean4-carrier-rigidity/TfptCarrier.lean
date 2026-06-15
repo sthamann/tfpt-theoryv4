@@ -52,6 +52,7 @@ import TfptCarrier.SeamWindingInterface
 import TfptCarrier.CarrierData
 import TfptCarrier.Hypercharge
 import TfptCarrier.GlueUniqueness
+import TfptCarrier.SeamDeckClosure
 import TfptCarrier.AnchorLadder
 import TfptCarrier.PascalLadder
 import TfptCarrier.Sanity

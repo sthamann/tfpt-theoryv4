@@ -59,6 +59,24 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-15 (Lean: the QGEO.SYM.01 conditional theorem machine-proved)}
+\begin{itemize}
+\item \textbf{The mark-local $\Rightarrow\omega\circ\rho=\omega$ implication is now Lean-formalised}
+  (\texttt{SeamDeckClosure.lean}, ledger \texttt{FORM.QGEO.01}, \mO). A new module in the
+  carrier-rigidity Lean project machine-proves the algebraic core of \texttt{v201}/\texttt{v210}
+  (\textsc{audit: pass}, no \texttt{sorry}/\texttt{admit}, no domain axioms --- \texttt{\#print axioms} $=$
+  \texttt{propext, Classical.choice, Quot.sound} only): (i) the $4$th-root character orthogonality
+  $\sum_{j<4}\zeta^j=(\text{if }\zeta{=}1\text{ then }4\text{ else }0)$ for $\zeta^4{=}1$ (so a $\mu_4$-mark
+  sum is supported only on modes $\equiv0\bmod4$); (ii) the clock generator $-i$ has order $4$;
+  (iii) \texttt{markLocal\_blockDiagonal}: a mark-local Toeplitz symbol connects only equal clock-characters,
+  $[\rho,M_f]=0$; (iv) the premise is a typed \texttt{structure} \texttt{SeamDeckPremise} (the physical seam
+  DtN \emph{is} mark-local) --- consumed, \emph{not} proved, exactly as \texttt{CalderonProjector} encodes the
+  Paper-1 analytic input; (v) \texttt{SeamDeckPremise.clock\_invariant}: \emph{given} the premise, the clock
+  commutes with the DtN, whence $\omega\circ\rho=\omega$. So the \emph{implication} is now \mE\ (formally
+  proved); the \emph{premise} (the physical seam being mark-local) stays \mO\ --- the one fundamental
+  seam-identification postulate, \emph{not} closed.
+\end{itemize}
+
 \subsection*{2026-06-15 (QGEO sharpening: mark-local DtN certified on realistic profiles)}
 \begin{itemize}
 \item \textbf{Mark-local DtN $\Rightarrow\omega\circ\rho=\omega$, certified on realistic Steklov profiles and

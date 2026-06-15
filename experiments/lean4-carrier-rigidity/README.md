@@ -77,6 +77,37 @@ Boundary Polarization*).
 > `verification/v89_carrier_index_lemma.py` and
 > `verification/v92_glue_uniqueness.py`, ledger `FORM.GLUE.01`).
 
+> **Theorem (Seam-deck closure — the `QGEO.SYM.01` conditional theorem;
+> added 2026-06-15).** The last open premise of TFPT, `QGEO.SYM.01`
+> ("the carrier μ₄ clock is the conformal deck of the seam"), reduces
+> (v201/v210) to: *the raw seam DtN sub-principal symbol is mark-local*
+> ⇒ *the carrier clock preserves the quasi-free state* (`ω∘ρ=ω`). This
+> module formalises that **implication**:
+>
+> * `geom_sum_fourth_root`: for `ζ : ℂ` with `ζ⁴ = 1`,
+>   `Σ_{j<4} ζ^j = if ζ = 1 then 4 else 0` (4th-root character
+>   orthogonality — the kernel that makes a μ₄-mark sum vanish off
+>   `mod 4`);
+> * `clock_gen_pow_four`, `mark_sum_residue_nonzero`: the clock
+>   generator `-i` has order 4 and the three non-trivial residues give a
+>   vanishing mark sum, so a μ₄-mark-sourced curvature is supported only
+>   on modes `≡ 0 (mod 4)`;
+> * `markLocal_blockDiagonal`: a mark-local Toeplitz symbol connects only
+>   equal clock-characters (`f_{n-n'} ≠ 0 ⇒ (n ≡ n' mod 4)`), i.e.
+>   `[ρ, M_f] = 0`;
+> * `SeamDeckPremise` (structure): the **physical premise** that the raw
+>   seam DtN is mark-local — a typed target consumed, *not* proved,
+>   exactly as `CalderonProjector` encodes the Paper-1 analytic input;
+> * `SeamDeckPremise.clock_invariant`: **given** the premise, the clock
+>   commutes with the DtN ⇒ the quasi-free state is invariant (`ω∘ρ=ω`).
+>
+> So the **implication** mark-local ⇒ `ω∘ρ=ω` is `[F]` (machine-proved);
+> the **premise** (the physical seam *is* mark-local) stays `[O]` — the
+> one fundamental seam-identification postulate, **not** closed here.
+> Formally verified: `TFPT.Carrier.SeamDeckClosure.*` (mirrors
+> `verification/v201_seam_subprincipal_marks.py` and
+> `verification/v210_mark_local_dtn.py`, ledger `FORM.QGEO.01`).
+
 ## Why this is interesting
 
 * The carrier polynomial `6 Y² − Y − 1 = 0` is in earlier TFPT drafts

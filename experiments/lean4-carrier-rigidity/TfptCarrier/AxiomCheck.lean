@@ -38,6 +38,7 @@ import TfptCarrier.SeamWindingInterface
 import TfptCarrier.CarrierData
 import TfptCarrier.Hypercharge
 import TfptCarrier.GlueUniqueness
+import TfptCarrier.SeamDeckClosure
 
 -- Layer 1: Polarization (algebraic core)
 #print axioms TFPT.Carrier.Polarization.sixY_carrier_polynomial
@@ -165,3 +166,10 @@ import TfptCarrier.GlueUniqueness
 #print axioms TFPT.Carrier.GlueUniqueness.unique_halfway_stage
 #print axioms TFPT.Carrier.GlueUniqueness.carrier_index_lemma
 #print axioms TFPT.Carrier.GlueUniqueness.glue_sectors_are_currents
+
+-- Seam-deck closure (QGEO.SYM.01 conditional theorem; v201/v210 algebraic core)
+#print axioms TFPT.Carrier.SeamDeckClosure.geom_sum_fourth_root
+#print axioms TFPT.Carrier.SeamDeckClosure.clock_gen_pow_four
+#print axioms TFPT.Carrier.SeamDeckClosure.mark_sum_residue_nonzero
+#print axioms TFPT.Carrier.SeamDeckClosure.markLocal_blockDiagonal
+#print axioms TFPT.Carrier.SeamDeckClosure.SeamDeckPremise.clock_invariant
