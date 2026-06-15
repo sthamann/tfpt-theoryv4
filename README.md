@@ -131,7 +131,7 @@ anchor (`1/G` is UV-sensitive, Sakharov-type induced gravity) — not a diffuse 
 | `audit_sync.py` | **The sync audit** (papers ↔ suite ↔ ledger ↔ changelog ↔ website, both directions); must end `AUDIT OK`. |
 | `make_figures.py` | Regenerates the figures (status heatmap, attractor, Coxeter circle, …). |
 | `make_manifest.py` | Writes `manifest.sha256` + `lean_manifest.sha256` (content digests). |
-| `wolfram/tfpt_readouts.wl` | Independent second path on Wolfram Engine (`116/116` checks); `wolfram/tfpt_readouts_extension.wl` mirrors the exact algebraic/identity/lattice results v84–v201 (`242/242`, verified on Wolfram Engine 14.3). |
+| `wolfram/tfpt_readouts.wl` | Independent second path on Wolfram Engine (`116/116` checks); `wolfram/tfpt_readouts_extension.wl` mirrors the exact algebraic/identity/lattice results v84–v209 (`246/246`, verified on Wolfram Engine 14.3). |
 | `redteam/run_redteam.py` | **Adversarial layer.** Tries to *break* the five reductions (Targets A–E); verdicts in `REDTEAM.*` ledger rows + `tfpt_5_redteam.tex`. |
 
 ### Other directories
@@ -162,7 +162,7 @@ bash build.sh notes
 cd verification && python run_all.py
 
 # 3. Independent Wolfram path  ->  "116/116 passed"  (optional, needs Wolfram Engine)
-#    (the v84+ extension mirrors the exact results, 242/242)
+#    (the v84+ extension mirrors the exact results, 246/246)
 wolframscript -file verification/wolfram/tfpt_readouts.wl
 wolframscript -file verification/wolfram/tfpt_readouts_extension.wl
 

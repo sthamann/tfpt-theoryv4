@@ -603,13 +603,17 @@
   "hash": "91763cc34337",
   "date": "2026-06-15"
  },
+ "tfpt_4_frontier::section::The muon anomalous magnetic moment --- a seam vertex readout::1": {
+  "hash": "fa4b8d3cdd1a",
+  "date": "2026-06-15"
+ },
  "tfpt_4_frontier::section::Full quantum gravity --- induced from the boundary kernel::1": {
-  "hash": "ef43a4d7b76d",
-  "date": "2026-06-13"
+  "hash": "ad014ae233bf",
+  "date": "2026-06-15"
  },
  "tfpt_4_frontier::section::Summary::1": {
-  "hash": "8e583589e877",
-  "date": "2026-06-14"
+  "hash": "86e88154ede7",
+  "date": "2026-06-15"
  },
  "tfpt_4_frontier::section::Appendix: computational verification::1": {
   "hash": "e0c58709c50b",
@@ -656,8 +660,8 @@
   "date": "2026-06-12"
  },
  "tfpt_horizon_readouts::section::Schwarzschild thermodynamics in four $\\cthree$-lines::1": {
-  "hash": "2901b05eeac3",
-  "date": "2026-06-12"
+  "hash": "3942edf793ad",
+  "date": "2026-06-15"
  },
  "tfpt_horizon_readouts::section::Page time and scrambling::1": {
   "hash": "1a6fdadc367d",
@@ -668,8 +672,8 @@
   "date": "2026-06-12"
  },
  "tfpt_horizon_readouts::section::The maximal black hole is the anchor: SdS in seam units::1": {
-  "hash": "0ee68eedc2dc",
-  "date": "2026-06-14"
+  "hash": "9e253ee0f345",
+  "date": "2026-06-15"
  },
  "tfpt_horizon_readouts::section::Turnaround radius, gravitational waves, light::1": {
   "hash": "5462b90a34b1",

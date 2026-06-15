@@ -1693,6 +1693,37 @@ Module[{c3, dtop},
     Simplify[dtop - 3/(256 Pi^4)] == 0];
 ];
 
+(* ---- (v204) FR.MUONG2.01: the muon seam-vertex value a_mu = 45/(524288 pi^9) ---- *)
+Module[{c3, dtop, Bgamma, delta2, amu},
+  c3 = 1/(8 Pi);
+  dtop = 48 c3^4;                                         (* = 3/(256 pi^4) *)
+  Bgamma = (3/2)(5/6);                                    (* carrier compression quotient = 5/4 *)
+  delta2 = Bgamma dtop^2;                                 (* second-order defect *)
+  amu = delta2/(2 Pi);                                    (* seam-loop projection *)
+  checkExact["v204 FR.MUONG2.01: the muon anomalous moment a_mu^seam = delta_2/(2 pi) with delta_2 = (B gamma) delta_top^2 = (5/4)(48 c3^4)^2 is the EXACT compiler number 45/(524288 pi^9) ~ 2.879e-9 (c3=1/8pi); delta_2 = 45/(262144 pi^8) = 4! * 120 * c3^8 (trace 2880 = 24 * 120 = 4! * 5!); the value is exact, the vertex projection is the [C] bridge",
+    Simplify[Bgamma - 5/4] == 0 && Simplify[dtop - 3/(256 Pi^4)] == 0 &&
+    Simplify[delta2 - 45/(262144 Pi^8)] == 0 && Simplify[amu - 45/(524288 Pi^9)] == 0 &&
+    Simplify[delta2 - 24*120*c3^8] == 0];
+];
+
+(* ---- (v205) GRAV.XI.01: xi = c3/phi_tree = 3/4, the independent gravitational 3/4 ---- *)
+Module[{c3, phitree},
+  c3 = 1/(8 Pi); phitree = 1/(6 Pi);
+  checkExact["v205 GRAV.XI.01: the torsion-compression factor xi = c3/phi_tree = (1/8pi)/(1/6pi) = 3/4 EXACTLY; the Einstein-limit reduction 8 pi c3^2 = c3 makes G an output (xi = c3/phi0); and 3/4 = 12 pi (c3/2) = ln(m/mu) = q(A3) (v152) -- the torsion-compression and the gapped EH replica are two independent appearances of the same gravitational 3/4",
+    Simplify[c3/phitree - 3/4] == 0 && Simplify[8 Pi c3^2 - c3] == 0 &&
+    Simplify[12 Pi (c3/2) - 3/4] == 0];
+];
+
+(* ---- (v208) HOR.BHTHERMO.01: scalaron Wald factor + modular 2 pi = 1/(4 c3) ---- *)
+Module[{c3, R, Ms, fR, A, G, M},
+  c3 = 1/(8 Pi);
+  fR = D[R + R^2/(6 Ms^2), R];                            (* f_R for the induced f(R) *)
+  checkExact["v208 HOR.BHTHERMO.01: the induced f(R)=R+R^2/(6 Ms^2) gives f_R = 1 + R/(3 Ms^2), so the Wald entropy S_W = (f_R A)/(4 G) = (A/4G)(1 + R_h/(3 Ms^2)) -- an exact scalaron correction to the area law; the modular beta 2 pi = 1/(4 c3) (T_H = kappa/2pi), and the leading area law S_BH = M^2/(2 c3) = 4 pi M^2 = A/(4 G)",
+    Simplify[fR - (1 + R/(3 Ms^2))] == 0 &&
+    Simplify[(fR A)/(4 G) - (A/(4 G))(1 + R/(3 Ms^2))] == 0 &&
+    Simplify[2 Pi - 1/(4 c3)] == 0 && Simplify[M^2/(2 c3) - 4 Pi M^2] == 0];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v203: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v209: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

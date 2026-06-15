@@ -650,10 +650,19 @@ export const papers: Paper[] = [
         ],
       },
       {
+        title: "The muon anomalous magnetic moment — a seam vertex readout",
+        body: "A [C] downstream readout (archive integration), not a compiler power. The carrier carries a second-order topological defect beyond the one that fixes α: δ₂ = Bγ·δ_top² = (5/4)δ_top² (δ_top = Ω_adm c₃⁴ = 48c₃⁴ = 3/(256π⁴); Bγ = (3/2)(5/6) = 5/4 the carrier compression quotient). Projected through the seam-loop phase 2π (the same 1/(2π) = 4c₃ unit that normalises c₃ itself), it reads as a magnetic vertex correction a_μ^seam = δ₂/(2π) = 45/(524288 π⁹) ≈ 2.879×10⁻⁹. The value is an exact compiler number (trace reading δ₂ = 4!·Tr_{S⁺}(X²)·c₃⁸, Tr = 120 = 5!) — but the identification of δ₂/(2π) as the anomalous moment is a physical bridge, so the prediction is [C]. Data, honestly: 0.81σ vs the dispersive Δa_μ = (2.49±0.48)×10⁻⁹; lattice/CMD-3 HVP shrinks the discrepancy (~1.5×10⁻⁹), where the fixed value then sits ~1.5σ high. A converged Δa_μ outside 2.879×10⁻⁹±0.5×10⁻⁹ excludes the seam-vertex mechanism (compiler core untouched).",
+        formulas: [
+          "a_\\mu^{\\mathrm{seam}} = \\frac{\\delta_2}{2\\pi} = \\frac{45}{524288\\,\\pi^9} \\approx 2.879\\times 10^{-9}",
+          "\\delta_2 = B\\gamma\\,\\delta_{\\mathrm{top}}^2 = \\tfrac54\\,\\delta_{\\mathrm{top}}^2 = 4!\\,\\mathrm{Tr}_{S^+}(X^2)\\,c_3^8",
+        ],
+      },
+      {
         title: "Full quantum gravity — induced from the seam",
-        body: "c₃ = 1/(8π) is the gravitational seam constant; the spectral action gives R + R² structurally (G2), and the closed admissible sector is gap-decoupled from the un-built ambient (G5, Decoupling Theorem). The ambient measure (G6) is holographically reduced to a finite seam-boundary measure — the strict-TOE completion target, no longer a bulk problem.",
+        body: "c₃ = 1/(8π) is the gravitational seam constant; the spectral action gives R + R² structurally (G2), and the closed admissible sector is gap-decoupled from the un-built ambient (G5, Decoupling Theorem). The ambient measure (G6) is holographically reduced to a finite seam-boundary measure — the strict-TOE completion target, no longer a bulk problem. Three archive-integration readouts sharpen the sector: (i) an INDEPENDENT gravitational 3/4 — the torsion-compression ratio ξ = c₃/φ_tree = 3/4 is exactly the q(A₃) = ln(m/μ) of the seam-determinant replica (v152), an over-determination; (ii) a quantitative Hubble value from the Λ branch, δ_Σ = Ω_adm e^{−2πα⁻¹/3} ≈ 1.085×10⁻¹²³ ⇒ H₀ = 66.5–67.1 km/s/Mpc (below Planck, far below SH0ES — the Hubble tension is NOT relieved), a [C] readout (imported Ω_b, ω_DM); (iii) a second, [P] continuum route — an FRG truncation with torsion has a non-Gaussian UV fixed point (y² = 16c₃² = 1/(4π²) fixed), a plausibility cross-check, not load-bearing, the seam-net staying primary.",
         formulas: [
           "2\\|V_{\\mathrm{metric}}\\| = 0.785 < \\Delta = 6\\log\\tfrac{3}{2} = 2.433, \\qquad \\Delta_{\\mathrm{eff}} = 1.648 > 0",
+          "\\xi = \\frac{c_3}{\\varphi_{\\mathrm{tree}}} = \\frac34 = q(A_3) = \\ln\\tfrac{m}{\\mu}, \\qquad H_0 = 66.5\\text{–}67.1\\ \\mathrm{km\\,s^{-1}\\,Mpc^{-1}}",
           "M_{\\mathrm{scal}}^2/\\bar M_{\\mathrm{Pl}}^2 = c_3^7, \\qquad M_{\\mathrm{scal}} = 3.06\\times 10^{13}\\,\\text{GeV}",
         ],
       },
@@ -684,6 +693,7 @@ export const papers: Paper[] = [
       { label: "η_B", value: "6.1×10⁻¹⁰", description: "Downstream readout from Ω_b h² [C]" },
       { label: "Koide Q", value: "0.664", description: "0.33% below 2/3 = |ℤ₂|/N_fam [C]" },
       { label: "m_a", value: "≈ 23.8 µeV", description: "Axion candidate; f_a = M_scal/128 [C]" },
+      { label: "muon a_μ", value: "2.879×10⁻⁹", description: "Seam vertex δ₂/(2π); 0.81σ dispersive [C]" },
       { label: "m_p/m_e", value: "open [O]", description: "Cross-sector ratio, not a compiler power" },
     ],
   },
@@ -789,9 +799,10 @@ export const papers: Paper[] = [
       },
       {
         title: "Schwarzschild thermodynamics in four c₃-lines",
-        body: "Temperature, entropy, power and lifetime all read off c₃, with the Hawking power denominator carrying the compiler fingerprint 1920 = |W(D₅)| (the Weyl group order of D₅).",
+        body: "Temperature, entropy, power and lifetime all read off c₃, with the Hawking power denominator carrying the compiler fingerprint 1920 = |W(D₅)| (the Weyl group order of D₅). The temperature is not put in by hand: the stationary exterior modular flow Δ^{it} = e^{−2πtK_H} (Bisognano–Wichmann / Tomita–Takesaki) makes the outside state KMS at inverse temperature 2π, so T_H = κ/(2π) — and that 2π is the seam unit 1/(4c₃), reproducing T_H = c₃/M (the seam = horizon modular identification ties to [ρ,Λ_Σ] = 0). The induced R + R² scalaron then corrects the area law to the Wald entropy S_W = (A/4G)(1 + R_h/3M_s²), an exact consequence of f(R) = R + R²/(6M_s²); the leading A/4G is the c₃ area law (1/4 = 1/|μ₄|). [E] for the identities; the black-hole/modular identification is [C].",
         formulas: [
           "T_H = \\frac{c_3}{M}, \\quad S_{BH} = \\frac{M^2}{2c_3}, \\quad P_H = \\frac{c_3}{1920\\,M^2}, \\quad \\tau_{\\mathrm{evap}} = \\frac{640}{c_3}M^3",
+          "T_H = \\frac{\\kappa}{2\\pi}, \\quad 2\\pi = \\frac{1}{4c_3}, \\qquad S_W = \\frac{A}{4G}\\Bigl(1 + \\frac{R_h}{3M_s^2}\\Bigr)",
           "1920 = |W(D_5)|",
         ],
       },
@@ -805,7 +816,7 @@ export const papers: Paper[] = [
       },
       {
         title: "De Sitter, Nariai and cosmic birefringence",
-        body: "The de Sitter entropy and the cosmic-birefringence angle are the same seam readouts; v_GW = c follows with no measurable dispersion.",
+        body: "The de Sitter entropy and the cosmic-birefringence angle are the same seam readouts; v_GW = c follows with no measurable dispersion. The defect reading of the black-hole interior: in compiler units it is not a curvature blow-up but the seam attractor — the same gapped transport whose sub-leading eigenvalue is λ₂ = (2/3)⁶ drives φ → φ_⋆ (dφ/dt = 0), so 'ρ → ∞' is replaced by a fixed point; information returns through the same Page-recovery channel; and the end state is a holographic Planck-scale floor (S_BH = A/4, one cell per |μ₄| = 4 Planck areas), not a point. A [C] structural reading — the old RN/torsion-charge metric is not resurrected, it is superseded by the Nariai/seam = horizon anchor.",
         formulas: [
           "S_{dS} = \\frac{e^{2\\alpha^{-1}}}{128\\,c_3^4} = 32\\pi^4 e^{2\\alpha^{-1}} \\approx 3.32\\times 10^{122}",
           "\\beta_{\\mathrm{rad}} = \\frac{\\varphi_0}{4\\pi} \\approx 0.2424^\\circ, \\qquad v_{\\mathrm{GW}} = c",

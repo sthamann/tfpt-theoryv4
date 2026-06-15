@@ -129,6 +129,20 @@ PBH evaporating now ($1.7\times10^{11}$ kg) & $k_BT\approx61$ MeV & relevant for
 \end{tabularx}
 \end{center}
 
+\par\smallskip\noindent\textbf{The temperature is modular; the entropy carries the scalaron.}
+\veri{v208\_bh\_\allowbreak thermodynamics.py} The Hawking factor is not put in by hand: the stationary exterior
+modular flow $\Delta^{it}=e^{-2\pi t K_H}$ (Bisognano--Wichmann / Tomita--Takesaki) makes the outside state
+KMS at inverse temperature $2\pi$, so $T_H=\kappa/(2\pi)$ --- and that $2\pi$ \emph{is} the seam unit
+$1/(4\cthree)$, reproducing $T_H=\cthree/M$ above (the seam$=$horizon modular identification ties to
+$[\rho,\Lambda_\Sigma]=0$, \veri{v198\_\allowbreak modular\_\allowbreak commutator\_\allowbreak reduction.py}).
+The induced $R+R^2$ scalaron then
+corrects the area law to the Wald entropy
+\[
+  S_W=\frac{f_R\,A}{4G}=\frac{A}{4G}\Bigl(1+\frac{R_h}{3M_s^2}\Bigr),\qquad M_s=\cthree^{7/2}\Mbar,
+\]
+an \emph{exact} consequence of $f(R)=R+R^2/(6M_s^2)$ (\veri{v28\_gravity\_fR.py}); the leading $A/4G$ is the
+$\cthree$ area law ($1/4=1/|\mu_4|$). \mE\ for the identities; the black-hole/modular identification is \mC.
+
 % =====================================================================
 \section{Page time and scrambling}
 % =====================================================================
@@ -170,6 +184,16 @@ the absolute gravitational-capacity limit, not an observed structure.
 The Nariai limit is not just a capacity number --- written in compiler units, the entire
 Schwarzschild--de~Sitter (SdS) family lands on atoms that are already load-bearing elsewhere in TFPT,
 with no adjustable parameter on either side. \mE\ \veri{v101\_horizon\_anchor.py}
+
+\par\smallskip\noindent\textbf{The defect reading: no singularity, a seam fixed point
+(\veri{v209\_bh\_regular\_core.py}).} In compiler units the interior is \emph{not} a curvature blow-up but
+the seam attractor: the same gapped transport whose sub-leading eigenvalue is $\lambda_2=(2/3)^6$
+(\veri{v56\_unique\_attractor.py}) drives $\varphi\to\varphi_\star$ ($\mathrm d\varphi/\mathrm dt=0$), so
+``$\rho\to\infty$'' is replaced by a fixed point; information returns through the same Page-recovery channel
+($\lambda_2$ per step, \veri{v54\_seam\_horizon\_keystones.py}); and the end state is a holographic
+Planck-scale floor ($S_{BH}=A/4$, one cell per $|\mu_4|=4$ Planck areas), not a point. \emph{Honest:} a \mC\
+structural reading --- the old RN/torsion-charge metric is \emph{not} resurrected, it is superseded by the
+Nariai/seam$=$horizon anchor here.
 
 \TFPTmotif
 
