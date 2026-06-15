@@ -445,7 +445,7 @@ export const predictions: Prediction[] = [
     ],
     pdf: "/papers/tfpt_4_frontier.pdf",
     description:
-      "A downstream cosmological readout from the closed Ω_b h² (observed 6.1×10⁻¹⁰). As a fundamental compiler power it is not closed — the leptogenesis Boltzmann solve is an interface. An anchored-Boltzmann attempt (v184) was tested honestly: the washout anchors plausibly (m̃₁ = m_3/A_Λ ≈ 5 meV, A_Λ = 10), but M₁ = M_R·φ₀⁴ only relocates the free input (M_R is the seesaw scale ~v²/m_3, not a compiler power), so η_B stays a sharper scenario, not a derivation.",
+      "A downstream cosmological readout from the closed Ω_b h² (observed 6.1×10⁻¹⁰). As a fundamental compiler power it is not closed — the leptogenesis Boltzmann solve is an interface. An anchored-Boltzmann attempt (v184) was tested honestly: the washout anchors plausibly (m̃₁ = m_3/A_Λ ≈ 5 meV, A_Λ = 10), but M₁ = M_R·φ₀⁴ only relocates the free input (M_R is the seesaw scale ~v²/m_3, not a compiler power), so η_B stays a sharper scenario, not a derivation. A cleaner branch (v212, FR.ETAB.04) drops the seesaw scale entirely: both Boltzmann inputs share the decuple A_Λ = 10 = |E(K₅)|, M₁ = M_scal·φ₀²/A_Λ ≈ 8.65×10⁹ GeV and m̃₁ = m_3/A_Λ ≈ 5 meV — so M₁ uses only {M_scal, φ₀, A_Λ} (no hidden seesaw scale) and lands in the thermal window where η_B ≈ 1.2×10⁻⁹ brackets 6.1×10⁻¹⁰; still [C] (the coupling mechanism is posited, not derived).",
     category: "Cosmology",
   },
   {
@@ -528,7 +528,7 @@ export const predictions: Prediction[] = [
     ],
     pdf: "/papers/tfpt_4_frontier.pdf",
     description:
-      "The candidate is the determinant-line axion of the strong-CP sector (WIMPs ruled out — no spare E₈ singlet). The misalignment angle is closed; f_a = M_scal/128 is a conjecture. A misalignment estimate (v185) and a converged full finite-T solve (experiments/ftransfer/axion_relic) decide it: at the predicted θ_i ≈ 170° hilltop the relic is Ω_a h² ≈ 0.66 — ~5.5× above Ω_DM h² = 0.12 (the observed value needs θ_i ≈ 106°). So as the dominant DM it OVER-closes the universe unless there is extra dilution or a lower f_a — a confirmed tension. A scenario, not a sharp prediction.",
+      "The candidate is the determinant-line axion of the strong-CP sector (WIMPs ruled out — no spare E₈ singlet). The misalignment angle is closed; f_a = M_scal/128 is a conjecture. A misalignment estimate (v185) and a converged full finite-T solve (experiments/ftransfer/axion_relic) decide it: at the predicted θ_i ≈ 170° hilltop the relic is Ω_a h² ≈ 0.66 — ~5.5× above Ω_DM h² = 0.12 (the observed value needs θ_i ≈ 106°). So as the dominant DM it OVER-closes the universe unless there is extra dilution or a lower f_a — a confirmed tension. A more robust branch (v211, DM.AXION.SPINE.01) is the spine angle θ_i = π·N_fam/g_car = 3π/5 = 108° (the central spine quotient, no fit): the same solver reaches Ω_DM at ≈106°, and 108° sits there in the MILD-anharmonic regime — 62° below the hilltop, so NOT exponentially sensitive, a far more robust landing. It is an alternative ansatz to the 170° seam value (mutually exclusive, the full solver decides); a converged Ω_a h² outside ~[0.08, 0.16] demotes it. A scenario, not a sharp prediction.",
     category: "Astrophysics",
   },
   {
