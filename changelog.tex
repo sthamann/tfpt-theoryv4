@@ -59,6 +59,26 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-15 (the diamond axis geometry --- two axes + the transfer corner)}
+\begin{itemize}
+\item \textbf{The Sheet Diamond is a discrete geometry with two axes
+  (\texttt{v218\_diamond\_axis\_geometry}, \texttt{tfpt\_2\_standard\_model}, \mE).} Sharpens
+  \texttt{v94}/\texttt{v95} with three exact \mE\ lemmas (no new numbers). \textbf{(1) Axis curvature:}
+  along the centered cross the determinant is linear on the winding axis $\det(C{+}xU)=14{+}6x$ (slope
+  $6{=}|R^+(A_3)|$) and quadratic on the sheet axis $\det(C{+}yV)=14{+}14y{+}4y^2$ (2nd difference
+  $8{=}\mathrm{rank}\,E_8$); the anchor block has $\det B(C{+}xU)=2\det(C{+}xU)$ and sheet curvature
+  $6{=}|R^+(A_3)|$ --- two curvatures $(8,6)=(\mathrm{rank}\,E_8,|R^+(A_3)|)$. \textbf{(2) Pl\"ucker
+  transfer ladder:} $\mathrm{Pl}(K)\to\mathrm{Pl}(C)\to\mathrm{Pl}(F)$ lifts in steps
+  $(1,8,10)=(N_\Phi,\mathrm{rank}\,E_8,A_\Lambda)$ then $(1,8,16)=(N_\Phi,\mathrm{rank}\,E_8,\dim S^+)$ ---
+  the decuple then the full generation (identity \mE, source$\to$pole reading \mC). \textbf{(3) Spectral
+  ramification:} for $Q,K,C,F$ the cubic discriminant factors as $q(r)^2\,\mathrm{Disc}(q)$ with squares
+  $(1,3,4,6)$ and kernels $(13,48,65,105)$, $F$ carrying $105=3{\cdot}5{\cdot}7$. The anchor-defect
+  spectrum and pair-sum/staircase blocks are honest \emph{audit} fingerprints ($28{=}2\dim G_2$,
+  $52{=}\dim F_4$ stay audit-only, not spine, as in \texttt{v94}/\texttt{v95}); $F$ as the
+  transfer-completion corner is a \emph{heuristic}, not a hard filter. Ledger \texttt{DIAMOND.AXIS.01},
+  \texttt{DIAMOND.PLUCKER.01}, \texttt{DIAMOND.SPECTRAL.01}; Wolfram-mirrored ($249/249$).
+\end{itemize}
+
 \subsection*{2026-06-15 (QGEO: the four marks emerge from Gauss--Bonnet --- K1 executed)}
 \begin{itemize}
 \item \textbf{The four marks emerge from Gauss--Bonnet --- count derived, not assumed

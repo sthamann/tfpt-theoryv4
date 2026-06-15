@@ -1749,6 +1749,35 @@ Module[{orbs, gb, nn},
     Select[orbs, (Length[#] - 1) == 3 &] == {{2, 2, 2, 2}}];
 ];
 
+(* ---- (v218) DIAMOND.AXIS/PLUCKER/SPECTRAL.01: the diamond axis geometry ---- *)
+Module[{R, Q, a, one, Cc, U, V, K, L, F, anc, plL, ram, x, y, dU, dV, bU, bV, sd, bsd, sq, ker},
+  R = {{1, 3, 0}, {1, 5, 2}, {2, 5, 3}}; Q = {{3, 1, 0}, {3, 2, 0}, {3, 2, 1}};
+  one = {1, 1, 1}; a = {1, 1, 2};
+  Cc = R + Q.DiagonalMatrix[{1, 0, 0}];                   (* center C = M(1,0) (v95) *)
+  U = Q.DiagonalMatrix[{1, 0, 0}]; V = Q.DiagonalMatrix[{0, 1, 1}];  (* winding / sheet axes *)
+  K = Cc - V; L = Cc + U; F = Cc + V;
+  anc[M_] := {{one.M.one, one.M.a}, {a.M.one, a.M.a}};    (* anchor block B_M *)
+  plL[M_] := With[{blk = {one.M, a.M}},
+    {Det[blk[[All, {1, 2}]]], Det[blk[[All, {1, 3}]]], Det[blk[[All, {2, 3}]]]}];
+  ram[M_] := Module[{t, p, rr, q},                        (* (|q(r)|, Disc(q)) of chi_M = (t-r)q *)
+    p = Det[t IdentityMatrix[3] - M];
+    rr = First[Cases[t /. Solve[p == 0, t], _Integer]];
+    q = Cancel[p/(t - rr)]; {Abs[q /. t -> rr], Discriminant[q, t]}];
+  dU = Expand[Det[Cc + x U]]; dV = Expand[Det[Cc + y V]];
+  bU = Expand[Det[anc[Cc + x U]]]; bV = Expand[Det[anc[Cc + y V]]];
+  sd = Det[Cc + V] - 2 Det[Cc] + Det[Cc - V];             (* sheet det 2nd difference *)
+  bsd = Det[anc[Cc + V]] - 2 Det[anc[Cc]] + Det[anc[Cc - V]];
+  sq = {ram[Q][[1]], ram[K][[1]], ram[Cc][[1]], ram[F][[1]]};
+  ker = {ram[Q][[2]], ram[K][[2]], ram[Cc][[2]], ram[F][[2]]};
+  checkExact["v218 DIAMOND.AXIS/PLUCKER/SPECTRAL.01: the Sheet Diamond (v94) is a discrete geometry with two axes around the centered cross (v95: C center, U winding, V sheet); F is the transfer completion. (1) AXIS CURVATURE: det(C+xU)=14+6x is LINEAR (winding flat, slope 6=|R^+(A3)|), det(C+yV)=14+14y+4y^2 is QUADRATIC with 2nd difference 8=rank E8; det B(C+xU)=2 det(C+xU); the anchor-block sheet 2nd difference is 6=|R^+(A3)| -- two curvatures (8 det, 6 anchor)=(rank E8, |R^+(A3)|). (2) PLUCKER TRANSFER LADDER: Pl(K)=(-1,6,4)->Pl(C)=(0,14,14)->Pl(F)=(1,22,30), steps (1,8,10)=(N_Phi,rank E8,A_Lambda) and (1,8,16)=(N_Phi,rank E8,dim S+) -- decuple 10 then full generation 16. (3) SPECTRAL RAMIFICATION: for Q,K,C,F the cubic discriminant factors as q(r)^2 Disc(q); squares |q(r)|={1,3,4,6}=(N_Phi,N_fam,|mu4|,|R^+(A3)|), kernels Disc(q)={13,48,65,105}=(Delta_Q,Omega_adm,g_car Delta_Q,N_fam g_car 7), F carries 105=3*5*7. NO new numbers -- it organises the existing operators; the G2/F4 pair-sum labels stay audit-only and F=transfer-corner stays a heuristic (Python-only audit blocks)",
+    dU == 6 x + 14 && dV == 4 y^2 + 14 y + 14 &&
+    Expand[bU - 2 dU] == 0 && bV == 3 y^2 + 21 y + 28 &&
+    sd == 8 && bsd == 6 &&
+    plL[K] == {-1, 6, 4} && plL[Cc] == {0, 14, 14} && plL[F] == {1, 22, 30} &&
+    (plL[Cc] - plL[K]) == {1, 8, 10} && (plL[F] - plL[Cc]) == {1, 8, 16} &&
+    sq == {1, 3, 4, 6} && ker == {13, 48, 65, 105}];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v216: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v218: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];
