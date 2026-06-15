@@ -12,8 +12,8 @@
   "date": "2026-06-12"
  },
  "introduction::subsection::Sharper still: one anchor $a=(1,1,2)$, and $E_8$ as a compiler hull \\texorpdfstring{(\\mE)}{}::1": {
-  "hash": "a0dd630b345d",
-  "date": "2026-06-14"
+  "hash": "4f5fadc9069e",
+  "date": "2026-06-15"
  },
  "introduction::subsection::The companion documents::1": {
   "hash": "cb43f67f0b4b",
@@ -32,8 +32,8 @@
   "date": "2026-06-12"
  },
  "introduction::subsection::The hard reduction: two research gates plus typed interfaces::1": {
-  "hash": "3a500282b14e",
-  "date": "2026-06-14"
+  "hash": "601bfa2af58e",
+  "date": "2026-06-15"
  },
  "introduction::section::The compiler: why $30=2\\cdot3\\cdot5$::1": {
   "hash": "0827633d0220",
@@ -608,7 +608,7 @@
   "date": "2026-06-15"
  },
  "tfpt_4_frontier::section::Full quantum gravity --- induced from the boundary kernel::1": {
-  "hash": "ad014ae233bf",
+  "hash": "8781a441a542",
   "date": "2026-06-15"
  },
  "tfpt_4_frontier::section::Summary::1": {
@@ -648,8 +648,8 @@
   "date": "2026-06-12"
  },
  "tfpt_5_redteam::section::Outcome::1": {
-  "hash": "5b2c1e8419b7",
-  "date": "2026-06-14"
+  "hash": "2c2de67b10dc",
+  "date": "2026-06-15"
  },
  "tfpt_horizon_readouts::front::(front matter)::1": {
   "hash": "091987bff9bb",
@@ -752,7 +752,7 @@
   "date": "2026-06-12"
  },
  "origin_theory::section::Honest status::1": {
-  "hash": "338593825589",
+  "hash": "4cf0e7e396c3",
   "date": "2026-06-15"
  },
  "origin_theory::section::Appendix: computational verification::1": {

@@ -104,7 +104,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     term: "G_net",
     alias: ["G_net", "(G_metric)", "G_metric", "ambient measure", "quantum-gravity measure", "seam-net inclusion"],
     short:
-      "The metric-sector interface (historically labelled G_metric): R + R² is heat-kernel grounded (G2) and gap-decoupled (G5); the closing statement is the index-4 μ₄ seam-net inclusion ⇒ holomorphic (E₈)₁. Net existence and full-cone reflection positivity are discharged to [E] (v175); the residual is then reduced (v176–v181) to a single definitional premise QGEO.SYM.01 — the carrier μ₄ clock is the conformal deck of the seam — which is bedrock, not reducible further without relabeling. Full QG closure is a certification layer, not a prerequisite for testing the readouts [C]/[O].",
+      "The metric-sector interface (historically labelled G_metric): R + R² is heat-kernel grounded (G2) and gap-decoupled (G5); the closing statement is the index-4 μ₄ seam-net inclusion ⇒ holomorphic (E₈)₁. Net existence and full-cone reflection positivity are discharged to [E] (v175); the residual is then reduced (v176–v181) to a single definitional premise QGEO.SYM.01 — the carrier μ₄ clock is the conformal deck of the seam — which is bedrock, not reducible further without relabeling. The deduction below the premise is now machine-checked: the geometric normal form (UNIFORM: z↦iz, σρσ=ρ⁻¹, orbit→μ₄, multiplier order-4 ⇔ ζ=±i; FORM.QGEO.02) and the conditional implication mark-local ⇒ ω∘ρ=ω (FORM.QGEO.01) are Lean-formalised (AUDIT: PASS, only the three standard kernel axioms), so QGEO.SYM.01 itself stays the one [O] postulate. Full QG closure is a certification layer, not a prerequisite for testing the readouts [C]/[O].",
   },
   {
     term: "F_transfer",
