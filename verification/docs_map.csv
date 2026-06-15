@@ -145,15 +145,15 @@ tfpt_3_e8_audit_bootstrap,section,The $E_8$-slice scan: results (honest hit / mi
 tfpt_3_e8_audit_bootstrap,section,Following the $SU(9)$ lead: cross-slice consistency,1263,1300,,6527de5ba23c,2026-06-12
 tfpt_3_e8_audit_bootstrap,section,Appendix: computational verification,1301,1316,v1_e8_glue.py;v4_flavor_matrix.py;v5_e8_cascade.py;v6_bootstrap.py,b08c71e486fc,2026-06-12
 tfpt_4_frontier,front,(front matter),1,96,v187_ftransfer_laws.py;v188_frontier_wording_guard.py;v35_quark_qcd_boundary.py,0795bf898e96,2026-06-14
-tfpt_4_frontier,section,Baryon asymmetry $\eta_B$ --- a downstream readout from the closed $\Omega_b h^2$,97,168,v169_etaB_boltzmann_interface.py;v184_etaB_anchored_boltzmann.py,80bd7344449d,2026-06-14
-tfpt_4_frontier,section,Proton/electron ratio $m_p/m_e$ --- a cross-sector ratio,169,204,v159_pyrate_gauge_crosscheck.py;v164_qcd_scale.py;v79_review_identities.py,e55f6430961c,2026-06-13
-tfpt_4_frontier,section,The Higgs quartic --- near-criticality from the free seam,205,243,v158_fixed_point_stable.py;v159_pyrate_gauge_crosscheck.py;v164_qcd_scale.py;v166_higgs_free_seam.py,7f638e3bebef,2026-06-13
-tfpt_4_frontier,section,"The Koide relation --- near $2/3$, computed exactly",244,384,v183_koide_f_corner_transfer.py;v25_frontier_conjectures.py;v37_plucker_anchor.py;v82_koide_attractor_splitting.py;v93_koide_relaxation_toy.py;v99_koide_flow_time.py,3f212b1b7495,2026-06-14
-tfpt_4_frontier,section,"Dark matter --- the candidate is fixed, the scale is pending",385,464,v185_axion_relic_solver.py;v25_frontier_conjectures.py,91763cc34337,2026-06-15
-tfpt_4_frontier,section,The muon anomalous magnetic moment --- a seam vertex readout,465,489,v204_muon_seam_g2.py;v51_boundary_half_step.py,fa4b8d3cdd1a,2026-06-15
-tfpt_4_frontier,section,Full quantum gravity --- induced from the boundary kernel,490,591,v113_quasifree_kernel.py;v152_norm_is_anchor.py;v165_premise_a_closure.py;v177_seam_marking_kernel.py;v205_xi_threequarter.py;v206_h0_lambda_branch.py;v207_asymptotic_safety.py;v210_mark_local_dtn.py;v36_spectral_action_g2.py;v60_lambda_metrology_branch.py,8781a441a542,2026-06-15
-tfpt_4_frontier,section,Summary,592,621,,86e88154ede7,2026-06-15
-tfpt_4_frontier,section,Appendix: computational verification,622,635,v28_gravity_fR.py;v36_spectral_action_g2.py;v7_gravity_cosmo.py,e0c58709c50b,2026-06-12
+tfpt_4_frontier,section,Baryon asymmetry $\eta_B$ --- a downstream readout from the closed $\Omega_b h^2$,97,184,v169_etaB_boltzmann_interface.py;v184_etaB_anchored_boltzmann.py;v212_leptogenesis_decuple.py,afc91cdeb72c,2026-06-15
+tfpt_4_frontier,section,Proton/electron ratio $m_p/m_e$ --- a cross-sector ratio,185,220,v159_pyrate_gauge_crosscheck.py;v164_qcd_scale.py;v79_review_identities.py,e55f6430961c,2026-06-13
+tfpt_4_frontier,section,The Higgs quartic --- near-criticality from the free seam,221,259,v158_fixed_point_stable.py;v159_pyrate_gauge_crosscheck.py;v164_qcd_scale.py;v166_higgs_free_seam.py,7f638e3bebef,2026-06-13
+tfpt_4_frontier,section,"The Koide relation --- near $2/3$, computed exactly",260,400,v183_koide_f_corner_transfer.py;v25_frontier_conjectures.py;v37_plucker_anchor.py;v82_koide_attractor_splitting.py;v93_koide_relaxation_toy.py;v99_koide_flow_time.py,3f212b1b7495,2026-06-14
+tfpt_4_frontier,section,"Dark matter --- the candidate is fixed, the scale is pending",401,491,v185_axion_relic_solver.py;v211_axion_spine_angle.py;v25_frontier_conjectures.py,17061b526d1c,2026-06-15
+tfpt_4_frontier,section,The muon anomalous magnetic moment --- a seam vertex readout,492,516,v204_muon_seam_g2.py;v51_boundary_half_step.py,fa4b8d3cdd1a,2026-06-15
+tfpt_4_frontier,section,Full quantum gravity --- induced from the boundary kernel,517,618,v113_quasifree_kernel.py;v152_norm_is_anchor.py;v165_premise_a_closure.py;v177_seam_marking_kernel.py;v205_xi_threequarter.py;v206_h0_lambda_branch.py;v207_asymptotic_safety.py;v210_mark_local_dtn.py;v36_spectral_action_g2.py;v60_lambda_metrology_branch.py,8781a441a542,2026-06-15
+tfpt_4_frontier,section,Summary,619,648,,6580fbe649b5,2026-06-15
+tfpt_4_frontier,section,Appendix: computational verification,649,662,v28_gravity_fR.py;v36_spectral_action_g2.py;v7_gravity_cosmo.py,e0c58709c50b,2026-06-12
 tfpt_5_redteam,front,(front matter),1,77,,db47236985f9,2026-06-14
 tfpt_5_redteam,section,Method,78,86,,aa670d017bc0,2026-06-12
 tfpt_5_redteam,section,Target A --- the $(E8)_1$ boundary-net identification,87,112,,a2a8182c2254,2026-06-12

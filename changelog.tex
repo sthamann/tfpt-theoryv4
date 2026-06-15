@@ -59,6 +59,26 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-15 (frontier: two sharper [C] scenario branches --- axion angle + leptogenesis)}
+\begin{itemize}
+\item \textbf{Axion DM spine-angle branch $\theta_i=\pi\Nfam/\gcar=3\pi/5$ (\texttt{v211\_axion\_spine\_angle},
+  \texttt{tfpt\_4\_frontier}, \mC).} A more \emph{robust} misalignment angle than the determinant-line hilltop
+  $\theta_i\approx170^\circ$ (\texttt{v185}, which over-produces $\Omega_a h^2\approx0.66$): the central spine
+  quotient gives $\theta_i=3\pi/5=108^\circ$ exactly (no fit), the finite-$T$ solver reaches
+  $\Omega_{\mathrm{DM}}$ at ${\approx}106^\circ$, and $108^\circ$ sits in the \emph{mild}-anharmonic regime
+  ($62^\circ$ below the hill-top) --- not exponentially sensitive. An alternative ansatz to
+  $\theta_i=\pi(1-\varphi_\Sigma)$ (mutually exclusive, the full solver decides, \texttt{DM.AXION.SPINE.01});
+  \mX\ $\Omega_a h^2$ outside ${\sim}[0.08,0.16]$ demotes it. A sharper scenario, not a derivation.
+\item \textbf{Leptogenesis scalaron-decuple branch (\texttt{v212\_leptogenesis\_decuple},
+  \texttt{tfpt\_4\_frontier}, \mC).} Both Boltzmann inputs share the decuple $A_\Lambda=10=|E(K_5)|$:
+  $M_1=M_{\mathrm{scal}}(\phiz)^2/A_\Lambda\approx8.65\times10^9$ GeV and $\tilde m_1=m_3/A_\Lambda\approx5$ meV.
+  $M_1$ uses \emph{only} $\{M_{\mathrm{scal}},\phiz,A_\Lambda\}$ --- no hidden seesaw scale, cleaner than
+  \texttt{v184}'s $M_R\varphi_0^4$ --- and lands in the thermal window where $\eta_B\approx1.2\times10^{-9}$
+  brackets the observed $6.1\times10^{-10}$. The coupling mechanism is posited not derived, so $\eta_B$ stays
+  \mC; \mX\ a precise Boltzmann/RGE solve outside the band falls the route, not the theory
+  (\texttt{FR.ETAB.04}; Route~A independent).
+\end{itemize}
+
 \subsection*{2026-06-15 (Lean: QGEO.UNIFORM.01 geometric normal form machine-proved)}
 \begin{itemize}
 \item \textbf{The M\"obius uniformisation normal form is now Lean-formalised}

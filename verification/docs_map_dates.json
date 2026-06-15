@@ -584,8 +584,8 @@
   "date": "2026-06-14"
  },
  "tfpt_4_frontier::section::Baryon asymmetry $\\eta_B$ --- a downstream readout from the closed $\\Omega_b h^2$::1": {
-  "hash": "80bd7344449d",
-  "date": "2026-06-14"
+  "hash": "afc91cdeb72c",
+  "date": "2026-06-15"
  },
  "tfpt_4_frontier::section::Proton/electron ratio $m_p/m_e$ --- a cross-sector ratio::1": {
   "hash": "e55f6430961c",
@@ -600,7 +600,7 @@
   "date": "2026-06-14"
  },
  "tfpt_4_frontier::section::Dark matter --- the candidate is fixed, the scale is pending::1": {
-  "hash": "91763cc34337",
+  "hash": "17061b526d1c",
   "date": "2026-06-15"
  },
  "tfpt_4_frontier::section::The muon anomalous magnetic moment --- a seam vertex readout::1": {
@@ -612,7 +612,7 @@
   "date": "2026-06-15"
  },
  "tfpt_4_frontier::section::Summary::1": {
-  "hash": "86e88154ede7",
+  "hash": "6580fbe649b5",
   "date": "2026-06-15"
  },
  "tfpt_4_frontier::section::Appendix: computational verification::1": {

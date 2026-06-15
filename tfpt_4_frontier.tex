@@ -164,6 +164,22 @@ $\varphi_0$-powers are off by ${\sim}75\%$/${\sim}40\%$), so $M_1=M_R\varphi_0^4
 the free input $M_1\!\to\!M_R$. Feeding both into the standard estimate lands $\eta_B$ in the observed
 band $O(10^{-10})$, so the route stays viable --- but the proposal cuts the free inputs from two to one,
 \emph{not} to zero. \textbf{$\eta_B$ stays \mC, a sharper scenario, not a derivation.}
+\par\smallskip\noindent\textbf{A cleaner route: the scalaron-decuple branch
+(\veri{v212\_leptogenesis\_decuple.py}).} Drop the seesaw scale altogether and let \emph{both} Boltzmann
+inputs share the decuple $A_\Lambda=10=|E(K_5)|$:
+\[
+  M_1=\frac{M_{\mathrm{scal}}\,(\phiz)^{2}}{A_\Lambda}\approx8.65\times10^{9}\ \mathrm{GeV},\qquad
+  \tilde m_1=\frac{m_3}{A_\Lambda}\approx5\ \mathrm{meV}.
+\]
+$M_1$ now uses \emph{only} compiler quantities ($M_{\mathrm{scal}}=\cthree^{7/2}\Mpl$, $\phiz$, $A_\Lambda$)
+--- \emph{no hidden seesaw scale} --- and lands inside the thermal window $[3\times10^9,3\times10^{10}]$ GeV
+where the Davidson--Ibarra $\varepsilon_1\approx8.5\times10^{-7}$ and the strong-washout efficiency give
+$\eta_B\approx1.2\times10^{-9}$, bracketing the observed $6.1\times10^{-10}$ untuned. Both inputs sharing
+$A_\Lambda$ reads as \emph{scalaron reheating dressed by two seed insertions $(\phiz)^2$, over the pair
+sector}. This is cleaner than $M_1=M_R\varphi_0^4$ (no relocated free scale), but the coupling
+\emph{mechanism} is posited, not derived, and $\kappa_f$ is washout-dependent --- so $\eta_B$ stays \mC;
+\mX\ a precise Boltzmann/RGE solve outside the band falls the \emph{route}, not the theory (Route~A is
+independent).
 
 % =====================================================================
 \section{Proton/electron ratio $m_p/m_e$ --- a cross-sector ratio}
@@ -460,6 +476,17 @@ the predicted hill-top. So as the \emph{dominant} dark matter the determinant-li
 $(f_a{=}M_{\mathrm{scal}}/128,\theta_i{\approx}170^\circ)$ \emph{over}-closes the universe unless there is
 extra dilution (entropy injection) or a lower $f_a$. This stays \mC, and over-production kills only the
 \emph{axion-as-dominant-DM} reading, not the compiler.
+\par\smallskip\noindent\textbf{A more robust angle: the spine branch.}
+\veri{v211\_axion\_spine\_angle.py} The same finite-$T$ solver reaches $\Omega_{\mathrm{DM}}$ at
+$\theta_i\approx106^\circ$ --- and the central spine quotient gives $\theta_i=\pi\Nfam/g_{\mathrm{car}}=3\pi/5=108^\circ$
+\emph{exactly} (a rational multiple of $\pi$, no fit; harmonic estimate $0.03\,\theta_i^2=0.107$, lifted to
+${\sim}0.12$ by a mild anharmonic factor). Crucially $108^\circ$ lies $62^\circ$ \emph{below} the hill-top,
+in the \emph{mild}-anharmonic regime, so the relic is \emph{not} exponentially sensitive: if the
+misalignment angle is the spine quotient, the determinant-line axion is all of dark matter \emph{without}
+hill-top tuning. This is an \emph{alternative} ansatz to $\theta_i=\pi(1-\varphi_\Sigma)\approx170^\circ$
+(the two are mutually exclusive; neither is forced) --- a sharper \mC\ scenario decided by the full solver
+(\texttt{DM.AXION.SPINE.01}), \emph{not} a derivation; \mX\ a converged $\Omega_a h^2$ outside ${\sim}[0.08,0.16]$
+at $\theta_i=3\pi/5$ demotes the branch.
 
 % =====================================================================
 \section{The muon anomalous magnetic moment --- a seam vertex readout}
@@ -598,10 +625,10 @@ $G_{\mathrm{metric}}$; the primary, machine-checked route stays the seam-net.
 \toprule
 \textbf{Item} & \textbf{Status} & \textbf{Honest handle / what is missing} \\
 \midrule
-$\eta_B$ & \mC & downstream readout $=6.1{\times}10^{-10}$ from closed $\Omega_b h^2$; leptogenesis is an interface (Boltzmann) \\
+$\eta_B$ & \mC & downstream readout $=6.1{\times}10^{-10}$ from closed $\Omega_b h^2$; leptogenesis interface, cleanest scenario $M_1{=}M_{\mathrm{scal}}(\phiz)^2/A_\Lambda$, $\tilde m_1{=}m_3/A_\Lambda$ (shared decuple, no seesaw scale) \\
 $m_p/m_e$ & \mO & cross-sector (QCD scale / closed $m_e$); scheme-level, not a compiler power \\
 Koide $Q$ & \mC & source ratio $Q=0.664$ near $2/3$; the source$\to$pole factor $53/54$ is an \emph{exact operator readout} of the missing $F{=}R{+}Q$ Sheet-Diamond corner \mE; the physical pole transfer ($F_{\mathrm{pole}}$) stays \mC \\
-dark matter & \mC/\mO & determinant-line axion fixed: $\theta_i\approx170^\circ$, $f_a{=}M_{\mathrm{scal}}/128$, $m_a\approx23.8\,\mu$eV define the branch; relic needs the hilltop anharmonic enhancement --- a branch-level kill test, not a theory closure \\
+dark matter & \mC/\mO & determinant-line axion fixed: $f_a{=}M_{\mathrm{scal}}/128$, $m_a\approx23.8\,\mu$eV; the robust angle is the spine branch $\theta_i{=}\pi\Nfam/g_{\mathrm{car}}{=}3\pi/5{=}108^\circ$ (mild-anharmonic, lands on $\Omega_{\mathrm{DM}}$ untuned), an alternative to the over-producing $170^\circ$ hilltop --- branch-level kill test, not a theory closure \\
 muon $a_\mu$ & \mC & seam vertex $a_\mu^{\mathrm{seam}}{=}\delta_2/(2\pi){=}45/(524288\pi^9){=}2.879{\times}10^{-9}$; exact \emph{value}, but the vertex projection is the \mC\ bridge ($0.81\sigma$ dispersive, ${\sim}1.5\sigma$ lattice) \\
 quantum gravity & \mE/\mO & $R+R^2$ heat-kernel grounded (G2); physical sector gap-decoupled; only ambient limit (G6) open \\
 \bottomrule
