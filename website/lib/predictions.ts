@@ -531,6 +531,30 @@ export const predictions: Prediction[] = [
       "The candidate is the determinant-line axion of the strong-CP sector (WIMPs ruled out — no spare E₈ singlet). The misalignment angle is closed; f_a = M_scal/128 is a conjecture. A misalignment estimate (v185) and a converged full finite-T solve (experiments/ftransfer/axion_relic) decide it: at the predicted θ_i ≈ 170° hilltop the relic is Ω_a h² ≈ 0.66 — ~5.5× above Ω_DM h² = 0.12 (the observed value needs θ_i ≈ 106°). So as the dominant DM it OVER-closes the universe unless there is extra dilution or a lower f_a — a confirmed tension. A scenario, not a sharp prediction.",
     category: "Astrophysics",
   },
+  {
+    id: "rare-kaon",
+    slug: "rare-kaon-decays",
+    title: "Rare Kaons K → πνν̄ — a live falsification channel",
+    shortTitle: "BR(K→πνν̄)",
+    target: "BR(K⁺) = 9.45×10⁻¹¹, BR(K_L) = 3.33×10⁻¹¹",
+    targetLatex:
+      "\\mathrm{BR}(K^+\\!\\to\\pi^+\\nu\\bar\\nu)=9.45\\times10^{-11},\\quad \\mathrm{BR}(K_L\\to\\pi^0\\nu\\bar\\nu)=3.33\\times10^{-11}",
+    numericValue: "9.45",
+    unit: "×10⁻¹¹",
+    status: "Conditional",
+    dependencyClass: "Flavor / residue matrix",
+    killTest:
+      "A stable NA62 BR(K⁺) outside [7,12]×10⁻¹¹, or a KOTO-II BR(K_L) off the predicted Grossman–Nir point, breaks the TFPT flavor bridge for this sector (the compiler core is untouched).",
+    derivationFormulas: [
+      "s_{12}=\\lambda_C,\\ s_{23}=\\tfrac{\\varphi_0}{1+\\lambda_C},\\ s_{13}=\\tfrac{\\lambda_C^3}{3},\\ \\delta_{\\mathrm{CKM}}=\\tfrac{\\pi}{3}+3\\lambda_C^2",
+      "(\\bar\\rho,\\bar\\eta)=(0.1374,\\,0.3509)\\ \\Rightarrow\\ \\lambda_t=V_{ts}^*V_{td}",
+      "\\mathrm{BR}(K_L)/\\mathrm{BR}(K^+)=0.352\\ll4.3\\ (\\text{Grossman–Nir})",
+    ],
+    pdf: "/papers/tfpt_2_standard_model.pdf",
+    description:
+      "The closed TFPT CKM point (no flavor fit) feeds the cleanest FCNC probe. With standard external short-distance input (Brod–Gorbahn–Stamou X_t, P_c, κ_±) it gives BR(K⁺→π⁺νν̄) = 9.45×10⁻¹¹ and BR(K_L→π⁰νν̄) = 3.33×10⁻¹¹ — a [C] downstream readout, NOT a compiler power (the SD functions are external). The neutral mode ∝ (Im λ_t)² is a direct probe of the holonomy phase δ_CKM; the current NA62 value (13.0₋₃.₀⁺³·³)×10⁻¹¹ sits ~1.2σ above. The ~2σ δ_CKM tension makes the NA62/KOTO-II corridor a genuinely discriminating, live falsifier (v202).",
+    category: "Flavor",
+  },
 ];
 
 /** Ledger claim IDs per prediction (mirror of the status-ledger row keys). */
@@ -555,6 +579,7 @@ export const CLAIM_ID: Record<string, string> = {
   "no-second-higgs": "EM.BUDGET.01",
   birefringence: "HOR.01",
   axion: "FR.DM.01",
+  "rare-kaon": "FR.RAREKAON.01",
 };
 
 /** Compact status marker per prediction status grade. */

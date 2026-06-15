@@ -344,8 +344,12 @@
   "date": "2026-06-13"
  },
  "tfpt_2_standard_model::section::Mixing: CKM and PMNS from holonomy::1": {
-  "hash": "7711b7bf61ea",
-  "date": "2026-06-12"
+  "hash": "250e0e9b01e6",
+  "date": "2026-06-15"
+ },
+ "tfpt_2_standard_model::subsection::Downstream flavor readout: the rare kaons $K\\to\\pi\\nu\\bar\\nu$::1": {
+  "hash": "722c459c445e",
+  "date": "2026-06-14"
  },
  "tfpt_2_standard_model::section::Neutrinos::1": {
   "hash": "4574cc289eb3",

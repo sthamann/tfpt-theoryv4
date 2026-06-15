@@ -35,8 +35,11 @@ from tfpt_constants import check, summary, reset
 HERE = os.path.dirname(os.path.abspath(__file__))
 LEDGER = os.path.join(HERE, "status_ledger.csv")
 
-# the four F_transfer frontier families (prediction rows)
-FRONTIER_PREFIXES = ("FR.KOIDE.", "FR.ETAB.", "FR.DM.", "FR.MPME.", "QCD.LAMBDA.")
+# the F_transfer frontier families + CKM-downstream flavor readouts (prediction rows)
+# (rare kaon FR.RAREKAON.* is a CKM-downstream readout, not one of the four functor
+#  interfaces, but it is guarded the same way: never a primitive [E]/[N] compiler power)
+FRONTIER_PREFIXES = ("FR.KOIDE.", "FR.ETAB.", "FR.DM.", "FR.MPME.", "QCD.LAMBDA.",
+                     "FR.RAREKAON.")
 CONDITIONAL = ("[C]", "[A]", "[O]", "conditional", "conjecture", "physical",
                "open", "scenario", "near-miss", "not forced", "not a claim",
                "non-claim", "transfer")

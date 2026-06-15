@@ -59,6 +59,23 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-15 (archive integration \#1: the rare kaon sector $K\to\pi\nu\bar\nu$ --- v202)}
+\begin{itemize}
+\item \textbf{\texttt{FR.RAREKAON.01} (\vref{v202}, \mC).} The closed TFPT CKM point ($s_{12}{=}\lambda_C$,
+  $s_{23}{=}\varphi_0/(1{+}\lambda_C){=}|V_{cb}|$, $s_{13}{=}\lambda_C^3/3$, $\delta{=}\pi/3{+}3\lambda_C^2{=}1.19823$
+  rad; \vref{v18}/\vref{v88}, no flavor fit) feeds the cleanest FCNC probe. With standard external
+  short-distance input (Brod--Gorbahn--Stamou $X_t,P_c,\kappa_\pm$) it gives
+  $\mathrm{BR}(K^+\!\to\pi^+\nu\bar\nu)=9.45\times10^{-11}$ and $\mathrm{BR}(K_L\to\pi^0\nu\bar\nu)=3.33\times10^{-11}$
+  --- a \mC\ downstream flavor readout, \emph{not} a compiler power (the SD functions are external). Recomputed
+  from the \emph{current} CKM point (an earlier archive scaffold quoted $\mathrm{BR}(K_L)=3.47\times10^{-11}$
+  from an $\Im(\lambda_t)/\lambda^5$ slip, corrected here). Grossman--Nir ratio $0.352\ll4.3$; NA62
+  $(13.0^{+3.3}_{-3.0})\times10^{-11}$ is $\sim1.2\sigma$ above. \textbf{Dated kill test \mX}: a stable NA62
+  $\mathrm{BR}(K^+)$ outside $[7,12]\times10^{-11}$, or a KOTO-II $\mathrm{BR}(K_L)$ off the GN point, breaks the
+  flavor bridge (core untouched). Integrated into \texttt{tfpt\_2\_standard\_model} (\S rare kaon), the ledger,
+  \vref{v187} guard (new \texttt{FR.RAREKAON.} family), registry, and the website (\texttt{predictions.ts}).
+  Python-only. Suite $201$ modules.
+\end{itemize}
+
 \subsection*{2026-06-15 (bedrock: the $\omega\circ\rho=\omega$ residual reduced once more --- v201)}
 \begin{itemize}
 \item \textbf{\texttt{QGEO.SUBPRIN.01} (\vref{v201}, \mE/\mO).} The \vref{v199} bedrock residual --- ``the

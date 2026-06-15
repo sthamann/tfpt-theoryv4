@@ -57,6 +57,7 @@ const CLUSTERS: Cluster[] = [
       { file: "v37_plucker_anchor.py", what: "Plücker anchor: ‖Pl(K)‖₁ = 11; pencil det(K+xQ); lepton ring" },
       { file: "v50_q_geometry.py", what: "Q geometry: Q₊ diag(3,2,1)-block; Q unique under budgets" },
       { file: "v52_pencil_endpoints.py", what: "pencil endpoints P(−1,0,1,2) = (2,4,20,68)" },
+      { file: "v202_rare_kaon.py", what: "the rare kaon sector K → π ν ν̄ from the TFPT CKM point ([C] downstream flavor readout, NOT a compiler power). The kernel fixes the full CKM matrix (s₁₂=λ_C, s₂₃=φ₀/(1+λ_C)=|V_cb|, s₁₃=λ_C³/3, δ=π/3+3λ_C²=1.19823 rad; v18/v88) with no flavor fit; feeding the exact point into the standard Brod–Gorbahn–Stamou short-distance formulas gives BR(K⁺→π⁺νν̄)=9.45×10⁻¹¹ and BR(K_L→π⁰νν̄)=3.33×10⁻¹¹. [I] CKM point + exact apex (ρ̄,η̄)=(0.1374,0.3509), λ_t=V_ts*V_td; [C] the branching ratios (NOT parameter-free — X_t, P_c, κ_± are external EW/QCD input); [N] BR(K⁺) ~1.2σ below NA62 (13.0₋₃.₀⁺³·³)×10⁻¹¹; [I] Grossman–Nir ratio 0.352 ≪ 4.3; [X] dated kill test: a stable NA62 BR(K⁺) outside [7,12]×10⁻¹¹, or a KOTO-II BR(K_L) off the GN point, breaks the flavor bridge (core untouched)." },
     ],
   },
   {

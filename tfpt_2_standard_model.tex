@@ -1209,6 +1209,29 @@ near-exact. (To upgrade to \mE\ the higher-order $\delta$ correction $\Delta_\tr
 explicitly.)
 \end{winbox}
 
+\subsection{Downstream flavor readout: the rare kaons $K\to\pi\nu\bar\nu$}
+\label{sec:rare-kaon}
+The closed CKM point is not an end state --- it feeds the theoretically cleanest flavor-changing
+neutral-current probe, the rare decays $K^+\!\to\pi^+\nu\bar\nu$ and $K_L\to\pi^0\nu\bar\nu$. These are
+\emph{not} a new compiler power: the only TFPT-specific content is the CKM point above; the short-distance
+loop functions ($X_t$, $P_c$, $\delta P_{c,u}$, $\kappa_\pm$, Brod--Gorbahn--Stamou) are standard external
+electroweak/QCD input. Inserting the exact TFPT products $\lambda_t=V_{ts}^*V_{td}$, $\lambda_c=V_{cs}^*V_{cd}$
+(equivalently the exact apex $(\bar\rho,\bar\eta)=(0.1374,0.3509)$) gives \veri{v202\_rare\_kaon.py}
+\[
+  \mathrm{BR}(K^+\!\to\pi^+\nu\bar\nu)=9.45\times10^{-11},\qquad
+  \mathrm{BR}(K_L\to\pi^0\nu\bar\nu)=3.33\times10^{-11},
+\]
+typed \mC\ (the branching ratios are not parameter-free). The neutral mode is purely CP-violating,
+$\mathrm{BR}(K_L)\propto(\Im\lambda_t)^2\propto\bar\eta^2$, so it is a direct probe of the holonomy phase
+$\delta_{\mathrm{CKM}}$; the charged mode carries a sizeable charm admixture and tests the overall CKM norm.
+The model-independent Grossman--Nir ratio is $\mathrm{BR}(K_L)/\mathrm{BR}(K^+)=0.352\ll4.3$, safely inside the
+isospin corridor. \textbf{Dated kill test \mX:} a stable NA62 $\mathrm{BR}(K^+)$ \emph{outside}
+$[7,12]\times10^{-11}$, or a KOTO-II $\mathrm{BR}(K_L)$ off the predicted Grossman--Nir point, breaks the TFPT
+flavor bridge for this sector (the compiler core is untouched). The current NA62 value
+$(13.0^{+3.3}_{-3.0})\times10^{-11}$ sits $\sim1.2\sigma$ above the prediction --- consistent today; the
+$\sim2\sigma$ $\delta_{\mathrm{CKM}}$ tension (\vref{v88}) makes the corridor a genuinely discriminating,
+live falsification channel.
+
 \noindent\textbf{Weak mixing from $D_5$.} Because the carrier $C^+$ \emph{is} the $D_5=\mathfrak{so}(10)$
 half-spinor, the weak mixing inherits the canonical $\mathfrak{so}(10)$ unification value
 $\sin^2\theta_W=\tfrac38=\Nfam/h(D_5)$ at the carrier scale, running to $0.231$ at $M_Z$ (standard).
