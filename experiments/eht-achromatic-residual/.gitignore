@@ -12,6 +12,8 @@ data/*
 !data/README.md
 results/*
 !results/.gitkeep
+# keep the tiny derived real-data summary (reproducible without the ~4 MB uvfits)
+!results/eht_real_achromaticity.json
 
 # notebook checkpoints
 .ipynb_checkpoints/

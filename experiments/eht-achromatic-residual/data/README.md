@@ -4,6 +4,26 @@ The pipeline runs on a `PolarimetricImage` instance plus a GRMHD
 forward-model cube. The two sources below cover the public material
 needed to perform the test on M87\* and Sgr A\*.
 
+## Real data INGESTED (2023-D01-01) — `eht_m87_2017/` (gitignored)
+
+`python scripts/fetch_eht_data.py` downloads the **real** EHT M87 2017 calibrated
+polarimetric uvfits (data product **2023-D01-01**, CyVerse DOI 10.25739/q46m-m857;
+GitHub `eventhorizontelescope/2023-D01-01`): 4 observing days (Apr 5/6/10/11) × 2
+bands (hi ≈ 229.07 GHz, lo ≈ 227.07 GHz), D-term-calibrated + self-calibrated HOPS
+(`*_hops_zbl-dtcal+selfcal.uvfits`), ~0.5 MB each.
+
+`tfpt-eht realdata` (`src/tfpt_eht/real_data.py`) reads these with `astropy.io.fits`,
+forms circular-basis Stokes (`I=(RR+LL)/2`, `Q=(RL+LR)/2`, `U=i(LR−RL)/2`), and reports
+the I-weighted net EVPA + `|m|` per band and the **band-to-band EVPA rotation** (the
+Faraday/achromaticity diagnostic): mean ΔEVPA ≈ +0.9°, implied RM ≈ 5×10⁵ rad/m²
+(M87-core ballpark). The tiny derived summary is committed as
+`results/eht_real_achromaticity.json`; the uvfits stay gitignored.
+
+**Scope:** this is **step 1** (real-data ingest + raw achromaticity). The TFPT
+achromatic-*residual* nulls (1/r² profile, sign-flip) need the **GRMHD-subtracted
+residual image** — i.e. polarimetric imaging (eht-imaging) + a GRMHD library — and stay
+**data-limited** until that imaging run.
+
 ## Event Horizon Telescope public releases
 
 * **M87\* 2017** (April 2017 campaign) — polarimetric reconstructions

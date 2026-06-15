@@ -6,3 +6,9 @@ build/
 dist/
 *.pyc
 results/*.json
+results/*.png
+# data dir: keep the README + the hand-authored measurements.json (provenance/inputs);
+# any downloaded/large data file is gitignored (see data/README.md)
+data/*
+!data/README.md
+!data/measurements.json

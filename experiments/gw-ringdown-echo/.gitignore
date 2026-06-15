@@ -6,3 +6,7 @@ build/
 dist/
 *.pyc
 results/*.json
+# data dir: keep the README only; gwtc_events.csv is re-downloadable via
+# scripts/fetch_catalog.py (GWOSC) and is therefore gitignored (see data/README.md)
+data/*
+!data/README.md

@@ -1,0 +1,14 @@
+{
+  "comment": "DESI DR2 (2025, arXiv:2503.14738) CPL w0-wa best fits for DESI BAO + CMB + one supernova compilation at a time. The three SN compilations (Pantheon+, Union3, DESY5) OVERLAP heavily (shared low-z SNe) and are ALTERNATIVE datasets, not independent -- they must NOT be stacked/multiplied. rho is the published-typical (w0,wa) CPL correlation.",
+  "tfpt_prediction": {"w0": -1.0, "wa": 0.0, "note": "cosmological constant: w=-1 exactly (Lambda/H0 engine, S_dS rho_Lambda = 32 pi^4)"},
+  "combinations": [
+    {"name": "DESI+CMB+Pantheon+", "w0": -0.838, "sigma_w0": 0.055, "wa": -0.62, "sigma_wa": 0.205,
+     "rho_w0_wa": -0.9, "published_sigma_vs_LCDM": 2.8, "sn_family": "Pantheon+"},
+    {"name": "DESI+CMB+Union3", "w0": -0.667, "sigma_w0": 0.088, "wa": -1.09, "sigma_wa": 0.29,
+     "rho_w0_wa": -0.9, "published_sigma_vs_LCDM": 3.8, "sn_family": "Union3"},
+    {"name": "DESI+CMB+DESY5", "w0": -0.752, "sigma_w0": 0.057, "wa": -0.86, "sigma_wa": 0.21,
+     "rho_w0_wa": -0.9, "published_sigma_vs_LCDM": 4.2, "sn_family": "DES-SN5YR"}
+  ],
+  "overlap_note": "Pantheon+, Union3 and DES-SN5YR share substantial low-z SNe; their w0-wa constraints are correlated, so combining them as if independent (e.g. sqrt(sum of sigma^2)) manufactures a spurious >5 sigma. Headline = strongest single overlap-aware combination, not a product.",
+  "downloaded": "2026-06-15 (published summary values)"
+}

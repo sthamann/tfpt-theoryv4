@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[project]
+name = "tfpt-dark-energy-w-watchdog"
+version = "0.1.0"
+description = "TFPT w=-1 watchdog vs DESI DR2 w0-wa combinations, overlap-aware (no naive SN-sample stacking)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Stefan Hamann" }]
+keywords = ["TFPT", "dark energy", "w0wa", "CPL", "DESI", "Lambda"]
+dependencies = ["numpy>=1.26"]
+
+[project.optional-dependencies]
+dev = ["ruff>=0.5"]
+
+[project.scripts]
+tfpt-w = "tfpt_w.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tfpt_w"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "NPY"]

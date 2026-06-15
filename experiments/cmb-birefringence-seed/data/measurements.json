@@ -39,5 +39,30 @@
       "note": "BBN constrains Omega_b h^2; converted with Planck h (h assumption declared)"
     }
   ],
+  "sin2_theta13": [
+    {
+      "experiment": "NuFIT 6.0 (normal ordering, 2024)",
+      "value": 0.02195,
+      "sigma": 0.00058,
+      "reference": "NuFIT 6.0 www.nu-fit.org (Esteban+ 2024)",
+      "note": "reactor angle; TFPT predicts sin^2 theta13 = phi0 * e^(-5/6) = 0.0231"
+    },
+    {
+      "experiment": "PDG 2024",
+      "value": 0.0220,
+      "sigma": 0.0007,
+      "reference": "PDG 2024 neutrino mixing review",
+      "note": "Daya Bay-dominated"
+    }
+  ],
+  "cabibbo_Vus": [
+    {
+      "experiment": "PDG 2024 |V_us|",
+      "value": 0.22431,
+      "sigma": 0.00085,
+      "reference": "PDG 2024 CKM review (Wolfenstein lambda = |V_us|)",
+      "note": "TFPT predicts lambda = sqrt(phi0(1-phi0)) = 0.224376"
+    }
+  ],
   "downloaded": "2026-06-15 (values transcribed from the cited refereed/preprint sources)"
 }

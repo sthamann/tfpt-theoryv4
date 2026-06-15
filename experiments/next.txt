@@ -1,0 +1,577 @@
+## Kurzurteil
+
+Der neue Stand ist deutlich reifer. Ihr seid von einer Signatursuche zu einer **typisierten Entscheidungsmaschine** gekommen: 48 Scorecard Zeilen, davon 22 konsistent, 7 null, 14 datenlimitiert, 4 echte Spannungen und 1 geparkter Analograum. Wichtig: Die README sagt jetzt sauber, dass es **keine unterscheidende Entdeckung** gibt. Das ist nicht defensiv, das ist wissenschaftlich gesund. Theorien, die nie schwitzen, sind meistens tot oder Marketing.
+
+Die stärksten aktuellen Punkte sind:
+
+**Konsistenzcluster:** `θ12`, `K⁺→π⁺νν`, CMB `β`, `Ω_b`, Seed Linie, Λ Hierarchie.
+**Echte Stresspunkte:** `θ13`, `A_s` bei fixem `N⋆=51.4`, Myon g minus 2 unter Lattice HVP, Axion Hilltop.
+**Saubere Nulls:** fast die gesamte FRB Suite.
+**Wertvollste offene Tests:** EHT Residual Imaging, Inflation Branch Resolver, Seed Stress v2, DESI `w`, Axion Spine, Leptogenese, Higgs Kritikalität.
+
+Die Scorecard Firewall und die neuen Metadaten sind genau richtig: `independence_group`, `evidence_class`, `discriminative_power`, `decision_horizon` und `hint_flag` verhindern, dass korrelierte Seed Beine wie unabhängige Treffer aussehen. Das README sagt explizit, dass `phi0_seed` und interne Checks nicht als unabhängige externe Treffer zählen. Sehr gut. 
+
+## 1. Was jetzt klar besser ist
+
+### 1.1 Die alte Zähler Inkonsistenz ist praktisch gelöst
+
+Der aktuelle Stand ist jetzt konsistent generiert: 48 Zeilen, 22 consistent, 4 tension, 7 null, 14 data limited, 1 parked. Das steht im README Generator Block und in der aktuellen `evidence_scorecard`. 
+
+Das ist ein echter Qualitätsgewinn. Manuelle Zähler sind wie Quantenfluktuationen in Excel: irgendwann materialisieren sie sich als Reviewer Problem.
+
+### 1.2 FRB ist jetzt methodisch sauber und empirisch eher negativ
+
+Die FRB Suite ist inzwischen stark gegen Numerologie gehärtet: eingefrorener Kernel, Energie versus Amplituden Semantik, Placebos, Surrogate, Free Quotient Null, Look Elsewhere Korrektur. Das Ergebnis ist größtenteils null: FRB.02, FRB.02b, FRB.04, FRB.06, FRB.07, FRB.08 und FRB.09 liefern keinen belastbaren TFPT Kanal. FRB.03 bleibt nur `data_limited` mit `hint_flag`. 
+
+Das ist gut. Nicht weil FRBs die Theorie stützen, sondern weil sie die Theorie disziplinieren. Die Theorie sieht dadurch weniger nach “wir finden überall Muster” aus.
+
+### 1.3 EHT ist zum echten Datensatz geworden
+
+Der EHT Block ist der größte Fortschritt seit dem letzten Check. Es wurden echte M87 2017 Polarimetrie uvfits aus EHT 2023 D01 01 ingestiert, 4 Tage mal 2 Bänder, und aus den Zirkularbasis Visibilities wurden Netto EVPA und Polarisationsfraktion berechnet. Die Band zu Band EVPA Rotation liegt im Mittel bei etwa `+0.9°`, mit impliziertem `RM ≈ 5×10⁵ rad/m²`. 
+
+Aber: Das ist **noch nicht** der TFPT Test. Das ist nur der reale Daten Ingest plus rohe Achromatizitätsdiagnostik. Der eigentliche Test bleibt:
+
+`χ₀res = χ₀obs − χ₀GRMHD`
+
+Danach müssen drei Nulls gleichzeitig bestehen:
+
+`kein λ² Tail`
+`1/r² Profil`
+`Sign Flip bei effektiver E·B Umkehr`
+
+Die README formuliert das korrekt als `data_limited`, bis GRMHD Imaging und Residual Subtraktion laufen. 
+
+### 1.4 Seed Stress ist jetzt ein echter Stresstest
+
+Der neue Seed Consistency Block ist gut: `β`, `Ω_b`, Cabibbo und `θ13` werden zu `φ0` invertiert, gemeinsam gefittet und per Leave One Out bewertet. Das Ergebnis: der Block hält, aber `θ13` ist der dominante Zug, mit etwa 88 Prozent des χ² und rund `−1.8σ` im Joint Fit. 
+
+Das ist exakt die richtige Diagnose. Nicht “Seed bestätigt”, sondern:
+
+> Der Seed ist kohärent, aber θ13 ist der erste ernsthafte Risskandidat.
+
+## 2. P0 Korrekturen vor dem nächsten Release
+
+### 2.1 Axion Spine ist semantisch doppelt in der Scorecard
+
+Aktuell gibt es zwei Zeilen für denselben Branch:
+
+`axion relic DM.AXION.SPINE.01`
+und
+`axion relic DM.AXION.SPINE.01 (theta_i=3pi/5)`
+
+Beide sagen im Kern: `θi = 3π/5`, Finite T Solve pending, Akzeptanzband `0.08 bis 0.16`. Eine davon muss weg oder die erste wird zur reinen Definition ohne Scorecard Gewicht. Sonst zählt ihr denselben offenen Test zweimal. Die aktuelle Scorecard zeigt die spätere, präzisere Zeile mit dem eingefrorenen Ω Band. 
+
+**Empfehlung:** Behalte nur die präzisere Zeile:
+
+```json
+"observable": "axion relic DM.AXION.SPINE.01 (theta_i=3pi/5)"
+```
+
+Dann gehen die Zähler real auf 47 Zeilen und `data_limited` auf 13, sofern sonst nichts geändert wird.
+
+### 2.2 Seed χ² ist widersprüchlich: 1.08 versus 1.23
+
+Im Inhaltsblock steht für die Shared Seed Erweiterung `χ²/dof=1.08`, im Seed Stresstest Abschnitt steht `χ²/dof=1.23`. Aus den angegebenen Joint Pulls ergibt sich plausibel `χ²/dof≈1.23`. Die Scorecard hat aktuell ebenfalls `1.08`.
+
+**Empfehlung:** Eine Quelle der Wahrheit:
+
+```json
+"data_value": "4 observables imply same phi0, chi2/dof=1.23"
+```
+
+Und ergänzen:
+
+```json
+"max_leg_pull_sigma": 2.0,
+"dominant_leg": "theta13",
+"dominant_chi2_fraction": 0.88
+```
+
+`pull_sigma = 2.0` ist für eine Composite Row missverständlich. Es ist kein normaler Einzel Pull, sondern der stärkste Leg Pull.
+
+### 2.3 Shared Seed Kill Condition ist zu hart formuliert
+
+Die Scorecard sagt sinngemäß: “any leg pulls implied phi0 away at >2 sigma”. Gleichzeitig ist `θ13` bei etwa 2σ und der Status ist `consistent`. Das ist logisch knapp an der Stolperkante.
+
+Die README hat die bessere Regel: `θ13 >3σ` löst `transfer-corrected` aus; zwei Beine >3σ killen den Shared Seed Block. Das sollte die Scorecard übernehmen.
+
+```json
+"kill_condition": "two independent seed legs >3 sigma, or one leg >5 sigma; theta13 alone >3 sigma flags PMNS theta13 as transfer-corrected"
+```
+
+### 2.4 EHT Signaturkatalog ist an einer Stelle stale
+
+Im Signaturkatalog steht bei EHT noch “datenlimitiert (synthetisch)”, aber weiter unten ist der reale EHT Ingest erledigt. 
+
+**Fix:**
+
+```text
+EHT: real data ingest + achromaticity diagnostic done; GRMHD residual nulls open
+```
+
+Klein, aber wichtig. Sonst sieht es aus, als hätte die README sich selbst überholt. Kommt vor. Auch Theorien brauchen Kaffee.
+
+### 2.5 EHT sollte nicht `phi0_seed` sein
+
+Die EHT Zeile ist aktuell `independence_group = phi0_seed`. Das ist aus meiner Sicht falsch oder zumindest unglücklich. Der EHT Kanal liest `16c3^4 = 1/(256π⁴)` beziehungsweise `δ_top/3`, also einen Top Form oder Horizon Collar Koeffizienten, nicht denselben `φ0` Seed wie β, Ωb, Cabibbo und θ13.
+
+**Empfehlung:**
+
+```json
+"independence_group": "c3_topform_horizon"
+```
+
+oder, falls die Enums klein bleiben sollen:
+
+```json
+"independence_group": "independent"
+```
+
+Besser wäre eine neue Gruppe `c3_topform_horizon`, damit Korrelationen ehrlich bleiben.
+
+### 2.6 Λ Hierarchie nicht als `0.00σ` schreiben
+
+Die README nennt Λ Hierarchie `0.00σ`. Das ist rhetorisch stark, aber statistisch unsauber. Es ist eine Abweichung in Größenordnungen, etwa `0.004 dex/order`, keine echte Mess Pull Größe. Die README selbst warnt, dass Λ drei verschiedene Objekte mischen kann und nicht als absolute Λ Vorhersage verkauft werden darf.
+
+**Fix:**
+
+```text
+Λ-Hierarchie: dev = 0.004 orders, not pull_sigma
+```
+
+Und in der Scorecard:
+
+```json
+"pull_sigma": null,
+"log_order_deviation": 0.004
+```
+
+### 2.7 `stage` braucht einen internen Typ
+
+Der Recovery Channel ist `evidence_class=internal_consistency`, aber `stage=search_target`. Das ist semantisch schief. Kein Drama, aber unschön.
+
+Entweder ergänzt ihr:
+
+```json
+"stage": "internal_consistency"
+```
+
+oder ihr lasst `stage` nur für empirische Kanäle gelten und macht bei internen Checks:
+
+```json
+"stage": "not_applicable"
+```
+
+Die aktuelle Trennung über `evidence_class` rettet es, aber sauberer wäre ein eigener Stage Enum.
+
+## 3. Bewertung der Ergebnisse nach Domäne
+
+### 3.1 FRB: Ergebnis negativ, methodisch stark
+
+Bewertung: **B+ für Methodik, D für positive Evidenz, A für Hygiene.**
+
+FRB liefert aktuell keine unterscheidende TFPT Signatur. Das sollte klar gesagt werden. Die Nulls sind aber nützlich, weil sie den Recovery Kernel in realen, schmutzigen Daten gegen Placebos und freie Quotienten getestet haben. Besonders FRB.02b ist wertvoll, weil es verhindert, dass ein beliebiger Quotient nachträglich als TFPT Kernel gelesen wird. 
+
+**Weitere FRB Untersuchungen nur noch, wenn neue Daten kommen.** Kein FRB.10 aus Langeweile. Das Universum ist groß, aber unsere Look Elsewhere Rechnung leider auch.
+
+### 3.2 CMB Seed: stärkster Kohärenzblock, aber korreliert
+
+Bewertung: **B für Kohärenz, C für unabhängige Evidenz.**
+
+ACT DR6 misst `β = 0.215° ± 0.074°`; das liegt nahe bei `0.2424°`, aber die ACT Analyse selbst warnt vor noch nicht vollständig verstandenen Systematiken. ([arXiv][1])
+
+`Ω_b` passt extrem gut, aber Ωb ist ein Standardkosmologie Wert, also schwach unterscheidend. Die Seed Linie ist schön, aber β und Ωb sind keine völlig unabhängigen Planeten. Der neue Seed Stress mit θ13 und Cabibbo ist deshalb wertvoller als die reine β plus Ωb Darstellung.
+
+**Wichtigster nächster Test:** θ13. Wenn θ13 bei höherer Präzision stabil bei circa `0.02195` bleibt und die TFPT Formel `0.0231` nicht nachzieht, muss dieser Leg entweder als Transfer korrigiert markiert werden oder der Seed Block bekommt eine echte Delle.
+
+### 3.3 Neutrinos: θ12 ist stark, θ13 ist der Alarmmelder
+
+Bewertung: **A für θ12, C minus für θ13, B für Gesamtblock.**
+
+`sin²θ12 = 0.306747` ist aktuell sehr stark. JUNO meldet aus den ersten 59.1 Tagen `sin²θ12 = 0.3092 ± 0.0087`, also komfortabel in der Nähe. ([Indico Global (Indico)][2])
+
+`sin²θ13 = 0.0231` liegt dagegen bei etwa `+2σ`. Das ist kein Kill, aber es ist der derzeit sauberste interne Stresstest, weil θ13 am selben Seed hängt wie β, Ωb und Cabibbo.
+
+**Zusatzuntersuchung:** Reactor only Fit getrennt von NuFIT Global. Nutzt Daya Bay, RENO, Double Chooz, JUNO sobald verfügbar. Keine globalen PMNS Priors in denselben Topf, wenn ihr den Seed isoliert stressen wollt.
+
+### 3.4 Inflation: A_s entscheidet die Typisierung
+
+Bewertung: **B für r Vorhersage, C für n_s, klare Spannung bei fixem N⋆.**
+
+Bei fixem `N⋆=51.4` ist `A_s` massiv daneben, `−11.3σ`. Sobald `N⋆` profiliert wird, landet A_s bei `N⋆≈56.1` und alles sieht sauberer aus. Das ist kein kleiner technischer Punkt, sondern die zentrale Typfrage:
+
+> Ist `N⋆=51.4` Prediction of Record, oder ist das Band `[50,60]` Prediction of Record?
+
+Die README empfiehlt bereits: Band ist Record, 51.4 ist Preferred Branch, A_s ist Bridge. Das ist vernünftig. Aber dann muss `A_s fixed` als Branch Stress geführt werden, nicht als gleichwertige Prediction.
+
+CMB S4 ist hier besonders wichtig, weil `r≈0.0045` bei einer Zielpräzision um `σ(r)≈5×10⁻⁴` scharf testbar wird. 
+
+### 3.5 EHT: bester offener Shape Test
+
+Bewertung: **A für Testqualität, C für aktuellen Datenstand.**
+
+EHT ist der beste noch offene astrophysikalische Test, weil TFPT dort nicht nur eine Zahl sucht, sondern eine Form: achromatisch, `1/r²`, Sign Flip. Die reale Datenpipeline ist gestartet, aber der jetzige EVPA Bandvergleich ist noch kein Residual Test. 
+
+**Wichtig:** Zwei nahe Frequenzbänder um 227 bis 229 GHz reichen kaum, um Achromatizität robust von Faraday und Kalibration zu trennen. Für den echten Test braucht ihr Bildraum, nicht nur Netto EVPA, und idealerweise multi epoch plus externe Faraday Kontrolle.
+
+### 3.6 GW Echo: sinnvoll, aber noch Stage 0
+
+Bewertung: **B für Priorisierung, noch keine Evidenz.**
+
+GWTC 5.0 hat laut LVK 390 bestätigte Events insgesamt und 161 neue O4b Events, damit passt eure Katalogzahl. ([LIGO][3])
+
+Der Scorecard Eintrag ist korrekt als `catalog_feasibility` typisiert. Der SNR Reach `ρ_echo≈6.3` heißt: Strain Test lohnt sich. Es heißt nicht: Echo getestet. Die README formuliert das inzwischen sauber. 
+
+### 3.7 Rare Kaon: derzeit schönster downstream Treffer
+
+Bewertung: **A minus als Konsistenz, B minus als unabhängige Evidenz, weil downstream.**
+
+NA62 2016 bis 2024 misst `BR(K⁺→π⁺νν) = (9.6^{+1.9}_{−1.8})×10⁻¹¹`, sehr nah an TFPT `9.45×10⁻¹¹`. ([arXiv][4])
+
+Das ist stark. Aber es ist kein primitiver Compiler Treffer, sondern eine downstream Flavor Bridge mit Short Distance Funktionen. Genau so steht es im README und so sollte es bleiben. 
+
+Der nächste wirklich gute Test ist nicht nochmal K⁺, sondern:
+
+`R_K = BR(KL→π0νν) / BR(K+→π+νν) = 0.35238`
+
+KOTO ist mit `KL` noch weit über dem SM Bereich, aber das kommt. KOTO 2024/2025 setzt aktuell ein Limit um `2.2×10⁻⁹`, also noch datenlimitiert. ([APS Link][5])
+
+### 3.8 Myon g minus 2: kein Verdict, sondern HVP Thermometer
+
+Bewertung: **ambivalent.**
+
+Mit WP2020 dispersiv sieht TFPT gut aus. Mit WP2025 Lattice ist TFPT in Spannung. Fermilab hat 2025 das finale Ergebnis mit 127 ppb Präzision publiziert, aber die entscheidende Unsicherheit ist jetzt die Standard Model HVP Seite. ([arXiv][6])
+
+Interpretation:
+
+> Wenn Lattice HVP konsolidiert und das Residuum nahe Null bleibt, fällt der g minus 2 Seam Vertex Branch. Nicht der Kern.
+
+Das ist genau die richtige Typisierung.
+
+### 3.9 Axion: Hilltop angeschossen, Spine muss jetzt entscheiden
+
+Bewertung: **Hilltop D, Spine offen.**
+
+Der Hilltop Branch ist in echter Spannung, weil die Finite T Rechnung `Ωa h²≈0.66` liefert, also grob Faktor `5.5` zu viel. Das ist bereits in den Dokumenten sauber festgehalten. 
+
+Der Spine Branch `θi=3π/5` ist jetzt der bessere Kandidat, aber noch nicht gerechnet. Durch die semantische Doppelzeile in der Scorecard wird er momentan sogar zu groß gezählt. Erst zusammenführen, dann rechnen.
+
+### 3.10 Dark Energy w: unterschätzt als Kill Watchdog
+
+Bewertung: **A als Watchdog, aktuell data limited.**
+
+TFPT sagt `w = −1`. DESI DR2 Kombinationen liefern je nach Supernova Kombination Hinweise auf dynamische Dunkle Energie im Bereich etwa `2.8σ bis 4.2σ`, aber die Kombinationen sind systematisch und statistisch heikel. ([arXiv][7])
+
+Dieser Kanal ist wichtiger als er im Scorecard Gewicht wirkt. Wenn sich `w≠−1` systematisch kontrolliert festzieht, trifft das direkt die Λ/H₀ Engine. Nicht sofort die gesamte Theorie, aber den Kosmologie Branch ziemlich unangenehm.
+
+## 4. Lohnenswerte Zusatzuntersuchungen
+
+### P0: Scorecard Hygiene
+
+1. Axion Spine Doppelzeile zusammenführen.
+2. Seed χ² auf `1.23` normalisieren oder klar erklären, warum zwei Werte existieren.
+3. Shared Seed Kill Condition auf die README Regel ändern.
+4. EHT Signaturkatalog von “synthetisch” auf “real ingest done, residual open” ändern.
+5. EHT `independence_group` aus `phi0_seed` herausnehmen.
+6. Λ Pull als `log_order_deviation` statt `σ` führen.
+7. Für Composite Rows eigene Felder einführen: `chi2_dof`, `max_leg_pull_sigma`, `dominant_leg`.
+
+Das ist kein kosmetischer Kleinkram. Das ist die Firewall gegen Scheinpräzision.
+
+### P1: EHT Residual Imaging
+
+Das ist der lohnendste echte Astrophysik Test.
+
+Pipeline:
+
+```text
+1. EHT 2017 M87 uvfits zu polarimetrischen Bildern rekonstruieren.
+2. Mehrere Imaging Pipelines nutzen: eht-imaging, SMILI, DIFMAP Kontrolllauf.
+3. GRMHD Bibliothek mit ipole oder vergleichbarem Radiative Transfer erzeugen.
+4. χobs in Bildraum auf Photonenring Koordinaten bringen.
+5. χGRMHD abziehen.
+6. χres auf drei Nulls testen:
+   kein λ² Tail
+   1/r² Profil
+   Sign Flip bei effektiver E·B Umkehr
+7. Injection Tests:
+   künstliches 1/r² Signal
+   Faraday λ² Signal
+   D Term Leckage Signal
+   EVPA Kalibrationsoffset
+```
+
+Wichtig: Mit nur zwei nahen Frequenzbändern darf die Frequency Null nicht zu stark behauptet werden. Macht sie als Diagnose, nicht als finalen Achromatizitätsbeweis.
+
+### P1: Seed Consistency v2
+
+Nächste Version:
+
+```text
+phi0_from_beta
+phi0_from_Omega_b
+phi0_from_Cabibbo
+phi0_from_theta13_reactor_only
+phi0_from_theta13_global
+```
+
+Dazu:
+
+```text
+correlation matrix
+leave one experiment family out
+dominant pull
+posterior predictive check
+```
+
+Entscheidungslogik:
+
+```text
+theta13 > 3σ allein: PMNS θ13 transfer corrected
+zwei Seed Beine > 3σ: Shared Seed Block fällt
+beta > 3σ weg: CMB birefringence leg fällt
+```
+
+### P1: Inflation Branch Resolver
+
+Der Branch Resolver muss jetzt eine echte Entscheidung erzwingen:
+
+```text
+Mode A: fixed N⋆ = 51.4
+Mode B: profiled N⋆ in [50,60]
+Mode C: reheating prior from microphysics
+```
+
+Output:
+
+```text
+n_s, r, A_s
+joint likelihood Planck only
+joint likelihood Planck + ACT + DESI
+Bayes factor fixed vs profiled
+CMB S4 forecast
+```
+
+Wenn `N⋆=51.4` nur Preferred Branch ist, sollte `A_s fixed` nicht als volle Prediction of Record zählen. Wenn es volle Prediction ist, dann ist es eine echte Spannung und muss so stehen bleiben.
+
+### P1: Dark Energy w Watchdog
+
+Baut einen eigenen Runner:
+
+```text
+experiments/dark-energy-w-watchdog/
+```
+
+Mit:
+
+```text
+ΛCDM
+wCDM
+CPL w0-wa
+DESI DR2 BAO
+CMB prior
+Pantheon+, Union3, DESY5 getrennt
+overlap-aware combination
+```
+
+Nicht die drei SN Kombinationen einfach multiplizieren. Genau dort entstehen gerne Scheinsignifikanzen mit Doktorhut.
+
+Kill:
+
+```text
+w != -1 bei >=5σ in systematik-kontrollierten, overlap-aware Kombinationen
+```
+
+### P1: Axion Spine Finite T Solve
+
+Jetzt rechnen, nicht mehr diskutieren.
+
+Frozen Inputs:
+
+```text
+fa = Mscal / 128
+theta_i = 3π/5
+NDW = 1
+chi(T) lattice exponent
+acceptance: 0.08 <= Ωa h² <= 0.16
+```
+
+Output:
+
+```text
+Ωa h²
+sensitivity to chi(T)
+sensitivity to g*(T)
+anharmonic factor
+branch verdict
+```
+
+Kein Nachjustieren. Wenn Spine fällt, fällt der dominante Axion DM Branch. Das wäre kein Weltuntergang, nur ein Asteroid für einen Branch.
+
+### P1: Rare Kaon Joint Flavor Bridge
+
+Nicht nur K⁺ Einzelwert.
+
+```text
+BR(K+)
+BR(KL)
+R_K = 0.35238
+δ_CKM / γ
+Jarlskog
+Grossman Nir bound
+SM short distance nuisance parameters
+```
+
+Ziel: Testet die Flavor Bridge als Geometrie, nicht einen einzelnen Glückstreffer.
+
+### P2: GW Strain Level Echo
+
+Stage 1 erst starten, wenn ihr echte Strain Pipeline habt.
+
+Minimum:
+
+```text
+High ringdown SNR events
+Kerr QNM subtraction
+residual matched filter
+lag free
+phase free
+q fixed at 64/729
+free q control
+injection recovery
+stacked Bayes factor
+```
+
+Interpretation:
+
+```text
+free q gewinnt fern vom Kernel: kein TFPT Signal
+q deutlich größer als 64/729 über mehrere Events: Kanal fällt
+kein Echo trotz Sensitivität: null
+```
+
+### P2: Higgs Near Criticality RGE
+
+Das ist sehr lohnend, weil es einen echten Standard Model Running Kanal trifft.
+
+```text
+λ(MPl)
+βλ(MPl)
+scan mt, αs, mH
+pull to double critical surface
+```
+
+Nicht als Compiler Output, sondern downstream Bridge. Der Frontier Text hält genau diese Grenze: Frontier und QCD/Kosmologie Transfers dürfen nicht zu primitiven Compiler Outputs gemacht werden. 
+
+### P2: Leptogenesis Scalaron Decuple
+
+Frozen Route:
+
+```text
+M1 = Mscal φ0² / AΛ
+mtilde1 = m3 / AΛ
+AΛ = 10
+δνCP = 4π/3
+```
+
+Full flavored Boltzmann, nicht nur eine Estimate Formel.
+
+Kill:
+
+```text
+ηB = 6.1e−10 um Faktor >3 verfehlt
+```
+
+### P2: QGEO DtN Mark Locality
+
+Nicht in die empirische Scorecard. Theory Contract.
+
+Ziel:
+
+```text
+Λ = |Dθ| + Mf
+f(θ) = Σ_j g(θ − jπ/2)
+=> Fourier support only 0 mod 4
+=> [ρ, Λ] = 0
+=> ω ∘ ρ = ω
+```
+
+Negative Controls:
+
+```text
+Z3 marks
+4 generic marks
+off character matrix elements
+```
+
+Das ist weniger glamourös als EHT, aber vermutlich fundamentaler. Mathematische Arbeit hat leider selten Nebelmaschine.
+
+## 5. Meine Gesamtbewertung
+
+### Wissenschaftliche Disziplin: 8.5 von 10
+
+Die Typisierung ist stark. Firewall, Stage, Status, Evidence Class, Independence Groups, Kill Conditions: Das ist genau die richtige Struktur. Besonders gut ist, dass interne Checks und korrelierte Seed Beine nicht als unabhängige externe Treffer zählen. 
+
+### Empirische Stützung: 5.5 von 10
+
+Es gibt viele schöne Konsistenzen, aber noch keine unterscheidende Signatur. Die besten positiven Punkte sind `θ12`, K⁺, CMB β und Λ Hierarchie. Aber jeder hat eine Einschränkung: θ12 braucht weitere JUNO Präzision, K⁺ ist downstream, β hat Systematiken, Λ ist Metrologie gefährdet.
+
+### Falsifizierbarkeit: 8 von 10
+
+Sehr gut. `θ13`, `A_s`, `r`, `w`, EHT, K⁺, g minus 2 Baseline und Axion Spine können echte Branches beschädigen. Das ist ein gutes Zeichen. Eine Theorie ohne Sollbruchstellen ist meistens nur ein sehr höflicher Mythos.
+
+### Aktuelles Risiko: mittel bis hoch
+
+Die vier Risikopunkte sind nicht dekorativ:
+
+`A_s fixed N⋆=51.4` ist stark gespannt.
+`θ13` ist der Seed Stress.
+`g−2` kippt mit Lattice HVP.
+`Axion Hilltop` ist überproduzierend.
+
+Keiner davon tötet den Compiler Kern. Aber alle vier zwingen euch, die Bridge Typisierung ernst zu nehmen.
+
+## 6. Konkrete nächste Agent Anweisung
+
+```text
+Branch: empirical-v4-decision-tests
+
+P0:
+1. Merge duplicate axion spine rows.
+2. Update shared seed chi2/dof to one canonical value.
+3. Replace shared seed kill condition with the 3σ leg rule and two-leg kill rule.
+4. Change EHT independence_group from phi0_seed to c3_topform_horizon.
+5. Replace Lambda pull_sigma with log_order_deviation.
+6. Update signature catalog EHT wording: real ingest done, GRMHD residual open.
+7. Add composite-row fields: chi2_dof, max_leg_pull_sigma, dominant_leg.
+
+P1:
+8. Run EHT imaging residual pipeline with GRMHD subtraction.
+9. Build seed-consistency v2 with reactor-only theta13 and covariance.
+10. Build inflation branch resolver with fixed vs profiled Nstar Bayes comparison.
+11. Build dark-energy-w-watchdog with overlap-aware DESI DR2 combinations.
+12. Run axion spine finite-T solve without tuning.
+13. Build rare-kaon joint bridge, including R_K and CKM nuisance parameters.
+
+P2:
+14. Start GW strain-level echo only after injection and free-q controls exist.
+15. Run Higgs criticality RGE nuisance scan.
+16. Run scalaron-decuple leptogenesis Boltzmann solve.
+17. Move QGEO DtN mark locality into theory-contracts, not evidence_scorecard.
+```
+
+## Bottom line
+
+Der Stand ist jetzt seriös genug, um externe Kritik auszuhalten, aber noch nicht stark genug, um “empirisch bestätigt” auch nur zu flüstern. Die richtige Aussage ist:
+
+> **TFPT hat einen bemerkenswert kohärenten, typisierten Konsistenzkörper, mehrere echte Stresspunkte und inzwischen gute Kill Tests. Die nächsten Entscheidungen kommen nicht aus mehr Suchräumen, sondern aus härteren Läufen: EHT Residual, Seed θ13, Inflation N⋆, DESI w, Axion Spine und Ftransfer Solver.**
+
+Das ist eine gute Lage. Nicht bequem, aber gut. Bequeme Theorien schlafen ein. This one is at least caffeinated.
+
+[1]: https://arxiv.org/abs/2509.13654?utm_source=chatgpt.com "Cosmic Birefringence from the Atacama Cosmology Telescope Data Release 6"
+[2]: https://indico.global/event/484/contributions/143473/attachments/67640/131077/JUNO_dbick_LLWI26.pdf?utm_source=chatgpt.com "JUNO – Status and First Results"
+[3]: https://ligo.org/detections/o4b-catalog/?utm_source=chatgpt.com "O4B CATALOG – LSC - LIGO Scientific Collaboration"
+[4]: https://arxiv.org/abs/2604.12649?utm_source=chatgpt.com "New measurement of $K^+\toπ^+ν\barν$ branching ratio at ..."
+[5]: https://link.aps.org/doi/10.1103/PhysRevLett.134.081802?utm_source=chatgpt.com "Search for the Decay at the J-PARC KOTO Experiment"
+[6]: https://arxiv.org/abs/2506.03069?utm_source=chatgpt.com "Measurement of the Positive Muon Anomalous Magnetic Moment to 127 ppb"
+[7]: https://arxiv.org/html/2504.15336v1?utm_source=chatgpt.com "On DESI's DR2 exclusion of ΛCDM"

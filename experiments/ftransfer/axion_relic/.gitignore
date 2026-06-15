@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+# derived run output (regenerable via spine_finiteT_solve.py)
+spine_results.json
+spine_independent_results.json

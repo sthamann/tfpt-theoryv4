@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[project]
+name = "tfpt-gw-speed"
+version = "0.1.0"
+description = "TFPT v_GW = c null test from GW170817 + GRB170817A (single Lorentz cone falsifier)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Stefan Hamann" }]
+keywords = ["TFPT", "gravitational waves", "GW170817", "Lorentz cone", "multimessenger"]
+dependencies = ["numpy>=1.26"]
+
+[project.optional-dependencies]
+dev = ["ruff>=0.5"]
+
+[project.scripts]
+tfpt-gwspeed = "tfpt_gwspeed.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tfpt_gwspeed"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "NPY"]

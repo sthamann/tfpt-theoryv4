@@ -1,0 +1,101 @@
+{
+  "days": [
+    "April05",
+    "April06",
+    "April10",
+    "April11"
+  ],
+  "per_band": {
+    "April05": {
+      "hi": {
+        "band": "April05_hi",
+        "freq_hz": 229070703125.0,
+        "lambda_m": 0.0013087333033435023,
+        "q_net": 0.031832363456487656,
+        "u_net": -0.023913659155368805,
+        "evpa_deg": -18.457621033393576,
+        "m_lin_net": 0.1843529890953897,
+        "n_vis": 4688
+      },
+      "lo": {
+        "band": "April05_lo",
+        "freq_hz": 227070703125.0,
+        "lambda_m": 0.0013202604029237865,
+        "q_net": 0.026961367577314377,
+        "u_net": -0.02124948799610138,
+        "evpa_deg": -19.121631185634563,
+        "m_lin_net": 0.1460701845008057,
+        "n_vis": 4688
+      }
+    },
+    "April06": {
+      "hi": {
+        "band": "April06_hi",
+        "freq_hz": 229070703125.0,
+        "lambda_m": 0.0013087333033435023,
+        "q_net": 0.021830247715115547,
+        "u_net": -0.014972939155995846,
+        "evpa_deg": -17.22273135735119,
+        "m_lin_net": 0.07534432570375876,
+        "n_vis": 6871
+      },
+      "lo": {
+        "band": "April06_lo",
+        "freq_hz": 227070703125.0,
+        "lambda_m": 0.0013202604029237865,
+        "q_net": 0.01810074783861637,
+        "u_net": -0.014397887513041496,
+        "evpa_deg": -19.24990554891165,
+        "m_lin_net": 0.06858562504792338,
+        "n_vis": 6515
+      }
+    },
+    "April10": {
+      "hi": {
+        "band": "April10_hi",
+        "freq_hz": 229070703125.0,
+        "lambda_m": 0.0013087333033435023,
+        "q_net": 0.02771836891770363,
+        "u_net": -0.012664644978940487,
+        "evpa_deg": -12.277934910253725,
+        "m_lin_net": 0.08401690931852929,
+        "n_vis": 2010
+      },
+      "lo": {
+        "band": "April10_lo",
+        "freq_hz": 227070703125.0,
+        "lambda_m": 0.0013202604029237865,
+        "q_net": 0.02627382054924965,
+        "u_net": -0.004694363567978144,
+        "evpa_deg": -5.065093566275432,
+        "m_lin_net": 0.07740362842361614,
+        "n_vis": 1814
+      }
+    },
+    "April11": {
+      "hi": {
+        "band": "April11_hi",
+        "freq_hz": 229070703125.0,
+        "lambda_m": 0.0013087333033435023,
+        "q_net": 0.030423417687416077,
+        "u_net": -0.00913225021213293,
+        "evpa_deg": -8.354135644378859,
+        "m_lin_net": 0.0851609134855478,
+        "n_vis": 6352
+      },
+      "lo": {
+        "band": "April11_lo",
+        "freq_hz": 227070703125.0,
+        "lambda_m": 0.0013202604029237865,
+        "q_net": 0.027147388085722923,
+        "u_net": -0.009049531072378159,
+        "evpa_deg": -9.217855932347453,
+        "m_lin_net": 0.07626255078560638,
+        "n_vis": 5877
+      }
+    }
+  },
+  "delta_evpa_deg": 0.9144841780520634,
+  "rotation_measure": 526676.5379853887,
+  "verdict": "REAL EHT M87 2017 polarimetry ingested (4 days x 2 bands). Raw band-to-band net-EVPA rotation = +0.91 deg (implied RM ~ 5.27e+05 rad/m^2). This is the RAW source chromaticity; the TFPT achromatic-residual nulls (1/r^2 profile, sign-flip) need the GRMHD-subtracted residual image (eht-imaging + GRMHD library) -> those remain DATA-LIMITED. Step 1 (real-data ingest + achromaticity diagnostic) done."
+}

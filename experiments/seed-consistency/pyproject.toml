@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[project]
+name = "tfpt-seed-consistency"
+version = "0.1.0"
+description = "TFPT shared-seed stress test: invert beta/Omega_b/Cabibbo/theta13 to phi0, joint fit + leave-one-out + dominant pull"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Stefan Hamann" }]
+keywords = ["TFPT", "phi0", "seed", "theta13", "Cabibbo", "leave-one-out"]
+dependencies = ["numpy>=1.26"]
+
+[project.optional-dependencies]
+dev = ["ruff>=0.5"]
+
+[project.scripts]
+tfpt-seed = "tfpt_seed.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tfpt_seed"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "NPY"]

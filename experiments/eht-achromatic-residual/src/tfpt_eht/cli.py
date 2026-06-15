@@ -16,9 +16,15 @@ precision (catches accidental drift between the constants).
 from __future__ import annotations
 
 import argparse
+import dataclasses
+import json
 import math
 import sys
 from collections.abc import Sequence
+from pathlib import Path
+
+from .real_data import run_real_achromaticity
+from .residual_pipeline import report as report_pipeline
 
 import numpy as np
 
@@ -167,6 +173,52 @@ def _cmd_demo(args: argparse.Namespace) -> int:
     return 0 if report.detection == (args.case == "signal") else 1
 
 
+def _cmd_inject(args: argparse.Namespace) -> int:
+    from tfpt_eht.injection import run_injection_suite
+
+    print("TFPT EHT residual pipeline -- injection-recovery suite")
+    print("=" * 64)
+    print("Real M87 GRMHD imaging stays data_limited; this validates the residual + 3-null")
+    print("machinery classifies four controlled injections correctly.\n")
+    results = run_injection_suite(image_size=args.image_size)
+    n_ok = 0
+    for r in results:
+        flag = "OK" if r.correct else "MISCLASSIFIED"
+        nl = " ".join(f"{k}={'P' if v else 'F'}" for k, v in r.nulls.items())
+        print(f"  {r.kind:16s} expect {r.expected:24s} got {r.observed:24s} [{flag}]  ({nl})")
+        n_ok += int(r.correct)
+    print(f"\n  {n_ok}/{len(results)} injections correctly classified.")
+    out = Path(__file__).resolve().parents[2] / "results" / "eht_injection_recovery.json"
+    out.parent.mkdir(exist_ok=True)
+    out.write_text(json.dumps([dataclasses.asdict(r) for r in results], indent=2), encoding="utf-8")
+    print(f"  Wrote {out}")
+    return 0 if n_ok == len(results) else 1
+
+
+def _cmd_realdata(args: argparse.Namespace) -> int:
+    r = run_real_achromaticity()
+    print("Real EHT M87 2017 polarimetry -- achromaticity diagnostic")
+    print("-" * 60)
+    if not r.available:
+        print(f"  {r.verdict}")
+        return 1
+    for day, b in r.per_band.items():
+        print(f"  {day}: hi {b['hi']['freq_hz']/1e9:.3f} GHz EVPA={b['hi']['evpa_deg']:+.1f} deg "
+              f"|m|={b['hi']['m_lin_net']:.3f}  |  lo {b['lo']['freq_hz']/1e9:.3f} GHz "
+              f"EVPA={b['lo']['evpa_deg']:+.1f} deg |m|={b['lo']['m_lin_net']:.3f}")
+    print(f"  mean band-to-band dEVPA = {r.delta_evpa_deg:+.2f} deg ; implied RM ~ "
+          f"{r.rotation_measure:.2e} rad/m^2")
+    print(f"\n  -> {r.verdict}")
+    out = Path(__file__).resolve().parents[2] / "results" / "eht_real_achromaticity.json"
+    out.parent.mkdir(exist_ok=True)
+    out.write_text(json.dumps({"days": r.days, "per_band": r.per_band,
+                               "delta_evpa_deg": r.delta_evpa_deg,
+                               "rotation_measure": r.rotation_measure,
+                               "verdict": r.verdict}, indent=2), encoding="utf-8")
+    print(f"\nWrote {out}")
+    return 0
+
+
 def _build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="tfpt-eht",
@@ -191,6 +243,22 @@ def _build_parser() -> argparse.ArgumentParser:
         "audit", help="check that the four expressions of the TFPT coupling agree"
     )
     p_audit.set_defaults(func=_cmd_audit)
+
+    p_real = sub.add_parser(
+        "realdata", help="ingest real EHT M87 2017 polarimetry + achromaticity diagnostic"
+    )
+    p_real.set_defaults(func=_cmd_realdata)
+
+    p_inj = sub.add_parser(
+        "inject", help="injection-recovery suite (validate the residual + 3-null pipeline)"
+    )
+    p_inj.add_argument("--image-size", type=int, default=96)
+    p_inj.set_defaults(func=_cmd_inject)
+
+    p_pipe = sub.add_parser(
+        "pipeline", help="GRMHD residual-imaging pipeline readiness (what is runnable / blocked)"
+    )
+    p_pipe.set_defaults(func=lambda _a: report_pipeline())
 
     return parser
 

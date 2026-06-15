@@ -8,6 +8,7 @@ from pathlib import Path
 
 from . import constants
 from .seed_line import run_seed_line
+from .shared_seed import run_shared_seed
 
 RESULTS = Path(__file__).resolve().parents[2] / "results"
 
@@ -57,8 +58,22 @@ def main(argv: list[str] | None = None) -> int:
 
     print(f"\n-> {r.verdict}")
 
+    # ---- shared-seed meta-test: one phi0 -> four independent observables -----
+    s = run_shared_seed()
+    print("\n[shared_seed]  one phi0 -> beta + Omega_b + sin^2(theta13) + Cabibbo")
+    print(f"    frozen phi0 = {s.phi0_frozen:.5f}")
+    for leg in s.legs:
+        print(f"    {leg.observable:14s} {leg.measured:.5g} -> phi0={leg.phi0_implied:.5f}"
+              f"+/-{leg.phi0_implied_err:.5f}  ({leg.z_vs_frozen:+.2f} sigma)  [{leg.source}]")
+    print(f"    combined chi2/dof = {s.combined_chi2:.2f}/{s.dof} ; max|z| = {s.spread_max_z:.2f}")
+    print(f"    -> {s.verdict}")
+
     RESULTS.mkdir(exist_ok=True)
-    out = {"constants": c, "modes": r.modes, "verdict": r.verdict}
+    out = {"constants": c, "modes": r.modes, "verdict": r.verdict,
+           "shared_seed": {"phi0_frozen": s.phi0_frozen, "combined_chi2": s.combined_chi2,
+                           "dof": s.dof, "max_z": s.spread_max_z,
+                           "consistent": s.combined_consistent, "verdict": s.verdict,
+                           "legs": [vars(leg) for leg in s.legs]}}
     (RESULTS / "results.json").write_text(json.dumps(out, indent=2), encoding="utf-8")
     print(f"\nWrote {RESULTS / 'results.json'}")
     return 0

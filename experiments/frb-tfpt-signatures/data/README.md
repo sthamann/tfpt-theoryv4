@@ -1,9 +1,10 @@
 # Data provenance
 
-The VizieR/IOPscience tables are **not committed**; restore them with
-`python scripts/fetch_data.py`. The Blinkverse export, the FRB 20240114A catalog,
-and the FRB.01 sub-band ToA table are **user-supplied / derived**. Raw pulse
-archives live in `../new-data/` (provenance + FRB.01 source material).
+The `data/` directory is **gitignored** (`data/*` in the repo-root and local
+`.gitignore`); **only this `README.md` and the small derived `frb01_subband_toas.csv`
+are committed.** Every downloaded/large table below is gitignored and re-obtained from
+the cited source (mostly `python scripts/fetch_data.py`). Raw pulse archives live in
+`../new-data/` (also gitignored; FRB.01 source material).
 
 ## Fetchable tables (`scripts/fetch_data.py`)
 

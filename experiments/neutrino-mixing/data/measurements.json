@@ -1,0 +1,21 @@
+{
+  "sin2_theta12": [
+    {"experiment": "NuFIT 6.0 (NO, 2024)", "value": 0.307, "sigma": 0.012,
+     "reference": "NuFIT 6.0 www.nu-fit.org"},
+    {"experiment": "JUNO first run (2025)", "value": 0.3092, "sigma": 0.0087,
+     "reference": "JUNO 59.1 d, compatible with TFPT 0.306747"}
+  ],
+  "sin2_theta13": [
+    {"experiment": "NuFIT 6.0 (NO, 2024)", "value": 0.02195, "sigma": 0.00058,
+     "reference": "NuFIT 6.0; Daya Bay-dominated"}
+  ],
+  "sin2_theta23": [
+    {"experiment": "NuFIT 6.0 (NO, lower octant)", "value": 0.470, "sigma": 0.017,
+     "reference": "NuFIT 6.0; octant ambiguous (also an upper-octant solution ~0.56)"}
+  ],
+  "delta_CKM_deg": [
+    {"experiment": "LHCb gamma combination (2024)", "value": 64.6, "sigma": 2.8,
+     "reference": "LHCb CKM gamma 2024 combination; delta_CKM ~ gamma in Wolfenstein"}
+  ],
+  "downloaded": "2026-06-15 (published global-fit summary values)"
+}

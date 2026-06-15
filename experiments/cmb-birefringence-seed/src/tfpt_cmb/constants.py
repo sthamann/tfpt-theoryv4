@@ -26,6 +26,9 @@ BETA_RAD: float = PHI0 / (4.0 * math.pi)              # birefringence angle [rad
 BETA_DEG: float = math.degrees(BETA_RAD)              # ~0.2424 deg
 SEED_SLOPE: float = 4.0 * math.pi - 1.0              # the frozen Omega_b/beta_rad line
 OMEGA_B: float = SEED_SLOPE * BETA_RAD                # ~0.04894
+# the SAME seed phi0 fixes two more observables (horizon_readouts; predictions.tex):
+SIN2_THETA13: float = PHI0 * math.exp(-5.0 / 6.0)    # phi0 * e^(-5/6) ~ 0.0231
+CABIBBO: float = math.sqrt(PHI0 * (1.0 - PHI0))      # sqrt(phi0(1-phi0)) ~ 0.224376
 
 
 def summary() -> dict[str, float]:
@@ -36,4 +39,6 @@ def summary() -> dict[str, float]:
         "beta_deg": BETA_DEG,
         "seed_slope_4pi_minus_1": SEED_SLOPE,
         "Omega_b": OMEGA_B,
+        "sin2_theta13": SIN2_THETA13,
+        "cabibbo_lambda": CABIBBO,
     }

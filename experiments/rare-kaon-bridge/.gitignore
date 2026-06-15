@@ -1,0 +1,12 @@
+.venv/
+.ruff_cache/
+__pycache__/
+*.egg-info/
+build/
+dist/
+*.pyc
+results/*.json
+# data dir: keep README + the hand-authored measurements.json (provenance/inputs)
+data/*
+!data/README.md
+!data/measurements.json

@@ -1,0 +1,11 @@
+{
+  "GW170817": {
+    "delta_t_grb_s": 1.74,
+    "delta_t_grb_sigma_s": 0.05,
+    "distance_Mpc": 40.0,
+    "emission_window_s": [0.0, 10.0],
+    "published_bound_dv_over_c": [-3.0e-15, 7.0e-16],
+    "reference": "Abbott+ 2017, ApJL 848 L13 (LIGO/Virgo + Fermi-GBM/INTEGRAL); GRB170817A arrived 1.74 s after the BNS merger"
+  },
+  "downloaded": "2026-06-15 (published multimessenger bound)"
+}

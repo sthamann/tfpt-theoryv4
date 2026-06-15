@@ -1,0 +1,11 @@
+.venv/
+.ruff_cache/
+__pycache__/
+*.egg-info/
+build/
+dist/
+*.pyc
+results/*.json
+data/*
+!data/README.md
+!data/measurements.json

@@ -1,0 +1,20 @@
+{
+  "comment": "Rare-kaon flavour-bridge inputs. TFPT predicts BR(K+), BR(KL), R_K (geometry), Cabibbo lambda and delta_CKM; |Vcb|, |Vub| and the SM short-distance functions are EXTERNAL nuisances (this is why the channel is a downstream bridge, not a primitive compiler hit).",
+  "BR_Kp_pinunu": {
+    "measured": 9.6e-11, "sigma_plus": 1.9e-11, "sigma_minus": 1.8e-11,
+    "experiment": "NA62 2016-2024", "reference": "arXiv:2604.12649"
+  },
+  "BR_KL_pi0nunu": {
+    "limit_90CL": 2.2e-9, "experiment": "KOTO 2024/2025",
+    "reference": "KOTO; PRL 134 081802 (still far above SM/TFPT)"
+  },
+  "BR_Kp_SM": {"value": 8.4e-11, "sigma": 1.0e-11, "reference": "Buras et al. SM (CKM-input limited)"},
+  "BR_KL_SM": {"value": 3.4e-11, "sigma": 0.6e-11, "reference": "Buras et al. SM"},
+  "gamma_CKM_deg": {"value": 64.6, "sigma": 2.8, "experiment": "LHCb 2024 combination",
+                    "reference": "LHCb gamma combination; delta_CKM ~ gamma in Wolfenstein"},
+  "jarlskog": {"value": 3.08e-5, "sigma": 0.13e-5, "reference": "PDG 2024 CKM fit"},
+  "ckm_nuisance": {"Vcb": 0.0409, "Vcb_sigma": 0.0011, "Vub": 0.00369, "Vub_sigma": 0.00011,
+                   "reference": "PDG 2024 (external, NOT TFPT-predicted)"},
+  "grossman_nir_coeff": {"value": 4.3, "reference": "Grossman-Nir isospin bound: BR(KL) <= 4.3 BR(K+)"},
+  "downloaded": "2026-06-15 (published summary values)"
+}

@@ -1,0 +1,23 @@
+{
+  "comment": "Buttazzo et al. 2013 (arXiv:1307.3536) NNLO fit of the SM couplings at the Planck scale, plus the input pole masses and their uncertainties. lambda(M_Pl) and the M_Pl couplings (eq.61) are linear fits in (M_t, M_h, alpha_s); beta_lambda(M_Pl) is computed at 1-loop from those couplings. TFPT predicts NEAR-CRITICALITY: the double-critical surface lambda(M_Pl)=0 AND beta_lambda(M_Pl)=0.",
+  "inputs": {
+    "M_t": {"value": 173.34, "sigma_exp": 0.76, "sigma_th": 0.3, "ref": "Tevatron+LHC 2013 pole mass"},
+    "M_h": {"value": 125.15, "sigma": 0.24, "ref": "ATLAS+CMS pole mass"},
+    "alpha_s_MZ": {"value": 0.1184, "sigma": 0.0007, "ref": "PDG MSbar 5-flavour"},
+    "M_W": {"value": 80.384, "sigma": 0.014, "ref": "PDG pole mass"}
+  },
+  "fit_MPl": {
+    "comment": "couplings at M_Pl (Buttazzo 2013 eq.61); g1 is GUT-normalised (g1^2 = 5/3 g_Y^2)",
+    "lambda": {"const": -0.0143, "d_Mt": -0.0066, "d_alpha_per_0.0007": 0.0018, "d_Mh": 0.0029},
+    "g1": {"const": 0.6154, "d_Mt": 0.0003, "d_MW_per_0.014": -0.0006},
+    "g2": {"const": 0.5055},
+    "g3": {"const": 0.4873, "d_alpha_per_0.0007": 0.0002},
+    "yt": {"const": 0.3825, "d_Mt": 0.0051, "d_alpha_per_0.0007": -0.0021}
+  },
+  "stability": {
+    "Mh_stability_bound": 129.6, "Mh_bound_sigma": 1.5,
+    "metastability_significance_published": 2.8,
+    "ref": "Buttazzo 2013 eq.65: absolute stability excluded at 2.8 sigma"
+  },
+  "downloaded": "2026-06-15 (published fit coefficients)"
+}

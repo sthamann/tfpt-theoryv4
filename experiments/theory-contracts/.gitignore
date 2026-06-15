@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+# derived run output (regenerable via qgeo_dtn_mark_locality.py)
+qgeo_dtn_results.json

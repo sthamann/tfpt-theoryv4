@@ -55,6 +55,34 @@ observables and the line holds within errors. The β errors are wide and the joi
 covariance is unmodelled, so no combined significance is claimed. The BBN `Ω_b` leg
 (CMB-independent) at 0.04σ is the sharpest single point.
 
+## Shared-seed meta-test — one `φ0` → **four** independent observables
+
+The same retarded seed `φ0` fixes four observables in completely different sectors
+(`shared_seed.py`):
+
+```
+β_rad         = φ0/(4π)              (CMB birefringence)
+Ω_b           = (4π−1)φ0/(4π)        (baryon fraction)
+sin²θ₁₃       = φ0·e^(−5/6)          (reactor neutrino angle)   = 0.0231
+λ_Cabibbo     = √(φ0(1−φ0))          (CKM Cabibbo angle)        = 0.224376
+```
+
+Inverting each measurement back to the seed it implies:
+
+| observable | measured | → implied φ0 | vs frozen 0.05317 |
+|---|---|---|---|
+| β (ACT DR6) | 0.215° | 0.04715 | −0.37σ |
+| Ω_b (BBN, h fixed) | 0.02218 h² | 0.05311 | −0.05σ |
+| sin²θ₁₃ (NuFIT 6.0) | 0.02195 | 0.05051 | **−2.0σ** (known mild tension) |
+| λ_Cabibbo (PDG) | 0.22431 | 0.05314 | **−0.08σ** |
+
+→ **combined χ²/dof = 1.23** (deviation from the joint best-fit seed, dof = n−1 — the proper
+internal-agreement statistic, canonical and identical to `seed-consistency`), max |z| = 2.0:
+four independent data worlds (CMB, BBN, reactor neutrinos, CKM) point at the *same* seed `φ0`.
+Strongest meta-signature, but **not validated** — sector covariances are unmodelled and
+θ₁₃/Cabibbo are seed-anchored low-energy predictions (RG/short-distance completion not computed
+here). The dominant pull is θ₁₃ (see `seed-consistency` for the full LOO/dominant-pull/PPC).
+
 ## Reproduce
 
 ```bash

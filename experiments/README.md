@@ -1,41 +1,686 @@
 # TFPT Experiments
 
 Reproduzierbare Build-Targets, die Aspekte der TFPT-Theorie beweisen, simulieren oder
-operationalisieren. Jedes Unterprojekt ist eigenständig und hat sein eigenes README
-mit Setup- und Run-Anleitung.
+**empirisch gegen echte, öffentliche Daten** testen. Jedes Unterprojekt ist
+eigenständig (eigene Abhängigkeiten, eigener Build, eigene CLI als Audit-Surface) und
+hat ein eigenes README mit Setup-, Run- und Detailbeschreibung. Dieses Dokument ist
+die **Gesamtübersicht aller Untersuchungen, Tests, Datenquellen und Ergebnisse**.
+
+> **Firewall (gilt überall):** Diese Experimente sind **Suchflächen und
+> Konsistenz-Checks**, keine load-bearing Claims. FRBs/Echos/Horizont-Signale sind
+> *residuale Boundary-Recovery-Muster*, **nicht** neue Gravitation und **nicht** direkte
+> Hawking-Strahlung. Frontier-Observablen (Koide, η_B, Axion, `m_p/m_e`, g−2, Kaonen)
+> sind `F_transfer`-Interfaces bzw. *downstream bridges* — **nie** primitive
+> Compiler-Outputs. Nichts wird still nach `[E]` hochgestuft.
+
+---
 
 ## Inhalt
 
 | Ordner | Zweck | Status |
 | --- | --- | --- |
-| `lean4-carrier-rigidity/` | Maschineller Beweis des Carrier-Polynoms `6Y² − Y − 1 = 0` und der Hyperladungs-Spur in Lean 4. Macht das zentrale Theorem aus Paper 2 als formal verifiziertes Computer-Theorem verfügbar. | aktiv |
-| `eht-achromatic-residual/` | Python-Pipeline für den achromatischen, dyonischen Residual-Test aus Paper 3 (`β_BH(r) ~ 16 c₃⁴ Q_e Q_m / r²`). Generiert synthetische EHT-Daten, führt drei unabhängige Null-Tests durch und ist auf reale EHT-Daten skalierbar. **(search.txt §4: EHT-Horizon-Collar)** | aktiv |
-| `frb-tfpt-signatures/` | Preregistrierte, multi-Source, surrogat-kalibrierte Suche nach residualen Boundary-Recovery-Signaturen in echten FRB-Daten (FRB.01 native Dispersion · FRB.02/02b Echo-Quotienten + Free-Quotient-Null · FRB.03–04/08 Polarisation/μ4 · FRB.09 Recovery-Clock). **(search.txt §1,2,6)** Verdict: `not_confirmed_not_refuted`. | aktiv |
-| `cmb-birefringence-seed/` | Cross-Domain-Seed-Linie: ein `φ₀` sagt Doppelbrechung `β = 0.2424°` **und** Baryon-Fraktion `Ω_b = (4π−1)β_rad` voraus; vier Modi (`beta_only/omega_b_only/joint_independent/joint_covariance_placeholder`) + Unit-Guard gegen `Ω_b` vs `Ω_b h²`. **(search.txt §3, Prio 1)** Verdict: **konsistent mit der Seed-Linie** (β 0.37σ, Ω_b 0.04σ BBN, Linie 0.35σ; keine kombinierte Signifikanz). | aktiv |
-| `lab-residuals/` | `F_transfer`-Laborkanäle, alle **[C]**: Myon g−2 (`Δaµ = 45/(2¹⁹π⁹)`, **pro SM-Baseline** gesplittet), seltene Kaonen (`K⁺→π⁺νν`), Axion (Marker + Hilltop/Spine-Branch). **(search.txt §7,8,9)** Ergebnis: Kaon **downstream bridge, sehr starke Konsistenz mit NA62 2016–2024 (−0.08σ)**, g−2 baseline-abhängig (viable dispersiv / tension lattice), Axion datenlimitiert. | aktiv |
-| `gw-ringdown-echo/` | TFPT-Ringdown-Echo-Amplitudenquotient `≤ (2/3)⁶`: **Sensitivity-Census auf Katalogebene** (GWTC-5.0, 390 kanonische Events; lokale Rohzeilenzahl 391 separat in `event_count_audit.md` auditiert). **(search.txt §5)** Stacked echo-SNR ≈ 6.3 → **Strain-Level-Test offen**, kein Echo-Claim auf Katalogebene. | aktiv (Stage 0) |
-| `quantum-recovery-analog/` | **Geparkt**: Analog-Recovery `I_n ~ (64/729)^n`. Kein direkter physischer Datensatz → bewusst nicht gebaut. **(search.txt §10)** | geparkt |
-| `ftransfer/` | Theorieseitige `F_transfer`-Solver (Axion-Relik, Koide-Source-to-Pole, Leptogenese-Boltzmann, QCD-Matching `m_p/m_e`). | aktiv |
+| `lean4-carrier-rigidity/` | Maschineller Beweis des Carrier-Polynoms `6Y² − Y − 1 = 0` und der Hyperladungs-Spur in Lean 4. Zentrales Theorem aus Paper 2 als formal verifiziertes Computer-Theorem. | aktiv |
+| `frb-tfpt-signatures/` | Preregistrierte, multi-Source, surrogat-kalibrierte FRB-Suche (FRB.01–FRB.09 + FRB.02b). **(search.txt §1,2,6)** Verdict: `not_confirmed_not_refuted`. | aktiv |
+| `cmb-birefringence-seed/` | Cross-Domain-Seed-Linie: ein `φ₀` → `β` **und** `Ω_b`; **Shared-Seed-Erweiterung** φ₀→β+Ω_b+θ13+Cabibbo (χ²/dof=1.23, kanonisch wie `seed-consistency`). **(search.txt §3, Prio 1)** | aktiv |
+| `cmb-inflation-scalaron/` | Starobinsky/Scalaron `n_s, r, A_s` aus `c₃` vs Planck/BICEP-Keck/DESI/CMB-S4; **scharf falsifizierbar** (`r≈0.0045`). | aktiv |
+| `neutrino-mixing/` | PMNS `θ12/θ13/θ23` + CKM `δ` vs NuFIT 6.0/JUNO/LHCb — **prediction_of_record** (θ12 −0.02σ). | aktiv |
+| `eht-achromatic-residual/` | Achromatischer dyonischer Residual-Test `β_BH(r) ∝ 1/r²` (3 Null-Tests). **(search.txt §4)** **Echte EHT-M87-2017-Polarimetrie ingestiert** (`tfpt-eht realdata`); **Injection-Recovery-Suite** (`tfpt-eht inject`, 4/4 korrekt klassifiziert); GRMHD-Residual-Nulls datenlimitiert. | aktiv |
+| `seed-consistency/` | Shared-Seed-Stresstest: β/Ω_b/Cabibbo/θ13 → φ₀, Joint-Fit + LOO + Dominant-Pull. **v2** GLS/PPC; **v3** reactor-only aus Daya Bay/RENO/Double Chooz (komb. `sin²θ13=0.02204`, χ²/dof=1.00, θ13 −1.62σ), NuFIT-global nur Shadow. | aktiv |
+| `gw-ringdown-echo/` | Ringdown-Echo-Amplitudenquotient `≤ (2/3)⁶`, Katalog-Feasibility auf GWTC-5.0. **(search.txt §5)** Strain-Level-Test offen. | aktiv (Stage 0) |
+| `gw-speed-multimessenger/` | `v_GW=c` Null-Test aus GW170817+GRB170817A (namentlicher Falsifikator). | aktiv |
+| `gw-ringdown-spectroscopy/` | **Schwarzloch-direkt**: QNM `ω_R/T_H→ln3=ln N_fam`, Flächenquant `4 ln3=ln81` — strukturell exakt, **datenlimitiert**. | aktiv |
+| `lab-residuals/` | `F_transfer`-Laborkanäle (g−2, seltene Kaonen, Axion), alle **[C]**; **Haloskop-Overlay** (`tfpt-lab haloscope`, DFSZ/KSVZ bei 23.8 µeV + Plot). **(search.txt §7,8,9)** | aktiv |
+| `rare-kaon-bridge/` | **Flavor-Bridge als Geometrie**: `R_K`, BR(K⁺), BR(KL), `δ_CKM/γ`, Jarlskog, Grossman-Nir + SM-Nuisances. 3/5 direkte Beine konsistent; downstream. | aktiv |
+| `dark-energy-w-watchdog/` | **`w=−1`-Killwatchdog** vs DESI DR2 `w0-wa`, **overlap-aware** (kein naives SN-Stacking). Stärkste Einzelkombo 4.4σ (naives Produkt 6.6σ = Scheinsignal). | aktiv |
+| `higgs-criticality/` | **Doppel-kritische Fläche** `λ(M_Pl)=0, β_λ(M_Pl)=0` vs SM-RGE (Buttazzo 2013 NNLO-Fit). λ=−0.0143±0.0057 (metastabil 2.5σ); downstream RGE-Bridge. | aktiv |
+| `lambda-h0-engine/` | Λ-Engine: `ρ_Λ/M_pl⁴=(3/256π⁴)e^{−2α⁻¹}` (122.95 vs 122.94 Größenordn.!), `S_dS ρ_Λ=32π⁴`, `H₀~√Λ`. | aktiv |
+| `recovery-channel/` | **Test C** (datenunabhängig): Recovery-Kernel als CPTP-Quantenkanal — CPTP/Choi, Data-Processing, QEC-Code, Page-Kurve bei `t_Page`. Packt `v155/160/161`. | aktiv |
+| `theory-contracts/` | **Reine Theorie-Contracts** (nicht in der empirischen Scorecard): QGEO-DtN-Mark-Locality (`[ρ,Λ]=0` aus Z4-Marken, Fourier-mod-4 + Negativkontrollen). | aktiv |
+| `quantum-recovery-analog/` | **Geparkt**: Analog-Recovery `I_n ~ (64/729)^n`, kein direkter Datensatz. **(search.txt §10)** | geparkt |
+| `ftransfer/` | Theorieseitige `F_transfer`-Solver: Axion-Relik (**Spine-Finite-T-Solve** `Ωₐh²=0.125` + **unabhängiger Cross-Check** sudden/analytisch [0.125, 0.143]), Koide, Leptogenese-Boltzmann, QCD-Matching `m_p/m_e`. | aktiv |
 
-## Empirische Coverage (search.txt)
+Über die ursprünglichen **9 search.txt-Suchräume** hinaus jetzt erweitert um die scharfen
+**Compiler-Ebenen-Vorhersagen** (Inflation, Neutrino-Mixing, `v_GW=c`, Λ/H₀, QNM `ln3`)
+und den datenunabhängigen **Recovery-Channel-Check** (Test C). Die zentrale, getypte
+Zeilenübersicht aller (Domäne, Observable) liegt in
+[`evidence_scorecard.json`](evidence_scorecard.json) (Generator
+`build_evidence_scorecard.py`, validiert feste `stage`/`status`/`evidence_class`-Enums).
+Schärfste Konsistenzpunkte (≤0.5σ): CMB `β`/`Ω_b`/Seed-Linie, Kaon `K⁺`, Neutrino `θ12`,
+Λ-Hierarchie.
 
-**9 aktive empirische Suchräume plus 1 geparkter Analograum.** Die zentrale,
-getypte Übersicht aller (Domäne, Observable)-Zeilen liegt in
-[`evidence_scorecard.json`](evidence_scorecard.json) (generiert von
-`build_evidence_scorecard.py`); jede Zeile trägt `claim_type`, `bridge_type`,
-`stage` und `status` aus festen Enums, damit nichts still nach `[E]` hochgestuft
-wird. Aktueller Stand: 6 `consistent`, 7 `null`, 1 `hint`, 5 `data_limited`,
-2 `tension`, 1 `parked`. Schärfste Konsistenzpunkte: CMB `β`/`Ω_b`/Seed-Linie
-(0.35–0.04σ, `prediction_of_record`) und das seltene Kaon `K⁺→π⁺νν` (−0.08σ,
-`downstream_bridge`).
+---
 
-## Konventionen
+## 1. Gesamtbefund — wo welche TFPT-Signatur, wie belastbar
+
+**Es gibt keine unterscheidende Entdeckung.** Was vorliegt: Konsistenzen (Theorie
+nicht im Widerspruch, oft sagt die Standardphysik dasselbe), saubere Nullbefunde,
+**vier echte Spannungen** (θ13, A_s@N⋆=51.4, g−2 unter Lattice-HVP, Axion-Hilltop) und
+mehrere noch-nicht-testbare Kanäle. Eine *belastbare* TFPT-Signatur bräuchte (a) eine
+eingefrorene Zahl, die TFPT von der Standardphysik unterscheidet, (b) in **≥2
+unabhängigen** Datenwelten, (c) mit kleinen Fehlern — das ist nirgends vollständig erfüllt.
+Die wirklich belastbaren Entscheidungen liegen jetzt bei **θ12, θ13, r, A_s, β, w, EHT,
+K⁺** und den `F_transfer`-Solvern.
+
+<!-- SCORECARD_STATS:START (generated by build_evidence_scorecard.py; do not edit) -->
+**Scorecard (auto-generated from `evidence_scorecard.json`): 47 Zeilen — 24 consistent, 4 tension, 7 null, 11 data_limited, 1 parked.**
+
+- nach `evidence_class`: 11 downstream_bridge, 19 external_data, 3 internal_consistency, 1 parked, 13 search_target
+- nach `independence_group`: 4 N_star_reheating, 2 alpha_em, 1 c3_topform_horizon, 32 independent, 8 phi0_seed
+- `alternative_group` (eine Frage, mehrere Lesarten — *nicht* doppelt zählen): 2 HVP_baseline, 2 Nstar_branch, 3 axion_branch
+- `watch_flag`: 1 (schärfster nicht-roter Kanal: dunkle Energie `w`)
+- _Korrelierte `phi0_seed`-Beine, `alternative_group`-Lesarten und `internal_consistency`-Checks zählen NICHT als unabhängige externe Treffer._
+<!-- SCORECARD_STATS:END -->
+
+### Robustheits-Stufen
+
+| Stufe | Kanäle | Lesart |
+|---|---|---|
+| **Schärfste Konsistenz** (≤0.5σ, mit Vorbehalt) | Λ-Hierarchie (**dev 0.004 Größenordnungen**, *kein* pull_sigma — Metrologie-Kohärenz), Neutrino `θ12` (**−0.02σ**), Kaon `K⁺→π⁺νν` (**−0.08σ**), CMB `Ω_b` BBN (0.04σ), CMB Seed-Linie (0.35σ), CMB `β` (0.37σ) | nah dran, aber teils Bridges, breite Fehler, korreliert (`phi0_seed`) oder Metrologie-Kohärenz |
+| **Konsistenz, nicht unterscheidend** | FRB.01 (keine native Dispersion), FRB.05 (`Ω_b` aus FRB-DM(z)), `v_GW=c` (GW170817), EDM `θ_eff=0`, Σm_ν, Inflation `n_s` vs Planck, A_s (profiliert), **Axion-Spine** (`Ωₐh²=0.125`, robust), **Higgs-Kritikalität** (λ(M_Pl)≈0) | Standardphysik sagt dasselbe / interne Identität / downstream-Bridge |
+| **Interne Konsistenz** (keine externe Messung) | Recovery-Channel CPTP/QEC, Page-Kurve-Turnover bei `t_Page`, **`S_dS·ρ_Λ=32π⁴`** (algebraische Identität, `stage=not_applicable`), **QGEO-DtN-Mark-Locality** (Theory-Contract) | `evidence_class=internal_consistency` / Theory-Contract — nicht im selben Korb wie CMB/Kaon |
+| **Sauberer Nullbefund** | FRB.02, FRB.02b, FRB.04, FRB.06, FRB.07, FRB.08, FRB.09 | Muster nachweislich **nicht** da, über mehrere Quellen |
+| **Echte Spannung** (Daten/Modell ziehen dagegen) | **θ13** (+2.0σ), **A_s** fix N⋆=51.4 (−11.3σ), g−2 unter Lattice-HVP (+3.86σ), Axion-**Hilltop** (~5.5× Überproduktion) | hier entscheidet sich Substanz; θ13 ist der `φ₀`-Seed-Treiber |
+| **Datenlimitiert mit Hinweis-Flag** | FRB.03 (Aktivitätsfenster, `hint_flag`) | 1/2 broad-match, n=2<5, LOO-instabil → `data_limited` (zu kalt für `hint`) |
+| **Datenlimitiert** (noch nicht testbar) | GW-Echo (Stage 0), **EHT-Residual** (echte Daten + Injection-Suite, GRMHD-Imaging offen), QNM `ln3`, Axion-Marker, Kaon `KL`/`R_K`, dunkle Energie `w` (4.4σ), m_ββ, δ_νCP, η_B | richtige Signatur/Vorhersage, Test noch offen |
+| **Geparkt** | Quantum-Recovery-Analog | kein physischer Datensatz |
+
+### TFPT-Signaturkatalog (search.txt) — was wo geprüft wurde
+
+| # | Signaturtyp | eingefrorener Wert | geprüft in | Ergebnis |
+|---|---|---|---|---|
+| 1 | feste Transferquotienten | `(2/3)⁶=64/729`, `(2/3)³=8/27`, Schritt `2/3` | FRB.02/02b/03/06/07, GW-Echo | Null / Hinweis / datenlimitiert |
+| 2 | µ4/Z4-Phasenstruktur | 4 Klassen | FRB.04, FRB.08 | Null (Fundamental m=2, nicht m=4) |
+| 3 | globale Seed-Rotation | `β = φ₀/(4π) = 0.2424°` | CMB | konsistent (0.37σ) |
+| 4 | achromatische Horizon-Pol. | `β_BH ∝ 1/r²`, Sign-Flip | EHT | real ingest + Achromatizität erledigt; GRMHD-Residual-Nulls offen |
+| 5 | harte Nullsignatur | keine native Dispersion, `v_GW=c` | FRB.01 | konsistent (kill-test bestanden) |
+| (+) | Recovery-Clock-Dynamik | `rate(n)=−6 ln(1−n/3)`, Wall bei N_fam=3 | FRB.09 | Null |
+| (+) | `F_transfer`-Laborwerte | `Δaµ`, `BR(K)`, `m_a` | lab-residuals | Kaon konsistent, g−2 baseline-abhängig, Axion datenlimitiert |
+
+---
+
+## 2. FRB — `frb-tfpt-signatures/` (search.txt §1,2,6)
+
+Preregistriert (`hypotheses/frb_tfpt_v1.yaml`), eingefrorener Kernel
+(`{1,(2/3)⁶,(1/3)⁶}`, exakte Brüche per Guard-Test geschützt), multi-Source,
+surrogat-kalibriert. Aggregat-Verdict: **`not_confirmed_not_refuted`** (keine
+replizierte, unterscheidende Stütze). Pro Achse:
+
+| Achse | Signatur | Methode + Nullmodelle | Datenquelle | Ergebnis |
+|---|---|---|---|---|
+| **FRB.01** | keine native (nicht-Plasma) Dispersion | Sub-Band-ToAs aus echten Wasserfällen; Fit `t(ν)=t₀+K ν⁻²+A_scat ν⁻⁴+drift+A_TFPT ν⁻³`; **implizierte Laufzeit vs ToA-Präzision** + Cross-Source-Universalität | PSRFITS/`.ar` (FRB 20121102A `.calibP` + FRB 20201124A) → `frb01_subband_toas.csv` | **Konsistenz** (2 Quellen, 119 Bursts; implizierte Laufzeit ~10⁻¹⁹ s ≪ Präzision ~5×10⁻⁵ s) |
+| **FRB.02** | Echo-/Recovery-Quotienten | konsekutive Within-Session-Energieverhältnisse vs Kernel; 4 Nulls (within-session, local-block, AR(1)-Energy-Storm, censoring), BH-q; Observable-Semantik (Energie- vs Amplitudenkanal) | FAST 1652 + Blinkverse (4 Quellen) | **Null** (kein Theorie-Kanal-Exzess) |
+| **FRB.02b** | Free-Quotient-Null (**Anti-Numerologie**) | M0 / M_fixed(8/27) / M_free(`q*∈[0.01,0.5]`); Look-Elsewhere-korrigiert; Injection-Recovery (validiert: recovered `q≈0.290≈8/27`) | FAST 1652 + Blinkverse | **Null (M0)** — freier Quotient landet *nicht* auf einem Kernelwert (LEE-p ≥ 0.31) |
+| **FRB.03** | Aktivitätsfenster-Eigenbreiten | `W_broad/P≈8/27`, `W_core/P≈1/27`; Population + Nullmodell + Leave-one-out; HDI-Fenster aus gefalteten Phasen | CHIME (FRB 20180916B) + Literatur-Repeater | **Schwacher Hinweis**: FRB 20180916B trifft (3%/1%), aber n=2<5 Quellen, null-p=0.11, nicht LOO-stabil |
+| **FRB.04** | PA/RM-Markov-Spektrum (µ4/D4) | Übergangsmatrix-Eigenwerte vs Kernel; 5 Nulls (stationary, time/block-shuffle, **AR(1)-drift**, Dirichlet); v2 Step-Relaxation | FAST FRB 20240114A Pol (6134) + Blinkverse (3 Quellen) | **Null** (RM≈{2/3,1/3} durch AR(1)-Drift erklärt; PA durch block-shuffle reproduziert) |
+| **FRB.05** | Baryon-Fraktion `Ω_b` | Macquart-`DM(z)`-Steigung, `Ω_b`-Fit mit System-Fehlerboden | lokalisierte FRBs (ApJ adb84d Table 4; Sharma 2024) | **Konsistenz**: `Ω_b=0.0483±0.0072` (0.1σ von TFPT 0.0489) |
+| **FRB.06** | Polarisationsgrad-Quantisierung | L/I, \|V\|/I nahe Kernelbrüchen; Beta-Null **+ Placebo-Kontrolle** (killt Tail-Artefakt) | FAST + Blinkverse (3 Quellen) | **Null** (kein Bruch über Placebo) |
+| **FRB.07** | Breiten-Relaxations-Echo | konsekutive Breitenverhältnisse vs Schritt-Kernel `{2/3,1/3}` | Blinkverse (3 Quellen) | **Null** |
+| **FRB.08** | statische PA-µ4-Klassen | Rayleigh-Test auf fundamentale Klassenzahl (µ4 → m=4) | FAST FRB 20240114A | **Null** (signifikant, aber Fundamental **m=2** = Orthogonalmodus, nicht m=4) |
+| **FRB.09** | Recovery-Clock-Dynamik | (A) Kaskaden-Wall ≤ N_fam=3; (B) Gap-Verhältnis `g1/g2 = ln3/ln(3/2)=2.71`; within-session-Shuffle-Null + Placebo | FAST 1652 + Blinkverse (4 Quellen) | **Null** (Wall 0/4, Beschleunigung 0/4) |
+| *generisch* | Energie-Kaskade | GMM + Log-Periodizität + Spacing-Ladder, smooth-Null-Surrogate | FAST 1652 | diskrete log-periodische Kaskade (p=0.002), aber **nicht** kernel-spezifisch |
+
+Details, Plots und exakte Algorithmen: [`frb-tfpt-signatures/README.md`](frb-tfpt-signatures/README.md).
+
+---
+
+## 3. CMB-Seed-Linie — `cmb-birefringence-seed/` (search.txt §3, Prio 1)
+
+**Eine** eingefrorene Größe `φ₀ = (4/3)c₃ + 48c₃⁴ = 1/(6π) + 3/(256π⁴)` sagt **zwei**
+Observablen voraus, die normalerweise in getrennten Pipelines leben:
+
+```
+β_rad   = φ₀/(4π)            → β = 0.242435°     (kosmische Doppelbrechung)
+Ω_b     = (4π − 1)·β_rad     → Ω_b = 0.04894     (Baryon-Fraktion)
+⇒ feste Seed-Linie:  Ω_b / β_rad = 4π − 1 = 11.566
+```
+
+**Vier Modi** (kein einzelner künstlich-scharfer „joint Treffer"):
+
+| Modus | Inhalt | Ergebnis |
+|---|---|---|
+| `beta_only` | `β` vs ACT DR6 / Planck PR4 | konsistent (0.37σ / 0.52σ) |
+| `omega_b_only` | `Ω_b` vs Planck 2018 / BBN (unit-safe `Ω_b h²/h²`) | konsistent (0.42σ / **0.04σ**) |
+| `joint_independent` | Linie `Ω_b/β_rad` + Single-Seed-Kohärenz `φ₀^β` vs `φ₀^Ω` (Annahme cov=0) | konsistent (Linie 0.35σ, Kohärenz 0.39σ) |
+| `joint_covariance_placeholder` | dieselbe Linie, **Kovarianz nicht modelliert** | **keine kombinierte Signifikanz beansprucht** (ACT-β + Planck-Ω_b beide CMB → BBN-Bein nutzen) |
+
+**Unit-Guard:** `β` intern immer in Radiant; `Ω_b` (~0.049) nie mit `Ω_b h²` (~0.022)
+verwechselt; BBN deklariert `Ω_b h²` + `h` explizit. **Verdict: konsistent mit der
+Seed-Linie (nicht *validiert*).** Datenquellen: ACT DR6 (arXiv:2509.13654), Planck PR4
+(arXiv:2205.13962), Planck 2018 VI, PDG/Cooke+2018 (BBN).
+
+---
+
+## 4. EHT-Horizont-Collar — `eht-achromatic-residual/` (search.txt §4)
+
+Sauberste *lokale* astrophysikalische Falsifikationsfläche: der achromatische, dyonische
+Residual-Intercept `β_BH(r) = 16 c₃⁴ Q_e Q_m / r² = (1/256π⁴) Q_e Q_m / r²`. TFPT fixiert
+**nicht** die Amplitude (MHD/GR-Gewichte), sondern drei **Null-Tests**:
+
+1. **frequency null** — `χ₀^res` achromatisch (kein `λ²`-Tail)
+2. **profile null** — `χ₀^res(r) ∝ 1/r²` um den Photonenring
+3. **sign-flip null** — Vorzeichenwechsel unter effektiver `E·B`-Umkehr
+
+`DETECTION` nur, wenn **alle drei** simultan bestehen. Die Kopplung `1/(256π⁴)=16c₃⁴`
+ist exakt fixiert (dieselbe Top-Form-Koeffizientenzahl `δ_top=48c₃⁴` wie in der
+α-Kernel-Korrektur); frei ist nur die Amplitude `Q_e^eff Q_m^eff` (MHD/GR-Gewicht).
+Synthetische End-to-End-Pipeline (`demo --case signal|null|systematic`) + die drei
+Null-Tests sind implementiert und grün.
+
+#### Echte Daten ingestiert (NEU, `tfpt-eht realdata`)
+`scripts/fetch_eht_data.py` lädt die **echten** EHT-M87-2017-Polarimetrie-uvfits
+(Datenprodukt **2023-D01-01**, CyVerse DOI 10.25739/q46m-m857, GitHub
+`eventhorizontelescope/2023-D01-01`): **4 Beobachtungstage (Apr 5/6/10/11) × 2 Bänder**
+(hi ≈ 229.07 GHz, lo ≈ 227.07 GHz), D-term- + self-kalibrierte HOPS-Sätze
+(`*_hops_zbl-dtcal+selfcal.uvfits`, je ~0.5 MB).
+
+`src/tfpt_eht/real_data.py` liest sie mit `astropy.io.fits`, bildet die Zirkular-Basis-
+Stokes-Visibilities `I=(RR+LL)/2`, `Q=(RL+LR)/2`, `U=i(LR−RL)/2`, und berechnet pro Band
+die I-amplitudengewichtete Netto-EVPA `χ=½ atan2(⟨U⟩,⟨Q⟩)` und `|m|`. Ergebnis:
+
+| Tag | hi: EVPA / \|m\| | lo: EVPA / \|m\| |
+|---|---|---|
+| Apr 05 | −18.5° / 0.184 | −19.1° / 0.146 |
+| Apr 06 | −17.2° / 0.075 | −19.2° / 0.069 |
+| Apr 10 | −12.3° / 0.084 | −5.1° / 0.077 |
+| Apr 11 | −8.4° / 0.085 | −9.2° / 0.076 |
+
+→ mittlere **Band-zu-Band-EVPA-Rotation +0.9°**, implizierte **RM ≈ 5×10⁵ rad/m²**
+(M87-Kern-Größenordnung, konsistent mit ALMA). Das ist die **rohe Quell-Chromatizität**;
+der TFPT-Residual-Test (`χ₀^res = χ₀^obs − χ₀^GRMHD`, dann die drei Nulls) braucht das
+**GRMHD-subtrahierte Bild** (polarimetrisches Imaging via eht-imaging + GRMHD-Library wie
+`ipole`) → die `1/r²`- und Sign-Flip-Nulls bleiben **`data_limited`**. Die uvfits sind
+gitignored; die kleine Summary `results/eht_real_achromaticity.json` ist versioniert.
+**Schritt 1 (echter Daten-Ingest + Achromatizitäts-Diagnostik) erledigt.**
+
+#### Injection-Recovery-Suite (NEU, `tfpt-eht inject`) — die Pipeline-Validierung
+
+Da das echte GRMHD-Imaging (eht-imaging/SMILI + `ipole`) schwere externe Libraries braucht,
+ist der *jetzt* lauffähige, wertvolle Teil die **Validierung**, dass die Residual- + 3-Null-
+Maschinerie vier kontrollierte Injektionen korrekt klassifiziert (`src/tfpt_eht/injection.py`):
+
+| Injektion | erwartet | Ergebnis |
+|---|---|---|
+| `tfpt_1overr2` (echte Signalform) | DETECTION (alle 3 Nulls) | ✓ frequency P / profile P / sign P |
+| `faraday_lambda2` (λ²-Schirm) | frequency-Null **verwirft** | ✓ frequency F |
+| `dterm_leakage` (D-Term) | profile/sign-Null verwirft | ✓ profile F / sign F |
+| `evpa_offset` (Kalibrationsoffset) | profile/sign-Null verwirft (freq passt) | ✓ frequency P / profile F / sign F |
+
+**4/4 korrekt klassifiziert** → die Pipeline labelt Achromatizität, Faraday-λ²-Tail,
+D-Term-Leckage und EVPA-Offset zuverlässig auseinander. Das ist das Gate, das der echte
+M87-Lauf durchlaufen muss, sobald GRMHD-Bilder vorliegen. (Nur zwei nahe Bänder ⇒ die
+Frequency-Null bleibt Diagnose, kein finaler Achromatizitätsbeweis.)
+
+#### Pipeline-Readiness (NEU, `tfpt-eht pipeline`)
+Der Orchestrator listet die 7 Stufen und sagt **exakt, was blockiert**: Stufen 1/2/7
+(uvfits-Ingest, EVPA-Diagnostik, Injection-Validierung) **erledigt**, Stufe 6 (3 Nulls)
+**lauffähig**, Stufen **3/4/5 blockiert** auf `eht-imaging`/SMILI (polarimetrisches Imaging)
+und eine GRMHD-Library (`ipole`, `χ₀^GRMHD`). Gesamtstatus **`data_limited`** bis Stufe 3+4
+installiert sind — der `χ₀^res`-Test selbst kann erst dann laufen. Kein Vortäuschen.
+
+---
+
+## 5. GW-Ringdown-Echo — `gw-ringdown-echo/` (search.txt §5, Stage 0)
+
+Echo-Amplitudenquotient `A_{n+1}/A_n ≤ (2/3)⁶ ≈ 0.0878` (Obergrenze, Lag frei).
+**Stage = `catalog_feasibility`** — **kein** Strain-Level-Echo-Test, **kein** Echo-Claim.
+Es ist ein Sensitivitäts-Census: Reicht eine zukünftige gestackte Strain-Suche?
+
+- Datenquelle: **echter LVK GWTC-5.0** via GWOSC-Event-API → `data/gwtc_events.csv`.
+  **390 kanonische Events** (161 neu in O4b); lokale Rohzeilenzahl **391** separat in
+  [`event_count_audit.md`](gw-ringdown-echo/event_count_audit.md) abgeglichen (die eine
+  Differenz = BNS GW170817, ohnehin aus der BBH-Selektion ausgeschlossen).
+- Selektion: 391 → **278 ringdown-fähige BBH** (`M_f ≥ 5 M☉`).
+- Ergebnis: gestackte Echo-SNR-Obergrenze **6.3** (realistisch `f_rd=0.3`) bzw. 21.1
+  (konservativ) vs Schwelle 5 → ein maximaler `(2/3)⁶`-Echo **wäre erreichbar** ⇒
+  Strain-Level-Test lohnt sich. **Datenlimitiert** bis zum echten Strain-Matched-Filter.
+
+Nächste Stufe (Stage 1): High-Ringdown-SNR-Events, Kerr-Subtraktion, Matched-Filter auf
+Residuen (Lag/Phase frei, Quotient fix), Injection-Kampagne `q=(2/3)⁶`, freier-`q`-Kontrolltemplate.
+
+---
+
+## 6. Labor-`F_transfer`-Residuen — `lab-residuals/` (search.txt §7,8,9)
+
+Drei unabhängige Laborkanäle, **alle `[C]`** (downstream bridges / frontier; nie `[E]`).
+Verdicts **pro Baseline/Branch gesplittet** — kein Ampel-Urteil über Modellannahmen.
+
+### Myon g−2 — `Δaµ = 45/(2¹⁹π⁹) = 2.879×10⁻⁹` (exakte Compilerzahl, Deutung = Bridge)
+| SM-Baseline | Residuum `a_exp−a_SM` | Pull | Status |
+|---|---|---|---|
+| WP2020 dispersiv | (2.62±0.45)×10⁻⁹ | +0.58σ | **viable** |
+| WP2025 Lattice | (0.39±0.65)×10⁻⁹ | +3.86σ | **tension** |
+| CMD-3-related / future | — | — | Platzhalter (datenlimitiert) |
+
+→ baseline-abhängig: passt zur alten dispersiven Anomalie, in Spannung mit der
+Lattice-HVP 2025. Quellen: Fermilab final (PRL 135 101802, 2025), Theory Initiative
+WP2020 / WP2025 (arXiv:2505.21476).
+
+### Seltene Kaonen — downstream bridge
+| Zerfall | TFPT | Daten | Pull |
+|---|---|---|---|
+| `K⁺→π⁺νν` | 9.45×10⁻¹¹ | NA62 2016–2024: (9.6⁺¹·⁹₋₁.₈)×10⁻¹¹ | **−0.08σ** (im Kill-Fenster [7,12]) |
+| `K⁺→π⁺νν` | 9.45×10⁻¹¹ | NA62 2016–2022: (13.0⁺³·³₋₃.₀)×10⁻¹¹ | −1.13σ |
+| `KL→π⁰νν` | 3.33×10⁻¹¹ | KOTO < 2.2×10⁻⁹ (90% CL) | datenlimitiert (weit unter Reichweite) |
+
+→ **sehr starke Konsistenz** mit NA62 2016–2024, aber downstream bridge (externe
+Short-Distance-Funktionen), kein Compiler-Treffer. Quellen: NA62 (arXiv:2604.12649;
+JHEP 02 (2025) 191), KOTO 2024.
+
+### Axion
+- **Haloskop-Marker** `m_a=23.8 µeV (≈5.76 GHz)`, `f_a=M_scal/128`: im HAYSTAC/CAPP-Band,
+  **nicht** bei DFSZ ausgeschlossen → **datenlimitiert**. Quellen: ADMX/HAYSTAC/CAPP.
+- **Relik-Branches** (voller Finite-T-Misalignment-Solve, `ftransfer/axion_relic/*.py`):
+  - `DM.AXION.HILLTOP.01` (θᵢ=170.4°, `Ωₐh²≈0.66`) → **Spannung (Überproduktion ~5.5×)**.
+  - `DM.AXION.SPINE.01` (θᵢ=3π/5=108° aus `N_fam/g_car=3/5`) → **gelöst, konsistent**:
+    `spine_finiteT_solve.py` liefert **`Ωₐh²=0.125`** (zentral), robust über die ganze
+    Akzeptanzband **[0.090, 0.151]** bei chi(T)-Exponent n=7…9 und g\*(T) ±10% — landet
+    *ohne Tuning* auf `Ω_DM=0.12`. Anharmonischer Faktor nur 1.19 (vs Hilltop-Runaway).
+    Der Spine-Winkel ist damit der überlebende Axion-DM-Branch; der Hilltop bleibt überproduzierend.
+  - **Unabhängiger Solver-Check** (`spine_independent_check.py`): zwei *andere* Methoden —
+    sudden/adiabatischer WKB-Readout (mit power-law **und** tanh-`χ(T)`) und die semi-
+    analytische Anharmonik-Skalierung — geben `Ωₐh² ∈ [0.125, 0.143]`, **alle im Band**. Das
+    Ergebnis ist robust gegen Methode und `χ(T)`-Parametrisierung (nicht ein Artefakt einer
+    Integration).
+  - **Haloskop-Overlay** (`tfpt-lab haloscope`): bei `m_a=23.8 µeV` (5.77 GHz) ist
+    `g_aγγ^DFSZ=3.6×10⁻¹⁵`, `g_aγγ^KSVZ=9.3×10⁻¹⁵ GeV⁻¹`. Der Punkt liegt im **HAYSTAC-Band**
+    (~2–3× KSVZ-Reichweite) → **weder KSVZ noch DFSZ ausgeschlossen**, ein Near-Future-
+    Haloskop-Ziel (Plot `results/haloscope_overlay.png`).
+
+---
+
+## 7. Geparkt + theorieseitig
+
+- **`quantum-recovery-analog/`** — geparkt. Zentrale Dynamik `I_n ~ (64/729)^n`; ohne
+  echten physischen Datensatz bewusst nicht gebaut (Analogie-Risiko). Aktivierung nur bei
+  einem realen Boundary-Recovery-Experiment mit messbarem `I_n`/Fidelity-Recovery.
+- **`ftransfer/`** — theorieseitige `F_transfer`-Solver (kein Daten-Confronting):
+  Axion-Relik (finite-T), Koide-Source-to-Pole (`53/54`), Leptogenese-Boltzmann (`η_B`),
+  QCD-Matching `m_p/m_e`.
+- **`lean4-carrier-rigidity/`** — formaler Lean-4-Beweis des Carrier-Polynoms
+  `6Y²−Y−1=0` und der Hyperladungs-Spur.
+
+---
+
+## 7b. Erweiterte Domänen — scharfe Compiler-Vorhersagen + Recovery-Channel
+
+Über die search.txt-Suchräume hinaus, motiviert aus der Origin Story / dem
+Recovery-Mechanismus. Jede Domäne ist self-contained (`pyproject.toml`, `src/<pkg>/`,
+`data/`, CLI `analyze`, README).
+
+### 7b.1 Recovery-Channel (Test C) — `recovery-channel/` (datenunabhängig)
+**Zweck.** Den Recovery-Kernel `{1,(2/3)⁶,(1/3)⁶}` *explizit* als CPTP-Quantenkanal
+`R: H_bulk → H_observable` bauen und die Standard-Quanteninfo-Axiome prüfen — die
+datenunabhängige „Informationsprojektor"-Reframing (search.txt-Folgevorschlag, Test C).
+Packt, was die Verifikations-Suite strukturell schon zeigt (`v155` quasi-free,
+`v160` Kumulanten, `v161` Bogoliubov `Γ(t)`).
+
+**Konstruktion.** Jeder Kernel-Eigenwert `λ` = Qubit-Amplitude-Damping-Kanal mit
+Anregungs-Überlebenswahrscheinlichkeit `λ` (Damping `γ=1−λ`): eine geschützte `λ=1`-Mode
+(das „Gesetz"/Attraktor) + zwei kontrahierte Moden `λ₂=(2/3)⁶≈0.0878`, `λ₃=(1/3)⁶≈0.00137`.
+
+**Checks & Ergebnis (alle bestanden):**
+- **CPTP** — Trace-Erhalt (`ΣKᵢ†Kᵢ=I`) + komplette Positivität (Choi-Matrix PSD, min-Eig
+  ≈ 0 bis Maschinengenauigkeit) für alle drei Moden.
+- **Recovery-Rate** — `Rⁿ` dämpft mit `λⁿ=(2/3)^{6n}` = Page-Recovery `Iₙ` (exakt
+  reproduziert: 8.78e-2, 7.71e-3, 6.77e-4 für n=1,2,3).
+- **Data-Processing-Ungleichung** — relative Entropie kontrahiert `S(Rρ‖Rσ)≤S(ρ‖σ)`
+  (der Kanal erzeugt nie Information).
+- **QEC** — die `λ=1`-Mode ist eine **decoherence-free / Knill-Laflamme**-Code (KL erfüllt);
+  die kontrahierten Moden verletzen KL → nicht korrigierbar; der Spektralgap `(2/3)⁶` ist
+  die Leckrate.
+- **Page-Kurve (Test B).** Mit der TFPT-Hawking-Law `P_H=c₃/(1920M²)` ist
+  `S_BH(t)/S₀=(1−t/τ)^{2/3}`; die Insel/unitäre Min-Vorschrift `S_page=min(S_BH,S_rad)`
+  dreht bei **`t/τ=1−(1/2)^{3/2}=0.6464`** — *exakt* die TFPT-Page-Zeit
+  `t_Page=(1−1/(2√2))τ` (numerisch 0.6466).
+
+**Typisierung.** `evidence_class=internal_consistency` — interne Konsistenzprüfung,
+**keine externe Messung**; nicht im selben Evidenz-Korb wie CMB/Kaon. **Kein neues Datum.**
+
+### 7b.2 CMB-Inflation (Starobinsky/Scalaron) — `cmb-inflation-scalaron/`
+**Frozen.** Niedrig-Krümmungs-Gravitationszweig `R+R²` (Spektral-Aktion) → Starobinsky mit
+`M_scal=c₃^{7/2}M̄=3.06×10¹³ GeV` (`[E]`); `N⋆` ist Reheating-Input (`[C]`, Band [50,60];
+slow-channel-Punkt 51.4). Read-offs: `n_s=1−2/N⋆`, `r=12/N⋆²`, `A_s=N⋆²/(24π²)·c₃⁷`.
+
+| Observable | TFPT (N⋆=51.4) | Daten | Pull |
+|---|---|---|---|
+| `n_s` | 0.9611 | Planck 0.9649±0.0042 | **−0.91σ (konsistent)** |
+| `n_s` | 0.9611 | P-ACT-LB+DESI 0.9743±0.0034 | **−3.9σ (Spannung)** |
+| `r` | 0.0045 | BICEP/Keck BK18 <0.036 | unter Limit |
+| `r` | 0.0045 | CMB-S4 σ_r≈5×10⁻⁴ | **9σ Zukunfts-Falsifikator** |
+| `A_s` | 1.76×10⁻⁹ | Planck 2.10×10⁻⁹±0.03 | **−11.3σ** → bevorzugt N⋆≈56 |
+
+**Branch-Resolver (P1).** Erzwingt die Typ-Entscheidung: ist `N⋆=51.4` prediction_of_record
+(dann A_s −11.3σ Killtest) oder ist das **Band [50,60]** der Record (dann profiliert A_s auf
+**N⋆=56.1** → `n_s=0.9644` bei −0.1σ Planck, `r=0.0038`, A_s konsistent → **downstream
+bridge**)? **Bayes-Faktor** (n_s+A_s-Likelihood, flacher Bandprior): `ln(B_profiled/fixed) =
++62` (Planck) bzw. `+65` (P-ACT-LB+DESI) — die Daten bevorzugen das Band **entscheidend**
+gegenüber dem Fixpunkt, also kann A_s **nicht** als volle prediction_of_record bei N⋆=51.4
+geführt werden. **CMB-S4-Forecast:** `r=0.0045` ist ein **9σ**-Detektionsziel (σ_r≈5×10⁻⁴).
+**Entscheidung FINALISIERT** (P1): Wegen `ln B = +62` ist der **Record das Band [50,60]**;
+`N⋆=51.4` ist der **preferred slow-channel Branch** (ein Punkt im Band, nicht der Record);
+`A_s` ist eine **downstream reheating Bridge**. Konsequenz: `n_s`/`r` bei 51.4 bleiben
+prediction_of_record (im Band); `A_s` bei fixem 51.4 ist ein **−11.3σ Branch-Stress
+(`downstream_bridge`)**, *kein* Record-Killtest; die record-konsistente Lesart profiliert `A_s`
+auf N⋆≈56. Beide A_s-Modi sind eine `alternative_group=Nstar_branch` (nie doppelt zählen).
+Quellen: Planck 2018 VI, BICEP/Keck BK18, P-ACT-LB+DESI, CMB-S4-Forecast.
+
+### 7b.3 Neutrino-/CKM-Mixing — `neutrino-mixing/` (prediction_of_record)
+**Frozen** (aus `c₃`/`φ₀`): `sin²θ12=1/3−φ₀/2=0.306747`; `sin²θ13=φ₀ e^{−5/6}=0.0231`;
+`sin²θ23=1/2` (Oktant nicht selektiert); `δ_CKM=π/3+3λ²=68.65°` (CKM-CP-Phase, kanonisch
+`v88`/`FLAV.CP.01`; anderer Sektor).
+
+| Observable | TFPT | Daten | Pull |
+|---|---|---|---|
+| `sin²θ12` | 0.306747 | NuFIT 6.0 0.307±0.012 | **−0.02σ** |
+| `sin²θ12` | 0.306747 | JUNO 0.3092±0.0087 | −0.28σ |
+| `sin²θ13` | 0.0231 | NuFIT 6.0 0.02195±0.00058 | **+2.0σ** (bekannte Spannung) |
+| `sin²θ23` | 0.5 | NuFIT 6.0 0.470±0.017 | +1.76σ (Oktant offen) |
+| `δ_CKM` | 68.65° | LHCb γ 64.6°±2.8 | +1.45σ |
+
+→ θ12 ist ein **scharfer Treffer**; θ13 trägt die **~2σ-Spannung** (teilt `φ₀` mit β → siehe
+Seed-Stresstest 7b.7). Quellen: NuFIT 6.0, JUNO (2025), LHCb γ-Kombination.
+
+### 7b.4 GW `v_GW=c` — `gw-speed-multimessenger/`
+**Frozen.** Ein gemeinsamer Lorentz-Kegel ⇒ `(v_GW−c)/c=0` exakt (namentlicher
+Falsifikator; Gravitations-Analogon zu FRB.01). **Daten:** GW170817 + GRB170817A
+(Abbott+ 2017, ApJL 848 L13): GRB kam 1.74 s nach dem Merger über ~40 Mpc → Bound
+`[−3×10⁻¹⁵, +7×10⁻¹⁶]`; naiver Zentralwert +4.2×10⁻¹⁶. TFPT-0 liegt im Bound →
+**Konsistenz (Killtest bestanden)**, keine Detektion (Standard-GR sagt dasselbe).
+
+### 7b.5 QNM-Ringdown `ln3` — `gw-ringdown-spectroscopy/` (schwarzloch-direkt)
+**Frozen** (`v57`/horizon_readouts, [C]/[P]): asymptotische Schwarzschild-QNM
+`ω_R/T_H → ln3 = ln N_fam`; Flächenquant `ΔA=4 ln3 l_p²=ln(N_fam⁴)=ln 81`. Numerische
+Identität `ln3=ln N_fam=1.0986` exakt. **Scope-Ehrlichkeit:** der asymptotische Wert lebt im
+Hoch-Oberton-Limit (`M·ω→ln3/(8π)=0.0437`), gemessen wird der n=0-Grundton (`M·ω≈0.3737`,
+Faktor 8.5 entfernt). GW150914/GW250114 zeigen nur n=0 → **datenlimitiert**; direkter Test
+braucht Hoch-Oberton-Spektroskopie. Die physisch *direkteste* BH-Recovery-Signatur und
+zugleich die am weitesten von heutiger Testbarkeit entfernte.
+
+### 7b.6 Λ/H₀-Engine — `lambda-h0-engine/`
+**Frozen** (ein EM-Fixpunkt `α⁻¹`): `ρ_Λ/M_pl⁴=(3/256π⁴)e^{−2α⁻¹}` (122.95 Größenordn.,
+unreduziert); `ρ_Λ/M̄_pl⁴=(3/4π²)e^{−2α⁻¹}` (120.15, reduziert); `S_dS·ρ_Λ=1/(128c₃⁴)=32π⁴`
+(exakte dimensionslose Identität); `H₀/M̄~e^{−α⁻¹}/(2π)`.
+
+| Größe | TFPT | gemessen (Planck Ω_Λ,H₀) | dev |
+|---|---|---|---|
+| `ρ_Λ/M_pl⁴` (Größenordn.) | 122.948 | 122.943 | **0.004** |
+| `ρ_Λ/M̄_pl⁴` (Größenordn.) | 120.147 | 120.143 | 0.004 |
+| `S_dS·ρ_Λ` | 32π⁴ = 3117.09 | (Identität) | exakt |
+| `H₀/M̄` (log₁₀) | −60.31 | −60.23 | 0.08 dex |
+
+→ ein `α⁻¹`-Motor für Λ, S_dS und H₀ — **Konsistenz / Metrologie-Kohärenz**, *keine*
+Ableitung der absoluten Skala (das ist der eine Anchor). Achtung: nicht als „Λ
+vorhergesagt" verkaufen; H₀/Ω_Λ dürfen nicht reimportiert und dann als Ergebnis gezählt
+werden.
+
+### 7b.7 Shared-Seed-Stresstest — `seed-consistency/` (P1, der θ13-Test)
+**Zweck.** Ist θ13 der erste Riss im Seed-Block? Ein Seed `φ₀` fixt vier Observablen in
+*getrennten* Pipelines; jede Messung wird zu `φ₀` invertiert, dann Inverse-Varianz-
+Joint-Fit + Leave-one-out (Δχ² bei Entfernung) + dominanter Pull (χ²-Anteil).
+
+| Bein | Pipeline | implied φ₀ | z(frozen) | z(joint) | Δχ²(LOO) |
+|---|---|---|---|---|---|
+| β | CMB | 0.04715 ± 0.01623 | −0.37 | −0.35 | +0.13 |
+| Ω_b | BBN | 0.05311 ± 0.00132 | −0.05 | +0.15 | +0.03 |
+| **θ13** | **reactor** | 0.05051 ± 0.00133 | **−2.00** | **−1.80** | **+3.54** |
+| Cabibbo | CKM | 0.05314 ± 0.00043 | −0.08 | +0.54 | +1.67 |
+
+→ Joint `φ₀=0.05291`, **χ²/dof=1.23 → Block hält** (mit globalem NuFIT-θ13). **θ13 ist der
+dominante Pull** (88% des χ², −1.80σ). **Akzeptanzregeln (eingefroren):** θ13 >3σ vom
+gemeinsamen Seed → PMNS-θ13 als *transfer-corrected* (μτ-Breaking) flaggen; **zwei** Beine
+>3σ → Shared-Seed-Block fällt. Aktuell keine Regel ausgelöst. Beine aus CMB/BBN/reactor/CKM
+(keine vier CMB-Schnitte). Quellen: ACT DR6, BBN D/H, NuFIT 6.0, PDG.
+
+**v2 (`tfpt-seed v2`, P1-Härtung).** θ13 wird in **reactor-only** (Daya Bay) als Fit-Bein und
+**global** (NuFIT) als *Shadow*-Sensitivität getrennt — beide nie gemeinsam im Fit (≈0.9
+korreliert). Eine **Kovarianzmatrix** treibt einen GLS-Joint-Fit (diagonal per Konstruktion,
+Off-Diagonals bleiben der ehrliche Ort für geteilte Systematiken); dazu **Leave-one-
+experiment-family-out** und ein **Posterior-Predictive-Check**. Ergebnis: reactor-θ13
+χ²/dof=1.37, **PPC p=0.25**, θ13 dominiert mit **90% des χ²** bei −1.92σ; reactor-only und
+global liefern **dasselbe Verdikt** (Block hält). Genau die richtige Diagnose: der Seed ist
+kohärent, aber θ13 ist der erste ernsthafte Risskandidat.
+
+**v3 (`tfpt-seed v3`, reactor-only aus den Einzelexperimenten).** Statt eines pauschalen
+reactor-θ13 nutzt v3 die **drei unabhängigen Detektoren** getrennt — Daya Bay
+(`0.02175±0.00065`), RENO (`0.02282±0.00165`), Double Chooz (`0.02619±0.00317`) — zeigt den
+implizierten `φ₀` jedes Experiments und bildet eine saubere reactor-only-Kombination
+**`sin²θ13=0.02204±0.00059`**. Nur diese geht in den Fit; NuFIT-global bleibt **Shadow**
+(nie beide im Fit — der globale Fit enthält die Reactor-Daten bereits). Ergebnis:
+**χ²/dof=1.00, PPC p=0.39**, θ13 dominant bei **−1.62σ** (88% χ²), Shadow(global) χ²/dof=1.23
+→ **gleiches Verdikt**. Die volle Reactor-Kombination (leicht höher als Daya Bay allein)
+entspannt den θ13-Zug — kein Statistik-Origami, keine vier CMB-Beine, global und reactor-only
+nie doppelt gefüttert. JUNO-θ13 wird ergänzt, sobald stabil.
+
+### 7b.8 EHT-Real-Data-Lauf — `eht-achromatic-residual/` (P1, echte Daten)
+Voll dokumentiert in **§4** (echte 2023-D01-01-Polarimetrie, 4 Tage × 2 Bänder,
+Band-zu-Band-EVPA +0.9°, RM~5×10⁵ rad/m²; Residual-Nulls `data_limited` bis GRMHD-Imaging).
+
+---
+
+## 7c. Entscheidungs-Tests (P1/P2: eigene Runner + Watchdogs)
+
+### 7c.1 Dunkle-Energie-`w`-Watchdog — `dark-energy-w-watchdog/` (P1, NEU)
+TFPT: `w=−1` exakt (Λ = konstantes Vakuum, `S_dS·ρ_Λ=32π⁴`). Konfrontiert den Punkt
+`(w0,wa)=(−1,0)` mit den DESI-DR2-CPL-Kombinationen über die 2-D-Mahalanobis-Distanz
+(`ρ(w0,wa)≈−0.9`, reproduziert die publizierten Signifikanzen auf ~0.2σ):
+
+| Kombination | 2-D-Distanz von w=−1 | publiziert |
+|---|---|---|
+| DESI+CMB+Pantheon+ | 3.07σ | 2.8σ |
+| DESI+CMB+Union3 | 3.87σ | 3.8σ |
+| DESI+CMB+DES-SN5YR | **4.37σ** | 4.2σ |
+
+**Overlap-aware:** Die drei SN-Compilations teilen Low-z-SNe ⇒ *Alternativen*, nicht
+unabhängig. Headline = **stärkste Einzelkombo 4.4σ**; das naive Produkt **6.6σ** wird
+explizit als *Scheinsignal* markiert (genau die Falle, die der Review warnt). **Kill:** `w≠−1`
+bei ≥5σ in einer einzelnen systematik-kontrollierten, overlap-aware-Kombination → trifft die
+Λ/H₀-Engine. Aktuell **armed, nicht ausgelöst** (`data_limited`).
+
+### 7c.2 Rare-Kaon-Flavor-Bridge — `rare-kaon-bridge/` (P1, NEU)
+Testet die Flavor-Bridge als **Geometrie**, nicht einen Einzeltreffer:
+
+| Bein | TFPT | Daten | Pull |
+|---|---|---|---|
+| `BR(K⁺→π⁺νν)` | 9.45×10⁻¹¹ | NA62 (9.6⁺¹·⁹₋₁.₈)×10⁻¹¹ | **−0.08σ** ✓ |
+| `δ_CKM / γ` | 68.65° | LHCb γ 64.6°±2.8 | **+1.45σ** ✓ |
+| Jarlskog `J` | 3.03×10⁻⁵ | PDG (3.08±0.13)×10⁻⁵ | **−0.07σ** ✓ |
+| `R_K=BR(KL)/BR(K⁺)` | **0.35238** | (KOTO-II) | nahe SM 0.40, respektiert Grossman-Nir (data_limited) |
+| `BR(KL→π⁰νν)` | 3.33×10⁻¹¹ | KOTO < 2.2×10⁻⁹ | unter Limit (data_limited) |
+
+→ 3/5 Beine direkte Datentreffer, Geometrie konsistent; aber **downstream Bridge** (`|Vcb|`,
+`|Vub|`, Short-Distance = externe Nuisances). Diskriminator: KOTO misst BR(KL) → R_K.
+
+### 7c.3 Higgs-Nahe-Kritikalität — `higgs-criticality/` (P2, NEU)
+TFPT-Vorhersage: die **doppel-kritische Fläche** `λ(M_Pl)=0` **und** `β_λ(M_Pl)=0`. Mit dem
+Buttazzo-2013-NNLO-Fit (arXiv:1307.3536, Gl. 61) extrapoliert + 1-Loop-`β_λ` aus den
+M_Pl-Kopplungen: **`λ(M_Pl)=−0.0143±0.0057`** (`lambda_pull_sigma=2.5`),
+**`β_λ(M_Pl)=+1.9×10⁻⁴`** (`near_zero`) — bemerkenswert nahe an (0,0), aber die exakte
+Doppel-Kritikalität ist mild gespannt. **Stabilitäts-Posterior** (MC über `M_t/M_h/α_s`,
+n=2×10⁵): **P(metastabil)=0.994**, P(stabil)=0.006 (≈2.5σ, reproduziert die publizierten
+2.8σ); `λ(M_Pl)`-Median −0.0143, 68%-CI [−0.020, −0.009]. Verdikt von `M_t` dominiert.
+**Konsistent** mit der Near-Criticality-Bridge, downstream RGE [C]; ein moderner 3–4-Loop-
+Stack + MC-vs-Pol-Topmasse wäre der Paper-fähige nächste Schritt.
+
+### 7c.4 Axion-Spine-Finite-T — `ftransfer/axion_relic/spine_finiteT_solve.py` (P1, gelöst)
+Voll dokumentiert in §6 (Axion): θᵢ=3π/5 → **`Ωₐh²=0.125`**, robust [0.090, 0.151] über
+chi(T)/g\*-Variationen → **konsistent, kein Tuning**. Damit ist der Spine der überlebende
+Axion-DM-Branch (Hilltop überproduziert).
+
+### 7c.5 QGEO-DtN-Mark-Locality — `theory-contracts/qgeo_dtn_mark_locality.py` (P2, Theory-Contract)
+**Bewusst NICHT in der empirischen Scorecard** (reine Mathematik). Z4-Marken bei `θ=jπ/2`
+geben `f=Σ_{j} g(θ−jπ/2)` mit Fourier-Support **nur `n≡0 mod 4`** ⇒ `[ρ,Λ]=0` ⇒ `ω∘ρ=ω`;
+numerisch (N=64) auf ~1e-16 bestätigt, **mit Negativkontrollen** (Z3-Marken und 4 generische
+Marken brechen den Kommutator, `[ρ,Λ]/|Λ|≈0.4–0.5`). **Contract hält.**
+
+### 7c.6 Weitere getypte Scorecard-Watchdogs + offene P2-Solver
+- **Neutrino-Absolutsektor:** `Σm_ν=5.88×10⁻² eV` (NO, **consistent**); `m_ββ=1.52×10⁻³ eV`
+  (NO, **data_limited**); `δ_νCP=240°` (**data_limited**, DUNE/HyperK).
+- **EDM-Null (`θ_eff=0`):** Neutron-EDM + Elektron-EDM beide **consistent** (PSI nEDM /
+  JILA/ACME-Limits). Kill: robustes EDM-Signal inkompatibel mit `θ_eff=0`.
+- **Leptogenese `η_B`** (Scalaron-Decuple, `ftransfer/leptogenesis_boltzmann`): **data_limited**
+  — voller flavored-density-matrix-Boltzmann-Lauf (`M1=M_scal φ₀²/AΛ`, `δ_νCP=4π/3`, AΛ=10)
+  ausstehend (die Verifikations-Suite hat das Interface `v169/v184`). **P2, offen.**
+- **GW-Strain-Echo** (Stage 1): erst nach echter Strain-Pipeline + Kerr-Subtraktion +
+  Injection- + Free-q-Kontrollen; bleibt `catalog_feasibility` (siehe §5). **P2, offen.**
+- **Rare-Kaon tree-only CKM:** die `|Vcb|`/`|Vub|`-Nuisances in §7c.2 sind PDG-Werte
+  (tree-dominiert); eine reine tree-level-Bridge (γ aus tree-B-Zerfällen, `|Vcb|`/`|Vub|`
+  exklusiv-tree) ist der nächste Schärfungsschritt, sobald KOTO `BR(KL)` liefert.
+- **Higgs 3–4-Loop-RGE:** die `higgs-criticality`-Bridge nutzt den Buttazzo-2013-NNLO-Fit;
+  ein moderner 3–4-Loop-Stack + MC-vs-Pol-Topmasse für eine paperfähige Posterior-Stabilitäts-
+  grenze ist **P2, offen** (die MC-Posterior P(metastabil)=0.994 ist schon implementiert).
+
+---
+
+## 8. Datenquellen (konsolidiert)
+
+| Domäne | Datensatz | Bezug / Provenienz | speist |
+|---|---|---|---|
+| FRB | CHIME/FRB Catalogue 1 | VizieR | FRB.03/04 (Drift, Folding) |
+| FRB | FRB 20121102A FAST 1652 Bursts | Li+2021, Nature 598 267 (VizieR) | FRB.02/02b/09, Energie-Kaskade |
+| FRB | FRB 20121102A (Aggarwal 2021) | IOPscience | Cross-Check |
+| FRB | lokalisierte FRB-`DM(z)` | ApJ adb84d Table 4; Sharma 2024 | FRB.05 (Ω_b) |
+| FRB | CHIME-Polarisation (Pandhi 2024) | IOPscience | RM/PA-Stresstests |
+| FRB | FAST FRB 20240114A Pol-Katalog (6134) | ScienceDB (user-supplied) | FRB.04/06/08 |
+| FRB | Blinkverse-DB (Multi-Source) | blinkverse.top | FRB.02/02b/04/06/07/09 Replikation |
+| FRB | rohe Wasserfälle (`.ar`/`.calibP`) | FRB 20201124A (1863), 20240114A (2729), 20121102A | FRB.01 Sub-Band-ToAs → `frb01_subband_toas.csv` |
+| CMB | Doppelbrechung `β` | ACT DR6 (arXiv:2509.13654), Planck PR4 (arXiv:2205.13962) | CMB `beta_only`/Linie + Shared-Seed |
+| CMB | `Ω_b` | Planck 2018 VI; BBN D/H (PDG/Cooke+2018) | CMB `omega_b_only`/Linie + Shared-Seed |
+| CMB | `sin²θ13`, Cabibbo `\|V_us\|` | NuFIT 6.0; PDG 2024 | Shared-Seed (θ13 + Cabibbo) |
+| CMB | `n_s`, `r`, `A_s` | Planck 2018 VI; BICEP/Keck BK18; P-ACT-LB+DESI; CMB-S4 (Forecast) | Inflation/Scalaron |
+| ν | PMNS `θ12/θ13/θ23` | NuFIT 6.0; JUNO (2025) | neutrino-mixing |
+| CKM | `δ`/`γ` | LHCb γ-Kombination | neutrino-mixing (CKM δ) |
+| GW | LVK GWTC-5.0 (390 kanonisch) | GWOSC Event-API | GW Echo-Census |
+| GW | GW170817 + GRB170817A | Abbott+ 2017 ApJL 848 L13 | `v_GW=c` Null-Test |
+| GW | Ringdown `M_f`,`a_f`,`f_220` | GW150914 (Isi+2019), GW250114 (GWTC-5.0) | QNM `ln3` (datenlimitiert) |
+| Kosmo | `Ω_Λ`, `H₀` | Planck 2018 VI | Λ/H₀-Engine |
+| Lab | Myon g−2 `a_exp` + SM-HVP | Fermilab PRL 135 101802 (2025); TI WP2020/WP2025 (arXiv:2505.21476) | g−2-Baseline-Matrix |
+| Lab | `BR(K⁺→π⁺νν)`, `KL`-Limit | NA62 (arXiv:2604.12649; JHEP 02 2025 191); KOTO 2024 | Kaon-Bridge |
+| Lab | γ (CKM), Jarlskog `J`, `\|Vcb\|`/`\|Vub\|` | LHCb γ 2024; PDG 2024 | rare-kaon-bridge (R_K, δ_CKM, J) |
+| Lab | Axion-Haloskop-Coverage | ADMX/HAYSTAC/CAPP | Axion-Marker |
+| EW | SM `λ(M_Pl)`, `β_λ(M_Pl)`-Fit | Buttazzo+2013 (arXiv:1307.3536, NNLO) | higgs-criticality (Doppel-kritische Fläche) |
+| EHT | M87 2017 Polarimetrie (uvfits) | **EHT 2023-D01-01** (CyVerse 10.25739/q46m-m857), real | EHT Achromatizität (real) + Injection-Suite; Residual-Nulls offen |
+| ν | Σm_ν, m_ββ, δ_νCP | DESI+CMB, KATRIN, LEGEND/nEXO, DUNE/HyperK | Neutrino absolutes Spektrum (scorecard) |
+| cosmo | dunkle Energie `w0-wa` | DESI DR2 (arXiv:2503.14738) + CMB + Pantheon+/Union3/DES-SN5YR | `w=−1` overlap-aware Watchdog |
+| lab | EDM-Limits (n, e) | PSI nEDM; JILA/ACME | EDM-Null (`θ_eff=0`, scorecard) |
+
+Große/öffentlich-neu-ladbare Rohdaten sind **gitignored**; nur kleine
+abgeleitete/Provenienz-Dateien (z. B. `frb01_subband_toas.csv`, `gwtc_events.csv`,
+`measurements.json`) werden versioniert, damit die Tests ohne GB-Downloads reproduzierbar bleiben.
+
+---
+
+## 9. Methodik / Red-Team-Prinzipien
+
+- **Preregistrierung & eingefrorener Kernel:** Hypothesen + Kernelwerte + Nullmodelle + Erfolgskriterien vor dem Lauf festgelegt (FRB: `hypotheses/*.yaml`, exakte Brüche per Guard-Test); Spine-Axion-Winkel vor dem Lauf eingefroren.
+- **Surrogat-kalibrierte Nullmodelle:** Within-Session-/Block-/Zeit-/Frequenz-Shuffle, AR(1)-Energy/Drift, Censoring, Dirichlet — pro Test mehrere, konservativ (max-p).
+- **Placebo-Kontrollen & Look-Elsewhere:** FRB.06 (arbiträre Kontrollbrüche), FRB.02b (freier Quotient gegen fixen TFPT-Quotienten, LEE-korrigiert, Injection-Recovery).
+- **Multi-Source-Replikation:** „Support" nur bei ≥2 unabhängigen Quellen (BH-q < 0.01, unterscheidend, semantisch valide).
+- **Observable-Semantik:** Energie- vs Amplitudenkanal korrekt zugeordnet (Energie → `64/729`, Amplitude → `8/27`); Fehlpaarung = geflaggte Audit-Anomalie.
+- **Kill-Bedingungen** pro Zeile explizit (z. B. `BR(K⁺)` außerhalb [7,12]×10⁻¹¹; gemeinsame über-Präzisions-Dispersion über Quellen; β bricht die Linie bei ≥3σ).
+
+### 9.1 Scorecard-Schema (`evidence_scorecard.json`, Generator `build_evidence_scorecard.py`)
+
+Eine getypte Zeile pro `(domain, observable)`. Felder:
+`domain · observable · tfpt_value · data_value · pull_sigma · claim_type · bridge_type ·
+stage · source · kill_condition · status` **plus die Metadaten**
+`independence_group · discriminative_power · decision_horizon · evidence_class · hint_flag`.
+
+**Feste Enums (Generator bricht bei Verstoß):**
+- `stage ∈ {prediction_of_record, downstream_bridge, search_target, catalog_feasibility,
+  strain_level_test, parked_analog, not_applicable}` (`not_applicable` = interne
+  Konsistenz-Checks/Identitäten ohne empirische Stufe, z. B. Recovery-Channel, Page-Kurve,
+  `S_dS·ρ_Λ=32π⁴`)
+- `status ∈ {consistent, hint, tension, null, kill_channel, data_limited, parked}`
+- `evidence_class ∈ {external_data, internal_consistency, downstream_bridge, search_target,
+  parked}`
+
+**Warum die Metadaten (Anti-Schein-Stärke):**
+- `independence_group` — **korrelierte Beine zählen nicht als unabhängig.** `phi0_seed`
+  (β, Ω_b, θ12, θ13, Cabibbo, Seed-Linie, FRB.05 — alle `φ₀`-abgeleitet), `alpha_em`
+  (Λ-Hierarchie, S_dS — aus `α⁻¹`), `N_star_reheating` (Inflation),
+  `c3_topform_horizon` (EHT, aus `16c₃⁴`), `independent` (Rest). Aktuell **8 Zeilen
+  `phi0_seed`** — ein Cluster, keine acht unabhängigen Treffer (Zahl auto-generiert, siehe §1).
+- `alternative_group` — **eine Frage, mehrere Lesarten** (nie gleichzeitig „consistent" und
+  „tension" aus demselben Thema zählen): `Nstar_branch` (A_s fixed vs profiliert),
+  `HVP_baseline` (g−2 WP2020 vs WP2025-Lattice), `axion_branch` (Haloskop/Hilltop/Spine).
+- `evidence_class` — `internal_consistency` (recovery-channel/Page-curve/S_dS-Identität:
+  interne Checks, *keine* externe Messung) wird vom `external_data`-Korb getrennt.
+- `watch_flag`/`watch_level` — der schärfste **nicht-rote** Kanal: dunkle Energie `w`
+  (`watch_flag=true`, `high`; 4.4σ stärkste Einzelkombo, aber systematik-limitiert → noch
+  `data_limited`, nicht `tension`).
+- `discriminative_power ∈ {internal, weak, medium}` — `weak`, wo die Standardphysik denselben
+  Wert vorhersagt (Ω_b, Λ-Hierarchie, v_GW=c).
+- `decision_horizon ∈ {near_term, mid_term, long_term}`.
+- `hint_flag` — true z. B. für FRB.03 (zu kalt für `status=hint`, daher `data_limited`).
+- Composite-/Branch-Felder: `chi2_dof`, `max_leg_pull_sigma`, `dominant_leg` (Shared-Seed);
+  `lambda_pull_sigma`/`beta_lambda_pull_sigma`/`status_note` (Higgs-Kritikalität);
+  `log_order_deviation` (Λ-Hierarchie, statt eines pull_sigma).
+
+**README-Statistik wird ausschließlich aus dem JSON generiert** (Marker-Block
+`<!-- SCORECARD_STATS -->`, vom Generator geschrieben) — keine handgepflegten Zähler.
+Aktueller Stand siehe §1.
+
+---
+
+## 10. Reproduzieren
+
+```bash
+# gemeinsames venv (mpmath/numpy/scipy/sympy/astropy)
+. experiments/tfpt-discovery/.venv/bin/activate
+
+# FRB (voller Lauf -> results/ + Plots)
+cd experiments/frb-tfpt-signatures && PYTHONPATH=src python -m frb_tfpt.cli analyze --seed 0
+
+# CMB Seed-Linie
+cd experiments/cmb-birefringence-seed && PYTHONPATH=src python -m tfpt_cmb.cli analyze
+
+# Labor-Residuen
+cd experiments/lab-residuals && PYTHONPATH=src python -m tfpt_lab.cli analyze
+
+# GW Echo-Census (Katalog ggf. neu laden)
+cd experiments/gw-ringdown-echo && python scripts/fetch_catalog.py && PYTHONPATH=src python -m tfpt_gw.cli analyze
+
+# echte EHT-Polarimetrie laden + Achromatizität + Injection-Suite + Pipeline-Readiness
+cd experiments/eht-achromatic-residual && python scripts/fetch_eht_data.py && PYTHONPATH=src python -m tfpt_eht.cli realdata
+cd experiments/eht-achromatic-residual && PYTHONPATH=src python -m tfpt_eht.cli inject
+cd experiments/eht-achromatic-residual && PYTHONPATH=src python -m tfpt_eht.cli pipeline
+
+# Seed-Stresstest (theta13-Treiber) — v1 + v2 (GLS/PPC) + v3 (reactor-only DB/RENO/DC)
+cd experiments/seed-consistency        && PYTHONPATH=src python -m tfpt_seed.cli analyze
+cd experiments/seed-consistency        && PYTHONPATH=src python -m tfpt_seed.cli v2
+cd experiments/seed-consistency        && PYTHONPATH=src python -m tfpt_seed.cli v3
+
+# erweiterte Domänen (Compiler-Ebene + Recovery-Channel)
+cd experiments/recovery-channel        && PYTHONPATH=src python -m tfpt_recovery.cli analyze
+cd experiments/cmb-inflation-scalaron  && PYTHONPATH=src python -m tfpt_inflation.cli analyze   # + Branch-Resolver/Bayes
+cd experiments/neutrino-mixing         && PYTHONPATH=src python -m tfpt_neutrino.cli analyze
+cd experiments/gw-speed-multimessenger && PYTHONPATH=src python -m tfpt_gwspeed.cli analyze
+cd experiments/gw-ringdown-spectroscopy && PYTHONPATH=src python -m tfpt_ringdown.cli analyze
+cd experiments/lambda-h0-engine        && PYTHONPATH=src python -m tfpt_lambda.cli analyze
+
+# Entscheidungs-Tests (P1/P2)
+cd experiments/dark-energy-w-watchdog  && PYTHONPATH=src python -m tfpt_w.cli analyze
+cd experiments/rare-kaon-bridge        && PYTHONPATH=src python -m tfpt_kaon.cli analyze
+cd experiments/higgs-criticality       && PYTHONPATH=src python -m tfpt_higgs.cli analyze   # + Stabilitäts-Posterior
+cd experiments/lab-residuals           && PYTHONPATH=src python -m tfpt_lab.cli haloscope    # 23.8 µeV Overlay
+cd experiments/ftransfer/axion_relic   && python spine_finiteT_solve.py      # ~25 s
+cd experiments/ftransfer/axion_relic   && python spine_independent_check.py  # unabhängiger Cross-Check
+cd experiments/theory-contracts        && python qgeo_dtn_mark_locality.py
+
+# zentrale Scorecard regenerieren
+python experiments/build_evidence_scorecard.py
+```
+
+---
+
+## 11. Konventionen
 
 * Jedes Experiment ist self-contained: eigene Abhängigkeiten, eigener Build, eigene
   CLI als Audit-Surface (`<pkg>.cli analyze`).
-* Keine SI-Werte werden als versteckte Eingabe importiert — alles fließt aus den
-  TFPT-Axiomen (`φ₀ = 1/(6π) + 3/(256π⁴)`, `c₃ = 1/(8π)`, Carrier-Polynom).
-* **Firewall / Typing:** Frontier-Observablen (Koide, η_B, Axion, `m_p/m_e`, g−2,
-  Kaonen) sind `F_transfer`-Interfaces bzw. downstream bridges — **nie** primitive
-  Compiler-Outputs. Status wird pro SM-Baseline / Branch gesplittet, kein einzelnes
-  Ampel-Urteil über Modellannahmen hinweg.
+* Keine SI-Werte als versteckte Eingabe — alles fließt aus den TFPT-Axiomen
+  (`c₃ = 1/(8π)`, `φ₀ = 1/(6π) + 3/(256π⁴)`, Carrier-Polynom `6Y²−Y−1=0`).
+* **Firewall / Typing:** Frontier-Observablen sind `F_transfer`-Bridges, **nie**
+  primitive Compiler-Outputs; Status pro SM-Baseline/Branch gesplittet; nichts wird
+  still nach `[E]` hochgestuft.
+* Standalone unter `experiments/` — **nicht** im Verification-Suite/Ledger/Website,
+  keine load-bearing Claims.

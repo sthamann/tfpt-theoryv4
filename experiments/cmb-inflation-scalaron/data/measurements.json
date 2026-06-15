@@ -1,0 +1,19 @@
+{
+  "n_s": [
+    {"experiment": "Planck 2018 (TT,TE,EE+lowE+lensing)", "value": 0.9649, "sigma": 0.0042,
+     "reference": "Planck 2018 VI, A&A 641 A6"},
+    {"experiment": "P-ACT-LB + DESI (2025)", "value": 0.9743, "sigma": 0.0034,
+     "reference": "ACT DR6 + DESI BAO combined; shifts n_s upward"}
+  ],
+  "r_tensor": [
+    {"experiment": "BICEP/Keck BK18 (2021)", "limit_95CL": 0.036,
+     "reference": "BICEP/Keck 2021, PRL 127 151301"},
+    {"experiment": "CMB-S4 (forecast)", "sigma_forecast": 5.0e-4,
+     "reference": "CMB-S4 science book; sharp future falsifier for r~0.0045"}
+  ],
+  "A_s": [
+    {"experiment": "Planck 2018", "value": 2.10e-9, "sigma": 0.03e-9,
+     "reference": "Planck 2018 VI; ln(10^10 A_s) = 3.044"}
+  ],
+  "downloaded": "2026-06-15 (published summary values)"
+}

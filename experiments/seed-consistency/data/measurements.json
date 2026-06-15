@@ -1,0 +1,16 @@
+{
+  "comment": "Each leg uses a CMB-INDEPENDENT or distinct measurement where possible (BBN Omega_b, reactor theta13, CKM Cabibbo) so the legs are not all the same pipeline.",
+  "beta_deg": {"value": 0.215, "sigma": 0.074, "reference": "ACT DR6 (arXiv:2509.13654)", "independence": "CMB"},
+  "omega_b_h2": {"value": 0.02218, "sigma": 0.00055, "h": 0.6736, "reference": "BBN D/H (PDG/Cooke+2018)", "independence": "BBN"},
+  "sin2_theta13": {"value": 0.02195, "sigma": 0.00058, "reference": "NuFIT 6.0", "independence": "reactor"},
+  "sin2_theta13_reactor": {"value": 0.02175, "sigma": 0.00065, "reference": "Daya Bay final 2023 (sin^2 2theta13 = 0.0851 +/- 0.0024), reactor-only", "independence": "reactor"},
+  "sin2_theta13_global": {"value": 0.02195, "sigma": 0.00058, "reference": "NuFIT 6.0 (global PMNS; contains reactor data -> ~0.9 correlated with reactor-only)", "independence": "global-PMNS"},
+  "sin2_theta13_reactor_experiments": [
+    {"experiment": "Daya Bay", "value": 0.02175, "sigma": 0.00065, "reference": "Daya Bay final 2023: sin^2 2theta13 = 0.0851 +/- 0.0024"},
+    {"experiment": "RENO", "value": 0.02282, "sigma": 0.00165, "reference": "RENO 2018/2024: sin^2 2theta13 = 0.0892 +/- 0.0063"},
+    {"experiment": "Double Chooz", "value": 0.02619, "sigma": 0.00317, "reference": "Double Chooz 2020: sin^2 2theta13 = 0.102 +/- 0.012"},
+    {"experiment": "JUNO", "value": null, "sigma": null, "reference": "JUNO theta13 sensitivity pending (primary target theta12); shadow only when available"}
+  ],
+  "cabibbo_Vus": {"value": 0.22431, "sigma": 0.00085, "reference": "PDG 2024", "independence": "CKM"},
+  "downloaded": "2026-06-15"
+}
