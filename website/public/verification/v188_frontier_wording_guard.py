@@ -20,6 +20,9 @@ none of the stale phrasings appear in the active documents.
        ADMISSIBLE physical sector, not the full ambient 4D theory.
     7. "Here is the complete solution" -> standalone over-claim; scope it to the
        admissible sector and state the ambient measure is not constructed.
+    8. "64.36" (the old determinant-line axion mass 64.36 ueV / f_a~8.86e10 GeV)
+       -> the SUPERSEDED small-angle (theta_i=phi0) reading; the current closed
+       reading is theta_i=170.4 deg, f_a=M_scal/128~2.39e11 GeV, m_a~23.8 ueV.
 
   Python-only (text sentinel over the active documents).
 """
@@ -57,6 +60,10 @@ FORBIDDEN = {
     r"Here is the complete solution":
         "standalone over-claim (gives reviewers free ammunition): scope it to the admissible "
         "sector and state the ambient measure is not constructed (G_metric frontier)",
+    r"64\.36":
+        "the determinant-line axion mass 64.36 ueV (f_a ~ 8.86e10 GeV) is the SUPERSEDED "
+        "small-angle (theta_i=phi0) reading; the current closed reading is theta_i=170.4 deg, "
+        "f_a=M_scal/128 ~ 2.39e11 GeV, m_a ~ 23.8 ueV (tfpt_4_frontier)",
 }
 
 
