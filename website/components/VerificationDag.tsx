@@ -315,6 +315,7 @@ const NODES: DagNode[] = [
       "v199_seam_state_invariance.py",
       "v200_seam_variational_scan.py",
       "v201_seam_subprincipal_marks.py",
+      "v210_mark_local_dtn.py",
     ],
   },
   {

@@ -59,6 +59,22 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-15 (QGEO sharpening: mark-local DtN certified on realistic profiles)}
+\begin{itemize}
+\item \textbf{Mark-local DtN $\Rightarrow\omega\circ\rho=\omega$, certified on realistic Steklov profiles and
+  at the state level (\texttt{v210\_mark\_local\_dtn}, \texttt{tfpt\_research\_contracts}, \mO).} A numerical
+  sharpening of \texttt{QGEO.SUBPRIN.01}/\texttt{v201}: a real von-Mises curvature bump summed over the four
+  $\mu_4$ marks, $f(\theta)=\sum_{j=0}^3 g(\theta-j\pi/2)$, builds the Steklov DtN $\Lambda=|D_\theta|+M_f$
+  whose off-$(\mathrm{mod}\,4)$ Fourier support vanishes to $<10^{-16}$, $\|[\rho,\Lambda]\|<10^{-15}$, and ---
+  the genuinely new step --- the quasi-free covariance $C=\tfrac12(1+\operatorname{sgn}H_1)$ is clock-invariant
+  ($\rho C\rho^\dagger=C$ to $<10^{-13}$), i.e.\ the actual $\omega\circ\rho=\omega$. Negative controls (single
+  off-centre bump, $\Z_3$ source, four generic marks) break both by $O(1)$; convergence stable for
+  $N\in\{16,32,64\}$. This certifies the \emph{implication}; the premise that the physical seam \emph{is}
+  mark-local stays \mO\ (it does \emph{not} close \texttt{QGEO.SYM.01}; net existence and full-cone RP remain
+  the \mE\ of \texttt{v175}). Ledger \texttt{QGEO.MARKLOCAL.01}. Python-only (the exact mark-sum identity is
+  Wolfram-mirrored via \texttt{v201}).
+\end{itemize}
+
 \subsection*{2026-06-15 (archive integration \#5: six dormant results revived from the old papers)}
 \begin{itemize}
 \item \textbf{Muon $g-2$ as a seam vertex (\texttt{v204\_muon\_seam\_g2}, \texttt{tfpt\_4\_frontier}, \mC).}
