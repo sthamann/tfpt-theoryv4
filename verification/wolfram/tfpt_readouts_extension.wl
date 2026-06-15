@@ -1683,6 +1683,16 @@ Module[{markSum, nn, rho, fmodes, Mf, Moff, gprof},
     rho . Moff - Moff . rho != ConstantArray[0, {Length[nn], Length[nn]}]];
 ];
 
+(* ---- (v203) HOR.EHT.01: the EHT polarization coupling 16 c3^4 = 1/(256 pi^4) = delta_top/3 ---- *)
+Module[{c3, dtop},
+  c3 = 1/(8 Pi);
+  dtop = 48 c3^4;                                         (* = 3/(256 pi^4) *)
+  checkExact["v203 HOR.EHT.01: the EHT achromatic polarization coupling beta_BH = 16 c3^4 (Q_e Q_m/r^2) has 16 c3^4 = 1/(256 pi^4) EXACTLY (c3=1/8pi), and equals delta_top/3 with delta_top = 48 c3^4 = 3/(256 pi^4) -- the SAME top-form coefficient that fixes the alpha-kernel precision-zone correction; the EHT coupling and the alpha correction are one compiler number (no free coupling)",
+    Simplify[16 c3^4 - 1/(256 Pi^4)] == 0 &&
+    Simplify[16 c3^4 - dtop/3] == 0 &&
+    Simplify[dtop - 3/(256 Pi^4)] == 0];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v201: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v203: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

@@ -555,6 +555,29 @@ export const predictions: Prediction[] = [
       "The closed TFPT CKM point (no flavor fit) feeds the cleanest FCNC probe. With standard external short-distance input (Brod–Gorbahn–Stamou X_t, P_c, κ_±) it gives BR(K⁺→π⁺νν̄) = 9.45×10⁻¹¹ and BR(K_L→π⁰νν̄) = 3.33×10⁻¹¹ — a [C] downstream readout, NOT a compiler power (the SD functions are external). The neutral mode ∝ (Im λ_t)² is a direct probe of the holonomy phase δ_CKM; the current NA62 value (13.0₋₃.₀⁺³·³)×10⁻¹¹ sits ~1.2σ above. The ~2σ δ_CKM tension makes the NA62/KOTO-II corridor a genuinely discriminating, live falsifier (v202).",
     category: "Flavor",
   },
+  {
+    id: "eht-intercept",
+    slug: "eht-achromatic-intercept",
+    title: "EHT achromatic polarization intercept",
+    shortTitle: "β_BH",
+    target: "β_BH ∝ 16c₃⁴ · Q_e Q_m / r² (achromatic, 1/r², sign-flipping)",
+    targetLatex:
+      "\\beta_{\\mathrm{BH}}(r)=16\\,c_3^4\\,\\frac{Q_e^{\\mathrm{eff}}Q_m^{\\mathrm{eff}}}{r^2}=\\frac{1}{256\\pi^4}\\frac{Q_e^{\\mathrm{eff}}Q_m^{\\mathrm{eff}}}{r^2}",
+    numericValue: "16c₃⁴",
+    unit: "= 1/(256π⁴)",
+    status: "Conditional",
+    dependencyClass: "Horizon / determinant line",
+    killTest:
+      "A structured achromatic residual intercept consistent with zero across the horizon-scale image after honest GRMHD subtraction — or one failing the frequency / 1/r² / sign-flip nulls — falsifies the channel (the compiler core is untouched).",
+    derivationFormulas: [
+      "16\\,c_3^4 = \\tfrac{1}{256\\pi^4} = \\tfrac{\\delta_{\\mathrm{top}}}{3},\\quad \\delta_{\\mathrm{top}}=48c_3^4",
+      "\\chi_0^{\\mathrm{res}} = \\chi_0^{\\mathrm{obs}} - \\chi_0^{\\mathrm{GRMHD}}\\ (\\text{3 nulls})",
+    ],
+    pdf: "/papers/tfpt_horizon_readouts.pdf",
+    description:
+      "The local (horizon-collar) sibling of cosmic birefringence: a structured, achromatic residual rotation of the linear-polarization angle around a horizon-scale black hole. The coupling 16c₃⁴ = 1/(256π⁴) is fixed EXACTLY — the same top-form coefficient δ_top = 48c₃⁴ that controls the α-kernel correction, so there is no free coupling. TFPT fixes the 1/r² shape, achromaticity and sign-flip (under E·B reversal); the amplitude Q_e Q_m is an MHD/GR weight, so the channel is [C] (shape/sign). NOT the old UFE black-hole metric (superseded by Nariai/seam=horizon); only the polarization signature survives (v203).",
+    category: "Astrophysics",
+  },
 ];
 
 /** Ledger claim IDs per prediction (mirror of the status-ledger row keys). */
@@ -580,6 +603,7 @@ export const CLAIM_ID: Record<string, string> = {
   birefringence: "HOR.01",
   axion: "FR.DM.01",
   "rare-kaon": "FR.RAREKAON.01",
+  "eht-intercept": "HOR.EHT.01",
 };
 
 /** Compact status marker per prediction status grade. */

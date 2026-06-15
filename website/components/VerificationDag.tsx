@@ -366,6 +366,7 @@ const NODES: DagNode[] = [
       "v102_seam_orientation.py",
       "v103_trisection_normal_form.py",
       "v104_nariai_clock.py",
+      "v203_eht_achromatic.py",
       "v105_residual_inventory.py",
       "v107_quantum_clock_target.py",
       "v169_etaB_boltzmann_interface.py",

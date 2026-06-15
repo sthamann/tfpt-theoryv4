@@ -113,6 +113,7 @@ const CLUSTERS: Cluster[] = [
       { file: "v61_cft_bridge.py", what: "boundary-CFT mirror: c(E₈)=8, c(D₅)=5, c(A₃)=3" },
       { file: "v67_area_law_coefficient.py", what: "Fursaev–Solodukhin S = A/4 ⇔ 2πc₃ = 1/4; c₃ = 1/(8π) unique" },
       { file: "v73_k_c3_half.py", what: "central coefficient k = c₃/2 forced (Gauss–Bonnet topology)" },
+      { file: "v203_eht_achromatic.py", what: "the EHT achromatic polarization-rotation intercept β_BH around a horizon-scale black hole — the surviving core of the old UFE/BH notes (NOT the RN-type metric, superseded by Nariai/seam=horizon v101–v104/v190; only the polarization signature). [E] the coupling is a compiler number: β_BH(r)=Q_e^eff Q_m^eff/(256π⁴r²)=16c₃⁴(Q_eQ_m/r²), 16c₃⁴=1/(256π⁴) exactly. [E] α-kernel cross-link: 16c₃⁴=δ_top/3, δ_top=48c₃⁴=3/(256π⁴) — the SAME top-form coefficient that fixes the α-kernel precision-zone correction (one row from β_rad=φ₀/4π). [C] TFPT fixes the 1/r² profile, achromaticity, and sign-flip under E·B reversal; the amplitude Q_eQ_m is an MHD/GR weight, not a compiler output. [X] dated kill test: the residual intercept must pass three nulls (frequency/achromatic, spatial 1/r², sign-flip); a null-consistent residual after honest GRMHD subtraction falsifies the channel (core untouched)." },
     ],
   },
   {
