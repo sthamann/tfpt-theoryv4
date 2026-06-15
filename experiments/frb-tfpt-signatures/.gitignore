@@ -6,3 +6,15 @@ build/
 dist/
 *.pyc
 .ipynb_checkpoints/
+
+# raw input data: public, re-downloadable, large (kept out of git)
+data/
+new-data/
+new_data/
+*.fil
+*.fits
+*.zip
+*.calibP
+*.calib.pazi.*
+*.rf.*
+*.ucf.cz
