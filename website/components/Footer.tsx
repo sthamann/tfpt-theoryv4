@@ -104,6 +104,21 @@ export function Footer() {
               </Link>
             </li>
             <li>
+              <Link href="/review" className="text-slate-400 hover:text-white">
+                For reviewers — read first
+              </Link>
+            </li>
+            <li>
+              <Link href="/objections" className="text-slate-400 hover:text-white">
+                Objection ledger
+              </Link>
+            </li>
+            <li>
+              <Link href="/replication" className="text-slate-400 hover:text-white">
+                Replication status
+              </Link>
+            </li>
+            <li>
               <Link href="/faq" className="text-slate-400 hover:text-white">
                 Hostile-referee FAQ
               </Link>

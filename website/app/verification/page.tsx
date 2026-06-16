@@ -57,6 +57,36 @@ const jsonLd = {
   isBasedOn: REPO_URL,
 };
 
+const authorsJsonLd = [
+  { "@type": "Person", name: "Stefan Hamann" },
+  { "@type": "Person", name: "Alessandro Rizzo" },
+];
+
+const softwareJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  name: "TFPT verification suite",
+  description: `${SCRIPT_TOTAL} numbered claim checks (Python), an independent Wolfram mirror, and a Lean 4 carrier-rigidity proof — every load-bearing TFPT result re-derived from the two axioms c₃ = 1/(8π) and g_car = 5.`,
+  codeRepository: REPO_URL,
+  url: `${SITE_URL}/verification`,
+  programmingLanguage: ["Python", "Wolfram Language", "Lean 4"],
+  runtimePlatform: "Python 3, Wolfram Engine, Lean 4",
+  author: authorsJsonLd,
+};
+
+const datasetJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  name: "TFPT status ledger & frozen prediction registry",
+  description:
+    "The versioned status_ledger.csv (single source of truth for every typed claim: id, status, location, dependency, script) and predictions_frozen.json (the blind prediction registry, frozen 2026-06-09).",
+  inLanguage: "en",
+  url: `${SITE_URL}/verification`,
+  isBasedOn: REPO_URL,
+  sameAs: [REPO_URL],
+  creator: authorsJsonLd,
+};
+
 const PATHS: { label: string; value: string; body: string }[] = [
   {
     label: "Python suite",
@@ -158,6 +188,14 @@ export default function VerificationPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(datasetJsonLd) }}
       />
 
       <section className="relative isolate overflow-hidden pt-12 pb-12 sm:pt-16">

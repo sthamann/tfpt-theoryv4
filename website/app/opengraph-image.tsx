@@ -177,16 +177,18 @@ export default function OpengraphImage() {
           <div
             style={{
               display: "flex",
+              flexWrap: "wrap",
               fontFamily: "serif",
-              fontSize: 92,
+              fontSize: 84,
               fontWeight: 600,
               color: "#f8fafc",
               lineHeight: 1.0,
               letterSpacing: -2.5,
               marginTop: 8,
+              maxWidth: 1080,
             }}
           >
-            The Standard Model, derived.
+            A testable Standard-Model skeleton.
           </div>
           <div
             style={{
@@ -198,7 +200,7 @@ export default function OpengraphImage() {
               display: "flex",
             }}
           >
-            From c₃ = 1/(8π) and g_car = 5: the gauge group, three families, α⁻¹ = 137.0359992, and the flavor sector. 20 falsifiable predictions, zero fitted constants.
+            From c₃ = 1/(8π) and g_car = 5: the gauge group, three families, α⁻¹ = 137.0359992, and the flavor sector. 22 falsifiable predictions, zero fitted constants.
           </div>
           <div
             style={{

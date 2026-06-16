@@ -44,7 +44,7 @@ website/
 │   ├── Hero.tsx                  Hero with the compiler map + 6-frame unpacking
 │   ├── Overview.tsx              Four pillars + μ₄ glue + α closure + claim stack
 │   ├── ReconstructionChain.tsx   The compiler pipeline / dependency DAG
-│   ├── PapersSection.tsx         Wrapper for the 8 documents
+│   ├── PapersSection.tsx         Wrapper for the 9 documents
 │   ├── PaperSection.tsx          Single document card with highlights
 │   ├── CarrierVisualization.tsx  3+2 carrier → D₅ spinor + SM packet (Doc 2)
 │   ├── AlphaVisualization.tsx    EM fixed point F_U(1)(α)=0 + no-knobs audit (Doc 1)

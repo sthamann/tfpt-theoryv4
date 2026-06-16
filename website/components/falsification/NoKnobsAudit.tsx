@@ -1,12 +1,16 @@
 "use client";
 
 import { motion } from "motion/react";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
 interface AuditRow {
   output: string;
   inputsAllowed: string;
   inputsForbidden: string;
   freeKnobs: string;
+  /** The single condition that would falsify this row (mirror of the kill board / KillCriteria). */
+  kill: string;
 }
 
 const ROWS: AuditRow[] = [
@@ -17,30 +21,35 @@ const ROWS: AuditRow[] = [
     inputsForbidden:
       "Fitting against CODATA / atom-recoil values; freezing φ_seam at φ₀ inside the root equation",
     freeKnobs: "0",
+    kill: "No unique positive root of F_U(1)=0, or the root drifts outside the declared interface uncertainty (~1.9σ).",
   },
   {
     output: "sin²θ₁₂  (solar angle)",
     inputsAllowed: "The seed φ₀ and the glue norm q(A₃) = 3/4 (seam misalignment ε = (3/4)φ₀)",
     inputsForbidden: "NuFIT central value pre-loaded as input",
     freeKnobs: "0",
+    kill: "A JUNO central value clearly away from 0.307 at high significance.",
   },
   {
     output: "sin²θ₁₃  (reactor angle)",
     inputsAllowed: "The seed φ₀ and the carrier trace e⁻⁵ᐟ⁶ (γ = 5/6)",
     inputsForbidden: "Oscillation-fit central value pre-loaded as input",
     freeKnobs: "0",
+    kill: "A robust normal-ordering global-fit exclusion at the stated confidence level.",
   },
   {
     output: "det R = 8, minors (2,3,5)",
     inputsAllowed: "The compiler residue matrix R = R(g_car, μ₄)",
     inputsForbidden: "Fitting R to a CKM/PMNS global fit",
     freeKnobs: "0",
+    kill: "A CKM/PMNS global fit no residue matrix with det 8, minors (2,3,5) can carry.",
   },
   {
     output: "N_Φ = 1  (Higgs index)",
     inputsAllowed: "The carrier index, N_Φ = g_car − |μ₄| = 1",
     inputsForbidden: "Observed Higgs count used as primitive input",
     freeKnobs: "0",
+    kill: "Robust discovery of a second light seam-even Higgs doublet.",
   },
   {
     output: "θ_eff = 0  (strong-CP null)",
@@ -48,36 +57,42 @@ const ROWS: AuditRow[] = [
       "γ₅-Hermiticity, polar structure, sheet involution + reflection positivity",
     inputsForbidden: "Tuned θ-phase, hidden flavor-side cancellation",
     freeKnobs: "0",
+    kill: "A solid neutron-EDM signal above the Standard-Model background.",
   },
   {
     output: "M_scal = c₃^(7/2) M̄  (scalaron)",
     inputsAllowed: "The seam power c₃⁷ = c₃^(Ω_adm − 10 b₁), exponent 7 = 48 − 41",
     inputsForbidden: "Fitting the scalaron mass to A_s",
     freeKnobs: "0",
+    kill: "A scalaron mass incompatible with the seam power c₃⁷.",
   },
   {
     output: "n_s, r, A_s  (inflation)",
     inputsAllowed: "The R² attractor + the seam-fixed scalaron mass + the e-fold count N★",
     inputsForbidden: "A free inflationary amplitude",
     freeKnobs: "0 (amplitude) · N★ input (50–60)",
+    kill: "A robust r ≳ 0.01 kills the R² branch carrying M_Pl and A_s.",
   },
   {
     output: "β_rad = 0.2424°  (birefringence)",
     inputsAllowed: "The determinant-line response, β_rad = φ₀/(4π)",
     inputsForbidden: "Calibration absorbed into the predicted angle",
     freeKnobs: "0",
+    kill: "An externally calibrated β = 0 within tight error.",
   },
   {
     output: "Ω_b = 0.04894  (baryon density)",
     inputsAllowed: "β_rad via Ω_b = (4π − 1)β_rad",
     inputsForbidden: "Planck value used as primitive input",
     freeKnobs: "0",
+    kill: "Robust inconsistency under the declared Planck comparison convention.",
   },
   {
     output: "m_a ≈ 23.8 µeV  (axion DM)",
     inputsAllowed: "f_a = M_scal/128 and the closed misalignment θ_i = 170°",
     inputsForbidden: "Coupling rescaling to fit a haloscope window",
     freeKnobs: "0 (decay-constant conjecture) · scenario-dependent (relic)",
+    kill: "Exclusion of the determinant-line axion window at the coupled sensitivity.",
   },
 ];
 
@@ -100,33 +115,25 @@ export function NoKnobsAudit() {
           </div>
 
           <div className="overflow-x-auto formula-scroll">
-            <table className="w-full min-w-[900px] border-separate border-spacing-0 text-left text-sm">
+            <table className="w-full min-w-[1180px] border-separate border-spacing-0 text-left text-sm">
               <thead>
                 <tr>
-                  <th
-                    scope="col"
-                    className="border-b border-slate-800/60 bg-slate-950/60 px-4 py-3 text-[10px] font-semibold uppercase tracking-widest text-slate-300"
-                  >
-                    Output
-                  </th>
-                  <th
-                    scope="col"
-                    className="border-b border-slate-800/60 bg-slate-950/60 px-4 py-3 text-[10px] font-semibold uppercase tracking-widest text-slate-300"
-                  >
-                    Inputs allowed
-                  </th>
-                  <th
-                    scope="col"
-                    className="border-b border-slate-800/60 bg-slate-950/60 px-4 py-3 text-[10px] font-semibold uppercase tracking-widest text-slate-300"
-                  >
-                    Inputs forbidden
-                  </th>
-                  <th
-                    scope="col"
-                    className="border-b border-slate-800/60 bg-slate-950/60 px-4 py-3 text-[10px] font-semibold uppercase tracking-widest text-slate-300"
-                  >
-                    Free knobs
-                  </th>
+                  {[
+                    "Output",
+                    "Inputs allowed",
+                    "Inputs forbidden",
+                    "Free knobs",
+                    "Kill condition",
+                    "Verify",
+                  ].map((h) => (
+                    <th
+                      key={h}
+                      scope="col"
+                      className="border-b border-slate-800/60 bg-slate-950/60 px-4 py-3 text-[10px] font-semibold uppercase tracking-widest text-slate-300"
+                    >
+                      {h}
+                    </th>
+                  ))}
                 </tr>
               </thead>
               <tbody>
@@ -150,6 +157,18 @@ export function NoKnobsAudit() {
                     </td>
                     <td className="border-b border-slate-800/60 px-4 py-3 align-top text-xs font-semibold text-emerald-200">
                       {row.freeKnobs}
+                    </td>
+                    <td className="border-b border-slate-800/60 px-4 py-3 align-top text-xs leading-relaxed text-amber-200/90">
+                      {row.kill}
+                    </td>
+                    <td className="border-b border-slate-800/60 px-4 py-3 align-top text-xs">
+                      <Link
+                        href="/verification#dag"
+                        className="inline-flex items-center gap-1 font-semibold text-blue-300 transition-colors hover:text-blue-200"
+                      >
+                        Run it
+                        <ArrowUpRight size={12} aria-hidden />
+                      </Link>
                     </td>
                   </motion.tr>
                 ))}

@@ -42,6 +42,67 @@ const GATES: Gate[] = [
 ];
 
 /**
+ * The open-residual visual: the whole residual at a glance as three tiles
+ * (Rest = v_geo ⊕ G_net ⊕ F_transfer). It is deliberately NOT area-weighted —
+ * there is no meaningful proportion between the three; the point is that the
+ * residual is exactly three named items, none hidden. The detailed status of
+ * each is in the cards below.
+ */
+const RESIDUAL: { label: string; marker: string; blurb: string; tone: string }[] = [
+  {
+    label: "v_geo",
+    marker: "[O]",
+    blurb: "One dimensionful scale anchor — the same primitive as gravity's 1/G.",
+    tone: "from-amber-500/15 to-amber-500/[0.03] border-amber-400/30",
+  },
+  {
+    label: "G_net",
+    marker: "[E] target · [O] seam",
+    blurb: "Metric-sector inclusion: the (E₈)₁ target algebra is closed; only the seam coupling is open.",
+    tone: "from-amber-500/15 to-amber-500/[0.03] border-amber-400/30",
+  },
+  {
+    label: "F_transfer",
+    marker: "[C]",
+    blurb: "One typed functor with exactly four downstream interfaces — bridges, never primitive outputs.",
+    tone: "from-slate-500/15 to-slate-500/[0.03] border-slate-500/30",
+  },
+];
+
+function ResidualTreemap() {
+  return (
+    <figure
+      className="mt-8 rounded-2xl border border-slate-700/40 bg-slate-950/30 p-4 sm:p-5"
+      aria-label="The complete open residual: v_geo, G_net and F_transfer"
+    >
+      <figcaption className="mb-3 text-center font-mono text-sm text-slate-300">
+        Rest = <span className="text-amber-200">v_geo</span> ⊕{" "}
+        <span className="text-amber-200">G_net</span> ⊕{" "}
+        <span className="text-slate-200">F_transfer</span>
+      </figcaption>
+      <div className="grid gap-3 sm:grid-cols-3">
+        {RESIDUAL.map((r) => (
+          <div
+            key={r.label}
+            className={`flex flex-col gap-2 rounded-xl border bg-gradient-to-br p-4 ${r.tone}`}
+          >
+            <div className="flex items-center justify-between gap-2">
+              <span className="font-mono text-base font-semibold text-slate-50">
+                {r.label}
+              </span>
+              <span className="rounded-full bg-slate-900/60 px-2 py-0.5 font-mono text-[10px] font-semibold text-slate-300 ring-1 ring-slate-600/40">
+                {r.marker}
+              </span>
+            </div>
+            <p className="text-xs leading-relaxed text-slate-300">{r.blurb}</p>
+          </div>
+        ))}
+      </div>
+    </figure>
+  );
+}
+
+/**
  * Trust section: what is still open. The research contracts name exactly two
  * genuine gates plus a set of typed frontier interfaces — surfacing this near
  * the top is a credibility signal, not a footnote.
@@ -59,6 +120,8 @@ export function OpenGates() {
           title="What is still open?"
           description="After the compiler closure the live residual is Rest = v_geo ⊕ G_net ⊕ F_transfer: one dimensionful scale anchor, one metric-sector inclusion theorem, and one downstream transfer functor. None of these is hidden, and none is overclaimed. (The historical labels U_wall / G_metric / F_frontier are kept only for ledger continuity.)"
         />
+
+        <ResidualTreemap />
 
         <div className="mt-10 grid gap-5 lg:grid-cols-3">
           {GATES.map((g, i) => (

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { SectionHeader } from "@/components/SectionHeader";
+import { KillBoard } from "@/components/falsification/KillBoard";
 import { KillCriteria } from "@/components/falsification/KillCriteria";
 import { NoKnobsAudit } from "@/components/falsification/NoKnobsAudit";
 import { SITE_VERSION } from "@/lib/version";
@@ -127,8 +128,24 @@ export default function FalsificationPage() {
       </section>
 
       <section
-        id="kill-criteria-section"
+        id="kill-board-section"
         className="relative scroll-mt-20 py-12 sm:py-16"
+        aria-labelledby="kill-board-heading"
+      >
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            id="kill-board-heading"
+            eyebrow="The kill board"
+            title="Every readout, its kill condition, and where it stands now"
+            description="The full status-graded surface as a board: each card carries the predicted value, the single condition that would falsify it, and — where a standalone empirical audit exists in the experiments/ tree — its live status. These confrontations are search targets, not load-bearing claims; no card is upgraded by data proximity."
+          />
+          <KillBoard />
+        </div>
+      </section>
+
+      <section
+        id="kill-criteria-section"
+        className="relative scroll-mt-20 border-t border-slate-800/60 py-12 sm:py-16"
         aria-labelledby="kill-criteria-heading"
       >
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
@@ -152,7 +169,7 @@ export default function FalsificationPage() {
             id="no-knobs-heading"
             eyebrow="No-knobs audit"
             title="Inputs allowed, inputs forbidden, free knobs"
-            description="A claim of 'no fitted constants' is only as strong as the audit table behind it. For each TFPT output, the table below records the inputs the construction may use (the two axioms and their consequences), the inputs it explicitly may not use, and the number of free parameters available for absorption. The free-knob count is the bar to clear."
+            description="A claim of 'no fitted constants' is only as strong as the audit table behind it. For each TFPT output the matrix records the inputs the construction may use (the two axioms and their consequences), the inputs it explicitly may not use, the number of free parameters available for absorption, the single condition that would falsify the row, and a link to run the check live. The free-knob count is the bar to clear."
           />
           <NoKnobsAudit />
         </div>

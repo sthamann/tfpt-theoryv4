@@ -1,5 +1,6 @@
 import { Hero } from "@/components/Hero";
 import { TrustContract } from "@/components/TrustContract";
+import { ClaimStack } from "@/components/ClaimStack";
 import { WhyThisMatters } from "@/components/WhyThisMatters";
 import { Overview } from "@/components/Overview";
 import { RosettaLexicon } from "@/components/RosettaLexicon";
@@ -15,6 +16,7 @@ export default function HomePage() {
     <>
       <Hero />
       <TrustContract />
+      <ClaimStack />
       <WhyThisMatters />
       <Overview />
       <RosettaLexicon />

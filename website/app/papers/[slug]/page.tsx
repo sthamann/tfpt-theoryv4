@@ -6,7 +6,9 @@ import { papers, STATUS_META, paperLabel } from "@/lib/papers";
 import { getReleaseAsset, formatBytes } from "@/lib/release";
 import { Math } from "@/components/Math";
 import { PaperSection } from "@/components/PaperSection";
+import { CitationBox } from "@/components/CitationBox";
 import { SITE_VERSION } from "@/lib/version";
+import { REPO_URL } from "@/lib/utils";
 
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://tfpt-theory.vercel.app";
@@ -39,6 +41,12 @@ export async function generateMetadata(
     .join(" ");
 
   const title = `${paperLabel(paper)} — ${paper.title}`;
+
+  // Highwire `citation_publication_date` prefers YYYY/MM/DD; fall back to the year.
+  const release = getReleaseAsset(paper.pdf);
+  const citationDate = release?.releaseDate
+    ? release.releaseDate.replace(/-/g, "/")
+    : "2026";
 
   return {
     title,
@@ -82,8 +90,10 @@ export async function generateMetadata(
       // elements, so two authors round-trip correctly.
       citation_title: paper.title,
       citation_author: ["Hamann, Stefan", "Rizzo, Alessandro"],
-      citation_publication_date: "2026",
+      citation_publication_date: citationDate,
       citation_pdf_url: `${SITE_URL}${paper.pdf}`,
+      citation_abstract_html_url: `${SITE_URL}/papers/${paper.slug}`,
+      citation_keywords: paper.keyFormulas.map((k) => k.label).join("; "),
       citation_language: "en",
     },
   };
@@ -108,6 +118,8 @@ export default async function PaperPage({ params }: PaperPageProps) {
     abstract: paper.abstract,
     url: `${SITE_URL}/papers/${paper.slug}`,
     inLanguage: "en",
+    datePublished: release?.releaseDate ?? "2026",
+    version: release?.version ?? `TFPT ${SITE_VERSION}`,
     isPartOf: {
       "@type": "PublicationIssue",
       issueNumber: String(paper.number),
@@ -117,6 +129,14 @@ export default async function PaperPage({ params }: PaperPageProps) {
       { "@type": "Person", name: "Stefan Hamann" },
       { "@type": "Person", name: "Alessandro Rizzo" },
     ],
+    // The machine-checked code + ledger the document is verified against.
+    isBasedOn: {
+      "@type": "SoftwareSourceCode",
+      name: "TFPT verification suite",
+      codeRepository: REPO_URL,
+      programmingLanguage: ["Python", "Wolfram Language", "Lean 4"],
+    },
+    sameAs: [REPO_URL],
     encoding: {
       "@type": "MediaObject",
       contentUrl: `${SITE_URL}${paper.pdf}`,
@@ -230,6 +250,17 @@ export default async function PaperPage({ params }: PaperPageProps) {
           </ul>
         </div>
       </section>
+
+      <CitationBox
+        title={paper.title}
+        slug={paper.slug}
+        canonicalUrl={`${SITE_URL}/papers/${paper.slug}`}
+        pdfUrl={`${SITE_URL}${paper.pdf}`}
+        version={release?.version}
+        releaseDate={release?.releaseDate}
+        sha256={release?.sha256}
+        statusLabel={meta.label}
+      />
 
       <nav
         aria-label="Paper navigation"

@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import { Math } from "./Math";
 import { AlphaRootPlot } from "./AlphaRootPlot";
+import { AlphaComparator } from "./AlphaComparator";
 import { AlphaSelfConsistencyLoop } from "./AlphaSelfConsistencyLoop";
 
 const COMPARISON: Array<{
@@ -121,6 +122,10 @@ F_{U(1)}(\alpha) \;&=\; \alpha^3 \;-\; 2 c_3^3\,\alpha^2 \\
             definition.
           </div>
         </div>
+      </div>
+
+      <div className="border-t border-slate-800/60 p-6 md:p-8">
+        <AlphaComparator />
       </div>
 
       <div className="grid gap-6 border-t border-slate-800/60 p-6 md:p-8 lg:grid-cols-2">

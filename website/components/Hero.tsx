@@ -9,8 +9,13 @@ import { ThreeDecoderMap } from "./ThreeDecoderMap";
 import { TheoryUnpacking } from "./TheoryUnpacking";
 import { GlossTerm } from "./GlossTerm";
 import { SITE_VERSION } from "@/lib/version";
+import { predictions } from "@/lib/predictions";
 
 const READING_GUIDE = "/papers/introduction.pdf";
+
+// Single source for the headline count: the prediction surface itself, so the
+// hero can never drift out of sync with the prediction table again.
+const TEST_SURFACES = predictions.length;
 
 export function Hero() {
   return (
@@ -41,20 +46,22 @@ export function Hero() {
           </span>
 
           <h1
-            aria-label="Two axioms. One compiler. The Standard Model, derived."
+            aria-label="Two axioms. One compiler. A testable Standard-Model skeleton."
             className="mt-6 max-w-4xl font-serif text-4xl font-semibold leading-[1.05] text-slate-50 sm:text-5xl md:text-6xl lg:text-7xl"
           >
-            <span className="block">Two axioms. One compiler.</span>
+            <span className="block">Two axioms. One compiler.</span>{" "}
             <span className="block">
-              The <span className="text-gradient-blue">Standard Model</span>, derived.
+              A testable <span className="text-gradient-blue">Standard-Model skeleton</span>.
             </span>
           </h1>
+
+          <ScopeGuard />
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-300">
             The gauge group, three families, hypercharge and the flavor matrix
             follow from two numbers.{" "}
             <span className="font-semibold text-blue-300">α⁻¹ = 137.0359992</span>,
             1.9σ from CODATA-2022.{" "}
-            <span className="font-semibold text-slate-100">20 status-graded test surfaces</span>;
+            <span className="font-semibold text-slate-100">{TEST_SURFACES} status-graded test surfaces</span>;
             zero fitted constants in the closed branch. Every claim is ledger-typed,
             reproducible, or explicitly open.
           </p>
@@ -169,6 +176,62 @@ export function Hero() {
   );
 }
 
+/**
+ * The scope guard: the [E]/[C]/[O] discipline made visible in the first
+ * viewport, so a skeptical reader sees the separation before reading any
+ * single claim. Status is encoded as text + marker (not colour alone) for
+ * accessibility; colours mirror the /verification marker legend.
+ */
+const SCOPE_GUARD: { marker: string; label: string; meaning: string; tone: string }[] = [
+  {
+    marker: "[E]",
+    label: "Exact",
+    meaning: "Identities, Lie/lattice theorems, Lean-formalised carrier, numerical fixed points",
+    tone: "border-emerald-400/30 bg-emerald-500/10 text-emerald-200",
+  },
+  {
+    marker: "[C]",
+    label: "Conditional",
+    meaning: "Physical bridges and readouts that hold under named hypotheses",
+    tone: "border-amber-400/30 bg-amber-500/10 text-amber-200",
+  },
+  {
+    marker: "[O]",
+    label: "Open",
+    meaning: "Declared inputs (c₃, g_car), the scale anchor v_geo, and one geometric premise",
+    tone: "border-rose-400/30 bg-rose-500/10 text-rose-200",
+  },
+];
+
+function ScopeGuard() {
+  return (
+    <div
+      aria-label="Claim scope: exact, conditional, open — separated by a machine-checked ledger"
+      className="mt-6 flex w-full max-w-3xl flex-col gap-2 sm:flex-row sm:flex-wrap sm:justify-center"
+    >
+      {SCOPE_GUARD.map((s) => (
+        <div
+          key={s.label}
+          className={cn(
+            "flex items-start gap-2 rounded-xl border px-3 py-2 text-left sm:flex-1 sm:basis-56",
+            s.tone,
+          )}
+        >
+          <span className="mt-px font-mono text-xs font-semibold">{s.marker}</span>
+          <span className="leading-tight">
+            <span className="block text-xs font-semibold uppercase tracking-wider">
+              {s.label}
+            </span>
+            <span className="block text-[11px] leading-snug text-slate-300/90">
+              {s.meaning}
+            </span>
+          </span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 const STATS: Array<{
   label: string;
   value: string;
@@ -182,7 +245,7 @@ const STATS: Array<{
   },
   {
     label: "Test surfaces",
-    value: "20",
+    value: String(TEST_SURFACES),
     note: "Status-graded readouts and kill criteria, each with a marker",
   },
   {
