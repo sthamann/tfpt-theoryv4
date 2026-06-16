@@ -64,10 +64,34 @@ const META: { status: Status; where: string; whereHref: string; stillOpen: strin
   { status: "Answered", where: "FAQ · α comparator", whereHref: "/faq", stillOpen: "No" },
 ];
 
+/**
+ * A concise ledger summary derived from the full FAQ answer: the leading
+ * sentence(s), capped at ~200 characters. A sentence boundary is `.`/`!`/`?`
+ * followed by whitespace + a capital letter (or end of string), so periods
+ * inside decimals ("137.0359992168") or dotted tokens ("QGEO.SYM.01") never
+ * split, and a bare one-word opener like "No." is extended into the next
+ * sentence rather than shown alone.
+ */
 function shortAnswer(a: string): string {
-  // First sentence of the FAQ answer, kept whole.
-  const m = a.match(/^[^.]*\./);
-  return m ? m[0] : a;
+  const MIN_LEN = 24;
+  const MAX_LEN = 200;
+  const boundary = /[.!?](?=\s+[A-Z(]|\s*$)/g;
+
+  let cut = a.length;
+  let m: RegExpExecArray | null;
+  while ((m = boundary.exec(a)) !== null) {
+    const end = m.index + 1;
+    if (end >= MIN_LEN) {
+      cut = end;
+      break;
+    }
+  }
+
+  const s = a.slice(0, cut).trim();
+  if (s.length > MAX_LEN) {
+    return s.slice(0, MAX_LEN).replace(/\s+\S*$/, "").trimEnd() + "…";
+  }
+  return s;
 }
 
 const ROWS = FAQ_ITEMS.map((item, i) => ({

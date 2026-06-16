@@ -44,7 +44,7 @@ export function KillBoard() {
           <span className="font-semibold uppercase tracking-widest text-slate-300">
             Status legend
           </span>
-          {(["consistent", "tension", "null", "data_limited"] as Finding[]).map((f) => (
+          {(["consistent", "robust", "tension", "null", "data_limited"] as Finding[]).map((f) => (
             <span
               key={f}
               className={cn(
