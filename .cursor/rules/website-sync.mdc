@@ -40,6 +40,12 @@ documents and the ledger (the ledger wins on any disagreement).
   `verification/script_registry.csv` + `script_clusters.csv` via
   `bash build.sh gen`. To add/change a script entry, edit the registry CSV and
   regenerate — never edit the TSX data by hand.
+- `website/lib/changelog.ts` — **GENERATED** from the canonical `changelog.tex`
+  (repo root) by `verification/make_changelog_web.py` via `bash build.sh gen`.
+  Drives the public `/changelog` page (`app/changelog/page.tsx` +
+  `components/Changelog.tsx`, server-rendered, math via KaTeX). Never edit by
+  hand — to change the changelog, edit `changelog.tex` (newest first, plain
+  LaTeX) and regenerate; `audit_sync.py` fails if the mirror is stale.
 - Status markers also live in `components/StatusPyramid.tsx`, `components/orientation/StatusMatrix.tsx`,
   and the `/verification` marker legend — keep them agreeing with the ledger.
 
@@ -49,6 +55,18 @@ documents and the ledger (the ledger wins on any disagreement).
    `bash build.sh gen` (regenerates `ScriptIndex.tsx` + the master TeX index).
 2. `bash build.sh website` (re-copies all `vN_*.py` + PDFs, stamps version + hashes).
 3. If it backs a DAG node, add its filename to that node's `scripts` in `VerificationDag.tsx`.
+
+## When the changelog changes (always — every committed change adds an entry)
+
+1. Add the dated entry to `changelog.tex` at the repo root (newest first, plain
+   LaTeX only — no doc-specific macros), exactly as the `tfpt-workflow` rule
+   requires.
+2. `bash build.sh gen` — regenerates `website/lib/changelog.ts` (the `/changelog`
+   page data) from `changelog.tex`. Never hand-edit `lib/changelog.ts`,
+   `components/Changelog.tsx` data, or the page text to mirror an entry.
+3. `bash build.sh website` re-copies `changelog.pdf` into `public/papers/`. The
+   `/changelog` page links that PDF and is otherwise generated, so no further
+   manual website edit is needed for a changelog entry.
 
 ## When a document changes (content or a recompiled `*.pdf`)
 
@@ -74,6 +92,7 @@ documents and the ledger (the ledger wins on any disagreement).
 - `cd website && npm run build` must pass (TypeScript + all static pages generated).
   `bash build.sh release` runs both plus the doc compile in one go.
 - Browser-check the touched page(s): `/`, `/verification`, `/papers/<slug>`, `/orientation`,
-  `/falsification`. On `/verification`, click a changed script to confirm the reproducer runs.
+  `/falsification`, `/changelog`. On `/verification`, click a changed script to confirm the
+  reproducer runs; on `/changelog`, confirm the newest entry rendered (math + markers).
 - The canonical repo link is `REPO_URL` in `lib/utils.ts`; the Pyodide version is pinned in
   `lib/pyodide.ts`.

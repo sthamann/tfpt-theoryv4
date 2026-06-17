@@ -14,6 +14,7 @@ const links = [
   { href: "/falsification", label: "Falsification" },
   { href: "/review", label: "For reviewers" },
   { href: "/faq", label: "FAQ" },
+  { href: "/changelog", label: "Changelog" },
 ];
 
 export function Navbar() {

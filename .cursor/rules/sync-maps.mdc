@@ -45,8 +45,9 @@ audit as the exit gate.
    German-allowed file) state status and results too — when a status, gate or
    headline result moves, check both and update them in the same change.
 4. **Regenerate**: `bash build.sh gen` again after the edits (maps + script
-   index), recompile touched docs, `bash build.sh website` if PDFs/scripts
-   changed.
+   index + the `/changelog` page data `website/lib/changelog.ts`, regenerated
+   from `changelog.tex` by `make_changelog_web.py`), recompile touched docs,
+   `bash build.sh website` if PDFs/scripts changed.
 5. **Gate**: `bash build.sh audit` must end `AUDIT OK`. It enforces (both
    directions): suite ↔ run_all ↔ registry ↔ ledger; citations in paper BODIES;
    no stale `\veri`/`\vref` targets; changelog entry for every new module;

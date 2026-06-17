@@ -36,6 +36,7 @@ All stdlib-only, runnable as plain `python3` (no venv needed); wired into
 | `script_registry.csv` + `script_clusters.csv` | **Single source** for the script index — one row per `vN` (cluster, website one-liner, TeX one-liner) |
 | `make_script_index.py` | Generates `../tex-artefacts/verification.tex` + `../website/components/ScriptIndex.tsx` from the registry (never edit those by hand) |
 | `make_docs_map.py` | Generates `docs_map.csv` (paper → section → line range → scripts cited → last-changed date) + `website_map.csv` (mirror surfaces: website files + root `README.md` + `next.txt` → scripts/docs mentioned) + the `docs_map_dates.json` sidecar |
+| `make_changelog_web.py` | Generates `../website/lib/changelog.ts` (the public `/changelog` page data) from the canonical `../changelog.tex` (never edit the `.ts` by hand) |
 | `audit_sync.py` | **The** sync audit (papers ↔ suite ↔ ledger ↔ changelog ↔ website, both directions); must end `AUDIT OK` before any commit |
 | `audit_baseline.json` | Frozen exceptions (grandfathered changelog ids, known integration gaps) — entries may only be *removed* |
 

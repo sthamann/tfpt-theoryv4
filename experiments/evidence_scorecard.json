@@ -390,7 +390,7 @@
       "domain": "pulsar",
       "observable": "per-pulsar size/waiting kernel ladder (PG.02/03)",
       "tfpt_value": "|dlog s|, dt-ratios on {log 3/2, (3/2)^3, (3/2)^6}",
-      "data_value": "null (frac 0.20/0.22 vs within-pulsar shuffle, p=1.0; 68/50 pulsars)",
+      "data_value": "null (frac 0.20/0.22 vs within-pulsar shuffle, p=0.27/0.93; 68/50 pulsars)",
       "pull_sigma": null,
       "claim_type": "search_target",
       "bridge_type": "boundary recovery kernel",

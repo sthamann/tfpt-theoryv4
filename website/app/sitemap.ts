@@ -76,6 +76,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    {
+      url: `${SITE_URL}/changelog`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.6,
+    },
   ];
 
   const paperPages: MetadataRoute.Sitemap = papers.map((p) => ({

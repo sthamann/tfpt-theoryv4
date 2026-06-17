@@ -300,8 +300,8 @@ Pulsare, 723 mit `Δν/ν`).
 | Kanal | Signatur | Methode + Null | Ergebnis |
 |---|---|---|---|
 | **PG.01** | `Δν/ν` log-periodisch bei TFPT-Ratio (`(3/2)^k` oder §C `{1+φ₀,4,8,8π}`) | Rayleigh-Log-Periodogramm + gezielte Einzelratio-Tests, kalibriert gegen **drei** Nulls (Log-Normal, formerhaltendes KDE, **entscheidend** populations-kontrollierter GMM-Bootstrap) + Look-Elsewhere (Bonferroni) | **Null** — die einzige Struktur ist die Bimodalität |
-| **PG.02** | aufeinanderfolgende **Größen** schreiten mit Kernelfaktoren (`\|Δlog s\|` auf `{log 3/2,(3/2)³,(3/2)⁶}`) | Per-Pulsar-Comb-Anteil vs **Within-Pulsar-Shuffle** (immun gegen globale Bimodalität) | **Null** (p=1.0, 68 Pulsare) |
-| **PG.03** | Inter-Glitch-**Wartezeit**-Ratios auf demselben Comb | Per-Pulsar vs Within-Pulsar-Shuffle | **Null** (p=1.0, 50 Pulsare) |
+| **PG.02** | aufeinanderfolgende **Größen** schreiten mit Kernelfaktoren (`\|Δlog s\|` auf `{log 3/2,(3/2)³,(3/2)⁶}`) | Per-Pulsar-Comb-Anteil vs **Within-Pulsar-Shuffle** der rohen Größen (umordnen, *dann* Log-Ratios neu berechnen; immun gegen globale Bimodalität) | **Null** (frac 0.20 vs 0.19, p≈0.27, 68 Pulsare) |
+| **PG.03** | Inter-Glitch-**Wartezeit**-Ratios auf demselben Comb | Per-Pulsar vs Within-Pulsar-Shuffle der rohen Wartezeit-Intervalle (umordnen, dann Ratios neu berechnen) | **Null** (frac 0.22 vs 0.25, p≈0.93, 50 Pulsare) |
 | **PG.04a** | Recovery-Fraktion `Q ∈ {φ₀,2φ₀,4φ₀,8φ₀,1−φ₀}` | KDE + Uniform-Null auf dem Yu+2013-`Q`-Set | **Null** (frac 0.10 vs 0.22, p≈1.0) |
 | **PG.04b** | Multikomponenten-`τ_d` bilden Kernel-Leiter `(3/2)^k` (Multiskalen-**DSI**) | Per-Glitch `τ_{i+1}/τ_i` vs `τ_d`-Shuffle | **Null** (13 Glitches, p≈0.69) |
 
@@ -313,7 +313,7 @@ Struktur bei Ratio **≈9.96** gegen die glatten Nulls (p≈0.002) — aber das 
 **kein** preregistrierter TFPT-Wert (13% neben `(3/2)⁶`). Die groben Kandidaten `8`, `8π`
 leuchten nur, weil sie auf demselben ~1-dex-Abstand reiten (`p_smooth<0.01`, aber `p_gmm>0.28`);
 `(3/2)⁶` hat ein rohes `p_gmm=0.032`, **fällt aber durch die Look-Elsewhere-Korrektur** (×7).
-Die entscheidenden, bimodalitäts-immunen **Per-Pulsar-Leitern (PG.02/03) sind null (p=1.0)**.
+Die entscheidenden, bimodalitäts-immunen **Per-Pulsar-Leitern (PG.02/03) sind null** (Größe p≈0.27, Wartezeit p≈0.93; der Within-Pulsar-Shuffle ordnet die rohen Größen/Intervalle um und berechnet die Log-Ratios neu).
 
 **PG.04 (Recovery, aktiviert).** Aus dem **echten** Yu+2013-Recovery-Set (arXiv:1211.2035
 `expTab.tex`, 60 Komponenten / 46 Glitches, inkl. der Multikomponenten-Recoveries von Vela/Crab):

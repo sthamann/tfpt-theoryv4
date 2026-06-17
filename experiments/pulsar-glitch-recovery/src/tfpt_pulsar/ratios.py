@@ -23,15 +23,25 @@ from .catalog import GlitchRecord, by_pulsar
 from .constants import kernel_log_ratios
 
 
-def _consecutive_log_size_ratios(series: list[GlitchRecord]) -> list[float]:
-    s = [r.df_f for r in series if r.df_f is not None and r.df_f > 0]
-    return [abs(np.log10(s[i + 1] / s[i])) for i in range(len(s) - 1)]
+def _log_ratios(values: list[float]) -> list[float]:
+    """Consecutive ``|log10|`` step ratios of an *ordered* value sequence.
+
+    The ordering matters: the result depends on which value follows which, so a
+    reordering of ``values`` yields a genuinely different multiset of ratios (this
+    is what makes the within-pulsar shuffle null non-trivial).
+    """
+    return [abs(np.log10(values[i + 1] / values[i])) for i in range(len(values) - 1)]
 
 
-def _consecutive_waiting_ratios(series: list[GlitchRecord]) -> list[float]:
+def _per_pulsar_sizes(series: list[GlitchRecord]) -> list[float]:
+    """Time-ordered positive glitch sizes ``Delta nu / nu`` for one pulsar."""
+    return [r.df_f for r in series if r.df_f is not None and r.df_f > 0]
+
+
+def _per_pulsar_waiting_times(series: list[GlitchRecord]) -> list[float]:
+    """Time-ordered positive inter-glitch waiting intervals for one pulsar."""
     t = [r.mjd for r in series if r.mjd is not None]
-    dt = [t[i + 1] - t[i] for i in range(len(t) - 1) if t[i + 1] > t[i]]
-    return [abs(np.log10(dt[i + 1] / dt[i])) for i in range(len(dt) - 1)]
+    return [t[i + 1] - t[i] for i in range(len(t) - 1) if t[i + 1] > t[i]]
 
 
 def _nearest_tooth_frac(log_ratios: np.ndarray, teeth: np.ndarray,
@@ -56,25 +66,31 @@ class LadderResult:
     verdict: str
 
 
-def _ladder_test(per_pulsar_logratios: list[list[float]], *, channel: str,
+def _ladder_test(per_pulsar_values: list[list[float]], *, channel: str,
                  teeth: np.ndarray, tol_dex: float = 0.05,
                  n_shuffle: int = 2000, seed: int = 0) -> LadderResult:
-    pooled = np.array([v for lst in per_pulsar_logratios for v in lst], dtype=float)
-    n_pulsars = sum(1 for lst in per_pulsar_logratios if lst)
+    # Observation: consecutive log-ratios taken in the recorded (chronological)
+    # order, pooled across pulsars.
+    obs_logratios = [_log_ratios(v) for v in per_pulsar_values]
+    pooled = np.array([r for lst in obs_logratios for r in lst], dtype=float)
+    n_pulsars = sum(1 for lst in obs_logratios if lst)
     obs = _nearest_tooth_frac(pooled, teeth, tol_dex)
 
+    # Within-pulsar shuffle null: permute each pulsar's RAW size/interval sequence
+    # (keeping its value *set* intact) and RECOMPUTE the consecutive log-ratios.
+    # The test statistic is order-invariant, so permuting the already-computed
+    # |log-ratios| would leave the pooled multiset unchanged and reproduce the
+    # observation exactly (p == 1 by construction); reordering the raw values
+    # before differencing is what actually breaks the step comb.
     rng = np.random.default_rng(seed)
     null = np.empty(n_shuffle)
     for k in range(n_shuffle):
         shuffled: list[float] = []
-        for lst in per_pulsar_logratios:
-            if not lst:
+        for v in per_pulsar_values:
+            if len(v) < 2:
                 continue
-            # a within-pulsar shuffle of the SIGNED steps is equivalent to a
-            # random reordering of |log-ratios|; resampling with replacement from
-            # the pulsar's own values preserves its set, destroys the step comb
-            v = np.array(lst)
-            shuffled.extend(rng.permutation(v).tolist())
+            perm = rng.permutation(np.asarray(v, dtype=float))
+            shuffled.extend(_log_ratios(perm.tolist()))
         null[k] = _nearest_tooth_frac(np.array(shuffled), teeth, tol_dex)
     null_mean = float(np.mean(null))
     p = float((1 + np.sum(null >= obs)) / (n_shuffle + 1))
@@ -92,7 +108,7 @@ def size_ratio_ladder(records: list[GlitchRecord], *, min_glitches: int = 3,
     """PG.02 -- consecutive glitch-size ratios vs the kernel log-comb."""
     groups = by_pulsar(records)
     teeth = np.array(list(kernel_log_ratios().values()))
-    per_pulsar = [_consecutive_log_size_ratios(g) for g in groups.values()
+    per_pulsar = [_per_pulsar_sizes(g) for g in groups.values()
                   if sum(1 for r in g if r.df_f) >= min_glitches]
     return _ladder_test(per_pulsar, channel="size", teeth=teeth, tol_dex=tol_dex,
                         n_shuffle=n_shuffle, seed=seed)
@@ -104,7 +120,7 @@ def waiting_ratio_ladder(records: list[GlitchRecord], *, min_glitches: int = 4,
     """PG.03 -- consecutive inter-glitch waiting-time ratios vs the kernel comb."""
     groups = by_pulsar(records)
     teeth = np.array(list(kernel_log_ratios().values()))
-    per_pulsar = [_consecutive_waiting_ratios(g) for g in groups.values()
+    per_pulsar = [_per_pulsar_waiting_times(g) for g in groups.values()
                   if sum(1 for r in g if r.mjd) >= min_glitches]
     return _ladder_test(per_pulsar, channel="waiting", teeth=teeth, tol_dex=tol_dex,
                         n_shuffle=n_shuffle, seed=seed)

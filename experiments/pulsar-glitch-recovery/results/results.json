@@ -140,9 +140,9 @@
     ],
     "tol_dex": 0.05,
     "frac_on_comb": 0.20342612419700215,
-    "null_mean": 0.20342612419700226,
-    "p_value": 1.0,
-    "verdict": "size ladder consistent with shuffle (frac=0.20 vs null 0.20, p=1.000) -- no kernel comb"
+    "null_mean": 0.19239935760171306,
+    "p_value": 0.2688655672163918,
+    "verdict": "size ladder consistent with shuffle (frac=0.20 vs null 0.19, p=0.269) -- no kernel comb"
   },
   "pg03_waiting_ladder": {
     "channel": "waiting",
@@ -155,9 +155,9 @@
     ],
     "tol_dex": 0.05,
     "frac_on_comb": 0.2193211488250653,
-    "null_mean": 0.2193211488250654,
-    "p_value": 1.0,
-    "verdict": "waiting ladder consistent with shuffle (frac=0.22 vs null 0.22, p=1.000) -- no kernel comb"
+    "null_mean": 0.24568146214099215,
+    "p_value": 0.9265367316341829,
+    "verdict": "waiting ladder consistent with shuffle (frac=0.22 vs null 0.25, p=0.927) -- no kernel comb"
   },
   "pg04_recovery": {
     "q_cluster": {

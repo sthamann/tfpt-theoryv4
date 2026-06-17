@@ -12,7 +12,8 @@ otherwise.
 Checks (sections A-F):
   A  suite integrity   : files on disk == run_all.py registration;
                          script_registry.csv == run_all.py; generated
-                         verification.tex / ScriptIndex.tsx / content maps fresh
+                         verification.tex / ScriptIndex.tsx / content maps /
+                         website changelog mirror (lib/changelog.ts) fresh
   B  papers, forward   : every registered script is cited (\\veri) in a paper
                          BODY (the master index table alone does not count)
   B  papers, reverse   : every \\veri{...} / \\vref{vN} target in the active
@@ -46,6 +47,7 @@ import re
 import sys
 from pathlib import Path
 
+import make_changelog_web
 import make_docs_map
 import make_script_index
 
@@ -113,6 +115,15 @@ def check_suite(registered: list[str]) -> None:
     ]:
         if not t.exists() or t.read_text() != content:
             err("A.generated", f"{t.relative_to(ROOT)} stale -- run make_docs_map.py")
+
+    # website changelog mirror fresh? (generated from changelog.tex by
+    # make_changelog_web.py; keeps the public /changelog page from drifting)
+    for target, content in make_changelog_web.build().items():
+        if make_changelog_web.WEBSITE_DIR in target.parents \
+                and not make_changelog_web.WEBSITE_DIR.exists():
+            continue
+        if not target.exists() or target.read_text() != content:
+            err("A.generated", f"{target.relative_to(ROOT)} stale -- run make_changelog_web.py")
 
 
 # -------------------------------------------------------------- B: papers

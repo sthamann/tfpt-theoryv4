@@ -93,7 +93,7 @@ ROWS = [
      "a preregistered TFPT ratio comb survives the population-controlled null + look-elsewhere", "null"],
     ["pulsar", "per-pulsar size/waiting kernel ladder (PG.02/03)",
      "|dlog s|, dt-ratios on {log 3/2, (3/2)^3, (3/2)^6}",
-     "null (frac 0.20/0.22 vs within-pulsar shuffle, p=1.0; 68/50 pulsars)", None,
+     "null (frac 0.20/0.22 vs within-pulsar shuffle, p=0.27/0.93; 68/50 pulsars)", None,
      "search_target", "boundary recovery kernel",
      "search_target", "Jodrell Bank Glitch Catalogue (within-pulsar shuffle null)",
      "consecutive glitches step by kernel factors above the within-pulsar shuffle", "null"],

@@ -35,12 +35,14 @@ website/
 ├── app/
 │   ├── layout.tsx        Root layout with SEO + JSON-LD
 │   ├── page.tsx          Home (Hero → Overview → Pipeline → Documents → Predictions → Downloads)
+│   ├── changelog/page.tsx  /changelog — dated record (generated from ../changelog.tex)
 │   ├── robots.ts         /robots.txt
 │   ├── sitemap.ts        /sitemap.xml
 │   └── globals.css       Tailwind v4 + design tokens
 ├── components/
 │   ├── Navbar.tsx                Sticky navigation, mobile menu
 │   ├── Footer.tsx                Site footer with downloads
+│   ├── Changelog.tsx             /changelog timeline (renders lib/changelog.ts, math via KaTeX)
 │   ├── Hero.tsx                  Hero with the compiler map + 6-frame unpacking
 │   ├── Overview.tsx              Four pillars + μ₄ glue + α closure + claim stack
 │   ├── ReconstructionChain.tsx   The compiler pipeline / dependency DAG
@@ -58,6 +60,7 @@ website/
 │   ├── predictions.ts     Predictions with status markers, kill criteria, formulas
 │   ├── glossary.ts        Inline glossary vocabulary
 │   ├── release.ts         PDF version / size / SHA-256 metadata
+│   ├── changelog.ts       GENERATED from ../changelog.tex (do not edit by hand)
 │   └── utils.ts
 ├── public/
 │   ├── papers/            All 8 document PDFs (introduction + tfpt_1–4 + horizon + origin + contracts)
@@ -96,6 +99,8 @@ The site is fully static after build (`○ (Static) prerendered as static conten
 All document and prediction content is read from `lib/papers.ts` and `lib/predictions.ts`. To update text, formulas, target values, or add a new prediction, edit those files — no other change is required.
 
 PDFs in `public/papers/` are mirrors of the eight active root documents (`introduction.tex`, `tfpt_1`–`tfpt_4`, `tfpt_horizon_readouts`, `origin_theory`, `tfpt_research_contracts`). Replace them in place and run `npm run release:write` to refresh the size + SHA-256 metadata in `lib/release.ts`.
+
+The `/changelog` page is a **generated mirror** of the canonical `../changelog.tex`: `lib/changelog.ts` is produced by `../verification/make_changelog_web.py` (run by `bash ../build.sh gen`) and its freshness is enforced by `../verification/audit_sync.py`. Never edit `lib/changelog.ts` (or the changelog page text) by hand — edit `changelog.tex` and regenerate.
 
 ## Accessibility & SEO
 

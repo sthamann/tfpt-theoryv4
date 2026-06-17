@@ -438,7 +438,34 @@ $\kappa\in[1.0,1.7]$ at one loop ($\to[1.0,1.2]$ at two loops), and proton decay
 breaks the match, no-$45$ proton-unsafe) all fire (\vref{v249}). \emph{Fourth}, the residual ``carrier is
 gauged'' reduces to ONE constructive object, the spectral triple $(A,H,D_F,J,\gamma)$ with $A_F$
 Pati--Salam and $H_F=3{\times}16$, whose NCG axioms (the first-order condition above all) and the
-$\sigma=$scalaron identification are the open contract \texttt{CONTRACT.QFT4D.DIRAC.01} (\vref{v250}). So
+$\sigma=$scalaron identification are the open contract \texttt{CONTRACT.QFT4D.DIRAC.01} (\vref{v250}).
+\emph{Fifth}, a first concrete step on that triple is taken (\veri{v251\_first\_order\_sigma.py}): on the
+lepton block the first-order condition is verified to \emph{hold} for the Yukawa operator and to be
+\emph{violated exactly} by the Majorana/$\sigma$ term --- the Chamseddine--Connes--van Suijlekom ``beyond
+first order'' mechanism by which the inner fluctuations promote the SM to Pati--Salam and generate $\sigma$
+(honest correction: $\sigma$ does \emph{not} rescue the first-order condition; its controlled violation
+\emph{is} the mechanism).
+\emph{Sixth}, the full $96$-dimensional finite spectral triple is then built explicitly
+(\veri{v252\_full\_finite\_triple.py}) --- $H_F$ the particle$\oplus$antiparticle doubling of three $SO(10)$
+$\mathbf{16}$-plets --- and the NCG axioms are verified by direct computation: reality $J$, grading $\gamma$,
+KO-dimension $6$, order-zero, the first-order condition (\emph{holding} for the SM algebra including the
+Majorana, \emph{violated} for the Pati--Salam algebra exactly by the Majorana on $\{\nu_R,e_R\}$), and the
+spectrum of $D_F$ reproducing the fermion masses and the type-I seesaw $m_{\rm light}=m_D^2/M_R$ --- thereby
+discharging five of the seven obligations of \texttt{CONTRACT.QFT4D.DIRAC.01} to \mE\ (orientability, the
+no-junk condition and the spectral-action expansion remain open).
+\emph{Seventh}, the scalaron--Pati--Salam ratio $\kappa$ in $M_{PS}=\kappa\,M_s$ is pinned to a tight $O(1)$
+interval ($\approx1.3$) by the RG and shown to be a scale-free ratio of heat-kernel coefficients,
+$\kappa=\sqrt{(f_2/f_0)\,c_{PS}/c_{\rm grav}}$, over the same $96$-dim $H_F$ (\veri{v253\_kappa\_scalaron\_ps.py}).
+\emph{Eighth}, the remaining NCG obligations are then discharged or honestly typed: the inner fluctuations
+$\Omega^1_D$ give exactly the one SM Higgs doublet $(1,2)_{1/2}$ with no junk and no $\mathbf{126}$, while
+$\sigma$ (the $\nu_R$ Majorana scalar, $B{-}L{=}2$) appears only as the beyond-first-order Pati--Salam field
+(\veri{v254\_inner\_fluctuations.py}); the spectral-action Seeley--DeWitt expansion $a_0,a_2,a_4$ yields the
+cosmological, Einstein--Hilbert and Yang--Mills$+R^2+$Higgs terms with $b/a^2=1/3$, $\sin^2\theta_W=3/8$ and
+the $R^2$ scalaron, making $\kappa$ an explicit moment ratio (\veri{v255\_spectral\_action\_expansion.py});
+only orientability and Poincar\'e duality resist a clean machine proof --- KO-dimension $6$ forces a skew
+intersection form (rank $2$, corank $1$), which the canonical hypercharge-faithful triple resolves in the
+literature (\veri{v256\_orientability\_poincare.py}).
+So
 unification is now \emph{one} theory decision (gauge $SO(10)$?) plus \emph{one} constructive object, both
 falsifiable --- not a fog. The colour $SU(4)_c$ here sits inside $SO(10){=}D_5$ and is distinct from the
 carrier family factor $A_3$.

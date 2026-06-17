@@ -154,6 +154,8 @@ def _analyze(seed: int) -> int:
                           for t in rep.targeted)
     ladder_kernel = pg02.p_value < 0.05 or pg03.p_value < 0.05
     recovery_kernel = pg04q.p_value < 0.05 or pg04t.p_value < 0.05 or pg04b.p_value < 0.05
+    n_glitches_wall = sum(pg04b.comp_counts.values())
+    n_wall_ok = n_glitches_wall - pg04b.n_wall_exceed
     if pg01_kernel or targeted_kernel or ladder_kernel or recovery_kernel:
         verdict = ("cross-domain kernel signature found in pulsar glitches "
                    "(survives the population-controlled null / shows in a ladder) "
@@ -167,7 +169,8 @@ def _analyze(seed: int) -> int:
                    "fraction Q is not at phi0-multiples, and the multi-component tau_d "
                    "ratios match neither the (3/2)^k ladder nor the det'-clean 2-mode "
                    "bend 2.7095 (the correct v124 candidate) -- though the WALL holds "
-                   f"(45/46 glitches need <=2 decay modes, consistent with the n=N_fam=3 "
+                   f"({n_wall_ok}/{n_glitches_wall} glitches need <=2 decay modes, "
+                   "consistent with the n=N_fam=3 "
                    "pole). This mirrors the FRB energy-cascade result (generic "
                    "discreteness, not kernel-specific) -- a clean cross-domain NULL. "
                    "The exact clock is WALLED (2 modes + floor, not an infinite ladder), "

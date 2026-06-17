@@ -124,6 +124,11 @@ export function Footer() {
               </Link>
             </li>
             <li>
+              <Link href="/changelog" className="text-slate-400 hover:text-white">
+                Changelog
+              </Link>
+            </li>
+            <li>
               <Link
                 href={READING_GUIDE.href}
                 target="_blank"

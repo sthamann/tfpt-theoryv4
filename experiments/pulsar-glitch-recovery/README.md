@@ -21,8 +21,8 @@ Tested against the **real** Jodrell Bank Glitch Catalogue (Basu et al. 2022):
 | Channel | Signature (`problem_1.txt`) | Method + null | Result |
 |---|---|---|---|
 | **PG.01** | glitch sizes `Δν/ν` show **log-periodic** discreteness at a TFPT ratio (kernel `(3/2)^k`, or §C `{1+φ₀, 4, 8, 8π}`) | Rayleigh log-periodogram (scan-max p) + targeted single-ratio tests, calibrated against **three** nulls: log-normal, shape-preserving KDE, and the decisive **population-controlled GMM bootstrap** (reproduces the known two-population bimodality); look-elsewhere (Bonferroni) over the candidate family | **null** — the only structure is the known bimodality |
-| **PG.02** | consecutive glitch **sizes** step by kernel factors (`\|Δlog s\|` on `{log 3/2, log(3/2)³, log(3/2)⁶}`) | per-pulsar comb fraction vs **within-pulsar shuffle** (immune to the global bimodality) | **null** (p=1.0) |
-| **PG.03** | inter-glitch **waiting-time** ratios on the same comb | per-pulsar comb fraction vs within-pulsar shuffle | **null** (p=1.0) |
+| **PG.02** | consecutive glitch **sizes** step by kernel factors (`\|Δlog s\|` on `{log 3/2, log(3/2)³, log(3/2)⁶}`) | per-pulsar comb fraction vs **within-pulsar shuffle** of the raw sizes — reorder each pulsar's own size set, *then recompute* the consecutive log-ratios (immune to the global bimodality) | **null** (frac 0.20 vs 0.19 chance, p≈0.27) |
+| **PG.03** | inter-glitch **waiting-time** ratios on the same comb | per-pulsar comb fraction vs within-pulsar shuffle of the raw waiting intervals (reorder, then recompute ratios) | **null** (frac 0.22 vs 0.25 chance, p≈0.93) |
 | **PG.04a** | recovery/healing fraction `Q ∈ {φ₀, 2φ₀, 4φ₀, 8φ₀, 1−φ₀}` | KDE + uniform null on the Yu+2013 `Q` set | **null** (frac 0.10 vs 0.22 chance, p≈1.0) |
 | **PG.04b** | multi-component decay timescales `τ_d` form a `(3/2)^k` ladder | per-glitch `τ_{i+1}/τ_i` vs `τ_d`-shuffle | **null** (13 glitches, p≈0.69) |
 | **PG.04c** | the *exact* clock (v124): 2-mode **bend** `τ_long/τ_short = ln3/ln(3/2) = 2.7095`; **wall** ≤2 decay modes | bend vs shuffle + component-count census | bend **null** (0/12, p≈1.0); **wall consistent** (45/46 ≤2 modes) |
@@ -62,9 +62,13 @@ All TFPT numbers are *derived* from the two axioms (`c₃ = 1/(8π)`, `g_car = 5
   `(3/2)⁶`). The coarse candidates `8`, `8π` light up only because they ride on that
   ~1-dex spacing (`p_smooth<0.01` but `p_gmm>0.28`); `(3/2)⁶` has a raw `p_gmm=0.032`
   but **fails the look-elsewhere correction** (×7 candidates).
-- **PG.02 / PG.03.** The decisive, bimodality-immune per-pulsar ladders are **dead
-  null** (p=1.0, 68/50 pulsars, 467/383 steps): consecutive glitch sizes and waiting
-  times do **not** step by kernel factors.
+- **PG.02 / PG.03.** The decisive, bimodality-immune per-pulsar ladders are **null**
+  (size frac 0.20 vs 0.19 chance, p≈0.27; waiting frac 0.22 vs 0.25 chance, p≈0.93;
+  68/50 pulsars, 467/383 steps): consecutive glitch sizes and waiting times do **not**
+  step by kernel factors. The within-pulsar null reorders each pulsar's raw size/interval
+  set and *recomputes* the consecutive log-ratios, so the shuffle produces genuinely
+  different ratios (the comb fraction is order-invariant, so permuting the already-computed
+  ratios would be a tautology that always returns p=1.0).
 - **PG.04 (recovery, Yu+2013).** The healing fraction `Q` is **not** clustered at
   `φ₀`-multiples (frac 0.10 vs ~0.22 chance, p≈1.0), the multi-component `τ_d` do **not**
   form the `(3/2)^k` ladder (p≈0.69), and — testing the *correct* v124 candidate — the
