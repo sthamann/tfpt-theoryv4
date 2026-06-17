@@ -314,6 +314,191 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "Orientability + Poincaré duality: the honest, literature-confirmed status — strict fail, weakened hold, "
+      },
+      {
+        "k": "c",
+        "v": "v257"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v257_quasiorient_modpd.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PS.NCG.ORIENT.02"
+            },
+            {
+              "k": "t",
+              "v": ") corrects the slightly too-generous "
+            },
+            {
+              "k": "c",
+              "v": "v256"
+            },
+            {
+              "k": "t",
+              "v": " typing."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The published result (Cacic–Stephan arXiv:0902.2068; CCM07; SM-vacuum hep-th/0601192) is that the Chamseddine–Connes–Marcolli Standard-Model finite triple (KO-dimension "
+        },
+        {
+          "k": "m",
+          "v": "6"
+        },
+        {
+          "k": "t",
+          "v": ", with three right-handed neutrinos — exactly the TFPT seesaw case) "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "genuinely fails"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " strict orientability and strict Poincaré duality, and instead satisfies the physically correct weakened versions. Verified on the explicit "
+        },
+        {
+          "k": "c",
+          "v": "v252"
+        },
+        {
+          "k": "t",
+          "v": " triple: "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "strict orientability fails ("
+        },
+        {
+          "k": "m",
+          "v": "\\gamma\\notin\\mathrm{span}\\{\\lambda(a)\\rho(b)\\}"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "quasi-orientability"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " holds (the left/right "
+        },
+        {
+          "k": "m",
+          "v": "A"
+        },
+        {
+          "k": "t",
+          "v": "-irrep boxes are disjoint by chirality: "
+        },
+        {
+          "k": "m",
+          "v": "L=H"
+        },
+        {
+          "k": "t",
+          "v": " weak-doublet, "
+        },
+        {
+          "k": "m",
+          "v": "R=\\mathbb C"
+        },
+        {
+          "k": "t",
+          "v": " singlet, so "
+        },
+        {
+          "k": "m",
+          "v": "L^{\\mathrm{LR}}(\\mathcal H^{\\mathrm{even}},\\mathcal H^{\\mathrm{odd}})=\\{0\\}"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "strict Poincaré duality fails (KO-"
+        },
+        {
+          "k": "m",
+          "v": "6"
+        },
+        {
+          "k": "t",
+          "v": " skew intersection form, corank "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": ", the equal-"
+        },
+        {
+          "k": "m",
+          "v": "L/R"
+        },
+        {
+          "k": "t",
+          "v": "-neutrino case); "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "modified Poincaré duality holds (CCM), Stephan's alternative triple (St06) restoring strict PD with identical physics. A known property of the NCG-SM model class, not a TFPT defect — no faked closure."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-17",
+    "dateLabel": "2026-06-17",
+    "heading": [
+      {
+        "k": "t",
         "v": "Remaining NCG obligations discharged or honestly typed: inner fluctuations, spectral action, orientability/Poincaré, "
       },
       {

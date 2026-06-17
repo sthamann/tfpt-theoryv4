@@ -50,7 +50,7 @@ export function Navbar() {
             <Logo size={36} />
           </Link>
           <span
-            className="hidden select-none items-baseline gap-1.5 rounded-full bg-slate-800/50 px-2.5 py-1 font-mono text-[10px] tracking-wide text-slate-400 ring-1 ring-slate-700/40 sm:inline-flex"
+            className="hidden select-none items-baseline gap-1.5 rounded-full bg-slate-800/50 px-2.5 py-1 font-mono text-[10px] tracking-wide text-slate-400 ring-1 ring-slate-700/40 xl:inline-flex"
             title={`TFPT ${SITE_VERSION} — document set last synced ${SITE_DATE} (build rev ${SITE_REV})`}
           >
             <span className="font-semibold text-slate-300">v{SITE_VERSION}</span>
@@ -59,12 +59,12 @@ export function Navbar() {
           </span>
         </div>
 
-        <ul className="hidden items-center gap-1 md:flex">
+        <ul className="hidden items-center gap-0.5 lg:flex">
           {links.map((l) => (
             <li key={l.href}>
               <Link
                 href={l.href}
-                className="rounded-md px-3 py-2 text-sm font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-white"
+                className="whitespace-nowrap rounded-md px-2.5 py-2 text-sm font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-white"
               >
                 {l.label}
               </Link>
@@ -76,7 +76,7 @@ export function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Verification suite on GitHub"
-              className="ml-1 inline-flex items-center gap-1.5 rounded-md px-3 py-2 text-sm font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-white"
+              className="ml-0.5 inline-flex items-center gap-1.5 whitespace-nowrap rounded-md px-2.5 py-2 text-sm font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-white"
             >
               <Github size={16} aria-hidden />
               GitHub
@@ -85,9 +85,9 @@ export function Navbar() {
           <li>
             <Link
               href="/orientation"
-              className="ml-1 rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition-transform hover:scale-105 focus:scale-105"
+              className="ml-1.5 whitespace-nowrap rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-3.5 py-2 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition-transform hover:scale-105 focus:scale-105"
             >
-              Read the reading guide
+              Reading guide
             </Link>
           </li>
         </ul>
@@ -95,7 +95,7 @@ export function Navbar() {
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-md text-slate-300 hover:bg-white/5 hover:text-white"
+          className="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-md text-slate-300 hover:bg-white/5 hover:text-white"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
         >
@@ -106,7 +106,7 @@ export function Navbar() {
       {open && (
         <div
           id="mobile-menu"
-          className="md:hidden glass-strong border-t border-slate-700/40 px-4 pb-4 pt-2"
+          className="lg:hidden glass-strong border-t border-slate-700/40 px-4 pb-4 pt-2"
         >
           <ul className="flex flex-col gap-1">
             {links.map((l) => (

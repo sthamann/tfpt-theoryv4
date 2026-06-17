@@ -21,16 +21,18 @@ fact, not a bug.
         [gamma_F, pi(a)] = 0 (v252); orientability proper is a degree-4 Hochschild
         cycle on the PRODUCT geometry M x F (metric dimension 4), the finite factor
         (metric dim 0) only contributing gamma_F -- so it is not a finite-only check.
-  [C] 4. CANONICAL TRIPLE SATISFIES BOTH.  for the full hypercharge-faithful SM/PS
-        spectral triple, orientability and Poincare duality DO hold (van Suijlekom,
-        "NCG and Particle Physics"; Chamseddine-Connes-Marcolli) -- the corank-1 of
-        the naive skew form is resolved on the physical sublattice / by the proper
-        K-theory pairing.  Established in the literature, not re-derived here.
-  [O] 5. RESIDUAL.  a fully self-contained machine proof of orientability + Poincare
-        duality within this suite needs the COMPLETE hypercharge-faithful canonical
-        bimodule; the v252 simplified representation faithfully verifies the five
-        substantive axioms (reality, grading, KO-6, order-zero, first-order) but not
-        these two skew/degree-4 conditions.  Honestly open.
+  [C] 4. STRICT FAILS, WEAKENED HOLD (corrected in v257).  CAUTION: contrary to a
+        first guess, the published result (Cacic-Stephan arXiv:0902.2068; CCM07) is
+        that the CCM Standard-Model finite triple (KO-6, three nu_R) FAILS strict
+        orientability and strict Poincare duality; it satisfies the WEAKENED versions
+        (quasi-orientability + modified Poincare duality) instead.  This is made
+        precise and machine-verified in v257 -- a known property of the NCG-SM model
+        class, not a TFPT defect.
+  [O] 5. RESIDUAL.  the strict axioms are not liftable to [E] (they are false for this
+        triple); the physically-correct weakened versions ARE established (v257).  The
+        v252 simplified representation faithfully verifies the five substantive axioms
+        (reality, grading, KO-6, order-zero, first-order); these two skew/degree-4
+        conditions are resolved in their weakened form in v257.
 
 Status: [E] the KO-6 skew structure + rank/corank + the local orientability
 condition; [C] the literature theorem for the canonical triple; [O] a self-contained
@@ -90,19 +92,21 @@ def run():
           "(metric dim 4), the finite factor (metric dim 0) only contributing gamma_F "
           "-- not a finite-only check", loc)
 
-    # 4. canonical triple (literature)
-    check("CANONICAL TRIPLE SATISFIES BOTH [C]: for the full hypercharge-faithful "
-          "SM/PS spectral triple orientability and Poincare duality DO hold "
-          "(van Suijlekom; Chamseddine-Connes-Marcolli) -- the corank-1 of the naive "
-          "skew form is resolved on the physical sublattice / proper K-theory pairing; "
-          "established in the literature, not re-derived here", True)
+    # 4. strict fails, weakened hold (corrected in v257)
+    check("STRICT FAILS, WEAKENED HOLD [C] (corrected in v257): contrary to a first "
+          "guess, the published result (Cacic-Stephan arXiv:0902.2068; CCM07) is that "
+          "the CCM Standard-Model finite triple (KO-6, three nu_R) FAILS strict "
+          "orientability and strict Poincare duality, and satisfies the WEAKENED "
+          "versions (quasi-orientability + modified Poincare duality) instead -- "
+          "machine-verified in v257; a known property of the NCG-SM class, not a "
+          "TFPT defect", True)
 
     # 5. residual
-    check("RESIDUAL [O]: a self-contained machine proof of orientability + Poincare "
-          "duality needs the COMPLETE hypercharge-faithful canonical bimodule; the "
-          "v252 simplified rep verifies the five substantive axioms (reality, grading, "
-          "KO-6, order-zero, first-order) but not these two skew/degree-4 conditions. "
-          "Honestly open", True)
+    check("RESIDUAL [O]: the strict axioms are NOT liftable to [E] (they are false for "
+          "this triple); the physically-correct weakened versions ARE established "
+          "(v257). The v252 rep verifies the five substantive axioms (reality, "
+          "grading, KO-6, order-zero, first-order); these two skew/degree-4 conditions "
+          "hold in their weakened form (v257)", True)
 
     return summary("v256 orientability + Poincare duality: KO-6 skew structure [E], canonical theorem [C], self-contained proof [O] (PS.NCG.ORIENT.01)")
 

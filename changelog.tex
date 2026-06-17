@@ -77,6 +77,22 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
   \texttt{/changelog} prerendered static) and \texttt{bash build.sh audit} (\texttt{AUDIT OK}).
 \end{itemize}
 
+\subsection*{2026-06-17 (Orientability + Poincar\'e duality: the honest, literature-confirmed status --- strict fail, weakened hold, \texttt{v257})}
+\begin{itemize}
+\item \textbf{\texttt{v257\_quasiorient\_modpd.py} (\texttt{PS.NCG.ORIENT.02}) corrects the slightly
+  too-generous \vref{v256} typing.} The published result (Cacic--Stephan arXiv:0902.2068; CCM07;
+  SM-vacuum hep-th/0601192) is that the Chamseddine--Connes--Marcolli Standard-Model finite triple
+  (KO-dimension $6$, with three right-handed neutrinos --- exactly the TFPT seesaw case) \emph{genuinely
+  fails} strict orientability and strict Poincar\'e duality, and instead satisfies the physically correct
+  weakened versions. Verified on the explicit \vref{v252} triple: \mE\ strict orientability fails
+  ($\gamma\notin\mathrm{span}\{\lambda(a)\rho(b)\}$); \mE\ \emph{quasi-orientability} holds (the left/right
+  $A$-irrep boxes are disjoint by chirality: $L=H$ weak-doublet, $R=\mathbb C$ singlet, so
+  $L^{\mathrm{LR}}(\mathcal H^{\mathrm{even}},\mathcal H^{\mathrm{odd}})=\{0\}$); \mE\ strict Poincar\'e
+  duality fails (KO-$6$ skew intersection form, corank $1$, the equal-$L/R$-neutrino case); \mC\ modified
+  Poincar\'e duality holds (CCM), Stephan's alternative triple (St06) restoring strict PD with identical
+  physics. A known property of the NCG-SM model class, not a TFPT defect --- no faked closure.
+\end{itemize}
+
 \subsection*{2026-06-17 (Remaining NCG obligations discharged or honestly typed: inner fluctuations, spectral action, orientability/Poincar\'e, \texttt{v254}--\texttt{v256})}
 \begin{itemize}
 \item \textbf{\texttt{v254\_inner\_fluctuations.py} (\texttt{PS.NCG.FLUCT.01}) closes \vref{v250} \#5 + the
