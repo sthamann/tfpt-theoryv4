@@ -762,6 +762,7 @@ export const papers: Paper[] = [
       { label: "Targets", value: "A–E", description: "Five load-bearing reductions, attacked" },
       { label: "Broken", value: "0", description: "No target failed; verdicts are typed, not green" },
       { label: "Target A", value: "0 new gates", description: "Factors into the already-open A2 (net assembly) + GATE.QGEO (v160–v165)" },
+      { label: "Target D CP", value: "ρ¹, ρ⁴", description: "Both CP phases are μ6 powers of one hexagonal unit, split by the sheet (v231) — 2 inputs → 1" },
     ],
   },
   {
@@ -987,6 +988,7 @@ export const papers: Paper[] = [
     highlights: [
       { label: "Skeleton", value: "(5,3)", description: "One pair generates the integer alphabet" },
       { label: "McKay bedrock", value: "2I → Ê₈", description: "Why {2,3,5}: E₈ is the icosahedral top (marks = irrep degrees)" },
+      { label: "Seam = E₈ singularity", value: "8 P¹'s", description: "du Val resolution of ℂ²/2I; link = Poincaré sphere S³/2I — a model for QGEO.REALIZE.01 (v232)" },
       { label: "CM norms", value: "41 · 7", description: "Square (Gauss) gives the EM index, hexagon (Eisenstein) the scalaron" },
       { label: "Gap", value: "6 log(3/2)", description: "Positive ⇒ unique attractor" },
       { label: "Free numbers", value: "0", description: "Only π is primitive" },

@@ -1872,6 +1872,47 @@ Module[{labels, edges, A, Ni, Nw, RRm, QQm, Cc2, Mst, s, t, d, nvec, one, av, KK
     Det[{{1, 1, 1}, d, nvec}] == 21 == 3*7];
 ];
 
+(* ==== v231: both CP phases are mu6 powers of one hexagonal unit, split by the sheet ==== *)
+Module[{rho, RRm, av, d, nvec, vol},
+  rho = Exp[I Pi/3];
+  RRm = {{1, 3, 0}, {1, 5, 2}, {2, 5, 3}}; av = {1, 1, 2};
+  d = av.Inverse[RRm];
+  nvec = {5, -9, 6};
+  vol = Det[{{1, 1, 1}, d, nvec}];
+  checkExact["v231 CP.MU6.01: both CP phases are mu6 powers of the one hexagonal CM unit rho=e^{i pi/3} "
+    <> "(j=0), split by the Z2 sheet. rho^6=1, rho^3=-1 (sheet half-turn); delta_CKM,lead=Arg(rho^1)=pi/3 "
+    <> "(quark), delta_PMNS=Arg(rho^4)=4pi/3 (lepton phase lattice); rho^4=-rho => "
+    <> "delta_PMNS=delta_CKM,lead+pi=(CM unit)x(sheet); the C6 monodromy has charpoly t^6-1; the dual-frame "
+    <> "orientation det(1,d,n)=21=3*7 is sheet-flipped Im det(1,d,rho^k n) = +/-21 sin(pi/3) for k=1,4. "
+    <> "Two CP phase inputs reduce to one hexagonal unit + the sheet (red-team Target D).",
+    Simplify[rho^6] == 1 && Simplify[rho^3] == -1 && Simplify[rho^4 + rho] == 0 &&
+    Simplify[Arg[rho^1] - Pi/3] == 0 && Simplify[rho^4 - Exp[I 4 Pi/3]] == 0 &&
+    Simplify[4 Pi/3 - Pi/3 - Pi] == 0 && vol == 21 &&
+    Simplify[Im[rho^1 vol] + Im[rho^4 vol]] == 0 &&
+    Simplify[Im[rho^1 vol] - 21 Sin[Pi/3]] == 0];
+];
+
+(* ==== v232: the seam as the E8 Kleinian singularity (du Val resolution + link) ==== *)
+Module[{labels, e8edges, A8, C8, degs},
+  labels = {1, 2, 3, 4, 5, 6, 4, 2, 3};                 (* affine E8 Kac marks *)
+  (* finite E8 = affine E8 minus the unique mark-1 (affine) node; relabel kept nodes 1..8 *)
+  e8edges = {{1, 2}, {2, 3}, {3, 4}, {4, 5}, {5, 6}, {6, 7}, {5, 8}};
+  A8 = Table[If[i != j && (MemberQ[e8edges, Sort[{i, j}]]), 1, 0], {i, 8}, {j, 8}];
+  C8 = 2 IdentityMatrix[8] - A8;
+  degs = Total /@ A8;
+  checkExact["v232 TOPO.E8.01: the seam as the E8 Kleinian singularity (du Val side of McKay, v219). "
+    <> "Dropping the unique trivial-rep node (the single Kac mark=1) from affine E8 leaves the finite E8 "
+    <> "Dynkin on 8 nodes = the dual intersection graph of the 8 exceptional P^1's of the minimal "
+    <> "resolution of C^2/2I (one trivalent node, arms 1,2,4). The negated intersection form is the E8 "
+    <> "Cartan: even (each P^1 a (-2)-curve), unimodular det=1, positive definite. The 8 curves = rank E8 "
+    <> "= g_car+N_fam = #nontrivial 2I irreps (9-1), a fourth reading of the '8'. Exactly one mark=1 => 2I "
+    <> "perfect => H1(S^3/2I)=0: the link is the Poincare homology sphere, pi1=2I order 120=|R+(E8)|.",
+    Count[labels, 1] == 1 && Total[labels^2] == 120 &&
+    Det[C8] == 1 && And @@ (# == 2 & /@ Diagonal[C8]) &&
+    Min[Eigenvalues[N[C8]]] > 0 && Sort[degs] == {1, 1, 1, 2, 2, 2, 2, 3} &&
+    Count[degs, 3] == 1 && (8 == 5 + 3)];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v230: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v232: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

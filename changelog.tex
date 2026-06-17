@@ -59,6 +59,30 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-17 (CP phases as $\mu_6$ powers --- a reduction of red-team Target D)}
+\begin{itemize}
+\item \textbf{Both CP phases are $\mu_6$ powers of one hexagonal CM unit, split by the sheet
+  (\texttt{v231\_cp\_mu6\_phases}, \texttt{tfpt\_5\_redteam}, \mE/\mC).} Sharper than \vref{v220}/\vref{v225}
+  (which only \emph{located} the CP residual). With $\rho=e^{i\pi/3}$ the primitive $6$th root (the $j{=}0$
+  Eisenstein CM unit): $\delta_{\mathrm{CKM}}$ leading $=\arg(\rho^1)=\pi/3$ (quark) and
+  $\delta_{\mathrm{PMNS}}=\arg(\rho^4)=4\pi/3$ (lepton, the phase lattice), with $\rho^4=-\rho$, so
+  $\delta_{\mathrm{PMNS}}=\delta_{\mathrm{CKM,lead}}+\pi=(\text{CM unit})\times(\Z_2\text{ sheet}, \rho^3{=}{-}1)$.
+  The two CP phases are \emph{one} hexagonal unit on the two sheets, not two independent inputs; the
+  dual-frame Jarlskog orientations are sheet-flipped ($\pm21\sin(\pi/3)$). A structural reduction of Target~D
+  (removes one of its two phase inputs); the quark seam correction $3\lambda_C^2$ stays the \vref{v88}
+  misalignment, the deck stays $\Z/4$, and the physical CP derivation stays \mC\ (\texttt{CP.MU6.01}).
+\item \textbf{The seam as the $E_8$ Kleinian singularity (\texttt{v232\_e8\_kleinian\_seam},
+  \texttt{origin\_theory}, \mE/\mC).} The du~Val side of the McKay correspondence (\vref{v219}) gives the
+  open seam-realisation premise \texttt{QGEO.REALIZE.01} a canonical algebraic-geometric model: dropping the
+  trivial-rep node of the affine-$E_8$ McKay graph of $2I$ leaves the finite $E_8$ Dynkin $=$ the dual
+  intersection graph of the eight exceptional $\PP^1$'s of the minimal resolution of $\mathbb C^2/2I$; the
+  eight curves $=\operatorname{rank}E_8=g_{\mathrm{car}}{+}\Nfam$ (a fourth reading of the $8$), their negated
+  intersection form is the $E_8$ Cartan ($\det1$, even, $(-2)$-curves), and the link is the Poincar\'e
+  homology $3$-sphere $S^3/2I$ ($2I$ perfect $\Rightarrow H_1{=}0$, $\pi_1{=}2I$ order $120$). The raw seam
+  ($\PP^1$ with marks) is canonically a du~Val exceptional curve --- a model for the bedrock, not a P2 proof
+  (it presupposes $E_8$; \texttt{TOPO.E8.01}, bedrock stays \mO).
+\end{itemize}
+
 \subsection*{2026-06-16 (the icosahedral bedrock, CM-norm duality, and a structural-finds round)}
 \begin{itemize}
 \item \textbf{McKay bedrock: why the atoms are $\{2,3,5\}$ (\texttt{v219\_icosahedral\_mckay},

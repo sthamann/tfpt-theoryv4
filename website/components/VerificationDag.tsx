@@ -166,6 +166,7 @@ const NODES: DagNode[] = [
       "v170_diamond_slice_compression.py",
       "v223_coxeter_totative_clock.py",
       "v227_degree_exponent_channel_split.py",
+      "v232_e8_kleinian_seam.py",
     ],
   },
   {
@@ -351,6 +352,7 @@ const NODES: DagNode[] = [
       "v163_rg_stability_flavor.py",
       "v220_cp_hexagonal_modulus.py",
       "v225_dual_normal_frame.py",
+      "v231_cp_mu6_phases.py",
     ],
   },
   {
