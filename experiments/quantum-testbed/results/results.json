@@ -1,0 +1,143 @@
+{
+  "constants": {
+    "c3": 0.039788735772973836,
+    "g_car": 5.0,
+    "phi0": 0.05317195217684553,
+    "N_fam": 3.0,
+    "kernel_energy_(2/3)^6": 0.08779149519890257,
+    "kernel_energy_(1/3)^6": 0.0013717421124828527,
+    "kernel_amp_(2/3)^3": 0.2962962962962962,
+    "delta_gap_6ln(3/2)": 2.4327906486489863,
+    "(3/2)^6": 11.390625
+  },
+  "qt01_entanglement": {
+    "occupation": [
+      1.0,
+      0.08779149519890257,
+      0.0013717421124828527
+    ],
+    "surprisals": [
+      2.4327906486489868,
+      6.591673732008658
+    ],
+    "modular_energies": [
+      2.3409039572961827,
+      6.590301048196687
+    ],
+    "schmidt": [
+      0.9109571899796968,
+      0.08767106790782041,
+      0.0012513148214006817,
+      0.00012042729108217084
+    ],
+    "recovery_I": {
+      "1": 0.08779149519890257,
+      "2": 0.0077073466292589335,
+      "3": 0.0006766394845988636
+    },
+    "protected_present": true,
+    "s_ratio": 2.7095112913514545,
+    "s_gap_is_delta": true,
+    "s_three_is_6ln3": true,
+    "s_ratio_is_clock": true,
+    "verdict": "entanglement spectrum carries the kernel exactly: a protected (zero-surprisal, decoherence-free) zeta=1 mode, surprisals {6 ln(3/2)=2.4328, 6 ln3=6.5917}, ratio 2.7095=ln3/ln(3/2), and Schmidt recovery I_n=(2/3)^{6n} -- the entanglement face of the recovery kernel"
+  },
+  "qt02_recovery_dsi": [
+    {
+      "name": "3/2 (carrier)",
+      "lam": 1.5,
+      "omega": 15.496241677849737,
+      "suppression": 2.6831635198776125e-11,
+      "amplitude": 0.003240637793487096,
+      "p_value": 0.972568578553616,
+      "detected": false
+    },
+    {
+      "name": "(3/2)^3 (amplitude gap)",
+      "lam": 3.375,
+      "omega": 5.165413892616579,
+      "suppression": 0.000299375126007456,
+      "amplitude": 0.00513733352407296,
+      "p_value": 0.5885286783042394,
+      "detected": false
+    },
+    {
+      "name": "(3/2)^6 (energy gap)",
+      "lam": 11.390625,
+      "omega": 2.5827069463082895,
+      "suppression": 0.01730246011431484,
+      "amplitude": 0.008688840364757035,
+      "p_value": 0.0024937655860349127,
+      "detected": true
+    },
+    {
+      "name": "2^6 (mode-2/mode-3 ratio)",
+      "lam": 64.0,
+      "omega": 1.510786713942398,
+      "suppression": 0.09318782295357586,
+      "amplitude": 0.014913635019114392,
+      "p_value": 0.0024937655860349127,
+      "detected": true
+    }
+  ],
+  "qt02_control": {
+    "lam": 11.390625,
+    "omega": 2.5827069463082895,
+    "amplitude": 0.021011142748593635,
+    "p_value": 0.30423940149625933,
+    "detected": false
+  },
+  "qt03_otoc": {
+    "n_sites": 64,
+    "lam": 11.390625,
+    "front_speed": 0.00746255170057131,
+    "return_dsi_p": 0.2956810631229236,
+    "return_dsi_detected": false
+  },
+  "qt04_walled_clock": {
+    "rates": [
+      -0.0,
+      2.432790648648986,
+      6.591673732008657
+    ],
+    "bend": 2.709511291351455,
+    "bend_curvature": 0.709511291351455,
+    "sheet_slope": 2.0,
+    "wall_at_nfam": true,
+    "verdict": "walled two-mode clock: rates {0, 2.4328, 6.5917}, det'-clean bend 2.7095=ln3/ln(3/2), sheet slope 2=|Z2|, hard wall at n=N_fam=3 (no 3rd mode)",
+    "matched_filter_kernel": {
+      "injected_ratio": 2.709511291351455,
+      "template_rms": 0.011337869719676161,
+      "free_ratio_recovered": 2.713299830949524,
+      "is_kernel_recovery": true
+    },
+    "matched_filter_nonkernel": {
+      "injected_ratio": 5.0,
+      "template_rms": 0.01358305285803707,
+      "free_ratio_recovered": 4.469373829519076,
+      "is_kernel_recovery": false
+    }
+  },
+  "qt05_mtc": {
+    "n_sectors": 16,
+    "n_bosons": 6,
+    "n_fermions": 2,
+    "n_anyons": 8,
+    "spin_phase_quantum": 0.7853981633974483,
+    "braid_phase_quantum": 1.5707963267948966,
+    "distinct_spin_phases": [
+      0.0,
+      0.785398,
+      2.356194,
+      3.141593,
+      3.926991,
+      5.497787
+    ],
+    "central_charge": 8.0,
+    "integrable": true,
+    "trivial_on_E8": true,
+    "verdict": "16 sectors -> 6 bosons, 2 fermions (theta=-1, phase pi = the m=2 dominant), 8 anyons; statistical phase quanta = pi/4 (spin, 8th roots) and pi/2 (braiding); c=8 (Gauss-Milgram); integrable factorised S, trivial on (E8)_1 -- the FRB.08 'fundamental m=2' is the PREDICTED fermion sector, not a null"
+  },
+  "checks_passed": true,
+  "verdict": "the frozen kernel is carried by the QUANTUM dynamics, as a *dynamical* signature, not a static ratio: (QT.01) the entanglement spectrum reproduces the kernel exactly (surprisals 6 ln(3/2), 6 ln3; protected DFS mode; I_n=(2/3)^{6n}); (QT.02) a geometric ladder relaxes log-periodically at omega=2pi/ln lambda with exp(-pi^2/ln lambda)-suppressed amplitude (detectable only for the coarse (3/2)^6, p=0.002; invisible for 3/2, p=0.973); (QT.04) but the EXACT clock (v124) is WALLED -- a single recovery is two modes + a protected floor with the det'-clean bend rate ratio 2.7095=ln3/ln(3/2) and NO third mode (pole at n=3), so sustained DSI needs a cascade. The sharp, falsifiable waveform signature is therefore: a fixed-ratio (2.7095) two-exponential recovery template with a non-decaying floor -- a matched filter on recovery WAVEFORMS (FRB tails, pulsar nu(t), GW ringdown residuals), not size histograms. (QT.05) the discrete->dynamic completion (v241-243) adds a DIFFERENT signature class: discrete statistical phases -- spin in units of pi/4 (8th roots), braiding in pi/2, with a dominant m=2 fermion sector (theta=-1) and c=8 -- reinterpreting the FRB.08 'm=2' as the PREDICTED fermion mode. Internal-consistency, no data."
+}

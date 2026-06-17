@@ -1,0 +1,27 @@
+{
+  "inputs": {
+    "M_Z": 91.1876,
+    "alpha_em_inv": 127.951,
+    "sin2_W_meas": 0.23122,
+    "alpha_s": 0.1179,
+    "sin2_W_GUT": 0.375
+  },
+  "alpha_inv_MZ": [
+    59.019701868,
+    29.58483022,
+    8.481764206955047
+  ],
+  "Lambda_12_GeV": 10308931063427.635,
+  "alpha_gut_inv": 42.41195318587155,
+  "alpha3_inv_at_12": 36.83645707888166,
+  "unify_miss_pct": 13.146048904079304,
+  "alpha_inv_2loop_at_12": [
+    42.21620249596819,
+    42.15457514682801,
+    37.21874942376748
+  ],
+  "sin2_pred_1loop": 0.2075896435384527,
+  "sin2_meas": 0.23122,
+  "pull_sigma": -590.7589115386829,
+  "verdict": "sin^2 theta_W = 3/8 is the standard SU(5)/SO(10) GUT value (TFPT inherits it via the carrier 16). Running the measured SM couplings 1-loop: alpha1=alpha2 meet at Lambda~1.0e+13 GeV but alpha3 misses by 13% (the known SM non-unification). Imposing unification, the 3/8 boundary predicts sin^2 theta_W(M_Z)=0.2076 vs measured 0.23122 -- the classic ~10% GQW gap. CONSISTENT at GUT level, NOT a precision hit; closing the gap needs SUSY/thresholds (beyond TFPT's tree relation)."
+}

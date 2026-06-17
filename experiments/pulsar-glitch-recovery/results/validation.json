@@ -1,0 +1,9 @@
+{
+  "smooth_p": 0.9335548172757475,
+  "smooth_rejected": true,
+  "comb_p": 0.0033222591362126247,
+  "comb_ratio_recovered": 3.3720451709446357,
+  "comb_detected": true,
+  "comb_ratio_ok": true,
+  "passed": true
+}

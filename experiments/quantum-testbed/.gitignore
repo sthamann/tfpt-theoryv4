@@ -1,0 +1,11 @@
+.venv/
+.ruff_cache/
+__pycache__/
+*.egg-info/
+build/
+dist/
+*.pyc
+.ipynb_checkpoints/
+
+# generated plots (the small results.json summary IS committed)
+results/*.png

@@ -1,0 +1,19 @@
+.venv/
+.ruff_cache/
+__pycache__/
+*.egg-info/
+build/
+dist/
+*.pyc
+.ipynb_checkpoints/
+
+# raw input data: public, re-downloadable (kept out of git)
+# ...but keep the tiny derived/provenance files so the analysis stays reproducible
+data/*
+!data/README.md
+!data/jbo_glitches.csv
+!data/yu2013_recovery.csv
+*.tar.gz
+
+# generated plots (the small results.json summary IS committed)
+results/*.png

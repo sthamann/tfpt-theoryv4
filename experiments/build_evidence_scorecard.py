@@ -84,6 +84,32 @@ ROWS = [
      None, "search_target", "boundary recovery kernel",
      "catalog_feasibility", "LVK GWTC-5.0 (390 canonical; 391 raw rows) + injection-recovery",
      "strain-level echo with ratio >>(2/3)^6 across events", "data_limited"],
+    # ---- pulsar glitches (experiments/pulsar-glitch-recovery) ----
+    # the missing cross-domain leg: same frozen kernel as FRB.02/09 + GW echo
+    ["pulsar", "glitch-size log-periodicity (PG.01)", "comb at (3/2)^k or {1+phi0,4,8,8pi}",
+     "real comb is the known 2-population bimodality (vanishes under population-controlled null; "
+     "(3/2)^6 raw p_gmm=0.03 fails LEE x7)", None, "search_target", "boundary recovery kernel",
+     "search_target", "Jodrell Bank Glitch Catalogue (Basu+2022; 726 glitches/222 pulsars)",
+     "a preregistered TFPT ratio comb survives the population-controlled null + look-elsewhere", "null"],
+    ["pulsar", "per-pulsar size/waiting kernel ladder (PG.02/03)",
+     "|dlog s|, dt-ratios on {log 3/2, (3/2)^3, (3/2)^6}",
+     "null (frac 0.20/0.22 vs within-pulsar shuffle, p=1.0; 68/50 pulsars)", None,
+     "search_target", "boundary recovery kernel",
+     "search_target", "Jodrell Bank Glitch Catalogue (within-pulsar shuffle null)",
+     "consecutive glitches step by kernel factors above the within-pulsar shuffle", "null"],
+    ["pulsar", "recovery Q / tau_d kernel structure (PG.04)",
+     "Q in {phi0..8phi0,1-phi0}; multi-comp tau_d ladder (3/2)^k",
+     "null (Q frac 0.10 vs 0.22 chance, p~1.0; tau_d ratios p=0.69; 60 comp/46 glitches)", None,
+     "search_target", "boundary recovery kernel (Q/tau_d)",
+     "search_target", "Yu+2013 (MNRAS 429,688) expTab recovery table",
+     "Q clusters at phi0 multiples OR tau_d components form the kernel ladder", "null"],
+    ["pulsar", "recovery-waveform clock template (PG.04/QT.04)",
+     "walled 2-mode clock: bend tau ratio 2.7095 + protected floor + wall (<=2 modes)",
+     "open: needs time-resolved recovery waveforms (matched filter), not summary Q/tau_d", None,
+     "search_target", "exact discrete->dynamic clock rate(n)=-6ln(1-n/3) (v124/v126/v147)",
+     "search_target", "FRB tails / pulsar nu(t) / GW ringdown residuals (future); QT.04 template validated",
+     "recovery waveforms fit a free 2-exp with rate ratio != 2.7095 (or >=3 robust decay modes)",
+     "data_limited"],
     # ---- lab (experiments/lab-residuals) ----
     ["lab", "muon g-2 Delta a_mu (WP2020 dispersive)", "2.879e-9",
      "residual 2.62e-9+/-0.45", 0.58, "bridge", "HVP (dispersive)",
@@ -119,6 +145,31 @@ ROWS = [
      "search_target", "gapped transport / Petz map (companion to v221)", "search_target",
      "recovery-channel (numerical)",
      "a free ratio reaches the (2/3)^6 rate OR a degenerate spectrum keeps the rank-one limit", "consistent"],
+    # ---- quantum testbed (experiments/quantum-testbed; internal-consistency, no data) ----
+    ["quantum", "entanglement spectrum carries the kernel (QT.01)",
+     "surprisals {6ln(3/2)=Delta, 6ln3}; protected DFS mode; I_n=(2/3)^{6n}",
+     "exact: modular gap + ratio ln3/ln(3/2) + Schmidt recovery reproduced", None,
+     "search_target", "Gaussian Gamma(t) entanglement (v161)", "search_target",
+     "quantum-testbed (numerical)",
+     "the entanglement spectrum does not carry the kernel", "consistent"],
+    ["quantum", "quench discrete-scale-invariance (QT.02)",
+     "log-periodic recovery at omega=2pi/ln lambda; eps~e^{-pi^2/ln lambda}",
+     "DSI detected for energy gap (3/2)^6 (p~0.002), invisible for 3/2; control null", None,
+     "search_target", "complex critical exponent (dynamical kernel)", "search_target",
+     "quantum-testbed (numerical)",
+     "a non-geometric ladder fakes the DSI at the kernel log-frequency", "consistent"],
+    ["quantum", "walled clock + matched-filter discriminator (QT.04)",
+     "exact rate(n)=-6ln(1-n/3): bend 2.7095, protected floor, wall at n=3",
+     "exact identities hold; matched filter separates kernel (2.71) from non-kernel recovery", None,
+     "search_target", "exact discrete->dynamic clock (v124/v126/v147)", "search_target",
+     "quantum-testbed (numerical)",
+     "the fixed-ratio template fails to separate kernel from non-kernel recoveries", "consistent"],
+    ["quantum", "anyon MTC statistical phases (QT.05)",
+     "16 sectors: 6 bosons/2 fermions(theta=-1)/8 anyons; spin quantum pi/4, braid pi/2; c=8",
+     "exact MTC: phase quanta pi/4 (spin, 8th roots) + pi/2 (braiding), c=8 Gauss-Milgram, integrable S",
+     None, "search_target", "carrier anyon MTC (v241/v242/v243)", "search_target",
+     "quantum-testbed (numerical)",
+     "the modular (S,T) data fails Verlinde/Gauss-Milgram or the phase quanta are not pi/4, pi/2", "consistent"],
     # ---- shared seed (one phi0 -> four observables) ----
     ["seed", "shared seed phi0", "phi0 = 1/(6pi)+3/(256pi^4) = 0.05317",
      "4 observables imply same phi0, chi2/dof=1.23 (dominant leg theta13, -1.80 sigma)",
@@ -238,6 +289,19 @@ ROWS = [
      "Shamir 2025 MNRAS 538 76 (JWST JADES); Land+2008 Galaxy Zoo",
      "a parity-odd global spin monopole surviving MW-aberration + selection systematics across surveys",
      "data_limited"],
+    # ---- spectral action / NCG matter content (v244/v245); RGE-confronted in gauge-unification ----
+    ["EW", "Weinberg angle sin^2 th_W (spectral scale)", "3/8 (NCG/SU(5) tree, v245)",
+     "3/8 is the standard SU(5)/SO(10) GUT value; SM 1-loop run gives alpha1=alpha2 @ ~1e13 GeV "
+     "but alpha3 misses 13%, and 3/8->sin^2_W(M_Z)=0.2076 vs 0.23122 (universal ~10% GQW gap, "
+     "needs SUSY/thresholds; NOT TFPT-specific)", None,
+     "bridge", "spectral-action unification g3=g2=sqrt(5/3)g1",
+     "downstream_bridge", "gauge-unification (1/2-loop RGE) vs PDG; Chamseddine-Connes-Marcolli (v245)",
+     "couplings unify with a DIFFERENT normalisation than 3/8 (sqrt(5/3))", "data_limited"],
+    ["EW", "carrier matter = one anomaly-free generation", "SO(10) 16 = SM gen, sum Y=sum Y^3=0",
+     "exact: 16 = one generation, all four anomalies cancel, Higgs=(1,2)_{1/2}", None,
+     "bridge", "carrier half-spinor (v244/v245)",
+     "not_applicable", "spectral-action matter content (v245, internal identity)",
+     "the carrier 16 fails to be an anomaly-free SM generation", "consistent"],
     # ---- internal-consistency checks (recovery channel / Page curve) ----
     # ---- parked ----
     ["quantum", "boundary recovery I_n ~ (64/729)^n", "64/729 per step",
@@ -279,6 +343,10 @@ OVERRIDES: dict[str, dict] = {
     "recovery kernel as CPTP map": {"stage": "not_applicable"},
     "Page curve turnover": {"stage": "not_applicable"},
     "Petz recovery + rank-one baby universe": {"stage": "not_applicable"},
+    "entanglement spectrum carries the kernel (QT.01)": {"stage": "not_applicable"},
+    "quench discrete-scale-invariance (QT.02)": {"stage": "not_applicable"},
+    "walled clock + matched-filter discriminator (QT.04)": {"stage": "not_applicable"},
+    "anyon MTC statistical phases (QT.05)": {"stage": "not_applicable"},
     "S_dS rho_Lambda": {"stage": "not_applicable"},          # algebraic identity, not a measurement
     "shared seed phi0": {"chi2_dof": 1.23, "max_leg_pull_sigma": 2.0,
                          "dominant_leg": "theta13", "dominant_chi2_fraction": 0.88},
@@ -298,6 +366,9 @@ OVERRIDES: dict[str, dict] = {
                                         "alternative_group": "w_de_eos"},
     "CCBH cosmological coupling": {"alternative_group": "w_de_eos", "discriminative_power": "weak"},
     "cosmic spin handedness": {"discriminative_power": "weak", "decision_horizon": "long_term"},
+    # 3/8 is shared by every SU(5)/SO(10) GUT -> not TFPT-discriminating; the M_Z gap is the
+    # universal SM non-unification, not a TFPT-specific tension.
+    "Weinberg angle sin^2 th_W": {"discriminative_power": "weak"},
     # --- Higgs near-criticality: show the two-axis pull, not just a green label ---
     "Higgs near-criticality": {"lambda_pull_sigma": 2.5, "beta_lambda_pull_sigma": "near_zero",
                                "status_note": "near critical; exact double-critical surface "

@@ -1,0 +1,8 @@
+.venv/
+.ruff_cache/
+__pycache__/
+*.egg-info/
+build/
+dist/
+*.pyc
+results/*.png

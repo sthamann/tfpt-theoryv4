@@ -1,0 +1,239 @@
+{
+  "constants": {
+    "c3": 0.039788735772973836,
+    "g_car": 5.0,
+    "phi0": 0.05317195217684553,
+    "N_fam": 3.0,
+    "p2_exp": 6.0,
+    "delta_gap_6ln(3/2)": 2.4327906486489863,
+    "kernel_energy_(2/3)^6": 0.08779149519890257,
+    "kernel_amp_(2/3)^3": 0.2962962962962962,
+    "(3/2)^6": 11.390625,
+    "8pi": 25.132741228718345,
+    "1+phi0": 1.0531719521768454
+  },
+  "catalogue": {
+    "n_glitches": 726,
+    "n_pulsars": 222,
+    "n_with_size": 723,
+    "prolific": [
+      [
+        "0537-6910",
+        65
+      ],
+      [
+        "1740-3015",
+        38
+      ],
+      [
+        "1341-6220",
+        35
+      ],
+      [
+        "0534+2200",
+        32
+      ],
+      [
+        "0835-4510",
+        26
+      ],
+      [
+        "0631+1036",
+        17
+      ]
+    ]
+  },
+  "pg01_discreteness": {
+    "lognormal_ks_p": 1.4973503585561564e-05,
+    "gmm_best_k": 3,
+    "gmm_delta_bic": 156.89821477919395,
+    "best_ratio": 9.962972478783698,
+    "z_max": 14.241071951855762,
+    "p_value": 0.07487520798668885,
+    "p_lognormal": 0.0016638935108153079,
+    "p_kde": 0.0016638935108153079,
+    "p_gmm": 0.07487520798668885,
+    "nearest_ratio": "(3/2)^6=729/64",
+    "nearest_rel_err": 0.1253357494620622,
+    "targeted": [
+      {
+        "name": "carrier_3/2",
+        "ratio": 1.5,
+        "kind": "kernel",
+        "z": 2.3231420529932953,
+        "p_lognormal": 0.11148086522462562,
+        "p_kde": 0.11148086522462562,
+        "p_gmm": 0.09983361064891846,
+        "p_value": 0.11148086522462562
+      },
+      {
+        "name": "(3/2)^3=27/8",
+        "ratio": 3.375,
+        "kind": "kernel",
+        "z": 1.094403333861724,
+        "p_lognormal": 0.3410981697171381,
+        "p_kde": 0.30782029950083195,
+        "p_gmm": 0.39600665557404324,
+        "p_value": 0.39600665557404324
+      },
+      {
+        "name": "(3/2)^6=729/64",
+        "ratio": 11.390625,
+        "kind": "kernel",
+        "z": 11.007842901741524,
+        "p_lognormal": 0.0016638935108153079,
+        "p_kde": 0.0016638935108153079,
+        "p_gmm": 0.03161397670549085,
+        "p_value": 0.03161397670549085
+      },
+      {
+        "name": "1+phi0",
+        "ratio": 1.0531719521768454,
+        "kind": "problem1",
+        "z": 0.7728350386697441,
+        "p_lognormal": 0.47420965058236275,
+        "p_kde": 0.44093178036605657,
+        "p_gmm": 0.46755407653910147,
+        "p_value": 0.47420965058236275
+      },
+      {
+        "name": "4",
+        "ratio": 4.0,
+        "kind": "problem1",
+        "z": 0.28269588083924785,
+        "p_lognormal": 0.7587354409317804,
+        "p_kde": 0.7653910149750416,
+        "p_gmm": 0.8685524126455907,
+        "p_value": 0.8685524126455907
+      },
+      {
+        "name": "8",
+        "ratio": 8.0,
+        "kind": "problem1",
+        "z": 4.884230496185524,
+        "p_lognormal": 0.011647254575707155,
+        "p_kde": 0.0066555740432612314,
+        "p_gmm": 0.28452579034941766,
+        "p_value": 0.28452579034941766
+      },
+      {
+        "name": "8pi",
+        "ratio": 25.132741228718345,
+        "kind": "problem1",
+        "z": 5.383345427755329,
+        "p_lognormal": 0.009983361064891847,
+        "p_kde": 0.0033277870216306157,
+        "p_gmm": 0.5224625623960066,
+        "p_value": 0.5224625623960066
+      }
+    ],
+    "verdict": "log-periodicity at ratio 9.96 (p_smooth=0.002) is the known glitch-size BIMODALITY (best_k=3); it vanishes under the population-controlled null (p_gmm=0.075) and the best ratio is not preregistered (closest (3/2)^6=729/64, 13% off) -- NOT a kernel signature"
+  },
+  "pg02_size_ladder": {
+    "channel": "size",
+    "n_pulsars": 68,
+    "n_ratios": 467,
+    "teeth_dex": [
+      0.17609125905568124,
+      0.5282737771670437,
+      1.0565475543340874
+    ],
+    "tol_dex": 0.05,
+    "frac_on_comb": 0.20342612419700215,
+    "null_mean": 0.20342612419700226,
+    "p_value": 1.0,
+    "verdict": "size ladder consistent with shuffle (frac=0.20 vs null 0.20, p=1.000) -- no kernel comb"
+  },
+  "pg03_waiting_ladder": {
+    "channel": "waiting",
+    "n_pulsars": 50,
+    "n_ratios": 383,
+    "teeth_dex": [
+      0.17609125905568124,
+      0.5282737771670437,
+      1.0565475543340874
+    ],
+    "tol_dex": 0.05,
+    "frac_on_comb": 0.2193211488250653,
+    "null_mean": 0.2193211488250654,
+    "p_value": 1.0,
+    "verdict": "waiting ladder consistent with shuffle (frac=0.22 vs null 0.22, p=1.000) -- no kernel comb"
+  },
+  "pg04_recovery": {
+    "q_cluster": {
+      "n": 59,
+      "targets": {
+        "phi0": 0.05317195217684553,
+        "2phi0": 0.10634390435369107,
+        "4phi0": 0.21268780870738213,
+        "8phi0": 0.42537561741476426,
+        "1-phi0": 0.9468280478231544
+      },
+      "tol": 0.025,
+      "frac_on_target": 0.1016949152542373,
+      "null_frac_kde": 0.22241101694915255,
+      "null_frac_uniform": 0.2271737288135593,
+      "p_value": 0.9965008747813047,
+      "verdict": "Q not clustered at phi0-multiples (frac=0.10 vs null 0.22/0.23, p=0.997)"
+    },
+    "tau_ladder": {
+      "n_glitches": 13,
+      "n_ratios": 14,
+      "teeth_dex": [
+        0.17609125905568124,
+        0.5282737771670437,
+        1.0565475543340874
+      ],
+      "tol_dex": 0.05,
+      "frac_on_comb": 0.14285714285714285,
+      "null_frac": 0.16305714285714284,
+      "p_value": 0.6886622675464907,
+      "ratios": [
+        5.389,
+        13.226,
+        14.722,
+        12.0,
+        23.5,
+        8.75,
+        12.5,
+        2.333,
+        7.167,
+        51.077,
+        75.974,
+        6.208,
+        5.796,
+        6.869
+      ],
+      "verdict": "tau_d component ratios consistent with shuffle (frac=0.14 vs null 0.16, p=0.689) -- no kernel ladder"
+    },
+    "bend_wall": {
+      "bend": 2.709511291351455,
+      "n_two_comp": 12,
+      "ratios": [
+        5.389,
+        13.226,
+        14.722,
+        12.0,
+        23.5,
+        8.75,
+        12.5,
+        2.333,
+        7.167,
+        51.077,
+        75.974,
+        6.869
+      ],
+      "frac_near_bend": 0.0,
+      "null_frac": 0.0778,
+      "p_value": 1.0,
+      "comp_counts": {
+        "1": 33,
+        "2": 12,
+        "3": 1
+      },
+      "n_wall_exceed": 1,
+      "verdict": "2-mode bend: 0.00 of 12 ratios near 2.710 (null 0.08, p=1.000; null); wall: 1 glitch(es) need >= 3 decay modes (consistent with <=2-mode wall)"
+    }
+  },
+  "verdict": "no TFPT recovery-kernel signature in pulsar glitches across all channels. (PG.01) glitch sizes show real log-periodic structure, but it is the known two-population BIMODALITY (vanishes under the population-controlled null) -- NOT a kernel comb; (PG.02/03) the decisive per-pulsar kernel ladders are null; (PG.04) the recovery fraction Q is not at phi0-multiples, and the multi-component tau_d ratios match neither the (3/2)^k ladder nor the det'-clean 2-mode bend 2.7095 (the correct v124 candidate) -- though the WALL holds (45/46 glitches need <=2 decay modes, consistent with the n=N_fam=3 pole). This mirrors the FRB energy-cascade result (generic discreteness, not kernel-specific) -- a clean cross-domain NULL. The exact clock is WALLED (2 modes + floor, not an infinite ladder), so sustained DSI needs a cascade; the open, more-sensitive probe is the fixed-ratio (2.7095) two-exponential recovery WAVEFORM template (matched filter), not summary Q/tau_d (see quantum-testbed QT.04)."
+}
