@@ -105,11 +105,11 @@ export interface Prediction {
  * without coupling the static build to the experiments tree.
  */
 export const EXPERIMENTS_AUDIT = {
-  rows: 50,
-  consistent: 24,
+  rows: 51,
+  consistent: 26,
   tension: 4,
   null: 7,
-  dataLimited: 14,
+  dataLimited: 13,
   parked: 1,
   repoPath: "experiments",
   readmePath: "experiments/README.md",
@@ -117,7 +117,7 @@ export const EXPERIMENTS_AUDIT = {
   headline:
     "No discriminating empirical discovery — but a typed, reproducible, falsifiable test matrix.",
   finding:
-    "50 typed scorecard rows across FRB, CMB, neutrino, GW, EHT, lab (g−2/kaon/axion), dark-energy, recovery-channel and black-hole-cosmology (CCBH / gravastar-echo / spin-parity) domains: 24 consistent, 4 tension, 7 clean nulls, 14 data-limited, 1 parked. Correlated φ₀-seed legs, alternative-group readings (e.g. CCBH vs DESI on w) and internal-consistency checks are NOT counted as independent external hits.",
+    "51 typed scorecard rows across FRB, CMB, neutrino, GW, EHT, lab (g−2/kaon/axion), dark-energy, recovery-channel and black-hole-cosmology (CCBH / gravastar-echo / spin-parity) domains: 26 consistent, 4 tension, 7 clean nulls, 13 data-limited, 1 parked. The full BDP Boltzmann solve now lands η_B = 6.5×10⁻¹⁰ at the frozen scalaron-route M₁ (ratio 1.07), and the Stage-1 GW-echo matched filter is injection-validated (3/3). Correlated φ₀-seed legs, alternative-group readings (e.g. CCBH vs DESI on w) and internal-consistency checks are NOT counted as independent external hits.",
 } as const;
 
 export const STATUS_BADGE: Record<PredictionStatus, { color: string; bg: string }> = {

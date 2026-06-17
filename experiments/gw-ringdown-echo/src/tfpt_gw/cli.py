@@ -8,14 +8,44 @@ from pathlib import Path
 
 from . import constants
 from .echo_forecast import forecast
+from .echo_search import injection_suite
 
 RESULTS = Path(__file__).resolve().parents[2] / "results"
 
 
+def _run_search() -> int:
+    """Stage-1 echo matched-filter + injection-recovery (validated on synthetic strain)."""
+    print("=" * 78)
+    print("TFPT GW echo Stage-1: matched-filter + injection-recovery (synthetic strain)")
+    print("=" * 78)
+    suite = injection_suite()
+    print(f"  frozen ratio (2/3)^6 = {constants.RATIO:.5f};  TFPT C=3/8 ECO template lag "
+          f"~ {suite.template_lag_ms:.2f} ms (gravastar-compactness); lag free (scanned)\n")
+    print(f"  {'injection':12s} {'echo SNR':>9} {'lag(ms)':>8} {'q_hat':>8}  "
+          f"{'label':16s} {'expected':16s} ok")
+    for r in suite.results:
+        print(f"  {r.case:12s} {r.echo_snr:9.2f} {r.best_lag_ms:8.2f} {r.q_hat:8.4f}  "
+              f"{r.label:16s} {r.expected:16s} {r.correct}")
+    print(f"\n  -> {suite.n_correct}/{suite.n_total} correctly classified")
+    print(f"\n-> {suite.verdict}")
+
+    RESULTS.mkdir(exist_ok=True)
+    out = {"stage": "strain_level_test (synthetic injection-recovery)",
+           "ratio_(2/3)^6": constants.RATIO, "template_lag_ms": suite.template_lag_ms,
+           "n_correct": suite.n_correct, "n_total": suite.n_total,
+           "results": [vars(r) for r in suite.results], "verdict": suite.verdict}
+    (RESULTS / "echo_search.json").write_text(json.dumps(out, indent=2), encoding="utf-8")
+    print(f"\nWrote {RESULTS / 'echo_search.json'}")
+    return 0 if suite.n_correct == suite.n_total else 1
+
+
 def main(argv: list[str] | None = None) -> int:
-    ap = argparse.ArgumentParser(description="TFPT GW ringdown echo-ratio forecast")
-    ap.add_argument("command", choices=["audit", "analyze"], nargs="?", default="analyze")
+    ap = argparse.ArgumentParser(description="TFPT GW ringdown echo-ratio forecast + Stage-1 search")
+    ap.add_argument("command", choices=["audit", "analyze", "search"], nargs="?", default="analyze")
     args = ap.parse_args(argv)
+
+    if args.command == "search":
+        return _run_search()
 
     print("=" * 72)
     print(f"TFPT ringdown echo-ratio CENSUS (stage={constants.STAGE}; ratio (2/3)^6, lag free)")

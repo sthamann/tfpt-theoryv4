@@ -30,7 +30,7 @@ from dataclasses import dataclass, field
 
 import numpy as np
 
-from .channel import amplitude_damping_kraus, apply_channel, choi
+from .channel import amplitude_damping_kraus, apply_channel
 from .constants import LAMBDA
 
 
@@ -118,9 +118,8 @@ def petz_check(lmbda: float, seed: int = 1) -> PetzReport:
     rec_ref = bool(np.allclose(R(apply_channel(kr, sigma)), sigma, atol=1e-9))
 
     # CPTP of the Petz map: its Choi is PSD
-    JR = choi([np.eye(2, dtype=complex)], d=2) * 0.0
-    # build Choi of R directly
     d = 2
+    JR = np.zeros((d * d, d * d), dtype=complex)
     for i in range(d):
         for j in range(d):
             E = np.zeros((d, d), dtype=complex)

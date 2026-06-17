@@ -780,7 +780,7 @@ def fig_residual_chain():
 
 
 def fig_script_timeline():
-    """The development timeline of the ~181 verification scripts: the phases of
+    """The development timeline of the ~235 verification scripts: the phases of
     the journey, what each did mathematically and physically. PDF + PNG."""
     from matplotlib.patches import FancyBboxPatch
 
@@ -801,10 +801,16 @@ def fig_script_timeline():
          "anomaly seed 4/3, strong-CP Pfaffian, Fock readings", C["gold"]),
         ("v175-v181", "AQFT closure -> geometric bedrock", "net existence + full-cone RP [E];\n"
          "residual -> one premise: carrier mu4 clock = seam conformal deck", C["blue"]),
+        ("v182-v213", "F_transfer functor + frontier", "reviewer residual map; F_transfer = one typed\n"
+         "functor (Koide, eta_B, axion, m_p/m_e) + machine guard", C["red"]),
+        ("v214-v218", "Pillowcase + Sheet Diamond", "QGEO pillowcase (cross-ratio 2 => j=1728), four\n"
+         "marks from Gauss-Bonnet, the Sheet Diamond axis geometry", C["gold"]),
+        ("v219-v237", "Icosahedral capstone", "McKay why {2,3,5}, CM norms 41/7, CP triality, Kleinian\n"
+         "seam, det K=1 = Kitaev E8; the (2,3,5) Brieskorn generates ALL", C["green"]),
     ]
-    fig, ax = plt.subplots(figsize=(7.6, 6.4))
+    fig, ax = plt.subplots(figsize=(7.8, 8.6))
     ax.set_xlim(0, 10); ax.set_ylim(0, len(phases) + 0.4); ax.axis("off")
-    ax.set_title("TFPT verification suite: the journey of ~181 machine-checked scripts",
+    ax.set_title("TFPT verification suite: the journey of ~235 machine-checked scripts",
                  fontsize=10.5, color=C["blue"])
     ax.plot([0.7, 0.7], [0.3, len(phases) + 0.1], color=C["gray"], lw=1.4, zorder=0)
     for i, (rng, head, sub, col) in enumerate(phases):
