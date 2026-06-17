@@ -738,17 +738,18 @@ def fig_residual_chain():
         ("start", "Naive residual", "''build a quantum-gravity measure''", C["gray"]),
         ("v175", "Net existence + full-cone RP", "discharged to [E] (CAR functor)", C["green"]),
         ("v176", "One central theorem", "Seam Collar Realisation Thm", C["green"]),
-        ("v177", "Split into two obligations", "MARKS + KERNEL", C["green"]),
-        ("v178", "Finite cores closed [E]", "Mobius + Schur (spectrum=operator)", C["green"]),
-        ("v179", "Unify to one premise", "QGEO.CONF.01 (conformal realisation)", C["green"]),
-        ("v180", "Milder isometry premise", "QGEO.ISO.01 (uniformisation+Kerekjarto)", C["green"]),
-        ("v181", "BEDROCK", "QGEO.SYM.01: carrier mu4 clock = seam conformal deck", C["gold"]),
+        ("v177-v178", "MARKS + KERNEL, cores [E]", "Mobius + Schur (spectrum=operator)", C["green"]),
+        ("v179-v181", "One geometric premise", "QGEO.SYM.01: carrier mu4 clock = seam conformal deck", C["green"]),
+        ("v194-v201", "Non-circular form", "state-invariance w o rho = w; DtN mark-local (Z4)", C["green"]),
+        ("v234", "ONE condition, three faces", "no abelian sector: holomorphy = homology-sphere = 1 irrep -> E8", C["green"]),
+        ("v235", "Chern-Simons form", "holomorphic <=> det K = 1 (the Kitaev E8 condensation tower)", C["green"]),
+        ("v237", "PHYSICAL BEDROCK", "is the seam short-range-entangled? det K=1 = the Kitaev E8 phase", C["gold"]),
     ]
     n = len(steps)
-    fig, ax = plt.subplots(figsize=(7.4, 5.4))
+    fig, ax = plt.subplots(figsize=(7.8, 6.4))
     ax.set_xlim(0, 10); ax.set_ylim(0, n + 0.5); ax.axis("off")
-    ax.set_title("Structural-residual reduction chain: the whole remaining\n"
-                 "''quantum gravity'' question collapses to one definitional premise",
+    ax.set_title("Structural-residual reduction chain: the whole ''quantum gravity'' question\n"
+                 "collapses to one falsifiable physical statement -- is the seam SRE?",
                  fontsize=10.5, color=C["blue"])
     bw, bh = 8.4, 0.62
     centers = []
@@ -758,7 +759,7 @@ def fig_residual_chain():
         box = FancyBboxPatch((x, y - bh / 2), bw, bh,
                              boxstyle="round,pad=0.04,rounding_size=0.12",
                              linewidth=1.6, edgecolor=col,
-                             facecolor=col, alpha=0.10 if tag != "v181" else 0.20)
+                             facecolor=col, alpha=0.10 if tag != "v237" else 0.20)
         ax.add_patch(box)
         ax.text(x + 0.18, y, tag, fontsize=9, fontweight="bold", va="center", color=col)
         ax.text(x + 1.35, y + 0.10, head, fontsize=8.6, va="center", fontweight="bold",
@@ -770,9 +771,9 @@ def fig_residual_chain():
         ax.add_patch(FancyArrowPatch((x0 - 2.4, y0 - bh / 2), (x1 - 2.4, y1 + bh / 2),
                                      arrowstyle="-|>", mutation_scale=11,
                                      color=C["gray"], lw=1.0))
-    ax.text(5.0, 0.18, "Everything above the bedrock is a theorem or an established "
-            "citation; the bedrock is a definition, left honestly [O].",
-            fontsize=7.6, ha="center", style="italic", color=C["gray"])
+    ax.text(5.0, 0.10, "Everything above is a theorem or an established citation; the bedrock, once a definition\n"
+            "(QGEO.SYM.01), is now a falsifiable physical question: is the seam SRE (det K = 1)?",
+            fontsize=6.8, ha="center", va="bottom", style="italic", color=C["gray"])
     fig.tight_layout()
     fig.savefig(os.path.join(OUT, "residual_chain.pdf"))
     fig.savefig(os.path.join(WEB, "residual_chain.png"), dpi=150)

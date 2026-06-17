@@ -633,3 +633,38 @@ Befund: kein neuer unterscheidender Treffer. CCBH ist die stärkste neue Brücke
 Lambda-Engine, w=-1 und reale SMBH-Wachstumsdaten), bleibt aber wegen der Literatur-Kontroverse
 data_limited; die Entscheidung fällt über DESI w(z). Gravastar schärft die GW-Echo-Suche um eine
 konkrete (Delay, Amplitude)-Vorlage. Händigkeit bleibt Frontier (Pixelhaufen-Warnung operativ).
+
+## Update 2026-06-17 (II): drei Durchbruch-Kandidaten gebaut (a/b/c); (d) war schon da
+
+Aus der Durchbruch-Liste a-d umgesetzt. (d) RR-Index-Gate ENTFÄLLT: existiert bereits als
+verification/v228_rr_index_gate.py (QGEO.RR.01) im parallelen v219-v237-Strang -- nicht dupliziert.
+Die anderen drei sind experiment-seitig (kollidieren nicht mit dem verification-Strang). Scorecard
+51 Zeilen (26 consistent, 7 null, 13 data_limited, 4 tension, 1 parked).
+
+(c) eta_B FULL ODE -- der stärkste neue Befund. fboltzmann_solve.py integriert die BDP-Boltzmann-
+Gleichungen (statt der analytischen kappa_f-Fit des Strips): integrierte Effizienz kappa_f=0.092
+(vs Fit 0.074, validiert den Strip), und am EINGEFRORENEN M1=M_scal phi0^2/A_Lambda=8.6e9 GeV mit
+delta_CP=4pi/3 ergibt sich eta_B=6.5e-10 vs beobachtet 6.1e-10 -- FAKTOR 1.07, ohne freien M_R-Dial.
+Der frühere "Solve pending"/data_limited ist erledigt -> consistent (downstream bridge, [C]: Washout
+m~1=m3/A_Lambda verankert, M1 via Scalaron-Route). Das ist eine echte Schärfung: der Strip liess M_R
+frei und bound M1>=8.8e9 von oben; jetzt landet die FROZEN-Skala bei 1.07x beobachtet.
+
+(b) Petz-Recovery + rank-one Baby-Universe -- recovery-channel/petz_recovery.py (CLI: tfpt-recovery
+petz), Companion zu v221_seam_qecc (das den KL-Kontraktionsbound liefert, Petz-Identifikation [C]
+aufgeschoben). Numerisch: ||T^n - P_inf|| = (2/3)^{6n} EXAKT (rank-one Kollaps am Kernel-Tempo = der
+1-dim Baby-Universe-Hilbertraum, Engelhardt 2025/JHEP 12(2025)159); expliziter Petz-Operator R_P ist
+CPTP + recovers reference, nur die lambda=1-Mode fuer alle Zustaende (KL); Negativkontrollen (freies
+Ratio, entartetes Spektrum) greifen. internal_consistency, kein neues Datum -- die staerkste
+Theorie-Bruecke zu Mainstream-QG (problem_b sec.H), jetzt realisiert statt nur behauptet.
+
+(a) GW-Echo Stage-1 -- gw-ringdown-echo/echo_search.py (CLI: tfpt-gw search). Echte Matched-Filter-
+Maschinerie: Kerr-Ringdown-Subtraktion -> MF auf Residuen (Lag/Phase frei, Ratio (2/3)^6 fix) ->
+Detection-SNR + freier-q-Kontrolltemplate. Auf synthetischem Strain 3/3 Injektionen korrekt
+klassifiziert (Kernel-Echo->DETECTION q_hat~(2/3)^6; kein Echo->NULL; Ratio 0.5->NON_KERNEL_ECHO).
+Template-Lag aus gravastar-compactness (~0.7ms, C=3/8); Lag gescannt, Ratio der Diskriminator. Bleibt
+data_limited bis echtes GWOSC-Strain (gwpy) -- kein Echo-Claim, validierte Pipeline (EHT-Muster).
+
+Befund: kein neuer unterscheidender empirischer Treffer (wie erwartet). Aber eta_B@frozen-M1 (1.07x)
+ist ein bemerkenswerter Near-Hit, die Petz/Baby-Universe-Bruecke ist die sauberste QG-Anbindung, und
+die GW-Echo-Pipeline ist jetzt bereit fuer echtes Strain. Website EXPERIMENTS_AUDIT auf 51/26/13
+gesynct. verification/ (v219-v237) bewusst NICHT angefasst -- das ist der parallele Strang.

@@ -79,12 +79,12 @@ K⁺** und den `F_transfer`-Solvern.
 | Stufe | Kanäle | Lesart |
 |---|---|---|
 | **Schärfste Konsistenz** (≤0.5σ, mit Vorbehalt) | Λ-Hierarchie (**dev 0.004 Größenordnungen**, *kein* pull_sigma — Metrologie-Kohärenz), Neutrino `θ12` (**−0.02σ**), Kaon `K⁺→π⁺νν` (**−0.08σ**), CMB `Ω_b` BBN (0.04σ), CMB Seed-Linie (0.35σ), CMB `β` (0.37σ) | nah dran, aber teils Bridges, breite Fehler, korreliert (`phi0_seed`) oder Metrologie-Kohärenz |
-| **Konsistenz, nicht unterscheidend** | FRB.01 (keine native Dispersion), FRB.05 (`Ω_b` aus FRB-DM(z)), `v_GW=c` (GW170817), EDM `θ_eff=0`, Σm_ν, Inflation `n_s` vs Planck, A_s (profiliert), **Axion-Spine** (`Ωₐh²=0.125`, robust), **Higgs-Kritikalität** (λ(M_Pl)≈0) | Standardphysik sagt dasselbe / interne Identität / downstream-Bridge |
-| **Interne Konsistenz** (keine externe Messung) | Recovery-Channel CPTP/QEC, Page-Kurve-Turnover bei `t_Page`, **`S_dS·ρ_Λ=32π⁴`** (algebraische Identität, `stage=not_applicable`), **QGEO-DtN-Mark-Locality** (Theory-Contract) | `evidence_class=internal_consistency` / Theory-Contract — nicht im selben Korb wie CMB/Kaon |
+| **Konsistenz, nicht unterscheidend** | FRB.01 (keine native Dispersion), FRB.05 (`Ω_b` aus FRB-DM(z)), `v_GW=c` (GW170817), EDM `θ_eff=0`, Σm_ν, Inflation `n_s` vs Planck, A_s (profiliert), **Axion-Spine** (`Ωₐh²=0.125`, robust), **Higgs-Kritikalität** (λ(M_Pl)≈0), **Leptogenese `η_B`** (voller ODE, `6.5×10⁻¹⁰` = 1.07× @ frozen `M₁`) | Standardphysik sagt dasselbe / interne Identität / downstream-Bridge |
+| **Interne Konsistenz** (keine externe Messung) | Recovery-Channel CPTP/QEC, Page-Kurve-Turnover bei `t_Page`, **Petz-Recovery + rank-one Baby-Universe** (`‖T^n−P_∞‖=(2/3)^{6n}`), **`S_dS·ρ_Λ=32π⁴`** (algebraische Identität, `stage=not_applicable`), **QGEO-DtN-Mark-Locality** (Theory-Contract) | `evidence_class=internal_consistency` / Theory-Contract — nicht im selben Korb wie CMB/Kaon |
 | **Sauberer Nullbefund** | FRB.02, FRB.02b, FRB.04, FRB.06, FRB.07, FRB.08, FRB.09 | Muster nachweislich **nicht** da, über mehrere Quellen |
 | **Echte Spannung** (Daten/Modell ziehen dagegen) | **θ13** (+2.0σ), **A_s** fix N⋆=51.4 (−11.3σ), g−2 unter Lattice-HVP (+3.86σ), Axion-**Hilltop** (~5.5× Überproduktion) | hier entscheidet sich Substanz; θ13 ist der `φ₀`-Seed-Treiber |
 | **Datenlimitiert mit Hinweis-Flag** | FRB.03 (Aktivitätsfenster, `hint_flag`) | 1/2 broad-match, n=2<5, LOO-instabil → `data_limited` (zu kalt für `hint`) |
-| **Datenlimitiert** (noch nicht testbar) | GW-Echo (Stage 0), **EHT-Residual** (echte Daten + Injection-Suite, GRMHD-Imaging offen), QNM `ln3`, Axion-Marker, Kaon `KL`/`R_K`, dunkle Energie `w` (4.4σ), m_ββ, δ_νCP, η_B, **CCBH `k=3`** (−0.14σ, umstritten), **Gravastar `C=3/8`-Echo**, **kosm. Händigkeit** (~3.3σ, Frontier) | richtige Signatur/Vorhersage, Test noch offen |
+| **Datenlimitiert** (noch nicht testbar) | GW-Echo (**Stage-1 MF injection-validiert, echtes Strain offen**), **EHT-Residual** (echte Daten + Injection-Suite, GRMHD-Imaging offen), QNM `ln3`, Axion-Marker, Kaon `KL`/`R_K`, dunkle Energie `w` (4.4σ), m_ββ, δ_νCP, **CCBH `k=3`** (−0.14σ, umstritten), **Gravastar `C=3/8`-Echo**, **kosm. Händigkeit** (~3.3σ, Frontier) | richtige Signatur/Vorhersage, Test noch offen |
 | **Geparkt** | Quantum-Recovery-Analog | kein physischer Datensatz |
 
 ### TFPT-Signaturkatalog (search.txt) — was wo geprüft wurde
@@ -237,8 +237,15 @@ Es ist ein Sensitivitäts-Census: Reicht eine zukünftige gestackte Strain-Suche
   (konservativ) vs Schwelle 5 → ein maximaler `(2/3)⁶`-Echo **wäre erreichbar** ⇒
   Strain-Level-Test lohnt sich. **Datenlimitiert** bis zum echten Strain-Matched-Filter.
 
-Nächste Stufe (Stage 1): High-Ringdown-SNR-Events, Kerr-Subtraktion, Matched-Filter auf
-Residuen (Lag/Phase frei, Quotient fix), Injection-Kampagne `q=(2/3)⁶`, freier-`q`-Kontrolltemplate.
+**Stage 1 — Matched-Filter-Maschinerie gebaut + injection-validiert (`tfpt-gw search`).** Die
+Pipeline (Kerr-Ringdown-Subtraktion → Matched-Filter auf Residuen, Lag/Phase frei, Quotient
+`(2/3)⁶` fix → Detection-SNR + freier-`q`-Kontrolltemplate) klassifiziert auf synthetischem
+Strain **3/3 Injektionen korrekt**: Kernel-Echo → `DETECTION` (`q̂≈(2/3)⁶`); kein Echo → `NULL`;
+falsches Ratio (0.5) → `NON_KERNEL_ECHO` (Echo da, aber **nicht** der TFPT-Kernel). Das
+Template-Lag ist objektabhängig (das `C=3/8`-ECO der `gravastar-compactness` gibt `~0.7 ms`); der
+Lag wird gescannt, das Ratio `(2/3)⁶` ist der eingefrorene Diskriminator. **Bleibt
+`data_limited`** bis echtes GWOSC-Strain (gwpy-Ingest) eingespeist ist — **kein Echo-Claim**,
+nur die validierte Maschinerie (Muster wie die EHT-Injection-Suite).
 
 ---
 
@@ -335,6 +342,16 @@ Anregungs-Überlebenswahrscheinlichkeit `λ` (Damping `γ=1−λ`): eine geschü
   `S_BH(t)/S₀=(1−t/τ)^{2/3}`; die Insel/unitäre Min-Vorschrift `S_page=min(S_BH,S_rad)`
   dreht bei **`t/τ=1−(1/2)^{3/2}=0.6464`** — *exakt* die TFPT-Page-Zeit
   `t_Page=(1−1/(2√2))τ` (numerisch 0.6466).
+- **Petz-Recovery + rank-one Baby-Universe (`tfpt-recovery petz`, Companion zu `v221`).** Der
+  gapped Transport `T` (CPTP, doppelt-stochastisch auf dem Cusp-Weight-3-Raum) kontrahiert
+  unter Iteration auf einen **rank-one** Projektor (den eindeutigen Fixpunkt/„Gesetz") mit der
+  **exakten** Rate `‖Tⁿ−P_∞‖=(2/3)^{6n}` (numerisch bestätigt 8.78e-2, 7.71e-3, …). Der
+  boundary-zugängliche Algebra kollabiert am Kernel-Tempo auf **eine Dimension** — die
+  TFPT-Realisierung des **1-dim Baby-Universe-Hilbertraums** (Engelhardt 2025; JHEP 12 (2025)
+  159). Dazu ein **expliziter Petz-Recovery-Operator** `R_P` (CPTP, recovers reference; nur die
+  `λ=1`-Mode für alle Zustände = KL): das `[C]` Petz-Identification, das `v221` aufgeschoben
+  hatte, jetzt realisiert. Negativkontrollen (freies Ratio → `rⁿ`; entartetes Spektrum → kein
+  rank-one) greifen.
 
 **Typisierung.** `evidence_class=internal_consistency` — interne Konsistenzprüfung,
 **keine externe Messung**; nicht im selben Evidenz-Korb wie CMB/Kaon. **Kein neues Datum.**
@@ -520,9 +537,13 @@ Marken brechen den Kommutator, `[ρ,Λ]/|Λ|≈0.4–0.5`). **Contract hält.**
   (NO, **data_limited**); `δ_νCP=240°` (**data_limited**, DUNE/HyperK).
 - **EDM-Null (`θ_eff=0`):** Neutron-EDM + Elektron-EDM beide **consistent** (PSI nEDM /
   JILA/ACME-Limits). Kill: robustes EDM-Signal inkompatibel mit `θ_eff=0`.
-- **Leptogenese `η_B`** (Scalaron-Decuple, `ftransfer/leptogenesis_boltzmann`): **data_limited**
-  — voller flavored-density-matrix-Boltzmann-Lauf (`M1=M_scal φ₀²/AΛ`, `δ_νCP=4π/3`, AΛ=10)
-  ausstehend (die Verifikations-Suite hat das Interface `v169/v184`). **P2, offen.**
+- **Leptogenese `η_B`** (Scalaron-Decuple, `ftransfer/leptogenesis_boltzmann/fboltzmann_solve.py`):
+  **gelöst → konsistent.** Der **volle BDP-Boltzmann-ODE-Solve** (integrierte Effizienz
+  `κ_f=0.092`, vs BDP-Fit 0.074 → validiert den Strip) liefert am **eingefrorenen** Schwerskala
+  `M₁=M_scal φ₀²/AΛ=8.6×10⁹ GeV` mit `δ_νCP=4π/3` ein **`η_B=6.5×10⁻¹⁰`** vs beobachtet
+  `6.1×10⁻¹⁰` — **Faktor 1.07, ohne freien `M_R`-Dial**. Bleibt `[C]` (Washout `m̃₁=m₃/AΛ`
+  verankert; `M₁` über die Scalaron-Route, README 7c.6). Der frühere `data_limited`-„Solve
+  pending" ist erledigt.
 - **GW-Strain-Echo** (Stage 1): erst nach echter Strain-Pipeline + Kerr-Subtraktion +
   Injection- + Free-q-Kontrollen; bleibt `catalog_feasibility` (siehe §5). **P2, offen.**
 - **Rare-Kaon tree-only CKM:** die `|Vcb|`/`|Vub|`-Nuisances in §7c.2 sind PDG-Werte
@@ -692,8 +713,9 @@ cd experiments/cmb-birefringence-seed && PYTHONPATH=src python -m tfpt_cmb.cli a
 # Labor-Residuen
 cd experiments/lab-residuals && PYTHONPATH=src python -m tfpt_lab.cli analyze
 
-# GW Echo-Census (Katalog ggf. neu laden)
+# GW Echo-Census (Katalog ggf. neu laden) + Stage-1 Matched-Filter (Injection-Recovery)
 cd experiments/gw-ringdown-echo && python scripts/fetch_catalog.py && PYTHONPATH=src python -m tfpt_gw.cli analyze
+cd experiments/gw-ringdown-echo && PYTHONPATH=src python -m tfpt_gw.cli search   # Stage-1 MF, 3/3 Injektionen
 
 # echte EHT-Polarimetrie laden + Achromatizität + Injection-Suite + Pipeline-Readiness
 cd experiments/eht-achromatic-residual && python scripts/fetch_eht_data.py && PYTHONPATH=src python -m tfpt_eht.cli realdata
@@ -707,6 +729,7 @@ cd experiments/seed-consistency        && PYTHONPATH=src python -m tfpt_seed.cli
 
 # erweiterte Domänen (Compiler-Ebene + Recovery-Channel)
 cd experiments/recovery-channel        && PYTHONPATH=src python -m tfpt_recovery.cli analyze
+cd experiments/recovery-channel        && PYTHONPATH=src python -m tfpt_recovery.cli petz      # Petz-Map + rank-one Baby-Universe
 cd experiments/cmb-inflation-scalaron  && PYTHONPATH=src python -m tfpt_inflation.cli analyze   # + Branch-Resolver/Bayes
 cd experiments/neutrino-mixing         && PYTHONPATH=src python -m tfpt_neutrino.cli analyze
 cd experiments/gw-speed-multimessenger && PYTHONPATH=src python -m tfpt_gwspeed.cli analyze
@@ -720,6 +743,7 @@ cd experiments/higgs-criticality       && PYTHONPATH=src python -m tfpt_higgs.cl
 cd experiments/lab-residuals           && PYTHONPATH=src python -m tfpt_lab.cli haloscope    # 23.8 µeV Overlay
 cd experiments/ftransfer/axion_relic   && python spine_finiteT_solve.py      # ~25 s
 cd experiments/ftransfer/axion_relic   && python spine_independent_check.py  # unabhängiger Cross-Check
+cd experiments/ftransfer/leptogenesis_boltzmann && python fboltzmann_solve.py  # voller ODE: eta_B=6.5e-10 @ frozen M1
 cd experiments/theory-contracts        && python qgeo_dtn_mark_locality.py
 
 # problem_b black-hole-cosmology Signaturen (neu)
