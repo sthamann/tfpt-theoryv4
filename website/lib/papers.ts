@@ -762,7 +762,7 @@ export const papers: Paper[] = [
       { label: "Targets", value: "A–E", description: "Five load-bearing reductions, attacked" },
       { label: "Broken", value: "0", description: "No target failed; verdicts are typed, not green" },
       { label: "Target A", value: "0 new gates", description: "Factors into the already-open A2 (net assembly) + GATE.QGEO (v160–v165)" },
-      { label: "Target D CP", value: "ρ¹, ρ⁴", description: "Both CP phases are μ6 powers of one hexagonal unit, split by the sheet (v231) — 2 inputs → 1" },
+      { label: "Target D CP", value: "triality + sheet", description: "Both CP phases are the universal Z₃ triality phase, split only by the Z₂ sheet (v231/v233) — the power choice is removed" },
     ],
   },
   {
@@ -1086,6 +1086,7 @@ export const papers: Paper[] = [
       { label: "c_u/c_d", value: "55/117", description: "Closed by Readout Rigidity" },
       { label: "G_net", value: "index 4", description: "Closing statement: the μ₄ index-4 seam-net inclusion ⇒ (E₈)₁; the free-bulk premise (A) factors into A2 + GATE.QGEO, zero new gates (v160–v165)" },
       { label: "v_geo", value: "1 scale", description: "Dimensional-analysis floor: one scale + π; shared by flavor & gravity" },
+      { label: "One closing theorem", value: "no abelian sector", description: "P2 · G_net · Target A are ONE condition (holomorphy = homology-sphere = one 1-dim irrep, all force E₈). The single open step: free bulk ⇒ holomorphic boundary (v234)" },
     ],
   },
 ];

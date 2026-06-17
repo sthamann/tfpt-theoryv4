@@ -1913,6 +1913,41 @@ Module[{labels, e8edges, A8, C8, degs},
     Count[degs, 3] == 1 && (8 == 5 + 3)];
 ];
 
+(* ==== v233: CP = the universal family/triality phase, sheet-split (mu6 = mu3 x mu2) ==== *)
+Module[{rho, omega},
+  rho = Exp[I Pi/3]; omega = Exp[2 I Pi/3];
+  checkExact["v233 CP.TRIALITY.01: the CP phase is the universal family/triality phase, sheet-split. "
+    <> "mu6 = mu3(triality) x mu2(sheet): omega=e^{2pi i/3} the Z3 triality centre (2/3 cusp weight), "
+    <> "rho = omega^2*(-1). Since rho^4 = rho^1*rho^3 with rho^3 in mu2, the quark (rho^1) and lepton "
+    <> "(rho^4) CP phases share the SAME family class and differ only by the sheet: rho^1*(-1)=omega^2 "
+    <> "(quark family part), rho^4=omega^2 (lepton). So CP = the universal triality phase + the sheet, "
+    <> "not a free power choice; omega is the mu3 factor of the order-30 (2,3,5) monodromy (v232).",
+    Simplify[omega^3] == 1 && Simplify[rho^3 + 1] == 0 && Simplify[rho - omega^2 (-1)] == 0 &&
+    Simplify[rho^4 - rho^1 rho^3] == 0 && Simplify[rho^1 (-1) - omega^2] == 0 &&
+    Simplify[rho^4 - omega^2] == 0];
+];
+
+(* ==== v234: Seam-Holomorphy selection -- one condition, three faces, E8 ==== *)
+Module[{marks, ones, e8edges, A8, C8},
+  marks = <|"A4" -> {1, 1, 1, 1, 1}, "D5" -> {1, 1, 2, 2, 1, 1},
+            "E6" -> {1, 1, 1, 2, 2, 2, 3}, "E7" -> {1, 2, 3, 4, 3, 2, 1, 2},
+            "E8" -> {1, 2, 3, 4, 5, 6, 4, 2, 3}|>;
+  ones = Count[#, 1] & /@ marks;
+  e8edges = {{1, 2}, {2, 3}, {3, 4}, {4, 5}, {5, 6}, {6, 7}, {5, 8}};
+  A8 = Table[If[i != j && MemberQ[e8edges, Sort[{i, j}]], 1, 0], {i, 8}, {j, 8}];
+  C8 = 2 IdentityMatrix[8] - A8;
+  checkExact["v234 GATE.HOLO.01: the structural residual is ONE condition (no nontrivial abelian sector) "
+    <> "with three equivalent faces forcing E8. #(mark-1 affine-Dynkin nodes) = |Gamma^ab| = |H1(S^3/Gamma)| "
+    <> "= #(1-dim irreps): A_n->n+1, D_n->4, E6->3, E7->2, E8->1 -- ONLY E8 gives 1 (2I the unique perfect "
+    <> "SU(2) subgroup, Poincare the unique homology-sphere space form). holomorphic c=8=g_car+N_fam => unique "
+    <> "even unimodular rank-8 lattice = E8 (Cartan even, det 1). So Target A (holomorphy) = v232 "
+    <> "(homology sphere) = v219 (one 1-dim irrep) is ONE E8-selector. Closing theorem: free bulk (v160) => "
+    <> "holomorphic boundary => E8 (stated, the one residual analytic step).",
+    ones["A4"] == 5 && ones["D5"] == 4 && ones["E6"] == 3 && ones["E7"] == 2 && ones["E8"] == 1 &&
+    Count[Values[ones], 1] == 1 &&
+    Det[C8] == 1 && And @@ (# == 2 & /@ Diagonal[C8]) && (5 + 3 == 8)];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v232: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v234: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

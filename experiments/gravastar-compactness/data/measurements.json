@@ -1,0 +1,37 @@
+{
+  "comment": "TFPT Nariai geometric quotient Q_geom=3/8 (the Koide-form quotient of the three horizon roots at the maximal de Sitter-black-hole/Nariai point; pure de Sitter limit = 1/2, horizon_readouts/v57) confronted with Jampolski & Rezzolla 2026 (arXiv:2509.15302) who find a MAXIMUM initial compactness C=3/8 above which collapse to a black hole is unavoidable (a de Sitter core nucleates and balances gravity -> gravastar). The shared rational 3/8 and shared de Sitter endpoint 1/2 motivate treating a C=3/8 object as a horizonless light-trapping ECO; combined with the TFPT recovery reflectivity it predicts an echo train. Compactness convention: C = G M /(R c^2) (geometric C=M/R), so the Schwarzschild horizon is C=1/2.",
+  "tfpt_prediction": {
+    "Q_geom_nariai": 0.375,
+    "Q_geom_de_sitter": 0.5,
+    "echo_amplitude_ratio_bound": 0.08779149519890260,
+    "echo_amplitude_ratio_label": "(2/3)^6 = 64/729 (TFPT boundary-recovery reflectivity, same kernel as gw-ringdown-echo)",
+    "note": "Q_geom(Nariai)=3/8 vs Q_geom(de Sitter)=1/2; the ECO echo amplitude is bounded by the recovery eigenvalue (2/3)^6."
+  },
+  "external_result": {
+    "name": "Jampolski & Rezzolla 2026, Formation of gravastars",
+    "arxiv": "2509.15302",
+    "max_compactness": 0.375,
+    "max_compactness_label": "C = 3/8 (above this, collapse to a black hole is unavoidable)",
+    "de_sitter_endpoint": 0.5
+  },
+  "compactness_landmarks": {
+    "photon_sphere": 0.3333333333333333,
+    "photon_sphere_label": "C=1/3 (R=3M): photon sphere at the surface -> light-trapping threshold",
+    "buchdahl": 0.4444444444444444,
+    "buchdahl_label": "C=4/9: Buchdahl bound for a static isotropic fluid",
+    "black_hole": 0.5,
+    "black_hole_label": "C=1/2 (R=2M): Schwarzschild horizon"
+  },
+  "masses_solar": {
+    "GW150914_remnant": 62.0,
+    "GW190521_remnant": 142.0,
+    "stellar_30": 30.0,
+    "M87star": 6.5e9,
+    "SgrA": 4.15e6
+  },
+  "constants": {
+    "GMsun_over_c3_seconds": 4.925490947e-6,
+    "comment": "GM_sun/c^3 in seconds; geometric time unit per solar mass"
+  },
+  "downloaded": "2026-06-17 (published summary values)"
+}

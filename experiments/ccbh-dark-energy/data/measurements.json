@@ -1,0 +1,28 @@
+{
+  "comment": "Cosmologically-coupled-black-hole (CCBH) coupling index k. Croker & Weiner (2019, ApJ 882 19) show a cosmologically coupled compact object gains mass M(a) ~ a^k, with k = -3 w_in fixed by the interior equation of state w_in; the population energy density then scales rho ~ a^(k-3), i.e. w_eff = -k/3. A de Sitter (vacuum, w_in=-1) interior gives k=3 EXACTLY, hence w_eff=-1 (a cosmological constant). Farrah+2023 (ApJL 944 L31) measured k from the redshift growth of SMBH mass at fixed stellar mass in passively-evolving ellipticals. The CCBH-as-dark-energy interpretation is CONTESTED (see contestation[]).",
+  "tfpt_prediction": {
+    "w_interior": -1.0,
+    "k": 3.0,
+    "w_eff_population": -1.0,
+    "note": "TFPT 'black hole local, de Sitter global': the Nariai seam interior is the de Sitter vacuum (w_in=-1, S_dS*rho_Lambda=32 pi^4), so k = -3 w_in = 3 exactly and the CCBH population acts as a true cosmological constant (w=-1). Same w=-1 confronted with DESI in dark-energy-w-watchdog."
+  },
+  "coupling_measurements": [
+    {"name": "Farrah+2023 combined (5 elliptical samples, z~0.7-2.5)", "k": 3.11, "sigma_k": 0.79,
+     "source": "Farrah et al. 2023, ApJL 944 L31", "note": "headline combined constraint, k=3.11 +0.80/-0.79"}
+  ],
+  "density_closure": {
+    "omega_de_ccbh_predicted": 0.68,
+    "sigma_omega_de_ccbh": 0.10,
+    "omega_lambda_observed": 0.6889,
+    "sigma_omega_lambda": 0.0056,
+    "source": "Farrah+2023 (SMBH realization density grown via k=3) vs Planck 2018 Omega_Lambda",
+    "note": "model-dependent and contested; the CCBH-side prediction (~0.68) carries a large model uncertainty (~0.1) that dominates -> reported as an order-level consistency leg, NOT a sharp pull"
+  },
+  "contestation": [
+    "Lacy et al. 2024 (no required mass growth in some samples)",
+    "Amendola et al. 2023 (background-cosmology constraints disfavour k=3 as all of DE)",
+    "Andrae & El-Badry 2023 (selection/mass-evolution systematics)",
+    "Mistele 2023 (gauge/averaging concerns in the coupling derivation)"
+  ],
+  "downloaded": "2026-06-17 (published summary values)"
+}

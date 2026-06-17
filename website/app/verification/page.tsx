@@ -95,7 +95,7 @@ const PATHS: { label: string; value: string; body: string }[] = [
   },
   {
     label: "Wolfram mirror",
-    value: "116/116 + 260/260",
+    value: "116/116 + 262/262",
     body: "An independent second path for the exact algebraic / identity / lattice results, on the Wolfram Engine: the verified base file plus the v84+ extension file.",
   },
   {

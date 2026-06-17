@@ -27,31 +27,31 @@
     "parked",
     "search_target"
   ],
-  "n_rows": 47,
+  "n_rows": 50,
   "count_by_status": {
     "consistent": 24,
     "null": 7,
-    "data_limited": 11,
+    "data_limited": 14,
     "tension": 4,
     "parked": 1
   },
   "count_by_stage": {
-    "search_target": 13,
+    "search_target": 15,
     "prediction_of_record": 18,
     "catalog_feasibility": 1,
-    "downstream_bridge": 11,
+    "downstream_bridge": 12,
     "not_applicable": 3,
     "parked_analog": 1
   },
   "count_by_evidence_class": {
-    "search_target": 13,
+    "search_target": 15,
     "external_data": 19,
-    "downstream_bridge": 11,
+    "downstream_bridge": 12,
     "internal_consistency": 3,
     "parked": 1
   },
   "count_by_independence_group": {
-    "independent": 32,
+    "independent": 35,
     "phi0_seed": 8,
     "c3_topform_horizon": 1,
     "N_star_reheating": 4,
@@ -60,7 +60,8 @@
   "count_by_alternative_group": {
     "HVP_baseline": 2,
     "axion_branch": 3,
-    "Nstar_branch": 2
+    "Nstar_branch": 2,
+    "w_de_eos": 2
   },
   "n_watch_flag": 1,
   "rows": [
@@ -803,12 +804,12 @@
       "status": "data_limited",
       "watch_flag": true,
       "watch_level": "high",
+      "alternative_group": "w_de_eos",
       "independence_group": "independent",
       "discriminative_power": "weak",
       "decision_horizon": "near_term",
       "evidence_class": "external_data",
-      "hint_flag": false,
-      "alternative_group": null
+      "hint_flag": false
     },
     {
       "domain": "neutrino",
@@ -989,6 +990,66 @@
       "discriminative_power": "medium",
       "decision_horizon": "mid_term",
       "evidence_class": "downstream_bridge",
+      "hint_flag": false,
+      "alternative_group": null,
+      "watch_flag": false
+    },
+    {
+      "domain": "cosmo",
+      "observable": "CCBH cosmological coupling k=3 (w=-1)",
+      "tfpt_value": "k = -3 w_in = 3 (de Sitter seam interior)",
+      "data_value": "Farrah+2023 k=3.11+/-0.79 (k consistent; CCBH-as-DE interpretation contested)",
+      "pull_sigma": -0.14,
+      "claim_type": "bridge",
+      "bridge_type": "BH interior EoS -> coupling (Croker-Weiner)",
+      "stage": "downstream_bridge",
+      "source": "Farrah+2023 ApJL 944 L31 (disputed: Lacy/Amendola/Andrae&El-Badry/Mistele)",
+      "kill_condition": "robust k != 3 at >=3 sigma in a controlled SMBH-growth sample",
+      "status": "data_limited",
+      "alternative_group": "w_de_eos",
+      "discriminative_power": "weak",
+      "independence_group": "independent",
+      "decision_horizon": "mid_term",
+      "evidence_class": "downstream_bridge",
+      "hint_flag": false,
+      "watch_flag": false
+    },
+    {
+      "domain": "GW",
+      "observable": "ECO compactness C=3/8 (gravastar echo)",
+      "tfpt_value": "C=3/8=Q_geom(Nariai); echo delay ~0.70 ms (62 Msun), ratio <= (2/3)^6",
+      "data_value": "no ECO echo detected; ringdown consistent with Kerr (rational 3/8 match is [C])",
+      "pull_sigma": null,
+      "claim_type": "bridge",
+      "bridge_type": "Nariai horizon-root quotient / ECO reflectivity",
+      "stage": "search_target",
+      "source": "Jampolski-Rezzolla 2026 (arXiv:2509.15302) + LVK ringdown",
+      "kill_condition": "a C=3/8 horizonless echo (predicted delay + (2/3)^6 damping) excluded across high-SNR ringdowns",
+      "status": "data_limited",
+      "independence_group": "independent",
+      "discriminative_power": "medium",
+      "decision_horizon": "mid_term",
+      "evidence_class": "search_target",
+      "hint_flag": false,
+      "alternative_group": null,
+      "watch_flag": false
+    },
+    {
+      "domain": "cosmo",
+      "observable": "cosmic spin handedness (parity)",
+      "tfpt_value": "approximate parity (tiny mu4/PSL(2,C) remnant)",
+      "data_value": "Shamir JADES 158:105 ~3.3 sigma monopole (likely MW-aberration dipole; Galaxy Zoo isotropic)",
+      "pull_sigma": null,
+      "claim_type": "frontier",
+      "bridge_type": "global boundary orientation",
+      "stage": "search_target",
+      "source": "Shamir 2025 MNRAS 538 76 (JWST JADES); Land+2008 Galaxy Zoo",
+      "kill_condition": "a parity-odd global spin monopole surviving MW-aberration + selection systematics across surveys",
+      "status": "data_limited",
+      "discriminative_power": "weak",
+      "decision_horizon": "long_term",
+      "independence_group": "independent",
+      "evidence_class": "search_target",
       "hint_flag": false,
       "alternative_group": null,
       "watch_flag": false

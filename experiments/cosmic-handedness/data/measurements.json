@@ -1,0 +1,21 @@
+{
+  "comment": "Galaxy-spin handedness counts (clockwise vs counter-clockwise relative to the Milky Way). Shamir 2025 (MNRAS 538 76) reports a ~50% excess of one rotation direction in JWST/JADES; the two leading interpretations are (i) a universe 'born rotating' (black-hole-cosmology / parent-spin inheritance) and (ii) a Milky-Way-rotation aberration systematic. Galaxy Zoo (Land+2008) earlier found consistency with isotropy. CAUTION: a raw count asymmetry is a MONOPOLE; an observer/MW effect is a DIPOLE -- separating them needs sky-resolved counts NOT encoded here.",
+  "tfpt_expectation": {
+    "allowed_asymmetry": 0.0,
+    "note": "TFPT carries only a mu4 clock + PSL(2,C)~SO+(3,1) boundary orientation -> at most a TINY global orientation remnant, NOT a ~20% handedness excess. So TFPT predicts approximate parity; a large robust asymmetry is NOT a clean TFPT prediction (the parent-spin-inheritance reading is frontier/conditional)."
+  },
+  "datasets": [
+    {"name": "Shamir 2025 JWST/JADES", "source": "MNRAS 538 76 (2025)",
+     "n_ccw": 158, "n_cw": 105, "frame": "relative to Milky Way",
+     "note": "263 galaxies with identifiable rotation; ~50% more counter-clockwise"},
+    {"name": "Galaxy Zoo (Land+2008)", "source": "MNRAS 388 1686 (2008)",
+     "n_ccw": null, "n_cw": null, "frame": "all-sky",
+     "verdict": "consistent with isotropy after correcting human-vote bias (no significant handedness)"}
+  ],
+  "systematics": [
+    "Milky-Way rotation aberration (a DIPOLE; Shamir notes correcting for it may explain the excess)",
+    "annotation / mirror-image labelling bias (Galaxy Zoo lesson)",
+    "selection + viewing-angle effects at high z"
+  ],
+  "downloaded": "2026-06-17 (published summary values)"
+}

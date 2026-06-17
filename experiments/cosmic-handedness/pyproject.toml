@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[project]
+name = "tfpt-cosmic-handedness"
+version = "0.1.0"
+description = "TFPT parity/isotropy watchdog: galaxy-spin handedness (Shamir JADES) vs a tiny mu4/PSL(2,C) boundary-orientation remnant; monopole-vs-MW-aberration-dipole discriminator (frontier)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Stefan Hamann" }]
+keywords = ["TFPT", "parity", "galaxy spin", "handedness", "isotropy", "PSL(2,C)", "frontier"]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["ruff>=0.5"]
+
+[project.scripts]
+tfpt-handedness = "tfpt_handedness.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tfpt_handedness"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "NPY"]

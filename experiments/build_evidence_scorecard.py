@@ -211,6 +211,25 @@ ROWS = [
      None, "bridge", "seam free-field boundary",
      "downstream_bridge", "higgs-criticality (Buttazzo 2013 NNLO fit)",
      "RGE pull off the double-critical surface at >5 sigma", "consistent"],
+    # ---- problem_b black-hole-cosmology signatures (new; experiments/ standalone) ----
+    ["cosmo", "CCBH cosmological coupling k=3 (w=-1)", "k = -3 w_in = 3 (de Sitter seam interior)",
+     "Farrah+2023 k=3.11+/-0.79 (k consistent; CCBH-as-DE interpretation contested)", -0.14, "bridge",
+     "BH interior EoS -> coupling (Croker-Weiner)", "downstream_bridge",
+     "Farrah+2023 ApJL 944 L31 (disputed: Lacy/Amendola/Andrae&El-Badry/Mistele)",
+     "robust k != 3 at >=3 sigma in a controlled SMBH-growth sample", "data_limited"],
+    ["GW", "ECO compactness C=3/8 (gravastar echo)",
+     "C=3/8=Q_geom(Nariai); echo delay ~0.70 ms (62 Msun), ratio <= (2/3)^6",
+     "no ECO echo detected; ringdown consistent with Kerr (rational 3/8 match is [C])", None, "bridge",
+     "Nariai horizon-root quotient / ECO reflectivity", "search_target",
+     "Jampolski-Rezzolla 2026 (arXiv:2509.15302) + LVK ringdown",
+     "a C=3/8 horizonless echo (predicted delay + (2/3)^6 damping) excluded across high-SNR ringdowns",
+     "data_limited"],
+    ["cosmo", "cosmic spin handedness (parity)", "approximate parity (tiny mu4/PSL(2,C) remnant)",
+     "Shamir JADES 158:105 ~3.3 sigma monopole (likely MW-aberration dipole; Galaxy Zoo isotropic)",
+     None, "frontier", "global boundary orientation", "search_target",
+     "Shamir 2025 MNRAS 538 76 (JWST JADES); Land+2008 Galaxy Zoo",
+     "a parity-odd global spin monopole surviving MW-aberration + selection systematics across surveys",
+     "data_limited"],
     # ---- internal-consistency checks (recovery channel / Page curve) ----
     # ---- parked ----
     ["quantum", "boundary recovery I_n ~ (64/729)^n", "64/729 per step",
@@ -259,7 +278,12 @@ OVERRIDES: dict[str, dict] = {
     "AXION.HILLTOP": {"alternative_group": "axion_branch"},
     "AXION.SPINE": {"alternative_group": "axion_branch"},
     # --- dark energy: sharpest non-red channel -> explicit watchdog flag ---
-    "dark-energy equation of state w": {"watch_flag": True, "watch_level": "high"},
+    # w(z) from DESI and CCBH-coupling k both probe "is dark energy a constant Lambda?" ->
+    # ALTERNATIVE readings of one question, never two independent hits.
+    "dark-energy equation of state w": {"watch_flag": True, "watch_level": "high",
+                                        "alternative_group": "w_de_eos"},
+    "CCBH cosmological coupling": {"alternative_group": "w_de_eos", "discriminative_power": "weak"},
+    "cosmic spin handedness": {"discriminative_power": "weak", "decision_horizon": "long_term"},
     # --- Higgs near-criticality: show the two-axis pull, not just a green label ---
     "Higgs near-criticality": {"lambda_pull_sigma": 2.5, "beta_lambda_pull_sigma": "near_zero",
                                "status_note": "near critical; exact double-critical surface "

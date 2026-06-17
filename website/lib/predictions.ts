@@ -105,11 +105,11 @@ export interface Prediction {
  * without coupling the static build to the experiments tree.
  */
 export const EXPERIMENTS_AUDIT = {
-  rows: 47,
+  rows: 50,
   consistent: 24,
   tension: 4,
   null: 7,
-  dataLimited: 11,
+  dataLimited: 14,
   parked: 1,
   repoPath: "experiments",
   readmePath: "experiments/README.md",
@@ -117,7 +117,7 @@ export const EXPERIMENTS_AUDIT = {
   headline:
     "No discriminating empirical discovery — but a typed, reproducible, falsifiable test matrix.",
   finding:
-    "47 typed scorecard rows across FRB, CMB, neutrino, GW, EHT, lab (g−2/kaon/axion), dark-energy and recovery-channel domains: 24 consistent, 4 tension, 7 clean nulls, 11 data-limited, 1 parked. Correlated φ₀-seed legs and internal-consistency checks are NOT counted as independent external hits.",
+    "50 typed scorecard rows across FRB, CMB, neutrino, GW, EHT, lab (g−2/kaon/axion), dark-energy, recovery-channel and black-hole-cosmology (CCBH / gravastar-echo / spin-parity) domains: 24 consistent, 4 tension, 7 clean nulls, 14 data-limited, 1 parked. Correlated φ₀-seed legs, alternative-group readings (e.g. CCBH vs DESI on w) and internal-consistency checks are NOT counted as independent external hits.",
 } as const;
 
 export const STATUS_BADGE: Record<PredictionStatus, { color: string; bg: string }> = {

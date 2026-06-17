@@ -601,3 +601,35 @@ Das ist eine gute Lage. Nicht bequem, aber gut. Bequeme Theorien schlafen ein. T
 [5]: https://link.aps.org/doi/10.1103/PhysRevLett.134.081802?utm_source=chatgpt.com "Search for the Decay at the J-PARC KOTO Experiment"
 [6]: https://arxiv.org/abs/2506.03069?utm_source=chatgpt.com "Measurement of the Positive Muon Anomalous Magnetic Moment to 127 ppb"
 [7]: https://arxiv.org/html/2504.15336v1?utm_source=chatgpt.com "On DESI's DR2 exclusion of ΛCDM"
+
+## Update 2026-06-17: drei neue Black-Hole-Cosmology-Signaturen aus problem_b.txt
+
+Aus dem Black-Hole-Cosmology-Teil von problem_b.txt drei datenkonfrontierbare Signaturen als
+self-contained experiments/-Runner gebaut (der Rest von problem_b ist verification/-Mathematik,
+kein Datentest). Scorecard jetzt 50 Zeilen (24 consistent, 7 null, 14 data_limited, 4 tension,
+1 parked). Alle drei bewusst konservativ getypt, keine als Entdeckung:
+
+1. ccbh-dark-energy (downstream bridge, data_limited): de-Sitter-Seam-Innere w_in=-1 =>
+   Croker-Weiner-Kopplung k=-3 w_in=3 exakt => Populations-EoS w_eff=-1. Gegen Farrah+2023
+   k=3.11+/-0.79 => -0.14σ; Dichte Omega_de~0.68 vs Planck 0.6889 => -0.09σ. ABER CCBH-als-DE
+   ist umstritten (Lacy/Amendola/Andrae&El-Badry/Mistele) => Bridge, kein Treffer. Ist der
+   Mechanismus hinter w=-1, das dark-energy-w-watchdog gegen DESI prüft => alternative_group
+   "w_de_eos" (CCBH + DESI-w zählen NICHT als zwei unabhängige Treffer). Kill: robustes k!=3 bei
+   >=3σ.
+2. gravastar-compactness (search target, data_limited): Nariai Q_geom=3/8 == Jampolski-Rezzolla
+   2026 (arXiv:2509.15302) Max-Kompaktheit C=3/8, geteiltes de-Sitter-Ende 1/2 -- exakter
+   Rational-Match, aber KEINE bewiesene C<->Q_geom-Abbildung => [C], struktureller Echo. Fenster
+   1/3<3/8<4/9<1/2 => horizontloser lichtfangender ECO. Echo-Template: Tortoise-Round-Trip-Delay
+   Dt=2.288 M -> ~0.70 ms (62 Msun), Amplitude <= (2/3)^6. Liefert gw-ringdown-echo die fehlende
+   Zeitskala. EHT-Schatten b_c=3 sqrt3 M Kerr-entartet -> Echos, nicht Schatten, sind der
+   Diskriminator.
+3. cosmic-handedness (Frontier-Watchdog, data_limited): TFPT erlaubt nur winzigen
+   mu4/PSL(2,C)-Orientierungsrest => approximate Parität, KEINE ~20%-Asymmetrie. Shamir JADES
+   158:105 = ~3.3σ Monopol, Galaxy-Zoo isotrop. Monopol (echte Parität) vs MW-Aberrations-Dipol
+   (Systematik) ungelöst -- braucht himmelsaufgelöste Zählungen. Nicht hochgestuft. Flag: globaler
+   paritäts-ungerader Spin-Monopol, der MW-Aberration + Selektion über Surveys übersteht.
+
+Befund: kein neuer unterscheidender Treffer. CCBH ist die stärkste neue Brücke (verbindet
+Lambda-Engine, w=-1 und reale SMBH-Wachstumsdaten), bleibt aber wegen der Literatur-Kontroverse
+data_limited; die Entscheidung fällt über DESI w(z). Gravastar schärft die GW-Echo-Suche um eine
+konkrete (Delay, Amplitude)-Vorlage. Händigkeit bleibt Frontier (Pixelhaufen-Warnung operativ).
