@@ -99,7 +99,7 @@ const NODES: DagNode[] = [
     marker: "[O] axiom · [E] Lean",
     title: "P2 — the five-slot carrier",
     summary:
-      "The carrier rank g_car = 5 (3 colour + 2 weak). A declared input but an OVER-DETERMINED bootstrap fixed point, not a free choice: forced three independent ways by the E8 closure (bootstrap μ²−5μ+4 = 0, v6), uniquely solved by the Pascal carrier condition 2^g = g²+g+2 ⇒ g = 5 (Lean-formalised, 0 sorry, audited to the standard kernel axioms), and the (g_car, N_fam) = (5,3) pair is the anchor moment data e₂(a) = g_car (a = (1,1,2) the unique multiset with elem-symm (4,5,2); v53). The P2 algebra — hypercharge, anomaly-freedom, integer rigidity — is Lean-formalised. Since the QBL theorem chain (v108–v113) the axiom is also reduced to the boundary-net premise: the one scalar kernel must pair the sheets (v110), the certified channel counts the code identically (v112), pair transport is minimally complete (v111), and the one quasi-free kernel — rank = c: 5 carrier block, 8 seam hull — is the defining datum of the free c=8 net (v113); closing the index-4 net statement closes this axiom to [E].",
+      "The carrier rank g_car = 5 (3 colour + 2 weak) — a declared input, but over-determined, not a free choice. It is forced three independent ways by the E₈ closure: the bootstrap quadratic μ²−5μ+4 = 0 (v6), the Pascal condition 2^g = g²+g+2 ⇒ g = 5 (Lean-formalised, 0 sorry), and the anchor moment e₂(a) = 5. The QBL chain (v108–v113) reduces it to one boundary-net premise — closing the index-4, c = 8 net closes this axiom to [E].",
     inputs: ["anchor a = (1,1,2) (g_car = e₂)"],
     outputs: ["g_car = 5"],
     failure: "Wrong family / charge lattice.",
@@ -154,7 +154,7 @@ const NODES: DagNode[] = [
     marker: "[E] lattice theorem",
     title: "E₈ — the μ₄ glue (audit hull)",
     summary:
-      "D₅ and A₃ share the discriminant group ℤ₄; their glue norms add to the root norm, q(D₅) + q(A₃) = 5/4 + 3/4 = 2. So E₈ = (D₅ ⊕ A₃) + μ₄ closes as a lattice theorem. E₈ is the unimodular audit hull, not a gauge group; 240 = 16·5·3 roots, 248 = 240 + 8.",
+      "D₅ and A₃ share the discriminant group ℤ₄; their glue norms add to the root norm, q(D₅) + q(A₃) = 5/4 + 3/4 = 2. So E₈ = (D₅ ⊕ A₃) + μ₄ closes as a lattice theorem — the unimodular audit hull, not a gauge group; 240 = 16·5·3 roots, 248 = 240 + 8. It is the forced choice, not a guess: no nontrivial abelian sector ⇔ holomorphy ⇔ det K = 1 selects (E₈)₁ uniquely (v234/v235/v237), and the whole (2,3,5) skeleton drops out of the Brieskorn capstone (v236).",
     inputs: ["D₅", "A₃"],
     outputs: ["240 roots, 248 = dim E₈"],
     failure: "Not even-unimodular; glue norms do not sum to 2.",
@@ -182,7 +182,7 @@ const NODES: DagNode[] = [
     marker: "[E] identity",
     title: "R, L — the flavor residue matrix",
     summary:
-      "The residue + winding matrix on the anchor a = (1,1,2). det R = 8 = h(D₅), principal 2-minors (2,3,5) with product h(E₈) = 30, ‖R‖_F² = 78 = dim E₆, χ_R = t³ − 9t² + 10t − 8, Σ L = 40. Inverse Anchor Theorem: 1ᵀM⁻¹1 = 1/atom and aᵀM⁻¹a = 1 for R, K, L. Operator-pencil geometry: det B(K+xQ) = (3x+2)(3x+5), a quadratic ⇒ y² = det B(K+xQ) is a double cover of the pencil line branched exactly at Koide x = −2/3 and carrier x = −5/3 — they are the two branch points (deck degree 2 = |ℤ₂| = the sheet; disc = 81 = N_fam⁴; separation = 1 transport period). Clearing matrices: 3K−2Q reproduces the D₅⊕A₃ glue (Σ = 240 = |R(E₈)|), 3K−5Q is charge-neutral. Block-det type checker det B = (9,10,16,40) for (Q,K,R,L). The relative operator T = 3 B(Q)⁻¹B(K) = [[5,11/3],[0,2]] has Spec {2,5}, tr 7 = scalaron, det 10 = A_Λ — the basis-invariant core. Forced Koide attractor: the unique branch-preserving Möbius map fixing q = 2,5 has multiplier (2/3)⁶ = the established transfer gap λ₂ (v54/56), so the Koide RG collapses to one identification; the clean rational split is non-generic (placement discriminants 81/49/40). Branch-kernel selection: at each branch point the anchor block is rank 1 with integer kernels (carrier kernel = the democratic vector 1); the collapse direction (−1,1,0) makes up/down the deck-odd pair and puts the leptons ON the ramification — and the anchor-forced cusp conjugation T_A (a = e₂+e₃) realises the same deck action. The dictionary 'Q₊ grading = A₃ discriminant grading' is now DERIVED (G = T_A·Σ acts integrally as B₁⊕E on the cusp basis), so the sheet question carries no separate [C]: its residual folds into the one existing Q-geometry gate. The Koide flow has the canonical generator dq/dt = (Δ/N_fam)·det B(q); the discrete-vs-continuous question is experimental (n=3 steps ⇔ m_τ = 1776.9427 MeV, decision at σ(m_τ) ~ 0.01 MeV).",
+      "The residue + winding matrix on the anchor a = (1,1,2). det R = 8 = h(D₅); the principal 2-minors (2,3,5) have product h(E₈) = 30. Its operator core T = 3 B(Q)⁻¹B(K) = [[5,11/3],[0,2]] has Spec {2,5}, trace 7 (scalaron) and det 10 = A_Λ — the basis-invariant heart of every readout. The Koide attractor is the unique branch-preserving Möbius map fixing q = 2,5, with multiplier (2/3)⁶ = the transfer gap λ₂ (v54/56). The old sheet / Q-grading question is now derived (G = T_A·Σ acts integrally), so it carries no separate open status.",
     inputs: ["E₈ / A₃"],
     outputs: ["det 8, minors (2,3,5), Σ L = 40"],
     failure: "Wrong D₆ branch.",
@@ -226,7 +226,7 @@ const NODES: DagNode[] = [
     marker: "[E] / [C]",
     title: "Masses & mixings — the φ₀-ladder",
     summary:
-      "All nine masses, CKM and the PMNS skeleton from one master formula m = (v/√2) λ_Y^L Λ with the seed φ₀. Charged-lepton coefficients (16/7, 4/3, 7/6) are exact; quark mass ratios (55/117, …) are integer Plücker readouts. Gate 1 is now complete: the absolute amplitude U_point reduces to one overall scale v_geo (ratios + Grand Mass Volume) — the same dimensionful anchor as gravity's 1/G. New (v114): the distinguished transport value δ = 1/2 is a μ₄-torsion theorem — flatness of the U_wall family is exactly (MU)⁴ = 1, and on the involutive branch the cusp trace forces diag M = (0, i/2, −i/2) with the cusp class automatic.",
+      "All nine masses, CKM and the PMNS skeleton from one master formula m = (v/√2) λ_Y^L Λ with the seed φ₀. The charged-lepton coefficients (16/7, 4/3, 7/6) are exact and the quark mass ratios (55/117, …) are integer Plücker readouts. The ratios are closed; only one overall amplitude v_geo remains — the same dimensionful anchor as gravity's 1/G.",
     inputs: ["R, L", "φ₀ (from c₃)"],
     outputs: ["9 masses, mixings"],
     failure: "Hierarchy mismatch.",
@@ -344,7 +344,7 @@ const NODES: DagNode[] = [
     marker: "[E] / [C]",
     title: "Solar angle — the seam misalignment",
     summary:
-      "The previously open SM angle. Tri-bimaximal 1/3 plus the seam misalignment ε = q(A₃)φ₀ = (3/4)φ₀ gives sin²θ₁₂ = 1/3 − φ₀/2 = 0.306747 — 0.1% from NuFIT 6.0. The live JUNO test. Since 2026-06-09 this is the frozen prediction of record in the machine-enforced blind registry (v84): exactly one θ₁₂ number is committed in advance, and the seam/non-linear variants are typed as derived variants of the same texture, never as alternatives.",
+      "Tri-bimaximal 1/3 plus the seam misalignment ε = q(A₃)φ₀ = (3/4)φ₀ gives sin²θ₁₂ = 1/3 − φ₀/2 = 0.306747 — 0.1% from NuFIT 6.0, the live JUNO test. It is the frozen prediction of record in the machine-enforced blind registry (v84): exactly one θ₁₂ number is committed in advance, seam / non-linear variants typed as the same texture, never alternatives.",
     inputs: ["R, L", "φ₀"],
     outputs: ["sin²θ₁₂ = 0.306747 (frozen)"],
     failure: "Seam-misalignment lemma fails.",
@@ -369,7 +369,7 @@ const NODES: DagNode[] = [
     marker: "[C] conditional",
     title: "Gravity & cosmology — the geometry channel",
     summary:
-      "The spectral action gives R + R²; the scalaron mass is M = c₃^(7/2) M̄ = 3.06×10¹³ GeV (exponent 7 = Ω_adm − 10 b₁). From the same attractor: n_s = 1 − 2/N★ and r = 12/N★² over the frozen band N★ ∈ [50,60]; the scalaron-reheating chain (v86) sharpens this conditionally to N★ = 51.4 ⇒ n_s = 0.9611, r = 0.0045 — recorded with its tensions (A_s coherence disfavours the slow Higgs channel at −11.4σ; the measured A_s requires near-instantaneous reheating). Λ ∼ e⁻²ᵅ⁻¹, H₀ ∼ √Λ. Gate 2: the IR tier is gap-decoupled (Δ_eff = 1.648 > 0), and the ambient measure G6 is holographically reduced to the rigorously-constructed (E₈)₁ lattice net (c = 8 = 5 + 3). After v83 + v87 the whole Target-A gate is ONE theorem: prove the seam–Calderón boundary net is holomorphic with c = 8 — then (E₈)₁ is the unique net (Minkowski–Siegel) AND the 2D bulk is unique (LR/KLM/BKLR; SO(16)₁ counter-model admits six modular invariants). Every scale is a ratio to one v_geo — the dimensional-analysis floor. New classical-gravity fingerprint (v101): the maximal black hole in the de Sitter bulk (Nariai) has horizon roots (1,1,−2) = the traceless anchor, its entropy bound is exactly the Koide 2/3 = |ℤ₂|/N_fam, the SdS mass line is itself a split double cover (deck = horizon swap), and evaporation flows away from the anchor point — the same repeller/attractor orientation as the flavor relaxation. Six atom landings, zero free parameters.",
+      "The spectral action gives R + R²; the scalaron mass is M = c₃^(7/2) M̄ = 3.06×10¹³ GeV (exponent 7 = Ω_adm − 10 b₁). From the same attractor n_s = 1 − 2/N★, r = 12/N★² on the frozen band N★ ∈ [50,60]; the reheating chain (v86) sharpens this conditionally to N★ = 51.4 ⇒ n_s = 0.9611, r = 0.0045 (recorded with its A_s tension). Λ ∼ e⁻²ᵅ⁻¹, H₀ ∼ √Λ. The metric sector reduces to the rigorously-constructed (E₈)₁ lattice net (c = 8 = 5 + 3); the whole closing step is now ONE falsifiable physical condition — the seam bulk is short-range-entangled (det K = 1), the Kitaev E₈ phase (v234/v235/v237). Classical fingerprint (v101): the maximal de Sitter (Nariai) black hole carries the traceless anchor (1,1,−2) and the Koide-2/3 entropy bound, and evaporates away from the anchor — the same orientation as flavor relaxation. Every scale is a ratio to one v_geo.",
     inputs: ["c₃ (P1)", "E₈"],
     outputs: ["Λ, A_s, n_s, r, scalaron M"],
     failure: "Ambient reflection-positivity fails.",
