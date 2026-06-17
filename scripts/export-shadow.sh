@@ -2,7 +2,9 @@
 # Export a filtered working tree for the Overleaf GitHub-sync mirror (tfpt5-shadow).
 #
 # Included:  all git-tracked files except the exclusions below.
-# Excluded:  _archive/, website/, *.pdf, .cursor/
+#            figures/*.pdf ARE mirrored (the manifest references them).
+# Excluded:  _archive/, website/, .cursor/, .github/, and every NON-figure *.pdf
+#            (compiled paper/archive PDFs).
 #
 # Usage:
 #   bash scripts/export-shadow.sh /path/to/shadow-checkout
@@ -24,7 +26,8 @@ should_export() {
     _archive/*|website/*|.cursor/*|.github/*) return 1 ;;
   esac
   case "$f" in
-    *.pdf) return 1 ;;
+    figures/*.pdf) return 0 ;;   # ship the figures: manifest.sha256 references them
+    *.pdf) return 1 ;;           # but no compiled paper / archive PDFs
   esac
   return 0
 }
@@ -70,10 +73,15 @@ This repository is a **one-way mirror** of the main TFPT repository, maintained 
 
 | Included | Excluded |
 |----------|----------|
-| Active \`.tex\` papers, \`tex-artefacts/\`, \`figures/\` | \`_archive/\` |
-| \`verification/\` (Python suite, ledger, maps) | \`website/\` |
-| \`experiments/\` (Lean, discovery) | All \`*.pdf\` |
-| \`build.sh\`, manifests, README | \`.cursor/\` |
+| Active \`.tex\` papers, \`tex-artefacts/\`, \`figures/*.pdf\` | \`_archive/\`, \`website/\` |
+| \`verification/\` (Python suite, ledger, maps, redteam, wolfram) | \`.cursor/\`, \`.github/\` |
+| \`experiments/\` (Lean, discovery) | Compiled paper \`*.pdf\` (non-figure) |
+| \`build.sh\`, manifests, README | |
+
+**Shadow-mode note.** This subset ships \`figures/\` (so \`python3 verification/make_manifest.py --check\`
+passes literally on the export) but **not** \`website/\`. The single-source generator
+\`verification/make_script_index.py\` detects the missing \`website/\` and skips its \`ScriptIndex.tsx\`
+mirror, so \`bash build.sh notes\` runs on the subset without it.
 
 **Do not edit here.** Changes flow: main repo → this mirror (GitHub Action) → Overleaf pull.
 

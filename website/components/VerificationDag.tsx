@@ -169,6 +169,8 @@ const NODES: DagNode[] = [
       "v232_e8_kleinian_seam.py",
       "v234_seam_holomorphy_selection.py",
       "v235_seam_chern_simons.py",
+      "v236_brieskorn_capstone.py",
+      "v237_seam_sre_closure.py",
     ],
   },
   {

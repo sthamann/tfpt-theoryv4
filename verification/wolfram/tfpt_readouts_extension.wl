@@ -1972,6 +1972,45 @@ Module[{cartanA, cartanD, e8edges, A3, D5, D8, E8, carrier},
     16/4^2 == 1 && 16/2^2 == 4 && (5 + 3 == 8)];
 ];
 
+(* ==== v236: the (2,3,5) Brieskorn singularity generates the skeleton ==== *)
+Module[{mu, eigen, e8exps, t},
+  mu = (2 - 1) (3 - 1) (5 - 1);
+  eigen = Union @ Flatten @ Table[Mod[15 j1 + 10 j2 + 6 j3, 30],
+     {j1, 1, 1}, {j2, 1, 2}, {j3, 1, 4}];
+  e8exps = {1, 7, 11, 13, 17, 19, 23, 29};
+  checkExact["v236 TOPO.BRIESKORN.01: the (2,3,5) Brieskorn singularity x^2+y^3+z^5 (exponents = the atoms "
+    <> "|Z2|,N_fam,g_car) generates the skeleton. Milnor number mu=(2-1)(3-1)(5-1)=1*2*4=8=rank E8 (the 5th "
+    <> "origin of the '8'); Milnor monodromy eigenvalues zeta_2^j1 zeta_3^j2 zeta_5^j3 = the primitive 30th "
+    <> "roots e^{2pi i m/30}, m the E8 exponents (charpoly Phi_30, deg phi(30)=8=mu) = the order-30 E8 Coxeter "
+    <> "element (v55); monodromy group <h>=Z/30=Z/2 x Z/3 x Z/5 (mu3 triality = h^10, CP); Galois (Z/30)^x = "
+    <> "Z/2 x Z/4 = the mu4 clock (x7). Milnor lattice E8, link Poincare sphere.",
+    mu == 8 && eigen == e8exps && Length[eigen] == 8 &&
+    Exponent[Cyclotomic[30, t], t] == 8 && PolynomialRemainder[t^30 - 1, Cyclotomic[30, t], t] == 0 &&
+    30 == 2*3*5 && 30/3 == 10 && PowerMod[7, 4, 30] == 1 && PowerMod[7, 2, 30] == 19];
+];
+
+(* ==== v237: closing step as physics -- no topological degeneracy <=> det K=1 <=> SRE ==== *)
+Module[{cartanA, cartanD, e8edges, E8, D8, A3, D5, carrier, gsd},
+  cartanA[n_] := SparseArray[{{i_, i_} -> 2, {i_, j_} /; Abs[i - j] == 1 -> -1}, {n, n}] // Normal;
+  cartanD[n_] := Module[{K}, K = 2 IdentityMatrix[n];
+     Do[K[[i, i + 1]] = K[[i + 1, i]] = -1, {i, n - 2}];
+     K[[n - 2, n]] = K[[n, n - 2]] = -1; K];
+  e8edges = {{1, 2}, {2, 3}, {3, 4}, {4, 5}, {5, 6}, {6, 7}, {5, 8}};
+  E8 = 2 IdentityMatrix[8] - Table[If[i != j && MemberQ[e8edges, Sort[{i, j}]], 1, 0], {i, 8}, {j, 8}];
+  A3 = cartanA[3]; D5 = cartanD[5]; D8 = cartanD[8];
+  carrier = ArrayFlatten[{{D5, 0}, {0, A3}}];
+  gsd[K_, g_] := Abs[Det[K]]^g;
+  checkExact["v237 GATE.HOLO.03: the closing step as a physical condition -- the abelian K-matrix "
+    <> "ground-state degeneracy on a genus-g surface is |det K|^g (torus: carrier D5(+)A3 -> 16, D8 -> 4, "
+    <> "E8 -> 1), so 'no topological ground-state degeneracy on any closed surface' <=> det K = 1 <=> the "
+    <> "seam bulk is short-range-entangled (the unique bosonic SRE c=8 phase = the Kitaev E8 state, edge "
+    <> "holomorphic). A unique vacuum on the plane (genus 0, always 1) is necessary but not sufficient; the "
+    <> "torus sees |det K|. NEG: an LRE bulk (D8, det 4) has 4-fold torus degeneracy + non-holomorphic edge.",
+    gsd[carrier, 1] == 16 && gsd[D8, 1] == 4 && gsd[E8, 1] == 1 &&
+    gsd[carrier, 2] == 256 && gsd[E8, 2] == 1 && gsd[carrier, 0] == 1 && gsd[E8, 0] == 1 &&
+    Det[E8] == 1 && (5 + 3 == 8)];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v235: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

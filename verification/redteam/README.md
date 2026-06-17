@@ -12,7 +12,7 @@ is carried by an explicit **status**, never by a green pass.
 
 | Script | Target | Status | Residual risk |
 |---|---|---|---|
-| `rt_A_e8net.py` | (E8)₁ boundary-net identification (`G_metric` ambient) | **reduced, not closed** | holomorphy proof + constructive map + bulk uniqueness |
+| `rt_A_e8net.py` | (E8)₁ boundary-net identification (`G_metric` ambient) | **reduced, not closed** | **one** statement: seam net holomorphic with `c=8` (⇔ the index-4 simple-current extension) |
 | `rt_B_pascal.py` | carrier-rank / Pascal condition (upstream of Theorem A) | **survives (narrowed)** | boundary derivation of half-spinor exhaustion |
 | `rt_C_kc3.py` | `k = c₃/2` seam-area coefficient (dimensional firewall) | **survives** | absolute `1/G` (UV-sensitive) is the one anchor |
 | `rt_D_upoint.py` | `U_point → v_geo` amplitude bijection | **survives (narrowed)** | CP phases (δ_CKM/PMNS) not covered by `v_geo` |
@@ -76,6 +76,29 @@ The adversarial verdicts were then used as a worklist. `../v83_e8net_holomorphic
   Pascal-row midpoint `Σ_{k≤(g−1)/2} C(g,k)=2^(g−1)` (the half-spinor split). The residual reduces
   to the standard input "carrier = half-spinor of Spin(2·g_car)" (`Λ^even(C⁵)=1+10+5=16`).
 
-Still genuinely open (typed honestly): Target A (i)+(ii); Target D's CP-phase residual
-(`v_geo` fixes magnitudes only); Target E's reheating/leptogenesis scales + the seam=Planck
-identification. Target C is a dimensional **floor**, not a gap.
+## Follow-up — Target A collapses to ONE residual (`v143`/`v148`/`v152`)
+
+After the `v83` step the residual narrowed further, and the reader-facing note
+`tfpt_5_redteam.tex` now carries this sharper form (mirrored by the regenerated
+`redteam_table.txt`):
+
+- **`v143` (graded Frobenius).** The index-4 `(D5)₁×(A3)₁ → (E8)₁` glue is realised at
+  **Lie level**, so the "net identification" is a concrete simple-current extension, not a
+  diffuse measure-equality.
+- **`v148` (NS/R sector census).** The odd glue sectors of the 16 carrier Majoranas have
+  **zero untwisted (NS) support** — they are **twisted (Ramond-type)** modules, and
+  `E8 = 120` (NS adjoint) `+ 128` (R spinor, one chirality) `= 248`. The remaining
+  Target-A issue is thus pushed down to a **twisted-sector / boundary-net** statement.
+- **`v152` (R3 normalisation = anchor).** The `q(A₃)` seam-EH normalisation is **not** a
+  separate gap: it collapses into the one already-declared dimensionful anchor
+  (`m/μ = e^{3/4}`, the `v68` induced-gravity scale) in dimensionless form.
+
+**Net effect.** Target A reduces to the **single** statement *"the seam–Calderón boundary
+net is holomorphic with `c=8`"* (⇔ the index-4 simple-current extension); `E8` and
+bulk-reconstruction uniqueness then follow (`v83`/`v87`/`v89`). The status stays
+**reduced, not closed** (conservative wording); only the residual *count* dropped to one.
+
+Still genuinely open (typed honestly): Target A's **one** holomorphy + `c=8` premise;
+Target D's CP-phase residual (`v_geo` fixes magnitudes only); Target E's
+reheating/leptogenesis scales + the seam=Planck identification. Target C is a dimensional
+**floor**, not a gap.

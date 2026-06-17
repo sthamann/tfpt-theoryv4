@@ -989,6 +989,7 @@ export const papers: Paper[] = [
       { label: "Skeleton", value: "(5,3)", description: "One pair generates the integer alphabet" },
       { label: "McKay bedrock", value: "2I → Ê₈", description: "Why {2,3,5}: E₈ is the icosahedral top (marks = irrep degrees)" },
       { label: "Seam = E₈ singularity", value: "8 P¹'s", description: "du Val resolution of ℂ²/2I; link = Poincaré sphere S³/2I — a model for QGEO.REALIZE.01 (v232)" },
+      { label: "Brieskorn capstone", value: "x²+y³+z⁵", description: "One singularity generates the skeleton: Milnor number (2-1)(3-1)(5-1)=8, monodromy = the order-30 Coxeter cycle (eigenvalues = E₈ exponents), both clocks as sub-/Galois structures (v236)" },
       { label: "CM norms", value: "41 · 7", description: "Square (Gauss) gives the EM index, hexagon (Eisenstein) the scalaron" },
       { label: "Gap", value: "6 log(3/2)", description: "Positive ⇒ unique attractor" },
       { label: "Free numbers", value: "0", description: "Only π is primitive" },
@@ -1088,6 +1089,7 @@ export const papers: Paper[] = [
       { label: "v_geo", value: "1 scale", description: "Dimensional-analysis floor: one scale + π; shared by flavor & gravity" },
       { label: "One closing theorem", value: "no abelian sector", description: "P2 · G_net · Target A are ONE condition (holomorphy = homology-sphere = one 1-dim irrep, all force E₈). The single open step: free bulk ⇒ holomorphic boundary (v234)" },
       { label: "CS realisation", value: "holomorphic ⇔ det K=1", description: "The closing step in abelian Chern-Simons: #anyons=|det K|; the v92 tower D5⊕A3(16)→D8(4)→E8(1) is anyon condensation = the Kitaev E8 state. Residual: condense the |μ₄| Lagrangian glue (v235)" },
+      { label: "Closing as physics", value: "seam is SRE?", description: "Sharper still: det K=1 ⟺ no topological ground-state degeneracy ⟺ the seam bulk is short-range-entangled (the Kitaev E8 phase). The one open step is now a physical yes/no (v237)" },
     ],
   },
 ];

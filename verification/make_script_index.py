@@ -27,9 +27,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 VERIF = ROOT / "verification"
+WEBSITE_DIR = ROOT / "website"
 TEX_TARGET = ROOT / "tex-artefacts" / "verification.tex"
-TSX_TARGET = ROOT / "website" / "components" / "ScriptIndex.tsx"
-SUITE_TARGET = ROOT / "website" / "lib" / "suite.ts"
+TSX_TARGET = WEBSITE_DIR / "components" / "ScriptIndex.tsx"
+SUITE_TARGET = WEBSITE_DIR / "lib" / "suite.ts"
 
 
 def module_number(script: str) -> int:
@@ -308,6 +309,13 @@ def main() -> None:
     check_only = "--check" in sys.argv
     stale = []
     for target, content in build().items():
+        # Shadow-export trees ship no website/ (only figures + suite are mirrored).
+        # Skip its generated mirrors so `make_script_index.py` / `build.sh notes`
+        # run on the subset instead of crashing on a missing parent directory.
+        if WEBSITE_DIR in target.parents and not WEBSITE_DIR.exists():
+            if not check_only:
+                print(f"skipped (no website/ in this tree): {target.relative_to(ROOT)}")
+            continue
         if not target.exists() or target.read_text() != content:
             if check_only:
                 stale.append(target)

@@ -6,10 +6,10 @@
   Target A   [STATUS: REDUCED, not closed]
     claim    : seam-Calderon boundary measure = (E8)_1 lattice net
     assume   : holomorphy (mu-index 1) + Haag duality/locality/modularity + tightness + constructive map + unique bulk reconstruction
-    works    : central charges (8=5+3) and the conformal embedding c_coset=0 are exact [I]; gap Delta_eff>0 gives clustering (supports tightness)
-    fails    : c=8 alone underdetermines the net (SO(16)_1, Narain family); equality of measures + the constructive boundary->bulk map are NOT established
-    verdict  : keep 'reduced to a rigorous boundary-net identification problem'; do NOT write 'metric sector closed'. The red team confirms the conservative wording.
-    residual : holomorphy proof + seam-Calderon->(E8)_1 constructive map + bulk-reconstruction uniqueness (constructive-QFT grade).
+    works    : central charges (8=5+3) and the conformal embedding c_coset=0 are exact [I]; holomorphy (mu-index 1 = det Cartan 1) is necessary AND sufficient to pin (E8)_1 (v83); the index-4 D5xA3->E8 glue is realised at Lie level (graded Frobenius v143) with its odd sectors twisted/Ramond (NS/R census v148: 248 = 120 NS-adjoint + 128 R-spinor)
+    fails    : c=8 alone still underdetermines the net (SO(16)_1, Narain family); the ONE remaining premise -- that the seam-Calderon boundary net is holomorphic with c=8 (<=> the index-4 simple-current extension) -- is not yet established
+    verdict  : keep 'reduced to a rigorous boundary-net identification problem'; do NOT write 'metric sector closed'. The residual is now a SINGLE twisted-sector statement (not three), and the q(A_3) normalisation collapses into the one declared anchor (v152) -- it is not a separate gap.
+    residual : ONE statement: the seam-Calderon boundary net is holomorphic with c=8 (<=> the index-4 D5xA3->E8 simple-current extension; v143/v148). E8 and bulk-reconstruction uniqueness then follow (v83/v87/v89); the R3 normalisation is the one declared anchor in dimensionless form (v152).
 
   Target B   [STATUS: SURVIVES (narrowed)]
     claim    : the carrier rank g=5 is forced by the Pascal condition

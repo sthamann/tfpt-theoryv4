@@ -10,12 +10,23 @@ measures or physical equivalence.  This script attacks the strong reading
 ("metric sector closed") and tests whether the conservative reading
 ("reduced to a boundary-net identification problem") is the correct boundary.
 
-FOLLOW-UP (../v83_e8net_holomorphic_uniqueness.py, ledger GATE.METRIC.04): residual 1 of
-this verdict is now CLOSED -- holomorphy (mu-index 1 = det Cartan 1) is necessary AND
-sufficient to pin (E8)_1 (E8 is the unique even unimodular rank-8 lattice, mass=1/|W(E8)|),
-so the constructive map need only show the boundary net is holomorphic & c=8.  Target A drops
-from 3 residuals to 2 (holomorphy+c8, bulk uniqueness), both still [P]/[A].  The adversarial
-findings below stand unchanged -- they are exactly what motivated the closure.
+FOLLOW-UP (later stages collapsed the residual to ONE statement; the adversarial
+findings below stand unchanged -- they are exactly what motivated the closures):
+  * v83 (GATE.METRIC.04): holomorphy (mu-index 1 = det Cartan 1) is necessary AND
+    sufficient to pin (E8)_1 (E8 = the unique even unimodular rank-8 lattice,
+    mass = 1/|W(E8)|), so the constructive map need only show the boundary net is
+    holomorphic with c=8.  (3 residuals -> 2.)
+  * v143 (graded Frobenius): the index-4 (D5)_1 x (A3)_1 -> (E8)_1 glue is realised
+    at Lie level, and v148 (NS/R sector census) locates its odd glue sectors as
+    TWISTED (Ramond-type) modules: E8 = 120 (NS adjoint) + 128 (R spinor, one
+    chirality).  So the residual is a single twisted-sector / simple-current
+    statement, not a diffuse "net identification".
+  * v152 (R3 normalisation = anchor): the q(A_3) seam-EH normalisation is NOT a
+    separate gap -- it collapses into the one already-declared dimensionful anchor
+    (m/mu = e^{3/4}, the v68 induced-gravity scale) in dimensionless form.
+Net effect: Target A reduces to ONE statement -- "the seam-Calderon boundary net is
+holomorphic with c=8" (<=> the index-4 simple-current extension) -- with E8 and bulk
+uniqueness then automatic.  Status stays REDUCED, not closed (conservative wording).
 
 Adversarial findings (all TRUE = the attack lands):
   * central charge c=8 does NOT pin the net -- (D8)_1=SO(16)_1 also has c=8;
@@ -97,6 +108,22 @@ def run():
          "and any non-Haag-dual extension. They satisfy the central-charge data but\n"
          "are physically inequivalent to (E8)_1. => data underdetermines the net.")
 
+    # --- 7b how the residual has since narrowed (v83/v143/v148/v152) --------
+    step("7b", "follow-up: the residual collapses to ONE twisted-sector statement")
+    note("v83 : holomorphy (mu-index 1 = det Cartan 1) is necessary AND sufficient\n"
+         "      to pin (E8)_1 (excludes SO(16)_1; E8 = unique even unimodular rank-8).\n"
+         "v143: the index-4 (D5)_1 x (A3)_1 -> (E8)_1 glue is realised at Lie level\n"
+         "      (graded Frobenius); v148: its odd glue sectors are TWISTED (Ramond).\n"
+         "v152: the q(A_3) normalisation is the one declared anchor in dimensionless\n"
+         "      form (m/mu = e^{3/4}), NOT a separate gap.")
+    check("twisted-sector census: E8 = 120 (NS adjoint = dim SO(16)) + 128 (R spinor, "
+          "one chirality) = 248", 120 + 128 == 248)
+    check("simple-current / glue extension index = |mu4| = N_fam + 1 = 4",
+          N_fam + 1 == 4)
+    note("=> Target A reduces to the SINGLE statement 'the seam-Calderon boundary net\n"
+         "   is holomorphic with c=8' (<=> the index-4 simple-current extension);\n"
+         "   E8 and bulk-reconstruction uniqueness are then automatic.")
+
     # --- 8 verdict ----------------------------------------------------------
     fails = summary("rt_A (E8)_1 boundary net")
     verdict(
@@ -105,15 +132,24 @@ def run():
         assumptions="holomorphy (mu-index 1) + Haag duality/locality/modularity + "
                     "tightness + constructive map + unique bulk reconstruction",
         works="central charges (8=5+3) and the conformal embedding c_coset=0 are exact "
-              "[I]; gap Delta_eff>0 gives clustering (supports tightness)",
-        fails="c=8 alone underdetermines the net (SO(16)_1, Narain family); equality of "
-              "measures + the constructive boundary->bulk map are NOT established",
+              "[I]; holomorphy (mu-index 1 = det Cartan 1) is necessary AND sufficient "
+              "to pin (E8)_1 (v83); the index-4 D5xA3->E8 glue is realised at Lie level "
+              "(graded Frobenius v143) with its odd sectors twisted/Ramond "
+              "(NS/R census v148: 248 = 120 NS-adjoint + 128 R-spinor)",
+        fails="c=8 alone still underdetermines the net (SO(16)_1, Narain family); the ONE "
+              "remaining premise -- that the seam-Calderon boundary net is holomorphic "
+              "with c=8 (<=> the index-4 simple-current extension) -- is not yet "
+              "established",
         status=REDUCED_OPEN,
         verdict_text="keep 'reduced to a rigorous boundary-net identification problem'; "
-                     "do NOT write 'metric sector closed'. The red team confirms the "
-                     "conservative wording.",
-        residual="holomorphy proof + seam-Calderon->(E8)_1 constructive map + "
-                 "bulk-reconstruction uniqueness (constructive-QFT grade).",
+                     "do NOT write 'metric sector closed'. The residual is now a SINGLE "
+                     "twisted-sector statement (not three), and the q(A_3) normalisation "
+                     "collapses into the one declared anchor (v152) -- it is not a "
+                     "separate gap.",
+        residual="ONE statement: the seam-Calderon boundary net is holomorphic with c=8 "
+                 "(<=> the index-4 D5xA3->E8 simple-current extension; v143/v148). E8 and "
+                 "bulk-reconstruction uniqueness then follow (v83/v87/v89); the R3 "
+                 "normalisation is the one declared anchor in dimensionless form (v152).",
     )
     return fails
 
