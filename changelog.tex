@@ -59,6 +59,24 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-17 (Carrier-native Pati--Salam program: $E_8$ forbids the 126, PS algebra, unification kill-test, Dirac contract, \texttt{v247}--\texttt{v250})}
+\begin{itemize}
+\item \textbf{Four scripts turning the gauge-unification finding into typed claims with negative controls.}
+  \texttt{v247\_e8\_branching\_no126.py} (\texttt{PS.E8BRANCH.01}): the $E_8$ hull branches under
+  $SO(10){\times}SU(4)$ as $(45,1){+}(1,15){+}(10,6){+}(16,4){+}(\overline{16},\bar4)$, so the $SO(10)$
+  content is exactly $\{1,10,16,45\}$ and the $\mathbf{126}$ is \emph{absent} --- the renormalisable
+  $126_H$ is algebraically forbidden and $10{+}16{+}45$ is $E_8$-supplied (only one $45\Rightarrow$
+  proton-marginal). \texttt{v248\_ps\_algebra.py} (\texttt{PS.ALGEBRA.01}):
+  $A_F=\mathbb H_L\oplus\mathbb H_R\oplus M_4(\mathbb C)\to SU(2)_L{\times}SU(2)_R{\times}SU(4)_c$, exact
+  hypercharges $Y=T_{3R}+(B{-}L)/2$, matching $\alpha_1^{-1}=\tfrac35\alpha_{2R}^{-1}+\tfrac25\alpha_4^{-1}$,
+  $\sin^2\theta_W=3/8$ (colour $SU(4)_c\subset D_5$, distinct from the family $A_3$).
+  \texttt{v249\_ps\_unification.py} (\texttt{PS.RGTEST.01}): the two-step PS$\to SO(10)$ unification kill-test
+  with negative controls (SM-only fails; $126$ breaks the scalaron match; proton decay selects content),
+  $M_{PS}/M_s=1.0$--$1.7$. \texttt{v250\_dirac\_triple\_contract.py} (\texttt{CONTRACT.QFT4D.DIRAC.01}): the
+  spectral-triple contract ($H_F=3{\times}16$, the seven NCG axioms, $\sigma=$scalaron) that would turn
+  ``carrier is gauged'' from a fork into a theorem. The root-level \texttt{qft.txt} carries the full analysis.
+\end{itemize}
+
 \subsection*{2026-06-17 (Honest data cross-check + emergent-QFT figures: the unification tension, \texttt{v246})}
 \begin{itemize}
 \item \textbf{\texttt{v246\_unification\_data\_crosscheck.py} (\texttt{QFT4D.RGTEST.01}) --- the first hard

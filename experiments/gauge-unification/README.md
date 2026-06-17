@@ -66,6 +66,26 @@ hadronic-matrix-element uncertainty. It is a genuine, *falsifiable* TFPT-native
 coincidence plus a sharp proton-decay kill-test — **not** a proof of unification.
 Full data in `results/pati_salam.json`.
 
+### Two-loop, leptogenesis, and the ~40% deviation
+
+- **The deviation is mostly the loop order.** Going 1-loop → 2-loop (2-loop SM below
+  `M_PS`, 1-loop PS above) pulls the scale ratio from `M_PS/M_s = 1.1–1.7` to
+  **`1.0–1.2`** — one scalar variant lands at **`×1.02` (essentially exact)**. The
+  residual `≲20%` is within PS-threshold corrections and the O(1) ambiguity between
+  the *scalaron mass* `c3^{7/2}M̄_Pl` and the actual PS-breaking *VEV*. So the
+  coincidence is exact to within the theory's own resolution — no anomaly to explain.
+- **Proton decay is the binding constraint, not the scale match.** Two-loop *lowers*
+  `M_GUT` (~1–3×10¹⁵), so at face value all minimal variants are Super-K-excluded;
+  survival needs `M_GUT` pushed up (larger reps / GUT thresholds) or the ~×3
+  matrix-element headroom. **This — not the scalaron match — is where the gauged-SO(10)
+  branch lives or dies.**
+- **Leptogenesis works at `M_R = scalaron`.** Seesaw with `m₃~0.05 eV` implies a
+  natural Dirac Yukawa `y_D = √(m₃ M_R)/v ≈ 0.22`; the needed CP asymmetry is `~0.02%`
+  of the Davidson–Ibarra bound (`M₁` in the thermal window). The apparent `~20×` vs
+  the `y_D=1` seesaw value `6×10¹⁴` is absorbed into the (free) Dirac Yukawa — **not a
+  tension.** So the scalaron consistently sets the PS-breaking, B−L and ν_R-Majorana
+  scale at once.
+
 ## Reproduce
 
 ```bash

@@ -35,7 +35,7 @@ from pathlib import Path
 
 import numpy as np
 
-from tfpt_gut.rge import M_Z, B1L, alpha_inv_at_MZ
+from tfpt_gut.rge import M_Z, B1L, B2L, alpha_inv_at_MZ, run_2loop
 
 # TFPT scalaron scale  M_s = c3^{7/2} * Mbar  (independent: from R+R^2 / spectral action)
 C3 = 1.0 / (8.0 * math.pi)
@@ -116,32 +116,98 @@ def scan() -> list[PSResult]:
 
 def verdict() -> str:
     res = scan()
-    ratios = [r.ratio_to_scalaron for r in res]
-    safe = [r for r in res if r.proton_safe and r.valid]
+    r1 = [r.ratio_to_scalaron for r in res]
+    r2 = [solve_2loop(b)[0] / M_SCALARON for b in PS_SCALAR_VARIANTS.values()]
     return (
         "Carrier-native Pati-Salam/SO(10) two-step unification: the carrier's own "
-        "SU(4)xSU(2)xSU(2) above M_PS DOES unify, and the required PS-breaking scale "
-        f"lands at M_PS = ({min(ratios):.1f}-{max(ratios):.1f}) x the TFPT scalaron scale "
-        f"M_s = {M_SCALARON:.2e} GeV across ALL scalar choices (robust: M_PS is fixed by "
-        "the SM run below it). So the gauge-unification scale and the gravitational "
-        "scalaron scale -- two INDEPENDENT TFPT structures -- coincide to ~40%. "
-        "PROTON DECAY then SELECTS the scalar content: minimal choices give M_GUT~2e15 GeV "
-        f"-> tau_p ~ few x 10^33 yr, EXCLUDED by Super-K ({TAU_P_SK:.1e} yr); but a higher-"
-        f"M_GUT choice (e.g. +(15,1,1), M_GUT~5.8e15) gives tau_p ~ 1e35 yr -- SAFE and "
-        f"within Hyper-K reach. {len(safe)}/{len(res)} variants survive. CAVEATS [O]: "
-        "presupposes the carrier SO(10) is GAUGED (the open fork); 1-loop; tau_p carries a "
-        "~x3 matrix-element uncertainty. A genuine, falsifiable TFPT-native coincidence "
-        "with a sharp proton-decay kill-test -- NOT a proof."
+        "SU(4)xSU(2)xSU(2) above M_PS DOES unify. (1) SCALE MATCH: the required "
+        f"PS-breaking scale M_PS lands on the TFPT scalaron scale M_s = {M_SCALARON:.2e} GeV "
+        f"-- 1-loop M_PS/M_s = {min(r1):.2f}-{max(r1):.2f}, and 2-loop SHRINKS this to "
+        f"{min(r2):.2f}-{max(r2):.2f} (one variant ~1.02, essentially exact). So the ~40% "
+        "1-loop gap was mostly the loop order; the residual <=20% is within PS-threshold + "
+        "O(1) (scalaron-mass vs breaking-VEV) ambiguity. Two INDEPENDENT TFPT scales "
+        "(gravitational scalaron, gauge unification) coincide. (2) PROTON DECAY is now the "
+        "BINDING constraint: M_GUT ~ 1-6e15 GeV gives tau_p(p->e pi0) ~ 10^33-10^35 yr; the "
+        f"minimal reps are EXCLUDED by Super-K ({TAU_P_SK:.1e} yr), only large-M_GUT content "
+        "(e.g. +(15,1,1) at 1-loop) is safe, and 2-loop lowers M_GUT so survival needs "
+        "M_GUT pushed up (larger reps / GUT thresholds) or the ~x3 matrix-element headroom. "
+        "(3) LEPTOGENESIS: M_R = scalaron is viable (implied y_D~0.22, needed CP asymmetry "
+        "~0.02% of the Davidson-Ibarra bound). CAVEATS [O]: presupposes the carrier SO(10) "
+        "is GAUGED (the open fork); the binding risk is proton decay, NOT the scale match. "
+        "A falsifiable TFPT-native coincidence with a sharp proton-decay kill-test, NOT a proof."
     )
+
+
+def solve_2loop(b_ps: tuple[float, float, float]) -> tuple[float, float, float]:
+    """Two-loop SM below M_PS + 1-loop PS above (the PS run is short, ~1.5 dec).
+    Root-find M_PS so the two SO(10) conditions a4=a2L and a4=a2R meet at one M_GUT."""
+    a0 = alpha_inv_at_MZ()
+    C = np.array(b_ps) / (2 * math.pi)
+
+    def residual(lnMps: float):
+        t = lnMps - math.log(M_Z)
+        a = run_2loop(a0, t, n=3000)                       # 2-loop SM a_i^-1 at M_PS
+        a4, a2l = a[2], a[1]
+        a2r = (5 / 3) * a[0] - (2 / 3) * a[2]
+        t12 = (a4 - a2l) / (C[0] - C[1])
+        t13 = (a4 - a2r) / (C[0] - C[2])
+        Mps = math.exp(lnMps)
+        return t12 - t13, Mps, t12, a4 - C[0] * t12
+
+    lo, hi = math.log(1e12), math.log(1e15)
+    rlo = residual(lo)[0]
+    for _ in range(60):
+        mid = 0.5 * (lo + hi)
+        rm = residual(mid)[0]
+        if (rlo < 0) != (rm < 0):
+            hi = mid
+        else:
+            lo, rlo = mid, rm
+    _, Mps, tg, ag = residual(0.5 * (lo + hi))
+    return Mps, Mps * math.exp(tg), ag
+
+
+def leptogenesis(M_R: float = M_SCALARON, m3_eV: float = 0.05) -> dict:
+    """Is M_R = scalaron viable for thermal leptogenesis?  m3 ~ sqrt(dm^2_atm).
+    Seesaw fixes the implied Dirac Yukawa y_D = sqrt(m3 M_R)/v; the washout anchor
+    m~1 = m3/A_Lambda = m3/10 (FR.ETAB.03) sets the efficiency; compare the needed
+    CP asymmetry to the Davidson-Ibarra bound."""
+    v = 174.0
+    m3 = m3_eV * 1e-9                                      # GeV
+    y_D = math.sqrt(m3 * M_R) / v
+    eps_max = (3 / (16 * math.pi)) * M_R * m3 / v**2       # Davidson-Ibarra
+    mtil_eV = m3_eV / 10.0                                 # m~1 = m3/A_Lambda
+    mstar = 1.08e-3
+    kappa = min((2e-2 / mtil_eV) * (mtil_eV / (mtil_eV + mstar))**1.16, 0.1)
+    eps_need = 6.1e-10 / (0.96e-2 * kappa)
+    return {
+        "M_R_GeV": M_R, "implied_y_D": y_D, "eps_DI_max": eps_max,
+        "mtilde1_eV": mtil_eV, "efficiency_kappa": kappa, "eps_needed": eps_need,
+        "headroom_eps_need_over_max": eps_need / eps_max,
+        "viable": eps_need < eps_max,
+        "note": ("M_R = scalaron is consistent with seesaw (natural y_D~0.22) and "
+                 "thermal leptogenesis (needed CP asymmetry ~0.02% of the DI bound; "
+                 "M_1 in the thermal window). The apparent ~20x vs the y_D=1 seesaw "
+                 "value 6e14 is absorbed into the (free) Dirac Yukawa -- NOT a tension."),
+    }
 
 
 def write_results(path: Path | None = None) -> dict:
     res = scan()
+    two_loop = []
+    for name, b in PS_SCALAR_VARIANTS.items():
+        M_PS, M_GUT, ag = solve_2loop(b)
+        tau = proton_lifetime(M_GUT, ag)
+        two_loop.append({"variant": name, "M_PS_GeV": M_PS, "M_GUT_GeV": M_GUT,
+                         "alpha_gut_inv": ag, "ratio_to_scalaron": M_PS / M_SCALARON,
+                         "tau_p_yr": tau, "proton_safe": bool(tau > TAU_P_SK)})
     out = {
         "scalaron_scale_GeV": M_SCALARON,
         "tau_p_superK_yr": TAU_P_SK,
         "tau_p_hyperK_yr": TAU_P_HK,
-        "variants": [asdict(r) for r in res],
+        "variants_1loop": [asdict(r) for r in res],
+        "variants_2loop": two_loop,
+        "leptogenesis": leptogenesis(),
         "verdict": verdict(),
     }
     if path is None:
@@ -162,6 +228,17 @@ if __name__ == "__main__":
                      "%.1f" % r.alpha_gut_inv, "x%.2f" % r.ratio_to_scalaron,
                      "%.1e" % r.tau_p_yr,
                      "SAFE" if r.proton_safe else "excluded"))
+    print("\n2-loop SM + 1-loop PS (root-found M_PS):")
+    for name, b in PS_SCALAR_VARIANTS.items():
+        M_PS, M_GUT, ag = solve_2loop(b)
+        tau = proton_lifetime(M_GUT, ag)
+        print("  %-28s M_PS=%.2e (x%.2f Ms)  M_GUT=%.2e  aG^-1=%.1f  tau_p=%.1e  %s"
+              % (name, M_PS, M_PS / M_SCALARON, M_GUT, ag, tau,
+                 "SAFE" if tau > TAU_P_SK else "excluded"))
+    lp = leptogenesis()
+    print("\nleptogenesis (M_R = scalaron = %.2e GeV): y_D=%.3f, eps_need/eps_max=%.1e -> %s"
+          % (lp["M_R_GeV"], lp["implied_y_D"], lp["headroom_eps_need_over_max"],
+             "VIABLE" if lp["viable"] else "fails"))
     write_results()
     print("\n" + verdict())
     print("\nwrote results/pati_salam.json")

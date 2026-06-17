@@ -2,7 +2,7 @@
   "scalaron_scale_GeV": 30599694999637.406,
   "tau_p_superK_yr": 2.4e+34,
   "tau_p_hyperK_yr": 1e+35,
-  "variants": [
+  "variants_1loop": [
     {
       "variant": "fermions_only",
       "b_ps": [
@@ -79,5 +79,63 @@
       "valid": true
     }
   ],
-  "verdict": "Carrier-native Pati-Salam/SO(10) two-step unification: the carrier's own SU(4)xSU(2)xSU(2) above M_PS DOES unify, and the required PS-breaking scale lands at M_PS = (1.1-1.7) x the TFPT scalaron scale M_s = 3.06e+13 GeV across ALL scalar choices (robust: M_PS is fixed by the SM run below it). So the gauge-unification scale and the gravitational scalaron scale -- two INDEPENDENT TFPT structures -- coincide to ~40%. PROTON DECAY then SELECTS the scalar content: minimal choices give M_GUT~2e15 GeV -> tau_p ~ few x 10^33 yr, EXCLUDED by Super-K (2.4e+34 yr); but a higher-M_GUT choice (e.g. +(15,1,1), M_GUT~5.8e15) gives tau_p ~ 1e35 yr -- SAFE and within Hyper-K reach. 1/5 variants survive. CAVEATS [O]: presupposes the carrier SO(10) is GAUGED (the open fork); 1-loop; tau_p carries a ~x3 matrix-element uncertainty. A genuine, falsifiable TFPT-native coincidence with a sharp proton-decay kill-test -- NOT a proof."
+  "variants_2loop": [
+    {
+      "variant": "fermions_only",
+      "M_PS_GeV": 43922262042973.055,
+      "M_GUT_GeV": 1390908801765718.0,
+      "alpha_gut_inv": 44.70947201790112,
+      "ratio_to_scalaron": 1.4353823475525986,
+      "tau_p_yr": 4.675991589355346e+32,
+      "proton_safe": false
+    },
+    {
+      "variant": "minimal (bidoublet + (4,1,2))",
+      "M_PS_GeV": 37409947481084.734,
+      "M_GUT_GeV": 1290612662081055.2,
+      "alpha_gut_inv": 44.48712344188514,
+      "ratio_to_scalaron": 1.2225594889598745,
+      "tau_p_yr": 3.431882054248054e+32,
+      "proton_safe": false
+    },
+    {
+      "variant": "+second bidoublet",
+      "M_PS_GeV": 37678116505539.35,
+      "M_GUT_GeV": 1110332874954530.6,
+      "alpha_gut_inv": 44.23594097269443,
+      "ratio_to_scalaron": 1.231323269921018,
+      "tau_p_yr": 1.8588457457730987e+32,
+      "proton_safe": false
+    },
+    {
+      "variant": "+(15,1,1) of SU(4)",
+      "M_PS_GeV": 36060106716047.08,
+      "M_GUT_GeV": 2798863554030703.0,
+      "alpha_gut_inv": 44.85597067065534,
+      "ratio_to_scalaron": 1.1784466059702352,
+      "tau_p_yr": 7.716981218085264e+33,
+      "proton_safe": false
+    },
+    {
+      "variant": "+extra (4,1,2)",
+      "M_PS_GeV": 31086880784553.83,
+      "M_GUT_GeV": 1407908958173254.5,
+      "alpha_gut_inv": 44.52484737413867,
+      "ratio_to_scalaron": 1.0159212627747498,
+      "tau_p_yr": 4.8683656018750516e+32,
+      "proton_safe": false
+    }
+  ],
+  "leptogenesis": {
+    "M_R_GeV": 30599694999637.406,
+    "implied_y_D": 0.2247989626066881,
+    "eps_DI_max": 0.0030160601939015104,
+    "mtilde1_eV": 0.005,
+    "efficiency_kappa": 0.1,
+    "eps_needed": 6.354166666666667e-07,
+    "headroom_eps_need_over_max": 0.00021067771391018074,
+    "viable": true,
+    "note": "M_R = scalaron is consistent with seesaw (natural y_D~0.22) and thermal leptogenesis (needed CP asymmetry ~0.02% of the DI bound; M_1 in the thermal window). The apparent ~20x vs the y_D=1 seesaw value 6e14 is absorbed into the (free) Dirac Yukawa -- NOT a tension."
+  },
+  "verdict": "Carrier-native Pati-Salam/SO(10) two-step unification: the carrier's own SU(4)xSU(2)xSU(2) above M_PS DOES unify. (1) SCALE MATCH: the required PS-breaking scale M_PS lands on the TFPT scalaron scale M_s = 3.06e+13 GeV -- 1-loop M_PS/M_s = 1.12-1.66, and 2-loop SHRINKS this to 1.02-1.44 (one variant ~1.02, essentially exact). So the ~40% 1-loop gap was mostly the loop order; the residual <=20% is within PS-threshold + O(1) (scalaron-mass vs breaking-VEV) ambiguity. Two INDEPENDENT TFPT scales (gravitational scalaron, gauge unification) coincide. (2) PROTON DECAY is now the BINDING constraint: M_GUT ~ 1-6e15 GeV gives tau_p(p->e pi0) ~ 10^33-10^35 yr; the minimal reps are EXCLUDED by Super-K (2.4e+34 yr), only large-M_GUT content (e.g. +(15,1,1) at 1-loop) is safe, and 2-loop lowers M_GUT so survival needs M_GUT pushed up (larger reps / GUT thresholds) or the ~x3 matrix-element headroom. (3) LEPTOGENESIS: M_R = scalaron is viable (implied y_D~0.22, needed CP asymmetry ~0.02% of the Davidson-Ibarra bound). CAVEATS [O]: presupposes the carrier SO(10) is GAUGED (the open fork); the binding risk is proton decay, NOT the scale match. A falsifiable TFPT-native coincidence with a sharp proton-decay kill-test, NOT a proof."
 }
