@@ -541,15 +541,15 @@ export const predictions: Prediction[] = [
     ],
     pdf: "/papers/tfpt_4_frontier.pdf",
     description:
-      "A downstream cosmological readout from the closed Ω_b h² (observed 6.1×10⁻¹⁰). As a fundamental compiler power it is not closed — the leptogenesis Boltzmann solve is an interface. An anchored-Boltzmann attempt (v184) was tested honestly: the washout anchors plausibly (m̃₁ = m_3/A_Λ ≈ 5 meV, A_Λ = 10), but M₁ = M_R·φ₀⁴ only relocates the free input (M_R is the seesaw scale ~v²/m_3, not a compiler power), so η_B stays a sharper scenario, not a derivation. A cleaner branch (v212, FR.ETAB.04) drops the seesaw scale entirely: both Boltzmann inputs share the decuple A_Λ = 10 = |E(K₅)|, M₁ = M_scal·φ₀²/A_Λ ≈ 8.65×10⁹ GeV and m̃₁ = m_3/A_Λ ≈ 5 meV — so M₁ uses only {M_scal, φ₀, A_Λ} (no hidden seesaw scale) and lands in the thermal window where η_B ≈ 1.2×10⁻⁹ brackets 6.1×10⁻¹⁰; still [C] (the coupling mechanism is posited, not derived).",
+      "A downstream cosmological readout from the closed Ω_b h² (observed 6.1×10⁻¹⁰). As a fundamental compiler power it is not closed — the leptogenesis Boltzmann solve is an interface. An anchored-Boltzmann attempt (v184) was tested honestly: the washout anchors plausibly (m̃₁ = m_3/A_Λ ≈ 5 meV, A_Λ = 10), but M₁ = M_R·φ₀⁴ only relocates the free input (M_R is the seesaw scale ~v²/m_3, not a compiler power), so η_B stays a sharper scenario, not a derivation. A cleaner branch (v212, FR.ETAB.04) drops the seesaw scale entirely: both Boltzmann inputs share the decuple A_Λ = 10 = |E(K₅)|, M₁ = M_scal·φ₀²/A_Λ ≈ 8.65×10⁹ GeV and m̃₁ = m_3/A_Λ ≈ 5 meV — so M₁ uses only {M_scal, φ₀, A_Λ} (no hidden seesaw scale) and lands in the thermal window where η_B ≈ 1.2×10⁻⁹ brackets 6.1×10⁻¹⁰. The full BDP Boltzmann ODE solve now confirms this at the frozen M₁: the integrated efficiency κ_f = 0.092 gives η_B = 6.5×10⁻¹⁰ = 1.07× the observed value, with NO free M_R dial; the full FLAVORED density-matrix solve is the next refinement. Still [C] (the coupling mechanism is posited, not derived).",
     category: "Cosmology",
     experiment: {
       summary:
         "experiments/ftransfer hosts the scalaron-decuple leptogenesis interface (M₁ = M_scal φ₀²/A_Λ, δ_νCP = 4π/3).",
       result:
-        "A full flavored Boltzmann solve is pending (data-limited); the anchored estimate brackets η_B ≈ 6×10⁻¹⁰ but the coupling mechanism is posited, not derived.",
-      finding: "data_limited",
-      repoPath: "experiments/ftransfer",
+        "The full BDP Boltzmann ODE solve (fboltzmann_solve.py) lands η_B = 6.5×10⁻¹⁰ at the frozen M₁ = M_scal·φ₀²/A_Λ — a factor 1.07 from the observed 6.1×10⁻¹⁰, with no free M_R dial (κ_f = 0.092 validates the analytic fit). The full FLAVORED density-matrix solve is the next refinement; stays [C] (coupling mechanism posited, washout anchored).",
+      finding: "consistent",
+      repoPath: "experiments/ftransfer/leptogenesis_boltzmann",
     },
   },
   {

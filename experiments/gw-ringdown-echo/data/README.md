@@ -13,4 +13,15 @@ The data file is **downloaded**, not committed:
 - **Why gitignored:** re-downloadable in seconds; the 390-vs-391 reconciliation is in
   [`../event_count_audit.md`](../event_count_audit.md).
 
-The full echo search additionally needs GWOSC **strain** (~GB/event) — not downloaded here.
+## `strain/` — real GWOSC strain (32 s HDF5), provenance JSON tracked, blobs gitignored
+
+- **What:** per-event 32 s, 4 kHz strain HDF5 for the **Stage-1 real-data echo search**
+  (`real_echo_search.py`), one file per detector (~1 MB each).
+- **Where to get it:** `python scripts/fetch_strain.py GW150914 GW190521`, which resolves the
+  per-detector URLs via the GWOSC event API (32 s tutorial files for O1 events) and downloads
+  with `urllib` + reads with `h5py` (no gwpy). It writes `strain/<event>_meta.json` (GPS, final
+  mass, file list).
+- **Tracked vs ignored:** the tiny `*_meta.json` provenance files **are committed**; the
+  `*.hdf5` blobs are **gitignored** (re-downloadable in seconds).
+- **Used by:** `tfpt-gw realdata --events GW150914 GW190521` (PSD-whitened matched filter +
+  Kerr-QNM subtraction + off-source background + free-ratio control).

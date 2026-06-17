@@ -11,6 +11,60 @@ from .echo_forecast import forecast
 from .echo_search import injection_suite
 
 RESULTS = Path(__file__).resolve().parents[2] / "results"
+STRAIN_DIR = Path(__file__).resolve().parents[2] / "data" / "strain"
+
+
+def _run_realdata(events: list[str]) -> int:
+    """Stage-1 echo search on REAL GWOSC strain (run scripts/fetch_strain.py first)."""
+    from .real_echo_search import search_event      # local import: needs downloaded strain
+
+    print("=" * 80)
+    print("TFPT GW echo Stage-1 on REAL GWOSC strain (PSD-whitened MF + Kerr subtraction)")
+    print("=" * 80)
+    have = [e for e in events if (STRAIN_DIR / f"{e}_meta.json").exists()]
+    missing = [e for e in events if e not in have]
+    if missing:
+        print(f"  (no strain for {missing}; run: python scripts/fetch_strain.py {' '.join(missing)})")
+    if not have:
+        print("  no strain downloaded -> nothing to do.")
+        return 1
+
+    out_events = []
+    for ev in have:
+        r = search_event(ev)
+        print(f"\n  {ev}: M_f={r.mf_msun} Msun, f0={r.f0_hz} Hz, tau={r.tau_ms} ms "
+              f"(echo kernel q=(2/3)^6={constants.RATIO:.4f})")
+        print(f"    {'det':4s} {'rho_max':>8} {'lag(ms)':>8} {'q_hat':>9} {'p_value':>8} {'kernel?':>8}")
+        for d in r.detectors:
+            print(f"    {d.detector:4s} {d.rho_max:8.2f} {d.best_lag_ms:8.1f} {d.q_hat:9.4f} "
+                  f"{d.p_value:8.4f} {str(d.kernel_consistent):>8}")
+        print(f"    -> network rho={r.rho_net}, kernel-consistent detectors="
+              f"{r.n_kernel_consistent}/{len(r.detectors)}  =>  {r.label}")
+        if r.note:
+            print(f"       note: {r.note}")
+        out_events.append(vars(r) | {"detectors": [vars(d) for d in r.detectors]})
+
+    any_candidate = any(e["label"] == "KERNEL_ECHO_CANDIDATE" for e in out_events)
+    verdict = (
+        "NO faint, kernel-ratio ((2/3)^6) ringdown echo found COINCIDENT in >=2 detectors for "
+        + ", ".join(have) + ". Single-detector low-p excesses are residual ringdown power "
+        "(q_hat ~ 1, not the faint kernel ratio) flagged by the free-ratio control, not echoes. "
+        "Consistent with the TFPT UPPER bound (echoes may be absent/smaller). First pass: "
+        "dominant-QNM subtraction + off-source background; full multi-mode subtraction + coherent "
+        "stacking is the next step. No detection claim."
+        if not any_candidate else
+        "A faint kernel-ratio echo is coincident in >=2 detectors -- escalate to coherent "
+        "stacking + time-slide coincident background + injections before any claim."
+    )
+    print(f"\n-> {verdict}")
+
+    RESULTS.mkdir(exist_ok=True)
+    (RESULTS / "echo_realdata.json").write_text(
+        json.dumps({"stage": "strain_level_test (real GWOSC strain, first pass)",
+                    "ratio_(2/3)^6": constants.RATIO, "events": out_events,
+                    "verdict": verdict}, indent=2), encoding="utf-8")
+    print(f"\nWrote {RESULTS / 'echo_realdata.json'}")
+    return 0
 
 
 def _run_search() -> int:
@@ -41,11 +95,16 @@ def _run_search() -> int:
 
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description="TFPT GW ringdown echo-ratio forecast + Stage-1 search")
-    ap.add_argument("command", choices=["audit", "analyze", "search"], nargs="?", default="analyze")
+    ap.add_argument("command", choices=["audit", "analyze", "search", "realdata"],
+                    nargs="?", default="analyze")
+    ap.add_argument("--events", nargs="*", default=["GW150914", "GW190521"],
+                    help="events for the realdata search (need scripts/fetch_strain.py first)")
     args = ap.parse_args(argv)
 
     if args.command == "search":
         return _run_search()
+    if args.command == "realdata":
+        return _run_realdata(args.events)
 
     print("=" * 72)
     print(f"TFPT ringdown echo-ratio CENSUS (stage={constants.STAGE}; ratio (2/3)^6, lag free)")

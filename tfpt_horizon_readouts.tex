@@ -164,8 +164,10 @@ $\dim S^+=16$, the gapped transport $T$ on the cusp-weight $3$-space (deviation 
 the Nariai anchor $(1,1,{-}2)$) is symmetric and doubly stochastic (CPTP), and on the trace-zero subspace it
 contracts with operator norm exactly $(2/3)^6$, so $\|T^n\delta\|\le(2/3)^{6n}\|\delta\|$ --- a
 Knill--Laflamme-type per-step recovery bound, with a free ratio breaking it. ``Finite recoverability code''
-is \mE; the holographic/Petz identification of $T$ with the Page recovery map is \mC, gated on the
-Seam--Horizon theorem. The scrambling prefactor carries a $\mu_4$ signature: with
+is \mE; the explicit Petz recovery map and the rank-one (one-dimensional baby-universe, cf.\ Engelhardt
+2025) contraction limit $\|T^n-P_\infty\|=(2/3)^{6n}$ are now realised numerically
+(\texttt{experiments/recovery-channel}), so the Petz identification of $T$ with the Page recovery map is
+verified at the channel level \mC; the full holographic reading stays gated on the Seam--Horizon theorem. The scrambling prefactor carries a $\mu_4$ signature: with
 $\beta=1/T_H=8\pi M$, $\beta/2\pi=4M$, so
 \[
   \boxed{\ t_{\mathrm{scr}}\sim|\mu_4|\,M\log S\ }\qquad(|\mu_4|=4)\qquad\mE\text{-audit}.

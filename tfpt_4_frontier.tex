@@ -183,7 +183,11 @@ inputs share the decuple $A_\Lambda=10=|E(K_5)|$:
 $M_1$ now uses \emph{only} compiler quantities ($M_{\mathrm{scal}}=\cthree^{7/2}\Mpl$, $\phiz$, $A_\Lambda$)
 --- \emph{no hidden seesaw scale} --- and lands inside the thermal window $[3\times10^9,3\times10^{10}]$ GeV
 where the Davidson--Ibarra $\varepsilon_1\approx8.5\times10^{-7}$ and the strong-washout efficiency give
-$\eta_B\approx1.2\times10^{-9}$, bracketing the observed $6.1\times10^{-10}$ untuned. Both inputs sharing
+$\eta_B\approx1.2\times10^{-9}$, bracketing the observed $6.1\times10^{-10}$ untuned. The \emph{full} BDP
+Boltzmann ODE (\texttt{experiments/ftransfer/leptogenesis\_boltzmann/fboltzmann\_solve.py}) now confirms
+this: the integrated efficiency $\kappa_f=0.092$ (validating the analytic $\kappa_f$) gives
+$\eta_B=6.5\times10^{-10}$ at the frozen $M_1$ --- a factor $1.07$ from the observed value, with \emph{no}
+free $M_R$ dial; the full \emph{flavored} density-matrix solve is the next refinement. Both inputs sharing
 $A_\Lambda$ reads as \emph{scalaron reheating dressed by two seed insertions $(\phiz)^2$, over the pair
 sector}. This is cleaner than $M_1=M_R\varphi_0^4$ (no relocated free scale), but the coupling
 \emph{mechanism} is posited, not derived, and $\kappa_f$ is washout-dependent --- so $\eta_B$ stays \mC;

@@ -10,3 +10,6 @@ results/*.json
 # scripts/fetch_catalog.py (GWOSC) and is therefore gitignored (see data/README.md)
 data/*
 !data/README.md
+# keep the tiny strain provenance JSONs; the HDF5 blobs are re-downloadable (fetch_strain.py)
+!data/strain/
+data/strain/*.hdf5

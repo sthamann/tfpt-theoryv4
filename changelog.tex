@@ -59,6 +59,54 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-17 (Experiments: black-hole-cosmology signatures, the $\eta_B$ Boltzmann solve, the Petz/baby-universe realisation, and a real-data GW-echo pipeline)}
+\begin{itemize}
+\item \textbf{Three new standalone black-hole-cosmology experiments (\texttt{experiments/}, all
+  \texttt{data\_limited}, not load-bearing).} From the \texttt{problem\_b} black-hole-cosmology survey:
+  (i) \texttt{ccbh-dark-energy} --- the de~Sitter seam interior ($w_{\mathrm{in}}{=}{-}1$) forces the
+  Croker--Weiner cosmological-coupling index $k={-}3w_{\mathrm{in}}=3$, hence a population $w={-}1$;
+  vs.\ Farrah+2023 $k=3.11\pm0.79$ ($-0.14\sigma$), a \emph{contested} downstream bridge and an
+  \emph{alternative reading} of the same $w={-}1$ the DESI watchdog tests (\texttt{alternative\_group}
+  \texttt{w\_de\_eos}, never double-counted). (ii) \texttt{gravastar-compactness} --- the Nariai
+  $Q_{\mathrm{geom}}{=}3/8$ equals the Jampolski--Rezzolla (2026) maximum horizonless compactness
+  $\mathcal C{=}3/8$ (shared de~Sitter endpoint $1/2$); since $1/3{<}3/8{<}4/9{<}1/2$ this is a
+  light-trapping ECO, yielding an echo template (round-trip delay ${\sim}0.7$ ms at $62\,M_\odot$,
+  amplitude $\le(2/3)^6$) --- a \mC\ structural echo, no $\mathcal C\!\leftrightarrow\!Q_{\mathrm{geom}}$
+  map proven. (iii) \texttt{cosmic-handedness} --- a parity watchdog (Shamir JADES ${\sim}3.3\sigma$
+  spin monopole, most likely a Milky-Way-aberration dipole), explicitly \emph{not} promoted (frontier).
+\item \textbf{$\eta_B$ --- full BDP Boltzmann ODE solve confirms the route at the frozen scale
+  (\texttt{experiments/ftransfer/leptogenesis\_boltzmann/fboltzmann\_solve.py}; \texttt{tfpt\_4\_frontier},
+  \mC).} Integrating the Buchm\"uller--Di~Bari--Pl\"umacher Boltzmann network (integrated efficiency
+  $\kappa_f=0.092$, validating the analytic fit) at the \emph{frozen} heavy scale
+  $M_1=M_{\mathrm{scal}}(\phiz)^2/A_\Lambda\approx8.65\times10^9$ GeV with $\delta_{\mathrm{CP}}=4\pi/3$ gives
+  $\eta_B=6.5\times10^{-10}$ --- a factor $1.07$ from the observed $6.1\times10^{-10}$, with \emph{no} free
+  $M_R$ dial. This moves the leptogenesis route from ``solve pending'' to a consistent \mC\ readout (the full
+  \emph{flavored} density-matrix solve is the next refinement); \texttt{tfpt\_4\_frontier} Route~C synced.
+\item \textbf{The Petz recovery map and the rank-one baby universe, realised numerically
+  (\texttt{experiments/recovery-channel}; \texttt{tfpt\_horizon\_readouts}, \mC; companion to \vref{v221}).}
+  The gapped transport contracts to a \emph{rank-one} projector at exactly $\|T^n-P_\infty\|=(2/3)^{6n}$ ---
+  the one-dimensional baby-universe Hilbert space (Engelhardt 2025) --- and the explicit Petz map is CPTP,
+  recovers the reference, and equals the identity only on the protected $\lambda{=}1$ (Knill--Laflamme) mode;
+  free-ratio and degenerate-spectrum negative controls hold. So the Petz identification \vref{v221} deferred is
+  now verified at the channel level (\texttt{internal\_consistency}, no new datum); the full holographic
+  reading stays gated on the Seam--Horizon theorem.
+\item \textbf{GW ringdown echo --- Stage-1 matched filter validated, then run on real GWOSC strain
+  (\texttt{experiments/gw-ringdown-echo}; \texttt{tfpt\_horizon\_readouts} search-targets).} The Stage-1
+  machinery (Kerr-ringdown subtraction $\to$ matched filter on the residual, ratio $(2/3)^6$ frozen, lag free,
+  $+$ free-ratio control) classifies $3/3$ synthetic injections; run on \emph{real} GWOSC strain
+  (GW150914, GW190521; PSD-whitening $+$ off-source background): \textbf{no kernel-ratio echo coincident in
+  $\ge2$ detectors}, consistent with the $(2/3)^6$ \emph{upper} bound (a single loud H1 excess has
+  $\hat q\approx2$, far from $(2/3)^6$, so the free-ratio control flags it as residual ringdown, not an echo).
+  First pass: dominant-QNM subtraction, incoherent combination --- full multi-mode $+$ coherent stacking is the
+  next step; no detection claim.
+\item \textbf{Scorecard + website synced.} \texttt{experiments/evidence\_scorecard.json} now $51$ rows
+  ($26$ consistent, $7$ null, $13$ data-limited, $4$ tension, $1$ parked); the website
+  \texttt{EXPERIMENTS\_AUDIT} mirror and the $\eta_B$ prediction entry are updated to match. These are
+  standalone \texttt{experiments/} surfaces (not in the verification suite or ledger); the
+  \texttt{tfpt\_4\_frontier}/\texttt{tfpt\_horizon\_readouts} and \texttt{papers.ts}/\texttt{predictions.ts}
+  edits are the in-same-change sync.
+\end{itemize}
+
 \subsection*{2026-06-17 (Red-team layer re-synced to the paper; shadow export mirrors \texttt{figures/})}
 \begin{itemize}
 \item \textbf{Red Team Target~A re-synced to \texttt{tfpt\_5\_redteam} (\texttt{rt\_A\_e8net.py},
