@@ -1,0 +1,83 @@
+{
+  "scalaron_scale_GeV": 30599694999637.406,
+  "tau_p_superK_yr": 2.4e+34,
+  "tau_p_hyperK_yr": 1e+35,
+  "variants": [
+    {
+      "variant": "fermions_only",
+      "b_ps": [
+        -10.666666666666666,
+        -3.3333333333333335,
+        -3.3333333333333335
+      ],
+      "M_PS_GeV": 50671751089524.77,
+      "M_GUT_GeV": 2617758078426786.5,
+      "alpha_gut_inv": 45.3072176932203,
+      "ratio_to_scalaron": 1.6559560835532907,
+      "tau_p_yr": 6.024664089993208e+33,
+      "proton_safe": false,
+      "valid": true
+    },
+    {
+      "variant": "minimal (bidoublet + (4,1,2))",
+      "b_ps": [
+        -10.333333333333334,
+        -3.0,
+        -2.3333333333333335
+      ],
+      "M_PS_GeV": 42169608140386.39,
+      "M_GUT_GeV": 2398055369082637.5,
+      "alpha_gut_inv": 45.05121800970946,
+      "ratio_to_scalaron": 1.3781055053289284,
+      "tau_p_yr": 4.1949802166141624e+33,
+      "proton_safe": false,
+      "valid": true
+    },
+    {
+      "variant": "+second bidoublet",
+      "b_ps": [
+        -10.333333333333334,
+        -2.6666666666666665,
+        -2.0
+      ],
+      "M_PS_GeV": 42515600835881.4,
+      "M_GUT_GeV": 2019925439787482.2,
+      "alpha_gut_inv": 44.7646734844733,
+      "ratio_to_scalaron": 1.389412568863356,
+      "tau_p_yr": 2.084933536692515e+33,
+      "proton_safe": false,
+      "valid": true
+    },
+    {
+      "variant": "+(15,1,1) of SU(4)",
+      "b_ps": [
+        -9.0,
+        -3.0,
+        -2.3333333333333335
+      ],
+      "M_PS_GeV": 40433705939867.31,
+      "M_GUT_GeV": 5797430685386016.0,
+      "alpha_gut_inv": 45.471588240682664,
+      "ratio_to_scalaron": 1.3213761098058798,
+      "tau_p_yr": 1.459830805834791e+35,
+      "proton_safe": true,
+      "valid": true
+    },
+    {
+      "variant": "+extra (4,1,2)",
+      "b_ps": [
+        -10.0,
+        -3.0,
+        -1.6666666666666667
+      ],
+      "M_PS_GeV": 34123951091463.484,
+      "M_GUT_GeV": 2641386362666510.0,
+      "alpha_gut_inv": 45.091747442306335,
+      "ratio_to_scalaron": 1.1151729156734353,
+      "tau_p_yr": 6.185885459511651e+33,
+      "proton_safe": false,
+      "valid": true
+    }
+  ],
+  "verdict": "Carrier-native Pati-Salam/SO(10) two-step unification: the carrier's own SU(4)xSU(2)xSU(2) above M_PS DOES unify, and the required PS-breaking scale lands at M_PS = (1.1-1.7) x the TFPT scalaron scale M_s = 3.06e+13 GeV across ALL scalar choices (robust: M_PS is fixed by the SM run below it). So the gauge-unification scale and the gravitational scalaron scale -- two INDEPENDENT TFPT structures -- coincide to ~40%. PROTON DECAY then SELECTS the scalar content: minimal choices give M_GUT~2e15 GeV -> tau_p ~ few x 10^33 yr, EXCLUDED by Super-K (2.4e+34 yr); but a higher-M_GUT choice (e.g. +(15,1,1), M_GUT~5.8e15) gives tau_p ~ 1e35 yr -- SAFE and within Hyper-K reach. 1/5 variants survive. CAVEATS [O]: presupposes the carrier SO(10) is GAUGED (the open fork); 1-loop; tau_p carries a ~x3 matrix-element uncertainty. A genuine, falsifiable TFPT-native coincidence with a sharp proton-decay kill-test -- NOT a proof."
+}
