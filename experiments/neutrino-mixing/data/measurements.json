@@ -17,5 +17,13 @@
     {"experiment": "LHCb gamma combination (2024)", "value": 64.6, "sigma": 2.8,
      "reference": "LHCb CKM gamma 2024 combination; delta_CKM ~ gamma in Wolfenstein"}
   ],
-  "downloaded": "2026-06-15 (published global-fit summary values)"
+  "delta_PMNS_deg": [
+    {"experiment": "NuFIT 6.0 (NO best fit, w/ SK, 2024)", "value": 212.0,
+     "sigma_plus": 26.0, "sigma_minus": 41.0,
+     "reference": "arXiv:2410.05380; delta_CP/deg = 212 +26 -41 (NO best fit incl. SK atmospheric); 3sigma 124->364"},
+    {"experiment": "NuFIT 6.0 (NO, LBL+reactor+IC, no SK, dchi2=0.6)", "value": 177.0,
+     "sigma_plus": 19.0, "sigma_minus": 20.0,
+     "reference": "arXiv:2410.05380; delta_CP/deg = 177 +19 -20 (NO without SK; CP conservation within 1sigma); secondary fit"}
+  ],
+  "downloaded": "2026-06-17 (NuFIT 6.0 published global-fit summary values; arXiv:2410.05380)"
 }

@@ -31,12 +31,16 @@ def main(argv: list[str] | None = None) -> int:
         print(f"  {c['observable']:14s} TFPT={c['tfpt']:.5g} vs {c['measured']:.5g}"
               f"+/-{c['sigma']:.3g} -> {c['z']:+.2f} sigma "
               f"({'ok' if c['consistent'] else 'TENSION'})  {c['experiment']}")
+    print("\n  structural CP relation (v231/v233; not a data pull):")
+    for s in r.structural:
+        print(f"    {s['relation']}  [{'holds' if s['holds'] else 'FAILS'}]  {s['type']}")
     print(f"\n-> {r.verdict}")
 
     RESULTS.mkdir(exist_ok=True)
     (RESULTS / "results.json").write_text(
         json.dumps({"constants": constants.summary(), "checks": r.checks,
-                    "verdict": r.verdict}, indent=2), encoding="utf-8")
+                    "structural": r.structural, "verdict": r.verdict}, indent=2),
+        encoding="utf-8")
     print(f"\nWrote {RESULTS / 'results.json'}")
     return 0
 

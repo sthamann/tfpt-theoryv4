@@ -186,9 +186,11 @@ ROWS = [
     ["neutrino", "m_betabeta (0vbb)", "m_bb = 1.52e-3 eV (normal ordering)",
      "LEGEND/nEXO sensitivity ~10-20 meV (not yet reached)", None, "prediction", "Majorana mass",
      "prediction_of_record", "LEGEND-1000 / nEXO", "a 0vbb signal incompatible with 1.5 meV NO", "data_limited"],
-    ["neutrino", "delta_nu_CP", "240 deg (4 pi/3)", "NuFIT 6.0 ~177-270 deg (weak)", None,
-     "prediction", "PMNS CP phase", "prediction_of_record", "T2K/NOvA/DUNE/HyperK",
-     "delta_nu_CP excludes 240 deg at >=3 sigma", "data_limited"],
+    ["neutrino", "delta_nu_CP", "240 deg (4 pi/3) = delta_CKM_lead + pi (v231/v233 sheet relation)",
+     "NuFIT 6.0 NO best fit 212 +26/-41 deg (CP-violating; CP conservation only within 1 sigma)", 1.08,
+     "prediction", "PMNS CP phase (hexagonal mu6 unit, sheet-split)", "prediction_of_record",
+     "neutrino-mixing (NuFIT 6.0); sharpens with DUNE/HyperK",
+     "delta_nu_CP excludes 240 deg at >=3 sigma", "consistent"],
     # ---- kaon flavor-bridge ratio (P2) ----
     ["CKM", "rare kaon ratio R_K = KL/K+", "3.33/9.45 = 0.35238",
      "geometry consistent (delta_CKM +1.45s, Jarlskog -0.07s, K+ -0.08s); KOTO KL not at SM reach",
@@ -269,6 +271,11 @@ _LONG = ("qnm", "m_betabeta", "page curve", "recovery kernel")
 # never silently double-counted).
 OVERRIDES: dict[str, dict] = {
     "achromatic dyonic intercept": {"independence_group": "c3_topform_horizon"},
+    # both CP phases are ONE hexagonal mu6 CM unit rho=e^{i pi/3} split by the Z2 sheet
+    # (v231/v233): delta_PMNS = delta_CKM,lead + pi. They are correlated, NOT two
+    # independent hits; the leptonic phase has weak discriminative power (large delta_CP error).
+    "delta_CKM": {"independence_group": "cp_mu6_phase"},
+    "delta_nu_CP": {"independence_group": "cp_mu6_phase", "discriminative_power": "weak"},
     "recovery kernel as CPTP map": {"stage": "not_applicable"},
     "Page curve turnover": {"stage": "not_applicable"},
     "Petz recovery + rank-one baby universe": {"stage": "not_applicable"},

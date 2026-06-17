@@ -106,10 +106,10 @@ export interface Prediction {
  */
 export const EXPERIMENTS_AUDIT = {
   rows: 51,
-  consistent: 26,
+  consistent: 27,
   tension: 4,
   null: 7,
-  dataLimited: 13,
+  dataLimited: 12,
   parked: 1,
   repoPath: "experiments",
   readmePath: "experiments/README.md",
@@ -117,7 +117,7 @@ export const EXPERIMENTS_AUDIT = {
   headline:
     "No discriminating empirical discovery — but a typed, reproducible, falsifiable test matrix.",
   finding:
-    "51 typed scorecard rows across FRB, CMB, neutrino, GW, EHT, lab (g−2/kaon/axion), dark-energy, recovery-channel and black-hole-cosmology (CCBH / gravastar-echo / spin-parity) domains: 26 consistent, 4 tension, 7 clean nulls, 13 data-limited, 1 parked. The full BDP Boltzmann solve now lands η_B = 6.5×10⁻¹⁰ at the frozen scalaron-route M₁ (ratio 1.07), and the Stage-1 GW-echo matched filter is injection-validated (3/3). Correlated φ₀-seed legs, alternative-group readings (e.g. CCBH vs DESI on w) and internal-consistency checks are NOT counted as independent external hits.",
+    "51 typed scorecard rows across FRB, CMB, neutrino, GW, EHT, lab (g−2/kaon/axion), dark-energy, recovery-channel and black-hole-cosmology (CCBH / gravastar-echo / spin-parity) domains: 27 consistent, 4 tension, 7 clean nulls, 12 data-limited, 1 parked. The latest structural round (v231/v233) ties the leptonic CP phase δ_PMNS = 4π/3 = 240° to δ_CKM via the Z2 sheet (δ_PMNS = δ_CKM,lead + π); confronted with the NuFIT 6.0 normal-ordering best fit (212°⁺²⁶₋₄₁) it sits at +1.08σ (consistent, weak power until DUNE/Hyper-K) and shares one independence group with δ_CKM. Correlated φ₀-seed legs, the cp_mu6_phase pair, alternative-group readings (e.g. CCBH vs DESI on w) and internal-consistency checks are NOT counted as independent external hits.",
 } as const;
 
 export const STATUS_BADGE: Record<PredictionStatus, { color: string; bg: string }> = {
