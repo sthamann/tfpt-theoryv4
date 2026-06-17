@@ -279,12 +279,6 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Newsreader:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
         />
-        <link
-          rel="alternate"
-          type="application/rdf+xml"
-          href="/sitemap.xml"
-          title="TFPT sitemap"
-        />
         <meta name="format-detection" content="telephone=no" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />

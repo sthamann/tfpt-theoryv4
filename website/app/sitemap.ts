@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { papers } from "@/lib/papers";
 import { RELEASE_ASSETS } from "@/lib/release";
+import { SITE_DATE } from "@/lib/version";
 
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://tfpt-theory.vercel.app";
@@ -19,84 +20,59 @@ function priorityForAsset(href: string): number {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
+  // Tie lastmod to the released content version (lib/version.ts, generated from
+  // tex-artefacts/version.tex) rather than the build timestamp, so crawlers see
+  // a meaningful "last changed" date instead of "today" on every deploy.
+  const lastModified = new Date(SITE_DATE);
 
+  // Only canonical, crawlable routes — no in-page fragment anchors (#overview,
+  // …): search engines drop URL fragments and fold them into the page URL.
   const pages: MetadataRoute.Sitemap = [
     {
       url: SITE_URL,
-      lastModified: now,
+      lastModified,
       changeFrequency: "weekly",
       priority: 1.0,
     },
     {
       url: `${SITE_URL}/orientation`,
-      lastModified: now,
+      lastModified,
       changeFrequency: "monthly",
       priority: 0.95,
     },
     {
-      url: `${SITE_URL}/#overview`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${SITE_URL}/#chain`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${SITE_URL}/#papers`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: `${SITE_URL}/#predictions`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${SITE_URL}/#downloads`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
       url: `${SITE_URL}/verification`,
-      lastModified: now,
+      lastModified,
       changeFrequency: "monthly",
       priority: 0.85,
     },
     {
       url: `${SITE_URL}/falsification`,
-      lastModified: now,
+      lastModified,
       changeFrequency: "monthly",
       priority: 0.85,
     },
     {
       url: `${SITE_URL}/review`,
-      lastModified: now,
+      lastModified,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${SITE_URL}/objections`,
-      lastModified: now,
+      lastModified,
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
       url: `${SITE_URL}/replication`,
-      lastModified: now,
+      lastModified,
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
       url: `${SITE_URL}/faq`,
-      lastModified: now,
+      lastModified,
       changeFrequency: "monthly",
       priority: 0.7,
     },
@@ -104,7 +80,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const paperPages: MetadataRoute.Sitemap = papers.map((p) => ({
     url: `${SITE_URL}/papers/${p.slug}`,
-    lastModified: now,
+    lastModified,
     changeFrequency: "monthly",
     priority: 0.85,
   }));
