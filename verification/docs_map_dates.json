@@ -584,8 +584,8 @@
   "date": "2026-06-15"
  },
  "tfpt_4_frontier::section::Baryon asymmetry $\\eta_B$ --- a downstream readout from the closed $\\Omega_b h^2$::1": {
-  "hash": "afc91cdeb72c",
-  "date": "2026-06-15"
+  "hash": "9496ae6a9fea",
+  "date": "2026-06-17"
  },
  "tfpt_4_frontier::section::Proton/electron ratio $m_p/m_e$ --- a cross-sector ratio::1": {
   "hash": "e55f6430961c",
@@ -664,7 +664,7 @@
   "date": "2026-06-15"
  },
  "tfpt_horizon_readouts::section::Page time and scrambling::1": {
-  "hash": "0645f969a377",
+  "hash": "939ed88ba0c3",
   "date": "2026-06-17"
  },
  "tfpt_horizon_readouts::section::De Sitter and the Nariai bound from the $\\Lambda$ closure::1": {
@@ -696,7 +696,7 @@
   "date": "2026-06-17"
  },
  "tfpt_research_contracts::section::Research Contract 1 --- $(U_{\\mathrm{wall}})$::1": {
-  "hash": "7e3109adbfa4",
+  "hash": "e90f57ddc623",
   "date": "2026-06-17"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {

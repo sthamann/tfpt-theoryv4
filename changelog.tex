@@ -59,6 +59,85 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-17 (Honest data cross-check + emergent-QFT figures: the unification tension, \texttt{v246})}
+\begin{itemize}
+\item \textbf{\texttt{v246\_unification\_data\_crosscheck.py} (\texttt{QFT4D.RGTEST.01}) --- the first hard
+  data confrontation of the spectral-action prediction.} TFPT's gauge-charged content \emph{is} the
+  Standard Model (\vref{v159}) and the theory adds no new states; the $E_8$ cascade is an arithmetic spine
+  (\vref{v5}), not a threshold tower. So the run \emph{is} the SM run: at one loop the couplings spread
+  ${\sim}10^{13}$--$10^{17}$\,GeV (residual $\Delta\alpha^{-1}\approx9$ at $2{\times}10^{16}$\,GeV), and at
+  two loops (RK4) the minimal spread is $\Delta\alpha^{-1}\approx3.2$ at $1.7{\times}10^{14}$\,GeV --- the
+  three never meet. Typed \mX/\mO: with ``no new state'' there is \emph{no} admissible threshold source, so
+  the spectral-action 4d-GUT route is in genuine tension (same status as NCG-SM), likely falsified unless
+  extended --- never a confirmation, and \emph{not} rescued by a cascade. Two new figures
+  (\texttt{figures/qft\_skeleton.pdf},
+  \texttt{figures/qft\_unification.pdf}) added via \texttt{make\_figures.py} (PDF $+$ website PNG) and
+  embedded in \texttt{tfpt\_research\_contracts.tex}; a root-level \texttt{qft.txt} summarises the
+  emergent-QFT skeleton, what each script proves, the data status and the open questions.
+\end{itemize}
+
+\subsection*{2026-06-17 (Spectral-action matter content: the $SO(10)$ \textbf{16} $=$ one anomaly-free SM generation, \texttt{v245})}
+\begin{itemize}
+\item \textbf{\texttt{v245\_spectral\_matter\_content.py} (\texttt{QFT4D.MATTER.01})
+  discharges the computable core of the 4d contract \vref{v244}.} The carrier
+  half-spinor (the $SO(10)$ \textbf{16}) is verified, in exact rational arithmetic,
+  to be one Standard-Model generation: $\mathbf{16}=SU(5)(\mathbf{10}{+}\bar{\mathbf
+  5}{+}\mathbf1)$, the SM multiplet dimensions sum to $16=\dim S^+$ ($15$ Weyl
+  fermions $+\,\nu_R$), the electric charges $Q=T_3+Y$ are exactly the SM values,
+  all four gauge anomalies cancel ($\sum Y=\sum Y^3=[SU(2)]^2U(1)=[SU(3)]^2U(1)=0$),
+  the spectral-action normalisation gives $\sin^2\theta_W=3/8$
+  ($g_3=g_2=\sqrt{5/3}\,g_1$), and the Higgs is the $(1,2)_{1/2}$ inner fluctuation.
+  So the matter-content $+$ tree-relation half of \texttt{CONTRACT.QFT4D.01} is now
+  \mE; only the seam$\to$Dirac realisation and the run-down couplings stay \mO.
+  Wired into \texttt{run\_all.py}, the ledger, the registry, cited in
+  \texttt{tfpt\_research\_contracts.tex}, mirrored to the website.
+\end{itemize}
+
+\subsection*{2026-06-17 (The QFT skeleton on the seam: thermal time, GNS/OS reconstruction, DHR sectors, the braiding S-matrix, and the 4d spectral-action contract, \texttt{v239}--\texttt{v244})}
+\begin{itemize}
+\item \textbf{Six emergent-QFT skeleton scripts (\vref{v238}).}
+  \texttt{v239\_\allowbreak kms\_\allowbreak thermal\_\allowbreak time.py} (\texttt{DYN.KMS.01}): the modular flow is KMS
+  at $\beta=1$, and $2\pi=1/(4c_3)$ fixes the modular temperature as $T_H=c_3/M$ ---
+  thermal time $=$ horizon time. \texttt{v240\_gns\_os\_reconstruction.py}
+  (\texttt{DYN.GNS.01}): GNS reconstructs the Hilbert space from $(\mathcal M,\omega)$
+  and the OS Hamiltonian $H_{\mathrm{OS}}=-\log T=-L$ is positive with gap $\Delta$
+  (the \vref{v64} mass gap). \texttt{v241\_dhr\_sectors.py} (\texttt{DHR.SECTORS.01}):
+  particles $=$ DHR sectors $=$ the discriminant anyons of the Lean glue form, with
+  the condensation tower $16\to4\to1$ (\vref{v235}/\vref{v237}).
+  \texttt{v242\_spin\_statistics\_modular.py} (\texttt{DHR.MODULAR.01}):
+  spin-statistics, the modular $(S,T)$ data, Verlinde fusion, and Gauss--Milgram
+  $c=8$. \texttt{v243\_haag\_ruelle\_braiding.py} (\texttt{DHR.SMATRIX.01}): the
+  $2$-particle S-matrix $=$ the braiding monodromy (factorised, crossing), with the
+  \vref{v238} mass gap supplying Haag--Ruelle asymptotic states.
+  \texttt{v244\_spectral\_action\_contract.py} (\texttt{CONTRACT.QFT4D.01}): the 4d
+  Lagrangian via the Connes spectral action --- the carrier half-spinor $16$ is one
+  generation, the SM gauge group sits in the carrier, gravity is \vref{v36}; the
+  matter Lagrangian is the open \mO\ contract. Net: the residual to a full 4d QFT is
+  \emph{one premise} (\texttt{QGEO.SYM.01}) plus \emph{one contract}
+  (\texttt{CONTRACT.QFT4D.01}). All wired into \texttt{run\_all.py}, the ledger and
+  registry, cited in \texttt{tfpt\_research\_contracts.tex}, mirrored to the website.
+\end{itemize}
+
+\subsection*{2026-06-17 (The static$\to$dynamic flip: modular flow $+$ a recovery Lindblad generator, \texttt{v238})}
+\begin{itemize}
+\item \textbf{New \texttt{v238\_modular\_lindblad\_dynamics.py} (\texttt{DYN.SEMIGROUP.01}, cluster
+  \texttt{registry}).} A companion to the modular round (\vref{v196}/\vref{v198}) and the recovery code
+  (\vref{v221}/\vref{v64}) that reads the \emph{same} seam objects \emph{dynamically} rather than
+  statically. \mE\ the modular flow $\sigma_t=e^{i t\Lambda_\Sigma}$ is a unitary one-parameter group
+  (Tomita--Takesaki) whose conservation of the $\mu_4$ clock,
+  $\rho\sigma_t\rho^{-1}=\sigma_t\Leftrightarrow[\rho,\Lambda_\Sigma]=0$, IS the \vref{v198}
+  state-invariance --- so the static commutator is the conservation law of modular time. \mE\ the
+  recovery channel's generator $L=\log T$ is a doubly-stochastic/CPTP-classical Markov generator
+  ($e^{L}=T$, $e^{L\tau}\to$ the democratic projector $=$ the arrow of time). \mE\ keystone: the
+  dissipative gap $=-\log((2/3)^6)=6\log(3/2)=$ the OS mass gap $\Delta$ (\vref{v64}) --- the static
+  recovery bound (\vref{v221}) and the dynamical mass gap (\vref{v64}) are one number, one
+  exponentiated. \mE\ the GKSL split $G=i\Lambda_\Sigma+L$ (imaginary $+$ real$\le0$ spectrum). \mO\
+  the residual is the \emph{geometric} modular flow (Connes--Rovelli ``thermal time $=$ physical
+  time'') on the full seam algebra $=$ \texttt{QGEO.SYM.01} (\vref{v198}) --- a target, not a closure.
+  Wired into \texttt{run\_all.py}, \texttt{status\_ledger.csv}, \texttt{script\_registry.csv} and cited
+  in \texttt{tfpt\_research\_contracts.tex}; mirrored to \texttt{website/public/verification}.
+\end{itemize}
+
 \subsection*{2026-06-17 (Experiments: black-hole-cosmology signatures, the $\eta_B$ Boltzmann solve, the Petz/baby-universe realisation, and a real-data GW-echo pipeline)}
 \begin{itemize}
 \item \textbf{Three new standalone black-hole-cosmology experiments (\texttt{experiments/}, all

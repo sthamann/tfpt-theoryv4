@@ -830,6 +830,104 @@ def fig_script_timeline():
     plt.close(fig)
 
 
+def fig_qft_skeleton():
+    """The emergent-QFT skeleton (v238-v246): how the seam chiral net becomes a
+    QFT, each step machine-checked, with the two honest open items flagged red.
+    PDF for the papers + PNG for the site."""
+    from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
+
+    steps = [
+        ("v156/v175", "Seam chiral net $(E_8)_1$, $c=8$", "a 2d chiral QFT exists [E/F]", C["green"]),
+        ("v238", "Modular flow = TIME (reversible)", "$\\sigma_t=e^{i t\\Lambda}$; $\\mu_4$ conserved $\\Leftrightarrow$ v198", C["green"]),
+        ("v238", "Recovery $L$ = ARROW of time", "gap $=6\\ln(3/2)=$ mass gap $=-\\ln(2/3)^6$", C["green"]),
+        ("v239", "KMS thermal time", "$\\beta=1$; $T_H=c_3/M$; $2\\pi=1/(4c_3)$", C["green"]),
+        ("v240", "GNS/OS: Hilbert space + $H\\geq 0$", "$H_{OS}=-L\\geq 0$, gap $=$ mass gap", C["green"]),
+        ("v241/v242", "Particles = DHR sectors", "$\\mathbb{Z}_4\\times\\mathbb{Z}_4$ (16); fusion, spin, $c=8$", C["green"]),
+        ("v243", "S-matrix = braiding", "factorised (Yang-Baxter), crossing; trivial on $E_8$", C["green"]),
+        ("v244/v245", "Spectral action $\\to$ 4d", "$\\mathbf{16}=$ one anomaly-free gen.; $\\sin^2\\theta_W=3/8$", C["gold"]),
+        ("OPEN", "QGEO.SYM.01 (postulate)", "independent of $\\{c_3,g_{car}\\}$ (v201/v210 counter-geoms)", C["red"]),
+        ("OPEN", "RG tension (v246)", "SM content (no new state) misses 1+2-loop; tension like NCG-SM", C["red"]),
+    ]
+    n = len(steps)
+    fig, ax = plt.subplots(figsize=(7.8, 6.8))
+    ax.set_xlim(0, 10); ax.set_ylim(0, n + 0.5); ax.axis("off")
+    ax.set_title("The emergent-QFT skeleton on the seam (v238-v246):\n"
+                 "each step machine-checked; the two open items in red",
+                 fontsize=10.5, color=C["blue"])
+    bw, bh = 8.6, 0.60
+    centers = []
+    for i, (tag, head, sub, col) in enumerate(steps):
+        y = n - i - 0.1
+        x = 0.4
+        box = FancyBboxPatch((x, y - bh / 2), bw, bh,
+                             boxstyle="round,pad=0.04,rounding_size=0.12",
+                             linewidth=1.6, edgecolor=col,
+                             facecolor=col, alpha=0.20 if tag == "OPEN" else 0.10)
+        ax.add_patch(box)
+        ax.text(x + 0.18, y, tag, fontsize=8.4, fontweight="bold", va="center", color=col)
+        ax.text(x + 1.65, y + 0.10, head, fontsize=8.4, va="center", fontweight="bold", color="#222")
+        ax.text(x + 1.65, y - 0.16, sub, fontsize=7.0, va="center", color=C["gray"])
+        centers.append((x + bw / 2, y))
+    for i in range(n - 1):
+        x0, y0 = centers[i]; x1, y1 = centers[i + 1]
+        ax.add_patch(FancyArrowPatch((x0 - 3.2, y0 - bh / 2), (x1 - 3.2, y1 + bh / 2),
+                                     arrowstyle="-|>", mutation_scale=10, color=C["gray"], lw=0.9))
+    ax.text(5.0, 0.06, "Conditional on QGEO.SYM.01; nothing here is marked solved or experimentally confirmed.",
+            fontsize=6.8, ha="center", va="bottom", style="italic", color=C["gray"])
+    fig.tight_layout()
+    fig.savefig(os.path.join(OUT, "qft_skeleton.pdf"))
+    fig.savefig(os.path.join(WEB, "qft_skeleton.png"), dpi=150)
+    plt.close(fig)
+
+
+def fig_qft_unification():
+    """Honest data cross-check (v246): the spectral-action boundary condition
+    g1=g2=g3 / sin^2=3/8 is NOT met by the SM run (1- AND 2-loop) -- the three
+    couplings miss. TFPT has SM gauge content and no new states, so there is no
+    admissible threshold source. A falsifiable tension, not a fit. PDF + PNG."""
+    MZ = 91.1876
+    ainv = np.array([59.01, 29.59, 8.47]); b1 = np.array([41 / 10, -19 / 6, -7.0])
+    b2 = np.array([[199 / 50, 27 / 10, 44 / 5], [9 / 10, 35 / 6, 12.0], [11 / 10, 9 / 2, -26.0]])
+    ts = np.linspace(0, np.log(1e18 / MZ), 600)
+    one = np.array([ainv - b1 / (2 * np.pi) * t for t in ts])        # 1-loop
+
+    def deriv(ai):
+        a = 1.0 / ai
+        return -b1 / (2 * np.pi) - (b2 @ a) / (8 * np.pi**2)
+    two = []; ai = ainv.copy(); dt = ts[1] - ts[0]
+    for _ in ts:
+        two.append(ai.copy())
+        k1 = deriv(ai); k2 = deriv(ai + 0.5 * dt * k1)
+        k3 = deriv(ai + 0.5 * dt * k2); k4 = deriv(ai + dt * k3)
+        ai = ai + dt / 6 * (k1 + 2 * k2 + 2 * k3 + k4)
+    two = np.array(two)
+    x = np.log10(MZ * np.exp(ts))
+
+    fig, ax = plt.subplots(figsize=(6.8, 4.6))
+    labels = [r"$\alpha_1^{-1}$ (U(1)$_Y$)", r"$\alpha_2^{-1}$ (SU(2))", r"$\alpha_3^{-1}$ (SU(3))"]
+    cols = [C["blue"], C["green"], C["red"]]
+    for i in range(3):
+        ax.plot(x, one[:, i], color=cols[i], lw=1.6, label=labels[i])
+        ax.plot(x, two[:, i], color=cols[i], lw=1.1, ls="--", alpha=0.85)
+    ax.plot([], [], color=C["gray"], lw=1.6, label="1-loop (solid)")
+    ax.plot([], [], color=C["gray"], lw=1.1, ls="--", label="2-loop (dashed)")
+    ax.annotate("they MISS\n(1- and 2-loop)", xy=(15.0, 43), xytext=(10.4, 30),
+                fontsize=8.5, color=C["red"], arrowprops=dict(arrowstyle="->", color=C["red"]))
+    ax.set_xlabel(r"$\log_{10}(\mu/\mathrm{GeV})$"); ax.set_ylabel(r"$\alpha_i^{-1}$")
+    ax.set_title("Spectral-action unification vs measured couplings (v246):\n"
+                 "1- and 2-loop both MISS -- a tension, no rescue (SM content, no new state)",
+                 fontsize=9.2, color=C["blue"])
+    ax.legend(fontsize=7.5, loc="upper right"); ax.grid(alpha=0.25)
+    ax.text(0.5, -0.20, "$g_1{=}g_2{=}g_3$, $\\sin^2\\theta_W{=}3/8$ is the spectral-action prediction; with SM content "
+            "and no new states there is no\nadmissible threshold source -- the 4d-GUT route is in tension (like NCG-SM), "
+            "not closed (QFT4D.RGTEST.01).",
+            transform=ax.transAxes, ha="center", fontsize=6.4, style="italic", color=C["gray"])
+    fig.tight_layout()
+    fig.savefig(os.path.join(OUT, "qft_unification.pdf"))
+    fig.savefig(os.path.join(WEB, "qft_unification.png"), dpi=150)
+    plt.close(fig)
+
+
 if __name__ == "__main__":
     fig_alpha_ablation()
     fig_mass_ladder()
@@ -848,4 +946,6 @@ if __name__ == "__main__":
     fig_slice_compression()
     fig_residual_chain()
     fig_script_timeline()
+    fig_qft_skeleton()
+    fig_qft_unification()
     print("figures written to", os.path.normpath(OUT))
