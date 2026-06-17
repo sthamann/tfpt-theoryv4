@@ -680,7 +680,7 @@ export const predictions: Prediction[] = [
     ],
     pdf: "/papers/tfpt_2_standard_model.pdf",
     description:
-      "The closed TFPT CKM point (no flavor fit) feeds the cleanest FCNC probe. With standard external short-distance input (Brod–Gorbahn–Stamou X_t, P_c, κ_±) it gives BR(K⁺→π⁺νν̄) = 9.45×10⁻¹¹ and BR(K_L→π⁰νν̄) = 3.33×10⁻¹¹ — a [C] downstream readout, NOT a compiler power (the SD functions are external). The neutral mode ∝ (Im λ_t)² is a direct probe of the holonomy phase δ_CKM; the current NA62 value (13.0₋₃.₀⁺³·³)×10⁻¹¹ sits ~1.2σ above. The ~2σ δ_CKM tension makes the NA62/KOTO-II corridor a genuinely discriminating, live falsifier (v202).",
+      "The closed TFPT CKM point (no flavor fit) feeds the cleanest FCNC probe. With standard external short-distance input (Brod–Gorbahn–Stamou X_t, P_c, κ_±) it gives BR(K⁺→π⁺νν̄) = 9.45×10⁻¹¹ and BR(K_L→π⁰νν̄) = 3.33×10⁻¹¹ — a [C] downstream readout, NOT a compiler power (the SD functions are external). The neutral mode ∝ (Im λ_t)² is a direct probe of the holonomy phase δ_CKM; the current NA62 value (13.0₋₃.₀⁺³·³)×10⁻¹¹ sits ~1.2σ above. The ~2σ δ_CKM tension makes the NA62/KOTO-II corridor a genuinely discriminating, live falsifier (v202). The leading term δ_CKM = π/3 is the hexagonal CM phase (the Eisenstein modular point j=0, arg ρ = π/3) — CP lives in this Z/6 phase fiber over the square (Z/4) seam deck, the geometric home of the one residual the magnitude logic does not cover (v220).",
     category: "Flavor",
     experiment: {
       summary:

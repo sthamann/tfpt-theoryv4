@@ -65,6 +65,11 @@ bootstrap fixed point* (forced three independent ways via the `E8` closure), so 
   *theorem* — the gapped boundary transport (`Δ = 6·log(3/2) > 0`) has, by Perron–Frobenius, a
   **unique attractor** at rate `(2/3)⁶` (the physical identification of the transport operator
   stays `[P]`); the hull carries a literal order-`30 = 2·3·5` Coxeter cycle.
+- **Icosahedral bedrock** (`v219`): *why* the atoms are `{2,3,5}` — `E₈` is the exceptional top of
+  the McKay tower of finite `SU(2)` subgroups (`2I`, order `120 = |R⁺(E₈)|`, has irrep degrees equal
+  to the affine-`E₈` Kac marks, `Σ = 30 = h(E₈)`), so choosing `E₈` is choosing the icosahedron. A
+  backward certificate, not a P2 proof; the same geometry reads `41` (EM index) as a Gaussian norm and
+  `7` (scalaron) as an Eisenstein norm of the one carrier split (`v222`).
 - **Master cover** (`v85`): all anchor-block pencil covers are *one* double cover up to GL(2)
   Möbius reparametrisation (`disc = N_fam⁴·det(G)²`); Koide and the carrier are its two branch
   points, the scalaron exponent its trace; `μ₄` is *not* a 4:1 cover of the line (honest negative).

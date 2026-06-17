@@ -363,6 +363,16 @@ with the product rule $=|\mu_4|/\det(\mathbf1+\tfrac12\widetilde M_0)=\tfrac{32}
 and $9$ \emph{are} the two family-resolvent determinants ($\times2^3$), and $\delta=\tfrac12=
 |(\widetilde M_0)_{22}|$ is supplied by the monodromy itself. The $e/\mu/\tau$ \emph{leg assignment}
 remains the established input above; nothing is re-fitted.
+\smallskip\\
+\noindent\emph{The lepton ring is an \'etale Frobenius algebra \mE/\mC\ (\veri{v229\_lepton\_frobenius\_algebra.py}).}
+The three coefficients are the spectrum of the commutative algebra $A=\mathbb Q[t]/(m)$,
+$m=(t{-}c_e)(t{-}c_\mu)(t{-}c_\tau)$: $A$ is \emph{\'etale} (separable), so the trace form
+$(x,y)\mapsto\operatorname{Tr}(xy)$ is nondegenerate ($\det\mathrm{Gram}=\operatorname{disc}(m)\neq0$) --- the
+defining property of a (commutative) Frobenius algebra --- and it lives over the $\mu_6$ resolvent
+($C_6$ has characteristic polynomial $t^6{-}1$, spectrum $\mu_6=\mu_3$ family $\times\,\mu_2$ sheet). So the
+charged-lepton boundary is a genuine finite Frobenius object \mE; the PMNS extension (its automorphisms plus
+the hexagonal CM phase $j{=}0$, \veri{v220\_cp\_hexagonal\_modulus.py}) is the natural \mC\ candidate, not a
+closure of the matrix.
 
 \smallskip
 \noindent\emph{Scope (honest).} This law is lepton-specific. Applied to the down sector it fails provably:
@@ -630,6 +640,24 @@ $(1,3,4,6)=(N_\Phi,\Nfam,|\mu_4|,|R^+(A_3)|)$ and kernels $(13,48,65,105)=(\Delt
 $\cdot$ scalaron). \emph{Audit:} the anchor-defect spectrum $\Delta_a(Q,K,R,C,L,F)=(8,16,18,21,24,26)$ and the
 corner-determinant pair-sum atlas (total $64=\dim S^+|\mu_4|$, staircase sum $81=\Nfam^4$) are recorded
 fingerprints --- the $2\dim G_2$ and $\dim F_4$ pair sums stay audit-only, like the $G_2$ center above.
+\smallskip\\
+\noindent\textbf{$F_{\mathrm{transfer}}$ is a path, not four interfaces (\veri{v224\_diamond\_ftransfer\_path.py}).}
+The corners $K{=}M(1,{-}1)$, $C{=}M(1,0)$, $F{=}M(1,1)$ lie on the \emph{sheet axis} $s{=}1$: the determinant
+there is the curved $\det M(1,t)=4t^2{+}14t{+}14$ (values $(4,14,32)$, 2nd difference $8{=}\operatorname{rank}E_8$),
+while the winding axis $\det M(s,0)=6s{+}8$ is flat. So $F_{\mathrm{transfer}}$ is read as \emph{one discrete
+geodesic} $K\to C\to F$ on the diamond (the Pl\"ucker steps $(1,8,10),(1,8,16)$ above), of which the Koide
+source$\to$pole M\"obius relaxation is the $1$-D projection (\vref{v37}/\vref{v183}); the external QFT solver
+evaluates continuously \emph{along} this known path \mC. The diagonal cut $t{=}s$ mixes the axes (negative
+control), so only the $s{=}1$ sheet axis is the branch-preserving transfer direction.
+\smallskip\\
+\noindent\textbf{The center collects the three local norms (\veri{v230\_center\_budget\_norms.py}).} The
+center's row sums are $(7,11,13)$, and these are the three \emph{local norms} of the theory:
+$7=N_{\mathbb Z[\omega]}(3{+}2\omega)$ (the Eisenstein/hexagonal CM norm $=$ scalaron exponent),
+$13=N_{\mathbb Z[i]}(3{+}2i)$ (the Gaussian/square CM norm $=\Delta_Q$), and
+$11=\binom40{+}\binom41{+}\binom42=1{+}4{+}6$ (the QBL boundary Fock count on the four $\mu_4$ corners
+$=\dim S^+{-}\gcar=16{-}5$). So $C=(\text{hex norm},\,\text{boundary Fock count},\,\text{square norm})$: the
+two exceptional CM rings (\veri{v222\_cm\_norm\_duality.py}) and the seam boundary count meet in one operator
+center, the ring assignment rigid \mE.
 \smallskip\\
 \noindent\textbf{The Winding Line.} On $R_s=R+s\,\mathbf 1e_1^\top$ (the $R\to L$ channel) anchor area and
 torsion volume run \emph{synchronously} for all $s$:

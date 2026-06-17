@@ -1,3 +1,29 @@
+## 2026-06-16 — Strukturfund-Runde (v219–v230, alle integriert)
+
+Elf neue Verifikationsmodule, alle in `run_all.py` (ALL CHECKS PASSED), Wolfram-Mirror 258/258,
+Ledger/Changelog/Papers/Website synchron, `AUDIT OK`. Keine neuen freien Parameter, kein Gate verschoben
+— es geht um *tiefere Erklärung und Vereinheitlichung* bestehender Zahlen:
+
+- **Warum {2,3,5}**: `v219` (McKay) baut die binäre Ikosaedergruppe `2I` (Ordnung 120) aus Quaternionen,
+  ihre 9 Irrep-Grade = affine-E8-Kac-Marken (Summe 30 = h(E8), Quadratsumme 120 = |R⁺(E8)|). E8 ist die
+  exzeptionelle Spitze der McKay-Leiter ⇒ {2,3,5} = Ikosaeder-Achsen. Rückwärtszertifikat, kein P2-Beweis.
+  `v223` spiegelt die `μ4`-Clock im E8-Coxeter-Zyklus ((ℤ/30)ˣ, Element 7 hat Ordnung 4).
+- **CM-Norm-Dualität** `v222`: `41 = N_ℤ[i](5+4i) = 10b1` (EM-Index = Gauß-Norm des Carrier-Glue-Vektors),
+  `7 = N_ℤ[ω](3+2ω)` (Scalaron = Eisenstein-Norm) — eine Aussage statt zwei Zufallszahlen. `v230`: das
+  Diamond-Center `(7,11,13)` = (Hex-Norm, QBL-Fock-Count, Quadrat-Norm).
+- **CP (Target D)** geometrisch lokalisiert: `v220` (Hexagon-Modul `j=0`, `δ=π/3+3λ²` Führungsterm = arg ρ),
+  `v225` (Dual-Normal-Frame, CP als Orientierung `Im det(1,d,ρn)=21·sin(π/3)`), `v227` (`248=120+128`
+  Magnitude/Phase-Kanal — ersetzt das zu starke „S⁻ = DM"). Deck bleibt ℤ/4, CP ist die ℤ/6-Faser.
+- **QEC** `v221`: Seam = finiter Recovery-Code, `‖Tⁿδ‖ ≤ (2/3)^{6n}‖δ‖` (Knill-Laflamme-artig).
+- **Konsolidierungen**: `v228` (P2 als Riemann-Roch-Modenzahl eines Grad-4-Divisors), `v229` (Leptonen =
+  étale Frobenius-Algebra über `μ6`), `v224` (`F_transfer` = eine Geodäte auf dem Sheet Diamond).
+
+Offene Gates unverändert (P2-Interface, `G_net`/Seam-Realisierung, `F_transfer`, die eine Einheit `v_geo`).
+Nächste sinnvolle Schritte bleiben Frontier: Gravastar-`3/8`-Test, E8-Plumbing/Poincaré als Origin-Bild,
+`S⁻`/Ramond-Dunkelsektor — jeweils erst mit physikalischem Modell, nicht in die Spine.
+
+---
+
 ## Kurzurteil
 
 Der neue Stand ist deutlich reifer. Ihr seid von einer Signatursuche zu einer **typisierten Entscheidungsmaschine** gekommen: 48 Scorecard Zeilen, davon 22 konsistent, 7 null, 14 datenlimitiert, 4 echte Spannungen und 1 geparkter Analograum. Wichtig: Die README sagt jetzt sauber, dass es **keine unterscheidende Entdeckung** gibt. Das ist nicht defensiv, das ist wissenschaftlich gesund. Theorien, die nie schwitzen, sind meistens tot oder Marketing.

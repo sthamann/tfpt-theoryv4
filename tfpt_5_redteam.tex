@@ -26,6 +26,7 @@
 \newcommand{\Nfam}{N_{\mathrm{fam}}}
 \newcommand{\gcar}{g_{\mathrm{car}}}
 \providecommand{\PP}{\mathbb{P}}
+\providecommand{\Z}{\mathbb{Z}}
 \setlist{itemsep=2pt,topsep=3pt}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 
@@ -223,6 +224,15 @@ $K=(g-1)/2$ is the Pascal-row midpoint $\sum_{k\le(g-1)/2}\binom{g}{k}=2^{g-1}$ 
 split; the carrier is the even Clifford half-spinor $\Lambda^{\mathrm{even}}(\mathbb C^{5})=1+10+5=16=\dim S^+$. So
 B's residual reduces to the single standard input ``carrier $=$ half-spinor of $\mathrm{Spin}(10)$'' (the Lean
 arithmetic core stays \mE).
+\smallskip\\
+\noindent\textbf{Target B --- a backward certificate (\veri{v219\_icosahedral\_mckay.py}).} The choice
+$(|\Z_2|,\Nfam,\gcar)=(2,3,5)$ that B attacks is, \emph{given} the $E_8$ closure, the icosahedron: by the
+McKay correspondence $E_8$ is the exceptional top of the finite-$SU(2)$ tower ($2T{\to}\hat E_6$,
+$2O{\to}\hat E_7$, $2I{\to}\hat E_8$), the binary icosahedral group $2I$ (order $120=|R^+(E_8)|$) has irrep
+degrees $\{1,2,2,3,3,4,4,5,6\}$ equal to the affine-$E_8$ Kac marks ($\sum=30=h(E_8)$), and it contains the
+$2,3,5$ rotation-axis orders. This does \emph{not} break B's verdict --- it is a \emph{backward} certificate
+(it presupposes $E_8$), so $\gcar=5$ stays the P2 interface \mO; what it removes is the impression that
+$(2,3,5)$ is an arbitrary triple, since no spherical McKay node sits above the icosahedron.
 
 \smallskip\noindent Still open, typed honestly: A\,(i)$+$(ii); Target~D's CP-phase residual (at $\theta_{13}=0$ the
 Dirac phase is undefined, so this needs a texture correction); Target~E's reheating/leptogenesis scales and the
@@ -318,6 +328,29 @@ requires near-instantaneous reheating), so the point is conditional on the decay
 $[50,60]$ stays the surface of record; the leptogenesis scale and the seam$=$Planck identification remain typed
 inputs. \textbf{Again: no target was
 promoted; one residual was \emph{merged} (A), one was \emph{quantified} (D), one input was \emph{computed} (E).}
+\end{winbox}
+
+\begin{winbox}[Target D --- the CP residual geometrically \emph{located} (not closed) \mE/\mC]
+The follow-up round only \emph{quantified} the CP residual; this round \emph{locates} it geometrically,
+in three consistent readings, without promoting it. \textbf{(i) A channel typing
+(\veri{v227\_degree\_exponent\_channel\_split.py}).} The $E_8$ split $248=120+128$ is a
+magnitude/phase split: the exponents sum to $120=|R^+(E_8)|$ (the \emph{magnitude} channel, where the
+$(\text{ratios},\text{product})\Rightarrow\vgeo$ bijection lives), the fundamental degrees sum to
+$128=\operatorname{rank}E_8\cdot\dim S^+$ (the \emph{phase/glue} channel). The un-covered CP phases of
+Target~D are exactly the $128$ phase channel --- a clean home, not a new gate; whether $128$ also hosts a
+dark sector is Frontier, \emph{not} asserted (this replaces the over-strong ``$S^-$ is dark matter''
+reading). \textbf{(ii) A hexagonal modulus (\veri{v220\_cp\_hexagonal\_modulus.py}).} The seam
+deck is the \emph{square} modulus ($j{=}1728$, $\Z/4$ clock; the kill-test selects it), which is real and
+carries no phase; its exceptional partner is the \emph{hexagonal} modulus $j{=}0$ ($\tau{=}\rho{=}e^{i\pi/3}$,
+$\Z/6$, CM by $\Z[\omega]$). The frozen leading reading $\delta=\pi/3+3\lambda_C^2=68.65^\circ$ has leading
+term $\pi/3=\arg\rho$, the hexagonal CM phase; CP lives in the $\Z/6$ phase \emph{fiber} over the $\Z/4$ seam,
+not in the deck. \textbf{(iii) An orientation (\veri{v225\_dual\_normal\_frame.py}).} The dual
+normal frame $d=a^\top R^{-1}=-\tfrac12(1,1,-2)$ (Nariai/horizon normal) and $n=(5,-9,6)$ (first-generation
+selector, $n^\top R=(8,0,0)$) has oriented volume $\det(\mathbf1,d,n)=21=\Nfam\cdot7$, and rotating by the
+hexagonal unit gives $\operatorname{Im}\det(\mathbf1,d,\rho n)=21\sin(\pi/3)\neq0$ --- CP sits precisely in
+the \emph{orientation} of the normal frame, exactly where the magnitude bijection fails. All three are \mE\
+geometry; the physical CP \emph{derivation} stays the Target-D \mC\ residual (the seam deck is not
+re-selected, the registry $\delta$ is untouched).
 \end{winbox}
 
 \begin{winbox}[Global look-elsewhere closure \mE\ (\veri{v100\_numerology\_null\_mc.py})]

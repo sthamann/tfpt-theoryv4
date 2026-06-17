@@ -560,6 +560,19 @@ residue pairing $\operatorname{Res}(\omega_i,\gamma_j)=\delta_{ij}$ and form the
 The corner rotation $z\mapsto iz$ acts on $H^1=\mathbb C^3$ as the $A_3$ Coxeter element (order
 $4=h(A_3)=|\mu_4|$, spectrum $\{i,-1,-i\}$, $\chi=\Phi_4\Phi_2$), an isometry of the Cartan form ---
 the exact analogue of the $E_8$ Coxeter element reading $\Phi_{30}$.
+\par\smallskip\noindent\textbf{The $\mu_4$ clock is the order-$4$ character of the $E_8$ cycle, and $(2,3,5)$
+is the icosahedron (\veri{v223\_coxeter\_totative\_clock.py}, \veri{v219\_icosahedral\_mckay.py}).} The two
+``Coxeter'' clocks are one object read at two scales. The $E_8$ exponents are the totatives
+$(\Z/30)^\times=\{1,7,11,13,17,19,23,29\}$, and the multiplicative order-$4$ element $7$ ($7^2{=}19$,
+$7^4{=}1\bmod30$) generates a literal $\mu_4$ clock $\langle7\rangle=\{1,7,13,19\}$ that permutes the four
+conjugate Coxeter $2$-planes --- the same $\mu_4$ as the seam corner rotation. And the period
+$30=2{\cdot}3{\cdot}5$ itself is not a free factorisation: by the McKay correspondence $E_8$ is the
+exceptional \emph{top} of the tower of finite $SU(2)$ subgroups ($2T{\to}\hat E_6$, $2O{\to}\hat E_7$,
+$2I{\to}\hat E_8$), so its branch data is the \emph{icosahedron} and the three atoms $(|\Z_2|,\Nfam,\gcar)
+=(2,3,5)$ are its rotation-axis orders. The binary icosahedral group $2I$ (order $120=|R^+(E_8)|$) has nine
+irreducible-representation degrees $\{1,2,2,3,3,4,4,5,6\}$ equal to the affine-$E_8$ Kac marks, with
+$\sum d_i=30=h(E_8)$ and $\sum d_i^2=120$. This is a \emph{backward certificate} of the closed $E_8$ \mE\
+(it explains the $(2,3,5)$ choice \mC; it does \emph{not} replace the P2 input).
 \par\smallskip\noindent\textbf{The metric, settled (former \mC).}
 The transcendental geometric (Green) metric $G_{ij}=-\log|p_i-p_j|$ on $\mu_4$ is only
 $D_4$-symmetric, with a regularisation-independent anisotropy $-\log2$ on the root space, so it is
@@ -668,7 +681,18 @@ then gives a second reading of the $U(1)$ integer,
 \begin{equation}
   \boxed{\ 10b_1=\dim D_5-|\mu_4|=45-4=41=\underbrace{40}_{\sum L}+\underbrace{(\gcar-|\mu_4|)}_{=N_\Phi=1}\ }\qquad\mE ,
 \end{equation}
-i.e.\ the single Higgs doublet is the carrier rank minus the glue corners, $5-4=1$. The start defect
+i.e.\ the single Higgs doublet is the carrier rank minus the glue corners, $5-4=1$.
+\par\smallskip
+\noindent\emph{A fourth, metric reading of $41$ (\veri{v222\_cm\_norm\_duality.py}).} On the square seam
+($j{=}1728$, complex multiplication by the Gaussian integers $\Z[i]$) the $U(1)$ index is the Gaussian
+\emph{norm} of the carrier-glue vector,
+\[
+  10b_1=N_{\Z[i]}(\gcar{+}i|\mu_4|)=\gcar^2+|\mu_4|^2=5^2+4^2=41 ,
+\]
+and the hexagonal partner ($j{=}0$, Eisenstein $\Z[\omega]$) reads the same $(3,2)$ carrier split as the
+scalaron exponent $N_{\Z[\omega]}(3{+}2\omega)=3^2{-}3{\cdot}2{+}2^2=7$. So $41$ (EM) and $7$ (scalaron)
+are the two exceptional CM norms of the one carrier, square vs.\ hexagonal --- not two unrelated $O(1)$
+numbers \mE. The start defect
 $60$ and the hypercharge moment $120$ are ``bilingual'':
 \begin{equation}
 \begin{gathered}

@@ -156,7 +156,16 @@ $I(A{:}C|B)_n\sim\lambda_2^{\,n}=(2/3)^{6n}$. \textbf{This is the same operator 
 Model:} the boundary transport spectrum is $\{1,(2/3)^6,(1/3)^6\}$ and its sub-leading eigenvalue
 $\lambda_2=(2/3)^6$ is exactly the flavor-gap eigenvalue ($\Delta_{\mathrm{gap}}=-\log(2/3)^6=6\log\tfrac32$).
 One boundary transport thus governs \emph{both} the SM flavor hierarchy and the horizon information recovery.
-\mE\ \veri{v54\_seam\_horizon\_keystones.py} The scrambling prefactor carries a $\mu_4$ signature: with
+\mE\ \veri{v54\_seam\_horizon\_keystones.py}
+\par\smallskip
+\noindent\textbf{The recovery is a finite code (\veri{v221\_seam\_qecc.py}).} Read as a quantum channel,
+this is a finite recoverability (error-correction-style) code: the code space is the carrier half-spinor
+$\dim S^+=16$, the gapped transport $T$ on the cusp-weight $3$-space (deviation directions $(1,{-}1,0)$ and
+the Nariai anchor $(1,1,{-}2)$) is symmetric and doubly stochastic (CPTP), and on the trace-zero subspace it
+contracts with operator norm exactly $(2/3)^6$, so $\|T^n\delta\|\le(2/3)^{6n}\|\delta\|$ --- a
+Knill--Laflamme-type per-step recovery bound, with a free ratio breaking it. ``Finite recoverability code''
+is \mE; the holographic/Petz identification of $T$ with the Page recovery map is \mC, gated on the
+Seam--Horizon theorem. The scrambling prefactor carries a $\mu_4$ signature: with
 $\beta=1/T_H=8\pi M$, $\beta/2\pi=4M$, so
 \[
   \boxed{\ t_{\mathrm{scr}}\sim|\mu_4|\,M\log S\ }\qquad(|\mu_4|=4)\qquad\mE\text{-audit}.

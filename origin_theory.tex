@@ -127,6 +127,35 @@ transport value $\delta=|\Z_2|/|\mu_4|=\tfrac12$, their product is $\dim\mathfra
 and their ratio is $\gcar/\Nfam=\tfrac53$ \veri{v51\_boundary\_half\_step.py}. The single transcendental is
 $\pi$; both $\pi$-coefficients are $2\pi$ times a compiler integer.
 
+\begin{keybox}[The icosahedral bedrock: \emph{why} the atoms are $\{2,3,5\}$ \mE\ (\veri{v219\_icosahedral\_mckay.py})]
+The pair $(\gcar,\Nfam)=(5,3)$ and the sheet $|\Z_2|=2$ are not three free small integers: $\{2,3,5\}$ is
+forced as soon as one fixes $E_8$. By the \textbf{McKay correspondence} the finite subgroups of $SU(2)$ are
+classified by the affine ADE diagrams, and $E_8$ is the exceptional \emph{maximum} of that spherical tower
+($2T{\to}\hat E_6$, $2O{\to}\hat E_7$, $2I{\to}\hat E_8$). Its branch data is the \emph{icosahedron}: the
+binary icosahedral group $2I$ (order $120{=}|R^+(E_8)|$) has element orders $\{1,2,3,4,5,6,10\}$ --- it
+literally \emph{contains} the $2,3,5$ rotation-axis orders --- and its nine irreducible representations have
+dimensions $\{1,2,2,3,3,4,4,5,6\}$, the Kac marks of $\hat E_8$, with
+\[
+  \sum_i d_i = 30 = h(E_8) = |\Z_2|\cdot\Nfam\cdot\gcar = 2\cdot3\cdot5,\qquad
+  \sum_i d_i^2 = 120 = |R^+(E_8)| .
+\]
+The McKay graph is \emph{built from the group} (the natural $2$-dim rep gives the affine $E_8$ adjacency,
+top eigenvalue $2$, with marks $=$ degrees), so the recurring $\{2,3,5\}$ signature has a single bedrock:
+$E_8$ \emph{is} the icosahedron. This is a \emph{backward certificate} of the already-closed $E_8$ \mE; the
+reading ``it explains the $(2,3,5)$ choice'' is \mC; the raw-seam origin (without first positing $E_8$) stays
+the \mO\ P2 interface. The same exceptional geometry has two metric readings via complex multiplication
+(\veri{v222\_cm\_norm\_duality.py}): on the \emph{square} seam ($j{=}1728$, Gaussian $\Z[i]$) the EM index is
+the Gaussian norm $N(\gcar{+}i|\mu_4|)=5^2{+}4^2=41=10b_1$, while on the \emph{hexagonal} partner ($j{=}0$,
+Eisenstein $\Z[\omega]$) the scalaron exponent is $N(3{+}2\omega)=7$ --- the carrier split $(3,2)$ generates
+$(5,6,7,13)$ by sum/product/Eisenstein/Gauss norm, the rings rigid. And the seam $\mu_4$ clock is the
+order-$4$ character of the $E_8$ Coxeter cycle itself: $(\Z/30)^\times$ are the $E_8$ exponents, with the
+order-$4$ generator $7$ acting as a literal $\mu_4$ clock on the eight live phases
+(\veri{v223\_coxeter\_totative\_clock.py}). Finally, P2 itself reads as a Riemann--Roch index: a degree-$4$
+seam divisor on $\PP^1$ forces $h^0{=}5{=}\gcar$ and $\operatorname{rank}H_1{=}3{=}\Nfam$, with even Clifford
+closure $\Lambda^{\mathrm{even}}(\mathbb C^5)=16=\dim S^+$ (\veri{v228\_rr\_index\_gate.py}, \mE/\mC/\mO,
+conditional on the seam producing the degree-$4$ divisor $=$ \texttt{QGEO.SYM.01}).
+\end{keybox}
+
 % =====================================================================
 \section{The ``$8$'' is triply forced: geometry $=$ lattice $=$ gravity}\label{sec:eight}
 % =====================================================================
@@ -261,6 +290,16 @@ identical fixed direction (cosine $=1$); the iterated operator tends to the rank
 eigenvector (only the boundary ``law'' survives). The convergence rate is exactly $(2/3)^6$. Hence the
 realized boundary state is a \emph{dynamical attractor}: the constants are selected, not chosen.
 \end{keybox}
+
+\noindent\textbf{The same gap is a finite recoverability code \mE/\mC\ (\veri{v221\_seam\_qecc.py}).} Read as
+a quantum channel, the gapped transport is a finite recoverability (error-correction-style) code on the
+carrier code space $\dim S^+=16$: the transport $T$ on the cusp-weight three-space (deviation directions
+$(1,{-}1,0)$ and the Nariai anchor $(1,1,{-}2)$) is symmetric and doubly stochastic (CPTP) with spectrum
+$\{1,(2/3)^6,(1/3)^6\}$, so on the trace-zero (deviation) subspace it contracts with operator norm exactly
+$(2/3)^6$, giving the per-step recovery bound $\|T^n\delta\|\le(2/3)^{6n}\|\delta\|$ (Knill--Laflamme type);
+a free ratio $r\neq(2/3)^6$ breaks it. ``Finite recoverability code'' is the \mE\ statement; the holographic
+(Page/Petz) reading --- the same $(2/3)^6$ that recovers horizon information across the seam --- is \mC,
+gated on the Seam--Horizon theorem (\S\ref{sec:crosslinks}).
 
 % =====================================================================
 \section{One $\ainv$ for electromagnetism, the cosmic horizon and $\Lambda$}\label{sec:alpha}

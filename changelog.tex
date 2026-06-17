@@ -59,6 +59,69 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-16 (the icosahedral bedrock, CM-norm duality, and a structural-finds round)}
+\begin{itemize}
+\item \textbf{McKay bedrock: why the atoms are $\{2,3,5\}$ (\texttt{v219\_icosahedral\_mckay},
+  \texttt{origin\_theory}, \mE).} $E_8$ is the exceptional \emph{top} of the McKay tower of finite
+  $SU(2)$ subgroups ($2T{\to}\hat E_6$, $2O{\to}\hat E_7$, $2I{\to}\hat E_8$). Built \emph{from the
+  group}: the $120$ unit-quaternion icosians close to the binary icosahedral group $2I$ (element orders
+  $\{1,2,3,4,5,6,10\}$ --- it contains the $2,3,5$ rotation-axis orders), $9$ conjugacy classes; the
+  $9$ irreducible character degrees (Dixon, from the class algebra) are $\{1,2,2,3,3,4,4,5,6\}$, sum
+  $30{=}h(E_8)$, sum of squares $120{=}|R^+(E_8)|$; the McKay adjacency from the natural $2$-dim rep
+  \emph{is} the affine $E_8$ graph with Kac marks $=$ the degrees. A backward certificate of the closed
+  $E_8$, not a P2 proof (\texttt{MCKAY.E8.01}).
+\item \textbf{CM-norm duality: $41$ (square) and $7$ (hex) (\texttt{v222\_cm\_norm\_duality},
+  \texttt{origin\_theory}, \mE).} The square seam (Gaussian $\Z[i]$, $j{=}1728$) gives
+  $N(\gcar{+}i|\mu_4|){=}5^2{+}4^2{=}41{=}10b_1$ (the EM index \emph{is} the Gaussian norm of the
+  carrier-glue vector) and $N(3{+}2i){=}13{=}\Delta_Q$; the hexagonal partner (Eisenstein $\Z[\omega]$,
+  $j{=}0$) gives $N(3{+}2\omega){=}7{=}$ scalaron. The $(3,2)$ split generates $(5,6,7,13)$ by
+  sum/product/Eisenstein/Gauss norm; rings rigid (\texttt{CMNORM.DUAL.01}).
+\item \textbf{The $\mu_4$ clock is the order-$4$ character of the $E_8$ Coxeter cycle
+  (\texttt{v223\_\allowbreak coxeter\_\allowbreak totative\_\allowbreak clock}, \texttt{origin\_theory}, \mE).} $(\Z/30)^\times$ are the
+  $E_8$ exponents; the order-$4$ generator $7$ ($\langle7\rangle{=}\{1,7,13,19\}$) is a literal $\mu_4$
+  clock permuting the four conjugate planes; only $E_8$ has $\varphi(h){=}\mathrm{rank}$ and
+  $h{=}2{\cdot}3{\cdot}5$ (\texttt{COX.CLOCK.01}).
+\item \textbf{$248{=}120{+}128$ as a magnitude/phase channel typing
+  (\texttt{v227\_\allowbreak degree\_\allowbreak exponent\_\allowbreak channel\_\allowbreak split},
+  \texttt{tfpt\_5\_redteam}, \mE).} Exponents sum $120{=}|R^+(E_8)|$ (magnitude channel), degrees sum
+  $128{=}\mathrm{rank}\cdot\dim S^+$ (phase/glue channel); the red-team Target~D magnitude bijection
+  lives in $120$, the un-covered CP phases in $128$; the dark-sector reading of $128$ stays Frontier
+  (replaces the over-strong $S^-$ reading; \texttt{E8.CHAN.01}).
+\item \textbf{P2 as the mode space of a degree-$4$ seam divisor (\texttt{v228\_rr\_index\_gate},
+  \texttt{origin\_theory}, \mE/\mC/\mO).} A Riemann--Roch index gate: $\deg D{=}4{=}|\mu_4|$ on $\PP^1$
+  forces $h^0{=}5{=}\gcar$, $\mathrm{rank}\,H_1{=}3{=}\Nfam$, $h^0{+}H_1{=}8{=}\mathrm{rank}\,E_8$,
+  $\Lambda^{\mathrm{even}}(\mathbb C^5){=}16{=}\dim S^+$ --- bedrock language for P2, conditional on the
+  seam producing the degree-$4$ divisor (\texttt{QGEO.RR.01}).
+\item \textbf{The seam as a finite recoverability code (\texttt{v221\_seam\_qecc},
+  \texttt{origin\_theory}, \mE/\mC).} Code dimension $\dim S^+{=}16$; the gapped transport is a CPTP
+  doubly-stochastic contraction with spectrum $\{1,(2/3)^6,(1/3)^6\}$, recovery bound
+  $\|T^n\delta\|{\le}(2/3)^{6n}\|\delta\|$ (Knill--Laflamme type); free ratio breaks it. Holographic/Petz
+  reading \mC, gated on the Seam--Horizon theorem (\texttt{QEC.SEAM.01}).
+\item \textbf{CP lives in the hexagonal phase fiber (\texttt{v220\_cp\_hexagonal\_modulus},
+  \texttt{tfpt\_5\_redteam}, \mE/\mC).} The seam deck is the square modulus $j{=}1728$ ($\Z/4$); its
+  partner is the hexagonal $j{=}0$ ($\Z/6$, $\arg\rho{=}\pi/3$). The frozen $\delta{=}\pi/3{+}3\lambda_C^2
+  {=}68.654^\circ$ has leading term $\pi/3{=}\arg\rho$; the deck stays $\Z/4$, CP is the $\Z/6$ fiber
+  (\texttt{CP.MOD.01}).
+\item \textbf{The dual normal frame $(d,n)$ with CP as orientation (\texttt{v225\_dual\_normal\_frame},
+  \texttt{tfpt\_5\_redteam}, \mE/\mC).} $d{=}a^\top R^{-1}{=}({-}\tfrac12,{-}\tfrac12,1){=}{-}\tfrac12$
+  Nariai; $n{=}(5,{-}9,6)$ reads $\det$ on the first-generation column; $\det(\mathbf1,d,n){=}21{=}3{\cdot}7$;
+  $\mathrm{Im}\det(\mathbf1,d,\rho n){=}21\sin(\pi/3)$ --- CP as orientation (\texttt{DUAL.FRAME.01}).
+\item \textbf{$F_{\mathrm{transfer}}$ as one path on the Sheet Diamond (\texttt{v224\_diamond\_ftransfer\_path},
+  \texttt{tfpt\_2\_standard\_model}, \mE/\mC).} $M(s,t){=}R{+}Q\,\mathrm{diag}(s,t,t)$: $K,C,F$ on the
+  sheet axis (curved, 2nd diff $8$), the winding axis flat (slope $6$), Pl\"ucker steps $(1,8,10),(1,8,16)$;
+  the Koide source$\to$pole is the $1$-D projection (\texttt{FTR.PATH.01}).
+\item \textbf{The charged leptons as an \'etale Frobenius algebra (\texttt{v229\_lepton\_frobenius\_algebra},
+  \texttt{tfpt\_2\_standard\_model}, \mE/\mC).} $(c_e,c_\mu,c_\tau){=}(\tfrac{16}7,\tfrac43,\tfrac76)$,
+  ring closure $c_e c_\tau{=}\tfrac83{=}|\Z_2|c_\mu$, product $\tfrac{32}9$; $A{=}\mathbb Q[t]/(m)$ is \'etale
+  (trace-form Gram nondegenerate), a commutative Frobenius algebra over the $\mu_6$ resolvent
+  (\texttt{LEP.FROB.01}).
+\item \textbf{The center budget $(7,11,13)$ as three local norms (\texttt{v230\_center\_budget\_norms},
+  \texttt{tfpt\_2\_standard\_model}, \mE).} $C{=}R{+}Q\,\mathrm{diag}(1,0,0)$ row sums $(7,11,13)$:
+  $7{=}N_{\Z[\omega]}(3{+}2\omega)$ (hex), $13{=}N_{\Z[i]}(3{+}2i)$ (square), $11{=}\binom40{+}\binom41{+}\binom42$
+  (QBL Fock count); the two CM rings and the boundary count meet in one operator center
+  (\texttt{CENTER.NORM.01}).
+\end{itemize}
+
 \subsection*{2026-06-15 (the diamond axis geometry --- two axes + the transfer corner)}
 \begin{itemize}
 \item \textbf{The Sheet Diamond is a discrete geometry with two axes

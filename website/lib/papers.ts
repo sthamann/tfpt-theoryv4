@@ -931,6 +931,14 @@ export const papers: Paper[] = [
         ],
       },
       {
+        title: "The icosahedral bedrock: why the atoms are {2,3,5}",
+        body: "E₈ is the exceptional top of the McKay tower of finite SU(2) subgroups (2T→Ê₆, 2O→Ê₇, 2I→Ê₈), so choosing E₈ is choosing the icosahedron. The McKay graph is built from the group: the 120 icosians close to the binary icosahedral group 2I (element orders containing the 2,3,5 axes), and its nine irreducible-representation degrees are exactly the affine-E₈ Kac marks. A backward certificate of the closed E₈, not a P2 proof. The same exceptional geometry has two complex-multiplication readings: the square modulus (j=1728) gives the EM index 41 as a Gaussian norm, the hexagonal partner (j=0) gives the scalaron 7 as an Eisenstein norm.",
+        formulas: [
+          "2I\\;(|2I|=120):\\;\\; \\{1,2,2,3,3,4,4,5,6\\} = \\text{affine } E_8 \\text{ marks}, \\;\\; \\textstyle\\sum d_i = 30 = h(E_8), \\;\\; \\sum d_i^2 = 120 = |R^+(E_8)|",
+          "41 = N_{\\mathbb{Z}[i]}(5+4i) = 10b_1, \\qquad 7 = N_{\\mathbb{Z}[\\omega]}(3+2\\omega) = \\text{scalaron}",
+        ],
+      },
+      {
         title: "The '8' is triply forced",
         body: "The seam denominator is fixed three independent ways. If the seam is a horizon, the gravitational 8π forces c₃; it must then coincide with the geometric 2|μ₄| (Gauss–Bonnet) and the lattice rank E₈ — all three give 8.",
         formulas: [
@@ -978,7 +986,8 @@ export const papers: Paper[] = [
     ],
     highlights: [
       { label: "Skeleton", value: "(5,3)", description: "One pair generates the integer alphabet" },
-      { label: "Δ_Y", value: "25 = 9 + 16", description: "Pythagorean mass volume" },
+      { label: "McKay bedrock", value: "2I → Ê₈", description: "Why {2,3,5}: E₈ is the icosahedral top (marks = irrep degrees)" },
+      { label: "CM norms", value: "41 · 7", description: "Square (Gauss) gives the EM index, hexagon (Eisenstein) the scalaron" },
       { label: "Gap", value: "6 log(3/2)", description: "Positive ⇒ unique attractor" },
       { label: "Free numbers", value: "0", description: "Only π is primitive" },
     ],

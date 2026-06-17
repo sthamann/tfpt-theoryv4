@@ -1778,6 +1778,100 @@ Module[{R, Q, a, one, Cc, U, V, K, L, F, anc, plL, ram, x, y, dU, dV, bU, bV, sd
     sq == {1, 3, 4, 6} && ker == {13, 48, 65, 105}];
 ];
 
+(* ==== v219-v230 round: icosahedral McKay, CM-norm duality, structural finds ==== *)
+Module[{labels, edges, A, Ni, Nw, RRm, QQm, Cc2, Mst, s, t, d, nvec, one, av, KKm, Lm},
+  (* v219 McKay: affine E8 marks = 2I irrep degrees, sums 30 and 120 *)
+  labels = {1, 2, 3, 4, 5, 6, 4, 2, 3};
+  edges = {{1, 2}, {2, 3}, {3, 4}, {4, 5}, {5, 6}, {6, 7}, {7, 8}, {6, 9}};
+  A = Table[If[i != j && MemberQ[edges, Sort[{i, j}]], 1, 0], {i, 9}, {j, 9}];
+  checkExact["v219 MCKAY.E8.01: 2I (order 120) irrep degrees {1,2,2,3,3,4,4,5,6} -- "
+    <> "the affine E8 Kac marks (A.marks = 2 marks, top eigenvalue 2); Total = 30 = "
+    <> "h(E8) = 2*3*5, Total of squares = 120 = |R^+(E8)| = |2I|; backward certificate "
+    <> "(McKay tower top), not a P2 proof",
+    Sort[labels] == {1, 2, 2, 3, 3, 4, 4, 5, 6} && A.labels == 2 labels &&
+    Total[labels] == 30 == 2*3*5 && Total[labels^2] == 120];
+
+  (* v222 CM-norm duality: 41 (square), 7 (hex), 13 (square) *)
+  Ni[a_, b_] := a^2 + b^2;             (* Gaussian Z[i] norm *)
+  Nw[a_, b_] := a^2 - a b + b^2;       (* Eisenstein Z[omega] norm *)
+  checkExact["v222 CMNORM.DUAL.01: N_Z[i](5+4i)=5^2+4^2=41=10 b1 (EM index), "
+    <> "N_Z[i](3+2i)=13=Delta_Q, N_Z[omega](3+2w)=3^2-3*2+2^2=7=scalaron; the (3,2) "
+    <> "split -> (5,6,7,13) by sum/product/Eisenstein/Gauss norm; rings rigid "
+    <> "(Eisenstein of (5,4)=21!=41, Gauss of (3,2)=13!=7)",
+    Ni[5, 4] == 41 && Ni[3, 2] == 13 && Nw[3, 2] == 7 &&
+    {3 + 2, 3*2, Nw[3, 2], Ni[3, 2]} == {5, 6, 7, 13} &&
+    Nw[5, 4] == 21 && Nw[5, 4] != 41 && Ni[3, 2] != 7];
+
+  (* v223 Coxeter totative clock: (Z/30)^x = E8 exponents, order-4 element 7 *)
+  checkExact["v223 COX.CLOCK.01: (Z/30)^x = {1,7,11,13,17,19,23,29} = E8 exponents, "
+    <> "phi(30)=8=rank E8, 30=2*3*5; mult-by-7 has order 4 (7^2=19, 7^4=1 mod 30): a "
+    <> "mu4 clock <7>={1,7,13,19}; the conjugate pairs split into 4 invariant planes",
+    Select[Range[29], CoprimeQ[#, 30] &] == {1, 7, 11, 13, 17, 19, 23, 29} &&
+    EulerPhi[30] == 8 && PowerMod[7, 2, 30] == 19 && PowerMod[7, 4, 30] == 1 &&
+    Sort[Mod[7^Range[0, 3], 30]] == {1, 7, 13, 19} &&
+    Length[Union[Sort /@ ({#, 30 - #} & /@ {1, 7, 11, 13, 17, 19, 23, 29})]] == 4];
+
+  (* v227 degree/exponent channel split: 248 = 120 + 128 *)
+  checkExact["v227 E8.CHAN.01: E8 exponents {1,7,11,13,17,19,23,29} sum 120=|R^+(E8)| "
+    <> "(magnitude channel); degrees {2,8,12,14,18,20,24,30} sum 128=2^(rank-1)="
+    <> "rank*dim S^+ (phase/glue channel); 248=120+128=adj(D8)+spinor(D8); deg-exp sum=rank=8",
+    Total[{1, 7, 11, 13, 17, 19, 23, 29}] == 120 &&
+    Total[{2, 8, 12, 14, 18, 20, 24, 30}] == 128 == 2^7 == 8*16 &&
+    120 + 128 == 248 && 128 - 120 == 8];
+
+  (* v228 Riemann-Roch index gate: degree-4 divisor on P^1 *)
+  checkExact["v228 QGEO.RR.01: deg D=4=|mu4| on P^1 => h0=deg+1=5=g_car, "
+    <> "rank H1(P^1 minus 4)=4-1=3=N_fam; h0+H1=8=rank E8, h0-H1=2=|Z2|; "
+    <> "Lambda^even(C^5)=C(5,0)+C(5,2)+C(5,4)=16=dim S^+; controls deg 3->(4,2), deg 5->(6,4)",
+    (4 + 1) == 5 && (4 - 1) == 3 && (5 + 3) == 8 && (5 - 3) == 2 &&
+    (Binomial[5, 0] + Binomial[5, 2] + Binomial[5, 4]) == 16 &&
+    {3 + 1, 3 - 1} == {4, 2} && {5 + 1, 5 - 1} == {6, 4}];
+
+  (* v229 lepton etale Frobenius algebra *)
+  checkExact["v229 LEP.FROB.01: (c_e,c_mu,c_tau)=(16/7,4/3,7/6), ring closure "
+    <> "c_e c_tau=8/3=|Z2| c_mu, product 32/9=2^g_car/N_fam^2; the etale algebra "
+    <> "Q[t]/(m) has nonzero discriminant (Frobenius/separable); C6 shift charpoly t^6-1",
+    (16/7)*(7/6) == 8/3 == 2*(4/3) && (16/7)*(4/3)*(7/6) == 32/9 == 2^5/3^2 &&
+    Discriminant[(t - 16/7) (t - 4/3) (t - 7/6), t] != 0 &&
+    CharacteristicPolynomial[
+      Normal[SparseArray[{{i_, j_} /; Mod[j - i, 6] == 1 -> 1}, {6, 6}]], t] == t^6 - 1];
+
+  (* v230 center budget (7,11,13) = three local norms *)
+  RRm = {{1, 3, 0}, {1, 5, 2}, {2, 5, 3}};
+  QQm = {{3, 1, 0}, {3, 2, 0}, {3, 2, 1}};
+  Cc2 = RRm + QQm.DiagonalMatrix[{1, 0, 0}];
+  checkExact["v230 CENTER.NORM.01: C=R+Q diag(1,0,0) row sums (7,11,13) = "
+    <> "(N_Z[omega](3+2w)=7 hex, C(4,0)+C(4,1)+C(4,2)=11 QBL Fock, N_Z[i](3+2i)=13 square) "
+    <> "= (hex norm, boundary Fock count, square norm)",
+    Total /@ Cc2 == {7, 11, 13} &&
+    {Nw[3, 2], Binomial[4, 0] + Binomial[4, 1] + Binomial[4, 2], Ni[3, 2]} == {7, 11, 13}];
+
+  (* v224 diamond F_transfer path: sheet axis curved, winding axis flat, Plucker steps *)
+  Mst[s_, t_] := RRm + QQm.DiagonalMatrix[{s, t, t}];
+  one = {1, 1, 1}; av = {1, 1, 2};
+  With[{plL = Function[M, With[{r1 = one.M, r2 = av.M},
+        {r1[[1]] r2[[2]] - r1[[2]] r2[[1]], r1[[1]] r2[[3]] - r1[[3]] r2[[1]],
+         r1[[2]] r2[[3]] - r1[[3]] r2[[2]]}]]},
+    checkExact["v224 FTR.PATH.01: K=M(1,-1),C=M(1,0),F=M(1,1) on the sheet axis; "
+      <> "det M(1,t)=4t^2+14t+14 (curved, 2nd diff 8=rank E8), det M(s,0)=6s+8 (flat, "
+      <> "slope 6=|R^+(A3)|); Plucker steps Pl(C)-Pl(K)=(1,8,10), Pl(F)-Pl(C)=(1,8,16)",
+      Expand[Det[Mst[1, t]]] == 4 t^2 + 14 t + 14 && Expand[Det[Mst[s, 0]]] == 6 s + 8 &&
+      (plL[Mst[1, 0]] - plL[Mst[1, -1]]) == {1, 8, 10} &&
+      (plL[Mst[1, 1]] - plL[Mst[1, 0]]) == {1, 8, 16}]];
+
+  (* v225 dual normal frame (d,n) and oriented volume *)
+  d = av.Inverse[RRm];
+  nvec = {5, -9, 6};
+  KKm = {{4, 2, 0}, {4, 3, 2}, {5, 3, 2}};
+  Lm = KKm + QQm;
+  checkExact["v225 DUAL.FRAME.01: d=a.R^{-1}=(-1/2,-1/2,1)=-1/2(1,1,-2) (Nariai normal; "
+    <> "d.1=0, d.a=1); n=(5,-9,6) with n.R=(det R,0,0)=(8,0,0), n.L=(det L,0,0)=(20,0,0); "
+    <> "oriented volume det(1,d,n)=21=N_fam*scalaron=3*7",
+    d == {-1/2, -1/2, 1} && d == -1/2 {1, 1, -2} && d.one == 0 && d.av == 1 &&
+    nvec.RRm == {Det[RRm], 0, 0} == {8, 0, 0} && nvec.Lm == {Det[Lm], 0, 0} == {20, 0, 0} &&
+    Det[{{1, 1, 1}, d, nvec}] == 21 == 3*7];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v218: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v230: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

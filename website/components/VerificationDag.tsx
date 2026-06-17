@@ -103,7 +103,7 @@ const NODES: DagNode[] = [
     inputs: ["anchor a = (1,1,2) (g_car = e₂)"],
     outputs: ["g_car = 5"],
     failure: "Wrong family / charge lattice.",
-    scripts: ["v2_carrier_pascal.py", "v14_carrier_uniqueness.py"],
+    scripts: ["v2_carrier_pascal.py", "v14_carrier_uniqueness.py", "v219_icosahedral_mckay.py", "v228_rr_index_gate.py"],
   },
   {
     id: "D5",
@@ -164,6 +164,8 @@ const NODES: DagNode[] = [
       "v15_bootstrap_classification.py",
       "v47_selection_theorem.py",
       "v170_diamond_slice_compression.py",
+      "v223_coxeter_totative_clock.py",
+      "v227_degree_exponent_channel_split.py",
     ],
   },
   {
@@ -226,8 +228,11 @@ const NODES: DagNode[] = [
     scripts: [
       "v18_quark_yukawa.py",
       "v20_lepton_c_derivation.py",
+      "v229_lepton_frobenius_algebra.py",
       "v24_quark_ratio_closure.py",
       "v46_grand_mass_volume.py",
+      "v224_diamond_ftransfer_path.py",
+      "v230_center_budget_norms.py",
       "v49_readout_rigidity.py",
       "v75_upoint_to_vgeo.py",
       "v88_cp_phase_audit.py",
@@ -344,6 +349,8 @@ const NODES: DagNode[] = [
       "v21_solar_product_quark.py",
       "v84_frozen_registry.py",
       "v163_rg_stability_flavor.py",
+      "v220_cp_hexagonal_modulus.py",
+      "v225_dual_normal_frame.py",
     ],
   },
   {
@@ -401,6 +408,7 @@ const NODES: DagNode[] = [
       "v55_coxeter_cycle.py",
       "v56_unique_attractor.py",
       "v171_os_moment_cluster.py",
+      "v222_cm_norm_duality.py",
     ],
   },
 ];

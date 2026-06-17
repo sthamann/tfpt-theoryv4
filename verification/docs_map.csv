@@ -7,19 +7,19 @@ introduction,subsection,The companion documents,248,280,,cb43f67f0b4b,2026-06-14
 introduction,section,The architecture at a glance,281,359,,c457aefc1cb7,2026-06-12
 introduction,section,The dependency DAG and the proof ledger,360,418,,fe77a4e2e658,2026-06-12
 introduction,subsection,The compact status formula: three honest layers,419,450,v14_carrier_uniqueness.py;v56_unique_attractor.py;v60_lambda_metrology_branch.py;v6_bootstrap.py,ec34baff1e46,2026-06-12
-introduction,subsection,The hard reduction: two research gates plus typed interfaces,451,566,v14_carrier_uniqueness.py;v23_anchor_generator.py;v36_spectral_action_g2.py;v6_bootstrap.py,7152cbd17bf8,2026-06-15
-introduction,section,The compiler: why $30=2\cdot3\cdot5$,567,594,,0827633d0220,2026-06-12
-introduction,section,The $\mu_4$ glue: how $E_8$ is really built,595,619,v1_e8_glue.py,e76c4fe33c1d,2026-06-12
-introduction,section,How derivation now works: the derivation map,620,658,,14e40212ef8c,2026-06-12
-introduction,subsection,Cosmology is the Pascal action grammar of the carrier,659,695,v18_quark_yukawa.py;v20_lepton_c_derivation.py;v46_grand_mass_volume.py,a97bc6f4d263,2026-06-12
-introduction,section,"Physical, geometric, topological: why the architecture is plausible",696,710,,5a4228cd0587,2026-06-12
-introduction,section,What role $E_8$ now plays exactly,711,736,,07ec9c971cd7,2026-06-12
-introduction,section,What this means for the theory-of-everything question,737,774,,00e8205e5cae,2026-06-12
-introduction,subsection,"The closure ledger: what is done, and what genuinely remains",775,819,,36ef7e8a5356,2026-06-12
-introduction,section,Does this make the theory more probable?,820,837,,540397fd6436,2026-06-12
-introduction,section,Predictions for running and upcoming experiments,838,908,v100_numerology_null_mc.py;v84_frozen_registry.py,aebe6e44a5a3,2026-06-12
-introduction,section,Conclusion,909,920,,85f94f17b1dd,2026-06-12
-introduction,section,Appendix: computational verification (reproducibility),921,957,v1_e8_glue.py,18d85e846635,2026-06-14
+introduction,subsection,The hard reduction: two research gates plus typed interfaces,451,570,v14_carrier_uniqueness.py;v219_icosahedral_mckay.py;v23_anchor_generator.py;v36_spectral_action_g2.py;v6_bootstrap.py,4459ec190ac4,2026-06-17
+introduction,section,The compiler: why $30=2\cdot3\cdot5$,571,603,v219_icosahedral_mckay.py;v223_coxeter_totative_clock.py,2ec68cba42d8,2026-06-17
+introduction,section,The $\mu_4$ glue: how $E_8$ is really built,604,628,v1_e8_glue.py,e76c4fe33c1d,2026-06-12
+introduction,section,How derivation now works: the derivation map,629,667,,14e40212ef8c,2026-06-12
+introduction,subsection,Cosmology is the Pascal action grammar of the carrier,668,704,v18_quark_yukawa.py;v20_lepton_c_derivation.py;v46_grand_mass_volume.py,a97bc6f4d263,2026-06-12
+introduction,section,"Physical, geometric, topological: why the architecture is plausible",705,719,,5a4228cd0587,2026-06-12
+introduction,section,What role $E_8$ now plays exactly,720,745,,07ec9c971cd7,2026-06-12
+introduction,section,What this means for the theory-of-everything question,746,783,,00e8205e5cae,2026-06-12
+introduction,subsection,"The closure ledger: what is done, and what genuinely remains",784,828,,36ef7e8a5356,2026-06-12
+introduction,section,Does this make the theory more probable?,829,846,,540397fd6436,2026-06-12
+introduction,section,Predictions for running and upcoming experiments,847,917,v100_numerology_null_mc.py;v84_frozen_registry.py,aebe6e44a5a3,2026-06-12
+introduction,section,Conclusion,918,929,,85f94f17b1dd,2026-06-12
+introduction,section,Appendix: computational verification (reproducibility),930,966,v1_e8_glue.py,18d85e846635,2026-06-14
 tfpt_1_architecture_e8,front,(front matter),1,146,,31add055d84c,2026-06-12
 tfpt_1_architecture_e8,section,How to read this document,147,364,v106_review_validation.py;v109_sheet_pairing.py;v110_calderon_sheet.py;v111_quadratic_transport.py;v112_selfcounting_channel.py;v113_quasifree_kernel.py;v23_anchor_generator.py,5afde72d746c,2026-06-12
 tfpt_1_architecture_e8,section,Headline: the Pascal compiler on five carrier slots,365,422,,32b8525a612e,2026-06-12
@@ -28,122 +28,122 @@ tfpt_1_architecture_e8,subsection,"One master moment generates $40$, $41$, $240$
 tfpt_1_architecture_e8,subsection,Compact $E_8$ compression and the role of $\nu^c$,486,497,,40fd97454046,2026-06-12
 tfpt_1_architecture_e8,section,"The $D_5\times A_3$ compiler: $E_8$ as a closure, not an input",498,539,,63494f285ad2,2026-06-12
 tfpt_1_architecture_e8,subsection,Carrier $=D_5=\mathfrak{so}_{10}$ (proved),540,551,,291366279c88,2026-06-12
-tfpt_1_architecture_e8,subsection,"Family $=A_3=\mathfrak{su}_4$ from $\mathbb P^1\setminus\mu_4$ (proved, with the metric settled)",552,572,,7063f369df01,2026-06-12
-tfpt_1_architecture_e8,subsection,The $\mu_4$ glue and the $5/4+3/4=2$ discriminant theorem (proved),573,636,v1_e8_glue.py,9a8e61c56705,2026-06-12
-tfpt_1_architecture_e8,subsection,"Glue-norm arithmetic, and three readings of $41$, $60$, $120$",637,780,v115_anchor_residue.py;v116_resonance_uniqueness.py;v117_monodromy_weyl_a3.py;v137_qplus_cohomology.py;v141_deck_selection.py;v142_frame_integrality.py;v145_pairing_atoms.py;v146_moebius_d4.py;v74_compiler_micro_lemmas.py;v91_spine_tetrahedron.py,de74c208b5d0,2026-06-12
-tfpt_1_architecture_e8,subsection,What the compiler outputs for the Standard Model and our reality,781,825,,b09f077f4954,2026-06-12
-tfpt_1_architecture_e8,section,Grammar I --- the carrier grammar ($3+2$),826,841,v2_carrier_pascal.py,12cbe2093168,2026-06-12
-tfpt_1_architecture_e8,subsection,Dual-root dictionary (everything from two charges),842,886,,17f83a851b31,2026-06-12
-tfpt_1_architecture_e8,subsection,Carrier arithmetic (proved identities),887,911,,96840e312e66,2026-06-12
-tfpt_1_architecture_e8,section,Grammar II --- the seed grammar (one decoder $\useed$),912,947,v106_review_validation.py,d2f237d4c817,2026-06-12
-tfpt_1_architecture_e8,section,Grammar III --- the action grammar (exponentials of $\ainv$),948,1008,,887c984b5b2c,2026-06-12
-tfpt_1_architecture_e8,subsection,The EM closure: $\ainv$ as an explicit fixed point (made explicit here),1009,1087,v3_em_alpha.py;v48_em_ward.py,eafa3c1ffe5c,2026-06-12
-tfpt_1_architecture_e8,subsection,"The decuple bridge (new, exact headline)",1088,1112,,604a14549a07,2026-06-12
-tfpt_1_architecture_e8,subsection,"The full power tower: $x^{1},x^{5},x^{10}$ on the carrier graph $K_5$",1113,1132,,e60b31acc53b,2026-06-12
-tfpt_1_architecture_e8,subsection,"Hubble is the square root of $\Lambda$ (corollary, exact)",1133,1145,,f71ac88c931d,2026-06-12
-tfpt_1_architecture_e8,subsection,The $\sim123$ orders of the cosmological constant,1146,1170,v7_gravity_cosmo.py,33204ef66256,2026-06-12
-tfpt_1_architecture_e8,subsection,The ladder is binomial; $2\gcar=\binom{\gcar}{2}$ singles out $\gcar=5$,1171,1191,v2_carrier_pascal.py,1230086f59a8,2026-06-12
-tfpt_1_architecture_e8,subsection,Discriminant action theorem: the ladder reads the hypercharge discriminant,1192,1207,,5ee0de80e6f6,2026-06-12
-tfpt_1_architecture_e8,subsection,A two-dimensional action lattice,1208,1235,,6c44fba9e667,2026-06-12
-tfpt_1_architecture_e8,section,The Einstein normaliser as a corrected tree value,1236,1253,v1_e8_glue.py,a347920cff11,2026-06-12
-tfpt_1_architecture_e8,section,"$\Lambda$-anchored metrology closure, and two anchors",1254,1325,v60_lambda_metrology_branch.py,ff0658321bbb,2026-06-12
-tfpt_1_architecture_e8,section,The landscape: $\gcar=5$ is overdetermined,1326,1351,v14_carrier_uniqueness.py;v6_bootstrap.py,106d81a23624,2026-06-12
-tfpt_1_architecture_e8,section,The $E_8$ carrier atlas --- stated unambiguously,1352,1360,v5_e8_cascade.py,121df94bcf3e,2026-06-12
-tfpt_1_architecture_e8,subsection,Level 1 --- original $E_8$ data of the series (\mE),1361,1377,,e3304fd383c7,2026-06-12
-tfpt_1_architecture_e8,subsection,Level 2 --- new exact counting identities (\mE),1378,1386,,143799fadb70,2026-06-12
-tfpt_1_architecture_e8,subsection,Level 2.5 --- the even-flip transition atlas (a falsifiable program),1387,1424,,72cbf6666cc0,2026-06-12
-tfpt_1_architecture_e8,subsection,Level 2.7 --- the carrier Coxeter theorem (the strongest new bridge),1425,1445,,4ccc4166d68a,2026-06-12
-tfpt_1_architecture_e8,subsection,Level 2.8 --- positive-root moment: $|R^+(E_8)|=\operatorname{Tr}_{S^+}X^2=5!$,1446,1461,,2fcb29770020,2026-06-12
-tfpt_1_architecture_e8,subsection,Level 2.9 --- the $2{\cdot}3{\cdot}5$ Coxeter cyclotomic compiler (meta-theorem),1462,1487,,c6ed7db7818d,2026-06-12
-tfpt_1_architecture_e8,subsection,Level 3 --- conjectural geometric readings (\mC),1488,1514,,2c4cf5c57ce7,2026-06-12
-tfpt_1_architecture_e8,section,"$\mathbb Z_6$ monodromy, flavor and CP readouts",1515,1532,v88_cp_phase_audit.py,1b4c087134e9,2026-06-12
-tfpt_1_architecture_e8,subsection,CP as triple seed variance; a closed observable quadrilateral,1533,1568,,b2d481b93ab9,2026-06-12
-tfpt_1_architecture_e8,section,Mass hierarchy as a hexagon with one extra turn,1569,1594,v18_quark_yukawa.py;v20_lepton_c_derivation.py,b9a59832c5a3,2026-06-12
-tfpt_1_architecture_e8,subsection,Lepton flavor decuple: the charged-lepton determinant carries $u^{10}$,1595,1617,,35942d3e5b57,2026-06-12
-tfpt_1_architecture_e8,subsection,Why the top Yukawa is $\approx1$: the $L=0$ anchor (Froggatt--Nielsen ladder),1618,1641,,7b4cae5a4c8e,2026-06-12
-tfpt_1_architecture_e8,section,Inflation interface,1642,1675,v7_gravity_cosmo.py;v86_nstar_reheating.py,4109ebb725a1,2026-06-12
-tfpt_1_architecture_e8,section,Further simple bridges,1676,1693,v74_compiler_micro_lemmas.py,22081a062641,2026-06-12
-tfpt_1_architecture_e8,section,Closures that the architecture rests on,1694,1737,v36_spectral_action_g2.py;v4_flavor_matrix.py,0a912e538f86,2026-06-12
-tfpt_1_architecture_e8,section,Status summary and open audit points,1738,1829,v22_open_gates_audit.py,fd431f8cd274,2026-06-12
-tfpt_1_architecture_e8,section,Consolidated picture,1830,1921,,b42cd049dc52,2026-06-12
-tfpt_1_architecture_e8,section,Theorem 1 --- the even carrier code,1922,1955,v79_review_identities.py,3d0eebca4c2c,2026-06-12
-tfpt_1_architecture_e8,section,Theorem 2 --- Exterior--Action Duality,1956,2014,v79_review_identities.py,c1712ff04295,2026-06-12
-tfpt_1_architecture_e8,section,Theorem 3 --- the Coxeter closure equation selects $\gcar=5$,2015,2027,,166eb67bba5d,2026-06-12
-tfpt_1_architecture_e8,section,Theorem 4 --- the $\mathbb Z_{30}$ cyclotomic Coxeter compiler,2028,2046,,d331d7e14c1e,2026-06-12
-tfpt_1_architecture_e8,section,Theorem 5 --- the root transition atlas and the positive-edge moment,2047,2072,,8b162142ffe4,2026-06-12
-tfpt_1_architecture_e8,section,"Theorem 6 --- downstream readouts from $(h,r,\cthree)$",2073,2148,v36_spectral_action_g2.py,63f10f097b2e,2026-06-12
-tfpt_1_architecture_e8,section,Theorem 7 --- the $D_5\times A_3$ lift of the $E_8$ atlas,2149,2367,v41_leg_assignment.py;v47_selection_theorem.py;v51_boundary_half_step.py;v53_compiler_core.py,ab4727748034,2026-06-12
-tfpt_1_architecture_e8,section,"Theorem 8 --- the $(1,1,2)$ anchor microcode and the $\varphi_0$-ladder",2368,2399,,a499da2b4aa8,2026-06-12
-tfpt_1_architecture_e8,section,Master statement and status,2400,2449,,7eb18c18c877,2026-06-12
-tfpt_1_architecture_e8,section,Appendix: machine-checkable $E_8=(D_5\oplus A_3)+\mu_4$ construction,2450,2568,,37ba4861318e,2026-06-12
-tfpt_1_architecture_e8,section,Appendix: computational verification,2569,2586,v1_e8_glue.py;v2_carrier_pascal.py;v3_em_alpha.py;v4_flavor_matrix.py;v7_gravity_cosmo.py,7a72953ecffe,2026-06-12
+tfpt_1_architecture_e8,subsection,"Family $=A_3=\mathfrak{su}_4$ from $\mathbb P^1\setminus\mu_4$ (proved, with the metric settled)",552,585,v219_icosahedral_mckay.py;v223_coxeter_totative_clock.py,e4de3541bbe3,2026-06-17
+tfpt_1_architecture_e8,subsection,The $\mu_4$ glue and the $5/4+3/4=2$ discriminant theorem (proved),586,649,v1_e8_glue.py,9a8e61c56705,2026-06-12
+tfpt_1_architecture_e8,subsection,"Glue-norm arithmetic, and three readings of $41$, $60$, $120$",650,804,v115_anchor_residue.py;v116_resonance_uniqueness.py;v117_monodromy_weyl_a3.py;v137_qplus_cohomology.py;v141_deck_selection.py;v142_frame_integrality.py;v145_pairing_atoms.py;v146_moebius_d4.py;v222_cm_norm_duality.py;v74_compiler_micro_lemmas.py;v91_spine_tetrahedron.py,0c702b08140b,2026-06-17
+tfpt_1_architecture_e8,subsection,What the compiler outputs for the Standard Model and our reality,805,849,,b09f077f4954,2026-06-12
+tfpt_1_architecture_e8,section,Grammar I --- the carrier grammar ($3+2$),850,865,v2_carrier_pascal.py,12cbe2093168,2026-06-12
+tfpt_1_architecture_e8,subsection,Dual-root dictionary (everything from two charges),866,910,,17f83a851b31,2026-06-12
+tfpt_1_architecture_e8,subsection,Carrier arithmetic (proved identities),911,935,,96840e312e66,2026-06-12
+tfpt_1_architecture_e8,section,Grammar II --- the seed grammar (one decoder $\useed$),936,971,v106_review_validation.py,d2f237d4c817,2026-06-12
+tfpt_1_architecture_e8,section,Grammar III --- the action grammar (exponentials of $\ainv$),972,1032,,887c984b5b2c,2026-06-12
+tfpt_1_architecture_e8,subsection,The EM closure: $\ainv$ as an explicit fixed point (made explicit here),1033,1111,v3_em_alpha.py;v48_em_ward.py,eafa3c1ffe5c,2026-06-12
+tfpt_1_architecture_e8,subsection,"The decuple bridge (new, exact headline)",1112,1136,,604a14549a07,2026-06-12
+tfpt_1_architecture_e8,subsection,"The full power tower: $x^{1},x^{5},x^{10}$ on the carrier graph $K_5$",1137,1156,,e60b31acc53b,2026-06-12
+tfpt_1_architecture_e8,subsection,"Hubble is the square root of $\Lambda$ (corollary, exact)",1157,1169,,f71ac88c931d,2026-06-12
+tfpt_1_architecture_e8,subsection,The $\sim123$ orders of the cosmological constant,1170,1194,v7_gravity_cosmo.py,33204ef66256,2026-06-12
+tfpt_1_architecture_e8,subsection,The ladder is binomial; $2\gcar=\binom{\gcar}{2}$ singles out $\gcar=5$,1195,1215,v2_carrier_pascal.py,1230086f59a8,2026-06-12
+tfpt_1_architecture_e8,subsection,Discriminant action theorem: the ladder reads the hypercharge discriminant,1216,1231,,5ee0de80e6f6,2026-06-12
+tfpt_1_architecture_e8,subsection,A two-dimensional action lattice,1232,1259,,6c44fba9e667,2026-06-12
+tfpt_1_architecture_e8,section,The Einstein normaliser as a corrected tree value,1260,1277,v1_e8_glue.py,a347920cff11,2026-06-12
+tfpt_1_architecture_e8,section,"$\Lambda$-anchored metrology closure, and two anchors",1278,1349,v60_lambda_metrology_branch.py,ff0658321bbb,2026-06-12
+tfpt_1_architecture_e8,section,The landscape: $\gcar=5$ is overdetermined,1350,1375,v14_carrier_uniqueness.py;v6_bootstrap.py,106d81a23624,2026-06-12
+tfpt_1_architecture_e8,section,The $E_8$ carrier atlas --- stated unambiguously,1376,1384,v5_e8_cascade.py,121df94bcf3e,2026-06-12
+tfpt_1_architecture_e8,subsection,Level 1 --- original $E_8$ data of the series (\mE),1385,1401,,e3304fd383c7,2026-06-12
+tfpt_1_architecture_e8,subsection,Level 2 --- new exact counting identities (\mE),1402,1410,,143799fadb70,2026-06-12
+tfpt_1_architecture_e8,subsection,Level 2.5 --- the even-flip transition atlas (a falsifiable program),1411,1448,,72cbf6666cc0,2026-06-12
+tfpt_1_architecture_e8,subsection,Level 2.7 --- the carrier Coxeter theorem (the strongest new bridge),1449,1469,,4ccc4166d68a,2026-06-12
+tfpt_1_architecture_e8,subsection,Level 2.8 --- positive-root moment: $|R^+(E_8)|=\operatorname{Tr}_{S^+}X^2=5!$,1470,1485,,2fcb29770020,2026-06-12
+tfpt_1_architecture_e8,subsection,Level 2.9 --- the $2{\cdot}3{\cdot}5$ Coxeter cyclotomic compiler (meta-theorem),1486,1511,,c6ed7db7818d,2026-06-12
+tfpt_1_architecture_e8,subsection,Level 3 --- conjectural geometric readings (\mC),1512,1538,,2c4cf5c57ce7,2026-06-12
+tfpt_1_architecture_e8,section,"$\mathbb Z_6$ monodromy, flavor and CP readouts",1539,1556,v88_cp_phase_audit.py,1b4c087134e9,2026-06-12
+tfpt_1_architecture_e8,subsection,CP as triple seed variance; a closed observable quadrilateral,1557,1592,,b2d481b93ab9,2026-06-12
+tfpt_1_architecture_e8,section,Mass hierarchy as a hexagon with one extra turn,1593,1618,v18_quark_yukawa.py;v20_lepton_c_derivation.py,b9a59832c5a3,2026-06-12
+tfpt_1_architecture_e8,subsection,Lepton flavor decuple: the charged-lepton determinant carries $u^{10}$,1619,1641,,35942d3e5b57,2026-06-12
+tfpt_1_architecture_e8,subsection,Why the top Yukawa is $\approx1$: the $L=0$ anchor (Froggatt--Nielsen ladder),1642,1665,,7b4cae5a4c8e,2026-06-12
+tfpt_1_architecture_e8,section,Inflation interface,1666,1699,v7_gravity_cosmo.py;v86_nstar_reheating.py,4109ebb725a1,2026-06-12
+tfpt_1_architecture_e8,section,Further simple bridges,1700,1717,v74_compiler_micro_lemmas.py,22081a062641,2026-06-12
+tfpt_1_architecture_e8,section,Closures that the architecture rests on,1718,1761,v36_spectral_action_g2.py;v4_flavor_matrix.py,0a912e538f86,2026-06-12
+tfpt_1_architecture_e8,section,Status summary and open audit points,1762,1853,v22_open_gates_audit.py,fd431f8cd274,2026-06-12
+tfpt_1_architecture_e8,section,Consolidated picture,1854,1945,,b42cd049dc52,2026-06-12
+tfpt_1_architecture_e8,section,Theorem 1 --- the even carrier code,1946,1979,v79_review_identities.py,3d0eebca4c2c,2026-06-12
+tfpt_1_architecture_e8,section,Theorem 2 --- Exterior--Action Duality,1980,2038,v79_review_identities.py,c1712ff04295,2026-06-12
+tfpt_1_architecture_e8,section,Theorem 3 --- the Coxeter closure equation selects $\gcar=5$,2039,2051,,166eb67bba5d,2026-06-12
+tfpt_1_architecture_e8,section,Theorem 4 --- the $\mathbb Z_{30}$ cyclotomic Coxeter compiler,2052,2070,,d331d7e14c1e,2026-06-12
+tfpt_1_architecture_e8,section,Theorem 5 --- the root transition atlas and the positive-edge moment,2071,2096,,8b162142ffe4,2026-06-12
+tfpt_1_architecture_e8,section,"Theorem 6 --- downstream readouts from $(h,r,\cthree)$",2097,2172,v36_spectral_action_g2.py,63f10f097b2e,2026-06-12
+tfpt_1_architecture_e8,section,Theorem 7 --- the $D_5\times A_3$ lift of the $E_8$ atlas,2173,2391,v41_leg_assignment.py;v47_selection_theorem.py;v51_boundary_half_step.py;v53_compiler_core.py,ab4727748034,2026-06-12
+tfpt_1_architecture_e8,section,"Theorem 8 --- the $(1,1,2)$ anchor microcode and the $\varphi_0$-ladder",2392,2423,,a499da2b4aa8,2026-06-12
+tfpt_1_architecture_e8,section,Master statement and status,2424,2473,,7eb18c18c877,2026-06-12
+tfpt_1_architecture_e8,section,Appendix: machine-checkable $E_8=(D_5\oplus A_3)+\mu_4$ construction,2474,2592,,37ba4861318e,2026-06-12
+tfpt_1_architecture_e8,section,Appendix: computational verification,2593,2610,v1_e8_glue.py;v2_carrier_pascal.py;v3_em_alpha.py;v4_flavor_matrix.py;v7_gravity_cosmo.py,7a72953ecffe,2026-06-12
 tfpt_2_standard_model,front,(front matter),1,129,,e727cb962348,2026-06-12
 tfpt_2_standard_model,section,The principle: one master formula instead of many Yukawa numbers,130,159,v172_trace_anomaly_seed.py,e9c22c490295,2026-06-13
 tfpt_2_standard_model,section,The seed $\phiz$ as a decoder,160,184,,9aac6cf99de9,2026-06-12
 tfpt_2_standard_model,section,The flavor residue matrix is the compiler signature,185,303,v4_flavor_matrix.py,aa0373556563,2026-06-12
-tfpt_2_standard_model,section,Charged leptons: completely closed in $\phiz$,304,391,v118_hexagon_family_dictionary.py;v20_lepton_c_derivation.py;v21_solar_product_quark.py;v37_plucker_anchor.py;v51_boundary_half_step.py,c2e9a38b6339,2026-06-13
-tfpt_2_standard_model,section,Quarks: hierarchy from the same word-lengths,392,555,v174_seam_fock_readings.py;v17_hexagonal_resolvent.py;v24_quark_ratio_closure.py;v26_flavor_frontier_unification.py;v37_plucker_anchor.py;v42_exterior_leg.py;v49_readout_rigidity.py;v71_simple_r_bridge.py;v94_sheet_diamond.py,7c03e77531da,2026-06-13
-tfpt_2_standard_model,section,The Sheet Diamond and the Winding Line: masses and transport from one surface,556,1068,v101_horizon_anchor.py;v10_projection_involution.py;v11_unique_KQ.py;v128_graded_hull.py;v12_mass_generation_polynomials.py;v134_dual_anchor.py;v135_det_surface.py;v137_qplus_cohomology.py;v140_canonical_map.py;v141_deck_selection.py;v146_moebius_d4.py;v218_diamond_axis_geometry.py;v37_plucker_anchor.py;v46_grand_mass_volume.py;v50_q_geometry.py;v52_pencil_endpoints.py;v54_seam_horizon_keystones.py;v56_unique_attractor.py;v69_d4_q_geometry.py;v70_q_integer_lift.py;v72_q_det_from_cusp.py;v74_compiler_micro_lemmas.py;v80_operator_pencil_geometry.py;v81_singular_pencil_matrices.py;v82_koide_attractor_splitting.py;v85_master_cover.py;v92_glue_uniqueness.py;v94_sheet_diamond.py;v95_centered_diamond.py;v96_branch_kernel_selection.py;v97_sheet_conjugation_bridge.py;v98_discriminant_dictionary.py,5de35f76bc6e,2026-06-15
-tfpt_2_standard_model,subsection,"Closing the audit gates: is $M{=}41$, $K$, $Q$ derived or imported?",1069,1191,v11_unique_KQ.py;v13_open_gates.py;v159_pyrate_gauge_crosscheck.py;v163_rg_stability_flavor.py;v164_qcd_scale.py;v16_solar_dual_anchor.py;v21_solar_product_quark.py;v74_compiler_micro_lemmas.py;v79_review_identities.py,2d67ed11e25a,2026-06-13
-tfpt_2_standard_model,section,Mixing: CKM and PMNS from holonomy,1192,1231,,250e0e9b01e6,2026-06-15
-tfpt_2_standard_model,subsection,Downstream flavor readout: the rare kaons $K\to\pi\nu\bar\nu$,1232,1265,v202_rare_kaon.py,722c459c445e,2026-06-14
-tfpt_2_standard_model,section,Neutrinos,1266,1299,,4574cc289eb3,2026-06-12
-tfpt_2_standard_model,section,How the legacy layers simplify (bridge map),1300,1326,,9eeb68ad4a79,2026-06-12
-tfpt_2_standard_model,section,Is the entire Standard Model thereby derived?,1327,1377,,a95844bb2e03,2026-06-12
-tfpt_2_standard_model,section,Closure status of the five former open questions,1378,1384,,d81c4f2bc8c5,2026-06-12
-tfpt_2_standard_model,subsection,(1) Flavor residual --- ratios closed combinatorially; only the absolute scale is the wall-selection $(U_{\mathrm{wall}})$ \mE/\mO,1385,1414,v27_wall_representative.py;v30_d4_character_variety.py;v31_R_dictionary.py;v33_explicit_flat_bundle.py;v34_h2_bridge_attempt.py,ab9fd38ab334,2026-06-12
-tfpt_2_standard_model,subsection,"(2) Gravity --- exact in the $R^2$ regime, one named truncation remainder \mC",1415,1459,v36_spectral_action_g2.py,bd7617e15b5c,2026-06-13
-tfpt_2_standard_model,subsection,(3) Strong CP --- decoupled from the mass-gap problem \mE/\mC,1460,1500,v173_pfaffian_cp_car.py,9e8863919ffb,2026-06-13
-tfpt_2_standard_model,subsection,(4) Constructive QFT closure of the admissible physical sector \mE/\mC,1501,1564,,f8a792183036,2026-06-14
-tfpt_2_standard_model,subsection,"(5) Axioms P1/P2 --- P2 machine-verified, P1 as an interface \mE/\mO",1565,1627,,de183afa60a7,2026-06-12
-tfpt_2_standard_model,section,How the original-paper predictions simplify,1628,1662,,b49be45910b9,2026-06-12
-tfpt_2_standard_model,section,Conclusion,1663,1732,,189e59f8e638,2026-06-13
-tfpt_2_standard_model,section,The setup: parabolic data on the family curve,1733,1781,,da2a8b23c886,2026-06-13
-tfpt_2_standard_model,section,Exact scaffolding (proved),1782,1818,,4a2c6f9f0067,2026-06-12
-tfpt_2_standard_model,section,The Riemann--Hilbert side (what the monodromy fixes),1819,1846,,c8f08856fa97,2026-06-13
-tfpt_2_standard_model,section,The parabolic-weight computation (resolved this round),1847,1904,v4_flavor_matrix.py;v9_neutrino_texture.py,6a586ab59d15,2026-06-12
-tfpt_2_standard_model,section,Global computation: the anchor multiset is derived,1905,1974,,b4aa2b939e86,2026-06-12
-tfpt_2_standard_model,subsection,"Part (ii): the $\mathbb Z_6$ structure of the residues, and the frontier",1975,2018,,460dabfecef9,2026-06-12
-tfpt_2_standard_model,subsection,The flavor transport theorem,2019,2080,,7c6bb9501156,2026-06-13
-tfpt_2_standard_model,section,The Parabolic Anchor Compiler,2081,2093,,94764ed306ed,2026-06-12
-tfpt_2_standard_model,subsection,Budget master table: everything is $d_p=-\deg E=4$ times a Coxeter datum,2094,2107,,b1e4b1c6b38d,2026-06-12
-tfpt_2_standard_model,subsection,"Flavor budget split, row sums, scalaron deficit",2108,2130,v7_gravity_cosmo.py,becad1e78641,2026-06-12
-tfpt_2_standard_model,subsection,The anchor power compiler,2131,2179,,814d0f23b42b,2026-06-12
-tfpt_2_standard_model,subsection,Residue-matrix spectral selector --- sharpening (H2),2180,2254,,8af2543c2f6a,2026-06-13
-tfpt_2_standard_model,section,Closing the flavor block: two theorems,2255,2373,,c76f02659f89,2026-06-13
-tfpt_2_standard_model,section,Status,2374,2428,,f56ff44b4a5b,2026-06-13
-tfpt_2_standard_model,section,The explicit mass gap closes dynamics and clustering,2429,2501,,9cacf6d78782,2026-06-13
-tfpt_2_standard_model,section,The seam elliptic complex is Fredholm (APS),2502,2524,,0b980ed498f3,2026-06-13
-tfpt_2_standard_model,section,The $R^{n\ge3}$ truncation is $O(1/N_\star^2)$-bounded,2525,2608,v86_nstar_reheating.py,039c4dd5795c,2026-06-12
-tfpt_2_standard_model,section,"The ambient closure: one spectral-action measure, IR-complete by decoupling",2609,2722,v28_gravity_fR.py,aec960384ae4,2026-06-12
-tfpt_2_standard_model,subsection,Seam response grammar: gravity is the inverse seed gain,2723,2790,,7cd027f0fd95,2026-06-13
-tfpt_2_standard_model,section,The solar angle $\theta_{12}$: derived from the seam,2791,2852,v84_frozen_registry.py;v9_neutrino_texture.py,47a208ca1aea,2026-06-12
-tfpt_2_standard_model,section,Quark $c$-rationals: best values at current precision,2853,2899,,8868ee5c77eb,2026-06-12
-tfpt_2_standard_model,section,"H2: the moduli computation, set up explicitly",2900,3002,v19_monodromy_moduli.py;v26_flavor_frontier_unification.py;v27_wall_representative.py;v49_readout_rigidity.py;v69_d4_q_geometry.py;v70_q_integer_lift.py,c4405eeb0ca3,2026-06-12
-tfpt_2_standard_model,section,"Status: what is now written out, and what is honestly left",3003,3042,v19_monodromy_moduli.py,f27b64a5a79f,2026-06-12
-tfpt_2_standard_model,section,Appendix: computational verification,3043,3058,v2_carrier_pascal.py;v3_em_alpha.py;v4_flavor_matrix.py;v7_gravity_cosmo.py,d9af3eae285d,2026-06-12
+tfpt_2_standard_model,section,Charged leptons: completely closed in $\phiz$,304,401,v118_hexagon_family_dictionary.py;v20_lepton_c_derivation.py;v21_solar_product_quark.py;v220_cp_hexagonal_modulus.py;v229_lepton_frobenius_algebra.py;v37_plucker_anchor.py;v51_boundary_half_step.py,4a92e6055cb6,2026-06-16
+tfpt_2_standard_model,section,Quarks: hierarchy from the same word-lengths,402,565,v174_seam_fock_readings.py;v17_hexagonal_resolvent.py;v24_quark_ratio_closure.py;v26_flavor_frontier_unification.py;v37_plucker_anchor.py;v42_exterior_leg.py;v49_readout_rigidity.py;v71_simple_r_bridge.py;v94_sheet_diamond.py,7c03e77531da,2026-06-13
+tfpt_2_standard_model,section,The Sheet Diamond and the Winding Line: masses and transport from one surface,566,1096,v101_horizon_anchor.py;v10_projection_involution.py;v11_unique_KQ.py;v128_graded_hull.py;v12_mass_generation_polynomials.py;v134_dual_anchor.py;v135_det_surface.py;v137_qplus_cohomology.py;v140_canonical_map.py;v141_deck_selection.py;v146_moebius_d4.py;v218_diamond_axis_geometry.py;v222_cm_norm_duality.py;v224_diamond_ftransfer_path.py;v230_center_budget_norms.py;v37_plucker_anchor.py;v46_grand_mass_volume.py;v50_q_geometry.py;v52_pencil_endpoints.py;v54_seam_horizon_keystones.py;v56_unique_attractor.py;v69_d4_q_geometry.py;v70_q_integer_lift.py;v72_q_det_from_cusp.py;v74_compiler_micro_lemmas.py;v80_operator_pencil_geometry.py;v81_singular_pencil_matrices.py;v82_koide_attractor_splitting.py;v85_master_cover.py;v92_glue_uniqueness.py;v94_sheet_diamond.py;v95_centered_diamond.py;v96_branch_kernel_selection.py;v97_sheet_conjugation_bridge.py;v98_discriminant_dictionary.py,a0dc044ab840,2026-06-16
+tfpt_2_standard_model,subsection,"Closing the audit gates: is $M{=}41$, $K$, $Q$ derived or imported?",1097,1219,v11_unique_KQ.py;v13_open_gates.py;v159_pyrate_gauge_crosscheck.py;v163_rg_stability_flavor.py;v164_qcd_scale.py;v16_solar_dual_anchor.py;v21_solar_product_quark.py;v74_compiler_micro_lemmas.py;v79_review_identities.py,2d67ed11e25a,2026-06-13
+tfpt_2_standard_model,section,Mixing: CKM and PMNS from holonomy,1220,1259,,250e0e9b01e6,2026-06-15
+tfpt_2_standard_model,subsection,Downstream flavor readout: the rare kaons $K\to\pi\nu\bar\nu$,1260,1293,v202_rare_kaon.py,722c459c445e,2026-06-14
+tfpt_2_standard_model,section,Neutrinos,1294,1327,,4574cc289eb3,2026-06-12
+tfpt_2_standard_model,section,How the legacy layers simplify (bridge map),1328,1354,,9eeb68ad4a79,2026-06-12
+tfpt_2_standard_model,section,Is the entire Standard Model thereby derived?,1355,1405,,a95844bb2e03,2026-06-12
+tfpt_2_standard_model,section,Closure status of the five former open questions,1406,1412,,d81c4f2bc8c5,2026-06-12
+tfpt_2_standard_model,subsection,(1) Flavor residual --- ratios closed combinatorially; only the absolute scale is the wall-selection $(U_{\mathrm{wall}})$ \mE/\mO,1413,1442,v27_wall_representative.py;v30_d4_character_variety.py;v31_R_dictionary.py;v33_explicit_flat_bundle.py;v34_h2_bridge_attempt.py,ab9fd38ab334,2026-06-12
+tfpt_2_standard_model,subsection,"(2) Gravity --- exact in the $R^2$ regime, one named truncation remainder \mC",1443,1487,v36_spectral_action_g2.py,bd7617e15b5c,2026-06-13
+tfpt_2_standard_model,subsection,(3) Strong CP --- decoupled from the mass-gap problem \mE/\mC,1488,1528,v173_pfaffian_cp_car.py,9e8863919ffb,2026-06-13
+tfpt_2_standard_model,subsection,(4) Constructive QFT closure of the admissible physical sector \mE/\mC,1529,1592,,f8a792183036,2026-06-14
+tfpt_2_standard_model,subsection,"(5) Axioms P1/P2 --- P2 machine-verified, P1 as an interface \mE/\mO",1593,1655,,de183afa60a7,2026-06-12
+tfpt_2_standard_model,section,How the original-paper predictions simplify,1656,1690,,b49be45910b9,2026-06-12
+tfpt_2_standard_model,section,Conclusion,1691,1760,,189e59f8e638,2026-06-13
+tfpt_2_standard_model,section,The setup: parabolic data on the family curve,1761,1809,,da2a8b23c886,2026-06-13
+tfpt_2_standard_model,section,Exact scaffolding (proved),1810,1846,,4a2c6f9f0067,2026-06-12
+tfpt_2_standard_model,section,The Riemann--Hilbert side (what the monodromy fixes),1847,1874,,c8f08856fa97,2026-06-13
+tfpt_2_standard_model,section,The parabolic-weight computation (resolved this round),1875,1932,v4_flavor_matrix.py;v9_neutrino_texture.py,6a586ab59d15,2026-06-12
+tfpt_2_standard_model,section,Global computation: the anchor multiset is derived,1933,2002,,b4aa2b939e86,2026-06-12
+tfpt_2_standard_model,subsection,"Part (ii): the $\mathbb Z_6$ structure of the residues, and the frontier",2003,2046,,460dabfecef9,2026-06-12
+tfpt_2_standard_model,subsection,The flavor transport theorem,2047,2108,,7c6bb9501156,2026-06-13
+tfpt_2_standard_model,section,The Parabolic Anchor Compiler,2109,2121,,94764ed306ed,2026-06-12
+tfpt_2_standard_model,subsection,Budget master table: everything is $d_p=-\deg E=4$ times a Coxeter datum,2122,2135,,b1e4b1c6b38d,2026-06-12
+tfpt_2_standard_model,subsection,"Flavor budget split, row sums, scalaron deficit",2136,2158,v7_gravity_cosmo.py,becad1e78641,2026-06-12
+tfpt_2_standard_model,subsection,The anchor power compiler,2159,2207,,814d0f23b42b,2026-06-12
+tfpt_2_standard_model,subsection,Residue-matrix spectral selector --- sharpening (H2),2208,2282,,8af2543c2f6a,2026-06-13
+tfpt_2_standard_model,section,Closing the flavor block: two theorems,2283,2401,,c76f02659f89,2026-06-13
+tfpt_2_standard_model,section,Status,2402,2456,,f56ff44b4a5b,2026-06-13
+tfpt_2_standard_model,section,The explicit mass gap closes dynamics and clustering,2457,2529,,9cacf6d78782,2026-06-13
+tfpt_2_standard_model,section,The seam elliptic complex is Fredholm (APS),2530,2552,,0b980ed498f3,2026-06-13
+tfpt_2_standard_model,section,The $R^{n\ge3}$ truncation is $O(1/N_\star^2)$-bounded,2553,2636,v86_nstar_reheating.py,039c4dd5795c,2026-06-12
+tfpt_2_standard_model,section,"The ambient closure: one spectral-action measure, IR-complete by decoupling",2637,2750,v28_gravity_fR.py,aec960384ae4,2026-06-12
+tfpt_2_standard_model,subsection,Seam response grammar: gravity is the inverse seed gain,2751,2818,,7cd027f0fd95,2026-06-13
+tfpt_2_standard_model,section,The solar angle $\theta_{12}$: derived from the seam,2819,2880,v84_frozen_registry.py;v9_neutrino_texture.py,47a208ca1aea,2026-06-12
+tfpt_2_standard_model,section,Quark $c$-rationals: best values at current precision,2881,2927,,8868ee5c77eb,2026-06-12
+tfpt_2_standard_model,section,"H2: the moduli computation, set up explicitly",2928,3030,v19_monodromy_moduli.py;v26_flavor_frontier_unification.py;v27_wall_representative.py;v49_readout_rigidity.py;v69_d4_q_geometry.py;v70_q_integer_lift.py,c4405eeb0ca3,2026-06-12
+tfpt_2_standard_model,section,"Status: what is now written out, and what is honestly left",3031,3070,v19_monodromy_moduli.py,f27b64a5a79f,2026-06-12
+tfpt_2_standard_model,section,Appendix: computational verification,3071,3086,v2_carrier_pascal.py;v3_em_alpha.py;v4_flavor_matrix.py;v7_gravity_cosmo.py,d9af3eae285d,2026-06-12
 tfpt_3_e8_audit_bootstrap,front,(front matter),1,152,,28184b45056a,2026-06-12
 tfpt_3_e8_audit_bootstrap,section,The compiler core (where this note sits),153,175,,8e3d9559b8f4,2026-06-12
 tfpt_3_e8_audit_bootstrap,section,"The $(1,1,2)$ anchor microcode",176,272,v108_pascal_ladder.py,651bb311833e,2026-06-13
 tfpt_3_e8_audit_bootstrap,section,The residue and length matrices as spectral objects,273,384,v100_numerology_null_mc.py;v37_plucker_anchor.py,8bd636bf0ca3,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,The secondary branching atlas,385,519,v170_diamond_slice_compression.py,c8d8836cba5c,2026-06-13
-tfpt_3_e8_audit_bootstrap,section,Group-theoretic audits (optional),520,538,,021e0730e513,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,Further audit lemmas (machine-verified this round),539,576,,f779e820e593,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,"What this changes, and what stays open",577,625,v1_e8_glue.py;v4_flavor_matrix.py,513d7469af4e,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,"The old cascade, recalled",626,641,v5_e8_cascade.py,d018bbe54914,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,The spine: every rung is a current number,642,738,,25ca0af8a1c6,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,Three views of one spine,739,786,v91_spine_tetrahedron.py,199ce2157442,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,Direct $\phiz$ relations: old vs current,787,811,,8e6b7d7185f2,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,Sector inventory: have all the old-cascade sectors been computed?,812,850,,fe5ae611804b,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,"What is new, what is old, what stays open",851,894,,d2d8039096c1,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,The loop for $\gcar$ --- an overdetermined fixed point,895,992,v15_bootstrap_classification.py;v6_bootstrap.py,83431665abeb,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,The loop for $\cthree$ --- the ``$8$'' is the $E_8$ rank,993,1014,,09d2a99e39c6,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,The Möbius origin of the irreducible $\pi$,1015,1113,v180_clock_is_mobius.py;v54_seam_horizon_keystones.py;v55_coxeter_cycle.py;v66_e8_casimir_degrees.py,42cf92482c16,2026-06-15
-tfpt_3_e8_audit_bootstrap,section,"Honest status: bootstrap, not creation from nothing",1114,1143,v108_pascal_ladder.py,7fa3623dd2c8,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,The honest open-items list,1144,1212,v9_neutrino_texture.py,901e7dcad1ec,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,The $E_8$-slice scan: results (honest hit / miss),1213,1262,,9bb6cf827ee4,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,Following the $SU(9)$ lead: cross-slice consistency,1263,1300,,6527de5ba23c,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,Appendix: computational verification,1301,1316,v1_e8_glue.py;v4_flavor_matrix.py;v5_e8_cascade.py;v6_bootstrap.py,b08c71e486fc,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,The secondary branching atlas,385,531,v170_diamond_slice_compression.py;v227_degree_exponent_channel_split.py,0758d07d81e8,2026-06-17
+tfpt_3_e8_audit_bootstrap,section,Group-theoretic audits (optional),532,550,,021e0730e513,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,Further audit lemmas (machine-verified this round),551,588,,f779e820e593,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,"What this changes, and what stays open",589,637,v1_e8_glue.py;v4_flavor_matrix.py,513d7469af4e,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,"The old cascade, recalled",638,653,v5_e8_cascade.py,d018bbe54914,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,The spine: every rung is a current number,654,750,,25ca0af8a1c6,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,Three views of one spine,751,798,v91_spine_tetrahedron.py,199ce2157442,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,Direct $\phiz$ relations: old vs current,799,823,,8e6b7d7185f2,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,Sector inventory: have all the old-cascade sectors been computed?,824,862,,fe5ae611804b,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,"What is new, what is old, what stays open",863,906,,d2d8039096c1,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,The loop for $\gcar$ --- an overdetermined fixed point,907,1004,v15_bootstrap_classification.py;v6_bootstrap.py,83431665abeb,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,The loop for $\cthree$ --- the ``$8$'' is the $E_8$ rank,1005,1026,,09d2a99e39c6,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,The Möbius origin of the irreducible $\pi$,1027,1125,v180_clock_is_mobius.py;v54_seam_horizon_keystones.py;v55_coxeter_cycle.py;v66_e8_casimir_degrees.py,42cf92482c16,2026-06-15
+tfpt_3_e8_audit_bootstrap,section,"Honest status: bootstrap, not creation from nothing",1126,1155,v108_pascal_ladder.py,7fa3623dd2c8,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,The honest open-items list,1156,1224,v9_neutrino_texture.py,901e7dcad1ec,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,The $E_8$-slice scan: results (honest hit / miss),1225,1274,,9bb6cf827ee4,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,Following the $SU(9)$ lead: cross-slice consistency,1275,1312,,6527de5ba23c,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,Appendix: computational verification,1313,1328,v1_e8_glue.py;v4_flavor_matrix.py;v5_e8_cascade.py;v6_bootstrap.py,b08c71e486fc,2026-06-12
 tfpt_4_frontier,front,(front matter),1,105,v187_ftransfer_laws.py;v188_frontier_wording_guard.py;v213_ftransfer_functor.py;v35_quark_qcd_boundary.py,edc22a195479,2026-06-15
 tfpt_4_frontier,section,Baryon asymmetry $\eta_B$ --- a downstream readout from the closed $\Omega_b h^2$,106,193,v169_etaB_boltzmann_interface.py;v184_etaB_anchored_boltzmann.py;v212_leptogenesis_decuple.py,afc91cdeb72c,2026-06-15
 tfpt_4_frontier,section,Proton/electron ratio $m_p/m_e$ --- a cross-sector ratio,194,229,v159_pyrate_gauge_crosscheck.py;v164_qcd_scale.py;v79_review_identities.py,e55f6430961c,2026-06-13
@@ -154,38 +154,38 @@ tfpt_4_frontier,section,The muon anomalous magnetic moment --- a seam vertex rea
 tfpt_4_frontier,section,Full quantum gravity --- induced from the boundary kernel,526,627,v113_quasifree_kernel.py;v152_norm_is_anchor.py;v165_premise_a_closure.py;v177_seam_marking_kernel.py;v205_xi_threequarter.py;v206_h0_lambda_branch.py;v207_asymptotic_safety.py;v210_mark_local_dtn.py;v36_spectral_action_g2.py;v60_lambda_metrology_branch.py,8781a441a542,2026-06-15
 tfpt_4_frontier,section,Summary,628,657,,6580fbe649b5,2026-06-15
 tfpt_4_frontier,section,Appendix: computational verification,658,671,v28_gravity_fR.py;v36_spectral_action_g2.py;v7_gravity_cosmo.py,e0c58709c50b,2026-06-12
-tfpt_5_redteam,front,(front matter),1,77,,db47236985f9,2026-06-14
-tfpt_5_redteam,section,Method,78,86,,aa670d017bc0,2026-06-12
-tfpt_5_redteam,section,Target A --- the $(E8)_1$ boundary-net identification,87,112,,a2a8182c2254,2026-06-12
-tfpt_5_redteam,section,Target B --- carrier rank / the Pascal condition,113,132,,3d7d3d087f33,2026-06-12
-tfpt_5_redteam,section,Target C --- $k=\cthree/2$ and the seam-area coefficient,133,155,,9a96b0bd27c8,2026-06-12
-tfpt_5_redteam,section,Target D --- $U_{\mathrm{point}}\to\vgeo$,156,175,,97cb4a7ed0bf,2026-06-12
-tfpt_5_redteam,section,Target E --- $\vgeo$ as the unique dimensional floor,176,196,,b7454d7d4217,2026-06-12
-tfpt_5_redteam,section,Outcome,197,360,v100_numerology_null_mc.py;v154_simple_current_theorem.py;v182_reviewer_residual_map.py;v83_e8net_holomorphic_uniqueness.py;v86_nstar_reheating.py;v87_bulk_uniqueness_reduction.py;v88_cp_phase_audit.py;v89_carrier_index_lemma.py;v92_glue_uniqueness.py;v99_koide_flow_time.py,2c2de67b10dc,2026-06-15
+tfpt_5_redteam,front,(front matter),1,78,,9c5747766a4c,2026-06-16
+tfpt_5_redteam,section,Method,79,87,,aa670d017bc0,2026-06-12
+tfpt_5_redteam,section,Target A --- the $(E8)_1$ boundary-net identification,88,113,,a2a8182c2254,2026-06-12
+tfpt_5_redteam,section,Target B --- carrier rank / the Pascal condition,114,133,,3d7d3d087f33,2026-06-12
+tfpt_5_redteam,section,Target C --- $k=\cthree/2$ and the seam-area coefficient,134,156,,9a96b0bd27c8,2026-06-12
+tfpt_5_redteam,section,Target D --- $U_{\mathrm{point}}\to\vgeo$,157,176,,97cb4a7ed0bf,2026-06-12
+tfpt_5_redteam,section,Target E --- $\vgeo$ as the unique dimensional floor,177,197,,b7454d7d4217,2026-06-12
+tfpt_5_redteam,section,Outcome,198,393,v100_numerology_null_mc.py;v154_simple_current_theorem.py;v182_reviewer_residual_map.py;v219_icosahedral_mckay.py;v220_cp_hexagonal_modulus.py;v225_dual_normal_frame.py;v227_degree_exponent_channel_split.py;v83_e8net_holomorphic_uniqueness.py;v86_nstar_reheating.py;v87_bulk_uniqueness_reduction.py;v88_cp_phase_audit.py;v89_carrier_index_lemma.py;v92_glue_uniqueness.py;v99_koide_flow_time.py,3a770adfbc87,2026-06-17
 tfpt_horizon_readouts,front,(front matter),1,93,,091987bff9bb,2026-06-12
 tfpt_horizon_readouts,section,The seam constant is the universal horizon temperature factor,94,103,v8_horizon.py,5a3f38cb2349,2026-06-12
 tfpt_horizon_readouts,section,Schwarzschild thermodynamics in four $\cthree$-lines,104,146,v198_modular_commutator_reduction.py;v208_bh_thermodynamics.py;v28_gravity_fR.py,3942edf793ad,2026-06-15
-tfpt_horizon_readouts,section,Page time and scrambling,147,165,v54_seam_horizon_keystones.py,1a6fdadc367d,2026-06-13
-tfpt_horizon_readouts,section,De Sitter and the Nariai bound from the $\Lambda$ closure,166,181,,526df4bfe631,2026-06-12
-tfpt_horizon_readouts,section,The maximal black hole is the anchor: SdS in seam units,182,638,v101_horizon_anchor.py;v102_seam_orientation.py;v103_trisection_normal_form.py;v104_nariai_clock.py;v107_quantum_clock_target.py;v124_resummed_clock.py;v126_clock_wall_bridge.py;v127_ring_resummation.py;v128_graded_hull.py;v129_entropy_power_law.py;v130_born_square.py;v131_measure_is_area.py;v132_detratio_anomaly.py;v133_zeta_budget.py;v134_dual_anchor.py;v138_vw_firewall.py;v144_detratio_family.py;v147_clock_gaussian.py;v190_nariai_entropy_bound.py;v191_universal_branch_line.py;v209_bh_regular_core.py;v54_seam_horizon_keystones.py;v56_unique_attractor.py,9e253ee0f345,2026-06-15
-tfpt_horizon_readouts,section,"Turnaround radius, gravitational waves, light",639,662,,5462b90a34b1,2026-06-12
-tfpt_horizon_readouts,section,The local sibling: an EHT achromatic polarization intercept,663,689,v203_eht_achromatic.py,1ef3477fbcdb,2026-06-14
-tfpt_horizon_readouts,section,Search targets (not claims),690,715,,1dfc761d4281,2026-06-14
-tfpt_horizon_readouts,section,Appendix: computational verification,716,725,v8_horizon.py,0cf5187a0412,2026-06-12
-tfpt_research_contracts,front,(front matter),1,85,v113_quasifree_kernel.py,95da02d153f2,2026-06-12
-tfpt_research_contracts,section,Research Contract 1 --- $(U_{\mathrm{wall}})$,86,1031,v114_torsion_delta.py;v115_anchor_residue.py;v116_resonance_uniqueness.py;v117_monodromy_weyl_a3.py;v118_hexagon_family_dictionary.py;v119_review_validation_2.py;v120_address_table.py;v121_address_pinning.py;v122_margin_theorem.py;v134_dual_anchor.py;v135_det_surface.py;v136_dual_normal_selector.py;v139_selector_triangle.py;v142_frame_integrality.py;v145_pairing_atoms.py;v149_cusp_normal.py;v168_qgeo_rigidity.py;v176_seam_collar_realisation.py;v177_seam_marking_kernel.py;v178_marks_kernel_attempt.py;v179_conformal_realisation.py;v180_clock_is_mobius.py;v181_clock_is_conformal_symmetry.py;v192_qgeo_energy_clock.py;v193_qgeo_energy_commutator.py;v194_raw_seam_dtn_rp.py;v195_marks_lefschetz_character.py;v196_seam_energy_functional.py;v198_modular_commutator_reduction.py;v199_seam_state_invariance.py;v200_seam_variational_scan.py;v201_seam_subprincipal_marks.py;v210_mark_local_dtn.py;v214_seam_pillowcase.py;v215_seam_deck_killtest.py;v216_marks_gauss_bonnet.py;v217_marks_emergence_scan.py;v29_research_contract_certs.py;v30_d4_character_variety.py;v31_R_dictionary.py;v32_rh_splitting.py;v33_explicit_flat_bundle.py;v34_h2_bridge_attempt.py;v38_uwall_killswitch.py;v39_uwall_selectors.py;v40_harmonic_metric.py;v41_leg_assignment.py;v42_exterior_leg.py;v43_exterior_bridge.py;v44_carrier_exterior.py;v45_family_exterior.py;v49_readout_rigidity.py;v71_simple_r_bridge.py;v75_upoint_to_vgeo.py,c693741bc032,2026-06-15
-tfpt_research_contracts,section,Research Contract 2 --- $(G_{\mathrm{metric}})$,1032,1438,v125_glue_qsystem.py;v128_graded_hull.py;v143_graded_frobenius.py;v148_fock_census.py;v150_replica_eh_model.py;v151_bfk_split.py;v153_no_unit_theorem.py;v154_simple_current_theorem.py;v155_quasifree_boundary.py;v156_seam_net_construction.py;v157_rigid_fixed_point.py;v158_fixed_point_stable.py;v160_seam_gaussianity_from_pf.py;v161_one_particle_reduction.py;v162_seam_transport_identification.py;v165_premise_a_closure.py;v171_os_moment_cluster.py;v175_net_existence_full_cone.py;v28_gravity_fR.py;v29_research_contract_certs.py;v36_spectral_action_g2.py;v59_area_law_evidence.py;v76_gmetric_reduction.py;v77_e8_conformal_net.py,61357e9e0506,2026-06-13
-tfpt_research_contracts,section,Certifiability and recommended order,1439,1509,v183_koide_f_corner_transfer.py;v184_etaB_anchored_boltzmann.py;v185_axion_relic_solver.py;v187_ftransfer_laws.py;v213_ftransfer_functor.py,23d61c75423c,2026-06-15
+tfpt_horizon_readouts,section,Page time and scrambling,147,174,v221_seam_qecc.py;v54_seam_horizon_keystones.py,0645f969a377,2026-06-17
+tfpt_horizon_readouts,section,De Sitter and the Nariai bound from the $\Lambda$ closure,175,190,,526df4bfe631,2026-06-12
+tfpt_horizon_readouts,section,The maximal black hole is the anchor: SdS in seam units,191,647,v101_horizon_anchor.py;v102_seam_orientation.py;v103_trisection_normal_form.py;v104_nariai_clock.py;v107_quantum_clock_target.py;v124_resummed_clock.py;v126_clock_wall_bridge.py;v127_ring_resummation.py;v128_graded_hull.py;v129_entropy_power_law.py;v130_born_square.py;v131_measure_is_area.py;v132_detratio_anomaly.py;v133_zeta_budget.py;v134_dual_anchor.py;v138_vw_firewall.py;v144_detratio_family.py;v147_clock_gaussian.py;v190_nariai_entropy_bound.py;v191_universal_branch_line.py;v209_bh_regular_core.py;v54_seam_horizon_keystones.py;v56_unique_attractor.py,9e253ee0f345,2026-06-15
+tfpt_horizon_readouts,section,"Turnaround radius, gravitational waves, light",648,671,,5462b90a34b1,2026-06-12
+tfpt_horizon_readouts,section,The local sibling: an EHT achromatic polarization intercept,672,698,v203_eht_achromatic.py,1ef3477fbcdb,2026-06-14
+tfpt_horizon_readouts,section,Search targets (not claims),699,724,,1dfc761d4281,2026-06-14
+tfpt_horizon_readouts,section,Appendix: computational verification,725,734,v8_horizon.py,0cf5187a0412,2026-06-12
+tfpt_research_contracts,front,(front matter),1,88,v113_quasifree_kernel.py;v224_diamond_ftransfer_path.py,ddcebb440342,2026-06-17
+tfpt_research_contracts,section,Research Contract 1 --- $(U_{\mathrm{wall}})$,89,1038,v114_torsion_delta.py;v115_anchor_residue.py;v116_resonance_uniqueness.py;v117_monodromy_weyl_a3.py;v118_hexagon_family_dictionary.py;v119_review_validation_2.py;v120_address_table.py;v121_address_pinning.py;v122_margin_theorem.py;v134_dual_anchor.py;v135_det_surface.py;v136_dual_normal_selector.py;v139_selector_triangle.py;v142_frame_integrality.py;v145_pairing_atoms.py;v149_cusp_normal.py;v168_qgeo_rigidity.py;v176_seam_collar_realisation.py;v177_seam_marking_kernel.py;v178_marks_kernel_attempt.py;v179_conformal_realisation.py;v180_clock_is_mobius.py;v181_clock_is_conformal_symmetry.py;v192_qgeo_energy_clock.py;v193_qgeo_energy_commutator.py;v194_raw_seam_dtn_rp.py;v195_marks_lefschetz_character.py;v196_seam_energy_functional.py;v198_modular_commutator_reduction.py;v199_seam_state_invariance.py;v200_seam_variational_scan.py;v201_seam_subprincipal_marks.py;v210_mark_local_dtn.py;v214_seam_pillowcase.py;v215_seam_deck_killtest.py;v216_marks_gauss_bonnet.py;v217_marks_emergence_scan.py;v228_rr_index_gate.py;v29_research_contract_certs.py;v30_d4_character_variety.py;v31_R_dictionary.py;v32_rh_splitting.py;v33_explicit_flat_bundle.py;v34_h2_bridge_attempt.py;v38_uwall_killswitch.py;v39_uwall_selectors.py;v40_harmonic_metric.py;v41_leg_assignment.py;v42_exterior_leg.py;v43_exterior_bridge.py;v44_carrier_exterior.py;v45_family_exterior.py;v49_readout_rigidity.py;v71_simple_r_bridge.py;v75_upoint_to_vgeo.py,bf337e078c4b,2026-06-17
+tfpt_research_contracts,section,Research Contract 2 --- $(G_{\mathrm{metric}})$,1039,1445,v125_glue_qsystem.py;v128_graded_hull.py;v143_graded_frobenius.py;v148_fock_census.py;v150_replica_eh_model.py;v151_bfk_split.py;v153_no_unit_theorem.py;v154_simple_current_theorem.py;v155_quasifree_boundary.py;v156_seam_net_construction.py;v157_rigid_fixed_point.py;v158_fixed_point_stable.py;v160_seam_gaussianity_from_pf.py;v161_one_particle_reduction.py;v162_seam_transport_identification.py;v165_premise_a_closure.py;v171_os_moment_cluster.py;v175_net_existence_full_cone.py;v28_gravity_fR.py;v29_research_contract_certs.py;v36_spectral_action_g2.py;v59_area_law_evidence.py;v76_gmetric_reduction.py;v77_e8_conformal_net.py,61357e9e0506,2026-06-13
+tfpt_research_contracts,section,Certifiability and recommended order,1446,1516,v183_koide_f_corner_transfer.py;v184_etaB_anchored_boltzmann.py;v185_axion_relic_solver.py;v187_ftransfer_laws.py;v213_ftransfer_functor.py,23d61c75423c,2026-06-15
 origin_theory,front,(front matter),1,83,,d018d8b4a693,2026-06-14
-origin_theory,section,"The whole integer skeleton from one pair $(\gcar,\Nfam)=(5,3)$",84,130,v189_riemann_roch_carrier.py;v197_rr_carrier_clifford_d5.py;v51_boundary_half_step.py;v53_compiler_core.py,97d2b3d24038,2026-06-14
-origin_theory,section,The ``$8$'' is triply forced: geometry $=$ lattice $=$ gravity,131,215,v101_horizon_anchor.py;v102_seam_orientation.py;v54_seam_horizon_keystones.py,649048863210,2026-06-12
-origin_theory,section,A cyclic element \emph{inside} the hull: the order-$30$ Coxeter rotation,216,242,v55_coxeter_cycle.py,c0f94313a091,2026-06-12
-origin_theory,section,The unique attractor: a gapped transport selects ONE fixed point,243,265,v56_unique_attractor.py,2be0f7a522f8,2026-06-12
-origin_theory,section,"One $\ainv$ for electromagnetism, the cosmic horizon and $\Lambda$",266,307,v3_em_alpha.py;v55_coxeter_cycle.py;v60_lambda_metrology_branch.py;v68_seeley_dewitt_residual.py,915ef1e6f23a,2026-06-12
-origin_theory,section,Interpretation \mC: the self-reproducing cosmic cycle,308,369,v60_lambda_metrology_branch.py,67d0212e3e3d,2026-06-12
-origin_theory,section,Falsifiers,370,421,v60_lambda_metrology_branch.py;v62_data_scorecard.py,879b36b02901,2026-06-12
-origin_theory,section,The seam and the horizon: the precise statement,422,679,v150_replica_eh_model.py;v151_bfk_split.py;v152_norm_is_anchor.py;v36_spectral_action_g2.py;v57_horizon_crosslinks.py;v58_seam_horizon_chain.py;v59_area_law_evidence.py;v61_cft_bridge.py;v67_area_law_coefficient.py;v68_seeley_dewitt_residual.py;v73_k_c3_half.py;v75_upoint_to_vgeo.py;v77_e8_conformal_net.py;v78_vgeo_floor.py;v90_conical_defect_chain.py,04300eddef40,2026-06-13
-origin_theory,section,"Consequences, and the whole story \mC",680,726,,85c6d59a1287,2026-06-12
-origin_theory,section,A closure program (next phase) \mO,727,837,v15_bootstrap_classification.py;v59_area_law_evidence.py;v63_seam_engineering_index.py;v64_causal_boundary_nogo.py;v65_falsification_layer.py;v69_d4_q_geometry.py;v6_bootstrap.py;v86_nstar_reheating.py,9be18e577dca,2026-06-12
-origin_theory,section,Honest status,838,1022,v105_residual_inventory.py;v110_calderon_sheet.py;v111_quadratic_transport.py;v112_selfcounting_channel.py;v113_quasifree_kernel.py;v123_inventory_update.py;v167_inventory_post_closure.py;v53_compiler_core.py;v54_seam_horizon_keystones.py;v55_coxeter_cycle.py;v56_unique_attractor.py;v57_horizon_crosslinks.py,4cf0e7e396c3,2026-06-15
-origin_theory,section,Appendix: computational verification,1023,1042,v53_compiler_core.py;v54_seam_horizon_keystones.py;v55_coxeter_cycle.py;v56_unique_attractor.py,48687b83b93b,2026-06-12
+origin_theory,section,"The whole integer skeleton from one pair $(\gcar,\Nfam)=(5,3)$",84,159,v189_riemann_roch_carrier.py;v197_rr_carrier_clifford_d5.py;v219_icosahedral_mckay.py;v222_cm_norm_duality.py;v223_coxeter_totative_clock.py;v228_rr_index_gate.py;v51_boundary_half_step.py;v53_compiler_core.py,70bbc2f50353,2026-06-16
+origin_theory,section,The ``$8$'' is triply forced: geometry $=$ lattice $=$ gravity,160,244,v101_horizon_anchor.py;v102_seam_orientation.py;v54_seam_horizon_keystones.py,649048863210,2026-06-12
+origin_theory,section,A cyclic element \emph{inside} the hull: the order-$30$ Coxeter rotation,245,271,v55_coxeter_cycle.py,c0f94313a091,2026-06-12
+origin_theory,section,The unique attractor: a gapped transport selects ONE fixed point,272,304,v221_seam_qecc.py;v56_unique_attractor.py,2bb0a073ae6e,2026-06-16
+origin_theory,section,"One $\ainv$ for electromagnetism, the cosmic horizon and $\Lambda$",305,346,v3_em_alpha.py;v55_coxeter_cycle.py;v60_lambda_metrology_branch.py;v68_seeley_dewitt_residual.py,915ef1e6f23a,2026-06-12
+origin_theory,section,Interpretation \mC: the self-reproducing cosmic cycle,347,408,v60_lambda_metrology_branch.py,67d0212e3e3d,2026-06-12
+origin_theory,section,Falsifiers,409,460,v60_lambda_metrology_branch.py;v62_data_scorecard.py,879b36b02901,2026-06-12
+origin_theory,section,The seam and the horizon: the precise statement,461,718,v150_replica_eh_model.py;v151_bfk_split.py;v152_norm_is_anchor.py;v36_spectral_action_g2.py;v57_horizon_crosslinks.py;v58_seam_horizon_chain.py;v59_area_law_evidence.py;v61_cft_bridge.py;v67_area_law_coefficient.py;v68_seeley_dewitt_residual.py;v73_k_c3_half.py;v75_upoint_to_vgeo.py;v77_e8_conformal_net.py;v78_vgeo_floor.py;v90_conical_defect_chain.py,04300eddef40,2026-06-13
+origin_theory,section,"Consequences, and the whole story \mC",719,765,,85c6d59a1287,2026-06-12
+origin_theory,section,A closure program (next phase) \mO,766,876,v15_bootstrap_classification.py;v59_area_law_evidence.py;v63_seam_engineering_index.py;v64_causal_boundary_nogo.py;v65_falsification_layer.py;v69_d4_q_geometry.py;v6_bootstrap.py;v86_nstar_reheating.py,9be18e577dca,2026-06-12
+origin_theory,section,Honest status,877,1061,v105_residual_inventory.py;v110_calderon_sheet.py;v111_quadratic_transport.py;v112_selfcounting_channel.py;v113_quasifree_kernel.py;v123_inventory_update.py;v167_inventory_post_closure.py;v53_compiler_core.py;v54_seam_horizon_keystones.py;v55_coxeter_cycle.py;v56_unique_attractor.py;v57_horizon_crosslinks.py,4cf0e7e396c3,2026-06-15
+origin_theory,section,Appendix: computational verification,1062,1081,v53_compiler_core.py;v54_seam_horizon_keystones.py;v55_coxeter_cycle.py;v56_unique_attractor.py,48687b83b93b,2026-06-12

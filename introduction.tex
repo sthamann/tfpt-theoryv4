@@ -556,11 +556,15 @@ The number of \emph{structural} assumptions is \textbf{two axioms}. Everything e
 \emph{consequence}. \emph{And even those two tighten:} the
 bootstrap note shows $\gcar=5$ and the integer $8$ in $\cthree$ are \emph{overdetermined $E_8$-closure
 fixed points} (rank-fill, Coxeter-match, integer-glue/norm all give $5$; $8=h(D_5)=\operatorname{rank}E_8=\det R=\varphi(30)$),
-leaving \emph{one} genuine continuous primitive: $\pi$ from the Möbius boundary. So the \emph{discrete}
+leaving \emph{one} genuine continuous primitive: $\pi$ from the Möbius boundary. \emph{A fourth, deeper
+forcing} comes from the McKay correspondence: $E_8$ is the exceptional top of the tower of finite $SU(2)$
+subgroups, so its branch data is the icosahedron and the three atoms $(2,3,5)$ are its rotation-axis orders
+--- the binary icosahedral group $2I$ (order $120=|R^+(E_8)|$) has irrep degrees equal to the affine-$E_8$
+Kac marks, $\sum=30=h(E_8)=2{\cdot}3{\cdot}5$ (\veri{v219\_icosahedral\_mckay.py}). So the \emph{discrete}
 core has no freely tunable fundamental numbers --- the bootstrap is \emph{not creation from nothing} (two
 inputs remain), but an overdetermination of those inputs. (This concerns the discrete core only;
 dimensionful masses, the QG measure and frontier items remain typed-open.)
-\veri{v6\_bootstrap.py} \veri{v14\_carrier\_uniqueness.py} \veri{v23\_anchor\_generator.py}
+\veri{v6\_bootstrap.py} \veri{v14\_carrier\_uniqueness.py} \veri{v23\_anchor\_generator.py} \veri{v219\_icosahedral\_mckay.py}
 \end{winboxnb}
 
 % =====================================================================
@@ -589,6 +593,11 @@ discrete atoms of the theory --- that is the point of the compiler:
 \item $|R(E_8)| = 16\cdot5\cdot3 = 240$ and $\dim E_8 = 240 + (5+3) = 248$. \mE
 \item the $\Z_{30}$ Coxeter element $\leftrightarrow$ the cyclotomic polynomial $\Phi_{30}$; the corner
       rotation $z\mapsto iz$ on $\PP^1\!\setminus\!\mu_4$ is the $A_3$ Coxeter element. \mE
+\item \textbf{why these three primes:} $E_8$ is the icosahedral top of the McKay tower
+      ($2I$, order $120$, irrep degrees $=$ affine-$E_8$ marks summing to $30$), so $2,3,5$ are the
+      icosahedron's rotation orders; and the $E_8$ exponents $(\Z/30)^\times$ carry an order-$4$ totative
+      character $\langle7\rangle$ --- the same $\mu_4$ seam clock. \mE\
+      \veri{v219\_icosahedral\_mckay.py} \veri{v223\_coxeter\_totative\_clock.py}
 \end{itemize}
 
 % =====================================================================

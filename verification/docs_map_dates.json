@@ -32,12 +32,12 @@
   "date": "2026-06-12"
  },
  "introduction::subsection::The hard reduction: two research gates plus typed interfaces::1": {
-  "hash": "7152cbd17bf8",
-  "date": "2026-06-15"
+  "hash": "4459ec190ac4",
+  "date": "2026-06-17"
  },
  "introduction::section::The compiler: why $30=2\\cdot3\\cdot5$::1": {
-  "hash": "0827633d0220",
-  "date": "2026-06-12"
+  "hash": "2ec68cba42d8",
+  "date": "2026-06-17"
  },
  "introduction::section::The $\\mu_4$ glue: how $E_8$ is really built::1": {
   "hash": "e76c4fe33c1d",
@@ -116,16 +116,16 @@
   "date": "2026-06-12"
  },
  "tfpt_1_architecture_e8::subsection::Family $=A_3=\\mathfrak{su}_4$ from $\\mathbb P^1\\setminus\\mu_4$ (proved, with the metric settled)::1": {
-  "hash": "7063f369df01",
-  "date": "2026-06-12"
+  "hash": "e4de3541bbe3",
+  "date": "2026-06-17"
  },
  "tfpt_1_architecture_e8::subsection::The $\\mu_4$ glue and the $5/4+3/4=2$ discriminant theorem (proved)::1": {
   "hash": "9a8e61c56705",
   "date": "2026-06-12"
  },
  "tfpt_1_architecture_e8::subsection::Glue-norm arithmetic, and three readings of $41$, $60$, $120$::1": {
-  "hash": "de74c208b5d0",
-  "date": "2026-06-12"
+  "hash": "0c702b08140b",
+  "date": "2026-06-17"
  },
  "tfpt_1_architecture_e8::subsection::What the compiler outputs for the Standard Model and our reality::1": {
   "hash": "b09f077f4954",
@@ -328,16 +328,16 @@
   "date": "2026-06-12"
  },
  "tfpt_2_standard_model::section::Charged leptons: completely closed in $\\phiz$::1": {
-  "hash": "c2e9a38b6339",
-  "date": "2026-06-13"
+  "hash": "4a92e6055cb6",
+  "date": "2026-06-16"
  },
  "tfpt_2_standard_model::section::Quarks: hierarchy from the same word-lengths::1": {
   "hash": "7c03e77531da",
   "date": "2026-06-13"
  },
  "tfpt_2_standard_model::section::The Sheet Diamond and the Winding Line: masses and transport from one surface::1": {
-  "hash": "5de35f76bc6e",
-  "date": "2026-06-15"
+  "hash": "a0dc044ab840",
+  "date": "2026-06-16"
  },
  "tfpt_2_standard_model::subsection::Closing the audit gates: is $M{=}41$, $K$, $Q$ derived or imported?::1": {
   "hash": "2d67ed11e25a",
@@ -508,8 +508,8 @@
   "date": "2026-06-12"
  },
  "tfpt_3_e8_audit_bootstrap::section::The secondary branching atlas::1": {
-  "hash": "c8d8836cba5c",
-  "date": "2026-06-13"
+  "hash": "0758d07d81e8",
+  "date": "2026-06-17"
  },
  "tfpt_3_e8_audit_bootstrap::section::Group-theoretic audits (optional)::1": {
   "hash": "021e0730e513",
@@ -620,8 +620,8 @@
   "date": "2026-06-12"
  },
  "tfpt_5_redteam::front::(front matter)::1": {
-  "hash": "db47236985f9",
-  "date": "2026-06-14"
+  "hash": "9c5747766a4c",
+  "date": "2026-06-16"
  },
  "tfpt_5_redteam::section::Method::1": {
   "hash": "aa670d017bc0",
@@ -648,8 +648,8 @@
   "date": "2026-06-12"
  },
  "tfpt_5_redteam::section::Outcome::1": {
-  "hash": "2c2de67b10dc",
-  "date": "2026-06-15"
+  "hash": "3a770adfbc87",
+  "date": "2026-06-17"
  },
  "tfpt_horizon_readouts::front::(front matter)::1": {
   "hash": "091987bff9bb",
@@ -664,8 +664,8 @@
   "date": "2026-06-15"
  },
  "tfpt_horizon_readouts::section::Page time and scrambling::1": {
-  "hash": "1a6fdadc367d",
-  "date": "2026-06-13"
+  "hash": "0645f969a377",
+  "date": "2026-06-17"
  },
  "tfpt_horizon_readouts::section::De Sitter and the Nariai bound from the $\\Lambda$ closure::1": {
   "hash": "526df4bfe631",
@@ -692,12 +692,12 @@
   "date": "2026-06-12"
  },
  "tfpt_research_contracts::front::(front matter)::1": {
-  "hash": "95da02d153f2",
-  "date": "2026-06-12"
+  "hash": "ddcebb440342",
+  "date": "2026-06-17"
  },
  "tfpt_research_contracts::section::Research Contract 1 --- $(U_{\\mathrm{wall}})$::1": {
-  "hash": "c693741bc032",
-  "date": "2026-06-15"
+  "hash": "bf337e078c4b",
+  "date": "2026-06-17"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {
   "hash": "61357e9e0506",
@@ -712,8 +712,8 @@
   "date": "2026-06-14"
  },
  "origin_theory::section::The whole integer skeleton from one pair $(\\gcar,\\Nfam)=(5,3)$::1": {
-  "hash": "97d2b3d24038",
-  "date": "2026-06-14"
+  "hash": "70bbc2f50353",
+  "date": "2026-06-16"
  },
  "origin_theory::section::The ``$8$'' is triply forced: geometry $=$ lattice $=$ gravity::1": {
   "hash": "649048863210",
@@ -724,8 +724,8 @@
   "date": "2026-06-12"
  },
  "origin_theory::section::The unique attractor: a gapped transport selects ONE fixed point::1": {
-  "hash": "2be0f7a522f8",
-  "date": "2026-06-12"
+  "hash": "2bb0a073ae6e",
+  "date": "2026-06-16"
  },
  "origin_theory::section::One $\\ainv$ for electromagnetism, the cosmic horizon and $\\Lambda$::1": {
   "hash": "915ef1e6f23a",
