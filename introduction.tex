@@ -549,6 +549,18 @@ block certification as a strict physical TOE. Both are written up as numbered \e
 \texttt{tfpt\_research\_contracts}, with priority on the selector-triangle pairings (the
 $v_{\mathrm{geo}}$ scale anchor) and the $G_{\mathrm{net}}$ inclusion theorem.
 \veri{v36\_spectral\_action\_g2.py}
+\par\smallskip\noindent\textbf{Sharper still: the structural residual is \emph{one} condition.} $G_{\mathrm{metric}}$,
+the carrier P2 and the red-team Target~A are not separate items: they are three provably-equivalent faces of
+the single condition \emph{``the seam carries no nontrivial abelian sector''} --- holomorphy ($\mu$-index
+$1$), a homology-sphere seam link ($\Gamma$ perfect $\Leftrightarrow2I$, \veri{v232\_e8\_kleinian\_seam.py}),
+exactly one $1$-dim irrep (\veri{v219\_icosahedral\_mckay.py}) --- all of which force $E_8$
+($\#(\text{mark-}1)=|H_1|=1$ only for $E_8$; holomorphic $c=8=\gcar+\Nfam$ gives the unique even unimodular
+rank-$8$ lattice). In abelian Chern--Simons language this is the single integer step holomorphic
+$\Leftrightarrow\det K=1$, the extension tower $D_5{\oplus}A_3(16)\to D_8(4)\to E_8(1)$ being anyon
+condensation (the Kitaev $E_8$ state); the one open analytic step is then ``the free RP seam condenses the
+order-$|\mu_4|$ Lagrangian glue'' $=$ \texttt{QGEO.SYM.01}. So beneath the two gate \emph{labels} there is,
+structurally, a single fundamental postulate.
+\veri{v234\_seam\_holomorphy\_selection.py} \veri{v235\_seam\_chern\_simons.py}
 
 \begin{winboxnb}[Reduction in one line]
 The number of \emph{structural} assumptions is \textbf{two axioms}. Everything else

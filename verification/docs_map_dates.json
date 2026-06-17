@@ -32,7 +32,7 @@
   "date": "2026-06-12"
  },
  "introduction::subsection::The hard reduction: two research gates plus typed interfaces::1": {
-  "hash": "4459ec190ac4",
+  "hash": "5c84c3690c92",
   "date": "2026-06-17"
  },
  "introduction::section::The compiler: why $30=2\\cdot3\\cdot5$::1": {
@@ -696,7 +696,7 @@
   "date": "2026-06-17"
  },
  "tfpt_research_contracts::section::Research Contract 1 --- $(U_{\\mathrm{wall}})$::1": {
-  "hash": "246807e6f3c6",
+  "hash": "e2e728a3a84a",
   "date": "2026-06-17"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {

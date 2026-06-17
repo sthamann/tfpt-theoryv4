@@ -221,6 +221,15 @@ The ledger is *append-only and versioned*: superseded rows are marked `active=fa
 
 ## 5. What is genuinely open
 
+- **One condition, not many** (`v234`/`v235`): the whole *structural* residual — the metric inclusion
+  `G_net`, the carrier `P2` and red-team Target A — is a single condition, *"the seam carries no
+  nontrivial abelian sector"*, with three provably-equivalent faces that all force `E8`: holomorphy
+  (`μ`-index 1), a homology-sphere seam link (`Γ` perfect `⟺ 2I`, `v232`), and exactly one 1-dim irrep
+  (`v219`) — all equal `#(mark-1) = |H₁| = 1`, true only for `E8`. In abelian Chern–Simons language it is
+  the single integer step `holomorphic ⟺ det K = 1`; the extension tower `D₅⊕A₃ (16) → D₈ (4) → E₈ (1)`
+  is anyon condensation, i.e. the Kitaev `E8` quantum-Hall state. So the one open analytic step is
+  *"the free RP seam condenses the order-`|μ₄|` Lagrangian glue (det → 1)"* = `QGEO.SYM.01`. Plus the two
+  irreducibles: the scale `v_geo` (No-Unit theorem) and the transfer functor `F_transfer` (external physics).
 - **The central theorem**: `1/(8π)` from the seam-determinant replica — structure closed, the
   Fursaev–Solodukhin factor machine-derived (`v90`), and the mechanism now exhibited at the
   gapped-model level (gap ⇒ cutoff-independent EH coefficient under replica, `v150`), with the

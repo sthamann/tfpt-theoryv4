@@ -20,53 +20,53 @@ const GATES: Gate[] = [
     tag: "Interface 1",
     marker: "[O]",
     title: "v_geo — the one scale anchor",
-    body: "The quark mass ratios are closed (Readout Rigidity, c_u/c_d = 55/117 on the discrete selector stratum) and the selector triangle pins R columnwise (the dual pair (d,n), v136/v139). Only the absolute amplitude scale v_geo remains — the same dimensionful anchor as gravity's 1/G; finite, algebraic and falsifiable. (Historical label: U_wall.)",
-    formula: "\\det R = 8, \\ \\operatorname{Spec}(Q_+)=\\{1,2,3\\} \\ \\text{fixed};\\ U_{\\mathrm{point}} \\to v_{\\mathrm{geo}}",
+    body: "The quark mass ratios are closed (Readout Rigidity, c_u/c_d = 55/117) and the selector triangle pins R columnwise (the dual pair (d,n), v136/v139). Only the absolute amplitude scale v_geo remains — and the No-Unit theorem (v153) proves a dimensionless compiler cannot make an absolute scale. So this is not a gap but an irreducible metrology primitive, the same one as gravity's 1/G. (Historical label: U_wall.)",
+    formula: "\\det R = 8,\\ \\operatorname{Spec}(Q_+)=\\{1,2,3\\};\\ U_{\\mathrm{point}} \\to v_{\\mathrm{geo}}",
     tone: "border-amber-400/30 bg-amber-500/5",
   },
   {
     tag: "Interface 2",
     marker: "[E] target · [O] seam",
     title: "G_net — the metric-sector inclusion",
-    body: "Three explicit levels make the status unambiguous. (1) G_net ALGEBRA [E]: (D₅)₁⊗(A₃)₁⋊⟨(1,1)⟩ ≅ (E₈)₁ — Jones index 4 = |μ₄|, holomorphic c = 8, the unique 2D bulk follows (v154). (2) G_net AQFT MACHINERY [E]: net existence and full-cone reflection positivity, via the CAR second-quantisation functor Γ(t)=⊕ₘΛᵐ(t) verified on the complete 2¹⁶-dim Fock space (v175); R + R² is heat-kernel grounded (G2) and the IR sector is gap-decoupled (G5, Δ_eff = 1.648 > 0). (3) G_net SEAM INSTANTIATION [O]: the one remaining premise QGEO.SYM.01 — the carrier μ₄ clock IS the seam's conformal deck. So the mathematics of the target object is closed; the only open item is the physical coupling of the raw seam to that object. That residual was driven to bedrock through the chain v175→v181 (assemble one central theorem → split into the MARKS + KERNEL obligations → close their finite cores → unify into one conformal-realisation premise QGEO.CONF.01 → milder isometry premise QGEO.ISO.01 → conformal-symmetry / deck premise QGEO.SYM.01), each step a theorem or an established citation (uniformisation, Kerékjártó, the order-4 Möbius classification). QGEO.SYM.01 is a definition, left honestly [O], not reducible further without relabeling. Framed honestly it is not a gap but TFPT's one fundamental postulate — the role 'c = const' plays in relativity — from which the rest unfolds by theorem; the achievement is that the whole theory is compressed onto exactly one sharply-located, falsifiable premise. Full QG closure is a certification layer, not a prerequisite for testing the readouts. The sharpest attack on this last premise is now an operator statement: QGEO.ENERGY.02, the energy commutator [ρ, Λ_Σ] = 0 on the rank-8 Calderón polarisation (v192/v193) — with ρ carrier-defined (Coxeter of W(A₃)=S₄), Λ_Σ the raw RP-seam DtN, and the commutator forcing the (1,2,3) grading on H¹. If the raw-seam DtN is RP-definable (the one non-circularity hinge), this turns QGEO.SYM.01 from a definition into an energy-rigidity theorem; an exact rider fixes the direction — the induced EH coefficient selects q(A₃)=¾ (family), not q(D₅)=⁵⁄₄ (carrier), so gravity is family-geometry-induced. That hinge was then tackled (v194): the DtN IS RP-canonical (Osterwalder–Schrader, v54) on a quasi-free seam state (v155), and [ρ, Λ_Σ]=0 closes on the finite cohomology H¹ [E] (distinct μ₄ characters, v177) — so the bedrock reduces one further notch, from a bare definition to ‘intrinsic Bisognano–Wichmann geometric modular covariance of the quasi-free seam state’: sharper and falsifiable, but still [O] (the full-L² modular geometricity must be intrinsic, else it re-presupposes the conformal covariance it should produce). The fog point keeps shrinking; it has not yet closed to [E]. The decisive crack (v198): the DtN principal symbol |k| = diag(|n|) and the clock ρ = diag(i^n) are both diagonal in the Fourier basis, so [ρ, |k|] = 0 EXACTLY on all of L² — the leading-order commutation is free on the whole boundary; and by Tomita–Takesaki [ρ, Λ_Σ]=0 FOLLOWS from the state being μ4-invariant (ω∘ρ=ω), needing only the state + reflection and NO conformal covariance — which removes the Bisognano–Wichmann circularity. So the entire residual is now the single, non-circular state-invariance ‘the raw quasi-free seam state is μ4-invariant’ (the Gaussian bulk measure is deck-invariant) — the maximally-operational form of QGEO.SYM.01. A foundational symmetry postulate cannot be derived from nothing (the role c = const plays in relativity); it is now in its sharpest, falsifiable, non-circular form — still [O], but the diffuse geometry is gone. One further reduction (v201): writing the DtN as Λ = |k| + M_f with M_f = multiplication by the boundary curvature f(θ), block-diagonality holds iff f is Z₄-invariant, and a curvature sourced by the four μ₄ marks f(θ)=Σⱼ g(θ−2πj/4) is automatically Z₄-invariant — so the μ₄-mark orbit (forced by v195) FORCES the sub-principal symbol block-diagonal (3 marks or generic marks break it). The whole residual thus collapses to the mark-locality of the DtN (the seam flat away from the μ₄ marks = the conformal-deck structure) — structurally definitional, the narrowest form yet of QGEO.SYM.01. (Historical label: G_metric.)",
-    formula: "[\\,(E_8)_1 : (D_5)_1\\times(A_3)_1\\,] = 4 = |\\mu_4| \\ \\Rightarrow\\ \\text{holomorphic } c = 8",
+    body: "The target object is closed: (D₅)₁⊗(A₃)₁⋊μ₄ ≅ (E₈)₁ (Jones index 4 = |μ₄|, holomorphic c = 8; v154), with net existence and full-cone reflection positivity discharged to [E] on the 2¹⁶-dim Fock space (v175), R + R² heat-kernel grounded and the IR sector gap-decoupled (Δ_eff = 1.648 > 0). Only the physical coupling of the raw seam to that object is open — the single premise QGEO.SYM.01: the carrier μ₄ clock IS the seam's conformal deck. That is not a gap but TFPT's one fundamental postulate (the role 'c = const' plays in relativity), driven to its sharpest non-circular form (a μ₄-invariant quasi-free seam state, v198/v201) and Lean-formalised below the premise. As the synthesis above shows, this gate, the carrier P2 and Target A are one condition — and in Chern-Simons language it is the single integer step 'det K = 1' (v234/v235). (Historical label: G_metric.)",
+    formula: "[\\,(E_8)_1 : (D_5)_1\\times(A_3)_1\\,] = 4 = |\\mu_4| \\Rightarrow \\text{holomorphic } c = 8",
     tone: "border-amber-400/30 bg-amber-500/5",
   },
   {
     tag: "Interface 3",
-    marker: "[C]/[C]",
+    marker: "[C]",
     title: "F_transfer — one typed functor, four interfaces",
-    body: "Not a bag of open topics: F_transfer = F_observable ∘ F_threshold ∘ F_RG, standard physics fed TFPT source data, with exactly four interfaces. F_pole (Koide source→pole): the 53/54 factor is an exact operator readout [E], the pole interpretation [C] (v183). F_Boltzmann (CP source→η_B): the washout anchors (m̃₁ = m_3/A_Λ); the cleanest [C] route is the scalaron-decuple branch where BOTH Boltzmann inputs share A_Λ = 10 = |E(K₅)| and η_B brackets 6.1×10⁻¹⁰ with no hidden seesaw scale (v212), still a sharper scenario. F_relic (axion → Ω_a): all-of-DM is possible only on the θ_i ≈ 170° hilltop, and the spine-angle branch θ_i = 3π/5 = π·N_fam/g_car is the sharper falsifiable [C] alternative (v211). F_QCD (m_p/m_e via Λ_QCD, b₃ = −7, lattice): a QCD matching contract [O], not a compiler number (the rejected 1836 near-formula is the discipline working). A machine guard (v187) enforces that all four stay [C]/[O] and are never promoted to a primitive [E] compiler prediction — exact algebraic sub-parts (53/54, b₃ = −7) may be [E], the physical prediction never is. Beyond the guard, the functor contract CONTRACT.F.01 (v213) pins four structural axioms: (1) μ₄-deck equivariance — the Koide multiplier λ₂ = (2/3)⁶ = 64/729 IS the deck transfer eigenvalue; (2) Plücker preservation — 53 = aᵀ(R+Q)1, ‖Pl(K)‖₁ = 11; (3) positivity/stochasticity — spec(T) = {1,(2/3)⁶,(1/3)⁶} positive, κ_f ∈ (0,1); (4) external modules explicit. It is the third research contract alongside U_wall and G_metric — a typed functor, a consolidation, not a closure.",
+    body: "Not a bag of open topics but one functor F_transfer = F_observable ∘ F_threshold ∘ F_RG (standard physics fed TFPT source data), with exactly four interfaces: F_pole (Koide 53/54, exact readout [E], pole reading [C], v183), F_Boltzmann (η_B via the scalaron-decuple A_Λ = 10, v212), F_relic (axion, the θ_i = 3π/5 spine branch, v211), F_QCD (m_p/m_e via Λ_QCD, b₃ = −7, lattice [O]). A machine guard (v187) forbids ever promoting these to a primitive [E] compiler prediction; the functor contract CONTRACT.F.01 (v213) pins four structural axioms (μ₄-deck equivariance, Plücker preservation, positivity, explicit external modules). A consolidation, not a closure. (Historical label: F_frontier.)",
     tone: "border-slate-500/30 bg-slate-500/5",
   },
 ];
 
-/**
- * The open-residual visual: the whole residual at a glance as three tiles
- * (Rest = v_geo ⊕ G_net ⊕ F_transfer). It is deliberately NOT area-weighted —
- * there is no meaningful proportion between the three; the point is that the
- * residual is exactly three named items, none hidden. The detailed status of
- * each is in the cards below.
- */
 const RESIDUAL: { label: string; marker: string; blurb: string; tone: string }[] = [
   {
     label: "v_geo",
     marker: "[O]",
-    blurb: "One dimensionful scale anchor — the same primitive as gravity's 1/G.",
+    blurb: "One dimensionful scale — irreducible by the No-Unit theorem; the same primitive as gravity's 1/G.",
     tone: "from-amber-500/15 to-amber-500/[0.03] border-amber-400/30",
   },
   {
     label: "G_net",
     marker: "[E] target · [O] seam",
-    blurb: "Metric-sector inclusion: the (E₈)₁ target algebra is closed; only the seam coupling is open.",
+    blurb: "Metric inclusion: the (E₈)₁ target is closed; only the seam coupling (QGEO.SYM.01) is open.",
     tone: "from-amber-500/15 to-amber-500/[0.03] border-amber-400/30",
   },
   {
     label: "F_transfer",
     marker: "[C]",
-    blurb: "One typed functor with exactly four downstream interfaces — bridges, never primitive outputs.",
+    blurb: "One typed functor, four downstream interfaces — bridges, never primitive outputs.",
     tone: "from-slate-500/15 to-slate-500/[0.03] border-slate-500/30",
   },
+];
+
+/** The three provably-equivalent faces of the single structural condition (v234). */
+const FACES: { face: string; statement: string }[] = [
+  { face: "AQFT", statement: "boundary net holomorphic (μ-index 1)" },
+  { face: "Geometry", statement: "seam link a homology 3-sphere (Γ perfect ⟺ 2I)" },
+  { face: "Rep theory", statement: "exactly one 1-dim irrep (no abelian charge)" },
 ];
 
 function ResidualTreemap() {
@@ -103,9 +103,61 @@ function ResidualTreemap() {
 }
 
 /**
- * Trust section: what is still open. The research contracts name exactly two
- * genuine gates plus a set of typed frontier interfaces — surfacing this near
- * the top is a credibility signal, not a footnote.
+ * The single closing condition (v234/v235): the whole structural residual is one
+ * condition with three provably-equivalent faces, all forcing E₈. Surfacing this
+ * compactly is the headline — the wall of QGEO history now lives in the paper.
+ */
+function ClosingCondition() {
+  return (
+    <figure className="mt-8 rounded-2xl border border-emerald-400/25 bg-emerald-500/[0.04] p-5 sm:p-6">
+      <figcaption className="text-sm font-semibold text-emerald-200">
+        The structural residual is{" "}
+        <span className="underline decoration-emerald-400/40 underline-offset-4">
+          one condition
+        </span>{" "}
+        — the seam carries no nontrivial abelian sector
+      </figcaption>
+      <p className="mt-2 text-sm leading-relaxed text-slate-300">
+        The metric inclusion (G_net), the carrier P2 and red-team Target A are not
+        three gates but three faces of a single condition — and all three force E₈:
+      </p>
+      <div className="mt-4 grid gap-3 sm:grid-cols-3">
+        {FACES.map((f) => (
+          <div
+            key={f.face}
+            className="rounded-xl border border-slate-700/40 bg-slate-950/40 p-3"
+          >
+            <div className="font-mono text-[11px] font-semibold uppercase tracking-wider text-emerald-300/80">
+              {f.face}
+            </div>
+            <div className="mt-1 text-xs leading-relaxed text-slate-300">
+              {f.statement}
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="mt-4 overflow-x-auto rounded-lg border border-slate-700/40 bg-slate-950/50 p-2.5">
+        <Math block>
+          {"\\#(\\text{1-dim irreps}) = |\\Gamma^{\\mathrm{ab}}| = |H_1(S^3/\\Gamma)| = 1 \\iff E_8 \\iff |\\det K| = 1"}
+        </Math>
+      </div>
+      <p className="mt-3 text-xs leading-relaxed text-slate-400">
+        In abelian Chern–Simons language the boundary is holomorphic ⟺ det K = 1, and the
+        extension tower D₅⊕A₃ (det 16) → D₈ (det 4) → E₈ (det 1) is anyon condensation —
+        the Kitaev E₈ quantum-Hall state. So the one open analytic step is sharply located:{" "}
+        <span className="text-slate-300">
+          the free RP seam condenses the order-|μ₄| Lagrangian glue (det → 1)
+        </span>{" "}
+        = the deck premise QGEO.SYM.01 (v234/v235).
+      </p>
+    </figure>
+  );
+}
+
+/**
+ * Trust section: what is still open. The whole structural residual collapses to one
+ * condition (no abelian sector ⟹ E₈), plus the one irreducible scale and the typed
+ * transfer functor — surfaced near the top as a credibility signal, not a footnote.
  */
 export function OpenGates() {
   return (
@@ -118,8 +170,10 @@ export function OpenGates() {
         <SectionHeader
           eyebrow="Honest boundaries"
           title="What is still open?"
-          description="After the compiler closure the live residual is Rest = v_geo ⊕ G_net ⊕ F_transfer: one dimensionful scale anchor, one metric-sector inclusion theorem, and one downstream transfer functor. None of these is hidden, and none is overclaimed. (The historical labels U_wall / G_metric / F_frontier are kept only for ledger continuity.)"
+          description="After the compiler closure the live residual is just three named items — Rest = v_geo ⊕ G_net ⊕ F_transfer. Sharper still: the structural part (the metric inclusion and the carrier P2) is one condition that forces E₈ three equivalent ways. Nothing is hidden, nothing is overclaimed."
         />
+
+        <ClosingCondition />
 
         <ResidualTreemap />
 

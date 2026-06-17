@@ -168,6 +168,7 @@ const NODES: DagNode[] = [
       "v227_degree_exponent_channel_split.py",
       "v232_e8_kleinian_seam.py",
       "v234_seam_holomorphy_selection.py",
+      "v235_seam_chern_simons.py",
     ],
   },
   {

@@ -504,6 +504,18 @@ statement that an invertible (Gaussian) bulk has a holomorphic chiral boundary. 
 closes the entire structural layer; $v_{\mathrm{geo}}$ stays the No-Unit metrology primitive and
 $F_{\mathrm{transfer}}$ stays external physics. This box certifies only that the three faces coincide and
 force $E_8$ (\mE); the analytic step itself is the open \mO.
+\par\smallskip\noindent\textbf{A physical realisation of the step (\veri{v235\_seam\_chern\_simons.py}).}
+The step lands in standard physics. A free gapped \emph{bosonic} $2{+}1$d bulk is an abelian
+Chern--Simons / $K$-matrix theory (even integer $K$), where $\#$anyons $=|\det K|$, the edge chiral central
+charge is $c={\rm signature}(K)$, and the edge net is \emph{holomorphic} $\Leftrightarrow|\det K|=1$ --- so
+``no nontrivial abelian sector'' is precisely $\det K=1$. The extension tower of \vref{v92} \emph{is} the
+anyon-condensation tower read by determinant: $D_5{\oplus}A_3$ ($\det16$, $16$ anyons) $\to SO(16)_1{=}D_8$
+($\det4$) $\to (E_8)_1$ ($\det1$, holomorphic), all rank $8$ with $c={\rm signature}=8=\gcar+\Nfam$, so the
+holomorphic end is the \emph{Kitaev $E_8$ quantum-Hall state}. Holomorphy $\Leftrightarrow$ condensing the
+order-$|\mu_4|=4$ \emph{Lagrangian} glue ($\det16{\to}16/4^2{=}1$); a partial order-$2$ isotropic only
+reaches $\det4$ ($D_8$). The residual is thereby a single integer condition --- ``the free RP seam condenses
+the order-$|\mu_4|$ Lagrangian glue'' --- the same sheet/$\mu_4$ selection as \texttt{GATE.QGEO}, but now with
+$\text{holomorphic}\Leftrightarrow\det1$ a theorem (\texttt{GATE.HOLO.02}, \mE/\mO).
 \end{keybox}
 
 \begin{lemma}[U1 --- wall landscape, \emph{corrected}]

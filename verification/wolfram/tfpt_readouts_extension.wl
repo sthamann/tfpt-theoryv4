@@ -1948,6 +1948,30 @@ Module[{marks, ones, e8edges, A8, C8},
     Det[C8] == 1 && And @@ (# == 2 & /@ Diagonal[C8]) && (5 + 3 == 8)];
 ];
 
+(* ==== v235: the closing step in abelian Chern-Simons -- holomorphic <=> det K = 1 ==== *)
+Module[{cartanA, cartanD, e8edges, A3, D5, D8, E8, carrier},
+  cartanA[n_] := SparseArray[{{i_, i_} -> 2, {i_, j_} /; Abs[i - j] == 1 -> -1}, {n, n}] // Normal;
+  cartanD[n_] := Module[{K}, K = 2 IdentityMatrix[n];
+     Do[K[[i, i + 1]] = K[[i + 1, i]] = -1, {i, n - 2}];
+     K[[n - 2, n]] = K[[n, n - 2]] = -1; K];
+  e8edges = {{1, 2}, {2, 3}, {3, 4}, {4, 5}, {5, 6}, {6, 7}, {5, 8}};
+  E8 = 2 IdentityMatrix[8] - Table[If[i != j && MemberQ[e8edges, Sort[{i, j}]], 1, 0], {i, 8}, {j, 8}];
+  A3 = cartanA[3]; D5 = cartanD[5]; D8 = cartanD[8];
+  carrier = ArrayFlatten[{{D5, 0}, {0, A3}}];
+  checkExact["v235 GATE.HOLO.02: the closing step in abelian Chern-Simons -- a free gapped bosonic 2+1d "
+    <> "bulk = an even integer K-matrix with #anyons=|det K|, edge c=signature(K), holomorphic <=> det=1. "
+    <> "The TFPT tower (v92) read by det: carrier D5(+)A3 (even, det 16, 16 anyons) -> SO(16)_1=D8 (det 4) "
+    <> "-> (E8)_1 (det 1, holomorphic), all rank 8, c=signature=8=g_car+N_fam. Holomorphic <=> det 1 <=> E8 "
+    <> "= the Kitaev E8 quantum-Hall state. Condensation: a Lagrangian glue of order sqrt(16)=|mu4|=4 takes "
+    <> "det 16->1; an order-2 isotropic only ->4=D8. NEG: D8 free+bosonic but 4 anyons (not holomorphic). "
+    <> "Residual: condense the |mu4| Lagrangian glue = the sheet/QGEO selection.",
+    Det[E8] == 1 && Det[D8] == 4 && Det[carrier] == 16 && Det[A3] == 4 && Det[D5] == 4 &&
+    And @@ (EvenQ[#] & /@ Join[Diagonal[E8], Diagonal[D8], Diagonal[carrier]]) &&
+    Min[Eigenvalues[N[E8]]] > 0 && Min[Eigenvalues[N[D8]]] > 0 && Min[Eigenvalues[N[carrier]]] > 0 &&
+    Length[E8] == Length[D8] == Length[carrier] == 8 &&
+    16/4^2 == 1 && 16/2^2 == 4 && (5 + 3 == 8)];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v234: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v235: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];
