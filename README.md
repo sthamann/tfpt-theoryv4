@@ -331,7 +331,12 @@ count (`#anyons = |det K|`, the condensation tower `16→4→1`, Gauss–Milgram
 **simplification** — `χ_E8 = j^{1/3}` gives `χ_E8(i) = 1728^{1/3} = 12`, so `τ=i` is **both** the order-4 CM
 point (the `QGEO.SYM.01` flat geometry) **and** the `(E8)₁` partition-function modulus (the `QG.AMB.01`
 holomorphy): the two obligations are **two faces of one object**, *"the raw seam is `(E8)₁` at `τ=i`"* —
-dropping the open count from two to **one** (`v282`). The recent round's computable predictions are all
+dropping the open count from two to **one** (`v282`). That single open lemma is now attacked from **two
+decomposed routes**: RP-state uniqueness (a 6-lemma chain, 5/6 discharged — Troyanov reduces the rest to
+*"the raw seam is the constant-curvature state"*, `v284`) and seam-net condensation (a 4-lemma chain, 3/4
+discharged — the open bit is `det K=1` = `QGEO.SYM.01`, `v285`); the two routes' open lemmas **coincide**, so
+the one statement that closes both is a **canonical equivalence between the raw seam KMS/DtN state and the
+holomorphic `(E8)₁` net at `τ=i`**. The recent round's computable predictions are all
 consistent at `<2σ`, with two sharp near-term kill tests (Σm_ν floor, proton decay; `v283`).
 A development timeline of all `281` scripts is in `introduction.tex` (and on the website verification page).
 

@@ -15,11 +15,11 @@ introduction,subsection,Cosmology is the Pascal action grammar of the carrier,68
 introduction,section,"Physical, geometric, topological: why the architecture is plausible",723,737,,5a4228cd0587,2026-06-12
 introduction,section,What role $E_8$ now plays exactly,738,763,,07ec9c971cd7,2026-06-12
 introduction,section,What this means for the theory-of-everything question,764,810,,3eac33656336,2026-06-18
-introduction,subsection,"The closure ledger: what is done, and what genuinely remains",811,879,,7393e54a01e4,2026-06-18
-introduction,section,Does this make the theory more probable?,880,897,,540397fd6436,2026-06-12
-introduction,section,Predictions for running and upcoming experiments,898,968,v100_numerology_null_mc.py;v84_frozen_registry.py,aebe6e44a5a3,2026-06-12
-introduction,section,Conclusion,969,980,,85f94f17b1dd,2026-06-12
-introduction,section,Appendix: computational verification (reproducibility),981,1020,v1_e8_glue.py,376b86d99cd2,2026-06-17
+introduction,subsection,"The closure ledger: what is done, and what genuinely remains",811,883,,1ec73f8618e7,2026-06-18
+introduction,section,Does this make the theory more probable?,884,901,,540397fd6436,2026-06-12
+introduction,section,Predictions for running and upcoming experiments,902,972,v100_numerology_null_mc.py;v84_frozen_registry.py,aebe6e44a5a3,2026-06-12
+introduction,section,Conclusion,973,984,,85f94f17b1dd,2026-06-12
+introduction,section,Appendix: computational verification (reproducibility),985,1024,v1_e8_glue.py,376b86d99cd2,2026-06-17
 tfpt_1_architecture_e8,front,(front matter),1,146,,31add055d84c,2026-06-12
 tfpt_1_architecture_e8,section,How to read this document,147,364,v106_review_validation.py;v109_sheet_pairing.py;v110_calderon_sheet.py;v111_quadratic_transport.py;v112_selfcounting_channel.py;v113_quasifree_kernel.py;v23_anchor_generator.py,5afde72d746c,2026-06-12
 tfpt_1_architecture_e8,section,Headline: the Pascal compiler on five carrier slots,365,422,,32b8525a612e,2026-06-12
