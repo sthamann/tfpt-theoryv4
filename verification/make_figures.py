@@ -737,42 +737,42 @@ def fig_residual_chain():
     steps = [
         ("start", "Naive residual", "''build a quantum-gravity measure''", C["gray"]),
         ("v175", "Net existence + full-cone RP", "discharged to [E] (CAR functor)", C["green"]),
-        ("v176", "One central theorem", "Seam Collar Realisation Thm", C["green"]),
-        ("v177-v178", "MARKS + KERNEL, cores [E]", "Mobius + Schur (spectrum=operator)", C["green"]),
-        ("v179-v181", "One geometric premise", "QGEO.SYM.01: carrier mu4 clock = seam conformal deck", C["green"]),
+        ("v176-v181", "One geometric premise", "QGEO.SYM.01: carrier mu4 clock = seam conformal deck", C["green"]),
         ("v194-v201", "Non-circular form", "state-invariance w o rho = w; DtN mark-local (Z4)", C["green"]),
-        ("v234", "ONE condition, three faces", "no abelian sector: holomorphy = homology-sphere = 1 irrep -> E8", C["green"]),
-        ("v235", "Chern-Simons form", "holomorphic <=> det K = 1 (the Kitaev E8 condensation tower)", C["green"]),
-        ("v237", "PHYSICAL BEDROCK", "is the seam short-range-entangled? det K=1 = the Kitaev E8 phase", C["gold"]),
+        ("v234-v235", "ONE condition: holomorphy", "no abelian sector <=> det K=1 (the Kitaev E8 tower)", C["green"]),
+        ("v276", "Flat all-orders closure (Lean)", "flat tau=i => [rho,H]=0 to ALL orders (FORM.QGEO.03)", C["green"]),
+        ("v282", "Two faces, ONE object", "chi_E8(i)=12: flat tau=i geometry = (E8)_1 holomorphy", C["green"]),
+        ("v284-v285", "Two routes, one open lemma", "RP-uniqueness 5/6 + condensation 3/4; open lemmas coincide", C["green"]),
+        ("BEDROCK", "ONE physical statement", "canonical equivalence: raw seam KMS/DtN <-> holomorphic (E8)_1 at tau=i", C["gold"]),
     ]
     n = len(steps)
-    fig, ax = plt.subplots(figsize=(7.8, 6.4))
-    ax.set_xlim(0, 10); ax.set_ylim(0, n + 0.5); ax.axis("off")
+    fig, ax = plt.subplots(figsize=(8.2, 6.6))
+    ax.set_xlim(0, 10.4); ax.set_ylim(0, n + 0.5); ax.axis("off")
     ax.set_title("Structural-residual reduction chain: the whole ''quantum gravity'' question\n"
-                 "collapses to one falsifiable physical statement -- is the seam SRE?",
+                 "collapses to one falsifiable physical statement -- is the seam (E8)_1 at tau=i?",
                  fontsize=10.5, color=C["blue"])
     bw, bh = 8.4, 0.62
     centers = []
     for i, (tag, head, sub, col) in enumerate(steps):
         y = n - i - 0.1
-        x = 0.5 + i * 0.12                      # slight diagonal descent
+        x = 0.5 + i * 0.10                      # slight diagonal descent
         box = FancyBboxPatch((x, y - bh / 2), bw, bh,
                              boxstyle="round,pad=0.04,rounding_size=0.12",
                              linewidth=1.6, edgecolor=col,
-                             facecolor=col, alpha=0.10 if tag != "v237" else 0.20)
+                             facecolor=col, alpha=0.10 if tag != "BEDROCK" else 0.20)
         ax.add_patch(box)
-        ax.text(x + 0.18, y, tag, fontsize=9, fontweight="bold", va="center", color=col)
-        ax.text(x + 1.35, y + 0.10, head, fontsize=8.6, va="center", fontweight="bold",
+        ax.text(x + 0.18, y, tag, fontsize=8.6, fontweight="bold", va="center", color=col)
+        ax.text(x + 1.45, y + 0.10, head, fontsize=8.4, va="center", fontweight="bold",
                 color="#222")
-        ax.text(x + 1.35, y - 0.16, sub, fontsize=7.4, va="center", color=C["gray"])
+        ax.text(x + 1.45, y - 0.16, sub, fontsize=6.9, va="center", color=C["gray"])
         centers.append((x + bw / 2, y))
     for i in range(n - 1):
         x0, y0 = centers[i]; x1, y1 = centers[i + 1]
         ax.add_patch(FancyArrowPatch((x0 - 2.4, y0 - bh / 2), (x1 - 2.4, y1 + bh / 2),
                                      arrowstyle="-|>", mutation_scale=11,
                                      color=C["gray"], lw=1.0))
-    ax.text(5.0, 0.10, "Everything above is a theorem or an established citation; the bedrock, once a definition\n"
-            "(QGEO.SYM.01), is now a falsifiable physical question: is the seam SRE (det K = 1)?",
+    ax.text(5.2, 0.10, "Everything above is a theorem, a Lean proof or an established citation; the bedrock, once a\n"
+            "definition (QGEO.SYM.01), is now one falsifiable physical question: is the raw seam (E8)_1 at tau=i?",
             fontsize=6.8, ha="center", va="bottom", style="italic", color=C["gray"])
     fig.tight_layout()
     fig.savefig(os.path.join(OUT, "residual_chain.pdf"))
@@ -808,10 +808,16 @@ def fig_script_timeline():
          "marks from Gauss-Bonnet, the Sheet Diamond axis geometry", C["gold"]),
         ("v219-v237", "Icosahedral capstone", "McKay why {2,3,5}, CM norms 41/7, CP triality, Kleinian\n"
          "seam, det K=1 = Kitaev E8; the (2,3,5) Brieskorn generates ALL", C["green"]),
+        ("v238-v261", "NCG / Modular Spectral Closure", "96-dim spectral triple, Dirac = covariance induction,\n"
+         "cutoff = KMS weight, seam/carrier/E8 on one K3: one relative object", C["blue"]),
+        ("v262-v275", "Frontier closure + QFT4D fork", "F_QCD m_p/m_e, M_nu seesaw, S_pert (EG, 1-loop + gauge\n"
+         "betas), scale over-determination, the QG.AMB roadmap", C["red"]),
+        ("v276-v285", "The Gral", "QGEO.SYM.01 -> one flat-tau=i postulate (Lean), seam = (E8)_1\n"
+         "at tau=i, the two proof routes decomposed (one open lemma)", C["gold"]),
     ]
-    fig, ax = plt.subplots(figsize=(7.8, 8.6))
+    fig, ax = plt.subplots(figsize=(7.8, 10.2))
     ax.set_xlim(0, 10); ax.set_ylim(0, len(phases) + 0.4); ax.axis("off")
-    ax.set_title("TFPT verification suite: the journey of ~235 machine-checked scripts",
+    ax.set_title("TFPT verification suite: the journey of ~285 machine-checked scripts",
                  fontsize=10.5, color=C["blue"])
     ax.plot([0.7, 0.7], [0.3, len(phases) + 0.1], color=C["gray"], lw=1.4, zorder=0)
     for i, (rng, head, sub, col) in enumerate(phases):
@@ -838,21 +844,21 @@ def fig_qft_skeleton():
 
     steps = [
         ("v156/v175", "Seam chiral net $(E_8)_1$, $c=8$", "a 2d chiral QFT exists [E/F]", C["green"]),
-        ("v238", "Modular flow = TIME (reversible)", "$\\sigma_t=e^{i t\\Lambda}$; $\\mu_4$ conserved $\\Leftrightarrow$ v198", C["green"]),
-        ("v238", "Recovery $L$ = ARROW of time", "gap $=6\\ln(3/2)=$ mass gap $=-\\ln(2/3)^6$", C["green"]),
-        ("v239", "KMS thermal time", "$\\beta=1$; $T_H=c_3/M$; $2\\pi=1/(4c_3)$", C["green"]),
+        ("v238/v239", "Modular flow = KMS time", "$\\sigma_t=e^{it\\Lambda}$, $\\beta=1$; gap $=6\\ln(3/2)$", C["green"]),
         ("v240", "GNS/OS: Hilbert space + $H\\geq 0$", "$H_{OS}=-L\\geq 0$, gap $=$ mass gap", C["green"]),
-        ("v241/v242", "Particles = DHR sectors", "$\\mathbb{Z}_4\\times\\mathbb{Z}_4$ (16); fusion, spin, $c=8$", C["green"]),
-        ("v243", "S-matrix = braiding", "factorised (Yang-Baxter), crossing; trivial on $E_8$", C["green"]),
-        ("v244/v245", "Spectral action $\\to$ 4d", "$\\mathbf{16}=$ one anomaly-free gen.; $\\sin^2\\theta_W=3/8$", C["gold"]),
-        ("OPEN", "QGEO.SYM.01 (postulate)", "independent of $\\{c_3,g_{car}\\}$ (v201/v210 counter-geoms)", C["red"]),
-        ("OPEN", "RG tension (v246)", "SM content (no new state) misses 1+2-loop; tension like NCG-SM", C["red"]),
+        ("v241-v243", "Particles = DHR sectors; S-mat", "$\\mathbb{Z}_4\\times\\mathbb{Z}_4$; braiding (Yang-Baxter)", C["green"]),
+        ("v244-v257", "Spectral triple $\\to$ 4d", "$\\mathbf{16}=$ one anomaly-free gen.; $\\sin^2\\theta_W=3/8$", C["green"]),
+        ("v258-v261", "Modular Spectral Closure", "one relative object: $D_F=$cov.\\ induction, cutoff$=$KMS, K3", C["green"]),
+        ("v269-v278", "Perturbative $S_{\\mathrm{pert}}$ (EG)", "1-loop quartic + gauge $\\beta=(41/10,-19/6,-7)$; LSZ unitary", C["green"]),
+        ("v265", "4D fork (frozen)", "boundary-only default; PS UV branch; SM-only GUT killed", C["gold"]),
+        ("OPEN", "QGEO.SYM.01 = seam$=(E_8)_1$ at $\\tau{=}i$", "the one premise (v282); two routes 8/10 lemmas done (v284/v285)", C["red"]),
+        ("OPEN", "QG.AMB.01 nonperturbative", "the $R^2/$Weyl$^2$ gravity $S_{\\mathrm{pert}}$ carries the Stelle ghost (rt_F)", C["red"]),
     ]
     n = len(steps)
-    fig, ax = plt.subplots(figsize=(7.8, 6.8))
+    fig, ax = plt.subplots(figsize=(8.0, 6.8))
     ax.set_xlim(0, 10); ax.set_ylim(0, n + 0.5); ax.axis("off")
-    ax.set_title("The emergent-QFT skeleton on the seam (v238-v246):\n"
-                 "each step machine-checked; the two open items in red",
+    ax.set_title("The emergent-QFT skeleton on the seam (v238-v285):\n"
+                 "each step machine-checked; the two genuinely open items in red",
                  fontsize=10.5, color=C["blue"])
     bw, bh = 8.6, 0.60
     centers = []
