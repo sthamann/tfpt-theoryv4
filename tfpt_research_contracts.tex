@@ -680,6 +680,19 @@ theorem'' is itself a composition of citable results (Kitaev/Freed--Hopkins, M\"
 Kawahigashi--Longo, \veri{v287\_free\_rp\_bulk\_to\_holomorphic\_boundary.py}) whose only open hypothesis ---
 seam-bulk invertibility --- coincides with Route B's Flat-Away. Both routes therefore meet at the \emph{same}
 geometric input, with no circularity (the import firewall of \vref{v286}).
+\par\smallskip\noindent\textbf{Red-team: $\mathbb{Z}_4$-invariance is not mark-locality.} A deliberate
+adversary (\veri{v290\_z4\_smooth\_curvature\_adversary.py}) shows the honest limit of Route B's lift: a
+\emph{smooth} $\mathbb{Z}_4$-symmetric off-mark curvature $f=\varepsilon\cos(4\theta)$ \emph{passes} the
+\vref{v288} commutator ($\|[\rho,\Lambda]\|=0$, since $i^n-i^{n\pm4}=0$) yet is not mark-local --- so
+$[\rho,\Lambda]{=}0$ is necessary but not sufficient. The modulus is instead excluded by the spectral data:
+it shifts the DtN spectrum off the flat ladder and the heat trace ($\max|\Delta\lambda|=0.155$,
+$\Delta\mathrm{Tr}=0.019$ at $\varepsilon=0.3$), i.e.\ the KMS weight and $(E_8)_1$ character that
+\texttt{SEAM.EQUIV.01} must match. Consequently the open lemma is named in its own right
+(\veri{v291\_flataway\_contract.py}, \texttt{FLATAWAY.RP.01}): \emph{the smooth curvature density in the DtN
+sub-principal symbol vanishes away from the four branch marks}, with three independent attack routes ---
+spectral-rigidity and heat-kernel (the flat seam is the \emph{unique} spectral/heat match of the smooth
+$\mathbb{Z}_4$ family) and RP-energy/Troyanov (the constant-curvature minimiser) --- closing any one of which
+closes Route B.
 \par\smallskip\noindent\textbf{One surface for seam, carrier and lattice: the Kummer/K3
 (\veri{v260\_k3\_kummer\_unification.py}).} The pillowcase is the elliptic-involution quotient
 $T^2_{\tau=i}/(z{\mapsto}{-}z)$, its four marks the four $2$-torsion fixed points; squaring the construction

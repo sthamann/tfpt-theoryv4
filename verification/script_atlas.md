@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`287` registered scripts · `340` ledger claims · `10` clusters.
+`289` registered scripts · `342` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -202,7 +202,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v75_upoint_to_vgeo** [E/O] `FLAV.UPOINT.01` — Gate 1 complete: U_point → v_geo (ratios + Grand Mass Volume); same anchor as 1/G
   - deps: v71_simple_r_bridge, v20_lepton_c_derivation, v46_grand_mass_volume, v68 · cited: origin theory, research contracts
 
-### `frontier` — Open gate (G_metric) & the frontier  (46 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (48 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -297,6 +297,10 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v286_seam_equivalence_contract, v201_seam_subprincipal_marks, v284_route_i_rp_uniqueness, FORM.QGEO.03, v198_modular_commutator_reduction · cited: research contracts
 - **v289_marklocal_raw** [E/C/O] `MARKLOCAL.RAW.01` — decompose the ONE remaining Route-B residual ('why is the raw seam sub-principal term mark-local?') into a 5-lemma chain and isolate the single open analytic lemma. [C] L1 conic pa
   - deps: v288_full_l2_subprincipal_z4, v286_seam_equivalence_contract, v264_raw_seam_marklocal, v201_seam_subprincipal_marks, FORM.QGEO.03 · cited: research contracts
+- **v290_z4_smooth_curvature_adversary** [E/O] `SEAM.ADVERSARY.01` — the Route-B red-team that Z4 block-diagonality is NOT mark-locality. Constructs the strongest adversary, a SMOOTH Z4-symmetric off-mark curvature f=ε·cos(4θ), and shows honestly: [
+  - deps: v288_full_l2_subprincipal_z4, v289_marklocal_raw, v291_flataway_contract, v201_seam_subprincipal_marks · cited: research contracts
+- **v291_flataway_contract** [E/C/O] `FLATAWAY.RP.01` — the Flat-Away lemma as its own named mini-theorem with three proof routes opened by v290. LEMMA [O]: given RawRPSeam with gap, chirality and the four μ4 marks, the smooth curvature
+  - deps: v290_z4_smooth_curvature_adversary, v289_marklocal_raw, v288_full_l2_subprincipal_z4, v286_seam_equivalence_contract, v284_route_i_rp_uniqueness · cited: research contracts
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (160 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -636,14 +640,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×22, `E8.GLU.01`×15, `HOR.NARIAI.01`×15, `AX.P1.01`×11, `FLAV.KQ.01`×10, `QGEO.PILLOW.01`×10, `v56`×9, `GATE.QGEO.01`×8, `v37`×8, `v68`×8, `CAR.SM.01`×8, `GATE.METRIC.06`×8, `QGEO.MARKS.01`×8, `QGEO.SUBPRIN.01`×8, `PS.DIRAC.02`×8
+**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×22, `E8.GLU.01`×15, `HOR.NARIAI.01`×15, `AX.P1.01`×11, `FLAV.KQ.01`×10, `QGEO.PILLOW.01`×10, `v56`×9, `QGEO.SUBPRIN.01`×9, `GATE.QGEO.01`×8, `v37`×8, `v68`×8, `CAR.SM.01`×8, `GATE.METRIC.06`×8, `QGEO.MARKS.01`×8, `PS.DIRAC.02`×8
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v278_lsz_bridge_unitarity** — `QFT4D.SPERT.04`
-- **v279_qgeo_obligation_lemma** — `QGEO.OBLIG.01`
 - **v280_pillowcase_steklov** — `QGEO.STEKLOV.01`
 - **v281_holomorphy_modular_data** — `QGAMB.MODULAR.01`
 - **v282_e8_tau_i_unification** — `QGAMB.UNIFY.01`
@@ -654,4 +656,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v287_free_rp_bulk_to_holomorphic_boundary** — `SEAM.EQUIV.A01`
 - **v288_full_l2_subprincipal_z4** — `SEAM.EQUIV.B01`
 - **v289_marklocal_raw** — `MARKLOCAL.RAW.01`
+- **v290_z4_smooth_curvature_adversary** — `SEAM.ADVERSARY.01`
+- **v291_flataway_contract** — `FLATAWAY.RP.01`
 

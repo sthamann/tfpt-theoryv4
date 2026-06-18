@@ -59,6 +59,22 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-18 (Route-B red-team: the smooth $\mathbb{Z}_4$ adversary + Flat-Away as a mini-theorem, \texttt{v290}--\texttt{v291})}
+\begin{itemize}
+\item \textbf{\texttt{v290\_z4\_smooth\_curvature\_adversary.py} (\texttt{SEAM.ADVERSARY.01})} is the honest
+  red-team that $\mathbb{Z}_4$ block-diagonality is \emph{not} mark-locality: a smooth $\mathbb{Z}_4$
+  off-mark curvature $f=\varepsilon\cos(4\theta)$ \mE\ passes the \vref{v288} commutator
+  ($\|[\rho,\Lambda]\|=0$, same as mark-local) yet \mE\ shifts the DtN spectrum ($\max|\Delta\lambda|=0.155$)
+  and the heat trace ($\Delta=0.019$). So the commutator is necessary, not sufficient; the modulus is
+  excluded by the spectral data, not $[\rho,\Lambda]{=}0$ --- which is exactly why Flat-Away cannot be
+  read off the commutator.
+\item \textbf{\texttt{v291\_flataway\_contract.py} (\texttt{FLATAWAY.RP.01})} states Flat-Away as its own
+  named mini-theorem and types three independent proof routes: \mE\ spectral-rigidity and \mE\ heat-kernel
+  (the flat seam is the \emph{unique} spectral/heat match of the smooth $\mathbb{Z}_4$ family --- deviation
+  zero only at $\varepsilon{=}0$) and \mC\ RP-energy/Troyanov (constant-curvature minimiser). Closing any one
+  closes Route B. \mE\ build green, \texttt{AUDIT OK}.
+\end{itemize}
+
 \subsection*{2026-06-18 (Route B sharpened: raw mark-locality decomposed + reviewer firewalls, \texttt{v289} / \texttt{v287}--\texttt{v288})}
 \begin{itemize}
 \item \textbf{\texttt{v289\_marklocal\_raw.py} (\texttt{MARKLOCAL.RAW.01})} decomposes the one remaining

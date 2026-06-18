@@ -195,6 +195,15 @@ function ClosingCondition() {
         same seam-bulk invertibility — so both routes meet at one geometric input, no circularity.
       </p>
       <p className="mt-3 rounded-lg border border-slate-700/40 bg-slate-950/40 p-3 text-xs leading-relaxed text-slate-300">
+        <span className="font-semibold text-slate-100">Honest red-team (v290):</span> ℤ₄-invariance is{" "}
+        <em>not</em> mark-locality — a smooth ε·cos(4θ) off-mark curvature passes the v288 commutator yet
+        shifts the DtN spectrum and heat trace. So the commutator is necessary, not sufficient; the modulus is
+        excluded by the spectral data (the KMS weight and (E₈)₁ character), which is exactly why{" "}
+        <span className="font-mono">Flat-Away</span> is now named as its own mini-theorem (v291, FLATAWAY.RP.01)
+        with three independent attack routes — spectral-rigidity, heat-kernel and RP-energy/Troyanov (the flat
+        seam is the <em>unique</em> spectral match of the smooth ℤ₄ family). Closing any one closes Route B.
+      </p>
+      <p className="mt-3 rounded-lg border border-slate-700/40 bg-slate-950/40 p-3 text-xs leading-relaxed text-slate-300">
         <span className="font-semibold text-slate-100">4D-QFT fork policy</span> (frozen decision tree, v265):
         Boundary QFT — complete modulo QGEO.SYM.01. Ambient QG — separate. <span className="text-amber-200">4D
         GUT — not claimed by default</span> (E₈ is the audit hull, not a 4D gauge group; SM-only unification

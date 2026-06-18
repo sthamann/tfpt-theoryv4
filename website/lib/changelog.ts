@@ -47,6 +47,254 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "Route-B red-team: the smooth "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{Z}_4"
+      },
+      {
+        "k": "t",
+        "v": " adversary + Flat-Away as a mini-theorem, "
+      },
+      {
+        "k": "c",
+        "v": "v290"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v291"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v290_z4_smooth_curvature_adversary.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.ADVERSARY.01"
+            },
+            {
+              "k": "t",
+              "v": ")"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " is the honest red-team that "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb{Z}_4"
+        },
+        {
+          "k": "t",
+          "v": " block-diagonality is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " mark-locality: a smooth "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb{Z}_4"
+        },
+        {
+          "k": "t",
+          "v": " off-mark curvature "
+        },
+        {
+          "k": "m",
+          "v": "f=\\varepsilon\\cos(4\\theta)"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "passes the "
+        },
+        {
+          "k": "c",
+          "v": "v288"
+        },
+        {
+          "k": "t",
+          "v": " commutator ("
+        },
+        {
+          "k": "m",
+          "v": "\\|[\\rho,\\Lambda]\\|=0"
+        },
+        {
+          "k": "t",
+          "v": ", same as mark-local) yet "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "shifts the DtN spectrum ("
+        },
+        {
+          "k": "m",
+          "v": "\\max|\\Delta\\lambda|=0.155"
+        },
+        {
+          "k": "t",
+          "v": ") and the heat trace ("
+        },
+        {
+          "k": "m",
+          "v": "\\Delta=0.019"
+        },
+        {
+          "k": "t",
+          "v": "). So the commutator is necessary, not sufficient; the modulus is excluded by the spectral data, not "
+        },
+        {
+          "k": "m",
+          "v": "[\\rho,\\Lambda]{=}0"
+        },
+        {
+          "k": "t",
+          "v": " — which is exactly why Flat-Away cannot be read off the commutator."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v291_flataway_contract.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "FLATAWAY.RP.01"
+            },
+            {
+              "k": "t",
+              "v": ")"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " states Flat-Away as its own named mini-theorem and types three independent proof routes: "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "spectral-rigidity and "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "heat-kernel (the flat seam is the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "unique"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " spectral/heat match of the smooth "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb{Z}_4"
+        },
+        {
+          "k": "t",
+          "v": " family — deviation zero only at "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon{=}0"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "RP-energy/Troyanov (constant-curvature minimiser). Closing any one closes Route B. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "build green, "
+        },
+        {
+          "k": "c",
+          "v": "AUDIT OK"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-18",
+    "dateLabel": "2026-06-18",
+    "heading": [
+      {
+        "k": "t",
         "v": "Route B sharpened: raw mark-locality decomposed + reviewer firewalls, "
       },
       {
