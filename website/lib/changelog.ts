@@ -47,6 +47,352 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "the two proof routes decomposed: Route (i) and Route (ii) into lemma chains, "
+      },
+      {
+        "k": "c",
+        "v": "v284"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v285"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v284_route_i_rp_uniqueness.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGEO.ROUTEI.01"
+            },
+            {
+              "k": "t",
+              "v": ")"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " turns Route (i) (RP-state uniqueness) into a 6-lemma chain: "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "5/6 lemmas are already discharged — L1 RP"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": "DtN ("
+        },
+        {
+          "k": "c",
+          "v": "v194"
+        },
+        {
+          "k": "t",
+          "v": "), L2 marks"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": "pillowcase ("
+        },
+        {
+          "k": "c",
+          "v": "v195"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v216"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v214"
+        },
+        {
+          "k": "t",
+          "v": "), L3 flat Steklov "
+        },
+        {
+          "k": "m",
+          "v": "=\\sqrt{-\\Delta_{\\mathrm{flat}}}"
+        },
+        {
+          "k": "t",
+          "v": " (verified here), L4 covariance from DtN ("
+        },
+        {
+          "k": "c",
+          "v": "v258"
+        },
+        {
+          "k": "t",
+          "v": "), L5 "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": "-invariance ("
+        },
+        {
+          "k": "c",
+          "v": "v276"
+        },
+        {
+          "k": "t",
+          "v": "/Lean/"
+        },
+        {
+          "k": "c",
+          "v": "v280"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": " Troyanov ("
+        },
+        {
+          "k": "m",
+          "v": "\\chi_{\\mathrm{orb}}{=}0\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " unique flat "
+        },
+        {
+          "k": "m",
+          "v": "\\tau{=}i"
+        },
+        {
+          "k": "t",
+          "v": ") reduces the residual to one lemma. "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": " the one open lemma: "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "the raw seam is the constant-curvature geometric state"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v285_route_ii_seam_condensation.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGAMB.ROUTEII.01"
+            },
+            {
+              "k": "t",
+              "v": ")"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " turns Route (ii) (seam-net condensation) into a 4-lemma chain: "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "3/4 discharged (no abelian sector "
+        },
+        {
+          "k": "m",
+          "v": "\\Leftrightarrow\\det K{=}1\n  \\Leftrightarrow"
+        },
+        {
+          "k": "t",
+          "v": " holomorphic "
+        },
+        {
+          "k": "m",
+          "v": "\\Leftrightarrow E_8"
+        },
+        {
+          "k": "t",
+          "v": "; the tower "
+        },
+        {
+          "k": "m",
+          "v": "16{\\to}4{\\to}1"
+        },
+        {
+          "k": "t",
+          "v": "), and "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "its open lemma coincides with Route (i)'s"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " — both are “the raw seam is the "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": "-at-"
+        },
+        {
+          "k": "m",
+          "v": "\\tau{=}i"
+        },
+        {
+          "k": "t",
+          "v": " object” ("
+        },
+        {
+          "k": "c",
+          "v": "v282"
+        },
+        {
+          "k": "t",
+          "v": "), so proving "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "either"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " route closes "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "both"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the unified open lemma: a canonical equivalence between the raw seam KMS/DtN state and the holomorphic "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " net at "
+        },
+        {
+          "k": "m",
+          "v": "\\tau{=}i"
+        },
+        {
+          "k": "t",
+          "v": ". Build green, "
+        },
+        {
+          "k": "c",
+          "v": "AUDIT OK"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-18",
+    "dateLabel": "2026-06-18",
+    "heading": [
+      {
+        "k": "t",
         "v": "self-investigation round: pillowcase DtN, modular data, the E8-at-"
       },
       {

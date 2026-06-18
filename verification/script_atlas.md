@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`281` registered scripts · `334` ledger claims · `10` clusters.
+`283` registered scripts · `336` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -202,7 +202,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v75_upoint_to_vgeo** [E/O] `FLAV.UPOINT.01` — Gate 1 complete: U_point → v_geo (ratios + Grand Mass Volume); same anchor as 1/G
   - deps: v71_simple_r_bridge, v20_lepton_c_derivation, v46_grand_mass_volume, v68 · cited: origin theory, research contracts
 
-### `frontier` — Open gate (G_metric) & the frontier  (41 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (42 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -287,8 +287,10 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v276_qgeo_flat_closes_commutator, v279_qgeo_obligation_lemma, v277_seam_calderon_e8_match, v281_holomorphy_modular_data, v214_seam_pillowcase · cited: research contracts
 - **v283_live_killtest_scorecard** [E/C/X] `PRED.LIVE.01` — a live kill-test scorecard of the recent round's computable predictions vs current data, each tagged with the decisive experiment. [N] PMNS angles sin²θ₁₂=0.30675 (+0.31σ), sin²θ₁₃
   - deps: v268_theta13_carrier_trace, v270_pmns_jarlskog_assembly, v272_nu_mass_scale, v266_ps_threshold_proton, v3_em_alpha · cited: 4 frontier
+- **v285_route_ii_seam_condensation** [E/O] `QGAMB.ROUTEII.01` — Route (ii) (seam-net condensation) decomposed into a 4-lemma chain, with the key result that its open lemma COINCIDES with Route (i)'s (the v282 unification at the lemma level). [E
+  - deps: v181_clock_is_conformal_symmetry, v234_seam_holomorphy_selection, v235_seam_chern_simons, v277_seam_calderon_e8_match, v281_holomorphy_modular_data, v282_e8_tau_i_unification, v284_route_i_rp_uniqueness · cited: research contracts
 
-### `registry` — Blind registry & red-team follow-ups (v84–v175)  (159 scripts)
+### `registry` — Blind registry & red-team follow-ups (v84–v175)  (160 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
 
 - **v84_frozen_registry** [E] `REG.FREEZE.01` — blind-prediction registry FROZEN 2026-06-09: every dimensionless prediction of record at 25 digits, re-derived from the two axioms each run (formula↔value lock); exactly ONE θ₁₂ pr
@@ -609,6 +611,8 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
   - deps: v181_clock_is_conformal_symmetry, v267_qgeo_rigidity_minimal_axiom, v276_qgeo_flat_closes_commutator, FORM.QGEO.03, v210_mark_local_dtn, v214_seam_pillowcase · cited: research contracts
 - **v280_pillowcase_steklov** [E/C/O] `QGEO.STEKLOV.01` — a direct numerical experiment on the flat τ=i pillowcase orbifold (the seam geometry): the self-investigable test of the QGEO.SYM.01 obligation (does NOT prove the premise). [E] pi
   - deps: v181_clock_is_conformal_symmetry, v276_qgeo_flat_closes_commutator, v279_qgeo_obligation_lemma, v214_seam_pillowcase, v216_marks_gauss_bonnet · cited: research contracts
+- **v284_route_i_rp_uniqueness** [E/C/O] `QGEO.ROUTEI.01` — Route (i) (RP-state uniqueness) decomposed into a 6-lemma chain with every dischargeable lemma discharged and the one irreducible lemma isolated (does NOT prove the open premise). 
+  - deps: v181_clock_is_conformal_symmetry, v279_qgeo_obligation_lemma, v194_raw_seam_dtn_rp, v216_marks_gauss_bonnet, v258_dirac_covariance_induction, v276_qgeo_flat_closes_commutator, v280_pillowcase_steklov · cited: research contracts
 
 ## Supersede map — do NOT reuse the left-hand claim
 
@@ -624,14 +628,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×19, `E8.GLU.01`×15, `HOR.NARIAI.01`×15, `AX.P1.01`×11, `FLAV.KQ.01`×10, `QGEO.PILLOW.01`×10, `v56`×9, `GATE.QGEO.01`×8, `v37`×8, `v68`×8, `CAR.SM.01`×8, `GATE.METRIC.06`×8, `QGEO.MARKS.01`×8, `PS.DIRAC.02`×8, `AX.P2.01`×7
+**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×21, `E8.GLU.01`×15, `HOR.NARIAI.01`×15, `AX.P1.01`×11, `FLAV.KQ.01`×10, `QGEO.PILLOW.01`×10, `v56`×9, `GATE.QGEO.01`×8, `v37`×8, `v68`×8, `CAR.SM.01`×8, `GATE.METRIC.06`×8, `QGEO.MARKS.01`×8, `PS.DIRAC.02`×8, `AX.P2.01`×7
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v272_nu_mass_scale** — `FLAV.NUSCALE.01`
-- **v273_eg_gauge_running** — `QFT4D.SPERT.03`
 - **v274_scale_overdetermination** — `SCALE.OVERDET.01`
 - **v275_qgamb_roadmap** — `QGAMB.ROADMAP.01`
 - **v276_qgeo_flat_closes_commutator** — `QGEO.SYM.03`
@@ -642,4 +644,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v281_holomorphy_modular_data** — `QGAMB.MODULAR.01`
 - **v282_e8_tau_i_unification** — `QGAMB.UNIFY.01`
 - **v283_live_killtest_scorecard** — `PRED.LIVE.01`
+- **v284_route_i_rp_uniqueness** — `QGEO.ROUTEI.01`
+- **v285_route_ii_seam_condensation** — `QGAMB.ROUTEII.01`
 

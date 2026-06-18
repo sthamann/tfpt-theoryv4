@@ -59,6 +59,22 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-18 (the two proof routes decomposed: Route (i) and Route (ii) into lemma chains, \texttt{v284}/\texttt{v285})}
+\begin{itemize}
+\item \textbf{\texttt{v284\_route\_i\_rp\_uniqueness.py} (\texttt{QGEO.ROUTEI.01})} turns Route (i) (RP-state
+  uniqueness) into a 6-lemma chain: \mE\ 5/6 lemmas are already discharged --- L1 RP$\to$DtN (\vref{v194}),
+  L2 marks$\to$pillowcase (\vref{v195}/\vref{v216}/\vref{v214}), L3 flat Steklov $=\sqrt{-\Delta_{\mathrm{flat}}}$
+  (verified here), L4 covariance from DtN (\vref{v258}), L5 $\mu_4$-invariance (\vref{v276}/Lean/\vref{v280}); \mC\
+  Troyanov ($\chi_{\mathrm{orb}}{=}0\Rightarrow$ unique flat $\tau{=}i$) reduces the residual to one lemma. \mO\
+  the one open lemma: \emph{the raw seam is the constant-curvature geometric state}.
+\item \textbf{\texttt{v285\_route\_ii\_seam\_condensation.py} (\texttt{QGAMB.ROUTEII.01})} turns Route (ii)
+  (seam-net condensation) into a 4-lemma chain: \mE\ 3/4 discharged (no abelian sector $\Leftrightarrow\det K{=}1
+  \Leftrightarrow$ holomorphic $\Leftrightarrow E_8$; the tower $16{\to}4{\to}1$), and \textbf{its open lemma
+  coincides with Route (i)'s} --- both are ``the raw seam is the $(E_8)_1$-at-$\tau{=}i$ object'' (\vref{v282}),
+  so proving \emph{either} route closes \emph{both}. \mO\ the unified open lemma: a canonical equivalence
+  between the raw seam KMS/DtN state and the holomorphic $(E_8)_1$ net at $\tau{=}i$. Build green, \texttt{AUDIT OK}.
+\end{itemize}
+
 \subsection*{2026-06-18 (self-investigation round: pillowcase DtN, modular data, the E8-at-$\tau{=}i$ unification, live scorecard, \texttt{v280}--\texttt{v283})}
 \begin{itemize}
 \item \textbf{\texttt{v280\_pillowcase\_steklov.py} (\texttt{QGEO.STEKLOV.01})} runs the QGEO chain on the actual
