@@ -11,10 +11,22 @@ export interface GlossaryEntry {
 
 export const GLOSSARY: GlossaryEntry[] = [
   {
+    term: "seam",
+    alias: ["the seam", "Σ", "boundary seam", "seam sphere"],
+    short:
+      "The abstract one-sided boundary sphere whose Gauss–Bonnet normaliser fixes c₃ = 1/(8π). Its local gravitational realisation is a horizon, but seam ≠ event horizon — that identification stays [C].",
+  },
+  {
     term: "seam constant",
     alias: ["c₃", "c3", "boundary number", "c_3"],
     short:
       "The first axiom P1: c₃ = 1/(8π). The boundary/seam normaliser, Gauss–Bonnet-hardenable as 1/(|ℤ₂|·∮ K). Drives the seed, α⁻¹ and the scale grammar.",
+  },
+  {
+    term: "readout",
+    alias: ["readouts", "read off", "reads off", "compiler output"],
+    short:
+      "An observable the compiler reads off E₈ after projection — a gauge charge, a mass-ladder rung, a mixing angle — rather than a separately-postulated quantity. Each readout carries a status grade ([E]/[C]/[O]).",
   },
   {
     term: "carrier",

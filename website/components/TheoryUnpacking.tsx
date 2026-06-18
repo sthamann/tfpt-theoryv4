@@ -32,6 +32,8 @@ interface UnpackingStep {
   title: string;
   body: string;
   formula: string;
+  /** Plain-English reading of the formula (caption + screen-reader label). */
+  plain: string;
 }
 
 const STEPS: UnpackingStep[] = [
@@ -42,6 +44,7 @@ const STEPS: UnpackingStep[] = [
     title: "Two numbers in",
     body: "The Standard Model takes ~20 parameters as input. Here only two numbers enter: the seam constant c₃ = 1/(8π) on the boundary and a five-slot carrier g_car = 5. No gauge group, no families, no α is put in by hand — everything below is a consequence.",
     formula: "c_3 = \\tfrac{1}{8\\pi}, \\qquad g_{\\mathrm{car}} = 5",
+    plain: "The seam constant c₃ equals one over eight pi; the carrier rank g_car equals five.",
   },
   {
     id: 1,
@@ -51,6 +54,7 @@ const STEPS: UnpackingStep[] = [
     body: "The seam carries a ℤ₂ sheet involution. The Gauss–Bonnet normalisation of the one-sided seam sphere fixes the seam constant — only π stays continuous.",
     formula:
       "c_3 = \\frac{1}{|\\mathbb{Z}_2|\\oint_{S^2}K\\,dA} = \\frac{1}{8\\pi}",
+    plain: "The seam constant is one divided by the ℤ₂-halved total curvature of the seam sphere (Gauss–Bonnet) — which equals one over eight pi.",
   },
   {
     id: 2,
@@ -60,6 +64,7 @@ const STEPS: UnpackingStep[] = [
     body: "The five carrier slots split into 3 colour + 2 weak. The even-Hamming code on the slots is the D₅ half-spinor — the split is arithmetic, not assumed.",
     formula:
       "g_{\\mathrm{car}} = 5 = 3 + 2 \\;\\Rightarrow\\; C^+ = D_5",
+    plain: "The five carrier slots split as three colour plus two weak, giving the D₅ half-spinor.",
   },
   {
     id: 3,
@@ -69,6 +74,7 @@ const STEPS: UnpackingStep[] = [
     body: "The colour block (dim 3) and weak block (dim 2) carry the determinant-normalized hypercharge Y = −1/3, +1/2. The half-spinor packet is Λ^even of the carrier, dim 16.",
     formula:
       "(\\dim E_-, \\dim E_+) = (3, 2), \\quad \\dim S^+ = 16",
+    plain: "The colour and weak blocks have dimensions three and two; the half-spinor packet has dimension sixteen.",
   },
   {
     id: 4,
@@ -78,6 +84,7 @@ const STEPS: UnpackingStep[] = [
     body: "Three families and the four-puncture geometry ℙ¹∖μ₄ = A₃ glue with the D₅ spinor across the common discriminant ℤ₄: E₈ = (D₅ ⊕ A₃) + μ₄, 240 roots.",
     formula:
       "E_8 = (D_5 \\oplus A_3) + \\mu_4, \\quad |R(E_8)| = 240",
+    plain: "E₈ is D₅ together with A₃, glued by μ₄, with 240 roots.",
   },
   {
     id: 5,
@@ -87,6 +94,7 @@ const STEPS: UnpackingStep[] = [
     body: "From E₈ the compiler reads off the gauge group, three families and the hypercharges; α⁻¹ = 137.036 (1.9σ from CODATA); all nine masses, CKM and PMNS from one φ₀-ladder; the strong-CP null θ_eff = 0; and the scalaron, Λ and the cosmological readouts — about fifty status-graded results, none fitted. The bootstrap loop even re-derives the two inputs, so the discrete core is over-determined.",
     formula:
       "\\alpha^{-1}(0) = 137.035\\,999\\,217\\,\\ldots,\\;\\; \\theta_{\\mathrm{eff}} = 0",
+    plain: "The inverse fine-structure constant is about 137.035999217, and the effective strong-CP phase is exactly zero.",
   },
 ];
 
@@ -244,7 +252,7 @@ export function TheoryUnpacking() {
                 {current.body}
               </p>
               <div className="mt-4 overflow-x-auto formula-scroll rounded-md border border-slate-700/40 bg-slate-950/60 p-3">
-                <Math block>{current.formula}</Math>
+                <Math block plain={current.plain}>{current.formula}</Math>
               </div>
             </motion.div>
           </AnimatePresence>

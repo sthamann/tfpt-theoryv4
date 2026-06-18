@@ -1,34 +1,74 @@
 "use client";
 
+import { ReactNode } from "react";
 import { motion } from "motion/react";
 import { Compass, Layers, Target, Shield } from "lucide-react";
 import { SectionHeader } from "./SectionHeader";
 import { Math } from "./Math";
+import { GlossTerm } from "./GlossTerm";
 import { StatusPyramid } from "./StatusPyramid";
 
-const PILLARS = [
+interface Pillar {
+  icon: typeof Compass;
+  title: string;
+  body: ReactNode;
+  accent: string;
+}
+
+const PILLARS: Pillar[] = [
   {
     icon: Compass,
     title: "Two axioms",
-    body: "Everything starts from the seam constant c₃ = 1/(8π) (P1) and the five-slot carrier g_car = 5 (P2). No SM gauge group, no families, no α is inserted by hand — they are consequences.",
+    body: (
+      <>
+        Everything starts from the{" "}
+        <GlossTerm term="seam constant">seam constant</GlossTerm> c₃ = 1/(8π) (P1)
+        and the five-slot{" "}
+        <GlossTerm term="carrier">carrier</GlossTerm> g_car = 5 (P2). No SM gauge
+        group, no families, no α is inserted by hand — they are consequences.
+      </>
+    ),
     accent: "from-blue-500 to-cyan-500",
   },
   {
     icon: Layers,
     title: "The E₈ compiler",
-    body: "The carrier gives the D₅ half-spinor, the family geometry ℙ¹∖μ₄ gives A₃, and the μ₄ glue closes E₈ = (D₅ ⊕ A₃) + μ₄ as a lattice theorem. E₈ is the audit hull; the SM is a readout after projection.",
+    body: (
+      <>
+        The carrier gives the D₅ half-spinor, the family geometry ℙ¹∖μ₄ gives A₃,
+        and the <GlossTerm term="μ₄ glue">μ₄ glue</GlossTerm> closes E₈ = (D₅ ⊕ A₃)
+        + μ₄ as a lattice theorem. E₈ is the{" "}
+        <GlossTerm term="E8 compiler">audit hull</GlossTerm>; the SM is a{" "}
+        <GlossTerm term="readout">readout</GlossTerm> after projection.
+      </>
+    ),
     accent: "from-violet-500 to-purple-500",
   },
   {
     icon: Target,
     title: "The bootstrap loop",
-    body: "The E₈ closure feeds back and fixes the inputs: g_car = 5 is forced three ways and the 8 in c₃ equals rank E₈ = h(D₅) = φ(30). The discrete core is overdetermined — only π stays irreducible.",
+    body: (
+      <>
+        The E₈ closure feeds back and fixes the inputs: g_car = 5 is forced three
+        ways and the 8 in c₃ equals rank E₈ = h(D₅) = φ(30). The discrete core is{" "}
+        <GlossTerm term="bootstrap loop">overdetermined</GlossTerm> — only π stays
+        irreducible.
+      </>
+    ),
     accent: "from-emerald-500 to-teal-500",
   },
   {
     icon: Shield,
     title: "Status discipline",
-    body: "Every claim carries a grade — [E] identity, [E] lattice theorem, [E] formalised, [E] numerical fixed point, [C] conditional, [O] open — and resolves to a single machine-checked ledger. The ledger wins on any disagreement.",
+    body: (
+      <>
+        Every claim carries a{" "}
+        <GlossTerm term="status markers">grade</GlossTerm> — [E] identity, [E]
+        lattice theorem, [E] formalised, [E] numerical fixed point, [C] conditional,
+        [O] open — and resolves to a single machine-checked ledger. The ledger wins
+        on any disagreement.
+      </>
+    ),
     accent: "from-orange-500 to-amber-500",
   },
 ];
@@ -119,7 +159,10 @@ export function Overview() {
                 </div>
               </div>
               <div className="mt-3 overflow-x-auto rounded-lg border border-blue-400/30 bg-blue-500/5 p-3">
-                <Math block>
+                <Math
+                  block
+                  plain="E₈ is the lattice D₅ together with A₃, glued by the μ₄ simple current."
+                >
                   {"E_8 = (D_5 \\oplus A_3) + \\mu_4"}
                 </Math>
               </div>
@@ -144,12 +187,18 @@ export function Overview() {
                 coefficient 41 = 10 b₁ — existence and uniqueness are proved:
               </p>
               <div className="mt-3 overflow-x-auto rounded-lg border border-slate-700/40 bg-slate-950/40 p-3">
-                <Math block>
+                <Math
+                  block
+                  plain="A parameter-free cubic in α, built only from c₃ and the abelian coefficient 41, set to zero."
+                >
                   {"F_{U(1)}(\\alpha) = \\alpha^3 - 2c_3^3\\alpha^2 - \\tfrac{4}{5}c_3^6\\cdot 41 \\log\\tfrac{1}{\\varphi_{\\mathrm{seam}}(\\alpha)} = 0"}
                 </Math>
               </div>
               <div className="mt-2 overflow-x-auto rounded-lg border border-emerald-400/30 bg-emerald-500/5 p-3">
-                <Math block>
+                <Math
+                  block
+                  plain="Its unique positive root gives the inverse fine-structure constant, about 137.0359992168."
+                >
                   {"\\Rightarrow \\alpha^{-1} = 137.035\\,999\\,216\\,8\\ldots"}
                 </Math>
               </div>

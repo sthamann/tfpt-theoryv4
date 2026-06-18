@@ -241,13 +241,17 @@
 }
 
 /*
- * KaTeX block accessibility: KaTeX already emits a sibling node with the
- * source TeX inside `.katex-mathml`, hidden visually. We keep the visual
- * `.katex-html` selectable so screen readers can fall back to either.
+ * KaTeX copy/extraction hygiene. The visual `.katex-html` branch lays fractions
+ * and superscripts out spatially, so selecting it yields garbled text (e.g.
+ * "c 3 = 8 π 1" for c₃ = 1/(8π)). We make it non-selectable so text selection,
+ * copy/paste, search-engine and LLM extraction skip it; the semantic source
+ * lives in the `.katex-mathml` <annotation> (read by assistive tech) and every
+ * display formula also exposes an explicit "copy LaTeX" button plus a plain-
+ * English caption (see components/Math.tsx).
  */
 .katex-display .katex-html,
 .katex .katex-html {
-  user-select: text;
+  user-select: none;
 }
 
 /*

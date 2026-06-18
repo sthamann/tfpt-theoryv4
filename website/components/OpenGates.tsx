@@ -137,7 +137,10 @@ function ClosingCondition() {
         ))}
       </div>
       <div className="mt-4 overflow-x-auto rounded-lg border border-slate-700/40 bg-slate-950/50 p-2.5">
-        <Math block>
+        <Math
+          block
+          plain="The seam has exactly one one-dimensional representation (a trivial abelianisation, a homology-sphere link) if and only if it is E₈ — equivalently, the K-matrix has determinant one."
+        >
           {"\\#(\\text{1-dim irreps}) = |\\Gamma^{\\mathrm{ab}}| = |H_1(S^3/\\Gamma)| = 1 \\iff E_8 \\iff |\\det K| = 1"}
         </Math>
       </div>
