@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`286` registered scripts · `339` ledger claims · `10` clusters.
+`287` registered scripts · `340` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -202,7 +202,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v75_upoint_to_vgeo** [E/O] `FLAV.UPOINT.01` — Gate 1 complete: U_point → v_geo (ratios + Grand Mass Volume); same anchor as 1/G
   - deps: v71_simple_r_bridge, v20_lepton_c_derivation, v46_grand_mass_volume, v68 · cited: origin theory, research contracts
 
-### `frontier` — Open gate (G_metric) & the frontier  (45 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (46 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -295,6 +295,8 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v286_seam_equivalence_contract, v175_net_existence_full_cone, v234_seam_holomorphy_selection, v277_seam_calderon_e8_match, v285_route_ii_seam_condensation · cited: research contracts
 - **v288_full_l2_subprincipal_z4** [E/O] `SEAM.EQUIV.B01` — Route B (DtN): the full-L² lift of the sub-principal Z4 block-diagonality, proving (numerically, on the full Toeplitz operator) the 'probably provable' step and lifting v201/v284 f
   - deps: v286_seam_equivalence_contract, v201_seam_subprincipal_marks, v284_route_i_rp_uniqueness, FORM.QGEO.03, v198_modular_commutator_reduction · cited: research contracts
+- **v289_marklocal_raw** [E/C/O] `MARKLOCAL.RAW.01` — decompose the ONE remaining Route-B residual ('why is the raw seam sub-principal term mark-local?') into a 5-lemma chain and isolate the single open analytic lemma. [C] L1 conic pa
+  - deps: v288_full_l2_subprincipal_z4, v286_seam_equivalence_contract, v264_raw_seam_marklocal, v201_seam_subprincipal_marks, FORM.QGEO.03 · cited: research contracts
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (160 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -634,13 +636,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×22, `E8.GLU.01`×15, `HOR.NARIAI.01`×15, `AX.P1.01`×11, `FLAV.KQ.01`×10, `QGEO.PILLOW.01`×10, `v56`×9, `GATE.QGEO.01`×8, `v37`×8, `v68`×8, `CAR.SM.01`×8, `GATE.METRIC.06`×8, `QGEO.MARKS.01`×8, `PS.DIRAC.02`×8, `AX.P2.01`×7
+**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×22, `E8.GLU.01`×15, `HOR.NARIAI.01`×15, `AX.P1.01`×11, `FLAV.KQ.01`×10, `QGEO.PILLOW.01`×10, `v56`×9, `GATE.QGEO.01`×8, `v37`×8, `v68`×8, `CAR.SM.01`×8, `GATE.METRIC.06`×8, `QGEO.MARKS.01`×8, `QGEO.SUBPRIN.01`×8, `PS.DIRAC.02`×8
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v277_seam_calderon_e8_match** — `QGAMB.TIERB.01`
 - **v278_lsz_bridge_unitarity** — `QFT4D.SPERT.04`
 - **v279_qgeo_obligation_lemma** — `QGEO.OBLIG.01`
 - **v280_pillowcase_steklov** — `QGEO.STEKLOV.01`
@@ -652,4 +653,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v286_seam_equivalence_contract** — `SEAM.EQUIV.01`
 - **v287_free_rp_bulk_to_holomorphic_boundary** — `SEAM.EQUIV.A01`
 - **v288_full_l2_subprincipal_z4** — `SEAM.EQUIV.B01`
+- **v289_marklocal_raw** — `MARKLOCAL.RAW.01`
 

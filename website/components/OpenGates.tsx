@@ -185,7 +185,11 @@ function ClosingCondition() {
         import — "invertible Gaussian bulk ⇒ single-sector boundary" (4/5 lemmas discharged); and{" "}
         <span className="text-slate-100">Route B</span> (DtN, v288) <em>proves</em> the full-L² lift of the
         subprincipal ℤ₄ block-diagonality, shrinking the residual to the single sharper question:{" "}
-        <span className="text-slate-300">why is the raw seam subprincipal term mark-local?</span>
+        <span className="text-slate-300">why is the raw seam subprincipal term mark-local?</span> — now
+        decomposed (v289) into a 5-lemma chain whose <em>only</em> open link is Flat-Away (RP + gap + 4 marks
+        ⇒ curvature vanishes away from the marks), 4/5 discharged. That is the best current attack; Route A's
+        one standard import is itself citable (Kitaev/Freed–Hopkins, Müger/KLM, Kawahigashi–Longo) modulo the
+        same seam-bulk invertibility — so both routes meet at one geometric input, no circularity.
       </p>
       <p className="mt-3 rounded-lg border border-slate-700/40 bg-slate-950/40 p-3 text-xs leading-relaxed text-slate-300">
         <span className="font-semibold text-slate-100">4D-QFT fork policy</span> (frozen decision tree, v265):

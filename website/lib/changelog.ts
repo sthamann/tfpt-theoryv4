@@ -47,6 +47,281 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "Route B sharpened: raw mark-locality decomposed + reviewer firewalls, "
+      },
+      {
+        "k": "c",
+        "v": "v289"
+      },
+      {
+        "k": "t",
+        "v": " / "
+      },
+      {
+        "k": "c",
+        "v": "v287"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v288"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v289_marklocal_raw.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "MARKLOCAL.RAW.01"
+            },
+            {
+              "k": "t",
+              "v": ")"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " decomposes the one remaining Route-B residual (`why is the raw seam sub-principal term mark-local?') into a 5-lemma chain and isolates the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "single"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " open analytic lemma: "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "L1 conic parametrix (b-calculus/Melrose, imported); "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "L2 "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Flat-Away"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " — RP"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": "gap"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": "4 marks "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " curvature vanishes away from the marks; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "L3 orbit-source ("
+        },
+        {
+          "k": "c",
+          "v": "v195"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v216"
+        },
+        {
+          "k": "t",
+          "v": "), L4 Fourier-support on "
+        },
+        {
+          "k": "m",
+          "v": "4\\Z"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v264"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v288"
+        },
+        {
+          "k": "t",
+          "v": "), L5 full-operator "
+        },
+        {
+          "k": "m",
+          "v": "[\\rho,\\Lambda]{=}0"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v288"
+        },
+        {
+          "k": "t",
+          "v": "). 4/5 discharged — Route B reduces to exactly L2."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v288"
+            },
+            {
+              "k": "t",
+              "v": " reviewer firewall"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": a SCOPE FIREWALL check makes the exact-label split explicit (Fourier lemma Formal/Exact; numerical test Numerical Exact; transfer to the raw conic DtN Conditional, "
+        },
+        {
+          "k": "c",
+          "v": "v264"
+        },
+        {
+          "k": "t",
+          "v": "; mark-locality from the RP seam Open Selection, "
+        },
+        {
+          "k": "c",
+          "v": "v289"
+        },
+        {
+          "k": "t",
+          "v": ") — so it can never be read as `full-"
+        },
+        {
+          "k": "m",
+          "v": "L^2"
+        },
+        {
+          "k": "t",
+          "v": " QGEO proved'."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v287"
+            },
+            {
+              "k": "t",
+              "v": " literature matrix"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": L3 (`invertible bulk "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " single-sector') is typed as a composition of citable results (LIT-A Kitaev/Freed–Hopkins, LIT-B Müger/Kawahigashi–Longo–Müger, LIT-C Kawahigashi–Longo) conditional on one open hypothesis — seam-bulk invertibility, which coincides with Route B. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "build green, "
+        },
+        {
+          "k": "c",
+          "v": "AUDIT OK"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-18",
+    "dateLabel": "2026-06-18",
+    "heading": [
+      {
+        "k": "t",
         "v": "closing sprint: the Seam Equivalence Theorem named + both routes attacked, "
       },
       {

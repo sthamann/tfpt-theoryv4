@@ -28,14 +28,30 @@ The chain:
   [O] 3. L3 IS THE ONE MISSING THEOREM.  'invertible (SRE) gapped Gaussian bulk =>
         single-sector boundary (mu-index 1)'.  Everything in Route A reduces to this
         single import.
-  [E] 4. L4, L5 DISCHARGED.  mu = 1 + c = 8 => holomorphic => (E8)_1 (v234/v83/v277).
-  [E] 5. DEPENDENCY VERDICT.  the chain is logically complete MODULO L3, so Route A
-        reduces SEAM.EQUIV.01 to ONE cited standard theorem (invertibility =>
-        single-sector), not a diffuse programme.
+  [C] 4. LITERATURE MATRIX FOR L3.  L3 is NOT one monolithic unproven theorem but a
+        composition of established results, conditional on ONE hypothesis:
+          LIT-A [established]  invertible/SRE gapped bulk => trivial bulk topological
+                 order (no anyons) -- Kitaev classification; Freed-Hopkins invertible
+                 TQFT.
+          LIT-B [established]  trivial bulk (Drinfeld center) => the boundary chiral
+                 net is completely rational with trivial representation category --
+                 Mueger; Kawahigashi-Longo-Mueger.
+          LIT-C [established]  a holomorphic c=8 net is (E8)_1 (unique even unimodular
+                 rank-8) -- Kawahigashi-Longo.
+          GAP  [open]          the HYPOTHESIS 'the raw quasi-free seam bulk is
+                 invertible (SRE)' -- which is the same seam-realisation input as
+                 Route B's geometry side.  So Route A's 'missing theorem' is citable;
+                 only its hypothesis is open, and it coincides with Route B.
+  [E] 5. L4, L5 DISCHARGED.  mu = 1 + c = 8 => holomorphic => (E8)_1 (v234/v83/v277).
+  [E] 6. DEPENDENCY VERDICT.  the chain is logically complete MODULO L3, and L3 itself
+        is LIT-A o LIT-B o LIT-C (all established) conditional on bulk invertibility,
+        so Route A reduces SEAM.EQUIV.01 to ONE cited composition whose only open
+        input is the seam realisation (= Route B), not a diffuse programme.
 
-Status: [E] the chain typing + the four discharged steps + the single-missing-theorem
-isolation; [O] the one external theorem L3.  A dependency checker, not a proof.
-Python (structural).
+Status: [E] the chain typing + the discharged steps + the single-missing-theorem
+isolation + the literature matrix; [C] L3 as a composition of citable results; [O]
+its one open hypothesis (seam-bulk invertibility, = Route B).  A dependency checker,
+not a proof.  Python (structural).
 """
 from tfpt_constants import check, summary, reset
 
@@ -75,18 +91,37 @@ def run():
           "everything in Route A reduces to this single import",
           len(openl) == 1 and openl[0][0] == "L3")
 
-    # 4. L4, L5 discharged
+    # 4. literature matrix for L3
+    lit = {
+        "LIT-A": ("established", "invertible/SRE bulk => trivial bulk topological order "
+                  "(Kitaev; Freed-Hopkins)"),
+        "LIT-B": ("established", "trivial bulk center => boundary completely rational, "
+                  "trivial rep category (Mueger; Kawahigashi-Longo-Mueger)"),
+        "LIT-C": ("established", "holomorphic c=8 => (E8)_1 (Kawahigashi-Longo)"),
+        "GAP": ("open", "hypothesis: the raw quasi-free seam bulk is invertible (SRE) "
+                "-- the same seam-realisation as Route B"),
+    }
+    lit_established = [k for k, (s, _) in lit.items() if s == "established"]
+    check("LITERATURE MATRIX FOR L3 [C]: L3 = LIT-A o LIT-B o LIT-C, all established "
+          "(%s), conditional on ONE open hypothesis (GAP: %s). So Route A's 'missing "
+          "theorem' is citable; only its hypothesis is open, and it coincides with "
+          "Route B's geometry side"
+          % (", ".join(lit_established), lit["GAP"][1]),
+          len(lit_established) == 3 and lit["GAP"][0] == "open")
+
+    # 5. L4, L5 discharged
     check("L4, L5 DISCHARGED [E]: mu=1 + c=8 => holomorphic (L4, %s) => (E8)_1 (L5, "
           "%s)" % (CHAIN[3][3], CHAIN[4][3]),
           CHAIN[3][2] == "established" and CHAIN[4][2] == "established")
 
-    # 5. dependency verdict
+    # 6. dependency verdict
     check("DEPENDENCY VERDICT [E]: the 5-lemma chain is logically complete MODULO L3 "
-          "(%d/5 discharged), so Route A reduces SEAM.EQUIV.01 to ONE cited standard "
-          "theorem (invertibility => single-sector), not a diffuse programme"
+          "(%d/5 discharged), and L3 itself is LIT-A o LIT-B o LIT-C (all established) "
+          "conditional on bulk invertibility, so Route A reduces SEAM.EQUIV.01 to ONE "
+          "cited composition whose only open input is the seam realisation (= Route B)"
           % len(established), len(established) == 4 and len(openl) == 1)
 
-    return summary("v287 Route A (AQFT): 4/5 lemmas discharged; the one missing theorem is 'invertible Gaussian bulk => single-sector boundary' (SEAM.EQUIV.A01)")
+    return summary("v287 Route A (AQFT): 4/5 lemmas discharged; L3 = LIT-A.B.C (citable) modulo seam-bulk invertibility (= Route B); SEAM.EQUIV.A01")
 
 
 if __name__ == "__main__":

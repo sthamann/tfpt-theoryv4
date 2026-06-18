@@ -30,11 +30,21 @@ sub-principal piece M_f is multiplication by the boundary curvature f(theta).
         is exactly ONE question: why is the raw seam sub-principal term mark-local
         (a sum of mu4-orbit sources)?  Smaller and sharper than 'the geometry premise'
         -- it is the curvature-locality half of SEAM.EQUIV.01.
+  [E] 6. SCOPE FIREWALL (so the claim is not over-read).  this module does NOT prove
+        'full-L^2 QGEO'.  The exact-label split is:
+          * Fourier lemma for Z4 mark-sourced f ............ Formal/Exact
+          * the numerical operator test (||[rho,Lambda]||) . Numerical Exact
+          * transfer to the raw conic Steklov DtN .......... Conditional (v264)
+          * mark-locality of the raw sub-principal term .... Open Selection (v289)
+        Precisely: 'for operators Lambda = |D_theta| + M_f with a mark-sourced,
+        Z4-symmetric curvature f, full-L^2 block-diagonality follows; the open rest
+        is deriving that mark-locality from the raw RP seam.'
 
 Status: [E] character orthogonality + the full-L^2 Z4 block-diagonality (lifts
-v201/v284) + the negative control + Lean consistency; [O] the one sharper residual
-(raw sub-principal mark-locality).  Real progress on Route B; does NOT close the
-premise.  Python (numpy FFT + Toeplitz).
+v201/v284) + the negative control + Lean consistency + the scope firewall; [O] the
+one sharper residual (raw sub-principal mark-locality, decomposed in v289).  Real
+progress on Route B; does NOT close the premise and does NOT claim full-L^2 QGEO.
+Python (numpy FFT + Toeplitz).
 """
 import numpy as np
 
@@ -102,7 +112,21 @@ def run():
           "(a sum of mu4-orbit sources)? -- the curvature-locality half of "
           "SEAM.EQUIV.01, smaller and sharper than 'the geometry premise'", True)
 
-    return summary("v288 full-L^2 Z4 block-diagonality: mark-local subprincipal => [rho,Lambda]=0 on L^2 (lifts v201/v284); residual = raw subprincipal mark-locality (SEAM.EQUIV.B01)")
+    # 6. scope firewall: precise exact-label split, so the claim is not over-read
+    scope = {
+        "Fourier lemma (Z4 mark-sourced f)": "Formal/Exact",
+        "numerical operator test ||[rho,Lambda]||": "Numerical Exact",
+        "transfer to raw conic Steklov DtN": "Conditional (v264)",
+        "mark-locality of raw subprincipal term": "Open Selection (v289)",
+    }
+    check("SCOPE FIREWALL [E]: this does NOT prove 'full-L^2 QGEO' -- exact-label "
+          "split %s. Precisely: for Lambda=|D_theta|+M_f with a mark-sourced, "
+          "Z4-symmetric curvature f, full-L^2 block-diagonality follows; the open "
+          "rest is deriving mark-locality from the raw RP seam"
+          % "; ".join("%s = %s" % (k, v) for k, v in scope.items()),
+          len(scope) == 4 and scope["mark-locality of raw subprincipal term"].startswith("Open"))
+
+    return summary("v288 full-L^2 Z4 block-diagonality: mark-local subprincipal => [rho,Lambda]=0 on L^2 (lifts v201/v284); scope firewalled; residual = raw subprincipal mark-locality (SEAM.EQUIV.B01)")
 
 
 if __name__ == "__main__":

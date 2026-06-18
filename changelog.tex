@@ -59,6 +59,24 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-18 (Route B sharpened: raw mark-locality decomposed + reviewer firewalls, \texttt{v289} / \texttt{v287}--\texttt{v288})}
+\begin{itemize}
+\item \textbf{\texttt{v289\_marklocal\_raw.py} (\texttt{MARKLOCAL.RAW.01})} decomposes the one remaining
+  Route-B residual (`why is the raw seam sub-principal term mark-local?') into a 5-lemma chain and
+  isolates the \emph{single} open analytic lemma: \mC\ L1 conic parametrix (b-calculus/Melrose, imported);
+  \mO\ L2 \textbf{Flat-Away} --- RP$+$gap$+$4 marks $\Rightarrow$ curvature vanishes away from the marks;
+  \mE\ L3 orbit-source (\vref{v195}/\vref{v216}), L4 Fourier-support on $4\Z$ (\vref{v264}/\vref{v288}),
+  L5 full-operator $[\rho,\Lambda]{=}0$ (\vref{v288}). 4/5 discharged --- Route B reduces to exactly L2.
+\item \textbf{\texttt{v288} reviewer firewall}: a SCOPE FIREWALL check makes the exact-label split explicit
+  (Fourier lemma Formal/Exact; numerical test Numerical Exact; transfer to the raw conic DtN Conditional,
+  \vref{v264}; mark-locality from the RP seam Open Selection, \vref{v289}) --- so it can never be read as
+  `full-$L^2$ QGEO proved'.
+\item \textbf{\texttt{v287} literature matrix}: L3 (`invertible bulk $\Rightarrow$ single-sector') is typed as
+  a composition of citable results (LIT-A Kitaev/Freed--Hopkins, LIT-B M\"uger/Kawahigashi--Longo--M\"uger,
+  LIT-C Kawahigashi--Longo) conditional on one open hypothesis --- seam-bulk invertibility, which coincides
+  with Route B. \mE\ build green, \texttt{AUDIT OK}.
+\end{itemize}
+
 \subsection*{2026-06-18 (closing sprint: the Seam Equivalence Theorem named + both routes attacked, \texttt{v286}--\texttt{v288})}
 \begin{itemize}
 \item \textbf{\texttt{v286\_seam\_equivalence\_contract.py} (\texttt{SEAM.EQUIV.01})} names the one open theorem
