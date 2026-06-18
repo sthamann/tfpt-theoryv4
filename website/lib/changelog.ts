@@ -47,6 +47,405 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "The bedrock in its minimal-axiom form: a rigidity theorem for "
+      },
+      {
+        "k": "c",
+        "v": "QGEO.SYM.01"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "v267"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v267_qgeo_rigidity_minimal_axiom.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGEO.SYM.02"
+            },
+            {
+              "k": "t",
+              "v": ") sharpens the one bedrock postulate to its irreducible kernel"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (it does "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " close it). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "single"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " bare statement “the seam admits the carrier order-"
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " clock as a conformal symmetry permuting its four marks” ("
+        },
+        {
+          "k": "m",
+          "v": "=\\omega\\circ\\rho=\\omega"
+        },
+        {
+          "k": "t",
+          "v": ") forces "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "everything"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": an order-"
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " Möbius orbit "
+        },
+        {
+          "k": "m",
+          "v": "\\{a,ia,-a,-ia\\}"
+        },
+        {
+          "k": "t",
+          "v": " has cross-ratio "
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": " independent of "
+        },
+        {
+          "k": "m",
+          "v": "a"
+        },
+        {
+          "k": "t",
+          "v": "; cross-ratio "
+        },
+        {
+          "k": "m",
+          "v": "2\\Leftrightarrow j{=}1728"
+        },
+        {
+          "k": "t",
+          "v": " (only "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda\\in\\{-1,\\tfrac12,2\\}"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "\\Leftrightarrow"
+        },
+        {
+          "k": "t",
+          "v": " the order-"
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " CM automorphism on "
+        },
+        {
+          "k": "m",
+          "v": "y^2{=}x^3{-}x"
+        },
+        {
+          "k": "t",
+          "v": "; and the unique flat pillowcase metric, mark-locality, "
+        },
+        {
+          "k": "m",
+          "v": "[\\rho,\\Lambda]{=}0"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "\\omega\\circ\\rho{=}\\omega"
+        },
+        {
+          "k": "t",
+          "v": " all follow ("
+        },
+        {
+          "k": "c",
+          "v": "v214"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v201"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v264"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v198"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "neg controls: generic config "
+        },
+        {
+          "k": "m",
+          "v": "j\\neq1728"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\Z_2"
+        },
+        {
+          "k": "t",
+          "v": " only), hexagonal "
+        },
+        {
+          "k": "m",
+          "v": "j{=}0"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\Z_6"
+        },
+        {
+          "k": "t",
+          "v": ", order "
+        },
+        {
+          "k": "m",
+          "v": "6"
+        },
+        {
+          "k": "t",
+          "v": ") — only the square (order-"
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": ") realises the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " clock. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "second, independent reason: "
+        },
+        {
+          "k": "m",
+          "v": "\\{1,i,-1,-i\\}"
+        },
+        {
+          "k": "t",
+          "v": " over "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb Q"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "j{=}1728"
+        },
+        {
+          "k": "t",
+          "v": " (CM by "
+        },
+        {
+          "k": "m",
+          "v": "\\Z[i]"
+        },
+        {
+          "k": "t",
+          "v": "), Belyi/dessins Galois-rigidity. "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the bare order-"
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " symmetry stays the one foundational postulate (like "
+        },
+        {
+          "k": "m",
+          "v": "c{=}"
+        },
+        {
+          "k": "t",
+          "v": "const) — the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "reduction"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " is closed (axiom "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " everything), the axiom is not. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "build green, "
+        },
+        {
+          "k": "c",
+          "v": "AUDIT OK"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-18",
+    "dateLabel": "2026-06-18",
+    "heading": [
+      {
+        "k": "t",
         "v": "Branch B decided: the explicit PS threshold model "
       },
       {

@@ -2049,6 +2049,24 @@ Module[{e8edges, E8, U, L, sig, nodes, marks},
     nodes == 16 && marks == 4 && nodes == marks^2];
 ];
 
+(* ==== v267: QGEO rigidity / minimal-axiom form of QGEO.SYM.01 (QGEO.SYM.02) ====
+   v262 (alpha_s RG), v263 (seesaw numpy), v264 (DtN FFT), v265 (RG+text guard),
+   v266 (proton RG) are numerical -> Python-only; v267's exact cross-ratio/j core is
+   mirrored here (the DtN/FFT part of v267 stays Python-only). *)
+Module[{a, cr, jf, l, sols, jhex},
+  cr = Simplify[((a - (-a)) (I a - (-I a)))/((a - (-I a)) (I a - (-a)))];
+  jf[x_] := 256 (x^2 - x + 1)^3/(x^2 (x - 1)^2);
+  sols = Sort[DeleteDuplicates[l /. Solve[jf[l] == 1728, l]]];
+  jhex = Simplify[jf[1/2 + Sqrt[3]/2 I]];
+  checkExact["v267 QGEO.SYM.02: the rigidity / minimal-axiom form of QGEO.SYM.01 -- an order-4 Moebius "
+    <> "orbit {a,ia,-a,-ia} has cross-ratio 2 (independent of a); cross-ratio 2 <=> j=1728 (only "
+    <> "lambda in {-1,1/2,2}, the square modulus tau=i with order-4 CM by Z[i]) -- so the order-4 conformal "
+    <> "symmetry forces the square config, the unique flat pillowcase metric (Troyanov), mark-locality and "
+    <> "omega o rho = omega; neg controls: generic config has j != 1728 (Z2 only), the hexagonal point has "
+    <> "j = 0 (Z6, order 6 != 4). The bare order-4 symmetry stays the one [O] postulate (like c=const).",
+    cr === 2 && jf[2] === 1728 && sols === Sort[{-1, 1/2, 2}] && Simplify[jhex] === 0];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];
