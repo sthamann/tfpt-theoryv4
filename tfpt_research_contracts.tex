@@ -583,6 +583,27 @@ account of completeness is therefore:
 \end{itemize}
 So ``solving the QFT'' here means exactly this: the boundary QFT is a single relative object reduced to
 one foundational symmetry postulate, with ambient QG held apart --- not a diffuse list of open interfaces.
+The MSC closes the boundary relative QFT object modulo \texttt{QGEO.SYM.01}; it does \emph{not} assert
+SM-only 4D gauge unification, and the canonical 4D reading is boundary only.
+\begin{keybox}[4D-QFT fork policy --- a frozen decision tree, not an open ambiguity (\veri{v265\_qft4d\_fork\_freeze.py})]
+The 4D reading is a \emph{branch policy}, machine-frozen in \texttt{qft4d\_fork\_freeze.json}:
+\begin{itemize}\setlength\itemsep{1pt}
+\item \textbf{A (canonical) --- boundary only.} \mC\ \emph{Boundary-only is the canonical 4D reading}:
+  TFPT delivers the boundary QFT, the relative spectral action and the SM readout; a 4D-GUT is
+  \emph{not claimed by default} ($E_8$ is the audit hull, never an unbroken 4D gauge group).
+\item \textbf{SM-only 4D-GUT unification is killed.} \mX\ the plain SM couplings do not meet (at the
+  $\alpha_1{=}\alpha_2$ scale $\alpha_3^{-1}$ is off by ${\sim}5.6$; spread ${\sim}8.8$ at $2{\times}10^{16}$
+  GeV, \vref{v246}). This is the canonical \emph{expectation}, not a failure.
+\item \textbf{B (conditional) --- carrier-native Pati--Salam UV branch.} \mC/\mO\ permitted \emph{only}
+  with the $E_8$-allowed content $\{1,10,16,45\}$ (no $\mathbf{126}$, \vref{v247}), $\sin^2\theta_W{=}3/8$
+  (\vref{v248}), $\kappa{=}M_{PS}/M_s$ in the frozen $O(1)$ band (\vref{v249}/\vref{v253}), and a threshold
+  model with a proton-decay kill test; carrier gauging itself stays the contract \texttt{CONTRACT.QFT4D.DIRAC.01}.
+\item \textbf{Proton-decay rule (no fake window).} \mX\ no discovery $\tau_p$ is predicted; PS is killed if
+  its thresholds need forbidden reps, leave the $\kappa$ band, or predict $\tau_p$ below the current bound
+  --- until a sharp window is published, proton decay is a \emph{safety constraint}, not a discovery.
+\end{itemize}
+The fork is thus a frozen decision tree with explicit promotion/demotion rules, \emph{not} an open ambiguity.
+\end{keybox}
 \par\smallskip\noindent\textbf{And the bedrock is now a falsifiable kill-test, not a proof-promise
 (\veri{v215\_seam\_deck\_killtest.py}).} A foundational symmetry cannot be derived from nothing
 (Bisognano--Wichmann would presuppose the very covariance it should produce); the honest move is to recast

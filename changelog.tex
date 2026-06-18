@@ -59,6 +59,24 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-18 (The 4D-QFT fork frozen as a branch policy: boundary-only canonical, Pati--Salam a falsifiable UV branch, SM-only GUT killed, \texttt{v265})}
+\begin{itemize}
+\item \textbf{\texttt{v265\_qft4d\_fork\_freeze.py} (\texttt{QFT4D.FORK.01}) turns the 4D-QFT fork from an open
+  ambiguity into a frozen decision tree} (\texttt{qft4d\_fork\_freeze.json}), no new physics. \textbf{A
+  (canonical):} boundary-only is the default 4D reading --- a 4D-GUT is \emph{not claimed by default}
+  ($E_8$ is the audit hull). \mX\ SM-only 4D-GUT unification is killed (1-loop: at the
+  $\alpha_1{=}\alpha_2$ scale $\alpha_3^{-1}$ off by ${\sim}5.6$, spread ${\sim}8.8$ at $2{\times}10^{16}$
+  GeV, re-deriving \vref{v246}) --- the canonical expectation, not a failure. \textbf{B (conditional):}
+  carrier-native Pati--Salam is a falsifiable UV branch only with the $E_8$-allowed content
+  $\{1,10,16,45\}$ (no $\mathbf{126}$, \vref{v247}), $\sin^2\theta_W{=}3/8$ (\vref{v248}), the $O(1)$
+  $\kappa{=}M_{PS}/M_s$ band (\vref{v249}/\vref{v253}), a threshold model and a proton-decay kill test
+  (\mX, no fake $\tau_p$ window; carrier gauging stays the contract). \mE\ a prose guard
+  (\texttt{QFT4D.NO\_OVERCLAIM.01}) forbids bare 4D over-claims and requires the scoped policy wording. New
+  ledger rows \texttt{QFT4D.BOUNDARY.DEFAULT.01}, \texttt{QFT4D.SMONLYGUT.01}, \texttt{PS.UVBRANCH.01},
+  \texttt{PS.THRESHOLD.01}, \texttt{PS.PROTON.KILL.01}. A fork-policy box added to
+  \texttt{tfpt\_research\_contracts}; \mE\ build green, \texttt{AUDIT OK}.
+\end{itemize}
+
 \subsection*{2026-06-18 (Three open-residual advances: the $F_{\mathrm{QCD}}$ solver, $M_\nu$ from $D_F$, and the raw-seam$\Rightarrow$mark-locality reduction, \texttt{v262}--\texttt{v264})}
 \begin{itemize}
 \item \textbf{\texttt{v262\_fqcd\_mp\_me.py} (\texttt{FR.MPME.02}) implements the one contract-only

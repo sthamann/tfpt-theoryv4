@@ -47,6 +47,336 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "The 4D-QFT fork frozen as a branch policy: boundary-only canonical, Pati–Salam a falsifiable UV branch, SM-only GUT killed, "
+      },
+      {
+        "k": "c",
+        "v": "v265"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v265_qft4d_fork_freeze.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QFT4D.FORK.01"
+            },
+            {
+              "k": "t",
+              "v": ") turns the 4D-QFT fork from an open ambiguity into a frozen decision tree"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "qft4d_fork_freeze.json"
+        },
+        {
+          "k": "t",
+          "v": "), no new physics. "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "A (canonical):"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " boundary-only is the default 4D reading — a 4D-GUT is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not claimed by default"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " is the audit hull). "
+        },
+        {
+          "k": "s",
+          "v": "X"
+        },
+        {
+          "k": "t",
+          "v": "SM-only 4D-GUT unification is killed (1-loop: at the "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha_1{=}\\alpha_2"
+        },
+        {
+          "k": "t",
+          "v": " scale "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha_3^{-1}"
+        },
+        {
+          "k": "t",
+          "v": " off by "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}5.6"
+        },
+        {
+          "k": "t",
+          "v": ", spread "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}8.8"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "2{\\times}10^{16}"
+        },
+        {
+          "k": "t",
+          "v": " GeV, re-deriving "
+        },
+        {
+          "k": "c",
+          "v": "v246"
+        },
+        {
+          "k": "t",
+          "v": ") — the canonical expectation, not a failure. "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "B (conditional):"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " carrier-native Pati–Salam is a falsifiable UV branch only with the "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": "-allowed content "
+        },
+        {
+          "k": "m",
+          "v": "\\{1,10,16,45\\}"
+        },
+        {
+          "k": "t",
+          "v": " (no "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbf{126}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v247"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "\\sin^2\\theta_W{=}3/8"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v248"
+        },
+        {
+          "k": "t",
+          "v": "), the "
+        },
+        {
+          "k": "m",
+          "v": "O(1)"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\kappa{=}M_{PS}/M_s"
+        },
+        {
+          "k": "t",
+          "v": " band ("
+        },
+        {
+          "k": "c",
+          "v": "v249"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v253"
+        },
+        {
+          "k": "t",
+          "v": "), a threshold model and a proton-decay kill test ("
+        },
+        {
+          "k": "s",
+          "v": "X"
+        },
+        {
+          "k": "t",
+          "v": ", no fake "
+        },
+        {
+          "k": "m",
+          "v": "\\tau_p"
+        },
+        {
+          "k": "t",
+          "v": " window; carrier gauging stays the contract). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "a prose guard ("
+        },
+        {
+          "k": "c",
+          "v": "QFT4D.NO_OVERCLAIM.01"
+        },
+        {
+          "k": "t",
+          "v": ") forbids bare 4D over-claims and requires the scoped policy wording. New ledger rows "
+        },
+        {
+          "k": "c",
+          "v": "QFT4D.BOUNDARY.DEFAULT.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "QFT4D.SMONLYGUT.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PS.UVBRANCH.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PS.THRESHOLD.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PS.PROTON.KILL.01"
+        },
+        {
+          "k": "t",
+          "v": ". A fork-policy box added to "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "build green, "
+        },
+        {
+          "k": "c",
+          "v": "AUDIT OK"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-18",
+    "dateLabel": "2026-06-18",
+    "heading": [
+      {
+        "k": "t",
         "v": "Three open-residual advances: the "
       },
       {

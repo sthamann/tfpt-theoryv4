@@ -161,6 +161,13 @@ function ClosingCondition() {
         relative object closed modulo QGEO.SYM.01 and adds <span className="text-emerald-200">no new open item</span>;
         the ambient QG measure is gap-decoupled (Δ_eff = 1.648 &gt; 0) and kept separate by design.
       </p>
+      <p className="mt-3 rounded-lg border border-slate-700/40 bg-slate-950/40 p-3 text-xs leading-relaxed text-slate-300">
+        <span className="font-semibold text-slate-100">4D-QFT fork policy</span> (frozen decision tree, v265):
+        Boundary QFT — complete modulo QGEO.SYM.01. Ambient QG — separate. <span className="text-amber-200">4D
+        GUT — not claimed by default</span> (E₈ is the audit hull, not a 4D gauge group; SM-only unification
+        is killed). Optional UV branch — carrier-native Pati-Salam, falsifiable by thresholds and proton
+        decay (E₈-allowed content only, no 126, sin²θ_W = 3/8). Not an open ambiguity.
+      </p>
     </figure>
   );
 }

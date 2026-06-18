@@ -1,0 +1,19 @@
+{
+  "canonical_reading": "boundary_only",
+  "sm_only_gut": "killed",
+  "uv_branch": "carrier_native_pati_salam",
+  "uv_branch_status": "conditional_candidate",
+  "promotion_rule": "PS may be promoted only if carrier gauging is derived as a spectral-triple theorem AND threshold + proton tests pass.",
+  "demotion_rule": "If thresholds require forbidden reps, violate the kappa band, or fail proton safety, PS is killed and boundary-only remains.",
+  "public_wording": "TFPT is not a 4D GUT by default.",
+  "evidence": {
+    "sm_spread_at_2e16": 8.77,
+    "alpha3_offset_at_meeting": 5.6,
+    "e8_branch_sum": 248,
+    "sin2_thetaW": "3/8",
+    "kappa_band": [
+      1.0,
+      1.7
+    ]
+  }
+}
