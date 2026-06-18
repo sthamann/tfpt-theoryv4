@@ -47,6 +47,325 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "Branch B decided: the explicit PS threshold model "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " proton-decay window — minimal content killed, "
+      },
+      {
+        "k": "m",
+        "v": "+(15,1,1)"
+      },
+      {
+        "k": "t",
+        "v": " survives, Hyper-K decisive, "
+      },
+      {
+        "k": "c",
+        "v": "v266"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v266_ps_threshold_proton.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PS.PROTON.02"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "c",
+              "v": "PS.THRESHOLD.02"
+            },
+            {
+              "k": "t",
+              "v": ") decides branch B of the "
+            },
+            {
+              "k": "c",
+              "v": "v265"
+            },
+            {
+              "k": "t",
+              "v": " fork."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The explicit two-step Pati–Salam thresholds give "
+        },
+        {
+          "k": "m",
+          "v": "d{=}6"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\tau_p(p{\\to}e^+\\pi^0)"
+        },
+        {
+          "k": "t",
+          "v": " (writes "
+        },
+        {
+          "k": "c",
+          "v": "ps_threshold_proton.json"
+        },
+        {
+          "k": "t",
+          "v": "): "
+        },
+        {
+          "k": "s",
+          "v": "X"
+        },
+        {
+          "k": "t",
+          "v": "the minimal "
+        },
+        {
+          "k": "m",
+          "v": "16"
+        },
+        {
+          "k": "t",
+          "v": "-Higgs content ("
+        },
+        {
+          "k": "m",
+          "v": "M_{GUT}{\\sim}2.4{\\times}10^{15}"
+        },
+        {
+          "k": "t",
+          "v": ") gives "
+        },
+        {
+          "k": "m",
+          "v": "\\tau_p{\\sim}4.4{\\times}10^{33}"
+        },
+        {
+          "k": "t",
+          "v": " yr "
+        },
+        {
+          "k": "m",
+          "v": "<"
+        },
+        {
+          "k": "t",
+          "v": " Super-K and is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "killed"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " even at the high hadronic band; "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": "-allowed "
+        },
+        {
+          "k": "m",
+          "v": "(15,1,1)"
+        },
+        {
+          "k": "t",
+          "v": " [the single "
+        },
+        {
+          "k": "m",
+          "v": "45"
+        },
+        {
+          "k": "t",
+          "v": "] raises "
+        },
+        {
+          "k": "m",
+          "v": "M_{GUT}{\\sim}5.9{\\times}10^{15}"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow\\tau_p{\\sim}1.6{\\times}10^{35}"
+        },
+        {
+          "k": "t",
+          "v": " yr, proton-safe "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "now"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "X"
+        },
+        {
+          "k": "t",
+          "v": "but that sits at the Hyper-K reach ("
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}1.4{\\times}10^{35}"
+        },
+        {
+          "k": "t",
+          "v": " yr) — a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "dated"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " kill test decisive within the decade. So branch B is promoted from “well-mannered candidate” to "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "content-selected (must be "
+            },
+            {
+              "k": "m",
+              "v": "+(15,1,1)"
+            },
+            {
+              "k": "t",
+              "v": "), Hyper-K-decisive UV branch"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "structurally marginal (only one "
+        },
+        {
+          "k": "m",
+          "v": "45"
+        },
+        {
+          "k": "t",
+          "v": " in the hull, "
+        },
+        {
+          "k": "c",
+          "v": "v247"
+        },
+        {
+          "k": "t",
+          "v": ") with an "
+        },
+        {
+          "k": "m",
+          "v": "O(3)"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\tau_p"
+        },
+        {
+          "k": "t",
+          "v": " band. Branch A (boundary-only) is unchanged and canonical. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "build green, "
+        },
+        {
+          "k": "c",
+          "v": "AUDIT OK"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-18",
+    "dateLabel": "2026-06-18",
+    "heading": [
+      {
+        "k": "t",
         "v": "The 4D-QFT fork frozen as a branch policy: boundary-only canonical, Pati–Salam a falsifiable UV branch, SM-only GUT killed, "
       },
       {

@@ -1,0 +1,12 @@
+{
+  "branch_B": "carrier_native_pati_salam",
+  "content_selected": "+(15,1,1) [the E8-allowed single 45]",
+  "minimal_16H": "KILLED by Super-K",
+  "tau_p_minimal_yr": 4.392e+33,
+  "tau_p_selected_yr": 1.553e+35,
+  "super_k_bound_yr": 2.4e+34,
+  "hyper_k_reach_yr": 1.4e+35,
+  "status_now": "proton-safe only with +(15,1,1); minimal excluded",
+  "kill_test": "Hyper-K p->e+pi0 within the decade is decisive",
+  "default_reading_unchanged": "A (boundary-only) remains canonical; B stays a conditional UV branch"
+}
