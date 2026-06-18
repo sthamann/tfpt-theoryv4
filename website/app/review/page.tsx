@@ -151,7 +151,13 @@ const BLOCKS: Block[] = [
         m_p/m_e are its four typed instances). The whole boundary-QFT layer
         (Dirac, cutoff, gauging, glue) collapses onto the same{" "}
         <span className="font-mono">G_net</span> premise via the Modular Spectral
-        Closure (v258–v261) — one relative object, no new open item.{" "}
+        Closure (v258–v261) — one relative object, no new open item. That premise
+        is now a single named theorem, the Seam Equivalence Theorem{" "}
+        <span className="font-mono">SEAM.EQUIV.01</span> (the raw RP seam IS the
+        holomorphic (E₈)₁ net at τ=i): an import firewall keeps its two routes
+        non-circular (v286), Route A reduces it to one standard import (v287), and
+        Route B proves the full-L² ℤ₄ lift, leaving only &ldquo;why is the raw
+        subprincipal term mark-local?&rdquo; (v288).{" "}
         <Link href="/#open-gates" className="font-semibold text-blue-300 hover:text-blue-200">
           The open residual →
         </Link>

@@ -145,7 +145,7 @@ const REVIEWER_MAP: { label: string; marker: string; tone: string; items: string
     items: [
       "P1, P2 — declared inputs, reduced to the anchor a=(1,1,2)+π (not free dials)",
       "v_geo — the one dimensionful scale (metrology primitive, No-Unit Theorem)",
-      "QGEO.SYM.01 — the carrier μ₄ clock is the seam's conformal deck (definitional)",
+      "SEAM.EQUIV.01 — the raw RP seam is the holomorphic (E₈)₁ net at τ=i (the one named theorem; residual: raw subprincipal mark-locality, v288)",
     ],
   },
   {
@@ -432,7 +432,7 @@ export default function VerificationPage() {
               className="mx-auto w-full max-w-4xl rounded-lg bg-white"
             />
             <figcaption className="mt-4 text-sm leading-relaxed text-slate-400">
-              The structural-residual reduction chain (v175 → v237). The whole remaining
+              The structural-residual reduction chain (v175 → v288). The whole remaining
               &ldquo;quantum gravity&rdquo; question collapses, one machine-checked step at a time, from a
               vague measure to a single <span className="text-slate-200">falsifiable physical</span>{" "}
               condition: is the seam short-range-entangled (<span className="font-mono">det K = 1</span>,
@@ -442,7 +442,11 @@ export default function VerificationPage() {
               emergent-QFT layer (<span className="font-mono">v258–v261</span>, the Modular Spectral Closure:
               Dirac = covariance induction, cutoff = KMS weight, seam/carrier/E₈ on one Kummer/K3) collapses
               onto this <em>same</em> bedrock — so the boundary QFT is one relative object that adds no new
-              open item.
+              open item. Closing sprint (<span className="font-mono">v286–v288</span>): the bedrock is now a
+              single <em>named</em> theorem, the Seam Equivalence Theorem (<span className="font-mono">SEAM.EQUIV.01</span>) —
+              the raw RP seam IS the holomorphic (E₈)₁ net at τ=i — with an import firewall keeping its two
+              routes non-circular; Route A reduces it to one standard import, Route B proves the full-L² ℤ₄
+              lift, leaving only &ldquo;why is the raw subprincipal term mark-local?&rdquo;.
             </figcaption>
           </figure>
         </div>

@@ -743,7 +743,8 @@ def fig_residual_chain():
         ("v276", "Flat all-orders closure (Lean)", "flat tau=i => [rho,H]=0 to ALL orders (FORM.QGEO.03)", C["green"]),
         ("v282", "Two faces, ONE object", "chi_E8(i)=12: flat tau=i geometry = (E8)_1 holomorphy", C["green"]),
         ("v284-v285", "Two routes, one open lemma", "RP-uniqueness 5/6 + condensation 3/4; open lemmas coincide", C["green"]),
-        ("BEDROCK", "ONE physical statement", "canonical equivalence: raw seam KMS/DtN <-> holomorphic (E8)_1 at tau=i", C["gold"]),
+        ("v286-v288", "SEAM.EQUIV.01 named + attacked", "import firewall (v286); Route A 4/5 (v287); Route B proves full-L2 Z4 lift (v288)", C["green"]),
+        ("BEDROCK", "ONE mark-locality bit", "residual: why is the raw seam subprincipal term mark-local? (= raw seam IS (E8)_1 at tau=i)", C["gold"]),
     ]
     n = len(steps)
     fig, ax = plt.subplots(figsize=(8.2, 6.6))
@@ -812,12 +813,12 @@ def fig_script_timeline():
          "cutoff = KMS weight, seam/carrier/E8 on one K3: one relative object", C["blue"]),
         ("v262-v275", "Frontier closure + QFT4D fork", "F_QCD m_p/m_e, M_nu seesaw, S_pert (EG, 1-loop + gauge\n"
          "betas), scale over-determination, the QG.AMB roadmap", C["red"]),
-        ("v276-v285", "The Gral", "QGEO.SYM.01 -> one flat-tau=i postulate (Lean), seam = (E8)_1\n"
-         "at tau=i, the two proof routes decomposed (one open lemma)", C["gold"]),
+        ("v276-v288", "The Gral: SEAM.EQUIV.01", "seam = (E8)_1 at tau=i named as ONE theorem; import\n"
+         "firewall (v286), Route A 4/5 (v287), Route B proves full-L2 Z4 lift (v288)", C["gold"]),
     ]
     fig, ax = plt.subplots(figsize=(7.8, 10.2))
     ax.set_xlim(0, 10); ax.set_ylim(0, len(phases) + 0.4); ax.axis("off")
-    ax.set_title("TFPT verification suite: the journey of ~285 machine-checked scripts",
+    ax.set_title("TFPT verification suite: the journey of ~288 machine-checked scripts",
                  fontsize=10.5, color=C["blue"])
     ax.plot([0.7, 0.7], [0.3, len(phases) + 0.1], color=C["gray"], lw=1.4, zorder=0)
     for i, (rng, head, sub, col) in enumerate(phases):
@@ -851,13 +852,13 @@ def fig_qft_skeleton():
         ("v258-v261", "Modular Spectral Closure", "one relative object: $D_F=$cov.\\ induction, cutoff$=$KMS, K3", C["green"]),
         ("v269-v278", "Perturbative $S_{\\mathrm{pert}}$ (EG)", "1-loop quartic + gauge $\\beta=(41/10,-19/6,-7)$; LSZ unitary", C["green"]),
         ("v265", "4D fork (frozen)", "boundary-only default; PS UV branch; SM-only GUT killed", C["gold"]),
-        ("OPEN", "QGEO.SYM.01 = seam$=(E_8)_1$ at $\\tau{=}i$", "the one premise (v282); two routes 8/10 lemmas done (v284/v285)", C["red"]),
+        ("OPEN", "SEAM.EQUIV.01 = seam$=(E_8)_1$ at $\\tau{=}i$", "ONE named theorem (v286); Route A 4/5 (v287), Route B full-L2 lift (v288); residual: raw subprincipal mark-local", C["red"]),
         ("OPEN", "QG.AMB.01 nonperturbative", "the $R^2/$Weyl$^2$ gravity $S_{\\mathrm{pert}}$ carries the Stelle ghost (rt_F)", C["red"]),
     ]
     n = len(steps)
     fig, ax = plt.subplots(figsize=(8.0, 6.8))
     ax.set_xlim(0, 10); ax.set_ylim(0, n + 0.5); ax.axis("off")
-    ax.set_title("The emergent-QFT skeleton on the seam (v238-v285):\n"
+    ax.set_title("The emergent-QFT skeleton on the seam (v238-v288):\n"
                  "each step machine-checked; the two genuinely open items in red",
                  fontsize=10.5, color=C["blue"])
     bw, bh = 8.6, 0.60

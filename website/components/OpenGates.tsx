@@ -173,7 +173,19 @@ function ClosingCondition() {
         explicit roadmap (v275): Tier A gap-decoupled, Tier B reduced to the holomorphic (E₈)₁ boundary net —
         reduced, not closed. Sharper still (v282): the flat τ=i geometry (QGEO.SYM.01) and the (E₈)₁ holomorphy
         (QG.AMB.01) are two faces of one object — χ_E8(i) = j(i)^{1/3} = 12, so τ=i is at once the order-4 CM
-        point and the (E₈)₁ modulus — collapsing the two open obligations to one: "the raw seam is (E₈)₁ at τ=i."
+        point and the (E₈)₁ modulus — collapsing the two open obligations to one.
+      </p>
+      <p className="mt-3 rounded-lg border border-emerald-400/15 bg-emerald-500/[0.03] p-3 text-xs leading-relaxed text-slate-300">
+        <span className="font-semibold text-emerald-200">That one statement is now a single named theorem</span>{" "}
+        — the Seam Equivalence Theorem (SEAM.EQUIV.01, v286): <em>the raw RP seam state is the holomorphic
+        (E₈)₁ boundary net at τ=i</em>. The contract concentrates the whole open structure on this one arrow and
+        enforces an <span className="text-slate-100">import firewall</span> so its two proof routes can never feed
+        each other (no "E₈ smuggled into the geometry and pulled back out"). Both routes are then attacked:{" "}
+        <span className="text-slate-100">Route A</span> (AQFT, v287) reduces the theorem to <em>one</em> standard
+        import — "invertible Gaussian bulk ⇒ single-sector boundary" (4/5 lemmas discharged); and{" "}
+        <span className="text-slate-100">Route B</span> (DtN, v288) <em>proves</em> the full-L² lift of the
+        subprincipal ℤ₄ block-diagonality, shrinking the residual to the single sharper question:{" "}
+        <span className="text-slate-300">why is the raw seam subprincipal term mark-local?</span>
       </p>
       <p className="mt-3 rounded-lg border border-slate-700/40 bg-slate-950/40 p-3 text-xs leading-relaxed text-slate-300">
         <span className="font-semibold text-slate-100">4D-QFT fork policy</span> (frozen decision tree, v265):

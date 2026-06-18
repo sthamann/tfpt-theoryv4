@@ -1613,3 +1613,44 @@ DIE KANONISCHE ABBILDUNG EXISTIERT UND IST RIGIDE (v140, Ledger
        geometrische Boundary-Deck ist (-U Monodromie-Blatt-Twist
        vs i^Q+ Cusp-Exponentiale).
 ================================================================================
+
+NACHTRAG 2026-06-18 (Closing Sprint: der EINE benannte Satz, v286-v288):
+================================================================================
+  STRATEGIE (aus problem_b.txt): nicht noch ein Readout, sondern den letzten
+  strukturellen Uebergang als EINEN praezisen, extern pruefbaren Satz
+  deklarieren und genau den einen offenen Pfeil angreifen.
+
+  (1) v286 SEAM.EQUIV.01 -- der Seam-Equivalence-Vertrag [E]:
+      Benennt den offenen Kern als EINEN Satz: "die rohe RP-Naht IST das
+      holomorphe (E8)_1-Boundary-Net bei tau=i". Typisiert 4 Objekte
+      (RawRPSeam, FlatTauIPillowcaseDtN, HolomorphicE8Net, SREKitaevE8Phase)
+      und 6 Pfeile (2 geschlossen = die zwei Routen, 1 konditional = v282,
+      1 offener Gral). IMPORT-FIREWALL: keine Route-i-Datei (v276/v280/v284)
+      importiert eine Route-ii-Datei (v277/v281/v285) oder umgekehrt -- die
+      Routen laufen NUR ueber SEAM.EQUIV.01 zusammen. Toetet den
+      Reviewer-Angriff "E8 in die Geometrie geschmuggelt und wieder
+      herausgezogen".
+
+  (2) v287 SEAM.EQUIV.A01 -- Route A (AQFT) Dependency-Checker [E]/[O]:
+      Die 5-Lemma-Kette RP+gap+chirality+Gaussian+invertibel => mu=1 =>
+      holomorph => (E8)_1 ist logisch vollstaendig MODULO EINEM Standardsatz:
+      "invertibler (SRE) Gaussian-Bulk => single-sector Boundary" (die
+      AQFT-Form von det K=1). 4/5 Lemmas entladen.
+
+  (3) v288 SEAM.EQUIV.B01 -- Route B (DtN) voller-L^2-Lift [E]:
+      BEWEIST den vollen-L^2-Lift der subprincipal Z4-Blockdiagonalitaet
+      (eine mark-sourced Kruemmung f=sum_{j<4} g(theta-j pi/2) hat
+      Fourier-Support nur auf m==0 mod 4, also [rho,Lambda]=0 auf ganz L^2,
+      ||.||~2e-15; generische Kruemmung -> 4.44). Hebt v201/v284 vom endlichen
+      Block auf den vollen Operator. REST schrumpft auf EINE schaerfere Frage:
+      warum ist der rohe Subprincipal-Term mark-local?
+
+  POSITIONIERUNG: "TFPT ist strukturell vollstaendig modulo einem benannten
+  Seam-Equivalence-Theorem" -- plus eine absolute Einheit (v_geo), ein
+  Transferfunktor (F_transfer) und ein optionaler Full-QG-Gipfel (QG.AMB.01).
+
+  NEBENBEFUND (gefixt): die Webseite zeigte canonical/OG/sitemap/robots auf
+  die TOTE Domain tfpt-theory.vercel.app (NEXT_PUBLIC_SITE_URL ungesetzt);
+  Site-URL nach lib/utils.ts zentralisiert, Default jetzt
+  www.fixpoint-theory.com. Empfehlung: NEXT_PUBLIC_SITE_URL in Vercel setzen.
+================================================================================

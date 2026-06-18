@@ -369,7 +369,7 @@ const NODES: DagNode[] = [
     marker: "[C] conditional",
     title: "Gravity & cosmology — the geometry channel",
     summary:
-      "The spectral action gives R + R²; the scalaron mass is M = c₃^(7/2) M̄ = 3.06×10¹³ GeV (exponent 7 = Ω_adm − 10 b₁). From the same attractor n_s = 1 − 2/N★, r = 12/N★² on the frozen band N★ ∈ [50,60]; the reheating chain (v86) sharpens this conditionally to N★ = 51.4 ⇒ n_s = 0.9611, r = 0.0045 (recorded with its A_s tension). Λ ∼ e⁻²ᵅ⁻¹, H₀ ∼ √Λ. The metric sector reduces to the rigorously-constructed (E₈)₁ lattice net (c = 8 = 5 + 3); its closing condition is the single seam premise — now sharpened to 'the raw seam is (E₈)₁ at τ=i' (det K = 1, the Kitaev E₈ phase), see the boundary-QFT node (v276/v282/v284/v285). Classical fingerprint (v101): the maximal de Sitter (Nariai) black hole carries the traceless anchor (1,1,−2) and the Koide-2/3 entropy bound, and evaporates away from the anchor — the same orientation as flavor relaxation. Every scale is a ratio to one v_geo.",
+      "The spectral action gives R + R²; the scalaron mass is M = c₃^(7/2) M̄ = 3.06×10¹³ GeV (exponent 7 = Ω_adm − 10 b₁). From the same attractor n_s = 1 − 2/N★, r = 12/N★² on the frozen band N★ ∈ [50,60]; the reheating chain (v86) sharpens this conditionally to N★ = 51.4 ⇒ n_s = 0.9611, r = 0.0045 (recorded with its A_s tension). Λ ∼ e⁻²ᵅ⁻¹, H₀ ∼ √Λ. The metric sector reduces to the rigorously-constructed (E₈)₁ lattice net (c = 8 = 5 + 3); its closing condition is the single named Seam Equivalence Theorem — 'the raw seam IS (E₈)₁ at τ=i' (det K = 1, the Kitaev E₈ phase; SEAM.EQUIV.01), see the boundary-QFT node (v276/v282/v286/v288). Classical fingerprint (v101): the maximal de Sitter (Nariai) black hole carries the traceless anchor (1,1,−2) and the Koide-2/3 entropy bound, and evaporates away from the anchor — the same orientation as flavor relaxation. Every scale is a ratio to one v_geo.",
     inputs: ["c₃ (P1)", "E₈"],
     outputs: ["Λ, A_s, n_s, r, scalaron M"],
     failure: "Ambient reflection-positivity fails.",
@@ -404,7 +404,7 @@ const NODES: DagNode[] = [
     marker: "[E]/[C] modulo one premise",
     title: "Boundary QFT & the seam bedrock",
     summary:
-      "On top of E₈ the boundary QFT is one relative object — the Modular Spectral Closure (v258–v261): the finite Dirac is the covariance induction of the seam KMS state, the spectral-action cutoff IS that KMS weight (f₂/f₀ = 1), and the seam, carrier-16 and E₈ live on one Kummer/K3. The perturbative 4D S-matrix S_pert is Epstein–Glaser-constructible (v269) with a one-loop quartic (v271) and the SM gauge β-coefficients (41/10, −19/6, −7; v273), LSZ-bridged to the physical S_phys with one-loop unitarity for matter+gauge (v278) — the R²/Weyl² gravity sector carries the Stelle ghost (rt_F), the nonperturbative QG.AMB.01 frontier. The whole layer closes modulo ONE premise, now sharpened to 'the raw seam is (E₈)₁ at τ=i' (χ_E8(i)=12, v282): the flat τ=i geometry (QGEO.SYM.01) and the holomorphy (det K=1) are two faces of one object, attacked from two decomposed routes (RP-state uniqueness 5/6 + Troyanov, v284; seam-net condensation 3/4, v285) whose open lemmas coincide — the single open statement is the canonical equivalence between the raw seam KMS/DtN state and the holomorphic (E₈)₁ net at τ=i.",
+      "On top of E₈ the boundary QFT is one relative object — the Modular Spectral Closure (v258–v261): the finite Dirac is the covariance induction of the seam KMS state, the spectral-action cutoff IS that KMS weight (f₂/f₀ = 1), and the seam, carrier-16 and E₈ live on one Kummer/K3. The perturbative 4D S-matrix S_pert is Epstein–Glaser-constructible (v269) with a one-loop quartic (v271) and the SM gauge β-coefficients (41/10, −19/6, −7; v273), LSZ-bridged to the physical S_phys with one-loop unitarity for matter+gauge (v278) — the R²/Weyl² gravity sector carries the Stelle ghost (rt_F), the nonperturbative QG.AMB.01 frontier. The whole layer closes modulo ONE named theorem, the Seam Equivalence Theorem (SEAM.EQUIV.01, v286): 'the raw RP seam state IS the holomorphic (E₈)₁ boundary net at τ=i' (χ_E8(i)=12, v282). The flat τ=i geometry (QGEO.SYM.01) and the holomorphy (det K=1) are two faces of that one object, and the contract enforces an import firewall so its two proof routes never feed each other. Both routes are attacked directly: Route A (AQFT, v287) reduces the theorem to ONE standard import 'invertible Gaussian bulk ⇒ single-sector boundary' (4/5 lemmas discharged); Route B (DtN, v288) PROVES the full-L² lift of the subprincipal ℤ₄ block-diagonality, shrinking the residual to the single sharper question 'why is the raw seam subprincipal term mark-local?'.",
     inputs: ["E₈", "seam KMS / DtN state"],
     outputs: ["one relative object; S_pert (1-loop unitary, matter+gauge)"],
     failure: "the seam net is not holomorphic (det K ≠ 1) / not the flat τ=i state.",
@@ -426,6 +426,9 @@ const NODES: DagNode[] = [
       "v282_e8_tau_i_unification.py",
       "v284_route_i_rp_uniqueness.py",
       "v285_route_ii_seam_condensation.py",
+      "v286_seam_equivalence_contract.py",
+      "v287_free_rp_bulk_to_holomorphic_boundary.py",
+      "v288_full_l2_subprincipal_z4.py",
     ],
   },
   {

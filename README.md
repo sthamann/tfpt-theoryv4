@@ -93,7 +93,8 @@ bootstrap fixed point* (forced three independent ways via the `E8` closure), so 
   (pillowcase), the carrier-16 (Kummer nodes) and `E₈` (`H²(K3) = U³⊕E₈(−1)²`) are facets of **one
   Kummer/K3 surface** (`v260`). The assembly certificate (`v261`) pins the cross-consistency — one number
   `4 = [B:A] = |μ₄| = 2χ = |(ℤ/2)²|`, one carrier-16, one gap `6log(3/2)` — so the layer is *QFT-complete
-  modulo the single seam premise* `QGEO.SYM.01`, with ambient QG kept separate.
+  modulo a single named theorem*, the **Seam Equivalence Theorem** `SEAM.EQUIV.01` (*the raw RP seam IS the
+  holomorphic `(E8)₁` net at `τ=i`*; `v286`–`v288`), with ambient QG kept separate.
 
 ### Honest scope — the four layers
 
@@ -338,7 +339,20 @@ discharged — the open bit is `det K=1` = `QGEO.SYM.01`, `v285`); the two route
 the one statement that closes both is a **canonical equivalence between the raw seam KMS/DtN state and the
 holomorphic `(E8)₁` net at `τ=i`**. The recent round's computable predictions are all
 consistent at `<2σ`, with two sharp near-term kill tests (Σm_ν floor, proton decay; `v283`).
-A development timeline of all `281` scripts is in `introduction.tex` (and on the website verification page).
+
+**Closing sprint (`v286`–`v288`) — the one open core is now a single *named* theorem.** Instead of more
+readouts, the open structure is concentrated on one arrow: the **Seam Equivalence Theorem** `SEAM.EQUIV.01`
+(`v286`) — *the raw RP seam state IS the holomorphic `(E8)₁` boundary net at `τ=i`*. The contract types four
+objects and six arrows and enforces an **import firewall** proving the two proof routes never import each
+other (killing the *"`E8` smuggled into the geometry and pulled back out"* circularity). Both routes are then
+attacked directly: **Route A** (AQFT, `v287`) reduces the theorem to **one** standard import — *"invertible
+Gaussian bulk ⇒ single-sector boundary"* (4/5 lemmas discharged); and **Route B** (DtN, `v288`) **proves** the
+full-`L²` lift of the subprincipal `ℤ₄` block-diagonality (a mark-sourced curvature has Fourier support only on
+modes `≡ 0 mod 4`, so `[ρ,Λ]=0` on all of `L²`; lifts `v201`/`v284`), shrinking the residual to the single
+sharper question *"why is the raw seam subprincipal term mark-local?"*. The honest positioning: **TFPT is
+structurally complete modulo one named Seam Equivalence Theorem**, plus an absolute unit (`v_geo`), a transfer
+functor (`F_transfer`) and an optional full-QG summit (`QG.AMB.01`).
+A development timeline of all `288` scripts is in `introduction.tex` (and on the website verification page).
 
 ---
 
