@@ -352,7 +352,22 @@ modes `≡ 0 mod 4`, so `[ρ,Λ]=0` on all of `L²`; lifts `v201`/`v284`), shrin
 sharper question *"why is the raw seam subprincipal term mark-local?"*. The honest positioning: **TFPT is
 structurally complete modulo one named Seam Equivalence Theorem**, plus an absolute unit (`v_geo`), a transfer
 functor (`F_transfer`) and an optional full-QG summit (`QG.AMB.01`).
-A development timeline of all `288` scripts is in `introduction.tex` (and on the website verification page).
+
+**Flat-Away round (`v289`–`v297`) — the residual reduced to one shared geometric input, with proofs.** The
+remaining question is decomposed into a 5-lemma chain whose *only* open link is **Flat-Away** — *RP + gap + the
+four marks ⇒ the curvature vanishes away from the marks* (`v289`). An honest red-team shows `ℤ₄`-invariance is
+**not** mark-locality (a smooth `ε·cos(4θ)` passes the commutator yet shifts the spectrum, `v290`), so Flat-Away
+is named as its own mini-theorem (`v291`) with **three independent routes**, each carried to a precise reduction:
+the **heat route** — the heat-trace deviation is a positive-definite quadratic form, *proved analytically* via
+convexity (`v295`), with the exact `a₂` divided-difference kernel now in **closed form**
+`W_k(t) = t(1−e^{−4kt})/(8k(1−e^{−t}))` + finite middle (`v296`) and **Lean-formalised**
+(`FORM.FLATAWAY.01`, axiom-clean); the **spectral route** — the spectral-mismatch Hessian over the full
+smooth-`ℤ₄` space is positive-definite, so flat is a strict isolated minimum (`v293`); the **variational route**
+— Troyanov uniqueness gives the flat cone metric as the unique curvature-energy minimiser (`v294`). And **Route A**'s
+import is now a citable theorem stack (Kitaev/Freed–Hopkins → Müger/Kawahigashi–Longo–Müger →
+Conway–Sloane/Dong–Xu, `v297`) modulo the **same** geometric input as Route B. So both routes reduce
+`SEAM.EQUIV.01` to one shared external fact — flat away from the marks.
+A development timeline of all `295` scripts is in `introduction.tex` (and on the website verification page).
 
 ---
 

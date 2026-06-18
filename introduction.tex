@@ -835,7 +835,7 @@ QFT measure (admissible sector) & \mE & \textbf{closed: RP from cusp spectrum, O
 full measured pole masses & \mC & ladder $\times\,v_{\mathrm{geo}}$, dressed by standard RG (no new physics); $v_{\mathrm{geo}}$ over-determined (\vref{v274}) \\
 absolute QCD scales ($m_p/m_e$, $\Lambda_{\mathrm{QCD}}$) & \mO & QCD matching contract (\texttt{FR.MPME.01}); not a compiler number \\
 full PMNS dynamics (mass scale, CP) & \mC/\mO & angles typed; CP strength $J_{\mathrm{PMNS}}{=}{-}0.0297$ derived (\vref{v270}); absolute $\nu$-scale $=$ one seesaw ratio (\vref{v272}) \\
-\textbf{(1)} \texttt{SEAM.EQUIV.01} --- one named theorem (\emph{raw seam $=(E_8)_1$ at $\tau{=}i$}) & \mO & the single arrow unifying the flat-$\tau{=}i$ geometry and the $\det K{=}1$ holomorphy (\vref{v282}/\vref{v286}, import firewall); Route~A reduces it to one standard import (\vref{v287}), Route~B \emph{proves} the full-$L^2$ $\Z_4$ lift (\vref{v288}); residual $=$ raw subprincipal mark-locality \\
+\textbf{(1)} \texttt{SEAM.EQUIV.01} --- one named theorem (\emph{raw seam $=(E_8)_1$ at $\tau{=}i$}) & \mO & the single arrow unifying the flat-$\tau{=}i$ geometry and the $\det K{=}1$ holomorphy (\vref{v282}/\vref{v286}, import firewall); Route~A is a citable theorem stack (\vref{v297}), Route~B \emph{proves} the full-$L^2$ $\Z_4$ lift (\vref{v288}); residual $=$ \emph{Flat-Away} (\vref{v289}), its heat positive-definiteness proved+Lean (\vref{v295}) \\
 \textbf{(2)} \texttt{QG.AMB.01} --- nonperturbative ambient measure & \mO & the genuinely separate strict-TOE summit: the perturbative $R^2/$Weyl$^2$ gravity ghost (Stelle) is the frontier; Tier-B's holomorphy bit ($\det K{=}1$, \vref{v277}) is absorbed into \texttt{SEAM.EQUIV.01} \\
 analytic boundary origin of $\pi$ ($c_3{=}\tfrac1{8\pi}$) & \mC & \textbf{hardened: $c_3{=}1/(|\Z_2|\oint_{S^2}K)=1/(8\pi)$ (Gauss--Bonnet)}; ``$8$''${=}\operatorname{rank}E_8$; $\pi$ stays the one primitive \\
 $\eta_B$, $m_p/m_e$, Koide, dark matter & \mO & frontier handles only (see document~4) \\
@@ -876,7 +876,15 @@ so the two routes never feed each other (no ``$E_8$ smuggled into the geometry a
 (AQFT) reduces it to \emph{one} standard import, ``invertible Gaussian bulk $\Rightarrow$ single-sector boundary''
 ($4/5$ lemmas discharged, \vref{v287}); and Route~B (DtN) \emph{proves} the full-$L^2$ lift of the subprincipal
 $\Z_4$ block-diagonality (\vref{v288}), shrinking the residual to the single sharper question \emph{why is the raw
-seam subprincipal term mark-local?}. The seam seed is \emph{hardened}:
+seam subprincipal term mark-local?}. \emph{Flat-Away round} (\vref{v289}--\vref{v297}): that residual is
+decomposed to one open analytic lemma, \emph{Flat-Away} (RP$+$gap$+$4 marks $\Rightarrow$ the curvature vanishes
+away from the marks, \vref{v289}); a red-team shows $\Z_4$-invariance is \emph{not} mark-locality (\vref{v290}),
+so Flat-Away is attacked on three independent routes --- the heat route, whose positive-definiteness is
+\emph{proved} by convexity with the exact $a_2$ kernel in closed form and Lean-formalised
+(\vref{v295}/\vref{v296}, \texttt{FORM.FLATAWAY.01}); the spectral-rigidity route (positive-definite Hessian over
+the full smooth-$\Z_4$ space, \vref{v293}); and the RP-energy/Troyanov route (\vref{v294}) --- while Route A's
+import is a citable theorem stack (\vref{v297}) modulo the \emph{same} geometric input, so both routes reduce to
+one shared external fact. The seam seed is \emph{hardened}:
 $c_3=1/(|\Z_2|\oint_{S^2}K\,dA)=1/(8\pi)$ is the one-sided Gauss--Bonnet normalisation of the seam sphere,
 with the discrete ``$8$'' equal to $\operatorname{rank}E_8$ and only the Gauss--Bonnet $\pi$ left as the
 single irreducible primitive. What remains for a full TOE is then the ambient-RP hypothesis (full QG),

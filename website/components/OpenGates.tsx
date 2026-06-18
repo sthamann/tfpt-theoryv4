@@ -209,8 +209,10 @@ function ClosingCondition() {
         now <em>exact</em>, not numerical (v295): convexity of the heat trace Λ↦Tr exp(−tΛ) plus the
         Gauss-Bonnet zero-mean condition makes the flat seam the global minimum (ΔTr ≥ 0, = 0 iff f = 0), and
         the Δ = 0 ⟺ flat step is
-        machine-formalised in Lean (FORM.FLATAWAY.01, axiom-clean). The three converge on one external
-        selection principle for the flat metric.
+        machine-formalised in Lean (FORM.FLATAWAY.01, axiom-clean); the a₂ coefficient is now in closed form
+        (v296). Route A&rsquo;s import is likewise a citable theorem stack (Kitaev/Freed–Hopkins → Müger/KLM →
+        Conway–Sloane, v297) modulo the same input. The three converge on one external selection principle for
+        the flat metric.
       </p>
       <p className="mt-3 rounded-lg border border-slate-700/40 bg-slate-950/40 p-3 text-xs leading-relaxed text-slate-300">
         <span className="font-semibold text-slate-100">4D-QFT fork policy</span> (frozen decision tree, v265):

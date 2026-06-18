@@ -1654,3 +1654,53 @@ NACHTRAG 2026-06-18 (Closing Sprint: der EINE benannte Satz, v286-v288):
   Site-URL nach lib/utils.ts zentralisiert, Default jetzt
   www.fixpoint-theory.com. Empfehlung: NEXT_PUBLIC_SITE_URL in Vercel setzen.
 ================================================================================
+
+NACHTRAG 2026-06-18 (Flat-Away: drei Routen + Heat-Beweis + Lean, v289-v297):
+================================================================================
+  STRATEGIE: den offenen Pfeil SEAM.EQUIV.01 auf EIN benanntes analytisches
+  Lemma (Flat-Away) verengen und es ehrlich angreifen -- kein neues Paper.
+
+  (1) v289 MARKLOCAL.RAW.01 [E/O]: zerlegt 'warum ist der rohe Subprincipal
+      mark-local?' in eine 5-Lemma-Kette; 4/5 entladen (conic parametrix [C],
+      orbit-source, Fourier-support, full-operator). EINES offen: FLAT-AWAY --
+      RP+Gap+4 Marks => Kruemmung verschwindet abseits der Marks.
+
+  (2) v290 SEAM.ADVERSARY.01 [E]: EHRLICHES Red-Team -- Z4-Invarianz ist NICHT
+      Mark-Locality. Eine glatte Z4-Off-Mark-Kruemmung f=eps*cos(4 theta) besteht
+      den Kommutator (||[rho,Lambda]||=0) aber verschiebt das DtN-Spektrum
+      (max|dl|=0.155) und die Heat-Trace (0.019). Der Kommutator ist notwendig,
+      nicht hinreichend; die Spektraldaten schliessen den Modulus aus.
+
+  (3) v291 FLATAWAY.RP.01 [O]: Flat-Away als eigenes Mini-Theorem mit drei
+      unabhaengigen Routen (Heat-Kernel, Spektral-Rigiditaet, RP-Energy/Troyanov).
+
+  (4) v292-v296 HEAT-ROUTE bewiesen + geschlossen + Lean:
+      - v292 [E]: Heat-Trace-Abweichung ist positiv-definite quadratische Form.
+      - v295 FLATAWAY.A2.01 [E]: BEWEIS via Konvexitaet (Klein/Peierls) + Null-
+        Mittel (Gauss-Bonnet) => eps=0 globales Minimum, ΔTr>=0 fuer ALLE eps,
+        =0 iff f=0. Exakter a2-Divided-Difference-Kernel (Duhamel).
+      - v296 FLATAWAY.A2.CLOSED.01 [E]: a2 in GESCHLOSSENER FORM -- Tails
+        teleskopieren (C_k+D_k e^{-4kt}=4kt(1-e^{-4kt})), W_k=t(1-e^{-4kt})/
+        (8k(1-e^{-t}))+endliche Mitte. W_1(t)=t(2t e^t+e^{3t}+3e^{2t}+e^t-1)
+        e^{-3t}/8. Small-t W_k=t/2+O(t^3) (t^2-Term kuerzt sich).
+      - FORM.FLATAWAY.01 (Lean, SeamDeckClosure Part 5): heatDeviation_eq_zero_iff
+        -- positiv-gewichtete Quadratsumme ist positiv-definit (Δ=0 <=> flach);
+        gebaut + axiom-sauber (propext/Classical.choice/Quot.sound).
+
+  (5) v293 FLATAWAY.SPEC.01 [E]: Spektral-Mismatch-Hessian positiv-definit ueber
+      den GANZEN glatten Z4-Raum (Eigenwerte {0.497,0.500,0.503}); Modus 4k
+      spaltet das entartete Level |2k| erster Ordnung. Flach = striktes Minimum.
+
+  (6) v294 FLATAWAY.ENERGY.01 [E/C]: Troyanov-Eindeutigkeit => flache Kegelmetrik
+      = eindeutiger konvexer Krummungsenergie-Minimierer (Hessian 2pi*I).
+
+  (7) v297 SEAM.EQUIV.A.LIT.01 [E]: Route A's Import als zitierbarer Theorem-Stack
+      LIT-A (Kitaev/Freed-Hopkins) o LIT-B (Mueger/KLM) o LIT-C (Conway-Sloane/
+      Dong-Xu) => 'invertibler Bulk => (E8)_1', modulo EINER offenen Hypothese
+      (Seam-Bulk invertibel) = Route B's Flat-Away. Non-zirkulaer (v286-Firewall).
+
+  ERGEBNIS: BEIDE Routen sind auf etablierte/zitierbare Maschinerie + EINEN
+  geteilten geometrischen Input (Flat-Away) reduziert. Der Gral ist von 'grosser
+  Wandsatz' auf eine einzelne spektrale/variationelle Invariante geschrumpft,
+  deren Positiv-Definitheit jetzt bewiesen UND Lean-formalisiert ist.
+================================================================================

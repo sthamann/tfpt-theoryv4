@@ -416,7 +416,7 @@ export default function VerificationPage() {
               className="mx-auto w-full max-w-4xl rounded-lg bg-white"
             />
             <figcaption className="mt-4 text-sm leading-relaxed text-slate-400">
-              The eleven phases of the ~235-script journey — what each did, mathematically and
+              The eleven phases of the ~295-script journey — what each did, mathematically and
               physically. The two axioms <span className="font-mono">c₃ = 1/(8π)</span> and{" "}
               <span className="font-mono">g_car = 5</span> are not free knobs: they reduce to the single
               parabolic anchor <span className="font-mono">a = (1,1,2)</span> plus π, and{" "}
@@ -432,7 +432,7 @@ export default function VerificationPage() {
               className="mx-auto w-full max-w-4xl rounded-lg bg-white"
             />
             <figcaption className="mt-4 text-sm leading-relaxed text-slate-400">
-              The structural-residual reduction chain (v175 → v288). The whole remaining
+              The structural-residual reduction chain (v175 → v297). The whole remaining
               &ldquo;quantum gravity&rdquo; question collapses, one machine-checked step at a time, from a
               vague measure to a single <span className="text-slate-200">falsifiable physical</span>{" "}
               condition: is the seam short-range-entangled (<span className="font-mono">det K = 1</span>,
@@ -446,7 +446,10 @@ export default function VerificationPage() {
               single <em>named</em> theorem, the Seam Equivalence Theorem (<span className="font-mono">SEAM.EQUIV.01</span>) —
               the raw RP seam IS the holomorphic (E₈)₁ net at τ=i — with an import firewall keeping its two
               routes non-circular; Route A reduces it to one standard import, Route B proves the full-L² ℤ₄
-              lift, leaving only &ldquo;why is the raw subprincipal term mark-local?&rdquo;.
+              lift, leaving only &ldquo;why is the raw subprincipal term mark-local?&rdquo;. Flat-Away round
+              (<span className="font-mono">v289–v297</span>): both routes are reduced to one shared geometric
+              input (Flat-Away), with the heat route&rsquo;s positive-definiteness <em>proved</em> (convexity),
+              its a₂ kernel in closed form, and the Δ = 0 ⟺ flat step Lean-formalised.
             </figcaption>
           </figure>
         </div>
