@@ -306,8 +306,24 @@ boundary compiler provably cannot produce an absolute scale, so `U_point ~ v_geo
 two axioms `{c₃, g_car}` are not free knobs: they reduce to the single parabolic anchor `a = (1,1,2)`
 plus `π` (`v23`), with `g_car = 5` an over-determined bootstrap fixed point (forced three ways `v6`,
 Pascal-unique and Lean-formalised). The bedrock premise is not closeable by a finite computation; it is
-the one item that needs a human constructive-geometry argument (or a proof assistant). A development
-timeline of all `261` scripts is in `introduction.tex` (and on the website verification page).
+the one item that needs a human constructive-geometry argument (or a proof assistant).
+
+**Latest round (`v269`–`v278`) — the open core is now two sharply-located math obligations.** The
+boundary QFT gained a **perturbative 4D layer**: the spectral-action S-matrix `S_pert` is
+Epstein–Glaser-constructible (`v269`), with a concrete one-loop quartic (`v271`) and the SM gauge
+β-coefficients `(41/10, −19/6, −7)` from the carrier content (`v273`), bridged to the physical asymptotic
+S-matrix `S_phys` via LSZ with **one-loop unitarity** verified (the optical theorem: the bubble cut equals
+the two-body phase space, `v278`) — for the matter+gauge sector; the `R²/Weyl²` gravity sector is
+renormalizable but non-unitary (the Stelle ghost, red-team `rt_F`), which is *exactly* the nonperturbative
+frontier. The two genuine obligations are now: **(1)** `QGEO.SYM.01` collapses to **one geometric postulate**
+— *the raw RP seam state is the flat τ=i pillowcase* (`v276`: granting it, the modular commutator `[ρ,H]=0`
+closes to all orders, since a flat isometry commutes with every function of its Laplacian); **(2)**
+`QG.AMB.01` Tier-B reduces to **one holomorphy bit** — *is the seam-Calderón boundary net holomorphic
+(`det K = 1`)?* (`v277`: every other `(E8)₁` invariant — c = 8, det Cartan 1, the 248-current character —
+already matches; the `c = 8` counterexample `SO(16)` has `det Cartan = 4`). The single mass anchor is
+moreover **over-determined** (`v274`: Newton's G and the dark-energy prediction give the same Planck mass
+to 0.11%, conditional on the Λ-branch), and the absolute neutrino scale is **one seesaw ratio** (`v272`).
+A development timeline of all `276` scripts is in `introduction.tex` (and on the website verification page).
 
 ---
 

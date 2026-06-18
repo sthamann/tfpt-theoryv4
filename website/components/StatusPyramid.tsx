@@ -69,7 +69,7 @@ const LAYERS: Layer[] = [
     level: 6,
     label: "[C]/[O] Conditional & open",
     short: "Conditional / open",
-    examples: "masses · A_s, n_s, r · η_B · Koide · (U_wall) flavor · (G_metric) QG",
+    examples: "masses · A_s, n_s, r · η_B · Koide · S_pert (EG, 1-loop unitary) · (U_wall) flavor · (G_metric) QG",
     tone: "from-amber-500 to-orange-600",
     ring: "ring-amber-400/40",
     text: "text-amber-50",
