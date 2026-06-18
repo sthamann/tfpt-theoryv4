@@ -59,6 +59,20 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-18 (QGEO.SYM.01 narrowed: the flat pillowcase closes the commutator to all orders, \texttt{v276})}
+\begin{itemize}
+\item \textbf{\texttt{v276\_qgeo\_flat\_closes\_commutator.py} (\texttt{QGEO.SYM.03}) collapses the bedrock
+  to ONE geometric postulate.} The state-level residual the whole bedrock rests on is the operator equation
+  $[\rho,H]{=}0$. \mE\ if $H=f(\Delta_{\mathrm{flat}})$ and the order-4 deck $\rho$ ($z{\mapsto}iz$) is a
+  flat-$\tau{=}i$ isometry, then $[\rho,\Delta]{=}0\Rightarrow[\rho,H]{=}0$ \emph{exactly}, to all orders
+  (verified on the discretised square torus: $\rho^4{=}I$, $[\rho,\Delta]{=}0$, $[\rho,\sqrt{-\Delta}]{=}0$;
+  generic non-isometry fails) --- upgrading the leading-order \vref{v198}/\vref{v201} to the full $H$. \mC\
+  $\tau{=}i$ is forced by order-4 ($j{=}1728$; hexagonal $j{=}0$ is order-6, excluded). \mO\ \texttt{QGEO.SYM.01}
+  therefore collapses to the single statement ``the raw seam IS the flat $\tau{=}i$ pillowcase quasi-free
+  state'' --- one human constructive-QFT proof, or an honest axiom. Narrows, does not close. Build green,
+  \texttt{AUDIT OK}.
+\end{itemize}
+
 \subsection*{2026-06-18 (Red Team Target F --- adversarial audit of the v269--v275 round, \texttt{rt\_F})}
 \begin{itemize}
 \item \textbf{\texttt{redteam/rt\_F\_qft4d.py} (\texttt{REDTEAM.F.01}) stress-tests the just-published round}

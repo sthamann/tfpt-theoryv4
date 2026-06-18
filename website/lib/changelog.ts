@@ -47,6 +47,226 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "QGEO.SYM.01 narrowed: the flat pillowcase closes the commutator to all orders, "
+      },
+      {
+        "k": "c",
+        "v": "v276"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v276_qgeo_flat_closes_commutator.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGEO.SYM.03"
+            },
+            {
+              "k": "t",
+              "v": ") collapses the bedrock to ONE geometric postulate."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The state-level residual the whole bedrock rests on is the operator equation "
+        },
+        {
+          "k": "m",
+          "v": "[\\rho,H]{=}0"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "if "
+        },
+        {
+          "k": "m",
+          "v": "H=f(\\Delta_{\\mathrm{flat}})"
+        },
+        {
+          "k": "t",
+          "v": " and the order-4 deck "
+        },
+        {
+          "k": "m",
+          "v": "\\rho"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "z{\\mapsto}iz"
+        },
+        {
+          "k": "t",
+          "v": ") is a flat-"
+        },
+        {
+          "k": "m",
+          "v": "\\tau{=}i"
+        },
+        {
+          "k": "t",
+          "v": " isometry, then "
+        },
+        {
+          "k": "m",
+          "v": "[\\rho,\\Delta]{=}0\\Rightarrow[\\rho,H]{=}0"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "exactly"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", to all orders (verified on the discretised square torus: "
+        },
+        {
+          "k": "m",
+          "v": "\\rho^4{=}I"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "[\\rho,\\Delta]{=}0"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "[\\rho,\\sqrt{-\\Delta}]{=}0"
+        },
+        {
+          "k": "t",
+          "v": "; generic non-isometry fails) — upgrading the leading-order "
+        },
+        {
+          "k": "c",
+          "v": "v198"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v201"
+        },
+        {
+          "k": "t",
+          "v": " to the full "
+        },
+        {
+          "k": "m",
+          "v": "H"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\tau{=}i"
+        },
+        {
+          "k": "t",
+          "v": " is forced by order-4 ("
+        },
+        {
+          "k": "m",
+          "v": "j{=}1728"
+        },
+        {
+          "k": "t",
+          "v": "; hexagonal "
+        },
+        {
+          "k": "m",
+          "v": "j{=}0"
+        },
+        {
+          "k": "t",
+          "v": " is order-6, excluded). "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "c",
+          "v": "QGEO.SYM.01"
+        },
+        {
+          "k": "t",
+          "v": " therefore collapses to the single statement “the raw seam IS the flat "
+        },
+        {
+          "k": "m",
+          "v": "\\tau{=}i"
+        },
+        {
+          "k": "t",
+          "v": " pillowcase quasi-free state” — one human constructive-QFT proof, or an honest axiom. Narrows, does not close. Build green, "
+        },
+        {
+          "k": "c",
+          "v": "AUDIT OK"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-18",
+    "dateLabel": "2026-06-18",
+    "heading": [
+      {
+        "k": "t",
         "v": "Red Team Target F — adversarial audit of the v269–v275 round, "
       },
       {

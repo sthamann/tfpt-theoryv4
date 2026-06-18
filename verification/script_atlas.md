@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`273` registered scripts · `325` ledger claims · `10` clusters.
+`274` registered scripts · `326` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -280,7 +280,7 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
 - **v275_qgamb_roadmap** [E/C/O/X] `QGAMB.ROADMAP.01` — the obligation roadmap for QG.AMB.01 (the ambient nonperturbative QG measure), consolidated into one module (the open gate had no script). [E] Tier A gap decoupling: Δ_eff=6log(3/2
   - deps: QG.AMB.01, v36_spectral_action_g2, v77_e8_conformal_net, v269_spert_paqft_skeleton · cited: 4 frontier
 
-### `registry` — Blind registry & red-team follow-ups (v84–v175)  (155 scripts)
+### `registry` — Blind registry & red-team follow-ups (v84–v175)  (156 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
 
 - **v84_frozen_registry** [E] `REG.FREEZE.01` — blind-prediction registry FROZEN 2026-06-09: every dimensionless prediction of record at 25 digits, re-derived from the two axioms each run (formula↔value lock); exactly ONE θ₁₂ pr
@@ -593,6 +593,8 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
   - deps: v269_spert_paqft_skeleton, v244_spectral_action_contract, v255_spectral_action_expansion, v166_higgs_free_seam · cited: research contracts
 - **v273_eg_gauge_running** [E/C/O] `QFT4D.SPERT.03` — the gauge sector of the EG one-loop (v271's quartic mechanism applied to the gauge self-energy). [E] the one-loop gauge 2-point has scaling degree sd=4=d so ω=0 → one counterterm p
   - deps: v271_eg_oneloop_quartic, v269_spert_paqft_skeleton, v159_pyrate_gauge_crosscheck, v2_carrier_pascal · cited: research contracts
+- **v276_qgeo_flat_closes_commutator** [E/C/O] `QGEO.SYM.03` — the flat tau=i pillowcase premise CLOSES the modular-commutator chain to all orders, collapsing the bedrock QGEO.SYM.01 to ONE geometric postulate (it does NOT prove the premise). 
+  - deps: v181_clock_is_conformal_symmetry, v267_qgeo_rigidity_minimal_axiom, v198_modular_commutator_reduction, v201_seam_subprincipal_marks, v214_seam_pillowcase, v258_dirac_covariance_induction · cited: research contracts
 
 ## Supersede map — do NOT reuse the left-hand claim
 
@@ -608,13 +610,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×16, `HOR.NARIAI.01`×15, `E8.GLU.01`×14, `AX.P1.01`×11, `FLAV.KQ.01`×10, `v56`×9, `GATE.QGEO.01`×8, `v37`×8, `v68`×8, `CAR.SM.01`×8, `GATE.METRIC.06`×8, `QGEO.MARKS.01`×8, `PS.DIRAC.02`×8, `AX.P2.01`×7, `CONTRACT.U.01`×7
+**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×17, `HOR.NARIAI.01`×15, `E8.GLU.01`×14, `AX.P1.01`×11, `FLAV.KQ.01`×10, `v56`×9, `GATE.QGEO.01`×8, `v37`×8, `v68`×8, `CAR.SM.01`×8, `GATE.METRIC.06`×8, `QGEO.MARKS.01`×8, `PS.DIRAC.02`×8, `AX.P2.01`×7, `CONTRACT.U.01`×7
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v264_raw_seam_marklocal** — `QGEO.ENERGY.03`
 - **v265_qft4d_fork_freeze** — `QFT4D.FORK.01, QFT4D.BOUNDARY.DEFAULT.01, QFT4D.SMONLYGUT.01, PS.UVBRANCH.01, PS.THRESHOLD.01, PS.PROTON.KILL.01, QFT4D.NO_OVERCLAIM.01`
 - **v266_ps_threshold_proton** — `PS.THRESHOLD.02, PS.PROTON.02`
 - **v267_qgeo_rigidity_minimal_axiom** — `QGEO.SYM.02`
@@ -626,4 +627,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v273_eg_gauge_running** — `QFT4D.SPERT.03`
 - **v274_scale_overdetermination** — `SCALE.OVERDET.01`
 - **v275_qgamb_roadmap** — `QGAMB.ROADMAP.01`
+- **v276_qgeo_flat_closes_commutator** — `QGEO.SYM.03`
 
