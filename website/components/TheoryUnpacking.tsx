@@ -28,6 +28,7 @@ import { cn } from "@/lib/utils";
 interface UnpackingStep {
   id: number;
   badge: string;
+  short: string;
   title: string;
   body: string;
   formula: string;
@@ -37,6 +38,7 @@ const STEPS: UnpackingStep[] = [
   {
     id: 0,
     badge: "Step 1",
+    short: "Two numbers",
     title: "Two numbers in",
     body: "The Standard Model takes ~20 parameters as input. Here only two numbers enter: the seam constant c₃ = 1/(8π) on the boundary and a five-slot carrier g_car = 5. No gauge group, no families, no α is put in by hand — everything below is a consequence.",
     formula: "c_3 = \\tfrac{1}{8\\pi}, \\qquad g_{\\mathrm{car}} = 5",
@@ -44,6 +46,7 @@ const STEPS: UnpackingStep[] = [
   {
     id: 1,
     badge: "Step 2",
+    short: "The seam",
     title: "The seam and its sheet",
     body: "The seam carries a ℤ₂ sheet involution. The Gauss–Bonnet normalisation of the one-sided seam sphere fixes the seam constant — only π stays continuous.",
     formula:
@@ -52,6 +55,7 @@ const STEPS: UnpackingStep[] = [
   {
     id: 2,
     badge: "Step 3",
+    short: "Carrier 3+2",
     title: "Carrier split → 3 + 2",
     body: "The five carrier slots split into 3 colour + 2 weak. The even-Hamming code on the slots is the D₅ half-spinor — the split is arithmetic, not assumed.",
     formula:
@@ -60,6 +64,7 @@ const STEPS: UnpackingStep[] = [
   {
     id: 3,
     badge: "Step 4",
+    short: "Spinor 16",
     title: "The 3 + 2 carrier",
     body: "The colour block (dim 3) and weak block (dim 2) carry the determinant-normalized hypercharge Y = −1/3, +1/2. The half-spinor packet is Λ^even of the carrier, dim 16.",
     formula:
@@ -68,6 +73,7 @@ const STEPS: UnpackingStep[] = [
   {
     id: 4,
     badge: "Step 5",
+    short: "Glue ⇒ E₈",
     title: "Glue ⇒ E₈",
     body: "Three families and the four-puncture geometry ℙ¹∖μ₄ = A₃ glue with the D₅ spinor across the common discriminant ℤ₄: E₈ = (D₅ ⊕ A₃) + μ₄, 240 roots.",
     formula:
@@ -76,6 +82,7 @@ const STEPS: UnpackingStep[] = [
   {
     id: 5,
     badge: "Step 6",
+    short: "Readouts",
     title: "What the compiler reads off",
     body: "From E₈ the compiler reads off the gauge group, three families and the hypercharges; α⁻¹ = 137.036 (1.9σ from CODATA); all nine masses, CKM and PMNS from one φ₀-ladder; the strong-CP null θ_eff = 0; and the scalaron, Λ and the cosmological readouts — about fifty status-graded results, none fitted. The bootstrap loop even re-derives the two inputs, so the discrete core is over-determined.",
     formula:
@@ -110,6 +117,7 @@ export function TheoryUnpacking() {
   }, [playing, hovered, reduced]);
 
   const current = STEPS[step];
+  const autoplaying = playing && !hovered && !reduced;
   const next = () => {
     setPlaying(false);
     setStep((s) => (s + 1) % STEPS.length);
@@ -128,10 +136,29 @@ export function TheoryUnpacking() {
       aria-label="Animated theory unpacking — six geometric frames"
       aria-roledescription="carousel"
     >
-      <header className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800/60 px-5 py-3">
-        <span className="text-[11px] font-semibold uppercase tracking-widest text-blue-300/80">
-          How the compiler works · two axioms → E₈ → the observables, in 6 steps
-        </span>
+      <header className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 px-5 py-3.5">
+        <div className="flex min-w-0 flex-col gap-0.5">
+          <span className="text-[10px] font-semibold uppercase tracking-widest text-blue-300/70">
+            How the compiler works · two axioms → E₈ → the observables
+          </span>
+          <span className="flex items-baseline gap-2">
+            <span className="font-mono text-[11px] font-semibold text-violet-300/90">
+              {String(step + 1).padStart(2, "0")}
+            </span>
+            <AnimatePresence mode="wait">
+              <motion.span
+                key={current.id}
+                initial={{ opacity: 0, y: 6 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -6 }}
+                transition={{ duration: 0.3 }}
+                className="truncate font-serif text-base font-semibold text-slate-100"
+              >
+                {current.short}
+              </motion.span>
+            </AnimatePresence>
+          </span>
+        </div>
         <div className="flex items-center gap-1.5">
           <button
             type="button"
@@ -173,6 +200,25 @@ export function TheoryUnpacking() {
         </div>
       </header>
 
+      {/* Autoplay progress: a live bar that fills over each frame's dwell time
+          while playing, and otherwise shows overall progress through the arc. */}
+      <div className="h-0.5 w-full bg-slate-800/60" aria-hidden="true">
+        {autoplaying ? (
+          <motion.div
+            key={step}
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: FRAME_MS / 1000, ease: "linear" }}
+            className="h-full origin-left bg-gradient-to-r from-blue-400 to-violet-400"
+          />
+        ) : (
+          <div
+            className="h-full origin-left bg-gradient-to-r from-blue-400/70 to-violet-400/70 transition-transform duration-500"
+            style={{ transform: `scaleX(${(step + 1) / STEPS.length})` }}
+          />
+        )}
+      </div>
+
       <div
         className="grid gap-0 lg:grid-cols-[3fr_2fr]"
         onMouseEnter={() => setHovered(true)}
@@ -191,15 +237,7 @@ export function TheoryUnpacking() {
               exit={{ opacity: 0, y: -12 }}
               transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
             >
-              <div className="flex items-center gap-2">
-                <span className="rounded-full bg-blue-500/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-widest text-blue-200 ring-1 ring-blue-400/30">
-                  {current.badge}
-                </span>
-                <span className="font-mono text-[10px] uppercase tracking-widest text-slate-500">
-                  {current.id + 1} / {STEPS.length}
-                </span>
-              </div>
-              <h3 className="mt-3 font-serif text-xl font-semibold leading-snug text-slate-50">
+              <h3 className="font-serif text-xl font-semibold leading-snug text-slate-50">
                 {current.title}
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-slate-300">
@@ -215,11 +253,12 @@ export function TheoryUnpacking() {
 
       <div
         role="tablist"
-        aria-label="Frame navigation"
-        className="grid grid-cols-6 gap-1 border-t border-slate-800/60 bg-slate-950/40 px-3 py-3 sm:gap-1.5 sm:px-5"
+        aria-label="Step navigation"
+        className="flex gap-1 border-t border-slate-800/60 bg-slate-950/40 px-2 py-2.5 sm:gap-1.5 sm:px-3"
       >
         {STEPS.map((s) => {
           const active = step === s.id;
+          const done = step > s.id;
           return (
             <button
               key={s.id}
@@ -231,15 +270,36 @@ export function TheoryUnpacking() {
                 setStep(s.id);
                 setPlaying(false);
               }}
-              className="group relative h-1.5 overflow-hidden rounded-full bg-slate-700/40 transition-colors hover:bg-slate-600/50"
+              className={cn(
+                "group flex min-w-0 flex-1 items-center justify-center gap-1.5 rounded-lg px-1.5 py-1.5 ring-1 transition-colors sm:justify-start sm:px-2.5",
+                active
+                  ? "bg-blue-500/15 ring-blue-400/40"
+                  : "bg-slate-900/40 ring-slate-700/40 hover:bg-slate-800/70",
+              )}
             >
               <span
                 aria-hidden="true"
                 className={cn(
-                  "block h-full origin-left rounded-full bg-gradient-to-r from-blue-400 to-violet-400 transition-transform duration-500 ease-out",
-                  active ? "scale-x-100" : "scale-x-0",
+                  "flex h-5 w-5 shrink-0 items-center justify-center rounded-full font-mono text-[10px] font-semibold transition-colors",
+                  active
+                    ? "bg-gradient-to-r from-blue-400 to-violet-400 text-slate-950"
+                    : done
+                      ? "bg-slate-600/70 text-slate-100"
+                      : "bg-slate-800 text-slate-400 group-hover:text-slate-200",
                 )}
-              />
+              >
+                {s.id + 1}
+              </span>
+              <span
+                className={cn(
+                  "hidden truncate text-[11px] font-medium sm:block",
+                  active
+                    ? "text-blue-100"
+                    : "text-slate-400 group-hover:text-slate-200",
+                )}
+              >
+                {s.short}
+              </span>
             </button>
           );
         })}
