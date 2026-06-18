@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`269` registered scripts · `320` ledger claims · `10` clusters.
+`273` registered scripts · `324` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -102,7 +102,7 @@ _The φ₀-ladder mass formula, the exact lepton coefficients, and the integer-P
 - **v229_lepton_frobenius_algebra** [E/C] `LEP.FROB.01` — a commutative Frobenius algebra. The C₆ shift has charpoly t⁶−1 (spectrum μ₆=μ₃ family ×μ₂ sheet). PMNS extension via Aut(A)+the hex CM point is [C].
   - deps: FLAV.LEPTON.01, ARCH.HEXRES.01, v220_cp_hexagonal_modulus · cited: 2 standard model
 
-### `neutrinos` — Neutrinos & the solar angle  (6 scripts)
+### `neutrinos` — Neutrinos & the solar angle  (7 scripts)
 _The Majorana texture, the dual anchor, and the previously open solar angle from the seam._
 
 - **v9_neutrino_texture** [E] `FLAV.TH12.01` — μτ Majorana texture → sin²θ₁₂ = 1/3 − φ₀/2, θ₂₃ = 45°
@@ -117,6 +117,8 @@ _The Majorana texture, the dual anchor, and the previously open solar angle from
   - deps: v9_neutrino_texture, v16_solar_dual_anchor, v263_mnu_from_df, v2_carrier_pascal · cited: 2 standard model
 - **v270_pmns_jarlskog_assembly** [E/C/O] `FLAV.PMNS.03` — the complete complex PMNS matrix + the leptonic Jarlskog J_PMNS (the CP strength), assembled from the four TFPT channels (sin²θ₁₂=1/3-φ₀/2, sin²θ₂₃=1/2, sin²θ₁₃=φ₀e^{-5/6}, δ=240°=
   - deps: v9_neutrino_texture, v263_mnu_from_df, v268_theta13_carrier_trace, v231_cp_mu6_phases, v233_cp_triality_phase · cited: 2 standard model
+- **v272_nu_mass_scale** [E/C/O/X] `FLAV.NUSCALE.01` — the absolute neutrino-mass scale, typed honestly (does NOT fabricate a Σm_ν number, which would contradict the v184 firewall). [E] the absolute scale reduces to ONE seesaw ratio m₃
+  - deps: v263_mnu_from_df, v270_pmns_jarlskog_assembly, v249_ps_unification, v262_fqcd_mp_me, v153_no_unit_theorem · cited: 2 standard model
 
 ### `gravity` — Gravity, inflation & cosmology  (6 scripts)
 _The R + R² spectral-action shadow, the seam-fixed scalaron, and the cosmological readouts._
@@ -200,7 +202,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v75_upoint_to_vgeo** [E/O] `FLAV.UPOINT.01` — Gate 1 complete: U_point → v_geo (ratios + Grand Mass Volume); same anchor as 1/G
   - deps: v71_simple_r_bridge, v20_lepton_c_derivation, v46_grand_mass_volume, v68 · cited: origin theory, research contracts
 
-### `frontier` — Open gate (G_metric) & the frontier  (35 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (37 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -273,8 +275,12 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v234_seam_holomorphy_selection, v92_glue_uniqueness, v232_e8_kleinian_seam, v181_clock_is_conformal_symmetry · cited: introduction, research contracts
 - **v237_seam_sre_closure** [E/C/O] `GATE.HOLO.03` — The closing step as a PHYSICAL condition: no topological ground-state degeneracy <=> det K=1 <=> the seam bulk is short-range-entangled (SRE/invertible). Sharpens GATE.HOLO.02's re
   - deps: v235_seam_chern_simons, v234_seam_holomorphy_selection, v181_clock_is_conformal_symmetry · cited: research contracts
+- **v274_scale_overdetermination** [E/O] `SCALE.OVERDET.01` — the single mass anchor is OVER-DETERMINED, and the absence of a derivable absolute scale is a THEOREM. [E] one anchor (No-Unit, v153): every dimensionful output = pure number × M_b
+  - deps: v153_no_unit_theorem, v7_gravity_cosmo, QG.AMB.01, v272_nu_mass_scale · cited: 4 frontier
+- **v275_qgamb_roadmap** [E/C/O/X] `QGAMB.ROADMAP.01` — the obligation roadmap for QG.AMB.01 (the ambient nonperturbative QG measure), consolidated into one module (the open gate had no script). [E] Tier A gap decoupling: Δ_eff=6log(3/2
+  - deps: QG.AMB.01, v36_spectral_action_g2, v77_e8_conformal_net, v269_spert_paqft_skeleton · cited: 4 frontier
 
-### `registry` — Blind registry & red-team follow-ups (v84–v175)  (154 scripts)
+### `registry` — Blind registry & red-team follow-ups (v84–v175)  (155 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
 
 - **v84_frozen_registry** [E] `REG.FREEZE.01` — blind-prediction registry FROZEN 2026-06-09: every dimensionless prediction of record at 25 digits, re-derived from the two axioms each run (formula↔value lock); exactly ONE θ₁₂ pr
@@ -585,6 +591,8 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
   - deps: v244_spectral_action_contract, v243_haag_ruelle_braiding, v240_gns_os_reconstruction, v255_spectral_action_expansion, v265_qft4d_fork_freeze · cited: research contracts
 - **v271_eg_oneloop_quartic** [E/C/O] `QFT4D.SPERT.02` — a concrete Epstein-Glaser order-2 (one-loop) quartic renormalization, taking the v269 S_pert skeleton from 'exists' to an actual EG number (no path integral). [E] T_1=:L_int: needs
   - deps: v269_spert_paqft_skeleton, v244_spectral_action_contract, v255_spectral_action_expansion, v166_higgs_free_seam · cited: research contracts
+- **v273_eg_gauge_running** [E/C/O] `QFT4D.SPERT.03` — the gauge sector of the EG one-loop (v271's quartic mechanism applied to the gauge self-energy). [E] the one-loop gauge 2-point has scaling degree sd=4=d so ω=0 → one counterterm p
+  - deps: v271_eg_oneloop_quartic, v269_spert_paqft_skeleton, v159_pyrate_gauge_crosscheck, v2_carrier_pascal · cited: research contracts
 
 ## Supersede map — do NOT reuse the left-hand claim
 
@@ -600,16 +608,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×16, `HOR.NARIAI.01`×15, `E8.GLU.01`×14, `AX.P1.01`×11, `FLAV.KQ.01`×10, `v56`×9, `GATE.QGEO.01`×8, `v37`×8, `v68`×8, `GATE.METRIC.06`×8, `QGEO.MARKS.01`×8, `PS.DIRAC.02`×8, `AX.P2.01`×7, `CONTRACT.U.01`×7, `v3`×7
+**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×16, `HOR.NARIAI.01`×15, `E8.GLU.01`×14, `AX.P1.01`×11, `FLAV.KQ.01`×10, `v56`×9, `GATE.QGEO.01`×8, `v37`×8, `v68`×8, `CAR.SM.01`×8, `GATE.METRIC.06`×8, `QGEO.MARKS.01`×8, `PS.DIRAC.02`×8, `AX.P2.01`×7, `CONTRACT.U.01`×7
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v260_k3_kummer_unification** — `ARCH.K3.01`
-- **v261_modular_spectral_closure** — `QFT.MSC.01`
-- **v262_fqcd_mp_me** — `FR.MPME.02`
-- **v263_mnu_from_df** — `FLAV.PMNS.02`
 - **v264_raw_seam_marklocal** — `QGEO.ENERGY.03`
 - **v265_qft4d_fork_freeze** — `QFT4D.FORK.01, QFT4D.BOUNDARY.DEFAULT.01, QFT4D.SMONLYGUT.01, PS.UVBRANCH.01, PS.THRESHOLD.01, PS.PROTON.KILL.01, QFT4D.NO_OVERCLAIM.01`
 - **v266_ps_threshold_proton** — `PS.THRESHOLD.02, PS.PROTON.02`
@@ -618,4 +622,8 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v269_spert_paqft_skeleton** — `QFT4D.SPERT.01`
 - **v270_pmns_jarlskog_assembly** — `FLAV.PMNS.03`
 - **v271_eg_oneloop_quartic** — `QFT4D.SPERT.02`
+- **v272_nu_mass_scale** — `FLAV.NUSCALE.01`
+- **v273_eg_gauge_running** — `QFT4D.SPERT.03`
+- **v274_scale_overdetermination** — `SCALE.OVERDET.01`
+- **v275_qgamb_roadmap** — `QGAMB.ROADMAP.01`
 

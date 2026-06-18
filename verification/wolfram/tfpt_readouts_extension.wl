@@ -2100,6 +2100,23 @@ Module[{d, sdProp, sdBubble, omega, nFree, Omega3, loop},
     sdProp == 2 && sdBubble == 4 && omega == 0 && nFree == 1 && loop === 1/(16 Pi^2)];
 ];
 
+(* ==== v273: EG one-loop gauge self-energy -> (b1,b2,b3) (QFT4D.SPERT.03) ====
+   v272 (nu-scale, numerical) + v274 (over-determination, numerical) + v275 (QG roadmap)
+   are Python-only; v273's exact one-loop beta coefficients from the content are mirrored. *)
+Module[{b3, b2, b1, perY},
+  b3 = -(11/3) 3 + (2/3) 6;
+  b2 = -(11/3) 2 + (2/3) 6 + (1/3) (1/2);
+  perY = 6 (1/6)^2 + 3 (2/3)^2 + 3 (1/3)^2 + 2 (1/2)^2 + 1;          (* = 10/3 per generation *)
+  b1 = (3/5) ((2/3) (3 perY) + (1/3) (2 (1/2)^2));
+  checkExact["v273 QFT4D.SPERT.03: the EG one-loop gauge self-energy gives the SM beta coefficients "
+    <> "from the carrier/SM content -- b_i = -(11/3)C2(G) + (2/3)sum_f T(R) + (1/3)sum_s T(R): "
+    <> "b3 = -(11/3)(3)+(2/3)(6) = -7 (asymptotic freedom), b2 = -(11/3)(2)+(2/3)(6)+(1/3)(1/2) = -19/6, "
+    <> "b1 (GUT norm) = (3/5)[(2/3)(10)+(1/3)(1/2)] = 41/10 (sum_f Y^2 = 10/3 per gen; the same 41 as "
+    <> "the carrier algebra 10 b1 = g_car 2^{g_car-2}+1). The one-loop gauge 2-point is the same "
+    <> "scaling-degree-4 EG extension as the quartic v271 (one counterterm per coupling, factor 1/(16 Pi^2)).",
+    perY === 10/3 && b3 === -7 && b2 === -19/6 && b1 === 41/10];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

@@ -47,6 +47,609 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "scale + frontier round: "
+      },
+      {
+        "k": "m",
+        "v": "\\nu"
+      },
+      {
+        "k": "t",
+        "v": "-mass scale, EG gauge running, over-determination, QG roadmap, "
+      },
+      {
+        "k": "c",
+        "v": "v272"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v275"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v272_nu_mass_scale.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "FLAV.NUSCALE.01"
+            },
+            {
+              "k": "t",
+              "v": ") types the absolute neutrino-mass scale honestly"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (no fabricated "
+        },
+        {
+          "k": "m",
+          "v": "\\Sigma m_\\nu"
+        },
+        {
+          "k": "t",
+          "v": " — would contradict the "
+        },
+        {
+          "k": "c",
+          "v": "v184"
+        },
+        {
+          "k": "t",
+          "v": " firewall). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the absolute scale reduces to "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " seesaw ratio "
+        },
+        {
+          "k": "m",
+          "v": "m_3=(y_\\nu v_{\\mathrm{EW}})^2/M_R"
+        },
+        {
+          "k": "t",
+          "v": " (one UV input, like "
+        },
+        {
+          "k": "m",
+          "v": "v_{\\mathrm{geo}}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v153"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the observed "
+        },
+        {
+          "k": "m",
+          "v": "m_3{=}0.050"
+        },
+        {
+          "k": "t",
+          "v": " eV with the TFPT PS"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": "GUT window "
+        },
+        {
+          "k": "m",
+          "v": "M_R\\in[4.2{\\times}10^{13},\n  2.4{\\times}10^{15}]"
+        },
+        {
+          "k": "t",
+          "v": " GeV ("
+        },
+        {
+          "k": "c",
+          "v": "v249"
+        },
+        {
+          "k": "t",
+          "v": ") needs "
+        },
+        {
+          "k": "m",
+          "v": "y_\\nu\\in[0.26,2.0]"
+        },
+        {
+          "k": "t",
+          "v": " — "
+        },
+        {
+          "k": "m",
+          "v": "O(1)"
+        },
+        {
+          "k": "t",
+          "v": ", no tuning; "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "m",
+          "v": "M_R"
+        },
+        {
+          "k": "t",
+          "v": " is not a clean "
+        },
+        {
+          "k": "m",
+          "v": "\\Mbar"
+        },
+        {
+          "k": "t",
+          "v": " power, so the absolute value stays open; "
+        },
+        {
+          "k": "s",
+          "v": "X"
+        },
+        {
+          "k": "t",
+          "v": "the NO floor "
+        },
+        {
+          "k": "m",
+          "v": "\\Sigma m_\\nu{=}0.0586"
+        },
+        {
+          "k": "t",
+          "v": " eV is the cosmological kill test. Closes the PMNS bookkeeping (the last "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "is one seesaw ratio)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v273_eg_gauge_running.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QFT4D.SPERT.03"
+            },
+            {
+              "k": "t",
+              "v": ") derives the SM one-loop "
+            },
+            {
+              "k": "m",
+              "v": "b_i"
+            },
+            {
+              "k": "t",
+              "v": " via the EG gauge self-energy."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the gauge 2-point is the same scaling-degree-4 extension as the quartic ("
+        },
+        {
+          "k": "c",
+          "v": "v271"
+        },
+        {
+          "k": "t",
+          "v": "), giving "
+        },
+        {
+          "k": "m",
+          "v": "(b_1,b_2,b_3)=(41/10,-19/6,-7)"
+        },
+        {
+          "k": "t",
+          "v": " from the carrier/SM content (the same "
+        },
+        {
+          "k": "m",
+          "v": "41"
+        },
+        {
+          "k": "t",
+          "v": " as the carrier algebra, "
+        },
+        {
+          "k": "c",
+          "v": "v159"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "two-loop "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " all-order stay open. Exact "
+        },
+        {
+          "k": "m",
+          "v": "b_i"
+        },
+        {
+          "k": "t",
+          "v": " mirrored in Wolfram."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v274_scale_overdetermination.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SCALE.OVERDET.01"
+            },
+            {
+              "k": "t",
+              "v": ") shows the single mass anchor is over-determined."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "two independent routes to "
+        },
+        {
+          "k": "m",
+          "v": "\\Mbar"
+        },
+        {
+          "k": "t",
+          "v": " agree — gravity "
+        },
+        {
+          "k": "m",
+          "v": "(8\\pi G)^{-1/2}=2.4353{\\times}10^{18}"
+        },
+        {
+          "k": "t",
+          "v": " GeV and cosmology (the compiler prediction "
+        },
+        {
+          "k": "m",
+          "v": "\\rho_\\Lambda/\\Mbar^4=(3/4\\pi^2)e^{-2\\alpha^{-1}}"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "\\rho_\\Lambda^{1/4}=2.24"
+        },
+        {
+          "k": "t",
+          "v": " meV) "
+        },
+        {
+          "k": "m",
+          "v": "=2.438{\\times}10^{18}"
+        },
+        {
+          "k": "t",
+          "v": " GeV, to "
+        },
+        {
+          "k": "m",
+          "v": "0.11\\%"
+        },
+        {
+          "k": "t",
+          "v": "; the seam being a conformal "
+        },
+        {
+          "k": "m",
+          "v": "c{=}8"
+        },
+        {
+          "k": "t",
+          "v": " CFT makes “no derivable absolute scale” a theorem, not a gap. Sharpens "
+        },
+        {
+          "k": "c",
+          "v": "v153"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v78"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v275_qgamb_roadmap.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGAMB.ROADMAP.01"
+            },
+            {
+              "k": "t",
+              "v": ") gives the open gate "
+            },
+            {
+              "k": "c",
+              "v": "QG.AMB.01"
+            },
+            {
+              "k": "t",
+              "v": " a module."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "Tier A gap decoupling ("
+        },
+        {
+          "k": "m",
+          "v": "\\Delta_{\\mathrm{eff}}=1.648>0"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v36"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v76"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "Tier B reduction to the holomorphic "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " boundary net ("
+        },
+        {
+          "k": "c",
+          "v": "v77"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the perturbative layer in hand ("
+        },
+        {
+          "k": "c",
+          "v": "v269"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v271"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v273"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the nonperturbative ambient measure stays the one structural frontier."
+        }
+      ],
+      [
+        {
+          "k": "t",
+          "v": "Suite "
+        },
+        {
+          "k": "c",
+          "v": "271/271"
+        },
+        {
+          "k": "t",
+          "v": " Wolfram, "
+        },
+        {
+          "k": "c",
+          "v": "run_all"
+        },
+        {
+          "k": "t",
+          "v": " green, "
+        },
+        {
+          "k": "c",
+          "v": "AUDIT OK"
+        },
+        {
+          "k": "t",
+          "v": ", build green."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-18",
+    "dateLabel": "2026-06-18",
+    "heading": [
+      {
+        "k": "t",
         "v": "4D QFT: a concrete Epstein–Glaser one-loop quartic renormalization, "
       },
       {
