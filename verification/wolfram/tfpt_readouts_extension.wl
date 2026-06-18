@@ -2080,6 +2080,26 @@ Module[{Yvec, trY2, roots},
     roots === Sort[{-1/3, 1/2}] && trY2 === 5/6 && (1 - trY2) === 1/6];
 ];
 
+(* ==== v271: concrete Epstein-Glaser one-loop quartic renormalization (QFT4D.SPERT.02) ====
+   v269 (S_pert skeleton) + v270 (PMNS Jarlskog, numerical) are Python-only; v271's exact
+   EG core (scaling degree, counterterm count, loop factor) is mirrored here. *)
+Module[{d, sdProp, sdBubble, omega, nFree, Omega3, loop},
+  d = 4;
+  sdProp = 2;                      (* massless Feynman propagator scaling degree in d=4 *)
+  sdBubble = 2 sdProp;             (* one-loop bubble = two propagators *)
+  omega = sdBubble - d;            (* UV singular order *)
+  nFree = If[omega >= 0, Binomial[omega + d, d], 0];  (* EG extension freedom *)
+  Omega3 = 2 Pi^2;                 (* unit 3-sphere surface area *)
+  loop = Simplify[Omega3/(2 (2 Pi)^4)];
+  checkExact["v271 QFT4D.SPERT.02: a concrete Epstein-Glaser one-loop quartic renormalization -- "
+    <> "the massless propagator has scaling degree sd=2 in d=4, the one-loop bubble (two propagators) "
+    <> "has sd=4=d, so the UV singular order omega=sd-d=0 => EXACTLY one logarithmic local counterterm "
+    <> "(C(omega+d,d)=1, renormalizable, no infinite tower); the loop factor Omega_3/(2(2Pi)^4)=1/(16 Pi^2) "
+    <> "EXACTLY (the same factor that normalises the spectral-action a_4 geometric quartic), giving the "
+    <> "phi^4 one-loop beta = 3 lambda^2/(16 Pi^2) (symmetry 3 = s,t,u channels).",
+    sdProp == 2 && sdBubble == 4 && omega == 0 && nFree == 1 && loop === 1/(16 Pi^2)];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

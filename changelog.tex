@@ -59,6 +59,33 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-18 (4D QFT: a concrete Epstein--Glaser one-loop quartic renormalization, \texttt{v271})}
+\begin{itemize}
+\item \textbf{\texttt{v271\_eg\_oneloop\_quartic.py} (\texttt{QFT4D.SPERT.02}) takes the \vref{v269} $S_{\mathrm{pert}}$
+  skeleton from ``exists'' to an actual EG number} (no path integral). \mE\ the first renormalization is the
+  order-2 product $T_2$; the massless propagator has scaling degree $\mathrm{sd}{=}2$ in $d{=}4$, the one-loop
+  bubble has $\mathrm{sd}{=}4{=}d$, so $\omega{=}\mathrm{sd}{-}d{=}0$ $\Rightarrow$ exactly one logarithmic local
+  counterterm ($C(\omega{+}d,d){=}1$, finite, no infinite tower); the loop factor $\Omega_3/(2(2\pi)^4)=1/(16\pi^2)$
+  exactly --- the \emph{same} factor that normalises the spectral-action $a_4$ geometric quartic. \mC\ the
+  $\phi^4$ one-loop $\beta_\lambda=3\lambda^2/(16\pi^2)$ (symmetry $3$ $=$ $s,t,u$ channels), EG initial condition
+  $\lambda_\Phi(\mathrm{UV})=1/(16\pi^2)$. \mO\ order-2/one-loop only; the all-order EG construction and the
+  nonperturbative measure \texttt{QG.AMB.01} stay open. Exact core mirrored in Wolfram ($270/270$). \mE\ build
+  green, \texttt{AUDIT OK}.
+\end{itemize}
+
+\subsection*{2026-06-18 (PMNS: the complete complex matrix + the leptonic Jarlskog CP strength, \texttt{v270})}
+\begin{itemize}
+\item \textbf{\texttt{v270\_pmns\_jarlskog\_assembly.py} (\texttt{FLAV.PMNS.03}) assembles the four TFPT
+  channels} ($\sin^2\theta_{12}{=}\tfrac13{-}\tfrac{\phiz}2$, $\sin^2\theta_{23}{=}\tfrac12$,
+  $\sin^2\theta_{13}{=}\phiz e^{-5/6}$, $\delta{=}4\pi/3$) \textbf{into one exactly-unitary complex PMNS
+  matrix and derives the leptonic CP strength.} \mE\ $U=R_{23}U_{13}(\delta)R_{12}$ is unitary; \mC\ the
+  Jarlskog $J_{\mathrm{PMNS}}=\Im(U_{e1}U_{\mu2}U_{e2}^{*}U_{\mu1}^{*})=-0.02965$ ($J_{\max}=0.03424$) is a
+  \emph{derived} number, the leptonic analogue of the CKM $J$ (\vref{v88}); \mC\ data: $J_{\max}$ vs NuFIT\,5.2
+  $0.0332$ ($\sim3\%$), $J$ vs best fit $-0.026$, the negative CP-violating sign reproduced. \mO\ $\delta$ is
+  the $\mu_6$/triality phase (assembled, not from $M_\nu/D_F$) and the absolute $\nu$-mass scale stays open ---
+  closes the CP-\emph{strength} readout, not the phase origin nor the scale. \mE\ build green, \texttt{AUDIT OK}.
+\end{itemize}
+
 \subsection*{2026-06-18 (4D QFT: the perturbative S-matrix as an Epstein--Glaser / pAQFT skeleton, \texttt{v269})}
 \begin{itemize}
 \item \textbf{\texttt{v269\_spert\_paqft\_skeleton.py} (\texttt{QFT4D.SPERT.01}) builds the honest middle

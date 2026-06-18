@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`267` registered scripts · `318` ledger claims · `10` clusters.
+`269` registered scripts · `320` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -102,7 +102,7 @@ _The φ₀-ladder mass formula, the exact lepton coefficients, and the integer-P
 - **v229_lepton_frobenius_algebra** [E/C] `LEP.FROB.01` — a commutative Frobenius algebra. The C₆ shift has charpoly t⁶−1 (spectrum μ₆=μ₃ family ×μ₂ sheet). PMNS extension via Aut(A)+the hex CM point is [C].
   - deps: FLAV.LEPTON.01, ARCH.HEXRES.01, v220_cp_hexagonal_modulus · cited: 2 standard model
 
-### `neutrinos` — Neutrinos & the solar angle  (5 scripts)
+### `neutrinos` — Neutrinos & the solar angle  (6 scripts)
 _The Majorana texture, the dual anchor, and the previously open solar angle from the seam._
 
 - **v9_neutrino_texture** [E] `FLAV.TH12.01` — μτ Majorana texture → sin²θ₁₂ = 1/3 − φ₀/2, θ₂₃ = 45°
@@ -115,6 +115,8 @@ _The Majorana texture, the dual anchor, and the previously open solar angle from
   - deps: v9_neutrino_texture, v252_full_finite_triple, v16_solar_dual_anchor, v233_cp_triality_phase · cited: 2 standard model
 - **v268_theta13_carrier_trace** [E/C/O] `FLAV.TH13.01` — the reactor angle theta_13 exponent IS the carrier hypercharge trace. The value sin^2 theta_13 = phi0 e^{-5/6} = 0.0231 was already checked (v16); here the exponent origin is close
   - deps: v9_neutrino_texture, v16_solar_dual_anchor, v263_mnu_from_df, v2_carrier_pascal · cited: 2 standard model
+- **v270_pmns_jarlskog_assembly** [E/C/O] `FLAV.PMNS.03` — the complete complex PMNS matrix + the leptonic Jarlskog J_PMNS (the CP strength), assembled from the four TFPT channels (sin²θ₁₂=1/3-φ₀/2, sin²θ₂₃=1/2, sin²θ₁₃=φ₀e^{-5/6}, δ=240°=
+  - deps: v9_neutrino_texture, v263_mnu_from_df, v268_theta13_carrier_trace, v231_cp_mu6_phases, v233_cp_triality_phase · cited: 2 standard model
 
 ### `gravity` — Gravity, inflation & cosmology  (6 scripts)
 _The R + R² spectral-action shadow, the seam-fixed scalaron, and the cosmological readouts._
@@ -272,7 +274,7 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
 - **v237_seam_sre_closure** [E/C/O] `GATE.HOLO.03` — The closing step as a PHYSICAL condition: no topological ground-state degeneracy <=> det K=1 <=> the seam bulk is short-range-entangled (SRE/invertible). Sharpens GATE.HOLO.02's re
   - deps: v235_seam_chern_simons, v234_seam_holomorphy_selection, v181_clock_is_conformal_symmetry · cited: research contracts
 
-### `registry` — Blind registry & red-team follow-ups (v84–v175)  (153 scripts)
+### `registry` — Blind registry & red-team follow-ups (v84–v175)  (154 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
 
 - **v84_frozen_registry** [E] `REG.FREEZE.01` — blind-prediction registry FROZEN 2026-06-09: every dimensionless prediction of record at 25 digits, re-derived from the two axioms each run (formula↔value lock); exactly ONE θ₁₂ pr
@@ -581,6 +583,8 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
   - deps: v181_clock_is_conformal_symmetry, v214_seam_pillowcase, v264_raw_seam_marklocal, v168_qgeo_rigidity, v198_modular_commutator_reduction · cited: research contracts
 - **v269_spert_paqft_skeleton** [E/C/O] `QFT4D.SPERT.01` — the perturbative 4D S-matrix (S_pert) as an Epstein-Glaser / pAQFT skeleton: the honest middle layer of the three-layer S-matrix (S_top 2d DHR braiding v243 / S_pert 4d EG of the s
   - deps: v244_spectral_action_contract, v243_haag_ruelle_braiding, v240_gns_os_reconstruction, v255_spectral_action_expansion, v265_qft4d_fork_freeze · cited: research contracts
+- **v271_eg_oneloop_quartic** [E/C/O] `QFT4D.SPERT.02` — a concrete Epstein-Glaser order-2 (one-loop) quartic renormalization, taking the v269 S_pert skeleton from 'exists' to an actual EG number (no path integral). [E] T_1=:L_int: needs
+  - deps: v269_spert_paqft_skeleton, v244_spectral_action_contract, v255_spectral_action_expansion, v166_higgs_free_seam · cited: research contracts
 
 ## Supersede map — do NOT reuse the left-hand claim
 
@@ -602,8 +606,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v258_dirac_covariance_induction** — `PS.DIRAC.03`
-- **v259_modular_cutoff_kappa** — `PS.SPECACT.02`
 - **v260_k3_kummer_unification** — `ARCH.K3.01`
 - **v261_modular_spectral_closure** — `QFT.MSC.01`
 - **v262_fqcd_mp_me** — `FR.MPME.02`
@@ -614,4 +616,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v267_qgeo_rigidity_minimal_axiom** — `QGEO.SYM.02`
 - **v268_theta13_carrier_trace** — `FLAV.TH13.01`
 - **v269_spert_paqft_skeleton** — `QFT4D.SPERT.01`
+- **v270_pmns_jarlskog_assembly** — `FLAV.PMNS.03`
+- **v271_eg_oneloop_quartic** — `QFT4D.SPERT.02`
 

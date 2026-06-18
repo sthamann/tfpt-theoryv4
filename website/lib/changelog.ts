@@ -47,6 +47,520 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "4D QFT: a concrete Epstein–Glaser one-loop quartic renormalization, "
+      },
+      {
+        "k": "c",
+        "v": "v271"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v271_eg_oneloop_quartic.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QFT4D.SPERT.02"
+            },
+            {
+              "k": "t",
+              "v": ") takes the "
+            },
+            {
+              "k": "c",
+              "v": "v269"
+            },
+            {
+              "k": "t",
+              "v": " "
+            },
+            {
+              "k": "m",
+              "v": "S_{\\mathrm{pert}}"
+            },
+            {
+              "k": "t",
+              "v": " skeleton from “exists” to an actual EG number"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (no path integral). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the first renormalization is the order-2 product "
+        },
+        {
+          "k": "m",
+          "v": "T_2"
+        },
+        {
+          "k": "t",
+          "v": "; the massless propagator has scaling degree "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{sd}{=}2"
+        },
+        {
+          "k": "t",
+          "v": " in "
+        },
+        {
+          "k": "m",
+          "v": "d{=}4"
+        },
+        {
+          "k": "t",
+          "v": ", the one-loop bubble has "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{sd}{=}4{=}d"
+        },
+        {
+          "k": "t",
+          "v": ", so "
+        },
+        {
+          "k": "m",
+          "v": "\\omega{=}\\mathrm{sd}{-}d{=}0"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " exactly one logarithmic local counterterm ("
+        },
+        {
+          "k": "m",
+          "v": "C(\\omega{+}d,d){=}1"
+        },
+        {
+          "k": "t",
+          "v": ", finite, no infinite tower); the loop factor "
+        },
+        {
+          "k": "m",
+          "v": "\\Omega_3/(2(2\\pi)^4)=1/(16\\pi^2)"
+        },
+        {
+          "k": "t",
+          "v": " exactly — the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "same"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " factor that normalises the spectral-action "
+        },
+        {
+          "k": "m",
+          "v": "a_4"
+        },
+        {
+          "k": "t",
+          "v": " geometric quartic. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the "
+        },
+        {
+          "k": "m",
+          "v": "\\phi^4"
+        },
+        {
+          "k": "t",
+          "v": " one-loop "
+        },
+        {
+          "k": "m",
+          "v": "\\beta_\\lambda=3\\lambda^2/(16\\pi^2)"
+        },
+        {
+          "k": "t",
+          "v": " (symmetry "
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "s,t,u"
+        },
+        {
+          "k": "t",
+          "v": " channels), EG initial condition "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_\\Phi(\\mathrm{UV})=1/(16\\pi^2)"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "order-2/one-loop only; the all-order EG construction and the nonperturbative measure "
+        },
+        {
+          "k": "c",
+          "v": "QG.AMB.01"
+        },
+        {
+          "k": "t",
+          "v": " stay open. Exact core mirrored in Wolfram ("
+        },
+        {
+          "k": "m",
+          "v": "270/270"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "build green, "
+        },
+        {
+          "k": "c",
+          "v": "AUDIT OK"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-18",
+    "dateLabel": "2026-06-18",
+    "heading": [
+      {
+        "k": "t",
+        "v": "PMNS: the complete complex matrix + the leptonic Jarlskog CP strength, "
+      },
+      {
+        "k": "c",
+        "v": "v270"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v270_pmns_jarlskog_assembly.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "FLAV.PMNS.03"
+            },
+            {
+              "k": "t",
+              "v": ") assembles the four TFPT channels"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\sin^2\\theta_{12}{=}\\tfrac13{-}\\tfrac{\\phiz}2"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\sin^2\\theta_{23}{=}\\tfrac12"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\sin^2\\theta_{13}{=}\\phiz e^{-5/6}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\delta{=}4\\pi/3"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "into one exactly-unitary complex PMNS matrix and derives the leptonic CP strength."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "U=R_{23}U_{13}(\\delta)R_{12}"
+        },
+        {
+          "k": "t",
+          "v": " is unitary; "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the Jarlskog "
+        },
+        {
+          "k": "m",
+          "v": "J_{\\mathrm{PMNS}}=\\Im(U_{e1}U_{\\mu2}U_{e2}^{*}U_{\\mu1}^{*})=-0.02965"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "J_{\\max}=0.03424"
+        },
+        {
+          "k": "t",
+          "v": ") is a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "derived"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " number, the leptonic analogue of the CKM "
+        },
+        {
+          "k": "m",
+          "v": "J"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v88"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "data: "
+        },
+        {
+          "k": "m",
+          "v": "J_{\\max}"
+        },
+        {
+          "k": "t",
+          "v": " vs NuFIT 5.2 "
+        },
+        {
+          "k": "m",
+          "v": "0.0332"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\sim3\\%"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "J"
+        },
+        {
+          "k": "t",
+          "v": " vs best fit "
+        },
+        {
+          "k": "m",
+          "v": "-0.026"
+        },
+        {
+          "k": "t",
+          "v": ", the negative CP-violating sign reproduced. "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "m",
+          "v": "\\delta"
+        },
+        {
+          "k": "t",
+          "v": " is the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_6"
+        },
+        {
+          "k": "t",
+          "v": "/triality phase (assembled, not from "
+        },
+        {
+          "k": "m",
+          "v": "M_\\nu/D_F"
+        },
+        {
+          "k": "t",
+          "v": ") and the absolute "
+        },
+        {
+          "k": "m",
+          "v": "\\nu"
+        },
+        {
+          "k": "t",
+          "v": "-mass scale stays open — closes the CP-"
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "strength"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " readout, not the phase origin nor the scale. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "build green, "
+        },
+        {
+          "k": "c",
+          "v": "AUDIT OK"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-18",
+    "dateLabel": "2026-06-18",
+    "heading": [
+      {
+        "k": "t",
         "v": "4D QFT: the perturbative S-matrix as an Epstein–Glaser / pAQFT skeleton, "
       },
       {

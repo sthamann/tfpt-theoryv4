@@ -428,6 +428,17 @@ divergences. \mC\ the gap $\Delta=6\log(3/2)$ gives an IR-safe adiabatic limit. 
 only: the nonperturbative ambient measure \texttt{QG.AMB.01} stays open, and the canonical 4d reading remains
 boundary-only (\vref{v265}); $S_{\mathrm{pert}}$ is the perturbative cross-section layer on top
 (\texttt{QFT4D.SPERT.01}).
+\par\smallskip\noindent\textbf{A concrete one-loop EG number (\veri{v271\_eg\_oneloop\_quartic.py}).}
+The skeleton is taken from ``exists'' to an actual Epstein--Glaser renormalization: the order-1 product
+$T_1={:}L_{\mathrm{int}}{:}$ needs no extension, and the first one is the order-2 $T_2$, whose UV behaviour is
+the Steinmann \emph{scaling degree}. \mE\ the massless propagator has $\mathrm{sd}=2$ in $d=4$, the one-loop
+bubble (two propagators) has $\mathrm{sd}=4=d$, so the singular order $\omega=\mathrm{sd}-d=0$ $\Rightarrow$
+\emph{exactly one} logarithmic local counterterm ($C(\omega{+}d,d)=1$ --- finite, renormalizable, no infinite
+tower); the one-loop factor is $\Omega_3/(2(2\pi)^4)=1/(16\pi^2)$ exactly, the \emph{same} $1/(16\pi^2)$ that
+normalises the spectral-action $a_4$ geometric quartic. \mC\ the $\phi^4$ one-loop running is then
+$\beta_\lambda=3\lambda^2/(16\pi^2)$ (symmetry factor $3=$ the $s,t,u$ channels), with the EG initial condition
+fixed by the spectral action, $\lambda_\Phi(\mathrm{UV})=1/(16\pi^2)$. \mO\ this is order-2/one-loop, one
+diagram class; the all-order construction and the nonperturbative measure stay open (\texttt{QFT4D.SPERT.02}).
 \par\smallskip\noindent\textbf{The first hard data confrontation
 (\veri{v246\_unification\_data\_crosscheck.py}).} TFPT's gauge-charged content \emph{is} exactly the
 Standard Model (\vref{v159}) and the theory adds no new states (\S\,``Dark matter $=$ no new state''); the
