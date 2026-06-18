@@ -715,7 +715,16 @@ deformation, $=0$ iff $f=0$; the exact second-order coefficient is the divided-d
 (validated to $10^{-6}$). The algebraic $\Delta{=}0\Leftrightarrow$ flat step is machine-formalised in Lean
 (\texttt{FORM.FLATAWAY.01}, \texttt{SeamDeckClosure.lean}: a positive-weighted sum of squares is
 positive-definite; axiom-clean). So Flat-Away's heat route is reduced to the single external invariant ``the
-seam fixes $a_2$'', with its positivity both proved and formalised.
+seam fixes $a_2$'', with its positivity both proved and formalised.  The $a_2$ coefficient itself is now in
+\emph{closed form} (\veri{v296\_flataway\_a2\_closed.py}): the operator tails telescope geometrically to
+$W_k^{\mathrm{tail}}=t(1-e^{-4kt})/(8k(1-e^{-t}))$, leaving a finite $(4k{-}1)$-term middle, e.g.\
+$W_1(t)=t(2t e^{t}+e^{3t}+3e^{2t}+e^{t}-1)e^{-3t}/8$ (manifestly positive; small-$t$ $W_k=t/2+O(t^3)$).
+Symmetrically, Route A's ``one standard import'' is now a precise, citable theorem stack
+(\veri{v297\_route\_a\_literature\_stack.py}): LIT-A (Kitaev; Freed--Hopkins) $\to$ LIT-B (M\"uger;
+Kawahigashi--Longo--M\"uger) $\to$ LIT-C (Conway--Sloane; Dong--Xu) compose into ``invertible bulk
+$\Rightarrow(E_8)_1$'', all three legs established, the single open hypothesis (seam-bulk invertibility)
+coinciding with Route B's Flat-Away --- so both routes are reduced to citable/established machinery plus the
+\emph{one} shared geometric input.
 \par\smallskip\noindent\textbf{One surface for seam, carrier and lattice: the Kummer/K3
 (\veri{v260\_k3\_kummer\_unification.py}).} The pillowcase is the elliptic-involution quotient
 $T^2_{\tau=i}/(z{\mapsto}{-}z)$, its four marks the four $2$-torsion fixed points; squaring the construction

@@ -47,6 +47,225 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "a"
+      },
+      {
+        "k": "m",
+        "v": "_2"
+      },
+      {
+        "k": "t",
+        "v": " closed form + Route A literature stack, "
+      },
+      {
+        "k": "c",
+        "v": "v296"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v297"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v296_flataway_a2_closed.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "FLATAWAY.A2.CLOSED.01"
+            },
+            {
+              "k": "t",
+              "v": ")"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " evaluates the exact "
+        },
+        {
+          "k": "m",
+          "v": "a_2"
+        },
+        {
+          "k": "t",
+          "v": " coefficient in "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "closed form"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the operator tails telescope geometrically ("
+        },
+        {
+          "k": "m",
+          "v": "C_k+D_k e^{-4kt}=4kt(1-e^{-4kt})"
+        },
+        {
+          "k": "t",
+          "v": ") to "
+        },
+        {
+          "k": "m",
+          "v": "W_k^{\\mathrm{tail}}=t(1-e^{-4kt})/(8k(1-e^{-t}))"
+        },
+        {
+          "k": "t",
+          "v": ", leaving a finite "
+        },
+        {
+          "k": "m",
+          "v": "(4k{-}1)"
+        },
+        {
+          "k": "t",
+          "v": "-term middle; e.g. "
+        },
+        {
+          "k": "m",
+          "v": "W_1(t)=t(2t e^{t}+e^{3t}+3e^{2t}+e^{t}-1)e^{-3t}/8"
+        },
+        {
+          "k": "t",
+          "v": ". Manifestly positive, small-"
+        },
+        {
+          "k": "m",
+          "v": "t"
+        },
+        {
+          "k": "t",
+          "v": " law "
+        },
+        {
+          "k": "m",
+          "v": "W_k=t/2+O(t^3)"
+        },
+        {
+          "k": "t",
+          "v": " (the "
+        },
+        {
+          "k": "m",
+          "v": "t^2"
+        },
+        {
+          "k": "t",
+          "v": " term cancels). Reproduces "
+        },
+        {
+          "k": "c",
+          "v": "v295"
+        },
+        {
+          "k": "t",
+          "v": " to machine precision."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v297_route_a_literature_stack.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EQUIV.A.LIT.01"
+            },
+            {
+              "k": "t",
+              "v": ")"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " writes Route A's one import as a citable stack: LIT-A (Kitaev; Freed–Hopkins) "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " LIT-B (Müger; Kawahigashi–Longo–Müger) "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " LIT-C (Conway–Sloane; Dong–Xu) compose into “invertible bulk "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": "”, all legs established; the single open hypothesis (seam-bulk invertibility) coincides with Route B's Flat-Away, and the stack is non-circular with Route B (the "
+        },
+        {
+          "k": "c",
+          "v": "v286"
+        },
+        {
+          "k": "t",
+          "v": " firewall holds). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "build green, "
+        },
+        {
+          "k": "c",
+          "v": "AUDIT OK"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-18",
+    "dateLabel": "2026-06-18",
+    "heading": [
+      {
+        "k": "t",
         "v": "Flat-Away heat route made exact + Lean-formalised, "
       },
       {

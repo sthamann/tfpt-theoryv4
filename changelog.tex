@@ -59,6 +59,20 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-18 (a$_2$ closed form + Route A literature stack, \texttt{v296}--\texttt{v297})}
+\begin{itemize}
+\item \textbf{\texttt{v296\_flataway\_a2\_closed.py} (\texttt{FLATAWAY.A2.CLOSED.01})} evaluates the exact $a_2$
+  coefficient in \emph{closed form}: the operator tails telescope geometrically
+  ($C_k+D_k e^{-4kt}=4kt(1-e^{-4kt})$) to $W_k^{\mathrm{tail}}=t(1-e^{-4kt})/(8k(1-e^{-t}))$, leaving a finite
+  $(4k{-}1)$-term middle; e.g.\ $W_1(t)=t(2t e^{t}+e^{3t}+3e^{2t}+e^{t}-1)e^{-3t}/8$. Manifestly positive,
+  small-$t$ law $W_k=t/2+O(t^3)$ (the $t^2$ term cancels). Reproduces \vref{v295} to machine precision.
+\item \textbf{\texttt{v297\_route\_a\_literature\_stack.py} (\texttt{SEAM.EQUIV.A.LIT.01})} writes Route A's one
+  import as a citable stack: LIT-A (Kitaev; Freed--Hopkins) $\to$ LIT-B (M\"uger; Kawahigashi--Longo--M\"uger)
+  $\to$ LIT-C (Conway--Sloane; Dong--Xu) compose into ``invertible bulk $\Rightarrow(E_8)_1$'', all legs
+  established; the single open hypothesis (seam-bulk invertibility) coincides with Route B's Flat-Away, and the
+  stack is non-circular with Route B (the \vref{v286} firewall holds). \mE\ build green, \texttt{AUDIT OK}.
+\end{itemize}
+
 \subsection*{2026-06-18 (Flat-Away heat route made exact + Lean-formalised, \texttt{v295} / \texttt{FORM.FLATAWAY.01})}
 \begin{itemize}
 \item \textbf{\texttt{v295\_flataway\_a2\_exact.py} (\texttt{FLATAWAY.A2.01})} upgrades the \vref{v292}
