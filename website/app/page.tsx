@@ -14,11 +14,17 @@ import { DownloadsSection } from "@/components/DownloadsSection";
 export default function HomePage() {
   return (
     <>
+      {/* Narrative arc: hook -> mechanism -> honesty discipline -> typed details
+          -> translation -> what's open -> the dependency DAG -> a gravity test
+          -> papers / predictions / downloads. The motivation (WhyThisMatters)
+          leads, so the fascination lands before the trust apparatus; the status
+          discipline (TrustContract, ClaimStack) follows immediately to keep
+          skeptical readers. */}
       <Hero />
-      <TrustContract />
-      <ClaimStack />
       <WhyThisMatters />
       <Overview />
+      <TrustContract />
+      <ClaimStack />
       <RosettaLexicon />
       <OpenGates />
       <ReconstructionChain />

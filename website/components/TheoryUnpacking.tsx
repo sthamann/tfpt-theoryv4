@@ -87,9 +87,18 @@ const FRAME_MS = 5500;
 
 export function TheoryUnpacking() {
   const reduced = useReducedMotion();
-  const [step, setStep] = useState(reduced ? STEPS.length - 1 : 0);
-  const [playing, setPlaying] = useState(!reduced);
+  // Deterministic initial state so the server and first client render match
+  // (avoids a hydration mismatch); reduced-motion is applied after mount below.
+  const [step, setStep] = useState(0);
+  const [playing, setPlaying] = useState(true);
   const [hovered, setHovered] = useState(false);
+
+  useEffect(() => {
+    if (reduced) {
+      setStep(STEPS.length - 1);
+      setPlaying(false);
+    }
+  }, [reduced]);
 
   useEffect(() => {
     if (!playing || hovered || reduced) return;
