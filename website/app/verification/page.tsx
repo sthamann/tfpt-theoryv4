@@ -307,7 +307,7 @@ export default function VerificationPage() {
           <SectionHeader
             eyebrow="For the external reviewer"
             title="The attack surface, at a glance"
-            description="What is exact, what is conditional, what is an open premise, and how to kill it — so a reviewer can decide where to push without reading 180 scripts first. Nothing here is hidden: the exact kernel stands on its own; the conditional and open layers are explicitly typed."
+            description="What is exact, what is conditional, what is an open premise, and how to kill it — so a reviewer can decide where to push without reading 260 scripts first. Nothing here is hidden: the exact kernel stands on its own; the conditional and open layers are explicitly typed."
           />
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {REVIEWER_MAP.map((box) => (
@@ -441,7 +441,11 @@ export default function VerificationPage() {
               condition: is the seam short-range-entangled (<span className="font-mono">det K = 1</span>,
               the Kitaev E₈ phase)? Everything above is a theorem or an established citation; the bedrock,
               once a definition (<span className="font-mono">QGEO.SYM.01</span>), is now a physical
-              question — <span className="font-mono">v_geo</span> stays the one no-unit primitive.
+              question — <span className="font-mono">v_geo</span> stays the one no-unit primitive. The
+              emergent-QFT layer (<span className="font-mono">v258–v261</span>, the Modular Spectral Closure:
+              Dirac = covariance induction, cutoff = KMS weight, seam/carrier/E₈ on one Kummer/K3) collapses
+              onto this <em>same</em> bedrock — so the boundary QFT is one relative object that adds no new
+              open item.
             </figcaption>
           </figure>
         </div>

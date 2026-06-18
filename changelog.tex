@@ -59,6 +59,38 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-18 (Paper consistency pass: the closure ledger and the status/QFT sections updated for the Modular Spectral Closure, with an explicit ``what is \emph{not} closed'' line)}
+\begin{itemize}
+\item \textbf{Five paper sections that predated the \texttt{v238}--\texttt{v261} round are brought up to date}
+  (additive, no status marker moved). The \texttt{introduction} closure-ledger table and the
+  ``five questions'' item now carry a \emph{boundary QFT (Modular Spectral Closure)} row --- one relative
+  object $\mathsf{TFPT}_{\mathrm{QFT}}=(\mathcal A_\Sigma,\omega_\Sigma,\Delta_\Sigma,\rho,A_F,H_F,D_F,J,
+  \gamma,S_{\mathrm{rel}})$ closed modulo \texttt{QGEO.SYM.01} (\vref{v258}--\vref{v261}) --- plus an explicit
+  list of what the closure does \emph{not} reach: the full measured pole masses, the absolute QCD scales
+  ($m_p/m_e$), the complete PMNS dynamics, and the real $4$D interacting QFT / ambient measure. The
+  \texttt{tfpt\_2} ``ambient closure'' section now states that the cutoff of its $S_{\mathrm{rel}}$ \emph{is}
+  the seam KMS weight ($f_2/f_0{=}1$, \vref{v259}) and $D_{\mathrm{rel}}$ the covariance induction
+  (\vref{v258}); the \texttt{tfpt\_2} ``(4) Constructive QFT closure'' section adds the relative-object
+  pointer; \texttt{tfpt\_4\_frontier}'s full-quantum-gravity section records that the cutoff moment $f_0$ is
+  pinned by the seam state (\vref{v255}/\vref{v259}); and \texttt{origin\_theory}'s honest-status keybox notes
+  that the whole boundary QFT collapses onto the same \texttt{QGEO.SYM.01} postulate (no sixth structural
+  class). An editorial consistency pass so every status surface agrees with the ledger. \mE\ build green
+  (\texttt{10 ok, 0 failed}), \texttt{AUDIT OK}.
+\end{itemize}
+
+\subsection*{2026-06-18 (Consistency pass: the Modular Spectral Closure surfaced structurally across the website and the intro status card)}
+\begin{itemize}
+\item \textbf{The \texttt{v258}--\texttt{v261} closure is now reflected on every ``what is open'' surface, not just the
+  research-contracts paper.} The homepage open-gates section and compiler-pipeline diagram, the hostile-referee
+  FAQ, the glossary $G_{\mathrm{net}}$ entry, the reviewer page and the verification residual-chain caption now
+  state that the \emph{entire} emergent-QFT layer (Dirac, cutoff, gauging, glue, orientability) collapses onto
+  the \emph{same} premise \texttt{QGEO.SYM.01} via the Modular Spectral Closure --- the boundary QFT is one
+  relative object that adds \emph{no new open item}, ambient QG separate. The introduction status card
+  (``the structural residual is one condition'') carries the same sentence. No status marker moved; this is an
+  editorial consistency pass so the public surfaces agree with the ledger and the paper. \mE\ build green,
+  \texttt{AUDIT OK}.
+\end{itemize}
+
 \subsection*{2026-06-17 (The Modular Spectral Closure: Dirac as covariance induction, the modular cutoff, the Kummer/K3 unification, and the assembly certificate, \texttt{v258}--\texttt{v261})}
 \begin{itemize}
 \item \textbf{\texttt{v258\_dirac\_covariance\_induction.py} (\texttt{PS.DIRAC.03}) closes the

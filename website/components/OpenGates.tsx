@@ -28,7 +28,7 @@ const GATES: Gate[] = [
     tag: "Interface 2",
     marker: "[E] target · [O] seam",
     title: "G_net — the metric-sector inclusion",
-    body: "The target object is closed: (D₅)₁⊗(A₃)₁⋊μ₄ ≅ (E₈)₁ (Jones index 4 = |μ₄|, holomorphic c = 8; v154), with net existence and full-cone reflection positivity discharged to [E] on the 2¹⁶-dim Fock space (v175), R + R² heat-kernel grounded and the IR sector gap-decoupled (Δ_eff = 1.648 > 0). Only the physical coupling of the raw seam to that object is open — the single premise QGEO.SYM.01: the carrier μ₄ clock IS the seam's conformal deck. That is not a gap but TFPT's one fundamental postulate (the role 'c = const' plays in relativity), driven to its sharpest non-circular form (a μ₄-invariant quasi-free seam state, v198/v201) and Lean-formalised below the premise. As the synthesis above shows, this gate, the carrier P2 and Target A are one condition — and in Chern-Simons language it is the single integer step 'det K = 1' (v234/v235). (Historical label: G_metric.)",
+    body: "The target object is closed: (D₅)₁⊗(A₃)₁⋊μ₄ ≅ (E₈)₁ (Jones index 4 = |μ₄|, holomorphic c = 8; v154), with net existence and full-cone reflection positivity discharged to [E] on the 2¹⁶-dim Fock space (v175), R + R² heat-kernel grounded and the IR sector gap-decoupled (Δ_eff = 1.648 > 0). Only the physical coupling of the raw seam to that object is open — the single premise QGEO.SYM.01: the carrier μ₄ clock IS the seam's conformal deck. That is not a gap but TFPT's one fundamental postulate (the role 'c = const' plays in relativity), driven to its sharpest non-circular form (a μ₄-invariant quasi-free seam state, v198/v201) and Lean-formalised below the premise. As the synthesis above shows, this gate, the carrier P2, Target A and the entire boundary-QFT layer (the Modular Spectral Closure, v258–v261: Dirac = covariance induction, cutoff = KMS weight, seam/carrier/E₈ on one K3) are one condition — and in Chern-Simons language it is the single integer step 'det K = 1' (v234/v235). (Historical label: G_metric.)",
     formula: "[\\,(E_8)_1 : (D_5)_1\\times(A_3)_1\\,] = 4 = |\\mu_4| \\Rightarrow \\text{holomorphic } c = 8",
     tone: "border-amber-400/30 bg-amber-500/5",
   },
@@ -150,6 +150,17 @@ function ClosingCondition() {
         </span>{" "}
         = the deck premise QGEO.SYM.01 (v234/v235).
       </p>
+      <p className="mt-3 rounded-lg border border-emerald-400/15 bg-emerald-500/[0.03] p-3 text-xs leading-relaxed text-slate-300">
+        <span className="font-semibold text-emerald-200">And the whole boundary QFT collapses onto the same premise</span>{" "}
+        (the <em>Modular Spectral Closure</em>, v258–v261): the finite Dirac is a covariance induction of the
+        seam KMS state ([D_F] = [D_Σ]⊗[K_car], v258), the spectral-action cutoff <em>is</em> that KMS weight
+        (f₂/f₀ = 1, v259), and the seam, the carrier-16 and E₈ live on one Kummer/K3 surface
+        (H²(K3) = U³⊕E₈(−1)², v260). The assembly certificate (v261) pins one number 4 = [B:A] = |μ₄| = 2χ =
+        |(ℤ/2)²| (index = marks = fixed points = glue order), one carrier-16 and one gap 6·log(3/2) — so Dirac,
+        cutoff, gauging, glue and orientability are readouts of the one seam state. The boundary QFT is one
+        relative object closed modulo QGEO.SYM.01 and adds <span className="text-emerald-200">no new open item</span>;
+        the ambient QG measure is gap-decoupled (Δ_eff = 1.648 &gt; 0) and kept separate by design.
+      </p>
     </figure>
   );
 }
@@ -170,7 +181,7 @@ export function OpenGates() {
         <SectionHeader
           eyebrow="Honest boundaries"
           title="What is still open?"
-          description="After the compiler closure the live residual is just three named items — Rest = v_geo ⊕ G_net ⊕ F_transfer. Sharper still: the structural part (the metric inclusion and the carrier P2) is one condition that forces E₈ three equivalent ways. Nothing is hidden, nothing is overclaimed."
+          description="After the compiler closure the live residual is just three named items — Rest = v_geo ⊕ G_net ⊕ F_transfer. Sharper still: the structural part (the metric inclusion and the carrier P2) is one condition that forces E₈ three equivalent ways — and the entire boundary-QFT layer (Dirac, cutoff, gauging, glue) now collapses onto that same condition via the Modular Spectral Closure. Nothing is hidden, nothing is overclaimed."
         />
 
         <ClosingCondition />

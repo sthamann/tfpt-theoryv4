@@ -171,14 +171,28 @@ const TRUNK_AFTER: StepNode[] = [
     status: "theorem-core",
   },
   {
-    id: "residual",
+    id: "qft-closure",
     step: 7,
+    label: "Boundary QFT — the Modular Spectral Closure",
+    formula:
+      "\\mathsf{TFPT}_{\\mathrm{QFT}} = (\\mathcal{A}_\\Sigma, \\omega_\\Sigma, \\Delta_\\Sigma, \\rho, A_F, H_F, D_F, J, \\gamma, S_{\\mathrm{rel}})",
+    input: "The seam KMS state + the 96-dim carrier finite spectral triple",
+    fixed:
+      "One relative object: D_F = covariance induction of the seam state (v258), cutoff = the KMS weight ⇒ f₂/f₀ = 1 (v259), seam + carrier-16 + E₈ on one Kummer/K3 (v260); cross-checked 4 = [B:A] = |μ₄| = 2χ = |(ℤ/2)²| (v261)",
+    notClaimed:
+      "Not closed unconditionally — complete modulo the one seam premise QGEO.SYM.01; the ambient QG measure stays separate",
+    fail: "An invariant disagrees across the round (index ≠ marks, two carrier-16s, or two different gaps)",
+    status: "bridge",
+  },
+  {
+    id: "residual",
+    step: 8,
     label: "The residual: two gates + interfaces",
     formula:
       "\\text{Rest} = (U_{\\mathrm{wall}}) \\oplus (G_{\\mathrm{metric}}) \\oplus (F_{\\mathrm{frontier}})",
     input: "The compiler closure",
     fixed:
-      "One flavor wall-selection, one quantum-gravity measure, and a set of typed frontier interfaces",
+      "One flavor wall-selection, one quantum-gravity measure, and a set of typed frontier interfaces — the whole boundary-QFT layer collapses onto the G_metric premise (step 7), adding no new open item",
     notClaimed: "No strict physical TOE certification yet (the ambient measure G6 is open)",
     fail: "A gate's closing theorem asserted before its lemma chain completes",
     status: "conditional",
@@ -298,7 +312,7 @@ export function ReconstructionChain() {
         <SectionHeader
           eyebrow="The compiler pipeline"
           title="From two axioms to the observables"
-          description="TFPT is a directed acyclic graph: two axioms at the source, the E₈ compiler in the middle, the observables as sinks. The compiler factorises into two engines — a discrete closure (from g_car) and a boundary dressing (from c₃) — that branch into three readouts, and the bootstrap loop feeds the output back to fix the inputs."
+          description="TFPT is a directed acyclic graph: two axioms at the source, the E₈ compiler in the middle, the observables as sinks. The compiler factorises into two engines — a discrete closure (from g_car) and a boundary dressing (from c₃) — that branch into three readouts, and the bootstrap loop feeds the output back to fix the inputs. On top, the boundary QFT assembles into one relative object — the Modular Spectral Closure — reduced to a single seam premise."
         />
 
         <div ref={ref} className="relative mx-auto mt-14 max-w-5xl space-y-3">

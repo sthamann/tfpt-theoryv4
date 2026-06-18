@@ -151,7 +151,10 @@ const BLOCKS: Block[] = [
         seam-net metric inclusion — algebra discharged to [E], one definitional
         seam premise left [O]), and <span className="font-mono">F_transfer</span>{" "}
         (the source→pole/relic/cosmology transport — Koide, η_B, the axion relic,
-        m_p/m_e are its four typed instances).{" "}
+        m_p/m_e are its four typed instances). The whole boundary-QFT layer
+        (Dirac, cutoff, gauging, glue) collapses onto the same{" "}
+        <span className="font-mono">G_net</span> premise via the Modular Spectral
+        Closure (v258–v261) — one relative object, no new open item.{" "}
         <Link href="/#open-gates" className="font-semibold text-blue-300 hover:text-blue-200">
           The open residual →
         </Link>

@@ -42,6 +42,399 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-06-18",
+    "dateLabel": "2026-06-18",
+    "heading": [
+      {
+        "k": "t",
+        "v": "Paper consistency pass: the closure ledger and the status/QFT sections updated for the Modular Spectral Closure, with an explicit “what is "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "not"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " closed” line"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Five paper sections that predated the "
+            },
+            {
+              "k": "c",
+              "v": "v238"
+            },
+            {
+              "k": "t",
+              "v": "–"
+            },
+            {
+              "k": "c",
+              "v": "v261"
+            },
+            {
+              "k": "t",
+              "v": " round are brought up to date"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (additive, no status marker moved). The "
+        },
+        {
+          "k": "c",
+          "v": "introduction"
+        },
+        {
+          "k": "t",
+          "v": " closure-ledger table and the “five questions” item now carry a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "boundary QFT (Modular Spectral Closure)"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " row — one relative object "
+        },
+        {
+          "k": "m",
+          "v": "\\mathsf{TFPT}_{\\mathrm{QFT}}=(\\mathcal A_\\Sigma,\\omega_\\Sigma,\\Delta_\\Sigma,\\rho,A_F,H_F,D_F,J,\n  \\gamma,S_{\\mathrm{rel}})"
+        },
+        {
+          "k": "t",
+          "v": " closed modulo "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.SYM.01"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v258"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v261"
+        },
+        {
+          "k": "t",
+          "v": ") — plus an explicit list of what the closure does "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " reach: the full measured pole masses, the absolute QCD scales ("
+        },
+        {
+          "k": "m",
+          "v": "m_p/m_e"
+        },
+        {
+          "k": "t",
+          "v": "), the complete PMNS dynamics, and the real "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": "D interacting QFT / ambient measure. The "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": " “ambient closure” section now states that the cutoff of its "
+        },
+        {
+          "k": "m",
+          "v": "S_{\\mathrm{rel}}"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the seam KMS weight ("
+        },
+        {
+          "k": "m",
+          "v": "f_2/f_0{=}1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v259"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "m",
+          "v": "D_{\\mathrm{rel}}"
+        },
+        {
+          "k": "t",
+          "v": " the covariance induction ("
+        },
+        {
+          "k": "c",
+          "v": "v258"
+        },
+        {
+          "k": "t",
+          "v": "); the "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": " “(4) Constructive QFT closure” section adds the relative-object pointer; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_4_frontier"
+        },
+        {
+          "k": "t",
+          "v": "'s full-quantum-gravity section records that the cutoff moment "
+        },
+        {
+          "k": "m",
+          "v": "f_0"
+        },
+        {
+          "k": "t",
+          "v": " is pinned by the seam state ("
+        },
+        {
+          "k": "c",
+          "v": "v255"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v259"
+        },
+        {
+          "k": "t",
+          "v": "); and "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": "'s honest-status keybox notes that the whole boundary QFT collapses onto the same "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.SYM.01"
+        },
+        {
+          "k": "t",
+          "v": " postulate (no sixth structural class). An editorial consistency pass so every status surface agrees with the ledger. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "build green ("
+        },
+        {
+          "k": "c",
+          "v": "10 ok, 0 failed"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "c",
+          "v": "AUDIT OK"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-18",
+    "dateLabel": "2026-06-18",
+    "heading": [
+      {
+        "k": "t",
+        "v": "Consistency pass: the Modular Spectral Closure surfaced structurally across the website and the intro status card"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "The "
+            },
+            {
+              "k": "c",
+              "v": "v258"
+            },
+            {
+              "k": "t",
+              "v": "–"
+            },
+            {
+              "k": "c",
+              "v": "v261"
+            },
+            {
+              "k": "t",
+              "v": " closure is now reflected on every “what is open” surface, not just the research-contracts paper."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The homepage open-gates section and compiler-pipeline diagram, the hostile-referee FAQ, the glossary "
+        },
+        {
+          "k": "m",
+          "v": "G_{\\mathrm{net}}"
+        },
+        {
+          "k": "t",
+          "v": " entry, the reviewer page and the verification residual-chain caption now state that the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "entire"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " emergent-QFT layer (Dirac, cutoff, gauging, glue, orientability) collapses onto the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "same"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " premise "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.SYM.01"
+        },
+        {
+          "k": "t",
+          "v": " via the Modular Spectral Closure — the boundary QFT is one relative object that adds "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "no new open item"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", ambient QG separate. The introduction status card (“the structural residual is one condition”) carries the same sentence. No status marker moved; this is an editorial consistency pass so the public surfaces agree with the ledger and the paper. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "build green, "
+        },
+        {
+          "k": "c",
+          "v": "AUDIT OK"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
     "date": "2026-06-17",
     "dateLabel": "2026-06-17",
     "heading": [

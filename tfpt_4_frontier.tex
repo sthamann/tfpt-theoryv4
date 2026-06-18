@@ -582,6 +582,12 @@ dynamical metric beyond the FRW/minisuperspace reduction. Two results sharpen it
 standard Seeley--DeWitt coefficients for the Dirac operator ($a_2\!\sim\!-R/3$, $a_4|_{R^2}\!\sim\!R^2/72$),
 Einstein--Hilbert $+$ $R^2$ \emph{structurally} --- the $R+R^2$ form is not postulated; the scalaron ratio
 $M^2/\Mpl^2=6(4\pi)^2/f_0$ with the TFPT closure $\cthree^7$ fixing the cutoff moment $f_0$.
+\emph{Update (Modular Spectral Closure):} the full Seeley--DeWitt expansion of this spectral action over the
+explicit $96$-dim finite triple is now written out (\veri{v255\_spectral\_action\_expansion.py}), and the
+cutoff moment $f_0$ is no longer a free scheme choice: identifying $f$ with the \emph{seam KMS weight}
+($\beta{=}1$ by Tomita--Takesaki, $2\pi{=}1/(4\cthree)$) gives $f_2/f_0=1$ exactly
+(\veri{v259\_modular\_cutoff\_kappa.py}), so $\kappa=\sqrt{(f_2/f_0)\,c_{PS}/c_{\rm grav}}$ collapses to a
+finite-triple trace ratio --- the scalaron normalisation is pinned by the seam state, not a regulator dial.
 \textbf{(ii) Gap-decoupled (G5).} The metric coupling is gap-dominated,
 $2\|V_{\mathrm{metric}}\|=0.785<\Delta=6\log\tfrac32=2.433$, so the admissible sector keeps a strictly
 positive effective gap $\Delta_{\mathrm{eff}}=1.648>0$ under the stated RP and metric-coupling assumptions.

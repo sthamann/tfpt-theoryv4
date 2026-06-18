@@ -1589,6 +1589,17 @@ realisation is supplied, \mE/\mC); and $\mathrm{QG}_{\mathrm{amb}}$ is the unpro
 projective measure (\emph{not} constructed, \mO). TFPT constructs $\mathrm{QFT}_{\mathrm{adm}}$ and
 $\mathrm{AQFT}_{\mathrm{bdry}}$; it does \emph{not} construct $\mathrm{QG}_{\mathrm{amb}}$. Whenever ``QFT
 closure'' appears, it means the first two, never the third.
+\par\smallskip\noindent\textbf{Since assembled into one relative object (Modular Spectral Closure).} The two
+constructed terms $\mathrm{QFT}_{\mathrm{adm}}+\mathrm{AQFT}_{\mathrm{bdry}}$ are now a \emph{single} relative
+datum $\mathsf{TFPT}_{\mathrm{QFT}}=(\mathcal A_\Sigma,\omega_\Sigma,\Delta_\Sigma,\rho,A_F,H_F,D_F,J,\gamma,
+S_{\mathrm{rel}})$: the explicit $96$-dim finite spectral triple is built (\veri{v252\_full\_finite\_triple.py}),
+its Dirac is the covariance induction of the seam KMS state (\veri{v258\_dirac\_covariance\_induction.py}), the
+spectral-action cutoff is that KMS weight ($f_2/f_0{=}1$, \veri{v259\_modular\_cutoff\_kappa.py}), and seam,
+carrier-$16$ and $E_8$ sit on one Kummer/K3 (\veri{v260\_k3\_kummer\_unification.py}), the whole assembly
+certified together (\veri{v261\_modular\_spectral\_closure.py}) --- closed modulo the single premise
+\texttt{QGEO.SYM.01}. \emph{What this still does \emph{not} close} is the dimensionful/ambient remainder: the
+full measured pole masses ($\times\,v_{\mathrm{geo}}$ $+$ standard RG, \mC), the absolute QCD scales
+($m_p/m_e$, \mO), the complete PMNS dynamics (\mC/\mO), and the real $4$D interacting QFT $\mathrm{QG}_{\mathrm{amb}}$ (\mO).
 
 \subsection*{(5) Axioms P1/P2 --- P2 machine-verified, P1 as an interface \mE/\mO}
 Here the hardening is \emph{empirical} and concrete. The Lean 4 proof (\texttt{lean4-carrier-rigidity},
@@ -2664,6 +2675,21 @@ factorises,
 both correction series convergent. Hence the unprojected ambient theory carries \emph{no new IR physics}
 beyond the admissible matter QFT and $R^2$ gravity.
 \end{proposition}
+
+\par\smallskip\noindent\textbf{The cutoff and the Dirac of $S_{\mathrm{rel}}$ are now fixed by the seam state
+(Modular Spectral Closure, \veri{v258\_dirac\_covariance\_induction.py}, \veri{v259\_modular\_cutoff\_kappa.py}).}
+The relative spectral action above is not a free template. Its Dirac operator $D_{\mathrm{rel}}$ is the
+\emph{modular/covariance induction} of the boundary seam KMS state --- $[D_F]=[D_\Sigma]\widehat\otimes_{(E_8)_1}
+[\mathcal K_{\mathrm{car}}]$, the finite implementation being $\log((1{-}C_F)C_F^{-1})$ with $C_F=P_F C_\Sigma
+P_F$ (\veri{v258\_dirac\_covariance\_induction.py}) --- and the cutoff $f$ \emph{is} that same KMS weight, so by
+Tomita--Takesaki/Bisognano--Wichmann ($\beta{=}1$, $2\pi{=}1/(4\cthree)$) its moments collapse to $f_2/f_0=1$
+exactly (\veri{v259\_modular\_cutoff\_kappa.py}), removing the last scheme freedom and turning $\kappa$ into a
+finite-triple trace ratio. The Seeley--DeWitt expansion of this $S_{\mathrm{rel}}$ over the explicit $96$-dim
+finite triple is written out (\veri{v255\_spectral\_action\_expansion.py}), and the whole assembly --- seam,
+carrier-$16$ and $E_8$ on one Kummer/K3 --- is certified as one relative object reduced to the single premise
+\texttt{QGEO.SYM.01} (\veri{v261\_modular\_spectral\_closure.py}). So this ``ambient closure'' delivers the
+\emph{boundary relative object}; the genuinely \mO\ piece is the \emph{real $4$D interacting} ambient measure
+$\mathrm{QG}_{\mathrm{amb}}$, kept separate by design.
 
 \noindent\textbf{Regimes, all TFPT-fixed.} Gravity has three clean windows set by the seam scales:
 $E<M\!\sim\!3\times10^{13}$ GeV is pure Einstein ($a_2$), $M<E<\Mbar$ is $R^2$ Starobinsky ($a_4$, the

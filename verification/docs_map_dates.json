@@ -32,8 +32,8 @@
   "date": "2026-06-12"
  },
  "introduction::subsection::The hard reduction: two research gates plus typed interfaces::1": {
-  "hash": "5c84c3690c92",
-  "date": "2026-06-17"
+  "hash": "3d286a99f105",
+  "date": "2026-06-18"
  },
  "introduction::section::The compiler: why $30=2\\cdot3\\cdot5$::1": {
   "hash": "2ec68cba42d8",
@@ -60,12 +60,12 @@
   "date": "2026-06-12"
  },
  "introduction::section::What this means for the theory-of-everything question::1": {
-  "hash": "00e8205e5cae",
-  "date": "2026-06-12"
+  "hash": "3eac33656336",
+  "date": "2026-06-18"
  },
  "introduction::subsection::The closure ledger: what is done, and what genuinely remains::1": {
-  "hash": "36ef7e8a5356",
-  "date": "2026-06-12"
+  "hash": "88caa304120d",
+  "date": "2026-06-18"
  },
  "introduction::section::Does this make the theory more probable?::1": {
   "hash": "540397fd6436",
@@ -380,8 +380,8 @@
   "date": "2026-06-13"
  },
  "tfpt_2_standard_model::subsection::(4) Constructive QFT closure of the admissible physical sector \\mE/\\mC::1": {
-  "hash": "f8a792183036",
-  "date": "2026-06-14"
+  "hash": "5d71792997f7",
+  "date": "2026-06-18"
  },
  "tfpt_2_standard_model::subsection::(5) Axioms P1/P2 --- P2 machine-verified, P1 as an interface \\mE/\\mO::1": {
   "hash": "de183afa60a7",
@@ -464,8 +464,8 @@
   "date": "2026-06-12"
  },
  "tfpt_2_standard_model::section::The ambient closure: one spectral-action measure, IR-complete by decoupling::1": {
-  "hash": "aec960384ae4",
-  "date": "2026-06-12"
+  "hash": "31ced2951bd5",
+  "date": "2026-06-18"
  },
  "tfpt_2_standard_model::subsection::Seam response grammar: gravity is the inverse seed gain::1": {
   "hash": "7cd027f0fd95",
@@ -608,8 +608,8 @@
   "date": "2026-06-15"
  },
  "tfpt_4_frontier::section::Full quantum gravity --- induced from the boundary kernel::1": {
-  "hash": "8781a441a542",
-  "date": "2026-06-15"
+  "hash": "53dabee3c30e",
+  "date": "2026-06-18"
  },
  "tfpt_4_frontier::section::Summary::1": {
   "hash": "6580fbe649b5",
@@ -752,8 +752,8 @@
   "date": "2026-06-12"
  },
  "origin_theory::section::Honest status::1": {
-  "hash": "4cf0e7e396c3",
-  "date": "2026-06-15"
+  "hash": "b5e84e94d4dd",
+  "date": "2026-06-18"
  },
  "origin_theory::section::Appendix: computational verification::1": {
   "hash": "48687b83b93b",

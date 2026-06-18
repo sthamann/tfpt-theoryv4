@@ -559,7 +559,13 @@ rank-$8$ lattice). In abelian Chern--Simons language this is the single integer 
 $\Leftrightarrow\det K=1$, the extension tower $D_5{\oplus}A_3(16)\to D_8(4)\to E_8(1)$ being anyon
 condensation (the Kitaev $E_8$ state); the one open analytic step is then ``the free RP seam condenses the
 order-$|\mu_4|$ Lagrangian glue'' $=$ \texttt{QGEO.SYM.01}. So beneath the two gate \emph{labels} there is,
-structurally, a single fundamental postulate.
+structurally, a single fundamental postulate. And the entire \emph{emergent-QFT layer} collapses onto the
+\emph{same} postulate (the \emph{Modular Spectral Closure}, \vref{v261}): the finite Dirac is a
+covariance induction of the seam KMS state (\vref{v258}), the spectral-action cutoff \emph{is} that KMS
+weight ($f_2/f_0=1$, \vref{v259}), the seam, the carrier-$16$ and $E_8$ live on one Kummer/K3 surface
+(\vref{v260}), so Dirac, cutoff, gauging, glue and orientability are all readouts of the one seam state ---
+the boundary QFT is closed as a single relative object modulo \texttt{QGEO.SYM.01} and adds \emph{no new open
+item}, while the ambient quantum-gravity measure stays separate by design.
 \veri{v234\_seam\_holomorphy\_selection.py} \veri{v235\_seam\_chern\_simons.py}
 
 \begin{winboxnb}[Reduction in one line]
@@ -778,10 +784,19 @@ numerological. (Audit level; all identities machine-verified.)
 \item \textbf{Strong CP --- decoupled.} $\theta_{\mathrm{eff}}{=}0$ follows from three structural facts
       ($\gamma_5$-Hermiticity, polar structure, sheet involution) $+$ reflection positivity ---
       \emph{without} a mass gap. \mE\ (given RP)
-\item \textbf{Full dynamics --- the admissible transfer model is closed.} The mass gap is the
-      \emph{explicit} discrete gap $6\log\tfrac32$ of the $C_6$ transfer operator (eigenvalues $(k/3)^6$),
-      which supports the OS reconstruction path on the admissible sector; the continuum and metric-coupled
-      theory still require the stated RP, cluster and limit assumptions. \mE\ (transfer model) / \mC\ (continuum)
+\item \textbf{Full dynamics --- the admissible transfer model is closed, and the boundary QFT is now one
+      relative object.} The mass gap is the \emph{explicit} discrete gap $6\log\tfrac32$ of the $C_6$ transfer
+      operator (eigenvalues $(k/3)^6$), which supports the OS reconstruction path on the admissible sector.
+      On top of this the whole emergent-QFT round assembles the boundary theory into one relative object
+      $\mathsf{TFPT}_{\mathrm{QFT}}=(\mathcal A_\Sigma,\omega_\Sigma,\Delta_\Sigma,\rho,A_F,H_F,D_F,J,\gamma,
+      S_{\mathrm{rel}})$ --- the \emph{Modular Spectral Closure}: the finite Dirac is a covariance induction
+      of the seam KMS state (\vref{v258}), the spectral-action cutoff \emph{is} that KMS weight (\vref{v259}),
+      the seam/carrier/$E_8$ live on one Kummer/K3 (\vref{v260}), all certified together (\vref{v261}) ---
+      closed modulo the single premise \texttt{QGEO.SYM.01}. \emph{What this does \emph{not} close:} the full
+      measured pole masses (the absolute scale $v_{\mathrm{geo}}$ $+$ standard RG), the absolute QCD scales
+      ($m_p/m_e$, \mO), the complete PMNS dynamics (the angles are typed; the full mass/CP dynamics stay
+      \mC/\mO), and the real $4$D interacting QFT / ambient measure (\mO). \mE\ (transfer model $+$ boundary
+      relative object) / \mC\ (continuum) / \mO\ (real $4$D)
 \item \textbf{Axioms P1/P2 --- P2 machine-verified.} The Lean proof builds cleanly (\texttt{1886 jobs},
       0 \texttt{sorry}, only kernel axioms); the P2 algebra is a theorem, P1 a typed interface. They
       remain declared inputs. \mE/\mO
@@ -807,15 +822,19 @@ $E_8=(D_5{\oplus}A_3){+}\mu_4$, group closure & \mE & --- complete \\
 bootstrap $(g,\mu){=}(5,4)$, ``$8$'' in $\cthree$ & \mE & --- complete (reverse glue $\mu^2{-}5\mu{+}4{=}0$) \\
 fine structure $\ainv$ & \mE & --- \textbf{existence+uniqueness proved}; value is a numerical fixed point (ledger \texttt{EM.FP.01}), Ward origin \mC \\
 fermion masses ($\phiz$-ladder) & \mE/\mO & leptons exact; quark \emph{ratios} closed (Pl\"ucker, \vref{v49}/\vref{v71}); absolute scale $=$ anchor \\
-mixings $\theta_{13},\theta_{23},\theta_{12}$ & \mE/\mC & $\theta_{12}$ cond.\ derived; $\theta_{23}$ maximal \\
+mixings $\theta_{13},\theta_{23},\theta_{12}$ (PMNS angles) & \mE/\mC & $\theta_{12}$ cond.\ derived; $\theta_{23}$ maximal; \emph{full} PMNS dynamics (mass scale, CP magnitude) stay \mC/\mO \\
 flavour matrix / H2 & \mE & dictionary \emph{exact} (hexagon $=$ twisted family spectrum, addresses pinned, margins forced, \vref{v118}--\vref{v122}); $R$ forced columnwise by $(d,n)$ (\vref{v136}/\vref{v139}); pairing values $=$ atom identities (\vref{v142}/\vref{v145}); residue $=$ \emph{one} lift map \\
 seam quantum clock (R1) & \mE/\mC & typed closed: reduced edge-sector clock (\vref{v124}--\vref{v133}); external VW edge $=2\times$ reduced budget, full 4d det $=$ firewall (\vref{v138}); det-ratio cancellation derived in-family (\vref{v144}) \\
 inflation $A_s,n_s,r$, scalaron $M$ & \mC & scalaron $M{=}\cthree^{7/2}\Mbar$ exact; $n_s,r$ are bands over $N_\star\in[50,60]$ (reheating point $51.4$, \vref{v86}) \\
 \midrule
-\multicolumn{3}{@{}l}{\textit{genuinely open --- the actual TOE remainder}}\\
-dim.\ EW/QCD masses & \mC & standard RG threshold matching (no new physics) \\
+boundary QFT (Modular Spectral Closure) & \mE/\mC & \textbf{one relative object} $\mathsf{TFPT}_{\mathrm{QFT}}$: $D_F=$ covariance induction (\vref{v258}), cutoff $=$ KMS weight $f_2/f_0{=}1$ (\vref{v259}), seam/carrier/$E_8$ on one K3 (\vref{v260}), certified (\vref{v261}) --- closed modulo \texttt{QGEO.SYM.01} \\
+\midrule
+\multicolumn{3}{@{}l}{\textit{genuinely open --- the actual TOE remainder (what the closure does \emph{not} cover)}}\\
 QFT measure (admissible sector) & \mE & \textbf{closed: RP from cusp spectrum, OS reconstruction} \\
-ambient QFT $+$ full gravity (metric sector) & \mO & \emph{not constructed here} (frontier doc); conditionally reduces to one named hypothesis (ambient RP) on the relative spectral-action measure \\
+full measured pole masses & \mC & ladder $\times\,v_{\mathrm{geo}}$, dressed by standard RG (no new physics) \\
+absolute QCD scales ($m_p/m_e$, $\Lambda_{\mathrm{QCD}}$) & \mO & QCD matching contract (\texttt{FR.MPME.01}); not a compiler number \\
+full PMNS dynamics (mass scale, CP) & \mC/\mO & angles typed; absolute $\nu$-mass scale + CP magnitude open \\
+real $4$D interacting QFT $+$ full gravity & \mO & ambient measure \emph{not constructed} (frontier); conditionally reduces to one named hypothesis (ambient RP) on the relative spectral-action measure \\
 analytic boundary origin of $\pi$ ($c_3{=}\tfrac1{8\pi}$) & \mC & \textbf{hardened: $c_3{=}1/(|\Z_2|\oint_{S^2}K)=1/(8\pi)$ (Gauss--Bonnet)}; ``$8$''${=}\operatorname{rank}E_8$; $\pi$ stays the one primitive \\
 $\eta_B$, $m_p/m_e$, Koide, dark matter & \mO & frontier handles only (see document~4) \\
 \bottomrule
@@ -827,8 +846,14 @@ $\eta_B$, $m_p/m_e$, Koide, dark matter & \mO & frontier handles only (see docum
 \emph{mass-hierarchy exponents} and the mixings are \emph{closed}; the nine masses follow from one
 $\phiz$-ladder (lepton rationals exact, quark $O(1)$ digits still a conditional finite evaluation). The
 \emph{admissible-sector} QFT measure is closed (a finite gapped transfer system, RP from the cusp
-spectrum, OS-reconstructed); the \emph{ambient/metric-sector} measure --- i.e.\ \emph{full quantum
-gravity} --- is \emph{not} constructed here and stays \mO\ (frontier doc), reducing conditionally to a
+spectrum, OS-reconstructed), and on top of it the whole boundary QFT is now \emph{one relative object}
+$\mathsf{TFPT}_{\mathrm{QFT}}$ (the \emph{Modular Spectral Closure}, \vref{v258}--\vref{v261}: $D_F$ a
+covariance induction, the cutoff the seam KMS weight, seam/carrier/$E_8$ on one Kummer/K3) --- closed modulo
+the \emph{single} premise \texttt{QGEO.SYM.01}. \emph{What that closure does \emph{not} reach} is exactly the
+dimensionful/ambient remainder: the full measured pole masses (ladder $\times\,v_{\mathrm{geo}}$ $+$ standard
+RG, \mC), the absolute QCD scales ($m_p/m_e$, \mO), the complete PMNS dynamics (\mC/\mO), and the
+\emph{real $4$D interacting QFT} --- the \emph{ambient/metric-sector} measure, i.e.\ \emph{full quantum
+gravity} --- which is \emph{not} constructed here and stays \mO\ (frontier doc), reducing conditionally to a
 single named hypothesis (ambient reflection positivity). The seam seed is \emph{hardened}:
 $c_3=1/(|\Z_2|\oint_{S^2}K\,dA)=1/(8\pi)$ is the one-sided Gauss--Bonnet normalisation of the seam sphere,
 with the discrete ``$8$'' equal to $\operatorname{rank}E_8$ and only the Gauss--Bonnet $\pi$ left as the
