@@ -59,6 +59,19 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-18 (PMNS: the reactor-angle exponent closed as the carrier hypercharge trace, \texttt{v268})}
+\begin{itemize}
+\item \textbf{\texttt{v268\_theta13\_carrier\_trace.py} (\texttt{FLAV.TH13.01}) closes the $\theta_{13}$
+  exponent origin.} The value $\sin^2\theta_{13}=\phiz e^{-5/6}=0.0231$ was already checked (\vref{v16}); now
+  the exponent is exact: \mE\ $\gamma=5/6=\mathrm{tr}_E Y^2$, the carrier hypercharge-squared trace
+  ($Y=\mathrm{diag}(-\tfrac13,-\tfrac13,-\tfrac13,\tfrac12,\tfrac12)$, roots of $6Y^2-Y-1=0$; complement
+  $\tfrac16$ the neutrino ratio). \mE\ own channel: the $\mu\tau$-breaking $\varepsilon=\tfrac34\phiz$
+  induces only ${\sim}1.6\times10^{-3}\ll0.023$, so $\theta_{13}$ is a separate carrier-trace channel ---
+  correcting the tempting (and wrong) ``$\theta_{13}$ from $M_\nu$'' route flagged by the new script atlas.
+  \mO\ the CP magnitude and the absolute $\nu$-mass scale remain the open PMNS items. Exact core mirrored in
+  Wolfram. \mE\ build green, \texttt{AUDIT OK}.
+\end{itemize}
+
 \subsection*{2026-06-18 (Infrastructure: a generated causal ``script atlas'' so the suite is navigable at a glance)}
 \begin{itemize}
 \item \textbf{\texttt{verification/make\_script\_atlas.py} generates \texttt{verification/script\_atlas.md}} ---

@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`265` registered scripts · `316` ledger claims · `10` clusters.
+`266` registered scripts · `317` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -102,7 +102,7 @@ _The φ₀-ladder mass formula, the exact lepton coefficients, and the integer-P
 - **v229_lepton_frobenius_algebra** [E/C] `LEP.FROB.01` — a commutative Frobenius algebra. The C₆ shift has charpoly t⁶−1 (spectrum μ₆=μ₃ family ×μ₂ sheet). PMNS extension via Aut(A)+the hex CM point is [C].
   - deps: FLAV.LEPTON.01, ARCH.HEXRES.01, v220_cp_hexagonal_modulus · cited: 2 standard model
 
-### `neutrinos` — Neutrinos & the solar angle  (4 scripts)
+### `neutrinos` — Neutrinos & the solar angle  (5 scripts)
 _The Majorana texture, the dual anchor, and the previously open solar angle from the seam._
 
 - **v9_neutrino_texture** [E] `FLAV.TH12.01` — μτ Majorana texture → sin²θ₁₂ = 1/3 − φ₀/2, θ₂₃ = 45°
@@ -113,6 +113,8 @@ _The Majorana texture, the dual anchor, and the previously open solar angle from
   - deps: v16_solar_dual_anchor, v20_lepton_c_derivation, E8 glue norms · cited: 2 standard model
 - **v263_mnu_from_df** [E/C/O] `FLAV.PMNS.02` — the light neutrino matrix M_nu as the type-I seesaw of D_F, advancing the solar-angle texture (v9) from a posited matrix to a seesaw OBJECT built from D_F's blocks. [E] M_nu=-m_D M
   - deps: v9_neutrino_texture, v252_full_finite_triple, v16_solar_dual_anchor, v233_cp_triality_phase · cited: 2 standard model
+- **v268_theta13_carrier_trace** [E/C/O] `FLAV.TH13.01` — the reactor angle theta_13 exponent IS the carrier hypercharge trace. The value sin^2 theta_13 = phi0 e^{-5/6} = 0.0231 was already checked (v16); here the exponent origin is close
+  - deps: v9_neutrino_texture, v16_solar_dual_anchor, v263_mnu_from_df, v2_carrier_pascal · cited: 2 standard model
 
 ### `gravity` — Gravity, inflation & cosmology  (6 scripts)
 _The R + R² spectral-action shadow, the seam-fixed scalaron, and the cosmological readouts._
@@ -598,7 +600,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v256_orientability_poincare** — `PS.NCG.ORIENT.01`
 - **v257_quasiorient_modpd** — `PS.NCG.ORIENT.02`
 - **v258_dirac_covariance_induction** — `PS.DIRAC.03`
 - **v259_modular_cutoff_kappa** — `PS.SPECACT.02`
@@ -610,4 +611,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v265_qft4d_fork_freeze** — `QFT4D.FORK.01, QFT4D.BOUNDARY.DEFAULT.01, QFT4D.SMONLYGUT.01, PS.UVBRANCH.01, PS.THRESHOLD.01, PS.PROTON.KILL.01, QFT4D.NO_OVERCLAIM.01`
 - **v266_ps_threshold_proton** — `PS.THRESHOLD.02, PS.PROTON.02`
 - **v267_qgeo_rigidity_minimal_axiom** — `QGEO.SYM.02`
+- **v268_theta13_carrier_trace** — `FLAV.TH13.01`
 

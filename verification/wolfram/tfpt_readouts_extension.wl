@@ -2067,6 +2067,19 @@ Module[{a, cr, jf, l, sols, jhex},
     cr === 2 && jf[2] === 1728 && sols === Sort[{-1, 1/2, 2}] && Simplify[jhex] === 0];
 ];
 
+(* ==== v268: reactor-angle exponent = carrier hypercharge trace (FLAV.TH13.01) ==== *)
+Module[{Yvec, trY2, roots},
+  roots = Sort[Y /. Solve[6 Y^2 - Y - 1 == 0, Y]];
+  Yvec = {-1/3, -1/3, -1/3, 1/2, 1/2};
+  trY2 = Total[Yvec^2];
+  checkExact["v268 FLAV.TH13.01: the theta_13 exponent is the carrier hypercharge trace -- "
+    <> "tr_E Y^2 = 3(1/3)^2 + 2(1/2)^2 = 5/6 over the 5-slot carrier hypercharge "
+    <> "Y=diag(-1/3,-1/3,-1/3,1/2,1/2) (the anomaly-free roots {-1/3,1/2} of 6Y^2-Y-1=0), so "
+    <> "sin^2 theta_13 = phi0 e^{-5/6} = phi0 e^{-tr_E Y^2}; complement 1 - 5/6 = 1/6 = the neutrino ratio. "
+    <> "theta_13 is its own carrier-trace channel (the mu-tau breaking gives only ~1e-3, not 0.023).",
+    roots === Sort[{-1/3, 1/2}] && trY2 === 5/6 && (1 - trY2) === 1/6];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

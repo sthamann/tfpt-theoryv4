@@ -47,6 +47,197 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "PMNS: the reactor-angle exponent closed as the carrier hypercharge trace, "
+      },
+      {
+        "k": "c",
+        "v": "v268"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v268_theta13_carrier_trace.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "FLAV.TH13.01"
+            },
+            {
+              "k": "t",
+              "v": ") closes the "
+            },
+            {
+              "k": "m",
+              "v": "\\theta_{13}"
+            },
+            {
+              "k": "t",
+              "v": " exponent origin."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The value "
+        },
+        {
+          "k": "m",
+          "v": "\\sin^2\\theta_{13}=\\phiz e^{-5/6}=0.0231"
+        },
+        {
+          "k": "t",
+          "v": " was already checked ("
+        },
+        {
+          "k": "c",
+          "v": "v16"
+        },
+        {
+          "k": "t",
+          "v": "); now the exponent is exact: "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "\\gamma=5/6=\\mathrm{tr}_E Y^2"
+        },
+        {
+          "k": "t",
+          "v": ", the carrier hypercharge-squared trace ("
+        },
+        {
+          "k": "m",
+          "v": "Y=\\mathrm{diag}(-\\tfrac13,-\\tfrac13,-\\tfrac13,\\tfrac12,\\tfrac12)"
+        },
+        {
+          "k": "t",
+          "v": ", roots of "
+        },
+        {
+          "k": "m",
+          "v": "6Y^2-Y-1=0"
+        },
+        {
+          "k": "t",
+          "v": "; complement "
+        },
+        {
+          "k": "m",
+          "v": "\\tfrac16"
+        },
+        {
+          "k": "t",
+          "v": " the neutrino ratio). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "own channel: the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu\\tau"
+        },
+        {
+          "k": "t",
+          "v": "-breaking "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon=\\tfrac34\\phiz"
+        },
+        {
+          "k": "t",
+          "v": " induces only "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}1.6\\times10^{-3}\\ll0.023"
+        },
+        {
+          "k": "t",
+          "v": ", so "
+        },
+        {
+          "k": "m",
+          "v": "\\theta_{13}"
+        },
+        {
+          "k": "t",
+          "v": " is a separate carrier-trace channel — correcting the tempting (and wrong) “"
+        },
+        {
+          "k": "m",
+          "v": "\\theta_{13}"
+        },
+        {
+          "k": "t",
+          "v": " from "
+        },
+        {
+          "k": "m",
+          "v": "M_\\nu"
+        },
+        {
+          "k": "t",
+          "v": "” route flagged by the new script atlas. "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the CP magnitude and the absolute "
+        },
+        {
+          "k": "m",
+          "v": "\\nu"
+        },
+        {
+          "k": "t",
+          "v": "-mass scale remain the open PMNS items. Exact core mirrored in Wolfram. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "build green, "
+        },
+        {
+          "k": "c",
+          "v": "AUDIT OK"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-18",
+    "dateLabel": "2026-06-18",
+    "heading": [
+      {
+        "k": "t",
         "v": "Infrastructure: a generated causal “script atlas” so the suite is navigable at a glance"
       }
     ],
