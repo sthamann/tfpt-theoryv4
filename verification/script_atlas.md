@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`292` registered scripts · `345` ledger claims · `10` clusters.
+`293` registered scripts · `347` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -202,7 +202,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v75_upoint_to_vgeo** [E/O] `FLAV.UPOINT.01` — Gate 1 complete: U_point → v_geo (ratios + Grand Mass Volume); same anchor as 1/G
   - deps: v71_simple_r_bridge, v20_lepton_c_derivation, v46_grand_mass_volume, v68 · cited: origin theory, research contracts
 
-### `frontier` — Open gate (G_metric) & the frontier  (51 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (52 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -307,6 +307,8 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v291_flataway_contract, v292_flataway_heat_reduction, v290_z4_smooth_curvature_adversary, v288_full_l2_subprincipal_z4 · cited: research contracts
 - **v294_flataway_rp_energy** [E/C/O] `FLATAWAY.ENERGY.01` — the RP-energy / Troyanov route: the flat pillowcase is the unique constant-curvature minimiser at the fixed mark divisor. [E] prescribed divisor + Gauss-Bonnet: S² with 4 cone angl
   - deps: v291_flataway_contract, v292_flataway_heat_reduction, v293_flataway_spectral_hessian, v284_route_i_rp_uniqueness · cited: research contracts
+- **v295_flataway_a2_exact** [E/O] `FLATAWAY.A2.01, FORM.FLATAWAY.01` — the EXACT analytic a₂ coefficient, upgrading the v292 positive-definiteness from numerical to a proof. [E] first variation vanishes: d/dε Tr e^{−tΛ(ε)}|₀ = −t f̂(0) Σe^{−t|n|} = 0 
+  - deps: v292_flataway_heat_reduction, v291_flataway_contract, v295_flataway_a2_exact, v290_z4_smooth_curvature_adversary, FORM.QGEO.03 · cited: research contracts
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (160 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -652,7 +654,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v283_live_killtest_scorecard** — `PRED.LIVE.01`
 - **v284_route_i_rp_uniqueness** — `QGEO.ROUTEI.01`
 - **v285_route_ii_seam_condensation** — `QGAMB.ROUTEII.01`
 - **v286_seam_equivalence_contract** — `SEAM.EQUIV.01`
@@ -664,4 +665,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v292_flataway_heat_reduction** — `FLATAWAY.HEAT.01`
 - **v293_flataway_spectral_hessian** — `FLATAWAY.SPEC.01`
 - **v294_flataway_rp_energy** — `FLATAWAY.ENERGY.01`
+- **v295_flataway_a2_exact** — `FLATAWAY.A2.01, FORM.FLATAWAY.01`
 

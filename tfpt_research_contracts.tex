@@ -706,6 +706,16 @@ isolated minimum (answering ``only one direction''); and \mE/\mC\ the \emph{vari
 metric as the unique strictly-convex curvature-energy minimiser. The three converge on \emph{one} external
 selection principle (fix $a_2$ / pin the Steklov spectrum / realise the energy-minimiser); closing any one
 closes Route B, and with Route A's holomorphy half, \texttt{SEAM.EQUIV.01}.
+\par\smallskip\noindent\textbf{The heat route made exact and Lean-formalised.} The positive-definiteness
+underpinning the heat route is now a theorem, not a numerical scan
+(\veri{v295\_flataway\_a2\_exact.py}): the first variation of $\mathrm{Tr}\,e^{-t\Lambda}$ vanishes (the
+smooth off-mark curvature has zero mean, Gauss-Bonnet), and since $\Lambda\mapsto\mathrm{Tr}\,e^{-t\Lambda}$ is
+convex (Klein/Peierls), $\varepsilon{=}0$ is the \emph{global} minimum --- so $\Delta\mathrm{Tr}\ge0$ for every
+deformation, $=0$ iff $f=0$; the exact second-order coefficient is the divided-difference kernel of $e^{-tx}$
+(validated to $10^{-6}$). The algebraic $\Delta{=}0\Leftrightarrow$ flat step is machine-formalised in Lean
+(\texttt{FORM.FLATAWAY.01}, \texttt{SeamDeckClosure.lean}: a positive-weighted sum of squares is
+positive-definite; axiom-clean). So Flat-Away's heat route is reduced to the single external invariant ``the
+seam fixes $a_2$'', with its positivity both proved and formalised.
 \par\smallskip\noindent\textbf{One surface for seam, carrier and lattice: the Kummer/K3
 (\veri{v260\_k3\_kummer\_unification.py}).} The pillowcase is the elliptic-involution quotient
 $T^2_{\tau=i}/(z{\mapsto}{-}z)$, its four marks the four $2$-torsion fixed points; squaring the construction

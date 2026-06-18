@@ -178,6 +178,10 @@ import TfptCarrier.CohomologyGrading
 #print axioms TFPT.Carrier.SeamDeckClosure.diagonal_commutesClock
 #print axioms TFPT.Carrier.SeamDeckClosure.flat_all_orders_clock
 
+-- Flat-Away heat-trace positive-definiteness (v292/v295: Δ = 0 ⟺ flat)
+#print axioms TFPT.Carrier.SeamDeckClosure.heatDeviation_nonneg
+#print axioms TFPT.Carrier.SeamDeckClosure.heatDeviation_eq_zero_iff
+
 -- Möbius uniformisation (QGEO.UNIFORM.01 geometric normal form; v177)
 #print axioms TFPT.Carrier.MobiusUniformisation.rho_pow_four
 #print axioms TFPT.Carrier.MobiusUniformisation.sigma_rho_sigma

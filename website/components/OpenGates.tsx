@@ -205,8 +205,12 @@ function ClosingCondition() {
         All three are now carried to a precise reduction: the heat-trace deviation is a positive-definite
         quadratic form ⟹ fix one coefficient a₂ (v292); the spectral-mismatch Hessian over the full smooth-ℤ₄
         space is positive-definite ⟹ flat is a strict isolated minimum (v293); and Troyanov uniqueness makes
-        the flat cone metric the unique strictly-convex curvature-energy minimiser (v294). The three converge
-        on one external selection principle for the flat metric.
+        the flat cone metric the unique strictly-convex curvature-energy minimiser (v294). The heat route is
+        now <em>exact</em>, not numerical (v295): convexity of the heat trace Λ↦Tr exp(−tΛ) plus the
+        Gauss-Bonnet zero-mean condition makes the flat seam the global minimum (ΔTr ≥ 0, = 0 iff f = 0), and
+        the Δ = 0 ⟺ flat step is
+        machine-formalised in Lean (FORM.FLATAWAY.01, axiom-clean). The three converge on one external
+        selection principle for the flat metric.
       </p>
       <p className="mt-3 rounded-lg border border-slate-700/40 bg-slate-950/40 p-3 text-xs leading-relaxed text-slate-300">
         <span className="font-semibold text-slate-100">4D-QFT fork policy</span> (frozen decision tree, v265):

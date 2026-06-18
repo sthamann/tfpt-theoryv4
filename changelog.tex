@@ -59,6 +59,22 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-18 (Flat-Away heat route made exact + Lean-formalised, \texttt{v295} / \texttt{FORM.FLATAWAY.01})}
+\begin{itemize}
+\item \textbf{\texttt{v295\_flataway\_a2\_exact.py} (\texttt{FLATAWAY.A2.01})} upgrades the \vref{v292}
+  positive-definiteness from a numerical scan to a \emph{proof}: the first variation of
+  $\mathrm{Tr}\,e^{-t\Lambda}$ vanishes (zero-mean off-mark curvature, Gauss-Bonnet), and since
+  $\Lambda\mapsto\mathrm{Tr}\,e^{-t\Lambda}$ is convex (Klein/Peierls), $\varepsilon{=}0$ is the \emph{global}
+  minimum --- so $\Delta\mathrm{Tr}\ge0$ for all deformations, $=0$ iff $f=0$. The exact second-order
+  coefficient is the divided-difference kernel of $e^{-tx}$ (Duhamel), validated to rel.\ err $<10^{-6}$.
+\item \textbf{Lean \texttt{FORM.FLATAWAY.01}} (\texttt{SeamDeckClosure.lean} Part 5): the formal
+  $\Delta{=}0\Leftrightarrow$ flat step --- a positive-weighted sum of squares is positive-definite
+  (\texttt{heatDeviation\_eq\_zero\_iff}); built and axiom-checked (only \texttt{propext},
+  \texttt{Classical.choice}, \texttt{Quot.sound}). So the heat route's positive-definiteness is now both
+  analytically proved and machine-formalised; only the single external fact (the seam fixes $a_2$) remains.
+  \mE\ build green, \texttt{AUDIT OK}.
+\end{itemize}
+
 \subsection*{2026-06-18 (Flat-Away attacked on all three routes, \texttt{v292}--\texttt{v294})}
 \begin{itemize}
 \item \textbf{\texttt{v292\_flataway\_heat\_reduction.py} (\texttt{FLATAWAY.HEAT.01})}: the heat route, made

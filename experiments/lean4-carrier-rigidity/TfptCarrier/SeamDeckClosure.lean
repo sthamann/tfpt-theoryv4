@@ -212,6 +212,40 @@ theorem flat_all_orders_clock (g : ℂ → ℂ) (d : ℤ → ℂ) :
     CommutesClock (specFun g d) :=
   diagonal_commutesClock (specFun_diagonal g d)
 
+/-! ### Part 5 — Flat-Away: positive-definiteness of the heat-trace deviation (v292/v295) -/
+
+/-- The off-mark **heat-trace deviation** as a quadratic form in the smooth `ℤ₄`
+curvature modes `g`, with weights `W k`: `Δ(g) = Σ_k W_k · (g_k)²`.  The weights are
+the v295 second-order heat coefficients `W_k = c_k(t)`, proved positive there
+(convexity of `Λ ↦ Tr e^{-tΛ}` together with the Gauss-Bonnet zero-mean condition). -/
+def heatDeviation {ι : Type*} (s : Finset ι) (W g : ι → ℝ) : ℝ :=
+  ∑ k ∈ s, W k * (g k) ^ 2
+
+/-- **Non-negativity.**  With non-negative weights the heat-trace deviation is `≥ 0`. -/
+theorem heatDeviation_nonneg {ι : Type*} (s : Finset ι) (W g : ι → ℝ)
+    (hW : ∀ k ∈ s, 0 ≤ W k) : 0 ≤ heatDeviation s W g := by
+  unfold heatDeviation
+  exact Finset.sum_nonneg (fun k hk => mul_nonneg (hW k hk) (sq_nonneg _))
+
+/-- **Positive-definiteness (the Flat-Away core).**  With *strictly positive* weights
+the heat-trace deviation vanishes iff every smooth curvature mode vanishes — i.e.
+matching the flat `(E₈)₁` heat data (`Δ = 0`) forces the off-mark curvature to be zero
+(*flat away from the four μ₄ marks*).  The positivity of the weights `W_k = c_k(t)` is
+the v295 analytic input; this lemma is the formal `Δ = 0 ⟺ flat` step.  Combined with
+`markLocal_blockDiagonal` it closes the heat route of Flat-Away modulo that one input. -/
+theorem heatDeviation_eq_zero_iff {ι : Type*} (s : Finset ι) (W g : ι → ℝ)
+    (hW : ∀ k ∈ s, 0 < W k) :
+    heatDeviation s W g = 0 ↔ ∀ k ∈ s, g k = 0 := by
+  unfold heatDeviation
+  rw [Finset.sum_eq_zero_iff_of_nonneg
+        (fun k hk => mul_nonneg (hW k hk).le (sq_nonneg _))]
+  refine ⟨fun h k hk => ?_, fun h k hk => ?_⟩
+  · have hk0 : W k * (g k) ^ 2 = 0 := h k hk
+    have hsq : (g k) ^ 2 = 0 := (mul_eq_zero.mp hk0).resolve_left (hW k hk).ne'
+    rw [pow_two] at hsq
+    exact mul_self_eq_zero.mp hsq
+  · rw [h k hk]; ring
+
 /-! ### Sanity: the clock has order 4 on the character classes -/
 
 /-- The clock character is genuinely `ℤ/4`: the four residues `0,1,2,3` are

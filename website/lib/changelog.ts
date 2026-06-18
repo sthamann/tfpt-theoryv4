@@ -47,6 +47,246 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "Flat-Away heat route made exact + Lean-formalised, "
+      },
+      {
+        "k": "c",
+        "v": "v295"
+      },
+      {
+        "k": "t",
+        "v": " / "
+      },
+      {
+        "k": "c",
+        "v": "FORM.FLATAWAY.01"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v295_flataway_a2_exact.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "FLATAWAY.A2.01"
+            },
+            {
+              "k": "t",
+              "v": ")"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " upgrades the "
+        },
+        {
+          "k": "c",
+          "v": "v292"
+        },
+        {
+          "k": "t",
+          "v": " positive-definiteness from a numerical scan to a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "proof"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the first variation of "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{Tr}\\,e^{-t\\Lambda}"
+        },
+        {
+          "k": "t",
+          "v": " vanishes (zero-mean off-mark curvature, Gauss-Bonnet), and since "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda\\mapsto\\mathrm{Tr}\\,e^{-t\\Lambda}"
+        },
+        {
+          "k": "t",
+          "v": " is convex (Klein/Peierls), "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon{=}0"
+        },
+        {
+          "k": "t",
+          "v": " is the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "global"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " minimum — so "
+        },
+        {
+          "k": "m",
+          "v": "\\Delta\\mathrm{Tr}\\ge0"
+        },
+        {
+          "k": "t",
+          "v": " for all deformations, "
+        },
+        {
+          "k": "m",
+          "v": "=0"
+        },
+        {
+          "k": "t",
+          "v": " iff "
+        },
+        {
+          "k": "m",
+          "v": "f=0"
+        },
+        {
+          "k": "t",
+          "v": ". The exact second-order coefficient is the divided-difference kernel of "
+        },
+        {
+          "k": "m",
+          "v": "e^{-tx}"
+        },
+        {
+          "k": "t",
+          "v": " (Duhamel), validated to rel. err "
+        },
+        {
+          "k": "m",
+          "v": "<10^{-6}"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Lean "
+            },
+            {
+              "k": "c",
+              "v": "FORM.FLATAWAY.01"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "SeamDeckClosure.lean"
+        },
+        {
+          "k": "t",
+          "v": " Part 5): the formal "
+        },
+        {
+          "k": "m",
+          "v": "\\Delta{=}0\\Leftrightarrow"
+        },
+        {
+          "k": "t",
+          "v": " flat step — a positive-weighted sum of squares is positive-definite ("
+        },
+        {
+          "k": "c",
+          "v": "heatDeviation_eq_zero_iff"
+        },
+        {
+          "k": "t",
+          "v": "); built and axiom-checked (only "
+        },
+        {
+          "k": "c",
+          "v": "propext"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "Classical.choice"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "Quot.sound"
+        },
+        {
+          "k": "t",
+          "v": "). So the heat route's positive-definiteness is now both analytically proved and machine-formalised; only the single external fact (the seam fixes "
+        },
+        {
+          "k": "m",
+          "v": "a_2"
+        },
+        {
+          "k": "t",
+          "v": ") remains. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "build green, "
+        },
+        {
+          "k": "c",
+          "v": "AUDIT OK"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-18",
+    "dateLabel": "2026-06-18",
+    "heading": [
+      {
+        "k": "t",
         "v": "Flat-Away attacked on all three routes, "
       },
       {
