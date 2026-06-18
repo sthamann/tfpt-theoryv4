@@ -652,6 +652,21 @@ $=$\texttt{QGEO.SYM.01}. \mE\ \textbf{the two open lemmas coincide} --- both say
 $(E_8)_1$ at $\tau{=}i$'' (\vref{v282}), so the canonical equivalence between the raw seam KMS/DtN state and the
 holomorphic $(E_8)_1$ net at $\tau{=}i$ is the \emph{single} \mO\ statement that closes both
 (\texttt{QGEO.ROUTEI.01}/\texttt{QGAMB.ROUTEII.01}).
+\par\smallskip\noindent\textbf{The Seam Equivalence Theorem, named and firewalled
+(\veri{v286\_seam\_equivalence\_contract.py}).} That single statement is now the named target
+\texttt{SEAM.EQUIV.01}: \emph{the raw RP seam state reconstructs canonically the holomorphic $(E_8)_1$ boundary
+net at the $\tau{=}i$ pillowcase} (respecting the DtN, the KMS flow, the $\mu_4$ deck, the Q-system extension,
+$\det K{=}1$ and the $(E_8)_1$ character). \mE\ the contract types four objects and six arrows --- two closed
+(the two routes), one conditional (\vref{v282}), one open Gral --- and enforces an \emph{import firewall}: no
+Route-i module imports any Route-ii module or vice versa, so the two routes can converge only through
+\texttt{SEAM.EQUIV.01} (this kills the ``$E_8$ smuggled into the geometry and pulled back out'' attack). The two
+proof routes are then attacked directly: \mE\ Route A (AQFT, \veri{v287\_free\_rp\_bulk\_to\_holomorphic\_boundary.py})
+reduces the Gral to \emph{one} standard theorem, ``invertible (SRE) Gaussian bulk $\Rightarrow$ single-sector
+boundary'' (4/5 lemmas discharged); and \mE\ Route B (DtN, \veri{v288\_full\_l2\_subprincipal\_z4.py})
+\emph{proves} the full-$L^2$ lift of the sub-principal $\mathbb{Z}_4$ block-diagonality (a mark-sourced curvature
+has Fourier support only on $m\equiv0\ (\mathrm{mod}\ 4)$, so $[\rho,\Lambda]{=}0$ on all of $L^2$), shrinking the
+residual to the single sharper question ``why is the raw seam sub-principal term mark-local?''
+(\texttt{SEAM.EQUIV.A01}/\texttt{SEAM.EQUIV.B01}).
 \par\smallskip\noindent\textbf{One surface for seam, carrier and lattice: the Kummer/K3
 (\veri{v260\_k3\_kummer\_unification.py}).} The pillowcase is the elliptic-involution quotient
 $T^2_{\tau=i}/(z{\mapsto}{-}z)$, its four marks the four $2$-torsion fixed points; squaring the construction

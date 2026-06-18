@@ -59,6 +59,27 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-18 (closing sprint: the Seam Equivalence Theorem named + both routes attacked, \texttt{v286}--\texttt{v288})}
+\begin{itemize}
+\item \textbf{\texttt{v286\_seam\_equivalence\_contract.py} (\texttt{SEAM.EQUIV.01})} names the one open theorem
+  --- \emph{the raw RP seam state is the holomorphic $(E_8)_1$ net at $\tau{=}i$} --- and concentrates the whole
+  open structure on it: four objects, six arrows (2 closed, 1 conditional \vref{v282}, 1 open Gral), an
+  \textbf{import firewall} proving the two routes (\vref{v276}/\vref{v280}/\vref{v284} vs
+  \vref{v277}/\vref{v281}/\vref{v285}) never import each other (no `$E_8$ into the geometry and back'
+  circularity), and an exact-label taxonomy. Writes \texttt{seam\_equivalence.json}.
+\item \textbf{\texttt{v287\_free\_rp\_bulk\_to\_holomorphic\_boundary.py} (\texttt{SEAM.EQUIV.A01})}: Route A
+  (AQFT) dependency checker --- the 5-lemma chain RP$+$gap$+$chirality$+$Gaussian$+$invertible
+  $\Rightarrow\mu{=}1\Rightarrow$ holomorphic $\Rightarrow(E_8)_1$ is logically complete \emph{modulo one}
+  standard theorem: \emph{invertible (SRE) Gaussian bulk $\Rightarrow$ single-sector boundary} (the AQFT form
+  of $\det K{=}1$). 4/5 discharged.
+\item \textbf{\texttt{v288\_full\_l2\_subprincipal\_z4.py} (\texttt{SEAM.EQUIV.B01})}: Route B (DtN) ---
+  \emph{proves} the full-$L^2$ lift of the sub-principal $\mathbb{Z}_4$ block-diagonality (a mark-sourced
+  curvature has Fourier support only on $m\equiv0$ mod 4, so $\Lambda=|n|+M_f$ commutes with
+  $\rho=\mathrm{diag}(i^n)$ on the full operator, $\|[\rho,\Lambda]\|\sim2{\times}10^{-15}$; generic curvature
+  $\to 4.44$), lifting \vref{v201}/\vref{v284} to $L^2$. The residual shrinks to one sharper question: why is the
+  raw seam sub-principal term mark-local? \mE\ build green, \texttt{AUDIT OK}.
+\end{itemize}
+
 \subsection*{2026-06-18 (the two proof routes decomposed: Route (i) and Route (ii) into lemma chains, \texttt{v284}/\texttt{v285})}
 \begin{itemize}
 \item \textbf{\texttt{v284\_route\_i\_rp\_uniqueness.py} (\texttt{QGEO.ROUTEI.01})} turns Route (i) (RP-state

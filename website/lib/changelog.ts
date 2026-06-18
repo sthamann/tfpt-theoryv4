@@ -47,6 +47,420 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "closing sprint: the Seam Equivalence Theorem named + both routes attacked, "
+      },
+      {
+        "k": "c",
+        "v": "v286"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v288"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v286_seam_equivalence_contract.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EQUIV.01"
+            },
+            {
+              "k": "t",
+              "v": ")"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " names the one open theorem — "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "the raw RP seam state is the holomorphic "
+            },
+            {
+              "k": "m",
+              "v": "(E_8)_1"
+            },
+            {
+              "k": "t",
+              "v": " net at "
+            },
+            {
+              "k": "m",
+              "v": "\\tau{=}i"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " — and concentrates the whole open structure on it: four objects, six arrows (2 closed, 1 conditional "
+        },
+        {
+          "k": "c",
+          "v": "v282"
+        },
+        {
+          "k": "t",
+          "v": ", 1 open Gral), an "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "import firewall"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " proving the two routes ("
+        },
+        {
+          "k": "c",
+          "v": "v276"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v280"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v284"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "c",
+          "v": "v277"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v281"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v285"
+        },
+        {
+          "k": "t",
+          "v": ") never import each other (no `"
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " into the geometry and back' circularity), and an exact-label taxonomy. Writes "
+        },
+        {
+          "k": "c",
+          "v": "seam_equivalence.json"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v287_free_rp_bulk_to_holomorphic_boundary.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EQUIV.A01"
+            },
+            {
+              "k": "t",
+              "v": ")"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": Route A (AQFT) dependency checker — the 5-lemma chain RP"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": "gap"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": "chirality"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": "Gaussian"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": "invertible "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow\\mu{=}1\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " holomorphic "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " is logically complete "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "modulo one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " standard theorem: "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "invertible (SRE) Gaussian bulk "
+            },
+            {
+              "k": "m",
+              "v": "\\Rightarrow"
+            },
+            {
+              "k": "t",
+              "v": " single-sector boundary"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (the AQFT form of "
+        },
+        {
+          "k": "m",
+          "v": "\\det K{=}1"
+        },
+        {
+          "k": "t",
+          "v": "). 4/5 discharged."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v288_full_l2_subprincipal_z4.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EQUIV.B01"
+            },
+            {
+              "k": "t",
+              "v": ")"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": Route B (DtN) — "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "proves"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the full-"
+        },
+        {
+          "k": "m",
+          "v": "L^2"
+        },
+        {
+          "k": "t",
+          "v": " lift of the sub-principal "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb{Z}_4"
+        },
+        {
+          "k": "t",
+          "v": " block-diagonality (a mark-sourced curvature has Fourier support only on "
+        },
+        {
+          "k": "m",
+          "v": "m\\equiv0"
+        },
+        {
+          "k": "t",
+          "v": " mod 4, so "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda=|n|+M_f"
+        },
+        {
+          "k": "t",
+          "v": " commutes with "
+        },
+        {
+          "k": "m",
+          "v": "\\rho=\\mathrm{diag}(i^n)"
+        },
+        {
+          "k": "t",
+          "v": " on the full operator, "
+        },
+        {
+          "k": "m",
+          "v": "\\|[\\rho,\\Lambda]\\|\\sim2{\\times}10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": "; generic curvature "
+        },
+        {
+          "k": "m",
+          "v": "\\to 4.44"
+        },
+        {
+          "k": "t",
+          "v": "), lifting "
+        },
+        {
+          "k": "c",
+          "v": "v201"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v284"
+        },
+        {
+          "k": "t",
+          "v": " to "
+        },
+        {
+          "k": "m",
+          "v": "L^2"
+        },
+        {
+          "k": "t",
+          "v": ". The residual shrinks to one sharper question: why is the raw seam sub-principal term mark-local? "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "build green, "
+        },
+        {
+          "k": "c",
+          "v": "AUDIT OK"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-18",
+    "dateLabel": "2026-06-18",
+    "heading": [
+      {
+        "k": "t",
         "v": "the two proof routes decomposed: Route (i) and Route (ii) into lemma chains, "
       },
       {

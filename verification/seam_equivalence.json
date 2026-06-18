@@ -1,0 +1,76 @@
+{
+  "theorem": "SEAM.EQUIV.01",
+  "statement": "the raw RP seam state reconstructs canonically the holomorphic (E8)_1 boundary net at the tau=i pillowcase",
+  "short_form": "the raw seam is (E8)_1 at tau=i",
+  "objects": {
+    "RawRPSeam": "RP data + gap + chirality + carrier clock (the primitive)",
+    "FlatTauIPillowcaseDtN": "the geometry route image (flat tau=i Steklov DtN)",
+    "HolomorphicE8Net": "the AQFT/RCFT route image (holomorphic (E8)_1 net)",
+    "SREKitaevE8Phase": "the topological phase (short-range-entangled, det K=1)"
+  },
+  "arrows": [
+    {
+      "from": "RawRPSeam",
+      "to": "FlatTauIPillowcaseDtN",
+      "status": "open",
+      "label": "Open Selection",
+      "evidence": "the geometry premise"
+    },
+    {
+      "from": "FlatTauIPillowcaseDtN",
+      "to": "omega o rho = omega",
+      "status": "closed",
+      "label": "Numerical+Formal Exact",
+      "evidence": "Route i: v276/v280 + Lean FORM.QGEO.03; v284"
+    },
+    {
+      "from": "RawRPSeam",
+      "to": "SREKitaevE8Phase",
+      "status": "open",
+      "label": "Open Selection",
+      "evidence": "the SRE premise"
+    },
+    {
+      "from": "SREKitaevE8Phase",
+      "to": "HolomorphicE8Net",
+      "status": "closed",
+      "label": "Conditional+Formal Exact",
+      "evidence": "Route ii: v235/v277/v281; v285"
+    },
+    {
+      "from": "FlatTauIPillowcaseDtN",
+      "to": "HolomorphicE8Net @ tau=i",
+      "status": "conditional",
+      "label": "Conditional Exact",
+      "evidence": "v282: chi_E8(i)=12, the order-4 CM point = the (E8)_1 modulus"
+    },
+    {
+      "from": "RawRPSeam",
+      "to": "HolomorphicE8Net",
+      "status": "gral",
+      "label": "Open Selection",
+      "evidence": "SEAM.EQUIV.01 -- the one open arrow; = both open arrows above (v284/v285 coincide)"
+    }
+  ],
+  "import_firewall": {
+    "route_i": [
+      "v276_qgeo_flat_closes_commutator",
+      "v280_pillowcase_steklov",
+      "v284_route_i_rp_uniqueness"
+    ],
+    "route_ii": [
+      "v277_seam_calderon_e8_match",
+      "v281_holomorphy_modular_data",
+      "v285_route_ii_seam_condensation"
+    ],
+    "i_imports_ii": [],
+    "ii_imports_i": [],
+    "clean": true
+  },
+  "the_one_open_arrow": "free Gaussian RP bulk => holomorphic single-sector boundary net",
+  "not_closed_by_this": [
+    "v_geo (metrology primitive)",
+    "F_transfer (downstream)",
+    "QG.AMB.01 (nonperturbative ambient measure)"
+  ]
+}
