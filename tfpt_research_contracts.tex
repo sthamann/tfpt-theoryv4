@@ -693,6 +693,19 @@ sub-principal symbol vanishes away from the four branch marks}, with three indep
 spectral-rigidity and heat-kernel (the flat seam is the \emph{unique} spectral/heat match of the smooth
 $\mathbb{Z}_4$ family) and RP-energy/Troyanov (the constant-curvature minimiser) --- closing any one of which
 closes Route B.
+\par\smallskip\noindent\textbf{All three routes attacked; Flat-Away reduced to one selection principle.} Each
+route is now carried to its precise reduction: \mE\ the \emph{heat} route
+(\veri{v292\_flataway\_heat\_reduction.py}) shows the heat-trace deviation
+$\Delta\mathrm{Tr}(e^{-t\Lambda})=c(t)\varepsilon^2+O(\varepsilon^4)$ is a positive-definite quadratic form in
+the off-mark curvature (leading invariant $\|f\|_{L^2}$), so Flat-Away $\Leftarrow$ ``the seam fixes the $a_2$
+heat coefficient''; \mE\ the \emph{spectral} route (\veri{v293\_flataway\_spectral\_hessian.py}) lifts this to
+the full smooth-$\mathbb{Z}_4$ space --- mode $4k$ splits the degenerate Steklov level $|2k|$, the mismatch
+Hessian over $\{4,8,12\}$ is positive-definite ($\{0.497,0.500,0.503\}$), so the flat seam is a \emph{strict}
+isolated minimum (answering ``only one direction''); and \mE/\mC\ the \emph{variational} route
+(\veri{v294\_flataway\_rp\_energy.py}) gives, with the rigid mark divisor and Troyanov uniqueness, the flat cone
+metric as the unique strictly-convex curvature-energy minimiser. The three converge on \emph{one} external
+selection principle (fix $a_2$ / pin the Steklov spectrum / realise the energy-minimiser); closing any one
+closes Route B, and with Route A's holomorphy half, \texttt{SEAM.EQUIV.01}.
 \par\smallskip\noindent\textbf{One surface for seam, carrier and lattice: the Kummer/K3
 (\veri{v260\_k3\_kummer\_unification.py}).} The pillowcase is the elliptic-involution quotient
 $T^2_{\tau=i}/(z{\mapsto}{-}z)$, its four marks the four $2$-torsion fixed points; squaring the construction

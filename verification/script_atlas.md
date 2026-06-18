@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`289` registered scripts · `342` ledger claims · `10` clusters.
+`292` registered scripts · `345` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -202,7 +202,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v75_upoint_to_vgeo** [E/O] `FLAV.UPOINT.01` — Gate 1 complete: U_point → v_geo (ratios + Grand Mass Volume); same anchor as 1/G
   - deps: v71_simple_r_bridge, v20_lepton_c_derivation, v46_grand_mass_volume, v68 · cited: origin theory, research contracts
 
-### `frontier` — Open gate (G_metric) & the frontier  (48 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (51 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -301,6 +301,12 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v288_full_l2_subprincipal_z4, v289_marklocal_raw, v291_flataway_contract, v201_seam_subprincipal_marks · cited: research contracts
 - **v291_flataway_contract** [E/C/O] `FLATAWAY.RP.01` — the Flat-Away lemma as its own named mini-theorem with three proof routes opened by v290. LEMMA [O]: given RawRPSeam with gap, chirality and the four μ4 marks, the smooth curvature
   - deps: v290_z4_smooth_curvature_adversary, v289_marklocal_raw, v288_full_l2_subprincipal_z4, v286_seam_equivalence_contract, v284_route_i_rp_uniqueness · cited: research contracts
+- **v292_flataway_heat_reduction** [E/O] `FLATAWAY.HEAT.01` — the Heat-Kernel route made precise: reduces Flat-Away to ONE named spectral invariant. [E] the heat-trace deviation ΔTr(e^{−tΛ}) = c(t)ε²+O(ε⁴) is a positive-definite quadratic for
+  - deps: v291_flataway_contract, v290_z4_smooth_curvature_adversary, v288_full_l2_subprincipal_z4, v289_marklocal_raw · cited: research contracts
+- **v293_flataway_spectral_hessian** [E/O] `FLATAWAY.SPEC.01` — the Spectral-Rigidity route upgraded from one direction (v291) to the FULL smooth-Z4 space. [E] splitting mechanism: the degenerate flat Steklov level |n| is split by mode 4k at |n
+  - deps: v291_flataway_contract, v292_flataway_heat_reduction, v290_z4_smooth_curvature_adversary, v288_full_l2_subprincipal_z4 · cited: research contracts
+- **v294_flataway_rp_energy** [E/C/O] `FLATAWAY.ENERGY.01` — the RP-energy / Troyanov route: the flat pillowcase is the unique constant-curvature minimiser at the fixed mark divisor. [E] prescribed divisor + Gauss-Bonnet: S² with 4 cone angl
+  - deps: v291_flataway_contract, v292_flataway_heat_reduction, v293_flataway_spectral_hessian, v284_route_i_rp_uniqueness · cited: research contracts
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (160 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -646,9 +652,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v280_pillowcase_steklov** — `QGEO.STEKLOV.01`
-- **v281_holomorphy_modular_data** — `QGAMB.MODULAR.01`
-- **v282_e8_tau_i_unification** — `QGAMB.UNIFY.01`
 - **v283_live_killtest_scorecard** — `PRED.LIVE.01`
 - **v284_route_i_rp_uniqueness** — `QGEO.ROUTEI.01`
 - **v285_route_ii_seam_condensation** — `QGAMB.ROUTEII.01`
@@ -658,4 +661,7 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v289_marklocal_raw** — `MARKLOCAL.RAW.01`
 - **v290_z4_smooth_curvature_adversary** — `SEAM.ADVERSARY.01`
 - **v291_flataway_contract** — `FLATAWAY.RP.01`
+- **v292_flataway_heat_reduction** — `FLATAWAY.HEAT.01`
+- **v293_flataway_spectral_hessian** — `FLATAWAY.SPEC.01`
+- **v294_flataway_rp_energy** — `FLATAWAY.ENERGY.01`
 

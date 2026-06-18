@@ -202,6 +202,11 @@ function ClosingCondition() {
         <span className="font-mono">Flat-Away</span> is now named as its own mini-theorem (v291, FLATAWAY.RP.01)
         with three independent attack routes — spectral-rigidity, heat-kernel and RP-energy/Troyanov (the flat
         seam is the <em>unique</em> spectral match of the smooth ℤ₄ family). Closing any one closes Route B.
+        All three are now carried to a precise reduction: the heat-trace deviation is a positive-definite
+        quadratic form ⟹ fix one coefficient a₂ (v292); the spectral-mismatch Hessian over the full smooth-ℤ₄
+        space is positive-definite ⟹ flat is a strict isolated minimum (v293); and Troyanov uniqueness makes
+        the flat cone metric the unique strictly-convex curvature-energy minimiser (v294). The three converge
+        on one external selection principle for the flat metric.
       </p>
       <p className="mt-3 rounded-lg border border-slate-700/40 bg-slate-950/40 p-3 text-xs leading-relaxed text-slate-300">
         <span className="font-semibold text-slate-100">4D-QFT fork policy</span> (frozen decision tree, v265):

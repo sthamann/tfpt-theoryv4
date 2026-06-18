@@ -1,0 +1,53 @@
+[
+  { "from": 0.5, "to": 4.0, "text": "This is the fine-structure constant." },
+  { "from": 4.0, "to": 8.2, "text": "Physics measures it. TFPT claims it's the unique root of a short equation —" },
+  { "from": 8.2, "to": 11.2, "text": "fixed by two inputs, and nothing else." },
+  { "from": 11.2, "to": 14.8, "text": "Big claim. So I'll also show you exactly where it could break." },
+
+  { "from": 15.3, "to": 19.2, "text": "TFPT isn't another table of nice numbers — it's a discrete compiler." },
+  { "from": 19.2, "to": 24.0, "text": "Two operative inputs go in: a boundary constant, c₃ = 1/(8π)," },
+  { "from": 24.0, "to": 27.6, "text": "and a five-fold carrier, g_car = 5." },
+  { "from": 27.6, "to": 32.6, "text": "From those, one structure is built: the carrier makes the D₅ side," },
+  { "from": 32.6, "to": 37.0, "text": "four marked boundary points make the A₃ family geometry," },
+  { "from": 37.0, "to": 41.6, "text": "and the μ₄ glue closes them into E₈." },
+  { "from": 41.6, "to": 46.8, "text": "And this defuses the usual no-go theorems: E₈ is not a gauge group of nature." },
+  { "from": 46.8, "to": 50.8, "text": "It's the audit hull — the consistency container." },
+  { "from": 50.8, "to": 55.8, "text": "The Standard Model is a readout after projection, not 'everything is E₈.'" },
+
+  { "from": 56.3, "to": 60.6, "text": "What comes out splits cleanly. First, the discrete core —" },
+  { "from": 60.6, "to": 64.0, "text": "exact, or machine-checked:" },
+  { "from": 64.0, "to": 69.0, "text": "three families, hypercharges, the flavor matrix, sixteen carrier states," },
+  { "from": 69.0, "to": 73.6, "text": "the recurring 2-3-5, the Coxeter number 30, the 240 roots of E₈." },
+  { "from": 73.6, "to": 78.6, "text": "Then the boundary side: from c₃ comes one seed, φ₀ —" },
+  { "from": 78.6, "to": 83.6, "text": "and from it: the Cabibbo structure, the electromagnetic fixed point, the scale grammar." },
+  { "from": 83.6, "to": 89.6, "text": "The fine-structure constant lands as the unique positive root of a cubic: 137.0359992 —" },
+  { "from": 89.6, "to": 93.0, "text": "1.9 sigma from the measured value." },
+  { "from": 93.0, "to": 96.8, "text": "Not a fit. A forced root." },
+
+  { "from": 97.3, "to": 101.0, "text": "The Standard-Model part compresses hard." },
+  { "from": 101.0, "to": 106.0, "text": "Masses and mixings don't come from free Yukawa numbers —" },
+  { "from": 106.0, "to": 110.6, "text": "they come from one texture: a seed, a fixed flavor matrix, integer word-lengths." },
+  { "from": 110.6, "to": 115.0, "text": "The CKM angles and the leading CP phase fall out of the same holonomy;" },
+  { "from": 115.0, "to": 118.0, "text": "the reactor angle θ₁₃ comes straight from the seed." },
+  { "from": 118.0, "to": 122.8, "text": "Absolute masses run through one typed bridge, v_geo, and standard RG. Dimensional analysis with a seatbelt." },
+
+  { "from": 123.3, "to": 126.6, "text": "Now the honest part — how do you kill it?" },
+  { "from": 126.6, "to": 131.6, "text": "The predictions were frozen in a blind registry before any comparison — machine-enforced." },
+  { "from": 131.6, "to": 135.0, "text": "sin²θ₁₂ ≈ 0.3067.   sin²θ₁₃ ≈ 0.0231." },
+  { "from": 135.0, "to": 138.6, "text": "α⁻¹ as a fixed point. A small tensor ratio r between 0.0033 and 0.0048." },
+  { "from": 138.6, "to": 142.0, "text": "Normal neutrino ordering, with a low mass floor." },
+  { "from": 142.0, "to": 147.2, "text": "The closed core predictions sit within about one sigma today — every tension tracked in the open." },
+  { "from": 147.2, "to": 153.6, "text": "The near-term kill tests are real: neutrino mass from DESI and CMB-S4, and proton decay at Hyper-Kamiokande." },
+
+  { "from": 154.3, "to": 157.6, "text": "How is this kept honest?" },
+  { "from": 157.6, "to": 162.6, "text": "Every statement carries a status — exact, conditional, open, or kill-test —" },
+  { "from": 162.6, "to": 166.2, "text": "in one machine-readable ledger: the single source of truth." },
+  { "from": 166.2, "to": 172.8, "text": "And a red team whose job is to break the theory, not confirm it — or math becomes numerology with better typography." },
+
+  { "from": 173.3, "to": 176.6, "text": "So what's actually open?" },
+  { "from": 176.6, "to": 180.2, "text": "The discrete compiler is structurally closed." },
+  { "from": 180.2, "to": 185.6, "text": "The one hard knot is a single theorem: the raw, reflection-positive seam state must be —" },
+  { "from": 185.6, "to": 189.2, "text": "canonically — the holomorphic (E₈)₁ net at τ = i." },
+  { "from": 189.2, "to": 193.0, "text": "Both proof routes meet there. The sharpest remaining piece has a name: Flat-Away." },
+  { "from": 193.0, "to": 198.0, "text": "Close it, and the structural core is done. What stays are deliberately typed interfaces." }
+]

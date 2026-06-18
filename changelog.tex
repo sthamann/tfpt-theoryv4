@@ -59,6 +59,26 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-18 (Flat-Away attacked on all three routes, \texttt{v292}--\texttt{v294})}
+\begin{itemize}
+\item \textbf{\texttt{v292\_flataway\_heat\_reduction.py} (\texttt{FLATAWAY.HEAT.01})}: the heat route, made
+  precise. The heat-trace deviation $\Delta\mathrm{Tr}(e^{-t\Lambda})=c(t)\varepsilon^2+O(\varepsilon^4)$ is a
+  \emph{positive-definite} quadratic form in the off-mark curvature ($c_k(t)>0$ for every $\mathbb{Z}_4$ mode,
+  positive on all combinations), leading invariant $\|f\|_{L^2}$ --- so Flat-Away reduces to the single fact
+  ``the seam fixes the $a_2$ heat coefficient''.
+\item \textbf{\texttt{v293\_flataway\_spectral\_hessian.py} (\texttt{FLATAWAY.SPEC.01})}: the spectral route,
+  upgraded from one direction to the \emph{full} smooth-$\mathbb{Z}_4$ space. Mode $4k$ splits the degenerate
+  Steklov level $|2k|$ at first order; the Hessian of the spectral mismatch over modes $\{4,8,12\}$ is
+  positive-definite (eigenvalues $\{0.497,0.500,0.503\}$), so the flat seam is a strict isolated minimum --- the
+  ``only one direction'' objection is answered.
+\item \textbf{\texttt{v294\_flataway\_rp\_energy.py} (\texttt{FLATAWAY.ENERGY.01})}: the variational route. With
+  the rigid mark divisor (4 cone angles $\pi$, Gauss-Bonnet $4\pi$), Troyanov uniqueness gives a unique flat
+  cone metric, and the curvature energy $\int f^2$ is strictly convex (Hessian $2\pi I$) with a unique
+  minimiser --- Flat-Away reduces to ``RP$+$gap realises the energy-minimiser''. The three routes converge on
+  one selection principle for the flat metric; closing any one closes Route B. \mE\ build green,
+  \texttt{AUDIT OK}.
+\end{itemize}
+
 \subsection*{2026-06-18 (Route-B red-team: the smooth $\mathbb{Z}_4$ adversary + Flat-Away as a mini-theorem, \texttt{v290}--\texttt{v291})}
 \begin{itemize}
 \item \textbf{\texttt{v290\_z4\_smooth\_curvature\_adversary.py} (\texttt{SEAM.ADVERSARY.01})} is the honest

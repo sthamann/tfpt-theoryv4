@@ -47,6 +47,273 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "Flat-Away attacked on all three routes, "
+      },
+      {
+        "k": "c",
+        "v": "v292"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v294"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v292_flataway_heat_reduction.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "FLATAWAY.HEAT.01"
+            },
+            {
+              "k": "t",
+              "v": ")"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the heat route, made precise. The heat-trace deviation "
+        },
+        {
+          "k": "m",
+          "v": "\\Delta\\mathrm{Tr}(e^{-t\\Lambda})=c(t)\\varepsilon^2+O(\\varepsilon^4)"
+        },
+        {
+          "k": "t",
+          "v": " is a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "positive-definite"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " quadratic form in the off-mark curvature ("
+        },
+        {
+          "k": "m",
+          "v": "c_k(t)>0"
+        },
+        {
+          "k": "t",
+          "v": " for every "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb{Z}_4"
+        },
+        {
+          "k": "t",
+          "v": " mode, positive on all combinations), leading invariant "
+        },
+        {
+          "k": "m",
+          "v": "\\|f\\|_{L^2}"
+        },
+        {
+          "k": "t",
+          "v": " — so Flat-Away reduces to the single fact “the seam fixes the "
+        },
+        {
+          "k": "m",
+          "v": "a_2"
+        },
+        {
+          "k": "t",
+          "v": " heat coefficient”."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v293_flataway_spectral_hessian.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "FLATAWAY.SPEC.01"
+            },
+            {
+              "k": "t",
+              "v": ")"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the spectral route, upgraded from one direction to the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "full"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " smooth-"
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb{Z}_4"
+        },
+        {
+          "k": "t",
+          "v": " space. Mode "
+        },
+        {
+          "k": "m",
+          "v": "4k"
+        },
+        {
+          "k": "t",
+          "v": " splits the degenerate Steklov level "
+        },
+        {
+          "k": "m",
+          "v": "|2k|"
+        },
+        {
+          "k": "t",
+          "v": " at first order; the Hessian of the spectral mismatch over modes "
+        },
+        {
+          "k": "m",
+          "v": "\\{4,8,12\\}"
+        },
+        {
+          "k": "t",
+          "v": " is positive-definite (eigenvalues "
+        },
+        {
+          "k": "m",
+          "v": "\\{0.497,0.500,0.503\\}"
+        },
+        {
+          "k": "t",
+          "v": "), so the flat seam is a strict isolated minimum — the “only one direction” objection is answered."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v294_flataway_rp_energy.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "FLATAWAY.ENERGY.01"
+            },
+            {
+              "k": "t",
+              "v": ")"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the variational route. With the rigid mark divisor (4 cone angles "
+        },
+        {
+          "k": "m",
+          "v": "\\pi"
+        },
+        {
+          "k": "t",
+          "v": ", Gauss-Bonnet "
+        },
+        {
+          "k": "m",
+          "v": "4\\pi"
+        },
+        {
+          "k": "t",
+          "v": "), Troyanov uniqueness gives a unique flat cone metric, and the curvature energy "
+        },
+        {
+          "k": "m",
+          "v": "\\int f^2"
+        },
+        {
+          "k": "t",
+          "v": " is strictly convex (Hessian "
+        },
+        {
+          "k": "m",
+          "v": "2\\pi I"
+        },
+        {
+          "k": "t",
+          "v": ") with a unique minimiser — Flat-Away reduces to “RP"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": "gap realises the energy-minimiser”. The three routes converge on one selection principle for the flat metric; closing any one closes Route B. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "build green, "
+        },
+        {
+          "k": "c",
+          "v": "AUDIT OK"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-18",
+    "dateLabel": "2026-06-18",
+    "heading": [
+      {
+        "k": "t",
         "v": "Route-B red-team: the smooth "
       },
       {
