@@ -8,9 +8,7 @@ import { SeriesMap } from "@/components/orientation/SeriesMap";
 import { PublicationOrder } from "@/components/orientation/PublicationOrder";
 import { OrientationDownload } from "@/components/orientation/OrientationDownload";
 import { SITE_VERSION } from "@/lib/version";
-
-const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://tfpt-theory.vercel.app";
+import { SITE_URL } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "TFPT in One Map — The Compiler Closure (Introduction)",

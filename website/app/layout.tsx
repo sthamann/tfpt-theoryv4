@@ -7,11 +7,9 @@ import { Footer } from "@/components/Footer";
 import { ReproducerProvider } from "@/components/Reproducer";
 import { papers } from "@/lib/papers";
 import { predictions } from "@/lib/predictions";
-import { REPO_URL } from "@/lib/utils";
+import { REPO_URL, SITE_URL } from "@/lib/utils";
 import { SITE_VERSION } from "@/lib/version";
 
-const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://tfpt-theory.vercel.app";
 const SITE_NAME = "TFPT — Topological Fixed-Point Theory";
 const SITE_DESCRIPTION =
   "Topological Fixed-Point Theory (TFPT). From two numbers, the seam constant c₃ = 1/(8π) and the carrier rank g_car = 5, a discrete compiler reads off the Standard Model, the constants (α⁻¹ = 137.0359992, 1.9σ from CODATA-2022), the flavor sector and the scale grammar. 22 falsifiable predictions, zero fitted constants; only π is irreducible.";

@@ -3,9 +3,7 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { HostileRefereeFAQ } from "@/components/HostileRefereeFAQ";
 import { FAQ_ITEMS } from "@/lib/faq";
-
-const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://tfpt-theory.vercel.app";
+import { SITE_URL } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Hostile-Referee FAQ — The Sharpest Objections, Answered",

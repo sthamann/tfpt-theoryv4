@@ -2,9 +2,7 @@ import type { MetadataRoute } from "next";
 import { papers } from "@/lib/papers";
 import { RELEASE_ASSETS } from "@/lib/release";
 import { SITE_DATE } from "@/lib/version";
-
-const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://tfpt-theory.vercel.app";
+import { SITE_URL } from "@/lib/utils";
 
 /**
  * Sitemap priority by asset path.

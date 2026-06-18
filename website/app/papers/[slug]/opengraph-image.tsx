@@ -153,7 +153,7 @@ export default async function PaperOgImage(
                 background: "#475569",
               }}
             />
-            <span style={{ display: "flex" }}>tfpt-theory.vercel.app</span>
+            <span style={{ display: "flex" }}>fixpoint-theory.com</span>
           </div>
         </div>
       </div>

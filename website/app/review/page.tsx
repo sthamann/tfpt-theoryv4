@@ -12,10 +12,7 @@ import {
 } from "lucide-react";
 import { SCRIPT_TOTAL } from "@/lib/suite";
 import { SITE_VERSION } from "@/lib/version";
-import { REPO_URL } from "@/lib/utils";
-
-const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://tfpt-theory.vercel.app";
+import { REPO_URL, SITE_URL } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Read this first — the skeptical reviewer's entry point",

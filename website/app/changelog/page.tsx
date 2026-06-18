@@ -3,11 +3,8 @@ import Link from "next/link";
 import { ArrowLeft, FileText, Github } from "lucide-react";
 import { Changelog } from "@/components/Changelog";
 import { CHANGELOG, CHANGELOG_COUNT } from "@/lib/changelog";
-import { REPO_URL } from "@/lib/utils";
+import { REPO_URL, SITE_URL } from "@/lib/utils";
 import { SITE_VERSION } from "@/lib/version";
-
-const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://tfpt-theory.vercel.app";
 
 const latest = CHANGELOG[0]?.date ?? "";
 const earliest = CHANGELOG[CHANGELOG.length - 1]?.date ?? "";

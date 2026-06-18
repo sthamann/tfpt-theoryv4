@@ -5,10 +5,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { VerificationDag } from "@/components/VerificationDag";
 import { ScriptIndex } from "@/components/ScriptIndex";
 import { SCRIPT_TOTAL } from "@/lib/suite";
-import { REPO_URL } from "@/lib/utils";
-
-const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://tfpt-theory.vercel.app";
+import { REPO_URL, SITE_URL } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Verification & Workflow — Every Number Machine-Checked",
