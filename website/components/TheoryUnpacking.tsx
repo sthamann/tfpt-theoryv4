@@ -36,14 +36,14 @@ interface UnpackingStep {
 const STEPS: UnpackingStep[] = [
   {
     id: 0,
-    badge: "Frame 1",
-    title: "The two axioms",
-    body: "Two numbers enter: the seam constant c₃ = 1/(8π) on the boundary, and a five-slot carrier g_car = 5. Nothing else — no gauge group, no families, no α — is inserted by hand.",
+    badge: "Step 1",
+    title: "Two numbers in",
+    body: "The Standard Model takes ~20 parameters as input. Here only two numbers enter: the seam constant c₃ = 1/(8π) on the boundary and a five-slot carrier g_car = 5. No gauge group, no families, no α is put in by hand — everything below is a consequence.",
     formula: "c_3 = \\tfrac{1}{8\\pi}, \\qquad g_{\\mathrm{car}} = 5",
   },
   {
     id: 1,
-    badge: "Frame 2",
+    badge: "Step 2",
     title: "The seam and its sheet",
     body: "The seam carries a ℤ₂ sheet involution. The Gauss–Bonnet normalisation of the one-sided seam sphere fixes the seam constant — only π stays continuous.",
     formula:
@@ -51,7 +51,7 @@ const STEPS: UnpackingStep[] = [
   },
   {
     id: 2,
-    badge: "Frame 3",
+    badge: "Step 3",
     title: "Carrier split → 3 + 2",
     body: "The five carrier slots split into 3 colour + 2 weak. The even-Hamming code on the slots is the D₅ half-spinor — the split is arithmetic, not assumed.",
     formula:
@@ -59,7 +59,7 @@ const STEPS: UnpackingStep[] = [
   },
   {
     id: 3,
-    badge: "Frame 4",
+    badge: "Step 4",
     title: "The 3 + 2 carrier",
     body: "The colour block (dim 3) and weak block (dim 2) carry the determinant-normalized hypercharge Y = −1/3, +1/2. The half-spinor packet is Λ^even of the carrier, dim 16.",
     formula:
@@ -67,7 +67,7 @@ const STEPS: UnpackingStep[] = [
   },
   {
     id: 4,
-    badge: "Frame 5",
+    badge: "Step 5",
     title: "Glue ⇒ E₈",
     body: "Three families and the four-puncture geometry ℙ¹∖μ₄ = A₃ glue with the D₅ spinor across the common discriminant ℤ₄: E₈ = (D₅ ⊕ A₃) + μ₄, 240 roots.",
     formula:
@@ -75,9 +75,9 @@ const STEPS: UnpackingStep[] = [
   },
   {
     id: 5,
-    badge: "Frame 6",
-    title: "The readouts + bootstrap",
-    body: "The compiler reads off α⁻¹, the flavor angles, the strong-CP null and β_rad — none fitted — and the bootstrap loop re-derives its own inputs, so the discrete core is overdetermined.",
+    badge: "Step 6",
+    title: "What the compiler reads off",
+    body: "From E₈ the compiler reads off the gauge group, three families and the hypercharges; α⁻¹ = 137.036 (1.9σ from CODATA); all nine masses, CKM and PMNS from one φ₀-ladder; the strong-CP null θ_eff = 0; and the scalaron, Λ and the cosmological readouts — about fifty status-graded results, none fitted. The bootstrap loop even re-derives the two inputs, so the discrete core is over-determined.",
     formula:
       "\\alpha^{-1}(0) = 137.035\\,999\\,217\\,\\ldots,\\;\\; \\theta_{\\mathrm{eff}} = 0",
   },
@@ -121,7 +121,7 @@ export function TheoryUnpacking() {
     >
       <header className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800/60 px-5 py-3">
         <span className="text-[11px] font-semibold uppercase tracking-widest text-blue-300/80">
-          Theory unpacking · how TFPT reconstructs reality, in 6 frames
+          How the compiler works · two axioms → E₈ → the observables, in 6 steps
         </span>
         <div className="flex items-center gap-1.5">
           <button

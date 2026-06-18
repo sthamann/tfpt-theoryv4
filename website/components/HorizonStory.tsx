@@ -145,7 +145,7 @@ export function HorizonStory() {
         <SectionHeader
           id="horizon-story-heading"
           eyebrow="Seam = horizon"
-          title="Put a black hole into the bulk — the grammar answers"
+          title="A black hole in the bulk: every coefficient lands on a compiler atom"
           description="A structure test with zero free parameters: write classical black-hole mechanics inside the de Sitter bulk in seam units, and every coefficient lands on a compiler atom that is already load-bearing elsewhere. Machine-checked in v101/v102; the carrier-in-the-bulk reading is typed [C]."
         />
         <div className="mt-10 grid gap-6 lg:grid-cols-2">

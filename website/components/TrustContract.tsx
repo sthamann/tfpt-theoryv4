@@ -49,7 +49,7 @@ export function TrustContract() {
                 id="trust-contract-heading"
                 className="font-serif text-lg font-semibold text-slate-50"
               >
-                Every claim has a grade. The ledger wins.
+                Every claim carries a status grade, decided by one ledger
               </h2>
               <p className="mt-1 max-w-xl text-sm leading-relaxed text-slate-400">
                 Read this as a checkable research artifact, not a landing page.

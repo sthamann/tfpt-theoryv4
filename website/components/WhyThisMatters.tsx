@@ -111,9 +111,9 @@ export function WhyThisMatters() {
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
-          eyebrow="Why this matters"
-          title="The Standard Model works — but mostly by being told the answers"
-          description="It takes roughly twenty numbers as input and fits the flavor sector by hand. It does not say why there are three families, why the hypercharges are what they are, or why the strong-CP phase is essentially zero. TFPT asks whether these share one boundary origin — and answers with a status-graded derivation, not a fit."
+          eyebrow="Derived vs. fitted"
+          title="The Standard Model takes ~20 numbers as input; TFPT derives the structure"
+          description="The Standard Model takes roughly twenty parameters as input and fits the flavor sector by hand. It does not say why there are three families, why the hypercharges take the values they do, or why the strong-CP phase is essentially zero. TFPT asks whether these share one boundary origin — and answers with a status-graded derivation, not a fit."
         />
 
         <motion.div
