@@ -47,6 +47,201 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "Zenodo release 5.2 (rev 191) — the perturbative 4D-QFT layer + scale closure, v269–v275"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Published to Zenodo."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Version "
+        },
+        {
+          "k": "c",
+          "v": "5.2 (rev 191)"
+        },
+        {
+          "k": "t",
+          "v": " of the ten-PDF document set was published as a new version of the TFPT deposit — record "
+        },
+        {
+          "k": "c",
+          "v": "20743347"
+        },
+        {
+          "k": "t",
+          "v": ", DOI "
+        },
+        {
+          "k": "c",
+          "v": "10.5281/zenodo.20743347"
+        },
+        {
+          "k": "t",
+          "v": ". This release carries the perturbative 4D-QFT layer (the Epstein–Glaser "
+        },
+        {
+          "k": "m",
+          "v": "S_{\\mathrm{pert}}"
+        },
+        {
+          "k": "t",
+          "v": " skeleton "
+        },
+        {
+          "k": "c",
+          "v": "v269"
+        },
+        {
+          "k": "t",
+          "v": ", the concrete one-loop quartic "
+        },
+        {
+          "k": "c",
+          "v": "v271"
+        },
+        {
+          "k": "t",
+          "v": " and gauge "
+        },
+        {
+          "k": "m",
+          "v": "\\beta"
+        },
+        {
+          "k": "t",
+          "v": "-coefficients "
+        },
+        {
+          "k": "c",
+          "v": "v273"
+        },
+        {
+          "k": "t",
+          "v": "), the complete complex PMNS matrix and leptonic CP strength "
+        },
+        {
+          "k": "c",
+          "v": "v270"
+        },
+        {
+          "k": "t",
+          "v": ", the honest absolute "
+        },
+        {
+          "k": "m",
+          "v": "\\nu"
+        },
+        {
+          "k": "t",
+          "v": "-mass-scale typing "
+        },
+        {
+          "k": "c",
+          "v": "v272"
+        },
+        {
+          "k": "t",
+          "v": ", the over-determination of the single mass anchor "
+        },
+        {
+          "k": "c",
+          "v": "v274"
+        },
+        {
+          "k": "t",
+          "v": ", and the "
+        },
+        {
+          "k": "c",
+          "v": "QG.AMB.01"
+        },
+        {
+          "k": "t",
+          "v": " obligation roadmap "
+        },
+        {
+          "k": "c",
+          "v": "v275"
+        },
+        {
+          "k": "t",
+          "v": ". Suite "
+        },
+        {
+          "k": "c",
+          "v": "273"
+        },
+        {
+          "k": "t",
+          "v": " modules (highest ID "
+        },
+        {
+          "k": "c",
+          "v": "v275"
+        },
+        {
+          "k": "t",
+          "v": "; v186/v226 skipped), Wolfram "
+        },
+        {
+          "k": "c",
+          "v": "271/271"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "run_all.py"
+        },
+        {
+          "k": "t",
+          "v": " green, "
+        },
+        {
+          "k": "c",
+          "v": "AUDIT OK"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "npm"
+        },
+        {
+          "k": "t",
+          "v": " build clean. The Zenodo description ("
+        },
+        {
+          "k": "c",
+          "v": "zenodo_description.html"
+        },
+        {
+          "k": "t",
+          "v": ") and the public website were synced in the same release."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-18",
+    "dateLabel": "2026-06-18",
+    "heading": [
+      {
+        "k": "t",
         "v": "scale + frontier round: "
       },
       {
