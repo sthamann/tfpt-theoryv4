@@ -47,6 +47,225 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "QG.AMB.01 Tier-B made concrete: the seam-Calderón "
+      },
+      {
+        "k": "m",
+        "v": "\\to(E_8)_1"
+      },
+      {
+        "k": "t",
+        "v": " match, "
+      },
+      {
+        "k": "c",
+        "v": "v277"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v277_seam_calderon_e8_match.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGAMB.TIERB.01"
+            },
+            {
+              "k": "t",
+              "v": ") reduces Tier-B to ONE bit."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the full "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " matching target is computed and matches: "
+        },
+        {
+          "k": "m",
+          "v": "c{=}8"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\det\\mathrm{Cartan}(E_8){=}1"
+        },
+        {
+          "k": "t",
+          "v": ", the holomorphic character "
+        },
+        {
+          "k": "m",
+          "v": "E_4/\\eta^8{=}j^{1/3}{=}q^{-1/3}(1{+}248q{+}\\dots)"
+        },
+        {
+          "k": "t",
+          "v": " with a single primary and exactly "
+        },
+        {
+          "k": "m",
+          "v": "248{=}\\dim E_8"
+        },
+        {
+          "k": "t",
+          "v": " weight-1 currents ("
+        },
+        {
+          "k": "m",
+          "v": "240"
+        },
+        {
+          "k": "t",
+          "v": " roots). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the discriminator is holomorphy — the "
+        },
+        {
+          "k": "m",
+          "v": "c{=}8"
+        },
+        {
+          "k": "t",
+          "v": " counterexample "
+        },
+        {
+          "k": "m",
+          "v": "(D_8){=}SO(16)_1"
+        },
+        {
+          "k": "t",
+          "v": " has "
+        },
+        {
+          "k": "m",
+          "v": "\\det\\mathrm{Cartan}{=}4"
+        },
+        {
+          "k": "t",
+          "v": " (non-holomorphic), so the one condition is "
+        },
+        {
+          "k": "m",
+          "v": "|\\det K|{=}1"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the seam side matches via "
+        },
+        {
+          "k": "c",
+          "v": "v276"
+        },
+        {
+          "k": "t",
+          "v": " (flat "
+        },
+        {
+          "k": "m",
+          "v": "\\tau{=}i"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v260"
+        },
+        {
+          "k": "t",
+          "v": " (Kummer/K3). "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "residual "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the single holomorphy bit; reduced, not closed. Exact core mirrored in Wolfram ("
+        },
+        {
+          "k": "m",
+          "v": "272/272"
+        },
+        {
+          "k": "t",
+          "v": "). Build green, "
+        },
+        {
+          "k": "c",
+          "v": "AUDIT OK"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-18",
+    "dateLabel": "2026-06-18",
+    "heading": [
+      {
+        "k": "t",
         "v": "QGEO.SYM.01 narrowed: the flat pillowcase closes the commutator to all orders, "
       },
       {

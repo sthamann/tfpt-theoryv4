@@ -151,9 +151,9 @@ tfpt_4_frontier,section,The Higgs quartic --- near-criticality from the free sea
 tfpt_4_frontier,section,"The Koide relation --- near $2/3$, computed exactly",282,422,v183_koide_f_corner_transfer.py;v25_frontier_conjectures.py;v37_plucker_anchor.py;v82_koide_attractor_splitting.py;v93_koide_relaxation_toy.py;v99_koide_flow_time.py,3f212b1b7495,2026-06-14
 tfpt_4_frontier,section,"Dark matter --- the candidate is fixed, the scale is pending",423,513,v185_axion_relic_solver.py;v211_axion_spine_angle.py;v25_frontier_conjectures.py,17061b526d1c,2026-06-15
 tfpt_4_frontier,section,The muon anomalous magnetic moment --- a seam vertex readout,514,538,v204_muon_seam_g2.py;v51_boundary_half_step.py,fa4b8d3cdd1a,2026-06-15
-tfpt_4_frontier,section,Full quantum gravity --- induced from the boundary kernel,539,671,v113_quasifree_kernel.py;v152_norm_is_anchor.py;v165_premise_a_closure.py;v177_seam_marking_kernel.py;v205_xi_threequarter.py;v206_h0_lambda_branch.py;v207_asymptotic_safety.py;v210_mark_local_dtn.py;v255_spectral_action_expansion.py;v259_modular_cutoff_kappa.py;v274_scale_overdetermination.py;v275_qgamb_roadmap.py;v36_spectral_action_g2.py;v60_lambda_metrology_branch.py,0194c0eefa9e,2026-06-18
-tfpt_4_frontier,section,Summary,672,701,,6580fbe649b5,2026-06-15
-tfpt_4_frontier,section,Appendix: computational verification,702,715,v28_gravity_fR.py;v36_spectral_action_g2.py;v7_gravity_cosmo.py,e0c58709c50b,2026-06-12
+tfpt_4_frontier,section,Full quantum gravity --- induced from the boundary kernel,539,681,v113_quasifree_kernel.py;v152_norm_is_anchor.py;v165_premise_a_closure.py;v177_seam_marking_kernel.py;v205_xi_threequarter.py;v206_h0_lambda_branch.py;v207_asymptotic_safety.py;v210_mark_local_dtn.py;v255_spectral_action_expansion.py;v259_modular_cutoff_kappa.py;v274_scale_overdetermination.py;v275_qgamb_roadmap.py;v277_seam_calderon_e8_match.py;v36_spectral_action_g2.py;v60_lambda_metrology_branch.py,8d43601f68b0,2026-06-18
+tfpt_4_frontier,section,Summary,682,711,,6580fbe649b5,2026-06-15
+tfpt_4_frontier,section,Appendix: computational verification,712,725,v28_gravity_fR.py;v36_spectral_action_g2.py;v7_gravity_cosmo.py,e0c58709c50b,2026-06-12
 tfpt_5_redteam,front,(front matter),1,78,,ed1064954d8c,2026-06-18
 tfpt_5_redteam,section,Method,79,87,,aa670d017bc0,2026-06-12
 tfpt_5_redteam,section,Target A --- the $(E8)_1$ boundary-net identification,88,113,,a2a8182c2254,2026-06-12

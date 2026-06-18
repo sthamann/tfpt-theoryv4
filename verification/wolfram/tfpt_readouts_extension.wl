@@ -2117,6 +2117,28 @@ Module[{b3, b2, b1, perY},
     perY === 10/3 && b3 === -7 && b2 === -19/6 && b1 === 41/10];
 ];
 
+(* ==== v277: seam-Calderon -> (E8)_1 matching certificate (QGAMB.TIERB.01) ====
+   v276 (flat-pillowcase commutator, numerical) is Python-only; v277's exact lattice
+   discriminator (det E8 vs det D8) + the (E8)_1 character 248 are mirrored. *)
+Module[{cE8, cD8, detE8, detD8, E4, prod8, chi, currents, roots},
+  cE8 = {{2,-1,0,0,0,0,0,0},{-1,2,-1,0,0,0,0,0},{0,-1,2,-1,0,0,0,0},{0,0,-1,2,-1,0,0,0},
+         {0,0,0,-1,2,-1,0,-1},{0,0,0,0,-1,2,-1,0},{0,0,0,0,0,-1,2,0},{0,0,0,0,-1,0,0,2}};
+  cD8 = {{2,-1,0,0,0,0,0,0},{-1,2,-1,0,0,0,0,0},{0,-1,2,-1,0,0,0,0},{0,0,-1,2,-1,0,0,0},
+         {0,0,0,-1,2,-1,0,0},{0,0,0,0,-1,2,-1,-1},{0,0,0,0,0,-1,2,0},{0,0,0,0,0,-1,0,2}};
+  detE8 = Det[cE8]; detD8 = Det[cD8];
+  E4 = 1 + 240 Sum[DivisorSigma[3, n] q^n, {n, 1, 6}];
+  roots = Coefficient[E4, q, 1];
+  prod8 = Product[(1 - q^n)^8, {n, 1, 8}];
+  chi = Series[E4/prod8, {q, 0, 4}] // Normal;   (* = q^{1/3} * (E8)_1 character *)
+  currents = Coefficient[chi, q, 1];
+  checkExact["v277 QGAMB.TIERB.01: the seam-Calderon -> (E8)_1 matching certificate -- the discriminator is "
+    <> "HOLOMORPHY: det Cartan(E8) = 1 (one primary, holomorphic) vs the c=8 counterexample "
+    <> "det Cartan(D8 = SO(16)) = 4 (four primaries, non-holomorphic); the unique holomorphic c=8 character "
+    <> "E4/eta^8 = j^{1/3} = q^{-1/3}(1 + 248 q + ...) has a single primary and exactly 248 = dim E8 weight-1 "
+    <> "currents (240 roots from Theta_E8 = E4). So Tier-B of QG.AMB.01 reduces to the single bit |det K| = 1.",
+    detE8 == 1 && detD8 == 4 && roots == 240 && currents == 248];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

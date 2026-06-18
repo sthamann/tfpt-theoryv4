@@ -59,6 +59,18 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-18 (QG.AMB.01 Tier-B made concrete: the seam-Calder\'on $\to(E_8)_1$ match, \texttt{v277})}
+\begin{itemize}
+\item \textbf{\texttt{v277\_seam\_calderon\_e8\_match.py} (\texttt{QGAMB.TIERB.01}) reduces Tier-B to ONE bit.}
+  \mE\ the full $(E_8)_1$ matching target is computed and matches: $c{=}8$, $\det\mathrm{Cartan}(E_8){=}1$, the
+  holomorphic character $E_4/\eta^8{=}j^{1/3}{=}q^{-1/3}(1{+}248q{+}\dots)$ with a single primary and exactly
+  $248{=}\dim E_8$ weight-1 currents ($240$ roots). \mE\ the discriminator is holomorphy --- the $c{=}8$
+  counterexample $(D_8){=}SO(16)_1$ has $\det\mathrm{Cartan}{=}4$ (non-holomorphic), so the one condition is
+  $|\det K|{=}1$. \mC\ the seam side matches via \vref{v276} (flat $\tau{=}i$) $+$ \vref{v260} (Kummer/K3).
+  \mO\ residual $=$ the single holomorphy bit; reduced, not closed. Exact core mirrored in Wolfram
+  ($272/272$). Build green, \texttt{AUDIT OK}.
+\end{itemize}
+
 \subsection*{2026-06-18 (QGEO.SYM.01 narrowed: the flat pillowcase closes the commutator to all orders, \texttt{v276})}
 \begin{itemize}
 \item \textbf{\texttt{v276\_qgeo\_flat\_closes\_commutator.py} (\texttt{QGEO.SYM.03}) collapses the bedrock
