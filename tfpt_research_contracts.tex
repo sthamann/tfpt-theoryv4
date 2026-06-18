@@ -415,6 +415,19 @@ with the forced SM hypercharges and the spectral-action value $\sin^2\theta_W=3/
 run-down couplings stay open. So the residual to a full 4d QFT is \emph{one premise}
 (\texttt{QGEO.SYM.01}) plus \emph{one contract} (\texttt{CONTRACT.QFT4D.01}), not a
 diffuse list.
+\par\smallskip\noindent\textbf{The perturbative 4d S-matrix is constructible (\veri{v269\_spert\_paqft\_skeleton.py}).}
+The 4d scattering layer is typed precisely as three \emph{distinct} objects: $S_{\mathrm{top}}$ (the 2d DHR
+braiding monodromy, $|M|{=}1$ statistics, \vref{v243}), $S_{\mathrm{pert}}$ (the 4d Epstein--Glaser / BV
+S-matrix of the spectral action), and $S_{\mathrm{phys}}$ (LSZ on the OS-reconstructed Wightman functions,
+\vref{v240}) --- the 2d braiding is \emph{not} the 4d cross-section S-matrix. \mE\ the spectral-action $a_4$
+interaction is power-counting renormalizable (every operator mass dimension $\le4$: $7$ marginal $+\,3$
+relevant, a \emph{finite} counterterm basis), so \mC\ by the Epstein--Glaser theorem (causal perturbation
+theory; Brunetti--Fredenhagen pAQFT) the perturbative S-matrix $S(g)=T\exp(i\!\int g\,L_{\mathrm{int}})$ is
+built order by order by causal factorisation $+$ finite local extension --- no path integral, \emph{no} UV
+divergences. \mC\ the gap $\Delta=6\log(3/2)$ gives an IR-safe adiabatic limit. \mO\ this is \emph{perturbative}
+only: the nonperturbative ambient measure \texttt{QG.AMB.01} stays open, and the canonical 4d reading remains
+boundary-only (\vref{v265}); $S_{\mathrm{pert}}$ is the perturbative cross-section layer on top
+(\texttt{QFT4D.SPERT.01}).
 \par\smallskip\noindent\textbf{The first hard data confrontation
 (\veri{v246\_unification\_data\_crosscheck.py}).} TFPT's gauge-charged content \emph{is} exactly the
 Standard Model (\vref{v159}) and the theory adds no new states (\S\,``Dark matter $=$ no new state''); the

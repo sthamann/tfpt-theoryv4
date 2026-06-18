@@ -47,6 +47,238 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "4D QFT: the perturbative S-matrix as an Epstein–Glaser / pAQFT skeleton, "
+      },
+      {
+        "k": "c",
+        "v": "v269"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v269_spert_paqft_skeleton.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QFT4D.SPERT.01"
+            },
+            {
+              "k": "t",
+              "v": ") builds the honest middle layer of the three-layer S-matrix"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (the first concrete 4D-QFT step beyond the spectral-action contract), "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " a nonperturbative closure. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "three distinct layers: "
+        },
+        {
+          "k": "m",
+          "v": "S_{\\mathrm{top}}"
+        },
+        {
+          "k": "t",
+          "v": " (2d DHR braiding "
+        },
+        {
+          "k": "m",
+          "v": "|M|{=}1"
+        },
+        {
+          "k": "t",
+          "v": ", statistics, "
+        },
+        {
+          "k": "c",
+          "v": "v243"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "S_{\\mathrm{pert}}"
+        },
+        {
+          "k": "t",
+          "v": " (4d Epstein–Glaser/BV S-matrix of the spectral action), "
+        },
+        {
+          "k": "m",
+          "v": "S_{\\mathrm{phys}}"
+        },
+        {
+          "k": "t",
+          "v": " (LSZ on the OS Wightman functions, "
+        },
+        {
+          "k": "c",
+          "v": "v240"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the spectral-action "
+        },
+        {
+          "k": "m",
+          "v": "a_4"
+        },
+        {
+          "k": "t",
+          "v": " interaction is power-counting renormalizable (all operators dim "
+        },
+        {
+          "k": "m",
+          "v": "\\le4"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "7"
+        },
+        {
+          "k": "t",
+          "v": " marginal "
+        },
+        {
+          "k": "m",
+          "v": "+\\,3"
+        },
+        {
+          "k": "t",
+          "v": " relevant, a finite counterterm basis), so "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "by the Epstein–Glaser theorem the perturbative S-matrix exists order by order (causal factorisation "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " finite local extension; no path integral, no UV divergences). "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the gap "
+        },
+        {
+          "k": "m",
+          "v": "\\Delta=6\\log(3/2)"
+        },
+        {
+          "k": "t",
+          "v": " gives an IR-safe adiabatic limit ("
+        },
+        {
+          "k": "m",
+          "v": "S_{\\mathrm{pert}}\\to S_{\\mathrm{phys}}"
+        },
+        {
+          "k": "t",
+          "v": " via LSZ). "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "perturbative only — the ambient measure "
+        },
+        {
+          "k": "c",
+          "v": "QG.AMB.01"
+        },
+        {
+          "k": "t",
+          "v": " stays open, the canonical 4d reading remains boundary-only ("
+        },
+        {
+          "k": "c",
+          "v": "v265"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "build green, "
+        },
+        {
+          "k": "c",
+          "v": "AUDIT OK"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-18",
+    "dateLabel": "2026-06-18",
+    "heading": [
+      {
+        "k": "t",
         "v": "PMNS: the reactor-angle exponent closed as the carrier hypercharge trace, "
       },
       {

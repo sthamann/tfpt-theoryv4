@@ -59,6 +59,21 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-18 (4D QFT: the perturbative S-matrix as an Epstein--Glaser / pAQFT skeleton, \texttt{v269})}
+\begin{itemize}
+\item \textbf{\texttt{v269\_spert\_paqft\_skeleton.py} (\texttt{QFT4D.SPERT.01}) builds the honest middle
+  layer of the three-layer S-matrix} (the first concrete 4D-QFT step beyond the spectral-action contract),
+  \emph{not} a nonperturbative closure. \mE\ three distinct layers: $S_{\mathrm{top}}$ (2d DHR braiding
+  $|M|{=}1$, statistics, \vref{v243}), $S_{\mathrm{pert}}$ (4d Epstein--Glaser/BV S-matrix of the spectral
+  action), $S_{\mathrm{phys}}$ (LSZ on the OS Wightman functions, \vref{v240}). \mE\ the spectral-action
+  $a_4$ interaction is power-counting renormalizable (all operators dim $\le4$; $7$ marginal $+\,3$ relevant,
+  a finite counterterm basis), so \mC\ by the Epstein--Glaser theorem the perturbative S-matrix exists order
+  by order (causal factorisation $+$ finite local extension; no path integral, no UV divergences). \mC\ the
+  gap $\Delta=6\log(3/2)$ gives an IR-safe adiabatic limit ($S_{\mathrm{pert}}\to S_{\mathrm{phys}}$ via LSZ).
+  \mO\ perturbative only --- the ambient measure \texttt{QG.AMB.01} stays open, the canonical 4d reading
+  remains boundary-only (\vref{v265}). \mE\ build green, \texttt{AUDIT OK}.
+\end{itemize}
+
 \subsection*{2026-06-18 (PMNS: the reactor-angle exponent closed as the carrier hypercharge trace, \texttt{v268})}
 \begin{itemize}
 \item \textbf{\texttt{v268\_theta13\_carrier\_trace.py} (\texttt{FLAV.TH13.01}) closes the $\theta_{13}$
