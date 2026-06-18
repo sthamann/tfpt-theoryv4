@@ -171,7 +171,9 @@ function ClosingCondition() {
         exactly why the one genuine structural frontier is the{" "}
         <span className="text-amber-200">nonperturbative</span> ambient measure QG.AMB.01, which now carries an
         explicit roadmap (v275): Tier A gap-decoupled, Tier B reduced to the holomorphic (E₈)₁ boundary net —
-        reduced, not closed.
+        reduced, not closed. Sharper still (v282): the flat τ=i geometry (QGEO.SYM.01) and the (E₈)₁ holomorphy
+        (QG.AMB.01) are two faces of one object — χ_E8(i) = j(i)^{1/3} = 12, so τ=i is at once the order-4 CM
+        point and the (E₈)₁ modulus — collapsing the two open obligations to one: "the raw seam is (E₈)₁ at τ=i."
       </p>
       <p className="mt-3 rounded-lg border border-slate-700/40 bg-slate-950/40 p-3 text-xs leading-relaxed text-slate-300">
         <span className="font-semibold text-slate-100">4D-QFT fork policy</span> (frozen decision tree, v265):

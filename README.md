@@ -323,7 +323,17 @@ closes to all orders, since a flat isometry commutes with every function of its 
 already matches; the `c = 8` counterexample `SO(16)` has `det Cartan = 4`). The single mass anchor is
 moreover **over-determined** (`v274`: Newton's G and the dark-energy prediction give the same Planck mass
 to 0.11%, conditional on the Λ-branch), and the absolute neutrino scale is **one seesaw ratio** (`v272`).
-A development timeline of all `276` scripts is in `introduction.tex` (and on the website verification page).
+
+**Self-investigation round (`v280`–`v283`) — the two obligations are one object.** A direct numerical
+experiment on the actual flat τ=i pillowcase orbifold realises the whole chain
+(`[ρ,Δ]=0 ⇒ [ρ,H]=0 ⇒ [ρ,C]=0 ⇒ ω∘ρ=ω`, route-(i) evidence, `v280`); the Tier-B holomorphy bit is the anyon
+count (`#anyons = |det K|`, the condensation tower `16→4→1`, Gauss–Milgram `c=8`, `v281`); and — the candidate
+**simplification** — `χ_E8 = j^{1/3}` gives `χ_E8(i) = 1728^{1/3} = 12`, so `τ=i` is **both** the order-4 CM
+point (the `QGEO.SYM.01` flat geometry) **and** the `(E8)₁` partition-function modulus (the `QG.AMB.01`
+holomorphy): the two obligations are **two faces of one object**, *"the raw seam is `(E8)₁` at `τ=i`"* —
+dropping the open count from two to **one** (`v282`). The recent round's computable predictions are all
+consistent at `<2σ`, with two sharp near-term kill tests (Σm_ν floor, proton decay; `v283`).
+A development timeline of all `281` scripts is in `introduction.tex` (and on the website verification page).
 
 ---
 
