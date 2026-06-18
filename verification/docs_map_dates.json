@@ -352,8 +352,8 @@
   "date": "2026-06-14"
  },
  "tfpt_2_standard_model::section::Neutrinos::1": {
-  "hash": "4574cc289eb3",
-  "date": "2026-06-12"
+  "hash": "cb342df51f15",
+  "date": "2026-06-18"
  },
  "tfpt_2_standard_model::section::How the legacy layers simplify (bridge map)::1": {
   "hash": "9eeb68ad4a79",
@@ -588,8 +588,8 @@
   "date": "2026-06-17"
  },
  "tfpt_4_frontier::section::Proton/electron ratio $m_p/m_e$ --- a cross-sector ratio::1": {
-  "hash": "e55f6430961c",
-  "date": "2026-06-13"
+  "hash": "23b0e81bdc69",
+  "date": "2026-06-18"
  },
  "tfpt_4_frontier::section::The Higgs quartic --- near-criticality from the free seam::1": {
   "hash": "7f638e3bebef",
@@ -696,8 +696,8 @@
   "date": "2026-06-17"
  },
  "tfpt_research_contracts::section::Research Contract 1 --- $(U_{\\mathrm{wall}})$::1": {
-  "hash": "647f41864c51",
-  "date": "2026-06-17"
+  "hash": "9e9515696f9b",
+  "date": "2026-06-18"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {
   "hash": "61357e9e0506",

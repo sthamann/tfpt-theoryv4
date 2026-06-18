@@ -526,6 +526,18 @@ symmetry. A genuine reduction and unification, \emph{not} a closure: the premise
 \emph{is} the uniformising constant-curvature representative of its conformal class'' stays \mO\ ---
 milder and more canonical than the bare isometry premise, and now \emph{shared} by both residuals
 (\texttt{QGEO.PILLOW.01}).
+\par\smallskip\noindent\textbf{The converse, on the canonical metric: raw seam $\Rightarrow$ mark-locality
+(\veri{v264\_raw\_seam\_marklocal.py}).} Composing the chain explicitly closes the gap between
+\vref{v216}, \vref{v201} and \vref{v198} on the uniformising metric: the flat pillowcase has its curvature
+\emph{only} at the four cone points (\vref{v216}), so the DtN sub-principal symbol $M_f$ is a $\mu_4$-orbit
+sum, hence $\Z_4$-invariant (Fourier support on $4\Z$, verified by FFT), hence block-diagonal in the
+clock-character basis, hence $[\rho,M_f]=0$; with the principal symbol $|k|$ already commuting (\vref{v198})
+this gives $[\rho,\Lambda]=0$ and $\omega\circ\rho=\omega$ \emph{on this metric}. A negative control (curvature
+\emph{off} the $\mu_4$ orbit) breaks $\Z_4$-invariance and the chain fails. So the entire bedrock collapses
+to the \emph{single} metric-realisation statement ``the raw RP seam carries the uniformising flat pillowcase
+metric'' --- which \emph{is} \texttt{QGEO.SYM.01}. A genuine reduction/sharpening (\texttt{QGEO.ENERGY.03}),
+\mO\ --- it does \emph{not} prove the raw seam must carry that metric; that converse is the irreducible
+postulate.
 \par\smallskip\noindent\textbf{One surface for seam, carrier and lattice: the Kummer/K3
 (\veri{v260\_k3\_kummer\_unification.py}).} The pillowcase is the elliptic-involution quotient
 $T^2_{\tau=i}/(z{\mapsto}{-}z)$, its four marks the four $2$-torsion fixed points; squaring the construction

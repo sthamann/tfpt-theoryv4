@@ -214,6 +214,15 @@ reaches confinement ($\alpha_s\sim1$) at $\sim0.5$ GeV, so the QCD confinement s
 numerator follows from $\{\alpha_s(M_Z),b_3\}$ alone by dimensional transmutation. The
 $O(1)$ proton/$\Lambda$ factor is lattice (non-perturbative), so the ratio still stays \mO\
 --- not forced (\veri{v164\_qcd\_scale.py}).
+\par\smallskip\noindent\textbf{The $F_{\mathrm{QCD}}$ transfer is now an implemented solver
+(\veri{v262\_fqcd\_mp\_me.py}).} The contract-only pipeline
+(\texttt{experiments/ftransfer/qcd\_matching\_mp\_me}) is realised: a two-loop $\alpha_s$ run from
+$M_Z$ with $n_f$ thresholds (carrier coefficient $b_3=-7$, \mE) gives $\alpha_s(2\,\text{GeV})\simeq0.30$
+and $\Lambda^{(3)}_{\overline{\rm MS}}\simeq0.33$ GeV; with the lattice bridge $C_p=m_p/\Lambda^{(3)}$
+(external $O(1)$) and the closed $m_e$ this reproduces $m_p/m_e\simeq1824$ against the measured $1836.15$
+within the external error budget ($\sim7\%$, lattice-$C_p$ dominated). This advances \texttt{FR.MPME.01}
+(\mO) to \texttt{FR.MPME.02} (\mC, ``reproduced by the named $F_{\mathrm{QCD}}$ transfer''); the firewall
+holds --- $b_3=-7$ is \mE, the ratio is a transfer, never a compiler power.
 
 \begin{keybox}[Honest status of $m_p/m_e$ \mO]
 Computable at \emph{scheme level} (from $\alpha_s(M_Z)$ running $+$ the closed $m_e$), exactly like the

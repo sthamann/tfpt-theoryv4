@@ -59,6 +59,33 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-18 (Three open-residual advances: the $F_{\mathrm{QCD}}$ solver, $M_\nu$ from $D_F$, and the raw-seam$\Rightarrow$mark-locality reduction, \texttt{v262}--\texttt{v264})}
+\begin{itemize}
+\item \textbf{\texttt{v262\_fqcd\_mp\_me.py} (\texttt{FR.MPME.02}) implements the one contract-only
+  $F_{\mathrm{transfer}}$ pipeline.} A real two-loop $\alpha_s$ solver runs $\alpha_s(M_Z){=}0.1179$ with
+  $n_f$ thresholds (carrier $b_3{=}-7$, \mE) to $\alpha_s(2\,\text{GeV}){\sim}0.30$ and
+  $\Lambda^{(3)}_{\overline{\rm MS}}{\sim}0.33$\,GeV; with the lattice bridge $C_p$ (external $O(1)$) and the
+  closed $m_e$ it reproduces $m_p/m_e{\sim}1824$ vs the measured $1836.15$ within the $\sim7\%$ external
+  budget. A \mC\ transfer reproduction (firewall: no compiler integer for $1836$), advancing
+  \texttt{FR.MPME.01} (\mO) to \texttt{FR.MPME.02} (\mC).
+\item \textbf{\texttt{v263\_mnu\_from\_df.py} (\texttt{FLAV.PMNS.02}) makes $M_\nu$ a seesaw operator of
+  $D_F$.} \mE\ $M_\nu=-m_D M_R^{-1} m_D^\top$ is symmetric, seesaw-suppressed and (for $\mu\tau$-symmetric
+  inputs) $\mu\tau$-symmetric; \mC\ it reproduces $\theta_{23}{=}45^\circ$ and
+  $\sin^2\theta_{12}{=}\tfrac13{-}\tfrac{\phiz}{2}$ (\vref{v9}) under the seam misalignment; \mO\
+  $\theta_{13}{=}0$ in the leading texture, the CP \emph{magnitude} ($240^\circ$) is the $\mu_6$/triality
+  phase (\vref{v231}/\vref{v233}), and $M_R$ is the free seesaw scale. An operator advance, not a closure
+  of full PMNS dynamics.
+\item \textbf{\texttt{v264\_raw\_seam\_marklocal.py} (\texttt{QGEO.ENERGY.03}) sharpens the bedrock.}
+  Composing \vref{v216}$+$\vref{v201}$+$\vref{v198} on the canonical pillowcase: the flat-pillowcase
+  curvature lives only at the $4$ marks, so the DtN sub-principal symbol is $\Z_4$-invariant (Fourier on
+  $4\Z$, FFT-verified), block-diagonal, and $[\rho,\Lambda]{=}0\Rightarrow\omega\circ\rho{=}\omega$ on this
+  metric. So the whole bedrock collapses to the single metric statement ``the raw RP seam carries the
+  uniformising flat pillowcase metric'' ($=$\texttt{QGEO.SYM.01}). A reduction/sharpening, \mO\ --- it does
+  \emph{not} prove the seam must carry that metric (negative control: curvature off the $\mu_4$ orbit breaks
+  the chain). Paper citations added in \texttt{tfpt\_4\_frontier}, \texttt{tfpt\_2\_standard\_model} and
+  \texttt{tfpt\_research\_contracts}. \mE\ \texttt{AUDIT OK}, build green.
+\end{itemize}
+
 \subsection*{2026-06-18 (Paper consistency pass: the closure ledger and the status/QFT sections updated for the Modular Spectral Closure, with an explicit ``what is \emph{not} closed'' line)}
 \begin{itemize}
 \item \textbf{Five paper sections that predated the \texttt{v238}--\texttt{v261} round are brought up to date}

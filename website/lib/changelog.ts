@@ -47,6 +47,581 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "Three open-residual advances: the "
+      },
+      {
+        "k": "m",
+        "v": "F_{\\mathrm{QCD}}"
+      },
+      {
+        "k": "t",
+        "v": " solver, "
+      },
+      {
+        "k": "m",
+        "v": "M_\\nu"
+      },
+      {
+        "k": "t",
+        "v": " from "
+      },
+      {
+        "k": "m",
+        "v": "D_F"
+      },
+      {
+        "k": "t",
+        "v": ", and the raw-seam"
+      },
+      {
+        "k": "m",
+        "v": "\\Rightarrow"
+      },
+      {
+        "k": "t",
+        "v": "mark-locality reduction, "
+      },
+      {
+        "k": "c",
+        "v": "v262"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v264"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v262_fqcd_mp_me.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "FR.MPME.02"
+            },
+            {
+              "k": "t",
+              "v": ") implements the one contract-only "
+            },
+            {
+              "k": "m",
+              "v": "F_{\\mathrm{transfer}}"
+            },
+            {
+              "k": "t",
+              "v": " pipeline."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " A real two-loop "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha_s"
+        },
+        {
+          "k": "t",
+          "v": " solver runs "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha_s(M_Z){=}0.1179"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "n_f"
+        },
+        {
+          "k": "t",
+          "v": " thresholds (carrier "
+        },
+        {
+          "k": "m",
+          "v": "b_3{=}-7"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": ") to "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha_s(2\\,\\text{GeV}){\\sim}0.30"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda^{(3)}_{\\overline{\\rm MS}}{\\sim}0.33"
+        },
+        {
+          "k": "t",
+          "v": " GeV; with the lattice bridge "
+        },
+        {
+          "k": "m",
+          "v": "C_p"
+        },
+        {
+          "k": "t",
+          "v": " (external "
+        },
+        {
+          "k": "m",
+          "v": "O(1)"
+        },
+        {
+          "k": "t",
+          "v": ") and the closed "
+        },
+        {
+          "k": "m",
+          "v": "m_e"
+        },
+        {
+          "k": "t",
+          "v": " it reproduces "
+        },
+        {
+          "k": "m",
+          "v": "m_p/m_e{\\sim}1824"
+        },
+        {
+          "k": "t",
+          "v": " vs the measured "
+        },
+        {
+          "k": "m",
+          "v": "1836.15"
+        },
+        {
+          "k": "t",
+          "v": " within the "
+        },
+        {
+          "k": "m",
+          "v": "\\sim7\\%"
+        },
+        {
+          "k": "t",
+          "v": " external budget. A "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "transfer reproduction (firewall: no compiler integer for "
+        },
+        {
+          "k": "m",
+          "v": "1836"
+        },
+        {
+          "k": "t",
+          "v": "), advancing "
+        },
+        {
+          "k": "c",
+          "v": "FR.MPME.01"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": ") to "
+        },
+        {
+          "k": "c",
+          "v": "FR.MPME.02"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v263_mnu_from_df.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "FLAV.PMNS.02"
+            },
+            {
+              "k": "t",
+              "v": ") makes "
+            },
+            {
+              "k": "m",
+              "v": "M_\\nu"
+            },
+            {
+              "k": "t",
+              "v": " a seesaw operator of "
+            },
+            {
+              "k": "m",
+              "v": "D_F"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "M_\\nu=-m_D M_R^{-1} m_D^\\top"
+        },
+        {
+          "k": "t",
+          "v": " is symmetric, seesaw-suppressed and (for "
+        },
+        {
+          "k": "m",
+          "v": "\\mu\\tau"
+        },
+        {
+          "k": "t",
+          "v": "-symmetric inputs) "
+        },
+        {
+          "k": "m",
+          "v": "\\mu\\tau"
+        },
+        {
+          "k": "t",
+          "v": "-symmetric; "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "it reproduces "
+        },
+        {
+          "k": "m",
+          "v": "\\theta_{23}{=}45^\\circ"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "\\sin^2\\theta_{12}{=}\\tfrac13{-}\\tfrac{\\phiz}{2}"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v9"
+        },
+        {
+          "k": "t",
+          "v": ") under the seam misalignment; "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\theta_{13}{=}0"
+        },
+        {
+          "k": "t",
+          "v": " in the leading texture, the CP "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "magnitude"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "240^\\circ"
+        },
+        {
+          "k": "t",
+          "v": ") is the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_6"
+        },
+        {
+          "k": "t",
+          "v": "/triality phase ("
+        },
+        {
+          "k": "c",
+          "v": "v231"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v233"
+        },
+        {
+          "k": "t",
+          "v": "), and "
+        },
+        {
+          "k": "m",
+          "v": "M_R"
+        },
+        {
+          "k": "t",
+          "v": " is the free seesaw scale. An operator advance, not a closure of full PMNS dynamics."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v264_raw_seam_marklocal.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGEO.ENERGY.03"
+            },
+            {
+              "k": "t",
+              "v": ") sharpens the bedrock."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Composing "
+        },
+        {
+          "k": "c",
+          "v": "v216"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "c",
+          "v": "v201"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "c",
+          "v": "v198"
+        },
+        {
+          "k": "t",
+          "v": " on the canonical pillowcase: the flat-pillowcase curvature lives only at the "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " marks, so the DtN sub-principal symbol is "
+        },
+        {
+          "k": "m",
+          "v": "\\Z_4"
+        },
+        {
+          "k": "t",
+          "v": "-invariant (Fourier on "
+        },
+        {
+          "k": "m",
+          "v": "4\\Z"
+        },
+        {
+          "k": "t",
+          "v": ", FFT-verified), block-diagonal, and "
+        },
+        {
+          "k": "m",
+          "v": "[\\rho,\\Lambda]{=}0\\Rightarrow\\omega\\circ\\rho{=}\\omega"
+        },
+        {
+          "k": "t",
+          "v": " on this metric. So the whole bedrock collapses to the single metric statement “the raw RP seam carries the uniformising flat pillowcase metric” ("
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "c",
+          "v": "QGEO.SYM.01"
+        },
+        {
+          "k": "t",
+          "v": "). A reduction/sharpening, "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "— it does "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " prove the seam must carry that metric (negative control: curvature off the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " orbit breaks the chain). Paper citations added in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_4_frontier"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2_standard_model"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "c",
+          "v": "AUDIT OK"
+        },
+        {
+          "k": "t",
+          "v": ", build green."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-18",
+    "dateLabel": "2026-06-18",
+    "heading": [
+      {
+        "k": "t",
         "v": "Paper consistency pass: the closure ledger and the status/QFT sections updated for the Modular Spectral Closure, with an explicit “what is "
       },
       {
