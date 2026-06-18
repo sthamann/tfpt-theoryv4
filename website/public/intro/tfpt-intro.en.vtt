@@ -1,0 +1,182 @@
+WEBVTT
+
+1
+00:00:00.500 --> 00:00:04.000
+This is the fine-structure constant.
+
+2
+00:00:04.000 --> 00:00:08.200
+Physics measures it. TFPT claims it's the unique root of a short equation —
+
+3
+00:00:08.200 --> 00:00:11.200
+fixed by two inputs, and nothing else.
+
+4
+00:00:11.200 --> 00:00:14.800
+Big claim. So I'll also show you exactly where it could break.
+
+5
+00:00:15.300 --> 00:00:19.200
+TFPT isn't another table of nice numbers — it's a discrete compiler.
+
+6
+00:00:19.200 --> 00:00:24.000
+Two operative inputs go in: a boundary constant, c₃ = 1/(8π),
+
+7
+00:00:24.000 --> 00:00:27.600
+and a five-fold carrier, g_car = 5.
+
+8
+00:00:27.600 --> 00:00:32.600
+From those, one structure is built: the carrier makes the D₅ side,
+
+9
+00:00:32.600 --> 00:00:37.000
+four marked boundary points make the A₃ family geometry,
+
+10
+00:00:37.000 --> 00:00:41.600
+and the μ₄ glue closes them into E₈.
+
+11
+00:00:41.600 --> 00:00:46.800
+And this defuses the usual no-go theorems: E₈ is not a gauge group of nature.
+
+12
+00:00:46.800 --> 00:00:50.800
+It's the audit hull — the consistency container.
+
+13
+00:00:50.800 --> 00:00:55.800
+The Standard Model is a readout after projection, not 'everything is E₈.'
+
+14
+00:00:56.300 --> 00:01:00.600
+What comes out splits cleanly. First, the discrete core —
+
+15
+00:01:00.600 --> 00:01:04.000
+exact, or machine-checked:
+
+16
+00:01:04.000 --> 00:01:09.000
+three families, hypercharges, the flavor matrix, sixteen carrier states,
+
+17
+00:01:09.000 --> 00:01:13.600
+the recurring 2-3-5, the Coxeter number 30, the 240 roots of E₈.
+
+18
+00:01:13.600 --> 00:01:18.600
+Then the boundary side: from c₃ comes one seed, φ₀ —
+
+19
+00:01:18.600 --> 00:01:23.600
+and from it: the Cabibbo structure, the electromagnetic fixed point, the scale grammar.
+
+20
+00:01:23.600 --> 00:01:29.600
+The fine-structure constant lands as the unique positive root of a cubic: 137.0359992 —
+
+21
+00:01:29.600 --> 00:01:33.000
+1.9 sigma from the measured value.
+
+22
+00:01:33.000 --> 00:01:36.800
+Not a fit. A forced root.
+
+23
+00:01:37.300 --> 00:01:41.000
+The Standard-Model part compresses hard.
+
+24
+00:01:41.000 --> 00:01:46.000
+Masses and mixings don't come from free Yukawa numbers —
+
+25
+00:01:46.000 --> 00:01:50.600
+they come from one texture: a seed, a fixed flavor matrix, integer word-lengths.
+
+26
+00:01:50.600 --> 00:01:55.000
+The CKM angles and the leading CP phase fall out of the same holonomy;
+
+27
+00:01:55.000 --> 00:01:58.000
+the reactor angle θ₁₃ comes straight from the seed.
+
+28
+00:01:58.000 --> 00:02:02.800
+Absolute masses run through one typed bridge, v_geo, and standard RG. Dimensional analysis with a seatbelt.
+
+29
+00:02:03.300 --> 00:02:06.600
+Now the honest part — how do you kill it?
+
+30
+00:02:06.600 --> 00:02:11.600
+The predictions were frozen in a blind registry before any comparison — machine-enforced.
+
+31
+00:02:11.600 --> 00:02:15.000
+sin²θ₁₂ ≈ 0.3067.   sin²θ₁₃ ≈ 0.0231.
+
+32
+00:02:15.000 --> 00:02:18.600
+α⁻¹ as a fixed point. A small tensor ratio r between 0.0033 and 0.0048.
+
+33
+00:02:18.600 --> 00:02:22.000
+Normal neutrino ordering, with a low mass floor.
+
+34
+00:02:22.000 --> 00:02:27.200
+The closed core predictions sit within about one sigma today — every tension tracked in the open.
+
+35
+00:02:27.200 --> 00:02:33.600
+The near-term kill tests are real: neutrino mass from DESI and CMB-S4, and proton decay at Hyper-Kamiokande.
+
+36
+00:02:34.300 --> 00:02:37.600
+How is this kept honest?
+
+37
+00:02:37.600 --> 00:02:42.600
+Every statement carries a status — exact, conditional, open, or kill-test —
+
+38
+00:02:42.600 --> 00:02:46.200
+in one machine-readable ledger: the single source of truth.
+
+39
+00:02:46.200 --> 00:02:52.800
+And a red team whose job is to break the theory, not confirm it — or math becomes numerology with better typography.
+
+40
+00:02:53.300 --> 00:02:56.600
+So what's actually open?
+
+41
+00:02:56.600 --> 00:03:00.200
+The discrete compiler is structurally closed.
+
+42
+00:03:00.200 --> 00:03:05.600
+The one hard knot is a single theorem: the raw, reflection-positive seam state must be —
+
+43
+00:03:05.600 --> 00:03:09.200
+canonically — the holomorphic (E₈)₁ net at τ = i.
+
+44
+00:03:09.200 --> 00:03:13.000
+Both proof routes meet there. The sharpest remaining piece has a name: Flat-Away.
+
+45
+00:03:13.000 --> 00:03:18.000
+Close it, and the structural core is done. What stays are deliberately typed interfaces.
+

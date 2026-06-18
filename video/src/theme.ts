@@ -1,3 +1,5 @@
+import type { CSSProperties } from "react";
+
 /**
  * TFPT video design tokens — mirrors the website (app/globals.css) so the intro
  * film and the site read as one product.
@@ -29,7 +31,7 @@ export const GRADIENT_BLUE =
   "linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #f472b6 100%)";
 
 /** Apply a clipped gradient to text. */
-export const gradientText = (gradient = GRADIENT_BLUE): React.CSSProperties => ({
+export const gradientText = (gradient = GRADIENT_BLUE): CSSProperties => ({
   backgroundImage: gradient,
   WebkitBackgroundClip: "text",
   backgroundClip: "text",

@@ -115,8 +115,8 @@ export const Scene07OpenKnot: React.FC = () => {
           alignItems: "center",
           justifyContent: "center",
           gap: 30,
-          opacity: end,
-          ...endRise,
+          opacity: end * endRise.opacity,
+          transform: endRise.transform,
         }}
       >
         <BrandMark size={72} />

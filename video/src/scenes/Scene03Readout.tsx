@@ -66,17 +66,17 @@ export const Scene03Readout: React.FC = () => {
   const frame = useCurrentFrame();
 
   const eyebrow = enterUp(frame, 6, 22);
-  const cols = fadeInOut(frame, 30, 70, 720, 790);
-  const colShift = interpolate(frame, [720, 800], [0, -40], {
+  const cols = fadeInOut(frame, 30, 70, 760, 820);
+  const colShift = interpolate(frame, [760, 830], [0, -40], {
     easing: Easing.in(Easing.cubic),
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
 
-  const alphaIn = fade(frame, 760, 840);
-  const num = enterUp(frame, 770, 30);
-  const sigma = enterUp(frame, 900, 24);
-  const verdict = enterUp(frame, 1040, 24);
+  const alphaIn = fade(frame, 795, 850);
+  const num = enterUp(frame, 805, 30);
+  const sigma = enterUp(frame, 1010, 24);
+  const verdict = enterUp(frame, 1110, 24);
 
   return (
     <AbsoluteFill>
@@ -97,31 +97,32 @@ export const Scene03Readout: React.FC = () => {
             transform: `translateY(${colShift}px)`,
           }}
         >
-          <ListCard title="Discrete core" grade="E" accent={COLORS.violet} items={CORE} baseStart={40} frame={frame} />
-          <ListCard title="Boundary side" grade="C" accent={COLORS.blueLight} items={BOUNDARY} baseStart={240} frame={frame} />
+          <ListCard title="Discrete core" grade="E" accent={COLORS.violet} items={CORE} baseStart={120} frame={frame} />
+          <ListCard title="Boundary side" grade="C" accent={COLORS.blueLight} items={BOUNDARY} baseStart={360} frame={frame} />
         </div>
 
         {/* alpha reveal */}
         <div
           style={{
             position: "absolute",
-            top: 300,
+            top: 252,
             opacity: alphaIn,
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            gap: 26,
-            width: 1500,
+            gap: 22,
+            width: 1600,
           }}
         >
-          <div style={{ fontFamily: SANS, fontSize: 32, color: COLORS.textDim, ...enterUp(frame, 760, 24) }}>
+          <div style={{ fontFamily: SANS, fontSize: 32, color: COLORS.textDim, ...enterUp(frame, 805, 24) }}>
             the unique positive root of a cubic closure
           </div>
           <div
             style={{
               fontFamily: MONO,
               fontWeight: 700,
-              fontSize: 150,
+              fontSize: 118,
+              whiteSpace: "nowrap",
               color: COLORS.textBright,
               textShadow: "0 0 70px rgba(96,165,250,0.4)",
               ...num,

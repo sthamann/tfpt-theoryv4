@@ -57,26 +57,27 @@ const Chevron: React.FC<{ on: number; color?: string }> = ({ on, color = COLORS.
 export const Scene02Machine: React.FC = () => {
   const frame = useCurrentFrame();
 
+  // Internal beats are aligned to the caption timeline (scene starts at 15s).
   const eyebrow = enterUp(frame, 6, 22);
-  const inA = enterUp(frame, 40, 22);
-  const inB = enterUp(frame, 64, 22);
-  const arrow1 = fade(frame, 110, 150);
-  const mid = enterUp(frame, 150, 24);
-  const arrow2 = fade(frame, 300, 340);
-  const e8 = enterUp(frame, 330, 26);
-  const formula = enterUp(frame, 470, 26);
+  const inA = enterUp(frame, 110, 22);
+  const inB = enterUp(frame, 250, 22);
+  const arrow1 = fade(frame, 330, 380);
+  const mid = enterUp(frame, 360, 24);
+  const arrow2 = fade(frame, 600, 650);
+  const e8 = enterUp(frame, 630, 26);
+  const formula = enterUp(frame, 670, 26);
 
-  // E8 glow ramps when it lights up
-  const e8glow = fade(frame, 360, 470, 0.2, 1);
+  // E8 glow ramps when the glue closes it into E8
+  const e8glow = fade(frame, 620, 700, 0.2, 1);
 
-  // lower callouts swap
-  const calloutA = fadeInOut(frame, 640, 668, 820, 846);
-  const calloutB = fadeInOut(frame, 860, 888, 1180, 1210);
+  // lower callouts swap — "audit hull" then "readout after projection"
+  const calloutA = fadeInOut(frame, 800, 832, 1040, 1070);
+  const calloutB = fadeInOut(frame, 1080, 1112, 1200, 1225);
 
   return (
     <AbsoluteFill>
       <Bg accent={COLORS.blue} tint="#7c3aed" />
-      <AbsoluteFill style={{ flexDirection: "column", alignItems: "center", paddingTop: 92 }}>
+      <AbsoluteFill style={{ flexDirection: "column", alignItems: "center", paddingTop: 76 }}>
         <div style={eyebrow}>
           <Eyebrow>The machine</Eyebrow>
         </div>
@@ -84,7 +85,7 @@ export const Scene02Machine: React.FC = () => {
         {/* the compiler row */}
         <div
           style={{
-            marginTop: 70,
+            marginTop: 52,
             display: "flex",
             alignItems: "center",
             gap: 42,
@@ -128,8 +129,8 @@ export const Scene02Machine: React.FC = () => {
           <div
             style={{
               ...e8,
-              width: 220,
-              height: 220,
+              width: 200,
+              height: 200,
               borderRadius: "50%",
               display: "flex",
               flexDirection: "column",
@@ -150,15 +151,15 @@ export const Scene02Machine: React.FC = () => {
           </div>
         </div>
 
-        <div style={{ marginTop: 56, ...formula }}>
-          <Formula size={48}>
+        <div style={{ marginTop: 40, ...formula }}>
+          <Formula size={44}>
             <Tok color={COLORS.violet}>D₅</Tok> ⊕ <Tok color={COLORS.violet}>A₃</Tok> +{" "}
             <Tok color={COLORS.pink}>μ₄</Tok> ⇒ <Tok color={COLORS.exact}>E₈</Tok>
           </Formula>
         </div>
 
         {/* swapping reframe callouts */}
-        <div style={{ position: "relative", marginTop: 46, height: 120, width: 1500 }}>
+        <div style={{ position: "relative", marginTop: 34, height: 120, width: 1620 }}>
           <Callout opacity={calloutA} color={COLORS.open}>
             E₈ is <b style={{ color: COLORS.textBright }}>not</b> a gauge group of nature — it is the{" "}
             <b style={{ color: COLORS.open }}>audit hull</b>, the consistency container.
@@ -191,12 +192,12 @@ const Callout: React.FC<{
     <div
       style={{
         fontFamily: SANS,
-        fontSize: 40,
+        fontSize: 34,
         fontWeight: 500,
         color: COLORS.text,
         textAlign: "center",
-        maxWidth: 1280,
-        padding: "20px 36px",
+        maxWidth: 1520,
+        padding: "16px 30px",
         borderRadius: 16,
         background: "rgba(2,6,18,0.5)",
         border: `1px solid ${color}44`,

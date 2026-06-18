@@ -1,4 +1,5 @@
 import { Hero } from "@/components/Hero";
+import { IntroVideo } from "@/components/IntroVideo";
 import { TrustContract } from "@/components/TrustContract";
 import { ClaimStack } from "@/components/ClaimStack";
 import { WhyThisMatters } from "@/components/WhyThisMatters";
@@ -21,6 +22,7 @@ export default function HomePage() {
           discipline (TrustContract, ClaimStack) follows immediately to keep
           skeptical readers. */}
       <Hero />
+      <IntroVideo />
       <WhyThisMatters />
       <Overview />
       <TrustContract />
