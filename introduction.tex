@@ -616,6 +616,15 @@ discrete atoms of the theory --- that is the point of the compiler:
       icosahedron's rotation orders; and the $E_8$ exponents $(\Z/30)^\times$ carry an order-$4$ totative
       character $\langle7\rangle$ --- the same $\mu_4$ seam clock. \mE\
       \veri{v219\_icosahedral\_mckay.py} \veri{v223\_coxeter\_totative\_clock.py}
+\item \textbf{a network reading (computational substrate).} On the same McKay $(2,3,5)$ graph the affine-$E_8$
+      marks are the \emph{unique dynamical attractor} of a minimal local-averaging update
+      $m\!\leftarrow\!(A{+}2I)/4\cdot m$ (it converges from \emph{any} positive start to $(1,2,3,4,5,6,4,2,3)$);
+      the spherical tower terminates at $E_8$ and the cascade $E_8\!\supset\!E_7\!\supset\!E_6\!\dots$ is
+      nested-subgraph coarse-graining. So $E_8$ reads as the \emph{universal attractor of a minimal $(2,3,5)$
+      network} (a Wolfram-style computational-substrate picture) at the Coxeter-skeleton level. \mC\ A minimal
+      hypergraph \emph{rewrite} reproducing the \emph{full} structure (lattice $+$ recovery $+$ readouts) stays
+      open, and $\phiz$ is the analytic seed $\tfrac{4}{3}c_3=1/(6\pi)$, not an edge fraction. \mO\
+      \veri{v298\_e8\_network\_attractor.py}
 \end{itemize}
 
 % =====================================================================

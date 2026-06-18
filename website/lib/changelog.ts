@@ -47,6 +47,212 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "E8 as a network attractor — the Wolfram-program reading, "
+      },
+      {
+        "k": "c",
+        "v": "v298"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v298_e8_network_attractor.py"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " is an honest audit of the “TFPT as a hypergraph/rewrite system” idea, on the "
+        },
+        {
+          "k": "c",
+          "v": "v219"
+        },
+        {
+          "k": "t",
+          "v": " McKay bedrock. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the affine-"
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " Kac marks "
+        },
+        {
+          "k": "m",
+          "v": "(1,2,3,4,5,6,4,2,3)"
+        },
+        {
+          "k": "t",
+          "v": " are the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "unique dynamical attractor"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " of a minimal local-averaging update "
+        },
+        {
+          "k": "m",
+          "v": "m\\!\\leftarrow\\!(A{+}2I)/4\\,m"
+        },
+        {
+          "k": "t",
+          "v": " on the "
+        },
+        {
+          "k": "m",
+          "v": "(2,3,5)"
+        },
+        {
+          "k": "t",
+          "v": " McKay graph (converges from any positive start; "
+        },
+        {
+          "k": "m",
+          "v": "A\\,m=2m"
+        },
+        {
+          "k": "t",
+          "v": ", top eigenvalue "
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": "); the spherical tower terminates at "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " and the cascade is nested-subgraph coarse-graining. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the Wolfram reading “"
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " is the universal attractor of a minimal "
+        },
+        {
+          "k": "m",
+          "v": "(2,3,5)"
+        },
+        {
+          "k": "t",
+          "v": " network” holds at the Coxeter-skeleton level. "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "a minimal hypergraph "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "rewrite"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " reproducing the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "full"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " structure stays open; honest negatives: "
+        },
+        {
+          "k": "m",
+          "v": "\\phiz"
+        },
+        {
+          "k": "t",
+          "v": " is the analytic seed "
+        },
+        {
+          "k": "m",
+          "v": "\\tfrac{4}{3}c_3=1/(6\\pi)"
+        },
+        {
+          "k": "t",
+          "v": ", not an edge fraction, and recovery is a 1-D Möbius fixed point, not a rewrite. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "build green, "
+        },
+        {
+          "k": "c",
+          "v": "AUDIT OK"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-18",
+    "dateLabel": "2026-06-18",
+    "heading": [
+      {
+        "k": "t",
         "v": "a"
       },
       {
