@@ -59,6 +59,18 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-18 (Infrastructure: a generated causal ``script atlas'' so the suite is navigable at a glance)}
+\begin{itemize}
+\item \textbf{\texttt{verification/make\_script\_atlas.py} generates \texttt{verification/script\_atlas.md}} ---
+  a single grouped, dependency-aware view fusing the existing single sources (\texttt{status\_ledger.csv} for
+  claim$\to$status$\to$dependencies$\to$supersedes, \texttt{script\_registry.csv}/\texttt{script\_clusters.csv}
+  for the theme grouping, \texttt{docs\_map.csv} for where each script is cited). It lists every registered
+  script by cluster with its claim(s), four-class marker, one-liner, resolved dependencies and citing papers,
+  plus a \emph{supersede map} (which old claim each new one replaces) and a dependency/most-depended-on
+  overview --- the antidote to duplicating work or forgetting superseded results. No new data, a re-projection
+  only; wired into \texttt{bash build.sh gen}. \mE\ build green, \texttt{AUDIT OK}.
+\end{itemize}
+
 \subsection*{2026-06-18 (The bedrock in its minimal-axiom form: a rigidity theorem for \texttt{QGEO.SYM.01}, \texttt{v267})}
 \begin{itemize}
 \item \textbf{\texttt{v267\_qgeo\_rigidity\_minimal\_axiom.py} (\texttt{QGEO.SYM.02}) sharpens the one bedrock

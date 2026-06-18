@@ -84,6 +84,7 @@ run_gen() {  # regenerate every single-source surface (cheap, stdlib python only
   python3 "$ROOT/verification/make_script_index.py" || exit 1
   python3 "$ROOT/verification/make_docs_map.py" || exit 1
   python3 "$ROOT/verification/make_changelog_web.py" || exit 1
+  python3 "$ROOT/verification/make_script_atlas.py" || exit 1
 }
 
 run_website() {  # mirror PDFs + scripts into website/, stamp version + hashes

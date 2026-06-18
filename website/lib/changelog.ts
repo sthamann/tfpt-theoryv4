@@ -47,6 +47,134 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "Infrastructure: a generated causal “script atlas” so the suite is navigable at a glance"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "verification/make_script_atlas.py"
+            },
+            {
+              "k": "t",
+              "v": " generates "
+            },
+            {
+              "k": "c",
+              "v": "verification/script_atlas.md"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " — a single grouped, dependency-aware view fusing the existing single sources ("
+        },
+        {
+          "k": "c",
+          "v": "status_ledger.csv"
+        },
+        {
+          "k": "t",
+          "v": " for claim"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": "status"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": "dependencies"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": "supersedes, "
+        },
+        {
+          "k": "c",
+          "v": "script_registry.csv"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "script_clusters.csv"
+        },
+        {
+          "k": "t",
+          "v": " for the theme grouping, "
+        },
+        {
+          "k": "c",
+          "v": "docs_map.csv"
+        },
+        {
+          "k": "t",
+          "v": " for where each script is cited). It lists every registered script by cluster with its claim(s), four-class marker, one-liner, resolved dependencies and citing papers, plus a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "supersede map"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (which old claim each new one replaces) and a dependency/most-depended-on overview — the antidote to duplicating work or forgetting superseded results. No new data, a re-projection only; wired into "
+        },
+        {
+          "k": "c",
+          "v": "bash build.sh gen"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "build green, "
+        },
+        {
+          "k": "c",
+          "v": "AUDIT OK"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-18",
+    "dateLabel": "2026-06-18",
+    "heading": [
+      {
+        "k": "t",
         "v": "The bedrock in its minimal-axiom form: a rigidity theorem for "
       },
       {
