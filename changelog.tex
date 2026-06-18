@@ -59,6 +59,24 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-18 (the Gr\"al: QGEO.SYM.01 as one precise lemma $+$ the all-orders step Lean-formalised, \texttt{v279}/\texttt{FORM.QGEO.03})}
+\begin{itemize}
+\item \textbf{\texttt{v279\_qgeo\_obligation\_lemma.py} (\texttt{QGEO.OBLIG.01}) writes the bedrock as ONE precise
+  constructive-QFT lemma.} Given the premise \emph{the raw seam carries the flat $\tau{=}i$ pillowcase metric}
+  (Troyanov-unique, $\Lambda_\Sigma{=}\sqrt{-\Delta_{\mathrm{flat}}}$), then $\omega_\Sigma\circ\rho=\omega_\Sigma
+  \to$ mark-locality $\to E_8$. \mE\ the reduction DAG from `free RP seam' has exactly \emph{one} open leaf ---
+  `the raw seam state is the flat state'; \mE\ the geometric side is fixed (flat DtN diagonal, $\rho$ commutes to
+  all orders), so the obligation is a state-identification, with \mC\ two proof routes (RP-state uniqueness, or
+  Troyanov $+$ OS).
+\item \textbf{\texttt{FORM.QGEO.03}: the all-orders step is now machine-proved in Lean.}
+  \texttt{SeamDeckClosure.lean} gains \texttt{diagonal\_commutesClock} and
+  \texttt{flat\_all\_orders\_clock}: any spectral function $g(\Delta_{\mathrm{flat}})$ of the Fourier-diagonal
+  flat Laplacian commutes with the carrier clock $\rho{=}\mathrm{diag}(i^n)$ --- so the \vref{v276} all-orders
+  closure is a Lean theorem (only \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}; no
+  \texttt{sorry}; full \texttt{lake build} green, $3356$ jobs). The premise (the seam \emph{is} flat) stays the
+  \mO\ \texttt{QGEO.SYM.01} input. Build green, \texttt{AUDIT OK}.
+\end{itemize}
+
 \subsection*{2026-06-18 (4D QFT: the $S_{\mathrm{pert}}\to S_{\mathrm{phys}}$ LSZ bridge $+$ one-loop unitarity, \texttt{v278})}
 \begin{itemize}
 \item \textbf{\texttt{v278\_lsz\_bridge\_unitarity.py} (\texttt{QFT4D.SPERT.04}) connects the perturbative

@@ -613,6 +613,20 @@ flatness removes the lower-order terms. \mO\ so \texttt{QGEO.SYM.01} collapses t
 statement, ``the raw RP seam state is the flat $\tau{=}i$ pillowcase quasi-free state ($H{=}\sqrt{-\Delta_{\mathrm{flat}}}$)'';
 everything downstream is \mE, and the remaining human obligation is one constructive-QFT proof that the raw seam
 DtN state \emph{is} that flat geometry (\texttt{QGEO.SYM.03}).
+\par\smallskip\noindent\textbf{The obligation as one precise lemma, Lean-backed (\veri{v279\_qgeo\_obligation\_lemma.py}).}
+The bedrock is now written as a single constructive-QFT \emph{lemma}: \emph{given} the premise ``the raw seam
+carries the flat $\tau{=}i$ pillowcase metric $g_{\mathrm{flat}}$ (Troyanov-unique, cone angles $\pi$), so
+$\Lambda_\Sigma=\sqrt{-\Delta_{g_{\mathrm{flat}}}}$'', the conclusion $\omega_\Sigma\circ\rho=\omega_\Sigma$ (and
+hence mark-locality, the metric inclusion, $E_8$) follows. \mE\ the reduction DAG from ``free RP seam'' to this
+premise has \emph{exactly one} un-discharged leaf --- ``the raw seam state \emph{is} the flat state'' --- every
+other node being closed; and the geometric side is fixed (the flat DtN is Fourier-diagonal), so the obligation is
+a \emph{state-identification}, not a geometric ambiguity, with two candidate routes (\mC): RP-state uniqueness on
+the flat $\tau{=}i$ orbifold, or Troyanov $+$ OS reconstruction. \mE\ the all-orders closure step is now a
+\emph{Lean theorem}: \texttt{TfptCarrier/SeamDeckClosure.lean} (\texttt{flat\_all\_orders\_clock}) proves that any
+spectral function $g(\Delta_{\mathrm{flat}})$ of the Fourier-diagonal flat Laplacian commutes with the carrier
+clock $\rho=\mathrm{diag}(i^n)$ --- upgrading \vref{v198}/\vref{v201} to the full operator with only the standard
+axioms, no \texttt{sorry} (\texttt{FORM.QGEO.03}). \mO\ the one premise stays the honest axiom
+(\texttt{QGEO.OBLIG.01}).
 \par\smallskip\noindent\textbf{One surface for seam, carrier and lattice: the Kummer/K3
 (\veri{v260\_k3\_kummer\_unification.py}).} The pillowcase is the elliptic-involution quotient
 $T^2_{\tau=i}/(z{\mapsto}{-}z)$, its four marks the four $2$-torsion fixed points; squaring the construction

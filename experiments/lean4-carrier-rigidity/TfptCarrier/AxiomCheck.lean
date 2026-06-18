@@ -175,6 +175,8 @@ import TfptCarrier.CohomologyGrading
 #print axioms TFPT.Carrier.SeamDeckClosure.mark_sum_residue_nonzero
 #print axioms TFPT.Carrier.SeamDeckClosure.markLocal_blockDiagonal
 #print axioms TFPT.Carrier.SeamDeckClosure.SeamDeckPremise.clock_invariant
+#print axioms TFPT.Carrier.SeamDeckClosure.diagonal_commutesClock
+#print axioms TFPT.Carrier.SeamDeckClosure.flat_all_orders_clock
 
 -- Möbius uniformisation (QGEO.UNIFORM.01 geometric normal form; v177)
 #print axioms TFPT.Carrier.MobiusUniformisation.rho_pow_four

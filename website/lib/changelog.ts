@@ -47,6 +47,311 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "the Gräl: QGEO.SYM.01 as one precise lemma "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the all-orders step Lean-formalised, "
+      },
+      {
+        "k": "c",
+        "v": "v279"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "FORM.QGEO.03"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v279_qgeo_obligation_lemma.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGEO.OBLIG.01"
+            },
+            {
+              "k": "t",
+              "v": ") writes the bedrock as ONE precise constructive-QFT lemma."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Given the premise "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "the raw seam carries the flat "
+            },
+            {
+              "k": "m",
+              "v": "\\tau{=}i"
+            },
+            {
+              "k": "t",
+              "v": " pillowcase metric"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (Troyanov-unique, "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda_\\Sigma{=}\\sqrt{-\\Delta_{\\mathrm{flat}}}"
+        },
+        {
+          "k": "t",
+          "v": "), then "
+        },
+        {
+          "k": "m",
+          "v": "\\omega_\\Sigma\\circ\\rho=\\omega_\\Sigma\n  \\to"
+        },
+        {
+          "k": "t",
+          "v": " mark-locality "
+        },
+        {
+          "k": "m",
+          "v": "\\to E_8"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the reduction DAG from `free RP seam' has exactly "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " open leaf — `the raw seam state is the flat state'; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the geometric side is fixed (flat DtN diagonal, "
+        },
+        {
+          "k": "m",
+          "v": "\\rho"
+        },
+        {
+          "k": "t",
+          "v": " commutes to all orders), so the obligation is a state-identification, with "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "two proof routes (RP-state uniqueness, or Troyanov "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " OS)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "FORM.QGEO.03"
+            },
+            {
+              "k": "t",
+              "v": ": the all-orders step is now machine-proved in Lean."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "SeamDeckClosure.lean"
+        },
+        {
+          "k": "t",
+          "v": " gains "
+        },
+        {
+          "k": "c",
+          "v": "diagonal_commutesClock"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "flat_all_orders_clock"
+        },
+        {
+          "k": "t",
+          "v": ": any spectral function "
+        },
+        {
+          "k": "m",
+          "v": "g(\\Delta_{\\mathrm{flat}})"
+        },
+        {
+          "k": "t",
+          "v": " of the Fourier-diagonal flat Laplacian commutes with the carrier clock "
+        },
+        {
+          "k": "m",
+          "v": "\\rho{=}\\mathrm{diag}(i^n)"
+        },
+        {
+          "k": "t",
+          "v": " — so the "
+        },
+        {
+          "k": "c",
+          "v": "v276"
+        },
+        {
+          "k": "t",
+          "v": " all-orders closure is a Lean theorem (only "
+        },
+        {
+          "k": "c",
+          "v": "propext"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "Classical.choice"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "Quot.sound"
+        },
+        {
+          "k": "t",
+          "v": "; no "
+        },
+        {
+          "k": "c",
+          "v": "sorry"
+        },
+        {
+          "k": "t",
+          "v": "; full "
+        },
+        {
+          "k": "c",
+          "v": "lake build"
+        },
+        {
+          "k": "t",
+          "v": " green, "
+        },
+        {
+          "k": "m",
+          "v": "3356"
+        },
+        {
+          "k": "t",
+          "v": " jobs). The premise (the seam "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " flat) stays the "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "c",
+          "v": "QGEO.SYM.01"
+        },
+        {
+          "k": "t",
+          "v": " input. Build green, "
+        },
+        {
+          "k": "c",
+          "v": "AUDIT OK"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-18",
+    "dateLabel": "2026-06-18",
+    "heading": [
+      {
+        "k": "t",
         "v": "4D QFT: the "
       },
       {

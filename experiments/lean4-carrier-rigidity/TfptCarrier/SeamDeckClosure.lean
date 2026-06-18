@@ -173,6 +173,45 @@ def ofMarkSet (S : Finset ℤ) (hS : ∀ m ∈ S, cls m = 0) : SeamDeckPremise :
 
 end SeamDeckPremise
 
+/-! ### Part 4 — the flat-metric all-orders closure (v276) -/
+
+/-- `CommutesClock M`: the boundary operator `M` (matrix element `M n n'` in the
+Fourier-mode basis) commutes with the carrier clock `ρ = diag(iⁿ)`, i.e. it connects
+only equal clock-characters: `M n n' ≠ 0 ⇒ cls n = cls n'`. -/
+def CommutesClock (M : ℤ → ℤ → ℂ) : Prop := ∀ n n', M n n' ≠ 0 → cls n = cls n'
+
+/-- A **diagonal** boundary operator commutes with the clock (its only nonzero
+entries are on `n = n'`).  The flat-metric Laplacian `Δ_flat` is diagonal in the
+Fourier-mode basis. -/
+theorem diagonal_commutesClock {M : ℤ → ℤ → ℂ}
+    (hd : ∀ n n', n ≠ n' → M n n' = 0) : CommutesClock M := by
+  intro n n' hMnn'
+  by_cases h : n = n'
+  · rw [h]
+  · exact absurd (hd n n' h) hMnn'
+
+/-- A **spectral function** `g` of a diagonal operator with eigenvalues `d` is the
+diagonal operator with eigenvalues `g ∘ d` — by construction still diagonal.  This
+models `H = g(Δ_flat)` (e.g. `g = √·`, the DtN `√(-Δ_flat)`). -/
+def specFun (g : ℂ → ℂ) (d : ℤ → ℂ) : ℤ → ℤ → ℂ :=
+  fun n n' => if n = n' then g (d n) else 0
+
+theorem specFun_diagonal (g : ℂ → ℂ) (d : ℤ → ℂ) :
+    ∀ n n', n ≠ n' → specFun g d n n' = 0 := by
+  intro n n' h; simp [specFun, h]
+
+/-- **Flat-metric all-orders closure (the Lean form of `v276`).** For the flat τ=i
+pillowcase the DtN modular Hamiltonian `H = g(Δ_flat)` is a spectral function of the
+Fourier-diagonal flat Laplacian, hence diagonal, hence commutes with the carrier
+clock — for **every** spectral function `g`, i.e. to ALL orders, not merely the
+principal (`v198`) and sub-principal (`v201`) orders.  This upgrades the conditional
+block-diagonality to the full operator and reduces `QGEO.SYM.01` to the single
+geometric premise *the raw seam carries the flat τ=i metric* (so that `H` is a
+function of the diagonal `Δ_flat`).  The premise stays [O]; this closure is [F]. -/
+theorem flat_all_orders_clock (g : ℂ → ℂ) (d : ℤ → ℂ) :
+    CommutesClock (specFun g d) :=
+  diagonal_commutesClock (specFun_diagonal g d)
+
 /-! ### Sanity: the clock has order 4 on the character classes -/
 
 /-- The clock character is genuinely `ℤ/4`: the four residues `0,1,2,3` are
