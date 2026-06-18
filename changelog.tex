@@ -59,6 +59,20 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-18 (Red Team Target F --- adversarial audit of the v269--v275 round, \texttt{rt\_F})}
+\begin{itemize}
+\item \textbf{\texttt{redteam/rt\_F\_qft4d.py} (\texttt{REDTEAM.F.01}) stress-tests the just-published round}
+  (the perturbative $S_{\mathrm{pert}}$ layer, the PMNS Jarlskog, the $\nu$-scale, the over-determination,
+  the \texttt{QG.AMB.01} roadmap). \textsc{Survives (narrowed)}: two attacks land and are folded in.
+  \textbf{(1)} the gravity $R^2/$Weyl$^2$ sub-sector is power-counting renormalizable but \emph{non-unitary}
+  (the Stelle ghost: the four-derivative propagator $1/(p^2(p^2+M^2))$ has a negative-residue massive spin-2
+  mode), so $S_{\mathrm{pert}}$ is unitary for the matter$+$gauge sector only --- which is exactly why the
+  nonperturbative \texttt{QG.AMB.01} is the real frontier (caveat added to \vref{v269}). \textbf{(2)} the
+  $0.11\%$ anchor over-determination is conditional on the $\Lambda$-branch readout (\texttt{LAMBDA.BRANCH.01},
+  \mC), the gravity route being unconditional (caveat added to \vref{v274}). Added as Target F in
+  \texttt{tfpt\_5\_redteam} + the red-team table; \texttt{run\_redteam.py} green.
+\end{itemize}
+
 \subsection*{2026-06-18 (Zenodo release 5.2 (rev 191) --- the perturbative 4D-QFT layer + scale closure, v269--v275)}
 \begin{itemize}
 \item \textbf{Published to Zenodo.} Version \texttt{5.2 (rev 191)} of the ten-PDF document set was published

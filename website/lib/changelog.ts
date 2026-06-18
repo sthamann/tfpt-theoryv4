@@ -47,6 +47,232 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "Red Team Target F — adversarial audit of the v269–v275 round, "
+      },
+      {
+        "k": "c",
+        "v": "rt_F"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "redteam/rt_F_qft4d.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "REDTEAM.F.01"
+            },
+            {
+              "k": "t",
+              "v": ") stress-tests the just-published round"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (the perturbative "
+        },
+        {
+          "k": "m",
+          "v": "S_{\\mathrm{pert}}"
+        },
+        {
+          "k": "t",
+          "v": " layer, the PMNS Jarlskog, the "
+        },
+        {
+          "k": "m",
+          "v": "\\nu"
+        },
+        {
+          "k": "t",
+          "v": "-scale, the over-determination, the "
+        },
+        {
+          "k": "c",
+          "v": "QG.AMB.01"
+        },
+        {
+          "k": "t",
+          "v": " roadmap). "
+        },
+        {
+          "k": "t",
+          "v": "Survives (narrowed)"
+        },
+        {
+          "k": "t",
+          "v": ": two attacks land and are folded in. "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(1)"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the gravity "
+        },
+        {
+          "k": "m",
+          "v": "R^2/"
+        },
+        {
+          "k": "t",
+          "v": "Weyl"
+        },
+        {
+          "k": "m",
+          "v": "^2"
+        },
+        {
+          "k": "t",
+          "v": " sub-sector is power-counting renormalizable but "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "non-unitary"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (the Stelle ghost: the four-derivative propagator "
+        },
+        {
+          "k": "m",
+          "v": "1/(p^2(p^2+M^2))"
+        },
+        {
+          "k": "t",
+          "v": " has a negative-residue massive spin-2 mode), so "
+        },
+        {
+          "k": "m",
+          "v": "S_{\\mathrm{pert}}"
+        },
+        {
+          "k": "t",
+          "v": " is unitary for the matter"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": "gauge sector only — which is exactly why the nonperturbative "
+        },
+        {
+          "k": "c",
+          "v": "QG.AMB.01"
+        },
+        {
+          "k": "t",
+          "v": " is the real frontier (caveat added to "
+        },
+        {
+          "k": "c",
+          "v": "v269"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(2)"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "0.11\\%"
+        },
+        {
+          "k": "t",
+          "v": " anchor over-determination is conditional on the "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda"
+        },
+        {
+          "k": "t",
+          "v": "-branch readout ("
+        },
+        {
+          "k": "c",
+          "v": "LAMBDA.BRANCH.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "), the gravity route being unconditional (caveat added to "
+        },
+        {
+          "k": "c",
+          "v": "v274"
+        },
+        {
+          "k": "t",
+          "v": "). Added as Target F in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_5_redteam"
+        },
+        {
+          "k": "t",
+          "v": " + the red-team table; "
+        },
+        {
+          "k": "c",
+          "v": "run_redteam.py"
+        },
+        {
+          "k": "t",
+          "v": " green."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-18",
+    "dateLabel": "2026-06-18",
+    "heading": [
+      {
+        "k": "t",
         "v": "Zenodo release 5.2 (rev 191) — the perturbative 4D-QFT layer + scale closure, v269–v275"
       }
     ],

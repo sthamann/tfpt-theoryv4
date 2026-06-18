@@ -439,6 +439,13 @@ normalises the spectral-action $a_4$ geometric quartic. \mC\ the $\phi^4$ one-lo
 $\beta_\lambda=3\lambda^2/(16\pi^2)$ (symmetry factor $3=$ the $s,t,u$ channels), with the EG initial condition
 fixed by the spectral action, $\lambda_\Phi(\mathrm{UV})=1/(16\pi^2)$. \mO\ this is order-2/one-loop, one
 diagram class; the all-order construction and the nonperturbative measure stay open (\texttt{QFT4D.SPERT.02}).
+\par\smallskip\noindent\emph{Red-team caveat (\veri{redteam/rt\_F\_qft4d.py}).} Power-counting
+renormalizability is \emph{not} unitarity for the gravity sub-sector: the $R^2/$Weyl$^2$ terms give a
+four-derivative propagator $1/(p^2(p^2+M^2))$ whose massive spin-2 mode has a negative residue (the Stelle
+ghost). So $S_{\mathrm{pert}}$ is a unitary perturbative S-matrix for the \emph{matter$+$gauge} sector only;
+the gravity perturbative S-matrix carries the ghost --- which is precisely why the \emph{nonperturbative}
+\texttt{QG.AMB.01} (asymptotic safety \vref{v207} / the boundary $(E_8)_1$ net) is the real frontier, not a
+new gap.
 \par\smallskip\noindent\textbf{The gauge running is an EG order-2 number (\veri{v273\_eg\_gauge\_running.py}).}
 The same scaling-degree-4 mechanism applied to the gauge self-energy gives the SM one-loop coefficients from the
 carrier/SM content: $b_i=-\tfrac{11}{3}C_2(G)+\tfrac23\sum_f T(R)+\tfrac13\sum_s T(R)$, i.e.\ \mE\

@@ -43,6 +43,14 @@
     verdict  : v_geo is the unique dimensional floor of the CERTIFIED tiers (true by dimensional analysis). Full single-scale-ness is conditional on the flagged identifications staying honestly typed.
     residual : explicit reduction (or honest frontier typing) of EW/reheating/leptogenesis scales + the seam=Planck cutoff identification.
 
+  Target F   [STATUS: SURVIVES (narrowed)]
+    claim    : the v269-v275 round: S_pert EG-constructible + one-loop numbers, PMNS Jarlskog, nu-scale typing, scale over-determination, QG.AMB.01 roadmap
+    assume   : EG perturbative existence; the spectral-action operator basis; the Lambda-branch readout; the assembled mu6 CP phase
+    works    : power-counting renormalizability (dim<=4), the exact one-loop b_i (41/10,-19/6,-7) and quartic beta = 3lam^2/16pi^2 [E]; the unitary PMNS assembly + J_PMNS as a derived consequence; the honest [O] typing of the nu-scale; the striking 0.11% anchor over-determination
+    fails    : the GRAVITY sub-sector S_pert is renormalizable but NON-UNITARY (Stelle ghost in Weyl^2); the over-determination is conditional on the Lambda-branch [C]; J_PMNS inherits delta's [C] provenance; the nu-window is weak (only the NO floor is a real kill test)
+    verdict  : the round SURVIVES as typed, but two narrowings are mandatory: (1) scope S_pert to matter+gauge unitary / gravity renormalizable-but-ghosty (-> QG.AMB.01); (2) state the over-determination as conditional on the Lambda-branch. J_PMNS and the nu-window are already honestly typed.
+    residual : the perturbative gravity S-matrix is non-unitary (Stelle ghost) -- this IS the QG.AMB.01 frontier, not a new gap; the over-determination is conditional on LAMBDA.BRANCH.01 [C].
+
 ==============================================================================
   STATUS MATRIX
     A  REDUCED, not closed     seam-Calderon boundary measure = (E8)_1 lattice net
@@ -50,4 +58,5 @@
     C  SURVIVES                k = c3/2 = 1/(16 pi) (reduced) and S/A = 1/4
     D  SURVIVES (narrowed)     ratios + products fix the amplitudes up to one scale v_geo
     E  SURVIVES (narrowed)     exactly one dimensionful scale v_geo carries the whole theory
+    F  SURVIVES (narrowed)     the v269-v275 round: S_pert EG-constructible + one-loop numbers, PMNS Jarlskog, nu-scale typing, scale over-determination, QG.AMB.01 roadmap
 ==============================================================================

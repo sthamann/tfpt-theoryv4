@@ -12,8 +12,9 @@ import rt_B_pascal
 import rt_C_kc3
 import rt_D_upoint
 import rt_E_vgeo
+import rt_F_qft4d
 
-MODULES = [rt_A_e8net, rt_B_pascal, rt_C_kc3, rt_D_upoint, rt_E_vgeo]
+MODULES = [rt_A_e8net, rt_B_pascal, rt_C_kc3, rt_D_upoint, rt_E_vgeo, rt_F_qft4d]
 ARTIFACT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "redteam_table.txt")
 
 

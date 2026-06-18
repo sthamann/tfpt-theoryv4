@@ -45,8 +45,10 @@ These are THREE DISTINCT objects; the 2d braiding is not the physical 4d S-matri
 
 Status: [E] the three-layer typing + power-counting + finite counterterm basis;
 [C] the Epstein-Glaser existence (cited theorem applied) + the adiabatic/gap link;
-[O] the nonperturbative ambient measure stays open.  A contract/skeleton (like
-v244/v250), explicitly perturbative.  Python-only (sympy dimensions + structure).
+[O] the nonperturbative ambient measure stays open, AND the gravity sub-sector is
+renormalizable-but-non-unitary (the Stelle ghost; red-team rt_F) -- S_pert is unitary
+for the matter+gauge sector only.  A contract/skeleton (like v244/v250), explicitly
+perturbative.  Python-only (sympy dimensions + structure).
 """
 import sympy as sp
 
@@ -119,6 +121,16 @@ def run():
           "adiabatic limit g->1 and asymptotic states; S_pert connects to S_phys "
           "via LSZ on the OS Wightman functions (couplings feed in from the "
           "spectral action, v255)" % gap, gap > 0)
+
+    # 5b. gravity-sector unitarity caveat (red-team rt_F)
+    check("GRAVITY-SECTOR CAVEAT [O]: power-counting renormalizable does NOT mean "
+          "unitary for the gravity sub-sector -- the R^2/Weyl^2 terms give a "
+          "4-derivative propagator 1/(p^2(p^2+M^2)) with a negative-residue massive "
+          "spin-2 mode (the Stelle ghost). So S_pert is a unitary perturbative "
+          "S-matrix for the MATTER+GAUGE sector only; the gravity perturbative "
+          "S-matrix carries the ghost -- which is exactly why the nonperturbative "
+          "QG.AMB.01 (asymptotic safety / boundary (E8)_1 net) is the real frontier "
+          "(red-team rt_F)", True)
 
     # 6. nonperturbative residual
     check("NONPERTURBATIVE RESIDUAL [O]: S_pert is PERTURBATIVE (a formal power "

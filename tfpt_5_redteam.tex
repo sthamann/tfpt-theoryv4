@@ -1,7 +1,7 @@
 % ---------------------------------------------------------------------
 %  TFPT --- Red Team / Stress Test layer (Targets A--E)
 %  A deliberately adversarial pass over the five load-bearing reductions.
-%  Backed by verification/redteam/rt_A..rt_E + run_redteam.py.
+%  Backed by verification/redteam/rt_A..rt_F + run_redteam.py.
 % ---------------------------------------------------------------------
 \documentclass[11pt,a4paper]{article}
 \usepackage[T1]{fontenc}
@@ -54,7 +54,7 @@ logical transitions. Each target is run through one fixed protocol --- minimal s
 assumptions, logical chain, validity conditions, counterexample search, limiting/degenerate
 cases, alternative structures, provisional verdict --- and produces a deliberately narrow output:
 where the statement works, where it could fail, and the residual risk. The layer is machine-backed
-by \veri{redteam/rt\_A\_e8net.py} \dots \veri{redteam/rt\_E\_vgeo.py} and
+by \veri{redteam/rt\_A\_e8net.py} \dots \veri{redteam/rt\_E\_vgeo.py}, \veri{redteam/rt\_F\_qft4d.py} and
 \veri{redteam/run\_redteam.py}; a red-team check asserts an \emph{adversarial} fact (a counterexample
 really exists, a hidden assumption is really needed, a firewall really holds), and the honest
 outcome lives in the \textbf{status} of each target, never in a green pass.
@@ -195,11 +195,38 @@ honestly typed. Status \mE\,(ratios) $+$ \mO\,(one scale). Residual: explicit re
 frontier typing) of the EW / reheating / leptogenesis scales $+$ the seam$=$Planck cutoff.
 
 % =====================================================================
+\section*{Target F --- the perturbative 4D-QFT $+$ scale round (v269--v275)}\label{sec:F}
+% =====================================================================
+\noindent\textbf{Minimal claim.} The round published in release 5.2 --- the Epstein--Glaser
+$S_{\mathrm{pert}}$ layer (\vref{v269}/\vref{v271}/\vref{v273}), the PMNS Jarlskog CP strength
+(\vref{v270}), the absolute $\nu$-scale typing (\vref{v272}), the scale over-determination
+(\vref{v274}) and the \texttt{QG.AMB.01} roadmap (\vref{v275}).\veri{redteam/rt\_F\_qft4d.py}
+
+\begin{keybox}[Two attacks land; the round survives once they are named]
+\textbf{(1) The gravity $S_{\mathrm{pert}}$ is non-unitary.} Power-counting renormalizability is \emph{not}
+unitarity: the $R^2/$Weyl$^2$ sector gives a four-derivative propagator $1/(p^2(p^2+M^2))$ with a
+negative-residue massive spin-2 mode (the Stelle ghost). So $S_{\mathrm{pert}}$ is unitary for the
+matter$+$gauge sector only; the gravity perturbative S-matrix carries the ghost --- which is exactly why the
+\emph{nonperturbative} \texttt{QG.AMB.01} is the real frontier, not a new gap.
+\textbf{(2) The over-determination is conditional.} \vref{v274}'s Route-2 inverts the
+$\rho_\Lambda/\Mpl^4=(3/4\pi^2)e^{-2\alpha^{-1}}$ prediction, which is itself \texttt{LAMBDA.BRANCH.01} \mC;
+so the $0.11\%$ gravity-vs-cosmology agreement is conditional on the $\Lambda$-branch (the gravity route is
+unconditional). \textbf{Already-honest:} $J_{\mathrm{PMNS}}$ inherits $\delta$'s \mC\ provenance (assembled
+$\mu_6$ phase, not an $M_\nu$ output) and the $\nu$-scale is \mO\ with the NO floor $\Sigma m_\nu=0.0586$ eV as
+the one kill test.
+\end{keybox}
+
+\noindent\textbf{Verdict.} \textsc{Survives (narrowed)}: the round stands as typed; the two narrowings above are
+now folded into \vref{v269} and \vref{v274}. Residual: the perturbative gravity S-matrix is non-unitary (the
+Stelle ghost) --- this \emph{is} the \texttt{QG.AMB.01} frontier; and the anchor over-determination is
+conditional on the $\Lambda$-branch.
+
+% =====================================================================
 \section*{Outcome}
 % =====================================================================
 \par\smallskip\noindent\textbf{What the red team changed.}
 No target broke. The hardest gate (A) is confirmed \emph{open} with the conservative wording;
-three targets (B, D, E) \emph{survive once a silent assumption is named}; one (C) survives as
+four targets (B, D, E, F) \emph{survive once a silent assumption is named}; one (C) survives as
 worded. The net effect is not new physics but sharper typing: the package now states \emph{where}
 each reduction would fail and \emph{which} assumptions are truly necessary, exactly at the weakest
 logical transitions. Reproduce with \texttt{cd verification/redteam \&\& python run\_redteam.py}.

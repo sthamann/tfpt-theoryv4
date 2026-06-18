@@ -31,7 +31,8 @@ point to the SAME M_bar.
         compiler can have -- not a missing derivation.
 
 Status: [E] one anchor + the conformal-seam reason; [N] the two-route over-
-determination (gravity vs dark energy, 0.11%); [A] the re-typing.  Sharpens v153/v78
+determination (gravity vs dark energy, 0.11%) -- CONDITIONAL on the Lambda-branch
+readout (LAMBDA.BRANCH.01 [C]; red-team rt_F); [A] the re-typing.  Sharpens v153/v78
 from "v_geo is open" to "the anchor is over-determined and equals the Planck mass".
 Python-only (mpmath; the alpha^-1 fixed point from v3).
 """
@@ -72,6 +73,14 @@ def run():
           "dark-energy scale and Newton's G are the SAME Planck mass"
           % (float(Mbar_grav), float(Mbar_cosmo), float(100 * disagree)),
           disagree < mp.mpf("0.01"))
+
+    # 2b. conditionality of the over-determination (red-team rt_F)
+    check("CONDITIONALITY [O]: Route 2 inverts the rho_Lambda/M_bar^4 = (3/4 pi^2) "
+          "e^{-2 alpha^-1} prediction, which is itself LAMBDA.BRANCH.01 [C] (the "
+          "dark-energy branch readout) -- so the 0.11%% gravity-vs-cosmology agreement "
+          "is conditional on the Lambda-branch being correct, not unconditional "
+          "(red-team rt_F). Route 1 (gravity G) is unconditional; the over-determination "
+          "is 'two routes agree GIVEN the Lambda-branch'", True)
 
     # 3. the anchor is the gravitational unit
     check("GRAVITATIONAL UNIT [E]: M_bar enters as the spectral-action cutoff = the "
