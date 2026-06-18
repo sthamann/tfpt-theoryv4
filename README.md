@@ -83,6 +83,17 @@ bootstrap fixed point* (forced three independent ways via the `E8` closure), so 
   axes — `Q = U+V`, `R/L = C∓U` (winding), `K/F = C∓V` (sheet, `Spec V = {0,1,2}` = the cusp
   class); the center has `det C = 14`, `ΣC = 31 = 2^g−1` (the IR gap-bound numerator),
   `Pl_R(C) = 7·(2,3,1)` — the `G₂` reading stays audit-typed.
+- **The boundary QFT as one relative object** (`v238`–`v261`, *Modular Spectral Closure*): the
+  emergent-QFT round assembles the seam into `TFPT_QFT = (A_Σ, ω_Σ, Δ_Σ, ρ, A_F, H_F, D_F, J, γ, S_rel)`
+  and collapses it to a single object. The 96-dim finite spectral triple (`A_F = ℍ_L⊕ℍ_R⊕M₄(ℂ)`, KO-6,
+  order-zero, the first-order condition violated *exactly* by the Majorana = the CCvS σ mechanism, `v252`)
+  is closed by three moves: the finite Dirac is the **modular/covariance induction** of the seam KMS state
+  (`[D_F] = [D_Σ]⊗[K_car]`, the Yukawas a readout of `C_Σ`, `v258`); the spectral-action **cutoff is that
+  KMS weight** so `f₂/f₀ = 1` exactly and `κ` becomes a finite-triple trace ratio (`v259`); and the seam
+  (pillowcase), the carrier-16 (Kummer nodes) and `E₈` (`H²(K3) = U³⊕E₈(−1)²`) are facets of **one
+  Kummer/K3 surface** (`v260`). The assembly certificate (`v261`) pins the cross-consistency — one number
+  `4 = [B:A] = |μ₄| = 2χ = |(ℤ/2)²|`, one carrier-16, one gap `6log(3/2)` — so the layer is *QFT-complete
+  modulo the single seam premise* `QGEO.SYM.01`, with ambient QG kept separate.
 
 ### Honest scope — the four layers
 
@@ -92,7 +103,7 @@ layers (this separation is the discipline of the whole package):
 | Layer | Content | Status |
 |---|---|---|
 | **1. Closed compiler** | `E8` glue, carrier, `α⁻¹`, `(R,K,Q,L)`, lepton/quark *ratios* | `[I]/[L]/[N]` |
-| **2. Protected IR physics** | `R+R²`, admissible gapped transfer sector (OS-reconstructed *under RP/gap hypotheses*) | `[I]/[P]` |
+| **2. Protected IR physics** | `R+R²`, admissible gapped transfer sector (OS-reconstructed *under RP/gap hypotheses*); the boundary QFT as one relative object (Modular Spectral Closure: Dirac = covariance induction, cutoff = KMS weight, seam/carrier/E₈ on one K3) | `[I]/[P]` |
 | **3. Anchors** | `π`, one dimensionful induced-gravity scale, `U_point` absolute amplitude norm | `[A]` (declared, not "missing") |
 | **4. Interfaces** | `m_p/m_e`, `η_B` (leptogenesis), Koide, axion relic, full ambient QG measure | `[P]/[A]` |
 
@@ -136,7 +147,7 @@ anchor (`1/G` is UV-sensitive, Sakharov-type induced gravity) — not a diffuse 
 | `audit_sync.py` | **The sync audit** (papers ↔ suite ↔ ledger ↔ changelog ↔ website, both directions); must end `AUDIT OK`. |
 | `make_figures.py` | Regenerates the figures (status heatmap, attractor, Coxeter circle, …). |
 | `make_manifest.py` | Writes `manifest.sha256` + `lean_manifest.sha256` (content digests). |
-| `wolfram/tfpt_readouts.wl` | Independent second path on Wolfram Engine (`116/116` checks); `wolfram/tfpt_readouts_extension.wl` mirrors the exact algebraic/identity/lattice results v84–v209 (`246/246`, verified on Wolfram Engine 14.3). |
+| `wolfram/tfpt_readouts.wl` | Independent second path on Wolfram Engine (`116/116` checks); `wolfram/tfpt_readouts_extension.wl` mirrors the exact algebraic/identity/lattice results v84–v260 (`267/267`, verified on Wolfram Engine 14.3). |
 | `redteam/run_redteam.py` | **Adversarial layer.** Tries to *break* the five reductions (Targets A–E); verdicts in `REDTEAM.*` ledger rows + `tfpt_5_redteam.tex`. |
 
 ### Other directories
@@ -172,7 +183,7 @@ bash build.sh notes
 cd verification && python run_all.py
 
 # 3. Independent Wolfram path  ->  "116/116 passed"  (optional, needs Wolfram Engine)
-#    (the v84+ extension mirrors the exact results, 246/246)
+#    (the v84+ extension mirrors the exact results, 267/267)
 wolframscript -file verification/wolfram/tfpt_readouts.wl
 wolframscript -file verification/wolfram/tfpt_readouts_extension.wl
 
@@ -230,6 +241,12 @@ The ledger is *append-only and versioned*: superseded rows are marked `active=fa
   is anyon condensation, i.e. the Kitaev `E8` quantum-Hall state. So the one open analytic step is
   *"the free RP seam condenses the order-`|μ₄|` Lagrangian glue (det → 1)"* = `QGEO.SYM.01`. Plus the two
   irreducibles: the scale `v_geo` (No-Unit theorem) and the transfer functor `F_transfer` (external physics).
+  **The whole emergent-QFT layer collapses onto the *same* premise** (`v261`, Modular Spectral Closure):
+  the finite Dirac (covariance induction, `v258`), the spectral-action cutoff (the seam KMS weight, `v259`),
+  the gauging (inner fluctuations), the glue and orientability are all readouts of the one seam state, so
+  the boundary QFT is closed *as a relative object* modulo `QGEO.SYM.01` — it adds **no new open item**.
+  The ambient quantum-gravity measure (`QG.AMB.01`) is gap-decoupled (`Δ_eff = 1.648 > 0`) and kept
+  separate by design: a certification layer, not a QFT blocker.
 - **The central theorem**: `1/(8π)` from the seam-determinant replica — structure closed, the
   Fursaev–Solodukhin factor machine-derived (`v90`), and the mechanism now exhibited at the
   gapped-model level (gap ⇒ cutoff-independent EH coefficient under replica, `v150`), with the
@@ -290,7 +307,7 @@ two axioms `{c₃, g_car}` are not free knobs: they reduce to the single parabol
 plus `π` (`v23`), with `g_car = 5` an over-determined bootstrap fixed point (forced three ways `v6`,
 Pascal-unique and Lean-formalised). The bedrock premise is not closeable by a finite computation; it is
 the one item that needs a human constructive-geometry argument (or a proof assistant). A development
-timeline of all `181` scripts is in `introduction.tex` (and on the website verification page).
+timeline of all `261` scripts is in `introduction.tex` (and on the website verification page).
 
 ---
 

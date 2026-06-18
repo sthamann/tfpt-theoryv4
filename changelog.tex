@@ -59,6 +59,49 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-17 (The Modular Spectral Closure: Dirac as covariance induction, the modular cutoff, the Kummer/K3 unification, and the assembly certificate, \texttt{v258}--\texttt{v261})}
+\begin{itemize}
+\item \textbf{\texttt{v258\_dirac\_covariance\_induction.py} (\texttt{PS.DIRAC.03}) closes the
+  ``posited Yukawa vs derived operator'' gap of \vref{v250}/\vref{v252}.} The finite Dirac operator $D_F$
+  is the modular/covariance \emph{induction} of the boundary seam quasi-free (KMS, $\beta{=}1$) state: a
+  Gaussian state is fixed by its covariance $C$ (a positive contraction) with one-particle modular
+  Hamiltonian $H=\log((1{-}C)C^{-1})$ (Araki; Casini--Huerta), inverse to the KMS occupation
+  $C=(1{+}e^{H})^{-1}$. \mE\ the inversion identity holds exactly; \mE\ $C_F$ is a positive contraction;
+  \mE\ the induced operator is chirality-odd; \mE\ it is unitarily equivalent to the \vref{v252} $D_F$ (same
+  mass spectrum); \mE\ the Majorana/seesaw $m_D^2/M_R$ is an off-diagonal covariance entry. \mC\
+  $C_F=P_F C_\Sigma P_F$, so $D_F$ is the Kasparov shadow $[D_\Sigma]\widehat\otimes_{(E_8)_1}[\mathcal
+  K_{\mathrm{car}}]$ of the boundary geometry and the \vref{v18} Yukawas are the readout of $C_\Sigma$.
+\item \textbf{\texttt{v259\_modular\_cutoff\_kappa.py} (\texttt{PS.SPECACT.02}) fixes the last open
+  spectral-action input.} The cutoff $f$ is the seam's own modular/KMS weight: by
+  Tomita--Takesaki/Bisognano--Wichmann the seam is KMS at $\beta{=}1$ (\vref{v239}) and $2\pi{=}1/(4c_3)$
+  (\vref{v58}) fixes $\beta$, so the heat-kernel cutoff $f(u)=e^{-u}$ is \emph{derived}. \mE\ its moments
+  give $f_2/f_0=f_4/f_2=1$ exactly; \mE\ a generic Gaussian cutoff gives $\sqrt\pi/2\neq1$ (the choice is
+  non-vacuous); \mE\ hence $\kappa=\sqrt{(f_2/f_0)\,c_{PS}/c_{\rm grav}}=\sqrt{c_{PS}/c_{\rm grav}}$ loses
+  its scheme factor. \mC\ the open \mO\ cutoff freedom of \vref{v253}/\vref{v255} becomes a finite trace
+  ratio over the $96$-dim $H_F$ (the RG $\kappa{\approx}1.3$ pins $c_{PS}/c_{\rm grav}{\approx}1.7$).
+\item \textbf{\texttt{v260\_k3\_kummer\_unification.py} (\texttt{ARCH.K3.01}) unifies seam, carrier and
+  lattice on one surface.} The pillowcase is the elliptic-involution quotient $T^2_{\tau=i}/(z{\mapsto}{-}z)$
+  (\vref{v214}); squaring it gives the Kummer/K3 surface, whose three facets are three TFPT objects. \mE\ the
+  $E_8$ Cartan is even/$\det1$/positive-definite; \mE\ $H^2(\mathrm{K3},\Z)=U^3\oplus E_8({-}1)^2$ (rank $22$,
+  $\det{-}1$, even, signature $(3,19)$); \mE\ the seam is $T^2/(z{\mapsto}{-}z)$ with $4$ marks (orbifold
+  Euler char $0$); \mE\ the carrier-$16$ are the $|A[2]|{=}2^4{=}16$ Kummer nodes $=\dim S^+$ (\vref{v197}),
+  $16{=}4{\times}4$; \mE\ honest note --- the rank-$16$ Kummer lattice is \emph{not} the $E_8({-}1)^2$
+  summand. \mC\ so the \vref{v1} ``glue $D_5{\oplus}A_3{+}\mu_4{\Rightarrow}E_8$'' is the lattice shadow of a
+  single object; $E_8$ appears both locally (du Val $\mathbb C^2/2I$, \vref{v232}/\vref{v236}) and globally
+  ($H^2$ summand). A unification, not a closure.
+\item \textbf{\texttt{v261\_modular\_spectral\_closure.py} (\texttt{QFT.MSC.01}) is the assembly capstone.}
+  The whole QFT round (\vref{v238}--\vref{v260}) is certified as \emph{one} relative object
+  $\mathsf{TFPT}_{\mathrm{QFT}}=(\mathcal A_\Sigma,\omega_\Sigma,\Delta_\Sigma,\rho,A_F,H_F,D_F,J,\gamma,
+  S_{\mathrm{rel}})$ reduced to \emph{one} open premise. \mE\ the cross-consistency invariants agree:
+  $4=[B{:}A]=|\mu_4|=2\chi=|(\Z/2)^2|$ (index $=$ marks $=$ fixed points $=$ glue order), one carrier-$16$
+  (spinor $=$ lattice $=$ triple), one gap $6\log(3/2)$ (OS $=$ recovery $=$ Lindblad); \mE\ the three
+  closures re-derived; \mE\ the ten-component manifest present. \mO\ the QFT layer reduces to
+  \texttt{QGEO.SYM.01} (seam realisation), the ambient QG measure \texttt{QG.AMB.01} kept separate. \mC\
+  the \emph{Modular Spectral Universality} master statement: the unique RP holomorphic index-$4$ KMS seam
+  state induces the $96$-dim KO-$6$ triple whose inner fluctuations give the gauged Pati--Salam spectral
+  action --- the honest sense in which the boundary QFT is complete.
+\end{itemize}
+
 \subsection*{2026-06-17 (Infrastructure: the changelog is now a public website page, generated from \texttt{changelog.tex} and audit-gated)}
 \begin{itemize}
 \item \textbf{The canonical changelog now also drives a public \texttt{/changelog} website page.}

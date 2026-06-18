@@ -47,6 +47,984 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "The Modular Spectral Closure: Dirac as covariance induction, the modular cutoff, the Kummer/K3 unification, and the assembly certificate, "
+      },
+      {
+        "k": "c",
+        "v": "v258"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v261"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v258_dirac_covariance_induction.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PS.DIRAC.03"
+            },
+            {
+              "k": "t",
+              "v": ") closes the “posited Yukawa vs derived operator” gap of "
+            },
+            {
+              "k": "c",
+              "v": "v250"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "c",
+              "v": "v252"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The finite Dirac operator "
+        },
+        {
+          "k": "m",
+          "v": "D_F"
+        },
+        {
+          "k": "t",
+          "v": " is the modular/covariance "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "induction"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " of the boundary seam quasi-free (KMS, "
+        },
+        {
+          "k": "m",
+          "v": "\\beta{=}1"
+        },
+        {
+          "k": "t",
+          "v": ") state: a Gaussian state is fixed by its covariance "
+        },
+        {
+          "k": "m",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": " (a positive contraction) with one-particle modular Hamiltonian "
+        },
+        {
+          "k": "m",
+          "v": "H=\\log((1{-}C)C^{-1})"
+        },
+        {
+          "k": "t",
+          "v": " (Araki; Casini–Huerta), inverse to the KMS occupation "
+        },
+        {
+          "k": "m",
+          "v": "C=(1{+}e^{H})^{-1}"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the inversion identity holds exactly; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "C_F"
+        },
+        {
+          "k": "t",
+          "v": " is a positive contraction; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the induced operator is chirality-odd; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "it is unitarily equivalent to the "
+        },
+        {
+          "k": "c",
+          "v": "v252"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "D_F"
+        },
+        {
+          "k": "t",
+          "v": " (same mass spectrum); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the Majorana/seesaw "
+        },
+        {
+          "k": "m",
+          "v": "m_D^2/M_R"
+        },
+        {
+          "k": "t",
+          "v": " is an off-diagonal covariance entry. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "C_F=P_F C_\\Sigma P_F"
+        },
+        {
+          "k": "t",
+          "v": ", so "
+        },
+        {
+          "k": "m",
+          "v": "D_F"
+        },
+        {
+          "k": "t",
+          "v": " is the Kasparov shadow "
+        },
+        {
+          "k": "m",
+          "v": "[D_\\Sigma]\\widehat\\otimes_{(E_8)_1}[\\mathcal\n  K_{\\mathrm{car}}]"
+        },
+        {
+          "k": "t",
+          "v": " of the boundary geometry and the "
+        },
+        {
+          "k": "c",
+          "v": "v18"
+        },
+        {
+          "k": "t",
+          "v": " Yukawas are the readout of "
+        },
+        {
+          "k": "m",
+          "v": "C_\\Sigma"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v259_modular_cutoff_kappa.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PS.SPECACT.02"
+            },
+            {
+              "k": "t",
+              "v": ") fixes the last open spectral-action input."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The cutoff "
+        },
+        {
+          "k": "m",
+          "v": "f"
+        },
+        {
+          "k": "t",
+          "v": " is the seam's own modular/KMS weight: by Tomita–Takesaki/Bisognano–Wichmann the seam is KMS at "
+        },
+        {
+          "k": "m",
+          "v": "\\beta{=}1"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v239"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "m",
+          "v": "2\\pi{=}1/(4c_3)"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v58"
+        },
+        {
+          "k": "t",
+          "v": ") fixes "
+        },
+        {
+          "k": "m",
+          "v": "\\beta"
+        },
+        {
+          "k": "t",
+          "v": ", so the heat-kernel cutoff "
+        },
+        {
+          "k": "m",
+          "v": "f(u)=e^{-u}"
+        },
+        {
+          "k": "t",
+          "v": " is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "derived"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "its moments give "
+        },
+        {
+          "k": "m",
+          "v": "f_2/f_0=f_4/f_2=1"
+        },
+        {
+          "k": "t",
+          "v": " exactly; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "a generic Gaussian cutoff gives "
+        },
+        {
+          "k": "m",
+          "v": "\\sqrt\\pi/2\\neq1"
+        },
+        {
+          "k": "t",
+          "v": " (the choice is non-vacuous); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "hence "
+        },
+        {
+          "k": "m",
+          "v": "\\kappa=\\sqrt{(f_2/f_0)\\,c_{PS}/c_{\\rm grav}}=\\sqrt{c_{PS}/c_{\\rm grav}}"
+        },
+        {
+          "k": "t",
+          "v": " loses its scheme factor. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the open "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "cutoff freedom of "
+        },
+        {
+          "k": "c",
+          "v": "v253"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v255"
+        },
+        {
+          "k": "t",
+          "v": " becomes a finite trace ratio over the "
+        },
+        {
+          "k": "m",
+          "v": "96"
+        },
+        {
+          "k": "t",
+          "v": "-dim "
+        },
+        {
+          "k": "m",
+          "v": "H_F"
+        },
+        {
+          "k": "t",
+          "v": " (the RG "
+        },
+        {
+          "k": "m",
+          "v": "\\kappa{\\approx}1.3"
+        },
+        {
+          "k": "t",
+          "v": " pins "
+        },
+        {
+          "k": "m",
+          "v": "c_{PS}/c_{\\rm grav}{\\approx}1.7"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v260_k3_kummer_unification.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "ARCH.K3.01"
+            },
+            {
+              "k": "t",
+              "v": ") unifies seam, carrier and lattice on one surface."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The pillowcase is the elliptic-involution quotient "
+        },
+        {
+          "k": "m",
+          "v": "T^2_{\\tau=i}/(z{\\mapsto}{-}z)"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v214"
+        },
+        {
+          "k": "t",
+          "v": "); squaring it gives the Kummer/K3 surface, whose three facets are three TFPT objects. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " Cartan is even/"
+        },
+        {
+          "k": "m",
+          "v": "\\det1"
+        },
+        {
+          "k": "t",
+          "v": "/positive-definite; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "H^2(\\mathrm{K3},\\Z)=U^3\\oplus E_8({-}1)^2"
+        },
+        {
+          "k": "t",
+          "v": " (rank "
+        },
+        {
+          "k": "m",
+          "v": "22"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\det{-}1"
+        },
+        {
+          "k": "t",
+          "v": ", even, signature "
+        },
+        {
+          "k": "m",
+          "v": "(3,19)"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the seam is "
+        },
+        {
+          "k": "m",
+          "v": "T^2/(z{\\mapsto}{-}z)"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " marks (orbifold Euler char "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the carrier-"
+        },
+        {
+          "k": "m",
+          "v": "16"
+        },
+        {
+          "k": "t",
+          "v": " are the "
+        },
+        {
+          "k": "m",
+          "v": "|A[2]|{=}2^4{=}16"
+        },
+        {
+          "k": "t",
+          "v": " Kummer nodes "
+        },
+        {
+          "k": "m",
+          "v": "=\\dim S^+"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v197"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "16{=}4{\\times}4"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "honest note — the rank-"
+        },
+        {
+          "k": "m",
+          "v": "16"
+        },
+        {
+          "k": "t",
+          "v": " Kummer lattice is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "E_8({-}1)^2"
+        },
+        {
+          "k": "t",
+          "v": " summand. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "so the "
+        },
+        {
+          "k": "c",
+          "v": "v1"
+        },
+        {
+          "k": "t",
+          "v": " “glue "
+        },
+        {
+          "k": "m",
+          "v": "D_5{\\oplus}A_3{+}\\mu_4{\\Rightarrow}E_8"
+        },
+        {
+          "k": "t",
+          "v": "” is the lattice shadow of a single object; "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " appears both locally (du Val "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb C^2/2I"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v232"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v236"
+        },
+        {
+          "k": "t",
+          "v": ") and globally ("
+        },
+        {
+          "k": "m",
+          "v": "H^2"
+        },
+        {
+          "k": "t",
+          "v": " summand). A unification, not a closure."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v261_modular_spectral_closure.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QFT.MSC.01"
+            },
+            {
+              "k": "t",
+              "v": ") is the assembly capstone."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The whole QFT round ("
+        },
+        {
+          "k": "c",
+          "v": "v238"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v260"
+        },
+        {
+          "k": "t",
+          "v": ") is certified as "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " relative object "
+        },
+        {
+          "k": "m",
+          "v": "\\mathsf{TFPT}_{\\mathrm{QFT}}=(\\mathcal A_\\Sigma,\\omega_\\Sigma,\\Delta_\\Sigma,\\rho,A_F,H_F,D_F,J,\\gamma,\n  S_{\\mathrm{rel}})"
+        },
+        {
+          "k": "t",
+          "v": " reduced to "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " open premise. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the cross-consistency invariants agree: "
+        },
+        {
+          "k": "m",
+          "v": "4=[B{:}A]=|\\mu_4|=2\\chi=|(\\Z/2)^2|"
+        },
+        {
+          "k": "t",
+          "v": " (index "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " marks "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " fixed points "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " glue order), one carrier-"
+        },
+        {
+          "k": "m",
+          "v": "16"
+        },
+        {
+          "k": "t",
+          "v": " (spinor "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " lattice "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " triple), one gap "
+        },
+        {
+          "k": "m",
+          "v": "6\\log(3/2)"
+        },
+        {
+          "k": "t",
+          "v": " (OS "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " recovery "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " Lindblad); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the three closures re-derived; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the ten-component manifest present. "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the QFT layer reduces to "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.SYM.01"
+        },
+        {
+          "k": "t",
+          "v": " (seam realisation), the ambient QG measure "
+        },
+        {
+          "k": "c",
+          "v": "QG.AMB.01"
+        },
+        {
+          "k": "t",
+          "v": " kept separate. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Modular Spectral Universality"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " master statement: the unique RP holomorphic index-"
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " KMS seam state induces the "
+        },
+        {
+          "k": "m",
+          "v": "96"
+        },
+        {
+          "k": "t",
+          "v": "-dim KO-"
+        },
+        {
+          "k": "m",
+          "v": "6"
+        },
+        {
+          "k": "t",
+          "v": " triple whose inner fluctuations give the gauged Pati–Salam spectral action — the honest sense in which the boundary QFT is complete."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-17",
+    "dateLabel": "2026-06-17",
+    "heading": [
+      {
+        "k": "t",
         "v": "Infrastructure: the changelog is now a public website page, generated from "
       },
       {

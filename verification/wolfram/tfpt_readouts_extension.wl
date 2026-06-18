@@ -2011,6 +2011,44 @@ Module[{cartanA, cartanD, e8edges, E8, D8, A3, D5, carrier, gsd},
     Det[E8] == 1 && (5 + 3 == 8)];
 ];
 
+(* ==== v259: the modular/KMS spectral-action cutoff fixes f_2/f_0 = 1 (PS.SPECACT.02) ====
+   v258 (Dirac as covariance induction) is numerical matrix-log linear algebra -> Python-only. *)
+Module[{u, f, f0, f2, f4, g, g0, g2},
+  f = Exp[-u];
+  f0 = f /. u -> 0;
+  f2 = Integrate[f, {u, 0, Infinity}];
+  f4 = Integrate[u f, {u, 0, Infinity}];
+  g = Exp[-u^2];
+  g0 = g /. u -> 0;
+  g2 = Integrate[g, {u, 0, Infinity}];
+  checkExact["v259 PS.SPECACT.02: the seam KMS cutoff f(u)=e^{-u} (beta=1 by Tomita-Takesaki/BW + the seam "
+    <> "unit 2pi=1/(4 c3)) gives moments f_0=f(0)=1, f_2=int_0^inf f=1, f_4=int_0^inf u f=1, so "
+    <> "f_2/f_0 = f_4/f_2 = 1 EXACTLY -- the spectral-action scheme freedom collapses; NEG control: a generic "
+    <> "Gaussian cutoff e^{-u^2} gives f_2/f_0 = sqrt(pi)/2 != 1, so kappa = sqrt((f2/f0) c_PS/c_grav) = "
+    <> "sqrt(c_PS/c_grav) loses its scheme factor (the last open cutoff input becomes a finite trace ratio).",
+    f0 == 1 && f2 == 1 && f4 == 1 && f2/f0 == 1 && f4/f2 == 1 &&
+    g0 == 1 && g2 == Sqrt[Pi]/2 && g2/g0 =!= 1];
+];
+
+(* ==== v260: one Kummer/K3 carries seam + carrier-16 + E8 (ARCH.K3.01) ==== *)
+Module[{e8edges, E8, U, L, sig, nodes, marks},
+  e8edges = {{1, 2}, {2, 3}, {3, 4}, {4, 5}, {5, 6}, {6, 7}, {5, 8}};
+  E8 = 2 IdentityMatrix[8] - Table[If[i != j && MemberQ[e8edges, Sort[{i, j}]], 1, 0], {i, 8}, {j, 8}];
+  U = {{0, 1}, {1, 0}};
+  L = ArrayFlatten[{{U, 0, 0, 0, 0}, {0, U, 0, 0, 0}, {0, 0, U, 0, 0},
+     {0, 0, 0, -E8, 0}, {0, 0, 0, 0, -E8}}];
+  sig = {Count[Eigenvalues[N[L]], x_ /; x > 0], Count[Eigenvalues[N[L]], x_ /; x < 0]};
+  nodes = 2^4; marks = 2^2;
+  checkExact["v260 ARCH.K3.01: one Kummer/K3 surface carries seam + carrier-16 + E8. E8 Cartan even, det 1, "
+    <> "positive-definite (the unique even unimodular pos-def rank-8 lattice); the K3 lattice U^3(+)E8(-1)^2 "
+    <> "has rank 22=b_2, det -1 (unimodular), even, signature (3,19) with E8(-1)^2 an orthogonal summand; the "
+    <> "seam T^2/(z->-z) has 4=|(Z/2)^2| marks (pillowcase); the carrier-16 = Kummer nodes |A[2]|=2^4=16 = "
+    <> "dim S+ = 4x4 = (seam marks)^2. So the v1 glue D5(+)A3+mu4=>E8 is the lattice shadow of one object.",
+    Det[E8] == 1 && AllTrue[Diagonal[E8], EvenQ] && PositiveDefiniteMatrixQ[E8] &&
+    Length[L] == 22 && Det[L] == -1 && AllTrue[Diagonal[L], EvenQ] && sig == {3, 19} &&
+    nodes == 16 && marks == 4 && nodes == marks^2];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

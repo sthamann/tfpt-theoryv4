@@ -83,6 +83,15 @@ F_{\mathrm{transfer}}$: named QFT/cosmology \emph{transfer} interfaces, never co
 \emph{not} four unrelated interfaces but \emph{one} discrete geodesic on the Sheet Diamond (the
 $K{\to}C{\to}F$ sheet axis $M(1,t)$, with the Koide source$\to$pole as its $1$-D M\"obius projection), along
 which the external continuous solver merely evaluates (\veri{v224\_diamond\_ftransfer\_path.py}).
+\smallskip\\
+\noindent\textbf{QFT layer (this round).} The boundary QFT is now \emph{one relative object}
+$\mathsf{TFPT}_{\mathrm{QFT}}=(\mathcal A_\Sigma,\omega_\Sigma,\Delta_\Sigma,\rho,A_F,H_F,D_F,J,\gamma,
+S_{\mathrm{rel}})$, closed modulo the \emph{single} premise \texttt{QGEO.SYM.01}: its finite Dirac is a
+covariance induction of the seam KMS state (\vref{v258}), its spectral-action cutoff \emph{is} that KMS
+weight (\vref{v259}), its seam, carrier-$16$ and $E_8$ live on one Kummer/K3 surface (\vref{v260}), and the
+whole assembly is certified as the \emph{Modular Spectral Closure} (\vref{v261}). The ambient
+quantum-gravity measure $(G_{\mathrm{metric}})$ is gap-decoupled and kept separate by design --- the QFT
+layer does not wait on it.
 \end{keybox}
 
 % =====================================================================
@@ -468,6 +477,23 @@ intersection form, corank $1$; arXiv:0902.2068, hep-th/0601192), not a TFPT defe
 physically-correct weakened versions, \emph{quasi-orientability} (left/right irrep boxes disjoint by
 chirality) and \emph{modified Poincar\'e duality}, do hold (\veri{v256\_orientability\_poincare.py},
 \veri{v257\_quasiorient\_modpd.py}).
+\emph{Ninth}, the built $D_F$ is no independent posit but the \emph{modular/covariance induction} of the
+boundary seam state (\veri{v258\_dirac\_covariance\_induction.py}): a quasi-free (KMS, $\beta{=}1$) state is
+fixed by its covariance $C$ (a positive contraction), with one-particle modular Hamiltonian
+$H=\log((1{-}C)C^{-1})$ (Araki; Casini--Huerta) inverse to the KMS occupation $C=(1{+}e^{H})^{-1}$; inducing
+the carrier covariance $C_F=P_F C_\Sigma P_F$ returns the \vref{v252} operator \emph{exactly} --- same
+spectrum, chirality-odd, the Majorana an off-diagonal covariance entry with the seesaw $m_D^2/M_R$ recovered
+--- so $D_F$ is the Kasparov shadow $[D_\Sigma]\widehat\otimes_{(E_8)_1}[\mathcal K_{\mathrm{car}}]$ of the
+boundary geometry and the \vref{v18} Yukawas are the \emph{readout} of $C_\Sigma$, \mE\ modulo the one \mO\
+seam realisation.
+\emph{Tenth}, the last open spectral-action input --- the cutoff function $f$ --- is fixed by the same seam
+state (\veri{v259\_modular\_cutoff\_kappa.py}): by Tomita--Takesaki/Bisognano--Wichmann the seam is KMS at
+$\beta{=}1$ (\vref{v239}) and the seam unit $2\pi{=}1/(4c_3)$ (\vref{v58}) fixes that $\beta$, so the
+heat-kernel cutoff $f(u)=e^{-u}$ is \emph{derived}, not chosen, with moments $f_2/f_0=f_4/f_2=1$
+\emph{exactly} (a generic Gaussian cutoff gives $\sqrt\pi/2\neq1$, so the choice is non-vacuous); hence
+$\kappa=\sqrt{(f_2/f_0)\,c_{PS}/c_{\rm grav}}=\sqrt{c_{PS}/c_{\rm grav}}$ loses its scheme factor and the
+\vref{v253}/\vref{v255} open \mO\ cutoff freedom becomes a \mC\ finite trace ratio over the $96$-dim $H_F$
+(the RG $\kappa{\approx}1.3$ pinning $c_{PS}/c_{\rm grav}{\approx}1.7$).
 So
 unification is now \emph{one} theory decision (gauge $SO(10)$?) plus \emph{one} constructive object, both
 falsifiable --- not a fog. The colour $SU(4)_c$ here sits inside $SO(10){=}D_5$ and is distinct from the
@@ -500,6 +526,51 @@ symmetry. A genuine reduction and unification, \emph{not} a closure: the premise
 \emph{is} the uniformising constant-curvature representative of its conformal class'' stays \mO\ ---
 milder and more canonical than the bare isometry premise, and now \emph{shared} by both residuals
 (\texttt{QGEO.PILLOW.01}).
+\par\smallskip\noindent\textbf{One surface for seam, carrier and lattice: the Kummer/K3
+(\veri{v260\_k3\_kummer\_unification.py}).} The pillowcase is the elliptic-involution quotient
+$T^2_{\tau=i}/(z{\mapsto}{-}z)$, its four marks the four $2$-torsion fixed points; squaring the construction
+to complex dimension two gives the \emph{Kummer surface} $\mathrm{Km}(T^2{\times}T^2)$, a K3, whose three
+facets reproduce three TFPT objects at once. \mE\ the $16$ nodes (the $2$-torsion $|A[2]|{=}2^4{=}16$ of the
+abelian surface) resolve to $16$ exceptional $\mathbb P^1$'s $=\dim S^+=\Lambda^{\mathrm{even}}(\mathbb
+C^5)=16$ (\vref{v197}), the carrier-$16$ as the \emph{square} of the seam-$4$; \mE\ the cup-product form on
+$H^2(\mathrm{K3},\Z)$ is the even unimodular lattice $U^3\oplus E_8({-}1)^2$ of signature $(3,19)$, so the
+same $E_8$ the carrier glues to (\vref{v1}) is the surface's intersection form. (Honestly: the $16$ node
+classes span the rank-$16$ Kummer lattice, a sublattice \emph{distinct} from the $E_8({-}1)^2$ summand ---
+both exact, not identified.) Thus the \vref{v1} ``glue $D_5{\oplus}A_3{+}\mu_4{\Rightarrow}E_8$'' is the
+lattice shadow of a single smooth object that already carries the seam and the carrier; $E_8$ appears both
+\emph{locally} as the du Val $\mathbb C^2/2I$ singularity (the Poincar\'e-sphere link, \vref{v232}/\vref{v236})
+and \emph{globally} as this $H^2$ summand. A unification (\texttt{ARCH.K3.01}), \emph{not} a closure: the
+lattice arithmetic is \mE, the carrier$\leftrightarrow$node identification \mC.
+\par\smallskip\noindent\textbf{Synthesis --- the Modular Spectral Closure (\veri{v261\_modular\_spectral\_closure.py}).}
+The ten steps above are not ten independent results: they are facets of one relative spectral datum
+\[
+  \boxed{\ \mathsf{TFPT}_{\mathrm{QFT}}=\bigl(\mathcal A_\Sigma,\ \omega_\Sigma,\ \Delta_\Sigma,\ \rho,\
+  A_F,\ H_F,\ D_F,\ J,\ \gamma,\ S_{\mathrm{rel}}\bigr)\ }
+\]
+(seam algebra, KMS state, modular generator, $\mu_4$ clock; the carrier finite triple; the relative
+spectral action), governed by a single \emph{Modular Spectral Universality} statement: \emph{the unique
+reflection-positive, holomorphic, index-$4$ KMS seam state $\omega_\Sigma$ minimises the modular clock
+defect, induces via the Kasparov/covariance map (\vref{v258}) the $96$-dim KO-$6$ finite triple $D_F$
+(\vref{v252}), whose inner fluctuations (\vref{v254}) generate the gauged Pati--Salam spectral action with
+the seam KMS cutoff (\vref{v259})} --- so Dirac, cutoff, gauging, glue and orientability are not separate
+choices but readouts of one seam state. The certificate \vref{v261} pins the cross-consistency: one number
+$4=[B{:}A]=|\mu_4|=2\chi=|(\Z/2)^2|$ (index $=$ marks $=$ fixed points $=$ glue order), one carrier-$16$
+($\dim S^+=\Lambda^{\mathrm{even}}(\mathbb C^5)=$ Kummer nodes, $H_F=96$), and one gap
+$\Delta=6\log(3/2)$ (OS mass gap $=$ recovery rate $=$ Lindblad gap, static and dynamic). The honest
+account of completeness is therefore:
+\begin{itemize}\setlength\itemsep{1pt}
+\item \mE/\mC\ \textbf{QFT-complete (modulo one premise).} The admissible OS sector, the boundary
+  $(E_8)_1$ net, the relative spectral action, $D_F$ (as covariance induction), the cutoff (as the KMS
+  weight) and the gauging (as inner fluctuations) are one relative object --- closed once
+  \texttt{QGEO.SYM.01} (the seam realisation: \emph{the raw quasi-free seam state is $\mu_4$-invariant}) is
+  granted. That single \mO\ premise is the only structural input the QFT layer still consumes.
+\item \mO\ \textbf{Ambient QG --- separate by design.} The full covariant metric-sector / ambient
+  quantum-gravity measure (\texttt{QG.AMB.01}) is gap-decoupled ($\Delta_{\mathrm{eff}}=1.648>0$) and is
+  \emph{not} a blocker for the QFT layer: it is a different (certification) object, not a missing piece of
+  the boundary QFT.
+\end{itemize}
+So ``solving the QFT'' here means exactly this: the boundary QFT is a single relative object reduced to
+one foundational symmetry postulate, with ambient QG held apart --- not a diffuse list of open interfaces.
 \par\smallskip\noindent\textbf{And the bedrock is now a falsifiable kill-test, not a proof-promise
 (\veri{v215\_seam\_deck\_killtest.py}).} A foundational symmetry cannot be derived from nothing
 (Bisognano--Wichmann would presuppose the very covariance it should produce); the honest move is to recast
