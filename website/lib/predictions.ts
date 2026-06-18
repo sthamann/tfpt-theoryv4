@@ -330,14 +330,16 @@ export const predictions: Prediction[] = [
     status: "Conditional",
     dependencyClass: "Neutrino transport",
     killTest:
-      "Inverted ordering, or a large m_ββ detection, kills the Majorana branch.",
+      "Inverted ordering, a large m_ββ detection, or a cosmological Σm_ν < 0.0586 eV (the normal-ordering floor, v272) kills the minimal Majorana branch.",
     derivationFormulas: [
       "\\text{normal ordering preferred}",
+      "\\Sigma m_\\nu \\gtrsim 0.0586\\,\\mathrm{eV}\\ (\\text{NO floor})",
+      "J_{\\mathrm{PMNS}} = -0.0297",
       "\\delta_{\\mathrm{CP}} = 240^\\circ",
     ],
     pdf: "/papers/tfpt_2_standard_model.pdf",
     description:
-      "The Majorana neutrino sector prefers normal ordering with a small effective mass. LEGEND / nEXO / DUNE / KATRIN are the comparison surface.",
+      "The Majorana neutrino sector prefers normal ordering with a small effective mass; the NO floor Σm_ν = 0.0586 eV is consistent with the cosmological bound and is a near-term kill test (v272). The absolute scale is one seesaw ratio (M_R, the same single anchor as v_geo), while the full complex PMNS matrix and the leptonic CP strength J_PMNS = −0.0297 (data-consistent) are now assembled (v270). LEGEND / nEXO / DUNE / KATRIN are the comparison surface.",
     category: "Neutrino",
   },
   {

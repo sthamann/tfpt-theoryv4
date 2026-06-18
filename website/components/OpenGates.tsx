@@ -20,7 +20,7 @@ const GATES: Gate[] = [
     tag: "Interface 1",
     marker: "[O]",
     title: "v_geo — the one scale anchor",
-    body: "The quark mass ratios are closed (Readout Rigidity, c_u/c_d = 55/117) and the selector triangle pins R columnwise (the dual pair (d,n), v136/v139). Only the absolute amplitude scale v_geo remains — and the No-Unit theorem (v153) proves a dimensionless compiler cannot make an absolute scale. So this is not a gap but an irreducible metrology primitive, the same one as gravity's 1/G. (Historical label: U_wall.)",
+    body: "The quark mass ratios are closed (Readout Rigidity, c_u/c_d = 55/117) and the selector triangle pins R columnwise (the dual pair (d,n), v136/v139). Only the absolute amplitude scale v_geo remains — and the No-Unit theorem (v153) proves a dimensionless compiler cannot make an absolute scale. So this is not a gap but an irreducible metrology primitive, the same one as gravity's 1/G. Sharper still (v274): the anchor is over-determined — Newton's G and the compiler's dark-energy prediction (ρ_Λ/M̄⁴ = (3/4π²)e^{−2α⁻¹}) give the same reduced Planck mass to 0.11% — so it is the gravitational unit, not a missing derivation; and because the seam is a conformal c=8 CFT (scale-invariant by construction), 'no derivable absolute scale' is a theorem, not a gap. The absolute neutrino scale (v272) is the same single anchor. (Historical label: U_wall.)",
     formula: "\\det R = 8,\\ \\operatorname{Spec}(Q_+)=\\{1,2,3\\};\\ U_{\\mathrm{point}} \\to v_{\\mathrm{geo}}",
     tone: "border-amber-400/30 bg-amber-500/5",
   },
@@ -45,7 +45,7 @@ const RESIDUAL: { label: string; marker: string; blurb: string; tone: string }[]
   {
     label: "v_geo",
     marker: "[O]",
-    blurb: "One dimensionful scale — irreducible by the No-Unit theorem; the same primitive as gravity's 1/G.",
+    blurb: "One dimensionful scale — irreducible by the No-Unit theorem and over-determined (gravity = dark energy = M̄_Pl to 0.11%, v274); the same primitive as gravity's 1/G.",
     tone: "from-amber-500/15 to-amber-500/[0.03] border-amber-400/30",
   },
   {
@@ -160,6 +160,15 @@ function ClosingCondition() {
         cutoff, gauging, glue and orientability are readouts of the one seam state. The boundary QFT is one
         relative object closed modulo QGEO.SYM.01 and adds <span className="text-emerald-200">no new open item</span>;
         the ambient QG measure is gap-decoupled (Δ_eff = 1.648 &gt; 0) and kept separate by design.
+      </p>
+      <p className="mt-3 rounded-lg border border-slate-700/40 bg-slate-950/40 p-3 text-xs leading-relaxed text-slate-300">
+        <span className="font-semibold text-slate-100">The 4D perturbative S-matrix is now constructible</span>{" "}
+        (S_pert, v269/v271/v273): the spectral-action interaction is power-counting renormalizable, so by the
+        Epstein–Glaser theorem the perturbative S(g) exists order by order (one log counterterm per coupling, loop
+        factor 1/(16π²)), giving the SM one-loop β-coefficients (b₁,b₂,b₃) = (41/10, −19/6, −7) from the carrier
+        content. The one genuine structural frontier is the <span className="text-amber-200">nonperturbative</span>{" "}
+        ambient measure QG.AMB.01, which now carries an explicit roadmap (v275): Tier A gap-decoupled, Tier B
+        reduced to the holomorphic (E₈)₁ boundary net — reduced, not closed.
       </p>
       <p className="mt-3 rounded-lg border border-slate-700/40 bg-slate-950/40 p-3 text-xs leading-relaxed text-slate-300">
         <span className="font-semibold text-slate-100">4D-QFT fork policy</span> (frozen decision tree, v265):
