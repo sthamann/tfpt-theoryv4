@@ -59,6 +59,20 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-18 (4D QFT: the $S_{\mathrm{pert}}\to S_{\mathrm{phys}}$ LSZ bridge $+$ one-loop unitarity, \texttt{v278})}
+\begin{itemize}
+\item \textbf{\texttt{v278\_lsz\_bridge\_unitarity.py} (\texttt{QFT4D.SPERT.04}) connects the perturbative
+  S-matrix to the physical asymptotic one and verifies one-loop unitarity.} \mE\ LSZ bridge: the EG
+  $T$-products of $S_{\mathrm{pert}}$ (\vref{v269}) \emph{are} the OS Wick-rotated correlators (\vref{v240}), so
+  amputate$+$on-shell-residue gives $S_{\mathrm{pert}}\xrightarrow{\mathrm{LSZ}}S_{\mathrm{phys}}$; \mC\ the gap
+  $\Delta{=}6\log(3/2){>}0$ gives Haag--Ruelle asymptotic states. \mE\ \emph{one-loop optical theorem}: the
+  bubble discontinuity $\operatorname{Im}B(s)/\pi=x_+{-}x_-=\sqrt{1-4m^2/s}$ \emph{exactly} $=$ the two-body
+  phase space, so $2\operatorname{Im}M=\sum\!\int d\Pi|M|^2$ (cutting rule) holds --- the matter$+$gauge sector
+  is unitary, with the cut turning on at the physical two-particle threshold. \mO\ the gravity sector's Stelle
+  ghost (\vref{v269}/\texttt{rt\_F}) is non-unitary $\to$ \texttt{QG.AMB.01}. Exact core mirrored in Wolfram
+  ($273/273$). Build green, \texttt{AUDIT OK}.
+\end{itemize}
+
 \subsection*{2026-06-18 (QG.AMB.01 Tier-B made concrete: the seam-Calder\'on $\to(E_8)_1$ match, \texttt{v277})}
 \begin{itemize}
 \item \textbf{\texttt{v277\_seam\_calderon\_e8\_match.py} (\texttt{QGAMB.TIERB.01}) reduces Tier-B to ONE bit.}

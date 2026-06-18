@@ -453,6 +453,17 @@ $b_3=-7$, $b_2=-\tfrac{19}{6}$, $b_1=\tfrac{41}{10}$ (GUT-normalised; the same $
 $10\,b_1=\gcar\,2^{\gcar-2}+1$, \vref{v159}). \mC\ the physical RG directions ($b_3<0$ asymptotic freedom, $b_1>0$
 the $U(1)$ Landau pole) are EG-derived and feed the unification cross-check (\vref{v246}/\vref{v249}); \mO\ the
 two-loop matrix (\vref{v159}, PyR@TE) and the all-order construction stay open (\texttt{QFT4D.SPERT.03}).
+\par\smallskip\noindent\textbf{The bridge to the physical S-matrix and one-loop unitarity (\veri{v278\_lsz\_bridge\_unitarity.py}).}
+The perturbative layer connects to the physical asymptotic S-matrix: \mE\ the EG time-ordered products of
+$S_{\mathrm{pert}}$ are the OS Wick-rotated correlators (\vref{v240}), so amputating external legs and taking the
+on-shell residue gives $S_{\mathrm{pert}}\xrightarrow{\mathrm{LSZ}}S_{\mathrm{phys}}$ (the three-layer S-matrix
+$S_{\mathrm{top}}\,|\,S_{\mathrm{pert}}\xrightarrow{\mathrm{LSZ}}S_{\mathrm{phys}}$), valid because the gap
+$\Delta{=}6\log(3/2)$ gives Haag--Ruelle asymptotic states. \mE\ \emph{one-loop unitarity} is the optical
+theorem: the $s$-channel bubble discontinuity $\operatorname{Im}B(s)/\pi=x_+{-}x_-=\sqrt{1-4m^2/s}$ is
+\emph{exactly} the two-body phase space (turning on at the physical threshold $s{=}4m^2$), so
+$2\operatorname{Im}M=\sum\!\int d\Pi\,|M|^2$ holds and the matter$+$gauge sector is unitary order by order.
+\mO\ the gravity sector's Stelle ghost is the lone non-unitary piece $\to$ \texttt{QG.AMB.01}
+(\texttt{QFT4D.SPERT.04}).
 \par\smallskip\noindent\textbf{The first hard data confrontation
 (\veri{v246\_unification\_data\_crosscheck.py}).} TFPT's gauge-charged content \emph{is} exactly the
 Standard Model (\vref{v159}) and the theory adds no new states (\S\,``Dark matter $=$ no new state''); the

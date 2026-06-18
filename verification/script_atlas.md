@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`275` registered scripts · `327` ledger claims · `10` clusters.
+`276` registered scripts · `328` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -282,7 +282,7 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
 - **v277_seam_calderon_e8_match** [E/C/O] `QGAMB.TIERB.01` — the seam-Calderón → (E8)₁ matching certificate, the concrete Tier-B step of QG.AMB.01 (v275): computes the full (E8)₁ matching target and pins the residual to ONE bit (does NOT clo
   - deps: v275_qgamb_roadmap, v77_e8_conformal_net, redteam/rt_A_e8net, v276_qgeo_flat_closes_commutator, v260_k3_kummer_unification, v235_seam_chern_simons · cited: 4 frontier
 
-### `registry` — Blind registry & red-team follow-ups (v84–v175)  (156 scripts)
+### `registry` — Blind registry & red-team follow-ups (v84–v175)  (157 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
 
 - **v84_frozen_registry** [E] `REG.FREEZE.01` — blind-prediction registry FROZEN 2026-06-09: every dimensionless prediction of record at 25 digits, re-derived from the two axioms each run (formula↔value lock); exactly ONE θ₁₂ pr
@@ -597,6 +597,8 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
   - deps: v271_eg_oneloop_quartic, v269_spert_paqft_skeleton, v159_pyrate_gauge_crosscheck, v2_carrier_pascal · cited: research contracts
 - **v276_qgeo_flat_closes_commutator** [E/C/O] `QGEO.SYM.03` — the flat tau=i pillowcase premise CLOSES the modular-commutator chain to all orders, collapsing the bedrock QGEO.SYM.01 to ONE geometric postulate (it does NOT prove the premise). 
   - deps: v181_clock_is_conformal_symmetry, v267_qgeo_rigidity_minimal_axiom, v198_modular_commutator_reduction, v201_seam_subprincipal_marks, v214_seam_pillowcase, v258_dirac_covariance_induction · cited: research contracts
+- **v278_lsz_bridge_unitarity** [E/C/O] `QFT4D.SPERT.04` — the S_pert → S_phys LSZ bridge + one-loop unitarity: connects the EG perturbative S-matrix (v269/v271/v273) to the physical asymptotic S-matrix (S_phys = LSZ on the OS Wightman fun
+  - deps: v269_spert_paqft_skeleton, v271_eg_oneloop_quartic, v240_gns_os_reconstruction, v243_haag_ruelle_braiding, redteam/rt_F_qft4d · cited: research contracts
 
 ## Supersede map — do NOT reuse the left-hand claim
 
@@ -618,7 +620,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v266_ps_threshold_proton** — `PS.THRESHOLD.02, PS.PROTON.02`
 - **v267_qgeo_rigidity_minimal_axiom** — `QGEO.SYM.02`
 - **v268_theta13_carrier_trace** — `FLAV.TH13.01`
 - **v269_spert_paqft_skeleton** — `QFT4D.SPERT.01`
@@ -630,4 +631,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v275_qgamb_roadmap** — `QGAMB.ROADMAP.01`
 - **v276_qgeo_flat_closes_commutator** — `QGEO.SYM.03`
 - **v277_seam_calderon_e8_match** — `QGAMB.TIERB.01`
+- **v278_lsz_bridge_unitarity** — `QFT4D.SPERT.04`
 

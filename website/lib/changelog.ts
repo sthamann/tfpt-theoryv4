@@ -47,6 +47,268 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "4D QFT: the "
+      },
+      {
+        "k": "m",
+        "v": "S_{\\mathrm{pert}}\\to S_{\\mathrm{phys}}"
+      },
+      {
+        "k": "t",
+        "v": " LSZ bridge "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " one-loop unitarity, "
+      },
+      {
+        "k": "c",
+        "v": "v278"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v278_lsz_bridge_unitarity.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QFT4D.SPERT.04"
+            },
+            {
+              "k": "t",
+              "v": ") connects the perturbative S-matrix to the physical asymptotic one and verifies one-loop unitarity."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "LSZ bridge: the EG "
+        },
+        {
+          "k": "m",
+          "v": "T"
+        },
+        {
+          "k": "t",
+          "v": "-products of "
+        },
+        {
+          "k": "m",
+          "v": "S_{\\mathrm{pert}}"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v269"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "are"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the OS Wick-rotated correlators ("
+        },
+        {
+          "k": "c",
+          "v": "v240"
+        },
+        {
+          "k": "t",
+          "v": "), so amputate"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": "on-shell-residue gives "
+        },
+        {
+          "k": "m",
+          "v": "S_{\\mathrm{pert}}\\xrightarrow{\\mathrm{LSZ}}S_{\\mathrm{phys}}"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the gap "
+        },
+        {
+          "k": "m",
+          "v": "\\Delta{=}6\\log(3/2){>}0"
+        },
+        {
+          "k": "t",
+          "v": " gives Haag–Ruelle asymptotic states. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one-loop optical theorem"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the bubble discontinuity "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{Im}B(s)/\\pi=x_+{-}x_-=\\sqrt{1-4m^2/s}"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "exactly"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the two-body phase space, so "
+        },
+        {
+          "k": "m",
+          "v": "2\\operatorname{Im}M=\\sum\\!\\int d\\Pi|M|^2"
+        },
+        {
+          "k": "t",
+          "v": " (cutting rule) holds — the matter"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": "gauge sector is unitary, with the cut turning on at the physical two-particle threshold. "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the gravity sector's Stelle ghost ("
+        },
+        {
+          "k": "c",
+          "v": "v269"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "rt_F"
+        },
+        {
+          "k": "t",
+          "v": ") is non-unitary "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "QG.AMB.01"
+        },
+        {
+          "k": "t",
+          "v": ". Exact core mirrored in Wolfram ("
+        },
+        {
+          "k": "m",
+          "v": "273/273"
+        },
+        {
+          "k": "t",
+          "v": "). Build green, "
+        },
+        {
+          "k": "c",
+          "v": "AUDIT OK"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-18",
+    "dateLabel": "2026-06-18",
+    "heading": [
+      {
+        "k": "t",
         "v": "QG.AMB.01 Tier-B made concrete: the seam-Calderón "
       },
       {

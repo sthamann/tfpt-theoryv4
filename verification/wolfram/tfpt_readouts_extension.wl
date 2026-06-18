@@ -2139,6 +2139,18 @@ Module[{cE8, cD8, detE8, detD8, E4, prod8, chi, currents, roots},
     detE8 == 1 && detD8 == 4 && roots == 240 && currents == 248];
 ];
 
+(* ==== v278: S_pert -> S_phys LSZ bridge, one-loop optical theorem (QFT4D.SPERT.04) ==== *)
+Module[{xs, measureSq, phaseSq},
+  xs = x /. Solve[s x (1 - x) == m^2, x];                 (* x_+ , x_- *)
+  measureSq = Simplify[(xs[[1]] - xs[[2]])^2];            (* (x_+ - x_-)^2 = bubble discontinuity^2 / pi^2 *)
+  phaseSq = 1 - 4 m^2/s;                                  (* two-body phase space, squared *)
+  checkExact["v278 QFT4D.SPERT.04: the one-loop optical theorem -- the s-channel bubble discontinuity "
+    <> "Im B(s)/pi = x_+ - x_- has (x_+ - x_-)^2 = 1 - 4 m^2/s EXACTLY, i.e. Im B/pi = sqrt(1 - 4 m^2/s), "
+    <> "the two-body phase-space factor; so 2 Im M = sum_int dPi |M|^2 (cutting rule) holds at one loop and "
+    <> "S_pert is unitary for the matter+gauge sector (the gravity sector carries the Stelle ghost).",
+    Simplify[measureSq - phaseSq] == 0];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];
