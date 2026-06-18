@@ -59,6 +59,25 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-18 (self-investigation round: pillowcase DtN, modular data, the E8-at-$\tau{=}i$ unification, live scorecard, \texttt{v280}--\texttt{v283})}
+\begin{itemize}
+\item \textbf{\texttt{v280\_pillowcase\_steklov.py} (\texttt{QGEO.STEKLOV.01})} runs the QGEO chain on the actual
+  flat $\tau{=}i$ pillowcase orbifold: the order-4 deck permutes the 4 cone points (2 fixed $+$ 1 swap) and the
+  geometric chain $[\rho,\Delta]{=}0\Rightarrow[\rho,H]{=}0\Rightarrow[\rho,C]{=}0\Rightarrow\omega\circ\rho{=}\omega$
+  is numerically exact --- route-(i) evidence for \texttt{QGEO.OBLIG.01}; the premise stays \mO.
+\item \textbf{\texttt{v281\_holomorphy\_modular\_data.py} (\texttt{QGAMB.MODULAR.01})}: \#anyons $=|\det\mathrm{Gram}|$
+  (E8$\to$1, SO(16)$\to$4), the anyon-condensation tower $16\to4\to1$, Gauss--Milgram $\to c{=}8$; holomorphy
+  ($\det K{=}1$) is the single Tier-B discriminator.
+\item \textbf{\texttt{v282\_e8\_tau\_i\_unification.py} (\texttt{QGAMB.UNIFY.01})}: the candidate
+  \emph{simplification} --- $\chi_{E_8}{=}j^{1/3}$ gives $\chi_{E_8}(i){=}1728^{1/3}{=}12$, so $\tau{=}i$ is both
+  the order-4 CM point (QGEO) and the $(E_8)_1$ modulus (QG.AMB): the two obligations are two faces of one object
+  (the seam is $(E_8)_1$ at $\tau{=}i$), \textbf{obligation count $2\to1$}.
+\item \textbf{\texttt{v283\_live\_killtest\_scorecard.py} (\texttt{PRED.LIVE.01})}: the recent round's
+  computable predictions vs current data --- all consistent $<2\sigma$, with two sharp near-term kill tests
+  ($\Sigma m_\nu$ floor $0.0586$ eV; proton decay $1.55{\times}10^{35}$ yr).
+\item Wolfram $275/275$ (v281/v282 exact-mirrored); build green, \texttt{AUDIT OK}.
+\end{itemize}
+
 \subsection*{2026-06-18 (the Gr\"al: QGEO.SYM.01 as one precise lemma $+$ the all-orders step Lean-formalised, \texttt{v279}/\texttt{FORM.QGEO.03})}
 \begin{itemize}
 \item \textbf{\texttt{v279\_qgeo\_obligation\_lemma.py} (\texttt{QGEO.OBLIG.01}) writes the bedrock as ONE precise

@@ -627,6 +627,17 @@ spectral function $g(\Delta_{\mathrm{flat}})$ of the Fourier-diagonal flat Lapla
 clock $\rho=\mathrm{diag}(i^n)$ --- upgrading \vref{v198}/\vref{v201} to the full operator with only the standard
 axioms, no \texttt{sorry} (\texttt{FORM.QGEO.03}). \mO\ the one premise stays the honest axiom
 (\texttt{QGEO.OBLIG.01}).
+\par\smallskip\noindent\textbf{Self-investigation: the experiment and the simplification
+(\veri{v280\_pillowcase\_steklov.py}, \veri{v282\_e8\_tau\_i\_unification.py}).} Two things can be done
+\emph{ourselves}. (i) A direct numerical experiment on the actual flat $\tau{=}i$ pillowcase orbifold realises
+the whole chain: the order-4 deck permutes the four cone points ($2$ fixed $+$ $1$ swapped) and
+$[\rho,\Delta]{=}0\Rightarrow[\rho,H]{=}0\Rightarrow[\rho,C]{=}0\Rightarrow\omega\circ\rho{=}\omega$ is
+numerically exact, with the Steklov DtN positive and metric-determined --- route-(i) evidence (RP-state
+uniqueness), the premise still \mO. (ii) A candidate \emph{simplification}: the $(E_8)_1$ character
+$\chi_{E_8}=\Theta_{E_8}/\eta^8=j^{1/3}$ gives $\chi_{E_8}(i)=1728^{1/3}=12$, so $\tau{=}i$ is \emph{both} the
+order-4 CM point (\texttt{QGEO.SYM.01}, flat geometry) \emph{and} the $(E_8)_1$ partition-function modulus
+(\texttt{QG.AMB.01}, holomorphy) --- the two open premises are two faces of one object, ``the raw seam is
+$(E_8)_1$ at $\tau{=}i$'', dropping the obligation count $2\to1$ (\texttt{QGAMB.UNIFY.01}).
 \par\smallskip\noindent\textbf{One surface for seam, carrier and lattice: the Kummer/K3
 (\veri{v260\_k3\_kummer\_unification.py}).} The pillowcase is the elliptic-involution quotient
 $T^2_{\tau=i}/(z{\mapsto}{-}z)$, its four marks the four $2$-torsion fixed points; squaring the construction

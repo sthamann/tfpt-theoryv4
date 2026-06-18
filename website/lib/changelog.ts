@@ -47,6 +47,366 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "self-investigation round: pillowcase DtN, modular data, the E8-at-"
+      },
+      {
+        "k": "m",
+        "v": "\\tau{=}i"
+      },
+      {
+        "k": "t",
+        "v": " unification, live scorecard, "
+      },
+      {
+        "k": "c",
+        "v": "v280"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v283"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v280_pillowcase_steklov.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGEO.STEKLOV.01"
+            },
+            {
+              "k": "t",
+              "v": ")"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " runs the QGEO chain on the actual flat "
+        },
+        {
+          "k": "m",
+          "v": "\\tau{=}i"
+        },
+        {
+          "k": "t",
+          "v": " pillowcase orbifold: the order-4 deck permutes the 4 cone points (2 fixed "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " 1 swap) and the geometric chain "
+        },
+        {
+          "k": "m",
+          "v": "[\\rho,\\Delta]{=}0\\Rightarrow[\\rho,H]{=}0\\Rightarrow[\\rho,C]{=}0\\Rightarrow\\omega\\circ\\rho{=}\\omega"
+        },
+        {
+          "k": "t",
+          "v": " is numerically exact — route-(i) evidence for "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.OBLIG.01"
+        },
+        {
+          "k": "t",
+          "v": "; the premise stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v281_holomorphy_modular_data.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGAMB.MODULAR.01"
+            },
+            {
+              "k": "t",
+              "v": ")"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": #anyons "
+        },
+        {
+          "k": "m",
+          "v": "=|\\det\\mathrm{Gram}|"
+        },
+        {
+          "k": "t",
+          "v": " (E8"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": "1, SO(16)"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": "4), the anyon-condensation tower "
+        },
+        {
+          "k": "m",
+          "v": "16\\to4\\to1"
+        },
+        {
+          "k": "t",
+          "v": ", Gauss–Milgram "
+        },
+        {
+          "k": "m",
+          "v": "\\to c{=}8"
+        },
+        {
+          "k": "t",
+          "v": "; holomorphy ("
+        },
+        {
+          "k": "m",
+          "v": "\\det K{=}1"
+        },
+        {
+          "k": "t",
+          "v": ") is the single Tier-B discriminator."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v282_e8_tau_i_unification.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGAMB.UNIFY.01"
+            },
+            {
+              "k": "t",
+              "v": ")"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the candidate "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "simplification"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " — "
+        },
+        {
+          "k": "m",
+          "v": "\\chi_{E_8}{=}j^{1/3}"
+        },
+        {
+          "k": "t",
+          "v": " gives "
+        },
+        {
+          "k": "m",
+          "v": "\\chi_{E_8}(i){=}1728^{1/3}{=}12"
+        },
+        {
+          "k": "t",
+          "v": ", so "
+        },
+        {
+          "k": "m",
+          "v": "\\tau{=}i"
+        },
+        {
+          "k": "t",
+          "v": " is both the order-4 CM point (QGEO) and the "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " modulus (QG.AMB): the two obligations are two faces of one object (the seam is "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "\\tau{=}i"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "obligation count "
+            },
+            {
+              "k": "m",
+              "v": "2\\to1"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v283_live_killtest_scorecard.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRED.LIVE.01"
+            },
+            {
+              "k": "t",
+              "v": ")"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the recent round's computable predictions vs current data — all consistent "
+        },
+        {
+          "k": "m",
+          "v": "<2\\sigma"
+        },
+        {
+          "k": "t",
+          "v": ", with two sharp near-term kill tests ("
+        },
+        {
+          "k": "m",
+          "v": "\\Sigma m_\\nu"
+        },
+        {
+          "k": "t",
+          "v": " floor "
+        },
+        {
+          "k": "m",
+          "v": "0.0586"
+        },
+        {
+          "k": "t",
+          "v": " eV; proton decay "
+        },
+        {
+          "k": "m",
+          "v": "1.55{\\times}10^{35}"
+        },
+        {
+          "k": "t",
+          "v": " yr)."
+        }
+      ],
+      [
+        {
+          "k": "t",
+          "v": "Wolfram "
+        },
+        {
+          "k": "m",
+          "v": "275/275"
+        },
+        {
+          "k": "t",
+          "v": " (v281/v282 exact-mirrored); build green, "
+        },
+        {
+          "k": "c",
+          "v": "AUDIT OK"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-18",
+    "dateLabel": "2026-06-18",
+    "heading": [
+      {
+        "k": "t",
         "v": "the Gräl: QGEO.SYM.01 as one precise lemma "
       },
       {

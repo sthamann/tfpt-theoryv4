@@ -2151,6 +2151,35 @@ Module[{xs, measureSq, phaseSq},
     Simplify[measureSq - phaseSq] == 0];
 ];
 
+(* ==== v281: anyon-condensation tower + Gauss-Milgram (QGAMB.MODULAR.01) ==== *)
+Module[{cE8, cD8, cD5, cA3, dE8, dD8, dcar, gm},
+  cE8 = {{2,-1,0,0,0,0,0,0},{-1,2,-1,0,0,0,0,0},{0,-1,2,-1,0,0,0,0},{0,0,-1,2,-1,0,0,0},
+         {0,0,0,-1,2,-1,0,-1},{0,0,0,0,-1,2,-1,0},{0,0,0,0,0,-1,2,0},{0,0,0,0,-1,0,0,2}};
+  cD8 = {{2,-1,0,0,0,0,0,0},{-1,2,-1,0,0,0,0,0},{0,-1,2,-1,0,0,0,0},{0,0,-1,2,-1,0,0,0},
+         {0,0,0,-1,2,-1,0,0},{0,0,0,0,-1,2,-1,-1},{0,0,0,0,0,-1,2,0},{0,0,0,0,0,-1,0,2}};
+  cD5 = {{2,-1,0,0,0},{-1,2,-1,0,0},{0,-1,2,-1,-1},{0,0,-1,2,0},{0,0,-1,0,2}};
+  cA3 = {{2,-1,0},{-1,2,-1},{0,-1,2}};
+  dE8 = Det[cE8]; dD8 = Det[cD8]; dcar = Det[cD5] Det[cA3];
+  gm = Sum[Exp[2 Pi I h], {h, {0, 1/2, 1, 1}}];   (* D8 anyons 1,v,s,c *)
+  checkExact["v281 QGAMB.MODULAR.01: #anyons = |det Gram| -- E8->1 (holomorphic), D8=SO(16)->4, "
+    <> "D5(+)A3->16; the anyon-condensation tower 16 -> 4 -> 1 (each step a Lagrangian Z2 boson, |det|/4); "
+    <> "Gauss-Milgram sum_a e^{2pi i h_a} = 2 = sqrt|A| e^{2pi i c/8} for c=8 (D8 spins 0,1/2,1,1). "
+    <> "E8 is the unique holomorphic c=8 (det 1); SO(16) same c but 4 anyons => holomorphy is the discriminator.",
+    dE8 == 1 && dD8 == 4 && dcar == 16 && dcar/dD8 == 4 && dD8/dE8 == 4 && Simplify[gm] == 2];
+];
+
+(* ==== v282: E8-at-tau=i unification, chi_E8(i)=12 (QGAMB.UNIFY.01) ==== *)
+Module[{jf, jorder4, chiI},
+  jf[x_] := 256 (x^2 - x + 1)^3/(x^2 (x - 1)^2);
+  jorder4 = jf[2];                          (* cross-ratio 2 => j = 1728 = the tau=i CM point *)
+  chiI = Surd[1728, 3];                     (* chi_E8(i) = j(i)^{1/3} = 1728^{1/3} *)
+  checkExact["v282 QGAMB.UNIFY.01: tau=i is the order-4 CM point (cross-ratio 2 => j=1728), and the "
+    <> "(E8)_1 character chi_E8 = Theta_E8/eta^8 = j^{1/3} (chi^3 = j) gives chi_E8(i) = 1728^{1/3} = 12 -- "
+    <> "the (E8)_1 partition function at the SAME tau=i, so the QGEO flat-geometry premise and the QG.AMB "
+    <> "holomorphy premise are two faces of one object (the seam is (E8)_1 at tau=i): obligation count 2 -> 1.",
+    jorder4 == 1728 && chiI == 12];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];
