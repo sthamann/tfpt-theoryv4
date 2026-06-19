@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`297` registered scripts · `351` ledger claims · `10` clusters.
+`300` registered scripts · `354` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -202,7 +202,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v75_upoint_to_vgeo** [E/O] `FLAV.UPOINT.01` — Gate 1 complete: U_point → v_geo (ratios + Grand Mass Volume); same anchor as 1/G
   - deps: v71_simple_r_bridge, v20_lepton_c_derivation, v46_grand_mass_volume, v68 · cited: origin theory, research contracts
 
-### `frontier` — Open gate (G_metric) & the frontier  (56 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (59 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -317,6 +317,12 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v219_icosahedral_mckay, COX.TOTATIVE.01, CASCADE.BRIDGE.01 · cited: introduction
 - **v299_hypergraph_0d_autonomous** [E/O] `HYP.0D.01` — NOT 'P2 derived'. [E] HYP.ICO.01 icosahedron = 3-uniform hypergraph (12 V, 20 hyperedges, 30 edges=h(E8)), |Aut(graph)|=120=|I_h|=A5×ℤ₂ (the McKay group is the SU(2) binary lift 2I
   - deps: v219_icosahedral_mckay, v298_e8_network_attractor, QBL.GATE.01 · cited: introduction
+- **v300_flataway_rigid** [E/C/O] `FLATAWAY.RIGID.01` — the attack on Flat-Away: (I) HARDEN the obstruction from a soft minimum (v291/v293) to a DISCRETE one, (II) DERIVE the external pin from the (E8)₁ data. [E] FLAT FINGERPRINT: spec(
+  - deps: v293_flataway_spectral_hessian, v295_flataway_a2_exact, v297_route_a_literature_stack · cited: research contracts
+- **v301_route_a_invertible** [E/C/O] `SEAM.EQUIV.A.INV.01` — discharge Route A's single open hypothesis (v297 LIT-A: 'the raw quasi-free seam bulk is invertible/SRE') via the free-fermion classification. Since v300 collapsed Route B into Rou
+  - deps: v297_route_a_literature_stack, v300_flataway_rigid, v277_seam_calderon_e8_match, v286_seam_equivalence_contract · cited: research contracts
+- **v302_seam_gap** [E/C/O] `SEAM.EQUIV.GAP.01` — the LAST lever: after v300/v301 the whole open content of SEAM.EQUIV.01 was 'the quasi-free seam bulk is gapped'; this shows that gap is NOT a free input but the established RECOVE
+  - deps: v301_route_a_invertible, v43_exterior_bridge, v123_inventory_update, v286_seam_equivalence_contract · cited: research contracts
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (160 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -662,9 +668,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v288_full_l2_subprincipal_z4** — `SEAM.EQUIV.B01`
-- **v289_marklocal_raw** — `MARKLOCAL.RAW.01`
-- **v290_z4_smooth_curvature_adversary** — `SEAM.ADVERSARY.01`
 - **v291_flataway_contract** — `FLATAWAY.RP.01`
 - **v292_flataway_heat_reduction** — `FLATAWAY.HEAT.01`
 - **v293_flataway_spectral_hessian** — `FLATAWAY.SPEC.01`
@@ -674,4 +677,7 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v297_route_a_literature_stack** — `SEAM.EQUIV.A.LIT.01`
 - **v298_e8_network_attractor** — `E8.NETWORK.01`
 - **v299_hypergraph_0d_autonomous** — `HYP.0D.01`
+- **v300_flataway_rigid** — `FLATAWAY.RIGID.01`
+- **v301_route_a_invertible** — `SEAM.EQUIV.A.INV.01`
+- **v302_seam_gap** — `SEAM.EQUIV.GAP.01`
 

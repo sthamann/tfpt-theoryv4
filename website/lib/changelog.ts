@@ -47,6 +47,1214 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "the last lever: the seam mass gap "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "is"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " the derived Recovery gap "
+      },
+      {
+        "k": "m",
+        "v": "6\\ln(3/2)"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "v302"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v302_seam_gap.py"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " closes the chain on the single statement "
+        },
+        {
+          "k": "c",
+          "v": "v301"
+        },
+        {
+          "k": "t",
+          "v": " had left: “the quasi-free seam bulk is gapped”. That gap is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " a free input — it is the established "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Recovery gap"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " of the seam transfer operator, derived from the carrier. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the frozen transfer spectrum is "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{spec}(T)=\\{1,(2/3)^6,(1/3)^6\\}"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v160"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v162"
+        },
+        {
+          "k": "t",
+          "v": "), a simple Perron eigenvalue "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " separated from the rest; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the gap is "
+        },
+        {
+          "k": "m",
+          "v": "\\Delta=-\\ln((2/3)^6)=6\\ln(3/2)=2\\Nfam\\ln(3/2)\\approx2.4328>0"
+        },
+        {
+          "k": "t",
+          "v": " (multiplicative gap "
+        },
+        {
+          "k": "m",
+          "v": "1-(2/3)^6=665/729"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "(2/3)^6"
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": "-deck transfer eigenvalue forced by the carrier); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "with the decoupling margin "
+        },
+        {
+          "k": "m",
+          "v": "\\Delta-31/(4\\pi^2)\\approx1.648>0"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v76"
+        },
+        {
+          "k": "t",
+          "v": ") it is robust, and Perron–Frobenius primitivity makes the leading mode simple; "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "by Osterwalder–Schrader / quasi-free clustering a transfer-operator gap "
+        },
+        {
+          "k": "m",
+          "v": "\\Delta>0"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " a mass gap of the reconstructed Hamiltonian. "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Bottom line:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "c",
+          "v": "v300"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v301"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": "'s entire residual is now a composition of "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "standard cited theorems"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (OS/quasi-free clustering "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " Kitaev free-fermion invertibility "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "c",
+          "v": "v297"
+        },
+        {
+          "k": "t",
+          "v": " AQFT stack) over "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "established"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " TFPT facts ("
+        },
+        {
+          "k": "m",
+          "v": "16"
+        },
+        {
+          "k": "t",
+          "v": " quasi-free Majoranas; transfer gap "
+        },
+        {
+          "k": "m",
+          "v": "6\\ln(3/2)"
+        },
+        {
+          "k": "t",
+          "v": ") — "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "no undischarged TFPT-internal assumption remains"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ". It stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "(not machine-proved end-to-end), but the open front is reduced to citable machinery over a spectral gap that is provably positive. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "suite "
+        },
+        {
+          "k": "c",
+          "v": "v302"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "5/5"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "AUDIT OK"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-19",
+    "dateLabel": "2026-06-19",
+    "heading": [
+      {
+        "k": "t",
+        "v": "Route A's last hypothesis discharged: the gapped quasi-free bulk is invertible by the free-fermion classification, "
+      },
+      {
+        "k": "c",
+        "v": "v301"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v301_route_a_invertible.py"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " attacks the single remaining "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "unconditional"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " gap of "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": ". Since "
+        },
+        {
+          "k": "c",
+          "v": "v300"
+        },
+        {
+          "k": "t",
+          "v": " collapsed Route B into Route A's rationality, that gap is Route A's open hypothesis ("
+        },
+        {
+          "k": "c",
+          "v": "v297"
+        },
+        {
+          "k": "t",
+          "v": " LIT-A): “the raw quasi-free seam bulk is invertible (SRE)”. A "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "gapped"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " free-fermion (Gaussian) "
+        },
+        {
+          "k": "m",
+          "v": "2{+}1"
+        },
+        {
+          "k": "t",
+          "v": "D bulk cannot carry intrinsic topological order — free fermions give the integer (IQHE/Chern) phases, all "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "invertible"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "; intrinsic topological order needs interactions (Kitaev's periodic table, class D). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the carrier is "
+        },
+        {
+          "k": "m",
+          "v": "16"
+        },
+        {
+          "k": "t",
+          "v": " Majoranas, "
+        },
+        {
+          "k": "m",
+          "v": "c=g_{\\mathrm{car}}{+}\\Nfam=8=16/2"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v148"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "SO(16)_1\\supset(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\dim\\mathfrak{so}(16)=120"
+        },
+        {
+          "k": "t",
+          "v": " currents "
+        },
+        {
+          "k": "m",
+          "v": "+\\,128"
+        },
+        {
+          "k": "t",
+          "v": " spinor "
+        },
+        {
+          "k": "m",
+          "v": "=248"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v154"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "so a gapped quasi-free bulk is invertible automatically; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the invariant "
+        },
+        {
+          "k": "m",
+          "v": "|\\det K|=\\#"
+        },
+        {
+          "k": "t",
+          "v": "anyons is "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " for "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " (invertible) vs "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " for the gauged "
+        },
+        {
+          "k": "m",
+          "v": "D_8{=}SO(16)"
+        },
+        {
+          "k": "t",
+          "v": " (anyons), which free fermions cannot produce. "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "LIT-A's `invertible bulk' now "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "follows"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " from `gapped 16-Majorana quasi-free bulk' ("
+        },
+        {
+          "k": "c",
+          "v": "v148"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v160"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": "the mass gap), so the residual changes from a topological-order statement to a spectral one. "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Bottom line:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "c",
+          "v": "v300"
+        },
+        {
+          "k": "t",
+          "v": ", the whole open content of "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " reduces to the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "single spectral statement"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " “the quasi-free seam bulk is gapped” — the topological-order obstruction (hidden anyons) is removed; the gap is not manufactured. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "suite "
+        },
+        {
+          "k": "c",
+          "v": "v301"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "6/6"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "AUDIT OK"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-19",
+    "dateLabel": "2026-06-19",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the Flat-Away attack: a hard discrete obstruction "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the pin derived from "
+      },
+      {
+        "k": "m",
+        "v": "(E_8)_1"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "v300"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v300_flataway_rigid.py"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " attacks the single external fact the three Flat-Away routes ("
+        },
+        {
+          "k": "c",
+          "v": "v291"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v293"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v295"
+        },
+        {
+          "k": "t",
+          "v": ") left open, on two fronts. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Harden:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the flat seam was only a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "soft"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " minimum (“the spectral mismatch grows with "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon"
+        },
+        {
+          "k": "t",
+          "v": "”); here the obstruction becomes a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "discrete"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " on/off invariant. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the flat fingerprint — "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{spec}(|D_\\theta|)"
+        },
+        {
+          "k": "t",
+          "v": " is the integer ladder with every level "
+        },
+        {
+          "k": "m",
+          "v": "n\\ge1"
+        },
+        {
+          "k": "t",
+          "v": " of multiplicity exactly "
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the resonant mode "
+        },
+        {
+          "k": "m",
+          "v": "4k"
+        },
+        {
+          "k": "t",
+          "v": " splits level "
+        },
+        {
+          "k": "m",
+          "v": "2k"
+        },
+        {
+          "k": "t",
+          "v": " by gap "
+        },
+        {
+          "k": "m",
+          "v": "=g_k"
+        },
+        {
+          "k": "t",
+          "v": " (sympy "
+        },
+        {
+          "k": "m",
+          "v": "2\\times2"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "[[2k,g/2],[g/2,2k]]\\Rightarrow 2k\\pm g/2"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " an "
+        },
+        {
+          "k": "m",
+          "v": "O(g^2)"
+        },
+        {
+          "k": "t",
+          "v": " common shift), validated against the full Toeplitz operator; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "any "
+        },
+        {
+          "k": "m",
+          "v": "g_k\\ne0"
+        },
+        {
+          "k": "t",
+          "v": " lifts the resonant degeneracy ("
+        },
+        {
+          "k": "m",
+          "v": "2\\to1{+}1"
+        },
+        {
+          "k": "t",
+          "v": ") and changes the spectral "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "multiset"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", so preserving the flat ladder "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "with"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " its mult-"
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": " degeneracies forces every "
+        },
+        {
+          "k": "m",
+          "v": "g_k=0\\Rightarrow f=0"
+        },
+        {
+          "k": "t",
+          "v": " — strictly stronger than the “deviation grows” scan; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": " with the "
+        },
+        {
+          "k": "c",
+          "v": "v295"
+        },
+        {
+          "k": "t",
+          "v": " convexity, flat is isolated analytically "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "and"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " discretely. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Derive the pin:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " character "
+        },
+        {
+          "k": "m",
+          "v": "E_4/\\eta^8=q^{-1/3}(1+248q+4124q^2+\\dots)"
+        },
+        {
+          "k": "t",
+          "v": " has integer "
+        },
+        {
+          "k": "m",
+          "v": "q"
+        },
+        {
+          "k": "t",
+          "v": "-coefficients ("
+        },
+        {
+          "k": "m",
+          "v": "248"
+        },
+        {
+          "k": "t",
+          "v": " at level "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " even unimodular "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " integer weights), so by 2d Steklov conformal rigidity the integer ladder "
+        },
+        {
+          "k": "m",
+          "v": "\\Leftrightarrow"
+        },
+        {
+          "k": "t",
+          "v": " flat seam, i.e. the external pin "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " rationality (Route A). "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": " verdict: Flat-Away carries "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "zero"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " new open content beyond Route A — the two "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " routes converge on one rationality fact. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "suite "
+        },
+        {
+          "k": "c",
+          "v": "v300"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "6/6"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "AUDIT OK"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-19",
+    "dateLabel": "2026-06-19",
+    "heading": [
+      {
+        "k": "t",
         "v": "the hypergraph/Wolfram bridge hardened: the "
       },
       {

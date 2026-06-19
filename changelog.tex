@@ -59,6 +59,63 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-19 (the last lever: the seam mass gap \emph{is} the derived Recovery gap $6\ln(3/2)$, \texttt{v302})}
+\begin{itemize}
+\item \textbf{\texttt{v302\_seam\_gap.py}} closes the chain on the single statement \vref{v301} had left:
+  ``the quasi-free seam bulk is gapped''.  That gap is \emph{not} a free input --- it is the established
+  \emph{Recovery gap} of the seam transfer operator, derived from the carrier.  \mE\ the frozen transfer
+  spectrum is $\mathrm{spec}(T)=\{1,(2/3)^6,(1/3)^6\}$ (\vref{v160}/\vref{v162}), a simple Perron eigenvalue
+  $1$ separated from the rest; \mE\ the gap is $\Delta=-\ln((2/3)^6)=6\ln(3/2)=2\Nfam\ln(3/2)\approx2.4328>0$
+  (multiplicative gap $1-(2/3)^6=665/729$; $(2/3)^6$ the $\mu_4$-deck transfer eigenvalue forced by the
+  carrier); \mE\ with the decoupling margin $\Delta-31/(4\pi^2)\approx1.648>0$ (\vref{v76}) it is robust, and
+  Perron--Frobenius primitivity makes the leading mode simple; \mC\ by Osterwalder--Schrader / quasi-free
+  clustering a transfer-operator gap $\Delta>0$ \emph{is} a mass gap of the reconstructed Hamiltonian.
+  \mO\ \textbf{Bottom line:} with \vref{v300}/\vref{v301}, \texttt{SEAM.EQUIV.01}'s entire residual is now a
+  composition of \emph{standard cited theorems} (OS/quasi-free clustering $+$ Kitaev free-fermion invertibility
+  $+$ the \vref{v297} AQFT stack) over \emph{established} TFPT facts ($16$ quasi-free Majoranas; transfer gap
+  $6\ln(3/2)$) --- \emph{no undischarged TFPT-internal assumption remains}.  It stays \mO\ (not machine-proved
+  end-to-end), but the open front is reduced to citable machinery over a spectral gap that is provably positive.
+  \mE\ suite \texttt{v302} $5/5$, \texttt{AUDIT OK}.
+\end{itemize}
+
+\subsection*{2026-06-19 (Route A's last hypothesis discharged: the gapped quasi-free bulk is invertible by the free-fermion classification, \texttt{v301})}
+\begin{itemize}
+\item \textbf{\texttt{v301\_route\_a\_invertible.py}} attacks the single remaining \emph{unconditional} gap of
+  \texttt{SEAM.EQUIV.01}.  Since \vref{v300} collapsed Route B into Route A's rationality, that gap is Route A's
+  open hypothesis (\vref{v297} LIT-A): ``the raw quasi-free seam bulk is invertible (SRE)''.  A \emph{gapped}
+  free-fermion (Gaussian) $2{+}1$D bulk cannot carry intrinsic topological order --- free fermions give the
+  integer (IQHE/Chern) phases, all \emph{invertible}; intrinsic topological order needs interactions (Kitaev's
+  periodic table, class D).  \mE\ the carrier is $16$ Majoranas, $c=g_{\mathrm{car}}{+}\Nfam=8=16/2$
+  (\vref{v148}); \mE\ $SO(16)_1\supset(E_8)_1$ ($\dim\mathfrak{so}(16)=120$ currents $+\,128$ spinor $=248$,
+  \vref{v154}); \mC\ so a gapped quasi-free bulk is invertible automatically; \mE\ the invariant
+  $|\det K|=\#$anyons is $1$ for $E_8$ (invertible) vs $4$ for the gauged $D_8{=}SO(16)$ (anyons), which free
+  fermions cannot produce.  \mO\ LIT-A's `invertible bulk' now \emph{follows} from `gapped 16-Majorana quasi-free
+  bulk' (\vref{v148}/\vref{v160}$+$the mass gap), so the residual changes from a topological-order statement to a
+  spectral one.  \mO\ \textbf{Bottom line:} with \vref{v300}, the whole open content of \texttt{SEAM.EQUIV.01}
+  reduces to the \emph{single spectral statement} ``the quasi-free seam bulk is gapped'' --- the topological-order
+  obstruction (hidden anyons) is removed; the gap is not manufactured.  \mE\ suite \texttt{v301} $6/6$,
+  \texttt{AUDIT OK}.
+\end{itemize}
+
+\subsection*{2026-06-19 (the Flat-Away attack: a hard discrete obstruction $+$ the pin derived from $(E_8)_1$, \texttt{v300})}
+\begin{itemize}
+\item \textbf{\texttt{v300\_flataway\_rigid.py}} attacks the single external fact the three Flat-Away routes
+  (\vref{v291}/\vref{v293}/\vref{v295}) left open, on two fronts. \emph{Harden:} the flat seam was only a
+  \emph{soft} minimum (``the spectral mismatch grows with $\varepsilon$''); here the obstruction becomes a
+  \emph{discrete} on/off invariant. \mE\ the flat fingerprint --- $\mathrm{spec}(|D_\theta|)$ is the integer
+  ladder with every level $n\ge1$ of multiplicity exactly $2$; \mE\ the resonant mode $4k$ splits level $2k$ by
+  gap $=g_k$ (sympy $2\times2$ $[[2k,g/2],[g/2,2k]]\Rightarrow 2k\pm g/2$, $+$ an $O(g^2)$ common shift),
+  validated against the full Toeplitz operator; \mE\ any $g_k\ne0$ lifts the resonant degeneracy
+  ($2\to1{+}1$) and changes the spectral \emph{multiset}, so preserving the flat ladder \emph{with} its mult-$2$
+  degeneracies forces every $g_k=0\Rightarrow f=0$ --- strictly stronger than the ``deviation grows'' scan; \mE\
+  with the \vref{v295} convexity, flat is isolated analytically \emph{and} discretely. \emph{Derive the pin:} \mC\
+  the $(E_8)_1$ character $E_4/\eta^8=q^{-1/3}(1+248q+4124q^2+\dots)$ has integer $q$-coefficients ($248$ at
+  level $1$; $E_8$ even unimodular $\Rightarrow$ integer weights), so by 2d Steklov conformal rigidity the integer
+  ladder $\Leftrightarrow$ flat seam, i.e.\ the external pin \emph{is} the $(E_8)_1$ rationality (Route~A). \mO\
+  verdict: Flat-Away carries \emph{zero} new open content beyond Route~A --- the two \texttt{SEAM.EQUIV.01} routes
+  converge on one rationality fact. \mE\ suite \texttt{v300} $6/6$, \texttt{AUDIT OK}.
+\end{itemize}
+
 \subsection*{2026-06-19 (the hypergraph/Wolfram bridge hardened: the $(2,3,r)$ seed reaches $E_8$ as the last finite point, \texttt{v299})}
 \begin{itemize}
 \item \textbf{\texttt{v299\_hypergraph\_0d\_autonomous.py}} hardens the Wolfram/hypergraph reading into a precisely

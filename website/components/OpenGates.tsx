@@ -214,6 +214,24 @@ function ClosingCondition() {
         Conway–Sloane, v297) modulo the same input. The three converge on one external selection principle for
         the flat metric.
       </p>
+      <p className="mt-3 text-sm leading-relaxed text-slate-300">
+        <span className="font-semibold text-slate-100">Closing arc (v300–v302) — the shared fact pinned, no
+        undischarged TFPT-internal assumption left.</span> Flat-Away is hardened from a <em>soft</em> minimum to a{" "}
+        <em>discrete</em> degeneracy obstruction (any smooth off-mark mode splits a doubly-degenerate Steklov
+        level, changing the spectral multiset), and its pin is <em>derived</em> from the (E₈)₁ integer-weight
+        character E₄/η⁸ = q<sup>−1/3</sup>(1 + 248q + …) via 2d Steklov rigidity — so Route B&rsquo;s residual{" "}
+        <em>coincides with</em> Route A&rsquo;s rationality (v300). Route A&rsquo;s one open hypothesis (
+        <span className="font-mono">the quasi-free bulk is invertible</span>) is then discharged by the
+        free-fermion classification: a gapped 16-Majorana (c = 8) Gaussian bulk is automatically invertible
+        (#anyons = |det K<sub>E₈</sub>| = 1; the gauged D₈ = SO(16) contrast has det = 4) (v301). And the single
+        spectral input that remains — <span className="font-mono">the quasi-free bulk is gapped</span> — is the{" "}
+        <em>derived Recovery gap</em> Δ = 6·ln(3/2) ≈ 2.43 &gt; 0 of the frozen transfer spectrum
+        {" "}{`{1,(2/3)⁶,(1/3)⁶}`} (margin Δ − 31/(4π²) ≈ 1.65 &gt; 0); by Osterwalder–Schrader / quasi-free
+        clustering a transfer gap <em>is</em> a bulk mass gap (v302). <span className="font-semibold text-slate-100">
+        Net:</span> SEAM.EQUIV.01 stays open (not machine-proved end-to-end), but its entire residual is now a
+        composition of standard cited theorems (OS/clustering, Kitaev free-fermion, the v297 AQFT stack) over
+        established TFPT facts — no undischarged TFPT-internal assumption remains.
+      </p>
       <p className="mt-3 rounded-lg border border-slate-700/40 bg-slate-950/40 p-3 text-xs leading-relaxed text-slate-300">
         <span className="font-semibold text-slate-100">4D-QFT fork policy</span> (frozen decision tree, v265):
         Boundary QFT — complete modulo QGEO.SYM.01. Ambient QG — separate. <span className="text-amber-200">4D

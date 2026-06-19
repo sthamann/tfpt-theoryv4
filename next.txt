@@ -1729,3 +1729,91 @@ NACHTRAG 2026-06-19 (Netzwerk-/Wolfram-Lesart des (2,3,5)/E8-Kerns, v298-v299):
   Hypergraph-Sicht ersetzt TFPT nicht, sie zeigt den gemeinsamen Kern.
   (Outreach-Paket fuer S. Wolfram liegt lokal unter /wolfram/, gitignored.)
 ================================================================================
+
+NACHTRAG 2026-06-19 (Angriff auf Flat-Away: hartes diskretes Obstruktion + Pin aus (E8)_1, v300):
+  Zwei Zuege auf die EINE externe Tatsache, die v291/v293/v295 offen liessen
+  ('pin das Steklov-Spektrum der Naht / fixiere den a_2-Heat-Koeffizienten auf
+  den flachen Wert'):
+  (I) HAERTEN. v291/v293 zeigten nur ein WEICHES Minimum ('Mismatch waechst mit
+      eps'). v300 macht daraus eine DISKRETE on/off-Invariante:
+      - [E] FLAT FINGERPRINT: spec(|D_theta|) ist die Ganzzahl-Leiter, jedes
+        Level n>=1 hat Multiplizitaet exakt 2 (+-n-Rotationsmoden).
+      - [E] EXAKTER SPLIT: der resonante Mode 4k spaltet Level 2k um gap=g_k
+        (sympy-2x2 [[2k,g/2],[g/2,2k]] -> 2k+-g/2, + O(g^2)-Shift), validiert am
+        vollen Toeplitz-Operator.
+      - [E] HARTE OBSTRUKTION: jedes g_k!=0 hebt die Entartung (2->1+1) und
+        aendert das Spektral-MULTISET => Erhalt der flachen Leiter MIT
+        Mult-2-Entartungen erzwingt alle g_k=0 => f=0. Stark gegen Reskalierung,
+        echt staerker als der 'deviation grows'-Scan.
+      - [E] ZWEI-METRIK-ISOLATION: mit der v295-Konvexitaet (Delta Tr>=0, =0 iff
+        f=0) ist flach analytisch UND diskret isoliert.
+  (II) PIN HERGELEITET. [C] der (E8)_1-Vakuumcharakter E4/eta^8 =
+      q^{-1/3}(1+248q+4124q^2+34752q^3+...) hat GANZZAHLIGE q-Koeffizienten,
+      248 Stroeme auf Level 1 (E8 gerade unimodular => ganzzahlige Gewichte);
+      per 2d-Steklov-Konformrigiditaet (Weinstock/Edward) gilt Ganzzahl-Leiter
+      <=> flache Naht. Also IST der offene 'externe Fakt' genau die
+      (E8)_1-Rationalitaet = SEAM.EQUIV.01 Route A.
+  [O] FAZIT: Flat-Away traegt KEINEN neuen offenen Inhalt jenseits Route A -- die
+  Konvexitaetsseite ist unbedingt, die diskrete Obstruktion exakt, und die einzige
+  verbleibende unbedingte Luecke ist identisch mit Route A's 'freier Bulk =>
+  rationales holomorphes Randnetz'. Die zwei SEAM.EQUIV.01-Routen laufen
+  beweisbar auf EINE Rationalitaets-Tatsache zusammen (v286-Firewall bestaetigt).
+  Suite v300 6/6; Python (numpy + sympy), numerisch/symbolisch -> nicht im
+  Wolfram-Mirror (wie die v289-v297-Runde).
+================================================================================
+
+NACHTRAG 2026-06-19 (Route A's letzte Hypothese entladen: gapped quasi-freier Bulk
+  ist invertierbar per Freie-Fermion-Klassifikation, v301):
+  Da v300 Route B in Route A's Rationalitaet kollabiert hat, ist die EINZIGE
+  verbleibende UNBEDINGTE Luecke von SEAM.EQUIV.01 Route A's offene Hypothese
+  (v297 LIT-A): 'der rohe quasi-freie Seam-Bulk ist invertierbar (SRE)'.
+  ZUG: ein GAPPED Freie-Fermion-(Gauss)-Bulk in 2+1D kann KEINE intrinsische
+  topologische Ordnung tragen -- freie Fermionen geben nur die ganzzahligen
+  (IQHE/Chern) Phasen, ALLE invertierbar; intrinsische Top-Ordnung braucht
+  Wechselwirkung (Kitaev periodic table, Klasse D, einziger Invariant = chirale
+  Zentralladung c).
+  [E] Carrier = 16 Majoranas, c=8 = g_car+N_fam = 16/2 (v148).
+  [E] SO(16)_1 enthaelt (E8)_1: dim so(16)=120 Stroeme + 128 Spinor = 248 = dim E8
+      (v154 Simple-Current-Extension).
+  [C] => gapped quasi-freier Bulk ist automatisch invertierbar.
+  [E] Invariant |det K| = #Anyonen: E8-Cartan det=1 (invertierbar) vs. das
+      gegauge D8=SO(16) det=4 (Anyonen) -- freie Fermionen koennen das nicht.
+  [O] REDUKTION: LIT-A's 'invertierbarer Bulk' FOLGT jetzt aus 'gapped
+      16-Majorana quasi-freier Bulk' (v148 + v160 + Massenluecke); der Rest
+      wechselt von einer Top-Ordnungs-Aussage zu einer SPEKTRALEN.
+  [O] BOTTOM LINE: mit v300 reduziert sich der GESAMTE offene Inhalt von
+      SEAM.EQUIV.01 auf die EINE spektrale Aussage 'der quasi-freie Seam-Bulk ist
+      gapped' -- die Top-Ordnungs-Obstruktion (versteckte Anyonen) ist weg, die
+      Luecke wird NICHT fabriziert. Suite v301 6/6; Python (numpy+sympy).
+================================================================================
+
+NACHTRAG 2026-06-19 (der letzte Hebel: die Seam-Massenluecke IST die hergeleitete
+  Recovery-Luecke 6 ln(3/2), v302):
+  Nach v300 (Route B = Route A Rationalitaet) und v301 (Route A invertierbar) war
+  der GESAMTE offene Inhalt von SEAM.EQUIV.01 die EINE spektrale Aussage 'der
+  quasi-freie Seam-Bulk ist gapped'. v302 zeigt: diese Luecke ist KEIN freier
+  Input, sondern die etablierte RECOVERY-LUECKE des Seam-Transferoperators.
+  [E] TRANSFER-SPEKTRUM spec(T) = {1, (2/3)^6, (1/3)^6} = {1, 64/729, 1/729}
+      (v160/v162) -- einfacher fuehrender Perron-Eigenwert 1, Rest < 1.
+  [E] LUECKE HERGELEITET: Delta = -ln((2/3)^6) = 6 ln(3/2) = 2 N_fam ln(3/2)
+      ~ 2.4328 > 0 (mult. Luecke 1-(2/3)^6 = 665/729); 6 = 2 N_fam, (2/3)^6 der
+      mu4-Deck-Transfer-Eigenwert -- vom Carrier ERZWUNGEN, nicht angenommen.
+  [E] POSITIVITAETS-MARGE Delta - 31/(4 pi^2) = 1.6476 > 0 (v76-Decoupling-Marge),
+      robust; Perron-Frobenius-Primitivitaet macht den fuehrenden Modus einfach.
+  [C] OS/QUASI-FREI-CLUSTERING: fuer ein RP-quasi-freies System ist eine
+      Transfer-Luecke Delta>0 <=> exponentielles Clustering <=> eine Massenluecke
+      des OS-rekonstruierten Hamiltonians (Osterwalder-Schrader; Bulk-Massenluecke
+      = Transfer-Luecke).
+  [O] FAZIT: mit v300/v301 ist der GESAMTE Rest von SEAM.EQUIV.01 jetzt eine
+      Komposition aus STANDARD-zitierten Saetzen (OS/Clustering + Kitaev-Freie-
+      Fermion-Invertierbarkeit + v297-AQFT-Stack) ueber ETABLIERTEN TFPT-Fakten
+      (16 quasi-freie Majoranas; Transfer-Luecke 6 ln(3/2)) -- KEINE offene
+      TFPT-interne Annahme bleibt. SEAM.EQUIV.01 bleibt [O] (nicht End-to-End
+      maschinen-bewiesen), aber die offene Front ist auf zitierbare Maschinerie
+      ueber einer beweisbar positiven Spektralluecke reduziert. Suite v302 5/5.
+
+  GESAMTBOGEN v300-v302: die offene Front ging von 'SEAM.EQUIV.01 (zwei Routen,
+  drei Sub-Lemmata)' ueber 'eine externe geometrische Invariante' (v300) und
+  'eine Top-Ordnungs-Frage' (v301) auf 'eine beweisbar positive Spektralluecke'
+  (v302) -- d.h. auf NULL offene TFPT-interne Annahmen, modulo Standard-Saetze.
+================================================================================

@@ -852,7 +852,7 @@ QFT measure (admissible sector) & \mE & \textbf{closed: RP from cusp spectrum, O
 full measured pole masses & \mC & ladder $\times\,v_{\mathrm{geo}}$, dressed by standard RG (no new physics); $v_{\mathrm{geo}}$ over-determined (\vref{v274}) \\
 absolute QCD scales ($m_p/m_e$, $\Lambda_{\mathrm{QCD}}$) & \mO & QCD matching contract (\texttt{FR.MPME.01}); not a compiler number \\
 full PMNS dynamics (mass scale, CP) & \mC/\mO & angles typed; CP strength $J_{\mathrm{PMNS}}{=}{-}0.0297$ derived (\vref{v270}); absolute $\nu$-scale $=$ one seesaw ratio (\vref{v272}) \\
-\textbf{(1)} \texttt{SEAM.EQUIV.01} --- one named theorem (\emph{raw seam $=(E_8)_1$ at $\tau{=}i$}) & \mO & the single arrow unifying the flat-$\tau{=}i$ geometry and the $\det K{=}1$ holomorphy (\vref{v282}/\vref{v286}, import firewall); Route~A is a citable theorem stack (\vref{v297}), Route~B \emph{proves} the full-$L^2$ $\Z_4$ lift (\vref{v288}); residual $=$ \emph{Flat-Away} (\vref{v289}), its heat positive-definiteness proved+Lean (\vref{v295}) \\
+\textbf{(1)} \texttt{SEAM.EQUIV.01} --- one named theorem (\emph{raw seam $=(E_8)_1$ at $\tau{=}i$}) & \mO & the single arrow unifying the flat-$\tau{=}i$ geometry and the $\det K{=}1$ holomorphy (\vref{v282}/\vref{v286}, import firewall). After the closing arc (\vref{v300}--\vref{v302}) its residual is a composition of \emph{cited} theorems over \emph{established} TFPT facts: Flat-Away hardened to a discrete obstruction $+$ its pin derived from $(E_8)_1$ (\vref{v300}); Route~A's invertibility discharged by the free-fermion classification (\vref{v301}); the last input $=$ the derived Recovery gap $6\ln(3/2){>}0$ (\vref{v302}). No undischarged TFPT-internal assumption remains (stays \mO: not machine-proved end-to-end) \\
 \textbf{(2)} \texttt{QG.AMB.01} --- nonperturbative ambient measure & \mO & the genuinely separate strict-TOE summit: the perturbative $R^2/$Weyl$^2$ gravity ghost (Stelle) is the frontier; Tier-B's holomorphy bit ($\det K{=}1$, \vref{v277}) is absorbed into \texttt{SEAM.EQUIV.01} \\
 analytic boundary origin of $\pi$ ($c_3{=}\tfrac1{8\pi}$) & \mC & \textbf{hardened: $c_3{=}1/(|\Z_2|\oint_{S^2}K)=1/(8\pi)$ (Gauss--Bonnet)}; ``$8$''${=}\operatorname{rank}E_8$; $\pi$ stays the one primitive \\
 $\eta_B$, $m_p/m_e$, Koide, dark matter & \mO & frontier handles only (see document~4) \\
@@ -901,7 +901,18 @@ so Flat-Away is attacked on three independent routes --- the heat route, whose p
 (\vref{v295}/\vref{v296}, \texttt{FORM.FLATAWAY.01}); the spectral-rigidity route (positive-definite Hessian over
 the full smooth-$\Z_4$ space, \vref{v293}); and the RP-energy/Troyanov route (\vref{v294}) --- while Route A's
 import is a citable theorem stack (\vref{v297}) modulo the \emph{same} geometric input, so both routes reduce to
-one shared external fact. The seam seed is \emph{hardened}:
+one shared external fact. \emph{Closing arc} (\vref{v300}--\vref{v302}): that shared fact is then pinned down.
+Flat-Away is hardened from a soft minimum to a \emph{discrete} degeneracy obstruction and its pin
+\emph{derived} from the $(E_8)_1$ integer-weight character via 2d Steklov rigidity (\vref{v300}), which makes
+Route~B's residual coincide with Route~A's rationality; Route~A's one open hypothesis (``the quasi-free bulk is
+invertible'') is then discharged by the free-fermion classification --- a gapped $16$-Majorana ($c{=}8$)
+Gaussian bulk is automatically invertible, $\#\text{anyons}=|\!\det K_{E_8}|=1$ (\vref{v301}); and the single
+spectral input that remains, ``the quasi-free bulk is gapped'', is identified with the \emph{derived} Recovery
+gap $\Delta=6\ln(3/2)\approx2.43>0$ of the frozen transfer spectrum $\{1,(2/3)^6,(1/3)^6\}$ (\vref{v302}).
+The net is honestly bounded: \texttt{SEAM.EQUIV.01} stays \mO\ (not machine-proved end-to-end), but its whole
+residual is now a composition of \emph{standard cited theorems} (Osterwalder--Schrader/quasi-free clustering,
+the Kitaev free-fermion classification, the \vref{v297} AQFT stack) over \emph{established} TFPT facts, with
+\emph{no} undischarged TFPT-internal assumption left. The seam seed is \emph{hardened}:
 $c_3=1/(|\Z_2|\oint_{S^2}K\,dA)=1/(8\pi)$ is the one-sided Gauss--Bonnet normalisation of the seam sphere,
 with the discrete ``$8$'' equal to $\operatorname{rank}E_8$ and only the Gauss--Bonnet $\pi$ left as the
 single irreducible primitive. What remains for a full TOE is then the ambient-RP hypothesis (full QG),

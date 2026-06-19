@@ -745,7 +745,8 @@ def fig_residual_chain():
         ("v284-v285", "Two routes, one open lemma", "RP-uniqueness 5/6 + condensation 3/4; open lemmas coincide", C["green"]),
         ("v286-v288", "SEAM.EQUIV.01 named + attacked", "import firewall (v286); Route A 4/5 (v287); Route B proves full-L2 Z4 lift (v288)", C["green"]),
         ("v289-v297", "Flat-Away: 3 routes reduced", "heat a2 closed+Lean (v292/v295/v296), spectral Hessian PD (v293), Troyanov (v294); Route A citable stack (v297)", C["green"]),
-        ("BEDROCK", "ONE shared input: Flat-Away", "residual: RP+gap+4 marks => curvature flat away from the marks (both routes meet here)", C["gold"]),
+        ("v300-v302", "Closing arc: shared fact pinned", "Flat-Away hard+pin from (E8)_1 Steklov (v300); Route A invertible via free fermions (v301); gap = derived 6ln(3/2)>0 (v302)", C["green"]),
+        ("BEDROCK", "No TFPT-internal assumption left", "SEAM.EQUIV.01 residual = cited theorems (OS/clustering, Kitaev free-fermion, AQFT stack) over established facts; stays [O] (not machine-proved end-to-end)", C["gold"]),
     ]
     n = len(steps)
     fig, ax = plt.subplots(figsize=(8.2, 6.6))
@@ -814,12 +815,14 @@ def fig_script_timeline():
          "cutoff = KMS weight, seam/carrier/E8 on one K3: one relative object", C["blue"]),
         ("v262-v275", "Frontier closure + QFT4D fork", "F_QCD m_p/m_e, M_nu seesaw, S_pert (EG, 1-loop + gauge\n"
          "betas), scale over-determination, the QG.AMB roadmap", C["red"]),
-        ("v276-v297", "The Gral: SEAM.EQUIV.01 + Flat-Away", "seam = (E8)_1 at tau=i named as ONE theorem;\n"
+        ("v276-v299", "The Gral: SEAM.EQUIV.01 + Flat-Away", "seam = (E8)_1 at tau=i named as ONE theorem;\n"
          "both routes reduced to one shared input (Flat-Away), heat a2 proved+Lean (v295/v296)", C["gold"]),
+        ("v300-v302", "Closing arc: residual pinned", "Flat-Away hard+pin from (E8)_1 (v300); Route A invertible\n"
+         "via free fermions (v301); gap = derived 6ln(3/2)>0 (v302); no TFPT-internal assumption left", C["gold"]),
     ]
     fig, ax = plt.subplots(figsize=(7.8, 10.2))
     ax.set_xlim(0, 10); ax.set_ylim(0, len(phases) + 0.4); ax.axis("off")
-    ax.set_title("TFPT verification suite: the journey of ~295 machine-checked scripts",
+    ax.set_title("TFPT verification suite: the journey of ~300 machine-checked scripts",
                  fontsize=10.5, color=C["blue"])
     ax.plot([0.7, 0.7], [0.3, len(phases) + 0.1], color=C["gray"], lw=1.4, zorder=0)
     for i, (rng, head, sub, col) in enumerate(phases):
@@ -853,7 +856,7 @@ def fig_qft_skeleton():
         ("v258-v261", "Modular Spectral Closure", "one relative object: $D_F=$cov.\\ induction, cutoff$=$KMS, K3", C["green"]),
         ("v269-v278", "Perturbative $S_{\\mathrm{pert}}$ (EG)", "1-loop quartic + gauge $\\beta=(41/10,-19/6,-7)$; LSZ unitary", C["green"]),
         ("v265", "4D fork (frozen)", "boundary-only default; PS UV branch; SM-only GUT killed", C["gold"]),
-        ("OPEN", "SEAM.EQUIV.01 = seam$=(E_8)_1$ at $\\tau{=}i$", "ONE named theorem (v286); both routes reduced to Flat-Away (v289-v297); heat a2 proved+Lean (v295/v296)", C["red"]),
+        ("OPEN", "SEAM.EQUIV.01 = seam$=(E_8)_1$ at $\\tau{=}i$", "ONE named theorem (v286); closing arc v300-v302: residual = cited theorems over established facts (no TFPT-internal assumption left), stays [O]", C["red"]),
         ("OPEN", "QG.AMB.01 nonperturbative", "the $R^2/$Weyl$^2$ gravity $S_{\\mathrm{pert}}$ carries the Stelle ghost (rt_F)", C["red"]),
     ]
     n = len(steps)

@@ -94,7 +94,10 @@ bootstrap fixed point* (forced three independent ways via the `E8` closure), so 
   Kummer/K3 surface** (`v260`). The assembly certificate (`v261`) pins the cross-consistency — one number
   `4 = [B:A] = |μ₄| = 2χ = |(ℤ/2)²|`, one carrier-16, one gap `6log(3/2)` — so the layer is *QFT-complete
   modulo a single named theorem*, the **Seam Equivalence Theorem** `SEAM.EQUIV.01` (*the raw RP seam IS the
-  holomorphic `(E8)₁` net at `τ=i`*; `v286`–`v288`), with ambient QG kept separate.
+  holomorphic `(E8)₁` net at `τ=i`*; `v286`–`v288`). After the closing arc (`v300`–`v302`) that theorem's
+  residual carries **no undischarged TFPT-internal assumption** — it is a composition of standard cited theorems
+  (Steklov rigidity, the free-fermion classification, the AQFT stack) over established facts (the carrier-16, the
+  derived gap `6log(3/2)>0`) — though it stays `[O]` (not machine-proved end-to-end). Ambient QG kept separate.
 
 ### Honest scope — the four layers
 
@@ -367,7 +370,22 @@ smooth-`ℤ₄` space is positive-definite, so flat is a strict isolated minimum
 import is now a citable theorem stack (Kitaev/Freed–Hopkins → Müger/Kawahigashi–Longo–Müger →
 Conway–Sloane/Dong–Xu, `v297`) modulo the **same** geometric input as Route B. So both routes reduce
 `SEAM.EQUIV.01` to one shared external fact — flat away from the marks.
-A development timeline of all `295` scripts is in `introduction.tex` (and on the website verification page).
+
+**Closing arc (`v300`–`v302`) — the shared fact pinned; no undischarged TFPT-internal assumption left.** Three
+moves finish the reduction. **(`v300`)** Flat-Away is hardened from a *soft* minimum to a **discrete** degeneracy
+obstruction (any smooth off-mark mode splits a doubly-degenerate Steklov level, changing the spectral multiset),
+and its pin is **derived** from the `(E8)₁` integer-weight character `E₄/η⁸ = q^{−1/3}(1+248q+…)` via 2d Steklov
+conformal rigidity — so Route B's residual *coincides with* Route A's rationality. **(`v301`)** Route A's one open
+hypothesis (*"the quasi-free bulk is invertible"*) is discharged by the **free-fermion classification**: a gapped
+16-Majorana (`c=8`) Gaussian bulk is automatically invertible (`#anyons = |det K_E8| = 1`; the gauged `D8=SO(16)`
+contrast has `det=4`), which removes the topological-order obstruction. **(`v302`)** The single spectral input
+that remains, *"the quasi-free bulk is gapped"*, is identified with the **derived Recovery gap**
+`Δ = 6·ln(3/2) ≈ 2.43 > 0` of the frozen transfer spectrum `{1,(2/3)⁶,(1/3)⁶}` (margin `Δ−31/(4π²) ≈ 1.65 > 0`);
+by Osterwalder–Schrader / quasi-free clustering a transfer gap *is* a bulk mass gap. **Net:** `SEAM.EQUIV.01`
+stays `[O]` (not machine-proved end-to-end), but its entire residual is now a composition of **standard cited
+theorems** (OS/clustering, Kitaev free-fermion, the `v297` AQFT stack) over **established** TFPT facts — *no
+undischarged TFPT-internal assumption remains*.
+A development timeline of all `300` scripts is in `introduction.tex` (and on the website verification page).
 
 ---
 
