@@ -64,7 +64,7 @@
   "date": "2026-06-18"
  },
  "introduction::subsection::The closure ledger: what is done, and what genuinely remains::1": {
-  "hash": "6caeccb2ff3a",
+  "hash": "51e119ae840d",
   "date": "2026-06-19"
  },
  "introduction::section::Does this make the theory more probable?::1": {
@@ -108,8 +108,8 @@
   "date": "2026-06-12"
  },
  "tfpt_1_architecture_e8::section::The $D_5\\times A_3$ compiler: $E_8$ as a closure, not an input::1": {
-  "hash": "63494f285ad2",
-  "date": "2026-06-12"
+  "hash": "79d1e36d285e",
+  "date": "2026-06-19"
  },
  "tfpt_1_architecture_e8::subsection::Carrier $=D_5=\\mathfrak{so}_{10}$ (proved)::1": {
   "hash": "291366279c88",
@@ -648,8 +648,8 @@
   "date": "2026-06-12"
  },
  "tfpt_5_redteam::section::Target F --- the perturbative 4D-QFT $+$ scale round (v269--v275)::1": {
-  "hash": "60c2184bcb8e",
-  "date": "2026-06-17"
+  "hash": "e74abceb419c",
+  "date": "2026-06-19"
  },
  "tfpt_5_redteam::section::Outcome::1": {
   "hash": "57ff549ba35d",
@@ -700,7 +700,7 @@
   "date": "2026-06-17"
  },
  "tfpt_research_contracts::section::Research Contract 1 --- $(U_{\\mathrm{wall}})$::1": {
-  "hash": "87e6727ddae9",
+  "hash": "5f0202524d75",
   "date": "2026-06-19"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {

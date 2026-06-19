@@ -59,6 +59,30 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-19 (an infinite-derivative narrowing of the Stelle-ghost attack, the double-pushout figure, and the ``constancy of $c$'' framing of \texttt{SEAM.EQUIV.01}: \texttt{v304})}
+\begin{itemize}
+\item \textbf{\texttt{v304\_idg\_nonlocal\_ghost.py} (\texttt{QGAMB.IDG.01}, \mC/\mO).} A conditional,
+  parameter-free narrowing of the red-team \texttt{rt\_F}/\vref{v278} Stelle-ghost attack on the perturbative
+  gravity sector. \mE\ the local $R{+}R^2/$Weyl$^2$ four-derivative propagator $1/(p^2(p^2{+}M^2))$ carries a
+  negative-residue massive spin-2 mode (the Stelle ghost) only as a \emph{truncation artefact}; \mE\ for an
+  \emph{entire} graviton form factor $a(p^2)=e^{p^2/M^2}$ (nowhere zero) the dressed propagator $1/(p^2a)$ has no
+  extra pole (Tomboulis 1997; Biswas--Mazumdar--Siegel 2006), whereas any \emph{polynomial} truncation has a real
+  zero $=$ the ghost; \mC\ the spectral-action cutoff is the seam KMS weight $f(u)=e^{-u}$ (\vref{v259}), so the
+  un-truncated trace points to a nonlocal form factor with \emph{no new parameter}. \mO\ It does \emph{not} close
+  \texttt{QG.AMB.01}: the trace regulator is not yet shown to resum to an entire $a(\Box)$, and a ghost-free
+  \emph{perturbative} graviton is not the nonperturbative ambient measure. Cited in the red-team Target~F body;
+  ledger row \texttt{QGAMB.IDG.01}.
+\item \textbf{Double-pushout figure (\texttt{tfpt\_1\_architecture\_e8}).} A new shared TikZ macro
+  (\texttt{TFPTdoublepushout} in \texttt{tex-artefacts/tfpt\_figures.tex}) draws the commuting square showing that
+  the order-$|\mu_4|{=}4$ glue is \emph{one} operation in two categories: the lattice pushout
+  $D_5\oplus A_3+\mu_4\Rightarrow E_8$ (\vref{v1}) and the conformal-net / anyon-condensation extension
+  $(D_5)_1\otimes(A_3)_1\rtimes\mu_4\cong(E_8)_1$ (\vref{v92}/\vref{v281}/\vref{v234}/\vref{v277}/\vref{v260}).
+  Expository only; no new claim.
+\item \textbf{Framing (\texttt{introduction}, \texttt{tfpt\_research\_contracts}).} \texttt{SEAM.EQUIV.01} is now
+  stated explicitly as the \emph{one} irreducible structural postulate of the theory --- the role the constancy of
+  $c$ plays in relativity (cf.\ \vref{v267}). Prose sharpening; no status change.
+\end{itemize}
+
 \subsection*{2026-06-19 (the discrete$\to$dynamic lens on \texttt{F\_transfer}: one shape, one seam-rate, \texttt{v303})}
 \begin{itemize}
 \item \textbf{\texttt{v303\_ftransfer\_dynamics.py}} asks whether the main-branch mechanism --- a gapped,

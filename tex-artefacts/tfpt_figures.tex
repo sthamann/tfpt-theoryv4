@@ -81,6 +81,30 @@
 {\scriptsize\itshape $D_5\oplus A_3+\mu_4\Rightarrow E_8$ --- the unique even unimodular rank-$8$ glue \ [E] exact (lattice).}
 \end{center}}
 
+% ===== B5b: the double pushout (one glue, two categories) ========
+\newcommand{\TFPTdoublepushout}{%
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,>={Stealth[length=2mm]},
+  lat/.style={rounded corners=2pt,draw=tfblue,fill=tfblue!6,inner sep=5pt,align=center,text width=34mm},
+  net/.style={rounded corners=2pt,draw=tfblue!70!black,fill=tfblue!4,inner sep=5pt,align=center,text width=34mm},
+  e8l/.style={rounded corners=2pt,draw=tfgold!80!black,fill=tfgold!12,inner sep=5pt,align=center,text width=34mm,font=\bfseries},
+  e8n/.style={rounded corners=2pt,draw=tfgreen!70!black,fill=tfgreen!10,inner sep=5pt,align=center,text width=34mm,font=\bfseries},
+  ar/.style={->,tfgray,semithick},
+  lb/.style={font=\scriptsize,text=black,align=center,fill=white,inner sep=1.5pt}]
+  \node[lat] (LL) at (0,2.5)   {$D_5\oplus A_3$\\[1pt]\scriptsize root lattices,\ $\mathrm{disc}=\Z_4$};
+  \node[e8l] (LR) at (6.6,2.5) {$E_8$\\[1pt]\scriptsize even unimodular,\ $\det 1$};
+  \node[net] (BL) at (0,0)     {$(D_5)_1\otimes(A_3)_1$\\[1pt]\scriptsize chiral nets,\ $c=8$};
+  \node[e8n] (BR) at (6.6,0)   {$(E_8)_1$\\[1pt]\scriptsize holomorphic,\ $\mu$-index $1$};
+  \draw[ar] (LL)--node[lb]{$+\,\mu_4$ glue}(LR);
+  \draw[ar] (BL)--node[lb]{$\rtimes\,\mu_4$ extension}(BR);
+  \draw[ar] (LL)--node[lb,left=-1pt]{level-$1$}(BL);
+  \draw[ar] (LR)--node[lb,right=-1pt]{level-$1$}(BR);
+\end{tikzpicture}\\[2pt]
+{\scriptsize\itshape One operation, two categories: the order-$|\mu_4|{=}4$ glue is the lattice pushout
+$D_5\oplus A_3+\mu_4\Rightarrow E_8$ \emph{and} the simple-current / anyon-condensation extension
+$(D_5)_1\otimes(A_3)_1\rtimes\mu_4\cong(E_8)_1$; the square commutes. \ [E] exact.}
+\end{center}}
+
 % ===== B6: the 2/3 motif map =====================================
 \newcommand{\TFPTmotif}{%
 \begin{center}

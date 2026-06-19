@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`301` registered scripts · `355` ledger claims · `10` clusters.
+`302` registered scripts · `356` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -202,7 +202,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v75_upoint_to_vgeo** [E/O] `FLAV.UPOINT.01` — Gate 1 complete: U_point → v_geo (ratios + Grand Mass Volume); same anchor as 1/G
   - deps: v71_simple_r_bridge, v20_lepton_c_derivation, v46_grand_mass_volume, v68 · cited: origin theory, research contracts
 
-### `frontier` — Open gate (G_metric) & the frontier  (60 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (61 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -325,6 +325,8 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v301_route_a_invertible, v43_exterior_bridge, v123_inventory_update, v286_seam_equivalence_contract · cited: research contracts
 - **v303_ftransfer_dynamics** [E/C/O] `FR.DYNAMICS.01` — the discrete->dynamic lens on F_transfer: is the main-branch mechanism (a gapped, positivity-preserving relaxation to a UNIQUE attractor; local-averaging update -> E8 marks, gap 6 
   - deps: v213_ftransfer_functor, v82_koide_attractor_splitting, v56_unique_attractor, v302_seam_gap · cited: research contracts
+- **v304_idg_nonlocal_ghost** [E/C/O] `QGAMB.IDG.01` — the KMS spectral-action cutoff suggests a NONLOCAL (infinite-derivative) graviton form factor; under entire analyticity the Stelle ghost is a TRUNCATION ARTEFACT — a CONDITIONAL na
+  - deps: QG.AMB.01, v259, v278, rt_F · cited: 5 redteam
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (160 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -670,7 +672,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v292_flataway_heat_reduction** — `FLATAWAY.HEAT.01`
 - **v293_flataway_spectral_hessian** — `FLATAWAY.SPEC.01`
 - **v294_flataway_rp_energy** — `FLATAWAY.ENERGY.01`
 - **v295_flataway_a2_exact** — `FLATAWAY.A2.01, FORM.FLATAWAY.01`
@@ -682,4 +683,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v301_route_a_invertible** — `SEAM.EQUIV.A.INV.01`
 - **v302_seam_gap** — `SEAM.EQUIV.GAP.01`
 - **v303_ftransfer_dynamics** — `FR.DYNAMICS.01`
+- **v304_idg_nonlocal_ghost** — `QGAMB.IDG.01`
 

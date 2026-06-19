@@ -47,6 +47,487 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "an infinite-derivative narrowing of the Stelle-ghost attack, the double-pushout figure, and the “constancy of "
+      },
+      {
+        "k": "m",
+        "v": "c"
+      },
+      {
+        "k": "t",
+        "v": "” framing of "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.EQUIV.01"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "c",
+        "v": "v304"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v304_idg_nonlocal_ghost.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGAMB.IDG.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "s",
+              "v": "C"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "s",
+              "v": "O"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " A conditional, parameter-free narrowing of the red-team "
+        },
+        {
+          "k": "c",
+          "v": "rt_F"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v278"
+        },
+        {
+          "k": "t",
+          "v": " Stelle-ghost attack on the perturbative gravity sector. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the local "
+        },
+        {
+          "k": "m",
+          "v": "R{+}R^2/"
+        },
+        {
+          "k": "t",
+          "v": "Weyl"
+        },
+        {
+          "k": "m",
+          "v": "^2"
+        },
+        {
+          "k": "t",
+          "v": " four-derivative propagator "
+        },
+        {
+          "k": "m",
+          "v": "1/(p^2(p^2{+}M^2))"
+        },
+        {
+          "k": "t",
+          "v": " carries a negative-residue massive spin-2 mode (the Stelle ghost) only as a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "truncation artefact"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "for an "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "entire"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " graviton form factor "
+        },
+        {
+          "k": "m",
+          "v": "a(p^2)=e^{p^2/M^2}"
+        },
+        {
+          "k": "t",
+          "v": " (nowhere zero) the dressed propagator "
+        },
+        {
+          "k": "m",
+          "v": "1/(p^2a)"
+        },
+        {
+          "k": "t",
+          "v": " has no extra pole (Tomboulis 1997; Biswas–Mazumdar–Siegel 2006), whereas any "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "polynomial"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " truncation has a real zero "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the ghost; "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the spectral-action cutoff is the seam KMS weight "
+        },
+        {
+          "k": "m",
+          "v": "f(u)=e^{-u}"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v259"
+        },
+        {
+          "k": "t",
+          "v": "), so the un-truncated trace points to a nonlocal form factor with "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "no new parameter"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "It does "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " close "
+        },
+        {
+          "k": "c",
+          "v": "QG.AMB.01"
+        },
+        {
+          "k": "t",
+          "v": ": the trace regulator is not yet shown to resum to an entire "
+        },
+        {
+          "k": "m",
+          "v": "a(\\Box)"
+        },
+        {
+          "k": "t",
+          "v": ", and a ghost-free "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "perturbative"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " graviton is not the nonperturbative ambient measure. Cited in the red-team Target F body; ledger row "
+        },
+        {
+          "k": "c",
+          "v": "QGAMB.IDG.01"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Double-pushout figure ("
+            },
+            {
+              "k": "c",
+              "v": "tfpt_1_architecture_e8"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " A new shared TikZ macro ("
+        },
+        {
+          "k": "c",
+          "v": "TFPTdoublepushout"
+        },
+        {
+          "k": "t",
+          "v": " in "
+        },
+        {
+          "k": "c",
+          "v": "tex-artefacts/tfpt_figures.tex"
+        },
+        {
+          "k": "t",
+          "v": ") draws the commuting square showing that the order-"
+        },
+        {
+          "k": "m",
+          "v": "|\\mu_4|{=}4"
+        },
+        {
+          "k": "t",
+          "v": " glue is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " operation in two categories: the lattice pushout "
+        },
+        {
+          "k": "m",
+          "v": "D_5\\oplus A_3+\\mu_4\\Rightarrow E_8"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v1"
+        },
+        {
+          "k": "t",
+          "v": ") and the conformal-net / anyon-condensation extension "
+        },
+        {
+          "k": "m",
+          "v": "(D_5)_1\\otimes(A_3)_1\\rtimes\\mu_4\\cong(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v92"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v281"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v234"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v277"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v260"
+        },
+        {
+          "k": "t",
+          "v": "). Expository only; no new claim."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Framing ("
+            },
+            {
+              "k": "c",
+              "v": "introduction"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "c",
+              "v": "tfpt_research_contracts"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " is now stated explicitly as the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " irreducible structural postulate of the theory — the role the constancy of "
+        },
+        {
+          "k": "m",
+          "v": "c"
+        },
+        {
+          "k": "t",
+          "v": " plays in relativity (cf. "
+        },
+        {
+          "k": "c",
+          "v": "v267"
+        },
+        {
+          "k": "t",
+          "v": "). Prose sharpening; no status change."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-19",
+    "dateLabel": "2026-06-19",
+    "heading": [
+      {
+        "k": "t",
         "v": "the discrete"
       },
       {
