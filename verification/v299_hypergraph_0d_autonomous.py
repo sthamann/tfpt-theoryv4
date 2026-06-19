@@ -1,19 +1,25 @@
 """v299 -- the hypergraph / Wolfram-program bridge, hardened.  This does NOT claim
 "P2 is derived" or "E8 emerges from nothing".  It proves the precise, honest statement:
 
-    P2 (the 3-arm (2,3,*) icosahedral seed) is the minimal seed on which a LOCAL,
-    witness-based spectral growth dynamics is forced through E6 -> E7 -> E8 and stops at
-    the affine boundary Ê8 -- with E8 the MAXIMAL FINITE point and Ê8 the critical
-    (rho=2) edge.  The Wolfram floor and the TFPT floor fall back to the SAME (2,3,5)
-    seed.
+    P2 (the 3-arm (2,3,r) exceptional branch type) is the irreducible seed on which a
+    LOCAL, witness-based spectral growth dynamics REACHES E8 = T(2,3,5) as the LAST FINITE
+    point: it runs E6 -> E7 -> E8 and stops at the affine boundary Ê8 (the critical rho=2
+    edge).  The Wolfram floor and the TFPT floor fall back to the SAME (2,3,5) seed.
 
-Negative controls (the built-in guards against over-reach): a path A_n seed and a D_n
-seed both stay rho < 2 forever and NEVER reach E8 -- so rho<=2 selects the ADE world,
-NOT E8; only the exceptional (1,2,*) arm does.
+On the groups (a deliberate precision): the icosahedron GRAPH has automorphism group
+I_h = A5 x Z2 of order 120 (rotations A5 order 60 + reflections).  The McKay group is the
+binary icosahedral group 2I, the SU(2) double cover of the rotation group A5 -- also order
+120 but a DIFFERENT (perfect) group; it is 2I, not the graph automorphism group, whose
+McKay graph is affine E8 (built from quaternions in v219).
+
+Negative controls (the built-in guards against over-reach): a path A_n seed and a D_n seed
+have the EXACT closed forms rho(A_n)=2cos(pi/(n+1)) and rho(D_n)=2cos(pi/(2n-2)), both < 2
+for ALL n -- so rho<=2 selects the ADE world, NOT E8; only the exceptional (1,2,r) arm does.
 
 Claims (hard-typed):
   [E]  HYP.ICO.01     icosahedron = 3-uniform hypergraph (12 V, 20 triangular hyperedges,
-                      30 edges = h(E8)); |Aut| = 120 = |image of 2I|.
+                      30 edges = h(E8)); |Aut(graph)| = 120 = |I_h| = |A5 x Z2| (the McKay
+                      group is the SU(2) binary lift 2I, a different order-120 group; v219).
   [E]  HYP.REWRITE.01 the 1->4 subdivision rewrite preserves all 120 icosahedral
                       symmetries at every scale (V: 12 -> 42 -> 162).
   [E]  HYP.FUSION.01  the 2I fusion tensor N^k_ij is a nonneg-integer weighted 3-uniform
@@ -29,10 +35,11 @@ Claims (hard-typed):
                       E6 -> E7 -> E8 -> Ê8 then stops -- exact UNDER the 3-arm (2,3,*)
                       seed and the grow-longest-leg policy.  Critical witness = the Kac
                       marks.
-  [E]  HYP.NEG.AN.01  control: a path A_n seed stays rho < 2 forever, never reaches E8.
-  [E]  HYP.NEG.DN.01  control: a D_n seed (legs 1,1,k) stays in the D-series forever,
-                      never reaches E8.
-  [O]  HYP.SEED.01    the 3-arm (2,3,*) exceptional seed is the SINGLE irreducible input
+  [E]  HYP.NEG.AN.01  control: rho(A_n)=2cos(pi/(n+1))<2 for ALL n (closed form), so the
+                      A-family never reaches E8.
+  [E]  HYP.NEG.DN.01  control: rho(D_n)=2cos(pi/(2n-2))<2 for ALL n (closed form), so the
+                      D-family never reaches E8; only the (1,2,r) arm does.
+  [O]  HYP.SEED.01    the 3-arm (2,3,r) exceptional branch is the SINGLE irreducible input
                       = TFPT's P2 / the icosahedral choice (NOT "P2 derived").
 
 Status: [E] the hypergraph facts (ICO/REWRITE/FUSION), the spectral selection
@@ -134,16 +141,16 @@ def _grow(seed, policy_longest=True, cap=12):
 
 def run():
     reset()
-    print("v299  hypergraph/Wolfram bridge: P2 is the minimal (2,3,*) seed forcing the local ADE dynamics to E8")
+    print("v299  hypergraph/Wolfram bridge: the (2,3,r) seed reaches E8 as the last finite point of a local ADE rule")
 
     # HYP.ICO.01
     V, A, faces = _icosahedron()
     nV, nE, nF = len(V), int(A.sum() // 2), len(faces)
     naut = len(_graph_autos(A))
     check("HYP.ICO.01 [E]: the icosahedron is a 3-uniform hypergraph (V=%d, triangular "
-          "hyperedges=%d, edges=%d=h(E8)), |Aut|=%d=|image of 2I| -- a concrete "
-          "hypergraph carrying the E8-generating (2,3,5) symmetry"
-          % (nV, nF, nE, naut),
+          "hyperedges=%d, edges=%d=h(E8)); |Aut(graph)|=%d=|I_h|=|A5xZ2| (rotations A5 "
+          "order 60 + reflections). The McKay group is the SU(2) binary lift 2I (order "
+          "120, perfect, != I_h), built from quaternions in v219" % (nV, nF, nE, naut),
           nV == 12 and nF == 20 and nE == 30 == 2 * N_fam * g_car and naut == 120)
 
     # HYP.REWRITE.01: 1->4 subdivision preserves all 120 symmetries
@@ -157,8 +164,9 @@ def run():
     preserved = sum(all(np.min(np.abs(Vsub - w).sum(1)) < 1e-6 for w in (O @ Vsub.T).T)
                     for O in Os)
     check("HYP.REWRITE.01 [E]: the 1->4 triangle-subdivision rewrite is equivariant -- "
-          "all %d/%d icosahedral symmetries still permute the subdivided hypergraph "
-          "(V 12->%d->162); the 2I symmetry is carried to every scale"
+          "all %d/%d full icosahedral symmetries (I_h, whose rotation subgroup A5 has "
+          "the binary lift 2I) still permute the subdivided hypergraph (V 12->%d->162); "
+          "the icosahedral symmetry is carried to every scale"
           % (preserved, len(Os), len(Vsub)), preserved == 120 and len(Vsub) == 42)
 
     # HYP.FUSION.01: 2I fusion tensor (via v219) is a 3-uniform hypergraph; V-slice = E8
@@ -200,13 +208,22 @@ def run():
           % (rs["A8"], rs["E6"], rs["E7"], rs["E8"], rs["Ê8"], rs["E10"]),
           rs["E8"] < 2 < rs["E10"] and abs(rs["Ê8"] - 2) < 1e-9)
 
-    # HYP.CW.01
+    # HYP.CW.01: the LOCAL gate is decided by the DIFFUSION-generated witness (no global
+    # rho); the Perron eigenvector is compared only as an independent audit.
     cw = {nm: _witness_localgate(_star(lg))[1] for nm, lg in
           [("E8", [1, 2, 4]), ("Ê8", [1, 2, 5]), ("E10", [1, 2, 6])]}
-    check("HYP.CW.01 [E]: Collatz-Wielandt -- rho<=2 <=> a positive witness m with "
-          "A m <= 2m exists (LOCAL per-node balance): E8=%s, Ê8=%s, E10=%s"
-          % (cw["E8"], cw["Ê8"], cw["E10"]),
-          cw["E8"] and cw["Ê8"] and not cw["E10"])
+
+    def _perron_gate(lg):
+        Ad = _star(lg).astype(float)
+        m = np.abs(np.linalg.eigh(Ad)[1][:, -1]); m = m / m.min()
+        return bool(np.all(Ad @ m <= 2 * m + 1e-6))
+    audit_ok = all(_perron_gate(lg) == cw[nm] for nm, lg in
+                   [("E8", [1, 2, 4]), ("Ê8", [1, 2, 5]), ("E10", [1, 2, 6])])
+    check("HYP.CW.01 [E]: Collatz-Wielandt -- the LOCAL gate (diffusion-generated "
+          "witness, A m <= 2m, no global rho in the decision): E8=%s, Ê8=%s, E10=%s; "
+          "the independent Perron-eigenvector audit agrees (%s)"
+          % (cw["E8"], cw["Ê8"], cw["E10"], audit_ok),
+          cw["E8"] and cw["Ê8"] and not cw["E10"] and audit_ok)
 
     # HYP.AUTO.01: autonomous rule from the (2,3,*) seed -> E6,E7,E8,Ê8
     seq = _grow([1, 2, 2])
@@ -220,29 +237,32 @@ def run():
           % (seq, marks),
           seq == expected and marks == [1, 2, 2, 3, 3, 4, 4, 5, 6])
 
-    # HYP.NEG.AN.01: path control
+    # HYP.NEG.AN.01: path control, EXACT for all n (closed form rho(A_m)=2cos(pi/(m+1)))
+    an_ok = all(abs(_rho(_star([m - 1, 0, 0])) - 2 * np.cos(np.pi / (m + 1))) < 1e-6
+                for m in range(4, 12))
     seq_a = _grow([1, 0, 0], cap=8)
-    reaches_e8_a = (1, 2, 4) in seq_a
-    check("HYP.NEG.AN.01 [E]: control -- a path A_n seed stays rho<2 and grows as A_n "
-          "forever (len %d steps, all gate-accepted), NEVER reaches E8 (%s) -- so rho<=2 "
-          "selects the ADE world, NOT E8" % (len(seq_a), reaches_e8_a),
-          not reaches_e8_a)
+    check("HYP.NEG.AN.01 [E]: control -- A_n is a path with rho(A_n)=2cos(pi/(n+1))<2 "
+          "for ALL n (closed form verified, n=4..11; finite growth %d steps never "
+          "reaches E8). So rho<=2 selects the ADE world, NOT E8"
+          % len(seq_a), an_ok and (1, 2, 4) not in seq_a)
 
-    # HYP.NEG.DN.01: D_n control (legs 1,1,k)
+    # HYP.NEG.DN.01: D_n control, EXACT for all n (rho(D_m)=2cos(pi/(2m-2)))
+    dn_ok = all(abs(_rho(_star([1, 1, m - 3])) - 2 * np.cos(np.pi / (2 * m - 2))) < 1e-6
+                for m in range(4, 12))
     seq_d = _grow([1, 1, 2], cap=8)
-    reaches_e8_d = (1, 2, 4) in seq_d
-    check("HYP.NEG.DN.01 [E]: control -- a D_n seed (legs 1,1,k) stays in the D-series "
-          "forever (len %d steps, gate-accepted), NEVER reaches E8 (%s) -- only the "
-          "exceptional (1,2,*) arm does" % (len(seq_d), reaches_e8_d),
-          not reaches_e8_d)
+    check("HYP.NEG.DN.01 [E]: control -- D_n has rho(D_n)=2cos(pi/(2n-2))<2 for ALL n "
+          "(closed form verified, n=4..11; finite growth %d steps never reaches E8). "
+          "Only the exceptional (1,2,r) arm reaches E8"
+          % len(seq_d), dn_ok and (1, 2, 4) not in seq_d)
 
     # HYP.SEED.01: the seed is the irreducible input = P2 (NOT derived)
-    check("HYP.SEED.01 [O]: the 3-arm (2,3,*) exceptional seed is the SINGLE irreducible "
-          "input = TFPT's P2 / the icosahedral choice (the A_n and D_n controls confirm "
-          "rho<=2 alone is not enough) -- this is NOT 'P2 derived', it is 'P2 = the "
-          "minimal seed forcing E8'", True)
+    check("HYP.SEED.01 [O]: the 3-arm (2,3,r) exceptional branch type is the SINGLE "
+          "irreducible input = TFPT's P2 / the icosahedral choice (the A_n and D_n "
+          "controls confirm rho<=2 alone is not enough) -- this is NOT 'P2 derived', it "
+          "is 'P2 = the minimal seed on which the local rule REACHES E8 as the last "
+          "finite point'", True)
 
-    return summary("v299 hypergraph bridge: P2 is the minimal (2,3,*) seed on which a local witness-based growth forces E6->E7->E8->Ê8 (A_n/D_n controls: rho<=2 selects ADE, not E8); a second network reading of the (2,3,5)/E8 core, NOT a derivation of P2")
+    return summary("v299 hypergraph bridge: the 3-arm (2,3,r) seed is the irreducible input on which a local witness-based rule REACHES E8 as the last finite point (E6->E7->E8->Ê8; A_n/D_n controls with exact rho=2cos formulas: rho<=2 selects ADE, not E8); a second network reading of the (2,3,5)/E8 core, NOT a derivation of P2")
 
 
 if __name__ == "__main__":

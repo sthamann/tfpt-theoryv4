@@ -32,7 +32,7 @@ TFPTs zwei Axiome reduzieren sich auf die drei „Atome" **(2, 3, 5)**. Genau di
 
 Die 30 Kanten sind kein Zufall: **30 = 2·3·5 = die Coxeter‑Zahl von E8**.
 
-Lese die **20 Dreiecksflächen als Hyperkanten** über den 12 Ecken — dann ist der Ikosaeder ein **3‑uniformer Hypergraph** (jede Hyperkante verbindet 3 Knoten). Nachgerechnet: seine Automorphismengruppe (alle Symmetrien) hat **Ordnung 120**. Und 120 ist *genau* die Ordnung der binären Ikosaedergruppe `2I` — derselben Gruppe, deren **McKay‑Graph das affine E8 ist** (`v219_icosahedral_mckay.py`).
+Lese die **20 Dreiecksflächen als Hyperkanten** über den 12 Ecken — dann ist der Ikosaeder ein **3‑uniformer Hypergraph** (jede Hyperkante verbindet 3 Knoten). Nachgerechnet: seine **Graph‑Automorphismengruppe** ist `I_h = A5 × ℤ₂` der **Ordnung 120** (Drehgruppe `A5` der Ordnung 60 plus Spiegelungen). Die *McKay‑Gruppe* ist nicht diese Graph‑Automorphismengruppe, sondern die **binäre Ikosaedergruppe `2I`** — der `SU(2)`‑Lift der Drehgruppe `A5`, ebenfalls Ordnung 120, aber eine *andere* (perfekte) Gruppe — und **deren McKay‑Graph ist das affine E8** (`v219_icosahedral_mckay.py`). Beide haben Ordnung 120; das ist der Berührungspunkt, aber es sind verschiedene Gruppen.
 
 > **Korrelation 1 (Hypergraph‑Automorphismen ↔ E8):** Ein konkreter, kleiner 3‑uniformer Hypergraph (der Ikosaeder) trägt *exakt* die Symmetriegruppe, aus der E8 entsteht. Hypergraph‑Theorie spricht hier dieselbe Sprache wie TFPT: **Symmetrie eines kleinen Netzwerks → E8.**
 
@@ -96,7 +96,7 @@ Damit das hier keine „Mustererkennung mit Glitzerhut" ist:
 
 Statt der zu großen Frage „Rewrite → E8" habe ich den scharfen, gruppentheoretisch testbaren Aufhänger durchgerechnet: **Gibt es ein minimales Hypergraph‑Rewrite, das die binäre Ikosaedergruppe `2I` (die E8‑erzeugende Symmetrie) trägt?** Antwort: **Ja, zweifach — auf der Symmetrie‑ und auf der Struktur‑Ebene.**
 
-### 3.1 Ein minimales Rewrite trägt die 2I‑Symmetrie auf ALLEN Skalen
+### 3.1 Ein minimales Rewrite trägt die ikosaedrische Symmetrie auf ALLEN Skalen
 
 Das kanonische Kandidat‑Rewrite ist die **geodätische Dreiecks‑Unterteilung**: ersetze jede Dreiecks‑Hyperkante durch 4 (Knoten auf die Kugel setzen). Das ist eine lupenreine lokale Umschreibe‑Regel im Wolfram‑Stil:
 
@@ -106,7 +106,7 @@ Das kanonische Kandidat‑Rewrite ist die **geodätische Dreiecks‑Unterteilung
                                   (Flächen 20 → 80 → 320 → …)
 ```
 
-Nachgerechnet: **alle 120 Ikosaeder‑Symmetrien bilden auch den unterteilten Hypergraphen auf sich ab — auf jeder Stufe (120/120).** Das Rewrite ist also **äquivariant**: die volle `2I`‑Bild‑Symmetrie bleibt zu allen Skalen erhalten.
+Nachgerechnet: **alle 120 Ikosaeder‑Symmetrien bilden auch den unterteilten Hypergraphen auf sich ab — auf jeder Stufe (120/120).** Das Rewrite ist also **äquivariant**: die volle **ikosaedrische Symmetrie `I_h`** (Ordnung 120; ihr Rotations‑Teil `A5` hat den binären Lift `2I`, der über McKay E8 erzeugt) bleibt zu allen Skalen erhalten.
 
 > **Ergebnis A:** Ein konkretes, minimales lokales Hypergraph‑Rewrite *trägt* die E8‑erzeugende Symmetrie unbegrenzt. „Rewrite → 2I" ist auf der **Symmetrie‑Ebene erfüllt**.
 
@@ -229,4 +229,4 @@ Level 5   Standardmodell              [exakt/bedingt] = die Readouts
 
 ---
 
-*Belege (alle maschinengeprüft, `python run_all.py`): `v219_icosahedral_mckay.py` (E8 = McKay‑Graph von 2I), `v298_e8_network_attractor.py` (Marks‑Attraktor, Turm, Kaskade, ehrliche Negative), `v160_seam_gaussianity_from_pf.py` / `v162_seam_transport_identification.py` (Transfer‑Spektrum {1,(2/3)^6,(1/3)^6}, Gap 6·log(3/2)). Direkt in dieser Analyse nachgerechnet: der Ikosaeder‑Hypergraph (12/30/20, |Aut|=120); die `T_{2,3,r}`‑Determinantenkette (3,2,1,0,−1); der **Rewrite‑Test** — das äquivariante 1→4‑Subdivision‑Rewrite (120/120 Symmetrien auf jeder Stufe, 12→42→162) und der **Fusionstensor** `N^k_{ij}` von 2I (nichtnegativ, kommutativ‑assoziativ, 2‑dim‑Scheibe = E8‑McKay‑Graph); die **emergente Dynamik** — Spektralradien (A₅..E8 < 2, Ê8 = 2, E10 > 2) und die `ρ≤2`‑Wachstumsdynamik (Smiths Satz 1970: `ρ≤2` ⇔ affines ADE); die **Lokalität** von `ρ≤2` (Collatz–Wielandt: `ρ = min_{m>0} max_i (Am)_i/m_i`, lokaler Zeuge `m` existiert für A₅…Ê8, nicht für E10, kritischer Zeuge = die Kac‑Marks); die **autonome Regel** (selbst‑erzeugter Zeuge via projektiv‑normalisierter lokaler Diffusion + **lokales** Balance‑Tor `A m ≤ 2 m` → `E6→E7→E8→Ê8`, Stopp an `ρ=2`); die **zwei Negativkontrollen** (`A_n`‑Pfad und `D_n`‑Seed bleiben für immer `ρ<2`, erreichen E8 nie). Alle Rewrite‑Resultate sind als Modul **`v299_hypergraph_0d_autonomous.py`** (Claims `HYP.ICO/REWRITE/FUSION/SMITH/CW/AUTO/NEG.AN/NEG.DN/SEED.01`) maschinengeprüft im Ledger.*
+*Belege (alle maschinengeprüft, `python run_all.py`): `v219_icosahedral_mckay.py` (E8 = McKay‑Graph von 2I), `v298_e8_network_attractor.py` (Marks‑Attraktor, Turm, Kaskade, ehrliche Negative), `v160_seam_gaussianity_from_pf.py` / `v162_seam_transport_identification.py` (Transfer‑Spektrum {1,(2/3)^6,(1/3)^6}, Gap 6·log(3/2)). Direkt in dieser Analyse nachgerechnet: der Ikosaeder‑Hypergraph (12/30/20, |Aut|=120); die `T_{2,3,r}`‑Determinantenkette (3,2,1,0,−1); der **Rewrite‑Test** — das äquivariante 1→4‑Subdivision‑Rewrite (120/120 Symmetrien auf jeder Stufe, 12→42→162) und der **Fusionstensor** `N^k_{ij}` von 2I (nichtnegativ, kommutativ‑assoziativ, 2‑dim‑Scheibe = E8‑McKay‑Graph); die **emergente Dynamik** — Spektralradien (A₅..E8 < 2, Ê8 = 2, E10 > 2) und die `ρ≤2`‑Wachstumsdynamik (Smiths Satz 1970: `ρ≤2` ⇔ affines ADE); die **Lokalität** von `ρ≤2` (Collatz–Wielandt: `ρ = min_{m>0} max_i (Am)_i/m_i`, lokaler Zeuge `m` existiert für A₅…Ê8, nicht für E10, kritischer Zeuge = die Kac‑Marks); die **autonome Regel** (selbst‑erzeugter Zeuge via projektiv‑normalisierter lokaler Diffusion + **lokales** Balance‑Tor `A m ≤ 2 m` → `E6→E7→E8→Ê8`, Stopp an `ρ=2`); die **zwei Negativkontrollen** mit *exakter* geschlossener Form (`ρ(A_n)=2cos(π/(n+1))` und `ρ(D_n)=2cos(π/(2n−2))`, beide `<2` für **alle** `n` — `A_n`‑Pfad und `D_n`‑Seed erreichen E8 also nie, nicht nur bis zu einem Cap). Alle Rewrite‑Resultate sind als Modul **`v299_hypergraph_0d_autonomous.py`** (Claims `HYP.ICO/REWRITE/FUSION/SMITH/CW/AUTO/NEG.AN/NEG.DN/SEED.01`) maschinengeprüft im Ledger.*

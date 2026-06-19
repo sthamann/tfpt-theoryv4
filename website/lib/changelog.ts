@@ -47,7 +47,23 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
-        "v": "the hypergraph/Wolfram bridge hardened: P2 = the minimal seed forcing E8, "
+        "v": "the hypergraph/Wolfram bridge hardened: the "
+      },
+      {
+        "k": "m",
+        "v": "(2,3,r)"
+      },
+      {
+        "k": "t",
+        "v": " seed reaches "
+      },
+      {
+        "k": "m",
+        "v": "E_8"
+      },
+      {
+        "k": "t",
+        "v": " as the last finite point, "
       },
       {
         "k": "c",
@@ -95,11 +111,48 @@ export const CHANGELOG: ChangelogEntry[] = [
         },
         {
           "k": "m",
-          "v": "|\\mathrm{Aut}|=120=|2I|"
+          "v": "|\\mathrm{Aut(graph)}|=120=|I_h|=|A_5{\\times}\\mathbb{Z}_2|"
         },
         {
           "k": "t",
-          "v": ", "
+          "v": "; the McKay group is the "
+        },
+        {
+          "k": "m",
+          "v": "SU(2)"
+        },
+        {
+          "k": "t",
+          "v": " binary lift "
+        },
+        {
+          "k": "m",
+          "v": "2I"
+        },
+        {
+          "k": "t",
+          "v": ", a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "different"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " order-120 group whose McKay graph is affine "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": "; "
         },
         {
           "k": "m",
@@ -211,7 +264,7 @@ export const CHANGELOG: ChangelogEntry[] = [
         },
         {
           "k": "t",
-          "v": "* the autonomous rule (self-generated witness "
+          "v": "* the autonomous rule (diffusion-generated witness "
         },
         {
           "k": "m",
@@ -240,7 +293,7 @@ export const CHANGELOG: ChangelogEntry[] = [
         },
         {
           "k": "t",
-          "v": ", projectively normalised) runs "
+          "v": ", Perron only as audit) runs "
         },
         {
           "k": "m",
@@ -256,11 +309,11 @@ export const CHANGELOG: ChangelogEntry[] = [
         },
         {
           "k": "t",
-          "v": "the "
+          "v": "the negative controls "
         },
         {
           "k": "m",
-          "v": "A_n"
+          "v": "\\rho(A_n)=2\\cos\\frac{\\pi}{n+1}"
         },
         {
           "k": "t",
@@ -268,11 +321,40 @@ export const CHANGELOG: ChangelogEntry[] = [
         },
         {
           "k": "m",
-          "v": "D_n"
+          "v": "\\rho(D_n)=2\\cos\\frac{\\pi}{2n-2}"
         },
         {
           "k": "t",
-          "v": " negative controls never reach "
+          "v": " are "
+        },
+        {
+          "k": "m",
+          "v": "<2"
+        },
+        {
+          "k": "t",
+          "v": " for "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "all"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "n"
+        },
+        {
+          "k": "t",
+          "v": " (closed form), so neither family ever reaches "
         },
         {
           "k": "m",
@@ -311,7 +393,7 @@ export const CHANGELOG: ChangelogEntry[] = [
           "c": [
             {
               "k": "t",
-              "v": "P2 is the minimal seed forcing "
+              "v": "the rule reaches "
             },
             {
               "k": "m",
@@ -319,7 +401,7 @@ export const CHANGELOG: ChangelogEntry[] = [
             },
             {
               "k": "t",
-              "v": ", not a derivation of P2"
+              "v": " as the last finite point on this seed; it is not a derivation of P2"
             }
           ]
         },

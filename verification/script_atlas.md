@@ -315,7 +315,7 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v287_free_rp_bulk_to_holomorphic_boundary, v286_seam_equivalence_contract, v291_flataway_contract, v288_full_l2_subprincipal_z4 · cited: research contracts
 - **v298_e8_network_attractor** [E/C/O] `E8.NETWORK.01` — a computational-substrate (Wolfram-program) reading of the (2,3,5)/McKay hull, on the v219 bedrock; an HONEST audit of the 'TFPT as hypergraph' idea, not a derivation. [E] the E8 K
   - deps: v219_icosahedral_mckay, COX.TOTATIVE.01, CASCADE.BRIDGE.01 · cited: introduction
-- **v299_hypergraph_0d_autonomous** [E/O] `HYP.0D.01` — NOT 'P2 derived'. [E] HYP.ICO.01 icosahedron = 3-uniform hypergraph (12 V, 20 hyperedges, 30 edges=h(E8)), |Aut|=120=|2I image|; [E] HYP.REWRITE.01 the 1→4 subdivision rewrite is e
+- **v299_hypergraph_0d_autonomous** [E/O] `HYP.0D.01` — NOT 'P2 derived'. [E] HYP.ICO.01 icosahedron = 3-uniform hypergraph (12 V, 20 hyperedges, 30 edges=h(E8)), |Aut(graph)|=120=|I_h|=A5×ℤ₂ (the McKay group is the SU(2) binary lift 2I
   - deps: v219_icosahedral_mckay, v298_e8_network_attractor, QBL.GATE.01 · cited: introduction
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (160 scripts)

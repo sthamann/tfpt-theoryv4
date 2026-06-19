@@ -625,12 +625,14 @@ discrete atoms of the theory --- that is the point of the compiler:
       hypergraph \emph{rewrite} reproducing the \emph{full} structure (lattice $+$ recovery $+$ readouts) stays
       open, and $\phiz$ is the analytic seed $\tfrac{4}{3}c_3=1/(6\pi)$, not an edge fraction. \mO\
       \veri{v298\_e8\_network\_attractor.py}
-\item \textbf{the bridge, hardened.} A local witness-based growth dynamics (self-generated Perron weight $+$ the
-      local balance gate $A m\le2m$, Collatz--Wielandt $=$ Smith's $\rho\le2$) is forced through
-      $E_6\!\to\!E_7\!\to\!E_8$ and stops at the affine boundary $\hat E_8$ --- but \emph{only} from a 3-arm
-      $(2,3,\cdot)$ seed ($A_n$ and $D_n$ controls never reach $E_8$). So $P_2$ is exactly the minimal seed
-      forcing $E_8$ as the last finite attractor --- a second network reading of the $(2,3,5)$ hull, not a
-      derivation of $P_2$. \mO\ \veri{v299\_hypergraph\_0d\_autonomous.py}
+\item \textbf{the bridge, hardened.} A local witness-based growth dynamics (a \emph{diffusion-generated} witness
+      $+$ the local balance gate $A m\le2m$, Collatz--Wielandt $=$ Smith's $\rho\le2$; the Perron eigenvector
+      enters only as an audit) \emph{reaches} $E_8$ as the last finite point ($E_6\!\to\!E_7\!\to\!E_8$, then
+      stops at the affine boundary $\hat E_8$) --- but \emph{only} from a 3-arm $(2,3,\cdot)$ seed (the controls
+      $\rho(A_n)=2\cos\frac{\pi}{n+1}$ and $\rho(D_n)=2\cos\frac{\pi}{2n-2}$ are $<2$ for \emph{all} $n$, so
+      neither family ever reaches $E_8$). So $P_2$ is exactly the irreducible seed on which the rule reaches
+      $E_8$ as the last finite point --- a second network reading of the $(2,3,5)$ hull, not a derivation of
+      $P_2$. \mO\ \veri{v299\_hypergraph\_0d\_autonomous.py}
 \end{itemize}
 
 % =====================================================================
