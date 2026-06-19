@@ -48,3 +48,8 @@ experiments/frb-tfpt-signatures/data/*
 !experiments/frb-tfpt-signatures/data/README.md
 !experiments/frb-tfpt-signatures/data/frb01_subband_toas.csv
 experiments/frb-tfpt-signatures/new-data/
+
+# Outreach drafts (mini-paper + email + Wolfram-Language verification for S. Wolfram);
+# local-only, not part of the published record. NB: anchored "/wolfram/" so it does
+# NOT match the tracked verification/wolfram mirror.
+/wolfram/
