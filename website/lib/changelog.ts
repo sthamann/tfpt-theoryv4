@@ -47,6 +47,318 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "the discrete"
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": "dynamic lens on "
+      },
+      {
+        "k": "c",
+        "v": "F_transfer"
+      },
+      {
+        "k": "t",
+        "v": ": one shape, one seam-rate, "
+      },
+      {
+        "k": "c",
+        "v": "v303"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v303_ftransfer_dynamics.py"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " asks whether the main-branch mechanism — a gapped, positivity-preserving relaxation to a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "unique"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " attractor (the local-averaging update "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " marks, gap "
+        },
+        {
+          "k": "m",
+          "v": "6\\ln(3/2)"
+        },
+        {
+          "k": "t",
+          "v": ") — is also the shape of the four "
+        },
+        {
+          "k": "c",
+          "v": "F_transfer"
+        },
+        {
+          "k": "t",
+          "v": " instances, or an unrelated bolt-on. It is the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "same"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " shape: "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "F_pole (Koide) "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the seam dynamics (Möbius multiplier "
+        },
+        {
+          "k": "m",
+          "v": "F'{=}(2/3)^6{=}\\lambda_2"
+        },
+        {
+          "k": "t",
+          "v": ", the seam-clock eigenvalue "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " a unique attractor at the seam rate, "
+        },
+        {
+          "k": "c",
+          "v": "v82"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v54"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "F_Boltzmann ("
+        },
+        {
+          "k": "m",
+          "v": "\\eta_B"
+        },
+        {
+          "k": "t",
+          "v": ") is a gapped positive contraction (washout "
+        },
+        {
+          "k": "m",
+          "v": "\\kappa_f\\in(0,1)"
+        },
+        {
+          "k": "t",
+          "v": ", H-theorem); "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "F_relic (axion) freezes at an adiabatic fixed point; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "F_QCD ("
+        },
+        {
+          "k": "m",
+          "v": "m_p/m_e"
+        },
+        {
+          "k": "t",
+          "v": ") is the 1-loop RG flow with the carrier "
+        },
+        {
+          "k": "m",
+          "v": "b_3{=}-7"
+        },
+        {
+          "k": "t",
+          "v": " (asymptotic freedom, Gaussian UV attractor). "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": " Verdict: one shape underlies all four; F_pole has the seam rate "
+        },
+        {
+          "k": "m",
+          "v": "(2/3)^6"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "exactly"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", the other three share only the shape with external rates (thermal/cosmological/RG). So "
+        },
+        {
+          "k": "c",
+          "v": "F_transfer"
+        },
+        {
+          "k": "t",
+          "v": " is the readout end of the one discrete"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": "dynamic principle, "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " a bolt-on; the theory's simplicity is preserved because the external rates are honestly fenced ("
+        },
+        {
+          "k": "c",
+          "v": "v187"
+        },
+        {
+          "k": "t",
+          "v": "), not reduced to the seam. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "suite "
+        },
+        {
+          "k": "c",
+          "v": "v303"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "5/5"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "AUDIT OK"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-19",
+    "dateLabel": "2026-06-19",
+    "heading": [
+      {
+        "k": "t",
         "v": "the last lever: the seam mass gap "
       },
       {

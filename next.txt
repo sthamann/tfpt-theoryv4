@@ -1817,3 +1817,35 @@ NACHTRAG 2026-06-19 (der letzte Hebel: die Seam-Massenluecke IST die hergeleitet
   'eine Top-Ordnungs-Frage' (v301) auf 'eine beweisbar positive Spektralluecke'
   (v302) -- d.h. auf NULL offene TFPT-interne Annahmen, modulo Standard-Saetze.
 ================================================================================
+
+NACHTRAG 2026-06-19 (Diskret->Dynamik-Linse auf F_transfer: eine Form, eine
+  Seam-Rate, v303):
+  FRAGE (vom Nutzer): haengt F_transfer konzeptionell zusammen, ist die
+  Einfachheit gewahrt, und ist der Diskret->Dynamik-Uebergang des Hauptzweigs
+  (gapped Relaxation auf einen EINDEUTIGEN Attraktor; m<-(A+2I)/4 m -> E8-Marks,
+  Gap 6 ln(3/2)) auch hier eine Loesung?
+  ANTWORT (v303, ehrlich): ALLE VIER Instanzen teilen DIESELBE FORM -- eine
+  gapped, positivitaets-erhaltende Relaxation/Fluss auf einen eindeutigen
+  Attraktor (Perron-Frobenius / Boltzmann-H-Theorem / RG-Fixpunkt). Aber nur
+  EINE hat die SEAM-RATE:
+  [E] F_pole (Koide) IST die Seam-Dynamik: Moebius-Map, Fixpunkt-Multiplikator
+      F'=(2/3)^6 = lambda_2 = subdominanter Seam-Clock-Eigenwert (v82/v54);
+      |F'|<1 => eindeutiger Attraktor zur SEAM-Rate.
+  [C] F_Boltzmann (eta_B): gapped positive Kontraktion (Washout kappa_f in (0,1),
+      H-Theorem); Compiler fixt A_Lambda=10; Rate THERMISCH.
+  [C] F_relic (Axion): Misalignment-komovierende Zahl friert auf Konstante ein
+      (adiabatischer Fixpunkt); Seed theta_i=3pi/5; Rate KOSMOLOGISCH.
+  [I] F_QCD (m_p/m_e): 1-Loop-RG-Fluss mit Carrier b3=-7 (asympt. Freiheit) hat
+      den Gauss'schen UV-Fixpunkt als Attraktor; Lambda_QCD dynamisch erzeugt.
+  [O] FAZIT: eine Form unter allen vier = das Hauptzweig-Prinzip; F_pole hat die
+      Seam-Rate EXAKT, die anderen drei teilen nur die FORM (externe Raten). Also
+      ist F_transfer das READOUT-Ende des EINEN Prinzips, KEIN Bolt-on -- und die
+      Einfachheit der Theorie ist genau deshalb gewahrt, weil die externen Raten
+      EHRLICH eingezaeunt sind (v187), nicht weil sie auf den Seam reduzieren.
+  NUANCE (v93): sogar F_pole's Fluss-Zeit ist nicht-ganzzahlig => die Relaxation
+  ist die KONTINUIERLICHE Halbgruppe e^{t log F} des diskreten Operators -- genau
+  die Diffusions-Halbgruppen-Lesart des Hauptzweigs. UEBERSEHEN? Nein: es gibt
+  KEINE versteckte Reduktion der externen Raten auf den Seam (A_Lambda=10,
+  theta_i=3pi/5, b3=-7 sind verschiedene Carrier-Integers; kappa_f != lambda_2).
+  Die Architektur ist die ehrliche. Suite v303 5/5; Python (numpy).
+================================================================================

@@ -314,6 +314,7 @@ const NODES: DagNode[] = [
       "v212_leptogenesis_decuple.py",
       "v187_ftransfer_laws.py",
       "v213_ftransfer_functor.py",
+      "v303_ftransfer_dynamics.py",
       "v188_frontier_wording_guard.py",
       "v189_riemann_roch_carrier.py",
       "v190_nariai_entropy_bound.py",

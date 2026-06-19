@@ -245,6 +245,10 @@ The ledger is *append-only and versioned*: superseded rows are marked `active=fa
   is anyon condensation, i.e. the Kitaev `E8` quantum-Hall state. So the one open analytic step is
   *"the free RP seam condenses the order-`|μ₄|` Lagrangian glue (det → 1)"* = `QGEO.SYM.01`. Plus the two
   irreducibles: the scale `v_geo` (No-Unit theorem) and the transfer functor `F_transfer` (external physics).
+  The discrete→dynamic lens (`v303`) shows `F_transfer` is the *readout end of the one principle*, not a
+  bolt-on: all four interfaces are gapped relaxations to a unique attractor (Perron–Frobenius / H-theorem / RG
+  fixed point), with only `F_pole` (Koide) at the seam rate `(2/3)⁶` and the other three (η_B washout, axion
+  freeze, QCD RG) sharing the shape with external rates — honestly fenced by `v187`.
   **The whole emergent-QFT layer collapses onto the *same* premise** (`v261`, Modular Spectral Closure):
   the finite Dirac (covariance induction, `v258`), the spectral-action cutoff (the seam KMS weight, `v259`),
   the gauging (inner fluctuations), the glue and orientability are all readouts of the one seam state, so

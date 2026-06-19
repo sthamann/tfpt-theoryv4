@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { SectionHeader } from "./SectionHeader";
 import { Math } from "./Math";
+import { FTransferDynamics } from "./FTransferDynamics";
 
 interface Gate {
   tag: string;
@@ -298,6 +299,8 @@ export function OpenGates() {
             </motion.article>
           ))}
         </div>
+
+        <FTransferDynamics />
 
         <div className="mt-6 flex flex-wrap items-center gap-3 text-sm text-slate-400">
           <span>The gates are written up as numbered research contracts.</span>

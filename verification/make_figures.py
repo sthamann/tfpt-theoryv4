@@ -936,6 +936,78 @@ def fig_qft_unification():
     fig.tight_layout()
     fig.savefig(os.path.join(OUT, "qft_unification.pdf"))
     fig.savefig(os.path.join(WEB, "qft_unification.png"), dpi=150)
+
+
+def fig_ftransfer_dynamics():
+    """F_transfer = one shape, four rates: each instance is a gapped relaxation to a
+    UNIQUE attractor; only F_pole's rate is the seam eigenvalue (2/3)^6 (v303)."""
+    fig, axes = plt.subplots(2, 2, figsize=(8.6, 6.2))
+    fig.subplots_adjust(hspace=0.42, wspace=0.28, top=0.88, bottom=0.13,
+                        left=0.09, right=0.97)
+
+    gap = 6 * np.log(1.5)                       # seam gap = -ln (2/3)^6 = 2.4328
+
+    # --- F_pole (Koide): continuous flow of the seam transfer, rate = the seam gap ---
+    ax = axes[0, 0]
+    t = np.linspace(0, 2.8, 200)
+    xstar = 2.0
+    ax.plot(t, xstar + (5 - xstar) * np.exp(-gap * t), color=C["gold"], lw=2.4)
+    ax.scatter([0, 1, 2], [5] + [xstar + (5 - xstar) * (2 / 3) ** (6 * n) for n in (1, 2)],
+               color=C["gold"], s=22, zorder=5)
+    ax.axhline(xstar, ls="--", color=C["gray"], lw=1.2)
+    ax.text(2.7, xstar + 0.18, "attractor $q^\\ast{=}2$", ha="right", fontsize=8.5, color=C["gray"])
+    ax.set_title("F$_{\\rm pole}$ (Koide) — SEAM rate $(2/3)^6$", color=C["gold"], fontweight="bold")
+    ax.set_xlabel("flow time $t$"); ax.set_ylabel("branch coord $q$")
+    ax.text(0.5, 4.4, "Möbius map, $F'{=}(2/3)^6{=}\\lambda_2$\n(= seam clock eigenvalue)", fontsize=8)
+    for s in ax.spines.values():
+        s.set_color(C["gold"]); s.set_linewidth(1.6)
+
+    # --- F_Boltzmann (eta_B): thermal washout to the balance (H-theorem) ---
+    ax = axes[0, 1]
+    z = np.linspace(0, 6, 200)
+    W = 1.3
+    ax.plot(z, (1 - np.exp(-W * z)), color=C["blue"], lw=2.2)
+    ax.axhline(1.0, ls="--", color=C["gray"], lw=1.2)
+    ax.text(5.9, 0.93, "balance $S/W$", ha="right", fontsize=8.5, color=C["gray"])
+    ax.set_title("F$_{\\rm Boltzmann}$ ($\\eta_B$) — thermal washout", color=C["blue"])
+    ax.set_xlabel("$z=M_1/T$"); ax.set_ylabel("asymmetry $Y/Y^\\ast$")
+    ax.text(2.0, 0.30, "$\\kappa_f\\in(0,1)$\nrate thermal", fontsize=8)
+
+    # --- F_relic (axion): damped misalignment -> frozen comoving number ---
+    ax = axes[1, 0]
+    t = np.linspace(0, 14, 500)
+    env = np.exp(-0.16 * t)
+    ax.plot(t, env * np.cos(2.2 * t), color=C["green"], lw=1.4, alpha=0.85)
+    ax.plot(t, env, ls=":", color=C["green"], lw=1.2)
+    ax.axhline(0.0, ls="--", color=C["gray"], lw=1.0)
+    ncom = 0.5 * env[-1] ** 2 * np.ones_like(t)   # comoving number ~ const at late time
+    ax.text(13.5, 0.55, "$n_a a^3 \\to$ const\n(adiabatic freeze)", ha="right", fontsize=8, color=C["green"])
+    ax.set_title("F$_{\\rm relic}$ (axion) — cosmological freeze", color=C["green"])
+    ax.set_xlabel("time ($H\\!\\downarrow$)"); ax.set_ylabel("$\\theta(t)$")
+    ax.text(5.4, -0.62, "seed $\\theta_i{=}3\\pi/5$, rate cosmological", fontsize=8)
+
+    # --- F_QCD (m_p/m_e): RG flow to the Gaussian UV fixed point (asymptotic freedom) ---
+    ax = axes[1, 1]
+    b0 = 7.0
+    lnmu = np.linspace(0, 14, 200)               # ln(mu/M_Z), toward the UV
+    aMZ = 0.118
+    al = aMZ / (1 + aMZ * (b0 / (2 * np.pi)) * lnmu)
+    ax.plot(lnmu, al, color=C["red"], lw=2.2)
+    ax.axhline(0.0, ls="--", color=C["gray"], lw=1.2)
+    ax.text(13.5, 0.012, "UV attractor $\\alpha_s\\to0$", ha="right", fontsize=8.5, color=C["gray"])
+    ax.set_title("F$_{\\rm QCD}$ ($m_p/m_e$) — RG flow, $b_3{=}{-}7$", color=C["red"])
+    ax.set_xlabel("$\\ln(\\mu/M_Z)$ (toward UV)"); ax.set_ylabel("$\\alpha_s(\\mu)$")
+    ax.text(4.0, 0.085, "asymptotic freedom\n$\\Lambda_{\\rm QCD}$ generated", fontsize=8)
+
+    fig.suptitle("$F_{\\rm transfer}$: one shape, four rates — a gapped relaxation to a UNIQUE attractor",
+                 fontsize=13, fontweight="bold")
+    fig.text(0.5, 0.03,
+             "Only F$_{\\rm pole}$'s rate is the seam eigenvalue $(2/3)^6$; the other three share the "
+             "shape with external rates (v303).",
+             ha="center", fontsize=8.5, color=C["gray"])
+    fig.savefig(os.path.join(OUT, "ftransfer_dynamics.pdf"))
+    fig.savefig(os.path.join(WEB, "ftransfer_dynamics.png"), dpi=150)
+    plt.close(fig)
     plt.close(fig)
 
 
@@ -959,4 +1031,5 @@ if __name__ == "__main__":
     fig_script_timeline()
     fig_qft_skeleton()
     fig_qft_unification()
+    fig_ftransfer_dynamics()
     print("figures written to", os.path.normpath(OUT))

@@ -59,6 +59,23 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-19 (the discrete$\to$dynamic lens on \texttt{F\_transfer}: one shape, one seam-rate, \texttt{v303})}
+\begin{itemize}
+\item \textbf{\texttt{v303\_ftransfer\_dynamics.py}} asks whether the main-branch mechanism --- a gapped,
+  positivity-preserving relaxation to a \emph{unique} attractor (the local-averaging update $\to$ the $E_8$ marks,
+  gap $6\ln(3/2)$) --- is also the shape of the four \texttt{F\_transfer} instances, or an unrelated bolt-on. It
+  is the \emph{same} shape: \mE\ F\_pole (Koide) \emph{is} the seam dynamics (M\"obius multiplier
+  $F'{=}(2/3)^6{=}\lambda_2$, the seam-clock eigenvalue $\Rightarrow$ a unique attractor at the seam rate,
+  \vref{v82}/\vref{v54}); \mC\ F\_Boltzmann ($\eta_B$) is a gapped positive contraction (washout
+  $\kappa_f\in(0,1)$, H-theorem); \mC\ F\_relic (axion) freezes at an adiabatic fixed point; \mE\ F\_QCD
+  ($m_p/m_e$) is the 1-loop RG flow with the carrier $b_3{=}-7$ (asymptotic freedom, Gaussian UV attractor). \mO\
+  Verdict: one shape underlies all four; F\_pole has the seam rate $(2/3)^6$ \emph{exactly}, the other three share
+  only the shape with external rates (thermal/cosmological/RG). So \texttt{F\_transfer} is the readout end of the
+  one discrete$\to$dynamic principle, \emph{not} a bolt-on; the theory's simplicity is preserved because the
+  external rates are honestly fenced (\vref{v187}), not reduced to the seam. \mE\ suite \texttt{v303} $5/5$,
+  \texttt{AUDIT OK}.
+\end{itemize}
+
 \subsection*{2026-06-19 (the last lever: the seam mass gap \emph{is} the derived Recovery gap $6\ln(3/2)$, \texttt{v302})}
 \begin{itemize}
 \item \textbf{\texttt{v302\_seam\_gap.py}} closes the chain on the single statement \vref{v301} had left:
