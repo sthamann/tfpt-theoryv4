@@ -42,6 +42,311 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-06-19",
+    "dateLabel": "2026-06-19",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the hypergraph/Wolfram bridge hardened: P2 = the minimal seed forcing E8, "
+      },
+      {
+        "k": "c",
+        "v": "v299"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v299_hypergraph_0d_autonomous.py"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " hardens the Wolfram/hypergraph reading into a precisely typed bridge (builds on "
+        },
+        {
+          "k": "c",
+          "v": "v219"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v298"
+        },
+        {
+          "k": "t",
+          "v": "): "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the icosahedron is a 3-uniform hypergraph ("
+        },
+        {
+          "k": "m",
+          "v": "|\\mathrm{Aut}|=120=|2I|"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "30"
+        },
+        {
+          "k": "t",
+          "v": " edges "
+        },
+        {
+          "k": "m",
+          "v": "=h(E_8)"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the "
+        },
+        {
+          "k": "m",
+          "v": "1\\to4"
+        },
+        {
+          "k": "t",
+          "v": " subdivision rewrite is equivariant (all "
+        },
+        {
+          "k": "m",
+          "v": "120"
+        },
+        {
+          "k": "t",
+          "v": " symmetries at every scale); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the "
+        },
+        {
+          "k": "m",
+          "v": "2I"
+        },
+        {
+          "k": "t",
+          "v": " fusion tensor is a weighted 3-uniform hypergraph whose 2-dim slice is the affine "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " McKay graph; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "Smith ("
+        },
+        {
+          "k": "m",
+          "v": "\\rho\\le2\\Leftrightarrow"
+        },
+        {
+          "k": "t",
+          "v": " affine ADE) "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " Collatz–Wielandt ("
+        },
+        {
+          "k": "m",
+          "v": "\\rho\\le2\\Leftrightarrow"
+        },
+        {
+          "k": "t",
+          "v": " a local witness "
+        },
+        {
+          "k": "m",
+          "v": "Am\\le2m"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "* the autonomous rule (self-generated witness "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "local"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " gate "
+        },
+        {
+          "k": "m",
+          "v": "Am\\le2m"
+        },
+        {
+          "k": "t",
+          "v": ", projectively normalised) runs "
+        },
+        {
+          "k": "m",
+          "v": "E_6\\to E_7\\to E_8\\to\\hat E_8"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the "
+        },
+        {
+          "k": "m",
+          "v": "A_n"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "D_n"
+        },
+        {
+          "k": "t",
+          "v": " negative controls never reach "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": ". Honest type: "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the "
+        },
+        {
+          "k": "m",
+          "v": "(2,3,\\cdot)"
+        },
+        {
+          "k": "t",
+          "v": " seed is the single irreducible input "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " P2 — "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "P2 is the minimal seed forcing "
+            },
+            {
+              "k": "m",
+              "v": "E_8"
+            },
+            {
+              "k": "t",
+              "v": ", not a derivation of P2"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "build green, "
+        },
+        {
+          "k": "c",
+          "v": "AUDIT OK"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
     "date": "2026-06-18",
     "dateLabel": "2026-06-18",
     "heading": [

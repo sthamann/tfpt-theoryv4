@@ -59,6 +59,20 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-19 (the hypergraph/Wolfram bridge hardened: P2 = the minimal seed forcing E8, \texttt{v299})}
+\begin{itemize}
+\item \textbf{\texttt{v299\_hypergraph\_0d\_autonomous.py}} hardens the Wolfram/hypergraph reading into a precisely
+  typed bridge (builds on \vref{v219}/\vref{v298}): \mE\ the icosahedron is a 3-uniform hypergraph
+  ($|\mathrm{Aut}|=120=|2I|$, $30$ edges $=h(E_8)$); \mE\ the $1\to4$ subdivision rewrite is equivariant (all
+  $120$ symmetries at every scale); \mE\ the $2I$ fusion tensor is a weighted 3-uniform hypergraph whose 2-dim
+  slice is the affine $E_8$ McKay graph; \mE\ Smith ($\rho\le2\Leftrightarrow$ affine ADE) $+$ Collatz--Wielandt
+  ($\rho\le2\Leftrightarrow$ a local witness $Am\le2m$); \mE* the autonomous rule (self-generated witness $+$
+  \emph{local} gate $Am\le2m$, projectively normalised) runs $E_6\to E_7\to E_8\to\hat E_8$; \mE\ the $A_n$ and
+  $D_n$ negative controls never reach $E_8$. Honest type: \mO\ the $(2,3,\cdot)$ seed is the single irreducible
+  input $=$ P2 --- \emph{P2 is the minimal seed forcing $E_8$, not a derivation of P2}. \mE\ build green,
+  \texttt{AUDIT OK}.
+\end{itemize}
+
 \subsection*{2026-06-18 (E8 as a network attractor --- the Wolfram-program reading, \texttt{v298})}
 \begin{itemize}
 \item \textbf{\texttt{v298\_e8\_network\_attractor.py}} is an honest audit of the ``TFPT as a hypergraph/rewrite

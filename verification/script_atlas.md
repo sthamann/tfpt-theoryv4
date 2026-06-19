@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`296` registered scripts · `350` ledger claims · `10` clusters.
+`297` registered scripts · `351` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -202,7 +202,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v75_upoint_to_vgeo** [E/O] `FLAV.UPOINT.01` — Gate 1 complete: U_point → v_geo (ratios + Grand Mass Volume); same anchor as 1/G
   - deps: v71_simple_r_bridge, v20_lepton_c_derivation, v46_grand_mass_volume, v68 · cited: origin theory, research contracts
 
-### `frontier` — Open gate (G_metric) & the frontier  (55 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (56 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -315,6 +315,8 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v287_free_rp_bulk_to_holomorphic_boundary, v286_seam_equivalence_contract, v291_flataway_contract, v288_full_l2_subprincipal_z4 · cited: research contracts
 - **v298_e8_network_attractor** [E/C/O] `E8.NETWORK.01` — a computational-substrate (Wolfram-program) reading of the (2,3,5)/McKay hull, on the v219 bedrock; an HONEST audit of the 'TFPT as hypergraph' idea, not a derivation. [E] the E8 K
   - deps: v219_icosahedral_mckay, COX.TOTATIVE.01, CASCADE.BRIDGE.01 · cited: introduction
+- **v299_hypergraph_0d_autonomous** [E/O] `HYP.0D.01` — NOT 'P2 derived'. [E] HYP.ICO.01 icosahedron = 3-uniform hypergraph (12 V, 20 hyperedges, 30 edges=h(E8)), |Aut|=120=|2I image|; [E] HYP.REWRITE.01 the 1→4 subdivision rewrite is e
+  - deps: v219_icosahedral_mckay, v298_e8_network_attractor, QBL.GATE.01 · cited: introduction
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (160 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -660,7 +662,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v287_free_rp_bulk_to_holomorphic_boundary** — `SEAM.EQUIV.A01`
 - **v288_full_l2_subprincipal_z4** — `SEAM.EQUIV.B01`
 - **v289_marklocal_raw** — `MARKLOCAL.RAW.01`
 - **v290_z4_smooth_curvature_adversary** — `SEAM.ADVERSARY.01`
@@ -672,4 +673,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v296_flataway_a2_closed** — `FLATAWAY.A2.CLOSED.01`
 - **v297_route_a_literature_stack** — `SEAM.EQUIV.A.LIT.01`
 - **v298_e8_network_attractor** — `E8.NETWORK.01`
+- **v299_hypergraph_0d_autonomous** — `HYP.0D.01`
 

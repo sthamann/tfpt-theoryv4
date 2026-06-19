@@ -8,18 +8,18 @@ introduction,section,The architecture at a glance,281,359,,c457aefc1cb7,2026-06-
 introduction,section,The dependency DAG and the proof ledger,360,418,,fe77a4e2e658,2026-06-12
 introduction,subsection,The compact status formula: three honest layers,419,450,v14_carrier_uniqueness.py;v56_unique_attractor.py;v60_lambda_metrology_branch.py;v6_bootstrap.py,ec34baff1e46,2026-06-12
 introduction,subsection,The hard reduction: two research gates plus typed interfaces,451,588,v14_carrier_uniqueness.py;v219_icosahedral_mckay.py;v232_e8_kleinian_seam.py;v234_seam_holomorphy_selection.py;v235_seam_chern_simons.py;v23_anchor_generator.py;v36_spectral_action_g2.py;v6_bootstrap.py,3d286a99f105,2026-06-18
-introduction,section,The compiler: why $30=2\cdot3\cdot5$,589,630,v219_icosahedral_mckay.py;v223_coxeter_totative_clock.py;v298_e8_network_attractor.py,daa20dd949c1,2026-06-18
-introduction,section,The $\mu_4$ glue: how $E_8$ is really built,631,655,v1_e8_glue.py,e76c4fe33c1d,2026-06-12
-introduction,section,How derivation now works: the derivation map,656,694,,14e40212ef8c,2026-06-12
-introduction,subsection,Cosmology is the Pascal action grammar of the carrier,695,731,v18_quark_yukawa.py;v20_lepton_c_derivation.py;v46_grand_mass_volume.py,a97bc6f4d263,2026-06-12
-introduction,section,"Physical, geometric, topological: why the architecture is plausible",732,746,,5a4228cd0587,2026-06-12
-introduction,section,What role $E_8$ now plays exactly,747,772,,07ec9c971cd7,2026-06-12
-introduction,section,What this means for the theory-of-everything question,773,819,,3eac33656336,2026-06-18
-introduction,subsection,"The closure ledger: what is done, and what genuinely remains",820,907,,08cf97c0485c,2026-06-18
-introduction,section,Does this make the theory more probable?,908,925,,540397fd6436,2026-06-12
-introduction,section,Predictions for running and upcoming experiments,926,996,v100_numerology_null_mc.py;v84_frozen_registry.py,aebe6e44a5a3,2026-06-12
-introduction,section,Conclusion,997,1008,,85f94f17b1dd,2026-06-12
-introduction,section,Appendix: computational verification (reproducibility),1009,1048,v1_e8_glue.py,376b86d99cd2,2026-06-17
+introduction,section,The compiler: why $30=2\cdot3\cdot5$,589,636,v219_icosahedral_mckay.py;v223_coxeter_totative_clock.py;v298_e8_network_attractor.py;v299_hypergraph_0d_autonomous.py,34d6404b078b,2026-06-19
+introduction,section,The $\mu_4$ glue: how $E_8$ is really built,637,661,v1_e8_glue.py,e76c4fe33c1d,2026-06-12
+introduction,section,How derivation now works: the derivation map,662,700,,14e40212ef8c,2026-06-12
+introduction,subsection,Cosmology is the Pascal action grammar of the carrier,701,737,v18_quark_yukawa.py;v20_lepton_c_derivation.py;v46_grand_mass_volume.py,a97bc6f4d263,2026-06-12
+introduction,section,"Physical, geometric, topological: why the architecture is plausible",738,752,,5a4228cd0587,2026-06-12
+introduction,section,What role $E_8$ now plays exactly,753,778,,07ec9c971cd7,2026-06-12
+introduction,section,What this means for the theory-of-everything question,779,825,,3eac33656336,2026-06-18
+introduction,subsection,"The closure ledger: what is done, and what genuinely remains",826,913,,08cf97c0485c,2026-06-18
+introduction,section,Does this make the theory more probable?,914,931,,540397fd6436,2026-06-12
+introduction,section,Predictions for running and upcoming experiments,932,1002,v100_numerology_null_mc.py;v84_frozen_registry.py,aebe6e44a5a3,2026-06-12
+introduction,section,Conclusion,1003,1014,,85f94f17b1dd,2026-06-12
+introduction,section,Appendix: computational verification (reproducibility),1015,1054,v1_e8_glue.py,376b86d99cd2,2026-06-17
 tfpt_1_architecture_e8,front,(front matter),1,146,,31add055d84c,2026-06-12
 tfpt_1_architecture_e8,section,How to read this document,147,364,v106_review_validation.py;v109_sheet_pairing.py;v110_calderon_sheet.py;v111_quadratic_transport.py;v112_selfcounting_channel.py;v113_quasifree_kernel.py;v23_anchor_generator.py,5afde72d746c,2026-06-12
 tfpt_1_architecture_e8,section,Headline: the Pascal compiler on five carrier slots,365,422,,32b8525a612e,2026-06-12
