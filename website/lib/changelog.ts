@@ -42,6 +42,821 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-06-21",
+    "dateLabel": "2026-06-21",
+    "heading": [
+      {
+        "k": "t",
+        "v": "adversarial-review follow-ups: a structural anti-numerology firewall, an out-of-sample seed cross-validation, an operational data watchdog, and the Target-A holomorphy kill test: "
+      },
+      {
+        "k": "c",
+        "v": "v305"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v307"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v305_witness_independence.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "WITNESS.ECON.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "structural"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " anti-numerology firewall complementing the "
+        },
+        {
+          "k": "c",
+          "v": "v100"
+        },
+        {
+          "k": "t",
+          "v": " phenomenological null test, against the sharpest self-deception worry (“the same integer counted many times as if independent”). Every headline integer ("
+        },
+        {
+          "k": "m",
+          "v": "|\\mu_4|{=}4"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "g_{\\mathrm{car}}{=}5"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "|\\mathbb Z_2|{=}2"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "N_{\\mathrm{fam}}{=}3"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\dim S^+{=}16"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{rank}E_8{=}8"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "240"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "248"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "|2I|{=}120"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "h(E_8){=}30"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "|W(D_5)|{=}1920"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\Omega_{\\mathrm{adm}}{=}48"
+        },
+        {
+          "k": "t",
+          "v": ", the gap exponent "
+        },
+        {
+          "k": "m",
+          "v": "6"
+        },
+        {
+          "k": "t",
+          "v": ") is a documented image of the single anchor "
+        },
+        {
+          "k": "m",
+          "v": "a{=}(1,1,2)"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "\\pi"
+        },
+        {
+          "k": "t",
+          "v": " the only transcendental primitive ("
+        },
+        {
+          "k": "m",
+          "v": "13"
+        },
+        {
+          "k": "t",
+          "v": " atoms from "
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": " free primitives, "
+        },
+        {
+          "k": "m",
+          "v": "6.5\\times"
+        },
+        {
+          "k": "t",
+          "v": " compression made explicit), so the recurring "
+        },
+        {
+          "k": "m",
+          "v": "2/3{=}|\\mathbb Z_2|/N_{\\mathrm{fam}}"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "(2/3)^6"
+        },
+        {
+          "k": "t",
+          "v": " are "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ratio; the "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " spine is overdetermined ("
+        },
+        {
+          "k": "m",
+          "v": "\\ge3"
+        },
+        {
+          "k": "t",
+          "v": " structurally independent witnesses) while the pure-seed readouts are single-witness (scored jointly by "
+        },
+        {
+          "k": "c",
+          "v": "v100"
+        },
+        {
+          "k": "t",
+          "v": ", never multiplied); the negative control shows "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha^{-1}"
+        },
+        {
+          "k": "t",
+          "v": "'s “"
+        },
+        {
+          "k": "m",
+          "v": "137"
+        },
+        {
+          "k": "t",
+          "v": "” is foreign to the anchor family (an independent witness via the "
+        },
+        {
+          "k": "m",
+          "v": "F_{U(1)}"
+        },
+        {
+          "k": "t",
+          "v": " cubic, "
+        },
+        {
+          "k": "c",
+          "v": "v3"
+        },
+        {
+          "k": "t",
+          "v": "). Cited in the "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_5_redteam"
+        },
+        {
+          "k": "t",
+          "v": " body; ledger row "
+        },
+        {
+          "k": "c",
+          "v": "WITNESS.ECON.01"
+        },
+        {
+          "k": "t",
+          "v": ". Python-only."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v306_seed_crossval.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEED.CROSSVAL.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " A leave-one-out cross-validation turning the “many observables, one seed "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi_0"
+        },
+        {
+          "k": "t",
+          "v": "” worry into a falsifiable out-of-sample test: back-solving "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi_0"
+        },
+        {
+          "k": "t",
+          "v": " from each of the five seed-grammar observables ("
+        },
+        {
+          "k": "m",
+          "v": "\\sin^2\\theta_{12}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\sin^2\\theta_{13}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\beta"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\Omega_b"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_C"
+        },
+        {
+          "k": "t",
+          "v": "; NuFIT 6.0 / ACT DR6 / Planck / PDG) and error-weighted-averaging reproduces the axiom seed "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi_0=1/(6\\pi)+48c_3^4=0.0531720"
+        },
+        {
+          "k": "t",
+          "v": " to "
+        },
+        {
+          "k": "m",
+          "v": "0.04\\%"
+        },
+        {
+          "k": "t",
+          "v": "; leave-one-out predicts every held-out observable within "
+        },
+        {
+          "k": "m",
+          "v": "3\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " out of sample (most-tensioned "
+        },
+        {
+          "k": "m",
+          "v": "=\\sin^2\\theta_{13}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}2\\sigma"
+        },
+        {
+          "k": "t",
+          "v": "); a data"
+        },
+        {
+          "k": "m",
+          "v": "\\leftrightarrow"
+        },
+        {
+          "k": "t",
+          "v": "formula shuffle explodes the "
+        },
+        {
+          "k": "m",
+          "v": "\\chi^2"
+        },
+        {
+          "k": "t",
+          "v": " by "
+        },
+        {
+          "k": "m",
+          "v": ">100\\times"
+        },
+        {
+          "k": "t",
+          "v": ". Cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_5_redteam"
+        },
+        {
+          "k": "t",
+          "v": "; ledger row "
+        },
+        {
+          "k": "c",
+          "v": "SEED.CROSSVAL.01"
+        },
+        {
+          "k": "t",
+          "v": ". Python-only."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v307_data_watchdog.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "DATA.WATCHDOG.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The operational decision pipeline over the frozen registry ("
+        },
+        {
+          "k": "c",
+          "v": "v84"
+        },
+        {
+          "k": "t",
+          "v": "): it classifies all twenty registry entries "
+        },
+        {
+          "k": "t",
+          "v": "pass"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "t",
+          "v": "watch"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "t",
+          "v": "tension"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "t",
+          "v": "kill"
+        },
+        {
+          "k": "t",
+          "v": " by live "
+        },
+        {
+          "k": "m",
+          "v": "n_\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " against the repo-documented current bests (CODATA 2022, NuFIT 6.0, ACT DR6, Planck 2018, PDG 2024, BK18). No decidable prediction is in "
+        },
+        {
+          "k": "t",
+          "v": "kill"
+        },
+        {
+          "k": "t",
+          "v": "; the watch items are "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha^{-1}"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "1.9\\sigma"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "s_{23}"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "1.8\\sigma"
+        },
+        {
+          "k": "t",
+          "v": ") and the most-tensioned core prediction "
+        },
+        {
+          "k": "m",
+          "v": "\\sin^2\\theta_{13}"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "2.0\\sigma"
+        },
+        {
+          "k": "t",
+          "v": ", the honest current pressure point); "
+        },
+        {
+          "k": "m",
+          "v": "\\sin^2\\theta_{12}=0.306747"
+        },
+        {
+          "k": "t",
+          "v": " is compatible ("
+        },
+        {
+          "k": "m",
+          "v": "0.02\\sigma"
+        },
+        {
+          "k": "t",
+          "v": ", the JUNO falsifier), the "
+        },
+        {
+          "k": "m",
+          "v": "r\\in[0.0033,0.0048]"
+        },
+        {
+          "k": "t",
+          "v": " band is below the BK18 limit and the kill, and "
+        },
+        {
+          "k": "m",
+          "v": "w{=}{-}1"
+        },
+        {
+          "k": "t",
+          "v": " is flagged as the DESI dark-energy watchdog. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": "; ledger row "
+        },
+        {
+          "k": "c",
+          "v": "DATA.WATCHDOG.01"
+        },
+        {
+          "k": "t",
+          "v": ". Python-only."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Target-A holomorphy kill test ("
+            },
+            {
+              "k": "c",
+              "v": "freeze_file.csv"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " A new "
+        },
+        {
+          "k": "c",
+          "v": "seam_holomorphy"
+        },
+        {
+          "k": "t",
+          "v": " freeze row records the sharpened "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "physical"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " kill criterion for Target A: a raw quasi-free seam bulk showing topological ground-state degeneracy on the torus ("
+        },
+        {
+          "k": "m",
+          "v": "|\\det K|>1"
+        },
+        {
+          "k": "t",
+          "v": ", the same-"
+        },
+        {
+          "k": "m",
+          "v": "c"
+        },
+        {
+          "k": "t",
+          "v": " rival "
+        },
+        {
+          "k": "m",
+          "v": "SO(16)_1"
+        },
+        {
+          "k": "t",
+          "v": ") would break holomorphy and kill “seam net "
+        },
+        {
+          "k": "m",
+          "v": "=(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": "” — since holomorphic "
+        },
+        {
+          "k": "m",
+          "v": "c{=}8\\Leftrightarrow E_8"
+        },
+        {
+          "k": "t",
+          "v": " is machine-proven ("
+        },
+        {
+          "k": "c",
+          "v": "v83"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v143"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "m",
+          "v": "\\det K{=}1\\Leftrightarrow"
+        },
+        {
+          "k": "t",
+          "v": " invertible/SRE ("
+        },
+        {
+          "k": "c",
+          "v": "v237"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v301"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v302"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ]
+    ]
+  },
+  {
     "date": "2026-06-19",
     "dateLabel": "2026-06-19",
     "heading": [

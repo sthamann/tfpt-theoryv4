@@ -115,4 +115,10 @@ time-1 map — its exact symbolic form *is* mirrored) stay Python-only and
 are flagged as such in the `.wl` comments. The statistical numerology null
 test `v100_numerology_null_mc.py` (grammar census + Monte-Carlo + RNG
 controls) is likewise Python-only by the suite's convention (like
-`v62`/`v64`/`v65`) and flagged in the `.wl` comment.
+`v62`/`v64`/`v65`) and flagged in the `.wl` comment. The 2026-06-21
+adversarial-review follow-ups — `v305_witness_independence.py` (the structural
+generator-economy firewall), `v306_seed_crossval.py` (the leave-one-out seed
+cross-validation) and `v307_data_watchdog.py` (the decision pipeline over the
+frozen registry) — are structural/statistical/data-confrontation modules and
+are therefore Python-only by the same convention (no exact algebraic result is
+added, so the Wolfram exact-check count is unchanged).

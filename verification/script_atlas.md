@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`302` registered scripts · `356` ledger claims · `10` clusters.
+`305` registered scripts · `359` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -202,7 +202,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v75_upoint_to_vgeo** [E/O] `FLAV.UPOINT.01` — Gate 1 complete: U_point → v_geo (ratios + Grand Mass Volume); same anchor as 1/G
   - deps: v71_simple_r_bridge, v20_lepton_c_derivation, v46_grand_mass_volume, v68 · cited: origin theory, research contracts
 
-### `frontier` — Open gate (G_metric) & the frontier  (61 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (62 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -327,8 +327,10 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v213_ftransfer_functor, v82_koide_attractor_splitting, v56_unique_attractor, v302_seam_gap · cited: research contracts
 - **v304_idg_nonlocal_ghost** [E/C/O] `QGAMB.IDG.01` — the KMS spectral-action cutoff suggests a NONLOCAL (infinite-derivative) graviton form factor; under entire analyticity the Stelle ghost is a TRUNCATION ARTEFACT — a CONDITIONAL na
   - deps: QG.AMB.01, v259, v278, rt_F · cited: 5 redteam
+- **v307_data_watchdog** [E/X] `DATA.WATCHDOG.01` — Data watchdog: the operational decision pipeline over the frozen registry (v84). Classifies all 20 entries (16 predictions + 2 assigned textures + 2 bands) PASS/WATCH/TENSION/KILL 
+  - deps: v84_frozen_registry, v62_data_scorecard · cited: origin theory
 
-### `registry` — Blind registry & red-team follow-ups (v84–v175)  (160 scripts)
+### `registry` — Blind registry & red-team follow-ups (v84–v175)  (162 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
 
 - **v84_frozen_registry** [E] `REG.FREEZE.01` — blind-prediction registry FROZEN 2026-06-09: every dimensionless prediction of record at 25 digits, re-derived from the two axioms each run (formula↔value lock); exactly ONE θ₁₂ pr
@@ -651,6 +653,10 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
   - deps: v181_clock_is_conformal_symmetry, v276_qgeo_flat_closes_commutator, v279_qgeo_obligation_lemma, v214_seam_pillowcase, v216_marks_gauss_bonnet · cited: research contracts
 - **v284_route_i_rp_uniqueness** [E/C/O] `QGEO.ROUTEI.01` — Route (i) (RP-state uniqueness) decomposed into a 6-lemma chain with every dischargeable lemma discharged and the one irreducible lemma isolated (does NOT prove the open premise). 
   - deps: v181_clock_is_conformal_symmetry, v279_qgeo_obligation_lemma, v194_raw_seam_dtn_rp, v216_marks_gauss_bonnet, v258_dirac_covariance_induction, v276_qgeo_flat_closes_commutator, v280_pillowcase_steklov · cited: research contracts
+- **v305_witness_independence** [E] `WITNESS.ECON.01` — Witness-independence / generator-economy audit (structural anti-numerology firewall, companion to v100): every headline integer (4,5,2,3,16,8,240,248,120,30,1920,48,6) is a documen
+  - deps: v23_anchor_generator, v84_frozen_registry, v62_data_scorecard · cited: 5 redteam
+- **v306_seed_crossval** [E/O] `SEED.CROSSVAL.01` — Leave-one-out cross-validation of the shared seed phi0: back-solving phi0 independently from the 5 seed-grammar observables (sin^2 theta12, sin^2 theta13, beta, Omega_b, lambda_C; 
+  - deps: v23_anchor_generator, v84_frozen_registry, v62_data_scorecard · cited: 5 redteam
 
 ## Supersede map — do NOT reuse the left-hand claim
 
@@ -666,15 +672,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×22, `E8.GLU.01`×15, `HOR.NARIAI.01`×15, `AX.P1.01`×11, `FLAV.KQ.01`×10, `QGEO.PILLOW.01`×10, `v56`×9, `QGEO.SUBPRIN.01`×9, `GATE.QGEO.01`×8, `v37`×8, `v68`×8, `CAR.SM.01`×8, `GATE.METRIC.06`×8, `QGEO.MARKS.01`×8, `PS.DIRAC.02`×8
+**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×22, `E8.GLU.01`×15, `HOR.NARIAI.01`×15, `AX.P1.01`×11, `FLAV.KQ.01`×10, `REG.FREEZE.01`×10, `QGEO.PILLOW.01`×10, `v56`×9, `QGEO.SUBPRIN.01`×9, `GATE.QGEO.01`×8, `v37`×8, `v68`×8, `CAR.SM.01`×8, `GATE.METRIC.06`×8, `QGEO.MARKS.01`×8
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v293_flataway_spectral_hessian** — `FLATAWAY.SPEC.01`
-- **v294_flataway_rp_energy** — `FLATAWAY.ENERGY.01`
-- **v295_flataway_a2_exact** — `FLATAWAY.A2.01, FORM.FLATAWAY.01`
 - **v296_flataway_a2_closed** — `FLATAWAY.A2.CLOSED.01`
 - **v297_route_a_literature_stack** — `SEAM.EQUIV.A.LIT.01`
 - **v298_e8_network_attractor** — `E8.NETWORK.01`
@@ -684,4 +687,7 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v302_seam_gap** — `SEAM.EQUIV.GAP.01`
 - **v303_ftransfer_dynamics** — `FR.DYNAMICS.01`
 - **v304_idg_nonlocal_ghost** — `QGAMB.IDG.01`
+- **v305_witness_independence** — `WITNESS.ECON.01`
+- **v306_seed_crossval** — `SEED.CROSSVAL.01`
+- **v307_data_watchdog** — `DATA.WATCHDOG.01`
 

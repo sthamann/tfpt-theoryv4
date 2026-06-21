@@ -41,6 +41,11 @@ verification/pyrate/*.generated.txt
 
 # Local scratch / explanations (not part of the published record)
 temp/
+_documentation/
+
+# Local animation render pipeline (not shipped)
+_render/
+tfpt_animation*
 
 # FRB experiment datasets (local copies; see data/README.md)
 # keep the tiny derived/provenance files so FRB.01 stays reproducible
