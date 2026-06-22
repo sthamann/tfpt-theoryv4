@@ -47,6 +47,491 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "frontier round: the OS step discharged at the many-body level, the ambient measure built on the gap-decoupled sector, and the carrier Cartan determinants grounded in Lean: "
+      },
+      {
+        "k": "c",
+        "v": "v329"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "v330"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "FORM.CARTAN.DET.01"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v329_os_gap_reduction.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGEO.OSGAP.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "s",
+              "v": "O"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The one analytic input the v308 keystone chain still cited — “the OS-reconstructed bulk gap "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the transfer gap” — is discharged at the many-body level: the OS/Euclidean Hamiltonian is the second quantization "
+        },
+        {
+          "k": "m",
+          "v": "d\\Gamma(-\\log T)"
+        },
+        {
+          "k": "t",
+          "v": ", whose spectrum is the set of sums of single-mode energies, so the bulk gap "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the smallest positive single-mode energy "
+        },
+        {
+          "k": "m",
+          "v": "=6\\ln\\tfrac32"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "independent of system size"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ". Together with "
+        },
+        {
+          "k": "m",
+          "v": "H\\Rightarrow\\omega\\circ\\rho{=}\\omega"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "H\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " SRE "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": ", this exhibits the rotation-invariant flat-pillowcase premise "
+        },
+        {
+          "k": "m",
+          "v": "H"
+        },
+        {
+          "k": "t",
+          "v": " as the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "single sufficient premise"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " of both bedrock IDs; residual "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the necessity of "
+        },
+        {
+          "k": "m",
+          "v": "H"
+        },
+        {
+          "k": "t",
+          "v": " on the raw collar."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v330_qgamb_admissible_measure.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGAMB.MEASURE.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "s",
+              "v": "O"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The constructive step "
+        },
+        {
+          "k": "c",
+          "v": "v275"
+        },
+        {
+          "k": "t",
+          "v": "'s roadmap calls for: on the gap-decoupled "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "admissible"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " sector the ambient measure is built as a bona fide OS object — reflection-positive (symmetric PSD transfer), exponentially clustering ("
+        },
+        {
+          "k": "m",
+          "v": "C(n)/C(n{-}1)\\to(2/3)^6"
+        },
+        {
+          "k": "t",
+          "v": "), with finite susceptibility "
+        },
+        {
+          "k": "m",
+          "v": "\\chi=729/665"
+        },
+        {
+          "k": "t",
+          "v": " so "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{Var}(S_\\Lambda)/\\Lambda\\to\\chi"
+        },
+        {
+          "k": "t",
+          "v": " converges "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " uniform tightness (Prokhorov) "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " the projective limit exists; OS reconstruction gives "
+        },
+        {
+          "k": "m",
+          "v": "H_{\\mathrm{OS}}\\ge0"
+        },
+        {
+          "k": "t",
+          "v": " with gap "
+        },
+        {
+          "k": "m",
+          "v": "6\\ln\\tfrac32"
+        },
+        {
+          "k": "t",
+          "v": ". The full "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{QG}_{\\mathrm{amb}}"
+        },
+        {
+          "k": "t",
+          "v": " (the metric sector) stays open, gap-decoupled — a genuine "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "partial"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " construction, not a closure."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "CartanDeterminants.lean"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "FORM.CARTAN.DET.01"
+            },
+            {
+              "k": "t",
+              "v": ", Lean 4, "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The carrier piece of the holomorphy/anyon discriminator is grounded in real "
+        },
+        {
+          "k": "c",
+          "v": "Matrix.det"
+        },
+        {
+          "k": "t",
+          "v": " computations (kernel "
+        },
+        {
+          "k": "c",
+          "v": "decide"
+        },
+        {
+          "k": "t",
+          "v": ", no extra axiom): "
+        },
+        {
+          "k": "m",
+          "v": "|\\det\\mathrm{Cartan}(A_3)|{=}4{=}|\\mu_4|"
+        },
+        {
+          "k": "t",
+          "v": " (3"
+        },
+        {
+          "k": "m",
+          "v": "\\times"
+        },
+        {
+          "k": "t",
+          "v": "3, "
+        },
+        {
+          "k": "c",
+          "v": "det_fin_three"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "m",
+          "v": "|\\det\\mathrm{Cartan}(D_5)|{=}4"
+        },
+        {
+          "k": "t",
+          "v": " (5"
+        },
+        {
+          "k": "m",
+          "v": "\\times"
+        },
+        {
+          "k": "t",
+          "v": "5, "
+        },
+        {
+          "k": "c",
+          "v": "decide"
+        },
+        {
+          "k": "t",
+          "v": "), giving the carrier "
+        },
+        {
+          "k": "m",
+          "v": "|\\det\\mathrm{Gram}|{=}4\\cdot4{=}16"
+        },
+        {
+          "k": "t",
+          "v": " (the "
+        },
+        {
+          "k": "c",
+          "v": "v281"
+        },
+        {
+          "k": "t",
+          "v": " anyon count). The rank-8 "
+        },
+        {
+          "k": "m",
+          "v": "E_8/D_8"
+        },
+        {
+          "k": "t",
+          "v": " case stays the Nat discriminator — Mathlib's own "
+        },
+        {
+          "k": "c",
+          "v": "Data.Matrix.Cartan"
+        },
+        {
+          "k": "t",
+          "v": " leaves "
+        },
+        {
+          "k": "c",
+          "v": "E\\textsubscript{8}_det = 1"
+        },
+        {
+          "k": "t",
+          "v": " as a "
+        },
+        {
+          "k": "c",
+          "v": "proof_wanted"
+        },
+        {
+          "k": "t",
+          "v": ". Built "
+        },
+        {
+          "k": "c",
+          "v": "lake build"
+        },
+        {
+          "k": "t",
+          "v": " on Lean v4.29.1 "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " Mathlib."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-22",
+    "dateLabel": "2026-06-22",
+    "heading": [
+      {
+        "k": "t",
         "v": "next-steps round: the keystone collapsed to one shared premise (Lean "
       },
       {

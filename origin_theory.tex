@@ -1241,6 +1241,18 @@ $\Delta{=}6\ln\tfrac32>0$ (\vref{v76}/\vref{v302}) as the input. By \vref{v323} 
 \vref{v176}/\vref{v261}), \emph{not} a closure: $H$ stays \mO.
 \end{keybox}
 
+\par\smallskip\noindent\textbf{The OS step, discharged at the many-body level}
+(\veri{v329\_os\_gap\_reduction.py}). The one analytic input the keystone chain still cited --- ``the
+OS-reconstructed bulk gap $=$ the transfer gap'' --- is now discharged on the finite model. \mE\ The OS/Euclidean
+many-body Hamiltonian is the second quantization $d\Gamma(-\log T)$ of the recovery transfer $T$, whose spectrum is
+the set of sums of single-mode energies; hence the many-body (bulk) gap equals the smallest positive single-mode
+energy $=6\ln\tfrac32$, \emph{independent of the number of modes} --- exactly ``bulk gap $=$ transfer gap''. \mE\
+Under $H$ the rest follows ($C{=}f(L)\Rightarrow[\rho,K]{=}0\Rightarrow\omega\circ\rho{=}\omega$; $\det K{=}1\Rightarrow$
+holomorphic $\Rightarrow(E_8)_1$), so $H$ is the \emph{single sufficient premise} of both bedrock IDs. (The carrier
+piece of the holomorphy discriminator is itself now Lean-grounded in real determinants, \texttt{FORM.CARTAN.DET.01}:
+$|\det\mathrm{Cartan}(A_3)|{=}|\det\mathrm{Cartan}(D_5)|{=}4$, carrier index $16$.) \mO\ The residual is only the
+\emph{necessity} of $H$ on the raw collar.
+
 \par\smallskip\noindent\textbf{The transfer functor as a runnable solver suite}
 (\veri{v326\_ftransfer\_suite.py}). The four $F_{\mathrm{transfer}}$ readouts are productised into one harness, each
 a gapped relaxation to a unique attractor: \mE\ $F_{\mathrm{pole}}$ (Koide) is a M\"obius contraction to
@@ -1267,6 +1279,18 @@ object closed modulo the keystone \texttt{SEAM.EQUIV.01}, adding \emph{no new st
 dimensionful/ambient remainder: the full measured pole masses ($\times\,v_{\mathrm{geo}}$ $+$ standard RG),
 the absolute QCD scales ($m_p/m_e$), the complete PMNS dynamics, and the \emph{real $4$D interacting} ambient
 measure $\mathrm{QG}_{\mathrm{amb}}$ --- the $F_{\mathrm{transfer}}$ and ambient items already on the list.
+
+\par\smallskip\noindent\textbf{The ambient measure on the decoupled sector}
+(\veri{v330\_qgamb\_admissible\_measure.py}). On the \emph{admissible} sector the ambient measure is not just
+roadmapped (\vref{v275}) but \emph{constructed}: the seam transfer is reflection-positive (symmetric PSD), the gap
+gives exponential clustering ($C(n)/C(n{-}1)\to(2/3)^6$), and the finite susceptibility $\chi=\sum_n C(n)=729/665$
+makes $\mathrm{Var}(S_\Lambda)/\Lambda\to\chi$ converge, so the finite-volume measures are uniformly \emph{tight}
+(Prokhorov) and the projective limit $\mu=\lim_\Lambda\mu_\Lambda$ EXISTS; OS reconstruction then gives
+$H_{\mathrm{OS}}{=}-\log T\ge0$ with gap $6\ln\tfrac32$ \mE. The construction \emph{is} the gap (an ungapped
+transfer sends $\chi\to\infty$ and tightness fails). \mO\ What stays open is only the \emph{non-admissible}
+(metric) sector --- the full $\mathrm{QG}_{\mathrm{amb}}$ needs the metric-direction measure and its coupling; by
+the gap-decoupling margin $\Delta-31/(4\pi^2)\approx1.648>0$ (\vref{v76}) the physical readouts do not need it, so
+this is a genuine partial construction, not a closure.
 
 % =====================================================================
 \section*{Appendix: computational verification}

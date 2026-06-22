@@ -6,6 +6,7 @@
 import { motion } from "motion/react";
 import { Play } from "lucide-react";
 import { useReproducer } from "./Reproducer";
+import { RichText, shortText } from "@/lib/richtext";
 
 interface Script {
   file: string;
@@ -244,6 +245,8 @@ const CLUSTERS: Cluster[] = [
       { file: "v325_pillowcase_keystone.py", what: "The seam keystone as ONE citable theorem: the raw seam state is the flat tau=i pillowcase state, with EXACTLY ONE open lemma. IF (raw RP-collar seam state = flat tau=i pillowcase / rotation-invariant state) THEN 4 square marks + mu4 deck + omega o rho=omega + holomorphic c=8 => (E8)_1, with the carrier recovery gap as input. Pieces (all exact): n=2chi(S^2)=4 (v216); cross-ratio 2 => j=1728 (v214/v267); flat orbifold S^2(2,2,2,2), chi_orb=0 (Troyanov); DtN sub-principal at m=0 mod 4 (v201/v280); det Cartan(E8)=1 vs D8=4 (v83/v143/v308); gap 6 ln(3/2)>0 (v76/v302). The ONE open lemma -- the raw collar state IS the flat tau=i pillowcase / rotation-invariant state -- is SHARED by both bedrock IDs (QGEO.SYM.01, SEAM.EQUIV.01; v323), machine-pinned in Lean (FORM.SEAMEQUIV.01 + FORM.QGEO.BW.01). An assembly/reduction certificate (like v176/v261), not a closure." },
       { file: "v326_ftransfer_suite.py", what: "The F_transfer solver suite: the four transfer readouts as ONE runnable harness, each a gapped relaxation to a unique attractor, with values + uncertainties + honest typing (productises v303). F_pole (Koide): Moebius contraction to Q*=2/3 with multiplier (2/3)^6 = the seam-clock subleading eigenvalue, unique attractor at the SEAM rate. F_Boltzmann (eta_B): washout contraction to the balance 6.1e-11, monotone (H-theorem), external thermal rate. F_relic (axion): the comoving number N=E/omega is the adiabatic invariant, the relic freezes (seed theta_i=3pi/5), cosmological rate. F_QCD (m_p/m_e): 1-loop RG with carrier b0=7 flows to the Gaussian UV fixed point, Lambda_QCD generated; standard RG. F_RareKaon (bridge): BR(K+)=9.45e-11 on NA62 2016-2024 (v202). Only F_pole has the seam rate (2/3)^6; the other four share the SHAPE with external rates honestly fenced (v187/v303) -- the suite makes the frontier measurable without claiming the external rates." },
       { file: "v327_hypergraph_rewrite.py", what: "Deriving the cusp weight 2/3 from a minimal rewrite (sharpening v324/v312). A minimal local rule -- a family channel with N_fam=3 slots, one absorbing attractor (w=0) and |Z2|=2 surviving -- supplies the cusp fiber. M=[[1,0,0],[0,1/3,1/3],[0,1/3,1/3]] has spectrum {1,2/3,0}; 2/3=(N_fam-1)/N_fam=|Z2|/N_fam EMERGES from the rule arity, not injected. Over the order-6=2 N_fam hand the rate is (2/3)^6=64/729 = the recovery gap (v76/v324), derived. NON-GRAPH-SPECTRAL (proof, sharpening v312): 2/3 is NOT a root of the affine-E8 charpoly (p(2/3)=-3520/19683 != 0), so the recovery rate cannot be an adjacency eigenvalue. The absorbing state (eigenvalue 1) is the democratic w=0 law (v317). Honest residual: the arity {2,3} (the anchor atoms) is still the input (P2) -- v324's injected datum reduced to the anchor arity. Substrate = (2,3,5)-adjacency (carrier) x this minimal branching rule (family)." },
+      { file: "v329_os_gap_reduction.py", what: "Closing the OS step: the bulk gap IS the transfer gap (second quantization), and assembling the single sufficient premise of the whole bedrock. [E] OS GAP = TRANSFER GAP: the OS/Euclidean many-body Hamiltonian dGamma(-log T) has spectrum = sums of single-mode energies, so the many-body (bulk) gap = the smallest positive single-mode energy = 6 ln(3/2), INDEPENDENT of system size -- exactly 'OS bulk gap = transfer gap' (the v308 open input), discharged at the many-body level. [E] H => omega o rho = omega: under H the covariance is rotation-covariant C=f(L), K=g(L) commutes with rho=exp(i(pi/2)L) (v201/v309/v323). [E] H => SRE => (E8)_1: det Cartan(E8)=1 vs D8=4 (v237/v308). [E] both bedrock IDs follow from the ONE premise H = 'raw collar = rotation-invariant flat tau=i pillowcase state' (Lean-pinned FORM.SEAMEQUIV.01 + FORM.QGEO.BW.01). [O] residual: the NECESSITY of H on the raw collar. Sharpens v240/v308/v323/v325; does NOT close the bedrock." },
+      { file: "v330_qgamb_admissible_measure.py", what: "Constructing the ambient measure on the gap-decoupled admissible sector as a bona fide Osterwalder-Schrader object (with the honest fence). [E] REFLECTION POSITIVITY: the seam transfer T (v221/v311; spectrum {1,(2/3)^6,(1/3)^6}) is symmetric PSD => the finite-volume measures are RP. [E] EXPONENTIAL CLUSTERING: C(n)/C(n-1) -> lambda_2=(2/3)^6 (xi=1/Delta, Delta=6 ln(3/2)). [E] TIGHTNESS => PROJECTIVE LIMIT: chi=sum_n C(n)=729/665 finite, so Var(S_L)/L -> chi => uniform tightness (Prokhorov) => the projective limit mu=lim mu_Lambda EXISTS on the admissible sector. [E] OS RECONSTRUCTION: H_OS=-log T>=0, unique vacuum, gap 6 ln(3/2) (v240) -- mu is a genuine OS measure on the admissible sector. [E] NEG: an ungapped transfer (lambda_2->1) sends chi->inf, tightness FAILS. [O] THE FULL AMBIENT MEASURE: the non-admissible (metric) sector is NOT built; by the gap margin Delta-31/(4pi^2)~1.648>0 (v76/v275) physical readouts do not need it, but QG.AMB.01 stays open. A genuine PARTIAL construction, NOT a closure." },
     ],
   },
   {
@@ -438,15 +441,18 @@ export function ScriptIndex() {
         </span>
       </div>
 
-      <div className="grid gap-5 lg:grid-cols-2">
+      {/* Masonry columns so clusters pack tightly regardless of height — a
+          row grid stretched short clusters next to the 160-script cluster and
+          left huge empty gaps. */}
+      <div className="columns-1 gap-5 lg:columns-2 [&>*]:mb-5">
         {CLUSTERS.map((c, i) => (
           <motion.section
             key={c.title}
-            initial={{ opacity: 0, y: 14 }}
+            initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.05 }}
+            viewport={{ once: true, amount: 0.04 }}
             transition={{ duration: 0.5, delay: (i % 2) * 0.05 }}
-            className="glass relative overflow-hidden rounded-2xl ring-1 ring-slate-700/40"
+            className="glass relative block break-inside-avoid overflow-hidden rounded-2xl ring-1 ring-slate-700/40"
           >
             <div
               aria-hidden
@@ -471,13 +477,13 @@ export function ScriptIndex() {
                       type="button"
                       onClick={() => open(s.file)}
                       className="group flex w-full items-start gap-2 rounded-md px-2 py-1.5 text-left transition-colors hover:bg-blue-500/5"
-                      title={`Run ${s.file} in your browser`}
+                      title={`Open ${s.file} — full description + run it in your browser`}
                     >
                       <span className="mt-0.5 font-mono text-[11px] font-semibold text-blue-300 group-hover:text-blue-200">
                         {s.file.split("_")[0]}
                       </span>
                       <span className="flex-1 text-[11px] leading-snug text-slate-300">
-                        {s.what}
+                        <RichText text={shortText(s.what)} />
                       </span>
                       <Play
                         size={12}

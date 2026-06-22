@@ -20,6 +20,7 @@ import {
   XCircle,
 } from "lucide-react";
 import { runScript, pyodideVersion, type RunResult } from "@/lib/pyodide";
+import { RichText } from "@/lib/richtext";
 import { cn, REPO_URL } from "@/lib/utils";
 
 interface ReproducerCtx {
@@ -240,17 +241,17 @@ function ReproducerModal({ file, onClose }: { file: string; onClose: () => void 
                 What this script checks
               </div>
               <p className="mt-1 text-[13px] font-medium leading-snug text-slate-100">
-                {doc.title}
+                <RichText text={doc.title} />
               </p>
               {doc.body && (
                 <>
                   <div
                     className={cn(
-                      "mt-2 overflow-hidden whitespace-pre-wrap break-words font-mono text-[11px] leading-relaxed text-slate-400",
+                      "mt-2 overflow-hidden whitespace-pre-wrap break-words text-[11px] leading-relaxed text-slate-400",
                       docOpen ? "" : "max-h-[3.9rem]",
                     )}
                   >
-                    {doc.body}
+                    <RichText text={doc.body} />
                   </div>
                   <button
                     type="button"
@@ -349,7 +350,7 @@ function ReproducerModal({ file, onClose }: { file: string; onClose: () => void 
                       />
                     )}
                     <span className="text-[12px] leading-snug text-slate-300">
-                      {c.label}
+                      <RichText text={c.label} />
                     </span>
                   </li>
                 ))}

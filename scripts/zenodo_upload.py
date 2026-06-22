@@ -36,7 +36,7 @@ from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_RECORD_ID = "20712258"  # 5.1 (rev 159), published 2026-06-16; DOI 10.5281/zenodo.20712258
+DEFAULT_RECORD_ID = "20791704"  # 5.2 (rev 231), published 2026-06-22; DOI 10.5281/zenodo.20791704
 ZENODO_API = "https://zenodo.org/api"
 REPO_URL = "https://github.com/sthamann/tfpt-theoryv4"
 
@@ -276,6 +276,9 @@ def validate_pdfs() -> list[Path]:
 
 
 def main() -> int:
+    # Load .env BEFORE building argparse so ZENODO_RECORD from .env is used as the
+    # --record default (argparse evaluates defaults at add_argument time).
+    load_dotenv(ROOT / ".env")
     parser = argparse.ArgumentParser(description="Upload TFPT release to Zenodo")
     parser.add_argument(
         "--record",
@@ -303,8 +306,6 @@ def main() -> int:
         help="Publish the new version (default: stop after draft upload)",
     )
     args = parser.parse_args()
-
-    load_dotenv(ROOT / ".env")
 
     token = os.environ.get("ZENODO_TOKEN", "").strip()
     if not token and not args.dry_run:

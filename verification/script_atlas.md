@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`326` registered scripts · `382` ledger claims · `10` clusters.
+`328` registered scripts · `385` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -208,7 +208,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v75_upoint_to_vgeo** [E/O] `FLAV.UPOINT.01` — Gate 1 complete: U_point → v_geo (ratios + Grand Mass Volume); same anchor as 1/G
   - deps: v71_simple_r_bridge, v20_lepton_c_derivation, v46_grand_mass_volume, v68 · cited: origin theory, research contracts
 
-### `frontier` — Open gate (G_metric) & the frontier  (79 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (81 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -363,12 +363,16 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v181_clock_is_conformal_symmetry, v309_modular_bedrock, v308_seam_equiv_chain, v308, v309, v198, v323_bw_geometric_modular, v323 · cited: origin theory
 - **v324_hypergraph_fiber** [E/C/O] `HYP.FIBER.01` — The minimal hypergraph substrate that works: a (2,3,5)-network FIBERED by a 3-fold cusp channel reproduces both the E8 skeleton and the recovery gap (the constructive v312 follow-u
   - deps: v312_hypergraph_substrate, v315_coxeter_coupling, v317_galois_family, v312, v315, v317, v319, v221 · cited: origin theory
-- **v325_pillowcase_keystone** [E/O] `QGEO.KEYSTONE.01` — The seam keystone as ONE citable theorem: the raw seam state is the flat tau=i pillowcase state, with EXACTLY ONE open lemma. IF (raw RP-collar seam state = flat tau=i pillowcase /
+- **v325_pillowcase_keystone** [E/O] `QGEO.KEYSTONE.01, FORM.CARTAN.DET.01` — The seam keystone as ONE citable theorem: the raw seam state is the flat tau=i pillowcase state, with EXACTLY ONE open lemma. IF (raw RP-collar seam state = flat tau=i pillowcase /
   - deps: v181_clock_is_conformal_symmetry, v286_seam_equivalence_contract, v323_bw_geometric_modular, v214, v216, v280, v308, v323 · cited: origin theory
 - **v326_ftransfer_suite** [E/C] `FR.SUITE.01` — The F_transfer solver suite: the four transfer readouts as ONE runnable harness, each a gapped relaxation to a unique attractor, with values + uncertainties + honest typing (produc
   - deps: v303_ftransfer_dynamics, v303, v82, v184, v185, v202 · cited: origin theory
 - **v327_hypergraph_rewrite** [E/O] `HYP.REWRITE.01` — Deriving the cusp weight 2/3 from a minimal rewrite (sharpening v324/v312). A minimal local rule -- a family channel with N_fam=3 slots, one absorbing attractor (w=0) and |Z2|=2 su
   - deps: v324_hypergraph_fiber, v312_hypergraph_substrate, v312, v324, v317, v76 · cited: origin theory
+- **v329_os_gap_reduction** [E/O] `QGEO.OSGAP.01` — Closing the OS step: the bulk gap IS the transfer gap (second quantization), and assembling the single sufficient premise of the whole bedrock. [E] OS GAP = TRANSFER GAP: the OS/Eu
+  - deps: v308_seam_equiv_chain, v323_bw_geometric_modular, v325_pillowcase_keystone, v240, v308, v323, v325, v237 · cited: origin theory
+- **v330_qgamb_admissible_measure** [E/O] `QGAMB.MEASURE.01` — Constructing the ambient measure on the gap-decoupled admissible sector as a bona fide Osterwalder-Schrader object (with the honest fence). [E] REFLECTION POSITIVITY: the seam tran
+  - deps: v275_qgamb_roadmap, v275, v311, v240, v221, v76 · cited: origin theory
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (163 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -720,16 +724,16 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v317_galois_family** — `GALOIS.FAMILY.01`
-- **v318_arithmetic_capstone** — `ARITH.CAPSTONE.01`
 - **v319_translation_clock** — `TRANSLATE.CLOCK.01`
 - **v320_galois_cp_relation** — `GALOIS.CP.PREDICT.01`
 - **v321_killtest_board** — `KILL.BOARD.01`
 - **v322_cp_lock_sharpened** — `GALOIS.CP.SHARPEN.01`
 - **v323_bw_geometric_modular** — `QGEO.BW.01, FORM.QGEO.BW.01`
 - **v324_hypergraph_fiber** — `HYP.FIBER.01`
-- **v325_pillowcase_keystone** — `QGEO.KEYSTONE.01`
+- **v325_pillowcase_keystone** — `QGEO.KEYSTONE.01, FORM.CARTAN.DET.01`
 - **v326_ftransfer_suite** — `FR.SUITE.01`
 - **v327_hypergraph_rewrite** — `HYP.REWRITE.01`
 - **v328_theta13_pressure** — `FLAV.TH13.PRESSURE.01`
+- **v329_os_gap_reduction** — `QGEO.OSGAP.01`
+- **v330_qgamb_admissible_measure** — `QGAMB.MEASURE.01`
 

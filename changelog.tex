@@ -59,6 +59,31 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-22 (frontier round: the OS step discharged at the many-body level, the ambient measure built on the gap-decoupled sector, and the carrier Cartan determinants grounded in Lean: \texttt{v329}, \texttt{v330}, \texttt{FORM.CARTAN.DET.01})}
+\begin{itemize}
+\item \textbf{\texttt{v329\_os\_gap\_reduction.py} (\texttt{QGEO.OSGAP.01}, \mE/\mO).} The one analytic input the v308
+  keystone chain still cited --- ``the OS-reconstructed bulk gap $=$ the transfer gap'' --- is discharged at the
+  many-body level: the OS/Euclidean Hamiltonian is the second quantization $d\Gamma(-\log T)$, whose spectrum is the
+  set of sums of single-mode energies, so the bulk gap $=$ the smallest positive single-mode energy $=6\ln\tfrac32$,
+  \emph{independent of system size}.  Together with $H\Rightarrow\omega\circ\rho{=}\omega$ and $H\Rightarrow$ SRE
+  $\Rightarrow(E_8)_1$, this exhibits the rotation-invariant flat-pillowcase premise $H$ as the \emph{single
+  sufficient premise} of both bedrock IDs; residual $=$ the necessity of $H$ on the raw collar.
+\item \textbf{\texttt{v330\_qgamb\_admissible\_measure.py} (\texttt{QGAMB.MEASURE.01}, \mE/\mO).} The constructive
+  step \texttt{v275}'s roadmap calls for: on the gap-decoupled \emph{admissible} sector the ambient measure is built
+  as a bona fide OS object --- reflection-positive (symmetric PSD transfer), exponentially clustering
+  ($C(n)/C(n{-}1)\to(2/3)^6$), with finite susceptibility $\chi=729/665$ so $\mathrm{Var}(S_\Lambda)/\Lambda\to\chi$
+  converges $\Rightarrow$ uniform tightness (Prokhorov) $\Rightarrow$ the projective limit exists; OS reconstruction
+  gives $H_{\mathrm{OS}}\ge0$ with gap $6\ln\tfrac32$.  The full $\mathrm{QG}_{\mathrm{amb}}$ (the metric sector)
+  stays open, gap-decoupled --- a genuine \emph{partial} construction, not a closure.
+\item \textbf{\texttt{CartanDeterminants.lean} (\texttt{FORM.CARTAN.DET.01}, Lean 4, \mE).} The carrier piece of the
+  holomorphy/anyon discriminator is grounded in real \texttt{Matrix.det} computations (kernel \texttt{decide}, no
+  extra axiom): $|\det\mathrm{Cartan}(A_3)|{=}4{=}|\mu_4|$ (3$\times$3, \texttt{det\_fin\_three}) and
+  $|\det\mathrm{Cartan}(D_5)|{=}4$ (5$\times$5, \texttt{decide}), giving the carrier $|\det\mathrm{Gram}|{=}4\cdot4{=}16$
+  (the \texttt{v281} anyon count).  The rank-8 $E_8/D_8$ case stays the Nat discriminator --- Mathlib's own
+  \texttt{Data.Matrix.Cartan} leaves \texttt{E\textsubscript{8}\_det = 1} as a \texttt{proof\_wanted}.  Built
+  \texttt{lake build} on Lean v4.29.1 $+$ Mathlib.
+\end{itemize}
+
 \subsection*{2026-06-22 (next-steps round: the keystone collapsed to one shared premise (Lean $+$ one citable theorem), the $F_{\mathrm{transfer}}$ solver suite, the cusp weight derived from a minimal rewrite, and the $\theta_{13}$ pressure point: \texttt{FORM.QGEO.BW.01}, \texttt{v325}, \texttt{v326}, \texttt{v327}, \texttt{v328})}
 \begin{itemize}
 \item \textbf{\texttt{BWKeystone.lean} (\texttt{FORM.QGEO.BW.01}, Lean 4, \mE/\mO).} The \texttt{v323} Bisognano--Wichmann

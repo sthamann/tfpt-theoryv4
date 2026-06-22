@@ -156,7 +156,7 @@ and the `GATE.*` rows in the ledger.
 - **Upload commands:** `bash build.sh zenodo` (compile notes + draft upload) or
   `bash build.sh zenodo-publish` (same + publish). Token: local `.env` (`ZENODO_TOKEN`, gitignored)
  or GitHub secret `ZENODO_TOKEN`. Latest record id: `ZENODO_RECORD` in `.env` / workflow
- (update after each publish — currently `20743347`).
+ (update after each publish — currently `20791704`).
 - **When to edit `zenodo_description.html` (same change, not optional):**
   - bump `\TFPTversion` in `tex-artefacts/version.tex` for a curated Zenodo release;
   - reproducibility stack counts change (Python modules, Wolfram checks, Lean audit wording);

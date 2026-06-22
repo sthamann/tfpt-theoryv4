@@ -154,6 +154,7 @@ TSX_HEADER = """\
 import { motion } from "motion/react";
 import { Play } from "lucide-react";
 import { useReproducer } from "./Reproducer";
+import { RichText, shortText } from "@/lib/richtext";
 
 interface Script {
   file: string;
@@ -192,15 +193,18 @@ export function ScriptIndex() {
         </span>
       </div>
 
-      <div className="grid gap-5 lg:grid-cols-2">
+      {/* Masonry columns so clusters pack tightly regardless of height — a
+          row grid stretched short clusters next to the 160-script cluster and
+          left huge empty gaps. */}
+      <div className="columns-1 gap-5 lg:columns-2 [&>*]:mb-5">
         {CLUSTERS.map((c, i) => (
           <motion.section
             key={c.title}
-            initial={{ opacity: 0, y: 14 }}
+            initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.05 }}
+            viewport={{ once: true, amount: 0.04 }}
             transition={{ duration: 0.5, delay: (i % 2) * 0.05 }}
-            className="glass relative overflow-hidden rounded-2xl ring-1 ring-slate-700/40"
+            className="glass relative block break-inside-avoid overflow-hidden rounded-2xl ring-1 ring-slate-700/40"
           >
             <div
               aria-hidden
@@ -225,13 +229,13 @@ export function ScriptIndex() {
                       type="button"
                       onClick={() => open(s.file)}
                       className="group flex w-full items-start gap-2 rounded-md px-2 py-1.5 text-left transition-colors hover:bg-blue-500/5"
-                      title={`Run ${s.file} in your browser`}
+                      title={`Open ${s.file} — full description + run it in your browser`}
                     >
                       <span className="mt-0.5 font-mono text-[11px] font-semibold text-blue-300 group-hover:text-blue-200">
                         {s.file.split("_")[0]}
                       </span>
                       <span className="flex-1 text-[11px] leading-snug text-slate-300">
-                        {s.what}
+                        <RichText text={shortText(s.what)} />
                       </span>
                       <Play
                         size={12}

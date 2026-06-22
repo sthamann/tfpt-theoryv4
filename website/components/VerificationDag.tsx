@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "motion/react";
 import { FileCode2, Play } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { RichText } from "@/lib/richtext";
 import { useReproducer } from "./Reproducer";
 
 /**
@@ -656,7 +657,7 @@ export function VerificationDag() {
           </span>
         </div>
         <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-300">
-          {node.summary}
+          <RichText text={node.summary} />
         </p>
 
         <div className="mt-4 grid gap-3 sm:grid-cols-3">
@@ -735,7 +736,9 @@ function DetailCell({
       </div>
       <ul className="mt-1.5 space-y-1 text-xs leading-relaxed text-slate-300">
         {items.map((it, i) => (
-          <li key={i}>{it}</li>
+          <li key={i}>
+            <RichText text={it} />
+          </li>
         ))}
       </ul>
     </div>
