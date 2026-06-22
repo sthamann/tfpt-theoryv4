@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TFPT Machine — two numbers build a universe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app">
+   <div class="layout">
+    <!-- ===================== left sidebar ===================== -->
+    <aside class="sidebar">
+      <div class="brand">
+        <svg class="brand-logo logo-animated" viewBox="0 0 64 64" width="48" height="48" role="img" aria-label="TFPT logo" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="tfptm-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#1d4ed8" /><stop offset="40%" stop-color="#6366f1" /><stop offset="80%" stop-color="#a855f7" /><stop offset="100%" stop-color="#ec4899" />
+            </linearGradient>
+            <radialGradient id="tfptm-glow" cx="50%" cy="50%" r="55%"><stop offset="0%" stop-color="#ffffff" stop-opacity="0.95" /><stop offset="55%" stop-color="#ffffff" stop-opacity="0.18" /><stop offset="100%" stop-color="#ffffff" stop-opacity="0" /></radialGradient>
+            <linearGradient id="tfptm-edge" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#ffffff" stop-opacity="0.55" /><stop offset="100%" stop-color="#ffffff" stop-opacity="0" /></linearGradient>
+          </defs>
+          <rect x="0.5" y="0.5" width="63" height="63" rx="14.5" fill="url(#tfptm-grad)" />
+          <rect x="0.5" y="0.5" width="63" height="63" rx="14.5" fill="none" stroke="url(#tfptm-edge)" stroke-width="1" />
+          <g class="logo-glow"><circle cx="32" cy="32" r="14" fill="url(#tfptm-glow)" /></g>
+          <g class="logo-arcs" stroke="#ffffff" fill="none" stroke-linecap="round">
+            <path d="M 14 32 A 18 18 0 0 1 50 32" stroke-width="1.4" stroke-opacity="0.55" />
+            <path d="M 14 32 A 18 18 0 0 0 50 32" stroke-width="1.2" stroke-opacity="0.4" stroke-dasharray="2 3" />
+          </g>
+          <line x1="11" y1="32" x2="53" y2="32" stroke="#ffffff" stroke-opacity="0.55" stroke-width="1" stroke-linecap="round" />
+          <g class="logo-dots-top" fill="#ffffff"><circle cx="22" cy="22" r="2" opacity="0.95" /><circle cx="32" cy="19" r="2" opacity="0.95" /><circle cx="42" cy="22" r="2" opacity="0.95" /></g>
+          <g class="logo-dots-bottom" fill="#ffffff"><circle cx="26" cy="45" r="2" opacity="0.95" /><circle cx="38" cy="45" r="2" opacity="0.95" /></g>
+          <g class="logo-fixedpoint"><circle cx="32" cy="32" r="3" fill="#ffffff" /><circle class="logo-ring" cx="32" cy="32" r="6" fill="none" stroke="#ffffff" stroke-width="0.8" stroke-opacity="0.5" /></g>
+        </svg>
+        <div class="brand-text">
+          <h1>TFPT&nbsp;Machine</h1>
+          <p class="brand-tag">The compiler in action — from one edge to the Standard Model, the constants and 23 predictions.</p>
+        </div>
+      </div>
+
+      <div class="side-controls">
+        <button id="btn-run" class="btn btn-primary btn-block" title="Run / pause (Space)"><span class="ico" id="run-ico">▶</span> <span class="lbl" id="run-lbl">Run</span></button>
+        <div class="ctl-row">
+          <button id="btn-step" class="btn" title="One step (→)">Step ▸</button>
+          <button id="btn-reset" class="btn" title="Reset (R)">Reset</button>
+        </div>
+        <button id="btn-forge" class="btn btn-forge btn-block" title="Scan 10,000 candidate universes — only one closes">🎲 Failed universes</button>
+        <button id="btn-restore" class="btn btn-restore btn-block" title="Restore the unique closing universe" hidden>↺ Restore (8, 5)</button>
+        <button id="btn-intro" class="btn btn-block" title="Replay the origin prologue">▷ Intro</button>
+        <label class="toggle" title="Plain words vs technical labels"><input id="plain-toggle" type="checkbox" checked /> <span>Plain words</span></label>
+        <label class="toggle" title="Click a part to light up only what it depends on"><input id="xray-toggle" type="checkbox" /> <span>X-ray dependencies</span></label>
+        <label class="toggle" title="Abstract typed hypergraph of the theory"><input id="substrate-toggle" type="checkbox" /> <span>Substrate (hypergraph)</span></label>
+        <label class="speed">Speed <input id="speed" type="range" min="0.25" max="3" step="0.05" value="1" /></label>
+      </div>
+
+      <article class="panel ablation side-ablation">
+        <div class="panel-head"><span class="dot dot-gold"></span><h2>Ablation console</h2></div>
+        <p class="insp-sub">Proof the inputs aren't free: turn the dials and the 1/137 engine recomputes live. Only the audited pair (8, 5) lands on the real value.</p>
+        <div class="dial"><label>Tempo dial <b>N</b> <small>c₃ = 1/(N·π)</small></label>
+          <input id="dial-N" type="range" min="6" max="10" step="1" value="8" /><output id="out-N">8</output></div>
+        <div class="dial"><label>Width dial <b>g_car</b> <small>budget 10·b₁</small></label>
+          <input id="dial-g" type="range" min="3" max="7" step="1" value="5" /><output id="out-g">5</output></div>
+        <div class="readout ok" id="ablation-readout">
+          <div class="readout-label">α⁻¹ (computed live)</div>
+          <div class="readout-value" id="ablation-value">137.0359992</div>
+          <div class="readout-verdict" id="ablation-verdict">locked — the unique fit (N=8, g=5) → CODATA α⁻¹</div>
+        </div>
+        <div class="break-bar">
+          <span class="break-lead">Break it — every rule is load-bearing:</span>
+          <div id="scenario-buttons" class="scenario-buttons"></div>
+        </div>
+      </article>
+
+      <div class="side-card step-card">
+        <span class="step-index" id="step-index">Step 0 / 10</span>
+        <div class="step-title" id="step-title">The Source</div>
+        <div class="step-desc" id="step-desc">Press Run — or Step through it one stage at a time.</div>
+      </div>
+
+      <div class="side-card">
+        <div class="sc-title">The idea</div>
+        <ul class="idea-list">
+          <li><b>one seam</b>, two readouts</li>
+          <li><b>E₈ validates</b> the closure — not a gauge group</li>
+          <li>the SM is <b>projected</b>, not guessed</li>
+          <li><b>0</b> free compiler dials</li>
+        </ul>
+        <div class="idea-legend"><span class="cdot cd-g"></span>compiler <span class="cdot cd-y"></span>transfer <span class="cdot cd-r"></span>failed</div>
+      </div>
+
+      <div class="side-card">
+        <div class="sc-title">Three layers</div>
+        <div class="ly ly-1">◆ Compiler <small>discrete · exact</small></div>
+        <div class="ly ly-2">◆ Transport <small>gapped attractor</small></div>
+        <div class="ly ly-3">◆ Physics <small>v_geo · RG · Boltzmann</small></div>
+      </div>
+    </aside>
+
+    <!-- ===================== main column ===================== -->
+    <main class="main">
+    <!-- ===================== the machine ===================== -->
+    <section class="stage-wrap">
+      <canvas id="machine" aria-label="The TFPT machine: from one boundary edge to the Standard Model and the predictions"></canvas>
+      <div id="tooltip" class="tooltip" hidden></div>
+      <div id="broken-banner" class="broken-banner" hidden>✗ THIS UNIVERSE DOES NOT CLOSE — <span id="broken-reason"></span></div>
+      <div id="micdrop" class="micdrop" hidden>
+        <div class="md-row"><span class="md-k">INPUT</span><span class="md-v">c₃ = 1/(8π) · g_car = 5</span></div>
+        <div class="md-arrow">↓</div>
+        <div class="md-row"><span class="md-k">OUTPUT</span><span class="md-v">23 predictions · the Standard Model · the cosmos</span></div>
+        <div class="md-arrow">↓</div>
+        <div class="md-free">FREE PARAMETERS = <b>0</b></div>
+        <div class="md-tag">the machine closes itself.</div>
+      </div>
+      <div class="stage-progress"><div id="progressbar"></div></div>
+    </section>
+
+    <!-- ===================== inspector ===================== -->
+    <section class="deck">
+      <article id="inspector" class="panel inspector">
+        <div class="panel-head"><span class="dot"></span><h2 id="insp-title">Inspector</h2></div>
+        <p id="insp-sub" class="insp-sub">Click any part of the machine to see what it really is.</p>
+        <div id="insp-big" class="insp-big"></div>
+        <div id="insp-atoms" class="chips"></div>
+        <p id="insp-detail" class="insp-detail">
+          It all starts from ONE thing on the far left — an edge of reality with four marks. Two readings of
+          that edge look like free inputs (a tempo and a width), but the auditor <code>E₈</code> in the middle
+          only locks together for one choice — so it <b>pins its own axioms</b> (the loop arching back). From
+          there the machine builds the particles, the constants, and even the cosmos, then fills the two boards
+          below — each card coloured by how it matches real data.
+        </p>
+      </article>
+    </section>
+
+    <!-- ===================== match legend ===================== -->
+    <div class="legend-bar">
+      <span class="muted">Card colour = match with what we've measured:</span>
+      <span class="lg lg-green">● match (≲1σ)</span>
+      <span class="lg lg-orange">● near / tension (~1–3σ)</span>
+      <span class="lg lg-red">● no match (excluded)</span>
+      <span class="lg lg-slate">● not yet decisive</span>
+    </div>
+
+    <!-- ===================== Standard Model deck ===================== -->
+    <section class="board-wrap">
+      <div class="board-head"><h2>All the particles — the Standard Model <span id="sm-count" class="muted">· built at the SM stage</span></h2></div>
+      <div id="sm-board" class="board-groups"></div>
+    </section>
+
+    <!-- ===================== Predictions deck ===================== -->
+    <section class="board-wrap">
+      <div class="board-head"><h2>Predictions — go and measure them <span id="pred-count" class="muted">· 0 / 23 online</span></h2><div class="tally" id="tally"></div></div>
+      <div class="timeline-legend" id="timeline-legend"></div>
+      <div id="board" class="board-groups"></div>
+    </section>
+
+    <footer class="foot">
+      Grounded in the TFPT repo (<code>verification/</code>, <code>origin_theory.tex</code>,
+      <code>website/lib/predictions.ts</code>, the v62 scorecard / v307 watchdog). Standalone, local-only
+      (<code>_game/</code>, git-ignored) — no claim is made here that isn't in the papers.
+    </footer>
+    </main>
+   </div>
+  </div>
+
+  <!-- ===================== origin prologue ===================== -->
+  <div id="prologue" class="prologue" hidden>
+    <div class="prologue-card">
+      <button id="prologue-skip-x" class="modal-close" aria-label="Skip">×</button>
+      <div class="prologue-stage" id="prologue-visual"></div>
+      <div class="prologue-kicker" id="prologue-kicker">PROLOGUE</div>
+      <h3 id="prologue-title">Reality has an edge</h3>
+      <p id="prologue-body">Not space is fundamental. The <b>edge</b> carries the rules.</p>
+      <div class="prologue-dots" id="prologue-dots"></div>
+      <div class="prologue-nav">
+        <button id="prologue-skip" class="btn">Skip ▸</button>
+        <button id="prologue-next" class="btn btn-primary">Next ▸</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== failed-universes forge ===================== -->
+  <div id="forge" class="forge" hidden>
+    <div class="forge-card">
+      <button id="forge-close" class="modal-close" aria-label="Close">×</button>
+      <div class="forge-title">UNIVERSE FORGE</div>
+      <div class="forge-sub">Scanning the grid of candidate universes — every (tempo N, width g). Does each one <b>close</b>?</div>
+      <div class="forge-now" id="forge-now">— —</div>
+      <div class="forge-verdict" id="forge-verdict">…</div>
+      <div class="forge-counters">
+        <div class="fc fc-dead"><div class="fc-n" id="fc-dead">0</div><div class="fc-l">died (no closure)</div></div>
+        <div class="fc fc-alive"><div class="fc-n" id="fc-alive">0</div><div class="fc-l">closed</div></div>
+      </div>
+      <div class="forge-bar"><div id="forge-bar-fill"></div></div>
+      <div class="forge-foot" id="forge-foot">10,000 candidates: tempo N ∈ 1..100, width g ∈ 1..100.</div>
+      <button id="forge-skip" class="btn" style="margin-top:14px">Skip to the answer ▸</button>
+    </div>
+  </div>
+
+  <!-- ===================== detail modal ===================== -->
+  <div id="modal" class="modal" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true">
+      <button id="modal-close" class="modal-close" aria-label="Close">×</button>
+      <div class="modal-badges" id="modal-badges"></div>
+      <h3 id="modal-title">—</h3>
+      <div class="modal-values">
+        <div class="mv"><span class="mv-k">TFPT says</span><span class="mv-v" id="modal-tfpt">—</span></div>
+        <div class="mv"><span class="mv-k">Measured</span><span class="mv-v" id="modal-measured">—</span></div>
+      </div>
+      <p class="modal-note" id="modal-note"></p>
+      <div class="audit-trail">
+        <div class="at-title">Audit trail — why this value exists</div>
+        <div class="at-row"><span class="at-k">Compiler route</span><span class="at-v" id="modal-route">—</span></div>
+        <div class="at-row"><span class="at-k">E₈ audit</span><span class="at-v" id="modal-e8route">—</span></div>
+        <div class="at-row"><span class="at-k">Bridge</span><span class="at-v" id="modal-bridge">—</span></div>
+      </div>
+      <div class="modal-row"><span class="modal-row-k">Formula</span><code id="modal-formula"></code></div>
+      <p class="modal-detail" id="modal-detail"></p>
+      <div class="modal-row modal-kill" id="modal-kill-row"><span class="modal-row-k">Kill test</span><span id="modal-kill"></span></div>
+      <div class="modal-row modal-when" id="modal-when-row"><span class="modal-row-k">When</span><span id="modal-when"></span></div>
+    </div>
+  </div>
+
+  <!-- ===================== deep modal (click a key part) ===================== -->
+  <div id="deepmodal" class="modal" hidden>
+    <div class="deep-card" role="dialog" aria-modal="true">
+      <button id="deep-close" class="modal-close" aria-label="Close">×</button>
+      <div id="deep-body"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast-msg" hidden></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/machine.js"></script>
+</body>
+</html>

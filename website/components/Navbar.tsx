@@ -10,6 +10,7 @@ import { Logo } from "./Logo";
 const links = [
   { href: "/#overview", label: "Overview" },
   { href: "/#predictions", label: "Predictions" },
+  { href: "/compiler", label: "Compiler in action" },
   { href: "/verification", label: "Verification" },
   { href: "/falsification", label: "Falsification" },
   { href: "/review", label: "For reviewers" },
