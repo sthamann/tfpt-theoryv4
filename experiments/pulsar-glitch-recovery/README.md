@@ -117,10 +117,67 @@ flagged).
   is consistent with the signal being below monthly reach. **No claim.** The sharper test is
   **daily-cadence** timing of a giant glitch (Crab 2017) or Vela, resolving >2 decades in `ln(time)`.
 
+## PG.06 — the dense J0537-6910 stacked recovery comb (HEAVY / optional, `tfpt-pulsar nicer`)
+
+PG.05 was `data_limited` because the Crab *monthly* cadence under-samples the recovery. The
+decisive dataset is **PSR J0537-6910, the "Big Glitcher"** — glitches every ~100 d, monitored
+densely in X-rays (NICER 2017–, RXTE 1999–2011). `scripts/fetch_nicer_j0537.py` confirms the data
+exist: **1165 NICER observations** of J0537 (MJD 57925–60833, ~8 yr, ~2948 ks; committed list
+`data/nicer_j0537/j0537_observations.csv`). This stage scaffolds the full reduction **honestly**:
+
+- **Upstream (gated, heavy):** fetch the cleaned **L2** events + orbit per ObsID from HEASARC
+  (~GB; **not** auto-run), then **PINT** (`get_NICER_TOAs` + a satellite observatory from the
+  `.orb`) barycentres + epoch-folds them to `nu(t)` — **no HEASoft/`nicerl2` needed** for the L2
+  path. PINT is pip-installed; HEASoft is not (and isn't required). The bulk download + fold is a
+  real project, so it is left to the operator; `nu_series_from_nicer` raises rather than fabricate.
+- **Downstream (runs now, injection-validated):** `nu(t)` → per-glitch `nudot` recovery →
+  superposed-epoch **stack** → the kernel-`omega` comb detector. The detector is validated over
+  noisy realisations: in a **sufficient ln(tau) range** the comb is detected **96%** of the time
+  with **0%** false positives.
+
+**The key, machine-checked finding (it reframes the whole search):** the comb periodogram needs
+**>~2.8 comb periods in ln(tau)** (≈3 decades in `tau`) to localise `omega`. A J0537 ~100 d
+inter-glitch interval spans only **~1.9 periods**, where the same comb is detected **0%** of the
+time — and **stacking many glitches buys amplitude SNR, NOT ln(tau) range**. So J0537, despite its
+dense sampling, is **range-blind**; the decisive target is a **long-interval, densely-monitored**
+pulsar — **Vela** (glitch every ~3 yr, daily timing → ~3 decades in `tau`, ~2.8 periods). Output:
+`results/pg06_nicer_j0537.json` + `results/pg06_range_finding.png`. **Firewall:** search target,
+no claim; the synthetic run validates machinery only.
+
+## PG.06b — REAL NICER Vela-pulsar data: pipeline proven on real photons (`tfpt-pulsar vela`)
+
+PG.06 pointed at a long-interval, densely-monitored pulsar → **Vela** (PSR B0833-45 / J0835-4510).
+`scripts/fetch_nicer_vela.py` confirms the HEASARC NICER archive holds **665 Vela observations**
+(MJD 57941–60817, ~7.9 yr, ~762 ks; ~6.5 GB of L2 events). `tfpt-pulsar vela --download` pulls one
+real observation (~10 MB) and **`src/tfpt_pulsar/vela.py`** runs the reduction end-to-end:
+
+> download cleaned **L2** events + orbit → **PINT** barycentres (`get_NICER_TOAs` + satellite
+> observatory from the `.orb`, **no HEASoft**) → H-test fold.
+
+**Real-data result (obsid 0020180102):** 430,739 photons barycentred; the **Vela pulsation is
+DETECTED at F0 = 11.19275 Hz (period 89.34 ms, H = 18.4)** — exactly the Vela spin. **The
+download → barycentre → fold pipeline is proven on REAL data**, with PINT alone (HEASoft not
+installed and not needed).
+
+**Honest wall (no claim).** A comb-*quality* `nu(t)` lives at the ~µHz level (the recovery
+structure), so it needs a **phase-connected timing solution** across all 665 observations
+(per-obs H-test gives only ~mHz). That is ~6.5 GB of events + a multi-hour PINT/`tempo2` timing
+analysis + glitch handling — a real reduction project, **not** a sandbox fold. So PG.06b proves the
+real-data pipeline and quantifies the remaining job; it does **not** fabricate a `nu(t)` or claim a
+comb. Output: `results/pg06b_vela.json`.
+
+**Offline reduction driver (`scripts/reduce_vela_nu_t.py`).** The full project wired end-to-end,
+runnable on a workstation: STAGE 1 (automated) downloads + barycentres + coarse-folds every Vela
+obs (resumable; `--max-obs 0` = all ~6.5 GB / hours) → `data/nicer_vela/vela_nu_perobs.csv`
+(secular spin-down + big glitches at ~mHz); STAGE 2 (documented research step) = phase-connect the
+TOAs with tempo2/PINT (+ glitch model) → `vela_nu_t.csv` at µHz; STAGE 3 hook = `detect_comb` at
+ω=2.58 on that `nu(t)`. Tested here on one obs (F0=11.19275 Hz); the full run is offline by design.
+
 ## Reproduce
 
 ```bash
 python -m venv .venv && . .venv/bin/activate && pip install -e .   # numpy/scipy/matplotlib
+pip install pint-pulsar                                            # for the PG.06/06b PINT fold
 python scripts/fetch_glitches.py        # (optional) re-fetch JBO sizes; derived CSV is committed
 python scripts/fetch_recovery.py        # (optional) re-fetch Yu+2013 Q/tau_d; derived CSV is committed
 python scripts/fetch_crab_ephemeris.py  # (optional) re-fetch Crab nu(t); derived CSV is committed
@@ -128,6 +185,10 @@ tfpt-pulsar audit                       # frozen constants / candidate ratios
 tfpt-pulsar validate                    # injection-recovery self-check of the machinery
 tfpt-pulsar analyze                     # PG.01/02/03/04 (static) on the real catalogues -> results/
 tfpt-pulsar dynamic                     # PG.05 dynamic recovery comb (omega=2.58) on real Crab nu(t)
+python scripts/fetch_nicer_j0537.py     # PG.06: confirm + list the 1165 NICER J0537 observations
+tfpt-pulsar nicer                       # PG.06 scaffold: env + plan + downstream comb (injection-validated)
+python scripts/fetch_nicer_vela.py      # PG.06b: confirm + list the 665 NICER Vela-pulsar observations
+tfpt-pulsar vela --download             # PG.06b: download one real Vela obs + PINT-fold -> detect the pulsation
 # or without install:  PYTHONPATH=src python -m tfpt_pulsar.cli analyze
 ```
 
@@ -137,9 +198,13 @@ tfpt-pulsar dynamic                     # PG.05 dynamic recovery comb (omega=2.5
 scripts/fetch_glitches.py        # download + parse Jodrell Bank gTable.html -> data/jbo_glitches.csv
 scripts/fetch_recovery.py        # download + parse Yu+2013 expTab.tex   -> data/yu2013_recovery.csv
 scripts/fetch_crab_ephemeris.py  # download + parse Crab crab2.txt       -> data/crab_ephemeris.csv (PG.05)
+scripts/fetch_nicer_j0537.py     # HEASARC nicermastr -> data/nicer_j0537/j0537_observations.csv (PG.06)
+scripts/fetch_nicer_vela.py      # HEASARC nicermastr -> data/nicer_vela/vela_observations.csv (PG.06b)
+scripts/reduce_vela_nu_t.py      # OFFLINE heavy driver: download+barycentre+fold all Vela obs -> nu(t) (PG.06b)
 data/jbo_glitches.csv            # committed derived size catalogue (726 glitches)
 data/yu2013_recovery.csv         # committed derived recovery table (60 Q/tau_d components, 46 glitches)
 data/crab_ephemeris.csv          # committed derived Crab nu/nudot(t) monthly series (479 points, PG.05)
+data/nicer_j0537/j0537_observations.csv  # committed list of 1165 NICER J0537 observations (PG.06)
 src/tfpt_pulsar/constants.py     # frozen TFPT kernel + phi0 + preregistered candidate ratios
 src/tfpt_pulsar/catalog.py       # HTML/TeX/ephemeris parsers + CSV loaders + grouping
 src/tfpt_pulsar/discreteness.py  # PG.01: log-periodicity + GMM + 3 nulls (lognormal/KDE/population)
@@ -147,8 +212,11 @@ src/tfpt_pulsar/ratios.py        # PG.02/03: per-pulsar size + waiting-time kern
 src/tfpt_pulsar/recovery.py      # PG.04: Q-cluster (phi0 multiples) + tau_d multi-timescale ladder
 src/tfpt_pulsar/dsi.py           # discrete-scale-invariance predictor (omega=2pi/ln lambda)
 src/tfpt_pulsar/nu_recovery.py   # PG.05: dynamic recovery comb (omega=2.58) on real Crab nu(t) + injection
+src/tfpt_pulsar/nicer_j0537.py   # PG.06: J0537 stacked-recovery scaffold (PINT upstream + comb downstream)
+src/tfpt_pulsar/vela.py          # PG.06b: REAL NICER Vela download + PINT barycentre + H-test fold
 src/tfpt_pulsar/validation.py    # injection-recovery self-check
-src/tfpt_pulsar/cli.py           # `tfpt-pulsar audit|validate|analyze|dynamic`
-results/results.json             # committed summary (+ pg01_periodogram.png / pg05_*.png, gitignored)
-results/pg05_recovery_comb.json  # committed PG.05 summary
+src/tfpt_pulsar/cli.py           # `tfpt-pulsar audit|validate|analyze|dynamic|nicer|vela`
+data/nicer_vela/vela_observations.csv  # committed list of 665 NICER Vela-pulsar observations (PG.06b)
+results/results.json             # committed summary (+ pg01/pg05/pg06 png, gitignored)
+results/pg05_recovery_comb.json, pg06_nicer_j0537.json, pg06b_vela.json  # committed PG.05/06/06b summaries
 ```

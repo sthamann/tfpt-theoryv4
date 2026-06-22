@@ -1,0 +1,16 @@
+{
+  "n_observations": 665,
+  "span_years": 7.873925552006303,
+  "total_exposure_ks": 761.7079167402834,
+  "full_reduction_gb": 6.5,
+  "detection": {
+    "obsid": "0020180102",
+    "n_photons": 430739,
+    "n_used": 40000,
+    "best_f0_hz": 11.19275,
+    "h_stat": 18.4,
+    "detected": true
+  },
+  "full_reduction_note": "a comb-quality nu(t) needs a PHASE-CONNECTED timing solution over all 665 obs (per-obs H-test gives only ~mHz; the recovery/comb lives at ~uHz). That is ~6.5 GB of events + a multi-hour PINT/tempo2 timing analysis + glitch handling -- a real reduction project, not a sandbox fold.",
+  "verdict": "REAL NICER Vela data reduced: 430739 photons barycentred with PINT (NO HEASoft), Vela pulsation DETECTED at F0=11.19275 Hz (H=18.4; period ~89.34 ms) on a 40000-photon subsample of obsid 0020180102. PIPELINE PROVEN ON REAL DATA. a comb-quality nu(t) needs a PHASE-CONNECTED timing solution over all 665 obs (per-obs H-test gives only ~mHz; the recovery/comb lives at ~uHz). That is ~6.5 GB of events + a multi-hour PINT/tempo2 timing analysis + glitch handling -- a real reduction project, not a sandbox fold. No claim."
+}

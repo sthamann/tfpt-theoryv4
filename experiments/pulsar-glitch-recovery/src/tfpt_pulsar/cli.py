@@ -7,11 +7,16 @@ Commands:
               real Jodrell Bank catalogue; write results/results.json (+ plot)
     dynamic   PG.05: the dynamic recovery-comb test (omega=2.58) on the real Crab
               nu(t) ephemeris; injection-validated; write results/pg05_*.json (+ plot)
+    nicer     PG.06 (heavy): scaffold the dense J0537-6910 stacked recovery-comb test
+              (HEASARC L2 events + PINT -> nu(t) -> stack); downstream injection-validated
+    vela      PG.06b: REAL NICER Vela-pulsar data -- download one obs (--download) + PINT-fold to
+              detect the pulsation; proves the reduction pipeline on real data (no HEASoft)
 """
 
 from __future__ import annotations
 
 import argparse
+import csv
 import json
 from pathlib import Path
 
@@ -122,6 +127,105 @@ def _dynamic(seed: int) -> int:
     print(f"\nWrote {RESULTS / 'pg05_recovery_comb.json'}")
     plot_path = make_plot(RESULTS / "pg05_recovery_comb.png", seed=seed)
     print(f"Wrote {plot_path}")
+    return 0
+
+
+def _nicer(seed: int) -> int:
+    """PG.06 (heavy/optional) -- the dense, stacked recovery-comb test on PSR J0537-6910.
+
+    Upstream (NICER L2 events + PINT folding -> nu(t)) is gated on ~GB downloads; downstream
+    (nu(t) -> superposed-epoch stack -> kernel-omega comb) is injection-validated now on a
+    synthetic J0537-like series and runs unchanged on real data when present.
+    """
+    from .nicer_j0537 import OMEGA, make_plot, run
+
+    r = run(seed=seed)
+    print("=" * 80)
+    print("PG.06 (heavy) -- dense stacked recovery comb on PSR J0537-6910 (the 'Big Glitcher')")
+    print(f"  kernel cascade log-frequency omega = {OMEGA:.3f}")
+    print("=" * 80)
+    e = r.env
+    print(f"  environment: PINT={e.pint} astropy={e.astropy} scipy={e.scipy} "
+          f"HEASoft={e.heasoft}")
+    print(f"    {e.note}")
+    print("\n  fetch/reduce plan (data/nicer_j0537/):")
+    for line in r.plan:
+        print(f"    {line}")
+    if r.real_available and r.real is not None:
+        print(f"\n  REAL nu(t): stacked comb gain={r.real.gain:.3f} p={r.real.p_value:.3f} "
+              f"({r.real.n_segments} segments, {r.real.tau_points} tau-bins) -> "
+              f"detected={r.real.detected}")
+    elif r.validation is not None:
+        v = r.validation
+        print(f"\n  detector validation (comb detection rate over {v.n_seeds} noisy seeds; "
+              f"eps={v.eps}, noise={v.noise}):")
+        print(f"    SUFFICIENT range (~{v.long_periods:.1f} comb periods, Vela-like long interval):")
+        print(f"      comb detected {100*v.long_comb_rate:.0f}%  |  false-positive (null) "
+              f"{100*v.long_null_rate:.0f}%  -> validated={v.passed}")
+        print(f"    J0537 range (~{v.j0537_periods:.1f} comb periods, ~100 d interval):")
+        print(f"      same comb detected {100*v.j0537_comb_rate:.0f}%  -> range-blind "
+              "(stacking buys amplitude, NOT ln(tau) range)")
+    print(f"\n==> {r.verdict}")
+
+    RESULTS.mkdir(exist_ok=True)
+    out = {
+        "kernel_omega": OMEGA,
+        "environment": vars(r.env),
+        "fetch_plan": r.plan,
+        "real_available": r.real_available,
+        "real": vars(r.real) if r.real else None,
+        "synthetic_validation": vars(r.validation) if r.validation else None,
+        "verdict": r.verdict,
+    }
+    (RESULTS / "pg06_nicer_j0537.json").write_text(json.dumps(out, indent=2), encoding="utf-8")
+    print(f"\nWrote {RESULTS / 'pg06_nicer_j0537.json'}")
+    if not r.real_available:
+        print(f"Wrote {make_plot(RESULTS / 'pg06_range_finding.png')}")
+    return 0
+
+
+def _vela(seed: int, download: bool) -> int:
+    """PG.06b -- REAL NICER Vela-pulsar data: prove the reduction pipeline on real photons.
+
+    Vela is the long-interval target PG.06 pointed at. This downloads one real NICER observation
+    (if asked / absent) and folds it with PINT to detect the Vela pulsation -- proving the
+    download->barycentre->fold pipeline on REAL data (no HEASoft). A comb-quality nu(t) still needs
+    a full phase-connected timing solution (documented, heavy).
+    """
+    from .vela import OBS_CSV, download_one, run
+
+    if download and OBS_CSV.exists():
+        with OBS_CSV.open(encoding="utf-8") as fh:
+            first = next(csv.DictReader(fh), None)
+        if first:
+            print(f"  downloading one real NICER Vela obs {first['obsid']} (~10 MB)...")
+            download_one(first["obsid"], float(first["mjd_start"]))
+
+    r = run(seed=seed)
+    print("=" * 80)
+    print("PG.06b -- REAL NICER Vela-pulsar (PSR B0833-45) reduction pipeline")
+    print("=" * 80)
+    print(f"  archive: {r.n_observations} observations, {r.span_years:.1f} yr, "
+          f"~{r.total_exposure_ks:.0f} ks (full L2 download ~{r.full_reduction_gb} GB)"
+          if r.n_observations else "  (run scripts/fetch_nicer_vela.py first for the obs list)")
+    if r.detection is not None:
+        d = r.detection
+        print(f"\n  REAL-DATA fold (obsid {d.obsid}):")
+        print(f"    {d.n_photons} photons barycentred (PINT, no HEASoft); fold on {d.n_used} subsample")
+        print(f"    Vela pulsation: F0={d.best_f0_hz} Hz (period {1000.0/d.best_f0_hz:.2f} ms), "
+              f"H={d.h_stat} -> detected={d.detected}")
+    else:
+        print("\n  no observation downloaded yet -> rerun with --download")
+    print(f"\n  full comb-quality nu(t): {r.full_reduction_note}")
+    print(f"\n==> {r.verdict}")
+
+    RESULTS.mkdir(exist_ok=True)
+    out = {"n_observations": r.n_observations, "span_years": r.span_years,
+           "total_exposure_ks": r.total_exposure_ks, "full_reduction_gb": r.full_reduction_gb,
+           "detection": vars(r.detection) if r.detection else None,
+           "full_reduction_note": r.full_reduction_note, "verdict": r.verdict}
+    (RESULTS / "pg06b_vela.json").write_text(json.dumps(out, indent=2), encoding="utf-8")
+    print(f"\nWrote {RESULTS / 'pg06b_vela.json'}")
     return 0
 
 
@@ -254,9 +358,12 @@ def _analyze(seed: int) -> int:
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(
         description="TFPT recovery-kernel search in pulsar glitches (Jodrell Bank)")
-    ap.add_argument("command", choices=["audit", "validate", "analyze", "dynamic"],
+    ap.add_argument("command",
+                    choices=["audit", "validate", "analyze", "dynamic", "nicer", "vela"],
                     nargs="?", default="analyze")
     ap.add_argument("--seed", type=int, default=0)
+    ap.add_argument("--download", action="store_true",
+                    help="vela: download one real NICER Vela obs before folding")
     args = ap.parse_args(argv)
     if args.command == "audit":
         return _audit()
@@ -264,6 +371,10 @@ def main(argv: list[str] | None = None) -> int:
         return _validate()
     if args.command == "dynamic":
         return _dynamic(args.seed)
+    if args.command == "nicer":
+        return _nicer(args.seed)
+    if args.command == "vela":
+        return _vela(args.seed, args.download)
     return _analyze(args.seed)
 
 

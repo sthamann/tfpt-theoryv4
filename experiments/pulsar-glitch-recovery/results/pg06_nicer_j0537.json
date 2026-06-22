@@ -1,0 +1,39 @@
+{
+  "kernel_omega": 2.5827069463082895,
+  "environment": {
+    "pint": true,
+    "astropy": true,
+    "numpy": true,
+    "scipy": true,
+    "heasoft": false,
+    "note": "L2-events + PINT path: HEASoft is NOT required (use archived *_cl.evt). "
+  },
+  "fetch_plan": [
+    "1. Resolve NICER ObsIDs for PSR J0537-6910 (target also = 'SNR 0540-69' field):",
+    "     HEASARC Xamin / Browse table 'nicermastr', object 'PSR J0537-6910' (or RA/Dec",
+    "     05:37:47.4 -69:10:20); ObsIDs are in the 10503601xx / 20503601xx / 30503601xx series.",
+    "2. Pull the cleaned L2 events + orbit per ObsID from the public archive tree",
+    "     https://heasarc.gsfc.nasa.gov/FTP/nicer/data/obs/<YYYY_MM>/<ObsID>/",
+    "       xti/event_cl/ni<ObsID>_0mpu7_cl.evt.gz     (cleaned L2 photon events)",
+    "       auxil/ni<ObsID>.orb.gz                     (orbit, for barycentring)",
+    "     (a per-target wget script is offered by Xamin 'Download products'.)",
+    "   NOTE: this is ~GB across the full monitoring campaign -- a real download.",
+    "3. (RXTE 1999-2011, optional, doubles the baseline) HEASARC table 'xtemaster',",
+    "     PCA event data for J0537; reduce with the standard RXTE recipe.",
+    "4. NO HEASoft needed for the L2 path: PINT barycentres from the .orb + folds the events."
+  ],
+  "real_available": false,
+  "real": null,
+  "synthetic_validation": {
+    "eps": 0.3,
+    "noise": 0.1,
+    "n_seeds": 25,
+    "long_periods": 2.8,
+    "long_comb_rate": 0.96,
+    "long_null_rate": 0.0,
+    "j0537_periods": 1.8929578624225245,
+    "j0537_comb_rate": 0.0,
+    "passed": true
+  },
+  "verdict": "UPSTREAM NOT RUN (no real J0537 nu(t) yet): the dense X-ray event reduction needs PINT (INSTALLED) + ~GB of NICER L2 events from HEASARC (see plan). DETECTOR validated over noisy realisations: in the SUFFICIENT-RANGE regime (~2.8 comb periods) the comb is detected 96% of the time with a 0% false-positive rate -> validated=True. KEY FINDING (machine-checked): the comb periodogram needs >~2.8 periods in ln(tau); a J0537 ~100 d inter-glitch interval gives only ~1.9 periods, where the same comb is detected just 0% of the time -- a hard RANGE limit that stacking many glitches CANNOT fix (stacking buys amplitude, not ln(tau) range). => the decisive target is a LONG-interval, densely-monitored pulsar (Vela: glitch every ~3 yr, daily timing -> ~3 decades in tau), NOT J0537. No real-data claim."
+}

@@ -71,10 +71,15 @@ def run() -> dict:
             "machinery is validated end-to-end by the injection suite (4/4). With only two close "
             "bands (227/229 GHz) the frequency null is a diagnostic, not a final achromaticity proof.")
     if _have("ehtim") and not _have("ipole"):
-        note += (" UPDATE: eht-imaging is now installed and verified on the real M87 uvfits "
-                 "(it parses the 2017 data, net |m|~3.4%, EVPA~-34 deg at 229 GHz), so the IMAGING "
-                 "stage (3) is unblocked -- the SOLE remaining blocker is the GRMHD forward model "
-                 "(stage 4: ipole/koral + GRMHD simulation data, not pip-installable).")
+        note += (" UPDATE: eht-imaging is installed and READS the real M87 2017 uvfits (verified: "
+                 "net |m|~3.4%, EVPA~-34 deg at 229 GHz at short baselines). The imaging LIBRARY is "
+                 "thus available, but a science-grade chi0_obs(r) reconstruction is itself non-"
+                 "trivial -- a naive one-shot RML run does NOT converge (needs the EHT-pipeline "
+                 "flux scale, station gains, regulariser tuning + validation), so stage 3 is "
+                 "'library present, expert setup required', not a push-button step. AND the "
+                 "discriminating residual still needs the GRMHD forward model (stage 4: ipole/koral "
+                 "+ simulation data, not pip-installable). So the chi0_res 3-null test stays "
+                 "data_limited on BOTH a careful polarimetric reconstruction and the GRMHD baseline.")
     out = {
         "pipeline": "EHT achromatic dyonic residual (chi0_res then 3 nulls)",
         "stages": [asdict(s) for s in stages],

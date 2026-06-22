@@ -121,6 +121,26 @@ ROWS = [
      "strain_level_test", "Jodrell Bank Crab monthly ephemeris (479 nu/nudot points, 1988-2026)",
      "a log-periodic comb at omega=2.58 is special vs the off-kernel periodogram in a clean segment",
      "data_limited"],
+    ["pulsar", "real NICER Vela reduction pipeline (PG.06b)",
+     "download L2 events + PINT barycentre + H-test fold of the long-interval target (Vela)",
+     "PIPELINE PROVEN ON REAL DATA: 665 NICER Vela obs confirmed (HEASARC, ~7.9 yr); one obs "
+     "downloaded + PINT-barycentred (no HEASoft) -> Vela pulsation DETECTED at F0=11.193 Hz "
+     "(89.34 ms, H=18.4). Comb-quality nu(t) still needs phase-connected timing (~6.5 GB, multi-hour)", None,
+     "search_target", "boundary recovery kernel (dynamic, real-data pipeline)",
+     "strain_level_test", "HEASARC NICER Vela pulsar PSR B0833-45 (665 obs) + PINT",
+     "a phase-connected nu(t) over a >~2.8-period Vela inter-glitch recovery shows the omega=2.58 comb",
+     "data_limited"],
+    ["pulsar", "dense J0537 stacked recovery comb + range finding (PG.06)",
+     "same omega=2.583 comb, stacked over many J0537 glitches (NICER/RXTE, dense)",
+     "data_limited/scaffold: 1165 NICER J0537 observations confirmed (HEASARC, ~8 yr); upstream "
+     "(L2 events + PINT fold -> nu(t)) gated on ~GB downloads (no HEASoft needed); downstream "
+     "injection-validated (comb detected 96%, 0% false-positive in sufficient range). KEY: the comb "
+     "needs >~2.8 ln(tau) periods; J0537 ~100 d intervals give ~1.9 (range-blind) -- stacking buys "
+     "amplitude not range -> the decisive target is a long-interval pulsar (Vela), not J0537", None,
+     "search_target", "boundary recovery kernel (dynamic, stacked)",
+     "strain_level_test", "HEASARC NICER J0537-6910 (Ho+2020 MNRAS 498,4605; 1165 obs) + PINT",
+     "a stacked log-periodic comb at omega=2.58 over a >~2.8-period (long-interval) recovery",
+     "data_limited"],
     ["pulsar", "recovery-waveform clock template (PG.04/QT.04)",
      "walled 2-mode clock: bend tau ratio 2.7095 + protected floor + wall (<=2 modes)",
      "GW single-event ringdown DONE (gw Stage 2): the bend is degenerate within one monotone recovery "
@@ -235,6 +255,12 @@ ROWS = [
      "asymptotic regime not measured (n=0 fundamental only)", None, "search_target",
      "horizon ringdown (Hod, [C]/[P])", "search_target", "GW150914/GW250114 ringdown",
      "high-overtone omega_R/T_H != ln3", "data_limited"],
+    # ---- EM fixed point alpha^-1 (the headline compiler prediction; v3_em_alpha) ----
+    ["EM", "fine-structure constant alpha^-1",
+     "137.0359992168 (unique positive root of the boundary U(1) Ward identity F_U(1)=0; M=41 index, v3)",
+     "CODATA 2022 137.035999177(21)", 1.9, "prediction", "EM fixed point (compiler primitive)",
+     "prediction_of_record", "CODATA 2022 (also scored live in verification/v307_data_watchdog)",
+     "alpha^-1 outside the CODATA window at >3 sigma", "consistent"],
     # ---- Lambda/H0 engine (lambda-h0-engine) ----
     ["cosmo", "Lambda hierarchy rho_Lambda/M_pl^4", "(3/256pi^4) e^-2ainv = 122.948 orders",
      "measured 122.943 orders (dev 0.004 orders, NOT a pull_sigma)", None, "prediction",
@@ -285,6 +311,19 @@ ROWS = [
      "full BDP ODE solve: eta_B=6.5e-10 at the frozen M1 (ratio 1.07; kappa_f=0.092)", None, "bridge",
      "leptogenesis interface (Boltzmann)", "downstream_bridge", "ftransfer/leptogenesis_boltzmann/fboltzmann_solve.py",
      "flavored Boltzmann misses eta_B=6.1e-10 by >3x", "consistent"],
+    ["lab", "charged-lepton Koide ratio Q (F_pole)",
+     "Q* = 2/3 = 0.666667 (democratic |Z2|/N_fam; realised by the source->pole transfer)",
+     "PDG pole masses Q = 0.6666645 (= 2/3 to 3e-6, the famous coincidence)", None, "bridge",
+     "F_pole source->pole [C] (multiplier (2/3)^6; v93/v183) -- transfer conditional, not closed",
+     "downstream_bridge", "PDG charged-lepton pole masses; ftransfer/koide_source_to_pole",
+     "Q_pole drifts off 2/3 at >3 sigma", "consistent"],
+    ["lab", "proton/electron mass ratio m_p/m_e (F_QCD)",
+     "~1836.15 (QCD/EW cross-sector, carrier b3=-7 run, v262); exact 1920-84+0.151=1836.151 [O] numerology-flagged",
+     "PDG 1836.15267", None, "bridge",
+     "F_QCD cross-sector matching [O] -- frontier keeps it OPEN (the exact combination would invite "
+     "the numerology charge); only the b3=-7 QCD-run structure is [I]",
+     "downstream_bridge", "PDG; ftransfer/qcd_matching_mp_me",
+     "a closed first-principles m_p/m_e disagrees with 1836.15", "data_limited"],
     ["EW", "Higgs near-criticality", "lambda(M_Pl)~0, beta_lambda(M_Pl)~0 (double-critical)",
      "Buttazzo2013 fit: lambda(M_Pl)=-0.0143+/-0.0057, beta_lambda=+1.9e-4 (metastable 2.5 sigma)",
      None, "bridge", "seam free-field boundary",
@@ -355,6 +394,14 @@ _LONG = ("qnm", "m_betabeta", "page curve", "recovery kernel")
 # never silently double-counted).
 OVERRIDES: dict[str, dict] = {
     "achromatic dyonic intercept": {"independence_group": "c3_topform_horizon"},
+    # alpha^-1 is the PRIMARY alpha_em member: the Lambda hierarchy + S_dS DERIVE from it,
+    # so all three are ONE cluster, not three independent hits. +1.9 sigma at CODATA precision
+    # (a watch item, also tracked live in v307_data_watchdog) -- not a clean win.
+    "fine-structure constant": {"independence_group": "alpha_em", "watch_flag": True,
+                                "watch_level": "medium"},
+    # F_transfer bridges to known constants: real handles, but weakly discriminating / [C]/[O].
+    "Koide ratio Q": {"discriminative_power": "weak"},
+    "proton/electron mass ratio": {"discriminative_power": "weak"},
     # both CP phases are ONE hexagonal mu6 CM unit rho=e^{i pi/3} split by the Z2 sheet
     # (v231/v233): delta_PMNS = delta_CKM,lead + pi. They are correlated, NOT two
     # independent hits; the leptonic phase has weak discriminative power (large delta_CP error).

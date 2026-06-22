@@ -14,6 +14,12 @@ data/*
 !data/jbo_glitches.csv
 !data/yu2013_recovery.csv
 !data/crab_ephemeris.csv
+!data/nicer_j0537/
+data/nicer_j0537/*
+!data/nicer_j0537/j0537_observations.csv
+!data/nicer_vela/
+data/nicer_vela/*
+!data/nicer_vela/vela_observations.csv
 *.tar.gz
 
 # generated plots (the small results.json summary IS committed)

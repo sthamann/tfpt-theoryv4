@@ -14,12 +14,17 @@ without the ~1.8 MB raw HTML download.
 | `yu2013_recovery.csv` (committed) | parsed `expTab.tex` recovery table | 60 components / 46 glitches | parsed by `scripts/fetch_recovery.py` |
 | `crab2.txt` (gitignored) | Jodrell Bank Crab monthly ephemeris (raw text) | ~580 rows | `https://www.jb.man.ac.uk/pulsar/crab/crab2.txt` |
 | `crab_ephemeris.csv` (committed) | parsed `nu`/`nudot`(t) monthly series | 479 points, 1988–2026 | parsed by `scripts/fetch_crab_ephemeris.py` |
+| `nicer_j0537/j0537_observations.csv` (committed) | NICER J0537-6910 observation list (name, MJD, exposure) | 1165 obs, 2017–2025 | HEASARC `nicermastr` TAP via `scripts/fetch_nicer_j0537.py` (PG.06) |
+| `nicer_vela/vela_observations.csv` (committed) | NICER Vela-pulsar (PSR B0833-45) observation list | 665 obs, MJD 57941–60817 (~7.9 yr) | HEASARC `nicermastr` cone search via `scripts/fetch_nicer_vela.py` (PG.06b) |
+| NICER L2 events + orbit (gitignored, ~GB) | per-ObsID `*_0mpu7_cl.evt` + `.orb` (J0537 ~6.6 GB, Vela ~6.5 GB) | — | HEASARC archive / Xamin (PG.06/06b upstream; **not** auto-fetched; one Vela obs is real-data-proven) |
 
 Cite **Basu et al. 2022, MNRAS 510, 4049** (size catalogue), **Yu et al. 2013,
 MNRAS 429, 688** (recovery table) — plus the per-row original references in
 `yu2013_recovery.csv` (e.g. `cdk88`=Cordes+1988, `wbl01`=Wong+2001, `dml02`=Dodson+2002,
 `lps93`=Lyne+1993) — and the **Jodrell Bank Crab Pulsar Monthly Ephemeris** (Lyne,
-Pritchard & Graham-Smith 1993, MNRAS 265, 1003; updated monthly) when using these data.
+Pritchard & Graham-Smith 1993, MNRAS 265, 1003; updated monthly) when using these data. For the
+PG.06 J0537-6910 NICER data cite **Ho et al. 2020 (MNRAS 498, 4605)** and **Ho et al. 2021
+(ApJL 913, L27)** plus the HEASARC NICER archive.
 
 ## Re-fetch
 
