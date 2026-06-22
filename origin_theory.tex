@@ -176,6 +176,121 @@ is the order-$3$ power $h^{10}$ in $\langle h\rangle=\Z/30$, while the $\mu_4$ s
 recurring $\{2,3,5\}$ is not many numbers but \emph{one} icosahedral singularity read several ways \mE.
 \end{keybox}
 
+\par\smallskip\noindent\textbf{The atoms are the network's spectral angles --- the golden ratio is the
+$\gcar{=}5$ signature (\veri{v313\_golden\_atoms\_spectral.py}).} The same $(2,3,5)$ has a spectral face. The
+affine-$E_8$ adjacency characteristic polynomial factors as $x(x^2{-}4)(x^2{-}1)(x^2{-}x{-}1)(x^2{+}x{-}1)$, so its
+non-trivial eigenvalues are exactly $2\cos(\pi/k)$ for $k\in\{|\Z_2|,\Nfam,\gcar\}=\{2,3,5\}$: $2\cos(\pi/2){=}0$,
+$2\cos(\pi/3){=}1$, $2\cos(\pi/5){=}\phi$ (the golden ratio, with the second harmonic $2\cos(2\pi/5){=}1/\phi$).
+\mE\ So the golden ratio is \emph{specifically} the $\gcar{=}5$ ($5$-fold) signature, and $\gcar{=}5$ gains a new
+spectral witness ($\pi/5$) distinct from Pascal and Riemann--Roch. The selection is the icosahedral one:
+$1/|\Z_2|{+}1/\Nfam{+}1/\gcar=31/30>1$ is the spherical-triangle condition forcing the \emph{finite}
+$2I\Rightarrow E_8$, and its numerator $31=2^{\gcar}{-}1=248/8=1{+}h(E_8)$ is exactly the gap-decoupling margin
+numerator (\vref{v63}/\vref{v76}) over the Coxeter $30=h(E_8)$ --- a unification of already-anchored quantities,
+not new evidence. Honestly, $\phi$ is a \emph{structural} lattice/network quantity, absent from the dimensionless
+readouts; and as the $E_8$-quasicrystal (Elser--Sloane cut-and-project) ratio it is a concrete candidate substrate
+for the rewrite question \mC.
+
+\par\smallskip\noindent\textbf{Static vs.\ dynamic rates: a number-field split}
+(\veri{v314\_rate\_translation.py}). The discrete kernel and the dynamic recovery sit in \emph{different number
+fields}, which is the precise reason their rates do not freely interconvert. The adjacency spectrum splits as a
+rational part $\{0,\pm1,\pm2\}\subset\mathbb Q$ and a golden part $\{\pm\phi,\pm1/\phi\}\subset\mathbb Q(\sqrt5)$,
+while the dynamic transfer spectrum $\{1,(2/3)^6,(1/3)^6\}$ is \emph{entirely rational}. \mE\ So the family/sheet
+rates \emph{do} translate --- the rational angles $2\cos(\pi/2){=}0$ ($|\Z_2|$) and $2\cos(\pi/3){=}1$ ($\Nfam$)
+are the same atoms that build the recovery rate $(2/3)^6=(|\Z_2|/\Nfam)^{2\Nfam}\in\mathbb Q$ --- but the carrier
+$5$-fold (golden, $\mathbb Q(\sqrt5)$) has \emph{no} rational dynamic image (a field obstruction: $2/3$ is neither
+an adjacency nor a lazy-update eigenvalue, and the heat-kernel time $\Delta/(2-\phi)\approx6.37$ is not clean).
+\mE\ The carrier is therefore \emph{static-only} --- $\gcar{=}5$ builds the lattice and spectrum, while
+$\{|\Z_2|,\Nfam\}{=}\{2,3\}$ drive the relaxation. The only object holding both is the order-$30$ Coxeter element,
+$30=\gcar\,(2\Nfam)=5\cdot6$ (the golden in the order-$5$ factor, the recovery exponent $6{=}2\Nfam$ in the
+order-$6$ factor); correspondingly the $\phi$-quasicrystal $E_8=H_4{+}\phi H_4$ carries the carrier but not the
+(rational, $3$-fold) cusp-weight family dynamics \mC.
+
+\par\smallskip\noindent\textbf{Couple or factorize? A cyclotomic answer}
+(\veri{v315\_coxeter\_coupling.py}). The order-$30$ Coxeter element does \emph{not} dynamically entangle the two
+sectors --- as a cyclic group it \emph{factorizes}, $\Z/30=\Z/5\times\Z/6$ (a direct product, decoupled, in line
+with the field obstruction above). It couples them instead at the \emph{field} level: $\mathbb Q(\zeta_{30})$ is the
+compositum of the carrier field $\mathbb Q(\zeta_5)$ (which contains the golden $\sqrt5=\phi+1/\phi$) and the family
+field $\mathbb Q(\zeta_3)$, with degree $[\mathbb Q(\zeta_{30}){:}\mathbb Q]=8=$ rank $E_8$. \mE\ Its Galois group is
+exactly $(\Z/5)^\times\times(\Z/3)^\times=\Z/4\times\Z/2=\mu_4\times\Z_2$ (order $8$, maximal element order $4$,
+\emph{not} cyclic) --- so the $\mu_4$ seam clock \emph{is} the Galois group of the carrier's golden field, and the
+$\Z_2$ sheet that of the family field. The carrier ($\sqrt5$, $5$-fold) and the family ($\zeta_3$, $3$-fold) are
+thus conjugate sub-data of \emph{one} cyclotomic field: the static$\leftrightarrow$dynamic bridge is
+\emph{arithmetic} (Galois), not a dynamical generator \mC.
+
+\par\smallskip\noindent\textbf{Does the Galois action reach the physics? The CP phases}
+(\veri{v316\_galois\_readout.py}). It does --- through the \emph{family} factor. The hexagonal CP unit
+$\rho=\zeta_6=\zeta_{30}^5$ is exactly the order-$6=2\Nfam$ factor $c^5$ above (the carrier factor being
+$\zeta_5=\zeta_{30}^6$), so the leading CP phases are its cyclotomic arguments:
+$\delta_{\mathrm{CKM}}^{\mathrm{lead}}=\pi/3=\arg\zeta_6$ and $\delta_{\mathrm{PMNS}}=4\pi/3=\arg\zeta_6^{\,4}$ (the
+power $4=|\mu_4|$), with $\zeta_6^4=-\zeta_6$ the $\Z_2$ sheet flip and $\mu_6=\mu_3\times\mu_2$ (family $\times$
+sheet) \mC. \mE\ Crucially the family Galois factor itself is physical: $\mathrm{Gal}(\mathbb Q(\zeta_6)/\mathbb Q)
+=\Z_2$, $\zeta_6\mapsto\zeta_6^5=\bar\zeta_6$, \emph{is} CP conjugation $\delta\mapsto-\delta$. The carrier factor
+$\zeta_5$ (the golden $\sqrt5$) carries no phase --- $\mu_4$ stays static --- and the \emph{magnitudes}
+($\sin^2\theta_{12}=\tfrac13-\phiz/2$, with $\phiz$ transcendental) are not cyclotomic at all. So the
+$\mu_4\times\Z_2$ coupling touches the readouts exactly in the phase sector the field split predicts: the CP phases
+are family-factor cyclotomic data, the magnitudes the analytic seed \mE.
+
+\par\smallskip\noindent\textbf{Are the three generations themselves a Galois orbit?}
+(\veri{v317\_galois\_family.py}). The same arithmetic governs the family count, not only the phase. The three cusp
+weights $\{0,\tfrac13,\tfrac23\}$ (with $\mathrm{Spec}(Q_+)=3\alpha+1=\{1,2,3\}$, the $A_3$ exponents) are, under
+$w\mapsto e^{2\pi i w}$, the cube roots of unity $\{1,\zeta_3,\zeta_3^2\}$, and the cyclic family symmetry
+$w\mapsto w+\tfrac13$ is a \emph{transitive} $\mu_3$ orbit --- the three generations \emph{are} the cube-root orbit.
+\mE\ The family Galois $\Z_2$ ($\zeta_3\mapsto\zeta_3^2=\bar\zeta_3$, the same CP conjugation as above) refines this
+to $1{+}2$: it \emph{fixes} the rational weight $w=0$ and \emph{swaps} $w=\tfrac13\leftrightarrow\tfrac23$. And the
+fixed (rational) generation is precisely the recovery \emph{attractor} --- $w=0$ carries the transfer eigenvalue $1$
+(the stationary ``law'', \S\ref{sec:attractor}), while the Galois-conjugate pair carries the decaying modes
+$(2/3)^6,(1/3)^6$ (the hierarchy). \mE\ So the family structure is the same arithmetic as the CP phase: a $\mu_3$
+orbit, Galois-refined $1{+}2$, the fixed point the selected law; only the mass \emph{magnitudes} remain the analytic
+seed \mC.
+
+\par\smallskip\noindent\textbf{Capstone --- what is genuinely free} (\veri{v318\_arithmetic\_capstone.py}).
+Collecting the arc: the entire SM \emph{structural} sector --- the three generations, the two CP phases, their
+orbit/hierarchy ordering --- is the cyclotomic field $\mathbb Q(\zeta_{30})$ with Galois group $\mu_4\times\Z_2$
+(degree $[\mathbb Q(\zeta_{30}){:}\mathbb Q]=8=$ rank $E_8$, $30=|\Z_2|\Nfam\gcar=h(E_8)$), and this skeleton is
+\emph{forced} by the anchor atoms $\{2,3,5\}=e(a)$ --- no freedom. \mE\ The \emph{magnitude} layer is no freer: the
+seed $\phiz=(|\mu_4|/\Nfam)\cthree+\Omega_{\mathrm{adm}}\cthree^4=\tfrac43\cthree+48\cthree^4$ is a pure function of
+$\pi$ (the coefficients anchor-derived), so $\sin^2\theta_{12}=\tfrac13-\phiz/2$ and its kin are
+$\{a,\pi\}$-determined transcendentals --- not cyclotomic, not free. \mE\ Hence the complete input is
+$\{a,\pi,v_{\mathrm{geo}}\}$: \emph{zero} dimensionless free parameters (everything is $\{a,\pi\}$), $\pi$ the unique
+transcendental primitive, and $v_{\mathrm{geo}}$ the single dimensionful unit (No-Unit Theorem). \mO\ This rigidity
+holds \emph{given} the axioms; it does not by itself realise the structure on the raw seam --- that remains the open
+bedrock (\texttt{QGEO.SYM.01}/\texttt{SEAM.EQUIV.01}).
+
+\begin{keybox}[The translation clock: discrete $\leftrightarrow$ dynamic is one clock, $5\times6$ \mE/\mC\ (\veri{v319\_translation\_clock.py})]
+There is a vivid way to read the whole arc above. The bridge between the \emph{static} (lattice/spectrum) data
+and the \emph{dynamic} (recovery/relaxation) data is not a map but a \emph{clock} --- the order-$30$ Coxeter
+element --- and, because $\gcd(\gcar,2\Nfam)=\gcd(5,6)=1$, it factorises into \emph{two coprime hands}:
+\[
+  \boxed{\ \Z/30 \;=\; \underbrace{\Z/5}_{\text{static carrier }\gcar}\;\times\;\underbrace{\Z/6}_{\text{dynamic family }2\Nfam}\ },
+  \qquad 30 = h(E_8) = \gcar\,(2\Nfam).
+\]
+\textbf{The dynamic hand runs $0,1,2,3,4,5$} ($\Z/6=2\Nfam$): the recovery exponent is \emph{exactly}
+$6=2\Nfam$, the rate $(2/3)^6=(|\Z_2|/\Nfam)^{2\Nfam}$, the order-$6$ generator $c^5$ ($\zeta_6=\zeta_{30}^5$,
+the hexagonal CP unit). This is the hand that \emph{translates} into a dynamic rate (the rational/family
+sector, \vref{v314}). \textbf{The static hand runs $1,2,3,4,5$} ($\Z/5=\gcar$): the golden field
+$\mathbb Q(\sqrt5)$ ($\varphi=2\cos(\pi/5)$), field-obstructed --- it builds the lattice and spectrum but has
+\emph{no} rational dynamic image, so it is static-only ($\zeta_5=\zeta_{30}^6$ carries no phase). \textbf{And the
+``$0$ versus $1$'' is meaningful:} the resummed clock $\mathrm{rate}(n)=-p_2\ln(1-n/\Nfam)$ (\vref{v124}) has
+$\mathrm{rate}(0)=0$ --- position $0$ is the \emph{conserved law} (the attractor, eigenvalue $1$,
+\S\ref{sec:attractor}) --- while $n=1,2,\dots$ are the live decaying modes; correspondingly the $E_8$ live phases
+(the Coxeter exponents $=$ totatives of $30$) \emph{start at $1$}, the $0$ phase being the fixed law, not a
+totative. So $0,1,2,3,4,5$ is the law-inclusive reading and $1,2,3,4,5$ the live-only reading of the \emph{same}
+hand. One full turn $=\operatorname{lcm}(5,6)=30$ synchronises both hands: rank $E_8=8=\varphi(30)$ live phases,
+pairing into $|\mu_4|=4$ invariant planes (\S\ref{sec:coxeter}). The arithmetic is \mE; the reading ``the bridge
+\emph{is} one clock'' is \mC.
+\end{keybox}
+
+\begin{figure}[h]\centering
+\includegraphics[width=0.46\linewidth]{translation_clock.pdf}
+\caption{The translation clock (\veri{v319\_translation\_clock.py}): the discrete$\leftrightarrow$dynamic bridge
+is the order-$30$ Coxeter element read as two coprime hands. The \emph{dynamic} hand ($\Z/6=2\Nfam$, outer,
+ticks $0..5$) carries the recovery rate $(2/3)^6$ (exponent $6$), with position $0$ the conserved law (the
+attractor) and $1..5$ the live phases; the \emph{static} hand ($\Z/5=\gcar$, inner, ticks $1..5$) carries the
+golden $\sqrt5$ and no rate. One full turn is $\operatorname{lcm}(5,6)=30=h(E_8)$. \mE\ (arithmetic) / \mC\ (the
+one-clock reading).}
+\label{fig:translation-clock}
+\end{figure}
+
 % =====================================================================
 \section{The ``$8$'' is triply forced: geometry $=$ lattice $=$ gravity}\label{sec:eight}
 % =====================================================================

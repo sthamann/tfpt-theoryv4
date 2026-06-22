@@ -466,6 +466,7 @@ const NODES: DagNode[] = [
       "v56_unique_attractor.py",
       "v171_os_moment_cluster.py",
       "v222_cm_norm_duality.py",
+      "v319_translation_clock.py",
     ],
   },
 ];

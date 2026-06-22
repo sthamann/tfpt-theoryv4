@@ -453,6 +453,14 @@ $b_3=-7$, $b_2=-\tfrac{19}{6}$, $b_1=\tfrac{41}{10}$ (GUT-normalised; the same $
 $10\,b_1=\gcar\,2^{\gcar-2}+1$, \vref{v159}). \mC\ the physical RG directions ($b_3<0$ asymptotic freedom, $b_1>0$
 the $U(1)$ Landau pole) are EG-derived and feed the unification cross-check (\vref{v246}/\vref{v249}); \mO\ the
 two-loop matrix (\vref{v159}, PyR@TE) and the all-order construction stay open (\texttt{QFT4D.SPERT.03}).
+\par\smallskip\noindent\textbf{The carrier content \emph{is} one anomaly-free SM generation (\veri{v310\_carrier\_sm\_anomaly.py}).}
+Those one-loop coefficients sit on top of an exact spectrum/anomaly closure: the carrier half-spinor
+$16=\Lambda^{\mathrm{even}}(\mathbb C^5)=1{+}10{+}5$ decomposes under $SU(5)\subset SO(10)$ as $10{+}\bar5{+}1=$ exactly
+one Standard-Model generation $(Q,u^c,d^c,L,e^c,\nu^c)$, and that content is \mE\ gauge-anomaly-free
+($\sum Y=0$, $\sum Y^3=0$, $[SU(2)]^2U(1)=[SU(3)]^2U(1)=0$, exact) while reproducing $(b_1,b_2,b_3)=
+(\tfrac{41}{10},-\tfrac{19}{6},-7)$; a fourth family would shift $b_1$ off $41/10$, so $\Nfam{=}3$ \emph{pins} the RG.
+\mE\ for the spectrum, anomalies and one-loop $\beta$; the full Epstein--Glaser interacting $S$-matrix and the Yukawa
+sector stay \mC/\mO.
 \par\smallskip\noindent\textbf{The bridge to the physical S-matrix and one-loop unitarity (\veri{v278\_lsz\_bridge\_unitarity.py}).}
 The perturbative layer connects to the physical asymptotic S-matrix: \mE\ the EG time-ordered products of
 $S_{\mathrm{pert}}$ are the OS Wick-rotated correlators (\vref{v240}), so amputating external legs and taking the
@@ -772,6 +780,22 @@ cited theorems (OS/quasi-free clustering $+$ Kitaev free-fermion invertibility $
 over established TFPT facts ($16$ quasi-free Majoranas; transfer gap $6\ln(3/2)$): \emph{no undischarged
 TFPT-internal assumption remains}. It stays \mO\ (not machine-proved end-to-end), but the open front is reduced
 to citable machinery over a spectral gap that is provably positive.
+\par\smallskip\noindent\textbf{TOE-roadmap follow-ups --- the keystone as a typed certificate, the bedrock
+modular form, and the gap-decoupled measure (\veri{v308\_seam\_equiv\_chain.py}, \veri{v309\_modular\_bedrock.py},
+\veri{v311\_gap\_decoupled\_measure.py}).} Three machine-checked steps push the keystone arc further.
+\emph{(i) Composition certificate} (\veri{v308\_seam\_equiv\_chain.py}): the closing implication is one well-typed
+logical chain $\text{gap}{>}0\to\text{invertible}\to\text{holomorphic }c{=}8\to(E_8)_1$ whose arithmetic
+discriminators are exact --- $|\det\mathrm{Cartan}(E_8)|{=}1$ against $|\det\mathrm{Cartan}(D_8)|{=}4$, the carrier
+tower $4{\cdot}4{=}16\to4\to1$, $c{=}\gcar{+}\Nfam{=}8$ --- so the only undischarged premise is the cited OS step;
+\mE\ the discriminators, \mO\ the keystone. \emph{(ii) Modular bedrock} (\veri{v309\_modular\_bedrock.py}): with the
+four marks derived from Gauss--Bonnet (\vref{v216}) and the order-$4$ clock from cross-ratio $2$ (\vref{v214}), the
+quasi-free modular Hamiltonian $K=\log((1{-}C)/C)$ is built explicitly and $[\rho,K]{=}0\Leftrightarrow
+\omega{\circ}\rho{=}\omega$ (a $\Z_2$ profile breaks it), so the bedrock reduces \emph{non-circularly} to the
+Bisognano--Wichmann intrinsicality of the raw collar state; \mE\ the model, \mO\ the intrinsicality.
+\emph{(iii) Gap-decoupled measure} (\veri{v311\_gap\_decoupled\_measure.py}): the admissible sector clusters
+exponentially at rate $(2/3)^6$ (correlation length $1/\Delta$, finite susceptibility $729/665$) and the \vref{v76}
+margin $\Delta-31/(4\pi^2)>0$ decouples it from the un-built ambient, so the physical sector is a convergent object
+while \texttt{QG.AMB.01} stays \mO. Each pins the residual to a single named step rather than closing it.
 \par\smallskip\noindent\textbf{One surface for seam, carrier and lattice: the Kummer/K3
 (\veri{v260\_k3\_kummer\_unification.py}).} The pillowcase is the elliptic-involution quotient
 $T^2_{\tau=i}/(z{\mapsto}{-}z)$, its four marks the four $2$-torsion fixed points; squaring the construction

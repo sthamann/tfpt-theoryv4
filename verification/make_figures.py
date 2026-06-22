@@ -207,6 +207,71 @@ def fig_coxeter_circle():
     plt.close(fig)
 
 
+def fig_translation_clock():
+    """The discrete<->dynamic translation clock: the order-30 Coxeter element as
+    two coprime hands -- a static carrier ring (Z/5, golden, no rate) and a dynamic
+    family ring (Z/6, the recovery rate (2/3)^6), read law-inclusive (0..5) or
+    live-only (1..5).  Backs v319_translation_clock.py."""
+    fig, ax = plt.subplots(figsize=(5.6, 5.6))
+    th = np.linspace(0, 2 * np.pi, 400)
+
+    # --- outer ring: the dynamic 6-hand (Z/6 = 2 N_fam), ticks 0..5 ---
+    Rd = 1.0
+    ax.plot(Rd * np.cos(th), Rd * np.sin(th), color=C["blue"], lw=1.1, alpha=0.55)
+    for k in range(6):
+        a = np.pi / 2 - 2 * np.pi * k / 6          # start at top, clockwise
+        x, y = Rd * np.cos(a), Rd * np.sin(a)
+        law = (k == 0)
+        ax.scatter([x], [y], s=150 if law else 95,
+                   color=C["red"] if law else C["blue"], zorder=4,
+                   edgecolor="k", lw=0.5)
+        ax.annotate(str(k), (x, y), textcoords="offset points",
+                    xytext=(0, 0), ha="center", va="center", fontsize=8.5,
+                    color="white", fontweight="bold")
+    # mark the conserved law at position 0
+    ax.annotate("law (rate 0)\n= attractor", (0, Rd),
+                textcoords="offset points", xytext=(0, 12), ha="center",
+                fontsize=8, color=C["red"])
+
+    # --- inner ring: the static 5-hand (Z/5 = g_car), ticks 1..5 ---
+    Rs = 0.56
+    ax.plot(Rs * np.cos(th), Rs * np.sin(th), color=C["gold"], lw=1.1, alpha=0.6)
+    for k in range(5):
+        a = np.pi / 2 - 2 * np.pi * k / 5
+        x, y = Rs * np.cos(a), Rs * np.sin(a)
+        ax.scatter([x], [y], s=95, color=C["gold"], zorder=4,
+                   edgecolor="k", lw=0.5)
+        ax.annotate(str(k + 1), (x, y), textcoords="offset points",
+                    xytext=(0, 0), ha="center", va="center", fontsize=8.5,
+                    color="white", fontweight="bold")
+
+    ax.text(0, 0, r"$\mathbb{Z}/30$" "\n" r"$=5\times6$", ha="center",
+            va="center", fontsize=10, fontweight="bold", color=C["gray"])
+
+    # legends as text below
+    ax.text(0, -1.30, r"dynamic hand $\mathbb{Z}/6=2N_{\rm fam}$ (0..5): "
+            r"rate $(2/3)^6$, exponent $6$", ha="center", fontsize=8.2,
+            color=C["blue"])
+    ax.text(0, -1.46, r"static hand $\mathbb{Z}/5=g_{\rm car}$ (1..5): "
+            r"golden $\sqrt{5}$, no rate", ha="center", fontsize=8.2,
+            color=C["gold"])
+
+    ax.set_aspect("equal")
+    ax.set_xlim(-1.45, 1.45)
+    ax.set_ylim(-1.6, 1.45)
+    ax.set_xticks([])
+    ax.set_yticks([])
+    for sp in ax.spines.values():
+        sp.set_visible(False)
+    ax.set_title("The translation clock: discrete $\\leftrightarrow$ dynamic\n"
+                 "order-$30$ Coxeter element $=$ static $5$ $\\times$ dynamic $6$",
+                 fontsize=10)
+    fig.tight_layout()
+    fig.savefig(os.path.join(OUT, "translation_clock.pdf"))
+    fig.savefig(os.path.join(WEB, "translation_clock.png"), dpi=150)
+    plt.close(fig)
+
+
 def fig_attractor():
     """Gapped boundary transport -> unique attractor; geometric rate (2/3)^6."""
     spec = np.array([1.0, (2 / 3) ** 6, (1 / 3) ** 6])
@@ -1017,6 +1082,7 @@ if __name__ == "__main__":
     fig_action_tower()
     fig_status_heatmap()
     fig_coxeter_circle()
+    fig_translation_clock()
     fig_attractor()
     fig_sds_cover()
     fig_nariai_entropy()

@@ -962,6 +962,14 @@ export const papers: Paper[] = [
           "S_{dS}\\,\\rho_\\Lambda = \\frac{1}{128\\,c_3^4} = 32\\pi^4",
         ],
       },
+      {
+        title: "The translation clock: discrete ↔ dynamic is one clock (5 × 6)",
+        body: "The bridge between the static (lattice/spectrum) data and the dynamic (recovery) data is a clock — the order-30 Coxeter element — which factorizes into two coprime hands: a static carrier ring ℤ/5 = g_car (golden √5, no rate) and a dynamic family ring ℤ/6 = 2N_fam (the recovery rate (2/3)⁶, exponent 6 = 2N_fam). The dynamic hand runs 0,1,2,3,4,5 with position 0 the conserved law (the attractor, rate 0) and 1..5 the live phases; the static hand runs 1,2,3,4,5. So '0,1,2,3,4,5' is the law-inclusive reading and '1,2,3,4,5' the live-only reading of the same clock. The arithmetic is [E]; 'the bridge is one clock' is [C] (v319).",
+        formulas: [
+          "\\mathbb{Z}/30 = \\underbrace{\\mathbb{Z}/5}_{\\text{static } g_{\\mathrm{car}}} \\times \\underbrace{\\mathbb{Z}/6}_{\\text{dynamic } 2N_{\\mathrm{fam}}}, \\qquad 30 = h(E_8) = g_{\\mathrm{car}}(2N_{\\mathrm{fam}}) = 5\\times 6",
+          "\\mathrm{rate}(n) = -p_2\\log\\!\\big(1-\\tfrac{n}{N_{\\mathrm{fam}}}\\big):\\;\\; \\mathrm{rate}(0)=0\\;(\\text{law}),\\quad (2/3)^6 = (|\\mathbb{Z}_2|/N_{\\mathrm{fam}})^{2N_{\\mathrm{fam}}}",
+        ],
+      },
     ],
     keyFormulas: [
       {
@@ -992,6 +1000,7 @@ export const papers: Paper[] = [
       { label: "Brieskorn capstone", value: "x²+y³+z⁵", description: "One singularity generates the skeleton: Milnor number (2-1)(3-1)(5-1)=8, monodromy = the order-30 Coxeter cycle (eigenvalues = E₈ exponents), both clocks as sub-/Galois structures (v236)" },
       { label: "CM norms", value: "41 · 7", description: "Square (Gauss) gives the EM index, hexagon (Eisenstein) the scalaron" },
       { label: "Gap", value: "6 log(3/2)", description: "Positive ⇒ unique attractor" },
+      { label: "Translation clock", value: "5 × 6 = 30", description: "Static carrier hand ℤ/5 × dynamic family hand ℤ/6; 0..5 law-inclusive, 1..5 live-only (v319)" },
       { label: "Free numbers", value: "0", description: "Only π is primitive" },
     ],
   },

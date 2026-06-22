@@ -59,6 +59,166 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-22 (the translation clock: the discrete$\leftrightarrow$dynamic bridge \emph{is} the order-$30$ Coxeter element, a clock with two coprime hands $5\times6$, read law-inclusive ($0..5$) or live-only ($1..5$): \texttt{v319})}
+\begin{itemize}
+\item \textbf{\texttt{v319\_translation\_clock.py} (\texttt{TRANSLATE.CLOCK.01}, \mE/\mC).} A synthesis of the
+  \texttt{v313}--\texttt{v318} arc with \texttt{v124}/\texttt{v55}, answering the question ``is the
+  static$\leftrightarrow$dynamic translation a clock running $0,1,2,3,4,5$ or $1,2,3,4,5$?''. \mE\ the only object
+  holding both the static carrier ($\mathbb Q(\sqrt5)$) and the dynamic family (rational) data is the order-$30$
+  Coxeter element (\texttt{v314}); $30=h(E_8)=\gcar(2\Nfam)=5\cdot6$ and $\gcd(5,6)=1\Rightarrow\Z/30=\Z/5\times\Z/6$
+  (two coprime hands, \texttt{v315}). \mE\ the \emph{dynamic} hand is $\Z/6=2\Nfam$ (ticks $0,\dots,5$): the recovery
+  exponent is exactly $6=2\Nfam$, rate $(2/3)^6=(|\Z_2|/\Nfam)^{2\Nfam}$, order-$6$ generator $c^5$
+  ($\zeta_6=\zeta_{30}^5$, \texttt{v316}). \mE\ position $0$ is the \emph{conserved law} --- the resummed clock
+  $\mathrm{rate}(n)=-p_2\ln(1-n/\Nfam)$ (\texttt{v124}) has $\mathrm{rate}(0)=0$ (the attractor, eigenvalue $1$,
+  \texttt{v56}), the live decaying modes from $n{=}1$, and the $E_8$ live phases (totatives of $30$) start at $1$
+  ($\{1,7,\dots,29\}$), the $0$ phase not a totative --- so ``$0,1,2,3,4,5$'' is law-inclusive, ``$1,2,3,4,5$''
+  live-only. \mE\ the \emph{static} hand is $\Z/5=\gcar$ (ticks $1,\dots,5$): the golden field $\mathbb Q(\sqrt5)$
+  ($\varphi=2\cos(\pi/5)$), field-obstructed (no rational dynamic image, \texttt{v314}) --- static-only;
+  $\zeta_5=\zeta_{30}^6$ carries no phase. \mE\ one full turn $=\operatorname{lcm}(5,6)=30=h(E_8)$, rank
+  $E_8=8=\varphi(30)$ live phases pairing into $|\mu_4|=4$ invariant planes (\texttt{v55}). \mC\ verdict: the
+  discrete$\to$dynamic translation \emph{is} the order-$30$ clock $=$ (static $5$-ring) $\times$ (dynamic $6$-ring),
+  the dynamic hand carrying the rate (exponent $6=2\Nfam$), the static hand the golden carrier (no rate), and
+  ``$0$ vs $1$'' $=$ law-inclusive vs live-only; the arithmetic is \mE, the ``it is one clock'' reading \mC.
+  Python-only (\texttt{sympy}), like the rest of the arc. New figure \texttt{figures/translation\_clock.pdf}
+  (concentric $5$- and $6$-hands). Cited in \texttt{origin\_theory}; ledger row \texttt{TRANSLATE.CLOCK.01}.
+\end{itemize}
+
+\subsection*{2026-06-21 (capstone: the SM structural sector is $\mathbb Q(\zeta_{30})+$ Galois $\mu_4\times\Z_2$, and the complete input is $\{a,\pi,v_{\mathrm{geo}}\}$ --- zero dimensionless free parameters: \texttt{v318})}
+\begin{itemize}
+\item \textbf{\texttt{v318\_arithmetic\_capstone.py} (\texttt{ARITH.CAPSTONE.01}, \mE/\mO).} The synthesis of the
+  \texttt{v313}--\texttt{v317} arc. \mE\ the SM \emph{structural} sector (the $3$ generations, the $2$ CP phases,
+  their orbit/hierarchy) is the cyclotomic field $\mathbb Q(\zeta_{30})$ with Galois group $\mu_4\times\Z_2$ (degree
+  $\varphi(30)=8=$ rank $E_8$, $30=|\Z_2|\Nfam\gcar=h(E_8)$), forced by the anchor atoms $\{2,3,5\}=e(a)$; \mE\ the
+  magnitude seed $\varphi_0=(|\mu_4|/\Nfam)c_3+\Omega_{\mathrm{adm}}c_3^4=\tfrac43 c_3+48 c_3^4$ ($c_3=1/(8\pi)$) is a
+  pure function of $\pi$ (no free parameters, anchor-derived coefficients), so the magnitudes
+  ($\sin^2\theta_{12}=\tfrac13-\varphi_0/2$) are $\{a,\pi\}$-determined, not free; \mE\ free inventory: \emph{zero}
+  dimensionless free parameters, $\pi$ the unique transcendental primitive (\texttt{ARCH.CORE.01}), $v_{\mathrm{geo}}$
+  the unique dimensionful input (No-Unit Theorem) --- complete input $\{a,\pi,v_{\mathrm{geo}}\}$. \mO\ honest
+  residual: this rigidity holds \emph{given} the axioms and does not realise the structure on the raw seam
+  (\texttt{QGEO.SYM.01}/\texttt{SEAM.EQUIV.01} stay \mO). Cited in \texttt{origin\_theory}; ledger row
+  \texttt{ARITH.CAPSTONE.01}.
+\end{itemize}
+
+\subsection*{2026-06-21 (are the 3 generations a $\mu_3$/Galois orbit? Yes ($\mu_3$), Galois-refined $1{+}2$ with the fixed generation $=$ the recovery attractor: \texttt{v317})}
+\begin{itemize}
+\item \textbf{\texttt{v317\_galois\_family.py} (\texttt{GALOIS.FAMILY.01}, \mE/\mC).} The \texttt{v316} follow-up to the
+  generation structure. \mE\ the three cusp weights $\{0,\tfrac13,\tfrac23\}$ (with $\mathrm{Spec}(Q_+)=\{1,2,3\}$,
+  the $A_3$ exponents) are the cube roots of unity $\{1,\zeta_3,\zeta_3^2\}$ under $w\mapsto e^{2\pi i w}$, and the
+  cyclic family symmetry $w\mapsto w{+}\tfrac13$ is a \emph{transitive} $\mu_3$ orbit (the family IS the cube-root
+  orbit); \mE\ the transfer eigenvalues $(1{-}w)^6=\{1,(2/3)^6,(1/3)^6\}$ attach to the weights (attractor $=$
+  eigenvalue $1$ at $w{=}0$); \mE\ the family Galois $\Z_2$ ($\zeta_3\mapsto\zeta_3^2=\bar\zeta_3$, $=$ the
+  \texttt{v316} CP conjugation) refines the orbit to $1{+}2$ --- fixing $w{=}0$ (rational) and swapping
+  $w{=}\tfrac13\leftrightarrow\tfrac23$; \mE\ so the Galois-FIXED generation is the recovery ATTRACTOR (the law) and
+  the Galois-conjugate pair the decaying hierarchy. \mC\ verdict: the family STRUCTURE is the same arithmetic as the
+  CP phase (a $\mu_3$ orbit, Galois-refined $1{+}2$), the mass MAGNITUDES remaining the analytic seed. Cited in
+  \texttt{origin\_theory}; ledger row \texttt{GALOIS.FAMILY.01}.
+\end{itemize}
+
+\subsection*{2026-06-21 (does the Galois $\mu_4\times\Z_2$ organize the readouts? Yes --- the CP phases are the family-factor cyclotomic data, Galois $\Z_2=$ CP conjugation: \texttt{v316})}
+\begin{itemize}
+\item \textbf{\texttt{v316\_galois\_readout.py} (\texttt{GALOIS.READOUT.01}, \mE/\mC).} The \texttt{v315} follow-up to
+  phenomenology: does the Galois coupling $\mu_4\times\Z_2$ reach the physics? \mE\ it does, through the \emph{family}
+  factor --- the hexagonal CP unit $\rho=\zeta_6=\zeta_{30}^5$ is exactly the order-$6=2\Nfam$ factor $c^5$ of
+  \texttt{v315} (the carrier being $\zeta_5=\zeta_{30}^6$); \mC\ the leading CP phases are its cyclotomic arguments
+  $\delta_{\mathrm{CKM}}^{\mathrm{lead}}=\pi/3=\arg\zeta_6$ and $\delta_{\mathrm{PMNS}}=4\pi/3=\arg\zeta_6^4$ (power
+  $4=|\mu_4|$), with $\zeta_6^4=-\zeta_6$ the $\Z_2$ sheet flip and $\mu_6=\mu_3\times\mu_2$ (inherits
+  \texttt{v231}/\texttt{v233}); \mE\ the family Galois $\mathrm{Gal}(\mathbb Q(\zeta_6)/\mathbb Q)=\Z_2$
+  ($\zeta_6\mapsto\zeta_6^5=\bar\zeta_6$) \emph{is} CP conjugation $\delta\mapsto-\delta$; \mE\ the carrier factor
+  $\zeta_5$ (golden $\sqrt5$) carries no phase ($\mu_4$ static), and the magnitudes
+  ($\sin^2\theta_{12}=\tfrac13-\varphi_0/2$, transcendental $\varphi_0$) are not cyclotomic. \mC\ verdict: the Galois
+  bridge reaches phenomenology in the phase sector predicted by the \texttt{v314} field split. Cited in
+  \texttt{origin\_theory}; ledger row \texttt{GALOIS.READOUT.01}.
+\end{itemize}
+
+\subsection*{2026-06-21 (couple or factorize? the order-30 Coxeter element couples the carrier and family sectors as a cyclotomic compositum, Galois $=\mu_4\times\Z_2$: \texttt{v315})}
+\begin{itemize}
+\item \textbf{\texttt{v315\_coxeter\_coupling.py} (\texttt{COX.COUPLE.01}, \mE/\mC).} Answers the \texttt{v314}
+  question --- does $30=\gcar(2\Nfam)=5\cdot6$ couple the carrier ($5$-fold, golden, $\mathbb Q(\sqrt5)$) and family
+  ($6=2\cdot3$, rational) sectors, or just factorize? \mE\ the cyclic group \emph{factorizes}: $\gcd(5,6)=1\Rightarrow
+  \Z/30=\Z/5\times\Z/6$ (direct product, group-decoupled, in line with the \texttt{v314} field obstruction); \mE\ the
+  $E_8$ exponents $=$ totatives$(30)$ split as totatives$(5)\times$ totatives$(6)$, $\varphi(30)=4\cdot2=8=$ rank
+  $E_8$; \mE\ but the \emph{field} couples: $\mathbb Q(\zeta_{30})$ is the compositum of the carrier
+  $\mathbb Q(\zeta_5)\ni\sqrt5$ and the family $\mathbb Q(\zeta_3)$, degree $8=$ rank $E_8$; \mE\ the Galois group is
+  exactly $(\Z/5)^\times\times(\Z/3)^\times=\Z/4\times\Z/2=\mu_4\times\Z_2$ (order $8$, max element order $4$), so the
+  $\mu_4$ seam clock \emph{is} the Galois group of the carrier's golden field and $\Z_2$ that of the family field
+  (refining \texttt{v223}); \mE\ $\sqrt5=\phi+1/\phi$ is the quadratic Gauss sum in $\mathbb Q(\zeta_5)$. \mC\ verdict:
+  $30=5\cdot6$ does not dynamically entangle the sectors --- it couples them as the cyclotomic compositum, the
+  static$\leftrightarrow$dynamic bridge being \emph{Galois}, not a dynamical map. Cited in \texttt{origin\_theory};
+  ledger row \texttt{COX.COUPLE.01}.
+\end{itemize}
+
+\subsection*{2026-06-21 (do the discrete-kernel and dynamic rates translate? An exact number-field split $\mathbb Q$ vs $\mathbb Q(\sqrt5)$: \texttt{v314})}
+\begin{itemize}
+\item \textbf{\texttt{v314\_rate\_translation.py} (\texttt{RATE.TRANSLATE.01}, \mE/\mC).} Answers, exactly, whether
+  the discrete kernel (the affine-$E_8$ network, carrying the golden ratio) and the dynamic part (the seam transfer,
+  carrying the recovery rate $(2/3)^6$) translate. \mE\ FIELD SPLIT: the adjacency spectrum is the rational part
+  $\{0,\pm1,\pm2\}\subset\mathbb Q$ plus the golden part $\{\pm\phi,\pm1/\phi\}\subset\mathbb Q(\sqrt5)$, while the
+  transfer spectrum $\{1,(2/3)^6,(1/3)^6\}$ is \emph{entirely} rational; \mE\ the family/sheet rates DO translate
+  (the rational angles $2\cos(\pi/2){=}0=|\mathbb Z_2|$ and $2\cos(\pi/3){=}1=\Nfam$ build
+  $(2/3)^6=(|\mathbb Z_2|/\Nfam)^{2\Nfam}\in\mathbb Q$, same field, same atoms), but \mE\ the carrier $5$-fold
+  (golden, $\mathbb Q(\sqrt5)$) has NO rational dynamic image -- a field obstruction ($2/3$ is neither an adjacency
+  nor a lazy-update eigenvalue; heat-kernel $t=\Delta/(2-\phi)\approx6.37$ not clean), so the carrier is
+  \emph{static-only}; \mE\ the only object holding both is the order-$30$ Coxeter element
+  $30=\gcar(2\Nfam)=5\cdot6$, and the $\phi$-quasicrystal $E_8=H_4{+}\phi H_4$ ($240=2\cdot120$) carries the carrier
+  but not the (rational, $3$-fold) cusp-weight family dynamics. Cited in \texttt{origin\_theory}; ledger row
+  \texttt{RATE.TRANSLATE.01}.
+\end{itemize}
+
+\subsection*{2026-06-21 (the golden ratio made precise: the $(2,3,5)$ atoms are the affine-$E_8$ network spectral angles, $\phi=2\cos(\pi/5)$ the $\gcar{=}5$ signature: \texttt{v313})}
+\begin{itemize}
+\item \textbf{\texttt{v313\_golden\_atoms\_spectral.py} (\texttt{GOLD.ATOMS.01}, \mE/\mC).} A follow-up to \texttt{v312}'s
+  observation, made exact. \mE\ the affine-$E_8$ adjacency characteristic polynomial factors as
+  $x(x^2{-}4)(x^2{-}1)(x^2{-}x{-}1)(x^2{+}x{-}1)$, so the golden minimal polynomial $x^2{-}x{-}1$ divides it and
+  $\phi=2\cos(\pi/5)=(1{+}\sqrt5)/2$ is an \emph{exact} eigenvalue; \mE\ the non-trivial eigenvalues are
+  $2\cos(\pi/k)$ for exactly $k\in\{2,3,5\}=\{|\mathbb Z_2|,\Nfam,\gcar\}$ ($2\cos(\pi/2){=}0$, $2\cos(\pi/3){=}1$,
+  $2\cos(\pi/5){=}\phi$, $2\cos(2\pi/5){=}1/\phi$), so the golden ratio is \emph{specifically} the $\gcar{=}5$
+  ($5$-fold) signature and $\gcar{=}5$ gains a new spectral witness distinct from Pascal/Riemann--Roch (raising the
+  \texttt{v305} multiplicity); \mE\ the $(2,3,5)$ spherical excess $1/2{+}1/3{+}1/5=31/30>1$ (the condition selecting
+  the finite $2I\Rightarrow E_8$) ties the \texttt{v63}/\texttt{v76} gap-margin numerator $31=2^{\gcar}{-}1=248/8=1{+}h(E_8)$
+  to the Coxeter $30=h(E_8)$ --- a unification of already-anchored quantities, NOT new evidence (honest
+  anti-numerology, \texttt{v305}); \mE\ honest null: $\phi$ is a structural lattice/network quantity, not a
+  phenomenological readout. \mC\ direction: $\phi$ is the $E_8$-quasicrystal (Elser--Sloane cut-and-project) ratio,
+  a candidate aperiodic substrate for the \texttt{v312} question. Cited in \texttt{origin\_theory}; ledger row
+  \texttt{GOLD.ATOMS.01}.
+\end{itemize}
+
+\subsection*{2026-06-21 (TOE-roadmap solver round: the \texttt{SEAM.EQUIV.01} keystone certificate, the modular bedrock, the carrier$\to$SM closure, the gap-decoupled measure, and the sharpened hypergraph substrate: \texttt{v308}--\texttt{v312})}
+\begin{itemize}
+\item \textbf{\texttt{v308\_seam\_equiv\_chain.py} (\texttt{SEAM.EQUIV.CHAIN.01}, \mE/\mO).} TOE attack point~1:
+  the keystone ``the raw seam-Calder\'on net is the holomorphic $c{=}8$ $(E_8)_1$ net'' assembled into ONE
+  well-typed logical chain $\text{gap}{>}0\to\text{invertible/SRE (Kitaev)}\to\text{holomorphic }c{=}8\
+  (\text{M\"uger/KLM})\to(E_8)_1\ (\text{Conway--Sloane})$, with the exact discriminators
+  $|\det\mathrm{Cartan}(E_8)|{=}1$ vs $|\det\mathrm{Cartan}(D_8{=}SO(16))|{=}4$, the carrier tower
+  $4{\cdot}4{=}16\to4\to1$ and $c{=}\gcar{+}\Nfam{=}8$ all machine-checked; the input gap is the derived recovery gap
+  $6\ln(3/2){>}0$. The only undischarged premise is the cited OS step --- an assembly/reduction certificate (a Lean
+  target), not an end-to-end closure. Cited in \texttt{tfpt\_research\_contracts}; ledger row \texttt{SEAM.EQUIV.CHAIN.01}.
+\item \textbf{\texttt{v309\_modular\_bedrock.py} (\texttt{QGEO.MODHAM.01}, \mE/\mO).} TOE attack point~2: the bedrock
+  $\omega{\circ}\rho{=}\omega$ via an explicit modular Hamiltonian, non-circular --- the four marks come from
+  Gauss--Bonnet (\texttt{v216}) and the order-$4$ clock from cross-ratio $2$ (\texttt{v214}), so $\mu_4$ is derived;
+  the quasi-free modular Hamiltonian $K=\log((1{-}C)/C)$ round-trips to the seam operator and $[\rho,K]{=}0
+  \Leftrightarrow\omega{\circ}\rho{=}\omega$ (a $\mathbb Z_2$ profile breaks it). Reduces the bedrock to the
+  Bisognano--Wichmann intrinsicality of the raw collar; not a closure of \texttt{QGEO.SYM.01}. Cited in
+  \texttt{tfpt\_research\_contracts}; ledger row \texttt{QGEO.MODHAM.01}.
+\item \textbf{\texttt{v310\_carrier\_sm\_anomaly.py} (\texttt{CAR.SM.ANOM.01}, \mE).} TOE attack point~3: the carrier
+  half-spinor $16=\Lambda^{\mathrm{even}}(\mathbb C^5)=1{+}10{+}5$ is exactly one anomaly-free Standard-Model
+  generation ($SU(5)\subset SO(10)$: $10{+}\bar5{+}1$), with $\sum Y=\sum Y^3=[SU(2)]^2U(1)=[SU(3)]^2U(1)=0$ (exact)
+  and the one-loop $(b_1,b_2,b_3)=(\tfrac{41}{10},-\tfrac{19}{6},-7)$; a fourth family shifts $b_1$, so $\Nfam{=}3$
+  pins the RG. Closes the spectrum/anomaly/$\beta$ sub-question; the interacting Epstein--Glaser $S$-matrix and the
+  Yukawa sector stay \mC/\mO. Cited in \texttt{tfpt\_research\_contracts}; ledger row \texttt{CAR.SM.ANOM.01}.
+\item \textbf{\texttt{v311\_gap\_decoupled\_measure.py} (\texttt{QGAMB.CLUSTER.01}, \mE/\mC/\mO).} TOE attack point~4:
+  the physical QG measure as a gap-decoupled, exponentially-clustering object --- the transfer spectrum
+  $\{1,(2/3)^6,(1/3)^6\}$ gives geometric clustering at rate $(2/3)^6$ (correlation length $1/(6\ln(3/2))$, finite
+  susceptibility $729/665$), and the \texttt{v76} margin $6\ln(3/2)-31/(4\pi^2){\approx}1.648{>}0$ decouples the
+  physical sector from the un-built ambient. \texttt{QG.AMB.01} stays \mO\ (gap-decoupled, inert). Cited in
+  \texttt{tfpt\_research\_contracts}; ledger row \texttt{QGAMB.CLUSTER.01}.
+\item \textbf{\texttt{v312\_hypergraph\_substrate.py} (\texttt{HYP.INJECT.01}, \mE/\mO).} TOE attack point~5: the
+  hypergraph substrate sharpened --- the affine-$E_8$ Kac marks are the Perron eigenvector ($A\,m{=}2m$) and the
+  subleading eigenvalue is exactly $2\cos(\pi/5)=$ the golden ratio, but the recovery rate $(2/3)^6$ is \emph{not}
+  any eigenvalue and $\varphi_0$ is not a rational edge fraction; so a full-structure rewrite must inject exactly two
+  non-graph-spectral data --- the cusp weight $2/3{=}|\mathbb Z_2|/\Nfam$ and the analytic seed $\varphi_0$. The open
+  question is precisely delimited, not closed. Cited in \texttt{introduction}; ledger row \texttt{HYP.INJECT.01}.
+\end{itemize}
+
 \subsection*{2026-06-21 (adversarial-review follow-ups: a structural anti-numerology firewall, an out-of-sample seed cross-validation, an operational data watchdog, and the Target-A holomorphy kill test: \texttt{v305}--\texttt{v307})}
 \begin{itemize}
 \item \textbf{\texttt{v305\_witness\_independence.py} (\texttt{WITNESS.ECON.01}, \mE).} The \emph{structural} anti-numerology

@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`305` registered scripts · `359` ledger claims · `10` clusters.
+`317` registered scripts · `371` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (13 scripts)
+### `core` — Compiler core & the E₈ glue  (14 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -37,6 +37,8 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: E8.CAS.01, v88_cp_phase_audit · cited: 3 e8 audit bootstrap, 5 redteam
 - **v228_rr_index_gate** [E/C/O] `QGEO.RR.01` — P2 as the mode space of a degree-4 seam divisor (a Riemann-Roch INDEX GATE; bedrock language for P2, not a proof from nothing). deg D=4=|μ₄| on P¹ ⇒ h⁰(O(D))=5=g_car (Riemann-Roch,
   - deps: ARCH.RR.01, v197_rr_carrier_clifford_d5, v181_clock_is_conformal_symmetry · cited: origin theory, research contracts
+- **v318_arithmetic_capstone** [E/C/O] `ARITH.CAPSTONE.01` — The capstone: the SM structural sector is Q(zeta30) + Galois mu4 x Z2, and the complete input is {a, pi, v_geo} (synthesis of the v313-v317 arc). The structural sector (3 generatio
+  - deps: v317_galois_family, v316_galois_readout, v315_coxeter_coupling, v53_compiler_core, NOUNIT.01, v313, v314, v315 · cited: origin theory
 
 ### `em` — Electromagnetic fixed point  (2 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -136,7 +138,7 @@ _The R + R² spectral-action shadow, the seam-fixed scalaron, and the cosmologic
 - **v206_h0_lambda_branch** [E/C] `GRAV.H0.01` — must be displayed); [N] ρ_Λ=M_Pl⁴δ_Σ≈2.4×10⁻⁴⁷ GeV⁴ (observed vacuum order); [N] 123-orders cross-link |log₁₀δ_Σ|≈122.96, consistent with the v60 split 122.948; [C] under flatness 
   - deps: v60_lambda_metrology_branch, v55_coxeter_cycle · cited: 4 frontier
 
-### `horizon` — Horizon code & Origin Theory (self-consistency)  (18 scripts)
+### `horizon` — Horizon code & Origin Theory (self-consistency)  (19 scripts)
 _The seam as the universal horizon code, the order-30 Coxeter cycle, and the gapped unique attractor that makes parameter-freeness a theorem._
 
 - **v6_bootstrap** [E] `BOOT.01` — reverse glue μ²−5μ+4=0; g_car=5 three ways; 8 = rank E₈ = φ(30)
@@ -175,6 +177,8 @@ _The seam as the universal horizon code, the order-30 Coxeter cycle, and the gap
   - deps: v219_icosahedral_mckay, v181_clock_is_conformal_symmetry, v1_e8_glue · cited: introduction, origin theory
 - **v236_brieskorn_capstone** [E] `TOPO.BRIESKORN.01` — The (2,3,5) Brieskorn singularity x^2+y^3+z^5 is the ONE generator of the discrete skeleton -- the capstone of the icosahedral round (v55/v219/v223/v232/v233). Its exponents ARE th
   - deps: v219_icosahedral_mckay, v223_coxeter_totative_clock, v233_cp_triality_phase, v232_e8_kleinian_seam, SEAM.COX.01 · cited: origin theory
+- **v319_translation_clock** [E/C/O] `TRANSLATE.CLOCK.01` — The translation clock: the discrete<->dynamic bridge IS the order-30 Coxeter element, a clock with two coprime hands 5 x 6, read law-inclusive (0..5) or live-only (1..5). The only 
+  - deps: v314_rate_translation, v315_coxeter_coupling, v318_arithmetic_capstone, v314, v315, v124, v55 · cited: origin theory
 
 ### `uwall` — Open gate (U_wall) — the flavor wall  (11 scripts)
 _The parabolic wall-selection contract: the quark ratios are closed; only the absolute amplitude scale stays open._
@@ -202,7 +206,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v75_upoint_to_vgeo** [E/O] `FLAV.UPOINT.01` — Gate 1 complete: U_point → v_geo (ratios + Grand Mass Volume); same anchor as 1/G
   - deps: v71_simple_r_bridge, v20_lepton_c_derivation, v46_grand_mass_volume, v68 · cited: origin theory, research contracts
 
-### `frontier` — Open gate (G_metric) & the frontier  (62 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (71 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -329,8 +333,26 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: QG.AMB.01, v259, v278, rt_F · cited: 5 redteam
 - **v307_data_watchdog** [E/X] `DATA.WATCHDOG.01` — Data watchdog: the operational decision pipeline over the frozen registry (v84). Classifies all 20 entries (16 predictions + 2 assigned textures + 2 bands) PASS/WATCH/TENSION/KILL 
   - deps: v84_frozen_registry, v62_data_scorecard · cited: origin theory
+- **v308_seam_equiv_chain** [E/O] `SEAM.EQUIV.CHAIN.01` — TOE attack 1 -- the SEAM.EQUIV.01 keystone as a composition certificate: the v297 stack as ONE well-typed chain gap>0 -> invertible (Kitaev) -> holomorphic c=8 (Mueger/KLM) -> (E8)
+  - deps: v286_seam_equivalence_contract, v302_seam_gap, v297, v301, v302 · cited: research contracts
+- **v309_modular_bedrock** [E/O] `QGEO.MODHAM.01` — TOE attack 2 -- the bedrock omega o rho = omega via an explicit modular Hamiltonian, non-circular: marks=4 from Gauss-Bonnet (v216) + the order-4 clock from cross-ratio 2 (v214) =>
+  - deps: v181_clock_is_conformal_symmetry, v198, v210, v214, v216 · cited: research contracts
+- **v311_gap_decoupled_measure** [E/C/O] `QGAMB.CLUSTER.01` — TOE attack 4 -- the physical QG measure as a gap-decoupled, exponentially-clustering object: the transfer spectrum {1,(2/3)^6,(1/3)^6} gives geometric clustering at rate (2/3)^6, c
+  - deps: QG.AMB.01, v22_open_gates_audit, v36_spectral_action_g2, v36, v76, v259 · cited: research contracts
+- **v312_hypergraph_substrate** [E/O] `HYP.INJECT.01` — TOE attack 5 -- the hypergraph substrate sharpened: the affine-E8 Kac marks are the Perron eigenvector (A.marks=2 marks) and the subleading eigenvalue is exactly 2cos(pi/5)=golden 
+  - deps: v298_e8_network_attractor, v299_hypergraph_0d_autonomous, v219, v298, v299 · cited: introduction
+- **v313_golden_atoms_spectral** [E/C] `GOLD.ATOMS.01` — The golden ratio is the g_car=5 signature -- the (2,3,5) atoms ARE the affine-E8 network spectral angles (v312 follow-up, exact). The charpoly factors x(x^2-4)(x^2-1)(x^2-x-1)(x^2+
+  - deps: v219_icosahedral_mckay, v312_hypergraph_substrate, v219, v312, v63 · cited: origin theory
+- **v314_rate_translation** [E/C/O] `RATE.TRANSLATE.01` — Do the discrete-kernel and dynamic rates translate? An exact number-field split. The affine-E8 adjacency spectrum splits into the rational part {0,+-1,+-2} in Q and the golden part
+  - deps: v313_golden_atoms_spectral, v302_seam_gap, v313, v54, v56 · cited: origin theory
+- **v315_coxeter_coupling** [E/C] `COX.COUPLE.01` — Couple or factorize? The order-30 Coxeter sectors couple as a cyclotomic field (v314 follow-up). GROUP FACTORIZES: gcd(5,6)=1 => Z/30 = Z/5 x Z/6 (direct product, group-decoupled).
+  - deps: v314_rate_translation, COX.TOTATIVE.01, v314, v223, v55 · cited: origin theory
+- **v316_galois_readout** [E/C] `GALOIS.READOUT.01` — Does the Galois mu4 x Z2 (v315) organize the physical readouts? Yes -- the CP phases. The hexagonal CP unit rho=zeta_6=zeta_30^5 is the order-6=2 N_fam FAMILY factor c^5 of v315 (t
+  - deps: v315_coxeter_coupling, v233_cp_triality_phase, v315, v231, v233 · cited: origin theory
+- **v317_galois_family** [E/C] `GALOIS.FAMILY.01` — Are the 3 generations a mu3/Galois orbit? Yes (mu3), refined 1+2 by Galois (v316 follow-up). The 3 cusp weights {0,1/3,2/3} (Spec(Q+)={1,2,3}=A3 exponents) map under w->e^{2pi i w}
+  - deps: v316_galois_readout, v315_coxeter_coupling, v316, v315, v56 · cited: origin theory
 
-### `registry` — Blind registry & red-team follow-ups (v84–v175)  (162 scripts)
+### `registry` — Blind registry & red-team follow-ups (v84–v175)  (163 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
 
 - **v84_frozen_registry** [E] `REG.FREEZE.01` — blind-prediction registry FROZEN 2026-06-09: every dimensionless prediction of record at 25 digits, re-derived from the two axioms each run (formula↔value lock); exactly ONE θ₁₂ pr
@@ -657,6 +679,8 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
   - deps: v23_anchor_generator, v84_frozen_registry, v62_data_scorecard · cited: 5 redteam
 - **v306_seed_crossval** [E/O] `SEED.CROSSVAL.01` — Leave-one-out cross-validation of the shared seed phi0: back-solving phi0 independently from the 5 seed-grammar observables (sin^2 theta12, sin^2 theta13, beta, Omega_b, lambda_C; 
   - deps: v23_anchor_generator, v84_frozen_registry, v62_data_scorecard · cited: 5 redteam
+- **v310_carrier_sm_anomaly** [E/C/O] `CAR.SM.ANOM.01` — TOE attack 3 -- the carrier half-spinor IS one anomaly-free SM generation with the SM RG: 16=Lambda^even(C^5)=1+10+5 -> SU(5)<SO(10) as 10+5bar+1 = one generation; gauge-anomaly-fr
+  - deps: v2_carrier_pascal, v273_eg_gauge_running, v273, v159 · cited: research contracts
 
 ## Supersede map — do NOT reuse the left-hand claim
 
@@ -672,22 +696,22 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×22, `E8.GLU.01`×15, `HOR.NARIAI.01`×15, `AX.P1.01`×11, `FLAV.KQ.01`×10, `REG.FREEZE.01`×10, `QGEO.PILLOW.01`×10, `v56`×9, `QGEO.SUBPRIN.01`×9, `GATE.QGEO.01`×8, `v37`×8, `v68`×8, `CAR.SM.01`×8, `GATE.METRIC.06`×8, `QGEO.MARKS.01`×8
+**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×23, `E8.GLU.01`×15, `HOR.NARIAI.01`×15, `AX.P1.01`×11, `v56`×11, `FLAV.KQ.01`×10, `REG.FREEZE.01`×10, `QGEO.PILLOW.01`×10, `CAR.SM.01`×9, `QGEO.SUBPRIN.01`×9, `GATE.QGEO.01`×8, `v37`×8, `v55`×8, `v68`×8, `GATE.METRIC.06`×8
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v296_flataway_a2_closed** — `FLATAWAY.A2.CLOSED.01`
-- **v297_route_a_literature_stack** — `SEAM.EQUIV.A.LIT.01`
-- **v298_e8_network_attractor** — `E8.NETWORK.01`
-- **v299_hypergraph_0d_autonomous** — `HYP.0D.01`
-- **v300_flataway_rigid** — `FLATAWAY.RIGID.01`
-- **v301_route_a_invertible** — `SEAM.EQUIV.A.INV.01`
-- **v302_seam_gap** — `SEAM.EQUIV.GAP.01`
-- **v303_ftransfer_dynamics** — `FR.DYNAMICS.01`
-- **v304_idg_nonlocal_ghost** — `QGAMB.IDG.01`
-- **v305_witness_independence** — `WITNESS.ECON.01`
-- **v306_seed_crossval** — `SEED.CROSSVAL.01`
-- **v307_data_watchdog** — `DATA.WATCHDOG.01`
+- **v308_seam_equiv_chain** — `SEAM.EQUIV.CHAIN.01`
+- **v309_modular_bedrock** — `QGEO.MODHAM.01`
+- **v310_carrier_sm_anomaly** — `CAR.SM.ANOM.01`
+- **v311_gap_decoupled_measure** — `QGAMB.CLUSTER.01`
+- **v312_hypergraph_substrate** — `HYP.INJECT.01`
+- **v313_golden_atoms_spectral** — `GOLD.ATOMS.01`
+- **v314_rate_translation** — `RATE.TRANSLATE.01`
+- **v315_coxeter_coupling** — `COX.COUPLE.01`
+- **v316_galois_readout** — `GALOIS.READOUT.01`
+- **v317_galois_family** — `GALOIS.FAMILY.01`
+- **v318_arithmetic_capstone** — `ARITH.CAPSTONE.01`
+- **v319_translation_clock** — `TRANSLATE.CLOCK.01`
 

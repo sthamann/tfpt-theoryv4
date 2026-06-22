@@ -342,6 +342,36 @@ export default function VerificationPage() {
         </div>
       </section>
 
+      {/* Origin Theory — the translation clock */}
+      <section className="relative border-t border-slate-800/60 py-12 sm:py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            eyebrow="Origin Theory · one clock"
+            title="The translation clock: discrete ↔ dynamic is 5 × 6"
+            description="The bridge between the static (lattice/spectrum) data and the dynamic (recovery/relaxation) data is not a map but a clock — the order-30 Coxeter element — and, because gcd(5,6)=1, it factorizes into two coprime hands: a static carrier ring ℤ/5 = g_car (golden √5, no rate) and a dynamic family ring ℤ/6 = 2·N_fam (the recovery rate (2/3)⁶, exponent 6). The dynamic hand runs 0,1,2,3,4,5 — position 0 is the conserved law (the attractor, rate 0), 1..5 the live phases; the static hand runs 1,2,3,4,5. So '0,1,2,3,4,5' is the law-inclusive reading and '1,2,3,4,5' the live-only reading of the same clock (v319)."
+          />
+          <figure className="mt-8 overflow-hidden rounded-2xl border border-slate-700/40 bg-slate-950/40 p-4 sm:p-6">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/figures/translation_clock.png"
+              alt="Two concentric clock rings. The outer ring has six ticks labelled 0,1,2,3,4,5 — the dynamic family hand ℤ/6 = 2·N_fam carrying the recovery rate (2/3)^6 (exponent 6); the tick at position 0 is highlighted as the conserved law (rate 0, the attractor). The inner ring has five ticks labelled 1,2,3,4,5 — the static carrier hand ℤ/5 = g_car carrying the golden √5 and no rate. The centre reads ℤ/30 = 5 × 6, the order-30 Coxeter clock."
+              className="mx-auto w-full max-w-md rounded-lg bg-white"
+            />
+            <figcaption className="mt-4 text-sm leading-relaxed text-slate-400">
+              The order-30 Coxeter clock as two coprime hands:{" "}
+              <span className="text-slate-200">dynamic</span>{" "}
+              <span className="font-mono">ℤ/6 = 2·N_fam</span> (0..5, rate{" "}
+              <span className="font-mono">(2/3)⁶</span>, position 0 = the law) and{" "}
+              <span className="text-slate-200">static</span>{" "}
+              <span className="font-mono">ℤ/5 = g_car</span> (1..5, golden{" "}
+              <span className="font-mono">√5</span>, no rate). One full turn is{" "}
+              <span className="font-mono">lcm(5,6) = 30 = h(E₈)</span> — the arithmetic is [E],
+              the &ldquo;the bridge is one clock&rdquo; reading is [C] (v319).
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
       {/* External cross-check figure (PyR@TE) */}
       <section className="relative border-t border-slate-800/60 py-12 sm:py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">

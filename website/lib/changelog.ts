@@ -42,6 +42,3538 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-06-22",
+    "dateLabel": "2026-06-22",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the translation clock: the discrete"
+      },
+      {
+        "k": "m",
+        "v": "\\leftrightarrow"
+      },
+      {
+        "k": "t",
+        "v": "dynamic bridge "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "is"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " the order-"
+      },
+      {
+        "k": "m",
+        "v": "30"
+      },
+      {
+        "k": "t",
+        "v": " Coxeter element, a clock with two coprime hands "
+      },
+      {
+        "k": "m",
+        "v": "5\\times6"
+      },
+      {
+        "k": "t",
+        "v": ", read law-inclusive ("
+      },
+      {
+        "k": "m",
+        "v": "0..5"
+      },
+      {
+        "k": "t",
+        "v": ") or live-only ("
+      },
+      {
+        "k": "m",
+        "v": "1..5"
+      },
+      {
+        "k": "t",
+        "v": "): "
+      },
+      {
+        "k": "c",
+        "v": "v319"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v319_translation_clock.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "TRANSLATE.CLOCK.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "s",
+              "v": "C"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " A synthesis of the "
+        },
+        {
+          "k": "c",
+          "v": "v313"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v318"
+        },
+        {
+          "k": "t",
+          "v": " arc with "
+        },
+        {
+          "k": "c",
+          "v": "v124"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v55"
+        },
+        {
+          "k": "t",
+          "v": ", answering the question “is the static"
+        },
+        {
+          "k": "m",
+          "v": "\\leftrightarrow"
+        },
+        {
+          "k": "t",
+          "v": "dynamic translation a clock running "
+        },
+        {
+          "k": "m",
+          "v": "0,1,2,3,4,5"
+        },
+        {
+          "k": "t",
+          "v": " or "
+        },
+        {
+          "k": "m",
+          "v": "1,2,3,4,5"
+        },
+        {
+          "k": "t",
+          "v": "?”. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the only object holding both the static carrier ("
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb Q(\\sqrt5)"
+        },
+        {
+          "k": "t",
+          "v": ") and the dynamic family (rational) data is the order-"
+        },
+        {
+          "k": "m",
+          "v": "30"
+        },
+        {
+          "k": "t",
+          "v": " Coxeter element ("
+        },
+        {
+          "k": "c",
+          "v": "v314"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "m",
+          "v": "30=h(E_8)=\\gcar(2\\Nfam)=5\\cdot6"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "\\gcd(5,6)=1\\Rightarrow\\Z/30=\\Z/5\\times\\Z/6"
+        },
+        {
+          "k": "t",
+          "v": " (two coprime hands, "
+        },
+        {
+          "k": "c",
+          "v": "v315"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "dynamic"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " hand is "
+        },
+        {
+          "k": "m",
+          "v": "\\Z/6=2\\Nfam"
+        },
+        {
+          "k": "t",
+          "v": " (ticks "
+        },
+        {
+          "k": "m",
+          "v": "0,\\dots,5"
+        },
+        {
+          "k": "t",
+          "v": "): the recovery exponent is exactly "
+        },
+        {
+          "k": "m",
+          "v": "6=2\\Nfam"
+        },
+        {
+          "k": "t",
+          "v": ", rate "
+        },
+        {
+          "k": "m",
+          "v": "(2/3)^6=(|\\Z_2|/\\Nfam)^{2\\Nfam}"
+        },
+        {
+          "k": "t",
+          "v": ", order-"
+        },
+        {
+          "k": "m",
+          "v": "6"
+        },
+        {
+          "k": "t",
+          "v": " generator "
+        },
+        {
+          "k": "m",
+          "v": "c^5"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\zeta_6=\\zeta_{30}^5"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v316"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "position "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " is the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "conserved law"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " — the resummed clock "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{rate}(n)=-p_2\\ln(1-n/\\Nfam)"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v124"
+        },
+        {
+          "k": "t",
+          "v": ") has "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{rate}(0)=0"
+        },
+        {
+          "k": "t",
+          "v": " (the attractor, eigenvalue "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v56"
+        },
+        {
+          "k": "t",
+          "v": "), the live decaying modes from "
+        },
+        {
+          "k": "m",
+          "v": "n{=}1"
+        },
+        {
+          "k": "t",
+          "v": ", and the "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " live phases (totatives of "
+        },
+        {
+          "k": "m",
+          "v": "30"
+        },
+        {
+          "k": "t",
+          "v": ") start at "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\{1,7,\\dots,29\\}"
+        },
+        {
+          "k": "t",
+          "v": "), the "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " phase not a totative — so “"
+        },
+        {
+          "k": "m",
+          "v": "0,1,2,3,4,5"
+        },
+        {
+          "k": "t",
+          "v": "” is law-inclusive, “"
+        },
+        {
+          "k": "m",
+          "v": "1,2,3,4,5"
+        },
+        {
+          "k": "t",
+          "v": "” live-only. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "static"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " hand is "
+        },
+        {
+          "k": "m",
+          "v": "\\Z/5=\\gcar"
+        },
+        {
+          "k": "t",
+          "v": " (ticks "
+        },
+        {
+          "k": "m",
+          "v": "1,\\dots,5"
+        },
+        {
+          "k": "t",
+          "v": "): the golden field "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb Q(\\sqrt5)"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\varphi=2\\cos(\\pi/5)"
+        },
+        {
+          "k": "t",
+          "v": "), field-obstructed (no rational dynamic image, "
+        },
+        {
+          "k": "c",
+          "v": "v314"
+        },
+        {
+          "k": "t",
+          "v": ") — static-only; "
+        },
+        {
+          "k": "m",
+          "v": "\\zeta_5=\\zeta_{30}^6"
+        },
+        {
+          "k": "t",
+          "v": " carries no phase. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "one full turn "
+        },
+        {
+          "k": "m",
+          "v": "=\\operatorname{lcm}(5,6)=30=h(E_8)"
+        },
+        {
+          "k": "t",
+          "v": ", rank "
+        },
+        {
+          "k": "m",
+          "v": "E_8=8=\\varphi(30)"
+        },
+        {
+          "k": "t",
+          "v": " live phases pairing into "
+        },
+        {
+          "k": "m",
+          "v": "|\\mu_4|=4"
+        },
+        {
+          "k": "t",
+          "v": " invariant planes ("
+        },
+        {
+          "k": "c",
+          "v": "v55"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "verdict: the discrete"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": "dynamic translation "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the order-"
+        },
+        {
+          "k": "m",
+          "v": "30"
+        },
+        {
+          "k": "t",
+          "v": " clock "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " (static "
+        },
+        {
+          "k": "m",
+          "v": "5"
+        },
+        {
+          "k": "t",
+          "v": "-ring) "
+        },
+        {
+          "k": "m",
+          "v": "\\times"
+        },
+        {
+          "k": "t",
+          "v": " (dynamic "
+        },
+        {
+          "k": "m",
+          "v": "6"
+        },
+        {
+          "k": "t",
+          "v": "-ring), the dynamic hand carrying the rate (exponent "
+        },
+        {
+          "k": "m",
+          "v": "6=2\\Nfam"
+        },
+        {
+          "k": "t",
+          "v": "), the static hand the golden carrier (no rate), and “"
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": "” "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " law-inclusive vs live-only; the arithmetic is "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": ", the “it is one clock” reading "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": ". Python-only ("
+        },
+        {
+          "k": "c",
+          "v": "sympy"
+        },
+        {
+          "k": "t",
+          "v": "), like the rest of the arc. New figure "
+        },
+        {
+          "k": "c",
+          "v": "figures/translation_clock.pdf"
+        },
+        {
+          "k": "t",
+          "v": " (concentric "
+        },
+        {
+          "k": "m",
+          "v": "5"
+        },
+        {
+          "k": "t",
+          "v": "- and "
+        },
+        {
+          "k": "m",
+          "v": "6"
+        },
+        {
+          "k": "t",
+          "v": "-hands). Cited in "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": "; ledger row "
+        },
+        {
+          "k": "c",
+          "v": "TRANSLATE.CLOCK.01"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-21",
+    "dateLabel": "2026-06-21",
+    "heading": [
+      {
+        "k": "t",
+        "v": "capstone: the SM structural sector is "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb Q(\\zeta_{30})+"
+      },
+      {
+        "k": "t",
+        "v": " Galois "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4\\times\\Z_2"
+      },
+      {
+        "k": "t",
+        "v": ", and the complete input is "
+      },
+      {
+        "k": "m",
+        "v": "\\{a,\\pi,v_{\\mathrm{geo}}\\}"
+      },
+      {
+        "k": "t",
+        "v": " — zero dimensionless free parameters: "
+      },
+      {
+        "k": "c",
+        "v": "v318"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v318_arithmetic_capstone.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "ARITH.CAPSTONE.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "s",
+              "v": "O"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The synthesis of the "
+        },
+        {
+          "k": "c",
+          "v": "v313"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v317"
+        },
+        {
+          "k": "t",
+          "v": " arc. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the SM "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "structural"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " sector (the "
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": " generations, the "
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": " CP phases, their orbit/hierarchy) is the cyclotomic field "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb Q(\\zeta_{30})"
+        },
+        {
+          "k": "t",
+          "v": " with Galois group "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4\\times\\Z_2"
+        },
+        {
+          "k": "t",
+          "v": " (degree "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi(30)=8="
+        },
+        {
+          "k": "t",
+          "v": " rank "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "30=|\\Z_2|\\Nfam\\gcar=h(E_8)"
+        },
+        {
+          "k": "t",
+          "v": "), forced by the anchor atoms "
+        },
+        {
+          "k": "m",
+          "v": "\\{2,3,5\\}=e(a)"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the magnitude seed "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi_0=(|\\mu_4|/\\Nfam)c_3+\\Omega_{\\mathrm{adm}}c_3^4=\\tfrac43 c_3+48 c_3^4"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "c_3=1/(8\\pi)"
+        },
+        {
+          "k": "t",
+          "v": ") is a pure function of "
+        },
+        {
+          "k": "m",
+          "v": "\\pi"
+        },
+        {
+          "k": "t",
+          "v": " (no free parameters, anchor-derived coefficients), so the magnitudes ("
+        },
+        {
+          "k": "m",
+          "v": "\\sin^2\\theta_{12}=\\tfrac13-\\varphi_0/2"
+        },
+        {
+          "k": "t",
+          "v": ") are "
+        },
+        {
+          "k": "m",
+          "v": "\\{a,\\pi\\}"
+        },
+        {
+          "k": "t",
+          "v": "-determined, not free; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "free inventory: "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "zero"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " dimensionless free parameters, "
+        },
+        {
+          "k": "m",
+          "v": "\\pi"
+        },
+        {
+          "k": "t",
+          "v": " the unique transcendental primitive ("
+        },
+        {
+          "k": "c",
+          "v": "ARCH.CORE.01"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "v_{\\mathrm{geo}}"
+        },
+        {
+          "k": "t",
+          "v": " the unique dimensionful input (No-Unit Theorem) — complete input "
+        },
+        {
+          "k": "m",
+          "v": "\\{a,\\pi,v_{\\mathrm{geo}}\\}"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "honest residual: this rigidity holds "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "given"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the axioms and does not realise the structure on the raw seam ("
+        },
+        {
+          "k": "c",
+          "v": "QGEO.SYM.01"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " stay "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "). Cited in "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": "; ledger row "
+        },
+        {
+          "k": "c",
+          "v": "ARITH.CAPSTONE.01"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-21",
+    "dateLabel": "2026-06-21",
+    "heading": [
+      {
+        "k": "t",
+        "v": "are the 3 generations a "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_3"
+      },
+      {
+        "k": "t",
+        "v": "/Galois orbit? Yes ("
+      },
+      {
+        "k": "m",
+        "v": "\\mu_3"
+      },
+      {
+        "k": "t",
+        "v": "), Galois-refined "
+      },
+      {
+        "k": "m",
+        "v": "1{+}2"
+      },
+      {
+        "k": "t",
+        "v": " with the fixed generation "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the recovery attractor: "
+      },
+      {
+        "k": "c",
+        "v": "v317"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v317_galois_family.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "GALOIS.FAMILY.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "s",
+              "v": "C"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The "
+        },
+        {
+          "k": "c",
+          "v": "v316"
+        },
+        {
+          "k": "t",
+          "v": " follow-up to the generation structure. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the three cusp weights "
+        },
+        {
+          "k": "m",
+          "v": "\\{0,\\tfrac13,\\tfrac23\\}"
+        },
+        {
+          "k": "t",
+          "v": " (with "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{Spec}(Q_+)=\\{1,2,3\\}"
+        },
+        {
+          "k": "t",
+          "v": ", the "
+        },
+        {
+          "k": "m",
+          "v": "A_3"
+        },
+        {
+          "k": "t",
+          "v": " exponents) are the cube roots of unity "
+        },
+        {
+          "k": "m",
+          "v": "\\{1,\\zeta_3,\\zeta_3^2\\}"
+        },
+        {
+          "k": "t",
+          "v": " under "
+        },
+        {
+          "k": "m",
+          "v": "w\\mapsto e^{2\\pi i w}"
+        },
+        {
+          "k": "t",
+          "v": ", and the cyclic family symmetry "
+        },
+        {
+          "k": "m",
+          "v": "w\\mapsto w{+}\\tfrac13"
+        },
+        {
+          "k": "t",
+          "v": " is a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "transitive"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_3"
+        },
+        {
+          "k": "t",
+          "v": " orbit (the family IS the cube-root orbit); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the transfer eigenvalues "
+        },
+        {
+          "k": "m",
+          "v": "(1{-}w)^6=\\{1,(2/3)^6,(1/3)^6\\}"
+        },
+        {
+          "k": "t",
+          "v": " attach to the weights (attractor "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " eigenvalue "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "w{=}0"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the family Galois "
+        },
+        {
+          "k": "m",
+          "v": "\\Z_2"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\zeta_3\\mapsto\\zeta_3^2=\\bar\\zeta_3"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "c",
+          "v": "v316"
+        },
+        {
+          "k": "t",
+          "v": " CP conjugation) refines the orbit to "
+        },
+        {
+          "k": "m",
+          "v": "1{+}2"
+        },
+        {
+          "k": "t",
+          "v": " — fixing "
+        },
+        {
+          "k": "m",
+          "v": "w{=}0"
+        },
+        {
+          "k": "t",
+          "v": " (rational) and swapping "
+        },
+        {
+          "k": "m",
+          "v": "w{=}\\tfrac13\\leftrightarrow\\tfrac23"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "so the Galois-FIXED generation is the recovery ATTRACTOR (the law) and the Galois-conjugate pair the decaying hierarchy. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "verdict: the family STRUCTURE is the same arithmetic as the CP phase (a "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_3"
+        },
+        {
+          "k": "t",
+          "v": " orbit, Galois-refined "
+        },
+        {
+          "k": "m",
+          "v": "1{+}2"
+        },
+        {
+          "k": "t",
+          "v": "), the mass MAGNITUDES remaining the analytic seed. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": "; ledger row "
+        },
+        {
+          "k": "c",
+          "v": "GALOIS.FAMILY.01"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-21",
+    "dateLabel": "2026-06-21",
+    "heading": [
+      {
+        "k": "t",
+        "v": "does the Galois "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4\\times\\Z_2"
+      },
+      {
+        "k": "t",
+        "v": " organize the readouts? Yes — the CP phases are the family-factor cyclotomic data, Galois "
+      },
+      {
+        "k": "m",
+        "v": "\\Z_2="
+      },
+      {
+        "k": "t",
+        "v": " CP conjugation: "
+      },
+      {
+        "k": "c",
+        "v": "v316"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v316_galois_readout.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "GALOIS.READOUT.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "s",
+              "v": "C"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The "
+        },
+        {
+          "k": "c",
+          "v": "v315"
+        },
+        {
+          "k": "t",
+          "v": " follow-up to phenomenology: does the Galois coupling "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4\\times\\Z_2"
+        },
+        {
+          "k": "t",
+          "v": " reach the physics? "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "it does, through the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "family"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " factor — the hexagonal CP unit "
+        },
+        {
+          "k": "m",
+          "v": "\\rho=\\zeta_6=\\zeta_{30}^5"
+        },
+        {
+          "k": "t",
+          "v": " is exactly the order-"
+        },
+        {
+          "k": "m",
+          "v": "6=2\\Nfam"
+        },
+        {
+          "k": "t",
+          "v": " factor "
+        },
+        {
+          "k": "m",
+          "v": "c^5"
+        },
+        {
+          "k": "t",
+          "v": " of "
+        },
+        {
+          "k": "c",
+          "v": "v315"
+        },
+        {
+          "k": "t",
+          "v": " (the carrier being "
+        },
+        {
+          "k": "m",
+          "v": "\\zeta_5=\\zeta_{30}^6"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the leading CP phases are its cyclotomic arguments "
+        },
+        {
+          "k": "m",
+          "v": "\\delta_{\\mathrm{CKM}}^{\\mathrm{lead}}=\\pi/3=\\arg\\zeta_6"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "\\delta_{\\mathrm{PMNS}}=4\\pi/3=\\arg\\zeta_6^4"
+        },
+        {
+          "k": "t",
+          "v": " (power "
+        },
+        {
+          "k": "m",
+          "v": "4=|\\mu_4|"
+        },
+        {
+          "k": "t",
+          "v": "), with "
+        },
+        {
+          "k": "m",
+          "v": "\\zeta_6^4=-\\zeta_6"
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "\\Z_2"
+        },
+        {
+          "k": "t",
+          "v": " sheet flip and "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_6=\\mu_3\\times\\mu_2"
+        },
+        {
+          "k": "t",
+          "v": " (inherits "
+        },
+        {
+          "k": "c",
+          "v": "v231"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v233"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the family Galois "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{Gal}(\\mathbb Q(\\zeta_6)/\\mathbb Q)=\\Z_2"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\zeta_6\\mapsto\\zeta_6^5=\\bar\\zeta_6"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " CP conjugation "
+        },
+        {
+          "k": "m",
+          "v": "\\delta\\mapsto-\\delta"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the carrier factor "
+        },
+        {
+          "k": "m",
+          "v": "\\zeta_5"
+        },
+        {
+          "k": "t",
+          "v": " (golden "
+        },
+        {
+          "k": "m",
+          "v": "\\sqrt5"
+        },
+        {
+          "k": "t",
+          "v": ") carries no phase ("
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " static), and the magnitudes ("
+        },
+        {
+          "k": "m",
+          "v": "\\sin^2\\theta_{12}=\\tfrac13-\\varphi_0/2"
+        },
+        {
+          "k": "t",
+          "v": ", transcendental "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi_0"
+        },
+        {
+          "k": "t",
+          "v": ") are not cyclotomic. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "verdict: the Galois bridge reaches phenomenology in the phase sector predicted by the "
+        },
+        {
+          "k": "c",
+          "v": "v314"
+        },
+        {
+          "k": "t",
+          "v": " field split. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": "; ledger row "
+        },
+        {
+          "k": "c",
+          "v": "GALOIS.READOUT.01"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-21",
+    "dateLabel": "2026-06-21",
+    "heading": [
+      {
+        "k": "t",
+        "v": "couple or factorize? the order-30 Coxeter element couples the carrier and family sectors as a cyclotomic compositum, Galois "
+      },
+      {
+        "k": "m",
+        "v": "=\\mu_4\\times\\Z_2"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "c",
+        "v": "v315"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v315_coxeter_coupling.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "COX.COUPLE.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "s",
+              "v": "C"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Answers the "
+        },
+        {
+          "k": "c",
+          "v": "v314"
+        },
+        {
+          "k": "t",
+          "v": " question — does "
+        },
+        {
+          "k": "m",
+          "v": "30=\\gcar(2\\Nfam)=5\\cdot6"
+        },
+        {
+          "k": "t",
+          "v": " couple the carrier ("
+        },
+        {
+          "k": "m",
+          "v": "5"
+        },
+        {
+          "k": "t",
+          "v": "-fold, golden, "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb Q(\\sqrt5)"
+        },
+        {
+          "k": "t",
+          "v": ") and family ("
+        },
+        {
+          "k": "m",
+          "v": "6=2\\cdot3"
+        },
+        {
+          "k": "t",
+          "v": ", rational) sectors, or just factorize? "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the cyclic group "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "factorizes"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "\\gcd(5,6)=1\\Rightarrow\n  \\Z/30=\\Z/5\\times\\Z/6"
+        },
+        {
+          "k": "t",
+          "v": " (direct product, group-decoupled, in line with the "
+        },
+        {
+          "k": "c",
+          "v": "v314"
+        },
+        {
+          "k": "t",
+          "v": " field obstruction); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " exponents "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " totatives"
+        },
+        {
+          "k": "m",
+          "v": "(30)"
+        },
+        {
+          "k": "t",
+          "v": " split as totatives"
+        },
+        {
+          "k": "m",
+          "v": "(5)\\times"
+        },
+        {
+          "k": "t",
+          "v": " totatives"
+        },
+        {
+          "k": "m",
+          "v": "(6)"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi(30)=4\\cdot2=8="
+        },
+        {
+          "k": "t",
+          "v": " rank "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "but the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "field"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " couples: "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb Q(\\zeta_{30})"
+        },
+        {
+          "k": "t",
+          "v": " is the compositum of the carrier "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb Q(\\zeta_5)\\ni\\sqrt5"
+        },
+        {
+          "k": "t",
+          "v": " and the family "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb Q(\\zeta_3)"
+        },
+        {
+          "k": "t",
+          "v": ", degree "
+        },
+        {
+          "k": "m",
+          "v": "8="
+        },
+        {
+          "k": "t",
+          "v": " rank "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the Galois group is exactly "
+        },
+        {
+          "k": "m",
+          "v": "(\\Z/5)^\\times\\times(\\Z/3)^\\times=\\Z/4\\times\\Z/2=\\mu_4\\times\\Z_2"
+        },
+        {
+          "k": "t",
+          "v": " (order "
+        },
+        {
+          "k": "m",
+          "v": "8"
+        },
+        {
+          "k": "t",
+          "v": ", max element order "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": "), so the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " seam clock "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the Galois group of the carrier's golden field and "
+        },
+        {
+          "k": "m",
+          "v": "\\Z_2"
+        },
+        {
+          "k": "t",
+          "v": " that of the family field (refining "
+        },
+        {
+          "k": "c",
+          "v": "v223"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "\\sqrt5=\\phi+1/\\phi"
+        },
+        {
+          "k": "t",
+          "v": " is the quadratic Gauss sum in "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb Q(\\zeta_5)"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "verdict: "
+        },
+        {
+          "k": "m",
+          "v": "30=5\\cdot6"
+        },
+        {
+          "k": "t",
+          "v": " does not dynamically entangle the sectors — it couples them as the cyclotomic compositum, the static"
+        },
+        {
+          "k": "m",
+          "v": "\\leftrightarrow"
+        },
+        {
+          "k": "t",
+          "v": "dynamic bridge being "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Galois"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", not a dynamical map. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": "; ledger row "
+        },
+        {
+          "k": "c",
+          "v": "COX.COUPLE.01"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-21",
+    "dateLabel": "2026-06-21",
+    "heading": [
+      {
+        "k": "t",
+        "v": "do the discrete-kernel and dynamic rates translate? An exact number-field split "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb Q"
+      },
+      {
+        "k": "t",
+        "v": " vs "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb Q(\\sqrt5)"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "c",
+        "v": "v314"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v314_rate_translation.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "RATE.TRANSLATE.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "s",
+              "v": "C"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Answers, exactly, whether the discrete kernel (the affine-"
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " network, carrying the golden ratio) and the dynamic part (the seam transfer, carrying the recovery rate "
+        },
+        {
+          "k": "m",
+          "v": "(2/3)^6"
+        },
+        {
+          "k": "t",
+          "v": ") translate. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "FIELD SPLIT: the adjacency spectrum is the rational part "
+        },
+        {
+          "k": "m",
+          "v": "\\{0,\\pm1,\\pm2\\}\\subset\\mathbb Q"
+        },
+        {
+          "k": "t",
+          "v": " plus the golden part "
+        },
+        {
+          "k": "m",
+          "v": "\\{\\pm\\phi,\\pm1/\\phi\\}\\subset\\mathbb Q(\\sqrt5)"
+        },
+        {
+          "k": "t",
+          "v": ", while the transfer spectrum "
+        },
+        {
+          "k": "m",
+          "v": "\\{1,(2/3)^6,(1/3)^6\\}"
+        },
+        {
+          "k": "t",
+          "v": " is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "entirely"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " rational; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the family/sheet rates DO translate (the rational angles "
+        },
+        {
+          "k": "m",
+          "v": "2\\cos(\\pi/2){=}0=|\\mathbb Z_2|"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "2\\cos(\\pi/3){=}1=\\Nfam"
+        },
+        {
+          "k": "t",
+          "v": " build "
+        },
+        {
+          "k": "m",
+          "v": "(2/3)^6=(|\\mathbb Z_2|/\\Nfam)^{2\\Nfam}\\in\\mathbb Q"
+        },
+        {
+          "k": "t",
+          "v": ", same field, same atoms), but "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the carrier "
+        },
+        {
+          "k": "m",
+          "v": "5"
+        },
+        {
+          "k": "t",
+          "v": "-fold (golden, "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb Q(\\sqrt5)"
+        },
+        {
+          "k": "t",
+          "v": ") has NO rational dynamic image – a field obstruction ("
+        },
+        {
+          "k": "m",
+          "v": "2/3"
+        },
+        {
+          "k": "t",
+          "v": " is neither an adjacency nor a lazy-update eigenvalue; heat-kernel "
+        },
+        {
+          "k": "m",
+          "v": "t=\\Delta/(2-\\phi)\\approx6.37"
+        },
+        {
+          "k": "t",
+          "v": " not clean), so the carrier is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "static-only"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the only object holding both is the order-"
+        },
+        {
+          "k": "m",
+          "v": "30"
+        },
+        {
+          "k": "t",
+          "v": " Coxeter element "
+        },
+        {
+          "k": "m",
+          "v": "30=\\gcar(2\\Nfam)=5\\cdot6"
+        },
+        {
+          "k": "t",
+          "v": ", and the "
+        },
+        {
+          "k": "m",
+          "v": "\\phi"
+        },
+        {
+          "k": "t",
+          "v": "-quasicrystal "
+        },
+        {
+          "k": "m",
+          "v": "E_8=H_4{+}\\phi H_4"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "240=2\\cdot120"
+        },
+        {
+          "k": "t",
+          "v": ") carries the carrier but not the (rational, "
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": "-fold) cusp-weight family dynamics. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": "; ledger row "
+        },
+        {
+          "k": "c",
+          "v": "RATE.TRANSLATE.01"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-21",
+    "dateLabel": "2026-06-21",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the golden ratio made precise: the "
+      },
+      {
+        "k": "m",
+        "v": "(2,3,5)"
+      },
+      {
+        "k": "t",
+        "v": " atoms are the affine-"
+      },
+      {
+        "k": "m",
+        "v": "E_8"
+      },
+      {
+        "k": "t",
+        "v": " network spectral angles, "
+      },
+      {
+        "k": "m",
+        "v": "\\phi=2\\cos(\\pi/5)"
+      },
+      {
+        "k": "t",
+        "v": " the "
+      },
+      {
+        "k": "m",
+        "v": "\\gcar{=}5"
+      },
+      {
+        "k": "t",
+        "v": " signature: "
+      },
+      {
+        "k": "c",
+        "v": "v313"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v313_golden_atoms_spectral.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "GOLD.ATOMS.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "s",
+              "v": "C"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " A follow-up to "
+        },
+        {
+          "k": "c",
+          "v": "v312"
+        },
+        {
+          "k": "t",
+          "v": "'s observation, made exact. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the affine-"
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " adjacency characteristic polynomial factors as "
+        },
+        {
+          "k": "m",
+          "v": "x(x^2{-}4)(x^2{-}1)(x^2{-}x{-}1)(x^2{+}x{-}1)"
+        },
+        {
+          "k": "t",
+          "v": ", so the golden minimal polynomial "
+        },
+        {
+          "k": "m",
+          "v": "x^2{-}x{-}1"
+        },
+        {
+          "k": "t",
+          "v": " divides it and "
+        },
+        {
+          "k": "m",
+          "v": "\\phi=2\\cos(\\pi/5)=(1{+}\\sqrt5)/2"
+        },
+        {
+          "k": "t",
+          "v": " is an "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "exact"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " eigenvalue; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the non-trivial eigenvalues are "
+        },
+        {
+          "k": "m",
+          "v": "2\\cos(\\pi/k)"
+        },
+        {
+          "k": "t",
+          "v": " for exactly "
+        },
+        {
+          "k": "m",
+          "v": "k\\in\\{2,3,5\\}=\\{|\\mathbb Z_2|,\\Nfam,\\gcar\\}"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "2\\cos(\\pi/2){=}0"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "2\\cos(\\pi/3){=}1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "2\\cos(\\pi/5){=}\\phi"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "2\\cos(2\\pi/5){=}1/\\phi"
+        },
+        {
+          "k": "t",
+          "v": "), so the golden ratio is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "specifically"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "\\gcar{=}5"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "5"
+        },
+        {
+          "k": "t",
+          "v": "-fold) signature and "
+        },
+        {
+          "k": "m",
+          "v": "\\gcar{=}5"
+        },
+        {
+          "k": "t",
+          "v": " gains a new spectral witness distinct from Pascal/Riemann–Roch (raising the "
+        },
+        {
+          "k": "c",
+          "v": "v305"
+        },
+        {
+          "k": "t",
+          "v": " multiplicity); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the "
+        },
+        {
+          "k": "m",
+          "v": "(2,3,5)"
+        },
+        {
+          "k": "t",
+          "v": " spherical excess "
+        },
+        {
+          "k": "m",
+          "v": "1/2{+}1/3{+}1/5=31/30>1"
+        },
+        {
+          "k": "t",
+          "v": " (the condition selecting the finite "
+        },
+        {
+          "k": "m",
+          "v": "2I\\Rightarrow E_8"
+        },
+        {
+          "k": "t",
+          "v": ") ties the "
+        },
+        {
+          "k": "c",
+          "v": "v63"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v76"
+        },
+        {
+          "k": "t",
+          "v": " gap-margin numerator "
+        },
+        {
+          "k": "m",
+          "v": "31=2^{\\gcar}{-}1=248/8=1{+}h(E_8)"
+        },
+        {
+          "k": "t",
+          "v": " to the Coxeter "
+        },
+        {
+          "k": "m",
+          "v": "30=h(E_8)"
+        },
+        {
+          "k": "t",
+          "v": " — a unification of already-anchored quantities, NOT new evidence (honest anti-numerology, "
+        },
+        {
+          "k": "c",
+          "v": "v305"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "honest null: "
+        },
+        {
+          "k": "m",
+          "v": "\\phi"
+        },
+        {
+          "k": "t",
+          "v": " is a structural lattice/network quantity, not a phenomenological readout. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "direction: "
+        },
+        {
+          "k": "m",
+          "v": "\\phi"
+        },
+        {
+          "k": "t",
+          "v": " is the "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": "-quasicrystal (Elser–Sloane cut-and-project) ratio, a candidate aperiodic substrate for the "
+        },
+        {
+          "k": "c",
+          "v": "v312"
+        },
+        {
+          "k": "t",
+          "v": " question. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": "; ledger row "
+        },
+        {
+          "k": "c",
+          "v": "GOLD.ATOMS.01"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-21",
+    "dateLabel": "2026-06-21",
+    "heading": [
+      {
+        "k": "t",
+        "v": "TOE-roadmap solver round: the "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.EQUIV.01"
+      },
+      {
+        "k": "t",
+        "v": " keystone certificate, the modular bedrock, the carrier"
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": "SM closure, the gap-decoupled measure, and the sharpened hypergraph substrate: "
+      },
+      {
+        "k": "c",
+        "v": "v308"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v312"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v308_seam_equiv_chain.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EQUIV.CHAIN.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "s",
+              "v": "O"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " TOE attack point 1: the keystone “the raw seam-Calderón net is the holomorphic "
+        },
+        {
+          "k": "m",
+          "v": "c{=}8"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " net” assembled into ONE well-typed logical chain "
+        },
+        {
+          "k": "m",
+          "v": "\\text{gap}{>}0\\to\\text{invertible/SRE (Kitaev)}\\to\\text{holomorphic }c{=}8\\\n  (\\text{M\\\"uger/KLM})\\to(E_8)_1\\ (\\text{Conway--Sloane})"
+        },
+        {
+          "k": "t",
+          "v": ", with the exact discriminators "
+        },
+        {
+          "k": "m",
+          "v": "|\\det\\mathrm{Cartan}(E_8)|{=}1"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "|\\det\\mathrm{Cartan}(D_8{=}SO(16))|{=}4"
+        },
+        {
+          "k": "t",
+          "v": ", the carrier tower "
+        },
+        {
+          "k": "m",
+          "v": "4{\\cdot}4{=}16\\to4\\to1"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "c{=}\\gcar{+}\\Nfam{=}8"
+        },
+        {
+          "k": "t",
+          "v": " all machine-checked; the input gap is the derived recovery gap "
+        },
+        {
+          "k": "m",
+          "v": "6\\ln(3/2){>}0"
+        },
+        {
+          "k": "t",
+          "v": ". The only undischarged premise is the cited OS step — an assembly/reduction certificate (a Lean target), not an end-to-end closure. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": "; ledger row "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.CHAIN.01"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v309_modular_bedrock.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGEO.MODHAM.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "s",
+              "v": "O"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " TOE attack point 2: the bedrock "
+        },
+        {
+          "k": "m",
+          "v": "\\omega{\\circ}\\rho{=}\\omega"
+        },
+        {
+          "k": "t",
+          "v": " via an explicit modular Hamiltonian, non-circular — the four marks come from Gauss–Bonnet ("
+        },
+        {
+          "k": "c",
+          "v": "v216"
+        },
+        {
+          "k": "t",
+          "v": ") and the order-"
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " clock from cross-ratio "
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v214"
+        },
+        {
+          "k": "t",
+          "v": "), so "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " is derived; the quasi-free modular Hamiltonian "
+        },
+        {
+          "k": "m",
+          "v": "K=\\log((1{-}C)/C)"
+        },
+        {
+          "k": "t",
+          "v": " round-trips to the seam operator and "
+        },
+        {
+          "k": "m",
+          "v": "[\\rho,K]{=}0\n  \\Leftrightarrow\\omega{\\circ}\\rho{=}\\omega"
+        },
+        {
+          "k": "t",
+          "v": " (a "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb Z_2"
+        },
+        {
+          "k": "t",
+          "v": " profile breaks it). Reduces the bedrock to the Bisognano–Wichmann intrinsicality of the raw collar; not a closure of "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.SYM.01"
+        },
+        {
+          "k": "t",
+          "v": ". Cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": "; ledger row "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.MODHAM.01"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v310_carrier_sm_anomaly.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "CAR.SM.ANOM.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " TOE attack point 3: the carrier half-spinor "
+        },
+        {
+          "k": "m",
+          "v": "16=\\Lambda^{\\mathrm{even}}(\\mathbb C^5)=1{+}10{+}5"
+        },
+        {
+          "k": "t",
+          "v": " is exactly one anomaly-free Standard-Model generation ("
+        },
+        {
+          "k": "m",
+          "v": "SU(5)\\subset SO(10)"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "10{+}\\bar5{+}1"
+        },
+        {
+          "k": "t",
+          "v": "), with "
+        },
+        {
+          "k": "m",
+          "v": "\\sum Y=\\sum Y^3=[SU(2)]^2U(1)=[SU(3)]^2U(1)=0"
+        },
+        {
+          "k": "t",
+          "v": " (exact) and the one-loop "
+        },
+        {
+          "k": "m",
+          "v": "(b_1,b_2,b_3)=(\\tfrac{41}{10},-\\tfrac{19}{6},-7)"
+        },
+        {
+          "k": "t",
+          "v": "; a fourth family shifts "
+        },
+        {
+          "k": "m",
+          "v": "b_1"
+        },
+        {
+          "k": "t",
+          "v": ", so "
+        },
+        {
+          "k": "m",
+          "v": "\\Nfam{=}3"
+        },
+        {
+          "k": "t",
+          "v": " pins the RG. Closes the spectrum/anomaly/"
+        },
+        {
+          "k": "m",
+          "v": "\\beta"
+        },
+        {
+          "k": "t",
+          "v": " sub-question; the interacting Epstein–Glaser "
+        },
+        {
+          "k": "m",
+          "v": "S"
+        },
+        {
+          "k": "t",
+          "v": "-matrix and the Yukawa sector stay "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": ". Cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": "; ledger row "
+        },
+        {
+          "k": "c",
+          "v": "CAR.SM.ANOM.01"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v311_gap_decoupled_measure.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGAMB.CLUSTER.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "s",
+              "v": "C"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "s",
+              "v": "O"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " TOE attack point 4: the physical QG measure as a gap-decoupled, exponentially-clustering object — the transfer spectrum "
+        },
+        {
+          "k": "m",
+          "v": "\\{1,(2/3)^6,(1/3)^6\\}"
+        },
+        {
+          "k": "t",
+          "v": " gives geometric clustering at rate "
+        },
+        {
+          "k": "m",
+          "v": "(2/3)^6"
+        },
+        {
+          "k": "t",
+          "v": " (correlation length "
+        },
+        {
+          "k": "m",
+          "v": "1/(6\\ln(3/2))"
+        },
+        {
+          "k": "t",
+          "v": ", finite susceptibility "
+        },
+        {
+          "k": "m",
+          "v": "729/665"
+        },
+        {
+          "k": "t",
+          "v": "), and the "
+        },
+        {
+          "k": "c",
+          "v": "v76"
+        },
+        {
+          "k": "t",
+          "v": " margin "
+        },
+        {
+          "k": "m",
+          "v": "6\\ln(3/2)-31/(4\\pi^2){\\approx}1.648{>}0"
+        },
+        {
+          "k": "t",
+          "v": " decouples the physical sector from the un-built ambient. "
+        },
+        {
+          "k": "c",
+          "v": "QG.AMB.01"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "(gap-decoupled, inert). Cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": "; ledger row "
+        },
+        {
+          "k": "c",
+          "v": "QGAMB.CLUSTER.01"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v312_hypergraph_substrate.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "HYP.INJECT.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "s",
+              "v": "O"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " TOE attack point 5: the hypergraph substrate sharpened — the affine-"
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " Kac marks are the Perron eigenvector ("
+        },
+        {
+          "k": "m",
+          "v": "A\\,m{=}2m"
+        },
+        {
+          "k": "t",
+          "v": ") and the subleading eigenvalue is exactly "
+        },
+        {
+          "k": "m",
+          "v": "2\\cos(\\pi/5)="
+        },
+        {
+          "k": "t",
+          "v": " the golden ratio, but the recovery rate "
+        },
+        {
+          "k": "m",
+          "v": "(2/3)^6"
+        },
+        {
+          "k": "t",
+          "v": " is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " any eigenvalue and "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi_0"
+        },
+        {
+          "k": "t",
+          "v": " is not a rational edge fraction; so a full-structure rewrite must inject exactly two non-graph-spectral data — the cusp weight "
+        },
+        {
+          "k": "m",
+          "v": "2/3{=}|\\mathbb Z_2|/\\Nfam"
+        },
+        {
+          "k": "t",
+          "v": " and the analytic seed "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi_0"
+        },
+        {
+          "k": "t",
+          "v": ". The open question is precisely delimited, not closed. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "introduction"
+        },
+        {
+          "k": "t",
+          "v": "; ledger row "
+        },
+        {
+          "k": "c",
+          "v": "HYP.INJECT.01"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
     "date": "2026-06-21",
     "dateLabel": "2026-06-21",
     "heading": [
