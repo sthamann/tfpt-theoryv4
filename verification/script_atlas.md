@@ -50,9 +50,9 @@ _The fine-structure constant as the unique root of the boundary U(1) Ward identi
 - **v3_em_alpha** [E] `EM.FP.01` — α⁻¹ = 137.0359992168 unique root of F_U(1)=0; ablation
   - deps: AX.P1.01, v13_open_gates · cited: introduction, origin theory, 1 architecture e8, 2 standard model
 - **v48_em_ward** [E/C] `EM.WARD.01` — EM boundary Ward (Thm C): F_U(1) decomposition; 8b₁ = 164/5
-  - deps: v3_em_alpha, v3 · cited: 1 architecture e8
-- **v341_alpha_quillen** [E/O] `ALPHA.QUILLEN.01` — The alpha fixed point reformulated as the STATIONARITY of a U(1) determinant line, every ingredient identified as an index / heat-kernel coefficient / discriminant form -- NOT a fr
-  - deps: v3, v48, v159, v216, v1 · cited: 1 architecture e8
+  - deps: v3_em_alpha, v3, v341 · cited: 1 architecture e8
+- **v341_alpha_quillen** [E/C/O] `ALPHA.QUILLEN.01` — The alpha fixed point reformulated as the STATIONARITY of a U(1) determinant line, every ingredient identified as an index / heat-kernel coefficient / discriminant form -- NOT a fr
+  - deps: v48_em_ward, v3, v48, v159, v216, v1 · cited: 1 architecture e8
 
 ### `flavor` — Flavor matrix & operators  (13 scripts)
 _The integer operator ladder (R, K, Q, L) and its spectral invariants — the flavor signature._

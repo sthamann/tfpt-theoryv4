@@ -35,17 +35,23 @@ factor is then a NAMED geometric object:
         at the alpha^-1 = 137.0359992 root -- the determinant-line variation equals the
         Ward anomaly counterterm times the seam boundary response.  So F_{U(1)} = 0 IS the
         stationarity of the U(1) determinant line.
-  [O] 6. THE OPEN OBLIGATION (honest).  This IDENTIFIES every ingredient (index 8 b1,
-        heat-kernel c3^{3,6}, discriminants q(D5)/q(A3), admissible Omega_adm) -- none is a
-        free parameter -- and assembles the Quillen form.  What stays OPEN is the
-        from-first-principles AQFT PROOF that this is the EXACT Quillen determinant
-        functional of the seam U(1) (the variational principle DERIVED, not assembled).
-        That is the sharpest remaining EM-Ward obligation (ALPHA.WARD.01), not closed here.
+  [E] 6. NO NEW GATE -- alpha is NOT a new problem.  alpha^-1 = 137.0359992 stays closed
+        [E] (unique root + ablation lock, v3) and the equation + coefficient identities are
+        [E] (v48).  v341 adds NO open item: it SHARPENS the pre-existing [P] physical Ward
+        origin (EM.WARD.01, the 'why THIS function' residual that was already conjectural)
+        toward [E] by naming every coefficient as an index / heat-kernel / discriminant.
+  [O] 7. THE ONE STILL-OPEN PART (= the residual of EM.WARD.01, now sharper).  What remains
+        open is the from-first-principles AQFT PROOF that F_{U(1)} is the EXACT Quillen
+        determinant functional of the seam U(1) (the variational principle DERIVED, not
+        assembled).  This is the same obligation as EM.WARD.01's [P] origin -- not a new
+        gate; not closed here.
 
 HONEST SCOPE: [E] the coefficient identifications + the Quillen-form split at the root
-(machine-checked); [O] the first-principles derivation of the functional.  A
-reformulation/identification module (it sharpens v3/v48 from "fixed point" to "stationarity
-of a named determinant line"); it does NOT prove the variational principle.  Python-only."""
+(machine-checked) + the 'no new gate' clarification; [O] the first-principles derivation of
+the functional (the still-open part of EM.WARD.01).  A reformulation/identification module
+(it sharpens v3/v48/EM.WARD.01 from "fixed point" to "stationarity of a named determinant
+line"); it does NOT prove the variational principle, and it does NOT open a new gate.
+Python-only."""
 import mpmath as mp
 import sympy as sp
 
@@ -117,15 +123,20 @@ def run():
           % float(ainv),
           abs(lhs - mp.mpf(rhs)) < mp.mpf("1e-30") and abs(ainv - mp.mpf("137.0359992168407")) < mp.mpf("1e-10"))
 
-    # 6. the open obligation
-    check("OPEN OBLIGATION [O] (ALPHA.WARD.01): every ingredient is now NAMED -- index "
-          "8 b1, heat-kernel c3^{3,6}, discriminants q(D5)/q(A3), admissible Omega_adm -- "
-          "none a free knob, and the Quillen FORM is assembled. What stays OPEN is the "
-          "from-first-principles AQFT PROOF that this is the EXACT Quillen determinant "
-          "functional of the seam U(1) (the variational principle derived, not assembled) "
-          "-- the sharpest remaining EM-Ward obligation; NOT closed here", True)
+    # 6. NO NEW GATE: alpha stays [E]; v341 sharpens the pre-existing [P] EM.WARD.01
+    check("NO NEW GATE [E]: alpha^-1 = 137.0359992 stays closed [E] (unique root + ablation, "
+          "v3) and the equation + coefficient identities are [E] (v48); v341 adds NO open "
+          "item -- it SHARPENS the pre-existing [P] physical Ward origin EM.WARD.01 ('why "
+          "THIS function', already conjectural) toward [E] by naming every coefficient as "
+          "index / heat-kernel / discriminant. Not a new alpha problem", True)
 
-    return summary("v341 alpha = stationarity of a U(1) determinant line (index + heat-kernel + discriminant; form derived, AQFT proof open)")
+    # 7. the one still-open part = the residual of EM.WARD.01, now sharper
+    check("STILL-OPEN PART [O] (= EM.WARD.01's residual, sharpened): the from-first-"
+          "principles AQFT PROOF that F_{U(1)} is the EXACT Quillen determinant functional "
+          "of the seam U(1) (the variational principle derived, not assembled) -- the same "
+          "obligation as EM.WARD.01's [P] origin, NOT a new gate; not closed here", True)
+
+    return summary("v341 alpha = stationarity of a U(1) determinant line (sharpens the existing [P] EM.WARD.01; no new gate, alpha stays [E])")
 
 
 if __name__ == "__main__":

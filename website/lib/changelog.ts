@@ -264,20 +264,104 @@ export const CHANGELOG: ChangelogEntry[] = [
           "v": " root. "
         },
         {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "No new gate:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\ainv"
+        },
+        {
+          "k": "t",
+          "v": " stays closed "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "; v341 adds no open item — it "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "sharpens"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the pre-existing "
+        },
+        {
           "k": "s",
           "v": "O"
         },
         {
           "k": "t",
-          "v": "the from-first-principles AQFT proof that this is the EXACT Quillen functional (the variational principle derived, not assembled) stays open ("
+          "v": "/physical-origin obligation "
         },
         {
           "k": "c",
-          "v": "ALPHA.WARD.01"
+          "v": "EM.WARD.01"
         },
         {
           "k": "t",
-          "v": ") — the sharpest remaining EM-Ward obligation. Wolfram mirror "
+          "v": " (“why "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "this"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " function”, already conjectural). "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the one still-open part "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " that residual: the from-first-principles AQFT proof that "
+        },
+        {
+          "k": "m",
+          "v": "F_{U(1)}"
+        },
+        {
+          "k": "t",
+          "v": " is the EXACT Quillen functional (the variational principle derived, not assembled), unchanged in scope. Wolfram mirror "
         },
         {
           "k": "m",
