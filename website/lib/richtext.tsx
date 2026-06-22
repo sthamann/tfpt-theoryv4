@@ -44,11 +44,15 @@ const MARKER_GLOBAL = /\[(E|C|O|X|I|L|F|N|P|B|R|A)\]/g;
 const MATH_CHAR =
   /[=^_{}|+×÷·⋅∘⊕⊗√∞∂∇∈∉⊂⊆∩∪⇒⟹→↦↔⟷≤≥≠≈∼≅≡∝∏∑−⁻⁺⁰¹²³⁴⁵⁶⁷⁸⁹ⁿ₀₁₂₃₄₅₆₇₈₉α-ωΑ-Ωℤℙℝℂℕℚ]/u;
 
+// A "core" is a letter (Latin, Greek) / blackboard / digit — anything that is
+// not purely operators/punctuation. Lone operators (= → ⇒ ± …) have no core and
+// are never chipped, so prose is never mangled.
+const CORE_CHAR = /[A-Za-z0-9α-ωΑ-Ωℤℙℝℂℕℚ]/u;
+
 function isFormula(raw: string): boolean {
   const t = raw.replace(/^[("'¿¡]+/, "").replace(/[).,;:!?"']+$/, "");
-  if (!t) return false;
-  if (!/[A-Za-z0-9]/.test(t)) return false; // require an alphanumeric core
-  if (MATH_CHAR.test(t)) return true;
+  if (!t || !CORE_CHAR.test(t)) return false;
+  if (MATH_CHAR.test(t)) return true; // symbols, sub/superscripts, Greek (φ₀, μ₄, α⁻¹, ℤ₄)
   if (/[A-Za-z]\d/.test(t)) return true; // identifier: c3, E8, phi0, theta13, v219, D5, P1
   if (/\d+\/\d+/.test(t)) return true; // fraction: 41/10, 2/3
   return false;
@@ -78,10 +82,22 @@ function renderProse(text: string, keyBase: string): ReactNode {
   const parts = text.split(/(\s+)/); // keep whitespace runs as their own parts
   return parts.map((part, i) => {
     if (i % 2 === 1) return <Fragment key={`${keyBase}-s${i}`}>{part}</Fragment>;
-    if (part && isFormula(part)) {
-      return <FormulaChip key={`${keyBase}-f${i}`} value={part} />;
+    if (!part || !isFormula(part)) {
+      return <Fragment key={`${keyBase}-t${i}`}>{part}</Fragment>;
     }
-    return <Fragment key={`${keyBase}-t${i}`}>{part}</Fragment>;
+    // Keep trailing/leading sentence punctuation outside the chip (but not
+    // parentheses, which are part of formulas like (2/3)⁶ or F_U(1)).
+    const lead = part.match(/^[,"']+/)?.[0] ?? "";
+    const trail = part.match(/[,;:.!?"']+$/)?.[0] ?? "";
+    const core = part.slice(lead.length, part.length - trail.length);
+    if (!core) return <Fragment key={`${keyBase}-t${i}`}>{part}</Fragment>;
+    return (
+      <Fragment key={`${keyBase}-f${i}`}>
+        {lead}
+        <FormulaChip value={core} />
+        {trail}
+      </Fragment>
+    );
   });
 }
 

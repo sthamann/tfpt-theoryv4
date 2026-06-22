@@ -47,6 +47,583 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "endgame round: the necessity of "
+      },
+      {
+        "k": "m",
+        "v": "H"
+      },
+      {
+        "k": "t",
+        "v": " reduced to the order-4 CM selection, the QG metric sector characterized as the conformal-mode problem, "
+      },
+      {
+        "k": "m",
+        "v": "|\\det E_8|{=}1"
+      },
+      {
+        "k": "t",
+        "v": " and the "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4"
+      },
+      {
+        "k": "t",
+        "v": " commutation grounded in Lean: "
+      },
+      {
+        "k": "c",
+        "v": "v331"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "v332"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "FORM.MU4COMM.01"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v331_necessity_of_H.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGEO.NECESS.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "s",
+              "v": "O"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The necessity companion to "
+        },
+        {
+          "k": "c",
+          "v": "v329"
+        },
+        {
+          "k": "t",
+          "v": ": a concrete Steklov (DtN) computation shows the seam "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda{=}|k|{+}M_f"
+        },
+        {
+          "k": "t",
+          "v": " commutes with the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " clock "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "iff"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the four marks sit at the square ("
+        },
+        {
+          "k": "m",
+          "v": "\\tau{=}i"
+        },
+        {
+          "k": "t",
+          "v": ") — moving a mark off the square breaks "
+        },
+        {
+          "k": "m",
+          "v": "\\Z_4"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "[\\rho,\\Lambda]\\neq0"
+        },
+        {
+          "k": "t",
+          "v": ". The square has cross-ratio "
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "j{=}1728"
+        },
+        {
+          "k": "t",
+          "v": "), the unique "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": "-config with an order-4 automorphism ("
+        },
+        {
+          "k": "c",
+          "v": "v214"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v267"
+        },
+        {
+          "k": "t",
+          "v": "), so "
+        },
+        {
+          "k": "m",
+          "v": "H\\Leftrightarrow"
+        },
+        {
+          "k": "t",
+          "v": " square "
+        },
+        {
+          "k": "m",
+          "v": "\\Leftrightarrow\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " and “necessity of "
+        },
+        {
+          "k": "m",
+          "v": "H"
+        },
+        {
+          "k": "t",
+          "v": "” sharpens to: the raw dynamics places the four Gauss–Bonnet marks ("
+        },
+        {
+          "k": "c",
+          "v": "v216"
+        },
+        {
+          "k": "t",
+          "v": ") at the order-4 CM point. Residual "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " that dynamical selection."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v332_qgamb_metric_sector.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGAMB.METRIC.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "s",
+              "v": "C"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "s",
+              "v": "O"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The open metric sector of "
+        },
+        {
+          "k": "c",
+          "v": "QG.AMB.01"
+        },
+        {
+          "k": "t",
+          "v": " is characterized precisely as the Gibbons–Hawking–Perry conformal-factor problem: the conformal mode has a negative kinetic coefficient "
+        },
+        {
+          "k": "m",
+          "v": "-(D{-}1)(D{-}2)/4"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "{=}-\\tfrac32"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "D{=}4"
+        },
+        {
+          "k": "t",
+          "v": "), so the bare Euclidean measure diverges over it. The obstruction is in the conformal/gauge direction, gap-insulated from the admissible sector ("
+        },
+        {
+          "k": "c",
+          "v": "v330"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v76"
+        },
+        {
+          "k": "t",
+          "v": "); the only route is the conditional IDG taming ("
+        },
+        {
+          "k": "c",
+          "v": "v304"
+        },
+        {
+          "k": "t",
+          "v": "), with the polynomial "
+        },
+        {
+          "k": "m",
+          "v": "R{+}R^2"
+        },
+        {
+          "k": "t",
+          "v": " ghost as the control. Open, but pinned to one named obstruction."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "CartanDeterminants.lean"
+            },
+            {
+              "k": "t",
+              "v": " extended ("
+            },
+            {
+              "k": "c",
+              "v": "FORM.CARTAN.DET.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The rank-8 holomorphy discriminator "
+        },
+        {
+          "k": "m",
+          "v": "|\\det\\mathrm{Cartan}(E_8)|{=}1"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " has one anyon, vs "
+        },
+        {
+          "k": "m",
+          "v": "D_8"
+        },
+        {
+          "k": "t",
+          "v": "'s four) is now proved principally and kernel-only: "
+        },
+        {
+          "k": "c",
+          "v": "cartanE8 * cartanE8inv = 1"
+        },
+        {
+          "k": "t",
+          "v": " by "
+        },
+        {
+          "k": "c",
+          "v": "decide"
+        },
+        {
+          "k": "t",
+          "v": " on the 8"
+        },
+        {
+          "k": "m",
+          "v": "\\times"
+        },
+        {
+          "k": "t",
+          "v": "8 PRODUCT gives "
+        },
+        {
+          "k": "c",
+          "v": "IsUnit (det E8)"
+        },
+        {
+          "k": "t",
+          "v": " via "
+        },
+        {
+          "k": "m",
+          "v": "\\det E_8\\cdot\\det E_8^{-1}{=}\\det 1{=}1"
+        },
+        {
+          "k": "t",
+          "v": " — no 8! determinant, no "
+        },
+        {
+          "k": "c",
+          "v": "native_decide"
+        },
+        {
+          "k": "t",
+          "v": " (Mathlib itself leaves "
+        },
+        {
+          "k": "c",
+          "v": "E\\textsubscript{8}_det = 1"
+        },
+        {
+          "k": "t",
+          "v": " a "
+        },
+        {
+          "k": "c",
+          "v": "proof_wanted"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "Mu4Commutation.lean"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "FORM.MU4COMM.01"
+            },
+            {
+              "k": "t",
+              "v": ", Lean 4, "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The v201/v323 mark-locality criterion as exact linear algebra over the Gaussian integers "
+        },
+        {
+          "k": "m",
+          "v": "\\Z[i]"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "i^4{=}1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "i^2{=}-1"
+        },
+        {
+          "k": "t",
+          "v": ", and (on concrete "
+        },
+        {
+          "k": "m",
+          "v": "6\\times6"
+        },
+        {
+          "k": "t",
+          "v": " matrices) an offset-4 coupling commutes with the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " clock while an offset-2 coupling does not — all by kernel "
+        },
+        {
+          "k": "c",
+          "v": "decide"
+        },
+        {
+          "k": "t",
+          "v": ". Built "
+        },
+        {
+          "k": "c",
+          "v": "lake build"
+        },
+        {
+          "k": "t",
+          "v": " on Lean v4.29.1 "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " Mathlib."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-22",
+    "dateLabel": "2026-06-22",
+    "heading": [
+      {
+        "k": "t",
         "v": "frontier round: the OS step discharged at the many-body level, the ambient measure built on the gap-decoupled sector, and the carrier Cartan determinants grounded in Lean: "
       },
       {

@@ -80,10 +80,19 @@ ROWS = [
      "residual has lambda^2 tail OR not 1/r^2 OR no E.B sign flip", "data_limited"],
     # ---- GW (experiments/gw-ringdown-echo) ----
     ["GW", "ringdown echo amplitude ratio", "A_{n+1}/A_n <= (2/3)^6",
-     "catalog reach rho_echo~6.3; Stage-1 matched-filter validated on injections (3/3, free-ratio control); real strain pending",
+     "catalog reach rho_echo~6.3; Stage-1 matched-filter validated (3/3); real GWOSC strain "
+     "(GW150914,GW190521) run = no kernel-ratio echo coincident in >=2 detectors (q_hat~1, free-ratio rejected)",
      None, "search_target", "boundary recovery kernel",
-     "catalog_feasibility", "LVK GWTC-5.0 (390 canonical; 391 raw rows) + injection-recovery",
+     "strain_level_test", "LVK GWTC-5.0 (390 canonical) + real 32s strain (GW150914/GW190521)",
      "strain-level echo with ratio >>(2/3)^6 across events", "data_limited"],
+    ["GW", "dynamic walled-clock recovery bend (Stage 2)",
+     "bend rate(2)/rate(1)=ln3/ln(3/2)=2.7095 + protected floor + hard wall (v124/v147, QT.04)",
+     "NO_KERNEL_RECOVERY on real strain (q_hat~1, not the bend); identifiability: within ONE recovery "
+     "the bend is degenerate with single-exp (two-mode R^2 gain ~1.3e-3, even noise-free) -> a single "
+     "ringdown cannot carry the bend; discriminating signature is the cascade comb (omega=2.58, eps~2%)",
+     None, "search_target", "boundary recovery kernel (dynamic)",
+     "strain_level_test", "real 32s GWOSC strain (GW150914/GW190521); QT.04 walled-clock template",
+     "a locked-bend (2.7095) two-timescale recovery coincident in >=2 detectors", "data_limited"],
     # ---- pulsar glitches (experiments/pulsar-glitch-recovery) ----
     # the missing cross-domain leg: same frozen kernel as FRB.02/09 + GW echo
     ["pulsar", "glitch-size log-periodicity (PG.01)", "comb at (3/2)^k or {1+phi0,4,8,8pi}",
@@ -105,10 +114,12 @@ ROWS = [
      "Q clusters at phi0 multiples OR tau_d components form the kernel ladder", "null"],
     ["pulsar", "recovery-waveform clock template (PG.04/QT.04)",
      "walled 2-mode clock: bend tau ratio 2.7095 + protected floor + wall (<=2 modes)",
-     "open: needs time-resolved recovery waveforms (matched filter), not summary Q/tau_d", None,
+     "GW single-event ringdown DONE (gw Stage 2): the bend is degenerate within one monotone recovery "
+     "(two-mode R^2 gain ~1e-3); the discriminating signature is the CASCADE comb (omega=2.58), so the "
+     "open lever is FRB-repeater tails / pulsar nu(t) post-glitch SEQUENCES, not summary Q/tau_d", None,
      "search_target", "exact discrete->dynamic clock rate(n)=-6ln(1-n/3) (v124/v126/v147)",
-     "search_target", "FRB tails / pulsar nu(t) / GW ringdown residuals (future); QT.04 template validated",
-     "recovery waveforms fit a free 2-exp with rate ratio != 2.7095 (or >=3 robust decay modes)",
+     "search_target", "FRB tails / pulsar nu(t) sequences (future); QT.04 template validated; GW Stage 2 done",
+     "recovery-waveform SEQUENCE shows the cascade comb at omega=2.58 (or a single recovery fits >=3 modes)",
      "data_limited"],
     # ---- lab (experiments/lab-residuals) ----
     ["lab", "muon g-2 Delta a_mu (WP2020 dispersive)", "2.879e-9",

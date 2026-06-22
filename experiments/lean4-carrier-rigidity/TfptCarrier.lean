@@ -56,6 +56,7 @@ import TfptCarrier.SeamDeckClosure
 import TfptCarrier.SeamEquivChain
 import TfptCarrier.BWKeystone
 import TfptCarrier.CartanDeterminants
+import TfptCarrier.Mu4Commutation
 import TfptCarrier.MobiusUniformisation
 import TfptCarrier.CohomologyGrading
 import TfptCarrier.AnchorLadder

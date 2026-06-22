@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`328` registered scripts · `385` ledger claims · `10` clusters.
+`330` registered scripts · `388` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -208,7 +208,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v75_upoint_to_vgeo** [E/O] `FLAV.UPOINT.01` — Gate 1 complete: U_point → v_geo (ratios + Grand Mass Volume); same anchor as 1/G
   - deps: v71_simple_r_bridge, v20_lepton_c_derivation, v46_grand_mass_volume, v68 · cited: origin theory, research contracts
 
-### `frontier` — Open gate (G_metric) & the frontier  (81 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (83 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -373,6 +373,10 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v308_seam_equiv_chain, v323_bw_geometric_modular, v325_pillowcase_keystone, v240, v308, v323, v325, v237 · cited: origin theory
 - **v330_qgamb_admissible_measure** [E/O] `QGAMB.MEASURE.01` — Constructing the ambient measure on the gap-decoupled admissible sector as a bona fide Osterwalder-Schrader object (with the honest fence). [E] REFLECTION POSITIVITY: the seam tran
   - deps: v275_qgamb_roadmap, v275, v311, v240, v221, v76 · cited: origin theory
+- **v331_necessity_of_H** [E/O] `QGEO.NECESS.01, FORM.MU4COMM.01` — The NECESSITY of H reduced: rotation-invariance of the seam DtN is EQUIVALENT to the four marks at the square (tau=i), so the one open lemma is exactly the order-4 CM selection (th
+  - deps: v329_os_gap_reduction, v325_pillowcase_keystone, v201_seam_subprincipal_marks, v329, v201, v210, v214, v216 · cited: origin theory
+- **v332_qgamb_metric_sector** [E/C/O] `QGAMB.METRIC.01` — The metric sector of QG.AMB.01 characterized: the obstruction is exactly the conformal-mode (Gibbons-Hawking-Perry) problem, the physical sector is gap-insulated, and the only rout
+  - deps: v330_qgamb_admissible_measure, v275_qgamb_roadmap, v304_idg_nonlocal_ghost, v330, v275, v304, v76 · cited: origin theory
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (163 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -718,14 +722,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×26, `E8.GLU.01`×15, `HOR.NARIAI.01`×15, `AX.P1.01`×11, `v56`×11, `REG.FREEZE.01`×11, `SEAM.EQUIV.01`×11, `FLAV.KQ.01`×10, `QGEO.PILLOW.01`×10, `CAR.SM.01`×9, `QGEO.SUBPRIN.01`×9, `GATE.QGEO.01`×8, `v37`×8, `v55`×8, `v68`×8
+**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×26, `E8.GLU.01`×15, `HOR.NARIAI.01`×15, `AX.P1.01`×11, `v56`×11, `REG.FREEZE.01`×11, `SEAM.EQUIV.01`×11, `QGEO.SUBPRIN.01`×11, `FLAV.KQ.01`×10, `QGEO.PILLOW.01`×10, `v76`×9, `CAR.SM.01`×9, `GATE.QGEO.01`×8, `v37`×8, `v55`×8
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v319_translation_clock** — `TRANSLATE.CLOCK.01`
-- **v320_galois_cp_relation** — `GALOIS.CP.PREDICT.01`
 - **v321_killtest_board** — `KILL.BOARD.01`
 - **v322_cp_lock_sharpened** — `GALOIS.CP.SHARPEN.01`
 - **v323_bw_geometric_modular** — `QGEO.BW.01, FORM.QGEO.BW.01`
@@ -736,4 +738,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v328_theta13_pressure** — `FLAV.TH13.PRESSURE.01`
 - **v329_os_gap_reduction** — `QGEO.OSGAP.01`
 - **v330_qgamb_admissible_measure** — `QGAMB.MEASURE.01`
+- **v331_necessity_of_H** — `QGEO.NECESS.01, FORM.MU4COMM.01`
+- **v332_qgamb_metric_sector** — `QGAMB.METRIC.01`
 

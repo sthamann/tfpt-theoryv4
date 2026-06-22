@@ -59,6 +59,32 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-22 (endgame round: the necessity of $H$ reduced to the order-4 CM selection, the QG metric sector characterized as the conformal-mode problem, $|\det E_8|{=}1$ and the $\mu_4$ commutation grounded in Lean: \texttt{v331}, \texttt{v332}, \texttt{FORM.MU4COMM.01})}
+\begin{itemize}
+\item \textbf{\texttt{v331\_necessity\_of\_H.py} (\texttt{QGEO.NECESS.01}, \mE/\mO).} The necessity companion to
+  \texttt{v329}: a concrete Steklov (DtN) computation shows the seam $\Lambda{=}|k|{+}M_f$ commutes with the $\mu_4$
+  clock \emph{iff} the four marks sit at the square ($\tau{=}i$) --- moving a mark off the square breaks $\Z_4$ and
+  $[\rho,\Lambda]\neq0$.  The square has cross-ratio $2$ ($j{=}1728$), the unique $4$-config with an order-4
+  automorphism (\vref{v214}/\vref{v267}), so $H\Leftrightarrow$ square $\Leftrightarrow\mu_4$ and ``necessity of
+  $H$'' sharpens to: the raw dynamics places the four Gauss--Bonnet marks (\vref{v216}) at the order-4 CM point.
+  Residual $=$ that dynamical selection.
+\item \textbf{\texttt{v332\_qgamb\_metric\_sector.py} (\texttt{QGAMB.METRIC.01}, \mE/\mC/\mO).} The open metric sector
+  of \texttt{QG.AMB.01} is characterized precisely as the Gibbons--Hawking--Perry conformal-factor problem: the
+  conformal mode has a negative kinetic coefficient $-(D{-}1)(D{-}2)/4$ (${=}-\tfrac32$ at $D{=}4$), so the bare
+  Euclidean measure diverges over it.  The obstruction is in the conformal/gauge direction, gap-insulated from the
+  admissible sector (\vref{v330}/\vref{v76}); the only route is the conditional IDG taming (\vref{v304}), with the
+  polynomial $R{+}R^2$ ghost as the control.  Open, but pinned to one named obstruction.
+\item \textbf{\texttt{CartanDeterminants.lean} extended (\texttt{FORM.CARTAN.DET.01}, \mE).} The rank-8 holomorphy
+  discriminator $|\det\mathrm{Cartan}(E_8)|{=}1$ ($E_8$ has one anyon, vs $D_8$'s four) is now proved principally and
+  kernel-only: \texttt{cartanE8 * cartanE8inv = 1} by \texttt{decide} on the 8$\times$8 PRODUCT gives
+  \texttt{IsUnit (det E8)} via $\det E_8\cdot\det E_8^{-1}{=}\det 1{=}1$ --- no 8! determinant, no
+  \texttt{native\_decide} (Mathlib itself leaves \texttt{E\textsubscript{8}\_det = 1} a \texttt{proof\_wanted}).
+\item \textbf{\texttt{Mu4Commutation.lean} (\texttt{FORM.MU4COMM.01}, Lean 4, \mE).} The v201/v323 mark-locality
+  criterion as exact linear algebra over the Gaussian integers $\Z[i]$: $i^4{=}1$, $i^2{=}-1$, and (on concrete
+  $6\times6$ matrices) an offset-4 coupling commutes with the $\mu_4$ clock while an offset-2 coupling does not ---
+  all by kernel \texttt{decide}.  Built \texttt{lake build} on Lean v4.29.1 $+$ Mathlib.
+\end{itemize}
+
 \subsection*{2026-06-22 (frontier round: the OS step discharged at the many-body level, the ambient measure built on the gap-decoupled sector, and the carrier Cartan determinants grounded in Lean: \texttt{v329}, \texttt{v330}, \texttt{FORM.CARTAN.DET.01})}
 \begin{itemize}
 \item \textbf{\texttt{v329\_os\_gap\_reduction.py} (\texttt{QGEO.OSGAP.01}, \mE/\mO).} The one analytic input the v308
