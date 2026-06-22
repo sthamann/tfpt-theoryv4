@@ -47,6 +47,465 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "bandwidth search of the unmapped "
+      },
+      {
+        "k": "m",
+        "v": "E_8"
+      },
+      {
+        "k": "t",
+        "v": " region, with a strict forced-identity discriminator: the genuine overlooked structure is COLLECTIVE ("
+      },
+      {
+        "k": "m",
+        "v": "\\sum\\deg=128=\\dim S^+"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\prod\\deg=|W(E_8)|"
+      },
+      {
+        "k": "t",
+        "v": ", exponents "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " totatives of "
+      },
+      {
+        "k": "m",
+        "v": "30"
+      },
+      {
+        "k": "t",
+        "v": "); the per-degree atom matches are unforced and DECLINED; no new physical hit – reconciling "
+      },
+      {
+        "k": "c",
+        "v": "v66"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "c",
+        "v": "v354"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "c",
+        "v": "v355"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v355"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "E8.UNMAPPED.BANDWIDTH.01"
+            },
+            {
+              "k": "t",
+              "v": ") — the next step after "
+            },
+            {
+              "k": "c",
+              "v": "v354"
+            },
+            {
+              "k": "t",
+              "v": ", run honestly."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The obvious follow-up (“search those five degrees for hits we overlooked”) is itself the numerology temptation "
+        },
+        {
+          "k": "c",
+          "v": "v354"
+        },
+        {
+          "k": "t",
+          "v": " warns about: a rich object like "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " returns a numerical match for almost anything. So the scan uses a STRICT discriminator – a candidate counts only if it is a FORCED identity (a theorem about "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": "), never a coincidence. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "FORCED, SET-LEVEL (the genuinely overlooked structure, collective not per-number): "
+        },
+        {
+          "k": "m",
+          "v": "\\sum\\deg=128=\n\\dim S^+"
+        },
+        {
+          "k": "t",
+          "v": ", the spinor half of "
+        },
+        {
+          "k": "m",
+          "v": "248=120+128"
+        },
+        {
+          "k": "t",
+          "v": " (theorem: "
+        },
+        {
+          "k": "m",
+          "v": "\\sum\\deg=\\#"
+        },
+        {
+          "k": "t",
+          "v": "pos roots"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": "rank"
+        },
+        {
+          "k": "m",
+          "v": "=120+8"
+        },
+        {
+          "k": "t",
+          "v": ") – the invariant budget of "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " equals the fermion content the carrier reads; "
+        },
+        {
+          "k": "m",
+          "v": "\\sum\\exp=120=\\#"
+        },
+        {
+          "k": "t",
+          "v": "pos roots; "
+        },
+        {
+          "k": "m",
+          "v": "\\prod\\deg=|W(E_8)|=696{,}729{,}600"
+        },
+        {
+          "k": "t",
+          "v": "; exponents "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi(30){=}8"
+        },
+        {
+          "k": "t",
+          "v": " totatives of "
+        },
+        {
+          "k": "m",
+          "v": "30"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v223"
+        },
+        {
+          "k": "t",
+          "v": "), so the unmapped degrees' exponents are part of the forced set; "
+        },
+        {
+          "k": "m",
+          "v": "\\max\\deg=30=h(E_8)"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "SUGGESTIVE, not a theorem: "
+        },
+        {
+          "k": "m",
+          "v": "12{=}h(E_6)"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "18{=}h(E_7)"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "30{=}h(E_8)"
+        },
+        {
+          "k": "t",
+          "v": " are all degrees of "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " (the "
+        },
+        {
+          "k": "m",
+          "v": "2T/2O/2I"
+        },
+        {
+          "k": "t",
+          "v": " McKay ladder, "
+        },
+        {
+          "k": "c",
+          "v": "v219"
+        },
+        {
+          "k": "t",
+          "v": "), but “"
+        },
+        {
+          "k": "m",
+          "v": "\\deg(E_8)"
+        },
+        {
+          "k": "t",
+          "v": " contains its subalgebras' Coxeter numbers” is not a general theorem – flagged, not claimed. "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "DECLINED (the numerology temptation): the per-degree atom matches "
+        },
+        {
+          "k": "m",
+          "v": "14{=}\\dim G_2"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "20{=}\\det L"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "24{=}|W(A_3)|"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "12{=}|R(A_3)|"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "18{=}p_4(a)"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v66"
+        },
+        {
+          "k": "t",
+          "v": " already flagged "
+        },
+        {
+          "k": "m",
+          "v": "12,18"
+        },
+        {
+          "k": "t",
+          "v": " as fittable) each admit "
+        },
+        {
+          "k": "m",
+          "v": "\\ge2"
+        },
+        {
+          "k": "t",
+          "v": " readings, and the lone extra prime in "
+        },
+        {
+          "k": "m",
+          "v": "|W(E_8)|=2^{14}3^5 5^2\\,7"
+        },
+        {
+          "k": "t",
+          "v": " “"
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": "” the scalaron exponent is one of many readings of "
+        },
+        {
+          "k": "m",
+          "v": "7"
+        },
+        {
+          "k": "t",
+          "v": " – all declined. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "RECONCILES "
+        },
+        {
+          "k": "c",
+          "v": "v66"
+        },
+        {
+          "k": "t",
+          "v": " (the 8 degrees coincide with the load-bearing integers) and "
+        },
+        {
+          "k": "c",
+          "v": "v354"
+        },
+        {
+          "k": "t",
+          "v": " (only "
+        },
+        {
+          "k": "m",
+          "v": "2,8,30"
+        },
+        {
+          "k": "t",
+          "v": " are primary readouts): the search finds NO new forced physical hit, and the disciplined decline IS the anti-numerology result. (This also sharpens "
+        },
+        {
+          "k": "c",
+          "v": "v354"
+        },
+        {
+          "k": "t",
+          "v": ": the five are “no PRIMARY readout / hull overhead”, not literally “unmapped” – they coincide with structural atoms, but unforced.) Cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_5_redteam"
+        },
+        {
+          "k": "t",
+          "v": " (with a full audited degree table); mirrored in Wolfram ("
+        },
+        {
+          "k": "c",
+          "v": "301/301"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-22",
+    "dateLabel": "2026-06-22",
+    "heading": [
+      {
+        "k": "t",
         "v": "the REVERSE numerology audit, and what the golden ratio means: of "
       },
       {
@@ -63,7 +522,7 @@ export const CHANGELOG: ChangelogEntry[] = [
       },
       {
         "k": "t",
-        "v": " are load-bearing and "
+        "v": " feed a primary readout and "
       },
       {
         "k": "m",
@@ -71,7 +530,7 @@ export const CHANGELOG: ChangelogEntry[] = [
       },
       {
         "k": "t",
-        "v": " are unmapped (the hull overhead); the golden ratio is UNMAPPED structure, so it cannot be numerology: "
+        "v": " are hull overhead; the golden ratio is UNMAPPED structure, so it cannot be numerology: "
       },
       {
         "k": "c",
@@ -215,7 +674,7 @@ export const CHANGELOG: ChangelogEntry[] = [
         },
         {
           "k": "t",
-          "v": " cycle) — and FIVE are UNMAPPED "
+          "v": " cycle) — and FIVE carry no primary readout "
         },
         {
           "k": "m",
@@ -223,7 +682,23 @@ export const CHANGELOG: ChangelogEntry[] = [
         },
         {
           "k": "t",
-          "v": "; so "
+          "v": " (they coincide with structural atoms per "
+        },
+        {
+          "k": "c",
+          "v": "v66"
+        },
+        {
+          "k": "t",
+          "v": ", but unforced – reconciled in "
+        },
+        {
+          "k": "c",
+          "v": "v355"
+        },
+        {
+          "k": "t",
+          "v": "); so "
         },
         {
           "k": "m",
@@ -231,7 +706,7 @@ export const CHANGELOG: ChangelogEntry[] = [
         },
         {
           "k": "t",
-          "v": " are load-bearing, "
+          "v": " are primary readouts, "
         },
         {
           "k": "m",
@@ -239,7 +714,7 @@ export const CHANGELOG: ChangelogEntry[] = [
         },
         {
           "k": "t",
-          "v": " are not. "
+          "v": " hull overhead. "
         },
         {
           "k": "s",

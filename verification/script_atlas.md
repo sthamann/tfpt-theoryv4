@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`352` registered scripts · `410` ledger claims · `10` clusters.
+`353` registered scripts · `411` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -28,7 +28,7 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
 - **v53_compiler_core** [E] `ARCH.CORE.01` — whole integer skeleton from (5,3); Δ_Y = 25 = 9+16
   - deps: v46_grand_mass_volume, v23, v47, BND.GLUE.01 · cited: origin theory, 1 architecture e8
 - **v66_e8_casimir_degrees** [E] `ARCH.E8DEG.01` — compiler atoms = E₈ Casimir degrees; Σ = 128 = 2⁷
-  - deps: v37, v10, v55, v56, h(E8)=30 · cited: 3 e8 audit bootstrap
+  - deps: v37, v10, v55, v56, h(E8)=30 · cited: 3 e8 audit bootstrap, 5 redteam
 - **v219_icosahedral_mckay** [E/C/O] `MCKAY.E8.01` — McKay bedrock: WHY the atoms are 2,3,5. E₈ is the exceptional TOP of the McKay tower of finite SU(2) subgroups (2T→Ê₆, 2O→Ê₇, 2I→Ê₈). The McKay graph is BUILT from the group: the 1
   - deps: AX.P2.01, v1_e8_glue, v53_compiler_core · cited: introduction, origin theory, 1 architecture e8, 5 redteam
 - **v222_cm_norm_duality** [E/C] `CMNORM.DUAL.01` — CM-norm duality: the two exceptional moduli give 41 and 7. SQUARE (Gaussian ℤ[i], j=1728): N(g_car+i|μ₄|)=5²+4²=41=10b₁ (the EM index IS the Gaussian norm of the carrier-glue vecto
@@ -420,7 +420,7 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
 - **v343_four_routes_analysis** [E/C/O] `FOUR.ROUTES.01` — The honest investigation of the four black-hole-birth solution routes (A finite causal diamond, B Carlip-Cardy near-horizon CFT, C modular/thermal flow, D self-reproduction attract
   - deps: v335_seam_equiv_unify, QG.AMB.01, v54, v190, v332, v334, v337, v239 · cited: origin theory
 
-### `registry` — Blind registry & red-team follow-ups (v84–v175)  (164 scripts)
+### `registry` — Blind registry & red-team follow-ups (v84–v175)  (165 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
 
 - **v84_frozen_registry** [E] `REG.FREEZE.01` — blind-prediction registry FROZEN 2026-06-09: every dimensionless prediction of record at 25 digits, re-derived from the two axioms each run (formula↔value lock); exactly ONE θ₁₂ pr
@@ -751,6 +751,8 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
   - deps: v2_carrier_pascal, v273_eg_gauge_running, v273, v159 · cited: research contracts
 - **v354_e8_reverse_audit** [E/O] `E8.REVERSE.AUDIT.01` — The REVERSE numerology audit + what the golden ratio means. The forward rule (v305) is one-directional (every readout must map onto E8); the reverse question: how much E8 structure
   - deps: WITNESS.INDEP.01, v305, v100, v312, v348, v54 · cited: 5 redteam
+- **v355_e8_unmapped_bandwidth** [E/C/O] `E8.UNMAPPED.BANDWIDTH.01` — A disciplined bandwidth search of the unmapped E8 region (next step after v354), run with a STRICT discriminator: a candidate counts only if it is a FORCED identity (a theorem abou
+  - deps: v354_e8_reverse_audit, v354, v66, v223, v219, v305 · cited: 5 redteam
 
 ## Supersede map — do NOT reuse the left-hand claim
 
@@ -774,7 +776,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v343_four_routes_analysis** — `FOUR.ROUTES.01`
 - **v344_detk_synthesis** — `SEAM.DETK.01`
 - **v345_hypergraph_homotopy** — `SEAM.DETK.02`
 - **v346_seam_geometric_bridge** — `SEAM.EQUIV.GEOM.01`
@@ -786,4 +787,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v352_framework_irreducible** — `TFPT.IRREDUCIBLE.01`
 - **v353_selfloop_capstone** — `TFPT.SELFLOOP.01`
 - **v354_e8_reverse_audit** — `E8.REVERSE.AUDIT.01`
+- **v355_e8_unmapped_bandwidth** — `E8.UNMAPPED.BANDWIDTH.01`
 

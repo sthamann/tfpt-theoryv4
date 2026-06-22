@@ -2360,6 +2360,15 @@ Module[{exps, degs, mapped, unmapped},
     degs == {2, 8, 12, 14, 18, 20, 24, 30} && unmapped == {12, 14, 18, 20, 24} && Max[FactorInteger[30][[All,1]]] == 5];
 ];
 
+(* ==== v355 E8.UNMAPPED.BANDWIDTH.01: the unmapped region's forced content is COLLECTIVE ==== *)
+Module[{exps, degs, totatives},
+  exps = {1, 7, 11, 13, 17, 19, 23, 29};
+  degs = exps + 1;                                       (* {2,8,12,14,18,20,24,30} *)
+  totatives = Select[Range[1, 29], CoprimeQ[#, 30] &];
+  checkExact["v355 E8.UNMAPPED.BANDWIDTH.01: disciplined bandwidth search -- the unmapped region's genuine structure is COLLECTIVE and forced: sum(degrees)=128=dim S^+ (the spinor half of 248=120+128; theorem sum=#pos roots+rank=120+8), sum(exponents)=120=#pos roots, product(degrees)=|W(E8)|=696729600, exponents = the phi(30)=8 totatives of 30 (so the unmapped degrees' exponents are part of the forced set), max(degree)=30=h(E8). The per-degree atom matches and the |W| prime 7 are UNFORCED and declined; no new physical hit. Reconciles v66 and v354",
+    Total[degs] == 128 == 248 - 120 && Total[exps] == 120 && Times @@ degs == 696729600 && exps == totatives && Max[degs] == 30];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

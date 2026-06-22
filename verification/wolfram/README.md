@@ -105,7 +105,7 @@ v84–v93 block passed **45/45** on first run; the v94–v140 blocks were added
 the same day, the v141–v144 block on 2026-06-12. Current state:
 
 ```
---- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354: 300 passed, 0 failed ---
+--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355: 301 passed, 0 failed ---
 ALL WOLFRAM EXTENSION CHECKS PASSED
 ```
 
@@ -205,11 +205,14 @@ and `v352_framework_irreducible.py` (both axioms bootstrap-forced — the `8` ov
 `rank E8 = h(D5) = φ(30) = 8`, `g_car=5` the Coxeter-match — so the only irreducibles are the
 framework + `π`). (`v353_selfloop_capstone.py`, the self-consistent-loop rethink, is Python-only.)
 
-The 2026-06-22 **reverse-audit round** added one more exact check (299 → 300):
+The 2026-06-22 **reverse-audit round** added two more exact checks (299 → 301):
 `v354_e8_reverse_audit.py` (the reverse numerology audit — of E8's 8 Casimir degrees
-`{2,8,12,14,18,20,24,30}` exactly 3 are load-bearing (`2,8,30`) and 5 are unmapped
-(`{12,14,18,20,24}`, the hull overhead); the golden ratio is in the unmapped structure, so it
-is not numerology).
+`{2,8,12,14,18,20,24,30}` exactly 3 feed a primary readout (`2,8,30`) and 5 are hull overhead
+(`{12,14,18,20,24}`); the golden ratio is in the unmapped structure, so it is not numerology),
+and `v355_e8_unmapped_bandwidth.py` (the disciplined bandwidth search — the unmapped region's
+forced content is *collective*: `sum(degrees)=128=dim S⁺`, `product(degrees)=|W(E8)|`,
+`exponents = totatives of 30`; the per-degree atom matches are unforced and declined, so the
+search finds no new physical hit — reconciling `v66` and `v354`).
 
 The 2026-06-22 **next-steps round (A/C/D/B)** added one more exact check (288 → 289):
 `v337_decoupling_theorem.py` (the ambient back-reaction scale `2·dim(E₈)·c₃² = 31/(4π²)`

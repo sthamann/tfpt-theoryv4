@@ -9,11 +9,13 @@ numerology.
         an E8 atom (anti-fitting), but says nothing about E8 structure that maps to no
         readout.  The reverse audit is the missing complement.
   [E] 2. THE REVERSE AUDIT (E8's Casimir invariants).  E8 has 8 Casimir invariant degrees
-        {2,8,12,14,18,20,24,30} (= exponents + 1).  Of these, exactly THREE feed a physical
-        readout -- degree 2 (the quadratic/metric), degree 8 (the rank -> c3=1/(8pi)), degree
-        30 (the Coxeter number -> g_car=5 and the order-30 cycle) -- and FIVE are UNMAPPED:
-        {12,14,18,20,24} feed no readout.  So 3/8 of E8's deep invariants are load-bearing,
-        5/8 are not.
+        {2,8,12,14,18,20,24,30} (= exponents + 1).  Of these, exactly THREE feed a PRIMARY
+        physical-constant readout -- degree 2 (the quadratic/metric), degree 8 (the rank ->
+        c3=1/(8pi)), degree 30 (the Coxeter number -> g_car=5 and the order-30 cycle) -- and
+        FIVE carry no primary readout: {12,14,18,20,24}.  (These five DO coincide with internal
+        structural atoms -- A3 roots, dim G2, det L, |W(A3)|, the anchor power sum -- per v66;
+        but those per-degree coincidences are mostly UNFORCED, the numerology temptation that
+        the bandwidth search v355 declines.)  So 3/8 are primary readouts, 5/8 hull overhead.
   [E] 3. ECONOMY, NOT PROMISCUITY (the anti-numerology signature).  A SMALL, FIXED set of E8
         data -- rank 8, h=30, det Cartan 1, the D5(+)A3 maximal sub, the 16 half-spinor --
         generates the ENTIRE readout set (gauge group, 3 families, hypercharges, alpha^-1,
@@ -60,9 +62,11 @@ def run():
     mapped_degs = [2, 8, 30]                          # metric, rank->c3, Coxeter->g_car
     unmapped_degs = [d for d in degrees if d not in mapped_degs]
     check("THE REVERSE AUDIT [E]: E8's 8 Casimir degrees are %s (= exponents+1); exactly "
-          "THREE feed a readout -- 2 (metric), 8 (rank -> c3=1/(8pi)), 30 (Coxeter -> g_car=5 "
-          "and the order-30 cycle) -- and FIVE are UNMAPPED: %s. So 3/8 of E8's deep "
-          "invariants are load-bearing, 5/8 are not"
+          "THREE feed a PRIMARY physical-constant readout -- 2 (metric), 8 (rank -> c3=1/(8pi)), "
+          "30 (Coxeter -> g_car=5 and the order-30 cycle) -- and FIVE carry no primary readout: "
+          "%s (they coincide with structural ATOMS -- A3 roots, dim G2, det L, |W(A3)|, the "
+          "anchor power sum -- per v66, but those per-degree coincidences are mostly UNFORCED, "
+          "the numerology temptation v355 declines). So 3/8 are primary readouts, 5/8 hull overhead"
           % (degrees, unmapped_degs),
           degrees == [2, 8, 12, 14, 18, 20, 24, 30] and unmapped_degs == [12, 14, 18, 20, 24]
           and max(sp.primefactors(30)) == g_car)
@@ -99,7 +103,7 @@ def run():
           "higher-invariant readout could live, or genuine over-capacity. TFPT does not "
           "pretend E8 is fully used" % mapped_frac, mapped_frac == sp.Rational(3, 8))
 
-    return summary("v354 reverse audit: 3/8 of E8's Casimir invariants are load-bearing, 5/8 unmapped (the hull overhead); a small fixed invariant set generates all readouts (economy, not promiscuity = anti-numerology); the golden ratio is UNMAPPED internal structure (the icosahedral signature of h=30), so it cannot be numerology -- it is the carrier announcing it is icosahedral")
+    return summary("v354 reverse audit: 3/8 of E8's Casimir invariants are primary physical-constant readouts, 5/8 are hull overhead (they coincide with structural atoms per v66 but unforced -- reconciled in v355); a small fixed invariant set generates all readouts (economy, not promiscuity = anti-numerology); the golden ratio is UNMAPPED internal structure (the icosahedral signature of h=30), so it cannot be numerology -- it is the carrier announcing it is icosahedral")
 
 
 if __name__ == "__main__":
