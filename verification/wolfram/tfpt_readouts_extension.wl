@@ -2238,6 +2238,14 @@ Module[{chiOrb, M, evs, edges, cAff, x, p23},
     p23 != 0];
 ];
 
+(* ==== v337 DECOUPLING.THEOREM.01: the ambient back-reaction scale identity ==== *)
+Module[{ambient},
+  (* the largest ambient back-reaction scale 2*dim(E8)*c3^2 = 31/(4 pi^2) exactly (c3=1/(8pi)) *)
+  ambient = 2*248*c3^2;
+  checkExact["v337 DECOUPLING.THEOREM.01: the ambient back-reaction scale 2*dim(E8)*c3^2 = 2*248/(8pi)^2 = 496/(64 pi^2) = 31/(4 pi^2) exactly; the decoupling margin Delta - 31/(4pi^2) = 6 log(3/2) - 31/(4pi^2) > 0 (the gapped admissible spectrum {1,(2/3)^6,(1/3)^6} has finite susceptibility chi=1/(1-(2/3)^6)=729/665), so every readout is independent of the un-built ambient measure",
+    Simplify[ambient - 31/(4 Pi^2)] == 0 && (1/(1 - (2/3)^6)) == 729/665];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

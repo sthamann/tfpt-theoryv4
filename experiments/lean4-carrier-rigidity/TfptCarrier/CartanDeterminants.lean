@@ -131,4 +131,47 @@ theorem cartanE8_even_unimodular :
     selector.  `det D₈ = 4` stays the Nat discriminator in `SeamEquivChain.lean`. -/
 theorem cartanD5_even : ∀ i, cartanD5 i i = 2 := by decide
 
+/-! ### The holomorphy discriminator, hardened: E₈ vs D₈ = SO(16) (both even, c=8, rank 8).
+
+The c=8 counterexample to "(E₈)₁ is the unique holomorphic c=8 net" is `SO(16)₁ = (D₈)₁`:
+it has the SAME central charge `c=8` and is ALSO an even symmetric rank-8 integer Gram
+matrix, but it is NOT unimodular (`|det| = 4`, four primaries).  So neither `c=8` nor
+even+symmetric+rank-8 separates the two — only UNIMODULARITY (one anyon, `det` a unit) does.
+Here we exhibit `D₈` explicitly and prove, fully and kernel-only, the structural part of the
+discriminator: `D₈` is even and symmetric just like `E₈`, while the separating value `4`
+(`= det D₈`, the cited Nat fact) is genuinely NOT a unit — so unimodularity is load-bearing. -/
+
+/-- The `D₈ = SO(16)` Cartan matrix (the c=8 non-holomorphic counterexample): a chain
+    `1–2–3–4–5–6` with a fork `7,8` both attached to node `6`. -/
+def cartanD8 : Matrix (Fin 8) (Fin 8) ℤ :=
+  !![ 2, -1,  0,  0,  0,  0,  0,  0;
+     -1,  2, -1,  0,  0,  0,  0,  0;
+      0, -1,  2, -1,  0,  0,  0,  0;
+      0,  0, -1,  2, -1,  0,  0,  0;
+      0,  0,  0, -1,  2, -1,  0,  0;
+      0,  0,  0,  0, -1,  2, -1, -1;
+      0,  0,  0,  0,  0, -1,  2,  0;
+      0,  0,  0,  0,  0, -1,  0,  2]
+
+set_option maxRecDepth 10000 in
+/-- `D₈` is symmetric (an integer Gram matrix), like `E₈`. -/
+theorem cartanD8_transpose : cartanD8.transpose = cartanD8 := by decide
+
+set_option maxRecDepth 10000 in
+/-- `D₈` is EVEN (diagonal `= 2`), like `E₈` — so evenness does NOT separate them. -/
+theorem cartanD8_even : ∀ i, cartanD8 i i = 2 := by decide
+
+/-- The separating value `4 = det Cartan(D₈)` is NOT a unit in `ℤ` (it is neither `1` nor
+    `-1`), whereas `det Cartan(E₈)` IS a unit.  Hence UNIMODULARITY is the load-bearing
+    holomorphy selector: among even symmetric rank-8 `c=8` Gram matrices, `E₈` (one anyon,
+    `det` a unit) and `D₈ = SO(16)` (four anyons, `det = 4` not a unit) are separated only
+    by `IsUnit det`.  (Fully proven, kernel-only; `det D₈ = 4` itself is the cited Nat fact
+    of `SeamEquivChain.lean`, an 8! Leibniz determinant left to the classification.) -/
+theorem four_not_isUnit : ¬ IsUnit (4 : ℤ) := by decide
+
+/-- The hardened discriminator arithmetic: the `E₈` selector is real (`det` a unit) and the
+    `D₈` separating value `4` is genuinely not a unit. -/
+theorem holomorphy_discriminator_arith : IsUnit cartanE8.det ∧ ¬ IsUnit (4 : ℤ) :=
+  ⟨cartanE8_det_isUnit, four_not_isUnit⟩
+
 end TfptCarrier.CartanDeterminants

@@ -352,7 +352,7 @@
   "date": "2026-06-22"
  },
  "tfpt_2_standard_model::section::Neutrinos::1": {
-  "hash": "9ea9a613b49c",
+  "hash": "add66d3e8f5c",
   "date": "2026-06-22"
  },
  "tfpt_2_standard_model::section::How the legacy layers simplify (bridge map)::1": {
@@ -608,7 +608,7 @@
   "date": "2026-06-15"
  },
  "tfpt_4_frontier::section::Full quantum gravity --- induced from the boundary kernel::1": {
-  "hash": "06d5d4ea38fe",
+  "hash": "80241a6031de",
   "date": "2026-06-22"
  },
  "tfpt_4_frontier::section::Summary::1": {
@@ -756,7 +756,7 @@
   "date": "2026-06-12"
  },
  "origin_theory::section::Honest status::1": {
-  "hash": "8b019b562fbe",
+  "hash": "28222dace867",
   "date": "2026-06-22"
  },
  "origin_theory::section::Appendix: computational verification::1": {

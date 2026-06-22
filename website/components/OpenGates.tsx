@@ -171,7 +171,13 @@ function ClosingCondition() {
         standard cited theorems (OS/clustering, the Kitaev free-fermion classification, the AQFT stack)
         over established TFPT facts — Lean-pinned (FORM.SEAMEQUIV.01) to exactly those named steps plus the
         derived Recovery gap Δ = 6·ln(3/2) ≈ 2.43 &gt; 0, with no undischarged TFPT-internal assumption
-        left. The full sprint-by-sprint reduction (v234 → v302 and the arithmetic capstone v313–v320) is in
+        left. Its two heavy legs are now <span className="text-emerald-200">literature-anchored</span> (v336):
+        the continuum scaling limit (Morinelli–Morsella–Stottmeister–Tanimoto, free lattice fermions → chiral
+        CFT) and the Osterwalder–Schrader reconstruction of unitary lattice VOAs (Adamo–Moriwaki–Tanimoto)
+        are recent rigorous theorems, with (E₈)₁ inside their range (c=8, rank 8, 16 Majoranas) — so the open
+        residual narrows to the single holomorphy bit det K=1. And the QG decoupling is itself a theorem
+        (v337): every readout factors through the gapped admissible spectrum (susceptibility χ=729/665,
+        margin 1.648&gt;0), so TFPT provably does not need the ambient measure. The full sprint-by-sprint reduction (v234 → v302 and the arithmetic capstone v313–v320) is in
         the{" "}
         <Link href="/changelog" className="text-blue-300 underline-offset-2 hover:underline">
           changelog

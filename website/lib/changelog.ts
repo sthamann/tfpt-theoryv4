@@ -47,6 +47,596 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "next-steps round: the one open lemma literature-anchored, the Decoupling Theorem, the holomorphy discriminator hardened in Lean, and the "
+      },
+      {
+        "k": "m",
+        "v": "\\theta_{13}"
+      },
+      {
+        "k": "t",
+        "v": " budget: "
+      },
+      {
+        "k": "c",
+        "v": "v336"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "v337"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "v338"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "FORM.CARTAN.DET.01"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v336"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EQUIV.CONTINUUM.01"
+            },
+            {
+              "k": "t",
+              "v": ") — the one open lemma, literature-anchored."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " SEAM.EQUIV.01's only open input (the continuum OS reconstruction of the gapped quasi-free collar) is split into a CITABLE part and a narrow open part. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "continuum leg: Morinelli–Morsella–Stottmeister–Tanimoto ("
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "CFT from Lattice Fermions"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", doi:10.1007/s00220-022-04521-8; CMP 387 (2021) 299; PRL 127 (2021) 230601) give, by operator-algebraic (wavelet) renormalization, the chiral-CFT scaling limit of free lattice fermions (Koo–Saleur "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " Virasoro, correct "
+        },
+        {
+          "k": "m",
+          "v": "c"
+        },
+        {
+          "k": "t",
+          "v": "); WZW range "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{rank}\\le c\\le D"
+        },
+        {
+          "k": "t",
+          "v": ", and "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "c{=}8"
+        },
+        {
+          "k": "t",
+          "v": ", rank 8, "
+        },
+        {
+          "k": "m",
+          "v": "D{=}16"
+        },
+        {
+          "k": "t",
+          "v": " Majoranas, "
+        },
+        {
+          "k": "m",
+          "v": "SO(16)_1\\!\\to\\!(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": ") is inside it. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "OS leg: Adamo–Moriwaki–Tanimoto (arXiv:2407.18222, 2024) prove the conformal OS axioms for unitary lattice VOAs. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "target pinned by "
+        },
+        {
+          "k": "m",
+          "v": "c{=}\\gcar{+}\\Nfam{=}8"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\det\\mathrm{Cartan}(E_8){=}1"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "narrowed residual "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " “the raw collar's massless scaling limit is the holomorphic "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " net” ("
+        },
+        {
+          "k": "m",
+          "v": "\\det K{=}1"
+        },
+        {
+          "k": "t",
+          "v": "), not a from-scratch construction."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v337"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "DECOUPLING.THEOREM.01"
+            },
+            {
+              "k": "t",
+              "v": ") — the Decoupling Theorem."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "every dimensionless readout factors through the gapped admissible transfer spectrum "
+        },
+        {
+          "k": "m",
+          "v": "\\{1,(2/3)^6,(1/3)^6\\}"
+        },
+        {
+          "k": "t",
+          "v": "; finite susceptibility "
+        },
+        {
+          "k": "m",
+          "v": "\\chi=1/(1-(2/3)^6)=729/665"
+        },
+        {
+          "k": "t",
+          "v": " gap-suppresses the ambient contribution (margin "
+        },
+        {
+          "k": "m",
+          "v": "6\\ln\\tfrac32-31/(4\\pi^2)\\approx\n1.648>0"
+        },
+        {
+          "k": "t",
+          "v": ", with "
+        },
+        {
+          "k": "m",
+          "v": "2\\dim(E_8)c_3^2=31/(4\\pi^2)"
+        },
+        {
+          "k": "t",
+          "v": " exactly), so no readout depends on the ambient measure "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "QG.AMB.01"
+        },
+        {
+          "k": "t",
+          "v": " decoupled; negative control (gap closed "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow\\chi"
+        },
+        {
+          "k": "t",
+          "v": " diverges) makes it non-vacuous. This is the theorem that makes the "
+        },
+        {
+          "k": "c",
+          "v": "QG.AMB.01"
+        },
+        {
+          "k": "t",
+          "v": " reclassification ("
+        },
+        {
+          "k": "c",
+          "v": "v335"
+        },
+        {
+          "k": "t",
+          "v": ") honest; consolidates "
+        },
+        {
+          "k": "c",
+          "v": "v76"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v311"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v330"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v332"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v338"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "THETA13.BUDGET.01"
+            },
+            {
+              "k": "t",
+              "v": ") — the "
+            },
+            {
+              "k": "m",
+              "v": "\\theta_{13}"
+            },
+            {
+              "k": "t",
+              "v": " budget, fenced."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The "
+        },
+        {
+          "k": "m",
+          "v": "+2\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " pressure point ("
+        },
+        {
+          "k": "c",
+          "v": "v328"
+        },
+        {
+          "k": "t",
+          "v": ") quantified against "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "both"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " NuFIT 6.0 NO variants: "
+        },
+        {
+          "k": "m",
+          "v": "+2.0\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " vs the no-SK central ("
+        },
+        {
+          "k": "m",
+          "v": "0.02195"
+        },
+        {
+          "k": "t",
+          "v": ") but "
+        },
+        {
+          "k": "m",
+          "v": "+1.7\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " vs the with-SK best fit ("
+        },
+        {
+          "k": "m",
+          "v": "0.02215\\pm0.00057"
+        },
+        {
+          "k": "t",
+          "v": "), a "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}0.3\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " systematic spread; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "0.023108"
+        },
+        {
+          "k": "t",
+          "v": " lies inside the with-SK "
+        },
+        {
+          "k": "m",
+          "v": "3\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " band (upper "
+        },
+        {
+          "k": "m",
+          "v": "0.02388"
+        },
+        {
+          "k": "t",
+          "v": "), an upper-edge pressure point not a falsification; "
+        },
+        {
+          "k": "s",
+          "v": "X"
+        },
+        {
+          "k": "t",
+          "v": "JUNO's sub-1% precision turns it into a "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}6\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " kill-or-confirm."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Lean ("
+            },
+            {
+              "k": "c",
+              "v": "FORM.CARTAN.DET.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "CartanDeterminants.lean"
+        },
+        {
+          "k": "t",
+          "v": " extended with the explicit "
+        },
+        {
+          "k": "m",
+          "v": "D_8=SO(16)"
+        },
+        {
+          "k": "t",
+          "v": " Cartan matrix and a fully-proven (kernel-only) holomorphy discriminator: "
+        },
+        {
+          "k": "m",
+          "v": "D_8"
+        },
+        {
+          "k": "t",
+          "v": " is even and symmetric just like "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " (same "
+        },
+        {
+          "k": "m",
+          "v": "c{=}8"
+        },
+        {
+          "k": "t",
+          "v": ") but "
+        },
+        {
+          "k": "m",
+          "v": "4=\\det\\mathrm{Cartan}(D_8)"
+        },
+        {
+          "k": "t",
+          "v": " is genuinely not a unit while "
+        },
+        {
+          "k": "m",
+          "v": "\\det\\mathrm{Cartan}\n(E_8)"
+        },
+        {
+          "k": "t",
+          "v": " is — so unimodularity (one anyon) is the load-bearing selector. "
+        },
+        {
+          "k": "c",
+          "v": "lake build"
+        },
+        {
+          "k": "t",
+          "v": " green."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-22",
+    "dateLabel": "2026-06-22",
+    "heading": [
+      {
+        "k": "t",
         "v": "keystone unification + status reframe: ONE open theorem, ONE decoupled foreign problem: "
       },
       {

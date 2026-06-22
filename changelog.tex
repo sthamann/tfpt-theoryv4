@@ -59,6 +59,36 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-22 (next-steps round: the one open lemma literature-anchored, the Decoupling Theorem, the holomorphy discriminator hardened in Lean, and the $\theta_{13}$ budget: \texttt{v336}, \texttt{v337}, \texttt{v338}, \texttt{FORM.CARTAN.DET.01})}
+\begin{itemize}
+\item \textbf{\texttt{v336} (\texttt{SEAM.EQUIV.CONTINUUM.01}) --- the one open lemma, literature-anchored.}
+SEAM.EQUIV.01's only open input (the continuum OS reconstruction of the gapped quasi-free collar) is split into a
+CITABLE part and a narrow open part. \mC\ continuum leg: Morinelli--Morsella--Stottmeister--Tanimoto (\emph{CFT
+from Lattice Fermions}, doi:10.1007/s00220-022-04521-8; CMP 387 (2021) 299; PRL 127 (2021) 230601) give, by
+operator-algebraic (wavelet) renormalization, the chiral-CFT scaling limit of free lattice fermions (Koo--Saleur
+$\to$ Virasoro, correct $c$); WZW range $\mathrm{rank}\le c\le D$, and $(E_8)_1$ ($c{=}8$, rank 8, $D{=}16$
+Majoranas, $SO(16)_1\!\to\!(E_8)_1$) is inside it. \mC\ OS leg: Adamo--Moriwaki--Tanimoto (arXiv:2407.18222, 2024)
+prove the conformal OS axioms for unitary lattice VOAs. \mE\ target pinned by $c{=}\gcar{+}\Nfam{=}8$,
+$\det\mathrm{Cartan}(E_8){=}1$. \mO\ narrowed residual $=$ ``the raw collar's massless scaling limit is the
+holomorphic $(E_8)_1$ net'' ($\det K{=}1$), not a from-scratch construction.
+\item \textbf{\texttt{v337} (\texttt{DECOUPLING.THEOREM.01}) --- the Decoupling Theorem.} \mE\ every dimensionless
+readout factors through the gapped admissible transfer spectrum $\{1,(2/3)^6,(1/3)^6\}$; finite susceptibility
+$\chi=1/(1-(2/3)^6)=729/665$ gap-suppresses the ambient contribution (margin $6\ln\tfrac32-31/(4\pi^2)\approx
+1.648>0$, with $2\dim(E_8)c_3^2=31/(4\pi^2)$ exactly), so no readout depends on the ambient measure $\Rightarrow$
+\texttt{QG.AMB.01} decoupled; negative control (gap closed $\Rightarrow\chi$ diverges) makes it non-vacuous. This is
+the theorem that makes the \texttt{QG.AMB.01} reclassification (\vref{v335}) honest; consolidates
+\vref{v76}/\vref{v311}/\vref{v330}/\vref{v332}.
+\item \textbf{\texttt{v338} (\texttt{THETA13.BUDGET.01}) --- the $\theta_{13}$ budget, fenced.} The $+2\sigma$
+pressure point (\vref{v328}) quantified against \emph{both} NuFIT 6.0 NO variants: $+2.0\sigma$ vs the no-SK
+central ($0.02195$) but $+1.7\sigma$ vs the with-SK best fit ($0.02215\pm0.00057$), a ${\sim}0.3\sigma$ systematic
+spread; \mE\ $0.023108$ lies inside the with-SK $3\sigma$ band (upper $0.02388$), an upper-edge pressure point not
+a falsification; \mX\ JUNO's sub-1\% precision turns it into a ${\sim}6\sigma$ kill-or-confirm.
+\item \textbf{Lean (\texttt{FORM.CARTAN.DET.01}).} \texttt{CartanDeterminants.lean} extended with the explicit
+$D_8=SO(16)$ Cartan matrix and a fully-proven (kernel-only) holomorphy discriminator: $D_8$ is even and symmetric
+just like $E_8$ (same $c{=}8$) but $4=\det\mathrm{Cartan}(D_8)$ is genuinely not a unit while $\det\mathrm{Cartan}
+(E_8)$ is --- so unimodularity (one anyon) is the load-bearing selector. \texttt{lake build} green.
+\end{itemize}
+
 \subsection*{2026-06-22 (keystone unification + status reframe: ONE open theorem, ONE decoupled foreign problem: \texttt{v335}, \texttt{FORM.QGEO.BW.01} \texttt{qgeoSymIsCorollary})}
 \begin{itemize}
 \item \textbf{\texttt{v335} (\texttt{SEAM.EQUIV.UNIFY.01}) --- the keystone unification.} A bird's-eye

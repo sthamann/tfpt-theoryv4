@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`333` registered scripts · `391` ledger claims · `10` clusters.
+`336` registered scripts · `394` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (15 scripts)
+### `core` — Compiler core & the E₈ glue  (16 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -41,6 +41,8 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v317_galois_family, v316_galois_readout, v315_coxeter_coupling, v53_compiler_core, NOUNIT.01, v313, v314, v315 · cited: origin theory
 - **v335_seam_equiv_unify** [E/O] `SEAM.EQUIV.UNIFY.01` — The keystone unification: there is ONE open theorem (SEAM.EQUIV.01), QGEO.SYM.01 is its COROLLARY (a conformal-net axiom), and QG.AMB.01 is a decoupled general QG problem, NOT a TF
   - deps: v308_seam_equiv_chain, v323_bw_geometric_modular, v181_clock_is_conformal_symmetry, QG.AMB.01, v308, v323, v329, v333 · cited: introduction, origin theory
+- **v336_continuum_limit** [E/C/O] `SEAM.EQUIV.CONTINUUM.01` — The ONE open lemma of SEAM.EQUIV.01, stated precisely and mapped to the recent rigorous literature: the continuum-limit and OS-reconstruction legs are now CITABLE, the genuinely-op
+  - deps: v308_seam_equiv_chain, v335_seam_equiv_unify, v308, v277, v335 · cited: origin theory
 
 ### `em` — Electromagnetic fixed point  (2 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -106,7 +108,7 @@ _The φ₀-ladder mass formula, the exact lepton coefficients, and the integer-P
 - **v229_lepton_frobenius_algebra** [E/C] `LEP.FROB.01` — a commutative Frobenius algebra. The C₆ shift has charpoly t⁶−1 (spectrum μ₆=μ₃ family ×μ₂ sheet). PMNS extension via Aut(A)+the hex CM point is [C].
   - deps: FLAV.LEPTON.01, ARCH.HEXRES.01, v220_cp_hexagonal_modulus · cited: 2 standard model
 
-### `neutrinos` — Neutrinos & the solar angle  (8 scripts)
+### `neutrinos` — Neutrinos & the solar angle  (9 scripts)
 _The Majorana texture, the dual anchor, and the previously open solar angle from the seam._
 
 - **v9_neutrino_texture** [E] `FLAV.TH12.01` — μτ Majorana texture → sin²θ₁₂ = 1/3 − φ₀/2, θ₂₃ = 45°
@@ -125,6 +127,8 @@ _The Majorana texture, the dual anchor, and the previously open solar angle from
   - deps: v263_mnu_from_df, v270_pmns_jarlskog_assembly, v249_ps_unification, v262_fqcd_mp_me, v153_no_unit_theorem · cited: 2 standard model
 - **v328_theta13_pressure** [E/X] `FLAV.TH13.PRESSURE.01` — The theta13 pressure point: the honest weak spot, quantified and pre-registered. sin^2 theta13 = phi0 e^{-5/6} = 0.023108 vs NuFIT 6.0 NO (0.02195 +- 0.00058) is +2.0 sigma -- the 
   - deps: v268_theta13_carrier_trace, v62_data_scorecard, v306_seed_crossval, v268, v62, v306, v307 · cited: 2 standard model
+- **v338_theta13_budget** [E/X] `THETA13.BUDGET.01` — THETA13.BUDGET.01: the theta13 sub-leading budget vs the current global fit -- the +2 sigma pressure point (v328) quantified against BOTH NuFIT 6.0 NO variants and JUNO; neither de
+  - deps: THETA13.PRESSURE.01, v306, v328, v84_frozen_registry · cited: 2 standard model
 
 ### `gravity` — Gravity, inflation & cosmology  (6 scripts)
 _The R + R² spectral-action shadow, the seam-fixed scalaron, and the cosmological readouts._
@@ -210,7 +214,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v75_upoint_to_vgeo** [E/O] `FLAV.UPOINT.01` — Gate 1 complete: U_point → v_geo (ratios + Grand Mass Volume); same anchor as 1/G
   - deps: v71_simple_r_bridge, v20_lepton_c_derivation, v46_grand_mass_volume, v68 · cited: origin theory, research contracts
 
-### `frontier` — Open gate (G_metric) & the frontier  (85 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (86 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -383,6 +387,8 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v331_necessity_of_H, v181_clock_is_conformal_symmetry, v331, v214, v216, v267, v56 · cited: origin theory
 - **v334_conformal_resolution** [E/C/O] `QGAMB.CONFORMAL.01` — The conformal-mode resolution: the Gibbons-Hawking-Perry contour rotation (IR sign) + the infinite-derivative (IDG) dressing (UV pole) give a CONDITIONALLY convergent metric-sector
   - deps: v332_qgamb_metric_sector, v304_idg_nonlocal_ghost, v330_qgamb_admissible_measure, v332, v304, v330, v76 · cited: origin theory
+- **v337_decoupling_theorem** [E] `DECOUPLING.THEOREM.01` — THE DECOUPLING THEOREM (consolidated, citable): every TFPT dimensionless readout factors through the gapped admissible sector and is INDEPENDENT of the ambient QG measure -- the th
+  - deps: QG.AMB.01, v76, v311, v330, v332, v335 · cited: 4 frontier
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (163 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -728,15 +734,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `E8.GLU.01`×15, `HOR.NARIAI.01`×15, `v76`×12, `v56`×12, `AX.P1.01`×11, `REG.FREEZE.01`×11, `SEAM.EQUIV.01`×11, `QGEO.SUBPRIN.01`×11, `FLAV.KQ.01`×10, `QGEO.PILLOW.01`×10, `CAR.SM.01`×9, `GATE.QGEO.01`×8, `v37`×8, `v55`×8
+**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `E8.GLU.01`×15, `HOR.NARIAI.01`×15, `v76`×13, `v56`×12, `REG.FREEZE.01`×12, `AX.P1.01`×11, `SEAM.EQUIV.01`×11, `QGEO.SUBPRIN.01`×11, `FLAV.KQ.01`×10, `QGEO.PILLOW.01`×10, `CAR.SM.01`×9, `GATE.QGEO.01`×8, `QG.AMB.01`×8, `v37`×8
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v324_hypergraph_fiber** — `HYP.FIBER.01`
-- **v325_pillowcase_keystone** — `QGEO.KEYSTONE.01, FORM.CARTAN.DET.01`
-- **v326_ftransfer_suite** — `FR.SUITE.01`
 - **v327_hypergraph_rewrite** — `HYP.REWRITE.01`
 - **v328_theta13_pressure** — `FLAV.TH13.PRESSURE.01`
 - **v329_os_gap_reduction** — `QGEO.OSGAP.01`
@@ -746,4 +749,7 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v333_cm_selection** — `QGEO.CMSELECT.01`
 - **v334_conformal_resolution** — `QGAMB.CONFORMAL.01`
 - **v335_seam_equiv_unify** — `SEAM.EQUIV.UNIFY.01`
+- **v336_continuum_limit** — `SEAM.EQUIV.CONTINUUM.01`
+- **v337_decoupling_theorem** — `DECOUPLING.THEOREM.01`
+- **v338_theta13_budget** — `THETA13.BUDGET.01`
 
