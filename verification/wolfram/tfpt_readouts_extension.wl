@@ -2282,6 +2282,19 @@ Module[{cartanA, cartanD, E8, detADE},
     detADE == {3, 4, 4, 4, 1} && Det[E8] == 1];
 ];
 
+(* ==== v345 SEAM.DETK.02: the plumbing-link H_1 = coker(Cartan) via Smith normal form ==== *)
+Module[{cartanD, E8, sfE8, sfD5, cokerE8, cokerD5},
+  cartanD[n_] := Module[{M = Normal[SparseArray[{{i_, i_} -> 2, {i_, j_} /; Abs[i - j] == 1 -> -1}, {n, n}]]},
+    M[[n, n - 1]] = M[[n - 1, n]] = 0; M[[n, n - 2]] = M[[n - 2, n]] = -1; M];
+  E8 = {{2,-1,0,0,0,0,0,0},{-1,2,-1,0,0,0,0,0},{0,-1,2,-1,0,0,0,0},{0,0,-1,2,-1,0,0,0},
+        {0,0,0,-1,2,-1,0,-1},{0,0,0,0,-1,2,-1,0},{0,0,0,0,0,-1,2,0},{0,0,0,0,-1,0,0,2}};
+  (* coker = product of invariant factors > 1 = |H_1(plumbing link)|; E8 -> 1 (homology sphere), D5 -> 4 *)
+  cokerE8 = Times @@ Select[Abs[Diagonal[SmithDecomposition[E8][[2]]]], # > 1 &] /. {} -> 1;
+  cokerD5 = Times @@ Select[Abs[Diagonal[SmithDecomposition[cartanD[5]][[2]]]], # > 1 &] /. {} -> 1;
+  checkExact["v345 SEAM.DETK.02: the plumbing link H_1 = coker(Cartan) via Smith normal form -- |coker(E8)| = 1 (Smith normal form = identity => the E8-graph plumbing boundary is an INTEGRAL HOMOLOGY SPHERE, the genus-1 meaning of det E8=1), while |coker(D5)| = 4 (Z/4, not a homology sphere); only E8 among ADE gives a homology-sphere link, and with pi_1 = 2I=SL(2,5) perfect it is THE Poincare sphere (det K=1). Executes the combinatorial core of route R3 (v344); the geometric realisation bridge stays SEAM.EQUIV.01",
+    (cokerE8 === 1 || cokerE8 === Times[]) && cokerD5 == 4 && Det[E8] == 1];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

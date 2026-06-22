@@ -105,7 +105,7 @@ v84–v93 block passed **45/45** on first run; the v94–v140 blocks were added
 the same day, the v141–v144 block on 2026-06-12. Current state:
 
 ```
---- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344: 292 passed, 0 failed ---
+--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345: 293 passed, 0 failed ---
 ALL WOLFRAM EXTENSION CHECKS PASSED
 ```
 
@@ -164,6 +164,12 @@ The 2026-06-22 **det K=1 synthesis round** added one more exact check (291 → 2
 `A_n→n+1, D_n→4, E6→3, E7→2, E8→1` — only `E8→1`, the binary icosahedral `2I` being the
 unique perfect ADE group). The four-routes analysis `v343_four_routes_analysis.py` is a
 Python-only roadmap (its de Sitter / gap facts are already mirrored via v54/v337).
+
+The 2026-06-22 **R3 execution round** added one more exact check (292 → 293):
+`v345_hypergraph_homotopy.py` (the plumbing link `H₁ = coker(Cartan)` via the Smith normal
+form — `|coker(E8)| = 1` so the E8 plumbing boundary is an integral homology sphere, vs
+`|coker(D5)| = 4`; only E8). The companion perfectness of `2I = SL(2,5)` (the link's `π₁`)
+is a direct finite-group commutator computation, Python-only.
 
 The 2026-06-22 **next-steps round (A/C/D/B)** added one more exact check (288 → 289):
 `v337_decoupling_theorem.py` (the ambient back-reaction scale `2·dim(E₈)·c₃² = 31/(4π²)`

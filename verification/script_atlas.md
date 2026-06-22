@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`342` registered scripts · `400` ledger claims · `10` clusters.
+`343` registered scripts · `401` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (17 scripts)
+### `core` — Compiler core & the E₈ glue  (18 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -45,6 +45,8 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v308_seam_equiv_chain, v335_seam_equiv_unify, v308, v277, v335 · cited: origin theory
 - **v344_detk_synthesis** [E/C/O] `SEAM.DETK.01` — The bird's-eye synthesis of the ONE open keystone bit, det K=1 -- a full-spectrum map of SEAM.EQUIV.01's only open residual. [E] det K=1 is ONE statement with SIX equivalent faces 
   - deps: v335_seam_equiv_unify, v232, v235, v219, v281, v282, v312, v336 · cited: origin theory
+- **v345_hypergraph_homotopy** [E/O] `SEAM.DETK.02` — EXECUTE the combinatorial core of route R3 (the hypergraph-homotopy route to det K=1, v344): computes explicitly that the (2,3,5)-rewrite attractor graph's plumbing link is the POI
+  - deps: v344_detk_synthesis, v335_seam_equiv_unify, v232, v312, v344, v55, v219 · cited: origin theory
 
 ### `em` — Electromagnetic fixed point  (4 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -746,13 +748,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `E8.GLU.01`×15, `HOR.NARIAI.01`×15, `v76`×13, `v56`×13, `REG.FREEZE.01`×12, `AX.P1.01`×11, `SEAM.EQUIV.01`×11, `QGEO.SUBPRIN.01`×11, `FLAV.KQ.01`×10, `QGEO.PILLOW.01`×10, `QG.AMB.01`×9, `v3`×9, `CAR.SM.01`×9, `GATE.QGEO.01`×8
+**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `E8.GLU.01`×15, `HOR.NARIAI.01`×15, `v76`×13, `v56`×13, `REG.FREEZE.01`×12, `AX.P1.01`×11, `SEAM.EQUIV.01`×11, `QGEO.SUBPRIN.01`×11, `FLAV.KQ.01`×10, `QGEO.PILLOW.01`×10, `QG.AMB.01`×9, `v3`×9, `v55`×9, `CAR.SM.01`×9
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v333_cm_selection** — `QGEO.CMSELECT.01`
 - **v334_conformal_resolution** — `QGAMB.CONFORMAL.01`
 - **v335_seam_equiv_unify** — `SEAM.EQUIV.UNIFY.01`
 - **v336_continuum_limit** — `SEAM.EQUIV.CONTINUUM.01`
@@ -764,4 +765,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v342_em_ward_heatkernel** — `EM.WARD.02`
 - **v343_four_routes_analysis** — `FOUR.ROUTES.01`
 - **v344_detk_synthesis** — `SEAM.DETK.01`
+- **v345_hypergraph_homotopy** — `SEAM.DETK.02`
 

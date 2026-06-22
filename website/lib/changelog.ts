@@ -47,6 +47,282 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "executing route R3: the "
+      },
+      {
+        "k": "m",
+        "v": "(2,3,5)"
+      },
+      {
+        "k": "t",
+        "v": "-rewrite attractor link computed to be the Poincaré homology sphere ("
+      },
+      {
+        "k": "m",
+        "v": "\\det K{=}1"
+      },
+      {
+        "k": "t",
+        "v": "), the combinatorial core complete, only the geometric bridge open: "
+      },
+      {
+        "k": "c",
+        "v": "v345"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v345"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.DETK.02"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Carries out the combinatorial core of the hypergraph-homotopy route (R3, the most promising fresh angle from "
+        },
+        {
+          "k": "c",
+          "v": "v344"
+        },
+        {
+          "k": "t",
+          "v": ") as far as it computably goes. By plumbing topology (Brieskorn/Hirzebruch) the link of a tree plumbing with the ADE Cartan intersection form has "
+        },
+        {
+          "k": "m",
+          "v": "H_1=\\operatorname{coker}(\\mathrm{Cartan})"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the Smith normal form of the "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " Cartan matrix is the identity, so "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{coker}(E_8)=0"
+        },
+        {
+          "k": "t",
+          "v": " – the "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": "-graph plumbing boundary is an INTEGRAL HOMOLOGY SPHERE (the genus-1 meaning of "
+        },
+        {
+          "k": "m",
+          "v": "\\det E_8{=}1"
+        },
+        {
+          "k": "t",
+          "v": "); among ADE only "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " does this ("
+        },
+        {
+          "k": "m",
+          "v": "A_n\\!\\to\\!\\Z/(n{+}1)"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "D_n\\!\\to\\!\\Z/4"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "E_6\\!\\to\\!\\Z/3"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "E_7\\!\\to\\!\\Z/2"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "\\pi_1=2I=SL(2,5)"
+        },
+        {
+          "k": "t",
+          "v": " is PERFECT (commutator subgroup "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the whole order-120 group, computed directly), so "
+        },
+        {
+          "k": "m",
+          "v": "H_1=0"
+        },
+        {
+          "k": "t",
+          "v": " and the link is THE Poincaré sphere, "
+        },
+        {
+          "k": "m",
+          "v": "|2I|=120=|\\mu_4|\\,h(E_8)"
+        },
+        {
+          "k": "t",
+          "v": ". So R3's combinatorial half is "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "-complete: the "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " attractor link is forced to be the Poincaré sphere ("
+        },
+        {
+          "k": "m",
+          "v": "\\det K{=}1"
+        },
+        {
+          "k": "t",
+          "v": "), uniquely among ADE. "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "what stays open is only the geometric realisation bridge (the raw rewrite seam attractor "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " this "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " du Val plumbing) "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " content; not closed, but the keystone is now reduced to that single geometric identification. Wolfram mirror "
+        },
+        {
+          "k": "m",
+          "v": "+1"
+        },
+        {
+          "k": "t",
+          "v": " (292 "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " 293)."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-22",
+    "dateLabel": "2026-06-22",
+    "heading": [
+      {
+        "k": "t",
         "v": "the one keystone bit "
       },
       {

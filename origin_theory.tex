@@ -561,6 +561,21 @@ exactly the \texttt{SEAM.EQUIV.01} content. The synthesis sharpens the target to
 ranks the routes --- it does not prove it.
 \end{keybox}
 
+\noindent\textbf{Executing R3 (the Poincar\'e-sphere link).}
+(\veri{v345\_hypergraph\_homotopy.py})
+The combinatorial half of the hypergraph route is now carried out explicitly. By standard plumbing topology
+(Brieskorn/Hirzebruch) the link of a tree plumbing with the ADE Cartan intersection form has
+$H_1=\operatorname{coker}(\mathrm{Cartan})$. \mE\ the Smith normal form of the $E_8$ Cartan matrix is the identity,
+so $\operatorname{coker}(E_8)=0$: the $E_8$-graph plumbing boundary is an \emph{integral homology sphere} --- the
+genus-1 meaning of $\det E_8{=}1$. \mE\ among ADE only $E_8$ does this (the cokernels are
+$\Z/(n{+}1)$, $\Z/4$, $\Z/3$, $\Z/2$ for $A_n,D_n,E_6,E_7$). \mE\ its fundamental group $\pi_1=2I=SL(2,5)$ is
+\emph{perfect} (the commutator subgroup equals the whole order-$120$ group, computed directly), so $H_1=0$ and the
+link is \emph{the} Poincar\'e homology sphere, with $|2I|=120=|\mu_4|\,h(E_8)$. So R3's combinatorial core is
+complete \mE: the $E_8$ attractor link is forced to be the Poincar\'e sphere ($\det K{=}1$), uniquely among ADE.
+\mO\ what stays open is only the geometric realisation bridge --- that the raw rewrite seam attractor \emph{is} this
+$E_8$ du~Val plumbing --- the \texttt{SEAM.EQUIV.01} content; this does not close it, but reduces the keystone to
+that single geometric identification.
+
 % =====================================================================
 \section{One $\ainv$ for electromagnetism, the cosmic horizon and $\Lambda$}\label{sec:alpha}
 % =====================================================================
