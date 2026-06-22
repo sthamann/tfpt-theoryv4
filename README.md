@@ -389,7 +389,17 @@ by Osterwalder–Schrader / quasi-free clustering a transfer gap *is* a bulk mas
 stays `[O]` (not machine-proved end-to-end), but its entire residual is now a composition of **standard cited
 theorems** (OS/clustering, Kitaev free-fermion, the `v297` AQFT stack) over **established** TFPT facts — *no
 undischarged TFPT-internal assumption remains*.
-A development timeline of all `300` scripts is in `introduction.tex` (and on the website verification page).
+
+**The arithmetic arc (`v313`–`v321`) + the Lean keystone (`FORM.SEAMEQUIV.01`).** A cyclotomic capstone makes the
+SM *structural* sector exact: the three generations, the two CP phases and their orbit/hierarchy are the cyclotomic
+field `ℚ(ζ₃₀)` with Galois group `μ₄ × ℤ₂` (degree `8 = rank E₈`), forced by the atoms `{2,3,5}`; the seed `φ₀`
+itself reduces to a pure function of `π`, so there are **zero dimensionless free parameters** — `{a, π, v_geo}` is
+the complete input (`v318`). This yields a **new falsifiable prediction**: the two CP phases are Galois-locked,
+`δ_PMNS = δ_CKM,lead + π = 240°` (`v320`; kill test at DUNE/Hyper-K). And the `SEAM.EQUIV.01` closing chain is now
+**Lean-formalised** (`FORM.SEAMEQUIV.01`, `lake build` clean): the composition `gap → invertible → holomorphic c=8
+→ (E8)₁` is machine-checked, with `#print axioms` pinning the residual to exactly the named cited theorems + the
+one OS input.
+A development timeline of all `320+` scripts is in `introduction.tex` (and on the website verification page).
 
 ---
 

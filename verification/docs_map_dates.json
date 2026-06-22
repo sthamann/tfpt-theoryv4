@@ -352,8 +352,8 @@
   "date": "2026-06-14"
  },
  "tfpt_2_standard_model::section::Neutrinos::1": {
-  "hash": "cae5954c6298",
-  "date": "2026-06-18"
+  "hash": "519fe4f2310c",
+  "date": "2026-06-22"
  },
  "tfpt_2_standard_model::section::How the legacy layers simplify (bridge map)::1": {
   "hash": "9eeb68ad4a79",
@@ -652,8 +652,8 @@
   "date": "2026-06-19"
  },
  "tfpt_5_redteam::section::Outcome::1": {
-  "hash": "cb9e88684adf",
-  "date": "2026-06-21"
+  "hash": "27c70e6f06c1",
+  "date": "2026-06-22"
  },
  "tfpt_horizon_readouts::front::(front matter)::1": {
   "hash": "091987bff9bb",

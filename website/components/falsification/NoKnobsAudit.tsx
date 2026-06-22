@@ -38,6 +38,14 @@ const ROWS: AuditRow[] = [
     kill: "A robust normal-ordering global-fit exclusion at the stated confidence level.",
   },
   {
+    output: "δ_PMNS = 240°  (leptonic CP phase)",
+    inputsAllowed:
+      "The hexagonal unit ρ = ζ₆ of the family Galois factor; δ_PMNS = arg(ρ⁴) = δ_CKM,lead + π, locked by ρ⁴ = −ρ (v320)",
+    inputsForbidden: "A free leptonic CP phase fit to NuFIT",
+    freeKnobs: "0",
+    kill: "A measured δ_PMNS robustly away from δ_CKM,lead + π = 240° (>3σ at DUNE/Hyper-K).",
+  },
+  {
     output: "det R = 8, minors (2,3,5)",
     inputsAllowed: "The compiler residue matrix R = R(g_car, μ₄)",
     inputsForbidden: "Fitting R to a CKM/PMNS global fit",

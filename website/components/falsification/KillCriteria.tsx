@@ -65,6 +65,14 @@ const ROWS: KillRow[] = [
     severity: "bridge",
   },
   {
+    area: "Leptonic CP phase δ_PMNS",
+    paper: "Origin Theory · DUNE / Hyper-K (v320)",
+    criterion:
+      "The two CP phases are Galois-locked: both are powers of one hexagonal unit ρ = ζ₆ of the family factor, so δ_PMNS = arg(ρ⁴) = δ_CKM,lead + π = 240° (the previously assigned value is now a forced relation to the measured quark phase). A measured δ_PMNS robustly away from 240° (beyond the sub-leading budget, >3σ at DUNE/Hyper-K/JUNO) falsifies the whole Galois-CP organisation.",
+    formal: "\\delta_{\\mathrm{PMNS}} \\neq \\delta_{\\mathrm{CKM}}^{\\mathrm{lead}} + \\pi = 240^\\circ",
+    severity: "structural",
+  },
+  {
     area: "Strong CP θ_eff",
     paper: "Doc 2 · PSI nEDM",
     criterion:

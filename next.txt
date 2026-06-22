@@ -3,6 +3,28 @@
  Stand: 2026-06-08  |  verankert in v81_singular_pencil_matrices.py (11/11), Wolfram 116/116
 ================================================================================
 
+NACHTRAG 2026-06-22 (Arithmetik-Arc v313-v321 + Lean-Keystone FORM.SEAMEQUIV.01):
+  Der SM-Struktursektor IST der zyklotomische Koerper Q(zeta_30) mit Galois-Gruppe
+  mu4 x Z2 (Grad 8 = rank E8), erzwungen durch die Atome {2,3,5}. Der Seed phi0
+  reduziert selbst auf eine reine pi-Funktion -> NULL dimensionslose freie Parameter;
+  vollstaendiger Input = {a, pi, v_geo} (v318).
+  - v313 golden = g_car=5-Spektralsignatur (2cos(pi/5)); v314 diskret<->dynamisch
+    spaltet nach Koerper (Q vs Q(sqrt5)); v315 30=5x6 koppelt als Kompositum, Galois
+    mu4 x Z2; v316 CP-Phasen = zeta_6-Daten, Galois-Z2 = CP-Konjugation; v317 die 3
+    Generationen = mu3-Bahn, Galois-verfeinert 1+2 (fix = Recovery-Attraktor); v319
+    Translation-Clock 5x6.
+  - NEUE testbare Vorhersage v320: delta_PMNS = delta_CKM,lead + pi = 240 Grad (beide
+    Potenzen einer Hexagon-Einheit rho=zeta_6, rho^4=-rho). Galois-Lock, kein freier
+    Input mehr (war 'assigned'). Kill-Test DUNE/Hyper-K; freeze_file cp_phase_relation.
+  - v321 Forward-Kill-Board (die entscheidenden kommenden Messungen, gerankt, je an
+    eine freeze_file-Zeile gekoppelt).
+  - C (Lean): FORM.SEAMEQUIV.01 -- die v308-Kette (gap->invertibel->holomorph c=8->
+    (E8)_1) als Lean-Theorem seamEquivChain; #print axioms pinnt den Rest auf die
+    benannten zitierten Schritte + den einen OS-Input. lake build sauber.
+  - Deep-Sync: predictions.ts, KillCriteria.tsx, NoKnobsAudit.tsx, OpenGates.tsx,
+    README, origin_theory, tfpt_2 (delta_CP), tfpt_5_redteam (CP-Kill), papers.ts,
+    neue Figur galois_cp_hexagon. AUDIT OK.
+
 NACHTRAG 2026-06-15 (F_transfer-Funktor-Vertrag CONTRACT.F.01, v213):
   Die vier Frontier-Transfers als EIN getypter Funktor konsolidiert:
   F_transfer = F_observable o F_threshold o F_RG, jede Instanz = diskreter

@@ -117,7 +117,7 @@ export const EXPERIMENTS_AUDIT = {
   headline:
     "No discriminating empirical discovery — but a typed, reproducible, falsifiable test matrix.",
   finding:
-    "51 typed scorecard rows across FRB, CMB, neutrino, GW, EHT, lab (g−2/kaon/axion), dark-energy, recovery-channel and black-hole-cosmology (CCBH / gravastar-echo / spin-parity) domains: 27 consistent, 4 tension, 7 clean nulls, 12 data-limited, 1 parked. The latest structural round (v231/v233) ties the leptonic CP phase δ_PMNS = 4π/3 = 240° to δ_CKM via the Z2 sheet (δ_PMNS = δ_CKM,lead + π); confronted with the NuFIT 6.0 normal-ordering best fit (212°⁺²⁶₋₄₁) it sits at +1.08σ (consistent, weak power until DUNE/Hyper-K) and shares one independence group with δ_CKM. Correlated φ₀-seed legs, the cp_mu6_phase pair, alternative-group readings (e.g. CCBH vs DESI on w) and internal-consistency checks are NOT counted as independent external hits.",
+    "51 typed scorecard rows across FRB, CMB, neutrino, GW, EHT, lab (g−2/kaon/axion), dark-energy, recovery-channel and black-hole-cosmology (CCBH / gravastar-echo / spin-parity) domains: 27 consistent, 4 tension, 7 clean nulls, 12 data-limited, 1 parked. The latest structural round (v231/v233) ties the leptonic CP phase δ_PMNS = 4π/3 = 240° to δ_CKM via the Z2 sheet (δ_PMNS = δ_CKM,lead + π); confronted with the NuFIT 6.0 normal-ordering best fit (212°⁺²⁶₋₄₁) it sits at +1.08σ (consistent, weak power until DUNE/Hyper-K) and shares one independence group with δ_CKM. This is now a pre-registered kill test (v320): both CP phases are powers of one hexagonal unit ρ = ζ₆, so a δ_PMNS robustly away from 240° at DUNE/Hyper-K/JUNO would falsify the Galois-CP lock. The cyclotomic capstone (v313–v318) makes the whole SM structural sector ℚ(ζ₃₀) with Galois group μ₄ × ℤ₂ (degree 8 = rank E₈), leaving zero dimensionless free parameters — {a, π, v_geo} is the complete input. Correlated φ₀-seed legs, the cp_mu6_phase pair, alternative-group readings (e.g. CCBH vs DESI on w) and internal-consistency checks are NOT counted as independent external hits.",
 } as const;
 
 export const STATUS_BADGE: Record<PredictionStatus, { color: string; bg: string }> = {
@@ -330,16 +330,16 @@ export const predictions: Prediction[] = [
     status: "Conditional",
     dependencyClass: "Neutrino transport",
     killTest:
-      "Inverted ordering, a large m_ββ detection, or a cosmological Σm_ν < 0.0586 eV (the normal-ordering floor, v272) kills the minimal Majorana branch.",
+      "Inverted ordering, a large m_ββ detection, a cosmological Σm_ν < 0.0586 eV (the normal-ordering floor, v272), or a δ_PMNS robustly away from the Galois-locked 240° = δ_CKM,lead + π (v320) kills the minimal Majorana / Galois-CP branch.",
     derivationFormulas: [
       "\\text{normal ordering preferred}",
       "\\Sigma m_\\nu \\gtrsim 0.0586\\,\\mathrm{eV}\\ (\\text{NO floor})",
       "J_{\\mathrm{PMNS}} = -0.0297",
-      "\\delta_{\\mathrm{CP}} = 240^\\circ",
+      "\\delta_{\\mathrm{PMNS}} = \\delta_{\\mathrm{CKM}}^{\\mathrm{lead}} + \\pi = 240^\\circ\\ (\\text{Galois-locked, v320})",
     ],
     pdf: "/papers/tfpt_2_standard_model.pdf",
     description:
-      "The Majorana neutrino sector prefers normal ordering with a small effective mass; the NO floor Σm_ν = 0.0586 eV is consistent with the cosmological bound and is a near-term kill test (v272). The absolute scale is one seesaw ratio (M_R, the same single anchor as v_geo), while the full complex PMNS matrix and the leptonic CP strength J_PMNS = −0.0297 (data-consistent) are now assembled (v270). LEGEND / nEXO / DUNE / KATRIN are the comparison surface.",
+      "The Majorana neutrino sector prefers normal ordering with a small effective mass; the NO floor Σm_ν = 0.0586 eV is consistent with the cosmological bound and is a near-term kill test (v272). The absolute scale is one seesaw ratio (M_R, the same single anchor as v_geo), while the full complex PMNS matrix and the leptonic CP strength J_PMNS = −0.0297 (data-consistent) are now assembled (v270). The leptonic CP phase is no longer an assigned texture but a Galois-forced relation to the measured quark phase: δ_PMNS = δ_CKM,lead + π = 240° (both powers of one hexagonal unit ρ = ζ₆; v320), testable at DUNE/Hyper-K. LEGEND / nEXO / DUNE / KATRIN are the comparison surface.",
     category: "Neutrino",
   },
   {

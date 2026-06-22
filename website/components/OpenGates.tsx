@@ -231,7 +231,14 @@ function ClosingCondition() {
         clustering a transfer gap <em>is</em> a bulk mass gap (v302). <span className="font-semibold text-slate-100">
         Net:</span> SEAM.EQUIV.01 stays open (not machine-proved end-to-end), but its entire residual is now a
         composition of standard cited theorems (OS/clustering, Kitaev free-fermion, the v297 AQFT stack) over
-        established TFPT facts — no undischarged TFPT-internal assumption remains.
+        established TFPT facts — no undischarged TFPT-internal assumption remains. That closing chain is now{" "}
+        <em>Lean-formalised</em> (FORM.SEAMEQUIV.01, lake build clean): gap → invertible → holomorphic c = 8 →
+        (E₈)₁ as a well-typed theorem whose <span className="font-mono">#print axioms</span> pins the residual to
+        exactly the named cited steps + the one OS input. And the arithmetic capstone (v313–v318) makes the SM
+        structural sector the cyclotomic field ℚ(ζ₃₀) with Galois μ₄ × ℤ₂ (degree 8 = rank E₈), leaving{" "}
+        <span className="text-emerald-200">zero dimensionless free parameters</span> ({`{a, π, v_geo}`} is the
+        complete input) — with a new falsifiable CP-lock prediction δ<sub>PMNS</sub> = δ<sub>CKM,lead</sub> + π =
+        240° (v320, kill test at DUNE/Hyper-K).
       </p>
       <p className="mt-3 rounded-lg border border-slate-700/40 bg-slate-950/40 p-3 text-xs leading-relaxed text-slate-300">
         <span className="font-semibold text-slate-100">4D-QFT fork policy</span> (frozen decision tree, v265):

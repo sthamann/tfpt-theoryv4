@@ -352,7 +352,7 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
 - **v317_galois_family** [E/C] `GALOIS.FAMILY.01` — Are the 3 generations a mu3/Galois orbit? Yes (mu3), refined 1+2 by Galois (v316 follow-up). The 3 cusp weights {0,1/3,2/3} (Spec(Q+)={1,2,3}=A3 exponents) map under w->e^{2pi i w}
   - deps: v316_galois_readout, v315_coxeter_coupling, v316, v315, v56 · cited: origin theory
 - **v320_galois_cp_relation** [E/C/X] `GALOIS.CP.PREDICT.01` — A NEW falsifiable prediction from the Galois structure: the two CP phases are locked, delta_PMNS = delta_CKM,lead + pi. Both phases are powers of one hexagonal unit rho=zeta_6 (v31
-  - deps: v316_galois_readout, v318_arithmetic_capstone, v316, v231, v233 · cited: origin theory
+  - deps: v316_galois_readout, v318_arithmetic_capstone, v316, v231, v233 · cited: origin theory, 5 redteam
 - **v321_killtest_board** [E/C/X] `KILL.BOARD.01` — The forward kill-test board: the decisive upcoming measurements, ranked (forward companion to v307). Each entry is locked to a freeze_file.csv kill row: #1 JUNO sin^2 theta12=0.306
   - deps: v307_data_watchdog, v320_galois_cp_relation, v84_frozen_registry · cited: origin theory
 

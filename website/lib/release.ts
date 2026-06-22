@@ -34,81 +34,81 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/introduction.pdf": {
     href: "/papers/introduction.pdf",
     ...COMMON,
-    bytes: 1738442,
+    bytes: 1738570,
     sha256:
-      "561620645b5dd25f471d214500d35860b0ab860eb3c24b81b3e6c0f0a4260c1c",
+      "3845eb4c7c76e072b09679b34614c26a9493954284cdb91ad85214801443027b",
     changelog:
       "Compiler-closure reading guide: two axioms, the dependency DAG, the predictions and the proof ledger.",
   },
   "/papers/tfpt_1_architecture_e8.pdf": {
     href: "/papers/tfpt_1_architecture_e8.pdf",
     ...COMMON,
-    bytes: 1080704,
+    bytes: 1080568,
     sha256:
-      "bdaa110ecb11eb292794f95013f2d671931c5b79cece1e66069f2b5d29a7ec13",
+      "473fda1e50eee377e1a9985aec35ba17d3d1ac0482d48ba1affaf0434a940722",
     changelog:
       "Architecture: the two axioms, the D₅ × A₃ → E₈ construction, and the EM fixed point with existence + uniqueness.",
   },
   "/papers/tfpt_2_standard_model.pdf": {
     href: "/papers/tfpt_2_standard_model.pdf",
     ...COMMON,
-    bytes: 1152862,
+    bytes: 1153285,
     sha256:
-      "be224b91a72541707068c97b7a87443936934223860e56017269605725d200a4",
+      "35c2ea2bb1972d69b987439ec93bd0f7380b4dd8ab1e181f29dd6b46bc0010ef",
     changelog:
       "The Standard Model in one φ₀-ladder, the flavor residue matrix, and the derived solar angle θ₁₂.",
   },
   "/papers/tfpt_3_e8_audit_bootstrap.pdf": {
     href: "/papers/tfpt_3_e8_audit_bootstrap.pdf",
     ...COMMON,
-    bytes: 898431,
+    bytes: 898339,
     sha256:
-      "1c00016f652770f4b343a6ee13f2fd96ef140c3a86a28cedb7bb199a33d43c5f",
+      "9b2d0f859a7117de69e45f4eedc1c695f70fd6e229ec2d9892df5e3d6e634c3c",
     changelog:
       "The seven E₈ slices as an audit raster, the cascade bridge, and the Möbius bootstrap.",
   },
   "/papers/tfpt_4_frontier.pdf": {
     href: "/papers/tfpt_4_frontier.pdf",
     ...COMMON,
-    bytes: 763624,
+    bytes: 763787,
     sha256:
-      "8eca30510729e47b5aa2b193d7cdfc22d056bc040eefeaf669e5ee85c66b9c69",
+      "3e268c7575c78072a5289036f6f2e841fcb56f01d20098f5037254da9473519c",
     changelog:
       "Honest status of η_B, m_p/m_e, Koide, dark matter and full quantum gravity — not forced onto the ladder.",
   },
   "/papers/tfpt_horizon_readouts.pdf": {
     href: "/papers/tfpt_horizon_readouts.pdf",
     ...COMMON,
-    bytes: 877671,
+    bytes: 877748,
     sha256:
-      "288ec7e6165d4be9bf94f5f0e45fe35fbbda9e9b1d26d18e59b24df3798a7aa6",
+      "8490dfdae82abc4e6a874bf67ef82e2aeca49ad8bbc858a5211342b5659bf135",
     changelog:
       "Appendix H — the horizon unit system: c₃ = 1/(8π) as the universal horizon thermal code.",
   },
   "/papers/origin_theory.pdf": {
     href: "/papers/origin_theory.pdf",
     ...COMMON,
-    bytes: 985182,
+    bytes: 985049,
     sha256:
-      "f429ccf0c56cb93b2341c17d10497dec297cf71fad98f32797893a5db3090729",
+      "231c8e0f078560fbe594c3bbd92df68008e8662028f06e8740551f5b19a045ed",
     changelog:
       "Origin Theory: the (5,3) skeleton, the triply-forced 8, the order-30 Coxeter cycle, and the gapped unique attractor.",
   },
   "/papers/tfpt_research_contracts.pdf": {
     href: "/papers/tfpt_research_contracts.pdf",
     ...COMMON,
-    bytes: 1309266,
+    bytes: 1309381,
     sha256:
-      "1397aca3869205093256eb1af009c2287c863404ef2e3a09b374b9ba52901c35",
+      "67cc84e205bd34ffffea5b528d01baccdda41ed76c36aeb37d4aeba742912dcd",
     changelog:
       "Research contracts for the remaining interfaces: v_geo (scale anchor), G_net (metric inclusion), F_transfer (downstream transport).",
   },
   "/papers/tfpt_5_redteam.pdf": {
     href: "/papers/tfpt_5_redteam.pdf",
     ...COMMON,
-    bytes: 723423,
+    bytes: 724037,
     sha256:
-      "20d3d846580bf05526e44265b25e69da3c819d07cd17fc88f0ec1ee7a2d9ae35",
+      "feb09ee986793dac3381337c821891305bee188701d92ad036ed567770463843",
     changelog:
       "The adversarial audit: Targets A–E, what survives, what each target reduces to, and the kill tests.",
   },
@@ -117,7 +117,7 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
     ...COMMON,
     bytes: 804350,
     sha256:
-      "db4ec7b9995cfc775fb5418ada4700c99165add3ab4b454c9e4d717a178d4f25",
+      "6da424b1faf9affddb55044c2a3dc6ef90393d162a4845877026c41bc2ca9c70",
     changelog:
       "The canonical dated changelog of every change to the theory, the suite, the papers and the website.",
   },
