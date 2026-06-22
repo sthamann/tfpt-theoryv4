@@ -2269,6 +2269,19 @@ Module[{c3v, ointK, c3gb, gilkey, q2},
       && Simplify[q2 - 1/(256 Pi^3)] == 0 && ((4/5)*41 == 8*(41/10))];
 ];
 
+(* ==== v344 SEAM.DETK.01: the ADE |det Cartan| = |H_1(link)| sequence, only E8 -> 1 ==== *)
+Module[{cartanA, cartanD, E8, detADE},
+  cartanA[n_] := SparseArray[{{i_, i_} -> 2, {i_, j_} /; Abs[i - j] == 1 -> -1}, {n, n}];
+  cartanD[n_] := Module[{M = Normal[cartanA[n]]},
+    M[[n, n - 1]] = M[[n - 1, n]] = 0; M[[n, n - 2]] = M[[n - 2, n]] = -1; M];
+  E8 = {{2,-1,0,0,0,0,0,0},{-1,2,-1,0,0,0,0,0},{0,-1,2,-1,0,0,0,0},{0,0,-1,2,-1,0,0,0},
+        {0,0,0,-1,2,-1,0,-1},{0,0,0,0,-1,2,-1,0},{0,0,0,0,0,-1,2,0},{0,0,0,0,-1,0,0,2}};
+  (* |det Cartan| = |H_1(link)| = #(1-dim irreps): A_n->n+1, D_n->4, E6->3, E7->2, E8->1; only E8 -> 1 *)
+  detADE = {Det[cartanA[2]], Det[cartanA[3]], Det[cartanD[4]], Det[cartanD[5]], Det[E8]};
+  checkExact["v344 SEAM.DETK.01: the ADE |det Cartan| = |H_1(link)| = #(1-dim irreps) sequence -- A2=3 (=n+1), A3=4, D4=4, D5=4, E8=1; ONLY E8 -> 1 (the binary icosahedral 2I is the unique perfect ADE group, H_1=0), so det K=1 (holomorphy) <=> homology-sphere link <=> E8. The one open keystone bit, six equivalent faces (v232/v235/v219/v281/v282)",
+    detADE == {3, 4, 4, 4, 1} && Det[E8] == 1];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

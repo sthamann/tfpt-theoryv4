@@ -105,7 +105,7 @@ v84–v93 block passed **45/45** on first run; the v94–v140 blocks were added
 the same day, the v141–v144 block on 2026-06-12. Current state:
 
 ```
---- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342: 291 passed, 0 failed ---
+--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344: 292 passed, 0 failed ---
 ALL WOLFRAM EXTENSION CHECKS PASSED
 ```
 
@@ -158,6 +158,12 @@ The 2026-06-22 **EM-Ward heat-kernel round** added one more exact check (290 →
 the Gilkey `a₄` gauge-curvature coefficient `30Ω²/360=1/12`, the `c₃`-ladder `{0,3,6}`, and
 `2c₃³=1/(256π³)` carrying `π³` = three boundary insertions). The textbook Gilkey coefficient
 is cited, not re-derived; the cubic Maxwell moment stays the `EM.WARD.01` residual.
+
+The 2026-06-22 **det K=1 synthesis round** added one more exact check (291 → 292):
+`v344_detk_synthesis.py` (the ADE `|det Cartan| = |H₁(link)| = #(1-dim irreps)` sequence
+`A_n→n+1, D_n→4, E6→3, E7→2, E8→1` — only `E8→1`, the binary icosahedral `2I` being the
+unique perfect ADE group). The four-routes analysis `v343_four_routes_analysis.py` is a
+Python-only roadmap (its de Sitter / gap facts are already mirrored via v54/v337).
 
 The 2026-06-22 **next-steps round (A/C/D/B)** added one more exact check (288 → 289):
 `v337_decoupling_theorem.py` (the ambient back-reaction scale `2·dim(E₈)·c₃² = 31/(4π²)`

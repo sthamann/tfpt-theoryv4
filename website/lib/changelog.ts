@@ -47,6 +47,321 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "the one keystone bit "
+      },
+      {
+        "k": "m",
+        "v": "\\det K{=}1"
+      },
+      {
+        "k": "t",
+        "v": " mapped: six equivalent faces, the genus-1 obstruction, three access routes, the hypergraph-homotopy route the most promising fresh angle: "
+      },
+      {
+        "k": "c",
+        "v": "v344"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v344"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.DETK.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " A bird's-eye, full-spectrum map of "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": "'s only open residual, the holomorphy bit "
+        },
+        {
+          "k": "m",
+          "v": "\\det K{=}1"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "it is ONE statement with six equivalent faces (holomorphy / homology-sphere link "
+        },
+        {
+          "k": "m",
+          "v": "H_1{=}0"
+        },
+        {
+          "k": "t",
+          "v": " / one "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": "-dim irrep / "
+        },
+        {
+          "k": "m",
+          "v": "\\det"
+        },
+        {
+          "k": "t",
+          "v": " Cartan "
+        },
+        {
+          "k": "m",
+          "v": "=1"
+        },
+        {
+          "k": "t",
+          "v": " / full "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " condensation / "
+        },
+        {
+          "k": "m",
+          "v": "\\tau{=}i"
+        },
+        {
+          "k": "t",
+          "v": " CM), unified by "
+        },
+        {
+          "k": "m",
+          "v": "|\\det\\mathrm{Cartan}|=|H_1(\\text{link})|=\\#(\\text{1-dim irreps})"
+        },
+        {
+          "k": "t",
+          "v": " across ADE ("
+        },
+        {
+          "k": "m",
+          "v": "A_n{\\to}n{+}1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "D_n{\\to}4"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "E_6{\\to}3"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "E_7{\\to}2"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "E_8{\\to}1"
+        },
+        {
+          "k": "t",
+          "v": ") – only "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " gives "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the GENUS-1 OBSTRUCTION explains why it is hard: every easy argument (plane vacuum, gap, free-fermion) is genus-0, necessary but not sufficient ("
+        },
+        {
+          "k": "c",
+          "v": "v87"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "m",
+          "v": "\\det K"
+        },
+        {
+          "k": "t",
+          "v": " is the torus degeneracy. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "THREE genus-1 access routes: R1 continuum-modular ("
+        },
+        {
+          "k": "c",
+          "v": "v336"
+        },
+        {
+          "k": "t",
+          "v": "), R2 anyon-condensation ("
+        },
+        {
+          "k": "c",
+          "v": "v281"
+        },
+        {
+          "k": "t",
+          "v": "), R3 hypergraph-homotopy. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the HYPERGRAPH route is the most promising fresh angle: the "
+        },
+        {
+          "k": "m",
+          "v": "(2,3,5)"
+        },
+        {
+          "k": "t",
+          "v": " rewrite attractor is the affine-"
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " graph ("
+        },
+        {
+          "k": "c",
+          "v": "v312"
+        },
+        {
+          "k": "t",
+          "v": ") and the "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " du Val link is the Poincaré sphere ("
+        },
+        {
+          "k": "c",
+          "v": "v232"
+        },
+        {
+          "k": "t",
+          "v": "), so "
+        },
+        {
+          "k": "m",
+          "v": "\\det K{=}1"
+        },
+        {
+          "k": "t",
+          "v": " becomes a finite combinatorial statement (no continuum limit). "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "none closes it; the gap is the combinatorial-to-geometric bridge "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " content. A synthesis/roadmap; closes nothing."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-22",
+    "dateLabel": "2026-06-22",
+    "heading": [
+      {
+        "k": "t",
         "v": "the four black-hole-birth completion routes investigated: none closes all or is 100% provable alone; all four converge on "
       },
       {

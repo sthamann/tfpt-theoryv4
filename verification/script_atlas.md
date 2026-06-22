@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`341` registered scripts · `399` ledger claims · `10` clusters.
+`342` registered scripts · `400` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (16 scripts)
+### `core` — Compiler core & the E₈ glue  (17 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -43,6 +43,8 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v308_seam_equiv_chain, v323_bw_geometric_modular, v181_clock_is_conformal_symmetry, QG.AMB.01, v308, v323, v329, v333 · cited: introduction, origin theory
 - **v336_continuum_limit** [E/C/O] `SEAM.EQUIV.CONTINUUM.01` — The ONE open lemma of SEAM.EQUIV.01, stated precisely and mapped to the recent rigorous literature: the continuum-limit and OS-reconstruction legs are now CITABLE, the genuinely-op
   - deps: v308_seam_equiv_chain, v335_seam_equiv_unify, v308, v277, v335 · cited: origin theory
+- **v344_detk_synthesis** [E/C/O] `SEAM.DETK.01` — The bird's-eye synthesis of the ONE open keystone bit, det K=1 -- a full-spectrum map of SEAM.EQUIV.01's only open residual. [E] det K=1 is ONE statement with SIX equivalent faces 
+  - deps: v335_seam_equiv_unify, v232, v235, v219, v281, v282, v312, v336 · cited: origin theory
 
 ### `em` — Electromagnetic fixed point  (4 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -750,7 +752,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v332_qgamb_metric_sector** — `QGAMB.METRIC.01`
 - **v333_cm_selection** — `QGEO.CMSELECT.01`
 - **v334_conformal_resolution** — `QGAMB.CONFORMAL.01`
 - **v335_seam_equiv_unify** — `SEAM.EQUIV.UNIFY.01`
@@ -762,4 +763,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v341_alpha_quillen** — `ALPHA.QUILLEN.01`
 - **v342_em_ward_heatkernel** — `EM.WARD.02`
 - **v343_four_routes_analysis** — `FOUR.ROUTES.01`
+- **v344_detk_synthesis** — `SEAM.DETK.01`
 
