@@ -112,6 +112,15 @@ ROWS = [
      "search_target", "boundary recovery kernel (Q/tau_d)",
      "search_target", "Yu+2013 (MNRAS 429,688) expTab recovery table",
      "Q clusters at phi0 multiples OR tau_d components form the kernel ladder", "null"],
+    ["pulsar", "dynamic recovery comb on real nu(t) (PG.05)",
+     "log-periodic comb at omega=2pi/ln((3/2)^6)=2.583 in the post-glitch recovery waveform",
+     "data_limited: detector injection-validated on the real monthly sampling (cascade comb found "
+     "p=0.002, smooth power law rejected p=0.15); NO kernel comb in 7 Crab inter-glitch segments "
+     "(p=0.12-0.44); monthly cadence < the ~2% (eps~exp(-pi^2/ln lambda)) comb amplitude", None,
+     "search_target", "boundary recovery kernel (dynamic)",
+     "strain_level_test", "Jodrell Bank Crab monthly ephemeris (479 nu/nudot points, 1988-2026)",
+     "a log-periodic comb at omega=2.58 is special vs the off-kernel periodogram in a clean segment",
+     "data_limited"],
     ["pulsar", "recovery-waveform clock template (PG.04/QT.04)",
      "walled 2-mode clock: bend tau ratio 2.7095 + protected floor + wall (<=2 modes)",
      "GW single-event ringdown DONE (gw Stage 2): the bend is degenerate within one monotone recovery "

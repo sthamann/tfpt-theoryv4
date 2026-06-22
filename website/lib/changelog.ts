@@ -47,6 +47,361 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "closing round: the CM-selection mechanism (the last keystone residual), the conformal-mode resolution, and the Conway–Sloane even-unimodular side in Lean: "
+      },
+      {
+        "k": "c",
+        "v": "v333"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "v334"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "FORM.CARTAN.DET.01"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v333_cm_selection.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGEO.CMSELECT.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "s",
+              "v": "O"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The CM-selection mechanism for the last keystone residual: "
+        },
+        {
+          "k": "m",
+          "v": "\\tau{=}i"
+        },
+        {
+          "k": "t",
+          "v": " (the square) is the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "unique"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " order-4 modulus — "
+        },
+        {
+          "k": "m",
+          "v": "S{=}\\bigl(\\begin{smallmatrix}0&-1\\\\1&0\\end{smallmatrix}\\bigr)"
+        },
+        {
+          "k": "t",
+          "v": " has "
+        },
+        {
+          "k": "m",
+          "v": "S^4{=}I"
+        },
+        {
+          "k": "t",
+          "v": " and fixes "
+        },
+        {
+          "k": "m",
+          "v": "i"
+        },
+        {
+          "k": "t",
+          "v": ", and an order-4 deck selects "
+        },
+        {
+          "k": "m",
+          "v": "j{=}1728"
+        },
+        {
+          "k": "t",
+          "v": " (vs the order-3 hexagon "
+        },
+        {
+          "k": "m",
+          "v": "j{=}0"
+        },
+        {
+          "k": "t",
+          "v": ") — AND the square is the Fekete attractor of symmetric mark-equilibration (four points minimizing the log-energy converge to equal "
+        },
+        {
+          "k": "m",
+          "v": "\\pi/2"
+        },
+        {
+          "k": "t",
+          "v": " spacing). So given the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " deck, "
+        },
+        {
+          "k": "m",
+          "v": "\\tau{=}i"
+        },
+        {
+          "k": "t",
+          "v": " is forced; the residual sharpens from “why the square” to “the deck acts geometrically” (= "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.SYM.01"
+        },
+        {
+          "k": "t",
+          "v": "). NOT a closure."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v334_conformal_resolution.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGAMB.CONFORMAL.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "s",
+              "v": "C"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "s",
+              "v": "O"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The conformal-mode resolution for the QG metric sector: the Gibbons–Hawking–Perry contour rotation "
+        },
+        {
+          "k": "m",
+          "v": "\\phi\\to i\\phi"
+        },
+        {
+          "k": "t",
+          "v": " flips the wrong-sign kinetic term, making the divergent conformal Gaussian "
+        },
+        {
+          "k": "m",
+          "v": "\\int e^{+|c|\\phi^2}"
+        },
+        {
+          "k": "t",
+          "v": " into the convergent "
+        },
+        {
+          "k": "m",
+          "v": "\\int e^{-|c|\\phi^2}{=}\\sqrt{\\pi/|c|}"
+        },
+        {
+          "k": "t",
+          "v": "; the entire IDG form factor "
+        },
+        {
+          "k": "m",
+          "v": "e^{p^2/M^2}"
+        },
+        {
+          "k": "t",
+          "v": " dresses the propagator pole-free (the polynomial "
+        },
+        {
+          "k": "m",
+          "v": "R{+}R^2"
+        },
+        {
+          "k": "t",
+          "v": " ghost as control). Together they give a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "conditional"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " mode-by-mode construction of the metric-sector measure; the residual is only the contour's nonperturbative validity (gap-decoupled, blocks no test). NOT a closure."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "CartanDeterminants.lean"
+            },
+            {
+              "k": "t",
+              "v": " extended ("
+            },
+            {
+              "k": "c",
+              "v": "FORM.CARTAN.DET.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The Conway–Sloane lattice side: the E"
+        },
+        {
+          "k": "m",
+          "v": "_8"
+        },
+        {
+          "k": "t",
+          "v": " Cartan matrix is proved to be an EVEN (diagonal "
+        },
+        {
+          "k": "m",
+          "v": "=2"
+        },
+        {
+          "k": "t",
+          "v": "), symmetric, unimodular ("
+        },
+        {
+          "k": "m",
+          "v": "|\\det|{=}1"
+        },
+        {
+          "k": "t",
+          "v": ") integer Gram matrix — the defining data of an even unimodular rank-8 lattice — all by kernel "
+        },
+        {
+          "k": "c",
+          "v": "decide"
+        },
+        {
+          "k": "t",
+          "v": " / the integer-inverse argument. The remaining content (Witt's uniqueness: E"
+        },
+        {
+          "k": "m",
+          "v": "_8"
+        },
+        {
+          "k": "t",
+          "v": " is the only even unimodular lattice in dim "
+        },
+        {
+          "k": "m",
+          "v": "<16"
+        },
+        {
+          "k": "t",
+          "v": ") is the cited classification residual."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-22",
+    "dateLabel": "2026-06-22",
+    "heading": [
+      {
+        "k": "t",
         "v": "endgame round: the necessity of "
       },
       {

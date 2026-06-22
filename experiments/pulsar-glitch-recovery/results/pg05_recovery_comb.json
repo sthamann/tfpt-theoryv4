@@ -1,0 +1,80 @@
+{
+  "kernel_omega": 2.5827069463082895,
+  "n_points": 479,
+  "span_years": 37.998631074606436,
+  "n_glitches": 10,
+  "injection": {
+    "comb_detected": true,
+    "comb_p": 0.0018587360594795538,
+    "smooth_rejected": true,
+    "smooth_p": 0.1524163568773234,
+    "passed": true
+  },
+  "segments": [
+    {
+      "glitch_mjd": 47771.0,
+      "n_points": 83,
+      "span_days": 2469.0,
+      "omega": 2.5827069463082895,
+      "amplitude": 0.3197572873657514,
+      "p_value": 0.24319419237749546,
+      "detected": false
+    },
+    {
+      "glitch_mjd": 50279.0,
+      "n_points": 38,
+      "span_days": 1126.0,
+      "omega": 2.5827069463082895,
+      "amplitude": 0.20955761976576276,
+      "p_value": 0.375,
+      "detected": false
+    },
+    {
+      "glitch_mjd": 52105.0,
+      "n_points": 31,
+      "span_days": 914.0,
+      "omega": 2.5827069463082895,
+      "amplitude": 0.2405658370747656,
+      "p_value": 0.4368029739776952,
+      "detected": false
+    },
+    {
+      "glitch_mjd": 53071.0,
+      "n_points": 98,
+      "span_days": 2791.0,
+      "omega": 2.5827069463082895,
+      "amplitude": 0.15116967661080483,
+      "p_value": 0.42857142857142855,
+      "detected": false
+    },
+    {
+      "glitch_mjd": 55878.0,
+      "n_points": 74,
+      "span_days": 2172.0,
+      "omega": 2.5827069463082895,
+      "amplitude": 0.23322186001263687,
+      "p_value": 0.3242753623188406,
+      "detected": false
+    },
+    {
+      "glitch_mjd": 58079.0,
+      "n_points": 25,
+      "span_days": 584.0,
+      "omega": 2.5827069463082895,
+      "amplitude": 0.76275463814952,
+      "p_value": 0.12126865671641791,
+      "detected": false
+    },
+    {
+      "glitch_mjd": 58691.0,
+      "n_points": 84,
+      "span_days": 2442.0,
+      "omega": 2.5827069463082895,
+      "amplitude": 0.10721994725317452,
+      "p_value": 0.4358047016274864,
+      "detected": false
+    }
+  ],
+  "n_detected": 0,
+  "verdict": "NO kernel recovery comb (omega=2.583) in the real Crab nu(t): across 7 clean inter-glitch segments (of 10 detected glitches over 38 yr) none shows the log-periodic comb above the smooth-trend surrogate null + look-elsewhere. The detector IS injection-validated on this exact monthly sampling (a geometric cascade is found, a smooth power law is not), so this is a real null, not a sensitivity gap -- consistent with the ~2% comb amplitude (eps~exp(-pi^2/ln lambda)) being below monthly-cadence reach. Status: data_limited; no claim. Sharper test: daily-cadence timing of a giant glitch (e.g. Crab 2017) or Vela, where the fast transient is resolved over >2 decades in ln(time)."
+}

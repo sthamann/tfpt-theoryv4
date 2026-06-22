@@ -27,31 +27,31 @@
     "parked",
     "search_target"
   ],
-  "n_rows": 62,
+  "n_rows": 63,
   "count_by_status": {
     "consistent": 32,
     "null": 10,
-    "data_limited": 15,
+    "data_limited": 16,
     "tension": 4,
     "parked": 1
   },
   "count_by_stage": {
     "search_target": 19,
     "prediction_of_record": 18,
-    "strain_level_test": 2,
+    "strain_level_test": 3,
     "downstream_bridge": 13,
     "not_applicable": 9,
     "parked_analog": 1
   },
   "count_by_evidence_class": {
     "search_target": 19,
-    "external_data": 20,
+    "external_data": 21,
     "downstream_bridge": 13,
     "internal_consistency": 9,
     "parked": 1
   },
   "count_by_independence_group": {
-    "independent": 45,
+    "independent": 46,
     "phi0_seed": 8,
     "c3_topform_horizon": 1,
     "N_star_reheating": 4,
@@ -442,6 +442,26 @@
       "discriminative_power": "medium",
       "decision_horizon": "mid_term",
       "evidence_class": "search_target",
+      "hint_flag": false,
+      "alternative_group": null,
+      "watch_flag": false
+    },
+    {
+      "domain": "pulsar",
+      "observable": "dynamic recovery comb on real nu(t) (PG.05)",
+      "tfpt_value": "log-periodic comb at omega=2pi/ln((3/2)^6)=2.583 in the post-glitch recovery waveform",
+      "data_value": "data_limited: detector injection-validated on the real monthly sampling (cascade comb found p=0.002, smooth power law rejected p=0.15); NO kernel comb in 7 Crab inter-glitch segments (p=0.12-0.44); monthly cadence < the ~2% (eps~exp(-pi^2/ln lambda)) comb amplitude",
+      "pull_sigma": null,
+      "claim_type": "search_target",
+      "bridge_type": "boundary recovery kernel (dynamic)",
+      "stage": "strain_level_test",
+      "source": "Jodrell Bank Crab monthly ephemeris (479 nu/nudot points, 1988-2026)",
+      "kill_condition": "a log-periodic comb at omega=2.58 is special vs the off-kernel periodogram in a clean segment",
+      "status": "data_limited",
+      "independence_group": "independent",
+      "discriminative_power": "medium",
+      "decision_horizon": "mid_term",
+      "evidence_class": "external_data",
       "hint_flag": false,
       "alternative_group": null,
       "watch_flag": false

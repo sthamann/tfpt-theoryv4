@@ -34,90 +34,90 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/introduction.pdf": {
     href: "/papers/introduction.pdf",
     ...COMMON,
-    bytes: 1776911,
+    bytes: 1783078,
     sha256:
-      "2a3d3da077324d4cbad2d696df3188a2515bcad96f10ec5f95d79f3ff764daaa",
+      "fee771b6b55c6c56d4e791e0aae479ea47de92fffdd2bce31374540593f04be8",
     changelog:
       "Compiler-closure reading guide: two axioms, the dependency DAG, the predictions and the proof ledger.",
   },
   "/papers/tfpt_1_architecture_e8.pdf": {
     href: "/papers/tfpt_1_architecture_e8.pdf",
     ...COMMON,
-    bytes: 1080575,
+    bytes: 1080567,
     sha256:
-      "cfcfccf102d799fabd8c8a104d689b0988b72a88447ac6d6839a64425a182911",
+      "d7f4ed8b94345471495102a88ec3b2048bda8bf7f5aaabf5f3f9b22e79bd06e9",
     changelog:
       "Architecture: the two axioms, the D₅ × A₃ → E₈ construction, and the EM fixed point with existence + uniqueness.",
   },
   "/papers/tfpt_2_standard_model.pdf": {
     href: "/papers/tfpt_2_standard_model.pdf",
     ...COMMON,
-    bytes: 1155991,
+    bytes: 1155993,
     sha256:
-      "bbdb59220a69cd6306318940c7bcc5bbedaa7dbb9b3eb452e3d1b483a3b7febd",
+      "edf1be60ee3731cd830f7ca27b10d9c23aed814c59baacb433afa2568bf89554",
     changelog:
       "The Standard Model in one φ₀-ladder, the flavor residue matrix, and the derived solar angle θ₁₂.",
   },
   "/papers/tfpt_3_e8_audit_bootstrap.pdf": {
     href: "/papers/tfpt_3_e8_audit_bootstrap.pdf",
     ...COMMON,
-    bytes: 898621,
+    bytes: 898760,
     sha256:
-      "669a8f2eca128eb80792e9af67995c136de7586ab38088ec65de0536a85f5849",
+      "f7f9a8e0487ae15c2428a9472785b91e172f07db3fe5af80bfec4b5446c16d9e",
     changelog:
       "The seven E₈ slices as an audit raster, the cascade bridge, and the Möbius bootstrap.",
   },
   "/papers/tfpt_4_frontier.pdf": {
     href: "/papers/tfpt_4_frontier.pdf",
     ...COMMON,
-    bytes: 763498,
+    bytes: 763621,
     sha256:
-      "ef2edbb104e0332039f1740df237217eb1981e05752a8884df4a77826d9dbdac",
+      "e01792aecfc9f39c11cc9ad381b648de230ddffb4409765f4ce538eda67dfebb",
     changelog:
       "Honest status of η_B, m_p/m_e, Koide, dark matter and full quantum gravity — not forced onto the ladder.",
   },
   "/papers/tfpt_horizon_readouts.pdf": {
     href: "/papers/tfpt_horizon_readouts.pdf",
     ...COMMON,
-    bytes: 877780,
+    bytes: 877915,
     sha256:
-      "612f714207f2587f8eb36003a210ee6f5bffc1578bfd6f006b3a0e1e414a8f13",
+      "99a1aa30b6086d75c799162dedb9d1612d0b51bd003151dd4a13be9260af1a04",
     changelog:
       "Appendix H — the horizon unit system: c₃ = 1/(8π) as the universal horizon thermal code.",
   },
   "/papers/origin_theory.pdf": {
     href: "/papers/origin_theory.pdf",
     ...COMMON,
-    bytes: 997387,
+    bytes: 998197,
     sha256:
-      "1cdc3d7f47122ca3828eae3a75167cb8a2973809cd4aff0da10ccbe1bc6b7813",
+      "58707d64575395353f5db4fed444518ad7783fd95c51527f3c1a34144e1ff18b",
     changelog:
       "Origin Theory: the (5,3) skeleton, the triply-forced 8, the order-30 Coxeter cycle, and the gapped unique attractor.",
   },
   "/papers/tfpt_research_contracts.pdf": {
     href: "/papers/tfpt_research_contracts.pdf",
     ...COMMON,
-    bytes: 1309649,
+    bytes: 1309778,
     sha256:
-      "027ff3cd772c3e60af6607b7673a399a73226e02c3aa22a7de3c8082d8d04029",
+      "64cf47682c150e70ca9571f8197a00915564cc8d4112623d4a5aa93d878edcd5",
     changelog:
       "Research contracts for the remaining interfaces: v_geo (scale anchor), G_net (metric inclusion), F_transfer (downstream transport).",
   },
   "/papers/tfpt_5_redteam.pdf": {
     href: "/papers/tfpt_5_redteam.pdf",
     ...COMMON,
-    bytes: 746096,
+    bytes: 746249,
     sha256:
-      "63f29acbb91bb99f7d6028d838bca655e71014ea70481002aaa78e9db14dce3c",
+      "b6dfacb7c77c33b0e2b2a2b4fe2507b832e3fc0ba522ccfaaf47fe6cbbdd70cd",
     changelog:
       "The adversarial audit: Targets A–E, what survives, what each target reduces to, and the kill tests.",
   },
   "/papers/changelog.pdf": {
     href: "/papers/changelog.pdf",
     ...COMMON,
-    bytes: 851696,
+    bytes: 854175,
     sha256:
-      "b2e7159ef2438d384fb57b6c9a7792c4b6b1537d49e7ccc340c5050ef689284d",
+      "6741230bac2ab972f2765bf7033bfecf4a5fb1d7f1016a1a52e3f52b5f3947a9",
     changelog:
       "The canonical dated changelog of every change to the theory, the suite, the papers and the website.",
   },

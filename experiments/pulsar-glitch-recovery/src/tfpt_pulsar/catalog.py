@@ -33,6 +33,7 @@ import numpy as np
 DATA = Path(__file__).resolve().parents[2] / "data"
 DERIVED_CSV = DATA / "jbo_glitches.csv"
 RECOVERY_CSV = DATA / "yu2013_recovery.csv"
+CRAB_CSV = DATA / "crab_ephemeris.csv"
 
 _CELL = re.compile(r"<t[dh][^>]*>(.*?)</t[dh]>", re.S | re.I)
 _ROW = re.compile(r"<tr[^>]*>(.*?)</tr>", re.S | re.I)
@@ -277,3 +278,82 @@ def recovery_by_glitch(records: list[RecoveryRecord]) -> dict[tuple[str, float],
     for k in groups:
         groups[k] = sorted(groups[k], key=lambda r: (r.tau_d if r.tau_d else 0.0))
     return groups
+
+
+# --------------------------------------------------------------------------- Crab nu(t) (PG.05)
+@dataclass(frozen=True)
+class CrabPoint:
+    """One monthly point of the Jodrell Bank Crab ephemeris."""
+
+    mjd: float
+    nu: float            # spin frequency (Hz)
+    sigma_nu: float | None   # frequency error (last digits)
+    nudot: float         # spin-down rate (1e-15 s^-2)
+    sigma_nudot: float | None
+
+
+def parse_crab_ephemeris(text: str) -> list[CrabPoint]:
+    """Parse ``crab2.txt`` monthly rows into (mjd, nu, nudot, +errors).
+
+    The file uses THREE column layouts over its history (an extra ``t_MIT``/``xxxxxxxx``
+    column appears, then a ``nudotdot`` column is added), so the fields are located by VALUE,
+    not by fixed index: MJD is the integer token in [40000,70000], nu the decimal in [29,31]
+    Hz, nudot the value near -3.7e5 (1e-15 s^-2); the error follows each."""
+    out: list[CrabPoint] = []
+    for line in text.splitlines():
+        tok = line.split()
+        i_mjd = i_nu = i_nudot = None
+        for i, t in enumerate(tok):
+            try:
+                v = float(t)
+            except ValueError:
+                continue
+            if i_mjd is None and "." not in t and 40000.0 <= v <= 70000.0:
+                i_mjd = i
+            elif i_nu is None and "." in t and 29.0 <= v <= 31.0:
+                i_nu = i
+            elif i_nudot is None and -4.0e5 <= v <= -3.5e5:
+                i_nudot = i
+        if i_mjd is None or i_nu is None or i_nudot is None:
+            continue
+
+        def _f(i: int) -> float | None:
+            try:
+                return float(tok[i])
+            except (ValueError, IndexError):
+                return None
+
+        out.append(CrabPoint(float(tok[i_mjd]), float(tok[i_nu]), _f(i_nu + 1),
+                             float(tok[i_nudot]), _f(i_nudot + 1)))
+    out.sort(key=lambda p: p.mjd)
+    return out
+
+
+_CRAB_HEADER = ["mjd", "nu", "sigma_nu", "nudot", "sigma_nudot"]
+
+
+def write_crab_csv(rows: list[CrabPoint], path: Path = CRAB_CSV) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", newline="", encoding="utf-8") as fh:
+        w = csv.DictWriter(fh, fieldnames=_CRAB_HEADER)
+        w.writeheader()
+        for r in rows:
+            w.writerow(asdict(r))
+
+
+def load_crab_ephemeris(path: Path = CRAB_CSV) -> list[CrabPoint]:
+    """Load the committed derived Crab monthly ephemeris (no network)."""
+    if not path.exists():
+        raise FileNotFoundError(
+            f"{path} missing -- run `python scripts/fetch_crab_ephemeris.py` first "
+            "(downloads + parses the Jodrell Bank Crab monthly ephemeris crab2.txt)."
+        )
+    out: list[CrabPoint] = []
+    with path.open(encoding="utf-8") as fh:
+        for row in csv.DictReader(fh):
+            def f(key: str) -> float | None:
+                v = row[key]
+                return float(v) if v not in ("", "None") else None
+            out.append(CrabPoint(float(row["mjd"]), float(row["nu"]), f("sigma_nu"),
+                                 float(row["nudot"]), f("sigma_nudot")))
+    return out

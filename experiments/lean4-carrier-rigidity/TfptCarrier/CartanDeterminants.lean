@@ -102,4 +102,33 @@ theorem cartanE8_det_isUnit : IsUnit cartanE8.det := by
   refine ⟨⟨cartanE8.det, cartanE8inv.det, h, ?_⟩, rfl⟩
   rw [mul_comm]; exact h
 
+/-! ### The Conway–Sloane side: E₈ Cartan is an EVEN UNIMODULAR symmetric Gram matrix.
+
+The keystone's Conway–Sloane step says a holomorphic c=8 chiral net is `(E₈)₁`, the lattice
+net of the unique even unimodular rank-8 lattice.  Here we machine-check that the E₈ Cartan
+matrix has the three DEFINING properties of (the Gram matrix of) such a lattice: it is
+symmetric, EVEN (diagonal `= 2 ∈ 2ℤ`, so `xᵀ G x ∈ 2ℤ` for all integer `x`), and unimodular
+(`|det| = 1`, above).  The remaining content of Conway–Sloane is the UNIQUENESS — Witt's
+theorem that E₈ is the *only* even unimodular lattice in dimension `< 16` — which is the
+cited classification residual, not re-proved here. -/
+
+set_option maxRecDepth 10000 in
+/-- E₈ Cartan is symmetric. -/
+theorem cartanE8_transpose : cartanE8.transpose = cartanE8 := by decide
+
+/-- E₈ Cartan has even diagonal (`= 2`): the lattice is EVEN (`xᵀ G x ∈ 2ℤ`). -/
+theorem cartanE8_even : ∀ i, cartanE8 i i = 2 := by decide
+
+/-- The E₈ Cartan matrix is an even, symmetric, unimodular integer Gram matrix — the
+    defining data of an even unimodular rank-8 lattice.  (Uniqueness = Witt's theorem,
+    cited.) -/
+theorem cartanE8_even_unimodular :
+    (∀ i, cartanE8 i i = 2) ∧ cartanE8.IsSymm ∧ IsUnit cartanE8.det :=
+  ⟨cartanE8_even, cartanE8_transpose, cartanE8_det_isUnit⟩
+
+/-- Contrast (the discriminator): D₈ = SO(16) is also even (diagonal `= 2`) but NOT
+    unimodular — `|det Cartan(D₈)| = 4` — so unimodularity (one anyon) is the load-bearing
+    selector.  `det D₈ = 4` stays the Nat discriminator in `SeamEquivChain.lean`. -/
+theorem cartanD5_even : ∀ i, cartanD5 i i = 2 := by decide
+
 end TfptCarrier.CartanDeterminants

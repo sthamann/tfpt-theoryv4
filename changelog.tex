@@ -59,6 +59,28 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-22 (closing round: the CM-selection mechanism (the last keystone residual), the conformal-mode resolution, and the Conway--Sloane even-unimodular side in Lean: \texttt{v333}, \texttt{v334}, \texttt{FORM.CARTAN.DET.01})}
+\begin{itemize}
+\item \textbf{\texttt{v333\_cm\_selection.py} (\texttt{QGEO.CMSELECT.01}, \mE/\mO).} The CM-selection mechanism for
+  the last keystone residual: $\tau{=}i$ (the square) is the \emph{unique} order-4 modulus --- $S{=}\bigl(\begin{smallmatrix}0&-1\\1&0\end{smallmatrix}\bigr)$ has $S^4{=}I$ and fixes $i$, and an order-4 deck selects
+  $j{=}1728$ (vs the order-3 hexagon $j{=}0$) --- AND the square is the Fekete attractor of symmetric
+  mark-equilibration (four points minimizing the log-energy converge to equal $\pi/2$ spacing).  So given the
+  $\mu_4$ deck, $\tau{=}i$ is forced; the residual sharpens from ``why the square'' to ``the deck acts
+  geometrically'' (= \texttt{QGEO.SYM.01}).  NOT a closure.
+\item \textbf{\texttt{v334\_conformal\_resolution.py} (\texttt{QGAMB.CONFORMAL.01}, \mE/\mC/\mO).} The
+  conformal-mode resolution for the QG metric sector: the Gibbons--Hawking--Perry contour rotation $\phi\to i\phi$
+  flips the wrong-sign kinetic term, making the divergent conformal Gaussian $\int e^{+|c|\phi^2}$ into the
+  convergent $\int e^{-|c|\phi^2}{=}\sqrt{\pi/|c|}$; the entire IDG form factor $e^{p^2/M^2}$ dresses the
+  propagator pole-free (the polynomial $R{+}R^2$ ghost as control).  Together they give a \emph{conditional}
+  mode-by-mode construction of the metric-sector measure; the residual is only the contour's nonperturbative
+  validity (gap-decoupled, blocks no test).  NOT a closure.
+\item \textbf{\texttt{CartanDeterminants.lean} extended (\texttt{FORM.CARTAN.DET.01}, \mE).} The Conway--Sloane
+  lattice side: the E$_8$ Cartan matrix is proved to be an EVEN (diagonal $=2$), symmetric, unimodular
+  ($|\det|{=}1$) integer Gram matrix --- the defining data of an even unimodular rank-8 lattice --- all by kernel
+  \texttt{decide} / the integer-inverse argument.  The remaining content (Witt's uniqueness: E$_8$ is the only even
+  unimodular lattice in dim $<16$) is the cited classification residual.
+\end{itemize}
+
 \subsection*{2026-06-22 (endgame round: the necessity of $H$ reduced to the order-4 CM selection, the QG metric sector characterized as the conformal-mode problem, $|\det E_8|{=}1$ and the $\mu_4$ commutation grounded in Lean: \texttt{v331}, \texttt{v332}, \texttt{FORM.MU4COMM.01})}
 \begin{itemize}
 \item \textbf{\texttt{v331\_necessity\_of\_H.py} (\texttt{QGEO.NECESS.01}, \mE/\mO).} The necessity companion to

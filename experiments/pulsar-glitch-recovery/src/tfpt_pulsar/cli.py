@@ -5,6 +5,8 @@ Commands:
     validate  injection-recovery self-check of the discreteness machinery
     analyze   run PG.01 (size discreteness) + PG.02/03 (kernel ladders) on the
               real Jodrell Bank catalogue; write results/results.json (+ plot)
+    dynamic   PG.05: the dynamic recovery-comb test (omega=2.58) on the real Crab
+              nu(t) ephemeris; injection-validated; write results/pg05_*.json (+ plot)
 """
 
 from __future__ import annotations
@@ -78,6 +80,49 @@ def _plot(sizes, seed: int) -> None:
     fig.tight_layout()
     fig.savefig(RESULTS / "pg01_periodogram.png", dpi=130)
     plt.close(fig)
+
+
+def _dynamic(seed: int) -> int:
+    """PG.05 -- the DYNAMIC recovery-comb test on the real Crab nu(t) waveform.
+
+    The static ratio searches (PG.01-04) are null; the discriminating dynamic signature is the
+    log-periodic comb at omega=2pi/ln((3/2)^6)=2.58 across a recovery spanning a wide ln(time)
+    range. The Crab monthly ephemeris is the one public dataset with that reach.
+    """
+    from .nu_recovery import OMEGA, make_plot, pg05_recovery_comb
+
+    r = pg05_recovery_comb(seed=seed)
+    print("=" * 78)
+    print("PG.05 -- dynamic recovery comb on the real Crab nu(t) (Jodrell Bank ephemeris)")
+    print(f"  kernel cascade log-frequency omega = 2pi/ln((3/2)^6) = {OMEGA:.3f}")
+    print("=" * 78)
+    print(f"  data: {r.n_points} monthly points over {r.span_years:.0f} yr; "
+          f"{r.n_glitches} glitches detected")
+    inj = r.injection
+    print("\n  detector injection-validation (on the REAL monthly sampling):")
+    print(f"    injected geometric cascade comb -> detected={inj.comb_detected} (p={inj.comb_p:.3f})")
+    print(f"    smooth power-law recovery       -> rejected={inj.smooth_rejected} (p={inj.smooth_p:.3f})")
+    print(f"    -> detector valid: {inj.passed}")
+    print(f"\n  inter-glitch recovery segments ({len(r.segments)} clean, comb at omega):")
+    print(f"    {'glitch MJD':>11} {'n':>4} {'span(d)':>8} {'gain':>7} {'p':>7} {'comb?':>7}")
+    for s in r.segments:
+        print(f"    {s.glitch_mjd:11.0f} {s.n_points:4d} {s.span_days:8.0f} {s.amplitude:7.3f} "
+              f"{s.p_value:7.3f} {str(s.detected):>7}")
+    print(f"    -> comb detected in {r.n_detected}/{len(r.segments)} segments")
+    print(f"\n==> VERDICT: {r.verdict}")
+
+    RESULTS.mkdir(exist_ok=True)
+    out = {
+        "kernel_omega": r.omega, "n_points": r.n_points, "span_years": r.span_years,
+        "n_glitches": r.n_glitches,
+        "injection": vars(r.injection), "segments": [vars(s) for s in r.segments],
+        "n_detected": r.n_detected, "verdict": r.verdict,
+    }
+    (RESULTS / "pg05_recovery_comb.json").write_text(json.dumps(out, indent=2), encoding="utf-8")
+    print(f"\nWrote {RESULTS / 'pg05_recovery_comb.json'}")
+    plot_path = make_plot(RESULTS / "pg05_recovery_comb.png", seed=seed)
+    print(f"Wrote {plot_path}")
+    return 0
 
 
 def _analyze(seed: int) -> int:
@@ -209,7 +254,7 @@ def _analyze(seed: int) -> int:
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(
         description="TFPT recovery-kernel search in pulsar glitches (Jodrell Bank)")
-    ap.add_argument("command", choices=["audit", "validate", "analyze"],
+    ap.add_argument("command", choices=["audit", "validate", "analyze", "dynamic"],
                     nargs="?", default="analyze")
     ap.add_argument("--seed", type=int, default=0)
     args = ap.parse_args(argv)
@@ -217,6 +262,8 @@ def main(argv: list[str] | None = None) -> int:
         return _audit()
     if args.command == "validate":
         return _validate()
+    if args.command == "dynamic":
+        return _dynamic(args.seed)
     return _analyze(args.seed)
 
 

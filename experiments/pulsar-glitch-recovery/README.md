@@ -43,9 +43,12 @@ with the **det-clean bend** locking the two decay rates at `ln3/ln(3/2) = 2.7095
 **protected floor** (incomplete recovery, the `λ=1` "law"), and a **hard wall** (no 3rd decay mode).
 PG.04b/c test the data-side proxies on the summary `Q`/`τ_d` (bend null; wall consistent — 45/46
 glitches ≤2 modes). The genuine, more-sensitive test needs **time-resolved** recovery *waveforms*
-(`ν(t)` after a glitch): a **matched filter** with the fixed-ratio (2.7095) two-exponential template,
-built and validated in `quantum-testbed` QT.04. (Sustained log-periodic DSI returns only across a
-*cascade* of events, never within one walled recovery.)
+(`ν(t)` after a glitch). Because a single monotone recovery's two-mode **bend is degenerate** with a
+single exponential (machine-checked in the GW Stage-2 analysis: a two-mode R² gain of ~1e-3 even
+noise-free), the *discriminating* dynamic signature is the **log-periodic comb** across a recovery
+spanning a wide range in `ln(time)`, at `ω = 2π/ln((3/2)⁶) = 2.583`. **PG.05 runs exactly that test
+on the real Crab `ν(t)` ephemeris** (below). (Sustained log-periodic DSI returns only across a
+*cascade* of modes/events, never within one walled recovery.)
 
 All TFPT numbers are *derived* from the two axioms (`c₃ = 1/(8π)`, `g_car = 5`) in
 `constants.py` — identical to the `recovery-channel`/FRB kernel — and frozen as
@@ -86,15 +89,45 @@ The machinery is **injection-validated** (`tfpt-pulsar validate`): it recovers a
 injected `(3/2)³` comb (p≈0.003, ratio 3.37) and rejects a synthetic *bimodal*
 smooth distribution (p≈0.93) — so the PG.01 null is a real null, not a dead pipeline.
 
+## PG.05 — the DYNAMIC recovery comb on real Crab ν(t) (NEW, `tfpt-pulsar dynamic`)
+
+PG.01–04 test **static ratios**; PG.05 tests the **dynamical** signature on a real,
+time-resolved recovery *waveform* — the one piece the size/`Q`/`τ_d` summaries lack. It uses
+the **Jodrell Bank Crab monthly ephemeris** (`crab2.txt`, 479 monthly `ν`/`ν̇` points over
+**1988–2026**, `scripts/fetch_crab_ephemeris.py`), the only public dataset with the wide
+`ln(time)` reach the comb needs.
+
+Pipeline (`src/tfpt_pulsar/nu_recovery.py`): detect glitches from the `ν̇` steps (10 found,
+matching the known Crab glitches incl. the 2017 giant); for each clean inter-glitch segment build
+the post-glitch `ν̇` recovery (secular braking removed); test whether a log-periodic comb at the
+**kernel** `ω=2.583` is *special* vs a periodogram of off-kernel log-frequencies (a degree-2
+polynomial-in-`ln τ` baseline absorbs the smooth recovery trend, so a pure power law is **not**
+flagged).
+
+**Result (real Crab `ν(t)`): `data_limited` — NO kernel comb, but the detector is validated.**
+
+- **Injection validation on the real monthly sampling:** an injected geometric-ladder cascade comb
+  is detected at `ω` (p≈0.002); a smooth power-law recovery is correctly **rejected** (p≈0.15).
+  The detector works on exactly this cadence.
+- **Real data:** across **7** clean inter-glitch segments (of 10 glitches over 38 yr) the kernel
+  `ω` is **not** a special frequency in any (p≈0.12–0.44) — a clean null above the surrogate +
+  look-elsewhere bar.
+- **Honest scope:** monthly cadence undersamples the fast (days) transient, so PG.05 probes only the
+  slow inter-glitch relaxation; with the comb amplitude predicted at `ε ~ exp(-π²/ln λ) ≈ 2%`, this
+  is consistent with the signal being below monthly reach. **No claim.** The sharper test is
+  **daily-cadence** timing of a giant glitch (Crab 2017) or Vela, resolving >2 decades in `ln(time)`.
+
 ## Reproduce
 
 ```bash
 python -m venv .venv && . .venv/bin/activate && pip install -e .   # numpy/scipy/matplotlib
 python scripts/fetch_glitches.py        # (optional) re-fetch JBO sizes; derived CSV is committed
 python scripts/fetch_recovery.py        # (optional) re-fetch Yu+2013 Q/tau_d; derived CSV is committed
+python scripts/fetch_crab_ephemeris.py  # (optional) re-fetch Crab nu(t); derived CSV is committed
 tfpt-pulsar audit                       # frozen constants / candidate ratios
 tfpt-pulsar validate                    # injection-recovery self-check of the machinery
-tfpt-pulsar analyze                     # PG.01/02/03/04 on the real catalogues -> results/
+tfpt-pulsar analyze                     # PG.01/02/03/04 (static) on the real catalogues -> results/
+tfpt-pulsar dynamic                     # PG.05 dynamic recovery comb (omega=2.58) on real Crab nu(t)
 # or without install:  PYTHONPATH=src python -m tfpt_pulsar.cli analyze
 ```
 
@@ -103,15 +136,19 @@ tfpt-pulsar analyze                     # PG.01/02/03/04 on the real catalogues 
 ```
 scripts/fetch_glitches.py        # download + parse Jodrell Bank gTable.html -> data/jbo_glitches.csv
 scripts/fetch_recovery.py        # download + parse Yu+2013 expTab.tex   -> data/yu2013_recovery.csv
+scripts/fetch_crab_ephemeris.py  # download + parse Crab crab2.txt       -> data/crab_ephemeris.csv (PG.05)
 data/jbo_glitches.csv            # committed derived size catalogue (726 glitches)
 data/yu2013_recovery.csv         # committed derived recovery table (60 Q/tau_d components, 46 glitches)
+data/crab_ephemeris.csv          # committed derived Crab nu/nudot(t) monthly series (479 points, PG.05)
 src/tfpt_pulsar/constants.py     # frozen TFPT kernel + phi0 + preregistered candidate ratios
-src/tfpt_pulsar/catalog.py       # HTML/TeX parsers + CSV loaders + per-pulsar/per-glitch grouping
+src/tfpt_pulsar/catalog.py       # HTML/TeX/ephemeris parsers + CSV loaders + grouping
 src/tfpt_pulsar/discreteness.py  # PG.01: log-periodicity + GMM + 3 nulls (lognormal/KDE/population)
 src/tfpt_pulsar/ratios.py        # PG.02/03: per-pulsar size + waiting-time kernel ladders (shuffle null)
 src/tfpt_pulsar/recovery.py      # PG.04: Q-cluster (phi0 multiples) + tau_d multi-timescale ladder
-src/tfpt_pulsar/dsi.py           # discrete-scale-invariance predictor (omega=2pi/ln lambda) -- the dynamical signature
+src/tfpt_pulsar/dsi.py           # discrete-scale-invariance predictor (omega=2pi/ln lambda)
+src/tfpt_pulsar/nu_recovery.py   # PG.05: dynamic recovery comb (omega=2.58) on real Crab nu(t) + injection
 src/tfpt_pulsar/validation.py    # injection-recovery self-check
-src/tfpt_pulsar/cli.py           # `tfpt-pulsar audit|validate|analyze`
-results/results.json             # committed summary (+ pg01_periodogram.png, gitignored)
+src/tfpt_pulsar/cli.py           # `tfpt-pulsar audit|validate|analyze|dynamic`
+results/results.json             # committed summary (+ pg01_periodogram.png / pg05_*.png, gitignored)
+results/pg05_recovery_comb.json  # committed PG.05 summary
 ```

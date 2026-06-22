@@ -13,6 +13,7 @@ data/*
 !data/README.md
 !data/jbo_glitches.csv
 !data/yu2013_recovery.csv
+!data/crab_ephemeris.csv
 *.tar.gz
 
 # generated plots (the small results.json summary IS committed)

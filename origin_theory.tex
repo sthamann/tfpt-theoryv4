@@ -1265,7 +1265,10 @@ $H\Leftrightarrow$ square $\Leftrightarrow$ order-4 CM $\Leftrightarrow$ the $\m
 sharpens to the single statement \emph{the raw dynamics places the four Gauss-Bonnet marks (\vref{v216}) at the
 order-4 CM point}. \mO\ Why the dynamics selects that point (vs a generic $4$-puncture torus) is the irreducible
 residual. (The mark-locality criterion behind this --- offset-4 couplings commute with $\rho$, offset-2 do not ---
-is itself now exact Lean linear algebra over $\Z[i]$, \texttt{FORM.MU4COMM.01}.)
+is itself now exact Lean linear algebra over $\Z[i]$, \texttt{FORM.MU4COMM.01}.) The order-4 uniqueness ($S$ fixes
+$\tau{=}i$, the unique order-4 elliptic point) and the fact that the square is the \emph{Fekete attractor} of
+symmetric mark-equilibration are machine-checked in \veri{v333\_cm\_selection.py}, sharpening the residual to ``the
+deck acts geometrically''.
 
 \par\smallskip\noindent\textbf{The transfer functor as a runnable solver suite}
 (\veri{v326\_ftransfer\_suite.py}). The four $F_{\mathrm{transfer}}$ readouts are productised into one harness, each
@@ -1316,7 +1319,10 @@ so by the same gap-decoupling margin every physical readout is insulated from it
 conditional infinite-derivative taming (the entire form factor $e^{\Box/M^2}$ of \vref{v304} dresses the conformal
 propagator with no new pole), with the polynomial $R{+}R^2$ truncation re-introducing the Stelle ghost as the
 control. \mO\ So the full $\mathrm{QG}_{\mathrm{amb}}$ needs the conformal mode resolved nonperturbatively (a GHP
-contour rotation or the IDG resummation) --- a precise characterization of the residual, not a closure.
+contour rotation or the IDG resummation) --- a precise characterization of the residual, not a closure. The
+GHP sign-flip (the conformal Gaussian made convergent) and the IDG pole-free dressing together give a
+\emph{conditional} mode-by-mode construction, machine-checked in \veri{v334\_conformal\_resolution.py}; the open
+part is only the contour's nonperturbative validity.
 
 % =====================================================================
 \section*{Appendix: computational verification}

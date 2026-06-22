@@ -12,18 +12,32 @@ without the ~1.8 MB raw HTML download.
 | `jbo_glitches.csv` (committed) | parsed derived size table | 726 rows (723 with `dF/F`) | parsed by `scripts/fetch_glitches.py` |
 | `1211.2035` e-print (gitignored) | Yu+2013 arXiv source tarball | — | `https://arxiv.org/e-print/1211.2035` |
 | `yu2013_recovery.csv` (committed) | parsed `expTab.tex` recovery table | 60 components / 46 glitches | parsed by `scripts/fetch_recovery.py` |
+| `crab2.txt` (gitignored) | Jodrell Bank Crab monthly ephemeris (raw text) | ~580 rows | `https://www.jb.man.ac.uk/pulsar/crab/crab2.txt` |
+| `crab_ephemeris.csv` (committed) | parsed `nu`/`nudot`(t) monthly series | 479 points, 1988–2026 | parsed by `scripts/fetch_crab_ephemeris.py` |
 
-Cite **Basu et al. 2022, MNRAS 510, 4049** (size catalogue) and **Yu et al. 2013,
+Cite **Basu et al. 2022, MNRAS 510, 4049** (size catalogue), **Yu et al. 2013,
 MNRAS 429, 688** (recovery table) — plus the per-row original references in
 `yu2013_recovery.csv` (e.g. `cdk88`=Cordes+1988, `wbl01`=Wong+2001, `dml02`=Dodson+2002,
-`lps93`=Lyne+1993) — when using these data.
+`lps93`=Lyne+1993) — and the **Jodrell Bank Crab Pulsar Monthly Ephemeris** (Lyne,
+Pritchard & Graham-Smith 1993, MNRAS 265, 1003; updated monthly) when using these data.
 
 ## Re-fetch
 
 ```bash
-python scripts/fetch_glitches.py     # gTable.html -> data/jbo_glitches.csv  (sizes, PG.01/02/03)
-python scripts/fetch_recovery.py     # arXiv 1211.2035 expTab.tex -> data/yu2013_recovery.csv  (Q/tau_d, PG.04)
+python scripts/fetch_glitches.py        # gTable.html -> data/jbo_glitches.csv  (sizes, PG.01/02/03)
+python scripts/fetch_recovery.py        # arXiv 1211.2035 expTab.tex -> data/yu2013_recovery.csv  (Q/tau_d, PG.04)
+python scripts/fetch_crab_ephemeris.py  # crab2.txt -> data/crab_ephemeris.csv  (nu/nudot(t), PG.05 dynamic comb)
 ```
+
+## `crab_ephemeris.csv` — the Crab nu(t) waveform (PG.05)
+
+Columns: `mjd, nu, sigma_nu, nudot, sigma_nudot`. The monthly spin frequency `nu` (Hz)
+and spin-down rate `nudot` (`1e-15 s^-2`) over ~38 yr. Unlike the static size/`Q`/`tau_d`
+tables, this is a *time-resolved recovery waveform*: each inter-glitch interval is a
+months-to-years relaxation sampled over ~1.5 decades in `ln(time)` — the wide-baseline
+input the dynamic log-periodic recovery comb (`omega = 2pi/ln((3/2)^6) = 2.58`) needs and
+that PG.01–04 lacked. The file is parsed by VALUE (the layout changes 3× over the archive's
+history), so `nu~29-30 Hz` and `nudot~-3.7e5` are located robustly.
 
 ## Derived columns (`jbo_glitches.csv`)
 
