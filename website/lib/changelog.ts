@@ -46,6 +46,283 @@ export const CHANGELOG: ChangelogEntry[] = [
     "dateLabel": "2026-06-22",
     "heading": [
       {
+        "k": "m",
+        "v": "A_s"
+      },
+      {
+        "k": "t",
+        "v": " reconciled with the archived derivation: predicted & dimensionless (so it does not define a mass), the tension is the reheating channel: "
+      },
+      {
+        "k": "c",
+        "v": "v340"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v340"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "AS.RECONCILE.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Answers “why don't we have "
+        },
+        {
+          "k": "m",
+          "v": "A_s"
+        },
+        {
+          "k": "t",
+          "v": " / the old versions derived it” and “can a ratio define mass itself”. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "A_s"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " predicted and "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "dimensionless"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "A_s=N_\\star^2(M_{\\mathrm{scal}}/\\bar M_{\\mathrm{Pl}})^2/(24\\pi^2)=N_\\star^2\\cthree^7/(24\\pi^2)"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "M_{\\mathrm{scal}}/\\bar M_{\\mathrm{Pl}}=\\cthree^{7/2}=1.26\\times10^{-5}"
+        },
+        {
+          "k": "t",
+          "v": " a pure ratio, so "
+        },
+        {
+          "k": "m",
+          "v": "A_s"
+        },
+        {
+          "k": "t",
+          "v": " pins the e-fold count "
+        },
+        {
+          "k": "m",
+          "v": "N_\\star"
+        },
+        {
+          "k": "t",
+          "v": ", NOT "
+        },
+        {
+          "k": "m",
+          "v": "\\bar M_{\\mathrm{Pl}}"
+        },
+        {
+          "k": "t",
+          "v": " — it cannot define an absolute mass (No-Unit, "
+        },
+        {
+          "k": "c",
+          "v": "v153"
+        },
+        {
+          "k": "t",
+          "v": ", stands). "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the "
+        },
+        {
+          "k": "m",
+          "v": "-11.4\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " at the slow Higgs channel ("
+        },
+        {
+          "k": "m",
+          "v": "N_\\star{=}51.4"
+        },
+        {
+          "k": "t",
+          "v": ") is the slow-vs-fast reheating dichotomy; the "
+        },
+        {
+          "k": "m",
+          "v": "A_s"
+        },
+        {
+          "k": "t",
+          "v": "-preferred "
+        },
+        {
+          "k": "m",
+          "v": "N_\\star{=}56.2\\sim"
+        },
+        {
+          "k": "t",
+          "v": " the instantaneous bound. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the archived TFPT v4.5/v4.6 reported a clean "
+        },
+        {
+          "k": "m",
+          "v": "A_s=2.124\\times10^{-9}"
+        },
+        {
+          "k": "t",
+          "v": " using the algebraic "
+        },
+        {
+          "k": "m",
+          "v": "N_\\star=3/\\phiz-1=55.42"
+        },
+        {
+          "k": "t",
+          "v": "; at that "
+        },
+        {
+          "k": "m",
+          "v": "N_\\star"
+        },
+        {
+          "k": "t",
+          "v": " the current normalisation gives "
+        },
+        {
+          "k": "m",
+          "v": "2.047\\times10^{-9}"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "-1.9\\sigma"
+        },
+        {
+          "k": "t",
+          "v": ") — the old clean "
+        },
+        {
+          "k": "m",
+          "v": "A_s"
+        },
+        {
+          "k": "t",
+          "v": " is near-instantaneous reheating, not the slow channel. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "nothing lost: the current theory replaced the posited algebraic "
+        },
+        {
+          "k": "m",
+          "v": "N_\\star"
+        },
+        {
+          "k": "t",
+          "v": " with one derived from reheating physics and exposed honestly that "
+        },
+        {
+          "k": "m",
+          "v": "A_s"
+        },
+        {
+          "k": "t",
+          "v": " requires fast (pre)heating. Record band "
+        },
+        {
+          "k": "m",
+          "v": "N_\\star\\in[50,60]"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v84"
+        },
+        {
+          "k": "t",
+          "v": ") untouched."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-22",
+    "dateLabel": "2026-06-22",
+    "heading": [
+      {
         "k": "t",
         "v": "the first-principles boundary, mapped: can "
       },

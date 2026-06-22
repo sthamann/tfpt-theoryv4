@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`337` registered scripts · `395` ledger claims · `10` clusters.
+`338` registered scripts · `396` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -214,7 +214,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v75_upoint_to_vgeo** [E/O] `FLAV.UPOINT.01` — Gate 1 complete: U_point → v_geo (ratios + Grand Mass Volume); same anchor as 1/G
   - deps: v71_simple_r_bridge, v20_lepton_c_derivation, v46_grand_mass_volume, v68 · cited: origin theory, research contracts
 
-### `frontier` — Open gate (G_metric) & the frontier  (87 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (88 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -391,6 +391,8 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: QG.AMB.01, v76, v311, v330, v332, v335 · cited: 4 frontier
 - **v339_firstprinciples_boundary** [E/C/O/X] `FIRSTPRINCIPLES.BOUNDARY.01` — The honest first-principles boundary, mapped precisely -- answers (a) can M_Planck/v_geo be computed? and (b) can F_transfer be made first-principles? Both NO, with the exact reaso
   - deps: v153, v274, v262, v246, v35, v78_vgeo_floor, v262_fqcd_mp_me · cited: 4 frontier
+- **v340_As_reconcile** [E/C/X] `AS.RECONCILE.01` — A_s is predicted (not missing), is DIMENSIONLESS (so it does NOT define an absolute mass), and the apparent -11 sigma tension is a reheating-channel question -- reconciled with the
+  - deps: v86, v153, v84, v274_scale_overdetermination · cited: origin theory
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (163 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -742,7 +744,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v328_theta13_pressure** — `FLAV.TH13.PRESSURE.01`
 - **v329_os_gap_reduction** — `QGEO.OSGAP.01`
 - **v330_qgamb_admissible_measure** — `QGAMB.MEASURE.01`
 - **v331_necessity_of_H** — `QGEO.NECESS.01, FORM.MU4COMM.01`
@@ -754,4 +755,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v337_decoupling_theorem** — `DECOUPLING.THEOREM.01`
 - **v338_theta13_budget** — `THETA13.BUDGET.01`
 - **v339_firstprinciples_boundary** — `FIRSTPRINCIPLES.BOUNDARY.01`
+- **v340_As_reconcile** — `AS.RECONCILE.01`
 
