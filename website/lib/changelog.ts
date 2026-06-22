@@ -47,6 +47,286 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "Route B carried out: rigidity "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the icosian-ring identity reduce the whole keystone to ONE question – does the raw seam carry the golden ratio? – the simplest form of L2: "
+      },
+      {
+        "k": "c",
+        "v": "v348"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v348"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EQUIV.RIGID.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Executes the rigidity route (mode B of "
+        },
+        {
+          "k": "c",
+          "v": "v347"
+        },
+        {
+          "k": "t",
+          "v": ") and lands on a strikingly simple statement. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "rigidity closes the crystallographic part: the order-4 clock has the unique normal form "
+        },
+        {
+          "k": "m",
+          "v": "z\\mapsto iz"
+        },
+        {
+          "k": "t",
+          "v": " (Nielsen/Kerckhoff, "
+        },
+        {
+          "k": "c",
+          "v": "v180"
+        },
+        {
+          "k": "t",
+          "v": "), Troyanov gives the unique flat pillowcase metric ("
+        },
+        {
+          "k": "c",
+          "v": "v284"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the downstream is a LATTICE identity, not just a graph: by Conway–Sloane the ring of icosians ("
+        },
+        {
+          "k": "m",
+          "v": "120"
+        },
+        {
+          "k": "t",
+          "v": " unit icosians "
+        },
+        {
+          "k": "m",
+          "v": "=2I"
+        },
+        {
+          "k": "t",
+          "v": ", golden-ratio quaternion norm) IS the rank-"
+        },
+        {
+          "k": "m",
+          "v": "8"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " lattice. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the single bridge is the golden ratio: the crystallographic restriction allows only orders "
+        },
+        {
+          "k": "m",
+          "v": "\\{1,2,3,4,6\\}"
+        },
+        {
+          "k": "t",
+          "v": " (the "
+        },
+        {
+          "k": "m",
+          "v": "5"
+        },
+        {
+          "k": "t",
+          "v": "-fold absent), so "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi=2\\cos(\\pi/5)"
+        },
+        {
+          "k": "t",
+          "v": " is exactly what extends the crystallographic "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " to the non-crystallographic icosahedral "
+        },
+        {
+          "k": "m",
+          "v": "2I"
+        },
+        {
+          "k": "t",
+          "v": " (the quasicrystal). "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "so the entire keystone reduces to ONE question: "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "does the raw seam carry the golden ratio?"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " – if yes, "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4{+}\\varphi\\Rightarrow2I\\Rightarrow E_8"
+        },
+        {
+          "k": "t",
+          "v": " and rigidity fixes the rest. "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "honest subtlety: TFPT's "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi"
+        },
+        {
+          "k": "t",
+          "v": " is currently "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": "-side ("
+        },
+        {
+          "k": "c",
+          "v": "v312"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v313"
+        },
+        {
+          "k": "t",
+          "v": "); the raw-seam data so far are not manifestly golden, so showing the RAW seam carries "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi"
+        },
+        {
+          "k": "t",
+          "v": " non-circularly is the residual ("
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " L2, sharpest form). Wolfram mirror "
+        },
+        {
+          "k": "m",
+          "v": "+1"
+        },
+        {
+          "k": "t",
+          "v": " (294 "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " 295). An analysis/reduction; closes nothing."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-22",
+    "dateLabel": "2026-06-22",
+    "heading": [
+      {
+        "k": "t",
         "v": "can the one open arrow be "
       },
       {

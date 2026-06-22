@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`345` registered scripts · `403` ledger claims · `10` clusters.
+`346` registered scripts · `404` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (20 scripts)
+### `core` — Compiler core & the E₈ glue  (21 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -51,6 +51,8 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v335_seam_equiv_unify, v345_hypergraph_homotopy, v216, v219, v232, v345, v313 · cited: origin theory
 - **v347_seam_closure_modes** [E/O] `SEAM.EQUIV.CLOSURE.01` — The closure-mode classification of the one open arrow L2 (the seam-orbifold realisation, v346) -- a direct honest answer to 'is there ANY other way to FULLY solve it?'. [E] THE PRE
   - deps: v346_seam_geometric_bridge, v216, v284, v300, v331, v246, v336 · cited: origin theory
+- **v348_seam_rigidity_route** [E/O] `SEAM.EQUIV.RIGID.01` — Route B (the rigidity route) for the one open arrow L2, carried out -- it lands on a strikingly SIMPLE statement: the whole keystone reduces to ONE question, does the raw seam carr
+  - deps: v347_seam_closure_modes, v180, v284, v219, v312, v313 · cited: origin theory
 
 ### `em` — Electromagnetic fixed point  (4 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -758,7 +760,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v336_continuum_limit** — `SEAM.EQUIV.CONTINUUM.01`
 - **v337_decoupling_theorem** — `DECOUPLING.THEOREM.01`
 - **v338_theta13_budget** — `THETA13.BUDGET.01`
 - **v339_firstprinciples_boundary** — `FIRSTPRINCIPLES.BOUNDARY.01`
@@ -770,4 +771,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v345_hypergraph_homotopy** — `SEAM.DETK.02`
 - **v346_seam_geometric_bridge** — `SEAM.EQUIV.GEOM.01`
 - **v347_seam_closure_modes** — `SEAM.EQUIV.CLOSURE.01`
+- **v348_seam_rigidity_route** — `SEAM.EQUIV.RIGID.01`
 

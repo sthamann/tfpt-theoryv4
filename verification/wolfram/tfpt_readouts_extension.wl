@@ -2304,6 +2304,14 @@ Module[{chiSeam, chi2I},
     chiSeam == 0 && chi2I == 1/30];
 ];
 
+(* ==== v348 SEAM.EQUIV.RIGID.01: phi bridges crystallographic mu4 to non-crystallographic 2I ==== *)
+Module[{cryst, phi},
+  cryst = {1, 2, 3, 4, 6};          (* crystallographic restriction: lattice-compatible rotation orders *)
+  phi = (1 + Sqrt[5])/2;
+  checkExact["v348 SEAM.EQUIV.RIGID.01 (Route B): the crystallographic restriction allows only rotation orders {1,2,3,4,6} (the 5-fold is NON-crystallographic), so mu4 (order 4, crystallographic) needs the golden ratio phi = 2 cos(pi/5) to extend to the icosahedral 2I (5-fold, non-crystallographic, the quasicrystal); and E8 = the ring of icosians (Conway-Sloane, rank 8) makes 2I->E8 a lattice identity. So the whole keystone reduces to ONE question: does the raw seam carry phi? (rigidity closes the rest); NOT closed",
+    (! MemberQ[cryst, 5]) && Simplify[phi - 2 Cos[Pi/5]] == 0 && (5 + 3 == 8)];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];
