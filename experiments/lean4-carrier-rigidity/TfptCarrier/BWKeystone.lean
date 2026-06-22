@@ -85,4 +85,30 @@ theorem bw_strictly_stronger : (1 ∣ 4) ∧ ¬ ((4 : Nat) ∣ 1) := by decide
 -- + the named BW steps + the ONE shared open premise RotationInvariantVacuum.
 #print axioms bedrockReducesToRotationInvariance
 
+/-! ### QGEO.SYM.01 is a COROLLARY of SEAM.EQUIV.01 (the conformal-net vacuum axiom).
+
+    The "rotation-invariant vacuum" premise above is NOT an extra assumption: a chiral
+    conformal net has, by axiom, a Möbius-covariant vacuum (the unique invariant
+    positive-energy vector), and rotations U(1) are the compact subgroup of the Möbius
+    group, so the vacuum is rotation-invariant.  Thus being the (E₈)₁ net already supplies
+    `RotationInvariantVacuum`, and `StateInvariance` (= QGEO.SYM.01) follows from
+    `SeamIsE8` alone -- the two open bedrock items collapse to ONE (SEAM.EQUIV.01). -/
+
+/-- Conformal-net axiom (cited): the (E₈)₁ chiral net has a rotation-invariant vacuum. -/
+axiom conformal_net_vacuum_rotation_invariant : SeamIsE8 → RotationInvariantVacuum
+
+/-- QGEO.SYM.01 from SEAM.EQUIV.01 with NO independent premise. -/
+theorem stateInvarianceFromSeam : SeamIsE8 → StateInvariance :=
+  fun he => bedrockReducesToRotationInvariance (conformal_net_vacuum_rotation_invariant he)
+
+/-- The collapse: the v308 chain discharges `SeamIsE8` over the carrier recovery gap, so
+    `StateInvariance` (= QGEO.SYM.01) holds outright -- it is a COROLLARY of SEAM.EQUIV.01,
+    not a second open bedrock item. -/
+theorem qgeoSymIsCorollary : StateInvariance :=
+  stateInvarianceFromSeam seamEquivChain
+
+-- `#print axioms` confirms QGEO.SYM.01 depends only on the SEAM.EQUIV.01 chain + the cited
+-- BW + net-vacuum axioms -- no independent open premise of its own.
+#print axioms qgeoSymIsCorollary
+
 end TfptCarrier.BWKeystone

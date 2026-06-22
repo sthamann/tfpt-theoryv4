@@ -32,7 +32,7 @@
   "date": "2026-06-22"
  },
  "introduction::subsection::The hard reduction: the live residual as typed interfaces::1": {
-  "hash": "e20c810995f0",
+  "hash": "5fd1faff3dad",
   "date": "2026-06-22"
  },
  "introduction::section::The compiler: why $30=2\\cdot3\\cdot5$::1": {
@@ -64,7 +64,7 @@
   "date": "2026-06-22"
  },
  "introduction::subsection::The closure ledger: what is done, and what genuinely remains::1": {
-  "hash": "25d7d4b91f4d",
+  "hash": "f32a6db95534",
   "date": "2026-06-22"
  },
  "introduction::section::Does this make the theory more probable?::1": {
@@ -608,7 +608,7 @@
   "date": "2026-06-15"
  },
  "tfpt_4_frontier::section::Full quantum gravity --- induced from the boundary kernel::1": {
-  "hash": "8cbc686e3218",
+  "hash": "06d5d4ea38fe",
   "date": "2026-06-22"
  },
  "tfpt_4_frontier::section::Summary::1": {
@@ -648,8 +648,8 @@
   "date": "2026-06-12"
  },
  "tfpt_5_redteam::section::Target F --- the perturbative 4D-QFT $+$ scale round (v269--v275)::1": {
-  "hash": "e74abceb419c",
-  "date": "2026-06-19"
+  "hash": "097b6533521b",
+  "date": "2026-06-22"
  },
  "tfpt_5_redteam::section::Outcome::1": {
   "hash": "ceb2c8828a45",
@@ -700,7 +700,7 @@
   "date": "2026-06-22"
  },
  "tfpt_research_contracts::section::Research Contract 1 --- $(U_{\\mathrm{wall}})$::1": {
-  "hash": "507dbfa8afb0",
+  "hash": "71261bdf32e2",
   "date": "2026-06-22"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {
@@ -756,7 +756,7 @@
   "date": "2026-06-12"
  },
  "origin_theory::section::Honest status::1": {
-  "hash": "379a0a56e51e",
+  "hash": "8b019b562fbe",
   "date": "2026-06-22"
  },
  "origin_theory::section::Appendix: computational verification::1": {

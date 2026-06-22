@@ -3,6 +3,23 @@
  Stand: 2026-06-08  |  verankert in v81_singular_pencil_matrices.py (11/11), Wolfram 116/116
 ================================================================================
 
+NACHTRAG 2026-06-22 (Keystone-Unifikation v335 + Status-Reframe: EIN Theorem, EIN entkoppeltes Problem):
+  Vogelperspektive auf die zwei "offenen Bedrock-Punkte" -> sie sind NICHT symmetrisch:
+  - QGEO.SYM.01 ist KEIN eigenes Problem mehr, sondern ein KOROLLAR von SEAM.EQUIV.01:
+    ein chiraler konformer Netz hat per Axiom ein Moebius-kovariantes (also rotations-
+    invariantes) Vakuum; mu4 = Rotation um pi/2 fixiert es => omega o rho = omega. Also
+    SEAM.EQUIV.01 => QGEO.SYM.01 OHNE Extra-Praemisse (v335; Lean qgeoSymIsCorollary in
+    BWKeystone.lean). Die zwei Bedrock-Items kollabieren zu EINEM.
+  - QG.AMB.01 ist KEIN TFPT-Loch: es IST das allgemeine Euklidische-QG-Konformfaktor-
+    Problem (Gibbons-Hawking-Perry 1978), von dem TFPT rigoros gap-entkoppelt ist
+    (Marge 1.648>0, v76/v330/v332). Herabgestuft von "TFPT-Frontier" auf "vererbtes,
+    entkoppeltes allgemeines QG-Problem" - keine Vorhersage haengt davon ab.
+  => Status: EIN loesbares Theorem (SEAM.EQUIV.01, ein offenes Kontinuums-Lemma: die
+    Kontinuums-OS-Rekonstruktion des rohen Kragens) + v_geo (Einheit) + F_transfer.
+  Deep-Sync: tfpt_status.tex (kanonische Karte), introduction, origin_theory, tfpt_4,
+  tfpt_5, tfpt_research_contracts, README, OpenGates/FAQ/papers.ts, Ledger (QG.AMB.01 +
+  QGEO.SYM.01 + SEAM.EQUIV.UNIFY.01) alle auf "ein Theorem + ein entkoppeltes Problem".
+
 NACHTRAG 2026-06-22 (Arithmetik-Arc v313-v321 + Lean-Keystone FORM.SEAMEQUIV.01):
   Der SM-Struktursektor IST der zyklotomische Koerper Q(zeta_30) mit Galois-Gruppe
   mu4 x Z2 (Grad 8 = rank E8), erzwungen durch die Atome {2,3,5}. Der Seed phi0

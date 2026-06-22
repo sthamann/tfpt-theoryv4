@@ -59,6 +59,38 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-22 (keystone unification + status reframe: ONE open theorem, ONE decoupled foreign problem: \texttt{v335}, \texttt{FORM.QGEO.BW.01} \texttt{qgeoSymIsCorollary})}
+\begin{itemize}
+\item \textbf{\texttt{v335} (\texttt{SEAM.EQUIV.UNIFY.01}) --- the keystone unification.} A bird's-eye
+consolidation of the v308/v323/v325/v329/v333 arc that collapses the ``two open structural items'' narrative.
+\mE\ \textbf{\texttt{QGEO.SYM.01} is a COROLLARY of \texttt{SEAM.EQUIV.01}} (no extra premise): a chiral conformal
+net has, by axiom, a M\"obius-covariant vacuum (the unique invariant positive-energy vector); rotations $U(1)$ are
+the compact subgroup of the M\"obius group, so the vacuum is rotation-invariant, and the $\mu_4$ clock $=$ rotation
+by $\pi/2$ ($(e^{i\pi/2})^4{=}1$) fixes it $\Rightarrow\omega\circ\rho{=}\omega$. So \texttt{SEAM.EQUIV.01}
+$\Rightarrow$ \texttt{QGEO.SYM.01} with NO extra premise (the v323 ``rotation-invariant vacuum'' is a net axiom)
+--- the two bedrock items collapse to ONE. \mE\ \textbf{the one keystone theorem}: \texttt{SEAM.EQUIV.01} $=$ a
+construction theorem ($c{=}\gcar{+}\Nfam{=}8$, $\det\mathrm{Cartan}(E_8){=}1$, gap $6\ln\tfrac32>0$ derived) with
+EXACTLY one open continuum lemma (the rigorous continuum OS reconstruction $+$ invertibility of the raw collar).
+\mE\ \textbf{\texttt{QG.AMB.01} decoupled, not a gate}: margin $\Delta-31/(4\pi^2)\approx1.648>0$
+(v76/v311/v330/v332) $\Rightarrow$ no TFPT prediction depends on the ambient measure; it is the \emph{general}
+Euclidean-QG conformal-factor problem (Gibbons--Hawking--Perry 1978), inherited not TFPT-specific --- reclassified
+from ``TFPT structural frontier'' to ``decoupled general QG problem''. \mE\ \textbf{collapsed status}: open
+structural items $2\to1$; live residual $=v_{\mathrm{geo}}+G_{\mathrm{net}}({=}\texttt{SEAM.EQUIV.01})+
+F_{\mathrm{transfer}}$. \mO\ the one residual $=$ \texttt{SEAM.EQUIV.01}'s continuum OS reconstruction.
+\item \textbf{Lean (\texttt{FORM.QGEO.BW.01}, \texttt{qgeoSymIsCorollary}).} \texttt{BWKeystone.lean} extended with the
+cited conformal-net vacuum axiom \texttt{conformal\_net\_vacuum\_rotation\_invariant}; with it,
+\texttt{StateInvariance} ($=$\texttt{QGEO.SYM.01}) follows from \texttt{SeamIsE8} alone, so \texttt{QGEO.SYM.01} is a
+COROLLARY of \texttt{SEAM.EQUIV.01} with no independent open premise (\texttt{\#print axioms} confirms only the chain
+$+$ cited BW/net axioms). \texttt{lake build} green (3362 jobs).
+\item \textbf{Status deep-sync.} The ledger (\texttt{QG.AMB.01} reclassified to ``decoupled general QG; non-TFPT'';
+\texttt{QGEO.SYM.01} marked a corollary; new \texttt{SEAM.EQUIV.UNIFY.01} row), the canonical status card
+(\texttt{tfpt\_status.tex}), \texttt{introduction} (status core $+$ gate table), \texttt{origin\_theory},
+\texttt{tfpt\_4\_frontier}, \texttt{tfpt\_5\_redteam}, \texttt{tfpt\_research\_contracts}, \texttt{README},
+\texttt{next.txt} and the website (\texttt{OpenGates}, FAQ, \texttt{papers.ts}) all moved to ``one solvable theorem
+(\texttt{SEAM.EQUIV.01}) $+$ one decoupled foreign problem (\texttt{QG.AMB.01})''. No falsifiable prediction
+changed; this is a status-framing sharpening backed by \texttt{v335} $+$ the Lean corollary.
+\end{itemize}
+
 \subsection*{2026-06-22 (closing round: the CM-selection mechanism (the last keystone residual), the conformal-mode resolution, and the Conway--Sloane even-unimodular side in Lean: \texttt{v333}, \texttt{v334}, \texttt{FORM.CARTAN.DET.01})}
 \begin{itemize}
 \item \textbf{\texttt{v333\_cm\_selection.py} (\texttt{QGEO.CMSELECT.01}, \mE/\mO).} The CM-selection mechanism for

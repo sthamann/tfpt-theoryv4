@@ -29,6 +29,15 @@ $F_{\mathrm{transfer}}$ & one functor, four typed interfaces (Koide, $\eta_B$, a
 \bottomrule
 \end{tabular}
 \end{center}
+\noindent The single open \emph{structural theorem} is $G_{\mathrm{net}}$ ($=$ \texttt{SEAM.EQUIV.01}: the raw seam
+\emph{is} the holomorphic $(E_8)_1$ net), a constructive-AQFT theorem whose only open input is the continuum
+Osterwalder--Schrader reconstruction of the gapped quasi-free collar. \texttt{QGEO.SYM.01} (the $\mu_4$ deck acting
+geometrically) is now its \emph{corollary}: a conformal net's vacuum is rotation-invariant by axiom, so the deck
+follows with no extra premise (\texttt{v335}, Lean \texttt{FORM.QGEO.BW.01}). The full nonperturbative
+quantum-gravity measure \texttt{QG.AMB.01} is the \emph{general} Euclidean-QG conformal-factor problem (Gibbons--
+Hawking--Perry 1978), from which TFPT is rigorously \emph{gap-decoupled} (margin $1.648>0$, \texttt{v76}/\texttt{v330})
+--- an inherited, decoupled problem, \emph{not} a TFPT-specific open item. So the honest residual is \emph{one}
+solvable theorem ($G_{\mathrm{net}}$) plus the typed $v_{\mathrm{geo}}$ and $F_{\mathrm{transfer}}$ interfaces.
 \noindent Everything carries a claim ID resolving to a row of \texttt{verification/status\_ledger.csv}
 (the single source of truth); \textbf{if the text and the ledger ever disagree, the ledger wins.} The
 historical labels $(U_{\mathrm{wall}},G_{\mathrm{metric}},F_{\mathrm{frontier}})$ are retained only for

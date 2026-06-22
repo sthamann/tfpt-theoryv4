@@ -252,9 +252,11 @@ The ledger is *append-only and versioned*: superseded rows are marked `active=fa
   **The whole emergent-QFT layer collapses onto the *same* premise** (`v261`, Modular Spectral Closure):
   the finite Dirac (covariance induction, `v258`), the spectral-action cutoff (the seam KMS weight, `v259`),
   the gauging (inner fluctuations), the glue and orientability are all readouts of the one seam state, so
-  the boundary QFT is closed *as a relative object* modulo `QGEO.SYM.01` — it adds **no new open item**.
-  The ambient quantum-gravity measure (`QG.AMB.01`) is gap-decoupled (`Δ_eff = 1.648 > 0`) and kept
-  separate by design: a certification layer, not a QFT blocker.
+  the boundary QFT is closed *as a relative object* modulo the single keystone `SEAM.EQUIV.01` — it adds
+  **no new open item** (`QGEO.SYM.01` is its corollary, `v335`).
+  The ambient quantum-gravity measure (`QG.AMB.01`) is **not** a second TFPT structural item: it is the
+  *general* Euclidean-QG conformal-factor problem (GHP 1978), gap-decoupled (`Δ_eff = 1.648 > 0`) — an
+  inherited, decoupled problem, no readout depends on it.
 - **The central theorem**: `1/(8π)` from the seam-determinant replica — structure closed, the
   Fursaev–Solodukhin factor machine-derived (`v90`), and the mechanism now exhibited at the
   gapped-model level (gap ⇒ cutoff-independent EH coefficient under replica, `v150`), with the
@@ -323,10 +325,13 @@ Epstein–Glaser-constructible (`v269`), with a concrete one-loop quartic (`v271
 S-matrix `S_phys` via LSZ with **one-loop unitarity** verified (the optical theorem: the bubble cut equals
 the two-body phase space, `v278`) — for the matter+gauge sector; the `R²/Weyl²` gravity sector is
 renormalizable but non-unitary (the Stelle ghost, red-team `rt_F`), which is *exactly* the nonperturbative
-frontier. The two genuine obligations are now: **(1)** `QGEO.SYM.01` collapses to **one geometric postulate**
-— *the raw RP seam state is the flat τ=i pillowcase* (`v276`: granting it, the modular commutator `[ρ,H]=0`
-closes to all orders, since a flat isometry commutes with every function of its Laplacian); **(2)**
-`QG.AMB.01` Tier-B reduces to **one holomorphy bit** — *is the seam-Calderón boundary net holomorphic
+frontier. These collapse (`v282`/`v335`) to **one** structural theorem `SEAM.EQUIV.01` — `QGEO.SYM.01` is a
+**corollary** of it (a conformal net's vacuum is rotation-invariant by axiom, so the μ₄ deck follows with no extra
+premise; `v335`, Lean `qgeoSymIsCorollary`), and `QG.AMB.01` is **not** a second structural item but a *decoupled
+general* Euclidean-QG problem (the conformal-factor problem, GHP 1978; gap-decoupled, no readout depends on it).
+Concretely the two faces are: **(1)** the geometric postulate *the raw RP seam state is the flat τ=i pillowcase*
+(`v276`: granting it, the modular commutator `[ρ,H]=0` closes to all orders, since a flat isometry commutes with
+every function of its Laplacian); **(2)** the holomorphy bit — *is the seam-Calderón boundary net holomorphic
 (`det K = 1`)?* (`v277`: every other `(E8)₁` invariant — c = 8, det Cartan 1, the 248-current character —
 already matches; the `c = 8` counterexample `SO(16)` has `det Cartan = 4`). The single mass anchor is
 moreover **over-determined** (`v274`: Newton's G and the dark-energy prediction give the same Planck mass

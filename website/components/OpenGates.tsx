@@ -29,7 +29,7 @@ const GATES: Gate[] = [
     tag: "Interface 2",
     marker: "[E] target · [O] seam",
     title: "G_net — the metric-sector inclusion",
-    body: "The target object is closed: (D₅)₁⊗(A₃)₁⋊μ₄ ≅ (E₈)₁ (Jones index 4 = |μ₄|, holomorphic c = 8; v154), with net existence and full-cone reflection positivity discharged to [E] on the 2¹⁶-dim Fock space (v175), R + R² heat-kernel grounded and the IR sector gap-decoupled (Δ_eff = 1.648 > 0). Only the physical coupling of the raw seam to that object is open — the single named keystone SEAM.EQUIV.01: the raw RP seam IS the holomorphic (E₈)₁ net at τ=i. Its conformal-deck face QGEO.SYM.01 (the carrier μ₄ clock is the seam's deck) is downstream, Lean-pinned to named cited steps. That is TFPT's one fundamental postulate — the role 'c = const' plays in relativity — and in Chern–Simons language it is the single integer step 'det K = 1' (v234/v235). (Historical label: G_metric.)",
+    body: "The target object is closed: (D₅)₁⊗(A₃)₁⋊μ₄ ≅ (E₈)₁ (Jones index 4 = |μ₄|, holomorphic c = 8; v154), with net existence and full-cone reflection positivity discharged to [E] on the 2¹⁶-dim Fock space (v175), R + R² heat-kernel grounded and the IR sector gap-decoupled (Δ_eff = 1.648 > 0). Only the physical coupling of the raw seam to that object is open — the single named keystone SEAM.EQUIV.01: the raw RP seam IS the holomorphic (E₈)₁ net at τ=i. Its conformal-deck face QGEO.SYM.01 is now a corollary (a conformal net's vacuum is rotation-invariant by axiom; v335), Lean-pinned to named cited steps. That is TFPT's one fundamental postulate — the role 'c = const' plays in relativity — and in Chern–Simons language it is the single integer step 'det K = 1' (v234/v235). (Historical label: G_metric.)",
     formula: "[\\,(E_8)_1 : (D_5)_1\\times(A_3)_1\\,] = 4 = |\\mu_4| \\Rightarrow \\text{holomorphic } c = 8",
     tone: "border-amber-400/30 bg-amber-500/5",
   },
@@ -155,15 +155,18 @@ function ClosingCondition() {
         modulo the single keystone{" "}
         <span className="font-mono text-emerald-200">SEAM.EQUIV.01</span> (the raw RP seam IS the
         holomorphic (E₈)₁ net at τ=i), adding <span className="text-emerald-200">no new open item</span>;
-        the conformal-deck premise QGEO.SYM.01 is its downstream definitional face. The ambient QG measure
-        is gap-decoupled (Δ_eff = 1.648 &gt; 0) and kept separate by design.
+        the conformal-deck premise QGEO.SYM.01 is now its <span className="text-emerald-200">corollary</span>{" "}
+        (a conformal net&apos;s vacuum is rotation-invariant by axiom, v335). The ambient QG measure QG.AMB.01
+        is a <span className="text-amber-200">decoupled general QG problem</span> — gap-decoupled (Δ_eff = 1.648
+        &gt; 0), inherited not TFPT-specific, <span className="text-amber-200">not a TFPT structural item</span>.
       </p>
       <p className="mt-3 rounded-lg border border-slate-700/40 bg-slate-950/40 p-3 text-xs leading-relaxed text-slate-300">
         <span className="font-semibold text-slate-100">SEAM.EQUIV.01 is the single named open theorem.</span>{" "}
         The 4D perturbative S-matrix is constructible (Epstein–Glaser; SM one-loop β = (41/10, −19/6, −7)
         from the carrier content), unitary for the <span className="text-slate-100">matter+gauge</span>{" "}
         sector — the R²/Weyl² gravity sub-sector is the non-unitary Stelle ghost, which is exactly the
-        separate nonperturbative frontier <span className="text-amber-200">QG.AMB.01</span>. The keystone
+        decoupled general QG problem <span className="text-amber-200">QG.AMB.01</span> (the Euclidean-QG
+        conformal-factor problem; gap-decoupled, not a TFPT structural item). The keystone
         stays open (not machine-proved end-to-end), but its entire residual is now a composition of
         standard cited theorems (OS/clustering, the Kitaev free-fermion classification, the AQFT stack)
         over established TFPT facts — Lean-pinned (FORM.SEAMEQUIV.01) to exactly those named steps plus the

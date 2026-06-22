@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`332` registered scripts · `390` ledger claims · `10` clusters.
+`333` registered scripts · `391` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (14 scripts)
+### `core` — Compiler core & the E₈ glue  (15 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -39,6 +39,8 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: ARCH.RR.01, v197_rr_carrier_clifford_d5, v181_clock_is_conformal_symmetry · cited: origin theory, research contracts
 - **v318_arithmetic_capstone** [E/C/O] `ARITH.CAPSTONE.01` — The capstone: the SM structural sector is Q(zeta30) + Galois mu4 x Z2, and the complete input is {a, pi, v_geo} (synthesis of the v313-v317 arc). The structural sector (3 generatio
   - deps: v317_galois_family, v316_galois_readout, v315_coxeter_coupling, v53_compiler_core, NOUNIT.01, v313, v314, v315 · cited: origin theory
+- **v335_seam_equiv_unify** [E/O] `SEAM.EQUIV.UNIFY.01` — The keystone unification: there is ONE open theorem (SEAM.EQUIV.01), QGEO.SYM.01 is its COROLLARY (a conformal-net axiom), and QG.AMB.01 is a decoupled general QG problem, NOT a TF
+  - deps: v308_seam_equiv_chain, v323_bw_geometric_modular, v181_clock_is_conformal_symmetry, QG.AMB.01, v308, v323, v329, v333 · cited: introduction, origin theory
 
 ### `em` — Electromagnetic fixed point  (2 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -726,13 +728,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×27, `E8.GLU.01`×15, `HOR.NARIAI.01`×15, `v56`×12, `AX.P1.01`×11, `REG.FREEZE.01`×11, `SEAM.EQUIV.01`×11, `QGEO.SUBPRIN.01`×11, `FLAV.KQ.01`×10, `v76`×10, `QGEO.PILLOW.01`×10, `CAR.SM.01`×9, `GATE.QGEO.01`×8, `v37`×8, `v55`×8
+**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `E8.GLU.01`×15, `HOR.NARIAI.01`×15, `v76`×12, `v56`×12, `AX.P1.01`×11, `REG.FREEZE.01`×11, `SEAM.EQUIV.01`×11, `QGEO.SUBPRIN.01`×11, `FLAV.KQ.01`×10, `QGEO.PILLOW.01`×10, `CAR.SM.01`×9, `GATE.QGEO.01`×8, `v37`×8, `v55`×8
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v323_bw_geometric_modular** — `QGEO.BW.01, FORM.QGEO.BW.01`
 - **v324_hypergraph_fiber** — `HYP.FIBER.01`
 - **v325_pillowcase_keystone** — `QGEO.KEYSTONE.01, FORM.CARTAN.DET.01`
 - **v326_ftransfer_suite** — `FR.SUITE.01`
@@ -744,4 +745,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v332_qgamb_metric_sector** — `QGAMB.METRIC.01`
 - **v333_cm_selection** — `QGEO.CMSELECT.01`
 - **v334_conformal_resolution** — `QGAMB.CONFORMAL.01`
+- **v335_seam_equiv_unify** — `SEAM.EQUIV.UNIFY.01`
 

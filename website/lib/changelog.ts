@@ -47,6 +47,616 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "keystone unification + status reframe: ONE open theorem, ONE decoupled foreign problem: "
+      },
+      {
+        "k": "c",
+        "v": "v335"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "FORM.QGEO.BW.01"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "qgeoSymIsCorollary"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v335"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EQUIV.UNIFY.01"
+            },
+            {
+              "k": "t",
+              "v": ") — the keystone unification."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " A bird's-eye consolidation of the v308/v323/v325/v329/v333 arc that collapses the “two open structural items” narrative. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "QGEO.SYM.01"
+            },
+            {
+              "k": "t",
+              "v": " is a COROLLARY of "
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EQUIV.01"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (no extra premise): a chiral conformal net has, by axiom, a Möbius-covariant vacuum (the unique invariant positive-energy vector); rotations "
+        },
+        {
+          "k": "m",
+          "v": "U(1)"
+        },
+        {
+          "k": "t",
+          "v": " are the compact subgroup of the Möbius group, so the vacuum is rotation-invariant, and the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " clock "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " rotation by "
+        },
+        {
+          "k": "m",
+          "v": "\\pi/2"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "(e^{i\\pi/2})^4{=}1"
+        },
+        {
+          "k": "t",
+          "v": ") fixes it "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow\\omega\\circ\\rho{=}\\omega"
+        },
+        {
+          "k": "t",
+          "v": ". So "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.SYM.01"
+        },
+        {
+          "k": "t",
+          "v": " with NO extra premise (the v323 “rotation-invariant vacuum” is a net axiom) — the two bedrock items collapse to ONE. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "the one keystone theorem"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " a construction theorem ("
+        },
+        {
+          "k": "m",
+          "v": "c{=}\\gcar{+}\\Nfam{=}8"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\det\\mathrm{Cartan}(E_8){=}1"
+        },
+        {
+          "k": "t",
+          "v": ", gap "
+        },
+        {
+          "k": "m",
+          "v": "6\\ln\\tfrac32>0"
+        },
+        {
+          "k": "t",
+          "v": " derived) with EXACTLY one open continuum lemma (the rigorous continuum OS reconstruction "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " invertibility of the raw collar). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "QG.AMB.01"
+            },
+            {
+              "k": "t",
+              "v": " decoupled, not a gate"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": margin "
+        },
+        {
+          "k": "m",
+          "v": "\\Delta-31/(4\\pi^2)\\approx1.648>0"
+        },
+        {
+          "k": "t",
+          "v": " (v76/v311/v330/v332) "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " no TFPT prediction depends on the ambient measure; it is the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "general"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Euclidean-QG conformal-factor problem (Gibbons–Hawking–Perry 1978), inherited not TFPT-specific — reclassified from “TFPT structural frontier” to “decoupled general QG problem”. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "collapsed status"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": open structural items "
+        },
+        {
+          "k": "m",
+          "v": "2\\to1"
+        },
+        {
+          "k": "t",
+          "v": "; live residual "
+        },
+        {
+          "k": "m",
+          "v": "=v_{\\mathrm{geo}}+G_{\\mathrm{net}}({=}\\texttt{SEAM.EQUIV.01})+\nF_{\\mathrm{transfer}}"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the one residual "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": "'s continuum OS reconstruction."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Lean ("
+            },
+            {
+              "k": "c",
+              "v": "FORM.QGEO.BW.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "c",
+              "v": "qgeoSymIsCorollary"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "BWKeystone.lean"
+        },
+        {
+          "k": "t",
+          "v": " extended with the cited conformal-net vacuum axiom "
+        },
+        {
+          "k": "c",
+          "v": "conformal_net_vacuum_rotation_invariant"
+        },
+        {
+          "k": "t",
+          "v": "; with it, "
+        },
+        {
+          "k": "c",
+          "v": "StateInvariance"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "c",
+          "v": "QGEO.SYM.01"
+        },
+        {
+          "k": "t",
+          "v": ") follows from "
+        },
+        {
+          "k": "c",
+          "v": "SeamIsE8"
+        },
+        {
+          "k": "t",
+          "v": " alone, so "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.SYM.01"
+        },
+        {
+          "k": "t",
+          "v": " is a COROLLARY of "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " with no independent open premise ("
+        },
+        {
+          "k": "c",
+          "v": "#print axioms"
+        },
+        {
+          "k": "t",
+          "v": " confirms only the chain "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " cited BW/net axioms). "
+        },
+        {
+          "k": "c",
+          "v": "lake build"
+        },
+        {
+          "k": "t",
+          "v": " green (3362 jobs)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Status deep-sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The ledger ("
+        },
+        {
+          "k": "c",
+          "v": "QG.AMB.01"
+        },
+        {
+          "k": "t",
+          "v": " reclassified to “decoupled general QG; non-TFPT”; "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.SYM.01"
+        },
+        {
+          "k": "t",
+          "v": " marked a corollary; new "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.UNIFY.01"
+        },
+        {
+          "k": "t",
+          "v": " row), the canonical status card ("
+        },
+        {
+          "k": "c",
+          "v": "tfpt_status.tex"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "c",
+          "v": "introduction"
+        },
+        {
+          "k": "t",
+          "v": " (status core "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " gate table), "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_4_frontier"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_5_redteam"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "README"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "next.txt"
+        },
+        {
+          "k": "t",
+          "v": " and the website ("
+        },
+        {
+          "k": "c",
+          "v": "OpenGates"
+        },
+        {
+          "k": "t",
+          "v": ", FAQ, "
+        },
+        {
+          "k": "c",
+          "v": "papers.ts"
+        },
+        {
+          "k": "t",
+          "v": ") all moved to “one solvable theorem ("
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " one decoupled foreign problem ("
+        },
+        {
+          "k": "c",
+          "v": "QG.AMB.01"
+        },
+        {
+          "k": "t",
+          "v": ")”. No falsifiable prediction changed; this is a status-framing sharpening backed by "
+        },
+        {
+          "k": "c",
+          "v": "v335"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the Lean corollary."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-22",
+    "dateLabel": "2026-06-22",
+    "heading": [
+      {
+        "k": "t",
         "v": "closing round: the CM-selection mechanism (the last keystone residual), the conformal-mode resolution, and the Conway–Sloane even-unimodular side in Lean: "
       },
       {
