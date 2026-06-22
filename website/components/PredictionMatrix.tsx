@@ -46,6 +46,7 @@ const TESTABILITY_BY_ID: Record<string, TestabilityAxis> = {
   theta13: "currently testable",
   theta23: "near-term",
   "neutrino-ordering": "long-term",
+  "delta-pmns": "near-term",
   "strong-cp": "currently testable",
   mpme: "structural",
   ns: "currently testable",
@@ -58,6 +59,8 @@ const TESTABILITY_BY_ID: Record<string, TestabilityAxis> = {
   "no-second-higgs": "structural",
   birefringence: "currently testable",
   axion: "near-term",
+  "rare-kaon": "currently testable",
+  "eht-intercept": "long-term",
 };
 
 const STATUS_AXIS: StatusAxis[] = [

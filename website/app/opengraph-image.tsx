@@ -200,7 +200,7 @@ export default function OpengraphImage() {
               display: "flex",
             }}
           >
-            From c₃ = 1/(8π) and g_car = 5: the gauge group, three families, α⁻¹ = 137.0359992, and the flavor sector. 22 falsifiable predictions, zero fitted constants.
+            From c₃ = 1/(8π) and g_car = 5: the gauge group, three families, α⁻¹ = 137.0359992, and the flavor sector. 23 falsifiable predictions, zero fitted constants.
           </div>
           <div
             style={{

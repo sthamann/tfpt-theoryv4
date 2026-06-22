@@ -70,6 +70,28 @@ export interface PredictionExperiment {
   repoPath: string;
 }
 
+/**
+ * Compact, table-ready confrontation of a prediction against the current best
+ * measurement, plus the experiment that will make it a definitive hit or kill.
+ * Every value is repo-documented (v307 data watchdog `MEAS`/`BRIDGE`, v321 forward
+ * kill-test board `BOARD`, `freeze_file.csv`, and the standalone `experiments/`
+ * tree) — nothing here is freshly invented. Drives the falsification overview table.
+ */
+export interface PredictionConfrontation {
+  /** Short LaTeX of the derivation (the "how it is read off"). */
+  derivation: string;
+  /** TFPT predicted value, compact. */
+  tfptValue: string;
+  /** Current measured / experimental value (repo-documented best), or a structural note. */
+  measured: string;
+  /** Deviation TFPT vs measured (σ, %, "null", "structural", or "data-limited"). */
+  deviation: string;
+  /** Where the measured value comes from, with its release year. */
+  source: string;
+  /** The experiment + timeline that will make this a definitive hit or kill. */
+  decisive: string;
+}
+
 export interface Prediction {
   id: string;
   slug: string;
@@ -96,6 +118,8 @@ export interface Prediction {
     | "Astrophysics";
   /** Standalone empirical confrontation (experiments/ tree), if one exists. */
   experiment?: PredictionExperiment;
+  /** Compact, table-ready confrontation against current data + the decisive future test. */
+  confrontation: PredictionConfrontation;
 }
 
 /**
@@ -178,6 +202,14 @@ export const predictions: Prediction[] = [
     description:
       "The fine-structure constant is the unique positive root of the cubic closure built from c₃ and the abelian coefficient 41 = 10 b₁. Existence and uniqueness are proved; the value lands 2.9×10⁻¹⁰ (1.9σ) from CODATA-2022. Typed [E]: the coefficients are exact identities, the Ward-origin reading of the equation is conditional [C] (ledger EM.FP.01).",
     category: "Coupling",
+    confrontation: {
+      derivation: "F_{U(1)}(\\alpha)=0,\\ \\textstyle\\sum L + N_\\Phi = 41 = 10\\,b_1",
+      tfptValue: "137.035 999 217",
+      measured: "137.035 999 177 ± 2.1×10⁻⁸",
+      deviation: "+1.9σ",
+      source: "CODATA 2022",
+      decisive: "CODATA / atom-recoil refinement (ongoing)",
+    },
   },
   {
     id: "lambda-c",
@@ -198,6 +230,14 @@ export const predictions: Prediction[] = [
     description:
       "The Cabibbo angle is the carrier base of the φ₀-ladder — the same seed that fixes the reactor angle and the birefringence amplitude.",
     category: "Flavor",
+    confrontation: {
+      derivation: "\\lambda_C = \\sqrt{\\varphi_0(1-\\varphi_0)}",
+      tfptValue: "0.22438",
+      measured: "0.2245 ± 0.0005",
+      deviation: "−0.24σ",
+      source: "PDG 2024 (|V_us|)",
+      decisive: "CKM global fit (ongoing)",
+    },
   },
   {
     id: "flavor-invariants",
@@ -220,6 +260,14 @@ export const predictions: Prediction[] = [
     description:
       "The flavor matrix carries only compiler numbers: determinant h(D₅) = 8, principal 2-minors (2,3,5) with product h(E₈) = 30, trace N_fam². Any future global fit must satisfy these.",
     category: "Flavor",
+    confrontation: {
+      derivation: "\\det R = h(D_5) = 8,\\ \\mathrm{minors}=(2,3,5)",
+      tfptValue: "det R = 8, minors (2,3,5)",
+      measured: "carried by current CKM/PMNS global fits",
+      deviation: "structural (no fit avoids it)",
+      source: "CKM/PMNS global fits (PDG / NuFIT 2024)",
+      decisive: "future CKM/PMNS global fit",
+    },
   },
   {
     id: "koide",
@@ -241,6 +289,14 @@ export const predictions: Prediction[] = [
     description:
       "The source-level Koide quotient is 0.664, 0.33% below the democratic compiler target 2/3. Near-miss, not an exact derivation — the source→pole transfer is a conjecture.",
     category: "Flavor",
+    confrontation: {
+      derivation: "Q_\\star = \\tfrac{|\\mathbb{Z}_2|}{N_{\\mathrm{fam}}} = \\tfrac{2}{3}",
+      tfptValue: "0.664 (target 2/3 = 0.6667)",
+      measured: "Q_exp ≈ 0.6666",
+      deviation: "−0.33% (near-miss, [C])",
+      source: "PDG charged-lepton pole masses 2024",
+      decisive: "structural — no single experiment (source→pole transfer)",
+    },
   },
   {
     id: "theta12",
@@ -262,6 +318,14 @@ export const predictions: Prediction[] = [
     description:
       "Previously the only open SM angle. Tri-bimaximal 1/3 plus the seam misalignment ε = (3/4)φ₀ = c₃ + 36 c₃⁴ (leading term c₃, fourth-order puncture correction exact) gives the prediction of record sin²θ₁₂_seed = 0.306747. This single seed value is the frozen prediction (blind registry predictions_frozen.json, 2026-06-09, machine-enforced by v84); the seam-corrected 0.306808 and non-linear 0.307020 are scheme diagnostics of the same texture along the F_transfer orbit, not rescue branches. Live status: JUNO's first 59.1-day run reports sin²θ₁₂ = 0.3092 ± 0.0087 — compatible, precision phase pending; NuFIT 6.0 (0.307) is the pre-JUNO global-fit baseline.",
     category: "Neutrino",
+    confrontation: {
+      derivation: "\\sin^2\\theta_{12} = \\tfrac{1}{3} - \\tfrac{\\varphi_0}{2}",
+      tfptValue: "0.30675",
+      measured: "0.307 ± 0.012 (NuFIT) · 0.3092 ± 0.0087 (JUNO)",
+      deviation: "−0.02σ (NuFIT) · −0.28σ (JUNO)",
+      source: "NuFIT 6.0 (2024) · JUNO (2025)",
+      decisive: "JUNO ~2026–2028 (the fastest falsifier)",
+    },
     experiment: {
       summary:
         "experiments/neutrino-mixing confronts sin²θ₁₂ = 1/3 − φ₀/2 with NuFIT 6.0 and JUNO's first 59.1-day run.",
@@ -290,6 +354,14 @@ export const predictions: Prediction[] = [
     description:
       "The reactor angle is the seed times the carrier-trace factor e⁻⁵ᐟ⁶ (γ = 5/6). Daya Bay / RENO / JUNO compare; PDG 0.0220.",
     category: "Neutrino",
+    confrontation: {
+      derivation: "\\sin^2\\theta_{13} = \\varphi_0\\,e^{-5/6}",
+      tfptValue: "0.0231",
+      measured: "0.02195 ± 0.00058",
+      deviation: "+2.0σ (the honest pressure point)",
+      source: "NuFIT 6.0 (2024)",
+      decisive: "JUNO / global fit ~2026–2028",
+    },
     experiment: {
       summary:
         "experiments/seed-consistency stresses the shared seed φ₀ → β/Ω_b/Cabibbo/θ₁₃; v3 combines reactor-only θ₁₃ from Daya Bay + RENO + Double Chooz (NuFIT-global only as a shadow, never both in the fit).",
@@ -318,6 +390,14 @@ export const predictions: Prediction[] = [
     description:
       "The atmospheric angle is near-maximal in the μτ-symmetric limit; the octant is not selected by the present transport. DUNE addresses the ambiguity.",
     category: "Neutrino",
+    confrontation: {
+      derivation: "\\theta_{23} = 45^\\circ\\ (\\mu\\tau\\text{-symmetric})",
+      tfptValue: "≈ 0.5 (octant not selected)",
+      measured: "0.470 ± 0.017",
+      deviation: "+1.76σ (octant open)",
+      source: "NuFIT 6.0 (2024)",
+      decisive: "DUNE / NOvA / T2K ~2030 (octant)",
+    },
   },
   {
     id: "neutrino-ordering",
@@ -341,6 +421,54 @@ export const predictions: Prediction[] = [
     description:
       "The Majorana neutrino sector prefers normal ordering with a small effective mass; the NO floor Σm_ν = 0.0586 eV is consistent with the cosmological bound and is a near-term kill test (v272). The absolute scale is one seesaw ratio (M_R, the same single anchor as v_geo), while the full complex PMNS matrix and the leptonic CP strength J_PMNS = −0.0297 (data-consistent) are now assembled (v270). The leptonic CP phase is no longer an assigned texture but a Galois-forced relation to the leading (π/3) component of the quark phase: δ_PMNS = δ_CKM,lead + π = 240° (both powers of one hexagonal unit ρ = ζ₆; the lock is to the structural π/3, not the full measured γ ≈ 68.7° — so 240°, not 248.7°; v320), testable at DUNE/Hyper-K. LEGEND / nEXO / DUNE / KATRIN are the comparison surface.",
     category: "Neutrino",
+    confrontation: {
+      derivation: "\\text{normal ordering},\\ \\Sigma m_\\nu \\gtrsim 0.0586\\,\\mathrm{eV}",
+      tfptValue: "NO, small m_ββ, Σm_ν ≳ 0.0586 eV",
+      measured: "NO preferred; Σm_ν < ~0.072 eV",
+      deviation: "consistent (NO floor at the cosmological edge)",
+      source: "NuFIT 6.0 (2024) · DESI+Planck (2024)",
+      decisive: "DUNE / LEGEND / nEXO ~2028–2035",
+    },
+  },
+  {
+    id: "delta-pmns",
+    slug: "leptonic-cp-phase",
+    title: "Leptonic CP Phase — Galois-Locked to the Quark Phase",
+    shortTitle: "δ_PMNS",
+    target: "δ_PMNS = 240° (band 240° ± ~9°)",
+    targetLatex:
+      "\\delta_{\\mathrm{PMNS}} = \\delta_{\\mathrm{CKM}}^{\\mathrm{lead}} + \\pi = 240^\\circ",
+    numericValue: "240",
+    unit: "°",
+    status: "Conditional",
+    dependencyClass: "Neutrino transport",
+    killTest:
+      "A measured δ_PMNS robustly outside the band 240° ± ~9° (= δ_CKM,lead + π), or landing on a different hexagonal node (60/120/180/300°), at >3σ (DUNE / Hyper-K / JUNO) falsifies the whole Galois-CP organisation.",
+    derivationFormulas: [
+      "\\rho = \\zeta_6,\\quad \\delta_{\\mathrm{CKM}}^{\\mathrm{lead}} = \\arg(\\rho) = \\tfrac{\\pi}{3} = 60^\\circ",
+      "\\delta_{\\mathrm{PMNS}} = \\arg(\\rho^4) = |\\mu_4|\\cdot\\delta_{\\mathrm{CKM}}^{\\mathrm{lead}} = \\tfrac{4\\pi}{3} = 240^\\circ",
+      "\\rho^4 = -\\rho \\;\\Rightarrow\\; \\delta_{\\mathrm{PMNS}} = \\delta_{\\mathrm{CKM}}^{\\mathrm{lead}} + \\pi",
+    ],
+    pdf: "/papers/origin_theory.pdf",
+    description:
+      "The leptonic CP phase is no longer an assigned texture but a Galois-forced relation to the quark phase: both CP phases are powers of one hexagonal unit ρ = ζ₆ of the family factor, so δ_CKM,lead = arg(ρ) = π/3 = 60° and δ_PMNS = arg(ρ⁴) = 4π/3 = 240°, and since ρ⁴ = −ρ they are locked, δ_PMNS = δ_CKM,lead + π (v316/v320). Sharpened (v322): the node selector is the deck order |μ₄| (δ_PMNS = 4·δ_CKM,lead); the sub-leading correction is bounded by the quark analogue 3λ² ≈ 8.7°, so the prediction of record is the band 240° ± ~9°. It sits at +1.08σ of the NuFIT 6.0 normal-ordering best fit (212°⁺²⁶₋₄₁) and inside the CP-violating region the data mildly prefer; the nearest wrong hexagonal node is 60° away. A [C] downstream bridge (the seam deck stays Z/4, CP lives in the hexagonal phase fiber over it); discriminating power is weak until DUNE / Hyper-K.",
+    category: "Neutrino",
+    confrontation: {
+      derivation: "\\delta_{\\mathrm{PMNS}} = \\arg(\\zeta_6^4) = 4\\,\\delta_{\\mathrm{CKM}}^{\\mathrm{lead}}",
+      tfptValue: "240° (band 240° ± ~9°)",
+      measured: "212°⁺²⁶₋₄₁ (NO best fit)",
+      deviation: "+1.08σ (consistent, weak power)",
+      source: "NuFIT 6.0 (2024)",
+      decisive: "DUNE / Hyper-K ~2030+",
+    },
+    experiment: {
+      summary:
+        "experiments/neutrino-mixing confronts δ_PMNS = 4π/3 = 240° (Galois-locked to δ_CKM) with the NuFIT 6.0 normal-ordering global fit.",
+      result:
+        "+1.08σ vs the NuFIT 6.0 NO best fit (212°⁺²⁶₋₄₁); inside the 3σ CP-violating region the data mildly prefer. Discriminating power is weak until DUNE/Hyper-K.",
+      finding: "consistent",
+      repoPath: "experiments/neutrino-mixing",
+    },
   },
   {
     id: "strong-cp",
@@ -361,6 +489,14 @@ export const predictions: Prediction[] = [
     description:
       "θ_eff = 0 follows from three structural facts (γ₅-Hermiticity, polar structure, sheet involution) plus reflection positivity — without a mass gap. Now formalised as Pfaffian reality in the self-dual 16-Majorana CAR model (v173): the sheet-odd Calderón involution pairs the spectrum (±λ), γ₅-Hermiticity makes the fermion-measure Pfaffian real (arg ∈ {0,π}), and reflection positivity (Z > 0) selects the positive branch — a topological null theorem. PSI nEDM / SNS test it.",
     category: "QCD/EDM",
+    confrontation: {
+      derivation: "\\arg\\det M_u = \\arg\\det M_d = 0 \\Rightarrow \\theta_{\\mathrm{eff}} = 0",
+      tfptValue: "0 (structural null)",
+      measured: "|d_n| < 1.8×10⁻²⁶ e·cm (consistent with 0)",
+      deviation: "null (no EDM signal)",
+      source: "PSI nEDM (2020)",
+      decisive: "PSI n2EDM / SNS (ongoing)",
+    },
     experiment: {
       summary:
         "The EDM-null (θ_eff = 0) is tracked as two typed scorecard rows under experiments/ — neutron and electron EDM vs the PSI nEDM and JILA/ACME limits.",
@@ -390,6 +526,14 @@ export const predictions: Prediction[] = [
     description:
       "Listed for honesty: m_p/m_e is a cross-sector ratio, computable at scheme level but genuinely not a compiler power. It is deliberately not forced onto the ladder.",
     category: "QCD/EDM",
+    confrontation: {
+      derivation: "\\tfrac{m_p}{m_e} = \\tfrac{\\Lambda_{\\mathrm{QCD}}}{\\text{EW Yukawa}}\\ (\\text{not a power})",
+      tfptValue: "not claimed (≈ 1836)",
+      measured: "1836.152673",
+      deviation: "n/a (explicitly not claimed)",
+      source: "CODATA 2022",
+      decisive: "structural — fails only if mis-asserted",
+    },
   },
   {
     id: "ns",
@@ -410,6 +554,14 @@ export const predictions: Prediction[] = [
     description:
       "The scalar tilt comes from the same R² (Starobinsky) attractor that fixes the scalaron mass. The frozen registry keeps n_s as a band over N★ ∈ [50,60]; the scalaron-reheating chain (v86, Higgs channel) sharpens it conditionally to N★ = 51.4 ⇒ n_s = 0.9611 — recorded with its tensions (+0.9σ below Planck; the same chain underpredicts A_s, so the point is conditional on the decay channel).",
     category: "Cosmology",
+    confrontation: {
+      derivation: "n_s = 1 - \\tfrac{2}{N_\\star},\\ N_\\star \\in [50,60]",
+      tfptValue: "0.960–0.967 (0.9611 at N★=51.4)",
+      measured: "0.9649 ± 0.0042",
+      deviation: "−0.91σ (band consistent)",
+      source: "Planck 2018",
+      decisive: "CMB-S4 ~2028–2032",
+    },
     experiment: {
       summary:
         "experiments/cmb-inflation-scalaron compares n_s = 1 − 2/N⋆ to Planck and the ACT+DESI combination; the branch resolver decides the N⋆ typing.",
@@ -439,6 +591,14 @@ export const predictions: Prediction[] = [
     description:
       "The tensor ratio of the R² scalaron is already below the current bound and within reach of CMB-S4 (σ_r ≤ 5×10⁻⁴, ~2033). The frozen registry keeps r as a band; the scalaron-reheating chain (v86) sharpens it conditionally to r = 0.0045.",
     category: "Cosmology",
+    confrontation: {
+      derivation: "r = \\tfrac{12}{N_\\star^2},\\ N_\\star \\in [50,60]",
+      tfptValue: "0.0033–0.0048 (0.0045)",
+      measured: "< 0.036 (95% upper limit)",
+      deviation: "below bound (data-limited)",
+      source: "BICEP/Keck BK18 (2021)",
+      decisive: "CMB-S4 / LiteBIRD ~2028–2032 (σ_r ~ 5×10⁻⁴)",
+    },
     experiment: {
       summary:
         "experiments/cmb-inflation-scalaron evaluates r = 12/N⋆² against BICEP/Keck and forecasts CMB-S4.",
@@ -467,6 +627,14 @@ export const predictions: Prediction[] = [
     description:
       "Generic Starobinsky fits the scalaron mass to A_s; TFPT fixes it by the seam, (M/M̄)² = c₃⁷, so A_s becomes a prediction — the measured A_s prefers N★ = 56.2. Honest record (v86): the slow Higgs-channel reheating point N★ = 51.4 underpredicts A_s by 11σ, so the measured A_s requires near-instantaneous reheating; A_s arbitrates the reheating speed.",
     category: "Cosmology",
+    confrontation: {
+      derivation: "A_s = \\tfrac{N_\\star^2}{24\\pi^2}\\,c_3^7",
+      tfptValue: "≈ 2.0×10⁻⁹",
+      measured: "≈ 2.1×10⁻⁹",
+      deviation: "consistent in band (N★ ≈ 56 profiled)",
+      source: "Planck 2018",
+      decisive: "fixed by N★ / reheating speed",
+    },
     experiment: {
       summary:
         "experiments/cmb-inflation-scalaron runs the branch resolver: fixed N⋆ = 51.4 vs profiled N⋆, with a Bayes-factor comparison.",
@@ -496,6 +664,14 @@ export const predictions: Prediction[] = [
     description:
       "The scalaron mass comes out exactly at the canonical Starobinsky value, with the exponent 7 = 48 − 41 = Ω_adm − 10 b₁ fixed by the seam. A former input is now an output.",
     category: "Cosmology",
+    confrontation: {
+      derivation: "\\tfrac{M_{\\mathrm{scal}}^2}{\\bar M_{\\mathrm{Pl}}^2} = c_3^{\\,7}",
+      tfptValue: "3.06×10¹³ GeV",
+      measured: "canonical Starobinsky value (from A_s)",
+      deviation: "matches the A_s-inferred mass",
+      source: "Planck 2018 (A_s)",
+      decisive: "CMB-S4 inflation constraints ~2028–2032",
+    },
   },
   {
     id: "omega-b",
@@ -516,6 +692,14 @@ export const predictions: Prediction[] = [
     description:
       "The baryon fraction reads off the determinant-line angle β_rad. Planck comparison row 0.04930.",
     category: "Cosmology",
+    confrontation: {
+      derivation: "\\Omega_b = (4\\pi - 1)\\,\\beta_{\\mathrm{rad}}",
+      tfptValue: "0.04894",
+      measured: "0.0493 ± 0.0006 (Planck) · 0.0483 ± 0.0072 (FRB)",
+      deviation: "0.04σ (BBN leg) · 0.10σ (FRB)",
+      source: "Planck 2018 · FRB Macquart DM(z)",
+      decisive: "settled — consistency, weak discriminator",
+    },
     experiment: {
       summary:
         "Ω_b is the BBN leg of the seed line (experiments/cmb-birefringence-seed) and is cross-checked against the FRB Macquart DM(z) baryon fraction (experiments/frb-tfpt-signatures, FRB.05).",
@@ -545,6 +729,14 @@ export const predictions: Prediction[] = [
     description:
       "A downstream cosmological readout from the closed Ω_b h² (observed 6.1×10⁻¹⁰). As a fundamental compiler power it is not closed — the leptogenesis Boltzmann solve is an interface. An anchored-Boltzmann attempt (v184) was tested honestly: the washout anchors plausibly (m̃₁ = m_3/A_Λ ≈ 5 meV, A_Λ = 10), but M₁ = M_R·φ₀⁴ only relocates the free input (M_R is the seesaw scale ~v²/m_3, not a compiler power), so η_B stays a sharper scenario, not a derivation. A cleaner branch (v212, FR.ETAB.04) drops the seesaw scale entirely: both Boltzmann inputs share the decuple A_Λ = 10 = |E(K₅)|, M₁ = M_scal·φ₀²/A_Λ ≈ 8.65×10⁹ GeV and m̃₁ = m_3/A_Λ ≈ 5 meV — so M₁ uses only {M_scal, φ₀, A_Λ} (no hidden seesaw scale) and lands in the thermal window where η_B ≈ 1.2×10⁻⁹ brackets 6.1×10⁻¹⁰. The full BDP Boltzmann ODE solve now confirms this at the frozen M₁: the integrated efficiency κ_f = 0.092 gives η_B = 6.5×10⁻¹⁰ = 1.07× the observed value, with NO free M_R dial; the full FLAVORED density-matrix solve is the next refinement. Still [C] (the coupling mechanism is posited, not derived).",
     category: "Cosmology",
+    confrontation: {
+      derivation: "\\eta_B = 273.9\\times10^{-10}\\,\\Omega_b h^2",
+      tfptValue: "6.09×10⁻¹⁰ (Boltzmann solve 6.5×10⁻¹⁰)",
+      measured: "6.1×10⁻¹⁰",
+      deviation: "×1.07 (consistent, [C] not closed)",
+      source: "Planck 2018 / BBN",
+      decisive: "settled observation — not a discriminator",
+    },
     experiment: {
       summary:
         "experiments/ftransfer hosts the scalaron-decuple leptogenesis interface (M₁ = M_scal φ₀²/A_Λ, δ_νCP = 4π/3).",
@@ -573,6 +765,14 @@ export const predictions: Prediction[] = [
     description:
       "The electroweak scale, the cosmological constant and the Hubble scale are all powers of one exponential engine on the carrier — the same α⁻¹ ≈ 137. SH0ES / DESI / Planck (Hubble tension) test it.",
     category: "Cosmology",
+    confrontation: {
+      derivation: "\\Lambda \\sim e^{-2\\alpha^{-1}},\\ H_0 \\sim \\sqrt{\\Lambda},\\ w = -1",
+      tfptValue: "w = −1 (single engine)",
+      measured: "DESI DR2 hints w ≠ −1",
+      deviation: "w = −1 excluded at 4.4σ (1 combo; watchdog ARMED)",
+      source: "DESI DR2 (2025)",
+      decisive: "DESI / Euclid (ongoing)",
+    },
     experiment: {
       summary:
         "experiments/dark-energy-w-watchdog confronts w = −1 with the DESI DR2 w0-wa combinations, overlap-aware (no naive supernova-sample stacking).",
@@ -601,6 +801,14 @@ export const predictions: Prediction[] = [
     description:
       "The carrier index fixes exactly one weak doublet (N_Φ = g_car − |μ₄| = 1). A structural prohibition, not a fit.",
     category: "Higgs",
+    confrontation: {
+      derivation: "N_\\Phi = g_{\\mathrm{car}} - |\\mu_4| = 1",
+      tfptValue: "exactly 1 light doublet",
+      measured: "1 Higgs doublet observed (no 2nd)",
+      deviation: "consistent (structural prohibition)",
+      source: "LHC (ATLAS / CMS) 2024",
+      decisive: "HL-LHC (ongoing)",
+    },
   },
   {
     id: "birefringence",
@@ -622,6 +830,14 @@ export const predictions: Prediction[] = [
     description:
       "The determinant-line / Chern–Simons response of the seam. ACT DR6 measures 0.215° ± 0.074° — within 0.4σ of the TFPT value.",
     category: "Astrophysics",
+    confrontation: {
+      derivation: "\\beta_{\\mathrm{rad}} = \\tfrac{\\varphi_0}{4\\pi}",
+      tfptValue: "0.2424°",
+      measured: "0.215° ± 0.074°",
+      deviation: "+0.37σ",
+      source: "ACT DR6 (2025)",
+      decisive: "LiteBIRD / Simons Obs. ~2028+",
+    },
     experiment: {
       summary:
         "experiments/cmb-birefringence-seed tests one φ₀ → β AND Ω_b (seed line Ω_b/β_rad = 4π−1) plus the shared-seed extension φ₀ → β+Ω_b+θ₁₃+Cabibbo.",
@@ -652,6 +868,14 @@ export const predictions: Prediction[] = [
     description:
       "The candidate is the determinant-line axion of the strong-CP sector (WIMPs ruled out — no spare E₈ singlet). The misalignment angle is closed; f_a = M_scal/128 is a conjecture. A misalignment estimate (v185) and a converged full finite-T solve (experiments/ftransfer/axion_relic) decide it: at the predicted θ_i ≈ 170° hilltop the relic is Ω_a h² ≈ 0.66 — ~5.5× above Ω_DM h² = 0.12 (the observed value needs θ_i ≈ 106°). So as the dominant DM it OVER-closes the universe unless there is extra dilution or a lower f_a — a confirmed tension. A more robust branch (v211, DM.AXION.SPINE.01) is the spine angle θ_i = π·N_fam/g_car = 3π/5 = 108° (the central spine quotient, no fit): the same solver reaches Ω_DM at ≈106°, and 108° sits there in the MILD-anharmonic regime — 62° below the hilltop, so NOT exponentially sensitive, a far more robust landing. It is an alternative ansatz to the 170° seam value (mutually exclusive, the full solver decides); a converged Ω_a h² outside ~[0.08, 0.16] demotes it. A scenario, not a sharp prediction.",
     category: "Astrophysics",
+    confrontation: {
+      derivation: "f_a = \\tfrac{M_{\\mathrm{scal}}}{128},\\ m_a \\approx 23.8\\,\\mu\\mathrm{eV}",
+      tfptValue: "23.8 µeV (f_a = M_scal/128)",
+      measured: "not excluded (HAYSTAC band)",
+      deviation: "data-limited (DFSZ/KSVZ not yet reached)",
+      source: "haloscopes (HAYSTAC 2024)",
+      decisive: "haloscope coverage at 23.8 µeV (this decade)",
+    },
     experiment: {
       summary:
         "experiments/ftransfer/axion_relic runs the full finite-T misalignment solve for both branches; experiments/lab-residuals overlays the haloscope coupling at 23.8 µeV.",
@@ -684,6 +908,14 @@ export const predictions: Prediction[] = [
     description:
       "The closed TFPT CKM point (no flavor fit) feeds the cleanest FCNC probe. With standard external short-distance input (Brod–Gorbahn–Stamou X_t, P_c, κ_±) it gives BR(K⁺→π⁺νν̄) = 9.45×10⁻¹¹ and BR(K_L→π⁰νν̄) = 3.33×10⁻¹¹ — a [C] downstream readout, NOT a compiler power (the SD functions are external). The neutral mode ∝ (Im λ_t)² is a direct probe of the holonomy phase δ_CKM. The NA62 combination of the full 2016–2024 dataset, BR(K⁺) = (9.6⁺¹·⁹₋₁·₈)×10⁻¹¹ (La Thuile 2026), lands essentially on the prediction (+0.08σ); the earlier 2016–2022 observation was (13.0₋₃.₀⁺³·³)×10⁻¹¹ (~1.2σ above). This is a strong consistency hit for the closed CKM point — but honestly an F_transfer bridge, not a unique TFPT-vs-SM discriminator (the SM value (8.6±0.4)×10⁻¹¹ also sits within the NA62 error). The ~2σ δ_CKM tension keeps the NA62/KOTO-II corridor a live falsifier (v202). The leading term δ_CKM = π/3 is the hexagonal CM phase (the Eisenstein modular point j=0, arg ρ = π/3) — CP lives in this Z/6 phase fiber over the square (Z/4) seam deck, the geometric home of the one residual the magnitude logic does not cover (v220).",
     category: "Flavor",
+    confrontation: {
+      derivation: "\\text{closed CKM point} \\to \\mathrm{BR}(K^+\\!\\to\\pi^+\\nu\\bar\\nu)",
+      tfptValue: "9.45×10⁻¹¹ (K⁺) · 3.33×10⁻¹¹ (K_L)",
+      measured: "(9.6⁺¹·⁹₋₁·₈)×10⁻¹¹",
+      deviation: "+0.08σ",
+      source: "NA62 2016–2024 (La Thuile 2026)",
+      decisive: "NA62 / KOTO-II (ongoing)",
+    },
     experiment: {
       summary:
         "experiments/rare-kaon-bridge tests the flavor bridge as a geometry: BR(K⁺), BR(K_L), R_K, δ_CKM/γ, Jarlskog and the Grossman–Nir bound together.",
@@ -715,6 +947,14 @@ export const predictions: Prediction[] = [
     description:
       "The local (horizon-collar) sibling of cosmic birefringence: a structured, achromatic residual rotation of the linear-polarization angle around a horizon-scale black hole. The coupling 16c₃⁴ = 1/(256π⁴) is fixed EXACTLY — the same top-form coefficient δ_top = 48c₃⁴ that controls the α-kernel correction, so there is no free coupling. TFPT fixes the 1/r² shape, achromaticity and sign-flip (under E·B reversal); the amplitude Q_e Q_m is an MHD/GR weight, so the channel is [C] (shape/sign). NOT the old UFE black-hole metric (superseded by Nariai/seam=horizon); only the polarization signature survives (v203).",
     category: "Astrophysics",
+    confrontation: {
+      derivation: "\\beta_{\\mathrm{BH}}(r) = 16\\,c_3^4\\,\\tfrac{Q_e Q_m}{r^2} = \\tfrac{1}{256\\pi^4}\\tfrac{Q_e Q_m}{r^2}",
+      tfptValue: "16c₃⁴ = 1/(256π⁴) (achromatic, 1/r², sign-flip)",
+      measured: "band-to-band EVPA +0.9° (intercept nulls open)",
+      deviation: "data-limited",
+      source: "EHT M87 2017 polarimetry (2023)",
+      decisive: "ngEHT + GRMHD library (this decade)",
+    },
     experiment: {
       summary:
         "experiments/eht-achromatic-residual ingests the real EHT M87 2017 polarimetry (uvfits, 2023-D01-01), runs the achromaticity diagnostic, a 4-injection recovery suite and a pipeline-readiness orchestrator.",
@@ -736,6 +976,7 @@ export const CLAIM_ID: Record<string, string> = {
   theta13: "REG.FREEZE.01",
   theta23: "REG.FREEZE.01",
   "neutrino-ordering": "PRED.LAYER.01",
+  "delta-pmns": "GALOIS.READOUT.01",
   "strong-cp": "PRED.LAYER.01",
   mpme: "FR.MPME.01",
   ns: "COSMO.INF.01",

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { SectionHeader } from "@/components/SectionHeader";
 import { KillBoard } from "@/components/falsification/KillBoard";
+import { FalsificationTable } from "@/components/falsification/FalsificationTable";
 import { KillCriteria } from "@/components/falsification/KillCriteria";
 import { NoKnobsAudit } from "@/components/falsification/NoKnobsAudit";
 import { SITE_VERSION } from "@/lib/version";
@@ -138,6 +139,22 @@ export default function FalsificationPage() {
             description="The full status-graded surface as a board: each card carries the predicted value, the single condition that would falsify it, and — where a standalone empirical audit exists in the experiments/ tree — its live status. These confrontations are search targets, not load-bearing claims; no card is upgraded by data proximity."
           />
           <KillBoard />
+        </div>
+      </section>
+
+      <section
+        id="confrontation-table-section"
+        className="relative scroll-mt-20 border-t border-slate-800/60 py-12 sm:py-16"
+        aria-labelledby="confrontation-table-heading"
+      >
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            id="confrontation-table-heading"
+            eyebrow="The confrontation table"
+            title="Every readout against the data, with its decisive year"
+            description="The same prediction surface as one dense table: for each readout, the derivation, the TFPT value, the current measured value, the deviation, the dated experimental source, and the experiment — with an approximate year — that will turn it into a definitive hit or kill (typically a sharper, future measurement). Every value is repo-documented; nothing is fitted."
+          />
+          <FalsificationTable />
         </div>
       </section>
 

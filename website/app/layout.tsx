@@ -12,7 +12,7 @@ import { SITE_VERSION } from "@/lib/version";
 
 const SITE_NAME = "TFPT — Topological Fixed-Point Theory";
 const SITE_DESCRIPTION =
-  "Topological Fixed-Point Theory (TFPT). From two numbers, the seam constant c₃ = 1/(8π) and the carrier rank g_car = 5, a discrete compiler reads off the Standard Model, the constants (α⁻¹ = 137.0359992, 1.9σ from CODATA-2022), the flavor sector and the scale grammar. 22 falsifiable predictions, zero fitted constants; only π is irreducible.";
+  "Topological Fixed-Point Theory (TFPT). From two numbers, the seam constant c₃ = 1/(8π) and the carrier rank g_car = 5, a discrete compiler reads off the Standard Model, the constants (α⁻¹ = 137.0359992, 1.9σ from CODATA-2022), the flavor sector and the scale grammar. 23 falsifiable predictions, zero fitted constants; only π is irreducible.";
 
 export const viewport: Viewport = {
   themeColor: [
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     title: `${SITE_NAME}: Two Axioms, One Compiler, the Standard-Model Skeleton Derived`,
     description:
-      "From two numbers, c₃ = 1/(8π) and g_car = 5, a discrete compiler reads off the Standard Model, α⁻¹ = 137.0359992 (1.9σ from CODATA-2022), the flavor sector, strong-CP closure, and the scale grammar. 22 falsifiable predictions, zero fitted constants.",
+      "From two numbers, c₃ = 1/(8π) and g_car = 5, a discrete compiler reads off the Standard Model, α⁻¹ = 137.0359992 (1.9σ from CODATA-2022), the flavor sector, strong-CP closure, and the scale grammar. 23 falsifiable predictions, zero fitted constants.",
     locale: "en_US",
     url: SITE_URL,
   },
