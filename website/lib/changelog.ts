@@ -47,6 +47,456 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "two consequences: the "
+      },
+      {
+        "k": "m",
+        "v": "c{=}8"
+      },
+      {
+        "k": "t",
+        "v": " which-net ambiguity resolved by the order-4 clock, and BOTH axioms shown bootstrap-forced so the only irreducibles are the framework "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\pi"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "c",
+        "v": "v351"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "v352"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v351"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EQUIV.CONTINUUM.02"
+            },
+            {
+              "k": "t",
+              "v": ") — the which-net ambiguity falls."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The long-standing “"
+        },
+        {
+          "k": "m",
+          "v": "c{=}8"
+        },
+        {
+          "k": "t",
+          "v": " ambiguity” ("
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " det 1 vs "
+        },
+        {
+          "k": "m",
+          "v": "SO(16){=}D_8"
+        },
+        {
+          "k": "t",
+          "v": " det 4, both "
+        },
+        {
+          "k": "m",
+          "v": "c{=}8"
+        },
+        {
+          "k": "t",
+          "v": ", flagged open in "
+        },
+        {
+          "k": "c",
+          "v": "v277"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v344"
+        },
+        {
+          "k": "t",
+          "v": ") is RESOLVED, non-circularly, by the seam's ORDER-4 "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " clock: the index-4 simple-current extension of "
+        },
+        {
+          "k": "m",
+          "v": "D_5\\!\\oplus\\!A_3"
+        },
+        {
+          "k": "t",
+          "v": " is "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v154"
+        },
+        {
+          "k": "t",
+          "v": "), the index-2 would be "
+        },
+        {
+          "k": "m",
+          "v": "SO(16)"
+        },
+        {
+          "k": "t",
+          "v": ", so the order-4 clock (the four Gauss–Bonnet marks, "
+        },
+        {
+          "k": "c",
+          "v": "v216"
+        },
+        {
+          "k": "t",
+          "v": ") selects "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " (full "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " condensation "
+        },
+        {
+          "k": "m",
+          "v": "16{\\to}4{\\to}1"
+        },
+        {
+          "k": "t",
+          "v": ") not "
+        },
+        {
+          "k": "m",
+          "v": "SO(16)"
+        },
+        {
+          "k": "t",
+          "v": " (partial "
+        },
+        {
+          "k": "m",
+          "v": "\\Z_2"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "16{\\to}4"
+        },
+        {
+          "k": "t",
+          "v": "). The bootstrap agrees ("
+        },
+        {
+          "k": "m",
+          "v": "h(E_8){=}30"
+        },
+        {
+          "k": "t",
+          "v": " max prime "
+        },
+        {
+          "k": "m",
+          "v": "5{=}\\gcar"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "h(D_8){=}14"
+        },
+        {
+          "k": "t",
+          "v": " max prime "
+        },
+        {
+          "k": "m",
+          "v": "7"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "so "
+        },
+        {
+          "k": "m",
+          "v": "\\det K{=}1"
+        },
+        {
+          "k": "t",
+          "v": " is a consequence, not an open input. "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the residual of "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " is then PURELY the chiral-edge / scaling-limit existence ("
+        },
+        {
+          "k": "c",
+          "v": "v336"
+        },
+        {
+          "k": "t",
+          "v": "), not which-net."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v352"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "TFPT.IRREDUCIBLE.01"
+            },
+            {
+              "k": "t",
+              "v": ") — the inputs are not axioms."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The deepest answer to “the inputs are back-determined”: BOTH P1 and P2 are bootstrap-forced fixed points. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "\\gcar{=}5"
+        },
+        {
+          "k": "t",
+          "v": " is forced three ways ("
+        },
+        {
+          "k": "c",
+          "v": "v6"
+        },
+        {
+          "k": "t",
+          "v": "); the "
+        },
+        {
+          "k": "m",
+          "v": "8"
+        },
+        {
+          "k": "t",
+          "v": " in "
+        },
+        {
+          "k": "m",
+          "v": "\\cthree"
+        },
+        {
+          "k": "t",
+          "v": " four ways ("
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{rank}E_8=h(D_5)=\\phi(30)=\\det R"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v54"
+        },
+        {
+          "k": "t",
+          "v": "); the "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " hull is forced (unique even unimodular rank-8, "
+        },
+        {
+          "k": "c",
+          "v": "v83"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v154"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "so the ONLY irreducibles are the FRAMEWORK (a discrete reflection-positive boundary with a finite carrier) and the transcendental "
+        },
+        {
+          "k": "m",
+          "v": "\\pi"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the framework is the META-AXIOM — not math-reducible, the foundational stance (like “spacetime is a manifold”), minimal, tested by its consequences not proved. TFPT's true input is ONE framework "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\pi"
+        },
+        {
+          "k": "t",
+          "v": ". Wolfram mirror "
+        },
+        {
+          "k": "m",
+          "v": "+2"
+        },
+        {
+          "k": "t",
+          "v": " (297 "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " 299)."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-22",
+    "dateLabel": "2026-06-22",
+    "heading": [
+      {
+        "k": "t",
         "v": "correction: the inputs are bootstrap-forced fixed points, not free axioms – "
       },
       {

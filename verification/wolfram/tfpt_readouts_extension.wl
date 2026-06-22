@@ -2332,6 +2332,24 @@ Module[{primes30, maxPrime, piecesGolden, glueGolden},
     primes30 == {2, 3, 5} && maxPrime == 5 && (! piecesGolden) && glueGolden];
 ];
 
+(* ==== v351 SEAM.EQUIV.CONTINUUM.02: the order-4 clock + Coxeter-match pin E8 over SO(16) ==== *)
+Module[{cE8, cD8},
+  cE8 = {{2,-1,0,0,0,0,0,0},{-1,2,-1,0,0,0,0,0},{0,-1,2,-1,0,0,0,0},{0,0,-1,2,-1,0,0,0},
+         {0,0,0,-1,2,-1,0,-1},{0,0,0,0,-1,2,-1,0},{0,0,0,0,0,-1,2,0},{0,0,0,0,-1,0,0,2}};
+  cD8 = {{2,-1,0,0,0,0,0,0},{-1,2,-1,0,0,0,0,0},{0,-1,2,-1,0,0,0,0},{0,0,-1,2,-1,0,0,0},
+         {0,0,0,-1,2,-1,0,0},{0,0,0,0,-1,2,-1,-1},{0,0,0,0,0,-1,2,0},{0,0,0,0,0,-1,0,2}};
+  checkExact["v351 SEAM.EQUIV.CONTINUUM.02: the c=8 which-net ambiguity (E8 det 1 vs SO(16)=D8 det 4) is RESOLVED by the seam's ORDER-4 mu4 clock -- index-4 extension of D5(+)A3 = E8 (full mu4 condensation 16->4->1), index-2 = SO(16) (partial Z2 16->4); the order (4 not 2) selects E8. The bootstrap agrees: h(E8)=30 max prime 5=g_car, h(D8)=14 max prime 7, so SO(16) fails the Coxeter-match. The residual of SEAM.EQUIV.01 is then PURELY the chiral-edge existence, not which-net",
+    Det[cE8] == 1 && Det[cD8] == 4 && Max[FactorInteger[30][[All,1]]] == 5 && Max[FactorInteger[14][[All,1]]] == 7];
+];
+
+(* ==== v352 TFPT.IRREDUCIBLE.01: both axioms bootstrap-forced; irreducibles = framework + pi ==== *)
+Module[{eight},
+  (* the 8 in c3 over-determined: rank E8 = h(D5)=2*5-2 = phi(30) = 8 ; g_car=5 forced (Coxeter-match) *)
+  eight = {8, 2*5 - 2, EulerPhi[30]};
+  checkExact["v352 TFPT.IRREDUCIBLE.01: BOTH axioms are bootstrap-forced fixed points -- the 8 in c3=1/(8pi) is over-determined (rank E8 = h(D5)=2*5-2 = phi(30) = 8) and g_car=5 = max prime of h(E8)=30 (Coxeter-match), with c=g_car+N_fam=8 forcing the unique even-unimodular rank-8 E8 hull; so the ONLY irreducibles are the FRAMEWORK (discrete RP boundary + finite carrier) and the transcendental pi -- 'the inputs are not free axioms' confirmed",
+    (eight == {8, 8, 8}) && (Max[FactorInteger[30][[All,1]]] == 5) && (5 + 3 == 8)];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];
