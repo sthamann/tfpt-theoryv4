@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`351` registered scripts · `409` ledger claims · `10` clusters.
+`352` registered scripts · `410` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -420,7 +420,7 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
 - **v343_four_routes_analysis** [E/C/O] `FOUR.ROUTES.01` — The honest investigation of the four black-hole-birth solution routes (A finite causal diamond, B Carlip-Cardy near-horizon CFT, C modular/thermal flow, D self-reproduction attract
   - deps: v335_seam_equiv_unify, QG.AMB.01, v54, v190, v332, v334, v337, v239 · cited: origin theory
 
-### `registry` — Blind registry & red-team follow-ups (v84–v175)  (163 scripts)
+### `registry` — Blind registry & red-team follow-ups (v84–v175)  (164 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
 
 - **v84_frozen_registry** [E] `REG.FREEZE.01` — blind-prediction registry FROZEN 2026-06-09: every dimensionless prediction of record at 25 digits, re-derived from the two axioms each run (formula↔value lock); exactly ONE θ₁₂ pr
@@ -749,6 +749,8 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
   - deps: v23_anchor_generator, v84_frozen_registry, v62_data_scorecard · cited: 5 redteam
 - **v310_carrier_sm_anomaly** [E/C/O] `CAR.SM.ANOM.01` — TOE attack 3 -- the carrier half-spinor IS one anomaly-free SM generation with the SM RG: 16=Lambda^even(C^5)=1+10+5 -> SU(5)<SO(10) as 10+5bar+1 = one generation; gauge-anomaly-fr
   - deps: v2_carrier_pascal, v273_eg_gauge_running, v273, v159 · cited: research contracts
+- **v354_e8_reverse_audit** [E/O] `E8.REVERSE.AUDIT.01` — The REVERSE numerology audit + what the golden ratio means. The forward rule (v305) is one-directional (every readout must map onto E8); the reverse question: how much E8 structure
+  - deps: WITNESS.INDEP.01, v305, v100, v312, v348, v54 · cited: 5 redteam
 
 ## Supersede map — do NOT reuse the left-hand claim
 
@@ -766,13 +768,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `E8.GLU.01`×15, `v56`×15, `HOR.NARIAI.01`×15, `v76`×13, `REG.FREEZE.01`×12, `AX.P1.01`×11, `SEAM.EQUIV.01`×11, `QGEO.SUBPRIN.01`×11, `FLAV.KQ.01`×10, `v216`×10, `QGEO.PILLOW.01`×10, `QG.AMB.01`×9, `v3`×9, `v55`×9
+**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `E8.GLU.01`×15, `v56`×15, `HOR.NARIAI.01`×15, `v76`×13, `REG.FREEZE.01`×12, `AX.P1.01`×11, `SEAM.EQUIV.01`×11, `QGEO.SUBPRIN.01`×11, `FLAV.KQ.01`×10, `v216`×10, `QGEO.PILLOW.01`×10, `QG.AMB.01`×9, `v3`×9, `v54`×9
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v342_em_ward_heatkernel** — `EM.WARD.02`
 - **v343_four_routes_analysis** — `FOUR.ROUTES.01`
 - **v344_detk_synthesis** — `SEAM.DETK.01`
 - **v345_hypergraph_homotopy** — `SEAM.DETK.02`
@@ -784,4 +785,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v351_continuum_realisation_sharpened** — `SEAM.EQUIV.CONTINUUM.02`
 - **v352_framework_irreducible** — `TFPT.IRREDUCIBLE.01`
 - **v353_selfloop_capstone** — `TFPT.SELFLOOP.01`
+- **v354_e8_reverse_audit** — `E8.REVERSE.AUDIT.01`
 

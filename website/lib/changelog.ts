@@ -47,6 +47,377 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "the REVERSE numerology audit, and what the golden ratio means: of "
+      },
+      {
+        "k": "m",
+        "v": "E_8"
+      },
+      {
+        "k": "t",
+        "v": "'s 8 Casimir invariants only "
+      },
+      {
+        "k": "m",
+        "v": "3"
+      },
+      {
+        "k": "t",
+        "v": " are load-bearing and "
+      },
+      {
+        "k": "m",
+        "v": "5"
+      },
+      {
+        "k": "t",
+        "v": " are unmapped (the hull overhead); the golden ratio is UNMAPPED structure, so it cannot be numerology: "
+      },
+      {
+        "k": "c",
+        "v": "v354"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v354"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "E8.REVERSE.AUDIT.01"
+            },
+            {
+              "k": "t",
+              "v": ") — the reverse complement of "
+            },
+            {
+              "k": "c",
+              "v": "v305"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " TFPT's forward discipline ("
+        },
+        {
+          "k": "c",
+          "v": "v305"
+        },
+        {
+          "k": "t",
+          "v": ") is one-directional: every physical READOUT must map onto an "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " structure (anti-fitting). The sharp adversarial question runs the OTHER way — how much "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " structure maps onto NOTHING, and is the recurring golden ratio numerology? "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "THE REVERSE AUDIT: of "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": "'s eight Casimir invariant degrees "
+        },
+        {
+          "k": "m",
+          "v": "\\{2,8,12,14,18,20,24,30\\}"
+        },
+        {
+          "k": "t",
+          "v": " (exponents "
+        },
+        {
+          "k": "m",
+          "v": "+1"
+        },
+        {
+          "k": "t",
+          "v": "), exactly THREE feed a readout — "
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": " (metric), "
+        },
+        {
+          "k": "m",
+          "v": "8"
+        },
+        {
+          "k": "t",
+          "v": " (rank "
+        },
+        {
+          "k": "m",
+          "v": "\\to\\cthree\n{=}1/(8\\pi)"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "30"
+        },
+        {
+          "k": "t",
+          "v": " (Coxeter "
+        },
+        {
+          "k": "m",
+          "v": "\\to\\gcar{=}5"
+        },
+        {
+          "k": "t",
+          "v": " and the order-"
+        },
+        {
+          "k": "m",
+          "v": "30"
+        },
+        {
+          "k": "t",
+          "v": " cycle) — and FIVE are UNMAPPED "
+        },
+        {
+          "k": "m",
+          "v": "\\{12,14,18,20,24\\}"
+        },
+        {
+          "k": "t",
+          "v": "; so "
+        },
+        {
+          "k": "m",
+          "v": "3/8"
+        },
+        {
+          "k": "t",
+          "v": " are load-bearing, "
+        },
+        {
+          "k": "m",
+          "v": "5/8"
+        },
+        {
+          "k": "t",
+          "v": " are not. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "ECONOMY, NOT PROMISCUITY: a small fixed set ("
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{rank}8"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "h{=}30"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\det K{=}1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "D_5{\\oplus}A_3"
+        },
+        {
+          "k": "t",
+          "v": ", the "
+        },
+        {
+          "k": "m",
+          "v": "16"
+        },
+        {
+          "k": "t",
+          "v": " half-spinor) generates the ENTIRE readout set, and the higher Casimirs are never reached into to fit — a numerological use would be PROMISCUOUS (mine the rich structure), TFPT is ECONOMICAL (few invariants, many readouts) and leaves most of "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " untouched, the anti-numerology signature being precisely the large unused remainder. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "THE GOLDEN RATIO IS UNMAPPED "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " NOT NUMEROLOGY: "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi=2\\cos\n(\\pi/5)"
+        },
+        {
+          "k": "t",
+          "v": " appears only in internal structure (the affine-"
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " attractor eigenvalue "
+        },
+        {
+          "k": "c",
+          "v": "v312"
+        },
+        {
+          "k": "t",
+          "v": ", the icosian lattice "
+        },
+        {
+          "k": "c",
+          "v": "v348"
+        },
+        {
+          "k": "t",
+          "v": ") and in NO physical readout; numerology means a number FITTED to an observation, "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi"
+        },
+        {
+          "k": "t",
+          "v": " is fitted to nothing — it is the algebraic signature of the "
+        },
+        {
+          "k": "m",
+          "v": "5"
+        },
+        {
+          "k": "t",
+          "v": "-fold ("
+        },
+        {
+          "k": "m",
+          "v": "h{=}30{=}2\\cdot3\\cdot5"
+        },
+        {
+          "k": "t",
+          "v": "), the carrier announcing it is icosahedral. "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the "
+        },
+        {
+          "k": "m",
+          "v": "5/8"
+        },
+        {
+          "k": "t",
+          "v": " unmapped is the HULL OVERHEAD ("
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " is the minimal even-unimodular hull, not the world group); where a future higher-invariant readout could live, or genuine over-capacity — stated plainly, not hidden. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_5_redteam"
+        },
+        {
+          "k": "t",
+          "v": "; mirrored in Wolfram ("
+        },
+        {
+          "k": "c",
+          "v": "300/300"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-22",
+    "dateLabel": "2026-06-22",
+    "heading": [
+      {
+        "k": "t",
         "v": "the bird's-eye rethink: TFPT is a unique self-consistent LOOP with ZERO free dials, not a linear axiom system; "
       },
       {

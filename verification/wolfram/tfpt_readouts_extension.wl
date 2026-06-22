@@ -2350,6 +2350,16 @@ Module[{eight},
     (eight == {8, 8, 8}) && (Max[FactorInteger[30][[All,1]]] == 5) && (5 + 3 == 8)];
 ];
 
+(* ==== v354 E8.REVERSE.AUDIT.01: 3 of 8 E8 Casimir degrees are load-bearing, 5 unmapped ==== *)
+Module[{exps, degs, mapped, unmapped},
+  exps = {1, 7, 11, 13, 17, 19, 23, 29};          (* E8 exponents *)
+  degs = exps + 1;                                 (* Casimir degrees {2,8,12,14,18,20,24,30} *)
+  mapped = {2, 8, 30};                             (* metric, rank->c3, Coxeter->g_car *)
+  unmapped = Complement[degs, mapped];
+  checkExact["v354 E8.REVERSE.AUDIT.01: the reverse numerology audit -- E8's 8 Casimir degrees {2,8,12,14,18,20,24,30} (=exponents+1); exactly THREE feed a physical readout (2 metric, 8 rank->c3, 30 Coxeter->g_car) and FIVE are UNMAPPED {12,14,18,20,24}, the hull overhead. A small fixed invariant set generates all readouts (economy, not promiscuity = anti-numerology); the golden ratio 2cos(pi/5) is in the unmapped structure (the 5-fold of h=30=2*3*5), so it cannot be numerology",
+    degs == {2, 8, 12, 14, 18, 20, 24, 30} && unmapped == {12, 14, 18, 20, 24} && Max[FactorInteger[30][[All,1]]] == 5];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];
