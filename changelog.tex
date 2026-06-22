@@ -59,6 +59,23 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-22 (the honest test -- does the raw seam carry $\varphi$? -- answer NO: the bare carrier gives $\sqrt2$, golden is the icosahedral input; the keystone reduces to ``is $g_{\mathrm{car}}{=}5$ a pentagon or a count?'': \texttt{v349})}
+\begin{itemize}
+\item \textbf{\texttt{v349} (\texttt{SEAM.EQUIV.GOLDEN.01}).} The honest, computed test of the \vref{v348}
+question, and a clarifying NEGATIVE: the raw seam does \emph{not} carry the golden ratio. \mE\ the golden ratio
+$2\cos(\pi/5)$ is the signature of a $5$-fold rotation ($5\mid h$); the carrier $D_5$ has $h{=}8$ (eigenvalue
+$\sqrt2$) and $A_3$ has $h{=}4$ -- no 5-fold; the dynamical data (cusp $\{0,1/3,2/3\}$, recovery $(2/3)^6$, seed
+$\varphi_0$) are rational/transcendental. \mE\ $5\mid h$ holds only for $A_4{=}SU(5)$ ($h{=}5$), $H_3$ ($h{=}10$),
+$E_8$ ($h{=}30$) -- the output/icosahedral side, so $\varphi$ is the icosahedral INPUT. \mE\ $\varphi$ alone would
+not suffice ($2I\neq C_5\times\mu_4$, $20\neq120$). \mO\ the resolution: the keystone reduces to one question --
+is $\gcar{=}5$ a PENTAGON (a $5$-fold rotation $\Rightarrow$ golden $\Rightarrow$ icosahedral $2I=E_8$) or just a
+COUNT (the rank of $D_5\Rightarrow\sqrt2$)? The ``absurdly simple solution'' is real but is a \emph{reading} of
+axiom~P2 (the golden ratio is the pentagon content of $\gcar{=}5$, not derivable from $\gcar{=}5$-as-a-count); there
+is no hidden $\varphi$. L2 is foundational: P2-as-pentagon closes it (mode~C), else a rigidity theorem must produce
+the 5-fold (mode~B); not closed. Wolfram mirror $+1$ (295 $\to$ 296). A NEGATIVE/clarification; prevents a false
+closure.
+\end{itemize}
+
 \subsection*{2026-06-22 (Route B carried out: rigidity $+$ the icosian-ring identity reduce the whole keystone to ONE question -- does the raw seam carry the golden ratio? -- the simplest form of L2: \texttt{v348})}
 \begin{itemize}
 \item \textbf{\texttt{v348} (\texttt{SEAM.EQUIV.RIGID.01}).} Executes the rigidity route (mode B of \vref{v347}) and

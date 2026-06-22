@@ -47,6 +47,395 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "the honest test – does the raw seam carry "
+      },
+      {
+        "k": "m",
+        "v": "\\varphi"
+      },
+      {
+        "k": "t",
+        "v": "? – answer NO: the bare carrier gives "
+      },
+      {
+        "k": "m",
+        "v": "\\sqrt2"
+      },
+      {
+        "k": "t",
+        "v": ", golden is the icosahedral input; the keystone reduces to “is "
+      },
+      {
+        "k": "m",
+        "v": "g_{\\mathrm{car}}{=}5"
+      },
+      {
+        "k": "t",
+        "v": " a pentagon or a count?”: "
+      },
+      {
+        "k": "c",
+        "v": "v349"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v349"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EQUIV.GOLDEN.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The honest, computed test of the "
+        },
+        {
+          "k": "c",
+          "v": "v348"
+        },
+        {
+          "k": "t",
+          "v": " question, and a clarifying NEGATIVE: the raw seam does "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " carry the golden ratio. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the golden ratio "
+        },
+        {
+          "k": "m",
+          "v": "2\\cos(\\pi/5)"
+        },
+        {
+          "k": "t",
+          "v": " is the signature of a "
+        },
+        {
+          "k": "m",
+          "v": "5"
+        },
+        {
+          "k": "t",
+          "v": "-fold rotation ("
+        },
+        {
+          "k": "m",
+          "v": "5\\mid h"
+        },
+        {
+          "k": "t",
+          "v": "); the carrier "
+        },
+        {
+          "k": "m",
+          "v": "D_5"
+        },
+        {
+          "k": "t",
+          "v": " has "
+        },
+        {
+          "k": "m",
+          "v": "h{=}8"
+        },
+        {
+          "k": "t",
+          "v": " (eigenvalue "
+        },
+        {
+          "k": "m",
+          "v": "\\sqrt2"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "m",
+          "v": "A_3"
+        },
+        {
+          "k": "t",
+          "v": " has "
+        },
+        {
+          "k": "m",
+          "v": "h{=}4"
+        },
+        {
+          "k": "t",
+          "v": " – no 5-fold; the dynamical data (cusp "
+        },
+        {
+          "k": "m",
+          "v": "\\{0,1/3,2/3\\}"
+        },
+        {
+          "k": "t",
+          "v": ", recovery "
+        },
+        {
+          "k": "m",
+          "v": "(2/3)^6"
+        },
+        {
+          "k": "t",
+          "v": ", seed "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi_0"
+        },
+        {
+          "k": "t",
+          "v": ") are rational/transcendental. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "5\\mid h"
+        },
+        {
+          "k": "t",
+          "v": " holds only for "
+        },
+        {
+          "k": "m",
+          "v": "A_4{=}SU(5)"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "h{=}5"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "H_3"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "h{=}10"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "h{=}30"
+        },
+        {
+          "k": "t",
+          "v": ") – the output/icosahedral side, so "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi"
+        },
+        {
+          "k": "t",
+          "v": " is the icosahedral INPUT. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "\\varphi"
+        },
+        {
+          "k": "t",
+          "v": " alone would not suffice ("
+        },
+        {
+          "k": "m",
+          "v": "2I\\neq C_5\\times\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "20\\neq120"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the resolution: the keystone reduces to one question – is "
+        },
+        {
+          "k": "m",
+          "v": "\\gcar{=}5"
+        },
+        {
+          "k": "t",
+          "v": " a PENTAGON (a "
+        },
+        {
+          "k": "m",
+          "v": "5"
+        },
+        {
+          "k": "t",
+          "v": "-fold rotation "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " golden "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " icosahedral "
+        },
+        {
+          "k": "m",
+          "v": "2I=E_8"
+        },
+        {
+          "k": "t",
+          "v": ") or just a COUNT (the rank of "
+        },
+        {
+          "k": "m",
+          "v": "D_5\\Rightarrow\\sqrt2"
+        },
+        {
+          "k": "t",
+          "v": ")? The “absurdly simple solution” is real but is a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "reading"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " of axiom P2 (the golden ratio is the pentagon content of "
+        },
+        {
+          "k": "m",
+          "v": "\\gcar{=}5"
+        },
+        {
+          "k": "t",
+          "v": ", not derivable from "
+        },
+        {
+          "k": "m",
+          "v": "\\gcar{=}5"
+        },
+        {
+          "k": "t",
+          "v": "-as-a-count); there is no hidden "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi"
+        },
+        {
+          "k": "t",
+          "v": ". L2 is foundational: P2-as-pentagon closes it (mode C), else a rigidity theorem must produce the 5-fold (mode B); not closed. Wolfram mirror "
+        },
+        {
+          "k": "m",
+          "v": "+1"
+        },
+        {
+          "k": "t",
+          "v": " (295 "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " 296). A NEGATIVE/clarification; prevents a false closure."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-22",
+    "dateLabel": "2026-06-22",
+    "heading": [
+      {
+        "k": "t",
         "v": "Route B carried out: rigidity "
       },
       {

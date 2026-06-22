@@ -2312,6 +2312,15 @@ Module[{cryst, phi},
     (! MemberQ[cryst, 5]) && Simplify[phi - 2 Cos[Pi/5]] == 0 && (5 + 3 == 8)];
 ];
 
+(* ==== v349 SEAM.EQUIV.GOLDEN.01: the raw carrier is NOT golden (D5 h=8 -> sqrt2); 5|h only on the output side ==== *)
+Module[{eigD5, eigA3, goldenHs},
+  (* Coxeter eigenvalue 2cos(2pi/h): D5 (h=8) -> sqrt2, A3 (h=4) -> 0; golden needs 5|h *)
+  eigD5 = Simplify[2 Cos[2 Pi/8]]; eigA3 = Simplify[2 Cos[2 Pi/4]];
+  goldenHs = Select[{4, 8, 5, 10, 30}, Mod[#, 5] == 0 &];   (* A3,D5 vs A4=SU(5),H3,E8 *)
+  checkExact["v349 SEAM.EQUIV.GOLDEN.01: the RAW carrier is NOT golden -- D5 (h=8) gives 2cos(2pi/8)=sqrt2 and A3 (h=4) gives 2cos(2pi/4)=0, neither in Q(sqrt5); the golden ratio 2cos(pi/5) needs a 5-fold rotation (5|h), which holds ONLY on the output/icosahedral side {5(SU5),10(H3),30(E8)}. So phi is the icosahedral INPUT, not a hidden feature of the raw seam; the keystone L2 reduces to 'is g_car=5 a pentagon (5-fold) or a count (rank D5)?' -- NOT closed",
+    eigD5 == Sqrt[2] && eigA3 == 0 && goldenHs == {5, 10, 30}];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

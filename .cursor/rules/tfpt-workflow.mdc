@@ -97,6 +97,15 @@ and the `GATE.*` rows in the ledger.
 
 ## Workflow for a NEW finding (follow in order)
 
+> **⚠️ ALWAYS SUMMARISE THE CONCRETE RESULTS FIRST — THEN UPDATE.**
+> **After running ANY script or completing ANY step** (a `vN_*.py` run, `run_all.py`,
+> the Wolfram path, an audit, a compile, a numeric experiment), **STOP and write a short,
+> concrete summary of what that execution ACTUALLY produced** — the exact numbers/
+> identities it printed, pass/fail counts, what changed vs. what you expected — **BEFORE
+> you touch a single paper, ledger, changelog, website or manifest surface.** Never start
+> "updating everything" from memory, assumption, or what the result *should* have been:
+> update surfaces ONLY from the verified result you just reported. **No summary ⇒ no edits.**
+
 1. **Explore** computationally first (throwaway shell snippet) to confirm the number/identity.
 2. **Write `verification/vN_<name>.py`** — derive from `{c3, g_car}` (import from
    `tfpt_constants`), use `check()/summary()/reset()`, exact `sympy` where possible.
