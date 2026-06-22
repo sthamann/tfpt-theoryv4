@@ -47,6 +47,730 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "the forward kill-test board: the decisive upcoming measurements ranked, each locked to a freeze row — incl. the new Galois-CP relation: "
+      },
+      {
+        "k": "c",
+        "v": "v321"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v321_killtest_board.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "KILL.BOARD.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The forward companion to "
+        },
+        {
+          "k": "c",
+          "v": "v307"
+        },
+        {
+          "k": "t",
+          "v": " (the current-data board): the decisive "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "upcoming"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " measurements, ranked and each locked to a "
+        },
+        {
+          "k": "c",
+          "v": "freeze_file.csv"
+        },
+        {
+          "k": "t",
+          "v": " kill row – #1 JUNO "
+        },
+        {
+          "k": "m",
+          "v": "\\sin^2\\theta_{12}{=}0.306747"
+        },
+        {
+          "k": "t",
+          "v": " (fastest), #2 CMB-S4/LiteBIRD "
+        },
+        {
+          "k": "m",
+          "v": "r"
+        },
+        {
+          "k": "t",
+          "v": " (kill "
+        },
+        {
+          "k": "m",
+          "v": "r{>}0.01"
+        },
+        {
+          "k": "t",
+          "v": "), #3 DESI/Euclid "
+        },
+        {
+          "k": "m",
+          "v": "w"
+        },
+        {
+          "k": "t",
+          "v": " (kill "
+        },
+        {
+          "k": "m",
+          "v": "w{\\ne}{-}1"
+        },
+        {
+          "k": "t",
+          "v": "), #4 DUNE/Hyper-K "
+        },
+        {
+          "k": "m",
+          "v": "\\delta_{\\mathrm{PMNS}}{=}240^\\circ"
+        },
+        {
+          "k": "t",
+          "v": " (the new "
+        },
+        {
+          "k": "c",
+          "v": "v320"
+        },
+        {
+          "k": "t",
+          "v": " Galois-CP relation), #5 DUNE/LEGEND/nEXO ordering"
+        },
+        {
+          "k": "m",
+          "v": "+m_{\\beta\\beta}"
+        },
+        {
+          "k": "t",
+          "v": ", #6 PSI n2EDM, #7 JUNO "
+        },
+        {
+          "k": "m",
+          "v": "\\sin^2\\theta_{13}"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\sim2\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " now), #8 LiteBIRD "
+        },
+        {
+          "k": "m",
+          "v": "\\beta"
+        },
+        {
+          "k": "t",
+          "v": ". A forward decision ledger (publicly-stated experimental reach), complementing "
+        },
+        {
+          "k": "c",
+          "v": "v307"
+        },
+        {
+          "k": "t",
+          "v": "; no new physics. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": "; ledger row "
+        },
+        {
+          "k": "c",
+          "v": "KILL.BOARD.01"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-22",
+    "dateLabel": "2026-06-22",
+    "heading": [
+      {
+        "k": "t",
+        "v": "Lean: the "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.EQUIV.01"
+      },
+      {
+        "k": "t",
+        "v": " composition chain formalised — the keystone residual machine-pinned to the named cited steps: "
+      },
+      {
+        "k": "c",
+        "v": "FORM.SEAMEQUIV.01"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "SeamEquivChain.lean"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "FORM.SEAMEQUIV.01"
+            },
+            {
+              "k": "t",
+              "v": ", Lean 4, "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "s",
+              "v": "O"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " A Lean 4 mirror of the "
+        },
+        {
+          "k": "c",
+          "v": "v308"
+        },
+        {
+          "k": "t",
+          "v": " closing chain: the four nodes "
+        },
+        {
+          "k": "m",
+          "v": "\\textsf{GapPositive}\\to\\textsf{InvertibleSRE}\\to\\textsf{HolomorphicC8}\n  \\to\\textsf{SeamIsE8}"
+        },
+        {
+          "k": "t",
+          "v": " assembled as a well-typed composition theorem "
+        },
+        {
+          "k": "c",
+          "v": "seamEquivChain"
+        },
+        {
+          "k": "t",
+          "v": ", with the three cited literature steps (Kitaev free-fermion invertibility; Müger / Kawahigashi–Longo–Müger holomorphy; Conway–Sloane "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " uniqueness) as named "
+        },
+        {
+          "k": "c",
+          "v": "axiom"
+        },
+        {
+          "k": "t",
+          "v": "s and the carrier recovery gap (the OS step) as the single open input. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "c",
+          "v": "#print axioms seamEquivChain"
+        },
+        {
+          "k": "t",
+          "v": " confirms the residual is exactly those named steps "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "recovery_gap"
+        },
+        {
+          "k": "t",
+          "v": " (no hidden assumption); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "a "
+        },
+        {
+          "k": "c",
+          "v": "decide"
+        },
+        {
+          "k": "t",
+          "v": "-proven discriminator "
+        },
+        {
+          "k": "m",
+          "v": "\\textsf{primariesE8}=1\\ne\\textsf{primariesD8}=4"
+        },
+        {
+          "k": "t",
+          "v": " (the "
+        },
+        {
+          "k": "m",
+          "v": "|\\det\\mathrm{Cartan}|"
+        },
+        {
+          "k": "t",
+          "v": " that separates the holomorphic "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " from the same-"
+        },
+        {
+          "k": "m",
+          "v": "c"
+        },
+        {
+          "k": "t",
+          "v": " rival "
+        },
+        {
+          "k": "m",
+          "v": "D_8{=}SO(16)"
+        },
+        {
+          "k": "t",
+          "v": "). Built end-to-end ("
+        },
+        {
+          "k": "c",
+          "v": "lake build"
+        },
+        {
+          "k": "t",
+          "v": ", 3357 jobs) on Lean v4.29.1 "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " Mathlib. "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "The value is the machine-checked composition "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " axiom audit (pinning the keystone residual), "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " a from-scratch proof — it does NOT close "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": ". Ledger row "
+        },
+        {
+          "k": "c",
+          "v": "FORM.SEAMEQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": "; mirrors "
+        },
+        {
+          "k": "c",
+          "v": "v308"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-22",
+    "dateLabel": "2026-06-22",
+    "heading": [
+      {
+        "k": "t",
+        "v": "a NEW falsifiable prediction from the Galois structure: the two CP phases are locked, "
+      },
+      {
+        "k": "m",
+        "v": "\\delta_{\\mathrm{PMNS}}=\\delta_{\\mathrm{CKM}}^{\\mathrm{lead}}+\\pi"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "c",
+        "v": "v320"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v320_galois_cp_relation.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "GALOIS.CP.PREDICT.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "s",
+              "v": "C"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "s",
+              "v": "X"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The "
+        },
+        {
+          "k": "c",
+          "v": "v316"
+        },
+        {
+          "k": "t",
+          "v": " follow-up turned into a testable cross-prediction. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "both leading CP phases are powers of the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " hexagonal unit "
+        },
+        {
+          "k": "m",
+          "v": "\\rho=\\zeta_6"
+        },
+        {
+          "k": "t",
+          "v": " of the family Galois factor: "
+        },
+        {
+          "k": "m",
+          "v": "\\delta_{\\mathrm{CKM}}^{\\mathrm{lead}}=\\arg\\rho=\\pi/3"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "60^\\circ"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "\\delta_{\\mathrm{PMNS}}=\\arg\\rho^4=4\\pi/3"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "240^\\circ"
+        },
+        {
+          "k": "t",
+          "v": "), and "
+        },
+        {
+          "k": "m",
+          "v": "\\rho^4=-\\rho"
+        },
+        {
+          "k": "t",
+          "v": " locks them as "
+        },
+        {
+          "k": "m",
+          "v": "\\delta_{\\mathrm{PMNS}}=\\delta_{\\mathrm{CKM}}^{\\mathrm{lead}}+\\pi"
+        },
+        {
+          "k": "t",
+          "v": " (the "
+        },
+        {
+          "k": "m",
+          "v": "\\Z_2"
+        },
+        {
+          "k": "t",
+          "v": " sheet flip); "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "this upgrades the previously assigned "
+        },
+        {
+          "k": "m",
+          "v": "\\delta_{\\mathrm{PMNS}}=240^\\circ"
+        },
+        {
+          "k": "t",
+          "v": " to a Galois-forced relation to the measured quark phase (the quark and lepton leading CP phases are not independent); "
+        },
+        {
+          "k": "s",
+          "v": "X"
+        },
+        {
+          "k": "t",
+          "v": "kill test: a "
+        },
+        {
+          "k": "m",
+          "v": "\\delta_{\\mathrm{PMNS}}"
+        },
+        {
+          "k": "t",
+          "v": " robustly incompatible with "
+        },
+        {
+          "k": "m",
+          "v": "240^\\circ"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": ">3\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " at DUNE/Hyper-K/JUNO) falsifies the Galois-CP organisation; "
+        },
+        {
+          "k": "m",
+          "v": "240^\\circ"
+        },
+        {
+          "k": "t",
+          "v": " is currently within the broad NuFIT 6.0 range. A genuine new falsifiable consequence of the "
+        },
+        {
+          "k": "c",
+          "v": "v313"
+        },
+        {
+          "k": "t",
+          "v": "–% "
+        },
+        {
+          "k": "c",
+          "v": "v319"
+        },
+        {
+          "k": "t",
+          "v": " arithmetic arc (also a "
+        },
+        {
+          "k": "c",
+          "v": "freeze_file.csv"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "cp_phase_relation"
+        },
+        {
+          "k": "t",
+          "v": " kill row). Cited in "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": "; ledger row "
+        },
+        {
+          "k": "c",
+          "v": "GALOIS.CP.PREDICT.01"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-22",
+    "dateLabel": "2026-06-22",
+    "heading": [
+      {
+        "k": "t",
         "v": "the translation clock: the discrete"
       },
       {

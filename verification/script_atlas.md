@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`317` registered scripts · `371` ledger claims · `10` clusters.
+`319` registered scripts · `374` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -206,7 +206,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v75_upoint_to_vgeo** [E/O] `FLAV.UPOINT.01` — Gate 1 complete: U_point → v_geo (ratios + Grand Mass Volume); same anchor as 1/G
   - deps: v71_simple_r_bridge, v20_lepton_c_derivation, v46_grand_mass_volume, v68 · cited: origin theory, research contracts
 
-### `frontier` — Open gate (G_metric) & the frontier  (71 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (73 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -333,8 +333,8 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: QG.AMB.01, v259, v278, rt_F · cited: 5 redteam
 - **v307_data_watchdog** [E/X] `DATA.WATCHDOG.01` — Data watchdog: the operational decision pipeline over the frozen registry (v84). Classifies all 20 entries (16 predictions + 2 assigned textures + 2 bands) PASS/WATCH/TENSION/KILL 
   - deps: v84_frozen_registry, v62_data_scorecard · cited: origin theory
-- **v308_seam_equiv_chain** [E/O] `SEAM.EQUIV.CHAIN.01` — TOE attack 1 -- the SEAM.EQUIV.01 keystone as a composition certificate: the v297 stack as ONE well-typed chain gap>0 -> invertible (Kitaev) -> holomorphic c=8 (Mueger/KLM) -> (E8)
-  - deps: v286_seam_equivalence_contract, v302_seam_gap, v297, v301, v302 · cited: research contracts
+- **v308_seam_equiv_chain** [E/O] `SEAM.EQUIV.CHAIN.01, FORM.SEAMEQUIV.01` — TOE attack 1 -- the SEAM.EQUIV.01 keystone as a composition certificate: the v297 stack as ONE well-typed chain gap>0 -> invertible (Kitaev) -> holomorphic c=8 (Mueger/KLM) -> (E8)
+  - deps: v286_seam_equivalence_contract, v302_seam_gap, v297, v301, v302, v308_seam_equiv_chain · cited: research contracts
 - **v309_modular_bedrock** [E/O] `QGEO.MODHAM.01` — TOE attack 2 -- the bedrock omega o rho = omega via an explicit modular Hamiltonian, non-circular: marks=4 from Gauss-Bonnet (v216) + the order-4 clock from cross-ratio 2 (v214) =>
   - deps: v181_clock_is_conformal_symmetry, v198, v210, v214, v216 · cited: research contracts
 - **v311_gap_decoupled_measure** [E/C/O] `QGAMB.CLUSTER.01` — TOE attack 4 -- the physical QG measure as a gap-decoupled, exponentially-clustering object: the transfer spectrum {1,(2/3)^6,(1/3)^6} gives geometric clustering at rate (2/3)^6, c
@@ -351,6 +351,10 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v315_coxeter_coupling, v233_cp_triality_phase, v315, v231, v233 · cited: origin theory
 - **v317_galois_family** [E/C] `GALOIS.FAMILY.01` — Are the 3 generations a mu3/Galois orbit? Yes (mu3), refined 1+2 by Galois (v316 follow-up). The 3 cusp weights {0,1/3,2/3} (Spec(Q+)={1,2,3}=A3 exponents) map under w->e^{2pi i w}
   - deps: v316_galois_readout, v315_coxeter_coupling, v316, v315, v56 · cited: origin theory
+- **v320_galois_cp_relation** [E/C/X] `GALOIS.CP.PREDICT.01` — A NEW falsifiable prediction from the Galois structure: the two CP phases are locked, delta_PMNS = delta_CKM,lead + pi. Both phases are powers of one hexagonal unit rho=zeta_6 (v31
+  - deps: v316_galois_readout, v318_arithmetic_capstone, v316, v231, v233 · cited: origin theory
+- **v321_killtest_board** [E/C/X] `KILL.BOARD.01` — The forward kill-test board: the decisive upcoming measurements, ranked (forward companion to v307). Each entry is locked to a freeze_file.csv kill row: #1 JUNO sin^2 theta12=0.306
+  - deps: v307_data_watchdog, v320_galois_cp_relation, v84_frozen_registry · cited: origin theory
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (163 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -696,14 +700,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×23, `E8.GLU.01`×15, `HOR.NARIAI.01`×15, `AX.P1.01`×11, `v56`×11, `FLAV.KQ.01`×10, `REG.FREEZE.01`×10, `QGEO.PILLOW.01`×10, `CAR.SM.01`×9, `QGEO.SUBPRIN.01`×9, `GATE.QGEO.01`×8, `v37`×8, `v55`×8, `v68`×8, `GATE.METRIC.06`×8
+**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×23, `E8.GLU.01`×15, `HOR.NARIAI.01`×15, `AX.P1.01`×11, `v56`×11, `REG.FREEZE.01`×11, `FLAV.KQ.01`×10, `QGEO.PILLOW.01`×10, `CAR.SM.01`×9, `QGEO.SUBPRIN.01`×9, `SEAM.EQUIV.01`×9, `GATE.QGEO.01`×8, `v37`×8, `v55`×8, `v68`×8
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v308_seam_equiv_chain** — `SEAM.EQUIV.CHAIN.01`
-- **v309_modular_bedrock** — `QGEO.MODHAM.01`
 - **v310_carrier_sm_anomaly** — `CAR.SM.ANOM.01`
 - **v311_gap_decoupled_measure** — `QGAMB.CLUSTER.01`
 - **v312_hypergraph_substrate** — `HYP.INJECT.01`
@@ -714,4 +716,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v317_galois_family** — `GALOIS.FAMILY.01`
 - **v318_arithmetic_capstone** — `ARITH.CAPSTONE.01`
 - **v319_translation_clock** — `TRANSLATE.CLOCK.01`
+- **v320_galois_cp_relation** — `GALOIS.CP.PREDICT.01`
+- **v321_killtest_board** — `KILL.BOARD.01`
 

@@ -270,6 +270,72 @@ def fig_translation_clock():
     plt.close(fig)
 
 
+def fig_galois_cp_hexagon():
+    """The Galois CP lock: both CP phases are powers of one hexagonal unit rho=zeta_6,
+    delta_CKM,lead = arg(rho) = pi/3 and delta_PMNS = arg(rho^4) = 4pi/3, locked by
+    rho^4 = -rho to delta_PMNS = delta_CKM,lead + pi.  The 3 generations are the even
+    vertices (cube roots zeta_3); the family Galois Z2 (zeta_6 -> conj) = CP conjugation.
+    Backs v320_galois_cp_relation.py / v316 / v317."""
+    fig, ax = plt.subplots(figsize=(5.6, 5.6))
+    th = np.linspace(0, 2 * np.pi, 400)
+    ax.plot(np.cos(th), np.sin(th), color=C["gray"], lw=0.8, alpha=0.4)
+
+    # the six zeta_6 powers k=0..5 at angles 60*k deg
+    pts = {k: (np.cos(np.pi * k / 3), np.sin(np.pi * k / 3)) for k in range(6)}
+    # hexagon edges
+    hx = [pts[k][0] for k in range(6)] + [pts[0][0]]
+    hy = [pts[k][1] for k in range(6)] + [pts[0][1]]
+    ax.plot(hx, hy, color=C["gray"], lw=1.0, alpha=0.55)
+
+    # the 3 generations = cube roots zeta_3 = even vertices (0,2,4): inner triangle
+    tri = [pts[k] for k in (0, 2, 4)] + [pts[0]]
+    ax.plot([p[0] for p in tri], [p[1] for p in tri], color=C["green"],
+            lw=1.0, alpha=0.5, ls="--")
+    for k in (0, 2, 4):
+        ax.scatter([pts[k][0]], [pts[k][1]], s=70, color=C["green"], zorder=3,
+                   edgecolor="k", lw=0.4)
+
+    # the CP lock: rho^1 (CKM) and rho^4 (PMNS), diametrically opposite
+    ax.plot([pts[1][0], pts[4][0]], [pts[1][1], pts[4][1]],
+            color=C["red"], lw=2.0, zorder=2)
+    ax.scatter([pts[1][0]], [pts[1][1]], s=150, color=C["blue"], zorder=5,
+               edgecolor="k", lw=0.6)
+    ax.scatter([pts[4][0]], [pts[4][1]], s=150, color=C["red"], zorder=5,
+               edgecolor="k", lw=0.6)
+    ax.annotate(r"$\delta_{\rm CKM}^{\rm lead}=\arg\rho=\pi/3$ $(60^\circ)$",
+                pts[1], textcoords="offset points", xytext=(8, 8),
+                fontsize=8.5, color=C["blue"])
+    ax.annotate(r"$\delta_{\rm PMNS}=\arg\rho^4=4\pi/3$ $(240^\circ)$",
+                pts[4], textcoords="offset points", xytext=(-12, -16),
+                ha="right", fontsize=8.5, color=C["red"])
+    ax.annotate(r"$\rho^4=-\rho$:  $\delta_{\rm PMNS}=\delta_{\rm CKM}^{\rm lead}+\pi$",
+                (0, 0), textcoords="offset points", xytext=(0, 6), ha="center",
+                fontsize=8.6, color=C["red"], fontweight="bold")
+
+    # the sheet generator rho^3 = -1 and rho^0 = 1
+    for k, lab in ((0, r"$1$"), (3, r"$-1=\rho^3$ (sheet $\mathbb{Z}_2$)")):
+        ax.scatter([pts[k][0]], [pts[k][1]], s=55, color=C["gray"], zorder=3)
+    ax.annotate(r"$-1=\rho^3$ (sheet)", pts[3], textcoords="offset points",
+                xytext=(-8, 6), ha="right", fontsize=7.6, color=C["gray"])
+
+    ax.text(0, -1.34, r"generations $=$ cube roots $\{1,\zeta_3,\zeta_3^2\}$ "
+            r"(green); Galois $\mathbb{Z}_2:\zeta_6\!\mapsto\!\bar\zeta_6=$ CP conj.",
+            ha="center", fontsize=8.0, color=C["green"])
+
+    ax.set_aspect("equal")
+    ax.set_xlim(-1.5, 1.5)
+    ax.set_ylim(-1.5, 1.45)
+    ax.set_xticks([]); ax.set_yticks([])
+    for sp in ax.spines.values():
+        sp.set_visible(False)
+    ax.set_title(r"The Galois CP lock on $\rho=\zeta_6$: "
+                 r"$\delta_{\rm PMNS}=\delta_{\rm CKM}^{\rm lead}+\pi$", fontsize=10)
+    fig.tight_layout()
+    fig.savefig(os.path.join(OUT, "galois_cp_hexagon.pdf"))
+    fig.savefig(os.path.join(WEB, "galois_cp_hexagon.png"), dpi=150)
+    plt.close(fig)
+
+
 def fig_attractor():
     """Gapped boundary transport -> unique attractor; geometric rate (2/3)^6."""
     spec = np.array([1.0, (2 / 3) ** 6, (1 / 3) ** 6])
@@ -1081,6 +1147,7 @@ if __name__ == "__main__":
     fig_status_heatmap()
     fig_coxeter_circle()
     fig_translation_clock()
+    fig_galois_cp_hexagon()
     fig_attractor()
     fig_sds_cover()
     fig_nariai_entropy()

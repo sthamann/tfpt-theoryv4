@@ -905,7 +905,7 @@ export const papers: Paper[] = [
     title: "Origin Theory",
     subtitle: "The seam as a horizon, the cyclic compiler hull, and the parameter-free attractor",
     abstract:
-      "Why the two TFPT inputs leave no free dimensionless compiler dial beyond the anchor structure and π — the one dimensionful scale v_geo and the continuous transfer physics F_transfer remain explicitly typed, not derived. Two layers, kept strictly apart: a structural [E] core (exact, machine-checked identities) — the (g_car, N_fam) = (5,3) skeleton, the triply-forced 8 (geometry = lattice = gravity), the order-30 Coxeter cycle, one boundary transport for both flavor and horizon, and a gapped unique attractor — plus one honestly-typed [C] interpretation: the cyclic self-reproduction reading.",
+      "Why the two TFPT inputs leave no free dimensionless compiler dial beyond the anchor structure and π — the one dimensionful scale v_geo and the continuous transfer physics F_transfer remain explicitly typed, not derived. Two layers, kept strictly apart: a structural [E] core (exact, machine-checked identities) — the (g_car, N_fam) = (5,3) skeleton, the triply-forced 8 (geometry = lattice = gravity), the order-30 Coxeter cycle, one boundary transport for both flavor and horizon, and a gapped unique attractor — plus one honestly-typed [C] interpretation: the cyclic self-reproduction reading. A new cyclotomic capstone makes this precise: the entire SM structural sector (the three generations, the two CP phases, the orbit/hierarchy ordering) is the cyclotomic field ℚ(ζ₃₀) with Galois group μ₄ × ℤ₂ (degree 8 = rank E₈), forced by the atoms {2,3,5}; this yields zero dimensionless free parameters ({a, π, v_geo} is the complete input) and one new falsifiable prediction — the two CP phases are Galois-locked, δ_PMNS = δ_CKM,lead + π = 240°.",
     status: "synthesis",
     statusLabel: "Origin synthesis",
     pdf: "/papers/origin_theory.pdf",
@@ -970,6 +970,22 @@ export const papers: Paper[] = [
           "\\mathrm{rate}(n) = -p_2\\log\\!\\big(1-\\tfrac{n}{N_{\\mathrm{fam}}}\\big):\\;\\; \\mathrm{rate}(0)=0\\;(\\text{law}),\\quad (2/3)^6 = (|\\mathbb{Z}_2|/N_{\\mathrm{fam}})^{2N_{\\mathrm{fam}}}",
         ],
       },
+      {
+        title: "The cyclotomic capstone: the structural sector is ℚ(ζ₃₀) + Galois μ₄ × ℤ₂",
+        body: "Collecting the arithmetic arc: the affine-E₈ network spectrum carries the atoms {2,3,5} as the angles 2cos(π/k), with the golden ratio φ = 2cos(π/5) the g_car = 5 signature (v313). The static (carrier) and dynamic (recovery) data split by number field — ℚ(√5) for the 5-fold carrier vs ℚ for the rational family rates (v314) — and the order-30 Coxeter element couples them as the cyclotomic compositum ℚ(ζ₃₀), whose Galois group is exactly μ₄ × ℤ₂ of degree 8 = rank E₈ (v315). The whole SM structural sector lives there: the three generations are the μ₃ cube-root orbit (Galois-refined 1+2, the fixed one the attractor, v317) and the two CP phases the ζ₆ family-factor data (v316). The magnitude seed φ₀ itself reduces to a pure function of π, so there are zero dimensionless free parameters — {a, π, v_geo} is the complete input (v318). [E] arithmetic / [O] the raw-seam realisation stays open.",
+        formulas: [
+          "\\mathbb{Q}(\\zeta_{30}) = \\mathbb{Q}(\\zeta_5)\\cdot\\mathbb{Q}(\\zeta_3), \\quad \\mathrm{Gal} = (\\mathbb{Z}/5)^\\times\\times(\\mathbb{Z}/3)^\\times = \\mu_4\\times\\mathbb{Z}_2, \\quad [\\mathbb{Q}(\\zeta_{30}):\\mathbb{Q}] = 8 = \\operatorname{rank}E_8",
+          "\\varphi_0 = \\tfrac{|\\mu_4|}{N_{\\mathrm{fam}}}c_3 + \\Omega_{\\mathrm{adm}}c_3^4 = \\tfrac43 c_3 + 48 c_3^4 \\;\\Rightarrow\\; 0 \\text{ dimensionless free parameters}",
+        ],
+      },
+      {
+        title: "The Galois CP lock: a falsifiable prediction",
+        body: "The arithmetic is not only descriptive — it makes a testable cross-prediction. Both leading CP phases are powers of the one hexagonal unit ρ = ζ₆ of the family factor: δ_CKM,lead = arg(ρ) = π/3 (60°) and δ_PMNS = arg(ρ⁴) = 4π/3 (240°), and since ρ⁴ = −ρ they are locked, δ_PMNS = δ_CKM,lead + π. This upgrades the previously assigned δ_PMNS = 240° to a Galois-forced relation to the measured quark phase: the quark and lepton leading CP phases are not independent. Kill test: a δ_PMNS robustly incompatible with 240° (>3σ at DUNE/Hyper-K/JUNO) falsifies the whole Galois-CP organisation (v320). [E] relation / [C] phase identification / [X] kill test.",
+        formulas: [
+          "\\rho = \\zeta_6, \\quad \\delta_{\\mathrm{CKM}}^{\\mathrm{lead}} = \\arg\\rho = \\tfrac{\\pi}{3}, \\quad \\delta_{\\mathrm{PMNS}} = \\arg\\rho^4 = \\tfrac{4\\pi}{3}, \\quad \\rho^4 = -\\rho",
+          "\\boxed{\\;\\delta_{\\mathrm{PMNS}} = \\delta_{\\mathrm{CKM}}^{\\mathrm{lead}} + \\pi = 240^\\circ\\;}",
+        ],
+      },
     ],
     keyFormulas: [
       {
@@ -1001,7 +1017,9 @@ export const papers: Paper[] = [
       { label: "CM norms", value: "41 · 7", description: "Square (Gauss) gives the EM index, hexagon (Eisenstein) the scalaron" },
       { label: "Gap", value: "6 log(3/2)", description: "Positive ⇒ unique attractor" },
       { label: "Translation clock", value: "5 × 6 = 30", description: "Static carrier hand ℤ/5 × dynamic family hand ℤ/6; 0..5 law-inclusive, 1..5 live-only (v319)" },
-      { label: "Free numbers", value: "0", description: "Only π is primitive" },
+      { label: "Cyclotomic capstone", value: "ℚ(ζ₃₀), μ₄×ℤ₂", description: "The SM structural sector is one cyclotomic field, Galois = μ₄×ℤ₂, degree 8 = rank E₈ (v313–v318)" },
+      { label: "Galois CP lock", value: "δ_PMNS = δ_CKM + π", description: "A new falsifiable prediction: the two CP phases are Galois-locked, δ_PMNS = 240° (kill test at DUNE/Hyper-K, v320)" },
+      { label: "Free numbers", value: "0", description: "Zero dimensionless free parameters: {a, π, v_geo} is the complete input (v318)" },
     ],
   },
   {

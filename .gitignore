@@ -47,6 +47,9 @@ _documentation/
 _render/
 tfpt_animation*
 
+# Interactive "TFPT machine" game (local-only, standalone; not part of the record)
+_game/
+
 # FRB experiment datasets (local copies; see data/README.md)
 # keep the tiny derived/provenance files so FRB.01 stays reproducible
 experiments/frb-tfpt-signatures/data/*
