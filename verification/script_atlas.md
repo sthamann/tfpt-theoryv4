@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`343` registered scripts · `401` ledger claims · `10` clusters.
+`344` registered scripts · `402` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (18 scripts)
+### `core` — Compiler core & the E₈ glue  (19 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -47,6 +47,8 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v335_seam_equiv_unify, v232, v235, v219, v281, v282, v312, v336 · cited: origin theory
 - **v345_hypergraph_homotopy** [E/O] `SEAM.DETK.02` — EXECUTE the combinatorial core of route R3 (the hypergraph-homotopy route to det K=1, v344): computes explicitly that the (2,3,5)-rewrite attractor graph's plumbing link is the POI
   - deps: v344_detk_synthesis, v335_seam_equiv_unify, v232, v312, v344, v55, v219 · cited: origin theory
+- **v346_seam_geometric_bridge** [E/O] `SEAM.EQUIV.GEOM.01` — The geometric bridge as an explicit six-link chain raw-seam => det K=1, with the ONE open arrow pinned -- the honest capstone of the SEAM.EQUIV.01 investigation. L1 [E/C] raw seam 
+  - deps: v335_seam_equiv_unify, v345_hypergraph_homotopy, v216, v219, v232, v345, v313 · cited: origin theory
 
 ### `em` — Electromagnetic fixed point  (4 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -754,7 +756,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v334_conformal_resolution** — `QGAMB.CONFORMAL.01`
 - **v335_seam_equiv_unify** — `SEAM.EQUIV.UNIFY.01`
 - **v336_continuum_limit** — `SEAM.EQUIV.CONTINUUM.01`
 - **v337_decoupling_theorem** — `DECOUPLING.THEOREM.01`
@@ -766,4 +767,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v343_four_routes_analysis** — `FOUR.ROUTES.01`
 - **v344_detk_synthesis** — `SEAM.DETK.01`
 - **v345_hypergraph_homotopy** — `SEAM.DETK.02`
+- **v346_seam_geometric_bridge** — `SEAM.EQUIV.GEOM.01`
 

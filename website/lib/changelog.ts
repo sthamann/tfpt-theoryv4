@@ -47,6 +47,401 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "the geometric bridge made explicit: the keystone is ONE arrow – raw-seam "
+      },
+      {
+        "k": "m",
+        "v": "\\Rightarrow\\det K{=}1"
+      },
+      {
+        "k": "t",
+        "v": " is a six-link chain, five theorems "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " one open orbifold realisation, the group forced by the "
+      },
+      {
+        "k": "m",
+        "v": "(2,3,5)"
+      },
+      {
+        "k": "t",
+        "v": " atoms: "
+      },
+      {
+        "k": "c",
+        "v": "v346"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v346"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EQUIV.GEOM.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The honest capstone of the "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " investigation: it lays out the full path raw-seam "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow\\det K{=}1"
+        },
+        {
+          "k": "t",
+          "v": " as six links and shows exactly one is open. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "L1 raw seam "
+        },
+        {
+          "k": "m",
+          "v": "\\to\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " four marks (Gauss–Bonnet, "
+        },
+        {
+          "k": "c",
+          "v": "v216"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "L2 "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "(2,3,5)"
+        },
+        {
+          "k": "t",
+          "v": " atoms "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "2I"
+        },
+        {
+          "k": "t",
+          "v": " orbifold "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb{C}^2/\\Gamma"
+        },
+        {
+          "k": "t",
+          "v": " (THE ONE OPEN ARROW "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the geometric content of "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "L3 "
+        },
+        {
+          "k": "m",
+          "v": "2I\\to"
+        },
+        {
+          "k": "t",
+          "v": " affine "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " McKay ("
+        },
+        {
+          "k": "c",
+          "v": "v219"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "L4 "
+        },
+        {
+          "k": "m",
+          "v": "2I\\to E_8"
+        },
+        {
+          "k": "t",
+          "v": " du Val ("
+        },
+        {
+          "k": "c",
+          "v": "v232"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "L5 "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb{C}^2/2I\\to"
+        },
+        {
+          "k": "t",
+          "v": " Poincaré link "
+        },
+        {
+          "k": "m",
+          "v": "H_1{=}0"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v345"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "L6 "
+        },
+        {
+          "k": "m",
+          "v": "H_1{=}0\\to\\det K{=}1"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "five of six links are theorems; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the group is FORCED by the seam's own atoms (the exceptional "
+        },
+        {
+          "k": "m",
+          "v": "SU(2)"
+        },
+        {
+          "k": "t",
+          "v": " axis signatures "
+        },
+        {
+          "k": "m",
+          "v": "(2,3,3)/(2,3,4)/(2,3,5)\\to 2T/2O/2I"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "(2,3,5)"
+        },
+        {
+          "k": "t",
+          "v": " unique to "
+        },
+        {
+          "k": "m",
+          "v": "2I"
+        },
+        {
+          "k": "t",
+          "v": ", and "
+        },
+        {
+          "k": "m",
+          "v": "(|\\Z_2|,\\Nfam,\\gcar){=}(2,3,5)"
+        },
+        {
+          "k": "t",
+          "v": " ARE those axes); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "everything downstream of L2 is then forced. "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the irreducible open content is L2 alone (“the raw seam normal bundle is an ADE orbifold point "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb{C}^2/\\Gamma"
+        },
+        {
+          "k": "t",
+          "v": "”) "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": "; not closed, but the bridge is now demonstrably ONE arrow with the group pinned and all downstream proven."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-22",
+    "dateLabel": "2026-06-22",
+    "heading": [
+      {
+        "k": "t",
         "v": "executing route R3: the "
       },
       {
