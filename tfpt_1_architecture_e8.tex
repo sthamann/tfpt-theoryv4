@@ -1130,6 +1130,22 @@ residual: the from-first-principles AQFT proof that $F_{U(1)}$ is the \emph{exac
 $U(1)$ --- the variational principle \emph{derived}, not assembled. That is the sharpest remaining EM-Ward
 obligation, unchanged in scope, now stated more sharply.
 \par\smallskip
+\noindent\textbf{The heat-kernel origin of the terms (\veri{v342\_em\_ward\_heatkernel.py}).} The determinant-line
+form is more than bookkeeping: its terms are textbook heat-kernel coefficients. \mE\ $\cthree=1/(8\pi)$ \emph{is}
+the boundary Gauss--Bonnet coefficient ($\oint_{S^2}K=2\pi\chi=4\pi$, $\cthree=1/(|\Z_2|\oint K)$, the same
+$\chi{=}2$ as the marks, \vref{v216}). \mE\ the $\alpha^2$ (Calder\'on) term \emph{is} the Gilkey gauge-curvature
+coefficient: the $U(1)$ Laplacian's Seeley--DeWitt $a_4$ contains $30\,\Omega_{ij}\Omega^{ij}/360=\tfrac1{12}\Omega^2$
+(Gilkey, \emph{Invariance Theory}, Thm 4.8.16), and with $\Omega=i\alpha F$ this forces an $-(\alpha^2/12)F^2$
+contribution to $\log\det\Delta_{U(1)}$ --- so the Calder\'on $-2\cthree^3\alpha^2$ is the gauge-curvature
+(Quillen-curvature) piece, not an ansatz. \mE\ the $\cthree$-orders $\{0,3,6\}$ are an arithmetic ladder (step $3=$
+the three channels; $6=|R^+(A_3)|$, the $C_6$ hexagon), and the $\pi$-power test confirms it: $2\cthree^3=1/(256\pi^3)$
+carries $\pi^3$, i.e.\ \emph{three} boundary $\cthree$-insertions, not a single bulk coefficient. \textbf{Typing:} the
+boundary structure and the gauge-curvature origin of the quadratic term are heat-kernel-forced \mE; the exact
+coefficient value is \mC\ (the seam $F$-normalisation); the cubic $\alpha^3$ Maxwell moment (a topological/Chern
+level) and the full ``this \emph{is} the seam $U(1)$ $\zeta$-determinant'' claim stay \mO\ --- exactly the
+\texttt{EM.WARD.01} residual, unchanged. So the quadratic/curvature half of the EM-Ward origin is now derived; the
+cubic-moment half remains the honest open part.
+\par\smallskip
 
 \noindent The full ablation --- which inputs are load-bearing and which only set the last digit --- is in
 the \hyperref[sec:ablation]{Ablation appendix} below.

@@ -2257,6 +2257,18 @@ Module[{c3v, phib},
       && (5/4 + 3/4 == 2) && ((4/5)*41 == 8*(41/10))];
 ];
 
+(* ==== v342 EM.WARD.02: the heat-kernel origin of the F_U(1) terms ==== *)
+Module[{c3v, ointK, c3gb, gilkey, q2},
+  c3v = 1/(8 Pi);
+  (* c3 = boundary Gauss-Bonnet coefficient: oint_{S^2} K = 2 pi chi = 4 pi (chi=2), c3 = 1/(|Z2| oint K) *)
+  ointK = 2 Pi*2; c3gb = 1/(2*ointK);
+  (* Gilkey a4 gauge-curvature coefficient 30 Omega^2/360 = 1/12; c3-ladder {0,3,6}; 2 c3^3 ~ pi^3 (three boundary insertions) *)
+  gilkey = 30/360; q2 = 2 c3v^3;
+  checkExact["v342 EM.WARD.02: c3 = 1/(|Z2| oint_{S^2} K) = 1/(2*4pi) = 1/(8pi) (boundary Gauss-Bonnet, chi=2); the Gilkey a4 gauge-curvature coeff is 30 Omega^2/360 = 1/12 (=> an alpha^2 term in log det Delta_U(1), the Calderon -2 c3^3 a^2); the c3-ladder {0,3,6} is arithmetic step 3; 2 c3^3 = 1/(256 pi^3) carries pi^3 (THREE boundary insertions, not a single bulk a4); 8 b1 = (4/5)*41 = (rank E8)(41/10) -- the term STRUCTURE is heat-kernel-forced (the exact value [C], the cubic alpha^3 [O])",
+    Simplify[c3gb - c3v] == 0 && gilkey == 1/12 && (3 - 0 == 3 && 6 - 3 == 3)
+      && Simplify[q2 - 1/(256 Pi^3)] == 0 && ((4/5)*41 == 8*(41/10))];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

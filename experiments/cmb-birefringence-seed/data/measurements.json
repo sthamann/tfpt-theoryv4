@@ -5,16 +5,27 @@
       "value": 0.215,
       "sigma": 0.074,
       "unit": "deg",
+      "data_family": "ACT",
       "reference": "arXiv:2509.13654",
       "note": "EB+TB Bayesian, optics-model miscalibration priors; 2.9 sigma from 0; unresolved systematics flagged by the authors"
     },
     {
-      "experiment": "Planck PR4 (Eskilt & Komatsu 2022)",
+      "experiment": "Planck PR4 (Eskilt 2022)",
       "value": 0.30,
       "sigma": 0.11,
       "unit": "deg",
+      "data_family": "Planck",
       "reference": "arXiv:2205.13962",
       "note": "independent CMB birefringence, same sign"
+    },
+    {
+      "experiment": "Planck PR3 (Minami & Komatsu 2020)",
+      "value": 0.35,
+      "sigma": 0.14,
+      "unit": "deg",
+      "data_family": "Planck",
+      "reference": "arXiv:2011.11254",
+      "note": "the original 2.4 sigma hint; SUPERSEDED by PR4 (same Planck data family + shared absolute-angle calibration systematic -> NOT independent of the PR4 value)"
     }
   ],
   "omega_b": [

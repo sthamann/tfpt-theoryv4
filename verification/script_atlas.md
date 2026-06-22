@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`339` registered scripts · `397` ledger claims · `10` clusters.
+`340` registered scripts · `398` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -44,15 +44,17 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
 - **v336_continuum_limit** [E/C/O] `SEAM.EQUIV.CONTINUUM.01` — The ONE open lemma of SEAM.EQUIV.01, stated precisely and mapped to the recent rigorous literature: the continuum-limit and OS-reconstruction legs are now CITABLE, the genuinely-op
   - deps: v308_seam_equiv_chain, v335_seam_equiv_unify, v308, v277, v335 · cited: origin theory
 
-### `em` — Electromagnetic fixed point  (3 scripts)
+### `em` — Electromagnetic fixed point  (4 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
 
 - **v3_em_alpha** [E] `EM.FP.01` — α⁻¹ = 137.0359992168 unique root of F_U(1)=0; ablation
   - deps: AX.P1.01, v13_open_gates · cited: introduction, origin theory, 1 architecture e8, 2 standard model
 - **v48_em_ward** [E/C] `EM.WARD.01` — EM boundary Ward (Thm C): F_U(1) decomposition; 8b₁ = 164/5
-  - deps: v3_em_alpha, v3, v341 · cited: 1 architecture e8
+  - deps: v3_em_alpha, v3, v341, v342 · cited: 1 architecture e8
 - **v341_alpha_quillen** [E/C/O] `ALPHA.QUILLEN.01` — The alpha fixed point reformulated as the STATIONARITY of a U(1) determinant line, every ingredient identified as an index / heat-kernel coefficient / discriminant form -- NOT a fr
   - deps: v48_em_ward, v3, v48, v159, v216, v1 · cited: 1 architecture e8
+- **v342_em_ward_heatkernel** [E/C/O] `EM.WARD.02` — The heat-kernel sharpening of EM.WARD.01: DERIVES the ORIGIN and STRUCTURE of the F_{U(1)} determinant-line terms from textbook Seeley-DeWitt/Gilkey coefficients, advancing the EM-
+  - deps: v48_em_ward, v48, v216, v3, v159 · cited: 1 architecture e8
 
 ### `flavor` — Flavor matrix & operators  (13 scripts)
 _The integer operator ladder (R, K, Q, L) and its spectral invariants — the flavor signature._
@@ -740,13 +742,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `E8.GLU.01`×15, `HOR.NARIAI.01`×15, `v76`×13, `v56`×12, `REG.FREEZE.01`×12, `AX.P1.01`×11, `SEAM.EQUIV.01`×11, `QGEO.SUBPRIN.01`×11, `FLAV.KQ.01`×10, `QGEO.PILLOW.01`×10, `CAR.SM.01`×9, `GATE.QGEO.01`×8, `QG.AMB.01`×8, `v3`×8
+**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `E8.GLU.01`×15, `HOR.NARIAI.01`×15, `v76`×13, `v56`×12, `REG.FREEZE.01`×12, `AX.P1.01`×11, `SEAM.EQUIV.01`×11, `QGEO.SUBPRIN.01`×11, `FLAV.KQ.01`×10, `QGEO.PILLOW.01`×10, `v3`×9, `CAR.SM.01`×9, `GATE.QGEO.01`×8, `QG.AMB.01`×8
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v330_qgamb_admissible_measure** — `QGAMB.MEASURE.01`
 - **v331_necessity_of_H** — `QGEO.NECESS.01, FORM.MU4COMM.01`
 - **v332_qgamb_metric_sector** — `QGAMB.METRIC.01`
 - **v333_cm_selection** — `QGEO.CMSELECT.01`
@@ -758,4 +759,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v339_firstprinciples_boundary** — `FIRSTPRINCIPLES.BOUNDARY.01`
 - **v340_As_reconcile** — `AS.RECONCILE.01`
 - **v341_alpha_quillen** — `ALPHA.QUILLEN.01`
+- **v342_em_ward_heatkernel** — `EM.WARD.02`
 

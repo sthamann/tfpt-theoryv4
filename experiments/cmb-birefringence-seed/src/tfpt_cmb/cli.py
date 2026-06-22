@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 
 from . import constants
+from .birefringence_meta import SYS_FLOOR_DEG, birefringence_meta
 from .seed_line import run_seed_line
 from .shared_seed import run_shared_seed
 
@@ -68,12 +69,32 @@ def main(argv: list[str] | None = None) -> int:
     print(f"    combined chi2/dof = {s.combined_chi2:.2f}/{s.dof} ; max|z| = {s.spread_max_z:.2f}")
     print(f"    -> {s.verdict}")
 
+    # ---- beta meta-analysis: combine the birefringence measurements, correlation-aware ----
+    mt = birefringence_meta()
+    print("\n[beta_meta]  combine the birefringence measurements (shared-systematic aware)")
+    for mm in mt.measurements:
+        print(f"    {mm['experiment']:38s} {mm['value']:.3f}+/-{mm['sigma']:.3f} deg "
+              f"[family {mm['data_family']}]")
+    print(f"    NAIVE IVW (independent, lower-bound error): {mt.naive_mean:.3f}+/-{mt.naive_sigma:.3f}"
+          f" -> {mt.naive_z:+.2f} sigma   (inputs mutually consistent, chi2/dof={mt.internal_chi2_dof:.2f})")
+    print(f"    FAMILY-AWARE (+{SYS_FLOOR_DEG:.2f} deg shared calib syst): "
+          f"{mt.meta_mean:.3f}+/-{mt.meta_sigma:.3f} -> {mt.meta_z:+.2f} sigma  (the honest error)")
+    if mt.bbn_cross_z is not None:
+        print(f"    CMB-INDEPENDENT cross-check (BBN Omega_b -> beta): {mt.bbn_cross_z:+.2f} sigma")
+    print(f"    -> {mt.verdict}")
+
     RESULTS.mkdir(exist_ok=True)
     out = {"constants": c, "modes": r.modes, "verdict": r.verdict,
            "shared_seed": {"phi0_frozen": s.phi0_frozen, "combined_chi2": s.combined_chi2,
                            "dof": s.dof, "max_z": s.spread_max_z,
                            "consistent": s.combined_consistent, "verdict": s.verdict,
-                           "legs": [vars(leg) for leg in s.legs]}}
+                           "legs": [vars(leg) for leg in s.legs]},
+           "beta_meta": {"naive_mean": mt.naive_mean, "naive_sigma": mt.naive_sigma,
+                         "naive_z": mt.naive_z, "meta_mean": mt.meta_mean,
+                         "meta_sigma": mt.meta_sigma, "meta_z": mt.meta_z,
+                         "internal_chi2_dof": mt.internal_chi2_dof,
+                         "bbn_cross_z": mt.bbn_cross_z, "family_values": mt.family_values,
+                         "verdict": mt.verdict}}
     (RESULTS / "results.json").write_text(json.dumps(out, indent=2), encoding="utf-8")
     print(f"\nWrote {RESULTS / 'results.json'}")
     return 0

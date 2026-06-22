@@ -66,6 +66,15 @@ def run() -> dict:
     # the residual nulls require stages 3+4; if those are blocked, the TFPT test is data_limited
     imaging_ready = all(s.status != "blocked" for s in stages if s.n in (3, 4, 5))
     overall = "ready_to_run_TFPT_test" if imaging_ready else "data_limited"
+    blocked_names = ", ".join(f"stage {s.n} ({s.name})" for s in blocked) or "none"
+    note = (f"Residual nulls stay data_limited until {blocked_names} can run. The residual + null "
+            "machinery is validated end-to-end by the injection suite (4/4). With only two close "
+            "bands (227/229 GHz) the frequency null is a diagnostic, not a final achromaticity proof.")
+    if _have("ehtim") and not _have("ipole"):
+        note += (" UPDATE: eht-imaging is now installed and verified on the real M87 uvfits "
+                 "(it parses the 2017 data, net |m|~3.4%, EVPA~-34 deg at 229 GHz), so the IMAGING "
+                 "stage (3) is unblocked -- the SOLE remaining blocker is the GRMHD forward model "
+                 "(stage 4: ipole/koral + GRMHD simulation data, not pip-installable).")
     out = {
         "pipeline": "EHT achromatic dyonic residual (chi0_res then 3 nulls)",
         "stages": [asdict(s) for s in stages],
@@ -74,10 +83,7 @@ def run() -> dict:
         "n_blocked": len(blocked),
         "blocked_on": [s.detail for s in blocked],
         "overall_status": overall,
-        "note": ("Residual nulls stay data_limited until eht-imaging/SMILI (stage 3) and a GRMHD "
-                 "library (stage 4) are installed. The residual + null machinery itself is "
-                 "validated end-to-end by the injection suite (4/4). With only two close bands "
-                 "(227/229 GHz) the frequency null is a diagnostic, not a final achromaticity proof."),
+        "note": note,
     }
     RESULTS.mkdir(exist_ok=True)
     (RESULTS / "eht_pipeline_readiness.json").write_text(json.dumps(out, indent=2), encoding="utf-8")

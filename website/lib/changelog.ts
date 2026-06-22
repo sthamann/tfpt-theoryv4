@@ -46,6 +46,343 @@ export const CHANGELOG: ChangelogEntry[] = [
     "dateLabel": "2026-06-22",
     "heading": [
       {
+        "k": "t",
+        "v": "the heat-kernel origin of the "
+      },
+      {
+        "k": "m",
+        "v": "\\alpha"
+      },
+      {
+        "k": "t",
+        "v": " terms: the Calderón quadratic is the Gilkey gauge-curvature coefficient; the cubic Maxwell moment stays the "
+      },
+      {
+        "k": "c",
+        "v": "EM.WARD.01"
+      },
+      {
+        "k": "t",
+        "v": " residual: "
+      },
+      {
+        "k": "c",
+        "v": "v342"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v342"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "EM.WARD.02"
+            },
+            {
+              "k": "t",
+              "v": ") — the heat-kernel sharpening of "
+            },
+            {
+              "k": "c",
+              "v": "EM.WARD.01"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Derives the ORIGIN and STRUCTURE of the "
+        },
+        {
+          "k": "m",
+          "v": "F_{U(1)}"
+        },
+        {
+          "k": "t",
+          "v": " determinant-line terms from textbook Seeley–DeWitt / Gilkey coefficients, advancing the EM-Ward origin from "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "(conjectured) to "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "for the term structure; no new gate. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "\\cthree=\n1/(8\\pi)"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the boundary Gauss–Bonnet coefficient ("
+        },
+        {
+          "k": "m",
+          "v": "\\oint_{S^2}K=2\\pi\\chi=4\\pi"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\chi{=}2"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v216"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha^2"
+        },
+        {
+          "k": "t",
+          "v": " (Calderón) term "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the Gilkey gauge-curvature coefficient ("
+        },
+        {
+          "k": "m",
+          "v": "30\\,\\Omega^2/360=\\tfrac1{12}\n\\Omega^2"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\Omega{=}i\\alpha F\\Rightarrow-(\\alpha^2/12)F^2"
+        },
+        {
+          "k": "t",
+          "v": "), so it is forced, not an ansatz. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the "
+        },
+        {
+          "k": "m",
+          "v": "\\cthree"
+        },
+        {
+          "k": "t",
+          "v": "-orders "
+        },
+        {
+          "k": "m",
+          "v": "\\{0,3,6\\}"
+        },
+        {
+          "k": "t",
+          "v": " are an arithmetic ladder and "
+        },
+        {
+          "k": "m",
+          "v": "2\\cthree^3=1/(256\\pi^3)"
+        },
+        {
+          "k": "t",
+          "v": " carries "
+        },
+        {
+          "k": "m",
+          "v": "\\pi^3"
+        },
+        {
+          "k": "t",
+          "v": " (three boundary insertions). "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": " the exact coefficient needs the seam "
+        },
+        {
+          "k": "m",
+          "v": "F"
+        },
+        {
+          "k": "t",
+          "v": "-normalisation. "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the cubic "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha^3"
+        },
+        {
+          "k": "t",
+          "v": " Maxwell moment (a topological/Chern level) "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the full “this is the seam "
+        },
+        {
+          "k": "m",
+          "v": "U(1)"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\zeta"
+        },
+        {
+          "k": "t",
+          "v": "-determinant” identification stay the "
+        },
+        {
+          "k": "c",
+          "v": "EM.WARD.01"
+        },
+        {
+          "k": "t",
+          "v": " residual, tied to "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "m",
+          "v": "\\ainv"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "("
+        },
+        {
+          "k": "c",
+          "v": "v3"
+        },
+        {
+          "k": "t",
+          "v": "). Wolfram mirror "
+        },
+        {
+          "k": "m",
+          "v": "+1"
+        },
+        {
+          "k": "t",
+          "v": " (290 "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " 291)."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-22",
+    "dateLabel": "2026-06-22",
+    "heading": [
+      {
         "k": "m",
         "v": "\\alpha"
       },

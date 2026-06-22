@@ -83,18 +83,40 @@ Strongest meta-signature, but **not validated** — sector covariances are unmod
 θ₁₃/Cabibbo are seed-anchored low-energy predictions (RG/short-distance completion not computed
 here). The dominant pull is θ₁₃ (see `seed-consistency` for the full LOO/dominant-pull/PPC).
 
+## β meta-analysis — combine the birefringence measurements, shared-systematic aware (`birefringence_meta.py`)
+
+The single-measurement modes compare β_TFPT to ACT and Planck *separately*. The meta-analysis
+**combines** the published β values — but honestly, because CMB birefringence measurements are
+**not independent**: the Planck-based values (PR3 Minami&Komatsu 2020, PR4 Eskilt 2022) share
+Planck data + the dominant **absolute-angle / EB-foreground calibration** systematic. So:
+
+| combination | β [deg] | TFPT 0.2424° | note |
+|---|---|---|---|
+| **naive IVW** (all 3 as independent) | 0.259 ± 0.056 | **−0.29σ** | *lower bound* on the error (double-counts Planck) |
+| **family-aware** (ACT + best-Planck, +0.10° shared calib. syst.) | 0.241 ± 0.117 | **+0.01σ** | the honest error |
+| **CMB-independent** (BBN Ω_b → β) | — | **+0.04σ** | the cleanest cross-check |
+
+Inputs are mutually consistent (χ²/dof = 0.46). **TFPT's 0.2424° sits essentially on the
+family-aware meta-estimate** and on the BBN-independent leg — **consistent, not a detection**: the
+shared calibration systematic dominates, so the family-aware (not the naive) error is the honest
+one, and a real frequency/foreground null needs the raw per-frequency EB spectra (not recomputed
+here; the per-experiment frequency-robustness is taken from the cited papers).
+
 ## Reproduce
 
 ```bash
 python -m venv .venv && . .venv/bin/activate && pip install -e .
-tfpt-cmb analyze            # or: PYTHONPATH=src python -m tfpt_cmb.cli analyze
+tfpt-cmb analyze            # seed-line + shared-seed + beta meta-analysis -> results/results.json
+# or: PYTHONPATH=src python -m tfpt_cmb.cli analyze
 ```
 
 ## Layout
 
 ```
-src/tfpt_cmb/constants.py   # φ0, β, Ω_b, the 4π−1 line — all from c₃ (no SI input)
-src/tfpt_cmb/seed_line.py   # per-observable + single-seed-coherence + line tests
-src/tfpt_cmb/cli.py         # `tfpt-cmb analyze`
-data/measurements.json      # published β (ACT/Planck) + Ω_b (Planck/BBN) with refs
+src/tfpt_cmb/constants.py        # φ0, β, Ω_b, the 4π−1 line — all from c₃ (no SI input)
+src/tfpt_cmb/seed_line.py        # per-observable + single-seed-coherence + line tests
+src/tfpt_cmb/shared_seed.py      # one φ0 -> β + Ω_b + θ13 + Cabibbo meta-test
+src/tfpt_cmb/birefringence_meta.py  # β meta-analysis (naive vs family-aware, BBN cross-check)
+src/tfpt_cmb/cli.py              # `tfpt-cmb analyze`
+data/measurements.json           # published β (ACT/Planck PR4/PR3, with data_family) + Ω_b + refs
 ```
