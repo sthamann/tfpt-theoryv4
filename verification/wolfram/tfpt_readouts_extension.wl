@@ -2218,6 +2218,26 @@ Module[{edges, cAff, x, units, maxord, z6, z30, gauss},
     Simplify[4 Pi/3 - (Pi/3 + Pi)] == 0 && (4 Pi/3) (180/Pi) == 240 && Simplify[Arg[z6] - Pi/3] == 0];
 ];
 
+(* ==== v325/v327: the keystone pillowcase orbifold + the cusp-weight rewrite (exact) ==== *)
+Module[{chiOrb, M, evs, edges, cAff, x, p23},
+  (* v325 QGEO.KEYSTONE.01: the flat pillowcase orbifold S^2(2,2,2,2) has chi_orb = 0 *)
+  chiOrb = 2 - 4 (1 - 1/2);
+  checkExact["v325 QGEO.KEYSTONE.01: the four order-2 cone points give the Euclidean orbifold S^2(2,2,2,2) (the pillowcase), chi_orb = 2 - 4(1-1/2) = 0 => flat, uniformised at tau=i (the keystone hypothesis; marks=4, j=1728, det Cartan E8=1 already mirrored via v216/v214/v277)",
+    chiOrb == 0];
+  (* v327 HYP.REWRITE.01: the minimal 3-channel/1-absorbing rewrite M has spectrum {0,2/3,1} *)
+  M = {{1, 0, 0}, {0, 1/3, 1/3}, {0, 1/3, 1/3}};
+  evs = Sort[Eigenvalues[M]];
+  checkExact["v327 HYP.REWRITE.01: the minimal 3-channel/1-absorbing rewrite M has spectrum {0,2/3,1}; the recovery survival 2/3 = (Nfam-1)/Nfam = |Z2|/Nfam emerges from the rule arity, and over the order-6 = 2 Nfam hand (2/3)^(2 Nfam) = 64/729 = the recovery gap",
+    evs == {0, 2/3, 1} && 2/3 == (Nfam - 1)/Nfam && (2/3)^(2 Nfam) == 64/729];
+  (* v327 NON-GRAPH-SPECTRAL: 2/3 is NOT a root of the affine-E8 charpoly (sharpens v312) *)
+  edges = {{1, 2}, {2, 3}, {3, 4}, {4, 5}, {5, 6}, {6, 7}, {7, 8}, {6, 9}};
+  cAff = Table[0, {9}, {9}];
+  Do[cAff[[e[[1]], e[[2]]]] = 1; cAff[[e[[2]], e[[1]]]] = 1, {e, edges}];
+  p23 = CharacteristicPolynomial[cAff, x] /. x -> 2/3;
+  checkExact["v327 NON-GRAPH-SPECTRAL (proof): 2/3 is NOT a root of the affine-E8 charpoly -- p(2/3) != 0 -- so the recovery rate cannot be an adjacency eigenvalue (the v312 negative, now a proof)",
+    p23 != 0];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

@@ -105,7 +105,7 @@ v84–v93 block passed **45/45** on first run; the v94–v140 blocks were added
 the same day, the v141–v144 block on 2026-06-12. Current state:
 
 ```
---- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320: 285 passed, 0 failed ---
+--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327: 288 passed, 0 failed ---
 ALL WOLFRAM EXTENSION CHECKS PASSED
 ```
 
@@ -137,3 +137,13 @@ quadratic Gauss sum in `Q(ζ₅)`), `v316_galois_readout.py` (`ρ=ζ₆=ζ₃₀
 `v320_galois_cp_relation.py` (the CP lock `δ_PMNS=4π/3=δ_CKM,lead+π=240°`). The
 translation clock `v319_translation_clock.py` is a structural reading and stays
 Python-only.
+
+The 2026-06-22 **next-steps round** added three more exact checks (285 → 288):
+`v325_pillowcase_keystone.py` (the keystone orbifold `S²(2,2,2,2)` has
+`χ_orb = 2 − 4(1−1/2) = 0`, i.e. flat at `τ=i`; the other keystone pieces —
+`marks=4`, `j=1728`, `det Cartan(E₈)=1` — were already mirrored via v216/v214/v277)
+and `v327_hypergraph_rewrite.py` (the minimal branching rule `M` has spectrum
+`{0,2/3,1}`, the survival `2/3=(N_fam−1)/N_fam` with `(2/3)^6=64/729`, and the proof
+that `2/3` is **not** a root of the affine-E₈ characteristic polynomial). The
+`F_transfer` solver suite `v326_ftransfer_suite.py` (numerical ODE/RG relaxations) and
+the `θ13` pressure-point `v328_theta13_pressure.py` (data confrontation) are Python-only.

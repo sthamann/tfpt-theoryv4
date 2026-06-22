@@ -67,6 +67,88 @@ def _run_realdata(events: list[str]) -> int:
     return 0
 
 
+def _run_dynamic(events: list[str]) -> int:
+    """Stage-2 DYNAMIC walled-clock recovery matched filter on REAL GWOSC strain.
+
+    Closes the experiments/README §1.1 gap: the static (2/3)^6 ratio searches are null;
+    the kernel's dynamic signature is the walled two-mode clock (bend 2.7095 + floor + wall,
+    QT.04). Here that template is fit to the post-merger residual power envelope on real
+    strain, validated by injection into real off-source noise.
+    """
+    # local imports (same pattern as _run_realdata): these pull in h5py via strain_data,
+    # which the base `analyze`/`audit` commands must not require.
+    from .dynamic_recovery import (
+        BEND,
+        injection_suite_dynamic,
+        search_event_dynamic,
+    )
+    from .strain_data import read_hdf5
+
+    print("=" * 84)
+    print("TFPT GW Stage-2: DYNAMIC walled-clock recovery matched filter on REAL GWOSC strain")
+    print(f"  frozen bend rate(2)/rate(1) = ln3/ln(3/2) = {BEND:.4f} (one-parameter template)")
+    print("=" * 84)
+
+    have = [e for e in events if (STRAIN_DIR / f"{e}_meta.json").exists()]
+    missing = [e for e in events if e not in have]
+    if missing:
+        print(f"  (no strain for {missing}; run: python scripts/fetch_strain.py {' '.join(missing)})")
+    if not have:
+        print("  no strain downloaded -> nothing to do.")
+        return 1
+
+    meta0 = json.loads((STRAIN_DIR / f"{have[0]}_meta.json").read_text(encoding="utf-8"))
+    noise = read_hdf5(str(STRAIN_DIR / Path(next(iter(meta0["files"].values()))).name))
+    suite = injection_suite_dynamic(noise.data, noise.dt)
+    print("\n  injection validation (synthetic recovery -> REAL off-source noise):")
+    print(f"    {'injection':14s} {'r2_template':>11} {'q_hat':>8}  {'label':22s} {'expected':22s} ok")
+    for r in suite.results:
+        print(f"    {r.case:14s} {r.r2_template:11.4f} {r.q_hat:8.4f}  {r.label:22s} "
+              f"{r.expected:22s} {r.correct}")
+    print(f"    -> {suite.n_correct}/{suite.n_total} correctly classified")
+
+    out_events = []
+    for ev in have:
+        r = search_event_dynamic(ev, STRAIN_DIR)
+        print(f"\n  {ev}: M_f={r.mf_msun} Msun, tau={r.tau_ms} ms")
+        print(f"    {'det':4s} {'r2_template':>11} {'q_hat(bend)':>11} {'p_value':>8} {'kernel?':>8}")
+        for d in r.detectors:
+            print(f"    {d.detector:4s} {d.r2_template:11.4f} {d.q_hat:11.4f} "
+                  f"{d.p_value:8.4f} {str(d.kernel_consistent):>8}")
+        print(f"    -> kernel-consistent detectors = {r.n_kernel_consistent}/{len(r.detectors)}"
+              f"  =>  {r.label}")
+        if r.note:
+            print(f"       note: {r.note}")
+        out_events.append(vars(r) | {"detectors": [vars(d) for d in r.detectors]})
+
+    any_candidate = any(e["label"] == "WALLED_CLOCK_RECOVERY_CANDIDATE" for e in out_events)
+    verdict = (
+        f"NO locked-ratio (bend {BEND:.4f}) walled-clock recovery found COINCIDENT in >=2 "
+        "detectors for " + ", ".join(have) + ". Decaying post-merger envelopes are leftover "
+        "single-mode ringdown power (q_hat far from the bend), rejected by the free-ratio "
+        "control -- not a TFPT walled-clock recovery. Consistent with the kernel being an "
+        "UPPER bound (a recovery imprint may be absent or below sensitivity). First pass: "
+        "dominant-QNM subtraction + RMS envelope + off-source background; multi-mode "
+        "subtraction + coherent stacking is the next step. No recovery claim made."
+        if not any_candidate else
+        "A locked-ratio walled-clock recovery is coincident in >=2 detectors -- escalate to "
+        "coherent multi-mode subtraction + time-slide background + injections before any claim."
+    )
+    print(f"\n-> {verdict}")
+
+    RESULTS.mkdir(exist_ok=True)
+    (RESULTS / "dynamic_recovery.json").write_text(
+        json.dumps({"stage": "strain_level_test (dynamic walled-clock, real GWOSC strain, first pass)",
+                    "bend_ln3_over_ln1.5": BEND,
+                    "injection_validation": {"n_correct": suite.n_correct,
+                                             "n_total": suite.n_total,
+                                             "results": [vars(r) for r in suite.results],
+                                             "verdict": suite.verdict},
+                    "events": out_events, "verdict": verdict}, indent=2), encoding="utf-8")
+    print(f"\nWrote {RESULTS / 'dynamic_recovery.json'}")
+    return 0
+
+
 def _run_search() -> int:
     """Stage-1 echo matched-filter + injection-recovery (validated on synthetic strain)."""
     print("=" * 78)
@@ -95,16 +177,18 @@ def _run_search() -> int:
 
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description="TFPT GW ringdown echo-ratio forecast + Stage-1 search")
-    ap.add_argument("command", choices=["audit", "analyze", "search", "realdata"],
+    ap.add_argument("command", choices=["audit", "analyze", "search", "realdata", "dynamic"],
                     nargs="?", default="analyze")
     ap.add_argument("--events", nargs="*", default=["GW150914", "GW190521"],
-                    help="events for the realdata search (need scripts/fetch_strain.py first)")
+                    help="events for the realdata/dynamic search (need scripts/fetch_strain.py first)")
     args = ap.parse_args(argv)
 
     if args.command == "search":
         return _run_search()
     if args.command == "realdata":
         return _run_realdata(args.events)
+    if args.command == "dynamic":
+        return _run_dynamic(args.events)
 
     print("=" * 72)
     print(f"TFPT ringdown echo-ratio CENSUS (stage={constants.STAGE}; ratio (2/3)^6, lag free)")

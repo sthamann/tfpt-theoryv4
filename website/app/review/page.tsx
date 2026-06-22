@@ -154,10 +154,13 @@ const BLOCKS: Block[] = [
         Closure (v258–v261) — one relative object, no new open item. That premise
         is now a single named theorem, the Seam Equivalence Theorem{" "}
         <span className="font-mono">SEAM.EQUIV.01</span> (the raw RP seam IS the
-        holomorphic (E₈)₁ net at τ=i): an import firewall keeps its two routes
-        non-circular (v286), Route A reduces it to one standard import (v287), and
-        Route B proves the full-L² ℤ₄ lift, leaving only &ldquo;why is the raw
-        subprincipal term mark-local?&rdquo; (v288).{" "}
+        holomorphic (E₈)₁ net at τ=i); its conformal-deck face QGEO.SYM.01 is
+        downstream, and its residual is a composition of cited theorems over
+        established TFPT facts, Lean-pinned. The step-by-step reduction lives on the{" "}
+        <Link href="/changelog" className="font-semibold text-blue-300 hover:text-blue-200">
+          changelog
+        </Link>
+        .{" "}
         <Link href="/#open-gates" className="font-semibold text-blue-300 hover:text-blue-200">
           The open residual →
         </Link>

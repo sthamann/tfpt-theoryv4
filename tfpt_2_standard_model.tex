@@ -1352,6 +1352,15 @@ carrier-trace channel: the $\mu\tau$-breaking $\varepsilon=\tfrac34\phiz$ that f
 only $\sin^2\theta_{13}\sim\varepsilon^2\approx1.6\times10^{-3}\ll0.023$, so $\theta_{13}$ is \emph{not} the
 seesaw $\mu\tau$ breaking. \mO\ the CP \emph{magnitude} and the absolute $\nu$-mass scale remain the open
 PMNS items.
+\par\smallskip\noindent\textbf{The honest pressure point: $\theta_{13}$ at $+2.0\sigma$ (\veri{v328\_theta13\_pressure.py}).}
+This reactor channel is TFPT's most-tensioned core prediction, and it is named, not hidden: $\sin^2\theta_{13}=\phiz
+e^{-5/6}=0.023108$ sits $+2.0\sigma$ \emph{above} the NuFIT~6.0 normal-ordering fit ($0.02195\pm0.00058$). \mC\ it is
+not relieved cheaply: the back-solved seed $\phiz(\theta_{13})=e^{5/6}\sin^2\theta_{13}^{\mathrm{exp}}=0.0505$ is
+${\sim}5\%$ below the axiom, while PMNS $\theta_{13}$ RG running ($<1\%$, NO) and the \emph{exact} exponent $5/6$
+leave no freeze-respecting sub-leading correction --- so the prediction stays frozen (\texttt{REG.FREEZE.01}).
+\mX\ pre-registered kill: a stable $\sin^2\theta_{13}$ robustly away from $0.023108$ at $>3\sigma$ (JUNO / a future
+global fit) flags the carrier-trace / seed-grammar reading. It is exactly the single ${\sim}2\sigma$ outlier of the
+seed-hyperplane cross-validation (\vref{v306}) --- one honest pressure point, not a pattern of failures.
 \par\smallskip\noindent\textbf{The full PMNS matrix and the CP strength (\veri{v270\_pmns\_jarlskog\_assembly.py}).}
 The four channels --- $\sin^2\theta_{12}=\tfrac13-\tfrac{\phiz}2$ (\vref{v9}/\vref{v263}),
 $\sin^2\theta_{23}=\tfrac12$ (\vref{v9}/\vref{v263}), $\sin^2\theta_{13}=\phiz e^{-5/6}$ (\vref{v16}/\vref{v268})
@@ -1689,7 +1698,7 @@ analytic premises are imported hypotheses, not derived. \textbf{Irreducible rema
 idempotents $+$ the analytic Calder\'on/winding interface''. \textbf{Hardening path:} formalise the
 index-theoretic premises directly (substantially more work, beyond the current Lean scope). \mO
 
-\begin{gapbox}[Overall balance of the five questions --- after this round]
+\begin{gapbox}[Overall balance of the five questions]
 \renewcommand{\arraystretch}{1.2}\small
 \begin{tabularx}{\linewidth}{@{}p{0.5cm}p{4.3cm}Y@{}}
 \toprule
@@ -1705,7 +1714,7 @@ index-theoretic premises directly (substantially more work, beyond the current L
 \markerkey
 
 \smallskip
-\noindent After this round the five points are \emph{closed, reduced or typed}: (1) reduced to the
+\noindent The five points are \emph{closed, reduced or typed}: (1) reduced to the
 $(U_{\mathrm{wall}})$ selector (Mehta--Seshadri framework $+$ stable-point selection), (3) decoupled from the
 mass-gap problem, (4) the admissible transfer model closed by the explicit discrete gap
 $6\log\tfrac32$ (continuum/metric conditional), (5) P2 machine-verified; (2) is exact in the $R^2$ regime up to a
@@ -2433,17 +2442,17 @@ so the geodesic representative is unique.
 hence $\deg_{\mathrm{par}}=L^{\mathrm{transp}}_{\min}$ term by term. \qedhere
 \end{proof}
 
-\par\smallskip\noindent\textbf{Flavor block: reduced to one structural input $(U)$.}
+\par\smallskip\noindent\textbf{Flavor block: matrix derived; only the absolute scale remains.}
 With Lemma~\ref{lem:dd} (H1, proved), Proposition~\ref{prop:equiv} (residues $+$ windings, proved) and
 Theorem~\ref{thm:ms} (stable $=$ minimal), the parabolic and transport derivations of the full flavor
-matrix \emph{coincide}. The single remaining input is \emph{(U)}, the unitarity of $\nabla_F^\star$ ---
-a structural property asserted by the flavor-transport theorem (Part~II: the family connection is metric,
-holonomy in $U(\Nfam)$), not a new conjecture. The flavor block is therefore \emph{reduced} to (U) ---
-closed given (U), open without it. \mE\ (given (U)). \emph{Status update:} the $(U)$ gate has since been
-decomposed and largely discharged --- the quark \emph{ratios} are closed without it
-(\vref{v49}/\vref{v71}), Gate~1 reduces $U_{\mathrm{point}}\to v_{\mathrm{geo}}$ (\vref{v75}), and the
-selector establishment is narrowed to two line pairings (\vref{v139}/\vref{v142}); see the research
-contracts for the current decomposition.
+matrix \emph{coincide}, given the structural input \emph{(U)} (the unitarity of $\nabla_F^\star$ --- a
+property asserted by the flavor-transport theorem of Part~II, the family connection being metric with
+holonomy in $U(\Nfam)$, not a new conjecture). The $(U)$ gate is decomposed and largely discharged: the
+quark \emph{ratios} are closed without it (\vref{v49}/\vref{v71}), Gate~1 reduces
+$U_{\mathrm{point}}\to v_{\mathrm{geo}}$ (\vref{v75}), and the selector establishment is narrowed to two
+line pairings (\vref{v139}/\vref{v142}); the only remainder is the absolute amplitude scale
+$v_{\mathrm{geo}}$. See the research contracts for the current decomposition. \mE\ (ratios) / \mO\
+($v_{\mathrm{geo}}$ scale).
 \par\smallskip
 
 \begin{theorem}[H2 as a spectral-selector realisation --- the sharp statement]

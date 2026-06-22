@@ -75,9 +75,9 @@ const LEXICON: { term: string; reading: string }[] = [
       "The one dimensionful renormalization condition — a unit choice. After setting ℏ = c = 1 a single scale must still be fixed by hand; the No-Unit Theorem proves a dimensionless compiler cannot produce it.",
   },
   {
-    term: "QGEO.SYM.01 (bedrock)",
+    term: "SEAM.EQUIV.01 (keystone)",
     reading:
-      "The single geometric postulate: the seam’s conformal structure IS the carrier orbifold deck. The role Einstein’s ‘c = const’ plays — an irreducible premise the rest unfolds from.",
+      "The single named open theorem: the raw reflection-positive seam state IS the holomorphic (E₈)₁ net at τ=i. The role Einstein’s ‘c = const’ plays — TFPT’s one irreducible structural postulate; its conformal-deck face QGEO.SYM.01 (the seam’s conformal structure IS the carrier orbifold deck) is downstream.",
   },
 ];
 

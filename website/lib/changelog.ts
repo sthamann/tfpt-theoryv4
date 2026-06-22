@@ -47,6 +47,1216 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "next-steps round: the keystone collapsed to one shared premise (Lean "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " one citable theorem), the "
+      },
+      {
+        "k": "m",
+        "v": "F_{\\mathrm{transfer}}"
+      },
+      {
+        "k": "t",
+        "v": " solver suite, the cusp weight derived from a minimal rewrite, and the "
+      },
+      {
+        "k": "m",
+        "v": "\\theta_{13}"
+      },
+      {
+        "k": "t",
+        "v": " pressure point: "
+      },
+      {
+        "k": "c",
+        "v": "FORM.QGEO.BW.01"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "v325"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "v326"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "v327"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "v328"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "BWKeystone.lean"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "FORM.QGEO.BW.01"
+            },
+            {
+              "k": "t",
+              "v": ", Lean 4, "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "s",
+              "v": "O"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The "
+        },
+        {
+          "k": "c",
+          "v": "v323"
+        },
+        {
+          "k": "t",
+          "v": " Bisognano–Wichmann linkage formalised: the nodes "
+        },
+        {
+          "k": "m",
+          "v": "\\textsf{RotationInvariantVacuum}\\to\\textsf{GeometricModularFlow}\\to\n  \\textsf{Mu4ModularSymmetry}\\to\\textsf{StateInvariance}"
+        },
+        {
+          "k": "t",
+          "v": " (="
+        },
+        {
+          "k": "c",
+          "v": "QGEO.SYM.01"
+        },
+        {
+          "k": "t",
+          "v": ") composed over the "
+        },
+        {
+          "k": "c",
+          "v": "v308"
+        },
+        {
+          "k": "t",
+          "v": " chain. The theorem "
+        },
+        {
+          "k": "c",
+          "v": "bedrockReducesToRotationInvariance"
+        },
+        {
+          "k": "t",
+          "v": " shows the WHOLE bedrock "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.SYM.01"
+        },
+        {
+          "k": "t",
+          "v": " reduces to the SINGLE shared open premise "
+        },
+        {
+          "k": "c",
+          "v": "RotationInvariantVacuum"
+        },
+        {
+          "k": "t",
+          "v": " — the two open bedrock items collapse to one — with "
+        },
+        {
+          "k": "c",
+          "v": "#print axioms"
+        },
+        {
+          "k": "t",
+          "v": " confirming the residual "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the cited chain steps "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " recovery gap "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the named BW steps "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " that one premise. Plus a "
+        },
+        {
+          "k": "c",
+          "v": "decide"
+        },
+        {
+          "k": "t",
+          "v": "-proven discriminator "
+        },
+        {
+          "k": "m",
+          "v": "(1\\mid4)\\wedge\\neg(4\\mid1)"
+        },
+        {
+          "k": "t",
+          "v": " (BW geometric flow strictly stronger than "
+        },
+        {
+          "k": "c",
+          "v": "v309"
+        },
+        {
+          "k": "t",
+          "v": " clock invariance). Built "
+        },
+        {
+          "k": "c",
+          "v": "lake build"
+        },
+        {
+          "k": "t",
+          "v": " on Lean v4.29.1 "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " Mathlib."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v325_pillowcase_keystone.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGEO.KEYSTONE.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "s",
+              "v": "O"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The keystone as ONE citable theorem: IF the raw seam state is the flat "
+        },
+        {
+          "k": "m",
+          "v": "\\tau{=}i"
+        },
+        {
+          "k": "t",
+          "v": " pillowcase (rotation-invariant) state THEN the whole bedrock closes (4 square marks, "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " deck, "
+        },
+        {
+          "k": "m",
+          "v": "\\omega\\circ\\rho{=}\\omega"
+        },
+        {
+          "k": "t",
+          "v": ", holomorphic "
+        },
+        {
+          "k": "m",
+          "v": "c{=}8\\Rightarrow(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": ", with the recovery gap as input); all pieces machine-checked (incl. the pillowcase "
+        },
+        {
+          "k": "m",
+          "v": "\\chi_{\\mathrm{orb}}{=}0"
+        },
+        {
+          "k": "t",
+          "v": "), the single open lemma shared by both bedrock IDs and Lean-pinned. An assembly certificate, not a closure."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v326_ftransfer_suite.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "FR.SUITE.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "s",
+              "v": "C"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The four "
+        },
+        {
+          "k": "m",
+          "v": "F_{\\mathrm{transfer}}"
+        },
+        {
+          "k": "t",
+          "v": " readouts productised into one runnable harness, each a gapped relaxation to a unique attractor: "
+        },
+        {
+          "k": "m",
+          "v": "F_{\\mathrm{pole}}"
+        },
+        {
+          "k": "t",
+          "v": " (Koide, seam rate "
+        },
+        {
+          "k": "m",
+          "v": "(2/3)^6"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "F_{\\mathrm{Boltzmann}}"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\eta_B"
+        },
+        {
+          "k": "t",
+          "v": ", H-theorem), "
+        },
+        {
+          "k": "m",
+          "v": "F_{\\mathrm{relic}}"
+        },
+        {
+          "k": "t",
+          "v": " (axion adiabatic invariant), "
+        },
+        {
+          "k": "m",
+          "v": "F_{\\mathrm{QCD}}"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "m_p/m_e"
+        },
+        {
+          "k": "t",
+          "v": ", RG to the UV fixed point), plus the "
+        },
+        {
+          "k": "m",
+          "v": "F_{\\mathrm{RareKaon}}"
+        },
+        {
+          "k": "t",
+          "v": " bridge. Only "
+        },
+        {
+          "k": "m",
+          "v": "F_{\\mathrm{pole}}"
+        },
+        {
+          "k": "t",
+          "v": " carries the seam rate; the four external rates are honestly fenced ("
+        },
+        {
+          "k": "c",
+          "v": "v187"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v303"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v327_hypergraph_rewrite.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "HYP.REWRITE.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "s",
+              "v": "O"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The cusp weight "
+        },
+        {
+          "k": "m",
+          "v": "2/3"
+        },
+        {
+          "k": "t",
+          "v": " is DERIVED from a minimal rewrite: a 3-channel/1-absorbing family rule has spectrum "
+        },
+        {
+          "k": "m",
+          "v": "\\{1,2/3,0\\}"
+        },
+        {
+          "k": "t",
+          "v": ", so "
+        },
+        {
+          "k": "m",
+          "v": "2/3{=}(\\Nfam{-}1)/\\Nfam{=}|\\Z_2|/\\Nfam"
+        },
+        {
+          "k": "t",
+          "v": " emerges from the rule arity and "
+        },
+        {
+          "k": "m",
+          "v": "(2/3)^6{=}64/729"
+        },
+        {
+          "k": "t",
+          "v": " is the recovery gap; with a PROOF that "
+        },
+        {
+          "k": "m",
+          "v": "2/3"
+        },
+        {
+          "k": "t",
+          "v": " is not a root of the affine-"
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " charpoly ("
+        },
+        {
+          "k": "m",
+          "v": "p(2/3){=}-3520/19683\\ne0"
+        },
+        {
+          "k": "t",
+          "v": ", sharpening "
+        },
+        {
+          "k": "c",
+          "v": "v312"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "c",
+          "v": "v324"
+        },
+        {
+          "k": "t",
+          "v": "'s injected datum is reduced to the anchor arity "
+        },
+        {
+          "k": "m",
+          "v": "\\{2,3\\}"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v328_theta13_pressure.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "FLAV.TH13.PRESSURE.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "s",
+              "v": "C"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "s",
+              "v": "X"
+            },
+            {
+              "k": "t",
+              "v": ") "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " "
+            },
+            {
+              "k": "c",
+              "v": "v307"
+            },
+            {
+              "k": "t",
+              "v": " hardening."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The honest weak spot named and quantified: "
+        },
+        {
+          "k": "m",
+          "v": "\\sin^2\\theta_{13}{=}\\phiz e^{-5/6}{=}0.023108"
+        },
+        {
+          "k": "t",
+          "v": " is "
+        },
+        {
+          "k": "m",
+          "v": "+2.0\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " above NuFIT 6.0 NO, a SEPARATE carrier-trace channel ("
+        },
+        {
+          "k": "c",
+          "v": "v268"
+        },
+        {
+          "k": "t",
+          "v": "), not relieved by any freeze-respecting correction (RG "
+        },
+        {
+          "k": "m",
+          "v": "<1\\%"
+        },
+        {
+          "k": "t",
+          "v": ", exponent "
+        },
+        {
+          "k": "m",
+          "v": "5/6"
+        },
+        {
+          "k": "t",
+          "v": " exact), pre-registered as the kill. The "
+        },
+        {
+          "k": "c",
+          "v": "v307"
+        },
+        {
+          "k": "t",
+          "v": " watchdog gains a data provenance/date check and the rare-kaon "
+        },
+        {
+          "k": "m",
+          "v": "F_{\\mathrm{transfer}}"
+        },
+        {
+          "k": "t",
+          "v": " bridge row."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Wolfram mirror "
+            },
+            {
+              "k": "m",
+              "v": "285\\to288"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v325"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\chi_{\\mathrm{orb}}{=}0"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "c",
+          "v": "v327"
+        },
+        {
+          "k": "t",
+          "v": " (rewrite spectrum "
+        },
+        {
+          "k": "m",
+          "v": "\\{0,2/3,1\\}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "(2/3)^6{=}64/729"
+        },
+        {
+          "k": "t",
+          "v": ", and the non-graph-spectral proof) added to "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_readouts_extension.wl"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "GATE.WOLFRAM.02"
+        },
+        {
+          "k": "t",
+          "v": " and the Wolfram README updated to "
+        },
+        {
+          "k": "m",
+          "v": "288/288"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-22",
+    "dateLabel": "2026-06-22",
+    "heading": [
+      {
+        "k": "t",
+        "v": "consistency + de-accretion editorial pass: current-state alignment across papers, website and ledger; no new modules"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Keystone naming reconciled to "
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EQUIV.01"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Following "
+        },
+        {
+          "k": "c",
+          "v": "v323"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "QGEO.BW.01"
+        },
+        {
+          "k": "t",
+          "v": " (the deck premise is downstream of the seam being a chiral net), the single named open keystone is now "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "everywhere"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", with "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.SYM.01"
+        },
+        {
+          "k": "t",
+          "v": " stated as its "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "downstream"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " conformal-deck face. The ledger row "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.SYM.01"
+        },
+        {
+          "k": "t",
+          "v": " was updated (it no longer calls itself “the single structural residual of the whole theory”; it now depends on "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "QGEO.BW.01"
+        },
+        {
+          "k": "t",
+          "v": "), and the superseded “"
+        },
+        {
+          "k": "c",
+          "v": "GATE.QGEO"
+        },
+        {
+          "k": "t",
+          "v": " open gate” / “two research gates "
+        },
+        {
+          "k": "m",
+          "v": "(U_{\\mathrm{wall}})"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "G_{\\mathrm{metric}}"
+        },
+        {
+          "k": "t",
+          "v": "” framing was replaced by the current "
+        },
+        {
+          "k": "m",
+          "v": "\\text{Rest}=v_{\\mathrm{geo}}\\oplus G_{\\mathrm{net}}\n  \\oplus F_{\\mathrm{transfer}}"
+        },
+        {
+          "k": "t",
+          "v": " with the two structural items "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "QG.AMB.01"
+        },
+        {
+          "k": "t",
+          "v": " (intro status card, "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_4_frontier"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_5_redteam"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ", and the website)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "De-accretion: the sprint-by-sprint reduction history was moved to this changelog, where it belongs."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Several reader-facing sections had grown by accretion (each round appended a clause). They were rewritten to state the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "current"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " result once, with the round-by-round narrative left here: the introduction closure ledger (“honest bottom line”) and hard-reduction subsection; the "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": " “residual inventory” (the five “Update/…/Terminal” passes collapsed to one current inventory); the "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_5_redteam"
+        },
+        {
+          "k": "t",
+          "v": " Target-A Outcome; and on the website the FAQ “What is still open?”, the "
+        },
+        {
+          "k": "c",
+          "v": "OpenGates"
+        },
+        {
+          "k": "t",
+          "v": " closing-condition block, the "
+        },
+        {
+          "k": "c",
+          "v": "papers.ts"
+        },
+        {
+          "k": "t",
+          "v": " research-contracts/red-team entries, the verification-DAG "
+        },
+        {
+          "k": "c",
+          "v": "qft"
+        },
+        {
+          "k": "t",
+          "v": " node, the glossary "
+        },
+        {
+          "k": "c",
+          "v": "G_net"
+        },
+        {
+          "k": "t",
+          "v": " entry, the Rosetta lexicon, and the verification/review pages. No scientific content or "
+        },
+        {
+          "k": "c",
+          "v": "\\veri"
+        },
+        {
+          "k": "t",
+          "v": " citation was dropped; only the embedded version-stamp logs were removed."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Stale facts corrected."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Version label "
+        },
+        {
+          "k": "c",
+          "v": "5.0"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "c",
+          "v": "v5.2"
+        },
+        {
+          "k": "t",
+          "v": " (intro, single-sourced via "
+        },
+        {
+          "k": "c",
+          "v": "\\TFPTversion"
+        },
+        {
+          "k": "t",
+          "v": "); Lean build "
+        },
+        {
+          "k": "c",
+          "v": "1886"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "c",
+          "v": "3357"
+        },
+        {
+          "k": "t",
+          "v": " jobs ("
+        },
+        {
+          "k": "c",
+          "v": "FORM.SEAMEQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": "); README Python suite "
+        },
+        {
+          "k": "c",
+          "v": "v213"
+        },
+        {
+          "k": "t",
+          "v": "/ 212"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "c",
+          "v": "v324"
+        },
+        {
+          "k": "t",
+          "v": "/ 322 modules; Wolfram extension "
+        },
+        {
+          "k": "c",
+          "v": "269/269"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "c",
+          "v": "249/249"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "c",
+          "v": "285/285"
+        },
+        {
+          "k": "t",
+          "v": " (README, website replication page, "
+        },
+        {
+          "k": "c",
+          "v": "zenodo_description.html"
+        },
+        {
+          "k": "t",
+          "v": "); residual “Paper-3” old-paper attributions in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": " neutralised."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-22",
+    "dateLabel": "2026-06-22",
+    "heading": [
+      {
+        "k": "t",
         "v": "external-review pass: a registry bug fix, the NA62 2026 rare-kaon update, CP-phase prose hygiene, and three firewall/visualisation enhancements: "
       },
       {

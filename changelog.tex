@@ -59,6 +59,71 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-22 (next-steps round: the keystone collapsed to one shared premise (Lean $+$ one citable theorem), the $F_{\mathrm{transfer}}$ solver suite, the cusp weight derived from a minimal rewrite, and the $\theta_{13}$ pressure point: \texttt{FORM.QGEO.BW.01}, \texttt{v325}, \texttt{v326}, \texttt{v327}, \texttt{v328})}
+\begin{itemize}
+\item \textbf{\texttt{BWKeystone.lean} (\texttt{FORM.QGEO.BW.01}, Lean 4, \mE/\mO).} The \texttt{v323} Bisognano--Wichmann
+  linkage formalised: the nodes $\textsf{RotationInvariantVacuum}\to\textsf{GeometricModularFlow}\to
+  \textsf{Mu4ModularSymmetry}\to\textsf{StateInvariance}$ (=\texttt{QGEO.SYM.01}) composed over the \texttt{v308} chain.
+  The theorem \texttt{bedrockReducesToRotationInvariance} shows the WHOLE bedrock \texttt{QGEO.SYM.01} reduces to
+  the SINGLE shared open premise \texttt{RotationInvariantVacuum} --- the two open bedrock items collapse to one ---
+  with \texttt{\#print axioms} confirming the residual $=$ the cited chain steps $+$ recovery gap $+$ the named BW
+  steps $+$ that one premise.  Plus a \texttt{decide}-proven discriminator $(1\mid4)\wedge\neg(4\mid1)$ (BW geometric
+  flow strictly stronger than \texttt{v309} clock invariance).  Built \texttt{lake build} on Lean v4.29.1 $+$ Mathlib.
+\item \textbf{\texttt{v325\_pillowcase\_keystone.py} (\texttt{QGEO.KEYSTONE.01}, \mE/\mO).} The keystone as ONE
+  citable theorem: IF the raw seam state is the flat $\tau{=}i$ pillowcase (rotation-invariant) state THEN the whole
+  bedrock closes (4 square marks, $\mu_4$ deck, $\omega\circ\rho{=}\omega$, holomorphic $c{=}8\Rightarrow(E_8)_1$,
+  with the recovery gap as input); all pieces machine-checked (incl.\ the pillowcase $\chi_{\mathrm{orb}}{=}0$), the
+  single open lemma shared by both bedrock IDs and Lean-pinned.  An assembly certificate, not a closure.
+\item \textbf{\texttt{v326\_ftransfer\_suite.py} (\texttt{FR.SUITE.01}, \mE/\mC).} The four $F_{\mathrm{transfer}}$
+  readouts productised into one runnable harness, each a gapped relaxation to a unique attractor: $F_{\mathrm{pole}}$
+  (Koide, seam rate $(2/3)^6$), $F_{\mathrm{Boltzmann}}$ ($\eta_B$, H-theorem), $F_{\mathrm{relic}}$ (axion adiabatic
+  invariant), $F_{\mathrm{QCD}}$ ($m_p/m_e$, RG to the UV fixed point), plus the $F_{\mathrm{RareKaon}}$ bridge.
+  Only $F_{\mathrm{pole}}$ carries the seam rate; the four external rates are honestly fenced (\texttt{v187}/\texttt{v303}).
+\item \textbf{\texttt{v327\_hypergraph\_rewrite.py} (\texttt{HYP.REWRITE.01}, \mE/\mO).} The cusp weight $2/3$ is
+  DERIVED from a minimal rewrite: a 3-channel/1-absorbing family rule has spectrum $\{1,2/3,0\}$, so
+  $2/3{=}(\Nfam{-}1)/\Nfam{=}|\Z_2|/\Nfam$ emerges from the rule arity and $(2/3)^6{=}64/729$ is the recovery gap;
+  with a PROOF that $2/3$ is not a root of the affine-$E_8$ charpoly ($p(2/3){=}-3520/19683\ne0$, sharpening \texttt{v312}).
+  \texttt{v324}'s injected datum is reduced to the anchor arity $\{2,3\}$.
+\item \textbf{\texttt{v328\_theta13\_pressure.py} (\texttt{FLAV.TH13.PRESSURE.01}, \mC/\mX) $+$ \texttt{v307}
+  hardening.} The honest weak spot named and quantified: $\sin^2\theta_{13}{=}\phiz e^{-5/6}{=}0.023108$ is
+  $+2.0\sigma$ above NuFIT 6.0 NO, a SEPARATE carrier-trace channel (\texttt{v268}), not relieved by any
+  freeze-respecting correction (RG $<1\%$, exponent $5/6$ exact), pre-registered as the kill.  The \texttt{v307}
+  watchdog gains a data provenance/date check and the rare-kaon $F_{\mathrm{transfer}}$ bridge row.
+\item \textbf{Wolfram mirror $285\to288$.} \texttt{v325} ($\chi_{\mathrm{orb}}{=}0$) and \texttt{v327} (rewrite
+  spectrum $\{0,2/3,1\}$, $(2/3)^6{=}64/729$, and the non-graph-spectral proof) added to
+  \texttt{tfpt\_readouts\_extension.wl}; \texttt{GATE.WOLFRAM.02} and the Wolfram README updated to $288/288$.
+\end{itemize}
+
+\subsection*{2026-06-22 (consistency + de-accretion editorial pass: current-state alignment across papers, website and ledger; no new modules)}
+\begin{itemize}
+\item \textbf{Keystone naming reconciled to \texttt{SEAM.EQUIV.01}.} Following \texttt{v323}/\texttt{QGEO.BW.01}
+  (the deck premise is downstream of the seam being a chiral net), the single named open keystone is now
+  \texttt{SEAM.EQUIV.01} \emph{everywhere}, with \texttt{QGEO.SYM.01} stated as its \emph{downstream}
+  conformal-deck face. The ledger row \texttt{QGEO.SYM.01} was updated (it no longer calls itself ``the single
+  structural residual of the whole theory''; it now depends on \texttt{SEAM.EQUIV.01}/\texttt{QGEO.BW.01}), and
+  the superseded ``\texttt{GATE.QGEO} open gate'' / ``two research gates $(U_{\mathrm{wall}})$ and
+  $G_{\mathrm{metric}}$'' framing was replaced by the current $\text{Rest}=v_{\mathrm{geo}}\oplus G_{\mathrm{net}}
+  \oplus F_{\mathrm{transfer}}$ with the two structural items \texttt{SEAM.EQUIV.01} $+$ \texttt{QG.AMB.01}
+  (intro status card, \texttt{tfpt\_4\_frontier}, \texttt{origin\_theory}, \texttt{tfpt\_5\_redteam},
+  \texttt{tfpt\_research\_contracts}, and the website).
+\item \textbf{De-accretion: the sprint-by-sprint reduction history was moved to this changelog, where it belongs.}
+  Several reader-facing sections had grown by accretion (each round appended a clause). They were rewritten to
+  state the \emph{current} result once, with the round-by-round narrative left here: the introduction closure
+  ledger (``honest bottom line'') and hard-reduction subsection; the \texttt{origin\_theory} ``residual
+  inventory'' (the five ``Update/\ldots/Terminal'' passes collapsed to one current inventory); the
+  \texttt{tfpt\_5\_redteam} Target-A Outcome; and on the website the FAQ ``What is still open?'', the
+  \texttt{OpenGates} closing-condition block, the \texttt{papers.ts} research-contracts/red-team entries, the
+  verification-DAG \texttt{qft} node, the glossary \texttt{G\_net} entry, the Rosetta lexicon, and the
+  verification/review pages. No scientific content or \texttt{\textbackslash veri} citation was dropped; only the
+  embedded version-stamp logs were removed.
+\item \textbf{Stale facts corrected.} Version label \texttt{5.0}$\to$\texttt{v5.2} (intro, single-sourced via
+  \texttt{\textbackslash TFPTversion}); Lean build \texttt{1886}$\to$\texttt{3357} jobs (\texttt{FORM.SEAMEQUIV.01});
+  README Python suite \texttt{v213}/\,212$\to$\texttt{v324}/\,322 modules; Wolfram extension
+  \texttt{269/269}\,/\,\texttt{249/249}$\to$\texttt{285/285} (README, website replication page,
+  \texttt{zenodo\_description.html}); residual ``Paper-3'' old-paper attributions in \texttt{tfpt\_2} neutralised.
+\end{itemize}
+\noindent\emph{(Original 2026-06-22 entry follows.)}
+
 \subsection*{2026-06-22 (external-review pass: a registry bug fix, the NA62 2026 rare-kaon update, CP-phase prose hygiene, and three firewall/visualisation enhancements: \texttt{v202}, \texttt{v203}, \texttt{v305}, \texttt{v307}, \texttt{v321})}
 \begin{itemize}
 \item \textbf{Bug fix --- $\delta_{\mathrm{CKM}}$ display value.} The predictions table (\texttt{tex-artefacts/predictions.tex})

@@ -75,6 +75,16 @@ BRIDGE_HIST = {  # the earlier observation each bridge readout was previously ju
 NO_DECISION = {"MSCAL_OVER_MBAR", "DELTA_CP_NU_DEG", "SIN2_THETA23"}
 # the dark-energy / vacuum front: w=-1 readout, the most dangerous negative front
 WATCHDOG = {"RHOL_OVER_MBAR4"}
+# data provenance: every measured/bridge source carries a release date, so the watchdog
+# board cannot silently drift onto stale numbers (review point: provenance + date).
+SOURCE_DATES = {
+    "CODATA 2022": "2022", "NuFIT 6.0": "2024", "ACT DR6": "2025",
+    "Planck 2018": "2018", "PDG 2024": "2024", "PDG 2024 |Vcb|": "2024",
+    "PDG 2024 |Vub|": "2024", "PDG 2024 gamma=65.7+-3.0 deg": "2024",
+    "PDG 2024 (source vs pole)": "2024", "FLAG 2024 (scheme spread)": "2024",
+    "PDG 2024 MSbar (scheme spread)": "2024", "PDG 2024 (scheme spread)": "2024",
+    "NA62 2016-2024 (La Thuile 2026)": "2026", "NA62 2016-2022": "2025",
+}
 
 BK18_R_LIMIT = 0.036          # BICEP/Keck 2018 95% upper limit on r
 R_KILL = 0.01                 # TFPT kill: robust r > 0.01 kills the R^2 branch
@@ -212,6 +222,17 @@ def run():
           "8.6e-11 is also inside the NA62 error), not a unique TFPT-vs-SM "
           "discriminator" % (n_k, n_k_hist),
           classify(n_k) == "PASS" and abs(n_k_hist) > 1.0)
+
+    # ---- 7. data provenance: every measured/bridge source is dated ----
+    used_sources = ([src for (_c, _s, src) in MEAS.values()]
+                    + [src for (_c, _w, src) in SCHEME.values()]
+                    + [src for (_p, _c, _s, src) in BRIDGE.values()]
+                    + [src for (_c, _s, src) in BRIDGE_HIST.values()])
+    undated = sorted({s for s in used_sources if s not in SOURCE_DATES})
+    check("DATA PROVENANCE [N]: every measured/bridge source on the board carries a "
+          "release date (no silent drift onto stale numbers); %d sources, undated=%s"
+          % (len(set(used_sources)), undated),
+          undated == [])
 
     return summary("v307 data watchdog (decision pipeline)")
 

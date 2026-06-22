@@ -207,6 +207,19 @@ fibre the $3$-node cusp ($=\Nfam$). Honestly (\vref{v312}) the cusp weight is st
 the graph --- so this is a consistent realisation of the predicted product structure, not a derivation of $2/3$ from
 a pure rewrite \mC.
 
+\par\smallskip\noindent\textbf{The cusp weight from a minimal rewrite}
+(\veri{v327\_hypergraph\_rewrite.py}). One honest step further: the injected $2/3$ is the fixed point of a
+\emph{minimal local rule}. A family channel with $\Nfam{=}3$ slots, one absorbing attractor ($w{=}0$) and
+$|\Z_2|{=}2$ surviving (the $\Z_2$ pair), has per-step survival operator
+$M=\bigl(\begin{smallmatrix}1&0&0\\0&\frac13&\frac13\\0&\frac13&\frac13\end{smallmatrix}\bigr)$ with spectrum
+$\{1,\tfrac23,0\}$ --- so the recovery survival $\tfrac23=(\Nfam{-}1)/\Nfam=|\Z_2|/\Nfam$ \emph{emerges from the
+rule arity}, and over the order-$6{=}2\Nfam$ hand the rate is $(2/3)^6$. \mE\ Moreover $2/3$ is provably \emph{not}
+a root of the affine-$E_8$ characteristic polynomial ($p(2/3)=-3520/19683\ne0$), so the recovery rate cannot be an
+adjacency eigenvalue (the \vref{v312} negative, now a proof). \mO\ The residual shrinks: the rewrite derives the
+\emph{ratio} $2/3$ from the arity $\{|\Z_2|,\Nfam\}=\{2,3\}$, leaving only the anchor atoms as input --- so the
+substrate is the $(2,3,5)$ adjacency (carrier) $\times$ this minimal branching rule (family), both built from
+$\{2,3,5\}$ \mC.
+
 \par\smallskip\noindent\textbf{Static vs.\ dynamic rates: a number-field split}
 (\veri{v314\_rate\_translation.py}). The discrete kernel and the dynamic recovery sit in \emph{different number
 fields}, which is the precise reason their rates do not freely interconvert. The adjacency spectrum splits as a
@@ -787,8 +800,8 @@ $\int R\supset4\pi(1{-}n)A$). \emph{Update (\veri{v90\_conical\_defect\_chain.py
 $\int K=2\pi(1{-}\alpha)$ is machine-derived on a smoothed cone (spherical-cap regularisation, exactly
 smoothing-independent), lifted codim-$2$ to $4\pi(1{-}\alpha)A$, and the replica derivative then gives
 $S=4\pi kA$ with the smooth part dropping out; $S=A/4\Leftrightarrow\cthree=1/(8\pi)$ is sympy-solved as
-unique. The single remaining step of the whole chain is thereby isolated: ``seam determinant $\Rightarrow$
-EH form $k\!\int\!\sqrt g\,R$'' --- nothing else is open, and no Bekenstein--Hawking import remains.}
+unique. The single remaining step of \emph{this area-law chain} is thereby isolated: ``seam determinant $\Rightarrow$
+EH form $k\!\int\!\sqrt g\,R$'' --- nothing else in the chain is open, and no Bekenstein--Hawking import remains.}
 \smallskip\\
 \noindent\textbf{The mechanism exists: the EH form at the gapped-model level
 (\veri{v150\_replica\_eh\_model.py}).} The isolated step now has its mechanism exhibited exactly, at the
@@ -1125,91 +1138,20 @@ the bridge reaches its final form: \emph{one} \mC\ identification, ``the transfe
 own Nariai clock''. \emph{(Since constructed, \vref{v124}--\vref{v133}: the resummed clock has the closed form
 $\mathrm{rate}(n)=-p_2\ln(1-n/N_{\mathrm{fam}})$, its weights are the Mehta--Seshadri parabolic weights of
 $A_0^\star$, and the rate is the entropy power law $\Gamma\propto(S/S_{dS})^{p_2}$; the residue of R1 is
-one finite $\zeta(0)$ budget.)} \textbf{(C) The complete gap list (machine-pinned).} Exactly \emph{five} structural
-objects stand between the certified core and a strict TOE: the seam quantum clock \mC, the
-holomorphy$+c{=}8$ theorem \mC/\mO, the seam-determinant$\to$EH step \mO, the H2 dictionary \mO/\mC, and
-the parabolic realisation of $Q$ (which now also carries the sheet question) \mC\ --- plus the two
-irreducibles (one scale $v_{\mathrm{geo}}$, the primitive $\pi$) and the frozen data surfaces. Nothing is
-closed by this box; its claim is \emph{completeness} --- a sixth structural gap would fail the script.
-\smallskip\\
-\noindent\emph{Update (post \vref{v110}--\vref{v122}, \veri{v123\_inventory\_update.py}):} the list keeps its
-cardinality but its \emph{contents} sharpened. The old R4 (``H2 dictionary'') is \textbf{discharged}
---- its values, addresses and margins are now exact theorems (\vref{v118}--\vref{v122}); what replaces it is the far
-smaller R4$'$, the \emph{establishment of the selectors} ($n=(5,-9,6)$ and the diamond determinants
---- five frozen integers). And R2 now carries \textbf{three loads}: the one index-$4$ boundary-net
-statement closes, when proven, the metric gate, the carrier choice \emph{and} the QBL programme ---
-one theorem, three doors. The flavor side has no open analysis class of its own anymore.
-\smallskip\\
-\noindent\emph{Second update (\vref{v141}--\vref{v144}):} four of the five classes sharpened again, none
-removed. R5's \emph{discrete} freedom is gone --- the $\Z_3$ deck choice is \emph{derived} from the
-integer model (geometric deck $=$ sheet-twisted class, \vref{v141}); R4$'$ shrinks from three pairings to
-\emph{two} (the $\sigma$-pairing is integrality-forced mod $11$, \vref{v142}); R2's Q-system
-identification holds at the finite Lie level (graded Frobenius hull, \vref{v143}) --- the residue is
-\emph{one} conformal-net statement; and R1's det-ratio cancellation is derived within the SdS family
-($e_2$-rigidity, \vref{v144}), with the finite-weight absorption obstruction stated sharply. R3 is
-untouched.
-\smallskip\\
-\noindent\emph{Third update (\vref{v145}--\vref{v148}):} each class now sits at its floor. R4$'$:
-the pairing \emph{values} are atom identities (new closure $|\mu_4|+\gcar=\Nfam^2$); residue $=$
-\emph{one} lift map (\vref{v145}). R5: the \emph{full} M\"obius $D_4$ of the seam curve matches the
-integer model parity by parity; residue $=$ the module identification itself (\vref{v146}). R1: the
-ring sum \emph{is} the Born-squared Gaussian zero-mode integral and the quantum bend is
-det$'$-clean; residue $=$ the measure identification $+$ one reference normalisation (\vref{v147}).
-R2: the odd glue sectors are \emph{Ramond} modules (zero NS support), the glue choice is the
-R-projection ($248=120_{\mathrm{NS}}+128_{\mathrm R}$) --- the one net statement is scoped to the
-twisted-sector structure (\vref{v148}). R3's mechanism now \emph{exists} (gapped replica $\Rightarrow$ EH
-form, \vref{v150}), the Calder\'on transfer is \emph{answered} (the DtN kernel is conically clean, BFK,
-\vref{v151}), and its normalisation is the dimensionful anchor, not a separate gap (\vref{v152}). And
-R4$'$ dissolves further: \emph{both} dual normals are anchor data ($n=(p_2,p_0,e_2)(a)$ in the cusp
-frame, \vref{v149}) --- residue $=$ one assignment.
-\smallskip\\
-\noindent\emph{Fourth update (\vref{v153}--\vref{v154}, external review formalised):} the two surviving
-non-frontier items are now stated as theorems. $v_{\mathrm{geo}}$ is an \emph{irreducible metrology
-primitive} by the \textbf{No-Unit Theorem} --- a dimensionless compiler cannot select an absolute scale,
-and $U_{\mathrm{point}}\sim v_{\mathrm{geo}}$, $1/G\sim v_{\mathrm{geo}}^2$, $m/\mu=e^{3/4}$ are one unit
-in three mass-dimensions (\vref{v153}). And $G_{\mathrm{net}}$ is the \textbf{Simple-Current Extension
-Theorem} $(D_5)_1{\otimes}(A_3)_1{\rtimes}\langle(1,1)\rangle\cong(E_8)_1$ (index $4$, $c{=}8$,
-$\mu{=}1\Rightarrow$ holomorphic $\Rightarrow E_8$), exact and machine-assembled; the only residue is the
-seam-side identification (\vref{v154}) --- which itself reduces to \emph{one} shared physical premise: the
-boundary marginal of a Gaussian bulk is automatically quasi-free (compression of a contraction,
-\vref{v155}), so $G_{\mathrm{net}}$'s analytic core is the \emph{same} ``seam is a free RP field'' premise
-that the area law (\vref{v59}) and R3 (\vref{v150}/\vref{v151}) already use --- one premise, not three.
-And the target net is \emph{explicitly constructed and verified} (\vref{v156}): the DtN/Calder\'on
-operator is the free chiral dispersion $\omega_k{=}|k|$, $16$ Majoranas give $c{=}8{=}5{+}3$, the currents
-are $248{=}120{+}128$, and the holomorphic character $E_4/\eta^8=j^{1/3}$ (with $248$ at level $1$) makes
-$B\cong(E_8)_1$ a checked identity. And the free-bulk premise itself reframes (\vref{v157}): freeness is
-the \emph{rigid} holomorphic $c{=}8$ boundary fixed point --- the DtN symbol is universally $|k|$
-(Lee--Uhlmann), a holomorphic $c{=}8$ theory has no marginal $(1,1)$ deformation (so no room for an
-interaction), and the same $|\Z_2|$ that halves $8\pi$ in $\cthree$ is the Ramond projection giving
-$\mu{=}1$. So premise~(A) shrinks from ``prove Gaussianity'' to ``the gapped flow reaches the holomorphic
-fixed point''; freeness is then forced by rigidity, not postulated. An exact operator-dimension count (\vref{v158})
-settles the destination: the relevant window $(0,1)$ for bosonic deformations is empty, the dimension-$1$
-currents are chiral, and the lowest interaction (a quartic) has dimension $2$ (irrelevant) --- the free
-chiral $c{=}8$ fixed point is isolated and stable. So (A) reduces to a basin-of-attraction statement with
-a proven stable target.
-\emph{Fifth update (\vref{v160}--\vref{v165}): (A) ceases to be its own gate.} It is recast as a
-fixed-point theorem --- quasi-free $\Rightarrow$ all higher connected cumulants $\kappa_{2n}{=}0$
-(\vref{v160}); the infinite Schwinger cone is \emph{eliminated}, because a quasi-free transport is the
-Bogoliubov second quantisation $\Gamma(t)$ and the cone gap equals the one-particle gap $(2/3)^6$ exactly
-(\vref{v161}), a value forced by $\mu_4$-equivariance and the unique residue $A_0^\star$ (\vref{v162}); and
-the surviving $16$-dimensional identification \emph{factors} into the two already-open items --- $A_2$ net
-existence (an assembly of established net constructions, \mC) and $R_1=$ \texttt{GATE.QGEO} (the seam
-collar boundary $=$ the punctured sphere $\PP\setminus\mu_4$) --- so by the No-Unit Theorem the irreducibles
-stay exactly $\{\pi,v_{\mathrm{geo}}\}$ and (A) carries \emph{zero independent open gates} (\vref{v165});
-a unification, not an unconditional proof.
-\textbf{The honest one line:} TFPT is closed as a dimensionless
-boundary compiler; its only irreducibles are $\pi$ and the one metrology unit $v_{\mathrm{geo}}$; the one
-strict-TOE theorem still carrying weight is the seam-net identification; every ``frontier'' item is an
-instance of $F_{\mathrm{transfer}}$.
-\smallskip\\
-\noindent\emph{Terminal inventory (machine-pinned, \veri{v167\_inventory\_post\_closure.py}):} with (A)
-discharged, the \textbf{(C)} count above collapses --- the seam clock, the index-$4$ net and the
-$Q$-realisation all merge into the \emph{one} Tier-1 hinge (seam $=$ flavour $=$ horizon $=$ $A_2$ net
-assembly $+$ \texttt{GATE.QGEO}), the EH step folds into $v_{\mathrm{geo}}$ and the ambient measure into
-$G_{\mathrm{net}}$. The terminal residual is therefore \emph{one} hinge $+$ \emph{one} transfer functor
-($F_{\mathrm{transfer}}$: Koide, $\eta_B$, axion, $m_p/m_e$) $+$ the irreducible core
-$\{\pi,v_{\mathrm{geo}}\}$ (a theorem). A sixth independent structural class --- or a new irreducible ---
-would fail the script.
+one finite $\zeta(0)$ budget.)} \textbf{(C) The current inventory (machine-pinned, \veri{v123\_inventory\_update.py}/\veri{v167\_inventory\_post\_closure.py}).}
+After the free-bulk premise (A) is discharged (\vref{v160}--\vref{v165}) and the seam clock, the index-$4$
+net and the $Q$-realisation all merge into one hinge, the structural residual is \emph{two} named open
+items --- the single keystone \texttt{SEAM.EQUIV.01} (the raw RP seam $=$ the holomorphic $(E_8)_1$ net at
+$\tau{=}i$; its conformal-deck face \texttt{QGEO.SYM.01} is downstream, \vref{v323}) and the separate
+ambient measure \texttt{QG.AMB.01} --- plus the two irreducibles (one scale $v_{\mathrm{geo}}$, the
+primitive $\pi$; a theorem) and the typed transfer functor $F_{\mathrm{transfer}}$ (Koide, $\eta_B$, axion,
+$m_p/m_e$). The historical ``five structural classes'' (seam clock, holomorphy$+c{=}8$,
+seam-determinant$\to$EH, H2 dictionary, $Q$-realisation) have all closed, discharged or merged into the one
+keystone; their round-by-round reduction is recorded in the changelog, not replayed here.
+\textbf{The honest one line:} TFPT is closed as a dimensionless boundary compiler; its only irreducibles
+are $\pi$ and the one metrology unit $v_{\mathrm{geo}}$; the one strict-structural theorem still carrying
+weight is the seam-net keystone \texttt{SEAM.EQUIV.01}; every ``frontier'' item is an instance of
+$F_{\mathrm{transfer}}$.
 \end{keybox}
 
 \begin{keybox}[The carrier chapter: the interior is free, the structure is the certificate \mE/\mC\ (\veri{v113\_quasifree\_kernel.py})]
@@ -1231,7 +1173,7 @@ black-hole keystones (Nariai $=$ anchor, one orientation, one clock) are the sam
 the horizon. \emph{Honest residue:} the premise ``the seam is the free $c{=}8$ net'' is the
 $G_{\mathrm{net}}$ gate itself --- one theorem now closes both the metric story and the carrier choice ---
 and that premise is itself no longer free-standing: it is a fixed-point theorem whose only residual factors
-into the already-open net-existence ($A_2$) and \texttt{GATE.QGEO}, with the irreducible core
+into the already-open net-existence ($A_2$) and the keystone \texttt{SEAM.EQUIV.01}, with the irreducible core
 $\{\pi,v_{\mathrm{geo}}\}$ a theorem (\vref{v160}--\vref{v165}). That residual is since sharpened to a
 single point: net existence and full-cone reflection positivity are discharged to \mE\
 (\vref{v175}), the realisation is assembled as one central theorem (\vref{v176}) and split into the
@@ -1260,8 +1202,9 @@ geometric normal form (\textsc{Uniform}: $z\mapsto iz$, $\sigma\rho\sigma=\rho^{
 multiplier order-$4\Leftrightarrow\zeta{=}\pm i$; \texttt{FORM.QGEO.02}) and the conditional implication
 \emph{mark-local}$\Rightarrow\omega\circ\rho=\omega$ (\texttt{FORM.QGEO.01}) are \textbf{Lean-formalised}
 (\textsc{audit: pass}, only the three standard kernel axioms; mirrors \vref{v177} and \vref{v201}/\vref{v210}).
-So everything \emph{downstream} of the postulate is \mE; the postulate \texttt{QGEO.SYM.01} itself
-remains the one irreducible \mO.
+So everything \emph{downstream} of the postulate is \mE; the conformal-deck premise \texttt{QGEO.SYM.01} is
+itself the downstream face of the single keystone \texttt{SEAM.EQUIV.01} (next paragraph), which carries the
+one irreducible \mO.
 \end{keybox}
 
 \par\smallskip\noindent\textbf{Bisognano--Wichmann: the deck postulate is downstream of the seam being a chiral
@@ -1277,7 +1220,37 @@ Bisognano--Wichmann content: \emph{given} the seam is the $(E_8)_1$ chiral confo
 $\omega\circ\rho=\omega$ \emph{follows} --- \texttt{QGEO.SYM.01} is not an independent axiom but downstream of
 \texttt{SEAM.EQUIV.01} plus a rotation-invariant vacuum. \mO\ The single remaining premise is then that the raw
 collar vacuum is rotation-invariant (no preferred seam angle) --- cleaner than a bespoke thermal state, and
-\emph{shared} with the keystone, so the two open items collapse toward one.
+\emph{shared} with the keystone, so the two open items collapse toward one. This collapse is machine-pinned in
+Lean (\texttt{FORM.QGEO.BW.01}): \texttt{bedrockReducesToRotationInvariance} composes the Bisognano--Wichmann
+steps over the \vref{v308} chain, and \texttt{\#print axioms} confirms the residual is exactly the cited theorems
+$+$ the carrier recovery gap $+$ the one shared premise (rotation-invariant vacuum).
+
+\begin{keybox}[The seam keystone theorem --- one open lemma \mE/\mO\ (\veri{v325\_pillowcase\_keystone.py})]
+The whole bedrock can now be stated as \emph{one} citable theorem with \emph{exactly one} open hypothesis.
+\textbf{Hypothesis} \mO\ ($H$): the raw RP-collar seam state is the flat $\tau{=}i$ pillowcase state ---
+equivalently, the OS-reconstructed seam vacuum is the rotation-invariant quasi-free state. \textbf{Then} \mE:
+the four marks are square ($n{=}2\chi(S^2){=}4$, \vref{v216}; cross-ratio $2\Rightarrow j{=}1728$, the order-$4$
+CM modulus, \vref{v214}/\vref{v267}); the orbifold $S^2(2,2,2,2)$ has $\chi_{\mathrm{orb}}{=}0$, i.e.\ it is flat
+at $\tau{=}i$ (Troyanov); the DtN sub-principal is supported only at $m\equiv0\bmod4$, so
+$[\rho,\Lambda]{=}0\Rightarrow\omega\circ\rho{=}\omega$ (\texttt{QGEO.SYM.01}, \vref{v201}/\vref{v280}/\vref{v323});
+and a holomorphic $c{=}8$ chiral net is $(E_8)_1$ ($\det\mathrm{Cartan}(E_8){=}1$ vs $D_8{=}4$,
+\vref{v83}/\vref{v143}/\vref{v308}, \texttt{SEAM.EQUIV.01}), with the carrier recovery gap
+$\Delta{=}6\ln\tfrac32>0$ (\vref{v76}/\vref{v302}) as the input. By \vref{v323} the single hypothesis $H$ is
+\emph{shared} by both bedrock IDs, so the keystone has \textbf{exactly one} open lemma, machine-pinned in Lean
+(\texttt{FORM.SEAMEQUIV.01} $+$ \texttt{FORM.QGEO.BW.01}). This is an assembly/reduction certificate (like
+\vref{v176}/\vref{v261}), \emph{not} a closure: $H$ stays \mO.
+\end{keybox}
+
+\par\smallskip\noindent\textbf{The transfer functor as a runnable solver suite}
+(\veri{v326\_ftransfer\_suite.py}). The four $F_{\mathrm{transfer}}$ readouts are productised into one harness, each
+a gapped relaxation to a unique attractor: \mE\ $F_{\mathrm{pole}}$ (Koide) is a M\"obius contraction to
+$Q^*{=}2/3$ with multiplier exactly $(2/3)^6$ (the seam-clock subleading eigenvalue) --- the only one at the
+\emph{seam} rate; \mC\ $F_{\mathrm{Boltzmann}}$ ($\eta_B$) is a washout contraction to the balance (H-theorem,
+thermal rate); \mC\ $F_{\mathrm{relic}}$ (axion) freezes the comoving number $N{=}E/\omega$ (the adiabatic
+invariant, cosmological rate); \mE\ $F_{\mathrm{QCD}}$ ($m_p/m_e$) is the $1$-loop RG to the Gaussian UV fixed
+point with the carrier $b_0{=}7$ ($\Lambda_{\mathrm{QCD}}$ dynamically generated); and the $F_{\mathrm{RareKaon}}$
+bridge lands on NA62 (\vref{v202}). One shape, one seam rate, four external rates honestly fenced (\vref{v187}/
+\vref{v303}) --- the suite makes the frontier measurable without claiming the external rates as compiler outputs.
 
 \par\smallskip\noindent\textbf{And the whole boundary QFT collapses onto that one postulate (the Modular
 Spectral Closure, \veri{v261\_modular\_spectral\_closure.py}).} The emergent-QFT round assembles the boundary
@@ -1289,7 +1262,7 @@ facets of one Kummer/K3 surface (\veri{v260\_k3\_kummer\_unification.py}). A cro
 pins the round ($4=[B{:}A]=|\mu_4|=2\chi=|(\Z/2)^2|$; one carrier-$16$; one gap $6\log\tfrac32$,
 \veri{v261\_modular\_spectral\_closure.py}). So Dirac, cutoff, gauging, glue and orientability are not
 separate residuals --- they are readouts of the \emph{same} seam state, and the boundary QFT is one relative
-object closed modulo \texttt{QGEO.SYM.01}, adding \emph{no new structural class} (the inventory's
+object closed modulo the keystone \texttt{SEAM.EQUIV.01}, adding \emph{no new structural class} (the inventory's
 ``no sixth class'' is preserved). \emph{What the closure does \emph{not} reach} stays exactly the
 dimensionful/ambient remainder: the full measured pole masses ($\times\,v_{\mathrm{geo}}$ $+$ standard RG),
 the absolute QCD scales ($m_p/m_e$), the complete PMNS dynamics, and the \emph{real $4$D interacting} ambient
