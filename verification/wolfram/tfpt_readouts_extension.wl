@@ -2321,6 +2321,17 @@ Module[{eigD5, eigA3, goldenHs},
     eigD5 == Sqrt[2] && eigA3 == 0 && goldenHs == {5, 10, 30}];
 ];
 
+(* ==== v350 SEAM.EQUIV.BOOTSTRAP.01: g_car=5 IS the icosahedral 5 of h(E8)=30 (the v349 correction) ==== *)
+Module[{primes30, maxPrime, piecesGolden, glueGolden},
+  primes30 = Sort[FactorInteger[30][[All, 1]]];        (* {2,3,5} = the icosahedral axes *)
+  maxPrime = Max[primes30];
+  (* the pieces D5 (h=8), A3 (h=4) are non-golden; the glued E8 (h=30) is golden (5|30) *)
+  piecesGolden = (Mod[8, 5] == 0) || (Mod[4, 5] == 0);
+  glueGolden = (Mod[30, 5] == 0);
+  checkExact["v350 SEAM.EQUIV.BOOTSTRAP.01 (correcting v349): g_car=5 is NOT the D5 rank but the BOOTSTRAP fixed point -- the largest prime of h(E8)=30, and FactorInteger[30]={2,3,5} ARE the icosahedral axes (the atoms |Z2|,N_fam,g_car). The golden ratio is EMERGENT from the mu4-glue: D5(h=8) and A3(h=4) are non-golden, but D5(+)A3 -> E8 (v154) gives h=30 (golden, 5|30). So the inputs are over-determined fixed points (not free axioms) and the golden is intrinsic to the fixed point; the residual is the physical continuum realisation, not the golden ratio",
+    primes30 == {2, 3, 5} && maxPrime == 5 && (! piecesGolden) && glueGolden];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

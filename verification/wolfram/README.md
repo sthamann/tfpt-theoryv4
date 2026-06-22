@@ -105,7 +105,7 @@ v84–v93 block passed **45/45** on first run; the v94–v140 blocks were added
 the same day, the v141–v144 block on 2026-06-12. Current state:
 
 ```
---- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349: 296 passed, 0 failed ---
+--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350: 297 passed, 0 failed ---
 ALL WOLFRAM EXTENSION CHECKS PASSED
 ```
 
@@ -189,6 +189,13 @@ The 2026-06-22 **golden-ratio test round** added one more exact check (295 → 2
 (`h=8`) gives `2cos(2π/8)=√2`, `A3` (`h=4`) gives `0`; golden needs `5|h`, which holds only on
 the output side `{SU(5) h=5, H3 h=10, E8 h=30}`. So `φ` is the icosahedral *input*, not a hidden
 raw feature; `L2` reduces to "is `g_car=5` a pentagon or a count?").
+
+The 2026-06-22 **bootstrap-correction round** added one more exact check (296 → 297):
+`v350_bootstrap_inputs_correction.py` (the correction of v349 — `g_car=5` is the bootstrap
+fixed point, the largest prime of `h(E8)=30`, and `FactorInteger[30]={2,3,5}` ARE the
+icosahedral axes; the golden ratio is EMERGENT from the `μ4`-glue `D5⊕A3→E8` (`h=30`, golden),
+not external. So the inputs are over-determined fixed points, not free axioms, and the
+residual is the physical continuum realisation, not the golden ratio).
 
 The 2026-06-22 **next-steps round (A/C/D/B)** added one more exact check (288 → 289):
 `v337_decoupling_theorem.py` (the ambient back-reaction scale `2·dim(E₈)·c₃² = 31/(4π²)`

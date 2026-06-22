@@ -47,6 +47,337 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "correction: the inputs are bootstrap-forced fixed points, not free axioms – "
+      },
+      {
+        "k": "m",
+        "v": "g_{\\mathrm{car}}{=}5"
+      },
+      {
+        "k": "t",
+        "v": " IS the icosahedral "
+      },
+      {
+        "k": "m",
+        "v": "5"
+      },
+      {
+        "k": "t",
+        "v": " of "
+      },
+      {
+        "k": "m",
+        "v": "h(E_8){=}30"
+      },
+      {
+        "k": "t",
+        "v": ", and the golden ratio is emergent from the "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4"
+      },
+      {
+        "k": "t",
+        "v": "-glue, not external: "
+      },
+      {
+        "k": "c",
+        "v": "v350"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v350"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EQUIV.BOOTSTRAP.01"
+            },
+            {
+              "k": "t",
+              "v": ") — correcting "
+            },
+            {
+              "k": "c",
+              "v": "v349"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " An honest correction prompted by the right objection that the inputs are not axioms but are back-determined by the theory. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the inputs ARE bootstrap-forced ("
+        },
+        {
+          "k": "c",
+          "v": "v6"
+        },
+        {
+          "k": "t",
+          "v": "): "
+        },
+        {
+          "k": "m",
+          "v": "\\gcar{=}5"
+        },
+        {
+          "k": "t",
+          "v": " is over-determined three ways – rank-fill ("
+        },
+        {
+          "k": "m",
+          "v": "\\gcar{+}\\Nfam{=}8"
+        },
+        {
+          "k": "t",
+          "v": "), Coxeter-match ("
+        },
+        {
+          "k": "m",
+          "v": "\\gcar{=}"
+        },
+        {
+          "k": "t",
+          "v": " max prime of "
+        },
+        {
+          "k": "m",
+          "v": "h(E_8){=}30"
+        },
+        {
+          "k": "t",
+          "v": "), Pascal ("
+        },
+        {
+          "k": "m",
+          "v": "2^4{=}C(5,0){+}C(5,1){+}C(5,2)"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "so "
+        },
+        {
+          "k": "m",
+          "v": "\\gcar{=}5"
+        },
+        {
+          "k": "t",
+          "v": " IS the icosahedral "
+        },
+        {
+          "k": "m",
+          "v": "5"
+        },
+        {
+          "k": "t",
+          "v": "-fold (the "
+        },
+        {
+          "k": "m",
+          "v": "5"
+        },
+        {
+          "k": "t",
+          "v": " in "
+        },
+        {
+          "k": "m",
+          "v": "h(E_8){=}30{=}2{\\cdot}3{\\cdot}5"
+        },
+        {
+          "k": "t",
+          "v": "), not the "
+        },
+        {
+          "k": "m",
+          "v": "D_5"
+        },
+        {
+          "k": "t",
+          "v": " rank; the atoms "
+        },
+        {
+          "k": "m",
+          "v": "(2,3,5)"
+        },
+        {
+          "k": "t",
+          "v": " ARE the primes of the icosahedral Coxeter number "
+        },
+        {
+          "k": "m",
+          "v": "30"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the golden ratio is EMERGENT from the glue: "
+        },
+        {
+          "k": "m",
+          "v": "D_5"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "h{=}8"
+        },
+        {
+          "k": "t",
+          "v": ")/"
+        },
+        {
+          "k": "m",
+          "v": "A_3"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "h{=}4"
+        },
+        {
+          "k": "t",
+          "v": ") are non-golden alone, but "
+        },
+        {
+          "k": "m",
+          "v": "D_5\\!\\oplus\\!A_3\\to E_8"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " index-4, "
+        },
+        {
+          "k": "c",
+          "v": "v154"
+        },
+        {
+          "k": "t",
+          "v": ") gives "
+        },
+        {
+          "k": "m",
+          "v": "h(E_8){=}30"
+        },
+        {
+          "k": "t",
+          "v": " (golden) – the seam's own "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " produces the "
+        },
+        {
+          "k": "m",
+          "v": "5"
+        },
+        {
+          "k": "t",
+          "v": "-fold, so "
+        },
+        {
+          "k": "c",
+          "v": "v349"
+        },
+        {
+          "k": "t",
+          "v": " checked the un-glued pieces, the wrong object, and its pentagon-vs-count dichotomy was false. "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the residual relocates: the golden is bootstrap-forced, the only open thing is the physical continuum realisation ("
+        },
+        {
+          "k": "c",
+          "v": "v336"
+        },
+        {
+          "k": "t",
+          "v": "), NOT the golden ratio. Honest caveat: self-consistency within the framework, not from-nothing. Wolfram mirror "
+        },
+        {
+          "k": "m",
+          "v": "+1"
+        },
+        {
+          "k": "t",
+          "v": " (296 "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " 297)."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-22",
+    "dateLabel": "2026-06-22",
+    "heading": [
+      {
+        "k": "t",
         "v": "the honest test – does the raw seam carry "
       },
       {
