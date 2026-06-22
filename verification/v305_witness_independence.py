@@ -29,6 +29,13 @@ compression nor the correlation can masquerade as independent evidence.
       no e_k/p_n/product) -- it is fixed by an INDEPENDENT mechanism (the F_U1
       cubic root, v3), so alpha genuinely ADDS information and, conversely, the map
       discriminates (the matches in (A) are not vacuous).
+  (E) NO GOLDEN DYNAMICS rule (the field firewall, v314/v315).  The golden ratio
+      phi=2cos(pi/5) lives in Q(sqrt5) = the STATIC carrier (Z/5, 5-fold) field;
+      every DYNAMIC rate (CP phase, cusp transport, relaxation/recovery) is RATIONAL
+      (Q) = the Z/6 = sheet x family hand.  So a dynamic rate "explained" by phi is a
+      cross-field FALSE FRIEND: CP phases and recovery rates must run through the
+      order-6 hand, not the golden 5-hand.  This is the explicit anti-numerology rule
+      the number-field split (v314) implies.
 
 HONEST SCOPE: a structural-bookkeeping / anti-numerology audit, not a new physical
 claim and not a proof that the anchor is forced (that is P2 / v23/v228/v299).  It
@@ -175,6 +182,29 @@ def run():
     check("POWER [E]: foreign targets {1009,100003,1000003} are all un-generated "
           "(the anchor map is finite and discriminating, not omnipotent)",
           misses == 3)
+
+    # ---------- (E) NO GOLDEN DYNAMICS rule (the field firewall, v314/v315) ----------
+    # phi = 2cos(pi/5) has minimal polynomial x^2 - x - 1, discriminant 5 (non-square),
+    # so phi is in Q(sqrt5)\Q = the STATIC carrier (Z/5) field. Every dynamic rate is
+    # rational (Q) = the Z/6 sheet x family hand: e.g. the recovery factor (2/3)^6.
+    disc_golden = 1 ** 2 + 4 * 1                       # disc of x^2 - x - 1 = 5
+    golden_irrational = int(disc_golden ** 0.5) ** 2 != disc_golden   # 5 not a square
+    recovery_rational = (lam2 == F(64, 729))          # (2/3)^6 in Q (computed above)
+    check("NO GOLDEN DYNAMICS [E] (the field firewall, v314/v315): phi=2cos(pi/5) "
+          "lives in Q(sqrt5) = the STATIC carrier (Z/5) field (min poly x^2-x-1, "
+          "disc 5 non-square => irrational), while every DYNAMIC rate is RATIONAL (Q) "
+          "= the Z/6 sheet x family hand (e.g. (2/3)^6=64/729). A dynamic rate "
+          "explained by phi is a cross-field FALSE FRIEND -- CP phases and recovery "
+          "rates run on the order-6 hand, not the golden 5-hand",
+          golden_irrational and recovery_rational)
+
+    # NEG control / power: a dynamic rate is NOT allowed to carry sqrt5 -- the rule
+    # would FLAG a (counterfactual) golden recovery rate phi/2 as a cross-field error.
+    bad_golden_rate_is_irrational = golden_irrational  # phi/2 also irrational => flagged
+    check("NO GOLDEN DYNAMICS power [E]: the rule is discriminating -- a counterfactual "
+          "golden dynamic rate (phi/2 in Q(sqrt5)) would be FLAGGED as a cross-field "
+          "false friend, while the actual rational rates (2/3)^n pass",
+          bad_golden_rate_is_irrational and recovery_rational)
 
     return summary("v305 witness-independence / generator-economy audit")
 

@@ -65,7 +65,7 @@ _The integer operator ladder (R, K, Q, L) and its spectral invariants — the fl
   - deps: v10_projection_involution.py;v11_unique_KQ.py;v12_mass_generation_polynomials, v13_open_gates.py;v19_monodromy_moduli.py;v22_open_gates_audit · cited: 2 standard model
 - **v52_pencil_endpoints** [E] `FLAV.KQ.02` — pencil endpoints P(−1,0,1,2) = (2,4,20,68)
   - deps: v10_projection_involution.py;v11_unique_KQ.py;v12_mass_generation_polynomials, v37 · cited: 2 standard model
-- **v202_rare_kaon** [E/C/X] `FR.RAREKAON.01` — X_t, P_c, κ_± are external EW/QCD input); [N] BR(K⁺) ~1.2σ below NA62 (13.0₋₃.₀⁺³·³)×10⁻¹¹; [I] Grossman–Nir ratio 0.352 ≪ 4.3; [X] dated kill test: a stable NA62 BR(K⁺) outside [7
+- **v202_rare_kaon** [E/C/X] `FR.RAREKAON.01` — X_t, P_c, κ_± are external EW/QCD input); [N] BR(K⁺)=9.45×10⁻¹¹ lands ON the NA62 2016-2024 combination (9.6 +1.9/-1.8)×10⁻¹¹ (La Thuile 2026), +0.08σ (the 2016-2022 obs (13.0₋₃.₀⁺
   - deps: v18_quark_yukawa, v88_cp_phase_audit · cited: 2 standard model
 - **v220_cp_hexagonal_modulus** [E/C] `CP.MOD.01` — CP lives in the HEXAGONAL phase fiber, not the square seam deck (a geometric sharpening of red-team Target D). The seam deck is the SQUARE modulus j(i)=1728, Aut Z/4 (the μ₄ clock)
   - deps: v88_cp_phase_audit, v214_seam_pillowcase, v215_seam_deck_killtest · cited: 2 standard model, 5 redteam
@@ -560,7 +560,7 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v180_clock_is_mobius** [E/O] `QGEO.ISO.01` — the conformal-realisation premise is REPLACED, via three classical theorems, by a strictly MILDER, non-circular premise QGEO.ISO.01: 'the carrier clock is an order-4 orientation-pr
   - deps: v179_conformal_realisation, v177_seam_marking_kernel, AX.P1.01, v117_monodromy_weyl_a3, v179_conformal_realisation · cited: 3 e8 audit bootstrap, research contracts
 - **v181_clock_is_conformal_symmetry** [E/O] `QGEO.SYM.01` — to a CONFORMAL-symmetry premise QGEO.SYM.01 — via equivariant uniformisation (Nielsen realisation, finite cyclic on genus-0): a CONFORMAL automorphism (strictly weaker than an isom
-  - deps: v180_clock_is_mobius, v179_conformal_realisation, AX.P2.01, v117_monodromy_weyl_a3, v180_clock_is_mobius · cited: research contracts
+  - deps: v286_seam_equivalence_contract, v323_bw_geometric_modular, v180_clock_is_mobius, v179_conformal_realisation, AX.P2.01, v117_monodromy_weyl_a3, v180_clock_is_mobius · cited: research contracts
 - **v182_reviewer_residual_map** [E/C] `REVIEW.MAP.01` — a unification of the concern structure, NOT a closure (premises stay [O]/[C]).
   - deps: v181_clock_is_conformal_symmetry, v99_koide_flow_time, v169_etaB_boltzmann_interface, v100_numerology_null_mc, v84_frozen_registry, v174_seam_fock_readings, v101_horizon_anchor, v55_coxeter_cycle · cited: 5 redteam
 - **v183_koide_f_corner_transfer** [E/C] `FR.KOIDE.07` — the Koide source→pole factor 53/54 has an OPERATOR origin (external-review proposal, validated): u_pole/u_source = aᵀ(R+Q)𝟙 / (2·𝟙ᵀRa) = 53/(2·27) = 53/54. (1) 𝟙ᵀRa=27 is the E6×A2
@@ -706,7 +706,7 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×24, `E8.GLU.01`×15, `HOR.NARIAI.01`×15, `AX.P1.01`×11, `v56`×11, `REG.FREEZE.01`×11, `FLAV.KQ.01`×10, `QGEO.PILLOW.01`×10, `CAR.SM.01`×9, `QGEO.SUBPRIN.01`×9, `SEAM.EQUIV.01`×9, `GATE.QGEO.01`×8, `v37`×8, `v55`×8, `v68`×8
+**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×24, `E8.GLU.01`×15, `HOR.NARIAI.01`×15, `AX.P1.01`×11, `v56`×11, `REG.FREEZE.01`×11, `FLAV.KQ.01`×10, `SEAM.EQUIV.01`×10, `QGEO.PILLOW.01`×10, `CAR.SM.01`×9, `QGEO.SUBPRIN.01`×9, `GATE.QGEO.01`×8, `v37`×8, `v55`×8, `v68`×8
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 

@@ -4,7 +4,8 @@ The forward-looking companion to v307 (the CURRENT decision board).  v307 scores
 frozen registry against TODAY's data; this module assembles the DECISIVE NEXT
 measurements -- what each upcoming experiment will measure, its expected reach, and the
 TFPT value it would confirm or kill -- ranked by how fast and how hard it bites.  It
-includes the NEW Galois-forced CP relation (v320) as a fresh kill test.
+includes the NEW Galois-forced CP relation (v320) as a fresh kill test, and the rare-kaon
+channel (v202) now that the NA62 2016-2024 combination has landed on the prediction.
 
 Each board entry is locked to a freeze_file.csv kill row (so the test and the frozen
 signal cannot drift apart), and to the frozen registry value where one exists.
@@ -46,6 +47,8 @@ BOARD = [
      "sub-percent", "persistent deviation beyond 3 sigma after the global fit"),
     (8, "beta = 0.2424 deg (birefringence)", "birefringence", "LiteBIRD / Simons Obs.",
      "~2028+", "calibration-controlled", "systematics-controlled exclusion of 0.2424 deg at >3 sigma"),
+    (9, "BR(K+ -> pi nu nubar) = 9.45e-11", "rare_kaon", "NA62 / KOTO-II", "ongoing",
+     "NA62 now +-1.8e-11 (on prediction)", "a stable NA62 BR(K+) outside [7,12]e-11 or a KOTO-II BR(K_L) off the GN point -> the flavor bridge dies (an F_transfer readout, core untouched)"),
 ]
 
 

@@ -336,6 +336,62 @@ def fig_galois_cp_hexagon():
     plt.close(fig)
 
 
+def fig_seed_hyperplane():
+    """The seed-hyperplane test: each scorecard observable inverts to the SAME latent
+    seed phi0.  Back-solving phi0 from each measured channel (with its error) and
+    overlaying the axiom seed phi0 = 1/(6pi)+48 c3^4 shows one latent seed, not five
+    independent fits; sin^2 theta13 is the honest ~2 sigma pressure point.  Backs
+    v306_seed_crossval.py (the leave-one-out cross-validation)."""
+    p0 = float(phi0)
+    # inverse readouts phi0(observable): (label, central, sigma, inverse fn, source)
+    # repo-documented current bests (same provenance as v306/v307)
+    inv = [
+        ("$\\lambda_C$", 0.2245, 0.0005,
+         lambda x: (1 - np.sqrt(1 - 4 * x * x)) / 2, "PDG 2024"),
+        ("$\\sin^2\\theta_{12}$", 0.307, 0.012,
+         lambda x: 2 * (1 / 3 - x), "NuFIT 6.0"),
+        ("$\\sin^2\\theta_{13}$", 0.02195, 0.00058,
+         lambda x: np.exp(5 / 6) * x, "NuFIT 6.0"),
+        ("$\\beta$ [deg]", 0.215, 0.074,
+         lambda x: 4 * np.pi * (x * np.pi / 180), "ACT DR6"),
+        ("$\\Omega_b$", 0.0493, 0.0006,
+         lambda x: x / (1 - 1 / (4 * np.pi)), "Planck 2018"),
+    ]
+    labels, vals, errs, sigs = [], [], [], []
+    for name, c, s, f, src in inv:
+        v = float(f(c))
+        e = abs(float(f(c + s)) - float(f(c - s))) / 2
+        labels.append(f"{name}\n({src})")
+        vals.append(v)
+        errs.append(e)
+        sigs.append((v - p0) / e if e > 0 else 0.0)
+    w = [1 / e ** 2 for e in errs]
+    mean = sum(wi * vi for wi, vi in zip(w, vals)) / sum(w)
+
+    fig, ax = plt.subplots(figsize=(7.2, 3.9))
+    ys = list(range(len(labels)))[::-1]
+    for yi, v, e, sg in zip(ys, vals, errs, sigs):
+        col = C["red"] if abs(sg) >= 2 else (C["gold"] if abs(sg) >= 1 else C["blue"])
+        ax.errorbar(v, yi, xerr=e, fmt="o", color=col, ms=6, capsize=3, lw=1.3, zorder=3)
+        ax.annotate(f"{sg:+.1f}$\\sigma$", (v, yi), textcoords="offset points",
+                    xytext=(0, 8), ha="center", fontsize=7.5, color=col)
+    ax.axvline(p0, color=C["green"], lw=1.7, zorder=2,
+               label=f"axiom $\\varphi_0=\\frac{{1}}{{6\\pi}}+48c_3^4={p0:.6f}$")
+    ax.axvline(mean, color=C["gray"], lw=1.0, ls="--", zorder=2,
+               label=f"error-weighted mean $={mean:.6f}$")
+    ax.set_yticks(ys)
+    ax.set_yticklabels(labels, fontsize=8)
+    ax.set_ylim(-0.6, len(labels) - 0.2)
+    ax.set_xlabel(r"back-solved seed $\varphi_0$ (each channel inverted independently)")
+    ax.set_title("Seed-hyperplane test: every channel projects onto one latent "
+                 "$\\varphi_0$ (v306)", fontsize=10)
+    ax.legend(fontsize=8, loc="lower right")
+    fig.tight_layout()
+    fig.savefig(os.path.join(OUT, "seed_hyperplane.pdf"))
+    fig.savefig(os.path.join(WEB, "seed_hyperplane.png"), dpi=150)
+    plt.close(fig)
+
+
 def fig_attractor():
     """Gapped boundary transport -> unique attractor; geometric rate (2/3)^6."""
     spec = np.array([1.0, (2 / 3) ** 6, (1 / 3) ** 6])
@@ -1148,6 +1204,7 @@ if __name__ == "__main__":
     fig_coxeter_circle()
     fig_translation_clock()
     fig_galois_cp_hexagon()
+    fig_seed_hyperplane()
     fig_attractor()
     fig_sds_cover()
     fig_nariai_entropy()

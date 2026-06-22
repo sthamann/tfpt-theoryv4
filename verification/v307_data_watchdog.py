@@ -8,8 +8,12 @@ and classifies it PASS / WATCH / TENSION / KILL against a fixed threshold, plus 
 conditional bands (r, n_s) and the watchdog fronts (w) -- so the theory's standing
 against today's data is one machine-checked table, refreshed on every suite run.
 
-  [N] 1. COVERAGE: every frozen prediction + assigned texture + conditional band
-        is classified (count matches the registry JSON).
+  [N] 1. COVERAGE: every frozen prediction + assigned texture + conditional band +
+        F_transfer bridge readout (rare kaon) is classified (count matches the JSON).
+  [N] 6. RARE-KAON BRIDGE: BR(K+)=9.45e-11 now lands ON the NA62 2016-2024 combination
+        (9.6 +1.9/-1.8)e-11 (+0.08 sigma; was ~1.2 sigma vs the 2016-2022 13.0e-11) -- a
+        strong consistency hit, but an F_transfer bridge (SM 8.6e-11 also inside the NA62
+        error), not a unique TFPT-vs-SM discriminator.
   [N] 2. THEORY ALIVE: NO decidable prediction is in KILL (|n_sigma| >= 3); the
         compiler survives current data.
   [N] 3. POWER: the pipeline is not trivially green -- at least one prediction
@@ -57,6 +61,15 @@ SCHEME = {
     "MU_OVER_MD":    (0.47, 0.05, "FLAG 2024 (scheme spread)"),
     "MC_OVER_MS":    (13.6, 0.05, "PDG 2024 MSbar (scheme spread)"),
     "MT_OVER_MB":    (41.0, 0.05, "PDG 2024 (scheme spread)"),
+}
+# F_transfer BRIDGE readouts: NOT frozen compiler predictions (external short-distance
+# input), tracked so the live experimental confrontation is visible, typed [C].
+# id -> (prediction, measured_central, sigma, source)
+BRIDGE = {
+    "BR_KP_PINUNU": (9.45e-11, 9.6e-11, 1.8e-11, "NA62 2016-2024 (La Thuile 2026)"),
+}
+BRIDGE_HIST = {  # the earlier observation each bridge readout was previously judged against
+    "BR_KP_PINUNU": (13.0e-11, 3.0e-11, "NA62 2016-2022"),
 }
 # no current decisive datum (downstream / assigned / not-yet-measured)
 NO_DECISION = {"MSCAL_OVER_MBAR", "DELTA_CP_NU_DEG", "SIN2_THETA23"}
@@ -118,6 +131,13 @@ def run():
         board.append((a["id"], "assigned", "NO-DECISION",
                       "assigned texture (octant/phase not predicted)"))
 
+    # F_transfer bridge readouts (external SD input; not frozen compiler predictions)
+    bridge_board = []
+    for bid, (pred, m, s, src) in BRIDGE.items():
+        n = (pred - m) / s
+        bridge_board.append((bid, "bridge", classify(n), f"{n:+.2f} sigma vs {src}"))
+    board.extend(bridge_board)
+
     # conditional bands
     rband = next(b for b in bands if b["id"] == "R_TENSOR")
     rmax = float(rband["band_max"])
@@ -140,9 +160,9 @@ def run():
     print("  tally:", dict(tally))
 
     # ---- 1. coverage ----
-    expected = len(preds) + len(assigned) + len(bands)
-    check("COVERAGE [N]: every frozen prediction + assigned texture + band is "
-          "classified (%d entries match the registry)" % expected,
+    expected = len(preds) + len(assigned) + len(bands) + len(BRIDGE)
+    check("COVERAGE [N]: every frozen prediction + assigned texture + band + "
+          "F_transfer bridge is classified (%d entries match the registry)" % expected,
           len(board) == expected)
 
     # ---- 2. theory alive: no KILL among decidable predictions ----
@@ -180,6 +200,18 @@ def run():
     check("DARK-ENERGY FRONT [N]: w=-1 (rho_Lambda readout) flagged WATCHDOG -- "
           "DESI dynamical-DE hints are the most dangerous negative front",
           any(v == "WATCHDOG" for _i, _l, v, _d in board))
+
+    # ---- 6. rare-kaon bridge: the NA62 2016-2024 update ----
+    pred_k, m_k, s_k, _src = BRIDGE["BR_KP_PINUNU"]
+    n_k = (pred_k - m_k) / s_k
+    hm, hs, _hsrc = BRIDGE_HIST["BR_KP_PINUNU"]
+    n_k_hist = (pred_k - hm) / hs
+    check("RARE-KAON BRIDGE [N]: BR(K+)=9.45e-11 now lands ON NA62 2016-2024 "
+          "(9.6 +1.9/-1.8)e-11 -> %+.2f sigma (was %+.2f sigma vs the 2016-2022 "
+          "13.0e-11) -- a strong consistency hit, but an F_transfer bridge (the SM "
+          "8.6e-11 is also inside the NA62 error), not a unique TFPT-vs-SM "
+          "discriminator" % (n_k, n_k_hist),
+          classify(n_k) == "PASS" and abs(n_k_hist) > 1.0)
 
     return summary("v307 data watchdog (decision pipeline)")
 

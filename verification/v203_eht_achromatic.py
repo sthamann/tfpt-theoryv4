@@ -19,13 +19,15 @@ by the same c3 that sets alpha and the cosmic birefringence beta_rad.
         E.B structure on the collar) is an MHD/GR weight, not a compiler output.
         So the channel is typed [C] (shape/sign) -- never a parameter-free
         amplitude prediction at one image pixel.
-  [X] 4. THREE INDEPENDENT NULLS (dated kill test). The residual intercept
+  [X] 4. FOUR INDEPENDENT NULLS (dated kill test). The residual intercept
         chi_0^res = chi_0^obs - chi_0^GRMHD must simultaneously (a) be achromatic
         (frequency-null), (b) follow the 1/r^2 spatial profile (spatial-null),
-        (c) flip sign under effective E.B reversal (sign-flip null). A residual
-        statistically consistent with zero across the image after honest GRMHD
-        subtraction, OR failing any null, falsifies THIS channel -- not the
-        compiler (the determinant-line coupling is shared with alpha/beta_rad).
+        (c) flip sign under effective E.B reversal (sign-flip null), and (d) carry
+        azimuthal Fourier power ONLY at m = 0 mod 4 (the mu4 Fourier fingerprint of
+        the four marks, v201/QGEO.SUBPRIN.01). A residual statistically consistent
+        with zero across the image after honest GRMHD subtraction, OR failing any
+        null, falsifies THIS channel -- not the compiler (the determinant-line
+        coupling is shared with alpha/beta_rad).
   [I] 5. SCOPE. The old UFE closed RN-type metric (D/r^4, regular cores, shadow
         shift) is NOT imported -- it is superseded by the Nariai/seam=horizon
         readouts (v101-v104, v190). Only the polarization signature survives.
@@ -33,6 +35,7 @@ by the same c3 that sets alpha and the cosmic birefringence beta_rad.
   Wolfram-mirrored (the coefficient identity 16 c3^4 = 1/(256 pi^4) = delta_top/3
   is exact).
 """
+import numpy as np
 import sympy as sp
 
 from tfpt_constants import check, summary, reset
@@ -73,6 +76,28 @@ def run():
           "consistent with zero after honest GRMHD subtraction, or failing any "
           "null, falsifies THIS channel (not the compiler)" % (nulls,),
           len(nulls) == 3)
+
+    # 4b. the FOURTH (mu4 Fourier) null -- the QGEO fingerprint (v201/QGEO.SUBPRIN.01)
+    # a mu4-symmetric azimuthal residual f(theta)=sum_j g(theta-2pi j/4) is periodic
+    # with period 2pi/4, so its Fourier support is ONLY at m = 0 mod 4 (Z4 block-
+    # diagonality from the four marks); a non-mu4 (Z2) profile leaks to m=2 -> a sharp,
+    # pre-registered geometric null tying the EHT residual to the seam deck.
+    th = np.linspace(0, 2 * np.pi, 256, endpoint=False)
+    bump = lambda x: np.exp(np.cos(x))                       # an arbitrary single-mark bump
+    f_mu4 = sum(bump(th - 2 * np.pi * j / 4) for j in range(4))   # mu4 orbit (period 2pi/4)
+    amp4 = np.abs(np.fft.rfft(f_mu4))
+    off_mod4 = sum(amp4[m] for m in range(1, len(amp4)) if m % 4 != 0)
+    on_mod4 = sum(amp4[m] for m in range(4, len(amp4), 4))
+    f_z2 = sum(bump(th - 2 * np.pi * j / 2) for j in range(2))    # Z2 control (period pi)
+    amp2 = np.abs(np.fft.rfft(f_z2))
+    leak_z2 = sum(amp2[m] for m in range(1, len(amp2)) if m % 4 != 0)   # leaks at m=2
+    check("FOURTH NULL [X] (the mu4 Fourier fingerprint, v201/QGEO.SUBPRIN.01): the "
+          "azimuthal residual must carry power ONLY at m = 0 mod 4 (Z4 block-"
+          "diagonality from the four marks) -- a mu4-orbit profile has ~0 off-mod-4 "
+          "power (%.1e) while a Z2 control leaks at m=2 (%.2f); a sharp pre-registered "
+          "geometric null linking EHT polarimetry to the seam deck"
+          % (off_mod4, leak_z2),
+          off_mod4 < 1e-6 and on_mod4 > 1.0 and leak_z2 > 1e-3)
 
     # 5. scope: NOT the UFE metric
     check("SCOPE [I]: the old UFE closed RN-type metric (D/r^4, regular cores, "

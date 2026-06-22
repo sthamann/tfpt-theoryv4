@@ -47,6 +47,776 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "external-review pass: a registry bug fix, the NA62 2026 rare-kaon update, CP-phase prose hygiene, and three firewall/visualisation enhancements: "
+      },
+      {
+        "k": "c",
+        "v": "v202"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "v203"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "v305"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "v307"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "v321"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Bug fix — "
+            },
+            {
+              "k": "m",
+              "v": "\\delta_{\\mathrm{CKM}}"
+            },
+            {
+              "k": "t",
+              "v": " display value."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The predictions table ("
+        },
+        {
+          "k": "c",
+          "v": "tex-artefacts/predictions.tex"
+        },
+        {
+          "k": "t",
+          "v": ") showed "
+        },
+        {
+          "k": "m",
+          "v": "\\delta=\\tfrac\\pi3+3\\lambda^2=66.96^\\circ"
+        },
+        {
+          "k": "t",
+          "v": ", but that formula evaluates to "
+        },
+        {
+          "k": "m",
+          "v": "68.65^\\circ"
+        },
+        {
+          "k": "t",
+          "v": " (the canonical frozen "
+        },
+        {
+          "k": "c",
+          "v": "DELTA_CKM_RAD"
+        },
+        {
+          "k": "m",
+          "v": "=1.198232"
+        },
+        {
+          "k": "t",
+          "v": " rad, used by "
+        },
+        {
+          "k": "c",
+          "v": "v88"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v202"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "FLAV.CP.01"
+        },
+        {
+          "k": "t",
+          "v": " everywhere else). Corrected to "
+        },
+        {
+          "k": "m",
+          "v": "68.65^\\circ"
+        },
+        {
+          "k": "t",
+          "v": ". An external review correctly flagged the inconsistency; it was an isolated display typo (the website was already clean)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v202_rare_kaon.py"
+            },
+            {
+              "k": "t",
+              "v": " — NA62 2016–2024 update ("
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "s",
+              "v": "C"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The charged-mode comparison is moved from the historical NA62 "
+        },
+        {
+          "k": "m",
+          "v": "2016"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "2022"
+        },
+        {
+          "k": "t",
+          "v": " observation "
+        },
+        {
+          "k": "m",
+          "v": "(13.0^{+3.3}_{-3.0})\\times10^{-11}"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\sim1.2\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " above) to the full "
+        },
+        {
+          "k": "m",
+          "v": "2016"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "2024"
+        },
+        {
+          "k": "t",
+          "v": " combination "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{BR}(K^+)=(9.6^{+1.9}_{-1.8})\\times10^{-11}"
+        },
+        {
+          "k": "t",
+          "v": " (La Thuile 2026), on which the prediction "
+        },
+        {
+          "k": "m",
+          "v": "9.45\\times10^{-11}"
+        },
+        {
+          "k": "t",
+          "v": " lands at "
+        },
+        {
+          "k": "m",
+          "v": "+0.08\\sigma"
+        },
+        {
+          "k": "t",
+          "v": ". Framed honestly: a strong "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "consistency"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " hit for the closed CKM point, but an "
+        },
+        {
+          "k": "m",
+          "v": "F_{\\mathrm{transfer}}"
+        },
+        {
+          "k": "t",
+          "v": " bridge — "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " a unique TFPT-vs-SM discriminator (the SM "
+        },
+        {
+          "k": "m",
+          "v": "(8.6\\pm0.4)\\times10^{-11}"
+        },
+        {
+          "k": "t",
+          "v": " is also inside the NA62 error). Propagated to the ledger ("
+        },
+        {
+          "k": "c",
+          "v": "FR.RAREKAON.01"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "c",
+          "v": "freeze_file"
+        },
+        {
+          "k": "t",
+          "v": " (new "
+        },
+        {
+          "k": "c",
+          "v": "rare_kaon"
+        },
+        {
+          "k": "t",
+          "v": " kill row), the watchdog ("
+        },
+        {
+          "k": "c",
+          "v": "v307"
+        },
+        {
+          "k": "t",
+          "v": ", a new "
+        },
+        {
+          "k": "m",
+          "v": "F_{\\mathrm{transfer}}"
+        },
+        {
+          "k": "t",
+          "v": " bridge row), the forward board ("
+        },
+        {
+          "k": "c",
+          "v": "v321"
+        },
+        {
+          "k": "t",
+          "v": ", rank 9), and "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2_standard_model"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the website."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "CP-phase prose hygiene."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The Galois CP lock is tightened from “a relation to the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "measured"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " quark phase” to “a relation to the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "leading"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\pi/3"
+        },
+        {
+          "k": "t",
+          "v": ") component of the quark phase”: the lock is to the structural "
+        },
+        {
+          "k": "m",
+          "v": "\\pi/3"
+        },
+        {
+          "k": "t",
+          "v": ", not the full measured "
+        },
+        {
+          "k": "m",
+          "v": "\\gamma=\\delta_{\\mathrm{CKM}}^{\\mathrm{lead}}+3\\lambda_C^2\\approx68.7^\\circ"
+        },
+        {
+          "k": "t",
+          "v": ", so "
+        },
+        {
+          "k": "m",
+          "v": "\\delta_{\\mathrm{PMNS}}=240^\\circ"
+        },
+        {
+          "k": "t",
+          "v": " (not "
+        },
+        {
+          "k": "m",
+          "v": "248.7^\\circ"
+        },
+        {
+          "k": "t",
+          "v": "). Fixed in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2_standard_model"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "papers.ts"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "predictions.ts"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v305_witness_independence.py"
+            },
+            {
+              "k": "t",
+              "v": " — the No-Golden-Dynamics rule ("
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The number-field split is made an explicit anti-numerology firewall rule: "
+        },
+        {
+          "k": "m",
+          "v": "\\phi=2\\cos(\\pi/5)\\in\\mathbb Q(\\sqrt5)"
+        },
+        {
+          "k": "t",
+          "v": " is the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "static"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " carrier ("
+        },
+        {
+          "k": "m",
+          "v": "\\Z/5"
+        },
+        {
+          "k": "t",
+          "v": ") field, every "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "dynamic"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " rate is rational ("
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb Q"
+        },
+        {
+          "k": "t",
+          "v": ", the "
+        },
+        {
+          "k": "m",
+          "v": "\\Z/6"
+        },
+        {
+          "k": "t",
+          "v": " hand), so a dynamic rate explained by "
+        },
+        {
+          "k": "m",
+          "v": "\\phi"
+        },
+        {
+          "k": "t",
+          "v": " is a cross-field false friend ("
+        },
+        {
+          "k": "c",
+          "v": "v314"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v315"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v203_eht_achromatic.py"
+            },
+            {
+              "k": "t",
+              "v": " — the "
+            },
+            {
+              "k": "m",
+              "v": "\\mu_4"
+            },
+            {
+              "k": "t",
+              "v": " Fourier fourth null ("
+            },
+            {
+              "k": "s",
+              "v": "X"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The EHT residual pre-registration gains a fourth null: the azimuthal residual must carry power "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "only"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "m\\equiv0\\bmod4"
+        },
+        {
+          "k": "t",
+          "v": " (the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " fingerprint of the four marks, "
+        },
+        {
+          "k": "c",
+          "v": "v201"
+        },
+        {
+          "k": "t",
+          "v": "); a "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": "-orbit profile has "
+        },
+        {
+          "k": "m",
+          "v": "\\sim0"
+        },
+        {
+          "k": "t",
+          "v": " off-mode power while a "
+        },
+        {
+          "k": "m",
+          "v": "\\Z_2"
+        },
+        {
+          "k": "t",
+          "v": " control leaks at "
+        },
+        {
+          "k": "m",
+          "v": "m=2"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Seed-hyperplane figure (Fig. "
+            },
+            {
+              "k": "t",
+              "v": "fig:seed-hyperplane"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " A new figure visualises "
+        },
+        {
+          "k": "c",
+          "v": "v306"
+        },
+        {
+          "k": "t",
+          "v": ": every scorecard observable inverts "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "independently"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " to the one latent seed "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi_0"
+        },
+        {
+          "k": "t",
+          "v": ", the error-weighted mean matching the axiom to "
+        },
+        {
+          "k": "m",
+          "v": "0.04\\%"
+        },
+        {
+          "k": "t",
+          "v": ", with "
+        },
+        {
+          "k": "m",
+          "v": "\\sin^2\\theta_{13}"
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "\\sim2\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " pressure point. Added to "
+        },
+        {
+          "k": "c",
+          "v": "make_figures.py"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_5_redteam"
+        },
+        {
+          "k": "t",
+          "v": " and the manifest."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-22",
+    "dateLabel": "2026-06-22",
+    "heading": [
+      {
+        "k": "t",
         "v": "Wolfram mirror of the arithmetic arc "
       },
       {

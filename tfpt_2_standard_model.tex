@@ -1275,10 +1275,14 @@ $\delta_{\mathrm{CKM}}$; the charged mode carries a sizeable charm admixture and
 The model-independent Grossman--Nir ratio is $\mathrm{BR}(K_L)/\mathrm{BR}(K^+)=0.352\ll4.3$, safely inside the
 isospin corridor. \textbf{Dated kill test \mX:} a stable NA62 $\mathrm{BR}(K^+)$ \emph{outside}
 $[7,12]\times10^{-11}$, or a KOTO-II $\mathrm{BR}(K_L)$ off the predicted Grossman--Nir point, breaks the TFPT
-flavor bridge for this sector (the compiler core is untouched). The current NA62 value
-$(13.0^{+3.3}_{-3.0})\times10^{-11}$ sits $\sim1.2\sigma$ above the prediction --- consistent today; the
-$\sim2\sigma$ $\delta_{\mathrm{CKM}}$ tension (\vref{v88}) makes the corridor a genuinely discriminating,
-live falsification channel.
+flavor bridge for this sector (the compiler core is untouched). The current NA62 combination of the full
+$2016$--$2024$ dataset, $\mathrm{BR}(K^+)=(9.6^{+1.9}_{-1.8})\times10^{-11}$ (La~Thuile~2026), lands
+essentially \emph{on} the prediction ($+0.08\sigma$); the earlier $2016$--$2022$ observation was
+$(13.0^{+3.3}_{-3.0})\times10^{-11}$ ($\sim1.2\sigma$ above). This is a strong \emph{consistency} hit for the
+closed CKM point fed through standard short-distance input --- but honestly it is an $F_{\mathrm{transfer}}$
+bridge, not a unique TFPT-vs-SM discriminator: the Standard-Model value $(8.6\pm0.4)\times10^{-11}$ also sits
+within the NA62 error, so the channel currently confirms the CKM point rather than separating TFPT from the SM.
+The $\sim2\sigma$ $\delta_{\mathrm{CKM}}$ tension (\vref{v88}) keeps the corridor a live falsification channel.
 
 \noindent\textbf{Weak mixing from $D_5$.} Because the carrier $C^+$ \emph{is} the $D_5=\mathfrak{so}(10)$
 half-spinor, the weak mixing inherits the canonical $\mathfrak{so}(10)$ unification value
@@ -1332,8 +1336,10 @@ $\theta_{23}=45^\circ$ and $\sin^2\theta_{12}=\tfrac13-\tfrac{\phiz}{2}$ under t
 reproducing \vref{v9}. Honestly open: the leading texture gives $\theta_{13}=0$ (the physical
 $\sin^2\theta_{13}\sim\phiz e^{-5/6}$ is a separate readout, \mO), the CP \emph{magnitude}
 $\delta_{\mathrm{CP}}=240^\circ$ is the $\mu_6$/triality phase --- now a Galois-\emph{forced} relation to the
-measured quark phase, $\delta_{\mathrm{PMNS}}=\delta_{\mathrm{CKM}}^{\mathrm{lead}}+\pi$ (one hexagonal unit
-$\rho=\zeta_6$; \vref{v231}/\vref{v233}/\vref{v320}), not from $M_\nu$, and a pre-registered kill test at
+\emph{leading} ($\pi/3$) component of the quark phase, $\delta_{\mathrm{PMNS}}=\delta_{\mathrm{CKM}}^{\mathrm{lead}}+\pi$
+(one hexagonal unit $\rho=\zeta_6$; the lock is to the structural $\pi/3$, \emph{not} the full measured
+$\gamma=\delta_{\mathrm{CKM}}^{\mathrm{lead}}+3\lambda_C^2\approx68.7^\circ$ that carries the quark transport
+correction; \vref{v231}/\vref{v233}/\vref{v320}), not from $M_\nu$, and a pre-registered kill test at
 DUNE/Hyper-K (\mX),
 and the absolute $\nu$-mass scale ($M_R$) is the free seesaw scale --- so this is an \emph{operator}
 advance (PMNS is now a seesaw object), \emph{not} a closure of full PMNS dynamics.
@@ -1689,7 +1695,7 @@ index-theoretic premises directly (substantially more work, beyond the current L
 \toprule
 \# & \textbf{Status now} & \textbf{Isolated remainder} \\
 \midrule
-1 & \mE\ (closed) & unitarity of $\nabla_F^\star$ (Paper-3 structure) \\
+1 & \mE\ (closed) & unitarity of $\nabla_F^\star$ (parabolic Hodge structure) \\
 2 & \mE\ in the $R^2$ regime & controlled $R^{n\ge3}$ truncation $+$ Fredholm \\
 3 & \mE\ (strong CP, given RP) & full dynamics: admissible gapped sector via (4) under RP/gap; ambient QG open \\
 4 & \mE\ adm.\ sector & admissible-sector measure closed (gap $6\log\tfrac32$, OS) \emph{under RP/gap hyp.}; ambient metric measure open ($G_{\mathrm{metric}}$) \\
@@ -1774,8 +1780,8 @@ sharply outlined, short remainder.
 \begin{abstract}
 This note opens the one remaining structural gap of the $D_5\times A_3$ compiler: deriving the
 charged-fermion transport word-lengths $L_u=(7,3,0)$, $L_d=(7,5,2)$, $L_e=(8,5,3)$ --- equivalently the
-residue triple $\{0,1,3\}$ and its $D_6$ orbit --- from first principles, rather than from the Paper-3
-resolvent. The correct framework is parabolic Higgs/bundle theory on the rigid family curve
+residue triple $\{0,1,3\}$ and its $D_6$ orbit --- from first principles, rather than from the legacy
+resolvent construction. The correct framework is parabolic Higgs/bundle theory on the rigid family curve
 $X_f^\circ\cong\mathbb P^1\setminus\mu_4$, with the three transport cusps $\{1,\tfrac23,\tfrac13\}$
 promoted to parabolic weights $\{0,\tfrac13,\tfrac23\}$ at each of the four punctures. We prove the
 exact scaffolding (parabolic degree zero forces $\deg E=-|\mu_4|=-4$; the word-length splits as
@@ -2365,7 +2371,7 @@ this is exactly hypothesis (H1) of Theorem~\ref{thm:flavor}, now a proved combin
 
 \begin{proposition}[Parabolic $\leftrightarrow$ transport equivalence on the splitting]
 \label{prop:equiv}
-On $\mathbb P^1\setminus\mu_4$ both the parabolic word-length $L_{f,j}=6n_{f,j}+r_{f,j}$ and the Paper-3
+On $\mathbb P^1\setminus\mu_4$ both the parabolic word-length $L_{f,j}=6n_{f,j}+r_{f,j}$ and the
 transport word-length decompose as integer winding plus a $\mathbb Z_6$ residue, and the two
 decompositions coincide term-by-term:
 \begin{itemize}[leftmargin=1.5em]
@@ -2391,7 +2397,7 @@ Proposition~\ref{prop:equiv} reduces the last open piece to the single technical
 
 \begin{theorem}[Stable $=$ minimal, via Mehta--Seshadri --- closes the flavor block]
 \label{thm:ms}
-Let $X=\mathbb P^1\setminus\mu_4$ carry the rank-$\Nfam$ family bundle with the Paper-3 family
+Let $X=\mathbb P^1\setminus\mu_4$ carry the rank-$\Nfam$ family bundle with the family
 connection $\nabla_F^\star$, and assume \emph{(U)} that $\nabla_F^\star$ is unitary (its holonomy lies in
 $U(\Nfam)$, generated by the cyclic $U_6$ shift and the cusp data --- the metric family connection).
 Equip the Deligne parabolic extension with weights equal to the cusp exponents

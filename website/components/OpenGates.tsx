@@ -21,7 +21,7 @@ const GATES: Gate[] = [
     tag: "Interface 1",
     marker: "[O]",
     title: "v_geo — the one scale anchor",
-    body: "The quark mass ratios are closed (Readout Rigidity, c_u/c_d = 55/117) and the selector triangle pins R columnwise (the dual pair (d,n), v136/v139). Only the absolute amplitude scale v_geo remains — and the No-Unit theorem (v153) proves a dimensionless compiler cannot make an absolute scale. So this is not a gap but an irreducible metrology primitive, the same one as gravity's 1/G. Sharper still (v274): the anchor is over-determined — Newton's G and the compiler's dark-energy prediction (ρ_Λ/M̄⁴ = (3/4π²)e^{−2α⁻¹}) give the same reduced Planck mass to 0.11% (conditional on the Λ-branch readout; the gravity route is unconditional — red-team rt_F) — so it is the gravitational unit, not a missing derivation; and because the seam is a conformal c=8 CFT (scale-invariant by construction), 'no derivable absolute scale' is a theorem, not a gap. The absolute neutrino scale (v272) is the same single anchor. (Historical label: U_wall.)",
+    body: "The quark mass ratios are closed (Readout Rigidity, c_u/c_d = 55/117) and the selector triangle pins R columnwise (the dual pair (d,n), v136/v139). Only the absolute amplitude scale v_geo remains — and the No-Unit theorem (v153) proves a dimensionless compiler cannot make an absolute scale. So this is not a gap but an irreducible metrology primitive, the same unit as gravity's 1/G, and over-determined: Newton's G and the dark-energy readout give the same reduced Planck mass to 0.11% (v274). The absolute neutrino scale (v272) is the same anchor. (Historical label: U_wall.)",
     formula: "\\det R = 8,\\ \\operatorname{Spec}(Q_+)=\\{1,2,3\\};\\ U_{\\mathrm{point}} \\to v_{\\mathrm{geo}}",
     tone: "border-amber-400/30 bg-amber-500/5",
   },
@@ -29,7 +29,7 @@ const GATES: Gate[] = [
     tag: "Interface 2",
     marker: "[E] target · [O] seam",
     title: "G_net — the metric-sector inclusion",
-    body: "The target object is closed: (D₅)₁⊗(A₃)₁⋊μ₄ ≅ (E₈)₁ (Jones index 4 = |μ₄|, holomorphic c = 8; v154), with net existence and full-cone reflection positivity discharged to [E] on the 2¹⁶-dim Fock space (v175), R + R² heat-kernel grounded and the IR sector gap-decoupled (Δ_eff = 1.648 > 0). Only the physical coupling of the raw seam to that object is open — the single premise QGEO.SYM.01: the carrier μ₄ clock IS the seam's conformal deck. That is not a gap but TFPT's one fundamental postulate (the role 'c = const' plays in relativity), driven to its sharpest non-circular form (a μ₄-invariant quasi-free seam state, v198/v201) and Lean-formalised below the premise. As the synthesis above shows, this gate, the carrier P2, Target A and the entire boundary-QFT layer (the Modular Spectral Closure, v258–v261: Dirac = covariance induction, cutoff = KMS weight, seam/carrier/E₈ on one K3) are one condition — and in Chern-Simons language it is the single integer step 'det K = 1' (v234/v235). (Historical label: G_metric.)",
+    body: "The target object is closed: (D₅)₁⊗(A₃)₁⋊μ₄ ≅ (E₈)₁ (Jones index 4 = |μ₄|, holomorphic c = 8; v154), with net existence and full-cone reflection positivity discharged to [E] on the 2¹⁶-dim Fock space (v175), R + R² heat-kernel grounded and the IR sector gap-decoupled (Δ_eff = 1.648 > 0). Only the physical coupling of the raw seam to that object is open — the single named keystone SEAM.EQUIV.01: the raw RP seam IS the holomorphic (E₈)₁ net at τ=i. Its conformal-deck face QGEO.SYM.01 (the carrier μ₄ clock is the seam's deck) is downstream, Lean-pinned to named cited steps. That is TFPT's one fundamental postulate — the role 'c = const' plays in relativity — and in Chern–Simons language it is the single integer step 'det K = 1' (v234/v235). (Historical label: G_metric.)",
     formula: "[\\,(E_8)_1 : (D_5)_1\\times(A_3)_1\\,] = 4 = |\\mu_4| \\Rightarrow \\text{holomorphic } c = 8",
     tone: "border-amber-400/30 bg-amber-500/5",
   },
@@ -52,7 +52,7 @@ const RESIDUAL: { label: string; marker: string; blurb: string; tone: string }[]
   {
     label: "G_net",
     marker: "[E] target · [O] seam",
-    blurb: "Metric inclusion: the (E₈)₁ target is closed; only the seam coupling (QGEO.SYM.01) is open.",
+    blurb: "Metric inclusion: the (E₈)₁ target is closed; only the seam coupling — the single named keystone SEAM.EQUIV.01 — is open.",
     tone: "from-amber-500/15 to-amber-500/[0.03] border-amber-400/30",
   },
   {
@@ -105,8 +105,9 @@ function ResidualTreemap() {
 
 /**
  * The single closing condition (v234/v235): the whole structural residual is one
- * condition with three provably-equivalent faces, all forcing E₈. Surfacing this
- * compactly is the headline — the wall of QGEO history now lives in the paper.
+ * condition with three provably-equivalent faces, all forcing E₈. This states the
+ * current end-point only — the sprint-by-sprint reduction history lives on /changelog
+ * and in the research contracts, not in this reader-facing block.
  */
 function ClosingCondition() {
   return (
@@ -145,104 +146,38 @@ function ClosingCondition() {
           {"\\#(\\text{1-dim irreps}) = |\\Gamma^{\\mathrm{ab}}| = |H_1(S^3/\\Gamma)| = 1 \\iff E_8 \\iff |\\det K| = 1"}
         </Math>
       </div>
-      <p className="mt-3 text-xs leading-relaxed text-slate-400">
-        In abelian Chern–Simons language the boundary is holomorphic ⟺ det K = 1, and the
-        extension tower D₅⊕A₃ (det 16) → D₈ (det 4) → E₈ (det 1) is anyon condensation —
-        the Kitaev E₈ quantum-Hall state. So the one open analytic step is sharply located:{" "}
-        <span className="text-slate-300">
-          the free RP seam condenses the order-|μ₄| Lagrangian glue (det → 1)
-        </span>{" "}
-        = the deck premise QGEO.SYM.01 (v234/v235).
-      </p>
       <p className="mt-3 rounded-lg border border-emerald-400/15 bg-emerald-500/[0.03] p-3 text-xs leading-relaxed text-slate-300">
-        <span className="font-semibold text-emerald-200">And the whole boundary QFT collapses onto the same premise</span>{" "}
-        (the <em>Modular Spectral Closure</em>, v258–v261): the finite Dirac is a covariance induction of the
-        seam KMS state ([D_F] = [D_Σ]⊗[K_car], v258), the spectral-action cutoff <em>is</em> that KMS weight
-        (f₂/f₀ = 1, v259), and the seam, the carrier-16 and E₈ live on one Kummer/K3 surface
-        (H²(K3) = U³⊕E₈(−1)², v260). The assembly certificate (v261) pins one number 4 = [B:A] = |μ₄| = 2χ =
-        |(ℤ/2)²| (index = marks = fixed points = glue order), one carrier-16 and one gap 6·log(3/2) — so Dirac,
-        cutoff, gauging, glue and orientability are readouts of the one seam state. The boundary QFT is one
-        relative object closed modulo QGEO.SYM.01 and adds <span className="text-emerald-200">no new open item</span>;
-        the ambient QG measure is gap-decoupled (Δ_eff = 1.648 &gt; 0) and kept separate by design.
+        <span className="font-semibold text-emerald-200">The whole boundary QFT collapses onto the same premise</span>{" "}
+        (the <em>Modular Spectral Closure</em>, v258–v261): the finite Dirac is a covariance induction of
+        the seam KMS state, the spectral-action cutoff <em>is</em> that KMS weight (f₂/f₀ = 1), and the
+        seam, the carrier-16 and E₈ live on one Kummer/K3 surface. So Dirac, cutoff, gauging, glue and
+        orientability are readouts of one seam state — the boundary QFT is one relative object closed
+        modulo the single keystone{" "}
+        <span className="font-mono text-emerald-200">SEAM.EQUIV.01</span> (the raw RP seam IS the
+        holomorphic (E₈)₁ net at τ=i), adding <span className="text-emerald-200">no new open item</span>;
+        the conformal-deck premise QGEO.SYM.01 is its downstream definitional face. The ambient QG measure
+        is gap-decoupled (Δ_eff = 1.648 &gt; 0) and kept separate by design.
       </p>
       <p className="mt-3 rounded-lg border border-slate-700/40 bg-slate-950/40 p-3 text-xs leading-relaxed text-slate-300">
-        <span className="font-semibold text-slate-100">The 4D perturbative S-matrix is now constructible</span>{" "}
-        (S_pert, v269/v271/v273): the spectral-action interaction is power-counting renormalizable, so by the
-        Epstein–Glaser theorem the perturbative S(g) exists order by order (one log counterterm per coupling, loop
-        factor 1/(16π²)), giving the SM one-loop β-coefficients (b₁,b₂,b₃) = (41/10, −19/6, −7) from the carrier
-        content. This is unitary for the <span className="text-slate-100">matter+gauge</span> sector only — the
-        R²/Weyl² gravity sub-sector is renormalizable but non-unitary (the Stelle ghost; red-team rt_F), which is
-        exactly why the one genuine structural frontier is the{" "}
-        <span className="text-amber-200">nonperturbative</span> ambient measure QG.AMB.01, which now carries an
-        explicit roadmap (v275): Tier A gap-decoupled, Tier B reduced to the holomorphic (E₈)₁ boundary net —
-        reduced, not closed. Sharper still (v282): the flat τ=i geometry (QGEO.SYM.01) and the (E₈)₁ holomorphy
-        (QG.AMB.01) are two faces of one object — χ_E8(i) = j(i)^{1/3} = 12, so τ=i is at once the order-4 CM
-        point and the (E₈)₁ modulus — collapsing the two open obligations to one.
-      </p>
-      <p className="mt-3 rounded-lg border border-emerald-400/15 bg-emerald-500/[0.03] p-3 text-xs leading-relaxed text-slate-300">
-        <span className="font-semibold text-emerald-200">That one statement is now a single named theorem</span>{" "}
-        — the Seam Equivalence Theorem (SEAM.EQUIV.01, v286): <em>the raw RP seam state is the holomorphic
-        (E₈)₁ boundary net at τ=i</em>. The contract concentrates the whole open structure on this one arrow and
-        enforces an <span className="text-slate-100">import firewall</span> so its two proof routes can never feed
-        each other (no "E₈ smuggled into the geometry and pulled back out"). Both routes are then attacked:{" "}
-        <span className="text-slate-100">Route A</span> (AQFT, v287) reduces the theorem to <em>one</em> standard
-        import — "invertible Gaussian bulk ⇒ single-sector boundary" (4/5 lemmas discharged); and{" "}
-        <span className="text-slate-100">Route B</span> (DtN, v288) <em>proves</em> the full-L² lift of the
-        subprincipal ℤ₄ block-diagonality, shrinking the residual to the single sharper question:{" "}
-        <span className="text-slate-300">why is the raw seam subprincipal term mark-local?</span> — now
-        decomposed (v289) into a 5-lemma chain whose <em>only</em> open link is Flat-Away (RP + gap + 4 marks
-        ⇒ curvature vanishes away from the marks), 4/5 discharged. That is the best current attack; Route A's
-        one standard import is itself citable (Kitaev/Freed–Hopkins, Müger/KLM, Kawahigashi–Longo) modulo the
-        same seam-bulk invertibility — so both routes meet at one geometric input, no circularity.
-      </p>
-      <p className="mt-3 rounded-lg border border-slate-700/40 bg-slate-950/40 p-3 text-xs leading-relaxed text-slate-300">
-        <span className="font-semibold text-slate-100">Honest red-team (v290):</span> ℤ₄-invariance is{" "}
-        <em>not</em> mark-locality — a smooth ε·cos(4θ) off-mark curvature passes the v288 commutator yet
-        shifts the DtN spectrum and heat trace. So the commutator is necessary, not sufficient; the modulus is
-        excluded by the spectral data (the KMS weight and (E₈)₁ character), which is exactly why{" "}
-        <span className="font-mono">Flat-Away</span> is now named as its own mini-theorem (v291, FLATAWAY.RP.01)
-        with three independent attack routes — spectral-rigidity, heat-kernel and RP-energy/Troyanov (the flat
-        seam is the <em>unique</em> spectral match of the smooth ℤ₄ family). Closing any one closes Route B.
-        All three are now carried to a precise reduction: the heat-trace deviation is a positive-definite
-        quadratic form ⟹ fix one coefficient a₂ (v292); the spectral-mismatch Hessian over the full smooth-ℤ₄
-        space is positive-definite ⟹ flat is a strict isolated minimum (v293); and Troyanov uniqueness makes
-        the flat cone metric the unique strictly-convex curvature-energy minimiser (v294). The heat route is
-        now <em>exact</em>, not numerical (v295): convexity of the heat trace Λ↦Tr exp(−tΛ) plus the
-        Gauss-Bonnet zero-mean condition makes the flat seam the global minimum (ΔTr ≥ 0, = 0 iff f = 0), and
-        the Δ = 0 ⟺ flat step is
-        machine-formalised in Lean (FORM.FLATAWAY.01, axiom-clean); the a₂ coefficient is now in closed form
-        (v296). Route A&rsquo;s import is likewise a citable theorem stack (Kitaev/Freed–Hopkins → Müger/KLM →
-        Conway–Sloane, v297) modulo the same input. The three converge on one external selection principle for
-        the flat metric.
-      </p>
-      <p className="mt-3 text-sm leading-relaxed text-slate-300">
-        <span className="font-semibold text-slate-100">Closing arc (v300–v302) — the shared fact pinned, no
-        undischarged TFPT-internal assumption left.</span> Flat-Away is hardened from a <em>soft</em> minimum to a{" "}
-        <em>discrete</em> degeneracy obstruction (any smooth off-mark mode splits a doubly-degenerate Steklov
-        level, changing the spectral multiset), and its pin is <em>derived</em> from the (E₈)₁ integer-weight
-        character E₄/η⁸ = q<sup>−1/3</sup>(1 + 248q + …) via 2d Steklov rigidity — so Route B&rsquo;s residual{" "}
-        <em>coincides with</em> Route A&rsquo;s rationality (v300). Route A&rsquo;s one open hypothesis (
-        <span className="font-mono">the quasi-free bulk is invertible</span>) is then discharged by the
-        free-fermion classification: a gapped 16-Majorana (c = 8) Gaussian bulk is automatically invertible
-        (#anyons = |det K<sub>E₈</sub>| = 1; the gauged D₈ = SO(16) contrast has det = 4) (v301). And the single
-        spectral input that remains — <span className="font-mono">the quasi-free bulk is gapped</span> — is the{" "}
-        <em>derived Recovery gap</em> Δ = 6·ln(3/2) ≈ 2.43 &gt; 0 of the frozen transfer spectrum
-        {" "}{`{1,(2/3)⁶,(1/3)⁶}`} (margin Δ − 31/(4π²) ≈ 1.65 &gt; 0); by Osterwalder–Schrader / quasi-free
-        clustering a transfer gap <em>is</em> a bulk mass gap (v302). <span className="font-semibold text-slate-100">
-        Net:</span> SEAM.EQUIV.01 stays open (not machine-proved end-to-end), but its entire residual is now a
-        composition of standard cited theorems (OS/clustering, Kitaev free-fermion, the v297 AQFT stack) over
-        established TFPT facts — no undischarged TFPT-internal assumption remains. That closing chain is now{" "}
-        <em>Lean-formalised</em> (FORM.SEAMEQUIV.01, lake build clean): gap → invertible → holomorphic c = 8 →
-        (E₈)₁ as a well-typed theorem whose <span className="font-mono">#print axioms</span> pins the residual to
-        exactly the named cited steps + the one OS input. And the arithmetic capstone (v313–v318) makes the SM
-        structural sector the cyclotomic field ℚ(ζ₃₀) with Galois μ₄ × ℤ₂ (degree 8 = rank E₈), leaving{" "}
-        <span className="text-emerald-200">zero dimensionless free parameters</span> ({`{a, π, v_geo}`} is the
-        complete input) — with a new falsifiable CP-lock prediction δ<sub>PMNS</sub> = δ<sub>CKM,lead</sub> + π =
-        240° (v320, kill test at DUNE/Hyper-K).
+        <span className="font-semibold text-slate-100">SEAM.EQUIV.01 is the single named open theorem.</span>{" "}
+        The 4D perturbative S-matrix is constructible (Epstein–Glaser; SM one-loop β = (41/10, −19/6, −7)
+        from the carrier content), unitary for the <span className="text-slate-100">matter+gauge</span>{" "}
+        sector — the R²/Weyl² gravity sub-sector is the non-unitary Stelle ghost, which is exactly the
+        separate nonperturbative frontier <span className="text-amber-200">QG.AMB.01</span>. The keystone
+        stays open (not machine-proved end-to-end), but its entire residual is now a composition of
+        standard cited theorems (OS/clustering, the Kitaev free-fermion classification, the AQFT stack)
+        over established TFPT facts — Lean-pinned (FORM.SEAMEQUIV.01) to exactly those named steps plus the
+        derived Recovery gap Δ = 6·ln(3/2) ≈ 2.43 &gt; 0, with no undischarged TFPT-internal assumption
+        left. The full sprint-by-sprint reduction (v234 → v302 and the arithmetic capstone v313–v320) is in
+        the{" "}
+        <Link href="/changelog" className="text-blue-300 underline-offset-2 hover:underline">
+          changelog
+        </Link>{" "}
+        and the research contracts, not replayed here.
       </p>
       <p className="mt-3 rounded-lg border border-slate-700/40 bg-slate-950/40 p-3 text-xs leading-relaxed text-slate-300">
         <span className="font-semibold text-slate-100">4D-QFT fork policy</span> (frozen decision tree, v265):
-        Boundary QFT — complete modulo QGEO.SYM.01. Ambient QG — separate. <span className="text-amber-200">4D
+        Boundary QFT — complete modulo SEAM.EQUIV.01. Ambient QG — separate. <span className="text-amber-200">4D
         GUT — not claimed by default</span> (E₈ is the audit hull, not a 4D gauge group; SM-only unification
         is killed). Optional UV branch — carrier-native Pati-Salam, falsifiable by thresholds and proton
         decay (E₈-allowed content only, no 126, sin²θ_W = 3/8). Not an open ambiguity.

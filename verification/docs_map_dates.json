@@ -12,8 +12,8 @@
   "date": "2026-06-12"
  },
  "introduction::subsection::Sharper still: one anchor $a=(1,1,2)$, and $E_8$ as a compiler hull \\texorpdfstring{(\\mE)}{}::1": {
-  "hash": "4f5fadc9069e",
-  "date": "2026-06-15"
+  "hash": "b79198ae8f83",
+  "date": "2026-06-22"
  },
  "introduction::subsection::The companion documents::1": {
   "hash": "cb43f67f0b4b",
@@ -28,12 +28,12 @@
   "date": "2026-06-12"
  },
  "introduction::subsection::The compact status formula: three honest layers::1": {
-  "hash": "ec34baff1e46",
-  "date": "2026-06-12"
+  "hash": "f2503324cd66",
+  "date": "2026-06-22"
  },
- "introduction::subsection::The hard reduction: two research gates plus typed interfaces::1": {
-  "hash": "ac31e8567f25",
-  "date": "2026-06-19"
+ "introduction::subsection::The hard reduction: the live residual as typed interfaces::1": {
+  "hash": "e20c810995f0",
+  "date": "2026-06-22"
  },
  "introduction::section::The compiler: why $30=2\\cdot3\\cdot5$::1": {
   "hash": "f1d07412f629",
@@ -60,12 +60,12 @@
   "date": "2026-06-12"
  },
  "introduction::section::What this means for the theory-of-everything question::1": {
-  "hash": "3eac33656336",
-  "date": "2026-06-18"
+  "hash": "398d6f6a2ca1",
+  "date": "2026-06-22"
  },
  "introduction::subsection::The closure ledger: what is done, and what genuinely remains::1": {
-  "hash": "51e119ae840d",
-  "date": "2026-06-19"
+  "hash": "25d7d4b91f4d",
+  "date": "2026-06-22"
  },
  "introduction::section::Does this make the theory more probable?::1": {
   "hash": "540397fd6436",
@@ -348,11 +348,11 @@
   "date": "2026-06-15"
  },
  "tfpt_2_standard_model::subsection::Downstream flavor readout: the rare kaons $K\\to\\pi\\nu\\bar\\nu$::1": {
-  "hash": "722c459c445e",
-  "date": "2026-06-14"
+  "hash": "39a675abdb19",
+  "date": "2026-06-22"
  },
  "tfpt_2_standard_model::section::Neutrinos::1": {
-  "hash": "519fe4f2310c",
+  "hash": "642ebdb18939",
   "date": "2026-06-22"
  },
  "tfpt_2_standard_model::section::How the legacy layers simplify (bridge map)::1": {
@@ -384,16 +384,16 @@
   "date": "2026-06-18"
  },
  "tfpt_2_standard_model::subsection::(5) Axioms P1/P2 --- P2 machine-verified, P1 as an interface \\mE/\\mO::1": {
-  "hash": "de183afa60a7",
-  "date": "2026-06-12"
+  "hash": "47377d632f07",
+  "date": "2026-06-22"
  },
  "tfpt_2_standard_model::section::How the original-paper predictions simplify::1": {
   "hash": "b49be45910b9",
   "date": "2026-06-12"
  },
  "tfpt_2_standard_model::section::Conclusion::1": {
-  "hash": "189e59f8e638",
-  "date": "2026-06-13"
+  "hash": "26e76a5b3189",
+  "date": "2026-06-22"
  },
  "tfpt_2_standard_model::section::The setup: parabolic data on the family curve::1": {
   "hash": "da2a8b23c886",
@@ -444,8 +444,8 @@
   "date": "2026-06-13"
  },
  "tfpt_2_standard_model::section::Closing the flavor block: two theorems::1": {
-  "hash": "c76f02659f89",
-  "date": "2026-06-13"
+  "hash": "a05bf768acf5",
+  "date": "2026-06-22"
  },
  "tfpt_2_standard_model::section::Status::1": {
   "hash": "f56ff44b4a5b",
@@ -652,7 +652,7 @@
   "date": "2026-06-19"
  },
  "tfpt_5_redteam::section::Outcome::1": {
-  "hash": "27c70e6f06c1",
+  "hash": "6c556b48bf30",
   "date": "2026-06-22"
  },
  "tfpt_horizon_readouts::front::(front matter)::1": {
@@ -716,7 +716,7 @@
   "date": "2026-06-14"
  },
  "origin_theory::section::The whole integer skeleton from one pair $(\\gcar,\\Nfam)=(5,3)$::1": {
-  "hash": "7f3d28868323",
+  "hash": "18a019bdc812",
   "date": "2026-06-22"
  },
  "origin_theory::section::The ``$8$'' is triply forced: geometry $=$ lattice $=$ gravity::1": {

@@ -17,8 +17,12 @@ bridge), while the CKM point feeding them is [I]/[N] (already in the suite).
         3.33e-11. NOT parameter-free (the SD functions are external), hence [C].
         (Recomputed from the CURRENT CKM point; an earlier scaffold quoted
         BR(K_L)=3.47e-11 from a slip in Im(lambda_t)/lambda^5 -- corrected here.)
-  [N] 3. NA62 CONSISTENCY: the charged channel BR(K+) = 9.45e-11 sits ~1.2 sigma
-        below the NA62 observation (13.0 +3.3/-3.0)e-11 -- consistent today.
+  [N] 3. NA62 CONSISTENCY: BR(K+) = 9.45e-11 lands essentially ON the NA62 full
+        2016-2024 combination (9.6 +1.9/-1.8)e-11 (La Thuile 2026), +0.08 sigma; the
+        earlier 2016-2022 observation was (13.0 +3.3/-3.0)e-11 (~1.2 sigma above). A
+        strong consistency hit for the CKM point -- but NOT a unique TFPT-vs-SM
+        discriminator (the SM value (8.6 +- 0.4)e-11 also sits inside the NA62 error,
+        so the channel confirms the CKM point rather than separating TFPT from the SM).
   [I] 4. GROSSMAN-NIR: BR(K_L)/BR(K+) = 0.352, safely inside the model-
         independent isospin corridor (<= 4.3). A measured ratio above 4.3 would
         signal new physics outside the SM operator basis (not a TFPT-specific
@@ -40,7 +44,10 @@ X_T = mp.mpf('1.462')          # Inami-Lim top function (NLO QCD + EW)
 DP_CU = mp.mpf('0.04')         # long-distance charm-up interference
 DELTA_EM = mp.mpf('-0.003')    # EM correction to K+
 EPS_K = mp.mpf('2.228e-3')     # indirect CP violation
-NA62_C, NA62_LO = mp.mpf('13.0e-11'), mp.mpf('3.0e-11')   # (13.0 +3.3/-3.0)e-11
+NA62_C, NA62_LO = mp.mpf('9.6e-11'), mp.mpf('1.8e-11')    # NA62 full 2016-2024 combination
+#   (9.6 +1.9/-1.8)e-11 (La Thuile 2026); historical 2016-2022 obs was (13.0 +3.3/-3.0)e-11
+NA62_2022_C, NA62_2022_LO = mp.mpf('13.0e-11'), mp.mpf('3.0e-11')
+BR_SM = mp.mpf('8.6e-11')                                  # SM (meson mixing); also inside NA62 error
 
 
 def ckm_point():
@@ -103,11 +110,16 @@ def run():
           "(Im lambda_t)^2 prop etabar^2 -- a direct probe of delta_CKM)",
           BRL, mp.mpf('3.33e-11'), tol=mp.mpf('1e-2'))
 
-    # 3. NA62 consistency
-    pull_na62 = (NA62_C - BRp) / NA62_LO
-    check("NA62 CONSISTENCY [N]: BR(K+)=9.45e-11 vs (13.0 +3.3/-3.0)e-11 -> "
-          "%.2f sigma below; consistent today" % float(pull_na62),
-          pull_na62, mp.mpf('1.18'), tol=mp.mpf('0.1'))
+    # 3. NA62 consistency (full 2016-2024 combination)
+    pull_na62 = (NA62_C - BRp) / NA62_LO            # prediction below central -> lower error
+    pull_2022 = (NA62_2022_C - BRp) / NA62_2022_LO  # the historical 2016-2022 observation
+    sm_inside = abs(NA62_C - BR_SM) < 2 * NA62_LO   # SM also inside the NA62 error
+    check("NA62 CONSISTENCY [N]: BR(K+)=9.45e-11 lands ON NA62 2016-2024 "
+          "(9.6 +1.9/-1.8)e-11 -> +%.2f sigma (was +%.2f sigma vs the 2016-2022 "
+          "13.0e-11); a strong consistency hit for the CKM point, NOT a unique "
+          "TFPT-vs-SM discriminator (SM 8.6e-11 is also inside the NA62 error)"
+          % (float(pull_na62), float(pull_2022)),
+          abs(pull_na62) < mp.mpf('0.5') and pull_2022 > 1.0 and sm_inside)
 
     # 4. Grossman-Nir
     gn = BRL / BRp

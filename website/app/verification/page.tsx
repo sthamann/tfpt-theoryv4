@@ -336,8 +336,9 @@ export default function VerificationPage() {
               a two-input discrete compiler whose algebraic kernel derives the Standard-Model skeleton
               and several dimensionless readouts, with every physical transfer layer explicitly typed
             </span>{" "}
-            — and, given the single seam premise QGEO.SYM.01, the AQFT closure to (E₈)₁ follows through
-            the verified chain v175–v181.
+            — and, given the single named keystone SEAM.EQUIV.01 (the raw RP seam = the holomorphic (E₈)₁
+            net at τ=i), the AQFT closure to (E₈)₁ follows; its conformal-deck face QGEO.SYM.01 is
+            downstream and Lean-pinned.
           </p>
         </div>
       </section>
@@ -462,24 +463,21 @@ export default function VerificationPage() {
               className="mx-auto w-full max-w-4xl rounded-lg bg-white"
             />
             <figcaption className="mt-4 text-sm leading-relaxed text-slate-400">
-              The structural-residual reduction chain (v175 → v297). The whole remaining
+              The structural-residual reduction chain (v175 → v302). The whole remaining
               &ldquo;quantum gravity&rdquo; question collapses, one machine-checked step at a time, from a
               vague measure to a single <span className="text-slate-200">falsifiable physical</span>{" "}
               condition: is the seam short-range-entangled (<span className="font-mono">det K = 1</span>,
-              the Kitaev E₈ phase)? Everything above is a theorem or an established citation; the bedrock,
-              once a definition (<span className="font-mono">QGEO.SYM.01</span>), is now a physical
-              question — <span className="font-mono">v_geo</span> stays the one no-unit primitive. The
-              emergent-QFT layer (<span className="font-mono">v258–v261</span>, the Modular Spectral Closure:
-              Dirac = covariance induction, cutoff = KMS weight, seam/carrier/E₈ on one Kummer/K3) collapses
-              onto this <em>same</em> bedrock — so the boundary QFT is one relative object that adds no new
-              open item. Closing sprint (<span className="font-mono">v286–v288</span>): the bedrock is now a
-              single <em>named</em> theorem, the Seam Equivalence Theorem (<span className="font-mono">SEAM.EQUIV.01</span>) —
-              the raw RP seam IS the holomorphic (E₈)₁ net at τ=i — with an import firewall keeping its two
-              routes non-circular; Route A reduces it to one standard import, Route B proves the full-L² ℤ₄
-              lift, leaving only &ldquo;why is the raw subprincipal term mark-local?&rdquo;. Flat-Away round
-              (<span className="font-mono">v289–v297</span>): both routes are reduced to one shared geometric
-              input (Flat-Away), with the heat route&rsquo;s positive-definiteness <em>proved</em> (convexity),
-              its a₂ kernel in closed form, and the Δ = 0 ⟺ flat step Lean-formalised.
+              the Kitaev E₈ phase)? Everything above is a theorem or an established citation;{" "}
+              <span className="font-mono">v_geo</span> stays the one no-unit primitive. The emergent-QFT
+              layer (<span className="font-mono">v258–v261</span>, the Modular Spectral Closure: Dirac =
+              covariance induction, cutoff = KMS weight, seam/carrier/E₈ on one Kummer/K3) collapses onto
+              this <em>same</em> bedrock — so the boundary QFT is one relative object that adds no new open
+              item. The bedrock is a single <em>named</em> theorem, the Seam Equivalence Theorem
+              (<span className="font-mono">SEAM.EQUIV.01</span>) — the raw RP seam IS the holomorphic (E₈)₁
+              net at τ=i (its conformal-deck face <span className="font-mono">QGEO.SYM.01</span> is
+              downstream); its residual is Lean-pinned to named cited theorems plus the derived Recovery
+              gap. The full step-by-step reduction lives on the{" "}
+              <span className="text-slate-200">/changelog</span> page.
             </figcaption>
           </figure>
         </div>

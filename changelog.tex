@@ -59,6 +59,41 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-22 (external-review pass: a registry bug fix, the NA62 2026 rare-kaon update, CP-phase prose hygiene, and three firewall/visualisation enhancements: \texttt{v202}, \texttt{v203}, \texttt{v305}, \texttt{v307}, \texttt{v321})}
+\begin{itemize}
+\item \textbf{Bug fix --- $\delta_{\mathrm{CKM}}$ display value.} The predictions table (\texttt{tex-artefacts/predictions.tex})
+  showed $\delta=\tfrac\pi3+3\lambda^2=66.96^\circ$, but that formula evaluates to $68.65^\circ$ (the canonical
+  frozen \texttt{DELTA\_CKM\_RAD}$=1.198232$ rad, used by \texttt{v88}/\texttt{v202}/\texttt{FLAV.CP.01}
+  everywhere else). Corrected to $68.65^\circ$. An external review correctly flagged the inconsistency; it was an
+  isolated display typo (the website was already clean).
+\item \textbf{\texttt{v202\_rare\_kaon.py} --- NA62 2016--2024 update (\mE/\mC).} The charged-mode comparison is
+  moved from the historical NA62 $2016$--$2022$ observation $(13.0^{+3.3}_{-3.0})\times10^{-11}$ ($\sim1.2\sigma$
+  above) to the full $2016$--$2024$ combination $\mathrm{BR}(K^+)=(9.6^{+1.9}_{-1.8})\times10^{-11}$
+  (La~Thuile~2026), on which the prediction $9.45\times10^{-11}$ lands at $+0.08\sigma$. Framed honestly: a strong
+  \emph{consistency} hit for the closed CKM point, but an $F_{\mathrm{transfer}}$ bridge --- \emph{not} a unique
+  TFPT-vs-SM discriminator (the SM $(8.6\pm0.4)\times10^{-11}$ is also inside the NA62 error). Propagated to the
+  ledger (\texttt{FR.RAREKAON.01}), \texttt{freeze\_file} (new \texttt{rare\_kaon} kill row), the watchdog
+  (\texttt{v307}, a new $F_{\mathrm{transfer}}$ bridge row), the forward board (\texttt{v321}, rank 9), and
+  \texttt{tfpt\_2\_standard\_model} $+$ the website.
+\item \textbf{CP-phase prose hygiene.} The Galois CP lock is tightened from ``a relation to the \emph{measured}
+  quark phase'' to ``a relation to the \emph{leading} ($\pi/3$) component of the quark phase'': the lock is to the
+  structural $\pi/3$, not the full measured $\gamma=\delta_{\mathrm{CKM}}^{\mathrm{lead}}+3\lambda_C^2\approx68.7^\circ$,
+  so $\delta_{\mathrm{PMNS}}=240^\circ$ (not $248.7^\circ$). Fixed in \texttt{tfpt\_2\_standard\_model},
+  \texttt{origin\_theory}, \texttt{papers.ts} and \texttt{predictions.ts}.
+\item \textbf{\texttt{v305\_witness\_independence.py} --- the No-Golden-Dynamics rule (\mE).} The number-field
+  split is made an explicit anti-numerology firewall rule: $\phi=2\cos(\pi/5)\in\mathbb Q(\sqrt5)$ is the
+  \emph{static} carrier ($\Z/5$) field, every \emph{dynamic} rate is rational ($\mathbb Q$, the $\Z/6$ hand), so a
+  dynamic rate explained by $\phi$ is a cross-field false friend (\texttt{v314}/\texttt{v315}).
+\item \textbf{\texttt{v203\_eht\_achromatic.py} --- the $\mu_4$ Fourier fourth null (\mX).} The EHT residual
+  pre-registration gains a fourth null: the azimuthal residual must carry power \emph{only} at $m\equiv0\bmod4$
+  (the $\mu_4$ fingerprint of the four marks, \texttt{v201}); a $\mu_4$-orbit profile has $\sim0$ off-mode power
+  while a $\Z_2$ control leaks at $m=2$.
+\item \textbf{Seed-hyperplane figure (Fig.~\ref{fig:seed-hyperplane}).} A new figure visualises \texttt{v306}:
+  every scorecard observable inverts \emph{independently} to the one latent seed $\varphi_0$, the error-weighted
+  mean matching the axiom to $0.04\%$, with $\sin^2\theta_{13}$ the $\sim2\sigma$ pressure point. Added to
+  \texttt{make\_figures.py}, \texttt{tfpt\_5\_redteam} and the manifest.
+\end{itemize}
+
 \subsection*{2026-06-22 (Wolfram mirror of the arithmetic arc $+$ three sharpening steps: the CP-lock made quantitative, the Bisognano--Wichmann keystone, the minimal hypergraph fibre: \texttt{v322}, \texttt{v323}, \texttt{v324})}
 \begin{itemize}
 \item \textbf{Wolfram mirror of the cyclotomic/Galois arithmetic arc (the independent second path).} The exact
