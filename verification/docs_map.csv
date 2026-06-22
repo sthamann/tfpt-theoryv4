@@ -1,25 +1,25 @@
 doc,kind,title,line_start,line_end,scripts,hash,last_changed
 introduction,front,(front matter),1,138,v1_e8_glue.py;v3_em_alpha.py,bf401e00f03f,2026-06-12
 introduction,section,What this is about: the jump in construction principle,139,141,,04fdafccd10b,2026-06-12
-introduction,subsection,In plain words,142,164,,b2eae9f54bd2,2026-06-12
-introduction,subsection,"Sharper still: one anchor $a=(1,1,2)$, and $E_8$ as a compiler hull \texorpdfstring{(\mE)}{}",165,248,v119_review_validation_2.py;v189_riemann_roch_carrier.py;v197_rr_carrier_clifford_d5.py;v23_anchor_generator.py,b79198ae8f83,2026-06-22
-introduction,subsection,The companion documents,249,281,,cb43f67f0b4b,2026-06-14
-introduction,section,The architecture at a glance,282,360,,c457aefc1cb7,2026-06-12
-introduction,section,The dependency DAG and the proof ledger,361,419,,fe77a4e2e658,2026-06-12
-introduction,subsection,The compact status formula: three honest layers,420,451,v14_carrier_uniqueness.py;v56_unique_attractor.py;v60_lambda_metrology_branch.py;v6_bootstrap.py,f2503324cd66,2026-06-22
-introduction,subsection,The hard reduction: the live residual as typed interfaces,452,568,v14_carrier_uniqueness.py;v219_icosahedral_mckay.py;v232_e8_kleinian_seam.py;v234_seam_holomorphy_selection.py;v235_seam_chern_simons.py;v23_anchor_generator.py;v335_seam_equiv_unify.py;v36_spectral_action_g2.py;v6_bootstrap.py,5fd1faff3dad,2026-06-22
-introduction,section,The compiler: why $30=2\cdot3\cdot5$,569,625,v219_icosahedral_mckay.py;v223_coxeter_totative_clock.py;v298_e8_network_attractor.py;v299_hypergraph_0d_autonomous.py;v312_hypergraph_substrate.py,f1d07412f629,2026-06-21
-introduction,section,The $\mu_4$ glue: how $E_8$ is really built,626,650,v1_e8_glue.py,e76c4fe33c1d,2026-06-12
-introduction,section,How derivation now works: the derivation map,651,689,,14e40212ef8c,2026-06-12
-introduction,subsection,Cosmology is the Pascal action grammar of the carrier,690,726,v18_quark_yukawa.py;v20_lepton_c_derivation.py;v46_grand_mass_volume.py,a97bc6f4d263,2026-06-12
-introduction,section,"Physical, geometric, topological: why the architecture is plausible",727,741,,5a4228cd0587,2026-06-12
-introduction,section,What role $E_8$ now plays exactly,742,767,,07ec9c971cd7,2026-06-12
-introduction,section,What this means for the theory-of-everything question,768,814,,398d6f6a2ca1,2026-06-22
-introduction,subsection,"The closure ledger: what is done, and what genuinely remains",815,893,,f32a6db95534,2026-06-22
-introduction,section,Does this make the theory more probable?,894,911,,540397fd6436,2026-06-12
-introduction,section,Predictions for running and upcoming experiments,912,982,v100_numerology_null_mc.py;v84_frozen_registry.py,aebe6e44a5a3,2026-06-12
-introduction,section,Conclusion,983,994,,85f94f17b1dd,2026-06-12
-introduction,section,Appendix: computational verification (reproducibility),995,1034,v1_e8_glue.py,376b86d99cd2,2026-06-17
+introduction,subsection,In plain words,142,171,v353_selfloop_capstone.py,678c3e60c020,2026-06-22
+introduction,subsection,"Sharper still: one anchor $a=(1,1,2)$, and $E_8$ as a compiler hull \texorpdfstring{(\mE)}{}",172,255,v119_review_validation_2.py;v189_riemann_roch_carrier.py;v197_rr_carrier_clifford_d5.py;v23_anchor_generator.py,b79198ae8f83,2026-06-22
+introduction,subsection,The companion documents,256,288,,cb43f67f0b4b,2026-06-14
+introduction,section,The architecture at a glance,289,367,,c457aefc1cb7,2026-06-12
+introduction,section,The dependency DAG and the proof ledger,368,426,,fe77a4e2e658,2026-06-12
+introduction,subsection,The compact status formula: three honest layers,427,458,v14_carrier_uniqueness.py;v56_unique_attractor.py;v60_lambda_metrology_branch.py;v6_bootstrap.py,f2503324cd66,2026-06-22
+introduction,subsection,The hard reduction: the live residual as typed interfaces,459,575,v14_carrier_uniqueness.py;v219_icosahedral_mckay.py;v232_e8_kleinian_seam.py;v234_seam_holomorphy_selection.py;v235_seam_chern_simons.py;v23_anchor_generator.py;v335_seam_equiv_unify.py;v36_spectral_action_g2.py;v6_bootstrap.py,5fd1faff3dad,2026-06-22
+introduction,section,The compiler: why $30=2\cdot3\cdot5$,576,632,v219_icosahedral_mckay.py;v223_coxeter_totative_clock.py;v298_e8_network_attractor.py;v299_hypergraph_0d_autonomous.py;v312_hypergraph_substrate.py,f1d07412f629,2026-06-21
+introduction,section,The $\mu_4$ glue: how $E_8$ is really built,633,657,v1_e8_glue.py,e76c4fe33c1d,2026-06-12
+introduction,section,How derivation now works: the derivation map,658,696,,14e40212ef8c,2026-06-12
+introduction,subsection,Cosmology is the Pascal action grammar of the carrier,697,733,v18_quark_yukawa.py;v20_lepton_c_derivation.py;v46_grand_mass_volume.py,a97bc6f4d263,2026-06-12
+introduction,section,"Physical, geometric, topological: why the architecture is plausible",734,748,,5a4228cd0587,2026-06-12
+introduction,section,What role $E_8$ now plays exactly,749,774,,07ec9c971cd7,2026-06-12
+introduction,section,What this means for the theory-of-everything question,775,821,,398d6f6a2ca1,2026-06-22
+introduction,subsection,"The closure ledger: what is done, and what genuinely remains",822,900,,f32a6db95534,2026-06-22
+introduction,section,Does this make the theory more probable?,901,918,,540397fd6436,2026-06-12
+introduction,section,Predictions for running and upcoming experiments,919,989,v100_numerology_null_mc.py;v84_frozen_registry.py,aebe6e44a5a3,2026-06-12
+introduction,section,Conclusion,990,1001,,85f94f17b1dd,2026-06-12
+introduction,section,Appendix: computational verification (reproducibility),1002,1041,v1_e8_glue.py,376b86d99cd2,2026-06-17
 tfpt_1_architecture_e8,front,(front matter),1,146,,31add055d84c,2026-06-12
 tfpt_1_architecture_e8,section,How to read this document,147,364,v106_review_validation.py;v109_sheet_pairing.py;v110_calderon_sheet.py;v111_quadratic_transport.py;v112_selfcounting_channel.py;v113_quasifree_kernel.py;v23_anchor_generator.py,5afde72d746c,2026-06-12
 tfpt_1_architecture_e8,section,Headline: the Pascal compiler on five carrier slots,365,422,,32b8525a612e,2026-06-12

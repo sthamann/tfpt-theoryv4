@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`350` registered scripts · `408` ledger claims · `10` clusters.
+`351` registered scripts · `409` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (25 scripts)
+### `core` — Compiler core & the E₈ glue  (26 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -61,6 +61,8 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v346_seam_geometric_bridge, v277, v344, v216, v154, v281, v336 · cited: origin theory
 - **v352_framework_irreducible** [E/O] `TFPT.IRREDUCIBLE.01` — The framework reduction -- the deepest answer to 'the inputs are not axioms, they are back-determined'. [E] P2 (g_car=5) FORCED three ways (v6): rank-fill, Coxeter-match (g_car=max
   - deps: v6, v54, v83, v154, v216, v342, v153_no_unit_theorem · cited: origin theory
+- **v353_selfloop_capstone** [E/O] `TFPT.SELFLOOP.01` — The bird's-eye rethink (refining v352): TFPT is not a LINEAR theory (axioms -> theorems) but a CLOSED SELF-CONSISTENT LOOP whose outputs fix its own inputs, with ZERO free adjustab
+  - deps: v352_framework_irreducible, v6, v56, v54, v336, v351 · cited: introduction
 
 ### `em` — Electromagnetic fixed point  (4 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -760,16 +762,16 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - `GATE.RU.01` → superseded by `FLAV.RIGID.01` (v49_readout_rigidity)
 - `GATE.UWALL.01` → superseded by `FLAV.RIGID.01` (v49_readout_rigidity)
 - `SEAM.EQUIV.GOLDEN.01` → superseded by `SEAM.EQUIV.BOOTSTRAP.01` (v350_bootstrap_inputs_correction)
+- `TFPT.IRREDUCIBLE.01` → superseded by `TFPT.SELFLOOP.01` (v353_selfloop_capstone)
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `E8.GLU.01`×15, `HOR.NARIAI.01`×15, `v56`×14, `v76`×13, `REG.FREEZE.01`×12, `AX.P1.01`×11, `SEAM.EQUIV.01`×11, `QGEO.SUBPRIN.01`×11, `FLAV.KQ.01`×10, `v216`×10, `QGEO.PILLOW.01`×10, `QG.AMB.01`×9, `v3`×9, `v55`×9
+**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `E8.GLU.01`×15, `v56`×15, `HOR.NARIAI.01`×15, `v76`×13, `REG.FREEZE.01`×12, `AX.P1.01`×11, `SEAM.EQUIV.01`×11, `QGEO.SUBPRIN.01`×11, `FLAV.KQ.01`×10, `v216`×10, `QGEO.PILLOW.01`×10, `QG.AMB.01`×9, `v3`×9, `v55`×9
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v341_alpha_quillen** — `ALPHA.QUILLEN.01`
 - **v342_em_ward_heatkernel** — `EM.WARD.02`
 - **v343_four_routes_analysis** — `FOUR.ROUTES.01`
 - **v344_detk_synthesis** — `SEAM.DETK.01`
@@ -781,4 +783,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v350_bootstrap_inputs_correction** — `SEAM.EQUIV.BOOTSTRAP.01`
 - **v351_continuum_realisation_sharpened** — `SEAM.EQUIV.CONTINUUM.02`
 - **v352_framework_irreducible** — `TFPT.IRREDUCIBLE.01`
+- **v353_selfloop_capstone** — `TFPT.SELFLOOP.01`
 

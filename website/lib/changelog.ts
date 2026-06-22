@@ -47,6 +47,229 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "the bird's-eye rethink: TFPT is a unique self-consistent LOOP with ZERO free dials, not a linear axiom system; "
+      },
+      {
+        "k": "m",
+        "v": "\\pi"
+      },
+      {
+        "k": "t",
+        "v": " is a fixed geometric constant, not a dial; the one residual is the continuum closure: "
+      },
+      {
+        "k": "c",
+        "v": "v353"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v353"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "TFPT.SELFLOOP.01"
+            },
+            {
+              "k": "t",
+              "v": ") — refining "
+            },
+            {
+              "k": "c",
+              "v": "v352"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Stepping all the way back: TFPT is not a LINEAR theory (axioms "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " theorems) but a CLOSED SELF-CONSISTENT LOOP whose outputs fix its own inputs. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "it is a loop: "
+        },
+        {
+          "k": "m",
+          "v": "\\gcar{=}5{=}"
+        },
+        {
+          "k": "t",
+          "v": " max prime of the output "
+        },
+        {
+          "k": "m",
+          "v": "h(E_8){=}30"
+        },
+        {
+          "k": "t",
+          "v": ", and the "
+        },
+        {
+          "k": "m",
+          "v": "8"
+        },
+        {
+          "k": "t",
+          "v": " in "
+        },
+        {
+          "k": "m",
+          "v": "\\cthree{=}\\operatorname{rank}\nE_8"
+        },
+        {
+          "k": "t",
+          "v": " – the outputs fix the inputs ("
+        },
+        {
+          "k": "c",
+          "v": "v6"
+        },
+        {
+          "k": "t",
+          "v": "), with a unique fixed point ("
+        },
+        {
+          "k": "c",
+          "v": "v56"
+        },
+        {
+          "k": "t",
+          "v": "); “which is the axiom?” is the wrong question for a loop. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "ZERO free adjustable dimensionless dials: every load-bearing number is forced/over-determined. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "\\pi"
+        },
+        {
+          "k": "t",
+          "v": " is a FIXED geometric constant (the boundary "
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": "-sphere, "
+        },
+        {
+          "k": "m",
+          "v": "\\oint K{=}4\\pi"
+        },
+        {
+          "k": "t",
+          "v": "), not a dial. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "this refines "
+        },
+        {
+          "k": "c",
+          "v": "v352"
+        },
+        {
+          "k": "t",
+          "v": "'s “framework "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\pi"
+        },
+        {
+          "k": "t",
+          "v": "”: "
+        },
+        {
+          "k": "m",
+          "v": "\\pi"
+        },
+        {
+          "k": "t",
+          "v": " is not a free input and the framework is a SELECTION PRINCIPLE (the unique self-consistent loop), not a free meta-axiom – the honest characterisation is “a unique self-consistent loop with zero free dials”. "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the one residual is the CONTINUUM closure of the loop (the chiral-edge existence, "
+        },
+        {
+          "k": "c",
+          "v": "v336"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v351"
+        },
+        {
+          "k": "t",
+          "v": "); structural-realism (loop complete) vs constructivism (continuum open) is a philosophical, not numerical, fork – no free numbers either way. A capstone synthesis."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-22",
+    "dateLabel": "2026-06-22",
+    "heading": [
+      {
+        "k": "t",
         "v": "two consequences: the "
       },
       {
