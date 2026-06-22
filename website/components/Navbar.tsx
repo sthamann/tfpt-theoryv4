@@ -10,7 +10,7 @@ import { Logo } from "./Logo";
 const links = [
   { href: "/#overview", label: "Overview" },
   { href: "/#predictions", label: "Predictions" },
-  { href: "/compiler", label: "Compiler in action" },
+  { href: "/compiler", label: "Compiler" },
   { href: "/verification", label: "Verification" },
   { href: "/falsification", label: "Falsification" },
   { href: "/review", label: "For reviewers" },
@@ -51,7 +51,7 @@ export function Navbar() {
             <Logo size={36} />
           </Link>
           <span
-            className="hidden select-none items-baseline gap-1.5 rounded-full bg-slate-800/50 px-2.5 py-1 font-mono text-[10px] tracking-wide text-slate-400 ring-1 ring-slate-700/40 xl:inline-flex"
+            className="hidden shrink-0 select-none items-baseline gap-1.5 whitespace-nowrap rounded-full bg-slate-800/50 px-2.5 py-1 font-mono text-[10px] tracking-wide text-slate-400 ring-1 ring-slate-700/40 xl:inline-flex"
             title={`TFPT ${SITE_VERSION} — document set last synced ${SITE_DATE} (build rev ${SITE_REV})`}
           >
             <span className="font-semibold text-slate-300">v{SITE_VERSION}</span>
