@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`319` registered scripts · `374` ledger claims · `10` clusters.
+`322` registered scripts · `377` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -206,7 +206,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v75_upoint_to_vgeo** [E/O] `FLAV.UPOINT.01` — Gate 1 complete: U_point → v_geo (ratios + Grand Mass Volume); same anchor as 1/G
   - deps: v71_simple_r_bridge, v20_lepton_c_derivation, v46_grand_mass_volume, v68 · cited: origin theory, research contracts
 
-### `frontier` — Open gate (G_metric) & the frontier  (73 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (76 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -355,6 +355,12 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v316_galois_readout, v318_arithmetic_capstone, v316, v231, v233 · cited: origin theory, 5 redteam
 - **v321_killtest_board** [E/C/X] `KILL.BOARD.01` — The forward kill-test board: the decisive upcoming measurements, ranked (forward companion to v307). Each entry is locked to a freeze_file.csv kill row: #1 JUNO sin^2 theta12=0.306
   - deps: v307_data_watchdog, v320_galois_cp_relation, v84_frozen_registry · cited: origin theory
+- **v322_cp_lock_sharpened** [E/C/X] `GALOIS.CP.SHARPEN.01` — The v320 CP-lock prediction sharpened into a quantitative kill test. The leading CP phase sits on the six hexagonal nodes arg(rho^k)=k*60deg; delta_CKM,lead=60deg (node 1), delta_P
+  - deps: v320_galois_cp_relation, v316_galois_readout, v320, v316 · cited: origin theory
+- **v323_bw_geometric_modular** [E/C/O] `QGEO.BW.01` — The keystone pushed one step: Bisognano-Wichmann makes the seam modular flow GEOMETRIC, so the mu4 deck invariance is not an independent axiom. The clock rho=diag(i^n)=exp(i(pi/2)L
+  - deps: v181_clock_is_conformal_symmetry, v309_modular_bedrock, v308_seam_equiv_chain, v308, v309, v198 · cited: origin theory
+- **v324_hypergraph_fiber** [E/C/O] `HYP.FIBER.01` — The minimal hypergraph substrate that works: a (2,3,5)-network FIBERED by a 3-fold cusp channel reproduces both the E8 skeleton and the recovery gap (the constructive v312 follow-u
+  - deps: v312_hypergraph_substrate, v315_coxeter_coupling, v317_galois_family, v312, v315, v317, v319, v221 · cited: origin theory
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (163 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -700,15 +706,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×23, `E8.GLU.01`×15, `HOR.NARIAI.01`×15, `AX.P1.01`×11, `v56`×11, `REG.FREEZE.01`×11, `FLAV.KQ.01`×10, `QGEO.PILLOW.01`×10, `CAR.SM.01`×9, `QGEO.SUBPRIN.01`×9, `SEAM.EQUIV.01`×9, `GATE.QGEO.01`×8, `v37`×8, `v55`×8, `v68`×8
+**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×24, `E8.GLU.01`×15, `HOR.NARIAI.01`×15, `AX.P1.01`×11, `v56`×11, `REG.FREEZE.01`×11, `FLAV.KQ.01`×10, `QGEO.PILLOW.01`×10, `CAR.SM.01`×9, `QGEO.SUBPRIN.01`×9, `SEAM.EQUIV.01`×9, `GATE.QGEO.01`×8, `v37`×8, `v55`×8, `v68`×8
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v310_carrier_sm_anomaly** — `CAR.SM.ANOM.01`
-- **v311_gap_decoupled_measure** — `QGAMB.CLUSTER.01`
-- **v312_hypergraph_substrate** — `HYP.INJECT.01`
 - **v313_golden_atoms_spectral** — `GOLD.ATOMS.01`
 - **v314_rate_translation** — `RATE.TRANSLATE.01`
 - **v315_coxeter_coupling** — `COX.COUPLE.01`
@@ -718,4 +721,7 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v319_translation_clock** — `TRANSLATE.CLOCK.01`
 - **v320_galois_cp_relation** — `GALOIS.CP.PREDICT.01`
 - **v321_killtest_board** — `KILL.BOARD.01`
+- **v322_cp_lock_sharpened** — `GALOIS.CP.SHARPEN.01`
+- **v323_bw_geometric_modular** — `QGEO.BW.01`
+- **v324_hypergraph_fiber** — `HYP.FIBER.01`
 

@@ -47,6 +47,1073 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "Wolfram mirror of the arithmetic arc "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " three sharpening steps: the CP-lock made quantitative, the Bisognano–Wichmann keystone, the minimal hypergraph fibre: "
+      },
+      {
+        "k": "c",
+        "v": "v322"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "v323"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "v324"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Wolfram mirror of the cyclotomic/Galois arithmetic arc (the independent second path)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The exact algebraic results of the arc are now mirrored in "
+        },
+        {
+          "k": "c",
+          "v": "verification/wolfram/tfpt_readouts_extension.wl"
+        },
+        {
+          "k": "t",
+          "v": " (ten new "
+        },
+        {
+          "k": "c",
+          "v": "checkExact"
+        },
+        {
+          "k": "t",
+          "v": " blocks, "
+        },
+        {
+          "k": "m",
+          "v": "275\\to285"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "all passing"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "): "
+        },
+        {
+          "k": "c",
+          "v": "v313"
+        },
+        {
+          "k": "t",
+          "v": " (the affine-"
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " characteristic polynomial with the golden factor "
+        },
+        {
+          "k": "m",
+          "v": "x^2{-}x{-}1"
+        },
+        {
+          "k": "t",
+          "v": "; the "
+        },
+        {
+          "k": "m",
+          "v": "(2,3,5)"
+        },
+        {
+          "k": "t",
+          "v": " atoms as "
+        },
+        {
+          "k": "m",
+          "v": "2\\cos(\\pi/k)"
+        },
+        {
+          "k": "t",
+          "v": "; the "
+        },
+        {
+          "k": "m",
+          "v": "31/30"
+        },
+        {
+          "k": "t",
+          "v": " selection), "
+        },
+        {
+          "k": "c",
+          "v": "v314"
+        },
+        {
+          "k": "t",
+          "v": " (the rational kernel vs "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb Q(\\sqrt5)"
+        },
+        {
+          "k": "t",
+          "v": " dynamic-rate split), "
+        },
+        {
+          "k": "c",
+          "v": "v315"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "30{=}5{\\cdot}6"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi(30){=}8"
+        },
+        {
+          "k": "t",
+          "v": ", the Galois group "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4\\times\\Z_2"
+        },
+        {
+          "k": "t",
+          "v": ", the "
+        },
+        {
+          "k": "m",
+          "v": "\\sqrt5"
+        },
+        {
+          "k": "t",
+          "v": " Gauss sum), "
+        },
+        {
+          "k": "c",
+          "v": "v316"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\rho{=}\\zeta_6{=}\\zeta_{30}^5"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\rho^4{=}-\\rho"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{Gal}{=}\\Z_2{=}"
+        },
+        {
+          "k": "t",
+          "v": " CP conjugation), "
+        },
+        {
+          "k": "c",
+          "v": "v317"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\Nfam{=}3"
+        },
+        {
+          "k": "t",
+          "v": " as the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_3"
+        },
+        {
+          "k": "t",
+          "v": " orbit, the "
+        },
+        {
+          "k": "m",
+          "v": "1{+}2"
+        },
+        {
+          "k": "t",
+          "v": " Galois split), "
+        },
+        {
+          "k": "c",
+          "v": "v318"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\phiz{=}(4/3)\\cthree{+}48\\cthree^4"
+        },
+        {
+          "k": "t",
+          "v": " a pure function of "
+        },
+        {
+          "k": "m",
+          "v": "\\pi"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "c",
+          "v": "v320"
+        },
+        {
+          "k": "t",
+          "v": " (the CP lock "
+        },
+        {
+          "k": "m",
+          "v": "\\delta_{\\mathrm{PMNS}}{=}240^\\circ"
+        },
+        {
+          "k": "t",
+          "v": "). Ledger "
+        },
+        {
+          "k": "c",
+          "v": "GATE.WOLFRAM.02"
+        },
+        {
+          "k": "t",
+          "v": " and the Wolfram README updated to "
+        },
+        {
+          "k": "m",
+          "v": "285/285"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v322_cp_lock_sharpened.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "GALOIS.CP.SHARPEN.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "s",
+              "v": "C"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "s",
+              "v": "X"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The "
+        },
+        {
+          "k": "c",
+          "v": "v320"
+        },
+        {
+          "k": "t",
+          "v": " CP-lock sharpened into a quantitative, pre-registered kill test. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the leading phase sits on the six hexagonal nodes "
+        },
+        {
+          "k": "m",
+          "v": "\\arg\\rho^k{=}k\\cdot60^\\circ"
+        },
+        {
+          "k": "t",
+          "v": ", and "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "which"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " one is selected is the deck order: "
+        },
+        {
+          "k": "m",
+          "v": "\\delta_{\\mathrm{PMNS}}^{\\mathrm{lead}}{=}|\\mu_4|\\,\\delta_{\\mathrm{CKM}}^{\\mathrm{lead}}{=}4(\\pi/3)"
+        },
+        {
+          "k": "t",
+          "v": " (node "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the sub-leading correction is bounded by the quark analogue "
+        },
+        {
+          "k": "m",
+          "v": "3\\lambda^2\\approx8.7^\\circ"
+        },
+        {
+          "k": "t",
+          "v": ", so the prediction is the band "
+        },
+        {
+          "k": "m",
+          "v": "240^\\circ\\pm\\sim9^\\circ"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "against NuFIT 6.0 (NO, "
+        },
+        {
+          "k": "m",
+          "v": "\\delta_{CP}{=}212^{+26}_{-41}{}^\\circ"
+        },
+        {
+          "k": "t",
+          "v": ") the leading value is "
+        },
+        {
+          "k": "m",
+          "v": "+1.08\\sigma"
+        },
+        {
+          "k": "t",
+          "v": ", the band edge "
+        },
+        {
+          "k": "m",
+          "v": "+0.74\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " – compatible today; "
+        },
+        {
+          "k": "s",
+          "v": "X"
+        },
+        {
+          "k": "t",
+          "v": "the nearest wrong node is "
+        },
+        {
+          "k": "m",
+          "v": "60^\\circ"
+        },
+        {
+          "k": "t",
+          "v": " away, far beyond the budget, so DUNE/Hyper-K ("
+        },
+        {
+          "k": "m",
+          "v": "\\sim5"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "15^\\circ"
+        },
+        {
+          "k": "t",
+          "v": ") discriminate cleanly. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": "; ledger "
+        },
+        {
+          "k": "c",
+          "v": "GALOIS.CP.SHARPEN.01"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v323_bw_geometric_modular.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGEO.BW.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "s",
+              "v": "C"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "s",
+              "v": "O"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The keystone pushed one honest step via Bisognano–Wichmann. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " clock is a geometric rotation "
+        },
+        {
+          "k": "m",
+          "v": "\\rho{=}\\mathrm{diag}(i^n){=}\\exp(i\\tfrac\\pi2 L)"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4\\subset U(1)_{\\mathrm{rot}}"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "for a rotation-covariant covariance "
+        },
+        {
+          "k": "m",
+          "v": "C{=}f(L)"
+        },
+        {
+          "k": "t",
+          "v": " the modular Hamiltonian "
+        },
+        {
+          "k": "m",
+          "v": "K{=}\\log((1{-}C)/C){=}g(L)"
+        },
+        {
+          "k": "t",
+          "v": ", so "
+        },
+        {
+          "k": "m",
+          "v": "[K,L]{=}0"
+        },
+        {
+          "k": "t",
+          "v": " (the modular flow is geometric) and the clock is a modular symmetry "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "for free"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (the discriminator: a period-"
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " curvature preserves the clock but its flow is not geometric, "
+        },
+        {
+          "k": "m",
+          "v": "[K,L]\\ne0"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "given the seam is the "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " chiral net ("
+        },
+        {
+          "k": "c",
+          "v": "v308"
+        },
+        {
+          "k": "t",
+          "v": "), BW/Hislop–Longo make the vacuum modular flow geometric, so "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.SYM.01"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\omega\\circ\\rho{=}\\omega"
+        },
+        {
+          "k": "t",
+          "v": ") is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "downstream"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " of "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " a rotation-invariant vacuum, not an independent axiom; "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "residual: the raw collar vacuum is rotation-invariant (cleaner than "
+        },
+        {
+          "k": "c",
+          "v": "v309"
+        },
+        {
+          "k": "t",
+          "v": ", shared with "
+        },
+        {
+          "k": "c",
+          "v": "v308"
+        },
+        {
+          "k": "t",
+          "v": "). Cited in "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": "; ledger "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.BW.01"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v324_hypergraph_fiber.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "HYP.FIBER.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "s",
+              "v": "C"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The constructive "
+        },
+        {
+          "k": "c",
+          "v": "v312"
+        },
+        {
+          "k": "t",
+          "v": " follow-up: the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "minimal"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " substrate that carries both the "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " skeleton and the recovery gap is a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "product"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the carrier network "
+        },
+        {
+          "k": "m",
+          "v": "T_{\\mathrm{net}}{=}(A{+}2I)/4"
+        },
+        {
+          "k": "t",
+          "v": " (attractor "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " Kac marks "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " skeleton) fibred by the "
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": "-node family cusp "
+        },
+        {
+          "k": "m",
+          "v": "T_{\\mathrm{cusp}}{=}\\mathrm{diag}((1{-}w)^{2\\Nfam})"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "w\\in\\{0,\\tfrac13,\\tfrac23\\}"
+        },
+        {
+          "k": "t",
+          "v": " (spectrum "
+        },
+        {
+          "k": "m",
+          "v": "\\{1,(2/3)^6,(1/3)^6\\}"
+        },
+        {
+          "k": "t",
+          "v": "); the fibred "
+        },
+        {
+          "k": "m",
+          "v": "T_{\\mathrm{net}}\\otimes T_{\\mathrm{cusp}}"
+        },
+        {
+          "k": "t",
+          "v": " has top eigenvalue "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " (eigenvector "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{marks}\\otimes(w{=}0)"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "m",
+          "v": "(2/3)^6"
+        },
+        {
+          "k": "t",
+          "v": " as a genuine eigenvalue ("
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{marks}\\otimes(w{=}\\tfrac13)"
+        },
+        {
+          "k": "t",
+          "v": ") – the "
+        },
+        {
+          "k": "m",
+          "v": "\\Nfam{=}3"
+        },
+        {
+          "k": "t",
+          "v": " cusp is the minimal fibre and the substrate "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " carrier "
+        },
+        {
+          "k": "m",
+          "v": "\\times"
+        },
+        {
+          "k": "t",
+          "v": " family "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "30{=}\\gcar(2\\Nfam){=}5{\\times}6"
+        },
+        {
+          "k": "t",
+          "v": " of "
+        },
+        {
+          "k": "c",
+          "v": "v315"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "honestly ("
+        },
+        {
+          "k": "c",
+          "v": "v312"
+        },
+        {
+          "k": "t",
+          "v": ") the cusp weight is still "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "injected"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", not derived from the graph – a consistent realisation, not a derivation of "
+        },
+        {
+          "k": "m",
+          "v": "2/3"
+        },
+        {
+          "k": "t",
+          "v": " from a pure rewrite. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": "; ledger "
+        },
+        {
+          "k": "c",
+          "v": "HYP.FIBER.01"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-22",
+    "dateLabel": "2026-06-22",
+    "heading": [
+      {
+        "k": "t",
         "v": "the forward kill-test board: the decisive upcoming measurements ranked, each locked to a freeze row — incl. the new Galois-CP relation: "
       },
       {

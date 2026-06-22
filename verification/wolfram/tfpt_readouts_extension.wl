@@ -2180,6 +2180,44 @@ Module[{jf, jorder4, chiI},
     jorder4 == 1728 && chiI == 12];
 ];
 
+(* ==== v313-v320: the cyclotomic / Galois arithmetic arc (exact) ==== *)
+Module[{edges, cAff, x, units, maxord, z6, z30, gauss},
+  (* v313 GOLD.ATOMS.01 -- the golden ratio is the g_car=5 spectral signature *)
+  edges = {{1, 2}, {2, 3}, {3, 4}, {4, 5}, {5, 6}, {6, 7}, {7, 8}, {6, 9}};
+  cAff = Table[0, {9}, {9}];
+  Do[cAff[[e[[1]], e[[2]]]] = 1; cAff[[e[[2]], e[[1]]]] = 1, {e, edges}];
+  checkExact["v313 GOLD.ATOMS.01: affine-E8 charpoly = x(x^2-4)(x^2-1)(x^2-x-1)(x^2+x-1) -- the golden minimal polynomial x^2-x-1 divides it (phi=2cos(pi/5) an exact eigenvalue); the leading sign tracks Mathematica's Det[A-xI] convention for odd n",
+    Expand[CharacteristicPolynomial[cAff, x] + x (x^2 - 4) (x^2 - 1) (x^2 - x - 1) (x^2 + x - 1)] === 0];
+  checkExact["v313 the (2,3,5) atoms ARE the spectral angles 2cos(pi/k): 2cos(pi/2)=0=|Z2|, 2cos(pi/3)=1=Nfam, 2cos(pi/5)=golden phi=gcar",
+    2 Cos[Pi/2] == 0 && 2 Cos[Pi/3] == 1 && Simplify[2 Cos[Pi/5] - (1 + Sqrt[5])/2] == 0];
+  checkExact["v313 icosahedral selection 1/|Z2|+1/Nfam+1/gcar = 31/30; 31 = 2^gcar-1 = 248/8 = 1+h(E8); 30 = h(E8) = |Z2| Nfam gcar",
+    1/2 + 1/Nfam + 1/gcar == 31/30 && 31 == 2^gcar - 1 && 2^gcar - 1 == 248/8 && 248/8 == 1 + 30 && 30 == 2 Nfam gcar];
+  (* v314 RATE.TRANSLATE.01 -- the number-field split between discrete kernel and dynamic rates *)
+  checkExact["v314 RATE.TRANSLATE.01: the discrete kernel rates {1/2,1/3,2/3,(2/3)^6} are rational (Q); the dynamic golden rate uses phi=2cos(pi/5), MinimalPolynomial x^2-x-1, living in Q(sqrt5) = the real subfield of Q(zeta5) ([Q(zeta5):Q]=4); since Q(sqrt5) cap Q = Q, exact translation acts only on the rational (2,3)-fold sector",
+    Element[1/2, Rationals] && Element[(2/3)^6, Rationals] && MinimalPolynomial[2 Cos[Pi/5], x] == x^2 - x - 1 && EulerPhi[5] == 4 && Simplify[2 Cos[2 Pi/5] - (Sqrt[5] - 1)/2] == 0];
+  (* v315 COX.COUPLE.01 -- the order-30 Coxeter sectors couple as a cyclotomic field *)
+  units = Select[Range[29], CoprimeQ[#, 30] &];
+  maxord = Max[MultiplicativeOrder[#, 30] & /@ units];
+  checkExact["v315 COX.COUPLE.01: 30 = gcar(2 Nfam) = 5*6, gcd(5,6)=1; [Q(zeta30):Q]=EulerPhi[30]=8=rank E8; |(Z/30)^x|=8 with max element order 4 (NOT cyclic Z/8) => Galois = mu4 x Z2, (Z/5)^x=mu4 (ord 4), (Z/3)^x=Z2 (ord 2)",
+    30 == gcar (2 Nfam) && GCD[gcar, 2 Nfam] == 1 && EulerPhi[30] == 8 && Length[units] == 8 && maxord == 4 && EulerPhi[5] == 4 && EulerPhi[3] == 2];
+  gauss = Sum[JacobiSymbol[k, 5] Exp[2 Pi I k/5], {k, 1, 4}];
+  checkExact["v315 carrier generator sqrt5 = phi + 1/phi = the quadratic Gauss sum (zeta5 - zeta5^2 - zeta5^3 + zeta5^4) in Q(zeta5), g^2 = 5",
+    FullSimplify[gauss^2] == 5 && Simplify[(1 + Sqrt[5])/2 + 2/(1 + Sqrt[5]) - Sqrt[5]] == 0];
+  (* v316 GALOIS.READOUT.01 -- CP phases are the family-factor cyclotomic data *)
+  z6 = Exp[I Pi/3]; z30 = Exp[2 Pi I/30];
+  checkExact["v316 GALOIS.READOUT.01: the CP unit rho=zeta6=zeta30^5 (the order-6 family factor c^5); rho^4=-rho (sheet flip); Gal(Q(zeta6)/Q)=Z2 with zeta6->zeta6^5=conj(zeta6) = CP conjugation",
+    Simplify[z6 - z30^5] == 0 && Simplify[z6^4 + z6] == 0 && Simplify[Conjugate[z6] - z6^5] == 0];
+  (* v317 GALOIS.FAMILY.01 -- the three generations are the mu3 orbit, Galois-refined 1+2 *)
+  checkExact["v317 GALOIS.FAMILY.01: Nfam=3 = the mu3 orbit {1,zeta3,zeta3^2} (cube roots of unity), 1+zeta3+zeta3^2=0 (democratic); Gal(Q(zeta3)/Q)=Z2 fixes 1 (the attractor generation) and swaps the conjugate pair {zeta3,zeta3^2} = the Galois-refined 1+2 hierarchy split",
+    Nfam == 3 && Simplify[1 + Exp[2 Pi I/3] + Exp[4 Pi I/3]] == 0 && Simplify[Conjugate[Exp[2 Pi I/3]] - Exp[4 Pi I/3]] == 0 && EulerPhi[3] == 2];
+  (* v318 ARITH.CAPSTONE.01 -- the magnitude seed reduces to a pure pi-function *)
+  checkExact["v318 ARITH.CAPSTONE.01: phi0 = (|mu4|/Nfam) c3 + Omega_adm c3^4 = (4/3)c3 + 48 c3^4 = 1/(6 Pi) + 3/(256 Pi^4) (a pure function of Pi => 0 dimensionless free parameters)",
+    Simplify[(4/3) c3 + 48 c3^4 - (1/(6 Pi) + 3/(256 Pi^4))] == 0 && Simplify[(4/3) c3 + 48 c3^4 - phi0] == 0];
+  (* v320 GALOIS.CP.PREDICT.01 -- the falsifiable CP lock *)
+  checkExact["v320 GALOIS.CP.PREDICT.01: delta_PMNS = arg(rho^4) = 4Pi/3 = delta_CKM,lead (=arg(rho)=Pi/3) + Pi = 240 deg -- the Galois CP lock (rho^4=-rho)",
+    Simplify[4 Pi/3 - (Pi/3 + Pi)] == 0 && (4 Pi/3) (180/Pi) == 240 && Simplify[Arg[z6] - Pi/3] == 0];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

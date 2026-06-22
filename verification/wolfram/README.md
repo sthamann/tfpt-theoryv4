@@ -105,7 +105,7 @@ v84–v93 block passed **45/45** on first run; the v94–v140 blocks were added
 the same day, the v141–v144 block on 2026-06-12. Current state:
 
 ```
---- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282: 275 passed, 0 failed ---
+--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320: 285 passed, 0 failed ---
 ALL WOLFRAM EXTENSION CHECKS PASSED
 ```
 
@@ -122,3 +122,18 @@ cross-validation) and `v307_data_watchdog.py` (the decision pipeline over the
 frozen registry) — are structural/statistical/data-confrontation modules and
 are therefore Python-only by the same convention (no exact algebraic result is
 added, so the Wolfram exact-check count is unchanged).
+
+The 2026-06-22 **cyclotomic/Galois arithmetic arc** added ten exact checks
+(275 → 285): `v313_golden_atoms_spectral.py` (the affine-E8 charpoly factors
+`x(x²−4)(x²−1)(x²−x−1)(x²+x−1)` with the golden minimal polynomial `x²−x−1`,
+the `(2,3,5)` atoms as the spectral angles `2cos(π/k)`, and the `31/30`
+icosahedral selection), `v314_rate_translation.py` (the rational kernel vs the
+`Q(√5)` dynamic-rate split, translation acting only on `Q`), `v315_coxeter_coupling.py`
+(`30=5·6`, `φ(30)=8=rank E8`, the Galois group `μ4×Z2`, and `√5` as the
+quadratic Gauss sum in `Q(ζ₅)`), `v316_galois_readout.py` (`ρ=ζ₆=ζ₃₀⁵`,
+`ρ⁴=−ρ`, and `Gal(Q(ζ₆)/Q)=Z2` as CP conjugation), `v317_galois_family.py`
+(`N_fam=3` as the `μ3` orbit with the Galois-refined `1+2` split),
+`v318_arithmetic_capstone.py` (`φ₀=(4/3)c₃+48c₃⁴` as a pure function of `π`) and
+`v320_galois_cp_relation.py` (the CP lock `δ_PMNS=4π/3=δ_CKM,lead+π=240°`). The
+translation clock `v319_translation_clock.py` is a structural reading and stays
+Python-only.
