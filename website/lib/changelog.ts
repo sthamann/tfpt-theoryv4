@@ -47,6 +47,313 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "the first-principles boundary, mapped: can "
+      },
+      {
+        "k": "m",
+        "v": "M_{\\mathrm{Planck}}"
+      },
+      {
+        "k": "t",
+        "v": " be computed? can "
+      },
+      {
+        "k": "m",
+        "v": "F_{\\mathrm{transfer}}"
+      },
+      {
+        "k": "t",
+        "v": " be first-principles? both NO, with the exact reason: "
+      },
+      {
+        "k": "c",
+        "v": "v339"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v339"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "FIRSTPRINCIPLES.BOUNDARY.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " An honest boundary audit answering two head-on questions and fabricating nothing. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "The Planck mass cannot be computed"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " — "
+        },
+        {
+          "k": "m",
+          "v": "v_{\\mathrm{geo}}/M_{\\mathrm{Planck}}"
+        },
+        {
+          "k": "t",
+          "v": " is forbidden by theorem (No-Unit, "
+        },
+        {
+          "k": "c",
+          "v": "v153"
+        },
+        {
+          "k": "t",
+          "v": "): a mass is mass-dimension "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " while every TFPT datum is dimension "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": ", so no dimensionless map outputs an absolute scale. It is not a gap but over-determined (gravity "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " dark energy to "
+        },
+        {
+          "k": "m",
+          "v": "0.11\\%"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v274"
+        },
+        {
+          "k": "t",
+          "v": "); every dimensionless "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "ratio"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " is derived, only the one unit is not. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "m",
+              "v": "F_{\\mathrm{transfer}}"
+            },
+            {
+              "k": "t",
+              "v": " cannot be made first-principles"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " either: for "
+        },
+        {
+          "k": "m",
+          "v": "m_p/m_e"
+        },
+        {
+          "k": "t",
+          "v": " the structure is in place ("
+        },
+        {
+          "k": "c",
+          "v": "v262"
+        },
+        {
+          "k": "t",
+          "v": ", carrier "
+        },
+        {
+          "k": "m",
+          "v": "b_3{=}{-}7"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " closed electron) but two inputs stay external. "
+        },
+        {
+          "k": "s",
+          "v": "X"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha_s(M_Z)"
+        },
+        {
+          "k": "t",
+          "v": " is external "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "because of a tension"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " — the SM ("
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " TFPT content, no new states) does not unify (1-loop spread "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}8.8"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "2{\\times}10^{16}"
+        },
+        {
+          "k": "t",
+          "v": " GeV, "
+        },
+        {
+          "k": "c",
+          "v": "v246"
+        },
+        {
+          "k": "t",
+          "v": "). The lattice "
+        },
+        {
+          "k": "m",
+          "v": "C_p\\!\\sim\\!2.83"
+        },
+        {
+          "k": "t",
+          "v": " is parameter-free but lattice-only ("
+        },
+        {
+          "k": "c",
+          "v": "v35"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "m",
+          "v": "\\eta_B"
+        },
+        {
+          "k": "t",
+          "v": "/axion ride on cosmological initial conditions; Koide "
+        },
+        {
+          "k": "m",
+          "v": "Q{=}2/3"
+        },
+        {
+          "k": "t",
+          "v": " is structural "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "The residuals classify into four honest kinds: forbidden-by-theorem, external-and-tensioned, external-but-parameter-free, cosmological. A classification, not a solution."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-22",
+    "dateLabel": "2026-06-22",
+    "heading": [
+      {
+        "k": "t",
         "v": "next-steps round: the one open lemma literature-anchored, the Decoupling Theorem, the holomorphy discriminator hardened in Lean, and the "
       },
       {
