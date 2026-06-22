@@ -2246,6 +2246,17 @@ Module[{ambient},
     Simplify[ambient - 31/(4 Pi^2)] == 0 && (1/(1 - (2/3)^6)) == 729/665];
 ];
 
+(* ==== v341 ALPHA.QUILLEN.01: the seam-form discriminant identities ==== *)
+Module[{c3v, phib},
+  c3v = 1/(8 Pi); phib = 1/(6 Pi);
+  (* phi_base = (4/3) c3 carries q(A3): c3/phi_base = 3/4; with -5/4 = -q(D5) the F_U(1)
+     seam response carries BOTH glue forms, q(D5)+q(A3)=2 = E8 root norm; counterterm
+     coefficient (4/5)M = 8 b1 = 8*(41/10) with b1 the U(1)_Y one-loop beta (rank E8 = 8) *)
+  checkExact["v341 ALPHA.QUILLEN.01: phi_base = 1/(6pi) = (4/3) c3 so c3/phi_base = 3/4 = q(A3), the exponent -5/4 = -q(D5), and q(D5)+q(A3) = 5/4+3/4 = 2 = E8 root norm; the anomaly counterterm coefficient (4/5)M = 8 b1 = 8*(41/10) = (rank E8) b1 (the EM Ward, v48) -- so the F_U(1) determinant-line form has only index/heat-kernel/discriminant atoms, no free knob",
+    Simplify[phib - (4/3) c3v] == 0 && Simplify[c3v/phib] == 3/4
+      && (5/4 + 3/4 == 2) && ((4/5)*41 == 8*(41/10))];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

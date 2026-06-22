@@ -105,7 +105,7 @@ v84–v93 block passed **45/45** on first run; the v94–v140 blocks were added
 the same day, the v141–v144 block on 2026-06-12. Current state:
 
 ```
---- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337: 289 passed, 0 failed ---
+--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341: 290 passed, 0 failed ---
 ALL WOLFRAM EXTENSION CHECKS PASSED
 ```
 
@@ -147,6 +147,11 @@ and `v327_hypergraph_rewrite.py` (the minimal branching rule `M` has spectrum
 that `2/3` is **not** a root of the affine-E₈ characteristic polynomial). The
 `F_transfer` solver suite `v326_ftransfer_suite.py` (numerical ODE/RG relaxations) and
 the `θ13` pressure-point `v328_theta13_pressure.py` (data confrontation) are Python-only.
+
+The 2026-06-22 **α-Quillen round** added one more exact check (289 → 290):
+`v341_alpha_quillen.py` (the `F_U(1)` seam-form discriminant identities — `φ_base=(4/3)c₃` so
+`c₃/φ_base=3/4=q(A3)`, `−5/4=−q(D5)`, `q(D5)+q(A3)=2`, and the counterterm `(4/5)M=8b₁`).
+The Quillen-form split at the root is the numerical α solve (Python-only, v3).
 
 The 2026-06-22 **next-steps round (A/C/D/B)** added one more exact check (288 → 289):
 `v337_decoupling_theorem.py` (the ambient back-reaction scale `2·dim(E₈)·c₃² = 31/(4π²)`

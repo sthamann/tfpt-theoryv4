@@ -1110,6 +1110,23 @@ decomposition and the coefficient identities ($8b_1=\tfrac45 M$, $-\tfrac54=q(D_
 $\partial_\tau\log Z_{\mathrm{Calder\acute on}}=-2\cthree^3\alpha^2$, $\partial_\tau\log\det\nolimits_\zeta(1-\mathcal T_{C_6,U(1)})=-8b_1\cthree^6\log\tfrac1{\phiseam}$)
 is a conjectured \mC\ interpretation, not yet machine-proven. \veri{v48\_em\_ward.py}
 \par\smallskip
+\noindent\textbf{The determinant-line (Quillen) form.} (\veri{v341\_alpha\_quillen.py})
+The three terms assemble into a single \emph{stationarity} statement for the boundary $U(1)$ determinant line,
+\[
+  \underbrace{\bigl[\alpha^3-2\cthree^3\alpha^2\bigr]}_{\delta\log\det\Delta_{U(1)}}
+  \;=\;\underbrace{\bigl[8b_1\cthree^6\bigr]}_{\text{ctr.}}\;
+  \underbrace{\bigl[\log\tfrac1{\phiseam}\bigr]}_{\text{seam resp.}},
+\]
+so $F_{U(1)}=0$ is $\delta\log\det\Delta_{U(1)}+\text{counterterm}+\text{seam response}=0$. Every factor is a
+\emph{named} object, not a knob: the counterterm coefficient is $8b_1\cthree^6=(\operatorname{rank}E_8)\,b_1\,\cthree^6$
+(index $\times$ heat-kernel), $\cthree=1/(8\pi)$ is the Gauss--Bonnet boundary coefficient, the exponent
+$-\tfrac54=-q(D_5)$ is one carrier discriminant norm and the seam base $\phibase=1/(6\pi)=\tfrac43\cthree$ carries
+the \emph{other}, $\cthree/\phibase=\tfrac34=q(A_3)$ --- both glue forms appear, and the split is verified at the
+root. \textbf{Typing:} the determinant-line assembly and all coefficient identities are exact \mE; what stays
+\emph{open} (\texttt{ALPHA.WARD.01}, \mO) is the from-first-principles AQFT proof that this is the \emph{exact}
+Quillen functional of the seam $U(1)$ --- the variational principle \emph{derived}, not assembled. This is the
+sharpest remaining EM-Ward obligation, and it is the honest residual of the ``why \emph{this} function'' question.
+\par\smallskip
 
 \noindent The full ablation --- which inputs are load-bearing and which only set the last digit --- is in
 the \hyperref[sec:ablation]{Ablation appendix} below.

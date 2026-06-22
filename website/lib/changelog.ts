@@ -47,6 +47,263 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "m",
+        "v": "\\alpha"
+      },
+      {
+        "k": "t",
+        "v": " as the stationarity of a "
+      },
+      {
+        "k": "m",
+        "v": "U(1)"
+      },
+      {
+        "k": "t",
+        "v": " determinant line: every ingredient an index / heat-kernel coefficient / discriminant form, the open EM-Ward obligation named: "
+      },
+      {
+        "k": "c",
+        "v": "v341"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v341"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "ALPHA.QUILLEN.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Answers the external review's sharpest valid point — “derive the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "form"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " of "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": ", not more decimals”. The EM closure "
+        },
+        {
+          "k": "m",
+          "v": "F_{U(1)}=\\alpha^3-2\\cthree^3\\alpha^2-\\tfrac45\\cthree^6 M\\log(1/\\varphi_{\\mathrm{seam}})=0"
+        },
+        {
+          "k": "t",
+          "v": " is rewritten as a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "stationarity"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " of the boundary "
+        },
+        {
+          "k": "m",
+          "v": "U(1)"
+        },
+        {
+          "k": "t",
+          "v": " determinant line: "
+        },
+        {
+          "k": "m",
+          "v": "[\\alpha^3-2\\cthree^3\\alpha^2]_{\\,\\delta\\log\\det\\Delta_{U(1)}}=[8b_1\\cthree^6]_{\\,\\text{counterterm}}\\cdot\n[\\log(1/\\varphi_{\\mathrm{seam}})]_{\\,\\text{seam response}}"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "every ingredient is a NAMED object, not a knob: "
+        },
+        {
+          "k": "m",
+          "v": "M{=}41"
+        },
+        {
+          "k": "t",
+          "v": " is a "
+        },
+        {
+          "k": "m",
+          "v": "U(1)"
+        },
+        {
+          "k": "t",
+          "v": " index ("
+        },
+        {
+          "k": "m",
+          "v": "\\tfrac45 M=8b_1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "b_1{=}41/10"
+        },
+        {
+          "k": "t",
+          "v": " the SM "
+        },
+        {
+          "k": "m",
+          "v": "U(1)_Y"
+        },
+        {
+          "k": "t",
+          "v": " beta, EM Ward "
+        },
+        {
+          "k": "c",
+          "v": "v48"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "m",
+          "v": "\\cthree{=}1/(8\\pi)"
+        },
+        {
+          "k": "t",
+          "v": " the Gauss–Bonnet boundary coefficient ("
+        },
+        {
+          "k": "m",
+          "v": "8{=}\\operatorname{rank}E_8"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "m",
+          "v": "-5/4=-q(D_5)"
+        },
+        {
+          "k": "t",
+          "v": " a discriminant form and "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi_{\\mathrm{base}}{=}1/(6\\pi){=}\\tfrac43\\cthree"
+        },
+        {
+          "k": "t",
+          "v": " carries the other, "
+        },
+        {
+          "k": "m",
+          "v": "\\cthree/\\varphi_{\\mathrm{base}}{=}3/4{=}q(A_3)"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\delta_{\\mathrm{top}}{=}\\Omega_{\\mathrm{adm}}\\cthree^4"
+        },
+        {
+          "k": "t",
+          "v": ". The Quillen split is verified at the "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha^{-1}{=}137.0359992"
+        },
+        {
+          "k": "t",
+          "v": " root. "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the from-first-principles AQFT proof that this is the EXACT Quillen functional (the variational principle derived, not assembled) stays open ("
+        },
+        {
+          "k": "c",
+          "v": "ALPHA.WARD.01"
+        },
+        {
+          "k": "t",
+          "v": ") — the sharpest remaining EM-Ward obligation. Wolfram mirror "
+        },
+        {
+          "k": "m",
+          "v": "+1"
+        },
+        {
+          "k": "t",
+          "v": " (289 "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " 290)."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-22",
+    "dateLabel": "2026-06-22",
+    "heading": [
+      {
+        "k": "m",
         "v": "A_s"
       },
       {
