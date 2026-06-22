@@ -105,7 +105,7 @@ v84–v93 block passed **45/45** on first run; the v94–v140 blocks were added
 the same day, the v141–v144 block on 2026-06-12. Current state:
 
 ```
---- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345: 293 passed, 0 failed ---
+--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347: 294 passed, 0 failed ---
 ALL WOLFRAM EXTENSION CHECKS PASSED
 ```
 
@@ -170,6 +170,13 @@ The 2026-06-22 **R3 execution round** added one more exact check (292 → 293):
 form — `|coker(E8)| = 1` so the E8 plumbing boundary is an integral homology sphere, vs
 `|coker(D5)| = 4`; only E8). The companion perfectness of `2I = SL(2,5)` (the link's `π₁`)
 is a direct finite-group commutator computation, Python-only.
+
+The 2026-06-22 **L2 closure-modes round** added one more exact check (293 → 294):
+`v347_seam_closure_modes.py` (the precise locus of the one open arrow — the seam pillowcase
+base `S²(2,2,2,2)` has `χ_orb = 0` (Euclidean/flat) while the 2I/E8 Seifert base `S²(2,3,5)`
+has `χ_orb = 1/30` (spherical), so L2 bridges two geometric types). The geometric-bridge
+capstone `v346_seam_geometric_bridge.py` is a Python-only chain-bookkeeping roadmap (its
+arithmetic is already mirrored via v344/v345).
 
 The 2026-06-22 **next-steps round (A/C/D/B)** added one more exact check (288 → 289):
 `v337_decoupling_theorem.py` (the ambient back-reaction scale `2·dim(E₈)·c₃² = 31/(4π²)`

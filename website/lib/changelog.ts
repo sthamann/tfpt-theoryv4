@@ -47,6 +47,216 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "can the one open arrow be "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "fully"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " solved? the closure-mode classification: the flat"
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": "spherical base locus, four modes, no free theorem – only rigidity or axiom "
+      },
+      {
+        "k": "m",
+        "v": "P_3"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "c",
+        "v": "v347"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v347"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EQUIV.CLOSURE.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " A direct, honest answer to “is there any other way to fully solve the one open arrow L2?”. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the precise locus: the seam gives the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "flat"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " pillowcase base "
+        },
+        {
+          "k": "m",
+          "v": "S^2(2,2,2,2)"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\chi_{\\mathrm{orb}}=2-4(1-\\tfrac12)=0"
+        },
+        {
+          "k": "t",
+          "v": ", v216) while the "
+        },
+        {
+          "k": "m",
+          "v": "2I/E_8"
+        },
+        {
+          "k": "t",
+          "v": " structure is the Seifert base over the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "spherical"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "S^2(2,3,5)"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\chi_{\\mathrm{orb}}=2-(\\tfrac12+\\tfrac23+\\tfrac45)=\\tfrac1{30}"
+        },
+        {
+          "k": "t",
+          "v": "), so L2 bridges two geometric types – why it needs the carrier "
+        },
+        {
+          "k": "m",
+          "v": "(2,3,5)"
+        },
+        {
+          "k": "t",
+          "v": " input. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "as a “physics-realises-geometry” statement L2 has exactly four closure modes: A construct (the analytic wall), B rigidity (a unique-realisation theorem – the only theorem-route w/o new input, pursued v284/v300/v331), C axiom "
+        },
+        {
+          "k": "m",
+          "v": "P_3"
+        },
+        {
+          "k": "t",
+          "v": " (then TFPT is complete relative to 3 axioms), D empirical. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the “no new state” discipline (v246) blocks deriving L2 from extra physics, so no route makes it a free theorem. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "verdict: full closure is either a rigidity theorem (B) or axiom status (C), validated either way by (D); only B closes it as a theorem. "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "NOT closed – classifies the modes, locates the difficulty. Wolfram mirror "
+        },
+        {
+          "k": "m",
+          "v": "+1"
+        },
+        {
+          "k": "t",
+          "v": " (293 "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " 294). An analysis/roadmap; closes nothing."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-22",
+    "dateLabel": "2026-06-22",
+    "heading": [
+      {
+        "k": "t",
         "v": "the geometric bridge made explicit: the keystone is ONE arrow – raw-seam "
       },
       {

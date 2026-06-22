@@ -2295,6 +2295,15 @@ Module[{cartanD, E8, sfE8, sfD5, cokerE8, cokerD5},
     (cokerE8 === 1 || cokerE8 === Times[]) && cokerD5 == 4 && Det[E8] == 1];
 ];
 
+(* ==== v347 SEAM.EQUIV.CLOSURE.01: the flat seam base vs the spherical icosahedral base ==== *)
+Module[{chiSeam, chi2I},
+  (* seam pillowcase S^2(2,2,2,2): chi_orb = 0 (Euclidean/flat); 2I Seifert base S^2(2,3,5): chi_orb = 1/30 (spherical) *)
+  chiSeam = 2 - 4 (1 - 1/2);
+  chi2I = 2 - ((1 - 1/2) + (1 - 1/3) + (1 - 1/5));
+  checkExact["v347 SEAM.EQUIV.CLOSURE.01: the open arrow L2 must bridge the seam pillowcase base S^2(2,2,2,2) -- chi_orb = 2-4(1-1/2) = 0 (EUCLIDEAN/flat) -- to the 2I/E8 Seifert base S^2(2,3,5) -- chi_orb = 2-(1/2+2/3+4/5) = 1/30 (SPHERICAL); two different geometric types, the precise locus of why L2 needs the carrier (2,3,5) input. Closure modes: A construct (analytic wall) / B rigidity (only theorem-route) / C axiom P3 / D empirical -- no free theorem",
+    chiSeam == 0 && chi2I == 1/30];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];
