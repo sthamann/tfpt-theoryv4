@@ -47,6 +47,343 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "the four black-hole-birth completion routes investigated: none closes all or is 100% provable alone; all four converge on "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.EQUIV.01"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the decoupled QG contour: "
+      },
+      {
+        "k": "c",
+        "v": "v343"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v343"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "FOUR.ROUTES.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " A direct, honest answer to “which black-hole-birth route closes ALL problems and is 100% provable”: "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "none individually"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " — but the four converge on the same two residuals as "
+        },
+        {
+          "k": "c",
+          "v": "v335"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(A)"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the finite causal diamond reframes "
+        },
+        {
+          "k": "c",
+          "v": "QG.AMB"
+        },
+        {
+          "k": "t",
+          "v": " to a finite thermal trace (de Sitter "
+        },
+        {
+          "k": "m",
+          "v": "S_{\\mathrm{dS}}=32\\pi^4 e^{2\\ainv}"
+        },
+        {
+          "k": "t",
+          "v": " finite, "
+        },
+        {
+          "k": "m",
+          "v": "\\chi=729/665"
+        },
+        {
+          "k": "t",
+          "v": ") but inherits the GHP contour ("
+        },
+        {
+          "k": "c",
+          "v": "v334"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "); does not touch the seam. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(B)"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Carlip–Cardy gives a second route to existence"
+        },
+        {
+          "k": "m",
+          "v": "+c"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "c{=}8"
+        },
+        {
+          "k": "t",
+          "v": " consistent, but the Carlip ambiguity and no holomorphy "
+        },
+        {
+          "k": "m",
+          "v": "\\det K{=}1"
+        },
+        {
+          "k": "t",
+          "v": ") — inherits "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(C)"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the modular/thermal flow ("
+        },
+        {
+          "k": "c",
+          "v": "v239"
+        },
+        {
+          "k": "t",
+          "v": ") is well-defined but its geometric content is "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.SYM.01"
+        },
+        {
+          "k": "t",
+          "v": ", a corollary of "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v335"
+        },
+        {
+          "k": "t",
+          "v": ") — a reduction. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(D)"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the unique attractor ("
+        },
+        {
+          "k": "c",
+          "v": "v56"
+        },
+        {
+          "k": "t",
+          "v": ") gives parameter-freeness but the cyclic dynamics is "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "interpretation. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Verdict:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " independent closures "
+        },
+        {
+          "k": "m",
+          "v": "=0"
+        },
+        {
+          "k": "t",
+          "v": "; irreducible residuals after all four "
+        },
+        {
+          "k": "m",
+          "v": "=2"
+        },
+        {
+          "k": "t",
+          "v": " (unchanged from "
+        },
+        {
+          "k": "c",
+          "v": "v335"
+        },
+        {
+          "k": "t",
+          "v": "); the horizon premise makes both more natural but eliminates neither — focus "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": ". An analysis module; closes nothing, fabricates nothing."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-22",
+    "dateLabel": "2026-06-22",
+    "heading": [
+      {
+        "k": "t",
         "v": "the heat-kernel origin of the "
       },
       {

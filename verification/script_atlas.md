@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`340` registered scripts · `398` ledger claims · `10` clusters.
+`341` registered scripts · `399` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -218,7 +218,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v75_upoint_to_vgeo** [E/O] `FLAV.UPOINT.01` — Gate 1 complete: U_point → v_geo (ratios + Grand Mass Volume); same anchor as 1/G
   - deps: v71_simple_r_bridge, v20_lepton_c_derivation, v46_grand_mass_volume, v68 · cited: origin theory, research contracts
 
-### `frontier` — Open gate (G_metric) & the frontier  (88 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (89 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -397,6 +397,8 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v153, v274, v262, v246, v35, v78_vgeo_floor, v262_fqcd_mp_me · cited: 4 frontier
 - **v340_As_reconcile** [E/C/X] `AS.RECONCILE.01` — A_s is predicted (not missing), is DIMENSIONLESS (so it does NOT define an absolute mass), and the apparent -11 sigma tension is a reheating-channel question -- reconciled with the
   - deps: v86, v153, v84, v274_scale_overdetermination · cited: origin theory
+- **v343_four_routes_analysis** [E/C/O] `FOUR.ROUTES.01` — The honest investigation of the four black-hole-birth solution routes (A finite causal diamond, B Carlip-Cardy near-horizon CFT, C modular/thermal flow, D self-reproduction attract
+  - deps: v335_seam_equiv_unify, QG.AMB.01, v54, v190, v332, v334, v337, v239 · cited: origin theory
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (163 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -742,13 +744,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `E8.GLU.01`×15, `HOR.NARIAI.01`×15, `v76`×13, `v56`×12, `REG.FREEZE.01`×12, `AX.P1.01`×11, `SEAM.EQUIV.01`×11, `QGEO.SUBPRIN.01`×11, `FLAV.KQ.01`×10, `QGEO.PILLOW.01`×10, `v3`×9, `CAR.SM.01`×9, `GATE.QGEO.01`×8, `QG.AMB.01`×8
+**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `E8.GLU.01`×15, `HOR.NARIAI.01`×15, `v76`×13, `v56`×13, `REG.FREEZE.01`×12, `AX.P1.01`×11, `SEAM.EQUIV.01`×11, `QGEO.SUBPRIN.01`×11, `FLAV.KQ.01`×10, `QGEO.PILLOW.01`×10, `QG.AMB.01`×9, `v3`×9, `CAR.SM.01`×9, `GATE.QGEO.01`×8
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v331_necessity_of_H** — `QGEO.NECESS.01, FORM.MU4COMM.01`
 - **v332_qgamb_metric_sector** — `QGAMB.METRIC.01`
 - **v333_cm_selection** — `QGEO.CMSELECT.01`
 - **v334_conformal_resolution** — `QGAMB.CONFORMAL.01`
@@ -760,4 +761,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v340_As_reconcile** — `AS.RECONCILE.01`
 - **v341_alpha_quillen** — `ALPHA.QUILLEN.01`
 - **v342_em_ward_heatkernel** — `EM.WARD.02`
+- **v343_four_routes_analysis** — `FOUR.ROUTES.01`
 
