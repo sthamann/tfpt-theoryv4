@@ -222,12 +222,11 @@ def fig_translation_clock():
         a = np.pi / 2 - 2 * np.pi * k / 6          # start at top, clockwise
         x, y = Rd * np.cos(a), Rd * np.sin(a)
         law = (k == 0)
-        ax.scatter([x], [y], s=150 if law else 95,
+        ax.scatter([x], [y], s=160 if law else 110,
                    color=C["red"] if law else C["blue"], zorder=4,
                    edgecolor="k", lw=0.5)
-        ax.annotate(str(k), (x, y), textcoords="offset points",
-                    xytext=(0, 0), ha="center", va="center", fontsize=8.5,
-                    color="white", fontweight="bold")
+        ax.text(x, y, str(k), ha="center", va="center", fontsize=8.5,
+                color="white", fontweight="bold", zorder=6)
     # mark the conserved law at position 0
     ax.annotate("law (rate 0)\n= attractor", (0, Rd),
                 textcoords="offset points", xytext=(0, 12), ha="center",
@@ -239,11 +238,10 @@ def fig_translation_clock():
     for k in range(5):
         a = np.pi / 2 - 2 * np.pi * k / 5
         x, y = Rs * np.cos(a), Rs * np.sin(a)
-        ax.scatter([x], [y], s=95, color=C["gold"], zorder=4,
+        ax.scatter([x], [y], s=110, color=C["gold"], zorder=4,
                    edgecolor="k", lw=0.5)
-        ax.annotate(str(k + 1), (x, y), textcoords="offset points",
-                    xytext=(0, 0), ha="center", va="center", fontsize=8.5,
-                    color="white", fontweight="bold")
+        ax.text(x, y, str(k + 1), ha="center", va="center", fontsize=8.5,
+                color="white", fontweight="bold", zorder=6)
 
     ax.text(0, 0, r"$\mathbb{Z}/30$" "\n" r"$=5\times6$", ha="center",
             va="center", fontsize=10, fontweight="bold", color=C["gray"])

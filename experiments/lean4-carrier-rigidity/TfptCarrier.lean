@@ -53,6 +53,7 @@ import TfptCarrier.CarrierData
 import TfptCarrier.Hypercharge
 import TfptCarrier.GlueUniqueness
 import TfptCarrier.SeamDeckClosure
+import TfptCarrier.SeamEquivChain
 import TfptCarrier.MobiusUniformisation
 import TfptCarrier.CohomologyGrading
 import TfptCarrier.AnchorLadder

@@ -59,6 +59,37 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-22 (Lean: the \texttt{SEAM.EQUIV.01} composition chain formalised --- the keystone residual machine-pinned to the named cited steps: \texttt{FORM.SEAMEQUIV.01})}
+\begin{itemize}
+\item \textbf{\texttt{SeamEquivChain.lean} (\texttt{FORM.SEAMEQUIV.01}, Lean 4, \mE/\mO).} A Lean~4 mirror of the
+  \texttt{v308} closing chain: the four nodes $\textsf{GapPositive}\to\textsf{InvertibleSRE}\to\textsf{HolomorphicC8}
+  \to\textsf{SeamIsE8}$ assembled as a well-typed composition theorem \texttt{seamEquivChain}, with the three cited
+  literature steps (Kitaev free-fermion invertibility; M\"uger / Kawahigashi--Longo--M\"uger holomorphy;
+  Conway--Sloane $E_8$ uniqueness) as named \texttt{axiom}s and the carrier recovery gap (the OS step) as the single
+  open input. \mE\ \texttt{\#print axioms seamEquivChain} confirms the residual is exactly those named steps $+$
+  \texttt{recovery\_gap} (no hidden assumption); \mE\ a \texttt{decide}-proven discriminator
+  $\textsf{primariesE8}=1\ne\textsf{primariesD8}=4$ (the $|\det\mathrm{Cartan}|$ that separates the holomorphic
+  $E_8$ from the same-$c$ rival $D_8{=}SO(16)$). Built end-to-end (\texttt{lake build}, 3357 jobs) on Lean
+  v4.29.1 $+$ Mathlib. \mO\ The value is the machine-checked composition $+$ axiom audit (pinning the keystone
+  residual), \emph{not} a from-scratch proof --- it does NOT close \texttt{SEAM.EQUIV.01}. Ledger row
+  \texttt{FORM.SEAMEQUIV.01}; mirrors \texttt{v308}.
+\end{itemize}
+
+\subsection*{2026-06-22 (a NEW falsifiable prediction from the Galois structure: the two CP phases are locked, $\delta_{\mathrm{PMNS}}=\delta_{\mathrm{CKM}}^{\mathrm{lead}}+\pi$: \texttt{v320})}
+\begin{itemize}
+\item \textbf{\texttt{v320\_galois\_cp\_relation.py} (\texttt{GALOIS.CP.PREDICT.01}, \mE/\mC/\mX).} The \texttt{v316}
+  follow-up turned into a testable cross-prediction. \mE\ both leading CP phases are powers of the \emph{one}
+  hexagonal unit $\rho=\zeta_6$ of the family Galois factor: $\delta_{\mathrm{CKM}}^{\mathrm{lead}}=\arg\rho=\pi/3$
+  ($60^\circ$), $\delta_{\mathrm{PMNS}}=\arg\rho^4=4\pi/3$ ($240^\circ$), and $\rho^4=-\rho$ locks them as
+  $\delta_{\mathrm{PMNS}}=\delta_{\mathrm{CKM}}^{\mathrm{lead}}+\pi$ (the $\Z_2$ sheet flip); \mC\ this upgrades the
+  previously assigned $\delta_{\mathrm{PMNS}}=240^\circ$ to a Galois-forced relation to the measured quark phase
+  (the quark and lepton leading CP phases are not independent); \mX\ kill test: a $\delta_{\mathrm{PMNS}}$ robustly
+  incompatible with $240^\circ$ ($>3\sigma$ at DUNE/Hyper-K/JUNO) falsifies the Galois-CP organisation; $240^\circ$
+  is currently within the broad NuFIT 6.0 range. A genuine new falsifiable consequence of the \texttt{v313}--%
+  \texttt{v319} arithmetic arc (also a \texttt{freeze\_file.csv} \texttt{cp\_phase\_relation} kill row). Cited in
+  \texttt{origin\_theory}; ledger row \texttt{GALOIS.CP.PREDICT.01}.
+\end{itemize}
+
 \subsection*{2026-06-22 (the translation clock: the discrete$\leftrightarrow$dynamic bridge \emph{is} the order-$30$ Coxeter element, a clock with two coprime hands $5\times6$, read law-inclusive ($0..5$) or live-only ($1..5$): \texttt{v319})}
 \begin{itemize}
 \item \textbf{\texttt{v319\_translation\_clock.py} (\texttt{TRANSLATE.CLOCK.01}, \mE/\mC).} A synthesis of the
