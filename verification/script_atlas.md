@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`356` registered scripts · `414` ledger claims · `10` clusters.
+`357` registered scripts · `415` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (29 scripts)
+### `core` — Compiler core & the E₈ glue  (30 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -69,6 +69,8 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v356_continuum_mmst_applicability, v356, v57, v58, v59, v216, v221, v323 · cited: 4 frontier, research contracts
 - **v359_grav_nonlinear_einstein** [E/C/O] `GRAV.NONLINEAR.01` — The FULL covariant Einstein equation, parameter-free (Direction 1, extends v358). The Jacobson-2015 fixed-VOLUME entanglement equilibrium brings in the EINSTEIN TENSOR G_ab (not ju
   - deps: v358_grav_entropy_equilibrium, v358, v60, v323, v57, v58, v216 · cited: 4 frontier
+- **v360_grav_gap_corrections** [E/C/O/X] `GRAV.GAPCORR.01` — Direction 2: the gap-induced higher-curvature correction to GR -- the disciplined result. Does the seam transfer gap give a NEW forced near-term GR-deviation beyond the known R^2 s
+  - deps: v359_grav_nonlinear_einstein, v359, v358, v36, v28, v354, v355 · cited: 4 frontier
 
 ### `em` — Electromagnetic fixed point  (4 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -782,7 +784,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v347_seam_closure_modes** — `SEAM.EQUIV.CLOSURE.01`
 - **v348_seam_rigidity_route** — `SEAM.EQUIV.RIGID.01`
 - **v349_raw_seam_golden_test** — `SEAM.EQUIV.GOLDEN.01`
 - **v350_bootstrap_inputs_correction** — `SEAM.EQUIV.BOOTSTRAP.01`
@@ -794,4 +795,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v356_continuum_mmst_applicability** — `SEAM.EQUIV.CONTINUUM.03`
 - **v358_grav_entropy_equilibrium** — `GRAV.ENTROPY.EQUILIBRIUM.01`
 - **v359_grav_nonlinear_einstein** — `GRAV.NONLINEAR.01`
+- **v360_grav_gap_corrections** — `GRAV.GAPCORR.01`
 

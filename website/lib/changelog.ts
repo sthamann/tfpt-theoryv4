@@ -47,6 +47,323 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "Direction 2, the disciplined result: the gap-induced GR correction is the known "
+      },
+      {
+        "k": "m",
+        "v": "R^2"
+      },
+      {
+        "k": "t",
+        "v": " scalaron — already falsifiable via "
+      },
+      {
+        "k": "m",
+        "v": "n_s/r"
+      },
+      {
+        "k": "t",
+        "v": "; a "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "new"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " forced near-term deviation does NOT survive the discriminator and is declined: "
+      },
+      {
+        "k": "c",
+        "v": "v360"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v360"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "GRAV.GAPCORR.01"
+            },
+            {
+              "k": "t",
+              "v": ") — Direction 2, run honestly."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Does the seam transfer gap "
+        },
+        {
+          "k": "m",
+          "v": "\\{1,(2/3)^6,(1/3)^6\\}"
+        },
+        {
+          "k": "t",
+          "v": " yield a NEW, calculable, FORCED deviation from GR (a near-term kill test) beyond the known "
+        },
+        {
+          "k": "m",
+          "v": "R^2"
+        },
+        {
+          "k": "t",
+          "v": " scalaron? With the "
+        },
+        {
+          "k": "c",
+          "v": "v354"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v355"
+        },
+        {
+          "k": "t",
+          "v": " discriminator the answer is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "no"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", and this is recorded rather than manufacturing a coefficient. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the leading higher-curvature term IS the "
+        },
+        {
+          "k": "m",
+          "v": "R^2"
+        },
+        {
+          "k": "t",
+          "v": " scalaron (spectral-action "
+        },
+        {
+          "k": "m",
+          "v": "a_4{=}R^2/72"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v36"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "M_{\\mathrm{scal}}^2/\\Mbar^2=\\cthree^7"
+        },
+        {
+          "k": "t",
+          "v": ", exponent "
+        },
+        {
+          "k": "m",
+          "v": "7{=}\\gcar{+}\\Nfam{-}1"
+        },
+        {
+          "k": "t",
+          "v": ") — the calculable beyond-Einstein correction, already in TFPT. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "it is the entanglement-equilibrium NEXT order (the Wald first law "
+        },
+        {
+          "k": "m",
+          "v": "\\to f(R){=}R{+}R^2"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v28"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v359"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "it is ALREADY falsifiable via "
+        },
+        {
+          "k": "m",
+          "v": "n_s{=}1{-}2/N_\\star"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "r{=}12/N_\\star^2"
+        },
+        {
+          "k": "t",
+          "v": " (live CMB-S4 kill test). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the gap "
+        },
+        {
+          "k": "m",
+          "v": "\\Delta{=}6\\ln\\tfrac32"
+        },
+        {
+          "k": "t",
+          "v": " is a dimensionless rate, so a distinct gap-induced curvature"
+        },
+        {
+          "k": "m",
+          "v": "^2"
+        },
+        {
+          "k": "t",
+          "v": " term sits at "
+        },
+        {
+          "k": "m",
+          "v": "\\xi\\,v_{\\mathrm{geo}}\\sim"
+        },
+        {
+          "k": "t",
+          "v": " the seam/Planck scale (not near-term observable). "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "DECLINE: a new dimensionless coefficient is not atom-forced (the scalaron exponent "
+        },
+        {
+          "k": "m",
+          "v": "7{=}g{+}N{-}1"
+        },
+        {
+          "k": "t",
+          "v": " and the gap exponent "
+        },
+        {
+          "k": "m",
+          "v": "6{=}2\\Nfam"
+        },
+        {
+          "k": "t",
+          "v": " are different; "
+        },
+        {
+          "k": "m",
+          "v": "\\cthree^7"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "(2/3)^6"
+        },
+        {
+          "k": "t",
+          "v": " unrelated) — per "
+        },
+        {
+          "k": "c",
+          "v": "v354"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v355"
+        },
+        {
+          "k": "t",
+          "v": " declined. Direction 2 yields no new near-term forced prediction; the answer is the existing scalaron. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_4"
+        },
+        {
+          "k": "t",
+          "v": "; Python-only."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-23",
+    "dateLabel": "2026-06-23",
+    "heading": [
+      {
+        "k": "t",
         "v": "the FULL covariant Einstein equation, parameter-free: the fixed-volume entanglement equilibrium gives "
       },
       {

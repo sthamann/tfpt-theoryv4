@@ -32,19 +32,16 @@ reachable now, concrete next steps (modules to build / what to compute), honest 
 - **Difficulty:** medium-high (a genuine GR computation, but on a fixed symmetric background). **Open part:** the
   background-independent / fully dynamical metric (still needs the continuum realisation).
 
-## Direction 2 — Calculable **GR corrections from the seam gap** (a prediction channel)
-- **Goal:** turn the seam transfer gap `(2/3)⁶` / the spectrum `{1,(2/3)⁶,(1/3)⁶}` into **calculable** higher-curvature
-  corrections to GR (beyond the known `R²` scalaron), i.e. a falsifiable deviation at the seam scale.
-- **Why reachable now:** the entropy density and the modular spectrum are atom-fixed; higher-derivative entropy
-  corrections (Wald / the subleading heat-kernel terms) map to higher-curvature couplings whose coefficients are now
-  gap-determined, not free.
-- **Concrete steps:**
-  1. `v360 GRAV.GAPCORR.01` — derive the leading correction coefficient from the subleading transfer eigenvalue
-     `(2/3)⁶` (the first-law `δS` beyond the area term); express it in atoms.
-  2. Translate to an observable: a correction to the scalaron sector or a seam-scale modification; pre-register a
-     kill test (`[X]`) tied to a `freeze_file` row.
-- **Difficulty:** medium. **Risk:** must pass the anti-numerology discriminator (a *forced* coefficient, not a fit) —
-  decline if the coefficient is not atom-forced.
+## Direction 2 — GR corrections from the seam gap — DONE (`v360`): the disciplined result is a DECLINE
+- **RESULT (`v360 GRAV.GAPCORR.01`):** run with the strict discriminator, the answer is **no new near-term forced
+  prediction**. The leading higher-curvature term IS the **R² scalaron** (`M_scal²/M̄² = c₃⁷`), which is the
+  next-order term of the same entanglement-equilibrium route (Wald first law → f(R)=R+R²) and is **already** a live
+  CMB-S4 kill test (`n_s = 1−2/N★`, `r = 12/N★²`). A *distinct* gap-induced curvature² term sits at the seam/Planck
+  scale (`Δ = 6 ln(3/2)` is dimensionless → scale `ξ·v_geo`), and a new dimensionless coefficient there is **not
+  atom-forced** (scalaron exponent 7=g+N−1  vs gap exponent 6=2N_fam; `c₃⁷` vs `(2/3)⁶` unrelated) → declined per
+  v354/v355.
+- **Takeaway:** the calculable GR deviation already exists (the scalaron); Direction 2 added no new dial — exactly the
+  anti-numerology outcome. Closed.
 
 ## Direction 3 — The QG **measure** (C7) as fluctuations around the parameter-free saddle
 - **Goal:** complete `G_metric`'s *measure* side (C7), now that the classical saddle (the Einstein equation) is
@@ -97,13 +94,14 @@ reachable now, concrete next steps (modules to build / what to compute), honest 
 ---
 
 ## Recommended order (highest value / most tractable first)
-1. **Direction 1** (non-linear Einstein) — directly extends v358, closes B6 conceptually; fold the Direction-4 Λ
-   consistency check in here as one extra `check()` (Λ must match `ρ_Λ = (3/4π²)e^{−2α⁻¹}`, v60).
-2. **Direction 2** (gap corrections) — the only *new falsifiable prediction* channel; do it with the strict discriminator.
-3. **Direction 5** (backreaction) — explicit, uses J3.
+1. ✅ **Direction 1** (non-linear Einstein) — DONE (`v359`): full covariant `G_ab + Λ g_ab = (1/c₃) T_ab`,
+   both coefficients parameter-free; B6 closed at the local level. (Direction-4 Λ consistency folded in.)
+2. ✅ **Direction 2** (gap corrections) — DONE (`v360`): disciplined DECLINE — the calculable GR deviation is the
+   R² scalaron (already falsifiable); no new atom-forced coefficient.
+3. **Direction 5** (backreaction) — explicit, uses J3. ← next up.
 4. **Direction 6** (v_geo) — cheap clarity.
 5. **Direction 3 / 7** (QG measure / MMST in-class) — the two hard functional-analysis residuals; long-horizon.
-- (Direction 4 demoted to a fold-in of Direction 1: Λ's value is already done from α.)
+- (Direction 4 was folded into Direction 1: Λ's value is already done from α.)
 
 ## Discipline reminders (do not relax)
 - Every new `vN` follows the full workflow: derive from `{c₃, g_car}`, `check()/summary()`, register in `run_all.py`
