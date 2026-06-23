@@ -1,6 +1,6 @@
 # TFPT — Topological Fixed-Point Theory
 
-> A closed **discrete compiler** for the dimensionless skeleton of the Standard Model and
+> **Version 5.3** · A closed **discrete compiler** for the dimensionless skeleton of the Standard Model and
 > cosmology, built from **two inputs** plus typed physical anchors for the absolute scales.
 > Every load-bearing claim is machine-checked by an independent verification suite.
 
@@ -41,8 +41,9 @@ bootstrap fixed point* (forced three independent ways via the `E8` closure), so 
         ├─►  lattice operators (Q,K,R,L) on H₁(P¹∖μ4)=ℤ³,  det = (3,4,8,20),  ∏ = 1920 = |W(D5)|
         │         └─►  masses (φ₀-ladder), lepton c = (16/7, 4/3, 7/6), quark ratios (integer Plücker)
         │
-        └─►  c₃ = Einstein/Jacobson 8π coefficient ─► R+R² scalaron M = c₃^(7/2)·M̄_Pl ≈ 3.06×10¹³ GeV,
-                                                       Λ ~ e^(−2α⁻¹), Ω_b = (1−1/4π)φ₀ ≈ 0.04894
+        └─►  c₃ = Einstein/Jacobson 8π coefficient ─► full covariant G_ab+Λg_ab = c₃⁻¹T_ab (both coeffs fixed,
+                                                       v359); R+R² scalaron M ≈ 3.06×10¹³ GeV; Λ ~ e^(−2α⁻¹);
+                                                       Ω_b = (1−1/4π)φ₀ ≈ 0.04894
 ```
 
 ### What it produces (selected, all machine-checked)
@@ -141,7 +142,7 @@ anchor (`1/G` is UV-sensitive, Sakharov-type induced gravity) — not a diffuse 
 
 | Item | What it is |
 |---|---|
-| `v1_*.py … v324_*.py` | 322 numbered claim checks (one file per claim cluster; highest ID `v324`). |
+| `v1_*.py … v380_*.py` | 375 numbered claim checks (one file per claim cluster; highest ID `v380`). |
 | `run_all.py` | Runs the whole suite; ends `ALL CHECKS PASSED`. |
 | `tfpt_constants.py` | Shared constants + `check()` harness. |
 | `predictions_frozen.json` | **Blind-prediction registry** (frozen 2026-06-09): every dimensionless prediction of record at 25 digits, locked to its formula by `v84_frozen_registry.py` on every run; exactly one `θ12` prediction of record (seed `0.306747`), `r`/`n_s` only as `N_star` bands. |
@@ -151,18 +152,20 @@ anchor (`1/G` is UV-sensitive, Sakharov-type induced gravity) — not a diffuse 
 | `audit_sync.py` | **The sync audit** (papers ↔ suite ↔ ledger ↔ changelog ↔ website, both directions); must end `AUDIT OK`. |
 | `make_figures.py` | Regenerates the figures (status heatmap, attractor, Coxeter circle, …). |
 | `make_manifest.py` | Writes `manifest.sha256` + `lean_manifest.sha256` (content digests). |
-| `wolfram/tfpt_readouts.wl` | Independent second path on Wolfram Engine (`116/116` checks); `wolfram/tfpt_readouts_extension.wl` mirrors the exact algebraic/identity/lattice results (`285/285`, verified on Wolfram Engine 14.3). |
+| `wolfram/tfpt_readouts.wl` | Independent second path on Wolfram Engine (`116/116` checks); `wolfram/tfpt_readouts_extension.wl` mirrors the exact algebraic/identity/lattice results (`303/303`, verified on Wolfram Engine 14.3). |
 | `redteam/run_redteam.py` | **Adversarial layer.** Tries to *break* the five reductions (Targets A–E); verdicts in `REDTEAM.*` ledger rows + `tfpt_5_redteam.tex`. |
 
 ### Other directories
 
 - `experiments/lean4-carrier-rigidity/` — Lean 4 proofs, machine-formalised `[F]` (`AUDIT: PASS`,
   no `sorry`/`admit`, only the three standard kernel axioms): the carrier algebra (P2: hypercharge,
-  anomaly-freedom, integer rigidity, Pascal/glue uniqueness) **and** the geometric/conditional cores of
+  anomaly-freedom, integer rigidity, Pascal/glue uniqueness), the geometric/conditional cores of
   the open `QGEO.SYM.01` premise — the Möbius uniformisation normal form `z↦iz` / `σρσ=ρ⁻¹` / orbit→`μ₄`
   (`FORM.QGEO.02`, mirrors `v177`) and the conditional theorem *mark-local DtN ⇒ `ω∘ρ=ω`*
-  (`FORM.QGEO.01`, mirrors `v201`/`v210`). The *implication* is `[F]`; the seam-realisation *premise*
-  (`QGEO.SYM.01`) stays `[O]`, a typed target — not closed.
+  (`FORM.QGEO.01`, mirrors `v201`/`v210`), the seam equivalence chain (`FORM.SEAMEQUIV.01`) and
+  the S3 continuum leg (`FORM.SEAM.MMST.01`: MMST hypotheses kernel-proved, scaling limit + OS
+  reconstruction as named cited axioms). The *implication* is `[F]`; the seam-realisation *premise*
+  (`SEAM.EQUIV.01`) is **closed modulo a cited theorem** — not machine-proved end-to-end.
 - `experiments/` — research-level explorations (e.g. `eht-achromatic-residual`, discovery scripts).
 - `figures/` — generated PDFs used by the documents.
 - `website/` — the public Next.js mirror (papers, interactive verification DAG, in-browser
@@ -187,7 +190,7 @@ bash build.sh notes
 cd verification && python run_all.py
 
 # 3. Independent Wolfram path  ->  "116/116 passed"  (optional, needs Wolfram Engine)
-#    (the v84+ extension mirrors the exact results, 285/285)
+#    (the v84+ extension mirrors the exact results, 303/303)
 wolframscript -file verification/wolfram/tfpt_readouts.wl
 wolframscript -file verification/wolfram/tfpt_readouts_extension.wl
 
@@ -236,6 +239,41 @@ The ledger is *append-only and versioned*: superseded rows are marked `active=fa
 
 ## 5. What is genuinely open
 
+**Current status (v5.3, 2026-06-23).** The discrete/algebraic compiler is closed (`[E]`). The honest
+residual is **three named interface problems** — not a diffuse list:
+
+| Interface | Question | Status |
+|---|---|---|
+| `v_geo` | the one metrology unit (`=1/√G = m/μ`); No-Unit Thm: no compiler scale | primitive `[O]` |
+| `G_net` | `SEAM.EQUIV.01`: the raw seam *is* the holomorphic `(E8)₁` net | `[C]` — closed modulo a cited theorem |
+| `F_transfer` | one functor, four typed interfaces (Koide, `η_B`, axion, `m_p/m_e`) | `[C]` |
+
+**Gravity is parameter-free.** The classical metric-sector field equation is no longer only an `R+R²`
+readout. The entanglement first law `δS = δ⟨K⟩` (Jacobson; Faulkner et al.), run with TFPT's atoms,
+gives the **full covariant** Einstein equation `G_ab + Λ g_ab = c₃⁻¹ T_ab` with **both** coefficients
+fixed — `c₃⁻¹ = 8π` (no free dimensionless Newton dial; the thermodynamic origin `2π/η` *coincides*
+with the geometric one `|Z₂|·2π·χ` via `|μ₄| = |Z₂|·χ(S²) = 4`, so `c₃` is triply over-determined —
+anchor, geometry, thermodynamics, `v358`/`v359`) and `Λ` from `α` (`ρ_Λ = (3/4π²)e^{−2α⁻¹}`, `v60`);
+the Einstein tensor (not Ricci) is forced by Lovelock, so matter conservation is an output (`v359`).
+The residual here is only the equation-of-state interpretive fork and the one unit `v_geo`. The global
+measure (`QG.AMB.01`) is now a **`[C]` redundancy** (`v369`): a certification object rather than
+missing dynamics, conditional on `SEAM.EQUIV.01` and Bisognano–Wichmann.
+
+**`SEAM.EQUIV.01` is closed modulo a cited theorem.** The explicit lattice model (`v367`/`v368`) and
+the S3 closure stack pin the target at every computable level — central charge `c=8` (`v376`), the
+`(E8)₁` character with 248 currents and one primary (`v377`), genus-one torus GSD = 1 (`v378`) and
+reflection positivity (`v379`) — and it is Lean-formalised as `FORM.SEAM.MMST.01`: the collar's MMST
+hypotheses are kernel-proved, the MMST scaling-limit and Adamo–Moriwaki–Tanimoto OS-reconstruction
+theorems enter as named cited axioms, and the `#print axioms` check is clean. The *only* residual
+that stays `[O]` is the abstract continuum existence of the scaling limit (exactly those two cited
+published theorems, `v336`). `QGEO.SYM.01` (the `μ₄` deck acting geometrically) is its **corollary**
+(`v335`, Lean `FORM.QGEO.BW.01`). `QG.AMB.01` is gap-decoupled from the general Euclidean-QG
+conformal-factor problem (margin `Δ_eff ≈ 1.648 > 0`, `v76`/`v330`).
+
+---
+
+### Historical reduction (how we got here)
+
 - **One condition, not many** (`v234`/`v235`): the whole *structural* residual — the metric inclusion
   `G_net`, the carrier `P2` and red-team Target A — is a single condition, *"the seam carries no
   nontrivial abelian sector"*, with three provably-equivalent faces that all force `E8`: holomorphy
@@ -257,15 +295,16 @@ The ledger is *append-only and versioned*: superseded rows are marked `active=fa
   The ambient quantum-gravity measure (`QG.AMB.01`) is **not** a second TFPT structural item: it is the
   *general* Euclidean-QG conformal-factor problem (GHP 1978), gap-decoupled (`Δ_eff = 1.648 > 0`) — an
   inherited, decoupled problem, no readout depends on it.
-- **Gravity is parameter-free** (`v358`): the classical metric-sector field equation is no longer only an
-  `R+R²` readout. The entanglement first law `δS = δ⟨K⟩` (Jacobson; Faulkner et al.), run with TFPT's atoms,
-  gives the *linearised* Einstein equation `G_ab = c₃⁻¹ T_ab` with `c₃⁻¹ = 8π` **fixed** — no free
-  dimensionless Newton dial — and the **thermodynamic** origin of `c₃` (the first-law coefficient `2π/η`)
-  **coincides** with the **geometric** one (the one-sided Gauss–Bonnet `|Z₂|·2π·χ`) via the atom identity
-  `|μ₄| = |Z₂|·χ(S²) = 4`. So `c₃` is **triply over-determined** (anchor, geometry, thermodynamics). The
-  matter flux is assembled (the CHM ball modular Hamiltonian, `v323`) and the entropy density is atom-fixed
-  (`1/4 = 1/|μ₄|`, central charge `c = g_car+N_fam = 8`). The only residual is the linear→nonlinear extension
-  and the one unit `v_geo`.
+- **Gravity is parameter-free** (`v358`/`v359`): the classical metric-sector field equation is no longer only an
+  `R+R²` readout. The entanglement first law gives the **full covariant** Einstein equation
+  `G_ab + Λ g_ab = c₃⁻¹ T_ab` with **both** coefficients fixed — `c₃⁻¹ = 8π` and `Λ` from `α` — and the
+  **thermodynamic** origin of `c₃` (the first-law coefficient `2π/η`) **coincides** with the **geometric**
+  one (the one-sided Gauss–Bonnet `|Z₂|·2π·χ`) via the atom identity `|μ₄| = |Z₂|·χ(S²) = 4`. So `c₃` is
+  **triply over-determined** (anchor, geometry, thermodynamics). The matter flux is assembled (the CHM ball
+  modular Hamiltonian, `v323`) and the entropy density is atom-fixed (`1/4 = 1/|μ₄|`, central charge
+  `c = g_car+N_fam = 8`). The only residual is the equation-of-state interpretive fork and the one unit
+  `v_geo`. The perturbative Stelle ghost is a Seeley–DeWitt truncation artefact; resummation of the KMS
+  heat kernel pushes it to infinity (`v380`).
 - **The central theorem**: `1/(8π)` from the seam-determinant replica — structure closed, the
   Fursaev–Solodukhin factor machine-derived (`v90`), and the mechanism now exhibited at the
   gapped-model level (gap ⇒ cutoff-independent EH coefficient under replica, `v150`), with the
@@ -274,146 +313,35 @@ The ledger is *append-only and versioned*: superseded rows are marked `active=fa
   normalisation is itself the one dimensionful anchor in disguise (the EH coefficient is a log-ratio
   `k = ln(m/μ)/12π`, and `m/μ` is `1/G`, `v152`), so the isolated residual is just the
   kernel-identification premise plus that single declared anchor.
-- **Full covariant metric-sector / ambient QG measure** (`G_metric`) — kept open by design;
-  gap-decoupled from the admissible IR sector (`Δ_eff = 1.648 > 0`). After `v83`/`v87` the whole
-  Target-A gate is **one** theorem: *the seam–Calderón boundary net is holomorphic with `c = 8`*
-  — then `(E8)₁` and the unique 2D bulk both follow. Equivalent index form (`v89`): *the seam net
-  contains the carrier net with Jones index `4 = |μ₄|` as its `μ₄` simple-current extension* —
-  holomorphy then follows from μ-additivity instead of being assumed. And *which* extension carries
-  no freedom (`v92`): the carrier extension tower is completely rigid — carrier `(μ=16)` →
-  `SO(16)₁` `(μ=4`, the unique intermediate`)` → `(E8)₁` `(μ=1`, two chiralities = sheet`)` —
-  so Gate A is the *bare* index statement. The two structural residuals are now **discharged to a
-  theorem** (`v175`): the CAR second-quantisation functor `Γ(t)=⊕ₘΛᵐ(t)` makes full-cone reflection
-  positivity reduce *for every `m`* to the one-particle contraction (verified on the complete
-  `2¹⁶=65536`-dim Fock space), and net existence is an assembled, verified `(E8)₁` certificate
-  (character `1+248q+4124q²+…`, embedding `248=120+128`, `E8` Cartan even unimodular) — so net
-  existence and full-cone RP are `[E]`, and the single open structural premise is the seam-collar
-  realisation (its finite half — cross-ratio 2, faithful Möbius `D4`, `b₁=N_fam=3`,
-  characters = `A3` exponents — is proven exactly, `v168`). That residual is then driven to **bedrock**
-  (`v176`–`v181`): assembled as one central theorem (`v176`), split into the marks + kernel
-  obligations whose finite cores close (`v177`/`v178`), unified into one conformal-realisation premise
-  (`v179`), and reduced — via uniformisation, Kerékjártó and the order-4 Möbius classification — to a
-  seam-*isometry* premise (`v180`) and finally to the strictly weaker conformal-*symmetry* / deck
-  premise `QGEO.SYM.01` (`v181`): *the carrier `μ₄` clock is the conformal deck of the seam*. Below
-  that the residual is **definitional** (the seam's conformal structure *is* the `μ₄`-deck structure of
-  the carrier), not a missing theorem — the single irreducible structural residual of the whole theory.
-  It is then driven to its sharpest, **non-circular** form (`v194`–`v198`): the raw seam DtN is
-  RP-canonical (Osterwalder–Schrader on the quasi-free state, `v194`), the marks are *forced* by a
-  Lefschetz/character argument rather than posited (`v195`), and the bedrock is cracked to a clean
-  **state-invariance** — the DtN principal symbol `|k|=diag(|n|)` commutes *exactly* with the clock
-  `diag(iⁿ)` on all of `L²`, and by Tomita–Takesaki `[ρ,Λ_Σ]=0` *follows from* `ω∘ρ=ω` with no conformal
-  covariance (removing the Bisognano–Wichmann circularity, `v198`). The bounded residual is then reduced
-  once more (`v201`): writing the DtN as `Λ=|k|+M_f` with `M_f` multiplication by the boundary curvature
-  `f(θ)`, block-diagonality holds iff `f` is `Z₄`-invariant, and a curvature sourced by the four `μ₄` marks
-  `f=Σⱼ g(θ−2πj/4)` *is* automatically `Z₄`-invariant — so the `μ₄`-mark orbit (forced by `v195`) *forces*
-  the sub-principal symbol block-diagonal. The entire residual thus collapses to the **mark-locality** of
-  the DtN (the seam flat away from the `μ₄` marks `=` the conformal-deck structure) — a foundational
-  symmetry postulate in its sharpest, structurally-definitional form (the role `c=const` plays in
-  relativity), not a missing theorem.
+- **Ambient QG measure** (`QG.AMB.01` / `G_metric`) — reframed as a **`[C]` redundancy** (`v369`): a
+  certification object rather than missing dynamics, conditional on `SEAM.EQUIV.01` and Bisognano–Wichmann;
+  gap-decoupled from the admissible IR sector (`Δ_eff ≈ 1.648 > 0`). The historical reduction chain
+  (`v83`–`v302`, `v335`, S3 stack `v376`–`v379`, Lean `FORM.SEAM.MMST.01`) drove the seam premise
+  `SEAM.EQUIV.01` to **closed modulo a cited theorem** (MMST + OS reconstruction); net existence and
+  full-cone RP are `[E]` (`v175`).
 - **Absolute amplitude normalisation** (`U_point`) — an anchor; the quark *ratios* are closed.
 - **Frontier interfaces** (`m_p/m_e`, `η_B`, Koide, axion relic) — deliberately typed as
   interfaces, never quoted as compiler outputs.
 
-The remaining distance is therefore not a list but **one definitional geometric premise**
-(`QGEO.SYM.01`, `v181`: *the carrier `μ₄` clock is the conformal deck of the seam* — net existence and
-full-cone RP are `[E]`, `v175`, and the conformal/isometry layers reduce to it via uniformisation +
-Kerékjártó) plus **one declared metrology unit**. The central theorem reads as a clean simple-current
-extension, `(D₅)₁⊗(A₃)₁ ⋊ ⟨(1,1)⟩ ≅ (E₈)₁` (index 4, c = 8, μ = 1 ⇒ holomorphic ⇒ E₈, `v154`), and
-`v_geo` is an *irreducible metrology primitive* by the No-Unit Theorem (`v153`): a dimensionless
-boundary compiler provably cannot produce an absolute scale, so `U_point ~ v_geo`, `1/G ~ v_geo²` and
-`m/μ = e^{3/4}` are one unit in three readings — the only irreducibles are `v_geo` and `π`. Likewise the
-two axioms `{c₃, g_car}` are not free knobs: they reduce to the single parabolic anchor `a = (1,1,2)`
-plus `π` (`v23`), with `g_car = 5` an over-determined bootstrap fixed point (forced three ways `v6`,
-Pascal-unique and Lean-formalised). The bedrock premise is not closeable by a finite computation; it is
-the one item that needs a human constructive-geometry argument (or a proof assistant).
+The remaining distance is therefore not a list but **one metrology unit** (`v_geo`, the No-Unit Theorem,
+`v153`/`v364`) plus the **typed `F_transfer` interfaces** (Koide, `η_B`, axion, `m_p/m_e` — deliberately
+`[C]`, never compiler outputs), above the **cited-theorem ceiling** on the seam (`SEAM.EQUIV.01` closed
+modulo MMST + OS reconstruction, Lean `FORM.SEAM.MMST.01`) and with **`QG.AMB.01` a `[C]` redundancy**
+(`v369`). The central theorem reads as a clean simple-current extension,
+`(D₅)₁⊗(A₃)₁ ⋊ ⟨(1,1)⟩ ≅ (E₈)₁` (index 4, c = 8, μ = 1 ⇒ holomorphic ⇒ E₈, `v154`).
 
-**Latest round (`v269`–`v278`) — the open core is now two sharply-located math obligations.** The
-boundary QFT gained a **perturbative 4D layer**: the spectral-action S-matrix `S_pert` is
-Epstein–Glaser-constructible (`v269`), with a concrete one-loop quartic (`v271`) and the SM gauge
-β-coefficients `(41/10, −19/6, −7)` from the carrier content (`v273`), bridged to the physical asymptotic
-S-matrix `S_phys` via LSZ with **one-loop unitarity** verified (the optical theorem: the bubble cut equals
-the two-body phase space, `v278`) — for the matter+gauge sector; the `R²/Weyl²` gravity sector is
-renormalizable but non-unitary (the Stelle ghost, red-team `rt_F`), which is *exactly* the nonperturbative
-frontier. These collapse (`v282`/`v335`) to **one** structural theorem `SEAM.EQUIV.01` — `QGEO.SYM.01` is a
-**corollary** of it (a conformal net's vacuum is rotation-invariant by axiom, so the μ₄ deck follows with no extra
-premise; `v335`, Lean `qgeoSymIsCorollary`), and `QG.AMB.01` is **not** a second structural item but a *decoupled
-general* Euclidean-QG problem (the conformal-factor problem, GHP 1978; gap-decoupled, no readout depends on it).
-Concretely the two faces are: **(1)** the geometric postulate *the raw RP seam state is the flat τ=i pillowcase*
-(`v276`: granting it, the modular commutator `[ρ,H]=0` closes to all orders, since a flat isometry commutes with
-every function of its Laplacian); **(2)** the holomorphy bit — *is the seam-Calderón boundary net holomorphic
-(`det K = 1`)?* (`v277`: every other `(E8)₁` invariant — c = 8, det Cartan 1, the 248-current character —
-already matches; the `c = 8` counterexample `SO(16)` has `det Cartan = 4`). The single mass anchor is
-moreover **over-determined** (`v274`: Newton's G and the dark-energy prediction give the same Planck mass
-to 0.11%, conditional on the Λ-branch), and the absolute neutrino scale is **one seesaw ratio** (`v272`).
+**Forward plan v2 (2026-06-23) — all five tracks done.** Track 1 (`v367`/`v368` + S3 stack `v376`–`v379`):
+an explicit gapped p+ip lattice model (numerical Chern `|C|=1`, `c_-=8`) pins the `(E8)₁` target at every
+computable level; only the cited MMST continuum scaling limit stays external. Track 2 (`v369`): the ambient
+QG measure is reframed as a **holographic redundancy** — holomorphy ⇒ `DHR = Vec`, no torus GSD, finite
+Petz recovery — so `QG.AMB.01` is a certification object, not missing dynamics. Track 3 (`v371`–`v374`):
+the four `F_transfer` interfaces promoted to typed runnable solvers (Koide QED-excluded negative; `η_B` BDP
+ODE factor ~1.1; axion spine branch lands on `Ω_DM`; `m_p/m_e` band contains 1836.15). Track 4 (`v375`):
+a status-typed CI over the frozen prediction registry with a live JUNO/NuFIT/ACT/BK18 scorecard (`θ13`
+flagged at 2.0σ). Plus `v380`: the KMS Entire Hessian — the Stelle ghost is exactly a finite Seeley–DeWitt
+truncation; resummation pushes the ghost zero to infinity, so perturbative graviton unitarity holds.
 
-**Self-investigation round (`v280`–`v283`) — the two obligations are one object.** A direct numerical
-experiment on the actual flat τ=i pillowcase orbifold realises the whole chain
-(`[ρ,Δ]=0 ⇒ [ρ,H]=0 ⇒ [ρ,C]=0 ⇒ ω∘ρ=ω`, route-(i) evidence, `v280`); the Tier-B holomorphy bit is the anyon
-count (`#anyons = |det K|`, the condensation tower `16→4→1`, Gauss–Milgram `c=8`, `v281`); and — the candidate
-**simplification** — `χ_E8 = j^{1/3}` gives `χ_E8(i) = 1728^{1/3} = 12`, so `τ=i` is **both** the order-4 CM
-point (the `QGEO.SYM.01` flat geometry) **and** the `(E8)₁` partition-function modulus (the `QG.AMB.01`
-holomorphy): the two obligations are **two faces of one object**, *"the raw seam is `(E8)₁` at `τ=i`"* —
-dropping the open count from two to **one** (`v282`). That single open lemma is now attacked from **two
-decomposed routes**: RP-state uniqueness (a 6-lemma chain, 5/6 discharged — Troyanov reduces the rest to
-*"the raw seam is the constant-curvature state"*, `v284`) and seam-net condensation (a 4-lemma chain, 3/4
-discharged — the open bit is `det K=1` = `QGEO.SYM.01`, `v285`); the two routes' open lemmas **coincide**, so
-the one statement that closes both is a **canonical equivalence between the raw seam KMS/DtN state and the
-holomorphic `(E8)₁` net at `τ=i`**. The recent round's computable predictions are all
-consistent at `<2σ`, with two sharp near-term kill tests (Σm_ν floor, proton decay; `v283`).
-
-**Closing sprint (`v286`–`v288`) — the one open core is now a single *named* theorem.** Instead of more
-readouts, the open structure is concentrated on one arrow: the **Seam Equivalence Theorem** `SEAM.EQUIV.01`
-(`v286`) — *the raw RP seam state IS the holomorphic `(E8)₁` boundary net at `τ=i`*. The contract types four
-objects and six arrows and enforces an **import firewall** proving the two proof routes never import each
-other (killing the *"`E8` smuggled into the geometry and pulled back out"* circularity). Both routes are then
-attacked directly: **Route A** (AQFT, `v287`) reduces the theorem to **one** standard import — *"invertible
-Gaussian bulk ⇒ single-sector boundary"* (4/5 lemmas discharged); and **Route B** (DtN, `v288`) **proves** the
-full-`L²` lift of the subprincipal `ℤ₄` block-diagonality (a mark-sourced curvature has Fourier support only on
-modes `≡ 0 mod 4`, so `[ρ,Λ]=0` on all of `L²`; lifts `v201`/`v284`), shrinking the residual to the single
-sharper question *"why is the raw seam subprincipal term mark-local?"*. The honest positioning: **TFPT is
-structurally complete modulo one named Seam Equivalence Theorem**, plus an absolute unit (`v_geo`), a transfer
-functor (`F_transfer`) and an optional full-QG summit (`QG.AMB.01`).
-
-**Flat-Away round (`v289`–`v297`) — the residual reduced to one shared geometric input, with proofs.** The
-remaining question is decomposed into a 5-lemma chain whose *only* open link is **Flat-Away** — *RP + gap + the
-four marks ⇒ the curvature vanishes away from the marks* (`v289`). An honest red-team shows `ℤ₄`-invariance is
-**not** mark-locality (a smooth `ε·cos(4θ)` passes the commutator yet shifts the spectrum, `v290`), so Flat-Away
-is named as its own mini-theorem (`v291`) with **three independent routes**, each carried to a precise reduction:
-the **heat route** — the heat-trace deviation is a positive-definite quadratic form, *proved analytically* via
-convexity (`v295`), with the exact `a₂` divided-difference kernel now in **closed form**
-`W_k(t) = t(1−e^{−4kt})/(8k(1−e^{−t}))` + finite middle (`v296`) and **Lean-formalised**
-(`FORM.FLATAWAY.01`, axiom-clean); the **spectral route** — the spectral-mismatch Hessian over the full
-smooth-`ℤ₄` space is positive-definite, so flat is a strict isolated minimum (`v293`); the **variational route**
-— Troyanov uniqueness gives the flat cone metric as the unique curvature-energy minimiser (`v294`). And **Route A**'s
-import is now a citable theorem stack (Kitaev/Freed–Hopkins → Müger/Kawahigashi–Longo–Müger →
-Conway–Sloane/Dong–Xu, `v297`) modulo the **same** geometric input as Route B. So both routes reduce
-`SEAM.EQUIV.01` to one shared external fact — flat away from the marks.
-
-**Closing arc (`v300`–`v302`) — the shared fact pinned; no undischarged TFPT-internal assumption left.** Three
-moves finish the reduction. **(`v300`)** Flat-Away is hardened from a *soft* minimum to a **discrete** degeneracy
-obstruction (any smooth off-mark mode splits a doubly-degenerate Steklov level, changing the spectral multiset),
-and its pin is **derived** from the `(E8)₁` integer-weight character `E₄/η⁸ = q^{−1/3}(1+248q+…)` via 2d Steklov
-conformal rigidity — so Route B's residual *coincides with* Route A's rationality. **(`v301`)** Route A's one open
-hypothesis (*"the quasi-free bulk is invertible"*) is discharged by the **free-fermion classification**: a gapped
-16-Majorana (`c=8`) Gaussian bulk is automatically invertible (`#anyons = |det K_E8| = 1`; the gauged `D8=SO(16)`
-contrast has `det=4`), which removes the topological-order obstruction. **(`v302`)** The single spectral input
-that remains, *"the quasi-free bulk is gapped"*, is identified with the **derived Recovery gap**
-`Δ = 6·ln(3/2) ≈ 2.43 > 0` of the frozen transfer spectrum `{1,(2/3)⁶,(1/3)⁶}` (margin `Δ−31/(4π²) ≈ 1.65 > 0`);
-by Osterwalder–Schrader / quasi-free clustering a transfer gap *is* a bulk mass gap. **Net:** `SEAM.EQUIV.01`
-stays `[O]` (not machine-proved end-to-end), but its entire residual is now a composition of **standard cited
-theorems** (OS/clustering, Kitaev free-fermion, the `v297` AQFT stack) over **established** TFPT facts — *no
-undischarged TFPT-internal assumption remains*.
-
-**The arithmetic arc (`v313`–`v321`) + the Lean keystone (`FORM.SEAMEQUIV.01`).** A cyclotomic capstone makes the
-SM *structural* sector exact: the three generations, the two CP phases and their orbit/hierarchy are the cyclotomic
-field `ℚ(ζ₃₀)` with Galois group `μ₄ × ℤ₂` (degree `8 = rank E₈`), forced by the atoms `{2,3,5}`; the seed `φ₀`
-itself reduces to a pure function of `π`, so there are **zero dimensionless free parameters** — `{a, π, v_geo}` is
-the complete input (`v318`). This yields a **new falsifiable prediction**: the two CP phases are Galois-locked,
-`δ_PMNS = δ_CKM,lead + π = 240°` (`v320`; kill test at DUNE/Hyper-K). And the `SEAM.EQUIV.01` closing chain is now
-**Lean-formalised** (`FORM.SEAMEQUIV.01`, `lake build` clean): the composition `gap → invertible → holomorphic c=8
-→ (E8)₁` is machine-checked, with `#print axioms` pinning the residual to exactly the named cited theorems + the
-one OS input.
-A development timeline of all `320+` scripts is in `introduction.tex` (and on the website verification page).
+A development timeline of all 375 modules is in `introduction.tex` (and on the website verification page).
 
 ---
 

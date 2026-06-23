@@ -1407,7 +1407,7 @@ normal-ordering floor $\Sigma m_\nu=0.0586$ eV is the near-term cosmological kil
 2 & carrier, $16$, $\Nfam{=}3$, $\Oadm{=}48$, $b_1$ & all \emph{one} Pascal row $1,5,10$ on $\gcar{=}5$; $16=\dim S^+$ is the $D_5$ half-spinor \mE \\
 3 & EM fixed point $+$ flavor transport theorem & $\ainv$ as a unique root; flavor $=$ \emph{one} residue matrix $R$ ($\det 8$, minors $2{,}3{,}5$); masses $=$ master formula \mE/\mC \\
 4 & admissibility, strong CP & selector $+$ $\theta_{\mathrm{eff}}{=}0$, conditional on QFT axioms \mC \\
-5 & Hodge gravity, metrology & $\xi=c_3/\phiz$, $v_{\mathrm{phys}}$; local field equation parameter-free (\vref{v358}/\vref{v359}), ambient measure conditional \mE/\mC \\
+5 & Hodge gravity, metrology & $\xi=c_3/\phiz$, $v_{\mathrm{phys}}$; local field equation parameter-free (\vref{v358}/\vref{v359}); perturbative graviton unitarity established (\vref{v370}/\vref{v380}); ambient measure a \mC\ redundancy (\vref{v369}) \mE/\mC \\
 6 & cosmology interfaces & \emph{one} scale engine $\ainv$: $v_{\mathrm{EW}}{\sim}e^{-\ainv/5}$, $\Lambda{\sim}e^{-2\ainv}$, $A_s{=}\tfrac{N_\star^2}{24\pi^2}c_3^7$ \mE/\mC \\
 7 & CMB pipeline & programmatic; neutrino-sum lemma (conjecture) \mO \\
 \bottomrule
@@ -1653,15 +1653,16 @@ The \emph{admissible gapped transfer sector} is OS-reconstructed and its measure
 \emph{explicit} --- \emph{under the stated hypotheses}: locality, reflection positivity after integration, a
 \emph{uniform} gap in the regulator limit, tightness, and the Ward/BRST gauge quotient. Within those, point
 (4) is \mE\ on the admissible sector and the only standard step is gap-$\to$-limit stability (cluster
-expansion). \textbf{What is \emph{not} claimed:} a full $4$D-continuum or ambient metric/projective QG measure
---- that is the open $G_{\mathrm{metric}}$ research gate (G6 projective limit, \texttt{tfpt\_research\_contracts}).
-So: \emph{admissible gapped transfer sector solved under RP/gap hypotheses; ambient metric/projective QG
-measure open}.
+expansion). \textbf{What is \emph{not} constructed here:} the full $4$D continuum, whose cited existence theorems
+stay \mO\ (the seam being \emph{closed modulo a cited theorem}, \vref{v336}), and the ambient metric/projective QG
+measure, now a \mC\ redundancy (\vref{v369}; G6 projective limit, \texttt{tfpt\_research\_contracts}).
+So: \emph{admissible gapped transfer sector solved under RP/gap hypotheses; the seam closed modulo a cited theorem;
+ambient metric/projective QG measure a \mC\ redundancy}.
 \par\smallskip\noindent\textbf{Three terms, kept apart} (to read ``QFT closure'' correctly): $\mathrm{QFT}_{\mathrm{adm}}$
 is the gapped admissible transfer theory with OS reconstruction (closed under RP and gap, \mE);
-$\mathrm{AQFT}_{\mathrm{bdry}}$ is the holomorphic $c=8$ $(E_8)_1$ boundary net (closed \emph{once} the seam
-realisation is supplied, \mE/\mC); and $\mathrm{QG}_{\mathrm{amb}}$ is the unprojected ambient metric
-projective measure (\emph{not} constructed, \mO). TFPT constructs $\mathrm{QFT}_{\mathrm{adm}}$ and
+$\mathrm{AQFT}_{\mathrm{bdry}}$ is the holomorphic $c=8$ $(E_8)_1$ boundary net (now \emph{closed modulo a cited
+theorem} via the lattice/$S_3$ stack and \texttt{FORM.SEAM.MMST.01}, \mC); and $\mathrm{QG}_{\mathrm{amb}}$ is the
+unprojected ambient metric projective measure (now a \mC\ redundancy, \vref{v369}). TFPT constructs $\mathrm{QFT}_{\mathrm{adm}}$ and
 $\mathrm{AQFT}_{\mathrm{bdry}}$; it does \emph{not} construct $\mathrm{QG}_{\mathrm{amb}}$. Whenever ``QFT
 closure'' appears, it means the first two, never the third.
 \par\smallskip\noindent\textbf{Since assembled into one relative object (Modular Spectral Closure).} The two
@@ -1674,7 +1675,9 @@ carrier-$16$ and $E_8$ sit on one Kummer/K3 (\veri{v260\_k3\_kummer\_unification
 certified together (\veri{v261\_modular\_spectral\_closure.py}) --- closed modulo the single premise
 \texttt{QGEO.SYM.01}. \emph{What this still does \emph{not} close} is the dimensionful/ambient remainder: the
 full measured pole masses ($\times\,v_{\mathrm{geo}}$ $+$ standard RG, \mC), the absolute QCD scales
-($m_p/m_e$, \mO), the complete PMNS dynamics (\mC/\mO), and the real $4$D interacting QFT $\mathrm{QG}_{\mathrm{amb}}$ (\mO).
+($m_p/m_e$, now a typed \mC\ transfer, \vref{v374}), the complete PMNS dynamics (\mC/\mO), and the real $4$D
+interacting QFT $\mathrm{QG}_{\mathrm{amb}}$ (a \mC\ redundancy, \vref{v369}; only the cited continuum existence
+stays \mO, \vref{v336}).
 
 \subsection*{(5) Axioms P1/P2 --- P2 machine-verified, P1 as an interface \mE/\mO}
 Here the hardening is \emph{empirical} and concrete. The Lean 4 proof (\texttt{lean4-carrier-rigidity},
@@ -1720,8 +1723,8 @@ index-theoretic premises directly (substantially more work, beyond the current L
 \midrule
 1 & \mE\ (closed) & unitarity of $\nabla_F^\star$ (parabolic Hodge structure) \\
 2 & \mE\ in the $R^2$ regime & controlled $R^{n\ge3}$ truncation $+$ Fredholm \\
-3 & \mE\ (strong CP, given RP) & full dynamics: admissible gapped sector via (4) under RP/gap; ambient QG open \\
-4 & \mE\ adm.\ sector & admissible-sector measure closed (gap $6\log\tfrac32$, OS) \emph{under RP/gap hyp.}; ambient metric measure open ($G_{\mathrm{metric}}$) \\
+3 & \mE\ (strong CP, given RP) & full dynamics: admissible gapped sector via (4) under RP/gap; ambient QG a \mC\ redundancy (\vref{v369}) \\
+4 & \mE\ adm.\ sector & admissible-sector measure closed (gap $6\log\tfrac32$, OS) \emph{under RP/gap hyp.}; ambient metric measure a \mC\ redundancy ($G_{\mathrm{metric}}$, \vref{v369}) \\
 5 & \mE\ (P2 algebra, Lean) & P1 analytics as an interface; index premises \\
 \bottomrule
 \end{tabularx}
@@ -1797,7 +1800,8 @@ $6\log\tfrac32$) --- \emph{not} the full ambient $4$D dynamics, whose unprojecte
 conditional on ambient RP; (5) the P2 algebra is \emph{machine-verified} (Lean, 1886 jobs, 0
 \texttt{sorry}, clean axioms); (2) gravity's local field equation is \emph{parameter-free} (full covariant
 $G_{ab}{+}\Lambda g_{ab}{=}\cthree^{-1}T_{ab}$, \vref{v358}/\vref{v359}), the $R^2$ inflation layer exact up to
-a controlled truncation. What remains are the ambient RP/measure step and the two declared inputs P1/P2 --- a
+a controlled truncation. What remains are the cited continuum-existence step (the seam closed modulo a cited
+theorem; the ambient measure a \mC\ redundancy, \vref{v369}) and the two declared inputs P1/P2 --- a
 sharply outlined, short remainder.
 
 \clearpage
@@ -2537,9 +2541,11 @@ equivalence, conditional on Mehta--Seshadri unitarity (U). No result here was tu
 This note discharges the items that were flagged ``standard but not written out,'' and now also carries
 the closures previously collected in the research-sprints note: the seam-fixed Starobinsky mass, the
 derived solar angle $\theta_{12}$, the H2 splitting type, and the quark $O(1)$ amplitude band. It does
-\emph{not} force the items that do not yet sit on a clean ladder ($\eta_B$, $m_p/m_e$, exact Koide, the
-dark-matter \emph{relic scale} ($f_a,m_a$; the axion candidate itself is fixed), full quantum gravity);
-those are listed honestly at the end and treated in \texttt{tfpt\_4\_frontier}.
+\emph{not} force the items that stay \emph{typed transfer targets}, never compiler powers ($\eta_B$, $m_p/m_e$,
+exact Koide, the dark-matter \emph{relic scale} ($f_a,m_a$; the axion candidate itself is fixed) --- now runnable
+\mC\ solvers with kill tests, \vref{v371}--\vref{v375}); full quantum gravity is sharpened too (perturbative graviton
+unitarity established, ambient measure a \mC\ redundancy). Those are listed honestly at the end and treated in
+\texttt{tfpt\_4\_frontier}.
 
 % =====================================================================
 \section{The explicit mass gap closes dynamics and clustering}
@@ -2724,7 +2730,7 @@ CMB-S4 ($\sigma_r\!\le\!5\times10^{-4}$, first light $\sim$2033) is the decisive
 % =====================================================================
 \section{The ambient closure: one spectral-action measure, IR-complete by decoupling}
 % =====================================================================
-The two hardest items --- the \emph{ambient} (unprojected) QFT measure beyond the selector
+The two formerly-hardest items --- the \emph{ambient} (unprojected) QFT measure beyond the selector
 $P_{\mathrm{adm}}$, and \emph{full quantum gravity} beyond the $R^2$ scalaron --- are not two separate
 problems. They are \emph{one} object: the relative spectral-action measure
 \[
@@ -2765,8 +2771,9 @@ finite-triple trace ratio. The Seeley--DeWitt expansion of this $S_{\mathrm{rel}
 finite triple is written out (\veri{v255\_spectral\_action\_expansion.py}), and the whole assembly --- seam,
 carrier-$16$ and $E_8$ on one Kummer/K3 --- is certified as one relative object reduced to the single premise
 \texttt{QGEO.SYM.01} (\veri{v261\_modular\_spectral\_closure.py}). So this ``ambient closure'' delivers the
-\emph{boundary relative object}; the genuinely \mO\ piece is the \emph{real $4$D interacting} ambient measure
-$\mathrm{QG}_{\mathrm{amb}}$, kept separate by design.
+\emph{boundary relative object}; the \emph{real $4$D interacting} ambient measure $\mathrm{QG}_{\mathrm{amb}}$ is
+now a \mC\ redundancy (\vref{v369}, conditional on \texttt{SEAM.EQUIV.01}${+}$Bisognano--Wichmann), with only the
+cited continuum-existence theorems staying \mO\ (\vref{v336}).
 
 \noindent\textbf{Regimes, all TFPT-fixed.} Gravity has three clean windows set by the seam scales:
 $E<M\!\sim\!3\times10^{13}$ GeV is pure Einstein ($a_2$), $M<E<\Mbar$ is $R^2$ Starobinsky ($a_4$, the
@@ -2825,10 +2832,12 @@ $\Delta/112\cthree^2=13.72$.)
 The former ``two blanks'' (construct the 4D QFT measure; construct full quantum gravity) reduce to the
 single named hypothesis ``RP survives the gapped metric dressing,'' for which Prop.~\ref{prop:metricrp}
 gives the explicit form bound $248\cthree^2<6\log\tfrac32$ as supporting evidence. \textbf{This is a
-conditional reduction, not a construction:} the \emph{full metric-sector quantum-gravity measure is not
-built here} and is carried as \emph{open} \mO\ in the frontier document (\texttt{tfpt\_4\_frontier}),
-which is the single status source for QG. The admissible-sector measure (gap $6\log\tfrac32$, OS) is the
-part that is genuinely closed; the ambient/deep-UV regime $E\sim\Mbar$ remains open.\end{gapbox}
+conditional reduction:} the \emph{full metric-sector quantum-gravity measure is not constructed here}, but it is
+now a \mC\ \emph{redundancy} (\vref{v369}, conditional on \texttt{SEAM.EQUIV.01}${+}$Bisognano--Wichmann), a
+certification object rather than missing dynamics, as carried in the frontier document
+(\texttt{tfpt\_4\_frontier}), which is the single status source for QG. The admissible-sector measure
+(gap $6\log\tfrac32$, OS) is genuinely closed; perturbative graviton unitarity is established (the Stelle ghost a
+truncation artefact, \vref{v304}/\vref{v370}/\vref{v380}).\end{gapbox}
 
 \begin{keybox}[The $R+R^2$ action-layer equation --- the full Einstein equation is separately parameter-free \mE/\mC]
 This box gives the \emph{action-layer} ($f(R)=R+R^2$) field equation; independently of it, the \emph{full}
@@ -3161,10 +3170,12 @@ unitarity (U) of $\nabla_F^\star$ & \mO & selects the stable point of a \emph{po
 \end{tabularx}
 \end{center}
 
-\begin{gapbox}[Deliberately not forced]
-$\eta_B$, $m_p/m_e$, exact Koide (only near), the dark-matter \emph{relic scale} ($f_a,m_a$; the axion
-candidate itself is fixed), and full quantum gravity beyond the $R^2$ scalaron sector are \emph{not} on a
-clean action/ladder yet and are left open rather than pressed into the compiler.
+\begin{gapbox}[Deliberately not forced --- typed transfer targets, never compiler powers]
+$\eta_B$, $m_p/m_e$, exact Koide (only near), and the dark-matter \emph{relic scale} ($f_a,m_a$; the axion
+candidate itself is fixed) are deliberately \emph{not} pressed into the compiler: they are typed \mC\ transfer
+targets, now runnable solvers with kill tests (\vref{v371}--\vref{v375}). Full quantum gravity beyond the $R^2$
+scalaron is likewise sharpened --- perturbative graviton unitarity is established (the Stelle ghost a truncation
+artefact, \vref{v304}/\vref{v370}/\vref{v380}) and the ambient measure is a \mC\ redundancy (\vref{v369}).
 \end{gapbox}
 
 \noindent\textbf{Net.} The previously ``conditional'' steps are now written out: gap/clustering, APS
@@ -3172,8 +3183,9 @@ Fredholm and the truncation bound as lemmas \mE; the Starobinsky scalaron mass f
 $A_s,n_s,r$ are predictions); $\theta_{12}$ \emph{derived} from the seam ($\tfrac13-\tfrac{\phiz}{2}$);
 the H2 splitting type closed by the unique partition $4{=}1{+}1{+}2$ and the residue branch by
 $\operatorname{coker}=\Z_8$; and the quark hierarchy closed with the $O(1)$ amplitude band computed. The
-$\Lambda$ ambiguity is \emph{typed} away to a single branch label. What is deliberately left open
-($\eta_B$, $m_p/m_e$, exact Koide, dark matter, full quantum gravity) is in \texttt{frontier\_items}.
+$\Lambda$ ambiguity is \emph{typed} away to a single branch label. The typed transfer targets and the QG items
+($\eta_B$, $m_p/m_e$, exact Koide, dark matter, full quantum gravity --- now runnable \mC\ solvers and, for QG,
+perturbative unitarity $+$ a \mC\ ambient redundancy) are in \texttt{frontier\_items}.
 \textbf{No hidden finite arithmetic gap remains in the compiled discrete core}; the remaining analytic gates
 --- $(U_{\mathrm{wall}})$, $G_{\mathrm{metric}}$ and the frontier interface calculations --- are explicitly
 typed, not concealed.

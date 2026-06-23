@@ -8,8 +8,8 @@
   "date": "2026-06-12"
  },
  "introduction::subsection::In plain words::1": {
-  "hash": "678c3e60c020",
-  "date": "2026-06-22"
+  "hash": "5c765a4e98e5",
+  "date": "2026-06-23"
  },
  "introduction::subsection::Sharper still: one anchor $a=(1,1,2)$, and $E_8$ as a compiler hull \\texorpdfstring{(\\mE)}{}::1": {
   "hash": "b79198ae8f83",
@@ -28,11 +28,11 @@
   "date": "2026-06-12"
  },
  "introduction::subsection::The compact status formula: three honest layers::1": {
-  "hash": "f2503324cd66",
-  "date": "2026-06-22"
+  "hash": "48df7d31261a",
+  "date": "2026-06-23"
  },
  "introduction::subsection::The hard reduction: the live residual as typed interfaces::1": {
-  "hash": "28e4c600304d",
+  "hash": "6ed6f105bf84",
   "date": "2026-06-23"
  },
  "introduction::section::The compiler: why $30=2\\cdot3\\cdot5$::1": {
@@ -60,11 +60,11 @@
   "date": "2026-06-12"
  },
  "introduction::section::What this means for the theory-of-everything question::1": {
-  "hash": "5bd91de5db59",
+  "hash": "244ccbac9a89",
   "date": "2026-06-23"
  },
  "introduction::subsection::The closure ledger: what is done, and what genuinely remains::1": {
-  "hash": "eb9b3f7ae140",
+  "hash": "6267d362db9a",
   "date": "2026-06-23"
  },
  "introduction::section::Does this make the theory more probable?::1": {
@@ -108,8 +108,8 @@
   "date": "2026-06-12"
  },
  "tfpt_1_architecture_e8::section::The $D_5\\times A_3$ compiler: $E_8$ as a closure, not an input::1": {
-  "hash": "79d1e36d285e",
-  "date": "2026-06-19"
+  "hash": "e5a812d391d9",
+  "date": "2026-06-23"
  },
  "tfpt_1_architecture_e8::subsection::Carrier $=D_5=\\mathfrak{so}_{10}$ (proved)::1": {
   "hash": "291366279c88",
@@ -356,7 +356,7 @@
   "date": "2026-06-22"
  },
  "tfpt_2_standard_model::section::How the legacy layers simplify (bridge map)::1": {
-  "hash": "4a25e436aaaf",
+  "hash": "f76d4592f628",
   "date": "2026-06-23"
  },
  "tfpt_2_standard_model::section::Is the entire Standard Model thereby derived?::1": {
@@ -380,11 +380,11 @@
   "date": "2026-06-13"
  },
  "tfpt_2_standard_model::subsection::(4) Constructive QFT closure of the admissible physical sector \\mE/\\mC::1": {
-  "hash": "5d71792997f7",
-  "date": "2026-06-18"
+  "hash": "bf7ed6c21dd7",
+  "date": "2026-06-23"
  },
  "tfpt_2_standard_model::subsection::(5) Axioms P1/P2 --- P2 machine-verified, P1 as an interface \\mE/\\mO::1": {
-  "hash": "6101c10ca5d0",
+  "hash": "c0a53aa411be",
   "date": "2026-06-23"
  },
  "tfpt_2_standard_model::section::How the original-paper predictions simplify::1": {
@@ -392,7 +392,7 @@
   "date": "2026-06-12"
  },
  "tfpt_2_standard_model::section::Conclusion::1": {
-  "hash": "c55883e15edd",
+  "hash": "b5fe2b598006",
   "date": "2026-06-23"
  },
  "tfpt_2_standard_model::section::The setup: parabolic data on the family curve::1": {
@@ -448,8 +448,8 @@
   "date": "2026-06-22"
  },
  "tfpt_2_standard_model::section::Status::1": {
-  "hash": "f56ff44b4a5b",
-  "date": "2026-06-13"
+  "hash": "f5ceab40dc08",
+  "date": "2026-06-23"
  },
  "tfpt_2_standard_model::section::The explicit mass gap closes dynamics and clustering::1": {
   "hash": "9cacf6d78782",
@@ -464,7 +464,7 @@
   "date": "2026-06-12"
  },
  "tfpt_2_standard_model::section::The ambient closure: one spectral-action measure, IR-complete by decoupling::1": {
-  "hash": "da45db85dac3",
+  "hash": "72ad3f8ead32",
   "date": "2026-06-23"
  },
  "tfpt_2_standard_model::subsection::Seam response grammar: gravity is the inverse seed gain::1": {
@@ -484,8 +484,8 @@
   "date": "2026-06-12"
  },
  "tfpt_2_standard_model::section::Status: what is now written out, and what is honestly left::1": {
-  "hash": "f27b64a5a79f",
-  "date": "2026-06-12"
+  "hash": "9801054d0906",
+  "date": "2026-06-23"
  },
  "tfpt_2_standard_model::section::Appendix: computational verification::1": {
   "hash": "d9af3eae285d",
@@ -564,7 +564,7 @@
   "date": "2026-06-12"
  },
  "tfpt_3_e8_audit_bootstrap::section::The honest open-items list::1": {
-  "hash": "826032a4a249",
+  "hash": "86a04661cca4",
   "date": "2026-06-23"
  },
  "tfpt_3_e8_audit_bootstrap::section::The $E_8$-slice scan: results (honest hit / miss)::1": {
@@ -580,8 +580,8 @@
   "date": "2026-06-12"
  },
  "tfpt_4_frontier::front::(front matter)::1": {
-  "hash": "edc22a195479",
-  "date": "2026-06-15"
+  "hash": "706e21c56ace",
+  "date": "2026-06-23"
  },
  "tfpt_4_frontier::section::Baryon asymmetry $\\eta_B$ --- a downstream readout from the closed $\\Omega_b h^2$::1": {
   "hash": "9496ae6a9fea",
@@ -608,24 +608,24 @@
   "date": "2026-06-15"
  },
  "tfpt_4_frontier::section::Full quantum gravity --- induced from the boundary kernel::1": {
-  "hash": "b135d6afec22",
+  "hash": "b72db3ccf2a8",
   "date": "2026-06-23"
  },
  "tfpt_4_frontier::section::Summary::1": {
-  "hash": "127dd88a3bde",
+  "hash": "4cd5996c85c8",
   "date": "2026-06-23"
  },
  "tfpt_4_frontier::section::Appendix: computational verification::1": {
-  "hash": "e0c58709c50b",
-  "date": "2026-06-12"
+  "hash": "a60291cc927f",
+  "date": "2026-06-23"
  },
  "tfpt_5_redteam::front::(front matter)::1": {
-  "hash": "ed1064954d8c",
-  "date": "2026-06-18"
+  "hash": "2fcf6c438ba1",
+  "date": "2026-06-23"
  },
  "tfpt_5_redteam::section::Method::1": {
-  "hash": "aa670d017bc0",
-  "date": "2026-06-12"
+  "hash": "610fddcc2990",
+  "date": "2026-06-23"
  },
  "tfpt_5_redteam::section::Target A --- the $(E8)_1$ boundary-net identification::1": {
   "hash": "a2a8182c2254",
@@ -648,11 +648,11 @@
   "date": "2026-06-12"
  },
  "tfpt_5_redteam::section::Target F --- the perturbative 4D-QFT $+$ scale round (v269--v275)::1": {
-  "hash": "8f35cc041ef9",
+  "hash": "24e8d581a446",
   "date": "2026-06-23"
  },
  "tfpt_5_redteam::section::Outcome::1": {
-  "hash": "c16d8643a3d4",
+  "hash": "cc411204e8f7",
   "date": "2026-06-23"
  },
  "tfpt_horizon_readouts::front::(front matter)::1": {
@@ -700,11 +700,11 @@
   "date": "2026-06-23"
  },
  "tfpt_research_contracts::section::Research Contract 1 --- $(U_{\\mathrm{wall}})$::1": {
-  "hash": "2ae443b2f877",
+  "hash": "0ac43489c9ea",
   "date": "2026-06-23"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {
-  "hash": "c5dd223cd3d7",
+  "hash": "6d4b577571f2",
   "date": "2026-06-23"
  },
  "tfpt_research_contracts::section::Certifiability and recommended order::1": {
@@ -728,8 +728,8 @@
   "date": "2026-06-12"
  },
  "origin_theory::section::The unique attractor: a gapped transport selects ONE fixed point::1": {
-  "hash": "88202042f968",
-  "date": "2026-06-22"
+  "hash": "607ff2678b7d",
+  "date": "2026-06-23"
  },
  "origin_theory::section::One $\\ainv$ for electromagnetism, the cosmic horizon and $\\Lambda$::1": {
   "hash": "915ef1e6f23a",
@@ -756,8 +756,8 @@
   "date": "2026-06-22"
  },
  "origin_theory::section::Honest status::1": {
-  "hash": "28222dace867",
-  "date": "2026-06-22"
+  "hash": "655a8a4b98e7",
+  "date": "2026-06-23"
  },
  "origin_theory::section::Appendix: computational verification::1": {
   "hash": "48687b83b93b",

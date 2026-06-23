@@ -516,8 +516,9 @@ suggests four completion routes. \emph{Honest finding}: none closes everything o
 \item \textbf{(A) Finite causal diamond} \mE/\mO: inside a horizon the ambient measure is a \emph{thermal trace}
 $\operatorname{Tr}e^{-\beta H}$ over a finite static patch, manifestly finite for a gapped $H$ (de Sitter
 $S_{\mathrm{dS}}=32\pi^4 e^{2\ainv}$ finite, $128\cthree^4=1/(32\pi^4)$; $\chi=729/665$) --- so \texttt{QG.AMB}
-becomes \emph{well-posed and finite} \mE, but the wrong-sign conformal mode ($c_{\mathrm{conf}}(4)=-3/2$) still
-needs the GHP contour (\vref{v334}, \mO). Reframes \texttt{QG.AMB}; does not touch the seam.
+becomes \emph{well-posed and finite} \mE; the wrong-sign conformal mode ($c_{\mathrm{conf}}(4)=-3/2$) is handled by
+the GHP contour (\vref{v334}) and \texttt{QG.AMB} is now a \mC\ redundancy (\vref{v369}), not a missing item.
+Reframes \texttt{QG.AMB}; does not touch the seam.
 \item \textbf{(B) Carlip--Cardy near-horizon CFT} \mC: a horizon's near-horizon Virasoro $+$ Cardy reproduces the
 entropy consistent with $c=\gcar{+}\Nfam=8$ --- a second route to existence$+c$ (cf.\ \vref{v336}) --- but the
 central charge has the Carlip normalisation ambiguity and gives no holomorphy $\det K{=}1$: inherits
@@ -529,10 +530,12 @@ central charge has the Carlip normalisation ambiguity and gives no holomorphy $\
 parameter-freeness \mE), but ``the dynamics \emph{is} the cyclic fixed point'' is the \mC\ interpretation, acting
 on the same seam structure.
 \end{itemize}
-\textbf{Verdict:} independent closures $=0$; the four routes reduce the whole picture to the same
+\textbf{Verdict:} these four horizon routes independently close $0$; they reduce the whole picture to the same
 \texttt{SEAM.EQUIV.01} $+$ decoupled-QG residuals as \vref{v335}. The horizon premise makes both \emph{more
 natural} (A: a finite thermal trace; B: a near-horizon CFT) but eliminates neither --- so the effort focuses,
-unambiguously, on the one keystone.
+unambiguously, on the one keystone, which is meanwhile \emph{closed modulo a cited theorem} by the separate
+lattice/$S_3$ route (\vref{v367}/\vref{v368}, \vref{v376}--\vref{v379}, Lean \texttt{FORM.SEAM.MMST.01}; cited
+continuum existence \mO).
 \end{keybox}
 
 \begin{keybox}[The one keystone bit $\det K{=}1$: six faces, the genus-1 obstruction, three routes \mE/\mC/\mO\ (\veri{v344\_detk\_synthesis.py})]
@@ -572,23 +575,26 @@ $\Z/(n{+}1)$, $\Z/4$, $\Z/3$, $\Z/2$ for $A_n,D_n,E_6,E_7$). \mE\ its fundamenta
 \emph{perfect} (the commutator subgroup equals the whole order-$120$ group, computed directly), so $H_1=0$ and the
 link is \emph{the} Poincar\'e homology sphere, with $|2I|=120=|\mu_4|\,h(E_8)$. So R3's combinatorial core is
 complete \mE: the $E_8$ attractor link is forced to be the Poincar\'e sphere ($\det K{=}1$), uniquely among ADE.
-\mO\ what stays open is only the geometric realisation bridge --- that the raw rewrite seam attractor \emph{is} this
-$E_8$ du~Val plumbing --- the \texttt{SEAM.EQUIV.01} content; this does not close it, but reduces the keystone to
-that single geometric identification.
+\mO\ what this route leaves open is only the geometric realisation bridge --- that the raw rewrite seam attractor
+\emph{is} this $E_8$ du~Val plumbing --- the \texttt{SEAM.EQUIV.01} content; this geometric route does not close it
+on its own, but the keystone is meanwhile \emph{closed modulo a cited theorem} by the separate lattice/$S_3$ route
+(\vref{v367}/\vref{v368}, \vref{v376}--\vref{v379}).
 
 \par\smallskip\noindent\textbf{The bridge is one arrow.} (\veri{v346\_seam\_geometric\_bridge.py})
 Assembling everything, the path from the raw seam to $\det K{=}1$ is a chain of \emph{six} links, of which exactly
 \emph{one} is open. \mE/\mC\ L1: the raw seam gives the $\mu_4$ clock and four marks (Gauss--Bonnet, \vref{v216}).
 \mO\ L2: the $\mu_4$ clock and the carrier $(2,3,5)$ atoms realise the binary icosahedral $2I$ action
-$\mathbb{C}^2/\Gamma$ --- \emph{the one open arrow}. \mE\ L3--L6: $2I\to$ affine $E_8$ (McKay, \vref{v219}) $\to$ the $E_8$ du~Val
+$\mathbb{C}^2/\Gamma$ --- \emph{the one arrow open in this geometric route}. \mE\ L3--L6: $2I\to$ affine $E_8$ (McKay, \vref{v219}) $\to$ the $E_8$ du~Val
 singularity (\vref{v232}) $\to$ the Poincar\'e link $H_1{=}0$ (\vref{v345}) $\to\det K{=}1$ --- all theorems. And the
 \emph{group is forced by the seam's own atoms}: the exceptional $SU(2)$ subgroups carry axis signatures
 $(2,3,3),(2,3,4),(2,3,5)$ for $2T,2O,2I$, and $(2,3,5)$ --- which is exactly
 $(|\Z_2|,\Nfam,\gcar)$ --- is unique to $2I$. So \emph{if} the seam realises any finite-$SU(2)$ orbifold, that group
 is $2I$ and \emph{everything downstream is forced}; the entire keystone is the single statement ``the raw
 quasi-free seam normal bundle is an ADE orbifold point $\mathbb{C}^2/\Gamma$.'' \mO\ That one geometric realisation is
-\texttt{SEAM.EQUIV.01} itself --- not closed here, but the bridge is now demonstrably \emph{one arrow}, with the
-group pinned and all six downstream consequences proven.
+\texttt{SEAM.EQUIV.01} itself --- not closed by \emph{this} route, but the bridge is now demonstrably \emph{one arrow},
+with the group pinned and all six downstream consequences proven; and the keystone is independently \emph{closed
+modulo a cited theorem} by the lattice/$S_3$ route (\vref{v367}/\vref{v368}, \vref{v376}--\vref{v379}, Lean
+\texttt{FORM.SEAM.MMST.01}).
 
 \par\smallskip\noindent\textbf{The closure modes of the one arrow.} (\veri{v347\_seam\_closure\_modes.py})
 Can it be \emph{fully} solved? The locus is sharp: the seam gives the \emph{flat} pillowcase base $S^2(2,2,2,2)$
@@ -1318,27 +1324,32 @@ $\mathrm{rate}(n)=-p_2\ln(1-n/N_{\mathrm{fam}})$, its weights are the Mehta--Ses
 $A_0^\star$, and the rate is the entropy power law $\Gamma\propto(S/S_{dS})^{p_2}$; the residue of R1 is
 one finite $\zeta(0)$ budget.)} \textbf{(C) The current inventory (machine-pinned, \veri{v123\_inventory\_update.py}/\veri{v167\_inventory\_post\_closure.py}).}
 After the free-bulk premise (A) is discharged (\vref{v160}--\vref{v165}) and the seam clock, the index-$4$
-net and the $Q$-realisation all merge into one hinge, the structural residual is now \emph{one}
-named open theorem --- the keystone \texttt{SEAM.EQUIV.01} (the raw RP seam $=$ the holomorphic $(E_8)_1$ net at
+net and the $Q$-realisation all merge into one hinge, the structural core is now the single keystone
+\texttt{SEAM.EQUIV.01} (the raw RP seam $=$ the holomorphic $(E_8)_1$ net at
 $\tau{=}i$; its conformal-deck face \texttt{QGEO.SYM.01} is a \emph{corollary}, since a conformal net's vacuum is
-rotation-invariant by axiom, \vref{v323}/\veri{v335\_seam\_equiv\_unify.py}).  The ambient measure
-\texttt{QG.AMB.01} is \emph{not} a second structural item: it is the \emph{general} Euclidean-QG conformal-factor
-problem (Gibbons--Hawking--Perry 1978), from which TFPT is rigorously gap-decoupled (margin $1.648>0$) --- an
-inherited, decoupled problem.  And the one open theorem is now \emph{literature-anchored}: its two heavy legs ---
+rotation-invariant by axiom, \vref{v323}/\veri{v335\_seam\_equiv\_unify.py}), and it is now \emph{closed modulo a
+cited theorem}: the explicit lattice model (\vref{v367}/\vref{v368}) and the $S_3$ stack ($c{=}8$, $248$ currents/$1$
+primary, torus $\mathrm{GSD}{=}1$, RP; \vref{v376}--\vref{v379}) pin it at every computable level and it is
+Lean-formalised as \texttt{FORM.SEAM.MMST.01}.  The ambient measure
+\texttt{QG.AMB.01} is \emph{not} a second structural item: it is now a \mC\ \emph{redundancy} (\vref{v369}), a
+certification object rather than missing dynamics, conditional on \texttt{SEAM.EQUIV.01}${+}$Bisognano--Wichmann,
+from which TFPT is moreover rigorously gap-decoupled (margin $1.648>0$).  And the keystone's residual is
+\emph{literature-anchored}: its two heavy legs ---
 the continuum scaling limit and the Osterwalder--Schrader reconstruction --- are recent rigorous theorems
 (Morinelli--Morsella--Stottmeister--Tanimoto's chiral-CFT scaling limit of free lattice fermions, and
 Adamo--Moriwaki--Tanimoto's conformal OS axioms for unitary lattice VOAs), with $(E_8)_1$ inside their range
-($c{=}8$, rank $8$, $16$ Majoranas); the genuinely-open residual narrows to ``the raw collar's massless scaling
-limit is the $c{=}8$ \emph{holomorphic} $(E_8)_1$ net'' (i.e.\ the $\det K{=}1$ discriminator), not a from-scratch
-construction (\veri{v336\_continuum\_limit.py}).  Alongside the one theorem stand the two irreducibles (one scale
+($c{=}8$, rank $8$, $16$ Majoranas); the only residual that stays \mO\ is the abstract continuum existence ---
+``the raw collar's massless scaling limit is the $c{=}8$ \emph{holomorphic} $(E_8)_1$ net'' (i.e.\ the $\det K{=}1$
+discriminator) --- exactly those two cited published theorems, not a from-scratch
+construction (\veri{v336\_continuum\_limit.py}).  Alongside the keystone stand the two irreducibles (one scale
 $v_{\mathrm{geo}}$, the primitive $\pi$; a theorem) and the typed transfer functor $F_{\mathrm{transfer}}$ (Koide,
 $\eta_B$, axion, $m_p/m_e$). The historical ``five structural classes'' (seam clock, holomorphy$+c{=}8$,
 seam-determinant$\to$EH, H2 dictionary, $Q$-realisation) have all closed, discharged or merged into the one
 keystone; their round-by-round reduction is recorded in the changelog, not replayed here.
 \textbf{The honest one line:} TFPT is closed as a dimensionless boundary compiler; its only irreducibles
-are $\pi$ and the one metrology unit $v_{\mathrm{geo}}$; the one strict-structural theorem still carrying
-weight is the seam-net keystone \texttt{SEAM.EQUIV.01}; every ``frontier'' item is an instance of
-$F_{\mathrm{transfer}}$.
+are $\pi$ and the one metrology unit $v_{\mathrm{geo}}$; the seam-net keystone \texttt{SEAM.EQUIV.01} is
+\emph{closed modulo a cited theorem} (only the cited continuum existence stays \mO); and every ``frontier'' item is
+a typed \mC\ instance of $F_{\mathrm{transfer}}$.
 \end{keybox}
 
 \begin{keybox}[The carrier chapter: the interior is free, the structure is the certificate \mE/\mC\ (\veri{v113\_quasifree\_kernel.py})]
@@ -1360,7 +1371,8 @@ black-hole keystones (Nariai $=$ anchor, one orientation, one clock) are the sam
 the horizon. \emph{Honest residue:} the premise ``the seam is the free $c{=}8$ net'' is the
 $G_{\mathrm{net}}$ gate itself --- one theorem now closes both the metric story and the carrier choice ---
 and that premise is itself no longer free-standing: it is a fixed-point theorem whose only residual factors
-into the already-open net-existence ($A_2$) and the keystone \texttt{SEAM.EQUIV.01}, with the irreducible core
+into the net-existence ($A_2$) and the keystone \texttt{SEAM.EQUIV.01}, now \emph{closed modulo a cited theorem}
+(\vref{v367}/\vref{v368}, \vref{v376}--\vref{v379}), with the irreducible core
 $\{\pi,v_{\mathrm{geo}}\}$ a theorem (\vref{v160}--\vref{v165}). That residual is since sharpened to a
 single point: net existence and full-cone reflection positivity are discharged to \mE\
 (\vref{v175}), the realisation is assembled as one central theorem (\vref{v176}) and split into the
@@ -1407,12 +1419,14 @@ Bisognano--Wichmann content: \emph{given} the seam is the $(E_8)_1$ chiral confo
 $\omega\circ\rho=\omega$ \emph{follows} --- \texttt{QGEO.SYM.01} is not an independent axiom but downstream of
 \texttt{SEAM.EQUIV.01} plus a rotation-invariant vacuum. \mO\ The single remaining premise is then that the raw
 collar vacuum is rotation-invariant (no preferred seam angle) --- cleaner than a bespoke thermal state, and
-\emph{shared} with the keystone, so the two open items collapse toward one. This collapse is machine-pinned in
+\emph{shared} with the keystone, so the two open items collapse toward one (and the keystone itself is now
+\emph{closed modulo a cited theorem} via the lattice/$S_3$ pinning and \texttt{FORM.SEAM.MMST.01}, only the cited
+continuum existence staying \mO). This collapse is machine-pinned in
 Lean (\texttt{FORM.QGEO.BW.01}): \texttt{bedrockReducesToRotationInvariance} composes the Bisognano--Wichmann
 steps over the \vref{v308} chain, and \texttt{\#print axioms} confirms the residual is exactly the cited theorems
 $+$ the carrier recovery gap $+$ the one shared premise (rotation-invariant vacuum).
 
-\begin{keybox}[The seam keystone theorem --- one open lemma \mE/\mO\ (\veri{v325\_pillowcase\_keystone.py})]
+\begin{keybox}[The seam keystone theorem --- closed modulo a cited theorem \mE/\mC\ (\veri{v325\_pillowcase\_keystone.py})]
 The whole bedrock can now be stated as \emph{one} citable theorem with \emph{exactly one} open hypothesis.
 \textbf{Hypothesis} \mO\ ($H$): the raw RP-collar seam state is the flat $\tau{=}i$ pillowcase state ---
 equivalently, the OS-reconstructed seam vacuum is the rotation-invariant quasi-free state. \textbf{Then} \mE:
@@ -1423,9 +1437,12 @@ $[\rho,\Lambda]{=}0\Rightarrow\omega\circ\rho{=}\omega$ (\texttt{QGEO.SYM.01}, \
 and a holomorphic $c{=}8$ chiral net is $(E_8)_1$ ($\det\mathrm{Cartan}(E_8){=}1$ vs $D_8{=}4$,
 \vref{v83}/\vref{v143}/\vref{v308}, \texttt{SEAM.EQUIV.01}), with the carrier recovery gap
 $\Delta{=}6\ln\tfrac32>0$ (\vref{v76}/\vref{v302}) as the input. By \vref{v323} the single hypothesis $H$ is
-\emph{shared} by both bedrock IDs, so the keystone has \textbf{exactly one} open lemma, machine-pinned in Lean
-(\texttt{FORM.SEAMEQUIV.01} $+$ \texttt{FORM.QGEO.BW.01}). This is an assembly/reduction certificate (like
-\vref{v176}/\vref{v261}), \emph{not} a closure: $H$ stays \mO.
+\emph{shared} by both bedrock IDs. $H$ is now pinned at every computable level by the explicit lattice model
+(\vref{v367}/\vref{v368}) and the $S_3$ stack ($c{=}8$, $248$ currents/$1$ primary, torus $\mathrm{GSD}{=}1$, RP;
+\vref{v376}--\vref{v379}) and is machine-pinned in Lean (\texttt{FORM.SEAMEQUIV.01} $+$ \texttt{FORM.SEAM.MMST.01}
+$+$ \texttt{FORM.QGEO.BW.01}), so the keystone is \emph{closed modulo a cited theorem}: the \emph{only} residual that
+stays \mO\ is the abstract continuum existence of the scaling limit (the cited MMST/OS theorems, \vref{v336}), not
+$H$ as a from-scratch construction.
 \end{keybox}
 
 \par\smallskip\noindent\textbf{The OS step, discharged at the many-body level}
@@ -1491,10 +1508,11 @@ gives exponential clustering ($C(n)/C(n{-}1)\to(2/3)^6$), and the finite suscept
 makes $\mathrm{Var}(S_\Lambda)/\Lambda\to\chi$ converge, so the finite-volume measures are uniformly \emph{tight}
 (Prokhorov) and the projective limit $\mu=\lim_\Lambda\mu_\Lambda$ EXISTS; OS reconstruction then gives
 $H_{\mathrm{OS}}{=}-\log T\ge0$ with gap $6\ln\tfrac32$ \mE. The construction \emph{is} the gap (an ungapped
-transfer sends $\chi\to\infty$ and tightness fails). \mO\ What stays open is only the \emph{non-admissible}
-(metric) sector --- the full $\mathrm{QG}_{\mathrm{amb}}$ needs the metric-direction measure and its coupling; by
-the gap-decoupling margin $\Delta-31/(4\pi^2)\approx1.648>0$ (\vref{v76}) the physical readouts do not need it, so
-this is a genuine partial construction, not a closure.
+transfer sends $\chi\to\infty$ and tightness fails). \mC\ The \emph{non-admissible}
+(metric) sector --- the full $\mathrm{QG}_{\mathrm{amb}}$ measure --- is now discharged as a \emph{redundancy}
+(\vref{v369}, conditional on \texttt{SEAM.EQUIV.01}${+}$Bisognano--Wichmann), a certification object rather than
+missing dynamics; by the gap-decoupling margin $\Delta-31/(4\pi^2)\approx1.648>0$ (\vref{v76}) the physical readouts
+do not need it.
 
 \par\smallskip\noindent\textbf{The metric-sector obstruction is the conformal mode}
 (\veri{v332\_qgamb\_metric\_sector.py}). The open ``metric sector'' is not a vague gap: it is precisely the
@@ -1502,14 +1520,16 @@ Gibbons--Hawking--Perry conformal-factor problem. \mE\ The conformal mode $h_{\m
 \emph{negative} kinetic coefficient $c_{\mathrm{conf}}(D){=}-(D{-}1)(D{-}2)/4$ (${=}-\tfrac32$ at $D{=}4$), so the
 bare Euclidean weight $e^{-S}\sim e^{+|c|\phi^2}$ diverges over that direction --- the measure obstruction. \mE\
 But it lives in the conformal/gauge direction, \emph{not} the admissible sector (positive and gapped, \vref{v330}),
-so by the same gap-decoupling margin every physical readout is insulated from it. \mC\ The only route is the
-conditional infinite-derivative taming (the entire form factor $e^{\Box/M^2}$ of \vref{v304} dresses the conformal
-propagator with no new pole), with the polynomial $R{+}R^2$ truncation re-introducing the Stelle ghost as the
-control. \mO\ So the full $\mathrm{QG}_{\mathrm{amb}}$ needs the conformal mode resolved nonperturbatively (a GHP
-contour rotation or the IDG resummation) --- a precise characterization of the residual, not a closure. The
-GHP sign-flip (the conformal Gaussian made convergent) and the IDG pole-free dressing together give a
-\emph{conditional} mode-by-mode construction, machine-checked in \veri{v334\_conformal\_resolution.py}; the open
-part is only the contour's nonperturbative validity.
+so by the same gap-decoupling margin every physical readout is insulated from it. \mC\ \emph{Perturbative} graviton
+unitarity is moreover established: the Stelle ghost is a Seeley--DeWitt \emph{truncation artefact} --- the entire
+form factor $e^{\Box/M^2}$ of \vref{v304} dresses the conformal propagator with no new pole, the spin-$2$ sector is
+ghost-free via the entire KMS form factor and the Barnes--Rivers decomposition (\vref{v370}), and the truncation
+tower decouples (the nearest truncation-zero modulus runs to infinity, \vref{v380}); only the polynomial
+$R{+}R^2$ truncation ever re-introduces the ghost, as a control. \mC\ The remaining \emph{nonperturbative} ambient
+measure is the \mC\ redundancy above (\vref{v369}); the conformal mode's nonperturbative resolution (a GHP contour
+rotation or the IDG resummation) is the conditional ingredient --- the GHP sign-flip (the conformal Gaussian made
+convergent) and the IDG pole-free dressing together give a \emph{conditional} mode-by-mode construction,
+machine-checked in \veri{v334\_conformal\_resolution.py}.
 
 % =====================================================================
 \section*{Appendix: computational verification}

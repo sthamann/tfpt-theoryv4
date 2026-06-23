@@ -417,6 +417,339 @@ export const CHANGELOG: ChangelogEntry[] = [
     "dateLabel": "2026-06-23",
     "heading": [
       {
+        "k": "t",
+        "v": "Status propagation: the "
+      },
+      {
+        "k": "c",
+        "v": "v365"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v380"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "FORM.SEAM.MMST.01"
+      },
+      {
+        "k": "t",
+        "v": " status carried into the remaining papers, the "
+      },
+      {
+        "k": "c",
+        "v": "README"
+      },
+      {
+        "k": "t",
+        "v": " and the Zenodo description"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Deep-sync of the post-S3 status."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The canonical surfaces ("
+        },
+        {
+          "k": "c",
+          "v": "tfpt_status"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "introduction"
+        },
+        {
+          "k": "t",
+          "v": ") were already current; this pass propagated the same honest wording into "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "tfpt_5"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ", the root "
+        },
+        {
+          "k": "c",
+          "v": "README.md"
+        },
+        {
+          "k": "t",
+          "v": ", the Zenodo description and "
+        },
+        {
+          "k": "c",
+          "v": "website/lib/papers.ts"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "closed modulo a cited theorem"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (lattice "
+        },
+        {
+          "k": "c",
+          "v": "v367"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v368"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "S_3"
+        },
+        {
+          "k": "t",
+          "v": " stack "
+        },
+        {
+          "k": "c",
+          "v": "v376"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v379"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " Lean "
+        },
+        {
+          "k": "c",
+          "v": "FORM.SEAM.MMST.01"
+        },
+        {
+          "k": "t",
+          "v": "; residual "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the cited MMST/OS existence only); "
+        },
+        {
+          "k": "c",
+          "v": "QG.AMB.01"
+        },
+        {
+          "k": "t",
+          "v": " is a "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "redundancy"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v369"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v379"
+        },
+        {
+          "k": "t",
+          "v": "), a certification object not missing dynamics; perturbative graviton unitarity is established (the Stelle ghost is a Seeley–DeWitt truncation artefact, "
+        },
+        {
+          "k": "c",
+          "v": "v304"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v370"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v380"
+        },
+        {
+          "k": "t",
+          "v": "); and the frontier transfers are typed runnable solvers with kill tests ("
+        },
+        {
+          "k": "c",
+          "v": "v371"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v374"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the observatory CI ("
+        },
+        {
+          "k": "c",
+          "v": "v375"
+        },
+        {
+          "k": "t",
+          "v": "). No new claim — a wording propagation so every surface matches the ledger; "
+        },
+        {
+          "k": "c",
+          "v": "AUDIT OK"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-23",
+    "dateLabel": "2026-06-23",
+    "heading": [
+      {
         "k": "c",
         "v": "v380"
       },
