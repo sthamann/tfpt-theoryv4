@@ -47,6 +47,345 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "the classical gravity field equation, parameter-free: the entanglement first law "
+      },
+      {
+        "k": "m",
+        "v": "\\delta S=\\delta\\langle K\\rangle"
+      },
+      {
+        "k": "t",
+        "v": " with TFPT's atoms gives the LINEARISED Einstein equation with "
+      },
+      {
+        "k": "m",
+        "v": "G"
+      },
+      {
+        "k": "t",
+        "v": " from "
+      },
+      {
+        "k": "m",
+        "v": "\\cthree"
+      },
+      {
+        "k": "t",
+        "v": "; the thermodynamic and geometric origins of "
+      },
+      {
+        "k": "m",
+        "v": "\\cthree"
+      },
+      {
+        "k": "t",
+        "v": " coincide via "
+      },
+      {
+        "k": "m",
+        "v": "|\\mu_4|=|\\Z_2|\\chi=4"
+      },
+      {
+        "k": "t",
+        "v": "; the two formerly-open pieces (matter flux J3, entropy-density coefficient) closed/atom-fixed: "
+      },
+      {
+        "k": "c",
+        "v": "v358"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v358"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "GRAV.ENTROPY.EQUILIBRIUM.01"
+            },
+            {
+              "k": "t",
+              "v": ") — the bridge to the dynamic world, instantiated on the gravity side."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Carrying out the Jacobson-2015 / Faulkner-et-al. “first law of entanglement "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " Einstein equation” with TFPT's atoms. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "PARAMETER-FREE COEFFICIENT: "
+        },
+        {
+          "k": "m",
+          "v": "\\delta S=\\delta\\langle K\\rangle"
+        },
+        {
+          "k": "t",
+          "v": " gives "
+        },
+        {
+          "k": "m",
+          "v": "G_{ab}=\\cthree^{-1}T_{ab}"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "\\cthree^{-1}=8\\pi"
+        },
+        {
+          "k": "t",
+          "v": " fixed; all four "
+        },
+        {
+          "k": "m",
+          "v": "\\cthree"
+        },
+        {
+          "k": "t",
+          "v": "-roles consistent (Unruh "
+        },
+        {
+          "k": "m",
+          "v": "1/(2\\pi){=}4\\cthree"
+        },
+        {
+          "k": "t",
+          "v": ", EH "
+        },
+        {
+          "k": "m",
+          "v": "1/(16\\pi){=}\\cthree/2"
+        },
+        {
+          "k": "t",
+          "v": ", Einstein "
+        },
+        {
+          "k": "m",
+          "v": "8\\pi{=}1/\\cthree"
+        },
+        {
+          "k": "t",
+          "v": ", Bekenstein "
+        },
+        {
+          "k": "m",
+          "v": "1/4{=}1/|\\mu_4|"
+        },
+        {
+          "k": "t",
+          "v": ") — no free dimensionless Newton dial. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "THERMO "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " GEO COINCIDENCE (new): the first law's coefficient "
+        },
+        {
+          "k": "m",
+          "v": "2\\pi/\\eta"
+        },
+        {
+          "k": "t",
+          "v": " equals the geometric "
+        },
+        {
+          "k": "m",
+          "v": "|\\Z_2|2\\pi\\chi"
+        },
+        {
+          "k": "t",
+          "v": " iff "
+        },
+        {
+          "k": "m",
+          "v": "|\\mu_4|=|\\Z_2|\\chi=4"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v216"
+        },
+        {
+          "k": "t",
+          "v": ") — the thermodynamic and geometric origins of "
+        },
+        {
+          "k": "m",
+          "v": "\\cthree"
+        },
+        {
+          "k": "t",
+          "v": " are ONE. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "J3 SOLVED: the CHM ball modular Hamiltonian (boost via BW, "
+        },
+        {
+          "k": "c",
+          "v": "v323"
+        },
+        {
+          "k": "t",
+          "v": ") gives the matter flux "
+        },
+        {
+          "k": "m",
+          "v": "\\delta\\langle K_B\\rangle=\\tfrac{8\\pi^2R^4}{15}\\delta\\langle T_{00}\\rangle"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "ENTROPY DENSITY ATOM-FIXED: "
+        },
+        {
+          "k": "m",
+          "v": "1/4{=}1/|\\mu_4|"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v57"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " central charge "
+        },
+        {
+          "k": "m",
+          "v": "c=\\gcar{+}\\Nfam=8"
+        },
+        {
+          "k": "t",
+          "v": " (form "
+        },
+        {
+          "k": "c",
+          "v": "v59"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "residual: linear"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": "full non-linear (the original B6) "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "v_{\\mathrm{geo}}"
+        },
+        {
+          "k": "t",
+          "v": " unit. Closes the LINEARISED Einstein equation parameter-free; cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": "; mirrored in Wolfram ("
+        },
+        {
+          "k": "c",
+          "v": "302/302"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-23",
+    "dateLabel": "2026-06-23",
+    "heading": [
+      {
+        "k": "t",
         "v": "the two frontier walls attacked directly: Direction A assembles the continuum chain of "
       },
       {

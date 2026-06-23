@@ -2369,6 +2369,17 @@ Module[{exps, degs, totatives},
     Total[degs] == 128 == 248 - 120 && Total[exps] == 120 && Times @@ degs == 696729600 && exps == totatives && Max[degs] == 30];
 ];
 
+(* ==== v358 GRAV.ENTROPY.EQUILIBRIUM.01: parameter-free linearised Einstein + thermo=geo ==== *)
+Module[{c3, eta, Z2, mu4, chi, r, R, w, wint},
+  c3 = 1/(8 Pi); eta = 1/4; Z2 = 2; mu4 = 4; chi = 2;
+  w = (R^2 - r^2)/(2 R);
+  wint = Integrate[w * 4 Pi r^2, {r, 0, R}];      (* CHM 3-ball weight integral *)
+  checkExact["v358 GRAV.ENTROPY.EQUILIBRIUM.01: the entanglement first law delta S = delta<K> with TFPT atoms gives the LINEARISED Einstein equation parameter-free -- 1/c3 = 8pi (Unruh 1/(2pi)=4c3, EH 1/(16pi)=c3/2, Bekenstein 1/4=1/|mu4|); THERMO=GEO coincidence 2pi/eta = |Z2|2pi chi iff |mu4|=|Z2|chi=4; J3 matter flux = CHM 3-ball weight integral int w d^3x = 4pi R^4/15 so delta<K_B>=8pi^2 R^4/15 delta<T_00>",
+    Simplify[1/c3 - 8 Pi] == 0 && Simplify[1/(2 Pi) - 4 c3] == 0 && Simplify[1/(16 Pi) - c3/2] == 0
+      && eta == 1/mu4 && Simplify[(2 Pi/eta) - (Z2 * 2 Pi * chi)] == 0 && mu4 == Z2 * chi
+      && Simplify[wint - 4 Pi R^4/15] == 0 && Simplify[2 Pi wint - 8 Pi^2 R^4/15] == 0];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];
