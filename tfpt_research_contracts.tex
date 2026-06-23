@@ -818,6 +818,25 @@ an edge-localised in-gap chiral branch (absent in the trivial phase) -- so by an
 question on the lattice. \mE\ the gapped Chern model, the $c_-{=}8$ counting and the edge existence; \mC\ the
 $\mu_4$ condensation to $(E_8)_1$; \mO\ the genuine \emph{continuum scaling limit} (MMST, \vref{v336}) stays
 open --- S3 is now a runnable lattice model, reduced not closed.
+\par\smallskip\noindent\textbf{The S3 closure stack: $c=8$, the $(E_8)_1$ character, the torus count and
+reflection positivity --- all computed on the lattice (\veri{v376\_seam\_s3\_centralcharge.py},
+\veri{v377\_seam\_s3\_e8character.py}, \veri{v378\_seam\_s3\_modular.py}, \veri{v379\_seam\_s3\_rp.py}).}
+On that explicit model the target of the scaling limit is now pinned at every level a computation can
+reach. \emph{Central charge} (\vref{v376}): the Calabrese--Cardy finite-size entanglement scaling gives
+$c=1.0000$ per critical complex mode, so the $16$-Majorana ($=8$ complex) collar has $c=8=\gcar{+}\Nfam$,
+and it is chiral ($c_-=8$). \emph{The net} (\vref{v377}): the exact affine character
+$\chi=E_4/\eta^8=q^{-1/3}(1+248q+4124q^2+\dots)$ gives $c=8$ and $248$ level-1 currents (one primary), and
+the $\mu_4$/GSO promotion $248{=}240{+}8{=}120{+}128$ ($240{=}16{\cdot}5{\cdot}3$) pins $(E_8)_1$ over the
+same-$c$ rival $SO(16)_1$ ($120$ currents, four primaries). \emph{Genus-1} (\vref{v378}): the KLM
+condensation $\mu(\text{carrier}){=}16\to\mu(E_8){=}16/4^2{=}1$ and the single character's modular
+$T$-eigenvalue $e^{-2\pi i/3}$ give torus ground-state degeneracy $1$ --- the holomorphy / $\det K{=}1$
+statement that the genus-0 arguments could not reach (\vref{v344}). \emph{Reflection positivity}
+(\vref{v379}): the gapped collar's Euclidean two-point function has a positive spectral measure, so the OS
+reflection Gram matrix is positive semidefinite (a ghost mode breaks it). \mE\ all four (numerical $c$,
+exact character, genus-1 count, RP); \mO\ the one thing a computation cannot supply is the abstract
+\emph{continuum existence} of the limit (the cited MMST theorem, \vref{v336}). With RP in hand the ambient
+measure C7 is then discharged by the redundancy theorem (\vref{v369}), so S3 is the master key: the target
+is pinned exactly, only the existence proof is external.
 \par\smallskip\noindent\textbf{TOE-roadmap follow-ups --- the keystone as a typed certificate, the bedrock
 modular form, and the gap-decoupled measure (\veri{v308\_seam\_equiv\_chain.py}, \veri{v309\_modular\_bedrock.py},
 \veri{v311\_gap\_decoupled\_measure.py}).} Three machine-checked steps push the keystone arc further.

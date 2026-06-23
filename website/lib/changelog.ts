@@ -418,6 +418,458 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "S3 closure stack — the target of the seam scaling limit pinned at EVERY computable level: central charge "
+      },
+      {
+        "k": "m",
+        "v": "c{=}8"
+      },
+      {
+        "k": "t",
+        "v": " from the lattice ("
+      },
+      {
+        "k": "c",
+        "v": "v376"
+      },
+      {
+        "k": "t",
+        "v": "), the "
+      },
+      {
+        "k": "m",
+        "v": "(E_8)_1"
+      },
+      {
+        "k": "t",
+        "v": " character ("
+      },
+      {
+        "k": "c",
+        "v": "v377"
+      },
+      {
+        "k": "t",
+        "v": "), the genus-1 torus count "
+      },
+      {
+        "k": "m",
+        "v": "=1"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "c",
+        "v": "v378"
+      },
+      {
+        "k": "t",
+        "v": "), and reflection positivity ("
+      },
+      {
+        "k": "c",
+        "v": "v379"
+      },
+      {
+        "k": "t",
+        "v": "); only the abstract continuum existence (cited MMST) stays external"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v376"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.S3.CENTRALCHARGE.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The Calabrese–Cardy finite-size entanglement-entropy scaling of the critical free-fermion content gives "
+        },
+        {
+          "k": "m",
+          "v": "c=1.0000"
+        },
+        {
+          "k": "t",
+          "v": " per complex mode (Peschel correlation-matrix EE; the "
+        },
+        {
+          "k": "m",
+          "v": "L{=}4m{+}2"
+        },
+        {
+          "k": "t",
+          "v": " sizes avoid the half-filling zero-mode), so the 16-Majorana ("
+        },
+        {
+          "k": "m",
+          "v": "=8"
+        },
+        {
+          "k": "t",
+          "v": " complex) collar has "
+        },
+        {
+          "k": "m",
+          "v": "c=8=\\gcar{+}\\Nfam"
+        },
+        {
+          "k": "t",
+          "v": ", chiral ("
+        },
+        {
+          "k": "m",
+          "v": "c_-{=}8"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v367"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v368"
+        },
+        {
+          "k": "t",
+          "v": "). Numerical "
+        },
+        {
+          "k": "m",
+          "v": "c{=}8"
+        },
+        {
+          "k": "t",
+          "v": " from the lattice. Python (numpy)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v377"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.S3.E8CHARACTER.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The exact affine character "
+        },
+        {
+          "k": "m",
+          "v": "\\chi = E_4/\\eta^8 = q^{-1/3}(1 + 248q + 4124q^2 + \\dots)"
+        },
+        {
+          "k": "t",
+          "v": " gives "
+        },
+        {
+          "k": "m",
+          "v": "c = 8"
+        },
+        {
+          "k": "t",
+          "v": " and 248 level-1 currents (one primary); the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": "/GSO promotion "
+        },
+        {
+          "k": "m",
+          "v": "248 = 240 + 8 = 120 + 128"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "240 = 16{\\cdot}5{\\cdot}3"
+        },
+        {
+          "k": "t",
+          "v": ") pins "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " over the same-"
+        },
+        {
+          "k": "m",
+          "v": "c"
+        },
+        {
+          "k": "t",
+          "v": " rival "
+        },
+        {
+          "k": "m",
+          "v": "SO(16)_1"
+        },
+        {
+          "k": "t",
+          "v": " (120 currents, 4 primaries). Python (sympy q-series)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v378"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.S3.MODULAR.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The genus-1 discriminator: KLM condensation "
+        },
+        {
+          "k": "m",
+          "v": "\\mu(\\text{carrier}){=}16\\to\\mu(E_8){=}16/4^2{=}1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "|\\det\\mathrm{Cartan}(E_8)|{=}1"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "D_8{=}4"
+        },
+        {
+          "k": "t",
+          "v": ", and the single character's modular "
+        },
+        {
+          "k": "m",
+          "v": "T"
+        },
+        {
+          "k": "t",
+          "v": "-eigenvalue "
+        },
+        {
+          "k": "m",
+          "v": "e^{-2\\pi i/3}"
+        },
+        {
+          "k": "t",
+          "v": " give torus ground-state degeneracy 1 (holomorphic "
+        },
+        {
+          "k": "m",
+          "v": "=(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": ") — the “hard part” "
+        },
+        {
+          "k": "c",
+          "v": "v344"
+        },
+        {
+          "k": "t",
+          "v": " isolated. Python (sympy)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v379"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.S3.RP.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Reflection positivity (the OS axiom) of the explicit gapped collar: the positive spectral measure makes the Hankel/reflection Gram matrix PSD (a ghost mode breaks it). With "
+        },
+        {
+          "k": "m",
+          "v": "c{=}8"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " in hand, the OS inputs are complete and C7/"
+        },
+        {
+          "k": "c",
+          "v": "QG.AMB.01"
+        },
+        {
+          "k": "t",
+          "v": " is then discharged by the redundancy theorem "
+        },
+        {
+          "k": "c",
+          "v": "v369"
+        },
+        {
+          "k": "t",
+          "v": ". Python (numpy)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Net:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " S3 is the master key — on the explicit lattice model the target net "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " is pinned exactly (central charge, character, genus-1 count, RP); the only remaining residual is the abstract "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "continuum existence"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " of the scaling limit (the cited MMST theorem "
+        },
+        {
+          "k": "c",
+          "v": "v336"
+        },
+        {
+          "k": "t",
+          "v": "), which lives outside the computational suite. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-23",
+    "dateLabel": "2026-06-23",
+    "heading": [
+      {
+        "k": "t",
         "v": "Track 4 — the prediction OBSERVATORY: a status-typed CI over the frozen prediction registry that makes the falsifiability surface machine-checkable, with a live data scorecard ("
       },
       {

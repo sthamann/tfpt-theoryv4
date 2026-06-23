@@ -217,6 +217,23 @@ prediction-of-record vs diagnostics, JUNO first-data + ACT DR6 + CODATA caveats,
 status", null-model bound typed). What remains are only the two genuinely-hard external residuals: the **C7
 non-perturbative projective limit** and **SEAM.EQUIV.01 S3** (now a single lattice-existence statement).
 
+### S3 closure stack (2026-06-23) — the target pinned at every computable level
+`v376`–`v379` attack the master-key residual (S3 / `SEAM.EQUIV.01`) directly on the explicit `v367` lattice model:
+- **`v376` central charge** — Calabrese–Cardy entanglement scaling → `c = 1.0000` per complex mode ⇒ `c = 8` for the
+  16-Majorana collar, chiral (`c_- = 8`). The central charge of the scaling limit, *from the lattice*.
+- **`v377` the net** — exact character `χ = E₄/η⁸ = q^(−1/3)(1 + 248q + 4124q² + …)` ⇒ `c = 8`, 248 currents, one
+  primary; the μ₄/GSO promotion `248 = 240+8 = 120+128` pins `(E8)₁` over `SO(16)₁` (120 currents, 4 primaries).
+- **`v378` genus-1** — KLM condensation `μ: 16 → 1`, `det K = 1`, modular `T`-eigenvalue `e^(−2πi/3)` ⇒ torus GSD = 1
+  (the holomorphy statement the genus-0 arguments couldn't reach, `v344`).
+- **`v379` reflection positivity** — the gapped collar's positive spectral measure ⇒ PSD OS Gram matrix (a ghost mode
+  breaks it). With `c=8` + `(E8)₁` the OS inputs are complete, and **C7 is discharged by the redundancy theorem `v369`**.
+
+**Net:** the target net `(E8)₁` is now pinned **exactly** (central charge, character, genus-1 count, RP). The *only*
+remaining residual is the abstract **continuum-existence** of the scaling limit — the cited, published MMST theorem
+(`v336`) — which lives outside the computational suite. The honest closure ceiling is therefore **"closed modulo a
+cited published theorem"**; the next step toward that is a Lean formalisation of the MMST/Adamo hypothesis-verification
+for the collar (no further numerical lever remains).
+
 ### Honest limits (hold even at full closure)
 No absolute GeV from pure numbers (`v_geo` is metrology, `v153`/`v364`); QCD/nuclei/chemistry stay solver physics;
 no antigravity/warp (gravity only via `T_ab`); experiments (JUNO, CMB-S4, EDM, …) remain the judges.

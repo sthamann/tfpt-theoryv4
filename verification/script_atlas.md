@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`370` registered scripts · `428` ledger claims · `10` clusters.
+`374` registered scripts · `432` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (36 scripts)
+### `core` — Compiler core & the E₈ glue  (40 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -83,6 +83,14 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v286_seam_equivalence_contract, v356, v366, v351, v369, v301, v302, v154 · cited: research contracts
 - **v368_seam_s3_inflow** [E/C/O] `SEAM.S3.INFLOW.01` — Track 1: the bulk-edge / anomaly-inflow leg (S4 of the v356 chain) made CONCRETE on the v367 lattice model -- a finite STRIP of the gapped p+ip model has a realised, non-gappable c
   - deps: v286_seam_equivalence_contract, v367, v356, v336, v351, v301 · cited: research contracts
+- **v376_seam_s3_centralcharge** [E/O] `SEAM.S3.CENTRALCHARGE.01` — S3 closure stack: the central charge c=8 extracted NUMERICALLY from the lattice via Calabrese-Cardy finite-size entanglement scaling of the critical free-fermion content (the quant
+  - deps: v286_seam_equivalence_contract, v367, v368, v336 · cited: research contracts
+- **v377_seam_s3_e8character** [E/O] `SEAM.S3.E8CHARACTER.01` — S3 closure stack: the chiral c=8 content is the SPECIFIC net (E8)_1, via the exact affine character q-series + the mu4/GSO promotion. [E] chi = E4/eta^8 = q^{-1/3}(1+248q+4124q^2+.
+  - deps: v286_seam_equivalence_contract, v336, v351, v83, v1 · cited: research contracts
+- **v378_seam_s3_modular** [E/O] `SEAM.S3.MODULAR.01` — S3 closure stack: the GENUS-1 discriminator -- torus ground-state degeneracy = 1 (holomorphic = (E8)_1), the 'hard part' v344 flagged (genus-0 unique vacuum is necessary not suffic
+  - deps: v286_seam_equivalence_contract, v344, v154, v369, v83, v87 · cited: research contracts
+- **v379_seam_s3_rp** [E/C/O] `SEAM.S3.RP.01` — C7 / OS reconstruction: reflection positivity (the OS axiom) of the explicit gapped collar measure, verified numerically -- the remaining constructive-QFT ingredient for the OS rec
+  - deps: QG.AMB.01, v367, v369, v240, v76, v376, v377, v378 · cited: research contracts
 
 ### `em` — Electromagnetic fixed point  (4 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -804,16 +812,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `v76`×16, `SEAM.EQUIV.01`×16, `E8.GLU.01`×15, `v56`×15, `HOR.NARIAI.01`×15, `QG.AMB.01`×12, `v216`×12, `REG.FREEZE.01`×12, `AX.P1.01`×11, `QGEO.SUBPRIN.01`×11, `FLAV.KQ.01`×10, `v3`×10, `QGEO.PILLOW.01`×10, `v54`×9
+**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `SEAM.EQUIV.01`×19, `v76`×17, `E8.GLU.01`×15, `v56`×15, `HOR.NARIAI.01`×15, `QG.AMB.01`×13, `v216`×12, `REG.FREEZE.01`×12, `AX.P1.01`×11, `QGEO.SUBPRIN.01`×11, `FLAV.KQ.01`×10, `v3`×10, `v336`×10, `QGEO.PILLOW.01`×10
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v364_vgeo_sharpen** — `VGEO.SHARPEN.01`
-- **v365_qg_oneloop_saddle** — `QGAMB.SADDLE.01`
-- **v366_mmst_seam_collar** — `SEAM.MMST.INCLASS.01`
-- **v367_seam_s3_lattice** — `SEAM.S3.LATTICE.01`
 - **v368_seam_s3_inflow** — `SEAM.S3.INFLOW.01`
 - **v369_qgamb_redundancy** — `QGAMB.REDUNDANCY.01`
 - **v370_grav_spin2_unitarity** — `GRAV.SPIN2.UNITARITY.01`
@@ -822,4 +826,8 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v373_ftransfer_relic** — `FR.RELIC.SOLVE.01`
 - **v374_ftransfer_qcd** — `FR.QCD.BUDGET.01`
 - **v375_observatory_registry** — `OBSERVATORY.REGISTRY.01`
+- **v376_seam_s3_centralcharge** — `SEAM.S3.CENTRALCHARGE.01`
+- **v377_seam_s3_e8character** — `SEAM.S3.E8CHARACTER.01`
+- **v378_seam_s3_modular** — `SEAM.S3.MODULAR.01`
+- **v379_seam_s3_rp** — `SEAM.S3.RP.01`
 
