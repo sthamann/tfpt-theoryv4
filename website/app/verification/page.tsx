@@ -134,8 +134,8 @@ const REVIEWER_MAP: { label: string; marker: string; tone: string; items: string
     tone: "border-amber-400/30 bg-amber-500/5",
     items: [
       "Reflection positivity + gap (Decoupling Theorem, Δ_eff = 1.648)",
-      "G_net algebra + AQFT machinery [E]; seam coupling [O]",
-      "F_transfer: Koide, η_B, axion relic, m_p/m_e (typed interfaces)",
+      "G_net algebra + AQFT machinery [E]; seam coupling [C] closed modulo cited theorems (v367/v368 + v376–v379)",
+      "F_transfer: Koide, η_B, axion relic, m_p/m_e — runnable typed solvers (v371–v375)",
       "Scheme layer / QCD + EW matching for absolute masses",
     ],
   },
@@ -146,7 +146,7 @@ const REVIEWER_MAP: { label: string; marker: string; tone: string; items: string
     items: [
       "P1, P2 — declared inputs, reduced to the anchor a=(1,1,2)+π (not free dials)",
       "v_geo — the one dimensionful scale (metrology primitive, No-Unit Theorem)",
-      "SEAM.EQUIV.01 — the raw RP seam is the holomorphic (E₈)₁ net at τ=i (the one named theorem; residual: raw subprincipal mark-locality, v288)",
+      "SEAM.EQUIV.01 — [C] closed modulo cited theorems (lattice v367/v368 + S3 stack v376–v379, Lean FORM.SEAM.MMST.01); the only [O] residual is the cited MMST/Adamo continuum scaling-limit existence (v336)",
     ],
   },
   {
@@ -337,9 +337,11 @@ export default function VerificationPage() {
               a two-input discrete compiler whose algebraic kernel derives the Standard-Model skeleton
               and several dimensionless readouts, with every physical transfer layer explicitly typed
             </span>{" "}
-            — and, given the single named keystone SEAM.EQUIV.01 (the raw RP seam = the holomorphic (E₈)₁
-            net at τ=i), the AQFT closure to (E₈)₁ follows; its conformal-deck face QGEO.SYM.01 is
-            downstream and Lean-pinned.
+            — and the keystone SEAM.EQUIV.01 (the raw RP seam = the holomorphic (E₈)₁ net at τ=i) is
+            closed modulo cited theorems: the target net is pinned at every computable level (lattice
+            v367/v368 + S3 stack v376–v379) and Lean-pinned (FORM.SEAM.MMST.01) to the published MMST/Adamo
+            theorems, so the AQFT closure to (E₈)₁ follows modulo the cited continuum-existence residual
+            (v336); its conformal-deck face QGEO.SYM.01 is a corollary.
           </p>
         </div>
       </section>
@@ -438,7 +440,7 @@ export default function VerificationPage() {
           <SectionHeader
             eyebrow="The journey & what remains"
             title="From two axioms to one geometric premise"
-            description="The verification suite grew in eleven phases — foundations, the Standard-Model readouts, the seam=horizon geometry, the horizon/flavor geometry, the R1–R5 and premise-(A) reductions, the PyR@TE RGE cross-checks, the AQFT bridges and closure, the F_transfer functor, the QGEO pillowcase, and the icosahedral capstone. The closure round drives the whole remaining structural question down, step by machine-checked step, to a single falsifiable physical condition."
+            description="The verification suite grew in eleven phases — foundations, the Standard-Model readouts, the seam=horizon geometry, the horizon/flavor geometry, the R1–R5 and premise-(A) reductions, the PyR@TE RGE cross-checks, the AQFT bridges and closure, the F_transfer functor, the QGEO pillowcase, and the icosahedral capstone. The closure round drives the whole remaining structural question down, step by machine-checked step, to a target pinned at every computable level — closed modulo a cited published theorem (MMST/Adamo), not solved."
           />
           <figure className="mt-8 overflow-hidden rounded-2xl border border-slate-700/40 bg-slate-950/40 p-4 sm:p-6">
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -473,11 +475,13 @@ export default function VerificationPage() {
               layer (<span className="font-mono">v258–v261</span>, the Modular Spectral Closure: Dirac =
               covariance induction, cutoff = KMS weight, seam/carrier/E₈ on one Kummer/K3) collapses onto
               this <em>same</em> bedrock — so the boundary QFT is one relative object that adds no new open
-              item. The bedrock is a single <em>named</em> theorem, the Seam Equivalence Theorem
+              item. The bedrock is now closed modulo cited theorems via the Seam Equivalence Theorem
               (<span className="font-mono">SEAM.EQUIV.01</span>) — the raw RP seam IS the holomorphic (E₈)₁
-              net at τ=i (its conformal-deck face <span className="font-mono">QGEO.SYM.01</span> is
-              downstream); its residual is Lean-pinned to named cited theorems plus the derived Recovery
-              gap.               The full step-by-step reduction lives on the{" "}
+              net at τ=i (its conformal-deck face <span className="font-mono">QGEO.SYM.01</span> is a
+              corollary): the target is pinned at every computable level by an explicit lattice model
+              (v367/v368) and the S3 closure stack (v376–v379), Lean-pinned (FORM.SEAM.MMST.01) to the
+              published MMST/Adamo theorems, leaving [O] = the cited continuum scaling-limit existence only
+              (v336). The full step-by-step reduction lives on the{" "}
               <span className="text-slate-200">/changelog</span> page.
             </figcaption>
           </figure>

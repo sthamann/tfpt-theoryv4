@@ -18,7 +18,7 @@ const MATH_ORDER = [
   { n: 1, label: "Architecture: the two axioms, D₅ × A₃ → E₈, α⁻¹" },
   { n: 2, label: "Standard Model: the φ₀-ladder, flavor matrix, θ₁₂" },
   { n: 3, label: "E₈ audit raster, cascade bridge, Möbius bootstrap" },
-  { n: 4, label: "Frontier: η_B, m_p/m_e, Koide, dark matter, QG" },
+  { n: 4, label: "Frontier: η_B, m_p/m_e, Koide, dark matter; QG measure discharged [C], graviton unitarity [C]" },
   { n: 5, label: "Appendix H — horizon unit system (reframe)" },
   { n: 6, label: "Origin Theory — the gapped unique attractor" },
 ];

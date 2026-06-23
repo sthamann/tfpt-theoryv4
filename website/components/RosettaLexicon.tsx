@@ -67,7 +67,7 @@ const LEXICON: { term: string; reading: string }[] = [
   {
     term: "F_transfer",
     reading:
-      "The (still-open) RG / threshold-matching functor: compiler source data → physical pole observable (Koide source→pole, η_B Boltzmann, m_p/m_e via QCD/EW). The missing dynamical action principle lives here.",
+      "The typed RG / threshold-matching functor: compiler source data → physical pole observable, now a runnable solver suite (Koide source→pole v371, η_B Boltzmann v372, axion relic v373, m_p/m_e via QCD/EW v374), each a typed [C] bridge with a kill test, folded into a prediction-observatory CI (v375).",
   },
   {
     term: "v_geo",
@@ -77,7 +77,7 @@ const LEXICON: { term: string; reading: string }[] = [
   {
     term: "SEAM.EQUIV.01 (keystone)",
     reading:
-      "The single named open theorem: the raw reflection-positive seam state IS the holomorphic (E₈)₁ net at τ=i. The role Einstein’s ‘c = const’ plays — TFPT’s one irreducible structural postulate; its conformal-deck face QGEO.SYM.01 (the seam’s conformal structure IS the carrier orbifold deck) is downstream.",
+      "The keystone, now closed modulo cited theorems (not solved): the raw reflection-positive seam state IS the holomorphic (E₈)₁ net at τ=i. The target is pinned at every computable level by an explicit lattice model (v367/v368) and the S3 stack (v376–v379), Lean-pinned (FORM.SEAM.MMST.01) to the published MMST/Adamo theorems; the residual is the cited continuum scaling-limit existence only (v336). The role Einstein’s ‘c = const’ plays — TFPT’s one irreducible structural postulate; its conformal-deck face QGEO.SYM.01 is a corollary.",
   },
 ];
 
@@ -120,10 +120,11 @@ export function RosettaLexicon() {
           </table>
         </div>
         <p className="mt-5 text-sm leading-relaxed text-slate-400">
-          The one honest gap a physicist will spot is{" "}
+          The one honest layer a physicist will scrutinise is{" "}
           <span className="font-mono text-slate-200">F_transfer</span>: the discrete kernel and the
-          dimensionless readouts are exact, but the continuous dynamical principle that drives the
-          source data to the physical pole is the open transfer layer — explicitly typed{" "}
+          dimensionless readouts are exact, while the continuous transport that drives the
+          source data to the physical pole is the external transfer layer — now a typed, runnable
+          solver suite (v371–v375), explicitly{" "}
           <span className="font-mono">[C]</span>, never sold as a derivation.
         </p>
       </div>

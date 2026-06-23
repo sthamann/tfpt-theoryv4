@@ -114,15 +114,27 @@ export const GLOSSARY: GlossaryEntry[] = [
   },
   {
     term: "G_net",
-    alias: ["G_net", "(G_metric)", "G_metric", "ambient measure", "quantum-gravity measure", "seam-net inclusion"],
+    alias: ["G_net", "(G_metric)", "G_metric", "seam-net inclusion", "continuum realisation"],
     short:
-      "The metric-sector interface (historically labelled G_metric): R + R² is heat-kernel grounded (G2) and gap-decoupled (G5); the closing statement is the index-4 μ₄ seam-net inclusion ⇒ holomorphic (E₈)₁. Net existence and full-cone reflection positivity are discharged to [E] (v175). The whole emergent-QFT layer collapses onto one premise (the Modular Spectral Closure, v258–v261: the finite Dirac is a covariance induction of the seam KMS state, the spectral-action cutoff is that KMS weight with f₂/f₀ = 1, and the seam, carrier-16 and E₈ live on one Kummer/K3 surface), so the boundary QFT is one relative object closed modulo a single named theorem, the Seam Equivalence Theorem (SEAM.EQUIV.01): the raw RP seam IS the holomorphic (E₈)₁ net at τ=i. Its conformal-deck face QGEO.SYM.01 (the carrier μ₄ clock is the seam's deck) is downstream and Lean-pinned (FORM.SEAMEQUIV.01) to named cited steps plus the derived Recovery gap Δ = 6·ln(3/2) > 0. Note: the local classical field equation is separately parameter-free (Gₐᵦ+Λgₐᵦ=c₃⁻¹Tₐᵦ, both coefficients fixed, v358/v359); this interface concerns the ambient, non-perturbative measure, not the field equation. Full QG closure is a certification layer, not a prerequisite for testing the readouts [C]/[O].",
+      "The metric-sector interface (historically labelled G_metric): R + R² is heat-kernel grounded (G2) and gap-decoupled (G5); the closing statement is the index-4 μ₄ seam-net inclusion ⇒ holomorphic (E₈)₁, with net existence and full-cone reflection positivity discharged to [E] (v175). Status [C] — closed modulo cited theorems (not solved): the target (E₈)₁ net is now pinned at every computable level by an explicit gapped lattice model (v367/v368) and the S3 closure stack — central charge c = 8 from the lattice (v376), the (E₈)₁ character 248/1 (v377), genus-1 torus GSD = 1 (v378) and reflection positivity (v379). With the Modular Spectral Closure (v258–v261), the boundary QFT is therefore one relative object closed modulo cited theorems via the Seam Equivalence Theorem SEAM.EQUIV.01 (the raw RP seam IS the holomorphic (E₈)₁ net at τ=i), Lean-pinned (FORM.SEAM.MMST.01, SeamScalingLimit.lean) to the published MMST/Adamo scaling-limit theorems. The one residual is [O] = the abstract continuum scaling-limit existence only (v336). The local field equation is separately parameter-free (v358/v359); QG closure is a certification layer, not a prerequisite for testing the readouts [C]/[O].",
   },
   {
     term: "F_transfer",
     alias: ["F_transfer", "(F_frontier)", "F_frontier", "transfer functor"],
     short:
-      "The downstream interface: the continuous transport from compiler source data to measured observables. Koide source→pole, η_B source→Boltzmann relic, axion scale→abundance and m_p/m_e→QCD/EW matching are four instances of this one missing functor — not primitive compiler predictions [C]. The functor contract CONTRACT.F.01 (v213) pins it with four axioms (μ₄-deck equivariant, Plücker-preserving, positive/stochastic, external-module-explicit); the third research contract alongside U_wall and G_metric.",
+      "The downstream interface: the continuous transport from compiler source data to measured observables, now a typed RUNNABLE solver suite F_transfer = F_pole ⊕ F_Boltzmann ⊕ F_relic ⊕ F_QCD — Koide source→pole (v371), η_B via the Boltzmann washout (v372), the axion relic abundance (v373) and m_p/m_e via QCD/EW matching (v374), each with a kill test and folded into a prediction-observatory CI (v375). The functor contract CONTRACT.F.01 (v213) pins four axioms (μ₄-deck equivariant, Plücker-preserving, positive/stochastic, external-module-explicit); a machine guard (v187) keeps every output a typed [C] bridge, never promoted to a primitive [E] compiler prediction. The third research interface alongside v_geo and G_net.",
+  },
+  {
+    term: "SEAM.EQUIV.01",
+    alias: ["SEAM.EQUIV.01", "Seam Equivalence Theorem", "S3", "the keystone", "seam equivalence", "the single keystone"],
+    short:
+      "The keystone of the metric sector: the raw reflection-positive seam state IS the holomorphic (E₈)₁ boundary net at τ=i. Status [C] — closed modulo cited theorems, NOT solved: the target net is pinned at every computable level by an explicit gapped lattice model (v367/v368) and the S3 closure stack (c = 8 from the lattice v376, the (E₈)₁ character 248/1 v377, genus-1 torus GSD = 1 v378, reflection positivity v379), and the chain is Lean-pinned (FORM.SEAM.MMST.01, SeamScalingLimit.lean) to the published MMST/Adamo scaling-limit theorems. The only residual is [O] = the abstract continuum scaling-limit existence (v336), a cited published theorem outside the computational suite. Its conformal-deck face QGEO.SYM.01 is a corollary (v335). TFPT's one irreducible structural postulate — the role 'c = const' plays in relativity.",
+  },
+  {
+    term: "QG.AMB.01",
+    alias: ["QG.AMB.01", "QG.AMB", "C7", "G6", "ambient measure", "quantum-gravity measure", "ambient QG measure"],
+    short:
+      "The ambient, non-perturbative quantum-gravity measure (historically C7 / G6). Status [C] — discharged as a redundancy, NOT an open frontier: the ambient-redundancy theorem (v369) plus the S3 reflection-positivity closure (v379) show it is a certification object, not missing dynamics — every readout factors through the gapped admissible spectrum (Decoupling Theorem v337, Δ_eff = 1.648 > 0), so TFPT provably does not need it. Conditional on SEAM.EQUIV.01 + Bisognano–Wichmann intrinsicality (the residual [O]). The R²/Weyl² Stelle ghost is a Seeley–DeWitt truncation artefact, so perturbative spin-2 graviton unitarity is established [C] (v304/v370/v380) — not a non-unitarity hole.",
   },
 ];
 

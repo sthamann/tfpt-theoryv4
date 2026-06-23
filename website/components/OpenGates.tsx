@@ -27,17 +27,17 @@ const GATES: Gate[] = [
   },
   {
     tag: "Interface 2",
-    marker: "[E] target · [O] seam",
+    marker: "[E] target · [C] seam",
     title: "G_net — the metric-sector inclusion",
-    body: "The target object is closed: (D₅)₁⊗(A₃)₁⋊μ₄ ≅ (E₈)₁ (Jones index 4 = |μ₄|, holomorphic c = 8; v154), with net existence and full-cone reflection positivity discharged to [E] on the 2¹⁶-dim Fock space (v175), R + R² heat-kernel grounded and the IR sector gap-decoupled (Δ_eff = 1.648 > 0). Only the physical coupling of the raw seam to that object is open — the single named keystone SEAM.EQUIV.01: the raw RP seam IS the holomorphic (E₈)₁ net at τ=i. Its conformal-deck face QGEO.SYM.01 is now a corollary (a conformal net's vacuum is rotation-invariant by axiom; v335), Lean-pinned to named cited steps. That is TFPT's one fundamental postulate — the role 'c = const' plays in relativity — and in Chern–Simons language it is the single integer step 'det K = 1' (v234/v235). (Historical label: G_metric.)",
+    body: "The target object is closed: (D₅)₁⊗(A₃)₁⋊μ₄ ≅ (E₈)₁ (Jones index 4 = |μ₄|, holomorphic c = 8; v154), with net existence and full-cone reflection positivity discharged to [E] on the 2¹⁶-dim Fock space (v175), R + R² heat-kernel grounded and the IR sector gap-decoupled (Δ_eff = 1.648 > 0). The coupling of the raw seam to that object — the keystone SEAM.EQUIV.01 (the raw RP seam IS the holomorphic (E₈)₁ net at τ=i) — is now closed modulo cited theorems: an explicit gapped lattice model (v367/v368) plus the S3 closure stack pin the target at every computable level (central charge c = 8 from the lattice v376, the (E₈)₁ character 248/1 v377, genus-1 torus GSD = 1 v378, reflection positivity v379), Lean-pinned (FORM.SEAM.MMST.01, SeamScalingLimit.lean) to the published MMST/Adamo theorems. The one residual is [O] = the abstract continuum scaling-limit existence only (v336) — closed modulo a cited theorem, not solved. Its conformal-deck face QGEO.SYM.01 is a corollary (a conformal net's vacuum is rotation-invariant by axiom; v335). That is TFPT's one fundamental postulate — the role 'c = const' plays in relativity. (Historical label: G_metric.)",
     formula: "[\\,(E_8)_1 : (D_5)_1\\times(A_3)_1\\,] = 4 = |\\mu_4| \\Rightarrow \\text{holomorphic } c = 8",
     tone: "border-amber-400/30 bg-amber-500/5",
   },
   {
     tag: "Interface 3",
     marker: "[C]",
-    title: "F_transfer — one typed functor, four interfaces",
-    body: "Not a bag of open topics but one functor F_transfer = F_observable ∘ F_threshold ∘ F_RG (standard physics fed TFPT source data), with exactly four interfaces: F_pole (Koide 53/54, exact readout [E], pole reading [C], v183), F_Boltzmann (η_B via the scalaron-decuple A_Λ = 10, v212), F_relic (axion, the θ_i = 3π/5 spine branch, v211), F_QCD (m_p/m_e via Λ_QCD, b₃ = −7, lattice [O]). A machine guard (v187) forbids ever promoting these to a primitive [E] compiler prediction; the functor contract CONTRACT.F.01 (v213) pins four structural axioms (μ₄-deck equivariance, Plücker preservation, positivity, explicit external modules). A consolidation, not a closure. (Historical label: F_frontier.)",
+    title: "F_transfer — one typed runnable solver suite",
+    body: "Not a bag of open topics but one typed, RUNNABLE solver suite F_transfer = F_pole ⊕ F_Boltzmann ⊕ F_relic ⊕ F_QCD (standard physics fed TFPT source data), each with a kill test: F_pole (Koide source→pole, QED-dressed, v371), F_Boltzmann (η_B washout via the BDP Boltzmann ODE, v372), F_relic (the finite-T axion relic on the θ_i = 3π/5 spine branch, v373), F_QCD (m_p/m_e via carrier-b₃ running, v374) — folded into a status-typed prediction-observatory CI (v375). A machine guard (v187) forbids ever promoting these to a primitive [E] compiler prediction; the functor contract CONTRACT.F.01 (v213) pins four structural axioms (μ₄-deck equivariance, Plücker preservation, positivity, explicit external modules). The predictions stay [C], never compiler outputs. (Historical label: F_frontier.)",
     tone: "border-slate-500/30 bg-slate-500/5",
   },
 ];
@@ -51,14 +51,14 @@ const RESIDUAL: { label: string; marker: string; blurb: string; tone: string }[]
   },
   {
     label: "G_net",
-    marker: "[E] target · [O] seam",
-    blurb: "Metric inclusion: the (E₈)₁ target is closed; only the seam coupling — the single named keystone SEAM.EQUIV.01 — is open.",
+    marker: "[E] target · [C] seam",
+    blurb: "Metric inclusion: the (E₈)₁ target is closed and pinned at every computable level (lattice v367/v368 + S3 stack v376–v379); the seam coupling SEAM.EQUIV.01 is closed modulo cited theorems (Lean FORM.SEAM.MMST.01), residual [O] = the cited MMST continuum existence only (v336).",
     tone: "from-amber-500/15 to-amber-500/[0.03] border-amber-400/30",
   },
   {
     label: "F_transfer",
     marker: "[C]",
-    blurb: "One typed functor, four downstream interfaces — bridges, never primitive outputs.",
+    blurb: "One typed runnable solver suite (v371–v374) + a prediction-observatory CI (v375), each with a kill test — bridges, never primitive outputs.",
     tone: "from-slate-500/15 to-slate-500/[0.03] border-slate-500/30",
   },
 ];
@@ -157,28 +157,38 @@ function ClosingCondition() {
         holomorphic (E₈)₁ net at τ=i), adding <span className="text-emerald-200">no new open item</span>;
         the conformal-deck premise QGEO.SYM.01 is now its <span className="text-emerald-200">corollary</span>{" "}
         (a conformal net&apos;s vacuum is rotation-invariant by axiom, v335). The ambient QG measure QG.AMB.01
-        is a <span className="text-amber-200">decoupled general QG problem</span> — gap-decoupled (Δ_eff = 1.648
-        &gt; 0), inherited not TFPT-specific, <span className="text-amber-200">not a TFPT structural item</span>.
+        is <span className="text-amber-200">discharged as a redundancy</span> (v369 + v379) — a{" "}
+        <span className="text-amber-200">certification object, not missing dynamics</span> — gap-decoupled
+        (Δ_eff = 1.648 &gt; 0) and conditional only on SEAM.EQUIV.01 + Bisognano–Wichmann,{" "}
+        <span className="text-amber-200">not a TFPT structural item</span>.
       </p>
       <p className="mt-3 rounded-lg border border-slate-700/40 bg-slate-950/40 p-3 text-xs leading-relaxed text-slate-300">
-        <span className="font-semibold text-slate-100">SEAM.EQUIV.01 is the single named open theorem.</span>{" "}
+        <span className="font-semibold text-slate-100">SEAM.EQUIV.01 is closed modulo cited theorems.</span>{" "}
         The 4D perturbative S-matrix is constructible (Epstein–Glaser; SM one-loop β = (41/10, −19/6, −7)
         from the carrier content), unitary for the <span className="text-slate-100">matter+gauge</span>{" "}
-        sector — the R²/Weyl² gravity sub-sector is the non-unitary Stelle ghost, which is exactly the
-        decoupled general QG problem <span className="text-amber-200">QG.AMB.01</span> (the Euclidean-QG
-        conformal-factor problem; gap-decoupled, not a TFPT structural item). The keystone
-        stays open (not machine-proved end-to-end), but its entire residual is now a composition of
-        standard cited theorems (OS/clustering, the Kitaev free-fermion classification, the AQFT stack)
-        over established TFPT facts — Lean-pinned (FORM.SEAMEQUIV.01) to exactly those named steps plus the
-        derived Recovery gap Δ = 6·ln(3/2) ≈ 2.43 &gt; 0, with no undischarged TFPT-internal assumption
-        left. Its two heavy legs are now <span className="text-emerald-200">literature-anchored</span> (v336):
+        sector — and the R²/Weyl² gravity sub-sector&apos;s Stelle ghost is a{" "}
+        <span className="text-emerald-200">Seeley–DeWitt truncation artefact</span>: the untruncated KMS
+        spectral-action Hessian is entire and zero-free, so resummation decouples it and{" "}
+        <span className="text-emerald-200">perturbative spin-2 graviton unitarity is established [C]</span>{" "}
+        (v304/v370/v380). The ambient measure <span className="text-amber-200">QG.AMB.01</span> is itself
+        <span className="text-amber-200"> discharged as a redundancy</span> (v369 + v379) — a certification
+        object, not missing dynamics. The keystone is no longer an open theorem: its entire residual is a
+        composition of standard cited theorems (OS/clustering, the Kitaev free-fermion classification, the
+        AQFT stack) over established TFPT facts — Lean-pinned (FORM.SEAM.MMST.01, SeamScalingLimit.lean) to
+        exactly those named steps plus the derived Recovery gap Δ = 6·ln(3/2) ≈ 2.43 &gt; 0, with no
+        undischarged TFPT-internal assumption left. The target net is pinned at every computable level by an
+        explicit gapped lattice model (v367/v368) and the S3 closure stack (central charge c = 8 from the
+        lattice v376, the (E₈)₁ character 248/1 v377, genus-1 torus GSD = 1 v378, reflection positivity
+        v379). Its two heavy legs are <span className="text-emerald-200">literature-anchored</span> (v336):
         the continuum scaling limit (Morinelli–Morsella–Stottmeister–Tanimoto, free lattice fermions → chiral
         CFT) and the Osterwalder–Schrader reconstruction of unitary lattice VOAs (Adamo–Moriwaki–Tanimoto)
-        are recent rigorous theorems, with (E₈)₁ inside their range (c=8, rank 8, 16 Majoranas) — so the open
-        residual narrows to the single holomorphy bit det K=1. And the QG decoupling is itself a theorem
-        (v337): every readout factors through the gapped admissible spectrum (susceptibility χ=729/665,
-        margin 1.648&gt;0), so TFPT provably does not need the ambient measure. The full sprint-by-sprint reduction (v234 → v302 and the arithmetic capstone v313–v320) is in
-        the{" "}
+        are recent rigorous theorems, with (E₈)₁ inside their range (c=8, rank 8, 16 Majoranas) — so the one
+        residual is <span className="text-amber-200">[O] = the abstract continuum scaling-limit existence
+        only</span> (v336), a cited published theorem outside the suite (closed modulo a cited theorem, not
+        solved). And the QG decoupling is itself a theorem (v337): every readout factors through the gapped
+        admissible spectrum (susceptibility χ=729/665, margin 1.648&gt;0), so TFPT provably does not need the
+        ambient measure. The full sprint-by-sprint reduction (v234 → v302 and the arithmetic capstone
+        v313–v320) is in the{" "}
         <Link href="/changelog" className="text-blue-300 underline-offset-2 hover:underline">
           changelog
         </Link>{" "}
@@ -186,7 +196,8 @@ function ClosingCondition() {
       </p>
       <p className="mt-3 rounded-lg border border-slate-700/40 bg-slate-950/40 p-3 text-xs leading-relaxed text-slate-300">
         <span className="font-semibold text-slate-100">4D-QFT fork policy</span> (frozen decision tree, v265):
-        Boundary QFT — complete modulo SEAM.EQUIV.01. Ambient QG — separate. <span className="text-amber-200">4D
+        Boundary QFT — closed modulo cited theorems (SEAM.EQUIV.01). Ambient QG — discharged as redundancy
+        [C] (v369). <span className="text-amber-200">4D
         GUT — not claimed by default</span> (E₈ is the audit hull, not a 4D gauge group; SM-only unification
         is killed). Optional UV branch — carrier-native Pati-Salam, falsifiable by thresholds and proton
         decay (E₈-allowed content only, no 126, sin²θ_W = 3/8). Not an open ambiguity.

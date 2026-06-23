@@ -101,7 +101,7 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
     sha256:
       "5d87520c85484e7a4f0cf1f89377d05c11ffb5d4257df9354fed496e75537720",
     changelog:
-      "Research contracts for the remaining interfaces: v_geo (scale anchor), G_net (metric inclusion), F_transfer (downstream transport).",
+      "Research contracts for the remaining interfaces: v_geo (scale anchor, [O]), G_net (metric inclusion, [C] closed modulo cited theorems), F_transfer (downstream transport, typed runnable solvers [C]).",
   },
   "/papers/tfpt_5_redteam.pdf": {
     href: "/papers/tfpt_5_redteam.pdf",

@@ -84,10 +84,13 @@ const BLOCKS: Block[] = [
         It is <strong className="text-slate-100">not</strong> an E₈ gauge theory
         (so the Distler–Garibaldi / Coleman–Mandula no-gos do not apply), and{" "}
         <strong className="text-slate-100">not</strong> a certified strict
-        physical theory of everything — the local Einstein equation is now
-        parameter-free, but the ambient, non-perturbative quantum-gravity measure
-        is a layer reduced to one definitional premise, not yet certified. The
-        absolute mass scale is a single declared dimensionful anchor (v_geo), and{" "}
+        physical theory of everything end-to-end — the keystone SEAM.EQUIV.01 is
+        closed only modulo a cited published theorem (the MMST/Adamo continuum
+        scaling-limit existence). The local Einstein equation is parameter-free,
+        and the ambient, non-perturbative quantum-gravity measure is discharged as
+        a redundancy [C] (a certification object, not missing dynamics), not an
+        open hole. The absolute mass scale is a single declared dimensionful
+        anchor (v_geo), and{" "}
         <span className="font-mono">m_p/m_e</span> is explicitly not claimed as a
         compiler power. No experimental value is ever used as an input — only as
         a comparison row.
@@ -145,19 +148,22 @@ const BLOCKS: Block[] = [
       <>
         Exactly three named interfaces, none hidden:{" "}
         <span className="font-mono">v_geo</span> (one dimensionful scale anchor,
-        the same nature as 1/G), <span className="font-mono">G_net</span> (the
-        seam-net metric inclusion — algebra discharged to [E], one definitional
-        seam premise left [O]), and <span className="font-mono">F_transfer</span>{" "}
+        the same nature as 1/G, [O]), <span className="font-mono">G_net</span> (the
+        seam-net metric inclusion — algebra discharged to [E]; the seam keystone now
+        [C], closed modulo cited theorems), and <span className="font-mono">F_transfer</span>{" "}
         (the source→pole/relic/cosmology transport — Koide, η_B, the axion relic,
-        m_p/m_e are its four typed instances). The whole boundary-QFT layer
-        (Dirac, cutoff, gauging, glue) collapses onto the same{" "}
-        <span className="font-mono">G_net</span> premise via the Modular Spectral
-        Closure (v258–v261) — one relative object, no new open item. That premise
-        is now a single named theorem, the Seam Equivalence Theorem{" "}
+        m_p/m_e are its four instances, now runnable typed solvers v371–v375 [C]).
+        The whole boundary-QFT layer (Dirac, cutoff, gauging, glue) collapses onto
+        the same <span className="font-mono">G_net</span> premise via the Modular
+        Spectral Closure (v258–v261) — one relative object, no new open item. That
+        premise is now closed modulo cited theorems via the Seam Equivalence Theorem{" "}
         <span className="font-mono">SEAM.EQUIV.01</span> (the raw RP seam IS the
-        holomorphic (E₈)₁ net at τ=i); its conformal-deck face QGEO.SYM.01 is
-        downstream, and its residual is a composition of cited theorems over
-        established TFPT facts, Lean-pinned. The step-by-step reduction lives on the{" "}
+        holomorphic (E₈)₁ net at τ=i): the target net is pinned at every computable
+        level by an explicit lattice model (v367/v368) and the S3 closure stack
+        (v376–v379), Lean-pinned (FORM.SEAM.MMST.01) to the published MMST/Adamo
+        theorems, leaving [O] = the cited continuum scaling-limit existence only
+        (v336); its conformal-deck face QGEO.SYM.01 is a corollary. The
+        step-by-step reduction lives on the{" "}
         <Link href="/changelog" className="font-semibold text-blue-300 hover:text-blue-200">
           changelog
         </Link>

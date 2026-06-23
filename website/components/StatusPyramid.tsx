@@ -69,7 +69,7 @@ const LAYERS: Layer[] = [
     level: 6,
     label: "[C]/[O] Conditional & open",
     short: "Conditional / open",
-    examples: "masses · A_s, n_s, r · η_B · Koide · S_pert (EG, 1-loop unitary) · v_geo scale · G_net (SEAM.EQUIV.01) · QG.AMB.01",
+    examples: "masses · A_s, n_s, r · η_B · Koide · S_pert (EG, 1-loop unitary) · v_geo scale [O] · G_net [C] (SEAM.EQUIV.01, closed modulo cited) · QG.AMB.01 [C] (redundancy)",
     tone: "from-amber-500 to-orange-600",
     ring: "ring-amber-400/40",
     text: "text-amber-50",

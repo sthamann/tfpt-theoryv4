@@ -166,8 +166,11 @@ inputs ($\gcar{=}5$ is the largest prime of the output $h(E_8){=}30$; the $8$ in
 with a \emph{unique} fixed point (\vref{v6}/\vref{v56}) and \emph{zero} free adjustable dimensionless parameters.
 Even $\pi$ is not a free dial: it is the fixed geometric constant of the boundary $2$-sphere
 ($\oint_{S^2}K=4\pi$), the one transcendental the continuous boundary contains. ``Which is the axiom?'' is the
-wrong question for a loop --- every part is fixed by the whole; the only genuinely open question is whether the loop
-also closes in the \emph{continuum} (the keystone \texttt{SEAM.EQUIV.01}).
+wrong question for a loop --- every part is fixed by the whole; the one remaining structural question, whether the loop
+also closes in the \emph{continuum} (the keystone \texttt{SEAM.EQUIV.01}), is now \emph{closed modulo a cited
+theorem} --- the lattice model and $S_3$ stack pin it at every computable level and it is Lean-formalised
+(\texttt{FORM.SEAM.MMST.01}); only the cited continuum-existence theorems stay \mO\ (\vref{v367}/\vref{v368},
+\vref{v376}--\vref{v379}, \vref{v336}).
 
 \subsection*{Sharper still: one anchor $a=(1,1,2)$, and $E_8$ as a compiler hull \texorpdfstring{(\mE)}{}}
 
@@ -438,7 +441,8 @@ the ambient metric measure is \emph{holographically reduced} to a finite seam-\e
 tier B, \vref{v76}) --- which is in turn the rigorously-constructed $(E_8)_1$ lattice net (\vref{v77}), so $G_{\mathrm{metric}}$
 is imported into existing RCFT rigor rather than built anew. So the only genuine residuals are \emph{one}
 dimensionful scale $v_{\mathrm{geo}}$ --- the \emph{dimensional-analysis floor} that no theory escapes (\vref{v78}),
-shared by flavor and gravity --- the boundary net identification, and the named QFT/cosmology transfer
+shared by flavor and gravity --- the boundary net identification (now \emph{closed modulo a cited theorem},
+\vref{v367}/\vref{v368}, \vref{v376}--\vref{v379}, Lean \texttt{FORM.SEAM.MMST.01}), and the named QFT/cosmology transfer
 interfaces ($F_{\mathrm{frontier}}$).
 \par\smallskip\noindent\textbf{Two points that are \emph{not} in the residual (closed, but easy to mis-list as open).}
 \emph{(i) Parameter-freeness is a theorem under the named hypotheses:} the boundary transport is gapped
@@ -485,10 +489,14 @@ existence and full-cone reflection positivity are discharged to \mE\ (\vref{v175
 \textbf{No-Unit Theorem} (\vref{v153}) makes $v_{\mathrm{geo}}$ an irreducible metrology primitive
 ($U_{\mathrm{point}}\sim v_{\mathrm{geo}}$, $1/G\sim v_{\mathrm{geo}}^2$, $m/\mu=e^{3/4}$ --- one unit in
 three dimensions). The flavor selector and Q-geometry residues are \emph{derived} (no discrete freedom
-left). What stays open is the \emph{one} seam-side identification, now packaged as the single named
+left). The \emph{one} seam-side identification, packaged as the single named
 theorem \texttt{SEAM.EQUIV.01} --- \emph{the raw reflection-positive seam state is the holomorphic
-$(E_8)_1$ net at $\tau{=}i$} --- whose conformal-deck premise \texttt{QGEO.SYM.01} is its \emph{downstream}
-definitional face (per \vref{v323}; the residual is Lean-pinned to named cited steps, \vref{v308}). The
+$(E_8)_1$ net at $\tau{=}i$} --- is now \emph{closed modulo a cited theorem}: the explicit lattice model
+(\vref{v367}/\vref{v368}) and the $S_3$ stack ($c{=}8$, $248$ currents/$1$ primary, torus $\mathrm{GSD}{=}1$, RP;
+\vref{v376}--\vref{v379}) pin it at every computable level, Lean-formalised as \texttt{FORM.SEAM.MMST.01}, with only
+the cited MMST/OS continuum-existence theorems left \mO\ (\vref{v336}); its conformal-deck premise
+\texttt{QGEO.SYM.01} is its \emph{downstream} definitional face (per \vref{v323}; the residual is Lean-pinned to named
+cited steps, \vref{v308}). The
 sprint-by-sprint reduction that produced it is recorded in the changelog and in
 \texttt{tfpt\_research\_contracts}, not replayed here.
 The status card:
@@ -503,14 +511,14 @@ Newton constant $G_N$ & \mE/\mC & not \emph{independent}: branch pins $\bar M_{\
 ratio $c_u/c_d=\tfrac{55}{117}$ & \mE & $\gcar\|\mathrm{Pl}_{\mathbf1,a}(K)\|_1/(\Nfam^2\Delta_Q)$; rigid on the derived stratum (\vref{v49}/\vref{v71}), no solve \\
 flavor absolute scale & \mE/\mO & ratios \emph{closed} (\vref{v49}/\vref{v71}); only the absolute scale remains $=v_{\mathrm{geo}}$ (Gate~1, \vref{v75}), the same anchor as $1/G$ \\
 $R+R^2$ gravity & \mE/\mC & covariant $f(R)$ field equation closed in regime; heat-kernel grounded (G2) \\
-Einstein eq.\ (covariant, local) & \mE/\mC & fixed-volume entanglement equilibrium $\Rightarrow$ \emph{full} $G_{ab}{+}\Lambda g_{ab}{=}\cthree^{-1}T_{ab}$ with BOTH coefficients parameter-free: $8\pi{=}1/\cthree$ (\vref{v358}, thermo$=$geo via $|\mu_4|{=}|\Z_2|\chi{=}4$) and $\Lambda$ from $\alpha$ (\vref{v60}); Einstein tensor via Lovelock, conservation an output (\vref{v359}); residual $=$ equation-of-state status $+$ global measure (C7) $+$ $v_{\mathrm{geo}}$ \\
+Einstein eq.\ (covariant, local) & \mE/\mC & fixed-volume entanglement equilibrium $\Rightarrow$ \emph{full} $G_{ab}{+}\Lambda g_{ab}{=}\cthree^{-1}T_{ab}$ with BOTH coefficients parameter-free: $8\pi{=}1/\cthree$ (\vref{v358}, thermo$=$geo via $|\mu_4|{=}|\Z_2|\chi{=}4$) and $\Lambda$ from $\alpha$ (\vref{v60}); Einstein tensor via Lovelock, conservation an output (\vref{v359}); residual $=$ equation-of-state status $+$ $v_{\mathrm{geo}}$, global measure (C7) now a \mC\ redundancy (\vref{v369}) \\
 physical QG sector & \mE/\mC & gap-decoupled admissible measure ($\Delta_{\mathrm{eff}}{=}1.648{>}0$) \\
-ambient QG measure & \mO (reduced) & \textbf{Gate 2 tier B}: holographically reduced to a finite seam-\emph{boundary} measure (\vref{v76}); IR tier closed (decoupling); strict-TOE cert.\ $=$ the simple-current extension $(D_5)_1{\otimes}(A_3)_1{\rtimes}\langle(1,1)\rangle\cong(E_8)_1$ (\vref{v154}); the free-bulk premise (A) is itself a fixed-point theorem with the cone eliminated (cone gap $=$ one-particle gap $(2/3)^6$) and factors into the already-open $A_2$ net-existence $+$ the keystone \texttt{SEAM.EQUIV.01} --- zero new gates (\vref{v160}--\vref{v165}) \\
+ambient QG measure & \mC\ (redundancy) & \textbf{certification object, not missing dynamics} (\vref{v369}; conditional on \texttt{SEAM.EQUIV.01}${+}$Bisognano--Wichmann): holographically reduced to a finite seam-\emph{boundary} measure (\vref{v76}); IR tier closed (decoupling); strict-TOE cert.\ $=$ the simple-current extension $(D_5)_1{\otimes}(A_3)_1{\rtimes}\langle(1,1)\rangle\cong(E_8)_1$ (\vref{v154}); the free-bulk premise (A) is itself a fixed-point theorem with the cone eliminated (cone gap $=$ one-particle gap $(2/3)^6$) and factors into the $A_2$ net-existence $+$ the keystone \texttt{SEAM.EQUIV.01}, closed modulo a cited theorem --- zero new gates (\vref{v160}--\vref{v165}) \\
 $v_{\mathrm{geo}}$ metrology unit & \mO (primitive) & No-Unit Theorem (\vref{v153}): a dimensionless compiler makes no absolute scale; $U_{\mathrm{point}}\sim v_{\mathrm{geo}}$, $1/G\sim v_{\mathrm{geo}}^2$, $m/\mu$ a ratio --- one unit, irreducible \\
-Koide & \mC & $Q_{\mathrm{src}}+\varphi_0/24$ as source$\to$pole transfer conjecture \\
-axion DM & \mC/\mO & $f_a=M_{\mathrm{scal}}/128$ as a scenario \\
-$\eta_B$ & \mC & readout closed; leptogenesis Boltzmann solve missing \\
-$m_p/m_e$ & \mO & cross-sector QCD/EW ratio \\
+Koide & \mC & $Q_{\mathrm{src}}+\varphi_0/24$ source$\to$pole: typed runnable solver with kill test (QED-excluded, \vref{v371}) \\
+axion DM & \mC & $f_a=M_{\mathrm{scal}}/128$: finite-$T$ spine-branch typed runnable solver (\vref{v373}) \\
+$\eta_B$ & \mC & readout closed; integrated BDP leptogenesis Boltzmann ODE, typed runnable solver (\vref{v372}) \\
+$m_p/m_e$ & \mC & cross-sector QCD/EW ratio: typed runnable solver with uncertainty budget (\vref{v374}) \\
 $N_\star$ & \mC & reheating input; scalaron-reheating point $N_\star{=}51.4$ (\vref{v86}); frozen band $[50,60]$ \\
 $a=(1,1,2)$ & \mE/\mC & forced by $4=2+1+1$, conditional on the carrier \\
 carrier selection $g{=}5$ (QBL) & \mE/\mC & theorem chain \vref{v108}--\vref{v113}: sheet-odd kernel, self-counting channel, transport degree $2$, one quasi-free kernel (rank $=c$); residue $=$ the $G_{\mathrm{net}}$ premise itself --- gate closes $\Rightarrow$ carrier \mE \\
@@ -522,16 +530,19 @@ $E_8$ Lean & \mE & hardening, not a blocker (script-certified) \\
 \end{tabularx}
 \end{center}
 \markerkey
-\noindent The structural open core is the \emph{single} named keystone \texttt{SEAM.EQUIV.01} (the
-$G_{\mathrm{net}}$ inclusion: the raw RP seam $=(E_8)_1$ at $\tau{=}i$); its conformal-deck face
-\texttt{QGEO.SYM.01} is now a \emph{corollary} (a conformal net's vacuum is rotation-invariant by axiom,
+\noindent The former structural open core, the \emph{single} named keystone \texttt{SEAM.EQUIV.01} (the
+$G_{\mathrm{net}}$ inclusion: the raw RP seam $=(E_8)_1$ at $\tau{=}i$), is now \emph{closed modulo a cited theorem}:
+the explicit lattice model (\vref{v367}/\vref{v368}) and the $S_3$ stack ($c{=}8$, $248$ currents/$1$ primary, torus
+$\mathrm{GSD}{=}1$, RP; \vref{v376}--\vref{v379}) pin it at every computable level, it is Lean-formalised as
+\texttt{FORM.SEAM.MMST.01}, and only the cited MMST/OS continuum-existence theorems stay \mO\ (\vref{v336}); its
+conformal-deck face \texttt{QGEO.SYM.01} is a \emph{corollary} (a conformal net's vacuum is rotation-invariant by axiom,
 \vref{v323}/\veri{v335\_seam\_equiv\_unify.py}), not a second item. $v_{\mathrm{geo}}$ is an irreducible metrology
-unit and the frontier items are typed interfaces, not structural holes. $G_{\mathrm{net}}$ is now heat-kernel
+unit and the frontier items are typed interfaces, not structural holes. $G_{\mathrm{net}}$ is heat-kernel
 grounded (G2: the spectral action gives $R+R^2$ structurally) and \emph{gap-decoupled} (G5:
-$\Delta_{\mathrm{eff}}{=}1.648{>}0$ isolates the closed admissible sector from the un-built ambient), so the
-ambient measure \texttt{QG.AMB.01} is \emph{not} a TFPT structural item at all: it is the \emph{general}
-Euclidean-QG conformal-factor problem (Gibbons--Hawking--Perry 1978), inherited and decoupled --- its absence does
-not affect any TFPT readout, it only blocks certification as a strict physical TOE. Both are written up
+$\Delta_{\mathrm{eff}}{=}1.648{>}0$ isolates the closed admissible sector from the ambient), so the
+ambient measure \texttt{QG.AMB.01} is no longer carried as an open structural item: it is a \mC\ \emph{redundancy}
+(\vref{v369}, conditional on \texttt{SEAM.EQUIV.01}${+}$Bisognano--Wichmann), a certification object rather than
+missing dynamics --- it does not affect any TFPT readout. Both are written up
 as numbered \emph{research contracts} (lemma chains $+$ closing theorem $+$ machine-certifiability) in the
 companion \texttt{tfpt\_research\_contracts}, with priority on the $v_{\mathrm{geo}}$ scale anchor and the
 $G_{\mathrm{net}}$/\texttt{SEAM.EQUIV.01} inclusion theorem.
@@ -544,16 +555,19 @@ exactly one $1$-dim irrep (\veri{v219\_icosahedral\_mckay.py}) --- all of which 
 ($\#(\text{mark-}1)=|H_1|=1$ only for $E_8$; holomorphic $c=8=\gcar+\Nfam$ gives the unique even unimodular
 rank-$8$ lattice). In abelian Chern--Simons language this is the single integer step holomorphic
 $\Leftrightarrow\det K=1$, the extension tower $D_5{\oplus}A_3(16)\to D_8(4)\to E_8(1)$ being anyon
-condensation (the Kitaev $E_8$ state); the one open analytic step is then ``the free RP seam condenses the
+condensation (the Kitaev $E_8$ state); the one analytic step ``the free RP seam condenses the
 order-$|\mu_4|$ Lagrangian glue'' $=$ the single named keystone \texttt{SEAM.EQUIV.01} (with
-\texttt{QGEO.SYM.01} its downstream conformal-deck face). So beneath the gate \emph{labels} there is,
+\texttt{QGEO.SYM.01} its downstream conformal-deck face) is now \emph{closed modulo a cited theorem}
+(\vref{v367}/\vref{v368}, \vref{v376}--\vref{v379}, Lean \texttt{FORM.SEAM.MMST.01}; cited continuum existence \mO,
+\vref{v336}). So beneath the gate \emph{labels} there is,
 structurally, a single fundamental postulate. And the entire \emph{emergent-QFT layer} collapses onto the
 \emph{same} postulate (the \emph{Modular Spectral Closure}, \vref{v261}): the finite Dirac is a
 covariance induction of the seam KMS state (\vref{v258}), the spectral-action cutoff \emph{is} that KMS
 weight ($f_2/f_0=1$, \vref{v259}), the seam, the carrier-$16$ and $E_8$ live on one Kummer/K3 surface
 (\vref{v260}), so Dirac, cutoff, gauging, glue and orientability are all readouts of the one seam state ---
 the boundary QFT is closed as a single relative object modulo the keystone \texttt{SEAM.EQUIV.01} and adds
-\emph{no new open item}, while the ambient quantum-gravity measure stays separate by design.
+\emph{no new open item}, while the ambient quantum-gravity measure is a \mC\ redundancy (\vref{v369}), not a separate
+structural gap.
 \veri{v234\_seam\_holomorphy\_selection.py} \veri{v235\_seam\_chern\_simons.py}
 
 \begin{winboxnb}[Reduction in one line]
@@ -799,8 +813,12 @@ numerological. (Audit level; all identities machine-verified.)
       (\vref{v359}). The $R{+}R^2$ scalaron is the \emph{action}/inflation layer (the next-order term of the
       same equilibrium route, \vref{v360}), and $v_{\mathrm{geo}}$ is the theory's single dimensionful input
       (\vref{v364}). What remains is \emph{not} the field equation but the equation-of-state status (Jacobson
-      framing, not a from-action quantisation), the ambient measure \texttt{QG.AMB.01} and the one unit
-      $v_{\mathrm{geo}}$. \mE\ (local field equation) / \mO\ (ambient measure)
+      framing, not a from-action quantisation) and the one unit $v_{\mathrm{geo}}$; the ambient measure
+      \texttt{QG.AMB.01} is now a \mC\ redundancy (\vref{v369}, conditional on
+      \texttt{SEAM.EQUIV.01}${+}$Bisognano--Wichmann), not missing dynamics, and \emph{perturbative} graviton
+      unitarity is established --- the Stelle ghost is a Seeley--DeWitt truncation artefact (\vref{v304}), the
+      spin-$2$ sector ghost-free via the entire KMS form factor (\vref{v370}) with the truncation tower decoupling
+      (\vref{v380}). \mE\ (local field equation) / \mC\ (perturbative unitarity, ambient redundancy)
 \item \textbf{Strong CP --- decoupled.} $\theta_{\mathrm{eff}}{=}0$ follows from three structural facts
       ($\gamma_5$-Hermiticity, polar structure, sheet involution) $+$ reflection positivity ---
       \emph{without} a mass gap. \mE\ (given RP)
@@ -812,11 +830,14 @@ numerological. (Audit level; all identities machine-verified.)
       S_{\mathrm{rel}})$ --- the \emph{Modular Spectral Closure}: the finite Dirac is a covariance induction
       of the seam KMS state (\vref{v258}), the spectral-action cutoff \emph{is} that KMS weight (\vref{v259}),
       the seam/carrier/$E_8$ live on one Kummer/K3 (\vref{v260}), all certified together (\vref{v261}) ---
-      closed modulo the single keystone \texttt{SEAM.EQUIV.01}. \emph{What this does \emph{not} close:} the full
+      closed modulo the single keystone \texttt{SEAM.EQUIV.01}, itself now \emph{closed modulo a cited theorem}
+      (lattice $+$ $S_3$ stack, Lean \texttt{FORM.SEAM.MMST.01}; \vref{v367}/\vref{v368}, \vref{v376}--\vref{v379}).
+      \emph{What this does \emph{not} fully close:} the full
       measured pole masses (the absolute scale $v_{\mathrm{geo}}$ $+$ standard RG), the absolute QCD scales
-      ($m_p/m_e$, \mO), the complete PMNS dynamics (the angles are typed; the full mass/CP dynamics stay
-      \mC/\mO), and the real $4$D interacting QFT / ambient measure (\mO). \mE\ (transfer model $+$ boundary
-      relative object) / \mC\ (continuum) / \mO\ (real $4$D)
+      ($m_p/m_e$, now a typed \mC\ transfer, \vref{v374}), the complete PMNS dynamics (the angles are typed; the full
+      mass/CP dynamics stay \mC/\mO), and the real $4$D interacting QFT --- the continuum limit, whose cited
+      existence theorems stay \mO\ --- with the ambient measure a \mC\ redundancy (\vref{v369}). \mE\ (transfer model
+      $+$ boundary relative object) / \mC\ (continuum modulo cited, transfers, ambient redundancy)
 \item \textbf{Axioms P1/P2 --- P2 machine-verified.} The Lean proof builds cleanly (\texttt{3357 jobs},
       0 \texttt{sorry}, only kernel axioms); the P2 algebra is a theorem, P1 a typed interface. They
       remain declared inputs. \mE/\mO
@@ -847,18 +868,18 @@ flavour matrix / H2 & \mE & dictionary \emph{exact} (hexagon $=$ twisted family 
 seam quantum clock (R1) & \mE/\mC & typed closed: reduced edge-sector clock (\vref{v124}--\vref{v133}); external VW edge $=2\times$ reduced budget, full 4d det $=$ firewall (\vref{v138}); det-ratio cancellation derived in-family (\vref{v144}) \\
 inflation $A_s,n_s,r$, scalaron $M$ & \mC & scalaron $M{=}\cthree^{7/2}\Mbar$ exact; $n_s,r$ are bands over $N_\star\in[50,60]$ (reheating point $51.4$, \vref{v86}) \\
 \midrule
-boundary QFT (Modular Spectral Closure) & \mE/\mC & \textbf{one relative object} $\mathsf{TFPT}_{\mathrm{QFT}}$: $D_F=$ covariance induction (\vref{v258}), cutoff $=$ KMS weight $f_2/f_0{=}1$ (\vref{v259}), seam/carrier/$E_8$ on one K3 (\vref{v260}), certified (\vref{v261}) --- closed modulo \texttt{SEAM.EQUIV.01} \\
-perturbative $4$D S-matrix ($S_{\mathrm{pert}}$) & \mE/\mC & \textbf{Epstein--Glaser-constructible} (\vref{v269}): one-loop quartic (\vref{v271}) $+$ gauge $\beta=(41/10,-19/6,-7)$ (\vref{v273}), $S_{\mathrm{pert}}\!\xrightarrow{\mathrm{LSZ}}\!S_{\mathrm{phys}}$ with one-loop unitarity (optical theorem, \vref{v278}) --- matter$+$gauge; gravity $R^2/$Weyl$^2$ non-unitary (Stelle ghost) \\
+boundary QFT (Modular Spectral Closure) & \mE/\mC & \textbf{one relative object} $\mathsf{TFPT}_{\mathrm{QFT}}$: $D_F=$ covariance induction (\vref{v258}), cutoff $=$ KMS weight $f_2/f_0{=}1$ (\vref{v259}), seam/carrier/$E_8$ on one K3 (\vref{v260}), certified (\vref{v261}) --- closed modulo \texttt{SEAM.EQUIV.01}, itself closed modulo a cited theorem (\vref{v376}--\vref{v379}) \\
+perturbative $4$D S-matrix ($S_{\mathrm{pert}}$) & \mE/\mC & \textbf{Epstein--Glaser-constructible} (\vref{v269}): one-loop quartic (\vref{v271}) $+$ gauge $\beta=(41/10,-19/6,-7)$ (\vref{v273}), $S_{\mathrm{pert}}\!\xrightarrow{\mathrm{LSZ}}\!S_{\mathrm{phys}}$ with one-loop unitarity (optical theorem, \vref{v278}); the spin-$2$ graviton sector is perturbatively unitary too --- the Stelle ghost is a Seeley--DeWitt truncation artefact (\vref{v304}/\vref{v370}/\vref{v380}) \\
 \midrule
-\multicolumn{3}{@{}l}{\textit{genuinely open --- the actual TOE remainder (what the closure does \emph{not} cover)}}\\
+\multicolumn{3}{@{}l}{\textit{the actual TOE remainder --- dimensionful units, typed transfers, and the cited-theorem ceiling on the seam}}\\
 QFT measure (admissible sector) & \mE & \textbf{closed: RP from cusp spectrum, OS reconstruction} \\
 full measured pole masses & \mC & ladder $\times\,v_{\mathrm{geo}}$, dressed by standard RG (no new physics); $v_{\mathrm{geo}}$ over-determined (\vref{v274}) \\
-absolute QCD scales ($m_p/m_e$, $\Lambda_{\mathrm{QCD}}$) & \mO & QCD matching contract (\texttt{FR.MPME.01}); not a compiler number \\
+absolute QCD scales ($m_p/m_e$, $\Lambda_{\mathrm{QCD}}$) & \mC & typed runnable transfer with uncertainty budget (\vref{v374}, contract \texttt{FR.MPME.01}); not a compiler number \\
 full PMNS dynamics (mass scale, CP) & \mC/\mO & angles typed; CP strength $J_{\mathrm{PMNS}}{=}{-}0.0297$ derived (\vref{v270}); absolute $\nu$-scale $=$ one seesaw ratio (\vref{v272}) \\
-\textbf{(1)} \texttt{SEAM.EQUIV.01} --- one named theorem (\emph{raw seam $=(E_8)_1$ at $\tau{=}i$}) & \mO & the single arrow unifying the flat-$\tau{=}i$ geometry and the $\det K{=}1$ holomorphy (\vref{v282}/\vref{v286}, import firewall). After the closing arc (\vref{v300}--\vref{v302}) its residual is a composition of \emph{cited} theorems over \emph{established} TFPT facts: Flat-Away hardened to a discrete obstruction $+$ its pin derived from $(E_8)_1$ (\vref{v300}); Route~A's invertibility discharged by the free-fermion classification (\vref{v301}); the last input $=$ the derived Recovery gap $6\ln(3/2){>}0$ (\vref{v302}). No undischarged TFPT-internal assumption remains (stays \mO: not machine-proved end-to-end) \\
-\textbf{(2)} \texttt{QG.AMB.01} --- ambient measure (\emph{decoupled, non-TFPT}) & \mO & \emph{not} a TFPT structural item: the \emph{general} Euclidean-QG conformal-factor problem (GHP 1978), gap-decoupled (margin $1.648{>}0$, \vref{v330}/\vref{v335}) so no readout depends on it; obstruction characterised (\vref{v332}) $+$ conditionally resolved by GHP$+$IDG (\vref{v334}); Tier-B's holomorphy bit ($\det K{=}1$, \vref{v277}) is absorbed into \texttt{SEAM.EQUIV.01} \\
+\textbf{(1)} \texttt{SEAM.EQUIV.01} --- one named theorem (\emph{raw seam $=(E_8)_1$ at $\tau{=}i$}) & \mC & \textbf{closed modulo a cited theorem}: the explicit lattice model (\vref{v367}/\vref{v368}) and the $S_3$ stack ($c{=}8$, $248$ currents/$1$ primary, torus $\mathrm{GSD}{=}1$, RP; \vref{v376}--\vref{v379}) pin it at every computable level, Lean-formalised as \texttt{FORM.SEAM.MMST.01} (collar hypotheses kernel-proved, MMST/OS as named cited axioms, clean \texttt{\#print axioms}); the \emph{only} residual that stays \mO\ is the abstract continuum existence of the scaling limit --- exactly the two cited published theorems (\vref{v336}) \\
+\textbf{(2)} \texttt{QG.AMB.01} --- ambient measure (\emph{redundancy, not missing dynamics}) & \mC & \textbf{discharged as a redundancy} (\vref{v369}; \vref{v379} RP$\to$OS), conditional on \texttt{SEAM.EQUIV.01}${+}$Bisognano--Wichmann: a certification object, gap-decoupled (margin $1.648{>}0$, \vref{v330}/\vref{v335}) so no readout depends on it; obstruction characterised (\vref{v332}) $+$ conditionally resolved by GHP$+$IDG (\vref{v334}); Tier-B's holomorphy bit ($\det K{=}1$, \vref{v277}) is absorbed into \texttt{SEAM.EQUIV.01} \\
 analytic boundary origin of $\pi$ ($c_3{=}\tfrac1{8\pi}$) & \mC & \textbf{hardened: $c_3{=}1/(|\Z_2|\oint_{S^2}K)=1/(8\pi)$ (Gauss--Bonnet)}; ``$8$''${=}\operatorname{rank}E_8$; $\pi$ stays the one primitive \\
-$\eta_B$, $m_p/m_e$, Koide, dark matter & \mO & frontier handles only (see document~4) \\
+$\eta_B$, $m_p/m_e$, Koide, dark matter & \mC & typed runnable transfer solvers with kill tests (\vref{v371}--\vref{v374}, observatory CI \vref{v375}; see document~4) \\
 \bottomrule
 \end{tabularx}
 \end{center}
@@ -873,37 +894,43 @@ $\mathsf{TFPT}_{\mathrm{QFT}}$ (the \emph{Modular Spectral Closure}, \vref{v258}
 covariance induction, the cutoff the seam KMS weight, seam/carrier/$E_8$ on one Kummer/K3) --- closed modulo
 the single keystone \texttt{SEAM.EQUIV.01}. \emph{What that closure does \emph{not} reach} is exactly the
 dimensionful/ambient remainder: the full measured pole masses (ladder $\times\,v_{\mathrm{geo}}$ $+$ standard
-RG, \mC), the absolute QCD scales ($m_p/m_e$, \mO), the complete PMNS dynamics (\mC/\mO), and the
-nonperturbative \emph{ambient} measure \texttt{QG.AMB.01}. (The metric-sector \emph{field equation} itself
-is now parameter-free at the local level --- the full covariant $G_{ab}{+}\Lambda g_{ab}{=}\cthree^{-1}T_{ab}$
-from fixed-volume entanglement equilibrium, \vref{v358}/\vref{v359} --- so what stays \mO\ is the ambient
-\emph{measure}, not the field equation.) The
+RG, \mC), the absolute QCD scales ($m_p/m_e$, now a typed \mC\ transfer, \vref{v374}), the complete PMNS dynamics (\mC/\mO), and the
+nonperturbative \emph{ambient} measure \texttt{QG.AMB.01}, now itself a \mC\ redundancy (\vref{v369}). (The
+metric-sector \emph{field equation} is parameter-free at the local level --- the full covariant
+$G_{ab}{+}\Lambda g_{ab}{=}\cthree^{-1}T_{ab}$ from fixed-volume entanglement equilibrium, \vref{v358}/\vref{v359}
+--- and the ambient \emph{measure} is no longer an open structural item but a certification object, conditional on
+\texttt{SEAM.EQUIV.01}${+}$Bisognano--Wichmann.) The
 \emph{perturbative} $4$D QFT is now built: the spectral-action S-matrix is Epstein--Glaser-constructible and
 LSZ-bridged to the physical asymptotic S-matrix with one-loop unitarity for the matter$+$gauge sector
-(\vref{v269}--\vref{v278}); only the nonperturbative ambient measure stays \mO\ --- its $R^2/$Weyl$^2$
-gravity sector is renormalizable but non-unitary (the Stelle ghost), the lone perturbatively-irreducible
-piece, with Tier-B reduced to the single holomorphy bit $\det K{=}1$ (\vref{v277}) and the whole bedrock
-reduced to one geometric postulate, \emph{the raw seam is the flat $\tau{=}i$ pillowcase} (\vref{v276}).
-The single open lemma is the named theorem \texttt{SEAM.EQUIV.01} --- \emph{the raw reflection-positive
-seam state is the holomorphic $(E_8)_1$ net at $\tau{=}i$}. (The flat $\tau{=}i$ geometry and the $E_8$
-holomorphy are \emph{two faces of one object}: the $(E_8)_1$ character is $\chi_{E_8}{=}j^{1/3}$, so
-$\chi_{E_8}(i){=}1728^{1/3}{=}12$ and $\tau{=}i$ is at once the order-$4$ CM point and the $(E_8)_1$
-partition-function modulus, \vref{v282}.) It stays \mO\ (not machine-proved end-to-end), but its whole
-residual is now a composition of \emph{standard cited theorems} (Osterwalder--Schrader/quasi-free clustering,
-the Kitaev free-fermion classification, the Route-A AQFT stack) over \emph{established} TFPT facts, with
-\emph{no} undischarged TFPT-internal assumption left --- Lean-pinned to exactly those named steps plus the
-derived Recovery gap $\Delta=6\ln(3/2)\approx2.43>0$ (\vref{v308}); the conformal-deck premise
+(\vref{v269}--\vref{v278}), and the spin-$2$ graviton sector is perturbatively unitary too --- the $R^2/$Weyl$^2$
+Stelle ghost is a Seeley--DeWitt \emph{truncation artefact} (\vref{v304}), ghost-free via the entire KMS form factor
+and the Barnes--Rivers decomposition (\vref{v370}) with the truncation tower decoupling (\vref{v380}); the whole
+bedrock reduces to one geometric postulate, \emph{the raw seam is the flat $\tau{=}i$ pillowcase} (\vref{v276}), with
+Tier-B's holomorphy bit $\det K{=}1$ (\vref{v277}) absorbed into \texttt{SEAM.EQUIV.01}.
+The former single open lemma, the named theorem \texttt{SEAM.EQUIV.01} --- \emph{the raw reflection-positive
+seam state is the holomorphic $(E_8)_1$ net at $\tau{=}i$} --- is now \emph{closed modulo a cited theorem}. (The
+flat $\tau{=}i$ geometry and the $E_8$ holomorphy are \emph{two faces of one object}: the $(E_8)_1$ character is
+$\chi_{E_8}{=}j^{1/3}$, so $\chi_{E_8}(i){=}1728^{1/3}{=}12$ and $\tau{=}i$ is at once the order-$4$ CM point and the
+$(E_8)_1$ partition-function modulus, \vref{v282}.) The explicit lattice model (\vref{v367}/\vref{v368}) and the
+$S_3$ stack ($c{=}8$, $248$ currents/$1$ primary, torus $\mathrm{GSD}{=}1$, RP; \vref{v376}--\vref{v379}) pin it at
+every computable level, and it is Lean-formalised as \texttt{FORM.SEAM.MMST.01} (collar hypotheses kernel-proved,
+the MMST scaling-limit and Adamo--Moriwaki--Tanimoto OS-reconstruction theorems as named cited axioms, clean
+\texttt{\#print axioms}); the \emph{only} residual that stays \mO\ is the abstract continuum existence of the scaling
+limit --- exactly those two cited published theorems (\vref{v336}) --- so it is closed \emph{modulo a cited theorem},
+not solved, Lean-pinned to exactly those named steps plus the derived Recovery gap
+$\Delta=6\ln(3/2)\approx2.43>0$ (\vref{v308}); the conformal-deck premise
 \texttt{QGEO.SYM.01} is its \emph{downstream} definitional face (\vref{v323}). This is by design the
-\emph{one} irreducible structural postulate of the theory --- the role the \emph{constancy of $c$} plays in
+\emph{one} irreducible structural input of the theory --- the role the \emph{constancy of $c$} plays in
 relativity. It is not a defect to be removed but the single, sharply-localised, falsifiable premise on which
-the whole boundary closure turns; ``closing the theory'' is therefore the concrete task of proving (or
-refuting) exactly this one arrow, not an open-ended search. The full sprint-by-sprint reduction that pinned
+the whole boundary closure turns; with the lattice/$S_3$ pinning and the Lean formalisation in place,
+``closing the theory'' has reduced to invoking exactly the two cited continuum-existence theorems, not an
+open-ended search. The full sprint-by-sprint reduction that pinned
 \texttt{SEAM.EQUIV.01} is recorded in the changelog, not replayed here. The seam seed is \emph{hardened}:
 $c_3=1/(|\Z_2|\oint_{S^2}K\,dA)=1/(8\pi)$ is the one-sided Gauss--Bonnet normalisation of the seam sphere,
 with the discrete ``$8$'' equal to $\operatorname{rank}E_8$ and only the Gauss--Bonnet $\pi$ left as the
-single irreducible primitive. What remains for a full TOE is then the ambient-RP hypothesis (full QG),
-plus the standard-RG
-dimensionful masses and the honest frontier items. No load-bearing discrete parameter remains free, and
+single irreducible primitive. What remains for a full TOE is then the cited continuum-existence theorem on
+the seam and the one unit $v_{\mathrm{geo}}$, plus the standard-RG
+dimensionful masses and the typed frontier transfers (the ambient QG measure being a \mC\ redundancy, \vref{v369}). No load-bearing discrete parameter remains free, and
 $\pi$ is the lone continuous primitive. \emph{4D-QFT fork policy (frozen, \vref{v265}):} the canonical 4D
 reading is \emph{boundary only} --- a 4D-GUT is \emph{not claimed by default} ($E_8$ is the audit hull;
 SM-only unification is killed, \vref{v246}); carrier-native Pati--Salam is a separately-typed, falsifiable

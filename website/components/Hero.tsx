@@ -198,7 +198,7 @@ const SCOPE_GUARD: { marker: string; label: string; meaning: string; tone: strin
   {
     marker: "[O]",
     label: "Open",
-    meaning: "Declared inputs (c₃, g_car), the scale anchor v_geo, and one geometric premise",
+    meaning: "Declared inputs (c₃, g_car), the scale anchor v_geo, and the cited continuum-existence residual of the seam keystone",
     tone: "border-rose-400/30 bg-rose-500/10 text-rose-200",
   },
 ];
@@ -254,8 +254,8 @@ const STATS: Array<{
     note: "In the closed branch; only π stays irreducible after the bootstrap",
   },
   {
-    label: "Open interfaces",
+    label: "Residual interfaces",
     value: "3",
-    note: "v_geo scale anchor + G_net metric inclusion + F_transfer — explicitly open",
+    note: "v_geo scale anchor [O] + G_net metric inclusion [C] + F_transfer [C] — honestly typed",
   },
 ];

@@ -52,7 +52,7 @@ export default function CompilerPage() {
           </p>
         </div>
         <a
-          href="/compiler/index.html?v=3"
+          href="/compiler/index.html?v=4"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-slate-700/60 bg-white/5 px-3 py-1.5 text-xs font-medium text-slate-200 transition-colors hover:bg-white/10 hover:text-white"
@@ -62,7 +62,7 @@ export default function CompilerPage() {
         </a>
       </div>
       <iframe
-        src="/compiler/index.html?v=3"
+        src="/compiler/index.html?v=4"
         title="TFPT Machine — the compiler in action: from one edge to the Standard Model"
         loading="lazy"
         className="w-full flex-1 border-0 bg-[#080c18]"

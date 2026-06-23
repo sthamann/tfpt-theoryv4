@@ -43,7 +43,7 @@ const ROWS: Row[] = [
   },
   {
     layer: "Frontier items",
-    status: "Honest handles — Koide, m_p/m_e, dark matter; the local Einstein equation Gₐᵦ+Λgₐᵦ=c₃⁻¹Tₐᵦ is parameter-free [E], the ambient nonperturbative QG measure stays the frontier",
+    status: "Honest handles — Koide, m_p/m_e, dark matter, now runnable typed solvers (v371–v375); the local Einstein equation Gₐᵦ+Λgₐᵦ=c₃⁻¹Tₐᵦ is parameter-free [E]; the ambient nonperturbative QG measure QG.AMB.01 is discharged as a redundancy [C] (v369+v379) and perturbative graviton unitarity is established [C] (v304/v370/v380)",
     paper: "Doc 4",
     tone: "conditional",
   },

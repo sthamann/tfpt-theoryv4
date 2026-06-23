@@ -24,7 +24,7 @@ core is machine-checked; physical readouts run through \emph{named bridges} whos
 \textbf{Interface} & \textbf{Question} & \textbf{Status} \\
 \midrule
 $v_{\mathrm{geo}}$ & the one metrology unit ($=1/\sqrt G=m/\mu$); No-Unit Thm: no compiler scale & primitive \mO \\
-$G_{\mathrm{net}}$ & simple-current extension $(D_5)_1{\otimes}(A_3)_1{\rtimes}\langle(1,1)\rangle\cong(E_8)_1$ & \mE/\mC \\
+$G_{\mathrm{net}}$ & simple-current extension $(D_5)_1{\otimes}(A_3)_1{\rtimes}\langle(1,1)\rangle\cong(E_8)_1$ & \mC \\
 $F_{\mathrm{transfer}}$ & one functor, four typed interfaces (Koide, $\eta_B$, axion, $m_p/m_e$) & \mC \\
 \bottomrule
 \end{tabular}
@@ -36,21 +36,31 @@ coefficients fixed --- $\cthree^{-1}=8\pi$ (no free dimensionless Newton dial; t
 \emph{coincides} with the geometric one $|\Z_2|2\pi\chi$ via $|\mu_4|=|\Z_2|\chi(S^2)=4$, so $\cthree$ is triply
 over-determined --- anchor, geometry, thermodynamics, \texttt{v358}) and $\Lambda$ from $\alpha$ ($\rho_\Lambda
 =(3/4\pi^2)e^{-2\alpha^{-1}}$, \texttt{v60}); the Einstein tensor (not Ricci) is forced by Lovelock, so matter
-conservation is an output (\texttt{v359}). The residual is only the equation-of-state status, the global measure
-(C7) and the one unit $v_{\mathrm{geo}}$.
+conservation is an output (\texttt{v359}). The residual here is only the equation-of-state status and the one unit
+$v_{\mathrm{geo}}$; the global measure (C7 $=$ \texttt{QG.AMB.01}) is now a \mC\ redundancy (\texttt{v369}), a
+certification object rather than missing dynamics, conditional on \texttt{SEAM.EQUIV.01} and Bisognano--Wichmann.
 \smallskip\\
-\noindent The single open \emph{structural theorem} is $G_{\mathrm{net}}$ ($=$ \texttt{SEAM.EQUIV.01}: the raw seam
-\emph{is} the holomorphic $(E_8)_1$ net), a constructive-AQFT theorem whose only open input is the continuum
-Osterwalder--Schrader reconstruction of the gapped quasi-free collar. \texttt{QGEO.SYM.01} (the $\mu_4$ deck acting
-geometrically) is now its \emph{corollary}: a conformal net's vacuum is rotation-invariant by axiom, so the deck
-follows with no extra premise (\texttt{v335}, Lean \texttt{FORM.QGEO.BW.01}). The full nonperturbative
-quantum-gravity measure \texttt{QG.AMB.01} is the \emph{general} Euclidean-QG conformal-factor problem (Gibbons--
-Hawking--Perry 1978), from which TFPT is rigorously \emph{gap-decoupled} (margin $1.648>0$, \texttt{v76}/\texttt{v330})
---- an inherited, decoupled problem, \emph{not} a TFPT-specific open item. So the honest residual is \emph{one}
-solvable theorem ($G_{\mathrm{net}}$) plus the typed $v_{\mathrm{geo}}$ and $F_{\mathrm{transfer}}$ interfaces.
+\noindent The seam-net structural theorem $G_{\mathrm{net}}$ ($=$ \texttt{SEAM.EQUIV.01}: the raw seam \emph{is} the
+holomorphic $(E_8)_1$ net) is now \emph{closed modulo a cited theorem}. The explicit lattice model (\texttt{v367}/%
+\texttt{v368}) and the $S_3$ closure stack pin the target at every computable level --- central charge $c=8$
+(\texttt{v376}), the $(E_8)_1$ character with $248$ currents and one primary (\texttt{v377}), genus-one torus
+$\mathrm{GSD}=1$ (\texttt{v378}) and reflection positivity (\texttt{v379}) --- and it is Lean-formalised as
+\texttt{FORM.SEAM.MMST.01}: the collar's MMST hypotheses are kernel-proved, the MMST scaling-limit and
+Adamo--Moriwaki--Tanimoto OS-reconstruction theorems enter as named cited axioms, and the \texttt{\#print axioms}
+check is clean. The \emph{only} residual that stays \mO\ is the abstract continuum existence of the scaling limit, i.e.\
+exactly those two cited published theorems (\texttt{v336}); so this is \emph{closed modulo a cited theorem}, not
+solved. \texttt{QGEO.SYM.01} (the $\mu_4$ deck acting geometrically) is its \emph{corollary}: a conformal net's vacuum
+is rotation-invariant by axiom, so the deck follows with no extra premise (\texttt{v335}, Lean
+\texttt{FORM.QGEO.BW.01}). The nonperturbative quantum-gravity measure \texttt{QG.AMB.01} is no longer carried as an
+open item: it is a \mC\ \emph{redundancy} (\texttt{v369}), a certification object rather than missing dynamics,
+conditional on \texttt{SEAM.EQUIV.01} and Bisognano--Wichmann (and TFPT is moreover rigorously gap-decoupled from the
+general Euclidean-QG conformal-factor problem, margin $1.648>0$, \texttt{v76}/\texttt{v330}). So the honest residual is
+the one unit $v_{\mathrm{geo}}$ plus the typed $F_{\mathrm{transfer}}$ interfaces, above the cited-theorem ceiling on
+the seam and with \texttt{QG.AMB.01} a \mC\ redundancy.
 \noindent Everything carries a claim ID resolving to a row of \texttt{verification/status\_ledger.csv}
 (the single source of truth); \textbf{if the text and the ledger ever disagree, the ledger wins.} The
 historical labels $(U_{\mathrm{wall}},G_{\mathrm{metric}},F_{\mathrm{frontier}})$ are retained only for
-ledger continuity --- the live residual is $v_{\mathrm{geo}}\oplus G_{\mathrm{net}}\oplus F_{\mathrm{transfer}}$.
+ledger continuity --- the live residual is $v_{\mathrm{geo}}\oplus F_{\mathrm{transfer}}$, with the seam
+$G_{\mathrm{net}}$ closed modulo a cited theorem and \texttt{QG.AMB.01} a \mC\ redundancy.
 \markerkey
 \end{keyboxnb}

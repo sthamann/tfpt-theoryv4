@@ -15,8 +15,8 @@ const CLAIMS = [
 const NOT_CLAIMS = [
   "E₈ is the unimodular audit/compiler hull, not an unbroken physical gauge group — so the no-go results against literal E₈ world-formulas do not apply.",
   "The dimensionful EW/QCD masses (m_W, m_Z, m_H, sin²θ_W, α_s) sit on the RG scheme layer; the absolute quark amplitude scale reduces to the U_point anchor.",
-  "The frontier items — η_B, m_p/m_e, Koide, dark matter — are honest handles, not forced compiler powers; gravity's local field equation is now parameter-free (Gₐᵦ + Λgₐᵦ = c₃⁻¹Tₐᵦ, both coefficients fixed), with only the ambient measure left open.",
-  "No strict physical TOE is certified: the ambient, non-perturbative quantum-gravity measure (G6 / QG.AMB.01) — decoupled from the now-closed local field equation — remains the open completion target.",
+  "The frontier items — η_B, m_p/m_e, Koide, dark matter — are honest handles, not forced compiler powers, now runnable typed solvers (F_transfer = F_pole ⊕ F_Boltzmann ⊕ F_relic ⊕ F_QCD, v371–v374) with kill tests; gravity's local field equation is parameter-free (Gₐᵦ + Λgₐᵦ = c₃⁻¹Tₐᵦ, both coefficients fixed).",
+  "No strict physical TOE is certified end-to-end: the keystone SEAM.EQUIV.01 is closed only modulo a cited published theorem (the MMST/Adamo continuum scaling-limit existence, v336), and v_geo stays the one metrology unit. The ambient quantum-gravity measure (G6 / QG.AMB.01) is NOT the open completion target — it is discharged as a redundancy [C] (v369 + v379), a certification object, not missing dynamics.",
 ];
 
 export function WhatTfptClaims() {
