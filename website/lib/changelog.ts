@@ -47,6 +47,266 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "Direction 6, "
+      },
+      {
+        "k": "m",
+        "v": "v_{\\mathrm{geo}}"
+      },
+      {
+        "k": "t",
+        "v": " sharpened: after the parameter-free gravity, the "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "gravity"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " sector adds NO new dimensionful input either, so "
+      },
+      {
+        "k": "m",
+        "v": "v_{\\mathrm{geo}}"
+      },
+      {
+        "k": "t",
+        "v": " is the SINGLE dimensionful input of the complete theory — final tally "
+      },
+      {
+        "k": "m",
+        "v": "\\{v_{\\mathrm{geo}},\\pi\\}"
+      },
+      {
+        "k": "t",
+        "v": ", ZERO dimensionless dials: "
+      },
+      {
+        "k": "c",
+        "v": "v364"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v364"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "VGEO.SHARPEN.01"
+            },
+            {
+              "k": "t",
+              "v": ") — Direction 6."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The No-Unit Theorem ("
+        },
+        {
+          "k": "c",
+          "v": "v153"
+        },
+        {
+          "k": "t",
+          "v": ") already made "
+        },
+        {
+          "k": "m",
+          "v": "v_{\\mathrm{geo}}"
+        },
+        {
+          "k": "t",
+          "v": " a forced metrology primitive. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "The SHARPENING after the parameter-free gravity ("
+        },
+        {
+          "k": "c",
+          "v": "v358"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v359"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v361"
+        },
+        {
+          "k": "t",
+          "v": "): the Einstein coefficient "
+        },
+        {
+          "k": "m",
+          "v": "1/\\cthree=8\\pi"
+        },
+        {
+          "k": "t",
+          "v": " and the "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda"
+        },
+        {
+          "k": "t",
+          "v": " prefactor "
+        },
+        {
+          "k": "m",
+          "v": "(8\\pi)^2{\\cdot}48\\cthree^4=3/(4\\pi^2)"
+        },
+        {
+          "k": "t",
+          "v": " are dimensionless, so "
+        },
+        {
+          "k": "m",
+          "v": "1/G\\sim v_{\\mathrm{geo}}^2"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda\\sim(\\text{dimensionless})\\,v_{\\mathrm{geo}}^4"
+        },
+        {
+          "k": "t",
+          "v": " reduce to "
+        },
+        {
+          "k": "m",
+          "v": "v_{\\mathrm{geo}}"
+        },
+        {
+          "k": "t",
+          "v": " times atoms — the gravity sector adds no new scale. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "FINAL TALLY: every dimensionful quantity "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " (a dimensionless ratio)"
+        },
+        {
+          "k": "m",
+          "v": "\\times"
+        },
+        {
+          "k": "t",
+          "v": "(a power of "
+        },
+        {
+          "k": "m",
+          "v": "v_{\\mathrm{geo}}"
+        },
+        {
+          "k": "t",
+          "v": "); TFPT's free content is "
+        },
+        {
+          "k": "m",
+          "v": "\\{v_{\\mathrm{geo}},\\pi\\}"
+        },
+        {
+          "k": "t",
+          "v": " with ZERO dimensionless dials, a "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}26\\to1"
+        },
+        {
+          "k": "t",
+          "v": " reduction vs the SM. "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "m",
+          "v": "v_{\\mathrm{geo}}"
+        },
+        {
+          "k": "t",
+          "v": " stays irreducibly primitive (No-Unit; "
+        },
+        {
+          "k": "m",
+          "v": "1/G"
+        },
+        {
+          "k": "t",
+          "v": " UV-sensitive, Sakharov "
+        },
+        {
+          "k": "c",
+          "v": "v68"
+        },
+        {
+          "k": "t",
+          "v": "). Direction 6 is clarity — the last dimensionful anchor named and shown to be the only one. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": "; Python-only."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-23",
+    "dateLabel": "2026-06-23",
+    "heading": [
+      {
+        "k": "t",
         "v": "Direction 5, the matter–gravity backreaction: the carrier's gravitational anomaly is forced "
       },
       {

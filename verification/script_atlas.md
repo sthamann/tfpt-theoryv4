@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`358` registered scripts · `416` ledger claims · `10` clusters.
+`359` registered scripts · `417` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (31 scripts)
+### `core` — Compiler core & the E₈ glue  (32 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -73,6 +73,8 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v359_grav_nonlinear_einstein, v359, v358, v36, v28, v354, v355 · cited: 4 frontier
 - **v361_grav_backreaction** [E/C/O] `GRAV.BACKREACT.01` — Direction 5: the matter-gravity backreaction with the explicit J3 flux -- two forced facts + an honest decline. [E] the carrier's gravitational anomaly is FORCED: c_-=8 (16 Majoran
   - deps: v359_grav_nonlinear_einstein, v359, v358, v60, v337, v159, v354, v355 · cited: 4 frontier
+- **v364_vgeo_sharpen** [E/O] `VGEO.SHARPEN.01` — Direction 6: v_geo is the SINGLE dimensionful input of the WHOLE theory -- confirmed across matter AND gravity -- and irreducibly primitive. The No-Unit Theorem (v153) showed the d
+  - deps: v153, v358, v359, v361, v60, v68, v78 · cited: research contracts
 
 ### `em` — Electromagnetic fixed point  (4 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -786,7 +788,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v349_raw_seam_golden_test** — `SEAM.EQUIV.GOLDEN.01`
 - **v350_bootstrap_inputs_correction** — `SEAM.EQUIV.BOOTSTRAP.01`
 - **v351_continuum_realisation_sharpened** — `SEAM.EQUIV.CONTINUUM.02`
 - **v352_framework_irreducible** — `TFPT.IRREDUCIBLE.01`
@@ -798,4 +799,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v359_grav_nonlinear_einstein** — `GRAV.NONLINEAR.01`
 - **v360_grav_gap_corrections** — `GRAV.GAPCORR.01`
 - **v361_grav_backreaction** — `GRAV.BACKREACT.01`
+- **v364_vgeo_sharpen** — `VGEO.SHARPEN.01`
 

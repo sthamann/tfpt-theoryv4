@@ -77,14 +77,15 @@ reachable now, concrete next steps (modules to build / what to compute), honest 
 - **Takeaway:** the backreaction is finite and consistent (closes the CC-backreaction loop), but adds no new dial.
   Closed.
 
-## Direction 6 — The absolute scale **v_geo** (the single remaining dimensionful input)
-- **Goal:** the one acknowledged unit. Either (a) derive the Planck-area / entropy unit from the seam, or (b) prove it
-  is irreducibly the one unit (sharpen the No-Unit theorem `v153`).
-- **Why reachable now:** after v358 it is provably the **only** dimensionful input in the gravity coupling — isolated.
-- **Concrete steps:**
-  1. `v364 VGEO.SHARPEN.01` — restate `v_geo` as the single Planck-area unit tying `1/G`, `U_point`, `m/μ`; test any
-     Sakharov-style induced-scale relation; honest `[O]` if it stays primitive.
-- **Difficulty:** conceptual (likely stays the one unit). **Value:** clarity — the last dimensionful anchor named.
+## Direction 6 — The absolute scale v_geo — DONE (`v364`): the single dimensionful input; 0 dials + 1 unit + π
+- **RESULT (`v364 VGEO.SHARPEN.01`):** the No-Unit Theorem (`v153`) already made `v_geo` a forced metrology
+  primitive; the **sharpening** after the parameter-free gravity (v358/v359/v361) is that the **gravity sector adds no
+  new scale either** — `1/c₃ = 8π` and the `Λ` prefactor `(8π)²·48c₃⁴ = 3/(4π²)` are dimensionless, so `1/G ~ v_geo²`
+  and `Λ ~ (dimensionless)·v_geo⁴` reduce to `v_geo` × atoms.
+- **Final tally:** every dimensionful quantity = (dimensionless ratio) × (power of `v_geo`); TFPT's free content is
+  `{v_geo, π}` with **ZERO dimensionless dials** — a ~26 → 1 reduction vs the SM. `v_geo` is irreducibly primitive
+  (the one unit, not a gap); `1/G` is UV-sensitive (Sakharov, v68).
+- **Takeaway:** the last dimensionful anchor is named and shown to be the **only** one. Closed.
 
 ## Direction 7 (complementary, matter side) — close the **(E8)₁ in-class** continuum realisation
 - **Goal:** the matter-side bridge residual: prove the seam collar is in MMST's free-lattice-fermion class so the
@@ -102,8 +103,8 @@ reachable now, concrete next steps (modules to build / what to compute), honest 
 2. ✅ **Direction 2** (gap corrections) — DONE (`v360`): disciplined DECLINE — the calculable GR deviation is the
    R² scalaron (already falsifiable); no new atom-forced coefficient.
 3. ✅ **Direction 5** (backreaction) — DONE (`v361`): finite & forced (c_-=8 + Λ from α), no new dial.
-4. **Direction 6** (v_geo) — cheap clarity. ← next up.
-5. **Direction 3 / 7** (QG measure / MMST in-class) — the two hard functional-analysis residuals; long-horizon.
+4. ✅ **Direction 6** (v_geo) — DONE (`v364`): the single dimensionful input; 0 dials + 1 unit + π.
+5. **Direction 3 / 7** (QG measure / MMST in-class) — the two hard functional-analysis residuals; long-horizon. ← all that remains.
 - (Direction 4 was folded into Direction 1: Λ's value is already done from α.)
 
 ## Discipline reminders (do not relax)
