@@ -47,6 +47,342 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "Direction 5, the matter–gravity backreaction: the carrier's gravitational anomaly is forced "
+      },
+      {
+        "k": "m",
+        "v": "c_-{=}8"
+      },
+      {
+        "k": "t",
+        "v": ", and the matter vacuum-energy backreaction is finite ("
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": " the forced "
+      },
+      {
+        "k": "m",
+        "v": "\\Lambda"
+      },
+      {
+        "k": "t",
+        "v": " from "
+      },
+      {
+        "k": "m",
+        "v": "\\alpha"
+      },
+      {
+        "k": "t",
+        "v": ", not "
+      },
+      {
+        "k": "m",
+        "v": "M_{\\mathrm{Pl}}^4"
+      },
+      {
+        "k": "t",
+        "v": ") — the loop closes; no new SM-quantum-number read-out (declined): "
+      },
+      {
+        "k": "c",
+        "v": "v361"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v361"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "GRAV.BACKREACT.01"
+            },
+            {
+              "k": "t",
+              "v": ") — Direction 5."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " With the parameter-free equation ("
+        },
+        {
+          "k": "c",
+          "v": "v359"
+        },
+        {
+          "k": "t",
+          "v": ") and the explicit J3 flux ("
+        },
+        {
+          "k": "c",
+          "v": "v358"
+        },
+        {
+          "k": "t",
+          "v": "), the backreaction of TFPT's carrier matter is computed. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the carrier's gravitational anomaly is forced: "
+        },
+        {
+          "k": "m",
+          "v": "c_-=16/2=8=\\gcar{+}\\Nfam"
+        },
+        {
+          "k": "t",
+          "v": " (the chiral central charge of the "
+        },
+        {
+          "k": "m",
+          "v": "16"
+        },
+        {
+          "k": "t",
+          "v": "-Majorana content). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the backreaction is FINITE "
+        },
+        {
+          "k": "m",
+          "v": "\\to\\Lambda"
+        },
+        {
+          "k": "t",
+          "v": " from "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": ": the matter vacuum energy through "
+        },
+        {
+          "k": "m",
+          "v": "G_{ab}=\\cthree^{-1}T_{ab}"
+        },
+        {
+          "k": "t",
+          "v": " is gap-suppressed (Decoupling Thm "
+        },
+        {
+          "k": "c",
+          "v": "v337"
+        },
+        {
+          "k": "t",
+          "v": ") to "
+        },
+        {
+          "k": "m",
+          "v": "\\rho_\\Lambda/\\Mbar^4=(3/(4\\pi^2))e^{-2\\alpha^{-1}}"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v60"
+        },
+        {
+          "k": "t",
+          "v": "), the "
+        },
+        {
+          "k": "m",
+          "v": "123"
+        },
+        {
+          "k": "t",
+          "v": " orders "
+        },
+        {
+          "k": "m",
+          "v": "=119.03+3.92"
+        },
+        {
+          "k": "t",
+          "v": " — "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "M_{\\mathrm{Pl}}^4"
+        },
+        {
+          "k": "t",
+          "v": " catastrophe; the loop ("
+        },
+        {
+          "k": "c",
+          "v": "v359"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "c",
+          "v": "v60"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the carrier vacuum) closes. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "J3 explicit: "
+        },
+        {
+          "k": "m",
+          "v": "\\delta\\langle K_B\\rangle=(8\\pi^2R^4/15)\\delta\\langle T_{00}\\rangle"
+        },
+        {
+          "k": "t",
+          "v": ", carrier "
+        },
+        {
+          "k": "m",
+          "v": "T_{ab}="
+        },
+        {
+          "k": "t",
+          "v": " the SM's ("
+        },
+        {
+          "k": "c",
+          "v": "v159"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the SM trace anomaly is reproduced (content "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " SM). "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "DECLINE: no new atom-forced read-out of individual SM quantum numbers beyond "
+        },
+        {
+          "k": "m",
+          "v": "c_-{=}8"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda"
+        },
+        {
+          "k": "t",
+          "v": " — per "
+        },
+        {
+          "k": "c",
+          "v": "v354"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v355"
+        },
+        {
+          "k": "t",
+          "v": " declined. The backreaction is finite and consistent, adding no new dial. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_4"
+        },
+        {
+          "k": "t",
+          "v": "; Python-only."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-23",
+    "dateLabel": "2026-06-23",
+    "heading": [
+      {
+        "k": "t",
         "v": "Direction 2, the disciplined result: the gap-induced GR correction is the known "
       },
       {

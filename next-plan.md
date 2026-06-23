@@ -65,14 +65,17 @@ reachable now, concrete next steps (modules to build / what to compute), honest 
 - **Difficulty:** low — fold into Direction 1 (one extra `check()`), do not spend a standalone effort on it.
 - **Priority:** demoted (Λ is essentially done; this is housekeeping).
 
-## Direction 5 — Matter–gravity **backreaction** (J3 explicit → the full Einstein eq with TFPT matter)
-- **Goal:** with the matter boost flux J3 now assembled (CHM ball modular Hamiltonian × TFPT's `T_ab`), compute the
-  **backreaction** of the SM content on the metric — gravitational read-outs of the carrier.
-- **Why reachable now:** `δ⟨K_B⟩ = (8π²R⁴/15) δ⟨T₀₀⟩` is explicit; the SM stress tensor is the carrier's.
-- **Concrete steps:**
-  1. `v363 GRAV.BACKREACT.01` — feed the carrier stress tensor into the J3 flux; check the sourced linearised metric;
-     look for any *forced* gravitational read-out of SM quantum numbers.
-- **Difficulty:** medium. **Risk:** anti-numerology discipline on any "read-out".
+## Direction 5 — Matter–gravity backreaction — DONE (`v361`): finite & forced, no new dial
+- **RESULT (`v361 GRAV.BACKREACT.01`):** two genuine forced facts + an honest decline.
+  - **[E]** the carrier's gravitational anomaly is **forced**: `c_- = 16/2 = 8 = g_car + N_fam` (chiral central
+    charge of the 16-Majorana content).
+  - **[E]** the backreaction is **finite** → **Λ from α**: the matter vacuum energy through `G_ab = c₃⁻¹ T_ab` is
+    gap-suppressed (Decoupling Thm v337) to `ρ_Λ = (3/4π²)e^{−2α⁻¹}` (v60), the 123 orders = 119.03 + 3.92 — **not**
+    the `M_Pl⁴` catastrophe. The loop (v359 equation + v60 Λ + carrier vacuum) **closes**.
+  - **[O]** decline: no new atom-forced read-out of individual SM quantum numbers (the backreaction is GR-with-the-SM;
+    the forced pieces `c_-=8`, `Λ` are already established).
+- **Takeaway:** the backreaction is finite and consistent (closes the CC-backreaction loop), but adds no new dial.
+  Closed.
 
 ## Direction 6 — The absolute scale **v_geo** (the single remaining dimensionful input)
 - **Goal:** the one acknowledged unit. Either (a) derive the Planck-area / entropy unit from the seam, or (b) prove it
@@ -98,8 +101,8 @@ reachable now, concrete next steps (modules to build / what to compute), honest 
    both coefficients parameter-free; B6 closed at the local level. (Direction-4 Λ consistency folded in.)
 2. ✅ **Direction 2** (gap corrections) — DONE (`v360`): disciplined DECLINE — the calculable GR deviation is the
    R² scalaron (already falsifiable); no new atom-forced coefficient.
-3. **Direction 5** (backreaction) — explicit, uses J3. ← next up.
-4. **Direction 6** (v_geo) — cheap clarity.
+3. ✅ **Direction 5** (backreaction) — DONE (`v361`): finite & forced (c_-=8 + Λ from α), no new dial.
+4. **Direction 6** (v_geo) — cheap clarity. ← next up.
 5. **Direction 3 / 7** (QG measure / MMST in-class) — the two hard functional-analysis residuals; long-horizon.
 - (Direction 4 was folded into Direction 1: Λ's value is already done from α.)
 
