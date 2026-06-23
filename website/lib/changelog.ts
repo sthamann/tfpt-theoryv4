@@ -47,6 +47,630 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "External-review closure: the two genuine residual targets named — "
+      },
+      {
+        "k": "c",
+        "v": "v381"
+      },
+      {
+        "k": "t",
+        "v": " the all-order Epstein–Glaser/BRST contract for "
+      },
+      {
+        "k": "m",
+        "v": "S_{\\mathrm{pert}}"
+      },
+      {
+        "k": "t",
+        "v": ", and "
+      },
+      {
+        "k": "c",
+        "v": "v382"
+      },
+      {
+        "k": "t",
+        "v": " the Quillen determinant-line variation as a tracked target"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v381"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QFT4D.EG.ALLORDER.01"
+            },
+            {
+              "k": "t",
+              "v": ") — the all-order 4D perturbative-QFT closing statement."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " A mathematical-physics review of the QFT/TOE layers identified exactly one genuinely new, buildable item: the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "all-order"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Epstein–Glaser/BRST contract for the perturbative 4D S-matrix "
+        },
+        {
+          "k": "m",
+          "v": "S_{\\mathrm{pert}}"
+        },
+        {
+          "k": "t",
+          "v": " (the previous documents had the "
+        },
+        {
+          "k": "m",
+          "v": "S_{\\mathrm{pert}}"
+        },
+        {
+          "k": "t",
+          "v": " skeleton and one-loop, "
+        },
+        {
+          "k": "c",
+          "v": "v269"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v271"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v273"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v278"
+        },
+        {
+          "k": "t",
+          "v": ", but no named all-order claim). This module types the standard causal-perturbation-theory closure for the TFPT finite interaction class — it does "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " build a path integral. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "power-counting: every gauge"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": "matter vertex (Yang–Mills "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " Dirac–Yukawa "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " Higgs "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " ghost) is a mass-dimension-4 marginal operator, so the EG singular order "
+        },
+        {
+          "k": "m",
+          "v": "\\omega\\le4"
+        },
+        {
+          "k": "t",
+          "v": " and the counterterm space is finite at every order; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "BRST nilpotency "
+        },
+        {
+          "k": "m",
+          "v": "s^2{=}0"
+        },
+        {
+          "k": "t",
+          "v": " verified exactly via the Jacobi identity for "
+        },
+        {
+          "k": "m",
+          "v": "su(2)"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "su(3)"
+        },
+        {
+          "k": "t",
+          "v": " (the carrier weak"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": "colour content); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the seam gap "
+        },
+        {
+          "k": "m",
+          "v": "\\Delta=6\\log\\tfrac32>0"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v302"
+        },
+        {
+          "k": "t",
+          "v": ") gives the IR-safe adiabatic limit. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the two heavy legs are imported rigorous theorems — all-order "
+        },
+        {
+          "k": "m",
+          "v": "T_n"
+        },
+        {
+          "k": "t",
+          "v": " existence by causal factorisation (Epstein–Glaser 1973) and all-order BRST invariance (Piguet–Sorella / Kugo–Ojima) — applied to the TFPT class. Matter"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": "gauge "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "only"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the "
+        },
+        {
+          "k": "m",
+          "v": "R^2"
+        },
+        {
+          "k": "t",
+          "v": "/Weyl"
+        },
+        {
+          "k": "m",
+          "v": "^2"
+        },
+        {
+          "k": "t",
+          "v": " gravity sub-sector is the entire-form-factor resummation ("
+        },
+        {
+          "k": "c",
+          "v": "v304"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v370"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v380"
+        },
+        {
+          "k": "t",
+          "v": "), and "
+        },
+        {
+          "k": "m",
+          "v": "S_{\\mathrm{pert}}"
+        },
+        {
+          "k": "t",
+          "v": " is not the ambient measure "
+        },
+        {
+          "k": "c",
+          "v": "QG.AMB.01"
+        },
+        {
+          "k": "t",
+          "v": " (a "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "redundancy, "
+        },
+        {
+          "k": "c",
+          "v": "v369"
+        },
+        {
+          "k": "t",
+          "v": "). NET "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": ", prerequisites "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "; not "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "and not a path integral. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_5_redteam"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": "; Python-only."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v382"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "ALPHA.QUILLEN.EXACT.01"
+            },
+            {
+              "k": "t",
+              "v": ") — the Quillen determinant-line variation, named as a target."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Per the same review, the “why "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "this"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "F_{U(1)}"
+        },
+        {
+          "k": "t",
+          "v": " functional” obligation (previously tracked only as "
+        },
+        {
+          "k": "c",
+          "v": "EM.WARD.01"
+        },
+        {
+          "k": "t",
+          "v": "'s residual, "
+        },
+        {
+          "k": "c",
+          "v": "v341"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v342"
+        },
+        {
+          "k": "t",
+          "v": ") is elevated to its own citable target: "
+        },
+        {
+          "k": "m",
+          "v": "\\delta_\\tau(\\log\\det_\\zeta\\Delta_{U(1)}+8b_1\\cthree^6\\log\\varphi_{\\mathrm{seam}})=0"
+        },
+        {
+          "k": "t",
+          "v": " on the determinant line over the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " seam moduli. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the Quillen split holds at the "
+        },
+        {
+          "k": "m",
+          "v": "\\ainv{=}137.0359992"
+        },
+        {
+          "k": "t",
+          "v": " root with every coefficient a named atom (index "
+        },
+        {
+          "k": "m",
+          "v": "8b_1"
+        },
+        {
+          "k": "t",
+          "v": ", heat-kernel "
+        },
+        {
+          "k": "m",
+          "v": "\\cthree^{3,6}"
+        },
+        {
+          "k": "t",
+          "v": ", discriminant "
+        },
+        {
+          "k": "m",
+          "v": "q(D_5){+}q(A_3){=}2"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the value stays closed ("
+        },
+        {
+          "k": "c",
+          "v": "v3"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the from-first-principles exactness proof is the target. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "it is a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "face"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " of "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v336"
+        },
+        {
+          "k": "t",
+          "v": ") — the seam "
+        },
+        {
+          "k": "m",
+          "v": "U(1)"
+        },
+        {
+          "k": "t",
+          "v": " determinant line lives on the same holomorphic net — so it adds "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "no"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " second independent gate; it makes the existing residual trackable. No new number (reuses the Wolfram-mirrored "
+        },
+        {
+          "k": "c",
+          "v": "v341"
+        },
+        {
+          "k": "t",
+          "v": " identities). Cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1_architecture_e8"
+        },
+        {
+          "k": "t",
+          "v": "; Python-only."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-23",
+    "dateLabel": "2026-06-23",
+    "heading": [
+      {
+        "k": "t",
         "v": "Track 2 of the forward plan v2 — the AMBIENT REDUNDANCY statement ("
       },
       {

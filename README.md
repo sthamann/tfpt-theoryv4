@@ -259,6 +259,14 @@ The residual here is only the equation-of-state interpretive fork and the one un
 measure (`QG.AMB.01`) is now a **`[C]` redundancy** (`v369`): a certification object rather than
 missing dynamics, conditional on `SEAM.EQUIV.01` and Bisognano–Wichmann.
 
+**The perturbative 4D leg closes to all orders.** The matter+gauge `S_pert` is a typed
+Epstein–Glaser/BRST contract (`v381`, `QFT4D.EG.ALLORDER.01`): dimension-4 power-counting ⇒ a finite
+counterterm space, BRST nilpotency `s²=0` for the carrier `su(3)×su(2)`, and the seam gap ⇒ the
+adiabatic limit, with all-order `T_n` existence and the Slavnov–Taylor identity imported (the
+`R²/Weyl²` Stelle ghost is fenced out as the resummed entire form factor, `v304`/`v370`/`v380`). The
+EM-Ward functional origin — *why exactly that* `F_U(1)` — is named as the tracked target
+`ALPHA.QUILLEN.EXACT.01` (`v382`), a face of `SEAM.EQUIV.01`; the `α⁻¹` value itself stays `[E]`.
+
 **`SEAM.EQUIV.01` is closed modulo a cited theorem.** The explicit lattice model (`v367`/`v368`) and
 the S3 closure stack pin the target at every computable level — central charge `c=8` (`v376`), the
 `(E8)₁` character with 248 currents and one primary (`v377`), genus-one torus GSD = 1 (`v378`) and

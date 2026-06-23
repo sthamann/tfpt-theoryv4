@@ -152,8 +152,8 @@
   "date": "2026-06-12"
  },
  "tfpt_1_architecture_e8::subsection::The EM closure: $\\ainv$ as an explicit fixed point (made explicit here)::1": {
-  "hash": "60204bfc7725",
-  "date": "2026-06-22"
+  "hash": "f07ead13781e",
+  "date": "2026-06-23"
  },
  "tfpt_1_architecture_e8::subsection::The decuple bridge (new, exact headline)::1": {
   "hash": "604a14549a07",
@@ -380,7 +380,7 @@
   "date": "2026-06-13"
  },
  "tfpt_2_standard_model::subsection::(4) Constructive QFT closure of the admissible physical sector \\mE/\\mC::1": {
-  "hash": "bf7ed6c21dd7",
+  "hash": "444508a6dca8",
   "date": "2026-06-23"
  },
  "tfpt_2_standard_model::subsection::(5) Axioms P1/P2 --- P2 machine-verified, P1 as an interface \\mE/\\mO::1": {
@@ -648,7 +648,7 @@
   "date": "2026-06-12"
  },
  "tfpt_5_redteam::section::Target F --- the perturbative 4D-QFT $+$ scale round (v269--v275)::1": {
-  "hash": "24e8d581a446",
+  "hash": "d059e70de45d",
   "date": "2026-06-23"
  },
  "tfpt_5_redteam::section::Outcome::1": {

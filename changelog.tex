@@ -59,6 +59,35 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-23 (External-review closure: the two genuine residual targets named --- \texttt{v381} the all-order Epstein--Glaser/BRST contract for $S_{\mathrm{pert}}$, and \texttt{v382} the Quillen determinant-line variation as a tracked target)}
+\begin{itemize}
+\item \textbf{\texttt{v381} (\texttt{QFT4D.EG.ALLORDER.01}) --- the all-order 4D perturbative-QFT closing statement.}
+A mathematical-physics review of the QFT/TOE layers identified exactly one genuinely new, buildable item: the
+\emph{all-order} Epstein--Glaser/BRST contract for the perturbative 4D S-matrix $S_{\mathrm{pert}}$ (the previous
+documents had the $S_{\mathrm{pert}}$ skeleton and one-loop, \vref{v269}/\vref{v271}/\vref{v273}/\vref{v278}, but no
+named all-order claim). This module types the standard causal-perturbation-theory closure for the TFPT finite
+interaction class --- it does \emph{not} build a path integral. \mE\ power-counting: every gauge$+$matter vertex
+(Yang--Mills $+$ Dirac--Yukawa $+$ Higgs $+$ ghost) is a mass-dimension-4 marginal operator, so the EG singular
+order $\omega\le4$ and the counterterm space is finite at every order; \mE\ BRST nilpotency $s^2{=}0$ verified
+exactly via the Jacobi identity for $su(2)$ and $su(3)$ (the carrier weak$+$colour content); \mE\ the seam gap
+$\Delta=6\log\tfrac32>0$ (\vref{v302}) gives the IR-safe adiabatic limit. \mC\ the two heavy legs are imported
+rigorous theorems --- all-order $T_n$ existence by causal factorisation (Epstein--Glaser 1973) and all-order BRST
+invariance (Piguet--Sorella / Kugo--Ojima) --- applied to the TFPT class. Matter$+$gauge \emph{only}: the
+$R^2$/Weyl$^2$ gravity sub-sector is the entire-form-factor resummation (\vref{v304}/\vref{v370}/\vref{v380}), and
+$S_{\mathrm{pert}}$ is not the ambient measure \texttt{QG.AMB.01} (a \mC\ redundancy, \vref{v369}). NET \mC,
+prerequisites \mE; not \mE\ and not a path integral. Cited in \texttt{tfpt\_5\_redteam} and \texttt{tfpt\_2}; Python-only.
+\item \textbf{\texttt{v382} (\texttt{ALPHA.QUILLEN.EXACT.01}) --- the Quillen determinant-line variation, named as a target.}
+Per the same review, the ``why \emph{this} $F_{U(1)}$ functional'' obligation (previously tracked only as
+\texttt{EM.WARD.01}'s residual, \vref{v341}/\vref{v342}) is elevated to its own citable target:
+$\delta_\tau(\log\det_\zeta\Delta_{U(1)}+8b_1\cthree^6\log\varphi_{\mathrm{seam}})=0$ on the determinant line over the
+$\mu_4$ seam moduli. \mE\ the Quillen split holds at the $\ainv{=}137.0359992$ root with every coefficient a named
+atom (index $8b_1$, heat-kernel $\cthree^{3,6}$, discriminant $q(D_5){+}q(A_3){=}2$); \mE\ the value stays closed
+(\vref{v3}); \mO\ the from-first-principles exactness proof is the target. \mC\ it is a \emph{face} of
+\texttt{SEAM.EQUIV.01} (\vref{v336}) --- the seam $U(1)$ determinant line lives on the same holomorphic net --- so it
+adds \emph{no} second independent gate; it makes the existing residual trackable. No new number (reuses the
+Wolfram-mirrored \vref{v341} identities). Cited in \texttt{tfpt\_1\_architecture\_e8}; Python-only.
+\end{itemize}
+
 \subsection*{2026-06-23 (Track 2 of the forward plan v2 --- the AMBIENT REDUNDANCY statement (\texttt{v369}): the holographic route to Gravity-complete that sidesteps building the general Euclidean QG measure)}
 \begin{itemize}
 \item \textbf{\texttt{v369} (\texttt{QGAMB.REDUNDANCY.01}) --- Track 2 (forward plan v2).} Instead of

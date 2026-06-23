@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`375` registered scripts · `434` ledger claims · `10` clusters.
+`377` registered scripts · `436` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -92,7 +92,7 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
 - **v379_seam_s3_rp** [E/C/O] `SEAM.S3.RP.01` — C7 / OS reconstruction: reflection positivity (the OS axiom) of the explicit gapped collar measure, verified numerically -- the remaining constructive-QFT ingredient for the OS rec
   - deps: QG.AMB.01, v367, v369, v240, v76, v376, v377, v378 · cited: research contracts
 
-### `em` — Electromagnetic fixed point  (4 scripts)
+### `em` — Electromagnetic fixed point  (5 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
 
 - **v3_em_alpha** [E] `EM.FP.01` — α⁻¹ = 137.0359992168 unique root of F_U(1)=0; ablation
@@ -103,6 +103,8 @@ _The fine-structure constant as the unique root of the boundary U(1) Ward identi
   - deps: v48_em_ward, v3, v48, v159, v216, v1 · cited: 1 architecture e8
 - **v342_em_ward_heatkernel** [E/C/O] `EM.WARD.02` — The heat-kernel sharpening of EM.WARD.01: DERIVES the ORIGIN and STRUCTURE of the F_{U(1)} determinant-line terms from textbook Seeley-DeWitt/Gilkey coefficients, advancing the EM-
   - deps: v48_em_ward, v48, v216, v3, v159 · cited: 1 architecture e8
+- **v382_alpha_quillen_exact** [E/C/O] `ALPHA.QUILLEN.EXACT.01` — Names the Quillen determinant-line VARIATION delta_tau(log det_zeta Delta_U(1) + 8 b1 c3^6 log phi_seam)=0 as a tracked target (review Point 10), elevating EM.WARD.01's residual to
+  - deps: v48_em_ward, v286_seam_equivalence_contract, v341, v342, v3, v48, v216, v336 · cited: 1 architecture e8
 
 ### `flavor` — Flavor matrix & operators  (13 scripts)
 _The integer operator ladder (R, K, Q, L) and its spectral invariants — the flavor signature._
@@ -464,7 +466,7 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
 - **v380_grav_kms_hessian** [E/C/O] `GRAV.KMS.HESSIAN.01` — The KMS Entire Hessian -- the Stelle ghost is EXACTLY the Seeley-DeWitt truncation, and resummation pushes it to infinity (upgrades v304/v370 from 'assume entire' to a derived stat
   - deps: QG.AMB.01, v259, v304, v370, v334 · cited: 5 redteam
 
-### `registry` — Blind registry & red-team follow-ups (v84–v175)  (165 scripts)
+### `registry` — Blind registry & red-team follow-ups (v84–v175)  (166 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
 
 - **v84_frozen_registry** [E] `REG.FREEZE.01` — blind-prediction registry FROZEN 2026-06-09: every dimensionless prediction of record at 25 digits, re-derived from the two axioms each run (formula↔value lock); exactly ONE θ₁₂ pr
@@ -797,6 +799,8 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
   - deps: WITNESS.INDEP.01, v305, v100, v312, v348, v54 · cited: 5 redteam
 - **v355_e8_unmapped_bandwidth** [E/C/O] `E8.UNMAPPED.BANDWIDTH.01` — A disciplined bandwidth search of the unmapped E8 region (next step after v354), run with a STRICT discriminator: a candidate counts only if it is a FORCED identity (a theorem abou
   - deps: v354_e8_reverse_audit, v354, v66, v223, v219, v305 · cited: 5 redteam
+- **v381_qft4d_eg_allorder** [E/C] `QFT4D.EG.ALLORDER.01` — The all-order Epstein-Glaser / BRST contract for the perturbative 4D S-matrix S_pert -- the 'all-order closing statement' for the 4D perturbative QFT leg (review Point 3). Types th
+  - deps: v269, v271, v273, v278, v302, v304, v370, v380 · cited: 2 standard model
 
 ## Supersede map — do NOT reuse the left-hand claim
 
@@ -814,14 +818,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `SEAM.EQUIV.01`×20, `v76`×17, `E8.GLU.01`×15, `v56`×15, `HOR.NARIAI.01`×15, `QG.AMB.01`×14, `v216`×12, `REG.FREEZE.01`×12, `AX.P1.01`×11, `v336`×11, `QGEO.SUBPRIN.01`×11, `FLAV.KQ.01`×10, `v3`×10, `QGEO.PILLOW.01`×10
+**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `SEAM.EQUIV.01`×21, `v76`×17, `E8.GLU.01`×15, `v56`×15, `HOR.NARIAI.01`×15, `QG.AMB.01`×14, `v216`×13, `v336`×12, `REG.FREEZE.01`×12, `AX.P1.01`×11, `v3`×11, `QGEO.SUBPRIN.01`×11, `FLAV.KQ.01`×10, `QGEO.PILLOW.01`×10
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v369_qgamb_redundancy** — `QGAMB.REDUNDANCY.01`
-- **v370_grav_spin2_unitarity** — `GRAV.SPIN2.UNITARITY.01`
 - **v371_ftransfer_pole** — `FR.POLE.SOLVE.01`
 - **v372_ftransfer_boltzmann** — `FR.BOLTZMANN.SOLVE.01`
 - **v373_ftransfer_relic** — `FR.RELIC.SOLVE.01`
@@ -832,4 +834,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v378_seam_s3_modular** — `SEAM.S3.MODULAR.01`
 - **v379_seam_s3_rp** — `SEAM.S3.RP.01`
 - **v380_grav_kms_hessian** — `GRAV.KMS.HESSIAN.01`
+- **v381_qft4d_eg_allorder** — `QFT4D.EG.ALLORDER.01`
+- **v382_alpha_quillen_exact** — `ALPHA.QUILLEN.EXACT.01`
 
