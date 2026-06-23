@@ -57,16 +57,16 @@ reachable now, concrete next steps (modules to build / what to compute), honest 
   2. Tie to the existing OS/clustering machinery (`v240`, `v398`) and the GHP contour (`v334`).
 - **Difficulty:** high (constructive-QFT grade). **Open part:** the genuine non-perturbative boundary projective limit.
 
-## Direction 4 — Cosmology: **Λ / S_dS as the equilibrium state**
-- **Goal:** derive the cosmological constant `Λ` / de Sitter entropy `S_dS` as the **equilibrium state** of the seam
-  thermodynamics (connect to dark energy).
-- **Why reachable now:** the de Sitter background is the maximally-symmetric solution of the parameter-free equation;
-  `δS = 0` (equilibrium) selects it, and TFPT already has `S_dS = 32π⁴ e^{2α⁻¹}` (`v54`/`v190`) + the Nariai anchor.
-- **Concrete steps:**
-  1. `v362 COSMO.EQUILIBRIUM.01` — show the dS background is the equilibrium (max-entropy at fixed volume) solution;
-     read off `Λ` from the equilibrium condition + the seam vacuum number `δ_Σ` (`v206`).
-  2. Cross-check against the existing `Λ ~ e^{−2α⁻¹}` and `H₀` readouts; keep the Hubble-tension honesty.
-- **Difficulty:** medium. **Open part:** the absolute normalisation (= `v_geo`, Direction 6).
+## Direction 4 — Cosmology: Λ **consistency** (the VALUE is already done from α — DEMOTED)
+- **CORRECTION:** Λ's value is **not open**. TFPT already derives it from α (`v60`):
+  `ρ_Λ/M̄_Pl⁴ = (3/4π²)·e^{−2α⁻¹}`, and the famous "123 orders" = `2α⁻¹/ln10` (= 119.03, the EM fixed point) +
+  `log₁₀(256π⁴/3)` (= 3.92, the seam-defect prefactor). So "derive Λ" is redundant — the original Direction 4 goal
+  was an over-claim.
+- **Reduced goal:** the only genuinely new item is a **consistency check** — that the Λ appearing as the
+  background-curvature constant in the Direction-1 non-linear equation equals the already-derived `ρ_Λ`, i.e. the two
+  gravity routes (the α-readout `v60` and the equilibrium/field-equation) agree. A confirmation, not a new derivation.
+- **Difficulty:** low — fold into Direction 1 (one extra `check()`), do not spend a standalone effort on it.
+- **Priority:** demoted (Λ is essentially done; this is housekeeping).
 
 ## Direction 5 — Matter–gravity **backreaction** (J3 explicit → the full Einstein eq with TFPT matter)
 - **Goal:** with the matter boost flux J3 now assembled (CHM ball modular Hamiltonian × TFPT's `T_ab`), compute the
@@ -97,12 +97,13 @@ reachable now, concrete next steps (modules to build / what to compute), honest 
 ---
 
 ## Recommended order (highest value / most tractable first)
-1. **Direction 1** (non-linear Einstein) — directly extends v358, closes B6 conceptually.
-2. **Direction 4** (Λ as equilibrium) — high-impact (dark energy), medium difficulty, builds on existing dS readouts.
-3. **Direction 2** (gap corrections) — the only *new falsifiable prediction* channel; do it with the strict discriminator.
-4. **Direction 5** (backreaction) — explicit, uses J3.
-5. **Direction 6** (v_geo) — cheap clarity.
-6. **Direction 3 / 7** (QG measure / MMST in-class) — the two hard functional-analysis residuals; long-horizon.
+1. **Direction 1** (non-linear Einstein) — directly extends v358, closes B6 conceptually; fold the Direction-4 Λ
+   consistency check in here as one extra `check()` (Λ must match `ρ_Λ = (3/4π²)e^{−2α⁻¹}`, v60).
+2. **Direction 2** (gap corrections) — the only *new falsifiable prediction* channel; do it with the strict discriminator.
+3. **Direction 5** (backreaction) — explicit, uses J3.
+4. **Direction 6** (v_geo) — cheap clarity.
+5. **Direction 3 / 7** (QG measure / MMST in-class) — the two hard functional-analysis residuals; long-horizon.
+- (Direction 4 demoted to a fold-in of Direction 1: Λ's value is already done from α.)
 
 ## Discipline reminders (do not relax)
 - Every new `vN` follows the full workflow: derive from `{c₃, g_car}`, `check()/summary()`, register in `run_all.py`

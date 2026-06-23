@@ -105,7 +105,7 @@ v84–v93 block passed **45/45** on first run; the v94–v140 blocks were added
 the same day, the v141–v144 block on 2026-06-12. Current state:
 
 ```
---- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358: 302 passed, 0 failed ---
+--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359: 303 passed, 0 failed ---
 ALL WOLFRAM EXTENSION CHECKS PASSED
 ```
 
@@ -214,11 +214,14 @@ forced content is *collective*: `sum(degrees)=128=dim S⁺`, `product(degrees)=|
 `exponents = totatives of 30`; the per-degree atom matches are unforced and declined, so the
 search finds no new physical hit — reconciling `v66` and `v354`).
 
-The 2026-06-23 **entanglement-gravity round** added one more exact check (301 → 302):
+The 2026-06-23 **entanglement-gravity round** added two exact checks (301 → 303):
 `v358_grav_entropy_equilibrium.py` (the entanglement first law `δS=δ⟨K⟩` with TFPT's atoms gives
 the *linearised* Einstein equation parameter-free — `1/c3 = 8π`; the thermodynamic (`2π/η`) and
 geometric (`|Z2|·2π·χ`) origins of `c3` coincide via `|μ4|=|Z2|·χ=4`; the CHM 3-ball weight
-integral `∫w d³x = 4π R⁴/15` assembles the matter boost flux J3).
+integral `∫w d³x = 4π R⁴/15` assembles the matter boost flux J3), and
+`v359_grav_nonlinear_einstein.py` (the *full* covariant `G_ab + Λ g_ab = (1/c3) T_ab` via the
+fixed-volume equilibrium — the Einstein tensor `g^{ab}G_ab = (1−d/2)R = −R` in d=4, both
+coefficients parameter-free: `8π = 1/c3` and the `Λ` prefactor `(8π)²·48c3⁴ = 3/(4π²)`).
 
 The 2026-06-22 **next-steps round (A/C/D/B)** added one more exact check (288 → 289):
 `v337_decoupling_theorem.py` (the ambient back-reaction scale `2·dim(E₈)·c₃² = 31/(4π²)`

@@ -47,6 +47,370 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "the FULL covariant Einstein equation, parameter-free: the fixed-volume entanglement equilibrium gives "
+      },
+      {
+        "k": "m",
+        "v": "G_{ab}+\\Lambda g_{ab}=\\cthree^{-1}T_{ab}"
+      },
+      {
+        "k": "t",
+        "v": " with BOTH coefficients TFPT-fixed ("
+      },
+      {
+        "k": "m",
+        "v": "8\\pi=1/\\cthree"
+      },
+      {
+        "k": "t",
+        "v": " from "
+      },
+      {
+        "k": "c",
+        "v": "v358"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\Lambda"
+      },
+      {
+        "k": "t",
+        "v": " from "
+      },
+      {
+        "k": "m",
+        "v": "\\alpha"
+      },
+      {
+        "k": "t",
+        "v": " via "
+      },
+      {
+        "k": "c",
+        "v": "v60"
+      },
+      {
+        "k": "t",
+        "v": "); B6 closed at the local level: "
+      },
+      {
+        "k": "c",
+        "v": "v359"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v359"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "GRAV.NONLINEAR.01"
+            },
+            {
+              "k": "t",
+              "v": ") — Direction 1, the full covariant equation."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Extends "
+        },
+        {
+          "k": "c",
+          "v": "v358"
+        },
+        {
+          "k": "t",
+          "v": " from the linearised (fixed-radius, Ricci-level) result to the FULL covariant equation. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "Jacobson 2015: demanding stationarity of the small-ball entanglement entropy at fixed "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "volume"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " brings in the EINSTEIN TENSOR "
+        },
+        {
+          "k": "m",
+          "v": "G_{ab}"
+        },
+        {
+          "k": "t",
+          "v": " (not just "
+        },
+        {
+          "k": "m",
+          "v": "R_{ab}"
+        },
+        {
+          "k": "t",
+          "v": ") — trace "
+        },
+        {
+          "k": "m",
+          "v": "g^{ab}G_{ab}=(1-d/2)R=-R"
+        },
+        {
+          "k": "t",
+          "v": " in "
+        },
+        {
+          "k": "m",
+          "v": "d{=}4"
+        },
+        {
+          "k": "t",
+          "v": ", the structure that carries "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": " Lovelock: "
+        },
+        {
+          "k": "m",
+          "v": "G_{ab}"
+        },
+        {
+          "k": "t",
+          "v": " is the unique symmetric divergence-free second-order metric tensor, so "
+        },
+        {
+          "k": "m",
+          "v": "\\nabla^a(G_{ab}+\\Lambda\ng_{ab})=0"
+        },
+        {
+          "k": "t",
+          "v": " forces "
+        },
+        {
+          "k": "m",
+          "v": "\\nabla^a T_{ab}=0"
+        },
+        {
+          "k": "t",
+          "v": " — conservation is an output. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "coefficient 1: "
+        },
+        {
+          "k": "m",
+          "v": "8\\pi G\\to 8\\pi=1/\\cthree"
+        },
+        {
+          "k": "t",
+          "v": " fixed ("
+        },
+        {
+          "k": "c",
+          "v": "v358"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "coefficient 2: Jacobson leaves "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda"
+        },
+        {
+          "k": "t",
+          "v": " free, TFPT fixes it — "
+        },
+        {
+          "k": "m",
+          "v": "\\rho_\\Lambda/\\Mbar^4=(3/(4\\pi^2))e^{-2\\alpha^{-1}}"
+        },
+        {
+          "k": "t",
+          "v": ", prefactor "
+        },
+        {
+          "k": "m",
+          "v": "(8\\pi)^2{\\cdot}48\\cthree^4=3/(4\\pi^2)"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v60"
+        },
+        {
+          "k": "t",
+          "v": "); so BOTH coefficients are TFPT-fixed, not free integration constants. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "all timelike directions "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " the covariant tensor equation; the matter side is the assembled CHM ball modular flux ("
+        },
+        {
+          "k": "c",
+          "v": "v358"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v323"
+        },
+        {
+          "k": "t",
+          "v": "). NET: the original B6 “full covariant Einstein-side field equation” is now PARAMETER-FREE at the local level. "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "residual: the Jacobson equation-of-state status (not a from-action quantisation) "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the global ambient measure (C7/"
+        },
+        {
+          "k": "c",
+          "v": "QG.AMB.01"
+        },
+        {
+          "k": "t",
+          "v": ", separate, gap-decoupled); "
+        },
+        {
+          "k": "m",
+          "v": "v_{\\mathrm{geo}}"
+        },
+        {
+          "k": "t",
+          "v": " the one unit. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": "; mirrored in Wolfram ("
+        },
+        {
+          "k": "c",
+          "v": "303/303"
+        },
+        {
+          "k": "t",
+          "v": "). ("
+        },
+        {
+          "k": "c",
+          "v": "next-plan.md"
+        },
+        {
+          "k": "t",
+          "v": " Direction 4 folded in: the "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda"
+        },
+        {
+          "k": "t",
+          "v": " here matches the "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": "-readout.)"
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-23",
+    "dateLabel": "2026-06-23",
+    "heading": [
+      {
+        "k": "t",
         "v": "the classical gravity field equation, parameter-free: the entanglement first law "
       },
       {

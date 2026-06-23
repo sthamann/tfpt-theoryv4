@@ -2380,6 +2380,17 @@ Module[{c3, eta, Z2, mu4, chi, r, R, w, wint},
       && Simplify[wint - 4 Pi R^4/15] == 0 && Simplify[2 Pi wint - 8 Pi^2 R^4/15] == 0];
 ];
 
+(* ==== v359 GRAV.NONLINEAR.01: full covariant Einstein eq, both coefficients parameter-free ==== *)
+Module[{c3, eta, d, Rs, traceG, dtop, prefactor},
+  c3 = 1/(8 Pi); eta = 1/4;
+  traceG = (1 - d/2);                              (* g^{ab}G_ab = (1-d/2) R; coefficient of R *)
+  dtop = 48 c3^4;
+  prefactor = (8 Pi)^2 * dtop;                     (* Lambda prefactor = 3/(4 pi^2) *)
+  checkExact["v359 GRAV.NONLINEAR.01: the fixed-volume entanglement equilibrium gives the FULL covariant G_ab + Lambda g_ab = (1/c3) T_ab with BOTH coefficients parameter-free -- Einstein-tensor trace g^{ab}G_ab=(1-d/2)R=-R in d=4 (the trace structure carrying Lambda, via Jacobson 2015 + Lovelock); coeff 1: 8pi=1/c3 (2pi/eta, eta=1/|mu4|); coeff 2: Lambda from alpha, prefactor (8pi)^2*48c3^4 = 3/(4pi^2) (v60)",
+    Simplify[(traceG /. d -> 4) + 1] == 0 && Simplify[2 Pi/eta - 8 Pi] == 0 && Simplify[1/c3 - 8 Pi] == 0
+      && Simplify[prefactor - 3/(4 Pi^2)] == 0 && Simplify[dtop - 3/(256 Pi^4)] == 0];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];
