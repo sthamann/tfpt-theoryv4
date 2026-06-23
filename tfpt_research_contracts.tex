@@ -1838,6 +1838,30 @@ admissible sector, with \emph{zero} new dimensionless dials (\vref{v364}). \text
 it. \mE/\mC/\mO
 \end{keybox}
 
+\begin{keybox}[The holographic route: the ambient measure is boundary-\emph{redundant}, not missing dynamics (\veri{v369\_qgamb\_redundancy.py}, \texttt{QGAMB.REDUNDANCY.01})]
+There is a second, strategically stronger way to dispatch Gate~2 than building the measure: prove that the
+ambient sector carries \emph{no} physical degrees of freedom relative to the holomorphic boundary algebra, so the
+measure \texttt{QG.AMB.01} is a non-fundamental \emph{certification} object --- the role a coordinate choice plays
+in general relativity --- rather than a missing piece of dynamics. The discriminators that make this
+\emph{ambient-redundancy} statement well-posed are all in hand. \textbf{Trivial superselection \mE:} the number
+of DHR sectors of a chiral net is $|\det\mathrm{Cartan}|$, which is $1$ for $E_8$ (one primary, the vacuum;
+$\mathrm{DHR}((E_8)_1)=\mathrm{Vec}$) against $4$ for the same-$c$ rival $SO(16)_1$ --- a holomorphic boundary net
+has \emph{no} nontrivial superselection charge that a bulk could carry invisibly. \textbf{No torus degeneracy
+\mE:} the ground-state degeneracy on $T^2$ equals the number of anyons $=|\det K|=1$ for $E_8$, so there is no
+topologically protected bulk d.o.f.\ hidden from the boundary (the genus-$1$ obstruction of \vref{v344}, in its
+redundancy reading). \textbf{Bounded reconstruction \mE:} the seam transfer deviation subspace contracts at the
+finite gapped Petz rate $(2/3)^6$ (\vref{v221}), and the gap-decoupling margin
+$\Delta_{\mathrm{eff}}=6\log\tfrac32-\tfrac{31}{4\pi^2}\approx1.648>0$ (\vref{v76}/\vref{v337}) separates the
+un-built ambient sector from the admissible one. \textbf{The statement \mC:} with the Bisognano--Wichmann modular
+reconstruction map (\vref{v258}/\vref{v309}/\vref{v323}), under \texttt{SEAM.EQUIV.01} every gauge-invariant bulk
+observable is boundary-reconstructible,
+$\mathcal O_{\mathrm{phys}}^{\mathrm{bulk}}/\mathrm{Diff}\cong\mathcal A_\Sigma^{\mu_4}$, and two ambient measures
+sharing the same boundary state are physically equivalent. \textbf{Residual \mO:} the construction consumes
+exactly two premises --- \texttt{SEAM.EQUIV.01} (the S3 lattice input, \vref{v366}) and the BW intrinsicality of
+the raw collar (\vref{v329}); it does \emph{not} construct \texttt{QG.AMB.01} but supplies the \emph{alternative}
+route, so that Gravity-complete $=$ Boundary-complete $+$ Ambient-redundancy. \mE/\mC/\mO
+\end{keybox}
+
 \begin{keybox}[The classical field equation, parameter-free: entanglement equilibrium gives the linearised Einstein equation with $G$ from $\cthree$ (\veri{v358\_grav\_entropy\_equilibrium.py})]
 While Gate 2 (above) reduces the metric-sector \emph{measure}, the classical metric-sector \emph{field equation}
 is supplied directly by the entanglement first law $\delta S=\delta\langle K\rangle$ (Jacobson 2015; Faulkner et

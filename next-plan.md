@@ -131,6 +131,85 @@ Both are now theorem-bounded reductions, not diffuse "full QG / continuum" gaps 
 been pulled; what is left is genuinely hard mathematics (constructive QFT / scaling-limit existence), not a free
 dial or a missing TFPT mechanism.
 
+---
+
+## Forward plan v2 (2026-06-23) — Tracks toward QFT / Gravity / TOE completion
+
+The Directions 1–7 above closed/sharpened the *internal* gravity and reduction work. What remains is organised as
+**four tracks** with the precise completion target each unlocks. Definitions (the operational completion grammar,
+consistent with `tfpt_research_contracts` and the No-Unit theorem `v153`/`v364`):
+
+- **QFT-complete** = Modular Spectral Closure (`v261`) **+** `SEAM.EQUIV.01` discharged (the boundary relative
+  object is one mathematical object, no residual premise).
+- **Gravity-complete** = QFT-complete **+** *either* the ambient measure is built (C7) *or* the ambient sector is
+  proved physically redundant (the holographic route).
+- **TOE-complete (operational)** = Gravity-complete **+** `F_transfer` is a closed, dial-free solver suite **+**
+  the frozen kill tests survive. (`v_geo` stays the one metrology unit — by theorem, not a gap.)
+
+### Track 1 — close `SEAM.EQUIV.01` by attacking the single S3 input (highest leverage → QFT-complete)
+- **Goal:** discharge S3 (`v356`/`v366`): the abstract 16-Majorana collar realised as a genuine **lattice chiral
+  free-fermion invertible phase** (`c_- = 8`, gap `6 ln(3/2)`, `det K = 1`) — the seam one-sidedness that *defines*
+  `c₃`. Given S3, MMST applies as a cited theorem and the scaling limit is `(E8)₁`.
+- **Why reachable now:** the continuum chain S1→S6 is theorem-bounded except S3 (`v366`); the gap is *derived*
+  (`v302`), the target *pinned* (`v351`), invertibility follows from gapped free fermions (`v301`).
+- **Concrete steps:**
+  1. `v367 SEAM.S3.LATTICE.01` — build the explicit Koo–Saleur lattice fermion model of the collar; verify on the
+     lattice (numerically + class arithmetic) `c_- = 8`, transfer gap `= 6 ln(3/2)`, `det K = 1` vs `SO(16)` `= 4`.
+  2. `v368 SEAM.S3.INFLOW.01` — harden the anomaly-inflow leg (S4): the chiral edge of the invertible bulk is
+     non-gappable (`c_- ≠ 0` by bulk–edge), so edge existence follows from S2+S3, not a separate assumption.
+- **Difficulty:** high (constructive lattice→continuum existence). **Open part:** the from-scratch lattice
+  realisation; stays `[O]`/`[C]` (cited MMST), but reduces "continuum gap" to one lattice existence statement.
+
+### Track 2 — `Gravity-complete` without building the ambient swamp (the holographic route)
+- **Goal:** prove the **ambient redundancy** statement instead of constructing the general Euclidean QG measure —
+  the strategically strongest move, since it sidesteps the conformal-factor swamp (`v332`/`v334`).
+- **Why reachable now:** `(E8)₁` holomorphy gives `DHR((E8)₁) = Vec` (no anyons / superselection), `det K = 1`
+  (no torus GSD), the Petz recovery rate `(2/3)⁶` (`v221`), and the gap-decoupling margin `Δ_eff ≈ 1.648 > 0`
+  (`v76`/`v337`) are all in hand — the ingredients of a boundary-reconstruction theorem.
+- **Concrete steps:**
+  1. ✅ `v369 QGAMB.REDUNDANCY.01` — **DONE (this change):** assemble the ambient-redundancy statement
+     `O_phys^bulk/Diff ≅ A_Σ^{μ4}` from the established `[E]` discriminators (`det K = 1` ⇒ `DHR = Vec`; no torus
+     GSD; finite Petz recovery `(2/3)⁶`; gap margin `1.648 > 0`) + modular (Bisognano–Wichmann) covariance; so
+     QG.AMB.01 is a non-fundamental **certification** object, not missing dynamics. `[C]` (conditional on
+     `SEAM.EQUIV.01` + BW intrinsicality); residual `[O]` = those two premises. Python-only.
+  2. `v370 KMS.HESSIAN.ENTIRE.01` — the perturbative companion (`list.txt` "Paper C"): evaluate the **untruncated**
+     KMS spectral-action Hessian `Tr e^{−D²/Λ²}` as a *form factor* (not to `a₄`); target the spin-2 sector
+     `Π₂(p) ∝ 1/(p² e^{p²/M²})` (entire, zero-free) ⇒ the Stelle ghost is a truncation artefact. `[C]` →
+     perturbative graviton unitarity; mirror the exact pieces in Wolfram.
+- **Difficulty:** `v369` low-medium (synthesis of established facts, like `v335`/`v365`); `v370` medium (a real
+  heat-kernel form-factor computation). **Open part:** `v369` stays `[C]` on `SEAM.EQUIV.01`; `v370` is perturbative
+  only (does not replace the non-perturbative measure).
+
+### Track 3 — `TOE-complete (operational)`: `F_transfer` as a dial-free solver suite
+- **Goal:** turn the frontier transfer interfaces into runnable, typed solvers — `F_transfer = F_pole ⊕ F_Boltzmann
+  ⊕ F_relic ⊕ F_QCD` — so every "near-miss" either becomes algorithmically reproducible or dies honestly.
+- **Why reachable now:** `v326` already assembles the suite as one harness; `v339` maps each external input
+  precisely; the compiler fixes the source (CKM point, Koide `Q=2/3`), the solver does the QCD/thermal dirt.
+- **Concrete steps:** `v371 F.POLE` (Koide source→pole via RG+QED dressing), `v372 F.BOLTZMANN` (`η_B` washout),
+  `v373 F.RELIC` (finite-T axion relic), `v374 F.QCD` (`m_p/m_e` via carrier-`b₃` running). Each: compiler input +
+  external standard physics → typed `[C]` output, **no free dial**. Feeds the freeze registry (rare kaons, `ε_K`,
+  PMNS package, reheating map).
+- **Difficulty:** medium (engineering + cited external physics). **Open part:** these stay `[C]` transfer bridges,
+  never promoted to compiler powers (the firewall in `tfpt_4_frontier`).
+
+### Track 4 — "and possibly more": the observatory stack (prediction machine, not a PDF)
+- **Goal:** operationalise the compiler as a prediction machine: a machine-readable prediction registry (extend
+  `freeze_file.csv`), a horizon-signature lab (`β_BH(r)` achromatic `1/r²`, echo templates, `(2/3)^{6n}` recovery —
+  as a *search* tool, not a claim machine), and a status-typed CI for every observable.
+- **Difficulty:** low-medium (tooling). **Open part:** none physical — this is infrastructure that makes the closed
+  pieces usable and the open pieces honestly fenced.
+
+### Recommended order (v2)
+1. `v369` (ambient redundancy) — **done**: the one `list.txt`-strategic module the suite was missing.
+2. Track 1 (`v367`/`v368`, S3) — the QFT-complete leverage point.
+3. `v370` (entire spin-2 form factor) — perturbative graviton unitarity.
+4. Track 3 (`v371`–`v374`, `F_transfer`) — operational TOE-completeness + new predictions.
+5. Track 4 (observatory) — fold in as the closed pieces land.
+
+### Honest limits (hold even at full closure)
+No absolute GeV from pure numbers (`v_geo` is metrology, `v153`/`v364`); QCD/nuclei/chemistry stay solver physics;
+no antigravity/warp (gravity only via `T_ab`); experiments (JUNO, CMB-S4, EDM, …) remain the judges.
+
 ## Discipline reminders (do not relax)
 - Every new `vN` follows the full workflow: derive from `{c₃, g_car}`, `check()/summary()`, register in `run_all.py`
   + `script_registry.csv`, cite `\veri{}` in the affected paper **body**, mirror exact results in Wolfram, add a

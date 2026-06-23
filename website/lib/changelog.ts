@@ -47,6 +47,377 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "Track 2 of the forward plan v2 — the AMBIENT REDUNDANCY statement ("
+      },
+      {
+        "k": "c",
+        "v": "v369"
+      },
+      {
+        "k": "t",
+        "v": "): the holographic route to Gravity-complete that sidesteps building the general Euclidean QG measure"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v369"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGAMB.REDUNDANCY.01"
+            },
+            {
+              "k": "t",
+              "v": ") — Track 2 (forward plan v2)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Instead of constructing the non-perturbative ambient measure (the conformal-factor swamp, "
+        },
+        {
+          "k": "c",
+          "v": "v332"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v334"
+        },
+        {
+          "k": "t",
+          "v": "), assemble the established discriminators that prove the ambient sector carries "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "no"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " physical degrees of freedom relative to the holomorphic boundary algebra, so the QG measure (gate C7/"
+        },
+        {
+          "k": "c",
+          "v": "QG.AMB.01"
+        },
+        {
+          "k": "t",
+          "v": ") is a non-fundamental "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "certification"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " object (like a coordinate choice in GR), not missing dynamics. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "holomorphy "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{DHR}((E_8)_1)=\\mathrm{Vec}"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "\\#"
+        },
+        {
+          "k": "t",
+          "v": "primaries "
+        },
+        {
+          "k": "m",
+          "v": "=|\\det\\mathrm{Cartan}|=1"
+        },
+        {
+          "k": "t",
+          "v": " for "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " for "
+        },
+        {
+          "k": "m",
+          "v": "SO(16)"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " no nontrivial superselection charge a bulk could carry invisibly; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "no torus ground-state degeneracy ("
+        },
+        {
+          "k": "m",
+          "v": "|\\det K|=1"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "finite Petz recovery rate "
+        },
+        {
+          "k": "m",
+          "v": "(2/3)^6"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v221"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the gap-decoupling margin "
+        },
+        {
+          "k": "m",
+          "v": "\\Delta_{\\mathrm{eff}}=6\\log\\tfrac32-\\tfrac{31}{4\\pi^2}\\approx1.648>0"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v76"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v337"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "with the Bisognano–Wichmann reconstruction map ("
+        },
+        {
+          "k": "c",
+          "v": "v258"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v309"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v323"
+        },
+        {
+          "k": "t",
+          "v": ") the redundancy statement "
+        },
+        {
+          "k": "m",
+          "v": "\\mathcal O_{\\mathrm{phys}}^{\\mathrm{bulk}}/\\mathrm{Diff}\\cong\\mathcal A_\\Sigma^{\\mu_4}"
+        },
+        {
+          "k": "t",
+          "v": " is well-posed. "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "residual: the two consumed premises — "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " (the S3 lattice input, "
+        },
+        {
+          "k": "c",
+          "v": "v366"
+        },
+        {
+          "k": "t",
+          "v": ") and the BW intrinsicality of the raw collar ("
+        },
+        {
+          "k": "c",
+          "v": "v329"
+        },
+        {
+          "k": "t",
+          "v": "); it does "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " construct "
+        },
+        {
+          "k": "c",
+          "v": "QG.AMB.01"
+        },
+        {
+          "k": "t",
+          "v": " but provides the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "alternative"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (holographic redundancy) route: Gravity-complete "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " Boundary-complete "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " Ambient-redundancy. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": "; Python-only."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-23",
+    "dateLabel": "2026-06-23",
+    "heading": [
+      {
+        "k": "t",
         "v": "Directions 3 & 7 — the two hard functional-analysis residuals ADVANCED: the QG measure as one-loop fluctuations around the parameter-free saddle ("
       },
       {
