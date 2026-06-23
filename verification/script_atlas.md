@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`374` registered scripts · `432` ledger claims · `10` clusters.
+`374` registered scripts · `433` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -812,7 +812,7 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `SEAM.EQUIV.01`×19, `v76`×17, `E8.GLU.01`×15, `v56`×15, `HOR.NARIAI.01`×15, `QG.AMB.01`×13, `v216`×12, `REG.FREEZE.01`×12, `AX.P1.01`×11, `QGEO.SUBPRIN.01`×11, `FLAV.KQ.01`×10, `v3`×10, `v336`×10, `QGEO.PILLOW.01`×10
+**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `SEAM.EQUIV.01`×20, `v76`×17, `E8.GLU.01`×15, `v56`×15, `HOR.NARIAI.01`×15, `QG.AMB.01`×13, `v216`×12, `REG.FREEZE.01`×12, `AX.P1.01`×11, `v336`×11, `QGEO.SUBPRIN.01`×11, `FLAV.KQ.01`×10, `v3`×10, `QGEO.PILLOW.01`×10
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 

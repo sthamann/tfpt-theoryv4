@@ -54,6 +54,7 @@ import TfptCarrier.Hypercharge
 import TfptCarrier.GlueUniqueness
 import TfptCarrier.SeamDeckClosure
 import TfptCarrier.SeamEquivChain
+import TfptCarrier.SeamScalingLimit
 import TfptCarrier.BWKeystone
 import TfptCarrier.CartanDeterminants
 import TfptCarrier.Mu4Commutation

@@ -418,6 +418,219 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "Lean: the S3 continuum leg formalised as “closed modulo a cited theorem” — "
+      },
+      {
+        "k": "c",
+        "v": "FORM.SEAM.MMST.01"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "FORM.SEAM.MMST.01"
+            },
+            {
+              "k": "t",
+              "v": " — Lean 4 formalisation."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The S3 continuum leg is now machine-formalised in a new module ("
+        },
+        {
+          "k": "c",
+          "v": "SeamScalingLimit.lean"
+        },
+        {
+          "k": "t",
+          "v": "), lake build OK and "
+        },
+        {
+          "k": "c",
+          "v": "#print axioms"
+        },
+        {
+          "k": "t",
+          "v": " clean, in the audit-contract style of "
+        },
+        {
+          "k": "c",
+          "v": "SeamEquivChain.lean"
+        },
+        {
+          "k": "t",
+          "v": ". The MMST applicability hypotheses for the seam collar are "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "provable"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " by kernel "
+        },
+        {
+          "k": "c",
+          "v": "decide"
+        },
+        {
+          "k": "t",
+          "v": " (no axioms): "
+        },
+        {
+          "k": "m",
+          "v": "D = 16"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{rank} = c = 8"
+        },
+        {
+          "k": "t",
+          "v": ", the range "
+        },
+        {
+          "k": "m",
+          "v": "8 \\le 8 \\le 16"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "c_- = 8 \\neq 0"
+        },
+        {
+          "k": "t",
+          "v": ", and "
+        },
+        {
+          "k": "m",
+          "v": "\\det K = 1"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "SO(16)"
+        },
+        {
+          "k": "t",
+          "v": "'s "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": ". The MMST scaling-limit theorem (CMP 2022) and the Adamo–Moriwaki–Tanimoto OS reconstruction (2024) are "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "named cited axioms"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "; the conclusion "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " follows by a well-typed composition whose residual ("
+        },
+        {
+          "k": "c",
+          "v": "#print axioms"
+        },
+        {
+          "k": "t",
+          "v": ") is exactly those two published theorems plus the carrier gap — no hidden assumption, no "
+        },
+        {
+          "k": "c",
+          "v": "sorry"
+        },
+        {
+          "k": "t",
+          "v": ". Mirrors the S3 closure stack "
+        },
+        {
+          "k": "c",
+          "v": "v376"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v379"
+        },
+        {
+          "k": "t",
+          "v": "; so "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " is now “closed modulo a cited theorem”, the honest formalisation ceiling. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "lean_manifest"
+        },
+        {
+          "k": "t",
+          "v": " refreshed."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-23",
+    "dateLabel": "2026-06-23",
+    "heading": [
+      {
+        "k": "t",
         "v": "S3 closure stack — the target of the seam scaling limit pinned at EVERY computable level: central charge "
       },
       {

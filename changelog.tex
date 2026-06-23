@@ -78,6 +78,20 @@ of the raw collar (\vref{v329}); it does \emph{not} construct \texttt{QG.AMB.01}
 Cited in \texttt{tfpt\_research\_contracts}; Python-only.
 \end{itemize}
 
+\subsection*{2026-06-23 (Lean: the S3 continuum leg formalised as ``closed modulo a cited theorem'' --- \texttt{FORM.SEAM.MMST.01})}
+\begin{itemize}
+\item \textbf{\texttt{FORM.SEAM.MMST.01} --- Lean 4 formalisation.} The S3 continuum leg is now
+machine-formalised in a new module (\texttt{SeamScalingLimit.lean}), lake build OK and \texttt{\#print axioms}
+clean, in the audit-contract style of \texttt{SeamEquivChain.lean}. The MMST applicability hypotheses for the seam collar
+are \emph{provable} by kernel \texttt{decide} (no axioms): $D = 16$, $\operatorname{rank} = c = 8$, the range
+$8 \le 8 \le 16$, $c_- = 8 \neq 0$, and $\det K = 1$ vs $SO(16)$'s $4$. The MMST scaling-limit theorem (CMP 2022) and
+the Adamo--Moriwaki--Tanimoto OS reconstruction (2024) are \emph{named cited axioms}; the conclusion
+$(E_8)_1$ follows by a well-typed composition whose residual (\texttt{\#print axioms}) is exactly those two
+published theorems plus the carrier gap --- no hidden assumption, no \texttt{sorry}. Mirrors the S3 closure
+stack \texttt{v376}--\texttt{v379}; so \texttt{SEAM.EQUIV.01} is now ``closed modulo a cited theorem'', the
+honest formalisation ceiling. Cited in \texttt{tfpt\_research\_contracts}; \texttt{lean\_manifest} refreshed.
+\end{itemize}
+
 \subsection*{2026-06-23 (S3 closure stack --- the target of the seam scaling limit pinned at EVERY computable level: central charge $c{=}8$ from the lattice (\texttt{v376}), the $(E_8)_1$ character (\texttt{v377}), the genus-1 torus count $=1$ (\texttt{v378}), and reflection positivity (\texttt{v379}); only the abstract continuum existence (cited MMST) stays external)}
 \begin{itemize}
 \item \textbf{\texttt{v376} (\texttt{SEAM.S3.CENTRALCHARGE.01}).} The Calabrese--Cardy finite-size

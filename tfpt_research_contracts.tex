@@ -837,6 +837,17 @@ exact character, genus-1 count, RP); \mO\ the one thing a computation cannot sup
 \emph{continuum existence} of the limit (the cited MMST theorem, \vref{v336}). With RP in hand the ambient
 measure C7 is then discharged by the redundancy theorem (\vref{v369}), so S3 is the master key: the target
 is pinned exactly, only the existence proof is external.
+\par\smallskip\noindent\textbf{And that external step is now Lean-formalised as ``closed modulo a cited
+theorem'' (\texttt{FORM.SEAM.MMST.01}, \texttt{TfptCarrier/SeamScalingLimit.lean}).} The continuum leg is
+machine-formalised in the audit-contract style of \texttt{SeamEquivChain.lean}: the collar's MMST
+applicability hypotheses are \emph{provable} arithmetic facts by Lean kernel \texttt{decide} (no axioms) ---
+$D{=}16$ Majoranas, $\operatorname{rank}{=}c{=}8$, the range $8\le8\le16$, the chirality $c_-{=}8\neq0$, and
+the holomorphy discriminator $\det K{=}1$ vs $SO(16)$'s $4$; the MMST scaling-limit theorem and the
+Adamo--Moriwaki--Tanimoto OS reconstruction are declared as \emph{named cited axioms}; and the conclusion
+$(E_8)_1$ follows by a well-typed composition whose \texttt{\#print axioms} pins the residual to exactly those
+two published theorems (plus the carrier gap), with no hidden assumption and no \texttt{sorry}. Every
+TFPT-internal hypothesis is thus kernel-checked; only the two cited theorems are assumed --- the honest
+closure ceiling for \texttt{SEAM.EQUIV.01}.
 \par\smallskip\noindent\textbf{TOE-roadmap follow-ups --- the keystone as a typed certificate, the bedrock
 modular form, and the gap-decoupled measure (\veri{v308\_seam\_equiv\_chain.py}, \veri{v309\_modular\_bedrock.py},
 \veri{v311\_gap\_decoupled\_measure.py}).} Three machine-checked steps push the keystone arc further.
