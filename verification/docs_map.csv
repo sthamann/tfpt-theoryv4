@@ -7,19 +7,19 @@ introduction,subsection,The companion documents,256,288,,cb43f67f0b4b,2026-06-14
 introduction,section,The architecture at a glance,289,367,,c457aefc1cb7,2026-06-12
 introduction,section,The dependency DAG and the proof ledger,368,426,,fe77a4e2e658,2026-06-12
 introduction,subsection,The compact status formula: three honest layers,427,458,v14_carrier_uniqueness.py;v56_unique_attractor.py;v60_lambda_metrology_branch.py;v6_bootstrap.py,f2503324cd66,2026-06-22
-introduction,subsection,The hard reduction: the live residual as typed interfaces,459,575,v14_carrier_uniqueness.py;v219_icosahedral_mckay.py;v232_e8_kleinian_seam.py;v234_seam_holomorphy_selection.py;v235_seam_chern_simons.py;v23_anchor_generator.py;v335_seam_equiv_unify.py;v36_spectral_action_g2.py;v6_bootstrap.py,5fd1faff3dad,2026-06-22
-introduction,section,The compiler: why $30=2\cdot3\cdot5$,576,632,v219_icosahedral_mckay.py;v223_coxeter_totative_clock.py;v298_e8_network_attractor.py;v299_hypergraph_0d_autonomous.py;v312_hypergraph_substrate.py,f1d07412f629,2026-06-21
-introduction,section,The $\mu_4$ glue: how $E_8$ is really built,633,657,v1_e8_glue.py,e76c4fe33c1d,2026-06-12
-introduction,section,How derivation now works: the derivation map,658,696,,14e40212ef8c,2026-06-12
-introduction,subsection,Cosmology is the Pascal action grammar of the carrier,697,733,v18_quark_yukawa.py;v20_lepton_c_derivation.py;v46_grand_mass_volume.py,a97bc6f4d263,2026-06-12
-introduction,section,"Physical, geometric, topological: why the architecture is plausible",734,748,,5a4228cd0587,2026-06-12
-introduction,section,What role $E_8$ now plays exactly,749,774,,07ec9c971cd7,2026-06-12
-introduction,section,What this means for the theory-of-everything question,775,821,,398d6f6a2ca1,2026-06-22
-introduction,subsection,"The closure ledger: what is done, and what genuinely remains",822,900,,f32a6db95534,2026-06-22
-introduction,section,Does this make the theory more probable?,901,918,,540397fd6436,2026-06-12
-introduction,section,Predictions for running and upcoming experiments,919,989,v100_numerology_null_mc.py;v84_frozen_registry.py,aebe6e44a5a3,2026-06-12
-introduction,section,Conclusion,990,1001,,85f94f17b1dd,2026-06-12
-introduction,section,Appendix: computational verification (reproducibility),1002,1041,v1_e8_glue.py,376b86d99cd2,2026-06-17
+introduction,subsection,The hard reduction: the live residual as typed interfaces,459,576,v14_carrier_uniqueness.py;v219_icosahedral_mckay.py;v232_e8_kleinian_seam.py;v234_seam_holomorphy_selection.py;v235_seam_chern_simons.py;v23_anchor_generator.py;v335_seam_equiv_unify.py;v36_spectral_action_g2.py;v6_bootstrap.py,b15a654c613c,2026-06-23
+introduction,section,The compiler: why $30=2\cdot3\cdot5$,577,633,v219_icosahedral_mckay.py;v223_coxeter_totative_clock.py;v298_e8_network_attractor.py;v299_hypergraph_0d_autonomous.py;v312_hypergraph_substrate.py,f1d07412f629,2026-06-21
+introduction,section,The $\mu_4$ glue: how $E_8$ is really built,634,658,v1_e8_glue.py,e76c4fe33c1d,2026-06-12
+introduction,section,How derivation now works: the derivation map,659,697,,14e40212ef8c,2026-06-12
+introduction,subsection,Cosmology is the Pascal action grammar of the carrier,698,734,v18_quark_yukawa.py;v20_lepton_c_derivation.py;v46_grand_mass_volume.py,a97bc6f4d263,2026-06-12
+introduction,section,"Physical, geometric, topological: why the architecture is plausible",735,749,,5a4228cd0587,2026-06-12
+introduction,section,What role $E_8$ now plays exactly,750,775,,07ec9c971cd7,2026-06-12
+introduction,section,What this means for the theory-of-everything question,776,822,,398d6f6a2ca1,2026-06-22
+introduction,subsection,"The closure ledger: what is done, and what genuinely remains",823,901,,f32a6db95534,2026-06-22
+introduction,section,Does this make the theory more probable?,902,919,,540397fd6436,2026-06-12
+introduction,section,Predictions for running and upcoming experiments,920,990,v100_numerology_null_mc.py;v84_frozen_registry.py,aebe6e44a5a3,2026-06-12
+introduction,section,Conclusion,991,1002,,85f94f17b1dd,2026-06-12
+introduction,section,Appendix: computational verification (reproducibility),1003,1042,v1_e8_glue.py,376b86d99cd2,2026-06-17
 tfpt_1_architecture_e8,front,(front matter),1,146,,31add055d84c,2026-06-12
 tfpt_1_architecture_e8,section,How to read this document,147,364,v106_review_validation.py;v109_sheet_pairing.py;v110_calderon_sheet.py;v111_quadratic_transport.py;v112_selfcounting_channel.py;v113_quasifree_kernel.py;v23_anchor_generator.py,5afde72d746c,2026-06-12
 tfpt_1_architecture_e8,section,Headline: the Pascal compiler on five carrier slots,365,422,,32b8525a612e,2026-06-12
@@ -151,9 +151,9 @@ tfpt_4_frontier,section,The Higgs quartic --- near-criticality from the free sea
 tfpt_4_frontier,section,"The Koide relation --- near $2/3$, computed exactly",298,438,v183_koide_f_corner_transfer.py;v25_frontier_conjectures.py;v37_plucker_anchor.py;v82_koide_attractor_splitting.py;v93_koide_relaxation_toy.py;v99_koide_flow_time.py,3f212b1b7495,2026-06-14
 tfpt_4_frontier,section,"Dark matter --- the candidate is fixed, the scale is pending",439,529,v185_axion_relic_solver.py;v211_axion_spine_angle.py;v25_frontier_conjectures.py,17061b526d1c,2026-06-15
 tfpt_4_frontier,section,The muon anomalous magnetic moment --- a seam vertex readout,530,554,v204_muon_seam_g2.py;v51_boundary_half_step.py,fa4b8d3cdd1a,2026-06-15
-tfpt_4_frontier,section,Full quantum gravity --- induced from the boundary kernel,555,717,v113_quasifree_kernel.py;v152_norm_is_anchor.py;v165_premise_a_closure.py;v177_seam_marking_kernel.py;v205_xi_threequarter.py;v206_h0_lambda_branch.py;v207_asymptotic_safety.py;v210_mark_local_dtn.py;v255_spectral_action_expansion.py;v259_modular_cutoff_kappa.py;v274_scale_overdetermination.py;v275_qgamb_roadmap.py;v277_seam_calderon_e8_match.py;v281_holomorphy_modular_data.py;v283_live_killtest_scorecard.py;v337_decoupling_theorem.py;v36_spectral_action_g2.py;v60_lambda_metrology_branch.py,80241a6031de,2026-06-22
-tfpt_4_frontier,section,Summary,718,747,,6580fbe649b5,2026-06-15
-tfpt_4_frontier,section,Appendix: computational verification,748,761,v28_gravity_fR.py;v36_spectral_action_g2.py;v7_gravity_cosmo.py,e0c58709c50b,2026-06-12
+tfpt_4_frontier,section,Full quantum gravity --- induced from the boundary kernel,555,734,v113_quasifree_kernel.py;v152_norm_is_anchor.py;v165_premise_a_closure.py;v177_seam_marking_kernel.py;v205_xi_threequarter.py;v206_h0_lambda_branch.py;v207_asymptotic_safety.py;v210_mark_local_dtn.py;v255_spectral_action_expansion.py;v259_modular_cutoff_kappa.py;v274_scale_overdetermination.py;v275_qgamb_roadmap.py;v277_seam_calderon_e8_match.py;v281_holomorphy_modular_data.py;v283_live_killtest_scorecard.py;v337_decoupling_theorem.py;v358_grav_entropy_equilibrium.py;v36_spectral_action_g2.py;v60_lambda_metrology_branch.py,879670162ae8,2026-06-23
+tfpt_4_frontier,section,Summary,735,764,,6580fbe649b5,2026-06-15
+tfpt_4_frontier,section,Appendix: computational verification,765,778,v28_gravity_fR.py;v36_spectral_action_g2.py;v7_gravity_cosmo.py,e0c58709c50b,2026-06-12
 tfpt_5_redteam,front,(front matter),1,78,,ed1064954d8c,2026-06-18
 tfpt_5_redteam,section,Method,79,87,,aa670d017bc0,2026-06-12
 tfpt_5_redteam,section,Target A --- the $(E8)_1$ boundary-net identification,88,113,,a2a8182c2254,2026-06-12

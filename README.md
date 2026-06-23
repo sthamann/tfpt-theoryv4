@@ -257,6 +257,15 @@ The ledger is *append-only and versioned*: superseded rows are marked `active=fa
   The ambient quantum-gravity measure (`QG.AMB.01`) is **not** a second TFPT structural item: it is the
   *general* Euclidean-QG conformal-factor problem (GHP 1978), gap-decoupled (`Δ_eff = 1.648 > 0`) — an
   inherited, decoupled problem, no readout depends on it.
+- **Gravity is parameter-free** (`v358`): the classical metric-sector field equation is no longer only an
+  `R+R²` readout. The entanglement first law `δS = δ⟨K⟩` (Jacobson; Faulkner et al.), run with TFPT's atoms,
+  gives the *linearised* Einstein equation `G_ab = c₃⁻¹ T_ab` with `c₃⁻¹ = 8π` **fixed** — no free
+  dimensionless Newton dial — and the **thermodynamic** origin of `c₃` (the first-law coefficient `2π/η`)
+  **coincides** with the **geometric** one (the one-sided Gauss–Bonnet `|Z₂|·2π·χ`) via the atom identity
+  `|μ₄| = |Z₂|·χ(S²) = 4`. So `c₃` is **triply over-determined** (anchor, geometry, thermodynamics). The
+  matter flux is assembled (the CHM ball modular Hamiltonian, `v323`) and the entropy density is atom-fixed
+  (`1/4 = 1/|μ₄|`, central charge `c = g_car+N_fam = 8`). The only residual is the linear→nonlinear extension
+  and the one unit `v_geo`.
 - **The central theorem**: `1/(8π)` from the seam-determinant replica — structure closed, the
   Fursaev–Solodukhin factor machine-derived (`v90`), and the mechanism now exhibited at the
   gapped-model level (gap ⇒ cutoff-independent EH coefficient under replica, `v150`), with the

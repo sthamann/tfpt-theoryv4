@@ -26,7 +26,7 @@ export interface ReleaseAsset {
 }
 
 const COMMON = {
-  version: "TFPT 5.2",
+  version: "TFPT 5.3",
   releaseDate: "2026-06-23",
 };
 
@@ -34,81 +34,81 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/introduction.pdf": {
     href: "/papers/introduction.pdf",
     ...COMMON,
-    bytes: 1878032,
+    bytes: 1880103,
     sha256:
-      "451e434325bf6d96a9fee4a253c07863d7d0e215fa81bffb6e96ff0e4dbc466e",
+      "9dcc5e7d28dc1f3ee317ef595fc9d5407c471412762d1c9de9d53b56ec9cbffc",
     changelog:
       "Compiler-closure reading guide: two axioms, the dependency DAG, the predictions and the proof ledger.",
   },
   "/papers/tfpt_1_architecture_e8.pdf": {
     href: "/papers/tfpt_1_architecture_e8.pdf",
     ...COMMON,
-    bytes: 1087871,
+    bytes: 1089050,
     sha256:
-      "40ec5ab937eacf5bcf3a13f6a73820c9afb97ec783e92a1fc8de71eca1300a0f",
+      "07d849d89eb53b2834d782c715d05adc25c47e63eceacbdc0d673669a07c9759",
     changelog:
       "Architecture: the two axioms, the D₅ × A₃ → E₈ construction, and the EM fixed point with existence + uniqueness.",
   },
   "/papers/tfpt_2_standard_model.pdf": {
     href: "/papers/tfpt_2_standard_model.pdf",
     ...COMMON,
-    bytes: 1158463,
+    bytes: 1159526,
     sha256:
-      "a5615efa6d6f0e9c5186e96248c5f6455d46771afae746c6b36bcbda67a98cd7",
+      "1827f4a65c9417bbed4adbeed6619685a73785ca229bb190829c03386f94af12",
     changelog:
       "The Standard Model in one φ₀-ladder, the flavor residue matrix, and the derived solar angle θ₁₂.",
   },
   "/papers/tfpt_3_e8_audit_bootstrap.pdf": {
     href: "/papers/tfpt_3_e8_audit_bootstrap.pdf",
     ...COMMON,
-    bytes: 902067,
+    bytes: 903063,
     sha256:
-      "a61f8a0f9051b2290d07a2481a2632619d2ea4596579fac628b48b02c8a25ccd",
+      "7c33bd7cdcd1569094b0c79e3699ac28ba74aed48465228686dc5901782b6208",
     changelog:
       "The seven E₈ slices as an audit raster, the cascade bridge, and the Möbius bootstrap.",
   },
   "/papers/tfpt_4_frontier.pdf": {
     href: "/papers/tfpt_4_frontier.pdf",
     ...COMMON,
-    bytes: 768895,
+    bytes: 773045,
     sha256:
-      "41f98a68ea4921c84c89f352fbc10d172a9240d028b57efa307df4b8dbf43d3a",
+      "6c9384a6c17e77b014958967304896a2205a0908e610a19616c742c93f3f6beb",
     changelog:
       "Honest status of η_B, m_p/m_e, Koide, dark matter and full quantum gravity — not forced onto the ladder.",
   },
   "/papers/tfpt_horizon_readouts.pdf": {
     href: "/papers/tfpt_horizon_readouts.pdf",
     ...COMMON,
-    bytes: 882129,
+    bytes: 884105,
     sha256:
-      "e83c4f2d45af95ef89aead2f36383bc308bd5baac3d32338ee358191b12fef7c",
+      "53c1a0f6e4cc8b998fb3e04f65d03917690243077e518e73a228a3df76596d82",
     changelog:
       "Appendix H — the horizon unit system: c₃ = 1/(8π) as the universal horizon thermal code.",
   },
   "/papers/origin_theory.pdf": {
     href: "/papers/origin_theory.pdf",
     ...COMMON,
-    bytes: 1026367,
+    bytes: 1027437,
     sha256:
-      "6f079141882764d90c288a405f5714ff9afb78c0541c08d52033615703dc7b92",
+      "ab26752f721ce58bc031ff50a2a55ce0201340de71d3241cdd4fbb972298b828",
     changelog:
       "Origin Theory: the (5,3) skeleton, the triply-forced 8, the order-30 Coxeter cycle, and the gapped unique attractor.",
   },
   "/papers/tfpt_research_contracts.pdf": {
     href: "/papers/tfpt_research_contracts.pdf",
     ...COMMON,
-    bytes: 1317724,
+    bytes: 1318806,
     sha256:
-      "84bf09a777d107c315bcfebc5daf1496dd86877d090c350d91d811831725b721",
+      "e1d129b1af37e547aa78d56582b8b1031306826db57999a2e730b24a16a113f3",
     changelog:
       "Research contracts for the remaining interfaces: v_geo (scale anchor), G_net (metric inclusion), F_transfer (downstream transport).",
   },
   "/papers/tfpt_5_redteam.pdf": {
     href: "/papers/tfpt_5_redteam.pdf",
     ...COMMON,
-    bytes: 762918,
+    bytes: 763580,
     sha256:
-      "15051c4febef53ecce69a8ae46f11bc8b49654c7972b545c516d5a6e37c2333d",
+      "4cee1b91b9c1653efa9077024c1f03a8e6872ba358ee594eac8e88be8f55f20b",
     changelog:
       "The adversarial audit: Targets A–E, what survives, what each target reduces to, and the kill tests.",
   },
@@ -117,7 +117,7 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
     ...COMMON,
     bytes: 915180,
     sha256:
-      "ed33b2a381844ee17daa9b30b55d64385515129421d81b81924a13b44dcec80b",
+      "1bd973097d5f21b7a5d759559e71a0745989965713be59c0ab11918ee963104a",
     changelog:
       "The canonical dated changelog of every change to the theory, the suite, the papers and the website.",
   },

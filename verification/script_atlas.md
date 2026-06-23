@@ -66,7 +66,7 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
 - **v356_continuum_mmst_applicability** [E/C/O] `SEAM.EQUIV.CONTINUUM.03` — Direction A: the continuum chain of SEAM.EQUIV.01 assembled theorem-by-theorem, residual reduced to ONE lattice-realization input tied to the seam's one-sidedness. Chain: gapped (v
   - deps: v286_seam_equivalence_contract, v301, v302, v336, v351, v297, v58, v40 · cited: research contracts
 - **v358_grav_entropy_equilibrium** [E/C/O] `GRAV.ENTROPY.EQUILIBRIUM.01` — The entanglement-equilibrium derivation (Jacobson 2015 / Faulkner et al., delta S = delta<K>) with TFPT's atoms -> the LINEARISED Einstein equation falls out PARAMETER-FREE, and th
-  - deps: v356_continuum_mmst_applicability, v356, v57, v58, v59, v216, v221, v323 · cited: research contracts
+  - deps: v356_continuum_mmst_applicability, v356, v57, v58, v59, v216, v221, v323 · cited: 4 frontier, research contracts
 
 ### `em` — Electromagnetic fixed point  (4 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._

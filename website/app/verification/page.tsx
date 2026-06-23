@@ -4,6 +4,7 @@ import { ArrowLeft, Github, TerminalSquare } from "lucide-react";
 import { SectionHeader } from "@/components/SectionHeader";
 import { VerificationDag } from "@/components/VerificationDag";
 import { ScriptIndex } from "@/components/ScriptIndex";
+import { GravityEmergence } from "@/components/GravityEmergence";
 import { SCRIPT_TOTAL } from "@/lib/suite";
 import { REPO_URL, SITE_URL } from "@/lib/utils";
 
@@ -476,10 +477,11 @@ export default function VerificationPage() {
               (<span className="font-mono">SEAM.EQUIV.01</span>) — the raw RP seam IS the holomorphic (E₈)₁
               net at τ=i (its conformal-deck face <span className="font-mono">QGEO.SYM.01</span> is
               downstream); its residual is Lean-pinned to named cited theorems plus the derived Recovery
-              gap. The full step-by-step reduction lives on the{" "}
+              gap.               The full step-by-step reduction lives on the{" "}
               <span className="text-slate-200">/changelog</span> page.
             </figcaption>
           </figure>
+          <GravityEmergence />
         </div>
       </section>
 

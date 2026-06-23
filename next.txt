@@ -3,6 +3,27 @@
  Stand: 2026-06-08  |  verankert in v81_singular_pencil_matrices.py (11/11), Wolfram 116/116
 ================================================================================
 
+NACHTRAG 2026-06-23 (PARAMETERFREIE GRAVITATION v358 -- die Bruecke zur dynamischen Welt, auf der Gravitations-Seite instanziiert):
+  Nach der Bruecken-Analyse (diskret->kontinuierlich = modular-thermodynamisch; Jacobson + Tomita-Takesaki +
+  Verschraenkung->Geometrie) wurde die Verschraenkungs-Gleichgewichts-Ableitung (Jacobson 2015 / Faulkner et al.,
+  delta S = delta<K>) mit TFPTs Atomen durchgerechnet:
+  - [E] PARAMETERFREIER EINSTEIN-KOEFFIZIENT: G_ab = (1/c3) T_ab, 1/c3 = 8pi FIXIERT; alle vier c3-Rollen
+    konsistent (Unruh 1/(2pi)=4c3, EH 1/(16pi)=c3/2, Einstein 8pi=1/c3, Bekenstein 1/4=1/|mu4|) -- KEINE freie
+    dimensionslose Newton-Stellschraube.
+  - [E] THERMO = GEO KOINZIDENZ (neu): der Erste-Gesetz-Koeffizient 2pi/eta = die geometrische einseitige
+    Gauss-Bonnet |Z2|*2pi*chi GENAU DANN, wenn |mu4| = |Z2|*chi(S^2) = 4 (v216). => thermodynamischer und
+    geometrischer Ursprung von c3 sind EINS; c3 ist dreifach ueberbestimmt (Anker v23, Geometrie v58, Thermo v358).
+  - [C] J3 GELOEST: die CHM-Ball-Modular-Hamiltonian (Boost via Bisognano-Wichmann v323) liefert den Materie-Fluss
+    delta<K_B> = 8pi^2 R^4/15 * delta<T_00> (3-Ball-Gewichtsintegral int w d^3x = 4pi R^4/15).
+  - [E] ENTROPIEDICHTE ATOM-FIXIERT: 1/4=1/|mu4| (v57) + Zentralladung c=g_car+N_fam=8 (Form v59).
+  - [O] REST: linear->voll nichtlinear kovariant (das alte B6) + die absolute Skala v_geo. KEIN freier
+    dimensionsloser Parameter in der Gravitationskopplung mehr.
+  WIRKUNG: B6/G_metric von [O] -> linearisiert parameterfrei; C7-Mass = Fluktuationen um einen parameterfreien
+  Sattel; Vereinheitlichung neu (kein Eich-GUT, aber Gravitation+Materie aus DEMSELBEN Seam, c3 setzt beide).
+  Deep-Sync: version.tex 5.2->5.3, tfpt_status, introduction (Statuskarte), tfpt_4 (QG-Keybox iii), README,
+  tfpt_research_contracts (Keybox), papers.ts, Status-Komponenten, neue animierte Visualisierung, Wolfram 302/302,
+  Zenodo. AUDIT OK. Naechste Richtungen siehe next-plan.md.
+
 NACHTRAG 2026-06-22 (Keystone-Unifikation v335 + Status-Reframe: EIN Theorem, EIN entkoppeltes Problem):
   Vogelperspektive auf die zwei "offenen Bedrock-Punkte" -> sie sind NICHT symmetrisch:
   - QGEO.SYM.01 ist KEIN eigenes Problem mehr, sondern ein KOROLLAR von SEAM.EQUIV.01:
