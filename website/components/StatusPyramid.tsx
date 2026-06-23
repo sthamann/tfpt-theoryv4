@@ -49,7 +49,7 @@ const LAYERS: Layer[] = [
     level: 4,
     label: "[E] Exact identity",
     short: "Identity",
-    examples: "240 = 16·5·3 · 248 = 240+8 · b₁ = 41/10 · det R = 8 · χ_R",
+    examples: "240 = 16·5·3 · 248 = 240+8 · b₁ = 41/10 · det R = 8 · Einstein 8π = c₃⁻¹",
     tone: "from-emerald-500 to-teal-500",
     ring: "ring-emerald-400/40",
     text: "text-emerald-50",

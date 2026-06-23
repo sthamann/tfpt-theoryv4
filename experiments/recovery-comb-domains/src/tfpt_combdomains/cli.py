@@ -1,9 +1,9 @@
 """``tfpt-combdomains`` -- search the dynamic TFPT recovery comb (omega=2.58) across domains.
 
-Runs the shared detector's injection validation, then reports all five channels (A1 magnetar,
-A2 BH tail/QNM, A3 FRB burst tail, B4 BEC analog, B5 quantum simulator) with their firewall
-legitimacy + data status. No claim: where data is in hand the comb runs; otherwise the precise
-blocker is reported.
+Runs the shared detector's injection validation, then reports all six channels (A1 magnetar,
+A2 BH tail/QNM, A3 FAST/GBT FRB tail, A3b CHIME baseband FRB tail, B4 BEC analog, B5 quantum
+simulator) with their firewall legitimacy + data status. No claim: where data is in hand the comb
+runs; otherwise the precise blocker is reported.
 """
 
 from __future__ import annotations
@@ -13,7 +13,7 @@ import json
 from dataclasses import asdict
 from pathlib import Path
 
-from . import fetch, quake
+from . import fetch, microshots, quake
 from .channels import all_channels
 from .comb import EPS_PREDICTED, LAMBDA, MIN_COMB_PERIODS, OMEGA, validate_detector, validate_stack
 
@@ -22,7 +22,8 @@ RESULTS = Path(__file__).resolve().parents[2] / "results"
 
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description="TFPT recovery comb across domains")
-    ap.add_argument("command", choices=["audit", "analyze", "fetch-magnetar", "quake"],
+    ap.add_argument("command",
+                    choices=["audit", "analyze", "fetch-magnetar", "quake", "microshots"],
                     nargs="?", default="analyze")
     args, extra = ap.parse_known_args(argv)
     if args.command == "fetch-magnetar":
@@ -30,9 +31,12 @@ def main(argv: list[str] | None = None) -> int:
     if args.command == "quake":
         quake.analyze(refresh="--refresh" in extra)
         return 0
+    if args.command == "microshots":
+        microshots.analyze()
+        return 0
 
     print("=" * 82)
-    print("TFPT recovery comb across domains -- one detector, five channels")
+    print("TFPT recovery comb across domains -- one detector, six channels")
     print(f"  kernel: lambda=(3/2)^6={LAMBDA:.3f}  omega=2pi/ln(lambda)={OMEGA:.3f}  "
           f"predicted ripple eps~exp(-pi^2/ln lambda)={EPS_PREDICTED:.3f}")
     print(f"  ln(tau) RANGE requirement to localise omega: > ~{MIN_COMB_PERIODS} comb periods")
@@ -73,7 +77,7 @@ def main(argv: list[str] | None = None) -> int:
                  and not c.result["comb_detected"]]
     verdict = (
         f"detector validated (fires at >~{MIN_COMB_PERIODS} periods, range-blind below; no false "
-        f"positives). Across the 5 domains: {len(real)} have data in hand "
+        f"positives). Across the {len(rep.channels)} channels: {len(real)} have data in hand "
         f"({', '.join(c.key for c in real) or 'none'}); "
         + (f"comb DETECTED in {', '.join(c.key for c in detected)} -> ESCALATE (independent check first). "
            if detected else

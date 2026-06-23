@@ -153,6 +153,30 @@ ROWS = [
      "search_target", "real FRB waterfalls (FAST/GBT .calibP, 3 repeaters) + shared stacked comb detector",
      "the omega=2.58 comb is special vs the off-kernel periodogram in a clean stacked burst tail",
      "null"],
+    ["FRB", "recovery comb in CHIME baseband FRB tail (omega=2.58, stacked)",
+     "log-periodic comb at omega=2pi/ln((3/2)^6) in the post-peak burst-tail recovery",
+     "REAL CHIME/FRB Baseband Catalog 1 (CANFAR DOI 10.11570/23.0029): 8 distinct FRBs at 2.56us, "
+     "coherently dedispersed, full-Stokes; incoherent cross-channel dedispersion -> true profile + "
+     "genuine scattering tail; all 8 clear the >=2.8-period gate; STACKED kernel omega=2.58 NOT "
+     "special (p=0.67) -> clean NULL on cleaner data than FAST. Still WEAK: a ms burst has no "
+     "3-decade recovery and the comb is an intrinsic ~2% effect", None,
+     "search_target", "boundary recovery kernel (dynamic)",
+     "search_target", "CHIME/FRB baseband catalog (DOI 10.11570/23.0029) + shared stacked comb detector",
+     "the omega=2.58 comb is special vs the off-kernel periodogram in a clean stacked CHIME burst tail",
+     "null"],
+    ["FRB", "microshot cascade kernel (FRB 20220912A B1/B2)",
+     "resummed recovery clock: gap ratio ln3/ln(3/2)=2.71 + hard wall at N_fam=3 + log-periodic "
+     "time-comb omega=2.58 (v124, dynamic kernel)",
+     "REAL vetted microshot catalog (Hewitt+2023 MNRAS 526 2039; Zenodo 10552561): B1 27 + B2 18 "
+     "manually-identified microshots (intra-burst point process) + real NRT peak fluxes. Gap ratio "
+     "NOT piled at 2.71 above a gap-shuffle null + placebo (B1 enr 1.47 p=0.16 vs placebo 1.26; B2 "
+     "below chance); no protected wall (B1 longest decreasing-gap run=5>3); time-DSI comb range-limited "
+     "(1.5-1.6 periods <2.8); amplitude echo ratio NOT enriched at 64/729 or 8/27 (B1 energy enr 0.80 "
+     "p=0.75, a free quotient hits 9x vs ~0 at the kernel) -> clean NULL across all channels", None,
+     "search_target", "boundary recovery kernel (dynamic, intra-burst point process)",
+     "search_target", "Nan\u00e7ay ECLAT FRB 20220912A microshots (Hewitt+2023; Zenodo 10552561)",
+     "a microshot gap-clock at 2.71 OR a protected wall<=3 OR a time-DSI comb survives the null in >=2 bright bursts",
+     "null"],
     ["X-ray", "recovery comb in magnetar outburst relaxation (omega=2.58)",
      "log-periodic comb at omega=2.58 in the post-outburst X-ray flux decay (wide ln t, stackable)",
      "data_limited: needs Swift/XRT or Coti Zelati+2018 flux(t); ~3 decades in ln t = best new "

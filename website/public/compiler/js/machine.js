@@ -361,7 +361,7 @@
 
   // ---- deep modal (click a key part → rich explainer) ----
   const deepModal = $("deepmodal"), deepBody = $("deep-body");
-  const DEEP = new Set(["seam", "glue", "seed", "em", "cosmo"]);
+  const DEEP = new Set(["seam", "glue", "seed", "em", "cosmo", "out"]);
   const C = D.constants;
   const fmt = (x, n) => Number(x).toFixed(n);
   const eh = escapeHTML;
@@ -372,6 +372,7 @@
     if (id === "seed") return deepSeed();
     if (id === "em") return deepAlpha();
     if (id === "cosmo") return deepGravity();
+    if (id === "out") return deepTally();
     return "";
   }
   function deepSource() {
@@ -449,15 +450,38 @@
     return `
       <div class="deep-kicker">Gravity \u00b7 QFT \u00b7 Cosmos</div>
       <h3>\u272a Where gravity and quantum field theory live</h3>
-      <p class="deep-lede">The <b>same edge</b>, read as a <b>horizon</b>, is where gravity, an emergent quantum field theory and cosmology come from. The seam constant <b>is</b> the gravitational one.</p>
-      <div class="deep-sec"><h4>Gravity</h4>
-        <p class="deep-p">c\u2083 = 1/(8\u03c0) is exactly the coefficient in Einstein\u2019s equation <b>G_\u03bc\u03bd = 8\u03c0 T_\u03bc\u03bd</b> and in the Bekenstein\u2013Hawking entropy \u2014 the seam tempo <b>is</b> the gravitational coupling.</p>
-        <div class="deep-formula">spectral action \u27f6 R + R\u00b2 (Starobinsky),   scalaron mass M = c\u2083^{7/2}\u00b7M\u0304 \u2248 3.06\u00d710\u00b9\u00b3 GeV<small>The E\u2087\u00d7A\u2081 audit slice carries the gravity / inflation sector.</small></div></div>
+      <p class="deep-lede">The <b>same edge</b>, read as a <b>horizon</b>, is where gravity, an emergent quantum field theory and cosmology come from. As of the 2026-06 work this is no longer an analogy: Einstein\u2019s equation is <b>derived</b> from the edge, <b>parameter-free</b>.</p>
+      <div class="deep-sec"><h4>Gravity is now derived, not assumed</h4>
+        <p class="deep-p">Demanding entanglement equilibrium on every small causal diamond \u2014 the first law <b>\u03b4S = \u03b4\u27e8K\u27e9</b> (Jacobson / Faulkner) \u2014 with the seam\u2019s atoms <b>produces</b> the full covariant Einstein equation. Energy conservation \u2207\u1d43T_ab = 0 comes out as an <b>output</b> (Lovelock), not an input.</p>
+        <div class="deep-formula">G_ab + \u039b g_ab = c\u2083\u207b\u00b9 T_ab,   c\u2083\u207b\u00b9 = 8\u03c0<small>BOTH coefficients fixed: 8\u03c0 = 1/c\u2083 from the seam (v358/v359); \u039b from \u03b1 via \u039b \u223c e^(\u22122\u03b1\u207b\u00b9) (v60). No free dimensionless Newton dial.</small></div></div>
+      <div class="deep-grid">
+        <div class="deep-fact ok"><div class="df-v">8\u03c0 = 1/c\u2083</div><div class="df-k">Einstein coefficient \u2014 fixed by the seam</div></div>
+        <div class="deep-fact ok"><div class="df-v">\u00d73</div><div class="df-k">c\u2083 over-determined: anchor \u00b7 Gauss\u2013Bonnet \u00b7 thermodynamics</div></div>
+        <div class="deep-fact ok"><div class="df-v">|\u03bc\u2084| = |\u2124\u2082|\u00b7\u03c7 = 4</div><div class="df-k">thermo origin = geo origin of c\u2083</div></div>
+        <div class="deep-fact ok"><div class="df-v">M_scal = c\u2083^{7/2}\u00b7M\u0304</div><div class="df-k">\u2248 3.06\u00d710\u00b9\u00b3 GeV (R+R\u00b2 scalaron)</div></div>
+      </div>
       <div class="deep-sec"><h4>Quantum field theory</h4>
         <p class="deep-p">The boundary is an <b>emergent chiral QFT</b>: one anomaly-free generation, a spectral-triple / boundary-net description, with modular (KMS) flow in the role of time. The SM fields are projections of this boundary data \u2014 not added by hand.</p></div>
       <div class="deep-sec"><h4>Cosmos</h4>
-        <p class="deep-p">The horizon reading fixes the expansion: the cosmological constant\u2019s famous ~122-orders smallness becomes <b>\u039b \u223c e^(\u22122\u03b1\u207b\u00b9)</b> (\u2248 e^(\u22122\u00b7137)), plus the inflation tilt n_s, the tensor ratio r, the baryon density and a tiny cosmic-light rotation.</p></div>
-      <div class="deep-frontier"><b>Honest frontier:</b> the full nonperturbative <b>4D quantum-gravity measure</b> and the precise \u201cseam = horizon\u201d theorem stay <b>OPEN</b> (the R\u00b2/Weyl\u00b2 sector carries the Stelle ghost). This is where the compiler hands off to physics that is not yet closed \u2014 and the machine says so.</div>`;
+        <p class="deep-p">The horizon reading fixes the expansion: the cosmological constant\u2019s famous ~122-orders smallness becomes <b>\u039b \u223c e^(\u22122\u03b1\u207b\u00b9)</b> (\u2248 e^(\u22122\u00b7137)), plus R+R\u00b2 inflation (the tilt n_s, the tensor ratio r \u2014 a live CMB-S4 kill test), the baryon density and a tiny cosmic-light rotation.</p></div>
+      <div class="deep-frontier"><b>Honest frontier:</b> this is the Jacobson <b>equation-of-state</b> derivation (a conditional, physical framework), not yet a from-action quantisation; the full nonperturbative <b>4D quantum-gravity measure</b> stays <b>OPEN</b> (though gap-decoupled). What changed: the field equation itself is now parameter-free \u2014 the only thing still dimensionful is the single unit v_geo (open the readout box \u2192).</div>`;
+  }
+  function deepTally() {
+    return `
+      <div class="deep-kicker">The readout \u00b7 the whole tally</div>
+      <h3>\u25ce Two numbers in \u2014 and only ONE unit</h3>
+      <p class="deep-lede">Everything on the two boards below \u2014 the Standard Model and 23 predictions \u2014 comes out of the seam. The honest input count is the punchline: <b>zero dimensionless dials</b>, <b>one</b> unit, and \u03c0.</p>
+      <div class="deep-grid">
+        <div class="deep-fact ok"><div class="df-v">0</div><div class="df-k">dimensionless dials (the SM has ~26)</div></div>
+        <div class="deep-fact ok"><div class="df-v">1</div><div class="df-k">dimensionful unit: v_geo (the ruler)</div></div>
+        <div class="deep-fact"><div class="df-v">\u03c0</div><div class="df-k">the one math constant with no cheaper origin</div></div>
+      </div>
+      <div class="deep-sec"><h4>What is v_geo \u2014 and why it can\u2019t be removed</h4>
+        <p class="deep-p">Every compiler number (c\u2083 = 1/(8\u03c0), g_car = 5, the lattice determinants, \u03b1\u207b\u00b9, \u2026) is a <b>pure number</b> \u2014 it doesn\u2019t change if you swap metres for inches. But a <b>mass</b> does. A machine fed only pure numbers can therefore output <b>ratios</b>, never an absolute kilogram or GeV. That is a theorem (the \u201cNo-Unit\u201d result, v153): you always need exactly <b>one</b> dimensionful anchor. TFPT calls it <b>v_geo</b>.</p></div>
+      <div class="deep-formula">every dimensionful quantity  =  (a dimensionless compiler ratio) \u00d7 (a power of v_geo)<small>masses \u223c v_geo \u00b7 1/G \u223c v_geo\u00b2 \u00b7 \u039b \u223c v_geo\u2074 \u00b7 a pure ratio like m/\u03bc = e^{3/4} carries no scale at all.</small></div>
+      <div class="deep-sec"><h4>Does the new parameter-free gravity let us drop v_geo?</h4>
+        <p class="deep-p">No \u2014 and that is now <b>proven</b>, not hoped (v364). The derived gravity couplings (8\u03c0 = 1/c\u2083 and the \u039b prefactor 3/(4\u03c0\u00b2)) are themselves <b>dimensionless</b>, so Newton\u2019s constant and \u039b just re-express v_geo (1/G \u223c v_geo\u00b2, \u039b \u223c v_geo\u2074). Gravity adds <b>no second scale</b> to play against v_geo. You can <b>rename</b> the anchor (use the Planck or proton mass instead), but you cannot make the theory unit-free.</p></div>
+      <div class="deep-frontier"><b>The bottom line:</b> measure <b>one</b> thing once and the entire spectrum \u2014 every mass ratio, every coupling, the cosmos \u2014 follows. A ~26 \u2192 1 reduction versus the Standard Model. That single unit is the irreducible price of a universe that has a size.</div>`;
   }
 
   // E8 root system: 240 roots, rotating 8D\u21922D projection

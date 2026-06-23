@@ -368,7 +368,7 @@ const NODES: DagNode[] = [
     x: 90,
     y: 88,
     tone: "conditional",
-    marker: "[C] conditional",
+    marker: "[E]/[C] mixed",
     title: "Gravity & cosmology — the geometry channel",
     summary:
       "The spectral action gives R + R²; the scalaron mass is M = c₃^(7/2) M̄ = 3.06×10¹³ GeV (exponent 7 = Ω_adm − 10 b₁). NEW (v358/v359): beyond the R + R² action, the classical field equation is parameter-free — the fixed-volume entanglement equilibrium (Jacobson; Faulkner et al.) gives the FULL covariant Einstein equation G_ab + Λ g_ab = c₃⁻¹ T_ab with BOTH coefficients fixed: c₃⁻¹ = 8π (no free Newton dial; thermo 2π/η = geo |Z₂|·2π·χ via |μ₄| = |Z₂|·χ = 4 — so c₃ is triply over-determined, anchor v23/geometry v58/thermo v358) and Λ from α (ρ_Λ = (3/4π²)e^{−2α⁻¹}, v60). The Einstein tensor (not Ricci) is forced by Lovelock at fixed volume, so matter conservation ∇ᵃT_ab = 0 is an output (v359) — B6's full covariant field equation, parameter-free at the local level. From the same attractor n_s = 1 − 2/N★, r = 12/N★² on the frozen band N★ ∈ [50,60]; the reheating chain (v86) sharpens this conditionally to N★ = 51.4 ⇒ n_s = 0.9611, r = 0.0045 (recorded with its A_s tension). Λ ∼ e⁻²ᵅ⁻¹, H₀ ∼ √Λ. The metric sector reduces to the rigorously-constructed (E₈)₁ lattice net (c = 8 = 5 + 3); its closing condition is the single named Seam Equivalence Theorem — 'the raw seam IS (E₈)₁ at τ=i' (det K = 1, the Kitaev E₈ phase; SEAM.EQUIV.01), see the boundary-QFT node (v276/v282/v286/v288). Classical fingerprint (v101): the maximal de Sitter (Nariai) black hole carries the traceless anchor (1,1,−2) and the Koide-2/3 entropy bound, and evaporates away from the anchor — the same orientation as flavor relaxation. Every scale is a ratio to one v_geo.",

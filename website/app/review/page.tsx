@@ -84,8 +84,9 @@ const BLOCKS: Block[] = [
         It is <strong className="text-slate-100">not</strong> an E₈ gauge theory
         (so the Distler–Garibaldi / Coleman–Mandula no-gos do not apply), and{" "}
         <strong className="text-slate-100">not</strong> a certified strict
-        physical theory of everything — full quantum-gravity closure is a layer
-        that is reduced to one definitional premise, not yet certified. The
+        physical theory of everything — the local Einstein equation is now
+        parameter-free, but the ambient, non-perturbative quantum-gravity measure
+        is a layer reduced to one definitional premise, not yet certified. The
         absolute mass scale is a single declared dimensionful anchor (v_geo), and{" "}
         <span className="font-mono">m_p/m_e</span> is explicitly not claimed as a
         compiler power. No experimental value is ever used as an input — only as

@@ -606,7 +606,7 @@ export const papers: Paper[] = [
     contribution: [
       "η_B = 6.1×10⁻¹⁰ as a downstream readout from the closed Ω_b h² (not a fundamental compiler power).",
       "The Koide relation computed exactly: Q = 0.664, 0.33% below the democratic target 2/3 = |ℤ₂|/N_fam.",
-      "The axion dark-matter candidate fixed (θ_i = 170° closed), with f_a = M_scal/128 a conjecture; full QG R + R² heat-kernel grounded, ambient measure open.",
+      "The axion dark-matter candidate fixed (θ_i = 170° closed), with f_a = M_scal/128 a conjecture; the local Einstein equation Gₐᵦ+Λgₐᵦ=c₃⁻¹Tₐᵦ is parameter-free (v358/v359), with only the ambient QG measure open.",
     ],
     notClaimed: [
       "η_B as a fundamental compiler power, the absolute axion relic abundance, an exact Koide 2/3, and m_p/m_e as a compiler number are all explicitly not claimed.",
@@ -686,7 +686,7 @@ export const papers: Paper[] = [
       {
         label: "QG gap-decoupling",
         latex: "\\Delta_{\\mathrm{eff}} = \\Delta - 2\\|V\\| = 1.648 > 0",
-        description: "R + R² grounded (G2); ambient measure (G6) open. [E]/[O]",
+        description: "Local Einstein eq parameter-free (v358/v359); R + R² grounded (G2); ambient measure (G6) open. [E]/[O]",
       },
     ],
     highlights: [

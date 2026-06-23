@@ -1,4 +1,4 @@
-"""The five cross-domain recovery-comb channels (search.txt options A1-A3, B4-B5).
+"""The six cross-domain recovery-comb channels (A1-A3b, B4-B5).
 
 Each channel applies the SAME injection-validated comb detector (``comb.py``) to a recovery curve
 from a different domain, and is typed by:
@@ -27,6 +27,7 @@ from pathlib import Path
 
 import numpy as np
 
+from .chime import read_chime_profile
 from .comb import LAMBDA, MIN_COMB_PERIODS, OMEGA, run_comb, stacked_comb_test
 
 DATA = Path(__file__).resolve().parents[2] / "data"
@@ -252,6 +253,76 @@ def channel_a3_frb_tail() -> Channel:
                    head + detail + tnote, agg)
 
 
+# --------------------------------------------------------------------------- A3b CHIME baseband
+CHIME_DIR = FRB_WATERFALLS / "chime-baseband"
+
+
+def channel_a3b_chime_baseband() -> Channel:
+    """CHIME/FRB baseband-catalog burst TAILS (stacked) -- the same horizon-residual tail-comb as
+    A3, but on coherently-dedispersed, full-Stokes, 2.56 us CHIME baseband (DOI 10.11570/23.0029).
+    Higher data QUALITY (genuine scattering tails, not noise-filled range) than the FAST/GBT
+    .calibP; the physical ms-burst ceiling (no 3-decade recovery) is unchanged. Each file is a
+    distinct one-off FRB, so this is a multi-source stack by construction."""
+    files = sorted(CHIME_DIR.glob("*_beamformed.h5")) if CHIME_DIR.exists() else []
+    per: list[dict] = []
+    curves: list[tuple[np.ndarray, np.ndarray]] = []
+    for fpath in files:
+        rd = read_chime_profile(fpath)
+        if rd is None:
+            continue
+        dt, prof, src = rd
+        tl = _frb_tail(dt, prof)
+        if tl is None:
+            continue
+        tau, rec = tl
+        res = run_comb(tau, rec)
+        res["source"] = src
+        per.append(res)
+        if res["range_sufficient"]:
+            curves.append((tau, rec))
+
+    if not per:
+        return Channel(
+            "A3b", "CHIME baseband FRB burst tail (stacked)", "horizon-residual", "data_limited",
+            "no CHIME beamformed HDF5 in frb-tfpt-signatures/new-data/chime-baseband/ (or h5py "
+            "unavailable). Fetch a subset of the 140 baseband-catalog files (DOI 10.11570/23.0029) "
+            "with the CADC vos client: `vcp vos:AstroDataCitationDOI/CISTI.CANFAR/23.0029/data/"
+            "beamformed_files/<FRB>_beamformed.h5 .` (each ~0.15-4 GB; pick the smallest/brightest).")
+
+    stack = stacked_comb_test(curves) if curves else None
+    head = (f"REAL CHIME baseband (2.56us, coherently dedispersed, full-Stokes): {len(per)} "
+            f"distinct FRB(s); {len(curves)} clear the ln-range gate (>= {MIN_COMB_PERIODS} comb "
+            "periods). ")
+    detail = "; ".join(
+        f"{p['source']} (periods={p['comb_periods']}, p={p['p_value']}"
+        + ("" if p["range_sufficient"] else ", <gate: range-blind, EXCLUDED") + ")"
+        for p in per)
+    if stack and stack["n_used"]:
+        tnote = (f". STACKED over {stack['n_used']} CHIME burst tails: kernel omega={OMEGA:.2f} is "
+                 + (f"SPECIAL (p={stack['p_value']}) -> ESCALATE (independent cross-check first)"
+                    if stack["comb_detected"]
+                    else f"NOT special (p={stack['p_value']}) -> clean NULL")
+                 + " (coherently-dedispersed genuine scattering tails -> cleaner than FAST, but a ms "
+                   "burst still has no wide recovery and the comb is an intrinsic ~2% effect -> a "
+                   "weak constraint, not a horizon detection).")
+    else:
+        tnote = ". No CHIME burst tail clears the ln-range gate -> RANGE-LIMITED."
+    agg = {
+        "n_points": int(sum(p["n_points"] for p in per)),
+        "comb_periods": max(p["comb_periods"] for p in per),
+        "range_sufficient": bool(curves),
+        "gain": (stack or {}).get("gain", 0.0),
+        "p_value": (stack or {}).get("p_value", 1.0),
+        "comb_detected": bool(stack and stack["comb_detected"]),
+        "omega": OMEGA,
+        "n_sources": len(per),
+        "n_stacked": (stack or {}).get("n_used", 0),
+        "per_source": per,
+    }
+    return Channel("A3b", "CHIME baseband FRB burst tail (stacked)", "horizon-residual", "real",
+                   head + detail + tnote, agg)
+
+
 # --------------------------------------------------------------------------- B4 BEC analog horizon
 def channel_b4_bec_analog() -> Channel:
     """BEC analog-horizon Hawking/Page recovery -- a laboratory horizon. The recovery-channel
@@ -289,5 +360,6 @@ class DomainReport:
 def all_channels() -> DomainReport:
     return DomainReport(OMEGA, LAMBDA, MIN_COMB_PERIODS, [
         channel_a1_magnetar(), channel_a2_bh_tail(), channel_a3_frb_tail(),
+        channel_a3b_chime_baseband(),
         channel_b4_bec_analog(), channel_b5_quantum_ladder(),
     ])

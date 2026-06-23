@@ -1,1 +1,1 @@
-"""TFPT recovery-comb across domains: one injection-validated comb detector, five channels."""
+"""TFPT recovery-comb across domains: one injection-validated comb detector, six channels."""

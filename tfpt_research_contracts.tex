@@ -1,7 +1,8 @@
 % ---------------------------------------------------------------------
 %  TFPT --- Research Contracts for the two remaining gates
 %  (U_wall): the parabolic flavor wall-selection (priority 1, finite/algebraic)
-%  (G_metric): the full metric-sector quantum-gravity measure (priority 2)
+%  (G_metric): the ambient metric-sector quantum-gravity MEASURE (priority 2;
+%              the local field equation is parameter-free, v358/v359 -- see keyboxes below)
 % ---------------------------------------------------------------------
 \documentclass[11pt,a4paper]{article}
 \usepackage[T1]{fontenc}
@@ -1825,8 +1826,10 @@ $w=(R^2-r^2)/(2R)$; the $3$-ball weight integral is $\int_B w\,d^3x=4\pi R^4/15$
 $\delta\langle K_B\rangle=\tfrac{8\pi^2R^4}{15}\,\delta\langle T_{00}\rangle$ --- the concrete matter boost flux
 of TFPT's stress tensor. \textbf{The entropy density, atom-fixed \mE.} The Bekenstein numerator $1/4=1/|\mu_4|$
 (\vref{v57}) and the entanglement normalisation $=$ the central charge $c=\gcar{+}\Nfam=8$ pin the dimensionless
-coefficient; the area-law form is established (\vref{v59}). \textbf{Residual \mO:} only (i) the linear$\to$full
-non-linear covariant extension and (ii) the absolute scale $v_{\mathrm{geo}}$ (the Planck-area unit) remain ---
+coefficient; the area-law form is established (\vref{v59}). \textbf{Residual \mO:} the full covariant extension
+is now \emph{closed} (\vref{v359}, next keybox); what remains is only (i) the Jacobson equation-of-state
+\emph{status} (a thermodynamic derivation, not a from-action quantisation), (ii) the global ambient measure
+(Gate 2/C7), and (iii) the absolute scale $v_{\mathrm{geo}}$ (the Planck-area unit) ---
 \emph{no free dimensionless parameter survives in the gravity coupling}.
 
 \smallskip\noindent\textbf{And that boundary measure is a \emph{rigorously constructed} net (\veri{v77\_e8\_conformal\_net.py}).}
@@ -1839,6 +1842,26 @@ embedding} $(D_5)_1\!\times\!(A_3)_1\subset(E_8)_1$ (coset $c=0$). Now $(E_8)_1$
 subnet), and the gap $\Delta_{\mathrm{eff}}>0$ supplies the clustering/tightness --- so $G6$ is imported into
 existing RCFT/conformal-net rigor rather than built from scratch. Residual $=$ the net identification $+$ bulk
 reconstruction. \mE\ (charges, embedding) $+$ \mC\ (identification)
+\end{keybox}
+
+\begin{keybox}[The full covariant field equation, parameter-free: fixed-volume equilibrium gives the Einstein tensor with conservation as an output (\veri{v359\_grav\_nonlinear\_einstein.py})]
+The linearised result above (\vref{v358}) extends to the \emph{full} covariant equation by Jacobson's
+\emph{fixed-volume} (maximal-vacuum-entanglement) equilibrium --- no linearisation assumed.
+\textbf{Einstein tensor, not Ricci \mE.} Stationarity of the entanglement entropy at fixed volume forces the
+divergence-free combination: the $4$D trace identity $g^{ab}G_{ab}=(1-\tfrac d2)R=-R$ (for $d=4$) selects
+$G_{ab}=R_{ab}-\tfrac12 R\,g_{ab}$, so
+\[
+  \boxed{\ G_{ab}+\Lambda g_{ab}=\cthree^{-1}T_{ab},\qquad \cthree^{-1}=8\pi\ }
+\]
+with \emph{both} coefficients TFPT-fixed: the Newton coupling $8\pi=1/\cthree$ (\vref{v358}) and the
+cosmological constant $\Lambda$ from $\alpha$, $\rho_\Lambda=(3/4\pi^2)e^{-2\alpha^{-1}}$ (\vref{v60}).
+\textbf{Conservation is an output \mE.} By Lovelock's theorem the only divergence-free, second-order, local
+symmetric tensor built from the metric is $a\,G_{ab}+b\,g_{ab}$, so $\nabla^a G_{ab}=0$ forces
+$\nabla^a T_{ab}=0$ --- matter conservation is \emph{derived}, not assumed. \textbf{So Gate B6 --- the
+classical metric-sector field equation --- is closed parameter-free at the \emph{local} level.}
+\textbf{Residual \mO:} the Jacobson equation-of-state \emph{status} (a thermodynamic derivation, not a
+from-action quantisation), the global ambient measure (Gate 2/C7, the constructive boundary projective
+limit), and the single unit $v_{\mathrm{geo}}$ --- no free dimensionless gravity dial remains. \mE/\mC/\mO
 \end{keybox}
 
 \begin{keybox}[The Simple-Current Extension Theorem --- the central $G_{\mathrm{net}}$ closing statement \mE/\mC\ (\veri{v154\_simple\_current\_theorem.py})]
@@ -2048,8 +2071,10 @@ identities imply covariant conservation, and its low-curvature expansion is the 
   f_R R_{\mu\nu}-\tfrac12 f(R)g_{\mu\nu}+(g_{\mu\nu}\Box-\nabla_\mu\nabla_\nu)f_R
   =\Mpl^{-2}T_{\mu\nu}+O(R^3/M^4),
 \]
-so the closed covariant equation becomes the controlled IR shadow of the full measure. \emph{Status: open;
-the deepest item. G5 certified; the regime equation closed \veri{v28\_gravity\_fR.py}.}
+so the closed covariant equation becomes the controlled IR shadow of the full measure. \emph{Status: the
+local covariant field equation is parameter-free (\vref{v358}/\vref{v359}); Theorem G remains open only for
+the projective-limit ambient \emph{measure} $\mu_{\mathrm{QG}}$ (G6, the deepest item). G5 certified; the
+regime equation closed \veri{v28\_gravity\_fR.py}.}
 \end{keybox}
 
 % =====================================================================

@@ -224,6 +224,106 @@
       }
     },
     {
+      "key": "A3b",
+      "domain": "CHIME baseband FRB burst tail (stacked)",
+      "firewall_legitimacy": "horizon-residual",
+      "data_status": "real",
+      "note": "REAL CHIME baseband (2.56us, coherently dedispersed, full-Stokes): 8 distinct FRB(s); 8 clear the ln-range gate (>= 2.8 comb periods). FRB20181226E (periods=3.94, p=0.2477); FRB20181231C (periods=4.39, p=0.7541); FRB20190102A (periods=4.04, p=0.1013); FRB20190210B (periods=4.2, p=0.2477); FRB20190213D (periods=4.26, p=0.7016); FRB20190502B (periods=4.48, p=0.6528); FRB20190519H (periods=3.23, p=0.2477); FRB20190627A (periods=4.19, p=0.745). STACKED over 8 CHIME burst tails: kernel omega=2.58 is NOT special (p=0.6678) -> clean NULL (coherently-dedispersed genuine scattering tails -> cleaner than FAST, but a ms burst still has no wide recovery and the comb is an intrinsic ~2% effect -> a weak constraint, not a horizon detection).",
+      "result": {
+        "n_points": 219174,
+        "comb_periods": 4.48,
+        "range_sufficient": true,
+        "gain": 0.1694,
+        "p_value": 0.6678,
+        "comb_detected": false,
+        "omega": 2.5827069463082895,
+        "n_sources": 8,
+        "n_stacked": 8,
+        "per_source": [
+          {
+            "n_points": 14459,
+            "comb_periods": 3.94,
+            "range_sufficient": true,
+            "gain": 0.1289,
+            "p_value": 0.2477,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "FRB20181226E"
+          },
+          {
+            "n_points": 43948,
+            "comb_periods": 4.39,
+            "range_sufficient": true,
+            "gain": 0.1503,
+            "p_value": 0.7541,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "FRB20181231C"
+          },
+          {
+            "n_points": 18739,
+            "comb_periods": 4.04,
+            "range_sufficient": true,
+            "gain": 0.0385,
+            "p_value": 0.1013,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "FRB20190102A"
+          },
+          {
+            "n_points": 27648,
+            "comb_periods": 4.2,
+            "range_sufficient": true,
+            "gain": 0.3934,
+            "p_value": 0.2477,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "FRB20190210B"
+          },
+          {
+            "n_points": 31595,
+            "comb_periods": 4.26,
+            "range_sufficient": true,
+            "gain": 0.0005,
+            "p_value": 0.7016,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "FRB20190213D"
+          },
+          {
+            "n_points": 53634,
+            "comb_periods": 4.48,
+            "range_sufficient": true,
+            "gain": 0.4801,
+            "p_value": 0.6528,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "FRB20190502B"
+          },
+          {
+            "n_points": 2602,
+            "comb_periods": 3.23,
+            "range_sufficient": true,
+            "gain": 0.0214,
+            "p_value": 0.2477,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "FRB20190519H"
+          },
+          {
+            "n_points": 26549,
+            "comb_periods": 4.19,
+            "range_sufficient": true,
+            "gain": 0.1424,
+            "p_value": 0.745,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "FRB20190627A"
+          }
+        ]
+      }
+    },
+    {
       "key": "B4",
       "domain": "BEC analog-horizon Hawking/Page recovery",
       "firewall_legitimacy": "analog",
@@ -240,5 +340,5 @@
       "result": null
     }
   ],
-  "verdict": "detector validated (fires at >~2.8 periods, range-blind below; no false positives). Across the 5 domains: 2 have data in hand (A1, A3); in A1, A3 the range is sufficient but the kernel omega=2.58 is NOT special (clean NULL on real data, though FRB burst tails are scattering/noise-dominated -> weak). The wide-ln(t), cleaner channels (A1 magnetar ~3 decades; A2 BH late-time tail) are data_limited; the analog/simulator channels (B4/B5) need bespoke experiments. The comb is intrinsically a ~2% effect needing a clean, wide-range recovery -- the search space is genuinely narrow. No claim."
+  "verdict": "detector validated (fires at >~2.8 periods, range-blind below; no false positives). Across the 6 channels: 3 have data in hand (A1, A3, A3b); in A1, A3, A3b the range is sufficient but the kernel omega=2.58 is NOT special (clean NULL on real data, though FRB burst tails are scattering/noise-dominated -> weak). The wide-ln(t), cleaner channels (A1 magnetar ~3 decades; A2 BH late-time tail) are data_limited; the analog/simulator channels (B4/B5) need bespoke experiments. The comb is intrinsically a ~2% effect needing a clean, wide-range recovery -- the search space is genuinely narrow. No claim."
 }

@@ -47,6 +47,385 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "Consistency pass: the parameter-free "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "full covariant"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " Einstein equation ("
+      },
+      {
+        "k": "c",
+        "v": "v358"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v359"
+      },
+      {
+        "k": "t",
+        "v": ") propagated across ALL stale paper and website surfaces; new "
+      },
+      {
+        "k": "c",
+        "v": "v359"
+      },
+      {
+        "k": "t",
+        "v": " keybox; homepage gravity animation"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Deep-sync of the parameter-free gravity status."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " A cross-surface audit found several documents and website components still framing gravity as “exact only in the "
+        },
+        {
+          "k": "m",
+          "v": "R+R^2"
+        },
+        {
+          "k": "t",
+          "v": " regime” or the metric-sector field equation as “open”. These were reconciled with the canonical post-"
+        },
+        {
+          "k": "c",
+          "v": "v358"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v359"
+        },
+        {
+          "k": "t",
+          "v": " status: the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "local"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " covariant field equation "
+        },
+        {
+          "k": "m",
+          "v": "G_{ab}+\\Lambda g_{ab}=\\cthree^{-1}T_{ab}"
+        },
+        {
+          "k": "t",
+          "v": " is PARAMETER-FREE (both coefficients fixed); what remains open is the Jacobson equation-of-state status, the global ambient measure ("
+        },
+        {
+          "k": "c",
+          "v": "QG.AMB.01"
+        },
+        {
+          "k": "t",
+          "v": "/C7), and the single unit "
+        },
+        {
+          "k": "m",
+          "v": "v_{\\mathrm{geo}}"
+        },
+        {
+          "k": "t",
+          "v": ". Touched: "
+        },
+        {
+          "k": "c",
+          "v": "introduction"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2_standard_model"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3_e8_audit_bootstrap"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_4_frontier"
+        },
+        {
+          "k": "t",
+          "v": " (summary table), "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New "
+            },
+            {
+              "k": "c",
+              "v": "v359"
+            },
+            {
+              "k": "t",
+              "v": " keybox"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " added to "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " (full covariant equation: fixed-volume "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " Einstein tensor, Lovelock "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " conservation an output); the "
+        },
+        {
+          "k": "c",
+          "v": "v358"
+        },
+        {
+          "k": "t",
+          "v": " residual corrected from “linear"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": "nonlinear” (stale — "
+        },
+        {
+          "k": "c",
+          "v": "v359"
+        },
+        {
+          "k": "t",
+          "v": " closed it) to the equation-of-state "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " C7 "
+        },
+        {
+          "k": "m",
+          "v": "+\\,v_{\\mathrm{geo}}"
+        },
+        {
+          "k": "t",
+          "v": " residual, including the generated script index ("
+        },
+        {
+          "k": "c",
+          "v": "script_registry.csv"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The "
+        },
+        {
+          "k": "c",
+          "v": "GravityEmergence"
+        },
+        {
+          "k": "t",
+          "v": " animation (three origins of "
+        },
+        {
+          "k": "m",
+          "v": "\\cthree"
+        },
+        {
+          "k": "t",
+          "v": " converging to "
+        },
+        {
+          "k": "m",
+          "v": "1/(8\\pi)"
+        },
+        {
+          "k": "t",
+          "v": "; the parameter-free Einstein equation) was updated to the full covariant result and surfaced as a dedicated homepage section ("
+        },
+        {
+          "k": "c",
+          "v": "/#gravity"
+        },
+        {
+          "k": "t",
+          "v": "); gravity-status wording aligned across "
+        },
+        {
+          "k": "c",
+          "v": "ReconstructionChain"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "VerificationDag"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "StatusMatrix"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "WhatTfptClaims"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "ThreeDecoderMap"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "StatusPyramid"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "papers.ts"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "glossary.ts"
+        },
+        {
+          "k": "t",
+          "v": " and the review page."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-23",
+    "dateLabel": "2026-06-23",
+    "heading": [
+      {
+        "k": "t",
         "v": "Direction 6, "
       },
       {

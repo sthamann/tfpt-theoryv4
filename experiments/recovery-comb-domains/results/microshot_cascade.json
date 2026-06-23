@@ -1,0 +1,102 @@
+{
+  "firewall": "search target (horizon-residual), not a claim",
+  "source": "FRB 20220912A microshots, Hewitt et al. 2023 (MNRAS 526, 2039; Zenodo 10552561)",
+  "kernel": {
+    "clock_ratio": 2.709511291351455,
+    "omega": 2.5827069463082895,
+    "lambda": 11.390625,
+    "wall": 3,
+    "min_comb_periods": 2.8
+  },
+  "bursts": {
+    "B1": {
+      "n_shots": 27,
+      "span_ms": 7.969,
+      "gap_clock": {
+        "n_ratios": 25,
+        "obs": 7,
+        "enrichment": 1.469,
+        "p": 0.1632,
+        "placebo_max_enr": 1.259,
+        "supported": false
+      },
+      "wall": {
+        "longest_run": 5,
+        "mean_null_run": 3.71,
+        "p_deficit": 0.9795,
+        "supported": false
+      },
+      "time_comb": {
+        "periods": 1.61,
+        "range_sufficient": false,
+        "rayleigh": 0.8047,
+        "p": 0.378,
+        "detected": false
+      },
+      "echo": {
+        "n_ratios": 26,
+        "energy": {
+          "obs": 1,
+          "enrichment": 0.797,
+          "p": 0.7456
+        },
+        "amplitude": {
+          "obs": 1,
+          "enrichment": 0.318,
+          "p": 0.9808
+        },
+        "best_free_quotient_hits": 9,
+        "supported": false,
+        "peak_snr_range": [
+          51.0,
+          1327.1
+        ]
+      }
+    },
+    "B2": {
+      "n_shots": 18,
+      "span_ms": 3.782,
+      "gap_clock": {
+        "n_ratios": 16,
+        "obs": 1,
+        "enrichment": 0.334,
+        "p": 0.9718,
+        "placebo_max_enr": 2.335,
+        "supported": false
+      },
+      "wall": {
+        "longest_run": 3,
+        "mean_null_run": 3.47,
+        "p_deficit": 0.5839,
+        "supported": false
+      },
+      "time_comb": {
+        "periods": 1.46,
+        "range_sufficient": false,
+        "rayleigh": 0.3734,
+        "p": 0.6198,
+        "detected": false
+      },
+      "echo": {
+        "n_ratios": 17,
+        "energy": {
+          "obs": 0,
+          "enrichment": 0.0,
+          "p": 1.0
+        },
+        "amplitude": {
+          "obs": 4,
+          "enrichment": 1.483,
+          "p": 0.2544
+        },
+        "best_free_quotient_hits": 4,
+        "supported": false,
+        "peak_snr_range": [
+          96.7,
+          2306.1
+        ]
+      }
+    }
+  },
+  "verdict": "NO microshot-cascade kernel signature on the vetted catalog: the gap ratio does not pile up at the clock 2.71 above a gap-shuffle null + placebo, there is no protected wall at 3, the time-DSI comb is not special (range-limited <2.8 periods), and the amplitude echo ratio is not enriched at 64/729 or 8/27 (a free quotient beats the kernel) -> clean NULL across all channels. No claim."
+}

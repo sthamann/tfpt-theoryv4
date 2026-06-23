@@ -43,7 +43,7 @@ const ROWS: Row[] = [
   },
   {
     layer: "Frontier items",
-    status: "Honest handles — Koide, m_p/m_e, dark matter; perturbative S_pert built (1-loop unitary), nonperturbative QG the frontier",
+    status: "Honest handles — Koide, m_p/m_e, dark matter; the local Einstein equation Gₐᵦ+Λgₐᵦ=c₃⁻¹Tₐᵦ is parameter-free [E], the ambient nonperturbative QG measure stays the frontier",
     paper: "Doc 4",
     tone: "conditional",
   },

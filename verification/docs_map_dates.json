@@ -60,12 +60,12 @@
   "date": "2026-06-12"
  },
  "introduction::section::What this means for the theory-of-everything question::1": {
-  "hash": "398d6f6a2ca1",
-  "date": "2026-06-22"
+  "hash": "5bd91de5db59",
+  "date": "2026-06-23"
  },
  "introduction::subsection::The closure ledger: what is done, and what genuinely remains::1": {
-  "hash": "f32a6db95534",
-  "date": "2026-06-22"
+  "hash": "eb9b3f7ae140",
+  "date": "2026-06-23"
  },
  "introduction::section::Does this make the theory more probable?::1": {
   "hash": "540397fd6436",
@@ -312,8 +312,8 @@
   "date": "2026-06-12"
  },
  "tfpt_2_standard_model::front::(front matter)::1": {
-  "hash": "e727cb962348",
-  "date": "2026-06-12"
+  "hash": "9bb410b30126",
+  "date": "2026-06-23"
  },
  "tfpt_2_standard_model::section::The principle: one master formula instead of many Yukawa numbers::1": {
   "hash": "e9c22c490295",
@@ -356,8 +356,8 @@
   "date": "2026-06-22"
  },
  "tfpt_2_standard_model::section::How the legacy layers simplify (bridge map)::1": {
-  "hash": "9eeb68ad4a79",
-  "date": "2026-06-12"
+  "hash": "4a25e436aaaf",
+  "date": "2026-06-23"
  },
  "tfpt_2_standard_model::section::Is the entire Standard Model thereby derived?::1": {
   "hash": "a95844bb2e03",
@@ -371,9 +371,9 @@
   "hash": "ab9fd38ab334",
   "date": "2026-06-12"
  },
- "tfpt_2_standard_model::subsection::(2) Gravity --- exact in the $R^2$ regime, one named truncation remainder \\mC::1": {
-  "hash": "bd7617e15b5c",
-  "date": "2026-06-13"
+ "tfpt_2_standard_model::subsection::(2) Gravity --- the local field equation is parameter-free; the $R^2$ inflation layer up to one truncation \\mE/\\mC::1": {
+  "hash": "58038e03429f",
+  "date": "2026-06-22"
  },
  "tfpt_2_standard_model::subsection::(3) Strong CP --- decoupled from the mass-gap problem \\mE/\\mC::1": {
   "hash": "9e8863919ffb",
@@ -384,16 +384,16 @@
   "date": "2026-06-18"
  },
  "tfpt_2_standard_model::subsection::(5) Axioms P1/P2 --- P2 machine-verified, P1 as an interface \\mE/\\mO::1": {
-  "hash": "6a645ba38d3b",
-  "date": "2026-06-22"
+  "hash": "6101c10ca5d0",
+  "date": "2026-06-23"
  },
  "tfpt_2_standard_model::section::How the original-paper predictions simplify::1": {
   "hash": "b49be45910b9",
   "date": "2026-06-12"
  },
  "tfpt_2_standard_model::section::Conclusion::1": {
-  "hash": "26e76a5b3189",
-  "date": "2026-06-22"
+  "hash": "c55883e15edd",
+  "date": "2026-06-23"
  },
  "tfpt_2_standard_model::section::The setup: parabolic data on the family curve::1": {
   "hash": "da2a8b23c886",
@@ -464,8 +464,8 @@
   "date": "2026-06-12"
  },
  "tfpt_2_standard_model::section::The ambient closure: one spectral-action measure, IR-complete by decoupling::1": {
-  "hash": "31ced2951bd5",
-  "date": "2026-06-18"
+  "hash": "da45db85dac3",
+  "date": "2026-06-23"
  },
  "tfpt_2_standard_model::subsection::Seam response grammar: gravity is the inverse seed gain::1": {
   "hash": "7cd027f0fd95",
@@ -564,8 +564,8 @@
   "date": "2026-06-12"
  },
  "tfpt_3_e8_audit_bootstrap::section::The honest open-items list::1": {
-  "hash": "901e7dcad1ec",
-  "date": "2026-06-12"
+  "hash": "826032a4a249",
+  "date": "2026-06-23"
  },
  "tfpt_3_e8_audit_bootstrap::section::The $E_8$-slice scan: results (honest hit / miss)::1": {
   "hash": "9bb6cf827ee4",
@@ -612,8 +612,8 @@
   "date": "2026-06-23"
  },
  "tfpt_4_frontier::section::Summary::1": {
-  "hash": "6580fbe649b5",
-  "date": "2026-06-15"
+  "hash": "b391d25fbe5a",
+  "date": "2026-06-23"
  },
  "tfpt_4_frontier::section::Appendix: computational verification::1": {
   "hash": "e0c58709c50b",
@@ -696,15 +696,15 @@
   "date": "2026-06-12"
  },
  "tfpt_research_contracts::front::(front matter)::1": {
-  "hash": "b1684133fafb",
-  "date": "2026-06-22"
+  "hash": "0582ab4f0b22",
+  "date": "2026-06-23"
  },
  "tfpt_research_contracts::section::Research Contract 1 --- $(U_{\\mathrm{wall}})$::1": {
   "hash": "7d3a07678ac4",
   "date": "2026-06-23"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {
-  "hash": "df541711c06d",
+  "hash": "6ce8887e8472",
   "date": "2026-06-23"
  },
  "tfpt_research_contracts::section::Certifiability and recommended order::1": {
@@ -744,12 +744,12 @@
   "date": "2026-06-22"
  },
  "origin_theory::section::The seam and the horizon: the precise statement::1": {
-  "hash": "8f27910e414c",
-  "date": "2026-06-22"
+  "hash": "1800f1a1cec2",
+  "date": "2026-06-23"
  },
  "origin_theory::section::Consequences, and the whole story \\mC::1": {
-  "hash": "85c6d59a1287",
-  "date": "2026-06-12"
+  "hash": "d4c934798cd6",
+  "date": "2026-06-23"
  },
  "origin_theory::section::A closure program (next phase) \\mO::1": {
   "hash": "234a68e24e33",

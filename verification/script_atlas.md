@@ -68,7 +68,7 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
 - **v358_grav_entropy_equilibrium** [E/C/O] `GRAV.ENTROPY.EQUILIBRIUM.01` — The entanglement-equilibrium derivation (Jacobson 2015 / Faulkner et al., delta S = delta<K>) with TFPT's atoms -> the LINEARISED Einstein equation falls out PARAMETER-FREE, and th
   - deps: v356_continuum_mmst_applicability, v356, v57, v58, v59, v216, v221, v323 · cited: 4 frontier, research contracts
 - **v359_grav_nonlinear_einstein** [E/C/O] `GRAV.NONLINEAR.01` — The FULL covariant Einstein equation, parameter-free (Direction 1, extends v358). The Jacobson-2015 fixed-VOLUME entanglement equilibrium brings in the EINSTEIN TENSOR G_ab (not ju
-  - deps: v358_grav_entropy_equilibrium, v358, v60, v323, v57, v58, v216 · cited: 4 frontier
+  - deps: v358_grav_entropy_equilibrium, v358, v60, v323, v57, v58, v216 · cited: 4 frontier, research contracts
 - **v360_grav_gap_corrections** [E/C/O/X] `GRAV.GAPCORR.01` — Direction 2: the gap-induced higher-curvature correction to GR -- the disciplined result. Does the seam transfer gap give a NEW forced near-term GR-deviation beyond the known R^2 s
   - deps: v359_grav_nonlinear_einstein, v359, v358, v36, v28, v354, v355 · cited: 4 frontier
 - **v361_grav_backreaction** [E/C/O] `GRAV.BACKREACT.01` — Direction 5: the matter-gravity backreaction with the explicit J3 flux -- two forced facts + an honest decline. [E] the carrier's gravitational anomaly is FORCED: c_-=8 (16 Majoran

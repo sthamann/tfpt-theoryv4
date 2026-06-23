@@ -15,8 +15,8 @@ const CLAIMS = [
 const NOT_CLAIMS = [
   "E₈ is the unimodular audit/compiler hull, not an unbroken physical gauge group — so the no-go results against literal E₈ world-formulas do not apply.",
   "The dimensionful EW/QCD masses (m_W, m_Z, m_H, sin²θ_W, α_s) sit on the RG scheme layer; the absolute quark amplitude scale reduces to the U_point anchor.",
-  "The frontier items — η_B, m_p/m_e, Koide, dark matter, full quantum gravity — are honest handles, not forced compiler powers.",
-  "No strict physical TOE is certified: the ambient quantum-gravity measure (G6) remains the open completion target.",
+  "The frontier items — η_B, m_p/m_e, Koide, dark matter — are honest handles, not forced compiler powers; gravity's local field equation is now parameter-free (Gₐᵦ + Λgₐᵦ = c₃⁻¹Tₐᵦ, both coefficients fixed), with only the ambient measure left open.",
+  "No strict physical TOE is certified: the ambient, non-perturbative quantum-gravity measure (G6 / QG.AMB.01) — decoupled from the now-closed local field equation — remains the open completion target.",
 ];
 
 export function WhatTfptClaims() {

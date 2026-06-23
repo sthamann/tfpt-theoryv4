@@ -105,15 +105,15 @@
       detail: "The 16-block \u00d73 with the \u03c6\u2080-ladder and the flavor engine assembles the whole Standard Model: nine fermion masses on one ladder, the CKM and PMNS mixings. See the Standard-Model deck below." },
     { id: "cosmo", kind: "stage", x: 0.84, y: 0.63, accent: "#a78bfa", icon: "\u272a", belt: "physics",
       plain: "GRAVITY \u00b7 QFT \u00b7 COSMOS", sub: "the seam as a horizon \u2014 click",
-      title: "Gravity / QFT / horizon", tech: "G_\u03bc\u03bd = 8\u03c0 T_\u03bc\u03bd, R+R\u00b2, \u039b \u223c e^{\u22122\u03b1\u207b\u00b9}",
-      atoms: ["c\u2083 = 1/(8\u03c0) = the Einstein/Hawking coefficient", "R+R\u00b2 (Starobinsky) from the spectral action", "emergent boundary QFT; full 4D QG stays OPEN"],
-      detail: "The SAME edge, read as a horizon, gives gravity, an emergent quantum field theory and cosmology. c\u2083 = 1/(8\u03c0) is literally the Einstein/Hawking coefficient; the spectral action gives R+R\u00b2 with the scalaron mass; \u039b's ~122-orders smallness becomes e^{\u22122\u00d7137}. The full nonperturbative 4D quantum-gravity measure is the honest open frontier." },
+      title: "Gravity / QFT / horizon", tech: "G_ab + \u039b g_ab = c\u2083\u207b\u00b9 T_ab  (\u03b4S = \u03b4\u27e8K\u27e9)",
+      atoms: ["G_ab = c\u2083\u207b\u00b9 T_ab DERIVED from \u03b4S = \u03b4\u27e8K\u27e9 (parameter-free)", "c\u2083 triply over-determined: anchor \u00b7 geometry \u00b7 thermodynamics", "\u039b from \u03b1; R+R\u00b2 scalaron \u2014 full 4D QG measure stays OPEN"],
+      detail: "The SAME edge, read as a horizon, gives gravity, an emergent quantum field theory and cosmology. As of the 2026-06 work, Einstein's equation is DERIVED parameter-free from entanglement equilibrium (\u03b4S = \u03b4\u27e8K\u27e9): G_ab + \u039b g_ab = c\u2083\u207b\u00b9 T_ab with 8\u03c0 = 1/c\u2083 (v358/v359) and \u039b from \u03b1 (v60). The spectral action adds R+R\u00b2 (the scalaron). The one thing still dimensionful is the single unit v_geo; the full nonperturbative 4D quantum-gravity measure is the honest open frontier." },
 
     { id: "out", kind: "output", x: 0.93, y: 0.82, accent: "#3fd0e0", icon: "\u25ce", belt: "physics",
-      plain: "PREDICTIONS", sub: "23 things you can go measure",
+      plain: "PREDICTIONS", sub: "23 to measure \u2014 click for the tally",
       title: "The readout board", tech: "23 typed predictions vs current data",
-      atoms: ["coloured by data match", "9 match \u00b7 6 near \u00b7 0 miss \u00b7 8 pending"],
-      detail: "The machine's output: 23 forward predictions and falsifiers, each coloured by how it stacks up against current data. See the predictions deck below." },
+      atoms: ["coloured by data match", "9 match \u00b7 6 near \u00b7 0 miss \u00b7 8 pending", "tally: 0 dimensionless dials + 1 unit (v_geo) + \u03c0"],
+      detail: "The machine's output: 23 forward predictions and falsifiers, each coloured by how it stacks up against current data. Click for the full tally \u2014 the whole Standard Model, the constants and the cosmos come from ZERO dimensionless dials, ONE unit (v_geo) and \u03c0." },
   ];
 
   // forward pipes (drive the flow + the step depth)
