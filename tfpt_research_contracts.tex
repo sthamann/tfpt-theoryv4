@@ -795,6 +795,17 @@ the \emph{same} one-sidedness that makes $\cthree=1/(8\pi)$ a one-sided Gauss--B
 So the lone realization input is tied to the constant that \emph{defines} the theory, not a free dial; the residual
 is now ``the abstract collar is realized as a genuine lattice chiral free-fermion invertible phase'', \mO\ but
 theorem-bounded on both sides.
+\par\smallskip\noindent\textbf{MMST in-class verified for the collar, so the scaling limit is $(E_8)_1$
+(\veri{v366\_mmst\_seam\_collar.py}, \texttt{SEAM.MMST.INCLASS.01}).} The continuum leg is now checked
+\emph{hypothesis-by-hypothesis} for the explicit seam collar: it is a $D{=}\dim S^+{=}16$ Majorana quasi-free
+(CAR) state (\vref{v155}/\vref{v160}), gapped with $\Delta{=}6\log\tfrac32{>}0$ \emph{derived} (\vref{v302}), and
+chiral with $c_-{=}D/2{=}8{=}\gcar{+}\Nfam$, so it sits squarely in the MMST free-lattice-fermion class with
+$\operatorname{rank}\le c\le D$ reading $8\le8\le16$ (\emph{in} range, saturating $\operatorname{rank}{=}c{=}8$).
+The MMST massless-scaling-limit theorem then applies as a cited result, and the order-$4$ $\mu_4$ clock pins the
+target to $(E_8)_1$ ($\det K{=}1$, one primary) over the same-$c$ rival $SO(16)_1$ ($\det K{=}4$, \vref{v351}).
+\mE\ the class arithmetic, the derived gap, the chirality and the $(E_8)_1$ pinning; \mC\ the CAR-class typing and
+the cited MMST theorem; \mO\ the lone residual is exactly S3 above (the lattice realization). The continuum side
+of \texttt{SEAM.EQUIV.01} is thereby reduced to a single, named, theorem-bounded input.
 \par\smallskip\noindent\textbf{TOE-roadmap follow-ups --- the keystone as a typed certificate, the bedrock
 modular form, and the gap-decoupled measure (\veri{v308\_seam\_equiv\_chain.py}, \veri{v309\_modular\_bedrock.py},
 \veri{v311\_gap\_decoupled\_measure.py}).} Three machine-checked steps push the keystone arc further.
@@ -1807,6 +1818,24 @@ i.e.\ the dimension of the open problem drops from bulk QG to a finite seam-boun
 the constructive boundary projective limit (constructive-QFT grade) --- reduced, not closed. So Gate 2 is now
 \emph{two clean tiers}: Tier A (IR physics) closed under RP$+$gap; Tier B (strict TOE) reduced to a boundary
 measure, no longer a diffuse ``full QG missing''. \mC/\mO
+\end{keybox}
+
+\begin{keybox}[The measure as one-loop fluctuations around the \emph{parameter-free} saddle (\veri{v365\_qg\_oneloop\_saddle.py}, \texttt{QGAMB.SADDLE.01})]
+With the saddle now parameter-free (\vref{v358}/\vref{v359}), the boundary measure of Tier B organises as a
+Gaussian one-loop fluctuation determinant whose ingredients are atom-fixed. \textbf{Fixed quadratic form \mE:}
+the fluctuation inverse-propagator stiffness is the saddle coefficient $1/\cthree=8\pi$ --- no free dimensionless
+dial, so the one-loop problem is \emph{well-posed} (it was not before \vref{v358}). \textbf{Gap-controlled
+convergence \mE:} the fluctuation operator obeys
+$M\ge\Delta_{\mathrm{eff}}=6\log\tfrac32-\tfrac{31}{4\pi^2}\approx1.648>0$ (\vref{v76}/\vref{v337}), so the Gaussian
+integral converges mode-by-mode with no zero/negative modes besides the saddle directions; on the OS spectrum
+$\{0,6\log\tfrac32,6\log3\}$ the regularised one-loop log-det $\operatorname{Tr}'\log M=6\log\tfrac92$ is finite.
+\textbf{Conformal direction \mC:} the one wrong-sign mode ($c_{\mathrm{conf}}(4)=-\tfrac32$) is made convergent by
+the GHP contour ($\int e^{-|c|\phi^2}=\sqrt{2\pi/3}$) with IDG dressing (\vref{v334}). \textbf{Tightness \mE:}
+$\chi=1/(1-(2/3)^6)=729/665<\infty$ (\vref{v330}), so the one-loop measure has a projective limit on the
+admissible sector, with \emph{zero} new dimensionless dials (\vref{v364}). \textbf{Residual \mO:} the full
+\emph{non-perturbative} projective limit (G6 on the ambient sector) remains open --- this sharpens C7 from
+``diffuse full QG'' to a one-loop-controlled Gaussian problem around a parameter-free saddle, it does not close
+it. \mE/\mC/\mO
 \end{keybox}
 
 \begin{keybox}[The classical field equation, parameter-free: entanglement equilibrium gives the linearised Einstein equation with $G$ from $\cthree$ (\veri{v358\_grav\_entropy\_equilibrium.py})]

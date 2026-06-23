@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`359` registered scripts · `417` ledger claims · `10` clusters.
+`361` registered scripts · `419` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (32 scripts)
+### `core` — Compiler core & the E₈ glue  (34 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -75,6 +75,10 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v359_grav_nonlinear_einstein, v359, v358, v60, v337, v159, v354, v355 · cited: 4 frontier
 - **v364_vgeo_sharpen** [E/O] `VGEO.SHARPEN.01` — Direction 6: v_geo is the SINGLE dimensionful input of the WHOLE theory -- confirmed across matter AND gravity -- and irreducibly primitive. The No-Unit Theorem (v153) showed the d
   - deps: v153, v358, v359, v361, v60, v68, v78 · cited: research contracts
+- **v365_qg_oneloop_saddle** [E/C/O] `QGAMB.SADDLE.01` — Direction 3: the QG measure (gate C7/QG.AMB.01) as one-loop GAUSSIAN fluctuations around the PARAMETER-FREE saddle (v358/v359). [E] the fluctuation stiffness is 1/c3=8pi (no free d
+  - deps: QG.AMB.01, v358, v359, v76, v337, v330, v334, v364 · cited: research contracts
+- **v366_mmst_seam_collar** [E/C/O] `SEAM.MMST.INCLASS.01` — Direction 7: the seam collar is IN MMST's free-lattice-fermion scaling-limit class, so the chiral scaling limit is a chiral CFT of central charge 8 pinned to (E8)_1 -- reducing SEA
+  - deps: v286_seam_equivalence_contract, v336, v356, v351, v302, v155, v160, v297 · cited: research contracts
 
 ### `em` — Electromagnetic fixed point  (4 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -782,14 +786,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `E8.GLU.01`×15, `v56`×15, `HOR.NARIAI.01`×15, `v76`×14, `v216`×12, `SEAM.EQUIV.01`×12, `REG.FREEZE.01`×12, `AX.P1.01`×11, `QGEO.SUBPRIN.01`×11, `FLAV.KQ.01`×10, `QGEO.PILLOW.01`×10, `QG.AMB.01`×9, `v3`×9, `v54`×9
+**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `E8.GLU.01`×15, `v76`×15, `v56`×15, `HOR.NARIAI.01`×15, `SEAM.EQUIV.01`×13, `v216`×12, `REG.FREEZE.01`×12, `AX.P1.01`×11, `QGEO.SUBPRIN.01`×11, `FLAV.KQ.01`×10, `QG.AMB.01`×10, `QGEO.PILLOW.01`×10, `v3`×9, `v54`×9
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v350_bootstrap_inputs_correction** — `SEAM.EQUIV.BOOTSTRAP.01`
-- **v351_continuum_realisation_sharpened** — `SEAM.EQUIV.CONTINUUM.02`
 - **v352_framework_irreducible** — `TFPT.IRREDUCIBLE.01`
 - **v353_selfloop_capstone** — `TFPT.SELFLOOP.01`
 - **v354_e8_reverse_audit** — `E8.REVERSE.AUDIT.01`
@@ -800,4 +802,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v360_grav_gap_corrections** — `GRAV.GAPCORR.01`
 - **v361_grav_backreaction** — `GRAV.BACKREACT.01`
 - **v364_vgeo_sharpen** — `VGEO.SHARPEN.01`
+- **v365_qg_oneloop_saddle** — `QGAMB.SADDLE.01`
+- **v366_mmst_seam_collar** — `SEAM.MMST.INCLASS.01`
 

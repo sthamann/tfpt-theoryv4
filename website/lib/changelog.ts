@@ -47,6 +47,489 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "Directions 3 & 7 — the two hard functional-analysis residuals ADVANCED: the QG measure as one-loop fluctuations around the parameter-free saddle ("
+      },
+      {
+        "k": "c",
+        "v": "v365"
+      },
+      {
+        "k": "t",
+        "v": "), and the seam collar verified IN MMST's free-fermion class so the scaling limit is "
+      },
+      {
+        "k": "m",
+        "v": "(E_8)_1"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "c",
+        "v": "v366"
+      },
+      {
+        "k": "t",
+        "v": ")"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v365"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGAMB.SADDLE.01"
+            },
+            {
+              "k": "t",
+              "v": ") — Direction 3."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " With the parameter-free saddle ("
+        },
+        {
+          "k": "c",
+          "v": "v358"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v359"
+        },
+        {
+          "k": "t",
+          "v": ") the QG "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "measure"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (gate C7/"
+        },
+        {
+          "k": "c",
+          "v": "QG.AMB.01"
+        },
+        {
+          "k": "t",
+          "v": ") organises as a one-loop Gaussian fluctuation determinant. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the fluctuation stiffness is "
+        },
+        {
+          "k": "m",
+          "v": "1/\\cthree=8\\pi"
+        },
+        {
+          "k": "t",
+          "v": " (no free dial, so the one-loop problem is now well-posed); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the fluctuation operator is gapped "
+        },
+        {
+          "k": "m",
+          "v": "M\\ge\\Delta_{\\mathrm{eff}}=6\\log\\tfrac32-\\tfrac{31}{4\\pi^2}\\approx1.648>0"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v76"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v337"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " mode-by-mode convergence, finite model log-det "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{Tr}'\\log M=6\\log\\tfrac92"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the conformal mode converges on the GHP contour ("
+        },
+        {
+          "k": "c",
+          "v": "v334"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the admissible projective limit exists ("
+        },
+        {
+          "k": "m",
+          "v": "\\chi=729/665"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v330"
+        },
+        {
+          "k": "t",
+          "v": ") with "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " new dials ("
+        },
+        {
+          "k": "c",
+          "v": "v364"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "residual: the full non-perturbative projective limit on the ambient sector. Sharpens C7 from “diffuse full QG” to a one-loop Gaussian problem around the parameter-free saddle; does not close it. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": "; Python-only."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v366"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.MMST.INCLASS.01"
+            },
+            {
+              "k": "t",
+              "v": ") — Direction 7."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The seam collar is verified IN MMST's free-lattice-fermion scaling-limit class hypothesis-by-hypothesis: "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "D{=}\\dim S^+{=}16"
+        },
+        {
+          "k": "t",
+          "v": " Majoranas, "
+        },
+        {
+          "k": "m",
+          "v": "c{=}\\gcar{+}\\Nfam{=}8"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{rank}E_8{=}8"
+        },
+        {
+          "k": "t",
+          "v": " so "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{rank}\\le c\\le D"
+        },
+        {
+          "k": "t",
+          "v": " is "
+        },
+        {
+          "k": "m",
+          "v": "8\\le8\\le16"
+        },
+        {
+          "k": "t",
+          "v": " (in range); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "gapped ("
+        },
+        {
+          "k": "m",
+          "v": "\\Delta{=}6\\log\\tfrac32{>}0"
+        },
+        {
+          "k": "t",
+          "v": ", derived "
+        },
+        {
+          "k": "c",
+          "v": "v302"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "quasi-free CAR class ("
+        },
+        {
+          "k": "c",
+          "v": "v155"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v160"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "chiral ("
+        },
+        {
+          "k": "m",
+          "v": "c_-{=}D/2{=}8\\neq0"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the MMST scaling-limit theorem then applies, and "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the order-"
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " clock pins the target to "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\det K{=}1"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "SO(16)"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\det K{=}4"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v351"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "residual: the single S3 input (the collar as a genuine lattice chiral invertible phase, the seam one-sidedness, "
+        },
+        {
+          "k": "c",
+          "v": "v297"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v356"
+        },
+        {
+          "k": "t",
+          "v": "). Reduces the continuum side of "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " to one named input; ADVANCES, does not close. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": "; Python-only."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-23",
+    "dateLabel": "2026-06-23",
+    "heading": [
+      {
+        "k": "t",
         "v": "Consistency pass: the parameter-free "
       },
       {

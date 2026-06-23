@@ -43,16 +43,21 @@ reachable now, concrete next steps (modules to build / what to compute), honest 
 - **Takeaway:** the calculable GR deviation already exists (the scalaron); Direction 2 added no new dial — exactly the
   anti-numerology outcome. Closed.
 
-## Direction 3 — The QG **measure** (C7) as fluctuations around the parameter-free saddle
-- **Goal:** complete `G_metric`'s *measure* side (C7), now that the classical saddle (the Einstein equation) is
-  parameter-free.
-- **Why reachable now:** `v76` already reduced the ambient measure to a finite seam-**boundary** (Calderón) measure;
-  with a parameter-free saddle, the path integral is **fluctuations around a fixed classical solution**.
-- **Concrete steps:**
-  1. `v361 QGAMB.SADDLE.01` — set up the one-loop fluctuation determinant around the `v358` saddle on the seam-boundary
-     measure; check the gap (`Δ_eff = 1.648 > 0`) controls convergence.
-  2. Tie to the existing OS/clustering machinery (`v240`, `v398`) and the GHP contour (`v334`).
-- **Difficulty:** high (constructive-QFT grade). **Open part:** the genuine non-perturbative boundary projective limit.
+## Direction 3 — The QG **measure** (C7) as fluctuations around the parameter-free saddle — DONE (`v365`): ADVANCED, not closed
+- **RESULT (`v365 QGAMB.SADDLE.01`):** with the parameter-free saddle (`v358`/`v359`) the QG **measure**
+  (gate C7/`QG.AMB.01`) organises as a **one-loop Gaussian fluctuation determinant** that is now *well-posed and
+  convergent*:
+  - **[E]** the fluctuation inverse-propagator **stiffness is fixed** `1/c₃ = 8π` (no free dial) — before `v358`
+    this expansion wasn't even dimensionlessly well-posed (the Newton coupling was a dial);
+  - **[E]** the fluctuation operator is **gapped** `M ≥ Δ_eff = 6 ln(3/2) − 31/(4π²) ≈ 1.648 > 0` (`v76`/`v337`)
+    ⇒ mode-by-mode convergence; finite model log-det `Tr' log M = 6 ln(9/2)` on the OS spectrum;
+  - **[C]** the wrong-sign conformal mode converges on the **GHP contour** `∫e^{−|c|φ²} = √(2π/3)` + IDG (`v334`);
+  - **[E]** the **admissible projective limit exists** (tightness `χ = 729/665`, `v330`), with **0** new
+    dimensionless dials (`v364`).
+- **[O] Open part:** the genuine **non-perturbative** projective limit (G6 on the *ambient* sector). One-loop
+  control around a fixed saddle **reduces** C7 to the non-perturbative limit; it does not close it.
+- **Takeaway:** C7 is sharpened from "diffuse full QG" to "a one-loop-controlled Gaussian fluctuation problem
+  around a parameter-free saddle." Cited in `tfpt_research_contracts`; Python-only.
 
 ## Direction 4 — Cosmology: Λ **consistency** (the VALUE is already done from α — DEMOTED)
 - **CORRECTION:** Λ's value is **not open**. TFPT already derives it from α (`v60`):
@@ -87,13 +92,19 @@ reachable now, concrete next steps (modules to build / what to compute), honest 
   (the one unit, not a gap); `1/G` is UV-sensitive (Sakharov, v68).
 - **Takeaway:** the last dimensionful anchor is named and shown to be the **only** one. Closed.
 
-## Direction 7 (complementary, matter side) — close the **(E8)₁ in-class** continuum realisation
-- **Goal:** the matter-side bridge residual: prove the seam collar is in MMST's free-lattice-fermion class so the
-  scaling limit IS `(E8)₁` (the SEAM.EQUIV.01 residual).
-- **Why now:** the gravity side is done; this is the symmetric remaining half (matter side).
-- **Concrete steps:** verify MMST's hypotheses for the explicit collar (`v336` + the wavelet/Koo-Saleur structure);
-  `v365 SEAM.MMST.INCLASS.01`.
-- **Difficulty:** high (functional analysis). **Open part:** the genuine scaling-limit theorem.
+## Direction 7 (complementary, matter side) — the **(E8)₁ in-class** continuum realisation — DONE (`v366`): ADVANCED, not closed
+- **RESULT (`v366 SEAM.MMST.INCLASS.01`):** the seam collar is verified **IN MMST's free-lattice-fermion
+  scaling-limit class**, hypothesis-by-hypothesis, so the chiral scaling limit is a chiral CFT pinned to `(E8)₁`:
+  - **[E]** class arithmetic: `D = dim S⁺ = 2^(g_car−1) = 16` Majoranas, `c = g_car + N_fam = 8`, `rank E8 = 8`
+    ⇒ MMST's range `rank ≤ c ≤ D` reads `8 ≤ 8 ≤ 16` (**in** range, saturating `rank = c = 8`);
+  - **[E]** gapped (`Δ = 6 ln(3/2) > 0`, **derived** `v302`); **[E]** chiral (`c₋ = D/2 = 8 ≠ 0`);
+  - **[C]** quasi-free CAR class (`v155`/`v160`) ⇒ the **MMST scaling-limit theorem applies** (`v336`);
+  - **[E]** the target is pinned to `(E8)₁` (`det K = 1` vs `SO(16)` `det K = 4`) by the order-4 `μ₄` clock (`v351`).
+- **[O] Open part:** the single **S3** input — the abstract collar realised as a genuine **lattice** chiral
+  free-fermion invertible phase (the one-sidedness / "Flat-Away", `v297`/`v356`) = the seam one-sidedness that
+  *defines* `c₃`. Given S3, MMST applies as a cited theorem.
+- **Takeaway:** the continuum side of `SEAM.EQUIV.01` is reduced to **one named, theorem-bounded input** (S3).
+  Verifies MMST in-class; **advances**, does not close. Cited in `tfpt_research_contracts`; Python-only.
 
 ---
 
@@ -104,8 +115,21 @@ reachable now, concrete next steps (modules to build / what to compute), honest 
    R² scalaron (already falsifiable); no new atom-forced coefficient.
 3. ✅ **Direction 5** (backreaction) — DONE (`v361`): finite & forced (c_-=8 + Λ from α), no new dial.
 4. ✅ **Direction 6** (v_geo) — DONE (`v364`): the single dimensionful input; 0 dials + 1 unit + π.
-5. **Direction 3 / 7** (QG measure / MMST in-class) — the two hard functional-analysis residuals; long-horizon. ← all that remains.
+5. ✅ **Direction 3** (QG measure) — DONE (`v365`): C7 reduced to a one-loop-controlled Gaussian fluctuation
+   problem around the parameter-free saddle (fixed stiffness `1/c₃=8π`, gap-controlled convergence, tight
+   admissible projective limit, 0 dials); residual = the non-perturbative projective limit only.
+6. ✅ **Direction 7** (MMST in-class) — DONE (`v366`): the seam collar verified in MMST's free-fermion class
+   (`8 ≤ 8 ≤ 16`, gapped, chiral) ⇒ scaling limit pinned to `(E8)₁`; `SEAM.EQUIV.01` reduced to the single S3
+   lattice-realisation input.
 - (Direction 4 was folded into Direction 1: Λ's value is already done from α.)
+
+### What now genuinely remains (both are single, named, *external/foundational* residuals)
+- **C7 non-perturbative projective limit** (the constructive-QFT ambient measure; gap-decoupled, blocks no test).
+- **SEAM.EQUIV.01 S3** (the lattice chiral free-fermion invertible realisation of the collar = the seam
+  one-sidedness that *defines* `c₃`).
+Both are now theorem-bounded reductions, not diffuse "full QG / continuum" gaps — every TFPT-internal lever has
+been pulled; what is left is genuinely hard mathematics (constructive QFT / scaling-limit existence), not a free
+dial or a missing TFPT mechanism.
 
 ## Discipline reminders (do not relax)
 - Every new `vN` follows the full workflow: derive from `{c₃, g_car}`, `check()/summary()`, register in `run_all.py`
