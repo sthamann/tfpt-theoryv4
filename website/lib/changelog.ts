@@ -417,6 +417,234 @@ export const CHANGELOG: ChangelogEntry[] = [
     "dateLabel": "2026-06-23",
     "heading": [
       {
+        "k": "c",
+        "v": "v380"
+      },
+      {
+        "k": "t",
+        "v": " — the KMS Entire Hessian: the Stelle ghost is EXACTLY the Seeley–DeWitt truncation, and resummation pushes it to infinity"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v380"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "GRAV.KMS.HESSIAN.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Upgrades "
+        },
+        {
+          "k": "c",
+          "v": "v304"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v370"
+        },
+        {
+          "k": "t",
+          "v": " from the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "assumption"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " “the resummed graviton form factor is entire” to a derived statement. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the seam KMS cutoff "
+        },
+        {
+          "k": "m",
+          "v": "f(u){=}e^{-u}"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v259"
+        },
+        {
+          "k": "t",
+          "v": ") gives the dressed spin-2 propagator "
+        },
+        {
+          "k": "m",
+          "v": "e^{-p^2/M^2}/p^2 = 1/(p^2 a)"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "a(u){=}e^u"
+        },
+        {
+          "k": "t",
+          "v": " entire and nowhere zero (only the "
+        },
+        {
+          "k": "m",
+          "v": "p^2{=}0"
+        },
+        {
+          "k": "t",
+          "v": " pole). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "each finite Seeley–DeWitt truncation is a Taylor partial sum of "
+        },
+        {
+          "k": "m",
+          "v": "a"
+        },
+        {
+          "k": "t",
+          "v": " and carries a Stelle-ghost zero ("
+        },
+        {
+          "k": "m",
+          "v": "T_1{=}1{+}u\\to u{=}-1"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "T_2\\to-1{\\pm}i"
+        },
+        {
+          "k": "t",
+          "v": "); the entire "
+        },
+        {
+          "k": "m",
+          "v": "a"
+        },
+        {
+          "k": "t",
+          "v": " has none. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the modulus of the nearest truncation-zero grows monotonically with the order ("
+        },
+        {
+          "k": "m",
+          "v": "1,1.41,\\dots,3.07"
+        },
+        {
+          "k": "t",
+          "v": " for "
+        },
+        {
+          "k": "m",
+          "v": "n{=}1..8"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "\\to\\infty"
+        },
+        {
+          "k": "t",
+          "v": " — the ghost decouples, “entire” "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " “do not truncate”. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " perturbative graviton unitarity; "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the exact off-shell curved-space Hessian identification is the cited heat-kernel resummation, perturbative-only. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_5_redteam"
+        },
+        {
+          "k": "t",
+          "v": " (Target F); Python."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-23",
+    "dateLabel": "2026-06-23",
+    "heading": [
+      {
         "k": "t",
         "v": "Lean: the S3 continuum leg formalised as “closed modulo a cited theorem” — "
       },

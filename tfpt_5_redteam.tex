@@ -247,6 +247,17 @@ separately by the GHP contour (\vref{v334}). So the full \emph{perturbative} gra
 sector-by-sector under the TFPT-fixed package --- still \mC\ (it inherits the entire-analyticity assumption) and
 still not the nonperturbative measure. (\texttt{GRAV.SPIN2.UNITARITY.01}.) \veri{v370\_grav\_spin2\_unitarity.py}
 
+\par\smallskip\noindent\textbf{And the ``entire'' assumption is itself discharged at the truncation-tower level
+(\mE; \veri{v380\_grav\_kms\_hessian.py}).} The seam KMS cutoff $f(u){=}e^{-u}$ (\vref{v259}) gives the kinetic
+form factor $a(u){=}e^{u}$ ($u{=}p^2/M^2$), which is entire and nowhere zero --- so the spin-2 propagator
+$e^{-p^2/M^2}/p^2$ has its only pole at $p^2{=}0$. The Seeley--DeWitt expansion is the \emph{Taylor truncation}
+of $a$: the $R{+}R^2$ order $1{+}u$ carries the Stelle zero $u{=}-1$, the Weyl$^2$ order $1{+}u{+}u^2/2$ the
+pair $-1{\pm}i$, and the modulus of the nearest truncation-zero grows monotonically with the order
+($1,1.41,\dots,3.07$ at order $1\!\to\!8$) and runs to infinity. So the ghost is \emph{exactly} the truncation
+and resummation removes it --- ``entire'' means ``do not truncate the heat kernel'', upgrading the assumption
+above to a derived statement. (\texttt{GRAV.KMS.HESSIAN.01}; the exact off-shell curved-space Hessian
+identification stays the cited heat-kernel step, and it is perturbative, not the nonperturbative measure.)
+
 % =====================================================================
 \section*{Outcome}
 % =====================================================================
