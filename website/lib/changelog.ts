@@ -418,6 +418,181 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "Track 4 — the prediction OBSERVATORY: a status-typed CI over the frozen prediction registry that makes the falsifiability surface machine-checkable, with a live data scorecard ("
+      },
+      {
+        "k": "c",
+        "v": "v375"
+      },
+      {
+        "k": "t",
+        "v": ")"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v375"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "OBSERVATORY.REGISTRY.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " A CI over "
+        },
+        {
+          "k": "c",
+          "v": "freeze_file.csv"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "every prediction carries a kill criterion (falsifiability complete, no orphan claims); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the headline values re-derive from "
+        },
+        {
+          "k": "m",
+          "v": "\\{\\phiz\\}"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\sin^2\\theta_{12}{=}1/3{-}\\phiz/2"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\sin^2\\theta_{13}{=}\\phiz e^{-5/6}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\beta_{\\mathrm{rad}}{=}\\phiz/(4\\pi)"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "a live scorecard records "
+        },
+        {
+          "k": "m",
+          "v": "\\theta_{12}"
+        },
+        {
+          "k": "t",
+          "v": " vs the JUNO first run ("
+        },
+        {
+          "k": "m",
+          "v": "0.28\\sigma"
+        },
+        {
+          "k": "t",
+          "v": ", compatible), "
+        },
+        {
+          "k": "m",
+          "v": "\\theta_{13}"
+        },
+        {
+          "k": "t",
+          "v": " vs NuFIT 6.0 NO ("
+        },
+        {
+          "k": "m",
+          "v": "2.0\\sigma"
+        },
+        {
+          "k": "t",
+          "v": ", the flagged most-tensioned core prediction), "
+        },
+        {
+          "k": "m",
+          "v": "\\beta_{\\mathrm{rad}}"
+        },
+        {
+          "k": "t",
+          "v": " vs ACT DR6 ("
+        },
+        {
+          "k": "m",
+          "v": "0.37\\sigma"
+        },
+        {
+          "k": "t",
+          "v": ", a hint), "
+        },
+        {
+          "k": "m",
+          "v": "r<0.036"
+        },
+        {
+          "k": "t",
+          "v": " (compatible). Tooling that makes the closed pieces usable and the open ones honestly fenced; no new physics. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_5_redteam"
+        },
+        {
+          "k": "t",
+          "v": "; Python (stdlib)."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-23",
+    "dateLabel": "2026-06-23",
+    "heading": [
+      {
+        "k": "t",
         "v": "Track 3 — the "
       },
       {

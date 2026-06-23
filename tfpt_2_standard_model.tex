@@ -2965,9 +2965,13 @@ $\varepsilon=\tfrac34\phiz$ rotation, $\sin^2\theta_{12}=|U_{e2}|^2/(1-|U_{e3}|^
 $\approx0.307$; all three are within $0.1\%$, but they must be quoted separately.
 \textbf{Freeze convention:} the \emph{single} prediction of record is
 $\boxed{\sin^2\theta_{12}^{\rm seed}=\tfrac13-\tfrac{\phiz}{2}=0.306747}$; $\theta_{12}^{\rm seam}$ and
-$\theta_{12}^{\rm nonlin}$ are \emph{derived variants} (different truncation/linearisation of the same
-texture), \emph{not} alternative predictions. This matters for JUNO, which will resolve this band sharply,
-so TFPT commits to one number in advance --- consistent with current global fits, not a post-hoc choice.
+$\theta_{12}^{\rm nonlin}$ are \emph{scheme diagnostics} --- the seam-corrected and full non-linear
+\emph{observation} maps of the same texture (different truncation/linearisation), \emph{not} alternative
+predictions and \emph{not} rescue branches. The three are one \emph{renormalisation orbit} (source seed
+$\to$ seam map $\to$ non-linear observation map): higher precision tests \emph{which point of the orbit}
+the data prefer, not which of three competing predictions to keep. This matters for JUNO, which will
+resolve this band sharply, so TFPT commits to one number in advance --- consistent with current global
+fits, not a post-hoc choice.
 \textbf{Machine enforcement:} the convention is no longer prose --- the blind-prediction registry
 (\texttt{verification/predictions\_frozen.json}, frozen 2026-06-09, ledger \texttt{REG.FREEZE.01}) admits
 exactly \emph{one} $\theta_{12}$ prediction of record and types the two variants as derived; the suite

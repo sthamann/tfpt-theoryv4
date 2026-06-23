@@ -257,6 +257,14 @@ worded. The net effect is not new physics but sharper typing: the package now st
 each reduction would fail and \emph{which} assumptions are truly necessary, exactly at the weakest
 logical transitions. Reproduce with \texttt{cd verification/redteam \&\& python run\_redteam.py}.
 
+\par\smallskip\noindent\textbf{The falsifiability surface is machine-checked (\veri{v375\_observatory\_registry.py}).}
+The frozen prediction registry (\texttt{freeze\_file.csv}) is verified by a status-typed CI: every prediction
+carries a kill criterion (no orphan claims), the headline values re-derive from $\{\varphi_0\}$, and a live scorecard
+records each one's distance to the current data --- $\theta_{12}$ vs the JUNO first run ($0.3092{\pm}0.0087$,
+$0.28\sigma$, compatible), $\theta_{13}$ vs NuFIT~6.0 NO ($2.0\sigma$, the openly-flagged most-tensioned core
+prediction), $\beta_{\mathrm{rad}}$ vs ACT~DR6 ($0.37\sigma$, a hint with systematics pending), and $r<0.036$
+(BK18, compatible). The observatory states its own weakest point rather than hiding it.
+
 \begin{winbox}[Follow-up --- the verdicts were then used as a worklist \mE\ (\veri{v83\_e8net\_holomorphic\_uniqueness.py})]
 Two residuals were attacked directly after the red-team pass; the result is recorded in ledger rows
 \texttt{GATE.METRIC.04} and \texttt{CAR.PASCAL.01}.

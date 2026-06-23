@@ -199,12 +199,23 @@ consistent with `tfpt_research_contracts` and the No-Unit theorem `v153`/`v364`)
 - **Difficulty:** low-medium (tooling). **Open part:** none physical — this is infrastructure that makes the closed
   pieces usable and the open pieces honestly fenced.
 
-### Recommended order (v2)
-1. `v369` (ambient redundancy) — **done**: the one `list.txt`-strategic module the suite was missing.
-2. Track 1 (`v367`/`v368`, S3) — the QFT-complete leverage point.
-3. `v370` (entire spin-2 form factor) — perturbative graviton unitarity.
-4. Track 3 (`v371`–`v374`, `F_transfer`) — operational TOE-completeness + new predictions.
-5. Track 4 (observatory) — fold in as the closed pieces land.
+### Recommended order (v2) — ALL DONE (2026-06-23)
+1. ✅ `v369` (ambient redundancy) — done: the holographic route, QG.AMB.01 reframed as a certification object.
+2. ✅ Track 1 (`v367`/`v368`, S3) — done: an explicit gapped p+ip lattice model (numerical Chern `|C|=1`, `c_-=8`,
+   `det K` 4→1) + the anomaly-inflow edge existence on a strip; S3 reduced to a runnable lattice model.
+3. ✅ Track 2 `v370` (spin-2 unitarity) — done: the Barnes–Rivers spin decomposition; the Stelle ghost is a spin-2
+   state cured by the entire KMS form factor (`v304`), the spin-0 mode by the GHP contour (`v334`) ⇒ perturbative
+   graviton unitarity sector-by-sector `[C]`.
+4. ✅ Track 3 (`v371`–`v374`, `F_transfer`) — done: the four transfers promoted from contracts to typed runnable
+   solvers with kill tests (Koide QED-excluded negative; `η_B` BDP ODE factor-1.1 near-hit; axion spine branch lands
+   on `Ω_DM`; `m_p/m_e` band contains 1836.15).
+5. ✅ Track 4 `v375` (observatory) — done: a status-typed CI over `freeze_file.csv` (falsifiability complete + the
+   live JUNO/NuFIT/ACT/BK18 scorecard, `θ13` flagged at 2.0σ).
+
+**Plus** the `list.txt` credibility/hygiene pass (claim-drift softened, `ε = c3 + 36 c3⁴` explicit, θ12
+prediction-of-record vs diagnostics, JUNO first-data + ACT DR6 + CODATA caveats, "Complete solutions" → "Closure
+status", null-model bound typed). What remains are only the two genuinely-hard external residuals: the **C7
+non-perturbative projective limit** and **SEAM.EQUIV.01 S3** (now a single lattice-existence statement).
 
 ### Honest limits (hold even at full closure)
 No absolute GeV from pure numbers (`v_geo` is metrology, `v153`/`v364`); QCD/nuclei/chemistry stay solver physics;
