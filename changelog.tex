@@ -59,6 +59,35 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-23 (Bird's-eye synthesis: two new structural patterns --- \texttt{v383} the universal spectral-gap principle and \texttt{v384} the residual is certification, not construction)}
+\begin{itemize}
+\item \textbf{\texttt{v383} (\texttt{DYNAMICS.UNIVERSAL.01}) --- the universal spectral-gap / Perron--Frobenius principle.}
+A fresh bird's-eye pass found that \emph{every} TFPT sector is the \emph{same} structural object: a gapped operator with
+a \emph{unique} leading attractor (the physics) and a spectral gap (the reason there is no free parameter).
+\vref{v303} named this only for $F_{\mathrm{transfer}}$; this module extends it to the sectors made parameter-free
+\emph{after} it. \mE\ three gaps are computed --- the flavor transfer $\{1,(2/3)^6,(1/3)^6\}$ with gap $6\ln(3/2)$
+(\vref{v56}/\vref{v82}); the affine-$E_8$ adjacency with Perron eigenvalue $2$ (Kac marks) and subleading
+$2\cos(\pi/5)=\varphi$, gap $2-\varphi=1/\varphi^2$ (\vref{v312}/\vref{v313}); the decoupling margin
+$\Delta_{\mathrm{eff}}\approx1.648$ (\vref{v76}/\vref{v337}). \mE\ the two number-field facets (\vref{v314}): golden
+$\varphi\in\mathbb Q(\sqrt5)$ (carrier-5, static) and $(2/3)^6\in\mathbb Q$ (family-3, dynamic) are the prime-5 and
+prime-3 facets of the order-30 Coxeter clock $30=2{\cdot}3{\cdot}5=h(E_8)$. \mC\ the other sectors are the same
+structure --- gravity ($\delta S{=}0$ equilibrium, \vref{v358}/\vref{v359}), the QG measure (Gaussian saddle,
+\vref{v365}), the boundary QFT (holomorphic $c{=}8$ RG fixed point, \vref{v157}/\vref{v158}), the all-order S-matrix
+(adiabatic limit, \vref{v381}), recovery (Petz fixed point, \vref{v221}), $\tau{=}i$ (\vref{v333}). \mC\ the
+meta-theorem: gapped $\Rightarrow$ unique attractor $\Rightarrow$ parameter-free, theory-wide. Cited in
+\texttt{origin\_theory}; a synthesis (no new number), Python-only.
+\item \textbf{\texttt{v384} (\texttt{RESIDUAL.CERTIFICATION.01}) --- the residual is certification, not construction.}
+After \vref{v369}/\vref{v381}/\vref{v382} the \emph{kind} of every open item has shifted: there is \emph{no} open TFPT
+physics mechanism left. A ledger-CI audit classifies every residual into exactly three external kinds: \mE\ (A)~external
+math proof (\texttt{SEAM.EQUIV.01} continuum existence $=$ the cited MMST/Adamo theorem \vref{v336};
+\texttt{ALPHA.QUILLEN.EXACT.01} \vref{v382}; \texttt{QG.AMB.01} the constructive measure, a \mC\ redundancy \vref{v369}),
+\mE\ (B)~theorem-forbidden ($v_{\mathrm{geo}}$, the No-Unit theorem \vref{v153}/\vref{v364}), \mE\ (C)~external physics
+($F_{\mathrm{transfer}}$, \vref{v371}--\vref{v374}, firewalled \vref{v187}). The two load-bearing facts are verified
+(No-Unit dimensionlessness; the gap-decoupling margin $1.648>0$), and the count of open \emph{internal} TFPT mechanisms
+is \textbf{zero}. \mC\ convergence: the only hard things left are theorems and external physics, not missing dynamics.
+Cited in \texttt{tfpt\_research\_contracts}; an audit (no new number), Python-only.
+\end{itemize}
+
 \subsection*{2026-06-23 (External-review closure: the two genuine residual targets named --- \texttt{v381} the all-order Epstein--Glaser/BRST contract for $S_{\mathrm{pert}}$, and \texttt{v382} the Quillen determinant-line variation as a tracked target)}
 \begin{itemize}
 \item \textbf{\texttt{v381} (\texttt{QFT4D.EG.ALLORDER.01}) --- the all-order 4D perturbative-QFT closing statement.}

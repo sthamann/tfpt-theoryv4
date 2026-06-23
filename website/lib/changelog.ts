@@ -47,6 +47,680 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "Bird's-eye synthesis: two new structural patterns — "
+      },
+      {
+        "k": "c",
+        "v": "v383"
+      },
+      {
+        "k": "t",
+        "v": " the universal spectral-gap principle and "
+      },
+      {
+        "k": "c",
+        "v": "v384"
+      },
+      {
+        "k": "t",
+        "v": " the residual is certification, not construction"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v383"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "DYNAMICS.UNIVERSAL.01"
+            },
+            {
+              "k": "t",
+              "v": ") — the universal spectral-gap / Perron–Frobenius principle."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " A fresh bird's-eye pass found that "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "every"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " TFPT sector is the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "same"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " structural object: a gapped operator with a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "unique"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " leading attractor (the physics) and a spectral gap (the reason there is no free parameter). "
+        },
+        {
+          "k": "c",
+          "v": "v303"
+        },
+        {
+          "k": "t",
+          "v": " named this only for "
+        },
+        {
+          "k": "m",
+          "v": "F_{\\mathrm{transfer}}"
+        },
+        {
+          "k": "t",
+          "v": "; this module extends it to the sectors made parameter-free "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "after"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " it. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "three gaps are computed — the flavor transfer "
+        },
+        {
+          "k": "m",
+          "v": "\\{1,(2/3)^6,(1/3)^6\\}"
+        },
+        {
+          "k": "t",
+          "v": " with gap "
+        },
+        {
+          "k": "m",
+          "v": "6\\ln(3/2)"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v56"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v82"
+        },
+        {
+          "k": "t",
+          "v": "); the affine-"
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " adjacency with Perron eigenvalue "
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": " (Kac marks) and subleading "
+        },
+        {
+          "k": "m",
+          "v": "2\\cos(\\pi/5)=\\varphi"
+        },
+        {
+          "k": "t",
+          "v": ", gap "
+        },
+        {
+          "k": "m",
+          "v": "2-\\varphi=1/\\varphi^2"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v312"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v313"
+        },
+        {
+          "k": "t",
+          "v": "); the decoupling margin "
+        },
+        {
+          "k": "m",
+          "v": "\\Delta_{\\mathrm{eff}}\\approx1.648"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v76"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v337"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the two number-field facets ("
+        },
+        {
+          "k": "c",
+          "v": "v314"
+        },
+        {
+          "k": "t",
+          "v": "): golden "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi\\in\\mathbb Q(\\sqrt5)"
+        },
+        {
+          "k": "t",
+          "v": " (carrier-5, static) and "
+        },
+        {
+          "k": "m",
+          "v": "(2/3)^6\\in\\mathbb Q"
+        },
+        {
+          "k": "t",
+          "v": " (family-3, dynamic) are the prime-5 and prime-3 facets of the order-30 Coxeter clock "
+        },
+        {
+          "k": "m",
+          "v": "30=2{\\cdot}3{\\cdot}5=h(E_8)"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the other sectors are the same structure — gravity ("
+        },
+        {
+          "k": "m",
+          "v": "\\delta S{=}0"
+        },
+        {
+          "k": "t",
+          "v": " equilibrium, "
+        },
+        {
+          "k": "c",
+          "v": "v358"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v359"
+        },
+        {
+          "k": "t",
+          "v": "), the QG measure (Gaussian saddle, "
+        },
+        {
+          "k": "c",
+          "v": "v365"
+        },
+        {
+          "k": "t",
+          "v": "), the boundary QFT (holomorphic "
+        },
+        {
+          "k": "m",
+          "v": "c{=}8"
+        },
+        {
+          "k": "t",
+          "v": " RG fixed point, "
+        },
+        {
+          "k": "c",
+          "v": "v157"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v158"
+        },
+        {
+          "k": "t",
+          "v": "), the all-order S-matrix (adiabatic limit, "
+        },
+        {
+          "k": "c",
+          "v": "v381"
+        },
+        {
+          "k": "t",
+          "v": "), recovery (Petz fixed point, "
+        },
+        {
+          "k": "c",
+          "v": "v221"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "\\tau{=}i"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v333"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the meta-theorem: gapped "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " unique attractor "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " parameter-free, theory-wide. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": "; a synthesis (no new number), Python-only."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v384"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "RESIDUAL.CERTIFICATION.01"
+            },
+            {
+              "k": "t",
+              "v": ") — the residual is certification, not construction."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " After "
+        },
+        {
+          "k": "c",
+          "v": "v369"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v381"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v382"
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "kind"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " of every open item has shifted: there is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "no"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " open TFPT physics mechanism left. A ledger-CI audit classifies every residual into exactly three external kinds: "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "(A) external math proof ("
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " continuum existence "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the cited MMST/Adamo theorem "
+        },
+        {
+          "k": "c",
+          "v": "v336"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "ALPHA.QUILLEN.EXACT.01"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v382"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "QG.AMB.01"
+        },
+        {
+          "k": "t",
+          "v": " the constructive measure, a "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "redundancy "
+        },
+        {
+          "k": "c",
+          "v": "v369"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "(B) theorem-forbidden ("
+        },
+        {
+          "k": "m",
+          "v": "v_{\\mathrm{geo}}"
+        },
+        {
+          "k": "t",
+          "v": ", the No-Unit theorem "
+        },
+        {
+          "k": "c",
+          "v": "v153"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v364"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "(C) external physics ("
+        },
+        {
+          "k": "m",
+          "v": "F_{\\mathrm{transfer}}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v371"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v374"
+        },
+        {
+          "k": "t",
+          "v": ", firewalled "
+        },
+        {
+          "k": "c",
+          "v": "v187"
+        },
+        {
+          "k": "t",
+          "v": "). The two load-bearing facts are verified (No-Unit dimensionlessness; the gap-decoupling margin "
+        },
+        {
+          "k": "m",
+          "v": "1.648>0"
+        },
+        {
+          "k": "t",
+          "v": "), and the count of open "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "internal"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " TFPT mechanisms is "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "zero"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "convergence: the only hard things left are theorems and external physics, not missing dynamics. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": "; an audit (no new number), Python-only."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-23",
+    "dateLabel": "2026-06-23",
+    "heading": [
+      {
+        "k": "t",
         "v": "External-review closure: the two genuine residual targets named — "
       },
       {

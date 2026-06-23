@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`377` registered scripts · `436` ledger claims · `10` clusters.
+`379` registered scripts · `438` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -268,7 +268,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v75_upoint_to_vgeo** [E/O] `FLAV.UPOINT.01` — Gate 1 complete: U_point → v_geo (ratios + Grand Mass Volume); same anchor as 1/G
   - deps: v71_simple_r_bridge, v20_lepton_c_derivation, v46_grand_mass_volume, v68 · cited: origin theory, research contracts
 
-### `frontier` — Open gate (G_metric) & the frontier  (97 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (99 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -465,6 +465,10 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v3, v9, v268, v328, v86, v60 · cited: 5 redteam
 - **v380_grav_kms_hessian** [E/C/O] `GRAV.KMS.HESSIAN.01` — The KMS Entire Hessian -- the Stelle ghost is EXACTLY the Seeley-DeWitt truncation, and resummation pushes it to infinity (upgrades v304/v370 from 'assume entire' to a derived stat
   - deps: QG.AMB.01, v259, v304, v370, v334 · cited: 5 redteam
+- **v383_dynamics_universal** [E/C] `DYNAMICS.UNIVERSAL.01` — DYNAMICS.UNIVERSAL.01: the UNIVERSAL spectral-gap / Perron-Frobenius principle -- every TFPT sector is the SAME object (a gapped operator with a UNIQUE leading attractor = the phys
+  - deps: v56, v82, v303, v312, v313, v314, v337, v358 · cited: origin theory
+- **v384_residual_certification** [E/C/O] `RESIDUAL.CERTIFICATION.01` — RESIDUAL.CERTIFICATION.01: the residual matrix is CERTIFICATION, not CONSTRUCTION -- after v369/v381/v382 there is NO open TFPT physics MECHANISM left; every residual is an externa
+  - deps: v286_seam_equivalence_contract, v382_alpha_quillen_exact, QG.AMB.01, v78_vgeo_floor, v371_ftransfer_pole, v153, v336, v369 · cited: research contracts
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (166 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -818,14 +822,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `SEAM.EQUIV.01`×21, `v76`×17, `E8.GLU.01`×15, `v56`×15, `HOR.NARIAI.01`×15, `QG.AMB.01`×14, `v216`×13, `v336`×12, `REG.FREEZE.01`×12, `AX.P1.01`×11, `v3`×11, `QGEO.SUBPRIN.01`×11, `FLAV.KQ.01`×10, `QGEO.PILLOW.01`×10
+**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `SEAM.EQUIV.01`×22, `v76`×17, `v56`×16, `E8.GLU.01`×15, `QG.AMB.01`×15, `HOR.NARIAI.01`×15, `v216`×13, `v336`×13, `REG.FREEZE.01`×12, `AX.P1.01`×11, `v3`×11, `QGEO.SUBPRIN.01`×11, `FLAV.KQ.01`×10, `QGEO.PILLOW.01`×10
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v371_ftransfer_pole** — `FR.POLE.SOLVE.01`
-- **v372_ftransfer_boltzmann** — `FR.BOLTZMANN.SOLVE.01`
 - **v373_ftransfer_relic** — `FR.RELIC.SOLVE.01`
 - **v374_ftransfer_qcd** — `FR.QCD.BUDGET.01`
 - **v375_observatory_registry** — `OBSERVATORY.REGISTRY.01`
@@ -836,4 +838,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v380_grav_kms_hessian** — `GRAV.KMS.HESSIAN.01`
 - **v381_qft4d_eg_allorder** — `QFT4D.EG.ALLORDER.01`
 - **v382_alpha_quillen_exact** — `ALPHA.QUILLEN.EXACT.01`
+- **v383_dynamics_universal** — `DYNAMICS.UNIVERSAL.01`
+- **v384_residual_certification** — `RESIDUAL.CERTIFICATION.01`
 

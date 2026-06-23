@@ -498,7 +498,7 @@ const NODES: DagNode[] = [
     marker: "[E] lattice theorem",
     title: "The bootstrap / self-consistency loop",
     summary:
-      "The E₈ closure feeds back and fixes the two inputs: g_car = 5 is forced three independent ways (rank-fill, Coxeter-match, and the integer-glue quadratic μ² − 5μ + 4 = 0), and the 8 in c₃ equals rank E₈ = h(D₅) = φ(30). A gapped boundary transport (Δ = 6 log 3/2 > 0) then has, by Perron–Frobenius, a unique attractor at rate (2/3)⁶ — so parameter-freeness is a theorem, not a tuning. Only π stays irreducible. TFPT is therefore not a linear theory (axioms → theorems) but a closed self-consistent loop: the two 'axioms' are back-determined by the closure, not free choices (v350/v352/v353).",
+      "The E₈ closure feeds back and fixes the two inputs: g_car = 5 is forced three independent ways (rank-fill, Coxeter-match, and the integer-glue quadratic μ² − 5μ + 4 = 0), and the 8 in c₃ equals rank E₈ = h(D₅) = φ(30). A gapped boundary transport (Δ = 6 log 3/2 > 0) then has, by Perron–Frobenius, a unique attractor at rate (2/3)⁶ — so parameter-freeness is a theorem, not a tuning. Only π stays irreducible. TFPT is therefore not a linear theory (axioms → theorems) but a closed self-consistent loop: the two 'axioms' are back-determined by the closure, not free choices (v350/v352/v353). The same gapped → unique-attractor structure recurs in every sector (compiler, flavor, QFT, gravity, QG), so parameter-freeness is ONE spectral-gap theorem theory-wide (v383); and the entire residual is now certification, not construction — every open item is an external math proof, theorem-forbidden, or external physics, with zero open internal mechanisms (v384).",
     inputs: ["E₈ closure"],
     outputs: ["g_car = 5, 8 = rank E₈; unique attractor"],
     failure: "g_car not forced three ways; the transport gap is not positive.",
@@ -514,6 +514,8 @@ const NODES: DagNode[] = [
       "v350_bootstrap_inputs_correction.py",
       "v352_framework_irreducible.py",
       "v353_selfloop_capstone.py",
+      "v383_dynamics_universal.py",
+      "v384_residual_certification.py",
     ],
   },
 ];
