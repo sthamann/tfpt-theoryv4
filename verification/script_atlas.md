@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`365` registered scripts · `423` ledger claims · `10` clusters.
+`369` registered scripts · `427` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -258,7 +258,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v75_upoint_to_vgeo** [E/O] `FLAV.UPOINT.01` — Gate 1 complete: U_point → v_geo (ratios + Grand Mass Volume); same anchor as 1/G
   - deps: v71_simple_r_bridge, v20_lepton_c_derivation, v46_grand_mass_volume, v68 · cited: origin theory, research contracts
 
-### `frontier` — Open gate (G_metric) & the frontier  (91 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (95 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -443,6 +443,14 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: QG.AMB.01, v286_seam_equivalence_contract, v366, v329, v221, v76, v337, v258 · cited: research contracts
 - **v370_grav_spin2_unitarity** [E/C/O] `GRAV.SPIN2.UNITARITY.01` — Track 2: the Barnes-Rivers spin decomposition of the graviton propagator -- perturbative graviton unitarity SECTOR-BY-SECTOR (extends v304's scalar pole algebra to the tensor spin 
   - deps: QG.AMB.01, v304, v334, v332, v259, v278, v354 · cited: 5 redteam
+- **v371_ftransfer_pole** [E/C/X] `FR.POLE.SOLVE.01` — Track 3 (F_transfer): the Koide source->pole transfer as a typed solver -- promotes the experiments/ftransfer solve into the ledger with a kill test (does NOT re-prove 53/54 v183 o
+  - deps: FR.POLE.01, v183, v82, v93, v101 · cited: 4 frontier
+- **v372_ftransfer_boltzmann** [E/C/X] `FR.BOLTZMANN.SOLVE.01` — Track 3 (F_transfer): eta_B from the INTEGRATED Buchmueller-Di Bari-Pluemacher Boltzmann network at the TFPT-frozen heavy scale -- promotes the experiments/ftransfer solve, replaci
+  - deps: FR.ETAB.01, v169, v212, v9, v7 · cited: 4 frontier
+- **v373_ftransfer_relic** [E/C/X] `FR.RELIC.SOLVE.01` — Track 3 (F_transfer): the axion relic from the FINITE-T misalignment ODE -- promotes the experiments/ftransfer solve and DECIDES the two TFPT angle branches, replacing the v326 adi
+  - deps: v185, v211, v25 · cited: 4 frontier
+- **v374_ftransfer_qcd** [E/C/X] `FR.QCD.BUDGET.01` — Track 3 (F_transfer): the m_p/m_e transfer as a typed uncertainty-budget + kill test -- the falsifiability companion to v262 (the precise 2-loop point), replacing the v326 toy (whi
+  - deps: v262_fqcd_mp_me, v262, v164, v339 · cited: 4 frontier
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (165 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -800,10 +808,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v356_continuum_mmst_applicability** — `SEAM.EQUIV.CONTINUUM.03`
-- **v358_grav_entropy_equilibrium** — `GRAV.ENTROPY.EQUILIBRIUM.01`
-- **v359_grav_nonlinear_einstein** — `GRAV.NONLINEAR.01`
-- **v360_grav_gap_corrections** — `GRAV.GAPCORR.01`
 - **v361_grav_backreaction** — `GRAV.BACKREACT.01`
 - **v364_vgeo_sharpen** — `VGEO.SHARPEN.01`
 - **v365_qg_oneloop_saddle** — `QGAMB.SADDLE.01`
@@ -812,4 +816,8 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v368_seam_s3_inflow** — `SEAM.S3.INFLOW.01`
 - **v369_qgamb_redundancy** — `QGAMB.REDUNDANCY.01`
 - **v370_grav_spin2_unitarity** — `GRAV.SPIN2.UNITARITY.01`
+- **v371_ftransfer_pole** — `FR.POLE.SOLVE.01`
+- **v372_ftransfer_boltzmann** — `FR.BOLTZMANN.SOLVE.01`
+- **v373_ftransfer_relic** — `FR.RELIC.SOLVE.01`
+- **v374_ftransfer_qcd** — `FR.QCD.BUDGET.01`
 

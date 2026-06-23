@@ -418,6 +418,555 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "Track 3 — the "
+      },
+      {
+        "k": "m",
+        "v": "F_{\\mathrm{transfer}}"
+      },
+      {
+        "k": "t",
+        "v": " functor promoted from contracts to TYPED runnable solvers with kill tests: Koide source"
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": "pole ("
+      },
+      {
+        "k": "c",
+        "v": "v371"
+      },
+      {
+        "k": "t",
+        "v": "), "
+      },
+      {
+        "k": "m",
+        "v": "\\eta_B"
+      },
+      {
+        "k": "t",
+        "v": " Boltzmann ("
+      },
+      {
+        "k": "c",
+        "v": "v372"
+      },
+      {
+        "k": "t",
+        "v": "), axion finite-"
+      },
+      {
+        "k": "m",
+        "v": "T"
+      },
+      {
+        "k": "t",
+        "v": " relic ("
+      },
+      {
+        "k": "c",
+        "v": "v373"
+      },
+      {
+        "k": "t",
+        "v": "), "
+      },
+      {
+        "k": "m",
+        "v": "m_p/m_e"
+      },
+      {
+        "k": "t",
+        "v": " uncertainty budget ("
+      },
+      {
+        "k": "c",
+        "v": "v374"
+      },
+      {
+        "k": "t",
+        "v": ")"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v371"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "FR.POLE.SOLVE.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " A clean "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "negative"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": standard QED/EW running cannot be the Koide source"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": "pole transfer (it pushes "
+        },
+        {
+          "k": "m",
+          "v": "Q"
+        },
+        {
+          "k": "t",
+          "v": " above "
+        },
+        {
+          "k": "m",
+          "v": "2/3"
+        },
+        {
+          "k": "t",
+          "v": "; the required "
+        },
+        {
+          "k": "m",
+          "v": "\\epsilon"
+        },
+        {
+          "k": "t",
+          "v": " is negative while QED's is positive), so the transfer is the non-QED "
+        },
+        {
+          "k": "m",
+          "v": "53/54"
+        },
+        {
+          "k": "t",
+          "v": " operator / "
+        },
+        {
+          "k": "m",
+          "v": "(2/3)^6"
+        },
+        {
+          "k": "t",
+          "v": " Moebius generator ("
+        },
+        {
+          "k": "c",
+          "v": "v183"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v82"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": ", plain running excluded as the kill. Python (numpy"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": "scipy)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v372"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "FR.BOLTZMANN.SOLVE.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The integrated Buchmueller–Di Bari–Pluemacher Boltzmann ODE at the TFPT-frozen "
+        },
+        {
+          "k": "m",
+          "v": "M_1{=}M_{\\mathrm{scal}}(\\phiz)^2/A_\\Lambda"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v212"
+        },
+        {
+          "k": "t",
+          "v": ") gives "
+        },
+        {
+          "k": "m",
+          "v": "\\eta_B"
+        },
+        {
+          "k": "t",
+          "v": " within a factor "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}1.1"
+        },
+        {
+          "k": "t",
+          "v": " of "
+        },
+        {
+          "k": "m",
+          "v": "6.1{\\times}10^{-10}"
+        },
+        {
+          "k": "t",
+          "v": " with no "
+        },
+        {
+          "k": "m",
+          "v": "M_R"
+        },
+        {
+          "k": "t",
+          "v": " dial; replaces the "
+        },
+        {
+          "k": "c",
+          "v": "v326"
+        },
+        {
+          "k": "t",
+          "v": " toy washout. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "s",
+          "v": "X"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v373"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "FR.RELIC.SOLVE.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The finite-"
+        },
+        {
+          "k": "m",
+          "v": "T"
+        },
+        {
+          "k": "t",
+          "v": " axion misalignment ODE decides the branch: the frozen spine angle "
+        },
+        {
+          "k": "m",
+          "v": "3\\pi/5"
+        },
+        {
+          "k": "t",
+          "v": " gives "
+        },
+        {
+          "k": "m",
+          "v": "\\Omega_a h^2{\\sim}0.12"
+        },
+        {
+          "k": "t",
+          "v": " (in "
+        },
+        {
+          "k": "m",
+          "v": "[0.08,0.16]"
+        },
+        {
+          "k": "t",
+          "v": ", lands on "
+        },
+        {
+          "k": "m",
+          "v": "\\Omega_{\\mathrm{DM}}"
+        },
+        {
+          "k": "t",
+          "v": " untuned) while the hilltop "
+        },
+        {
+          "k": "m",
+          "v": "170^\\circ"
+        },
+        {
+          "k": "t",
+          "v": " over-produces ("
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}5.4\\times"
+        },
+        {
+          "k": "t",
+          "v": "); replaces the "
+        },
+        {
+          "k": "c",
+          "v": "v326"
+        },
+        {
+          "k": "t",
+          "v": " toy. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "s",
+          "v": "X"
+        },
+        {
+          "k": "t",
+          "v": " (lattice "
+        },
+        {
+          "k": "m",
+          "v": "\\chi(T)"
+        },
+        {
+          "k": "t",
+          "v": " input)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v374"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "FR.QCD.BUDGET.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The "
+        },
+        {
+          "k": "m",
+          "v": "m_p/m_e"
+        },
+        {
+          "k": "t",
+          "v": " uncertainty budget: with "
+        },
+        {
+          "k": "m",
+          "v": "b_3{=}-7"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "and the two declared externals ("
+        },
+        {
+          "k": "m",
+          "v": "\\alpha_s(M_Z)"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "C_p"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}5.3\\%"
+        },
+        {
+          "k": "t",
+          "v": " each), the central "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}1824"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v262"
+        },
+        {
+          "k": "t",
+          "v": ") carries a propagated "
+        },
+        {
+          "k": "m",
+          "v": "{\\pm}7.5\\%"
+        },
+        {
+          "k": "t",
+          "v": " band "
+        },
+        {
+          "k": "m",
+          "v": "[\\sim1690,\\sim1960]"
+        },
+        {
+          "k": "t",
+          "v": " CONTAINING "
+        },
+        {
+          "k": "m",
+          "v": "1836.15"
+        },
+        {
+          "k": "t",
+          "v": "; lattice tightening is the kill. The falsifiability companion to "
+        },
+        {
+          "k": "c",
+          "v": "v262"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-23",
+    "dateLabel": "2026-06-23",
+    "heading": [
+      {
+        "k": "t",
         "v": "Track 1 — the S3 input made CONCRETE: an explicit gapped chiral-Majorana ("
       },
       {
