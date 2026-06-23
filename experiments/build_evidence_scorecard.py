@@ -141,6 +141,26 @@ ROWS = [
      "strain_level_test", "HEASARC NICER J0537-6910 (Ho+2020 MNRAS 498,4605; 1165 obs) + PINT",
      "a stacked log-periodic comb at omega=2.58 over a >~2.8-period (long-interval) recovery",
      "data_limited"],
+    # ---- cross-domain recovery-comb search (experiments/recovery-comb-domains) ----
+    ["FRB", "recovery comb in FRB burst tail (omega=2.58, stacked)",
+     "log-periodic comb at omega=2pi/ln((3/2)^6) in the post-peak burst-tail recovery",
+     "REAL data, now STACKED: 8 bright bursts across 3 repeaters (FRB 20121102A x5 FAST, "
+     "FRB 20190520B x2 GBT, FRB 20201124A x1 GBT); 7 clear the >=2.8-period ln-range gate; "
+     "phase-incoherent stack of the kernel comb gain -> omega=2.58 NOT special (p=0.34) -> clean "
+     "NULL (single-burst weak null p=0.25 sharpened to a 7-burst/3-repeater stack). Still WEAK: "
+     "FRB tails are scattering/noise-dominated and the comb is an intrinsic ~2% effect", None,
+     "search_target", "boundary recovery kernel (dynamic)",
+     "search_target", "real FRB waterfalls (FAST/GBT .calibP, 3 repeaters) + shared stacked comb detector",
+     "the omega=2.58 comb is special vs the off-kernel periodogram in a clean stacked burst tail",
+     "null"],
+    ["X-ray", "recovery comb in magnetar outburst relaxation (omega=2.58)",
+     "log-periodic comb at omega=2.58 in the post-outburst X-ray flux decay (wide ln t, stackable)",
+     "data_limited: needs Swift/XRT or Coti Zelati+2018 flux(t); ~3 decades in ln t = best new "
+     "candidate, but magnetospheric (surface) relaxation -> search target with firewall caveat, "
+     "not a horizon recovery; detector injection-validated", None,
+     "search_target", "boundary recovery kernel (dynamic, surface caveat)",
+     "search_target", "Swift/XRT light curves / Coti Zelati+2018 magnetar-outburst sample",
+     "the omega=2.58 comb is special in a wide-ln-t magnetar flux-decay recovery", "data_limited"],
     ["pulsar", "recovery-waveform clock template (PG.04/QT.04)",
      "walled 2-mode clock: bend tau ratio 2.7095 + protected floor + wall (<=2 modes)",
      "GW single-event ringdown DONE (gw Stage 2): the bend is degenerate within one monotone recovery "

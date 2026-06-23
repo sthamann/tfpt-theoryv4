@@ -1,0 +1,244 @@
+{
+  "kernel": {
+    "lambda": 11.390625,
+    "omega": 2.5827069463082895,
+    "eps_predicted": 0.01730246011431484,
+    "min_comb_periods": 2.8
+  },
+  "detector_validation": {
+    "eps": 0.3,
+    "noise": 0.1,
+    "n_seeds": 25,
+    "sufficient_periods": 2.8,
+    "sufficient_comb_rate": 0.96,
+    "sufficient_null_rate": 0.0,
+    "short_periods": 1.9,
+    "short_comb_rate": 0.0,
+    "passed": true
+  },
+  "stack_validation": {
+    "eps": 0.05,
+    "noise": 0.1,
+    "n_curves": 12,
+    "periods": 3.0,
+    "single_rate": 0.4166666666666667,
+    "stacked_rate": 1.0,
+    "null_rate": 0.08333333333333333,
+    "passed": true
+  },
+  "channels": [
+    {
+      "key": "A1",
+      "domain": "magnetar outburst flux relaxation (stacked)",
+      "firewall_legitimacy": "surface",
+      "data_status": "real",
+      "note": "REAL data: 6 outburst light curve(s); 2 clear the ln-range gate (>= 2.8 comb periods). 1E_1547.0-5408 (periods=3.54, p=1.0); SGR_1745-2900 (periods=2.93, p=0.302); SGR_1935+2154 (periods=2.07, p=0.0018, <gate: range-blind, EXCLUDED); Swift_J1818.0-1607 (periods=2.67, p=0.1354, <gate: range-blind, EXCLUDED); Swift_J1822.3-1606 (periods=1.59, p=0.898, <gate: range-blind, EXCLUDED); XTE_J1810-197 (periods=1.49, p=0.2164, <gate: range-blind, EXCLUDED). STACKED over 2 outbursts: kernel omega=2.58 is NOT special (p=0.986) -> clean NULL (magnetospheric/surface -> firewall caveat, not a horizon recovery).",
+      "result": {
+        "n_points": 1281,
+        "comb_periods": 3.54,
+        "range_sufficient": true,
+        "gain": 0.0102,
+        "p_value": 0.986,
+        "comb_detected": false,
+        "omega": 2.5827069463082895,
+        "n_sources": 6,
+        "n_stacked": 2,
+        "per_source": [
+          {
+            "n_points": 95,
+            "comb_periods": 3.54,
+            "range_sufficient": true,
+            "gain": 0.0002,
+            "p_value": 1.0,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "1E_1547.0-5408"
+          },
+          {
+            "n_points": 935,
+            "comb_periods": 2.93,
+            "range_sufficient": true,
+            "gain": 0.0201,
+            "p_value": 0.302,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "SGR_1745-2900"
+          },
+          {
+            "n_points": 133,
+            "comb_periods": 2.07,
+            "range_sufficient": false,
+            "gain": 0.0312,
+            "p_value": 0.0018,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "SGR_1935+2154"
+          },
+          {
+            "n_points": 43,
+            "comb_periods": 2.67,
+            "range_sufficient": false,
+            "gain": 0.5056,
+            "p_value": 0.1354,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "Swift_J1818.0-1607"
+          },
+          {
+            "n_points": 6,
+            "comb_periods": 1.59,
+            "range_sufficient": false,
+            "gain": 0.9677,
+            "p_value": 0.898,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "Swift_J1822.3-1606"
+          },
+          {
+            "n_points": 69,
+            "comb_periods": 1.49,
+            "range_sufficient": false,
+            "gain": 0.9554,
+            "p_value": 0.2164,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "XTE_J1810-197"
+          }
+        ]
+      }
+    },
+    {
+      "key": "A2",
+      "domain": "BH late-time ringdown tail / QNM overtones",
+      "firewall_legitimacy": "horizon",
+      "data_status": "data_limited",
+      "note": "the post-ringdown power-law tail is a horizon recovery, but below current single-event SNR; high-overtone omega_R/T_H -> ln3=ln N_fam needs overtone spectroscopy (n=0 only today). Horizon-legitimate but data-limited (see gw-ringdown-spectroscopy). The comb detector is ready for a stacked late-time residual once high-SNR events accumulate (O5+).",
+      "result": null
+    },
+    {
+      "key": "A3",
+      "domain": "FRB burst tail (stacked)",
+      "firewall_legitimacy": "horizon-residual",
+      "data_status": "real",
+      "note": "REAL data: 8 bright FRB burst waterfall(s) across 3 repeater(s) [FRB190520x2, J2000-1234x5, FRB20201124Ax1]; 7 clear the ln-range gate (>= 2.8 comb periods). 117pulse (periods=3.19, p=0.6655); 149pulse (periods=3.02, p=0.2477); 20191003_1032 (periods=2.13, p=0.2116, <gate: range-blind, EXCLUDED); 315-pulse (periods=3.18, p=0.2477); 529-pulse (periods=3.06, p=0.2477); burst1 (1) (periods=3.19, p=0.2477); burst1 (periods=3.28, p=0.2477); pulse1 (periods=2.81, p=0.5181). STACKED over 7 burst tails: kernel omega=2.58 is NOT special (p=0.3414) -> clean NULL (horizon-residual, but FRB tails are scattering/noise-dominated and the comb is an intrinsic ~2% effect -> a weak constraint, not a horizon detection).",
+      "result": {
+        "n_points": 14257,
+        "comb_periods": 3.28,
+        "range_sufficient": true,
+        "gain": 0.0355,
+        "p_value": 0.3414,
+        "comb_detected": false,
+        "omega": 2.5827069463082895,
+        "n_sources": 8,
+        "n_stacked": 7,
+        "per_source": [
+          {
+            "n_points": 2342,
+            "comb_periods": 3.19,
+            "range_sufficient": true,
+            "gain": 0.0024,
+            "p_value": 0.6655,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "117pulse",
+            "frb": "FRB190520"
+          },
+          {
+            "n_points": 1542,
+            "comb_periods": 3.02,
+            "range_sufficient": true,
+            "gain": 0.0048,
+            "p_value": 0.2477,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "149pulse",
+            "frb": "FRB190520"
+          },
+          {
+            "n_points": 178,
+            "comb_periods": 2.13,
+            "range_sufficient": false,
+            "gain": 0.3868,
+            "p_value": 0.2116,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "20191003_1032",
+            "frb": "J2000-1234"
+          },
+          {
+            "n_points": 2314,
+            "comb_periods": 3.18,
+            "range_sufficient": true,
+            "gain": 0.0313,
+            "p_value": 0.2477,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "315-pulse",
+            "frb": "J2000-1234"
+          },
+          {
+            "n_points": 1692,
+            "comb_periods": 3.06,
+            "range_sufficient": true,
+            "gain": 0.0027,
+            "p_value": 0.2477,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "529-pulse",
+            "frb": "J2000-1234"
+          },
+          {
+            "n_points": 2345,
+            "comb_periods": 3.19,
+            "range_sufficient": true,
+            "gain": 0.013,
+            "p_value": 0.2477,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "burst1 (1)",
+            "frb": "FRB20201124A"
+          },
+          {
+            "n_points": 2909,
+            "comb_periods": 3.28,
+            "range_sufficient": true,
+            "gain": 0.1918,
+            "p_value": 0.2477,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "burst1",
+            "frb": "J2000-1234"
+          },
+          {
+            "n_points": 935,
+            "comb_periods": 2.81,
+            "range_sufficient": true,
+            "gain": 0.0025,
+            "p_value": 0.5181,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "pulse1",
+            "frb": "J2000-1234"
+          }
+        ]
+      }
+    },
+    {
+      "key": "B4",
+      "domain": "BEC analog-horizon Hawking/Page recovery",
+      "firewall_legitimacy": "analog",
+      "data_status": "needs_experiment",
+      "note": "conceptually the MOST direct boundary-recovery realisation: an analog horizon's Hawking-correlation / Page-style information recovery could carry the (2/3)^6 rate or the omega=2.58 comb. Theory side = recovery-channel (CPTP/Page/Petz). Empirical side needs time/scale-resolved analog-gravity correlation data (not a public table) -> needs_experiment.",
+      "result": null
+    },
+    {
+      "key": "B5",
+      "domain": "quantum-simulator geometric ladder",
+      "firewall_legitimacy": "internal",
+      "data_status": "needs_experiment",
+      "note": "a simulator relaxing through the frozen ladder shows the comb by construction (quantum-testbed proves it synthetically: DSI at omega=2pi/ln lambda, suppression e^{-pi^2/ln lambda}). The empirical side needs a built experiment (engineered rate ladder, read-out of the relaxation) -> needs_experiment.",
+      "result": null
+    }
+  ],
+  "verdict": "detector validated (fires at >~2.8 periods, range-blind below; no false positives). Across the 5 domains: 2 have data in hand (A1, A3); in A1, A3 the range is sufficient but the kernel omega=2.58 is NOT special (clean NULL on real data, though FRB burst tails are scattering/noise-dominated -> weak). The wide-ln(t), cleaner channels (A1 magnetar ~3 decades; A2 BH late-time tail) are data_limited; the analog/simulator channels (B4/B5) need bespoke experiments. The comb is intrinsically a ~2% effect needing a clean, wide-range recovery -- the search space is genuinely narrow. No claim."
+}

@@ -1,0 +1,16 @@
+.venv*/
+.ruff_cache/
+__pycache__/
+*.egg-info/
+build/
+dist/
+*.pyc
+
+# raw input data: public, re-downloadable (kept out of git); the small results JSON IS committed
+data/*
+!data/README.md
+# A1: the small NORMALISED magnetar light curves + their README are committed (derived products,
+# like the results JSON); only the bulky raw downloads are ignored.
+!data/magnetar/
+data/magnetar/raw/
+results/*.png

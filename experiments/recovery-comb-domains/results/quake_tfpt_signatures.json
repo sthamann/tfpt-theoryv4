@@ -1,0 +1,150 @@
+{
+  "mainshocks": [
+    {
+      "name": "Ridgecrest2019",
+      "n_events": 7026,
+      "n_bins": 59,
+      "ln_range": 12.02,
+      "periods_3half6": 4.94
+    },
+    {
+      "name": "Landers1992",
+      "n_events": 4458,
+      "n_bins": 48,
+      "ln_range": 13.12,
+      "periods_3half6": 5.39
+    },
+    {
+      "name": "HectorMine1999",
+      "n_events": 1837,
+      "n_bins": 63,
+      "ln_range": 8.1,
+      "periods_3half6": 3.33
+    },
+    {
+      "name": "Tohoku2011",
+      "n_events": 4333,
+      "n_bins": 77,
+      "ln_range": 12.02,
+      "periods_3half6": 4.94
+    },
+    {
+      "name": "Maule2010",
+      "n_events": 1471,
+      "n_bins": 75,
+      "ln_range": 10.95,
+      "periods_3half6": 4.5
+    },
+    {
+      "name": "Sumatra2004",
+      "n_events": 1694,
+      "n_bins": 69,
+      "ln_range": 11.08,
+      "periods_3half6": 4.55
+    }
+  ],
+  "battery": {
+    "3/2 (1/Koide, fundamental)": {
+      "lambda": 1.5,
+      "omega": 15.496,
+      "n_used": 6,
+      "gain": 0.0147,
+      "p_value": 0.6881,
+      "comb_detected": false
+    },
+    "phi (golden, g_car=5)": {
+      "lambda": 1.618,
+      "omega": 13.057,
+      "n_used": 6,
+      "gain": 0.0137,
+      "p_value": 0.7248,
+      "comb_detected": false
+    },
+    "2 (sheet doubling)": {
+      "lambda": 2.0,
+      "omega": 9.065,
+      "n_used": 6,
+      "gain": 0.0201,
+      "p_value": 0.6636,
+      "comb_detected": false
+    },
+    "3 (N_fam)": {
+      "lambda": 3.0,
+      "omega": 5.719,
+      "n_used": 6,
+      "gain": 0.0367,
+      "p_value": 0.2239,
+      "comb_detected": false
+    },
+    "4 (|mu4|)": {
+      "lambda": 4.0,
+      "omega": 4.532,
+      "n_used": 6,
+      "gain": 0.0406,
+      "p_value": 0.1345,
+      "comb_detected": false
+    },
+    "5 (g_car)": {
+      "lambda": 5.0,
+      "omega": 3.904,
+      "n_used": 6,
+      "gain": 0.0339,
+      "p_value": 0.4751,
+      "comb_detected": false
+    },
+    "8 (rank E8)": {
+      "lambda": 8.0,
+      "omega": 3.022,
+      "n_used": 6,
+      "gain": 0.0261,
+      "p_value": 0.7936,
+      "comb_detected": false
+    },
+    "(3/2)^6 (recovery comb)": {
+      "lambda": 11.3906,
+      "omega": 2.583,
+      "n_used": 6,
+      "gain": 0.0345,
+      "p_value": 0.5769,
+      "comb_detected": false
+    },
+    "30 (Coxeter h)": {
+      "lambda": 30.0,
+      "omega": 1.847,
+      "n_used": 5,
+      "gain": 0.0942,
+      "p_value": 0.0852,
+      "comb_detected": false
+    }
+  },
+  "bonferroni_global_p": 0.7668,
+  "free_fit_peaks": [
+    {
+      "omega": 6.546,
+      "lambda": 2.611,
+      "stacked_gain": 0.2544
+    },
+    {
+      "omega": 3.422,
+      "lambda": 6.273,
+      "stacked_gain": 0.2535
+    },
+    {
+      "omega": 7.617,
+      "lambda": 2.282,
+      "stacked_gain": 0.2478
+    }
+  ],
+  "omori_p": [
+    0.864,
+    0.858,
+    1.105,
+    0.674,
+    0.828,
+    0.696
+  ],
+  "omori_p_mean": 0.837,
+  "omori_nearest_rational": "5/6",
+  "omori_coincidence_chance": 0.076,
+  "verdict": "6 aftershock sequences (up to ~5-6 comb periods, thousands of events). NO TFPT log-period is special after look-elsewhere (Bonferroni global p=0.77 >= 0.05). Seismicity's own dominant log-period lambda_fit~2.611 (seismology typically reports ~2). Firewall: earthquakes are not a horizon recovery, so this tests the SHAPE only, never TFPT physics."
+}

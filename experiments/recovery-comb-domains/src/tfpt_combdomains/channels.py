@@ -20,14 +20,14 @@ channels are range-blind by construction, which is itself the honest finding.
 from __future__ import annotations
 
 import csv
-import math
 import sys
+from collections import Counter
 from dataclasses import dataclass, field
 from pathlib import Path
 
 import numpy as np
 
-from .comb import LAMBDA, MIN_COMB_PERIODS, OMEGA, run_comb
+from .comb import LAMBDA, MIN_COMB_PERIODS, OMEGA, run_comb, stacked_comb_test
 
 DATA = Path(__file__).resolve().parents[2] / "data"
 FRB_WATERFALLS = (Path(__file__).resolve().parents[3]
@@ -46,29 +46,99 @@ class Channel:
 
 
 # --------------------------------------------------------------------------- A1 magnetar
+MAGNETAR_DIR = DATA / "magnetar"
+
+
+def _read_flux_csv(path: Path) -> tuple[np.ndarray, np.ndarray] | None:
+    """Read a normalised magnetar light curve (header ``t_days,flux[,flux_err]``; onset-relative
+    days, flux/rate in any consistent unit). Returns (t_days, flux) with t, flux > 0, or None."""
+    try:
+        with path.open(encoding="utf-8") as fh:
+            rd = csv.DictReader(fh)
+            cols = {(c or "").strip().lower(): c for c in (rd.fieldnames or [])}
+            tk = cols.get("t_days") or cols.get("t")
+            fk = cols.get("flux") or cols.get("rate") or cols.get("flux_unabs")
+            if not tk or not fk:
+                return None
+            t, f = [], []
+            for row in rd:
+                try:
+                    tv, fv = float(row[tk]), float(row[fk])
+                except (TypeError, ValueError):
+                    continue
+                if tv > 0 and fv > 0:
+                    t.append(tv)
+                    f.append(fv)
+    except OSError:
+        return None
+    return (np.array(t), np.array(f)) if len(t) >= 6 else None
+
+
 def channel_a1_magnetar() -> Channel:
     """Magnetar (SGR/AXP) post-outburst X-ray flux relaxation -- days..years (~3 decades in ln t),
-    stackable over many outbursts. The cleanest WIDE-range recovery dataset; legitimacy 'surface'
-    (magnetospheric/crustal relaxation, not a horizon -> a residual-recovery search target)."""
-    csvf = DATA / "magnetar" / "flux_decay.csv"   # columns: t_days, flux, (flux_err)
-    if csvf.exists():
-        t, f = [], []
-        with csvf.open(encoding="utf-8") as fh:
-            for row in csv.DictReader(fh):
-                t.append(float(row["t_days"]))
-                f.append(float(row["flux"]))
-        t = np.array(t)
-        rec = np.array(f) - np.polyval(np.polyfit(np.log(t), f, 1), np.log(t))
+    stackable over many outbursts: the widest-ln(t), best-sampled recovery data in hand. Legitimacy
+    'surface' (magnetospheric/crustal relaxation, a residual-recovery search target, not a horizon).
+
+    Sharp pipeline: each normalised light curve in ``data/magnetar/*.csv`` -> recovery observable
+    ``y = ln(flux)`` (so the orders-of-magnitude power-law decay is absorbed by the detector's
+    degree-2 ln-t baseline, not dominated by the bright early points); a per-curve ln-range gate;
+    then a phase-incoherent STACK over all sufficiently-ranged outbursts to beat the intrinsic ~2%
+    single-curve amplitude. Get data with ``tfpt-combdomains fetch-magnetar``."""
+    files = sorted(MAGNETAR_DIR.glob("*.csv")) if MAGNETAR_DIR.exists() else []
+    per: list[dict] = []
+    curves: list[tuple[np.ndarray, np.ndarray]] = []
+    for fpath in files:
+        rd = _read_flux_csv(fpath)
+        if rd is None:
+            continue
+        t, flux = rd
+        rec = np.log(flux)                       # recovery observable in log space
         res = run_comb(t, rec)
-        return Channel("A1", "magnetar outburst flux relaxation", "surface", "real",
-                       "post-outburst flux decay; comb test run", res)
-    return Channel(
-        "A1", "magnetar outburst flux relaxation", "surface", "data_limited",
-        "FETCH: Swift/XRT light curves (UKSSDC build-your-own) or the homogeneous Coti Zelati+2018 "
-        "magnetar-outburst sample (Swift/NICER/NuSTAR); drop flux(t) into data/magnetar/flux_decay.csv "
-        "(t_days,flux). Then the comb runs unchanged. Wide ln(t) (~3 decades) makes this the best "
-        "new candidate -- but the relaxation is magnetospheric (surface), so it is a search target "
-        "with a firewall caveat, not a horizon recovery.")
+        res["source"] = fpath.stem
+        per.append(res)
+        if res["range_sufficient"]:
+            curves.append((t, rec))
+
+    if not per:
+        return Channel(
+            "A1", "magnetar outburst flux relaxation", "surface", "data_limited",
+            "NO data yet. FETCH: `tfpt-combdomains fetch-magnetar` pulls Swift/XRT long-term light "
+            "curves (swifttools/UKSSDC) for a curated transient-magnetar list; or drop the Coti "
+            "Zelati+2018 MOOC ('download all data', http://magnetars.ice.csic.es) light curve(s) "
+            "into data/magnetar/<source>.csv (header t_days,flux[,flux_err], onset-relative days). "
+            "Wide ln(t) (~3 decades) makes this the best new candidate -- relaxation is "
+            "magnetospheric (surface), a search target with a firewall caveat, not a horizon recovery.")
+
+    stack = stacked_comb_test(curves) if curves else None
+    head = (f"REAL data: {len(per)} outburst light curve(s); {len(curves)} clear the ln-range gate "
+            f"(>= {MIN_COMB_PERIODS} comb periods). ")
+    detail = "; ".join(
+        f"{p['source']} (periods={p['comb_periods']}, p={p['p_value']}"
+        + ("" if p["range_sufficient"] else ", <gate: range-blind, EXCLUDED") + ")"
+        for p in per)
+    if stack and stack["n_used"]:
+        tail = (f". STACKED over {stack['n_used']} outbursts: kernel omega={OMEGA:.2f} is "
+                + (f"SPECIAL (p={stack['p_value']}) -> ESCALATE (independent cross-check first)"
+                   if stack["comb_detected"]
+                   else f"NOT special (p={stack['p_value']}) -> clean NULL")
+                + " (magnetospheric/surface -> firewall caveat, not a horizon recovery).")
+    else:
+        tail = (". No single outburst clears the ln-range gate yet -> RANGE-LIMITED; add more "
+                "wide-baseline (days..years) light curves (stacking raises amplitude, not ln-range).")
+    agg = {
+        "n_points": int(sum(p["n_points"] for p in per)),
+        "comb_periods": max(p["comb_periods"] for p in per),
+        "range_sufficient": bool(curves),
+        "gain": (stack or {}).get("gain", 0.0),
+        "p_value": (stack or {}).get("p_value", 1.0),
+        "comb_detected": bool(stack and stack["comb_detected"]),
+        "omega": OMEGA,
+        "n_sources": len(per),
+        "n_stacked": (stack or {}).get("n_used", 0),
+        "per_source": per,
+    }
+    return Channel("A1", "magnetar outburst flux relaxation (stacked)", "surface", "real",
+                   head + detail + tail, agg)
 
 
 # --------------------------------------------------------------------------- A2 BH late-time tail
@@ -86,46 +156,100 @@ def channel_a2_bh_tail() -> Channel:
 
 # --------------------------------------------------------------------------- A3 FRB burst tails
 def _read_frb_profile(path: Path):
-    """Frequency-summed intensity-vs-time profile of one PSRFITS/.calibP burst (reuses the FRB
-    experiment's astropy reader). Returns (dt_s, profile) or None."""
+    """Frequency-summed Stokes-I intensity-vs-time profile of one PSRFITS/.calibP burst (reuses the
+    FRB experiment's astropy reader). Returns (dt_s, profile, src_name) or None."""
     try:
         if str(FRB_SRC) not in sys.path:
             sys.path.insert(0, str(FRB_SRC))
         from frb_tfpt.psrfits import read_archive  # noqa: PLC0415  (optional cross-exp reader)
         arc = read_archive(str(path))
-        spec = np.asarray(arc.data, dtype=float)          # (nchan, ntime) Stokes-I dynamic spectrum
+        spec = np.asarray(arc.I, dtype=float)             # (nchan, nbin) Stokes-I dynamic spectrum
         prof = spec.sum(axis=0) if spec.ndim == 2 else np.asarray(spec, float).ravel()
-        return float(getattr(arc, "dt", 1.0)), prof
+        dt = float(np.atleast_1d(arc.tbin).ravel()[0])
+        return dt, prof, (arc.source or "").strip()
     except Exception:  # noqa: BLE001
         return None
 
 
+def _frb_tail(dt: float, prof: np.ndarray) -> tuple[np.ndarray, np.ndarray] | None:
+    """Post-peak intensity tail as a recovery curve: tau = (bins since peak) * dt, recovery = the
+    positive tail with its smooth linear-in-ln(tau) trend removed (the detector then re-detrends
+    with a degree-2 ln-t baseline). Returns (tau, rec) or None if the tail is too short."""
+    ipk = int(np.argmax(prof))
+    tail = np.asarray(prof[ipk + 1:], float)
+    tail = tail[tail > 0]
+    if len(tail) < 8:
+        return None
+    tau = (np.arange(len(tail)) + 1.0) * dt
+    rec = tail - np.polyval(np.polyfit(np.log(tau), tail, 1), np.log(tau))
+    return tau, rec
+
+
 def channel_a3_frb_tail() -> Channel:
-    """FRB burst TAIL: the post-peak intensity decay of a bright repeater burst -- a horizon-
-    residual recovery (firewall-legit). We have raw waterfalls in hand. BUT a single burst tail is
-    ms-scale -> spans ~1 decade in ln(t) -> ~0.9 comb periods << 2.8 -> RANGE-BLIND by construction
-    (stacking raises amplitude, not ln-range), exactly like a single GW ringdown."""
+    """FRB burst TAIL (stacked): the post-peak intensity decay of bright repeater bursts -- a
+    horizon-residual recovery (firewall-legit). A single ms-scale tail is scattering/noise-dominated
+    (a WEAK null), so the sharper test STACKS the phase-incoherent kernel comb gain across many
+    bright bursts (the SAME meta-test as A1), keeping the hard per-curve ln-range gate. Reads every
+    raw waterfall in ``frb-tfpt-signatures/new-data/*.calibP``."""
     files = sorted(FRB_WATERFALLS.glob("*.calibP")) if FRB_WATERFALLS.exists() else []
-    if files:
-        small = min(files, key=lambda p: p.stat().st_size)
-        rd = _read_frb_profile(small)
-        if rd is not None:
-            dt, prof = rd
-            ipk = int(np.argmax(prof))
-            tail = prof[ipk + 1:]
-            tail = tail[tail > 0]
-            if len(tail) >= 8:
-                tau = (np.arange(len(tail)) + 1.0) * dt
-                rec = tail - np.polyval(np.polyfit(np.log(tau), tail, 1), np.log(tau))
-                res = run_comb(tau, rec)
-                return Channel("A3", "FRB burst tail (stacked)", "horizon-residual", "real",
-                               f"read {small.name}; burst-tail comb test run", res)
-    return Channel(
-        "A3", "FRB burst tail (stacked)", "horizon-residual", "data_limited",
-        "raw waterfalls present, but a single burst tail spans only ~1 decade in ln(t) "
-        f"(~0.9 comb periods << the {MIN_COMB_PERIODS} needed) and is scattering-dominated -> "
-        "RANGE-BLIND by construction; stacking many tails raises amplitude, not ln-range. "
-        "(If the PSRFITS reader is unavailable the channel reports this analytic limit.)")
+    per: list[dict] = []
+    curves: list[tuple[np.ndarray, np.ndarray]] = []
+    for fpath in files:
+        rd = _read_frb_profile(fpath)
+        if rd is None:
+            continue
+        dt, prof, src = rd
+        tl = _frb_tail(dt, prof)
+        if tl is None:
+            continue
+        tau, rec = tl
+        res = run_comb(tau, rec)
+        res["source"] = fpath.stem
+        res["frb"] = src or "?"
+        per.append(res)
+        if res["range_sufficient"]:
+            curves.append((tau, rec))
+
+    if not per:
+        return Channel(
+            "A3", "FRB burst tail (stacked)", "horizon-residual", "data_limited",
+            "no readable raw waterfall in frb-tfpt-signatures/new-data/*.calibP (or the PSRFITS "
+            "reader/astropy is unavailable). A single ms-scale FRB tail spans ~1 decade in ln(t) and "
+            f"is scattering-dominated; the stack needs several bright bursts each clearing the "
+            f"{MIN_COMB_PERIODS}-period ln-range gate (stacking raises amplitude, not ln-range).")
+
+    by_src = Counter(p["frb"] for p in per)  # raw SRC_NAME; FAST 'J2000-1234' = FRB 20121102A campaign
+    stack = stacked_comb_test(curves) if curves else None
+    head = (f"REAL data: {len(per)} bright FRB burst waterfall(s) across {len(by_src)} repeater(s) "
+            f"[{', '.join(f'{s}x{n}' for s, n in by_src.items())}]; {len(curves)} clear the "
+            f"ln-range gate (>= {MIN_COMB_PERIODS} comb periods). ")
+    detail = "; ".join(
+        f"{p['source']} (periods={p['comb_periods']}, p={p['p_value']}"
+        + ("" if p["range_sufficient"] else ", <gate: range-blind, EXCLUDED") + ")"
+        for p in per)
+    if stack and stack["n_used"]:
+        tnote = (f". STACKED over {stack['n_used']} burst tails: kernel omega={OMEGA:.2f} is "
+                 + (f"SPECIAL (p={stack['p_value']}) -> ESCALATE (independent cross-check first)"
+                    if stack["comb_detected"]
+                    else f"NOT special (p={stack['p_value']}) -> clean NULL")
+                 + " (horizon-residual, but FRB tails are scattering/noise-dominated and the comb is "
+                   "an intrinsic ~2% effect -> a weak constraint, not a horizon detection).")
+    else:
+        tnote = ". No burst tail clears the ln-range gate -> RANGE-LIMITED."
+    agg = {
+        "n_points": int(sum(p["n_points"] for p in per)),
+        "comb_periods": max(p["comb_periods"] for p in per),
+        "range_sufficient": bool(curves),
+        "gain": (stack or {}).get("gain", 0.0),
+        "p_value": (stack or {}).get("p_value", 1.0),
+        "comb_detected": bool(stack and stack["comb_detected"]),
+        "omega": OMEGA,
+        "n_sources": len(per),
+        "n_stacked": (stack or {}).get("n_used", 0),
+        "per_source": per,
+    }
+    return Channel("A3", "FRB burst tail (stacked)", "horizon-residual", "real",
+                   head + detail + tnote, agg)
 
 
 # --------------------------------------------------------------------------- B4 BEC analog horizon
