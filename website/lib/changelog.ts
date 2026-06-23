@@ -42,6 +42,647 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-06-23",
+    "dateLabel": "2026-06-23",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the two frontier walls attacked directly: Direction A assembles the continuum chain of "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.EQUIV.01"
+      },
+      {
+        "k": "t",
+        "v": " theorem-by-theorem and ties its residual to the seam one-sidedness; Direction B was found ALREADY closed by "
+      },
+      {
+        "k": "c",
+        "v": "v40"
+      },
+      {
+        "k": "t",
+        "v": " (harmonic metric "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " finite linear algebra, not a PDE): "
+      },
+      {
+        "k": "c",
+        "v": "v356"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v356"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EQUIV.CONTINUUM.03"
+            },
+            {
+              "k": "t",
+              "v": ") — Direction A, the continuum chain assembled."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " After the reverse-audit/bandwidth work showed no hidden "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "discrete"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " lever remains, the only fundamental progress is to assemble the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "continuum"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " chain. Link-by-link: "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "S1"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the gapped ("
+        },
+        {
+          "k": "m",
+          "v": "\\Delta{=}6\\ln(3/2){>}0"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v302"
+        },
+        {
+          "k": "t",
+          "v": ") quasi-free "
+        },
+        {
+          "k": "m",
+          "v": "16"
+        },
+        {
+          "k": "t",
+          "v": "-Majorana collar ("
+        },
+        {
+          "k": "c",
+          "v": "v155"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v160"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "S2"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " invertible (gapped free fermions have no intrinsic topological order, Kitaev, "
+        },
+        {
+          "k": "c",
+          "v": "v301"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "S3"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "nontrivial"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " invertible phase ("
+        },
+        {
+          "k": "m",
+          "v": "c_-{=}8{\\neq}0"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "S4"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "non-gappable"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " anomalous chiral edge (anomaly inflow / bulk–edge), so edge "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "existence"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " is a CONSEQUENCE of S2"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": "S3, not a separate assumption — this directly reduces the "
+        },
+        {
+          "k": "c",
+          "v": "v336"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v351"
+        },
+        {
+          "k": "t",
+          "v": " “does the collar have a chiral edge?” residual "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "S5"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " its chiral-CFT scaling limit (MMST, "
+        },
+        {
+          "k": "c",
+          "v": "v336"
+        },
+        {
+          "k": "t",
+          "v": "; range "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{rank}\\le c\\le D"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "8\\le8\\le16"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "S6"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the order-"
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " clock "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the AQFT stack pin "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v351"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v297"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the only non-theorem link is S3, and "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "S3 is the seam being "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one-sided"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (chiral, "
+        },
+        {
+          "k": "m",
+          "v": "c_-{\\neq}0"
+        },
+        {
+          "k": "t",
+          "v": ") — the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "same"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " one-sidedness that makes "
+        },
+        {
+          "k": "m",
+          "v": "\\cthree{=}1/(8\\pi)"
+        },
+        {
+          "k": "t",
+          "v": " a one-sided Gauss–Bonnet ("
+        },
+        {
+          "k": "m",
+          "v": "|\\Z_2|\\oint K"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v58"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the one remaining input is “the abstract collar is realized as a genuine lattice chiral free-fermion invertible phase” (the "
+        },
+        {
+          "k": "c",
+          "v": "v297"
+        },
+        {
+          "k": "t",
+          "v": " Flat-Away). NET: "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " reduced to ONE realization input tied to the constant that "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "defines"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the theory; it ADVANCES, it does not close."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Direction B — found ALREADY closed by "
+            },
+            {
+              "k": "c",
+              "v": "v40"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The U-wall “transcendental Hitchin solve” ("
+        },
+        {
+          "k": "c",
+          "v": "v31"
+        },
+        {
+          "k": "t",
+          "v": ") is the worst case for a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "generic"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Higgs bundle; but at the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "polystable"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " point TFPT selects, Mehta–Seshadri makes the bundle "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "unitary"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", so the harmonic metric is the constant invariant Hermitian form ("
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "finite linear algebra"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", Higgs "
+        },
+        {
+          "k": "m",
+          "v": "\\Phi{=}0"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "m",
+          "v": "\\det R{=}8"
+        },
+        {
+          "k": "t",
+          "v": " is read off — not a PDE. Only the absolute amplitude "
+        },
+        {
+          "k": "m",
+          "v": "U_{\\mathrm{point}}"
+        },
+        {
+          "k": "t",
+          "v": " (an anchor) remains. A redundant new B module was built, found to duplicate/contradict "
+        },
+        {
+          "k": "c",
+          "v": "v40"
+        },
+        {
+          "k": "t",
+          "v": ", and "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "deleted"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (no padding). Honest outcome: B needs no new work."
+        }
+      ]
+    ]
+  },
+  {
     "date": "2026-06-22",
     "dateLabel": "2026-06-22",
     "heading": [
