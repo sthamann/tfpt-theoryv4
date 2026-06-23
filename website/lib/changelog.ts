@@ -418,6 +418,295 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "Track 2 — perturbative graviton unitarity sector-by-sector: the Barnes–Rivers spin decomposition localises the Stelle ghost in the spin-2 sector, cured by the entire KMS form factor; the spin-0 mode by the GHP contour ("
+      },
+      {
+        "k": "c",
+        "v": "v370"
+      },
+      {
+        "k": "t",
+        "v": ")"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v370"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "GRAV.SPIN2.UNITARITY.01"
+            },
+            {
+              "k": "t",
+              "v": ") — Track 2."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Extends "
+        },
+        {
+          "k": "c",
+          "v": "v304"
+        },
+        {
+          "k": "t",
+          "v": " (the scalar "
+        },
+        {
+          "k": "m",
+          "v": "1/(p^2(p^2{+}M^2))"
+        },
+        {
+          "k": "t",
+          "v": " pole algebra) to the actual tensor spin structure. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the Barnes–Rivers projectors are complete ("
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{tr}P_2{=}(d{-}2)(d{+}1)/2"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{tr}P_1{=}d{-}1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{tr}P_{0s}{=}\\operatorname{tr}P_{0w}{=}1"
+        },
+        {
+          "k": "t",
+          "v": " sum to "
+        },
+        {
+          "k": "m",
+          "v": "d(d{+}1)/2"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "d{=}4"
+        },
+        {
+          "k": "t",
+          "v": " split "
+        },
+        {
+          "k": "m",
+          "v": "5{+}3{+}1{+}1{=}10"
+        },
+        {
+          "k": "t",
+          "v": "), the EH propagator is "
+        },
+        {
+          "k": "m",
+          "v": "P_2/p^2-\\tfrac1{d-2}P_{0s}/p^2"
+        },
+        {
+          "k": "t",
+          "v": ", and the Stelle ghost is a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "spin-2"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " state. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the entire KMS form factor "
+        },
+        {
+          "k": "m",
+          "v": "e^{p^2/M^2}"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v304"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v259"
+        },
+        {
+          "k": "t",
+          "v": ") makes the spin-2 sector ghost-free; "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the wrong-sign spin-0 conformal mode ("
+        },
+        {
+          "k": "c",
+          "v": "v332"
+        },
+        {
+          "k": "t",
+          "v": ") is cured separately by the GHP contour ("
+        },
+        {
+          "k": "c",
+          "v": "v334"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "so the full "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "perturbative"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " graviton is ghost-free sector-by-sector (conditional on "
+        },
+        {
+          "k": "c",
+          "v": "v304"
+        },
+        {
+          "k": "t",
+          "v": "'s entire-analyticity assumption). "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "residual: perturbative-only "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the open analyticity assumption; not the non-perturbative measure. "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "DECLINE: "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{tr}P_2{=}5"
+        },
+        {
+          "k": "t",
+          "v": " is dimension counting, not "
+        },
+        {
+          "k": "m",
+          "v": "\\gcar"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v354"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v355"
+        },
+        {
+          "k": "t",
+          "v": "). Cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_5_redteam"
+        },
+        {
+          "k": "t",
+          "v": " (Target F); Python-only."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-23",
+    "dateLabel": "2026-06-23",
+    "heading": [
+      {
+        "k": "t",
         "v": "Directions 3 & 7 — the two hard functional-analysis residuals ADVANCED: the QG measure as one-loop fluctuations around the parameter-free saddle ("
       },
       {
