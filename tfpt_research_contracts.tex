@@ -806,6 +806,18 @@ target to $(E_8)_1$ ($\det K{=}1$, one primary) over the same-$c$ rival $SO(16)_
 \mE\ the class arithmetic, the derived gap, the chirality and the $(E_8)_1$ pinning; \mC\ the CAR-class typing and
 the cited MMST theorem; \mO\ the lone residual is exactly S3 above (the lattice realization). The continuum side
 of \texttt{SEAM.EQUIV.01} is thereby reduced to a single, named, theorem-bounded input.
+\par\smallskip\noindent\textbf{S3 made concrete: an explicit gapped chiral-Majorana lattice model
+(\veri{v367\_seam\_s3\_lattice.py}, \veri{v368\_seam\_s3\_inflow.py}).} The S3 input is no longer
+abstract. The $p{+}ip$ Bloch model $h(k){=}\sin k_x\,\sigma_x{+}\sin k_y\,\sigma_y{+}(M{-}\cos k_x{-}\cos
+k_y)\sigma_z$ is, at $M{=}1$, a gapped free-fermion phase with numerically-computed Chern number $|C|{=}1$
+($C{=}0$ trivially at $M{=}3$), so $N_{\mathrm{Maj}}{=}\dim S^+{=}16$ copies give a chiral edge of
+$c_-{=}16/2{=}8{=}\gcar{+}\Nfam$, with the edge K-matrix $SO(16)_1$ ($\det 4$) condensed to $(E_8)_1$
+($\det 1$) by the order-4 $\mu_4$ clock (\vref{v351}/\vref{v369}). A finite STRIP of the same model carries
+an edge-localised in-gap chiral branch (absent in the trivial phase) -- so by anomaly inflow the chiral edge
+\emph{exists} as a consequence of the invertible bulk (the S4 leg), discharging the ``does the edge exist?''
+question on the lattice. \mE\ the gapped Chern model, the $c_-{=}8$ counting and the edge existence; \mC\ the
+$\mu_4$ condensation to $(E_8)_1$; \mO\ the genuine \emph{continuum scaling limit} (MMST, \vref{v336}) stays
+open --- S3 is now a runnable lattice model, reduced not closed.
 \par\smallskip\noindent\textbf{TOE-roadmap follow-ups --- the keystone as a typed certificate, the bedrock
 modular form, and the gap-decoupled measure (\veri{v308\_seam\_equiv\_chain.py}, \veri{v309\_modular\_bedrock.py},
 \veri{v311\_gap\_decoupled\_measure.py}).} Three machine-checked steps push the keystone arc further.

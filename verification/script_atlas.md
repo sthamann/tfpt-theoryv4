@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`363` registered scripts · `421` ledger claims · `10` clusters.
+`365` registered scripts · `423` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (34 scripts)
+### `core` — Compiler core & the E₈ glue  (36 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -79,6 +79,10 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: QG.AMB.01, v358, v359, v76, v337, v330, v334, v364 · cited: research contracts
 - **v366_mmst_seam_collar** [E/C/O] `SEAM.MMST.INCLASS.01` — Direction 7: the seam collar is IN MMST's free-lattice-fermion scaling-limit class, so the chiral scaling limit is a chiral CFT of central charge 8 pinned to (E8)_1 -- reducing SEA
   - deps: v286_seam_equivalence_contract, v336, v356, v351, v302, v155, v160, v297 · cited: research contracts
+- **v367_seam_s3_lattice** [E/C/O] `SEAM.S3.LATTICE.01` — Track 1: the EXPLICIT lattice realisation of the S3 input -- a concrete gapped chiral-Majorana (p+ip) lattice model whose edge is the 16-Majorana SO(16)_1 carrier, mu4-condensed to
+  - deps: v286_seam_equivalence_contract, v356, v366, v351, v369, v301, v302, v154 · cited: research contracts
+- **v368_seam_s3_inflow** [E/C/O] `SEAM.S3.INFLOW.01` — Track 1: the bulk-edge / anomaly-inflow leg (S4 of the v356 chain) made CONCRETE on the v367 lattice model -- a finite STRIP of the gapped p+ip model has a realised, non-gappable c
+  - deps: v286_seam_equivalence_contract, v367, v356, v336, v351, v301 · cited: research contracts
 
 ### `em` — Electromagnetic fixed point  (4 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -790,14 +794,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `v76`×16, `E8.GLU.01`×15, `v56`×15, `HOR.NARIAI.01`×15, `SEAM.EQUIV.01`×14, `QG.AMB.01`×12, `v216`×12, `REG.FREEZE.01`×12, `AX.P1.01`×11, `QGEO.SUBPRIN.01`×11, `FLAV.KQ.01`×10, `QGEO.PILLOW.01`×10, `v3`×9, `v54`×9
+**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `v76`×16, `SEAM.EQUIV.01`×16, `E8.GLU.01`×15, `v56`×15, `HOR.NARIAI.01`×15, `QG.AMB.01`×12, `v216`×12, `REG.FREEZE.01`×12, `AX.P1.01`×11, `QGEO.SUBPRIN.01`×11, `FLAV.KQ.01`×10, `QGEO.PILLOW.01`×10, `v3`×9, `v54`×9
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v354_e8_reverse_audit** — `E8.REVERSE.AUDIT.01`
-- **v355_e8_unmapped_bandwidth** — `E8.UNMAPPED.BANDWIDTH.01`
 - **v356_continuum_mmst_applicability** — `SEAM.EQUIV.CONTINUUM.03`
 - **v358_grav_entropy_equilibrium** — `GRAV.ENTROPY.EQUILIBRIUM.01`
 - **v359_grav_nonlinear_einstein** — `GRAV.NONLINEAR.01`
@@ -806,6 +808,8 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v364_vgeo_sharpen** — `VGEO.SHARPEN.01`
 - **v365_qg_oneloop_saddle** — `QGAMB.SADDLE.01`
 - **v366_mmst_seam_collar** — `SEAM.MMST.INCLASS.01`
+- **v367_seam_s3_lattice** — `SEAM.S3.LATTICE.01`
+- **v368_seam_s3_inflow** — `SEAM.S3.INFLOW.01`
 - **v369_qgamb_redundancy** — `QGAMB.REDUNDANCY.01`
 - **v370_grav_spin2_unitarity** — `GRAV.SPIN2.UNITARITY.01`
 

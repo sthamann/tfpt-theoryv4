@@ -418,6 +418,392 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "Track 1 — the S3 input made CONCRETE: an explicit gapped chiral-Majorana ("
+      },
+      {
+        "k": "m",
+        "v": "p{+}ip"
+      },
+      {
+        "k": "t",
+        "v": ") lattice model with numerical Chern "
+      },
+      {
+        "k": "m",
+        "v": "|C|{=}1"
+      },
+      {
+        "k": "t",
+        "v": " realises the "
+      },
+      {
+        "k": "m",
+        "v": "c_-{=}8"
+      },
+      {
+        "k": "t",
+        "v": " edge ("
+      },
+      {
+        "k": "c",
+        "v": "v367"
+      },
+      {
+        "k": "t",
+        "v": "), and a strip shows the chiral edge exists by anomaly inflow ("
+      },
+      {
+        "k": "c",
+        "v": "v368"
+      },
+      {
+        "k": "t",
+        "v": ")"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v367"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.S3.LATTICE.01"
+            },
+            {
+              "k": "t",
+              "v": ") — Track 1."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The abstract S3 residual of "
+        },
+        {
+          "k": "c",
+          "v": "v356"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v366"
+        },
+        {
+          "k": "t",
+          "v": " (“the collar realised as a genuine lattice chiral free-fermion invertible phase”) is turned into a RUNNABLE model. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the "
+        },
+        {
+          "k": "m",
+          "v": "p{+}ip"
+        },
+        {
+          "k": "t",
+          "v": " Bloch model is gapped at "
+        },
+        {
+          "k": "m",
+          "v": "M{=}1"
+        },
+        {
+          "k": "t",
+          "v": " with a numerically computed Fukui–Hatsugai–Suzuki Chern number "
+        },
+        {
+          "k": "m",
+          "v": "|C|{=}1"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "C{=}0"
+        },
+        {
+          "k": "t",
+          "v": " trivially at "
+        },
+        {
+          "k": "m",
+          "v": "M{=}3"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "N_{\\mathrm{Maj}}{=}\\dim S^+{=}16"
+        },
+        {
+          "k": "t",
+          "v": " copies give "
+        },
+        {
+          "k": "m",
+          "v": "c_-{=}16/2{=}8{=}\\gcar{+}\\Nfam"
+        },
+        {
+          "k": "t",
+          "v": ", with the edge K-matrix "
+        },
+        {
+          "k": "m",
+          "v": "SO(16)_1"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\det 4"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "\\to(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\det 1"
+        },
+        {
+          "k": "t",
+          "v": ") by the order-4 "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " clock ("
+        },
+        {
+          "k": "c",
+          "v": "v351"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v369"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " condensation ("
+        },
+        {
+          "k": "c",
+          "v": "v154"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v351"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the continuum scaling-limit existence (MMST, "
+        },
+        {
+          "k": "c",
+          "v": "v336"
+        },
+        {
+          "k": "t",
+          "v": ") stays open. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": "; Python (numpy + sympy)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v368"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.S3.INFLOW.01"
+            },
+            {
+              "k": "t",
+              "v": ") — Track 1."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The bulk-edge / anomaly-inflow leg (S4) made concrete on the "
+        },
+        {
+          "k": "c",
+          "v": "v367"
+        },
+        {
+          "k": "t",
+          "v": " model: "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "a finite strip has an edge-localised in-gap chiral branch ("
+        },
+        {
+          "k": "m",
+          "v": "\\min_{k_x}|E|\\sim0"
+        },
+        {
+          "k": "t",
+          "v": ") in the topological phase and a clean gap in the trivial phase (neg control); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": " bulk-edge correspondence gives one chiral Majorana per edge ("
+        },
+        {
+          "k": "m",
+          "v": "c_-{=}8"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "so by anomaly inflow the chiral edge EXISTS as a consequence of the invertible bulk, discharging the "
+        },
+        {
+          "k": "c",
+          "v": "v336"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v351"
+        },
+        {
+          "k": "t",
+          "v": " “does the edge exist?” residual on the lattice. "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the continuum scaling limit stays open. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": "; Python (numpy)."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-23",
+    "dateLabel": "2026-06-23",
+    "heading": [
+      {
+        "k": "t",
         "v": "Track 2 — perturbative graviton unitarity sector-by-sector: the Barnes–Rivers spin decomposition localises the Stelle ghost in the spin-2 sector, cured by the entire KMS form factor; the spin-0 mode by the GHP contour ("
       },
       {
