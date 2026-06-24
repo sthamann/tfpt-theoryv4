@@ -524,6 +524,7 @@ const NODES: DagNode[] = [
       "v387_corrections_gap.py",
       "v388_corrections_budget.py",
       "v390_prime2_facet.py",
+      "v393_corrections_numeric.py",
     ],
   },
 ];

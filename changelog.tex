@@ -59,6 +59,22 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-24 (Correction error-bars: \texttt{v393} the typed budget as actual first-correction magnitudes)}
+\begin{itemize}
+\item \textbf{\texttt{v393} (\texttt{CORRECTIONS.NUMERIC.01}) --- the typed correction budget (\vref{v388}) as actual
+numbers.} The short-term, testable harvest of \vref{v388}: instead of merely typing each prediction's correction, this
+gives the magnitude, so a parameter-free central value can be quoted as ``value $\pm$ computed first correction''.
+\mE\ FIXED-POINT band (the $\varphi_0$-derived $\theta_{12},\theta_{13},\lambda_C,\beta_{\mathrm{rad}}$) $=$ the explicit
+$\varphi_0$ puncture term $36c_3^4/c_3 = 9/(128\pi^3)\approx0.227\%$ (exact; $=\theta_{12}$'s $\varepsilon$
+first-correction, $\varepsilon=(3/4)\varphi_0=c_3+36c_3^4$); \mE\ SEAM-GAPPED band (Koide $F_{\mathrm{pole}}$, recovery)
+$=(2/3)^6\approx8.78\%$, the QG-decoupling bound capped by $\chi-1=64/665\approx9.62\%$ (\vref{v337}); \mE\
+EXACT-IDENTITY band $=0$ structurally ($\det R=8$, $N_\Phi=1$, $\theta_{\mathrm{eff}}=0$); \mE\ EXTERNAL-RATE band $=$
+external physics, quoted ($m_p/m_e\,{\pm}7.5\%$ \vref{v374}; $n_s/r$ the $N_\star{\in}[50,60]$ band; $\eta_B\,1.07\times$
+\vref{v212}), fenced by \vref{v187}. \mC\ the assembled budget gives each prediction a computed theoretical-uncertainty
+band. Cited in \texttt{origin\_theory}, mirrored on the website prediction surface; a harvest of \vref{v388}, no new
+number; Python-only.
+\end{itemize}
+
 \subsection*{2026-06-24 (Attacking the last open lemma: \texttt{v392} the scaling-limit central charge \emph{converges})}
 \begin{itemize}
 \item \textbf{\texttt{v392} (\texttt{SEAM.S3.SCALINGLIMIT.01}) --- an honest attack on \texttt{SEAM.EQUIV.01}'s one

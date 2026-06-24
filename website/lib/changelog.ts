@@ -47,6 +47,325 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "Correction error-bars: "
+      },
+      {
+        "k": "c",
+        "v": "v393"
+      },
+      {
+        "k": "t",
+        "v": " the typed budget as actual first-correction magnitudes"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v393"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "CORRECTIONS.NUMERIC.01"
+            },
+            {
+              "k": "t",
+              "v": ") — the typed correction budget ("
+            },
+            {
+              "k": "c",
+              "v": "v388"
+            },
+            {
+              "k": "t",
+              "v": ") as actual numbers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The short-term, testable harvest of "
+        },
+        {
+          "k": "c",
+          "v": "v388"
+        },
+        {
+          "k": "t",
+          "v": ": instead of merely typing each prediction's correction, this gives the magnitude, so a parameter-free central value can be quoted as “value "
+        },
+        {
+          "k": "m",
+          "v": "\\pm"
+        },
+        {
+          "k": "t",
+          "v": " computed first correction”. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "FIXED-POINT band (the "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi_0"
+        },
+        {
+          "k": "t",
+          "v": "-derived "
+        },
+        {
+          "k": "m",
+          "v": "\\theta_{12},\\theta_{13},\\lambda_C,\\beta_{\\mathrm{rad}}"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the explicit "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi_0"
+        },
+        {
+          "k": "t",
+          "v": " puncture term "
+        },
+        {
+          "k": "m",
+          "v": "36c_3^4/c_3 = 9/(128\\pi^3)\\approx0.227\\%"
+        },
+        {
+          "k": "t",
+          "v": " (exact; "
+        },
+        {
+          "k": "m",
+          "v": "=\\theta_{12}"
+        },
+        {
+          "k": "t",
+          "v": "'s "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon"
+        },
+        {
+          "k": "t",
+          "v": " first-correction, "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon=(3/4)\\varphi_0=c_3+36c_3^4"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "SEAM-GAPPED band (Koide "
+        },
+        {
+          "k": "m",
+          "v": "F_{\\mathrm{pole}}"
+        },
+        {
+          "k": "t",
+          "v": ", recovery) "
+        },
+        {
+          "k": "m",
+          "v": "=(2/3)^6\\approx8.78\\%"
+        },
+        {
+          "k": "t",
+          "v": ", the QG-decoupling bound capped by "
+        },
+        {
+          "k": "m",
+          "v": "\\chi-1=64/665\\approx9.62\\%"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v337"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": " EXACT-IDENTITY band "
+        },
+        {
+          "k": "m",
+          "v": "=0"
+        },
+        {
+          "k": "t",
+          "v": " structurally ("
+        },
+        {
+          "k": "m",
+          "v": "\\det R=8"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "N_\\Phi=1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\theta_{\\mathrm{eff}}=0"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "EXTERNAL-RATE band "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " external physics, quoted ("
+        },
+        {
+          "k": "m",
+          "v": "m_p/m_e\\,{\\pm}7.5\\%"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v374"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "n_s/r"
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "N_\\star{\\in}[50,60]"
+        },
+        {
+          "k": "t",
+          "v": " band; "
+        },
+        {
+          "k": "m",
+          "v": "\\eta_B\\,1.07\\times"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v212"
+        },
+        {
+          "k": "t",
+          "v": "), fenced by "
+        },
+        {
+          "k": "c",
+          "v": "v187"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the assembled budget gives each prediction a computed theoretical-uncertainty band. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": ", mirrored on the website prediction surface; a harvest of "
+        },
+        {
+          "k": "c",
+          "v": "v388"
+        },
+        {
+          "k": "t",
+          "v": ", no new number; Python-only."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-24",
+    "dateLabel": "2026-06-24",
+    "heading": [
+      {
+        "k": "t",
         "v": "Attacking the last open lemma: "
       },
       {

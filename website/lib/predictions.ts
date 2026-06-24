@@ -973,6 +973,10 @@ export const predictions: Prediction[] = [
  * prediction: the size is the distance from a gapped operator's leading eigenvector, so it is
  * defined only where a subleading λ₂ exists. Each prediction is therefore one of four classes
  * — and for the "exact identity" class a band would be *wrong* (it would contradict [E]).
+ *
+ * The `band` strings are the actual computed first-correction magnitudes (mirror of v393
+ * CORRECTIONS.NUMERIC.01): fixed-point 0.227% (the φ₀ puncture 9/(128π³)), seam-gapped 8.78%
+ * = (2/3)⁶ (QG capped at 9.62% = 64/665), exact-identity 0, external-rate quoted external.
  */
 export type CorrectionClass =
   | "seam-gapped"
@@ -986,8 +990,8 @@ export const CORRECTION_CLASS_META: Record<
 > = {
   "seam-gapped": {
     label: "Seam-gapped",
-    band: "(2/3)⁶ ≈ 0.088 (golden (φ+2)/4 for the compiler)",
-    note: "Carries the seam rate λ₂ = (2/3)⁶ (Koide F_pole, recovery, the QG bound), or the compiler's golden (φ+2)/4. The genuine v387 case.",
+    band: "(2/3)⁶ ≈ 8.78% (QG capped at 64/665 ≈ 9.62%)",
+    note: "Carries the seam rate λ₂ = (2/3)⁶ (Koide F_pole, recovery, the QG bound capped by χ−1 = 64/665), or the compiler's golden (φ+2)/4. First-correction magnitude computed in v393.",
     tone: "border-emerald-400/25 bg-emerald-500/5 text-emerald-200",
   },
   "exact-identity": {
@@ -1004,8 +1008,8 @@ export const CORRECTION_CLASS_META: Record<
   },
   "fixed-point": {
     label: "Fixed point",
-    band: "interface / texture already explicit",
-    note: "The value is the exact attractor; the residual is the interface, and where a sub-leading texture exists it is already in the closed form (sin²θ₁₂: ε = c₃ + 36c₃⁴).",
+    band: "≈ 0.227% (the φ₀ puncture 36c₃⁴/c₃ = 9/(128π³))",
+    note: "The value is the exact attractor; the first correction is the explicit φ₀ puncture term already in the closed form (sin²θ₁₂: ε = c₃ + 36c₃⁴), magnitude 9/(128π³) ≈ 0.227% (v393).",
     tone: "border-violet-400/25 bg-violet-500/5 text-violet-200",
   },
 };
