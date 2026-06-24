@@ -931,7 +931,8 @@ def fig_residual_chain():
         ("v286-v288", "SEAM.EQUIV.01 named + attacked", "import firewall (v286); Route A 4/5 (v287); Route B proves full-L2 Z4 lift (v288)", C["green"]),
         ("v289-v297", "Flat-Away: 3 routes reduced", "heat a2 closed+Lean (v292/v295/v296), spectral Hessian PD (v293), Troyanov (v294); Route A citable stack (v297)", C["green"]),
         ("v300-v302", "Closing arc: shared fact pinned", "Flat-Away hard+pin from (E8)_1 Steklov (v300); Route A invertible via free fermions (v301); gap = derived 6ln(3/2)>0 (v302)", C["green"]),
-        ("BEDROCK", "No TFPT-internal assumption left", "SEAM.EQUIV.01 residual = cited theorems (OS/clustering, Kitaev free-fermion, AQFT stack) over established facts; stays [O] (not machine-proved end-to-end)", C["gold"]),
+        ("v335-v379", "Closed modulo cited theorems", "QGEO.SYM.01 = corollary of SEAM.EQUIV.01 (v335); gapped lattice model (v367/v368) + S3 stack (v376-v379), Lean-pinned MMST", C["green"]),
+        ("BEDROCK", "No TFPT-internal assumption left", "SEAM.EQUIV.01 residual = cited continuum scaling-limit existence (v336) over established facts; stays [O] (not machine-proved end-to-end)", C["gold"]),
     ]
     n = len(steps)
     fig, ax = plt.subplots(figsize=(8.2, 6.6))
@@ -1004,10 +1005,12 @@ def fig_script_timeline():
          "both routes reduced to one shared input (Flat-Away), heat a2 proved+Lean (v295/v296)", C["gold"]),
         ("v300-v302", "Closing arc: residual pinned", "Flat-Away hard+pin from (E8)_1 (v300); Route A invertible\n"
          "via free fermions (v301); gap = derived 6ln(3/2)>0 (v302); no TFPT-internal assumption left", C["gold"]),
+        ("v303-v407", "Solvers + parameter-free gravity + closure", "typed F_transfer solvers (Koide/eta_B/m_p-me/axion, v371-v375/v402);\n"
+         "parameter-free Einstein eq. full nonlinear (v359); QG.AMB a [C] redundancy (v369)", C["green"]),
     ]
     fig, ax = plt.subplots(figsize=(7.8, 10.2))
     ax.set_xlim(0, 10); ax.set_ylim(0, len(phases) + 0.4); ax.axis("off")
-    ax.set_title("TFPT verification suite: the journey of ~300 machine-checked scripts",
+    ax.set_title("TFPT verification suite: the journey of ~400 machine-checked scripts",
                  fontsize=10.5, color=C["blue"])
     ax.plot([0.7, 0.7], [0.3, len(phases) + 0.1], color=C["gray"], lw=1.4, zorder=0)
     for i, (rng, head, sub, col) in enumerate(phases):
@@ -1041,14 +1044,14 @@ def fig_qft_skeleton():
         ("v258-v261", "Modular Spectral Closure", "one relative object: $D_F=$cov.\\ induction, cutoff$=$KMS, K3", C["green"]),
         ("v269-v278", "Perturbative $S_{\\mathrm{pert}}$ (EG)", "1-loop quartic + gauge $\\beta=(41/10,-19/6,-7)$; LSZ unitary", C["green"]),
         ("v265", "4D fork (frozen)", "boundary-only default; PS UV branch; SM-only GUT killed", C["gold"]),
-        ("OPEN", "SEAM.EQUIV.01 = seam$=(E_8)_1$ at $\\tau{=}i$", "ONE named theorem (v286); closing arc v300-v302: residual = cited theorems over established facts (no TFPT-internal assumption left), stays [O]", C["red"]),
-        ("OPEN", "QG.AMB.01 nonperturbative", "the $R^2/$Weyl$^2$ gravity $S_{\\mathrm{pert}}$ carries the Stelle ghost (rt_F)", C["red"]),
+        ("v304-v380", "QG: ghost resolved, measure a redundancy", "Stelle ghost = truncation artefact; graviton unitarity [C]; QG.AMB [C] redundancy", C["gold"]),
+        ("OPEN", "SEAM.EQUIV.01 = seam$=(E_8)_1$ at $\\tau{=}i$", "closed modulo cited theorems (v367-v379); residual [O] = cited continuum (v336)", C["red"]),
     ]
     n = len(steps)
     fig, ax = plt.subplots(figsize=(8.0, 6.8))
     ax.set_xlim(0, 10); ax.set_ylim(0, n + 0.5); ax.axis("off")
-    ax.set_title("The emergent-QFT skeleton on the seam (v238-v297):\n"
-                 "each step machine-checked; the two genuinely open items in red",
+    ax.set_title("The emergent-QFT skeleton on the seam (v238-v407):\n"
+                 "each step machine-checked; the one residual cited-continuum item in red",
                  fontsize=10.5, color=C["blue"])
     bw, bh = 8.6, 0.60
     centers = []
@@ -1068,7 +1071,7 @@ def fig_qft_skeleton():
         x0, y0 = centers[i]; x1, y1 = centers[i + 1]
         ax.add_patch(FancyArrowPatch((x0 - 3.2, y0 - bh / 2), (x1 - 3.2, y1 + bh / 2),
                                      arrowstyle="-|>", mutation_scale=10, color=C["gray"], lw=0.9))
-    ax.text(5.0, 0.06, "Conditional on QGEO.SYM.01; nothing here is marked solved or experimentally confirmed.",
+    ax.text(5.0, 0.06, "Residual = the cited continuum scaling-limit existence (v336); nothing here is marked experimentally confirmed.",
             fontsize=6.8, ha="center", va="bottom", style="italic", color=C["gray"])
     fig.tight_layout()
     fig.savefig(os.path.join(OUT, "qft_skeleton.pdf"))

@@ -42,6 +42,13 @@ under-produces at this f_a, so the hilltop enhancement is required).
   matter OVER-produces -- a confirmed tension, not the optimistic 'all-DM'. Stays
   [C]; over-production kills the axion-as-dominant-DM reading (needs dilution or a
   lower f_a), not the compiler.
+
+  ROBUST BRANCH (v211, DM.AXION.SPINE.01): the hilltop theta_i ~ 170 deg is the
+  DISFAVOURED branch; the robust one is the spine quotient theta_i = pi N_fam/g_car
+  = 3pi/5 = 108 deg, which lands Omega_a h^2 on Omega_DM untuned (62 deg below the
+  hilltop, mild-anharmonic). This module retains the hilltop estimate as the honest
+  'why it under-produces harmonically / over-produces on the hilltop' diagnostic;
+  the branch DECISION (spine over hilltop) is v211 / tfpt_4_frontier.
 """
 import math
 

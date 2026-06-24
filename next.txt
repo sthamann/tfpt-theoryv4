@@ -3,6 +3,30 @@
  Stand: 2026-06-08  |  verankert in v81_singular_pencil_matrices.py (11/11), Wolfram 116/116
 ================================================================================
 
+NACHTRAG 2026-06-24 (CROSS-SURFACE-KONSISTENZ-SWEEP -- Papers/Website/Gates/Figures abgeglichen):
+  Vollstaendiger Konsistenz-Durchlauf ueber alle aktiven Surfaces (Sub-Agenten-Suche). Korrekturen:
+  - LEDGER-HYGIENE: doppelte aktive claim_id GATE.UWALL.06-09 aufgeloest. Es war eine ID-Kollision
+    (keine Supersede): die Monodromie-Serie v114-v117 behaelt .06-.09 (von v123_inventory_update.py +
+    run_all.py so verankert), die aeltere Exterior-Leg-Serie v42-v45 wurde auf GATE.UWALL.15-.18
+    umnummeriert (interne depends_on mitgezogen).
+  - WEBSITE: papers.ts "Documents 8"->"9" (Red-Team-Paper fehlte in der Zaehlung); Red-Team-Subtitle +
+    Highlight "Targets A-E"->"A-F" + neue Target-F-Section/Bullet (Abstract nannte F bereits);
+    StatusMatrix.tsx "Doc 7"->"Doc 8" (Research Contracts) + Framing v_geo[O]/G_net[C]/F_transfer[C];
+    objections "Paper 1"->"Doc 1".
+  - PAPERS: Marker angeglichen ohne kanonische Statusaenderung -- tfpt_1 Strong CP \mE->\mE/\mC (given RP),
+    tfpt_1 theta12 "genuinely open"->"conditionally derived"; tfpt_2 A_s \mE->\mE/\mC (M exakt, A_s-Band
+    ueber N_*), Part-II-Abstract "opens the one remaining gap"->"closes the last structural gap";
+    research_contracts QFT4D-Selbstwiderspruch + U_point-Headline (reduziert auf v_geo) bereinigt;
+    origin_theory Klasse C (G_metric/ambient measure = \mC redundancy); introduction (U_wall)->v_geo.
+    Verbotene Altpaper-Refs ersetzt (Papers 1-7, Papers 2/6, Paper-7, Paper-1 -> document-N/neutral;
+    tfpt_3 Cascade-Bridge bleibt regelkonform ausgenommen).
+  - README/verification: Residual-Gates-Tabelle (Alessandro-5.0-Stand) auf v5.3 gebracht.
+  - FIGURES: status_heatmap (ledger-getrieben) + Narrativ-Figuren (script_timeline/residual_chain bis
+    v4xx) regeneriert; manifest FIG-Liste um qft_skeleton/qft_unification ergaenzt.
+  AKTUELLER STAND (zur Einordnung der 2026-06-23-Notiz unten): v359 hat die LOKALE Einstein-Gleichung
+  voll nichtlinear kovariant + parameterfrei geschlossen (nicht nur linearisiert wie bei v358); die
+  Wolfram-Extension steht jetzt bei 303/303 (Basis 116/116). AUDIT OK.
+
 NACHTRAG 2026-06-23 (PARAMETERFREIE GRAVITATION v358 -- die Bruecke zur dynamischen Welt, auf der Gravitations-Seite instanziiert):
   Nach der Bruecken-Analyse (diskret->kontinuierlich = modular-thermodynamisch; Jacobson + Tomita-Takesaki +
   Verschraenkung->Geometrie) wurde die Verschraenkungs-Gleichgewichts-Ableitung (Jacobson 2015 / Faulkner et al.,

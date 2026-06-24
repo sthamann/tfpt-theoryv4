@@ -47,6 +47,1306 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "Two new tracked targets + axion-branch consistency: "
+      },
+      {
+        "k": "c",
+        "v": "v408"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "v409"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v408"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "HYP.PHI0.PUNCTURE.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Names the "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi_0"
+        },
+        {
+          "k": "t",
+          "v": " puncture term "
+        },
+        {
+          "k": "m",
+          "v": "48c_3^4"
+        },
+        {
+          "k": "t",
+          "v": " as the order-"
+        },
+        {
+          "k": "m",
+          "v": "|\\mu_4|{=}4"
+        },
+        {
+          "k": "t",
+          "v": " local boundary heat-kernel (Seeley–DeWitt) contact term of the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " puncture divisor, summed over "
+        },
+        {
+          "k": "m",
+          "v": "\\Omega_{\\mathrm{adm}}{=}\\Nfam\\dim S^+{=}48"
+        },
+        {
+          "k": "t",
+          "v": " admissible states — the analytic complement of the icosahedral tree term ("
+        },
+        {
+          "k": "c",
+          "v": "v396"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the exact split "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi_0{=}1/(6\\pi){+}48c_3^4"
+        },
+        {
+          "k": "t",
+          "v": ", the puncture count, the closed form "
+        },
+        {
+          "k": "m",
+          "v": "3/(256\\pi^4)"
+        },
+        {
+          "k": "t",
+          "v": " and the hypergraph negative (reused from "
+        },
+        {
+          "k": "c",
+          "v": "v396"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "ARCH.QUAD.01"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the from-first-principles heat-kernel proof; "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "a FACE of the seam boundary analysis (the "
+        },
+        {
+          "k": "m",
+          "v": "c_3"
+        },
+        {
+          "k": "t",
+          "v": " Gauss–Bonnet datum), not a new gate. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": "; no new number."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v409"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "RES.COXETER.SYMMETRY.01"
+            },
+            {
+              "k": "t",
+              "v": " closed as a structural lemma)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " prime-"
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": " (the seam sheet involution) is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "necessary"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " but "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not autonomous"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma{=}\\operatorname{diag}(1,-1,-1)"
+        },
+        {
+          "k": "t",
+          "v": " has spectrum "
+        },
+        {
+          "k": "m",
+          "v": "\\{\\pm1\\}"
+        },
+        {
+          "k": "t",
+          "v": " and projector "
+        },
+        {
+          "k": "m",
+          "v": "(I{+}\\sigma)/2"
+        },
+        {
+          "k": "t",
+          "v": " spectrum "
+        },
+        {
+          "k": "m",
+          "v": "\\{0,1\\}"
+        },
+        {
+          "k": "t",
+          "v": ", none in "
+        },
+        {
+          "k": "m",
+          "v": "(0,1)"
+        },
+        {
+          "k": "t",
+          "v": ", so prime-"
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": " carries no contraction rate, whereas the genuine rates "
+        },
+        {
+          "k": "m",
+          "v": "2/3"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "(1/3)^6"
+        },
+        {
+          "k": "t",
+          "v": " lie in "
+        },
+        {
+          "k": "m",
+          "v": "(0,1)"
+        },
+        {
+          "k": "t",
+          "v": " and carry prime-"
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": " only as a factor. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "no prime-"
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": "-only attractor exists; "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "dynamics begins only after coupling to family-"
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": " or carrier-"
+        },
+        {
+          "k": "m",
+          "v": "5"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "|\\mu_4|{=}2^2"
+        },
+        {
+          "k": "t",
+          "v": " the Galois bridge). Resolves the "
+        },
+        {
+          "k": "c",
+          "v": "v394"
+        },
+        {
+          "k": "t",
+          "v": " open question's falsifiable corollary; cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": "; the ledger row "
+        },
+        {
+          "k": "c",
+          "v": "RES.COXETER.SYMMETRY.01"
+        },
+        {
+          "k": "t",
+          "v": " retyped "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Axion branch consistency ("
+            },
+            {
+              "k": "c",
+              "v": "tfpt_4_frontier"
+            },
+            {
+              "k": "t",
+              "v": ", website "
+            },
+            {
+              "k": "c",
+              "v": "predictions.ts"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "c",
+              "v": "v185"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The dark-matter section's opening "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " keybox are realigned with the finite-"
+        },
+        {
+          "k": "m",
+          "v": "T"
+        },
+        {
+          "k": "t",
+          "v": " result already stated later in the same section: the robust dominant-DM branch is the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "spine"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " angle "
+        },
+        {
+          "k": "m",
+          "v": "\\theta_i{=}\\pi\\Nfam/\\gcar{=}3\\pi/5{=}108^\\circ"
+        },
+        {
+          "k": "t",
+          "v": " (untuned, in band), while the seam hilltop "
+        },
+        {
+          "k": "m",
+          "v": "\\theta_i{\\approx}170^\\circ"
+        },
+        {
+          "k": "t",
+          "v": " over-produces ("
+        },
+        {
+          "k": "m",
+          "v": "\\sim5.4\\times"
+        },
+        {
+          "k": "t",
+          "v": ") and is disfavoured; the misalignment angle is retyped from a closed "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "input to a "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "branch decision. The website prediction card now leads with the spine angle."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Verified, no change (Plücker "
+            },
+            {
+              "k": "m",
+              "v": "11"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The quark constant "
+        },
+        {
+          "k": "m",
+          "v": "11{=}\\|Pl(K)\\|_1{=}\\det(\\mathbf1|a|\\sigma)"
+        },
+        {
+          "k": "t",
+          "v": " is already typed honestly as an "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "identity with “why "
+        },
+        {
+          "k": "m",
+          "v": "11"
+        },
+        {
+          "k": "t",
+          "v": "” the lone "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "residue ("
+        },
+        {
+          "k": "c",
+          "v": "v407"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": "); the repo carried no overstatement, so no edit was required."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-24",
+    "dateLabel": "2026-06-24",
+    "heading": [
+      {
+        "k": "t",
+        "v": "Cross-surface consistency sweep: papers, website, gates, figures realigned"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger hygiene."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Resolved a duplicate active "
+        },
+        {
+          "k": "c",
+          "v": "claim_id"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "c",
+          "v": "GATE.UWALL.06--09"
+        },
+        {
+          "k": "t",
+          "v": " was carried by two distinct chains. It is an ID collision (not a supersede): the monodromy/residue chain "
+        },
+        {
+          "k": "c",
+          "v": "v114"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v117"
+        },
+        {
+          "k": "t",
+          "v": " keeps "
+        },
+        {
+          "k": "c",
+          "v": ".06--.09"
+        },
+        {
+          "k": "t",
+          "v": " (as asserted by "
+        },
+        {
+          "k": "c",
+          "v": "v123_inventory_update.py"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "run_all.py"
+        },
+        {
+          "k": "t",
+          "v": "); the older exterior-leg chain "
+        },
+        {
+          "k": "c",
+          "v": "v42"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v45"
+        },
+        {
+          "k": "t",
+          "v": " is renumbered to "
+        },
+        {
+          "k": "c",
+          "v": "GATE.UWALL.15--.18"
+        },
+        {
+          "k": "t",
+          "v": " (internal "
+        },
+        {
+          "k": "c",
+          "v": "depends_on"
+        },
+        {
+          "k": "t",
+          "v": " carried along). No claim content changed."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "papers.ts"
+        },
+        {
+          "k": "t",
+          "v": " document count "
+        },
+        {
+          "k": "m",
+          "v": "8\\to9"
+        },
+        {
+          "k": "t",
+          "v": " (the Red-Team paper was missing from the tally); Red-Team subtitle/highlight "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Targets A–E"
+            }
+          ]
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "A–F"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " with a new Target F section "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " contribution bullet (the abstract already carried F); "
+        },
+        {
+          "k": "c",
+          "v": "StatusMatrix.tsx"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Doc 7"
+            }
+          ]
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Doc 8"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " for the research contracts and the residual interfaces re-typed "
+        },
+        {
+          "k": "m",
+          "v": "v_{\\mathrm{geo}}"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "G_{\\mathrm{net}}"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "F_{\\mathrm{transfer}}"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "objections"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Paper 1"
+            }
+          ]
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Doc 1"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers (marker/wording alignment, no canonical status change)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": " Strong CP "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "(given RP) and "
+        },
+        {
+          "k": "m",
+          "v": "\\theta_{12}"
+        },
+        {
+          "k": "t",
+          "v": " “genuinely open”"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": "“conditionally derived”; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": " Starobinsky "
+        },
+        {
+          "k": "m",
+          "v": "A_s"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "("
+        },
+        {
+          "k": "m",
+          "v": "M"
+        },
+        {
+          "k": "t",
+          "v": " exact, "
+        },
+        {
+          "k": "m",
+          "v": "A_s"
+        },
+        {
+          "k": "t",
+          "v": " a band over "
+        },
+        {
+          "k": "m",
+          "v": "N_\\star\\in[50,60]"
+        },
+        {
+          "k": "t",
+          "v": ") and the Part-II abstract “opens the one remaining gap”"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": "“closes the last structural gap”; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " the QFT4D “nonperturbative measure stays open” line and the “only "
+        },
+        {
+          "k": "m",
+          "v": "U_{\\mathrm{point}}"
+        },
+        {
+          "k": "t",
+          "v": " stays open” headline reconciled with the "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "redundancy / "
+        },
+        {
+          "k": "m",
+          "v": "v_{\\mathrm{geo}}"
+        },
+        {
+          "k": "t",
+          "v": " reduction stated alongside; "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": " class C re-typed to the ambient-measure "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "redundancy; "
+        },
+        {
+          "k": "c",
+          "v": "introduction"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "(U_{\\mathrm{wall}})\\to v_{\\mathrm{geo}}"
+        },
+        {
+          "k": "t",
+          "v": ". Forbidden old-paper attributions (“Papers 1–7”, “Papers 2/6”, “Paper-7”, “Paper-1”) replaced by current document / neutral wording (the "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " cascade bridge stays exempt)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Suite README."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The residual-gates table (Alessandro-5.0 vintage) brought to the current model ("
+        },
+        {
+          "k": "m",
+          "v": "v_{\\mathrm{geo}}"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "G_{\\mathrm{net}}"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "F_{\\mathrm{transfer}}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "N_\\star"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "QG.AMB.01"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "; Wolfram "
+        },
+        {
+          "k": "m",
+          "v": "116/116+303/303"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Figures."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Regenerated "
+        },
+        {
+          "k": "c",
+          "v": "status_heatmap"
+        },
+        {
+          "k": "t",
+          "v": " (ledger-driven) and extended the narrative figures "
+        },
+        {
+          "k": "c",
+          "v": "script_timeline"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "residual_chain"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "qft_skeleton"
+        },
+        {
+          "k": "t",
+          "v": " through the "
+        },
+        {
+          "k": "c",
+          "v": "v303"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v407"
+        },
+        {
+          "k": "t",
+          "v": " arc (typed solvers, parameter-free local Einstein equation "
+        },
+        {
+          "k": "c",
+          "v": "v359"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "QG.AMB.01"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "redundancy, seam closed modulo cited theorems); the "
+        },
+        {
+          "k": "c",
+          "v": "qft_skeleton"
+        },
+        {
+          "k": "t",
+          "v": " “Stelle ghost” open box is retyped (resolved truncation artefact). Added "
+        },
+        {
+          "k": "c",
+          "v": "qft_skeleton"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "qft_unification"
+        },
+        {
+          "k": "t",
+          "v": " to the manifest figure list."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-24",
+    "dateLabel": "2026-06-24",
+    "heading": [
+      {
+        "k": "t",
         "v": "The "
       },
       {

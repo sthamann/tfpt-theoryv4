@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`402` registered scripts · `463` ledger claims · `10` clusters.
+`404` registered scripts · `464` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -149,14 +149,14 @@ _The φ₀-ladder mass formula, the exact lepton coefficients, and the integer-P
   - deps: delta=1/2 (distinguished), hexagon resolvent, g_car,N_fam,mu4 · cited: introduction, 1 architecture e8, 2 standard model
 - **v24_quark_ratio_closure** [-] `(no ledger claim)` — quark ratios 55/117, 34/47, 3/26 (match < 0.03%)
   - cited: 2 standard model
-- **v42_exterior_leg** [E/C] `GATE.UWALL.06` — Exterior Leg Lemma: c_u/c_d = 55/117 from the Λ²F area
-  - deps: v40_harmonic_metric, v41_leg_assignment, v51_boundary_half_step, v20, v30, v33 · cited: 2 standard model, research contracts
-- **v43_exterior_bridge** [E/C] `GATE.UWALL.07` — Λ²F bridge: exterior leg = 𝟑̄; discrete H2 invariant
-  - deps: v42_exterior_leg, v40_harmonic_metric, v33, v40, v29_research_contract_certs.py;v30_d4_character_variety.py;v31_R_dictionary.py;v32_rh_splitting · cited: research contracts
-- **v44_carrier_exterior** [E/C] `GATE.UWALL.08` — Lie grounding: 16 = Λ^even(5) = 1 + 10 + 5
-  - deps: v43_exterior_bridge, v42_exterior_leg, v19, v30, v29_research_contract_certs.py;v30_d4_character_variety.py;v31_R_dictionary.py;v32_rh_splitting · cited: 1 architecture e8, research contracts
-- **v45_family_exterior** [E/C] `GATE.UWALL.09` — the “11” is Pascal: ‖Pl(K)‖₁ = 11 = 16 − g_car
-  - deps: v44_carrier_exterior, v43_exterior_bridge, v42_exterior_leg, E8.GLU.01 (A3 factor), v29_research_contract_certs.py;v30_d4_character_variety.py;v31_R_dictionary.py;v32_rh_splitting · cited: 1 architecture e8, research contracts
+- **v42_exterior_leg** [E/C] `GATE.UWALL.15` — Exterior Leg Lemma: c_u/c_d = 55/117 from the Λ²F area
+  - deps: v41_leg_assignment, v37_plucker_anchor, v37 · cited: 2 standard model, research contracts
+- **v43_exterior_bridge** [E] `GATE.UWALL.16` — Λ²F bridge: exterior leg = 𝟑̄; discrete H2 invariant
+  - deps: v42_exterior_leg, v39, v40 · cited: research contracts
+- **v44_carrier_exterior** [E/C] `GATE.UWALL.17` — Lie grounding: 16 = Λ^even(5) = 1 + 10 + 5
+  - deps: v42_exterior_leg, v2_carrier_pascal, SU(5)<SO(10) · cited: 1 architecture e8, research contracts
+- **v45_family_exterior** [E] `GATE.UWALL.18` — the “11” is Pascal: ‖Pl(K)‖₁ = 11 = 16 − g_car
+  - deps: v44_carrier_exterior, v37, v42, v44 · cited: 1 architecture e8, research contracts
 - **v46_grand_mass_volume** [E] `FLAV.MASSVOL.01` — absolute scaling: det M_SM ∼ (φ₀)^25 = (φ₀)^(g_car²)
   - deps: v10_projection_involution.py;v11_unique_KQ.py;v12_mass_generation_polynomials, v24_quark_ratio_closure.py;v26_flavor_frontier_unification · cited: introduction, 1 architecture e8, 2 standard model
 - **v49_readout_rigidity** [E/O] `FLAV.RIGID.01` — Readout Rigidity: c_u/c_d = 55/117 constant on the stratum
@@ -276,7 +276,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v407_dn_pairings_omega** [E/C/O] `FLAV.SELECTOR.CLOSE.01` — FLAV.SELECTOR.CLOSE.01: the R4' residue folds into the tau=omega keystone (v405) -- the three (d,n) selector pairings ARE the tau=omega family-slice atoms. [E] the frame (1,a,sigma
   - deps: v405_seam_equiv_omega, v49_readout_rigidity, v405, v139, v136, v42 · cited: origin theory, 1 architecture e8
 
-### `frontier` — Open gate (G_metric) & the frontier  (116 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (118 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -396,7 +396,7 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
 - **v301_route_a_invertible** [E/C/O] `SEAM.EQUIV.A.INV.01` — discharge Route A's single open hypothesis (v297 LIT-A: 'the raw quasi-free seam bulk is invertible/SRE') via the free-fermion classification. Since v300 collapsed Route B into Rou
   - deps: v297_route_a_literature_stack, v300_flataway_rigid, v277_seam_calderon_e8_match, v286_seam_equivalence_contract · cited: research contracts
 - **v302_seam_gap** [E/C/O] `SEAM.EQUIV.GAP.01` — the LAST lever: after v300/v301 the whole open content of SEAM.EQUIV.01 was 'the quasi-free seam bulk is gapped'; this shows that gap is NOT a free input but the established RECOVE
-  - deps: v301_route_a_invertible, v43_exterior_bridge, v123_inventory_update, v286_seam_equivalence_contract · cited: research contracts
+  - deps: v301_route_a_invertible, v115_anchor_residue, v123_inventory_update, v286_seam_equivalence_contract · cited: research contracts
 - **v303_ftransfer_dynamics** [E/C/O] `FR.DYNAMICS.01` — the discrete->dynamic lens on F_transfer: is the main-branch mechanism (a gapped, positivity-preserving relaxation to a UNIQUE attractor; local-averaging update -> E8 marks, gap 6 
   - deps: v213_ftransfer_functor, v82_koide_attractor_splitting, v56_unique_attractor, v302_seam_gap · cited: research contracts
 - **v304_idg_nonlocal_ghost** [E/C/O] `QGAMB.IDG.01` — the KMS spectral-action cutoff suggests a NONLOCAL (infinite-derivative) graviton form factor; under entire analyticity the Stelle ghost is a TRUNCATION ARTEFACT — a CONDITIONAL na
@@ -489,8 +489,8 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v220, v282, v288, v314, v333, v383, v387 · cited: origin theory
 - **v393_corrections_numeric** [E/C] `CORRECTIONS.NUMERIC.01` — CORRECTIONS.NUMERIC.01: the typed correction budget (v388) turned into ACTUAL first-correction magnitudes -- a computed theoretical-uncertainty surface, the short-term testable har
   - deps: v388_corrections_budget, v388, v337, v374, v212, v187 · cited: origin theory
-- **v394_coxeter_atoms** [E/C/O] `COXETER.ATOMS.01, RES.COXETER.SYMMETRY.01` — COXETER.ATOMS.01: the clockwork coherence -- the three Coxeter primes ARE the three anchor atoms ARE the three number-field facets, and the prime-2 seam is the common dynamical fac
-  - deps: v314, v319, v383, v387, v390, v23, v53, v394_coxeter_atoms · cited: origin theory, research contracts
+- **v394_coxeter_atoms** [E/C] `COXETER.ATOMS.01` — COXETER.ATOMS.01: the clockwork coherence -- the three Coxeter primes ARE the three anchor atoms ARE the three number-field facets, and the prime-2 seam is the common dynamical fac
+  - deps: v314, v319, v383, v387, v390, v23, v53 · cited: origin theory, research contracts
 - **v395_hypergraph_coupled** [E/O] `HYP.COUPLED.01` — HYP.COUPLED.01: the coupled hypergraph rewrite -- one local rule unifies v299+v327+v324 (carrier x family). [E] LOCAL COUPLED MICRO-RULE: state on 9 affine-E8 nodes x 3 family slot
   - deps: v299, v312, v317, v324, v327 · cited: introduction, origin theory
 - **v396_phi0_icosahedral** [E/C/O] `HYP.PHI0.01` — HYP.PHI0.01: the phi0 leading term from icosahedral combinatorics (sharpening v312/v395). [E] ICO COUNTS ANCHOR-FORCED: V=12, E=30=h(E8), F=20=g_car(g_car-1), |Aut|=120=4h=|2I|. [E
@@ -511,6 +511,10 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v282_e8_tau_i_unification, v282, v214, v220, v267, v390 · cited: origin theory
 - **v405_seam_equiv_omega** [E/C/O] `SEAM.EQUIV.02` — SEAM.EQUIV.02: the dual keystone at tau=omega -- the family/flavor sector as the order-3 Eisenstein/A2 face of E8, dual to the seam = (E8)_1 at tau=i (v404). A named contract, NOT 
   - deps: v404_e8_char_cm_duality, v286_seam_equivalence_contract, v404, v220, v233, v72, v69, v137 · cited: origin theory
+- **v408_phi0_puncture_heatkernel** [E/C/O] `HYP.PHI0.PUNCTURE.01` — HYP.PHI0.PUNCTURE.01: name the phi0 puncture term dtop = 48 c3^4 as the order-4 local boundary heat-kernel (Seeley-DeWitt) contact term of the mu4 puncture divisor -- the analytic 
+  - deps: v396_phi0_icosahedral, v106_review_validation, v396, v312, v216, v342, v391 · cited: origin theory
+- **v409_coxeter_prime2_lemma** [-] `(no ledger claim)` — RES.COXETER.SYMMETRY.01 closed as a STRUCTURAL LEMMA: prime-2 is NECESSARY but NOT autonomous -- no prime-2-only attractor exists (resolves the v394/COXETER.ATOMS.01 open question'
+  - cited: research contracts
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (168 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -578,17 +582,17 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v114_torsion_delta** [E/C] `GATE.UWALL.06` — ∏ₖ Uᵏ M U⁻ᵏ = (MU)⁴ exactly, so the ℤ₄-family flatness of the (U_wall) bundle IS the torsion statement 'T = MU is a fourth root of unity' (the μ₄ atom = the ORDER of the twisted cu
   - deps: v40_harmonic_metric, v41_leg_assignment, v51_boundary_half_step, v20, v30, v33 · cited: research contracts
 - **v115_anchor_residue** [E/C] `GATE.UWALL.07` — Σₖ Uᵏ X U⁻ᵏ = 4 diag(X): μ₄ conjugation-averaging IS the diagonal projection ⇒ exponents at infinity = 4 diag(A₀) ⇒ anchor splitting 𝒪(−2)⊕𝒪(−1)² ⟺ diag A₀ = (2,1,1)/4 = ANCHOR/|μ₄
-  - deps: v42_exterior_leg, v40_harmonic_metric, v33, v40, v29_research_contract_certs.py;v30_d4_character_variety.py;v31_R_dictionary.py;v32_rh_splitting · cited: 1 architecture e8, research contracts
+  - deps: v114_torsion_delta, v40_harmonic_metric, v33, v40, v29_research_contract_certs.py;v30_d4_character_variety.py;v31_R_dictionary.py;v32_rh_splitting · cited: 1 architecture e8, research contracts
 - **v116_resonance_uniqueness** [E/C] `GATE.UWALL.08` — the anticipated Gröbner step was unnecessary): TWISTED-AVERAGE LEMMA [I] — at infinity the equivariant system reads dY/dw = −(1/w)(B₀ + B₁w + …)Y with B_m = Σₖ i^{km} Uᵏ A₀ U⁻ᵏ; th
-  - deps: v43_exterior_bridge, v42_exterior_leg, v19, v30, v29_research_contract_certs.py;v30_d4_character_variety.py;v31_R_dictionary.py;v32_rh_splitting · cited: 1 architecture e8, research contracts
+  - deps: v115_anchor_residue, v114_torsion_delta, v19, v30, v29_research_contract_certs.py;v30_d4_character_variety.py;v31_R_dictionary.py;v32_rh_splitting · cited: 1 architecture e8, research contracts
 - **v117_monodromy_weyl_a3** [E/C] `GATE.UWALL.09` — M̃₀ = [[0, −(1+i)/2, (1−i)/2], [−(1+i)/2, −i/2, −1/2], [(1−i)/2, −1/2, i/2]] (entries in ½ℤ[i]) is unitary, det 1, tr 0, char poly λ³−1 (cusp class EXACT), M̃₀³ = 1, diag M̃₀ = (0,
-  - deps: v44_carrier_exterior, v43_exterior_bridge, v42_exterior_leg, E8.GLU.01 (A3 factor), v29_research_contract_certs.py;v30_d4_character_variety.py;v31_R_dictionary.py;v32_rh_splitting · cited: 1 architecture e8, research contracts
+  - deps: v116_resonance_uniqueness, v115_anchor_residue, v114_torsion_delta, E8.GLU.01 (A3 factor), v29_research_contract_certs.py;v30_d4_character_variety.py;v31_R_dictionary.py;v32_rh_splitting · cited: 1 architecture e8, research contracts
 - **v118_hexagon_family_dictionary** [E/C/O] `FLAV.H2.02` — −M̃₀ has order 6 ((−M̃₀)³ = −1) and spec(M̃₀) ∪ spec(−M̃₀) = μ₆: the 6-site hypercharge hexagon spectrum IS the family monodromy spectrum plus its sheet twist (ℤ₆ = ℤ₂×ℤ₃ = (−1)×⟨M
-  - deps: v45_family_exterior, v4_flavor_matrix, v20 (leg assignment), ARCH.QUAD.01 (Omega_adm), v1_e8_glue · cited: 2 standard model, research contracts
+  - deps: v117_monodromy_weyl_a3, v4_flavor_matrix, v20 (leg assignment), ARCH.QUAD.01 (Omega_adm), v1_e8_glue · cited: 2 standard model, research contracts
 - **v119_review_validation_2** [E] `ARCH.TRIAD.01` — the three elementary symmetric values of the anchor normalised by the family count, (e₃,e₁,e₂)/p₀ = (2/3, 4/3, 5/3) = (Koide branch/sheet ratio, seed gain |μ₄|/N_fam, carrier branc
   - deps: v106_review_validation, v10_projection_involution.py;v11_unique_KQ.py;v12_mass_generation_polynomials, FLAV.DIAMOND.01-02, v99_koide_flow_time, v105_residual_inventory · cited: introduction, research contracts
 - **v120_address_table** [E/C/O] `FLAV.H2.03` — the red-team firewall): THE LEPTON WORDS ARE THE COMPILER ATOMS [I] — (L_e, L_μ, L_τ) = (8, 5, 3) = (rank E8, g_car, N_fam) = (p₀+e₂, e₂, p₀), in mass order (longest word = lightes
-  - deps: v118_hexagon_family_dictionary, v45_family_exterior, v119_review_validation_2, v18 (quark words), v20 (lepton words) · cited: research contracts
+  - deps: v118_hexagon_family_dictionary, v117_monodromy_weyl_a3, v119_review_validation_2, v18 (quark words), v20 (lepton words) · cited: research contracts
 - **v121_address_pinning** [E/C] `FLAV.H2.04` — the established identity L = R + 2U (v95) says the word-length table IS L[sector][generation] with rows (up; down; lepton) = ((7,3,0); (7,5,2); (8,5,3)) = the v18/v20 words verbati
   - deps: v120_address_table, FLAV.DIAMOND.02 (L = R + 2U), v4_flavor_matrix, v119_review_validation_2, v18, v20, v71 · cited: research contracts
 - **v122_margin_theorem** [E/C] `FLAV.H2.05` — the v121 atom margins lose their input status): three selectors, all frozen BEFORE the address question was posed — (S1) the D₄ annihilator n = (5,−9,6) with nᵀR = (8,0,0) (v94: ki
@@ -606,7 +610,7 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v128_graded_hull** [E/C] `E8.GRADE.01` — EXPLICIT COSET CONSTRUCTION [I]: the 240 E8 roots built as explicit norm-2 vectors in D₅⊕A₃+glue coordinates decompose over the glue ℤ₄ as 240 = 52 + 64 + 60 + 64 (C₀ = carrier 40+
   - deps: v125_glue_qsystem, v89_carrier_index_lemma, v127_ring_resummation, v104_nariai_clock, v1_e8_glue · cited: 2 standard model, horizon readouts, research contracts
 - **v129_entropy_power_law** [E/C] `HOR.CLOCK.06` — the established Nariai bookkeeping (v101) has S/S_dS ∈ {1, 2/3, 1/3} (pure dS; two-horizon total; single horizon — deficit S_dS/3 per step): EXACTLY the complementary cusp weights;
-  - deps: v127_ring_resummation, v126_clock_wall_bridge, v101_horizon_anchor, v102_seam_orientation, v43_exterior_bridge · cited: horizon readouts
+  - deps: v127_ring_resummation, v126_clock_wall_bridge, v101_horizon_anchor, v102_seam_orientation, v115_anchor_residue · cited: horizon readouts
 - **v130_born_square** [E/C] `HOR.CLOCK.07` — the v128 multiplicity and the v129 weight are ONE object): EXPONENT BOOKKEEPING [I] — each zero mode trades a Gaussian integral for a moduli factor ∝ S^{1/2} (standard collective c
   - deps: v129_entropy_power_law, v127_ring_resummation, v128_graded_hull, v101_horizon_anchor · cited: horizon readouts
 - **v131_measure_is_area** [E/C] `HOR.CLOCK.08` — on S²(r) the L² norm² of each of the three normalised l=1 harmonics is EXACTLY r² = A/(4π) (all three integrated exactly): the norm of every zero mode IS the horizon area, hence th
@@ -620,9 +624,9 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v135_det_surface** [E/C] `FLAV.SURF.01` — two iso-volume walls INDEPENDENT of s: t = −2 ⇒ det = 2 = |Z₂| (the Z₂ wall) and t = −1 ⇒ det = 4 = |μ₄| (the μ₄ wall; K = M(1,−1) lies on it, so det K = 4 is a LAYER, not an isola
   - deps: FLAV.DIAMOND.01-02, v121_address_pinning, v119_review_validation_2, E8.GRADE.01 (52), FLAV.KQ.01 (11 13) · cited: 2 standard model, research contracts
 - **v136_dual_normal_selector** [E/C] `GATE.UWALL.10` — brute-force census (216 per column): c₁ = (1,1,2) = a, c₂ = (3,5,5), c₃ = (0,2,3) are each the UNIQUE solution, so R4′ shrinks from a 6⁹ matrix census (v121) to three 1-of-216 colu
-  - deps: v134_dual_anchor, v43_exterior_bridge, v45_family_exterior, FLAV.H2.04 (superseded census), v135_det_surface, v101_horizon_anchor · cited: research contracts
+  - deps: v134_dual_anchor, v115_anchor_residue, v117_monodromy_weyl_a3, FLAV.H2.04 (superseded census), v135_det_surface, v101_horizon_anchor · cited: research contracts
 - **v137_qplus_cohomology** [E/C] `FLAV.QGEO.04` — Mehta–Seshadri weights, cusp classes, cohomology characters and the flavor operator Q₊ are ONE spectrum in four readouts; A₃ EXPONENTS [I]: (1,2,3) are the exponents of A₃ (W(A₃) =
-  - deps: v13_open_gates.py;v19_monodromy_moduli.py;v22_open_gates_audit, FLAV.QGEO.01-03, v43_exterior_bridge, v45_family_exterior, v135_det_surface · cited: 1 architecture e8, 2 standard model
+  - deps: v13_open_gates.py;v19_monodromy_moduli.py;v22_open_gates_audit, FLAV.QGEO.01-03, v115_anchor_residue, v117_monodromy_weyl_a3, v135_det_surface · cited: 1 architecture e8, 2 standard model
 - **v138_vw_firewall** [E/C] `HOR.CLOCK.11` — the structural finding: α_edge = −8/3 = 2 × (−4/3), the external edge factor consists of TWO IDENTICAL COPIES (one per horizon) and the per-copy magnitude 4/3 = e₁/p₀ is EXACTLY th
   - deps: v133_zeta_budget, v101_horizon_anchor, HOR.CLOCK.03-09 (the clock chain) · cited: horizon readouts
 - **v139_selector_triangle** [E/C] `GATE.UWALL.11` — the dual anchor (v134) has a closed form that never mentions R, so the first selector of the pair (d,n) is DERIVED, not residual; THE FRAME [I]: (1, a, σ) is a basis of ℤ³ with det
@@ -696,7 +700,7 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v173_pfaffian_cp_car** [E] `FLAV.STRONGCP.02` — the sheet-odd Calderón involution {D,Σ}=0 pairs the spectrum (±λ), γ5-Hermiticity (D†=γ5Dγ5) makes the fermion-measure Pfaffian real (arg∈{0,π}), and reflection positivity (Z>0) se
   - deps: v50_q_geometry, v113_quasifree_kernel, v156_seam_net_construction · cited: 2 standard model
 - **v174_seam_fock_readings** [E] `QFT.FOCK.01` — dim Λ^even(ℝ¹⁶)=2¹⁵=32768 reduces to a 16-dim one-particle problem under quasi-free Bogoliubov (2¹⁵/16=2¹¹), the explicit count behind v161 (''the QFT cone is large but not indepen
-  - deps: v42_exterior_leg, v113_quasifree_kernel, v157_rigid_fixed_point, v42_exterior_leg, v161_one_particle_reduction · cited: 2 standard model
+  - deps: v114_torsion_delta, v113_quasifree_kernel, v157_rigid_fixed_point, v42_exterior_leg, v161_one_particle_reduction · cited: 2 standard model
 - **v175_net_existence_full_cone** [E/O] `QFT.NETRP.01` — net existence (A2) and full-cone reflection positivity discharged to [E], isolating QGEO.REALIZE.01 as the single open premise (nothing fabricated): (1) FULL-CONE RP FOR ALL m — th
   - deps: v154_simple_current_theorem, v156_seam_net_construction, v160_seam_gaussianity_from_pf, v161_one_particle_reduction, v168_qgeo_rigidity, v83_e8net_holomorphic_uniqueness, v125_glue_qsystem, v161_one_particle_reduction · cited: research contracts
 - **v176_seam_collar_realisation** [E/O] `QGEO.REALIZE.02` — NOT a fabricated proof): the theorem 'the seam collar's conformal boundary is ℙ¹∖μ₄ with H¹ grading (1,2,3), Calderón contraction = rank-8 K_Σ, index-4 extension = (E8)₁' decompose
@@ -868,14 +872,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `SEAM.EQUIV.01`×25, `v76`×17, `v56`×17, `QG.AMB.01`×16, `v336`×16, `E8.GLU.01`×15, `HOR.NARIAI.01`×15, `v216`×14, `v312`×13, `REG.FREEZE.01`×12, `AX.P1.01`×11, `v3`×11, `v54`×11, `QGEO.SUBPRIN.01`×11
+**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `SEAM.EQUIV.01`×25, `v76`×17, `v56`×17, `QG.AMB.01`×16, `v336`×16, `E8.GLU.01`×15, `v216`×15, `HOR.NARIAI.01`×15, `v312`×14, `REG.FREEZE.01`×12, `AX.P1.01`×11, `v3`×11, `v54`×11, `QGEO.SUBPRIN.01`×11
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v396_phi0_icosahedral** — `HYP.PHI0.01`
-- **v397_external_clock_probe** — `FR.CLOCK.PROBE.01`
 - **v398_seam_state_rigidity** — `SEAM.RIGIDITY.01`
 - **v399_gravity_complete** — `GRAVITY.COMPLETE.01`
 - **v400_grav_nonlocal_action** — `GRAV.NONLOCAL.01`
@@ -886,4 +888,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v405_seam_equiv_omega** — `SEAM.EQUIV.02`
 - **v406_pmns_phase_origin** — `FLAV.PMNS.CLOSE.01`
 - **v407_dn_pairings_omega** — `FLAV.SELECTOR.CLOSE.01`
+- **v408_phi0_puncture_heatkernel** — `HYP.PHI0.PUNCTURE.01`
+- **v409_coxeter_prime2_lemma** — `(no claim)`
 

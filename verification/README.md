@@ -264,18 +264,22 @@ Claims carrying `[I]`, `[L]` or `[N]` are the ones reproduced by this suite;
 `[F]` Lean material lives in `lean4-carrier-rigidity/` (shipped) /
 `experiments/lean4-carrier-rigidity/` (repo).
 
-## Residual gates (explicitly open — do not silently promote)
+## Residual gates (explicitly open / conditional — do not silently promote)
 
-The audit-visible residual gates (Alessandro 5.0 review). These stay `[A]`/`[P]`
-and must not be rendered as closed:
+The audit-visible residual gates for the current document set. Open gates stay
+`[O]`, conditional gates `[C]`; none may be rendered as closed `[E]`. (The earlier
+`Q`-geometry and `R`-modulo-`(U)` gates are no longer residual: the quark *ratios*
+are closed combinatorially — integer Plücker, `v49`/`v71` — and `Q±` is now a
+Lie/lattice result with only `det Q = N_fam` remaining.)
 
 | Gate | Status | What is missing |
 |---|---|---|
-| Geometric origin of `Q` | `[A]` | `Q±` not yet forced from the `D4`-equivariant parabolic geometry on `P¹∖μ4` (reduced to two finite statements; see `v13`, `v19`) |
-| `R` modulo unitarity `(U)` | `[P]` | `R` derived up to the Mehta–Seshadri unitarity condition; the `D4`-fixed locus is positive-dimensional (`v19`), `(U)` selects the stable point |
-| `N_star` | `[P]` | reheating input, **not** a compiler consequence |
-| Covariant metric-sector eq. | `[A]` | full Einstein-side field equation open; `R+R²`/scalaron is a readout, not a closure |
-| Wolfram `[C]` second path | — | `.wl`/`.wls` exports shipped in `verification/wolfram/` as an independent numerical path |
+| `v_geo` (absolute scale) | `[O]` | the single dimensionless→dimensionful metrology unit; gravity's `1/G` and the flavor `U_point` anchor both reduce to it (`v68`, `v75`) |
+| `G_net` / `SEAM.EQUIV.01` | `[C]` | the raw RP seam *is* the holomorphic `(E8)_1` net, closed modulo cited theorems (`v367`/`v368`, `v376`–`v379`); only the cited continuum scaling-limit existence stays `[O]` (`v336`) |
+| `F_transfer` | `[C]` | the four typed transfer interfaces (`η_B`, `m_p/m_e`, exact Koide, dark-matter relic scale) — runnable solvers with kill tests (`v371`–`v375`) |
+| `N_star` | `[C]` | reheating input, **not** a compiler consequence; band `[50,60]` |
+| Ambient QG measure `QG.AMB.01` | `[C]` | the local covariant Einstein equation `G_ab+Λg_ab=c₃⁻¹T_ab` is parameter-free (`v359`); only the global nonperturbative measure remains, discharged as a `[C]` redundancy (`v369`/`v379`) — a certification object, not missing dynamics |
+| Wolfram second path | numeric | base `116/116` + extension `303/303` independent checks in `verification/wolfram/` |
 
 ## Red Team / Stress Test layer (`redteam/`)
 

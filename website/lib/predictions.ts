@@ -861,12 +861,12 @@ export const predictions: Prediction[] = [
     killTest:
       "Exclusion of the determinant-line axion window at the coupled sensitivity (relic abundance is scenario-sensitive, not closed).",
     derivationFormulas: [
-      "\\theta_i = \\pi(1 - \\varphi_{\\mathrm{seam}}(\\alpha_\\star)) = 170.4^\\circ",
+      "\\theta_i = \\pi\\,N_{\\mathrm{fam}}/g_{\\mathrm{car}} = 3\\pi/5 = 108^\\circ \\;\\text{(robust spine branch)}",
       "f_a = \\frac{M_{\\mathrm{scal}}}{2\\dim S^+|\\mu_4|} = \\frac{M_{\\mathrm{scal}}}{128}, \\quad m_a \\approx 23.8\\,\\mu\\text{eV}",
     ],
     pdf: "/papers/tfpt_4_frontier.pdf",
     description:
-      "The candidate is the determinant-line axion of the strong-CP sector (WIMPs ruled out — no spare E₈ singlet). The misalignment angle is closed; f_a = M_scal/128 is a conjecture. A misalignment estimate (v185) and a converged full finite-T solve (experiments/ftransfer/axion_relic) decide it: at the predicted θ_i ≈ 170° hilltop the relic is Ω_a h² ≈ 0.66 — ~5.5× above Ω_DM h² = 0.12 (the observed value needs θ_i ≈ 106°). So as the dominant DM it OVER-closes the universe unless there is extra dilution or a lower f_a — a confirmed tension. A more robust branch (v211, DM.AXION.SPINE.01) is the spine angle θ_i = π·N_fam/g_car = 3π/5 = 108° (the central spine quotient, no fit): the same solver reaches Ω_DM at ≈106°, and 108° sits there in the MILD-anharmonic regime — 62° below the hilltop, so NOT exponentially sensitive, a far more robust landing. It is an alternative ansatz to the 170° seam value (mutually exclusive, the full solver decides); a converged Ω_a h² outside ~[0.08, 0.16] demotes it. A scenario, not a sharp prediction.",
+      "The candidate is the determinant-line axion of the strong-CP sector (WIMPs ruled out — no spare E₈ singlet). The misalignment angle is a branch DECISION, not a closed number; f_a = M_scal/128 is a conjecture. A converged full finite-T solve (v185/v211, experiments/ftransfer/axion_relic) decides between two competing angles: the robust SPINE branch θ_i = π·N_fam/g_car = 3π/5 = 108° (the central spine quotient, no fit) lands Ω_a h² on Ω_DM untuned — 62° below the hilltop, in the MILD-anharmonic regime, so NOT exponentially sensitive (a far more robust landing). The seam hilltop θ_i = π(1 − φ_seam(α★)) ≈ 170° instead OVER-produces (Ω_a h² ≈ 0.66, ~5.4× above Ω_DM h² = 0.12) and is disfavoured. The two are mutually exclusive (neither is forced, the full solver decides); a converged Ω_a h² outside ~[0.08, 0.16] at the spine angle demotes the branch. A scenario, not a sharp prediction.",
     category: "Astrophysics",
     confrontation: {
       derivation: "f_a = \\tfrac{M_{\\mathrm{scal}}}{128},\\ m_a \\approx 23.8\\,\\mu\\mathrm{eV}",

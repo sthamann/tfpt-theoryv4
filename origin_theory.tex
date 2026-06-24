@@ -238,8 +238,14 @@ $\varphi_0^{\mathrm{tree}}=1/(6\pi)$ is not an independent hypergraph injection:
 $(2,3,5)$ skeleton it equals $F/(4h\pi)=F/(|\Aut|\pi)=(F/(\gcar\Nfam))c_3$ with $F=20$ triangular
 hyperedges, $h=30$, $|\Aut|=120$, and $F/h=|\Z_2|/\Nfam=2/3$ (the same ratio as \veri{v327\_hypergraph\_rewrite.py}). \mE\
 Gauss--Bonnet consistent ($c_3=1/(|\Z_2|4\pi)$, \veri{v216\_marks\_gauss\_bonnet.py}/\veri{v342\_em\_ward\_heatkernel.py}).
-\mE\ The puncture $48c_3^4$ is still analytic, not a rational hypergraph fraction (\veri{v312\_hypergraph\_substrate.py}). \mC\
-At leading order the seed is combinatorial; the puncture remains \mO.
+\mE\ The puncture $48c_3^4$ is still analytic, not a rational hypergraph fraction
+(\veri{v312\_hypergraph\_substrate.py}); it belongs to the \emph{boundary} engine, not the graph --- named
+\texttt{HYP.PHI0.PUNCTURE.01} (\veri{v408\_phi0\_puncture\_heatkernel.py}): the order-$|\mu_4|{=}4$ local
+boundary heat-kernel (Seeley--DeWitt) contact term $\Omega_{\mathrm{adm}}c_3^4$ of the $\mu_4$ puncture divisor,
+summed over $\Omega_{\mathrm{adm}}{=}\Nfam\dim S^+{=}48$ admissible states ($c_3$ the same Gauss--Bonnet datum,
+so $c_3^4$ a fourth-order boundary power; cf.\ \vref{v391}). \mC\ Two engines, two terms: the icosahedral
+hypergraph delivers the tree term, the boundary heat-kernel delivers the puncture; its from-first-principles
+heat-kernel proof is the tracked \mO\ residual.
 
 \par\smallskip\noindent\textbf{Static vs.\ dynamic rates: a number-field split}
 (\veri{v314\_rate\_translation.py}). The discrete kernel and the dynamic recovery sit in \emph{different number
@@ -1349,7 +1355,7 @@ then type into four honest classes:
 \begin{description}[leftmargin=2.0em,style=nextline,itemsep=1pt]
 \item[\textnormal{A --- allowed \& near \mE.}] metrology/signatures: birefringence $0.2424^\circ$, BH-echo $\lesssim(2/3)^6$, $v_{\mathrm{GW}}{=}c$, the axion window.
 \item[\textnormal{B --- allowed as reconstruction \mO.}] a holographically \emph{larger state space} (small boundary, reconstructed bulk) --- gated on the open Seam--Horizon area-law.
-\item[\textnormal{C --- only after $G_{\mathrm{metric}}$ \mO.}] topological seam shortcuts / nontrivial boundary collars --- gated on the ambient metric measure.
+\item[\textnormal{C --- only after Causal Boundary Engineering \mO.}] topological seam shortcuts / nontrivial boundary collars --- gated on the open classification of which boundary gluings $G_{\mathrm{metric}}$ permits (the ambient measure itself is a \mC\ redundancy).
 \item[\textnormal{D --- currently forbidden.}] local FTL, native photon dispersion, $v_{\mathrm{GW}}{\neq}c$, closed timelike curves, free energy --- each would \emph{break} a core claim.
 \end{description}
 The serious next theorem is \emph{Causal Boundary Engineering}: RP$+$OS$+$gap $\Rightarrow$ no CTCs, then

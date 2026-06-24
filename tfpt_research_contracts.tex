@@ -95,17 +95,22 @@ one unit, by the No-Unit theorem (\vref{v153}/\vref{v364}); \mE\ (C)~external ph
 dimensionlessness; the gap-decoupling margin $1.648>0$), so the only hard things left are theorems and external
 physics, not missing dynamics (\texttt{RESIDUAL.CERTIFICATION.01}).
 \smallskip\\
-\noindent\textbf{A new tracked structural question --- the Coxeter-clock facet symmetry
-(\texttt{RES.COXETER.SYMMETRY.01}, \veri{v394\_coxeter\_atoms.py}).} The order-$30$ clock $30=2{\cdot}3{\cdot}5
-=h(E_8)$ now has all three primes facet-typed, and they are exactly the three anchor atoms ($2{=}|Z_2|$, $3{=}\Nfam$,
-$5{=}\gcar$) wearing number-field hats ($\mathbb Q(i)/\mathbb Q(\sqrt{-3})/\mathbb Q(\sqrt5)$, \vref{v390}). The table
-is, on inspection, \emph{not} symmetric: the seam (prime-$2$) appears as the \emph{common factor} of both dynamic
-rates ($2/3=|Z_2|/\Nfam$ and $(\varphi{+}2)/4=(\varphi{+}2)/|\mu_4|$, $|\mu_4|{=}2^2$), not as an independent
-attractor, while prime-$3$ and prime-$5$ label the two hands. \emph{The open question:} can one \emph{prove} the seam
-involution must appear in every sector's spectral gap --- so prime-$2$ is the \emph{forced} universal dynamical engine,
-with the falsifiable corollary that no prime-$2$-only attractor exists --- or is there genuine residual structure?
-Resolving it would either sharpen \vref{v383}'s ``every sector is the same gapped operator'' to ``the same
-\emph{seam-driven} operator'', or expose a missing dynamical slot. A \mO\ question, registered here, not a claim.
+\noindent\textbf{The Coxeter-clock facet symmetry, resolved as a structural lemma
+(\texttt{RES.COXETER.SYMMETRY.01}, \veri{v394\_coxeter\_atoms.py}/\veri{v409\_coxeter\_prime2\_lemma.py}).} The
+order-$30$ clock $30=2{\cdot}3{\cdot}5=h(E_8)$ has all three primes facet-typed, and they are exactly the three
+anchor atoms ($2{=}|Z_2|$, $3{=}\Nfam$, $5{=}\gcar$) wearing number-field hats
+($\mathbb Q(i)/\mathbb Q(\sqrt{-3})/\mathbb Q(\sqrt5)$, \vref{v390}). The table is \emph{not} symmetric: the seam
+(prime-$2$) appears as the \emph{common factor} of both dynamic rates ($2/3=|Z_2|/\Nfam$ and
+$(\varphi{+}2)/4=(\varphi{+}2)/|\mu_4|$, $|\mu_4|{=}2^2$), not as an independent attractor. \emph{The structural
+lemma (\vref{v409}) closes the falsifiable corollary:} the sheet involution $\sigma{=}\operatorname{diag}(1,-1,-1)$
+has spectrum $\{+1,-1\}$ and projector $(I{+}\sigma)/2$ spectrum $\{0,1\}$ --- none in the open interval $(0,1)$,
+so prime-$2$ supplies a \emph{parity}/\emph{projection}, never a nonzero contraction rate; the genuine rates $2/3$
+and $(1/3)^6$ lie in $(0,1)$ and carry prime-$2$ only as a \emph{factor}. Hence prime-$2$ is \emph{necessary}
+(admissible boundary transport is sheet-paired) but \emph{not autonomous}: \textbf{no prime-$2$-only attractor
+exists} --- dynamics begins only after coupling to family prime-$3$ or carrier prime-$5$ ($|\mu_4|{=}2^2$ the
+Galois bridge). This closes the corollary \mE\ and types the necessity \mC, sharpening \vref{v383}'s ``every
+sector is the same gapped operator'' towards ``the same \emph{seam-driven} operator''; the full ``appears in
+every gap'' universality stays the \vref{v383} reading. \mE/\mC.
 \smallskip\\
 \noindent\textbf{QFT layer (this round).} The boundary QFT is now \emph{one relative object}
 $\mathsf{TFPT}_{\mathrm{QFT}}=(\mathcal A_\Sigma,\omega_\Sigma,\Delta_\Sigma,\rho,A_F,H_F,D_F,J,\gamma,
@@ -463,7 +468,8 @@ tower); the one-loop factor is $\Omega_3/(2(2\pi)^4)=1/(16\pi^2)$ exactly, the \
 normalises the spectral-action $a_4$ geometric quartic. \mC\ the $\phi^4$ one-loop running is then
 $\beta_\lambda=3\lambda^2/(16\pi^2)$ (symmetry factor $3=$ the $s,t,u$ channels), with the EG initial condition
 fixed by the spectral action, $\lambda_\Phi(\mathrm{UV})=1/(16\pi^2)$. \mO\ this is order-2/one-loop, one
-diagram class; the all-order construction and the nonperturbative measure stay open (\texttt{QFT4D.SPERT.02}).
+diagram class; the all-order perturbative construction stays open (\texttt{QFT4D.SPERT.02}), while the
+nonperturbative measure is discharged as a \mC\ redundancy (below).
 \par\smallskip\noindent\emph{Red-team caveat, now discharged (\veri{redteam/rt\_F\_qft4d.py}).} Power-counting
 renormalizability is \emph{not} unitarity for the gravity sub-sector: the local $R^2/$Weyl$^2$ \emph{truncation}
 gives a four-derivative propagator $1/(p^2(p^2+M^2))$ whose massive spin-2 mode has a negative residue (the Stelle
@@ -590,7 +596,7 @@ algebraic core --- the $4$th-root character orthogonality, the order-$4$ clock, 
 is machine-proved in the carrier-rigidity Lean project (\texttt{TfptCarrier/SeamDeckClosure.lean};
 \textsc{audit: pass}, axioms \texttt{propext, Classical.choice, Quot.sound} only). The premise itself is a
 typed \texttt{structure} \texttt{SeamDeckPremise} --- consumed, not proved, exactly as
-\texttt{CalderonProjector} encodes the Paper-1 analytic input --- so the conditional theorem
+\texttt{CalderonProjector} encodes the document-1 analytic input --- so the conditional theorem
 ``\texttt{SeamDeckPremise} $\Rightarrow\omega\circ\rho=\omega$'' is now \mE\ while
 \texttt{QGEO.SYM.01} stays the one open \mO\ postulate.
 \par\smallskip\noindent\textbf{The two residuals are one canonical metric: the pillowcase
@@ -1696,7 +1702,8 @@ essentially closed:
   $U_f^\star$ amplitude matrix, \emph{not} for $c_u/c_d$.
 \end{itemize}
 \textbf{Headline:} the remaining flavor bridge is not a PDE gate --- it is a finite exterior
-\emph{readout-rigidity} theorem; only $U_{\mathrm{point}}$ stays open.
+\emph{readout-rigidity} theorem; the only residual, $U_{\mathrm{point}}$, is not an independent gate ---
+it reduces to the single dimensionful anchor $v_{\mathrm{geo}}$ (Gate~1 below).
 
 \smallskip\noindent\textbf{The simple closure (\veri{v71\_simple\_r\_bridge.py}).} The selector stratum
 $\mathcal S_{8,Q}$ is now \emph{fully derived}: $\det R=8=\operatorname{rank}E_8$ with $\operatorname{SNF}(R)=(1,1,8)$

@@ -48,8 +48,8 @@
   "date": "2026-06-12"
  },
  "introduction::subsection::Cosmology is the Pascal action grammar of the carrier::1": {
-  "hash": "a97bc6f4d263",
-  "date": "2026-06-12"
+  "hash": "3f28610d2349",
+  "date": "2026-06-24"
  },
  "introduction::section::Physical, geometric, topological: why the architecture is plausible::1": {
   "hash": "5a4228cd0587",
@@ -128,8 +128,8 @@
   "date": "2026-06-17"
  },
  "tfpt_1_architecture_e8::subsection::What the compiler outputs for the Standard Model and our reality::1": {
-  "hash": "b09f077f4954",
-  "date": "2026-06-12"
+  "hash": "3d7ad0857bd5",
+  "date": "2026-06-24"
  },
  "tfpt_1_architecture_e8::section::Grammar I --- the carrier grammar ($3+2$)::1": {
   "hash": "12cbe2093168",
@@ -256,8 +256,8 @@
   "date": "2026-06-12"
  },
  "tfpt_1_architecture_e8::section::Closures that the architecture rests on::1": {
-  "hash": "0a912e538f86",
-  "date": "2026-06-12"
+  "hash": "ed1a7f05f64d",
+  "date": "2026-06-24"
  },
  "tfpt_1_architecture_e8::section::Status summary and open audit points::1": {
   "hash": "fd431f8cd274",
@@ -392,8 +392,8 @@
   "date": "2026-06-12"
  },
  "tfpt_2_standard_model::section::Conclusion::1": {
-  "hash": "b5fe2b598006",
-  "date": "2026-06-23"
+  "hash": "1e20fec4b73a",
+  "date": "2026-06-24"
  },
  "tfpt_2_standard_model::section::The setup: parabolic data on the family curve::1": {
   "hash": "da2a8b23c886",
@@ -472,8 +472,8 @@
   "date": "2026-06-13"
  },
  "tfpt_2_standard_model::section::The solar angle $\\theta_{12}$: derived from the seam::1": {
-  "hash": "28e10eb01428",
-  "date": "2026-06-23"
+  "hash": "6169f83a8004",
+  "date": "2026-06-24"
  },
  "tfpt_2_standard_model::section::Quark $c$-rationals: best values at current precision::1": {
   "hash": "8868ee5c77eb",
@@ -484,8 +484,8 @@
   "date": "2026-06-12"
  },
  "tfpt_2_standard_model::section::Status: what is now written out, and what is honestly left::1": {
-  "hash": "9801054d0906",
-  "date": "2026-06-23"
+  "hash": "ebe59b0770f0",
+  "date": "2026-06-24"
  },
  "tfpt_2_standard_model::section::Appendix: computational verification::1": {
   "hash": "d9af3eae285d",
@@ -564,8 +564,8 @@
   "date": "2026-06-12"
  },
  "tfpt_3_e8_audit_bootstrap::section::The honest open-items list::1": {
-  "hash": "86a04661cca4",
-  "date": "2026-06-23"
+  "hash": "954950bd8ee0",
+  "date": "2026-06-24"
  },
  "tfpt_3_e8_audit_bootstrap::section::The $E_8$-slice scan: results (honest hit / miss)::1": {
   "hash": "9bb6cf827ee4",
@@ -600,8 +600,8 @@
   "date": "2026-06-14"
  },
  "tfpt_4_frontier::section::Dark matter --- the candidate is fixed, the scale is pending::1": {
-  "hash": "17061b526d1c",
-  "date": "2026-06-15"
+  "hash": "adb40678c9e1",
+  "date": "2026-06-24"
  },
  "tfpt_4_frontier::section::The muon anomalous magnetic moment --- a seam vertex readout::1": {
   "hash": "fa4b8d3cdd1a",
@@ -676,8 +676,8 @@
   "date": "2026-06-12"
  },
  "tfpt_horizon_readouts::section::The maximal black hole is the anchor: SdS in seam units::1": {
-  "hash": "9e253ee0f345",
-  "date": "2026-06-15"
+  "hash": "6804e5c14ad3",
+  "date": "2026-06-24"
  },
  "tfpt_horizon_readouts::section::Turnaround radius, gravitational waves, light::1": {
   "hash": "5462b90a34b1",
@@ -696,11 +696,11 @@
   "date": "2026-06-12"
  },
  "tfpt_research_contracts::front::(front matter)::1": {
-  "hash": "e846147f8fec",
+  "hash": "419657ad575e",
   "date": "2026-06-24"
  },
  "tfpt_research_contracts::section::Research Contract 1 --- $(U_{\\mathrm{wall}})$::1": {
-  "hash": "249bfc0ab14f",
+  "hash": "faad1fee6908",
   "date": "2026-06-24"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {
@@ -716,7 +716,7 @@
   "date": "2026-06-24"
  },
  "origin_theory::section::The whole integer skeleton from one pair $(\\gcar,\\Nfam)=(5,3)$::1": {
-  "hash": "8ca1549ba3ae",
+  "hash": "556e4f29bb5e",
   "date": "2026-06-24"
  },
  "origin_theory::section::The ``$8$'' is triply forced: geometry $=$ lattice $=$ gravity::1": {
@@ -752,8 +752,8 @@
   "date": "2026-06-23"
  },
  "origin_theory::section::A closure program (next phase) \\mO::1": {
-  "hash": "234a68e24e33",
-  "date": "2026-06-22"
+  "hash": "4ca669130012",
+  "date": "2026-06-24"
  },
  "origin_theory::section::Honest status::1": {
   "hash": "655a8a4b98e7",

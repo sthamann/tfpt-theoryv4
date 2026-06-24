@@ -203,8 +203,8 @@ export const papers: Paper[] = [
       },
       {
         label: "Documents",
-        value: "8",
-        description: "Introduction + 4 core docs + Appendix H + Origin Theory + contracts",
+        value: "9",
+        description: "Introduction + 5 core papers + Appendix H + Origin Theory + contracts",
       },
     ],
   },
@@ -702,7 +702,7 @@ export const papers: Paper[] = [
     number: 5,
     slug: "redteam",
     title: "Red Team — The Adversarial Audit",
-    subtitle: "Targets A–E: attacking the five load-bearing reductions at their weakest transitions",
+    subtitle: "Targets A–F: attacking the six load-bearing reductions at their weakest transitions",
     abstract:
       "The deliberately adversarial layer: instead of confirming TFPT, this document attacks the six load-bearing reductions (Targets A–F) at their weakest logical transitions. Each target runs through one fixed protocol — minimal statement, assumptions, logical chain, counterexample search, limiting cases, alternative structures, verdict. A red-team check asserts an adversarial fact (a counterexample really exists, a hidden assumption is really needed, a firewall really holds); the honest outcome lives in the status of each target, never in a green pass. Verdicts: A reduced (one residual), B/D/E/F survive narrowed, C survives; none broken. Target F audits the perturbative-QFT + scale round (v269–v275): the two attacks that landed are now resolved — the R²/Weyl² gravity Stelle ghost is a Seeley–DeWitt truncation artefact (the untruncated KMS spectral-action Hessian is entire and zero-free, so resummation decouples it ⇒ perturbative spin-2 graviton unitarity established [C], v304/v370/v380), and the anchor over-determination is conditional on the Λ-branch — both folded back into v269/v274. The ambient QG.AMB.01 measure is itself discharged as a redundancy [C] (v369+v379), a certification object rather than a nonperturbative frontier.",
     status: "redteam",
@@ -717,6 +717,7 @@ export const papers: Paper[] = [
       "Target B (g_car = 5 Pascal selection): survives narrowed — residual = the degree-2 truncation (Quadratic Boundary Locality), since tied to the boundary-net premise (v108–v113).",
       "Target C (k = c₃/2, S = A/4): survives — the only anchor is the UV-sensitive absolute 1/G.",
       "Targets D/E (one scale v_geo): survive narrowed — CP phases and the EW/reheating/leptogenesis scales are explicitly outside v_geo.",
+      "Target F (perturbative 4D-QFT + scale round, v269–v275): survives narrowed — the two attacks that landed are resolved: the R²/Weyl² Stelle ghost is a Seeley–DeWitt truncation artefact (perturbative spin-2 graviton unitarity established [C], v304/v370/v380) and the ambient QG.AMB.01 measure is discharged as a [C] redundancy (v369+v379).",
     ],
     notClaimed: [
       "No target is closed by this layer; 'survives' means the statement stands as worded, not that its residual is gone.",
@@ -742,6 +743,10 @@ export const papers: Paper[] = [
         body: "B: the Pascal ladder 2^{g−1} = Σ_{k≤2} C(g,k) is exactly equivalent to the degree-2 truncation; the residual is the QBL premise, since merged with the boundary-net gate. C: the replica chain is derived; the absolute 1/G stays the one anchor. D: the frozen CP phase survives at +0.98σ with a decision threshold σ_γ ≤ 0.96°. E: v_geo carries the dimensionless theory; EW/reheating scales are typed interfaces.",
       },
       {
+        title: "Target F — the perturbative 4D-QFT + scale round (v269–v275)",
+        body: "Target F audits the perturbative-QFT + scale round. The two attacks that landed are now resolved: the R²/Weyl² gravity Stelle ghost is a Seeley–DeWitt truncation artefact (the untruncated KMS spectral-action form factor a(p²)=e^{p²/M²} keeps its only pole at p²=0, the spin-2 sector is ghost-free via the Barnes–Rivers decomposition, and the nearest truncation-zero modulus runs to infinity), so perturbative spin-2 graviton unitarity is established [C] (v304/v370/v380); and the anchor over-determination is conditional on the Λ-branch — both folded back into v269/v274. The ambient QG.AMB.01 measure is itself discharged as a [C] redundancy (v369+v379), a certification object rather than a nonperturbative frontier.",
+      },
+      {
         title: "Follow-up rounds — the residual count is monotone",
         body: "Machine-checked follow-up rounds moved Target A from three residuals to the single named keystone SEAM.EQUIV.01 and hardened the firewalls (numerology null test: P ≤ 10⁻³⁰·⁷ conditional on the declared grammar). This document states the current reduction; the dated round-by-round development lives on the /changelog page.",
       },
@@ -759,7 +764,7 @@ export const papers: Paper[] = [
       },
     ],
     highlights: [
-      { label: "Targets", value: "A–E", description: "Five load-bearing reductions, attacked" },
+      { label: "Targets", value: "A–F", description: "Six load-bearing reductions, attacked" },
       { label: "Broken", value: "0", description: "No target failed; verdicts are typed, not green" },
       { label: "Target A", value: "closed mod cited", description: "Factors into the A2 net assembly + the keystone SEAM.EQUIV.01, now [C] closed modulo cited theorems (lattice v367/v368 + S3 stack v376–v379, residual = cited continuum existence v336)" },
       { label: "Target D CP", value: "triality + sheet", description: "Both CP phases are the universal Z₃ triality phase, split only by the Z₂ sheet (v231/v233) — the power choice is removed" },

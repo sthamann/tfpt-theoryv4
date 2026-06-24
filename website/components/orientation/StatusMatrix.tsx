@@ -48,9 +48,9 @@ const ROWS: Row[] = [
     tone: "conditional",
   },
   {
-    layer: "Open interfaces v_geo, G_net, F_transfer",
-    status: "Numbered research contracts — the scale anchor, the metric inclusion, and the transfer functor",
-    paper: "Doc 7",
+    layer: "Residual interfaces v_geo [O], G_net [C], F_transfer [C]",
+    status: "Numbered research contracts — the scale anchor (open), the metric inclusion and the transfer functor (closed modulo cited theorems)",
+    paper: "Doc 8",
     tone: "downstream",
   },
 ];

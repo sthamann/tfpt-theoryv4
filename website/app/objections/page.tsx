@@ -52,7 +52,7 @@ const STATUS_META: Record<Status, { tone: string }> = {
  * answer already lands; it introduces no new claim.
  */
 const META: { status: Status; where: string; whereHref: string; stillOpen: string }[] = [
-  { status: "Answered", where: "FAQ · Paper 1", whereHref: "/faq", stillOpen: "No" },
+  { status: "Answered", where: "FAQ · Doc 1", whereHref: "/faq", stillOpen: "No" },
   { status: "Answered", where: "FAQ · Verification", whereHref: "/verification", stillOpen: "No" },
   { status: "Conditional", where: "FAQ · Open gates", whereHref: "/#open-gates", stillOpen: "Conditional layer (declared)" },
   { status: "Answered", where: "FAQ · Verification", whereHref: "/verification", stillOpen: "No (null model ≤ 10⁻³⁰·⁷)" },
