@@ -11,7 +11,7 @@ requires-python = ">=3.11"
 license = { text = "MIT" }
 authors = [{ name = "Stefan Hamann" }]
 keywords = ["TFPT", "gravitational waves", "ringdown", "echoes", "GWTC", "LVK"]
-dependencies = ["numpy>=1.26"]
+dependencies = ["numpy>=1.26", "h5py>=3.10", "scipy>=1.11"]
 
 [project.optional-dependencies]
 dev = ["ruff>=0.5"]

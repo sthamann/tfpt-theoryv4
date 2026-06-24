@@ -995,9 +995,23 @@ export const papers: Paper[] = [
       },
       {
         title: "The minimal hypergraph substrate is a fibred product",
-        body: "The rewrite question made concrete. The pure (2,3,5) network gives only the Coxeter skeleton and the golden 5-fold angle; the recovery rate (2/3)⁶ is provably not in its adjacency spectrum (v312). But the smallest substrate that carries everything is a product: the carrier network T_net = (A+2I)/4 (attractor = Kac marks = the E₈ skeleton) fibred by a 3-node family cusp T_cusp = diag((1−w)⁶), w ∈ {0,1/3,2/3} (spectrum {1,(2/3)⁶,(1/3)⁶}). The fibred T_net ⊗ T_cusp carries both at once: top eigenvalue 1 with eigenvector marks ⊗ (w=0) (skeleton × democratic cusp), and (2/3)⁶ as a genuine eigenvalue (network attractor × cusp subleading). This is the cyclotomic split made dynamical — substrate = carrier × family = the 30 = 5×6 of v315, with the recovery gap living entirely in the family factor. Honestly (v312) the cusp weight is still injected, not derived from the graph: a consistent realisation of the predicted product structure, not a derivation of 2/3 from a pure rewrite (v324). [E] construction / [C] reading.",
+        body: "The rewrite question made concrete. The pure (2,3,5) network gives only the Coxeter skeleton and the golden 5-fold angle; the recovery rate (2/3)⁶ is provably not in its adjacency spectrum (v312). But the smallest substrate that carries everything is a product: the carrier network T_net = (A+2I)/4 (attractor = Kac marks = the E₈ skeleton) fibred by a 3-node family cusp T_cusp = diag((1−w)⁶), w ∈ {0,1/3,2/3} (spectrum {1,(2/3)⁶,(1/3)⁶}). The fibred T_net ⊗ T_cusp carries both at once: top eigenvalue 1 with eigenvector marks ⊗ (w=0) (skeleton × democratic cusp), and (2/3)⁶ as a genuine eigenvalue (network attractor × cusp subleading). This is the cyclotomic split made dynamical — substrate = carrier × family = the 30 = 5×6 of v315, with the recovery gap living entirely in the family factor (v324). [E] construction / [C] reading.",
         formulas: [
           "T = T_{\\mathrm{net}} \\otimes T_{\\mathrm{cusp}}, \\quad \\operatorname{spec} \\ni 1\\ (\\text{marks}\\otimes w{=}0) \\ \\text{and}\\ (2/3)^6\\ (\\text{marks}\\otimes w{=}\\tfrac13)",
+        ],
+      },
+      {
+        title: "One coupled local rule unifies carrier × family",
+        body: "The three hypergraph modules (v299 carrier growth, v327 branching rule M, v324 fiber product) merge into a single rewrite on a 9×3 labelled grid. One micro-step = network lazy diffusion on each cusp column plus M on each node's family vector (T_micro = T_net ⊗ M, purely local on 27 cells). The joint attractor is marks ⊗ (w=0); one clock hand (2N_fam = 6 family steps) carries recovery (2/3)⁶; v324's T_net ⊗ T_cusp emerges as the cusp-readout basis; v299's growth E₆→E₇→E₈→Ê₈ is unchanged with the fiber attached. The cusp weight 2/3 = |ℤ₂|/N_fam is derived from the rule arity (v327); what remains non-graph-spectral for a full-structure rewrite is the analytic seed φ₀ alone (v312). [E] mechanism unified / [O] seed + φ₀.",
+        formulas: [
+          "T_{\\mathrm{micro}} = T_{\\mathrm{net}} \\otimes M, \\quad \\text{attractor} = \\mathrm{marks} \\otimes e_0, \\quad \\text{recovery after one hand} = (2/3)^6",
+        ],
+      },
+      {
+        title: "The φ₀ leading term is icosahedral combinatorics",
+        body: "The tree-level retained seed φ₀^tree = 1/(6π) equals F/(4hπ) on the icosahedral hypergraph (F = 20 triangular hyperedges, h = 30, |Aut| = 120): equivalently (F/(g_car·N_fam))·c₃, with F/h = |ℤ₂|/N_fam = 2/3 (the same survival ratio as v327). Gauss–Bonnet consistent with c₃ = 1/(|ℤ₂|·4π). The puncture 48c₃⁴ remains analytic, not a graph fraction (v396). [E] leading term / [C] reading / [O] puncture.",
+        formulas: [
+          "\\varphi_0^{\\mathrm{tree}} = \\frac{F}{4h\\pi} = \\frac{F}{\\gcar\\Nfam}\\,c_3 = \\frac{1}{6\\pi}",
         ],
       },
     ],

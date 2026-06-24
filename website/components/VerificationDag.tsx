@@ -352,6 +352,7 @@ const NODES: DagNode[] = [
       "v373_ftransfer_relic.py",
       "v374_ftransfer_qcd.py",
       "v375_observatory_registry.py",
+      "v397_external_clock_probe.py",
     ],
   },
   {

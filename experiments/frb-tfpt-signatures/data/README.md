@@ -6,6 +6,10 @@ are committed.** Every downloaded/large table below is gitignored and re-obtaine
 the cited source (mostly `python scripts/fetch_data.py`). Raw pulse archives live in
 `../new-data/` (also gitignored; FRB.01 source material).
 
+**Blinkverse + ScienceDB pol:** `python scripts/fetch_user_data.py` — Blinkverse via
+public REST export; ScienceDB pol catalog needs a free login drop-in (or
+`SCIENCEDB_COOKIE` env var).
+
 ## Fetchable tables (`scripts/fetch_data.py`)
 
 | File | Dataset | N | Source |
@@ -23,11 +27,9 @@ the cited source (mostly `python scripts/fetch_data.py`). Raw pulse archives liv
   bursts (`MJD_topo, RM, DM, Weff, S/N, DOL, DOC, PA_mean`). Wang et al. 2026
   (arXiv:2603.20663; ScienceDB `10.57760/sciencedb.Fastro.00040`). `..._v5` is
   preferred. Drives **FRB.04** + parts of FRB.06/FRB.08.
-- `blinkverse_bursts.csv` — Blinkverse multi-source DB, **10,890 bursts** across
-  ~12 repeaters with per-burst `energy, fluence, rm_qufit/rm_syn, polar_l/polar_c,
-  width, mjd, source`. Enables **multi-source** FRB.02 (4 repeaters), FRB.04 RM
-  (3), FRB.06/FRB.07. Loaders: `blinkverse_series`, `blinkverse_sources`.
-  (`blinkverse_hosts.csv`, `blinkverse_sources.csv` = host/source context.)
+- `blinkverse_bursts.csv` — Blinkverse multi-source DB (~8808 bursts for 4 repeaters
+  via `fetch_user_data.py`; full DB ~22k). Per-burst `energy, fluence, rm_qufit/rm_syn,
+  polar_l/polar_c, width, mjd, source`. No PA angles (pol fractions only).
 
 ## Derived
 

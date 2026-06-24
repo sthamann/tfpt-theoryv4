@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`389` registered scripts · `450` ledger claims · `10` clusters.
+`392` registered scripts · `453` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -104,7 +104,7 @@ _The fine-structure constant as the unique root of the boundary U(1) Ward identi
 - **v341_alpha_quillen** [E/C/O] `ALPHA.QUILLEN.01` — The alpha fixed point reformulated as the STATIONARITY of a U(1) determinant line, every ingredient identified as an index / heat-kernel coefficient / discriminant form -- NOT a fr
   - deps: v48_em_ward, v3, v48, v159, v216, v1 · cited: 1 architecture e8
 - **v342_em_ward_heatkernel** [E/C/O] `EM.WARD.02` — The heat-kernel sharpening of EM.WARD.01: DERIVES the ORIGIN and STRUCTURE of the F_{U(1)} determinant-line terms from textbook Seeley-DeWitt/Gilkey coefficients, advancing the EM-
-  - deps: v48_em_ward, v48, v216, v3, v159 · cited: 1 architecture e8
+  - deps: v48_em_ward, v48, v216, v3, v159 · cited: origin theory, 1 architecture e8
 - **v382_alpha_quillen_exact** [E/C/O] `ALPHA.QUILLEN.EXACT.01` — Names the Quillen determinant-line VARIATION delta_tau(log det_zeta Delta_U(1) + 8 b1 c3^6 log phi_seam)=0 as a tracked target (review Point 10), elevating EM.WARD.01's residual to
   - deps: v48_em_ward, v286_seam_equivalence_contract, v341, v342, v3, v48, v216, v336 · cited: 1 architecture e8
 - **v391_alpha_quillen_progress** [E/O] `ALPHA.QUILLEN.PROGRESS.01` — ALPHA.QUILLEN.PROGRESS.01: an HONEST attempt at the external target ALPHA.QUILLEN.EXACT.01 (v382) -- it REDUCES the open step to a sharper named sub-target via a solvable model but
@@ -272,7 +272,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v75_upoint_to_vgeo** [E/O] `FLAV.UPOINT.01` — Gate 1 complete: U_point → v_geo (ratios + Grand Mass Volume); same anchor as 1/G
   - deps: v71_simple_r_bridge, v20_lepton_c_derivation, v46_grand_mass_volume, v68 · cited: origin theory, research contracts
 
-### `frontier` — Open gate (G_metric) & the frontier  (106 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (109 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -386,7 +386,7 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
 - **v298_e8_network_attractor** [E/C/O] `E8.NETWORK.01` — a computational-substrate (Wolfram-program) reading of the (2,3,5)/McKay hull, on the v219 bedrock; an HONEST audit of the 'TFPT as hypergraph' idea, not a derivation. [E] the E8 K
   - deps: v219_icosahedral_mckay, COX.TOTATIVE.01, CASCADE.BRIDGE.01 · cited: introduction
 - **v299_hypergraph_0d_autonomous** [E/O] `HYP.0D.01` — NOT 'P2 derived'. [E] HYP.ICO.01 icosahedron = 3-uniform hypergraph (12 V, 20 hyperedges, 30 edges=h(E8)), |Aut(graph)|=120=|I_h|=A5×ℤ₂ (the McKay group is the SU(2) binary lift 2I
-  - deps: v219_icosahedral_mckay, v298_e8_network_attractor, QBL.GATE.01 · cited: introduction
+  - deps: v219_icosahedral_mckay, v298_e8_network_attractor, QBL.GATE.01 · cited: introduction, origin theory
 - **v300_flataway_rigid** [E/C/O] `FLATAWAY.RIGID.01` — the attack on Flat-Away: (I) HARDEN the obstruction from a soft minimum (v291/v293) to a DISCRETE one, (II) DERIVE the external pin from the (E8)₁ data. [E] FLAT FINGERPRINT: spec(
   - deps: v293_flataway_spectral_hessian, v295_flataway_a2_exact, v297_route_a_literature_stack · cited: research contracts
 - **v301_route_a_invertible** [E/C/O] `SEAM.EQUIV.A.INV.01` — discharge Route A's single open hypothesis (v297 LIT-A: 'the raw quasi-free seam bulk is invertible/SRE') via the free-fermion classification. Since v300 collapsed Route B into Rou
@@ -406,7 +406,7 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
 - **v311_gap_decoupled_measure** [E/C/O] `QGAMB.CLUSTER.01` — TOE attack 4 -- the physical QG measure as a gap-decoupled, exponentially-clustering object: the transfer spectrum {1,(2/3)^6,(1/3)^6} gives geometric clustering at rate (2/3)^6, c
   - deps: QG.AMB.01, v22_open_gates_audit, v36_spectral_action_g2, v36, v76, v259 · cited: research contracts
 - **v312_hypergraph_substrate** [E/O] `HYP.INJECT.01` — TOE attack 5 -- the hypergraph substrate sharpened: the affine-E8 Kac marks are the Perron eigenvector (A.marks=2 marks) and the subleading eigenvalue is exactly 2cos(pi/5)=golden 
-  - deps: v298_e8_network_attractor, v299_hypergraph_0d_autonomous, v219, v298, v299 · cited: introduction
+  - deps: v298_e8_network_attractor, v299_hypergraph_0d_autonomous, v219, v298, v299 · cited: introduction, origin theory
 - **v313_golden_atoms_spectral** [E/C] `GOLD.ATOMS.01` — The golden ratio is the g_car=5 signature -- the (2,3,5) atoms ARE the affine-E8 network spectral angles (v312 follow-up, exact). The charpoly factors x(x^2-4)(x^2-1)(x^2-x-1)(x^2+
   - deps: v219_icosahedral_mckay, v312_hypergraph_substrate, v219, v312, v63 · cited: origin theory
 - **v314_rate_translation** [E/C/O] `RATE.TRANSLATE.01` — Do the discrete-kernel and dynamic rates translate? An exact number-field split. The affine-E8 adjacency spectrum splits into the rational part {0,+-1,+-2} in Q and the golden part
@@ -426,13 +426,13 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
 - **v323_bw_geometric_modular** [E/C/O] `QGEO.BW.01, FORM.QGEO.BW.01` — The keystone pushed one step: Bisognano-Wichmann makes the seam modular flow GEOMETRIC, so the mu4 deck invariance is not an independent axiom. The clock rho=diag(i^n)=exp(i(pi/2)L
   - deps: v181_clock_is_conformal_symmetry, v309_modular_bedrock, v308_seam_equiv_chain, v308, v309, v198, v323_bw_geometric_modular, v323 · cited: origin theory
 - **v324_hypergraph_fiber** [E/C/O] `HYP.FIBER.01` — The minimal hypergraph substrate that works: a (2,3,5)-network FIBERED by a 3-fold cusp channel reproduces both the E8 skeleton and the recovery gap (the constructive v312 follow-u
-  - deps: v312_hypergraph_substrate, v315_coxeter_coupling, v317_galois_family, v312, v315, v317, v319, v221 · cited: origin theory
+  - deps: v312_hypergraph_substrate, v315_coxeter_coupling, v317_galois_family, v312, v315, v317, v319, v221 · cited: introduction, origin theory
 - **v325_pillowcase_keystone** [E/O] `QGEO.KEYSTONE.01, FORM.CARTAN.DET.01` — The seam keystone as ONE citable theorem: the raw seam state is the flat tau=i pillowcase state, with EXACTLY ONE open lemma. IF (raw RP-collar seam state = flat tau=i pillowcase /
   - deps: v181_clock_is_conformal_symmetry, v286_seam_equivalence_contract, v323_bw_geometric_modular, v214, v216, v280, v308, v323 · cited: origin theory
 - **v326_ftransfer_suite** [E/C] `FR.SUITE.01` — The F_transfer solver suite: the four transfer readouts as ONE runnable harness, each a gapped relaxation to a unique attractor, with values + uncertainties + honest typing (produc
   - deps: v303_ftransfer_dynamics, v303, v82, v184, v185, v202 · cited: origin theory
 - **v327_hypergraph_rewrite** [E/O] `HYP.REWRITE.01` — Deriving the cusp weight 2/3 from a minimal rewrite (sharpening v324/v312). A minimal local rule -- a family channel with N_fam=3 slots, one absorbing attractor (w=0) and |Z2|=2 su
-  - deps: v324_hypergraph_fiber, v312_hypergraph_substrate, v312, v324, v317, v76 · cited: origin theory
+  - deps: v324_hypergraph_fiber, v312_hypergraph_substrate, v312, v324, v317, v76 · cited: introduction, origin theory
 - **v329_os_gap_reduction** [E/O] `QGEO.OSGAP.01` — Closing the OS step: the bulk gap IS the transfer gap (second quantization), and assembling the single sufficient premise of the whole bedrock. [E] OS GAP = TRANSFER GAP: the OS/Eu
   - deps: v308_seam_equiv_chain, v323_bw_geometric_modular, v325_pillowcase_keystone, v240, v308, v323, v325, v237 · cited: origin theory
 - **v330_qgamb_admissible_measure** [E/O] `QGAMB.MEASURE.01` — Constructing the ambient measure on the gap-decoupled admissible sector as a bona fide Osterwalder-Schrader object (with the honest fence). [E] REFLECTION POSITIVITY: the seam tran
@@ -487,6 +487,12 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v388_corrections_budget, v388, v337, v374, v212, v187 · cited: origin theory
 - **v394_coxeter_atoms** [E/C/O] `COXETER.ATOMS.01, RES.COXETER.SYMMETRY.01` — COXETER.ATOMS.01: the clockwork coherence -- the three Coxeter primes ARE the three anchor atoms ARE the three number-field facets, and the prime-2 seam is the common dynamical fac
   - deps: v314, v319, v383, v387, v390, v23, v53, v394_coxeter_atoms · cited: origin theory, research contracts
+- **v395_hypergraph_coupled** [E/O] `HYP.COUPLED.01` — HYP.COUPLED.01: the coupled hypergraph rewrite -- one local rule unifies v299+v327+v324 (carrier x family). [E] LOCAL COUPLED MICRO-RULE: state on 9 affine-E8 nodes x 3 family slot
+  - deps: v299, v312, v317, v324, v327 · cited: introduction, origin theory
+- **v396_phi0_icosahedral** [E/C/O] `HYP.PHI0.01` — HYP.PHI0.01: the phi0 leading term from icosahedral combinatorics (sharpening v312/v395). [E] ICO COUNTS ANCHOR-FORCED: V=12, E=30=h(E8), F=20=g_car(g_car-1), |Aut|=120=4h=|2I|. [E
+  - deps: v312, v216, v342, v327, v395 · cited: introduction, origin theory
+- **v397_external_clock_probe** [E/C] `FR.CLOCK.PROBE.01` — FR.CLOCK.PROBE.01: a FALSIFIABLE probe of how external the 'external physics' really is -- do the frontier scheme-numbers land on the {2,3,5} clock (the anchor atoms, v394) or not?
+  - deps: v100, v187, v211, v212, v303, v374, v394 · cited: 4 frontier
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (167 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -732,7 +738,7 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v215_seam_deck_killtest** [E/O/X] `QGEO.KILL.01` — a foundational symmetry cannot be derived from nothing (v181/v153), and Bisognano–Wichmann would presuppose the covariance it should produce. Non-circular reduction (v198/v199/v201
   - deps: v181_clock_is_conformal_symmetry, v214_seam_pillowcase, v201_seam_subprincipal_marks, v168_qgeo_rigidity, v201_seam_subprincipal_marks, v214_seam_pillowcase · cited: research contracts
 - **v216_marks_gauss_bonnet** [E/O/X] `QGEO.MARKS.03` — three independent selectors converge. [O] residual: the square modulus (cross-ratio 2 ⟹ j=1728, v214) needs the one order-4 carrier input. The mark COUNT + EQUALITY are now derived
-  - deps: v195_marks_lefschetz_character, v214_seam_pillowcase, v215_seam_deck_killtest, AX.P1.01, v195_marks_lefschetz_character, v214_seam_pillowcase · cited: research contracts
+  - deps: v195_marks_lefschetz_character, v214_seam_pillowcase, v215_seam_deck_killtest, AX.P1.01, v195_marks_lefschetz_character, v214_seam_pillowcase · cited: origin theory, research contracts
 - **v217_marks_emergence_scan** [E/O/X] `QGEO.EMERGE.01` — the NUMERICAL emergence scan (QGEO.EMERGE.01, sibling of v216 as v210 is to v201): with the number of marks n AND their positions FREE, the 4-equally-spaced (square) config is the 
   - deps: v216_marks_gauss_bonnet, v215_seam_deck_killtest, v200_seam_variational_scan, v210_mark_local_dtn, v216_marks_gauss_bonnet · cited: research contracts
 - **v218_diamond_axis_geometry** [E/C] `DIAMOND.AXIS.01, DIAMOND.PLUCKER.01, DIAMOND.SPECTRAL.01` — curvatures (8,6)=(rank E₈, |R⁺(A₃)|). [E] PLÜCKER TRANSFER LADDER: Pl(K)=(−1,6,4)→Pl(C)=(0,14,14)→Pl(F)=(1,22,30); C−K=(1,8,10)=(N_Φ,rank E₈,A_Λ), F−C=(1,8,16)=(N_Φ,rank E₈,dim S⁺)
@@ -842,15 +848,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `SEAM.EQUIV.01`×23, `v76`×17, `v56`×17, `E8.GLU.01`×15, `QG.AMB.01`×15, `v336`×15, `HOR.NARIAI.01`×15, `v216`×13, `REG.FREEZE.01`×12, `AX.P1.01`×11, `v3`×11, `v312`×11, `QGEO.SUBPRIN.01`×11, `FLAV.KQ.01`×10
+**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `SEAM.EQUIV.01`×23, `v76`×17, `v56`×17, `E8.GLU.01`×15, `QG.AMB.01`×15, `v336`×15, `HOR.NARIAI.01`×15, `v216`×14, `v312`×13, `REG.FREEZE.01`×12, `AX.P1.01`×11, `v3`×11, `QGEO.SUBPRIN.01`×11, `FLAV.KQ.01`×10
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v383_dynamics_universal** — `DYNAMICS.UNIVERSAL.01`
-- **v384_residual_certification** — `RESIDUAL.CERTIFICATION.01`
-- **v385_uvbranch_killtest** — `UVBRANCH.KILLTEST.01`
 - **v386_grav_amplitude** — `GRAV.AMPLITUDE.01`
 - **v387_corrections_gap** — `CORRECTIONS.GAP.01`
 - **v388_corrections_budget** — `CORRECTIONS.BUDGET.01`
@@ -860,4 +863,7 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v392_seam_s3_scalinglimit** — `SEAM.S3.SCALINGLIMIT.01`
 - **v393_corrections_numeric** — `CORRECTIONS.NUMERIC.01`
 - **v394_coxeter_atoms** — `COXETER.ATOMS.01, RES.COXETER.SYMMETRY.01`
+- **v395_hypergraph_coupled** — `HYP.COUPLED.01`
+- **v396_phi0_icosahedral** — `HYP.PHI0.01`
+- **v397_external_clock_probe** — `FR.CLOCK.PROBE.01`
 

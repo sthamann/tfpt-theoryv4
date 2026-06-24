@@ -30,6 +30,7 @@
 \newcommand{\cthree}{c_3}
 \newcommand{\gcar}{g_{\mathrm{car}}}
 \newcommand{\Nfam}{N_{\mathrm{fam}}}
+\providecommand{\Aut}{\operatorname{Aut}}
 \newcommand{\phiz}{\varphi_0^{\mathrm{ret}}}
 \newcommand{\Oadm}{\Omega_{\mathrm{adm}}}
 \newcommand{\ainv}{\alpha^{-1}}
@@ -639,9 +640,23 @@ discrete atoms of the theory --- that is the point of the compiler:
       sharpens the open question: \mE\ the Kac marks are the Perron eigenvector ($A\,m{=}2m$) and the subleading
       eigenvalue is exactly $2\cos(\pi/5)=$ the golden ratio (the $5$-fold/icosahedral signature), but \mE\ the
       recovery rate $(2/3)^6$ is \emph{not} any eigenvalue of the adjacency and $\phiz$ is not a rational edge
-      fraction. So a substrate reproducing the \emph{full} structure must inject exactly two non-graph-spectral
-      data --- the cusp weight $2/3{=}|\Z_2|/\Nfam$ (the gap $6\ln(3/2)$) and the analytic seed $\phiz$ --- a
-      precise delimiting of the open question. \mO\ \veri{v312\_hypergraph\_substrate.py}
+      fraction. The cusp weight $2/3{=}|\Z_2|/\Nfam$ is now \emph{derived} from a minimal branching rule
+      (\veri{v327\_hypergraph\_rewrite.py}); what remains non-graph-spectral for a \emph{full}-structure rewrite
+      at leading order is sharpened by \veri{v396\_phi0\_icosahedral.py} (tree-level $\varphi_0^{\mathrm{tree}}=F/(4h\pi)$);
+      the puncture $48c_3^4$ alone stays open. \mO\ \veri{v312\_hypergraph\_substrate.py}
+\item \textbf{one coupled local rule (carrier $\times$ family).} On a $9\times3$ labelled grid (affine-$E_8$
+      nodes $\times$ family channels) a \emph{single} coupled micro-step --- network lazy diffusion on each cusp
+      column plus the \veri{v327\_hypergraph\_rewrite.py} branching rule $M$ on each node's family vector --- has joint attractor
+      marks$\otimes(w{=}0)$ and recovery rate $(2/3)^6$ after one clock hand ($2\Nfam$ family steps); the
+      \veri{v324\_hypergraph\_fiber.py} fiber product $T_{\mathrm{net}}\otimes T_{\mathrm{cusp}}$ emerges as the cusp-readout basis,
+      and the \veri{v299\_hypergraph\_0d\_autonomous.py} growth trajectory $E_6\!\to\!E_7\!\to\!E_8\!\to\!\hat E_8$ is unchanged with the
+      fiber attached. \mE\ \veri{v395\_hypergraph\_coupled.py}
+\item \textbf{the seed at leading order.} The tree-level retained seed
+      $\varphi_0^{\mathrm{tree}}=1/(6\pi)$ is exactly $F/(4h\pi)$ on the icosahedral hypergraph
+      ($F=20$ triangular hyperedges, $h=30$, $|\Aut|=120$): equivalently $(F/(\gcar\Nfam))c_3$, with
+      $F/h=|\Z_2|/\Nfam=2/3$ the same survival ratio as \veri{v327\_hypergraph\_rewrite.py}; Gauss--Bonnet
+      consistent with $c_3=1/(|\Z_2|4\pi)$. The puncture $48c_3^4$ remains analytic, not a graph
+      fraction. \mC\ \veri{v396\_phi0\_icosahedral.py}
 \end{itemize}
 
 % =====================================================================

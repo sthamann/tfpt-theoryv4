@@ -1,0 +1,351 @@
+{
+  "frb_joint": {
+    "sources": [
+      {
+        "source": "FRB 20121102A (FAST, Li+2021)",
+        "n_bursts": 1652,
+        "echo_p": 0.001,
+        "pa_p": 1.0,
+        "pa_m": 0,
+        "fisher_p": 1.0,
+        "joint_score": -0.0,
+        "note": ""
+      },
+      {
+        "source": "FRB20201124A (Blinkverse)",
+        "n_bursts": 2920,
+        "echo_p": 0.0969,
+        "pa_p": 1.0,
+        "pa_m": 0,
+        "fisher_p": 1.0,
+        "joint_score": -0.0,
+        "note": ""
+      },
+      {
+        "source": "FRB20220912A (Blinkverse)",
+        "n_bursts": 2690,
+        "echo_p": 0.2657,
+        "pa_p": 1.0,
+        "pa_m": 0,
+        "fisher_p": 1.0,
+        "joint_score": -0.0,
+        "note": ""
+      },
+      {
+        "source": "FRB20121102A (Blinkverse)",
+        "n_bursts": 2370,
+        "echo_p": 0.001,
+        "pa_p": 1.0,
+        "pa_m": 0,
+        "fisher_p": 1.0,
+        "joint_score": -0.0,
+        "note": ""
+      }
+    ],
+    "permutation_p": 1.0,
+    "n_with_both": 0,
+    "verdict": "clean joint NULL: no source with simultaneous echo+PA excess (4 sources tested, perm p=1.00)",
+    "data_limited": false
+  },
+  "frb_anyon": {
+    "results": [],
+    "injection_validated": true,
+    "verdict": "data_limited: no PA arrays on disk; pi/4 detector injection_validated=True",
+    "data_limited": true
+  },
+  "gw_joint": {
+    "injection": {
+      "cases": {
+        "kernel_joint": {
+          "label": "DETECTION",
+          "lag_ms": 0.75,
+          "q_hat": 0.1009,
+          "echo_snr": 14.84,
+          "joint_ok": true,
+          "lag_ok": true,
+          "ratio_ok": true
+        },
+        "wrong_lag": {
+          "label": "DETECTION",
+          "lag_ms": 8.0,
+          "q_hat": 0.1237,
+          "echo_snr": 16.57,
+          "joint_ok": false,
+          "lag_ok": true,
+          "ratio_ok": true
+        },
+        "null": {
+          "label": "NULL",
+          "lag_ms": 13.2,
+          "q_hat": 0.0151,
+          "echo_snr": 2.0,
+          "joint_ok": false,
+          "lag_ok": false,
+          "ratio_ok": false
+        }
+      },
+      "pipeline_ok": true,
+      "template_lag_ms": 0.7,
+      "ratio": 0.08779149519890257
+    },
+    "real_events": [
+      {
+        "event": "GW150914:H1",
+        "lag_ms": 24.5,
+        "q_hat": 1.9863,
+        "rho": 4.85,
+        "lag_ok": false,
+        "ratio_ok": false,
+        "joint_ok": false
+      },
+      {
+        "event": "GW150914:L1",
+        "lag_ms": 0.6500000000000001,
+        "q_hat": 0.6585,
+        "rho": 0.4,
+        "lag_ok": true,
+        "ratio_ok": false,
+        "joint_ok": false
+      },
+      {
+        "event": "GW190521:H1",
+        "lag_ms": 6.5,
+        "q_hat": 1.2129,
+        "rho": 2.07,
+        "lag_ok": false,
+        "ratio_ok": false,
+        "joint_ok": false
+      },
+      {
+        "event": "GW190521:L1",
+        "lag_ms": 21.0,
+        "q_hat": 3.1134,
+        "rho": 1.54,
+        "lag_ok": false,
+        "ratio_ok": false,
+        "joint_ok": false
+      },
+      {
+        "event": "GW190521:V1",
+        "lag_ms": 8.0,
+        "q_hat": 1.4651,
+        "rho": 2.02,
+        "lag_ok": false,
+        "ratio_ok": false,
+        "joint_ok": false
+      }
+    ],
+    "verdict": "NO joint gravastar hit on real GWOSC strain (lag=0.7 ms + (2/3)^6): 1 detector(s) hit gravastar lag only (residual ringdown, q_hat~1); consistent with Stage-1 null. Injection pipeline validated."
+  },
+  "horizon": {
+    "prints": [
+      {
+        "name": "Scrambling prefactor |mu4|=4",
+        "tfpt_value": "t_scr ~ 4 M log S",
+        "data_status": "data_limited: needs AdS/CFT or BH merger echo timing",
+        "decisive_experiment": "high-SNR merger + echo spectroscopy",
+        "kill_condition": "measured t_scr/M log S != 4 at >3 sigma"
+      },
+      {
+        "name": "Hawking power denominator |W(D5)|=1920",
+        "tfpt_value": "P_H = c3/(1920 M^2)",
+        "data_status": "internal: Page curve in recovery-channel matches turnover",
+        "decisive_experiment": "PBH evaporation / Stellar-mass Hawking (inaccessible)",
+        "kill_condition": "Hawking spectrum inconsistent with c3/1920M^2 normalization"
+      },
+      {
+        "name": "Area quantum 4 ln3 = ln 81",
+        "tfpt_value": "Delta A = 4.3944 l_p^2 = ln(N_fam^4)",
+        "data_status": "data_limited: needs high-overtone QNM (n>>0)",
+        "decisive_experiment": "next-gen ringdown spectroscopy",
+        "kill_condition": "omega_R/T_H high-overtone != ln3"
+      },
+      {
+        "name": "QNM family count ln3",
+        "tfpt_value": "omega_R/T_H -> 1.0986 = ln N_fam",
+        "data_status": "data_limited: GW150914 sees n=0 only (~8.5x from asymptote)",
+        "decisive_experiment": "LIGO/Virgo high-overtone stack",
+        "kill_condition": "asymptotic ringdown != ln3"
+      },
+      {
+        "name": "Turnaround radius r_ta(M)",
+        "tfpt_value": "Lambda-closure bound structure (no new parameter; uses alpha^-1)",
+        "data_status": "data_limited: cluster/halo scale test",
+        "decisive_experiment": "weak lensing + cluster mass profiles vs Lambda",
+        "kill_condition": "bound radius systematically violates r_ta(M) at fixed Lambda"
+      },
+      {
+        "name": "Seam coupling 16 c3^4 = 1/(256 pi^4)",
+        "tfpt_value": "delta_top/3 = 4.010149e-05 (EHT + alpha kernel link)",
+        "data_status": "EHT: achromatic ingest done; GRMHD residual open",
+        "decisive_experiment": "ngEHT + ipole GRMHD library",
+        "kill_condition": "residual fails 1/r^2 achromatic sign-flip nulls"
+      }
+    ],
+    "identities_ok": true,
+    "verdict": "structural identities OK (True): compiler fingerprints catalogued; decisive tests are QNM high-overtone (ln3), EHT residual (16c3^4), scrambling (|mu4|=4). None falsified; all data_limited except internal Page/Hawking."
+  },
+  "galois_cp": {
+    "checks": [
+      {
+        "name": "delta_PMNS = delta_CKM,lead + 180",
+        "tfpt": 240.0,
+        "measured": 240.0,
+        "sigma": null,
+        "z": null,
+        "holds": true,
+        "note": "exact arithmetic (Z2 sheet flip)"
+      },
+      {
+        "name": "delta_PMNS band 240 +/- 9 deg",
+        "tfpt": 240.0,
+        "measured": null,
+        "sigma": null,
+        "z": null,
+        "holds": true,
+        "note": "kill: |delta_PMNS - 240| > 9.0 at DUNE/Hyper-K"
+      },
+      {
+        "name": "J_PMNS (derived CP strength)",
+        "tfpt": -0.029652986923851335,
+        "measured": null,
+        "sigma": null,
+        "z": null,
+        "holds": true,
+        "note": "J_max=0.03424; independent of delta within mu6 node"
+      },
+      {
+        "name": "delta_PMNS vs NuFIT 6.0 (NO best fit, w/ SK,",
+        "tfpt": 240.0,
+        "measured": 212.0,
+        "sigma": 26.0,
+        "z": 1.0769230769230769,
+        "holds": true,
+        "note": "band [231.0,249.0]"
+      },
+      {
+        "name": "delta_PMNS vs NuFIT 6.0 (NO, LBL+reactor+IC,",
+        "tfpt": 240.0,
+        "measured": 177.0,
+        "sigma": 19.0,
+        "z": 3.3157894736842106,
+        "holds": false,
+        "note": "band [231.0,249.0]"
+      },
+      {
+        "name": "joint: data delta_PMNS implies delta_CKM,lead",
+        "tfpt": 60.0,
+        "measured": 32.0,
+        "sigma": 30.0,
+        "z": 0.9333333333333333,
+        "holds": true,
+        "note": "data delta=212 -> lead=32 (TFPT 60)"
+      },
+      {
+        "name": "J_max vs NuFIT",
+        "tfpt": 0.034240319965524055,
+        "measured": 0.0332,
+        "sigma": 0.002,
+        "z": 0.5201599827620272,
+        "holds": true,
+        "note": "~3% near-miss at fixed angles"
+      }
+    ],
+    "j_pmns": -0.029652986923851335,
+    "j_max": 0.034240319965524055,
+    "verdict": "Galois-CP lock holds structurally; J_PMNS=-0.02965 (derived). delta_PMNS=240 in band vs NuFIT (+1 sigma class); 1 tension(s). Kill: delta_PMNS outside 240+/-9 at >3 sigma."
+  },
+  "seed_extended": {
+    "xi": 0.7483030835625478,
+    "legs": [
+      {
+        "name": "beta",
+        "phi0_implied": 0.047154776582982484,
+        "sigma": 0.01623001612623583,
+        "z_frozen": -0.37074366082337284,
+        "in_core_fit": true,
+        "note": "core four-leg GLS"
+      },
+      {
+        "name": "Omega_b",
+        "phi0_implied": 0.0531092471131151,
+        "sigma": 0.0013169560826065514,
+        "z_frozen": -0.047613633103335114,
+        "in_core_fit": true,
+        "note": "core four-leg GLS"
+      },
+      {
+        "name": "theta13",
+        "phi0_implied": 0.050724138930615455,
+        "sigma": 0.0013668981289878287,
+        "z_frozen": -1.7907795718783035,
+        "in_core_fit": true,
+        "note": "core four-leg GLS"
+      },
+      {
+        "name": "Cabibbo",
+        "phi0_implied": 0.053138697244883404,
+        "sigma": 0.00042667265843890947,
+        "z_frozen": -0.07794015225583133,
+        "in_core_fit": true,
+        "note": "core four-leg GLS"
+      },
+      {
+        "name": "xi = c3/phi0",
+        "phi0_implied": 0.7483030835625478,
+        "sigma": null,
+        "z_frozen": null,
+        "in_core_fit": false,
+        "note": "structural ratio 0.7483; not an extra DOF"
+      },
+      {
+        "name": "BBN Omega_b (shadow)",
+        "phi0_implied": 0.0531092471131151,
+        "sigma": null,
+        "z_frozen": -0.047613633103335114,
+        "in_core_fit": false,
+        "note": "same information as Omega_b leg; D/H and Y_p do not map to phi0 without [C] bridge"
+      },
+      {
+        "name": "Y_p",
+        "phi0_implied": null,
+        "sigma": null,
+        "z_frozen": null,
+        "in_core_fit": false,
+        "note": "BBN Y_p=0.2453: no primitive phi0 map ([O]); consistency via standard BBN"
+      },
+      {
+        "name": "D_H",
+        "phi0_implied": null,
+        "sigma": null,
+        "z_frozen": null,
+        "in_core_fit": false,
+        "note": "BBN D_H=2.547e-05: no primitive phi0 map ([O]); consistency via standard BBN"
+      },
+      {
+        "name": "N_eff",
+        "phi0_implied": null,
+        "sigma": null,
+        "z_frozen": null,
+        "in_core_fit": false,
+        "note": "BBN N_eff=3.044: no primitive phi0 map ([O]); consistency via standard BBN"
+      }
+    ],
+    "core_chi2_dof": 0.9961036431311138,
+    "verdict": "extended seed line: core chi2/dof=1.00 (unchanged); xi=c3/phi0=0.7483; BBN Y_p/D/H/N_eff recorded as shadow legs (no extra phi0 DOF). Kill unchanged: two families >3 sigma off common phi0."
+  },
+  "dynamic": {
+    "crab": [],
+    "frb_gaps": {
+      "available": true,
+      "source": "FRB 20121102A (FAST, Li+2021)",
+      "n_gaps": 1651,
+      "clock_ratio": 2.709511291351455,
+      "near_count": 77,
+      "p_value": 0.5917,
+      "verdict": "null"
+    },
+    "verdict": "dynamic probes: Crab matched-filter -- no Crab segments; FRB repeater gap clock -- null (p=0.5917). Open lever: Vela daily nu(t) (>3 comb periods)."
+  },
+  "headline": "Extended signature round: joint FRB/GW templates, horizon catalog, Galois-CP+J_PMNS, seed shadows, dynamic Crab/FRB probes. Search targets only."
+}

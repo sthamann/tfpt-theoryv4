@@ -1,7 +1,7 @@
 {
  "introduction::front::(front matter)::1": {
-  "hash": "bf401e00f03f",
-  "date": "2026-06-12"
+  "hash": "f6539c898ae3",
+  "date": "2026-06-24"
  },
  "introduction::section::What this is about: the jump in construction principle::1": {
   "hash": "04fdafccd10b",
@@ -36,8 +36,8 @@
   "date": "2026-06-23"
  },
  "introduction::section::The compiler: why $30=2\\cdot3\\cdot5$::1": {
-  "hash": "f1d07412f629",
-  "date": "2026-06-21"
+  "hash": "d7ace62c85ab",
+  "date": "2026-06-24"
  },
  "introduction::section::The $\\mu_4$ glue: how $E_8$ is really built::1": {
   "hash": "e76c4fe33c1d",
@@ -580,8 +580,8 @@
   "date": "2026-06-12"
  },
  "tfpt_4_frontier::front::(front matter)::1": {
-  "hash": "706e21c56ace",
-  "date": "2026-06-23"
+  "hash": "15f8fb407027",
+  "date": "2026-06-24"
  },
  "tfpt_4_frontier::section::Baryon asymmetry $\\eta_B$ --- a downstream readout from the closed $\\Omega_b h^2$::1": {
   "hash": "9496ae6a9fea",
@@ -712,12 +712,12 @@
   "date": "2026-06-19"
  },
  "origin_theory::front::(front matter)::1": {
-  "hash": "d018d8b4a693",
-  "date": "2026-06-14"
+  "hash": "1806669dfa1e",
+  "date": "2026-06-24"
  },
  "origin_theory::section::The whole integer skeleton from one pair $(\\gcar,\\Nfam)=(5,3)$::1": {
-  "hash": "b7f02f7fae2e",
-  "date": "2026-06-22"
+  "hash": "8ca1549ba3ae",
+  "date": "2026-06-24"
  },
  "origin_theory::section::The ``$8$'' is triply forced: geometry $=$ lattice $=$ gravity::1": {
   "hash": "649048863210",

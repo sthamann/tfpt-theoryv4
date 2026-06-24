@@ -34,7 +34,10 @@ from .strain_data import (
 )
 
 STRAIN_DIR = Path(__file__).resolve().parents[2] / "data" / "strain"
-LAG_GRID_MS = np.arange(2.0, 40.0, 0.5)     # echo-lag scan (object-dependent, free)
+LAG_GRID_MS = np.concatenate([
+    np.arange(0.5, 2.0, 0.05),   # gravastar / ECO scale (0.7 ms template)
+    np.arange(2.0, 40.0, 0.5),
+])
 N_ECHO = 5
 KERNEL = RATIO                              # (2/3)^6 frozen amplitude ratio
 Q_TOL = 0.5

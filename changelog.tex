@@ -38,6 +38,7 @@
 \providecommand{\gcar}{g_{\mathrm{car}}}\providecommand{\Nfam}{N_{\mathrm{fam}}}
 \providecommand{\Oadm}{\Omega_{\mathrm{adm}}}\providecommand{\ainv}{\alpha^{-1}}
 \providecommand{\Mbar}{\bar M_{\mathrm{Pl}}}\providecommand{\Z}{\mathbb{Z}}\providecommand{\PP}{\mathbb{P}}
+\providecommand{\Aut}{\operatorname{Aut}}
 \title{\textbf{TFPT --- Changelog}\\[1mm]\large All changes and new results, by date}
 \author{Stefan Hamann \and Alessandro Rizzo}
 \date{\today}
@@ -58,6 +59,30 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 \noindent The dated record of every change (canonical source: \texttt{changelog.tex}, also
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
+
+\subsection*{2026-06-24 ($\varphi_0$ leading term from icosahedral combinatorics: \texttt{v396})}
+\begin{itemize}
+  \item \mE/\mC\ \textbf{\texttt{v396\_phi0\_icosahedral.py}} (\texttt{HYP.PHI0.01}): the tree-level seed $\varphi_0^{\mathrm{tree}}=1/(6\pi)$ is exactly $F/(4h\pi)=F/(|\Aut|\pi)=(F/(\gcar\Nfam))c_3$ on the icosahedral hypergraph ($F=20$ triangular hyperedges, $h=30$, $|\Aut|=120$); $F/h=|Z_2|/\Nfam=2/3$ (the same survival ratio as \texttt{v327}). \mE\ Gauss--Bonnet consistent with $c_3=1/(|Z_2|4\pi)$ (\texttt{v216}/\texttt{v342}). \mE\ honest negative: the puncture $48c_3^4$ is still analytic, not a hypergraph fraction. \mC\ $\varphi_0^{\mathrm{tree}}$ is a combinatorial reinterpretation, not a new independent injection; the puncture stays \mO.
+\end{itemize}
+
+\subsection*{2026-06-24 (Coupled hypergraph rewrite: \texttt{v395} unifies carrier $\times$ family in one local rule)}
+\begin{itemize}
+  \item \mE\ \textbf{\texttt{v395\_hypergraph\_coupled.py}} (\texttt{HYP.COUPLED.01}): one coupled local rewrite on a $9\times3$ labelled grid (affine-$E_8$ nodes $\times$ family channels) unifies \texttt{v299} (carrier growth), \texttt{v327} (branching rule $M$) and \texttt{v324} (fiber product). Micro-step $=$ network lazy diffusion on each cusp column $+$ $M$ on each node's family vector ($T_{\mathrm{micro}}=T_{\mathrm{net}}\otimes M$); joint attractor marks$\otimes e_0$; one clock hand ($6$ family steps) gives recovery $(2/3)^6$; \texttt{v324}'s $T_{\mathrm{net}}\otimes T_{\mathrm{cusp}}$ emerges as the cusp-readout basis. \mO\ the $3$-arm seed ($P_2$) and analytic $\varphi_0$ remain irreducible (\texttt{v312}).
+\end{itemize}
+
+\subsection*{2026-06-24 (A falsifiable clock probe of the frontier: \texttt{v397} how external is the ``external physics''?)}
+\begin{itemize}
+\item \textbf{\texttt{v397} (\texttt{FR.CLOCK.PROBE.01}) --- do the ``external'' frontier scheme-numbers land on the
+$\{2,3,5\}$ clock?} A falsifiable, anti-numerology probe (strict No-Free-Pattern, \vref{v100}: ``on the clock'' means
+an \emph{exact} match, not a wide-band fit). \mE\ the $\eta_B$ decuple $A_\Lambda=10=|Z_2|\gcar$ is ON the clock
+(\vref{v212}); \mE\ the Koide rate $(2/3)^6=(|Z_2|/\Nfam)^6$ is ON the clock (\vref{v303}); \mE\ the axion spine angle
+$\theta_i=\pi\Nfam/\gcar=3\pi/5$ is ON the clock (\vref{v211}/\vref{v373}); \mE\ the proton $C_p\sim2.83\pm0.15$ is
+\emph{not} a discriminating clock value --- within its $\pm5.3\%$ band several simple values fit
+($2^{3/2},17/6,14/5$), so by No-Free-Pattern it is declared EXTERNAL (the firewall \vref{v187}/\vref{v374} is correct
+there). \mC\ verdict: $3$ of the $4$ frontier scheme-numbers land \emph{exactly} on the clock, so the irreducible
+``external physics'' residue shrinks to essentially the proton's non-perturbative QCD number $C_p$. Cited in
+\texttt{tfpt\_4\_frontier}; a falsifiable probe whose answer could have been ``none on the clock''; Python-only.
+\end{itemize}
 
 \subsection*{2026-06-24 (Clockwork coherence + an open question: \texttt{v394} primes $=$ atoms $=$ facets, and \texttt{RES.COXETER.SYMMETRY.01})}
 \begin{itemize}

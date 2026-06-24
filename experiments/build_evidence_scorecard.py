@@ -411,7 +411,7 @@ ROWS = [
      "search_target", "boundary recovery + mu4 clock (cross-correlation)",
      "search_target", "extended-signatures/frb_joint",
      ">=2 sources with simultaneous echo+PA p<0.05 replicated", "data_limited"],
-    ["FRB", "anyon pi/4 EVPA comb (EXT.2)", "m=8 spacing 45 deg (QT.05 spin quantum pi/4)",
+    ["FRB", "anyon pi/4 EVPA comb (EXT.2)", "m=4 spacing 45 deg (QT.05 spin quantum pi/4)",
      "injection validated; real PA null or m=2 dominance (FRB.08 reinterpretation)", None,
      "search_target", "carrier anyon MTC (v241-v243)",
      "search_target", "extended-signatures/frb_anyon",

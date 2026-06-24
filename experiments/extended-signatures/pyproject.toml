@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[project]
+name = "tfpt-extended-signatures"
+version = "0.1.0"
+description = "Extended TFPT signature searches: FRB joint, GW gravastar joint, horizon prints, Galois-CP, seed line, dynamic probes"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Stefan Hamann" }]
+keywords = ["TFPT", "signatures", "FRB", "GW", "recovery", "Galois-CP"]
+dependencies = ["numpy>=1.26", "scipy>=1.11"]
+
+[project.optional-dependencies]
+dev = ["ruff>=0.5"]
+
+[project.scripts]
+tfpt-ext = "tfpt_ext.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tfpt_ext"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

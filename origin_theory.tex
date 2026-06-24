@@ -33,6 +33,7 @@
 \newcommand{\phiz}{\varphi_0}
 \newcommand{\gcar}{g_{\mathrm{car}}}
 \newcommand{\Nfam}{N_{\mathrm{fam}}}
+\providecommand{\Aut}{\operatorname{Aut}}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\PP}{\mathbb P}
 \newcommand{\ainv}{\alpha^{-1}}
@@ -219,6 +220,26 @@ adjacency eigenvalue (the \vref{v312} negative, now a proof). \mO\ The residual 
 \emph{ratio} $2/3$ from the arity $\{|\Z_2|,\Nfam\}=\{2,3\}$, leaving only the anchor atoms as input --- so the
 substrate is the $(2,3,5)$ adjacency (carrier) $\times$ this minimal branching rule (family), both built from
 $\{2,3,5\}$ \mC.
+
+\par\smallskip\noindent\textbf{One coupled local rule}
+(\veri{v395\_hypergraph\_coupled.py}). The three hypergraph modules (\veri{v299\_hypergraph\_0d\_autonomous.py},
+\veri{v327\_hypergraph\_rewrite.py}, \veri{v324\_hypergraph\_fiber.py}) merge
+into a \emph{single} rewrite on a $9{\times}3$ labelled grid: one micro-step $=$ network lazy diffusion on each
+cusp column $+$ the \veri{v327\_hypergraph\_rewrite.py} rule $M$ on each node's family vector ($T_{\mathrm{micro}}{=}T_{\mathrm{net}}\otimes
+M$, purely local on $27$ cells). \mE\ The joint attractor is marks$\otimes(w{=}0)$; one clock hand ($2\Nfam$ family
+micro-steps) carries recovery $(2/3)^6$; \veri{v324\_hypergraph\_fiber.py}'s $T_{\mathrm{net}}\otimes T_{\mathrm{cusp}}$ is the same
+substrate in the Galois/cusp readout basis (\veri{v317\_galois\_family.py}); \veri{v299\_hypergraph\_0d\_autonomous.py}'s growth $E_6{\to}E_7{\to}E_8{\to}\hat E_8$ is
+unchanged with the fiber attached. \mO\ The mechanism is unified; the irreducible inputs remain the $3$-arm seed
+($P_2$) and the analytic seed $\phiz$ (puncture term still \veri{v312\_hypergraph\_substrate.py}).
+
+\par\smallskip\noindent\textbf{The seed at leading order}
+(\veri{v396\_phi0\_icosahedral.py}). The tree-level retained seed
+$\varphi_0^{\mathrm{tree}}=1/(6\pi)$ is not an independent hypergraph injection: on the icosahedral
+$(2,3,5)$ skeleton it equals $F/(4h\pi)=F/(|\Aut|\pi)=(F/(\gcar\Nfam))c_3$ with $F=20$ triangular
+hyperedges, $h=30$, $|\Aut|=120$, and $F/h=|\Z_2|/\Nfam=2/3$ (the same ratio as \veri{v327\_hypergraph\_rewrite.py}). \mE\
+Gauss--Bonnet consistent ($c_3=1/(|\Z_2|4\pi)$, \veri{v216\_marks\_gauss\_bonnet.py}/\veri{v342\_em\_ward\_heatkernel.py}).
+\mE\ The puncture $48c_3^4$ is still analytic, not a rational hypergraph fraction (\veri{v312\_hypergraph\_substrate.py}). \mC\
+At leading order the seed is combinatorial; the puncture remains \mO.
 
 \par\smallskip\noindent\textbf{Static vs.\ dynamic rates: a number-field split}
 (\veri{v314\_rate\_translation.py}). The discrete kernel and the dynamic recovery sit in \emph{different number

@@ -46,6 +46,686 @@ export const CHANGELOG: ChangelogEntry[] = [
     "dateLabel": "2026-06-24",
     "heading": [
       {
+        "k": "m",
+        "v": "\\varphi_0"
+      },
+      {
+        "k": "t",
+        "v": " leading term from icosahedral combinatorics: "
+      },
+      {
+        "k": "c",
+        "v": "v396"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v396_phi0_icosahedral.py"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "HYP.PHI0.01"
+        },
+        {
+          "k": "t",
+          "v": "): the tree-level seed "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi_0^{\\mathrm{tree}}=1/(6\\pi)"
+        },
+        {
+          "k": "t",
+          "v": " is exactly "
+        },
+        {
+          "k": "m",
+          "v": "F/(4h\\pi)=F/(|\\Aut|\\pi)=(F/(\\gcar\\Nfam))c_3"
+        },
+        {
+          "k": "t",
+          "v": " on the icosahedral hypergraph ("
+        },
+        {
+          "k": "m",
+          "v": "F=20"
+        },
+        {
+          "k": "t",
+          "v": " triangular hyperedges, "
+        },
+        {
+          "k": "m",
+          "v": "h=30"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "|\\Aut|=120"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "m",
+          "v": "F/h=|Z_2|/\\Nfam=2/3"
+        },
+        {
+          "k": "t",
+          "v": " (the same survival ratio as "
+        },
+        {
+          "k": "c",
+          "v": "v327"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "Gauss–Bonnet consistent with "
+        },
+        {
+          "k": "m",
+          "v": "c_3=1/(|Z_2|4\\pi)"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v216"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v342"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "honest negative: the puncture "
+        },
+        {
+          "k": "m",
+          "v": "48c_3^4"
+        },
+        {
+          "k": "t",
+          "v": " is still analytic, not a hypergraph fraction. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "m",
+          "v": "\\varphi_0^{\\mathrm{tree}}"
+        },
+        {
+          "k": "t",
+          "v": " is a combinatorial reinterpretation, not a new independent injection; the puncture stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-24",
+    "dateLabel": "2026-06-24",
+    "heading": [
+      {
+        "k": "t",
+        "v": "Coupled hypergraph rewrite: "
+      },
+      {
+        "k": "c",
+        "v": "v395"
+      },
+      {
+        "k": "t",
+        "v": " unifies carrier "
+      },
+      {
+        "k": "m",
+        "v": "\\times"
+      },
+      {
+        "k": "t",
+        "v": " family in one local rule"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v395_hypergraph_coupled.py"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "HYP.COUPLED.01"
+        },
+        {
+          "k": "t",
+          "v": "): one coupled local rewrite on a "
+        },
+        {
+          "k": "m",
+          "v": "9\\times3"
+        },
+        {
+          "k": "t",
+          "v": " labelled grid (affine-"
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " nodes "
+        },
+        {
+          "k": "m",
+          "v": "\\times"
+        },
+        {
+          "k": "t",
+          "v": " family channels) unifies "
+        },
+        {
+          "k": "c",
+          "v": "v299"
+        },
+        {
+          "k": "t",
+          "v": " (carrier growth), "
+        },
+        {
+          "k": "c",
+          "v": "v327"
+        },
+        {
+          "k": "t",
+          "v": " (branching rule "
+        },
+        {
+          "k": "m",
+          "v": "M"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "c",
+          "v": "v324"
+        },
+        {
+          "k": "t",
+          "v": " (fiber product). Micro-step "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " network lazy diffusion on each cusp column "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "M"
+        },
+        {
+          "k": "t",
+          "v": " on each node's family vector ("
+        },
+        {
+          "k": "m",
+          "v": "T_{\\mathrm{micro}}=T_{\\mathrm{net}}\\otimes M"
+        },
+        {
+          "k": "t",
+          "v": "); joint attractor marks"
+        },
+        {
+          "k": "m",
+          "v": "\\otimes e_0"
+        },
+        {
+          "k": "t",
+          "v": "; one clock hand ("
+        },
+        {
+          "k": "m",
+          "v": "6"
+        },
+        {
+          "k": "t",
+          "v": " family steps) gives recovery "
+        },
+        {
+          "k": "m",
+          "v": "(2/3)^6"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "v324"
+        },
+        {
+          "k": "t",
+          "v": "'s "
+        },
+        {
+          "k": "m",
+          "v": "T_{\\mathrm{net}}\\otimes T_{\\mathrm{cusp}}"
+        },
+        {
+          "k": "t",
+          "v": " emerges as the cusp-readout basis. "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the "
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": "-arm seed ("
+        },
+        {
+          "k": "m",
+          "v": "P_2"
+        },
+        {
+          "k": "t",
+          "v": ") and analytic "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi_0"
+        },
+        {
+          "k": "t",
+          "v": " remain irreducible ("
+        },
+        {
+          "k": "c",
+          "v": "v312"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-24",
+    "dateLabel": "2026-06-24",
+    "heading": [
+      {
+        "k": "t",
+        "v": "A falsifiable clock probe of the frontier: "
+      },
+      {
+        "k": "c",
+        "v": "v397"
+      },
+      {
+        "k": "t",
+        "v": " how external is the “external physics”?"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v397"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "FR.CLOCK.PROBE.01"
+            },
+            {
+              "k": "t",
+              "v": ") — do the “external” frontier scheme-numbers land on the "
+            },
+            {
+              "k": "m",
+              "v": "\\{2,3,5\\}"
+            },
+            {
+              "k": "t",
+              "v": " clock?"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " A falsifiable, anti-numerology probe (strict No-Free-Pattern, "
+        },
+        {
+          "k": "c",
+          "v": "v100"
+        },
+        {
+          "k": "t",
+          "v": ": “on the clock” means an "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "exact"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " match, not a wide-band fit). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the "
+        },
+        {
+          "k": "m",
+          "v": "\\eta_B"
+        },
+        {
+          "k": "t",
+          "v": " decuple "
+        },
+        {
+          "k": "m",
+          "v": "A_\\Lambda=10=|Z_2|\\gcar"
+        },
+        {
+          "k": "t",
+          "v": " is ON the clock ("
+        },
+        {
+          "k": "c",
+          "v": "v212"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the Koide rate "
+        },
+        {
+          "k": "m",
+          "v": "(2/3)^6=(|Z_2|/\\Nfam)^6"
+        },
+        {
+          "k": "t",
+          "v": " is ON the clock ("
+        },
+        {
+          "k": "c",
+          "v": "v303"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the axion spine angle "
+        },
+        {
+          "k": "m",
+          "v": "\\theta_i=\\pi\\Nfam/\\gcar=3\\pi/5"
+        },
+        {
+          "k": "t",
+          "v": " is ON the clock ("
+        },
+        {
+          "k": "c",
+          "v": "v211"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v373"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the proton "
+        },
+        {
+          "k": "m",
+          "v": "C_p\\sim2.83\\pm0.15"
+        },
+        {
+          "k": "t",
+          "v": " is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " a discriminating clock value — within its "
+        },
+        {
+          "k": "m",
+          "v": "\\pm5.3\\%"
+        },
+        {
+          "k": "t",
+          "v": " band several simple values fit ("
+        },
+        {
+          "k": "m",
+          "v": "2^{3/2},17/6,14/5"
+        },
+        {
+          "k": "t",
+          "v": "), so by No-Free-Pattern it is declared EXTERNAL (the firewall "
+        },
+        {
+          "k": "c",
+          "v": "v187"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v374"
+        },
+        {
+          "k": "t",
+          "v": " is correct there). "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "verdict: "
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": " of the "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " frontier scheme-numbers land "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "exactly"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " on the clock, so the irreducible “external physics” residue shrinks to essentially the proton's non-perturbative QCD number "
+        },
+        {
+          "k": "m",
+          "v": "C_p"
+        },
+        {
+          "k": "t",
+          "v": ". Cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_4_frontier"
+        },
+        {
+          "k": "t",
+          "v": "; a falsifiable probe whose answer could have been “none on the clock”; Python-only."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-24",
+    "dateLabel": "2026-06-24",
+    "heading": [
+      {
         "k": "t",
         "v": "Clockwork coherence + an open question: "
       },
