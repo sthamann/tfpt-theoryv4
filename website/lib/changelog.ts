@@ -47,6 +47,306 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "Attacking the last open lemma: "
+      },
+      {
+        "k": "c",
+        "v": "v392"
+      },
+      {
+        "k": "t",
+        "v": " the scaling-limit central charge "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "converges"
+          }
+        ]
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v392"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.S3.SCALINGLIMIT.01"
+            },
+            {
+              "k": "t",
+              "v": ") — an honest attack on "
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EQUIV.01"
+            },
+            {
+              "k": "t",
+              "v": "'s one open lemma (continuum existence, "
+            },
+            {
+              "k": "c",
+              "v": "v336"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " It does "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " close "
+        },
+        {
+          "k": "c",
+          "v": "v336"
+        },
+        {
+          "k": "t",
+          "v": " (the abstract existence is the cited MMST theorem); it strengthens the case with the existence-relevant observable "
+        },
+        {
+          "k": "c",
+          "v": "v376"
+        },
+        {
+          "k": "t",
+          "v": " did not test: that the finite-size data "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "converge"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the Calabrese–Cardy entanglement slope "
+        },
+        {
+          "k": "m",
+          "v": "c_1(L)"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "L=66,130,258,386,514"
+        },
+        {
+          "k": "t",
+          "v": " is a monotone Cauchy-like sequence approaching "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "|c_1(L)-1|"
+        },
+        {
+          "k": "t",
+          "v": " strictly decreasing, "
+        },
+        {
+          "k": "m",
+          "v": "4.6\\times10^{-4}\\to7\\times10^{-6}"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "a "
+        },
+        {
+          "k": "m",
+          "v": "1/L"
+        },
+        {
+          "k": "t",
+          "v": " Richardson fit extrapolates to "
+        },
+        {
+          "k": "m",
+          "v": "c_1(\\infty)\\approx1.000"
+        },
+        {
+          "k": "t",
+          "v": ", so the "
+        },
+        {
+          "k": "m",
+          "v": "16"
+        },
+        {
+          "k": "t",
+          "v": "-Majorana collar "
+        },
+        {
+          "k": "m",
+          "v": "c=8c_1\\approx8.00\n=\\gcar{+}\\Nfam"
+        },
+        {
+          "k": "t",
+          "v": " is reached "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "in"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the limit; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the successive differences are themselves strictly decreasing (a numerical Cauchy sequence). "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "convergent data are evidence, not a proof of existence (the cited MMST theorem, "
+        },
+        {
+          "k": "c",
+          "v": "v336"
+        },
+        {
+          "k": "t",
+          "v": "), and do not pin "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " over the same-"
+        },
+        {
+          "k": "m",
+          "v": "c"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "SO(16)_1"
+        },
+        {
+          "k": "t",
+          "v": " (the holomorphy discriminator, "
+        },
+        {
+          "k": "c",
+          "v": "v377"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v378"
+        },
+        {
+          "k": "t",
+          "v": "). Strengthens the residual, does "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " close it. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": "; Python-only."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-24",
+    "dateLabel": "2026-06-24",
+    "heading": [
+      {
+        "k": "t",
         "v": "Lean 4: "
       },
       {

@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`386` registered scripts · `446` ledger claims · `10` clusters.
+`387` registered scripts · `447` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (40 scripts)
+### `core` — Compiler core & the E₈ glue  (41 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -91,6 +91,8 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v286_seam_equivalence_contract, v344, v154, v369, v83, v87 · cited: research contracts
 - **v379_seam_s3_rp** [E/C/O] `SEAM.S3.RP.01` — C7 / OS reconstruction: reflection positivity (the OS axiom) of the explicit gapped collar measure, verified numerically -- the remaining constructive-QFT ingredient for the OS rec
   - deps: QG.AMB.01, v367, v369, v240, v76, v376, v377, v378 · cited: research contracts
+- **v392_seam_s3_scalinglimit** [E/O] `SEAM.S3.SCALINGLIMIT.01` — SEAM.S3.SCALINGLIMIT.01: an HONEST attack on the one open lemma of SEAM.EQUIV.01 (the continuum scaling-limit existence, v336) -- does NOT close it (the abstract existence is the c
+  - deps: v336_continuum_limit, v336, v367, v368, v376, v377, v378 · cited: research contracts
 
 ### `em` — Electromagnetic fixed point  (6 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -836,13 +838,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `SEAM.EQUIV.01`×23, `v76`×17, `v56`×17, `E8.GLU.01`×15, `QG.AMB.01`×15, `HOR.NARIAI.01`×15, `v336`×14, `v216`×13, `REG.FREEZE.01`×12, `AX.P1.01`×11, `v3`×11, `v312`×11, `QGEO.SUBPRIN.01`×11, `FLAV.KQ.01`×10
+**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `SEAM.EQUIV.01`×23, `v76`×17, `v56`×17, `E8.GLU.01`×15, `QG.AMB.01`×15, `v336`×15, `HOR.NARIAI.01`×15, `v216`×13, `REG.FREEZE.01`×12, `AX.P1.01`×11, `v3`×11, `v312`×11, `QGEO.SUBPRIN.01`×11, `FLAV.KQ.01`×10
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v380_grav_kms_hessian** — `GRAV.KMS.HESSIAN.01`
 - **v381_qft4d_eg_allorder** — `QFT4D.EG.ALLORDER.01`
 - **v382_alpha_quillen_exact** — `ALPHA.QUILLEN.EXACT.01`
 - **v383_dynamics_universal** — `DYNAMICS.UNIVERSAL.01`
@@ -854,4 +855,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v389_grav_loop_finiteness** — `GRAV.LOOP.FINITE.01`
 - **v390_prime2_facet** — `COXETER.PRIME2.01`
 - **v391_alpha_quillen_progress** — `ALPHA.QUILLEN.PROGRESS.01`
+- **v392_seam_s3_scalinglimit** — `SEAM.S3.SCALINGLIMIT.01`
 

@@ -486,6 +486,7 @@ const NODES: DagNode[] = [
       "v377_seam_s3_e8character.py",
       "v378_seam_s3_modular.py",
       "v379_seam_s3_rp.py",
+      "v392_seam_s3_scalinglimit.py",
       "v380_grav_kms_hessian.py",
       "v381_qft4d_eg_allorder.py",
       "v385_uvbranch_killtest.py",
