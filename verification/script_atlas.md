@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`404` registered scripts · `464` ledger claims · `10` clusters.
+`404` registered scripts · `465` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -513,8 +513,8 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v404_e8_char_cm_duality, v286_seam_equivalence_contract, v404, v220, v233, v72, v69, v137 · cited: origin theory
 - **v408_phi0_puncture_heatkernel** [E/C/O] `HYP.PHI0.PUNCTURE.01` — HYP.PHI0.PUNCTURE.01: name the phi0 puncture term dtop = 48 c3^4 as the order-4 local boundary heat-kernel (Seeley-DeWitt) contact term of the mu4 puncture divisor -- the analytic 
   - deps: v396_phi0_icosahedral, v106_review_validation, v396, v312, v216, v342, v391 · cited: origin theory
-- **v409_coxeter_prime2_lemma** [-] `(no ledger claim)` — RES.COXETER.SYMMETRY.01 closed as a STRUCTURAL LEMMA: prime-2 is NECESSARY but NOT autonomous -- no prime-2-only attractor exists (resolves the v394/COXETER.ATOMS.01 open question'
-  - cited: research contracts
+- **v409_coxeter_prime2_lemma** [E/O] `FORM.COXETER.PRIME2.01` — RES.COXETER.SYMMETRY.01 closed as a STRUCTURAL LEMMA: prime-2 is NECESSARY but NOT autonomous -- no prime-2-only attractor exists (resolves the v394/COXETER.ATOMS.01 open question'
+  - deps: v394_coxeter_atoms.py; v409_coxeter_prime2_lemma, v394_coxeter_atoms, v394, v409 · cited: research contracts
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (168 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -889,5 +889,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v406_pmns_phase_origin** — `FLAV.PMNS.CLOSE.01`
 - **v407_dn_pairings_omega** — `FLAV.SELECTOR.CLOSE.01`
 - **v408_phi0_puncture_heatkernel** — `HYP.PHI0.PUNCTURE.01`
-- **v409_coxeter_prime2_lemma** — `(no claim)`
+- **v409_coxeter_prime2_lemma** — `FORM.COXETER.PRIME2.01`
 

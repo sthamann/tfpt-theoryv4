@@ -41,6 +41,7 @@ import TfptCarrier.GlueUniqueness
 import TfptCarrier.SeamDeckClosure
 import TfptCarrier.MobiusUniformisation
 import TfptCarrier.CohomologyGrading
+import TfptCarrier.CoxeterPrime2
 
 -- Layer 1: Polarization (algebraic core)
 #print axioms TFPT.Carrier.Polarization.sixY_carrier_polynomial
@@ -189,6 +190,13 @@ import TfptCarrier.CohomologyGrading
 #print axioms TFPT.Carrier.MobiusUniformisation.sigma_perm_mu4
 #print axioms TFPT.Carrier.MobiusUniformisation.mult_order_four_iff
 #print axioms TFPT.Carrier.MobiusUniformisation.uniformisation_normal_form
+
+-- Coxeter prime-2 structural lemma (RES.COXETER.SYMMETRY.01 corollary; v409)
+#print axioms TFPT.Carrier.CoxeterPrime2.involution_eigenvalue
+#print axioms TFPT.Carrier.CoxeterPrime2.idempotent_eigenvalue
+#print axioms TFPT.Carrier.CoxeterPrime2.involution_not_contraction
+#print axioms TFPT.Carrier.CoxeterPrime2.idempotent_not_contraction
+#print axioms TFPT.Carrier.CoxeterPrime2.no_prime2_only_attractor
 
 -- Cohomology grading (QGEO.COHOM.01 character node + MODULE parity; v177)
 #print axioms TFPT.Carrier.CohomologyGrading.omega1_pullback

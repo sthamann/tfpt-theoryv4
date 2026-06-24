@@ -573,6 +573,182 @@ export const CHANGELOG: ChangelogEntry[] = [
           "c": [
             {
               "k": "t",
+              "v": "Lean closure of the prime-2 corollary ("
+            },
+            {
+              "k": "c",
+              "v": "FORM.COXETER.PRIME2.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The v409 result is now also machine-proved in Lean 4 / Mathlib (new module "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier/CoxeterPrime2.lean"
+        },
+        {
+          "k": "t",
+          "v": "): an involution eigenvalue ("
+        },
+        {
+          "k": "m",
+          "v": "r^2{=}1"
+        },
+        {
+          "k": "t",
+          "v": ") is "
+        },
+        {
+          "k": "m",
+          "v": "\\pm1"
+        },
+        {
+          "k": "t",
+          "v": ", a projector eigenvalue ("
+        },
+        {
+          "k": "m",
+          "v": "r^2{=}r"
+        },
+        {
+          "k": "t",
+          "v": ") is "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " or "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": ", neither lies in the open interval "
+        },
+        {
+          "k": "m",
+          "v": "(0,1)"
+        },
+        {
+          "k": "t",
+          "v": ", while "
+        },
+        {
+          "k": "m",
+          "v": "2/3"
+        },
+        {
+          "k": "t",
+          "v": " does — so "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "no prime-2-only attractor exists"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ". Built clean ("
+        },
+        {
+          "k": "c",
+          "v": "lake build"
+        },
+        {
+          "k": "t",
+          "v": "); the new theorems are axiom-pure ("
+        },
+        {
+          "k": "m",
+          "v": "\\#"
+        },
+        {
+          "k": "c",
+          "v": "print axioms"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "propext"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "Classical.choice"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "Quot.sound"
+        },
+        {
+          "k": "t",
+          "v": " only) and pass the "
+        },
+        {
+          "k": "c",
+          "v": "AuditCheck"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "AuditContract"
+        },
+        {
+          "k": "t",
+          "v": " signature locks. This lifts "
+        },
+        {
+          "k": "c",
+          "v": "RES.COXETER.SYMMETRY.01"
+        },
+        {
+          "k": "t",
+          "v": " to the machine-proof tier."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
               "v": "Verified, no change (Plücker "
             },
             {

@@ -62,6 +62,7 @@ import TfptCarrier.Hypercharge
 import TfptCarrier.SeamDeckClosure
 import TfptCarrier.MobiusUniformisation
 import TfptCarrier.CohomologyGrading
+import TfptCarrier.CoxeterPrime2
 
 namespace TFPT.Carrier.AuditContract
 
@@ -503,5 +504,16 @@ example (z : ℂ) (hz : z ≠ 0) (hz4 : z ^ 4 - 1 ≠ 0) :
     TFPT.Carrier.CohomologyGrading.sigmaPull TFPT.Carrier.CohomologyGrading.omega1 z
       = TFPT.Carrier.CohomologyGrading.omega3 z :=
   TFPT.Carrier.CohomologyGrading.omega1_reflection z hz hz4
+
+/-! ## Coxeter prime-2 structural lemma (RES.COXETER.SYMMETRY.01 corollary; v409) -/
+
+/-- No prime-2-only attractor exists: every involution eigenvalue (`r²=1`) and
+every projector eigenvalue (`r²=r`) fails to be a contraction rate in `(0,1)`,
+while the seam family rate `2/3` is one. -/
+example :
+    (∀ r : ℝ, r * r = 1 → ¬ TFPT.Carrier.CoxeterPrime2.IsContractionRate r) ∧
+    (∀ r : ℝ, r * r = r → ¬ TFPT.Carrier.CoxeterPrime2.IsContractionRate r) ∧
+    TFPT.Carrier.CoxeterPrime2.IsContractionRate ((2 : ℝ) / 3) :=
+  TFPT.Carrier.CoxeterPrime2.no_prime2_only_attractor
 
 end TFPT.Carrier.AuditContract

@@ -40,6 +40,7 @@ import TfptCarrier.SeamWindingInterface
 import TfptCarrier.CarrierData
 import TfptCarrier.Hypercharge
 import TfptCarrier.GlueUniqueness
+import TfptCarrier.CoxeterPrime2
 
 -- Layer 1: Polarization (algebraic core)
 #check @TFPT.Carrier.Polarization.sixY_carrier_polynomial
@@ -185,3 +186,12 @@ import TfptCarrier.GlueUniqueness
 #check @TFPT.Carrier.GlueUniqueness.unique_halfway_stage
 #check @TFPT.Carrier.GlueUniqueness.carrier_index_lemma
 #check @TFPT.Carrier.GlueUniqueness.glue_sectors_are_currents
+
+-- Coxeter prime-2 structural lemma (RES.COXETER.SYMMETRY.01 corollary; v409)
+#check @TFPT.Carrier.CoxeterPrime2.involution_eigenvalue
+#check @TFPT.Carrier.CoxeterPrime2.idempotent_eigenvalue
+#check @TFPT.Carrier.CoxeterPrime2.involution_not_contraction
+#check @TFPT.Carrier.CoxeterPrime2.idempotent_not_contraction
+#check @TFPT.Carrier.CoxeterPrime2.no_prime2_only_attractor
+#check @TFPT.Carrier.CoxeterPrime2.parity_eigenvalue_remembers_start
+#check @TFPT.Carrier.CoxeterPrime2.seam_rate_has_attractor

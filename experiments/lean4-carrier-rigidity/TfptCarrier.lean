@@ -63,6 +63,7 @@ import TfptCarrier.CohomologyGrading
 import TfptCarrier.AnchorLadder
 import TfptCarrier.PascalLadder
 import TfptCarrier.SpectralGapAttractor
+import TfptCarrier.CoxeterPrime2
 import TfptCarrier.Sanity
 import TfptCarrier.AxiomCheck
 import TfptCarrier.AuditCheck

@@ -82,6 +82,13 @@ same section: the robust dominant-DM branch is the \emph{spine} angle $\theta_i{
 (untuned, in band), while the seam hilltop $\theta_i{\approx}170^\circ$ over-produces ($\sim5.4\times$) and is
 disfavoured; the misalignment angle is retyped from a closed \mE\ input to a \mC\ branch decision. The website
 prediction card now leads with the spine angle.
+\item \textbf{Lean closure of the prime-2 corollary (\texttt{FORM.COXETER.PRIME2.01}).} The v409 result is now
+also machine-proved in Lean~4 / Mathlib (new module \texttt{TfptCarrier/CoxeterPrime2.lean}): an involution
+eigenvalue ($r^2{=}1$) is $\pm1$, a projector eigenvalue ($r^2{=}r$) is $0$ or $1$, neither lies in the open
+interval $(0,1)$, while $2/3$ does --- so \emph{no prime-2-only attractor exists}. Built clean
+(\texttt{lake build}); the new theorems are axiom-pure ($\#$\texttt{print axioms} $=$ \texttt{propext},
+\texttt{Classical.choice}, \texttt{Quot.sound} only) and pass the \texttt{AuditCheck}/\texttt{AuditContract}
+signature locks. This lifts \texttt{RES.COXETER.SYMMETRY.01} to the machine-proof tier.
 \item \textbf{Verified, no change (Pl\"ucker $11$).} The quark constant $11{=}\|Pl(K)\|_1{=}\det(\mathbf1|a|\sigma)$
 is already typed honestly as an \mE\ identity with ``why $11$'' the lone \mO\ residue (\vref{v407}, \texttt{tfpt\_1});
 the repo carried no overstatement, so no edit was required.
