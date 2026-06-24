@@ -29,6 +29,8 @@ import numpy as np
 
 from .chime import read_chime_profile
 from .comb import LAMBDA, MIN_COMB_PERIODS, OMEGA, run_comb, stacked_comb_test
+from .grb import DATA as GRB_DIR
+from .grb import read_grb_csv
 
 DATA = Path(__file__).resolve().parents[2] / "data"
 FRB_WATERFALLS = (Path(__file__).resolve().parents[3]
@@ -323,6 +325,72 @@ def channel_a3b_chime_baseband() -> Channel:
                    head + detail + tnote, agg)
 
 
+# --------------------------------------------------------------------------- A4 GRB plateau
+def channel_a4_grb() -> Channel:
+    """GRB X-ray afterglow plateau (stacked) -- the WIDEST-ln(t) astrophysical recovery in hand.
+    A Swift-XRT flux light curve spans ~100 s..10^6-10^7 s (4-5 decades = 4-5 comb periods), so a
+    SINGLE GRB clears the ln-range gate the ms FRB tails (A3) cannot, and >1000 public curves make
+    the faint ~1.7% comb stackable with real statistics -- so this channel is NOT data-limited.
+    Recovery observable y = ln(flux) (the detector's degree-2 ln-t baseline absorbs the power-law
+    plateau/break trend, as in A1). Legitimacy 'surface': a central-engine/accretion relaxation,
+    NOT a horizon recovery -- a comb here is a universal-DSI coincidence, a NULL is the informative
+    outcome. Get data with ``tfpt-combdomains fetch-grb``."""
+    files = sorted(GRB_DIR.glob("*.csv")) if GRB_DIR.exists() else []
+    per: list[dict] = []
+    curves: list[tuple[np.ndarray, np.ndarray]] = []
+    for fpath in files:
+        rd = read_grb_csv(fpath)
+        if rd is None:
+            continue
+        t, flux = rd
+        rec = np.log(flux)                        # recovery observable in log space
+        res = run_comb(t, rec)
+        res["source"] = fpath.stem
+        per.append(res)
+        if res["range_sufficient"]:
+            curves.append((t, rec))
+
+    if not per:
+        return Channel(
+            "A4", "GRB X-ray afterglow plateau (stacked)", "surface", "data_limited",
+            "NO data yet. FETCH: `tfpt-combdomains fetch-grb` pulls public Swift-XRT GRB flux light "
+            "curves (UKSSDC, Evans+2007/2009) for a curated long/plateau-GRB list into "
+            "data/grb/<name>.csv (header t_s,flux[,flux_err], T0-relative seconds). A single GRB "
+            "afterglow spans 4-5 decades in ln(t) (4-5 comb periods) -> clears the gate that the ms "
+            "FRB tails cannot; central-engine relaxation (surface firewall), not a horizon recovery.")
+
+    stack = stacked_comb_test(curves) if curves else None
+    head = (f"REAL data: {len(per)} Swift-XRT GRB afterglow(s); {len(curves)} clear the ln-range gate "
+            f"(>= {MIN_COMB_PERIODS} comb periods -- most single GRBs do, ~4-5 decades). ")
+    detail = "; ".join(
+        f"{p['source']} (periods={p['comb_periods']}, p={p['p_value']}"
+        + ("" if p["range_sufficient"] else ", <gate: EXCLUDED") + ")"
+        for p in per)
+    if stack and stack["n_used"]:
+        tail = (f". STACKED over {stack['n_used']} GRBs: kernel omega={OMEGA:.2f} is "
+                + (f"SPECIAL (p={stack['p_value']}) -> ESCALATE (independent cross-check first)"
+                   if stack["comb_detected"]
+                   else f"NOT special (p={stack['p_value']}) -> clean NULL")
+                + " (central-engine/accretion relaxation -> surface firewall, not a horizon recovery; "
+                  "but WIDE-ln(t) + high-statistics, so this NULL is well-powered, NOT data-limited).")
+    else:
+        tail = ". No GRB clears the ln-range gate yet -> RANGE-LIMITED (unexpected; check the fetch)."
+    agg = {
+        "n_points": int(sum(p["n_points"] for p in per)),
+        "comb_periods": max(p["comb_periods"] for p in per),
+        "range_sufficient": bool(curves),
+        "gain": (stack or {}).get("gain", 0.0),
+        "p_value": (stack or {}).get("p_value", 1.0),
+        "comb_detected": bool(stack and stack["comb_detected"]),
+        "omega": OMEGA,
+        "n_sources": len(per),
+        "n_stacked": (stack or {}).get("n_used", 0),
+        "per_source": per,
+    }
+    return Channel("A4", "GRB X-ray afterglow plateau (stacked)", "surface", "real",
+                   head + detail + tail, agg)
+
+
 # --------------------------------------------------------------------------- B4 BEC analog horizon
 def channel_b4_bec_analog() -> Channel:
     """BEC analog-horizon Hawking/Page recovery -- a laboratory horizon. The recovery-channel
@@ -360,6 +428,6 @@ class DomainReport:
 def all_channels() -> DomainReport:
     return DomainReport(OMEGA, LAMBDA, MIN_COMB_PERIODS, [
         channel_a1_magnetar(), channel_a2_bh_tail(), channel_a3_frb_tail(),
-        channel_a3b_chime_baseband(),
+        channel_a3b_chime_baseband(), channel_a4_grb(),
         channel_b4_bec_analog(), channel_b5_quantum_ladder(),
     ])

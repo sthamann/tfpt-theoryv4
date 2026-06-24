@@ -39,7 +39,7 @@ Injection-validated (`validate_stack`): a faint `ε = 3–5 %` comb that a singl
 anti-conservative at ~3 periods, so a stacked hit is **escalate → independent cross-check**, never a
 claim).
 
-## The six channels (`channels.py`)
+## The seven channels (`channels.py`)
 
 | ch | domain | firewall legitimacy | data status | result |
 |---|---|---|---|---|
@@ -47,6 +47,7 @@ claim).
 | **A2** | BH late-time ringdown tail / QNM `ln3` | horizon | `data_limited` | horizon-legit but below single-event SNR (see gw-ringdown-spectroscopy) |
 | **A3** | FRB burst tail (FAST/GBT, stacked) | horizon-residual | **real** | **8 bright bursts / 3 repeaters**, 7 clear the gate; **stacked ω=2.58 not special (p≈0.34) → clean NULL** (weak: scattering-dominated, ~2% comb) |
 | **A3b** | CHIME baseband FRB tail (stacked) | horizon-residual | **real** | **8 distinct FRBs**, 2.56 µs coherently-dedispersed full-Stokes (DOI 10.11570/23.0029); all 8 clear the gate; **stacked ω=2.58 not special (p≈0.67) → clean NULL** (genuine scattering tails, still ~2% ceiling) |
+| **A4** | GRB X-ray afterglow plateau (stacked) | surface (borderline) | **real** | **22 Swift-XRT afterglows** (UKSSDC), **17 clear the gate at 3–4.4 comb periods** — the widest-ln(t) astrophysical recovery in hand; **stacked ω=2.58 NOT special (p≈0.13) → well-powered NULL** (not data-limited; central-engine/accretion, surface firewall) |
 | **B4** | BEC analog-horizon Hawking/Page | analog | `needs_experiment` | most direct boundary-recovery analog; theory = recovery-channel; needs analog-gravity data |
 | **B5** | quantum-simulator geometric ladder | internal | `needs_experiment` | comb by construction (quantum-testbed synthetic); needs a built simulator |
 
@@ -62,6 +63,18 @@ scattering tails** (not noise-filled range), and the stack is again a **clean NU
 special, p≈0.67). A2 (BH late-time tail) is the
 horizon-legitimate but data-limited channel; B4/B5 need bespoke experiments. The comb is intrinsically
 a ~2% effect needing a clean, wide-range recovery — the search space is genuinely narrow. **No claim.**
+
+**A4 (GRB X-ray afterglow plateau) is the widest-ln(t) astrophysical channel and the first that is
+NOT data-limited.** A Swift-XRT afterglow flux curve spans ~100 s … 10⁶–10⁷ s = **4–5 decades in
+ln(t)**, so a *single* GRB clears the 2.8-period gate that the ms FRB tails cannot, and the public
+UKSSDC repository has >1000 of them. Across **22 curated long/plateau GRBs** (`fetch-grb`), **17
+clear the gate** (3.0–4.4 comb periods; e.g. GRB 130427A 4.42, GRB 060729 4.35, GRB 060124/050416A
+4.1) and the phase-incoherent **stack is a clean, well-powered NULL** — the kernel ω=2.58 is **not
+special, p≈0.13**. Two individual GRBs show low single-curve p (130427A 0.004, 050416A 0.06) but
+these are *uncorrected* over 17 trials and the proper combined statistic (the stack) is null. The
+firewall is the same as A1: a GRB plateau is a **central-engine / accretion** relaxation (magnetar
+spin-down or fallback), **not a horizon recovery** — a comb here would be a universal-DSI coincidence,
+and this NULL is informative precisely because it is **well-powered, not data-limited**.
 
 ## Reproduce
 
@@ -85,6 +98,21 @@ Each `data/magnetar/*.csv` (`t_days,flux[,flux_err]`, onset-relative) is ingeste
 gated, and stacked. The `--swift` path resolves each curated position to its LSXPS source by cone
 search and pulls the observation-binned total-band rate curve. **First real run = a clean NULL**
 (stacked `p ≈ 0.99`). swifttools needs `distutils`, so on Python ≥ 3.12 install `setuptools` too.
+
+## Real GRB afterglow data (A4)
+
+```bash
+tfpt-combdomains fetch-grb     # pull the curated Swift-XRT plateau-GRB flux light curves (UKSSDC)
+tfpt-combdomains analyze       # A4 ingests data/grb/*.csv, gates, and stacks
+```
+
+`fetch-grb` downloads public Swift-XRT flux light curves
+(`https://www.swift.ac.uk/xrt_curves/<8-digit targetID>/flux.qdp`, Evans et al. 2007/2009) for a
+curated long/plateau-GRB list and normalises each to `data/grb/<name>.csv` (`t_s,flux,flux_err`,
+T0-relative seconds). The real GRB name is read from the file header, so a wrong target id simply
+misses (never fabricated). The small normalised curves are committed (like the magnetar set); the
+recovery observable is `y = ln(flux)` and the detector's degree-2 ln-t baseline absorbs the
+power-law plateau/break.
 
 ## Real CHIME baseband (A3b)
 

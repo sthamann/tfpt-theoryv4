@@ -13,7 +13,7 @@ import json
 from dataclasses import asdict
 from pathlib import Path
 
-from . import fetch, microshots, quake
+from . import fetch, grb, microshots, quake
 from .channels import all_channels
 from .comb import EPS_PREDICTED, LAMBDA, MIN_COMB_PERIODS, OMEGA, validate_detector, validate_stack
 
@@ -23,11 +23,14 @@ RESULTS = Path(__file__).resolve().parents[2] / "results"
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description="TFPT recovery comb across domains")
     ap.add_argument("command",
-                    choices=["audit", "analyze", "fetch-magnetar", "quake", "microshots"],
+                    choices=["audit", "analyze", "fetch-magnetar", "fetch-grb", "quake",
+                             "microshots"],
                     nargs="?", default="analyze")
     args, extra = ap.parse_known_args(argv)
     if args.command == "fetch-magnetar":
         return fetch.main(extra)
+    if args.command == "fetch-grb":
+        return grb.main(extra)
     if args.command == "quake":
         quake.analyze(refresh="--refresh" in extra)
         return 0

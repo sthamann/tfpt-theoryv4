@@ -13,4 +13,7 @@ data/*
 # like the results JSON); only the bulky raw downloads are ignored.
 !data/magnetar/
 data/magnetar/raw/
+# A4: the small NORMALISED Swift-XRT GRB afterglow light curves are committed too (derived
+# products from the public UKSSDC qdp; fetch-grb regenerates them).
+!data/grb/
 results/*.png
