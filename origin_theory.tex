@@ -532,8 +532,10 @@ realized boundary state is a \emph{dynamical attractor}: the constants are selec
 The scalar core of this statement --- gap $\Rightarrow$ unique attractor $+$ geometric decay $\Rightarrow$
 parameter-freeness, and the converse that without a gap ($r{=}1$) the start is never forgotten --- is now
 Lean-4 formalised (no \texttt{sorry}, only the standard kernel axioms; ledger \texttt{FORM.SPECTRALGAP.01},
-module \texttt{TfptCarrier/SpectralGapAttractor.lean}); the full multi-dimensional Perron--Frobenius statement
-stays the cited theorem.
+module \texttt{TfptCarrier/SpectralGapAttractor.lean}), now also for the finite-dimensional diagonalisable case
+(the deviation vector converges to the dominant eigendirection, parameter-free; a concrete instance on the
+cusp-transfer spectrum $\{1,(2/3)^6,(1/3)^6\}$); the general non-diagonalisable / infinite-dimensional
+Perron--Frobenius statement stays the cited theorem.
 \end{keybox}
 
 \noindent\textbf{The same gap is a finite recoverability code \mE/\mC\ (\veri{v221\_seam\_qecc.py}).} Read as

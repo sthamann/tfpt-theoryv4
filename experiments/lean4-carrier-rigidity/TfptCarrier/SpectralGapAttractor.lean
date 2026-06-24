@@ -108,4 +108,64 @@ theorem golden_rate_lt_one : (0 : ℝ) ≤ (5 + Real.sqrt 5) / 8 ∧ (5 + Real.s
   rw [div_lt_one (by norm_num : (0 : ℝ) < 8)]
   linarith [hlt]
 
+/-! ### Finite-dimensional case: a gapped operator converges to its dominant eigendirection.
+
+The genuine *multi-dimensional* statement ("full Perron–Frobenius"), reduced to the scalar core
+above. In the eigenbasis a diagonalisable operator acts componentwise by its eigenvalues;
+normalising the dominant eigenvalue to `1`, every *other* component has `|rate| < 1`, so its
+contribution decays and the iterate converges to the dominant eigendirection (the unique
+attractor), independently of the start. We prove the finite-dimensional diagonalisable case here;
+the general (non-diagonalisable / infinite-dimensional) Perron–Frobenius theorem stays the cited
+statement. -/
+
+/-- A single non-dominant eigencomponent (`|r| < 1`) decays: `rⁿ·c → 0`. -/
+theorem component_tendsto (r c : ℝ) (hr : |r| < 1) :
+    Tendsto (fun n : ℕ => r ^ n * c) atTop (nhds 0) := by
+  have hpow : Tendsto (fun n : ℕ => |r| ^ n) atTop (nhds 0) :=
+    tendsto_pow_atTop_nhds_zero_of_lt_one (abs_nonneg r) hr
+  have hr0 : Tendsto (fun n : ℕ => r ^ n) atTop (nhds 0) := by
+    rw [tendsto_zero_iff_norm_tendsto_zero]
+    simpa [Real.norm_eq_abs, abs_pow] using hpow
+  simpa using hr0.mul_const c
+
+/-- **Finite-dimensional gap ⇒ convergence to the dominant eigendirection.** With the dominant
+eigenvalue normalised to `1`, the deviation vector (all non-dominant components, each with
+`|rate| < 1`) tends to `0`: the iterate converges to the dominant eigendirection — the unique
+attractor — for any start `c`. -/
+theorem deviation_tendsto {k : ℕ} (r c : Fin k → ℝ) (hr : ∀ i, |r i| < 1) :
+    Tendsto (fun n : ℕ => fun i => (r i) ^ n * c i) atTop (nhds (0 : Fin k → ℝ)) := by
+  rw [tendsto_pi_nhds]
+  intro i
+  simpa using component_tendsto (r i) (c i) (hr i)
+
+/-- **Parameter-freeness in finite dimensions.** Two starts `c`, `c'` give deviation vectors that
+both vanish, so the dominant eigendirection the iterate selects is independent of the start. -/
+theorem deviation_unique {k : ℕ} (r c c' : Fin k → ℝ) (hr : ∀ i, |r i| < 1) :
+    Tendsto (fun n : ℕ => fun i => (r i) ^ n * c i - (r i) ^ n * c' i) atTop
+      (nhds (0 : Fin k → ℝ)) := by
+  rw [tendsto_pi_nhds]
+  intro i
+  have hfun : (fun n : ℕ => (r i) ^ n * c i - (r i) ^ n * c' i)
+      = (fun n : ℕ => (r i) ^ n * (c i - c' i)) := by funext n; ring
+  rw [hfun]
+  simpa using component_tendsto (r i) (c i - c' i) (hr i)
+
+/-- The TFPT flavor cusp-transfer spectrum `{1, (2/3)⁶, (1/3)⁶}` (v56/v82/v383): the two
+non-dominant rates lie strictly inside the unit disc. -/
+noncomputable def flavorRate : Fin 2 → ℝ
+  | 0 => (2 / 3) ^ 6
+  | 1 => (1 / 3) ^ 6
+
+theorem flavor_rates_lt_one : ∀ i, |flavorRate i| < 1 := by
+  intro i
+  fin_cases i
+  · simp only [flavorRate]; norm_num
+  · simp only [flavorRate]; norm_num
+
+/-- Concrete instance: the flavor operator's deviation from its dominant eigendirection decays
+(the gap `6 ln(3/2)` made into a convergence statement). -/
+theorem flavor_deviation_tendsto (c : Fin 2 → ℝ) :
+    Tendsto (fun n : ℕ => fun i => (flavorRate i) ^ n * c i) atTop (nhds (0 : Fin 2 → ℝ)) :=
+  deviation_tendsto flavorRate c flavor_rates_lt_one
+
 end TFPT.Carrier.SpectralGapAttractor

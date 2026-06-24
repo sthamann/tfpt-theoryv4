@@ -47,6 +47,223 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "Lean 4: "
+      },
+      {
+        "k": "c",
+        "v": "FORM.SPECTRALGAP.01"
+      },
+      {
+        "k": "t",
+        "v": " extended to the finite-dimensional Perron–Frobenius case"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "FORM.SPECTRALGAP.01"
+            },
+            {
+              "k": "t",
+              "v": " — the multi-dimensional case, reduced to the scalar core."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The Lean module "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier/SpectralGapAttractor.lean"
+        },
+        {
+          "k": "t",
+          "v": " now also proves the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "finite-dimensional"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " gapped-operator statement ("
+        },
+        {
+          "k": "c",
+          "v": "lake build"
+        },
+        {
+          "k": "t",
+          "v": " OK, no "
+        },
+        {
+          "k": "c",
+          "v": "sorry"
+        },
+        {
+          "k": "t",
+          "v": "): "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "c",
+          "v": "component_tendsto"
+        },
+        {
+          "k": "t",
+          "v": " (a non-dominant eigencomponent "
+        },
+        {
+          "k": "m",
+          "v": "|r|<1"
+        },
+        {
+          "k": "t",
+          "v": " decays, "
+        },
+        {
+          "k": "m",
+          "v": "r^n c\\to0"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "c",
+          "v": "deviation_tendsto"
+        },
+        {
+          "k": "t",
+          "v": " (with the dominant eigenvalue normalised to "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": ", the deviation vector — all non-dominant components — tends to "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": ", so the iterate converges to the dominant eigendirection, the unique attractor, for any start); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "c",
+          "v": "deviation_unique"
+        },
+        {
+          "k": "t",
+          "v": " (two starts give deviation vectors both "
+        },
+        {
+          "k": "m",
+          "v": "\\to0"
+        },
+        {
+          "k": "t",
+          "v": ", so the selected eigendirection is independent of the start — parameter-freeness in finite dimensions); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "c",
+          "v": "flavor_deviation_tendsto"
+        },
+        {
+          "k": "t",
+          "v": " (a concrete instance on the cusp-transfer spectrum "
+        },
+        {
+          "k": "m",
+          "v": "\\{1,(2/3)^6,(1/3)^6\\}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v56"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v82"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v383"
+        },
+        {
+          "k": "t",
+          "v": "). Honest scope: this is the finite-dimensional "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "diagonalisable"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " case (the genuine multi-dimensional content, reduced to the scalar core); the general non-diagonalisable / infinite-dimensional Perron–Frobenius theorem stays the cited statement. Referenced in "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-24",
+    "dateLabel": "2026-06-24",
+    "heading": [
+      {
+        "k": "t",
         "v": "Website: an animated “Universal Gap Lab” visualising "
       },
       {
