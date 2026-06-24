@@ -39,7 +39,8 @@ def main(argv: list[str] | None = None) -> int:
     RESULTS.mkdir(exist_ok=True)
     (RESULTS / "results.json").write_text(
         json.dumps({"constants": constants.summary(), "checks": r.checks,
-                    "structural": r.structural, "verdict": r.verdict}, indent=2),
+                    "structural": r.structural, "J_PMNS": r.j_pmns, "J_max": r.j_max,
+                    "verdict": r.verdict}, indent=2),
         encoding="utf-8")
     print(f"\nWrote {RESULTS / 'results.json'}")
     return 0

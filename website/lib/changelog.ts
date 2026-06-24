@@ -47,6 +47,387 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "Clockwork coherence + an open question: "
+      },
+      {
+        "k": "c",
+        "v": "v394"
+      },
+      {
+        "k": "t",
+        "v": " primes "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " atoms "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " facets, and "
+      },
+      {
+        "k": "c",
+        "v": "RES.COXETER.SYMMETRY.01"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v394"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "COXETER.ATOMS.01"
+            },
+            {
+              "k": "t",
+              "v": ") — the three Coxeter primes ARE the three anchor atoms ARE the three number-field facets."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " A bird's-eye "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "re-reading tying "
+        },
+        {
+          "k": "c",
+          "v": "v390"
+        },
+        {
+          "k": "t",
+          "v": " (the prime facets) to the anchor "
+        },
+        {
+          "k": "m",
+          "v": "a=(1,1,2)"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "v319"
+        },
+        {
+          "k": "t",
+          "v": " (the "
+        },
+        {
+          "k": "m",
+          "v": "5\\times6"
+        },
+        {
+          "k": "t",
+          "v": " clock). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "a=(1,1,2)"
+        },
+        {
+          "k": "t",
+          "v": " has "
+        },
+        {
+          "k": "m",
+          "v": "e_3{=}2{=}|Z_2|"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "p_0{=}3{=}\\Nfam"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "e_2{=}5{=}\\gcar"
+        },
+        {
+          "k": "t",
+          "v": ", product "
+        },
+        {
+          "k": "m",
+          "v": "2{\\cdot}3{\\cdot}5=30=h(E_8)"
+        },
+        {
+          "k": "t",
+          "v": " — the clock's primes "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "are"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the anchor's atoms. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "atoms "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " facet fields ("
+        },
+        {
+          "k": "c",
+          "v": "v390"
+        },
+        {
+          "k": "t",
+          "v": "): "
+        },
+        {
+          "k": "m",
+          "v": "2{\\to}\\mathbb Q(i)"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "3{\\to}\\mathbb Q(\\sqrt{-3})"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "5{\\to}\\mathbb Q(\\sqrt5)"
+        },
+        {
+          "k": "t",
+          "v": ", each ramified at its prime. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the QG susceptibility is pure "
+        },
+        {
+          "k": "m",
+          "v": "\\{2,3\\}"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "\\chi=1/(1{-}(2/3)^6)=729/665=3^6/(3^6{-}2^6)"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "(2/3)^6=2^6/3^6"
+        },
+        {
+          "k": "t",
+          "v": ", exponent "
+        },
+        {
+          "k": "m",
+          "v": "6=2\\Nfam"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "both dynamic rates carry prime-2: "
+        },
+        {
+          "k": "m",
+          "v": "2/3=|Z_2|/\\Nfam"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "(\\varphi{+}2)/4=(\\varphi{+}2)/|\\mu_4|"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "|\\mu_4|{=}4{=}2^2"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "30=5{\\times}6=\\gcar(2\\Nfam)"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v319"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the prime-2 seam is the universal dynamical engine; prime-3 (family) and prime-5 (carrier golden) the two attractors."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "RES.COXETER.SYMMETRY.01"
+            },
+            {
+              "k": "t",
+              "v": " — a new registered open research question."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Is the prime-2-as-common-factor reading "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "forced"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (the seam involution provably in every sector's gap, no independent prime-2 attractor), or is there a residual asymmetry? Resolving it would either tighten "
+        },
+        {
+          "k": "c",
+          "v": "v383"
+        },
+        {
+          "k": "t",
+          "v": "'s “every sector is the same gapped operator” to “the same "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "seam-driven"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " operator” (with the falsifiable corollary that no prime-2-only attractor exists), or reveal a missing dynamical slot. Tracked in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": "; a question, not a claim. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": "; Python-only."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-24",
+    "dateLabel": "2026-06-24",
+    "heading": [
+      {
+        "k": "t",
         "v": "Correction error-bars: "
       },
       {
