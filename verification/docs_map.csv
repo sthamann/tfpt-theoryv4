@@ -152,8 +152,8 @@ tfpt_4_frontier,section,"The Koide relation --- near $2/3$, computed exactly",29
 tfpt_4_frontier,section,"Dark matter --- the candidate is fixed, the scale is pending",440,530,v185_axion_relic_solver.py;v211_axion_spine_angle.py;v25_frontier_conjectures.py,17061b526d1c,2026-06-15
 tfpt_4_frontier,section,The muon anomalous magnetic moment --- a seam vertex readout,531,555,v204_muon_seam_g2.py;v51_boundary_half_step.py,fa4b8d3cdd1a,2026-06-15
 tfpt_4_frontier,section,Full quantum gravity --- induced from the boundary kernel,556,766,v113_quasifree_kernel.py;v152_norm_is_anchor.py;v165_premise_a_closure.py;v177_seam_marking_kernel.py;v205_xi_threequarter.py;v206_h0_lambda_branch.py;v207_asymptotic_safety.py;v210_mark_local_dtn.py;v255_spectral_action_expansion.py;v259_modular_cutoff_kappa.py;v274_scale_overdetermination.py;v275_qgamb_roadmap.py;v277_seam_calderon_e8_match.py;v281_holomorphy_modular_data.py;v283_live_killtest_scorecard.py;v337_decoupling_theorem.py;v358_grav_entropy_equilibrium.py;v359_grav_nonlinear_einstein.py;v360_grav_gap_corrections.py;v361_grav_backreaction.py;v36_spectral_action_g2.py;v60_lambda_metrology_branch.py,b72db3ccf2a8,2026-06-23
-tfpt_4_frontier,section,Summary,767,816,v371_ftransfer_pole.py;v372_ftransfer_boltzmann.py;v373_ftransfer_relic.py;v374_ftransfer_qcd.py;v386_grav_amplitude.py,6a385edc9fc8,2026-06-24
-tfpt_4_frontier,section,Appendix: computational verification,817,830,v28_gravity_fR.py;v36_spectral_action_g2.py;v7_gravity_cosmo.py,a60291cc927f,2026-06-23
+tfpt_4_frontier,section,Summary,767,819,v371_ftransfer_pole.py;v372_ftransfer_boltzmann.py;v373_ftransfer_relic.py;v374_ftransfer_qcd.py;v386_grav_amplitude.py;v389_grav_loop_finiteness.py,e514e017e829,2026-06-24
+tfpt_4_frontier,section,Appendix: computational verification,820,833,v28_gravity_fR.py;v36_spectral_action_g2.py;v7_gravity_cosmo.py,a60291cc927f,2026-06-23
 tfpt_5_redteam,front,(front matter),1,78,,2fcf6c438ba1,2026-06-23
 tfpt_5_redteam,section,Method,79,89,,610fddcc2990,2026-06-23
 tfpt_5_redteam,section,Target A --- the $(E8)_1$ boundary-net identification,90,115,,a2a8182c2254,2026-06-12

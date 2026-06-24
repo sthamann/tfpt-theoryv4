@@ -47,6 +47,288 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "Graviton loop finiteness: "
+      },
+      {
+        "k": "c",
+        "v": "v389"
+      },
+      {
+        "k": "t",
+        "v": " the entire form factor is UV-finite at the loop level by power counting"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v389"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "GRAV.LOOP.FINITE.01"
+            },
+            {
+              "k": "t",
+              "v": ") — the entire-form-factor graviton is UV-finite at the "
+            },
+            {
+              "k": "i",
+              "c": [
+                {
+                  "k": "t",
+                  "v": "loop"
+                }
+              ]
+            },
+            {
+              "k": "t",
+              "v": " level."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The honest next step past "
+        },
+        {
+          "k": "c",
+          "v": "v386"
+        },
+        {
+          "k": "t",
+          "v": " (which established the tree amplitude), extending "
+        },
+        {
+          "k": "c",
+          "v": "v304"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v370"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v380"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v386"
+        },
+        {
+          "k": "t",
+          "v": " from the propagator to the superficial degree of divergence of loop graphs. This is the standard infinite-derivative / nonlocal-gravity finiteness statement (Tomboulis; Biswas–Mazumdar–Siegel; Modesto), "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " a full proof of perturbative quantum gravity. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "super-polynomial falloff: "
+        },
+        {
+          "k": "m",
+          "v": "p^k e^{-p^2/M^2}\\to0"
+        },
+        {
+          "k": "t",
+          "v": " for every degree "
+        },
+        {
+          "k": "m",
+          "v": "k"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "one dressed line turns a quadratic divergence into the finite "
+        },
+        {
+          "k": "m",
+          "v": "(M^2/2)e^{-p_0^2/M^2}"
+        },
+        {
+          "k": "t",
+          "v": ", while the GR "
+        },
+        {
+          "k": "m",
+          "v": "\\int p^3/p^2\\,dp"
+        },
+        {
+          "k": "t",
+          "v": " diverges quadratically. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the superficial degree "
+        },
+        {
+          "k": "m",
+          "v": "\\to-\\infty"
+        },
+        {
+          "k": "t",
+          "v": " at every loop order "
+        },
+        {
+          "k": "m",
+          "v": "L"
+        },
+        {
+          "k": "t",
+          "v": " (the form factor multiplies the integrand by "
+        },
+        {
+          "k": "m",
+          "v": "e^{-(\\#\\mathrm{internal})p^2/M^2}"
+        },
+        {
+          "k": "t",
+          "v": "; dressed cutoff-ratio "
+        },
+        {
+          "k": "m",
+          "v": "\\to1"
+        },
+        {
+          "k": "t",
+          "v": " vs GR "
+        },
+        {
+          "k": "m",
+          "v": "\\to4"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the regulator is the seam scale "
+        },
+        {
+          "k": "m",
+          "v": "M=M_{\\mathrm{scal}}=\\cthree^{7/2}\\Mbar"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v253"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v259"
+        },
+        {
+          "k": "t",
+          "v": "), not a dial. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "loop "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "unitarity"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " of the nonlocal form factor (Lorentzian continuation / macro-causality, Pius–Sen / Briscese–Modesto) stays the honest open point — tree unitarity is "
+        },
+        {
+          "k": "c",
+          "v": "v386"
+        },
+        {
+          "k": "t",
+          "v": "; not claimed solved. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_4_frontier"
+        },
+        {
+          "k": "t",
+          "v": "; Python-only."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-24",
+    "dateLabel": "2026-06-24",
+    "heading": [
+      {
+        "k": "t",
         "v": "Typed correction budget: "
       },
       {

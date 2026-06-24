@@ -489,6 +489,7 @@ const NODES: DagNode[] = [
       "v381_qft4d_eg_allorder.py",
       "v385_uvbranch_killtest.py",
       "v386_grav_amplitude.py",
+      "v389_grav_loop_finiteness.py",
     ],
   },
   {

@@ -59,6 +59,21 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-24 (Graviton loop finiteness: \texttt{v389} the entire form factor is UV-finite at the loop level by power counting)}
+\begin{itemize}
+\item \textbf{\texttt{v389} (\texttt{GRAV.LOOP.FINITE.01}) --- the entire-form-factor graviton is UV-finite at the \emph{loop} level.}
+The honest next step past \vref{v386} (which established the tree amplitude), extending \vref{v304}/\vref{v370}/\vref{v380}/\vref{v386}
+from the propagator to the superficial degree of divergence of loop graphs. This is the standard infinite-derivative /
+nonlocal-gravity finiteness statement (Tomboulis; Biswas--Mazumdar--Siegel; Modesto), \emph{not} a full proof of
+perturbative quantum gravity. \mE\ super-polynomial falloff: $p^k e^{-p^2/M^2}\to0$ for every degree $k$. \mE\ one dressed
+line turns a quadratic divergence into the finite $(M^2/2)e^{-p_0^2/M^2}$, while the GR $\int p^3/p^2\,dp$ diverges
+quadratically. \mE\ the superficial degree $\to-\infty$ at every loop order $L$ (the form factor multiplies the integrand by
+$e^{-(\#\mathrm{internal})p^2/M^2}$; dressed cutoff-ratio $\to1$ vs GR $\to4$). \mE\ the regulator is the seam scale
+$M=M_{\mathrm{scal}}=\cthree^{7/2}\Mbar$ (\vref{v253}/\vref{v259}), not a dial. \mC\mO\ loop \emph{unitarity} of the nonlocal
+form factor (Lorentzian continuation / macro-causality, Pius--Sen / Briscese--Modesto) stays the honest open point --- tree
+unitarity is \vref{v386}; not claimed solved. Cited in \texttt{tfpt\_4\_frontier}; Python-only.
+\end{itemize}
+
 \subsection*{2026-06-24 (Typed correction budget: \texttt{v388} the gap correction is keyed to the mechanism class, not a uniform band)}
 \begin{itemize}
 \item \textbf{\texttt{v388} (\texttt{CORRECTIONS.BUDGET.01}) --- the gap-driven correction (\vref{v387}) is a \emph{typed} budget.}
