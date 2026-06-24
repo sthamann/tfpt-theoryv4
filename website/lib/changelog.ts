@@ -46,6 +46,1021 @@ export const CHANGELOG: ChangelogEntry[] = [
     "dateLabel": "2026-06-24",
     "heading": [
       {
+        "k": "t",
+        "v": "The five TOE/QFT closure contracts "
+      },
+      {
+        "k": "c",
+        "v": "v398"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v402"
+      },
+      {
+        "k": "t",
+        "v": " + a ledger rescope"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v398_seam_state_rigidity.py"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "SEAM.RIGIDITY.01"
+        },
+        {
+          "k": "t",
+          "v": ", Paper A): the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Seam State Rigidity Theorem"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " as ONE named target, consolidating the scattered state-invariance reductions ("
+        },
+        {
+          "k": "c",
+          "v": "v177"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v199"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v308"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v309"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v335"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "hardening"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the finite-block evidence to a multi-mode sweep. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "RP-definability hinge (OS canonical transfer "
+        },
+        {
+          "k": "m",
+          "v": "T{=}e^{-H}"
+        },
+        {
+          "k": "t",
+          "v": " from RP "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " reflection alone, "
+        },
+        {
+          "k": "c",
+          "v": "v54"
+        },
+        {
+          "k": "t",
+          "v": ", quasi-free "
+        },
+        {
+          "k": "c",
+          "v": "v155"
+        },
+        {
+          "k": "t",
+          "v": ", no "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " normal form); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "band-limited character-block-diagonal core "
+        },
+        {
+          "k": "m",
+          "v": "[\\rho,|k|]{=}0"
+        },
+        {
+          "k": "t",
+          "v": " swept "
+        },
+        {
+          "k": "m",
+          "v": "N{=}4..64"
+        },
+        {
+          "k": "t",
+          "v": " (beyond the "
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": "-dim "
+        },
+        {
+          "k": "m",
+          "v": "H^1"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "holomorphy "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "c{=}8"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "|\\!\\det\\mathrm{Cartan}|{=}1"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": ", index "
+        },
+        {
+          "k": "m",
+          "v": "4{=}|\\mu_4|"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the one residual: "
+        },
+        {
+          "k": "m",
+          "v": "[\\rho,\\Lambda_\\Sigma]{=}0"
+        },
+        {
+          "k": "t",
+          "v": " on the full "
+        },
+        {
+          "k": "m",
+          "v": "L^2"
+        },
+        {
+          "k": "t",
+          "v": " (intrinsic Bisognano–Wichmann). NOT a closure of "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " (continuum "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " cited MMST "
+        },
+        {
+          "k": "c",
+          "v": "v336"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v399_gravity_complete.py"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "GRAVITY.COMPLETE.01"
+        },
+        {
+          "k": "t",
+          "v": ", Paper B): the explicit verdict "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Gravity-complete "
+            },
+            {
+              "k": "m",
+              "v": "="
+            },
+            {
+              "k": "t",
+              "v": " Boundary-complete "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " Ambient-redundancy"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", combining the parameter-free local equation ("
+        },
+        {
+          "k": "c",
+          "v": "v358"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v359"
+        },
+        {
+          "k": "t",
+          "v": ") with the ambient redundancy ("
+        },
+        {
+          "k": "c",
+          "v": "v369"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the five gravitational readout classes (Newton "
+        },
+        {
+          "k": "m",
+          "v": "8\\pi"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda"
+        },
+        {
+          "k": "t",
+          "v": ", scalaron "
+        },
+        {
+          "k": "m",
+          "v": "\\cthree^7"
+        },
+        {
+          "k": "t",
+          "v": ", horizon "
+        },
+        {
+          "k": "m",
+          "v": "1/|\\mu_4|"
+        },
+        {
+          "k": "t",
+          "v": ", recovery "
+        },
+        {
+          "k": "m",
+          "v": "(2/3)^6"
+        },
+        {
+          "k": "t",
+          "v": ") are all boundary/seam/gap, so "
+        },
+        {
+          "k": "m",
+          "v": "\\mathcal O_{\\mathrm{phys}}\\subset\\mathcal A_\\Sigma"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "residual "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " intrinsic BW (no new gate)."
+        }
+      ],
+      [
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v400_grav_nonlocal_action.py"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "GRAV.NONLOCAL.01"
+        },
+        {
+          "k": "t",
+          "v": ", Paper C): the nonlocal spectral-gravity action with the local "
+        },
+        {
+          "k": "m",
+          "v": "R{+}R^2"
+        },
+        {
+          "k": "t",
+          "v": " as its IR projection (consolidating "
+        },
+        {
+          "k": "c",
+          "v": "v304"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v370"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v380"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v386"
+        },
+        {
+          "k": "t",
+          "v": ", adding the IR-matching check). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "entire "
+        },
+        {
+          "k": "m",
+          "v": "a{=}e^u\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " one pole (ghost-free), every truncation carries a Stelle zero (monotone, "
+        },
+        {
+          "k": "c",
+          "v": "v380"
+        },
+        {
+          "k": "t",
+          "v": "), and the IR order reproduces "
+        },
+        {
+          "k": "m",
+          "v": "R{+}R^2"
+        },
+        {
+          "k": "t",
+          "v": " with the atom-fixed scale "
+        },
+        {
+          "k": "m",
+          "v": "M_{\\mathrm{scal}}^2/\\Mbar^2{=}\\cthree^7"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v36"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v253"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the entire-"
+        },
+        {
+          "k": "m",
+          "v": "a"
+        },
+        {
+          "k": "t",
+          "v": " assumption "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " perturbative-only."
+        }
+      ],
+      [
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v401_metrology_closure.py"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "METROLOGY.CLOSURE.01"
+        },
+        {
+          "k": "t",
+          "v": ", Paper D): the final input set "
+        },
+        {
+          "k": "m",
+          "v": "\\{a,\\pi,v_{\\mathrm{geo}}\\}"
+        },
+        {
+          "k": "t",
+          "v": " certified — "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " dimensionless dials "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " unit (consolidating "
+        },
+        {
+          "k": "c",
+          "v": "v153"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v274"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v364"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v384"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "dimensional bookkeeping mass"
+        },
+        {
+          "k": "m",
+          "v": "/1G/\\Lambda/U_{\\mathrm{point}}/(m/\\mu){=}"
+        },
+        {
+          "k": "t",
+          "v": " number "
+        },
+        {
+          "k": "m",
+          "v": "\\times v_{\\mathrm{geo}}^{1,2,4,1,0}"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the "
+        },
+        {
+          "k": "m",
+          "v": "G"
+        },
+        {
+          "k": "t",
+          "v": "-vs-"
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda"
+        },
+        {
+          "k": "t",
+          "v": " over-determination "
+        },
+        {
+          "k": "m",
+          "v": "0.11\\%"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v274"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "m",
+          "v": "v_{\\mathrm{geo}}"
+        },
+        {
+          "k": "t",
+          "v": " theorem-forbidden ("
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{TOE}_{\\mathrm{strict}}{=}\\mathrm{TOE}_{\\mathrm{dimensionless}}{+}[v_{\\mathrm{geo}}]"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v402_ftransfer_suite.py"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "FTRANSFER.SUITE.01"
+        },
+        {
+          "k": "t",
+          "v": ", Paper E): the four frontier sectors as ONE functor "
+        },
+        {
+          "k": "m",
+          "v": "F_{\\mathrm{transfer}}"
+        },
+        {
+          "k": "t",
+          "v": ", the composition "
+        },
+        {
+          "k": "m",
+          "v": "F_{\\mathrm{obs}}\\circ F_{\\mathrm{thr}}\\circ F_{\\mathrm{RG}}"
+        },
+        {
+          "k": "t",
+          "v": " (consolidating the "
+        },
+        {
+          "k": "c",
+          "v": "FR.*.SOLVE"
+        },
+        {
+          "k": "t",
+          "v": " solvers), each with an exact atom source, a committed kill test, and the firewall (physical prediction stays "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": ", only the algebraic source "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "; never re-pressed into the compiler, "
+        },
+        {
+          "k": "c",
+          "v": "v187"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger rescope (repo hygiene):"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "GATE.METRIC.01"
+        },
+        {
+          "k": "t",
+          "v": " no longer reads “full covariant metric-sector field equation open” — the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "local"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " covariant equation is closed parameter-free ("
+        },
+        {
+          "k": "c",
+          "v": "GRAV.NONLINEAR.01"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v359"
+        },
+        {
+          "k": "t",
+          "v": "); the gate is rescoped so the open item is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "only"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the global nonperturbative ambient measure ("
+        },
+        {
+          "k": "c",
+          "v": "QG.AMB.01"
+        },
+        {
+          "k": "t",
+          "v": ", a "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "redundancy "
+        },
+        {
+          "k": "c",
+          "v": "v369"
+        },
+        {
+          "k": "t",
+          "v": "), removing the stale contradiction with the status card."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-24",
+    "dateLabel": "2026-06-24",
+    "heading": [
+      {
         "k": "m",
         "v": "\\varphi_0"
       },

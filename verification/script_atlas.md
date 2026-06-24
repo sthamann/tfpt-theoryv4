@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`392` registered scripts · `453` ledger claims · `10` clusters.
+`397` registered scripts · `458` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -272,7 +272,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v75_upoint_to_vgeo** [E/O] `FLAV.UPOINT.01` — Gate 1 complete: U_point → v_geo (ratios + Grand Mass Volume); same anchor as 1/G
   - deps: v71_simple_r_bridge, v20_lepton_c_derivation, v46_grand_mass_volume, v68 · cited: origin theory, research contracts
 
-### `frontier` — Open gate (G_metric) & the frontier  (109 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (113 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -284,7 +284,7 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
 - **v19_monodromy_moduli** [E] `FLAV.UFSTAR.01` — exact monodromy pole; D₄ SU(3) monodromy moduli
   - deps: H2 monodromy, Mehta-Seshadri, (U) · cited: 2 standard model
 - **v22_open_gates_audit** [C/O] `GATE.NSTAR.01, GATE.METRIC.01` — residual-gates audit: forced part vs named residual
-  - deps: reheating, QG.AMB.01 · cited: 1 architecture e8
+  - deps: reheating, QG.AMB.01, v359_grav_nonlinear_einstein · cited: 1 architecture e8
 - **v25_frontier_conjectures** [C] `FR.KOIDE.02, FR.DM.02` — conjectures: Koide φ₀/24; axion f_a = M_scal/128
   - deps: FR.KOIDE.01, FR.DM.01, M_scal=c3^{7/2}Mbar · cited: 4 frontier
 - **v26_flavor_frontier_unification** [E/O] `FLAV.UGATE.01` — the “11” not uniquely forced; flavor frontier → one (U) gate
@@ -493,8 +493,16 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v312, v216, v342, v327, v395 · cited: introduction, origin theory
 - **v397_external_clock_probe** [E/C] `FR.CLOCK.PROBE.01` — FR.CLOCK.PROBE.01: a FALSIFIABLE probe of how external the 'external physics' really is -- do the frontier scheme-numbers land on the {2,3,5} clock (the anchor atoms, v394) or not?
   - deps: v100, v187, v211, v212, v303, v374, v394 · cited: 4 frontier
+- **v399_gravity_complete** [E/C/O] `GRAVITY.COMPLETE.01` — Gravity-complete = Boundary-complete + Ambient-redundancy (Paper B): local equation parameter-free (v358/v359) + redundancy discriminators (v369) + O_phys subset A_Sigma over 5 rea
+  - deps: v359_grav_nonlinear_einstein, v369_qgamb_redundancy, QG.AMB.01, v358, v359, v369, v60, v36 · cited: research contracts
+- **v400_grav_nonlocal_action** [E/O] `GRAV.NONLOCAL.01` — Nonlocal spectral-gravity action; local R+R^2 is its IR projection (Paper C): entire form factor one pole + truncation-zero monotone + IR matching to R+R^2 with scale c3^7
+  - deps: v386_grav_amplitude, v389_grav_loop_finiteness, v304, v370, v380, v386, v36, v28 · cited: 4 frontier
+- **v401_metrology_closure** [E/C/O] `METROLOGY.CLOSURE.01` — Metrology closure {a, pi, v_geo} (Paper D): 0 dimensionless dials + 1 unit; dimensional bookkeeping (No-Unit) + gravity adds no unit + G-vs-Lambda 0.11%; v_geo theorem-forbidden
+  - deps: v384_residual_certification, v78_vgeo_floor, v153, v274, v364, v384 · cited: research contracts
+- **v402_ftransfer_suite** [E/C/X] `FTRANSFER.SUITE.01` — F_transfer functor suite (Paper E): the four frontier sectors as one F_observable o F_threshold o F_RG with exact atom sources + kill-test coverage + the firewall
+  - deps: v371_ftransfer_pole, v372_ftransfer_boltzmann, v373_ftransfer_relic, v374_ftransfer_qcd, v9, v93, v164, v185 · cited: 4 frontier
 
-### `registry` — Blind registry & red-team follow-ups (v84–v175)  (167 scripts)
+### `registry` — Blind registry & red-team follow-ups (v84–v175)  (168 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
 
 - **v84_frozen_registry** [E] `REG.FREEZE.01` — blind-prediction registry FROZEN 2026-06-09: every dimensionless prediction of record at 25 digits, re-derived from the two axioms each run (formula↔value lock); exactly ONE θ₁₂ pr
@@ -831,6 +839,8 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
   - deps: v269, v271, v273, v278, v302, v304, v370, v380 · cited: 2 standard model
 - **v385_uvbranch_killtest** [E/C/X] `UVBRANCH.KILLTEST.01` — UVBRANCH.KILLTEST.01: the optional carrier-Pati-Salam UV branch on the ALL-ORDER footing -- a single citable kill-test surface with the proton-decay SAFETY hierarchy computed (not 
   - deps: v159, v246, v247, v248, v249, v253, v265, v381 · cited: 5 redteam
+- **v398_seam_state_rigidity** [E/O] `SEAM.RIGIDITY.01` — Seam State Rigidity Theorem (Paper A / G_net): RP-definability hinge (OS transfer + quasi-free) + band-limited mu4-character core swept N=4..64 + holomorphy=>(E8)_1; [O] full-L^2 /
+  - deps: v286_seam_equivalence_contract, v54, v155, v177, v198, v199, v308, v309 · cited: research contracts
 
 ## Supersede map — do NOT reuse the left-hand claim
 
@@ -848,17 +858,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `SEAM.EQUIV.01`×23, `v76`×17, `v56`×17, `E8.GLU.01`×15, `QG.AMB.01`×15, `v336`×15, `HOR.NARIAI.01`×15, `v216`×14, `v312`×13, `REG.FREEZE.01`×12, `AX.P1.01`×11, `v3`×11, `QGEO.SUBPRIN.01`×11, `FLAV.KQ.01`×10
+**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `SEAM.EQUIV.01`×24, `v76`×17, `v56`×17, `QG.AMB.01`×16, `v336`×16, `E8.GLU.01`×15, `HOR.NARIAI.01`×15, `v216`×14, `v312`×13, `REG.FREEZE.01`×12, `AX.P1.01`×11, `v3`×11, `v54`×11, `QGEO.SUBPRIN.01`×11
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v386_grav_amplitude** — `GRAV.AMPLITUDE.01`
-- **v387_corrections_gap** — `CORRECTIONS.GAP.01`
-- **v388_corrections_budget** — `CORRECTIONS.BUDGET.01`
-- **v389_grav_loop_finiteness** — `GRAV.LOOP.FINITE.01`
-- **v390_prime2_facet** — `COXETER.PRIME2.01`
 - **v391_alpha_quillen_progress** — `ALPHA.QUILLEN.PROGRESS.01`
 - **v392_seam_s3_scalinglimit** — `SEAM.S3.SCALINGLIMIT.01`
 - **v393_corrections_numeric** — `CORRECTIONS.NUMERIC.01`
@@ -866,4 +871,9 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v395_hypergraph_coupled** — `HYP.COUPLED.01`
 - **v396_phi0_icosahedral** — `HYP.PHI0.01`
 - **v397_external_clock_probe** — `FR.CLOCK.PROBE.01`
+- **v398_seam_state_rigidity** — `SEAM.RIGIDITY.01`
+- **v399_gravity_complete** — `GRAVITY.COMPLETE.01`
+- **v400_grav_nonlocal_action** — `GRAV.NONLOCAL.01`
+- **v401_metrology_closure** — `METROLOGY.CLOSURE.01`
+- **v402_ftransfer_suite** — `FTRANSFER.SUITE.01`
 
