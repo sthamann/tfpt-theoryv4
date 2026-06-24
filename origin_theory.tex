@@ -506,7 +506,16 @@ $\lambda_2/\lambda_1$ that forces uniqueness also \emph{sizes} the first correct
 ($\mathrm{correction}_n\sim(\lambda_2/\lambda_1)^n$) --- flavor, horizon recovery and the QG bound all carry the
 $(2/3)^6$ rate (the QG susceptibility $\chi=729/665$ caps the ambient correction), while the discrete compiler
 transient decays at the golden $(\varphi+2)/4$. So the magnitude of sub-leading effects across TFPT is
-\emph{organised} by the gaps, not free.
+\emph{organised} by the gaps, not free. \textbf{Crucially, this correction is a \emph{typed} budget, not a
+uniform band on every prediction (\veri{v388\_corrections\_budget.py}):} since $(\lambda_2/\lambda_1)^n$ is the
+distance from a gapped operator's leading eigenvector, it is defined only where a subleading $\lambda_2$ exists.
+The prediction surface therefore splits into four classes --- \emph{seam-gapped} (Koide $F_{\mathrm{pole}}$,
+recovery, the QG bound: rate $(2/3)^6$; the compiler: golden $(\varphi+2)/4$), \emph{exact identity}
+($\det R=8$, $N_\Phi=1$, $\theta_{\mathrm{eff}}=0$, $\sin^2\theta_{13}$: \emph{no} $\lambda_2$, so the correction is
+$0$ structurally and a band there would contradict the \mE\ status), \emph{external-rate} ($\eta_B$ washout,
+axion freeze, $m_p/m_e$ RG: the gapped shape with an external rate, only $F_{\mathrm{pole}}$ carries the seam rate,
+\vref{v303}, firewalled \vref{v187}), and \emph{fixed-point} (where the texture is already explicit, e.g.\
+$\sin^2\theta_{12}$ with $\varepsilon=c_3+36c_3^4$). Only the seam-gapped class receives the $(2/3)^6$/golden band.
 
 \begin{keybox}[Parameter-freeness is an attractor, not a tuning \mE]
 A primitive operator with a spectral gap has (i) a unique dominant eigenvector and (ii) geometric

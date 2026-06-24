@@ -966,6 +966,77 @@ export const predictions: Prediction[] = [
   },
 ];
 
+/**
+ * Typed correction budget (mirror of v388 CORRECTIONS.BUDGET.01).
+ *
+ * The gap-driven correction (v387), correction_n ~ (λ₂/λ₁)ⁿ, is NOT a uniform band on every
+ * prediction: the size is the distance from a gapped operator's leading eigenvector, so it is
+ * defined only where a subleading λ₂ exists. Each prediction is therefore one of four classes
+ * — and for the "exact identity" class a band would be *wrong* (it would contradict [E]).
+ */
+export type CorrectionClass =
+  | "seam-gapped"
+  | "exact-identity"
+  | "external-rate"
+  | "fixed-point";
+
+export const CORRECTION_CLASS_META: Record<
+  CorrectionClass,
+  { label: string; band: string; note: string; tone: string }
+> = {
+  "seam-gapped": {
+    label: "Seam-gapped",
+    band: "(2/3)⁶ ≈ 0.088 (golden (φ+2)/4 for the compiler)",
+    note: "Carries the seam rate λ₂ = (2/3)⁶ (Koide F_pole, recovery, the QG bound), or the compiler's golden (φ+2)/4. The genuine v387 case.",
+    tone: "border-emerald-400/25 bg-emerald-500/5 text-emerald-200",
+  },
+  "exact-identity": {
+    label: "Exact identity",
+    band: "0 (structural)",
+    note: "A lattice/integer/topological-null readout (det R = 8, N_Φ = 1, θ_eff = 0, sin²θ₁₃ = φ₀e⁻⁵ᐟ⁶). No λ₂ → correction 0 structurally; a band here would contradict the [E] status.",
+    tone: "border-blue-400/25 bg-blue-500/5 text-blue-200",
+  },
+  "external-rate": {
+    label: "External rate",
+    band: "external physics (firewalled v187)",
+    note: "The gapped shape holds but the rate is thermal/cosmological/RG, not the seam — only F_pole carries the seam rate (v303). η_B washout, axion freeze, m_p/m_e RG, reheating-N★ bands.",
+    tone: "border-amber-400/25 bg-amber-500/5 text-amber-200",
+  },
+  "fixed-point": {
+    label: "Fixed point",
+    band: "interface / texture already explicit",
+    note: "The value is the exact attractor; the residual is the interface, and where a sub-leading texture exists it is already in the closed form (sin²θ₁₂: ε = c₃ + 36c₃⁴).",
+    tone: "border-violet-400/25 bg-violet-500/5 text-violet-200",
+  },
+};
+
+/** Correction class per prediction id (mirror of v388's four-class typing). */
+export const CORRECTION_BUDGET: Record<string, CorrectionClass> = {
+  "alpha-em": "fixed-point",
+  "lambda-c": "fixed-point",
+  "flavor-invariants": "exact-identity",
+  koide: "seam-gapped",
+  theta12: "fixed-point",
+  theta13: "exact-identity",
+  theta23: "external-rate",
+  "neutrino-ordering": "external-rate",
+  "delta-pmns": "fixed-point",
+  "strong-cp": "exact-identity",
+  mpme: "external-rate",
+  ns: "external-rate",
+  "r-tensor": "external-rate",
+  "as-amplitude": "external-rate",
+  scalaron: "fixed-point",
+  "omega-b": "fixed-point",
+  "eta-b": "external-rate",
+  hubble: "fixed-point",
+  "no-second-higgs": "exact-identity",
+  birefringence: "fixed-point",
+  axion: "external-rate",
+  "rare-kaon": "external-rate",
+  "eht-intercept": "external-rate",
+};
+
 /** Ledger claim IDs per prediction (mirror of the status-ledger row keys). */
 export const CLAIM_ID: Record<string, string> = {
   "alpha-em": "EM.FP.01",

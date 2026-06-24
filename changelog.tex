@@ -59,6 +59,25 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-24 (Typed correction budget: \texttt{v388} the gap correction is keyed to the mechanism class, not a uniform band)}
+\begin{itemize}
+\item \textbf{\texttt{v388} (\texttt{CORRECTIONS.BUDGET.01}) --- the gap-driven correction (\vref{v387}) is a \emph{typed} budget.}
+A machine-checked answer to ``does the $(\lambda_2/\lambda_1)^n$ correction apply to \emph{all} predictions?'' --- the
+answer is \emph{no}, and for one whole class a band would be \emph{wrong}. Because the size is the distance from a
+gapped operator's leading eigenvector, it is defined only where a subleading $\lambda_2$ exists, so the prediction
+surface splits into four classes. \mE\ \emph{seam-gapped} (Koide $F_{\mathrm{pole}}$ \vref{v303}, recovery \vref{v221},
+the QG bound capped by $\chi=729/665$ \vref{v337}): rate $(2/3)^6$; the discrete compiler: golden $(\varphi+2)/4$
+(\vref{v312}). \mE\ \emph{exact identity} ($\det R=8$, $N_\Phi=1$, $\theta_{\mathrm{eff}}=0$, $\sin^2\theta_{13}=\varphi_0
+e^{-5/6}$): no $\lambda_2$, so the correction is $0$ structurally and a band would contradict the \mE\ status. \mE\
+\emph{external-rate} ($\eta_B$ washout, axion freeze, $m_p/m_e$ RG): the gapped \emph{shape} with an external rate ---
+only $F_{\mathrm{pole}}$ has the seam rate (\vref{v303}), firewalled (\vref{v187}). \mE\ \emph{fixed-point}: the texture
+is already explicit (e.g.\ $\sin^2\theta_{12}$, $\varepsilon=(3/4)\varphi_0=c_3+36c_3^4$). \mE\ the Koide first correction
+(door~2): $F_{\mathrm{pole}}$ is the one seam-gapped prediction, rate $(2/3)^6\approx0.0878$ (\vref{v371}), the source
+quotient $0.33\%$ below $2/3$ --- the rate is the suppression \emph{scale}, not the residual. \mC\ so a uniform band on
+all predictions is wrong; the size is keyed to the mechanism class. A typing of \vref{v387} (as \vref{v384} is of
+\vref{v383}); cited in \texttt{origin\_theory}; Python-only.
+\end{itemize}
+
 \subsection*{2026-06-24 (Harvesting the QFT/gravity machinery: \texttt{v385} the UV-branch kill-test surface, \texttt{v386} the graviton-exchange amplitude, \texttt{v387} the gap-driven correction calculus)}
 \begin{itemize}
 \item \textbf{\texttt{v385} (\texttt{UVBRANCH.KILLTEST.01}) --- the carrier-Pati--Salam UV branch on the all-order footing.}

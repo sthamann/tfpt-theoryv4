@@ -47,6 +47,491 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "Typed correction budget: "
+      },
+      {
+        "k": "c",
+        "v": "v388"
+      },
+      {
+        "k": "t",
+        "v": " the gap correction is keyed to the mechanism class, not a uniform band"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v388"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "CORRECTIONS.BUDGET.01"
+            },
+            {
+              "k": "t",
+              "v": ") — the gap-driven correction ("
+            },
+            {
+              "k": "c",
+              "v": "v387"
+            },
+            {
+              "k": "t",
+              "v": ") is a "
+            },
+            {
+              "k": "i",
+              "c": [
+                {
+                  "k": "t",
+                  "v": "typed"
+                }
+              ]
+            },
+            {
+              "k": "t",
+              "v": " budget."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " A machine-checked answer to “does the "
+        },
+        {
+          "k": "m",
+          "v": "(\\lambda_2/\\lambda_1)^n"
+        },
+        {
+          "k": "t",
+          "v": " correction apply to "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "all"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " predictions?” — the answer is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "no"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", and for one whole class a band would be "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "wrong"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ". Because the size is the distance from a gapped operator's leading eigenvector, it is defined only where a subleading "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_2"
+        },
+        {
+          "k": "t",
+          "v": " exists, so the prediction surface splits into four classes. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "seam-gapped"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (Koide "
+        },
+        {
+          "k": "m",
+          "v": "F_{\\mathrm{pole}}"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v303"
+        },
+        {
+          "k": "t",
+          "v": ", recovery "
+        },
+        {
+          "k": "c",
+          "v": "v221"
+        },
+        {
+          "k": "t",
+          "v": ", the QG bound capped by "
+        },
+        {
+          "k": "m",
+          "v": "\\chi=729/665"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v337"
+        },
+        {
+          "k": "t",
+          "v": "): rate "
+        },
+        {
+          "k": "m",
+          "v": "(2/3)^6"
+        },
+        {
+          "k": "t",
+          "v": "; the discrete compiler: golden "
+        },
+        {
+          "k": "m",
+          "v": "(\\varphi+2)/4"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v312"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "exact identity"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\det R=8"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "N_\\Phi=1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\theta_{\\mathrm{eff}}=0"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\sin^2\\theta_{13}=\\varphi_0\ne^{-5/6}"
+        },
+        {
+          "k": "t",
+          "v": "): no "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_2"
+        },
+        {
+          "k": "t",
+          "v": ", so the correction is "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " structurally and a band would contradict the "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "status. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "external-rate"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\eta_B"
+        },
+        {
+          "k": "t",
+          "v": " washout, axion freeze, "
+        },
+        {
+          "k": "m",
+          "v": "m_p/m_e"
+        },
+        {
+          "k": "t",
+          "v": " RG): the gapped "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "shape"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " with an external rate — only "
+        },
+        {
+          "k": "m",
+          "v": "F_{\\mathrm{pole}}"
+        },
+        {
+          "k": "t",
+          "v": " has the seam rate ("
+        },
+        {
+          "k": "c",
+          "v": "v303"
+        },
+        {
+          "k": "t",
+          "v": "), firewalled ("
+        },
+        {
+          "k": "c",
+          "v": "v187"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "fixed-point"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the texture is already explicit (e.g. "
+        },
+        {
+          "k": "m",
+          "v": "\\sin^2\\theta_{12}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon=(3/4)\\varphi_0=c_3+36c_3^4"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the Koide first correction (door 2): "
+        },
+        {
+          "k": "m",
+          "v": "F_{\\mathrm{pole}}"
+        },
+        {
+          "k": "t",
+          "v": " is the one seam-gapped prediction, rate "
+        },
+        {
+          "k": "m",
+          "v": "(2/3)^6\\approx0.0878"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v371"
+        },
+        {
+          "k": "t",
+          "v": "), the source quotient "
+        },
+        {
+          "k": "m",
+          "v": "0.33\\%"
+        },
+        {
+          "k": "t",
+          "v": " below "
+        },
+        {
+          "k": "m",
+          "v": "2/3"
+        },
+        {
+          "k": "t",
+          "v": " — the rate is the suppression "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "scale"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", not the residual. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "so a uniform band on all predictions is wrong; the size is keyed to the mechanism class. A typing of "
+        },
+        {
+          "k": "c",
+          "v": "v387"
+        },
+        {
+          "k": "t",
+          "v": " (as "
+        },
+        {
+          "k": "c",
+          "v": "v384"
+        },
+        {
+          "k": "t",
+          "v": " is of "
+        },
+        {
+          "k": "c",
+          "v": "v383"
+        },
+        {
+          "k": "t",
+          "v": "); cited in "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": "; Python-only."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-24",
+    "dateLabel": "2026-06-24",
+    "heading": [
+      {
+        "k": "t",
         "v": "Harvesting the QFT/gravity machinery: "
       },
       {
