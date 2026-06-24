@@ -531,6 +531,20 @@ clock's three primes each carry a number-field facet (square/hexagon/pentagon $=
 (Gaussian, seam-orientation) one having been the previously unnamed facet. \textbf{And those three primes are not
 three coincidences (\veri{v394\_coxeter\_atoms.py}):} they are the three atoms of the anchor $a=(1,1,2)$ itself ---
 $2{=}e_3{=}|Z_2|$, $3{=}p_0{=}\Nfam$, $5{=}e_2{=}\gcar$ --- so $\{$atoms$\}=\{$Coxeter primes$\}=\{$facet fields$\}$.
+\textbf{And the three facets \emph{compose} to one arithmetic hull (\veri{v403\_facet\_compositum.py}):} taken
+together they generate $K=\mathbb Q(i,\sqrt{-3},\sqrt5)$, whose degree $[K:\mathbb Q]=2^3=8=\operatorname{rank}E_8
+=\gcar{+}\Nfam$ and Galois group $(\mathbb Z/2)^3$ (order $8$) match the $E_8$ rank; its seven quadratic subfields
+split $4$ imaginary $=|\mu_4|$ (the CM, dynamic facets) $+$ $3$ real $=\Nfam$ (the RM, static facets) and ramify
+\emph{only} over the three atoms $\{2,3,5\}=$ the primes of $h(E_8)=30$. So $K$ is the abelian \emph{arithmetic
+hull} dual to the $E_8$ \emph{lattice} hull --- both of rank/order $8$, both supported on the same atoms (the
+relation $2^{\omega(h)}=\operatorname{rank}$ is $E_8$-special: the $E_7$ control $h=18$ gives $2^2=4\neq7$). \mE/\mC\
+\textbf{And the \emph{same} $E_8$ character reads the two CM points oppositely (\veri{v404\_e8\_char\_cm\_duality.py}):}
+the $(E_8)_1$ vacuum character $\chi_{E_8}=E_4/\eta^8=j^{1/3}$ takes its two CM values at the only two elliptic points
+of $\mathrm{PSL}(2,\mathbb Z)$ --- $\chi_{E_8}(i)=1728^{1/3}=12$ at the seam ($\tau{=}i$, $E_8$ present, where the
+keystone \texttt{SEAM.EQUIV.01} closes, \vref{v282}) but $\chi_{E_8}(\omega)=0$ at the family ($\tau{=}\omega$,
+$j{=}0$, $E_4$ vanishes, \vref{v220}). So the seam/flavor rigidity asymmetry is one function read at two points: the
+constants are $\chi_{E_8}$ at its \emph{nonzero} CM value, while the soft flavor/CP residual ($U_{\mathrm{wall}}$,
+$v_{\mathrm{geo}}$) is its $j{=}0$ degeneration --- a candidate \emph{dual keystone} at $\tau{=}\omega$. \mE/\mC
 The dynamic sector is moreover pure $\{2,3\}$-arithmetic with the seam (prime-$2$) as the common factor: the QG
 susceptibility $\chi=729/665=3^6/(3^6{-}2^6)$ and the seam rate $(2/3)^6=2^6/3^6$, while $2/3=|Z_2|/\Nfam$ and the
 compiler rate $(\varphi{+}2)/4=(\varphi{+}2)/|\mu_4|$ ($|\mu_4|{=}4{=}2^2$) both carry prime-$2$ --- so $30=5\times6

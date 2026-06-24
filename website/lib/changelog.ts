@@ -47,6 +47,810 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "The arithmetic hull + the "
+      },
+      {
+        "k": "m",
+        "v": "E_8"
+      },
+      {
+        "k": "t",
+        "v": "-character CM duality: "
+      },
+      {
+        "k": "c",
+        "v": "v403"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "v404"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v403_facet_compositum.py"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "ARITH.HULL.01"
+        },
+        {
+          "k": "t",
+          "v": "): the three single-prime number-field facets of the order-"
+        },
+        {
+          "k": "m",
+          "v": "30"
+        },
+        {
+          "k": "t",
+          "v": " clock ("
+        },
+        {
+          "k": "c",
+          "v": "v390"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v394"
+        },
+        {
+          "k": "t",
+          "v": ", used so far only one at a time) "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "compose"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " to one field "
+        },
+        {
+          "k": "m",
+          "v": "K=\\mathbb Q(i,\\sqrt{-3},\\sqrt5)"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the squarefree parts "
+        },
+        {
+          "k": "m",
+          "v": "-1,-3,5"
+        },
+        {
+          "k": "t",
+          "v": " are independent in "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb Q^\\times/(\\mathbb Q^\\times)^2"
+        },
+        {
+          "k": "t",
+          "v": ", so "
+        },
+        {
+          "k": "m",
+          "v": "[K:\\mathbb Q]=2^3=8=\\operatorname{rank}E_8=\\gcar{+}\\Nfam"
+        },
+        {
+          "k": "t",
+          "v": " with Galois group "
+        },
+        {
+          "k": "m",
+          "v": "(\\mathbb Z/2)^3"
+        },
+        {
+          "k": "t",
+          "v": " (order "
+        },
+        {
+          "k": "m",
+          "v": "8"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "exactly "
+        },
+        {
+          "k": "m",
+          "v": "7"
+        },
+        {
+          "k": "t",
+          "v": " quadratic subfields "
+        },
+        {
+          "k": "m",
+          "v": "\\{-1,-3,5,3,-5,-15,15\\}"
+        },
+        {
+          "k": "t",
+          "v": ", splitting "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " imaginary "
+        },
+        {
+          "k": "m",
+          "v": "=|\\mu_4|"
+        },
+        {
+          "k": "t",
+          "v": " (CM/dynamic) "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": " real "
+        },
+        {
+          "k": "m",
+          "v": "=\\Nfam"
+        },
+        {
+          "k": "t",
+          "v": " (RM/static); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "ramified "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "only"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " over "
+        },
+        {
+          "k": "m",
+          "v": "\\{2,3,5\\}="
+        },
+        {
+          "k": "t",
+          "v": " the atoms "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the primes of "
+        },
+        {
+          "k": "m",
+          "v": "h(E_8)=30"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "2^{\\omega(h)}=\\operatorname{rank}"
+        },
+        {
+          "k": "t",
+          "v": " is "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": "-special (the "
+        },
+        {
+          "k": "m",
+          "v": "E_7"
+        },
+        {
+          "k": "t",
+          "v": " control "
+        },
+        {
+          "k": "m",
+          "v": "h=18"
+        },
+        {
+          "k": "t",
+          "v": " gives "
+        },
+        {
+          "k": "m",
+          "v": "2^2=4\\neq7"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "m",
+          "v": "K"
+        },
+        {
+          "k": "t",
+          "v": " is the abelian "
+        },
+        {
+          "k": "m",
+          "v": "(\\mathbb Z/2)^3"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "arithmetic"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " hull dual to the "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "lattice"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " hull; the "
+        },
+        {
+          "k": "m",
+          "v": "7"
+        },
+        {
+          "k": "t",
+          "v": " quadratic subfields are a candidate for the "
+        },
+        {
+          "k": "m",
+          "v": "7"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " audit slices. A synthesis composing the established facets, no new number; cited in "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": "; Python-only by the synthesis-module convention (cf. "
+        },
+        {
+          "k": "c",
+          "v": "v390"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v394"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v404_e8_char_cm_duality.py"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "E8.CMDUAL.01"
+        },
+        {
+          "k": "t",
+          "v": "): the "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " vacuum character "
+        },
+        {
+          "k": "m",
+          "v": "\\chi_{E_8}=E_4/\\eta^8=j^{1/3}"
+        },
+        {
+          "k": "t",
+          "v": " read at "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "both"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " CM points, extending "
+        },
+        {
+          "k": "c",
+          "v": "v282"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\chi_{E_8}(i)=12"
+        },
+        {
+          "k": "t",
+          "v": ") to the second elliptic point. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "\\chi_{E_8}^3=j"
+        },
+        {
+          "k": "t",
+          "v": " (q-series); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "SEAM "
+        },
+        {
+          "k": "m",
+          "v": "\\tau{=}i"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb Q(i)"
+        },
+        {
+          "k": "t",
+          "v": ", order "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": "): cross-ratio "
+        },
+        {
+          "k": "m",
+          "v": "2\\Rightarrow j=1728\\Rightarrow\\chi_{E_8}(i)=1728^{1/3}=12"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " present, "
+        },
+        {
+          "k": "c",
+          "v": "v214"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v282"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "FAMILY "
+        },
+        {
+          "k": "m",
+          "v": "\\tau{=}\\omega"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb Q(\\sqrt{-3})"
+        },
+        {
+          "k": "t",
+          "v": ", order "
+        },
+        {
+          "k": "m",
+          "v": "6"
+        },
+        {
+          "k": "t",
+          "v": "): the equianharmonic "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\lambda^2{-}\\lambda{+}1=0"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow j=0\\Rightarrow\\chi_{E_8}(\\omega)=0"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "E_4"
+        },
+        {
+          "k": "t",
+          "v": " vanishes, "
+        },
+        {
+          "k": "c",
+          "v": "v220"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v267"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "\\tau{=}i,\\tau{=}\\omega"
+        },
+        {
+          "k": "t",
+          "v": " are the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "only"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " elliptic points of "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{PSL}(2,\\mathbb Z)"
+        },
+        {
+          "k": "t",
+          "v": ", so the values are forced. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the seam/flavor rigidity duality: the seam is rigid where "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " is present ("
+        },
+        {
+          "k": "m",
+          "v": "\\chi=12"
+        },
+        {
+          "k": "t",
+          "v": ", the keystone "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " closes) while the flavor/CP sector is the soft residual where "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " degenerates ("
+        },
+        {
+          "k": "m",
+          "v": "\\chi=0"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "U_{\\mathrm{wall}}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "v_{\\mathrm{geo}}"
+        },
+        {
+          "k": "t",
+          "v": ", the CP texture), a candidate dual keystone at "
+        },
+        {
+          "k": "m",
+          "v": "\\tau{=}\\omega"
+        },
+        {
+          "k": "t",
+          "v": ". Cited in "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": "; core values "
+        },
+        {
+          "k": "m",
+          "v": "j=1728/j=0"
+        },
+        {
+          "k": "t",
+          "v": " already mirrored ("
+        },
+        {
+          "k": "c",
+          "v": "v214"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v220"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v267"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v282"
+        },
+        {
+          "k": "t",
+          "v": "), Python-only."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-24",
+    "dateLabel": "2026-06-24",
+    "heading": [
+      {
+        "k": "t",
         "v": "The five TOE/QFT closure contracts "
       },
       {

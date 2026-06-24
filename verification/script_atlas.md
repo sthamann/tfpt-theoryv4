@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`397` registered scripts · `458` ledger claims · `10` clusters.
+`399` registered scripts · `460` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -272,7 +272,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v75_upoint_to_vgeo** [E/O] `FLAV.UPOINT.01` — Gate 1 complete: U_point → v_geo (ratios + Grand Mass Volume); same anchor as 1/G
   - deps: v71_simple_r_bridge, v20_lepton_c_derivation, v46_grand_mass_volume, v68 · cited: origin theory, research contracts
 
-### `frontier` — Open gate (G_metric) & the frontier  (113 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (115 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -501,6 +501,10 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v384_residual_certification, v78_vgeo_floor, v153, v274, v364, v384 · cited: research contracts
 - **v402_ftransfer_suite** [E/C/X] `FTRANSFER.SUITE.01` — F_transfer functor suite (Paper E): the four frontier sectors as one F_observable o F_threshold o F_RG with exact atom sources + kill-test coverage + the firewall
   - deps: v371_ftransfer_pole, v372_ftransfer_boltzmann, v373_ftransfer_relic, v374_ftransfer_qcd, v9, v93, v164, v185 · cited: 4 frontier
+- **v403_facet_compositum** [E/C] `ARITH.HULL.01` — ARITH.HULL.01: the three number-field facets (v390) COMPOSE to K=Q(i,sqrt-3,sqrt5), a degree-8=rank(E8) abelian field -- the arithmetic hull dual to the E8 lattice hull. [E] -1,-3,
+  - deps: v390_prime2_facet, v394_coxeter_atoms, v23, v390, v394, v222 · cited: origin theory
+- **v404_e8_char_cm_duality** [E/C] `E8.CMDUAL.01` — E8.CMDUAL.01: the (E8)_1 vacuum character chi_E8=E4/eta^8=j^{1/3} at the two CM points -- 12 at the seam (tau=i), 0 at the family (tau=omega), extending v282. [E] chi_E8^3=j (q-ser
+  - deps: v282_e8_tau_i_unification, v282, v214, v220, v267, v390 · cited: origin theory
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (168 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -864,8 +868,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v391_alpha_quillen_progress** — `ALPHA.QUILLEN.PROGRESS.01`
-- **v392_seam_s3_scalinglimit** — `SEAM.S3.SCALINGLIMIT.01`
 - **v393_corrections_numeric** — `CORRECTIONS.NUMERIC.01`
 - **v394_coxeter_atoms** — `COXETER.ATOMS.01, RES.COXETER.SYMMETRY.01`
 - **v395_hypergraph_coupled** — `HYP.COUPLED.01`
@@ -876,4 +878,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v400_grav_nonlocal_action** — `GRAV.NONLOCAL.01`
 - **v401_metrology_closure** — `METROLOGY.CLOSURE.01`
 - **v402_ftransfer_suite** — `FTRANSFER.SUITE.01`
+- **v403_facet_compositum** — `ARITH.HULL.01`
+- **v404_e8_char_cm_duality** — `E8.CMDUAL.01`
 
