@@ -521,6 +521,7 @@ const NODES: DagNode[] = [
       "v384_residual_certification.py",
       "v387_corrections_gap.py",
       "v388_corrections_budget.py",
+      "v390_prime2_facet.py",
     ],
   },
 ];

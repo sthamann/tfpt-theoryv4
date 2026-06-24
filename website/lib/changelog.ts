@@ -47,6 +47,335 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "Completing the Coxeter clock: "
+      },
+      {
+        "k": "c",
+        "v": "v390"
+      },
+      {
+        "k": "t",
+        "v": " the prime-2 (Gaussian / "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb Z/4"
+      },
+      {
+        "k": "t",
+        "v": "-seam) facet of "
+      },
+      {
+        "k": "m",
+        "v": "30=2{\\cdot}3{\\cdot}5"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v390"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "COXETER.PRIME2.01"
+            },
+            {
+              "k": "t",
+              "v": ") — the prime-2 facet of the order-30 Coxeter clock."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v383"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v387"
+        },
+        {
+          "k": "t",
+          "v": " named two number-field facets of the clock "
+        },
+        {
+          "k": "m",
+          "v": "30=2{\\cdot}3{\\cdot}5=h(E_8)"
+        },
+        {
+          "k": "t",
+          "v": " — the golden "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi\\in\\mathbb Q(\\sqrt5)"
+        },
+        {
+          "k": "t",
+          "v": " (prime-5, carrier) and "
+        },
+        {
+          "k": "m",
+          "v": "(2/3)^6\\in\\mathbb Q"
+        },
+        {
+          "k": "t",
+          "v": " (prime-3, family). This names the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "prime-2"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " facet and identifies it with structure already in the theory: the Gaussian field "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb Q(i)"
+        },
+        {
+          "k": "t",
+          "v": ", i.e. the CM point "
+        },
+        {
+          "k": "m",
+          "v": "\\tau=i"
+        },
+        {
+          "k": "t",
+          "v": " and the order-4 "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4=\\mathbb Z/4"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "square"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " seam deck ("
+        },
+        {
+          "k": "c",
+          "v": "v282"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v288"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v333"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "h(E_8)=30"
+        },
+        {
+          "k": "t",
+          "v": " factors into exactly three primes; one quadratic facet field per prime, each ramified at its prime: "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{disc}\\mathbb Q(i)=-4"
+        },
+        {
+          "k": "t",
+          "v": " (2 ramifies), "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{disc}\\mathbb Q(\\sqrt{-3})=-3"
+        },
+        {
+          "k": "t",
+          "v": " (3 ramifies), "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{disc}\\mathbb Q(\\sqrt5)=5"
+        },
+        {
+          "k": "t",
+          "v": " (5 ramifies); the ramified primes are "
+        },
+        {
+          "k": "m",
+          "v": "\\{2,3,5\\}"
+        },
+        {
+          "k": "t",
+          "v": " with product "
+        },
+        {
+          "k": "m",
+          "v": "30=h(E_8)"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the prime-2 (Gaussian) facet is the "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb Z/4"
+        },
+        {
+          "k": "t",
+          "v": " seam deck: min. poly "
+        },
+        {
+          "k": "m",
+          "v": "x^2+1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "j(i)=1728=12^3"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\tau=i"
+        },
+        {
+          "k": "t",
+          "v": " fixed by the modular "
+        },
+        {
+          "k": "m",
+          "v": "S"
+        },
+        {
+          "k": "t",
+          "v": " of order "
+        },
+        {
+          "k": "m",
+          "v": "4=2^2"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "|\\mu_4|=4=2^2"
+        },
+        {
+          "k": "t",
+          "v": " — the static, even, seam-orientation facet. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "so the three primes of the clock now each carry a facet (square/hexagon/pentagon "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " seam/CP/carrier); the prime set "
+        },
+        {
+          "k": "m",
+          "v": "\\{2,3,5\\}"
+        },
+        {
+          "k": "t",
+          "v": " is forced by "
+        },
+        {
+          "k": "m",
+          "v": "h(E_8)=30"
+        },
+        {
+          "k": "t",
+          "v": ", not chosen. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": "; a synthesis, no new number; Python-only."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-24",
+    "dateLabel": "2026-06-24",
+    "heading": [
+      {
+        "k": "t",
         "v": "Graviton loop finiteness: "
       },
       {

@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`384` registered scripts · `443` ledger claims · `10` clusters.
+`385` registered scripts · `444` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -268,7 +268,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v75_upoint_to_vgeo** [E/O] `FLAV.UPOINT.01` — Gate 1 complete: U_point → v_geo (ratios + Grand Mass Volume); same anchor as 1/G
   - deps: v71_simple_r_bridge, v20_lepton_c_derivation, v46_grand_mass_volume, v68 · cited: origin theory, research contracts
 
-### `frontier` — Open gate (G_metric) & the frontier  (103 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (104 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -477,6 +477,8 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v303, v371, v383, v387, v314, v337, v221, v312 · cited: origin theory
 - **v389_grav_loop_finiteness** [E/C/O] `GRAV.LOOP.FINITE.01` — GRAV.LOOP.FINITE.01: the entire-form-factor graviton is UV-finite at the LOOP level by power counting -- the honest next step past v386 (tree). Extends v304/v370/v380/v386 from the
   - deps: v253, v259, v304, v370, v380, v386 · cited: 4 frontier
+- **v390_prime2_facet** [E/C] `COXETER.PRIME2.01` — COXETER.PRIME2.01: the prime-2 facet of the order-30 Coxeter clock, completing v383. The clock 30=2*3*5=h(E8) had two named number-field facets (golden phi in Q(sqrt5), prime-5/car
+  - deps: v220, v282, v288, v314, v333, v383, v387 · cited: origin theory
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (167 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -838,7 +840,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v378_seam_s3_modular** — `SEAM.S3.MODULAR.01`
 - **v379_seam_s3_rp** — `SEAM.S3.RP.01`
 - **v380_grav_kms_hessian** — `GRAV.KMS.HESSIAN.01`
 - **v381_qft4d_eg_allorder** — `QFT4D.EG.ALLORDER.01`
@@ -850,4 +851,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v387_corrections_gap** — `CORRECTIONS.GAP.01`
 - **v388_corrections_budget** — `CORRECTIONS.BUDGET.01`
 - **v389_grav_loop_finiteness** — `GRAV.LOOP.FINITE.01`
+- **v390_prime2_facet** — `COXETER.PRIME2.01`
 
