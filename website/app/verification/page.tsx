@@ -5,6 +5,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { VerificationDag } from "@/components/VerificationDag";
 import { ScriptIndex } from "@/components/ScriptIndex";
 import { GravityEmergence } from "@/components/GravityEmergence";
+import { UniversalGapLab } from "@/components/UniversalGapLab";
 import { SCRIPT_TOTAL } from "@/lib/suite";
 import { REPO_URL, SITE_URL } from "@/lib/utils";
 
@@ -373,6 +374,20 @@ export default function VerificationPage() {
               the &ldquo;the bridge is one clock&rdquo; reading is [C] (v319).
             </figcaption>
           </figure>
+        </div>
+      </section>
+
+      {/* Universal spectral gap — the animated lab (v383–v391) */}
+      <section className="relative border-t border-slate-800/60 py-12 sm:py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            eyebrow="One principle · animated"
+            title="The universal spectral gap — one operator, many sectors"
+            description="Every TFPT sector is the same object: a gapped operator with a unique attractor (the physics) and a spectral gap (the reason there is no free parameter). The same gap also sizes each sector's first correction — a typed budget, not a uniform band — and the gap rate is the prime-3 (2/3)⁶ or prime-5 golden facet of the order-30 Coxeter clock. Watch the sectors race to their attractor; the gapless r=1 track never forgets its start (the Lean theorem). Beside it: the entire-form-factor graviton (finite, ghost-free, UV-soft) and the residual matrix that is certification, not construction (v383–v391)."
+          />
+          <div className="mt-10">
+            <UniversalGapLab />
+          </div>
         </div>
       </section>
 

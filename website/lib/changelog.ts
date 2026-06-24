@@ -47,6 +47,186 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "Website: an animated “Universal Gap Lab” visualising "
+      },
+      {
+        "k": "c",
+        "v": "v383"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v391"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website — the "
+            },
+            {
+              "k": "c",
+              "v": "UniversalGapLab"
+            },
+            {
+              "k": "t",
+              "v": " animation on "
+            },
+            {
+              "k": "c",
+              "v": "/verification"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " A new client component (Framer Motion, no new dependency) with three linked, module-grounded views: (A) every sector as the gap contraction "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{iter}_n=x_\\star+r^n(x_0-x_\\star)"
+        },
+        {
+          "k": "t",
+          "v": " racing to its attractor at "
+        },
+        {
+          "k": "m",
+          "v": "r=(2/3)^6"
+        },
+        {
+          "k": "t",
+          "v": " (seam-gapped, "
+        },
+        {
+          "k": "c",
+          "v": "v303"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v387"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v388"
+        },
+        {
+          "k": "t",
+          "v": ") or the golden "
+        },
+        {
+          "k": "m",
+          "v": "(\\varphi+2)/4"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v312"
+        },
+        {
+          "k": "t",
+          "v": "), with a gapless "
+        },
+        {
+          "k": "m",
+          "v": "r=1"
+        },
+        {
+          "k": "t",
+          "v": " track that never forgets its start (the Lean theorem "
+        },
+        {
+          "k": "c",
+          "v": "FORM.SPECTRALGAP.01"
+        },
+        {
+          "k": "t",
+          "v": ") — the rate "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the first-correction size ("
+        },
+        {
+          "k": "c",
+          "v": "v388"
+        },
+        {
+          "k": "t",
+          "v": "); (B) the entire-form-factor graviton ratio "
+        },
+        {
+          "k": "m",
+          "v": "e^{-u}"
+        },
+        {
+          "k": "t",
+          "v": " falling faster than any power, ghost-free and UV-soft ("
+        },
+        {
+          "k": "c",
+          "v": "v386"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v389"
+        },
+        {
+          "k": "t",
+          "v": "); (C) the residual matrix as certification, not construction — every open item external, zero open internal mechanisms ("
+        },
+        {
+          "k": "c",
+          "v": "v384"
+        },
+        {
+          "k": "t",
+          "v": "). Mirror-only: every number is grounded in a module; no theory change."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-24",
+    "dateLabel": "2026-06-24",
+    "heading": [
+      {
+        "k": "t",
         "v": "Honest attempt at an external target: "
       },
       {
