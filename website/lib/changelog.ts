@@ -42,6 +42,572 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-06-24",
+    "dateLabel": "2026-06-24",
+    "heading": [
+      {
+        "k": "t",
+        "v": "Harvesting the QFT/gravity machinery: "
+      },
+      {
+        "k": "c",
+        "v": "v385"
+      },
+      {
+        "k": "t",
+        "v": " the UV-branch kill-test surface, "
+      },
+      {
+        "k": "c",
+        "v": "v386"
+      },
+      {
+        "k": "t",
+        "v": " the graviton-exchange amplitude, "
+      },
+      {
+        "k": "c",
+        "v": "v387"
+      },
+      {
+        "k": "t",
+        "v": " the gap-driven correction calculus"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v385"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "UVBRANCH.KILLTEST.01"
+            },
+            {
+              "k": "t",
+              "v": ") — the carrier-Pati–Salam UV branch on the all-order footing."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " A consolidation that ties the all-order EG/BRST closure ("
+        },
+        {
+          "k": "c",
+          "v": "v381"
+        },
+        {
+          "k": "t",
+          "v": ") to the optional UV branch and computes the one genuinely new thing: the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "proton-decay safety hierarchy"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the carrier content is the SM with no new states, so the SM-non-unification ("
+        },
+        {
+          "k": "c",
+          "v": "v246"
+        },
+        {
+          "k": "t",
+          "v": ") is now all-order-robust; "
+        },
+        {
+          "k": "s",
+          "v": "X"
+        },
+        {
+          "k": "t",
+          "v": "the plain-SM 4D-GUT stays killed ("
+        },
+        {
+          "k": "m",
+          "v": "\\sin^2\\theta_W=3/8"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "0.231"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the optional carrier-PS branch sits at "
+        },
+        {
+          "k": "m",
+          "v": "M_{PS}=\\kappa M_{\\mathrm{scal}}\\approx\n3\\times10^{13}"
+        },
+        {
+          "k": "t",
+          "v": " GeV ("
+        },
+        {
+          "k": "m",
+          "v": "\\kappa\\in[1.0,1.2]"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v253"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "minimal PS gauge bosons are "
+        },
+        {
+          "k": "m",
+          "v": "SU(4)"
+        },
+        {
+          "k": "t",
+          "v": " leptoquarks that mediate rare LFV ("
+        },
+        {
+          "k": "m",
+          "v": "K_L\\to\\mu e"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "p\\to e^+\\pi^0"
+        },
+        {
+          "k": "t",
+          "v": ", so the branch clears the binding bound by "
+        },
+        {
+          "k": "m",
+          "v": "M_{PS}/M_{\\mathrm{bound}}\\sim10^7"
+        },
+        {
+          "k": "t",
+          "v": " – proton-safe, with "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "no"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " fake "
+        },
+        {
+          "k": "m",
+          "v": "\\tau_p"
+        },
+        {
+          "k": "t",
+          "v": " window ("
+        },
+        {
+          "k": "c",
+          "v": "v265"
+        },
+        {
+          "k": "t",
+          "v": "). Cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_5_redteam"
+        },
+        {
+          "k": "t",
+          "v": "; Python-only."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v386"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "GRAV.AMPLITUDE.01"
+            },
+            {
+              "k": "t",
+              "v": ") — the graviton-exchange amplitude is finite and UV-soft."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Extends "
+        },
+        {
+          "k": "c",
+          "v": "v304"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v370"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v380"
+        },
+        {
+          "k": "t",
+          "v": " from the propagator to the actual tree amplitude. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the dressed spin-2 propagator "
+        },
+        {
+          "k": "m",
+          "v": "e^{-p^2/M^2}/p^2"
+        },
+        {
+          "k": "t",
+          "v": " has its only pole at "
+        },
+        {
+          "k": "m",
+          "v": "p^2=0"
+        },
+        {
+          "k": "t",
+          "v": " (residue "
+        },
+        {
+          "k": "m",
+          "v": "1>0"
+        },
+        {
+          "k": "t",
+          "v": ", ghost-free), is exponentially softened in the UV (the ratio "
+        },
+        {
+          "k": "m",
+          "v": "e^{-u}"
+        },
+        {
+          "k": "t",
+          "v": " falls faster than any power) and reduces to GR "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " a calculable "
+        },
+        {
+          "k": "m",
+          "v": "-p^2/M^2"
+        },
+        {
+          "k": "t",
+          "v": " correction at low energy ("
+        },
+        {
+          "k": "m",
+          "v": "M=M_{\\mathrm{scal}}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v253"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "a single positive-residue pole gives tree unitarity, so perturbative graviton scattering "
+        },
+        {
+          "k": "m",
+          "v": "A\\sim(T{\\cdot}P_2{\\cdot}T')e^{-p^2/M^2}/p^2"
+        },
+        {
+          "k": "t",
+          "v": " is an explicit finite computation (perturbative-only; "
+        },
+        {
+          "k": "c",
+          "v": "QG.AMB.01"
+        },
+        {
+          "k": "t",
+          "v": " stays a "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "redundancy, "
+        },
+        {
+          "k": "c",
+          "v": "v369"
+        },
+        {
+          "k": "t",
+          "v": "). Cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_4_frontier"
+        },
+        {
+          "k": "t",
+          "v": "; Python-only."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v387"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "CORRECTIONS.GAP.01"
+            },
+            {
+              "k": "t",
+              "v": ") — the gap-driven correction calculus."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The practical harvest of "
+        },
+        {
+          "k": "c",
+          "v": "v383"
+        },
+        {
+          "k": "t",
+          "v": ": the same spectral gap that makes a sector parameter-free also sets the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "size"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " of its first correction ("
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{correction}_n\\sim(\\lambda_2/\\lambda_1)^n"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "flavor, horizon recovery and the QG bound all share the "
+        },
+        {
+          "k": "m",
+          "v": "(2/3)^6"
+        },
+        {
+          "k": "t",
+          "v": " rate (the family-"
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": " facet; QG susceptibility "
+        },
+        {
+          "k": "m",
+          "v": "\\chi=729/665"
+        },
+        {
+          "k": "t",
+          "v": "), while the discrete compiler transient decays at the golden "
+        },
+        {
+          "k": "m",
+          "v": "(\\varphi+2)/4"
+        },
+        {
+          "k": "t",
+          "v": " (the carrier-"
+        },
+        {
+          "k": "m",
+          "v": "5"
+        },
+        {
+          "k": "t",
+          "v": " facet) — the two number-field facets of "
+        },
+        {
+          "k": "c",
+          "v": "v314"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v383"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the gap does double duty (why no free parameter "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "and"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " how big the first correction), so sub-leading magnitudes are organised, not free. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": "; Python-only."
+        }
+      ]
+    ]
+  },
+  {
     "date": "2026-06-23",
     "dateLabel": "2026-06-23",
     "heading": [

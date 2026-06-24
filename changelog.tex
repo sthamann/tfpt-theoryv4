@@ -59,6 +59,35 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-24 (Harvesting the QFT/gravity machinery: \texttt{v385} the UV-branch kill-test surface, \texttt{v386} the graviton-exchange amplitude, \texttt{v387} the gap-driven correction calculus)}
+\begin{itemize}
+\item \textbf{\texttt{v385} (\texttt{UVBRANCH.KILLTEST.01}) --- the carrier-Pati--Salam UV branch on the all-order footing.}
+A consolidation that ties the all-order EG/BRST closure (\vref{v381}) to the optional UV branch and computes the
+one genuinely new thing: the \emph{proton-decay safety hierarchy}. \mE\ the carrier content is the SM with no new
+states, so the SM-non-unification (\vref{v246}) is now all-order-robust; \mX\ the plain-SM 4D-GUT stays killed
+($\sin^2\theta_W=3/8$ vs $0.231$); \mC\ the optional carrier-PS branch sits at $M_{PS}=\kappa M_{\mathrm{scal}}\approx
+3\times10^{13}$ GeV ($\kappa\in[1.0,1.2]$, \vref{v253}); \mE\ minimal PS gauge bosons are $SU(4)$ leptoquarks that
+mediate rare LFV ($K_L\to\mu e$), \emph{not} $p\to e^+\pi^0$, so the branch clears the binding bound by
+$M_{PS}/M_{\mathrm{bound}}\sim10^7$ -- proton-safe, with \emph{no} fake $\tau_p$ window (\vref{v265}). Cited in
+\texttt{tfpt\_5\_redteam}; Python-only.
+\item \textbf{\texttt{v386} (\texttt{GRAV.AMPLITUDE.01}) --- the graviton-exchange amplitude is finite and UV-soft.}
+Extends \vref{v304}/\vref{v370}/\vref{v380} from the propagator to the actual tree amplitude. \mE\ the dressed spin-2
+propagator $e^{-p^2/M^2}/p^2$ has its only pole at $p^2=0$ (residue $1>0$, ghost-free), is exponentially softened in
+the UV (the ratio $e^{-u}$ falls faster than any power) and reduces to GR $+$ a calculable $-p^2/M^2$ correction at
+low energy ($M=M_{\mathrm{scal}}$, \vref{v253}); \mC\ a single positive-residue pole gives tree unitarity, so
+perturbative graviton scattering $A\sim(T{\cdot}P_2{\cdot}T')e^{-p^2/M^2}/p^2$ is an explicit finite computation
+(perturbative-only; \texttt{QG.AMB.01} stays a \mC\ redundancy, \vref{v369}). Cited in \texttt{tfpt\_4\_frontier};
+Python-only.
+\item \textbf{\texttt{v387} (\texttt{CORRECTIONS.GAP.01}) --- the gap-driven correction calculus.}
+The practical harvest of \vref{v383}: the same spectral gap that makes a sector parameter-free also sets the
+\emph{size} of its first correction ($\mathrm{correction}_n\sim(\lambda_2/\lambda_1)^n$). \mE\ flavor, horizon
+recovery and the QG bound all share the $(2/3)^6$ rate (the family-$3$ facet; QG susceptibility
+$\chi=729/665$), while the discrete compiler transient decays at the golden $(\varphi+2)/4$ (the carrier-$5$ facet)
+--- the two number-field facets of \vref{v314}/\vref{v383}. \mC\ the gap does double duty (why no free parameter
+\emph{and} how big the first correction), so sub-leading magnitudes are organised, not free. Cited in
+\texttt{origin\_theory}; Python-only.
+\end{itemize}
+
 \subsection*{2026-06-23 (Bird's-eye synthesis: two new structural patterns --- \texttt{v383} the universal spectral-gap principle and \texttt{v384} the residual is certification, not construction)}
 \begin{itemize}
 \item \textbf{\texttt{v383} (\texttt{DYNAMICS.UNIVERSAL.01}) --- the universal spectral-gap / Perron--Frobenius principle.}

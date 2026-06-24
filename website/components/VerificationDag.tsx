@@ -487,6 +487,8 @@ const NODES: DagNode[] = [
       "v379_seam_s3_rp.py",
       "v380_grav_kms_hessian.py",
       "v381_qft4d_eg_allorder.py",
+      "v385_uvbranch_killtest.py",
+      "v386_grav_amplitude.py",
     ],
   },
   {
@@ -516,6 +518,7 @@ const NODES: DagNode[] = [
       "v353_selfloop_capstone.py",
       "v383_dynamics_universal.py",
       "v384_residual_certification.py",
+      "v387_corrections_gap.py",
     ],
   },
 ];

@@ -612,8 +612,8 @@
   "date": "2026-06-23"
  },
  "tfpt_4_frontier::section::Summary::1": {
-  "hash": "4cd5996c85c8",
-  "date": "2026-06-23"
+  "hash": "6a385edc9fc8",
+  "date": "2026-06-24"
  },
  "tfpt_4_frontier::section::Appendix: computational verification::1": {
   "hash": "a60291cc927f",
@@ -648,8 +648,8 @@
   "date": "2026-06-12"
  },
  "tfpt_5_redteam::section::Target F --- the perturbative 4D-QFT $+$ scale round (v269--v275)::1": {
-  "hash": "d059e70de45d",
-  "date": "2026-06-23"
+  "hash": "0f9757fd6eab",
+  "date": "2026-06-24"
  },
  "tfpt_5_redteam::section::Outcome::1": {
   "hash": "cc411204e8f7",
@@ -728,8 +728,8 @@
   "date": "2026-06-12"
  },
  "origin_theory::section::The unique attractor: a gapped transport selects ONE fixed point::1": {
-  "hash": "75ab2dcc5b92",
-  "date": "2026-06-23"
+  "hash": "998be30808be",
+  "date": "2026-06-24"
  },
  "origin_theory::section::One $\\ainv$ for electromagnetism, the cosmic horizon and $\\Lambda$::1": {
   "hash": "915ef1e6f23a",
