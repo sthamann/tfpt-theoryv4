@@ -296,8 +296,8 @@
   "date": "2026-06-12"
  },
  "tfpt_1_architecture_e8::section::Theorem 8 --- the $(1,1,2)$ anchor microcode and the $\\varphi_0$-ladder::1": {
-  "hash": "a499da2b4aa8",
-  "date": "2026-06-12"
+  "hash": "8bd4d14e4c33",
+  "date": "2026-06-24"
  },
  "tfpt_1_architecture_e8::section::Master statement and status::1": {
   "hash": "7eb18c18c877",
@@ -352,8 +352,8 @@
   "date": "2026-06-22"
  },
  "tfpt_2_standard_model::section::Neutrinos::1": {
-  "hash": "add66d3e8f5c",
-  "date": "2026-06-22"
+  "hash": "353fdf23fe2f",
+  "date": "2026-06-24"
  },
  "tfpt_2_standard_model::section::How the legacy layers simplify (bridge map)::1": {
   "hash": "f76d4592f628",
@@ -728,7 +728,7 @@
   "date": "2026-06-12"
  },
  "origin_theory::section::The unique attractor: a gapped transport selects ONE fixed point::1": {
-  "hash": "38920b0d0921",
+  "hash": "731c6ea89fcb",
   "date": "2026-06-24"
  },
  "origin_theory::section::One $\\ainv$ for electromagnetism, the cosmic horizon and $\\Lambda$::1": {

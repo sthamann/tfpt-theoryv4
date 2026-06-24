@@ -544,7 +544,19 @@ of $\mathrm{PSL}(2,\mathbb Z)$ --- $\chi_{E_8}(i)=1728^{1/3}=12$ at the seam ($\
 keystone \texttt{SEAM.EQUIV.01} closes, \vref{v282}) but $\chi_{E_8}(\omega)=0$ at the family ($\tau{=}\omega$,
 $j{=}0$, $E_4$ vanishes, \vref{v220}). So the seam/flavor rigidity asymmetry is one function read at two points: the
 constants are $\chi_{E_8}$ at its \emph{nonzero} CM value, while the soft flavor/CP residual ($U_{\mathrm{wall}}$,
-$v_{\mathrm{geo}}$) is its $j{=}0$ degeneration --- a candidate \emph{dual keystone} at $\tau{=}\omega$. \mE/\mC
+$v_{\mathrm{geo}}$) is its $j{=}0$ degeneration --- a candidate \emph{dual keystone} at $\tau{=}\omega$. \mE/\mC\
+\textbf{That dual keystone is now named (\veri{v405\_seam\_equiv\_omega.py}, \texttt{SEAM.EQUIV.02}):} the
+family/flavor sector is the order-$3$ Eisenstein$/A_2$ face of $E_8$ at $\tau{=}\omega$, dual to the seam
+$=(E_8)_1$ at $\tau{=}i$. The $\tau{=}\omega$ Eisenstein lattice is exactly $A_2$ (Cartan $\det=3=\Nfam$,
+$h(A_2)=3=\Nfam$), and the flavor matrix $R$ is read by its $E_6{\times}A_2$ slice ($\|R\|_F^2=78=\dim E_6$,
+$\det R=8=\dim A_2=\operatorname{rank}E_8$); the CP phase $\delta_{\mathrm{PMNS}}=4\pi/3$ is the hexagonal CM
+phase there ($\arg\zeta_6=\pi/3$), and the cusp weights $\{0,1/3,2/3\}$ are the order-$3$ deck
+($=\Nfam=\det Q$). Like \texttt{SEAM.EQUIV.01} it is a \emph{named} keystone, not a closure: the residual is the
+canonical $\mathbb Z_3$ deck choice (\vref{v140}) and the one $v_{\mathrm{geo}}$-class scale. It also gives the two
+flavor residuals a home --- the PMNS CP-phase origin (\veri{v406\_pmns\_phase\_origin.py}: $\delta_{\mathrm{PMNS}}$
+is the $\tau{=}\omega$ CM phase, so PMNS has zero free flavor dials beyond $v_{\mathrm{geo}}$) and the $(d,n)$
+selector (\veri{v407\_dn\_pairings\_omega.py}: the three selector pairings $\{2,8,121\}$ are the $\tau{=}\omega$
+family-slice atoms $\{|Z_2|,\dim A_2{=}\det R,\|Pl(K)\|_1^2\}$). \mE/\mC
 The dynamic sector is moreover pure $\{2,3\}$-arithmetic with the seam (prime-$2$) as the common factor: the QG
 susceptibility $\chi=729/665=3^6/(3^6{-}2^6)$ and the seam rate $(2/3)^6=2^6/3^6$, while $2/3=|Z_2|/\Nfam$ and the
 compiler rate $(\varphi{+}2)/4=(\varphi{+}2)/|\mu_4|$ ($|\mu_4|{=}4{=}2^2$) both carry prime-$2$ --- so $30=5\times6

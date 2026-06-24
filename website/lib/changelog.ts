@@ -47,6 +47,974 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "The "
+      },
+      {
+        "k": "m",
+        "v": "\\tau{=}\\omega"
+      },
+      {
+        "k": "t",
+        "v": " dual keystone + the flavor residuals it homes: "
+      },
+      {
+        "k": "c",
+        "v": "v405"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v407"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v405_seam_equiv_omega.py"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.02"
+        },
+        {
+          "k": "t",
+          "v": "): the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "dual keystone"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "\\tau{=}\\omega"
+        },
+        {
+          "k": "t",
+          "v": " – the family/flavor sector as the order-"
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": " Eisenstein"
+        },
+        {
+          "k": "m",
+          "v": "/A_2"
+        },
+        {
+          "k": "t",
+          "v": " face of "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": ", dual to the seam "
+        },
+        {
+          "k": "m",
+          "v": "=(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "\\tau{=}i"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v404"
+        },
+        {
+          "k": "t",
+          "v": "). A named contract (genre of "
+        },
+        {
+          "k": "c",
+          "v": "v286"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v398"
+        },
+        {
+          "k": "t",
+          "v": "), NOT a closure. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "\\chi_{E_8}(\\omega)=0"
+        },
+        {
+          "k": "t",
+          "v": " (the family CM point degenerates "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": ") vs "
+        },
+        {
+          "k": "m",
+          "v": "\\chi_{E_8}(i)=12"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "A_2"
+        },
+        {
+          "k": "t",
+          "v": " is the "
+        },
+        {
+          "k": "m",
+          "v": "\\tau{=}\\omega"
+        },
+        {
+          "k": "t",
+          "v": " Eisenstein lattice (Cartan "
+        },
+        {
+          "k": "m",
+          "v": "\\det=3=\\Nfam"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "h=3=\\Nfam"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "R"
+        },
+        {
+          "k": "t",
+          "v": " lives in "
+        },
+        {
+          "k": "m",
+          "v": "E_6{\\times}A_2"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "248=78+8+2{\\cdot}27{\\cdot}3"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\det R=8=\\dim A_2=\\operatorname{rank}E_8"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "\\delta_{\\mathrm{PMNS}}=4\\pi/3"
+        },
+        {
+          "k": "t",
+          "v": " is the "
+        },
+        {
+          "k": "m",
+          "v": "\\tau{=}\\omega"
+        },
+        {
+          "k": "t",
+          "v": " CM phase; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the cusp weights "
+        },
+        {
+          "k": "m",
+          "v": "\\{0,1/3,2/3\\}"
+        },
+        {
+          "k": "t",
+          "v": " are the order-"
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": " deck "
+        },
+        {
+          "k": "m",
+          "v": "=\\Nfam=\\det Q"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the family sector is the order-"
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": " Eisenstein"
+        },
+        {
+          "k": "m",
+          "v": "/A_2"
+        },
+        {
+          "k": "t",
+          "v": " deck; the two keystones sit at the only two elliptic points of "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{PSL}(2,\\mathbb Z)"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "residual "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the canonical "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb Z_3"
+        },
+        {
+          "k": "t",
+          "v": " deck map ("
+        },
+        {
+          "k": "c",
+          "v": "v140"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "v_{\\mathrm{geo}}"
+        },
+        {
+          "k": "t",
+          "v": "-class scale. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": "; Python-only."
+        }
+      ],
+      [
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v406_pmns_phase_origin.py"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "FLAV.PMNS.CLOSE.01"
+        },
+        {
+          "k": "t",
+          "v": "): the PMNS dynamics closed "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "modulo"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "\\tau{=}\\omega"
+        },
+        {
+          "k": "t",
+          "v": " keystone – the CP-phase ORIGIN is the family CM point and the absolute scale is one "
+        },
+        {
+          "k": "m",
+          "v": "v_{\\mathrm{geo}}"
+        },
+        {
+          "k": "t",
+          "v": "-class unit, so PMNS has "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "zero free flavor dials beyond "
+            },
+            {
+              "k": "m",
+              "v": "v_{\\mathrm{geo}}"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the three angles ("
+        },
+        {
+          "k": "c",
+          "v": "v9"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v268"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " unitary "
+        },
+        {
+          "k": "m",
+          "v": "U_{\\mathrm{PMNS}}"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v270"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "m",
+          "v": "\\delta_{\\mathrm{PMNS}}=4\\pi/3"
+        },
+        {
+          "k": "t",
+          "v": " is the "
+        },
+        {
+          "k": "m",
+          "v": "\\tau{=}\\omega"
+        },
+        {
+          "k": "t",
+          "v": " hexagonal CM phase ("
+        },
+        {
+          "k": "c",
+          "v": "v405"
+        },
+        {
+          "k": "t",
+          "v": "), upgrading "
+        },
+        {
+          "k": "c",
+          "v": "v270"
+        },
+        {
+          "k": "t",
+          "v": "'s "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "“assembled input” to a keystone consequence; "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "m",
+          "v": "J_{\\mathrm{PMNS}}=-0.0297"
+        },
+        {
+          "k": "t",
+          "v": " derived; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the absolute scale "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " one seesaw ratio "
+        },
+        {
+          "k": "m",
+          "v": "=v_{\\mathrm{geo}}"
+        },
+        {
+          "k": "t",
+          "v": "-class ("
+        },
+        {
+          "k": "c",
+          "v": "v272"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v153"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "residual "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the seesaw operator realisation ("
+        },
+        {
+          "k": "m",
+          "v": "M_R"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v184"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "\\Sigma m_\\nu"
+        },
+        {
+          "k": "t",
+          "v": " floor kill test. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2_standard_model"
+        },
+        {
+          "k": "t",
+          "v": "; Python-only."
+        }
+      ],
+      [
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v407_dn_pairings_omega.py"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "FLAV.SELECTOR.CLOSE.01"
+        },
+        {
+          "k": "t",
+          "v": "): the R4"
+        },
+        {
+          "k": "m",
+          "v": "'"
+        },
+        {
+          "k": "t",
+          "v": " selector residue folds into the "
+        },
+        {
+          "k": "m",
+          "v": "\\tau{=}\\omega"
+        },
+        {
+          "k": "t",
+          "v": " keystone – the three "
+        },
+        {
+          "k": "m",
+          "v": "(d,n)"
+        },
+        {
+          "k": "t",
+          "v": " pairings ARE the "
+        },
+        {
+          "k": "m",
+          "v": "\\tau{=}\\omega"
+        },
+        {
+          "k": "t",
+          "v": " family-slice atoms. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the frame "
+        },
+        {
+          "k": "m",
+          "v": "(\\mathbf 1,a,\\sigma)"
+        },
+        {
+          "k": "t",
+          "v": " has "
+        },
+        {
+          "k": "m",
+          "v": "\\det=11=\\|Pl(K)\\|_1"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "n=(5,-9,6)"
+        },
+        {
+          "k": "t",
+          "v": " is the unique covector with "
+        },
+        {
+          "k": "m",
+          "v": "n{\\cdot}\\mathbf1=2"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "n{\\cdot}a=8"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "n{\\cdot}\\sigma=121=11^2"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow(d,n)\\Rightarrow R"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v136"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v139"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "n{\\cdot}a=8=\\operatorname{rank}E_8=\\dim A_2=\\det R"
+        },
+        {
+          "k": "t",
+          "v": " (the "
+        },
+        {
+          "k": "m",
+          "v": "A_2"
+        },
+        {
+          "k": "t",
+          "v": " block reading "
+        },
+        {
+          "k": "m",
+          "v": "R"
+        },
+        {
+          "k": "t",
+          "v": " in "
+        },
+        {
+          "k": "m",
+          "v": "E_6{\\times}A_2"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v405"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the pairings "
+        },
+        {
+          "k": "m",
+          "v": "\\{2,8,121\\}=\\{|Z_2|,\\dim A_2{=}\\det R,\\|Pl(K)\\|_1^2\\}"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "deriving "
+        },
+        {
+          "k": "m",
+          "v": "(d,n)"
+        },
+        {
+          "k": "t",
+          "v": " folds into "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.02"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "d"
+        },
+        {
+          "k": "t",
+          "v": " anchor-derived, "
+        },
+        {
+          "k": "c",
+          "v": "v139"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the lone residue “why "
+        },
+        {
+          "k": "m",
+          "v": "11{=}\\|Pl(K)\\|_1"
+        },
+        {
+          "k": "t",
+          "v": "”. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1_architecture_e8"
+        },
+        {
+          "k": "t",
+          "v": "; Python-only."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-24",
+    "dateLabel": "2026-06-24",
+    "heading": [
+      {
+        "k": "t",
         "v": "The arithmetic hull + the "
       },
       {
