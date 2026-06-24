@@ -142,7 +142,7 @@ anchor (`1/G` is UV-sensitive, Sakharov-type induced gravity) — not a diffuse 
 
 | Item | What it is |
 |---|---|
-| `v1_*.py … v380_*.py` | 375 numbered claim checks (one file per claim cluster; highest ID `v380`). |
+| `v1_*.py … v387_*.py` | 382 numbered claim checks (one file per claim cluster; highest ID `v387`). |
 | `run_all.py` | Runs the whole suite; ends `ALL CHECKS PASSED`. |
 | `tfpt_constants.py` | Shared constants + `check()` harness. |
 | `predictions_frozen.json` | **Blind-prediction registry** (frozen 2026-06-09): every dimensionless prediction of record at 25 digits, locked to its formula by `v84_frozen_registry.py` on every run; exactly one `θ12` prediction of record (seed `0.306747`), `r`/`n_s` only as `N_star` bands. |
@@ -267,6 +267,20 @@ adiabatic limit, with all-order `T_n` existence and the Slavnov–Taylor identit
 EM-Ward functional origin — *why exactly that* `F_U(1)` — is named as the tracked target
 `ALPHA.QUILLEN.EXACT.01` (`v382`), a face of `SEAM.EQUIV.01`; the `α⁻¹` value itself stays `[E]`.
 
+**One principle behind "parameter-free", and the shape of what's left.** A bird's-eye synthesis
+shows every TFPT sector is the *same* object — a gapped operator with a unique attractor (the physics)
+and a spectral gap (the reason there is no free dial); so "parameter-freeness is a theorem" is **one**
+spectral-gap statement, theory-wide, not a list of coincidences (`v383`, extending the `F_transfer`
+reading `v303` to gravity/QG/QFT). The same gap also *sizes* each sector's first correction
+(`correction_n ~ (λ₂/λ₁)ⁿ`): flavor/recovery/QG share `(2/3)⁶`, the discrete compiler decays at the
+golden `(φ+2)/4` (`v387`). And the residual matrix is now **certification, not construction** (`v384`):
+every open item is an external math proof, theorem-forbidden (the unit), or external physics — **zero**
+open internal mechanisms. Two harvests of the now-complete perturbative framework: the optional
+carrier-Pati–Salam UV branch is **proton-safe** (minimal `SU(4)` leptoquarks mediate rare LFV, not
+`p→e⁺π⁰`, so `M_PS ~ 3×10¹³` GeV clears the bound by `~10⁷`; no fake `τ_p` window, `v385`), and the
+entire-form-factor graviton-exchange amplitude `e⁻ᵖ²/ᴹ²/p²` is finite, UV-softened and tree-unitary —
+perturbative gravity is now an explicit, computable scattering problem (`v386`).
+
 **`SEAM.EQUIV.01` is closed modulo a cited theorem.** The explicit lattice model (`v367`/`v368`) and
 the S3 closure stack pin the target at every computable level — central charge `c=8` (`v376`), the
 `(E8)₁` character with 248 currents and one primary (`v377`), genus-one torus GSD = 1 (`v378`) and
@@ -349,7 +363,7 @@ a status-typed CI over the frozen prediction registry with a live JUNO/NuFIT/ACT
 flagged at 2.0σ). Plus `v380`: the KMS Entire Hessian — the Stelle ghost is exactly a finite Seeley–DeWitt
 truncation; resummation pushes the ghost zero to infinity, so perturbative graviton unitarity holds.
 
-A development timeline of all 375 modules is in `introduction.tex` (and on the website verification page).
+A development timeline of all 382 modules is in `introduction.tex` (and on the website verification page).
 
 ---
 
