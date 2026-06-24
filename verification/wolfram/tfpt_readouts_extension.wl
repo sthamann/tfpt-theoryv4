@@ -2391,6 +2391,60 @@ Module[{c3, eta, d, Rs, traceG, dtop, prefactor},
       && Simplify[prefactor - 3/(4 Pi^2)] == 0 && Simplify[dtop - 3/(256 Pi^4)] == 0];
 ];
 
+(* ==== v410-v414 round: the sheet generator V as a binary internal compiler ==== *)
+Module[{R, Q, V, C, J, one, a, I3, t, lam, Mt, e1, e2, e3, d1, d2, en, num, den},
+  R = {{1, 3, 0}, {1, 5, 2}, {2, 5, 3}};
+  Q = {{3, 1, 0}, {3, 2, 0}, {3, 2, 1}};
+  V = Q . DiagonalMatrix[{0, 1, 1}];
+  C = R + Q . DiagonalMatrix[{1, 0, 0}];
+  J = C - 2 V;
+  one = {1, 1, 1}; a = {1, 1, 2}; I3 = IdentityMatrix[3];
+
+  (* v410: closed form V^n, binary spine, bilinear families, theta cross-link *)
+  checkExact["v410 SHEET.GEN.BINARY.01: V = Q diag(0,1,1) powers print the binary spine -- V^n = {{0,2^(n-1),0},{0,2^n,0},{0,2^(n+1)-2,1}} and V^n.1 = (2^(n-1),2^n,2^(n+1)-1) for n=1..8 = (1,2,3),(2,4,7),(4,8,15),(8,16,31),...; bilinears 1.V^n.1=7 2^(n-1)-1, 1.V^n.a=7 2^(n-1), a.V^n.a=11 2^(n-1), a.V^n.1=11 2^(n-1)-2; readouts (6,7,9,11),13,27=1.R.a,55,56=dim 56_E7; theta sigma3(2)=9=a.V.1, sigma3(3)=28=1.V^3.a=det(I+R), sigma3(5)=126",
+    (And @@ Table[MatrixPower[V, k] == {{0, 2^(k-1), 0}, {0, 2^k, 0}, {0, 2^(k+1) - 2, 1}}, {k, 1, 8}])
+      && (And @@ Table[MatrixPower[V, k] . one == {2^(k-1), 2^k, 2^(k+1) - 1}, {k, 1, 8}])
+      && (And @@ Table[one . MatrixPower[V, k] . one == 7 2^(k-1) - 1, {k, 1, 8}])
+      && (And @@ Table[one . MatrixPower[V, k] . a == 7 2^(k-1), {k, 1, 8}])
+      && (And @@ Table[a . MatrixPower[V, k] . a == 11 2^(k-1), {k, 1, 8}])
+      && (And @@ Table[a . MatrixPower[V, k] . one == 11 2^(k-1) - 2, {k, 1, 8}])
+      && {one . V . one, one . V . a, a . V . one, a . V . a} == {6, 7, 9, 11}
+      && one . MatrixPower[V, 2] . one == 13 && one . MatrixPower[V, 3] . one == 27
+      && one . R . a == 27 && one . MatrixPower[V, 4] . one == 55
+      && one . MatrixPower[V, 4] . a == 56
+      && DivisorSigma[3, 2] == 9 == a . V . one && DivisorSigma[3, 3] == 28 == one . MatrixPower[V, 3] . a
+      && one . MatrixPower[V, 3] . a == Det[I3 + R] && DivisorSigma[3, 5] == 126];
+
+  (* v411: u/d ratio as a pure V-power readout *)
+  num = one . MatrixPower[V, 4] . one; den = (a . V . one)(one . MatrixPower[V, 2] . one);
+  checkExact["v411 FLAV.UD.VPOWER.01: c_u/c_d = (1.V^4.1)/((a.V.1)(1.V^2.1)) = 55/(9*13) = 55/117, identical to g_car*||Pl(K)||_1/(N_fam^2 Delta_Q) = 5*11/(9*13); RE-ENCODING, value stays [C]",
+    num == 55 && a . V . one == 9 && one . MatrixPower[V, 2] . one == 13
+      && num/den == 55/117 && (5*11)/(9*13) == 55/117];
+
+  (* v412: the sheet source corner J = M(1,-2) on the Z2 wall *)
+  checkExact["v412 DIAMOND.SHEET.SOURCE.J.01: J = M(1,-2) = C - 2V = {{4,1,0},{4,1,2},{5,1,1}} on the Z2 wall (det=2); chi_J = lam^3-6 lam^2+3 lam-2 => (tr,e2,det)=(6,3,2); a.J.a=30=h(E8), det(I+J)=12=dim g_SM=chi_E8(i), det(2I+J)=40=|R(D5)|",
+    J == {{4, 1, 0}, {4, 1, 2}, {5, 1, 1}}
+      && Simplify[CharacteristicPolynomial[J, lam] - (lam^3 - 6 lam^2 + 3 lam - 2)] == 0
+      && Tr[J] == 6 && Det[J] == 2 && a . J . a == 30
+      && Det[I3 + J] == 12 && Det[2 I3 + J] == 40];
+
+  (* v413: the sheet axis is a characteristic-difference calculator *)
+  Mt = C + t V;
+  e1 = Tr[Mt]; e3 = Det[Mt]; e2 = (Tr[Mt]^2 - Tr[Mt . Mt])/2;
+  d1[f_] := (f /. t -> t + 1) - f; d2[f_] := d1[d1[f]];
+  en = a . Mt . a;
+  checkExact["v413 DIAMOND.SHEET.CALCULUS.01: on M_t=C+tV, e1=3t+12, e2=2t^2+15t+25, e3=4t^2+14t+14 => Delta e1=3=N_fam, Delta^2 e2=4=|mu4|, Delta^2 e3=8=rank E8; anchor energy a.M_t.a = 52+11t (30->41->52->63)",
+    Simplify[e1 - (3 t + 12)] == 0 && Simplify[e2 - (2 t^2 + 15 t + 25)] == 0
+      && Simplify[e3 - (4 t^2 + 14 t + 14)] == 0
+      && Simplify[d1[e1] - 3] == 0 && Simplify[d2[e2] - 4] == 0 && Simplify[d2[e3] - 8] == 0
+      && Simplify[en - (52 + 11 t)] == 0];
+
+  (* v414: the center C is a resolvent portal G2 -> F4 -> E8 *)
+  checkExact["v414 DIAMOND.CENTER.RESOLVENT.01: tr C=12=dim g_SM=chi_E8(i), det C=14=dim G2, sum C=31=2^g_car-1=248/8; resolvent ladder det(C)=14, det(I+C)=52=dim F4, det(2I+C)=120=|R^+(E8)| (G2->F4->E8^+)",
+    Tr[C] == 12 && Det[C] == 14 && Total[Flatten[C]] == 31 && 31 == 248/8
+      && Det[I3 + C] == 52 && Det[2 I3 + C] == 120];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v414: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

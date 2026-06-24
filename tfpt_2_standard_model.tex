@@ -711,6 +711,72 @@ for the abelian coefficient, companion to $\Delta_Y=25=9{+}16$) and $p_1^2+p_2^2
 root count ($40{+}12$, \veri{v128\_graded\_hull.py}). All \mE; the ``2d surface with atom walls'' reading \mC.
 \end{winbox}
 
+\begin{keybox}[The sheet generator $V$ is a binary internal compiler \mE\ (\veri{v410\_sheet\_generator\_binary.py})]
+The sheet axis $V=Q\operatorname{diag}(0,1,1)$ is not only the rank-$2$ direction of the cross --- its
+\emph{iterates} print the binary carrier spine. The closed form (proved by the inductive step
+$F(n)V=F(n{+}1)$)
+\[
+  V^n=\begin{pmatrix}0&2^{n-1}&0\\0&2^{n}&0\\0&2^{n+1}-2&1\end{pmatrix},\qquad
+  V^n\mathbf 1=(2^{n-1},\,2^{n},\,2^{n+1}-1),
+\]
+gives $V^{1..4}\mathbf 1=(1,2,3),(2,4,7),(4,8,15),(8,16,31)$ --- the $A_3$ exponents, then
+$(|\Z_2|,|\mu_4|,7)$, $(|\mu_4|,\operatorname{rank}E_8,\dim A_3)$ and
+$(\operatorname{rank}E_8,\dim S^+,2^{\gcar}{-}1{=}248/8)$. The four bilinear families are exact in $n$,
+\[
+  \mathbf 1^TV^n\mathbf 1=7\cdot2^{n-1}-1,\quad \mathbf 1^TV^na=7\cdot2^{n-1},\quad
+  a^TV^na=11\cdot2^{n-1},\quad a^TV^n\mathbf 1=11\cdot2^{n-1}-2,
+\]
+so the recurring flavor integers are one operator's readouts: $(6,7,9,11)$ at $n{=}1$, then
+$\mathbf 1^TV^2\mathbf 1=13=\Delta_Q$, $\mathbf 1^TV^3\mathbf 1=27=\mathbf 1^TRa$,
+$\mathbf 1^TV^4\mathbf 1=55$ (the quark numerator) and $\mathbf 1^TV^4a=56=\dim\mathbf{56}_{E_7}$; the
+amplitude $a^TVa=11$ sits one level below the quark Pl\"ucker norm. \emph{Typing:} the closed form and
+the bilinears are exact \mE; the binary spine is \emph{forced} by $\operatorname{Spec}(V)=\{0,1,2\}$ (the
+dominant eigenvalue $2$ doubles, the eigenvalue $1$ fixes the third slot), so the carrier/Lie matches are
+audit-typed \mC, exactly like the $G_2$ center reading above.
+\smallskip\\
+\noindent\textbf{The quark $u/d$ ratio is a pure $V$-power readout (\veri{v411\_ud\_ratio\_vpower.py}).}
+The closed quark ratio re-expresses as a quotient of three bilinear readouts of the \emph{one} generator,
+\[
+  \boxed{\ \frac{c_u}{c_d}=\frac{\mathbf 1^TV^4\mathbf 1}{(a^TV\mathbf 1)(\mathbf 1^TV^2\mathbf 1)}
+  =\frac{55}{9\cdot13}=\frac{55}{117}\ },
+\]
+identical to the established $\gcar\|\operatorname{Pl}(K)\|_1/(\Nfam^2\Delta_Q)=5\cdot11/(9\cdot13)$ --- the
+numerator merely repackages $\gcar\cdot11=55=\mathbf 1^TV^4\mathbf 1$. This is an exact \emph{re-encoding}:
+the value and the $u/d$ identification stay \mC, coupled to the $(U_{\mathrm{wall}})$ readout rigidity.
+\smallskip\\
+\noindent\textbf{The source corner $J$ on the $\Z_2$ wall (\veri{v412\_sheet\_source\_corner\_J.py}).} The
+operator on the $t{=}{-}2$ iso-volume wall (the $\Z_2$ layer $\det{=}2$, \vref{v135}), so far unnamed,
+$J:=M(1,{-}2)=C-2V=\big(\begin{smallmatrix}4&1&0\\4&1&2\\5&1&1\end{smallmatrix}\big)$, completes the sheet
+axis $J,K,C,F=M(1,{-}2..1)$ and is tightly typed:
+\[
+  \chi_J=\lambda^3-6\lambda^2+3\lambda-2\ \Rightarrow\ (\operatorname{tr},e_2,\det)=(6,3,2)
+  =(|R^+(A_3)|,\Nfam,|\Z_2|),
+\]
+with $a^TJa=30=h(E_8)$, $\det(I{+}J)=12=\dim\mathfrak g_{\mathrm{SM}}=\chi_{E_8}(i)$ and
+$\det(2I{+}J)=40=|R(D_5)|$ --- the Lie readings audit-typed like the $G_2/F_4$ shadows.
+\smallskip\\
+\noindent\textbf{The sheet axis is a characteristic-difference calculator
+(\veri{v413\_sheet\_characteristic\_calculus.py}).} On $M_t=C+tV$ the elementary-symmetric coefficients
+encode the atoms as \emph{difference orders}: $e_1(t)=3t{+}12$, $e_2(t)=2t^2{+}15t{+}25$,
+$e_3(t)=\det M_t=4t^2{+}14t{+}14$, so $\Delta e_1=3=\Nfam$, $\Delta^2 e_2=4=|\mu_4|$ and
+$\Delta^2 e_3=8=\operatorname{rank}E_8$ (the $e_3$ curvature is the \vref{v218}/\vref{v224} sheet
+quadratic; the full triple is new). The anchor energy is exactly linear with the amplitude $11=a^TVa$,
+\[
+  a^TM_t a=52+11t:\qquad 30\xrightarrow{+11}41\xrightarrow{+11}52\xrightarrow{+11}63
+  =(h(E_8),\,10b_1,\,\dim F_4,\,7\Nfam^2),
+\]
+so $11$ is the \emph{step} of the anchor energy along the sheet axis, not only the quark Pl\"ucker norm.
+\smallskip\\
+\noindent\textbf{The center is a resolvent portal $G_2\!\to\!F_4\!\to\!E_8$
+(\veri{v414\_center\_resolvent\_portal.py}).} The center $C=M(1,0)$ (the $t{=}0$ value of $V$) has
+$\operatorname{tr}C=12=\dim\mathfrak g_{\mathrm{SM}}=\chi_{E_8}(i)$, $\det C=14=\dim G_2$ and
+$\sum_{ij}C_{ij}=31=2^{\gcar}{-}1=248/8$; its shifted determinants climb the exceptional shell ladder
+\[
+  \det C=14=\dim G_2,\qquad \det(I{+}C)=52=\dim F_4,\qquad \det(2I{+}C)=120=|R^+(E_8)|,
+\]
+i.e.\ $\det(C{+}kI)$ for $k=0,1,2$ traces $G_2\!\to\!F_4\!\to\!E_8^+$ --- exact \mE, the portal reading \mC.
+\end{keybox}
+
 \begin{keybox}[The $Q_+$ grading is cohomology: one spectrum in four readouts \mE\ (\veri{v137\_qplus\_cohomology.py})]
 The sheet axis is not just numerology on $V$: it is the cohomology of the seam curve.
 $b_1(\PP\setminus\mu_4)=3=\Nfam$, with holomorphic basis $\omega_k=z^{k-1}dz/(z^4-1)$, $k=1,2,3$

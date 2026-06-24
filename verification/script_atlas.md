@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`404` registered scripts · `465` ledger claims · `10` clusters.
+`409` registered scripts · `470` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -516,7 +516,7 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
 - **v409_coxeter_prime2_lemma** [E/O] `FORM.COXETER.PRIME2.01` — RES.COXETER.SYMMETRY.01 closed as a STRUCTURAL LEMMA: prime-2 is NECESSARY but NOT autonomous -- no prime-2-only attractor exists (resolves the v394/COXETER.ATOMS.01 open question'
   - deps: v394_coxeter_atoms.py; v409_coxeter_prime2_lemma, v394_coxeter_atoms, v394, v409 · cited: research contracts
 
-### `registry` — Blind registry & red-team follow-ups (v84–v175)  (168 scripts)
+### `registry` — Blind registry & red-team follow-ups (v84–v175)  (173 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
 
 - **v84_frozen_registry** [E] `REG.FREEZE.01` — blind-prediction registry FROZEN 2026-06-09: every dimensionless prediction of record at 25 digits, re-derived from the two axioms each run (formula↔value lock); exactly ONE θ₁₂ pr
@@ -855,6 +855,16 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
   - deps: v159, v246, v247, v248, v249, v253, v265, v381 · cited: 5 redteam
 - **v398_seam_state_rigidity** [E/O] `SEAM.RIGIDITY.01` — Seam State Rigidity Theorem (Paper A / G_net): RP-definability hinge (OS transfer + quasi-free) + band-limited mu4-character core swept N=4..64 + holomorphy=>(E8)_1; [O] full-L^2 /
   - deps: v286_seam_equivalence_contract, v54, v155, v177, v198, v199, v308, v309 · cited: research contracts
+- **v410_sheet_generator_binary** [E/C] `SHEET.GEN.BINARY.01` — The sheet generator V = Q diag(0,1,1) (the rank-2 sheet axis of the centered cross, v95/v218) is a binary internal compiler: V^n = ((0,2^(n-1),0),(0,2^n,0),(0,2^(n+1)-2,1)) (induct
+  - deps: v10_projection_involution.py;v11_unique_KQ.py;v12_mass_generation_polynomials, v95, v218, v135 · cited: 2 standard model, 3 e8 audit bootstrap
+- **v411_ud_ratio_vpower** [E/C] `FLAV.UD.VPOWER.01` — The quark u/d ratio is a pure V-power readout: the established c_u/c_d = g_car ||Pl(K)||_1/(N_fam^2 Delta_Q) = 55/117 (v94) re-expresses EXACTLY via the sheet generator (v410) as c
+  - deps: v18_quark_yukawa, v49_readout_rigidity, v94, v410 · cited: 2 standard model
+- **v412_sheet_source_corner_J** [E/C] `DIAMOND.SHEET.SOURCE.J.01` — The sheet source corner J: the determinant surface has two s-independent iso-volume walls (v135) t=-1 (det=4=|mu4|, carries K) and t=-2 (det=2=|Z2|); the operator on the Z2 wall, J
+  - deps: v10_projection_involution.py;v11_unique_KQ.py;v12_mass_generation_polynomials, v135, v95 · cited: 2 standard model
+- **v413_sheet_characteristic_calculus** [E/C] `DIAMOND.SHEET.CALCULUS.01` — The sheet axis is a discrete characteristic-difference calculator: on M_t=C+tV (v95/v218) the elementary-symmetric coefficients encode atoms as DIFFERENCE ORDERS -- e1(t)=3t+12, e2
+  - deps: v10_projection_involution.py;v11_unique_KQ.py;v12_mass_generation_polynomials, v218, v224, v410 · cited: 2 standard model
+- **v414_center_resolvent_portal** [E/C] `DIAMOND.CENTER.RESOLVENT.01` — The center C is a resolvent portal G2 -> F4 -> E8: the center C=M(1,0) (v95) is the t=0 evaluation of V; tr C=12=dim g_SM=chi_E8(i), det C=14=dim G2, sum C=31=2^g_car-1=248/8; the 
+  - deps: v10_projection_involution.py;v11_unique_KQ.py;v12_mass_generation_polynomials, v95, v230 · cited: 2 standard model
 
 ## Supersede map — do NOT reuse the left-hand claim
 
@@ -872,17 +882,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `SEAM.EQUIV.01`×25, `v76`×17, `v56`×17, `QG.AMB.01`×16, `v336`×16, `E8.GLU.01`×15, `v216`×15, `HOR.NARIAI.01`×15, `v312`×14, `REG.FREEZE.01`×12, `AX.P1.01`×11, `v3`×11, `v54`×11, `QGEO.SUBPRIN.01`×11
+**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `SEAM.EQUIV.01`×25, `v76`×17, `v56`×17, `QG.AMB.01`×16, `v336`×16, `E8.GLU.01`×15, `v216`×15, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v312`×14, `REG.FREEZE.01`×12, `AX.P1.01`×11, `v3`×11, `v54`×11
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v398_seam_state_rigidity** — `SEAM.RIGIDITY.01`
-- **v399_gravity_complete** — `GRAVITY.COMPLETE.01`
-- **v400_grav_nonlocal_action** — `GRAV.NONLOCAL.01`
-- **v401_metrology_closure** — `METROLOGY.CLOSURE.01`
-- **v402_ftransfer_suite** — `FTRANSFER.SUITE.01`
 - **v403_facet_compositum** — `ARITH.HULL.01`
 - **v404_e8_char_cm_duality** — `E8.CMDUAL.01`
 - **v405_seam_equiv_omega** — `SEAM.EQUIV.02`
@@ -890,4 +895,9 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v407_dn_pairings_omega** — `FLAV.SELECTOR.CLOSE.01`
 - **v408_phi0_puncture_heatkernel** — `HYP.PHI0.PUNCTURE.01`
 - **v409_coxeter_prime2_lemma** — `FORM.COXETER.PRIME2.01`
+- **v410_sheet_generator_binary** — `SHEET.GEN.BINARY.01`
+- **v411_ud_ratio_vpower** — `FLAV.UD.VPOWER.01`
+- **v412_sheet_source_corner_J** — `DIAMOND.SHEET.SOURCE.J.01`
+- **v413_sheet_characteristic_calculus** — `DIAMOND.SHEET.CALCULUS.01`
+- **v414_center_resolvent_portal** — `DIAMOND.CENTER.RESOLVENT.01`
 

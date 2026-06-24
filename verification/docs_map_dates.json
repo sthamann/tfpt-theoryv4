@@ -336,8 +336,8 @@
   "date": "2026-06-13"
  },
  "tfpt_2_standard_model::section::The Sheet Diamond and the Winding Line: masses and transport from one surface::1": {
-  "hash": "a0dc044ab840",
-  "date": "2026-06-16"
+  "hash": "424eb8c7a398",
+  "date": "2026-06-24"
  },
  "tfpt_2_standard_model::subsection::Closing the audit gates: is $M{=}41$, $K$, $Q$ derived or imported?::1": {
   "hash": "2d67ed11e25a",
@@ -512,8 +512,8 @@
   "date": "2026-06-17"
  },
  "tfpt_3_e8_audit_bootstrap::section::Group-theoretic audits (optional)::1": {
-  "hash": "021e0730e513",
-  "date": "2026-06-12"
+  "hash": "85d32a889833",
+  "date": "2026-06-24"
  },
  "tfpt_3_e8_audit_bootstrap::section::Further audit lemmas (machine-verified this round)::1": {
   "hash": "f779e820e593",

@@ -105,7 +105,7 @@ v84–v93 block passed **45/45** on first run; the v94–v140 blocks were added
 the same day, the v141–v144 block on 2026-06-12. Current state:
 
 ```
---- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359: 303 passed, 0 failed ---
+--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v414: 308 passed, 0 failed ---
 ALL WOLFRAM EXTENSION CHECKS PASSED
 ```
 
@@ -222,6 +222,20 @@ integral `∫w d³x = 4π R⁴/15` assembles the matter boost flux J3), and
 `v359_grav_nonlinear_einstein.py` (the *full* covariant `G_ab + Λ g_ab = (1/c3) T_ab` via the
 fixed-volume equilibrium — the Einstein tensor `g^{ab}G_ab = (1−d/2)R = −R` in d=4, both
 coefficients parameter-free: `8π = 1/c3` and the `Λ` prefactor `(8π)²·48c3⁴ = 3/(4π²)`).
+
+The 2026-06-24 **sheet-generator round** added five exact checks (303 → 308):
+`v410_sheet_generator_binary.py` (the sheet axis `V = Q diag(0,1,1)` is a binary internal
+compiler — `V^n = {{0,2^(n-1),0},{0,2^n,0},{0,2^(n+1)-2,1}}` so `V^n·1 = (2^(n-1),2^n,2^(n+1)-1)`,
+the bilinears `1ᵀV^n1 = 7·2^(n-1)-1`, `1ᵀV^na = 7·2^(n-1)`, `aᵀV^na = 11·2^(n-1)`,
+`aᵀV^n1 = 11·2^(n-1)-2`, and the theta cross-link `σ₃(2)=9=aᵀV1`, `σ₃(3)=28=1ᵀV³a=det(I+R)`,
+`σ₃(5)=126`), `v411_ud_ratio_vpower.py` (`c_u/c_d = (1ᵀV⁴1)/((aᵀV1)(1ᵀV²1)) = 55/117`, a
+re-encoding of `5·11/(9·13)`), `v412_sheet_source_corner_J.py` (the Z₂-wall corner
+`J = M(1,-2) = C-2V` with `χ_J = λ³-6λ²+3λ-2`, `aᵀJa=30=h(E₈)`, `det(I+J)=12`, `det(2I+J)=40`),
+`v413_sheet_characteristic_calculus.py` (`e₁=3t+12`, `e₂=2t²+15t+25`, `e₃=4t²+14t+14` ⟹
+`Δe₁=3`, `Δ²e₂=4`, `Δ²e₃=8`, and the anchor energy `aᵀM_t a = 52+11t`) and
+`v414_center_resolvent_portal.py` (the resolvent ladder `det(C)=14`, `det(I+C)=52`,
+`det(2I+C)=120` = `G₂ → F₄ → E₈⁺`). The binary-spine / Lie-dimension readings stay `[C]`,
+audit-typed.
 
 The 2026-06-22 **next-steps round (A/C/D/B)** added one more exact check (288 → 289):
 `v337_decoupling_theorem.py` (the ambient back-reaction scale `2·dim(E₈)·c₃² = 31/(4π²)`

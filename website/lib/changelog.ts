@@ -47,6 +47,885 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "The sheet generator "
+      },
+      {
+        "k": "m",
+        "v": "V"
+      },
+      {
+        "k": "t",
+        "v": " as a binary internal compiler: "
+      },
+      {
+        "k": "c",
+        "v": "v410"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v414"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v410"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SHEET.GEN.BINARY.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The rank-"
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": " sheet axis "
+        },
+        {
+          "k": "m",
+          "v": "V=Q\\operatorname{diag}(0,1,1)"
+        },
+        {
+          "k": "t",
+          "v": " of the centered cross ("
+        },
+        {
+          "k": "c",
+          "v": "v95"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v218"
+        },
+        {
+          "k": "t",
+          "v": ") is a binary internal compiler: its powers print the carrier spine. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the closed form "
+        },
+        {
+          "k": "m",
+          "v": "V^n=\\big(\\begin{smallmatrix}0&2^{n-1}&0\\\\0&2^n&0\\\\0&2^{n+1}-2&1\\end{smallmatrix}\\big)"
+        },
+        {
+          "k": "t",
+          "v": " (proved by the inductive step "
+        },
+        {
+          "k": "m",
+          "v": "F(n)V{=}F(n{+}1)"
+        },
+        {
+          "k": "t",
+          "v": "), so "
+        },
+        {
+          "k": "m",
+          "v": "V^n\\mathbf 1=(2^{n-1},2^n,2^{n+1}-1)=(1,2,3),(2,4,7),(4,8,15),(8,16,31)"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the four bilinear families "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbf 1^TV^n\\mathbf 1=7\\cdot2^{n-1}{-}1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbf 1^TV^na=7\\cdot2^{n-1}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "a^TV^na=11\\cdot2^{n-1}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "a^TV^n\\mathbf 1=11\\cdot2^{n-1}{-}2"
+        },
+        {
+          "k": "t",
+          "v": " give "
+        },
+        {
+          "k": "m",
+          "v": "(6,7,9,11)"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "n{=}1"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbf 1^TV^2\\mathbf 1{=}13{=}\\Delta_Q"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbf 1^TV^3\\mathbf 1{=}27{=}\\mathbf 1^TRa"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbf 1^TV^4\\mathbf 1{=}55"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbf 1^TV^4a{=}56{=}\\dim\\mathbf{56}_{E_7}"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the binary spine is FORCED by "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{Spec}(V){=}\\{0,1,2\\}"
+        },
+        {
+          "k": "t",
+          "v": ", so the carrier/Lie matches ("
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{rank}\\,E_8{=}8"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\dim S^+{=}16"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "248/8{=}31"
+        },
+        {
+          "k": "t",
+          "v": ") and the theta cross-link ("
+        },
+        {
+          "k": "m",
+          "v": "\\sigma_3(2){=}9{=}a^TV\\mathbf 1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma_3(3){=}28{=}\\mathbf 1^TV^3a{=}\\det(I{+}R)"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma_3(5){=}126"
+        },
+        {
+          "k": "t",
+          "v": ") are audit-typed (the "
+        },
+        {
+          "k": "c",
+          "v": "v95"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "G_2"
+        },
+        {
+          "k": "t",
+          "v": "-center typing)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v411"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "FLAV.UD.VPOWER.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The quark ratio is a pure "
+        },
+        {
+          "k": "m",
+          "v": "V"
+        },
+        {
+          "k": "t",
+          "v": "-power readout, "
+        },
+        {
+          "k": "m",
+          "v": "c_u/c_d=(\\mathbf 1^TV^4\\mathbf 1)/((a^TV\\mathbf 1)(\\mathbf 1^TV^2\\mathbf 1))=55/(9\\cdot13)=55/117"
+        },
+        {
+          "k": "t",
+          "v": ", identical to the established "
+        },
+        {
+          "k": "m",
+          "v": "\\gcar\\|\\mathrm{Pl}(K)\\|_1/(\\Nfam^2\\Delta_Q)=5\\cdot11/(9\\cdot13)"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v94"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the identity; "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "an exact "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "re-encoding"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (no new physical input) — the value and the "
+        },
+        {
+          "k": "m",
+          "v": "u/d"
+        },
+        {
+          "k": "t",
+          "v": " identification stay conditional, coupled to the "
+        },
+        {
+          "k": "m",
+          "v": "(U_{\\mathrm{wall}})"
+        },
+        {
+          "k": "t",
+          "v": " readout rigidity."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v412"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "DIAMOND.SHEET.SOURCE.J.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Names the operator on the "
+        },
+        {
+          "k": "m",
+          "v": "\\Z_2"
+        },
+        {
+          "k": "t",
+          "v": " wall ("
+        },
+        {
+          "k": "m",
+          "v": "t{=}{-}2"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\det{=}2"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v135"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "J{=}M(1,{-}2){=}C{-}2V"
+        },
+        {
+          "k": "t",
+          "v": ", completing the sheet axis "
+        },
+        {
+          "k": "m",
+          "v": "J,K,C,F{=}M(1,{-}2..1)"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "\\chi_J=\\lambda^3-6\\lambda^2+3\\lambda-2\\Rightarrow(\\mathrm{tr},e_2,\\det){=}(6,3,2)"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "a^TJa{=}30{=}h(E_8)"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\det(I{+}J){=}12{=}\\dim\\mathfrak g_{\\mathrm{SM}}"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "\\det(2I{+}J){=}40{=}|R(D_5)|"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the Lie readings audit-typed like the "
+        },
+        {
+          "k": "m",
+          "v": "G_2/F_4"
+        },
+        {
+          "k": "t",
+          "v": " shadows."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v413"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "DIAMOND.SHEET.CALCULUS.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " On "
+        },
+        {
+          "k": "m",
+          "v": "M_t{=}C{+}tV"
+        },
+        {
+          "k": "t",
+          "v": " the elementary-symmetric coefficients encode the atoms as difference orders: "
+        },
+        {
+          "k": "m",
+          "v": "e_1{=}3t{+}12"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "e_2{=}2t^2{+}15t{+}25"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "e_3{=}4t^2{+}14t{+}14"
+        },
+        {
+          "k": "t",
+          "v": " give "
+        },
+        {
+          "k": "m",
+          "v": "\\Delta e_1{=}3{=}\\Nfam"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\Delta^2 e_2{=}4{=}|\\mu_4|"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\Delta^2 e_3{=}8{=}\\mathrm{rank}\\,E_8"
+        },
+        {
+          "k": "t",
+          "v": " (the "
+        },
+        {
+          "k": "m",
+          "v": "e_3"
+        },
+        {
+          "k": "t",
+          "v": " curvature is the "
+        },
+        {
+          "k": "c",
+          "v": "v218"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v224"
+        },
+        {
+          "k": "t",
+          "v": " sheet quadratic; the full triple is new); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the anchor energy "
+        },
+        {
+          "k": "m",
+          "v": "a^TM_ta{=}52{+}11t"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "30{\\to}41{\\to}52{\\to}63"
+        },
+        {
+          "k": "t",
+          "v": ", step "
+        },
+        {
+          "k": "m",
+          "v": "11{=}a^TVa"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "atom/Lie readings audit-typed."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v414"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "DIAMOND.CENTER.RESOLVENT.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The center "
+        },
+        {
+          "k": "m",
+          "v": "C{=}M(1,0)"
+        },
+        {
+          "k": "t",
+          "v": " is a resolvent portal: "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "\\det C{=}14{=}\\dim G_2"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\det(I{+}C){=}52{=}\\dim F_4"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\det(2I{+}C){=}120{=}|R^+(E_8)|"
+        },
+        {
+          "k": "t",
+          "v": ", the exceptional shell ladder "
+        },
+        {
+          "k": "m",
+          "v": "G_2{\\to}F_4{\\to}E_8^+"
+        },
+        {
+          "k": "t",
+          "v": " as "
+        },
+        {
+          "k": "m",
+          "v": "\\det(C{+}kI)"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "k{=}0,1,2"
+        },
+        {
+          "k": "t",
+          "v": " (with "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{tr}\\,C{=}12{=}\\chi_{E_8}(i)"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\sum C{=}31{=}2^{\\gcar}{-}1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v95"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the portal reading."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Surfaces synced."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Integrated into the Sheet-Diamond section of "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": " (new keybox, five "
+        },
+        {
+          "k": "c",
+          "v": "\\veri"
+        },
+        {
+          "k": "t",
+          "v": " citations) and the "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " theta-raster of "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "run_all.py"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "script_registry.csv"
+        },
+        {
+          "k": "t",
+          "v": " and the ledger updated; Wolfram extension mirror "
+        },
+        {
+          "k": "m",
+          "v": "303\\to308"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-24",
+    "dateLabel": "2026-06-24",
+    "heading": [
+      {
+        "k": "t",
         "v": "Two new tracked targets + axion-branch consistency: "
       },
       {

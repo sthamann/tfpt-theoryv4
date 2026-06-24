@@ -60,6 +60,43 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-24 (The sheet generator $V$ as a binary internal compiler: \texttt{v410}--\texttt{v414})}
+\begin{itemize}
+\item \textbf{New module \texttt{v410} (\texttt{SHEET.GEN.BINARY.01}).} The rank-$2$ sheet axis
+$V=Q\operatorname{diag}(0,1,1)$ of the centered cross (\vref{v95}/\vref{v218}) is a binary internal compiler:
+its powers print the carrier spine. \mE\ the closed form $V^n=\big(\begin{smallmatrix}0&2^{n-1}&0\\0&2^n&0\\0&2^{n+1}-2&1\end{smallmatrix}\big)$
+(proved by the inductive step $F(n)V{=}F(n{+}1)$), so $V^n\mathbf 1=(2^{n-1},2^n,2^{n+1}-1)=(1,2,3),(2,4,7),(4,8,15),(8,16,31)$;
+\mE\ the four bilinear families $\mathbf 1^TV^n\mathbf 1=7\cdot2^{n-1}{-}1$, $\mathbf 1^TV^na=7\cdot2^{n-1}$,
+$a^TV^na=11\cdot2^{n-1}$, $a^TV^n\mathbf 1=11\cdot2^{n-1}{-}2$ give $(6,7,9,11)$ at $n{=}1$ and
+$\mathbf 1^TV^2\mathbf 1{=}13{=}\Delta_Q$, $\mathbf 1^TV^3\mathbf 1{=}27{=}\mathbf 1^TRa$,
+$\mathbf 1^TV^4\mathbf 1{=}55$, $\mathbf 1^TV^4a{=}56{=}\dim\mathbf{56}_{E_7}$; \mC\ the binary spine is FORCED by
+$\operatorname{Spec}(V){=}\{0,1,2\}$, so the carrier/Lie matches ($\mathrm{rank}\,E_8{=}8$, $\dim S^+{=}16$,
+$248/8{=}31$) and the theta cross-link ($\sigma_3(2){=}9{=}a^TV\mathbf 1$, $\sigma_3(3){=}28{=}\mathbf 1^TV^3a{=}\det(I{+}R)$,
+$\sigma_3(5){=}126$) are audit-typed (the \vref{v95} $G_2$-center typing).
+\item \textbf{New module \texttt{v411} (\texttt{FLAV.UD.VPOWER.01}).} The quark ratio is a pure $V$-power readout,
+$c_u/c_d=(\mathbf 1^TV^4\mathbf 1)/((a^TV\mathbf 1)(\mathbf 1^TV^2\mathbf 1))=55/(9\cdot13)=55/117$, identical to the
+established $\gcar\|\mathrm{Pl}(K)\|_1/(\Nfam^2\Delta_Q)=5\cdot11/(9\cdot13)$ (\vref{v94}). \mE\ the identity; \mC\ an
+exact \emph{re-encoding} (no new physical input) --- the value and the $u/d$ identification stay conditional, coupled
+to the $(U_{\mathrm{wall}})$ readout rigidity.
+\item \textbf{New module \texttt{v412} (\texttt{DIAMOND.SHEET.SOURCE.J.01}).} Names the operator on the $\Z_2$ wall
+($t{=}{-}2$, $\det{=}2$, \vref{v135}), $J{=}M(1,{-}2){=}C{-}2V$, completing the sheet axis $J,K,C,F{=}M(1,{-}2..1)$.
+\mE\ $\chi_J=\lambda^3-6\lambda^2+3\lambda-2\Rightarrow(\mathrm{tr},e_2,\det){=}(6,3,2)$; $a^TJa{=}30{=}h(E_8)$,
+$\det(I{+}J){=}12{=}\dim\mathfrak g_{\mathrm{SM}}$ and $\det(2I{+}J){=}40{=}|R(D_5)|$; \mC\ the Lie readings
+audit-typed like the $G_2/F_4$ shadows.
+\item \textbf{New module \texttt{v413} (\texttt{DIAMOND.SHEET.CALCULUS.01}).} On $M_t{=}C{+}tV$ the
+elementary-symmetric coefficients encode the atoms as difference orders: $e_1{=}3t{+}12$, $e_2{=}2t^2{+}15t{+}25$,
+$e_3{=}4t^2{+}14t{+}14$ give $\Delta e_1{=}3{=}\Nfam$, $\Delta^2 e_2{=}4{=}|\mu_4|$, $\Delta^2 e_3{=}8{=}\mathrm{rank}\,E_8$
+(the $e_3$ curvature is the \vref{v218}/\vref{v224} sheet quadratic; the full triple is new); \mE\ the anchor energy
+$a^TM_ta{=}52{+}11t$ ($30{\to}41{\to}52{\to}63$, step $11{=}a^TVa$); \mC\ atom/Lie readings audit-typed.
+\item \textbf{New module \texttt{v414} (\texttt{DIAMOND.CENTER.RESOLVENT.01}).} The center $C{=}M(1,0)$ is a resolvent
+portal: \mE\ $\det C{=}14{=}\dim G_2$, $\det(I{+}C){=}52{=}\dim F_4$, $\det(2I{+}C){=}120{=}|R^+(E_8)|$, the exceptional
+shell ladder $G_2{\to}F_4{\to}E_8^+$ as $\det(C{+}kI)$, $k{=}0,1,2$ (with $\mathrm{tr}\,C{=}12{=}\chi_{E_8}(i)$,
+$\sum C{=}31{=}2^{\gcar}{-}1$, \vref{v95}); \mC\ the portal reading.
+\item \textbf{Surfaces synced.} Integrated into the Sheet-Diamond section of \texttt{tfpt\_2} (new keybox, five
+\texttt{\textbackslash veri} citations) and the $E_8$ theta-raster of \texttt{tfpt\_3}; \texttt{run\_all.py},
+\texttt{script\_registry.csv} and the ledger updated; Wolfram extension mirror $303\to308$.
+\end{itemize}
+
 \subsection*{2026-06-24 (Two new tracked targets + axion-branch consistency: \texttt{v408}, \texttt{v409})}
 \begin{itemize}
 \item \textbf{New module \texttt{v408} (\texttt{HYP.PHI0.PUNCTURE.01}).} Names the $\varphi_0$ puncture term
