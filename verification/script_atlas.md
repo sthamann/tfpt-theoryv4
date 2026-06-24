@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`385` registered scripts · `445` ledger claims · `10` clusters.
+`386` registered scripts · `446` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -92,7 +92,7 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
 - **v379_seam_s3_rp** [E/C/O] `SEAM.S3.RP.01` — C7 / OS reconstruction: reflection positivity (the OS axiom) of the explicit gapped collar measure, verified numerically -- the remaining constructive-QFT ingredient for the OS rec
   - deps: QG.AMB.01, v367, v369, v240, v76, v376, v377, v378 · cited: research contracts
 
-### `em` — Electromagnetic fixed point  (5 scripts)
+### `em` — Electromagnetic fixed point  (6 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
 
 - **v3_em_alpha** [E] `EM.FP.01` — α⁻¹ = 137.0359992168 unique root of F_U(1)=0; ablation
@@ -105,6 +105,8 @@ _The fine-structure constant as the unique root of the boundary U(1) Ward identi
   - deps: v48_em_ward, v48, v216, v3, v159 · cited: 1 architecture e8
 - **v382_alpha_quillen_exact** [E/C/O] `ALPHA.QUILLEN.EXACT.01` — Names the Quillen determinant-line VARIATION delta_tau(log det_zeta Delta_U(1) + 8 b1 c3^6 log phi_seam)=0 as a tracked target (review Point 10), elevating EM.WARD.01's residual to
   - deps: v48_em_ward, v286_seam_equivalence_contract, v341, v342, v3, v48, v216, v336 · cited: 1 architecture e8
+- **v391_alpha_quillen_progress** [E/O] `ALPHA.QUILLEN.PROGRESS.01` — ALPHA.QUILLEN.PROGRESS.01: an HONEST attempt at the external target ALPHA.QUILLEN.EXACT.01 (v382) -- it REDUCES the open step to a sharper named sub-target via a solvable model but
+  - deps: v382_alpha_quillen_exact, v286_seam_equivalence_contract, v48_em_ward, v336, v341, v382 · cited: 1 architecture e8
 
 ### `flavor` — Flavor matrix & operators  (13 scripts)
 _The integer operator ladder (R, K, Q, L) and its spectral invariants — the flavor signature._
@@ -834,13 +836,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `SEAM.EQUIV.01`×22, `v76`×17, `v56`×17, `E8.GLU.01`×15, `QG.AMB.01`×15, `HOR.NARIAI.01`×15, `v216`×13, `v336`×13, `REG.FREEZE.01`×12, `AX.P1.01`×11, `v3`×11, `v312`×11, `QGEO.SUBPRIN.01`×11, `FLAV.KQ.01`×10
+**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `SEAM.EQUIV.01`×23, `v76`×17, `v56`×17, `E8.GLU.01`×15, `QG.AMB.01`×15, `HOR.NARIAI.01`×15, `v336`×14, `v216`×13, `REG.FREEZE.01`×12, `AX.P1.01`×11, `v3`×11, `v312`×11, `QGEO.SUBPRIN.01`×11, `FLAV.KQ.01`×10
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v379_seam_s3_rp** — `SEAM.S3.RP.01`
 - **v380_grav_kms_hessian** — `GRAV.KMS.HESSIAN.01`
 - **v381_qft4d_eg_allorder** — `QFT4D.EG.ALLORDER.01`
 - **v382_alpha_quillen_exact** — `ALPHA.QUILLEN.EXACT.01`
@@ -852,4 +853,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v388_corrections_budget** — `CORRECTIONS.BUDGET.01`
 - **v389_grav_loop_finiteness** — `GRAV.LOOP.FINITE.01`
 - **v390_prime2_facet** — `COXETER.PRIME2.01`
+- **v391_alpha_quillen_progress** — `ALPHA.QUILLEN.PROGRESS.01`
 

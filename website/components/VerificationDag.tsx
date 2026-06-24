@@ -226,6 +226,7 @@ const NODES: DagNode[] = [
       "v341_alpha_quillen.py",
       "v342_em_ward_heatkernel.py",
       "v382_alpha_quillen_exact.py",
+      "v391_alpha_quillen_progress.py",
     ],
   },
   {

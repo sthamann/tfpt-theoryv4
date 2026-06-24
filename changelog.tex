@@ -59,6 +59,22 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-24 (Honest attempt at an external target: \texttt{v391} reduces it, not a closure)}
+\begin{itemize}
+\item \textbf{\texttt{v391} (\texttt{ALPHA.QUILLEN.PROGRESS.01}) --- an honest attempt at the external target
+\texttt{ALPHA.QUILLEN.EXACT.01} (\vref{v382}, door~5).} It REDUCES the open step to a sharper named sub-target via a
+solvable model but does \emph{not} close it: \texttt{ALPHA.QUILLEN.EXACT.01} stays \mO\ (external math, type~A,
+\vref{v384}). \mE\ a solvable model $\det_\zeta(-\partial_\tau^2+m^2)$ on a circle of circumference $\beta$ equals
+$(2\sinh(\beta m/2))^2$, whose $m$-variation $\beta\coth(\beta m/2)=2/m+(\beta^2/6)m-(\beta^4/360)m^3+\dots$ is a closed
+heat-kernel/Laurent series (the $m^3$ coefficient $-1/360$ verified). \mE\ so a $\zeta$-determinant's coupling-variation
+is structured heat-kernel data, and \vref{v382}'s counterterm $8b_1\cthree^6$ (a Gauss--Bonnet heat-kernel power) is the
+right \emph{kind} of object; the \vref{v382} split is re-verified at $\ainv=137.0359992$. \mE\ the reduction: the open
+step now reduces to the named sub-target ``the seam $U(1)$ operator's Seeley--DeWitt coefficient $=8b_1\cthree^6$''.
+\mO\ \emph{not closed}: the actual seam-operator $\zeta$-determinant proof stays open, and \texttt{SEAM.EQUIV.01}
+continuum existence (MMST, \vref{v336}) stays the other external \mO; the value $\ainv$ stays \mE. An attempt that
+reduces, does not close. Cited in \texttt{tfpt\_1\_architecture\_e8}; Python-only.
+\end{itemize}
+
 \subsection*{2026-06-24 (Lean 4: \texttt{FORM.SPECTRALGAP.01} formalises the scalar core of the universal spectral-gap principle)}
 \begin{itemize}
 \item \textbf{\texttt{FORM.SPECTRALGAP.01} --- a Lean 4 proof of the gap $\Rightarrow$ unique-attractor $\Rightarrow$

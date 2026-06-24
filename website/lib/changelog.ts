@@ -47,6 +47,328 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "Honest attempt at an external target: "
+      },
+      {
+        "k": "c",
+        "v": "v391"
+      },
+      {
+        "k": "t",
+        "v": " reduces it, not a closure"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v391"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "ALPHA.QUILLEN.PROGRESS.01"
+            },
+            {
+              "k": "t",
+              "v": ") — an honest attempt at the external target "
+            },
+            {
+              "k": "c",
+              "v": "ALPHA.QUILLEN.EXACT.01"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "v382"
+            },
+            {
+              "k": "t",
+              "v": ", door 5)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " It REDUCES the open step to a sharper named sub-target via a solvable model but does "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " close it: "
+        },
+        {
+          "k": "c",
+          "v": "ALPHA.QUILLEN.EXACT.01"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "(external math, type A, "
+        },
+        {
+          "k": "c",
+          "v": "v384"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "a solvable model "
+        },
+        {
+          "k": "m",
+          "v": "\\det_\\zeta(-\\partial_\\tau^2+m^2)"
+        },
+        {
+          "k": "t",
+          "v": " on a circle of circumference "
+        },
+        {
+          "k": "m",
+          "v": "\\beta"
+        },
+        {
+          "k": "t",
+          "v": " equals "
+        },
+        {
+          "k": "m",
+          "v": "(2\\sinh(\\beta m/2))^2"
+        },
+        {
+          "k": "t",
+          "v": ", whose "
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": "-variation "
+        },
+        {
+          "k": "m",
+          "v": "\\beta\\coth(\\beta m/2)=2/m+(\\beta^2/6)m-(\\beta^4/360)m^3+\\dots"
+        },
+        {
+          "k": "t",
+          "v": " is a closed heat-kernel/Laurent series (the "
+        },
+        {
+          "k": "m",
+          "v": "m^3"
+        },
+        {
+          "k": "t",
+          "v": " coefficient "
+        },
+        {
+          "k": "m",
+          "v": "-1/360"
+        },
+        {
+          "k": "t",
+          "v": " verified). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "so a "
+        },
+        {
+          "k": "m",
+          "v": "\\zeta"
+        },
+        {
+          "k": "t",
+          "v": "-determinant's coupling-variation is structured heat-kernel data, and "
+        },
+        {
+          "k": "c",
+          "v": "v382"
+        },
+        {
+          "k": "t",
+          "v": "'s counterterm "
+        },
+        {
+          "k": "m",
+          "v": "8b_1\\cthree^6"
+        },
+        {
+          "k": "t",
+          "v": " (a Gauss–Bonnet heat-kernel power) is the right "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "kind"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " of object; the "
+        },
+        {
+          "k": "c",
+          "v": "v382"
+        },
+        {
+          "k": "t",
+          "v": " split is re-verified at "
+        },
+        {
+          "k": "m",
+          "v": "\\ainv=137.0359992"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the reduction: the open step now reduces to the named sub-target “the seam "
+        },
+        {
+          "k": "m",
+          "v": "U(1)"
+        },
+        {
+          "k": "t",
+          "v": " operator's Seeley–DeWitt coefficient "
+        },
+        {
+          "k": "m",
+          "v": "=8b_1\\cthree^6"
+        },
+        {
+          "k": "t",
+          "v": "”. "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not closed"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the actual seam-operator "
+        },
+        {
+          "k": "m",
+          "v": "\\zeta"
+        },
+        {
+          "k": "t",
+          "v": "-determinant proof stays open, and "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " continuum existence (MMST, "
+        },
+        {
+          "k": "c",
+          "v": "v336"
+        },
+        {
+          "k": "t",
+          "v": ") stays the other external "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "; the value "
+        },
+        {
+          "k": "m",
+          "v": "\\ainv"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": ". An attempt that reduces, does not close. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1_architecture_e8"
+        },
+        {
+          "k": "t",
+          "v": "; Python-only."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-24",
+    "dateLabel": "2026-06-24",
+    "heading": [
+      {
+        "k": "t",
         "v": "Lean 4: "
       },
       {
