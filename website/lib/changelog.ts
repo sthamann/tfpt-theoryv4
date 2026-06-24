@@ -47,6 +47,293 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "Lean 4: "
+      },
+      {
+        "k": "c",
+        "v": "FORM.SPECTRALGAP.01"
+      },
+      {
+        "k": "t",
+        "v": " formalises the scalar core of the universal spectral-gap principle"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "FORM.SPECTRALGAP.01"
+            },
+            {
+              "k": "t",
+              "v": " — a Lean 4 proof of the gap "
+            },
+            {
+              "k": "m",
+              "v": "\\Rightarrow"
+            },
+            {
+              "k": "t",
+              "v": " unique-attractor "
+            },
+            {
+              "k": "m",
+              "v": "\\Rightarrow"
+            },
+            {
+              "k": "t",
+              "v": " parameter-free core (door 4)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " New module "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier/SpectralGapAttractor.lean"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "lake build"
+        },
+        {
+          "k": "t",
+          "v": " OK, no "
+        },
+        {
+          "k": "c",
+          "v": "sorry"
+        },
+        {
+          "k": "t",
+          "v": ", only the three standard kernel axioms), formalising the meta-theorem of "
+        },
+        {
+          "k": "c",
+          "v": "v303"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v383"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v387"
+        },
+        {
+          "k": "t",
+          "v": " at the one-dimensional reduction — the affine gap contraction "
+        },
+        {
+          "k": "m",
+          "v": "x\\mapsto x_\\star+r(x-x_\\star)"
+        },
+        {
+          "k": "t",
+          "v": " with multiplier "
+        },
+        {
+          "k": "m",
+          "v": "r=\\lambda_2/\\lambda_1"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "c",
+          "v": "iter_sub"
+        },
+        {
+          "k": "t",
+          "v": ": the closed form "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{iter}_n-x_\\star=r^n(x_0-x_\\star)"
+        },
+        {
+          "k": "t",
+          "v": " (general "
+        },
+        {
+          "k": "m",
+          "v": "n"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "c",
+          "v": "iter_tendsto"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "0\\le r<1"
+        },
+        {
+          "k": "t",
+          "v": " (the gap) "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow\\mathrm{iter}_n\\to x_\\star"
+        },
+        {
+          "k": "t",
+          "v": " (the unique attractor); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "c",
+          "v": "starts_agree"
+        },
+        {
+          "k": "t",
+          "v": ": two starts differ by "
+        },
+        {
+          "k": "m",
+          "v": "r^n(a-b)\\to0"
+        },
+        {
+          "k": "t",
+          "v": ", so the attractor is independent of the initial state (parameter-freeness); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "c",
+          "v": "no_gap_no_forget"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "r=1"
+        },
+        {
+          "k": "t",
+          "v": " (no gap) leaves "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{iter}_n-x_\\star=x_0-x_\\star"
+        },
+        {
+          "k": "t",
+          "v": " constant — the initial condition is then a free parameter, so the gap is exactly what removes it; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the seam rate "
+        },
+        {
+          "k": "m",
+          "v": "(2/3)^6"
+        },
+        {
+          "k": "t",
+          "v": " and the golden "
+        },
+        {
+          "k": "m",
+          "v": "(\\varphi+2)/4=(5+\\sqrt5)/8"
+        },
+        {
+          "k": "t",
+          "v": " both lie in "
+        },
+        {
+          "k": "m",
+          "v": "[0,1)"
+        },
+        {
+          "k": "t",
+          "v": ". Honest scope: the scalar reduction (the contraction core "
+        },
+        {
+          "k": "c",
+          "v": "v303"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v383"
+        },
+        {
+          "k": "t",
+          "v": " iterate numerically); the full multi-dimensional Perron–Frobenius statement stays the cited theorem. Referenced in "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": "; ledger row "
+        },
+        {
+          "k": "c",
+          "v": "FORM.SPECTRALGAP.01"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-24",
+    "dateLabel": "2026-06-24",
+    "heading": [
+      {
+        "k": "t",
         "v": "Completing the Coxeter clock: "
       },
       {

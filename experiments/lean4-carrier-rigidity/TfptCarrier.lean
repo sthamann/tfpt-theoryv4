@@ -62,6 +62,7 @@ import TfptCarrier.MobiusUniformisation
 import TfptCarrier.CohomologyGrading
 import TfptCarrier.AnchorLadder
 import TfptCarrier.PascalLadder
+import TfptCarrier.SpectralGapAttractor
 import TfptCarrier.Sanity
 import TfptCarrier.AxiomCheck
 import TfptCarrier.AuditCheck

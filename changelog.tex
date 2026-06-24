@@ -59,6 +59,22 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-24 (Lean 4: \texttt{FORM.SPECTRALGAP.01} formalises the scalar core of the universal spectral-gap principle)}
+\begin{itemize}
+\item \textbf{\texttt{FORM.SPECTRALGAP.01} --- a Lean 4 proof of the gap $\Rightarrow$ unique-attractor $\Rightarrow$
+parameter-free core (door~4).} New module \texttt{TfptCarrier/SpectralGapAttractor.lean} (\texttt{lake build} OK,
+no \texttt{sorry}, only the three standard kernel axioms), formalising the meta-theorem of \vref{v303}/\vref{v383}/\vref{v387}
+at the one-dimensional reduction --- the affine gap contraction $x\mapsto x_\star+r(x-x_\star)$ with multiplier
+$r=\lambda_2/\lambda_1$. \mE\ \texttt{iter\_sub}: the closed form $\mathrm{iter}_n-x_\star=r^n(x_0-x_\star)$ (general $n$);
+\mE\ \texttt{iter\_tendsto}: $0\le r<1$ (the gap) $\Rightarrow\mathrm{iter}_n\to x_\star$ (the unique attractor);
+\mE\ \texttt{starts\_agree}: two starts differ by $r^n(a-b)\to0$, so the attractor is independent of the initial state
+(parameter-freeness); \mE\ \texttt{no\_gap\_no\_forget}: $r=1$ (no gap) leaves $\mathrm{iter}_n-x_\star=x_0-x_\star$ constant
+--- the initial condition is then a free parameter, so the gap is exactly what removes it; \mE\ the seam rate $(2/3)^6$ and
+the golden $(\varphi+2)/4=(5+\sqrt5)/8$ both lie in $[0,1)$. Honest scope: the scalar reduction (the contraction core
+\vref{v303}/\vref{v383} iterate numerically); the full multi-dimensional Perron--Frobenius statement stays the cited theorem.
+Referenced in \texttt{origin\_theory}; ledger row \texttt{FORM.SPECTRALGAP.01}.
+\end{itemize}
+
 \subsection*{2026-06-24 (Completing the Coxeter clock: \texttt{v390} the prime-2 (Gaussian / $\mathbb Z/4$-seam) facet of $30=2{\cdot}3{\cdot}5$)}
 \begin{itemize}
 \item \textbf{\texttt{v390} (\texttt{COXETER.PRIME2.01}) --- the prime-2 facet of the order-30 Coxeter clock.}
