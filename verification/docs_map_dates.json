@@ -700,7 +700,7 @@
   "date": "2026-06-24"
  },
  "tfpt_research_contracts::section::Research Contract 1 --- $(U_{\\mathrm{wall}})$::1": {
-  "hash": "36f7aaa1c9e3",
+  "hash": "04e23947ee9f",
   "date": "2026-06-25"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {
@@ -708,8 +708,8 @@
   "date": "2026-06-23"
  },
  "tfpt_research_contracts::section::Certifiability and recommended order::1": {
-  "hash": "2113212b3496",
-  "date": "2026-06-19"
+  "hash": "31fa6f7e49dc",
+  "date": "2026-06-25"
  },
  "origin_theory::front::(front matter)::1": {
   "hash": "1806669dfa1e",
@@ -762,5 +762,49 @@
  "origin_theory::section::Appendix: computational verification::1": {
   "hash": "48687b83b93b",
   "date": "2026-06-12"
+ },
+ "tfpt_safeguards::front::(front matter)::1": {
+  "hash": "a8ab152d20a5",
+  "date": "2026-06-25"
+ },
+ "tfpt_safeguards::section::The risk, and the shape of the answer::1": {
+  "hash": "d749f99f5758",
+  "date": "2026-06-25"
+ },
+ "tfpt_safeguards::section::Layer 1 --- the status calculus (no \\texttt{[C]} dressed as \\texttt{[E]})::1": {
+  "hash": "df53469dca69",
+  "date": "2026-06-25"
+ },
+ "tfpt_safeguards::section::Layer 2 --- no free pattern, and the reverse audit::1": {
+  "hash": "fb85fc6d85ab",
+  "date": "2026-06-25"
+ },
+ "tfpt_safeguards::section::Layer 3 --- the over-determination map (multiply vs.\\ compress)::1": {
+  "hash": "14722f4b91b2",
+  "date": "2026-06-25"
+ },
+ "tfpt_safeguards::section::Layer 4 --- the firewall and the No-Unit theorem::1": {
+  "hash": "491326327cb7",
+  "date": "2026-06-25"
+ },
+ "tfpt_safeguards::section::Layer 5 --- frozen predictions, the null model, and the $\\alpha$ uniqueness scan::1": {
+  "hash": "d9e049cae45b",
+  "date": "2026-06-25"
+ },
+ "tfpt_safeguards::section::Layer 6 --- two independent reproduction paths::1": {
+  "hash": "8a2780d5ad34",
+  "date": "2026-06-25"
+ },
+ "tfpt_safeguards::section::Layer 7 --- the red team::1": {
+  "hash": "0a2585467b1c",
+  "date": "2026-06-25"
+ },
+ "tfpt_safeguards::section::What would still falsify TFPT::1": {
+  "hash": "b2b997e0c1fb",
+  "date": "2026-06-25"
+ },
+ "tfpt_safeguards::section::Summary --- the layered defense::1": {
+  "hash": "cd621e91318d",
+  "date": "2026-06-25"
  }
 }

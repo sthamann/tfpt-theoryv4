@@ -54,6 +54,7 @@ DOCS = [
     "tfpt_horizon_readouts",
     "tfpt_research_contracts",
     "origin_theory",
+    "tfpt_safeguards",
 ]
 
 SCRIPT_RX = re.compile(r"v\d+_[A-Za-z0-9_]+\.py")

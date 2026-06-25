@@ -8,7 +8,8 @@ export type PaperStatus =
   | "frontier"
   | "redteam"
   | "horizon"
-  | "contracts";
+  | "contracts"
+  | "safeguards";
 
 export interface Paper {
   id: string;
@@ -109,6 +110,13 @@ export const STATUS_META: Record<
     bg: "bg-amber-500/10",
     ring: "ring-amber-500/30",
     gradient: "from-amber-500 to-yellow-500",
+  },
+  safeguards: {
+    label: "Verification discipline",
+    color: "text-emerald-300",
+    bg: "bg-emerald-500/10",
+    ring: "ring-emerald-500/30",
+    gradient: "from-emerald-500 to-teal-500",
   },
 };
 
@@ -1163,6 +1171,88 @@ export const papers: Paper[] = [
       { label: "Seam Equivalence Theorem", value: "closed mod cited", description: "The core is the keystone SEAM.EQUIV.01 (the raw RP seam IS the holomorphic (E8)₁ net at τ=i), now [C] closed modulo cited theorems: pinned at every computable level by an explicit lattice model (v367/v368) and the S3 closure stack (v376–v379), Lean-pinned (FORM.SEAM.MMST.01) to the published MMST/Adamo theorems, residual [O] = the cited continuum existence only (v336) — the theory's one irreducible structural postulate, the role the constancy of c plays in relativity" },
       { label: "Flat-Away", value: "one geometric input", description: "Both routes reduce to one shared fact — the raw seam is flat away from the four marks. Heat route: positive-definite a₂ proved (convexity) + closed form + Lean (v292/v295/v296); spectral Hessian PD (v293); Troyanov minimiser (v294); red-team Z₄≠mark-local (v290); Route A = citable stack Kitaev/Freed-Hopkins→Müger/KLM→Conway-Sloane (v297)" },
       { label: "Closing arc (v300–v302)", value: "no TFPT-internal assumption left", description: "Flat-Away hardened to a discrete degeneracy obstruction + its pin derived from the (E8)₁ integer-weight character via 2d Steklov rigidity (v300); Route A's invertibility discharged by the free-fermion classification (gapped 16-Majorana c=8 bulk is invertible, #anyons=|det K_E8|=1; v301); the last input is the derived Recovery gap Δ=6·ln(3/2)≈2.43>0 = a bulk mass gap via OS/quasi-free clustering (v302). SEAM.EQUIV.01 is now [C] closed modulo cited theorems (lattice v367/v368 + S3 stack v376–v379, Lean FORM.SEAM.MMST.01), residual [O] = the cited continuum existence only (v336)" },
+    ],
+  },
+  {
+    id: "09",
+    number: 9,
+    label: "Safeguards",
+    slug: "safeguards",
+    title: "Safeguards against Coincidence and Numerology",
+    subtitle: "The verification discipline — every mechanism that defends a load-bearing claim against chance, fitting and over-reading",
+    abstract:
+      "A two-input theory that reads out many small integers is, a priori, at risk of being elaborate numerology. This companion answers that risk not with rhetoric but with a layered, machine-checked discipline, stated uniformly in one place. The layers: (1) a four-class status calculus with a single-source ledger and a sync audit that makes it structurally impossible for a conditional [C] claim to be rendered as exact [E]; (2) an anti-fitting rule (no free pattern, v305) plus a reverse audit (E8.REVERSE.AUDIT.01) that publishes how much E₈ structure carries NO readout (3/8 primary, 5/8 hull overhead); (3) an over-determination map (v427) that honestly separates multiplicative evidence — seven witnesses from disjoint arithmetic grammars (Gauss, Eisenstein, cyclotomy, Galois, lattice, Pascal, Coxeter) all landing on the same skeleton — from compression (many readouts from one generator); (4) the F_transfer firewall (v187) and the No-Unit theorem (v153) that makes the absence of an absolute scale a theorem, not a gap; (5) a frozen prediction registry (v84) with a Monte-Carlo null model (v100) and a live data scorecard (v375); (6) two independent reproduction paths — an independent Wolfram engine (116+327 checks) and a Lean 4 kernel proof; and (7) an adversarial red-team layer. The thesis is deliberately narrow: these safeguards make coincidence an expensive explanation of the discrete core, and keep exact compiler closure from ever being mistaken for closed physics.",
+    status: "safeguards",
+    statusLabel: "Verification discipline",
+    pdf: "/papers/tfpt_safeguards.pdf",
+    inputs: [
+      "The whole TFPT stack as the object of audit: the ledger, the Python/Wolfram/Lean suites, the frozen registry, and the red-team document — read as a single discipline rather than per-result.",
+    ],
+    contribution: [
+      "Status calculus: the four display markers [E]/[C]/[O]/[X] are read from the single-source status_ledger.csv, not retyped per document, and audit_sync.py enforces (both directions) that the suite, runner, registry and ledger agree and that every script is cited in a paper body — so a [C] claim cannot be silently shown as [E].",
+      "Anti-fitting: the forward discipline / generator-economy audit (v305) admits an identity as load-bearing only if it is derivationally necessary, kills alternatives, is ablation-relevant, links modules, or is testable; the reverse audit (E8.REVERSE.AUDIT.01) publishes that only 3 of 8 E₈ Casimir degrees feed a primary readout (5/8 are unused hull overhead).",
+      "Over-determination map (v427): evidence multiplies only across disjoint grammars — seven (Gauss N(3+2i)=13, Eisenstein N(3+2ω)=7, cyclotomy N(3+2ζ₅)=55, Galois |（Z/5)ˣ|=4, |det Cartan E₈|=1, Pascal C(4,≤2)=11, Coxeter φ(30)=8) — while many readouts from one generator (the anchor a=(1,1,2), the flavor matrix R) are a compression gain, not independent multiplication.",
+      "Firewall + No-Unit: the four frontier transfers stay typed interfaces, never compiler outputs (v187/v213), and the No-Unit theorem (v153) makes v_geo theorem-forbidden; the residual-certification audit (v384) shows every open item is external-math, theorem-forbidden, or external-physics — zero open internal mechanisms.",
+      "Frozen predictions + null model: the registry (v84, REG.FREEZE.01) pre-registers the dimensionless predictions, a Monte-Carlo null model (v100) scores each match against chance, and the live scorecard (v375) records the data — including the pre-registered +2.0σ θ₁₃ tension (FLAV.TH13.PRESSURE.01), the opposite of hiding the worst case.",
+      "Two independent paths + red team: an independent Wolfram engine (116/116 + 327/327) and a Lean 4 kernel proof (hypercharge, anomaly, Pascal ladder, seam chain) re-derive the exact core, and the red-team companion attacks the theory and publishes what survives each attack.",
+    ],
+    notClaimed: [
+      "These safeguards do not establish physics: they make coincidence expensive for the discrete core and keep the typing honest, but the seam/anchor/transfer bridges remain the open research problem.",
+      "The over-determination map is not a Bayesian proof; it separates multiplicative (disjoint-grammar) from compression (one-generator) evidence so that neither is overstated.",
+    ],
+    falsification: [
+      "The discipline fails if any claim marked [E] does not in fact machine-check, if the null model is mis-specified so a chance hit is scored as signal, or if a frozen prediction is quietly retuned after data — each is itself an auditable defect.",
+    ],
+    sections: [
+      {
+        title: "Layer 1 — the status calculus (no [C] dressed as [E])",
+        body: "Every claim carries [E] exact/proven, [C] conditional, [O] open/axiom, or [X] kill test; the finer per-claim type lives in the single source of truth, status_ledger.csv, and the papers and website only mirror it. The sync audit (audit_sync.py) enforces in both directions that the suite, runner, registry and ledger agree, that every script is cited in a paper body, and that no generated surface is stale — so it is structurally impossible to render a conditional claim as exact.",
+      },
+      {
+        title: "Layer 2 — no free pattern, and the reverse audit",
+        body: "The forward discipline (v305) admits an identity as load-bearing only under named anti-fitting conditions; the reverse audit (E8.REVERSE.AUDIT.01) asks the honest opposite — of the eight E₈ Casimir degrees, exactly three feed a primary readout (degree 2 the metric, 8 the rank → c₃, 30 the Coxeter number → g_car), and five carry none. Publishing the 5/8 unused overhead is the anti-cherry-picking signal.",
+      },
+      {
+        title: "Layer 3 — the over-determination map (multiply vs. compress)",
+        body: "Over-determination is the strongest positive evidence, counted honestly (v427). Seven disjoint-grammar witnesses each reproduce a carrier-skeleton integer from their own structure (two quadratic rings, a degree-4 field, a finite group, a root lattice, a binomial/exterior algebra, a Coxeter invariant), so their joint landing multiplies; by contrast the anchor a=(1,1,2) emits (e₁,e₂,e₃)=(4,5,2)+power sums+the E₈ data from one generator — compression, not independent witnesses.",
+        formulas: [
+          "N(3+2i)=13,\\quad N(3+2\\omega)=7,\\quad N(3+2\\zeta_5)=55,\\quad |(\\mathbb Z/5)^\\times|=4",
+          "h(E_8)=30=2\\cdot3\\cdot5,\\quad \\varphi(30)=8=\\operatorname{rank}E_8",
+        ],
+      },
+      {
+        title: "Layer 4 — the firewall and the No-Unit theorem",
+        body: "The four frontier transfers (F_pole, F_Boltzmann, F_relic, F_QCD) are typed interfaces, never compiler outputs; a machine guard (v187) enforces it, and the recent single-flow reduction (v425) makes their dynamics the one native seam recovery semigroup, leaving only named anchors external. The No-Unit theorem (v153) makes v_geo forbidden by theorem, and the residual-certification audit (v384) shows zero open internal mechanisms.",
+      },
+      {
+        title: "Layers 5–7 — frozen predictions, independent paths, the red team",
+        body: "Predictions are pre-registered (v84, REG.FREEZE.01) and scored against a Monte-Carlo null model (v100) with a live scorecard (v375); the exact core is re-derived twice more independently (an independent Wolfram engine, 116+327 checks, and a Lean 4 kernel proof with no sorry); and the red-team companion attacks the theory and states what survives — including its own honesty that c=8 alone does not select (E₈)₁ (holomorphy, |det K|=1, is the load-bearing extra).",
+      },
+    ],
+    keyFormulas: [
+      {
+        label: "Seven disjoint witnesses",
+        latex: "N(3{+}2i){=}13,\\ N(3{+}2\\omega){=}7,\\ N(3{+}2\\zeta_5){=}55,\\ |(\\mathbb Z/5)^\\times|{=}4",
+        description: "Disjoint arithmetic grammars on the same skeleton ⇒ multiplicative evidence (v427)",
+      },
+      {
+        label: "Reverse audit",
+        latex: "3/8\\ \\text{primary readouts},\\quad 5/8\\ \\text{hull overhead}",
+        description: "How much E₈ structure carries NO readout — published, not hidden",
+      },
+      {
+        label: "No-Unit theorem",
+        latex: "\\dim[c_3]=\\dim[g_{\\mathrm{car}}]=0 \\Rightarrow v_{\\mathrm{geo}}\\ \\text{theorem-forbidden}",
+        description: "A dimensionless compiler cannot output an absolute scale (v153)",
+      },
+    ],
+    highlights: [
+      { label: "Status classes", value: "4", description: "[E]/[C]/[O]/[X], ledger-sourced, audit-enforced — no [C] dressed as [E]" },
+      { label: "Disjoint witnesses", value: "7", description: "Gauss, Eisenstein, cyclotomy, Galois, lattice, Pascal, Coxeter — multiply (v427)" },
+      { label: "Reverse audit", value: "3/8", description: "Only 3 of 8 E₈ degrees feed a primary readout; 5/8 is published hull overhead" },
+      { label: "Firewall", value: "4 typed", description: "F_pole/F_Boltzmann/F_relic/F_QCD never compiler outputs (v187); No-Unit makes v_geo a theorem (v153)" },
+      { label: "Independent paths", value: "2", description: "Wolfram (116+327) + Lean 4 kernel proof re-derive the exact core" },
+      { label: "Worst case shown", value: "θ₁₃ +2.0σ", description: "The most-tensioned prediction is pre-registered, not hidden (FLAV.TH13.PRESSURE.01)" },
     ],
   },
 ];

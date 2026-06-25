@@ -60,6 +60,62 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-25 (Safeguards visuals $+$ paper expansion $+$ the website safeguards band)}
+\begin{itemize}
+\item \textbf{Five safeguards figures} (\texttt{make\_figures.py}, in \texttt{manifest.sha256}): the
+layered defense, the $\alpha^{-1}$ uniqueness scan (one $F_{U(1)}$ variant of $94{,}500$ in the CODATA
+window), the reverse audit ($3/8$ vs $5/8$), the witness-independence map (seven disjoint grammars), and the
+look-elsewhere null model ($13/13$ vs $\le5/13$).
+\item \textbf{\texttt{tfpt\_safeguards} expanded.} Layer~5 now states the null model explicitly
+($\prod p_i{=}10^{-25.8}$, $2{\times}200$k pseudo-theories $\le5/13$, $\phiz\pm10\%\!\to\!6/13$, shuffle
+$1.2$) and the $\alpha$ uniqueness ($\le10^{-30.7}$, $\sim$102 bits, \vref{v100}), with the data watchdog
+(\vref{v307}) and kill board (\vref{v321}); the five figures are embedded.
+\item \textbf{Website: a prominent animated Safeguards band} (\texttt{components/Safeguards.tsx}) in the
+home flow (after the trust beat) --- headline statistics, the seven layers, the figures, links to the paper
+and the suite --- to address the coincidence/numerology suspicion proactively.
+\item \textbf{Koide flow-time investigation (honest negative).} Post-\texttt{v425}: the flow-time is
+\emph{not} native and does \emph{not} reduce to one scale --- \vref{v99} already rejects a scale reading as
+look-elsewhere; the only theory-side content is the conditional integer reading $t{=}\Nfam{=}3\Rightarrow
+m_\tau{=}1776.94$ MeV, a Belle~II kill test. No new module.
+\end{itemize}
+
+\subsection*{2026-06-25 (Three closure-strategy modules \texttt{v425}--\texttt{v427} $+$ the Safeguards paper)}
+\begin{itemize}
+\item \textbf{\texttt{v425} (\texttt{DYN.TRANSFER.UNIVERSAL.01}) --- the single-flow reduction of
+$F_{\mathrm{transfer}}$.} The four frontier transfers do not each need a separate external solver: their
+\emph{dynamics} is the ONE native flow (the seam modular/recovery semigroup, \texttt{v238}/\texttt{v240},
+gap $6\ln(3/2)$) restricted to each sector. \mE\ the \texttt{v99} Koide generator linearised at $q{=}2$ has
+rate $-\Delta$, time-$1$ contraction $(2/3)^6$; Boltzmann washout is that contraction (CP phase $4\pi/3$
+native, \texttt{v320}); QCD rate $b_3{=}-7$. \mC\ only the anchors ($v_{\mathrm{geo}}$, $C_p$, $M_R$) stay
+external; $F_{\mathrm{relic}}$'s cosmological IC $\theta_i$ is the one wall. A reduction (extends
+\texttt{v383} static$\to$dynamic), not internalisation; the firewall holds.
+\item \textbf{\texttt{v426} (\texttt{SEAM.EQUIV.LTORP.KMS.01}) --- the invertible $\beta{=}1$-KMS variant of
+(LTO-RP).} The corner NPW26 leave open (they prove it for topologically-ordered models; the seam is
+invertible $+$ KMS, not a trace). \mE\ a gapped reflection-symmetric $\mu_4$-even collar at $\beta{=}1$ KMS
+satisfies $\Theta K\Theta^{-1}{=}{-}K$ ($u_\Theta{=}J$) and $[\rho,K]{=}0$, so (LTO-RP) holds by direct
+Tomita--Takesaki; $|\!\det\mathrm{Cartan}(E_8)|{=}1$ (no anyons), state not a trace; neg controls have
+teeth. Advances \texttt{v424} sub-step (ii); \texttt{SEAM.EQUIV.01} stays \mO\ (continuum sub-step (i)
+remains).
+\item \textbf{\texttt{v427} (\texttt{OVERDET.WITNESS.MAP.01}) --- the honest over-determination accounting.}
+A reviewer correction made machine-explicit: witnesses from \emph{disjoint} grammars multiply, projections
+of the \emph{same} generator compress. \mE\ seven disjoint-grammar witnesses each reproduce a
+carrier-skeleton integer from their own structure --- Gauss $N(3{+}2i){=}13$, Eisenstein $N(3{+}2\omega){=}7$,
+cyclotomy $N(3{+}2\zeta_5){=}55$, Galois $|(\Z/5)^\times|{=}4$, $|\!\det\mathrm{Cartan}(E_8)|{=}1$, Pascal
+$\binom40{+}\binom41{+}\binom42{=}11$ ($2^4{=}16$), Coxeter $h(E_8){=}30{=}2{\cdot}3{\cdot}5$ with
+$\varphi(30){=}8$ --- and the anchor $a{=}(1,1,2)$ is the compression generator. Extends \texttt{v305}.
+\item \textbf{New paper \texttt{tfpt\_safeguards} (companion S).} A dedicated methodology paper collecting,
+in one language, every mechanism by which TFPT defends a claim against coincidence and numerology: the
+status calculus $+$ ledger $+$ audit, no-free-pattern $+$ reverse audit, the over-determination map
+(\texttt{v427}), the firewall $+$ No-Unit theorem, frozen predictions $+$ null model, the independent
+Wolfram and Lean paths, and the red team --- with a final kill-test summary. Registered in
+\texttt{build.sh}, \texttt{make\_docs\_map.py}, \texttt{make\_manifest.py} and the document-set box; the
+document set is now \textbf{eleven} deliverables (five numbered papers $+$ four companions $+$ introduction
+$+$ changelog).
+\item \textbf{Surfaces synced.} \texttt{run\_all.py} (421 modules), the registry, the ledger,
+\texttt{tfpt\_research\_contracts} (the $F_{\mathrm{transfer}}$ and keystone sections),
+\texttt{tfpt\_safeguards}; manifests refreshed.
+\end{itemize}
+
 \subsection*{2026-06-25 (The (LTO-RP) reduction of the keystone \texttt{SEAM.EQUIV.01}: \texttt{v424})}
 \begin{itemize}
 \item \textbf{New module \texttt{v424} (\texttt{SEAM.EQUIV.LTORP.01}).} An honest MMST-style reduction of the one

@@ -1273,6 +1273,152 @@ def fig_coxeter_galois():
     fig.savefig(os.path.join(WEB, "coxeter_galois.png"), dpi=150)
 
 
+def fig_safeguard_layers():
+    """The seven-layer defense against coincidence (overview schematic)."""
+    fig, ax = plt.subplots(figsize=(7.8, 4.4))
+    layers = [
+        ("7  Red team", "tfpt_5 \u00b7 Targets A\u2013F \u00b7 named kill tests", C["red"]),
+        ("6  Two independent paths", "Wolfram 116+327 \u00b7 Lean\u00a04 kernel proof", C["gold"]),
+        ("5  Frozen registry + null model", "v84 \u00b7 v100 Monte-Carlo \u00b7 v375 scorecard", C["gold"]),
+        ("4  Firewall + No-Unit", "v187/v213 \u00b7 v153 (v_geo theorem-forbidden)", C["green"]),
+        ("3  Over-determination map", "v427 \u00b7 disjoint grammars multiply, projections compress", C["green"]),
+        ("2  No free pattern + reverse audit", "v305 \u00b7 E8.REVERSE.AUDIT (3/8 readout)", C["blue"]),
+        ("1  Status calculus", "[E]/[C]/[O]/[X] \u00b7 ledger single source \u00b7 audit_sync", C["blue"]),
+    ]
+    n = len(layers)
+    for i, (title, sub, col) in enumerate(layers):
+        ax.add_patch(plt.Rectangle((0.1, i + 0.08), 9.8, 0.84, facecolor=col,
+                                   alpha=0.15, edgecolor=col, lw=1.3))
+        ax.text(0.35, i + 0.58, title, fontsize=10.5, fontweight="bold", color=col)
+        ax.text(0.35, i + 0.24, sub, fontsize=8.2, color=C["gray"])
+    ax.set_xlim(0, 10); ax.set_ylim(0, n + 0.1)
+    ax.axis("off")
+    ax.set_title("The layered defense \u2014 a load-bearing claim must pass all seven",
+                 fontsize=11)
+    fig.tight_layout()
+    fig.savefig(os.path.join(OUT, "safeguard_layers.pdf"))
+    fig.savefig(os.path.join(WEB, "safeguard_layers.png"), dpi=150)
+    plt.close(fig)
+
+
+def fig_alpha_uniqueness():
+    """alpha^-1 over the declared F_U(1) integer-budget variants: exactly one in window."""
+    fig, ax = plt.subplots(figsize=(7.8, 3.6))
+    codata = 137.035999177
+    Ms = list(range(30, 56))
+    ys = [ainv_of(M=M) for M in Ms]               # real root-solves at N=8
+    ax.axhspan(codata - 0.6, codata + 0.6, color=C["red"], alpha=0.12,
+               label="CODATA region (band widened for visibility;\ntrue window $4\\times10^{-8}$)")
+    ax.plot(Ms, ys, "o-", color=C["blue"], ms=3, lw=0.8)
+    ax.plot([41], [ainv_of(M=41)], "o", color=C["green"], ms=11,
+            label="$M{=}41,\\ N{=}8$ (TFPT) \u2014 the only hit")
+    ax.set_xlabel("integer budget $M=\\sum L+N_\\Phi$  (at $c_3=1/8\\pi$)")
+    ax.set_ylabel("$\\alpha^{-1}$ (root of $F_{U(1)}$)")
+    ax.set_title("$\\alpha^{-1}$ is a unique fixed point: of 94,500 declared "
+                 "$F_{U(1)}$ variants exactly one lands in the window (v100)",
+                 fontsize=9.6)
+    ax.legend(fontsize=7.6, loc="upper right")
+    ax.grid(alpha=0.25)
+    fig.tight_layout()
+    fig.savefig(os.path.join(OUT, "safeguard_alpha_uniqueness.pdf"))
+    fig.savefig(os.path.join(WEB, "safeguard_alpha_uniqueness.png"), dpi=150)
+    plt.close(fig)
+
+
+def fig_reverse_audit():
+    """E8's 8 Casimir degrees: 3 feed a readout, 5 are hull overhead."""
+    degs = [2, 8, 12, 14, 18, 20, 24, 30]
+    readout = {2: "metric", 8: "$c_3{=}1/8\\pi$", 30: "$g_{\\rm car}{=}5$"}
+    fig, ax = plt.subplots(figsize=(7.8, 3.0))
+    for i, d in enumerate(degs):
+        is_r = d in readout
+        col = C["green"] if is_r else C["gray"]
+        ax.bar(i, 1.0, color=col, alpha=0.85 if is_r else 0.30,
+               edgecolor=col, lw=1.2, width=0.8)
+        ax.text(i, 1.05, str(d), ha="center", fontsize=9.5, fontweight="bold")
+        if is_r:
+            ax.text(i, 0.5, readout[d], ha="center", va="center", rotation=90,
+                    fontsize=8, color="white", fontweight="bold")
+    ax.text(0.5, -0.22, "3 / 8 primary readouts (green)        "
+            "5 / 8 hull overhead (grey: 12,14,18,20,24)",
+            transform=ax.transAxes, ha="center", fontsize=8.6, color=C["gray"])
+    ax.set_xlim(-0.7, 7.7); ax.set_ylim(0, 1.2)
+    ax.axis("off")
+    ax.set_title("Reverse audit (E8.REVERSE.AUDIT.01): how much $E_8$ carries "
+                 "NO readout \u2014 published, not hidden", fontsize=9.8)
+    fig.tight_layout()
+    fig.savefig(os.path.join(OUT, "safeguard_reverse_audit.pdf"))
+    fig.savefig(os.path.join(WEB, "safeguard_reverse_audit.png"), dpi=150)
+    plt.close(fig)
+
+
+def fig_witness_map():
+    """Seven disjoint arithmetic grammars all land on the carrier skeleton (multiply);
+    the anchor is the single compression generator."""
+    fig, ax = plt.subplots(figsize=(7.8, 4.6))
+    wit = [
+        ("Gauss $\\mathbb{Z}[i]$", "$N(3{+}2i){=}13$"),
+        ("Eisenstein $\\mathbb{Z}[\\omega]$", "$N(3{+}2\\omega){=}7$"),
+        ("Cyclotomy $\\mathbb{Q}(\\zeta_5)$", "$N(3{+}2\\zeta_5){=}55$"),
+        ("Galois $(\\mathbb{Z}/5)^\\times$", "$|\\cdot|{=}4$"),
+        ("Root lattice $E_8$", "$|\\mathrm{det\\,Cartan}|{=}1$"),
+        ("Pascal/exterior", "$C(4,{\\leq}2){=}11,\\ 2^4{=}16$"),
+        ("Coxeter", "$\\varphi(30){=}8$"),
+    ]
+    n = len(wit)
+    sx, sy = 4.7, (n - 1) / 2.0
+    ax.add_patch(plt.Circle((sx, sy), 0.62, facecolor=C["green"], alpha=0.18,
+                            edgecolor=C["green"], lw=1.6))
+    ax.text(sx, sy + 0.12, "carrier", ha="center", fontsize=9, fontweight="bold",
+            color=C["green"])
+    ax.text(sx, sy - 0.22, "$\\{c_3,g_{\\rm car}\\}$", ha="center", fontsize=9,
+            color=C["green"])
+    for i, (g, val) in enumerate(wit):
+        y = n - 1 - i
+        ax.text(0.1, y, g, fontsize=8.8, fontweight="bold", color=C["blue"], va="center")
+        ax.text(2.35, y, val, fontsize=8.2, color=C["gray"], va="center")
+        ax.annotate("", xy=(sx - 0.62, sy), xytext=(3.5, y),
+                    arrowprops=dict(arrowstyle="->", color=C["blue"], lw=0.8, alpha=0.7))
+    ax.text(sx + 0.95, sy + 1.7, "disjoint grammars\n$\\Rightarrow$ MULTIPLY",
+            fontsize=8.6, color=C["green"], fontweight="bold")
+    # compression node
+    ax.text(sx + 0.95, sy - 1.4, "anchor $a{=}(1,1,2)$\n$\\to(4,5,2),\\,(240,248,8)$:\n"
+            "ONE generator $\\Rightarrow$ COMPRESS",
+            fontsize=8.0, color=C["gold"], fontweight="bold")
+    ax.set_xlim(0, 8.6); ax.set_ylim(-1.6, n + 0.2)
+    ax.axis("off")
+    ax.set_title("Witness-independence map (v427): disjoint grammars multiply, "
+                 "one-generator projections compress", fontsize=9.6)
+    fig.tight_layout()
+    fig.savefig(os.path.join(OUT, "safeguard_witness_map.pdf"))
+    fig.savefig(os.path.join(WEB, "safeguard_witness_map.png"), dpi=150)
+    plt.close(fig)
+
+
+def fig_null_model():
+    """Look-elsewhere null model (v100): TFPT 13/13 vs MC pseudo-theories and controls."""
+    fig, ax = plt.subplots(figsize=(7.2, 3.4))
+    labels = ["TFPT", "best MC\npseudo-theory", "$\\varphi_0\\,{\\pm}10\\%$\ncontrol",
+              "data shuffle\n(mean)"]
+    vals = [13, 5, 6, 1.2]
+    cols = [C["green"], C["gray"], C["gold"], C["gray"]]
+    ax.bar(labels, vals, color=cols, alpha=0.85, edgecolor=cols)
+    ax.axhline(13, color=C["green"], ls=":", lw=0.8)
+    for i, v in enumerate(vals):
+        ax.text(i, v + 0.25, f"{v}", ha="center", fontsize=9.5, fontweight="bold")
+    ax.set_ylabel("observables hit (of 13)")
+    ax.set_ylim(0, 14.5)
+    ax.set_title("Look-elsewhere null model (v100): $2{\\times}200$k pseudo-theories "
+                 "hit $\\leq 5/13$; TFPT $13/13$\njoint $\\prod p_i{=}10^{-25.8}$, "
+                 "with $\\alpha$ uniqueness $\\leq 10^{-30.7}$ ($\\sim$102 bits)",
+                 fontsize=9.2)
+    ax.grid(alpha=0.2, axis="y")
+    fig.tight_layout()
+    fig.savefig(os.path.join(OUT, "safeguard_null_model.pdf"))
+    fig.savefig(os.path.join(WEB, "safeguard_null_model.png"), dpi=150)
+    plt.close(fig)
+
+
 if __name__ == "__main__":
     fig_alpha_ablation()
     fig_mass_ladder()
@@ -1298,4 +1444,9 @@ if __name__ == "__main__":
     fig_qft_skeleton()
     fig_qft_unification()
     fig_ftransfer_dynamics()
+    fig_safeguard_layers()
+    fig_alpha_uniqueness()
+    fig_reverse_audit()
+    fig_witness_map()
+    fig_null_model()
     print("figures written to", os.path.normpath(OUT))

@@ -56,7 +56,7 @@ TEX = [
     "tfpt_1_architecture_e8.tex", "tfpt_2_standard_model.tex",
     "tfpt_3_e8_audit_bootstrap.tex", "tfpt_4_frontier.tex", "tfpt_5_redteam.tex",
     "tfpt_horizon_readouts.tex", "tfpt_research_contracts.tex",
-    "origin_theory.tex",
+    "origin_theory.tex", "tfpt_safeguards.tex",
 ]
 FIG = ["figures/action_tower.pdf", "figures/alpha_ablation.pdf",
        "figures/mass_ladder.pdf", "figures/status_heatmap.pdf",
@@ -70,7 +70,10 @@ FIG = ["figures/action_tower.pdf", "figures/alpha_ablation.pdf",
        "figures/rg_running.pdf", "figures/gauge_running.pdf",
        "figures/slice_compression.pdf", "figures/residual_chain.pdf",
        "figures/script_timeline.pdf", "figures/ftransfer_dynamics.pdf",
-       "figures/qft_skeleton.pdf", "figures/qft_unification.pdf"]
+       "figures/qft_skeleton.pdf", "figures/qft_unification.pdf",
+       "figures/safeguard_layers.pdf", "figures/safeguard_alpha_uniqueness.pdf",
+       "figures/safeguard_reverse_audit.pdf", "figures/safeguard_witness_map.pdf",
+       "figures/safeguard_null_model.pdf"]
 
 
 def collect():

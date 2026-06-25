@@ -66,6 +66,7 @@ NOTES=(
   tfpt_horizon_readouts
   tfpt_research_contracts
   origin_theory
+  tfpt_safeguards
   changelog
 )
 PAPERS=(

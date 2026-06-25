@@ -2,6 +2,7 @@ import { Hero } from "@/components/Hero";
 import { IntroVideo } from "@/components/IntroVideo";
 import { TrustContract } from "@/components/TrustContract";
 import { ClaimStack } from "@/components/ClaimStack";
+import { Safeguards } from "@/components/Safeguards";
 import { WhyThisMatters } from "@/components/WhyThisMatters";
 import { Overview } from "@/components/Overview";
 import { RosettaLexicon } from "@/components/RosettaLexicon";
@@ -29,6 +30,7 @@ export default function HomePage() {
       <Overview />
       <TrustContract />
       <ClaimStack />
+      <Safeguards />
       <RosettaLexicon />
       <OpenGates />
       <ReconstructionChain />

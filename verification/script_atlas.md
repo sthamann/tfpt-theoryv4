@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`418` registered scripts · `479` ledger claims · `10` clusters.
+`421` registered scripts · `482` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -288,7 +288,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v407_dn_pairings_omega** [E/C/O] `FLAV.SELECTOR.CLOSE.01` — FLAV.SELECTOR.CLOSE.01: the R4' residue folds into the tau=omega keystone (v405) -- the three (d,n) selector pairings ARE the tau=omega family-slice atoms. [E] the frame (1,a,sigma
   - deps: v405_seam_equiv_omega, v49_readout_rigidity, v405, v139, v136, v42 · cited: origin theory, 1 architecture e8
 
-### `frontier` — Open gate (G_metric) & the frontier  (121 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (123 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -354,7 +354,7 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
 - **v212_leptogenesis_decuple** [C/X] `FR.ETAB.04` — M₁=M_scal φ₀²/A_Λ≈8.65×10⁹ GeV and m̃₁=m₃/A_Λ≈5 meV. A cleaner [C] route than v184's M₁=M_R φ₀⁴ (which only relocated the free input to the un-pinned seesaw M_R). [I] shared decupl
   - deps: FR.ETAB.01, v169_etaB_boltzmann_interface, v184_etaB_anchored_boltzmann, v169_etaB_boltzmann_interface · cited: 4 frontier
 - **v213_ftransfer_functor** [E/C/O] `CONTRACT.F.01` — the F_transfer FUNCTOR CONTRACT (CONTRACT.F.01): the four frontier transfers are ONE typed functor F_transfer = F_observable∘F_threshold∘F_RG with four structural axioms, each inst
-  - deps: v82_koide_attractor_splitting, v212_leptogenesis_decuple, v211_axion_spine_angle, FR.MPME.01, v187_ftransfer_laws · cited: 4 frontier, research contracts
+  - deps: v82_koide_attractor_splitting, v212_leptogenesis_decuple, v211_axion_spine_angle, FR.MPME.01, v187_ftransfer_laws · cited: 4 frontier, research contracts, safeguards
 - **v234_seam_holomorphy_selection** [E/O] `GATE.HOLO.01` — The Seam-Holomorphy selection certificate: the entire structural residual is ONE condition with THREE equivalent faces, all forcing E8. THE CONDITION: 'the seam carries no nontrivi
   - deps: v1_e8_glue, v219_icosahedral_mckay, v232_e8_kleinian_seam, v89_carrier_index_lemma · cited: introduction, research contracts
 - **v235_seam_chern_simons** [E/O] `GATE.HOLO.02` — The closing step in abelian Chern-Simons language: holomorphic <=> det K = 1 -- a genuine reduction (not a closure) of GATE.HOLO.01 into standard anyon-condensation physics. A free
@@ -414,7 +414,7 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
 - **v304_idg_nonlocal_ghost** [E/C/O] `QGAMB.IDG.01` — the KMS spectral-action cutoff suggests a NONLOCAL (infinite-derivative) graviton form factor; under entire analyticity the Stelle ghost is a TRUNCATION ARTEFACT — a CONDITIONAL na
   - deps: QG.AMB.01, v259, v278, rt_F · cited: 5 redteam
 - **v307_data_watchdog** [E/X] `DATA.WATCHDOG.01` — Data watchdog: the operational decision pipeline over the frozen registry (v84). Classifies all 20 entries (16 predictions + 2 assigned textures + 2 bands) PASS/WATCH/TENSION/KILL 
-  - deps: v84_frozen_registry, v62_data_scorecard · cited: origin theory
+  - deps: v84_frozen_registry, v62_data_scorecard · cited: origin theory, safeguards
 - **v308_seam_equiv_chain** [E/O] `SEAM.EQUIV.CHAIN.01, FORM.SEAMEQUIV.01` — TOE attack 1 -- the SEAM.EQUIV.01 keystone as a composition certificate: the v297 stack as ONE well-typed chain gap>0 -> invertible (Kitaev) -> holomorphic c=8 (Mueger/KLM) -> (E8)
   - deps: v286_seam_equivalence_contract, v302_seam_gap, v297, v301, v302, v308_seam_equiv_chain · cited: research contracts
 - **v309_modular_bedrock** [E/O] `QGEO.MODHAM.01` — TOE attack 2 -- the bedrock omega o rho = omega via an explicit modular Hamiltonian, non-circular: marks=4 from Gauss-Bonnet (v216) + the order-4 clock from cross-ratio 2 (v214) =>
@@ -436,7 +436,7 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
 - **v320_galois_cp_relation** [E/C/X] `GALOIS.CP.PREDICT.01` — A NEW falsifiable prediction from the Galois structure: the two CP phases are locked, delta_PMNS = delta_CKM,lead + pi. Both phases are powers of one hexagonal unit rho=zeta_6 (v31
   - deps: v316_galois_readout, v318_arithmetic_capstone, v316, v231, v233 · cited: origin theory, 5 redteam
 - **v321_killtest_board** [E/C/X] `KILL.BOARD.01` — The forward kill-test board: the decisive upcoming measurements, ranked (forward companion to v307). Each entry is locked to a freeze_file.csv kill row: #1 JUNO sin^2 theta12=0.306
-  - deps: v307_data_watchdog, v320_galois_cp_relation, v84_frozen_registry · cited: origin theory
+  - deps: v307_data_watchdog, v320_galois_cp_relation, v84_frozen_registry · cited: origin theory, safeguards
 - **v322_cp_lock_sharpened** [E/C/X] `GALOIS.CP.SHARPEN.01` — The v320 CP-lock prediction sharpened into a quantitative kill test. The leading CP phase sits on the six hexagonal nodes arg(rho^k)=k*60deg; delta_CKM,lead=60deg (node 1), delta_P
   - deps: v320_galois_cp_relation, v316_galois_readout, v320, v316 · cited: origin theory
 - **v323_bw_geometric_modular** [E/C/O] `QGEO.BW.01, FORM.QGEO.BW.01` — The keystone pushed one step: Bisognano-Wichmann makes the seam modular flow GEOMETRIC, so the mu4 deck invariance is not an independent axiom. The clock rho=diag(i^n)=exp(i(pi/2)L
@@ -482,13 +482,13 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
 - **v374_ftransfer_qcd** [E/C/X] `FR.QCD.BUDGET.01` — Track 3 (F_transfer): the m_p/m_e transfer as a typed uncertainty-budget + kill test -- the falsifiability companion to v262 (the precise 2-loop point), replacing the v326 toy (whi
   - deps: v262_fqcd_mp_me, v262, v164, v339 · cited: 4 frontier
 - **v375_observatory_registry** [E] `OBSERVATORY.REGISTRY.01` — Track 4: the prediction OBSERVATORY -- a status-typed CI over the frozen prediction registry (freeze_file.csv) that makes the falsifiability surface machine-checkable (no new physi
-  - deps: v3, v9, v268, v328, v86, v60 · cited: 5 redteam
+  - deps: v3, v9, v268, v328, v86, v60 · cited: 5 redteam, safeguards
 - **v380_grav_kms_hessian** [E/C/O] `GRAV.KMS.HESSIAN.01` — The KMS Entire Hessian -- the Stelle ghost is EXACTLY the Seeley-DeWitt truncation, and resummation pushes it to infinity (upgrades v304/v370 from 'assume entire' to a derived stat
   - deps: QG.AMB.01, v259, v304, v370, v334 · cited: 5 redteam
 - **v383_dynamics_universal** [E/C] `DYNAMICS.UNIVERSAL.01` — DYNAMICS.UNIVERSAL.01: the UNIVERSAL spectral-gap / Perron-Frobenius principle -- every TFPT sector is the SAME object (a gapped operator with a UNIQUE leading attractor = the phys
   - deps: v56, v82, v303, v312, v313, v314, v337, v358 · cited: origin theory
 - **v384_residual_certification** [E/C/O] `RESIDUAL.CERTIFICATION.01` — RESIDUAL.CERTIFICATION.01: the residual matrix is CERTIFICATION, not CONSTRUCTION -- after v369/v381/v382 there is NO open TFPT physics MECHANISM left; every residual is an externa
-  - deps: v286_seam_equivalence_contract, v382_alpha_quillen_exact, QG.AMB.01, v78_vgeo_floor, v371_ftransfer_pole, v153, v336, v369 · cited: research contracts
+  - deps: v286_seam_equivalence_contract, v382_alpha_quillen_exact, QG.AMB.01, v78_vgeo_floor, v371_ftransfer_pole, v153, v336, v369 · cited: research contracts, safeguards
 - **v386_grav_amplitude** [E/C] `GRAV.AMPLITUDE.01` — GRAV.AMPLITUDE.01: the entire-form-factor graviton-exchange AMPLITUDE is finite, UV-softened and tree-unitary -- perturbative gravity as an explicit scattering problem, extending v
   - deps: v259, v304, v370, v380, v253, v369 · cited: 4 frontier
 - **v387_corrections_gap** [E/C] `CORRECTIONS.GAP.01` — CORRECTIONS.GAP.01: the practical harvest of v383 -- the same spectral gap that makes each sector parameter-free ALSO sets the SIZE of its first correction (correction_n ~ (lambda_
@@ -532,13 +532,17 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
 - **v423_no_ambient_dependency** [E/C] `QGAMB.NODEP.01` — The No-Ambient-Dependency certificate: no frozen TFPT readout is COMPUTED from the ambient QG measure QG.AMB.01 -- sharpening the v369/v384 prose redundancy into a machine-checked 
   - deps: QG.AMB.01, v337_decoupling_theorem, v286_seam_equivalence_contract, v337, v369, v384 · cited: 4 frontier
 - **v424_seam_lto_rp_reduction** [E/C/O] `SEAM.EQUIV.LTORP.01` — The (LTO-RP) reduction of the keystone: an honest MMST-style reduction of SEAM.EQUIV.01's one open lemma -- the raw collar's intrinsic Bisognano-Wichmann property (the v308/v309 re
-  - deps: v286_seam_equivalence_contract, v308_seam_equiv_chain, v309_modular_bedrock, v308, v309, v302, v240, v214 · cited: research contracts
+  - deps: v286_seam_equivalence_contract, v308_seam_equiv_chain, v309_modular_bedrock, v308, v309, v302, v240, v214 · cited: research contracts, safeguards
+- **v425_dyn_transfer_universal** [E/C] `DYN.TRANSFER.UNIVERSAL.01` — DYN.TRANSFER.UNIVERSAL.01 -- the single-flow reduction of F_transfer: the four frontier transfers (F_pole, F_Boltzmann, F_relic, F_QCD) do not each need a separate external solver;
+  - deps: v213_ftransfer_functor, v238_modular_lindblad_dynamics, v383_dynamics_universal, v164_qcd_scale, v238, v240, v99, v320 · cited: research contracts, safeguards
+- **v426_seam_lto_rp_kms** [E/C/O] `SEAM.EQUIV.LTORP.KMS.01` — SEAM.EQUIV.LTORP.KMS.01 -- the invertible beta=1-KMS variant of (LTO-RP), the corner NPW26 leave open (they prove it for topologically-ordered models; the TFPT seam is invertible +
+  - deps: v424_seam_lto_rp_reduction, v286_seam_equivalence_contract, v308_seam_equiv_chain, v309_modular_bedrock, v424, v309, v302, v240 · cited: research contracts, safeguards
 
-### `registry` — Blind registry & red-team follow-ups (v84–v175)  (173 scripts)
+### `registry` — Blind registry & red-team follow-ups (v84–v175)  (174 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
 
 - **v84_frozen_registry** [E] `REG.FREEZE.01` — blind-prediction registry FROZEN 2026-06-09: every dimensionless prediction of record at 25 digits, re-derived from the two axioms each run (formula↔value lock); exactly ONE θ₁₂ pr
-  - deps: v3_em_alpha, v9_neutrino_texture, v65_falsification_layer, freeze_file.csv · cited: introduction, 2 standard model
+  - deps: v3_em_alpha, v9_neutrino_texture, v65_falsification_layer, freeze_file.csv · cited: introduction, 2 standard model, safeguards
 - **v85_master_cover** [E/C] `FLAV.PENCIL.05` — Master-Cover Theorem: GL(2) covariance ⇒ exactly ONE anchor-block double cover up to Möbius reparametrisation (disc = N_fam⁴·det G²); the −8/3 = −rank E₈/N_fam rung = carrier − one
   - deps: v82_koide_attractor_splitting, v80, v81, v82 · cited: 2 standard model
 - **v86_nstar_reheating** [C] `COSMO.NSTAR.01` — recorded honestly: A_s coherence disfavours the slow Higgs channel (−11.4σ); the frozen band [50,60] stays the surface of record
@@ -570,7 +574,7 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v99_koide_flow_time** [E/C] `FR.KOIDE.06` — Q crosses 2/3 at +0.43σ(m_τ), t passes every integer ≥ 3 within +0.5σ [N]; conditional steps (registry untouched): n=2 excluded (−2.9σ), n=3 = N_fam steps ⇒ m_τ = 1776.9427 MeV (+0
   - deps: v82_koide_attractor_splitting, FR.KOIDE.05 (robustness of negative (i) corrected), COSMO.NSTAR.01 (M_scal) · cited: 4 frontier, 5 redteam
 - **v100_numerology_null_mc** [E/C] `AUDIT.NULLMC.01` — exactly ONE hits the 4×10⁻⁸ CODATA window ⇒ total ≤ 10⁻³⁰·⁷ (~102 bits), CONDITIONAL on the declared grammar (a null-model rejection, never 'certainty'); complementary to the v84 f
-  - deps: REG.FREEZE.01 (scored predictions = frozen registry), DATA.SCORECARD.01 (documented data centrals) · cited: introduction, 3 e8 audit bootstrap, 5 redteam
+  - deps: REG.FREEZE.01 (scored predictions = frozen registry), DATA.SCORECARD.01 (documented data centrals) · cited: introduction, 3 e8 audit bootstrap, 5 redteam, safeguards
 - **v101_horizon_anchor** [E/C] `HOR.NARIAI.01` — The maximal black hole is the anchor (Schwarzschild–de Sitter in seam units): the Nariai horizon cubic t³−3t+2 = (t−1)²(t+2) has roots (1,1,−2) = the TRACELESS ANCHOR a−(p₁/3)·1; t
   - deps: AX.P1.01, ARCH.CORE.01 (anchor), FLAV.PENCIL.03 (cover), FR.KOIDE.04 (orientation), v8_horizon, GATE.METRIC.07 (SU(4)_1 weights) · cited: origin theory, 2 standard model, horizon readouts
 - **v102_seam_orientation** [E/C] `HOR.ORIENT.01` — flavor: the canonical flow dq/dt = (Δ/N_fam)(q−2)(q−5) is the gradient flow of a cubic potential whose critical points are exactly the two branch points, with stationary curvatures
@@ -676,7 +680,7 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v152_norm_is_anchor** [E/O] `SEAM.EHMODEL.03` — ln m is scale-ambiguous, only m/μ is physical; k = c₃/2 ⟺ m/μ = e^{3/4} is the induced-gravity anchor 1/G (v68), not a separate gap; the irreducibles stay {one scale, π}; audit: th
   - deps: v151_bfk_split, v150_replica_eh_model, v73_k_c3_half, v68, v78, v150 · cited: origin theory, 4 frontier
 - **v153_no_unit_theorem** [E/O] `ANCHOR.VGEO.02` — U_point ~ v_geo, 1/G ~ v_geo², m/μ = e^{3/4} (a ratio); v_geo is an irreducible metrology primitive, not an open gap; irreducibles stay {one unit, π}
-  - deps: v78_vgeo_floor, v75_upoint_to_vgeo, v152_norm_is_anchor, v68, v78, v152 · cited: research contracts
+  - deps: v78_vgeo_floor, v75_upoint_to_vgeo, v152_norm_is_anchor, v68, v78, v152 · cited: research contracts, safeguards
 - **v154_simple_current_theorem** [E/C] `GATE.METRIC.11` — Simple-Current Extension Theorem (the central G_net theorem): A = (D5)1(x)(A3)1 extended by the isotropic glue L=<(1,1)> has index |L|=4, c=5+3=8, μ(B)=μ(A)/|L|²=16/16=1 ⇒ holomorp
   - deps: v148_fock_census, v143_graded_frobenius, v92_glue_uniqueness, v89_carrier_index_lemma, v89, v92, v125, v143 · cited: 5 redteam, research contracts
 - **v155_quasifree_boundary** [E/C] `GATE.METRIC.12` — a contraction, hence a valid covariance — so the G_net analytic premise (v110(b)/v113 'one kernel') FOLLOWS from 'the seam bulk is a RP free field', the same premise as v59 (area l
@@ -742,9 +746,9 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v185_axion_relic_solver** [C/X] `FR.DM.03` — so the axion DM branch stays a [C] SCENARIO. The harmonic misalignment UNDER-produces at this f_a (prefactor ~0.026/θ², θ~O(1) gives ~21% of Ω_DM, need θ_eff²~4.7), so the 170° hil
   - deps: FR.DM.01, v25_frontier_conjectures, v25_frontier_conjectures · cited: 4 frontier, research contracts
 - **v187_ftransfer_laws** [E/C/O] `FR.TRANSFER.01` — Koide (FR.KOIDE.*), η_B (FR.ETAB.*), axion (FR.DM.*), m_p/m_e+Λ_QCD (FR.MPME.*/QCD.LAMBDA.*) — must NEVER be typed as primitive [E]/[N] compiler predictions; each must carry a [C]/
-  - deps: v183_koide_f_corner_transfer, v184_etaB_anchored_boltzmann, v185_axion_relic_solver, v164_qcd_scale, v84_frozen_registry, v100_numerology_null_mc · cited: 4 frontier, research contracts
+  - deps: v183_koide_f_corner_transfer, v184_etaB_anchored_boltzmann, v185_axion_relic_solver, v164_qcd_scale, v84_frozen_registry, v100_numerology_null_mc · cited: 4 frontier, research contracts, safeguards
 - **v188_frontier_wording_guard** [E] `AUDIT.WORDING.01` — 'leptogenesis interface (mE)' (v184 retyped Route B to [C]), 'closed branch also fixes the leptogenesis inputs' (M_R is the seesaw scale, not a compiler power), 'relic scale f_a,m_
-  - deps: v184_etaB_anchored_boltzmann, v185_axion_relic_solver, v183_koide_f_corner_transfer, v187_ftransfer_laws · cited: 4 frontier
+  - deps: v184_etaB_anchored_boltzmann, v185_axion_relic_solver, v183_koide_f_corner_transfer, v187_ftransfer_laws · cited: 4 frontier, safeguards
 - **v189_riemann_roch_carrier** [E/C] `ARCH.RRCAR.01` — a fourth, geometric reading. h⁰ and rank H₁ are both fixed by deg=4 (one object, two invariants).
   - deps: v53_compiler_core, AX.P2.01, QGEO.COHOM.01, v1_e8_glue, v177_seam_marking_kernel, v1_e8_glue · cited: introduction, origin theory
 - **v190_nariai_entropy_bound** [E] `HOR.NARIAI.02` — a variation-free proof of the entropy floor (global minimum on x>0 is 2/3=|Z₂|/N_fam).
@@ -858,7 +862,7 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v284_route_i_rp_uniqueness** [E/C/O] `QGEO.ROUTEI.01` — Route (i) (RP-state uniqueness) decomposed into a 6-lemma chain with every dischargeable lemma discharged and the one irreducible lemma isolated (does NOT prove the open premise). 
   - deps: v181_clock_is_conformal_symmetry, v279_qgeo_obligation_lemma, v194_raw_seam_dtn_rp, v216_marks_gauss_bonnet, v258_dirac_covariance_induction, v276_qgeo_flat_closes_commutator, v280_pillowcase_steklov · cited: research contracts
 - **v305_witness_independence** [E] `WITNESS.ECON.01` — Witness-independence / generator-economy audit (structural anti-numerology firewall, companion to v100): every headline integer (4,5,2,3,16,8,240,248,120,30,1920,48,6) is a documen
-  - deps: v23_anchor_generator, v84_frozen_registry, v62_data_scorecard · cited: 5 redteam
+  - deps: v23_anchor_generator, v84_frozen_registry, v62_data_scorecard · cited: 5 redteam, safeguards
 - **v306_seed_crossval** [E/O] `SEED.CROSSVAL.01` — Leave-one-out cross-validation of the shared seed phi0: back-solving phi0 independently from the 5 seed-grammar observables (sin^2 theta12, sin^2 theta13, beta, Omega_b, lambda_C; 
   - deps: v23_anchor_generator, v84_frozen_registry, v62_data_scorecard · cited: 5 redteam
 - **v310_carrier_sm_anomaly** [E/C/O] `CAR.SM.ANOM.01` — TOE attack 3 -- the carrier half-spinor IS one anomaly-free SM generation with the SM RG: 16=Lambda^even(C^5)=1+10+5 -> SU(5)<SO(10) as 10+5bar+1 = one generation; gauge-anomaly-fr
@@ -883,6 +887,8 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
   - deps: v10_projection_involution.py;v11_unique_KQ.py;v12_mass_generation_polynomials, v218, v224, v410 · cited: 2 standard model
 - **v414_center_resolvent_portal** [E/C] `DIAMOND.CENTER.RESOLVENT.01` — The center C is a resolvent portal G2 -> F4 -> E8: the center C=M(1,0) (v95) is the t=0 evaluation of V; tr C=12=dim g_SM=chi_E8(i), det C=14=dim G2, sum C=31=2^g_car-1=248/8; the 
   - deps: v10_projection_involution.py;v11_unique_KQ.py;v12_mass_generation_polynomials, v95, v230 · cited: 2 standard model
+- **v427_overdet_witness_map** [E/C] `OVERDET.WITNESS.MAP.01` — OVERDET.WITNESS.MAP.01 -- the honest over-determination accounting, made machine-explicit (a reviewer correction): witnesses from DISJOINT grammars multiply; projections of the SAM
+  - deps: v354_e8_reverse_audit, v403_facet_compositum, v419_seam_galois_carrier, v83_e8net_holomorphic_uniqueness, v53_compiler_core, v415, v417, v418 · cited: safeguards
 
 ## Supersede map — do NOT reuse the left-hand claim
 
@@ -900,15 +906,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×28, `QGEO.SYM.01`×28, `QG.AMB.01`×17, `v76`×17, `v56`×17, `E8.GLU.01`×16, `v336`×16, `v216`×15, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v312`×14, `REG.FREEZE.01`×12, `AX.P1.01`×11, `v3`×11, `v54`×11
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×29, `QGEO.SYM.01`×28, `QG.AMB.01`×17, `v76`×17, `v56`×17, `E8.GLU.01`×16, `v336`×16, `v216`×15, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v312`×14, `REG.FREEZE.01`×12, `AX.P1.01`×11, `v3`×11, `v54`×11
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v412_sheet_source_corner_J** — `DIAMOND.SHEET.SOURCE.J.01`
-- **v413_sheet_characteristic_calculus** — `DIAMOND.SHEET.CALCULUS.01`
-- **v414_center_resolvent_portal** — `DIAMOND.CENTER.RESOLVENT.01`
 - **v415_gaussian_operator** — `DIAMOND.GAUSS.01`
 - **v416_atom_trichotomy** — `ARITH.TRICHOTOMY.01`
 - **v417_eisenstein_cp_operator** — `DIAMOND.EISEN.01`
@@ -918,4 +921,7 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v422_galois_net_bridge** — `SEAM.GALOIS.NET.01`
 - **v423_no_ambient_dependency** — `QGAMB.NODEP.01`
 - **v424_seam_lto_rp_reduction** — `SEAM.EQUIV.LTORP.01`
+- **v425_dyn_transfer_universal** — `DYN.TRANSFER.UNIVERSAL.01`
+- **v426_seam_lto_rp_kms** — `SEAM.EQUIV.LTORP.KMS.01`
+- **v427_overdet_witness_map** — `OVERDET.WITNESS.MAP.01`
 

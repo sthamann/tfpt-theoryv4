@@ -47,6 +47,1011 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "Safeguards visuals "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " paper expansion "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the website safeguards band"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Five safeguards figures"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "make_figures.py"
+        },
+        {
+          "k": "t",
+          "v": ", in "
+        },
+        {
+          "k": "c",
+          "v": "manifest.sha256"
+        },
+        {
+          "k": "t",
+          "v": "): the layered defense, the "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha^{-1}"
+        },
+        {
+          "k": "t",
+          "v": " uniqueness scan (one "
+        },
+        {
+          "k": "m",
+          "v": "F_{U(1)}"
+        },
+        {
+          "k": "t",
+          "v": " variant of "
+        },
+        {
+          "k": "m",
+          "v": "94{,}500"
+        },
+        {
+          "k": "t",
+          "v": " in the CODATA window), the reverse audit ("
+        },
+        {
+          "k": "m",
+          "v": "3/8"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "5/8"
+        },
+        {
+          "k": "t",
+          "v": "), the witness-independence map (seven disjoint grammars), and the look-elsewhere null model ("
+        },
+        {
+          "k": "m",
+          "v": "13/13"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "\\le5/13"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "tfpt_safeguards"
+            },
+            {
+              "k": "t",
+              "v": " expanded."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Layer 5 now states the null model explicitly ("
+        },
+        {
+          "k": "m",
+          "v": "\\prod p_i{=}10^{-25.8}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "2{\\times}200"
+        },
+        {
+          "k": "t",
+          "v": "k pseudo-theories "
+        },
+        {
+          "k": "m",
+          "v": "\\le5/13"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\phiz\\pm10\\%\\!\\to\\!6/13"
+        },
+        {
+          "k": "t",
+          "v": ", shuffle "
+        },
+        {
+          "k": "m",
+          "v": "1.2"
+        },
+        {
+          "k": "t",
+          "v": ") and the "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": " uniqueness ("
+        },
+        {
+          "k": "m",
+          "v": "\\le10^{-30.7}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\sim"
+        },
+        {
+          "k": "t",
+          "v": "102 bits, "
+        },
+        {
+          "k": "c",
+          "v": "v100"
+        },
+        {
+          "k": "t",
+          "v": "), with the data watchdog ("
+        },
+        {
+          "k": "c",
+          "v": "v307"
+        },
+        {
+          "k": "t",
+          "v": ") and kill board ("
+        },
+        {
+          "k": "c",
+          "v": "v321"
+        },
+        {
+          "k": "t",
+          "v": "); the five figures are embedded."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website: a prominent animated Safeguards band"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "components/Safeguards.tsx"
+        },
+        {
+          "k": "t",
+          "v": ") in the home flow (after the trust beat) — headline statistics, the seven layers, the figures, links to the paper and the suite — to address the coincidence/numerology suspicion proactively."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Koide flow-time investigation (honest negative)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Post-"
+        },
+        {
+          "k": "c",
+          "v": "v425"
+        },
+        {
+          "k": "t",
+          "v": ": the flow-time is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " native and does "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " reduce to one scale — "
+        },
+        {
+          "k": "c",
+          "v": "v99"
+        },
+        {
+          "k": "t",
+          "v": " already rejects a scale reading as look-elsewhere; the only theory-side content is the conditional integer reading "
+        },
+        {
+          "k": "m",
+          "v": "t{=}\\Nfam{=}3\\Rightarrow\nm_\\tau{=}1776.94"
+        },
+        {
+          "k": "t",
+          "v": " MeV, a Belle II kill test. No new module."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-25",
+    "dateLabel": "2026-06-25",
+    "heading": [
+      {
+        "k": "t",
+        "v": "Three closure-strategy modules "
+      },
+      {
+        "k": "c",
+        "v": "v425"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v427"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the Safeguards paper"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v425"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "DYN.TRANSFER.UNIVERSAL.01"
+            },
+            {
+              "k": "t",
+              "v": ") — the single-flow reduction of "
+            },
+            {
+              "k": "m",
+              "v": "F_{\\mathrm{transfer}}"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The four frontier transfers do not each need a separate external solver: their "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "dynamics"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " is the ONE native flow (the seam modular/recovery semigroup, "
+        },
+        {
+          "k": "c",
+          "v": "v238"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v240"
+        },
+        {
+          "k": "t",
+          "v": ", gap "
+        },
+        {
+          "k": "m",
+          "v": "6\\ln(3/2)"
+        },
+        {
+          "k": "t",
+          "v": ") restricted to each sector. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the "
+        },
+        {
+          "k": "c",
+          "v": "v99"
+        },
+        {
+          "k": "t",
+          "v": " Koide generator linearised at "
+        },
+        {
+          "k": "m",
+          "v": "q{=}2"
+        },
+        {
+          "k": "t",
+          "v": " has rate "
+        },
+        {
+          "k": "m",
+          "v": "-\\Delta"
+        },
+        {
+          "k": "t",
+          "v": ", time-"
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " contraction "
+        },
+        {
+          "k": "m",
+          "v": "(2/3)^6"
+        },
+        {
+          "k": "t",
+          "v": "; Boltzmann washout is that contraction (CP phase "
+        },
+        {
+          "k": "m",
+          "v": "4\\pi/3"
+        },
+        {
+          "k": "t",
+          "v": " native, "
+        },
+        {
+          "k": "c",
+          "v": "v320"
+        },
+        {
+          "k": "t",
+          "v": "); QCD rate "
+        },
+        {
+          "k": "m",
+          "v": "b_3{=}-7"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "only the anchors ("
+        },
+        {
+          "k": "m",
+          "v": "v_{\\mathrm{geo}}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "C_p"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "M_R"
+        },
+        {
+          "k": "t",
+          "v": ") stay external; "
+        },
+        {
+          "k": "m",
+          "v": "F_{\\mathrm{relic}}"
+        },
+        {
+          "k": "t",
+          "v": "'s cosmological IC "
+        },
+        {
+          "k": "m",
+          "v": "\\theta_i"
+        },
+        {
+          "k": "t",
+          "v": " is the one wall. A reduction (extends "
+        },
+        {
+          "k": "c",
+          "v": "v383"
+        },
+        {
+          "k": "t",
+          "v": " static"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": "dynamic), not internalisation; the firewall holds."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v426"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EQUIV.LTORP.KMS.01"
+            },
+            {
+              "k": "t",
+              "v": ") — the invertible "
+            },
+            {
+              "k": "m",
+              "v": "\\beta{=}1"
+            },
+            {
+              "k": "t",
+              "v": "-KMS variant of (LTO-RP)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The corner NPW26 leave open (they prove it for topologically-ordered models; the seam is invertible "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " KMS, not a trace). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "a gapped reflection-symmetric "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": "-even collar at "
+        },
+        {
+          "k": "m",
+          "v": "\\beta{=}1"
+        },
+        {
+          "k": "t",
+          "v": " KMS satisfies "
+        },
+        {
+          "k": "m",
+          "v": "\\Theta K\\Theta^{-1}{=}{-}K"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "u_\\Theta{=}J"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "m",
+          "v": "[\\rho,K]{=}0"
+        },
+        {
+          "k": "t",
+          "v": ", so (LTO-RP) holds by direct Tomita–Takesaki; "
+        },
+        {
+          "k": "m",
+          "v": "|\\!\\det\\mathrm{Cartan}(E_8)|{=}1"
+        },
+        {
+          "k": "t",
+          "v": " (no anyons), state not a trace; neg controls have teeth. Advances "
+        },
+        {
+          "k": "c",
+          "v": "v424"
+        },
+        {
+          "k": "t",
+          "v": " sub-step (ii); "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "(continuum sub-step (i) remains)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v427"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "OVERDET.WITNESS.MAP.01"
+            },
+            {
+              "k": "t",
+              "v": ") — the honest over-determination accounting."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " A reviewer correction made machine-explicit: witnesses from "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "disjoint"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " grammars multiply, projections of the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "same"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " generator compress. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "seven disjoint-grammar witnesses each reproduce a carrier-skeleton integer from their own structure — Gauss "
+        },
+        {
+          "k": "m",
+          "v": "N(3{+}2i){=}13"
+        },
+        {
+          "k": "t",
+          "v": ", Eisenstein "
+        },
+        {
+          "k": "m",
+          "v": "N(3{+}2\\omega){=}7"
+        },
+        {
+          "k": "t",
+          "v": ", cyclotomy "
+        },
+        {
+          "k": "m",
+          "v": "N(3{+}2\\zeta_5){=}55"
+        },
+        {
+          "k": "t",
+          "v": ", Galois "
+        },
+        {
+          "k": "m",
+          "v": "|(\\Z/5)^\\times|{=}4"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "|\\!\\det\\mathrm{Cartan}(E_8)|{=}1"
+        },
+        {
+          "k": "t",
+          "v": ", Pascal "
+        },
+        {
+          "k": "m",
+          "v": "\\binom40{+}\\binom41{+}\\binom42{=}11"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "2^4{=}16"
+        },
+        {
+          "k": "t",
+          "v": "), Coxeter "
+        },
+        {
+          "k": "m",
+          "v": "h(E_8){=}30{=}2{\\cdot}3{\\cdot}5"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi(30){=}8"
+        },
+        {
+          "k": "t",
+          "v": " — and the anchor "
+        },
+        {
+          "k": "m",
+          "v": "a{=}(1,1,2)"
+        },
+        {
+          "k": "t",
+          "v": " is the compression generator. Extends "
+        },
+        {
+          "k": "c",
+          "v": "v305"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New paper "
+            },
+            {
+              "k": "c",
+              "v": "tfpt_safeguards"
+            },
+            {
+              "k": "t",
+              "v": " (companion S)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " A dedicated methodology paper collecting, in one language, every mechanism by which TFPT defends a claim against coincidence and numerology: the status calculus "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " ledger "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " audit, no-free-pattern "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " reverse audit, the over-determination map ("
+        },
+        {
+          "k": "c",
+          "v": "v427"
+        },
+        {
+          "k": "t",
+          "v": "), the firewall "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " No-Unit theorem, frozen predictions "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " null model, the independent Wolfram and Lean paths, and the red team — with a final kill-test summary. Registered in "
+        },
+        {
+          "k": "c",
+          "v": "build.sh"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "make_docs_map.py"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "make_manifest.py"
+        },
+        {
+          "k": "t",
+          "v": " and the document-set box; the document set is now "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "eleven"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " deliverables (five numbered papers "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " four companions "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " introduction "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " changelog)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Surfaces synced."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "run_all.py"
+        },
+        {
+          "k": "t",
+          "v": " (421 modules), the registry, the ledger, "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " (the "
+        },
+        {
+          "k": "m",
+          "v": "F_{\\mathrm{transfer}}"
+        },
+        {
+          "k": "t",
+          "v": " and keystone sections), "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_safeguards"
+        },
+        {
+          "k": "t",
+          "v": "; manifests refreshed."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-25",
+    "dateLabel": "2026-06-25",
+    "heading": [
+      {
+        "k": "t",
         "v": "The (LTO-RP) reduction of the keystone "
       },
       {
