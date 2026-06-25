@@ -651,7 +651,10 @@ positive effective gap $\Delta_{\mathrm{eff}}=1.648>0$ under the stated RP and m
 A positive gap protects the admissible IR sector from the ambient, so under those assumptions the
 admissible-sector measure is closed. \textbf{What this leaves \mC:} the ambient metric measure --- the
 projective limit (G6) --- is now discharged as a \emph{redundancy} (\vref{v369}, conditional on
-\texttt{SEAM.EQUIV.01}${+}$Bisognano--Wichmann), a certification object rather than missing dynamics; we do
+\texttt{SEAM.EQUIV.01}${+}$Bisognano--Wichmann --- the one open premise being that the seam net condenses to
+the \emph{holomorphic} $|\det K|{=}1$ point that selects $(E_8)_1$; the central charge $c{=}8$ alone does
+\emph{not}, being shared by the non-holomorphic $SO(16)_1$ counterexample, \vref{v277}/\vref{v281}), a
+certification object rather than missing dynamics; we do
 \emph{not} claim it is physically irrelevant (that would itself be a physical interpretation), only that it is
 decoupled from the admissible IR sector under the stated assumptions. \veri{v36\_spectral\_action\_g2.py}
 \textbf{(iii) The classical field equation is parameter-free (\veri{v358\_grav\_entropy\_equilibrium.py}).} Beyond
@@ -716,6 +719,18 @@ measure.  It is therefore reclassified from ``TFPT structural frontier'' to a \m
 object, conditional on \texttt{SEAM.EQUIV.01}${+}$Bisognano--Wichmann, \vref{v369}): its obstruction is characterised
 (\vref{v332}) and conditionally resolved by the GHP contour rotation $+$ IDG dressing (\vref{v334}); not a TFPT
 structural hole (\texttt{QGAMB.ROADMAP.01}).
+This redundancy is now a machine-checked \emph{dependency} fact, not only prose
+(\veri{v423\_no\_ambient\_dependency.py}, \texttt{QGAMB.NODEP.01}): \texttt{QG.AMB.01} is a
+certification \emph{sink} --- every claim that lists it is a gravity-gate/QG row, never a frozen
+prediction --- and it is \emph{not a value source} --- it has no producing script, while $\alpha^{-1}$,
+the mixing angles and the cosmological readouts are each \emph{computed} by a compiler script
+(\vref{v3}/\vref{v9}/\vref{v268}/\vref{v7}), none of them an ambient-measure script. The single
+transitive link is architectural, not numerical: of the frozen readouts only $\theta_{13}$ references
+\texttt{QG.AMB.01}, through the 4d-QFT contract spine
+($\texttt{PS.DIRAC}{\to}\texttt{CONTRACT.QFT4D}{\to}\texttt{QG.G2}{\to}\texttt{GATE.METRIC}$) --- a
+coherence edge from living inside the unified spectral-action construction, not an input to its value
+$\sin^2\theta_{13}=\phiz\,e^{-5/6}$ (\vref{v268}). Honest scope: this kills \texttt{QG.AMB.01}
+specifically; it does \emph{not} discharge \texttt{SEAM.EQUIV.01}, on which the readouts still depend.
 \smallskip\\
 \noindent\emph{Tier B made concrete (\veri{v277\_seam\_calderon\_e8\_match.py}).} The
 seam-Calder\'on $\to(E_8)_1$ identification is reduced to a \emph{single} bit. \mE\ the full $(E_8)_1$ matching

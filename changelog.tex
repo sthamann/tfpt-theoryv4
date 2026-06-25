@@ -60,6 +60,53 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-25 (The (LTO-RP) reduction of the keystone \texttt{SEAM.EQUIV.01}: \texttt{v424})}
+\begin{itemize}
+\item \textbf{New module \texttt{v424} (\texttt{SEAM.EQUIV.LTORP.01}).} An honest MMST-style reduction of the one
+open keystone --- \texttt{SEAM.EQUIV.01}'s intrinsic Bisognano--Wichmann lemma (the \vref{v308}/\vref{v309}
+residual) --- to the recent commuting-projector theorem of Naaijkens--Penneys--Wallick (\texttt{arXiv:2605.10693},
+[NPW26]), with the central mapping \emph{corrected}. \mE\ the $\mu_4$ clock is a modular \emph{symmetry}
+($[\rho,K]{=}0$, \vref{v309}/\vref{v199}), not the flow --- $\sigma^\psi{=}\rho$ is type-wrong (a one-parameter
+group versus a finite order-$4$ element). \mE\ NPW26's axiom (LTO-RP) means $u_\Theta{=}J$ (reflection $=$ modular
+conjugation) $=$ the intrinsic BW condition $\theta K\theta{=}-K$, \emph{distinct} from $\omega{\circ}\rho{=}\omega$:
+a positive character-block-diagonal $K$ has $[\rho,K]{=}0$ yet never $\theta K\theta{=}-K$, so clock-invariance does
+\emph{not} imply (LTO-RP) (refuting that identification). \mO\ make-or-break: NPW26 prove (LTO-RP) for
+\emph{topologically ordered} models (Toric Code $|\det K|{=}4$ via a trace; Levin--Wen anyonic), while the seam is
+invertible ($|\det\mathrm{Cartan}(E_8)|{=}1$, no anyons) and a $\beta{=}1$ KMS state (not a trace) --- in neither
+proved bucket. \mC\ verdict: the BW residual reduces to NPW26 Theorem~A modulo two open sub-steps (realise the seam
+as a $\Z_2$-reflection commuting-projector LTO; extend (LTO-RP) to the invertible KMS case) --- a reduction, \emph{not}
+a closure; \texttt{SEAM.EQUIV.01} stays \mO. Cited in \texttt{tfpt\_research\_contracts}; Python-only (numpy; the det
+discriminators mirrored via \vref{v89}/\vref{v281}).
+\item \textbf{Validation provenance.} The three pivotal references of the closure-strategy note were independently
+verified real and correctly described: NPW26 (\texttt{arXiv:2605.10693}), the RP--Yang--Mills complete-monotonicity
+reconstruction (Int.\ J.\ Geom.\ Meth.\ Mod.\ Phys.\ 2026), and Marolf (\texttt{arXiv:2203.07421}).
+\item \textbf{Surfaces synced.} \texttt{run\_all.py}, the script registry, the status ledger and the
+\texttt{tfpt\_research\_contracts} keystone section; manifests refreshed.
+\end{itemize}
+
+\subsection*{2026-06-25 (No-Ambient-Dependency: no frozen readout is computed from \texttt{QG.AMB.01}: \texttt{v423})}
+\begin{itemize}
+\item \textbf{New module \texttt{v423} (\texttt{QGAMB.NODEP.01}).} Sharpens the \vref{v369}/\vref{v384}
+prose redundancy (``\texttt{QG.AMB.01} is a \mC\ redundancy, not dynamics'') into a machine-checked
+DAG${+}$script fact, told honestly. \mE\ gap-decoupling margin
+$\Delta_{\mathrm{eff}}=6\ln\tfrac32-31/(4\pi^2)\approx1.648>0$ ($31=2^{\gcar}-1$), susceptibility
+$\chi=729/665$ finite (negative control $\mathrm{gap}\!\to\!0\Rightarrow\chi\!\to\!\infty$); \mE\
+\texttt{QG.AMB.01} is a certification \emph{sink} (every claim that lists it is a gravity-gate/QG row, never a
+frozen prediction) and \emph{not a value source} (no producing script, while $\alpha^{-1}$, the mixing angles
+and cosmology are each \emph{computed} by a compiler script, \vref{v3}/\vref{v9}/\vref{v268}/\vref{v7}); \mE\
+the one transitive link is architectural --- of the frozen readouts only $\theta_{13}$ references it, via the
+4d-QFT contract spine ($\texttt{PS.DIRAC}{\to}\texttt{CONTRACT.QFT4D}{\to}\texttt{QG.G2}{\to}\texttt{GATE.METRIC}$),
+a coherence edge, not a numerical input. \mC\ verdict: \texttt{QG.AMB.01} is gap-decoupled certification ---
+\vref{v369} as a DAG/script fact; honest scope --- this does \emph{not} discharge \texttt{SEAM.EQUIV.01}, on
+which the readouts still depend. Cited in \texttt{tfpt\_4}; Python-only (gap algebra mirrored via \vref{v337}).
+\item \textbf{Paper sharpening (seam selector, up front).} The \texttt{tfpt\_4} quantum-gravity keybox now
+states explicitly that the open \texttt{SEAM.EQUIV.01} premise is the \emph{holomorphic} $|\det K|{=}1$ point
+that selects $(E_8)_1$ --- the central charge $c{=}8$ alone does \emph{not}, being shared by the
+non-holomorphic $SO(16)_1$ counterexample (\vref{v277}/\vref{v281}).
+\item \textbf{Surfaces synced.} \texttt{run\_all.py}, \texttt{script\_registry.csv},
+\texttt{status\_ledger.csv}, \texttt{tfpt\_4}; manifests refreshed.
+\end{itemize}
+
 \subsection*{2026-06-25 (The Galois$\leftrightarrow$Net bridge: \texttt{v422})}
 \begin{itemize}
 \item \textbf{New module \texttt{v422} (\texttt{SEAM.GALOIS.NET.01}).} The seam

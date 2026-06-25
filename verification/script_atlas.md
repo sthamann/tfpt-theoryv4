@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`416` registered scripts · `477` ledger claims · `10` clusters.
+`418` registered scripts · `479` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -288,7 +288,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v407_dn_pairings_omega** [E/C/O] `FLAV.SELECTOR.CLOSE.01` — FLAV.SELECTOR.CLOSE.01: the R4' residue folds into the tau=omega keystone (v405) -- the three (d,n) selector pairings ARE the tau=omega family-slice atoms. [E] the frame (1,a,sigma
   - deps: v405_seam_equiv_omega, v49_readout_rigidity, v405, v139, v136, v42 · cited: origin theory, 1 architecture e8
 
-### `frontier` — Open gate (G_metric) & the frontier  (119 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (121 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -529,6 +529,10 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v394_coxeter_atoms.py; v409_coxeter_prime2_lemma, v394_coxeter_atoms, v394, v409 · cited: research contracts
 - **v420_fpole_qed_running** [E/C/O] `FR.POLE.QED.01` — F_pole external: the Koide source->pole transfer is a ONE-LOOP ELECTROMAGNETIC effect, not an algebraic step -- the honest 'do the external physics' follow-up to v93 and the clock 
   - deps: v82_koide_attractor_splitting, v93_koide_relaxation_toy, v213_ftransfer_functor, FR.POLE.SOLVE, v93, v82, v327, v371 · cited: 4 frontier
+- **v423_no_ambient_dependency** [E/C] `QGAMB.NODEP.01` — The No-Ambient-Dependency certificate: no frozen TFPT readout is COMPUTED from the ambient QG measure QG.AMB.01 -- sharpening the v369/v384 prose redundancy into a machine-checked 
+  - deps: QG.AMB.01, v337_decoupling_theorem, v286_seam_equivalence_contract, v337, v369, v384 · cited: 4 frontier
+- **v424_seam_lto_rp_reduction** [E/C/O] `SEAM.EQUIV.LTORP.01` — The (LTO-RP) reduction of the keystone: an honest MMST-style reduction of SEAM.EQUIV.01's one open lemma -- the raw collar's intrinsic Bisognano-Wichmann property (the v308/v309 re
+  - deps: v286_seam_equivalence_contract, v308_seam_equiv_chain, v309_modular_bedrock, v308, v309, v302, v240, v214 · cited: research contracts
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (173 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -896,14 +900,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `SEAM.EQUIV.01`×26, `v76`×17, `v56`×17, `E8.GLU.01`×16, `QG.AMB.01`×16, `v336`×16, `v216`×15, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v312`×14, `REG.FREEZE.01`×12, `AX.P1.01`×11, `v3`×11, `v54`×11
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×28, `QGEO.SYM.01`×28, `QG.AMB.01`×17, `v76`×17, `v56`×17, `E8.GLU.01`×16, `v336`×16, `v216`×15, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v312`×14, `REG.FREEZE.01`×12, `AX.P1.01`×11, `v3`×11, `v54`×11
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v410_sheet_generator_binary** — `SHEET.GEN.BINARY.01`
-- **v411_ud_ratio_vpower** — `FLAV.UD.VPOWER.01`
 - **v412_sheet_source_corner_J** — `DIAMOND.SHEET.SOURCE.J.01`
 - **v413_sheet_characteristic_calculus** — `DIAMOND.SHEET.CALCULUS.01`
 - **v414_center_resolvent_portal** — `DIAMOND.CENTER.RESOLVENT.01`
@@ -914,4 +916,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v419_seam_galois_carrier** — `SEAM.GALOIS.01`
 - **v420_fpole_qed_running** — `FR.POLE.QED.01`
 - **v422_galois_net_bridge** — `SEAM.GALOIS.NET.01`
+- **v423_no_ambient_dependency** — `QGAMB.NODEP.01`
+- **v424_seam_lto_rp_reduction** — `SEAM.EQUIV.LTORP.01`
 

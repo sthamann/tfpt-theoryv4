@@ -47,6 +47,916 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "The (LTO-RP) reduction of the keystone "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.EQUIV.01"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "c",
+        "v": "v424"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v424"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EQUIV.LTORP.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " An honest MMST-style reduction of the one open keystone — "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": "'s intrinsic Bisognano–Wichmann lemma (the "
+        },
+        {
+          "k": "c",
+          "v": "v308"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v309"
+        },
+        {
+          "k": "t",
+          "v": " residual) — to the recent commuting-projector theorem of Naaijkens–Penneys–Wallick ("
+        },
+        {
+          "k": "c",
+          "v": "arXiv:2605.10693"
+        },
+        {
+          "k": "t",
+          "v": ", [NPW26]), with the central mapping "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "corrected"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " clock is a modular "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "symmetry"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "[\\rho,K]{=}0"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v309"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v199"
+        },
+        {
+          "k": "t",
+          "v": "), not the flow — "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma^\\psi{=}\\rho"
+        },
+        {
+          "k": "t",
+          "v": " is type-wrong (a one-parameter group versus a finite order-"
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " element). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "NPW26's axiom (LTO-RP) means "
+        },
+        {
+          "k": "m",
+          "v": "u_\\Theta{=}J"
+        },
+        {
+          "k": "t",
+          "v": " (reflection "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " modular conjugation) "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the intrinsic BW condition "
+        },
+        {
+          "k": "m",
+          "v": "\\theta K\\theta{=}-K"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "distinct"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " from "
+        },
+        {
+          "k": "m",
+          "v": "\\omega{\\circ}\\rho{=}\\omega"
+        },
+        {
+          "k": "t",
+          "v": ": a positive character-block-diagonal "
+        },
+        {
+          "k": "m",
+          "v": "K"
+        },
+        {
+          "k": "t",
+          "v": " has "
+        },
+        {
+          "k": "m",
+          "v": "[\\rho,K]{=}0"
+        },
+        {
+          "k": "t",
+          "v": " yet never "
+        },
+        {
+          "k": "m",
+          "v": "\\theta K\\theta{=}-K"
+        },
+        {
+          "k": "t",
+          "v": ", so clock-invariance does "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " imply (LTO-RP) (refuting that identification). "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "make-or-break: NPW26 prove (LTO-RP) for "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "topologically ordered"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " models (Toric Code "
+        },
+        {
+          "k": "m",
+          "v": "|\\det K|{=}4"
+        },
+        {
+          "k": "t",
+          "v": " via a trace; Levin–Wen anyonic), while the seam is invertible ("
+        },
+        {
+          "k": "m",
+          "v": "|\\det\\mathrm{Cartan}(E_8)|{=}1"
+        },
+        {
+          "k": "t",
+          "v": ", no anyons) and a "
+        },
+        {
+          "k": "m",
+          "v": "\\beta{=}1"
+        },
+        {
+          "k": "t",
+          "v": " KMS state (not a trace) — in neither proved bucket. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "verdict: the BW residual reduces to NPW26 Theorem A modulo two open sub-steps (realise the seam as a "
+        },
+        {
+          "k": "m",
+          "v": "\\Z_2"
+        },
+        {
+          "k": "t",
+          "v": "-reflection commuting-projector LTO; extend (LTO-RP) to the invertible KMS case) — a reduction, "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " a closure; "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": ". Cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": "; Python-only (numpy; the det discriminators mirrored via "
+        },
+        {
+          "k": "c",
+          "v": "v89"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v281"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Validation provenance."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The three pivotal references of the closure-strategy note were independently verified real and correctly described: NPW26 ("
+        },
+        {
+          "k": "c",
+          "v": "arXiv:2605.10693"
+        },
+        {
+          "k": "t",
+          "v": "), the RP–Yang–Mills complete-monotonicity reconstruction (Int. J. Geom. Meth. Mod. Phys. 2026), and Marolf ("
+        },
+        {
+          "k": "c",
+          "v": "arXiv:2203.07421"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Surfaces synced."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "run_all.py"
+        },
+        {
+          "k": "t",
+          "v": ", the script registry, the status ledger and the "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " keystone section; manifests refreshed."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-25",
+    "dateLabel": "2026-06-25",
+    "heading": [
+      {
+        "k": "t",
+        "v": "No-Ambient-Dependency: no frozen readout is computed from "
+      },
+      {
+        "k": "c",
+        "v": "QG.AMB.01"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "c",
+        "v": "v423"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v423"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGAMB.NODEP.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Sharpens the "
+        },
+        {
+          "k": "c",
+          "v": "v369"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v384"
+        },
+        {
+          "k": "t",
+          "v": " prose redundancy (“"
+        },
+        {
+          "k": "c",
+          "v": "QG.AMB.01"
+        },
+        {
+          "k": "t",
+          "v": " is a "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "redundancy, not dynamics”) into a machine-checked DAG"
+        },
+        {
+          "k": "m",
+          "v": "{+}"
+        },
+        {
+          "k": "t",
+          "v": "script fact, told honestly. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "gap-decoupling margin "
+        },
+        {
+          "k": "m",
+          "v": "\\Delta_{\\mathrm{eff}}=6\\ln\\tfrac32-31/(4\\pi^2)\\approx1.648>0"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "31=2^{\\gcar}-1"
+        },
+        {
+          "k": "t",
+          "v": "), susceptibility "
+        },
+        {
+          "k": "m",
+          "v": "\\chi=729/665"
+        },
+        {
+          "k": "t",
+          "v": " finite (negative control "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{gap}\\!\\to\\!0\\Rightarrow\\chi\\!\\to\\!\\infty"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "QG.AMB.01"
+        },
+        {
+          "k": "t",
+          "v": " is a certification "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "sink"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (every claim that lists it is a gravity-gate/QG row, never a frozen prediction) and "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not a value source"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (no producing script, while "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha^{-1}"
+        },
+        {
+          "k": "t",
+          "v": ", the mixing angles and cosmology are each "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "computed"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " by a compiler script, "
+        },
+        {
+          "k": "c",
+          "v": "v3"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v9"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v268"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v7"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": " the one transitive link is architectural — of the frozen readouts only "
+        },
+        {
+          "k": "m",
+          "v": "\\theta_{13}"
+        },
+        {
+          "k": "t",
+          "v": " references it, via the 4d-QFT contract spine ("
+        },
+        {
+          "k": "m",
+          "v": "\\texttt{PS.DIRAC}{\\to}\\texttt{CONTRACT.QFT4D}{\\to}\\texttt{QG.G2}{\\to}\\texttt{GATE.METRIC}"
+        },
+        {
+          "k": "t",
+          "v": "), a coherence edge, not a numerical input. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "verdict: "
+        },
+        {
+          "k": "c",
+          "v": "QG.AMB.01"
+        },
+        {
+          "k": "t",
+          "v": " is gap-decoupled certification — "
+        },
+        {
+          "k": "c",
+          "v": "v369"
+        },
+        {
+          "k": "t",
+          "v": " as a DAG/script fact; honest scope — this does "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " discharge "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": ", on which the readouts still depend. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_4"
+        },
+        {
+          "k": "t",
+          "v": "; Python-only (gap algebra mirrored via "
+        },
+        {
+          "k": "c",
+          "v": "v337"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Paper sharpening (seam selector, up front)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_4"
+        },
+        {
+          "k": "t",
+          "v": " quantum-gravity keybox now states explicitly that the open "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " premise is the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "holomorphic"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "|\\det K|{=}1"
+        },
+        {
+          "k": "t",
+          "v": " point that selects "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " — the central charge "
+        },
+        {
+          "k": "m",
+          "v": "c{=}8"
+        },
+        {
+          "k": "t",
+          "v": " alone does "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", being shared by the non-holomorphic "
+        },
+        {
+          "k": "m",
+          "v": "SO(16)_1"
+        },
+        {
+          "k": "t",
+          "v": " counterexample ("
+        },
+        {
+          "k": "c",
+          "v": "v277"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v281"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Surfaces synced."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "run_all.py"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "script_registry.csv"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "status_ledger.csv"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_4"
+        },
+        {
+          "k": "t",
+          "v": "; manifests refreshed."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-25",
+    "dateLabel": "2026-06-25",
+    "heading": [
+      {
+        "k": "t",
         "v": "The Galois"
       },
       {
