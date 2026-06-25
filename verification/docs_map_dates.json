@@ -308,8 +308,8 @@
   "date": "2026-06-12"
  },
  "tfpt_1_architecture_e8::section::Appendix: computational verification::1": {
-  "hash": "7a72953ecffe",
-  "date": "2026-06-12"
+  "hash": "ede62b4eb321",
+  "date": "2026-06-25"
  },
  "tfpt_2_standard_model::front::(front matter)::1": {
   "hash": "9bb410b30126",
@@ -488,8 +488,8 @@
   "date": "2026-06-24"
  },
  "tfpt_2_standard_model::section::Appendix: computational verification::1": {
-  "hash": "d9af3eae285d",
-  "date": "2026-06-12"
+  "hash": "d8bd87e41596",
+  "date": "2026-06-25"
  },
  "tfpt_3_e8_audit_bootstrap::front::(front matter)::1": {
   "hash": "28184b45056a",
@@ -616,8 +616,8 @@
   "date": "2026-06-24"
  },
  "tfpt_4_frontier::section::Appendix: computational verification::1": {
-  "hash": "a60291cc927f",
-  "date": "2026-06-23"
+  "hash": "435494367e01",
+  "date": "2026-06-25"
  },
  "tfpt_5_redteam::front::(front matter)::1": {
   "hash": "2fcf6c438ba1",
@@ -692,8 +692,8 @@
   "date": "2026-06-17"
  },
  "tfpt_horizon_readouts::section::Appendix: computational verification::1": {
-  "hash": "0cf5187a0412",
-  "date": "2026-06-12"
+  "hash": "abf9b76e25f0",
+  "date": "2026-06-25"
  },
  "tfpt_research_contracts::front::(front matter)::1": {
   "hash": "7934edc59e50",
@@ -708,7 +708,7 @@
   "date": "2026-06-23"
  },
  "tfpt_research_contracts::section::Certifiability and recommended order::1": {
-  "hash": "31fa6f7e49dc",
+  "hash": "0e935206f060",
   "date": "2026-06-25"
  },
  "origin_theory::front::(front matter)::1": {
@@ -760,8 +760,8 @@
   "date": "2026-06-23"
  },
  "origin_theory::section::Appendix: computational verification::1": {
-  "hash": "48687b83b93b",
-  "date": "2026-06-12"
+  "hash": "273bbb10f788",
+  "date": "2026-06-25"
  },
  "tfpt_safeguards::front::(front matter)::1": {
   "hash": "7c6a50da61ec",

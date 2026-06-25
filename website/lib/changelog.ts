@@ -47,6 +47,117 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "External-works references appendix — web-verified"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New shared appendix "
+            },
+            {
+              "k": "c",
+              "v": "tex-artefacts/tfpt_references.tex"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (“External works built upon”), "
+        },
+        {
+          "k": "c",
+          "v": "\\input"
+        },
+        {
+          "k": "t",
+          "v": " into the six math-heavy documents ("
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_4"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_horizon_readouts"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": "). The active papers named the foundational results they build on by author only, with no reference list; the appendix supplies web-verified locators (journal, volume, year / arXiv) grouped by topic: modular theory & AQFT (Tomita–Takesaki LNM 128 1970; Bisognano–Wichmann J. Math. Phys. 16/17; Osterwalder–Schrader CMP 31/42; Doplicher–Haag–Roberts CMP 23/35; Haag–Ruelle; Longo CMP 126/130; Kawahigashi–Longo–Müger CMP 219), conformal nets/VOAs/lattices (Frenkel–Kac Invent. Math. 62; Segal CMP 80; MMST; Adamo–Moriwaki–Tanimoto; Adamo–Giorgetti–Tanimoto "
+        },
+        {
+          "k": "c",
+          "v": "2506.01008"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "2508.07109"
+        },
+        {
+          "k": "t",
+          "v": "; Naaijkens–Penneys–Wallick), lattices/quadratic forms (Conway–Sloane; Siegel Ann. Math. 36 1935), singularities (Brieskorn Invent. Math. 2 1966; Milnor AMS 61 1968) and spectral geometry/gravity/thermal time (Chamseddine–Connes CMP 186; Connes–Rovelli CQG 11; Wald PRD 48; Casini–Huerta–Myers JHEP 05 2011). Added to the "
+        },
+        {
+          "k": "c",
+          "v": "make_manifest.py"
+        },
+        {
+          "k": "t",
+          "v": " TEX list. No claim or status change — a provenance/citation completeness pass."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-25",
+    "dateLabel": "2026-06-25",
+    "heading": [
+      {
+        "k": "t",
         "v": "External AQFT citations "
       },
       {

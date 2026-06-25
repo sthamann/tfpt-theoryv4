@@ -52,7 +52,7 @@ TEX = [
     "tex-artefacts/tfpt_docset.tex", "tex-artefacts/tfpt_style.tex",
     "tex-artefacts/tfpt_status.tex", "tex-artefacts/tfpt_figures.tex",
     "tex-artefacts/verification.tex", "tex-artefacts/version.tex",
-    "tex-artefacts/predictions.tex",
+    "tex-artefacts/predictions.tex", "tex-artefacts/tfpt_references.tex",
     "tfpt_1_architecture_e8.tex", "tfpt_2_standard_model.tex",
     "tfpt_3_e8_audit_bootstrap.tex", "tfpt_4_frontier.tex", "tfpt_5_redteam.tex",
     "tfpt_horizon_readouts.tex", "tfpt_research_contracts.tex",
