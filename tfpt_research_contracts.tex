@@ -841,7 +841,12 @@ The MMST massless-scaling-limit theorem then applies as a cited result, and the 
 target to $(E_8)_1$ ($\det K{=}1$, one primary) over the same-$c$ rival $SO(16)_1$ ($\det K{=}4$, \vref{v351}).
 \mE\ the class arithmetic, the derived gap, the chirality and the $(E_8)_1$ pinning; \mC\ the CAR-class typing and
 the cited MMST theorem; \mO\ the lone residual is exactly S3 above (the lattice realization). The continuum side
-of \texttt{SEAM.EQUIV.01} is thereby reduced to a single, named, theorem-bounded input.
+of \texttt{SEAM.EQUIV.01} is thereby reduced to a single, named, theorem-bounded input. The lattice$\to$conformal-net
+step itself is now a \emph{rigorous AQFT construction}: Adamo--Giorgetti--Tanimoto (\texttt{arXiv:2506.01008}, 2025)
+build the two-dimensional conformal net $\mathcal A_Q$ of an even lattice $Q$ and \emph{classify} every
+two-dimensional extension of the Heisenberg net (under a discreteness assumption) as such a lattice net --- so
+``the lattice is a conformal net'' is a theorem of the same operator-algebraic lineage the continuum leg invokes,
+not a hope.
 \par\smallskip\noindent\textbf{S3 made concrete: an explicit gapped chiral-Majorana lattice model
 (\veri{v367\_seam\_s3\_lattice.py}, \veri{v368\_seam\_s3\_inflow.py}).} The S3 input is no longer
 abstract. The $p{+}ip$ Bloch model $h(k){=}\sin k_x\,\sigma_x{+}\sin k_y\,\sigma_y{+}(M{-}\cos k_x{-}\cos
@@ -921,7 +926,11 @@ a closure. \emph{Sub-step (ii) is now constructively exhibited} (\veri{v426\_sea
 reflection-symmetric $\mu_4$-even collar at $\beta{=}1$ KMS satisfies $\Theta K\Theta^{-1}{=}{-}K$
 ($u_\Theta{=}J$) and $[\rho,K]{=}0$, so (LTO-RP) holds there by direct Tomita--Takesaki --- the corner NPW26
 leave open --- with $|\!\det\mathrm{Cartan}(E_8)|{=}1$ (invertible, no anyons) and the state a genuine KMS,
-not a trace; only the continuum sub-step (i) remains \mO.
+not a trace; only the continuum sub-step (i) remains \mO. On the covariance side, the recent theorem of
+Adamo--Giorgetti--Tanimoto (\texttt{arXiv:2508.07109}, 2025) --- every DHR representation of a conformal net
+extending a loop-group/Virasoro net is \emph{automatically} positive-energy and diffeomorphism-covariant ---
+defuses the old ``Bisognano--Wichmann presupposes the very covariance it should produce'' circularity (\vref{v215}):
+once the seam net is in hand, geometric covariance is a \emph{consequence}, not an input.
 \par\smallskip\noindent\textbf{The TOE/QFT closure contracts as three citable certificates
 (\veri{v398\_seam\_state\_rigidity.py}, \veri{v399\_gravity\_complete.py}, \veri{v401\_metrology\_closure.py}).}
 Three companion contracts package the closure status as named targets without fabricating any closure.

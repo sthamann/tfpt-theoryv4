@@ -20,13 +20,23 @@ recent rigorous results split that into a CITABLE part and a narrow GENUINELY-OP
         rank <= c <= D (D = number of Majorana copies).  (E8)_1 has c=8 and rank 8 and is
         realised from D=16 Majoranas (SO(16)_1 -> (E8)_1), so 8 <= 8 <= 16: it lies INSIDE
         the framework's range.  TFPT's collar is a gapped quasi-free (free-fermion / CAR)
-        state -- exactly this class.
+        state -- exactly this class.  COMPLEMENTARY CONSTRUCTION (Adamo-Giorgetti-Tanimoto,
+        "Rational and non-rational 2d CFTs arising from lattices", arXiv:2506.01008, 2025):
+        the 2d conformal net A_Q of an even lattice Q is built explicitly and EVERY 2d
+        extension of the Heisenberg net is classified (under a discreteness assumption) as
+        such a lattice net -- so "the lattice IS a conformal net" is itself a theorem of the
+        same operator-algebraic lineage, not an assumption.
   [C] 2. OS-RECONSTRUCTION LEG is citable.  Adamo-Moriwaki-Tanimoto, "Osterwalder-Schrader
         axioms for unitary full vertex operator algebras" (arXiv:2407.18222, 2024) prove
         the conformal OS axioms (incl. the linear-growth regularity) for a reasonable class
         of unitary VOAs -- including WZW / lattice VOAs -- so the Euclidean correlators
         reconstruct Wightman/AQFT data.  (E8)_1 is the even self-dual rank-8 lattice VOA, a
-        unitary VOA in this class.
+        unitary VOA in this class.  COVARIANCE COROLLARY (Adamo-Giorgetti-Tanimoto,
+        "Representations of conformal nets associated with infinite-dimensional groups",
+        arXiv:2508.07109, 2025): every DHR representation of a conformal net extending a
+        loop-group/Virasoro net is AUTOMATICALLY positive-energy and diffeomorphism-covariant
+        -- so once the seam net exists, the geometric (Bisognano-Wichmann) covariance is a
+        consequence, not a separate input, defusing the QGEO circularity worry (v215).
   [E] 3. THE TARGET IS PINNED BY TFPT ARITHMETIC.  c = g_car + N_fam = 8; det Cartan(E8) =
         1 (holomorphic, the unique even unimodular rank-8 lattice); the D=16 Majorana
         realisation SO(16)_1 IS the carrier-16 (the 2^16 Fock space, (D5)_1 (x) (A3)_1),

@@ -700,7 +700,7 @@
   "date": "2026-06-24"
  },
  "tfpt_research_contracts::section::Research Contract 1 --- $(U_{\\mathrm{wall}})$::1": {
-  "hash": "04e23947ee9f",
+  "hash": "b00544332d8e",
   "date": "2026-06-25"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {
@@ -716,7 +716,7 @@
   "date": "2026-06-24"
  },
  "origin_theory::section::The whole integer skeleton from one pair $(\\gcar,\\Nfam)=(5,3)$::1": {
-  "hash": "c3b9df141b2a",
+  "hash": "66729297bcbe",
   "date": "2026-06-25"
  },
  "origin_theory::section::The ``$8$'' is triply forced: geometry $=$ lattice $=$ gravity::1": {

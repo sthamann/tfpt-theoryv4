@@ -26,14 +26,18 @@ gives E8 (det 1), the Klein Z2xZ2 gives D8/SO(16) (det 4).  [E] lattice/Galois,
          |disc(D8)| = SO(16) (det Cartan = 4, four primaries), NOT E8 (det 1).
          So cyclic Z/4 -> E8, Klein/order-2 -> D8: the carrier-Galois being
          cyclic Z/4 (5 prime) matches the E8 glue, never the D8 Klein.
-  [C] 5. THE BRIDGE.  ONE cyclic Z/4 threads three objects: the seam deck mu4
-         (z->iz, v419), the carrier-Galois Gal(Q(zeta5)) (v419), and the (E8)_1
-         glue <(1,1)> (v1/v89/v154).  So the Galois gearbox of v419 IS the
-         simple-current glue of the holomorphic net -- a direct bridge from the
-         Galois side (Z/30)^x to G_net (SEAM.EQUIV.01).  All three are computably
+  [C] 5. THE BRIDGE = THE FOUR-FOLD mu4 IDENTITY.  ONE cyclic Z/4 threads the FOUR
+         mu4 readings: the seam DECK / divisor mu4 (z->iz on the 4-mark P^1, v419/
+         v177), the carrier-GALOIS Gal(Q(zeta5))=(Z/5)^x (v419), the DISCRIMINANT
+         group disc(D5)=disc(A3)=Z/4 (bullet 1), and the SIMPLE-CURRENT glue
+         <(1,1)> -> (E8)_1 (v1/v89/v154).  So the Galois gearbox (Z/30)^x of v419
+         IS the simple-current glue of the holomorphic net -- a direct bridge from
+         the Galois side to G_net (SEAM.EQUIV.01).  All four are computably
          cyclic-Z/4 [E]; the canonical identification (one functorial Z/4) is the
-         [C] bridge, with the cyclicity forced (5 odd/prime) and the Klein
-         alternative excluded.
+         [C] bridge, cyclicity forced (5 odd/prime), the Klein alternative excluded.
+         TYPING (v428): this four-fold identity is a COMPRESSION -- ONE object read
+         four ways, a unification that makes the carrier less axiomatic -- NOT four
+         independent witnesses that multiply over-determination.
 
 Mirrored in wolfram/tfpt_readouts_extension.wl (exact lattice/Galois facts).
 """
@@ -112,17 +116,20 @@ def run():
           halfway_order == 2 and d8_disc == 4 == abs(D8.det())
           and e8_disc != d8_disc and f_d8 == [2, 2])
 
-    # ---- 5. the bridge (typed [C]) ----
-    check("THE BRIDGE [C]: ONE cyclic Z/4 threads the seam deck mu4 (z->iz, "
-          "v419), the carrier-Galois Gal(Q(zeta5)) (v419), and the (E8)_1 glue "
-          "<(1,1)> (v1/v89/v154) -- the Galois gearbox (Z/30)^x of v419 IS the "
-          "simple-current glue of the holomorphic net, a direct Galois->G_net "
-          "bridge; all three computably cyclic-Z/4 [E], the canonical "
-          "identification [C] (cyclicity forced by 5, Klein excluded)",
+    # ---- 5. the bridge = the four-fold mu4 identity (typed [C]; compression per v428) ----
+    check("FOUR-FOLD mu4 IDENTITY [C]: ONE cyclic Z/4 threads the FOUR mu4 readings "
+          "-- the seam deck/divisor mu4 (z->iz, v419/v177), the carrier-Galois "
+          "Gal(Q(zeta5)) (v419), the discriminant disc(D5)=disc(A3)=Z/4, and the "
+          "(E8)_1 simple-current glue <(1,1)> (v1/v89/v154); the Galois gearbox "
+          "(Z/30)^x of v419 IS the holomorphic-net glue (a direct Galois->G_net "
+          "bridge). All four computably cyclic-Z/4 [E], the canonical identification "
+          "[C] (cyclicity forced by 5, Klein excluded). Per v428 this is a "
+          "COMPRESSION (one object read four ways), NOT four independent multipliers",
           f_d5 == f_a3 == [4] and ord5 == 4 and glue_order == 4)
 
-    return summary("v422 Galois<->Net bridge (mu4 = Gal(Q(zeta5)) = (E8)_1 glue, "
-                   "cyclic Z/4; Klein->D8 excluded)")
+    return summary("v422 Galois<->Net bridge / four-fold mu4 identity (deck=Galois="
+                   "discriminant=simple-current = one cyclic Z/4 -> (E8)_1; Klein->D8 "
+                   "excluded; a compression per v428, not four witnesses)")
 
 
 if __name__ == "__main__":

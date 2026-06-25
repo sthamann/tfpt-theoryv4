@@ -46,6 +46,324 @@ export const CHANGELOG: ChangelogEntry[] = [
     "dateLabel": "2026-06-25",
     "heading": [
       {
+        "k": "t",
+        "v": "External AQFT citations "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the four-fold "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4"
+      },
+      {
+        "k": "t",
+        "v": " identity sharpened"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Two recent Adamo–Giorgetti–Tanimoto theorems cited where the keystone builds on them."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The open "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " continuum/realisation legs ("
+        },
+        {
+          "k": "c",
+          "v": "v336"
+        },
+        {
+          "k": "t",
+          "v": ") now cite, alongside MMST and Adamo–Moriwaki–Tanimoto ("
+        },
+        {
+          "k": "c",
+          "v": "arXiv:2407.18222"
+        },
+        {
+          "k": "t",
+          "v": ", already in use): "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(a)"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the construction and classification of two-dimensional conformal nets from even lattices ("
+        },
+        {
+          "k": "c",
+          "v": "arXiv:2506.01008"
+        },
+        {
+          "k": "t",
+          "v": ", 2025) — “the lattice is a conformal net” is a theorem of the same operator-algebraic lineage, strengthening the lattice-realisation leg; and "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(b)"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " automatic positive-energy/diffeomorphism covariance of conformal-net representations ("
+        },
+        {
+          "k": "c",
+          "v": "arXiv:2508.07109"
+        },
+        {
+          "k": "t",
+          "v": ", 2025), which defuses the “Bisognano–Wichmann presupposes the covariance it should produce” circularity ("
+        },
+        {
+          "k": "c",
+          "v": "v215"
+        },
+        {
+          "k": "t",
+          "v": ") on the intrinsic-BW residual ("
+        },
+        {
+          "k": "c",
+          "v": "v424"
+        },
+        {
+          "k": "t",
+          "v": "). Added to "
+        },
+        {
+          "k": "c",
+          "v": "v336"
+        },
+        {
+          "k": "t",
+          "v": " docstring/registry, the "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.CONTINUUM.01"
+        },
+        {
+          "k": "t",
+          "v": " ledger "
+        },
+        {
+          "k": "c",
+          "v": "external_data"
+        },
+        {
+          "k": "t",
+          "v": ", and "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "The four-fold "
+            },
+            {
+              "k": "m",
+              "v": "\\mu_4"
+            },
+            {
+              "k": "t",
+              "v": " identity made explicit ("
+            },
+            {
+              "k": "c",
+              "v": "v422"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v422"
+        },
+        {
+          "k": "t",
+          "v": " already proved that the seam deck/divisor "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": ", the carrier Galois group "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{Gal}(\\mathbb Q(\\zeta_5))"
+        },
+        {
+          "k": "t",
+          "v": ", the discriminant "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{disc}(D_5){=}\\operatorname{disc}(A_3){=}\\Z/4"
+        },
+        {
+          "k": "t",
+          "v": " and the "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " simple-current glue are ONE cyclic "
+        },
+        {
+          "k": "m",
+          "v": "\\Z/4"
+        },
+        {
+          "k": "t",
+          "v": " (with the cyclic-vs-Klein negative control). It is now named the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "four-fold "
+            },
+            {
+              "k": "m",
+              "v": "\\mu_4"
+            },
+            {
+              "k": "t",
+              "v": " identity"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " and typed, per "
+        },
+        {
+          "k": "c",
+          "v": "v428"
+        },
+        {
+          "k": "t",
+          "v": ", as a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "compression"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (one object read four ways), NOT four independent witnesses – in "
+        },
+        {
+          "k": "c",
+          "v": "v422"
+        },
+        {
+          "k": "t",
+          "v": ", the registry, the "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.GALOIS.NET.01"
+        },
+        {
+          "k": "t",
+          "v": " ledger row and "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": ". (No new module: a separate "
+        },
+        {
+          "k": "c",
+          "v": "v429"
+        },
+        {
+          "k": "t",
+          "v": " would have duplicated "
+        },
+        {
+          "k": "c",
+          "v": "v422"
+        },
+        {
+          "k": "t",
+          "v": " and violated the very compression discipline.)"
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-25",
+    "dateLabel": "2026-06-25",
+    "heading": [
+      {
         "k": "c",
         "v": "v428"
       },
