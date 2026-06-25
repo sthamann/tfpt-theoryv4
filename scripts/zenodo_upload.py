@@ -36,7 +36,7 @@ from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_RECORD_ID = "20845312"  # 5.3 (rev 313), published 2026-06-25; DOI 10.5281/zenodo.20845312
+DEFAULT_RECORD_ID = "20846087"  # 5.3 (rev 315), published 2026-06-25; DOI 10.5281/zenodo.20846087
 ZENODO_API = "https://zenodo.org/api"
 REPO_URL = "https://github.com/sthamann/tfpt-theoryv4"
 
