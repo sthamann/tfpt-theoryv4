@@ -7,121 +7,121 @@ import { SANS, SERIF, MONO } from "../fonts";
 import { COLORS } from "../theme";
 import { enterUp, fade, fadeInOut } from "../components/anim";
 
-const CORE = [
-  "3 generations of matter",
-  "the right electric charges",
-  "16 carrier states",
-  "the atoms 2 · 3 · 5",
-  "Coxeter number 30",
-  "240 roots of E₈",
+const SM_ITEMS: { title: string; sub: string }[] = [
+  { title: "3 forces", sub: "SU(3)×SU(2)×U(1)" },
+  { title: "3 generations", sub: "no 4th family" },
+  { title: "exactly 1 Higgs", sub: "N_Φ = g_car − |μ₄|" },
+  { title: "9 fermion masses", sub: "one φ₀-ladder" },
+  { title: "CKM + PMNS", sub: "quark & neutrino mixing" },
+  { title: "2 CP phases", sub: "locked together" },
+  { title: "strong-CP = 0", sub: "no neutron dipole" },
+  { title: "all charges", sub: "hypercharge 41/10" },
 ];
-const BOUNDARY = [
-  "one seed φ₀, from c₃",
-  "the Cabibbo angle",
-  "the α fixed point",
-  "the scale grammar",
-];
-
-const ListCard: React.FC<{
-  title: string;
-  grade: "E" | "C";
-  accent: string;
-  items: string[];
-  baseStart: number;
-  frame: number;
-}> = ({ title, grade, accent, items, baseStart, frame }) => (
-  <div
-    style={{
-      width: 660,
-      padding: 36,
-      borderRadius: 24,
-      background: "rgba(10,16,30,0.62)",
-      border: `1px solid ${accent}40`,
-      backdropFilter: "blur(8px)",
-    }}
-  >
-    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 24, ...enterUp(frame, baseStart, 20) }}>
-      <div style={{ fontFamily: SERIF, fontSize: 42, fontWeight: 600, color: COLORS.textBright }}>
-        {title}
-      </div>
-      <StatusChip grade={grade} size={22} />
-    </div>
-    <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
-      {items.map((it, i) => {
-        const e = enterUp(frame, baseStart + 24 + i * 16, 20, 14);
-        return (
-          <div key={it} style={{ display: "flex", alignItems: "center", gap: 16, ...e }}>
-            <div style={{ width: 12, height: 12, borderRadius: 3, background: accent, flexShrink: 0 }} />
-            <div style={{ fontFamily: i < 2 ? SANS : MONO, fontSize: 30, color: COLORS.text, fontWeight: 500 }}>
-              {it}
-            </div>
-          </div>
-        );
-      })}
-    </div>
-  </div>
-);
 
 export const Scene03Readout: React.FC = () => {
   const frame = useCurrentFrame();
 
   const eyebrow = enterUp(frame, 6, 22);
-  const cols = fadeInOut(frame, 30, 70, 740, 800);
-  const colShift = interpolate(frame, [740, 810], [0, -40], {
+  const heading = enterUp(frame, 135, 24); // "almost the entire SM" (~62.5s)
+  const grid = fadeInOut(frame, 280, 320, 740, 790);
+  const gridShift = interpolate(frame, [740, 800], [0, -30], {
     easing: Easing.in(Easing.cubic),
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
 
   const alphaIn = fade(frame, 770, 820);
-  const num = enterUp(frame, 790, 30); // α⁻¹ lands (~81.5s)
-  const sigma = enterUp(frame, 960, 24); // ~86.8s
-  const verdict = enterUp(frame, 1085, 24); // ~91s
+  const num = enterUp(frame, 790, 28); // α⁻¹ lands (~84s)
+  const verdict = enterUp(frame, 960, 24); // forced / <2σ (~90s)
+  const footer = enterUp(frame, 1110, 26); // + cosmos + gravity (~95s)
 
   return (
     <AbsoluteFill>
       <Bg accent={COLORS.blue} tint="#0ea5e9" />
-      <AbsoluteFill style={{ flexDirection: "column", alignItems: "center", paddingTop: 92 }}>
+      <AbsoluteFill style={{ flexDirection: "column", alignItems: "center", paddingTop: 84 }}>
         <div style={eyebrow}>
           <Eyebrow>The readout — what comes out</Eyebrow>
         </div>
 
-        {/* two columns */}
         <div
           style={{
-            position: "absolute",
-            top: 250,
+            ...heading,
+            marginTop: 22,
             display: "flex",
-            gap: 56,
-            opacity: cols,
-            transform: `translateY(${colShift}px)`,
+            alignItems: "center",
+            gap: 18,
           }}
         >
-          <ListCard title="Discrete core" grade="E" accent={COLORS.violet} items={CORE} baseStart={120} frame={frame} />
-          <ListCard title="Boundary side" grade="C" accent={COLORS.blueLight} items={BOUNDARY} baseStart={360} frame={frame} />
+          <div style={{ fontFamily: SERIF, fontSize: 44, fontWeight: 600, color: COLORS.textBright }}>
+            Almost the entire Standard Model
+          </div>
+          <StatusChip grade="E" size={22} />
         </div>
 
-        {/* alpha reveal */}
+        {/* the SM scope grid (fades out as α reveals) */}
         <div
           style={{
             position: "absolute",
-            top: 252,
+            top: 300,
+            opacity: grid,
+            transform: `translateY(${gridShift}px)`,
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            gap: 20,
+            width: 1640,
+          }}
+        >
+          {SM_ITEMS.map((it, i) => {
+            const e = enterUp(frame, 300 + i * 26, 22, 18);
+            return (
+              <div
+                key={it.title}
+                style={{
+                  ...e,
+                  width: 386,
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 14,
+                  padding: "18px 24px",
+                  borderRadius: 16,
+                  background: "rgba(10,16,30,0.62)",
+                  border: `1px solid ${COLORS.exact}40`,
+                }}
+              >
+                <div style={{ color: COLORS.exact, fontSize: 26, fontWeight: 700 }}>✓</div>
+                <div style={{ display: "flex", flexDirection: "column" }}>
+                  <div style={{ fontFamily: SANS, fontSize: 28, fontWeight: 700, color: COLORS.textBright }}>
+                    {it.title}
+                  </div>
+                  <div style={{ fontFamily: MONO, fontSize: 19, color: COLORS.textDim }}>{it.sub}</div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* the α headline */}
+        <div
+          style={{
+            position: "absolute",
+            top: 320,
             opacity: alphaIn,
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            gap: 22,
+            gap: 20,
             width: 1600,
           }}
         >
-          <div style={{ fontFamily: SANS, fontSize: 32, color: COLORS.textDim, ...enterUp(frame, 790, 24) }}>
-            the single positive root of one cubic
+          <div style={{ fontFamily: SANS, fontSize: 30, color: COLORS.textDim, ...enterUp(frame, 790, 24) }}>
+            the fine-structure constant — the single positive root of one equation
           </div>
           <div
             style={{
               fontFamily: MONO,
               fontWeight: 700,
-              fontSize: 118,
+              fontSize: 116,
               whiteSpace: "nowrap",
               color: COLORS.textBright,
               textShadow: "0 0 70px rgba(96,165,250,0.4)",
@@ -130,28 +130,40 @@ export const Scene03Readout: React.FC = () => {
           >
             α⁻¹ = 137.0359992
           </div>
-          <div
-            style={{
-              fontFamily: SANS,
-              fontSize: 34,
-              color: COLORS.exact,
-              fontWeight: 600,
-              ...sigma,
-            }}
-          >
-            1.9σ from CODATA-2022
+          <div style={{ ...verdict, fontFamily: SERIF, fontWeight: 600, fontSize: 50 }}>
+            <span style={{ color: COLORS.textDim }}>Not chosen. </span>
+            <span style={{ color: COLORS.textBright }}>Forced.</span>
+            <span style={{ color: COLORS.exact }}> &lt; 2σ from experiment.</span>
           </div>
-          <div
-            style={{
-              fontFamily: SERIF,
-              fontWeight: 600,
-              fontSize: 58,
-              ...verdict,
-            }}
-          >
-            <span style={{ color: COLORS.textDim }}>Not a fit. </span>
-            <span style={{ color: COLORS.textBright }}>A forced answer.</span>
-          </div>
+        </div>
+
+        {/* + cosmos + gravity */}
+        <div
+          style={{
+            position: "absolute",
+            bottom: 188,
+            ...footer,
+            display: "flex",
+            gap: 16,
+          }}
+        >
+          {["the cosmos", "gravity"].map((t) => (
+            <div
+              key={t}
+              style={{
+                fontFamily: SANS,
+                fontSize: 28,
+                fontWeight: 600,
+                color: COLORS.violet,
+                padding: "10px 24px",
+                borderRadius: 999,
+                background: "rgba(167,139,250,0.12)",
+                border: `1px solid ${COLORS.violet}55`,
+              }}
+            >
+              + {t}
+            </div>
+          ))}
         </div>
       </AbsoluteFill>
     </AbsoluteFill>

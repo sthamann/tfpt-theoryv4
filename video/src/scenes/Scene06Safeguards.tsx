@@ -14,27 +14,27 @@ import { enterUp } from "../components/anim";
 const STATS: { big: string; small: string; color: string; at: number }[] = [
   {
     big: "13 / 13",
-    small: "TFPT hits all 13 frozen predictions — 200,000 random look-alikes reach ≤ 5",
+    small: "13 predictions frozen before the data — 200,000 random look-alikes reach ≤ 5",
     color: COLORS.exact,
-    at: 435, // ~160.5s
+    at: 435, // ~174.5s
   },
   {
     big: "1 in 94,500",
     small: "α variants — exactly one lands in the measured window",
     color: COLORS.blueLight,
-    at: 570, // ~165s
+    at: 660, // ~182s
   },
   {
-    big: "7 grammars",
-    small: "seven disjoint number systems rebuild the same skeleton",
+    big: "7 → 1",
+    small: "the seven arithmetic witnesses are one object — the 2·3·5 of E₈",
     color: COLORS.violet,
-    at: 750, // ~171s
+    at: 840, // ~188s
   },
   {
     big: "3 of 8",
     small: "E₈ pieces feed a prediction — the other 5 are published overhead",
     color: "#22d3ee",
-    at: 930, // ~177s
+    at: 985, // ~193s
   },
 ];
 
@@ -42,8 +42,8 @@ export const Scene06Safeguards: React.FC = () => {
   const frame = useCurrentFrame();
 
   const eyebrow = enterUp(frame, 6, 22);
-  const headline = enterUp(frame, 150, 26); // "we tried to break it" (~151s)
-  const band = enterUp(frame, 1095, 26); // ≤10⁻³⁰ + two paths (~182.5s)
+  const headline = enterUp(frame, 138, 26); // "we tried to break it" (~165s)
+  const band = enterUp(frame, 1070, 26); // ≤10⁻³⁰ + two paths (~195s)
 
   return (
     <AbsoluteFill>

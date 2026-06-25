@@ -7,7 +7,7 @@ import { Subtitle } from "./components/Subtitle";
 import { Scene01ColdOpen } from "./scenes/Scene01ColdOpen";
 import { Scene02Machine } from "./scenes/Scene02Machine";
 import { Scene03Readout } from "./scenes/Scene03Readout";
-import { Scene04Texture } from "./scenes/Scene04Texture";
+import { Scene04Clocks } from "./scenes/Scene04Clocks";
 import { Scene05Gravity } from "./scenes/Scene05Gravity";
 import { Scene06Safeguards } from "./scenes/Scene06Safeguards";
 import { Scene07Kill } from "./scenes/Scene07Kill";
@@ -17,7 +17,7 @@ const SCENE_COMPONENTS: Record<string, React.FC> = {
   "cold-open": Scene01ColdOpen,
   machine: Scene02Machine,
   readout: Scene03Readout,
-  texture: Scene04Texture,
+  clocks: Scene04Clocks,
   gravity: Scene05Gravity,
   safeguards: Scene06Safeguards,
   kill: Scene07Kill,
