@@ -3,12 +3,17 @@
 import { motion } from "motion/react";
 import { Math } from "@/components/Math";
 
-type Severity = "theorem" | "bridge" | "structural" | "downstream";
+type Severity = "theorem" | "bridge" | "structural" | "downstream" | "conditional";
 
 const SEVERITY_META: Record<
   Severity,
   { label: string; chip: string; tone: string }
 > = {
+  conditional: {
+    label: "Conditional frontier test (not frozen)",
+    chip: "bg-sky-500/15 text-sky-200 ring-sky-400/30",
+    tone: "from-sky-500 to-cyan-500",
+  },
   theorem: {
     label: "Identity / theorem kill",
     chip: "bg-blue-500/15 text-blue-200 ring-blue-400/30",
@@ -47,6 +52,22 @@ const ROWS: KillRow[] = [
       "A JUNO central value clearly away from sin²θ₁₂ ≈ 0.307 at high significance kills the seam-misalignment mechanism. JUNO has been taking data since August 2025 — this is the sharpest live test.",
     formal: "\\sin^2\\theta_{12} \\neq \\tfrac{1}{3} - \\tfrac{\\varphi_0}{2} \\approx 0.3067",
     severity: "bridge",
+  },
+  {
+    area: "Tau mass m_τ — conditional",
+    paper: "Doc 4 · Belle II / BES III (near-term)",
+    criterion:
+      "Conditional near-term test (NOT a frozen prediction; v99). If the Koide source→pole flow runs exactly N_fam = 3 steps (one per family), the τ mass is forced to m_τ = 1776.9427 MeV. The PDG-2025 world average 1776.93 ± 0.09 MeV sits +0.14σ from it; Belle II's most precise single measurement (1777.09 ± 0.08 ± 0.11 MeV, pseudomass endpoint, PRD 108 032006) is +1.1σ above. Separating the n = 3 step from n = 4 (1776.967) needs σ(m_τ) ≈ 0.01 MeV — about 10× today's precision (Belle II full dataset / BES III threshold scan). A stable m_τ away from the step value kills the integer-step reading; the firewalled Koide flow itself stays [C].",
+    formal: "m_\\tau \\stackrel{?}{=} 1776.9427\\,\\text{MeV}\\quad (t = N_{\\mathrm{fam}} = 3)",
+    severity: "conditional",
+  },
+  {
+    area: "Universal recovery comb ω = 2.58 — exploratory",
+    paper: "experiments/ · v425 single-flow",
+    criterion:
+      "Exploratory cross-domain signature (NOT a frozen prediction). v425 shows the four frontier transfers are ONE native seam recovery semigroup, so the same log-periodic comb at ω = 2π/ln((3/2)⁶) = 2.583 (amplitude ~2%) should appear in every wide-range recovery channel. Searched on real data (CHIME baseband + FAST FRB tails, magnetar outbursts, GRB afterglows) → clean null so far: ms FRB bursts are too short / scattering-dominated, and the cleaner wide-ln(t) channels (Vela day-cadence ν(t) timing, stacked BH late-time tails at O5+) are still data-limited. A confirmed ω = 2.58 comb in ≥ 2 independent wide-range channels would be striking; its absence only disfavours the recovery-channel reading — the firewall keeps the compiler core untouched.",
+    formal: "\\omega = 2\\pi/\\ln\\!\\big((3/2)^6\\big) = 2.583",
+    severity: "conditional",
   },
   {
     area: "Tensor ratio r",
