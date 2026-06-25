@@ -60,6 +60,27 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-25 (The Galois$\leftrightarrow$Net bridge: \texttt{v422})}
+\begin{itemize}
+\item \textbf{New module \texttt{v422} (\texttt{SEAM.GALOIS.NET.01}).} The seam
+$\mu_4=\operatorname{Gal}(\mathbb Q(\zeta_5))$ is the SAME cyclic $\Z/4$ as the $(E_8)_1$ simple-current glue
+--- not a mere order-$4$ coincidence --- bridging the Galois gearbox of \vref{v419} to $G_{\mathrm{net}}$/%
+\texttt{SEAM.EQUIV.01}. \mE\ $\operatorname{disc}(A_3)=\operatorname{disc}(D_5)=\Z/4$ (one Smith invariant
+factor $4$ $=$ cyclic, $\det4$); $D_n$ disc is $\Z/4$ for $n$ odd, $\Z_2{\times}\Z_2$ for $n$ even, so the
+carrier $D_5$ (rank $5=\gcar$, odd) is cyclic while $D_8$ (rank $8$, even) is Klein; \mE\
+$(\Z/5)^\times=\langle2\rangle$ is cyclic order $4$ (only the carrier prime $5$ gives order $4$); \mE\ in
+$\Z_4{\times}\Z_4$ ($16=\dim S^+$) the glue $(1,1)$ is order $4$ with Lagrangian quotient
+$16/4^2=1=(E_8)_1$ (\vref{v89}/\vref{v154}); \mE\ negative control: the Klein / order-$2$
+$\langle(2,2)\rangle$ gives $16/2^2=4=|\!\operatorname{disc}(D_8)|=SO(16)$ ($\det4$), NOT $E_8$ ($\det1$) ---
+cyclic $\Z/4\to E_8$, Klein$\to D_8$. \mC\ the bridge: one cyclic $\Z/4$ threads the seam deck $\mu_4$
+(\vref{v419}), $\operatorname{Gal}(\mathbb Q(\zeta_5))$ and the $(E_8)_1$ glue --- the Galois gearbox
+$(\Z/30)^\times$ IS the holomorphic net's glue, cyclicity forced by $5$, Klein excluded. Cited in
+\texttt{origin\_theory}; Wolfram-mirrored ($324\to327$).
+\item \textbf{Surfaces synced.} \texttt{run\_all.py}, \texttt{script\_registry.csv},
+\texttt{status\_ledger.csv}, \texttt{origin\_theory}; the Wolfram extension/README/ledger counts
+($327/327$) and the website verification count; manifests refreshed.
+\end{itemize}
+
 \subsection*{2026-06-25 (F\_pole external: the Koide source$\to$pole transfer is one-loop EM: \texttt{v420})}
 \begin{itemize}
 \item \textbf{New module \texttt{v420} (\texttt{FR.POLE.QED.01}).} The honest external-physics follow-up to

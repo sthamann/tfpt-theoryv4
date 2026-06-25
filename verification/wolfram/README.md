@@ -105,7 +105,7 @@ v84–v93 block passed **45/45** on first run; the v94–v140 blocks were added
 the same day, the v141–v144 block on 2026-06-12. Current state:
 
 ```
---- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419: 324 passed, 0 failed ---
+--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422: 327 passed, 0 failed ---
 ALL WOLFRAM EXTENSION CHECKS PASSED
 ```
 
@@ -280,6 +280,15 @@ the `μ₄` (`ℤ/4`) factor **is** `(ℤ/5)^×` — the carrier prime 5 — so 
 the carrier clock `C₅` by the explicit Frobenius operator `G` with `G C₅ G⁻¹ = C₅²`, `G⁴=I`. So the square
 seam (atom 2) is the carrier pentagon's (atom 5) Galois group, and `ℚ(ζ₃₀)` carries both `E₈` invariants.
 Figure `coxeter_galois.pdf`.
+
+The 2026-06-25 **Galois↔Net bridge round** added three exact checks (324 → 327):
+`v422_galois_net_bridge.py` — the seam `μ₄ = Gal(ℚ(ζ₅))` is the **same cyclic `ℤ/4`** as the `(E₈)₁`
+simple-current glue, not a mere order-4 coincidence. `disc(A₃)=disc(D₅)=ℤ/4` (one Smith invariant factor 4
+= cyclic; `D_n` disc is `ℤ/4` for `n` odd, `ℤ₂×ℤ₂` for `n` even, so the carrier `D₅` (rank 5, odd) is cyclic
+while `D₈` (rank 8, even) is Klein); `(ℤ/5)^×=⟨2⟩` is cyclic order 4 (only the carrier prime 5 gives order
+4); the glue `⟨(1,1)⟩` in `ℤ₄×ℤ₄` (16=dim S⁺) is order 4 with Lagrangian quotient `16/4²=1=(E₈)₁`. Negative
+control: the Klein/order-2 `⟨(2,2)⟩` gives `16/2²=4=disc(D₈)=SO(16)` (det 4), **not** `E₈` (det 1) — so the
+cyclic `ℤ/4` (forced by 5) selects `E₈`, bridging the Galois gearbox (v419) to `G_net`/`SEAM.EQUIV.01`.
 
 The 2026-06-22 **next-steps round (A/C/D/B)** added one more exact check (288 → 289):
 `v337_decoupling_theorem.py` (the ambient back-reaction scale `2·dim(E₈)·c₃² = 31/(4π²)`

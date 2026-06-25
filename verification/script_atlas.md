@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`415` registered scripts · `476` ledger claims · `10` clusters.
+`416` registered scripts · `477` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (44 scripts)
+### `core` — Compiler core & the E₈ glue  (45 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -99,6 +99,8 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v416_atom_trichotomy, v222_cm_norm_duality, v415_gaussian_operator, v417_eisenstein_cp_operator, v18_quark_yukawa, v416, v222, v415 · cited: origin theory
 - **v419_seam_galois_carrier** [E/C] `SEAM.GALOIS.01` — The seam mu4 IS the carrier's Galois group: a positive resolution of the v409/RES.COXETER.SYMMETRY.01 cyclic/Galois asymmetry. 30=2*3*5 is squarefree so Z/30 has no order-4 element
   - deps: v394_coxeter_atoms.py; v409_coxeter_prime2_lemma, v418_cyclotomic_norm_triple, v403_facet_compositum, v222_cm_norm_duality, v409, v418, v403, v316 · cited: origin theory
+- **v422_galois_net_bridge** [E/C] `SEAM.GALOIS.NET.01` — The Galois<->Net bridge: the seam mu4 = Gal(Q(zeta5)) is the SAME cyclic Z/4 as the (E8)_1 simple-current glue -- not a mere order-4 coincidence -- connecting the Galois gearbox of
+  - deps: v419_seam_galois_carrier, v286_seam_equivalence_contract, v1_e8_glue, v89_carrier_index_lemma, v403_facet_compositum, v419, v1, v89 · cited: origin theory
 
 ### `em` — Electromagnetic fixed point  (6 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -894,13 +896,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `SEAM.EQUIV.01`×25, `v76`×17, `v56`×17, `QG.AMB.01`×16, `v336`×16, `E8.GLU.01`×15, `v216`×15, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v312`×14, `REG.FREEZE.01`×12, `AX.P1.01`×11, `v3`×11, `v54`×11
+**Most-depended-on claims** (the load-bearing roots): `QGEO.SYM.01`×28, `SEAM.EQUIV.01`×26, `v76`×17, `v56`×17, `E8.GLU.01`×16, `QG.AMB.01`×16, `v336`×16, `v216`×15, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v312`×14, `REG.FREEZE.01`×12, `AX.P1.01`×11, `v3`×11, `v54`×11
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v409_coxeter_prime2_lemma** — `FORM.COXETER.PRIME2.01`
 - **v410_sheet_generator_binary** — `SHEET.GEN.BINARY.01`
 - **v411_ud_ratio_vpower** — `FLAV.UD.VPOWER.01`
 - **v412_sheet_source_corner_J** — `DIAMOND.SHEET.SOURCE.J.01`
@@ -912,4 +913,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v418_cyclotomic_norm_triple** — `ARITH.NORMTRIPLE.01`
 - **v419_seam_galois_carrier** — `SEAM.GALOIS.01`
 - **v420_fpole_qed_running** — `FR.POLE.QED.01`
+- **v422_galois_net_bridge** — `SEAM.GALOIS.NET.01`
 

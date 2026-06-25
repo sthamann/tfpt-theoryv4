@@ -185,6 +185,19 @@ $\mathbb Q(\zeta_{30})$ carries both $E_8$ invariants --- the cyclic hands ($h=3
 \begin{center}
 \includegraphics[width=0.92\linewidth]{coxeter_galois.pdf}
 \end{center}
+\par\smallskip\noindent\emph{The Galois gearbox IS the $(E_8)_1$ glue
+(\veri{v422\_galois\_net\_bridge.py}).} This bridges the Galois side directly to $G_{\mathrm{net}}$: the seam
+$\mu_4$ is not merely \emph{a} cyclic $\Z/4$, it is the \emph{same} one as the holomorphic-net glue. The
+carrier discriminants $\operatorname{disc}(A_3)=\operatorname{disc}(D_5)=\Z/4$ are cyclic (one Smith
+invariant factor $4$), and $D_5$ is cyclic precisely because its rank $5=\gcar$ is \emph{odd} ($D_n$ is
+$\Z/4$ for $n$ odd, $\Z_2\times\Z_2$ for $n$ even); the carrier-Galois
+$\operatorname{Gal}(\mathbb Q(\zeta_5))=(\Z/5)^\times$ is cyclic $\Z/4$ for the same reason ($5$ prime); and
+in $\operatorname{disc}(D_5\oplus A_3)=\Z_4\times\Z_4$ the simple current $(1,1)$ generates the cyclic $\Z/4$
+whose Lagrangian quotient $16/4^2=1$ \emph{is} $(E_8)_1$ (\vref{v89}/\vref{v154}). The cyclic-vs-Klein
+distinction is load-bearing: the order-$2$ halfway glue gives $D_8=SO(16)$ ($\det4$), not $E_8$ ($\det1$),
+so the carrier-Galois (cyclic, $5$ prime) matches $E_8$, never the $D_8$ Klein. So the order-$30$
+\emph{gearbox} $(\Z/30)^\times$ is the simple-current glue of the seam net --- one $\Z/4$ from carrier
+arithmetic through the lattice to the seam (\mE; the canonical identification \mC).
 Finally, P2 itself reads as a Riemann--Roch index: a degree-$4$
 seam divisor on $\PP^1$ forces $h^0{=}5{=}\gcar$ and $\operatorname{rank}H_1{=}3{=}\Nfam$, with even Clifford
 closure $\Lambda^{\mathrm{even}}(\mathbb C^5)=16=\dim S^+$ (\veri{v228\_rr\_index\_gate.py}, \mE/\mC/\mO,

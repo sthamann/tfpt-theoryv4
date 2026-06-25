@@ -47,6 +47,536 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "The Galois"
+      },
+      {
+        "k": "m",
+        "v": "\\leftrightarrow"
+      },
+      {
+        "k": "t",
+        "v": "Net bridge: "
+      },
+      {
+        "k": "c",
+        "v": "v422"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v422"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.GALOIS.NET.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The seam "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4=\\operatorname{Gal}(\\mathbb Q(\\zeta_5))"
+        },
+        {
+          "k": "t",
+          "v": " is the SAME cyclic "
+        },
+        {
+          "k": "m",
+          "v": "\\Z/4"
+        },
+        {
+          "k": "t",
+          "v": " as the "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " simple-current glue — not a mere order-"
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " coincidence — bridging the Galois gearbox of "
+        },
+        {
+          "k": "c",
+          "v": "v419"
+        },
+        {
+          "k": "t",
+          "v": " to "
+        },
+        {
+          "k": "m",
+          "v": "G_{\\mathrm{net}}"
+        },
+        {
+          "k": "t",
+          "v": "/% "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{disc}(A_3)=\\operatorname{disc}(D_5)=\\Z/4"
+        },
+        {
+          "k": "t",
+          "v": " (one Smith invariant factor "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " cyclic, "
+        },
+        {
+          "k": "m",
+          "v": "\\det4"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "m",
+          "v": "D_n"
+        },
+        {
+          "k": "t",
+          "v": " disc is "
+        },
+        {
+          "k": "m",
+          "v": "\\Z/4"
+        },
+        {
+          "k": "t",
+          "v": " for "
+        },
+        {
+          "k": "m",
+          "v": "n"
+        },
+        {
+          "k": "t",
+          "v": " odd, "
+        },
+        {
+          "k": "m",
+          "v": "\\Z_2{\\times}\\Z_2"
+        },
+        {
+          "k": "t",
+          "v": " for "
+        },
+        {
+          "k": "m",
+          "v": "n"
+        },
+        {
+          "k": "t",
+          "v": " even, so the carrier "
+        },
+        {
+          "k": "m",
+          "v": "D_5"
+        },
+        {
+          "k": "t",
+          "v": " (rank "
+        },
+        {
+          "k": "m",
+          "v": "5=\\gcar"
+        },
+        {
+          "k": "t",
+          "v": ", odd) is cyclic while "
+        },
+        {
+          "k": "m",
+          "v": "D_8"
+        },
+        {
+          "k": "t",
+          "v": " (rank "
+        },
+        {
+          "k": "m",
+          "v": "8"
+        },
+        {
+          "k": "t",
+          "v": ", even) is Klein; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "(\\Z/5)^\\times=\\langle2\\rangle"
+        },
+        {
+          "k": "t",
+          "v": " is cyclic order "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " (only the carrier prime "
+        },
+        {
+          "k": "m",
+          "v": "5"
+        },
+        {
+          "k": "t",
+          "v": " gives order "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "in "
+        },
+        {
+          "k": "m",
+          "v": "\\Z_4{\\times}\\Z_4"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "16=\\dim S^+"
+        },
+        {
+          "k": "t",
+          "v": ") the glue "
+        },
+        {
+          "k": "m",
+          "v": "(1,1)"
+        },
+        {
+          "k": "t",
+          "v": " is order "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " with Lagrangian quotient "
+        },
+        {
+          "k": "m",
+          "v": "16/4^2=1=(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v89"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v154"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "negative control: the Klein / order-"
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\langle(2,2)\\rangle"
+        },
+        {
+          "k": "t",
+          "v": " gives "
+        },
+        {
+          "k": "m",
+          "v": "16/2^2=4=|\\!\\operatorname{disc}(D_8)|=SO(16)"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\det4"
+        },
+        {
+          "k": "t",
+          "v": "), NOT "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\det1"
+        },
+        {
+          "k": "t",
+          "v": ") — cyclic "
+        },
+        {
+          "k": "m",
+          "v": "\\Z/4\\to E_8"
+        },
+        {
+          "k": "t",
+          "v": ", Klein"
+        },
+        {
+          "k": "m",
+          "v": "\\to D_8"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the bridge: one cyclic "
+        },
+        {
+          "k": "m",
+          "v": "\\Z/4"
+        },
+        {
+          "k": "t",
+          "v": " threads the seam deck "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v419"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{Gal}(\\mathbb Q(\\zeta_5))"
+        },
+        {
+          "k": "t",
+          "v": " and the "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " glue — the Galois gearbox "
+        },
+        {
+          "k": "m",
+          "v": "(\\Z/30)^\\times"
+        },
+        {
+          "k": "t",
+          "v": " IS the holomorphic net's glue, cyclicity forced by "
+        },
+        {
+          "k": "m",
+          "v": "5"
+        },
+        {
+          "k": "t",
+          "v": ", Klein excluded. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": "; Wolfram-mirrored ("
+        },
+        {
+          "k": "m",
+          "v": "324\\to327"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Surfaces synced."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "run_all.py"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "script_registry.csv"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "status_ledger.csv"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": "; the Wolfram extension/README/ledger counts ("
+        },
+        {
+          "k": "m",
+          "v": "327/327"
+        },
+        {
+          "k": "t",
+          "v": ") and the website verification count; manifests refreshed."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-25",
+    "dateLabel": "2026-06-25",
+    "heading": [
+      {
+        "k": "t",
         "v": "F_pole external: the Koide source"
       },
       {

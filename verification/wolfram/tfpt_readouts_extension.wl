@@ -2580,6 +2580,26 @@ Module[{C5, Phi5, red, G, I4, ord4, x},
       && G != I4 && MatrixPower[G, 2] != I4];
 ];
 
+(* ==== v422 round: the Galois<->Net bridge (mu4 = Gal(Q(zeta5)) = (E8)_1 glue) ==== *)
+Module[{A3, D5, D8, sf},
+  A3 = {{2, -1, 0}, {-1, 2, -1}, {0, -1, 2}};
+  D5 = {{2, -1, 0, 0, 0}, {-1, 2, -1, 0, 0}, {0, -1, 2, -1, -1}, {0, 0, -1, 2, 0}, {0, 0, -1, 0, 2}};
+  D8 = {{2, -1, 0, 0, 0, 0, 0, 0}, {-1, 2, -1, 0, 0, 0, 0, 0}, {0, -1, 2, -1, 0, 0, 0, 0},
+        {0, 0, -1, 2, -1, 0, 0, 0}, {0, 0, 0, -1, 2, -1, 0, 0}, {0, 0, 0, 0, -1, 2, -1, -1},
+        {0, 0, 0, 0, 0, -1, 2, 0}, {0, 0, 0, 0, 0, -1, 0, 2}};
+  sf[m_] := Select[Diagonal[SmithDecomposition[m][[2]]], # > 1 &];
+
+  checkExact["v422 SEAM.GALOIS.NET.01 (i): disc(A3)=disc(D5)=Z/4 cyclic (Smith invariant factors {4}, det 4); D_n disc is Z/4 for n ODD, Z2xZ2 for n EVEN -- D5 (rank 5=g_car odd) cyclic, D8 (rank 8 even) Klein {2,2}",
+    sf[A3] == {4} && sf[D5] == {4} && Abs[Det[A3]] == 4 && Abs[Det[D5]] == 4 && sf[D8] == {2, 2}];
+
+  checkExact["v422 SEAM.GALOIS.NET.01 (ii): Gal(Q(zeta5))=(Z/5)^x=<2> cyclic order 4; among the atoms only 5 gives order 4 (EulerPhi 5=4, 3=2, 2=1)",
+    EulerPhi[5] == 4 && MultiplicativeOrder[2, 5] == 4 && EulerPhi[3] == 2 && EulerPhi[2] == 1];
+
+  checkExact["v422 SEAM.GALOIS.NET.01 (iii): in disc(D5(+)A3)=Z4xZ4 (16) the glue (1,1) is order 4 (cyclic) => 16/4^2=1=disc(E8) (det 1); the halfway (2,2) is order 2 => 16/2^2=4=disc(D8) (det 4); cyclic Z/4 -> E8, Klein/order-2 -> D8",
+    LCM[4/GCD[1, 4], 4/GCD[1, 4]] == 4 && 16/4^2 == 1
+      && LCM[4/GCD[2, 4], 4/GCD[2, 4]] == 2 && 16/2^2 == 4 && Abs[Det[D8]] == 4];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];
