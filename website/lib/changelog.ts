@@ -42,6 +42,2781 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-06-25",
+    "dateLabel": "2026-06-25",
+    "heading": [
+      {
+        "k": "t",
+        "v": "F_pole external: the Koide source"
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": "pole transfer is one-loop EM: "
+      },
+      {
+        "k": "c",
+        "v": "v420"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v420"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "FR.POLE.QED.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The honest external-physics follow-up to "
+        },
+        {
+          "k": "c",
+          "v": "v93"
+        },
+        {
+          "k": "t",
+          "v": " and the clock No-Go: the Koide source"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": "pole transfer is a one-loop "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "electromagnetic"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " effect, not an algebraic step. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "Koide "
+        },
+        {
+          "k": "m",
+          "v": "Q"
+        },
+        {
+          "k": "t",
+          "v": " is rescaling-invariant ("
+        },
+        {
+          "k": "m",
+          "v": "Q(c\\,m)=Q(m)"
+        },
+        {
+          "k": "t",
+          "v": "), so flavor-universal running leaves it fixed and the source"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": "pole shift is purely flavor-split; "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the tree deficit "
+        },
+        {
+          "k": "m",
+          "v": "\\tfrac23-Q_{\\mathrm{src}}=0.00220"
+        },
+        {
+          "k": "t",
+          "v": " is one-loop-EM-sized ("
+        },
+        {
+          "k": "m",
+          "v": "=\\varphi_0/24"
+        },
+        {
+          "k": "t",
+          "v": " to "
+        },
+        {
+          "k": "m",
+          "v": "0.6\\%"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "=\\alpha/\\pi"
+        },
+        {
+          "k": "t",
+          "v": " to "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}5\\%"
+        },
+        {
+          "k": "t",
+          "v": "), the PDG pole sits at "
+        },
+        {
+          "k": "m",
+          "v": "2/3"
+        },
+        {
+          "k": "t",
+          "v": " (the IR attractor); "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "a 1-loop QED "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{pole}\\!\\leftrightarrow\\!\\overline{\\mathrm{MS}}"
+        },
+        {
+          "k": "t",
+          "v": " per-lepton-log estimate shifts "
+        },
+        {
+          "k": "m",
+          "v": "Q"
+        },
+        {
+          "k": "t",
+          "v": " by EM-loop order toward "
+        },
+        {
+          "k": "m",
+          "v": "2/3"
+        },
+        {
+          "k": "t",
+          "v": " (the "
+        },
+        {
+          "k": "c",
+          "v": "v82"
+        },
+        {
+          "k": "t",
+          "v": " direction); "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the exact flow time "
+        },
+        {
+          "k": "m",
+          "v": "t\\approx2.84"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v93"
+        },
+        {
+          "k": "t",
+          "v": ") is scheme/scale-dependent external QED, only sized. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "verdict: "
+        },
+        {
+          "k": "m",
+          "v": "F_{\\mathrm{pole}}"
+        },
+        {
+          "k": "t",
+          "v": " is a one-loop EM effect — the lens forces the rate "
+        },
+        {
+          "k": "m",
+          "v": "(2/3)^6"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v327"
+        },
+        {
+          "k": "t",
+          "v": "), external EM supplies the flow; "
+        },
+        {
+          "k": "c",
+          "v": "F_pole"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": ", firewalled ("
+        },
+        {
+          "k": "c",
+          "v": "v187"
+        },
+        {
+          "k": "t",
+          "v": "), so "
+        },
+        {
+          "k": "m",
+          "v": "F_{\\mathrm{transfer}}"
+        },
+        {
+          "k": "t",
+          "v": " is confirmed genuinely external — the open theme sharpened (QED), not closed. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_4"
+        },
+        {
+          "k": "t",
+          "v": "; numerical (mpmath), Python-only (no Wolfram check, by the suite convention like "
+        },
+        {
+          "k": "c",
+          "v": "v93"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v371"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Surfaces synced."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "run_all.py"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "script_registry.csv"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "status_ledger.csv"
+        },
+        {
+          "k": "t",
+          "v": ", the Koide section of "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_4"
+        },
+        {
+          "k": "t",
+          "v": "; manifests refreshed."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-25",
+    "dateLabel": "2026-06-25",
+    "heading": [
+      {
+        "k": "t",
+        "v": "The seam "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4"
+      },
+      {
+        "k": "t",
+        "v": " is the carrier's Galois group: "
+      },
+      {
+        "k": "c",
+        "v": "v419"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " figure"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v419"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.GALOIS.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " A positive resolution of the cyclic/Galois asymmetry ("
+        },
+        {
+          "k": "c",
+          "v": "v409"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "RES.COXETER.SYMMETRY.01"
+        },
+        {
+          "k": "t",
+          "v": "): why the seam "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " sits on the Galois side, not on the cyclic "
+        },
+        {
+          "k": "m",
+          "v": "\\zeta_{30}"
+        },
+        {
+          "k": "t",
+          "v": " dial. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "h(E_8)=30"
+        },
+        {
+          "k": "t",
+          "v": " is squarefree, so "
+        },
+        {
+          "k": "m",
+          "v": "\\Z/30"
+        },
+        {
+          "k": "t",
+          "v": " has element orders "
+        },
+        {
+          "k": "m",
+          "v": "\\{1,2,3,5,6,10,15,30\\}"
+        },
+        {
+          "k": "t",
+          "v": " — "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "no"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " order "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": ", so the seam "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " cannot be a rotation hand and is forced onto the Galois side; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "by CRT "
+        },
+        {
+          "k": "m",
+          "v": "(\\Z/30)^\\times=(\\Z/2)^\\times\\times(\\Z/3)^\\times\\times(\\Z/5)^\\times\n=\\mu_4\\times\\Z_2"
+        },
+        {
+          "k": "t",
+          "v": " (order "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi(30)=8=\\operatorname{rank}E_8"
+        },
+        {
+          "k": "t",
+          "v": "), and the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\Z/4"
+        },
+        {
+          "k": "t",
+          "v": ") factor IS "
+        },
+        {
+          "k": "m",
+          "v": "(\\Z/5)^\\times"
+        },
+        {
+          "k": "t",
+          "v": " (the carrier prime "
+        },
+        {
+          "k": "m",
+          "v": "5"
+        },
+        {
+          "k": "t",
+          "v": "), the "
+        },
+        {
+          "k": "m",
+          "v": "\\Z_2"
+        },
+        {
+          "k": "t",
+          "v": " IS "
+        },
+        {
+          "k": "m",
+          "v": "(\\Z/3)^\\times"
+        },
+        {
+          "k": "t",
+          "v": " (family "
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " CP conjugation, "
+        },
+        {
+          "k": "c",
+          "v": "v316"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "so the seam "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4=\\operatorname{Gal}(\\mathbb Q(\\zeta_5))"
+        },
+        {
+          "k": "t",
+          "v": ", realised on the carrier clock "
+        },
+        {
+          "k": "m",
+          "v": "C_5"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v418"
+        },
+        {
+          "k": "t",
+          "v": ") by the Frobenius "
+        },
+        {
+          "k": "m",
+          "v": "\\zeta_5\\mapsto\\zeta_5^2"
+        },
+        {
+          "k": "t",
+          "v": " — the explicit order-"
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " operator "
+        },
+        {
+          "k": "m",
+          "v": "G"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "GC_5G^{-1}=C_5^2"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "G^4=I"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "G^2C_5G^{-2}=C_5^{-1}"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "this is the positive content of "
+        },
+        {
+          "k": "c",
+          "v": "v409"
+        },
+        {
+          "k": "t",
+          "v": ": the "
+        },
+        {
+          "k": "m",
+          "v": "2^2{=}4"
+        },
+        {
+          "k": "t",
+          "v": " is the order of "
+        },
+        {
+          "k": "m",
+          "v": "(\\Z/5)^\\times"
+        },
+        {
+          "k": "t",
+          "v": ", and “no contraction rate” is because the seam is an "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "automorphism"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", not a hand; so "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb Q(\\zeta_{30})"
+        },
+        {
+          "k": "t",
+          "v": " carries both "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " invariants (cyclic "
+        },
+        {
+          "k": "m",
+          "v": "h{=}30"
+        },
+        {
+          "k": "t",
+          "v": ", Galois "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{rank}{=}8"
+        },
+        {
+          "k": "t",
+          "v": "). Cited in "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": "; Wolfram-mirrored ("
+        },
+        {
+          "k": "m",
+          "v": "321\\to324"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New figure "
+            },
+            {
+              "k": "c",
+              "v": "coxeter_galois.pdf"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The order-"
+        },
+        {
+          "k": "m",
+          "v": "30"
+        },
+        {
+          "k": "t",
+          "v": " cyclic dial with the four flavor hands (sheet/family/carrier/CP) beside the Galois gears ("
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4=\\operatorname{Aut}(\\zeta_5)"
+        },
+        {
+          "k": "t",
+          "v": " the seam, "
+        },
+        {
+          "k": "m",
+          "v": "\\Z_2=\\operatorname{Aut}(\\zeta_3)"
+        },
+        {
+          "k": "t",
+          "v": " the CP conjugation); added to "
+        },
+        {
+          "k": "c",
+          "v": "make_figures.py"
+        },
+        {
+          "k": "t",
+          "v": ", the manifest figure list and "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Surfaces synced."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "run_all.py"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "script_registry.csv"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "status_ledger.csv"
+        },
+        {
+          "k": "t",
+          "v": ", the Wolfram extension/README/ledger counts ("
+        },
+        {
+          "k": "m",
+          "v": "324/324"
+        },
+        {
+          "k": "t",
+          "v": ") and the website verification count; manifests refreshed."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-25",
+    "dateLabel": "2026-06-25",
+    "heading": [
+      {
+        "k": "t",
+        "v": "The cyclotomic norm triple "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the carrier-5 clock: "
+      },
+      {
+        "k": "c",
+        "v": "v418"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v418"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "ARITH.NORMTRIPLE.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The carrier split "
+        },
+        {
+          "k": "m",
+          "v": "(3,2)"
+        },
+        {
+          "k": "t",
+          "v": " read in the three atom-rings gives "
+        },
+        {
+          "k": "m",
+          "v": "(7,13,55)="
+        },
+        {
+          "k": "t",
+          "v": "(scalaron, "
+        },
+        {
+          "k": "m",
+          "v": "\\Delta_Q"
+        },
+        {
+          "k": "t",
+          "v": ", quark numerator), and the carrier-"
+        },
+        {
+          "k": "m",
+          "v": "5"
+        },
+        {
+          "k": "t",
+          "v": " clock missing from "
+        },
+        {
+          "k": "c",
+          "v": "v417"
+        },
+        {
+          "k": "t",
+          "v": " is found as the "
+        },
+        {
+          "k": "m",
+          "v": "4{\\times}4"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\Phi_5"
+        },
+        {
+          "k": "t",
+          "v": "-companion "
+        },
+        {
+          "k": "m",
+          "v": "C_5"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "C_5^5{=}I"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{tr}C_5{=}{-}1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\det C_5{=}1"
+        },
+        {
+          "k": "t",
+          "v": " (the four primitive "
+        },
+        {
+          "k": "m",
+          "v": "5"
+        },
+        {
+          "k": "t",
+          "v": "th roots), with the golden ratio as its real-part data ("
+        },
+        {
+          "k": "m",
+          "v": "2\\cos72^\\circ{=}1/\\varphi"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "2\\cos144^\\circ{=}{-}\\varphi"
+        },
+        {
+          "k": "t",
+          "v": "; output-side, "
+        },
+        {
+          "k": "c",
+          "v": "v313"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v349"
+        },
+        {
+          "k": "t",
+          "v": "; dim "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": ", not "
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": " — this refines "
+        },
+        {
+          "k": "c",
+          "v": "v417"
+        },
+        {
+          "k": "t",
+          "v": "'s gap from “no operator” to “no "
+        },
+        {
+          "k": "m",
+          "v": "3{\\times}3"
+        },
+        {
+          "k": "t",
+          "v": " operator”); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "N_{\\Z[\\zeta_5]}(3{+}2\\zeta_5){=}\\det(3I{+}2C_5){=}55{=}5{\\cdot}11{=}\\gcar\\|\\operatorname{Pl}(K)\\|_1"
+        },
+        {
+          "k": "t",
+          "v": ", the "
+        },
+        {
+          "k": "m",
+          "v": "c_u/c_d"
+        },
+        {
+          "k": "t",
+          "v": " numerator ("
+        },
+        {
+          "k": "c",
+          "v": "v410"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v411"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the triple "
+        },
+        {
+          "k": "m",
+          "v": "\\det(3I{+}2\\,\\mathrm{Comp}(\\Phi_n))=(7,13,55)"
+        },
+        {
+          "k": "t",
+          "v": " for "
+        },
+        {
+          "k": "m",
+          "v": "n{=}3,4,5"
+        },
+        {
+          "k": "t",
+          "v": " over "
+        },
+        {
+          "k": "m",
+          "v": "\\Z[\\omega],\\Z[i],\\Z[\\zeta_5]"
+        },
+        {
+          "k": "t",
+          "v": " (atoms "
+        },
+        {
+          "k": "m",
+          "v": "3,2,5"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v416"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "NEG control: the anchor "
+        },
+        {
+          "k": "m",
+          "v": "(5,4)\\to(21,41,461)"
+        },
+        {
+          "k": "t",
+          "v": " reaches named values only in the "
+        },
+        {
+          "k": "m",
+          "v": "\\omega"
+        },
+        {
+          "k": "t",
+          "v": "- and "
+        },
+        {
+          "k": "m",
+          "v": "i"
+        },
+        {
+          "k": "t",
+          "v": "-rings ("
+        },
+        {
+          "k": "m",
+          "v": "21{=}N_\\omega(5,4)"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "41{=}10b_1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v222"
+        },
+        {
+          "k": "t",
+          "v": ") but "
+        },
+        {
+          "k": "m",
+          "v": "461"
+        },
+        {
+          "k": "t",
+          "v": " (prime) in the carrier ring, so the carrier ring separates "
+        },
+        {
+          "k": "m",
+          "v": "(3,2)\\to55"
+        },
+        {
+          "k": "t",
+          "v": " from "
+        },
+        {
+          "k": "m",
+          "v": "(5,4)\\to461"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "honest: "
+        },
+        {
+          "k": "m",
+          "v": "(3,2)"
+        },
+        {
+          "k": "t",
+          "v": " is the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "forced"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " carrier split ("
+        },
+        {
+          "k": "c",
+          "v": "v14"
+        },
+        {
+          "k": "t",
+          "v": "), not the unique clean one — a scan finds "
+        },
+        {
+          "k": "m",
+          "v": "\\{(2,1)\\to(3,5,11),(3,2)\\to(7,13,55)\\}"
+        },
+        {
+          "k": "t",
+          "v": ", a small ladder. The sharper discriminator is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "cross-sector"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": only "
+        },
+        {
+          "k": "m",
+          "v": "(3,2)"
+        },
+        {
+          "k": "t",
+          "v": " spans three physics sectors (gravity "
+        },
+        {
+          "k": "m",
+          "v": "7"
+        },
+        {
+          "k": "t",
+          "v": ", flavor "
+        },
+        {
+          "k": "m",
+          "v": "13"
+        },
+        {
+          "k": "t",
+          "v": ", masses "
+        },
+        {
+          "k": "m",
+          "v": "55"
+        },
+        {
+          "k": "t",
+          "v": "), the unique cross-sector seed, while "
+        },
+        {
+          "k": "m",
+          "v": "(2,1)"
+        },
+        {
+          "k": "t",
+          "v": " is all compiler-core. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": "; Wolfram-mirrored ("
+        },
+        {
+          "k": "m",
+          "v": "318\\to321"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Surfaces synced."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "run_all.py"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "script_registry.csv"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "status_ledger.csv"
+        },
+        {
+          "k": "t",
+          "v": ", a triple paragraph in "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": ", the Wolfram extension/README/ledger counts ("
+        },
+        {
+          "k": "m",
+          "v": "321/321"
+        },
+        {
+          "k": "t",
+          "v": ") and the website verification count; manifests refreshed."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-25",
+    "dateLabel": "2026-06-25",
+    "heading": [
+      {
+        "k": "t",
+        "v": "The Eisenstein/CP operator "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the order-30 clock: "
+      },
+      {
+        "k": "c",
+        "v": "v417"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v417"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "DIAMOND.EISEN.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The hexagonal dual of "
+        },
+        {
+          "k": "c",
+          "v": "v415"
+        },
+        {
+          "k": "t",
+          "v": ": the "
+        },
+        {
+          "k": "m",
+          "v": "\\tau{=}\\omega"
+        },
+        {
+          "k": "t",
+          "v": " flavor side put on operators and unified with the seam into one order-"
+        },
+        {
+          "k": "m",
+          "v": "30"
+        },
+        {
+          "k": "t",
+          "v": " Coxeter clock. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the family rotation "
+        },
+        {
+          "k": "m",
+          "v": "P=(1\\,2\\,3)"
+        },
+        {
+          "k": "t",
+          "v": " is the order-"
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": " Eisenstein deck ("
+        },
+        {
+          "k": "m",
+          "v": "P^2{+}P{+}I=\\mathrm{ONES}"
+        },
+        {
+          "k": "t",
+          "v": ", so "
+        },
+        {
+          "k": "m",
+          "v": "\\omega^2{+}\\omega{+}1{=}0"
+        },
+        {
+          "k": "t",
+          "v": " on the plane "
+        },
+        {
+          "k": "m",
+          "v": "\\perp(1,1,1)"
+        },
+        {
+          "k": "t",
+          "v": "), the order-"
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": " dual of "
+        },
+        {
+          "k": "m",
+          "v": "J^2{=}{-}I"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "it realises the hex CM norm as "
+        },
+        {
+          "k": "m",
+          "v": "(3I{+}2P)(3I{+}2P^2)=7I{+}6\\,\\mathrm{ONES}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{Spec}\\{7,7,25\\}"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "7{=}N_{\\Z[\\omega]}(3{+}2\\omega){=}"
+        },
+        {
+          "k": "t",
+          "v": " scalaron, "
+        },
+        {
+          "k": "m",
+          "v": "25{=}\\gcar^2"
+        },
+        {
+          "k": "t",
+          "v": ") — the dual of "
+        },
+        {
+          "k": "c",
+          "v": "v415"
+        },
+        {
+          "k": "t",
+          "v": "'s "
+        },
+        {
+          "k": "m",
+          "v": "\\{13,13,9\\}"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the CP clock "
+        },
+        {
+          "k": "m",
+          "v": "W{=}{-}P^2"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\rho"
+        },
+        {
+          "k": "t",
+          "v": " of "
+        },
+        {
+          "k": "c",
+          "v": "v233"
+        },
+        {
+          "k": "t",
+          "v": ") has "
+        },
+        {
+          "k": "m",
+          "v": "W^2{=}P"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "W^3{=}{-}I"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{Spec}\\{-1,\\zeta_6,\\zeta_6^{-1}\\}"
+        },
+        {
+          "k": "t",
+          "v": ", giving "
+        },
+        {
+          "k": "m",
+          "v": "\\delta_{\\mathrm{CKM,lead}}{=}\\arg\\zeta_6{=}\\pi/3"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "\\delta_{\\mathrm{PMNS}}{=}\\arg\\zeta_6^4{=}4\\pi/3"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v316"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v320"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "all flavor clocks are powers of "
+        },
+        {
+          "k": "m",
+          "v": "\\zeta_{30}"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\zeta_{30}^{15}{=}{-}1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\zeta_{30}^{10}{=}\\omega"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\zeta_{30}^{6}{=}\\zeta_5"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\zeta_{30}^{5}{=}\\zeta_6"
+        },
+        {
+          "k": "t",
+          "v": ") while the seam "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4{=}i"
+        },
+        {
+          "k": "t",
+          "v": " is the Galois side "
+        },
+        {
+          "k": "m",
+          "v": "(\\Z/30)^\\times"
+        },
+        {
+          "k": "t",
+          "v": " of order "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi(30){=}8{=}\\operatorname{rank}E_8"
+        },
+        {
+          "k": "t",
+          "v": " — so "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb Q(\\zeta_{30})"
+        },
+        {
+          "k": "t",
+          "v": " carries both "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " invariants ("
+        },
+        {
+          "k": "m",
+          "v": "h{=}30"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{rank}{=}8"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "honest gap: the carrier "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_5"
+        },
+        {
+          "k": "t",
+          "v": " has no "
+        },
+        {
+          "k": "m",
+          "v": "3{\\times}3"
+        },
+        {
+          "k": "t",
+          "v": " operator (the golden "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi"
+        },
+        {
+          "k": "t",
+          "v": " is an output-side trace, "
+        },
+        {
+          "k": "c",
+          "v": "v313"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v349"
+        },
+        {
+          "k": "t",
+          "v": "); negatives: no "
+        },
+        {
+          "k": "m",
+          "v": "U,V"
+        },
+        {
+          "k": "t",
+          "v": "-diamond operator carries "
+        },
+        {
+          "k": "m",
+          "v": "\\zeta_6"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "[D,P]\\neq0"
+        },
+        {
+          "k": "t",
+          "v": " (no "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_{12}"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "N(3{+}2\\zeta_6){=}19{\\neq}7"
+        },
+        {
+          "k": "t",
+          "v": ". Cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": "; Wolfram-mirrored ("
+        },
+        {
+          "k": "m",
+          "v": "315\\to318"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Surfaces synced."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "run_all.py"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "script_registry.csv"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "status_ledger.csv"
+        },
+        {
+          "k": "t",
+          "v": ", the Sheet-Diamond keybox of "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": ", the Wolfram extension/README/ledger counts ("
+        },
+        {
+          "k": "m",
+          "v": "318/318"
+        },
+        {
+          "k": "t",
+          "v": ") and the website verification count; manifests refreshed."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-25",
+    "dateLabel": "2026-06-25",
+    "heading": [
+      {
+        "k": "t",
+        "v": "The Gaussian operator "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the atom trichotomy: "
+      },
+      {
+        "k": "c",
+        "v": "v415"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "v416"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v415"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "DIAMOND.GAUSS.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The square CM-norm dictionary of "
+        },
+        {
+          "k": "c",
+          "v": "v222"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v230"
+        },
+        {
+          "k": "t",
+          "v": " is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "operator-realised"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", and the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " deck becomes an intrinsic diamond object. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the integer commutator "
+        },
+        {
+          "k": "m",
+          "v": "J:=\\tfrac13[U,V]=\\big(\\begin{smallmatrix}-1&1&0\\\\-2&1&0\\\\-3&1&0\\end{smallmatrix}\\big)"
+        },
+        {
+          "k": "t",
+          "v": " has "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{Spec}(J)=\\{i,-i,0\\}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "J^2=-I"
+        },
+        {
+          "k": "t",
+          "v": " on the rank-"
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": " image and "
+        },
+        {
+          "k": "m",
+          "v": "J^3+J=0"
+        },
+        {
+          "k": "t",
+          "v": " — a "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " quarter-turn born from the binary "
+        },
+        {
+          "k": "m",
+          "v": "V"
+        },
+        {
+          "k": "t",
+          "v": " and ternary "
+        },
+        {
+          "k": "m",
+          "v": "U"
+        },
+        {
+          "k": "t",
+          "v": " compilers ("
+        },
+        {
+          "k": "c",
+          "v": "v410"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v95"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "3I+2J"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "5I+4J"
+        },
+        {
+          "k": "t",
+          "v": " have spectra "
+        },
+        {
+          "k": "m",
+          "v": "\\{3{+}2i,3{-}2i,3\\}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\{5{+}4i,5{-}4i,5\\}"
+        },
+        {
+          "k": "t",
+          "v": ", so the Gaussian integers "
+        },
+        {
+          "k": "m",
+          "v": "3{+}2i"
+        },
+        {
+          "k": "t",
+          "v": " (norm "
+        },
+        {
+          "k": "m",
+          "v": "13{=}\\Delta_Q"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "m",
+          "v": "5{+}4i"
+        },
+        {
+          "k": "t",
+          "v": " (norm "
+        },
+        {
+          "k": "m",
+          "v": "41{=}10b_1"
+        },
+        {
+          "k": "t",
+          "v": ") are "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "literal eigenvalues"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "(aI{+}bJ)(aI{-}bJ)"
+        },
+        {
+          "k": "t",
+          "v": " reads "
+        },
+        {
+          "k": "m",
+          "v": "(a^2{+}b^2)"
+        },
+        {
+          "k": "t",
+          "v": " on the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": "-plane and the real part"
+        },
+        {
+          "k": "m",
+          "v": "^2"
+        },
+        {
+          "k": "t",
+          "v": " on the kernel ("
+        },
+        {
+          "k": "m",
+          "v": "\\{13,13,9\\}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\{41,41,25\\}"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the intrinsic order-"
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " deck "
+        },
+        {
+          "k": "m",
+          "v": "D=-I+J-J^2"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "D^4=I"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\chi_D=(x{+}1)(x^2{+}1)"
+        },
+        {
+          "k": "t",
+          "v": ") has "
+        },
+        {
+          "k": "m",
+          "v": "\\chi_2"
+        },
+        {
+          "k": "t",
+          "v": "-line "
+        },
+        {
+          "k": "m",
+          "v": "\\ker[U,V]=a-\\mathbf 1"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the geometric-deck identification sharpens (does not close) the "
+        },
+        {
+          "k": "c",
+          "v": "v140"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\Z_3"
+        },
+        {
+          "k": "t",
+          "v": " residue. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": "; Wolfram-mirrored."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v416"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "ARITH.TRICHOTOMY.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The atoms "
+        },
+        {
+          "k": "m",
+          "v": "\\{2,3,5\\}"
+        },
+        {
+          "k": "t",
+          "v": " are ramified/inert/split in the two exceptional CM rings. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "in "
+        },
+        {
+          "k": "m",
+          "v": "\\Z[i]"
+        },
+        {
+          "k": "t",
+          "v": " (square/seam) "
+        },
+        {
+          "k": "m",
+          "v": "2{=}|\\Z_2|"
+        },
+        {
+          "k": "t",
+          "v": " ramifies, "
+        },
+        {
+          "k": "m",
+          "v": "3{=}\\Nfam"
+        },
+        {
+          "k": "t",
+          "v": " is inert, "
+        },
+        {
+          "k": "m",
+          "v": "5{=}\\gcar"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "splits"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " as "
+        },
+        {
+          "k": "m",
+          "v": "(2{+}i)(2{-}i)"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "in "
+        },
+        {
+          "k": "m",
+          "v": "\\Z[\\omega]"
+        },
+        {
+          "k": "t",
+          "v": " (hex/flavor) "
+        },
+        {
+          "k": "m",
+          "v": "3{=}\\Nfam"
+        },
+        {
+          "k": "t",
+          "v": " ramifies, "
+        },
+        {
+          "k": "m",
+          "v": "2,5"
+        },
+        {
+          "k": "t",
+          "v": " are inert; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the ramified prime of each ring is its own atom; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the three quadratic facets "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb Q(i),\\mathbb Q(\\sqrt{-3}),\\mathbb Q(\\sqrt5)"
+        },
+        {
+          "k": "t",
+          "v": " of "
+        },
+        {
+          "k": "m",
+          "v": "K=\\mathbb Q(i,\\sqrt{-3},\\sqrt5)"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v403"
+        },
+        {
+          "k": "t",
+          "v": ") ramify over exactly one atom each, product "
+        },
+        {
+          "k": "m",
+          "v": "2\\cdot3\\cdot5=30=h(E_8)"
+        },
+        {
+          "k": "t",
+          "v": ", two imaginary (CM/dynamic) "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " one real (RM/static). "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the seam/flavor/golden reading. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": "; Wolfram-mirrored."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Wolfram extension "
+            },
+            {
+              "k": "m",
+              "v": "308\\to315"
+            },
+            {
+              "k": "t",
+              "v": " "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " a pre-existing fix."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Added the seven exact checks for "
+        },
+        {
+          "k": "c",
+          "v": "v415"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v416"
+        },
+        {
+          "k": "t",
+          "v": " and corrected a one-character sign bug in the "
+        },
+        {
+          "k": "c",
+          "v": "v412"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "CharacteristicPolynomial"
+        },
+        {
+          "k": "t",
+          "v": " check (Wolfram returns "
+        },
+        {
+          "k": "m",
+          "v": "-\\chi"
+        },
+        {
+          "k": "t",
+          "v": " for odd rank), so "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_readouts_extension.wl"
+        },
+        {
+          "k": "t",
+          "v": " now runs genuinely clean at "
+        },
+        {
+          "k": "m",
+          "v": "315/315"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "GATE.WOLFRAM.02"
+        },
+        {
+          "k": "t",
+          "v": "); README and ledger counts updated."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Surfaces synced."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "run_all.py"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "script_registry.csv"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "status_ledger.csv"
+        },
+        {
+          "k": "t",
+          "v": " updated; a new keybox paragraph in the Sheet-Diamond section of "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": " and a trichotomy sentence in "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": "; manifests refreshed."
+        }
+      ]
+    ]
+  },
+  {
     "date": "2026-06-24",
     "dateLabel": "2026-06-24",
     "heading": [

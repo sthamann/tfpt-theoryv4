@@ -105,7 +105,7 @@ v84–v93 block passed **45/45** on first run; the v94–v140 blocks were added
 the same day, the v141–v144 block on 2026-06-12. Current state:
 
 ```
---- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v414: 308 passed, 0 failed ---
+--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419: 324 passed, 0 failed ---
 ALL WOLFRAM EXTENSION CHECKS PASSED
 ```
 
@@ -236,6 +236,50 @@ re-encoding of `5·11/(9·13)`), `v412_sheet_source_corner_J.py` (the Z₂-wall 
 `v414_center_resolvent_portal.py` (the resolvent ladder `det(C)=14`, `det(I+C)=52`,
 `det(2I+C)=120` = `G₂ → F₄ → E₈⁺`). The binary-spine / Lie-dimension readings stay `[C]`,
 audit-typed.
+
+The 2026-06-25 **Gaussian-operator / atom-trichotomy round** added seven exact
+checks (308 → 315): `v415_gaussian_operator.py` (the square CM-norm dictionary of
+`v222`/`v230` lifted from numbers to OPERATORS via `J = [U,V]/3`, the integer `μ₄`
+quarter-turn born from the commutator of the binary `V` and ternary `U` compilers —
+`J² = -I` on the rank-2 image, the Gaussian integers `3+2i`/`5+4i` are eigenvalues of
+`3I+2J`/`5I+4J` with norms `13=Δ_Q`/`41=10b₁`, `(aI+bJ)(aI-bJ)` reads `(a²+b²)` on the
+`μ₄`-plane and the real part² on the kernel, and the intrinsic order-4 deck
+`D=-I+J-J²` with `χ₂`-line `ker[U,V]=a-1`) and `v416_atom_trichotomy.py` (the atoms
+`{2,3,5}` are ramified/inert/split in `ℤ[i]` vs `ℤ[ω]`, the ramified prime of each ring
+is its own atom, and each atom is the unique ramified prime of one quadratic facet of
+`K=ℚ(i,√-3,√5)`, product `2·3·5=30=h(E₈)`). This round also corrected a one-character
+sign bug in the pre-existing `v412` `CharacteristicPolynomial` check (Wolfram returns
+`-(χ)` for odd rank `n=3`), so the extension now runs genuinely clean at `315/315`.
+
+The 2026-06-25 **Eisenstein/CP-operator round** added three exact checks (315 → 318):
+`v417_eisenstein_cp_operator.py` — the hexagonal dual of `v415`. The family rotation
+`P=(1 2 3)` is the order-3 Eisenstein deck (`P²+P+I=ONES`) and realises the hex CM norm
+`7=N_ℤ[ω](3+2ω)` as `(3I+2P)(3I+2P²)=7I+6·ONES` with `Spec {7,7,25}` (the dual of `v415`'s
+`{13,13,9}`); the CP clock `W=-P²` (order 6, `W²=P`, `W³=-I`, `Spec {-1,ζ₆,ζ₆⁻¹}`) gives the
+two CP phases `δ_CKM=arg ζ₆=π/3` and `δ_PMNS=arg ζ₆⁴=4π/3`; and all flavor-side clocks are
+powers of `ζ₃₀` (`ζ₃₀¹⁵=-1`, `ζ₃₀¹⁰=ω`, `ζ₃₀⁶=ζ₅`, `ζ₃₀⁵=ζ₆`) while the seam `μ₄=i` is the
+Galois side `(ℤ/30)^×` of order `φ(30)=8=rank E₈` — so `ℚ(ζ₃₀)` carries both `E₈` invariants
+(`h=30` and `rank=8`).
+
+The 2026-06-25 **cyclotomic-norm-triple round** added three exact checks (318 → 321):
+`v418_cyclotomic_norm_triple.py` — it finds the missing carrier-5 clock of `v417` as the `4×4`
+`Φ₅`-companion `C₅` (`C₅⁵=I`, golden ratio in its `2cos` values), shows the carrier norm
+`N_ℤ[ζ₅](3+2ζ₅)=det(3I+2C₅)=55=5·11=` the quark numerator, and assembles the norm triple
+`det(3I+2·Comp(Φ_{3,4,5}))=(7,13,55)=`(scalaron, `Δ_Q`, quark numerator) over the three atom-rings
+`ℤ[ω],ℤ[i],ℤ[ζ₅]` (atoms `3,2,5`). Negative control: the anchor `(5,4)→(21,41,461)` reaches named
+values only in the `ω`- and `i`-rings (`21=N_ω(5,4)`, `41=10b₁`, `v222`) but `461` (prime) in the
+carrier ring, so the carrier ring separates `(3,2)→55` from `(5,4)→461`; and honestly the scan shows
+`(3,2)` is the **forced** carrier split (`v14`), not the unique clean one (`(2,1)→(3,5,11)` is a
+secondary rung).
+
+The 2026-06-25 **seam-Galois round** added three exact checks (321 → 324):
+`v419_seam_galois_carrier.py` — a positive resolution of the `v409`/`RES.COXETER.SYMMETRY.01` cyclic/Galois
+asymmetry. Because `h(E₈)=30` is squarefree the cyclic clock `ℤ/30` has **no order-4 element**, so the seam
+`μ₄` is forced onto the Galois side `(ℤ/30)^× = (ℤ/2)^××(ℤ/3)^××(ℤ/5)^× = μ₄×ℤ₂` (order `φ(30)=8=rank E₈`);
+the `μ₄` (`ℤ/4`) factor **is** `(ℤ/5)^×` — the carrier prime 5 — so the seam `μ₄ = Gal(ℚ(ζ₅))`, realised on
+the carrier clock `C₅` by the explicit Frobenius operator `G` with `G C₅ G⁻¹ = C₅²`, `G⁴=I`. So the square
+seam (atom 2) is the carrier pentagon's (atom 5) Galois group, and `ℚ(ζ₃₀)` carries both `E₈` invariants.
+Figure `coxeter_galois.pdf`.
 
 The 2026-06-22 **next-steps round (A/C/D/B)** added one more exact check (288 → 289):
 `v337_decoupling_theorem.py` (the ambient back-reaction scale `2·dim(E₈)·c₃² = 31/(4π²)`

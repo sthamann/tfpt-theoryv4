@@ -1199,6 +1199,80 @@ def fig_ftransfer_dynamics():
     plt.close(fig)
 
 
+def fig_coxeter_galois():
+    """The order-30 Coxeter clock and its Galois gear (v419): the flavor clocks
+    (sheet/family/carrier/CP) are powers of zeta30 on the cyclic dial (order
+    h(E8)=30), while the seam mu4 (i) is NOT on the dial -- 30 is squarefree so
+    4 does not divide it -- but the Galois group (Z/30)^x = mu4 x Z2 =
+    Aut(Q(zeta5)) x Aut(Q(zeta3)) = the carrier-pentagon automorphisms x CP
+    conjugation.  Backs v419 / v417 / v418."""
+    fig, (axc, axg) = plt.subplots(1, 2, figsize=(9.8, 5.0),
+                                   gridspec_kw={"width_ratios": [1.15, 1.0]})
+
+    # ---- left: the cyclic 30-dial with the four flavor hands ----
+    th = np.linspace(0, 2 * np.pi, 400)
+    axc.plot(np.cos(th), np.sin(th), color=C["gray"], lw=0.8, alpha=0.4)
+    for k in range(30):
+        a = 2 * np.pi * k / 30
+        r0 = 0.88 if k % 5 == 0 else 0.93
+        axc.plot([r0 * np.cos(a), np.cos(a)], [r0 * np.sin(a), np.sin(a)],
+                 color=C["gray"], lw=0.6, alpha=0.5)
+    hands = [(15, r"sheet $-1=\zeta_{30}^{15}$ (ord 2)", C["gray"]),
+             (10, r"family $\omega=\zeta_{30}^{10}$ (ord 3)", C["green"]),
+             (6,  r"carrier $\zeta_5=\zeta_{30}^{6}$ (ord 5)", C["gold"]),
+             (5,  r"CP $\zeta_6=\zeta_{30}^{5}$ (ord 6)", C["red"])]
+    for k, lab, col in hands:
+        a = 2 * np.pi * k / 30
+        axc.annotate("", xy=(np.cos(a), np.sin(a)), xytext=(0, 0),
+                     arrowprops=dict(arrowstyle="->", color=col, lw=2.0))
+        axc.scatter([np.cos(a)], [np.sin(a)], s=70, color=col, zorder=4,
+                    edgecolor="k", lw=0.4)
+    axc.scatter([0], [0], s=18, color="k", zorder=5)
+    for i, (k, lab, col) in enumerate(hands):
+        axc.text(-1.52, 1.30 - 0.21 * i, lab, fontsize=7.8, color=col)
+    axc.set_aspect("equal"); axc.set_xlim(-1.58, 1.5); axc.set_ylim(-1.4, 1.55)
+    axc.set_xticks([]); axc.set_yticks([])
+    for sp in axc.spines.values():
+        sp.set_visible(False)
+    axc.set_title(r"Cyclic dial $\langle\zeta_{30}\rangle$, order $h(E_8){=}30$",
+                  fontsize=9.5)
+
+    # ---- right: the Galois gears (seam mu4 + CP Z2) ----
+    axg.axis("off")
+    sq = np.array([[1, 1], [-1, 1], [-1, -1], [1, -1], [1, 1]]) * 0.5 \
+        + np.array([-0.55, 0.45])
+    axg.plot(sq[:, 0], sq[:, 1], color=C["blue"], lw=2.2)
+    for v in sq[:4]:
+        axg.scatter([v[0]], [v[1]], s=55, color=C["blue"], zorder=3,
+                    edgecolor="k", lw=0.4)
+    axg.text(-0.55, 0.45, r"$\mu_4$", ha="center", va="center", fontsize=14,
+             color=C["blue"])
+    axg.text(-0.55, 1.18, r"SEAM $=\mathrm{Gal}\,\mathbb{Q}(\zeta_5)=(\mathbb{Z}/5)^\times$",
+             ha="center", fontsize=8.0, color=C["blue"])
+    axg.text(-0.55, -0.32, r"$i:\ \zeta_5\!\mapsto\!\zeta_5^2$ (Frobenius)",
+             ha="center", fontsize=7.6, color=C["blue"])
+    axg.plot([0.75, 1.7], [0.45, 0.45], color=C["green"], lw=2.2)
+    axg.scatter([0.75, 1.7], [0.45, 0.45], s=55, color=C["green"], zorder=3,
+                edgecolor="k", lw=0.4)
+    axg.text(1.22, 0.66, r"$\mathbb{Z}_2$", ha="center", fontsize=12,
+             color=C["green"])
+    axg.text(1.22, 0.16, r"CP $=\mathrm{Gal}\,\mathbb{Q}(\zeta_3)=(\mathbb{Z}/3)^\times$",
+             ha="center", fontsize=7.6, color=C["green"])
+    axg.text(0.35, -1.05,
+             r"$(\mathbb{Z}/30)^\times=\mu_4\times\mathbb{Z}_2$, order "
+             r"$\varphi(30){=}8{=}\mathrm{rank}\,E_8$", ha="center",
+             fontsize=8.4, fontweight="bold")
+    axg.set_xlim(-1.45, 1.95); axg.set_ylim(-1.3, 1.55)
+    axg.set_title(r"Galois gears, order $\mathrm{rank}\,E_8{=}8$",
+                  fontsize=9.5)
+
+    fig.suptitle(r"$30$ squarefree $\Rightarrow$ the seam $\mu_4$ is not a hand "
+                 r"($4\nmid30$) but the carrier's Galois group", fontsize=10.5)
+    fig.tight_layout(rect=[0, 0, 1, 0.95])
+    fig.savefig(os.path.join(OUT, "coxeter_galois.pdf"))
+    fig.savefig(os.path.join(WEB, "coxeter_galois.png"), dpi=150)
+
+
 if __name__ == "__main__":
     fig_alpha_ablation()
     fig_mass_ladder()
@@ -1207,6 +1281,7 @@ if __name__ == "__main__":
     fig_coxeter_circle()
     fig_translation_clock()
     fig_galois_cp_hexagon()
+    fig_coxeter_galois()
     fig_seed_hyperplane()
     fig_attractor()
     fig_sds_cover()

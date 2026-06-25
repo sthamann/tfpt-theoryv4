@@ -148,10 +148,44 @@ the \mO\ P2 interface. The same exceptional geometry has two metric readings via
 (\veri{v222\_cm\_norm\_duality.py}): on the \emph{square} seam ($j{=}1728$, Gaussian $\Z[i]$) the EM index is
 the Gaussian norm $N(\gcar{+}i|\mu_4|)=5^2{+}4^2=41=10b_1$, while on the \emph{hexagonal} partner ($j{=}0$,
 Eisenstein $\Z[\omega]$) the scalaron exponent is $N(3{+}2\omega)=7$ --- the carrier split $(3,2)$ generates
-$(5,6,7,13)$ by sum/product/Eisenstein/Gauss norm, the rings rigid. And the seam $\mu_4$ clock is the
+$(5,6,7,13)$ by sum/product/Eisenstein/Gauss norm, the rings rigid. The same two rings give the atoms a
+\emph{splitting trichotomy} (\veri{v416\_atom\_trichotomy.py}): in $\Z[i]$ (the square seam) $2{=}|\Z_2|$
+ramifies, $3{=}\Nfam$ is inert and $5{=}\gcar$ \emph{splits} as $(2{+}i)(2{-}i)$, while in $\Z[\omega]$ (the
+hexagonal partner) $3$ ramifies and $2,5$ are inert --- so the ramified prime of each ring \emph{is} its own
+atom, and the three quadratic facets $\mathbb Q(i),\mathbb Q(\sqrt{-3}),\mathbb Q(\sqrt5)$ of the order-$30$
+field $K=\mathbb Q(i,\sqrt{-3},\sqrt5)$ (\vref{v403}) ramify over exactly one atom each ($2,3,5$; product
+$30=h(E_8)$), two imaginary (CM/dynamic) plus one real (RM/static). The arithmetic is \mE, the
+seam/flavor/golden reading \mC. The same three rings carry the carrier split $(3,2)$ as one
+determinant triple (\veri{v418\_cyclotomic\_norm\_triple.py}): $\det(3I+2\,\mathrm{Comp}(\Phi_n))=(7,13,55)$
+for $n=3,4,5$ over $\Z[\omega],\Z[i],\Z[\zeta_5]$ --- the scalaron, $\Delta_Q$ and the quark numerator
+$55=\gcar\|\operatorname{Pl}(K)\|_1$; the carrier-$5$ clock missing from the $3$-dim flavor space is the
+$4{\times}4$ $\Phi_5$-companion (with the golden $\varphi$ as its real-part data). The anchor $(5,4)$ fails
+the triple in the carrier ring ($461$, prime), and honestly $(3,2)$ is the \emph{forced} split (\vref{v14}),
+not the unique clean one (the scan also finds $(2,1){\to}(3,5,11)$, a secondary rung). The sharper
+discriminator is \emph{cross-sector}: only $(3,2)$ lights up three different physics sectors --- gravity
+($7$), flavor ($13$) and masses ($55$) --- whereas $(2,1){\to}(3,5,11)$ is all compiler-core
+($\Nfam,\gcar,\|\operatorname{Pl}(K)\|_1$); the two rungs read as input $(2,1)\to$ output $(3,2)$. \mE/\mC.
+And the seam $\mu_4$
+clock is the
 order-$4$ character of the $E_8$ Coxeter cycle itself: $(\Z/30)^\times$ are the $E_8$ exponents, with the
 order-$4$ generator $7$ acting as a literal $\mu_4$ clock on the eight live phases
-(\veri{v223\_coxeter\_totative\_clock.py}). Finally, P2 itself reads as a Riemann--Roch index: a degree-$4$
+(\veri{v223\_coxeter\_totative\_clock.py}).
+\par\smallskip\noindent\emph{The seam $\mu_4$ is the carrier's Galois group
+(\veri{v419\_seam\_galois\_carrier.py}).} The deeper reason the seam sits on the Galois side, not on the
+cyclic dial, is that $h(E_8)=30$ is \emph{squarefree}: $\Z/30$ has no order-$4$ element, so $\mu_4$ cannot
+be a rotation hand. By CRT $(\Z/30)^\times=(\Z/2)^\times\times(\Z/3)^\times\times(\Z/5)^\times=\mu_4\times\Z_2$
+(order $\varphi(30)=8=\operatorname{rank}E_8$), and the $\mu_4$ factor \emph{is}
+$(\Z/5)^\times=\operatorname{Gal}(\mathbb Q(\zeta_5))$ --- the carrier prime $5$. So the seam $\mu_4$ is the
+carrier pentagon's automorphism group: the Frobenius $\zeta_5\mapsto\zeta_5^2$ is the explicit order-$4$
+operator $G$ with $G\,C_5\,G^{-1}=C_5^2$, $G^4=I$ on the carrier clock $C_5$ (\vref{v418}). This is the
+positive content of \texttt{RES.COXETER.SYMMETRY.01} (\vref{v409}): the $2^2=4$ is the order of
+$(\Z/5)^\times$, and the seam ``carries no rate'' because it is an \emph{automorphism}, not a hand. So
+$\mathbb Q(\zeta_{30})$ carries both $E_8$ invariants --- the cyclic hands ($h=30$) and the Galois gears
+($\operatorname{rank}=8=\mu_4\times\Z_2$).
+\begin{center}
+\includegraphics[width=0.92\linewidth]{coxeter_galois.pdf}
+\end{center}
+Finally, P2 itself reads as a Riemann--Roch index: a degree-$4$
 seam divisor on $\PP^1$ forces $h^0{=}5{=}\gcar$ and $\operatorname{rank}H_1{=}3{=}\Nfam$, with even Clifford
 closure $\Lambda^{\mathrm{even}}(\mathbb C^5)=16=\dim S^+$ (\veri{v228\_rr\_index\_gate.py}, \mE/\mC/\mO,
 conditional on the seam producing the degree-$4$ divisor $=$ \texttt{QGEO.SYM.01}). And the same
@@ -566,9 +600,9 @@ family-slice atoms $\{|Z_2|,\dim A_2{=}\det R,\|Pl(K)\|_1^2\}$). \mE/\mC
 The dynamic sector is moreover pure $\{2,3\}$-arithmetic with the seam (prime-$2$) as the common factor: the QG
 susceptibility $\chi=729/665=3^6/(3^6{-}2^6)$ and the seam rate $(2/3)^6=2^6/3^6$, while $2/3=|Z_2|/\Nfam$ and the
 compiler rate $(\varphi{+}2)/4=(\varphi{+}2)/|\mu_4|$ ($|\mu_4|{=}4{=}2^2$) both carry prime-$2$ --- so $30=5\times6
-=\gcar\,(2\Nfam)$ reads as (static carrier prime-$5$) $\times$ (dynamic prime-$2{\cdot}$prime-$3$). Whether the
-seam is the \emph{forced} universal dynamical engine (no independent prime-$2$ attractor) is registered as the open
-question \texttt{RES.COXETER.SYMMETRY.01}. \textbf{And the gap does double duty (\veri{v387\_corrections\_gap.py}):} the same
+=\gcar\,(2\Nfam)$ reads as (static carrier prime-$5$) $\times$ (dynamic prime-$2{\cdot}$prime-$3$). That the
+seam is the \emph{forced} universal dynamical engine (no independent prime-$2$ attractor) is
+\texttt{RES.COXETER.SYMMETRY.01}, resolved as a structural lemma (\vref{v409}/\vref{v419}). \textbf{And the gap does double duty (\veri{v387\_corrections\_gap.py}):} the same
 $\lambda_2/\lambda_1$ that forces uniqueness also \emph{sizes} the first correction in each sector
 ($\mathrm{correction}_n\sim(\lambda_2/\lambda_1)^n$) --- flavor, horizon recovery and the QG bound all carry the
 $(2/3)^6$ rate (the QG susceptibility $\chi=729/665$ caps the ambient correction), while the discrete compiler

@@ -2424,7 +2424,7 @@ Module[{R, Q, V, C, J, one, a, I3, t, lam, Mt, e1, e2, e3, d1, d2, en, num, den}
   (* v412: the sheet source corner J = M(1,-2) on the Z2 wall *)
   checkExact["v412 DIAMOND.SHEET.SOURCE.J.01: J = M(1,-2) = C - 2V = {{4,1,0},{4,1,2},{5,1,1}} on the Z2 wall (det=2); chi_J = lam^3-6 lam^2+3 lam-2 => (tr,e2,det)=(6,3,2); a.J.a=30=h(E8), det(I+J)=12=dim g_SM=chi_E8(i), det(2I+J)=40=|R(D5)|",
     J == {{4, 1, 0}, {4, 1, 2}, {5, 1, 1}}
-      && Simplify[CharacteristicPolynomial[J, lam] - (lam^3 - 6 lam^2 + 3 lam - 2)] == 0
+      && Simplify[CharacteristicPolynomial[J, lam] + (lam^3 - 6 lam^2 + 3 lam - 2)] == 0
       && Tr[J] == 6 && Det[J] == 2 && a . J . a == 30
       && Det[I3 + J] == 12 && Det[2 I3 + J] == 40];
 
@@ -2445,6 +2445,141 @@ Module[{R, Q, V, C, J, one, a, I3, t, lam, Mt, e1, e2, e3, d1, d2, en, num, den}
       && Det[I3 + C] == 52 && Det[2 I3 + C] == 120];
 ];
 
+(* ==== v415-v416 round: Gaussian operator + atom trichotomy ==== *)
+Module[{R, Q, U, V, J, I3, one, a, Pi2, D, x, neis},
+  R = {{1, 3, 0}, {1, 5, 2}, {2, 5, 3}};
+  Q = {{3, 1, 0}, {3, 2, 0}, {3, 2, 1}};
+  U = Q . DiagonalMatrix[{1, 0, 0}];
+  V = Q . DiagonalMatrix[{0, 1, 1}];
+  J = (U . V - V . U)/3;
+  I3 = IdentityMatrix[3]; one = {1, 1, 1}; a = {1, 1, 2};
+
+  (* v415 (1): J = [U,V]/3 is an integer mu4 quarter-turn complex structure *)
+  checkExact["v415 DIAMOND.GAUSS.01 (i): J=[U,V]/3={{-1,1,0},{-2,1,0},{-3,1,0}} integer, Spec(J)={i,-i,0}, J^3+J=0 (J^2=-I on the rank-2 image), MatrixRank=2 -- a mu4 quarter-turn from [binary V, ternary U]",
+    J == {{-1, 1, 0}, {-2, 1, 0}, {-3, 1, 0}}
+      && Sort[Eigenvalues[J]] == Sort[{I, -I, 0}]
+      && MatrixPower[J, 3] + J == ConstantArray[0, {3, 3}]
+      && MatrixRank[J] == 2];
+
+  (* v415 (2): the Gaussian integers 3+2i, 5+4i are eigenvalues *)
+  checkExact["v415 DIAMOND.GAUSS.01 (ii): 3I+2J has spectrum {3+2i,3-2i,3} and 5I+4J has {5+4i,5-4i,5}; |3+2i|^2=13=Delta_Q, |5+4i|^2=41=10 b1 -- the Gaussian integers are literal operator eigenvalues",
+    Sort[Eigenvalues[3 I3 + 2 J]] == Sort[{3 + 2 I, 3 - 2 I, 3}]
+      && Sort[Eigenvalues[5 I3 + 4 J]] == Sort[{5 + 4 I, 5 - 4 I, 5}]
+      && 3^2 + 2^2 == 13 && 5^2 + 4^2 == 41];
+
+  (* v415 (3): the square-norm dictionary as operator identities *)
+  checkExact["v415 DIAMOND.GAUSS.01 (iii): (3I+2J)(3I-2J)=9I-4J^2 has Spec {13,13,9} (13=Delta_Q, 9=N_fam^2); (5I+4J)(5I-4J)=25I-16J^2 has Spec {41,41,25} (41=10 b1, 25=g_car^2) -- the v222/v230 norms as operators",
+    (3 I3 + 2 J) . (3 I3 - 2 J) == 9 I3 - 4 J . J
+      && Sort[Eigenvalues[(3 I3 + 2 J) . (3 I3 - 2 J)]] == Sort[{13, 13, 9}]
+      && (5 I3 + 4 J) . (5 I3 - 4 J) == 25 I3 - 16 J . J
+      && Sort[Eigenvalues[(5 I3 + 4 J) . (5 I3 - 4 J)]] == Sort[{41, 41, 25}]];
+
+  (* v415 (4): the intrinsic order-4 mu4 deck D = -I + J - J^2 *)
+  Pi2 = I3 + J . J; D = J - Pi2;
+  checkExact["v415 DIAMOND.GAUSS.01 (iv): the intrinsic deck D=-I+J-J^2={{-1,1,0},{-2,1,0},{-4,3,-1}} is order 4 (D^4=I), Spec(D)={i,-1,-i} (the seam-deck spectrum, v146); chi2 line = ker[U,V] = NullSpace = {(0,0,1)} = a-1",
+    D == {{-1, 1, 0}, {-2, 1, 0}, {-4, 3, -1}}
+      && MatrixPower[D, 4] == I3
+      && Sort[Eigenvalues[D]] == Sort[{I, -I, -1}]
+      && NullSpace[J] == {{0, 0, 1}} && a - one == {0, 0, 1}];
+
+  (* v416 (1): the Z[i] (square/seam) trichotomy *)
+  checkExact["v416 ARITH.TRICHOTOMY.01 (Z[i], square/seam): 2 RAMIFIES (2=-i(1+i)^2), 3 INERT (3 mod 4=3, norm 9=N_fam^2), 5 SPLITS (5=(2+i)(2-i), 5 mod 4=1) -- g_car=5 factors on the seam",
+    Expand[-I (1 + I)^2] == 2 && Mod[3, 4] == 3 && 3^2 == 9
+      && Expand[(2 + I)(2 - I)] == 5 && Mod[5, 4] == 1 && 2^2 + 1^2 == 5];
+
+  (* v416 (2): the Z[omega] (hex/flavor) trichotomy + ramified prime = own atom *)
+  neis[aa_, bb_] := aa^2 - aa bb + bb^2;
+  checkExact["v416 ARITH.TRICHOTOMY.01 (Z[omega], hex/flavor): 3 RAMIFIES (N(1-omega)=3), 2 INERT (2 mod 3=2, norm 4), 5 INERT (5 mod 3=2, norm 25=g_car^2); the ramified prime of each ring is its atom (Z[i]<->2, Z[omega]<->3)",
+    neis[1, -1] == 3 && Mod[2, 3] == 2 && neis[2, 0] == 4
+      && Mod[5, 3] == 2 && neis[5, 0] == 25];
+
+  (* v416 (3): the three facets ramify over one atom each (v403) *)
+  checkExact["v416 ARITH.TRICHOTOMY.01 (facets, v403): Q(i)/Q(sqrt-3)/Q(sqrt5) have disc -4,-3,5, ramified over exactly {2},{3},{5}; product 2*3*5=30=h(E8); 2 imaginary (CM) + 1 real (RM)",
+    FactorInteger[4][[All, 1]] == {2} && FactorInteger[3][[All, 1]] == {3}
+      && FactorInteger[5][[All, 1]] == {5} && 2*3*5 == 30];
+];
+
+(* ==== v417 round: the Eisenstein/CP operator + the order-30 clock ==== *)
+Module[{P, W, I3, ones3, omega, zeta6, z30},
+  P = {{0, 0, 1}, {1, 0, 0}, {0, 1, 0}};        (* family rotation (1 2 3) *)
+  W = -MatrixPower[P, 2];                        (* the CP clock, order 6 *)
+  I3 = IdentityMatrix[3]; ones3 = ConstantArray[1, {3, 3}];
+  omega = Exp[2 Pi I/3]; zeta6 = Exp[I Pi/3]; z30 = Exp[2 Pi I/30];
+
+  (* v417 (1): the family rotation = Eisenstein deck + the hex norm 7 *)
+  checkExact["v417 DIAMOND.EISEN.01 (i): P=(1 2 3) Eisenstein deck (P^3=I, P^2+P+I=ONES); (3I+2P)(3I+2P^2)=7I+6 ONES with Spec {7,7,25} (7=N_omega(3+2omega)=scalaron, 25=g_car^2) -- the dual of v415's {13,13,9}; NEG (5I+4P)(5I+4P^2)->{21,21,81}, N_omega(5,4)=21!=41",
+    MatrixPower[P, 3] == I3 && MatrixPower[P, 2] + P + I3 == ones3
+      && (3 I3 + 2 P) . (3 I3 + 2 MatrixPower[P, 2]) == 7 I3 + 6 ones3
+      && Sort[Eigenvalues[(3 I3 + 2 P) . (3 I3 + 2 MatrixPower[P, 2])]] == Sort[{7, 7, 25}]
+      && (3^2 - 3*2 + 2^2) == 7
+      && Sort[Eigenvalues[(5 I3 + 4 P) . (5 I3 + 4 MatrixPower[P, 2])]] == Sort[{21, 21, 81}]
+      && (5^2 - 5*4 + 4^2) == 21];
+
+  (* v417 (2): the CP clock W = -P^2 and both CP phases *)
+  checkExact["v417 DIAMOND.EISEN.01 (ii): the CP clock W=-P^2 (=rho v233) has W^3=-I, W^2=P, Spec {-1,zeta6,zeta6^-1}; delta_CKM,lead=arg(zeta6)=pi/3 (eigenvalue of W), delta_PMNS=arg(zeta6^4)=4pi/3 (eigenvalue of W^4=P^2); W^3=-I the Z2 sheet flip",
+    MatrixPower[W, 3] == -I3 && MatrixPower[W, 2] == P && MatrixPower[W, 4] == MatrixPower[P, 2]
+      && Simplify[Det[W - zeta6 I3]] == 0 && Det[W + I3] == 0
+      && Simplify[Det[MatrixPower[W, 4] - Exp[4 I Pi/3] I3]] == 0
+      && Arg[zeta6] == Pi/3];
+
+  (* v417 (3): one order-30 Coxeter clock; seam mu4 is the Galois side *)
+  checkExact["v417 DIAMOND.EISEN.01 (iii): all flavor clocks are powers of zeta30 (h(E8)=30): z30^15=-1 (mu2), z30^10=omega (mu3), z30^6=zeta5 (mu5), z30^5=zeta6 (mu6); the seam mu4 (i) is NOT a power (4 nmid 30), it is the Galois side (Z/30)^x of order phi(30)=8=rank E8",
+    Simplify[z30^15 + 1] == 0 && Simplify[z30^10 - omega] == 0
+      && Simplify[z30^6 - Exp[2 Pi I/5]] == 0 && Simplify[z30^5 - zeta6] == 0
+      && Mod[30, 4] != 0 && EulerPhi[30] == 8
+      && Length[Select[Range[29], GCD[#, 30] == 1 &]] == 8];
+];
+
+(* ==== v418 round: the cyclotomic norm triple (7,13,55) over the atom-rings ==== *)
+Module[{C3, C4, C5, I2, I4, phi},
+  C3 = {{0, -1}, {1, -1}};                  (* Phi3 companion (omega) *)
+  C4 = {{0, -1}, {1, 0}};                    (* Phi4 companion (i) *)
+  C5 = {{0, 0, 0, -1}, {1, 0, 0, -1}, {0, 1, 0, -1}, {0, 0, 1, -1}};  (* Phi5 (zeta5) *)
+  I2 = IdentityMatrix[2]; I4 = IdentityMatrix[4]; phi = (1 + Sqrt[5])/2;
+
+  (* v418 (1): the carrier-5 clock C5 + the golden ratio *)
+  checkExact["v418 ARITH.NORMTRIPLE.01 (i): the carrier-5 clock C5 (Phi5-companion, 4x4) has C5^5=I, tr=-1, det=1 (the four primitive 5th roots); the golden ratio is its real-part data 2cos(72)=1/phi, 2cos(144)=-phi (output-side, v313/v349; dim 4, not 3 -- refines v417's gap)",
+    MatrixPower[C5, 5] == I4 && Tr[C5] == -1 && Det[C5] == 1
+      && Simplify[2 Cos[2 Pi/5] - 1/phi] == 0 && Simplify[2 Cos[4 Pi/5] + phi] == 0];
+
+  (* v418 (2): the carrier norm = the quark numerator *)
+  checkExact["v418 ARITH.NORMTRIPLE.01 (ii): N_Z[zeta5](3+2 zeta5)=det(3I+2 C5)=55=5*11=quark numerator (v410/v411)",
+    Det[3 I4 + 2 C5] == 55 && 55 == 5*11];
+
+  (* v418 (3): the triple + negative controls *)
+  checkExact["v418 ARITH.NORMTRIPLE.01 (iii): det(3I+2 Comp(Phi_{3,4,5}))=(7,13,55) over Z[omega],Z[i],Z[zeta5] (atoms 3,2,5); NEG control anchor (5,4)->(21,41,461) (461 prime, only the carrier ring distinguishes); (3,2) FORCED not unique, (2,1)->(3,5,11)",
+    {Det[3 I2 + 2 C3], Det[3 I2 + 2 C4], Det[3 I4 + 2 C5]} == {7, 13, 55}
+      && {Det[5 I2 + 4 C3], Det[5 I2 + 4 C4], Det[5 I4 + 4 C5]} == {21, 41, 461}
+      && PrimeQ[461]
+      && {Det[2 I2 + C3], Det[2 I2 + C4], Det[2 I4 + C5]} == {3, 5, 11}];
+];
+
+(* ==== v419 round: the seam mu4 = Gal(Q(zeta5)) = (Z/5)^x ==== *)
+Module[{C5, Phi5, red, G, I4, ord4, x},
+  C5 = {{0, 0, 0, -1}, {1, 0, 0, -1}, {0, 1, 0, -1}, {0, 0, 1, -1}};
+  I4 = IdentityMatrix[4]; Phi5 = x^4 + x^3 + x^2 + x + 1;
+  red[e_] := PadRight[CoefficientList[PolynomialRemainder[x^e, Phi5, x], x], 4];
+  G = Transpose[Table[red[2 k], {k, 0, 3}]];      (* sigma: x -> x^2 *)
+
+  (* v419 (1): 30 squarefree => no order-4 on the cyclic clock *)
+  checkExact["v419 SEAM.GALOIS.01 (i): 30=2*3*5 squarefree => Z/30 has orders {1,2,3,5,6,10,15,30}, NO order 4; the seam mu4 is forced onto the Galois side",
+    SquareFreeQ[30] && Union[Table[30/GCD[k, 30], {k, 0, 29}]] == {1, 2, 3, 5, 6, 10, 15, 30}
+      && ! MemberQ[Table[30/GCD[k, 30], {k, 0, 29}], 4]];
+
+  (* v419 (2): (Z/30)^x = mu4 x Z2 = (Z/5)^x x (Z/3)^x *)
+  ord4 = Select[Range[29], GCD[#, 30] == 1 && MultiplicativeOrder[#, 30] == 4 &];
+  checkExact["v419 SEAM.GALOIS.01 (ii): (Z/30)^x = mu4 x Z2, phi(30)=8=rank E8; mu4=(Z/5)^x (carrier 5), Z2=(Z/3)^x (family/CP); order-4 totatives {7,13,17,23} are (Z/5)^x generators",
+    EulerPhi[30] == 8 && EulerPhi[5] == 4 && EulerPhi[3] == 2 && EulerPhi[2] == 1
+      && ord4 == {7, 13, 17, 23}
+      && AllTrue[ord4, MultiplicativeOrder[Mod[#, 5], 5] == 4 &]];
+
+  (* v419 (3): the seam mu4 = Gal(Q(zeta5)) via the explicit Frobenius G *)
+  checkExact["v419 SEAM.GALOIS.01 (iii): the seam mu4 = Gal(Q(zeta5)): the Frobenius G (zeta5->zeta5^2) has G C5 G^-1 = C5^2, G^4=I, G^2 C5 G^-2 = C5^-1 (complex conj)",
+    G . C5 . Inverse[G] == C5 . C5 && MatrixPower[G, 4] == I4
+      && MatrixPower[G, 2] . C5 . Inverse[MatrixPower[G, 2]] == MatrixPower[C5, 4]
+      && G != I4 && MatrixPower[G, 2] != I4];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v414: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

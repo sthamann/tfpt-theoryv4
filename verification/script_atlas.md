@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`409` registered scripts · `470` ledger claims · `10` clusters.
+`415` registered scripts · `476` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (41 scripts)
+### `core` — Compiler core & the E₈ glue  (44 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -93,6 +93,12 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: QG.AMB.01, v367, v369, v240, v76, v376, v377, v378 · cited: research contracts
 - **v392_seam_s3_scalinglimit** [E/O] `SEAM.S3.SCALINGLIMIT.01` — SEAM.S3.SCALINGLIMIT.01: an HONEST attack on the one open lemma of SEAM.EQUIV.01 (the continuum scaling-limit existence, v336) -- does NOT close it (the abstract existence is the c
   - deps: v336_continuum_limit, v336, v367, v368, v376, v377, v378 · cited: research contracts
+- **v416_atom_trichotomy** [E/C] `ARITH.TRICHOTOMY.01` — The atom trichotomy: {2,3,5} are ramified/inert/split in the two exceptional CM rings, and each atom is the unique ramified prime of one quadratic facet of K=Q(i,sqrt-3,sqrt5) (v40
+  - deps: v403_facet_compositum, v222_cm_norm_duality, v394_coxeter_atoms, v390_prime2_facet, v403, v222, v390, v394 · cited: origin theory
+- **v418_cyclotomic_norm_triple** [E/C] `ARITH.NORMTRIPLE.01` — The cyclotomic norm triple: the carrier split (3,2) read in the three atom-rings gives (7,13,55)=(scalaron, Delta_Q, quark numerator), and the missing carrier-5 clock of v417 is fo
+  - deps: v416_atom_trichotomy, v222_cm_norm_duality, v415_gaussian_operator, v417_eisenstein_cp_operator, v18_quark_yukawa, v416, v222, v415 · cited: origin theory
+- **v419_seam_galois_carrier** [E/C] `SEAM.GALOIS.01` — The seam mu4 IS the carrier's Galois group: a positive resolution of the v409/RES.COXETER.SYMMETRY.01 cyclic/Galois asymmetry. 30=2*3*5 is squarefree so Z/30 has no order-4 element
+  - deps: v394_coxeter_atoms.py; v409_coxeter_prime2_lemma, v418_cyclotomic_norm_triple, v403_facet_compositum, v222_cm_norm_duality, v409, v418, v403, v316 · cited: origin theory
 
 ### `em` — Electromagnetic fixed point  (6 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -110,7 +116,7 @@ _The fine-structure constant as the unique root of the boundary U(1) Ward identi
 - **v391_alpha_quillen_progress** [E/O] `ALPHA.QUILLEN.PROGRESS.01` — ALPHA.QUILLEN.PROGRESS.01: an HONEST attempt at the external target ALPHA.QUILLEN.EXACT.01 (v382) -- it REDUCES the open step to a sharper named sub-target via a solvable model but
   - deps: v382_alpha_quillen_exact, v286_seam_equivalence_contract, v48_em_ward, v336, v341, v382 · cited: 1 architecture e8
 
-### `flavor` — Flavor matrix & operators  (13 scripts)
+### `flavor` — Flavor matrix & operators  (15 scripts)
 _The integer operator ladder (R, K, Q, L) and its spectral invariants — the flavor signature._
 
 - **v4_flavor_matrix** [E] `FLAV.R.01, FLAV.H2.01` — residue matrix R: det 8, minors (2,3,5), χ_R, Σ L = 40
@@ -139,6 +145,10 @@ _The integer operator ladder (R, K, Q, L) and its spectral invariants — the fl
   - deps: v220_cp_hexagonal_modulus, v225_dual_normal_frame, v88_cp_phase_audit · cited: 5 redteam
 - **v233_cp_triality_phase** [E/C] `CP.TRIALITY.01` — The CP phase is the UNIVERSAL family/triality phase, only sheet-split -- one step past v231 in mu6 = mu3 (family/triality) x mu2 (sheet). mu6=mu3 x mu2 (gcd(3,2)=1): the Z3 trialit
   - deps: v231_cp_mu6_phases, v88_cp_phase_audit, v232_e8_kleinian_seam · cited: origin theory, 5 redteam
+- **v415_gaussian_operator** [E/C] `DIAMOND.GAUSS.01` — The square CM-norm dictionary is operator-realised and the mu4 deck is intrinsic: the Gaussian arithmetic of v222/v230 lifted from numbers to OPERATORS via J=[U,V]/3, the complex s
+  - deps: v222_cm_norm_duality, v230_center_budget_norms, v410_sheet_generator_binary, FORM.QGEO.02, v222, v230, v410, v95 · cited: 2 standard model
+- **v417_eisenstein_cp_operator** [E/C] `DIAMOND.EISEN.01` — The Eisenstein/CP operator (hex dual of v415): the family rotation P=(1 2 3) and the CP clock W=-P^2 put the tau=omega flavor side on operators, unified with the seam into ONE orde
+  - deps: v415_gaussian_operator, v222_cm_norm_duality, v230_center_budget_norms, v88_cp_phase_audit, v415, v222, v230, v233 · cited: 2 standard model
 
 ### `masses` — Masses, leptons & quark ratios  (11 scripts)
 _The φ₀-ladder mass formula, the exact lepton coefficients, and the integer-Plücker quark ratios._
@@ -276,7 +286,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v407_dn_pairings_omega** [E/C/O] `FLAV.SELECTOR.CLOSE.01` — FLAV.SELECTOR.CLOSE.01: the R4' residue folds into the tau=omega keystone (v405) -- the three (d,n) selector pairings ARE the tau=omega family-slice atoms. [E] the frame (1,a,sigma
   - deps: v405_seam_equiv_omega, v49_readout_rigidity, v405, v139, v136, v42 · cited: origin theory, 1 architecture e8
 
-### `frontier` — Open gate (G_metric) & the frontier  (118 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (119 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -515,6 +525,8 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v396_phi0_icosahedral, v106_review_validation, v396, v312, v216, v342, v391 · cited: origin theory
 - **v409_coxeter_prime2_lemma** [E/O] `FORM.COXETER.PRIME2.01` — RES.COXETER.SYMMETRY.01 closed as a STRUCTURAL LEMMA: prime-2 is NECESSARY but NOT autonomous -- no prime-2-only attractor exists (resolves the v394/COXETER.ATOMS.01 open question'
   - deps: v394_coxeter_atoms.py; v409_coxeter_prime2_lemma, v394_coxeter_atoms, v394, v409 · cited: research contracts
+- **v420_fpole_qed_running** [E/C/O] `FR.POLE.QED.01` — F_pole external: the Koide source->pole transfer is a ONE-LOOP ELECTROMAGNETIC effect, not an algebraic step -- the honest 'do the external physics' follow-up to v93 and the clock 
+  - deps: v82_koide_attractor_splitting, v93_koide_relaxation_toy, v213_ftransfer_functor, FR.POLE.SOLVE, v93, v82, v327, v371 · cited: 4 frontier
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (173 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -888,16 +900,16 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v403_facet_compositum** — `ARITH.HULL.01`
-- **v404_e8_char_cm_duality** — `E8.CMDUAL.01`
-- **v405_seam_equiv_omega** — `SEAM.EQUIV.02`
-- **v406_pmns_phase_origin** — `FLAV.PMNS.CLOSE.01`
-- **v407_dn_pairings_omega** — `FLAV.SELECTOR.CLOSE.01`
-- **v408_phi0_puncture_heatkernel** — `HYP.PHI0.PUNCTURE.01`
 - **v409_coxeter_prime2_lemma** — `FORM.COXETER.PRIME2.01`
 - **v410_sheet_generator_binary** — `SHEET.GEN.BINARY.01`
 - **v411_ud_ratio_vpower** — `FLAV.UD.VPOWER.01`
 - **v412_sheet_source_corner_J** — `DIAMOND.SHEET.SOURCE.J.01`
 - **v413_sheet_characteristic_calculus** — `DIAMOND.SHEET.CALCULUS.01`
 - **v414_center_resolvent_portal** — `DIAMOND.CENTER.RESOLVENT.01`
+- **v415_gaussian_operator** — `DIAMOND.GAUSS.01`
+- **v416_atom_trichotomy** — `ARITH.TRICHOTOMY.01`
+- **v417_eisenstein_cp_operator** — `DIAMOND.EISEN.01`
+- **v418_cyclotomic_norm_triple** — `ARITH.NORMTRIPLE.01`
+- **v419_seam_galois_carrier** — `SEAM.GALOIS.01`
+- **v420_fpole_qed_running** — `FR.POLE.QED.01`
 

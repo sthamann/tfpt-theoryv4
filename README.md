@@ -142,7 +142,7 @@ anchor (`1/G` is UV-sensitive, Sakharov-type induced gravity) — not a diffuse 
 
 | Item | What it is |
 |---|---|
-| `v1_*.py … v387_*.py` | 382 numbered claim checks (one file per claim cluster; highest ID `v387`). |
+| `v1_*.py … v420_*.py` | 415 numbered claim checks (one file per claim cluster; highest ID `v420`). |
 | `run_all.py` | Runs the whole suite; ends `ALL CHECKS PASSED`. |
 | `tfpt_constants.py` | Shared constants + `check()` harness. |
 | `predictions_frozen.json` | **Blind-prediction registry** (frozen 2026-06-09): every dimensionless prediction of record at 25 digits, locked to its formula by `v84_frozen_registry.py` on every run; exactly one `θ12` prediction of record (seed `0.306747`), `r`/`n_s` only as `N_star` bands. |
@@ -152,7 +152,7 @@ anchor (`1/G` is UV-sensitive, Sakharov-type induced gravity) — not a diffuse 
 | `audit_sync.py` | **The sync audit** (papers ↔ suite ↔ ledger ↔ changelog ↔ website, both directions); must end `AUDIT OK`. |
 | `make_figures.py` | Regenerates the figures (status heatmap, attractor, Coxeter circle, …). |
 | `make_manifest.py` | Writes `manifest.sha256` + `lean_manifest.sha256` (content digests). |
-| `wolfram/tfpt_readouts.wl` | Independent second path on Wolfram Engine (`116/116` checks); `wolfram/tfpt_readouts_extension.wl` mirrors the exact algebraic/identity/lattice results (`303/303`, verified on Wolfram Engine 14.3). |
+| `wolfram/tfpt_readouts.wl` | Independent second path on Wolfram Engine (`116/116` checks); `wolfram/tfpt_readouts_extension.wl` mirrors the exact algebraic/identity/lattice results (`324/324`, verified on Wolfram Engine 14.3). |
 | `redteam/run_redteam.py` | **Adversarial layer.** Tries to *break* the five reductions (Targets A–E); verdicts in `REDTEAM.*` ledger rows + `tfpt_5_redteam.tex`. |
 
 ### Other directories
@@ -190,7 +190,7 @@ bash build.sh notes
 cd verification && python run_all.py
 
 # 3. Independent Wolfram path  ->  "116/116 passed"  (optional, needs Wolfram Engine)
-#    (the v84+ extension mirrors the exact results, 303/303)
+#    (the v84+ extension mirrors the exact results, 324/324)
 wolframscript -file verification/wolfram/tfpt_readouts.wl
 wolframscript -file verification/wolfram/tfpt_readouts_extension.wl
 
@@ -363,7 +363,7 @@ a status-typed CI over the frozen prediction registry with a live JUNO/NuFIT/ACT
 flagged at 2.0σ). Plus `v380`: the KMS Entire Hessian — the Stelle ghost is exactly a finite Seeley–DeWitt
 truncation; resummation pushes the ghost zero to infinity, so perturbative graviton unitarity holds.
 
-A development timeline of all 382 modules is in `introduction.tex` (and on the website verification page).
+A development timeline of all 415 modules is in `introduction.tex` (and on the website verification page).
 
 ---
 

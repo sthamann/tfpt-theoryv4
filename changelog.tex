@@ -60,6 +60,127 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-25 (F\_pole external: the Koide source$\to$pole transfer is one-loop EM: \texttt{v420})}
+\begin{itemize}
+\item \textbf{New module \texttt{v420} (\texttt{FR.POLE.QED.01}).} The honest external-physics follow-up to
+\vref{v93} and the clock No-Go: the Koide source$\to$pole transfer is a one-loop \emph{electromagnetic}
+effect, not an algebraic step. \mE\ Koide $Q$ is rescaling-invariant ($Q(c\,m)=Q(m)$), so flavor-universal
+running leaves it fixed and the source$\to$pole shift is purely flavor-split; \mC\ the tree deficit
+$\tfrac23-Q_{\mathrm{src}}=0.00220$ is one-loop-EM-sized ($=\varphi_0/24$ to $0.6\%$, $=\alpha/\pi$ to
+${\sim}5\%$), the PDG pole sits at $2/3$ (the IR attractor); \mC\ a 1-loop QED
+$\mathrm{pole}\!\leftrightarrow\!\overline{\mathrm{MS}}$ per-lepton-log estimate shifts $Q$ by EM-loop order
+toward $2/3$ (the \vref{v82} direction); \mO\ the exact flow time $t\approx2.84$ (\vref{v93}) is
+scheme/scale-dependent external QED, only sized. \mC\ verdict: $F_{\mathrm{pole}}$ is a one-loop EM effect
+--- the lens forces the rate $(2/3)^6$ (\vref{v327}), external EM supplies the flow; \texttt{F\_pole} stays
+\mC, firewalled (\vref{v187}), so $F_{\mathrm{transfer}}$ is confirmed genuinely external --- the open theme
+sharpened (QED), not closed. Cited in \texttt{tfpt\_4}; numerical (mpmath), Python-only (no Wolfram check,
+by the suite convention like \vref{v93}/\vref{v371}).
+\item \textbf{Surfaces synced.} \texttt{run\_all.py}, \texttt{script\_registry.csv},
+\texttt{status\_ledger.csv}, the Koide section of \texttt{tfpt\_4}; manifests refreshed.
+\end{itemize}
+
+\subsection*{2026-06-25 (The seam $\mu_4$ is the carrier's Galois group: \texttt{v419} $+$ figure)}
+\begin{itemize}
+\item \textbf{New module \texttt{v419} (\texttt{SEAM.GALOIS.01}).} A positive resolution of the
+cyclic/Galois asymmetry (\vref{v409}, \texttt{RES.COXETER.SYMMETRY.01}): why the seam $\mu_4$ sits on the
+Galois side, not on the cyclic $\zeta_{30}$ dial. \mE\ $h(E_8)=30$ is squarefree, so $\Z/30$ has element
+orders $\{1,2,3,5,6,10,15,30\}$ --- \emph{no} order $4$, so the seam $\mu_4$ cannot be a rotation hand and
+is forced onto the Galois side; \mE\ by CRT $(\Z/30)^\times=(\Z/2)^\times\times(\Z/3)^\times\times(\Z/5)^\times
+=\mu_4\times\Z_2$ (order $\varphi(30)=8=\operatorname{rank}E_8$), and the $\mu_4$ ($\Z/4$) factor IS
+$(\Z/5)^\times$ (the
+carrier prime $5$), the $\Z_2$ IS $(\Z/3)^\times$ (family $3$ $=$ CP conjugation, \vref{v316}); \mE\ so the
+seam $\mu_4=\operatorname{Gal}(\mathbb Q(\zeta_5))$, realised on the carrier clock $C_5$ (\vref{v418}) by the
+Frobenius $\zeta_5\mapsto\zeta_5^2$ --- the explicit order-$4$ operator $G$ with $GC_5G^{-1}=C_5^2$, $G^4=I$,
+$G^2C_5G^{-2}=C_5^{-1}$. \mC\ this is the positive content of \vref{v409}: the $2^2{=}4$ is the order of
+$(\Z/5)^\times$, and ``no contraction rate'' is because the seam is an \emph{automorphism}, not a hand; so
+$\mathbb Q(\zeta_{30})$ carries both $E_8$ invariants (cyclic $h{=}30$, Galois $\operatorname{rank}{=}8$).
+Cited in \texttt{origin\_theory}; Wolfram-mirrored ($321\to324$).
+\item \textbf{New figure \texttt{coxeter\_galois.pdf}.} The order-$30$ cyclic dial with the four flavor
+hands (sheet/family/carrier/CP) beside the Galois gears ($\mu_4=\operatorname{Aut}(\zeta_5)$ the seam,
+$\Z_2=\operatorname{Aut}(\zeta_3)$ the CP conjugation); added to \texttt{make\_figures.py}, the manifest
+figure list and \texttt{origin\_theory}.
+\item \textbf{Surfaces synced.} \texttt{run\_all.py}, \texttt{script\_registry.csv},
+\texttt{status\_ledger.csv}, the Wolfram extension/README/ledger counts ($324/324$) and the website
+verification count; manifests refreshed.
+\end{itemize}
+
+\subsection*{2026-06-25 (The cyclotomic norm triple $+$ the carrier-5 clock: \texttt{v418})}
+\begin{itemize}
+\item \textbf{New module \texttt{v418} (\texttt{ARITH.NORMTRIPLE.01}).} The carrier split $(3,2)$ read in
+the three atom-rings gives $(7,13,55)=$(scalaron, $\Delta_Q$, quark numerator), and the carrier-$5$ clock
+missing from \vref{v417} is found as the $4{\times}4$ $\Phi_5$-companion $C_5$. \mE\ $C_5^5{=}I$,
+$\operatorname{tr}C_5{=}{-}1$, $\det C_5{=}1$ (the four primitive $5$th roots), with the golden ratio as its
+real-part data ($2\cos72^\circ{=}1/\varphi$, $2\cos144^\circ{=}{-}\varphi$; output-side, \vref{v313}/\vref{v349};
+dim $4$, not $3$ --- this refines \vref{v417}'s gap from ``no operator'' to ``no $3{\times}3$ operator''); \mE\
+$N_{\Z[\zeta_5]}(3{+}2\zeta_5){=}\det(3I{+}2C_5){=}55{=}5{\cdot}11{=}\gcar\|\operatorname{Pl}(K)\|_1$, the
+$c_u/c_d$ numerator (\vref{v410}/\vref{v411}); \mE\ the triple $\det(3I{+}2\,\mathrm{Comp}(\Phi_n))=(7,13,55)$
+for $n{=}3,4,5$ over $\Z[\omega],\Z[i],\Z[\zeta_5]$ (atoms $3,2,5$, \vref{v416}); \mE\ NEG control: the anchor
+$(5,4)\to(21,41,461)$ reaches named values only in the $\omega$- and $i$-rings ($21{=}N_\omega(5,4)$,
+$41{=}10b_1$, \vref{v222}) but $461$ (prime) in the carrier ring, so the carrier ring separates
+$(3,2)\to55$ from $(5,4)\to461$. \mC\ honest: $(3,2)$ is the \emph{forced} carrier split (\vref{v14}), not the
+unique clean one --- a scan finds $\{(2,1)\to(3,5,11),(3,2)\to(7,13,55)\}$, a small ladder. The sharper discriminator is
+\emph{cross-sector}: only $(3,2)$ spans three physics sectors (gravity $7$, flavor $13$, masses $55$),
+the unique cross-sector seed, while $(2,1)$ is all compiler-core. Cited in
+\texttt{origin\_theory}; Wolfram-mirrored ($318\to321$).
+\item \textbf{Surfaces synced.} \texttt{run\_all.py}, \texttt{script\_registry.csv},
+\texttt{status\_ledger.csv}, a triple paragraph in \texttt{origin\_theory}, the Wolfram
+extension/README/ledger counts ($321/321$) and the website verification count; manifests refreshed.
+\end{itemize}
+
+\subsection*{2026-06-25 (The Eisenstein/CP operator $+$ the order-30 clock: \texttt{v417})}
+\begin{itemize}
+\item \textbf{New module \texttt{v417} (\texttt{DIAMOND.EISEN.01}).} The hexagonal dual of \vref{v415}:
+the $\tau{=}\omega$ flavor side put on operators and unified with the seam into one order-$30$ Coxeter
+clock. \mE\ the family rotation $P=(1\,2\,3)$ is the order-$3$ Eisenstein deck ($P^2{+}P{+}I=\mathrm{ONES}$,
+so $\omega^2{+}\omega{+}1{=}0$ on the plane $\perp(1,1,1)$), the order-$3$ dual of $J^2{=}{-}I$; \mE\ it
+realises the hex CM norm as $(3I{+}2P)(3I{+}2P^2)=7I{+}6\,\mathrm{ONES}$, $\operatorname{Spec}\{7,7,25\}$
+($7{=}N_{\Z[\omega]}(3{+}2\omega){=}$ scalaron, $25{=}\gcar^2$) --- the dual of \vref{v415}'s
+$\{13,13,9\}$; \mE\ the CP clock $W{=}{-}P^2$ ($\rho$ of \vref{v233}) has $W^2{=}P$, $W^3{=}{-}I$,
+$\operatorname{Spec}\{-1,\zeta_6,\zeta_6^{-1}\}$, giving $\delta_{\mathrm{CKM,lead}}{=}\arg\zeta_6{=}\pi/3$
+and $\delta_{\mathrm{PMNS}}{=}\arg\zeta_6^4{=}4\pi/3$ (\vref{v316}/\vref{v320}); \mE\ all flavor clocks are
+powers of $\zeta_{30}$ ($\zeta_{30}^{15}{=}{-}1$, $\zeta_{30}^{10}{=}\omega$, $\zeta_{30}^{6}{=}\zeta_5$,
+$\zeta_{30}^{5}{=}\zeta_6$) while the seam $\mu_4{=}i$ is the Galois side $(\Z/30)^\times$ of order
+$\varphi(30){=}8{=}\operatorname{rank}E_8$ --- so $\mathbb Q(\zeta_{30})$ carries both $E_8$ invariants
+($h{=}30$ and $\operatorname{rank}{=}8$). \mC\ honest gap: the carrier $\mu_5$ has no $3{\times}3$
+operator (the golden $\varphi$ is an output-side trace, \vref{v313}/\vref{v349}); negatives: no
+$U,V$-diamond operator carries $\zeta_6$, $[D,P]\neq0$ (no $\mu_{12}$), $N(3{+}2\zeta_6){=}19{\neq}7$.
+Cited in \texttt{tfpt\_2}; Wolfram-mirrored ($315\to318$).
+\item \textbf{Surfaces synced.} \texttt{run\_all.py}, \texttt{script\_registry.csv},
+\texttt{status\_ledger.csv}, the Sheet-Diamond keybox of \texttt{tfpt\_2}, the Wolfram
+extension/README/ledger counts ($318/318$) and the website verification count; manifests refreshed.
+\end{itemize}
+
+\subsection*{2026-06-25 (The Gaussian operator $+$ the atom trichotomy: \texttt{v415}, \texttt{v416})}
+\begin{itemize}
+\item \textbf{New module \texttt{v415} (\texttt{DIAMOND.GAUSS.01}).} The square CM-norm dictionary of
+\vref{v222}/\vref{v230} is \emph{operator-realised}, and the $\mu_4$ deck becomes an intrinsic diamond
+object. \mE\ the integer commutator $J:=\tfrac13[U,V]=\big(\begin{smallmatrix}-1&1&0\\-2&1&0\\-3&1&0\end{smallmatrix}\big)$
+has $\operatorname{Spec}(J)=\{i,-i,0\}$, $J^2=-I$ on the rank-$2$ image and $J^3+J=0$ --- a $\mu_4$
+quarter-turn born from the binary $V$ and ternary $U$ compilers (\vref{v410}/\vref{v95}); \mE\ $3I+2J$ and
+$5I+4J$ have spectra $\{3{+}2i,3{-}2i,3\}$, $\{5{+}4i,5{-}4i,5\}$, so the Gaussian integers $3{+}2i$ (norm
+$13{=}\Delta_Q$) and $5{+}4i$ (norm $41{=}10b_1$) are \emph{literal eigenvalues}; \mE\ $(aI{+}bJ)(aI{-}bJ)$
+reads $(a^2{+}b^2)$ on the $\mu_4$-plane and the real part$^2$ on the kernel ($\{13,13,9\}$, $\{41,41,25\}$);
+\mE\ the intrinsic order-$4$ deck $D=-I+J-J^2$ ($D^4=I$, $\chi_D=(x{+}1)(x^2{+}1)$) has $\chi_2$-line
+$\ker[U,V]=a-\mathbf 1$. \mC\ the geometric-deck identification sharpens (does not close) the \vref{v140}
+$\Z_3$ residue. Cited in \texttt{tfpt\_2}; Wolfram-mirrored.
+\item \textbf{New module \texttt{v416} (\texttt{ARITH.TRICHOTOMY.01}).} The atoms $\{2,3,5\}$ are
+ramified/inert/split in the two exceptional CM rings. \mE\ in $\Z[i]$ (square/seam) $2{=}|\Z_2|$ ramifies,
+$3{=}\Nfam$ is inert, $5{=}\gcar$ \emph{splits} as $(2{+}i)(2{-}i)$; \mE\ in $\Z[\omega]$ (hex/flavor)
+$3{=}\Nfam$ ramifies, $2,5$ are inert; \mE\ the ramified prime of each ring is its own atom; \mE\ the three
+quadratic facets $\mathbb Q(i),\mathbb Q(\sqrt{-3}),\mathbb Q(\sqrt5)$ of $K=\mathbb Q(i,\sqrt{-3},\sqrt5)$
+(\vref{v403}) ramify over exactly one atom each, product $2\cdot3\cdot5=30=h(E_8)$, two imaginary
+(CM/dynamic) $+$ one real (RM/static). \mC\ the seam/flavor/golden reading. Cited in
+\texttt{origin\_theory}; Wolfram-mirrored.
+\item \textbf{Wolfram extension $308\to315$ $+$ a pre-existing fix.} Added the seven exact checks for
+\texttt{v415}/\texttt{v416} and corrected a one-character sign bug in the \texttt{v412}
+\texttt{CharacteristicPolynomial} check (Wolfram returns $-\chi$ for odd rank), so
+\texttt{tfpt\_readouts\_extension.wl} now runs genuinely clean at $315/315$ (\texttt{GATE.WOLFRAM.02});
+README and ledger counts updated.
+\item \textbf{Surfaces synced.} \texttt{run\_all.py}, \texttt{script\_registry.csv} and
+\texttt{status\_ledger.csv} updated; a new keybox paragraph in the Sheet-Diamond section of \texttt{tfpt\_2}
+and a trichotomy sentence in \texttt{origin\_theory}; manifests refreshed.
+\end{itemize}
+
 \subsection*{2026-06-24 (The sheet generator $V$ as a binary internal compiler: \texttt{v410}--\texttt{v414})}
 \begin{itemize}
 \item \textbf{New module \texttt{v410} (\texttt{SHEET.GEN.BINARY.01}).} The rank-$2$ sheet axis

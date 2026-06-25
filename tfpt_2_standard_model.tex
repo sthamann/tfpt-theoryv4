@@ -775,6 +775,47 @@ $\sum_{ij}C_{ij}=31=2^{\gcar}{-}1=248/8$; its shifted determinants climb the exc
   \det C=14=\dim G_2,\qquad \det(I{+}C)=52=\dim F_4,\qquad \det(2I{+}C)=120=|R^+(E_8)|,
 \]
 i.e.\ $\det(C{+}kI)$ for $k=0,1,2$ traces $G_2\!\to\!F_4\!\to\!E_8^+$ --- exact \mE, the portal reading \mC.
+\smallskip\\
+\noindent\textbf{The square CM-norm dictionary is operator-realised, and the deck is intrinsic
+(\veri{v415\_gaussian\_operator.py}).} The non-commutativity of the two axes is itself a $\mu_4$
+quarter-turn: the integer commutator
+\[
+  J:=\tfrac13[U,V]=\begin{pmatrix}-1&1&0\\-2&1&0\\-3&1&0\end{pmatrix},\qquad
+  \operatorname{Spec}(J)=\{i,-i,0\},\quad J^2=-I\ \text{on the rank-2 image},
+\]
+is a complex structure born from the binary $V$ and ternary $U$ compilers. It lifts the Gaussian
+arithmetic of \vref{v222}/\vref{v230} from numbers to operators: $3I{+}2J$ has spectrum
+$\{3{+}2i,3{-}2i,3\}$ and $5I{+}4J$ has $\{5{+}4i,5{-}4i,5\}$, so the Gaussian integers $3{+}2i$ and
+$5{+}4i$ are literal eigenvalues, and
+\[
+  (3I{+}2J)(3I{-}2J)=9I-4J^2\sim\{13,13,9\},\qquad (5I{+}4J)(5I{-}4J)=25I-16J^2\sim\{41,41,25\},
+\]
+i.e.\ $\Delta_Q=13$ and $10b_1=41$ on the $\mu_4$-plane, the real part$^2$ ($\Nfam^2$, $\gcar^2$) on the
+kernel. Finally $D:=-I+J-J^2$ is an \emph{intrinsic} order-$4$ deck ($D^4=I$, $\chi_D=(x{+}1)(x^2{+}1)$,
+$\operatorname{Spec}\{i,-1,-i\}$) whose self-conjugate $\chi_2$-line is canonically
+$\ker[U,V]=(0,0,1)=a-\mathbf 1$; this exhibits the $\mu_4$ deck as a diamond object and sharpens the
+\vref{v140} $\Z_3$ residue to one concrete identification --- the operator identities \mE, the
+geometric-deck match \mC.
+\smallskip\\
+\noindent\textbf{The Eisenstein dual and the CP clock (\veri{v417\_eisenstein\_cp\_operator.py}).}
+The same lift works on the \emph{hexagonal} side. The family rotation $P=(1\,2\,3)$ is the order-$3$
+Eisenstein deck ($P^2+P+I=\mathrm{ONES}$, so $\omega^2+\omega+1=0$ on the plane $\perp(1,1,1)$ --- the
+order-$3$ dual of $J^2=-I$), and it realises the hexagonal CM norm as an operator,
+\[
+  (3I+2P)(3I+2P^2)=7I+6\,\mathrm{ONES}\sim\{7,7,25\},
+\]
+i.e.\ $7=N_{\Z[\omega]}(3{+}2\omega)=$ scalaron on the $\omega$-plane and $25=\gcar^2$ on $(1,1,1)$ ---
+the exact dual of the square $\{13,13,9\}$. The CP phase is the order-$6$ clock $W=-P^2$ (the triality
+$\rho=\omega^2{\cdot}({-}1)$): $W^2=P$, $W^3=-I$, $\operatorname{Spec}W=\{-1,\zeta_6,\zeta_6^{-1}\}$, and the
+two measured phases are arguments of its powers, $\delta_{\mathrm{CKM,lead}}=\arg\zeta_6=\pi/3$ and
+$\delta_{\mathrm{PMNS}}=\arg\zeta_6^4=4\pi/3$ (\vref{v316}/\vref{v320}). All four flavor-side clocks are
+powers of one Coxeter unit $\zeta_{30}$ ($h(E_8)=30=|\Z_2|\Nfam\gcar$): $\zeta_{30}^{15}=-1$,
+$\zeta_{30}^{10}=\omega$, $\zeta_{30}^{6}=\zeta_5$, $\zeta_{30}^{5}=\zeta_6$, while the seam $\mu_4=i$ is
+\emph{not} a power ($4\nmid30$) but the Galois side $(\Z/30)^\times$ of order
+$\varphi(30)=8=\operatorname{rank}E_8$ --- so $\mathbb Q(\zeta_{30})$ carries both $E_8$ invariants at
+once. \emph{Honest:} the carrier $\mu_5$ has no $3{\times}3$ operator (the golden $\varphi=2\cos\tfrac\pi5$
+is an output-side trace, \vref{v313}/\vref{v349}); the operator/arithmetic identities are \mE, the
+clock-assignment readings \mC.
 \end{keybox}
 
 \begin{keybox}[The $Q_+$ grading is cohomology: one spectrum in four readouts \mE\ (\veri{v137\_qplus\_cohomology.py})]
