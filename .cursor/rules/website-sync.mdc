@@ -51,6 +51,9 @@ documents and the ledger (the ledger wins on any disagreement).
 
 ## When the verification suite changes (new / renamed / removed `vN_*.py`)
 
+> Launch parallel subagents per **`subagent-deep-sync`** (website + paper + stale
+> wording) before editing; parent merges checklists.
+
 1. Add the script's row to `verification/script_registry.csv`, then
    `bash build.sh gen` (regenerates `ScriptIndex.tsx` + the master TeX index).
 2. `bash build.sh website` (re-copies all `vN_*.py` + PDFs, stamps version + hashes).

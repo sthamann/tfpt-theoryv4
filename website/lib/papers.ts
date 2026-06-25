@@ -1181,7 +1181,7 @@ export const papers: Paper[] = [
     title: "Safeguards against Coincidence and Numerology",
     subtitle: "The verification discipline — every mechanism that defends a load-bearing claim against chance, fitting and over-reading",
     abstract:
-      "A two-input theory that reads out many small integers is, a priori, at risk of being elaborate numerology. This companion answers that risk not with rhetoric but with a layered, machine-checked discipline, stated uniformly in one place. The layers: (1) a four-class status calculus with a single-source ledger and a sync audit that makes it structurally impossible for a conditional [C] claim to be rendered as exact [E]; (2) an anti-fitting rule (no free pattern, v305) plus a reverse audit (E8.REVERSE.AUDIT.01) that publishes how much E₈ structure carries NO readout (3/8 primary, 5/8 hull overhead); (3) an over-determination map (v427) that honestly separates multiplicative evidence — seven witnesses from disjoint arithmetic grammars (Gauss, Eisenstein, cyclotomy, Galois, lattice, Pascal, Coxeter) all landing on the same skeleton — from compression (many readouts from one generator); (4) the F_transfer firewall (v187) and the No-Unit theorem (v153) that makes the absence of an absolute scale a theorem, not a gap; (5) a frozen prediction registry (v84) with a Monte-Carlo null model (v100) and a live data scorecard (v375); (6) two independent reproduction paths — an independent Wolfram engine (116+327 checks) and a Lean 4 kernel proof; and (7) an adversarial red-team layer. The thesis is deliberately narrow: these safeguards make coincidence an expensive explanation of the discrete core, and keep exact compiler closure from ever being mistaken for closed physics.",
+      "A two-input theory that reads out many small integers is, a priori, at risk of being elaborate numerology. This companion answers that risk not with rhetoric but with a layered, machine-checked discipline, stated uniformly in one place. The layers: (1) a four-class status calculus with a single-source ledger and a sync audit that makes it structurally impossible for a conditional [C] claim to be rendered as exact [E]; (2) an anti-fitting rule (no free pattern, v305) plus a reverse audit (E8.REVERSE.AUDIT.01) that publishes how much E₈ structure carries NO readout (3/8 primary, 5/8 hull overhead); (3) an over-determination map (v427) whose framework separates multiplicative evidence from compression and which — applied to TFPT's own arithmetic witnesses (v428) — finds the seven (Gauss, Eisenstein, cyclotomy, Galois, lattice, Pascal, Coxeter) to be facets of one (2,3,5)/E₈ object (compression, not seven independent witnesses), locating the genuine multiplication in an input forced four independent ways (the '8' in c₃) plus a foreign readout (α⁻¹≈137); (4) the F_transfer firewall (v187) and the No-Unit theorem (v153) that makes the absence of an absolute scale a theorem, not a gap; (5) a frozen prediction registry (v84) with a Monte-Carlo null model (v100) and a live data scorecard (v375); (6) two independent reproduction paths — an independent Wolfram engine (116+327 checks) and a Lean 4 kernel proof; and (7) an adversarial red-team layer. The thesis is deliberately narrow: these safeguards make coincidence an expensive explanation of the discrete core, and keep exact compiler closure from ever being mistaken for closed physics.",
     status: "safeguards",
     statusLabel: "Verification discipline",
     pdf: "/papers/tfpt_safeguards.pdf",
@@ -1191,14 +1191,14 @@ export const papers: Paper[] = [
     contribution: [
       "Status calculus: the four display markers [E]/[C]/[O]/[X] are read from the single-source status_ledger.csv, not retyped per document, and audit_sync.py enforces (both directions) that the suite, runner, registry and ledger agree and that every script is cited in a paper body — so a [C] claim cannot be silently shown as [E].",
       "Anti-fitting: the forward discipline / generator-economy audit (v305) admits an identity as load-bearing only if it is derivationally necessary, kills alternatives, is ablation-relevant, links modules, or is testable; the reverse audit (E8.REVERSE.AUDIT.01) publishes that only 3 of 8 E₈ Casimir degrees feed a primary readout (5/8 are unused hull overhead).",
-      "Over-determination map (v427): evidence multiplies only across disjoint grammars — seven (Gauss N(3+2i)=13, Eisenstein N(3+2ω)=7, cyclotomy N(3+2ζ₅)=55, Galois |（Z/5)ˣ|=4, |det Cartan E₈|=1, Pascal C(4,≤2)=11, Coxeter φ(30)=8) — while many readouts from one generator (the anchor a=(1,1,2), the flavor matrix R) are a compression gain, not independent multiplication.",
+      "Over-determination map (v427) + honest self-correction (v428): the framework counts multiplicative evidence only across genuinely disjoint grammars; applying it to TFPT's own seven arithmetic witnesses (Gauss N(3+2i)=13, Eisenstein N(3+2ω)=7, cyclotomy N(3+2ζ₅)=55, Galois |(Z/5)ˣ|=4, |det Cartan E₈|=1, Pascal C(4,≤2)=11, Coxeter φ(30)=8) shows — by the Brieskorn classification (v236) — that they are facets of one (2,3,5)/E₈ object: compression, like the anchor a=(1,1,2), not seven independent multiplications. The genuine multiplication is the input forced four independent ways (rank E₈, h(D₅), φ(30), Milnor all =8) plus the foreign witness α⁻¹≈137.",
       "Firewall + No-Unit: the four frontier transfers stay typed interfaces, never compiler outputs (v187/v213), and the No-Unit theorem (v153) makes v_geo theorem-forbidden; the residual-certification audit (v384) shows every open item is external-math, theorem-forbidden, or external-physics — zero open internal mechanisms.",
       "Frozen predictions + null model: the registry (v84, REG.FREEZE.01) pre-registers the dimensionless predictions, a Monte-Carlo null model (v100) scores each match against chance, and the live scorecard (v375) records the data — including the pre-registered +2.0σ θ₁₃ tension (FLAV.TH13.PRESSURE.01), the opposite of hiding the worst case.",
       "Two independent paths + red team: an independent Wolfram engine (116/116 + 327/327) and a Lean 4 kernel proof (hypercharge, anomaly, Pascal ladder, seam chain) re-derive the exact core, and the red-team companion attacks the theory and publishes what survives each attack.",
     ],
     notClaimed: [
       "These safeguards do not establish physics: they make coincidence expensive for the discrete core and keep the typing honest, but the seam/anchor/transfer bridges remain the open research problem.",
-      "The over-determination map is not a Bayesian proof; it separates multiplicative (disjoint-grammar) from compression (one-generator) evidence so that neither is overstated.",
+      "The over-determination map is not a Bayesian proof, and we apply it to ourselves: the seven arithmetic witnesses compress one (2,3,5)/E₈ object (v428), so the honest multiplicative evidence is the multiply-forced input plus the foreign α⁻¹, not seven independent grammars.",
     ],
     falsification: [
       "The discipline fails if any claim marked [E] does not in fact machine-check, if the null model is mis-specified so a chance hit is scored as signal, or if a frozen prediction is quietly retuned after data — each is itself an auditable defect.",
@@ -1214,10 +1214,10 @@ export const papers: Paper[] = [
       },
       {
         title: "Layer 3 — the over-determination map (multiply vs. compress)",
-        body: "Over-determination is the strongest positive evidence, counted honestly (v427). Seven disjoint-grammar witnesses each reproduce a carrier-skeleton integer from their own structure (two quadratic rings, a degree-4 field, a finite group, a root lattice, a binomial/exterior algebra, a Coxeter invariant), so their joint landing multiplies; by contrast the anchor a=(1,1,2) emits (e₁,e₂,e₃)=(4,5,2)+power sums+the E₈ data from one generator — compression, not independent witnesses.",
+        body: "The framework is the right axis (v427): evidence multiplies only across genuinely disjoint grammars, while many readouts from one generator compress. Applied to TFPT's own seven arithmetic witnesses (v428), it forces a self-correction: by the Brieskorn classification (v236) the (2,3,5) singularity is the one generator behind the order-30 clock (Milnor 8 = rank E₈, 30 = 2·3·5 = h(E₈)), so the seven are facets of that same object — they compress, like the anchor a=(1,1,2). What genuinely multiplies is the input forced four independent ways (rank E₈, h(D₅)=8, φ(30), Milnor) plus the foreign witness α⁻¹≈137.",
         formulas: [
-          "N(3+2i)=13,\\quad N(3+2\\omega)=7,\\quad N(3+2\\zeta_5)=55,\\quad |(\\mathbb Z/5)^\\times|=4",
-          "h(E_8)=30=2\\cdot3\\cdot5,\\quad \\varphi(30)=8=\\operatorname{rank}E_8",
+          "N(3+2i)=13,\\ N(3+2\\omega)=7,\\ N(3+2\\zeta_5)=55,\\ |(\\mathbb Z/5)^\\times|=4 \\ \\text{(facets of one } (2,3,5)/E_8)",
+          "\\operatorname{rank}E_8=h(D_5)=\\varphi(30)=\\mu(2,3,5)=8 \\ \\text{(forced 4 ways)},\\quad \\alpha^{-1}\\approx137\\ \\text{(foreign)}",
         ],
       },
       {
@@ -1231,9 +1231,14 @@ export const papers: Paper[] = [
     ],
     keyFormulas: [
       {
-        label: "Seven disjoint witnesses",
+        label: "Seven readouts → one object",
         latex: "N(3{+}2i){=}13,\\ N(3{+}2\\omega){=}7,\\ N(3{+}2\\zeta_5){=}55,\\ |(\\mathbb Z/5)^\\times|{=}4",
-        description: "Disjoint arithmetic grammars on the same skeleton ⇒ multiplicative evidence (v427)",
+        description: "Facets of one (2,3,5)/E₈ object ⇒ compression, not multiplication (v428)",
+      },
+      {
+        label: "What genuinely multiplies",
+        latex: "\\operatorname{rank}E_8=h(D_5)=\\varphi(30)=\\mu(2,3,5)=8",
+        description: "The '8' in c₃ forced four independent ways, plus the foreign α⁻¹≈137 (v428)",
       },
       {
         label: "Reverse audit",
@@ -1248,7 +1253,7 @@ export const papers: Paper[] = [
     ],
     highlights: [
       { label: "Status classes", value: "4", description: "[E]/[C]/[O]/[X], ledger-sourced, audit-enforced — no [C] dressed as [E]" },
-      { label: "Disjoint witnesses", value: "7", description: "Gauss, Eisenstein, cyclotomy, Galois, lattice, Pascal, Coxeter — multiply (v427)" },
+      { label: "Witnesses → one object", value: "7→1", description: "Gauss, Eisenstein, cyclotomy, Galois, lattice, Pascal, Coxeter — facets of one (2,3,5)/E₈ object, so they compress (v428)" },
       { label: "Reverse audit", value: "3/8", description: "Only 3 of 8 E₈ degrees feed a primary readout; 5/8 is published hull overhead" },
       { label: "Firewall", value: "4 typed", description: "F_pole/F_Boltzmann/F_relic/F_QCD never compiler outputs (v187); No-Unit makes v_geo a theorem (v153)" },
       { label: "Independent paths", value: "2", description: "Wolfram (116+327) + Lean 4 kernel proof re-derive the exact core" },

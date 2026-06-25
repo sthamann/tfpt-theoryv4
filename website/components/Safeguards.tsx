@@ -48,7 +48,7 @@ const STATS: {
 const LAYERS: string[] = [
   "Status calculus — no [C] dressed as [E]",
   "No free pattern + reverse audit (3/8)",
-  "Over-determination map — 7 disjoint witnesses",
+  "Over-determination map — 7 readouts compress one object",
   "Firewall + No-Unit theorem",
   "Frozen registry + Monte-Carlo null model",
   "Two independent paths — Wolfram + Lean",
@@ -64,9 +64,9 @@ const FIGS: { src: string; w: number; h: number; cap: string }[] = [
   },
   {
     src: "/figures/safeguard_witness_map.png",
-    w: 1170,
-    h: 690,
-    cap: "Seven disjoint arithmetic grammars land on the same skeleton — the evidence multiplies.",
+    w: 1290,
+    h: 750,
+    cap: "The seven arithmetic readouts are facets of one (2,3,5)/E₈ object — they compress, not multiply; what genuinely multiplies is the input forced four ways (the '8' in c₃) plus the foreign α⁻¹≈137.",
   },
   {
     src: "/figures/safeguard_alpha_uniqueness.png",

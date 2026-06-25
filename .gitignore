@@ -39,6 +39,9 @@ verification/pyrate/*.generated.txt
 # Local secrets (Zenodo token, etc.)
 .env
 
+# Local exploratory 3D visualization sandbox (not shipped)
+/simulation/
+
 # Local scratch / explanations (not part of the published record)
 temp/
 _documentation/

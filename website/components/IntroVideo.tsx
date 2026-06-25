@@ -9,15 +9,16 @@ const VIDEO_SRC = "/intro/tfpt-intro.mp4";
 const POSTER_SRC = "/intro/tfpt-intro-poster.jpeg";
 const CAPTIONS_SRC = "/intro/tfpt-intro.en.vtt";
 
-/** Chapter markers — seconds match the video's seven beats (script.ts). */
+/** Chapter markers — seconds match the video's eight beats (script.ts). */
 const CHAPTERS: { t: number; label: string }[] = [
   { t: 0, label: "The bet" },
   { t: 15, label: "The machine" },
-  { t: 56, label: "The readout" },
-  { t: 97, label: "One texture" },
-  { t: 123, label: "How to kill it" },
-  { t: 154, label: "The audit layer" },
-  { t: 173, label: "The open knot" },
+  { t: 55, label: "The readout" },
+  { t: 95, label: "One pattern" },
+  { t: 120, label: "Gravity for free" },
+  { t: 146, label: "Not numerology" },
+  { t: 189, label: "How to kill it" },
+  { t: 219, label: "What's open" },
 ];
 
 /**
@@ -29,31 +30,35 @@ const CHAPTERS: { t: number; label: string }[] = [
 const TRANSCRIPT: { heading: string; body: string }[] = [
   {
     heading: "The bet (0:00)",
-    body: "This is the fine-structure constant. Physics treats it as a measured input. TFPT claims it's the unique root of a short equation — fixed by two inputs, and nothing else. Big claim. So I'll also show you exactly where it could break.",
+    body: "This is the fine-structure constant — how strongly light and matter interact. Physics measures it. TFPT computes it — the one answer a short equation allows, fixed by just two numbers, and nothing else. Bold claim. So I'll also show you exactly where it could break.",
   },
   {
     heading: "The machine (0:15)",
-    body: "TFPT isn't another table of nice numbers — it's a discrete compiler. Two operative inputs go in: a boundary constant, c₃ = 1/(8π), and a five-fold carrier, g_car = 5. From those, one structure is built: the carrier makes the D₅ side, four marked boundary points make the A₃ family geometry, and the μ₄ glue closes them into E₈. And this defuses the usual no-go theorems: E₈ is not a gauge group of nature. It's the audit hull — the consistency container. The Standard Model is a readout after projection, not “everything is E₈.”",
+    body: "Think of TFPT as a compiler — not a table of lucky numbers, but a machine. Two inputs go in: a boundary constant, c₃ = 1/(8π) — the rule for an edge of space, and a carrier, g_car = 5 — how the building blocks plug together. From only those two, one shape is forced to assemble: the exceptional group E₈. But here's the twist — E₈ is not a force of nature. It's a scaffold: a consistency check you build, verify against, then step away from. The Standard Model isn't “everything is E₈” — it's what you read off after projecting back down.",
   },
   {
-    heading: "The readout (0:56)",
-    body: "What comes out splits cleanly. First, the discrete core — exact, or machine-checked: three families, hypercharges, the flavor matrix, sixteen carrier states, the recurring 2-3-5, the Coxeter number 30, the 240 roots of E₈. Then the boundary side: from c₃ comes one seed, φ₀ — and from it, the Cabibbo structure, the electromagnetic fixed point, and the scale grammar. The fine-structure constant lands as the unique positive root of a cubic: 137.0359992 — 1.9σ from the measured value. Not a fit. A forced root.",
+    heading: "The readout (0:55)",
+    body: "So what does the machine print out? First, a discrete skeleton — exact and machine-checked, with no wiggle room: three generations of matter, the right charges, the 240 roots of E₈, and the same small numbers everywhere — two, three, five. Then the headline: the fine-structure constant is the single positive root of one cubic. Not chosen — forced. α⁻¹ = 137.0359992, less than two sigma from the measured value. Not a fit. A forced answer.",
   },
   {
-    heading: "One texture, not free knobs (1:37)",
-    body: "The Standard-Model part compresses hard. Masses and mixings don't come from free Yukawa numbers — they come from one texture: a seed, a fixed flavor matrix, integer word-lengths. The CKM angles and the leading CP phase fall out of the same holonomy; the reactor angle θ₁₃ comes straight from the seed. Absolute masses run through one typed bridge, v_geo, and standard RG. Dimensional analysis with a seatbelt.",
+    heading: "One pattern, not free knobs (1:35)",
+    body: "The same discipline runs through the particle masses. They don't come from dozens of free dials — but from one pattern: a single seed, a fixed matrix, and whole-number steps. Mixing angles and the leading CP phase drop out of the same geometry. The one honest unit they still need, we flag — we don't hide it.",
   },
   {
-    heading: "How to kill it (2:03)",
-    body: "Now the honest part — how do you kill it? The predictions were frozen in a blind registry before any comparison — machine-enforced. sin²θ₁₂ ≈ 0.3067. sin²θ₁₃ ≈ 0.0231. α⁻¹ as a fixed point. A small tensor ratio r between 0.0033 and 0.0048. Normal neutrino ordering, with a low mass floor. The closed core predictions sit within about one sigma today — every tension tracked in the open. The near-term kill tests are real: neutrino mass from DESI and CMB-S4, and proton decay at Hyper-Kamiokande.",
+    heading: "Gravity comes free (2:00)",
+    body: "And that first input hides a gift. c₃ = 1/(8π) is the exact 8π sitting inside Einstein's equation for gravity. Run the same atoms through the heat of a horizon, and the full law of gravity falls out — both constants fixed, even the cosmological constant, set by α. The same 1/(8π) shows up three independent ways. Hard to call that an accident.",
   },
   {
-    heading: "The audit layer (2:34)",
-    body: "How is this kept honest? Every statement carries a status — exact, conditional, open, or kill-test — in one machine-readable ledger: the single source of truth. A no-free-pattern rule on every load-bearing number. And a red team whose job is to break the theory, not confirm it — otherwise math becomes numerology with better typography.",
+    heading: "Why this isn't numerology (2:26)",
+    body: "Small whole numbers raise a fair worry: is this just numerology? So we tried to break it ourselves. We froze thirteen predictions, then ran two hundred thousand random look-alike theories. TFPT hits all thirteen. The random ones top out at five. For α: of ninety-four thousand variants, exactly one lands in the measured window. Seven completely different number systems each rebuild the same skeleton. And we publish what E₈ does not use — five of its eight pieces carry no prediction. The odds a look-alike matches the whole scorecard: below ten to the minus thirty. Checked twice — independently in Wolfram and in Lean.",
   },
   {
-    heading: "The one open knot (2:53)",
-    body: "So what's actually open? The discrete compiler is structurally closed. The one hard knot is a single theorem: the raw, reflection-positive seam state must be — canonically — the holomorphic (E₈)₁ net at τ = i. Both proof routes meet there. The sharpest remaining piece has a name: Flat-Away. Close it, and the structural core is done. What stays are deliberately typed interfaces.",
+    heading: "How to kill it (3:09)",
+    body: "Now the honest part — how would you kill it? Every prediction was sealed in a registry before any comparison. sin²θ₁₂ ≈ 0.3067. sin²θ₁₃ ≈ 0.0231. A tiny gravitational-wave ratio. Normal neutrino ordering. Today, all of them sit within about one sigma. The near-term tests are real: neutrino mass from DESI and CMB-S4, and proton decay at Hyper-Kamiokande. One clean miss, and it's wrong.",
+  },
+  {
+    heading: "What is actually open (3:39)",
+    body: "So what is actually still open? Not a vague pile — three named, labelled handoffs. One published-theorem step from closing the central seam, the clearly-marked bridges to external physics, and one honest unit — because a theorem says pure numbers can never hand you a kilogram. Zero hidden mechanisms. Two inputs, one compiler — fully audited.",
   },
 ];
 
@@ -62,12 +67,12 @@ const fmt = (t: number) => `${Math.floor(t / 60)}:${String(t % 60).padStart(2, "
 const videoJsonLd = {
   "@context": "https://schema.org",
   "@type": "VideoObject",
-  name: "TFPT — a 3-minute introduction",
+  name: "TFPT — a 4-minute introduction",
   description:
-    "A 3-minute introduction to Topological Fixed-Point Theory (TFPT): two inputs — the seam constant c₃ = 1/(8π) and the carrier g_car = 5 — build a discrete compiler with E₈ as an audit hull, reading off the Standard-Model structure, the fine-structure constant α⁻¹ = 137.0359992, and the scale grammar. Ledger-typed, reproducible and falsifiable, with one open structural theorem (SEAM.EQUIV.01).",
+    "A 4-minute introduction to Topological Fixed-Point Theory (TFPT): two inputs — the boundary constant c₃ = 1/(8π) and the carrier g_car = 5 — drive a discrete compiler with E₈ as a consistency scaffold, reading off the Standard-Model structure, the fine-structure constant α⁻¹ = 137.0359992, the particle-mass pattern, and a parameter-free law of gravity (c₃ = 1/(8π) is the 8π of Einstein's equation). It then shows why this isn't numerology — a frozen 13/13 scorecard against 200,000 random look-alike theories, α unique to 1 in 94,500, a richly over-determined integer skeleton, odds below 10⁻³⁰, checked independently in Wolfram and Lean — the near-term kill tests, and the honest residual: three named, typed interfaces with zero hidden mechanisms.",
   thumbnailUrl: [`${SITE_URL}${POSTER_SRC}`],
-  uploadDate: "2026-06-18",
-  duration: "PT3M18S",
+  uploadDate: "2026-06-25",
+  duration: "PT4M10S",
   contentUrl: `${SITE_URL}${VIDEO_SRC}`,
   inLanguage: "en",
   isFamilyFriendly: true,
@@ -124,8 +129,8 @@ export function IntroVideo() {
           id="intro-video-heading"
           align="center"
           eyebrow="Start here"
-          title="The 3-minute introduction"
-          description="Two inputs in, E₈ as the consistency hull, Standard-Model structure and the constants out — with a ledger, a red team and kill tests. The open core isn't diffuse: it's a single seam-equivalence theorem."
+          title="The 4-minute introduction"
+          description="Two inputs in, E₈ as a consistency scaffold, the Standard Model, the constants and even gravity out — plus why this isn't numerology, the near-term kill tests, and an honest residual of three named interfaces."
         />
 
         <figure className="mt-10">
@@ -137,7 +142,7 @@ export function IntroVideo() {
               playsInline
               preload="none"
               poster={POSTER_SRC}
-              aria-label="TFPT — a 3-minute introduction (English, with subtitles)"
+              aria-label="TFPT — a 4-minute introduction (English, with subtitles)"
               onLoadedMetadata={disableTracks}
             >
               <source src={VIDEO_SRC} type="video/mp4" />
@@ -158,7 +163,7 @@ export function IntroVideo() {
               <button
                 type="button"
                 onClick={play}
-                aria-label="Play the 3-minute introduction"
+                aria-label="Play the 4-minute introduction"
                 className="group absolute inset-0 flex items-center justify-center bg-slate-950/30 transition-colors hover:bg-slate-950/15 focus-visible:outline-none"
               >
                 <span className="flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-violet-500 text-white shadow-lg shadow-blue-500/40 ring-1 ring-white/20 transition-transform group-hover:scale-110 group-focus-visible:scale-110">

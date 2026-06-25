@@ -190,14 +190,14 @@ origin_theory,section,"Consequences, and the whole story \mC",1258,1306,,d4c9347
 origin_theory,section,A closure program (next phase) \mO,1307,1432,v15_bootstrap_classification.py;v340_As_reconcile.py;v59_area_law_evidence.py;v63_seam_engineering_index.py;v64_causal_boundary_nogo.py;v65_falsification_layer.py;v69_d4_q_geometry.py;v6_bootstrap.py;v86_nstar_reheating.py,4ca669130012,2026-06-24
 origin_theory,section,Honest status,1433,1687,v105_residual_inventory.py;v110_calderon_sheet.py;v111_quadratic_transport.py;v112_selfcounting_channel.py;v113_quasifree_kernel.py;v123_inventory_update.py;v167_inventory_post_closure.py;v258_dirac_covariance_induction.py;v259_modular_cutoff_kappa.py;v260_k3_kummer_unification.py;v261_modular_spectral_closure.py;v323_bw_geometric_modular.py;v325_pillowcase_keystone.py;v326_ftransfer_suite.py;v329_os_gap_reduction.py;v330_qgamb_admissible_measure.py;v331_necessity_of_H.py;v332_qgamb_metric_sector.py;v333_cm_selection.py;v334_conformal_resolution.py;v335_seam_equiv_unify.py;v336_continuum_limit.py;v53_compiler_core.py;v54_seam_horizon_keystones.py;v55_coxeter_cycle.py;v56_unique_attractor.py;v57_horizon_crosslinks.py,655a8a4b98e7,2026-06-23
 origin_theory,section,Appendix: computational verification,1688,1707,v53_compiler_core.py;v54_seam_horizon_keystones.py;v55_coxeter_cycle.py;v56_unique_attractor.py,48687b83b93b,2026-06-12
-tfpt_safeguards,front,(front matter),1,71,,a8ab152d20a5,2026-06-25
-tfpt_safeguards,section,"The risk, and the shape of the answer",72,84,,d749f99f5758,2026-06-25
-tfpt_safeguards,section,Layer 1 --- the status calculus (no \texttt{[C]} dressed as \texttt{[E]}),85,96,,df53469dca69,2026-06-25
-tfpt_safeguards,section,"Layer 2 --- no free pattern, and the reverse audit",97,115,v100_numerology_null_mc.py;v305_witness_independence.py,fb85fc6d85ab,2026-06-25
-tfpt_safeguards,section,Layer 3 --- the over-determination map (multiply vs.\ compress),116,149,v427_overdet_witness_map.py,14722f4b91b2,2026-06-25
-tfpt_safeguards,section,Layer 4 --- the firewall and the No-Unit theorem,150,168,v153_no_unit_theorem.py;v187_ftransfer_laws.py;v188_frontier_wording_guard.py;v213_ftransfer_functor.py;v384_residual_certification.py;v425_dyn_transfer_universal.py,491326327cb7,2026-06-25
-tfpt_safeguards,section,"Layer 5 --- frozen predictions, the null model, and the $\alpha$ uniqueness scan",169,205,v100_numerology_null_mc.py;v307_data_watchdog.py;v321_killtest_board.py;v375_observatory_registry.py;v84_frozen_registry.py,d9e049cae45b,2026-06-25
-tfpt_safeguards,section,Layer 6 --- two independent reproduction paths,206,220,,8a2780d5ad34,2026-06-25
-tfpt_safeguards,section,Layer 7 --- the red team,221,230,,0a2585467b1c,2026-06-25
-tfpt_safeguards,section,What would still falsify TFPT,231,241,v424_seam_lto_rp_reduction.py;v426_seam_lto_rp_kms.py,b2b997e0c1fb,2026-06-25
-tfpt_safeguards,section,Summary --- the layered defense,242,262,,cd621e91318d,2026-06-25
+tfpt_safeguards,front,(front matter),1,73,,7c6a50da61ec,2026-06-25
+tfpt_safeguards,section,"The risk, and the shape of the answer",74,86,,d749f99f5758,2026-06-25
+tfpt_safeguards,section,Layer 1 --- the status calculus (no \texttt{[C]} dressed as \texttt{[E]}),87,98,,df53469dca69,2026-06-25
+tfpt_safeguards,section,"Layer 2 --- no free pattern, and the reverse audit",99,117,v100_numerology_null_mc.py;v305_witness_independence.py,fb85fc6d85ab,2026-06-25
+tfpt_safeguards,section,Layer 3 --- the over-determination map (multiply vs.\ compress),118,167,v427_overdet_witness_map.py;v428_overdet_reclass.py,324de2abdf50,2026-06-25
+tfpt_safeguards,section,Layer 4 --- the firewall and the No-Unit theorem,168,186,v153_no_unit_theorem.py;v187_ftransfer_laws.py;v188_frontier_wording_guard.py;v213_ftransfer_functor.py;v384_residual_certification.py;v425_dyn_transfer_universal.py,491326327cb7,2026-06-25
+tfpt_safeguards,section,"Layer 5 --- frozen predictions, the null model, and the $\alpha$ uniqueness scan",187,223,v100_numerology_null_mc.py;v307_data_watchdog.py;v321_killtest_board.py;v375_observatory_registry.py;v84_frozen_registry.py,d9e049cae45b,2026-06-25
+tfpt_safeguards,section,Layer 6 --- two independent reproduction paths,224,238,,8a2780d5ad34,2026-06-25
+tfpt_safeguards,section,Layer 7 --- the red team,239,248,,0a2585467b1c,2026-06-25
+tfpt_safeguards,section,What would still falsify TFPT,249,259,v424_seam_lto_rp_reduction.py;v426_seam_lto_rp_kms.py,b2b997e0c1fb,2026-06-25
+tfpt_safeguards,section,Summary --- the layered defense,260,280,,262b271dd29f,2026-06-25

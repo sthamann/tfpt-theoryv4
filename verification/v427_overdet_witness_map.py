@@ -5,9 +5,20 @@ GENUINELY DISJOINT grammars; witnesses that are projections of the SAME generato
 count as COMPRESSION, not Bayesian multiplication.  This module makes that split
 machine-explicit -- the auditable map behind the over-determination claim.
 
-  [E] 1. DISJOINT-GRAMMAR WITNESSES (multiply).  Seven genuinely distinct
-         mathematical structures each independently reproduce a carrier-skeleton
-         integer, each computed FROM ITS OWN grammar:
+  >>> REFINED (and partly walked back) BY v428 (OVERDET.WITNESS.RECLASS.01).  An
+  early version of this module classified the seven arithmetic witnesses below as
+  DISJOINT grammars that MULTIPLY.  Applying this module's own multiply-vs-compress
+  test to itself (v428) shows that is wrong: by v236 (TOPO.BRIESKORN.01) the
+  (2,3,5) Brieskorn singularity is the ONE generator behind the order-30 clock, so
+  the seven are different number-theoretic READINGS of that one object -- they
+  COMPRESS, they do not multiply.  The check texts below therefore state the
+  arithmetic only (each grammar's value is correct) and DEFER the multiply/compress
+  verdict to v428.  What honestly multiplies is the INPUT forced several independent
+  ways (the "8" in c3 from rank(E8), h(D5), phi(30), Milnor) plus foreign witnesses
+  (alpha^-1).  See v428 for the corrected accounting.
+
+  [E] 1. SEVEN GRAMMAR READOUTS.  Seven syntactically distinct grammars each
+         reproduce a carrier-skeleton integer, each computed FROM ITS OWN syntax:
            Gauss Z[i]:      N(3+2i)   = 3^2+2^2        = 13 (=Delta_Q)
            Eisenstein Z[w]: N(3+2w)   = 3^2-3*2+2^2    = 7  (hex norm)
            Cyclotomy Q(z5): N(3+2 z5) = 2^4 Phi5(-3/2) = 55 (quark numerator)
@@ -15,27 +26,31 @@ machine-explicit -- the auditable map behind the over-determination claim.
            Root lattice:    |det Cartan(E8)|            = 1  (holomorphic)
            Pascal/exterior: C(4,0)+C(4,1)+C(4,2)        = 11; 2^4 = 16 = dim S+
            Coxeter:         h(E8) = 30 = 2*3*5;  phi(30) = 8 = rank E8
-         Distinct grammars landing on the same skeleton => their joint occurrence
-         MULTIPLIES (independent witnesses).
-  [E] 2. DISJOINTNESS.  The seven are pairwise different structures (a quadratic
-         ring, another quadratic ring, a degree-4 field, a finite group, a root
-         lattice, a binomial/exterior algebra, a Coxeter invariant) -- not
-         projections of one object.
-  [E] 3. COMPRESSION CLASS (do NOT multiply).  The anchor a=(1,1,2) emits MANY
-         readouts from ONE generator: elementary-symmetric (e1,e2,e3)=(4,5,2)
-         (e2=g_car), power sums, and the E8 data (240 roots, 248 dim, rank 8) -- a
-         compression GAIN, not independent witnesses.  The flavor matrix R likewise
-         (trace, det, minors from one R).
-  [E] 4. THE HONEST SPLIT.  >=7 disjoint-grammar witnesses (multiplicative) + the
-         projection readouts (compression) -- two different kinds of strength, the
-         reviewer's correction made machine-explicit (NOT one undifferentiated
-         "everything multiplies").
-  [C] 5. VERDICT.  Over-determination is real and TWO-component: the multiplicative
-         evidence is the seven disjoint arithmetic witnesses on {c3,g_car}; the
-         compression is the projected readouts.  This is the auditable map that
-         replaces the rhetorical claim; it does not by itself establish physics
-         (that is the seam/anchor/transfer bridge problem), only that coincidence
-         is an expensive explanation of the discrete core.
+         (Whether these MULTIPLY or COMPRESS is settled in v428: compression.)
+  [E] 2. SYNTACTIC DISTINCTNESS (NOT independence).  The seven are pairwise
+         different syntaxes (two quadratic rings, a degree-4 field, a finite group,
+         a root lattice, a binomial/exterior algebra, a Coxeter invariant) -- but by
+         v236 they are facets of ONE (2,3,5)/E8 object, so syntactic distinctness is
+         NOT statistical independence (corrected in v428).
+  [E] 3. COMPRESSION CLASS.  The anchor a=(1,1,2) emits MANY readouts from ONE
+         generator: elementary-symmetric (e1,e2,e3)=(4,5,2) (e2=g_car), power sums,
+         and the E8 data (240 roots, 248 dim, rank 8) -- a compression GAIN, not
+         independent witnesses.  The flavor matrix R likewise (trace, det, minors
+         from one R).  v428 shows the seven grammar readouts above belong to THIS
+         class too.
+  [E] 4. THE HONEST SPLIT.  The framework -- multiplicative witnesses vs.
+         compression readouts -- is the right axis; the CLASSIFICATION of the seven
+         is corrected by v428 (they compress).  The genuinely multiplicative
+         evidence is the input forced several independent ways (v428) + foreign
+         witnesses, NOT one undifferentiated "everything multiplies".
+  [C] 5. VERDICT.  The multiply-vs-compress framework stands; this module's
+         CLASSIFICATION of the seven arithmetic witnesses is refined by v428 (they
+         are readings of one (2,3,5)/E8 object = compression).  The auditable map
+         still replaces the rhetorical claim and shows coincidence is an expensive
+         explanation of the discrete core, but it does NOT by itself establish
+         physics (the seam/anchor/transfer bridge problem) -- and the multiplicative
+         strength is the multiply-forced inputs + foreign witnesses (v428), not the
+         seven readings.
 
 Python-only (sympy/numpy exact arithmetic).
 """
@@ -87,18 +102,20 @@ def run():
     values_ok = (gauss == 13 and eisen == 7 and cyclo == 55 and galois == 4
                  and latt == 1 and pascal == 11 and spinor == 16
                  and cox_factor == [2, 3, 5] and cox_phi == 8)
-    check("DISJOINT-GRAMMAR WITNESSES [E]: seven distinct structures each reproduce "
+    check("SEVEN GRAMMAR READOUTS [E]: seven distinct syntaxes each reproduce "
           "a carrier-skeleton integer FROM ITS OWN grammar -- N(3+2i)=13, N(3+2w)=7, "
           "N(3+2 z5)=55, |(Z/5)^x|=4, |det Cartan E8|=1, C(4,<=2)=11 (2^4=16), "
-          "h(E8)=30=2*3*5 with phi(30)=8=rank E8 -- so they MULTIPLY",
+          "h(E8)=30=2*3*5 with phi(30)=8=rank E8 -- whether they MULTIPLY or COMPRESS "
+          "is settled in v428 (compression: facets of one (2,3,5)/E8 object, v236)",
           landed and values_ok and len(witnesses) == 7)
 
     grammars = ["quadratic ring Z[i]", "quadratic ring Z[w]", "degree-4 field Q(z5)",
                 "finite group (Z/5)^x", "root lattice E8", "exterior/binomial",
                 "Coxeter invariant"]
-    check("DISJOINTNESS [E]: the seven witnesses are pairwise distinct mathematical "
-          "structures (%d named grammars), not projections of one object -- so their "
-          "joint landing is independent evidence, not one restatement"
+    check("SYNTACTIC DISTINCTNESS [E]: the seven witnesses are pairwise distinct "
+          "syntaxes (%d named grammars); but per v236 they are facets of ONE "
+          "(2,3,5)/E8 object, so syntactic distinctness is NOT statistical "
+          "independence -- the multiply/compress verdict is corrected in v428"
           % len(set(grammars)),
           len(set(grammars)) == 7)
 
@@ -119,23 +136,27 @@ def run():
 
     # ---- 4. the honest split ----
     n_independent = len(witnesses)
-    check("THE HONEST SPLIT [E]: %d disjoint-grammar witnesses (multiplicative) + "
-          "the anchor/R-matrix projections (compression) -- two different kinds of "
-          "strength, made explicit (not one undifferentiated 'everything multiplies')"
+    check("THE HONEST SPLIT [E]: the AXIS is right (multiplicative witnesses vs. "
+          "compression readouts); the CLASSIFICATION of these %d grammar readouts is "
+          "corrected by v428 -- they compress one (2,3,5)/E8 object. The genuinely "
+          "multiplicative evidence is the input forced several independent ways + "
+          "foreign witnesses (v428), not one undifferentiated 'everything multiplies'"
           % n_independent,
           n_independent >= 7 and compression and landed)
 
     # ---- 5. verdict (typed [C]) ----
-    check("VERDICT [C]: over-determination is real and TWO-component -- the "
-          "multiplicative evidence is the seven disjoint arithmetic witnesses on "
-          "{c3,g_car}; the compression is the projected readouts. This auditable map "
-          "replaces the rhetorical 'everything multiplies'; it shows coincidence is "
-          "an expensive explanation of the discrete core, but does NOT by itself "
-          "establish physics (that is the seam/anchor/transfer bridge problem)",
+    check("VERDICT [C]: the multiply-vs-compress framework stands; this module's "
+          "classification of the seven arithmetic witnesses is refined by v428 (they "
+          "are readings of one (2,3,5)/E8 object = compression). The map still shows "
+          "coincidence is an expensive explanation of the discrete core, but the "
+          "multiplicative strength is the multiply-forced inputs + foreign witnesses "
+          "(v428), and it does NOT by itself establish physics (the seam/anchor/"
+          "transfer bridge problem)",
           values_ok and compression and n_independent >= 7)
 
-    return summary("v427 OVERDET.WITNESS.MAP (7 disjoint-grammar witnesses multiply; "
-                   "anchor/R projections compress; the auditable over-determination map)")
+    return summary("v427 OVERDET.WITNESS.MAP (seven grammar readouts; classification "
+                   "refined by v428 -- they compress one (2,3,5)/E8 object; the "
+                   "auditable over-determination map)")
 
 
 if __name__ == "__main__":

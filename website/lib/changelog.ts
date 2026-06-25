@@ -46,6 +46,354 @@ export const CHANGELOG: ChangelogEntry[] = [
     "dateLabel": "2026-06-25",
     "heading": [
       {
+        "k": "c",
+        "v": "v428"
+      },
+      {
+        "k": "t",
+        "v": " — honest self-correction of the over-determination map"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v428"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "OVERDET.WITNESS.RECLASS.01"
+            },
+            {
+              "k": "t",
+              "v": ") — applying "
+            },
+            {
+              "k": "c",
+              "v": "v427"
+            },
+            {
+              "k": "t",
+              "v": "'s own multiply-vs-compress test to "
+            },
+            {
+              "k": "c",
+              "v": "v427"
+            },
+            {
+              "k": "t",
+              "v": " itself."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " A pattern search and the right objection exposed that calling the seven arithmetic witnesses “disjoint grammars that "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "multiply"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "” overstates independence. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "by the Brieskorn classification ("
+        },
+        {
+          "k": "c",
+          "v": "v236"
+        },
+        {
+          "k": "t",
+          "v": ") the "
+        },
+        {
+          "k": "m",
+          "v": "(2,3,5)"
+        },
+        {
+          "k": "t",
+          "v": " singularity is the ONE generator behind the order-"
+        },
+        {
+          "k": "m",
+          "v": "30"
+        },
+        {
+          "k": "t",
+          "v": " clock (Milnor "
+        },
+        {
+          "k": "m",
+          "v": "\\mu{=}(2{-}1)(3{-}1)(5{-}1){=}8{=}\\operatorname{rank}E_8"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "30{=}2{\\cdot}3{\\cdot}5\n{=}h(E_8)"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi(30){=}8"
+        },
+        {
+          "k": "t",
+          "v": "), so each witness is a facet of that same object (primes "
+        },
+        {
+          "k": "m",
+          "v": "2,3,5"
+        },
+        {
+          "k": "t",
+          "v": " of "
+        },
+        {
+          "k": "m",
+          "v": "30"
+        },
+        {
+          "k": "t",
+          "v": ", the clock "
+        },
+        {
+          "k": "m",
+          "v": "30"
+        },
+        {
+          "k": "t",
+          "v": ", or "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": "): all seven collapse to one generator "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "compression"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", not seven multiplications. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "what genuinely multiplies is the input forced four independent ways — the “"
+        },
+        {
+          "k": "m",
+          "v": "8"
+        },
+        {
+          "k": "t",
+          "v": "” in "
+        },
+        {
+          "k": "m",
+          "v": "\\cthree{=}1/(8\\pi)"
+        },
+        {
+          "k": "t",
+          "v": " from "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{rank}E_8"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "h(D_5){=}2(5{-}1)"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi(30)"
+        },
+        {
+          "k": "t",
+          "v": " and the Milnor number — plus the foreign witness "
+        },
+        {
+          "k": "m",
+          "v": "\\ainv{\\approx}137"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "refines and partly walks back "
+        },
+        {
+          "k": "c",
+          "v": "v427"
+        },
+        {
+          "k": "t",
+          "v": ", consistent with "
+        },
+        {
+          "k": "c",
+          "v": "v236"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v305"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v313"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Surfaces corrected (same change)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v427"
+        },
+        {
+          "k": "t",
+          "v": "'s prose, the ledger row ("
+        },
+        {
+          "k": "c",
+          "v": "OVERDET.WITNESS.MAP.01"
+        },
+        {
+          "k": "t",
+          "v": ", now noting the refinement), "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_safeguards"
+        },
+        {
+          "k": "t",
+          "v": " Layer 3 (the seven compress one object; a second keybox states what multiplies), the witness-map figure (redrawn), the website ("
+        },
+        {
+          "k": "c",
+          "v": "papers.ts"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "Safeguards.tsx"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "release.ts"
+        },
+        {
+          "k": "t",
+          "v": ", the intro-video description) and the Zenodo description. The over-determination claim is now the narrower, harder-to-attack “one richly over-determined input "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " a foreign readout”."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-25",
+    "dateLabel": "2026-06-25",
+    "heading": [
+      {
         "k": "t",
         "v": "Safeguards visuals "
       },

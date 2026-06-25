@@ -42,11 +42,11 @@ export const Poster: React.FC = () => {
             letterSpacing: -1,
           }}
         >
-          Two axioms. One compiler.
+          Two inputs. One compiler.
           <br />A testable Standard-Model skeleton.
         </div>
         <div style={{ fontFamily: SANS, fontSize: 30, color: COLORS.textDim }}>
-          a 3-minute introduction
+          a 4-minute introduction
         </div>
       </AbsoluteFill>
     </AbsoluteFill>

@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`421` registered scripts · `482` ledger claims · `10` clusters.
+`422` registered scripts · `483` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -538,7 +538,7 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
 - **v426_seam_lto_rp_kms** [E/C/O] `SEAM.EQUIV.LTORP.KMS.01` — SEAM.EQUIV.LTORP.KMS.01 -- the invertible beta=1-KMS variant of (LTO-RP), the corner NPW26 leave open (they prove it for topologically-ordered models; the TFPT seam is invertible +
   - deps: v424_seam_lto_rp_reduction, v286_seam_equivalence_contract, v308_seam_equiv_chain, v309_modular_bedrock, v424, v309, v302, v240 · cited: research contracts, safeguards
 
-### `registry` — Blind registry & red-team follow-ups (v84–v175)  (174 scripts)
+### `registry` — Blind registry & red-team follow-ups (v84–v175)  (175 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
 
 - **v84_frozen_registry** [E] `REG.FREEZE.01` — blind-prediction registry FROZEN 2026-06-09: every dimensionless prediction of record at 25 digits, re-derived from the two axioms each run (formula↔value lock); exactly ONE θ₁₂ pr
@@ -887,8 +887,10 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
   - deps: v10_projection_involution.py;v11_unique_KQ.py;v12_mass_generation_polynomials, v218, v224, v410 · cited: 2 standard model
 - **v414_center_resolvent_portal** [E/C] `DIAMOND.CENTER.RESOLVENT.01` — The center C is a resolvent portal G2 -> F4 -> E8: the center C=M(1,0) (v95) is the t=0 evaluation of V; tr C=12=dim g_SM=chi_E8(i), det C=14=dim G2, sum C=31=2^g_car-1=248/8; the 
   - deps: v10_projection_involution.py;v11_unique_KQ.py;v12_mass_generation_polynomials, v95, v230 · cited: 2 standard model
-- **v427_overdet_witness_map** [E/C] `OVERDET.WITNESS.MAP.01` — OVERDET.WITNESS.MAP.01 -- the honest over-determination accounting, made machine-explicit (a reviewer correction): witnesses from DISJOINT grammars multiply; projections of the SAM
-  - deps: v354_e8_reverse_audit, v403_facet_compositum, v419_seam_galois_carrier, v83_e8net_holomorphic_uniqueness, v53_compiler_core, v415, v417, v418 · cited: safeguards
+- **v427_overdet_witness_map** [E/C] `OVERDET.WITNESS.MAP.01` — OVERDET.WITNESS.MAP.01 -- the multiply-vs-compress FRAMEWORK for over-determination (a reviewer correction): witnesses from DISJOINT grammars multiply; projections of the SAME gene
+  - deps: v354_e8_reverse_audit, v403_facet_compositum, v419_seam_galois_carrier, v83_e8net_holomorphic_uniqueness, v236_brieskorn_capstone, v53_compiler_core, v415, v417 · cited: safeguards
+- **v428_overdet_reclass** [E/C] `OVERDET.WITNESS.RECLASS.01` — OVERDET.WITNESS.RECLASS.01 -- the honest correction of v427: applying v427's own multiply-vs-compress test to v427 itself. The (2,3,5) Brieskorn singularity (v236) is the ONE gener
+  - deps: v427_overdet_witness_map, v236_brieskorn_capstone, v53_compiler_core, v305, v313 · cited: safeguards
 
 ## Supersede map — do NOT reuse the left-hand claim
 
@@ -901,6 +903,7 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - `GATE.QGEO.01` → superseded by `FLAV.QGEO.03` (v72_q_det_from_cusp)
 - `GATE.RU.01` → superseded by `FLAV.RIGID.01` (v49_readout_rigidity)
 - `GATE.UWALL.01` → superseded by `FLAV.RIGID.01` (v49_readout_rigidity)
+- `OVERDET.WITNESS.MAP.01` → superseded by `OVERDET.WITNESS.RECLASS.01` (v428_overdet_reclass)
 - `SEAM.EQUIV.GOLDEN.01` → superseded by `SEAM.EQUIV.BOOTSTRAP.01` (v350_bootstrap_inputs_correction)
 - `TFPT.IRREDUCIBLE.01` → superseded by `TFPT.SELFLOOP.01` (v353_selfloop_capstone)
 
@@ -912,7 +915,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v415_gaussian_operator** — `DIAMOND.GAUSS.01`
 - **v416_atom_trichotomy** — `ARITH.TRICHOTOMY.01`
 - **v417_eisenstein_cp_operator** — `DIAMOND.EISEN.01`
 - **v418_cyclotomic_norm_triple** — `ARITH.NORMTRIPLE.01`
@@ -924,4 +926,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v425_dyn_transfer_universal** — `DYN.TRANSFER.UNIVERSAL.01`
 - **v426_seam_lto_rp_kms** — `SEAM.EQUIV.LTORP.KMS.01`
 - **v427_overdet_witness_map** — `OVERDET.WITNESS.MAP.01`
+- **v428_overdet_reclass** — `OVERDET.WITNESS.RECLASS.01`
 

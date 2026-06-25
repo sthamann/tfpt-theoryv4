@@ -59,20 +59,20 @@ export const Scene02Machine: React.FC = () => {
 
   // Internal beats are aligned to the caption timeline (scene starts at 15s).
   const eyebrow = enterUp(frame, 6, 22);
-  const inA = enterUp(frame, 110, 22);
-  const inB = enterUp(frame, 250, 22);
-  const arrow1 = fade(frame, 330, 380);
-  const mid = enterUp(frame, 360, 24);
-  const arrow2 = fade(frame, 600, 650);
-  const e8 = enterUp(frame, 630, 26);
-  const formula = enterUp(frame, 670, 26);
+  const inA = enterUp(frame, 120, 22); // c₃ named (~19.6s)
+  const inB = enterUp(frame, 280, 22); // g_car named (~24.6s)
+  const arrow1 = fade(frame, 380, 430);
+  const mid = enterUp(frame, 410, 24); // "one shape is forced to assemble" (~29s)
+  const arrow2 = fade(frame, 520, 570);
+  const e8 = enterUp(frame, 540, 26);
+  const formula = enterUp(frame, 600, 26);
 
   // E8 glow ramps when the glue closes it into E8
-  const e8glow = fade(frame, 620, 700, 0.2, 1);
+  const e8glow = fade(frame, 540, 620, 0.2, 1);
 
-  // lower callouts swap — "audit hull" then "readout after projection"
-  const calloutA = fadeInOut(frame, 800, 832, 1040, 1070);
-  const calloutB = fadeInOut(frame, 1080, 1112, 1200, 1225);
+  // lower callouts swap — "scaffold" then "readout after projection"
+  const calloutA = fadeInOut(frame, 740, 768, 905, 928); // ~40–46s
+  const calloutB = fadeInOut(frame, 935, 963, 1180, 1198); // ~46–55s
 
   return (
     <AbsoluteFill>
@@ -91,11 +91,13 @@ export const Scene02Machine: React.FC = () => {
             gap: 42,
           }}
         >
-          <div style={{ display: "flex", flexDirection: "column", gap: 22, ...inA }}>
-            <div style={inB}>
-              <InputChip symbol="c₃ = 1/(8π)" label="seam constant" color={COLORS.blueLight} />
+          <div style={{ display: "flex", flexDirection: "column", gap: 22 }}>
+            <div style={inA}>
+              <InputChip symbol="c₃ = 1/(8π)" label="boundary constant" color={COLORS.blueLight} />
             </div>
-            <InputChip symbol="g_car = 5" label="carrier rank" color={COLORS.violet} />
+            <div style={inB}>
+              <InputChip symbol="g_car = 5" label="carrier (3 + 2)" color={COLORS.violet} />
+            </div>
           </div>
 
           <Chevron on={arrow1} />
@@ -120,7 +122,7 @@ export const Scene02Machine: React.FC = () => {
               ⋊ μ₄ glue
             </div>
             <div style={{ fontFamily: SANS, fontSize: 22, color: COLORS.textDim }}>
-              SO(10) half-spinor · family geometry
+              the one shape that closes
             </div>
           </div>
 
@@ -161,11 +163,12 @@ export const Scene02Machine: React.FC = () => {
         {/* swapping reframe callouts */}
         <div style={{ position: "relative", marginTop: 34, height: 120, width: 1620 }}>
           <Callout opacity={calloutA} color={COLORS.open}>
-            E₈ is <b style={{ color: COLORS.textBright }}>not</b> a gauge group of nature — it is the{" "}
-            <b style={{ color: COLORS.open }}>audit hull</b>, the consistency container.
+            E₈ is <b style={{ color: COLORS.textBright }}>not</b> a force of nature — it is a{" "}
+            <b style={{ color: COLORS.open }}>scaffold</b> you build, check against, then step away from.
           </Callout>
           <Callout opacity={calloutB} color={COLORS.exact}>
-            The Standard Model is a <b style={{ color: COLORS.textBright }}>readout after projection</b> —
+            The Standard Model is what you{" "}
+            <b style={{ color: COLORS.textBright }}>read off after projecting back down</b> —
             not “everything is E₈”.
           </Callout>
         </div>

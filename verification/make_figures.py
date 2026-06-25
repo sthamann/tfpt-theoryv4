@@ -1281,7 +1281,7 @@ def fig_safeguard_layers():
         ("6  Two independent paths", "Wolfram 116+327 \u00b7 Lean\u00a04 kernel proof", C["gold"]),
         ("5  Frozen registry + null model", "v84 \u00b7 v100 Monte-Carlo \u00b7 v375 scorecard", C["gold"]),
         ("4  Firewall + No-Unit", "v187/v213 \u00b7 v153 (v_geo theorem-forbidden)", C["green"]),
-        ("3  Over-determination map", "v427 \u00b7 disjoint grammars multiply, projections compress", C["green"]),
+        ("3  Over-determination map", "v427/v428 \u00b7 seven readouts compress one (2,3,5)/E8 object", C["green"]),
         ("2  No free pattern + reverse audit", "v305 \u00b7 E8.REVERSE.AUDIT (3/8 readout)", C["blue"]),
         ("1  Status calculus", "[E]/[C]/[O]/[X] \u00b7 ledger single source \u00b7 audit_sync", C["blue"]),
     ]
@@ -1353,42 +1353,69 @@ def fig_reverse_audit():
 
 
 def fig_witness_map():
-    """Seven disjoint arithmetic grammars all land on the carrier skeleton (multiply);
-    the anchor is the single compression generator."""
-    fig, ax = plt.subplots(figsize=(7.8, 4.6))
+    """The CORRECTED over-determination map (v428): the seven arithmetic readouts are
+    facets of ONE (2,3,5)/E8 object (compression); what genuinely multiplies is the
+    input forced four independent ways (the '8') plus the foreign witness alpha^-1."""
+    fig, ax = plt.subplots(figsize=(8.6, 5.0))
+
+    # ---- left panel: COMPRESSION (seven facets -> one (2,3,5)/E8 object) ----
     wit = [
-        ("Gauss $\\mathbb{Z}[i]$", "$N(3{+}2i){=}13$"),
-        ("Eisenstein $\\mathbb{Z}[\\omega]$", "$N(3{+}2\\omega){=}7$"),
-        ("Cyclotomy $\\mathbb{Q}(\\zeta_5)$", "$N(3{+}2\\zeta_5){=}55$"),
-        ("Galois $(\\mathbb{Z}/5)^\\times$", "$|\\cdot|{=}4$"),
-        ("Root lattice $E_8$", "$|\\mathrm{det\\,Cartan}|{=}1$"),
-        ("Pascal/exterior", "$C(4,{\\leq}2){=}11,\\ 2^4{=}16$"),
-        ("Coxeter", "$\\varphi(30){=}8$"),
+        ("Gauss $\\mathbb{Z}[i]$  $N{=}13$", "2"),
+        ("Eisenstein $\\mathbb{Z}[\\omega]$  $N{=}7$", "3"),
+        ("Cyclotomy $\\mathbb{Q}(\\zeta_5)$  $N{=}55$", "5"),
+        ("Galois $(\\mathbb{Z}/5)^\\times{=}4$", "5"),
+        ("Pascal $2^4{=}16$", "2"),
+        ("Coxeter $\\varphi(30){=}8$", "30"),
+        ("$|\\mathrm{det\\,Cartan}(E_8)|{=}1$", "E_8"),
     ]
     n = len(wit)
-    sx, sy = 4.7, (n - 1) / 2.0
-    ax.add_patch(plt.Circle((sx, sy), 0.62, facecolor=C["green"], alpha=0.18,
-                            edgecolor=C["green"], lw=1.6))
-    ax.text(sx, sy + 0.12, "carrier", ha="center", fontsize=9, fontweight="bold",
-            color=C["green"])
-    ax.text(sx, sy - 0.22, "$\\{c_3,g_{\\rm car}\\}$", ha="center", fontsize=9,
-            color=C["green"])
-    for i, (g, val) in enumerate(wit):
+    sx, sy = 3.55, (n - 1) / 2.0
+    ax.add_patch(plt.Circle((sx, sy), 0.78, facecolor=C["gold"], alpha=0.16,
+                            edgecolor=C["gold"], lw=1.8))
+    ax.text(sx, sy + 0.20, "ONE object", ha="center", fontsize=8.8,
+            fontweight="bold", color=C["gold"])
+    ax.text(sx, sy - 0.16, "$(2,3,5)/E_8$", ha="center", fontsize=9.2, color=C["gold"])
+    ax.text(sx, sy - 0.52, "(v236)", ha="center", fontsize=7.6, color=C["gold"])
+    for i, (g, facet) in enumerate(wit):
         y = n - 1 - i
-        ax.text(0.1, y, g, fontsize=8.8, fontweight="bold", color=C["blue"], va="center")
-        ax.text(2.35, y, val, fontsize=8.2, color=C["gray"], va="center")
-        ax.annotate("", xy=(sx - 0.62, sy), xytext=(3.5, y),
-                    arrowprops=dict(arrowstyle="->", color=C["blue"], lw=0.8, alpha=0.7))
-    ax.text(sx + 0.95, sy + 1.7, "disjoint grammars\n$\\Rightarrow$ MULTIPLY",
-            fontsize=8.6, color=C["green"], fontweight="bold")
-    # compression node
-    ax.text(sx + 0.95, sy - 1.4, "anchor $a{=}(1,1,2)$\n$\\to(4,5,2),\\,(240,248,8)$:\n"
-            "ONE generator $\\Rightarrow$ COMPRESS",
-            fontsize=8.0, color=C["gold"], fontweight="bold")
-    ax.set_xlim(0, 8.6); ax.set_ylim(-1.6, n + 0.2)
+        ax.text(0.05, y, g, fontsize=8.0, fontweight="bold", color=C["blue"], va="center")
+        ax.text(2.45, y, "facet $%s$" % facet, fontsize=7.4, color=C["gray"], va="center")
+        ax.annotate("", xy=(sx - 0.78, sy), xytext=(3.05, y),
+                    arrowprops=dict(arrowstyle="->", color=C["gold"], lw=0.8, alpha=0.65))
+    ax.text(sx, -1.15, "seven readings of one generator\n$\\Rightarrow$ COMPRESS "
+            "(not independent)", ha="center", fontsize=8.4, color=C["gold"],
+            fontweight="bold")
+
+    ax.plot([4.9, 4.9], [-1.4, n - 0.2], color=C["gray"], lw=0.7, ls=":", alpha=0.6)
+
+    # ---- right panel: what genuinely MULTIPLIES ----
+    forced = [("$\\mathrm{rank}\\,E_8$", "8"), ("$h(D_5){=}2(5{-}1)$", "8"),
+              ("$\\varphi(30)$", "8"), ("Milnor $(2,3,5)$", "8")]
+    bx = 6.9
+    by0 = sy + 1.95
+    ax.text(bx, by0 + 0.95, "what genuinely MULTIPLIES", ha="center", fontsize=8.8,
+            fontweight="bold", color=C["green"])
+    for i, (lab, val) in enumerate(forced):
+        y = by0 - i * 0.62
+        ax.text(5.45, y, lab, fontsize=8.0, color=C["blue"], va="center")
+        ax.annotate("", xy=(bx + 0.18, by0 - 0.93), xytext=(bx - 0.05, y),
+                    arrowprops=dict(arrowstyle="->", color=C["green"], lw=0.8, alpha=0.6))
+    ax.add_patch(plt.Circle((bx + 0.45, by0 - 0.93), 0.5, facecolor=C["green"],
+                            alpha=0.18, edgecolor=C["green"], lw=1.6))
+    ax.text(bx + 0.45, by0 - 0.93, "$8$ in\n$c_3{=}\\frac{1}{8\\pi}$", ha="center",
+            va="center", fontsize=8.0, fontweight="bold", color=C["green"])
+    ax.text(bx, by0 - 1.95, "input forced four\nindependent ways", ha="center",
+            fontsize=7.8, color=C["green"])
+    ax.text(bx, -0.55, "$+$ foreign witness", ha="center", fontsize=8.2,
+            color=C["red"], fontweight="bold")
+    ax.text(bx, -1.35, "$\\alpha^{-1}\\!\\approx\\!137$ (prime,\nnot in the $(2,3,5)$ skeleton)",
+            ha="center", fontsize=7.8, color=C["red"])
+
+    ax.set_xlim(0, 8.7); ax.set_ylim(-2.0, n + 0.4)
     ax.axis("off")
-    ax.set_title("Witness-independence map (v427): disjoint grammars multiply, "
-                 "one-generator projections compress", fontsize=9.6)
+    ax.set_title("Corrected over-determination map (v428): seven arithmetic readouts "
+                 "COMPRESS one $(2,3,5)/E_8$ object;\nthe input forced four ways "
+                 "$+$ the foreign $\\alpha^{-1}$ are what multiply", fontsize=9.2)
     fig.tight_layout()
     fig.savefig(os.path.join(OUT, "safeguard_witness_map.pdf"))
     fig.savefig(os.path.join(WEB, "safeguard_witness_map.png"), dpi=150)

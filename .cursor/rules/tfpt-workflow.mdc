@@ -114,7 +114,10 @@ and the `GATE.*` rows in the ledger.
 4. **Integrate into the affected section.** This is mandatory, not optional — a
    finding that is not in the papers does not exist, and **content produced from a
    script must be cited with `\veri{vN_<name>.py}` in the *exact* section/box where
-   that content lives** (not merely "somewhere in the paper"). For every new script:
+   that content lives** (not merely "somewhere in the paper"). **Before editing,
+   launch parallel subagents** per the **`subagent-deep-sync` rule** (paper surfaces,
+   website mirrors, stale open-gate wording); merge their checklists, then edit.
+   For every new script:
    - add the theorem/keybox/table-row carrying the result, with the correct status
      marker and an inline `\veri{vN_<name>.py}` reference, **in the affected
      section** of the paper whose narrative it belongs to (a script may be cited in
@@ -215,7 +218,9 @@ bash build.sh release      # gen -> compile 10 docs -> website sync -> audit -> 
 ## Deep-sync rules (updates must be COMPLETE, never superficial)
 
 A change is **not done** when one box or one file mentions it — it is done when **every
-surface that states the affected fact agrees**. Concretely:
+surface that states the affected fact agrees**. Use **`subagent-deep-sync`** subagents
+to enumerate surfaces; the parent agent must clear the merged checklist before calling
+the change done. Concretely:
 
 - **Trace every affected statement.** When a result upgrades/supersedes an earlier claim,
   FIRST consult the generated content maps to enumerate the surfaces (see the

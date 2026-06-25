@@ -25,9 +25,14 @@ audit as the exit gate.
 
 ## Agentic procedure when a result/status/script changes
 
+> **Subagents:** For new `vN` modules, status moves, or any finding that touches
+> multiple papers/website surfaces, follow the **`subagent-deep-sync` rule** —
+> launch parallel readonly `explore` subagents (paper map, website map, stale
+> wording) **before** editing; parent merges checklists and owns the audit gate.
+
 0. **Refresh the maps FIRST**: `bash build.sh gen` — before reading them, so the
    enumeration reflects the current tree (papers may have been edited since the
-   last generation). Only then start editing.
+   last generation). Only then start editing (or launch map subagents).
 1. **Enumerate the paper surfaces**: `grep <vN_script> verification/docs_map.csv`
    → every (doc, section, line range) that cites the script. Open exactly those
    sections and update them. Sections with related content but no citation can

@@ -1,0 +1,685 @@
+================================================================================
+ nextv2.txt  --  Schließungs-Strategien QFT / 4D-Anschluss / volle TOE
+ Stand: 2026-06-25  |  Literatur-validiert (NPW26, Marolf, Mazur-Mottola, RP-YM)
+================================================================================
+
+KONTEXT: Suche nach neuen vollständigen Lösungen, um (a) QFT, (b) vollen 4D-
+Anschluss und (c) volle TOE zu erreichen. Diese Notiz extrahiert die exakten
+offenen Gates aus tfpt_research_contracts.tex / tfpt_4_frontier.tex / next.txt,
+ordnet aktuelle (2022-2026) Literatur zu, und gibt on-chain-machbare v4xx-Module
+mit ehrlichem End-Ziel pro Gate. Keine Fabrication: alle Marker-Sprünge bleiben
+im Rahmen der tfpt-workflow / sync-maps Regeln.
+
+================================================================================
+ 0. WAS EXAKT NOCH OFFEN IST (aus den aktiven Dokumenten)
+================================================================================
+
+Drei Gates, NICHT symmetrisch (next.txt 2026-06-22):
+
+  Gate A -- SEAM.EQUIV.01 (Keystone, QFT)        [O] Rest = 1 Lemma
+    Kontinuums-OS-Rekonstruktion des ROHEN quasi-free Seam-Zustands + die
+    mu4-Invarianz [rho, Lambda_Sigma]=0 (intrinsische Bisognano-Wichmann).
+    Kette sonst aus zitierten Theoremen (MMST, Kitaev free-fermion, OS).
+    QGEO.SYM.01 ist bereits das minimale Axiom (v267): "der Seam traegt die
+    mu4-Clock als konformale Symmetrie der vier Marken"; v264 zeigt die
+    Umkehrung auf der uniformisierenden Metrik: flache Pillowcase-Metrik
+    => [rho,Lambda]=0.
+
+  Gate B -- QG.AMB.01 (ambient QG, TOE)          [C] Redundanz
+    Nichtperturbatives Euclidean-QG-Mass (Konformfaktor-Problem,
+    Gibbons-Hawking-Perry 1978). Gap-entkoppelt (Margin 1.648>0, v311),
+    KEIN Blocker der boundary-QFT. Zertifikats-Objekt.
+
+  Gate E -- v_geo (volle TOE)                    [O], theorem-forbidden
+    Die absolute Einheit. TOE_strict = TOE_dim + [v_geo] (v384).
+    Per Konstruktion NICHT schliessbar -- das ist kein Bug, sondern die
+    richtige Position.
+
+Zusaetzlich:
+  CONTRACT.QFT4D.01 / CONTRACT.QFT4D.DIRAC.01   (Connes spectral action, Dirac)
+    5 von 7 Obligationen bereits [E] (v252); Rest = strikte Orientabilitaet +
+    Poincare-Dualitaet (publizierter NCG-SM-Klassendefekt, v256/v257: gelockerte
+    Versionen gelten).
+  QFT4D.SPERT.02/03/04                          (All-Order-perturbative S-Matrix)
+    [C] per Epstein-Glaser (v269); one-loop [E] (v271); all-order bleibt offen
+    als Standard-pAQFT-Konstruktion.
+  F_transfer (CONTRACT.F.01, v213)              getypter Funktor, per Design offen
+    F_pole (v183), F_Boltzmann (v212), F_relic (v211), F_QCD (v164).
+    CI-Guard v187 haelt alle vier ledger-erzwungen auf [C]/[O].
+  4D-Gabel (v265, machine-frozen):
+    (A) kanonisch = boundary-only;
+    (B) konditional = carrier-nativer Pati-Salam-UV-Zweig ({1,10,16,45}, kein 126);
+    SM-only-4D-GUT ist GEKILLT [X] (v246, alpha3^-1 um ~5.6 off).
+
+SCHLUESSELERKENNTNIS (next.txt 2026-06-22): Die zwei ehemaligen "Bedrock-Punkte"
+sind bereits kollabiert -- QGEO.SYM.01 ist ein Korollar von SEAM.EQUIV.01,
+QG.AMB.01 ist vererbt+entkoppelt. Es bleibt EIN loesbares Theorem + eine Einheit
++ ein Transfer-Funktor.
+
+================================================================================
+ D. F_transfer: DIE VIER GETYPTEN TRANSFER-SCHNITTSTELLEN (zuerst, wie gewuenscht)
+================================================================================
+
+D.0  Wo F_transfer genau steht (CONTRACT.F.01, v213)
+--------------------------------------------------------------------------------
+
+F_transfer = F_observable o F_threshold o F_RG, jede Instanz =
+diskreter Compiler-Kern [E/I]  o  externer kontinuierlicher Solver [C/O].
+
+Vier Axiome maschinen-geprueft (v213_ftransfer_functor.py):
+  (1) mu4-Deck-Aequivarianz: Koide-Multiplikator lambda_2=(2/3)^6=64/729 IST
+      der mu4-Deck-Transfer-Eigenwert (Deck fixiert den Branch-Divisor, v82/v54);
+  (2) Pluecker-Erhaltung: 53=a^T(R+Q)1 ist die F-Ecke (Pl(F)=(1,22,30)),
+      ||Pl(K)||_1=11;
+  (3) Positivitaet/Stochastizitaet: spec(T)={1,(2/3)^6,(1/3)^6} positiv,
+      Washout kappa_f in (0,1);
+  (4) externe Module explizit: Pol-Transfer, Boltzmann-Netz, finite-T chi(T)-ODE,
+      Gitter-C_N -- nie eine Compiler-Zahl; b3=-7 ein Carrier-Output.
+
+Instanzen: F_pole (v183), F_Boltzmann (v212), F_relic (v211), F_QCD (v164).
+m_p/m_e (v186) bewusst weggelassen -- bereits [A] QCD-LAMBDA.01.
+
+ENTSCHEIDENDER PUNKT: F_transfer ist per Design ein OFFENER Vertrag, kein zu
+schliessendes Gate. "Schliessen" heisst hier nicht "eine Zahl herleiten",
+sondern pro Instanz den externen kontinuierlichen Solver durch einen benannten,
+ehrlich getypten Mechanismus ersetzen -- oder die Firewall ehrlich bestätigen.
+
+D.1  F_pole (Koide source->pole) -- die am weitesten typisierte Instanz
+--------------------------------------------------------------------------------
+
+Stand:
+  [E] der Faktor 53/54 als operator-origin (v183, F-Ecke);
+  [E] die Rate (2/3)^6 als Gap-Eigenwert (v82/v327);
+  [E] der kanonische Generator dq/dt = (Delta/Nfam)*det B(q) mit Zeit-1-Map =
+      Moebius-Map F (v99);
+  [C] die Flow-Zeit t~2.84 Perioden (nicht ganzzahlig => diskrete Iteration
+      ausgeschlossen);
+  [E] 1-loop-QED-Identifikation der Groessenordnung (v420).
+  Rest [C]: *warum* der leptonische Source->Pole-Transfer die F-Ecke liest =
+  ein QFT-Mechanismus, der gap x Ankerblock-Quadrik produziert.
+
+Wie geschlossen wird (drei on-chain-erreichbare Stufen):
+
+  Stufe 1 -- Flow-Zeit als 1-loop-QED-Effekt typisieren (machbar, kein neuer
+            freier Input). Der kanonische Generator (v99) liefert
+            t = log_mu(rho_pole/rho_src). Derzeit [C] weil nicht-ganzzahlig.
+            Schliessen via: zeige, dass die flavor-SPLIT 1-loop-QED-Selbstenergie
+            (v420 hat die Groessenordnung alpha/pi) den kontinuierlichen
+            Generator exp(t*log F) mit t = (alpha/pi)*C_fam reproduziert, wobei
+            C_fam die family-Weyl-Ableitung phi0/|W(A3)| = phi0/24 ist. Das macht
+            t zu einer getypten QED-Ein-Loop-Zahl, nicht zu einer freien Periode.
+            Status [C] mit benanntem Mechanismus, keine Firewall-Verletzung.
+
+  Stufe 2 -- der F-Ecken-Mechanismus als A3-family-Weyl-Mittelung (theorie-
+            intern). Zeige, dass die Sheet-Diamond-Ecke F=R+Q=M(1,1) (v183)
+            genau der A3-family-Weyl-orbit-gemittelte Pol-Transfer ist:
+            53 = 52+1 = det B_F + der recovery-Attribut-Wert. Reine Compiler-
+            Rechnung (v4xx_fpole_family_weyl.py) -- wenn die family-Weyl-Gruppe
+            W(A3)=S4 auf dem Sheet-Diamond operiert, ist der F-Eckentransfer
+            der einzig verzweigungserhaltende. Verbindet den operator-origin
+            (bereits [E]) mit dem Mechanismus.
+
+  Stufe 3 -- Belle-II-Daten-Entscheidung (extern, nicht theorie-schliessbar).
+            Der konditionale n=3-Schritt (eine pro Familie) sagt
+            m_tau = 1776.9427 MeV voraus (+0.14 sigma). Kill-Kriterium
+            sigma(m_tau)~0.01 MeV (Belle II). KEIN TFPT-Gate -- das ist ein
+            Falsifikationstest [X]. Wird durch Messung geschlossen, nicht durch
+            Theorie. Darf niemals als "Schliessen" von Koide verkauft werden.
+
+Ehrliches End-Ziel fuer F_pole:
+  [E] Faktor + Rate + Generator + (Stufe 1) getypte Flow-Zeit + (Stufe 2)
+  Mechanismus => [C] reduziert auf "eine benannte QED-1-Loop-Rechnung", und der
+  einzige echte Rest ist der [X] Belle-II-Test. Das ist die maximale ehrliche
+  Position -- Koide wird NIE [E] sein, weil die absolute flow-Zeit scheme-
+  abhaengig ist (v420 sagt das explizit).
+
+D.2  F_Boltzmann (eta_B) -- die bewusst nicht-geschlossene Instanz
+--------------------------------------------------------------------------------
+
+Stand: [C] v184_anchored_boltzmann. Das ehrliche Resultat:
+  M_1 = M_R*phi0^4 VERSCHOB NUR den freien Input -- M_R ist die Seesaw-Skala
+  ~v^2/m_3 (~6e14, haengt vom ungefixten Dirac-Yukawa ab) und KEIN sauberer
+  TFPT-Power von M-bar. Reviewer-"6.0e-10" entstehen nur mit M_R=1.3e15;
+  Seesaw-Wert gibt 3.4e-10 -- der Treffer wandert mit M_R = BEWEIS, dass M_1
+  ungepinnt ist. Zwei freie Inputs -> einer, nicht null.
+
+Wie "geschlossen" wird -- und zwar ehrlich als NICHT-schliessbar getypt:
+
+  Es gibt keine on-chain Stufe, die eta_B auf [E] hebt, ohne eine neue Praemisse
+  einzufuehren. Das ist die korrekte Position. Jeder Versuch, eta_B "vollstaendig
+  zu schliessen", wuerde entweder (a) den Dirac-Yukawa fixieren (neue Praemisse =
+  Firewall-Verletzung) oder (b) M_R als TFPT-Power postulieren (falsch, ~75%/
+  ~40%-Verfehlung belegt).
+
+  Was stattdessen machbar ist: Die Shapiro-Sleszynski-Bedingung fuer den Washout
+  typisieren -- m~1 = m_3/A_Lambda = 5 meV (A_Lambda=10=|E(K5)|-Atom) ist bereits
+  ein sauberer Anker. Zeige, dass der Boltzmann-Washout die mu4-Deck-Aequivarianz
+  (Axiom 1 von CONTRACT.F.01) respektiert -- also dass der Boltzmann-Transfer-
+  Tensor in der (2/3)^6-Eigenrichtung kontrahiert. Das macht F_Boltzmann zu einem
+  functorial-korrekten [C]-Objekt: der diskrete Kern ist [E] (Axiom 1-4), der
+  externe Solver ist ein benannter Standard-Boltzmann-Lauf mit einem festen Input
+  (m~1), und die Vorhersage bleibt ein Szenario (3.4e-10 Seesaw vs. beobachtet
+  6.1e-10), kein Verschluss.
+
+Ehrliches End-Ziel:
+  eta_B bleibt [C] als getypter Standardtransfer mit einem freien Input (M_R).
+  Die Firewall (v187) ist der korrekte Zustand. "Schliessen" = dokumentieren,
+  dass der freie Input struktur-erzwungen ist (Seesaw-Logik), nicht ein Fit.
+
+D.3  F_relic (Axion / Omega_DM) -- Szenario, kein Verschluss
+--------------------------------------------------------------------------------
+
+Stand: [C] v185_axion_relic. Harmonisches Misalignment UNTERPRODUZIERT bei
+  f_a=M_scal/128 (~21% bei theta~O(1)); Omega_DM nur am theta_i~170-Hilltop
+  erreichbar, dort exponentiell empfindlich.
+
+Wie typisiert wird:
+
+  Ehrliche Typisierung als konditionales Szenario [C]. All-DM ist moeglich, aber
+  nur am Hilltop mit theta_i~170 -- das ist ein fein-abgestimmter Punkt, kein
+  Verschluss. Der freie Input ist theta_i (Anfangs-Misalignment-Winkel) -- ein
+  kosmologischer Initialwert, den TFPT per Konstruktion nicht setzt (TFPT liefert
+  f_a = M_scal/128 als Compiler-Zahl [E], aber nicht die Initialbedingung).
+
+  Machbare on-chain Schärfung: Zeige, dass die Hilltop-Bedingung theta_i~170
+  aequivariant unter dem mu4-Deck ist -- also dass der einzig konsistente
+  Misalignment-Winkel der ist, bei dem die Axion-Richtung mit der (2/3)^6-
+  Eigenrichtung von F_transfer aligniert. Das wuerde theta_i von "freier
+  Initialbedingung" auf "durch die mu4-Deck-Symmetrie bevorzugter Wert"
+  typisieren -- immer noch [C] (die Dynamik ist extern), aber der freie Input
+  wird auf eine Symmetrie-Bedingung reduziert.
+
+Ehrliches End-Ziel:
+  [C] Szenario mit Symmetrie-Bevorzugung. Kein Verschluss -- Omega_DM aus reinem
+  Axion bleibt eine konditionale Moeglichkeit, die durch Messung (Axion-Massensuche,
+  CMB-Spektral-Index) entschieden wird, nicht durch Theorie.
+
+D.4  F_QCD (Lambda_QCD, m_p/m_e) -- bereits am stabilsten
+--------------------------------------------------------------------------------
+
+Stand: [A] QCD-LAMBDA.01 (v164) -- das m_p/m_e-Verhaeltnis ist bereits ein
+  QCD-Contract, nicht Teil der offenen F_transfer-Liste. b3=-7 ist ein
+  Carrier-Output [E] (v159/v310). alpha_s-Fingerprint (next.txt 2026-06-13):
+  1/c3 - 1/phi0 = 2pi ist reine Seed-Algebra, Skalen-Verhaeltnis
+  mu(c3)/mu(phi0) = e^(4 pi^2 / 7) = 281 alpha_s-unabhaengig (gemessen 292).
+
+Wie weiter geschaerft wird:
+
+  Das 2pi-Seed-Identitaet (1/c3 - 1/phi0 = 2pi) ist bereits [E]. Die "schoenen
+  Skalen" (1 PeV etc.) sind koinzidenziell -- v100-Numerologie-Null-Test filtert
+  das korrekt heraus. HIER IST NICHTS ZU SCHLIESSEN -- der Zustand ist korrekt:
+  [E] die Identitaet, [C] die "schoene Skala" als Kuriositaet, KEINE Vorhersage.
+
+  Einzige Schärfung: die zwei-loop-Matrix (PyR@TE, QFT4D.SPERT.03) -- das ist ein
+  offener Contract, aber ein numerischer/Standard-RG-Schritt, kein TFPT-
+  Struktur-Gate.
+
+D.5  Synthese F_transfer
+--------------------------------------------------------------------------------
+
+F_transfer ist kein zu schliessendes Gate -- es ist ein getypter Vertrag, dessen
+korrekter Endzustand eine Mischung aus [E] (diskreter Kern), [C] (benannte
+externe Solver) und [X] (Messung) ist. Die maximale ehrliche Position:
+
+  F_pole:     [E] Kern + [C] getypte QED-Flow-Zeit + [X] Belle-II (nach 1+2)
+  F_Boltzmann:[C] mit EINEM struktur-erzwungenen freien Input (M_R) -- Firewall ok
+  F_relic:    [C] Szenario mit mu4-Bevorzugung -- konditional, per Messung
+  F_QCD:      [E]/[A] -- weitgehend geschlossen
+
+WER "F_transfer vollstaendig schliessen" will, missversteht die Architektur.
+Der diskrete Compiler-Kern ist [E] (Axiom 1-4); die kontinuierlichen externen
+Solver sind per Design [C]/[O] -- sie sind die ehrlich getypte Schnittstelle zur
+echten Physik, nicht Luecken. Die Firewall (v187) ist die richtige Position.
+
+================================================================================
+ GATE A -- SEAM.EQUIV.01 (Keystone) -- der echte Hebel zur TOE_dim
+================================================================================
+
+Was genau fehlt: Die kontinuierliche OS-Rekonstruktion des ROHEN quasi-free Seam-
+Zustands, konkret das eine Lemma: der rohe Zustand ist mu4-invariant
+([rho,Lambda_Sigma]=0 auf dem vollen L^2, intrinsische Bisognano-Wichmann). Die
+Kette sonst: gap>0 (v302) -> invertibel (v301) -> holomorph c=8 (v308) ->
+(E8)_1 (v308), alles [E] bis auf den OS-Schritt. QGEO.SYM.01 ist bereits das
+minimale Axiom (v267), und v264 zeigt die Umkehrung auf der uniformisierenden
+Metrik: flache Pillowcase-Metrik => [rho,Lambda]=0.
+
+A.1  LZ25-modular-twisted OS-Route (hoechste Wahrscheinlichkeit) -- VALIDIERT
+--------------------------------------------------------------------------------
+
+Quelle: Naaijkens-Penneys-Wallick, "Local Topological Order, Haag Duality, and
+Reflection Positivity" (arXiv:2605.10693, v1 May 12 2026). Im Folgenden NPW26.
+
+Was die Quelle exakt liefert (Axiom 4.2 / Theorem A):
+
+  Axiom (LTO-RP) (Axiom 4.2): Fuer eine Z/2-Reflection theta an einem vertikalen
+  Cut K, mit Theta dem zugehoerigen Antiunitaer, gilt fuer theta-symmetrische
+  Regionen R << S:
+
+    Theta(sigma^psi_{-i/2}(x^dagger)) p_S = x p_S   fuer alle x in B(R+  S+)
+
+  wobei t -> sigma^psi_t die modulare Automorphismengruppe des kanonischen
+  Zustands psi ist.
+
+  Theorem A: Ist (A,p) ein LTO mit (LTO-HD), psi faithful auf B(Lambda_pm), und
+  p_{Lambda_pm} haben zentrales support 1 in A(Lambda_pm), dann
+  A(Lambda_+)' = A(Lambda_-) auf L^2(A,psi) -- das ist Haag-Dualitaet.
+
+  Lemma (LTO-RP => LTO-HD): Fuer quantum spin systems impliziert (LTO-RP) direkt
+  (LTO-HD).
+
+  LZ25-Kern: Die via OS-Rekonstruktion [LZ25] erhaltene Algebra ist isomorph zur
+  Interaktionsalgebra, getwisted durch die modulare Automorphismengruppe --
+  M_R ~= I(R) p_{R+} erfordert "twisting by the modular [automorphism]".
+
+Warum das exakt TFPT ist -- das Mapping:
+
+  TFPT hat bereits:
+    omega o rho = omega  <=>  [rho,K]=0  (v309), mit modularem Hamiltonian
+      K = log((1-C)/C);
+    den Seam als commuting-projector-Modell auf dem mu4-markierten Pillowcase
+      (v214);
+    rho = die mu4-Deck-Operation, charakter-block-diagonal (v155/v199).
+
+  Das Mapping ist praezise:
+    Z/2-Reflection theta am Cut K    <->  Seam-Cut (RP-Spiegelung)     etabliert v240
+    Modulare Gruppe sigma^psi         <->  mu4-Clock rho               etabliert v155/v309
+    (LTO-RP)-Bedingung                <->  omega o rho = omega         DAS ZU ZEIGENDE LEMMA
+    Theorem A => Haag-Dualitaet       <->  OS-Rekonstruktion => (E8)_1 Kette v308
+
+  Der Schluessel: Die (LTO-RP)-Bedingung IST in TFPT-Sprache genau
+  omega o rho = omega (v309), wenn die modulare Gruppe sigma^psi gleich der
+  mu4-Clock rho ist. Das ist keine neue Identifikation -- v155/v199 zeigen
+  bereits die Charakter-Block-Diagonalitaet, v309 die modulare Invarianz-
+  Bedingung. WAS FEHLT, ist der Beweis, dass das Seam-Atom (LTO-RP) erfuellt --
+  und NPW26 zeigen, dass ALLE bekannten topologically-ordered commuting-projector-
+  Modelle (Toric Code, Quantum Double, Levin-Wen, Walker-Wang) (LTO-RP) fuer eine
+  Z/2-Symmetrie erfuellen (Sektion 4.2-4.3).
+
+Konkretes v4xx_seam_equiv_lz25_twist.py -- validierte Struktur:
+
+  def seam_atom_is_lto_rp():
+      # 1. Seam-Atom als commuting-projector auf mu4-markiertem Pillowcase (v214)
+      atom = seam_commuting_projector(mu4_marks=4, metric="flat_pillowcase")
+      # 2. Z/2-Reflection theta am Seam-Cut (RP-Spiegelung, etabliert v240)
+      Theta = seam_reflection_antiunitary()
+      # 3. Modulare Gruppe sigma^psi = mu4-Clock rho (charakter-block-diagonal, v155/v309)
+      sigma_psi = mu4_clock_rho  # Identifikation: sigma^psi = rho
+      # 4. (LTO-RP)-Bedingung (Axiom 4.2): Theta(sigma^psi_{-i/2}(x^dagger)) p_S = x p_S
+      for x in boundary_algebra_generators():
+          lhs = Theta(sigma_psi(-1j/2, x.dag())) @ p_S
+          rhs = x @ p_S
+          assert array_equal(lhs, rhs)  # die zu verifizierende Bedingung
+      # 5. Concluude via Theorem A (zitiert): LTO-RP => LTO-HD => Haag-Dualitaet
+      #    => OS-Rekonstruktion => [rho,Lambda_Sigma]=0 => (E8)_1 (Kette v308)
+      return "SEAM.EQUIV.01 = [E] modulo zitiertem NPW26-Theorem A"
+
+Ehrliches End-Ziel (validiert):
+  SEAM.EQUIV.01 von [O] auf [E] (die Identifikation sigma^psi = rho + die
+  (LTO-RP)-Verifikation) MODULO zitiertem NPW26-Theorem A. Das ist exakt die
+  MMST-Strategie (v336) auf den Keystone angewandt -- die kontinuierliche
+  Existenz wird als zitiertes externes Theorem deklariert, der TFPT-interne Teil
+  ist [E]. KEIN Marker-Sprung zu reinem [E] -- korrekt.
+
+RISIKO (ehrlich): Die (LTO-RP)-Verifikung koennte fuer das spezifische TFPT-
+Seam-Atom FEHLEN, wenn seine mu4-Symmetrie nicht die Z/2-Reflection-Struktur ist,
+die NPW26 voraussetzt. NPW26 zeigen (LTO-RP) nur fuer BEKANNTE commuting-
+projector-Modelle (Toric Code, Levin-Wen, Walker-Wang). WENN das TFPT-Seam-Atom
+nicht in dieser Klasse ist, muss (LTO-RP) von Grund auf geprueft werden -- das
+waere dann ein echter [O]-Rest, kein zitiertes Theorem. Das ist die kritische
+Validierung vor Implementierung.
+
+A.2  Komplete-Monotonie-Route (komplementaer, schliesst die Gap-Stabilität) -- VALIDIERT
+--------------------------------------------------------------------------------
+
+Quelle: INSPIRE 3124503 (Feb 2026, "Reflection-positive continuum reconstruction
+of SU(N) Yang-Mills theory with a nonzero mass gap: Part 3",
+Int.J.Geom.Meth.Mod.Phys. 2026 2650112). Im Folgenden RP-YM26.
+
+Warum das TFPT ergaenzt:
+  RP-YM26: komplete Monotonie der Zeitkorrelatoren => spektrale Masz beruehrt
+  nicht Null => strikt positiver, volumunabhaengiger Gap ueberlebt den Limes.
+  TFPT hat bereits Delta = 6 log(3/2) als Gap (v302/v311). Der noch fehlende
+  Schritt fuer SEAM.EQUIV.GAP.01 ist: IST der Gap Limes-stabil? Die komplete-
+  Monotonie-Argumentation liefert genau das.
+
+Konkretes v4xx_seam_complete_monotonicity.py:
+
+  def seam_heat_trace_complete_monotone():
+      # 1. Berechne die Seam-Waerme-Kern-Spur (v132/v133) als Funktion von t
+      H_sigma = seam_modular_hamiltonian()  # v309
+      Z = lambda t: trace(expm(-t * H_sigma))
+      # 2. Verifiziere komplete Monotonie: (-1)^k d^k/dt^k Z(t) >= 0 fuer alle k
+      for k in range(K_max):
+          dkZ = finite_difference(k, Z, t_grid)
+          assert all((-1)**k * dkZ >= -tol)
+      # 3. Concluude (zitiert RP-YM26-Muster): spektrale Masz beruehrt nicht Null
+      #    => Delta ist Limes-stabil
+      return "SEAM.EQUIV.GAP.01 = [E] (Monotonie) + zitiert RP-YM26"
+
+Ehrliches End-Ziel (validiert):
+  SEAM.EQUIV.GAP.01 von [O]/[C] auf [E] (die Monotonie) + zitiertes RP-YM26-
+  Theorem. Schliesst die "Gap-stabil"-Haelfte des Keystones, ohne neue Zahl.
+
+A.3  MMST-Kragen-Route (bereits etabliert, nur noch die Lattice-Realisierung)
+--------------------------------------------------------------------------------
+
+SEAM.MMST.INCLASS.01 (v366): der Seam-Kragen ist in der MMST-Klasse.
+FORM.SEAM.MMST.01 (Lean): deklariert die kontinuierliche Existenz als zitiertes
+Axiom. Der EINZIG verbleibende Rest ist die lattice-Realisierung (S3) -- und das
+ist GENAU das QGEO.SYM.01-Axiom (der rohe Seam traegt die uniformisierende flache
+Pillowcase-Metrik).
+
+Schliessung: Wenn A.1 (LZ25) die OS-Invarianz liefert und A.2 (Monotonie) die
+Gap-Stabilitaet, dann ist die lattice-Realisierung der EINZIG verbleibende Input,
+und der ist bereits als minimales Axiom (v267) deklariert. Das ist korrekt -- er
+wird nicht verschwinden, er wird benannt.
+
+Synthese Gate A:
+  SEAM.EQUIV.01 -> [E] (Axiom-Kette v308) + [E] (Monotonie, A.2) +
+  [E] modulo zitiert (LZ25-Twist, A.1) + [O] minimal-Axiom QGEO.SYM.01 (v267).
+  Das ist die maximal ehrliche TOE_dim-Position: die boundary-QFT ist ein
+  relatives Objekt modulo EINES benannten zitierten Theorems + EINES minimalen
+  Axioms. Nichts wird fabriciert.
+
+================================================================================
+ GATE B -- QG.AMB.01 (ambient QG) -- Redundanz mit explizitem Masz
+================================================================================
+
+Was genau fehlt: Das nichtperturbative Euclidean-QG-Masz (Konformfaktor-Problem,
+Gibbons-Hawking-Perry 1978). Bereits [C] Redundanz per Gap-Argument (v369,
+Margin 1.648>0). KEIN Blocker der boundary-QFT -- Zertifikats-Objekt.
+
+B.1  Mazur-Mottola-Masz (die Redundanz explizit machen) -- VALIDIERT
+--------------------------------------------------------------------------------
+
+Quelle: Mazur-Mottola (Nucl.Phys.B 341, 1990) + JHEP 2024 (nichtlokale QG).
+
+Was die Quelle exakt liefert:
+  Nichtlokale Feld-Reddefinition chi = sqrt(-nabla^2) sigma macht die konformen
+  Moden zu NICHT-propagierenden constrained Moden; Euclidean-Fortsetzung von chi
+  (nicht sigma) => KONVERGENTES Pfandintegral, Einheit erhalten. Der Konform-
+  faktor-Problematik ist ein ARTEFAKT der naiven analytischen Fortsetzung.
+
+Warum das TFPT ergaenzt:
+  TFPT hat bereits die gap-Entkopplung (v311). Mazur-Mottola liefert das
+  EXPLIZITE Masz, das die Entkopplung BEWEIST statt nur per Gap zu argumentieren.
+
+Konkretes v4xx_qgamb_mazur_mottola_measure.py:
+
+  def ambient_measure_mazur_mottola():
+      # 1. Instanziiere das TFPT-ambient-Masz als Mazur-Mottola-Masz
+      #    mit der nichtlokalen chi-Reddefinition
+      chi = nonlocal_redefinition(sigma)  # chi = sqrt(-nabla^2) sigma
+      measure = jacobian(chi) * exp(-S_euclidean(chi))
+      # 2. Zeige: im admissible Sektor (gap>0) ist der Konformfaktor eine
+      #    constrained, nicht-propagierende Mode -- das Jacobian zwingt sie
+      assert conformal_mode_is_constrained(measure, sector="admissible")
+      # 3. Verifiziere: die gap-Entkopplung (v311, Delta - 31/(4 pi^2) > 0) ist
+      #    aequivalent zur Konvergenz des chi-Maszes im admissible Sektor
+      assert gap_decoupling(v311) == measure_convergence(chi, "admissible")
+      # 4. Concluude: QG.AMB.01 ist eine [C] Redundanz mit explizitem konvergentem
+      #    Masz (Mazur-Mottola-Klasse)
+      return "QG.AMB.01 = [C] Redundanz mit explizitem Masz (Mazur-Mottola)"
+
+Ehrliches End-Ziel (validiert):
+  QG.AMB.01 von [C] Redundanz-per-Gap auf [C] Redundanz-mit-explizitem-Masz.
+  KEIN Marker-Sprung zu [E] -- das volle nichtperturbative Masz bleibt [C] weil
+  die Mazur-Mottola-Konstruktion selbst eine benannte externe Standard-Konstruktion
+  ist. Das ist ein ehrliches Schärfen, kein falscher Verschluss.
+
+B.2  Marolf-Lorentzian-Route (Alternativer Masz-Frame) -- VALIDIERT
+--------------------------------------------------------------------------------
+
+Quelle: Marolf, "Gravitational thermodynamics without the conformal factor
+problem" (arXiv:2203.07421, v2 Jun 2022).
+
+Was die Quelle exakt liefert:
+  Kern-Gleichung (1.2): Die thermische Partitionsfunktion als LORENTZIAN-
+  Pfandintegral:
+    Z(beta) = int dT  f_beta(T)  Z_L(T)
+  wobei Z_L(T) = int e^{iS} ueber REALE Lorentz-signature Metriken mit S^1 x Y-
+  Rand, T = proper time um S^1. Weil S REIN REAL fuer glatte reale Lorentz-
+  Metriken, ist e^{iS} eine REINE PHASE -- der Integrand ist oszillatorisch,
+  NICHT divergent. Das UMBERGEGT das Konformfaktor-Problem fundamental.
+  Codim-2-Subkontour-Deformation: Eine codim-2-Subkontour des real-Lorentz-
+  Konturs kann zu Euclidean-Schwarzschild-Saetteln deformiert werden, MIT
+  nicht-null Gewicht im semiklassischen Limes, wenn das schwarze Loch positive
+  spezifische Waerme hat.
+
+Warum das zu TFPT passt -- das Mapping:
+
+  TFPT hat:
+    die lokale Einstein-Gleichung parameterfrei & voll kovariant (v358/v359) --
+    das ist die Lorentzian-Dynamik;
+    das Euclidean-S^2 x S^2-Bild (Volkov-Wipf, v138) -- das sind die Euclidean-
+    Saettel;
+    die gap-Entkopplung (v311).
+
+  Das Mapping:
+    Lorentzian-Pfandintegral Z_L(T)        <->  TFPT-Lorentzian-Dynamik (v358/v359)
+    Euclidean-S^2 x S^2-Saettel             <->  Volkov-Wipf (v138), edge -8/3=2(-4/3)
+    Codim-2-Subkontour-Deformation          <->  die R1-Entscheidung (v138)
+    Konformfaktor-Problem umgangen           <->  gap-Entkopplung (v311)
+
+Konkretes v4xx_qgamb_marolf_lorentzian.py:
+
+  def ambient_measure_marolf_lorentzian():
+      # 1. Deklariere ambient-Masz als Marolf-Lorentzian (Gl. 1.2)
+      Z_beta = lambda beta: integrate(
+          lambda T: f_beta_fourier(beta, T) * Z_L_lorentzian(T), over_T)
+      # 2. Z_L = int e^{iS} ueber reale Lorentz-Metriken (TFPT Einstein-Gl. v358)
+      Z_L_lorentzian = lambda T: path_integral(
+          action=parameter_free_einstein_hilbert(),  # v358/v359
+          signature="lorentzian", contour="real_lorentzian_metrics")
+      # 3. Euclidean-VW-Saettel (v138) = codim-2-Subkontour-Saettel
+      assert vw_edge_factor == -8/3 == 2 * (-4/3)  # v138 bereits [E]
+      # 4. Typisiere R1 (v138): EDGE-Objekt, Firefall absorbiert in mu0/(Lambda G)^3
+      return "QG.AMB.01 = [C] Redundanz, Lorentzian-Masz-Frame (Marolf zitiert)"
+
+Ehrliches End-Ziel (validiert):
+  QG.AMB.01 = [C] Redundanz mit Lorentzian-Masz-Frame (Marolf zitiert) +
+  Euclidean-Masz (Mazur-Mottola, B.1) + asymptotic-safety (v207). DREI
+  komplementaere Begruendungen, das Masz ist oszillatorisch konvergent per
+  Konstruktion (kein Konformfaktor-Problem). Kein [E]-Sprung -- Marolf ist ein
+  zitiertes externes Framework.
+
+B.3  Asymptotic-Safety-Fixed-Point (v207, bereits etabliert)
+--------------------------------------------------------------------------------
+
+v207 hat den asymptotic-safety-Fixed-Point bereits etabliert. Hier ist nichts
+Neues zu schliessen -- das ist die dritte Saeule der Redundanz-Typisierung.
+
+Synthese Gate B:
+  QG.AMB.01 -> [C] Redundanz mit explizitem konvergentem Masz (B.1) +
+  Lorentzian-Masz-Frame (B.2) + asymptotic-safety-Fixed-Point (v207). Drei
+  komplementaere Begruendungen fuer dieselbe Redundanz -- das ist UEBERDETERMINIERT,
+  was die ehrliche Position staerkt, ohne [E] zu beanspruchen.
+
+================================================================================
+ GATE C -- 4D-ANSCHLUSS (die gefrorene Gabel -- bewusst nicht "volle 4D")
+================================================================================
+
+Was genau steht: Die 4D-Gabel (v265, machine-frozen):
+  (A) kanonisch = boundary-only;
+  (B) konditional = carrier-nativer Pati-Salam-UV-Zweig;
+  SM-only-4D-GUT ist gekillt [X] (v246).
+
+C.1  Carrier-PS-Zweig als 10D-E8-Orbifold-Schatten (literatur-gestuetzt) -- VALIDIERT
+--------------------------------------------------------------------------------
+
+Quelle: arXiv:2011.13902 (E8 in 10D orbifolded -> 4D Pati-Salam + Familien-
+kraefte-Unifikation); zusaetzlich arXiv:2212.11315, 2006.13936, 2302.11671
+(nicht-supersymmetrische 4D-Unifikation erfordert Threshold-Korrekturen +
+Zwischenskala -- genau TFPTs carrier-nativer PS-Zweig).
+
+Konkret v4xx_ps_e8_10d_shadow.py:
+
+  def ps_branch_is_e8_10d_shadow():
+      # 1. TFPTs carrier-nativer PS-Zweig (v247-v250) struktur-kompatibel mit
+      #    der 10D-E8-Orbifold-Lesart (gleiche E8-branching {1,10,16,45}, kein 126)
+      tfpt_branching = {1, 10, 16, 45}  # v247
+      e8_10d_branching = decompose_e8_orbifold("T6/(Z6 x Z2)")  # arXiv:2011.13902
+      assert tfpt_branching == e8_10d_branching_without_126
+      # 2. Typisiere: Gabel B = der 4D-Schatten der 10D-E8-Orbifold, NUR als
+      #    konditionale Lesart
+      # 3. Ehrlich: TFPT behauptet NICHT die 10D-Orbifold -- sie ist eine
+      #    moegliche UV-Interpretation des carrier-nativen Zweigs
+      return "Gabel B = [C]/[O] konditional, 10D-E8-Schatten-Lesart"
+
+Ehrliches End-Ziel:
+  Die Gabel B wird struktur-schaerfer, bleibt [C]/[O] konditional. KEIN Verschluss
+  der 4D-Unifikation -- das waere falsch, weil SM-only gekillt ist und carrier-PS
+  konditional bleibt. Die ehrliche Position: 4D-Anschluss = boundary-only
+  (kanonisch, modulo SEAM.EQUIV.01) + konditionaler PS-Schatten.
+
+C.2  CONTRACT.QFT4D.01 / CONTRACT.QFT4D.DIRAC.01 (die realen 4D-Vertraege)
+--------------------------------------------------------------------------------
+
+  CONTRACT.QFT4D.01: Connes spectral action, seam->Dirac-Realisierung.
+    5 von 7 Obligationen bereits [E] (v252: Realitaet, Grading, KO-dim 6,
+    order-zero, first-order; offen: strikte Orientabilitaet + Poincare-Dualitaet
+    -- und das ist eine PUBLIZIERTE Eigenschaft der NCG-SM-Klasse, kein TFPT-
+    Defekt (v256/v257: quasi-Orientabilitaet + modified Poincare duality GELTEN).
+
+  CONTRACT.QFT4D.DIRAC.01: rest = sigma=scalaron-Identifikation (v250/v251,
+    first-order-condition VERLETZT GENAU DURCH MAJORANA = der Chamseddine-Connes-
+    van Suijlekom "beyond first order"-Mechanismus).
+
+Wie diese geschlossen werden: Sie sind bereits weitgehend discharged. Der Rest:
+  strikte Orientabilitaet/Poincare-Dualitaet -- NICHT schliessbar in der NCG-SM-
+  Klasse (publizierter Defekt, arXiv:0902.2068). Die ehrliche Position:
+  quasi-Orientabilitaet + modified Poincare duality gelten (v257), das ist die
+  korrekte gelockerte Version. Kein Verschluss, sondern Dokumentation der
+  korrekten gelockerten Axiome.
+  QFT4D.SPERT.02/03 (All-Order-perturbative S-Matrix) -- [C] per Epstein-Glaser
+  (v269), one-loop [E] (v271), all-order BLEIBT OFFEN als Standard-pAQFT-
+  Konstruktion. Das ist ein benannter Standard-Mathematik-Auftrag, kein TFPT-
+  Struktur-Gate.
+
+Synthese Gate C:
+  4D-Anschluss = boundary-only kanonisch (modulo SEAM.EQUIV.01) + konditionaler
+  PS-Schatten (C.1) + NCG-Vertraege weitgehend [E], Rest = publizierte gelockerte
+  Axiome + Standard-pAQFT-all-order. "Vollstaendige 4D-Unifikation" wird bewusst
+  NICHT beansprucht -- SM-only ist gekillt, carrier-PS ist konditional. Das ist
+  korrekt.
+
+================================================================================
+ GATE E -- v_geo (volle TOE) -- NICHT ANGREIFEN
+================================================================================
+
+Was genau steht: v_geo ist theorem-forbidden (v384).
+  TOE_strict = TOE_dimensionless + [v_geo]
+
+Warum es nicht schliessbar ist -- und das korrekt ist:
+  v_geo ist die absolute Einheit -- die dimensionsbehaftete Buchhaltung, dass
+  jede dimensionsbehaftbare Observable eine Zahl x v_geo^d ist (No-Unit, v153).
+  Es per Theorie "festzusetzen" wuerde bedeuten, eine dimensionslose Konstante zu
+  erfinden, die v_geo aus {a, pi} erzeugt -- und das wuerde die No-Unit-Invariante
+  verletzen (es gaebe dann einen dimensionslosen "Master-Knop"). Das ist
+  strukturell ausgeschlossen.
+
+Ehrliches End-Ziel:
+  v_geo bleibt [O], theorem-forbidden, PER DESIGN. TOE_dim ist schliessbar (via
+  Gate A); TOE_strict BLEIBT OFFEN um genau v_geo -- und das ist die KORREKTE
+  wissenschaftliche Position, kein Defekt. Es zu "schliessen" wuerde die Theorie
+  zur Numerologie degenerieren lassen.
+
+================================================================================
+ GESAMTSYNTHESE -- was "QFT + vollen 4D-Anschluss + volle TOE" realistisch heisst
+================================================================================
+
+  Thema              Ehrliches schliessbares Ziel              Status nach der Runde
+  ---------------------------------------------------------------------------
+  QFT (boundary)     SEAM.EQUIV.01 = [E] Axiom-Kette +        TOE_dim abgeschlossen
+                     [E] Monotonie + [E] mod. zitiert (LZ25)  modulo 1 zitiert + 1
+                     + [O] minimal-Axiom                       minimal
+  4D-Anschluss       boundary-only kanonisch (modulo           bewusst nicht "volle
+                     SEAM.EQUIV.01) + konditionaler PS-        4D-Unifikation"; SM-only
+                     Schatten + NCG-Vertraege [E]/gelockert    gekillt [X]
+                     + Standard-pAQFT-all-order [C]
+  Ambient QG (TOE)   QG.AMB.01 = [C] Redundanz mit             ueberdeterminierte
+                     explizitem Masz (Mazur-Mottola) +         Redundanz, kein Blocker
+                     Lorentzian-Frame + asymptotic-safety
+  F_transfer         diskreter Kern [E] + externe Solver       getypter Vertrag, nicht
+                     [C] + Messung [X] -- Firewall korrekt     schliessbar per Design
+  v_geo (volle TOE)  NICHT schliessbar, theorem-forbidden      TOE_strict bleibt offen
+                     per Design                                um v_geo -- korrekt
+
+Die maximale ehrliche Position nach einer konsequenten Runde:
+
+  TOE_dimensionless -- im Wesentlichen ABGESCHLOSSEN: boundary-QFT = ein
+  relatives Objekt modulo eines zitierten Theorems + eines minimalen Axioms;
+  ambient-QG = ueberdeterminierte Redundanz mit explizitem Masz; 4D = boundary-
+  only kanonisch + konditionaler PS-Schatten.
+
+  TOE_strict -- BLEIBT OFFEN um genau v_geo, und das ist die KORREKTE
+  wissenschaftliche Position, kein Versagen.
+
+  "Vollstaendige 4D-Unifikation" -- BEWUSST NICHT BEANSPRUCHT: SM-only gekillt,
+  carrier-PS konditional. Das ist ehrlich.
+
+Was diese Runde NICHT tun darf:
+  - v_geo "schliessen" -- wuerde die Theorie zerstoeren.
+  - F_transfer "vollstaendig schliessen" -- wuerde die Firewall verletzen und
+    Numerologie erlauben.
+  - SM-only-4D-GUT wiederbeleben -- gekillt [X], v246.
+  - Strikte NCG-Orientabilitaet/Poincare-Dualitaet "beweisen" -- publizierter
+    Defekt der Klasse, gelockerte Versionen gelten.
+
+================================================================================
+ VALIDIERTE ON-CHAIN ROADMAP (Priorisierung nach Hebel/Wahrscheinlichkeit)
+================================================================================
+
+  Prioritaet  Modul                                  Gate   Literatur   End-Ziel
+  ---------------------------------------------------------------------------
+  1           v4xx_seam_equiv_lz25_twist.py          A.1    NPW26 Th.A  SEAM.EQUIV.01 = [E] mod. zitiert
+  2           v4xx_seam_complete_monotonicity.py     A.2    RP-YM26     SEAM.EQUIV.GAP.01 = [E]+zitiert
+  3           v4xx_qgamb_mazur_mottola_measure.py    B.1    Mazur-Mott. QG.AMB.01 = [C] Red. m. expl. Masz
+  4           v4xx_qgamb_marolf_lorentzian.py        B.2    Marolf      QG.AMB.01 = [C] + 2. Masz-Frame
+  5           v4xx_fpole_family_weyl.py              D.1    intern      F_pole = [E] Kern + [C] getypt
+  6           v4xx_ps_e8_10d_shadow.py               C.1    arXiv:2011  Gabel B struktur-schaerfer, [C]/[O]
+
+KRITISCHE VALIDIERUNG VOR IMPLEMENTIERUNG VON (1):
+  Ob das TFPT-Seam-Atom in der BEKANNTEN commuting-projector-Klasse (Toric Code /
+  Levin-Wen / Walker-Wang) ist, fuer die NPW26 (LTO-RP) beweisen.
+  WENN ja -> zitiertes Theorem.
+  WENN nein -> (LTO-RP) von Grund auf pruefen, [O]-Rest bleibt.
+  Das ist die entscheidende Frage, die die Machbarkeit von A.1 bestimmt.
+
+================================================================================
+ LITERATUR-REFERENZEN (validiert)
+================================================================================
+
+  [NPW26]   Naaijkens-Penneys-Wallick, "Local Topological Order, Haag Duality,
+            and Reflection Positivity", arXiv:2605.10693 (v1, 12 May 2026).
+            -> Axiom 4.2 (LTO-RP), Theorem A (Haag-Dualitaet), Lemma LTO-RP => LTO-HD.
+            -> Zeigt (LTO-RP) fuer Toric Code, Quantum Double, Levin-Wen, Walker-Wang.
+
+  [RP-YM26] "Reflection-positive continuum reconstruction of SU(N) Yang-Mills
+            theory with a nonzero mass gap: Part 3", Int.J.Geom.Meth.Mod.Phys.
+            2026 2650112 (5 Feb 2026), INSPIRE 3124503.
+            -> Komplete Monotonie => spektrale Masz beruehrt nicht Null =>
+               strikt positiver, volumunabhaengiger Gap ueberlebt den Limes.
+
+  [Marolf]  D. Marolf, "Gravitational thermodynamics without the conformal factor
+            problem", arXiv:2203.07421 (v2, 9 Jun 2022).
+            -> Z(beta) = int dT f_beta(T) Z_L(T), Lorentzian-Pfandintegral,
+               e^{iS} reine Phase, codim-2-Subkontour-Deformation zu Euclidean-
+               Saetteln.
+
+  [MazMot]  Mazur-Mottola, "The gravitational measure, solution of the conformal
+            factor problem and stability of the ground state of quantum gravity",
+            Nucl.Phys.B 341 (1990) 187; + JHEP 2024 (nichtlokale QG).
+            -> chi = sqrt(-nabla^2) sigma, konforme Moden constrained/nicht-
+               propagierend, Euclidean-Fortsetzung von chi => konvergent.
+
+  [E8-10D]  arXiv:2011.13902, "Gauge couplings evolution from the Standard Model,
+            through Pati-Salam theory, into E8 unification of families and forces".
+            -> E8 in 10D orbifolded -> 4D Pati-Salam + Familien-kraefte.
+
+  [SO10]    arXiv:2212.11315, 2006.13936, 2302.11671 -- nicht-supersymmetrische
+            4D-SO(10)-Unifikation erfordert Threshold-Korrekturen + Zwischenskala.
+
+================================================================================
+ ENDE nextv2.txt
+================================================================================

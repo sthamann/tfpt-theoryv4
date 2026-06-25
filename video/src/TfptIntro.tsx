@@ -8,18 +8,20 @@ import { Scene01ColdOpen } from "./scenes/Scene01ColdOpen";
 import { Scene02Machine } from "./scenes/Scene02Machine";
 import { Scene03Readout } from "./scenes/Scene03Readout";
 import { Scene04Texture } from "./scenes/Scene04Texture";
-import { Scene05Kill } from "./scenes/Scene05Kill";
-import { Scene06Audit } from "./scenes/Scene06Audit";
-import { Scene07OpenKnot } from "./scenes/Scene07OpenKnot";
+import { Scene05Gravity } from "./scenes/Scene05Gravity";
+import { Scene06Safeguards } from "./scenes/Scene06Safeguards";
+import { Scene07Kill } from "./scenes/Scene07Kill";
+import { Scene08Residual } from "./scenes/Scene08Residual";
 
 const SCENE_COMPONENTS: Record<string, React.FC> = {
   "cold-open": Scene01ColdOpen,
   machine: Scene02Machine,
   readout: Scene03Readout,
   texture: Scene04Texture,
-  kill: Scene05Kill,
-  audit: Scene06Audit,
-  "open-knot": Scene07OpenKnot,
+  gravity: Scene05Gravity,
+  safeguards: Scene06Safeguards,
+  kill: Scene07Kill,
+  residual: Scene08Residual,
 };
 
 const ProgressBar: React.FC = () => {

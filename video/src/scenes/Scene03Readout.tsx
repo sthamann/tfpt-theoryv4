@@ -8,17 +8,17 @@ import { COLORS } from "../theme";
 import { enterUp, fade, fadeInOut } from "../components/anim";
 
 const CORE = [
-  "3 families · hypercharges",
-  "the flavor matrix (det R = 8)",
+  "3 generations of matter",
+  "the right electric charges",
   "16 carrier states",
-  "recurring 2 · 3 · 5",
+  "the atoms 2 · 3 · 5",
   "Coxeter number 30",
   "240 roots of E₈",
 ];
 const BOUNDARY = [
-  "seed φ₀ from c₃",
-  "Cabibbo structure",
-  "electromagnetic fixed point",
+  "one seed φ₀, from c₃",
+  "the Cabibbo angle",
+  "the α fixed point",
   "the scale grammar",
 ];
 
@@ -66,17 +66,17 @@ export const Scene03Readout: React.FC = () => {
   const frame = useCurrentFrame();
 
   const eyebrow = enterUp(frame, 6, 22);
-  const cols = fadeInOut(frame, 30, 70, 760, 820);
-  const colShift = interpolate(frame, [760, 830], [0, -40], {
+  const cols = fadeInOut(frame, 30, 70, 740, 800);
+  const colShift = interpolate(frame, [740, 810], [0, -40], {
     easing: Easing.in(Easing.cubic),
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
 
-  const alphaIn = fade(frame, 795, 850);
-  const num = enterUp(frame, 805, 30);
-  const sigma = enterUp(frame, 1010, 24);
-  const verdict = enterUp(frame, 1110, 24);
+  const alphaIn = fade(frame, 770, 820);
+  const num = enterUp(frame, 790, 30); // α⁻¹ lands (~81.5s)
+  const sigma = enterUp(frame, 960, 24); // ~86.8s
+  const verdict = enterUp(frame, 1085, 24); // ~91s
 
   return (
     <AbsoluteFill>
@@ -114,8 +114,8 @@ export const Scene03Readout: React.FC = () => {
             width: 1600,
           }}
         >
-          <div style={{ fontFamily: SANS, fontSize: 32, color: COLORS.textDim, ...enterUp(frame, 805, 24) }}>
-            the unique positive root of a cubic closure
+          <div style={{ fontFamily: SANS, fontSize: 32, color: COLORS.textDim, ...enterUp(frame, 790, 24) }}>
+            the single positive root of one cubic
           </div>
           <div
             style={{
@@ -150,7 +150,7 @@ export const Scene03Readout: React.FC = () => {
             }}
           >
             <span style={{ color: COLORS.textDim }}>Not a fit. </span>
-            <span style={{ color: COLORS.textBright }}>A forced root.</span>
+            <span style={{ color: COLORS.textBright }}>A forced answer.</span>
           </div>
         </div>
       </AbsoluteFill>

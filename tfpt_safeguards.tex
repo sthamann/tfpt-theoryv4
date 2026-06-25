@@ -58,8 +58,10 @@ discipline}, and this companion states all of it uniformly. The layers are: (1) 
 calculus with a single-source ledger and a sync audit that forbids a conditional claim from being
 rendered as exact; (2) an anti-fitting rule (``no free pattern'') plus a reverse audit that counts how
 much structure carries \emph{no} readout; (3) an over-determination map that honestly separates
-\emph{multiplicative} evidence (witnesses from disjoint mathematical grammars) from \emph{compression}
-(many readouts from one generator); (4) a firewall that keeps external-physics interfaces from ever
+\emph{multiplicative} evidence from \emph{compression} (many readouts from one generator) and, applied to
+TFPT's own arithmetic witnesses, finds them to be facets of \emph{one} $(2,3,5)/E_8$ object (compression),
+locating the genuine multiplication in an input forced four independent ways plus a foreign readout
+($\alpha^{-1}$); (4) a firewall that keeps external-physics interfaces from ever
 being typed as compiler outputs, together with the No-Unit theorem that makes the absence of an absolute
 scale a \emph{theorem}; (5) a frozen prediction registry with a Monte-Carlo null model and a live data
 scorecard; (6) two independent reproduction paths --- an independent Wolfram engine and a Lean~4 kernel
@@ -114,12 +116,14 @@ a primary readout; the other five are published hull overhead.}\label{fig:revers
 \end{figure}
 
 \section{Layer 3 --- the over-determination map (multiply vs.\ compress)}
-The strongest positive evidence is over-determination, but it must be counted honestly
-(\veri{v427\_overdet\_witness\_map.py}, extending the generator-economy audit \vref{v305}). Evidence
-\emph{multiplies} only across genuinely disjoint grammars; many readouts from one generator are a
-\emph{compression} gain, not independent multiplication.
-\begin{keybox}[Seven disjoint-grammar witnesses on the same skeleton]
-Each is computed \emph{from its own structure} and lands on a carrier-skeleton integer:
+The strongest positive evidence is over-determination, but it must be counted honestly. The
+\emph{framework} is a sharp axis (\veri{v427\_overdet\_witness\_map.py}, extending the generator-economy
+audit \vref{v305}): evidence \emph{multiplies} only across genuinely disjoint grammars; many readouts
+from one generator are a \emph{compression} gain, not independent multiplication. The hard part is
+classifying TFPT's own witnesses correctly --- and applying that test to ourselves
+(\veri{v428\_overdet\_reclass.py}) forces a self-correction that we state in full.
+\begin{keybox}[Seven arithmetic readouts --- and why they \emph{compress}]
+Each integer below is computed \emph{from its own grammar} and lands on a carrier-skeleton value:
 \[
 \begin{array}{lll}
 \text{Gauss } \Z[i]: & N(3{+}2i)=3^2{+}2^2 & = 13\;(=\Delta_Q)\\
@@ -131,20 +135,34 @@ Each is computed \emph{from its own structure} and lands on a carrier-skeleton i
 \text{Coxeter}: & h(E_8)=30=2\!\cdot\!3\!\cdot\!5,\;\; \varphi(30) & = 8=\operatorname{rank}E_8
 \end{array}
 \]
-Seven pairwise-distinct structures (two quadratic rings, a degree-$4$ field, a finite group, a root
-lattice, a binomial/exterior algebra, a Coxeter invariant) landing on the same skeleton: their joint
-occurrence \emph{multiplies}. By contrast the anchor $a=(1,1,2)$ emits $(e_1,e_2,e_3)=(4,5,2)$ (with
-$e_2=\gcar$), the power sums, and the $E_8$ data $(240,248,\operatorname{rank}8)$ from \emph{one}
-generator --- a compression gain, not seven independent witnesses, and the flavor matrix $R$ (trace,
-determinant, minors) likewise. The map is the auditable replacement for ``everything multiplies''; it
-shows coincidence is an \emph{expensive} explanation of the discrete core, and nothing more --- it does
-not by itself establish physics.
+These are seven \emph{syntactically} distinct grammars --- but syntactic distinctness is not statistical
+independence. By the Brieskorn classification (\vref{v236}) the $(2,3,5)$ singularity $x^2{+}y^3{+}z^5$ is
+the \emph{one} generator behind the order-$30$ clock, with Milnor number $\mu=(2{-}1)(3{-}1)(5{-}1)=8=
+\operatorname{rank}E_8$ and $30=2\!\cdot\!3\!\cdot\!5=h(E_8)$. Each readout above is a facet of that same
+object: $\Z[i]$ is the prime-$2$ ($\mu_4$/sheet) face, $\Z[\omega]$ the prime-$3$ (family) face,
+$\mathbb Q(\zeta_5)$ and the Galois group the prime-$5$ (carrier) face, Pascal the $\mu_4$ exterior, the
+Coxeter number the whole clock, and $\det\mathrm{Cartan}(E_8)$ the $E_8$ resolution itself. \emph{So the
+seven do not multiply --- they compress}, exactly like the anchor $a=(1,1,2)$ emitting
+$(e_1,e_2,e_3)=(4,5,2)$, the power sums, and the $E_8$ data from one generator. An earlier version of this
+section called the seven ``disjoint grammars that multiply''; \veri{v428\_overdet\_reclass.py} applies
+this layer's own test to that claim and walks it back.
+\end{keybox}
+\begin{keybox}[What honestly multiplies: forced inputs $+$ a foreign witness]
+The genuine over-determination is of a different shape. First, the \emph{input} of the theory is forced
+by several \emph{independent} arguments: the ``$8$'' in $c_3=1/(8\pi)$ equals $\operatorname{rank}E_8=8$,
+the carrier Coxeter number $h(D_5)=2(5{-}1)=8$, the totient $\varphi(30)=8$, and the Milnor number
+$(2{-}1)(3{-}1)(5{-}1)=8$ --- four \emph{different} mathematical facts that independently fix the same
+constant, and that genuinely multiply. Second, the constant the theory was \emph{not} built around ---
+$\alpha^{-1}\approx 137$, a prime foreign to the $(2,3,5)$ skeleton --- is reproduced as the fixed point
+of the boundary Ward identity (\vref{v305}). The honest claim is therefore narrower and harder to attack:
+not ``seven independent witnesses,'' but \emph{one richly over-determined input plus a foreign readout}.
 \end{keybox}
 \begin{figure}[ht]\centering
 \includegraphics[width=0.92\linewidth]{figures/safeguard_witness_map}
-\caption{The witness-independence map (\veri{v427\_overdet\_witness\_map.py}): seven disjoint arithmetic
-grammars each land on the carrier skeleton (their joint occurrence \emph{multiplies}), while the single
-anchor $a{=}(1,1,2)$ emits many readouts (a \emph{compression} gain, not independent witnesses).}\label{fig:witness}
+\caption{The corrected over-determination map (\veri{v428\_overdet\_reclass.py}): the seven arithmetic
+readouts are facets of \emph{one} $(2,3,5)/E_8$ object (a \emph{compression} gain, like the anchor), so they
+do not multiply; what genuinely multiplies is the input forced four independent ways (the ``$8$'') plus the
+foreign witness $\alpha^{-1}\!\approx\!137$.}\label{fig:witness}
 \end{figure}
 
 \section{Layer 4 --- the firewall and the No-Unit theorem}
@@ -247,7 +265,7 @@ $v_{\mathrm{geo}}$ (theorem-forbidden), and the typed $F_{\mathrm{transfer}}$ in
 \midrule
 Status calculus & a \mC\ claim read as \mE & ledger $+$ \texttt{audit\_sync.py} \\
 No free pattern $+$ reverse audit & cherry-picking, decorative identities & \vref{v305}/\vref{v100}/\texttt{E8.REVERSE.AUDIT.01} \\
-Over-determination map & rhetorical ``everything multiplies'' & \vref{v427} \\
+Over-determination map & rhetorical ``everything multiplies'' (incl.\ \emph{our own} miscount) & \vref{v427}/\vref{v428} \\
 Firewall $+$ No-Unit & external physics sold as compiler output; a faked scale & \vref{v187}/\vref{v213}/\vref{v153}/\vref{v384} \\
 Frozen registry $+$ null model & moving goalposts; chance hits & \vref{v84}/\vref{v100}/\vref{v375} \\
 Two independent paths & a shared implementation bug & Wolfram $+$ Lean \\

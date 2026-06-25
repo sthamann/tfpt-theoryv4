@@ -1,182 +1,198 @@
 WEBVTT
 
 1
-00:00:00.500 --> 00:00:04.000
-This is the fine-structure constant.
+00:00:00.500 --> 00:00:04.200
+This is the fine-structure constant — how strongly light and matter interact.
 
 2
-00:00:04.000 --> 00:00:08.200
-Physics measures it. TFPT claims it's the unique root of a short equation —
+00:00:04.200 --> 00:00:08.600
+Physics measures it. TFPT computes it — the one answer a short equation allows,
 
 3
-00:00:08.200 --> 00:00:11.200
-fixed by two inputs, and nothing else.
+00:00:08.600 --> 00:00:11.600
+fixed by just two numbers, and nothing else.
 
 4
-00:00:11.200 --> 00:00:14.800
-Big claim. So I'll also show you exactly where it could break.
+00:00:11.600 --> 00:00:14.900
+Bold claim. So I'll also show you exactly where it could break.
 
 5
-00:00:15.300 --> 00:00:19.200
-TFPT isn't another table of nice numbers — it's a discrete compiler.
+00:00:15.400 --> 00:00:19.600
+Think of TFPT as a compiler — not a table of lucky numbers, but a machine.
 
 6
-00:00:19.200 --> 00:00:24.000
-Two operative inputs go in: a boundary constant, c₃ = 1/(8π),
+00:00:19.600 --> 00:00:24.600
+Two inputs go in: a boundary constant, c₃ = 1/(8π) — the rule for an edge of space,
 
 7
-00:00:24.000 --> 00:00:27.600
-and a five-fold carrier, g_car = 5.
+00:00:24.600 --> 00:00:29.000
+and a carrier, g_car = 5 — how the building blocks plug together.
 
 8
-00:00:27.600 --> 00:00:32.600
-From those, one structure is built: the carrier makes the D₅ side,
+00:00:29.000 --> 00:00:34.500
+From only those two, one shape is forced to assemble: the exceptional group E₈.
 
 9
-00:00:32.600 --> 00:00:37.000
-four marked boundary points make the A₃ family geometry,
+00:00:34.500 --> 00:00:40.000
+But here's the twist — E₈ is not a force of nature.
 
 10
-00:00:37.000 --> 00:00:41.600
-and the μ₄ glue closes them into E₈.
+00:00:40.000 --> 00:00:46.000
+It's a scaffold: a consistency check you build, verify against, then step away from.
 
 11
-00:00:41.600 --> 00:00:46.800
-And this defuses the usual no-go theorems: E₈ is not a gauge group of nature.
+00:00:46.000 --> 00:00:55.000
+The Standard Model isn't "everything is E₈" — it's what you read off after projecting back down.
 
 12
-00:00:46.800 --> 00:00:50.800
-It's the audit hull — the consistency container.
+00:00:55.400 --> 00:00:59.800
+So what does the machine print out?
 
 13
-00:00:50.800 --> 00:00:55.800
-The Standard Model is a readout after projection, not 'everything is E₈.'
+00:00:59.800 --> 00:01:05.500
+First, a discrete skeleton — exact and machine-checked, with no wiggle room:
 
 14
-00:00:56.300 --> 00:01:00.600
-What comes out splits cleanly. First, the discrete core —
+00:01:05.500 --> 00:01:11.000
+three generations of matter, the right charges, the 240 roots of E₈,
 
 15
-00:01:00.600 --> 00:01:04.000
-exact, or machine-checked:
+00:01:11.000 --> 00:01:15.500
+and the same small numbers everywhere — two, three, five.
 
 16
-00:01:04.000 --> 00:01:09.000
-three families, hypercharges, the flavor matrix, sixteen carrier states,
+00:01:15.500 --> 00:01:21.500
+Then the headline: the fine-structure constant is the single positive root of one cubic.
 
 17
-00:01:09.000 --> 00:01:13.600
-the recurring 2-3-5, the Coxeter number 30, the 240 roots of E₈.
+00:01:21.500 --> 00:01:26.800
+Not chosen — forced. α⁻¹ = 137.0359992,
 
 18
-00:01:13.600 --> 00:01:18.600
-Then the boundary side: from c₃ comes one seed, φ₀ —
+00:01:26.800 --> 00:01:31.000
+less than two sigma from the measured value.
 
 19
-00:01:18.600 --> 00:01:23.600
-and from it: the Cabibbo structure, the electromagnetic fixed point, the scale grammar.
+00:01:31.000 --> 00:01:34.900
+Not a fit. A forced answer.
 
 20
-00:01:23.600 --> 00:01:29.600
-The fine-structure constant lands as the unique positive root of a cubic: 137.0359992 —
+00:01:35.400 --> 00:01:39.500
+The same discipline runs through the particle masses.
 
 21
-00:01:29.600 --> 00:01:33.000
-1.9 sigma from the measured value.
+00:01:39.500 --> 00:01:45.000
+They don't come from dozens of free dials —
 
 22
-00:01:33.000 --> 00:01:36.800
-Not a fit. A forced root.
+00:01:45.000 --> 00:01:51.000
+but from one pattern: a single seed, a fixed matrix, and whole-number steps.
 
 23
-00:01:37.300 --> 00:01:41.000
-The Standard-Model part compresses hard.
+00:01:51.000 --> 00:01:55.800
+Mixing angles and the leading CP phase drop out of the same geometry.
 
 24
-00:01:41.000 --> 00:01:46.000
-Masses and mixings don't come from free Yukawa numbers —
+00:01:55.800 --> 00:01:59.900
+The one honest unit they still need, we flag — we don't hide it.
 
 25
-00:01:46.000 --> 00:01:50.600
-they come from one texture: a seed, a fixed flavor matrix, integer word-lengths.
+00:02:00.400 --> 00:02:04.500
+And that first input hides a gift.
 
 26
-00:01:50.600 --> 00:01:55.000
-The CKM angles and the leading CP phase fall out of the same holonomy;
+00:02:04.500 --> 00:02:10.000
+c₃ = 1/(8π) is the exact 8π sitting inside Einstein's equation for gravity.
 
 27
-00:01:55.000 --> 00:01:58.000
-the reactor angle θ₁₃ comes straight from the seed.
+00:02:10.000 --> 00:02:15.500
+Run the same atoms through the heat of a horizon, and the full law of gravity falls out —
 
 28
-00:01:58.000 --> 00:02:02.800
-Absolute masses run through one typed bridge, v_geo, and standard RG. Dimensional analysis with a seatbelt.
+00:02:15.500 --> 00:02:20.000
+both constants fixed, even the cosmological constant, set by α.
 
 29
-00:02:03.300 --> 00:02:06.600
-Now the honest part — how do you kill it?
+00:02:20.000 --> 00:02:25.900
+The same 1/(8π) shows up three independent ways. Hard to call that an accident.
 
 30
-00:02:06.600 --> 00:02:11.600
-The predictions were frozen in a blind registry before any comparison — machine-enforced.
+00:02:26.400 --> 00:02:31.000
+Small whole numbers raise a fair worry: is this just numerology?
 
 31
-00:02:11.600 --> 00:02:15.000
-sin²θ₁₂ ≈ 0.3067.   sin²θ₁₃ ≈ 0.0231.
+00:02:31.000 --> 00:02:34.500
+So we tried to break it ourselves.
 
 32
-00:02:15.000 --> 00:02:18.600
-α⁻¹ as a fixed point. A small tensor ratio r between 0.0033 and 0.0048.
+00:02:34.500 --> 00:02:40.500
+We froze thirteen predictions, then ran two hundred thousand random look-alike theories.
 
 33
-00:02:18.600 --> 00:02:22.000
-Normal neutrino ordering, with a low mass floor.
+00:02:40.500 --> 00:02:45.000
+TFPT hits all thirteen. The random ones top out at five.
 
 34
-00:02:22.000 --> 00:02:27.200
-The closed core predictions sit within about one sigma today — every tension tracked in the open.
+00:02:45.000 --> 00:02:51.000
+For α: of ninety-four thousand variants, exactly one lands in the measured window.
 
 35
-00:02:27.200 --> 00:02:33.600
-The near-term kill tests are real: neutrino mass from DESI and CMB-S4, and proton decay at Hyper-Kamiokande.
+00:02:51.000 --> 00:02:57.000
+Seven completely different number systems each rebuild the same skeleton.
 
 36
-00:02:34.300 --> 00:02:37.600
-How is this kept honest?
+00:02:57.000 --> 00:03:02.500
+And we publish what E₈ does not use — five of its eight pieces carry no prediction.
 
 37
-00:02:37.600 --> 00:02:42.600
-Every statement carries a status — exact, conditional, open, or kill-test —
+00:03:02.500 --> 00:03:09.000
+Odds a look-alike matches the whole scorecard: below 10⁻³⁰. Checked twice — in Wolfram and in Lean.
 
 38
-00:02:42.600 --> 00:02:46.200
-in one machine-readable ledger: the single source of truth.
+00:03:09.400 --> 00:03:13.500
+Now the honest part — how would you kill it?
 
 39
-00:02:46.200 --> 00:02:52.800
-And a red team whose job is to break the theory, not confirm it — or math becomes numerology with better typography.
+00:03:13.500 --> 00:03:18.500
+Every prediction was sealed in a registry before any comparison.
 
 40
-00:02:53.300 --> 00:02:56.600
-So what's actually open?
+00:03:18.500 --> 00:03:24.000
+sin²θ₁₂ ≈ 0.3067.  sin²θ₁₃ ≈ 0.0231.  A tiny gravitational-wave ratio.  Normal neutrino ordering.
 
 41
-00:02:56.600 --> 00:03:00.200
-The discrete compiler is structurally closed.
+00:03:24.000 --> 00:03:28.500
+Today, all of them sit within about one sigma.
 
 42
-00:03:00.200 --> 00:03:05.600
-The one hard knot is a single theorem: the raw, reflection-positive seam state must be —
+00:03:28.500 --> 00:03:34.500
+The near-term tests are real: neutrino mass from DESI and CMB-S4,
 
 43
-00:03:05.600 --> 00:03:09.200
-canonically — the holomorphic (E₈)₁ net at τ = i.
+00:03:34.500 --> 00:03:38.900
+and proton decay at Hyper-Kamiokande. One clean miss, and it's wrong.
 
 44
-00:03:09.200 --> 00:03:13.000
-Both proof routes meet there. The sharpest remaining piece has a name: Flat-Away.
+00:03:39.400 --> 00:03:43.500
+So what is actually still open?
 
 45
-00:03:13.000 --> 00:03:18.000
-Close it, and the structural core is done. What stays are deliberately typed interfaces.
+00:03:43.500 --> 00:03:48.500
+Not a vague pile — three named, labelled handoffs.
+
+46
+00:03:48.500 --> 00:03:54.000
+One published-theorem step from closing the central seam,
+
+47
+00:03:54.000 --> 00:03:59.000
+the clearly-marked bridges to external physics,
+
+48
+00:03:59.000 --> 00:04:05.000
+and one honest unit — because a theorem says pure numbers can never hand you a kilogram.
+
+49
+00:04:05.000 --> 00:04:10.000
+Zero hidden mechanisms. Two inputs, one compiler — fully audited.
 

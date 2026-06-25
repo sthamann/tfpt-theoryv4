@@ -15,30 +15,30 @@ export const Scene04Texture: React.FC = () => {
 
   const eyebrow = enterUp(frame, 6, 22);
   const formula = enterUp(frame, 60, 26);
-  const sub = enterUp(frame, 360, 22);
-  const bridge = enterUp(frame, 520, 26);
+  const sub = enterUp(frame, 480, 22); // "drop out of the same geometry" (~111s)
+  const bridge = enterUp(frame, 630, 26); // the one honest unit (~116s)
 
   return (
     <AbsoluteFill>
       <Bg accent="#22d3ee" tint="#7c3aed" />
       <AbsoluteFill style={{ flexDirection: "column", alignItems: "center", paddingTop: 96, gap: 40 }}>
         <div style={eyebrow}>
-          <Eyebrow color="#22d3ee">One texture — not free knobs</Eyebrow>
+          <Eyebrow color="#22d3ee">One pattern — not free knobs</Eyebrow>
         </div>
 
         <div style={{ ...formula, marginTop: 24 }}>
           <Formula size={40}>
             <Tok color={COLORS.textBright}>mass &amp; mixing</Tok> ={" "}
-            <Tok color={COLORS.blueLight}>seed φ₀</Tok> ⊗{" "}
-            <Tok color={COLORS.violet}>fixed flavor matrix R</Tok> ⊗{" "}
-            <Tok color={COLORS.pink}>integer word-lengths</Tok>
+            <Tok color={COLORS.blueLight}>one seed φ₀</Tok> ⊗{" "}
+            <Tok color={COLORS.violet}>fixed matrix R</Tok> ⊗{" "}
+            <Tok color={COLORS.pink}>whole-number steps</Tok>
           </Formula>
         </div>
 
         {/* CKM / angles dropping out */}
         <div style={{ display: "flex", gap: 20, marginTop: 10 }}>
           {DROPS.map((d, i) => {
-            const e = enterUp(frame, 170 + i * 22, 20, 22);
+            const e = enterUp(frame, 320 + i * 20, 20, 22);
             return (
               <div key={d} style={e}>
                 <Chip color={COLORS.textBright} size={30}>
@@ -49,7 +49,7 @@ export const Scene04Texture: React.FC = () => {
           })}
         </div>
         <div style={{ ...sub, fontFamily: SANS, fontSize: 30, color: COLORS.textDim }}>
-          …all fall out of the <b style={{ color: COLORS.text }}>same holonomy</b>; θ₁₃ comes straight from the seed.
+          …all drop out of the <b style={{ color: COLORS.text }}>same geometry</b>; θ₁₃ comes straight from the seed.
         </div>
 
         {/* the honest bridge */}
@@ -69,9 +69,8 @@ export const Scene04Texture: React.FC = () => {
         >
           <StatusChip grade="O" size={24} showLabel={false} />
           <div style={{ fontFamily: SERIF, fontSize: 38, color: COLORS.text, lineHeight: 1.25 }}>
-            Absolute masses aren’t “magically done” — they run through{" "}
-            <b style={{ color: COLORS.textBright }}>one typed bridge, v_geo</b>, and standard RG.
-            <span style={{ color: COLORS.textDim }}> Dimensional analysis with a seatbelt.</span>
+            Absolute masses still need <b style={{ color: COLORS.textBright }}>one honest unit, v_geo</b>.
+            <span style={{ color: COLORS.textDim }}> We flag it — we don’t hide it.</span>
           </div>
         </div>
       </AbsoluteFill>

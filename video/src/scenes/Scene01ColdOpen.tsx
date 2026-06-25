@@ -27,10 +27,11 @@ export const Scene01ColdOpen: React.FC = () => {
     extrapolateRight: "clamp",
   });
 
-  // sub-line swaps: "measured input" -> "two inputs. nothing else." -> break
-  const s1 = fadeInOut(frame, 150, 175, 235, 255);
-  const s2 = fadeInOut(frame, 255, 278, 320, 338);
-  const s3 = fadeInOut(frame, 332, 356, 460, 470);
+  // sub-line swaps, aligned to the caption beats:
+  // "measured" -> "one answer, two inputs" -> "where it could break"
+  const s1 = fadeInOut(frame, 120, 145, 240, 258);
+  const s2 = fadeInOut(frame, 250, 274, 338, 354);
+  const s3 = fadeInOut(frame, 345, 366, 442, 450);
 
   return (
     <AbsoluteFill>
@@ -77,10 +78,10 @@ export const Scene01ColdOpen: React.FC = () => {
 
         <div style={{ position: "relative", height: 90, width: 1500 }}>
           <SubLine opacity={s1} color={COLORS.textDim}>
-            Physics treats it as a measured input.
+            Physics measures it.
           </SubLine>
           <SubLine opacity={s2} color={COLORS.textBright}>
-            TFPT: the unique root of a short equation — two inputs, nothing else.
+            TFPT computes it — the one answer a short equation allows. Two inputs, nothing else.
           </SubLine>
           <SubLine opacity={s3} color={COLORS.open}>
             …and here is exactly where it could break.
