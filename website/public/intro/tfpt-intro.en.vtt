@@ -1,210 +1,186 @@
 WEBVTT
 
 1
-00:00:00.500 --> 00:00:04.200
-This is the fine-structure constant — how strongly light and matter interact.
+00:00:00.600 --> 00:00:04.800
+A program begins as a few lines of source code — and unfolds into something huge and detailed.
 
 2
-00:00:04.200 --> 00:00:08.600
-Physics measures it. TFPT computes it — the one answer a short equation allows,
+00:00:04.800 --> 00:00:09.000
+Here's an honest question, not a claim: could reality work the same way?
 
 3
-00:00:08.600 --> 00:00:11.600
-fixed by just two numbers, and nothing else.
+00:00:09.000 --> 00:00:14.500
+Could the rules of our universe be the output of something tiny — compiled, not chosen?
 
 4
-00:00:11.600 --> 00:00:14.900
-Bold claim. So I'll also show you exactly where it could break.
+00:00:14.500 --> 00:00:19.600
+Let's look at where that idea leads — and how it could fail.
 
 5
-00:00:15.400 --> 00:00:19.800
-Think of TFPT as a compiler — a machine, not a table of lucky numbers.
+00:00:20.400 --> 00:00:24.500
+Start at the end — with what this one idea actually produces.
 
 6
-00:00:19.800 --> 00:00:25.000
-Two inputs go in: a tempo, c₃ = 1/(8π) — the rate set by the edge of space,
+00:00:24.500 --> 00:00:31.000
+Almost the whole Standard Model — our rulebook for every known particle and force:
 
 7
-00:00:25.000 --> 00:00:29.500
-and a width, g_car = 5 — how many slots the carrier has.
+00:00:31.000 --> 00:00:37.000
+the forces, why matter comes in three families, the single Higgs, the masses, how they mix.
 
 8
-00:00:29.500 --> 00:00:34.500
-From those, the pieces build themselves: three families of matter,
+00:00:37.000 --> 00:00:43.000
+Gravity — Einstein's equation, with its constants fixed instead of assumed.
 
 9
-00:00:34.500 --> 00:00:39.500
-a sixteen-part block that is exactly one full generation, and the hypercharges.
+00:00:43.000 --> 00:00:49.500
+Pieces of cosmology — the early universe, how much ordinary matter there is, dark energy.
 
 10
-00:00:39.500 --> 00:00:45.500
-Then the key player — E₈. It isn't a force of nature; it's the auditor.
+00:00:49.500 --> 00:00:56.000
+The strength of light — the famous one over one-thirty-seven — is just one line among many.
 
 11
-00:00:45.500 --> 00:00:51.500
-The one rulebook where every piece locks together exactly one way — like a perfect crystal.
+00:00:56.000 --> 00:01:04.600
+And twenty-three concrete, testable predictions. That's the output. The real question: from how much input?
 
 12
-00:00:51.500 --> 00:00:58.000
-And it closes for only that one tempo and width — so E₈ doesn't accept the inputs, it forces them.
+00:01:05.400 --> 00:01:09.500
+Here's the surprising part: almost nothing goes in.
 
 13
-00:00:58.400 --> 00:01:02.500
-So what does the machine actually print out?
+00:01:09.500 --> 00:01:15.500
+Two numbers. A tempo — set by the edge of space. And a width: how many slots the building block has — five.
 
 14
-00:01:02.500 --> 00:01:08.000
-Almost the entire Standard Model — exact and machine-checked:
+00:01:15.500 --> 00:01:22.000
+And those two aren't even truly free. Strip it down, and what's left is one small whole-number pattern — and π.
 
 15
-00:01:08.000 --> 00:01:13.500
-the three forces and their charges, three generations, exactly one Higgs,
+00:01:22.000 --> 00:01:28.000
+A huge, detailed result from a tiny source.
 
 16
-00:01:13.500 --> 00:01:19.500
-all nine particle masses on a single ladder, the quark and neutrino mixings, both CP phases,
+00:01:28.000 --> 00:01:34.600
+That gap — between almost nothing and all of this — is the whole story.
 
 17
-00:01:19.500 --> 00:01:24.000
-and a built-in reason there's no neutron dipole — strong-CP is exactly zero.
+00:01:35.400 --> 00:01:40.000
+How can two numbers carry that much? Because they don't just get plugged in —
 
 18
-00:01:24.000 --> 00:01:30.000
-The headline: the fine-structure constant is the single positive root of one equation.
+00:01:40.000 --> 00:01:44.500
+they have to pass a test.
 
 19
-00:01:30.000 --> 00:01:35.000
-Not chosen — forced. α⁻¹ = 137.0359992, under two sigma from experiment.
+00:01:44.500 --> 00:01:50.500
+The parts they build must fit into one rigid mathematical object: E₈.
 
 20
-00:01:35.000 --> 00:01:42.000
-Read the same edge as a horizon, and you also get cosmology — and gravity.
+00:01:50.500 --> 00:01:57.500
+E₈ isn't a force of nature. It's a proof layer — the referee that certifies the pieces fit only one way.
 
 21
-00:01:42.400 --> 00:01:46.500
-But a list of numbers isn't physics yet. How does a static structure start to move?
+00:01:57.500 --> 00:02:04.000
+Two hundred and forty points, one perfect pattern.
 
 22
-00:01:46.500 --> 00:01:52.000
-Through a clock. Two gears mesh: one of size five, the carrier; one of size six, the families.
+00:02:04.000 --> 00:02:14.200
+If anything were off, nothing would lock. Most possible universes simply don't compile.
 
 23
-00:01:52.000 --> 00:01:57.500
-Together they turn an order-thirty cycle — the same 2 · 3 · 5 that runs through everything.
+00:02:15.400 --> 00:02:20.500
+Now turn it around. If the proof closes for only one tempo and one width…
 
 24
-00:01:57.500 --> 00:02:03.000
-This clock has a gap: it always relaxes toward one single state, and never drifts back.
+00:02:20.500 --> 00:02:26.500
+…then the proof decides them. The inputs are forced by the structure they build.
 
 25
-00:02:03.000 --> 00:02:09.000
-So the constants aren't tuned — they're selected. The machine settles on exactly one attractor.
+00:02:26.500 --> 00:02:33.000
+The thing works out its own starting point. The loop closes on itself.
 
 26
-00:02:09.000 --> 00:02:14.000
-That's the bridge: from frozen arithmetic to living dynamics.
+00:02:33.000 --> 00:02:38.500
+That's the fixed point the theory is named after.
 
 27
-00:02:14.400 --> 00:02:18.500
-And that first input hides a gift.
+00:02:38.500 --> 00:02:44.600
+Not a model you tune until it fits — a structure that has to be what it is.
 
 28
-00:02:18.500 --> 00:02:24.000
-c₃ = 1/(8π) is the exact 8π sitting inside Einstein's equation for gravity.
+00:02:45.400 --> 00:02:51.500
+Once you see it, the elegance is hard to miss.
 
 29
-00:02:24.000 --> 00:02:29.500
-Run the same atoms through the heat of a horizon, and the full law of gravity falls out —
+00:02:51.500 --> 00:02:58.500
+The same small numbers — two, three, five — run through every part, because it's all one object.
 
 30
-00:02:29.500 --> 00:02:34.000
-both constants fixed, even the cosmological constant, set by α.
+00:02:58.500 --> 00:03:05.000
+And it isn't frozen. A simple clock gives the whole thing a single resting state.
 
 31
-00:02:34.000 --> 00:02:39.800
-The same 1/(8π) shows up three independent ways. Hard to call that an accident.
+00:03:05.000 --> 00:03:14.600
+So the constants aren't dialled in by hand — they're where it settles. Almost no free choices, one connected picture.
 
 32
-00:02:40.400 --> 00:02:45.000
-Small whole numbers raise a fair worry: is this just numerology?
+00:03:15.400 --> 00:03:20.500
+Now the fair objection: small whole numbers that fit reality —
 
 33
-00:02:45.000 --> 00:02:48.500
-So we tried to break it ourselves.
+00:03:20.500 --> 00:03:24.500
+isn't that just numerology, like seeing faces in clouds?
 
 34
-00:02:48.500 --> 00:02:54.500
-Of all the predictions, thirteen were frozen before we ever looked at the data.
+00:03:24.500 --> 00:03:31.000
+We took it seriously. Nobody drew this picture top-down. It assembled itself —
 
 35
-00:02:54.500 --> 00:02:59.500
-Then two hundred thousand random look-alike theories. TFPT hits all thirteen;
+00:03:31.000 --> 00:03:38.000
+out of hundreds of small, independent checks, each verified by computer, that slowly clicked into one whole.
 
 36
-00:02:59.500 --> 00:03:03.500
-the random ones top out at five.
+00:03:38.000 --> 00:03:45.500
+E₈ proves the pieces can fit. These checks prove we're not fooling ourselves —
 
 37
-00:03:03.500 --> 00:03:09.000
-For α alone: of ninety-four thousand variants, exactly one lands in the measured window.
+00:03:45.500 --> 00:03:51.500
+every load-bearing claim machine-verified twice, with a team tasked to break it.
 
 38
-00:03:09.000 --> 00:03:15.000
-And the seven arithmetic 'coincidences'? They're one object — the 2 · 3 · 5 of E₈ — seen seven ways.
+00:03:51.500 --> 00:03:58.000
+We froze predictions before the data, then ran two hundred thousand random look-alikes.
 
 39
-00:03:15.000 --> 00:03:24.000
-Odds a look-alike matches the whole scorecard: below 10⁻³⁰. Checked twice — in Wolfram and in Lean.
+00:03:58.000 --> 00:04:04.600
+They get at most five right; this gets all thirteen. By luck? Below one in 10³⁰ — effectively zero.
 
 40
-00:03:24.400 --> 00:03:28.500
-The machine doesn't just explain — it predicts.
+00:04:05.400 --> 00:04:11.500
+It isn't finished, and we don't pretend it is.
 
 41
-00:03:28.500 --> 00:03:34.000
-Twenty-three falsifiable numbers. Today: nine already match, six are close, none miss,
+00:04:11.500 --> 00:04:18.000
+One theorem from sealing the core; a few bridges to known physics; one unit no pure number can give.
 
 42
-00:03:34.000 --> 00:03:38.000
-and eight are still waiting for data.
+00:04:18.000 --> 00:04:24.600
+Every gap is labelled — and it's killable: neutrino mass, proton decay, dark energy. One miss, and it's wrong.
 
 43
-00:03:38.000 --> 00:03:43.500
-sin²θ₁₂ ≈ 0.3067.  sin²θ₁₃ ≈ 0.0231.  A tiny gravitational-wave ratio.  Normal neutrino ordering.
+00:04:25.400 --> 00:04:30.000
+So — is reality compiled? We don't know. That's the honest answer.
 
 44
-00:03:43.500 --> 00:03:49.500
-The near-term tests are real: neutrino mass from DESI and CMB-S4, proton decay at Hyper-Kamiokande,
+00:04:30.000 --> 00:04:36.500
+But there's now a version you can test: built from almost nothing, fitting a surprising amount,
 
 45
-00:03:49.500 --> 00:03:54.500
-and the dark-energy equation of state at DESI.
+00:04:36.500 --> 00:04:40.500
+with every gap marked and every test named.
 
 46
-00:03:54.500 --> 00:04:00.000
-Each one is a tripwire. One clean miss, and the theory is wrong.
-
-47
-00:04:04.400 --> 00:04:08.500
-So what is actually still open?
-
-48
-00:04:08.500 --> 00:04:13.500
-Not a vague pile — three named, labelled handoffs.
-
-49
-00:04:13.500 --> 00:04:19.000
-One published-theorem step from closing the central seam,
-
-50
-00:04:19.000 --> 00:04:24.000
-the clearly-marked bridges to external physics,
-
-51
-00:04:24.000 --> 00:04:30.000
-and one honest unit — because a theorem says pure numbers can never hand you a kilogram.
-
-52
-00:04:30.000 --> 00:04:36.000
-Zero hidden mechanisms. Two inputs, one compiler — fully audited.
+00:04:40.500 --> 00:04:45.000
+Maybe the constants were never arbitrary. Maybe they simply had to add up.
 

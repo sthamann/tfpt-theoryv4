@@ -5,21 +5,23 @@ export const HEIGHT = 1080;
 const sec = (s: number) => Math.round(s * FPS);
 
 /**
- * The 8-beat timeline. `start`/`durationInFrames` are absolute on the master
- * track; the caption cues in captions.json are authored against the same
- * seconds, so the burned-in subtitle and the exported .vtt never drift.
+ * The 9-beat "Is reality compiled?" timeline. `start`/`durationInFrames` are
+ * absolute on the master track; the caption cues in captions.json are authored
+ * against the same seconds, so the burned-in subtitle and the exported .vtt
+ * never drift.
  */
 export const SCENES = [
-  { id: "cold-open", start: sec(0), durationInFrames: sec(15) },
-  { id: "machine", start: sec(15), durationInFrames: sec(43) },
-  { id: "readout", start: sec(58), durationInFrames: sec(44) },
-  { id: "clocks", start: sec(102), durationInFrames: sec(32) },
-  { id: "gravity", start: sec(134), durationInFrames: sec(26) },
-  { id: "safeguards", start: sec(160), durationInFrames: sec(44) },
-  { id: "kill", start: sec(204), durationInFrames: sec(40) },
-  { id: "residual", start: sec(244), durationInFrames: sec(32) },
+  { id: "question", start: sec(0), durationInFrames: sec(20) },
+  { id: "result", start: sec(20), durationInFrames: sec(45) },
+  { id: "input", start: sec(65), durationInFrames: sec(30) },
+  { id: "proof", start: sec(95), durationInFrames: sec(40) },
+  { id: "fixed-point", start: sec(135), durationInFrames: sec(30) },
+  { id: "beauty", start: sec(165), durationInFrames: sec(30) },
+  { id: "numerology", start: sec(195), durationInFrames: sec(50) },
+  { id: "open", start: sec(245), durationInFrames: sec(20) },
+  { id: "resolution", start: sec(265), durationInFrames: sec(20) },
 ] as const;
 
-export const TOTAL_FRAMES = sec(276);
+export const TOTAL_FRAMES = sec(285);
 
 export type Caption = { from: number; to: number; text: string };

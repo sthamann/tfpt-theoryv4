@@ -9,16 +9,17 @@ const VIDEO_SRC = "/intro/tfpt-intro.mp4";
 const POSTER_SRC = "/intro/tfpt-intro-poster.jpeg";
 const CAPTIONS_SRC = "/intro/tfpt-intro.en.vtt";
 
-/** Chapter markers — seconds match the video's eight beats (script.ts). */
+/** Chapter markers — seconds match the video's nine beats (script.ts). */
 const CHAPTERS: { t: number; label: string }[] = [
-  { t: 0, label: "The bet" },
-  { t: 15, label: "The machine & E₈" },
-  { t: 58, label: "The readout" },
-  { t: 102, label: "The clocks" },
-  { t: 134, label: "Gravity for free" },
-  { t: 160, label: "Not numerology" },
-  { t: 204, label: "23 predictions" },
-  { t: 244, label: "What's open" },
+  { t: 0, label: "Is reality compiled?" },
+  { t: 20, label: "What comes out" },
+  { t: 65, label: "From how little" },
+  { t: 95, label: "The proof layer (E₈)" },
+  { t: 135, label: "It computes itself" },
+  { t: 165, label: "The beauty" },
+  { t: 195, label: "Not numerology" },
+  { t: 245, label: "Honest gaps" },
+  { t: 265, label: "The honest answer" },
 ];
 
 /**
@@ -29,36 +30,40 @@ const CHAPTERS: { t: number; label: string }[] = [
  */
 const TRANSCRIPT: { heading: string; body: string }[] = [
   {
-    heading: "The bet (0:00)",
-    body: "This is the fine-structure constant — how strongly light and matter interact. Physics measures it. TFPT computes it — the one answer a short equation allows, fixed by just two numbers, and nothing else. Bold claim. So I'll also show you exactly where it could break.",
+    heading: "Is reality compiled? (0:00)",
+    body: "A program begins as a few lines of source code — and unfolds into something huge and detailed. Here's an honest question, not a claim: could reality work the same way? Could the rules of our universe be the output of something tiny — compiled, not chosen? Let's look at where that idea leads — and how it could fail.",
   },
   {
-    heading: "The machine & E₈ (0:15)",
-    body: "Think of TFPT as a compiler — a machine, not a table of lucky numbers. Two inputs go in: a tempo, c₃ = 1/(8π) — the rate set by the edge of space, and a width, g_car = 5 — how many slots the carrier has. From those, the pieces build themselves: three families of matter, a sixteen-part block that is exactly one full generation, and the hypercharges. Then the key player — E₈. It isn't a force of nature; it's the auditor: the one rulebook where every piece locks together exactly one way, like a perfect crystal. And it closes for only that one tempo and width — so E₈ doesn't accept the inputs, it forces them. The axioms are outputs.",
+    heading: "What comes out (0:20)",
+    body: "Start at the end — with what this one idea actually produces. Almost the whole Standard Model — our rulebook for every known particle and force: the forces, why matter comes in three families, the single Higgs, the masses, how they mix. Gravity — Einstein's equation, with its constants fixed instead of assumed. Pieces of cosmology — the early universe, how much ordinary matter there is, dark energy. The strength of light — the famous one over one-thirty-seven — is just one line among many. And twenty-three concrete, testable predictions. That's the output. The real question: from how much input?",
   },
   {
-    heading: "The readout — what comes out (0:58)",
-    body: "So what does the machine actually print out? Almost the entire Standard Model — exact and machine-checked: the three forces and their charges, three generations, exactly one Higgs, all nine particle masses on a single ladder, the quark and neutrino mixings, both CP phases, and a built-in reason there's no neutron dipole — strong-CP is exactly zero. The headline: the fine-structure constant is the single positive root of one equation. Not chosen — forced. α⁻¹ = 137.0359992, under two sigma from experiment. Read the same edge as a horizon, and you also get cosmology — and gravity.",
+    heading: "From how little (1:05)",
+    body: "Here's the surprising part: almost nothing goes in. Two numbers. A tempo — set by the edge of space. And a width: how many slots the building block has — five. And those two aren't even truly free. Strip it down, and what's left is one small whole-number pattern — and π. A huge, detailed result from a tiny source. That gap — between almost nothing and all of this — is the whole story.",
   },
   {
-    heading: "The clocks — discrete → dynamic (1:42)",
-    body: "But a list of numbers isn't physics yet — what makes it move? Through a clock. Two gears mesh: one of size five, the carrier; one of size six, the families. Together they turn an order-thirty cycle — the same 2 · 3 · 5 that runs through everything. This clock has a gap: it always relaxes toward one single state, and never drifts back. So the constants aren't tuned — they're selected. The machine settles on exactly one attractor (Perron–Frobenius). That's the bridge: from frozen arithmetic to living dynamics.",
+    heading: "The proof layer — E₈ (1:35)",
+    body: "How can two numbers carry that much? Because they don't just get plugged in — they have to pass a test. The parts they build must fit into one rigid mathematical object: E₈. E₈ isn't a force of nature. It's a proof layer — the referee that certifies the pieces fit only one way. Two hundred and forty points, one perfect pattern. If anything were off, nothing would lock. Most possible universes simply don't compile.",
   },
   {
-    heading: "Gravity comes free (2:14)",
-    body: "And that first input hides a gift. c₃ = 1/(8π) is the exact 8π sitting inside Einstein's equation for gravity. Run the same atoms through the heat of a horizon, and the full law of gravity falls out — both constants fixed, even the cosmological constant, set by α. The same 1/(8π) shows up three independent ways. Hard to call that an accident.",
+    heading: "It computes itself — the fixed point (2:15)",
+    body: "Now turn it around. If the proof closes for only one tempo and one width… then the proof decides them. The inputs are forced by the structure they build. The thing works out its own starting point. The loop closes on itself. That's the fixed point the theory is named after. Not a model you tune until it fits — a structure that has to be what it is.",
   },
   {
-    heading: "Why this isn't numerology (2:40)",
-    body: "Small whole numbers raise a fair worry: is this just numerology? So we tried to break it ourselves. Of all the predictions, thirteen were frozen before we ever looked at the data. Then two hundred thousand random look-alike theories. TFPT hits all thirteen; the random ones top out at five. For α alone: of ninety-four thousand variants, exactly one lands in the measured window. And the seven arithmetic “coincidences”? They're one object — the 2 · 3 · 5 of E₈ — seen seven ways, not seven flukes. The odds a look-alike matches the whole scorecard: below ten to the minus thirty. Checked twice — independently in Wolfram and in Lean.",
+    heading: "The beauty (2:45)",
+    body: "Once you see it, the elegance is hard to miss. The same small numbers — two, three, five — run through every part, because it's all one object. And it isn't frozen. A simple clock gives the whole thing a single resting state. So the constants aren't dialled in by hand — they're where it settles. Almost no free choices, one connected picture.",
   },
   {
-    heading: "23 predictions · how to kill it (3:24)",
-    body: "The machine doesn't just explain — it predicts. Twenty-three falsifiable numbers. Today: nine already match, six are close, none miss, and eight are still waiting for data. sin²θ₁₂ ≈ 0.3067. sin²θ₁₃ ≈ 0.0231. A tiny gravitational-wave ratio. Normal neutrino ordering. The near-term tests are real: neutrino mass from DESI and CMB-S4, proton decay at Hyper-Kamiokande, and the dark-energy equation of state at DESI. Each one is a tripwire. One clean miss, and the theory is wrong.",
+    heading: "Is this just numerology? (3:15)",
+    body: "Now the fair objection: small whole numbers that fit reality — isn't that just numerology, like seeing faces in clouds? We took it seriously. Nobody drew this picture top-down. It assembled itself — out of hundreds of small, independent checks, each verified by computer, that slowly clicked into one whole. E₈ proves the pieces can fit. These checks prove we're not fooling ourselves — every load-bearing claim machine-verified twice, with a team tasked to break it. We froze predictions before the data, then ran two hundred thousand random look-alikes. They get at most five right; this gets all thirteen. By luck? Below one in 10³⁰ — effectively zero.",
   },
   {
-    heading: "What is actually open (4:04)",
-    body: "So what is actually still open? Not a vague pile — three named, labelled handoffs. One published-theorem step from closing the central seam, the clearly-marked bridges to external physics, and one honest unit — because a theorem says pure numbers can never hand you a kilogram. Zero hidden mechanisms. Two inputs, one compiler — fully audited.",
+    heading: "Honest about the gaps (4:05)",
+    body: "It isn't finished, and we don't pretend it is. One theorem from sealing the core; a few bridges to known physics; one unit no pure number can give. Every gap is labelled — and it's killable: neutrino mass, proton decay, dark energy. One miss, and it's wrong.",
+  },
+  {
+    heading: "The honest answer (4:25)",
+    body: "So — is reality compiled? We don't know. That's the honest answer. But there's now a version you can test: built from almost nothing, fitting a surprising amount, with every gap marked and every test named. Maybe the constants were never arbitrary. Maybe they simply had to add up.",
   },
 ];
 
@@ -67,12 +72,12 @@ const fmt = (t: number) => `${Math.floor(t / 60)}:${String(t % 60).padStart(2, "
 const videoJsonLd = {
   "@context": "https://schema.org",
   "@type": "VideoObject",
-  name: "TFPT — a 4-minute introduction",
+  name: "TFPT — Is reality compiled?",
   description:
-    "A 4-minute introduction to Topological Fixed-Point Theory (TFPT): two inputs — the tempo c₃ = 1/(8π) and the carrier width g_car = 5 — drive a discrete compiler. E₈ is the auditor: the one rulebook where the pieces lock together exactly one way, so it pins the inputs (the axioms are outputs). The machine reads off almost the entire Standard Model (three forces and charges, three generations, exactly one Higgs, nine masses on one φ₀-ladder, CKM+PMNS, both CP phases, strong-CP = 0), the fine-structure constant α⁻¹ = 137.0359992, cosmology and a parameter-free law of gravity. An order-30 clock with a spectral gap turns the static structure into dynamics with a unique attractor (the constants are selected, not tuned). It makes 23 falsifiable predictions (9 match, 6 near, 0 miss, 8 pending; 13 frozen blind), shows why this isn't numerology (13/13 vs 200,000 random look-alikes ≤5, α unique to 1 in 94,500, the seven arithmetic witnesses are one 2·3·5/E₈ object, odds below 10⁻³⁰, checked in Wolfram and Lean), the near-term kill tests (DESI, CMB-S4, Hyper-K), and an honest residual of three named interfaces with zero hidden mechanisms.",
+    "A short film on Topological Fixed-Point Theory (TFPT) built around one honest question: is reality compiled? It opens with the output — almost the whole Standard Model (forces, three generations, one Higgs, the masses and mixings, strong-CP = 0), gravity (Einstein's equation with fixed constants), pieces of cosmology, the fine-structure constant α⁻¹ = 137.0359992 as just one line among many, and 23 testable predictions — then shows how little goes in: two numbers that reduce to one small whole-number pattern and π. E₈ is the proof layer: the referee (240-root projection) where the parts fit only one way, so the inputs are forced — a fixed point. The same 2·3·5 runs through every part, and a spectral-gap clock settles on one attractor (constants selected, not tuned). On numerology: hundreds of machine-checks assembled the picture bottom-up, verified twice (Wolfram + Lean) with a red team; 13 predictions were frozen before the data and beat 200,000 random look-alikes (≤5/13), odds below 10⁻³⁰. It is honest about the gaps (one theorem, a few bridges, one unit no pure number can give) and falsifiable (neutrino mass, proton decay, dark energy). The verdict is humble: we don't know — but here is a version you can test.",
   thumbnailUrl: [`${SITE_URL}${POSTER_SRC}`],
   uploadDate: "2026-06-25",
-  duration: "PT4M36S",
+  duration: "PT4M45S",
   contentUrl: `${SITE_URL}${VIDEO_SRC}`,
   inLanguage: "en",
   isFamilyFriendly: true,
@@ -129,8 +134,8 @@ export function IntroVideo() {
           id="intro-video-heading"
           align="center"
           eyebrow="Start here"
-          title="The 4-minute introduction"
-          description="Two inputs in; E₈ as the auditor that pins them; almost the whole Standard Model, the constants, the order-30 clocks that make it dynamical, gravity and 23 predictions out — plus why this isn't numerology, the kill tests, and an honest residual of three named interfaces."
+          title="Is reality compiled?"
+          description="A short film: the whole Standard Model, gravity and 23 predictions out of almost nothing — why E₈ is the proof layer, how the two inputs fix themselves, the beauty of one connected object, and how we keep it honest rather than numerology."
         />
 
         <figure className="mt-10">
@@ -142,7 +147,7 @@ export function IntroVideo() {
               playsInline
               preload="none"
               poster={POSTER_SRC}
-              aria-label="TFPT — a 4-minute introduction (English, with subtitles)"
+              aria-label="TFPT — Is reality compiled? (English, with subtitles)"
               onLoadedMetadata={disableTracks}
             >
               <source src={VIDEO_SRC} type="video/mp4" />
@@ -163,7 +168,7 @@ export function IntroVideo() {
               <button
                 type="button"
                 onClick={play}
-                aria-label="Play the 4-minute introduction"
+                aria-label="Play the film — Is reality compiled?"
                 className="group absolute inset-0 flex items-center justify-center bg-slate-950/30 transition-colors hover:bg-slate-950/15 focus-visible:outline-none"
               >
                 <span className="flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-violet-500 text-white shadow-lg shadow-blue-500/40 ring-1 ring-white/20 transition-transform group-hover:scale-110 group-focus-visible:scale-110">

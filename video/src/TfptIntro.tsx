@@ -4,24 +4,26 @@ import { SCENES } from "./script";
 import { COLORS } from "./theme";
 import { BrandMark } from "./components/ui";
 import { Subtitle } from "./components/Subtitle";
-import { Scene01ColdOpen } from "./scenes/Scene01ColdOpen";
-import { Scene02Machine } from "./scenes/Scene02Machine";
-import { Scene03Readout } from "./scenes/Scene03Readout";
-import { Scene04Clocks } from "./scenes/Scene04Clocks";
-import { Scene05Gravity } from "./scenes/Scene05Gravity";
-import { Scene06Safeguards } from "./scenes/Scene06Safeguards";
-import { Scene07Kill } from "./scenes/Scene07Kill";
-import { Scene08Residual } from "./scenes/Scene08Residual";
+import { Scene01Question } from "./scenes/Scene01Question";
+import { Scene02Result } from "./scenes/Scene02Result";
+import { Scene03Input } from "./scenes/Scene03Input";
+import { Scene04Proof } from "./scenes/Scene04Proof";
+import { Scene05FixedPoint } from "./scenes/Scene05FixedPoint";
+import { Scene06Beauty } from "./scenes/Scene06Beauty";
+import { Scene07Numerology } from "./scenes/Scene07Numerology";
+import { Scene08Open } from "./scenes/Scene08Open";
+import { Scene09Resolution } from "./scenes/Scene09Resolution";
 
 const SCENE_COMPONENTS: Record<string, React.FC> = {
-  "cold-open": Scene01ColdOpen,
-  machine: Scene02Machine,
-  readout: Scene03Readout,
-  clocks: Scene04Clocks,
-  gravity: Scene05Gravity,
-  safeguards: Scene06Safeguards,
-  kill: Scene07Kill,
-  residual: Scene08Residual,
+  question: Scene01Question,
+  result: Scene02Result,
+  input: Scene03Input,
+  proof: Scene04Proof,
+  "fixed-point": Scene05FixedPoint,
+  beauty: Scene06Beauty,
+  numerology: Scene07Numerology,
+  open: Scene08Open,
+  resolution: Scene09Resolution,
 };
 
 const ProgressBar: React.FC = () => {
