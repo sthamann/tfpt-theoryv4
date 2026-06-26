@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`422` registered scripts · `483` ledger claims · `10` clusters.
+`423` registered scripts · `484` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -288,7 +288,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v407_dn_pairings_omega** [E/C/O] `FLAV.SELECTOR.CLOSE.01` — FLAV.SELECTOR.CLOSE.01: the R4' residue folds into the tau=omega keystone (v405) -- the three (d,n) selector pairings ARE the tau=omega family-slice atoms. [E] the frame (1,a,sigma
   - deps: v405_seam_equiv_omega, v49_readout_rigidity, v405, v139, v136, v42 · cited: origin theory, 1 architecture e8
 
-### `frontier` — Open gate (G_metric) & the frontier  (123 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (124 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -537,6 +537,8 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v213_ftransfer_functor, v238_modular_lindblad_dynamics, v383_dynamics_universal, v164_qcd_scale, v238, v240, v99, v320 · cited: research contracts, safeguards
 - **v426_seam_lto_rp_kms** [E/C/O] `SEAM.EQUIV.LTORP.KMS.01` — SEAM.EQUIV.LTORP.KMS.01 -- the invertible beta=1-KMS variant of (LTO-RP), the corner NPW26 leave open (they prove it for topologically-ordered models; the TFPT seam is invertible +
   - deps: v424_seam_lto_rp_reduction, v286_seam_equivalence_contract, v308_seam_equiv_chain, v309_modular_bedrock, v424, v309, v302, v240 · cited: research contracts, safeguards
+- **v429_axion_pentagon_phi** [E/C] `DM.AXION.PENTAGON.01` — DM.AXION.PENTAGON.01 -- the 'unmapped' icosahedral/golden E8 structure surfaces in the ONE external cosmological input theta_i, answering 'why does idle E8 structure exist?' for th
+  - deps: v211_axion_spine_angle, v354_e8_reverse_audit, v313_golden_atoms_spectral · cited: origin theory, 4 frontier, 5 redteam
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (175 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -915,7 +917,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v416_atom_trichotomy** — `ARITH.TRICHOTOMY.01`
 - **v417_eisenstein_cp_operator** — `DIAMOND.EISEN.01`
 - **v418_cyclotomic_norm_triple** — `ARITH.NORMTRIPLE.01`
 - **v419_seam_galois_carrier** — `SEAM.GALOIS.01`
@@ -927,4 +928,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v426_seam_lto_rp_kms** — `SEAM.EQUIV.LTORP.KMS.01`
 - **v427_overdet_witness_map** — `OVERDET.WITNESS.MAP.01`
 - **v428_overdet_reclass** — `OVERDET.WITNESS.RECLASS.01`
+- **v429_axion_pentagon_phi** — `DM.AXION.PENTAGON.01`
 

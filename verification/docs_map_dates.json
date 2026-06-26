@@ -600,8 +600,8 @@
   "date": "2026-06-25"
  },
  "tfpt_4_frontier::section::Dark matter --- the candidate is fixed, the scale is pending::1": {
-  "hash": "adb40678c9e1",
-  "date": "2026-06-24"
+  "hash": "971bc26d8763",
+  "date": "2026-06-26"
  },
  "tfpt_4_frontier::section::The muon anomalous magnetic moment --- a seam vertex readout::1": {
   "hash": "fa4b8d3cdd1a",
@@ -652,8 +652,8 @@
   "date": "2026-06-24"
  },
  "tfpt_5_redteam::section::Outcome::1": {
-  "hash": "cc411204e8f7",
-  "date": "2026-06-23"
+  "hash": "3244545635ee",
+  "date": "2026-06-26"
  },
  "tfpt_horizon_readouts::front::(front matter)::1": {
   "hash": "091987bff9bb",
@@ -716,8 +716,8 @@
   "date": "2026-06-24"
  },
  "origin_theory::section::The whole integer skeleton from one pair $(\\gcar,\\Nfam)=(5,3)$::1": {
-  "hash": "66729297bcbe",
-  "date": "2026-06-25"
+  "hash": "8398cd8266df",
+  "date": "2026-06-26"
  },
  "origin_theory::section::The ``$8$'' is triply forced: geometry $=$ lattice $=$ gravity::1": {
   "hash": "649048863210",

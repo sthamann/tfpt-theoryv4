@@ -434,6 +434,8 @@ branch verdict
 
 Kein Nachjustieren. Wenn Spine fällt, fällt der dominante Axion DM Branch. Das wäre kein Weltuntergang, nur ein Asteroid für einen Branch.
 
+Nebenbefund (v429, DM.AXION.PENTAGON.01, [C] Brücke, kein Statuswechsel): weil `N_fam = g_car - 2`, ist `theta_i = (g_car-2)π/g_car` exakt der Innenwinkel des regulären `g_car`-Ecks — für `g_car=5` das Pentagon, also `theta_i = 3π/5 = 108°`, `cos(theta_i) = (1-√5)/4 = -1/(2φ)`. Der goldene Charakter ist eindeutig an `g_car=5` gebunden (n=3,4,6 geben rational 1/2,0,-1/2). Damit ist die sonst „unmapped" goldene/ikosaedrische E8-Struktur (v354/v313) genau die Geometrie dieses einen externen kosmologischen Inputs — `DM.AXION.SPINE.01` bleibt [C], kein Gate geschlossen.
+
 ### P1: Rare Kaon Joint Flavor Bridge
 
 Nicht nur K⁺ Einzelwert.

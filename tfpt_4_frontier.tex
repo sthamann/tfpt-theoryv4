@@ -549,8 +549,16 @@ extra dilution (entropy injection) or a lower $f_a$. This stays \mC, and over-pr
 \par\smallskip\noindent\textbf{A more robust angle: the spine branch.}
 \veri{v211\_axion\_spine\_angle.py} The same finite-$T$ solver reaches $\Omega_{\mathrm{DM}}$ at
 $\theta_i\approx106^\circ$ --- and the central spine quotient gives $\theta_i=\pi\Nfam/g_{\mathrm{car}}=3\pi/5=108^\circ$
-\emph{exactly} (a rational multiple of $\pi$, no fit; harmonic estimate $0.03\,\theta_i^2=0.107$, lifted to
-${\sim}0.12$ by a mild anharmonic factor). Crucially $108^\circ$ lies $62^\circ$ \emph{below} the hill-top,
+\emph{exactly} (no fit; harmonic estimate $0.03\,\theta_i^2=0.107$, lifted to
+${\sim}0.12$ by a mild anharmonic factor).
+\veri{v429\_axion\_pentagon\_phi.py} This angle is not a bare rational multiple of $\pi$: because
+$\Nfam=g_{\mathrm{car}}-2$, $\theta_i=(g_{\mathrm{car}}-2)\pi/g_{\mathrm{car}}$ is \emph{exactly} the interior
+angle of the regular $g_{\mathrm{car}}$-gon --- for $g_{\mathrm{car}}=5$ the \emph{pentagon}, so
+$\cos\theta_i=\cos(3\pi/5)=(1-\sqrt5)/4=-1/(2\varphi)$ with $\varphi=2\cos(\pi/5)$, and this golden character is
+\emph{unique} to $g_{\mathrm{car}}=5$ (the small $n$-gons $n=3,4,6$ give the rational $\tfrac12,0,-\tfrac12$). So the
+otherwise-unmapped golden/icosahedral $g_{\mathrm{car}}=5$ signature (\vref{v354}/\vref{v313}) is the geometry of
+this one external input --- a \mC\ reading that does \emph{not} upgrade \texttt{DM.AXION.SPINE.01}.
+Crucially $108^\circ$ lies $62^\circ$ \emph{below} the hill-top,
 in the \emph{mild}-anharmonic regime, so the relic is \emph{not} exponentially sensitive: if the
 misalignment angle is the spine quotient, the determinant-line axion is all of dark matter \emph{without}
 hill-top tuning. This is an \emph{alternative} ansatz to $\theta_i=\pi(1-\varphi_\Sigma)\approx170^\circ$

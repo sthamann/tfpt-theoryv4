@@ -42,6 +42,628 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-06-26",
+    "dateLabel": "2026-06-26",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v429"
+      },
+      {
+        "k": "t",
+        "v": " — the `unmapped' golden "
+      },
+      {
+        "k": "m",
+        "v": "E_8"
+      },
+      {
+        "k": "t",
+        "v": " structure is the geometry of the one external input "
+      },
+      {
+        "k": "m",
+        "v": "\\theta_i"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v429"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "DM.AXION.PENTAGON.01"
+            },
+            {
+              "k": "t",
+              "v": ") — a geometric re-reading answering “why does so much idle "
+            },
+            {
+              "k": "m",
+              "v": "E_8"
+            },
+            {
+              "k": "t",
+              "v": " structure exist?” for the one case where the idle structure has a job."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The reverse audit ("
+        },
+        {
+          "k": "c",
+          "v": "v354"
+        },
+        {
+          "k": "t",
+          "v": ") had argued the golden ratio "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi"
+        },
+        {
+          "k": "t",
+          "v": " is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "unmapped"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (it appears only internally — the affine-"
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " attractor angle "
+        },
+        {
+          "k": "c",
+          "v": "v312"
+        },
+        {
+          "k": "t",
+          "v": ", the icosian lattice "
+        },
+        {
+          "k": "c",
+          "v": "v348"
+        },
+        {
+          "k": "t",
+          "v": " — and in no physical readout), and used exactly that to conclude "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi"
+        },
+        {
+          "k": "t",
+          "v": " cannot be numerology. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "this sharpens that statement: because "
+        },
+        {
+          "k": "m",
+          "v": "\\Nfam{=}\\gcar{-}2"
+        },
+        {
+          "k": "t",
+          "v": ", the axion misalignment "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "spine"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " angle ("
+        },
+        {
+          "k": "c",
+          "v": "v211"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "DM.AXION.SPINE.01"
+        },
+        {
+          "k": "t",
+          "v": ") is "
+        },
+        {
+          "k": "m",
+          "v": "\\theta_i{=}\\pi\\Nfam/\\gcar{=}(\\gcar{-}2)\\pi/\\gcar"
+        },
+        {
+          "k": "t",
+          "v": ", which is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "exactly"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the interior angle of the regular "
+        },
+        {
+          "k": "m",
+          "v": "\\gcar"
+        },
+        {
+          "k": "t",
+          "v": "-gon — for "
+        },
+        {
+          "k": "m",
+          "v": "\\gcar{=}5"
+        },
+        {
+          "k": "t",
+          "v": " the pentagon, "
+        },
+        {
+          "k": "m",
+          "v": "\\theta_i{=}3\\pi/5{=}108^\\circ"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "its cosine is golden, "
+        },
+        {
+          "k": "m",
+          "v": "\\cos(3\\pi/5){=}(1{-}\\sqrt5)/4{=}{-}1/(2\\varphi)"
+        },
+        {
+          "k": "t",
+          "v": " (partner "
+        },
+        {
+          "k": "m",
+          "v": "2\\cos(2\\pi/5){=}1/\\varphi\n{=}\\varphi{-}1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi{=}2\\cos(\\pi/5)"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the golden character is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "unique"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " to "
+        },
+        {
+          "k": "m",
+          "v": "\\gcar{=}5"
+        },
+        {
+          "k": "t",
+          "v": ": among the small regular "
+        },
+        {
+          "k": "m",
+          "v": "n"
+        },
+        {
+          "k": "t",
+          "v": "-gons only "
+        },
+        {
+          "k": "m",
+          "v": "n{=}5"
+        },
+        {
+          "k": "t",
+          "v": " has an irrational interior-angle cosine ("
+        },
+        {
+          "k": "m",
+          "v": "n{=}3,4,6"
+        },
+        {
+          "k": "t",
+          "v": " give "
+        },
+        {
+          "k": "m",
+          "v": "1/2,0,-1/2"
+        },
+        {
+          "k": "t",
+          "v": "), so "
+        },
+        {
+          "k": "m",
+          "v": "\\theta_i"
+        },
+        {
+          "k": "t",
+          "v": " is golden "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "because"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the carrier is "
+        },
+        {
+          "k": "m",
+          "v": "5"
+        },
+        {
+          "k": "t",
+          "v": " (P2)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "An honest "
+            },
+            {
+              "k": "s",
+              "v": "C"
+            },
+            {
+              "k": "t",
+              "v": "bridge, not a status change."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " It connects two standing facts — "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi"
+        },
+        {
+          "k": "t",
+          "v": " is the unmapped "
+        },
+        {
+          "k": "m",
+          "v": "\\gcar{=}5"
+        },
+        {
+          "k": "t",
+          "v": " signature ("
+        },
+        {
+          "k": "c",
+          "v": "v354"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v313"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "m",
+          "v": "\\theta_i{=}3\\pi/5"
+        },
+        {
+          "k": "t",
+          "v": " is the one external cosmological input ("
+        },
+        {
+          "k": "c",
+          "v": "v211"
+        },
+        {
+          "k": "t",
+          "v": ") — and "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "refines"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v354"
+        },
+        {
+          "k": "t",
+          "v": " from “"
+        },
+        {
+          "k": "m",
+          "v": "\\varphi"
+        },
+        {
+          "k": "t",
+          "v": " in no physical readout” (it is the unmapped "
+        },
+        {
+          "k": "m",
+          "v": "\\gcar{=}5"
+        },
+        {
+          "k": "t",
+          "v": " signature, "
+        },
+        {
+          "k": "c",
+          "v": "v313"
+        },
+        {
+          "k": "t",
+          "v": ") to “"
+        },
+        {
+          "k": "m",
+          "v": "\\varphi"
+        },
+        {
+          "k": "t",
+          "v": " touches "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "only"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "spine misalignment angle” (conditional, branch-level, never a frozen prediction). It is a geometric motive for the spine over the hilltop "
+        },
+        {
+          "k": "m",
+          "v": "\\theta_i{\\approx}170^\\circ"
+        },
+        {
+          "k": "t",
+          "v": " (whose cosine is not a clean pentagon value), consistent with — not replacing — the finite-"
+        },
+        {
+          "k": "m",
+          "v": "T"
+        },
+        {
+          "k": "t",
+          "v": " solver that decides the branch ("
+        },
+        {
+          "k": "c",
+          "v": "v185"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v211"
+        },
+        {
+          "k": "t",
+          "v": "). It does "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " derive "
+        },
+        {
+          "k": "m",
+          "v": "\\theta_i"
+        },
+        {
+          "k": "t",
+          "v": ", does "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " upgrade "
+        },
+        {
+          "k": "c",
+          "v": "DM.AXION.SPINE.01"
+        },
+        {
+          "k": "t",
+          "v": " (stays "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": ") and closes no gate."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Surfaces synced."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "run_all.py"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "script_registry.csv"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "status_ledger.csv"
+        },
+        {
+          "k": "t",
+          "v": ", the dark-matter section of "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_4_frontier"
+        },
+        {
+          "k": "t",
+          "v": "; the Wolfram extension/README/ledger counts ("
+        },
+        {
+          "k": "c",
+          "v": "GATE.WOLFRAM.02"
+        },
+        {
+          "k": "t",
+          "v": ") and the website verification count; manifests refreshed."
+        }
+      ]
+    ]
+  },
+  {
     "date": "2026-06-25",
     "dateLabel": "2026-06-25",
     "heading": [

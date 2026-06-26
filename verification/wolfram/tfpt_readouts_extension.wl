@@ -2600,6 +2600,28 @@ Module[{A3, D5, D8, sf},
       && LCM[4/GCD[2, 4], 4/GCD[2, 4]] == 2 && 16/2^2 == 4 && Abs[Det[D8]] == 4];
 ];
 
+(* ==== v429 round: theta_i = the carrier-pentagon interior angle = golden ==== *)
+Module[{phi, gc, Nf},
+  phi = (1 + Sqrt[5])/2; gc = 5; Nf = 3;
+
+  (* v429 (1): theta_i = interior angle of the regular g_car-gon (pentagon) *)
+  checkExact["v429 DM.AXION.PENTAGON.01 (i): N_fam=g_car-2, so theta_i=pi N_fam/g_car=(g_car-2)pi/g_car = the interior angle of the regular g_car-gon; for g_car=5 the PENTAGON, theta_i=3 pi/5=108 deg",
+    Nf == gc - 2 && Simplify[Pi*Nf/gc - (gc - 2) Pi/gc] == 0
+      && Simplify[Pi*Nf/gc - 3 Pi/5] == 0 && (3 Pi/5)/Degree == 108];
+
+  (* v429 (2): cos(theta_i) is golden *)
+  checkExact["v429 DM.AXION.PENTAGON.01 (ii): cos(3 pi/5)=(1-Sqrt5)/4=-1/(2 phi); 2 cos(2 pi/5)=1/phi=phi-1; phi=2 cos(pi/5)=(1+Sqrt5)/2 -- the 'unmapped' golden ratio IS theta_i's angular data",
+    Simplify[Cos[3 Pi/5] - (1 - Sqrt[5])/4] == 0 && Simplify[Cos[3 Pi/5] + 1/(2 phi)] == 0
+      && Simplify[2 Cos[2 Pi/5] - 1/phi] == 0 && Simplify[2 Cos[2 Pi/5] - (phi - 1)] == 0
+      && Simplify[2 Cos[Pi/5] - phi] == 0];
+
+  (* v429 (3): the golden character is unique to g_car=5 *)
+  checkExact["v429 DM.AXION.PENTAGON.01 (iii): among small regular n-gons only n=5 has an IRRATIONAL interior-angle cosine -- cos((n-2)pi/n)=1/2,0,-1/2 for n=3,4,6 (rational), only n=5 gives -1/(2 phi); theta_i golden BECAUSE carrier=5 (P2)",
+    {Cos[Pi/3], Cos[Pi/2], Cos[2 Pi/3]} == {1/2, 0, -1/2}
+      && Element[Cos[Pi/3], Rationals] && Element[Cos[Pi/2], Rationals] && Element[Cos[2 Pi/3], Rationals]
+      && ! Element[Cos[3 Pi/5], Rationals] && Simplify[Cos[3 Pi/5] - (1 - Sqrt[5])/4] == 0];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];
