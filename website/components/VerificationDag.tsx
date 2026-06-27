@@ -155,7 +155,7 @@ const NODES: DagNode[] = [
     marker: "[E] lattice theorem",
     title: "E₈ — the μ₄ glue (audit hull)",
     summary:
-      "D₅ and A₃ share the discriminant group ℤ₄; their glue norms add to the root norm, q(D₅) + q(A₃) = 5/4 + 3/4 = 2. So E₈ = (D₅ ⊕ A₃) + μ₄ closes as a lattice theorem — the unimodular audit hull, not a gauge group; 240 = 16·5·3 roots, 248 = 240 + 8. It is the forced choice, not a guess: no nontrivial abelian sector ⇔ holomorphy ⇔ det K = 1 selects (E₈)₁ uniquely (v234/v235/v237), and the whole (2,3,5) skeleton drops out of the Brieskorn capstone (v236). The golden ratio φ is not a fitted number but the icosahedral (2,3,5) signature — an output of the bootstrap-forced geometry, not an input (v349/v354) — and a reverse numerology audit of the unmapped E₈ region finds no missed structure under a strict discriminator (v355).",
+      "D₅ and A₃ share the discriminant group ℤ₄; their glue norms add to the root norm, q(D₅) + q(A₃) = 5/4 + 3/4 = 2. So E₈ = (D₅ ⊕ A₃) + μ₄ closes as a lattice theorem — the unimodular audit hull, not a gauge group; 240 = 16·5·3 roots, 248 = 240 + 8. It is the forced choice, not a guess: no nontrivial abelian sector ⇔ holomorphy ⇔ det K = 1 selects (E₈)₁ uniquely (v234/v235/v237), and the whole (2,3,5) skeleton drops out of the Brieskorn capstone (v236). The golden ratio φ is not a fitted number but the icosahedral (2,3,5) signature — an output of the bootstrap-forced geometry, not an input (v349/v354) — and a reverse numerology audit of the unmapped E₈ region finds no missed primary readout under a strict discriminator (v355). The sheet/deck complement (v430) closes the adversarial follow-up: the seam's “other side” (the double-cover deck |ℤ₂| = 2 and the conjugate half-spinor S⁻ = part of the 128-spinor, ∑deg) is matched structure, forced-disjoint from the five unmapped Casimir degrees {12,14,18,20,24}. Those five are not diffuse overhead either: they are the forced two-family decomposition deg(E₈) = 6·spine{2,3,4,5} ⊔ ({2}∪det-ladder{8,14,20}), the residue classes {0,2} mod 6 forced by h = 30 = 2·3·5 (v431) — exact arithmetic, with the functorial flavour identification honestly kept [P].",
     inputs: ["D₅", "A₃"],
     outputs: ["240 roots, 248 = dim E₈"],
     failure: "Not even-unimodular; glue norms do not sum to 2.",
@@ -175,6 +175,8 @@ const NODES: DagNode[] = [
       "v349_raw_seam_golden_test.py",
       "v354_e8_reverse_audit.py",
       "v355_e8_unmapped_bandwidth.py",
+      "v430_other_side_reverse_audit.py",
+      "v431_e8_degree_ladder.py",
     ],
   },
   {

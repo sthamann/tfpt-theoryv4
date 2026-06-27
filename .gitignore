@@ -53,6 +53,9 @@ tfpt_animation*
 # Interactive "TFPT machine" game (local-only, standalone; not part of the record)
 _game/
 
+# LinkedIn outreach drafts (article + generated banner/figures); local-only, not shipped
+/linkedin/
+
 # Three.js / Rapier simulation (local-only; not part of the published record)
 simulation/
 

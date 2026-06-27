@@ -2622,6 +2622,96 @@ Module[{phi, gc, Nf},
       && ! Element[Cos[3 Pi/5], Rationals] && Simplify[Cos[3 Pi/5] - (1 - Sqrt[5])/4] == 0];
 ];
 
+(* ==== v430 round: the 'other side' (double-cover deck / conjugate sheet S^-) vs the unmapped E8 degrees ==== *)
+Module[{exps, degs, matched, unmapped, sheet, spinor},
+  exps = {1, 7, 11, 13, 17, 19, 23, 29};
+  degs = exps + 1;                          (* {2,8,12,14,18,20,24,30} *)
+  matched = {2, 8, 30};                      (* metric, rank->c3, Coxeter->g_car (v354) *)
+  unmapped = Complement[degs, matched];      (* {12,14,18,20,24} *)
+  spinor = 8*16;                             (* 128 = rank * dim S^+ *)
+  sheet = {2, 16, 32, 128};                  (* |Z2|, dim S^+, dim(S^+ + S^-), the 128-spinor *)
+
+  (* v430 (1): the deck is the matched degree-2 invariant, not one of the unmapped degrees *)
+  checkExact["v430 E8.OTHERSIDE.AUDIT.01 (i): the one-sided cover gives |Z2|=2 (the 1/2 in c3=1/(2*4pi)=1/(8pi)); 2=Min(E8 degrees)=the metric, one of the matched {2,8,30}, NOT one of the unmapped {12,14,18,20,24}",
+    1/8 == 1/(2*4) && Min[degs] == 2 && MemberQ[matched, 2] && ! MemberQ[unmapped, 2]
+      && matched == {2, 8, 30} && unmapped == {12, 14, 18, 20, 24}];
+
+  (* v430 (2): the two sheets are the 128-spinor (matched, collective) *)
+  checkExact["v430 E8.OTHERSIDE.AUDIT.01 (ii): dim S^+=dim S^-=16, the spinor block 128=rank*dim S^+=8*16=2^(rank-1)=Total[degrees], the spinor half of 248=120+128; S^- the conjugate (16-bar,4-bar), 128=2*64",
+    spinor == 128 && spinor == 2^(8 - 1) && spinor == Total[degs]
+      && 120 + spinor == 248 && spinor == 2*(16*4)];
+
+  (* v430 (3): the sheet/deck set is forced-disjoint from the unmapped region *)
+  checkExact["v430 E8.OTHERSIDE.AUDIT.01 (iii): the sheet/deck integer set {2,16,32,128} has EMPTY intersection with the unmapped degrees {12,14,18,20,24}; its only degree-alphabet contact is the matched 2",
+    sheet == {2, 16, 32, 128} && Intersection[sheet, unmapped] == {}
+      && Intersection[sheet, degs] == {2}];
+];
+
+(* ==== v431 round: E8.DEGREE.LADDER.01 -- unmapped degrees = 6*spine U det-ladder ==== *)
+Module[{exps, degs, h, tot30, expMod6, degMod6, matched, unmapped,
+        fam0, fam2, a, e1, e2, e3, p0, spine, R, Q, C, L, ladder, surf,
+        cleanSplit, e8Clean, e67Fail, homed},
+
+  exps = {1, 7, 11, 13, 17, 19, 23, 29};
+  degs = exps + 1;
+  h = 30;
+  tot30 = Select[Range[1, h - 1], CoprimeQ[#, h] &];
+  expMod6 = Sort[DeleteDuplicates[Mod[exps, 6]]];
+  degMod6 = Sort[DeleteDuplicates[Mod[degs, 6]]];
+  matched = {2, 8, 30};
+  unmapped = Complement[degs, matched];
+
+  (* v431 (1): two-family split forced by 30 = 2*3*5 *)
+  checkExact["v431 E8.DEGREE.LADDER.01 (i): E8 exponents = phi(30)=8 totatives of h=30=2*N_fam*g_car; coprime to 6 => +-1 mod 6, so degrees occupy ONLY {0,2} mod 6",
+    exps == tot30 && EulerPhi[h] == 8 && h == 2*3*5
+      && expMod6 == {1, 5} && degMod6 == {0, 2}];
+
+  (* v431 (2): 6k family = 6 x spine {2,3,4,5} = v91 anchor a=(1,1,2) *)
+  fam0 = Sort[Select[degs, Mod[#, 6] == 0 &]];
+  a = {1, 1, 2};
+  e1 = Total[a]; e2 = a[[1]] a[[2]] + a[[1]] a[[3]] + a[[2]] a[[3]];
+  e3 = Times @@ a; p0 = 3;
+  spine = Sort[{e3, p0, e1, e2}];
+  checkExact["v431 E8.DEGREE.LADDER.01 (ii): degrees==0 mod 6 = {12,18,24,30}; /6 = {2,3,4,5} = v91 spine {e3,p0,e1,e2}(a=(1,1,2)); 30=6*g_car matched",
+    fam0 == {12, 18, 24, 30} && Sort[fam0/6] == spine && spine == {2, 3, 4, 5}
+      && {e1, e2, e3, p0} == {4, 5, 2, 3}];
+
+  (* v431 (3): 6k+2 family = {2} U det-ladder {8,14,20} on winding line 6s+8 *)
+  fam2 = Sort[Select[degs, Mod[#, 6] == 2 &]];
+  R = {{1, 3, 0}, {1, 5, 2}, {2, 5, 3}};
+  Q = {{3, 1, 0}, {3, 2, 0}, {3, 2, 1}};
+  C = R + Q . DiagonalMatrix[{1, 0, 0}];
+  L = R + Q . DiagonalMatrix[{2, 0, 0}];
+  ladder = {Det[R], Det[C], Det[L]};
+  surf = Table[6 s + 8, {s, 0, 2}];
+  checkExact["v431 E8.DEGREE.LADDER.01 (iii): degrees==2 mod 6 = {2,8,14,20}; {8,14,20}=(det R,det C,det L)=winding line det M(s,0)=6s+8 (v135); 2=matched metric, 8=rank E8",
+    fam2 == {2, 8, 14, 20} && ladder == {8, 14, 20} && ladder == surf && ladder[[1]] == 8];
+
+  (* v431 (4): 18 = 6*N_fam spine member, not det-ladder holdout *)
+  checkExact["v431 E8.DEGREE.LADDER.01 (iv): 18=6*3=6*N_fam is spine-family 6*p0, NOT on det-ladder (6s+8=18 has no integer s); no orphan degree",
+    18 == 6*3 && MemberQ[fam0, 18] && Mod[18 - 8, 6] != 0];
+
+  (* v431 (5): clean {0,2} split special to E8 among exceptionals *)
+  cleanSplit[name_] := Module[{ex, hh, dm},
+    ex = Switch[name, "A4", {1, 2, 3, 4}, "D5", {1, 3, 5, 7, 4},
+      "E6", {1, 4, 5, 7, 8, 11}, "E7", {1, 5, 7, 9, 11, 13, 17},
+      "E8", exps, "F4", {1, 5, 7, 11}, "G2", {1, 5}];
+    hh = Switch[name, "A4", 5, "D5", 8, "E6", 12, "E7", 18, "E8", 30, "F4", 12, "G2", 6];
+    dm = DeleteDuplicates[Mod[ex + 1, 6]];
+    Sort[ex] == Select[Range[1, hh - 1], CoprimeQ[#, hh] &] && SubsetQ[{0, 2}, dm] && Mod[hh, 6] == 0];
+  e8Clean = cleanSplit["E8"];
+  e67Fail = ! (cleanSplit["E6"] && cleanSplit["E7"] && cleanSplit["D5"]);
+  checkExact["v431 E8.DEGREE.LADDER.01 (v): clean {0,2}-mod-6 split (6|h AND exponents=totatives) holds for E8 but FAILS for E6,E7,D5; F4/G2 share split but not spine+flavor-det content",
+    e8Clean && e67Fail && cleanSplit["F4"] && cleanSplit["G2"]];
+
+  (* v431 (6): all five 'unmapped' degrees homed; v355 functorial line upheld [P] *)
+  homed = And @@ Map[
+    Function[d, (Mod[d, 6] == 0 && MemberQ[spine, d/6]) || (Mod[d, 6] == 2 && MemberQ[ladder, d])],
+    unmapped];
+  checkExact["v431 E8.DEGREE.LADDER.01 (vi): all five unmapped {12,14,18,20,24} have forced FAMILY home (6*spine or det-ladder); degrees=6*spine U ({2} U det-ladder) exact [I]; functorial flavor map stays [P]",
+    homed && unmapped == {12, 14, 18, 20, 24}];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

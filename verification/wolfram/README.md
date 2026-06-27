@@ -105,7 +105,7 @@ v84–v93 block passed **45/45** on first run; the v94–v140 blocks were added
 the same day, the v141–v144 block on 2026-06-12. Current state:
 
 ```
---- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429: 330 passed, 0 failed ---
+--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431: 339 passed, 0 failed ---
 ALL WOLFRAM EXTENSION CHECKS PASSED
 ```
 
@@ -299,6 +299,26 @@ surfaces in the **one external cosmological input** `θ_i`. Because `N_fam=g_car
 only `n=5` has an irrational interior-angle cosine; `n=3,4,6` give `1/2,0,−1/2`). A `[C]` re-reading that
 refines `v354` ("`φ` in no readout" → "`φ` touches only the `[C]` spine angle") and gives a geometric motive
 for the spine branch over the hilltop `~170°`; it does **not** upgrade `DM.AXION.SPINE.01` (stays `[C]`).
+
+The 2026-06-27 **other-side audit round** added three exact checks (330 → 333):
+`v430_other_side_reverse_audit.py` — the sheet/deck complement of the reverse audit (`v354`/`v355`). The
+double cover's "other side" (the one-sided `ℤ₂` collar / conjugate half-spinor `S⁻`) is **forced-disjoint**
+from `E₈`'s five unmapped Casimir degrees `{12,14,18,20,24}`: the deck is the matched degree-2 invariant
+(`|ℤ₂|=2=Min(deg)`, the metric, one of the matched `{2,8,30}`); the two sheets are the `128`-spinor
+(`128=8·16=2^(rank−1)=Total[deg]`, the spinor half of `248=120+128`, `S⁻` the conjugate `(16̄,4̄)`,
+`128=2·64`); and the sheet/deck set `{2,16,32,128}` meets `{12,14,18,20,24}` in `∅` (only degree contact the
+matched `2`). A clean structural negative consolidating the `S⁻`-dark-matter downgrade (`v227`) and the WIMP
+no-go; no status change.
+
+The 2026-06-27 **degree-ladder round** added six exact checks (333 → 339):
+`v431_e8_degree_ladder.py` — the structural complement of the reverse audit (`v354`/`v355`/`v430`). `E₈`'s
+five "unmapped" Casimir degrees are **not** diffuse overhead but the forced two-family decomposition
+`deg(E₈) = 6·spine{2,3,4,5} ⊔ ({2}∪det-ladder{8,14,20})`: the exponents are the `φ(30)=8` totatives of
+`h=30=2·3·5`, so the degrees occupy only the residue classes `{0,2} mod 6`; the `6k` family `/6` is the
+`v91` spine `{2,3,4,5}`, the `6k+2` family `{8,14,20}=(det R,det C,det L)` is the winding line `6s+8`
+(`v135`); `18=6·N_fam` is spine-family, not a holdout; the clean split is special to `E₈` (`E₆/E₇/D₅` fail).
+The arithmetic decomposition is exact `[E]/[I]`; the **functorial** flavour identification stays `[P]`
+(`12,24` admit two readings each) — a structure theorem, not a forced flavour map; no status change.
 
 The 2026-06-22 **next-steps round (A/C/D/B)** added one more exact check (288 → 289):
 `v337_decoupling_theorem.py` (the ambient back-reaction scale `2·dim(E₈)·c₃² = 31/(4π²)`

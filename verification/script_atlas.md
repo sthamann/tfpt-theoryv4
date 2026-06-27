@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`423` registered scripts · `484` ledger claims · `10` clusters.
+`426` registered scripts · `487` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -540,7 +540,7 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
 - **v429_axion_pentagon_phi** [E/C] `DM.AXION.PENTAGON.01` — DM.AXION.PENTAGON.01 -- the 'unmapped' icosahedral/golden E8 structure surfaces in the ONE external cosmological input theta_i, answering 'why does idle E8 structure exist?' for th
   - deps: v211_axion_spine_angle, v354_e8_reverse_audit, v313_golden_atoms_spectral · cited: origin theory, 4 frontier, 5 redteam
 
-### `registry` — Blind registry & red-team follow-ups (v84–v175)  (175 scripts)
+### `registry` — Blind registry & red-team follow-ups (v84–v175)  (178 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
 
 - **v84_frozen_registry** [E] `REG.FREEZE.01` — blind-prediction registry FROZEN 2026-06-09: every dimensionless prediction of record at 25 digits, re-derived from the two axioms each run (formula↔value lock); exactly ONE θ₁₂ pr
@@ -893,6 +893,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
   - deps: v354_e8_reverse_audit, v403_facet_compositum, v419_seam_galois_carrier, v83_e8net_holomorphic_uniqueness, v236_brieskorn_capstone, v53_compiler_core, v415, v417 · cited: safeguards
 - **v428_overdet_reclass** [E/C] `OVERDET.WITNESS.RECLASS.01` — OVERDET.WITNESS.RECLASS.01 -- the honest correction of v427: applying v427's own multiply-vs-compress test to v427 itself. The (2,3,5) Brieskorn singularity (v236) is the ONE gener
   - deps: v427_overdet_witness_map, v236_brieskorn_capstone, v53_compiler_core, v305, v313 · cited: safeguards
+- **v430_other_side_reverse_audit** [E/O] `E8.OTHERSIDE.AUDIT.01` — E8.OTHERSIDE.AUDIT.01: the 'other side of the seam' (double-cover deck / conjugate sheet S⁻) audited against E8's UNMAPPED Casimir degrees -- the sheet/deck complement of v354/v355
+  - deps: v354_e8_reverse_audit, v355_e8_unmapped_bandwidth, v227_degree_exponent_channel_split, E8.CAS.01, v58, v109 · cited: 4 frontier, 5 redteam
+- **v431_e8_degree_ladder** [E/C/O] `E8.DEGREE.LADDER.01` — E8.DEGREE.LADDER.01: the reverse-audit 'unmapped' E8 Casimir degrees are NOT diffuse overhead but the forced two-family decomposition deg(E8) = 6·spine{2,3,4,5} (+) ({2} U flavor-d
+  - deps: v354_e8_reverse_audit, v355_e8_unmapped_bandwidth, v430_other_side_reverse_audit, E8.CAS.01, v91, v135 · cited: 5 redteam
+- **v432_overdet_floor** [E/C] `OVERDET.FLOOR.01` — OVERDET.FLOOR.01: the UNCONDITIONAL improbability floor + the L1<->L2 bridge -- the defensible number that survives even if a skeptic REJECTS the declared formula grammar, compleme
+  - deps: v427_overdet_witness_map, v428_overdet_reclass, v100, v305, v382_alpha_quillen_exact, v187 · cited: safeguards
 
 ## Supersede map — do NOT reuse the left-hand claim
 
@@ -917,9 +923,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v417_eisenstein_cp_operator** — `DIAMOND.EISEN.01`
-- **v418_cyclotomic_norm_triple** — `ARITH.NORMTRIPLE.01`
-- **v419_seam_galois_carrier** — `SEAM.GALOIS.01`
 - **v420_fpole_qed_running** — `FR.POLE.QED.01`
 - **v422_galois_net_bridge** — `SEAM.GALOIS.NET.01`
 - **v423_no_ambient_dependency** — `QGAMB.NODEP.01`
@@ -929,4 +932,7 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v427_overdet_witness_map** — `OVERDET.WITNESS.MAP.01`
 - **v428_overdet_reclass** — `OVERDET.WITNESS.RECLASS.01`
 - **v429_axion_pentagon_phi** — `DM.AXION.PENTAGON.01`
+- **v430_other_side_reverse_audit** — `E8.OTHERSIDE.AUDIT.01`
+- **v431_e8_degree_ladder** — `E8.DEGREE.LADDER.01`
+- **v432_overdet_floor** — `OVERDET.FLOOR.01`
 

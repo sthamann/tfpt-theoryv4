@@ -107,7 +107,9 @@ opposite question --- how much $E_8$ structure maps onto \emph{nothing}? Of the 
 $\{2,8,12,14,18,20,24,30\}$, exactly \textbf{three} feed a primary physical readout (degree $2$, the
 metric; degree $8$, the rank $\to\cthree=1/(8\pi)$; degree $30$, the Coxeter number $\to\gcar=5$ and the
 order-$30$ clock) and \textbf{five} carry no primary readout. A theory that publishes its $5/8$ unused
-overhead is not cherry-picking.
+overhead is not cherry-picking --- and those five are not diffuse slack but the forced two-family ladder
+$6\cdot\text{spine}\{2,3,4,5\}\sqcup\text{det-ladder}\{8,14,20\}$ (\vref{v431}), so even the overhead is
+structured, not mined.
 \end{keybox}
 \begin{figure}[ht]\centering
 \includegraphics[width=0.84\linewidth]{figures/safeguard_reverse_audit}
@@ -157,12 +159,26 @@ $\alpha^{-1}\approx 137$, a prime foreign to the $(2,3,5)$ skeleton --- is repro
 of the boundary Ward identity (\vref{v305}). The honest claim is therefore narrower and harder to attack:
 not ``seven independent witnesses,'' but \emph{one richly over-determined input plus a foreign readout}.
 \end{keybox}
+\begin{keybox}[The unconditional floor, and the $\alpha$-form lever \mC\ (\veri{v432\_overdet\_floor.py})]
+Multiplying \emph{only} across the genuinely disjoint pieces --- the input over-determination (the ``$8$''
+forced four ways), the foreign $\alpha^{-1}$ census ($\sim1/94500$, \vref{v100}), the $\varphi_0$-seed cluster
+counted \emph{once}, and one downstream witness ($K^+\!\to\!\pi^+\nu\bar\nu$) --- yields an \emph{unconditional}
+improbability floor: $\le 10^{-6}$ across a grid of deliberately generous chance assignments, nominal
+$\sim 10^{-10}$. This floor is grammar-\emph{independent} (it survives even if a skeptic rejects the declared
+formula grammar) and sits $\sim20$ orders \emph{above} the conditional null-model ceiling $10^{-30.7}$
+(\vref{v100}). That gap is exactly the evidential payoff of \emph{deriving} the $\alpha$ form: the open
+form-derivation \texttt{ALPHA.QUILLEN.EXACT.01} (\vref{v382}) and this floor are the \emph{same lever} ---
+closing it moves the $\alpha$ factor from the $1/94500$ census toward certainty. Honest scope: this is a
+conservative \emph{floor} (an upper bound on chance-plausibility), not a posterior, and it bounds only the
+``is it numerology?'' question --- not the physics bridge (the firewall, \vref{v187}).
+\end{keybox}
 \begin{figure}[ht]\centering
 \includegraphics[width=0.92\linewidth]{figures/safeguard_witness_map}
 \caption{The corrected over-determination map (\veri{v428\_overdet\_reclass.py}): the seven arithmetic
 readouts are facets of \emph{one} $(2,3,5)/E_8$ object (a \emph{compression} gain, like the anchor), so they
 do not multiply; what genuinely multiplies is the input forced four independent ways (the ``$8$'') plus the
-foreign witness $\alpha^{-1}\!\approx\!137$.}\label{fig:witness}
+foreign witness $\alpha^{-1}\!\approx\!137$. The disjoint pieces give an \emph{unconditional} floor
+$\sim10^{-10}$ (\veri{v432\_overdet\_floor.py}), $\sim20$ orders above the conditional $10^{-30.7}$.}\label{fig:witness}
 \end{figure}
 
 \section{Layer 4 --- the firewall and the No-Unit theorem}
@@ -264,8 +280,8 @@ $v_{\mathrm{geo}}$ (theorem-forbidden), and the typed $F_{\mathrm{transfer}}$ in
 \textbf{Layer} & \textbf{What it defends against} & \textbf{Artefact} \\
 \midrule
 Status calculus & a \mC\ claim read as \mE & ledger $+$ \texttt{audit\_sync.py} \\
-No free pattern $+$ reverse audit & cherry-picking, decorative identities & \vref{v305}/\vref{v100}/\texttt{E8.REVERSE.AUDIT.01} \\
-Over-determination map & rhetorical ``everything multiplies'' (incl.\ \emph{our own} miscount) & \vref{v427}/\vref{v428} \\
+No free pattern $+$ reverse audit & cherry-picking, decorative identities & \vref{v305}/\vref{v100}/\vref{v431}/\texttt{E8.REVERSE.AUDIT.01} \\
+Over-determination map & rhetorical ``everything multiplies'' (incl.\ \emph{our own} miscount) & \vref{v427}/\vref{v428}/\vref{v432} \\
 Firewall $+$ No-Unit & external physics sold as compiler output; a faked scale & \vref{v187}/\vref{v213}/\vref{v153}/\vref{v384} \\
 Frozen registry $+$ null model & moving goalposts; chance hits & \vref{v84}/\vref{v100}/\vref{v375} \\
 Two independent paths & a shared implementation bug & Wolfram $+$ Lean \\

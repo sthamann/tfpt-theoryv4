@@ -60,6 +60,71 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-27 (\texttt{v431}, \texttt{v432} --- the ``unmapped'' $E_8$ degrees are forced spine$+$flavor structure; the unconditional over-determination floor)}
+\begin{itemize}
+\item \textbf{New module \texttt{v431} (\texttt{E8.DEGREE.LADDER.01}) --- the reverse-audit ``unmapped'' $E_8$
+Casimir degrees are NOT diffuse overhead but a forced two-family decomposition.} The structural
+complement of the reverse audit (\vref{v354}/\vref{v355}) and its sheet/deck complement (\vref{v430}):
+$\deg(E_8)=6\cdot\mathrm{spine}\{2,3,4,5\}\sqcup(\{2\}\cup\mathrm{det\text{-}ladder}\{8,14,20\})$.
+\mE\ the two-family split is \emph{forced} by $h(E_8)=30=2\cdot3\cdot5$ --- the exponents are the
+$\varphi(30)=8$ totatives of $30$, hence coprime to $6$, hence $\equiv\pm1\bmod6$, so the degrees occupy
+only the residue classes $\{0,2\}\bmod6$. \mE\ the $6k$ family $\{12,18,24,30\}/6=\{2,3,4,5\}$ is the
+\vref{v91} spine; the $6k{+}2$ family $\{8,14,20\}=(\det R,\det C,\det L)$ is the winding line
+$\det M(s,0)=6s+8$ of the flavor diamond (\vref{v135}). \mE\ ``$18=6\Nfam$'' is not a holdout (spine
+family), and the clean split is special to $E_8$ among the simply-laced exceptionals ($E_6/E_7/D_5$ fail).
+\mC\ \textbf{honest \vref{v355} line:} the arithmetic decomposition is exact, but the \emph{functorial}
+claim ``$6k{+}2$ Casimir stratum $=$ flavor sheet operators'' needs a representation-theoretic map and
+stays \mC\ ($12,24$ admit two canonical readings each) --- a structure theorem, not a forced functorial
+flavor map. It reclassifies the \vref{v354} overhead to zero orphan degrees and closes no gate.
+\item \textbf{New module \texttt{v432} (\texttt{OVERDET.FLOOR.01}) --- the unconditional improbability
+floor and the L1$\leftrightarrow$L2 bridge.} The complement of the conditional null model (\vref{v100})
+and the multiply-vs-compress framework (\vref{v427}/\vref{v428}): the defensible over-determination number
+that survives even if a skeptic \emph{rejects} the declared formula grammar. \mE\ compression removed
+(\vref{v428}), the genuinely multiplicative pieces are the input ``$8$'' forced four independent ways plus
+the foreign witness $\ainv\sim137$. \mC\ multiplying only across disjoint pieces (input over-determination
+$\times$ the $\alpha$ census $1/94500$ $\times$ the $\phiz$-seed cluster counted once $\times$ one
+downstream witness) gives a floor $\le10^{-6}$ across a grid of generous assignments, nominal
+$\sim10^{-10}$. \mE\ that floor sits $\sim20$ orders \emph{above} the \vref{v100} conditional $10^{-30.7}$;
+the gap is exactly the evidential value of proving the forms forced, so the $\alpha$ form-derivation
+(\texttt{ALPHA.QUILLEN.EXACT.01}, \vref{v382}) and this floor are the \emph{same} lever. \mC\ \textbf{honest
+scope:} bounds only the ``is it numerology?'' question, not the physics bridge (firewall \vref{v187}); a
+conservative floor, not a posterior.
+\item \emph{Surfaces synced in the same change:} \vref{v431}/\vref{v432} added to \texttt{run\_all.py},
+\texttt{script\_registry.csv} (master index $+$ website \texttt{ScriptIndex}), \texttt{status\_ledger.csv},
+\texttt{tfpt\_5\_redteam} (reverse-audit winbox $+$ Casimir-degree figure) and \texttt{tfpt\_safeguards}
+(the over-determination layer); \texttt{v431} mirrored in
+\texttt{wolfram/tfpt\_readouts\_extension.wl} (\texttt{v432} is a conservative bound, Python-only).
+\end{itemize}
+
+\subsection*{2026-06-27 (\texttt{v430} --- the seam's ``other side'' is forced-disjoint from $E_8$'s unmapped Casimir degrees)}
+\begin{itemize}
+\item \textbf{New module \texttt{v430} (\texttt{E8.OTHERSIDE.AUDIT.01}) --- the sheet/deck complement of the
+reverse audit (\vref{v354}/\vref{v355}).} The reverse audit found five $E_8$ Casimir degrees
+$\{12,14,18,20,24\}$ with no primary readout (``hull overhead''); the double cover has an \emph{other side}
+(the one-sided $\Z_2$ collar / conjugate half-spinor $S^-$), so the sharp adversarial follow-up is
+\emph{``is the leftover where the second sheet lives?''} The answer is a disciplined \textbf{negative}.
+\mE\ the deck is the degree-$2$ invariant: the one-sided cover contributes $|\Z_2|=2$ (the $\tfrac12$ in
+$\cthree=1/(|\Z_2|\,4\pi)=1/(8\pi)$, \vref{v58}/\vref{v216}), and $2=\min\deg(E_8)$ is the quadratic/metric ---
+one of the \emph{matched} primary readouts $\{2,8,30\}$, never one of the unmapped degrees.
+\mE\ the two sheets are the $128$-spinor: $\dim S^+{=}\dim S^-{=}16$, the spinor block
+$128={\rm rank}\,E_8\cdot\dim S^+=2^{{\rm rank}-1}=\sum\deg$, the spinor half of $248=120+128$; $S^-$ enters
+$248$ as the conjugate $(\overline{16},\overline4)$ ($128=2\cdot64$), not a spare singlet.
+\mE\ forced-disjoint: the sheet/deck set $\{2,16,32,128\}$ has empty intersection with $\{12,14,18,20,24\}$,
+its only degree contact the matched $2$. \mO\ each unmapped degree, ``explained'' from sheet atoms, needs an
+unforced coefficient and admits $\ge2$ readings (the \vref{v355} discriminator), so there is no forced
+sheet$\to$unmapped-degree identity.
+\item \textbf{A structural negative, not a status change.} It consolidates the $S^-$-dark-matter downgrade
+(\vref{v227}) and the no-spare-singlet WIMP no-go of the frontier $E_8$ scan (\texttt{tfpt\_4\_frontier}): the
+other side is matched conjugate matter, the five unmapped degrees are the hull overhead, and the two do not
+meet. The only live ``other side'' question --- whether the $128$ phase/glue channel hosts a dark sector
+(\vref{v227}) --- concerns \emph{matched} structure, not the unmapped five. Closes no gate, upgrades nothing.
+\item \textbf{Surfaces synced.} \texttt{run\_all.py}, \texttt{script\_registry.csv},
+\texttt{status\_ledger.csv}; the reverse-audit Outcome winbox $+$ degree-audit table caption and the Target~D
+winbox of \texttt{tfpt\_5\_redteam}, the magnitude/phase keybox of \texttt{tfpt\_3\_e8\_audit\_bootstrap}, the
+WIMP-no-go passage of \texttt{tfpt\_4\_frontier}; the \texttt{E8} node of the website verification DAG; the
+Wolfram extension/README/ledger counts and the website verification count; manifests refreshed.
+\end{itemize}
+
 \subsection*{2026-06-26 (\texttt{v429} --- the `unmapped' golden $E_8$ structure is the geometry of the one external input $\theta_i$)}
 \begin{itemize}
 \item \textbf{New module \texttt{v429} (\texttt{DM.AXION.PENTAGON.01}) --- a geometric re-reading answering

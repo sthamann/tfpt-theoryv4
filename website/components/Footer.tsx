@@ -62,6 +62,15 @@ export function Footer() {
             By <span className="text-slate-300">Stefan Hamann</span> &amp;{" "}
             <span className="text-slate-300">Alessandro Rizzo</span>.
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            Contact:{" "}
+            <Link
+              href="mailto:sh@sh-future.de"
+              className="text-slate-400 underline decoration-slate-700 underline-offset-2 hover:text-white"
+            >
+              sh@sh-future.de
+            </Link>
+          </p>
         </div>
 
         <div>

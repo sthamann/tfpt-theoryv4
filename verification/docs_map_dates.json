@@ -508,8 +508,8 @@
   "date": "2026-06-12"
  },
  "tfpt_3_e8_audit_bootstrap::section::The secondary branching atlas::1": {
-  "hash": "0758d07d81e8",
-  "date": "2026-06-17"
+  "hash": "c7dc93d821b8",
+  "date": "2026-06-27"
  },
  "tfpt_3_e8_audit_bootstrap::section::Group-theoretic audits (optional)::1": {
   "hash": "85d32a889833",
@@ -600,8 +600,8 @@
   "date": "2026-06-25"
  },
  "tfpt_4_frontier::section::Dark matter --- the candidate is fixed, the scale is pending::1": {
-  "hash": "971bc26d8763",
-  "date": "2026-06-26"
+  "hash": "461df59eb123",
+  "date": "2026-06-27"
  },
  "tfpt_4_frontier::section::The muon anomalous magnetic moment --- a seam vertex readout::1": {
   "hash": "fa4b8d3cdd1a",
@@ -652,8 +652,8 @@
   "date": "2026-06-24"
  },
  "tfpt_5_redteam::section::Outcome::1": {
-  "hash": "3244545635ee",
-  "date": "2026-06-26"
+  "hash": "a157b393a981",
+  "date": "2026-06-27"
  },
  "tfpt_horizon_readouts::front::(front matter)::1": {
   "hash": "091987bff9bb",
@@ -776,12 +776,12 @@
   "date": "2026-06-25"
  },
  "tfpt_safeguards::section::Layer 2 --- no free pattern, and the reverse audit::1": {
-  "hash": "fb85fc6d85ab",
-  "date": "2026-06-25"
+  "hash": "decaff1d0dfe",
+  "date": "2026-06-27"
  },
  "tfpt_safeguards::section::Layer 3 --- the over-determination map (multiply vs.\\ compress)::1": {
-  "hash": "324de2abdf50",
-  "date": "2026-06-25"
+  "hash": "f323dbc21716",
+  "date": "2026-06-27"
  },
  "tfpt_safeguards::section::Layer 4 --- the firewall and the No-Unit theorem::1": {
   "hash": "491326327cb7",
@@ -804,7 +804,7 @@
   "date": "2026-06-25"
  },
  "tfpt_safeguards::section::Summary --- the layered defense::1": {
-  "hash": "262b271dd29f",
-  "date": "2026-06-25"
+  "hash": "96f85259a148",
+  "date": "2026-06-27"
  }
 }

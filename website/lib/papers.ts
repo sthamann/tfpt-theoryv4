@@ -1182,7 +1182,7 @@ export const papers: Paper[] = [
     title: "Safeguards against Coincidence and Numerology",
     subtitle: "The verification discipline — every mechanism that defends a load-bearing claim against chance, fitting and over-reading",
     abstract:
-      "A two-input theory that reads out many small integers is, a priori, at risk of being elaborate numerology. This companion answers that risk not with rhetoric but with a layered, machine-checked discipline, stated uniformly in one place. The layers: (1) a four-class status calculus with a single-source ledger and a sync audit that makes it structurally impossible for a conditional [C] claim to be rendered as exact [E]; (2) an anti-fitting rule (no free pattern, v305) plus a reverse audit (E8.REVERSE.AUDIT.01) that publishes how much E₈ structure carries NO readout (3/8 primary, 5/8 hull overhead); (3) an over-determination map (v427) whose framework separates multiplicative evidence from compression and which — applied to TFPT's own arithmetic witnesses (v428) — finds the seven (Gauss, Eisenstein, cyclotomy, Galois, lattice, Pascal, Coxeter) to be facets of one (2,3,5)/E₈ object (compression, not seven independent witnesses), locating the genuine multiplication in an input forced four independent ways (the '8' in c₃) plus a foreign readout (α⁻¹≈137); (4) the F_transfer firewall (v187) and the No-Unit theorem (v153) that makes the absence of an absolute scale a theorem, not a gap; (5) a frozen prediction registry (v84) with a Monte-Carlo null model (v100) and a live data scorecard (v375); (6) two independent reproduction paths — an independent Wolfram engine (116+327 checks) and a Lean 4 kernel proof; and (7) an adversarial red-team layer. The thesis is deliberately narrow: these safeguards make coincidence an expensive explanation of the discrete core, and keep exact compiler closure from ever being mistaken for closed physics.",
+      "A two-input theory that reads out many small integers is, a priori, at risk of being elaborate numerology. This companion answers that risk not with rhetoric but with a layered, machine-checked discipline, stated uniformly in one place. The layers: (1) a four-class status calculus with a single-source ledger and a sync audit that makes it structurally impossible for a conditional [C] claim to be rendered as exact [E]; (2) an anti-fitting rule (no free pattern, v305) plus a reverse audit (E8.REVERSE.AUDIT.01) that publishes how much E₈ structure carries NO readout (3/8 primary, 5/8 hull overhead); (3) an over-determination map (v427) whose framework separates multiplicative evidence from compression and which — applied to TFPT's own arithmetic witnesses (v428) — finds the seven (Gauss, Eisenstein, cyclotomy, Galois, lattice, Pascal, Coxeter) to be facets of one (2,3,5)/E₈ object (compression, not seven independent witnesses), locating the genuine multiplication in an input forced four independent ways (the '8' in c₃) plus a foreign readout (α⁻¹≈137); (4) the F_transfer firewall (v187) and the No-Unit theorem (v153) that makes the absence of an absolute scale a theorem, not a gap; (5) a frozen prediction registry (v84) with a Monte-Carlo null model (v100) and a live data scorecard (v375); (6) two independent reproduction paths — an independent Wolfram engine (116+339 checks) and a Lean 4 kernel proof; and (7) an adversarial red-team layer. The thesis is deliberately narrow: these safeguards make coincidence an expensive explanation of the discrete core, and keep exact compiler closure from ever being mistaken for closed physics.",
     status: "safeguards",
     statusLabel: "Verification discipline",
     pdf: "/papers/tfpt_safeguards.pdf",
@@ -1191,11 +1191,11 @@ export const papers: Paper[] = [
     ],
     contribution: [
       "Status calculus: the four display markers [E]/[C]/[O]/[X] are read from the single-source status_ledger.csv, not retyped per document, and audit_sync.py enforces (both directions) that the suite, runner, registry and ledger agree and that every script is cited in a paper body — so a [C] claim cannot be silently shown as [E].",
-      "Anti-fitting: the forward discipline / generator-economy audit (v305) admits an identity as load-bearing only if it is derivationally necessary, kills alternatives, is ablation-relevant, links modules, or is testable; the reverse audit (E8.REVERSE.AUDIT.01) publishes that only 3 of 8 E₈ Casimir degrees feed a primary readout (5/8 are unused hull overhead).",
-      "Over-determination map (v427) + honest self-correction (v428): the framework counts multiplicative evidence only across genuinely disjoint grammars; applying it to TFPT's own seven arithmetic witnesses (Gauss N(3+2i)=13, Eisenstein N(3+2ω)=7, cyclotomy N(3+2ζ₅)=55, Galois |(Z/5)ˣ|=4, |det Cartan E₈|=1, Pascal C(4,≤2)=11, Coxeter φ(30)=8) shows — by the Brieskorn classification (v236) — that they are facets of one (2,3,5)/E₈ object: compression, like the anchor a=(1,1,2), not seven independent multiplications. The genuine multiplication is the input forced four independent ways (rank E₈, h(D₅), φ(30), Milnor all =8) plus the foreign witness α⁻¹≈137.",
+      "Anti-fitting: the forward discipline / generator-economy audit (v305) admits an identity as load-bearing only if it is derivationally necessary, kills alternatives, is ablation-relevant, links modules, or is testable; the reverse audit (E8.REVERSE.AUDIT.01) publishes that only 3 of 8 E₈ Casimir degrees feed a primary readout (5/8 are unused hull overhead) — and those five are not diffuse slack but the forced two-family ladder 6·spine{2,3,4,5} ⊔ det-ladder{8,14,20}, the residue classes {0,2} mod 6 forced by h=30 (v431, exact arithmetic; the functorial flavour reading honestly kept [P]).",
+      "Over-determination map (v427) + honest self-correction (v428): the framework counts multiplicative evidence only across genuinely disjoint grammars; applying it to TFPT's own seven arithmetic witnesses (Gauss N(3+2i)=13, Eisenstein N(3+2ω)=7, cyclotomy N(3+2ζ₅)=55, Galois |(Z/5)ˣ|=4, |det Cartan E₈|=1, Pascal C(4,≤2)=11, Coxeter φ(30)=8) shows — by the Brieskorn classification (v236) — that they are facets of one (2,3,5)/E₈ object: compression, like the anchor a=(1,1,2), not seven independent multiplications. The genuine multiplication is the input forced four independent ways (rank E₈, h(D₅), φ(30), Milnor all =8) plus the foreign witness α⁻¹≈137. Multiplying only across those disjoint pieces gives a conservative unconditional floor (~10⁻¹⁰, v432) that survives even if a skeptic rejects the declared grammar — ~20 orders above the v100 conditional 10⁻³⁰·⁷; the gap is exactly the payoff of deriving the α form (ALPHA.QUILLEN.EXACT.01), so the floor and the α-derivation are one lever.",
       "Firewall + No-Unit: the four frontier transfers stay typed interfaces, never compiler outputs (v187/v213), and the No-Unit theorem (v153) makes v_geo theorem-forbidden; the residual-certification audit (v384) shows every open item is external-math, theorem-forbidden, or external-physics — zero open internal mechanisms.",
       "Frozen predictions + null model: the registry (v84, REG.FREEZE.01) pre-registers the dimensionless predictions, a Monte-Carlo null model (v100) scores each match against chance, and the live scorecard (v375) records the data — including the pre-registered +2.0σ θ₁₃ tension (FLAV.TH13.PRESSURE.01), the opposite of hiding the worst case.",
-      "Two independent paths + red team: an independent Wolfram engine (116/116 + 330/330) and a Lean 4 kernel proof (hypercharge, anomaly, Pascal ladder, seam chain) re-derive the exact core, and the red-team companion attacks the theory and publishes what survives each attack.",
+      "Two independent paths + red team: an independent Wolfram engine (116/116 + 339/339) and a Lean 4 kernel proof (hypercharge, anomaly, Pascal ladder, seam chain) re-derive the exact core, and the red-team companion attacks the theory and publishes what survives each attack.",
     ],
     notClaimed: [
       "These safeguards do not establish physics: they make coincidence expensive for the discrete core and keep the typing honest, but the seam/anchor/transfer bridges remain the open research problem.",
@@ -1211,14 +1211,15 @@ export const papers: Paper[] = [
       },
       {
         title: "Layer 2 — no free pattern, and the reverse audit",
-        body: "The forward discipline (v305) admits an identity as load-bearing only under named anti-fitting conditions; the reverse audit (E8.REVERSE.AUDIT.01) asks the honest opposite — of the eight E₈ Casimir degrees, exactly three feed a primary readout (degree 2 the metric, 8 the rank → c₃, 30 the Coxeter number → g_car), and five carry none. Publishing the 5/8 unused overhead is the anti-cherry-picking signal.",
+        body: "The forward discipline (v305) admits an identity as load-bearing only under named anti-fitting conditions; the reverse audit (E8.REVERSE.AUDIT.01) asks the honest opposite — of the eight E₈ Casimir degrees, exactly three feed a primary readout (degree 2 the metric, 8 the rank → c₃, 30 the Coxeter number → g_car), and five carry none. Publishing the 5/8 unused overhead is the anti-cherry-picking signal — and those five are not diffuse slack: they are the forced two-family decomposition deg(E₈) = 6·spine{2,3,4,5} ⊔ ({2}∪det-ladder{8,14,20}), the {0,2} mod 6 classes forced by h=30=2·3·5 (v431). Exact arithmetic; the functorial flavour identification stays [P].",
       },
       {
         title: "Layer 3 — the over-determination map (multiply vs. compress)",
-        body: "The framework is the right axis (v427): evidence multiplies only across genuinely disjoint grammars, while many readouts from one generator compress. Applied to TFPT's own seven arithmetic witnesses (v428), it forces a self-correction: by the Brieskorn classification (v236) the (2,3,5) singularity is the one generator behind the order-30 clock (Milnor 8 = rank E₈, 30 = 2·3·5 = h(E₈)), so the seven are facets of that same object — they compress, like the anchor a=(1,1,2). What genuinely multiplies is the input forced four independent ways (rank E₈, h(D₅)=8, φ(30), Milnor) plus the foreign witness α⁻¹≈137.",
+        body: "The framework is the right axis (v427): evidence multiplies only across genuinely disjoint grammars, while many readouts from one generator compress. Applied to TFPT's own seven arithmetic witnesses (v428), it forces a self-correction: by the Brieskorn classification (v236) the (2,3,5) singularity is the one generator behind the order-30 clock (Milnor 8 = rank E₈, 30 = 2·3·5 = h(E₈)), so the seven are facets of that same object — they compress, like the anchor a=(1,1,2). What genuinely multiplies is the input forced four independent ways (rank E₈, h(D₅)=8, φ(30), Milnor) plus the foreign witness α⁻¹≈137. Multiplying only across those disjoint pieces yields a conservative unconditional floor (~10⁻¹⁰, v432) that holds even without the declared grammar — ~20 orders above the v100 conditional 10⁻³⁰·⁷; that gap is the payoff of deriving the α form (ALPHA.QUILLEN.EXACT.01), so the floor and the α-derivation are one lever.",
         formulas: [
           "N(3+2i)=13,\\ N(3+2\\omega)=7,\\ N(3+2\\zeta_5)=55,\\ |(\\mathbb Z/5)^\\times|=4 \\ \\text{(facets of one } (2,3,5)/E_8)",
           "\\operatorname{rank}E_8=h(D_5)=\\varphi(30)=\\mu(2,3,5)=8 \\ \\text{(forced 4 ways)},\\quad \\alpha^{-1}\\approx137\\ \\text{(foreign)}",
+          "10^{-10}\\ \\text{(unconditional floor, v432)}\\ \\gg\\ 10^{-30.7}\\ \\text{(v100, conditional on grammar)}",
         ],
       },
       {
@@ -1227,7 +1228,7 @@ export const papers: Paper[] = [
       },
       {
         title: "Layers 5–7 — frozen predictions, independent paths, the red team",
-        body: "Predictions are pre-registered (v84, REG.FREEZE.01) and scored against a Monte-Carlo null model (v100) with a live scorecard (v375); the exact core is re-derived twice more independently (an independent Wolfram engine, 116+327 checks, and a Lean 4 kernel proof with no sorry); and the red-team companion attacks the theory and states what survives — including its own honesty that c=8 alone does not select (E₈)₁ (holomorphy, |det K|=1, is the load-bearing extra).",
+        body: "Predictions are pre-registered (v84, REG.FREEZE.01) and scored against a Monte-Carlo null model (v100) with a live scorecard (v375); the exact core is re-derived twice more independently (an independent Wolfram engine, 116+339 checks, and a Lean 4 kernel proof with no sorry); and the red-team companion attacks the theory and states what survives — including its own honesty that c=8 alone does not select (E₈)₁ (holomorphy, |det K|=1, is the load-bearing extra).",
       },
     ],
     keyFormulas: [
@@ -1243,8 +1244,8 @@ export const papers: Paper[] = [
       },
       {
         label: "Reverse audit",
-        latex: "3/8\\ \\text{primary readouts},\\quad 5/8\\ \\text{hull overhead}",
-        description: "How much E₈ structure carries NO readout — published, not hidden",
+        latex: "3/8\\ \\text{primary readouts},\\quad 5/8 = 6{\\cdot}\\text{spine} \\sqcup \\text{det-ladder}",
+        description: "How much E₈ structure carries NO readout — published, not hidden; the 5/8 is forced two-family structure, not diffuse overhead (v431)",
       },
       {
         label: "No-Unit theorem",
@@ -1255,9 +1256,10 @@ export const papers: Paper[] = [
     highlights: [
       { label: "Status classes", value: "4", description: "[E]/[C]/[O]/[X], ledger-sourced, audit-enforced — no [C] dressed as [E]" },
       { label: "Witnesses → one object", value: "7→1", description: "Gauss, Eisenstein, cyclotomy, Galois, lattice, Pascal, Coxeter — facets of one (2,3,5)/E₈ object, so they compress (v428)" },
-      { label: "Reverse audit", value: "3/8", description: "Only 3 of 8 E₈ degrees feed a primary readout; 5/8 is published hull overhead" },
+      { label: "Reverse audit", value: "3/8", description: "Only 3 of 8 E₈ degrees feed a primary readout; the 5/8 overhead is forced two-family structure 6·spine ⊔ det-ladder (v431), not diffuse slack" },
       { label: "Firewall", value: "4 typed", description: "F_pole/F_Boltzmann/F_relic/F_QCD never compiler outputs (v187); No-Unit makes v_geo a theorem (v153)" },
-      { label: "Independent paths", value: "2", description: "Wolfram (116+327) + Lean 4 kernel proof re-derive the exact core" },
+      { label: "Unconditional floor", value: "~10⁻¹⁰", description: "Disjoint-pieces-only improbability (v432), grammar-independent; ~20 orders above the v100 conditional 10⁻³⁰·⁷" },
+      { label: "Independent paths", value: "2", description: "Wolfram (116+339) + Lean 4 kernel proof re-derive the exact core" },
       { label: "Worst case shown", value: "θ₁₃ +2.0σ", description: "The most-tensioned prediction is pre-registered, not hidden (FLAV.TH13.PRESSURE.01)" },
     ],
   },

@@ -33,7 +33,7 @@ const STATS: {
   },
   {
     big: "3 / 8",
-    small: "Only 3 of 8 E₈ Casimir degrees feed a readout — the 5/8 overhead is published, not hidden.",
+    small: "Only 3 of 8 E₈ Casimir degrees feed a readout — and the 5/8 overhead is forced two-family structure (6·spine ⊔ det-ladder, v431), not diffuse slack.",
     icon: Layers,
     tone: "text-cyan-300",
   },
@@ -78,7 +78,7 @@ const FIGS: { src: string; w: number; h: number; cap: string }[] = [
     src: "/figures/safeguard_reverse_audit.png",
     w: 1170,
     h: 450,
-    cap: "Reverse audit: only 3/8 E₈ degrees feed a readout — the unused overhead is published.",
+    cap: "Reverse audit: only 3/8 E₈ degrees feed a readout — the 5/8 overhead is forced two-family structure (6·spine ⊔ det-ladder, v431), published not hidden.",
   },
 ];
 

@@ -126,34 +126,34 @@ tfpt_3_e8_audit_bootstrap,front,(front matter),1,152,,28184b45056a,2026-06-12
 tfpt_3_e8_audit_bootstrap,section,The compiler core (where this note sits),153,175,,8e3d9559b8f4,2026-06-12
 tfpt_3_e8_audit_bootstrap,section,"The $(1,1,2)$ anchor microcode",176,272,v108_pascal_ladder.py,651bb311833e,2026-06-13
 tfpt_3_e8_audit_bootstrap,section,The residue and length matrices as spectral objects,273,384,v100_numerology_null_mc.py;v37_plucker_anchor.py,8bd636bf0ca3,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,The secondary branching atlas,385,531,v170_diamond_slice_compression.py;v227_degree_exponent_channel_split.py,0758d07d81e8,2026-06-17
-tfpt_3_e8_audit_bootstrap,section,Group-theoretic audits (optional),532,553,v410_sheet_generator_binary.py,85d32a889833,2026-06-24
-tfpt_3_e8_audit_bootstrap,section,Further audit lemmas (machine-verified this round),554,591,,f779e820e593,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,"What this changes, and what stays open",592,640,v1_e8_glue.py;v4_flavor_matrix.py,513d7469af4e,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,"The old cascade, recalled",641,656,v5_e8_cascade.py,d018bbe54914,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,The spine: every rung is a current number,657,753,,25ca0af8a1c6,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,Three views of one spine,754,801,v91_spine_tetrahedron.py,199ce2157442,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,Direct $\phiz$ relations: old vs current,802,826,,8e6b7d7185f2,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,Sector inventory: have all the old-cascade sectors been computed?,827,865,,fe5ae611804b,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,"What is new, what is old, what stays open",866,909,,d2d8039096c1,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,The loop for $\gcar$ --- an overdetermined fixed point,910,1007,v15_bootstrap_classification.py;v6_bootstrap.py,83431665abeb,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,The loop for $\cthree$ --- the ``$8$'' is the $E_8$ rank,1008,1029,,09d2a99e39c6,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,The Möbius origin of the irreducible $\pi$,1030,1128,v180_clock_is_mobius.py;v54_seam_horizon_keystones.py;v55_coxeter_cycle.py;v66_e8_casimir_degrees.py,42cf92482c16,2026-06-15
-tfpt_3_e8_audit_bootstrap,section,"Honest status: bootstrap, not creation from nothing",1129,1158,v108_pascal_ladder.py,7fa3623dd2c8,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,The honest open-items list,1159,1227,v9_neutrino_texture.py,954950bd8ee0,2026-06-24
-tfpt_3_e8_audit_bootstrap,section,The $E_8$-slice scan: results (honest hit / miss),1228,1277,,9bb6cf827ee4,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,Following the $SU(9)$ lead: cross-slice consistency,1278,1315,,6527de5ba23c,2026-06-12
-tfpt_3_e8_audit_bootstrap,section,Appendix: computational verification,1316,1331,v1_e8_glue.py;v4_flavor_matrix.py;v5_e8_cascade.py;v6_bootstrap.py,b08c71e486fc,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,The secondary branching atlas,385,533,v170_diamond_slice_compression.py;v227_degree_exponent_channel_split.py,c7dc93d821b8,2026-06-27
+tfpt_3_e8_audit_bootstrap,section,Group-theoretic audits (optional),534,555,v410_sheet_generator_binary.py,85d32a889833,2026-06-24
+tfpt_3_e8_audit_bootstrap,section,Further audit lemmas (machine-verified this round),556,593,,f779e820e593,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,"What this changes, and what stays open",594,642,v1_e8_glue.py;v4_flavor_matrix.py,513d7469af4e,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,"The old cascade, recalled",643,658,v5_e8_cascade.py,d018bbe54914,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,The spine: every rung is a current number,659,755,,25ca0af8a1c6,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,Three views of one spine,756,803,v91_spine_tetrahedron.py,199ce2157442,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,Direct $\phiz$ relations: old vs current,804,828,,8e6b7d7185f2,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,Sector inventory: have all the old-cascade sectors been computed?,829,867,,fe5ae611804b,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,"What is new, what is old, what stays open",868,911,,d2d8039096c1,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,The loop for $\gcar$ --- an overdetermined fixed point,912,1009,v15_bootstrap_classification.py;v6_bootstrap.py,83431665abeb,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,The loop for $\cthree$ --- the ``$8$'' is the $E_8$ rank,1010,1031,,09d2a99e39c6,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,The Möbius origin of the irreducible $\pi$,1032,1130,v180_clock_is_mobius.py;v54_seam_horizon_keystones.py;v55_coxeter_cycle.py;v66_e8_casimir_degrees.py,42cf92482c16,2026-06-15
+tfpt_3_e8_audit_bootstrap,section,"Honest status: bootstrap, not creation from nothing",1131,1160,v108_pascal_ladder.py,7fa3623dd2c8,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,The honest open-items list,1161,1229,v9_neutrino_texture.py,954950bd8ee0,2026-06-24
+tfpt_3_e8_audit_bootstrap,section,The $E_8$-slice scan: results (honest hit / miss),1230,1279,,9bb6cf827ee4,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,Following the $SU(9)$ lead: cross-slice consistency,1280,1317,,6527de5ba23c,2026-06-12
+tfpt_3_e8_audit_bootstrap,section,Appendix: computational verification,1318,1333,v1_e8_glue.py;v4_flavor_matrix.py;v5_e8_cascade.py;v6_bootstrap.py,b08c71e486fc,2026-06-12
 tfpt_4_frontier,front,(front matter),1,119,v187_ftransfer_laws.py;v188_frontier_wording_guard.py;v213_ftransfer_functor.py;v35_quark_qcd_boundary.py;v397_external_clock_probe.py;v402_ftransfer_suite.py,d8b478386e89,2026-06-24
 tfpt_4_frontier,section,Baryon asymmetry $\eta_B$ --- a downstream readout from the closed $\Omega_b h^2$,120,211,v169_etaB_boltzmann_interface.py;v184_etaB_anchored_boltzmann.py;v212_leptogenesis_decuple.py,9496ae6a9fea,2026-06-17
 tfpt_4_frontier,section,Proton/electron ratio $m_p/m_e$ --- a cross-sector ratio,212,272,v159_pyrate_gauge_crosscheck.py;v164_qcd_scale.py;v262_fqcd_mp_me.py;v339_firstprinciples_boundary.py;v79_review_identities.py,388138957dfb,2026-06-22
 tfpt_4_frontier,section,The Higgs quartic --- near-criticality from the free seam,273,311,v158_fixed_point_stable.py;v159_pyrate_gauge_crosscheck.py;v164_qcd_scale.py;v166_higgs_free_seam.py,7f638e3bebef,2026-06-13
 tfpt_4_frontier,section,"The Koide relation --- near $2/3$, computed exactly",312,465,v183_koide_f_corner_transfer.py;v25_frontier_conjectures.py;v37_plucker_anchor.py;v420_fpole_qed_running.py;v82_koide_attractor_splitting.py;v93_koide_relaxation_toy.py;v99_koide_flow_time.py,c78c6f17e987,2026-06-25
-tfpt_4_frontier,section,"Dark matter --- the candidate is fixed, the scale is pending",466,569,v185_axion_relic_solver.py;v211_axion_spine_angle.py;v25_frontier_conjectures.py;v429_axion_pentagon_phi.py,971bc26d8763,2026-06-26
-tfpt_4_frontier,section,The muon anomalous magnetic moment --- a seam vertex readout,570,594,v204_muon_seam_g2.py;v51_boundary_half_step.py,fa4b8d3cdd1a,2026-06-15
-tfpt_4_frontier,section,Full quantum gravity --- induced from the boundary kernel,595,820,v113_quasifree_kernel.py;v152_norm_is_anchor.py;v165_premise_a_closure.py;v177_seam_marking_kernel.py;v205_xi_threequarter.py;v206_h0_lambda_branch.py;v207_asymptotic_safety.py;v210_mark_local_dtn.py;v255_spectral_action_expansion.py;v259_modular_cutoff_kappa.py;v274_scale_overdetermination.py;v275_qgamb_roadmap.py;v277_seam_calderon_e8_match.py;v281_holomorphy_modular_data.py;v283_live_killtest_scorecard.py;v337_decoupling_theorem.py;v358_grav_entropy_equilibrium.py;v359_grav_nonlinear_einstein.py;v360_grav_gap_corrections.py;v361_grav_backreaction.py;v36_spectral_action_g2.py;v423_no_ambient_dependency.py;v60_lambda_metrology_branch.py,73a3ee02ff28,2026-06-25
-tfpt_4_frontier,section,Summary,821,875,v371_ftransfer_pole.py;v372_ftransfer_boltzmann.py;v373_ftransfer_relic.py;v374_ftransfer_qcd.py;v386_grav_amplitude.py;v389_grav_loop_finiteness.py;v400_grav_nonlocal_action.py,78fae67d1189,2026-06-24
-tfpt_4_frontier,section,Appendix: computational verification,876,891,v28_gravity_fR.py;v36_spectral_action_g2.py;v7_gravity_cosmo.py,435494367e01,2026-06-25
+tfpt_4_frontier,section,"Dark matter --- the candidate is fixed, the scale is pending",466,573,v185_axion_relic_solver.py;v211_axion_spine_angle.py;v25_frontier_conjectures.py;v429_axion_pentagon_phi.py;v430_other_side_reverse_audit.py,461df59eb123,2026-06-27
+tfpt_4_frontier,section,The muon anomalous magnetic moment --- a seam vertex readout,574,598,v204_muon_seam_g2.py;v51_boundary_half_step.py,fa4b8d3cdd1a,2026-06-15
+tfpt_4_frontier,section,Full quantum gravity --- induced from the boundary kernel,599,824,v113_quasifree_kernel.py;v152_norm_is_anchor.py;v165_premise_a_closure.py;v177_seam_marking_kernel.py;v205_xi_threequarter.py;v206_h0_lambda_branch.py;v207_asymptotic_safety.py;v210_mark_local_dtn.py;v255_spectral_action_expansion.py;v259_modular_cutoff_kappa.py;v274_scale_overdetermination.py;v275_qgamb_roadmap.py;v277_seam_calderon_e8_match.py;v281_holomorphy_modular_data.py;v283_live_killtest_scorecard.py;v337_decoupling_theorem.py;v358_grav_entropy_equilibrium.py;v359_grav_nonlinear_einstein.py;v360_grav_gap_corrections.py;v361_grav_backreaction.py;v36_spectral_action_g2.py;v423_no_ambient_dependency.py;v60_lambda_metrology_branch.py,73a3ee02ff28,2026-06-25
+tfpt_4_frontier,section,Summary,825,879,v371_ftransfer_pole.py;v372_ftransfer_boltzmann.py;v373_ftransfer_relic.py;v374_ftransfer_qcd.py;v386_grav_amplitude.py;v389_grav_loop_finiteness.py;v400_grav_nonlocal_action.py,78fae67d1189,2026-06-24
+tfpt_4_frontier,section,Appendix: computational verification,880,895,v28_gravity_fR.py;v36_spectral_action_g2.py;v7_gravity_cosmo.py,435494367e01,2026-06-25
 tfpt_5_redteam,front,(front matter),1,78,,2fcf6c438ba1,2026-06-23
 tfpt_5_redteam,section,Method,79,89,,610fddcc2990,2026-06-23
 tfpt_5_redteam,section,Target A --- the $(E8)_1$ boundary-net identification,90,115,,a2a8182c2254,2026-06-12
@@ -162,7 +162,7 @@ tfpt_5_redteam,section,Target C --- $k=\cthree/2$ and the seam-area coefficient,
 tfpt_5_redteam,section,Target D --- $U_{\mathrm{point}}\to\vgeo$,159,178,,97cb4a7ed0bf,2026-06-12
 tfpt_5_redteam,section,Target E --- $\vgeo$ as the unique dimensional floor,179,199,,b7454d7d4217,2026-06-12
 tfpt_5_redteam,section,Target F --- the perturbative 4D-QFT $+$ scale round (v269--v275),200,276,v304_idg_nonlocal_ghost.py;v370_grav_spin2_unitarity.py;v380_grav_kms_hessian.py;v385_uvbranch_killtest.py,0f9757fd6eab,2026-06-24
-tfpt_5_redteam,section,Outcome,277,539,v100_numerology_null_mc.py;v154_simple_current_theorem.py;v182_reviewer_residual_map.py;v219_icosahedral_mckay.py;v220_cp_hexagonal_modulus.py;v225_dual_normal_frame.py;v227_degree_exponent_channel_split.py;v231_cp_mu6_phases.py;v233_cp_triality_phase.py;v305_witness_independence.py;v306_seed_crossval.py;v320_galois_cp_relation.py;v354_e8_reverse_audit.py;v355_e8_unmapped_bandwidth.py;v375_observatory_registry.py;v429_axion_pentagon_phi.py;v66_e8_casimir_degrees.py;v83_e8net_holomorphic_uniqueness.py;v86_nstar_reheating.py;v87_bulk_uniqueness_reduction.py;v88_cp_phase_audit.py;v89_carrier_index_lemma.py;v92_glue_uniqueness.py;v99_koide_flow_time.py,3244545635ee,2026-06-26
+tfpt_5_redteam,section,Outcome,277,548,v100_numerology_null_mc.py;v154_simple_current_theorem.py;v182_reviewer_residual_map.py;v219_icosahedral_mckay.py;v220_cp_hexagonal_modulus.py;v225_dual_normal_frame.py;v227_degree_exponent_channel_split.py;v231_cp_mu6_phases.py;v233_cp_triality_phase.py;v305_witness_independence.py;v306_seed_crossval.py;v320_galois_cp_relation.py;v354_e8_reverse_audit.py;v355_e8_unmapped_bandwidth.py;v375_observatory_registry.py;v429_axion_pentagon_phi.py;v430_other_side_reverse_audit.py;v431_e8_degree_ladder.py;v66_e8_casimir_degrees.py;v83_e8net_holomorphic_uniqueness.py;v86_nstar_reheating.py;v87_bulk_uniqueness_reduction.py;v88_cp_phase_audit.py;v89_carrier_index_lemma.py;v92_glue_uniqueness.py;v99_koide_flow_time.py,a157b393a981,2026-06-27
 tfpt_horizon_readouts,front,(front matter),1,93,,091987bff9bb,2026-06-12
 tfpt_horizon_readouts,section,The seam constant is the universal horizon temperature factor,94,103,v8_horizon.py,5a3f38cb2349,2026-06-12
 tfpt_horizon_readouts,section,Schwarzschild thermodynamics in four $\cthree$-lines,104,146,v198_modular_commutator_reduction.py;v208_bh_thermodynamics.py;v28_gravity_fR.py,3942edf793ad,2026-06-15
@@ -193,11 +193,11 @@ origin_theory,section,Appendix: computational verification,1694,1715,v53_compile
 tfpt_safeguards,front,(front matter),1,73,,7c6a50da61ec,2026-06-25
 tfpt_safeguards,section,"The risk, and the shape of the answer",74,86,,d749f99f5758,2026-06-25
 tfpt_safeguards,section,Layer 1 --- the status calculus (no \texttt{[C]} dressed as \texttt{[E]}),87,98,,df53469dca69,2026-06-25
-tfpt_safeguards,section,"Layer 2 --- no free pattern, and the reverse audit",99,117,v100_numerology_null_mc.py;v305_witness_independence.py,fb85fc6d85ab,2026-06-25
-tfpt_safeguards,section,Layer 3 --- the over-determination map (multiply vs.\ compress),118,167,v427_overdet_witness_map.py;v428_overdet_reclass.py,324de2abdf50,2026-06-25
-tfpt_safeguards,section,Layer 4 --- the firewall and the No-Unit theorem,168,186,v153_no_unit_theorem.py;v187_ftransfer_laws.py;v188_frontier_wording_guard.py;v213_ftransfer_functor.py;v384_residual_certification.py;v425_dyn_transfer_universal.py,491326327cb7,2026-06-25
-tfpt_safeguards,section,"Layer 5 --- frozen predictions, the null model, and the $\alpha$ uniqueness scan",187,223,v100_numerology_null_mc.py;v307_data_watchdog.py;v321_killtest_board.py;v375_observatory_registry.py;v84_frozen_registry.py,d9e049cae45b,2026-06-25
-tfpt_safeguards,section,Layer 6 --- two independent reproduction paths,224,238,,8a2780d5ad34,2026-06-25
-tfpt_safeguards,section,Layer 7 --- the red team,239,248,,0a2585467b1c,2026-06-25
-tfpt_safeguards,section,What would still falsify TFPT,249,259,v424_seam_lto_rp_reduction.py;v426_seam_lto_rp_kms.py,b2b997e0c1fb,2026-06-25
-tfpt_safeguards,section,Summary --- the layered defense,260,280,,262b271dd29f,2026-06-25
+tfpt_safeguards,section,"Layer 2 --- no free pattern, and the reverse audit",99,119,v100_numerology_null_mc.py;v305_witness_independence.py,decaff1d0dfe,2026-06-27
+tfpt_safeguards,section,Layer 3 --- the over-determination map (multiply vs.\ compress),120,183,v427_overdet_witness_map.py;v428_overdet_reclass.py;v432_overdet_floor.py,f323dbc21716,2026-06-27
+tfpt_safeguards,section,Layer 4 --- the firewall and the No-Unit theorem,184,202,v153_no_unit_theorem.py;v187_ftransfer_laws.py;v188_frontier_wording_guard.py;v213_ftransfer_functor.py;v384_residual_certification.py;v425_dyn_transfer_universal.py,491326327cb7,2026-06-25
+tfpt_safeguards,section,"Layer 5 --- frozen predictions, the null model, and the $\alpha$ uniqueness scan",203,239,v100_numerology_null_mc.py;v307_data_watchdog.py;v321_killtest_board.py;v375_observatory_registry.py;v84_frozen_registry.py,d9e049cae45b,2026-06-25
+tfpt_safeguards,section,Layer 6 --- two independent reproduction paths,240,254,,8a2780d5ad34,2026-06-25
+tfpt_safeguards,section,Layer 7 --- the red team,255,264,,0a2585467b1c,2026-06-25
+tfpt_safeguards,section,What would still falsify TFPT,265,275,v424_seam_lto_rp_reduction.py;v426_seam_lto_rp_kms.py,b2b997e0c1fb,2026-06-25
+tfpt_safeguards,section,Summary --- the layered defense,276,296,,96f85259a148,2026-06-27

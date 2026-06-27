@@ -9,7 +9,7 @@
 <div style="max-width:820px; margin:0 auto; padding:18px 22px; font-family:Calibri, Arial, sans-serif; font-size:15px; line-height:1.55; color:#1a1a1a;">
 
 <h1 style="font-size:22px; color:#1F4E79; margin:0 0 4px;">Topological Fixed-Point Theory (TFPT)</h1>
-<p style="font-size:16px; color:#444; margin:0 0 16px;"><i>Version 5.3 &mdash; a two-input discrete compiler for the dimensionless structure of the Standard Model, the fine-structure constant, and cosmology, with a fully machine-checked verification stack (421 Python modules, Wolfram 116+327, Lean&nbsp;4).</i></p>
+<p style="font-size:16px; color:#444; margin:0 0 16px;"><i>Version 5.3 &mdash; a two-input discrete compiler for the dimensionless structure of the Standard Model, the fine-structure constant, and cosmology, with a fully machine-checked verification stack (426 Python modules, Wolfram 116+339, Lean&nbsp;4).</i></p>
 
 <p>TFPT models fundamental physics as a small, deterministic <b>compiler</b>. Two boundary inputs are fed in; an <span style="font-family:Consolas,'Courier New',monospace;">E&#8328;</span> &ldquo;audit hull&rdquo; is built as an intermediate object; and the Standard-Model gauge structure, the fermion generations, the fine-structure constant, the flavour pattern, and the leading cosmological quantities emerge as <b>projections</b> &mdash; through a chain of exact identities and lattice/Lie theorems, not parameter fits. Every load-bearing statement is reproduced by an independent verification suite (Python, Wolfram, and a Lean&nbsp;4 proof) and tracked in a versioned status ledger.</p>
 
@@ -70,8 +70,8 @@
 <h2 style="font-size:18px; color:#1F4E79; margin:24px 0 6px;">Reproducibility (the distinguishing feature)</h2>
 <p>The deposit is fully machine-checkable:</p>
 <ul style="margin:6px 0; padding-left:22px;">
-  <li style="margin-bottom:3px;"><b>Python suite</b> <span style="font-family:Consolas,monospace;">v1&ndash;v428</span> (one file per claim cluster; 422 modules, highest ID v428) &rarr; <span style="font-family:Consolas,monospace;">ALL CHECKS PASSED</span>.</li>
-  <li style="margin-bottom:3px;"><b>Independent Wolfram path</b> &rarr; <span style="font-family:Consolas,monospace;">116/116</span> base checks plus the <span style="font-family:Consolas,monospace;">327/327</span> extension mirroring the exact algebraic/identity/lattice results.</li>
+  <li style="margin-bottom:3px;"><b>Python suite</b> <span style="font-family:Consolas,monospace;">v1&ndash;v432</span> (one file per claim cluster; 426 modules, highest ID v432) &rarr; <span style="font-family:Consolas,monospace;">ALL CHECKS PASSED</span>.</li>
+  <li style="margin-bottom:3px;"><b>Independent Wolfram path</b> &rarr; <span style="font-family:Consolas,monospace;">116/116</span> base checks plus the <span style="font-family:Consolas,monospace;">339/339</span> extension mirroring the exact algebraic/identity/lattice results.</li>
   <li style="margin-bottom:3px;"><b>Lean&nbsp;4 proofs</b> of the carrier algebra (hypercharge, anomaly-freedom, integer rigidity) and the seam equivalence chain (<span style="font-family:Consolas,monospace;">FORM.SEAMEQUIV.01</span>, <span style="font-family:Consolas,monospace;">FORM.SEAM.MMST.01</span>) &rarr; <span style="font-family:Consolas,monospace;">AUDIT: PASS</span>.</li>
   <li style="margin-bottom:3px;"><b>Versioned status ledger</b> (<span style="font-family:Consolas,monospace;">status_ledger.csv</span>): every claim carries an id, status, dependency, verification script, and <span style="font-family:Consolas,monospace;">active/canonical_status/supersedes</span> fields.</li>
   <li style="margin-bottom:3px;"><b>Content manifests</b> (<span style="font-family:Consolas,monospace;">SHA-256</span>) so the shipped package verifies literally.</li>
