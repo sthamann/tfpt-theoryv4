@@ -42,6 +42,761 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-06-28",
+    "dateLabel": "2026-06-28",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v434"
+      },
+      {
+        "k": "t",
+        "v": " — a third honest step on the "
+      },
+      {
+        "k": "m",
+        "v": "\\ainv"
+      },
+      {
+        "k": "t",
+        "v": " Quillen target: "
+      },
+      {
+        "k": "m",
+        "v": "b_1"
+      },
+      {
+        "k": "t",
+        "v": " is the "
+      },
+      {
+        "k": "m",
+        "v": "a_4"
+      },
+      {
+        "k": "t",
+        "v": " heat-kernel coefficient, and the three residuals collapse to one "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{[C]}"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " one "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{[O]}"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v434"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "ALPHA.QUILLEN.PROGRESS.03"
+            },
+            {
+              "k": "t",
+              "v": ") — it settles the status of the three residuals named after "
+            },
+            {
+              "k": "c",
+              "v": "v433"
+            },
+            {
+              "k": "t",
+              "v": " and shows they are "
+            },
+            {
+              "k": "i",
+              "c": [
+                {
+                  "k": "t",
+                  "v": "not"
+                }
+              ]
+            },
+            {
+              "k": "t",
+              "v": " three independent open problems."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The target "
+        },
+        {
+          "k": "c",
+          "v": "ALPHA.QUILLEN.EXACT.01"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v382"
+        },
+        {
+          "k": "t",
+          "v": ") stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\ainv=137.0359992"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "t",
+          "v": "itemize"
+        }
+      ],
+      [
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "m",
+              "v": "b_1"
+            },
+            {
+              "k": "t",
+              "v": " "
+            },
+            {
+              "k": "i",
+              "c": [
+                {
+                  "k": "t",
+                  "v": "is"
+                }
+              ]
+            },
+            {
+              "k": "t",
+              "v": " the "
+            },
+            {
+              "k": "m",
+              "v": "U(1)"
+            },
+            {
+              "k": "t",
+              "v": " "
+            },
+            {
+              "k": "m",
+              "v": "a_4"
+            },
+            {
+              "k": "t",
+              "v": " heat-kernel coefficient (the "
+            },
+            {
+              "k": "m",
+              "v": "\\beta=a_4"
+            },
+            {
+              "k": "t",
+              "v": " theorem)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The one-loop "
+        },
+        {
+          "k": "m",
+          "v": "\\beta"
+        },
+        {
+          "k": "t",
+          "v": " function of a gauge coupling "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "a_4"
+        },
+        {
+          "k": "t",
+          "v": " (Seeley–DeWitt "
+        },
+        {
+          "k": "m",
+          "v": "a_2"
+        },
+        {
+          "k": "t",
+          "v": " in "
+        },
+        {
+          "k": "m",
+          "v": "d{=}4"
+        },
+        {
+          "k": "t",
+          "v": ") heat-kernel coefficient of the charged-field operator (Vassilevich). Computed from the carrier hypercharge content with the standard spin weights ("
+        },
+        {
+          "k": "m",
+          "v": "\\tfrac23"
+        },
+        {
+          "k": "t",
+          "v": " per Weyl fermion, "
+        },
+        {
+          "k": "m",
+          "v": "\\tfrac13"
+        },
+        {
+          "k": "t",
+          "v": " per complex scalar), "
+        },
+        {
+          "k": "m",
+          "v": "\\sum\\tfrac23 Y_f^2+\\tfrac13 Y_s^2 = 41/6"
+        },
+        {
+          "k": "t",
+          "v": " (SM) and "
+        },
+        {
+          "k": "m",
+          "v": "(3/5)\\cdot{}"
+        },
+        {
+          "k": "t",
+          "v": "that "
+        },
+        {
+          "k": "m",
+          "v": "=41/10=b_1"
+        },
+        {
+          "k": "t",
+          "v": " (GUT). So the "
+        },
+        {
+          "k": "m",
+          "v": "b_1"
+        },
+        {
+          "k": "t",
+          "v": " in the counterterm "
+        },
+        {
+          "k": "m",
+          "v": "8b_1\\cthree^6"
+        },
+        {
+          "k": "t",
+          "v": " is the "
+        },
+        {
+          "k": "m",
+          "v": "a_4"
+        },
+        {
+          "k": "t",
+          "v": " coefficient of the carrier "
+        },
+        {
+          "k": "m",
+          "v": "U(1)_Y"
+        },
+        {
+          "k": "t",
+          "v": " content (the same number as the "
+        },
+        {
+          "k": "m",
+          "v": "\\beta"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v159"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v246"
+        },
+        {
+          "k": "t",
+          "v": "), the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "same kind"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " of heat-kernel object as the "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha^2"
+        },
+        {
+          "k": "t",
+          "v": " Calderón "
+        },
+        {
+          "k": "m",
+          "v": "a_4"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v342"
+        },
+        {
+          "k": "t",
+          "v": ") — not a fitted multiplicity."
+        }
+      ],
+      [
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "the geometry factors off:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "8b_1\\cthree^6=b_1\\cdot(\\operatorname{rank}E_8)\\cdot\\cthree^6"
+        },
+        {
+          "k": "t",
+          "v": ", with "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{rank}E_8=8"
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "\\chi{=}2"
+        },
+        {
+          "k": "t",
+          "v": " seam boundary count ("
+        },
+        {
+          "k": "c",
+          "v": "v216"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "m",
+          "v": "\\cthree^6"
+        },
+        {
+          "k": "t",
+          "v": " the six boundary insertions (the "
+        },
+        {
+          "k": "m",
+          "v": "\\pi"
+        },
+        {
+          "k": "t",
+          "v": "-power test, "
+        },
+        {
+          "k": "c",
+          "v": "v342"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "residual (1) "
+            },
+            {
+              "k": "m",
+              "v": "\\equiv"
+            },
+            {
+              "k": "t",
+              "v": " residual (3)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " With "
+        },
+        {
+          "k": "m",
+          "v": "b_1"
+        },
+        {
+          "k": "t",
+          "v": " and the "
+        },
+        {
+          "k": "m",
+          "v": "\\cthree"
+        },
+        {
+          "k": "t",
+          "v": "-powers heat-kernel-forced, the only freedom left in the exact seam "
+        },
+        {
+          "k": "m",
+          "v": "a_4"
+        },
+        {
+          "k": "t",
+          "v": " value is how the gauge curvature couples to the boundary measure — the seam "
+        },
+        {
+          "k": "m",
+          "v": "F"
+        },
+        {
+          "k": "t",
+          "v": "-normalisation. So “the actual seam "
+        },
+        {
+          "k": "m",
+          "v": "a_4=8b_1\\cthree^6"
+        },
+        {
+          "k": "t",
+          "v": "” and “the seam "
+        },
+        {
+          "k": "m",
+          "v": "F"
+        },
+        {
+          "k": "t",
+          "v": "-normalisation” are "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "obligation, not two."
+        }
+      ],
+      [
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "residual (2) located (not closed):"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the determinant-line variation factors "
+        },
+        {
+          "k": "m",
+          "v": "a^3-2\\cthree^3 a^2 = a^2(a-2\\cthree^3)"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "a^2"
+        },
+        {
+          "k": "t",
+          "v": " is the Gilkey gauge-curvature (Quillen/Chern) density ("
+        },
+        {
+          "k": "c",
+          "v": "v342"
+        },
+        {
+          "k": "t",
+          "v": "), so the leading "
+        },
+        {
+          "k": "m",
+          "v": "a^3=a\\cdot a^2"
+        },
+        {
+          "k": "t",
+          "v": " is the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "first moment"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " of the Chern density — a topological level at boundary order "
+        },
+        {
+          "k": "m",
+          "v": "\\cthree^0"
+        },
+        {
+          "k": "t",
+          "v": ", not a Seeley–DeWitt curvature integral. Its from-first-principles (Chern–Simons-type) origin stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "net reduction:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the EM-Ward residual is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "(residuals 1 & 3) "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": " (residual 2), not three independent problems — a genuine narrowing of the open surface. "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "c",
+          "v": "ALPHA.QUILLEN.EXACT.01"
+        },
+        {
+          "k": "t",
+          "v": " is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " closed (the "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha^3"
+        },
+        {
+          "k": "t",
+          "v": " Chern level and the from-first-principles proof stay external, type A, "
+        },
+        {
+          "k": "c",
+          "v": "v384"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ]
+    ]
+  },
+  {
     "date": "2026-06-27",
     "dateLabel": "2026-06-27",
     "heading": [
