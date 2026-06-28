@@ -1,3 +1,63 @@
+## 2026-06-29 — Recherche-Notiz: der α³-Chern-Level, externe Mathematik (NICHT geschlossen)
+
+Ziel dieser Runde war NICHT, `ALPHA.QUILLEN.EXACT.01` zu schließen, sondern die *externe*
+Mathematik des einzigen verbliebenen `[O]` (Residuum 2, der kubische `α³`-Term, das „Maxwell
+boundary moment" aus EM1/`v48`) ehrlich zu recherchieren und das Beweisziel zu skizzieren. Kein
+fabrizierter Abschluss — das Gate bleibt `[O]`, `α⁻¹` bleibt `[E]`.
+
+**Was die Literatur sagt (die `α²`/`α³`-Aufspaltung ist KEIN Ansatz, sondern ein benannter Rahmen):**
+
+- **Dai–Freed, „η-invariants and determinant lines", J. Math. Phys. 35 (1994) 5155** (Theorem 1.9):
+  für eine Familie von Dirac-Operatoren auf einem *ungeraddimensionalen* Rand ist die
+  exponentielle η-Invariante `τ = exp(iπ(η+h))` ein **Schnitt der inversen Quillen-
+  Determinantenlinie** über dem Parameterraum, mit Einheitsnorm in der Quillen-Metrik; ihre
+  kovariante Ableitung bzgl. der **Bismut–Freed-Connection** ist die Index-Dichte
+  `∇τ = 2πi ∫_{X/Z} Â(Ω)·ch`. Theorem 3.3: „modulo the integers" ist `ξ` glatt — d.h. die
+  η/CS-Größe ist **ganzzahlig quantisiert**.
+- **Bismut–Freed, „The analysis of elliptic families I/II", CMP (1986):** Krümmung der Quillen-
+  Connection = die Grad-2-Komponente der Familien-Index-Dichte (Heat-Kernel-asymptotik). Das ist
+  die `α²`-Seite (Calderón = Determinantenlinien-Krümmung, vgl. `v342`/`v433`/`v434`).
+- **Redlich, PRL 52 (1984) 18 / Stora–Zumino-Abstieg:** ein kubischer `Tr F³`-Term im Anomalie-
+  Polynom (Grad 6) steigt zu einer **Chern–Simons-Form** `ω₅ ∝ ∫ A∧F²` ab; ihr Level ist durch
+  den `U(1)³`-Anomalie-Koeffizienten fixiert und unter Large-Gauge-Transformationen zu `ℤ`
+  quantisiert (sonst ist `exp(iS)` nicht eindeutig). Genau die `[C]`-Aussage von `v435`.
+- **Vassilevich (hep-th/0306138) / Wodzicki:** im *ungeraddimensionalen* Fall übernimmt die
+  η-Funktion die Rolle der Randkorrektur; „krümmungsabhängige Terme werden erst ab D≥6 operativ".
+  Bestätigt `v435`s π⁰/Metrik-Unabhängigkeit: der `α³`-Level lebt im η-Sektor, nicht im
+  Krümmungs-Integral.
+
+**Saubere Identifikation (jetzt mit Sätzen statt Behauptung):**
+
+| Closure-Term | mathematisches Objekt | Status |
+|---|---|---|
+| `−2c3³·α²` (Calderón) | Krümmung der Quillen-Determinantenlinie (Bismut–Freed), Gilkey `a₄` | `[E]` Struktur, `[C]` exakter Wert (Seam-F-Norm) |
+| `α³` (Maxwell) | η-Invariante / CS-Level (Dai–Freed-Schnitt), kubische `U(1)³`-Anomalie, ∈ ℤ | `[C]` (Quantisierung), Ursprung `[O]` |
+| Transport | Heat-Kernel-Counterterm `8b1 c3⁶` (`v434`: `b1 = a₄`) | `[E]`/`[C]` |
+
+**Worauf das EM1-Beweisziel WIRKLICH reduziert (der ehrliche Sketch):**
+
+Das EM1-Lemma „`∂_τ log Z_Maxwell = a³` IST das Seam-`U(1)`-CS/η-Level" ist eine **Instanz des
+Dai–Freed-Satzes**. Um es from-first-principles zu schließen, fehlt genau:
+1. die **Seam-Dirac-Familie** `D_{∂X/Z}` über den `μ4`-Seam-Moduli `Z` explizit konstruieren
+   (der ungerade Rand `∂X` = das Seam-3-Mannigfaltigkeit) — das hängt an der Kontinuums-Existenz,
+   d.h. an **`SEAM.EQUIV.01`** (das andere `[O]`, MMST `v336`);
+2. ihr η/CS-Level = der `U(1)³`-Anomalie-Koeffizient des **Seam-Ladungsinhalts** = der gesuchte
+   Unit-Level `1` (analog `v14`: `Tr Y = Tr Y³ = 0` ist der SM-Hyperladungs-Kubik-Check; der
+   Seam-`U(1)` ist NICHT die volle SM-Hyperladung, sondern der minimale Rand-`U(1)`).
+
+**Befund:** `ALPHA.QUILLEN.EXACT.01` ist damit bestätigt **eine Facette von `SEAM.EQUIV.01`**
+(steht so schon im Ledger): der `α³`-Level ist *berechenbar, sobald* die Seam-Dirac-Familie
+existiert. Es sind also nicht zwei unabhängige externe Probleme, sondern eins (Kontinuums-Existenz)
+mit einer berechenbaren Folge (das CS-Level). Das ist Typ-A-Mathematik (`v384`) — NICHT von uns
+fabrizierbar, aber jetzt mit präzisem Pfad und benannten Sätzen.
+
+**Nicht geschlossen. Kein neues Modul, keine Statusänderung.** `v435` bleibt der schärfste
+verifizierbare Stand (π⁰-Test + bedingte Quantisierung); diese Notiz liefert nur die Literatur-
+Erdung dafür (Dai–Freed/Bismut–Freed/Redlich) und den konkreten nächsten Beweisschritt, falls die
+Seam-Kontinuumskonstruktion (`SEAM.EQUIV.01`) je angegriffen wird.
+
+---
+
 ## 2026-06-16 — Strukturfund-Runde (v219–v230, alle integriert)
 
 Elf neue Verifikationsmodule, alle in `run_all.py` (ALL CHECKS PASSED), Wolfram-Mirror 258/258,

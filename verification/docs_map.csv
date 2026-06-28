@@ -162,7 +162,7 @@ tfpt_5_redteam,section,Target C --- $k=\cthree/2$ and the seam-area coefficient,
 tfpt_5_redteam,section,Target D --- $U_{\mathrm{point}}\to\vgeo$,159,178,,97cb4a7ed0bf,2026-06-12
 tfpt_5_redteam,section,Target E --- $\vgeo$ as the unique dimensional floor,179,199,,b7454d7d4217,2026-06-12
 tfpt_5_redteam,section,Target F --- the perturbative 4D-QFT $+$ scale round (v269--v275),200,276,v304_idg_nonlocal_ghost.py;v370_grav_spin2_unitarity.py;v380_grav_kms_hessian.py;v385_uvbranch_killtest.py,0f9757fd6eab,2026-06-24
-tfpt_5_redteam,section,Outcome,277,548,v100_numerology_null_mc.py;v154_simple_current_theorem.py;v182_reviewer_residual_map.py;v219_icosahedral_mckay.py;v220_cp_hexagonal_modulus.py;v225_dual_normal_frame.py;v227_degree_exponent_channel_split.py;v231_cp_mu6_phases.py;v233_cp_triality_phase.py;v305_witness_independence.py;v306_seed_crossval.py;v320_galois_cp_relation.py;v354_e8_reverse_audit.py;v355_e8_unmapped_bandwidth.py;v375_observatory_registry.py;v429_axion_pentagon_phi.py;v430_other_side_reverse_audit.py;v431_e8_degree_ladder.py;v66_e8_casimir_degrees.py;v83_e8net_holomorphic_uniqueness.py;v86_nstar_reheating.py;v87_bulk_uniqueness_reduction.py;v88_cp_phase_audit.py;v89_carrier_index_lemma.py;v92_glue_uniqueness.py;v99_koide_flow_time.py,a157b393a981,2026-06-27
+tfpt_5_redteam,section,Outcome,277,552,v100_numerology_null_mc.py;v154_simple_current_theorem.py;v182_reviewer_residual_map.py;v219_icosahedral_mckay.py;v220_cp_hexagonal_modulus.py;v225_dual_normal_frame.py;v227_degree_exponent_channel_split.py;v231_cp_mu6_phases.py;v233_cp_triality_phase.py;v305_witness_independence.py;v306_seed_crossval.py;v320_galois_cp_relation.py;v354_e8_reverse_audit.py;v355_e8_unmapped_bandwidth.py;v375_observatory_registry.py;v429_axion_pentagon_phi.py;v430_other_side_reverse_audit.py;v431_e8_degree_ladder.py;v437_e8_degree_joint.py;v66_e8_casimir_degrees.py;v83_e8net_holomorphic_uniqueness.py;v86_nstar_reheating.py;v87_bulk_uniqueness_reduction.py;v88_cp_phase_audit.py;v89_carrier_index_lemma.py;v92_glue_uniqueness.py;v99_koide_flow_time.py,4b6370f96bd8,2026-06-28
 tfpt_horizon_readouts,front,(front matter),1,93,,091987bff9bb,2026-06-12
 tfpt_horizon_readouts,section,The seam constant is the universal horizon temperature factor,94,103,v8_horizon.py,5a3f38cb2349,2026-06-12
 tfpt_horizon_readouts,section,Schwarzschild thermodynamics in four $\cthree$-lines,104,146,v198_modular_commutator_reduction.py;v208_bh_thermodynamics.py;v28_gravity_fR.py,3942edf793ad,2026-06-15
@@ -194,10 +194,10 @@ tfpt_safeguards,front,(front matter),1,73,,7c6a50da61ec,2026-06-25
 tfpt_safeguards,section,"The risk, and the shape of the answer",74,86,,d749f99f5758,2026-06-25
 tfpt_safeguards,section,Layer 1 --- the status calculus (no \texttt{[C]} dressed as \texttt{[E]}),87,98,,df53469dca69,2026-06-25
 tfpt_safeguards,section,"Layer 2 --- no free pattern, and the reverse audit",99,119,v100_numerology_null_mc.py;v305_witness_independence.py,decaff1d0dfe,2026-06-27
-tfpt_safeguards,section,Layer 3 --- the over-determination map (multiply vs.\ compress),120,183,v427_overdet_witness_map.py;v428_overdet_reclass.py;v432_overdet_floor.py,f323dbc21716,2026-06-27
-tfpt_safeguards,section,Layer 4 --- the firewall and the No-Unit theorem,184,202,v153_no_unit_theorem.py;v187_ftransfer_laws.py;v188_frontier_wording_guard.py;v213_ftransfer_functor.py;v384_residual_certification.py;v425_dyn_transfer_universal.py,491326327cb7,2026-06-25
-tfpt_safeguards,section,"Layer 5 --- frozen predictions, the null model, and the $\alpha$ uniqueness scan",203,239,v100_numerology_null_mc.py;v307_data_watchdog.py;v321_killtest_board.py;v375_observatory_registry.py;v84_frozen_registry.py,d9e049cae45b,2026-06-25
-tfpt_safeguards,section,Layer 6 --- two independent reproduction paths,240,254,,8a2780d5ad34,2026-06-25
-tfpt_safeguards,section,Layer 7 --- the red team,255,264,,0a2585467b1c,2026-06-25
-tfpt_safeguards,section,What would still falsify TFPT,265,275,v424_seam_lto_rp_reduction.py;v426_seam_lto_rp_kms.py,b2b997e0c1fb,2026-06-25
-tfpt_safeguards,section,Summary --- the layered defense,276,296,,96f85259a148,2026-06-27
+tfpt_safeguards,section,Layer 3 --- the over-determination map (multiply vs.\ compress),120,190,v427_overdet_witness_map.py;v428_overdet_reclass.py;v432_overdet_floor.py;v436_overdet_floor2.py,b0bcd161f4c8,2026-06-28
+tfpt_safeguards,section,Layer 4 --- the firewall and the No-Unit theorem,191,209,v153_no_unit_theorem.py;v187_ftransfer_laws.py;v188_frontier_wording_guard.py;v213_ftransfer_functor.py;v384_residual_certification.py;v425_dyn_transfer_universal.py,491326327cb7,2026-06-25
+tfpt_safeguards,section,"Layer 5 --- frozen predictions, the null model, and the $\alpha$ uniqueness scan",210,246,v100_numerology_null_mc.py;v307_data_watchdog.py;v321_killtest_board.py;v375_observatory_registry.py;v84_frozen_registry.py,d9e049cae45b,2026-06-25
+tfpt_safeguards,section,Layer 6 --- two independent reproduction paths,247,261,,8a2780d5ad34,2026-06-25
+tfpt_safeguards,section,Layer 7 --- the red team,262,271,,0a2585467b1c,2026-06-25
+tfpt_safeguards,section,What would still falsify TFPT,272,282,v424_seam_lto_rp_reduction.py;v426_seam_lto_rp_kms.py,b2b997e0c1fb,2026-06-25
+tfpt_safeguards,section,Summary --- the layered defense,283,303,,96f85259a148,2026-06-27

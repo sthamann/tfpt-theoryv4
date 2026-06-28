@@ -60,6 +60,66 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-29 (\texttt{v437} --- more from the $E_8$ Casimir degrees, within the anti-numerology discipline: a joint quadratic forces both structural integers, and all of $E_8$ is fixed by its degree multiset)}
+\begin{itemize}
+\item \textbf{New module \texttt{v437} (\texttt{E8.DEGREE.JOINT.01}) --- a consolidation of \vref{v6}/\vref{v66}/\vref{v355}/\vref{v431}
+that derives more from the $E_8$ Casimir degrees \emph{without} crossing the \vref{v354}/\vref{v355}
+anti-numerology line.} It adds \emph{no} new per-degree coincidence --- only one joint lock and a reconstruction.
+\begin{itemize}
+\item \mE\ \textbf{all of $E_8$ is fixed by its degree multiset.} From $\deg(E_8)=\{2,8,12,14,18,20,24,30\}$
+alone: $\operatorname{rank}=\#\deg=8$, $h=\max\deg=30$, $\#$positive roots $=\sum\exp=120$, $\#$roots $=240$,
+$\dim E_8=248$, $|W(E_8)|=\prod\deg=696{,}729{,}600$, $\sum\deg=128=\dim S^+$.
+\item \mE\ \textbf{the joint quadratic (the new lock).} The two TFPT structural integers $(\gcar,\Nfam)$ are
+the \emph{unique} root pair of $x^2-(\operatorname{rank}E_8)\,x+(h/2)=x^2-8x+15=(x-3)(x-5)$: sum of roots
+$=\operatorname{rank}E_8=8$ (the rank-fill, \vref{v6}), product $=h/2=15=\gcar\Nfam$ ($2\gcar\Nfam=h$,
+\vref{v431}); $\{3,5\}$ is the unique positive-integer factor pair of $15$ summing to $8$. So $\gcar=5$ and
+$\Nfam=3$ are forced \emph{together} by two $E_8$ degree-invariants, not chosen one at a time. The three
+primary-readout degrees $\{2,8,30\}$ are exactly $\{\min,\operatorname{rank},\max\}$.
+\item \mE\ \textbf{discipline upheld:} no new per-degree mining beyond the joint quadratic; the five
+non-primary degrees keep their \vref{v431} family homes; the \vref{v354}/\vref{v355} line is not crossed.
+\end{itemize}
+\item \textbf{Surfaces updated.} Registered in \texttt{run\_all.py}, \texttt{script\_registry.csv} and
+\texttt{status\_ledger.csv} (\texttt{E8.DEGREE.JOINT.01}); cited in the \texttt{tfpt\_5} degree-audit winbox
+beside \vref{v431}; mirrored in \texttt{wolfram/tfpt\_readouts\_extension.wl} (extension $339\to342$). Exact
+integer/lattice; no new physical number, no status change.
+\end{itemize}
+
+\subsection*{2026-06-29 (\texttt{v436} --- hardening the unconditional ``is it numerology?'' floor to an assumption-minimal counting floor; plus a literature note grounding the $\alpha^3$ Chern level)}
+\begin{itemize}
+\item \textbf{New module \texttt{v436} (\texttt{OVERDET.FLOOR.02}) --- it \emph{hardens} \texttt{OVERDET.FLOOR.01}
+(\vref{v432}) so the numerology verdict no longer rests on any subjective chance assignment.} \vref{v432}'s
+nominal ${\sim}10^{-10}$ multiplies the counting census by hand-chosen plausibilities (input-``$8$''
+independence $0.1^3$, seed $0.012$, kaon $0.15$) a skeptic can contest; \vref{v436} shows the conclusion
+survives without them.
+\begin{itemize}
+\item \mE\ \textbf{assumption-minimal floor.} The $\alpha$ cubic-class census (\vref{v100} layer D) is
+\emph{pure counting}: of $N=94500$ complexity-matched $F_{U(1)}$ variants only \emph{one} lands in the
+$4\times10^{-8}$ CODATA window --- the TFPT instance, reproducing $\ainv=137.0359992$ --- so
+$p_\alpha\le1/94500=1.06\times10^{-5}\sim4.40\sigma$ with \emph{no} subjective probability, prior or
+multi-observable grammar.
+\item \mE\ \textbf{monotone concession ladder.} $-\log_{10}p$ from generous to adversarial: full
+scorecard$+\alpha\sim30.7\to$ scorecard-only $\sim25.8\to\alpha$-census-only $\sim4.98$; each rung uses
+strictly less evidence and the ``not chance ($>4\sigma$)'' verdict holds at the \emph{most adversarial}
+rung, so it never rests on one contestable piece. Stripping \emph{all} of \vref{v432}'s subjective factors
+($\sim1.8\times10^{-6}$) leaves the floor at $4.40\sigma$ --- they only sharpen it.
+\item \mC\ \textbf{honest $5\sigma$ gap.} The conventional $5\sigma$ line ($p=5.7\times10^{-7}$) is crossed
+unconditionally by the census times exactly \emph{one} further independent factor $\le0.054$ (the
+input-``$8$'' four-fold over-determination, or one foreign witness) --- stated, not hidden. \mC\ Firewall
+unchanged: bounds only ``is it numerology?'', not the physics bridge (\vref{v187}).
+\end{itemize}
+\item \textbf{Literature note (research log, not a status change).} A \texttt{next.txt} entry grounds the
+$\alpha^3$ Chern-level reading of \vref{v435} in named theorems --- Dai--Freed (\emph{$\eta$-invariants and
+determinant lines}, the exponentiated $\eta$-invariant as a section of the inverse Quillen determinant line),
+Bismut--Freed (determinant-line curvature $=$ the $\alpha^2$ Calder\'on side) and Redlich/Stora--Zumino (the
+cubic $\mathrm{Tr}\,F^3$ anomaly descends to a Chern--Simons level, quantised to $\Z$). It records that the
+\texttt{EM1} proof obligation reduces to constructing the seam Dirac family --- i.e.\ it is a \emph{facet} of
+\texttt{SEAM.EQUIV.01} --- and remains \mO\ external math (no fabricated closure).
+\item \textbf{Surfaces updated.} Registered in \texttt{run\_all.py}, \texttt{script\_registry.csv} and
+\texttt{status\_ledger.csv} (\texttt{OVERDET.FLOOR.02}); cited in the \texttt{tfpt\_safeguards} ``unconditional
+floor'' keybox beside \vref{v432}; mirrored on the website. Python-only; no new physical number, no status
+change.
+\end{itemize}
+
 \subsection*{2026-06-29 (\texttt{v435} --- a fourth honest step on the $\ainv$ Quillen target: a $\pi$-power test isolates the cubic $\alpha^3$ as the unique metric-independent (topological) rung, and types its coefficient as a conditional integer level)}
 \begin{itemize}
 \item \textbf{New module \texttt{v435} (\texttt{ALPHA.QUILLEN.PROGRESS.04}) --- it attacks the \emph{single}

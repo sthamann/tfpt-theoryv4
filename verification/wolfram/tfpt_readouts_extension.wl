@@ -2712,6 +2712,36 @@ Module[{exps, degs, h, tot30, expMod6, degMod6, matched, unmapped,
     homed && unmapped == {12, 14, 18, 20, 24}];
 ];
 
+(* ==== v437 round: E8.DEGREE.JOINT.01 -- (g_car,N_fam)=unique roots of x^2-8x+15; E8 fixed by its degrees ==== *)
+Module[{degs, exps, rank, h, nPos, nRoots, dim, x, quad, roots, factorPairs, pairsSum8, mapped, canonical},
+  degs = {2, 8, 12, 14, 18, 20, 24, 30};
+  exps = degs - 1;
+  rank = Length[degs];
+  h = Max[degs];
+  nPos = Total[exps];
+  nRoots = 2 nPos;
+  dim = nRoots + rank;
+
+  (* v437 (1): all of E8 fixed by its degree multiset *)
+  checkExact["v437 E8.DEGREE.JOINT.01 (i): E8 fixed by its degrees -- rank=#deg=8=2nd deg, h=max=30, #posroots=sum(exp)=120, #roots=240, dim=248, |W|=prod(deg)=696729600, sum(deg)=128=2^7",
+    rank == 8 && degs[[2]] == 8 && h == 30 && nPos == 120 && nRoots == 240
+      && dim == 248 && (Times @@ degs) == 696729600 && Total[degs] == 128 && 128 == 2^7];
+
+  (* v437 (2): the joint quadratic -- (g_car,N_fam) unique roots, coeffs (rank, h/2) *)
+  quad = x^2 - rank x + h/2;
+  roots = Sort[x /. Solve[quad == 0, x]];
+  factorPairs = Select[Divisors[h/2], # <= (h/2)/# &];
+  pairsSum8 = Select[factorPairs, # + (h/2)/# == rank &];
+  checkExact["v437 E8.DEGREE.JOINT.01 (ii): (g_car,N_fam)=(5,3) are the UNIQUE roots of x^2-(rank)x+(h/2)=x^2-8x+15=(x-3)(x-5); sum=rank E8=8, product=h/2=15=g_car*N_fam; {3,5} unique factor pair of 15 summing to 8",
+    roots == {3, 5} && h/2 == 15 && Factor[quad] == (x - 3) (x - 5) && pairsSum8 == {3}];
+
+  (* v437 (3): the three mapped degrees are the canonical invariants *)
+  mapped = {2, 8, 30};
+  canonical = Sort[{Min[degs], rank, Max[degs]}];
+  checkExact["v437 E8.DEGREE.JOINT.01 (iii): 3 primary-readout degrees {2,8,30}={min deg (quadratic Casimir), rank, max deg (Coxeter h)}; g_car=5=max prime of 30, N_fam=3=h/(2 g_car)",
+    mapped == canonical && 5 == Max[Select[Range[2, h], (PrimeQ[#] && Mod[h, #] == 0) &]] && 3 == h/(2*5)];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

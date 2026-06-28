@@ -47,6 +47,925 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "c",
+        "v": "v437"
+      },
+      {
+        "k": "t",
+        "v": " — more from the "
+      },
+      {
+        "k": "m",
+        "v": "E_8"
+      },
+      {
+        "k": "t",
+        "v": " Casimir degrees, within the anti-numerology discipline: a joint quadratic forces both structural integers, and all of "
+      },
+      {
+        "k": "m",
+        "v": "E_8"
+      },
+      {
+        "k": "t",
+        "v": " is fixed by its degree multiset"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v437"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "E8.DEGREE.JOINT.01"
+            },
+            {
+              "k": "t",
+              "v": ") — a consolidation of "
+            },
+            {
+              "k": "c",
+              "v": "v6"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "c",
+              "v": "v66"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "c",
+              "v": "v355"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "c",
+              "v": "v431"
+            },
+            {
+              "k": "t",
+              "v": " that derives more from the "
+            },
+            {
+              "k": "m",
+              "v": "E_8"
+            },
+            {
+              "k": "t",
+              "v": " Casimir degrees "
+            },
+            {
+              "k": "i",
+              "c": [
+                {
+                  "k": "t",
+                  "v": "without"
+                }
+              ]
+            },
+            {
+              "k": "t",
+              "v": " crossing the "
+            },
+            {
+              "k": "c",
+              "v": "v354"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "c",
+              "v": "v355"
+            },
+            {
+              "k": "t",
+              "v": " anti-numerology line."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " It adds "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "no"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " new per-degree coincidence — only one joint lock and a reconstruction. "
+        },
+        {
+          "k": "t",
+          "v": "itemize"
+        }
+      ],
+      [
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "all of "
+            },
+            {
+              "k": "m",
+              "v": "E_8"
+            },
+            {
+              "k": "t",
+              "v": " is fixed by its degree multiset."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " From "
+        },
+        {
+          "k": "m",
+          "v": "\\deg(E_8)=\\{2,8,12,14,18,20,24,30\\}"
+        },
+        {
+          "k": "t",
+          "v": " alone: "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{rank}=\\#\\deg=8"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "h=\\max\\deg=30"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\#"
+        },
+        {
+          "k": "t",
+          "v": "positive roots "
+        },
+        {
+          "k": "m",
+          "v": "=\\sum\\exp=120"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\#"
+        },
+        {
+          "k": "t",
+          "v": "roots "
+        },
+        {
+          "k": "m",
+          "v": "=240"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\dim E_8=248"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "|W(E_8)|=\\prod\\deg=696{,}729{,}600"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\sum\\deg=128=\\dim S^+"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "the joint quadratic (the new lock)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The two TFPT structural integers "
+        },
+        {
+          "k": "m",
+          "v": "(\\gcar,\\Nfam)"
+        },
+        {
+          "k": "t",
+          "v": " are the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "unique"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " root pair of "
+        },
+        {
+          "k": "m",
+          "v": "x^2-(\\operatorname{rank}E_8)\\,x+(h/2)=x^2-8x+15=(x-3)(x-5)"
+        },
+        {
+          "k": "t",
+          "v": ": sum of roots "
+        },
+        {
+          "k": "m",
+          "v": "=\\operatorname{rank}E_8=8"
+        },
+        {
+          "k": "t",
+          "v": " (the rank-fill, "
+        },
+        {
+          "k": "c",
+          "v": "v6"
+        },
+        {
+          "k": "t",
+          "v": "), product "
+        },
+        {
+          "k": "m",
+          "v": "=h/2=15=\\gcar\\Nfam"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "2\\gcar\\Nfam=h"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v431"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "m",
+          "v": "\\{3,5\\}"
+        },
+        {
+          "k": "t",
+          "v": " is the unique positive-integer factor pair of "
+        },
+        {
+          "k": "m",
+          "v": "15"
+        },
+        {
+          "k": "t",
+          "v": " summing to "
+        },
+        {
+          "k": "m",
+          "v": "8"
+        },
+        {
+          "k": "t",
+          "v": ". So "
+        },
+        {
+          "k": "m",
+          "v": "\\gcar=5"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "\\Nfam=3"
+        },
+        {
+          "k": "t",
+          "v": " are forced "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "together"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " by two "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " degree-invariants, not chosen one at a time. The three primary-readout degrees "
+        },
+        {
+          "k": "m",
+          "v": "\\{2,8,30\\}"
+        },
+        {
+          "k": "t",
+          "v": " are exactly "
+        },
+        {
+          "k": "m",
+          "v": "\\{\\min,\\operatorname{rank},\\max\\}"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "discipline upheld:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " no new per-degree mining beyond the joint quadratic; the five non-primary degrees keep their "
+        },
+        {
+          "k": "c",
+          "v": "v431"
+        },
+        {
+          "k": "t",
+          "v": " family homes; the "
+        },
+        {
+          "k": "c",
+          "v": "v354"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v355"
+        },
+        {
+          "k": "t",
+          "v": " line is not crossed."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-29",
+    "dateLabel": "2026-06-29",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v436"
+      },
+      {
+        "k": "t",
+        "v": " — hardening the unconditional “is it numerology?” floor to an assumption-minimal counting floor; plus a literature note grounding the "
+      },
+      {
+        "k": "m",
+        "v": "\\alpha^3"
+      },
+      {
+        "k": "t",
+        "v": " Chern level"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v436"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "OVERDET.FLOOR.02"
+            },
+            {
+              "k": "t",
+              "v": ") — it "
+            },
+            {
+              "k": "i",
+              "c": [
+                {
+                  "k": "t",
+                  "v": "hardens"
+                }
+              ]
+            },
+            {
+              "k": "t",
+              "v": " "
+            },
+            {
+              "k": "c",
+              "v": "OVERDET.FLOOR.01"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "v432"
+            },
+            {
+              "k": "t",
+              "v": ") so the numerology verdict no longer rests on any subjective chance assignment."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v432"
+        },
+        {
+          "k": "t",
+          "v": "'s nominal "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}10^{-10}"
+        },
+        {
+          "k": "t",
+          "v": " multiplies the counting census by hand-chosen plausibilities (input-“"
+        },
+        {
+          "k": "m",
+          "v": "8"
+        },
+        {
+          "k": "t",
+          "v": "” independence "
+        },
+        {
+          "k": "m",
+          "v": "0.1^3"
+        },
+        {
+          "k": "t",
+          "v": ", seed "
+        },
+        {
+          "k": "m",
+          "v": "0.012"
+        },
+        {
+          "k": "t",
+          "v": ", kaon "
+        },
+        {
+          "k": "m",
+          "v": "0.15"
+        },
+        {
+          "k": "t",
+          "v": ") a skeptic can contest; "
+        },
+        {
+          "k": "c",
+          "v": "v436"
+        },
+        {
+          "k": "t",
+          "v": " shows the conclusion survives without them. "
+        },
+        {
+          "k": "t",
+          "v": "itemize"
+        }
+      ],
+      [
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "assumption-minimal floor."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": " cubic-class census ("
+        },
+        {
+          "k": "c",
+          "v": "v100"
+        },
+        {
+          "k": "t",
+          "v": " layer D) is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "pure counting"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": of "
+        },
+        {
+          "k": "m",
+          "v": "N=94500"
+        },
+        {
+          "k": "t",
+          "v": " complexity-matched "
+        },
+        {
+          "k": "m",
+          "v": "F_{U(1)}"
+        },
+        {
+          "k": "t",
+          "v": " variants only "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " lands in the "
+        },
+        {
+          "k": "m",
+          "v": "4\\times10^{-8}"
+        },
+        {
+          "k": "t",
+          "v": " CODATA window — the TFPT instance, reproducing "
+        },
+        {
+          "k": "m",
+          "v": "\\ainv=137.0359992"
+        },
+        {
+          "k": "t",
+          "v": " — so "
+        },
+        {
+          "k": "m",
+          "v": "p_\\alpha\\le1/94500=1.06\\times10^{-5}\\sim4.40\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "no"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " subjective probability, prior or multi-observable grammar."
+        }
+      ],
+      [
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "monotone concession ladder."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "-\\log_{10}p"
+        },
+        {
+          "k": "t",
+          "v": " from generous to adversarial: full scorecard"
+        },
+        {
+          "k": "m",
+          "v": "+\\alpha\\sim30.7\\to"
+        },
+        {
+          "k": "t",
+          "v": " scorecard-only "
+        },
+        {
+          "k": "m",
+          "v": "\\sim25.8\\to\\alpha"
+        },
+        {
+          "k": "t",
+          "v": "-census-only "
+        },
+        {
+          "k": "m",
+          "v": "\\sim4.98"
+        },
+        {
+          "k": "t",
+          "v": "; each rung uses strictly less evidence and the “not chance ("
+        },
+        {
+          "k": "m",
+          "v": ">4\\sigma"
+        },
+        {
+          "k": "t",
+          "v": ")” verdict holds at the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "most adversarial"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " rung, so it never rests on one contestable piece. Stripping "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "all"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " of "
+        },
+        {
+          "k": "c",
+          "v": "v432"
+        },
+        {
+          "k": "t",
+          "v": "'s subjective factors ("
+        },
+        {
+          "k": "m",
+          "v": "\\sim1.8\\times10^{-6}"
+        },
+        {
+          "k": "t",
+          "v": ") leaves the floor at "
+        },
+        {
+          "k": "m",
+          "v": "4.40\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " — they only sharpen it."
+        }
+      ],
+      [
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "honest "
+            },
+            {
+              "k": "m",
+              "v": "5\\sigma"
+            },
+            {
+              "k": "t",
+              "v": " gap."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The conventional "
+        },
+        {
+          "k": "m",
+          "v": "5\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " line ("
+        },
+        {
+          "k": "m",
+          "v": "p=5.7\\times10^{-7}"
+        },
+        {
+          "k": "t",
+          "v": ") is crossed unconditionally by the census times exactly "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " further independent factor "
+        },
+        {
+          "k": "m",
+          "v": "\\le0.054"
+        },
+        {
+          "k": "t",
+          "v": " (the input-“"
+        },
+        {
+          "k": "m",
+          "v": "8"
+        },
+        {
+          "k": "t",
+          "v": "” four-fold over-determination, or one foreign witness) — stated, not hidden. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "Firewall unchanged: bounds only “is it numerology?”, not the physics bridge ("
+        },
+        {
+          "k": "c",
+          "v": "v187"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-29",
+    "dateLabel": "2026-06-29",
+    "heading": [
+      {
+        "k": "c",
         "v": "v435"
       },
       {

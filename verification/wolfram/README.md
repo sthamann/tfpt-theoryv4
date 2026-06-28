@@ -105,7 +105,7 @@ v84–v93 block passed **45/45** on first run; the v94–v140 blocks were added
 the same day, the v141–v144 block on 2026-06-12. Current state:
 
 ```
---- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431: 339 passed, 0 failed ---
+--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437: 342 passed, 0 failed ---
 ALL WOLFRAM EXTENSION CHECKS PASSED
 ```
 
@@ -319,6 +319,15 @@ five "unmapped" Casimir degrees are **not** diffuse overhead but the forced two-
 (`v135`); `18=6·N_fam` is spine-family, not a holdout; the clean split is special to `E₈` (`E₆/E₇/D₅` fail).
 The arithmetic decomposition is exact `[E]/[I]`; the **functorial** flavour identification stays `[P]`
 (`12,24` admit two readings each) — a structure theorem, not a forced flavour map; no status change.
+
+The 2026-06-29 **degree-joint round** added three exact checks (339 → 342):
+`v437_e8_degree_joint.py` — a consolidation of `v6`/`v66`/`v355`/`v431` that derives more from the `E₈`
+Casimir degrees without crossing the `v354`/`v355` anti-numerology line. All of `E₈`'s combinatorics is fixed
+by its degree multiset alone (`rank=8`, `h=30`, `120/240` roots, `dim=248`, `|W|=696729600`, `Σdeg=128`); and
+the two TFPT structural integers `(g_car,N_fam)=(5,3)` are the **unique** root pair of
+`x²−(rank E₈)x+(h/2) = x²−8x+15 = (x−3)(x−5)` (sum of roots `=rank E₈=8`, product `=h/2=15=g_car·N_fam`), so
+both are forced together by two degree-invariants; the three mapped degrees `{2,8,30}=min/rank/max`. No new
+per-degree mining; no status change.
 
 The 2026-06-22 **next-steps round (A/C/D/B)** added one more exact check (288 → 289):
 `v337_decoupling_theorem.py` (the ambient back-reaction scale `2·dim(E₈)·c₃² = 31/(4π²)`
