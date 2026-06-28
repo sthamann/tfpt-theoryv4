@@ -60,6 +60,36 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-29 (\texttt{v435} --- a fourth honest step on the $\ainv$ Quillen target: a $\pi$-power test isolates the cubic $\alpha^3$ as the unique metric-independent (topological) rung, and types its coefficient as a conditional integer level)}
+\begin{itemize}
+\item \textbf{New module \texttt{v435} (\texttt{ALPHA.QUILLEN.PROGRESS.04}) --- it attacks the \emph{single}
+remaining \mO\ left after \vref{v434} (residual (2), the cubic $\alpha^3$ Chern/Maxwell moment) and
+\emph{sharpens} it; it does \emph{not} close it.} The target \texttt{ALPHA.QUILLEN.EXACT.01} (\vref{v382})
+stays \mO; $\ainv=137.0359992$ stays \mE.
+\begin{itemize}
+\item \mE\ \textbf{$\pi$-power / metric-independence test.} The three EM-closure coefficients carry
+$\pi$-powers exactly $\{0,3,6\}$, equal to their $\cthree$-orders: Maxwell $k_0=1\to\pi^0$, Calder\'on
+$-2\cthree^3=-1/(256\pi^3)\to\pi^3$, transport $-8b_1\cthree^6=-41/(327680\pi^6)\to\pi^6$. So the Maxwell
+$a^3$ is the \emph{unique} $\pi^0/\cthree^0$ (metric-\emph{independent}) term. A heat-kernel boundary
+coefficient always carries the $(4\pi)^{-d/2}$ measure; a metric-independent term carries none --- the
+signature of a \emph{topological} term. The test thus partitions the closure into \emph{one} topological
+level ($a^3$) $+$ \emph{two} heat-kernel boundary terms, confirming \vref{v342}/\vref{v434}'s ``$a^3$ is a
+level, not a Seeley--DeWitt curvature integral'' from a \emph{test} rather than a claim.
+\item \mC\ \textbf{conditional level quantisation.} \emph{If} the $a^3$ term is the seam $U(1)$
+Chern--Simons/$\eta$ boundary level (the \texttt{EM1} reading, \vref{v48}), large-gauge invariance
+quantises the level to $\Z$, so $k_0=1$ is the \emph{unit} (minimal) level --- an integer, not a tunable
+real. This converts ``the coefficient happens to be $1$'' into ``the coefficient is an integer level and
+$1$ is the unit''.
+\item \mO\ \textbf{not closed:} the \texttt{EM1} lemma itself --- the from-first-principles Chern--Simons
+boundary proof that $\partial_\tau\log Z_{\mathrm{Maxwell}}=a^3$ --- stays external math (type A, \vref{v384});
+the seam $F$-normalisation stays the one \mC\ (residuals 1\,\&\,3, \vref{v434}); $\ainv$ stays \mE.
+\end{itemize}
+\item \textbf{Surfaces updated.} Registered in \texttt{run\_all.py}, \texttt{script\_registry.csv} and
+\texttt{status\_ledger.csv} (\texttt{ALPHA.QUILLEN.PROGRESS.04}); cited in the \texttt{tfpt\_1} EM-closure
+subsection beside \vref{v433}/\vref{v434}; mirrored on the website residual-gap lab. Python-only; no new
+physical number.
+\end{itemize}
+
 \subsection*{2026-06-28 (\texttt{v434} --- a third honest step on the $\ainv$ Quillen target: $b_1$ is the $a_4$ heat-kernel coefficient, and the three residuals collapse to one $\mathrm{[C]}$ $+$ one $\mathrm{[O]}$)}
 \begin{itemize}
 \item \textbf{New module \texttt{v434} (\texttt{ALPHA.QUILLEN.PROGRESS.03}) --- it settles the status of the

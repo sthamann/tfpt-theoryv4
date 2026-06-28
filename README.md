@@ -265,7 +265,12 @@ counterterm space, BRST nilpotency `s²=0` for the carrier `su(3)×su(2)`, and t
 adiabatic limit, with all-order `T_n` existence and the Slavnov–Taylor identity imported (the
 `R²/Weyl²` Stelle ghost is fenced out as the resummed entire form factor, `v304`/`v370`/`v380`). The
 EM-Ward functional origin — *why exactly that* `F_U(1)` — is named as the tracked target
-`ALPHA.QUILLEN.EXACT.01` (`v382`), a face of `SEAM.EQUIV.01`; the `α⁻¹` value itself stays `[E]`.
+`ALPHA.QUILLEN.EXACT.01` (`v382`), a face of `SEAM.EQUIV.01`; the `α⁻¹` value itself stays `[E]`. Four honest steps narrow that target without
+closing it: a solvable 4D model reaches the `a₄` heat-kernel order (`v433`); the matter factor `b₁` is the
+`U(1)_Y` `a₄` coefficient via the `β = a₄` theorem, collapsing the three residuals to one `[C]` (the seam
+`F`-normalisation) + one `[O]` (`v434`); and a `π`-power test isolates the cubic `α³` as the *unique*
+metric-independent (`π⁰`) topological rung, whose coefficient is a conditional integer Chern–Simons level
+(`v435`) — the from-first-principles CS-boundary proof staying the single external `[O]`.
 
 **One principle behind "parameter-free", and the shape of what's left.** A bird's-eye synthesis
 shows every TFPT sector is the *same* object — a gapped operator with a unique attractor (the physics)

@@ -217,7 +217,7 @@ const NODES: DagNode[] = [
     marker: "[E] numerical fixed point",
     title: "α⁻¹ — the electromagnetic fixed point",
     summary:
-      "The fine-structure constant is the unique positive root of the boundary U(1) Ward identity F_U(1)(α) = 0, built from c₃ and the abelian coefficient 41 = 10 b₁. Existence and uniqueness are proved; α⁻¹ = 137.0359992168, 1.9σ from CODATA-2022. F_U(1) = 0 is the stationarity of a U(1) determinant line, every coefficient a named index/heat-kernel/discriminant atom (v341/v342); the one residual — the from-first-principles proof that this IS the exact Quillen functional — is now the tracked target ALPHA.QUILLEN.EXACT.01 (v382), a face of SEAM.EQUIV.01, never the value (which stays [E]).",
+      "The fine-structure constant is the unique positive root of the boundary U(1) Ward identity F_U(1)(α) = 0, built from c₃ and the abelian coefficient 41 = 10 b₁. Existence and uniqueness are proved; α⁻¹ = 137.0359992168, 1.9σ from CODATA-2022. F_U(1) = 0 is the stationarity of a U(1) determinant line, every coefficient a named index/heat-kernel/discriminant atom (v341/v342); the one residual — the from-first-principles proof that this IS the exact Quillen functional — is the tracked target ALPHA.QUILLEN.EXACT.01 (v382), a face of SEAM.EQUIV.01, never the value (which stays [E]). Four honest steps narrow it: a solvable 4D model reaches the a₄ order (v433), the matter factor b₁ is the U(1)_Y a₄ heat-kernel coefficient via β = a₄ so the three residuals collapse to one [C] (seam F-normalisation) + one [O] (v434), and a π-power test isolates the cubic α³ as the unique metric-independent (π⁰) topological rung whose coefficient is a conditional integer Chern-Simons level (v435) — the from-first-principles CS proof stays [O].",
     inputs: ["c₃ (P1)", "M = 41 = 10 b₁ (from R, L)"],
     outputs: ["α⁻¹ = 137.0359992168"],
     failure: "No root, or a second admissible root.",
@@ -229,6 +229,9 @@ const NODES: DagNode[] = [
       "v342_em_ward_heatkernel.py",
       "v382_alpha_quillen_exact.py",
       "v391_alpha_quillen_progress.py",
+      "v433_alpha_quillen_heatkernel.py",
+      "v434_alpha_quillen_betafunction.py",
+      "v435_alpha_quillen_chernlevel.py",
     ],
   },
   {

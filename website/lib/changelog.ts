@@ -42,6 +42,597 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-06-29",
+    "dateLabel": "2026-06-29",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v435"
+      },
+      {
+        "k": "t",
+        "v": " — a fourth honest step on the "
+      },
+      {
+        "k": "m",
+        "v": "\\ainv"
+      },
+      {
+        "k": "t",
+        "v": " Quillen target: a "
+      },
+      {
+        "k": "m",
+        "v": "\\pi"
+      },
+      {
+        "k": "t",
+        "v": "-power test isolates the cubic "
+      },
+      {
+        "k": "m",
+        "v": "\\alpha^3"
+      },
+      {
+        "k": "t",
+        "v": " as the unique metric-independent (topological) rung, and types its coefficient as a conditional integer level"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v435"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "ALPHA.QUILLEN.PROGRESS.04"
+            },
+            {
+              "k": "t",
+              "v": ") — it attacks the "
+            },
+            {
+              "k": "i",
+              "c": [
+                {
+                  "k": "t",
+                  "v": "single"
+                }
+              ]
+            },
+            {
+              "k": "t",
+              "v": " remaining "
+            },
+            {
+              "k": "s",
+              "v": "O"
+            },
+            {
+              "k": "t",
+              "v": "left after "
+            },
+            {
+              "k": "c",
+              "v": "v434"
+            },
+            {
+              "k": "t",
+              "v": " (residual (2), the cubic "
+            },
+            {
+              "k": "m",
+              "v": "\\alpha^3"
+            },
+            {
+              "k": "t",
+              "v": " Chern/Maxwell moment) and "
+            },
+            {
+              "k": "i",
+              "c": [
+                {
+                  "k": "t",
+                  "v": "sharpens"
+                }
+              ]
+            },
+            {
+              "k": "t",
+              "v": " it; it does "
+            },
+            {
+              "k": "i",
+              "c": [
+                {
+                  "k": "t",
+                  "v": "not"
+                }
+              ]
+            },
+            {
+              "k": "t",
+              "v": " close it."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The target "
+        },
+        {
+          "k": "c",
+          "v": "ALPHA.QUILLEN.EXACT.01"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v382"
+        },
+        {
+          "k": "t",
+          "v": ") stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\ainv=137.0359992"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "t",
+          "v": "itemize"
+        }
+      ],
+      [
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "m",
+              "v": "\\pi"
+            },
+            {
+              "k": "t",
+              "v": "-power / metric-independence test."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The three EM-closure coefficients carry "
+        },
+        {
+          "k": "m",
+          "v": "\\pi"
+        },
+        {
+          "k": "t",
+          "v": "-powers exactly "
+        },
+        {
+          "k": "m",
+          "v": "\\{0,3,6\\}"
+        },
+        {
+          "k": "t",
+          "v": ", equal to their "
+        },
+        {
+          "k": "m",
+          "v": "\\cthree"
+        },
+        {
+          "k": "t",
+          "v": "-orders: Maxwell "
+        },
+        {
+          "k": "m",
+          "v": "k_0=1\\to\\pi^0"
+        },
+        {
+          "k": "t",
+          "v": ", Calderón "
+        },
+        {
+          "k": "m",
+          "v": "-2\\cthree^3=-1/(256\\pi^3)\\to\\pi^3"
+        },
+        {
+          "k": "t",
+          "v": ", transport "
+        },
+        {
+          "k": "m",
+          "v": "-8b_1\\cthree^6=-41/(327680\\pi^6)\\to\\pi^6"
+        },
+        {
+          "k": "t",
+          "v": ". So the Maxwell "
+        },
+        {
+          "k": "m",
+          "v": "a^3"
+        },
+        {
+          "k": "t",
+          "v": " is the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "unique"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\pi^0/\\cthree^0"
+        },
+        {
+          "k": "t",
+          "v": " (metric-"
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "independent"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ") term. A heat-kernel boundary coefficient always carries the "
+        },
+        {
+          "k": "m",
+          "v": "(4\\pi)^{-d/2}"
+        },
+        {
+          "k": "t",
+          "v": " measure; a metric-independent term carries none — the signature of a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "topological"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " term. The test thus partitions the closure into "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " topological level ("
+        },
+        {
+          "k": "m",
+          "v": "a^3"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "two"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " heat-kernel boundary terms, confirming "
+        },
+        {
+          "k": "c",
+          "v": "v342"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v434"
+        },
+        {
+          "k": "t",
+          "v": "'s “"
+        },
+        {
+          "k": "m",
+          "v": "a^3"
+        },
+        {
+          "k": "t",
+          "v": " is a level, not a Seeley–DeWitt curvature integral” from a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "test"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " rather than a claim."
+        }
+      ],
+      [
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "conditional level quantisation."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "If"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "a^3"
+        },
+        {
+          "k": "t",
+          "v": " term is the seam "
+        },
+        {
+          "k": "m",
+          "v": "U(1)"
+        },
+        {
+          "k": "t",
+          "v": " Chern–Simons/"
+        },
+        {
+          "k": "m",
+          "v": "\\eta"
+        },
+        {
+          "k": "t",
+          "v": " boundary level (the "
+        },
+        {
+          "k": "c",
+          "v": "EM1"
+        },
+        {
+          "k": "t",
+          "v": " reading, "
+        },
+        {
+          "k": "c",
+          "v": "v48"
+        },
+        {
+          "k": "t",
+          "v": "), large-gauge invariance quantises the level to "
+        },
+        {
+          "k": "m",
+          "v": "\\Z"
+        },
+        {
+          "k": "t",
+          "v": ", so "
+        },
+        {
+          "k": "m",
+          "v": "k_0=1"
+        },
+        {
+          "k": "t",
+          "v": " is the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "unit"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (minimal) level — an integer, not a tunable real. This converts “the coefficient happens to be "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": "” into “the coefficient is an integer level and "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " is the unit”."
+        }
+      ],
+      [
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "not closed:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "c",
+          "v": "EM1"
+        },
+        {
+          "k": "t",
+          "v": " lemma itself — the from-first-principles Chern–Simons boundary proof that "
+        },
+        {
+          "k": "m",
+          "v": "\\partial_\\tau\\log Z_{\\mathrm{Maxwell}}=a^3"
+        },
+        {
+          "k": "t",
+          "v": " — stays external math (type A, "
+        },
+        {
+          "k": "c",
+          "v": "v384"
+        },
+        {
+          "k": "t",
+          "v": "); the seam "
+        },
+        {
+          "k": "m",
+          "v": "F"
+        },
+        {
+          "k": "t",
+          "v": "-normalisation stays the one "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "(residuals 1 & 3, "
+        },
+        {
+          "k": "c",
+          "v": "v434"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "m",
+          "v": "\\ainv"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
     "date": "2026-06-28",
     "dateLabel": "2026-06-28",
     "heading": [

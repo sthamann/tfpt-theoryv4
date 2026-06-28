@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`428` registered scripts · `489` ledger claims · `10` clusters.
+`429` registered scripts · `490` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -102,7 +102,7 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
 - **v422_galois_net_bridge** [E/C] `SEAM.GALOIS.NET.01` — The Galois<->Net bridge: the seam mu4 = Gal(Q(zeta5)) is the SAME cyclic Z/4 as the (E8)_1 simple-current glue -- not a mere order-4 coincidence -- connecting the Galois gearbox of
   - deps: v419_seam_galois_carrier, v286_seam_equivalence_contract, v1_e8_glue, v89_carrier_index_lemma, v403_facet_compositum, v419, v1, v89 · cited: origin theory
 
-### `em` — Electromagnetic fixed point  (8 scripts)
+### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
 
 - **v3_em_alpha** [E] `EM.FP.01` — α⁻¹ = 137.0359992168 unique root of F_U(1)=0; ablation
@@ -121,6 +121,8 @@ _The fine-structure constant as the unique root of the boundary U(1) Ward identi
   - deps: v382_alpha_quillen_exact, v391_alpha_quillen_progress, v286_seam_equivalence_contract, v48_em_ward, v336, v341, v342, v382 · cited: 1 architecture e8
 - **v434_alpha_quillen_betafunction** [E/C/O] `ALPHA.QUILLEN.PROGRESS.03` — ALPHA.QUILLEN.PROGRESS.03: a THIRD honest step on ALPHA.QUILLEN.EXACT.01 (v382) -- it settles the three residuals named after v433 and shows they are NOT three independent problems
   - deps: v382_alpha_quillen_exact, v391_alpha_quillen_progress, v433_alpha_quillen_heatkernel, v48_em_ward, v342_em_ward_heatkernel, v159, v216, v246 · cited: 1 architecture e8
+- **v435_alpha_quillen_chernlevel** [E/C/O] `ALPHA.QUILLEN.PROGRESS.04` — ALPHA.QUILLEN.PROGRESS.04: a FOURTH honest step on ALPHA.QUILLEN.EXACT.01 (v382) -- it attacks the SINGLE remaining [O] after v434 (residual (2), the cubic alpha^3 Chern level) and
+  - deps: v382_alpha_quillen_exact, v391_alpha_quillen_progress, v433_alpha_quillen_heatkernel, v434_alpha_quillen_betafunction, v48_em_ward, v342_em_ward_heatkernel, v48, v342 · cited: 1 architecture e8
 
 ### `flavor` — Flavor matrix & operators  (15 scripts)
 _The integer operator ladder (R, K, Q, L) and its spectral invariants — the flavor signature._
@@ -927,7 +929,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v423_no_ambient_dependency** — `QGAMB.NODEP.01`
 - **v424_seam_lto_rp_reduction** — `SEAM.EQUIV.LTORP.01`
 - **v425_dyn_transfer_universal** — `DYN.TRANSFER.UNIVERSAL.01`
 - **v426_seam_lto_rp_kms** — `SEAM.EQUIV.LTORP.KMS.01`
@@ -939,4 +940,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v432_overdet_floor** — `OVERDET.FLOOR.01`
 - **v433_alpha_quillen_heatkernel** — `ALPHA.QUILLEN.PROGRESS.02`
 - **v434_alpha_quillen_betafunction** — `ALPHA.QUILLEN.PROGRESS.03`
+- **v435_alpha_quillen_chernlevel** — `ALPHA.QUILLEN.PROGRESS.04`
 
