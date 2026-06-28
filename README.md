@@ -4,6 +4,16 @@
 > cosmology, built from **two inputs** plus typed physical anchors for the absolute scales.
 > Every load-bearing claim is machine-checked by an independent verification suite.
 
+**🌐 Website & interactive verification: [fixpoint-theory.com](https://www.fixpoint-theory.com)** —
+[reading guide](https://www.fixpoint-theory.com/orientation) ·
+[how the compiler works](https://www.fixpoint-theory.com/compiler) ·
+[reproduce every claim in-browser](https://www.fixpoint-theory.com/verification) ·
+[how to falsify TFPT](https://www.fixpoint-theory.com/falsification) ·
+[FAQ](https://www.fixpoint-theory.com/faq)
+
+> _Disambiguation:_ this is the **physics** theory TFPT (a compiler closure for the Standard Model). It is
+> not the unrelated Brouwer–Lefschetz "topological fixed point theory" of mathematics (Nielsen/Lefschetz numbers).
+
 TFPT models physics as a small deterministic *compiler*: two boundary inputs are fed in, an
 `E8` "audit hull" is built as an intermediate object, and the Standard-Model + cosmology
 read-outs fall out as **projections** — through a chain of exact identities and lattice/Lie
@@ -369,6 +379,28 @@ flagged at 2.0σ). Plus `v380`: the KMS Entire Hessian — the Stelle ghost is e
 truncation; resummation pushes the ghost zero to infinity, so perturbative graviton unitarity holds.
 
 A development timeline of all 426 modules is in `introduction.tex` (and on the website verification page).
+
+---
+
+## Links & citation
+
+- **Website (interactive):** <https://www.fixpoint-theory.com> — the reading guide, the compiler walkthrough,
+  the interactive verification DAG, and an in-browser (Pyodide) reproducer for every script.
+- **Source code & documents:** <https://github.com/sthamann/tfpt-theoryv4>
+- **Archived deposit (DOI):** <https://doi.org/10.5281/zenodo.20846087> (Zenodo, v5.3)
+- **AI/agent context file:** <https://www.fixpoint-theory.com/llms.txt>
+
+```bibtex
+@misc{hamann2026tfpt,
+  title  = {Topological Fixed-Point Theory (TFPT): Two Axioms, One Compiler,
+            the Standard-Model Skeleton Derived},
+  author = {Hamann, Stefan and Rizzo, Alessandro},
+  year   = {2026},
+  note   = {Version 5.3},
+  doi    = {10.5281/zenodo.20846087},
+  url    = {https://doi.org/10.5281/zenodo.20846087}
+}
+```
 
 ---
 

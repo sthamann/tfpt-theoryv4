@@ -46,28 +46,24 @@ export const CHANGELOG: ChangelogEntry[] = [
     "dateLabel": "2026-06-29",
     "heading": [
       {
+        "k": "t",
+        "v": "discoverability — an SEO/GEO pass on the public website: a generated "
+      },
+      {
         "k": "c",
-        "v": "v437"
+        "v": "/llms.txt"
       },
       {
         "k": "t",
-        "v": " — more from the "
+        "v": ", explicit AI-crawler "
       },
       {
-        "k": "m",
-        "v": "E_8"
-      },
-      {
-        "k": "t",
-        "v": " Casimir degrees, within the anti-numerology discipline: a joint quadratic forces both structural integers, and all of "
-      },
-      {
-        "k": "m",
-        "v": "E_8"
+        "k": "c",
+        "v": "robots.txt"
       },
       {
         "k": "t",
-        "v": " is fixed by its degree multiset"
+        "v": ", query-targeted metadata, and the first real backlinks from the README and the Zenodo deposit"
       }
     ],
     "items": [
@@ -77,98 +73,104 @@ export const CHANGELOG: ChangelogEntry[] = [
           "c": [
             {
               "k": "t",
-              "v": "New module "
+              "v": "New "
             },
             {
               "k": "c",
-              "v": "v437"
+              "v": "/llms.txt"
             },
             {
               "k": "t",
-              "v": " ("
-            },
-            {
-              "k": "c",
-              "v": "E8.DEGREE.JOINT.01"
-            },
-            {
-              "k": "t",
-              "v": ") — a consolidation of "
-            },
-            {
-              "k": "c",
-              "v": "v6"
-            },
-            {
-              "k": "t",
-              "v": "/"
-            },
-            {
-              "k": "c",
-              "v": "v66"
-            },
-            {
-              "k": "t",
-              "v": "/"
-            },
-            {
-              "k": "c",
-              "v": "v355"
-            },
-            {
-              "k": "t",
-              "v": "/"
-            },
-            {
-              "k": "c",
-              "v": "v431"
-            },
-            {
-              "k": "t",
-              "v": " that derives more from the "
-            },
-            {
-              "k": "m",
-              "v": "E_8"
-            },
-            {
-              "k": "t",
-              "v": " Casimir degrees "
-            },
-            {
-              "k": "i",
-              "c": [
-                {
-                  "k": "t",
-                  "v": "without"
-                }
-              ]
-            },
-            {
-              "k": "t",
-              "v": " crossing the "
-            },
-            {
-              "k": "c",
-              "v": "v354"
-            },
-            {
-              "k": "t",
-              "v": "/"
-            },
-            {
-              "k": "c",
-              "v": "v355"
-            },
-            {
-              "k": "t",
-              "v": " anti-numerology line."
+              "v": " context file"
             }
           ]
         },
         {
           "k": "t",
-          "v": " It adds "
+          "v": " for AI / answer engines (ChatGPT, Perplexity, Claude, Gemini), generated at build time from the same data layer as the site ("
+        },
+        {
+          "k": "c",
+          "v": "papers.ts"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "predictions.ts"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "version.ts"
+        },
+        {
+          "k": "t",
+          "v": ") so it never drifts. It carries the one-line summary, the “claims / does not claim” split, the document set with PDF links, the headline predictions, and an explicit "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "disambiguation"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " from the unrelated Brouwer–Lefschetz “topological fixed point theory” of mathematics."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "robots.txt"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " now lists the major search and AI crawlers (Googlebot, Google-Extended, Bingbot, GPTBot, ChatGPT-User, OAI-SearchBot, PerplexityBot, ClaudeBot, anthropic-ai, …) explicitly as allowed; the site-wide meta description and keywords are reworded toward natural search queries (“derivation of the fine-structure constant”, “Standard Model from first principles”, “where does 137 come from”) and carry the same physics/mathematics disambiguation."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Backlinks (the missing piece)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The root "
+        },
+        {
+          "k": "c",
+          "v": "README.md"
+        },
+        {
+          "k": "t",
+          "v": " and the Zenodo deposit description ("
+        },
+        {
+          "k": "c",
+          "v": "zenodo_description.html"
+        },
+        {
+          "k": "t",
+          "v": ") previously contained "
         },
         {
           "k": "i",
@@ -181,114 +183,19 @@ export const CHANGELOG: ChangelogEntry[] = [
         },
         {
           "k": "t",
-          "v": " new per-degree coincidence — only one joint lock and a reconstruction. "
+          "v": " outbound links; both now link to "
+        },
+        {
+          "k": "c",
+          "v": "fixpoint-theory.com"
         },
         {
           "k": "t",
-          "v": "itemize"
-        }
-      ],
-      [
-        {
-          "k": "s",
-          "v": "E"
+          "v": " and the source repository, and the README gains a citation block with the archived deposit DOI "
         },
         {
-          "k": "b",
-          "c": [
-            {
-              "k": "t",
-              "v": "all of "
-            },
-            {
-              "k": "m",
-              "v": "E_8"
-            },
-            {
-              "k": "t",
-              "v": " is fixed by its degree multiset."
-            }
-          ]
-        },
-        {
-          "k": "t",
-          "v": " From "
-        },
-        {
-          "k": "m",
-          "v": "\\deg(E_8)=\\{2,8,12,14,18,20,24,30\\}"
-        },
-        {
-          "k": "t",
-          "v": " alone: "
-        },
-        {
-          "k": "m",
-          "v": "\\operatorname{rank}=\\#\\deg=8"
-        },
-        {
-          "k": "t",
-          "v": ", "
-        },
-        {
-          "k": "m",
-          "v": "h=\\max\\deg=30"
-        },
-        {
-          "k": "t",
-          "v": ", "
-        },
-        {
-          "k": "m",
-          "v": "\\#"
-        },
-        {
-          "k": "t",
-          "v": "positive roots "
-        },
-        {
-          "k": "m",
-          "v": "=\\sum\\exp=120"
-        },
-        {
-          "k": "t",
-          "v": ", "
-        },
-        {
-          "k": "m",
-          "v": "\\#"
-        },
-        {
-          "k": "t",
-          "v": "roots "
-        },
-        {
-          "k": "m",
-          "v": "=240"
-        },
-        {
-          "k": "t",
-          "v": ", "
-        },
-        {
-          "k": "m",
-          "v": "\\dim E_8=248"
-        },
-        {
-          "k": "t",
-          "v": ", "
-        },
-        {
-          "k": "m",
-          "v": "|W(E_8)|=\\prod\\deg=696{,}729{,}600"
-        },
-        {
-          "k": "t",
-          "v": ", "
-        },
-        {
-          "k": "m",
-          "v": "\\sum\\deg=128=\\dim S^+"
+          "k": "c",
+          "v": "10.5281/zenodo.20846087"
         },
         {
           "k": "t",
@@ -297,210 +204,8 @@ export const CHANGELOG: ChangelogEntry[] = [
       ],
       [
         {
-          "k": "s",
-          "v": "E"
-        },
-        {
-          "k": "b",
-          "c": [
-            {
-              "k": "t",
-              "v": "the joint quadratic (the new lock)."
-            }
-          ]
-        },
-        {
           "k": "t",
-          "v": " The two TFPT structural integers "
-        },
-        {
-          "k": "m",
-          "v": "(\\gcar,\\Nfam)"
-        },
-        {
-          "k": "t",
-          "v": " are the "
-        },
-        {
-          "k": "i",
-          "c": [
-            {
-              "k": "t",
-              "v": "unique"
-            }
-          ]
-        },
-        {
-          "k": "t",
-          "v": " root pair of "
-        },
-        {
-          "k": "m",
-          "v": "x^2-(\\operatorname{rank}E_8)\\,x+(h/2)=x^2-8x+15=(x-3)(x-5)"
-        },
-        {
-          "k": "t",
-          "v": ": sum of roots "
-        },
-        {
-          "k": "m",
-          "v": "=\\operatorname{rank}E_8=8"
-        },
-        {
-          "k": "t",
-          "v": " (the rank-fill, "
-        },
-        {
-          "k": "c",
-          "v": "v6"
-        },
-        {
-          "k": "t",
-          "v": "), product "
-        },
-        {
-          "k": "m",
-          "v": "=h/2=15=\\gcar\\Nfam"
-        },
-        {
-          "k": "t",
-          "v": " ("
-        },
-        {
-          "k": "m",
-          "v": "2\\gcar\\Nfam=h"
-        },
-        {
-          "k": "t",
-          "v": ", "
-        },
-        {
-          "k": "c",
-          "v": "v431"
-        },
-        {
-          "k": "t",
-          "v": "); "
-        },
-        {
-          "k": "m",
-          "v": "\\{3,5\\}"
-        },
-        {
-          "k": "t",
-          "v": " is the unique positive-integer factor pair of "
-        },
-        {
-          "k": "m",
-          "v": "15"
-        },
-        {
-          "k": "t",
-          "v": " summing to "
-        },
-        {
-          "k": "m",
-          "v": "8"
-        },
-        {
-          "k": "t",
-          "v": ". So "
-        },
-        {
-          "k": "m",
-          "v": "\\gcar=5"
-        },
-        {
-          "k": "t",
-          "v": " and "
-        },
-        {
-          "k": "m",
-          "v": "\\Nfam=3"
-        },
-        {
-          "k": "t",
-          "v": " are forced "
-        },
-        {
-          "k": "i",
-          "c": [
-            {
-              "k": "t",
-              "v": "together"
-            }
-          ]
-        },
-        {
-          "k": "t",
-          "v": " by two "
-        },
-        {
-          "k": "m",
-          "v": "E_8"
-        },
-        {
-          "k": "t",
-          "v": " degree-invariants, not chosen one at a time. The three primary-readout degrees "
-        },
-        {
-          "k": "m",
-          "v": "\\{2,8,30\\}"
-        },
-        {
-          "k": "t",
-          "v": " are exactly "
-        },
-        {
-          "k": "m",
-          "v": "\\{\\min,\\operatorname{rank},\\max\\}"
-        },
-        {
-          "k": "t",
-          "v": "."
-        }
-      ],
-      [
-        {
-          "k": "s",
-          "v": "E"
-        },
-        {
-          "k": "b",
-          "c": [
-            {
-              "k": "t",
-              "v": "discipline upheld:"
-            }
-          ]
-        },
-        {
-          "k": "t",
-          "v": " no new per-degree mining beyond the joint quadratic; the five non-primary degrees keep their "
-        },
-        {
-          "k": "c",
-          "v": "v431"
-        },
-        {
-          "k": "t",
-          "v": " family homes; the "
-        },
-        {
-          "k": "c",
-          "v": "v354"
-        },
-        {
-          "k": "t",
-          "v": "/"
-        },
-        {
-          "k": "c",
-          "v": "v355"
-        },
-        {
-          "k": "t",
-          "v": " line is not crossed."
+          "v": "Website / documentation infrastructure only — no theory, suite, ledger or status change."
         }
       ]
     ]
