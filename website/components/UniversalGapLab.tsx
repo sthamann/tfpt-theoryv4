@@ -77,7 +77,7 @@ const SECTORS: Sector[] = [
 
 const RESIDUALS: { id: string; kind: "A" | "B" | "C"; note: string }[] = [
   { id: "SEAM.EQUIV.01", kind: "A", note: "cited MMST/Adamo continuum theorem (v336)" },
-  { id: "ALPHA.QUILLEN.EXACT.01", kind: "A", note: "Quillen ζ-functional (v382; reduced v391)" },
+  { id: "ALPHA.QUILLEN.EXACT.01", kind: "A", note: "Quillen ζ-functional (v382; reduced v391, grounded v433)" },
   { id: "QG.AMB.01", kind: "A", note: "constructive measure, a [C] redundancy (v369)" },
   { id: "v_geo", kind: "B", note: "the one metrology unit — No-Unit theorem (v153/v364)" },
   { id: "F_transfer", kind: "C", note: "QCD / Boltzmann / relic (v371–v374, firewall v187)" },

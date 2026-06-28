@@ -47,6 +47,641 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "c",
+        "v": "v433"
+      },
+      {
+        "k": "t",
+        "v": " — a second honest step on the "
+      },
+      {
+        "k": "m",
+        "v": "\\ainv"
+      },
+      {
+        "k": "t",
+        "v": " Quillen target: a solvable 4D model reaches the "
+      },
+      {
+        "k": "m",
+        "v": "a_4"
+      },
+      {
+        "k": "t",
+        "v": " order, connecting "
+      },
+      {
+        "k": "c",
+        "v": "v391"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "c",
+        "v": "v342"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v433"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "ALPHA.QUILLEN.PROGRESS.02"
+            },
+            {
+              "k": "t",
+              "v": ") — a second honest step on the external target "
+            },
+            {
+              "k": "c",
+              "v": "ALPHA.QUILLEN.EXACT.01"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "v382"
+            },
+            {
+              "k": "t",
+              "v": "); it "
+            },
+            {
+              "k": "i",
+              "c": [
+                {
+                  "k": "t",
+                  "v": "grounds and connects"
+                }
+              ]
+            },
+            {
+              "k": "t",
+              "v": ", it does "
+            },
+            {
+              "k": "i",
+              "c": [
+                {
+                  "k": "t",
+                  "v": "not"
+                }
+              ]
+            },
+            {
+              "k": "t",
+              "v": " close it."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The target stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "(external math, type A, "
+        },
+        {
+          "k": "c",
+          "v": "v384"
+        },
+        {
+          "k": "t",
+          "v": "); the value "
+        },
+        {
+          "k": "m",
+          "v": "\\ainv=137.0359992"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": ". The earlier honest attempt "
+        },
+        {
+          "k": "c",
+          "v": "v391"
+        },
+        {
+          "k": "t",
+          "v": " gave a solvable model on a "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": "D circle whose "
+        },
+        {
+          "k": "m",
+          "v": "\\zeta"
+        },
+        {
+          "k": "t",
+          "v": "-determinant variation reached only the low Seeley–DeWitt orders "
+        },
+        {
+          "k": "m",
+          "v": "a_0,a_1"
+        },
+        {
+          "k": "t",
+          "v": "; separately, "
+        },
+        {
+          "k": "c",
+          "v": "v342"
+        },
+        {
+          "k": "t",
+          "v": " grounded the quadratic Calderón term in the Gilkey gauge-curvature coefficient "
+        },
+        {
+          "k": "m",
+          "v": "a_4"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "30/360=\\tfrac1{12}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\Omega^2/12"
+        },
+        {
+          "k": "t",
+          "v": "). This module supplies the missing link between the two. "
+        },
+        {
+          "k": "t",
+          "v": "itemize"
+        }
+      ],
+      [
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "a solvable 4D model reaches the "
+            },
+            {
+              "k": "m",
+              "v": "a_4"
+            },
+            {
+              "k": "t",
+              "v": " order:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the flat operator "
+        },
+        {
+          "k": "m",
+          "v": "\\Delta=-\\partial^2+m^2"
+        },
+        {
+          "k": "t",
+          "v": " on a "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": "-torus of volume "
+        },
+        {
+          "k": "m",
+          "v": "V"
+        },
+        {
+          "k": "t",
+          "v": " has heat trace "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{Tr}e^{-t\\Delta}=V/(4\\pi)^2\\,t^{-2}e^{-tm^2}"
+        },
+        {
+          "k": "t",
+          "v": ", with Gilkey coefficients "
+        },
+        {
+          "k": "m",
+          "v": "a_0=V/(4\\pi)^2"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "a_2=-Vm^2/(4\\pi)^2"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "a_4=Vm^4/(2(4\\pi)^2)"
+        },
+        {
+          "k": "t",
+          "v": "; the "
+        },
+        {
+          "k": "m",
+          "v": "t^0"
+        },
+        {
+          "k": "t",
+          "v": " (conformal-anomaly) order "
+        },
+        {
+          "k": "m",
+          "v": "a_4"
+        },
+        {
+          "k": "t",
+          "v": " is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "non-zero"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " — exactly the order "
+        },
+        {
+          "k": "c",
+          "v": "v391"
+        },
+        {
+          "k": "t",
+          "v": "'s "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": "D circle toy could not reach."
+        }
+      ],
+      [
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "it is the order "
+            },
+            {
+              "k": "c",
+              "v": "v342"
+            },
+            {
+              "k": "t",
+              "v": " uses:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " so "
+        },
+        {
+          "k": "c",
+          "v": "v391"
+        },
+        {
+          "k": "t",
+          "v": " (“a "
+        },
+        {
+          "k": "m",
+          "v": "\\zeta"
+        },
+        {
+          "k": "t",
+          "v": "-determinant variation "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " closed heat-kernel data”) and "
+        },
+        {
+          "k": "c",
+          "v": "v342"
+        },
+        {
+          "k": "t",
+          "v": " (“the seam term "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the Gilkey "
+        },
+        {
+          "k": "m",
+          "v": "a_4"
+        },
+        {
+          "k": "t",
+          "v": "”) are unified — the variation is heat-kernel data "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "at the "
+            },
+            {
+              "k": "m",
+              "v": "a_4"
+            },
+            {
+              "k": "t",
+              "v": " order"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", not only the low orders v391 reached."
+        }
+      ],
+      [
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "the measure is "
+            },
+            {
+              "k": "m",
+              "v": "\\cthree"
+            },
+            {
+              "k": "t",
+              "v": "-built:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the universal 4D heat-kernel measure "
+        },
+        {
+          "k": "m",
+          "v": "(4\\pi)^{-2}=1/(16\\pi^2)=(2\\cthree)^2=4\\cthree^2"
+        },
+        {
+          "k": "t",
+          "v": " in the seam's one-sided 2D-boundary normalisation "
+        },
+        {
+          "k": "m",
+          "v": "\\cthree=\\tfrac12(4\\pi)^{-1}"
+        },
+        {
+          "k": "t",
+          "v": "; and the "
+        },
+        {
+          "k": "c",
+          "v": "v382"
+        },
+        {
+          "k": "t",
+          "v": " split is re-verified at "
+        },
+        {
+          "k": "m",
+          "v": "\\ainv=137.0359992"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "not closed:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " computing the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "actual"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " seam "
+        },
+        {
+          "k": "m",
+          "v": "U(1)"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\zeta"
+        },
+        {
+          "k": "t",
+          "v": "-determinant "
+        },
+        {
+          "k": "m",
+          "v": "a_4"
+        },
+        {
+          "k": "t",
+          "v": " coefficient ("
+        },
+        {
+          "k": "m",
+          "v": "=8b_1\\cthree^6"
+        },
+        {
+          "k": "t",
+          "v": ") on the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " seam moduli, and the origin of the cubic "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha^3"
+        },
+        {
+          "k": "t",
+          "v": " Maxwell/Chern moment, stay open (external math, type A, "
+        },
+        {
+          "k": "c",
+          "v": "v384"
+        },
+        {
+          "k": "t",
+          "v": "); the exact seam "
+        },
+        {
+          "k": "m",
+          "v": "F"
+        },
+        {
+          "k": "t",
+          "v": "-normalisation fixing the coefficient "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "value"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "("
+        },
+        {
+          "k": "c",
+          "v": "v342"
+        },
+        {
+          "k": "t",
+          "v": "). A second honest step that grounds and connects, it does not close."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-27",
+    "dateLabel": "2026-06-27",
+    "heading": [
+      {
+        "k": "c",
         "v": "v431"
       },
       {

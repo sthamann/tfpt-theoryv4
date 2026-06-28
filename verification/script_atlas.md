@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`426` registered scripts · `487` ledger claims · `10` clusters.
+`427` registered scripts · `488` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -102,7 +102,7 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
 - **v422_galois_net_bridge** [E/C] `SEAM.GALOIS.NET.01` — The Galois<->Net bridge: the seam mu4 = Gal(Q(zeta5)) is the SAME cyclic Z/4 as the (E8)_1 simple-current glue -- not a mere order-4 coincidence -- connecting the Galois gearbox of
   - deps: v419_seam_galois_carrier, v286_seam_equivalence_contract, v1_e8_glue, v89_carrier_index_lemma, v403_facet_compositum, v419, v1, v89 · cited: origin theory
 
-### `em` — Electromagnetic fixed point  (6 scripts)
+### `em` — Electromagnetic fixed point  (7 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
 
 - **v3_em_alpha** [E] `EM.FP.01` — α⁻¹ = 137.0359992168 unique root of F_U(1)=0; ablation
@@ -117,6 +117,8 @@ _The fine-structure constant as the unique root of the boundary U(1) Ward identi
   - deps: v48_em_ward, v286_seam_equivalence_contract, v341, v342, v3, v48, v216, v336 · cited: 1 architecture e8
 - **v391_alpha_quillen_progress** [E/O] `ALPHA.QUILLEN.PROGRESS.01` — ALPHA.QUILLEN.PROGRESS.01: an HONEST attempt at the external target ALPHA.QUILLEN.EXACT.01 (v382) -- it REDUCES the open step to a sharper named sub-target via a solvable model but
   - deps: v382_alpha_quillen_exact, v286_seam_equivalence_contract, v48_em_ward, v336, v341, v382 · cited: 1 architecture e8
+- **v433_alpha_quillen_heatkernel** [E/C/O] `ALPHA.QUILLEN.PROGRESS.02` — ALPHA.QUILLEN.PROGRESS.02: a SECOND honest step on the external target ALPHA.QUILLEN.EXACT.01 (v382) -- it GROUNDS and CONNECTS, it does NOT close it; ALPHA.QUILLEN.EXACT.01 stays 
+  - deps: v382_alpha_quillen_exact, v391_alpha_quillen_progress, v286_seam_equivalence_contract, v48_em_ward, v336, v341, v342, v382 · cited: 1 architecture e8
 
 ### `flavor` — Flavor matrix & operators  (15 scripts)
 _The integer operator ladder (R, K, Q, L) and its spectral invariants — the flavor signature._
@@ -917,13 +919,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×29, `QGEO.SYM.01`×28, `QG.AMB.01`×17, `v76`×17, `v56`×17, `E8.GLU.01`×16, `v336`×16, `v216`×15, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v312`×14, `REG.FREEZE.01`×12, `AX.P1.01`×11, `v3`×11, `v54`×11
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×30, `QGEO.SYM.01`×28, `QG.AMB.01`×17, `v76`×17, `v56`×17, `v336`×17, `E8.GLU.01`×16, `v216`×15, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v312`×14, `REG.FREEZE.01`×12, `AX.P1.01`×11, `v3`×11, `v54`×11
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v420_fpole_qed_running** — `FR.POLE.QED.01`
 - **v422_galois_net_bridge** — `SEAM.GALOIS.NET.01`
 - **v423_no_ambient_dependency** — `QGAMB.NODEP.01`
 - **v424_seam_lto_rp_reduction** — `SEAM.EQUIV.LTORP.01`
@@ -935,4 +936,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v430_other_side_reverse_audit** — `E8.OTHERSIDE.AUDIT.01`
 - **v431_e8_degree_ladder** — `E8.DEGREE.LADDER.01`
 - **v432_overdet_floor** — `OVERDET.FLOOR.01`
+- **v433_alpha_quillen_heatkernel** — `ALPHA.QUILLEN.PROGRESS.02`
 
