@@ -26,8 +26,8 @@ const STATS: {
     tone: "text-emerald-300",
   },
   {
-    big: "1 in 94,500",
-    small: "Of all declared F_U(1) variants, exactly one α path lands in the CODATA window.",
+    big: "≈ 4.40σ",
+    small: "Assumption-minimal counting floor: of 94,500 declared F_U(1) variants exactly one α path lands in the CODATA window (1 in 94,500), with no subjective probability (v436).",
     icon: Crosshair,
     tone: "text-blue-300",
   },
@@ -39,7 +39,7 @@ const STATS: {
   },
   {
     big: "≤ 10⁻³⁰·⁷",
-    small: "≈ 102 bits: that a random theory of equal complexity reproduces the scorecard.",
+    small: "≈ 102 bits that a random theory of equal complexity reproduces the scorecard — conditional on the declared grammar (v100).",
     icon: ShieldCheck,
     tone: "text-violet-300",
   },

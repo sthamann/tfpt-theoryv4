@@ -780,7 +780,7 @@
   "date": "2026-06-27"
  },
  "tfpt_safeguards::section::Layer 3 --- the over-determination map (multiply vs.\\ compress)::1": {
-  "hash": "b0bcd161f4c8",
+  "hash": "411740bec6ef",
   "date": "2026-06-28"
  },
  "tfpt_safeguards::section::Layer 4 --- the firewall and the No-Unit theorem::1": {
@@ -804,7 +804,7 @@
   "date": "2026-06-25"
  },
  "tfpt_safeguards::section::Summary --- the layered defense::1": {
-  "hash": "96f85259a148",
-  "date": "2026-06-27"
+  "hash": "5e1d4ffe1f64",
+  "date": "2026-06-28"
  }
 }

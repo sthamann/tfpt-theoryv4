@@ -55,7 +55,7 @@ const META: { status: Status; where: string; whereHref: string; stillOpen: strin
   { status: "Answered", where: "FAQ · Doc 1", whereHref: "/faq", stillOpen: "No" },
   { status: "Answered", where: "FAQ · Verification", whereHref: "/verification", stillOpen: "No" },
   { status: "Conditional", where: "FAQ · Open gates", whereHref: "/#open-gates", stillOpen: "Conditional layer (declared)" },
-  { status: "Answered", where: "FAQ · Verification", whereHref: "/verification", stillOpen: "No (null model ≤ 10⁻³⁰·⁷)" },
+  { status: "Answered", where: "FAQ · Verification", whereHref: "/verification", stillOpen: "No (conditional ≤ 10⁻³⁰·⁷; unconditional ≈ 4.40σ, v436)" },
   { status: "Answered", where: "Falsification", whereHref: "/falsification", stillOpen: "By design" },
   { status: "Open", where: "Open gates · Research contracts", whereHref: "/#open-gates", stillOpen: "Yes — 3 named interfaces" },
   { status: "Answered", where: "FAQ · α comparator", whereHref: "/faq", stillOpen: "No" },

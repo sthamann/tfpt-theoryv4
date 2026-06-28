@@ -61,8 +61,9 @@ export function TrustContract() {
                 <span>predictions frozen pre-data — sin²θ₁₂ = 0.3067 (JUNO), r ≈ 0.004 (CMB-S4)</span>
                 <span className="hidden text-slate-500 sm:inline">·</span>
                 <span>
-                  null model: <span className="font-mono">P ≤ 10⁻³⁰·⁷</span> that a random theory of
-                  equal complexity reproduces the scorecard
+                  null model: conditional <span className="font-mono">P ≤ 10⁻³⁰·⁷</span>, plus an
+                  assumption-minimal <span className="font-mono">≈ 4.40σ</span> counting floor (1 in 94,500,
+                  no subjective probability)
                 </span>
               </p>
               <div className="mt-3 flex flex-wrap gap-1.5">
