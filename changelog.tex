@@ -60,6 +60,30 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-30 (\texttt{v460} --- the explicit flat-band commuting-projector (LTO) realisation of the S3 input: advancing the \texttt{SEAM.EQUIV.01} sub-step (i) from abstract existence to an explicit gap-protected quasi-local projector net carrying the $\Z_2$ reflection and the $\mu_4$ clock)}
+\begin{itemize}
+\item \textbf{\texttt{v460\_seam\_s3\_lto.py} (\texttt{SEAM.S3.LTO.01}).} NPW26 (\texttt{arXiv:2605.10693}) prove the
+intrinsic Bisognano--Wichmann lemma for \emph{commuting-projector} (local-topological-order) models with a $\Z_2$
+reflection; \texttt{v424} reduced the keystone BW residual to that theorem modulo two open sub-steps, of which (ii)
+was settled by \texttt{v426} and the continuum lift of BW by the uniform-in-$N$ tower \texttt{v455}. This module
+attacks the \emph{commuting-projector} side of sub-step (i) on the same explicit \texttt{v367} $p{+}ip$ collar.
+\mE\ FLAT-BAND PARENT: the flattened Bloch $Q{=}h/|h|$ has $Q^2{=}I$ (flat $\pm1$ bands) and $P{=}(I{-}Q)/2$ is an
+exact projector EQUAL to \texttt{v367}'s occupied ground-state projector --- a frustration-free commuting-projector
+parent with the same gapped ground state (machine precision over a $k$-grid). \mE\ GAP-PROTECTED QUASI-LOCALITY:
+the gapped projector kernel $|P(n,0)|$ decays rapidly ($\xi{\approx}1.14$ at $M{=}1$, exp $R^2{=}0.995$,
+$|P(20,0)|{<}10^{-6}$) and $\xi$ grows as the gap closes ($2.7$ at gap $0.02$); at the gapless point it decays as a
+clean power law $|R|^{-2.1}$ ($R^2{=}0.999$) --- locality needs the gap. \mE\ $\Z_2$ REFLECTION $+$ $\mu_4$
+INHERITED: the flattened modular Hamiltonian $K_{\mathrm{flat}}{=}\operatorname{sign}(K)$ inherits
+$\Theta K_{\mathrm{flat}}\Theta{=}{-}K_{\mathrm{flat}}$ ($u_\Theta{=}J$) and $[\rho,K_{\mathrm{flat}}]{=}0$ EXACTLY
+($\operatorname{sign}$ is odd; $\rho$ commutes with any $f(K)$), with side-even and off-$\mu_4$ neg controls firing.
+\mC\mO\ the chiral $c_-{=}8{\neq}0$ (FHS Chern $|C|{=}1$) obstructs STRICT finite-range commuting-projector locality
+(Kapustin--Fidkowski, \texttt{arXiv:1810.07756}; $C{\neq}0$ forbids exponentially-localised Wannier), so the
+realisation is the quasi-local LTO net NPW26 use --- the form sub-step (i) asks for. Advances \texttt{v424} sub-step
+(i); \texttt{SEAM.EQUIV.01} stays \mO\ (the continuum theorem MMST \texttt{v336} is the backbone). Python-only
+(numpy); registered in \texttt{run\_all.py}, the registry, the ledger and cited in
+\texttt{tfpt\_research\_contracts} (route (xxvii) of the convergent attacks).
+\end{itemize}
+
 \subsection*{2026-06-30 (\texttt{v454}--\texttt{v459} + Lean + Wolfram --- the post-F ``G-block'': the lattice Sugawara current algebra, a uniform-in-$N$ Tomita--Takesaki tower, chirality forced by $P_1$, an $(E_8)_1$ character kill test, the exact MMST citation audit and the complementary lattice-VOA route)}
 \begin{itemize}
 \item \textbf{\texttt{v454\_seam\_edge\_virasoro.py} (\texttt{SEAM.EQUIV.EDGE.VIRASORO.01}).} Tests the cited MMST

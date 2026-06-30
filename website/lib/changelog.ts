@@ -47,6 +47,491 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "c",
+        "v": "v460"
+      },
+      {
+        "k": "t",
+        "v": " — the explicit flat-band commuting-projector (LTO) realisation of the S3 input: advancing the "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.EQUIV.01"
+      },
+      {
+        "k": "t",
+        "v": " sub-step (i) from abstract existence to an explicit gap-protected quasi-local projector net carrying the "
+      },
+      {
+        "k": "m",
+        "v": "\\Z_2"
+      },
+      {
+        "k": "t",
+        "v": " reflection and the "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4"
+      },
+      {
+        "k": "t",
+        "v": " clock"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v460_seam_s3_lto.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.S3.LTO.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " NPW26 ("
+        },
+        {
+          "k": "c",
+          "v": "arXiv:2605.10693"
+        },
+        {
+          "k": "t",
+          "v": ") prove the intrinsic Bisognano–Wichmann lemma for "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "commuting-projector"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (local-topological-order) models with a "
+        },
+        {
+          "k": "m",
+          "v": "\\Z_2"
+        },
+        {
+          "k": "t",
+          "v": " reflection; "
+        },
+        {
+          "k": "c",
+          "v": "v424"
+        },
+        {
+          "k": "t",
+          "v": " reduced the keystone BW residual to that theorem modulo two open sub-steps, of which (ii) was settled by "
+        },
+        {
+          "k": "c",
+          "v": "v426"
+        },
+        {
+          "k": "t",
+          "v": " and the continuum lift of BW by the uniform-in-"
+        },
+        {
+          "k": "m",
+          "v": "N"
+        },
+        {
+          "k": "t",
+          "v": " tower "
+        },
+        {
+          "k": "c",
+          "v": "v455"
+        },
+        {
+          "k": "t",
+          "v": ". This module attacks the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "commuting-projector"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " side of sub-step (i) on the same explicit "
+        },
+        {
+          "k": "c",
+          "v": "v367"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "p{+}ip"
+        },
+        {
+          "k": "t",
+          "v": " collar. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "FLAT-BAND PARENT: the flattened Bloch "
+        },
+        {
+          "k": "m",
+          "v": "Q{=}h/|h|"
+        },
+        {
+          "k": "t",
+          "v": " has "
+        },
+        {
+          "k": "m",
+          "v": "Q^2{=}I"
+        },
+        {
+          "k": "t",
+          "v": " (flat "
+        },
+        {
+          "k": "m",
+          "v": "\\pm1"
+        },
+        {
+          "k": "t",
+          "v": " bands) and "
+        },
+        {
+          "k": "m",
+          "v": "P{=}(I{-}Q)/2"
+        },
+        {
+          "k": "t",
+          "v": " is an exact projector EQUAL to "
+        },
+        {
+          "k": "c",
+          "v": "v367"
+        },
+        {
+          "k": "t",
+          "v": "'s occupied ground-state projector — a frustration-free commuting-projector parent with the same gapped ground state (machine precision over a "
+        },
+        {
+          "k": "m",
+          "v": "k"
+        },
+        {
+          "k": "t",
+          "v": "-grid). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "GAP-PROTECTED QUASI-LOCALITY: the gapped projector kernel "
+        },
+        {
+          "k": "m",
+          "v": "|P(n,0)|"
+        },
+        {
+          "k": "t",
+          "v": " decays rapidly ("
+        },
+        {
+          "k": "m",
+          "v": "\\xi{\\approx}1.14"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "M{=}1"
+        },
+        {
+          "k": "t",
+          "v": ", exp "
+        },
+        {
+          "k": "m",
+          "v": "R^2{=}0.995"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "|P(20,0)|{<}10^{-6}"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "m",
+          "v": "\\xi"
+        },
+        {
+          "k": "t",
+          "v": " grows as the gap closes ("
+        },
+        {
+          "k": "m",
+          "v": "2.7"
+        },
+        {
+          "k": "t",
+          "v": " at gap "
+        },
+        {
+          "k": "m",
+          "v": "0.02"
+        },
+        {
+          "k": "t",
+          "v": "); at the gapless point it decays as a clean power law "
+        },
+        {
+          "k": "m",
+          "v": "|R|^{-2.1}"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "R^2{=}0.999"
+        },
+        {
+          "k": "t",
+          "v": ") — locality needs the gap. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "\\Z_2"
+        },
+        {
+          "k": "t",
+          "v": " REFLECTION "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " INHERITED: the flattened modular Hamiltonian "
+        },
+        {
+          "k": "m",
+          "v": "K_{\\mathrm{flat}}{=}\\operatorname{sign}(K)"
+        },
+        {
+          "k": "t",
+          "v": " inherits "
+        },
+        {
+          "k": "m",
+          "v": "\\Theta K_{\\mathrm{flat}}\\Theta{=}{-}K_{\\mathrm{flat}}"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "u_\\Theta{=}J"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "m",
+          "v": "[\\rho,K_{\\mathrm{flat}}]{=}0"
+        },
+        {
+          "k": "t",
+          "v": " EXACTLY ("
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{sign}"
+        },
+        {
+          "k": "t",
+          "v": " is odd; "
+        },
+        {
+          "k": "m",
+          "v": "\\rho"
+        },
+        {
+          "k": "t",
+          "v": " commutes with any "
+        },
+        {
+          "k": "m",
+          "v": "f(K)"
+        },
+        {
+          "k": "t",
+          "v": "), with side-even and off-"
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " neg controls firing. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the chiral "
+        },
+        {
+          "k": "m",
+          "v": "c_-{=}8{\\neq}0"
+        },
+        {
+          "k": "t",
+          "v": " (FHS Chern "
+        },
+        {
+          "k": "m",
+          "v": "|C|{=}1"
+        },
+        {
+          "k": "t",
+          "v": ") obstructs STRICT finite-range commuting-projector locality (Kapustin–Fidkowski, "
+        },
+        {
+          "k": "c",
+          "v": "arXiv:1810.07756"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "C{\\neq}0"
+        },
+        {
+          "k": "t",
+          "v": " forbids exponentially-localised Wannier), so the realisation is the quasi-local LTO net NPW26 use — the form sub-step (i) asks for. Advances "
+        },
+        {
+          "k": "c",
+          "v": "v424"
+        },
+        {
+          "k": "t",
+          "v": " sub-step (i); "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "(the continuum theorem MMST "
+        },
+        {
+          "k": "c",
+          "v": "v336"
+        },
+        {
+          "k": "t",
+          "v": " is the backbone). Python-only (numpy); registered in "
+        },
+        {
+          "k": "c",
+          "v": "run_all.py"
+        },
+        {
+          "k": "t",
+          "v": ", the registry, the ledger and cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " (route (xxvii) of the convergent attacks)."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-30",
+    "dateLabel": "2026-06-30",
+    "heading": [
+      {
+        "k": "c",
         "v": "v454"
       },
       {

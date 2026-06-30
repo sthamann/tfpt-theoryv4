@@ -945,7 +945,8 @@ rigidity with its forcing converse and the derivation of clock-invariance, three
 central charge, the four-point and uniform-in-$N$ pinning of the external fact, the Ising operator tower, the
 $(E_8)_1$ torus modular data, the $\mu_4$-from-marks derivation, the kill tests, the lattice Sugawara current
 algebra, a uniform-in-$N$ Tomita--Takesaki tower, the chirality-from-$P_1$ forcing, an $(E_8)_1$ character kill
-test, the exact MMST citation audit and the complementary lattice-VOA route
+test, the exact MMST citation audit, the complementary lattice-VOA route and the explicit flat-band
+commuting-projector LTO realisation
 (\veri{v438\_seam\_hsmi\_borchers.py}, \veri{v439\_seam\_lieb\_robinson.py}, \veri{v440\_seam\_lto\_rp\_beta.py},
 \veri{v441\_seam\_applicability\_ledger.py}, \veri{v442\_seam\_rigidity\_uniform.py},
 \veri{v443\_seam\_e8\_discriminator.py}, \veri{v444\_seam\_edge\_scaling.py},
@@ -956,7 +957,7 @@ test, the exact MMST citation audit and the complementary lattice-VOA route
 \veri{v453\_seam\_mu4\_from\_marks.py}, \veri{v454\_seam\_edge\_virasoro.py},
 \veri{v455\_seam\_bw\_uniform.py}, \veri{v456\_seam\_chirality\_from\_c3.py},
 \veri{v457\_seam\_character\_killtest.py}, \veri{v458\_seam\_mmst\_citation\_audit.py},
-\veri{v459\_seam\_lattice\_voa\_route.py}).} None closes
+\veri{v459\_seam\_lattice\_voa\_route.py}, \veri{v460\_seam\_s3\_lto.py}).} None closes
 \texttt{SEAM.EQUIV.01}; together they ground the one continuum input on both its halves, reduce it to a single
 analytic fact and make the claim falsifiable.
 \emph{(v) The intrinsic Bisognano--Wichmann route} (\veri{v438\_seam\_hsmi\_borchers.py}): the seam supplies a
@@ -1103,7 +1104,19 @@ realisation input (the collar's scaling limit $={}A_{E_8}$), tied to $P_1$ by (x
 $248{=}8{+}240{=}120{+}128$, $240{=}112{+}128$, $\det K\,1$ vs $4$) is kernel-hardened in Lean
 (\texttt{FORM.SEAM.RESIDUAL.01}, \texttt{TfptCarrier/SeamResidualAxiom.lean}), reducing the residual to ONE named
 TFPT-internal realisation axiom (\texttt{CollarRealizedAsLatticePhase}) plus the two cited existence theorems.
-Across (v)--(xxvi), \texttt{SEAM.EQUIV.01}
+\emph{(xxvii) The explicit flat-band commuting-projector (LTO) realisation} (\veri{v460\_seam\_s3\_lto.py}): NPW26
+prove the intrinsic Bisognano--Wichmann lemma of (iv) for \emph{commuting-projector} (local-topological-order)
+models, so sub-step (i) asks for the seam realised as such a $\Z_2$-reflection LTO. On the same \vref{v367}
+$p{+}ip$ collar the flattened Bloch $Q{=}h/|h|$ is a frustration-free flat-band parent --- $Q^2{=}I$ and the
+occupied $P{=}(I{-}Q)/2$ is an exact projector EQUAL to the ground-state projector --- whose real-space kernel is
+gap-protected quasi-local ($\xi{\approx}1.14$ at $M{=}1$, $|P(20,0)|{<}10^{-6}$; a clean power law $|R|^{-2.1}$ at the
+gapless point, so locality needs the gap), and whose flattened modular Hamiltonian $K_{\mathrm{flat}}{=}
+\operatorname{sign}(K)$ inherits the $\Z_2$ reflection $\Theta K_{\mathrm{flat}}\Theta{=}{-}K_{\mathrm{flat}}$ and the
+$\mu_4$ clock $[\rho,K_{\mathrm{flat}}]{=}0$ EXACTLY; \mE\ the flat-band/projector and reflection algebra, \mC\ the
+quasi-locality, \mO\ the chiral $c_-{=}8{\neq}0$ obstructs \emph{strictly} finite-range commuting-projector locality
+(Kapustin--Fidkowski, \texttt{arXiv:1810.07756}), so the realisation is exactly the quasi-local LTO net NPW26 use ---
+advancing sub-step (i) of (iv) from abstract existence to an explicit gap-protected net, strict locality the cited
+residual. Across (v)--(xxvii), \texttt{SEAM.EQUIV.01}
 stays \mO: every route reduces, audits or falsifies the residual without supplying the one cited
 continuum-existence theorem.
 \par\smallskip\noindent\textbf{The TOE/QFT closure contracts as three citable certificates
