@@ -60,6 +60,45 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-30 (\texttt{v461}/\texttt{v462} + Lean axiom merge --- the strict-locality obstruction made explicit, the 128-spinor extension exhibited at character level, and the \texttt{SEAM.EQUIV.01} residual reduced to ONE realisation axiom $+$ ONE combined cited theorem)}
+\begin{itemize}
+\item \textbf{\texttt{v461\_seam\_strict\_locality.py} (\texttt{SEAM.S3.LOCALITY.01}).} Sharpens \texttt{v460}'s verdict
+from a \emph{cited} statement to an \emph{exhibited} topological obstruction on the same \texttt{v367} $p{+}ip$
+collar. \mE\ CHERN INTEGER: the FHS Chern is $C{=}{+}1$ (chiral $M{=}1$), $0$ (trivial $M{=}3$), $-1$ (opposite
+mass). \mE\ WILSON-LOOP / WANNIER-CENTRE WINDING $={}$ CHERN: the hybrid Wannier centre $\theta(k_y)$ winds by
+$|C|{=}1$ (chiral) and $0$ (trivial) over the BZ; exponentially-localised Wannier exist IFF the winding is $0$
+(Brouder--Panati et al., PRL 98 046402; Thouless), so the chiral collar has NONE. \mE\ OBSTRUCTION INTEGERS TIED:
+winding $={}|C|{=}1{\neq}0$ and $c_-{=}8{=}\gcar{+}\Nfam{=}\operatorname{rank}E_8{\neq}0$ (the same $8$ as $c_3$'s
+one-sided count, \texttt{v456}). \mE\ NEG CONTROL: BOTH phases are gapped, yet only the trivial (winding $0$) admits
+exp-localised Wannier and a strict finite-range commuting projector --- it is the CHIRALITY, not the gap. \mC\mO\
+Kapustin--Fidkowski (\texttt{arXiv:1810.07756}): a strictly finite-range commuting projector would force winding $0$,
+$C{=}0$; since $C{=}1{\neq}0$ NONE exists, so \texttt{v424} sub-step (i)'s realisation is PROVABLY the quasi-local
+NPW26 LTO net (strict locality topologically forbidden, not a missing premise). \texttt{SEAM.EQUIV.01} stays \mO.
+Python-only (numpy); the winding/Chern integers Wolfram- and Lean-mirrored.
+\item \textbf{\texttt{v462\_seam\_spinor\_continuum.py} (\texttt{SEAM.EQUIV.SPINOR.01}).} The constructive companion
+of the \texttt{v458} (MMST audit) / \texttt{v459} (lattice-VOA) residual: the 128-spinor extension
+$SO(16)_1{\to}(E_8)_1$ exhibited three ways. \mE\ $(E_8)_1$ TOWER FROM $SO(16)_1$ SECTORS: the exact Jacobi/$E_8$
+identity $\theta_2^8{+}\theta_3^8{+}\theta_4^8{=}2E_4$ gives $\chi_{(E_8)_1}{=}E_4/\eta^8{=}\chi_o^{SO16}{+}\chi_s^{SO16}$
+--- the holomorphic $(E_8)_1$ character IS the $SO(16)_1$ vacuum $+$ spinor sector sum. \mE\ THE 128 SPINOR WEIGHT-1
+STATES FILL $120{\to}248$: $\chi_o$ gives $120$, $\chi_s$ gives $128$, summing to the exact tower
+$\{1,248,4124,34752\}$ ($248{=}120{+}128$). \mE\ FINITE 16-MAJORANA FOCK: $C(16,2){=}120$ NS bilinear currents and
+$2^{16/2}{=}256$ Ramond ground states $={}128$ spinor $+$ $128$ cospinor. \mE\ FINITE-$L\to$ CONTINUUM CONVERGENCE:
+the critical free-fermion ring Casimir gives $c_-{\to}8$ and the lowest scaled NS gap $x_1{\to}1$ with
+$|x_1{-}1|{\sim}1/L^2$ ($L{=}64..1024$). \mC\mO\ AGT/AMT (\texttt{v459}) supply the rigorous extension;
+\texttt{SEAM.EQUIV.01} existence (\texttt{v336}) stays \mO. Mixed exact ($\theta$ identity $+$ tower $+$
+$120/128/256$, Wolfram-mirrored) $+$ numerical (finite-$L$, Python-only).
+\item \textbf{Lean (\texttt{TfptCarrier/SeamResidualAxiom.lean}, \texttt{FORM.SEAM.RESIDUAL.01}).} The two former
+cited axioms \texttt{mmst\_existence} $\circ$ \texttt{agt\_lattice\_extension} are MERGED into ONE combined external
+axiom \texttt{seam\_realisation\_theorem} (dropping the intermediate \texttt{ChiralCFT\_c8}), so
+\texttt{\#print axioms seamResidualClosed} now lists exactly FOUR axioms (down from six). Two more kernel facts are
+added axiom-free: \texttt{strict\_locality\_forbidden} (\texttt{v461}: winding $={}|C|{=}1{\neq}0$, $c_-{\neq}0$) and
+\texttt{fock\_sectors} (\texttt{v462}: $C(16,2){=}120$, $2^8{=}256$, spinor $128$, $120{+}128{=}248$);
+\texttt{residual\_arithmetic} (now including both) depends only on \texttt{[propext]}. \texttt{lake build} OK. So the
+residual is reduced to ONE realisation axiom $+$ ONE combined cited theorem.
+\item \textbf{Wolfram.} \texttt{tfpt\_readouts\_extension.wl} adds 3 exact mirrors (total $363/363$): the \texttt{v461}
+obstruction integer-logic and the \texttt{v462} $\theta$-identity $+$ $120{+}128{=}248$ sector / Fock counts.
+\end{itemize}
+
 \subsection*{2026-06-30 (\texttt{v460} --- the explicit flat-band commuting-projector (LTO) realisation of the S3 input: advancing the \texttt{SEAM.EQUIV.01} sub-step (i) from abstract existence to an explicit gap-protected quasi-local projector net carrying the $\Z_2$ reflection and the $\mu_4$ clock)}
 \begin{itemize}
 \item \textbf{\texttt{v460\_seam\_s3\_lto.py} (\texttt{SEAM.S3.LTO.01}).} NPW26 (\texttt{arXiv:2605.10693}) prove the

@@ -939,14 +939,15 @@ Adamo--Giorgetti--Tanimoto (\texttt{arXiv:2508.07109}, 2025) --- every DHR repre
 extending a loop-group/Virasoro net is \emph{automatically} positive-energy and diffeomorphism-covariant ---
 defuses the old ``Bisognano--Wichmann presupposes the very covariance it should produce'' circularity (\vref{v215}):
 once the seam net is in hand, geometric covariance is a \emph{consequence}, not an input.
-\par\smallskip\noindent\textbf{Twenty-two convergent attacks on the one continuum residual --- intrinsic BW, a
+\par\smallskip\noindent\textbf{Twenty-four convergent attacks on the one continuum residual --- intrinsic BW, a
 bulk continuum motor and its chiral-edge counterpart, the $\beta$-homotopy, the applicability audit, uniform
 rigidity with its forcing converse and the derivation of clock-invariance, three independent reads of the edge
 central charge, the four-point and uniform-in-$N$ pinning of the external fact, the Ising operator tower, the
 $(E_8)_1$ torus modular data, the $\mu_4$-from-marks derivation, the kill tests, the lattice Sugawara current
 algebra, a uniform-in-$N$ Tomita--Takesaki tower, the chirality-from-$P_1$ forcing, an $(E_8)_1$ character kill
-test, the exact MMST citation audit, the complementary lattice-VOA route and the explicit flat-band
-commuting-projector LTO realisation
+test, the exact MMST citation audit, the complementary lattice-VOA route, the explicit flat-band
+commuting-projector LTO realisation, the strict-locality (Kapustin--Fidkowski) obstruction and the character-level
+128-spinor extension
 (\veri{v438\_seam\_hsmi\_borchers.py}, \veri{v439\_seam\_lieb\_robinson.py}, \veri{v440\_seam\_lto\_rp\_beta.py},
 \veri{v441\_seam\_applicability\_ledger.py}, \veri{v442\_seam\_rigidity\_uniform.py},
 \veri{v443\_seam\_e8\_discriminator.py}, \veri{v444\_seam\_edge\_scaling.py},
@@ -957,7 +958,8 @@ commuting-projector LTO realisation
 \veri{v453\_seam\_mu4\_from\_marks.py}, \veri{v454\_seam\_edge\_virasoro.py},
 \veri{v455\_seam\_bw\_uniform.py}, \veri{v456\_seam\_chirality\_from\_c3.py},
 \veri{v457\_seam\_character\_killtest.py}, \veri{v458\_seam\_mmst\_citation\_audit.py},
-\veri{v459\_seam\_lattice\_voa\_route.py}, \veri{v460\_seam\_s3\_lto.py}).} None closes
+\veri{v459\_seam\_lattice\_voa\_route.py}, \veri{v460\_seam\_s3\_lto.py},
+\veri{v461\_seam\_strict\_locality.py}, \veri{v462\_seam\_spinor\_continuum.py}).} None closes
 \texttt{SEAM.EQUIV.01}; together they ground the one continuum input on both its halves, reduce it to a single
 analytic fact and make the claim falsifiable.
 \emph{(v) The intrinsic Bisognano--Wichmann route} (\veri{v438\_seam\_hsmi\_borchers.py}): the seam supplies a
@@ -1116,7 +1118,30 @@ $\mu_4$ clock $[\rho,K_{\mathrm{flat}}]{=}0$ EXACTLY; \mE\ the flat-band/project
 quasi-locality, \mO\ the chiral $c_-{=}8{\neq}0$ obstructs \emph{strictly} finite-range commuting-projector locality
 (Kapustin--Fidkowski, \texttt{arXiv:1810.07756}), so the realisation is exactly the quasi-local LTO net NPW26 use ---
 advancing sub-step (i) of (iv) from abstract existence to an explicit gap-protected net, strict locality the cited
-residual. Across (v)--(xxvii), \texttt{SEAM.EQUIV.01}
+residual. \emph{(xxviii) The strict-locality obstruction made explicit} (\veri{v461\_seam\_strict\_locality.py}):
+upgrading (xxvii)'s ``strict locality is the cited residual'' from a citation to an EXHIBITED topological
+obstruction. On the same \vref{v367} collar the FHS Chern is $C{=}{+}1$ (chiral) / $0$ (trivial) / $-1$
+(opposite mass), and the hybrid Wannier-centre (Wilson-loop) phase $\theta(k_y)$ winds by $|C|{=}1$ (chiral) and
+$0$ (trivial) over the BZ --- exponentially-localised Wannier functions exist \emph{iff} that winding is $0$
+(Brouder--Panati et al.; Thouless), so the chiral collar has none; both phases are gapped, yet only the trivial one
+(winding $0$) admits a strict finite-range commuting projector, so it is the \emph{chirality} $c_-{=}8{\neq}0$, not
+the gap, that obstructs. \mE\ the Chern integer, the winding$={}|C|$ identity and the gapped neg-control, \mC\mO\
+Kapustin--Fidkowski (\texttt{arXiv:1810.07756}): a strictly finite-range commuting projector would force winding
+$0$ hence $C{=}0$, so for $C{=}1{\neq}0$ none exists --- sub-step (i)'s realisation is \emph{provably} the
+quasi-local NPW26 LTO net, strict locality topologically forbidden rather than a missing premise. \emph{(xxix) The
+character-level 128-spinor extension} (\veri{v462\_seam\_spinor\_continuum.py}): the constructive companion of
+(xxv)/(xxvi), exhibiting the $128$-spinor extension three ways --- the exact Jacobi/$E_8$ identity
+$\theta_2^8{+}\theta_3^8{+}\theta_4^8{=}2E_4$ makes the holomorphic character the sum of the $SO(16)_1$ vacuum and
+spinor sectors, $\chi_{(E_8)_1}{=}E_4/\eta^8{=}\chi_o^{SO16}{+}\chi_s^{SO16}$ (weight-$1$ counts $120{+}128{=}248$);
+the finite $16$-Majorana Fock space already carries them ($C(16,2){=}120$ currents and $2^{16/2}{=}256{=}128{+}128$
+Ramond states); and a critical free-fermion ring converges to the chiral CFT (Casimir $c_-{\to}8$, lowest scaled
+gap $x_1{\to}1$ with $|x_1{-}1|{\sim}1/N^2$). \mE\ the $\theta$ identity, the $120{+}128{=}248$ split and the
+finite-$L$ convergence, \mC\mO\ AGT/AMT (xxvi) supply the rigorous holomorphic extension. The full G-block
+arithmetic --- now including the (xxviii) winding obstruction and the (xxix) finite-Fock spinor counts --- is
+kernel-hardened in Lean (\texttt{FORM.SEAM.RESIDUAL.01}), and the two formerly separate cited theorems are
+\emph{merged} into one combined external axiom \texttt{seam\_realisation\_theorem}, so the residual reduces to ONE
+realisation axiom plus ONE cited theorem (\texttt{\#print axioms} drops from six to four). Across (v)--(xxix),
+\texttt{SEAM.EQUIV.01}
 stays \mO: every route reduces, audits or falsifies the residual without supplying the one cited
 continuum-existence theorem.
 \par\smallskip\noindent\textbf{The TOE/QFT closure contracts as three citable certificates

@@ -47,6 +47,984 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "c",
+        "v": "v461"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v462"
+      },
+      {
+        "k": "t",
+        "v": " + Lean axiom merge — the strict-locality obstruction made explicit, the 128-spinor extension exhibited at character level, and the "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.EQUIV.01"
+      },
+      {
+        "k": "t",
+        "v": " residual reduced to ONE realisation axiom "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " ONE combined cited theorem"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v461_seam_strict_locality.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.S3.LOCALITY.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Sharpens "
+        },
+        {
+          "k": "c",
+          "v": "v460"
+        },
+        {
+          "k": "t",
+          "v": "'s verdict from a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "cited"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " statement to an "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "exhibited"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " topological obstruction on the same "
+        },
+        {
+          "k": "c",
+          "v": "v367"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "p{+}ip"
+        },
+        {
+          "k": "t",
+          "v": " collar. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "CHERN INTEGER: the FHS Chern is "
+        },
+        {
+          "k": "m",
+          "v": "C{=}{+}1"
+        },
+        {
+          "k": "t",
+          "v": " (chiral "
+        },
+        {
+          "k": "m",
+          "v": "M{=}1"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " (trivial "
+        },
+        {
+          "k": "m",
+          "v": "M{=}3"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "-1"
+        },
+        {
+          "k": "t",
+          "v": " (opposite mass). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "WILSON-LOOP / WANNIER-CENTRE WINDING "
+        },
+        {
+          "k": "m",
+          "v": "={}"
+        },
+        {
+          "k": "t",
+          "v": " CHERN: the hybrid Wannier centre "
+        },
+        {
+          "k": "m",
+          "v": "\\theta(k_y)"
+        },
+        {
+          "k": "t",
+          "v": " winds by "
+        },
+        {
+          "k": "m",
+          "v": "|C|{=}1"
+        },
+        {
+          "k": "t",
+          "v": " (chiral) and "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " (trivial) over the BZ; exponentially-localised Wannier exist IFF the winding is "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " (Brouder–Panati et al., PRL 98 046402; Thouless), so the chiral collar has NONE. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "OBSTRUCTION INTEGERS TIED: winding "
+        },
+        {
+          "k": "m",
+          "v": "={}|C|{=}1{\\neq}0"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "c_-{=}8{=}\\gcar{+}\\Nfam{=}\\operatorname{rank}E_8{\\neq}0"
+        },
+        {
+          "k": "t",
+          "v": " (the same "
+        },
+        {
+          "k": "m",
+          "v": "8"
+        },
+        {
+          "k": "t",
+          "v": " as "
+        },
+        {
+          "k": "m",
+          "v": "c_3"
+        },
+        {
+          "k": "t",
+          "v": "'s one-sided count, "
+        },
+        {
+          "k": "c",
+          "v": "v456"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "NEG CONTROL: BOTH phases are gapped, yet only the trivial (winding "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": ") admits exp-localised Wannier and a strict finite-range commuting projector — it is the CHIRALITY, not the gap. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": " Kapustin–Fidkowski ("
+        },
+        {
+          "k": "c",
+          "v": "arXiv:1810.07756"
+        },
+        {
+          "k": "t",
+          "v": "): a strictly finite-range commuting projector would force winding "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "C{=}0"
+        },
+        {
+          "k": "t",
+          "v": "; since "
+        },
+        {
+          "k": "m",
+          "v": "C{=}1{\\neq}0"
+        },
+        {
+          "k": "t",
+          "v": " NONE exists, so "
+        },
+        {
+          "k": "c",
+          "v": "v424"
+        },
+        {
+          "k": "t",
+          "v": " sub-step (i)'s realisation is PROVABLY the quasi-local NPW26 LTO net (strict locality topologically forbidden, not a missing premise). "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": ". Python-only (numpy); the winding/Chern integers Wolfram- and Lean-mirrored."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v462_seam_spinor_continuum.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EQUIV.SPINOR.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The constructive companion of the "
+        },
+        {
+          "k": "c",
+          "v": "v458"
+        },
+        {
+          "k": "t",
+          "v": " (MMST audit) / "
+        },
+        {
+          "k": "c",
+          "v": "v459"
+        },
+        {
+          "k": "t",
+          "v": " (lattice-VOA) residual: the 128-spinor extension "
+        },
+        {
+          "k": "m",
+          "v": "SO(16)_1{\\to}(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " exhibited three ways. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " TOWER FROM "
+        },
+        {
+          "k": "m",
+          "v": "SO(16)_1"
+        },
+        {
+          "k": "t",
+          "v": " SECTORS: the exact Jacobi/"
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " identity "
+        },
+        {
+          "k": "m",
+          "v": "\\theta_2^8{+}\\theta_3^8{+}\\theta_4^8{=}2E_4"
+        },
+        {
+          "k": "t",
+          "v": " gives "
+        },
+        {
+          "k": "m",
+          "v": "\\chi_{(E_8)_1}{=}E_4/\\eta^8{=}\\chi_o^{SO16}{+}\\chi_s^{SO16}"
+        },
+        {
+          "k": "t",
+          "v": " — the holomorphic "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " character IS the "
+        },
+        {
+          "k": "m",
+          "v": "SO(16)_1"
+        },
+        {
+          "k": "t",
+          "v": " vacuum "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " spinor sector sum. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "THE 128 SPINOR WEIGHT-1 STATES FILL "
+        },
+        {
+          "k": "m",
+          "v": "120{\\to}248"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "\\chi_o"
+        },
+        {
+          "k": "t",
+          "v": " gives "
+        },
+        {
+          "k": "m",
+          "v": "120"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\chi_s"
+        },
+        {
+          "k": "t",
+          "v": " gives "
+        },
+        {
+          "k": "m",
+          "v": "128"
+        },
+        {
+          "k": "t",
+          "v": ", summing to the exact tower "
+        },
+        {
+          "k": "m",
+          "v": "\\{1,248,4124,34752\\}"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "248{=}120{+}128"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "FINITE 16-MAJORANA FOCK: "
+        },
+        {
+          "k": "m",
+          "v": "C(16,2){=}120"
+        },
+        {
+          "k": "t",
+          "v": " NS bilinear currents and "
+        },
+        {
+          "k": "m",
+          "v": "2^{16/2}{=}256"
+        },
+        {
+          "k": "t",
+          "v": " Ramond ground states "
+        },
+        {
+          "k": "m",
+          "v": "={}128"
+        },
+        {
+          "k": "t",
+          "v": " spinor "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "128"
+        },
+        {
+          "k": "t",
+          "v": " cospinor. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "FINITE-"
+        },
+        {
+          "k": "m",
+          "v": "L\\to"
+        },
+        {
+          "k": "t",
+          "v": " CONTINUUM CONVERGENCE: the critical free-fermion ring Casimir gives "
+        },
+        {
+          "k": "m",
+          "v": "c_-{\\to}8"
+        },
+        {
+          "k": "t",
+          "v": " and the lowest scaled NS gap "
+        },
+        {
+          "k": "m",
+          "v": "x_1{\\to}1"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "|x_1{-}1|{\\sim}1/L^2"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "L{=}64..1024"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "AGT/AMT ("
+        },
+        {
+          "k": "c",
+          "v": "v459"
+        },
+        {
+          "k": "t",
+          "v": ") supply the rigorous extension; "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " existence ("
+        },
+        {
+          "k": "c",
+          "v": "v336"
+        },
+        {
+          "k": "t",
+          "v": ") stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": ". Mixed exact ("
+        },
+        {
+          "k": "m",
+          "v": "\\theta"
+        },
+        {
+          "k": "t",
+          "v": " identity "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " tower "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "120/128/256"
+        },
+        {
+          "k": "t",
+          "v": ", Wolfram-mirrored) "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " numerical (finite-"
+        },
+        {
+          "k": "m",
+          "v": "L"
+        },
+        {
+          "k": "t",
+          "v": ", Python-only)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Lean ("
+            },
+            {
+              "k": "c",
+              "v": "TfptCarrier/SeamResidualAxiom.lean"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "c",
+              "v": "FORM.SEAM.RESIDUAL.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The two former cited axioms "
+        },
+        {
+          "k": "c",
+          "v": "mmst_existence"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\circ"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "agt_lattice_extension"
+        },
+        {
+          "k": "t",
+          "v": " are MERGED into ONE combined external axiom "
+        },
+        {
+          "k": "c",
+          "v": "seam_realisation_theorem"
+        },
+        {
+          "k": "t",
+          "v": " (dropping the intermediate "
+        },
+        {
+          "k": "c",
+          "v": "ChiralCFT_c8"
+        },
+        {
+          "k": "t",
+          "v": "), so "
+        },
+        {
+          "k": "c",
+          "v": "#print axioms seamResidualClosed"
+        },
+        {
+          "k": "t",
+          "v": " now lists exactly FOUR axioms (down from six). Two more kernel facts are added axiom-free: "
+        },
+        {
+          "k": "c",
+          "v": "strict_locality_forbidden"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v461"
+        },
+        {
+          "k": "t",
+          "v": ": winding "
+        },
+        {
+          "k": "m",
+          "v": "={}|C|{=}1{\\neq}0"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "c_-{\\neq}0"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "c",
+          "v": "fock_sectors"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v462"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "C(16,2){=}120"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "2^8{=}256"
+        },
+        {
+          "k": "t",
+          "v": ", spinor "
+        },
+        {
+          "k": "m",
+          "v": "128"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "120{+}128{=}248"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "residual_arithmetic"
+        },
+        {
+          "k": "t",
+          "v": " (now including both) depends only on "
+        },
+        {
+          "k": "c",
+          "v": "[propext]"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "c",
+          "v": "lake build"
+        },
+        {
+          "k": "t",
+          "v": " OK. So the residual is reduced to ONE realisation axiom "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " ONE combined cited theorem."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Wolfram."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_readouts_extension.wl"
+        },
+        {
+          "k": "t",
+          "v": " adds 3 exact mirrors (total "
+        },
+        {
+          "k": "m",
+          "v": "363/363"
+        },
+        {
+          "k": "t",
+          "v": "): the "
+        },
+        {
+          "k": "c",
+          "v": "v461"
+        },
+        {
+          "k": "t",
+          "v": " obstruction integer-logic and the "
+        },
+        {
+          "k": "c",
+          "v": "v462"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\theta"
+        },
+        {
+          "k": "t",
+          "v": "-identity "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "120{+}128{=}248"
+        },
+        {
+          "k": "t",
+          "v": " sector / Fock counts."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-30",
+    "dateLabel": "2026-06-30",
+    "heading": [
+      {
+        "k": "c",
         "v": "v460"
       },
       {

@@ -2872,6 +2872,36 @@ Module[{cSO16, cE8, Z2, intKoverPi, eight, reflFixed, cc,
     8 + 240 == 248 && 120 + 128 == 248 && 8 + 112 == 120];
 ];
 
+(* ==== v461/v462 round: the Kapustin-Fidkowski strict-locality obstruction (integer logic; the
+   Wilson-loop winding/Chern themselves are numerical, Python-only) and the 128-spinor extension
+   at character level -- the Jacobi/E8 theta identity theta2^8+theta3^8+theta4^8=2E4 (so the
+   (E8)_1 character is the SO(16)_1 vacuum+spinor sum) and the 120+128=248 sector + finite
+   16-Majorana Fock counts; mirrors v461/v462. ==== *)
+Module[{cMinus, reflFixed, th2, th3, th4, qE4, qq, vac, spin, inv8, chiSer, c1},
+  (* v461: tied obstruction integers + the reflection forcing (strict-local => C=-C => C=0) *)
+  cMinus = 2^(gcar - 1)*1/2;                          (* 16*|C|/2 = 8, |C|=1 *)
+  reflFixed = Solve[cc == -cc, cc];
+  checkExact["v461 SEAM.S3.LOCALITY.01: the Kapustin-Fidkowski strict-locality obstruction (integer logic) -- the Wannier/Wilson-loop winding=|C|=1!=0 and c_-=2^(g_car-1)*|C|/2=8=g_car+N_fam=rank E8!=0; a strictly finite-range commuting projector would force winding 0 => C=-C => C=0 (Solve[c==-c]={c->0}), contradicting C=1, so it is forbidden (the Wilson-loop winding/Chern themselves are numerical, Python-only)",
+    cMinus == 8 && cMinus == gcar + Nfam && reflFixed == {{cc -> 0}} && cMinus != 0];
+
+  (* v462 (i): the Jacobi/E8 theta identity theta2^8+theta3^8+theta4^8 = 2 E4 (numerical at q=1/50) *)
+  qq = N[1/50, 50];
+  th2 = 2 qq^(1/8) Sum[qq^(n (n + 1)/2), {n, 0, 30}];
+  th3 = 1 + 2 Sum[qq^(n^2/2), {n, 1, 30}];
+  th4 = 1 + 2 Sum[(-1)^n qq^(n^2/2), {n, 1, 30}];
+  qE4 = 1 + 240 Sum[DivisorSigma[3, n] qq^n, {n, 1, 40}];
+  check["v462 SEAM.EQUIV.SPINOR.01 (i): the Jacobi/E8 theta identity theta2^8+theta3^8+theta4^8 = 2 E4 => chi_{(E8)_1}=E4/eta^8 = chi_o^{SO16}+chi_s^{SO16} (the holomorphic (E8)_1 character IS the SO(16)_1 vacuum + spinor sector sum, the conformal embedding SO(16)_1 in (E8)_1)",
+    th2^8 + th3^8 + th4^8, 2 qE4, 10^-20];
+
+  (* v462 (ii): (E8)_1 weight-1 = SO(16)_1 vacuum 120 + spinor 128; finite 16-Majorana Fock *)
+  inv8 = Series[Product[(1 - q^n)^-8, {n, 1, 6}], {q, 0, 2}];
+  chiSer = Series[(1 + 240 Sum[DivisorSigma[3, n] q^n, {n, 1, 6}]) inv8, {q, 0, 2}];
+  c1 = CoefficientList[Normal[chiSer], q][[2]];        (* (E8)_1 weight-1 coeff = 248 *)
+  vac = Binomial[16, 2]; spin = 2^(16/2)/2;            (* 120 ; 128 *)
+  checkExact["v462 SEAM.EQUIV.SPINOR.01 (ii): the (E8)_1 weight-1 multiplicity 248 = SO(16)_1 vacuum 120 (C(16,2) bilinear so(16) currents) + spinor 128 (=2^{16/2}/2, half the Ramond ground space); 2^{16/2}=256=128+128, 120+128=248=dim E8 -- the 128 spinor fills the (E8)_1 - SO(16)_1 deficit",
+    c1 == 248 && vac == 120 && spin == 128 && vac + spin == 248 && 2^(16/2) == 256];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

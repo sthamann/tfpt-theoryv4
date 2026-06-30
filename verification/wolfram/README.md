@@ -105,7 +105,7 @@ v84–v93 block passed **45/45** on first run; the v94–v140 blocks were added
 the same day, the v141–v144 block on 2026-06-12. Current state:
 
 ```
---- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459: 360 passed, 0 failed ---
+--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462: 363 passed, 0 failed ---
 ALL WOLFRAM EXTENSION CHECKS PASSED
 ```
 
@@ -121,6 +121,17 @@ vs `|det Cartan D8| = 4`), and `v459` (E8 even unimodular, the 240 roots split
 `112 + 128`, and `248 = 8 + 240 = 120 + 128` — the lattice-VOA route supplying the
 128-spinor extension MMST leaves open). `v455` (uniform Tomita–Takesaki tower) and
 `v458` (the MMST citation audit) are Python-only/structural.
+
+The 2026-06-30 `v461`/`v462` round adds 3 more exact mirrors (total `363/363`):
+`v461` (the Kapustin–Fidkowski strict-locality obstruction as integer logic — the
+Wilson-loop/Wannier winding `= |C| = 1 ≠ 0` and `c_- = 8 ≠ 0`, and a strict
+finite-range commuting projector would force winding `0 ⟹ C = −C ⟹ C = 0`, so it is
+forbidden; the Wilson-loop winding/Chern themselves are numerical, Python-only), and
+`v462` (the 128-spinor extension at character level — the Jacobi/E8 theta identity
+`θ₂⁸+θ₃⁸+θ₄⁸ = 2E₄` so `χ_{(E8)₁} = E4/η⁸ = χ_o^{SO16} + χ_s^{SO16}`, and the
+`(E8)_1` weight-1 `248 = 120 + 128` with the finite 16-Majorana Fock counts
+`C(16,2)=120`, `2^{16/2}=256=128+128`; the finite-`L`→continuum convergence is
+Python-only).
 
 (ledger `GATE.WOLFRAM.02`). The scipy-only parts of the round (the `v86`
 pivot ODE solve, the `v88` data pulls, the `v99` mpmath ODE probe of the

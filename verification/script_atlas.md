@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`454` registered scripts · `520` ledger claims · `10` clusters.
+`456` registered scripts · `522` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -294,7 +294,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v407_dn_pairings_omega** [E/C/O] `FLAV.SELECTOR.CLOSE.01` — FLAV.SELECTOR.CLOSE.01: the R4' residue folds into the tau=omega keystone (v405) -- the three (d,n) selector pairings ARE the tau=omega family-slice atoms. [E] the frame (1,a,sigma
   - deps: v405_seam_equiv_omega, v49_readout_rigidity, v405, v139, v136, v42 · cited: origin theory, 1 architecture e8
 
-### `frontier` — Open gate (G_metric) & the frontier  (147 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (149 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -591,6 +591,10 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v286_seam_equivalence_contract, v458_seam_mmst_citation_audit, v378_seam_s3_modular, v456_seam_chirality_from_c3, v458, v456, v281, v336 · cited: research contracts
 - **v460_seam_s3_lto** [E/C/O] `SEAM.S3.LTO.01` — SEAM.S3.LTO.01: the EXPLICIT flat-band commuting-projector (local-topological-order) realisation of the S3 input -- advancing v424 sub-step (i) ('realise the raw seam as a Z/2-refl
   - deps: v286_seam_equivalence_contract, v367_seam_s3_lattice, v455_seam_bw_uniform, v424, v426, v367, v455, v336 · cited: research contracts
+- **v461_seam_strict_locality** [E/C/O] `SEAM.S3.LOCALITY.01` — SEAM.S3.LOCALITY.01: the Kapustin-Fidkowski/Thouless strict-locality OBSTRUCTION made explicit -- sharpening v460's verdict from a cited statement to an exhibited topological obstr
+  - deps: v286_seam_equivalence_contract, v460_seam_s3_lto, v456_seam_chirality_from_c3, v447_seam_edge_chern, v460, v447, v456, v367 · cited: research contracts
+- **v462_seam_spinor_continuum** [E/C/O] `SEAM.EQUIV.SPINOR.01` — SEAM.EQUIV.SPINOR.01: the 128-spinor extension SO(16)_1 -> (E8)_1 exhibited at CHARACTER level and as a finite-L -> continuum convergence -- the constructive companion of the v458 
+  - deps: v286_seam_equivalence_contract, v458_seam_mmst_citation_audit, v459_seam_lattice_voa_route, v457_seam_character_killtest, v458, v459, v457, v336 · cited: research contracts
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (180 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -973,14 +977,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×58, `QGEO.SYM.01`×31, `v336`×30, `v216`×18, `QG.AMB.01`×17, `v76`×17, `v56`×17, `E8.GLU.01`×16, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v312`×14, `v54`×13, `v323`×12, `REG.FREEZE.01`×12, `AX.P1.01`×11
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×60, `v336`×31, `QGEO.SYM.01`×31, `v216`×18, `QG.AMB.01`×17, `v76`×17, `v56`×17, `E8.GLU.01`×16, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v312`×14, `v54`×13, `v323`×12, `REG.FREEZE.01`×12, `AX.P1.01`×11
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v449_seam_mmst_uniform** — `SEAM.EQUIV.MMST.UNIFORM.01`
-- **v450_seam_edge_entanglement** — `SEAM.EQUIV.EDGE.ENTANGLEMENT.01`
 - **v451_seam_edge_cardy_tower** — `SEAM.EQUIV.EDGE.CARDY.01`
 - **v452_seam_e8_modular** — `SEAM.EQUIV.E8.MODULAR.01`
 - **v453_seam_mu4_from_marks** — `SEAM.RIGIDITY.MU4FROMMARKS.01`
@@ -991,4 +993,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v458_seam_mmst_citation_audit** — `SEAM.EQUIV.MMST.AUDIT.01`
 - **v459_seam_lattice_voa_route** — `SEAM.EQUIV.LATTICEVOA.01`
 - **v460_seam_s3_lto** — `SEAM.S3.LTO.01`
+- **v461_seam_strict_locality** — `SEAM.S3.LOCALITY.01`
+- **v462_seam_spinor_continuum** — `SEAM.EQUIV.SPINOR.01`
 

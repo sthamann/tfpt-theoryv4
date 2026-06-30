@@ -310,9 +310,15 @@ the one-sidedness that defines `c3=1/(8π)` (`v456`, so `S3` is a consequence of
 an exact hypothesis-by-hypothesis MMST citation audit (`v458`) isolates the single open piece to the
 `128`-spinor extension `SO(16)₁→(E8)₁` — which the complementary lattice-VOA route `A_{E8}` then
 *constructs* (`v459`, the `240` roots split `112+128`); a uniform-in-`N` Tomita–Takesaki tower (`v455`)
-lifts the intrinsic Bisognano–Wichmann condition `u_Θ=J`. The whole G-block arithmetic is
-Lean-hardened as `FORM.SEAM.RESIDUAL.01`, reducing the residual to *one* named TFPT-internal realisation
-axiom plus the two cited theorems. `QGEO.SYM.01` (the `μ₄` deck acting geometrically) is its
+lifts the intrinsic Bisognano–Wichmann condition `u_Θ=J`. Two follow-ups close the loose ends: the
+strict-locality of the S3 realisation is *topologically forbidden*, not a missing premise (`v461`: the
+Wilson-loop/Wannier winding `= |C| = 1 ≠ 0`, so Kapustin–Fidkowski forbids any strictly finite-range
+commuting projector — the realisation is necessarily the quasi-local NPW26 LTO net), and the `128`-spinor
+extension is exhibited at character level and as a finite-`L`→continuum convergence (`v462`: the Jacobi/E8
+identity `θ₂⁸+θ₃⁸+θ₄⁸=2E₄` makes `χ_{(E8)₁}=χ_o+χ_s`, `248=120+128`, with the lattice ring converging
+`c_-→8`). The whole G-block arithmetic is Lean-hardened as `FORM.SEAM.RESIDUAL.01`, now reducing the
+residual to *one* named TFPT-internal realisation axiom plus *one* combined cited theorem (the former
+`mmst_existence`∘`agt_lattice_extension` merged, so `#print axioms` drops from six to four). `QGEO.SYM.01` (the `μ₄` deck acting geometrically) is its
 **corollary** (`v335`, Lean `FORM.QGEO.BW.01`). `QG.AMB.01` is gap-decoupled from the general
 Euclidean-QG conformal-factor problem (margin `Δ_eff ≈ 1.648 > 0`, `v76`/`v330`).
 

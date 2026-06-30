@@ -588,7 +588,8 @@ example :
       ∧ 24 / Nat.gcd TfptCarrier.SeamEdgeChern.cMinus 24 = 3 :=
   ⟨TfptCarrier.SeamEdgeChern.holomorphic, TfptCarrier.SeamEdgeChern.tphase_order_three⟩
 
-/-! ## SEAM.EQUIV.01 residual reduced to ONE realization axiom (v456/v458/v459; G4) -/
+/-! ## SEAM.EQUIV.01 residual reduced to ONE realization axiom + ONE cited theorem
+    (v456/v458/v459/v461/v462; G4) -/
 
 /-- The chirality direction (S3) from P1: the one-sided count `|Z2|·(∮K/π) = 2·4 = 8`,
     and a reflection-symmetric (two-sided) boundary forces the Chern integer `C = 0`. -/
@@ -597,6 +598,24 @@ example :
       ∧ (∀ C : Int, C = -C → C = 0) :=
   ⟨TfptCarrier.SeamResidualAxiom.c3_eight_one_sided,
    TfptCarrier.SeamResidualAxiom.two_sided_nonchiral⟩
+
+/-- v461: strict locality is topologically forbidden — the Wannier winding `= |C| = 1 ≠ 0`
+    and `c₋ = 8 ≠ 0`, so no strictly finite-range commuting projector exists. -/
+example :
+    TfptCarrier.SeamResidualAxiom.wannierWinding ≠ 0
+      ∧ TfptCarrier.SeamResidualAxiom.cMinus ≠ 0 :=
+  TfptCarrier.SeamResidualAxiom.strict_locality_forbidden
+
+/-- v462: the finite 16-Majorana Fock space carries the spinor — `C(16,2) = 120` currents,
+    `256 = 128 + 128` Ramond states, `120 + 128 = 248`. -/
+example :
+    TfptCarrier.SeamResidualAxiom.so16Currents = TfptCarrier.SeamResidualAxiom.so16
+      ∧ TfptCarrier.SeamResidualAxiom.spinorFock = TfptCarrier.SeamResidualAxiom.spinor
+      ∧ TfptCarrier.SeamResidualAxiom.so16Currents + TfptCarrier.SeamResidualAxiom.spinorFock
+          = TfptCarrier.SeamResidualAxiom.adjE8 :=
+  ⟨(TfptCarrier.SeamResidualAxiom.fock_sectors).1,
+   (TfptCarrier.SeamResidualAxiom.fock_sectors).2.2.1,
+   (TfptCarrier.SeamResidualAxiom.fock_sectors).2.2.2⟩
 
 /-- The `248`-current content in BOTH decompositions: `248 = 120 + 128` (fermionic,
     MMST's 120 bilinears + the spinor residual) `= 8 + 240` (lattice-VOA, v459). -/
@@ -608,8 +627,8 @@ example :
   ⟨TfptCarrier.SeamResidualAxiom.currents_fermionic,
    TfptCarrier.SeamResidualAxiom.currents_lattice⟩
 
-/-- `SEAM.EQUIV.01` follows from the SINGLE realization axiom plus the two cited
-    published theorems (existence: MMST; extension: AGT lattice-VOA). -/
+/-- `SEAM.EQUIV.01` follows from the SINGLE realization axiom plus the SINGLE combined
+    cited theorem `seam_realisation_theorem` (the merge of MMST existence ∘ AGT extension). -/
 example : TfptCarrier.SeamResidualAxiom.SeamIsE8 :=
   TfptCarrier.SeamResidualAxiom.seamResidualClosed
 
