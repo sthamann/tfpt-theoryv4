@@ -939,15 +939,15 @@ Adamo--Giorgetti--Tanimoto (\texttt{arXiv:2508.07109}, 2025) --- every DHR repre
 extending a loop-group/Virasoro net is \emph{automatically} positive-energy and diffeomorphism-covariant ---
 defuses the old ``Bisognano--Wichmann presupposes the very covariance it should produce'' circularity (\vref{v215}):
 once the seam net is in hand, geometric covariance is a \emph{consequence}, not an input.
-\par\smallskip\noindent\textbf{Twenty-four convergent attacks on the one continuum residual --- intrinsic BW, a
+\par\smallskip\noindent\textbf{Twenty-six convergent attacks on the one continuum residual --- intrinsic BW, a
 bulk continuum motor and its chiral-edge counterpart, the $\beta$-homotopy, the applicability audit, uniform
 rigidity with its forcing converse and the derivation of clock-invariance, three independent reads of the edge
 central charge, the four-point and uniform-in-$N$ pinning of the external fact, the Ising operator tower, the
 $(E_8)_1$ torus modular data, the $\mu_4$-from-marks derivation, the kill tests, the lattice Sugawara current
 algebra, a uniform-in-$N$ Tomita--Takesaki tower, the chirality-from-$P_1$ forcing, an $(E_8)_1$ character kill
 test, the exact MMST citation audit, the complementary lattice-VOA route, the explicit flat-band
-commuting-projector LTO realisation, the strict-locality (Kapustin--Fidkowski) obstruction and the character-level
-128-spinor extension
+commuting-projector LTO realisation, the strict-locality (Kapustin--Fidkowski) obstruction, the character-level
+128-spinor extension, the $c{=}8$ holomorphic-uniqueness pin and the one-particle realisation rigidity
 (\veri{v438\_seam\_hsmi\_borchers.py}, \veri{v439\_seam\_lieb\_robinson.py}, \veri{v440\_seam\_lto\_rp\_beta.py},
 \veri{v441\_seam\_applicability\_ledger.py}, \veri{v442\_seam\_rigidity\_uniform.py},
 \veri{v443\_seam\_e8\_discriminator.py}, \veri{v444\_seam\_edge\_scaling.py},
@@ -959,7 +959,8 @@ commuting-projector LTO realisation, the strict-locality (Kapustin--Fidkowski) o
 \veri{v455\_seam\_bw\_uniform.py}, \veri{v456\_seam\_chirality\_from\_c3.py},
 \veri{v457\_seam\_character\_killtest.py}, \veri{v458\_seam\_mmst\_citation\_audit.py},
 \veri{v459\_seam\_lattice\_voa\_route.py}, \veri{v460\_seam\_s3\_lto.py},
-\veri{v461\_seam\_strict\_locality.py}, \veri{v462\_seam\_spinor\_continuum.py}).} None closes
+\veri{v461\_seam\_strict\_locality.py}, \veri{v462\_seam\_spinor\_continuum.py},
+\veri{v463\_seam\_c8\_holomorphic\_uniqueness.py}, \veri{v464\_seam\_oneparticle\_rigidity.py}).} None closes
 \texttt{SEAM.EQUIV.01}; together they ground the one continuum input on both its halves, reduce it to a single
 analytic fact and make the claim falsifiable.
 \emph{(v) The intrinsic Bisognano--Wichmann route} (\veri{v438\_seam\_hsmi\_borchers.py}): the seam supplies a
@@ -1136,14 +1137,37 @@ spinor sectors, $\chi_{(E_8)_1}{=}E_4/\eta^8{=}\chi_o^{SO16}{+}\chi_s^{SO16}$ (w
 the finite $16$-Majorana Fock space already carries them ($C(16,2){=}120$ currents and $2^{16/2}{=}256{=}128{+}128$
 Ramond states); and a critical free-fermion ring converges to the chiral CFT (Casimir $c_-{\to}8$, lowest scaled
 gap $x_1{\to}1$ with $|x_1{-}1|{\sim}1/N^2$). \mE\ the $\theta$ identity, the $120{+}128{=}248$ split and the
-finite-$L$ convergence, \mC\mO\ AGT/AMT (xxvi) supply the rigorous holomorphic extension. The full G-block
-arithmetic --- now including the (xxviii) winding obstruction and the (xxix) finite-Fock spinor counts --- is
-kernel-hardened in Lean (\texttt{FORM.SEAM.RESIDUAL.01}), and the two formerly separate cited theorems are
-\emph{merged} into one combined external axiom \texttt{seam\_realisation\_theorem}, so the residual reduces to ONE
-realisation axiom plus ONE cited theorem (\texttt{\#print axioms} drops from six to four). Across (v)--(xxix),
-\texttt{SEAM.EQUIV.01}
-stays \mO: every route reduces, audits or falsifies the residual without supplying the one cited
-continuum-existence theorem.
+finite-$L$ convergence, \mC\mO\ AGT/AMT (xxvi) supply the rigorous holomorphic extension. \emph{(xxx) The $c{=}8$
+holomorphic-uniqueness pin} (\veri{v463\_seam\_c8\_holomorphic\_uniqueness.py}): the positive lever that makes the
+\emph{identification} half classification-forced rather than assumed. At level $1$ the central charge
+$c{=}\dim\mathfrak g/(1{+}h^\vee){=}8$ has \emph{three} simple solutions --- $A_8$ ($\dim 80$), $D_8{=}\mathfrak{so}(16)$
+($\dim 120$) and $E_8$ ($\dim 248$) --- so $c{=}8$ is necessary but \emph{not} sufficient, and the $\det K{=}4$
+$SO(16)$ rival of (xxiii) is a genuine same-$c$ competitor, not a strawman. But a holomorphic (single-sector) $c{=}8$
+theory has an $SL(2,\mathbb Z)$-covariant character, and the only weight-$0$ form with leading $q^{-1/3}$ and integer
+coefficients is $j^{1/3}{=}E_4/\eta^8$, whose $q^1$ coefficient (the one-dimensional candidate space, vacuum $a_0{=}1$)
+is $248$ --- so $\dim V_1{=}248$ is \emph{forced}, selecting $E_8$ uniquely and excluding $A_8$/$D_8$. \mE\ the three
+candidates, the forced $248$, the tower $\{1,248,4124,34752,213126\}{=}E_4/\eta^8{=}j^{1/3}$; \mC\ Dong--Mason/
+Schellekens give the holomorphic $c{=}8$ VOA unique $={}V_{E_8}$ (the even unimodular rank-$8$ lattice unique $={}E_8$,
+Mordell--Witt), so ``$c{=}8$ holomorphic limit $={}(E_8)_1$'' is classification-forced. \emph{(xxxi) The one-particle
+realisation rigidity} (\veri{v464\_seam\_oneparticle\_rigidity.py}): attacking the \emph{realisation} input $R_1$
+itself. Since the seam is quasi-free (\vref{v113}/\vref{v160}/\vref{v161}), by Araki's self-dual CAR the whole net is
+the second quantisation of its one-particle symbol $P$, so $R_1$ collapses to a finite-per-mode statement about $P$:
+the gapped ground state is the \emph{unique} quasi-free state with $P{=}$ the spectral projection onto $K{<}0$
+($P^2{=}P$ to $<10^{-12}$, $K$ fixed by gap $+$ chirality $+$ reflection \vref{v426}); its real-space kernel is Cauchy
+on every fixed window ($\max|P_{2N}{-}P_N|{\sim}1/N{\to}0$, so $P_\infty$ exists), and the limit carries $c{=}1$ per
+Dirac (entanglement $S(L){=}(c/3)\ln L$, $16$ copies $\Rightarrow c_-{=}8$, tying \vref{v450}). \mE\ idempotency,
+Cauchy convergence and the $c$-fit; \mC\ Araki/Shale--Stinespring give the state$\leftrightarrow$symbol bijection and
+implementable Bogoliubov map, so $R_1$ is upgraded from a bald axiom to ``the unique quasi-free realisation, its
+one-particle limit exhibited, modulo the named CAR functor''. The full G-block
+arithmetic --- now including the (xxviii) winding obstruction, the (xxix) finite-Fock spinor counts and the (xxx)
+holomorphy selector --- is kernel-hardened in Lean (\texttt{FORM.SEAM.RESIDUAL.01}), and the two formerly separate
+cited theorems are \emph{merged} into one combined external axiom \texttt{seam\_realisation\_theorem}, so the residual
+reduces to ONE realisation axiom plus ONE cited theorem (\texttt{\#print axioms} drops from six to four). Across
+(v)--(xxxi), \texttt{SEAM.EQUIV.01}
+stays \mO: with (xxx) pinning the identification and (xxxi) reducing the realisation to its one-particle data, the
+residual is now \emph{entirely certification} --- a named, hypothesis-audited package of published theorems (MMST,
+AGT/AMT, Dong--Mason, Araki, Shale--Stinespring) with no open internal mechanism --- yet still rests on cited
+continuum-existence theorems we do not re-prove.
 \par\smallskip\noindent\textbf{The TOE/QFT closure contracts as three citable certificates
 (\veri{v398\_seam\_state\_rigidity.py}, \veri{v399\_gravity\_complete.py}, \veri{v401\_metrology\_closure.py}).}
 Three companion contracts package the closure status as named targets without fabricating any closure.

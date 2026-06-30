@@ -310,15 +310,24 @@ the one-sidedness that defines `c3=1/(8π)` (`v456`, so `S3` is a consequence of
 an exact hypothesis-by-hypothesis MMST citation audit (`v458`) isolates the single open piece to the
 `128`-spinor extension `SO(16)₁→(E8)₁` — which the complementary lattice-VOA route `A_{E8}` then
 *constructs* (`v459`, the `240` roots split `112+128`); a uniform-in-`N` Tomita–Takesaki tower (`v455`)
-lifts the intrinsic Bisognano–Wichmann condition `u_Θ=J`. Two follow-ups close the loose ends: the
+lifts the intrinsic Bisognano–Wichmann condition `u_Θ=J`. Four follow-ups close the loose ends: the
 strict-locality of the S3 realisation is *topologically forbidden*, not a missing premise (`v461`: the
 Wilson-loop/Wannier winding `= |C| = 1 ≠ 0`, so Kapustin–Fidkowski forbids any strictly finite-range
-commuting projector — the realisation is necessarily the quasi-local NPW26 LTO net), and the `128`-spinor
+commuting projector — the realisation is necessarily the quasi-local NPW26 LTO net); the `128`-spinor
 extension is exhibited at character level and as a finite-`L`→continuum convergence (`v462`: the Jacobi/E8
 identity `θ₂⁸+θ₃⁸+θ₄⁸=2E₄` makes `χ_{(E8)₁}=χ_o+χ_s`, `248=120+128`, with the lattice ring converging
-`c_-→8`). The whole G-block arithmetic is Lean-hardened as `FORM.SEAM.RESIDUAL.01`, now reducing the
+`c_-→8`); the *identification* is made classification-forced (`v463`: `c=8` has **three** level-1
+candidates `A8`/`D8`/`E8`, but holomorphy forces `dim V₁=E4/η⁸ q¹ coeff=248`, so only `E8` survives —
+Dong–Mason/Schellekens give the holomorphic `c=8` VOA unique `=V_{E8}`); and the *realisation* input `R1`
+is reduced to its one-particle data (`v464`: the seam being quasi-free makes its symbol `P` a unique
+idempotent whose scaling limit is exhibited — Cauchy kernel, entanglement `c→1`, `c_-=8` — so by
+Araki/Shale–Stinespring `R1` is the unique quasi-free realisation modulo the cited CAR functor). The whole
+G-block arithmetic is Lean-hardened as `FORM.SEAM.RESIDUAL.01`, now reducing the
 residual to *one* named TFPT-internal realisation axiom plus *one* combined cited theorem (the former
-`mmst_existence`∘`agt_lattice_extension` merged, so `#print axioms` drops from six to four). `QGEO.SYM.01` (the `μ₄` deck acting geometrically) is its
+`mmst_existence`∘`agt_lattice_extension` merged, so `#print axioms` drops from six to four). Across the
+whole G-block the residual is now *entirely certification* — a named, hypothesis-audited package of
+published theorems with no open internal mechanism — yet `SEAM.EQUIV.01` stays `[O]` because it still
+rests on cited continuum-existence theorems we do not re-prove. `QGEO.SYM.01` (the `μ₄` deck acting geometrically) is its
 **corollary** (`v335`, Lean `FORM.QGEO.BW.01`). `QG.AMB.01` is gap-decoupled from the general
 Euclidean-QG conformal-factor problem (margin `Δ_eff ≈ 1.648 > 0`, `v76`/`v330`).
 

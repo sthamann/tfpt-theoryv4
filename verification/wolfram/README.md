@@ -105,7 +105,7 @@ v84–v93 block passed **45/45** on first run; the v94–v140 blocks were added
 the same day, the v141–v144 block on 2026-06-12. Current state:
 
 ```
---- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462: 363 passed, 0 failed ---
+--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463: 365 passed, 0 failed ---
 ALL WOLFRAM EXTENSION CHECKS PASSED
 ```
 
@@ -132,6 +132,15 @@ forbidden; the Wilson-loop winding/Chern themselves are numerical, Python-only),
 `(E8)_1` weight-1 `248 = 120 + 128` with the finite 16-Majorana Fock counts
 `C(16,2)=120`, `2^{16/2}=256=128+128`; the finite-`L`→continuum convergence is
 Python-only).
+
+The 2026-06-30 `v463`/`v464` round adds 2 more exact mirrors (total `365/365`):
+`v463` (the `c=8` holomorphic-uniqueness pin — `c=8` has **three** level-1
+candidates `A8` (dim 80), `D8=SO(16)` (dim 120), `E8` (dim 248), all
+`dim = 8·(1+h^v)`, so `c=8` is necessary but **not** sufficient; holomorphy forces
+`dim V_1 = E4/η^8` `q^1` coeff `= 248 = dim E8`, excluding the gleich-`c` rivals
+`A8`/`D8`; the tower `{1,248,4124,34752,213126}` are the `E4/η^8` coefficients).
+`v464` (the one-particle realization rigidity — symbol idempotency, Cauchy kernel
+convergence, entanglement `c`-fit) is numerical, Python-only.
 
 (ledger `GATE.WOLFRAM.02`). The scipy-only parts of the round (the `v86`
 pivot ODE solve, the `v88` data pulls, the `v99` mpmath ODE probe of the

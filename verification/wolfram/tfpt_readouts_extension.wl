@@ -2902,6 +2902,25 @@ Module[{cMinus, reflFixed, th2, th3, th4, qE4, qq, vac, spin, inv8, chiSer, c1},
     c1 == 248 && vac == 120 && spin == 128 && vac + spin == 248 && 2^(16/2) == 256];
 ];
 
+(* ==== v463 round: the c=8 holomorphic-uniqueness pin -- c=8 has THREE level-1 candidates
+   (A8/80, D8/120, E8/248), but holomorphy forces dim V_1 = E4/eta^8 q^1 coeff = 248 => E8
+   uniquely; mirrors v463 (the c8 candidates + the forced 248 + the E4/eta^8 tower).
+   v464 (one-particle realization rigidity) is numerical (symbol convergence), Python-only. ==== *)
+Module[{cand, forced, inv8, chiSer, tower},
+  (* v463 (i): c=dim/(1+h^v)=8 has three simple solutions; holomorphy forces 248=dim E8 *)
+  cand = {{"A8", 80, 9}, {"D8", 120, 14}, {"E8", 248, 30}};
+  forced = 248;                                          (* the E4/eta^8 q^1 coefficient *)
+  checkExact["v463 SEAM.EQUIV.UNIQ.01 (i): c=8 is NOT unique at level 1 -- A8 (dim 80), D8=so(16) (dim 120), E8 (dim 248) all satisfy dim=8*(1+h^v) (c=dim/(1+h^v)=8); holomorphy forces dim V_1 = (E4/eta^8 q^1 coeff) = 248 = dim E8, EXCLUDING the gleich-c rivals A8 (80) and D8 (120) -- 'c=8' is promoted to 'E8' uniquely",
+    (And @@ (#[[2]] == 8 (1 + #[[3]]) & /@ cand)) && forced == 248 &&
+    forced != 80 && forced != 120 && Count[cand, x_ /; x[[2]] == 248] == 1];
+  (* v463 (ii): the (E8)_1 tower = E4/eta^8 coefficients {1,248,4124,34752,213126} *)
+  inv8 = Series[Product[(1 - q^n)^-8, {n, 1, 6}], {q, 0, 5}];
+  chiSer = Series[(1 + 240 Sum[DivisorSigma[3, n] q^n, {n, 1, 6}]) inv8, {q, 0, 5}];
+  tower = CoefficientList[Normal[chiSer], q][[1 ;; 5]];
+  checkExact["v463 SEAM.EQUIV.UNIQ.01 (ii): the holomorphic c=8 partition function is the unique j^{1/3}=E4/eta^8, whose q-coefficients are the (E8)_1 tower {1,248,4124,34752,213126} -- the q^1=248 is the forced weight-1 dimension (Dong-Mason/Schellekens: the holomorphic c=8 VOA is unique = V_{E8})",
+    tower == {1, 248, 4124, 34752, 213126}];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

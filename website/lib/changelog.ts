@@ -47,6 +47,895 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "c",
+        "v": "v463"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v464"
+      },
+      {
+        "k": "t",
+        "v": " + Lean + Wolfram — the "
+      },
+      {
+        "k": "m",
+        "v": "c{=}8"
+      },
+      {
+        "k": "t",
+        "v": " holomorphic-uniqueness pin and the one-particle realisation rigidity: the "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.EQUIV.01"
+      },
+      {
+        "k": "t",
+        "v": " residual reduced to "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "entirely certification"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " on both halves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "The bird's-eye reframing."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The recent G-block modules all sharpened the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "target"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " of the scaling limit; this round attacks the two halves that actually remain. The "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "continuum existence"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " is already citable ("
+        },
+        {
+          "k": "c",
+          "v": "v458"
+        },
+        {
+          "k": "t",
+          "v": " MMST "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v459"
+        },
+        {
+          "k": "t",
+          "v": " AGT/AMT); what was implicit was (B) "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "why"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " a "
+        },
+        {
+          "k": "m",
+          "v": "c{=}8"
+        },
+        {
+          "k": "t",
+          "v": " holomorphic limit must be "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": ", and (A) the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "realisation"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " input "
+        },
+        {
+          "k": "m",
+          "v": "R_1"
+        },
+        {
+          "k": "t",
+          "v": " that the abstract seam IS the concrete quasi-free collar. "
+        },
+        {
+          "k": "c",
+          "v": "v463"
+        },
+        {
+          "k": "t",
+          "v": " closes B; "
+        },
+        {
+          "k": "c",
+          "v": "v464"
+        },
+        {
+          "k": "t",
+          "v": " reduces A to its one-particle data."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v463_seam_c8_holomorphic_uniqueness.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EQUIV.UNIQ.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The "
+        },
+        {
+          "k": "m",
+          "v": "c{=}8"
+        },
+        {
+          "k": "t",
+          "v": " holomorphic-uniqueness pin. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "c{=}8"
+        },
+        {
+          "k": "t",
+          "v": " is NOT unique at level "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "c{=}\\dim\\mathfrak g/(1{+}h^\\vee){=}8"
+        },
+        {
+          "k": "t",
+          "v": " has THREE simple solutions "
+        },
+        {
+          "k": "m",
+          "v": "A_8"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\dim 80"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "D_8{=}\\mathfrak{so}(16)"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\dim 120"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\dim 248"
+        },
+        {
+          "k": "t",
+          "v": "), so the "
+        },
+        {
+          "k": "m",
+          "v": "\\det K{=}4"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "SO(16)"
+        },
+        {
+          "k": "t",
+          "v": " rival is a genuine same-"
+        },
+        {
+          "k": "m",
+          "v": "c"
+        },
+        {
+          "k": "t",
+          "v": " competitor. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "HOLOMORPHY FORCES "
+        },
+        {
+          "k": "m",
+          "v": "\\dim V_1{=}248"
+        },
+        {
+          "k": "t",
+          "v": ": the only weight-"
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " form with leading "
+        },
+        {
+          "k": "m",
+          "v": "q^{-1/3}"
+        },
+        {
+          "k": "t",
+          "v": " and integer coefficients is "
+        },
+        {
+          "k": "m",
+          "v": "j^{1/3}{=}E_4/\\eta^8"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "q^1"
+        },
+        {
+          "k": "t",
+          "v": " coefficient "
+        },
+        {
+          "k": "m",
+          "v": "248"
+        },
+        {
+          "k": "t",
+          "v": " (the "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": "-dim candidate space, vacuum "
+        },
+        {
+          "k": "m",
+          "v": "a_0{=}1"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "\\dim 248 +"
+        },
+        {
+          "k": "t",
+          "v": " level-"
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "c{=}8 \\Rightarrow E_8"
+        },
+        {
+          "k": "t",
+          "v": " uniquely ("
+        },
+        {
+          "k": "m",
+          "v": "248/(1{+}30){=}8"
+        },
+        {
+          "k": "t",
+          "v": "); tower "
+        },
+        {
+          "k": "m",
+          "v": "\\{1,248,4124,34752,213126\\}{=}E_4/\\eta^8{=}j^{1/3}"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "Dong–Mason/Schellekens: the holomorphic "
+        },
+        {
+          "k": "m",
+          "v": "c{=}8"
+        },
+        {
+          "k": "t",
+          "v": " VOA is unique "
+        },
+        {
+          "k": "m",
+          "v": "={}V_{E_8}"
+        },
+        {
+          "k": "t",
+          "v": " (even unimodular rank-"
+        },
+        {
+          "k": "m",
+          "v": "8"
+        },
+        {
+          "k": "t",
+          "v": " lattice unique "
+        },
+        {
+          "k": "m",
+          "v": "={}E_8"
+        },
+        {
+          "k": "t",
+          "v": ", Mordell–Witt) — so the identification half is classification-forced."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v464_seam_oneparticle_rigidity.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EQUIV.ONEPARTICLE.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The one-particle rigidity attacking "
+        },
+        {
+          "k": "m",
+          "v": "R_1"
+        },
+        {
+          "k": "t",
+          "v": ". The seam is quasi-free ("
+        },
+        {
+          "k": "c",
+          "v": "v113"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v160"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v161"
+        },
+        {
+          "k": "t",
+          "v": "), so by Araki self-dual CAR the net is the second quantisation of its one-particle symbol "
+        },
+        {
+          "k": "m",
+          "v": "P"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "RIGIDITY: the gapped ground state is the UNIQUE quasi-free state with "
+        },
+        {
+          "k": "m",
+          "v": "P{=}"
+        },
+        {
+          "k": "t",
+          "v": " projection onto "
+        },
+        {
+          "k": "m",
+          "v": "K{<}0"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "P^2{=}P"
+        },
+        {
+          "k": "t",
+          "v": " to "
+        },
+        {
+          "k": "m",
+          "v": "<10^{-12}"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "K"
+        },
+        {
+          "k": "t",
+          "v": " fixed by gap "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " chirality "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " reflection ("
+        },
+        {
+          "k": "c",
+          "v": "v426"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "ONE-PARTICLE LIMIT EXISTS: the kernel is Cauchy on a fixed window ("
+        },
+        {
+          "k": "m",
+          "v": "\\max|P_{2N}{-}P_N|{\\sim}1/N{\\to}0"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the limit is "
+        },
+        {
+          "k": "m",
+          "v": "c{=}1"
+        },
+        {
+          "k": "t",
+          "v": " Dirac: entanglement "
+        },
+        {
+          "k": "m",
+          "v": "S(L){=}(c/3)\\ln L"
+        },
+        {
+          "k": "t",
+          "v": " gives "
+        },
+        {
+          "k": "m",
+          "v": "c{\\to}1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "16"
+        },
+        {
+          "k": "t",
+          "v": " copies "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow c_-{=}8"
+        },
+        {
+          "k": "t",
+          "v": " (ties "
+        },
+        {
+          "k": "c",
+          "v": "v450"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "Shale–Stinespring makes the Bogoliubov map implementable, so "
+        },
+        {
+          "k": "m",
+          "v": "R_1"
+        },
+        {
+          "k": "t",
+          "v": " is upgraded from a bald axiom to “the unique quasi-free realisation, modulo the named CAR functor”. Python-only (numpy)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Lean ("
+            },
+            {
+              "k": "c",
+              "v": "SeamResidualAxiom.lean"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Adds the "
+        },
+        {
+          "k": "c",
+          "v": "v463"
+        },
+        {
+          "k": "t",
+          "v": " kernel facts "
+        },
+        {
+          "k": "c",
+          "v": "c8_three_candidates"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "A_8/D_8/E_8"
+        },
+        {
+          "k": "t",
+          "v": " each "
+        },
+        {
+          "k": "m",
+          "v": "\\dim{=}8(1{+}h^\\vee)"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "c",
+          "v": "holomorphy_selects_e8"
+        },
+        {
+          "k": "t",
+          "v": " (forced "
+        },
+        {
+          "k": "m",
+          "v": "\\dim V_1{=}248{=}E_8 \\neq 80,120"
+        },
+        {
+          "k": "t",
+          "v": ") to "
+        },
+        {
+          "k": "c",
+          "v": "residual_arithmetic"
+        },
+        {
+          "k": "t",
+          "v": " (still "
+        },
+        {
+          "k": "c",
+          "v": "[propext]"
+        },
+        {
+          "k": "t",
+          "v": "-only); "
+        },
+        {
+          "k": "c",
+          "v": "v464"
+        },
+        {
+          "k": "t",
+          "v": " is numerical. "
+        },
+        {
+          "k": "c",
+          "v": "#print axioms seamResidualClosed"
+        },
+        {
+          "k": "t",
+          "v": " still lists exactly FOUR axioms."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Wolfram + integration."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v463"
+        },
+        {
+          "k": "t",
+          "v": " mirrored (the three candidates, the forced "
+        },
+        {
+          "k": "m",
+          "v": "248"
+        },
+        {
+          "k": "t",
+          "v": ", the "
+        },
+        {
+          "k": "m",
+          "v": "E_4/\\eta^8"
+        },
+        {
+          "k": "t",
+          "v": " tower); the extension count is now "
+        },
+        {
+          "k": "m",
+          "v": "365/365"
+        },
+        {
+          "k": "t",
+          "v": ". Integrated across the contracts paper (attacks (xxx)/(xxxi)), README, zenodo, ledger and website. Net effect: across (v)–(xxxi) the "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " residual is now "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "entirely certification"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " — a named, hypothesis-audited package (MMST, AGT/AMT, Dong–Mason, Araki, Shale–Stinespring) with no open internal mechanism — yet "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "because it still rests on cited continuum-existence theorems we do not re-prove."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-30",
+    "dateLabel": "2026-06-30",
+    "heading": [
+      {
+        "k": "c",
         "v": "v461"
       },
       {

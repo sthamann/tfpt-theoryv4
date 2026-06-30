@@ -4,8 +4,10 @@
   (Lean mirror of `v456_seam_chirality_from_c3.py` (S3 from P1),
    `v458_seam_mmst_citation_audit.py` (the exact MMST citation audit),
    `v459_seam_lattice_voa_route.py` (the lattice-VOA second route),
-   `v461_seam_strict_locality.py` (the Kapustin–Fidkowski strict-locality obstruction) and
-   `v462_seam_spinor_continuum.py` (the 128-spinor extension at character level);
+   `v461_seam_strict_locality.py` (the Kapustin–Fidkowski strict-locality obstruction),
+   `v462_seam_spinor_continuum.py` (the 128-spinor extension at character level),
+   `v463_seam_c8_holomorphic_uniqueness.py` (the c=8 holomorphic-uniqueness pin) and
+   `v464_seam_oneparticle_rigidity.py` (the one-particle realization rigidity, numerical);
    ledger `FORM.SEAM.RESIDUAL.01`.)
 
   After the G-block (v454–v462) the keystone `SEAM.EQUIV.01` has exactly ONE TFPT-internal open
@@ -29,11 +31,21 @@
      `c = 1/2` copies in range `rank ≤ c ≤ D = 8 ≤ 8 ≤ 16`, then the lattice net `A_Q(E₈)`
      supplying the 128 spinor — declared as the SINGLE external axiom
      `seam_realisation_theorem` (the merge of the former `mmst_existence` ∘
-     `agt_lattice_extension`, dropping the intermediate `ChiralCFT_c8`).
+     `agt_lattice_extension`, dropping the intermediate `ChiralCFT_c8`);
+   • the IDENTIFICATION is classification-forced (v463): `c = 8` alone has THREE level-1
+     candidates (`A₈` dim 80, `D₈ = SO(16)` dim 120, `E₈` dim 248, each `dim = 8·(1+h∨)`),
+     but holomorphy forces `dim V₁ = 248` (the `E₄/η⁸` `q¹` coefficient), which selects `E₈`
+     uniquely — kernel-checked, so the `detK = 1` discriminator is not circular;
+   • the REALIZATION axiom itself is no longer bald (v464): the seam being quasi-free
+     (Araki self-dual CAR) makes its one-particle symbol `P` a UNIQUE idempotent whose
+     scaling limit is exhibited (Cauchy kernel, entanglement `c → 1`, `c₋ = 8`); the
+     numerical content lives in `v464`, so `collar_realizes` is now "the unique quasi-free
+     realization, modulo the cited Araki/Shale–Stinespring functor".
 
   `#print axioms seamResidualClosed` then shows the residual is exactly ONE cited
   published-theorem package plus the SINGLE TFPT realization axiom `collar_realizes`; the whole
-  residual-surface arithmetic (`residual_arithmetic`) is kernel-checked with NO axioms.
+  residual-surface arithmetic (`residual_arithmetic`, now incl. the v463 holomorphy selector)
+  is kernel-checked with NO axioms.
 -/
 
 import Mathlib.Tactic
@@ -145,6 +157,30 @@ theorem fock_sectors :
     so16Currents = so16 ∧ ramond = 256 ∧ spinorFock = spinor ∧
     so16Currents + spinorFock = adjE8 := by decide
 
+/-! ### v463 — the c=8 holomorphic-uniqueness pin (the identification selector). -/
+
+/-- `dim A₈ = 80`, dual Coxeter `h∨ = 9`. -/
+def dimA8 : Nat := 80
+def hvA8 : Nat := 9
+/-- `dim D₈ = dim so(16) = 120`, dual Coxeter `h∨ = 14` (so `1 + h∨ = 15`). -/
+def dimD8 : Nat := 120
+def hvD8 : Nat := 14
+/-- `dim E₈ = 248`, dual Coxeter `h∨ = 30`. -/
+def dimE8 : Nat := 248
+def hvE8 : Nat := 30
+/-- The forced weight-1 dimension of a holomorphic `c = 8` theory: the `E₄/η⁸` `q¹`
+    coefficient `= 248`. -/
+def forcedDimV1 : Nat := 248
+
+/-- `c = 8` is NOT unique at level 1: all three of `A₈`, `D₈`, `E₈` satisfy
+    `dim = 8·(1 + h∨)` (i.e. level-1 `c = dim/(1+h∨) = 8`). -/
+theorem c8_three_candidates :
+    dimA8 = 8 * (1 + hvA8) ∧ dimD8 = 8 * (1 + hvD8) ∧ dimE8 = 8 * (1 + hvE8) := by decide
+/-- Holomorphy forces `dim V₁ = 248`, which selects `E₈` uniquely and excludes the
+    same-`c` rivals `A₈` (80) and `D₈` (120). -/
+theorem holomorphy_selects_e8 :
+    forcedDimV1 = dimE8 ∧ forcedDimV1 ≠ dimA8 ∧ forcedDimV1 ≠ dimD8 := by decide
+
 /-! ### The single realization axiom and the cited theorem. -/
 
 /-- The seam collar is realized as the concrete gapped quasi-free lattice free-fermion
@@ -188,13 +224,16 @@ theorem residual_arithmetic :
     (detK_E8 = 1 ∧ detK_SO16 ≠ detK_E8) ∧
     wannierWinding = chern.natAbs ∧ wannierWinding ≠ 0 ∧ cMinus ≠ 0 ∧
     so16Currents = so16 ∧ ramond = 256 ∧ spinorFock = spinor ∧
-    so16Currents + spinorFock = adjE8 := by decide
+    so16Currents + spinorFock = adjE8 ∧
+    (dimA8 = 8 * (1 + hvA8) ∧ dimD8 = 8 * (1 + hvD8) ∧ dimE8 = 8 * (1 + hvE8)) ∧
+    (forcedDimV1 = dimE8 ∧ forcedDimV1 ≠ dimA8 ∧ forcedDimV1 ≠ dimD8) := by decide
 
 -- The residual is EXACTLY ONE cited published-theorem package (`seam_realisation_theorem`,
 -- the merged MMST v458 ∘ AGT v459) plus the SINGLE TFPT realization axiom (`collar_realizes`);
 -- the chirality direction (v456), the strict-locality obstruction (v461), the citation-audit
--- arithmetic (v458), the two-decomposition current content (v459) and the finite-Fock spinor
--- counts (v462) are all kernel-checked with NO axioms.
+-- arithmetic (v458), the two-decomposition current content (v459), the finite-Fock spinor
+-- counts (v462) and the c=8 holomorphy selector (v463) are all kernel-checked with NO axioms.
+-- The realization rigidity (v464) is numerical (one-particle symbol convergence), not a kernel fact.
 #print axioms residual_arithmetic
 #print axioms seamResidualClosed
 

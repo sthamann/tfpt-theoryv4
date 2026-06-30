@@ -60,6 +60,43 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-30 (\texttt{v463}/\texttt{v464} + Lean + Wolfram --- the $c{=}8$ holomorphic-uniqueness pin and the one-particle realisation rigidity: the \texttt{SEAM.EQUIV.01} residual reduced to \emph{entirely certification} on both halves)}
+\begin{itemize}
+\item \textbf{The bird's-eye reframing.} The recent G-block modules all sharpened the \emph{target} of the
+scaling limit; this round attacks the two halves that actually remain. The \emph{continuum existence} is already
+citable (\texttt{v458} MMST $+$ \texttt{v459} AGT/AMT); what was implicit was (B) \emph{why} a $c{=}8$ holomorphic
+limit must be $(E_8)_1$, and (A) the \emph{realisation} input $R_1$ that the abstract seam IS the concrete quasi-free
+collar. \texttt{v463} closes B; \texttt{v464} reduces A to its one-particle data.
+\item \textbf{\texttt{v463\_seam\_c8\_holomorphic\_uniqueness.py} (\texttt{SEAM.EQUIV.UNIQ.01}).} The $c{=}8$
+holomorphic-uniqueness pin. \mE\ $c{=}8$ is NOT unique at level $1$: $c{=}\dim\mathfrak g/(1{+}h^\vee){=}8$ has THREE
+simple solutions $A_8$ ($\dim 80$), $D_8{=}\mathfrak{so}(16)$ ($\dim 120$), $E_8$ ($\dim 248$), so the $\det K{=}4$
+$SO(16)$ rival is a genuine same-$c$ competitor. \mE\ HOLOMORPHY FORCES $\dim V_1{=}248$: the only weight-$0$ form with
+leading $q^{-1/3}$ and integer coefficients is $j^{1/3}{=}E_4/\eta^8$, $q^1$ coefficient $248$ (the $1$-dim candidate
+space, vacuum $a_0{=}1$). \mE\ $\dim 248 + $ level-$1$ $c{=}8 \Rightarrow E_8$ uniquely ($248/(1{+}30){=}8$);
+tower $\{1,248,4124,34752,213126\}{=}E_4/\eta^8{=}j^{1/3}$. \mC\ Dong--Mason/Schellekens: the holomorphic $c{=}8$ VOA is
+unique $={}V_{E_8}$ (even unimodular rank-$8$ lattice unique $={}E_8$, Mordell--Witt) --- so the identification half is
+classification-forced.
+\item \textbf{\texttt{v464\_seam\_oneparticle\_rigidity.py} (\texttt{SEAM.EQUIV.ONEPARTICLE.01}).} The one-particle
+rigidity attacking $R_1$. The seam is quasi-free (\texttt{v113}/\texttt{v160}/\texttt{v161}), so by Araki self-dual
+CAR the net is the second quantisation of its one-particle symbol $P$. \mE\ RIGIDITY: the gapped ground state is the
+UNIQUE quasi-free state with $P{=}$ projection onto $K{<}0$ ($P^2{=}P$ to $<10^{-12}$), $K$ fixed by gap $+$ chirality
+$+$ reflection (\texttt{v426}). \mE\ ONE-PARTICLE LIMIT EXISTS: the kernel is Cauchy on a fixed window
+($\max|P_{2N}{-}P_N|{\sim}1/N{\to}0$). \mE\ the limit is $c{=}1$ Dirac: entanglement $S(L){=}(c/3)\ln L$ gives
+$c{\to}1$, $16$ copies $\Rightarrow c_-{=}8$ (ties \texttt{v450}). \mC\ Shale--Stinespring makes the Bogoliubov map
+implementable, so $R_1$ is upgraded from a bald axiom to ``the unique quasi-free realisation, modulo the named CAR
+functor''. Python-only (numpy).
+\item \textbf{Lean (\texttt{SeamResidualAxiom.lean}).} Adds the \texttt{v463} kernel facts
+\texttt{c8\_three\_candidates} ($A_8/D_8/E_8$ each $\dim{=}8(1{+}h^\vee)$) and \texttt{holomorphy\_selects\_e8}
+(forced $\dim V_1{=}248{=}E_8 \neq 80,120$) to \texttt{residual\_arithmetic} (still \texttt{[propext]}-only); \texttt{v464}
+is numerical. \texttt{\#print axioms seamResidualClosed} still lists exactly FOUR axioms.
+\item \textbf{Wolfram + integration.} \texttt{v463} mirrored (the three candidates, the forced $248$, the $E_4/\eta^8$
+tower); the extension count is now $365/365$. Integrated across the contracts paper (attacks (xxx)/(xxxi)), README,
+zenodo, ledger and website. Net effect: across (v)--(xxxi) the \texttt{SEAM.EQUIV.01} residual is now \emph{entirely
+certification} --- a named, hypothesis-audited package (MMST, AGT/AMT, Dong--Mason, Araki, Shale--Stinespring) with no
+open internal mechanism --- yet \texttt{SEAM.EQUIV.01} stays \mO\ because it still rests on cited continuum-existence
+theorems we do not re-prove.
+\end{itemize}
+
 \subsection*{2026-06-30 (\texttt{v461}/\texttt{v462} + Lean axiom merge --- the strict-locality obstruction made explicit, the 128-spinor extension exhibited at character level, and the \texttt{SEAM.EQUIV.01} residual reduced to ONE realisation axiom $+$ ONE combined cited theorem)}
 \begin{itemize}
 \item \textbf{\texttt{v461\_seam\_strict\_locality.py} (\texttt{SEAM.S3.LOCALITY.01}).} Sharpens \texttt{v460}'s verdict
