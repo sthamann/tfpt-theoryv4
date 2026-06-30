@@ -29,8 +29,11 @@ import numpy as np
 
 from .chime import read_chime_profile
 from .comb import LAMBDA, MIN_COMB_PERIODS, OMEGA, run_comb, stacked_comb_test
+from .ent import DATA as ENT_DIR
+from .ent import bin_ln_t, read_ent_curves
 from .grb import DATA as GRB_DIR
 from .grb import read_grb_csv
+from .quake import IDIO, TFPT_LAMBDAS, _omega, _stacked_at
 
 DATA = Path(__file__).resolve().parents[2] / "data"
 FRB_WATERFALLS = (Path(__file__).resolve().parents[3]
@@ -391,6 +394,127 @@ def channel_a4_grb() -> Channel:
                    head + detail + tail, agg)
 
 
+# --------------------------------------------------------------------------- A5 nuclear transient
+def lambda_battery(t: np.ndarray, rec: np.ndarray, *, seed: int = 19) -> tuple[dict, float, int]:
+    """The full TFPT log-period battery on ONE recovery curve (the quake-style test, single-curve):
+    at every TFPT ratio lambda the comb gain at omega=2pi/ln(lambda) is ranked against its matched
+    off-kernel pool, with a PER-lambda ln-range + Nyquist gate, and a Bonferroni look-elsewhere
+    correction over the gated lambdas. Returns (battery, global_p, n_gated). The single (3/2)^6
+    kernel is range-blind on a ~3-period fade, but the small-lambda entries (3/2, phi, 2, 3, ...)
+    are well sampled, so this is the realistic multi-scale test for a single light curve."""
+    battery: dict = {}
+    for label, lam in TFPT_LAMBDAS.items():
+        res = _stacked_at([(np.asarray(t, float), np.asarray(rec, float))], _omega(lam), seed=seed)
+        battery[label] = {"lambda": round(lam, 4), "omega": round(_omega(lam), 3),
+                          "idio": label in IDIO, **res}
+    tested = [v for v in battery.values() if v["n_used"] > 0]
+    min_p = min((v["p_value"] for v in tested), default=1.0)
+    m_eff = max(1, len(tested))
+    return battery, round(min(1.0, min_p * m_eff), 4), m_eff
+
+
+def channel_a5_nuclear_transient() -> Channel:
+    """Extreme/ambiguous nuclear transient (AGN-disk TDE) optical FADE -- the years-long, wide-ln(t)
+    SINGLE recovery curve the comb search is starved for (e.g. J2245+3743: ZTF zr fade ~3.2 comb
+    periods, clearing the >2.8 gate the ms FRB tails cannot). Legitimacy 'surface': an
+    accretion/central-engine relaxation, NOT a horizon recovery (identical firewall to A1/A4) -- a
+    comb here is a universal-DSI coincidence, a NULL is the informative outcome. Each band of each
+    ENT in ``data/ent/*.csv`` -> y=ln(flux) vs t since the brightest epoch, binned in ln(t); the
+    kernel omega=2.58 is tested per band, the full TFPT-lambda battery on the widest-range band, and
+    (if >=2 distinct sources clear the gate) a cross-source phase-incoherent stack. Get data with
+    ``tfpt-combdomains fetch-ent``."""
+    files = sorted(ENT_DIR.glob("*.csv")) if ENT_DIR.exists() else []
+    entries: list[tuple[dict, np.ndarray, np.ndarray]] = []
+    for fpath in files:
+        for band, t, rec in read_ent_curves(fpath):
+            tb, yb = bin_ln_t(t, rec)
+            if len(tb) < 6:
+                continue
+            res = run_comb(tb, yb)
+            res["source"] = fpath.stem
+            res["band"] = band
+            res["n_epochs"] = int(len(t))
+            entries.append((res, tb, yb))
+
+    if not entries:
+        return Channel(
+            "A5", "nuclear transient (AGN-disk TDE) optical fade", "surface", "data_limited",
+            "NO data yet. FETCH: `tfpt-combdomains fetch-ent` pulls public ZTF DR light curves "
+            "(IRSA, anonymous) for the curated ENT list (J2245+3743 = AGN J224554.84+374326.5, "
+            "z=2.554) into data/ent/<name>.csv (mjd,mag,magerr,band). A years-long ENT fade is a "
+            "WIDE-ln(t) single recovery curve (clears the >2.8-period gate the ms FRB tails cannot); "
+            "accretion/central-engine relaxation (surface firewall), not a horizon recovery.")
+
+    per = [e[0] for e in entries]
+    gated = [e for e in entries if e[0]["range_sufficient"]]
+
+    battery: dict | None = None
+    bat_global_p = 1.0
+    bat_curve = None
+    headline = None
+    if gated:
+        headline = max(gated, key=lambda e: e[0]["comb_periods"])
+        battery, bat_global_p, _ = lambda_battery(headline[1], headline[2])
+        bat_curve = f"{headline[0]['source']}:{headline[0]['band']}"
+
+    # cross-source stack (independent phase) only across DISTINCT sources, not bands of one event
+    src_best: dict[str, tuple[dict, np.ndarray, np.ndarray]] = {}
+    for e in gated:
+        s = e[0]["source"]
+        if s not in src_best or e[0]["comb_periods"] > src_best[s][0]["comb_periods"]:
+            src_best[s] = e
+    stack = stacked_comb_test([(e[1], e[2]) for e in src_best.values()]) if len(src_best) >= 2 \
+        else None
+
+    n_src = len({p["source"] for p in per})
+    head = (f"REAL ZTF data: {len(per)} per-band fade curve(s) across {n_src} nuclear transient(s); "
+            f"{len(gated)} clear the ln-range gate (>= {MIN_COMB_PERIODS} comb periods). ")
+    detail = "; ".join(
+        f"{p['source']}:{p['band']} ({p['n_epochs']} epochs, periods={p['comb_periods']}, "
+        f"p={p['p_value']}" + ("" if p["range_sufficient"] else ", <gate: range-blind, EXCLUDED")
+        + ")" for p in per)
+    if headline is not None:
+        h = headline[0]
+        tail = (f". KERNEL omega={OMEGA:.2f} on the widest band ({h['source']}:{h['band']}, "
+                f"{h['comb_periods']} periods): "
+                + (f"SPECIAL (p={h['p_value']}) -> ESCALATE (independent cross-check first)"
+                   if h["comb_detected"]
+                   else f"NOT special (p={h['p_value']}) -> clean NULL")
+                + f". TFPT-lambda battery (Bonferroni over gated ratios): global p={bat_global_p}"
+                + (" -> a TFPT log-period survives look-elsewhere -> ESCALATE"
+                   if bat_global_p < 0.05 else " -> no TFPT log-period is special (NULL)")
+                + ". Firewall: AGN-disk TDE = accretion/central-engine relaxation, NOT a horizon "
+                  "recovery -> any hit is a universal-DSI coincidence, never TFPT confirmation; this "
+                  "wide-ln(t) NULL is well-powered, not data-limited.")
+        if stack and stack["n_used"]:
+            tail += (f" Cross-source stack ({stack['n_used']} ENTs): kernel omega "
+                     + ("SPECIAL" if stack["comb_detected"] else "NOT special")
+                     + f" (p={stack['p_value']}).")
+    else:
+        tail = (". No band clears the ln-range gate -> RANGE-LIMITED (the single (3/2)^6 kernel "
+                "needs >2.8 periods; the small-lambda battery still applies but a longer/denser fade "
+                "or more ENTs are needed for the kernel comb).")
+    agg = {
+        "n_points": int(sum(p["n_points"] for p in per)),
+        "n_epochs": int(sum(p["n_epochs"] for p in per)),
+        "comb_periods": max(p["comb_periods"] for p in per),
+        "range_sufficient": bool(gated),
+        "gain": (headline[0]["gain"] if headline else 0.0),
+        "p_value": (headline[0]["p_value"] if headline else
+                    min((p["p_value"] for p in per), default=1.0)),
+        "comb_detected": bool(any(e[0]["comb_detected"] for e in gated)),
+        "omega": OMEGA,
+        "n_sources": n_src,
+        "per_band": per,
+        "lambda_battery": battery,
+        "lambda_battery_global_p": bat_global_p,
+        "lambda_battery_curve": bat_curve,
+        "stack": stack,
+    }
+    return Channel("A5", "nuclear transient (AGN-disk TDE) optical fade (ZTF)", "surface", "real",
+                   head + detail + tail, agg)
+
+
 # --------------------------------------------------------------------------- B4 BEC analog horizon
 def channel_b4_bec_analog() -> Channel:
     """BEC analog-horizon Hawking/Page recovery -- a laboratory horizon. The recovery-channel
@@ -428,6 +552,6 @@ class DomainReport:
 def all_channels() -> DomainReport:
     return DomainReport(OMEGA, LAMBDA, MIN_COMB_PERIODS, [
         channel_a1_magnetar(), channel_a2_bh_tail(), channel_a3_frb_tail(),
-        channel_a3b_chime_baseband(), channel_a4_grb(),
+        channel_a3b_chime_baseband(), channel_a4_grb(), channel_a5_nuclear_transient(),
         channel_b4_bec_analog(), channel_b5_quantum_ladder(),
     ])

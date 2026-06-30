@@ -892,7 +892,15 @@ Adamo--Moriwaki--Tanimoto OS reconstruction are declared as \emph{named cited ax
 $(E_8)_1$ follows by a well-typed composition whose \texttt{\#print axioms} pins the residual to exactly those
 two published theorems (plus the carrier gap), with no hidden assumption and no \texttt{sorry}. Every
 TFPT-internal hypothesis is thus kernel-checked; only the two cited theorems are assumed --- the honest
-closure ceiling for \texttt{SEAM.EQUIV.01}.
+closure ceiling for \texttt{SEAM.EQUIV.01}. \emph{Two of the seven convergent routes below are now
+kernel-hardened the same way:} \texttt{FORM.SEAM.BW.HSMI.01} (\texttt{TfptCarrier/SeamStandardPair.lean})
+proves the four Borchers/Wiesbrock \emph{standard-pair relations} exactly over $\mathbb{Z}$ on the centred
+ladder ($[K,P]{=}P$, $J^2{=}1$, $JKJ{=}{-}K$, $JPJ{=}P_+$, all by kernel \texttt{decide}, no domain axiom),
+with the cited Borchers step and the one continuum input as named axioms; and
+\texttt{FORM.SEAM.APPLICABILITY.01} (\texttt{TfptCarrier/SeamApplicabilityLedger.lean}) kernel-checks the audit
+\emph{count} itself --- of the $12$ cited-theorem hypotheses exactly $11$ are internal and $1$ external (and
+$8\le8\le16$, $\det K{=}1\neq4$), all axiom-free --- so the very bookkeeping the keystone's honesty rests on is
+machine-verified, leaving only the one named continuum fact open.
 \par\smallskip\noindent\textbf{TOE-roadmap follow-ups --- the keystone as a typed certificate, the bedrock
 modular form, and the gap-decoupled measure (\veri{v308\_seam\_equiv\_chain.py}, \veri{v309\_modular\_bedrock.py},
 \veri{v311\_gap\_decoupled\_measure.py}).} Three machine-checked steps push the keystone arc further.
@@ -931,14 +939,109 @@ Adamo--Giorgetti--Tanimoto (\texttt{arXiv:2508.07109}, 2025) --- every DHR repre
 extending a loop-group/Virasoro net is \emph{automatically} positive-energy and diffeomorphism-covariant ---
 defuses the old ``Bisognano--Wichmann presupposes the very covariance it should produce'' circularity (\vref{v215}):
 once the seam net is in hand, geometric covariance is a \emph{consequence}, not an input.
+\par\smallskip\noindent\textbf{Eleven convergent attacks on the one continuum residual --- intrinsic BW, a
+bulk continuum motor and its chiral-edge counterpart, the $\beta$-homotopy, the applicability audit, uniform
+rigidity with its forcing converse and the derivation of clock-invariance, an independent topological reading of
+the edge central charge, the four-point pinning of the external fact, and the kill tests
+(\veri{v438\_seam\_hsmi\_borchers.py}, \veri{v439\_seam\_lieb\_robinson.py}, \veri{v440\_seam\_lto\_rp\_beta.py},
+\veri{v441\_seam\_applicability\_ledger.py}, \veri{v442\_seam\_rigidity\_uniform.py},
+\veri{v443\_seam\_e8\_discriminator.py}, \veri{v444\_seam\_edge\_scaling.py},
+\veri{v445\_seam\_rigidity\_forcing.py}, \veri{v446\_seam\_clock\_invariance.py},
+\veri{v447\_seam\_edge\_chern.py}, \veri{v448\_seam\_edge\_fourpoint.py}).} None closes
+\texttt{SEAM.EQUIV.01}; together they ground the one continuum input on both its halves, reduce it to a single
+analytic fact and make the claim falsifiable.
+\emph{(v) The intrinsic Bisognano--Wichmann route} (\veri{v438\_seam\_hsmi\_borchers.py}): the seam supplies a
+Longo \emph{standard pair} / $+$half-sided modular inclusion --- a positive lightlike translation $P\ge0$, the
+boost $K$ with $[K,P]{=}P$ (the Borchers scaling $\Delta^{it}P\Delta^{-it}{=}e^{-t}P$), and a reflection
+$J$ with $JKJ{=}{-}K$, $JPJ{=}P_-$ --- so by Borchers' theorem the modular flow is geometric \emph{intrinsically},
+\emph{without} presupposing the rotation-covariance of the vacuum; \mE\ the ladder algebra and the $sl(2,\mathbb{R})$
+positivity (min eig $>0$, with the indefinite boost as control), \mC\ the synthesis, \mO\ assembling the finite
+algebra and the positive-energy rep into one continuum standard pair (the MMST/NPW26 wall). \emph{(vi) The
+continuum-existence motor} (\veri{v439\_seam\_lieb\_robinson.py}): the explicit $p{+}ip$ collar (\vref{v367}) has
+a uniform-in-$N$ gap, exponential clustering with $N$-independent $\xi$, and a finite Lieb--Robinson light cone, so
+by Nachtergaele--Sims its \emph{bulk} thermodynamic limit exists --- grounding the bulk half of the cited MMST
+existence in our model and narrowing the open step to the chiral massless \emph{edge} scaling limit;
+\mE\ gap/clustering/light-cone, \mC\ the lift, \mO\ the edge CFT. \emph{(vii) The $\beta$-homotopy}
+(\veri{v440\_seam\_lto\_rp\_beta.py}): the (LTO-RP)/BW data ($\Theta K\Theta{=}{-}K$, $[\rho,K]{=}0$) are
+$\beta$-independent, and along the whole path $C_\beta{=}1/(1{+}e^{\beta K})$ from the NPW26-proven \emph{trace}
+state ($\beta{=}0$) to the seam KMS state ($\beta{=}1$) every covariance is reflection-related, $\mu_4$-invariant
+and valid --- a norm-continuous, obstruction-free homotopy, upgrading the single point of \vref{v426} to a path
+argument for sub-step (ii). \emph{(viii) The applicability audit} (\veri{v441\_seam\_applicability\_ledger.py}):
+a hypothesis-by-hypothesis ledger of MMST/NPW26/Adamo finds $11$ of $12$ hypotheses are TFPT-internal computed
+facts (\mE) and exactly one is external --- the continuum existence of the chiral scaling limit ---
+covariance being an Adamo consequence, not an input; the keystone's external dependence is pinned to that one
+analytic fact. \emph{(ix) Uniform rigidity} (\veri{v442\_seam\_rigidity\_uniform.py}): the band-limited
+$\mu_4$-character rigidity of \vref{v398} is uniform in $N$ --- exact $4$-sector commutation to $N{=}256$, a
+uniform gap, and an $N$-independent clock-breaking lower bound $\|[\rho,V]\|{=}2$ --- so it is not a small-$N$
+artifact (the full-$L^2$ forcing stays \mO). \emph{(x) The kill tests} (\veri{v443\_seam\_e8\_discriminator.py}):
+mode~D of the closure-mode classification (\vref{v347}) as concrete \emph{falsifiable} discriminators against the
+nearest $c{=}8$ rival $SO(16)_1$ --- torus GSD $1$ vs $4$, level-$1$ currents $248$ vs $120$, lattice theta $240$
+vs $112$ norm-$2$ roots --- with $c{=}8$ alone unable to decide (\vref{v277}) and only $\det K{=}1$ (the genus-$1$
+statement, \vref{v90}) selecting $E_8$; a seam with GSD${>}1$ would falsify $(E_8)_1$. \mX\ the tests, \mO\ the
+realisation. \emph{(xi) The chiral-edge scaling motor} (\veri{v444\_seam\_edge\_scaling.py}): the counterpart of
+(vi) on the \emph{edge}, attacking exactly the chiral massless scaling limit that the bulk motor left open. On the
+same $p{+}ip$ collar (\vref{v367}/\vref{v368}) the lattice edge already carries the conformal data of a chiral
+$c{=}\tfrac12$ Majorana CFT --- a linear, chiral in-gap dispersion (velocity $v{\approx}0.98$, $R^2{=}0.9999$, with
+\emph{opposite} per-edge velocities), an \emph{algebraic} edge two-point $\sim r^{-\eta}$ with $\eta{\approx}1$
+(versus the \emph{exponential} bulk row and the exponential trivial-phase control), and a Cauchy-convergent
+scaling-collapse under refinement ($\eta{=}1.001{\pm}0.007$, successive spread $0.028{\to}0.013$) --- so the
+$16$-copy edge is a chiral $c_-{=}8$ $(E_8)_1$ CFT; \mE\ the kinematics, correlator and collapse, \mC\ the
+central-charge reading, \mO\ the rigorous uniform-convergence theorem (cited MMST). With (vi) for the bulk and
+(xi) for the edge, \emph{both halves} of the one continuum residual are numerically grounded and pinned to a single
+cited theorem. \emph{(xii) The rigidity forcing converse} (\veri{v445\_seam\_rigidity\_forcing.py}): the converse
+of (ix), upgrading rigidity from ``block-diagonal \emph{permits} commuting'' to ``commuting with the order-$4$
+clock \emph{forces} block-diagonal''. For $\rho{=}\operatorname{diag}(i^n)$, $[\rho,K]{=}0$ \emph{iff}
+$K_{ij}{=}0$ whenever $i{\not\equiv}j\bmod4$ (verified entrywise, swept $N{=}4..128$), so the commutant is
+\emph{exactly} the $4$-sector block algebra: $\dim\{K:[\rho,K]{=}0\}{=}\sum_s n_s^2$, a proper subspace of the
+full $N^2$ algebra ($N{=}16$: $64{<}256$); every off-block unit has $\|[\rho,E_{ij}]\|{\ge}\sqrt2$ (zero slack),
+and the order-$2$ clock leaves a strictly larger commutant ($64$ vs $128$) --- the \emph{four} Gauss--Bonnet marks
+(order $4{=}|\mu_4|{=}h(A_3)$) force strictly more structure than two, and only the index-$4$ extension is $(E_8)_1$
+($\det{=}1$, \vref{v281}/\vref{v154}/\vref{v351}). \mE\ the entrywise iff, exact commutant dimension, off-block
+sharpness and order discriminator; \mC\ the synthesis (RP-definability $+$ clock-invariance \emph{force} the
+block-diagonal $\Lambda_\Sigma$, \vref{v442}'s ``permit'' upgraded to ``force''); \mO\ the single residual is now
+precisely that the physical transfer lies in the commutant (clock-invariance $=$ \texttt{QGEO.SYM.01},
+\vref{v323}/\vref{v335}). \emph{(xiii) Clock-invariance derived} (\veri{v446\_seam\_clock\_invariance.py}): closing
+(xii)'s residual one notch further --- the operator condition $[\rho,\Lambda_\Sigma]{=}0$ is itself a
+\emph{consequence} of a structural symmetry, not an extra assumption. On explicit finite OS data, the canonical
+transfer $\Lambda{=}C(1)C(0)^{-1}{=}e^{-h}$ (the transfer fixed by RP$+$reflection, \vref{v54}) of a
+$\mu_4$-invariant covariance satisfies $[\rho,\Lambda]{=}0$ (swept $N{=}4..32$; iff-sharp $\mu_4$-breaking neg
+control), $\Lambda$ is a positive contraction, and the free modular Hamiltonian $K{=}\log((1{-}C)C^{-1})$
+(\vref{v258}) of the invariant state has $[\rho,K]{=}0$ (Tomita--Takesaki). \mE\ the inheritance, contraction and
+modular commutation; \mC\ so with (xii), RP-definability \emph{plus} the four marks force the block-diagonal
+$\Lambda_\Sigma$; \mO\ the residual reduces from an operator commutation to the structural ``the seam RP data is
+$\mu_4$-symmetric'' (\texttt{QGEO.SYM.01}, \vref{v216}/\vref{v323}). \emph{(xiv) The independent topological edge
+reading} (\veri{v447\_seam\_edge\_chern.py}): a second, fit-free route to the edge central charge of (xi). On the
+same $p{+}ip$ collar (\vref{v367}/\vref{v368}) the bulk Chern number is the integer $C{=}{+}1$
+(Fukui--Hatsugai--Suzuki link variables; $C{=}0$ in the trivial phase, $C{=}{-}1$ at the opposite mass, matching
+(xi)'s opposite per-edge velocities), the open strip carries exactly $|C|{=}1$ chiral edge branch per boundary, and
+the Li--Haldane entanglement spectrum has in-gap modes at $\tfrac12$ only in the topological phase; \mE\ the Chern
+integer, channel count and entanglement signature, \mC\ the bulk--edge reading $c_-{=}N_{\mathrm{Maj}}\cdot\tfrac12
+\cdot|C|{=}16\cdot\tfrac12{=}8{=}\gcar{+}\Nfam$ --- the \emph{same} $c_-{=}8$ as (xi) from a logically independent
+(topological) observable. \emph{(xv) The four-point pinning of the external fact}
+(\veri{v448\_seam\_edge\_fourpoint.py}): extending (xi)'s two-point scaling limit to the next order to support
+exactly the one external fact (viii) isolates. The edge state is quasi-free (the ground-state correlation matrix is
+an exact projector $G^2{=}G\sim10^{-13}$, the MMST CAR hypothesis), and the edge four-point cross-ratio
+$Q{=}[G_{01}G_{23}]/[G_{02}G_{13}]$ at commensurate positions is Cauchy-convergent under refinement to the
+free-fermion conformal value $\sin(5\pi/12)/\sin(\pi/12){=}2{+}\sqrt3\approx3.732$ (the bulk control off-scale,
+exponential); \mE\ the quasi-free property, four-point convergence and conformal form, \mC\ so the one external MMST
+fact is empirically supported at \emph{both} two- and four-point order. Across (v)--(xv), \texttt{SEAM.EQUIV.01}
+stays \mO: every route reduces, audits or falsifies the residual without supplying the one cited
+continuum-existence theorem.
 \par\smallskip\noindent\textbf{The TOE/QFT closure contracts as three citable certificates
 (\veri{v398\_seam\_state\_rigidity.py}, \veri{v399\_gravity\_complete.py}, \veri{v401\_metrology\_closure.py}).}
 Three companion contracts package the closure status as named targets without fabricating any closure.
 \emph{(i) Seam State Rigidity} (\texttt{SEAM.RIGIDITY.01}): the scattered state-invariance reductions
 (\vref{v177}/\vref{v199}/\vref{v308}/\vref{v309}/\vref{v335}) as ONE theorem target --- \mE\ the RP-definability
 hinge (OS canonical transfer from RP $+$ reflection alone, \vref{v54}, quasi-free \vref{v155}), \mE\ the band-limited
-$\mu_4$-character-block-diagonal core swept $N{=}4..64$ (beyond the $3$-dim $H^1$), \mE\ holomorphy $\Rightarrow(E_8)_1$;
-\mO\ the one residual is $[\rho,\Lambda_\Sigma]{=}0$ on the full $L^2$ (intrinsic Bisognano--Wichmann).
+$\mu_4$-character-block-diagonal core swept $N{=}4..64$ (beyond the $3$-dim $H^1$, made uniform in $N$ to $N{=}256$
+by \vref{v442}), \mE\ holomorphy $\Rightarrow(E_8)_1$; and \mE\ the forcing converse (\vref{v445}) that commuting with
+the order-$4$ clock is \emph{exactly} $\mu_4$-block-diagonality, so the residual is no longer ``does block-diagonal
+permit'' but only $[\rho,\Lambda_\Sigma]{=}0$ on the full $L^2$ --- the physical transfer lying in that
+commutant (intrinsic Bisognano--Wichmann). \mE\ Moreover (\vref{v446}) that operator commutation is itself
+\emph{derived}: the OS canonical transfer of $\mu_4$-symmetric RP data inherits the clock (with the modular
+Hamiltonian commuting, \vref{v258}), so the residual reduces further to the \emph{structural} statement that the
+seam RP data is $\mu_4$-symmetric (the four marks, \texttt{QGEO.SYM.01}), leaving \mO\ only that structural
+symmetry on the raw continuum collar.
 \emph{(ii) Gravity-complete $=$ Boundary-complete $+$ Ambient-redundancy} (\texttt{GRAVITY.COMPLETE.01}): the local
 equation parameter-free (\vref{v358}/\vref{v359}) plus the redundancy discriminators (\vref{v369}), with
 $\mathcal O_{\mathrm{phys}}\subset\mathcal A_\Sigma$ checked over five gravitational readout classes.

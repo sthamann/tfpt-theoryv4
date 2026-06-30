@@ -60,6 +60,200 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-30 (\texttt{v446}/\texttt{v447}/\texttt{v448} + Lean + Wolfram --- deriving clock-invariance from $\mu_4$-symmetry, an independent topological reading of the edge $c_-{=}8$, and pinning the one external MMST fact at four-point order)}
+\begin{itemize}
+\item \textbf{\texttt{v446\_seam\_clock\_invariance.py} (\texttt{SEAM.RIGIDITY.CLOCKINV.01}).} Closes \texttt{v445}'s single
+residual one notch further: the operator condition $[\rho,\Lambda_\Sigma]{=}0$ (clock-invariance) is shown to be a
+\emph{consequence} of a structural symmetry, not an independent assumption. \mE\ the OS canonical transfer
+$\Lambda{=}C(1)C(0)^{-1}{=}e^{-h}$ (fixed by RP$+$reflection, \texttt{v54}) of a $\mu_4$-invariant RP covariance
+satisfies $[\rho,\Lambda]{=}0$ (swept $N{=}4..32$); \mE\ a $\mu_4$-breaking covariance gives $[\rho,\Lambda]\neq0$
+(iff-sharp neg control); \mE\ $\Lambda$ is a positive contraction (spectrum in $(0,1]$); \mE\ the free modular
+Hamiltonian $K{=}\log((1{-}C)C^{-1})$ (\texttt{v258}) of the invariant state has $[\rho,K]{=}0$ (Tomita--Takesaki),
+broken control $\neq0$. \mC\ so with \texttt{v445} (commute $\Leftrightarrow$ block-diagonal), RP-definability
+\emph{plus} the four marks \emph{force} the block-diagonal $\Lambda_\Sigma$; the residual reduces from an operator
+commutation to ``the seam RP data is $\mu_4$-symmetric'' (\texttt{QGEO.SYM.01}). \texttt{SEAM.EQUIV.01} stays \mO.
+\item \textbf{\texttt{v447\_seam\_edge\_chern.py} (\texttt{SEAM.EQUIV.EDGE.CHERN.01}).} An \emph{independent}
+(topological) reading of the edge central charge, corroborating \texttt{v444}'s correlator route from a different
+observable. \mE\ the $M{=}1$ collar has integer Chern number $C{=}{+}1$ (Fukui--Hatsugai--Suzuki link-variable
+method, no fit); \mE\ $C{=}0$ in the trivial phase and $C{=}{-}1$ at $M{=}{-}1$ (opposite chirality); \mE\ the open
+strip carries exactly $|C|{=}1$ chiral edge branch per boundary; \mE\ the Li--Haldane entanglement spectrum has
+in-gap modes at $1/2$ only in the topological phase. \mC\ bulk--edge: $c_-{=}N_{\mathrm{Maj}}\cdot\tfrac12\cdot|C|
+{=}16\cdot\tfrac12{=}8{=}\gcar{+}\Nfam$ --- the same $c_-{=}8$ as \texttt{v444}. \texttt{SEAM.EQUIV.01} stays \mO.
+\item \textbf{\texttt{v448\_seam\_edge\_fourpoint.py} (\texttt{SEAM.EQUIV.EDGE.FOURPOINT.01}).} Pins the one
+external MMST fact (continuum existence of the chiral scaling limit) empirically at the next order. \mE\ the
+ground-state correlation matrix is an exact projector $G^2{=}G$ ($\sim10^{-13}$), so the state is quasi-free (the
+MMST CAR hypothesis holds); \mE\ the edge four-point cross-ratio $Q{=}[G_{01}G_{23}]/[G_{02}G_{13}]$ at commensurate
+positions is Cauchy-convergent under refinement; \mE\ $Q$ converges to the free-fermion conformal cross-ratio
+$\sin(5\pi/12)/\sin(\pi/12){=}2{+}\sqrt3\approx3.732$; \mE\ the bulk control is off-scale (exponential). \mC\ so the
+one external fact is supported at \emph{both} two-point (\texttt{v444}) and four-point order. \texttt{SEAM.EQUIV.01}
+stays \mO.
+\item \textbf{Lean: \texttt{TfptCarrier/SeamRigidityForcing.lean} (\texttt{FORM.SEAM.RIGIDITY.FORCING.01}).}
+Kernel-hardens \texttt{v445} (and \texttt{v442}'s uniformity): the entrywise forcing iff
+$\mathrm{clock4}\,a{=}\mathrm{clock4}\,b\Leftrightarrow a{=}b$ (i.e.\ $i^a{=}i^b\Leftrightarrow a\equiv b\bmod4$,
+residue-only hence uniform in $N$), the four distinct eigenphases, the exact commutant dimension
+$\sum n_s^2{=}64{<}256$ and the order discriminator ($128{>}64$) are all proved by kernel \texttt{decide}
+(\texttt{forcing\_kernel\_facts}, no domain axioms); only the operator-level lift to the full $L^2$ is the named
+premise. \texttt{lake build} OK, \texttt{\#print axioms} clean.
+\item \textbf{Wolfram mirror.} \texttt{tfpt\_readouts\_extension.wl} gains three exact \texttt{v445} checks (entrywise
+forcing for all $a,b\in0..31$; commutant dimension $64{<}256$; order-2 commutant $128{>}64$ swept $N{=}4..64$):
+$342\to345$ checks, all passing (\texttt{GATE.WOLFRAM.02}).
+\item \textbf{Papers.} The adversarial audit (\texttt{tfpt\_5\_redteam}, Target~A) records the five-direction
+narrowing of the \texttt{SEAM.EQUIV.01} keystone (edge scaling \texttt{v444}, forcing converse \texttt{v445}
+$+$ Lean, derived clock-invariance \texttt{v446}, independent topological $c_-{=}8$ \texttt{v447}, four-point
+pinning \texttt{v448}) explicitly as ``not promoted'': the only residual that stays \mO\ is still the cited
+continuum-existence theorem (\texttt{v336}). The research-contracts note lists the same as ``eleven convergent
+attacks''.
+\end{itemize}
+
+\subsection*{2026-06-30 (\texttt{v445} --- the rigidity FORCING converse: commuting with the order-$4$ clock is \emph{exactly} $\mu_4$-block-diagonality, upgrading the rigidity step from ``permit'' to ``force'')}
+\begin{itemize}
+\item \textbf{\texttt{v445\_seam\_rigidity\_forcing.py} (\texttt{SEAM.RIGIDITY.FORCING.01}).} The rigidity route
+(\texttt{v398}/\texttt{v442}) showed a $\mu_4$-block-diagonal $K$ \emph{commutes} with the order-$4$ clock
+$\rho{=}\operatorname{diag}(i^n)$. This module proves the \emph{converse} and the exact structure, isolating the
+single remaining physical premise. \mE\ FORCING (entrywise iff): $[\rho,K]{=}0$ iff $K_{ij}{=}0$ whenever
+$i{\not\equiv}j\bmod4$, verified entrywise and swept $N{=}4..128$ --- commuting \emph{forces}
+$\mu_4$-block-diagonality, it does not merely permit it. \mE\ EXACT COMMUTANT DIMENSION:
+$\dim\{K:[\rho,K]{=}0\}{=}\sum_s n_s^2$ (the $\mathrm{ad}_\rho$ nullspace), a proper subspace of the full $N^2$
+algebra ($N{=}16$: $64{<}256$) --- a genuine quantitative restriction. \mE\ OFF-BLOCK $\Leftrightarrow$
+NON-COMMUTING: every off-block matrix unit has $\|[\rho,E_{ij}]\|{\ge}\sqrt2{>}0$ (zero slack). \mE\ THE ORDER IS
+THE DISCRIMINATOR: the order-$4$ clock gives $4$ sectors; the order-$2$ clock leaves a strictly larger commutant
+($N{=}16$: $64$ vs $128$) --- the four Gauss--Bonnet marks (order $4{=}|\mu_4|{=}h(A_3)$) force strictly more
+structure than two, and only the index-$4$ extension is $(E_8)_1$ ($\det{=}1$; \texttt{v281}/\texttt{v154}/\texttt{v351}).
+\mE\ NONDEGENERACY: exactly $4$ distinct eigenvalues $\{1,i,-1,-i\}$ for all $N{\ge}4$. \mC\ SYNTHESIS: commuting
+with the order-$4$ $\mu_4$ clock is \emph{equivalent} to $\mu_4$-block-diagonality, so RP-definability
+(\texttt{v54}/\texttt{v398}) $+$ clock-invariance \emph{force} the block-diagonal $\Lambda_\Sigma$ ---
+\texttt{v442}'s ``permit'' upgraded to ``force''. \mO\ the single residual is now precisely that the physical
+transfer lies in that commutant (clock-invariance $=$ \texttt{QGEO.SYM.01}, \texttt{v323}/\texttt{v335});
+\texttt{SEAM.RIGIDITY.01}/\texttt{SEAM.EQUIV.01} stays \mO. Python-only (numpy; det facts Wolfram-mirrored via
+\texttt{v89}/\texttt{v281}/\texttt{v422}). Registered in \texttt{run\_all.py}, \texttt{script\_registry.csv}, the
+ledger, and cited in \texttt{tfpt\_research\_contracts} (route (xii) of the convergent attacks, and the sharpened
+residual in the Seam State Rigidity contract).
+\end{itemize}
+
+\subsection*{2026-06-30 (Lean kernel-hardening of two of the seven \texttt{SEAM.EQUIV.01} routes --- the Borchers/Wiesbrock standard-pair relations and the applicability-ledger count, machine-verified with clean axioms; rigor without new mathematics)}
+\begin{itemize}
+\item \textbf{Context.} Two of the seven convergent attacks on the keystone residual are turned from numerical
+witnesses into kernel-checked facts, in the audit-contract style of \texttt{SeamScalingLimit.lean} /
+\texttt{BWKeystone.lean}: the load-bearing algebra/bookkeeping is proved by the Lean kernel, while the cited
+theorems and the one open continuum input remain named axioms. \texttt{lake build} OK; \texttt{\#print axioms}
+clean. Tracked as two new \texttt{FORM.*} ledger rows; \texttt{\textbackslash veri}-context in
+\texttt{tfpt\_research\_contracts}; Lean manifest refreshed.
+\item \textbf{\texttt{FORM.SEAM.BW.HSMI.01} (\texttt{TfptCarrier/SeamStandardPair.lean}) --- standard-pair
+relations, kernel-checked (hardens \texttt{v438}).} The four Borchers/Wiesbrock relations on the centred
+$5$-mode ladder over $\mathbb{Z}$ are proved by kernel \texttt{decide} (axioms \texttt{propext} /
+\texttt{Classical.choice} / \texttt{Quot.sound} only, no domain axiom): $[K,P]{=}P$, $J^2{=}1$, $JKJ{=}{-}K$,
+$JPJ{=}P_+$ (and $\operatorname{tr}K{=}0$). The cited Borchers/Wiesbrock theorem and the one continuum input
+(the continuum standard pair) are named axioms; the composition pins face~(ii) of \texttt{SEAM.EQUIV.01} to
+exactly those two --- intrinsic Bisognano--Wichmann, no rotation-covariance presupposed.
+\item \textbf{\texttt{FORM.SEAM.APPLICABILITY.01} (\texttt{TfptCarrier/SeamApplicabilityLedger.lean}) --- the
+audit count, kernel-checked (hardens \texttt{v441}).} The headline bookkeeping is itself machine-verified: of
+the $12$ cited-theorem hypotheses (MMST/NPW26/Adamo, mirrored in order) exactly $11$ are internal and $1$
+external (\texttt{total\_count}=12, \texttt{internal\_count}=11, \texttt{external\_count}=1), plus
+\texttt{mmst\_range} ($8\le8\le16$) and \texttt{npw\_outside\_bucket} ($\det K{=}1\neq4$) --- ALL with NO axioms
+(pure kernel \texttt{decide}). The single external fact (continuum scaling-limit existence) is the named axiom;
+the keystone reduction pins its external dependence to exactly that one fact.
+\item \textbf{Net.} Both modules are imported by the root \texttt{TfptCarrier.lean}, axiom-audited in
+\texttt{AxiomCheck.lean}, and signature-locked in \texttt{AuditContract.lean}; full \texttt{lake build}
+succeeds. No new mathematics --- the same facts \texttt{v438}/\texttt{v441} verify numerically are now
+kernel-proved; \texttt{SEAM.EQUIV.01} stays \mO.
+\end{itemize}
+
+\subsection*{2026-06-30 (the chiral-edge scaling motor \texttt{v444} --- the edge half of the one \texttt{SEAM.EQUIV.01} continuum residual: the lattice edge already carries the conformal data of a chiral $c{=}1/2$ Majorana CFT and converges under refinement, grounding the EDGE the way \texttt{v439} grounded the BULK; the keystone stays \mO)}
+\begin{itemize}
+\item \textbf{Context.} \texttt{v439} grounded the \emph{bulk} half of the cited MMST existence (uniform gap,
+exponential clustering, finite light cone) and explicitly narrowed the one open analytic step to the chiral massless
+\emph{edge} scaling limit. \texttt{v444} attacks exactly that residual on the SAME explicit \texttt{v367}/\texttt{v368}
+$p{+}ip$ collar. \texttt{vN}-registered, runs in \texttt{run\_all.py} (suite ends \texttt{ALL CHECKS PASSED}),
+\texttt{\textbackslash veri}-cited in the body of \texttt{tfpt\_research\_contracts} (the $G_{\mathrm{net}}$ contract).
+Python-only (numpy; no new exact identity to Wolfram-mirror).
+\item \textbf{\texttt{v444\_seam\_edge\_scaling.py} (\texttt{SEAM.EQUIV.CONTINUUM.EDGE.01}) --- chiral-edge motor.}
+The lattice edge carries the kinematic and conformal data of a chiral $c{=}1/2$ Majorana CFT: \mE\ a linear, chiral
+in-gap dispersion (velocity $v{\approx}0.98$, $R^2{=}0.9999$, with \emph{opposite} per-edge velocities --- one chiral
+Majorana per edge); \mE\ an \emph{algebraic} equal-time edge two-point $\sim r^{-\eta}$ with $\eta{\approx}1$, versus
+the \emph{exponential} bulk row and the exponential trivial-phase ($M{=}3$, no edge) control; \mE\ a Cauchy-convergent
+scaling-collapse under refinement ($\eta{=}1.001{\pm}0.007$, successive profile spread $0.028{\to}0.013$ across
+$N_x{=}36..60$) --- the numerical hallmark of an existing scaling limit. \mC\ $\eta{=}1\Leftrightarrow$ one chiral
+Majorana ($c{=}1/2$) per edge, so the $16$-copy carrier has a chiral $c_-{=}8$ $(E_8)_1$ edge CFT
+($c_-{=}\gcar{+}\Nfam$). \mO\ the rigorous uniform-convergence theorem (cited MMST, \texttt{v336}) is not supplied.
+\item \textbf{Net.} With \texttt{v439} (bulk) and \texttt{v444} (edge), \emph{both halves} of the one continuum
+residual are numerically grounded on our explicit model and pinned to a single cited existence theorem;
+\texttt{SEAM.EQUIV.01} stays \mO. Ledger row, \texttt{script\_registry.csv} index and the generated surfaces
+(\texttt{verification.tex}, \texttt{ScriptIndex.tsx}) updated in the same change; manifest refreshed last.
+\end{itemize}
+
+\subsection*{2026-06-30 (six convergent attacks on the one \texttt{SEAM.EQUIV.01} continuum residual --- intrinsic Bisognano--Wichmann, a Lieb--Robinson continuum motor, the $\beta$-homotopy, an applicability audit, uniform rigidity, and falsifiable kill tests; none closes the keystone, together they reduce it to a single analytic fact and make the claim falsifiable)}
+\begin{itemize}
+\item \textbf{Context.} The keystone \texttt{SEAM.EQUIV.01} is ``closed modulo a cited theorem'': its one open
+input is the continuum existence of the seam's chiral massless scaling limit. Six new modules attack that residual
+from independent directions; each is honest about \emph{not} closing it. All six are \texttt{vN}-registered, run in
+\texttt{run\_all.py} (suite ends \texttt{ALL CHECKS PASSED}), and are \texttt{\textbackslash veri}-cited in the
+body of \texttt{tfpt\_research\_contracts} (the $G_{\mathrm{net}}$ contract). Python-only (no new exact identity to
+Wolfram-mirror).
+\item \textbf{\texttt{v438\_seam\_hsmi\_borchers.py} (\texttt{SEAM.EQUIV.BW.HSMI.01}) --- intrinsic BW.} The seam
+supplies a Longo \emph{standard pair} / $+$half-sided modular inclusion (positive lightlike translation $P\ge0$,
+boost $K$ with $[K,P]{=}P$, reflection $J$ with $JKJ{=}{-}K$, $JPJ{=}P_-$), so by Borchers' theorem the modular
+flow is geometric \emph{intrinsically} --- \emph{without} presupposing rotation-covariance of the vacuum
+(complementary to Adamo--Giorgetti--Tanimoto). \mE\ ladder algebra exact, $sl(2,\mathbb{R})$ positivity (min eig
+$>0$); \mC\ synthesis; \mO\ the continuum standard pair.
+\item \textbf{\texttt{v439\_seam\_lieb\_robinson.py} (\texttt{SEAM.EQUIV.CONTINUUM.LR.01}) --- continuum motor.}
+The explicit gapped $p{+}ip$ collar (\texttt{v367}) has a uniform-in-$N$ gap, exponential clustering with
+$N$-independent $\xi$, and a finite Lieb--Robinson light cone, so by Nachtergaele--Sims its \emph{bulk}
+thermodynamic limit exists --- grounding the bulk half of the cited MMST existence in our model and narrowing the
+open step to the chiral \emph{edge} scaling limit. \mE/\mC, \mO\ the edge CFT.
+\item \textbf{\texttt{v440\_seam\_lto\_rp\_beta.py} (\texttt{SEAM.EQUIV.LTORP.BETA.01}) --- $\beta$-homotopy.}
+The (LTO-RP)/BW data ($\Theta K\Theta{=}{-}K$, $[\rho,K]{=}0$) are $\beta$-independent, and along the whole path
+$C_\beta{=}1/(1{+}e^{\beta K})$ from the NPW26-proven \emph{trace} state ($\beta{=}0$) to the seam KMS state
+($\beta{=}1$) every covariance is reflection-related, $\mu_4$-invariant and valid --- a norm-continuous,
+obstruction-free homotopy, upgrading the single point of \texttt{v426} to a path argument for sub-step~(ii) of
+\texttt{v424}.
+\item \textbf{\texttt{v441\_seam\_applicability\_ledger.py} (\texttt{SEAM.EQUIV.APPLICABILITY.01}) --- audit.}
+A hypothesis-by-hypothesis ledger of the three cited theorems (MMST / NPW26 / Adamo--Giorgetti--Tanimoto) finds
+$11$ of $12$ hypotheses are TFPT-internal computed facts and exactly one is external --- the continuum existence of
+the chiral scaling limit; covariance is an Adamo consequence (defuses the \texttt{v215} circularity), not an input.
+The keystone's external dependence is pinned to that one analytic fact.
+\item \textbf{\texttt{v442\_seam\_rigidity\_uniform.py} (\texttt{SEAM.RIGIDITY.UNIFORM.01}) --- uniform rigidity.}
+The band-limited $\mu_4$-character rigidity of \texttt{v398} is uniform in $N$: exact $4$-sector commutation to
+$N{=}256$ (not merely the $N\le64$ sweep), a uniform gap, and an $N$-independent clock-breaking lower bound
+$\|[\rho,V]\|{=}2$ --- so it is not a small-$N$ artifact (the full-$L^2$ forcing stays \mO).
+\item \textbf{\texttt{v443\_seam\_e8\_discriminator.py} (\texttt{SEAM.E8.DISCRIMINATOR.01}) --- kill tests.}
+Mode~D of the closure-mode classification (\texttt{v347}) as concrete \emph{falsifiable} discriminators against the
+nearest $c{=}8$ rival $SO(16)_1$: torus ground-state degeneracy $1$ vs $4$, level-$1$ currents $248$ vs $120$,
+lattice theta $240$ vs $112$ norm-$2$ roots; $c{=}8$ alone cannot decide (\texttt{v277}), only $\det K{=}1$ (the
+genus-$1$ statement, \texttt{v90}) selects $E_8$. A seam with GSD${>}1$ would falsify $(E_8)_1$. \mX/\mC.
+\item \textbf{Status discipline.} \texttt{SEAM.EQUIV.01} stays \mO\ throughout; the six modules reduce, audit and
+falsify the residual but do not supply the one cited continuum-existence theorem. Ledger rows, the
+\texttt{script\_registry.csv} index, and the generated surfaces (\texttt{verification.tex},
+\texttt{ScriptIndex.tsx}) are updated in the same change; manifest refreshed last.
+\end{itemize}
+
+\subsection*{2026-06-30 (shadow-export coherence --- the \texttt{tfpt5-shadow} mirror is now reproducible \emph{as shipped}: the audit is shadow-aware, the content maps are non-destructive on the website-free subset, and an export gate blocks any incoherent mirror)}
+\begin{itemize}
+\item \textbf{Context (reviewer finding, Alessandro).} On the exported \texttt{tfpt5\_shadow.zip}
+the independent surfaces reproduced (\texttt{build.sh notes} \(\to\) \texttt{11 ok}; Wolfram base/extension;
+Red Team; Lean transcript), but the \emph{package} layer did not: \texttt{make\_manifest.py --check}
+reported a stale \texttt{verification/website\_map.csv} and \texttt{build.sh audit} crashed because it
+unconditionally required \texttt{website/lib/release.ts}, which the shadow subset deliberately excludes.
+\item \textbf{\texttt{make\_docs\_map.py} is now shadow-aware.} \texttt{website\_map.csv} mirrors the
+\texttt{website/} sources; on a tree without \texttt{website/} the generator now \emph{skips} it instead of
+regenerating it down to a single \texttt{README.md} row. This removes the silent corruption that made
+\texttt{build.sh notes}/\texttt{gen} leave \texttt{website\_map.csv} stale against the manifest on the export
+(it now matches the established skips in \texttt{make\_script\_index.py} and \texttt{make\_changelog\_web.py}).
+\item \textbf{\texttt{audit\_sync.py} is now shadow-aware.} When \texttt{website/} is absent it skips the
+website mirror (section D), the website version stamps (E) and the website Wolfram-count card (F), and the
+website generated-surface freshness in (A), printing exactly which sections were skipped. \texttt{build.sh audit}
+therefore runs to a clean \texttt{AUDIT OK} on the shadow subset instead of raising \texttt{FileNotFoundError}.
+\item \textbf{Export coherence gate.} \texttt{scripts/export-shadow.sh} now re-runs
+\texttt{make\_manifest.py --check} and the shadow-aware \texttt{audit\_sync.py} \emph{on the filtered tree}
+before the mirror is published. The manifest check catches the earlier \texttt{v235--v298} symptom at the
+source: a module referenced by \texttt{run\_all.py}/\texttt{script\_registry.csv}/\texttt{manifest.sha256} but
+not committed (and thus dropped by \texttt{git ls-files}) now fails the export loudly instead of shipping a
+package that says \texttt{ALL CHECKS PASSED} while \texttt{run\_all.py} stops at the first missing script.
+\item \textbf{Manifest refreshed.} \texttt{manifest.sha256} was regenerated as the last release step so the
+shipped digests match the committed \texttt{changelog.tex} and \texttt{website\_map.csv}; the full Python
+suite reproduces end-to-end on the regenerated export. No theory content, status marker or \texttt{vN} module
+changed --- this is an export/infrastructure fix only.
+\end{itemize}
+
 \subsection*{2026-06-29 (discoverability --- an SEO/GEO pass on the public website: a generated \texttt{/llms.txt}, explicit AI-crawler \texttt{robots.txt}, query-targeted metadata, and the first real backlinks from the README and the Zenodo deposit)}
 \begin{itemize}
 \item \textbf{New \texttt{/llms.txt} context file} for AI / answer engines (ChatGPT, Perplexity, Claude,

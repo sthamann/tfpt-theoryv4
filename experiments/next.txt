@@ -1,3 +1,37 @@
+## 2026-06-30 — recovery-comb-domains A5: Nuclear-Transient/AGN-Scheiben-TDE (J2245+3743), echte ZTF-Daten, sauberer NULL
+
+Neuer **`surface`-Kanal A5** in `recovery-comb-domains` (motiviert aus der J2245-Notiz: „kann man so
+nach TFPT-Signaturen suchen?"). Objekt: **J2245+3743** = AGN J224554.84+374326.5, **z=2.554**,
+2018 um Faktor >40 aufgehellt, ~10⁵⁴ erg, favorisiert als TDE eines >30 M☉-Sterns **in einer
+AGN-Akkretionsscheibe** (Graham+2025, Nat. Astron., arXiv:2511.02178).
+
+**Was gebaut wurde** (alles stdlib+numpy, self-contained, kein verification/website-Touch — reines
+`experiments/`-Standalone):
+- `ent.py`: Fetcher gegen den **öffentlichen IRSA-ZTF-Lichtkurvendienst** (anonym, kein Login) per
+  Position → `data/ent/J2245+3743.csv` (`mjd,mag,magerr,band`, nur `catflags==0` + `magerr≤0.30`;
+  **1443 gute g/r/i-Epochen** MJD 58242→60967). Reader: pro Band flux=10^(−0.4 mag), Recovery-Origin
+  = hellste Epoche, `bin_ln_t` (Median je `ln(t)`-Bin).
+- `channel_a5_nuclear_transient()` + `lambda_battery()` (die quake-Style-TFPT-λ-Batterie auf EINER
+  Kurve), in `channels.py`; `fetch-ent` in der CLI; `all_channels()` jetzt 8 Kanäle.
+
+**Ergebnis (echte Daten, ehrlich):**
+- **zr-Band: 1007 Post-Peak-Epochen, 3.21 Kamm-Perioden → klärt das >2.8-Gate** (zg range-blind 1.8
+  nach Binning, ehrlich ausgeschlossen). J2245 ist also genau die **wide-ln(t)-Einzel-Recovery**,
+  nach der die Kamm-Suche hungert — nicht range-limitiert am Kernel.
+- **Kernel ω=2.58 NICHT besonders, p≈0.80** → sauberer NULL.
+- **TFPT-λ-Batterie** (`λ∈{3/2,φ,2,3,4,5,8,(3/2)⁶,30}`, Bonferroni): **global p≈0.08 → kein
+  TFPT-Log-Period besonders → NULL**.
+- **Firewall:** AGN-Scheiben-TDE = **Akkretion/Central-Engine**, NICHT Horizont — identische
+  Legitimität wie A1/A4; ein Treffer wäre universelle-DSI-Koinzidenz, **nie** TFPT-Bestätigung. Der
+  NULL ist **well-powered, nicht data-limited**. (z=2.554-Zeitdilatation = multiplikative
+  Zeitachsen-Streckung = additive `ln(t)`-Verschiebung → verschiebt nur die Kamm-PHASE, fügt KEINE
+  ln-Reichweite hinzu.)
+
+Konsistent mit allen anderen realen Kanälen (A1/A3/A3b/A4/A5 alle sauber NULL). Kanal ist
+multi-source-ready (weitere ENTs in `data/ent/` aktivieren den Cross-Source-Stack). **Kein Claim.**
+
+---
+
 ## 2026-06-29 — Recherche-Notiz: der α³-Chern-Level, externe Mathematik (NICHT geschlossen)
 
 Ziel dieser Runde war NICHT, `ALPHA.QUILLEN.EXACT.01` zu schließen, sondern die *externe*

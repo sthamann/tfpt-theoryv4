@@ -2742,6 +2742,31 @@ Module[{degs, exps, rank, h, nPos, nRoots, dim, x, quad, roots, factorPairs, pai
     mapped == canonical && 5 == Max[Select[Range[2, h], (PrimeQ[#] && Mod[h, #] == 0) &]] && 3 == h/(2*5)];
 ];
 
+(* ==== v445 round: SEAM.RIGIDITY.FORCING.01 -- commuting with the order-4 clock FORCES mu4-block-diagonality (the converse of v442; mirrors v445_seam_rigidity_forcing.py) ==== *)
+Module[{forcingIff, sec, sec2, dim4, dim2, sweepOK},
+  (* v445 (i): entrywise forcing -- [rho,E_ab]=(i^a-i^b)E_ab=0  <=>  a==b mod 4 *)
+  forcingIff = And @@ Flatten[Table[(I^a - I^b == 0) == (Mod[a - b, 4] == 0),
+     {a, 0, 31}, {b, 0, 31}]];
+  checkExact["v445 SEAM.RIGIDITY.FORCING.01 (i): entrywise forcing -- [rho,E_ab]=(i^a-i^b)E_ab=0 IFF a==b mod 4, verified for ALL a,b in 0..31 (residue-only => uniform in N; the converse of v442, commuting FORCES mu4-block-diagonality)",
+    forcingIff];
+
+  (* v445 (ii): exact commutant dimension = sum n_s^2, a PROPER subspace of N^2 (N=16) *)
+  sec = Table[Count[Range[0, 16 - 1], k_ /; Mod[k, 4] == s], {s, 0, 3}];
+  dim4 = Total[sec^2];
+  checkExact["v445 SEAM.RIGIDITY.FORCING.01 (ii): exact commutant dim = sum n_s^2 = 4*4^2 = 64 (N=16, four sectors {4,4,4,4}), a PROPER subspace of N^2=256 -- a genuine quantitative restriction",
+    sec == {4, 4, 4, 4} && dim4 == 64 && dim4 < 16^2];
+
+  (* v445 (iii): the order is the discriminator -- order-2 commutant strictly larger; marks=4 *)
+  sec2 = Table[Count[Range[0, 16 - 1], k_ /; Mod[k, 2] == s], {s, 0, 1}];
+  dim2 = Total[sec2^2];
+  sweepOK = And @@ Table[
+     Total[Table[Count[Range[0, n - 1], k_ /; Mod[k, 4] == s], {s, 0, 3}]^2]
+       < Total[Table[Count[Range[0, n - 1], k_ /; Mod[k, 2] == s], {s, 0, 1}]^2],
+     {n, {4, 8, 16, 32, 64}}];
+  checkExact["v445 SEAM.RIGIDITY.FORCING.01 (iii): THE ORDER IS THE DISCRIMINATOR -- order-2 commutant (N=16: 2*8^2=128) STRICTLY LARGER than order-4 (64); swept N=4..64; the four marks |mu4|=4=h(A3) force strictly more structure than two; only index-4 is (E8)_1 (det 1 vs SO(16) det 4, mirrored v281/v344)",
+    dim2 == 128 && dim4 < dim2 && sweepOK];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

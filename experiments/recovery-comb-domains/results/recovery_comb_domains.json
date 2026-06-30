@@ -324,6 +324,376 @@
       }
     },
     {
+      "key": "A4",
+      "domain": "GRB X-ray afterglow plateau (stacked)",
+      "firewall_legitimacy": "surface",
+      "data_status": "real",
+      "note": "REAL data: 22 Swift-XRT GRB afterglow(s); 17 clear the ln-range gate (>= 2.8 comb periods -- most single GRBs do, ~4-5 decades). GRB_050416A (periods=4.11, p=0.0597); GRB_050801 (periods=3.09, p=0.2387); GRB_050922C (periods=2.74, p=0.3533, <gate: EXCLUDED); GRB_051221A (periods=3.24, p=0.1519); GRB_060124 (periods=4.1, p=0.1989); GRB_060526 (periods=2.73, p=0.0018, <gate: EXCLUDED); GRB_060614 (periods=3.29, p=0.1826); GRB_060729 (periods=4.35, p=0.4521); GRB_061007 (periods=2.96, p=0.3146); GRB_061121 (periods=3.3, p=0.0958); GRB_080319B (periods=3.59, p=0.2098); GRB_080430 (periods=3.19, p=0.4882); GRB_081008 (periods=2.35, p=0.3509, <gate: EXCLUDED); GRB_090618 (periods=3.36, p=0.2188); GRB_100418A (periods=3.44, p=0.1989); GRB_100621A (periods=3.46, p=0.3255); GRB_100901A (periods=3.46, p=0.8969); GRB_110213A (periods=2.96, p=0.1573); GRB_110422A (periods=2.39, p=0.6497, <gate: EXCLUDED); GRB_120326A (periods=3.47, p=0.5407); GRB_121128A (periods=2.69, p=0.2441, <gate: EXCLUDED); GRB_130427A (periods=4.42, p=0.0036). STACKED over 17 GRBs: kernel omega=2.58 is NOT special (p=0.134) -> clean NULL (central-engine/accretion relaxation -> surface firewall, not a horizon recovery; but WIDE-ln(t) + high-statistics, so this NULL is well-powered, NOT data-limited).",
+      "result": {
+        "n_points": 11195,
+        "comb_periods": 4.42,
+        "range_sufficient": true,
+        "gain": 0.2037,
+        "p_value": 0.134,
+        "comb_detected": false,
+        "omega": 2.5827069463082895,
+        "n_sources": 22,
+        "n_stacked": 17,
+        "per_source": [
+          {
+            "n_points": 84,
+            "comb_periods": 4.11,
+            "range_sufficient": true,
+            "gain": 0.11,
+            "p_value": 0.0597,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "GRB_050416A"
+          },
+          {
+            "n_points": 13,
+            "comb_periods": 3.09,
+            "range_sufficient": true,
+            "gain": 0.302,
+            "p_value": 0.2387,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "GRB_050801"
+          },
+          {
+            "n_points": 127,
+            "comb_periods": 2.74,
+            "range_sufficient": false,
+            "gain": 0.0606,
+            "p_value": 0.3533,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "GRB_050922C"
+          },
+          {
+            "n_points": 67,
+            "comb_periods": 3.24,
+            "range_sufficient": true,
+            "gain": 0.1696,
+            "p_value": 0.1519,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "GRB_051221A"
+          },
+          {
+            "n_points": 986,
+            "comb_periods": 4.1,
+            "range_sufficient": true,
+            "gain": 0.3665,
+            "p_value": 0.1989,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "GRB_060124"
+          },
+          {
+            "n_points": 213,
+            "comb_periods": 2.73,
+            "range_sufficient": false,
+            "gain": 0.8355,
+            "p_value": 0.0018,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "GRB_060526"
+          },
+          {
+            "n_points": 518,
+            "comb_periods": 3.29,
+            "range_sufficient": true,
+            "gain": 0.31,
+            "p_value": 0.1826,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "GRB_060614"
+          },
+          {
+            "n_points": 745,
+            "comb_periods": 4.35,
+            "range_sufficient": true,
+            "gain": 0.0912,
+            "p_value": 0.4521,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "GRB_060729"
+          },
+          {
+            "n_points": 815,
+            "comb_periods": 2.96,
+            "range_sufficient": true,
+            "gain": 0.0218,
+            "p_value": 0.3146,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "GRB_061007"
+          },
+          {
+            "n_points": 393,
+            "comb_periods": 3.3,
+            "range_sufficient": true,
+            "gain": 0.4656,
+            "p_value": 0.0958,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "GRB_061121"
+          },
+          {
+            "n_points": 2086,
+            "comb_periods": 3.59,
+            "range_sufficient": true,
+            "gain": 0.0523,
+            "p_value": 0.2098,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "GRB_080319B"
+          },
+          {
+            "n_points": 139,
+            "comb_periods": 3.19,
+            "range_sufficient": true,
+            "gain": 0.0597,
+            "p_value": 0.4882,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "GRB_080430"
+          },
+          {
+            "n_points": 290,
+            "comb_periods": 2.35,
+            "range_sufficient": false,
+            "gain": 0.2697,
+            "p_value": 0.3509,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "GRB_081008"
+          },
+          {
+            "n_points": 1312,
+            "comb_periods": 3.36,
+            "range_sufficient": true,
+            "gain": 0.2285,
+            "p_value": 0.2188,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "GRB_090618"
+          },
+          {
+            "n_points": 27,
+            "comb_periods": 3.44,
+            "range_sufficient": true,
+            "gain": 0.4854,
+            "p_value": 0.1989,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "GRB_100418A"
+          },
+          {
+            "n_points": 360,
+            "comb_periods": 3.46,
+            "range_sufficient": true,
+            "gain": 0.113,
+            "p_value": 0.3255,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "GRB_100621A"
+          },
+          {
+            "n_points": 419,
+            "comb_periods": 3.46,
+            "range_sufficient": true,
+            "gain": 0.1322,
+            "p_value": 0.8969,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "GRB_100901A"
+          },
+          {
+            "n_points": 268,
+            "comb_periods": 2.96,
+            "range_sufficient": true,
+            "gain": 0.1718,
+            "p_value": 0.1573,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "GRB_110213A"
+          },
+          {
+            "n_points": 249,
+            "comb_periods": 2.39,
+            "range_sufficient": false,
+            "gain": 0.0247,
+            "p_value": 0.6497,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "GRB_110422A"
+          },
+          {
+            "n_points": 214,
+            "comb_periods": 3.47,
+            "range_sufficient": true,
+            "gain": 0.1138,
+            "p_value": 0.5407,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "GRB_120326A"
+          },
+          {
+            "n_points": 134,
+            "comb_periods": 2.69,
+            "range_sufficient": false,
+            "gain": 0.3641,
+            "p_value": 0.2441,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "GRB_121128A"
+          },
+          {
+            "n_points": 1736,
+            "comb_periods": 4.42,
+            "range_sufficient": true,
+            "gain": 0.2688,
+            "p_value": 0.0036,
+            "comb_detected": true,
+            "omega": 2.5827069463082895,
+            "source": "GRB_130427A"
+          }
+        ]
+      }
+    },
+    {
+      "key": "A5",
+      "domain": "nuclear transient (AGN-disk TDE) optical fade (ZTF)",
+      "firewall_legitimacy": "surface",
+      "data_status": "real",
+      "note": "REAL ZTF data: 2 per-band fade curve(s) across 1 nuclear transient(s); 1 clear the ln-range gate (>= 2.8 comb periods). J2245+3743:zg (407 epochs, periods=1.8, p=0.6624, <gate: range-blind, EXCLUDED); J2245+3743:zr (1007 epochs, periods=3.21, p=0.7993). KERNEL omega=2.58 on the widest band (J2245+3743:zr, 3.21 periods): NOT special (p=0.7993) -> clean NULL. TFPT-lambda battery (Bonferroni over gated ratios): global p=0.076 -> no TFPT log-period is special (NULL). Firewall: AGN-disk TDE = accretion/central-engine relaxation, NOT a horizon recovery -> any hit is a universal-DSI coincidence, never TFPT confirmation; this wide-ln(t) NULL is well-powered, not data-limited.",
+      "result": {
+        "n_points": 70,
+        "n_epochs": 1414,
+        "comb_periods": 3.21,
+        "range_sufficient": true,
+        "gain": 0.0355,
+        "p_value": 0.7993,
+        "comb_detected": false,
+        "omega": 2.5827069463082895,
+        "n_sources": 1,
+        "per_band": [
+          {
+            "n_points": 33,
+            "comb_periods": 1.8,
+            "range_sufficient": false,
+            "gain": 0.082,
+            "p_value": 0.6624,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "J2245+3743",
+            "band": "zg",
+            "n_epochs": 407
+          },
+          {
+            "n_points": 37,
+            "comb_periods": 3.21,
+            "range_sufficient": true,
+            "gain": 0.0355,
+            "p_value": 0.7993,
+            "comb_detected": false,
+            "omega": 2.5827069463082895,
+            "source": "J2245+3743",
+            "band": "zr",
+            "n_epochs": 1007
+          }
+        ],
+        "lambda_battery": {
+          "3/2 (1/Koide, fundamental)": {
+            "lambda": 1.5,
+            "omega": 15.496,
+            "idio": true,
+            "n_used": 1,
+            "gain": 0.0248,
+            "p_value": 0.2162,
+            "comb_detected": false
+          },
+          "phi (golden, g_car=5)": {
+            "lambda": 1.618,
+            "omega": 13.057,
+            "idio": true,
+            "n_used": 1,
+            "gain": 0.0252,
+            "p_value": 0.3462,
+            "comb_detected": false
+          },
+          "2 (sheet doubling)": {
+            "lambda": 2.0,
+            "omega": 9.065,
+            "idio": false,
+            "n_used": 1,
+            "gain": 0.1194,
+            "p_value": 0.0095,
+            "comb_detected": true
+          },
+          "3 (N_fam)": {
+            "lambda": 3.0,
+            "omega": 5.719,
+            "idio": false,
+            "n_used": 1,
+            "gain": 0.0169,
+            "p_value": 0.7451,
+            "comb_detected": false
+          },
+          "4 (|mu4|)": {
+            "lambda": 4.0,
+            "omega": 4.532,
+            "idio": false,
+            "n_used": 1,
+            "gain": 0.0526,
+            "p_value": 0.5459,
+            "comb_detected": false
+          },
+          "5 (g_car)": {
+            "lambda": 5.0,
+            "omega": 3.904,
+            "idio": false,
+            "n_used": 1,
+            "gain": 0.1231,
+            "p_value": 0.3082,
+            "comb_detected": false
+          },
+          "8 (rank E8)": {
+            "lambda": 8.0,
+            "omega": 3.022,
+            "idio": false,
+            "n_used": 1,
+            "gain": 0.1238,
+            "p_value": 0.6403,
+            "comb_detected": false
+          },
+          "(3/2)^6 (recovery comb)": {
+            "lambda": 11.3906,
+            "omega": 2.583,
+            "idio": true,
+            "n_used": 1,
+            "gain": 0.0355,
+            "p_value": 0.904,
+            "comb_detected": false
+          },
+          "30 (Coxeter h)": {
+            "lambda": 30.0,
+            "omega": 1.847,
+            "idio": false,
+            "n_used": 0,
+            "gain": 0.0,
+            "p_value": 1.0,
+            "comb_detected": false
+          }
+        },
+        "lambda_battery_global_p": 0.076,
+        "lambda_battery_curve": "J2245+3743:zr",
+        "stack": null
+      }
+    },
+    {
       "key": "B4",
       "domain": "BEC analog-horizon Hawking/Page recovery",
       "firewall_legitimacy": "analog",
@@ -340,5 +710,5 @@
       "result": null
     }
   ],
-  "verdict": "detector validated (fires at >~2.8 periods, range-blind below; no false positives). Across the 6 channels: 3 have data in hand (A1, A3, A3b); in A1, A3, A3b the range is sufficient but the kernel omega=2.58 is NOT special (clean NULL on real data, though FRB burst tails are scattering/noise-dominated -> weak). The wide-ln(t), cleaner channels (A1 magnetar ~3 decades; A2 BH late-time tail) are data_limited; the analog/simulator channels (B4/B5) need bespoke experiments. The comb is intrinsically a ~2% effect needing a clean, wide-range recovery -- the search space is genuinely narrow. No claim."
+  "verdict": "detector validated (fires at >~2.8 periods, range-blind below; no false positives). Across the 8 channels: 5 have data in hand (A1, A3, A3b, A4, A5); in A1, A3, A3b, A4, A5 the range is sufficient but the kernel omega=2.58 is NOT special (clean NULL on real data, though FRB burst tails are scattering/noise-dominated -> weak). The wide-ln(t), cleaner channels (A1 magnetar ~3 decades; A2 BH late-time tail) are data_limited; the analog/simulator channels (B4/B5) need bespoke experiments. The comb is intrinsically a ~2% effect needing a clean, wide-range recovery -- the search space is genuinely narrow. No claim."
 }

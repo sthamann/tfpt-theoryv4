@@ -1195,7 +1195,7 @@ export const papers: Paper[] = [
       "Over-determination map (v427) + honest self-correction (v428): the framework counts multiplicative evidence only across genuinely disjoint grammars; applying it to TFPT's own seven arithmetic witnesses (Gauss N(3+2i)=13, Eisenstein N(3+2ω)=7, cyclotomy N(3+2ζ₅)=55, Galois |(Z/5)ˣ|=4, |det Cartan E₈|=1, Pascal C(4,≤2)=11, Coxeter φ(30)=8) shows — by the Brieskorn classification (v236) — that they are facets of one (2,3,5)/E₈ object: compression, like the anchor a=(1,1,2), not seven independent multiplications. The genuine multiplication is the input forced four independent ways (rank E₈, h(D₅), φ(30), Milnor all =8) plus the foreign witness α⁻¹≈137. Multiplying only across those disjoint pieces gives a conservative unconditional floor (~10⁻¹⁰, v432) that survives even if a skeptic rejects the declared grammar — ~20 orders above the v100 conditional 10⁻³⁰·⁷; the gap is exactly the payoff of deriving the α form (ALPHA.QUILLEN.EXACT.01), so the floor and the α-derivation are one lever. Hardened to an assumption-minimal counting floor (v436): the pure-counting α census alone is 1/94 500 ≈ 4.40σ with no subjective probability, and a monotone concession ladder shows the verdict never rests on the contestable input-‘8’ independence.",
       "Firewall + No-Unit: the four frontier transfers stay typed interfaces, never compiler outputs (v187/v213), and the No-Unit theorem (v153) makes v_geo theorem-forbidden; the residual-certification audit (v384) shows every open item is external-math, theorem-forbidden, or external-physics — zero open internal mechanisms.",
       "Frozen predictions + null model: the registry (v84, REG.FREEZE.01) pre-registers the dimensionless predictions, a Monte-Carlo null model (v100) scores each match against chance, and the live scorecard (v375) records the data — including the pre-registered +2.0σ θ₁₃ tension (FLAV.TH13.PRESSURE.01), the opposite of hiding the worst case.",
-      "Two independent paths + red team: an independent Wolfram engine (116/116 + 342/342) and a Lean 4 kernel proof (hypercharge, anomaly, Pascal ladder, seam chain) re-derive the exact core, and the red-team companion attacks the theory and publishes what survives each attack.",
+      "Two independent paths + red team: an independent Wolfram engine (116/116 + 345/345) and a Lean 4 kernel proof (hypercharge, anomaly, Pascal ladder, seam chain) re-derive the exact core, and the red-team companion attacks the theory and publishes what survives each attack.",
     ],
     notClaimed: [
       "These safeguards do not establish physics: they make coincidence expensive for the discrete core and keep the typing honest, but the seam/anchor/transfer bridges remain the open research problem.",
@@ -1229,7 +1229,7 @@ export const papers: Paper[] = [
       },
       {
         title: "Layers 5–7 — frozen predictions, independent paths, the red team",
-        body: "Predictions are pre-registered (v84, REG.FREEZE.01) and scored against a Monte-Carlo null model (v100) with a live scorecard (v375); the exact core is re-derived twice more independently (an independent Wolfram engine, 116+342 checks, and a Lean 4 kernel proof with no sorry); and the red-team companion attacks the theory and states what survives — including its own honesty that c=8 alone does not select (E₈)₁ (holomorphy, |det K|=1, is the load-bearing extra).",
+        body: "Predictions are pre-registered (v84, REG.FREEZE.01) and scored against a Monte-Carlo null model (v100) with a live scorecard (v375); the exact core is re-derived twice more independently (an independent Wolfram engine, 116+345 checks, and a Lean 4 kernel proof with no sorry); and the red-team companion attacks the theory and states what survives — including its own honesty that c=8 alone does not select (E₈)₁ (holomorphy, |det K|=1, is the load-bearing extra).",
       },
     ],
     keyFormulas: [
@@ -1261,7 +1261,7 @@ export const papers: Paper[] = [
       { label: "Firewall", value: "4 typed", description: "F_pole/F_Boltzmann/F_relic/F_QCD never compiler outputs (v187); No-Unit makes v_geo a theorem (v153)" },
       { label: "Unconditional floor", value: "~10⁻¹⁰", description: "Disjoint-pieces-only improbability (v432), grammar-independent; ~20 orders above the v100 conditional 10⁻³⁰·⁷" },
       { label: "Counting floor", value: "≈4.40σ", description: "Assumption-minimal, no subjective probability: 1 of 94,500 complexity-matched α variants hits CODATA (v436); a monotone concession ladder holds the verdict at the most adversarial rung" },
-      { label: "Independent paths", value: "2", description: "Wolfram (116+342) + Lean 4 kernel proof re-derive the exact core" },
+      { label: "Independent paths", value: "2", description: "Wolfram (116+345) + Lean 4 kernel proof re-derive the exact core" },
       { label: "Worst case shown", value: "θ₁₃ +2.0σ", description: "The most-tensioned prediction is pre-registered, not hidden (FLAV.TH13.PRESSURE.01)" },
     ],
   },

@@ -79,9 +79,16 @@ This repository is a **one-way mirror** of the main TFPT repository, maintained 
 | \`build.sh\`, manifests, README | |
 
 **Shadow-mode note.** This subset ships \`figures/\` (so \`python3 verification/make_manifest.py --check\`
-passes literally on the export) but **not** \`website/\`. The single-source generator
-\`verification/make_script_index.py\` detects the missing \`website/\` and skips its \`ScriptIndex.tsx\`
-mirror, so \`bash build.sh notes\` runs on the subset without it.
+passes literally on the export) but **not** \`website/\`. The single-source generators
+(\`verification/make_script_index.py\`, \`make_changelog_web.py\`, \`make_docs_map.py\`) detect the
+missing \`website/\` and skip their website mirrors (\`ScriptIndex.tsx\`, \`lib/changelog.ts\`,
+\`website_map.csv\`), so \`bash build.sh notes\` and \`bash build.sh gen\` run on the subset
+non-destructively. \`bash build.sh audit\` is likewise shadow-aware: it skips the website mirror,
+website version and website wolfram-page checks and prints which sections it skipped.
+
+**Export coherence gate.** \`scripts/export-shadow.sh\` re-runs \`make_manifest.py --check\` and the
+(shadow-aware) \`audit_sync.py\` on this filtered tree before the mirror is published, so a package
+that says \"ALL CHECKS PASSED\" cannot ship unless it actually reproduces as exported.
 
 **Do not edit here.** Changes flow: main repo → this mirror (GitHub Action) → Overleaf pull.
 
@@ -91,3 +98,31 @@ Files exported: ${file_count}
 EOF
 
 printf 'export-shadow: %s files -> %s\n' "$file_count" "$DEST"
+
+# --- export coherence gate --------------------------------------------------
+# The mirror must be reproducible AS SHIPPED.  Two cheap, stdlib-only checks run
+# on the FILTERED tree before it is ever pushed/zipped, catching exactly the
+# Alessandro shadow-export findings:
+#   * make_manifest.py --check  -> every manifest-referenced file is present and
+#     current in the export (catches uncommitted modules dropped by git ls-files,
+#     and a stale manifest.sha256), so run_all.py can't reference a missing vN;
+#   * audit_sync.py (shadow-aware) -> suite <-> run_all <-> registry <-> ledger
+#     and the non-website generated surfaces agree on the subset.
+# A failure here means: regenerate manifest.sha256 (python3 verification/make_manifest.py)
+# and/or commit the missing files in the MAIN repo, then re-export.
+if command -v python3 >/dev/null 2>&1; then
+  echo "== shadow export coherence gate =="
+  if ! ( cd "$DEST" && python3 verification/make_manifest.py --check ); then
+    echo "::error::shadow export FAILED make_manifest.py --check on the filtered tree." >&2
+    echo "  Fix in the MAIN repo: ensure every manifest-referenced file is committed, then" >&2
+    echo "  re-run 'python3 verification/make_manifest.py' as the LAST step and re-export." >&2
+    exit 1
+  fi
+  if ! ( cd "$DEST" && python3 verification/audit_sync.py ); then
+    echo "::error::shadow export FAILED the (shadow-aware) sync audit on the filtered tree." >&2
+    exit 1
+  fi
+  echo "shadow export coherence gate: PASS"
+else
+  echo "WARNING: python3 not found -- skipping shadow export coherence gate" >&2
+fi

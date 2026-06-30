@@ -42,6 +42,3884 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-06-30",
+    "dateLabel": "2026-06-30",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v446"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v447"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v448"
+      },
+      {
+        "k": "t",
+        "v": " + Lean + Wolfram — deriving clock-invariance from "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4"
+      },
+      {
+        "k": "t",
+        "v": "-symmetry, an independent topological reading of the edge "
+      },
+      {
+        "k": "m",
+        "v": "c_-{=}8"
+      },
+      {
+        "k": "t",
+        "v": ", and pinning the one external MMST fact at four-point order"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v446_seam_clock_invariance.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.RIGIDITY.CLOCKINV.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Closes "
+        },
+        {
+          "k": "c",
+          "v": "v445"
+        },
+        {
+          "k": "t",
+          "v": "'s single residual one notch further: the operator condition "
+        },
+        {
+          "k": "m",
+          "v": "[\\rho,\\Lambda_\\Sigma]{=}0"
+        },
+        {
+          "k": "t",
+          "v": " (clock-invariance) is shown to be a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "consequence"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " of a structural symmetry, not an independent assumption. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the OS canonical transfer "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda{=}C(1)C(0)^{-1}{=}e^{-h}"
+        },
+        {
+          "k": "t",
+          "v": " (fixed by RP"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": "reflection, "
+        },
+        {
+          "k": "c",
+          "v": "v54"
+        },
+        {
+          "k": "t",
+          "v": ") of a "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": "-invariant RP covariance satisfies "
+        },
+        {
+          "k": "m",
+          "v": "[\\rho,\\Lambda]{=}0"
+        },
+        {
+          "k": "t",
+          "v": " (swept "
+        },
+        {
+          "k": "m",
+          "v": "N{=}4..32"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "a "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": "-breaking covariance gives "
+        },
+        {
+          "k": "m",
+          "v": "[\\rho,\\Lambda]\\neq0"
+        },
+        {
+          "k": "t",
+          "v": " (iff-sharp neg control); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda"
+        },
+        {
+          "k": "t",
+          "v": " is a positive contraction (spectrum in "
+        },
+        {
+          "k": "m",
+          "v": "(0,1]"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the free modular Hamiltonian "
+        },
+        {
+          "k": "m",
+          "v": "K{=}\\log((1{-}C)C^{-1})"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v258"
+        },
+        {
+          "k": "t",
+          "v": ") of the invariant state has "
+        },
+        {
+          "k": "m",
+          "v": "[\\rho,K]{=}0"
+        },
+        {
+          "k": "t",
+          "v": " (Tomita–Takesaki), broken control "
+        },
+        {
+          "k": "m",
+          "v": "\\neq0"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "so with "
+        },
+        {
+          "k": "c",
+          "v": "v445"
+        },
+        {
+          "k": "t",
+          "v": " (commute "
+        },
+        {
+          "k": "m",
+          "v": "\\Leftrightarrow"
+        },
+        {
+          "k": "t",
+          "v": " block-diagonal), RP-definability "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "plus"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the four marks "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "force"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the block-diagonal "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda_\\Sigma"
+        },
+        {
+          "k": "t",
+          "v": "; the residual reduces from an operator commutation to “the seam RP data is "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": "-symmetric” ("
+        },
+        {
+          "k": "c",
+          "v": "QGEO.SYM.01"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v447_seam_edge_chern.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EQUIV.EDGE.CHERN.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " An "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "independent"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (topological) reading of the edge central charge, corroborating "
+        },
+        {
+          "k": "c",
+          "v": "v444"
+        },
+        {
+          "k": "t",
+          "v": "'s correlator route from a different observable. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the "
+        },
+        {
+          "k": "m",
+          "v": "M{=}1"
+        },
+        {
+          "k": "t",
+          "v": " collar has integer Chern number "
+        },
+        {
+          "k": "m",
+          "v": "C{=}{+}1"
+        },
+        {
+          "k": "t",
+          "v": " (Fukui–Hatsugai–Suzuki link-variable method, no fit); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "C{=}0"
+        },
+        {
+          "k": "t",
+          "v": " in the trivial phase and "
+        },
+        {
+          "k": "m",
+          "v": "C{=}{-}1"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "M{=}{-}1"
+        },
+        {
+          "k": "t",
+          "v": " (opposite chirality); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the open strip carries exactly "
+        },
+        {
+          "k": "m",
+          "v": "|C|{=}1"
+        },
+        {
+          "k": "t",
+          "v": " chiral edge branch per boundary; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the Li–Haldane entanglement spectrum has in-gap modes at "
+        },
+        {
+          "k": "m",
+          "v": "1/2"
+        },
+        {
+          "k": "t",
+          "v": " only in the topological phase. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "bulk–edge: "
+        },
+        {
+          "k": "m",
+          "v": "c_-{=}N_{\\mathrm{Maj}}\\cdot\\tfrac12\\cdot|C|\n{=}16\\cdot\\tfrac12{=}8{=}\\gcar{+}\\Nfam"
+        },
+        {
+          "k": "t",
+          "v": " — the same "
+        },
+        {
+          "k": "m",
+          "v": "c_-{=}8"
+        },
+        {
+          "k": "t",
+          "v": " as "
+        },
+        {
+          "k": "c",
+          "v": "v444"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v448_seam_edge_fourpoint.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EQUIV.EDGE.FOURPOINT.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Pins the one external MMST fact (continuum existence of the chiral scaling limit) empirically at the next order. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the ground-state correlation matrix is an exact projector "
+        },
+        {
+          "k": "m",
+          "v": "G^2{=}G"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\sim10^{-13}"
+        },
+        {
+          "k": "t",
+          "v": "), so the state is quasi-free (the MMST CAR hypothesis holds); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the edge four-point cross-ratio "
+        },
+        {
+          "k": "m",
+          "v": "Q{=}[G_{01}G_{23}]/[G_{02}G_{13}]"
+        },
+        {
+          "k": "t",
+          "v": " at commensurate positions is Cauchy-convergent under refinement; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "Q"
+        },
+        {
+          "k": "t",
+          "v": " converges to the free-fermion conformal cross-ratio "
+        },
+        {
+          "k": "m",
+          "v": "\\sin(5\\pi/12)/\\sin(\\pi/12){=}2{+}\\sqrt3\\approx3.732"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the bulk control is off-scale (exponential). "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "so the one external fact is supported at "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "both"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " two-point ("
+        },
+        {
+          "k": "c",
+          "v": "v444"
+        },
+        {
+          "k": "t",
+          "v": ") and four-point order. "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Lean: "
+            },
+            {
+              "k": "c",
+              "v": "TfptCarrier/SeamRigidityForcing.lean"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "FORM.SEAM.RIGIDITY.FORCING.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Kernel-hardens "
+        },
+        {
+          "k": "c",
+          "v": "v445"
+        },
+        {
+          "k": "t",
+          "v": " (and "
+        },
+        {
+          "k": "c",
+          "v": "v442"
+        },
+        {
+          "k": "t",
+          "v": "'s uniformity): the entrywise forcing iff "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{clock4}\\,a{=}\\mathrm{clock4}\\,b\\Leftrightarrow a{=}b"
+        },
+        {
+          "k": "t",
+          "v": " (i.e. "
+        },
+        {
+          "k": "m",
+          "v": "i^a{=}i^b\\Leftrightarrow a\\equiv b\\bmod4"
+        },
+        {
+          "k": "t",
+          "v": ", residue-only hence uniform in "
+        },
+        {
+          "k": "m",
+          "v": "N"
+        },
+        {
+          "k": "t",
+          "v": "), the four distinct eigenphases, the exact commutant dimension "
+        },
+        {
+          "k": "m",
+          "v": "\\sum n_s^2{=}64{<}256"
+        },
+        {
+          "k": "t",
+          "v": " and the order discriminator ("
+        },
+        {
+          "k": "m",
+          "v": "128{>}64"
+        },
+        {
+          "k": "t",
+          "v": ") are all proved by kernel "
+        },
+        {
+          "k": "c",
+          "v": "decide"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "forcing_kernel_facts"
+        },
+        {
+          "k": "t",
+          "v": ", no domain axioms); only the operator-level lift to the full "
+        },
+        {
+          "k": "m",
+          "v": "L^2"
+        },
+        {
+          "k": "t",
+          "v": " is the named premise. "
+        },
+        {
+          "k": "c",
+          "v": "lake build"
+        },
+        {
+          "k": "t",
+          "v": " OK, "
+        },
+        {
+          "k": "c",
+          "v": "#print axioms"
+        },
+        {
+          "k": "t",
+          "v": " clean."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Wolfram mirror."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_readouts_extension.wl"
+        },
+        {
+          "k": "t",
+          "v": " gains three exact "
+        },
+        {
+          "k": "c",
+          "v": "v445"
+        },
+        {
+          "k": "t",
+          "v": " checks (entrywise forcing for all "
+        },
+        {
+          "k": "m",
+          "v": "a,b\\in0..31"
+        },
+        {
+          "k": "t",
+          "v": "; commutant dimension "
+        },
+        {
+          "k": "m",
+          "v": "64{<}256"
+        },
+        {
+          "k": "t",
+          "v": "; order-2 commutant "
+        },
+        {
+          "k": "m",
+          "v": "128{>}64"
+        },
+        {
+          "k": "t",
+          "v": " swept "
+        },
+        {
+          "k": "m",
+          "v": "N{=}4..64"
+        },
+        {
+          "k": "t",
+          "v": "): "
+        },
+        {
+          "k": "m",
+          "v": "342\\to345"
+        },
+        {
+          "k": "t",
+          "v": " checks, all passing ("
+        },
+        {
+          "k": "c",
+          "v": "GATE.WOLFRAM.02"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The adversarial audit ("
+        },
+        {
+          "k": "c",
+          "v": "tfpt_5_redteam"
+        },
+        {
+          "k": "t",
+          "v": ", Target A) records the five-direction narrowing of the "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " keystone (edge scaling "
+        },
+        {
+          "k": "c",
+          "v": "v444"
+        },
+        {
+          "k": "t",
+          "v": ", forcing converse "
+        },
+        {
+          "k": "c",
+          "v": "v445"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " Lean, derived clock-invariance "
+        },
+        {
+          "k": "c",
+          "v": "v446"
+        },
+        {
+          "k": "t",
+          "v": ", independent topological "
+        },
+        {
+          "k": "m",
+          "v": "c_-{=}8"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v447"
+        },
+        {
+          "k": "t",
+          "v": ", four-point pinning "
+        },
+        {
+          "k": "c",
+          "v": "v448"
+        },
+        {
+          "k": "t",
+          "v": ") explicitly as “not promoted”: the only residual that stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "is still the cited continuum-existence theorem ("
+        },
+        {
+          "k": "c",
+          "v": "v336"
+        },
+        {
+          "k": "t",
+          "v": "). The research-contracts note lists the same as “eleven convergent attacks”."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-30",
+    "dateLabel": "2026-06-30",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v445"
+      },
+      {
+        "k": "t",
+        "v": " — the rigidity FORCING converse: commuting with the order-"
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": " clock is "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "exactly"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4"
+      },
+      {
+        "k": "t",
+        "v": "-block-diagonality, upgrading the rigidity step from “permit” to “force”"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v445_seam_rigidity_forcing.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.RIGIDITY.FORCING.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The rigidity route ("
+        },
+        {
+          "k": "c",
+          "v": "v398"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v442"
+        },
+        {
+          "k": "t",
+          "v": ") showed a "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": "-block-diagonal "
+        },
+        {
+          "k": "m",
+          "v": "K"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "commutes"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " with the order-"
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " clock "
+        },
+        {
+          "k": "m",
+          "v": "\\rho{=}\\operatorname{diag}(i^n)"
+        },
+        {
+          "k": "t",
+          "v": ". This module proves the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "converse"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " and the exact structure, isolating the single remaining physical premise. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "FORCING (entrywise iff): "
+        },
+        {
+          "k": "m",
+          "v": "[\\rho,K]{=}0"
+        },
+        {
+          "k": "t",
+          "v": " iff "
+        },
+        {
+          "k": "m",
+          "v": "K_{ij}{=}0"
+        },
+        {
+          "k": "t",
+          "v": " whenever "
+        },
+        {
+          "k": "m",
+          "v": "i{\\not\\equiv}j\\bmod4"
+        },
+        {
+          "k": "t",
+          "v": ", verified entrywise and swept "
+        },
+        {
+          "k": "m",
+          "v": "N{=}4..128"
+        },
+        {
+          "k": "t",
+          "v": " — commuting "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "forces"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": "-block-diagonality, it does not merely permit it. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "EXACT COMMUTANT DIMENSION: "
+        },
+        {
+          "k": "m",
+          "v": "\\dim\\{K:[\\rho,K]{=}0\\}{=}\\sum_s n_s^2"
+        },
+        {
+          "k": "t",
+          "v": " (the "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{ad}_\\rho"
+        },
+        {
+          "k": "t",
+          "v": " nullspace), a proper subspace of the full "
+        },
+        {
+          "k": "m",
+          "v": "N^2"
+        },
+        {
+          "k": "t",
+          "v": " algebra ("
+        },
+        {
+          "k": "m",
+          "v": "N{=}16"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "64{<}256"
+        },
+        {
+          "k": "t",
+          "v": ") — a genuine quantitative restriction. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "OFF-BLOCK "
+        },
+        {
+          "k": "m",
+          "v": "\\Leftrightarrow"
+        },
+        {
+          "k": "t",
+          "v": " NON-COMMUTING: every off-block matrix unit has "
+        },
+        {
+          "k": "m",
+          "v": "\\|[\\rho,E_{ij}]\\|{\\ge}\\sqrt2{>}0"
+        },
+        {
+          "k": "t",
+          "v": " (zero slack). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "THE ORDER IS THE DISCRIMINATOR: the order-"
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " clock gives "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " sectors; the order-"
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": " clock leaves a strictly larger commutant ("
+        },
+        {
+          "k": "m",
+          "v": "N{=}16"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "64"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "128"
+        },
+        {
+          "k": "t",
+          "v": ") — the four Gauss–Bonnet marks (order "
+        },
+        {
+          "k": "m",
+          "v": "4{=}|\\mu_4|{=}h(A_3)"
+        },
+        {
+          "k": "t",
+          "v": ") force strictly more structure than two, and only the index-"
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " extension is "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\det{=}1"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "v281"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v154"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v351"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "NONDEGENERACY: exactly "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " distinct eigenvalues "
+        },
+        {
+          "k": "m",
+          "v": "\\{1,i,-1,-i\\}"
+        },
+        {
+          "k": "t",
+          "v": " for all "
+        },
+        {
+          "k": "m",
+          "v": "N{\\ge}4"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "SYNTHESIS: commuting with the order-"
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " clock is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "equivalent"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " to "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": "-block-diagonality, so RP-definability ("
+        },
+        {
+          "k": "c",
+          "v": "v54"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v398"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " clock-invariance "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "force"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the block-diagonal "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda_\\Sigma"
+        },
+        {
+          "k": "t",
+          "v": " — "
+        },
+        {
+          "k": "c",
+          "v": "v442"
+        },
+        {
+          "k": "t",
+          "v": "'s “permit” upgraded to “force”. "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the single residual is now precisely that the physical transfer lies in that commutant (clock-invariance "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.SYM.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v323"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v335"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.RIGIDITY.01"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": ". Python-only (numpy; det facts Wolfram-mirrored via "
+        },
+        {
+          "k": "c",
+          "v": "v89"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v281"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v422"
+        },
+        {
+          "k": "t",
+          "v": "). Registered in "
+        },
+        {
+          "k": "c",
+          "v": "run_all.py"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "script_registry.csv"
+        },
+        {
+          "k": "t",
+          "v": ", the ledger, and cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " (route (xii) of the convergent attacks, and the sharpened residual in the Seam State Rigidity contract)."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-30",
+    "dateLabel": "2026-06-30",
+    "heading": [
+      {
+        "k": "t",
+        "v": "Lean kernel-hardening of two of the seven "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.EQUIV.01"
+      },
+      {
+        "k": "t",
+        "v": " routes — the Borchers/Wiesbrock standard-pair relations and the applicability-ledger count, machine-verified with clean axioms; rigor without new mathematics"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Context."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Two of the seven convergent attacks on the keystone residual are turned from numerical witnesses into kernel-checked facts, in the audit-contract style of "
+        },
+        {
+          "k": "c",
+          "v": "SeamScalingLimit.lean"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "c",
+          "v": "BWKeystone.lean"
+        },
+        {
+          "k": "t",
+          "v": ": the load-bearing algebra/bookkeeping is proved by the Lean kernel, while the cited theorems and the one open continuum input remain named axioms. "
+        },
+        {
+          "k": "c",
+          "v": "lake build"
+        },
+        {
+          "k": "t",
+          "v": " OK; "
+        },
+        {
+          "k": "c",
+          "v": "#print axioms"
+        },
+        {
+          "k": "t",
+          "v": " clean. Tracked as two new "
+        },
+        {
+          "k": "c",
+          "v": "FORM.*"
+        },
+        {
+          "k": "t",
+          "v": " ledger rows; "
+        },
+        {
+          "k": "c",
+          "v": "\\veri"
+        },
+        {
+          "k": "t",
+          "v": "-context in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": "; Lean manifest refreshed."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "FORM.SEAM.BW.HSMI.01"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "TfptCarrier/SeamStandardPair.lean"
+            },
+            {
+              "k": "t",
+              "v": ") — standard-pair relations, kernel-checked (hardens "
+            },
+            {
+              "k": "c",
+              "v": "v438"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The four Borchers/Wiesbrock relations on the centred "
+        },
+        {
+          "k": "m",
+          "v": "5"
+        },
+        {
+          "k": "t",
+          "v": "-mode ladder over "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb{Z}"
+        },
+        {
+          "k": "t",
+          "v": " are proved by kernel "
+        },
+        {
+          "k": "c",
+          "v": "decide"
+        },
+        {
+          "k": "t",
+          "v": " (axioms "
+        },
+        {
+          "k": "c",
+          "v": "propext"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "c",
+          "v": "Classical.choice"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "c",
+          "v": "Quot.sound"
+        },
+        {
+          "k": "t",
+          "v": " only, no domain axiom): "
+        },
+        {
+          "k": "m",
+          "v": "[K,P]{=}P"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "J^2{=}1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "JKJ{=}{-}K"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "JPJ{=}P_+"
+        },
+        {
+          "k": "t",
+          "v": " (and "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{tr}K{=}0"
+        },
+        {
+          "k": "t",
+          "v": "). The cited Borchers/Wiesbrock theorem and the one continuum input (the continuum standard pair) are named axioms; the composition pins face (ii) of "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " to exactly those two — intrinsic Bisognano–Wichmann, no rotation-covariance presupposed."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "FORM.SEAM.APPLICABILITY.01"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "TfptCarrier/SeamApplicabilityLedger.lean"
+            },
+            {
+              "k": "t",
+              "v": ") — the audit count, kernel-checked (hardens "
+            },
+            {
+              "k": "c",
+              "v": "v441"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The headline bookkeeping is itself machine-verified: of the "
+        },
+        {
+          "k": "m",
+          "v": "12"
+        },
+        {
+          "k": "t",
+          "v": " cited-theorem hypotheses (MMST/NPW26/Adamo, mirrored in order) exactly "
+        },
+        {
+          "k": "m",
+          "v": "11"
+        },
+        {
+          "k": "t",
+          "v": " are internal and "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " external ("
+        },
+        {
+          "k": "c",
+          "v": "total_count"
+        },
+        {
+          "k": "t",
+          "v": "=12, "
+        },
+        {
+          "k": "c",
+          "v": "internal_count"
+        },
+        {
+          "k": "t",
+          "v": "=11, "
+        },
+        {
+          "k": "c",
+          "v": "external_count"
+        },
+        {
+          "k": "t",
+          "v": "=1), plus "
+        },
+        {
+          "k": "c",
+          "v": "mmst_range"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "8\\le8\\le16"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "c",
+          "v": "npw_outside_bucket"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\det K{=}1\\neq4"
+        },
+        {
+          "k": "t",
+          "v": ") — ALL with NO axioms (pure kernel "
+        },
+        {
+          "k": "c",
+          "v": "decide"
+        },
+        {
+          "k": "t",
+          "v": "). The single external fact (continuum scaling-limit existence) is the named axiom; the keystone reduction pins its external dependence to exactly that one fact."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Net."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Both modules are imported by the root "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier.lean"
+        },
+        {
+          "k": "t",
+          "v": ", axiom-audited in "
+        },
+        {
+          "k": "c",
+          "v": "AxiomCheck.lean"
+        },
+        {
+          "k": "t",
+          "v": ", and signature-locked in "
+        },
+        {
+          "k": "c",
+          "v": "AuditContract.lean"
+        },
+        {
+          "k": "t",
+          "v": "; full "
+        },
+        {
+          "k": "c",
+          "v": "lake build"
+        },
+        {
+          "k": "t",
+          "v": " succeeds. No new mathematics — the same facts "
+        },
+        {
+          "k": "c",
+          "v": "v438"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v441"
+        },
+        {
+          "k": "t",
+          "v": " verify numerically are now kernel-proved; "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-30",
+    "dateLabel": "2026-06-30",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the chiral-edge scaling motor "
+      },
+      {
+        "k": "c",
+        "v": "v444"
+      },
+      {
+        "k": "t",
+        "v": " — the edge half of the one "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.EQUIV.01"
+      },
+      {
+        "k": "t",
+        "v": " continuum residual: the lattice edge already carries the conformal data of a chiral "
+      },
+      {
+        "k": "m",
+        "v": "c{=}1/2"
+      },
+      {
+        "k": "t",
+        "v": " Majorana CFT and converges under refinement, grounding the EDGE the way "
+      },
+      {
+        "k": "c",
+        "v": "v439"
+      },
+      {
+        "k": "t",
+        "v": " grounded the BULK; the keystone stays "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Context."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v439"
+        },
+        {
+          "k": "t",
+          "v": " grounded the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "bulk"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " half of the cited MMST existence (uniform gap, exponential clustering, finite light cone) and explicitly narrowed the one open analytic step to the chiral massless "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "edge"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " scaling limit. "
+        },
+        {
+          "k": "c",
+          "v": "v444"
+        },
+        {
+          "k": "t",
+          "v": " attacks exactly that residual on the SAME explicit "
+        },
+        {
+          "k": "c",
+          "v": "v367"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v368"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "p{+}ip"
+        },
+        {
+          "k": "t",
+          "v": " collar. "
+        },
+        {
+          "k": "c",
+          "v": "vN"
+        },
+        {
+          "k": "t",
+          "v": "-registered, runs in "
+        },
+        {
+          "k": "c",
+          "v": "run_all.py"
+        },
+        {
+          "k": "t",
+          "v": " (suite ends "
+        },
+        {
+          "k": "c",
+          "v": "ALL CHECKS PASSED"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "c",
+          "v": "\\veri"
+        },
+        {
+          "k": "t",
+          "v": "-cited in the body of "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " (the "
+        },
+        {
+          "k": "m",
+          "v": "G_{\\mathrm{net}}"
+        },
+        {
+          "k": "t",
+          "v": " contract). Python-only (numpy; no new exact identity to Wolfram-mirror)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v444_seam_edge_scaling.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EQUIV.CONTINUUM.EDGE.01"
+            },
+            {
+              "k": "t",
+              "v": ") — chiral-edge motor."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The lattice edge carries the kinematic and conformal data of a chiral "
+        },
+        {
+          "k": "m",
+          "v": "c{=}1/2"
+        },
+        {
+          "k": "t",
+          "v": " Majorana CFT: "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "a linear, chiral in-gap dispersion (velocity "
+        },
+        {
+          "k": "m",
+          "v": "v{\\approx}0.98"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "R^2{=}0.9999"
+        },
+        {
+          "k": "t",
+          "v": ", with "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "opposite"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " per-edge velocities — one chiral Majorana per edge); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "an "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "algebraic"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " equal-time edge two-point "
+        },
+        {
+          "k": "m",
+          "v": "\\sim r^{-\\eta}"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "\\eta{\\approx}1"
+        },
+        {
+          "k": "t",
+          "v": ", versus the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "exponential"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " bulk row and the exponential trivial-phase ("
+        },
+        {
+          "k": "m",
+          "v": "M{=}3"
+        },
+        {
+          "k": "t",
+          "v": ", no edge) control; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "a Cauchy-convergent scaling-collapse under refinement ("
+        },
+        {
+          "k": "m",
+          "v": "\\eta{=}1.001{\\pm}0.007"
+        },
+        {
+          "k": "t",
+          "v": ", successive profile spread "
+        },
+        {
+          "k": "m",
+          "v": "0.028{\\to}0.013"
+        },
+        {
+          "k": "t",
+          "v": " across "
+        },
+        {
+          "k": "m",
+          "v": "N_x{=}36..60"
+        },
+        {
+          "k": "t",
+          "v": ") — the numerical hallmark of an existing scaling limit. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "m",
+          "v": "\\eta{=}1\\Leftrightarrow"
+        },
+        {
+          "k": "t",
+          "v": " one chiral Majorana ("
+        },
+        {
+          "k": "m",
+          "v": "c{=}1/2"
+        },
+        {
+          "k": "t",
+          "v": ") per edge, so the "
+        },
+        {
+          "k": "m",
+          "v": "16"
+        },
+        {
+          "k": "t",
+          "v": "-copy carrier has a chiral "
+        },
+        {
+          "k": "m",
+          "v": "c_-{=}8"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " edge CFT ("
+        },
+        {
+          "k": "m",
+          "v": "c_-{=}\\gcar{+}\\Nfam"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the rigorous uniform-convergence theorem (cited MMST, "
+        },
+        {
+          "k": "c",
+          "v": "v336"
+        },
+        {
+          "k": "t",
+          "v": ") is not supplied."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Net."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " With "
+        },
+        {
+          "k": "c",
+          "v": "v439"
+        },
+        {
+          "k": "t",
+          "v": " (bulk) and "
+        },
+        {
+          "k": "c",
+          "v": "v444"
+        },
+        {
+          "k": "t",
+          "v": " (edge), "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "both halves"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " of the one continuum residual are numerically grounded on our explicit model and pinned to a single cited existence theorem; "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": ". Ledger row, "
+        },
+        {
+          "k": "c",
+          "v": "script_registry.csv"
+        },
+        {
+          "k": "t",
+          "v": " index and the generated surfaces ("
+        },
+        {
+          "k": "c",
+          "v": "verification.tex"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "ScriptIndex.tsx"
+        },
+        {
+          "k": "t",
+          "v": ") updated in the same change; manifest refreshed last."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-30",
+    "dateLabel": "2026-06-30",
+    "heading": [
+      {
+        "k": "t",
+        "v": "six convergent attacks on the one "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.EQUIV.01"
+      },
+      {
+        "k": "t",
+        "v": " continuum residual — intrinsic Bisognano–Wichmann, a Lieb–Robinson continuum motor, the "
+      },
+      {
+        "k": "m",
+        "v": "\\beta"
+      },
+      {
+        "k": "t",
+        "v": "-homotopy, an applicability audit, uniform rigidity, and falsifiable kill tests; none closes the keystone, together they reduce it to a single analytic fact and make the claim falsifiable"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Context."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The keystone "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " is “closed modulo a cited theorem”: its one open input is the continuum existence of the seam's chiral massless scaling limit. Six new modules attack that residual from independent directions; each is honest about "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " closing it. All six are "
+        },
+        {
+          "k": "c",
+          "v": "vN"
+        },
+        {
+          "k": "t",
+          "v": "-registered, run in "
+        },
+        {
+          "k": "c",
+          "v": "run_all.py"
+        },
+        {
+          "k": "t",
+          "v": " (suite ends "
+        },
+        {
+          "k": "c",
+          "v": "ALL CHECKS PASSED"
+        },
+        {
+          "k": "t",
+          "v": "), and are "
+        },
+        {
+          "k": "c",
+          "v": "\\veri"
+        },
+        {
+          "k": "t",
+          "v": "-cited in the body of "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " (the "
+        },
+        {
+          "k": "m",
+          "v": "G_{\\mathrm{net}}"
+        },
+        {
+          "k": "t",
+          "v": " contract). Python-only (no new exact identity to Wolfram-mirror)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v438_seam_hsmi_borchers.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EQUIV.BW.HSMI.01"
+            },
+            {
+              "k": "t",
+              "v": ") — intrinsic BW."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The seam supplies a Longo "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "standard pair"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": "half-sided modular inclusion (positive lightlike translation "
+        },
+        {
+          "k": "m",
+          "v": "P\\ge0"
+        },
+        {
+          "k": "t",
+          "v": ", boost "
+        },
+        {
+          "k": "m",
+          "v": "K"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "[K,P]{=}P"
+        },
+        {
+          "k": "t",
+          "v": ", reflection "
+        },
+        {
+          "k": "m",
+          "v": "J"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "JKJ{=}{-}K"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "JPJ{=}P_-"
+        },
+        {
+          "k": "t",
+          "v": "), so by Borchers' theorem the modular flow is geometric "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "intrinsically"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " — "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "without"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " presupposing rotation-covariance of the vacuum (complementary to Adamo–Giorgetti–Tanimoto). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "ladder algebra exact, "
+        },
+        {
+          "k": "m",
+          "v": "sl(2,\\mathbb{R})"
+        },
+        {
+          "k": "t",
+          "v": " positivity (min eig "
+        },
+        {
+          "k": "m",
+          "v": ">0"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "synthesis; "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the continuum standard pair."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v439_seam_lieb_robinson.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EQUIV.CONTINUUM.LR.01"
+            },
+            {
+              "k": "t",
+              "v": ") — continuum motor."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The explicit gapped "
+        },
+        {
+          "k": "m",
+          "v": "p{+}ip"
+        },
+        {
+          "k": "t",
+          "v": " collar ("
+        },
+        {
+          "k": "c",
+          "v": "v367"
+        },
+        {
+          "k": "t",
+          "v": ") has a uniform-in-"
+        },
+        {
+          "k": "m",
+          "v": "N"
+        },
+        {
+          "k": "t",
+          "v": " gap, exponential clustering with "
+        },
+        {
+          "k": "m",
+          "v": "N"
+        },
+        {
+          "k": "t",
+          "v": "-independent "
+        },
+        {
+          "k": "m",
+          "v": "\\xi"
+        },
+        {
+          "k": "t",
+          "v": ", and a finite Lieb–Robinson light cone, so by Nachtergaele–Sims its "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "bulk"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " thermodynamic limit exists — grounding the bulk half of the cited MMST existence in our model and narrowing the open step to the chiral "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "edge"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " scaling limit. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the edge CFT."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v440_seam_lto_rp_beta.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EQUIV.LTORP.BETA.01"
+            },
+            {
+              "k": "t",
+              "v": ") — "
+            },
+            {
+              "k": "m",
+              "v": "\\beta"
+            },
+            {
+              "k": "t",
+              "v": "-homotopy."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The (LTO-RP)/BW data ("
+        },
+        {
+          "k": "m",
+          "v": "\\Theta K\\Theta{=}{-}K"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "[\\rho,K]{=}0"
+        },
+        {
+          "k": "t",
+          "v": ") are "
+        },
+        {
+          "k": "m",
+          "v": "\\beta"
+        },
+        {
+          "k": "t",
+          "v": "-independent, and along the whole path "
+        },
+        {
+          "k": "m",
+          "v": "C_\\beta{=}1/(1{+}e^{\\beta K})"
+        },
+        {
+          "k": "t",
+          "v": " from the NPW26-proven "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "trace"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " state ("
+        },
+        {
+          "k": "m",
+          "v": "\\beta{=}0"
+        },
+        {
+          "k": "t",
+          "v": ") to the seam KMS state ("
+        },
+        {
+          "k": "m",
+          "v": "\\beta{=}1"
+        },
+        {
+          "k": "t",
+          "v": ") every covariance is reflection-related, "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": "-invariant and valid — a norm-continuous, obstruction-free homotopy, upgrading the single point of "
+        },
+        {
+          "k": "c",
+          "v": "v426"
+        },
+        {
+          "k": "t",
+          "v": " to a path argument for sub-step (ii) of "
+        },
+        {
+          "k": "c",
+          "v": "v424"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v441_seam_applicability_ledger.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EQUIV.APPLICABILITY.01"
+            },
+            {
+              "k": "t",
+              "v": ") — audit."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " A hypothesis-by-hypothesis ledger of the three cited theorems (MMST / NPW26 / Adamo–Giorgetti–Tanimoto) finds "
+        },
+        {
+          "k": "m",
+          "v": "11"
+        },
+        {
+          "k": "t",
+          "v": " of "
+        },
+        {
+          "k": "m",
+          "v": "12"
+        },
+        {
+          "k": "t",
+          "v": " hypotheses are TFPT-internal computed facts and exactly one is external — the continuum existence of the chiral scaling limit; covariance is an Adamo consequence (defuses the "
+        },
+        {
+          "k": "c",
+          "v": "v215"
+        },
+        {
+          "k": "t",
+          "v": " circularity), not an input. The keystone's external dependence is pinned to that one analytic fact."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v442_seam_rigidity_uniform.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.RIGIDITY.UNIFORM.01"
+            },
+            {
+              "k": "t",
+              "v": ") — uniform rigidity."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The band-limited "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": "-character rigidity of "
+        },
+        {
+          "k": "c",
+          "v": "v398"
+        },
+        {
+          "k": "t",
+          "v": " is uniform in "
+        },
+        {
+          "k": "m",
+          "v": "N"
+        },
+        {
+          "k": "t",
+          "v": ": exact "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": "-sector commutation to "
+        },
+        {
+          "k": "m",
+          "v": "N{=}256"
+        },
+        {
+          "k": "t",
+          "v": " (not merely the "
+        },
+        {
+          "k": "m",
+          "v": "N\\le64"
+        },
+        {
+          "k": "t",
+          "v": " sweep), a uniform gap, and an "
+        },
+        {
+          "k": "m",
+          "v": "N"
+        },
+        {
+          "k": "t",
+          "v": "-independent clock-breaking lower bound "
+        },
+        {
+          "k": "m",
+          "v": "\\|[\\rho,V]\\|{=}2"
+        },
+        {
+          "k": "t",
+          "v": " — so it is not a small-"
+        },
+        {
+          "k": "m",
+          "v": "N"
+        },
+        {
+          "k": "t",
+          "v": " artifact (the full-"
+        },
+        {
+          "k": "m",
+          "v": "L^2"
+        },
+        {
+          "k": "t",
+          "v": " forcing stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v443_seam_e8_discriminator.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.E8.DISCRIMINATOR.01"
+            },
+            {
+              "k": "t",
+              "v": ") — kill tests."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Mode D of the closure-mode classification ("
+        },
+        {
+          "k": "c",
+          "v": "v347"
+        },
+        {
+          "k": "t",
+          "v": ") as concrete "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "falsifiable"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " discriminators against the nearest "
+        },
+        {
+          "k": "m",
+          "v": "c{=}8"
+        },
+        {
+          "k": "t",
+          "v": " rival "
+        },
+        {
+          "k": "m",
+          "v": "SO(16)_1"
+        },
+        {
+          "k": "t",
+          "v": ": torus ground-state degeneracy "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": ", level-"
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " currents "
+        },
+        {
+          "k": "m",
+          "v": "248"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "120"
+        },
+        {
+          "k": "t",
+          "v": ", lattice theta "
+        },
+        {
+          "k": "m",
+          "v": "240"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "112"
+        },
+        {
+          "k": "t",
+          "v": " norm-"
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": " roots; "
+        },
+        {
+          "k": "m",
+          "v": "c{=}8"
+        },
+        {
+          "k": "t",
+          "v": " alone cannot decide ("
+        },
+        {
+          "k": "c",
+          "v": "v277"
+        },
+        {
+          "k": "t",
+          "v": "), only "
+        },
+        {
+          "k": "m",
+          "v": "\\det K{=}1"
+        },
+        {
+          "k": "t",
+          "v": " (the genus-"
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " statement, "
+        },
+        {
+          "k": "c",
+          "v": "v90"
+        },
+        {
+          "k": "t",
+          "v": ") selects "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": ". A seam with GSD"
+        },
+        {
+          "k": "m",
+          "v": "{>}1"
+        },
+        {
+          "k": "t",
+          "v": " would falsify "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "X"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Status discipline."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "throughout; the six modules reduce, audit and falsify the residual but do not supply the one cited continuum-existence theorem. Ledger rows, the "
+        },
+        {
+          "k": "c",
+          "v": "script_registry.csv"
+        },
+        {
+          "k": "t",
+          "v": " index, and the generated surfaces ("
+        },
+        {
+          "k": "c",
+          "v": "verification.tex"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "ScriptIndex.tsx"
+        },
+        {
+          "k": "t",
+          "v": ") are updated in the same change; manifest refreshed last."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-30",
+    "dateLabel": "2026-06-30",
+    "heading": [
+      {
+        "k": "t",
+        "v": "shadow-export coherence — the "
+      },
+      {
+        "k": "c",
+        "v": "tfpt5-shadow"
+      },
+      {
+        "k": "t",
+        "v": " mirror is now reproducible "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "as shipped"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": ": the audit is shadow-aware, the content maps are non-destructive on the website-free subset, and an export gate blocks any incoherent mirror"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Context (reviewer finding, Alessandro)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " On the exported "
+        },
+        {
+          "k": "c",
+          "v": "tfpt5_shadow.zip"
+        },
+        {
+          "k": "t",
+          "v": " the independent surfaces reproduced ("
+        },
+        {
+          "k": "c",
+          "v": "build.sh notes"
+        },
+        {
+          "k": "t",
+          "v": " () "
+        },
+        {
+          "k": "c",
+          "v": "11 ok"
+        },
+        {
+          "k": "t",
+          "v": "; Wolfram base/extension; Red Team; Lean transcript), but the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "package"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " layer did not: "
+        },
+        {
+          "k": "c",
+          "v": "make_manifest.py --check"
+        },
+        {
+          "k": "t",
+          "v": " reported a stale "
+        },
+        {
+          "k": "c",
+          "v": "verification/website_map.csv"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "build.sh audit"
+        },
+        {
+          "k": "t",
+          "v": " crashed because it unconditionally required "
+        },
+        {
+          "k": "c",
+          "v": "website/lib/release.ts"
+        },
+        {
+          "k": "t",
+          "v": ", which the shadow subset deliberately excludes."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "make_docs_map.py"
+            },
+            {
+              "k": "t",
+              "v": " is now shadow-aware."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "website_map.csv"
+        },
+        {
+          "k": "t",
+          "v": " mirrors the "
+        },
+        {
+          "k": "c",
+          "v": "website/"
+        },
+        {
+          "k": "t",
+          "v": " sources; on a tree without "
+        },
+        {
+          "k": "c",
+          "v": "website/"
+        },
+        {
+          "k": "t",
+          "v": " the generator now "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "skips"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " it instead of regenerating it down to a single "
+        },
+        {
+          "k": "c",
+          "v": "README.md"
+        },
+        {
+          "k": "t",
+          "v": " row. This removes the silent corruption that made "
+        },
+        {
+          "k": "c",
+          "v": "build.sh notes"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "gen"
+        },
+        {
+          "k": "t",
+          "v": " leave "
+        },
+        {
+          "k": "c",
+          "v": "website_map.csv"
+        },
+        {
+          "k": "t",
+          "v": " stale against the manifest on the export (it now matches the established skips in "
+        },
+        {
+          "k": "c",
+          "v": "make_script_index.py"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "make_changelog_web.py"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "audit_sync.py"
+            },
+            {
+              "k": "t",
+              "v": " is now shadow-aware."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " When "
+        },
+        {
+          "k": "c",
+          "v": "website/"
+        },
+        {
+          "k": "t",
+          "v": " is absent it skips the website mirror (section D), the website version stamps (E) and the website Wolfram-count card (F), and the website generated-surface freshness in (A), printing exactly which sections were skipped. "
+        },
+        {
+          "k": "c",
+          "v": "build.sh audit"
+        },
+        {
+          "k": "t",
+          "v": " therefore runs to a clean "
+        },
+        {
+          "k": "c",
+          "v": "AUDIT OK"
+        },
+        {
+          "k": "t",
+          "v": " on the shadow subset instead of raising "
+        },
+        {
+          "k": "c",
+          "v": "FileNotFoundError"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Export coherence gate."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "scripts/export-shadow.sh"
+        },
+        {
+          "k": "t",
+          "v": " now re-runs "
+        },
+        {
+          "k": "c",
+          "v": "make_manifest.py --check"
+        },
+        {
+          "k": "t",
+          "v": " and the shadow-aware "
+        },
+        {
+          "k": "c",
+          "v": "audit_sync.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "on the filtered tree"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " before the mirror is published. The manifest check catches the earlier "
+        },
+        {
+          "k": "c",
+          "v": "v235--v298"
+        },
+        {
+          "k": "t",
+          "v": " symptom at the source: a module referenced by "
+        },
+        {
+          "k": "c",
+          "v": "run_all.py"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "script_registry.csv"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "manifest.sha256"
+        },
+        {
+          "k": "t",
+          "v": " but not committed (and thus dropped by "
+        },
+        {
+          "k": "c",
+          "v": "git ls-files"
+        },
+        {
+          "k": "t",
+          "v": ") now fails the export loudly instead of shipping a package that says "
+        },
+        {
+          "k": "c",
+          "v": "ALL CHECKS PASSED"
+        },
+        {
+          "k": "t",
+          "v": " while "
+        },
+        {
+          "k": "c",
+          "v": "run_all.py"
+        },
+        {
+          "k": "t",
+          "v": " stops at the first missing script."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Manifest refreshed."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "manifest.sha256"
+        },
+        {
+          "k": "t",
+          "v": " was regenerated as the last release step so the shipped digests match the committed "
+        },
+        {
+          "k": "c",
+          "v": "changelog.tex"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "website_map.csv"
+        },
+        {
+          "k": "t",
+          "v": "; the full Python suite reproduces end-to-end on the regenerated export. No theory content, status marker or "
+        },
+        {
+          "k": "c",
+          "v": "vN"
+        },
+        {
+          "k": "t",
+          "v": " module changed — this is an export/infrastructure fix only."
+        }
+      ]
+    ]
+  },
+  {
     "date": "2026-06-29",
     "dateLabel": "2026-06-29",
     "heading": [

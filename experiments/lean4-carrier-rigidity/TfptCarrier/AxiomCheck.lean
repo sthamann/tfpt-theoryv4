@@ -42,6 +42,9 @@ import TfptCarrier.SeamDeckClosure
 import TfptCarrier.MobiusUniformisation
 import TfptCarrier.CohomologyGrading
 import TfptCarrier.CoxeterPrime2
+import TfptCarrier.SeamStandardPair
+import TfptCarrier.SeamApplicabilityLedger
+import TfptCarrier.SeamRigidityForcing
 
 -- Layer 1: Polarization (algebraic core)
 #print axioms TFPT.Carrier.Polarization.sixY_carrier_polynomial
@@ -204,3 +207,26 @@ import TfptCarrier.CoxeterPrime2
 #print axioms TFPT.Carrier.CohomologyGrading.omega3_pullback
 #print axioms TFPT.Carrier.CohomologyGrading.omega1_reflection
 #print axioms TFPT.Carrier.CohomologyGrading.cohom_grading
+
+-- Borchers/Wiesbrock standard-pair algebra (SEAM.EQUIV.BW.HSMI.01; v438)
+-- The four standard-pair relations are kernel-checked (NO axioms); the geometric-flow
+-- composition pins the residual to the cited Borchers step + the one continuum input.
+#print axioms TfptCarrier.SeamStandardPair.standard_pair_relations
+#print axioms TfptCarrier.SeamStandardPair.boost_traceless
+#print axioms TfptCarrier.SeamStandardPair.geometricModularFlowFromStandardPair
+
+-- Applicability ledger (SEAM.EQUIV.APPLICABILITY.01; v441)
+-- The audit COUNT (11 internal, 1 external) and the MMST arithmetic are pure kernel
+-- facts (NO axioms); only the keystone reduction names the one external fact.
+#print axioms TfptCarrier.SeamApplicabilityLedger.audit
+#print axioms TfptCarrier.SeamApplicabilityLedger.mmst_range
+#print axioms TfptCarrier.SeamApplicabilityLedger.npw_outside_bucket
+#print axioms TfptCarrier.SeamApplicabilityLedger.keystoneReducesToOneFact
+
+-- Rigidity FORCING converse (SEAM.RIGIDITY.FORCING.01; v445 + v442)
+-- The entrywise forcing iff (residue-only, uniform in N), the exact commutant dimension
+-- and the order discriminator are pure kernel facts (NO axioms); only the rigidity closure
+-- names the one operator-level clock-invariance premise.
+#print axioms TfptCarrier.SeamRigidityForcing.forcing_kernel_facts
+#print axioms TfptCarrier.SeamRigidityForcing.commutator_zero_iff
+#print axioms TfptCarrier.SeamRigidityForcing.forcingClosesRigidity

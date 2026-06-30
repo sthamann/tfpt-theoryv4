@@ -54,6 +54,12 @@ import make_script_index
 ROOT = Path(__file__).resolve().parent.parent
 VERIF = ROOT / "verification"
 WEB = ROOT / "website"
+# Shadow-export trees (scripts/export-shadow.sh) intentionally omit website/.
+# When it is absent the website mirror cannot be checked, so the audit skips the
+# website-only sections (D, the website parts of E and F, and the website
+# generated-surface freshness in A) and says so -- mirroring the shadow-mode
+# skips already in make_script_index.py / make_changelog_web.py / make_docs_map.py.
+SHADOW = not WEB.exists()
 
 ACTIVE_DOCS = make_docs_map.DOCS                       # 9 papers
 ALL_NOTES = ACTIVE_DOCS + ["changelog"]                # + standalone changelog
@@ -105,6 +111,8 @@ def check_suite(registered: list[str]) -> None:
 
     # generated surfaces fresh?
     for target, content in make_script_index.build().items():
+        if WEB in target.parents and SHADOW:
+            continue                      # website mirror absent in a shadow tree
         if not target.exists() or target.read_text() != content:
             err("A.generated", f"{target.relative_to(ROOT)} stale -- run make_script_index.py")
     docs_csv, web_csv, sidecar = make_docs_map.build()
@@ -113,6 +121,8 @@ def check_suite(registered: list[str]) -> None:
         (make_docs_map.WEBSITE_MAP, web_csv),
         (make_docs_map.DATES_FILE, json.dumps(sidecar, indent=1) + "\n"),
     ]:
+        if t == make_docs_map.WEBSITE_MAP and SHADOW:
+            continue                      # website_map.csv mirrors website/ (absent here)
         if not t.exists() or t.read_text() != content:
             err("A.generated", f"{t.relative_to(ROOT)} stale -- run make_docs_map.py")
 
@@ -208,6 +218,8 @@ def check_ledger(registered: list[str]) -> None:
 
 # -------------------------------------------------------------- D: website
 def check_website(registered: list[str]) -> None:
+    if SHADOW:
+        return                            # no website/ in a shadow-export tree
     # 1. verification mirror
     pub_v = WEB / "public" / "verification"
     want = {f"{s}.py" for s in registered} | {"tfpt_constants.py"}
@@ -273,7 +285,9 @@ def tex_version() -> str:
 
 
 def check_versions() -> None:
-    ver = tex_version()
+    ver = tex_version()                    # validates version.tex parses (works in shadow)
+    if SHADOW:
+        return                            # version.ts / release.ts live under website/
     version_ts = WEB / "lib" / "version.ts"
     if not version_ts.exists():
         err("E.version", "website/lib/version.ts missing (run build.sh website)")
@@ -299,6 +313,8 @@ def check_wolfram() -> None:
     if not (m.group(1) == m2.group(1) == m2.group(2)):
         err("F.wolfram", f"wolfram counts disagree: README {m.group(1)} vs ledger "
                          f"{m2.group(1)}/{m2.group(2)} -- update both + re-run the .wl")
+    if SHADOW:
+        return                            # the website stats card lives under website/
     # the website stats card must carry the same counts (base + extension)
     m3 = re.search(r"current total (\d+)/(\d+)", ledger)
     page = (WEB / "app" / "verification" / "page.tsx").read_text()
@@ -327,6 +343,9 @@ def check_overfull() -> None:
 def main() -> None:
     registered = make_script_index.load_run_all_modules()
     baseline = load_baseline()
+    if SHADOW:
+        print("shadow mode: website/ absent -- skipping website mirror (D), "
+              "website version (E) and website wolfram-page (F) checks")
     check_suite(registered)
     check_papers(registered, baseline)
     check_csv_wellformed()
@@ -340,7 +359,9 @@ def main() -> None:
             print(e)
         print(f"\nAUDIT FAILED: {len(errors)} problem(s)")
         sys.exit(1)
-    print(f"AUDIT OK ({len(registered)} scripts; papers, ledger, changelog and website in sync)")
+    scope = "papers, ledger and changelog in sync (shadow tree: website checks skipped)" \
+        if SHADOW else "papers, ledger, changelog and website in sync"
+    print(f"AUDIT OK ({len(registered)} scripts; {scope})")
 
 
 if __name__ == "__main__":

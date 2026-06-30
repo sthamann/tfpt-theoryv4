@@ -39,6 +39,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 VERIF = ROOT / "verification"
+WEBSITE_DIR = ROOT / "website"
 DOCS_MAP = VERIF / "docs_map.csv"
 WEBSITE_MAP = VERIF / "website_map.csv"
 DATES_FILE = VERIF / "docs_map_dates.json"
@@ -171,7 +172,7 @@ def render_website_map() -> str:
     w = csv.writer(buf, lineterminator="\n")
     w.writerow(["file", "scripts", "docs"])
     by_id = registered_scripts()
-    web = ROOT / "website"
+    web = WEBSITE_DIR
     files = []
     for sub in ("app", "components", "lib"):
         files += sorted((web / sub).rglob("*.ts")) + sorted((web / sub).rglob("*.tsx"))
@@ -209,6 +210,15 @@ def main() -> None:
         (WEBSITE_MAP, web_csv),
         (DATES_FILE, json.dumps(sidecar, indent=1) + "\n"),
     ]
+    # Shadow-export trees ship no website/ -- website_map.csv mirrors website
+    # sources that are absent there, so regenerating it would destructively drop
+    # every website row (and make the manifest stale).  Skip it on such a tree,
+    # mirroring make_script_index.py / make_changelog_web.py, so `build.sh gen`
+    # and `build.sh notes` stay non-destructive on the shadow subset.
+    if not WEBSITE_DIR.exists():
+        targets = [(t, content) for t, content in targets if t != WEBSITE_MAP]
+        if not check_only:
+            print(f"skipped (no website/ in this tree): {WEBSITE_MAP.relative_to(ROOT)}")
     stale = [t for t, content in targets if not t.exists() or t.read_text() != content]
     if check_only:
         if stale:

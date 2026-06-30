@@ -105,7 +105,7 @@ v84–v93 block passed **45/45** on first run; the v94–v140 blocks were added
 the same day, the v141–v144 block on 2026-06-12. Current state:
 
 ```
---- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437: 342 passed, 0 failed ---
+--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445: 345 passed, 0 failed ---
 ALL WOLFRAM EXTENSION CHECKS PASSED
 ```
 
@@ -328,6 +328,18 @@ the two TFPT structural integers `(g_car,N_fam)=(5,3)` are the **unique** root p
 `x²−(rank E₈)x+(h/2) = x²−8x+15 = (x−3)(x−5)` (sum of roots `=rank E₈=8`, product `=h/2=15=g_car·N_fam`), so
 both are forced together by two degree-invariants; the three mapped degrees `{2,8,30}=min/rank/max`. No new
 per-degree mining; no status change.
+
+The 2026-06-30 **rigidity-forcing round** added three exact checks (342 → 345):
+`v445_seam_rigidity_forcing.py` — the converse of `v442`, upgrading rigidity from "block-diagonal PERMITS
+commuting" to "commuting with the order-4 clock FORCES block-diagonal". (i) the ENTRYWISE forcing
+`[ρ,E_{ab}]=(iᵃ−iᵇ)E_{ab}=0 ⟺ a≡b (mod 4)`, verified for all `a,b∈0..31` (residue-only ⇒ uniform in `N`, the
+v442 uniformity); (ii) the exact commutant dimension `Σ nₛ² = 4·4² = 64` is a PROPER subspace of `N²=256`
+(`N=16`); (iii) THE ORDER IS THE DISCRIMINATOR — the order-2 commutant (`128`) is strictly larger than the
+order-4 (`64`), swept `N=4..64`, so the four marks `|μ₄|=4=h(A₃)` force strictly more structure than two (only
+index-4 is `(E₈)₁`, det 1 vs `SO(16)` det 4, already mirrored via v281/v344). Also Lean-kernel-hardened
+(`SeamRigidityForcing.lean`, `FORM.SEAM.RIGIDITY.FORCING.01`). The clock-invariance derivation `v446`, the
+topological edge `v447` and the four-point `v448` are numerical (numpy BdG / OS reconstruction) and stay
+Python-only by the suite convention.
 
 The 2026-06-22 **next-steps round (A/C/D/B)** added one more exact check (288 → 289):
 `v337_decoupling_theorem.py` (the ambient back-reaction scale `2·dim(E₈)·c₃² = 31/(4π²)`

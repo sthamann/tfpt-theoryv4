@@ -63,6 +63,9 @@ import TfptCarrier.SeamDeckClosure
 import TfptCarrier.MobiusUniformisation
 import TfptCarrier.CohomologyGrading
 import TfptCarrier.CoxeterPrime2
+import TfptCarrier.SeamStandardPair
+import TfptCarrier.SeamApplicabilityLedger
+import TfptCarrier.SeamRigidityForcing
 
 namespace TFPT.Carrier.AuditContract
 
@@ -515,5 +518,55 @@ example :
     (∀ r : ℝ, r * r = r → ¬ TFPT.Carrier.CoxeterPrime2.IsContractionRate r) ∧
     TFPT.Carrier.CoxeterPrime2.IsContractionRate ((2 : ℝ) / 3) :=
   TFPT.Carrier.CoxeterPrime2.no_prime2_only_attractor
+
+/-! ## Borchers/Wiesbrock standard-pair algebra (SEAM.EQUIV.BW.HSMI.01; v438) -/
+
+/-- The four standard-pair relations exactly, on the centred 5-mode ladder:
+    `[K,P] = P`, `J² = 1`, `J K J = −K`, `J P J = P₊`. -/
+example :
+    (TfptCarrier.SeamStandardPair.K * TfptCarrier.SeamStandardPair.P
+        - TfptCarrier.SeamStandardPair.P * TfptCarrier.SeamStandardPair.K
+        = TfptCarrier.SeamStandardPair.P) ∧
+    (TfptCarrier.SeamStandardPair.J * TfptCarrier.SeamStandardPair.J = 1) ∧
+    (TfptCarrier.SeamStandardPair.J * TfptCarrier.SeamStandardPair.K
+        * TfptCarrier.SeamStandardPair.J = -TfptCarrier.SeamStandardPair.K) ∧
+    (TfptCarrier.SeamStandardPair.J * TfptCarrier.SeamStandardPair.P
+        * TfptCarrier.SeamStandardPair.J = TfptCarrier.SeamStandardPair.Pplus) :=
+  TfptCarrier.SeamStandardPair.standard_pair_relations
+
+/-- Intrinsic Bisognano–Wichmann: the seam standard pair yields a geometric modular
+    flow (face (ii)), modulo the cited Borchers step + the one continuum input. -/
+example : TfptCarrier.SeamStandardPair.GeometricModularFlow :=
+  TfptCarrier.SeamStandardPair.geometricModularFlowFromStandardPair
+
+/-! ## Applicability ledger (SEAM.EQUIV.APPLICABILITY.01; v441) -/
+
+/-- The audit: of 12 cited-theorem hypotheses, exactly 11 are internal and 1 external. -/
+example :
+    TfptCarrier.SeamApplicabilityLedger.sources.length = 12 ∧
+    TfptCarrier.SeamApplicabilityLedger.sources.countP
+      TfptCarrier.SeamApplicabilityLedger.Src.isInternal = 11 ∧
+    TfptCarrier.SeamApplicabilityLedger.sources.countP
+      TfptCarrier.SeamApplicabilityLedger.Src.isExternal = 1 :=
+  TfptCarrier.SeamApplicabilityLedger.audit
+
+/-- The MMST applicability range `rank ≤ c ≤ D` reads `8 ≤ 8 ≤ 16`. -/
+example :
+    TfptCarrier.SeamApplicabilityLedger.rankE8 ≤ TfptCarrier.SeamApplicabilityLedger.cChiral
+      ∧ TfptCarrier.SeamApplicabilityLedger.cChiral ≤ TfptCarrier.SeamApplicabilityLedger.D :=
+  TfptCarrier.SeamApplicabilityLedger.mmst_range
+
+/-! ## Rigidity FORCING converse (SEAM.RIGIDITY.FORCING.01; v445 + v442) -/
+
+/-- The entrywise forcing, uniform in N: `iᵃ = iᵇ ↔ a ≡ b (mod 4)`. -/
+example (a b : Fin 4) :
+    TfptCarrier.SeamRigidityForcing.clock4 a = TfptCarrier.SeamRigidityForcing.clock4 b
+      ↔ a = b :=
+  TfptCarrier.SeamRigidityForcing.commutator_zero_iff a b
+
+/-- The order discriminator: the order-4 commutant `64` is strictly smaller than the
+    order-2 commutant `128` (only the four marks give `(E₈)₁`). -/
+example : 4 * (4 * 4) < 2 * (8 * 8) :=
+  TfptCarrier.SeamRigidityForcing.order_discriminator_16
 
 end TFPT.Carrier.AuditContract

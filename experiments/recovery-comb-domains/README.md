@@ -1,4 +1,4 @@
-# Recovery comb across domains — one detector, six channels
+# Recovery comb across domains — one detector, eight channels
 
 > **Firewall:** search targets / consistency checks, **never** load-bearing claims. TFPT predicts
 > the dynamic comb in **boundary/horizon-recovery** relaxations; channels are typed by how
@@ -48,6 +48,7 @@ claim).
 | **A3** | FRB burst tail (FAST/GBT, stacked) | horizon-residual | **real** | **8 bright bursts / 3 repeaters**, 7 clear the gate; **stacked ω=2.58 not special (p≈0.34) → clean NULL** (weak: scattering-dominated, ~2% comb) |
 | **A3b** | CHIME baseband FRB tail (stacked) | horizon-residual | **real** | **8 distinct FRBs**, 2.56 µs coherently-dedispersed full-Stokes (DOI 10.11570/23.0029); all 8 clear the gate; **stacked ω=2.58 not special (p≈0.67) → clean NULL** (genuine scattering tails, still ~2% ceiling) |
 | **A4** | GRB X-ray afterglow plateau (stacked) | surface (borderline) | **real** | **22 Swift-XRT afterglows** (UKSSDC), **17 clear the gate at 3–4.4 comb periods** — the widest-ln(t) astrophysical recovery in hand; **stacked ω=2.58 NOT special (p≈0.13) → well-powered NULL** (not data-limited; central-engine/accretion, surface firewall) |
+| **A5** | nuclear transient / AGN-disk TDE optical fade (stacked) | surface (borderline) | **real** | **J2245+3743** (AGN J224554.84+374326.5, z=2.554; Graham+2025) ZTF DR fade; the **zr** band (1007 epochs) spans **3.21 comb periods** and clears the gate (zg range-blind, 1.8); **kernel ω=2.58 NOT special (p≈0.80)**; full **TFPT-λ battery NULL** after look-elsewhere (Bonferroni global **p≈0.08**) → **well-powered NULL** (accretion/central-engine, surface firewall — not a horizon recovery) |
 | **B4** | BEC analog-horizon Hawking/Page | analog | `needs_experiment` | most direct boundary-recovery analog; theory = recovery-channel; needs analog-gravity data |
 | **B5** | quantum-simulator geometric ladder | internal | `needs_experiment` | comb by construction (quantum-testbed synthetic); needs a built simulator |
 
@@ -76,11 +77,31 @@ firewall is the same as A1: a GRB plateau is a **central-engine / accretion** re
 spin-down or fallback), **not a horizon recovery** — a comb here would be a universal-DSI coincidence,
 and this NULL is informative precisely because it is **well-powered, not data-limited**.
 
+**A5 (nuclear transient / AGN-disk TDE optical fade) is the years-long, wide-ln(t) SINGLE recovery
+curve the search is starved for — a clean NULL.** The extreme nuclear transient **J2245+3743**
+(AGN J224554.84+374326.5, z=2.554; brightened >40× in 2018, ~10⁵⁴ erg, favoured as the TDE of a
+>30 M☉ star in an AGN accretion disk — Graham et al. 2025, Nat. Astron., arXiv:2511.02178) has a
+multi-year ZTF DR fade. The recovery observable is `y = ln(flux)` (flux = 10^(−0.4 mag)) with the
+origin at the brightest epoch, binned in `ln(t)` (median per bin). The **zr** band (1007 good
+epochs, MJD 58242→60967) spans **3.21 comb periods** and **clears the >2.8 ln-range gate** that the
+ms FRB tails cannot (the zg band is range-blind at 1.8 after binning, honestly excluded). On that
+wide-ln(t) curve the **kernel ω=2.58 is NOT special (p≈0.80)**, and the **full TFPT-λ battery**
+(`λ ∈ {3/2, φ, 2, 3, 4, 5, 8, (3/2)⁶, 30}`, the same quake-style look-elsewhere test) is **NULL**
+after Bonferroni (global **p≈0.08**, no single ratio survives). **Firewall:** an AGN-disk TDE is an
+**accretion / central-engine** relaxation, **not a horizon recovery** — identical legitimacy to A1
+(magnetar) and A4 (GRB), so any hit would be a universal-DSI coincidence, never TFPT confirmation;
+this NULL is **well-powered, not data-limited**. Note that z=2.554 time dilation stretches the
+observed time axis **multiplicatively** (= an additive shift in `ln(t)`), so it moves the comb
+**phase** but adds **no ln-range** — the years-long observed baseline + dense early sampling are what
+give the range. The channel is multi-source-ready: dropping more ENTs into `data/ent/` activates the
+cross-source phase-incoherent stack. **No claim.**
+
 ## Reproduce
 
 ```bash
 python -m venv .venv && . .venv/bin/activate && pip install -e .   # numpy only (A3 reuses the FRB reader + astropy)
-tfpt-combdomains analyze    # detector + stack validation + all 6 channels -> results/recovery_comb_domains.json
+tfpt-combdomains fetch-ent  # A5: pull the curated ENT ZTF light curve(s) from IRSA (anonymous)
+tfpt-combdomains analyze    # detector + stack validation + all 8 channels -> results/recovery_comb_domains.json
 # or: PYTHONPATH=src python -m tfpt_combdomains.cli analyze
 ```
 
@@ -113,6 +134,24 @@ T0-relative seconds). The real GRB name is read from the file header, so a wrong
 misses (never fabricated). The small normalised curves are committed (like the magnetar set); the
 recovery observable is `y = ln(flux)` and the detector's degree-2 ln-t baseline absorbs the
 power-law plateau/break.
+
+## Real nuclear-transient / ENT data (A5)
+
+```bash
+tfpt-combdomains fetch-ent     # pull the curated ENT ZTF DR light curve(s) from IRSA (anonymous)
+tfpt-combdomains analyze       # A5 ingests data/ent/*.csv, gates, runs the kernel + TFPT-lambda battery
+```
+
+`fetch-ent` queries the public **IRSA ZTF light-curve service**
+(`https://irsa.ipac.caltech.edu/cgi-bin/ZTF/nph_light_curves?POS=CIRCLE <ra> <dec> <r>&FORMAT=CSV`,
+anonymous, no login) by position for the curated ENT list and normalises each to
+`data/ent/<name>.csv` (`mjd,mag,magerr,band`; only `catflags==0` + `magerr≤0.30` good epochs). A
+position with no ZTF detection self-skips (never fabricated). The curated target is **J2245+3743**
+(RA 341.4785, Dec +37.72403; ZTF oid 733101200023066, ~1440 good g/r/i epochs). The small
+normalised CSV is committed (like the magnetar/GRB sets); `read_ent_curves` converts mag→flux per
+band, sets the recovery origin at the brightest epoch, and `bin_ln_t` medians it into equal-`ln(t)`
+bins. The kernel ω=2.58 is tested per band, the full TFPT-λ battery on the widest-range band, and
+(with ≥2 distinct sources) a cross-source phase-incoherent stack.
 
 ## Real CHIME baseband (A3b)
 
@@ -183,14 +222,18 @@ signature is robustly absent in data that *could* have shown it.
 
 ```
 src/tfpt_combdomains/comb.py      # detector + injection validation + ln-range gate + STACKED permutation meta-test
-src/tfpt_combdomains/channels.py  # the 6 channels (A1 magnetar stacked; A2 BH tail; A3 FAST/GBT FRB stacked; A3b CHIME baseband stacked; B4, B5)
+src/tfpt_combdomains/channels.py  # the 8 channels (A1 magnetar; A2 BH tail; A3 FAST/GBT FRB; A3b CHIME baseband; A4 GRB plateau; A5 nuclear-transient/ENT; B4, B5) + the single-curve TFPT-lambda battery
 src/tfpt_combdomains/chime.py     # CHIME baseband-catalog HDF5 reader (incoherent cross-channel dedispersion -> true profile+tail)
+src/tfpt_combdomains/grb.py       # A4: Swift-XRT GRB afterglow flux light curves (UKSSDC qdp) fetch + reader
+src/tfpt_combdomains/ent.py       # A5: ENT/AGN-disk-TDE ZTF DR light curves (IRSA) fetch + per-band recovery reader + ln(t) binning
 src/tfpt_combdomains/fetch.py     # real magnetar light curves (swifttools/LSXPS cone search + manual --normalize)
 src/tfpt_combdomains/quake.py     # FULL TFPT signature battery vs USGS earthquake aftershocks (look-elsewhere-corrected)
 src/tfpt_combdomains/microshots.py # (B1) intra-burst microshot cascade kernel test (vetted Hewitt+2023 catalog)
-src/tfpt_combdomains/cli.py       # `tfpt-combdomains {analyze, fetch-magnetar, quake, microshots}`
+src/tfpt_combdomains/cli.py       # `tfpt-combdomains {analyze, fetch-magnetar, fetch-grb, fetch-ent, quake, microshots}`
 scripts/fetch_magnetar.py         # thin CLI wrapper for the fetcher
 data/magnetar/*.csv               # normalised light curves (committed); data/{magnetar/raw,quake}/ gitignored
+data/grb/*.csv                    # normalised Swift-XRT GRB afterglow curves (committed)
+data/ent/*.csv                    # normalised ENT ZTF light curve(s), e.g. J2245+3743 (committed)
 results/recovery_comb_domains.json  # committed summary (detector + stack validation + per-channel status)
 results/quake_tfpt_signatures.json  # committed summary (battery + free-fit + Omori, look-elsewhere-corrected)
 ```
