@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`442` registered scripts · `506` ledger claims · `10` clusters.
+`447` registered scripts · `512` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -294,7 +294,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v407_dn_pairings_omega** [E/C/O] `FLAV.SELECTOR.CLOSE.01` — FLAV.SELECTOR.CLOSE.01: the R4' residue folds into the tau=omega keystone (v405) -- the three (d,n) selector pairings ARE the tau=omega family-slice atoms. [E] the frame (1,a,sigma
   - deps: v405_seam_equiv_omega, v49_readout_rigidity, v405, v139, v136, v42 · cited: origin theory, 1 architecture e8
 
-### `frontier` — Open gate (G_metric) & the frontier  (135 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (140 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -567,6 +567,16 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v286_seam_equivalence_contract, v444_seam_edge_scaling, v444, v367, v368, v376 · cited: 5 redteam, research contracts
 - **v448_seam_edge_fourpoint** [E/C/O] `SEAM.EQUIV.EDGE.FOURPOINT.01` — SEAM.EQUIV.EDGE.FOURPOINT.01: pinning the ONE external MMST fact empirically -- the edge FOUR-point is quasi-free and conformally convergent, extending v444's two-point scaling lim
   - deps: v286_seam_equivalence_contract, v444_seam_edge_scaling, v441_seam_applicability_ledger, v444, v441, v336 · cited: 5 redteam, research contracts
+- **v449_seam_mmst_uniform** [E/C/O] `SEAM.EQUIV.MMST.UNIFORM.01` — SEAM.EQUIV.MMST.UNIFORM.01: uniform-in-N control of the edge scaling limit -- the empirical content of the cited MMST uniform-convergence theorem, strengthened, on the same v367/v3
+  - deps: v286_seam_equivalence_contract, v444_seam_edge_scaling, v448_seam_edge_fourpoint, v444, v448, v336, v367, v368 · cited: 5 redteam, research contracts
+- **v450_seam_edge_entanglement** [E/C/O] `SEAM.EQUIV.EDGE.ENTANGLEMENT.01` — SEAM.EQUIV.EDGE.ENTANGLEMENT.01: a THIRD independent reading of the edge c_-=8 -- the Calabrese-Cardy entanglement scaling c=1/2 per Majorana (after v444 correlator, v447 topology)
+  - deps: v286_seam_equivalence_contract, v444_seam_edge_scaling, v447_seam_edge_chern, v444, v447 · cited: 5 redteam, research contracts
+- **v451_seam_edge_cardy_tower** [E/C/O] `SEAM.EQUIV.EDGE.CARDY.01` — SEAM.EQUIV.EDGE.CARDY.01: the Cardy finite-size conformal tower -- the edge spectrum reproduces the EXACT Ising primary dimensions {1/16,1/2}. On the critical Majorana ring (the v3
+  - deps: v286_seam_equivalence_contract, v444_seam_edge_scaling, v450_seam_edge_entanglement, v447_seam_edge_chern, v444, v450, v447 · cited: 5 redteam, research contracts
+- **v452_seam_e8_modular** [E/C/O] `SEAM.EQUIV.E8.MODULAR.01` — SEAM.EQUIV.E8.MODULAR.01: the (E8)_1 torus modular data -- one primary, S-invariant, T-phase e^{-2pi i/3}, the holomorphic c=8 signature (extends v156's q-expansion). [E] S-INVARIA
+  - deps: v286_seam_equivalence_contract, v447_seam_edge_chern, v156, v444, v281, v336 · cited: 5 redteam, research contracts
+- **v453_seam_mu4_from_marks** [E/C/O] `SEAM.RIGIDITY.MU4FROMMARKS.01` — SEAM.RIGIDITY.MU4FROMMARKS.01: deriving QGEO.SYM.01 (mu4-symmetry of the seam RP data) from the four marks -- the last structural premise of the rigidity chain folded into the exis
+  - deps: v286_seam_equivalence_contract, v446_seam_clock_invariance, v445_seam_rigidity_forcing, v181_clock_is_conformal_symmetry, v168_qgeo_rigidity, v446, v445, v168 · cited: 5 redteam, research contracts
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (180 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -949,17 +959,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×44, `QGEO.SYM.01`×30, `v336`×21, `QG.AMB.01`×17, `v76`×17, `v56`×17, `v216`×17, `E8.GLU.01`×16, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v312`×14, `v54`×13, `REG.FREEZE.01`×12, `AX.P1.01`×11, `v3`×11
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×50, `QGEO.SYM.01`×31, `v336`×23, `v216`×18, `QG.AMB.01`×17, `v76`×17, `v56`×17, `E8.GLU.01`×16, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v312`×14, `v54`×13, `v323`×12, `REG.FREEZE.01`×12, `AX.P1.01`×11
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v437_e8_degree_joint** — `E8.DEGREE.JOINT.01`
-- **v438_seam_hsmi_borchers** — `SEAM.EQUIV.BW.HSMI.01`
-- **v439_seam_lieb_robinson** — `SEAM.EQUIV.CONTINUUM.LR.01`
-- **v440_seam_lto_rp_beta** — `SEAM.EQUIV.LTORP.BETA.01`
-- **v441_seam_applicability_ledger** — `SEAM.EQUIV.APPLICABILITY.01`
 - **v442_seam_rigidity_uniform** — `SEAM.RIGIDITY.UNIFORM.01`
 - **v443_seam_e8_discriminator** — `SEAM.E8.DISCRIMINATOR.01`
 - **v444_seam_edge_scaling** — `SEAM.EQUIV.CONTINUUM.EDGE.01`
@@ -967,4 +972,9 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v446_seam_clock_invariance** — `SEAM.RIGIDITY.CLOCKINV.01`
 - **v447_seam_edge_chern** — `SEAM.EQUIV.EDGE.CHERN.01`
 - **v448_seam_edge_fourpoint** — `SEAM.EQUIV.EDGE.FOURPOINT.01`
+- **v449_seam_mmst_uniform** — `SEAM.EQUIV.MMST.UNIFORM.01`
+- **v450_seam_edge_entanglement** — `SEAM.EQUIV.EDGE.ENTANGLEMENT.01`
+- **v451_seam_edge_cardy_tower** — `SEAM.EQUIV.EDGE.CARDY.01`
+- **v452_seam_e8_modular** — `SEAM.EQUIV.E8.MODULAR.01`
+- **v453_seam_mu4_from_marks** — `SEAM.RIGIDITY.MU4FROMMARKS.01`
 

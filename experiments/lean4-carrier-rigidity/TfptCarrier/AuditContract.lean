@@ -66,6 +66,7 @@ import TfptCarrier.CoxeterPrime2
 import TfptCarrier.SeamStandardPair
 import TfptCarrier.SeamApplicabilityLedger
 import TfptCarrier.SeamRigidityForcing
+import TfptCarrier.SeamEdgeChern
 
 namespace TFPT.Carrier.AuditContract
 
@@ -568,5 +569,22 @@ example (a b : Fin 4) :
     order-2 commutant `128` (only the four marks give `(E₈)₁`). -/
 example : 4 * (4 * 4) < 2 * (8 * 8) :=
   TfptCarrier.SeamRigidityForcing.order_discriminator_16
+
+/-! ## Edge central-charge arithmetic (SEAM.EQUIV.EDGE.*; v447/v450/v451/v452) -/
+
+/-- The doubled edge-central-charge assembly `2·c₋ = N_Maj·|C|` (i.e. `c₋ = 16·½·1 = 8`),
+    and `c₋ = 8 = g_car + N_fam`. -/
+example :
+    2 * TfptCarrier.SeamEdgeChern.cMinus
+        = TfptCarrier.SeamEdgeChern.nMaj * (TfptCarrier.SeamEdgeChern.chern 1).natAbs
+      ∧ TfptCarrier.SeamEdgeChern.cMinus = 8 :=
+  ⟨TfptCarrier.SeamEdgeChern.two_cMinus_eq, TfptCarrier.SeamEdgeChern.cMinus_eq_eight⟩
+
+/-- The torus modular signature: `c ≡ 0 mod 8` (holomorphic) and the `T`-phase
+    `e^{−2πi c/24} = e^{−2πi/3}` has order `24/gcd(8,24) = 3`. -/
+example :
+    TfptCarrier.SeamEdgeChern.cMinus % 8 = 0
+      ∧ 24 / Nat.gcd TfptCarrier.SeamEdgeChern.cMinus 24 = 3 :=
+  ⟨TfptCarrier.SeamEdgeChern.holomorphic, TfptCarrier.SeamEdgeChern.tphase_order_three⟩
 
 end TFPT.Carrier.AuditContract

@@ -45,6 +45,7 @@ import TfptCarrier.CoxeterPrime2
 import TfptCarrier.SeamStandardPair
 import TfptCarrier.SeamApplicabilityLedger
 import TfptCarrier.SeamRigidityForcing
+import TfptCarrier.SeamEdgeChern
 
 -- Layer 1: Polarization (algebraic core)
 #print axioms TFPT.Carrier.Polarization.sixY_carrier_polynomial
@@ -230,3 +231,11 @@ import TfptCarrier.SeamRigidityForcing
 #print axioms TfptCarrier.SeamRigidityForcing.forcing_kernel_facts
 #print axioms TfptCarrier.SeamRigidityForcing.commutator_zero_iff
 #print axioms TfptCarrier.SeamRigidityForcing.forcingClosesRigidity
+
+-- Edge central-charge arithmetic (SEAM.EQUIV.EDGE.*; v447/v450/v451/v452)
+-- The Chern integers, bulk-edge count, c_-=8=g_car+N_fam assembly, holomorphic c mod 8
+-- and the order-3 modular T-phase are all kernel-checked with NO axioms; only the cited
+-- MMST continuum existence theorem (v336) stays the open residual.
+#print axioms TfptCarrier.SeamEdgeChern.edge_kernel_facts
+#print axioms TfptCarrier.SeamEdgeChern.two_cMinus_eq
+#print axioms TfptCarrier.SeamEdgeChern.tphase_order_three

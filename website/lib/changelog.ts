@@ -47,6 +47,1425 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "c",
+        "v": "v449"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v453"
+      },
+      {
+        "k": "t",
+        "v": " + Lean + Wolfram — the edge CFT named end-to-end: uniform-in-"
+      },
+      {
+        "k": "m",
+        "v": "N"
+      },
+      {
+        "k": "t",
+        "v": " convergence, three independent reads of "
+      },
+      {
+        "k": "m",
+        "v": "c_-{=}8"
+      },
+      {
+        "k": "t",
+        "v": ", the Ising operator tower, the "
+      },
+      {
+        "k": "m",
+        "v": "(E_8)_1"
+      },
+      {
+        "k": "t",
+        "v": " modular data, and "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4"
+      },
+      {
+        "k": "t",
+        "v": "-symmetry derived from the four marks"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v449_seam_mmst_uniform.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EQUIV.MMST.UNIFORM.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Strengthens the cited MMST hypothesis from convergence at a single cross-ratio ("
+        },
+        {
+          "k": "c",
+          "v": "v444"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v448"
+        },
+        {
+          "k": "t",
+          "v": ") to the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "uniformity"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the theorem actually asserts, on the same "
+        },
+        {
+          "k": "c",
+          "v": "v367"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v368"
+        },
+        {
+          "k": "t",
+          "v": " collar. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "cross-ratio A "
+        },
+        {
+          "k": "m",
+          "v": "Q(1,2,4,7)/12\\to2{+}\\sqrt3"
+        },
+        {
+          "k": "t",
+          "v": ", the deviation shrinking monotonically; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "an "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "independent"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " cross-ratio B "
+        },
+        {
+          "k": "m",
+          "v": "Q(1,3,5,9)/12\\to"
+        },
+        {
+          "k": "t",
+          "v": " its own value "
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": ", so convergence is not a tuned point; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "a uniform "
+        },
+        {
+          "k": "m",
+          "v": "1/N"
+        },
+        {
+          "k": "t",
+          "v": " rate "
+        },
+        {
+          "k": "m",
+          "v": "|Q(N){-}Q_\\infty|\\cdot N\\le4"
+        },
+        {
+          "k": "t",
+          "v": " for "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "both"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " observables at every "
+        },
+        {
+          "k": "m",
+          "v": "N_x\\in\\{36,48,60\\}"
+        },
+        {
+          "k": "t",
+          "v": " (one "
+        },
+        {
+          "k": "m",
+          "v": "N"
+        },
+        {
+          "k": "t",
+          "v": "-independent constant); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the bulk control is off-scale. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the MMST uniform-convergence hypothesis is empirically satisfied; "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v450_seam_edge_entanglement.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EQUIV.EDGE.ENTANGLEMENT.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " A "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "third"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " independent reading of the edge central charge (after the correlator "
+        },
+        {
+          "k": "c",
+          "v": "v444"
+        },
+        {
+          "k": "t",
+          "v": " and the topology "
+        },
+        {
+          "k": "c",
+          "v": "v447"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the Calabrese–Cardy entanglement law gives "
+        },
+        {
+          "k": "m",
+          "v": "c_{\\mathrm{Dirac}}{=}1.000"
+        },
+        {
+          "k": "t",
+          "v": " for the critical free-fermion chain; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "so "
+        },
+        {
+          "k": "m",
+          "v": "c"
+        },
+        {
+          "k": "t",
+          "v": " per Majorana "
+        },
+        {
+          "k": "m",
+          "v": "=1/2"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "a gapped control saturates ("
+        },
+        {
+          "k": "m",
+          "v": "c{=}0"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "bulk–edge: "
+        },
+        {
+          "k": "m",
+          "v": "c_-{=}N_{\\mathrm{Maj}}\\cdot\\tfrac12{=}16\\cdot\\tfrac12{=}8{=}\\gcar{+}\\Nfam"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v451_seam_edge_cardy_tower.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EQUIV.EDGE.CARDY.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Names the edge CFT by its "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "operator content"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the Cardy finite-size spectrum gives the spin dimension "
+        },
+        {
+          "k": "m",
+          "v": "h_\\sigma{=}1/16"
+        },
+        {
+          "k": "t",
+          "v": " (the periodic–antiperiodic ground-energy split) and "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the energy dimension "
+        },
+        {
+          "k": "m",
+          "v": "h_\\epsilon{=}1/2"
+        },
+        {
+          "k": "t",
+          "v": " (the lowest NS pair excitation), both "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "L"
+        },
+        {
+          "k": "t",
+          "v": "-independent (conformal "
+        },
+        {
+          "k": "m",
+          "v": "1/L"
+        },
+        {
+          "k": "t",
+          "v": " scaling). "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "m",
+          "v": "\\{c,h_\\sigma,h_\\epsilon\\}{=}\\{\\tfrac12,\n\\tfrac1{16},\\tfrac12\\}"
+        },
+        {
+          "k": "t",
+          "v": " is the chiral Ising (free-Majorana) minimal model "
+        },
+        {
+          "k": "m",
+          "v": "M(3,4)"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "16"
+        },
+        {
+          "k": "t",
+          "v": " copies give "
+        },
+        {
+          "k": "m",
+          "v": "c_-{=}8"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v452_seam_e8_modular.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EQUIV.E8.MODULAR.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " torus modular signature, extending "
+        },
+        {
+          "k": "c",
+          "v": "v156"
+        },
+        {
+          "k": "t",
+          "v": "'s "
+        },
+        {
+          "k": "m",
+          "v": "q"
+        },
+        {
+          "k": "t",
+          "v": "-expansion to the transformation data. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the character "
+        },
+        {
+          "k": "m",
+          "v": "\\chi{=}E_4/\\eta^8"
+        },
+        {
+          "k": "t",
+          "v": " is "
+        },
+        {
+          "k": "m",
+          "v": "S"
+        },
+        {
+          "k": "t",
+          "v": "-invariant "
+        },
+        {
+          "k": "m",
+          "v": "\\chi(-1/\\tau){=}\\chi(\\tau)"
+        },
+        {
+          "k": "t",
+          "v": " (one primary, "
+        },
+        {
+          "k": "m",
+          "v": "S{=}[1]"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "T"
+        },
+        {
+          "k": "t",
+          "v": "-phase "
+        },
+        {
+          "k": "m",
+          "v": "\\chi(\\tau{+}1)/\\chi(\\tau){=}e^{-2\\pi i/3}{=}e^{-2\\pi i c/24}"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "c{=}8"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "leading power "
+        },
+        {
+          "k": "m",
+          "v": "\\chi\\,q^{1/3}\\to1"
+        },
+        {
+          "k": "t",
+          "v": " so "
+        },
+        {
+          "k": "m",
+          "v": "q^{-c/24}{=}q^{-1/3}\\Rightarrow c{=}8"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "holomorphic "
+        },
+        {
+          "k": "m",
+          "v": "c{=}8\\equiv0\\bmod8"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "T"
+        },
+        {
+          "k": "t",
+          "v": "-phase order "
+        },
+        {
+          "k": "m",
+          "v": "24/\\gcd(8,24){=}3"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " identity is now pinned on the torus "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "and"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the edge. "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v453_seam_mu4_from_marks.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.RIGIDITY.MU4FROMMARKS.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Folds the last structural premise of the rigidity chain ("
+        },
+        {
+          "k": "c",
+          "v": "v446"
+        },
+        {
+          "k": "t",
+          "v": "'s residual "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.SYM.01"
+        },
+        {
+          "k": "t",
+          "v": ") into the existing realisation premise. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the four Gauss–Bonnet marks "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "are"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4{=}"
+        },
+        {
+          "k": "t",
+          "v": " roots of "
+        },
+        {
+          "k": "m",
+          "v": "z^4{-}1"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the order-"
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " clock "
+        },
+        {
+          "k": "m",
+          "v": "z\\!\\to\\!iz"
+        },
+        {
+          "k": "t",
+          "v": " is a "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": "-cycle permuting them (the "
+        },
+        {
+          "k": "c",
+          "v": "v445"
+        },
+        {
+          "k": "t",
+          "v": " clock); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "it preserves the cross-ratio "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda{=}2"
+        },
+        {
+          "k": "t",
+          "v": " (in the "
+        },
+        {
+          "k": "m",
+          "v": "D_4"
+        },
+        {
+          "k": "t",
+          "v": " stabiliser, "
+        },
+        {
+          "k": "c",
+          "v": "v168"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the form basis "
+        },
+        {
+          "k": "m",
+          "v": "\\omega_k{=}z^{k-1}dz/(z^4{-}1)\\to\ni^k\\omega_k"
+        },
+        {
+          "k": "t",
+          "v": " is "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": "-graded (weights "
+        },
+        {
+          "k": "m",
+          "v": "(1,2,3){=}A_3"
+        },
+        {
+          "k": "t",
+          "v": " exponents). "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "so "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.SYM.01"
+        },
+        {
+          "k": "t",
+          "v": " follows from marks"
+        },
+        {
+          "k": "m",
+          "v": "=\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the existing "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.REALIZE.01"
+        },
+        {
+          "k": "t",
+          "v": " — no new premise; the chain ("
+        },
+        {
+          "k": "c",
+          "v": "v453"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "c",
+          "v": "v446"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "c",
+          "v": "v445"
+        },
+        {
+          "k": "t",
+          "v": ") closes modulo realisation. "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Lean: "
+            },
+            {
+              "k": "c",
+              "v": "TfptCarrier/SeamEdgeChern.lean"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "FORM.SEAM.EDGE.CHERN.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Kernel-hardens the integer backbone the four edge reads converge on: the FHS Chern integers ("
+        },
+        {
+          "k": "m",
+          "v": "+1/0/-1"
+        },
+        {
+          "k": "t",
+          "v": "), the bulk–edge channel count "
+        },
+        {
+          "k": "m",
+          "v": "|C|{=}1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "N_{\\mathrm{Maj}}{=}2^{\\gcar-1}{=}16"
+        },
+        {
+          "k": "t",
+          "v": ", the assembly "
+        },
+        {
+          "k": "m",
+          "v": "2c_-{=}N_{\\mathrm{Maj}}\\cdot|C|"
+        },
+        {
+          "k": "t",
+          "v": " (so "
+        },
+        {
+          "k": "m",
+          "v": "c_-{=}8"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "c_-{=}8{=}\\gcar{+}\\Nfam{=}\\mathrm{rank}\\,E_8"
+        },
+        {
+          "k": "t",
+          "v": ", holomorphic "
+        },
+        {
+          "k": "m",
+          "v": "c\\equiv0\\bmod8"
+        },
+        {
+          "k": "t",
+          "v": " and the order-"
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": " modular "
+        },
+        {
+          "k": "m",
+          "v": "T"
+        },
+        {
+          "k": "t",
+          "v": "-phase — all by kernel "
+        },
+        {
+          "k": "c",
+          "v": "decide"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "edge_kernel_facts"
+        },
+        {
+          "k": "t",
+          "v": ", axioms "
+        },
+        {
+          "k": "c",
+          "v": "propext"
+        },
+        {
+          "k": "t",
+          "v": " only). "
+        },
+        {
+          "k": "c",
+          "v": "lake build"
+        },
+        {
+          "k": "t",
+          "v": " OK, "
+        },
+        {
+          "k": "c",
+          "v": "#print axioms"
+        },
+        {
+          "k": "t",
+          "v": " clean."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Wolfram mirror."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_readouts_extension.wl"
+        },
+        {
+          "k": "t",
+          "v": " gains nine exact checks ("
+        },
+        {
+          "k": "c",
+          "v": "v452"
+        },
+        {
+          "k": "t",
+          "v": " modular data "
+        },
+        {
+          "k": "m",
+          "v": "\\times4"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v450"
+        },
+        {
+          "k": "t",
+          "v": " entanglement assembly, "
+        },
+        {
+          "k": "c",
+          "v": "v451"
+        },
+        {
+          "k": "t",
+          "v": " Ising Kac weights, "
+        },
+        {
+          "k": "c",
+          "v": "v453"
+        },
+        {
+          "k": "t",
+          "v": " marks"
+        },
+        {
+          "k": "m",
+          "v": "=\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\times3"
+        },
+        {
+          "k": "t",
+          "v": "): "
+        },
+        {
+          "k": "m",
+          "v": "345\\to354"
+        },
+        {
+          "k": "t",
+          "v": " checks, all passing ("
+        },
+        {
+          "k": "c",
+          "v": "GATE.WOLFRAM.02"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "m",
+          "v": "E_4"
+        },
+        {
+          "k": "t",
+          "v": " is evaluated via its "
+        },
+        {
+          "k": "m",
+          "v": "q"
+        },
+        {
+          "k": "t",
+          "v": "-series since "
+        },
+        {
+          "k": "c",
+          "v": "EisensteinE"
+        },
+        {
+          "k": "t",
+          "v": " stays symbolic for complex "
+        },
+        {
+          "k": "m",
+          "v": "\\tau"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The adversarial audit ("
+        },
+        {
+          "k": "c",
+          "v": "tfpt_5_redteam"
+        },
+        {
+          "k": "t",
+          "v": ", Target A) and the research-contracts note record the edge CFT as named end-to-end — central charge "
+        },
+        {
+          "k": "m",
+          "v": "c_-{=}8"
+        },
+        {
+          "k": "t",
+          "v": " from three independent observables (correlator "
+        },
+        {
+          "k": "c",
+          "v": "v444"
+        },
+        {
+          "k": "t",
+          "v": ", topology "
+        },
+        {
+          "k": "c",
+          "v": "v447"
+        },
+        {
+          "k": "t",
+          "v": ", entanglement "
+        },
+        {
+          "k": "c",
+          "v": "v450"
+        },
+        {
+          "k": "t",
+          "v": "), the Ising operator tower ("
+        },
+        {
+          "k": "c",
+          "v": "v451"
+        },
+        {
+          "k": "t",
+          "v": "), the "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " torus modular data ("
+        },
+        {
+          "k": "c",
+          "v": "v452"
+        },
+        {
+          "k": "t",
+          "v": "), and the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " premise derived from the marks ("
+        },
+        {
+          "k": "c",
+          "v": "v453"
+        },
+        {
+          "k": "t",
+          "v": ") — while the only residual that stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "remains the cited continuum-existence theorem ("
+        },
+        {
+          "k": "c",
+          "v": "v336"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-30",
+    "dateLabel": "2026-06-30",
+    "heading": [
+      {
+        "k": "c",
         "v": "v446"
       },
       {

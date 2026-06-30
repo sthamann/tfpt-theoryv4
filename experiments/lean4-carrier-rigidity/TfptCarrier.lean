@@ -58,6 +58,7 @@ import TfptCarrier.SeamScalingLimit
 import TfptCarrier.SeamStandardPair
 import TfptCarrier.SeamApplicabilityLedger
 import TfptCarrier.SeamRigidityForcing
+import TfptCarrier.SeamEdgeChern
 import TfptCarrier.BWKeystone
 import TfptCarrier.CartanDeterminants
 import TfptCarrier.Mu4Commutation

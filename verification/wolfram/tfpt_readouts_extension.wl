@@ -2767,6 +2767,64 @@ Module[{forcingIff, sec, sec2, dim4, dim2, sweepOK},
     dim2 == 128 && dim4 < dim2 && sweepOK];
 ];
 
+(* ==== v452 round: SEAM.EQUIV.E8.MODULAR.01 -- the (E8)_1 torus modular data (one primary,
+   S-invariant, T-phase e^{-2pi i/3}, holomorphic c=8); mirrors v452_seam_e8_modular.py.
+   EisensteinE is left unevaluated by some engines, so E4 is built from its q-series; the
+   modular T-branch e^{i pi/12} is carried correctly by the native DedekindEta. ==== *)
+Module[{E4s, chi, t, t2, qq},
+  E4s[tau_, M_:60] := With[{q = N[Exp[2 Pi I tau], 40]}, 1 + 240 Sum[DivisorSigma[3, n] q^n, {n, 1, M}]];
+  chi[tau_] := E4s[tau]/DedekindEta[tau]^8;
+  t = 27/100 + 13/10 I;
+  (* (i) S-invariance: chi weight 0 (E4 wt 4 / eta^8 wt 4) => chi(-1/tau)=chi(tau), one primary *)
+  check["v452 SEAM.EQUIV.E8.MODULAR.01 (i): S-invariance chi(-1/tau)=chi(tau) (E4 wt4/eta^8 wt4 => chi wt0) -- ONE primary, S-matrix=[1]",
+    chi[-1/t], chi[t], 10^-9];
+  (* (ii) T-phase e^{-2pi i/3} = e^{-2pi i c/24} with c=8 (the central charge in the T eigenvalue) *)
+  check["v452 SEAM.EQUIV.E8.MODULAR.01 (ii): T-phase chi(tau+1)/chi(tau)=e^{-2pi i/3}=e^{-2pi i c/24} (c=8)",
+    chi[t + 1]/chi[t], Exp[-2 Pi I/3], 10^-9];
+  (* (iii) leading power q^{-1/3} => c=8 *)
+  t2 = 3 I; qq = N[Exp[2 Pi I t2], 40];
+  check["v452 SEAM.EQUIV.E8.MODULAR.01 (iii): leading power chi*q^{1/3}->1 => q^{-c/24}=q^{-1/3} => c=8=g_car+N_fam",
+    chi[t2] qq^(1/3), 1, 10^-4];
+  (* (iv) holomorphic constraint c=0 mod 8 and T-phase order 24/gcd(8,24)=3 (primitive cube root) *)
+  checkExact["v452 SEAM.EQUIV.E8.MODULAR.01 (iv): holomorphic c=8=0 mod 8 (even unimodular rank-8 E8) and T-phase order 24/gcd(8,24)=3 (primitive cube root e^{-2pi i/3}); c=8=g_car+N_fam=rank E8",
+    Mod[8, 8] == 0 && 24/GCD[8, 24] == 3 && 8 == gcar + Nfam];
+];
+
+(* ==== v450/v451 round: SEAM.EQUIV.EDGE.* -- the edge central charge c_-=8 from entanglement
+   (c=1/2 per Majorana) and the Ising minimal-model Kac weights (Cardy tower); mirrors
+   v450_seam_edge_entanglement.py / v451_seam_edge_cardy_tower.py (the numerical fits are
+   Python-only; the c_-=8 assembly and the Kac weights are exact and mirrored here). ==== *)
+Module[{NMaj, cMaj, cMinus, kacH, cMinModel},
+  NMaj = 2^(gcar - 1);
+  cMaj = 1/2;
+  cMinus = NMaj cMaj;
+  checkExact["v450 SEAM.EQUIV.EDGE.ENTANGLEMENT.01: c per Majorana=1/2 (Calabrese-Cardy: Dirac c=1=2*1/2), N_Maj=2^(g_car-1)=16, c_-=N_Maj*(1/2)=8=g_car+N_fam=rank E8 -- the entanglement reading of the edge central charge (third observable after v444/v447)",
+    NMaj == 16 && cMaj == 1/2 && cMinus == 8 && cMinus == gcar + Nfam];
+  kacH[r_, s_] := ((4 r - 3 s)^2 - 1)/48;     (* Kac weights of the Ising minimal model M(3,4) *)
+  cMinModel = 1 - 6 (3 - 4)^2/(3*4);
+  checkExact["v451 SEAM.EQUIV.EDGE.CARDY.01: the edge is the Ising minimal model M(3,4) -- c=1-6(p-q)^2/(pq)=1/2, Kac weights h_{2,2}=1/16 (sigma) and h_{1,3}=1/2 (epsilon); {c,h_sigma,h_epsilon}={1/2,1/16,1/2} uniquely names the free-Majorana CFT, 16 copies => c_-=16*(1/2)=8",
+    cMinModel == 1/2 && kacH[2, 2] == 1/16 && kacH[1, 3] == 1/2 && 16*cMinModel == 8];
+];
+
+(* ==== v453 round: SEAM.RIGIDITY.MU4FROMMARKS.01 -- the mu4-symmetry of the seam RP data
+   (QGEO.SYM.01) derived from the four marks; mirrors v453_seam_mu4_from_marks.py. ==== *)
+Module[{marks, images, cr, grading, z},
+  marks = {1, I, -1, -I};
+  images = I marks;
+  (* (i) the four marks ARE mu4 = roots of z^4-1, and z->iz is a 4-cycle of order 4 *)
+  checkExact["v453 SEAM.RIGIDITY.MU4FROMMARKS.01 (i): the four Gauss-Bonnet marks ARE mu4=roots of z^4-1; z->iz sends (1,i,-1,-i)->(i,-1,-i,1), a 4-cycle of order 4 (fixes the configuration setwise, the order-4 clock of v445)",
+    Sort[marks] == Sort[z /. Solve[z^4 == 1, z]] && Sort[images] == Sort[marks]
+      && images == {I, -1, -I, 1} && I^4 == 1 && I^2 != 1];
+  (* (ii) the form basis omega_k=z^{k-1}dz/(z^4-1) is mu4-graded with eigenvalue i^k *)
+  grading = Table[I^(k - 1) I, {k, 1, 3}];     (* z^{k-1}->i^{k-1}z^{k-1}, dz->i dz, z^4-1 fixed *)
+  checkExact["v453 SEAM.RIGIDITY.MU4FROMMARKS.01 (ii): the form basis omega_k=z^{k-1}dz/(z^4-1) -> i^k omega_k under z->iz (k=1,2,3 -> {i,-1,-i}, the three nontrivial mu4 characters; weights (1,2,3)=A3 exponents=Spec(Q_+)) -- the natural basis is mu4-graded, so any geometric datum is mu4-covariant",
+    grading == {I, -1, -I} && grading == Table[I^k, {k, 1, 3}]];
+  (* (iii) cross-ratio 2 preserved by z->iz (Moebius) => QGEO.SYM.01 from marks + QGEO.REALIZE.01 *)
+  cr[a_, b_, c_, d_] := ((a - c) (b - d))/((a - d) (b - c));
+  checkExact["v453 SEAM.RIGIDITY.MU4FROMMARKS.01 (iii): cross-ratio lambda(1,i,-1,-i)=2 is preserved by z->iz (in the D4 stabiliser, v168) => QGEO.SYM.01 ('seam RP data mu4-symmetric') follows from marks=mu4 + the existing QGEO.REALIZE.01, NO new premise; SEAM.EQUIV.01 stays [O]",
+    Simplify[cr @@ marks] == 2 && Simplify[cr @@ images] == Simplify[cr @@ marks]];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v453: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

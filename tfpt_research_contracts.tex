@@ -939,15 +939,19 @@ Adamo--Giorgetti--Tanimoto (\texttt{arXiv:2508.07109}, 2025) --- every DHR repre
 extending a loop-group/Virasoro net is \emph{automatically} positive-energy and diffeomorphism-covariant ---
 defuses the old ``Bisognano--Wichmann presupposes the very covariance it should produce'' circularity (\vref{v215}):
 once the seam net is in hand, geometric covariance is a \emph{consequence}, not an input.
-\par\smallskip\noindent\textbf{Eleven convergent attacks on the one continuum residual --- intrinsic BW, a
+\par\smallskip\noindent\textbf{Sixteen convergent attacks on the one continuum residual --- intrinsic BW, a
 bulk continuum motor and its chiral-edge counterpart, the $\beta$-homotopy, the applicability audit, uniform
-rigidity with its forcing converse and the derivation of clock-invariance, an independent topological reading of
-the edge central charge, the four-point pinning of the external fact, and the kill tests
+rigidity with its forcing converse and the derivation of clock-invariance, three independent reads of the edge
+central charge, the four-point and uniform-in-$N$ pinning of the external fact, the Ising operator tower, the
+$(E_8)_1$ torus modular data, the $\mu_4$-from-marks derivation, and the kill tests
 (\veri{v438\_seam\_hsmi\_borchers.py}, \veri{v439\_seam\_lieb\_robinson.py}, \veri{v440\_seam\_lto\_rp\_beta.py},
 \veri{v441\_seam\_applicability\_ledger.py}, \veri{v442\_seam\_rigidity\_uniform.py},
 \veri{v443\_seam\_e8\_discriminator.py}, \veri{v444\_seam\_edge\_scaling.py},
 \veri{v445\_seam\_rigidity\_forcing.py}, \veri{v446\_seam\_clock\_invariance.py},
-\veri{v447\_seam\_edge\_chern.py}, \veri{v448\_seam\_edge\_fourpoint.py}).} None closes
+\veri{v447\_seam\_edge\_chern.py}, \veri{v448\_seam\_edge\_fourpoint.py},
+\veri{v449\_seam\_mmst\_uniform.py}, \veri{v450\_seam\_edge\_entanglement.py},
+\veri{v451\_seam\_edge\_cardy\_tower.py}, \veri{v452\_seam\_e8\_modular.py},
+\veri{v453\_seam\_mu4\_from\_marks.py}).} None closes
 \texttt{SEAM.EQUIV.01}; together they ground the one continuum input on both its halves, reduce it to a single
 analytic fact and make the claim falsifiable.
 \emph{(v) The intrinsic Bisognano--Wichmann route} (\veri{v438\_seam\_hsmi\_borchers.py}): the seam supplies a
@@ -1024,7 +1028,33 @@ an exact projector $G^2{=}G\sim10^{-13}$, the MMST CAR hypothesis), and the edge
 $Q{=}[G_{01}G_{23}]/[G_{02}G_{13}]$ at commensurate positions is Cauchy-convergent under refinement to the
 free-fermion conformal value $\sin(5\pi/12)/\sin(\pi/12){=}2{+}\sqrt3\approx3.732$ (the bulk control off-scale,
 exponential); \mE\ the quasi-free property, four-point convergence and conformal form, \mC\ so the one external MMST
-fact is empirically supported at \emph{both} two- and four-point order. Across (v)--(xv), \texttt{SEAM.EQUIV.01}
+fact is empirically supported at \emph{both} two- and four-point order. \emph{(xvi) The uniform-in-$N$ pinning}
+(\veri{v449\_seam\_mmst\_uniform.py}): strengthening (xv) from convergence at a single cross-ratio to the
+\emph{uniformity} the cited theorem asserts --- two \emph{independent} edge four-point cross-ratios converge to
+\emph{distinct} conformal values ($Q(1,2,4,7)/12\to2{+}\sqrt3$ and $Q(1,3,5,9)/12\to2$) at one $N$-independent
+$1/N$ rate ($|Q(N){-}Q_\infty|\cdot N\le4$ for both, $N_x\in\{36,48,60\}$), the bulk control off-scale; \mE\ the
+two limits and the uniform rate, \mC\ so the MMST uniform-convergence \emph{hypothesis} is empirically met.
+\emph{(xvii) The entanglement reading of $c_-$} (\veri{v450\_seam\_edge\_entanglement.py}): a \emph{third},
+correlator-independent route to the edge central charge --- the Calabrese--Cardy block-entropy law gives
+$c_{\mathrm{Dirac}}{=}1.000$ for the critical free-fermion chain (vs a saturating, $\ell$-independent gapped
+control), so $c$ per Majorana $=\tfrac12$ and $c_-{=}16\cdot\tfrac12{=}8{=}\gcar{+}\Nfam$; \mE\ the law and the
+control, \mC\ the assembly. \emph{(xviii) The Ising operator tower} (\veri{v451\_seam\_edge\_cardy\_tower.py}):
+naming the edge CFT by its \emph{operator content} --- the Cardy finite-size spectrum reproduces the exact Ising
+chiral primaries $h_\sigma{=}\tfrac1{16}$ (the periodic--antiperiodic ground split) and $h_\epsilon{=}\tfrac12$ (the
+lowest NS pair gap), both $L$-independent, so $\{c,h_\sigma,h_\epsilon\}{=}\{\tfrac12,\tfrac1{16},\tfrac12\}$ is the
+free-Majorana minimal model $M(3,4)$; \mE\ the dimensions and conformal scaling, \mC\ the identification.
+\emph{(xix) The $(E_8)_1$ torus modular data} (\veri{v452\_seam\_e8\_modular.py}): pinning the $(E_8)_1$ identity on
+the \emph{torus}, complementing the edge reads (xi)/(xiv)/(xvii)/(xviii) --- the character $\chi{=}E_4/\eta^8$ is
+$S$-invariant ($\chi(-1/\tau){=}\chi(\tau)$, one primary), $T$-multiplies by $e^{-2\pi i/3}{=}e^{-2\pi i c/24}$
+($c{=}8$) and is holomorphic ($c\equiv0\bmod8$, $T$-phase order $3$); \mE\ the full modular signature.
+\emph{(xx) The $\mu_4$-from-marks derivation} (\veri{v453\_seam\_mu4\_from\_marks.py}): folding the last structural
+premise into the existing one --- the four Gauss--Bonnet marks \emph{are} $\mu_4$ (roots of $z^4{-}1$), the form
+basis $\omega_k$ is $\mu_4$-graded ($\to i^k\omega_k$, weights $(1,2,3){=}A_3$ exponents) and the order-$4$ clock
+$z\!\to\!iz$ fixes their cross-ratio $\lambda{=}2$ (the $D_4$ stabiliser, \vref{v168}), so the residual
+\texttt{QGEO.SYM.01} of (xiii) follows from marks$=\mu_4$ plus the existing \texttt{QGEO.REALIZE.01} --- \mE\ the
+three mark facts, \mC\ no new premise: the chain (xx)$\to$(xiii)$\to$(xii) closes modulo realisation. The integer
+backbone of (xiv)--(xix) ($c_-{=}8$, the Chern integers, the order-$3$ $T$-phase) is kernel-hardened in Lean
+axiom-free as \texttt{FORM.SEAM.EDGE.CHERN.01}. Across (v)--(xx), \texttt{SEAM.EQUIV.01}
 stays \mO: every route reduces, audits or falsifies the residual without supplying the one cited
 continuum-existence theorem.
 \par\smallskip\noindent\textbf{The TOE/QFT closure contracts as three citable certificates

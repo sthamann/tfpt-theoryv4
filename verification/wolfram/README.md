@@ -105,7 +105,7 @@ v84–v93 block passed **45/45** on first run; the v94–v140 blocks were added
 the same day, the v141–v144 block on 2026-06-12. Current state:
 
 ```
---- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445: 345 passed, 0 failed ---
+--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v453: 354 passed, 0 failed ---
 ALL WOLFRAM EXTENSION CHECKS PASSED
 ```
 
@@ -340,6 +340,23 @@ index-4 is `(E₈)₁`, det 1 vs `SO(16)` det 4, already mirrored via v281/v344)
 (`SeamRigidityForcing.lean`, `FORM.SEAM.RIGIDITY.FORCING.01`). The clock-invariance derivation `v446`, the
 topological edge `v447` and the four-point `v448` are numerical (numpy BdG / OS reconstruction) and stay
 Python-only by the suite convention.
+
+The 2026-06-30 **edge-CFT / modular round** added nine exact checks (345 → 354):
+`v452_seam_e8_modular.py` — the `(E₈)₁` torus modular data (4 checks): (i) S-invariance
+`χ(−1/τ)=χ(τ)` for `χ=E₄/η⁸` (weight 0 ⇒ one primary, `S=[1]`); (ii) T-phase
+`χ(τ+1)/χ(τ)=e^{−2πi/3}=e^{−2πi c/24}` (`c=8`); (iii) leading power `χ·q^{1/3}→1` ⇒
+`q^{−c/24}=q^{−1/3}` ⇒ `c=8=g_car+N_fam`; (iv) holomorphic `c=8≡0 (mod 8)` and T-phase order
+`24/gcd(8,24)=3`. (`E₄` is evaluated via its `q`-series `1+240·Σσ₃(n)qⁿ` because Wolfram's
+`EisensteinE` stays symbolic for complex `τ`.) `v450_seam_edge_entanglement.py` — the
+Calabrese-Cardy reading `c per Majorana = 1/2`, `N_Maj=2^{g_car−1}=16`, `c₋=16·½=8`.
+`v451_seam_edge_cardy_tower.py` — the edge is the Ising minimal model `M(3,4)`:
+`c=1−6(p−q)²/(pq)=1/2`, Kac weights `h_{2,2}=1/16` (σ) and `h_{1,3}=1/2` (ε), so
+`{c,h_σ,h_ε}={½,1/16,½}` uniquely names the free-Majorana CFT. `v453_seam_mu4_from_marks.py`
+— the four Gauss-Bonnet marks ARE `μ₄` (roots of `z⁴−1`), the form basis `ω_k` is `μ₄`-graded
+(`→iᵏω_k`) and the cross-ratio `λ=2` is preserved by `z→iz`, so `QGEO.SYM.01` follows from
+`marks=μ₄` + the existing `QGEO.REALIZE.01`. Also Lean-kernel-hardened (`SeamEdgeChern.lean`,
+`FORM.SEAM.EDGE.CHERN.01`). The numerical edge readings `v449` (uniform-in-N) and `v447`
+(topological Chern) stay Python-only (numpy BdG / FHS lattice).
 
 The 2026-06-22 **next-steps round (A/C/D/B)** added one more exact check (288 → 289):
 `v337_decoupling_theorem.py` (the ambient back-reaction scale `2·dim(E₈)·c₃² = 31/(4π²)`

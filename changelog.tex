@@ -60,6 +60,58 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-30 (\texttt{v449}--\texttt{v453} + Lean + Wolfram --- the edge CFT named end-to-end: uniform-in-$N$ convergence, three independent reads of $c_-{=}8$, the Ising operator tower, the $(E_8)_1$ modular data, and $\mu_4$-symmetry derived from the four marks)}
+\begin{itemize}
+\item \textbf{\texttt{v449\_seam\_mmst\_uniform.py} (\texttt{SEAM.EQUIV.MMST.UNIFORM.01}).} Strengthens the cited MMST
+hypothesis from convergence at a single cross-ratio (\texttt{v444}/\texttt{v448}) to the \emph{uniformity} the theorem
+actually asserts, on the same \texttt{v367}/\texttt{v368} collar. \mE\ cross-ratio A $Q(1,2,4,7)/12\to2{+}\sqrt3$, the
+deviation shrinking monotonically; \mE\ an \emph{independent} cross-ratio B $Q(1,3,5,9)/12\to$ its own value $2$, so
+convergence is not a tuned point; \mE\ a uniform $1/N$ rate $|Q(N){-}Q_\infty|\cdot N\le4$ for \emph{both} observables
+at every $N_x\in\{36,48,60\}$ (one $N$-independent constant); \mE\ the bulk control is off-scale. \mC\ the MMST
+uniform-convergence hypothesis is empirically satisfied; \texttt{SEAM.EQUIV.01} stays \mO.
+\item \textbf{\texttt{v450\_seam\_edge\_entanglement.py} (\texttt{SEAM.EQUIV.EDGE.ENTANGLEMENT.01}).} A \emph{third}
+independent reading of the edge central charge (after the correlator \texttt{v444} and the topology \texttt{v447}).
+\mE\ the Calabrese--Cardy entanglement law gives $c_{\mathrm{Dirac}}{=}1.000$ for the critical free-fermion chain;
+\mE\ so $c$ per Majorana $=1/2$; \mE\ a gapped control saturates ($c{=}0$). \mC\ bulk--edge:
+$c_-{=}N_{\mathrm{Maj}}\cdot\tfrac12{=}16\cdot\tfrac12{=}8{=}\gcar{+}\Nfam$. \texttt{SEAM.EQUIV.01} stays \mO.
+\item \textbf{\texttt{v451\_seam\_edge\_cardy\_tower.py} (\texttt{SEAM.EQUIV.EDGE.CARDY.01}).} Names the edge CFT by its
+\emph{operator content}. \mE\ the Cardy finite-size spectrum gives the spin dimension $h_\sigma{=}1/16$ (the
+periodic--antiperiodic ground-energy split) and \mE\ the energy dimension $h_\epsilon{=}1/2$ (the lowest NS pair
+excitation), both \mE\ $L$-independent (conformal $1/L$ scaling). \mC\ $\{c,h_\sigma,h_\epsilon\}{=}\{\tfrac12,
+\tfrac1{16},\tfrac12\}$ is the chiral Ising (free-Majorana) minimal model $M(3,4)$; $16$ copies give
+$c_-{=}8$. \texttt{SEAM.EQUIV.01} stays \mO.
+\item \textbf{\texttt{v452\_seam\_e8\_modular.py} (\texttt{SEAM.EQUIV.E8.MODULAR.01}).} The $(E_8)_1$ torus modular
+signature, extending \texttt{v156}'s $q$-expansion to the transformation data. \mE\ the character
+$\chi{=}E_4/\eta^8$ is $S$-invariant $\chi(-1/\tau){=}\chi(\tau)$ (one primary, $S{=}[1]$); \mE\ $T$-phase
+$\chi(\tau{+}1)/\chi(\tau){=}e^{-2\pi i/3}{=}e^{-2\pi i c/24}$ ($c{=}8$); \mE\ leading power $\chi\,q^{1/3}\to1$ so
+$q^{-c/24}{=}q^{-1/3}\Rightarrow c{=}8$; \mE\ holomorphic $c{=}8\equiv0\bmod8$ with $T$-phase order
+$24/\gcd(8,24){=}3$. \mC\ the $(E_8)_1$ identity is now pinned on the torus \emph{and} the edge. \texttt{SEAM.EQUIV.01}
+stays \mO.
+\item \textbf{\texttt{v453\_seam\_mu4\_from\_marks.py} (\texttt{SEAM.RIGIDITY.MU4FROMMARKS.01}).} Folds the last
+structural premise of the rigidity chain (\texttt{v446}'s residual \texttt{QGEO.SYM.01}) into the existing
+realisation premise. \mE\ the four Gauss--Bonnet marks \emph{are} $\mu_4{=}$ roots of $z^4{-}1$; \mE\ the order-$4$
+clock $z\!\to\!iz$ is a $4$-cycle permuting them (the \texttt{v445} clock); \mE\ it preserves the cross-ratio
+$\lambda{=}2$ (in the $D_4$ stabiliser, \texttt{v168}); \mE\ the form basis $\omega_k{=}z^{k-1}dz/(z^4{-}1)\to
+i^k\omega_k$ is $\mu_4$-graded (weights $(1,2,3){=}A_3$ exponents). \mC\ so \texttt{QGEO.SYM.01} follows from
+marks$=\mu_4$ $+$ the existing \texttt{QGEO.REALIZE.01} --- no new premise; the chain
+(\texttt{v453}$\to$\texttt{v446}$\to$\texttt{v445}) closes modulo realisation. \texttt{SEAM.EQUIV.01} stays \mO.
+\item \textbf{Lean: \texttt{TfptCarrier/SeamEdgeChern.lean} (\texttt{FORM.SEAM.EDGE.CHERN.01}).} Kernel-hardens the
+integer backbone the four edge reads converge on: the FHS Chern integers ($+1/0/-1$), the bulk--edge channel count
+$|C|{=}1$, $N_{\mathrm{Maj}}{=}2^{\gcar-1}{=}16$, the assembly $2c_-{=}N_{\mathrm{Maj}}\cdot|C|$ (so $c_-{=}8$),
+$c_-{=}8{=}\gcar{+}\Nfam{=}\mathrm{rank}\,E_8$, holomorphic $c\equiv0\bmod8$ and the order-$3$ modular $T$-phase ---
+all by kernel \texttt{decide} (\texttt{edge\_kernel\_facts}, axioms \texttt{propext} only). \texttt{lake build} OK,
+\texttt{\#print axioms} clean.
+\item \textbf{Wolfram mirror.} \texttt{tfpt\_readouts\_extension.wl} gains nine exact checks (\texttt{v452} modular
+data $\times4$, \texttt{v450} entanglement assembly, \texttt{v451} Ising Kac weights, \texttt{v453} marks$=\mu_4$
+$\times3$): $345\to354$ checks, all passing (\texttt{GATE.WOLFRAM.02}). $E_4$ is evaluated via its $q$-series since
+\texttt{EisensteinE} stays symbolic for complex $\tau$.
+\item \textbf{Papers.} The adversarial audit (\texttt{tfpt\_5\_redteam}, Target~A) and the research-contracts note
+record the edge CFT as named end-to-end --- central charge $c_-{=}8$ from three independent observables (correlator
+\texttt{v444}, topology \texttt{v447}, entanglement \texttt{v450}), the Ising operator tower (\texttt{v451}), the
+$(E_8)_1$ torus modular data (\texttt{v452}), and the $\mu_4$ premise derived from the marks (\texttt{v453}) --- while
+the only residual that stays \mO\ remains the cited continuum-existence theorem (\texttt{v336}).
+\end{itemize}
+
 \subsection*{2026-06-30 (\texttt{v446}/\texttt{v447}/\texttt{v448} + Lean + Wolfram --- deriving clock-invariance from $\mu_4$-symmetry, an independent topological reading of the edge $c_-{=}8$, and pinning the one external MMST fact at four-point order)}
 \begin{itemize}
 \item \textbf{\texttt{v446\_seam\_clock\_invariance.py} (\texttt{SEAM.RIGIDITY.CLOCKINV.01}).} Closes \texttt{v445}'s single
