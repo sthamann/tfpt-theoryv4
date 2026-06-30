@@ -37,10 +37,14 @@ const MARKER: Record<string, { label: string; cls: string; title: string }> = {
 };
 
 function InlineMath({ tex }: { tex: string }) {
+  // output: "html" (not "htmlAndMathml") keeps the page well under Vercel's
+  // 19 MB prerender limit: the duplicate MathML tree KaTeX emits per formula was
+  // ~half the changelog HTML across ~10k formulas. Accessibility is preserved by
+  // the role="math" aria-label={tex} wrapper below (the TeX is the accessible name).
   const html = katex.renderToString(tex, {
     throwOnError: false,
     strict: "ignore",
-    output: "htmlAndMathml",
+    output: "html",
     trust: false,
     macros: { ...CHANGELOG_MACROS },
   });
