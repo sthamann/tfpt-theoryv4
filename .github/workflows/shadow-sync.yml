@@ -3,10 +3,20 @@ name: Sync tfpt5-shadow mirror
 on:
   push:
     branches: [main]
+  schedule:
+    # Re-assert the mirror periodically. Overleaf is wired bidirectionally to
+    # tfpt5-shadow and its push-back DELETES every repo file it does not track
+    # (the v235-v298 suite block, video/, ...). A scheduled re-sync self-heals
+    # the mirror even when there is no new push to the source repo.
+    - cron: '17 */6 * * *'
   workflow_dispatch:
 
 permissions:
   contents: read
+
+concurrency:
+  group: shadow-sync
+  cancel-in-progress: false
 
 jobs:
   sync:
@@ -71,8 +81,12 @@ jobs:
 
           One-way mirror for Overleaf GitHub sync (no _archive, website, or PDFs)."
 
-          if ! git push -u "$remote" HEAD:main; then
-            echo "::error::Push to sthamann/tfpt5-shadow failed (HTTP 403 = token lacks write access)."
+          # Force-push so the mirror is ALWAYS exactly the export from main. The
+          # shadow is one-way by design (main -> mirror -> Overleaf pull); an
+          # Overleaf push-back only ever deletes repo files it does not track, so
+          # overwriting it is correct and lets the mirror self-heal.
+          if ! git push --force "$remote" HEAD:main; then
+            echo "::error::Force-push to sthamann/tfpt5-shadow failed (HTTP 403 = token lacks write access)."
             echo "Fine-grained PAT: grant this token Contents Read+Write on tfpt5-shadow only."
             echo "Classic PAT: needs the 'repo' scope."
             exit 1
