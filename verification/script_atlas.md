@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`447` registered scripts · `512` ledger claims · `10` clusters.
+`453` registered scripts · `519` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -294,7 +294,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v407_dn_pairings_omega** [E/C/O] `FLAV.SELECTOR.CLOSE.01` — FLAV.SELECTOR.CLOSE.01: the R4' residue folds into the tau=omega keystone (v405) -- the three (d,n) selector pairings ARE the tau=omega family-slice atoms. [E] the frame (1,a,sigma
   - deps: v405_seam_equiv_omega, v49_readout_rigidity, v405, v139, v136, v42 · cited: origin theory, 1 architecture e8
 
-### `frontier` — Open gate (G_metric) & the frontier  (140 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (146 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -577,6 +577,18 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v286_seam_equivalence_contract, v447_seam_edge_chern, v156, v444, v281, v336 · cited: 5 redteam, research contracts
 - **v453_seam_mu4_from_marks** [E/C/O] `SEAM.RIGIDITY.MU4FROMMARKS.01` — SEAM.RIGIDITY.MU4FROMMARKS.01: deriving QGEO.SYM.01 (mu4-symmetry of the seam RP data) from the four marks -- the last structural premise of the rigidity chain folded into the exis
   - deps: v286_seam_equivalence_contract, v446_seam_clock_invariance, v445_seam_rigidity_forcing, v181_clock_is_conformal_symmetry, v168_qgeo_rigidity, v446, v445, v168 · cited: 5 redteam, research contracts
+- **v454_seam_edge_virasoro** [E/C/O] `SEAM.EQUIV.EDGE.VIRASORO.01` — SEAM.EQUIV.EDGE.VIRASORO.01: the lattice realises the level-1 current algebra whose Sugawara central charge is EXACTLY 8 (G2) -- testing the cited MMST 'Koo-Saleur -> Virasoro with
+  - deps: v286_seam_equivalence_contract, v451_seam_edge_cardy_tower, v450_seam_edge_entanglement, v366_mmst_seam_collar, v450, v451, v336 · cited: research contracts
+- **v455_seam_bw_uniform** [E/C/O] `SEAM.EQUIV.BW.UNIFORM.01` — SEAM.EQUIV.BW.UNIFORM.01: a UNIFORM-IN-N Tomita-Takesaki tower for the intrinsic Bisognano-Wichmann condition u_Theta=J (G1) -- the inductive-limit companion to v426, advancing v42
+  - deps: v286_seam_equivalence_contract, v442_seam_rigidity_uniform, v445_seam_rigidity_forcing, v424, v426, v442, v336 · cited: research contracts
+- **v456_seam_chirality_from_c3** [E/C/O] `SEAM.S3.FROM-P1.01` — SEAM.S3.FROM-P1.01: the edge chirality (c_-!=0, the S3 phase) is FORCED by the one-sidedness that defines c3=1/(8pi) (P1), so S3 is a CONSEQUENCE of P1 (G6). [E] c3's '8' IS THE ON
+  - deps: v286_seam_equivalence_contract, v447_seam_edge_chern, v367_seam_s3_lattice, v356_continuum_mmst_applicability, v73, v367, v447, v336 · cited: research contracts
+- **v457_seam_character_killtest** [E/O/X] `SEAM.EQUIV.KILLTEST.01` — SEAM.EQUIV.KILLTEST.01 [X]: an explicit (E8)_1-vs-SO(16)_1 character/sector kill-test for the seam edge -- a FALSIFIABLE test of the (E8)_1 identification (G7). [E] (E8)_1 CHARACTE
+  - deps: v286_seam_equivalence_contract, v452_seam_e8_modular, v377_seam_s3_e8character, v378_seam_s3_modular, v156, v281, v452, v336 · cited: research contracts
+- **v458_seam_mmst_citation_audit** [C/O] `SEAM.EQUIV.MMST.AUDIT.01` — SEAM.EQUIV.MMST.AUDIT.01: the EXACT hypothesis-by-hypothesis citation audit of MMST (arXiv:2107.13834) against our collar (G3, the Zitat-Abgleich). [C] H1 ALGEBRA CLASS: CAR 16-Maj
+  - deps: v286_seam_equivalence_contract, v366_mmst_seam_collar, v356_continuum_mmst_applicability, v459_seam_lattice_voa_route, v336, v356, v155, v160 · cited: research contracts
+- **v459_seam_lattice_voa_route** [E/C/O] `SEAM.EQUIV.LATTICEVOA.01` — SEAM.EQUIV.LATTICEVOA.01: the SECOND, independent route to (E8)_1 -- the lattice net A_Q(E8) (Adamo-Giorgetti-Tanimoto arXiv:2506.01008 + OS arXiv:2407.18222) supplies the 128-spin
+  - deps: v286_seam_equivalence_contract, v458_seam_mmst_citation_audit, v378_seam_s3_modular, v456_seam_chirality_from_c3, v458, v456, v281, v336 · cited: research contracts
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (180 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -959,22 +971,22 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×50, `QGEO.SYM.01`×31, `v336`×23, `v216`×18, `QG.AMB.01`×17, `v76`×17, `v56`×17, `E8.GLU.01`×16, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v312`×14, `v54`×13, `v323`×12, `REG.FREEZE.01`×12, `AX.P1.01`×11
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×57, `QGEO.SYM.01`×31, `v336`×29, `v216`×18, `QG.AMB.01`×17, `v76`×17, `v56`×17, `E8.GLU.01`×16, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v312`×14, `v54`×13, `v323`×12, `REG.FREEZE.01`×12, `AX.P1.01`×11
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v442_seam_rigidity_uniform** — `SEAM.RIGIDITY.UNIFORM.01`
-- **v443_seam_e8_discriminator** — `SEAM.E8.DISCRIMINATOR.01`
-- **v444_seam_edge_scaling** — `SEAM.EQUIV.CONTINUUM.EDGE.01`
-- **v445_seam_rigidity_forcing** — `SEAM.RIGIDITY.FORCING.01`
-- **v446_seam_clock_invariance** — `SEAM.RIGIDITY.CLOCKINV.01`
-- **v447_seam_edge_chern** — `SEAM.EQUIV.EDGE.CHERN.01`
 - **v448_seam_edge_fourpoint** — `SEAM.EQUIV.EDGE.FOURPOINT.01`
 - **v449_seam_mmst_uniform** — `SEAM.EQUIV.MMST.UNIFORM.01`
 - **v450_seam_edge_entanglement** — `SEAM.EQUIV.EDGE.ENTANGLEMENT.01`
 - **v451_seam_edge_cardy_tower** — `SEAM.EQUIV.EDGE.CARDY.01`
 - **v452_seam_e8_modular** — `SEAM.EQUIV.E8.MODULAR.01`
 - **v453_seam_mu4_from_marks** — `SEAM.RIGIDITY.MU4FROMMARKS.01`
+- **v454_seam_edge_virasoro** — `SEAM.EQUIV.EDGE.VIRASORO.01`
+- **v455_seam_bw_uniform** — `SEAM.EQUIV.BW.UNIFORM.01`
+- **v456_seam_chirality_from_c3** — `SEAM.S3.FROM-P1.01`
+- **v457_seam_character_killtest** — `SEAM.EQUIV.KILLTEST.01`
+- **v458_seam_mmst_citation_audit** — `SEAM.EQUIV.MMST.AUDIT.01`
+- **v459_seam_lattice_voa_route** — `SEAM.EQUIV.LATTICEVOA.01`
 

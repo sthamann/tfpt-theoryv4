@@ -47,6 +47,1473 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "c",
+        "v": "v454"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v459"
+      },
+      {
+        "k": "t",
+        "v": " + Lean + Wolfram — the post-F “G-block”: the lattice Sugawara current algebra, a uniform-in-"
+      },
+      {
+        "k": "m",
+        "v": "N"
+      },
+      {
+        "k": "t",
+        "v": " Tomita–Takesaki tower, chirality forced by "
+      },
+      {
+        "k": "m",
+        "v": "P_1"
+      },
+      {
+        "k": "t",
+        "v": ", an "
+      },
+      {
+        "k": "m",
+        "v": "(E_8)_1"
+      },
+      {
+        "k": "t",
+        "v": " character kill test, the exact MMST citation audit and the complementary lattice-VOA route"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v454_seam_edge_virasoro.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EQUIV.EDGE.VIRASORO.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Tests the cited MMST “Koo–Saleur lattice generators "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " continuum Virasoro with the correct "
+        },
+        {
+          "k": "m",
+          "v": "c"
+        },
+        {
+          "k": "t",
+          "v": "” fact on our own free-fermion edge (G2). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the Affleck–Cardy Casimir energy fits "
+        },
+        {
+          "k": "m",
+          "v": "c_{\\mathrm{Dirac}}{=}1.000"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\tfrac12"
+        },
+        {
+          "k": "t",
+          "v": " per Majorana, "
+        },
+        {
+          "k": "m",
+          "v": "L{=}64..1024"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the lattice "
+        },
+        {
+          "k": "m",
+          "v": "U(1)"
+        },
+        {
+          "k": "t",
+          "v": " current closes its affine level exactly ("
+        },
+        {
+          "k": "m",
+          "v": "\\langle0|J_nJ_{-n}|0\\rangle{=}n"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "n{=}1..8"
+        },
+        {
+          "k": "t",
+          "v": "; a gapped control vanishes); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the level-"
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " Sugawara "
+        },
+        {
+          "k": "m",
+          "v": "c{=}\\dim G/(1{+}h^\\vee){=}8"
+        },
+        {
+          "k": "t",
+          "v": " for "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "both"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "SO(16)_1"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "120/15"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "248/31"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "m",
+          "v": "16{\\cdot}\\tfrac12{=}8{=}\\gcar{+}\\Nfam"
+        },
+        {
+          "k": "t",
+          "v": " is the level-"
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " current-algebra "
+        },
+        {
+          "k": "m",
+          "v": "c_-"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": ". Sugawara Wolfram-mirrored."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v455_seam_bw_uniform.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EQUIV.BW.UNIFORM.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " A uniform-in-"
+        },
+        {
+          "k": "m",
+          "v": "N"
+        },
+        {
+          "k": "t",
+          "v": " Tomita–Takesaki tower for the intrinsic Bisognano–Wichmann condition "
+        },
+        {
+          "k": "m",
+          "v": "u_\\Theta{=}J"
+        },
+        {
+          "k": "t",
+          "v": " — the inductive-limit companion to "
+        },
+        {
+          "k": "c",
+          "v": "v426"
+        },
+        {
+          "k": "t",
+          "v": ", advancing "
+        },
+        {
+          "k": "c",
+          "v": "v424"
+        },
+        {
+          "k": "t",
+          "v": " sub-step (i) (G1). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "\\|\\Theta K\\Theta{+}K\\|{=}0"
+        },
+        {
+          "k": "t",
+          "v": " exactly at every "
+        },
+        {
+          "k": "m",
+          "v": "N"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "N{=}8..128"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "an "
+        },
+        {
+          "k": "m",
+          "v": "N"
+        },
+        {
+          "k": "t",
+          "v": "-independent gap "
+        },
+        {
+          "k": "m",
+          "v": "6\\log\\tfrac32"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "[\\rho,K]{=}0"
+        },
+        {
+          "k": "t",
+          "v": " exactly at every "
+        },
+        {
+          "k": "m",
+          "v": "N"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "an "
+        },
+        {
+          "k": "m",
+          "v": "N"
+        },
+        {
+          "k": "t",
+          "v": "-independent neg-control margin "
+        },
+        {
+          "k": "m",
+          "v": "2\\|K\\|"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the inductive limit inherits "
+        },
+        {
+          "k": "m",
+          "v": "u_\\Theta{=}J"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": ". Python-only."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v456_seam_chirality_from_c3.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.S3.FROM-P1.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The edge chirality ("
+        },
+        {
+          "k": "m",
+          "v": "c_-{\\neq}0"
+        },
+        {
+          "k": "t",
+          "v": ", the S3 phase) is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "forced"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " by the one-sidedness that defines "
+        },
+        {
+          "k": "m",
+          "v": "c_3{=}1/(8\\pi)"
+        },
+        {
+          "k": "t",
+          "v": " (P1) (G6). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "c_3"
+        },
+        {
+          "k": "t",
+          "v": "'s “"
+        },
+        {
+          "k": "m",
+          "v": "8"
+        },
+        {
+          "k": "t",
+          "v": "” is the one-sided count "
+        },
+        {
+          "k": "m",
+          "v": "8{=}|\\Z_2|\\cdot(\\!\\int\\!K/\\pi){=}2\\cdot4"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "a reflection sends the Chern integer "
+        },
+        {
+          "k": "m",
+          "v": "C{\\to}{-}C"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "+1\\!\\to\\!-1"
+        },
+        {
+          "k": "t",
+          "v": " on the "
+        },
+        {
+          "k": "m",
+          "v": "p{+}ip"
+        },
+        {
+          "k": "t",
+          "v": " model); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "a two-sided boundary forces "
+        },
+        {
+          "k": "m",
+          "v": "C{=}{-}C{=}0"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the one-sided seam (no reflection) forces "
+        },
+        {
+          "k": "m",
+          "v": "C{\\neq}0"
+        },
+        {
+          "k": "t",
+          "v": ", magnitude "
+        },
+        {
+          "k": "m",
+          "v": "c_-{=}8{=}\\operatorname{rank}E_8"
+        },
+        {
+          "k": "t",
+          "v": " — S3 is a consequence of "
+        },
+        {
+          "k": "m",
+          "v": "P_1"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " existence stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": ". The arithmetic is Wolfram-mirrored."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v457_seam_character_killtest.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EQUIV.KILLTEST.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " An explicit character/sector kill test of "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " against "
+        },
+        {
+          "k": "m",
+          "v": "SO(16)_1"
+        },
+        {
+          "k": "t",
+          "v": " (G7). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " character "
+        },
+        {
+          "k": "m",
+          "v": "\\chi{=}E_4/\\eta^8"
+        },
+        {
+          "k": "t",
+          "v": " with tower degeneracies "
+        },
+        {
+          "k": "m",
+          "v": "\\{1,248,4124,34752,\\dots\\}"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the weight-"
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " count "
+        },
+        {
+          "k": "m",
+          "v": "248{=}120{+}128"
+        },
+        {
+          "k": "t",
+          "v": " (not the free "
+        },
+        {
+          "k": "m",
+          "v": "120"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the sector count "
+        },
+        {
+          "k": "m",
+          "v": "|\\!\\det\\mathrm{Cartan}\\,E_8|{=}1"
+        },
+        {
+          "k": "t",
+          "v": " (not "
+        },
+        {
+          "k": "m",
+          "v": "|\\!\\det\\mathrm{Cartan}\\,D_8|{=}4"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "X"
+        },
+        {
+          "k": "t",
+          "v": "a measured "
+        },
+        {
+          "k": "m",
+          "v": "120"
+        },
+        {
+          "k": "t",
+          "v": ", four sectors, or a wrong coefficient would "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "falsify"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": "; the data give "
+        },
+        {
+          "k": "m",
+          "v": "248/1/\\{1,248,4124\\}"
+        },
+        {
+          "k": "t",
+          "v": " (passed). "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": ". Wolfram-mirrored."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v458_seam_mmst_citation_audit.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EQUIV.MMST.AUDIT.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The exact hypothesis-by-hypothesis citation audit of MMST ("
+        },
+        {
+          "k": "c",
+          "v": "arXiv:2107.13834"
+        },
+        {
+          "k": "t",
+          "v": ") against the collar (G3, the “exakter Zitat-Abgleich”). "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "H1 CAR class, H2 massless limit, "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "H3 per-copy "
+        },
+        {
+          "k": "m",
+          "v": "c{=}\\tfrac12"
+        },
+        {
+          "k": "t",
+          "v": " (Thm 4.11), "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "H4 decoupled additivity to "
+        },
+        {
+          "k": "m",
+          "v": "c{=}8"
+        },
+        {
+          "k": "t",
+          "v": ", H5 the WZW range "
+        },
+        {
+          "k": "m",
+          "v": "8{\\le}8{\\le}16"
+        },
+        {
+          "k": "t",
+          "v": " with the "
+        },
+        {
+          "k": "m",
+          "v": "120"
+        },
+        {
+          "k": "t",
+          "v": " bilinear currents all match; "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the single residual H6 is the "
+        },
+        {
+          "k": "m",
+          "v": "128"
+        },
+        {
+          "k": "t",
+          "v": "-spinor extension "
+        },
+        {
+          "k": "m",
+          "v": "SO(16)_1{\\to}(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\det K\\,4{\\to}1"
+        },
+        {
+          "k": "t",
+          "v": "), outside MMST's bilinear method. "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": ", its open part narrowed to this one holomorphic extension."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v459_seam_lattice_voa_route.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EQUIV.LATTICEVOA.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The second, independent route to "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " supplying exactly the residual of "
+        },
+        {
+          "k": "c",
+          "v": "v458"
+        },
+        {
+          "k": "t",
+          "v": " (G5). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " even unimodular ("
+        },
+        {
+          "k": "m",
+          "v": "\\det{=}1"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": " the weight-"
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " space "
+        },
+        {
+          "k": "m",
+          "v": "248{=}8{+}240"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the "
+        },
+        {
+          "k": "m",
+          "v": "240"
+        },
+        {
+          "k": "t",
+          "v": " roots split "
+        },
+        {
+          "k": "m",
+          "v": "112"
+        },
+        {
+          "k": "t",
+          "v": " integer "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "128"
+        },
+        {
+          "k": "t",
+          "v": " half-integer (the spinor, "
+        },
+        {
+          "k": "m",
+          "v": "248{=}120{+}128"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the lattice net "
+        },
+        {
+          "k": "m",
+          "v": "A_{E_8}"
+        },
+        {
+          "k": "t",
+          "v": " (Adamo–Giorgetti–Tanimoto, "
+        },
+        {
+          "k": "c",
+          "v": "arXiv:2506.01008"
+        },
+        {
+          "k": "t",
+          "v": "; OS "
+        },
+        {
+          "k": "c",
+          "v": "arXiv:2407.18222"
+        },
+        {
+          "k": "t",
+          "v": ") constructs the holomorphic extension; "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the two routes leave one shared realisation input (collar "
+        },
+        {
+          "k": "m",
+          "v": "={}A_{E_8}"
+        },
+        {
+          "k": "t",
+          "v": ", tied to "
+        },
+        {
+          "k": "m",
+          "v": "P_1"
+        },
+        {
+          "k": "t",
+          "v": " by "
+        },
+        {
+          "k": "c",
+          "v": "v456"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": ". Wolfram-mirrored."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Lean ("
+            },
+            {
+              "k": "c",
+              "v": "FORM.SEAM.RESIDUAL.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "c",
+              "v": "TfptCarrier/SeamResidualAxiom.lean"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Kernel-checks the whole G-block arithmetic (the one-sided "
+        },
+        {
+          "k": "m",
+          "v": "8{=}|\\Z_2|\\!\\int\\!K/\\pi"
+        },
+        {
+          "k": "t",
+          "v": ", the reflection "
+        },
+        {
+          "k": "m",
+          "v": "C{\\to}{-}C"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "c_-{=}8"
+        },
+        {
+          "k": "t",
+          "v": ", the MMST range "
+        },
+        {
+          "k": "m",
+          "v": "8{\\le}8{\\le}16"
+        },
+        {
+          "k": "t",
+          "v": ", decoupled additivity, "
+        },
+        {
+          "k": "m",
+          "v": "248{=}8{+}240{=}120{+}128"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "240{=}112{+}128"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\det K\\,1"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": ") by "
+        },
+        {
+          "k": "c",
+          "v": "decide"
+        },
+        {
+          "k": "t",
+          "v": ", reducing the "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " residual to ONE named TFPT-internal realisation axiom ("
+        },
+        {
+          "k": "c",
+          "v": "CollarRealizedAsLatticePhase"
+        },
+        {
+          "k": "t",
+          "v": ") plus two cited external theorems (MMST "
+        },
+        {
+          "k": "c",
+          "v": "v458"
+        },
+        {
+          "k": "t",
+          "v": ", AGT "
+        },
+        {
+          "k": "c",
+          "v": "v459"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "lake build"
+        },
+        {
+          "k": "t",
+          "v": " OK."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Wolfram + integration."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Six exact mirrors added to "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_readouts_extension.wl"
+        },
+        {
+          "k": "t",
+          "v": " (Sugawara "
+        },
+        {
+          "k": "m",
+          "v": "c{=}8"
+        },
+        {
+          "k": "t",
+          "v": " for "
+        },
+        {
+          "k": "m",
+          "v": "120/15"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "248/31"
+        },
+        {
+          "k": "t",
+          "v": "; the one-sided "
+        },
+        {
+          "k": "m",
+          "v": "8{=}2\\cdot4"
+        },
+        {
+          "k": "t",
+          "v": " and reflection "
+        },
+        {
+          "k": "m",
+          "v": "C{=}{-}C\\Rightarrow0"
+        },
+        {
+          "k": "t",
+          "v": "; the "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " tower "
+        },
+        {
+          "k": "m",
+          "v": "\\{1,248,4124,34752\\}"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "248{=}120{+}128"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "|\\!\\det\\mathrm{Cartan}|"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": "; the root split "
+        },
+        {
+          "k": "m",
+          "v": "112{+}128"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "248{=}8{+}240"
+        },
+        {
+          "k": "t",
+          "v": ") — extension total now "
+        },
+        {
+          "k": "m",
+          "v": "360/360"
+        },
+        {
+          "k": "t",
+          "v": ". Registry, ledger, master index, website mirror and manifests updated in the same change."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-06-30",
+    "dateLabel": "2026-06-30",
+    "heading": [
+      {
+        "k": "c",
         "v": "v449"
       },
       {

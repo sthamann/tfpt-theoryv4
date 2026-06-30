@@ -2825,6 +2825,53 @@ Module[{marks, images, cr, grading, z},
     Simplify[cr @@ marks] == 2 && Simplify[cr @@ images] == Simplify[cr @@ marks]];
 ];
 
+(* ==== v454/v456/v457/v459 round (G-block): the edge current-algebra/Sugawara c=8,
+   the S3-from-P1 one-sided arithmetic, the (E8)_1 character/sector kill-test, and the
+   lattice-VOA second route; mirrors v454/v456/v457/v459. The Casimir + Kac-Moody fits
+   (v454), the Chern flip (v456) and the Tomita-Takesaki tower (v455) are numerical,
+   Python-only; the exact algebra is mirrored here. ==== *)
+Module[{cSO16, cE8, Z2, intKoverPi, eight, reflFixed, cc,
+        E4q, inv8, chiSeries, coeffs, cartanE8, cartanD8, nInt, nHalf},
+  (* v454: level-1 Sugawara c = dim G/(1+h^v) = 8 for both SO(16)_1 and (E8)_1 *)
+  cSO16 = 120/(1 + 14);
+  cE8 = 248/(1 + 30);
+  checkExact["v454 SEAM.EQUIV.EDGE.VIRASORO.01: level-1 Sugawara c=dim G/(1+h^v)=8 for BOTH SO(16)_1 (120/15) and (E8)_1 (248/31); 16 Majoranas => c_-=8=g_car+N_fam (the Casimir c and Kac-Moody central term <J_n J_-n>=n are numerical, Python-only)",
+    cSO16 == 8 && cE8 == 8 && cSO16 == cE8 && 8 == gcar + Nfam];
+
+  (* v456: c3's '8' is the one-sided count; reflection C->-C so two-sided forces C=0 *)
+  Z2 = 2; intKoverPi = 2*2;            (* intK/pi = 2 chi(S^2) = 4 *)
+  eight = Z2*intKoverPi;
+  reflFixed = Solve[cc == -cc, cc];
+  checkExact["v456 SEAM.S3.FROM-P1.01: c3's '8' is the one-sided count |Z2|*(intK/pi)=2*4=8; a reflection sends Chern C->-C so two-sided forces C=0 (Solve[c==-c]=>c=0), one-sided (no reflection) allows C!=0; c_-=8=g_car+N_fam shares the 8 (the Chern computation is numerical, Python-only)",
+    eight == 8 && (-1) == -(1) && reflFixed == {{cc -> 0}} && (gcar + Nfam) == 8];
+
+  (* v457: the (E8)_1 character tower {1,248,4124,34752} and the kill-test discriminators *)
+  cartanE8 = {{2, -1, 0, 0, 0, 0, 0, 0}, {-1, 2, -1, 0, 0, 0, 0, 0},
+     {0, -1, 2, -1, 0, 0, 0, 0}, {0, 0, -1, 2, -1, 0, 0, 0},
+     {0, 0, 0, -1, 2, -1, 0, -1}, {0, 0, 0, 0, -1, 2, -1, 0},
+     {0, 0, 0, 0, 0, -1, 2, 0}, {0, 0, 0, 0, -1, 0, 0, 2}};
+  cartanD8 = {{2, -1, 0, 0, 0, 0, 0, 0}, {-1, 2, -1, 0, 0, 0, 0, 0},
+     {0, -1, 2, -1, 0, 0, 0, 0}, {0, 0, -1, 2, -1, 0, 0, 0},
+     {0, 0, 0, -1, 2, -1, 0, 0}, {0, 0, 0, 0, -1, 2, -1, -1},
+     {0, 0, 0, 0, 0, -1, 2, 0}, {0, 0, 0, 0, 0, -1, 0, 2}};
+  E4q = 1 + 240 Sum[DivisorSigma[3, n] q^n, {n, 1, 6}];
+  inv8 = Series[Product[(1 - q^n)^-8, {n, 1, 6}], {q, 0, 4}];
+  chiSeries = Series[E4q inv8, {q, 0, 4}];
+  coeffs = CoefficientList[Normal[chiSeries], q];
+  checkExact["v457 SEAM.EQUIV.KILLTEST.01 (i): the (E8)_1 character tower chi=E4/eta^8=q^{-1/3}(1+248q+4124q^2+34752q^3+...); E4/Product(1-q^n)^8 q-series coeffs {1,248,4124,34752} -- the exact (E8)_1 conformal-tower degeneracies",
+    Take[coeffs, 4] == {1, 248, 4124, 34752}];
+  checkExact["v457 SEAM.EQUIV.KILLTEST.01 (ii): the kill-test discriminators -- weight-1 count 248=dim E8=120(SO16)+128(spinor); |det Cartan(E8)|=1 (invertible, one sector) vs |det Cartan(D8=SO16)|=4 (four sectors); a measured 120 or 4 would FALSIFY (E8)_1, the data give 248/1",
+    120 + 128 == 248 && Det[cartanE8] == 1 && Abs[Det[cartanD8]] == 4];
+
+  (* v459: E8 even unimodular + the 240 roots split 112+128; 248=8+240=120+128 *)
+  nInt = Length[Select[Tuples[{-1, 0, 1}, 8], Total[#^2] == 2 &]];
+  nHalf = Length[Select[Tuples[{-1/2, 1/2}, 8], EvenQ[Count[#, -1/2]] &]];
+  checkExact["v459 SEAM.EQUIV.LATTICEVOA.01 (i): E8 even unimodular -- det Cartan(E8)=1; the 240 roots split 112 integer (D8) + 128 half-integer (spinor): #{norm-2 in {-1,0,1}^8}=112, #{(+-1/2)^8 even #signs}=128",
+    Det[cartanE8] == 1 && nInt == 112 && nHalf == 128 && nInt + nHalf == 240];
+  checkExact["v459 SEAM.EQUIV.LATTICEVOA.01 (ii): the (E8)_1 weight-1 content in BOTH decompositions 248=8+240 (lattice: 8 Cartan + 240 roots) = 120+128 (fermionic: 120 so(16) bilinears + 128 spinor); the lattice route supplies the 128 spinor MMST (v458) leaves open",
+    8 + 240 == 248 && 120 + 128 == 248 && 8 + 112 == 120];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v453: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

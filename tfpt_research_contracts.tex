@@ -939,11 +939,13 @@ Adamo--Giorgetti--Tanimoto (\texttt{arXiv:2508.07109}, 2025) --- every DHR repre
 extending a loop-group/Virasoro net is \emph{automatically} positive-energy and diffeomorphism-covariant ---
 defuses the old ``Bisognano--Wichmann presupposes the very covariance it should produce'' circularity (\vref{v215}):
 once the seam net is in hand, geometric covariance is a \emph{consequence}, not an input.
-\par\smallskip\noindent\textbf{Sixteen convergent attacks on the one continuum residual --- intrinsic BW, a
+\par\smallskip\noindent\textbf{Twenty-two convergent attacks on the one continuum residual --- intrinsic BW, a
 bulk continuum motor and its chiral-edge counterpart, the $\beta$-homotopy, the applicability audit, uniform
 rigidity with its forcing converse and the derivation of clock-invariance, three independent reads of the edge
 central charge, the four-point and uniform-in-$N$ pinning of the external fact, the Ising operator tower, the
-$(E_8)_1$ torus modular data, the $\mu_4$-from-marks derivation, and the kill tests
+$(E_8)_1$ torus modular data, the $\mu_4$-from-marks derivation, the kill tests, the lattice Sugawara current
+algebra, a uniform-in-$N$ Tomita--Takesaki tower, the chirality-from-$P_1$ forcing, an $(E_8)_1$ character kill
+test, the exact MMST citation audit and the complementary lattice-VOA route
 (\veri{v438\_seam\_hsmi\_borchers.py}, \veri{v439\_seam\_lieb\_robinson.py}, \veri{v440\_seam\_lto\_rp\_beta.py},
 \veri{v441\_seam\_applicability\_ledger.py}, \veri{v442\_seam\_rigidity\_uniform.py},
 \veri{v443\_seam\_e8\_discriminator.py}, \veri{v444\_seam\_edge\_scaling.py},
@@ -951,7 +953,10 @@ $(E_8)_1$ torus modular data, the $\mu_4$-from-marks derivation, and the kill te
 \veri{v447\_seam\_edge\_chern.py}, \veri{v448\_seam\_edge\_fourpoint.py},
 \veri{v449\_seam\_mmst\_uniform.py}, \veri{v450\_seam\_edge\_entanglement.py},
 \veri{v451\_seam\_edge\_cardy\_tower.py}, \veri{v452\_seam\_e8\_modular.py},
-\veri{v453\_seam\_mu4\_from\_marks.py}).} None closes
+\veri{v453\_seam\_mu4\_from\_marks.py}, \veri{v454\_seam\_edge\_virasoro.py},
+\veri{v455\_seam\_bw\_uniform.py}, \veri{v456\_seam\_chirality\_from\_c3.py},
+\veri{v457\_seam\_character\_killtest.py}, \veri{v458\_seam\_mmst\_citation\_audit.py},
+\veri{v459\_seam\_lattice\_voa\_route.py}).} None closes
 \texttt{SEAM.EQUIV.01}; together they ground the one continuum input on both its halves, reduce it to a single
 analytic fact and make the claim falsifiable.
 \emph{(v) The intrinsic Bisognano--Wichmann route} (\veri{v438\_seam\_hsmi\_borchers.py}): the seam supplies a
@@ -1054,7 +1059,51 @@ $z\!\to\!iz$ fixes their cross-ratio $\lambda{=}2$ (the $D_4$ stabiliser, \vref{
 \texttt{QGEO.SYM.01} of (xiii) follows from marks$=\mu_4$ plus the existing \texttt{QGEO.REALIZE.01} --- \mE\ the
 three mark facts, \mC\ no new premise: the chain (xx)$\to$(xiii)$\to$(xii) closes modulo realisation. The integer
 backbone of (xiv)--(xix) ($c_-{=}8$, the Chern integers, the order-$3$ $T$-phase) is kernel-hardened in Lean
-axiom-free as \texttt{FORM.SEAM.EDGE.CHERN.01}. Across (v)--(xx), \texttt{SEAM.EQUIV.01}
+axiom-free as \texttt{FORM.SEAM.EDGE.CHERN.01}.
+\emph{(xxi) The lattice Sugawara current algebra} (\veri{v454\_seam\_edge\_virasoro.py}): testing the cited MMST
+``Koo--Saleur generators $\to$ continuum Virasoro with the correct $c$'' fact on the edge \emph{algebra}, not just
+its central charge. The critical free-fermion ring has the Affleck--Cardy Casimir energy $E_0(L){=}e_\infty L{-}\pi v
+c/(6L)$ fitting $c_{\mathrm{Dirac}}{=}1.000$ ($\tfrac12$ per Majorana, $L{=}64..1024$), the lattice $U(1)$ current
+closes its affine \emph{level} exactly ($\langle0|J_nJ_{-n}|0\rangle{=}n$, $n{=}1..8$; vanishing for a gapped
+control), and the level-$1$ Sugawara central charge $c{=}\dim G/(1{+}h^\vee){=}8$ for \emph{both} $SO(16)_1$
+($120/15$) and $(E_8)_1$ ($248/31$); \mE\ Casimir, Kac--Moody level and Sugawara, \mC\ $16{\cdot}\tfrac12{=}8$ is the
+level-$1$ current-algebra $c_-$. \emph{(xxii) The uniform-in-$N$ Tomita--Takesaki tower}
+(\veri{v455\_seam\_bw\_uniform.py}): the inductive-limit companion of \vref{v426} for sub-step (i) of (iv) --- a
+family of reflection-odd, $\mu_4$-even, gapped collars ($N{=}8..128$) on which the intrinsic Bisognano--Wichmann
+condition $u_\Theta{=}J$ ($\|\Theta K\Theta{+}K\|{=}0$) holds \emph{exactly at every $N$}, with an $N$-independent gap
+($6\log\tfrac32$) and an $N$-independent neg-control margin ($\|\Theta K\Theta{+}K\|{=}2\|K\|$ for a side-even
+reflection); \mE\ the uniform BW, gap, clock symmetry and teeth, \mC\mO\ so the inductive limit inherits
+$u_\Theta{=}J$ (the abstract continuum theorem stays the cited backbone). \emph{(xxiii) The chirality-from-$P_1$
+forcing} (\veri{v456\_seam\_chirality\_from\_c3.py}): the S3 input of the continuum chain (\vref{v356}) is removed as
+a free choice --- $c_3$'s ``$8$'' \emph{is} the one-sided count $8{=}|\Z_2|\cdot(\!\int\!K/\pi){=}2\cdot4$
+($8\pi{=}|\Z_2|\!\int\!K{=}2\cdot2\pi\chi(S^2)$, \vref{v73}), and a reflection sends the edge Chern integer
+$C{\to}{-}C$ (verified $C{=}{+}1\!\to\!{-}1$ on the explicit $p{+}ip$ model), so any \emph{two-sided}
+(reflection-symmetric) gapped boundary forces $C{=}{-}C{=}0$ while the \emph{one-sided} seam --- the same $|\Z_2|$
+quotient that gives $c_3$ its $8\pi$ --- has no such reflection and forces $C{\neq}0$; \mE\ the one-sided count and
+the $C{\to}{-}C$ flip, \mC\ chirality (S3) is a \emph{consequence} of $P_1$, magnitude $c_-{=}8$. \emph{(xxiv) The
+$(E_8)_1$ character kill test} (\veri{v457\_seam\_character\_killtest.py}): a \emph{falsifiable} sharpening of the
+(x)/(x'') discriminators --- the $(E_8)_1$ tower $\chi{=}E_4/\eta^8{=}q^{-1/3}(1{+}248q{+}4124q^2{+}34752q^3{+}\cdots)$,
+the weight-$1$ count $248{=}120{+}128$ (vs the free $120$) and the sector count $|\!\det\mathrm{Cartan}\,E_8|{=}1$
+(vs $|\!\det\mathrm{Cartan}\,D_8|{=}4$); a measured $120$, four sectors, or a wrong tower coefficient would
+\emph{falsify} $(E_8)_1$, and the data give $248/1/\{1,248,4124\}$ (passed). \mX\ the kill criterion, \mE\ the exact
+discriminators. \emph{(xxv) The exact MMST citation audit} (\veri{v458\_seam\_mmst\_citation\_audit.py}): a
+hypothesis-by-hypothesis reading of the cited MMST theorem (\texttt{arXiv:2107.13834}) against the collar --- H1 CAR
+class, H2 massless limit, H3 the per-copy $c{=}\tfrac12$ Thm~4.11, H4 decoupled additivity to $c{=}8$, and H5 the WZW
+range $8{\le}8{\le}16$ with its $120$ bilinear currents all \emph{match}, isolating the single residual H6 to the
+$128$-spinor extension $SO(16)_1{\to}(E_8)_1$ (the $\det K\,4{\to}1$ holomorphy step), \emph{outside} MMST's bilinear
+method; \mE\ the per-copy theorem, \mC\ the additivity and range, \mO\ the one open spinor extension. \emph{(xxvi)
+The complementary lattice-VOA route} (\veri{v459\_seam\_lattice\_voa\_route.py}): the second, independent
+construction that supplies exactly H6 --- for the even unimodular $E_8$ the lattice net $A_{E_8}$
+(Adamo--Giorgetti--Tanimoto, \texttt{arXiv:2506.01008}; OS \texttt{arXiv:2407.18222}) has weight-$1$ space
+$248{=}8{+}240$ with the $240$ roots splitting $112$ integer $+$ $128$ \emph{half-integer} (the spinor,
+$248{=}120{+}128$), so the lattice route builds the $128$-spinor currents MMST (xxv) leaves open; \mE\ the even
+unimodularity and root split, \mC\ AGT constructs the holomorphic extension, \mO\ the two routes leave one shared
+realisation input (the collar's scaling limit $={}A_{E_8}$), tied to $P_1$ by (xxiii). The G-block arithmetic
+(the one-sided $8{=}|\Z_2|\!\int\!K/\pi$, the reflection $C{\to}{-}C$, $c_-{=}8$, the range $8{\le}8{\le}16$,
+$248{=}8{+}240{=}120{+}128$, $240{=}112{+}128$, $\det K\,1$ vs $4$) is kernel-hardened in Lean
+(\texttt{FORM.SEAM.RESIDUAL.01}, \texttt{TfptCarrier/SeamResidualAxiom.lean}), reducing the residual to ONE named
+TFPT-internal realisation axiom (\texttt{CollarRealizedAsLatticePhase}) plus the two cited existence theorems.
+Across (v)--(xxvi), \texttt{SEAM.EQUIV.01}
 stays \mO: every route reduces, audits or falsifies the residual without supplying the one cited
 continuum-existence theorem.
 \par\smallskip\noindent\textbf{The TOE/QFT closure contracts as three citable certificates

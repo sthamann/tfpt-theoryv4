@@ -67,6 +67,7 @@ import TfptCarrier.SeamStandardPair
 import TfptCarrier.SeamApplicabilityLedger
 import TfptCarrier.SeamRigidityForcing
 import TfptCarrier.SeamEdgeChern
+import TfptCarrier.SeamResidualAxiom
 
 namespace TFPT.Carrier.AuditContract
 
@@ -586,5 +587,30 @@ example :
     TfptCarrier.SeamEdgeChern.cMinus % 8 = 0
       ∧ 24 / Nat.gcd TfptCarrier.SeamEdgeChern.cMinus 24 = 3 :=
   ⟨TfptCarrier.SeamEdgeChern.holomorphic, TfptCarrier.SeamEdgeChern.tphase_order_three⟩
+
+/-! ## SEAM.EQUIV.01 residual reduced to ONE realization axiom (v456/v458/v459; G4) -/
+
+/-- The chirality direction (S3) from P1: the one-sided count `|Z2|·(∮K/π) = 2·4 = 8`,
+    and a reflection-symmetric (two-sided) boundary forces the Chern integer `C = 0`. -/
+example :
+    TfptCarrier.SeamResidualAxiom.eightC3 = 8
+      ∧ (∀ C : Int, C = -C → C = 0) :=
+  ⟨TfptCarrier.SeamResidualAxiom.c3_eight_one_sided,
+   TfptCarrier.SeamResidualAxiom.two_sided_nonchiral⟩
+
+/-- The `248`-current content in BOTH decompositions: `248 = 120 + 128` (fermionic,
+    MMST's 120 bilinears + the spinor residual) `= 8 + 240` (lattice-VOA, v459). -/
+example :
+    TfptCarrier.SeamResidualAxiom.so16 + TfptCarrier.SeamResidualAxiom.spinor
+        = TfptCarrier.SeamResidualAxiom.adjE8
+      ∧ TfptCarrier.SeamResidualAxiom.cartan + TfptCarrier.SeamResidualAxiom.roots
+        = TfptCarrier.SeamResidualAxiom.adjE8 :=
+  ⟨TfptCarrier.SeamResidualAxiom.currents_fermionic,
+   TfptCarrier.SeamResidualAxiom.currents_lattice⟩
+
+/-- `SEAM.EQUIV.01` follows from the SINGLE realization axiom plus the two cited
+    published theorems (existence: MMST; extension: AGT lattice-VOA). -/
+example : TfptCarrier.SeamResidualAxiom.SeamIsE8 :=
+  TfptCarrier.SeamResidualAxiom.seamResidualClosed
 
 end TFPT.Carrier.AuditContract

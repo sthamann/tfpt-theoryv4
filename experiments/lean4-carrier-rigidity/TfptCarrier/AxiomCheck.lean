@@ -46,6 +46,8 @@ import TfptCarrier.SeamStandardPair
 import TfptCarrier.SeamApplicabilityLedger
 import TfptCarrier.SeamRigidityForcing
 import TfptCarrier.SeamEdgeChern
+import TfptCarrier.SeamScalingLimit
+import TfptCarrier.SeamResidualAxiom
 
 -- Layer 1: Polarization (algebraic core)
 #print axioms TFPT.Carrier.Polarization.sixY_carrier_polynomial
@@ -239,3 +241,12 @@ import TfptCarrier.SeamEdgeChern
 #print axioms TfptCarrier.SeamEdgeChern.edge_kernel_facts
 #print axioms TfptCarrier.SeamEdgeChern.two_cMinus_eq
 #print axioms TfptCarrier.SeamEdgeChern.tphase_order_three
+
+-- SEAM.EQUIV.01 residual reduced to ONE named realization axiom (v456/v458/v459; G4)
+-- The chirality direction (v456), the MMST citation-audit arithmetic (v458) and the
+-- two-decomposition 248=120+128=8+240 current content (v459) are kernel-checked with NO
+-- axioms (`residual_arithmetic`); the keystone composition (`seamResidualClosed`) names
+-- exactly the SINGLE realization axiom plus the two cited published theorems.
+#print axioms TfptCarrier.SeamResidualAxiom.residual_arithmetic
+#print axioms TfptCarrier.SeamResidualAxiom.two_sided_nonchiral
+#print axioms TfptCarrier.SeamResidualAxiom.seamResidualClosed

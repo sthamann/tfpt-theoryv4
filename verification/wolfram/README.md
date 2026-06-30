@@ -105,9 +105,22 @@ v84–v93 block passed **45/45** on first run; the v94–v140 blocks were added
 the same day, the v141–v144 block on 2026-06-12. Current state:
 
 ```
---- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v453: 354 passed, 0 failed ---
+--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459: 360 passed, 0 failed ---
 ALL WOLFRAM EXTENSION CHECKS PASSED
 ```
+
+The 2026-06-30 G-block round (the post-F "next options", `v454`–`v459`) adds 6
+exact mirrors: `v454` (the level-1 Sugawara central charge `c = dim G/(1+h^v) = 8`
+for **both** `SO(16)_1` `120/15` and `(E8)_1` `248/31`; the Casimir and Kac–Moody
+`<J_n J_-n>=n` fits are Python-only), `v456` (S3 from P1 — `c3`'s `8` is the
+one-sided count `|Z2|·(∮K/π)=2·4`, and a reflection sends the Chern integer
+`C → −C`, so a two-sided boundary forces `C = 0`; the Chern computation is
+Python-only), `v457` (the `(E8)_1` character tower `{1,248,4124,34752}` from
+`E4/η^8`, and the kill-test discriminators `248 = 120 + 128`, `|det Cartan E8| = 1`
+vs `|det Cartan D8| = 4`), and `v459` (E8 even unimodular, the 240 roots split
+`112 + 128`, and `248 = 8 + 240 = 120 + 128` — the lattice-VOA route supplying the
+128-spinor extension MMST leaves open). `v455` (uniform Tomita–Takesaki tower) and
+`v458` (the MMST citation audit) are Python-only/structural.
 
 (ledger `GATE.WOLFRAM.02`). The scipy-only parts of the round (the `v86`
 pivot ODE solve, the `v88` data pulls, the `v99` mpmath ODE probe of the

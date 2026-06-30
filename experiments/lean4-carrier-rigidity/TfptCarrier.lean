@@ -55,6 +55,7 @@ import TfptCarrier.GlueUniqueness
 import TfptCarrier.SeamDeckClosure
 import TfptCarrier.SeamEquivChain
 import TfptCarrier.SeamScalingLimit
+import TfptCarrier.SeamResidualAxiom
 import TfptCarrier.SeamStandardPair
 import TfptCarrier.SeamApplicabilityLedger
 import TfptCarrier.SeamRigidityForcing

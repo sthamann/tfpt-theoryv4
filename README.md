@@ -162,7 +162,7 @@ anchor (`1/G` is UV-sensitive, Sakharov-type induced gravity) — not a diffuse 
 | `audit_sync.py` | **The sync audit** (papers ↔ suite ↔ ledger ↔ changelog ↔ website, both directions); must end `AUDIT OK`. |
 | `make_figures.py` | Regenerates the figures (status heatmap, attractor, Coxeter circle, …). |
 | `make_manifest.py` | Writes `manifest.sha256` + `lean_manifest.sha256` (content digests). |
-| `wolfram/tfpt_readouts.wl` | Independent second path on Wolfram Engine (`116/116` checks); `wolfram/tfpt_readouts_extension.wl` mirrors the exact algebraic/identity/lattice results (`354/354`, verified on Wolfram Engine 14.3). |
+| `wolfram/tfpt_readouts.wl` | Independent second path on Wolfram Engine (`116/116` checks); `wolfram/tfpt_readouts_extension.wl` mirrors the exact algebraic/identity/lattice results (`360/360`, verified on Wolfram Engine 14.3). |
 | `redteam/run_redteam.py` | **Adversarial layer.** Tries to *break* the five reductions (Targets A–E); verdicts in `REDTEAM.*` ledger rows + `tfpt_5_redteam.tex`. |
 
 ### Other directories
@@ -200,7 +200,7 @@ bash build.sh notes
 cd verification && python run_all.py
 
 # 3. Independent Wolfram path  ->  "116/116 passed"  (optional, needs Wolfram Engine)
-#    (the v84+ extension mirrors the exact results, 324/324)
+#    (the v84+ extension mirrors the exact results, 360/360)
 wolframscript -file verification/wolfram/tfpt_readouts.wl
 wolframscript -file verification/wolfram/tfpt_readouts_extension.wl
 
@@ -303,9 +303,18 @@ reflection positivity (`v379`) — and it is Lean-formalised as `FORM.SEAM.MMST.
 hypotheses are kernel-proved, the MMST scaling-limit and Adamo–Moriwaki–Tanimoto OS-reconstruction
 theorems enter as named cited axioms, and the `#print axioms` check is clean. The *only* residual
 that stays `[O]` is the abstract continuum existence of the scaling limit (exactly those two cited
-published theorems, `v336`). `QGEO.SYM.01` (the `μ₄` deck acting geometrically) is its **corollary**
-(`v335`, Lean `FORM.QGEO.BW.01`). `QG.AMB.01` is gap-decoupled from the general Euclidean-QG
-conformal-factor problem (margin `Δ_eff ≈ 1.648 > 0`, `v76`/`v330`).
+published theorems, `v336`). The post-F **G-block** narrows that residual on six more fronts: the lattice
+current algebra carries the level-1 Sugawara `c=8` (`v454`), the edge chirality `c_-≠0` is *forced* by
+the one-sidedness that defines `c3=1/(8π)` (`v456`, so `S3` is a consequence of axiom `P1`), an
+`(E8)₁`-vs-`SO(16)₁` character/sector kill test passes (`v457`, `248=120+128`, `det K` `1` vs `4`), and
+an exact hypothesis-by-hypothesis MMST citation audit (`v458`) isolates the single open piece to the
+`128`-spinor extension `SO(16)₁→(E8)₁` — which the complementary lattice-VOA route `A_{E8}` then
+*constructs* (`v459`, the `240` roots split `112+128`); a uniform-in-`N` Tomita–Takesaki tower (`v455`)
+lifts the intrinsic Bisognano–Wichmann condition `u_Θ=J`. The whole G-block arithmetic is
+Lean-hardened as `FORM.SEAM.RESIDUAL.01`, reducing the residual to *one* named TFPT-internal realisation
+axiom plus the two cited theorems. `QGEO.SYM.01` (the `μ₄` deck acting geometrically) is its
+**corollary** (`v335`, Lean `FORM.QGEO.BW.01`). `QG.AMB.01` is gap-decoupled from the general
+Euclidean-QG conformal-factor problem (margin `Δ_eff ≈ 1.648 > 0`, `v76`/`v330`).
 
 ---
 

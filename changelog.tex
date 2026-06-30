@@ -60,6 +60,58 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-06-30 (\texttt{v454}--\texttt{v459} + Lean + Wolfram --- the post-F ``G-block'': the lattice Sugawara current algebra, a uniform-in-$N$ Tomita--Takesaki tower, chirality forced by $P_1$, an $(E_8)_1$ character kill test, the exact MMST citation audit and the complementary lattice-VOA route)}
+\begin{itemize}
+\item \textbf{\texttt{v454\_seam\_edge\_virasoro.py} (\texttt{SEAM.EQUIV.EDGE.VIRASORO.01}).} Tests the cited MMST
+``Koo--Saleur lattice generators $\to$ continuum Virasoro with the correct $c$'' fact on our own free-fermion edge
+(G2). \mE\ the Affleck--Cardy Casimir energy fits $c_{\mathrm{Dirac}}{=}1.000$ ($\tfrac12$ per Majorana, $L{=}64..1024$);
+\mE\ the lattice $U(1)$ current closes its affine level exactly ($\langle0|J_nJ_{-n}|0\rangle{=}n$, $n{=}1..8$; a gapped
+control vanishes); \mE\ the level-$1$ Sugawara $c{=}\dim G/(1{+}h^\vee){=}8$ for \emph{both} $SO(16)_1$ ($120/15$) and
+$(E_8)_1$ ($248/31$). \mC\ $16{\cdot}\tfrac12{=}8{=}\gcar{+}\Nfam$ is the level-$1$ current-algebra $c_-$;
+\texttt{SEAM.EQUIV.01} stays \mO. Sugawara Wolfram-mirrored.
+\item \textbf{\texttt{v455\_seam\_bw\_uniform.py} (\texttt{SEAM.EQUIV.BW.UNIFORM.01}).} A uniform-in-$N$
+Tomita--Takesaki tower for the intrinsic Bisognano--Wichmann condition $u_\Theta{=}J$ --- the inductive-limit companion
+to \texttt{v426}, advancing \texttt{v424} sub-step (i) (G1). \mE\ $\|\Theta K\Theta{+}K\|{=}0$ exactly at every $N$
+($N{=}8..128$); \mE\ an $N$-independent gap $6\log\tfrac32$; \mE\ $[\rho,K]{=}0$ exactly at every $N$; \mE\ an
+$N$-independent neg-control margin $2\|K\|$. \mC\mO\ the inductive limit inherits $u_\Theta{=}J$;
+\texttt{SEAM.EQUIV.01} stays \mO. Python-only.
+\item \textbf{\texttt{v456\_seam\_chirality\_from\_c3.py} (\texttt{SEAM.S3.FROM-P1.01}).} The edge chirality
+($c_-{\neq}0$, the S3 phase) is \emph{forced} by the one-sidedness that defines $c_3{=}1/(8\pi)$ (P1) (G6). \mE\
+$c_3$'s ``$8$'' is the one-sided count $8{=}|\Z_2|\cdot(\!\int\!K/\pi){=}2\cdot4$; \mE\ a reflection sends the Chern
+integer $C{\to}{-}C$ ($+1\!\to\!-1$ on the $p{+}ip$ model); \mE\ a two-sided boundary forces $C{=}{-}C{=}0$. \mC\ the
+one-sided seam (no reflection) forces $C{\neq}0$, magnitude $c_-{=}8{=}\operatorname{rank}E_8$ --- S3 is a consequence
+of $P_1$; \texttt{SEAM.EQUIV.01} existence stays \mO. The arithmetic is Wolfram-mirrored.
+\item \textbf{\texttt{v457\_seam\_character\_killtest.py} (\texttt{SEAM.EQUIV.KILLTEST.01}).} An explicit
+character/sector kill test of $(E_8)_1$ against $SO(16)_1$ (G7). \mE\ the $(E_8)_1$ character $\chi{=}E_4/\eta^8$
+with tower degeneracies $\{1,248,4124,34752,\dots\}$; \mE\ the weight-$1$ count $248{=}120{+}128$ (not the free $120$); \mE\ the sector
+count $|\!\det\mathrm{Cartan}\,E_8|{=}1$ (not $|\!\det\mathrm{Cartan}\,D_8|{=}4$). \mX\ a measured $120$, four sectors,
+or a wrong coefficient would \emph{falsify} $(E_8)_1$; the data give $248/1/\{1,248,4124\}$ (passed).
+\texttt{SEAM.EQUIV.01} stays \mO. Wolfram-mirrored.
+\item \textbf{\texttt{v458\_seam\_mmst\_citation\_audit.py} (\texttt{SEAM.EQUIV.MMST.AUDIT.01}).} The exact
+hypothesis-by-hypothesis citation audit of MMST (\texttt{arXiv:2107.13834}) against the collar (G3, the ``exakter
+Zitat-Abgleich''). \mC\ H1 CAR class, H2 massless limit, \mE\ H3 per-copy $c{=}\tfrac12$ (Thm~4.11), \mC\ H4 decoupled
+additivity to $c{=}8$, H5 the WZW range $8{\le}8{\le}16$ with the $120$ bilinear currents all match; \mO\ the single
+residual H6 is the $128$-spinor extension $SO(16)_1{\to}(E_8)_1$ ($\det K\,4{\to}1$), outside MMST's bilinear method.
+\texttt{SEAM.EQUIV.01} stays \mO, its open part narrowed to this one holomorphic extension.
+\item \textbf{\texttt{v459\_seam\_lattice\_voa\_route.py} (\texttt{SEAM.EQUIV.LATTICEVOA.01}).} The second, independent
+route to $(E_8)_1$ supplying exactly the residual of \texttt{v458} (G5). \mE\ $E_8$ even unimodular ($\det{=}1$); \mE\
+the weight-$1$ space $248{=}8{+}240$; \mE\ the $240$ roots split $112$ integer $+$ $128$ half-integer (the spinor,
+$248{=}120{+}128$). \mC\ the lattice net $A_{E_8}$ (Adamo--Giorgetti--Tanimoto, \texttt{arXiv:2506.01008}; OS
+\texttt{arXiv:2407.18222}) constructs the holomorphic extension; \mO\ the two routes leave one shared realisation input
+(collar $={}A_{E_8}$, tied to $P_1$ by \texttt{v456}). \texttt{SEAM.EQUIV.01} stays \mO. Wolfram-mirrored.
+\item \textbf{Lean (\texttt{FORM.SEAM.RESIDUAL.01}, \texttt{TfptCarrier/SeamResidualAxiom.lean}).} Kernel-checks the
+whole G-block arithmetic (the one-sided $8{=}|\Z_2|\!\int\!K/\pi$, the reflection $C{\to}{-}C$, $c_-{=}8$, the MMST
+range $8{\le}8{\le}16$, decoupled additivity, $248{=}8{+}240{=}120{+}128$, $240{=}112{+}128$, $\det K\,1$ vs $4$) by
+\texttt{decide}, reducing the \texttt{SEAM.EQUIV.01} residual to ONE named TFPT-internal realisation axiom
+(\texttt{CollarRealizedAsLatticePhase}) plus two cited external theorems (MMST \texttt{v458}, AGT \texttt{v459});
+\texttt{lake build} OK.
+\item \textbf{Wolfram + integration.} Six exact mirrors added to \texttt{tfpt\_readouts\_extension.wl} (Sugawara
+$c{=}8$ for $120/15$ and $248/31$; the one-sided $8{=}2\cdot4$ and reflection $C{=}{-}C\Rightarrow0$; the $(E_8)_1$
+tower $\{1,248,4124,34752\}$ with $248{=}120{+}128$ and $|\!\det\mathrm{Cartan}|$ $1$ vs $4$; the root split
+$112{+}128$ and $248{=}8{+}240$) --- extension total now $360/360$. Registry, ledger, master index, website mirror and
+manifests updated in the same change.
+\end{itemize}
+
 \subsection*{2026-06-30 (\texttt{v449}--\texttt{v453} + Lean + Wolfram --- the edge CFT named end-to-end: uniform-in-$N$ convergence, three independent reads of $c_-{=}8$, the Ising operator tower, the $(E_8)_1$ modular data, and $\mu_4$-symmetry derived from the four marks)}
 \begin{itemize}
 \item \textbf{\texttt{v449\_seam\_mmst\_uniform.py} (\texttt{SEAM.EQUIV.MMST.UNIFORM.01}).} Strengthens the cited MMST
