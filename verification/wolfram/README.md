@@ -158,7 +158,11 @@ added, so the Wolfram exact-check count is unchanged). The 2026-07-01 cross-sect
 seed slice `v465_seed_crosssector_joint.py` (the θ13-independent β + λ_C
 back-solve, a subset of `v306`) is likewise a statistical consistency module,
 Python-only (no exact algebraic result added; the Wolfram exact-check count stays
-unchanged).
+unchanged). The 2026-07-01 sixth-channel `v466_seed_leptonmass_channel.py` (the
+charged-lepton mass ratio `m_e/m_μ = (12/7) φ0²` back-solving the same seed to
+−0.11%, a new measurement sector extending the `v306`/`v465` over-determination) is
+the same kind of statistical consistency module, Python-only (no exact algebraic
+result added; the Wolfram exact-check count stays unchanged).
 
 The 2026-06-22 **cyclotomic/Galois arithmetic arc** added ten exact checks
 (275 → 285): `v313_golden_atoms_spectral.py` (the affine-E8 charpoly factors

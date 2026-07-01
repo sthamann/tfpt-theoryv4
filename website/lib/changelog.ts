@@ -47,6 +47,613 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "c",
+        "v": "v466"
+      },
+      {
+        "k": "t",
+        "v": " — a sixth seed channel from a new measurement sector: the charged-lepton mass ratio "
+      },
+      {
+        "k": "m",
+        "v": "m_e/m_\\mu{=}\\tfrac{12}{7}\\varphi_0^2"
+      },
+      {
+        "k": "t",
+        "v": " back-solves the same axiom seed to "
+      },
+      {
+        "k": "m",
+        "v": "-0.11\\%"
+      },
+      {
+        "k": "t",
+        "v": ", extending the empirical over-determination to "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "five"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " sectors"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v466_seed_leptonmass_channel.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEED.LEPTONMASS.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The seed over-determination of "
+        },
+        {
+          "k": "c",
+          "v": "v306"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v465"
+        },
+        {
+          "k": "t",
+          "v": " used five observables spanning three measurement sectors (neutrino mixing, CMB, quark mixing). This module adds the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "charged-lepton mass"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " sector: the ratio "
+        },
+        {
+          "k": "m",
+          "v": "m_e/m_\\mu{=}\\tfrac{12}{7}\\varphi_0^2"
+        },
+        {
+          "k": "t",
+          "v": " is a sixth independent readout of the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " axiom seed "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi_0{=}1/(6\\pi){+}48c_3^4"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "[E]"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " plumbing: the axiom "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi_0"
+        },
+        {
+          "k": "t",
+          "v": " reproduces the frozen "
+        },
+        {
+          "k": "m",
+          "v": "m_e/m_\\mu{=}\\tfrac{12}{7}\\varphi_0^2{=}0.00484673"
+        },
+        {
+          "k": "t",
+          "v": " to "
+        },
+        {
+          "k": "m",
+          "v": "10^{-9}"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "[N] new sector (headline):"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " back-solving "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi_0"
+        },
+        {
+          "k": "t",
+          "v": " from the measured "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "pole"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ratio "
+        },
+        {
+          "k": "m",
+          "v": "m_e/m_\\mu{=}0.004836"
+        },
+        {
+          "k": "t",
+          "v": " (PDG 2024) gives "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi_0{=}0.053113"
+        },
+        {
+          "k": "t",
+          "v": ", only "
+        },
+        {
+          "k": "m",
+          "v": "-0.11\\%"
+        },
+        {
+          "k": "t",
+          "v": " from the axiom — a fourth measurement sector beyond {neutrino mixing, CMB, quark mixing}. "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "[C] transport caveat:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the formula is the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "source"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ratio and the datum the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "pole"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ratio; the source"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": "pole shift is the seam-gapped correction class (bound "
+        },
+        {
+          "k": "m",
+          "v": "(2/3)^6{=}8.78\\%"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v393"
+        },
+        {
+          "k": "t",
+          "v": ") but largely cancels for "
+        },
+        {
+          "k": "m",
+          "v": "m_e/m_\\mu"
+        },
+        {
+          "k": "t",
+          "v": ", so the "
+        },
+        {
+          "k": "m",
+          "v": "0.11\\%"
+        },
+        {
+          "k": "t",
+          "v": " residual sits far inside the band — the channel is added as a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "consistent new sector"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", not a sharper pin. "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "[N] extends:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the six-channel cluster ("
+        },
+        {
+          "k": "c",
+          "v": "v306"
+        },
+        {
+          "k": "t",
+          "v": "'s five "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " this) has "
+        },
+        {
+          "k": "m",
+          "v": "\\chi^2/\\mathrm{dof}{<}1"
+        },
+        {
+          "k": "t",
+          "v": " and the error-weighted mean stays at the axiom to "
+        },
+        {
+          "k": "m",
+          "v": "{<}0.1\\%"
+        },
+        {
+          "k": "t",
+          "v": "; with the corroborating heavy-quark "
+        },
+        {
+          "k": "m",
+          "v": "m_t/m_b"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "-0.23\\%"
+        },
+        {
+          "k": "t",
+          "v": ") it is a seven-channel, five-sector agreement. "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "[N] power:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " a data"
+        },
+        {
+          "k": "m",
+          "v": "\\leftrightarrow"
+        },
+        {
+          "k": "t",
+          "v": "formula shuffle explodes the cluster "
+        },
+        {
+          "k": "m",
+          "v": "\\chi^2"
+        },
+        {
+          "k": "t",
+          "v": " by "
+        },
+        {
+          "k": "m",
+          "v": "{>}100\\times"
+        },
+        {
+          "k": "t",
+          "v": ", and the scheme-ambiguous "
+        },
+        {
+          "k": "m",
+          "v": "m_c/m_s{=}(34/47)/\\varphi_0"
+        },
+        {
+          "k": "t",
+          "v": " (FLAG "
+        },
+        {
+          "k": "m",
+          "v": "11"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "14"
+        },
+        {
+          "k": "t",
+          "v": ") is deliberately not counted. "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "[C] honest:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " theoretically still the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " seed ("
+        },
+        {
+          "k": "c",
+          "v": "v305"
+        },
+        {
+          "k": "t",
+          "v": " multiplicity "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": ") — an "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "empirical"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " strengthening, not theoretical independence; "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi_0"
+        },
+        {
+          "k": "t",
+          "v": " is fixed by the axioms, so it upgrades "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "no"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " prediction and closes "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "no"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " gate. Python-only (floats)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Integration."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Registered in "
+        },
+        {
+          "k": "c",
+          "v": "run_all.py"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "script_registry.csv"
+        },
+        {
+          "k": "t",
+          "v": " (cluster "
+        },
+        {
+          "k": "c",
+          "v": "registry"
+        },
+        {
+          "k": "t",
+          "v": "); ledger row "
+        },
+        {
+          "k": "c",
+          "v": "SEED.LEPTONMASS.01"
+        },
+        {
+          "k": "t",
+          "v": "; cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_5_redteam"
+        },
+        {
+          "k": "t",
+          "v": " (the seed-cross-validation firewall winbox, alongside "
+        },
+        {
+          "k": "c",
+          "v": "v305"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v306"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v465"
+        },
+        {
+          "k": "t",
+          "v": "); Python-only (flagged in the Wolfram README)."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-01",
+    "dateLabel": "2026-07-01",
+    "heading": [
+      {
+        "k": "c",
         "v": "v465"
       },
       {

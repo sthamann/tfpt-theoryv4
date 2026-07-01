@@ -1,3 +1,34 @@
+## 2026-07-01 — v466: sechster Seed-Kanal aus einem NEUEN Messsektor (Leptonmasse m_e/m_μ)
+
+**Frage:** die empirische Über-Bestimmung von φ₀ (v306 leave-one-out, v465 Cross-Sektor)
+nutzt fünf Observable aus DREI Messsektoren (Neutrino-Mischung, CMB, Quark-Mischung). Gibt
+es einen SAUBEREN sechsten Kanal aus einem *neuen* Sektor?
+
+**Befund (v466_seed_leptonmass_channel.py, SEED.LEPTONMASS.01):** ja — das
+Ladungslepton-Massenverhältnis `m_e/m_μ = (12/7) φ₀²` ist ein sechster, unabhängiger
+Auslesekanal desselben Achsen-Seeds φ₀ = 1/(6π) + 48 c₃⁴.
+- **[N] neuer Sektor:** Rückrechnung von φ₀ aus dem gemessenen POL-Verhältnis
+  `m_e/m_μ = 0.004836` (PDG) → φ₀ = 0.053113, nur **−0.11 %** vom Axiom — ein
+  Ladungslepton-MASSEN-Reading (Penning-Fallen-Massen), ein 4. Messsektor.
+- **[C] Transport-Vorbehalt (ehrlich):** die Formel ist das QUELL-Verhältnis, das Datum
+  das POL-Verhältnis; die Quelle→Pol-Verschiebung ist die seam-gapped Korrekturklasse
+  (Schranke (2/3)⁶ = 8.78 %, v393), hebt sich für m_e/m_μ aber weitgehend auf → der
+  0.11 %-Rest liegt weit im Band. Als KONSISTENTER neuer Sektor aufgenommen, NICHT als
+  schärferer Pin.
+- **[N] erweitert:** 6-Kanal-Cluster (v306's 5 + dieser) hat χ²/dof < 1, das
+  fehlergewichtete Mittel bleibt < 0.1 % am Axiom; mit dem stützenden Schwerquark
+  `m_t/m_b` (−0.23 %) ein 7-Kanal-, FÜNF-Sektor-Agreement.
+- **[N] Neg/Power:** Daten↔Formel-Shuffle sprengt χ² um >100×; `m_c/m_s = (34/47)/φ₀`
+  ist schema-mehrdeutig (FLAG 11–14), ein SCHWACHER Kanal, bewusst nicht gezählt.
+- **Ehrlich:** theoretisch weiterhin EIN Seed (v305 Multiplizität 1) — eine EMPIRISCHE
+  Stärkung (neuer Messsektor stimmt zu), KEINE theoretische Unabhängigkeit; φ₀ bleibt
+  durch die Axiome fixiert, hebt KEINE Vorhersage hoch und schließt KEIN Gate.
+
+Integriert: run_all, script_registry (Cluster `registry`), Ledger SEED.LEPTONMASS.01,
+zitiert in tfpt_5_redteam (Seed-Cross-Validation-Firewall-Winbox neben v305/v306/v465),
+Changelog 2026-07-01, README-Zähler → v466 (460 Checks); Python-only (Wolfram-README
+geflaggt). `bash build.sh audit` grün.
+
 ## 2026-06-30 — recovery-comb-domains A5: Nuclear-Transient/AGN-Scheiben-TDE (J2245+3743), echte ZTF-Daten, sauberer NULL
 
 Neuer **`surface`-Kanal A5** in `recovery-comb-domains` (motiviert aus der J2245-Notiz: „kann man so

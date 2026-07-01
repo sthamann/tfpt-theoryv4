@@ -60,6 +60,34 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-07-01 (\texttt{v466} --- a sixth seed channel from a new measurement sector: the charged-lepton mass ratio $m_e/m_\mu{=}\tfrac{12}{7}\varphi_0^2$ back-solves the same axiom seed to $-0.11\%$, extending the empirical over-determination to \emph{five} sectors)}
+\begin{itemize}
+\item \textbf{\texttt{v466\_seed\_leptonmass\_channel.py} (\texttt{SEED.LEPTONMASS.01}).} The seed
+over-determination of \texttt{v306}/\texttt{v465} used five observables spanning three measurement
+sectors (neutrino mixing, CMB, quark mixing). This module adds the \emph{charged-lepton mass} sector:
+the ratio $m_e/m_\mu{=}\tfrac{12}{7}\varphi_0^2$ is a sixth independent readout of the \emph{one} axiom
+seed $\varphi_0{=}1/(6\pi){+}48c_3^4$. \textbf{[E]} plumbing: the axiom $\varphi_0$ reproduces the frozen
+$m_e/m_\mu{=}\tfrac{12}{7}\varphi_0^2{=}0.00484673$ to $10^{-9}$. \textbf{[N] new sector (headline):}
+back-solving $\varphi_0$ from the measured \emph{pole} ratio $m_e/m_\mu{=}0.004836$ (PDG~2024) gives
+$\varphi_0{=}0.053113$, only $-0.11\%$ from the axiom --- a fourth measurement sector beyond
+\{neutrino mixing, CMB, quark mixing\}. \textbf{[C] transport caveat:} the formula is the \emph{source}
+ratio and the datum the \emph{pole} ratio; the source$\to$pole shift is the seam-gapped correction class
+(bound $(2/3)^6{=}8.78\%$, \texttt{v393}) but largely cancels for $m_e/m_\mu$, so the $0.11\%$ residual sits
+far inside the band --- the channel is added as a \emph{consistent new sector}, not a sharper pin.
+\textbf{[N] extends:} the six-channel cluster (\texttt{v306}'s five $+$ this) has $\chi^2/\mathrm{dof}{<}1$
+and the error-weighted mean stays at the axiom to ${<}0.1\%$; with the corroborating heavy-quark
+$m_t/m_b$ ($-0.23\%$) it is a seven-channel, five-sector agreement. \textbf{[N] power:} a
+data$\leftrightarrow$formula shuffle explodes the cluster $\chi^2$ by ${>}100\times$, and the
+scheme-ambiguous $m_c/m_s{=}(34/47)/\varphi_0$ (FLAG $11$--$14$) is deliberately not counted.
+\textbf{[C] honest:} theoretically still the \emph{one} seed (\texttt{v305} multiplicity $1$) --- an
+\emph{empirical} strengthening, not theoretical independence; $\varphi_0$ is fixed by the axioms, so it
+upgrades \emph{no} prediction and closes \emph{no} gate. Python-only (floats).
+\item \textbf{Integration.} Registered in \texttt{run\_all.py} and \texttt{script\_registry.csv}
+(cluster \texttt{registry}); ledger row \texttt{SEED.LEPTONMASS.01}; cited in \texttt{tfpt\_5\_redteam}
+(the seed-cross-validation firewall winbox, alongside \texttt{v305}/\texttt{v306}/\texttt{v465});
+Python-only (flagged in the Wolfram README).
+\end{itemize}
+
 \subsection*{2026-07-01 (\texttt{v465} --- the cross-sector one-parameter seed test: a CMB birefringence angle and a quark Cabibbo angle point to the same seed within $0.01\sigma$, the $\theta_{13}$-independent externally-runnable slice of \texttt{v306})}
 \begin{itemize}
 \item \textbf{\texttt{v465\_seed\_crosssector\_joint.py} (\texttt{SEED.CROSSSECTOR.01}).} The sharpest

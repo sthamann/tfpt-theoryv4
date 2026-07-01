@@ -34,9 +34,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/introduction.pdf": {
     href: "/papers/introduction.pdf",
     ...COMMON,
-    bytes: 2304452,
+    bytes: 2310504,
     sha256:
-      "badac7207384b1a6a9dc87b4250a226d0b1787753556785bf71d8c15364017c2",
+      "5abcb27a565c6f3ec355605de90ab292074472defb586471e61aa54572d3102d",
     changelog:
       "Compiler-closure reading guide: two axioms, the dependency DAG, the predictions and the proof ledger.",
   },
@@ -115,18 +115,18 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/tfpt_5_redteam.pdf": {
     href: "/papers/tfpt_5_redteam.pdf",
     ...COMMON,
-    bytes: 831745,
+    bytes: 833494,
     sha256:
-      "7edaa7823d3564cdac80a9028a73ba3bb2881c5af268f4b9195ffa9365422edf",
+      "7c6d750df20b1241a343b9e29ae116afdb1b76aefd8f4acd0face0a1197f81fd",
     changelog:
       "The adversarial audit: Targets A–E, what survives, what each target reduces to, and the kill tests.",
   },
   "/papers/changelog.pdf": {
     href: "/papers/changelog.pdf",
     ...COMMON,
-    bytes: 1157054,
+    bytes: 1161350,
     sha256:
-      "7eb8aa761eb1e780f4cc6615dfb95e25d7de4a4343960f14cb2302079cfe81a2",
+      "669452f3236eeb7b6cfe56eb2accb30925220db92c76ef04db40dd6261dbf3a5",
     changelog:
       "The canonical dated changelog of every change to the theory, the suite, the papers and the website.",
   },
