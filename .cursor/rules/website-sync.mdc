@@ -51,7 +51,7 @@ documents and the ledger (the ledger wins on any disagreement).
 
 ## When the verification suite changes (new / renamed / removed `vN_*.py`)
 
-> Launch parallel subagents per **`subagent-deep-sync`** (website + paper + stale
+> Launch parallel subagents per skill **`tfpt-deep-sync`** (website + paper + stale
 > wording) before editing; parent merges checklists.
 
 1. Add the script's row to `verification/script_registry.csv`, then

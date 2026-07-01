@@ -1,99 +1,41 @@
 ---
 description: Launch parallel subagents when integrating new findings/scripts so every paper and website surface stays in sync
-alwaysApply: true
+globs: verification/**,*.tex,changelog.tex,website/**
+alwaysApply: false
 ---
 
-# Subagent deep-sync — parallel surface enumeration & verification
+# Subagent deep-sync
 
-Integrating a new finding touches dozens of surfaces (papers, ledger, changelog,
-website mirrors, README, stale open-gate prose). **Do not rely on memory or a
-single grep.** After the script result is summarised and before you edit papers or
-website files, **launch subagents in parallel** to enumerate and verify every
-affected surface. The parent agent merges their checklists and applies edits;
-subagents do the wide search, the parent owns coherence and the audit gate.
+Integrating a finding touches dozens of surfaces. **Do not rely on memory or a single grep.**
 
-See also: `sync-maps` (content maps + audit procedure), `website-sync`
-(mirror file mapping), `tfpt-workflow` (full NEW-finding steps 1–10).
+**Full procedure, prompts, checklists:** skill **`tfpt-deep-sync`** (`.cursor/skills/tfpt-deep-sync/`).
 
-## When subagents are mandatory
+## When mandatory
 
-Launch the parallel pattern below when **any** of these apply:
+Launch parallel subagents when **any** of:
 
-- New or renamed `verification/vN_*.py` module
-- Status marker upgrade/downgrade on a claim or gate
-- Result that closes, narrows, or supersedes an open/residual sentence
-- New `\veri{}` citation or citation moved to a different paper section
-- Prediction or falsification surface changed on the website
+- New/renamed `verification/vN_*.py`
+- Status marker upgrade/downgrade
+- Result closes/narrows/supersedes open/residual prose
+- New/moved `\veri{}` citation
+- Prediction/falsification surface changed on website
 
-**Skip subagents** only for changes with zero theory impact (pure CI, tooling,
-typo) that touch no `\veri{}`, ledger row, status marker, or mirror surface.
+**Skip** only for zero theory impact (CI, tooling, typo) with no `\veri{}`, ledger, status, or mirror touch.
 
-## Parent agent — order of operations
+## Parent order (abbreviated)
 
-1. **Run the script** (or confirm the numeric/identity result). **Summarise
-   concrete output first** — exact numbers, pass/fail, scope — per `tfpt-workflow`.
-   No paper/website/ledger edits before the summary.
-2. **`bash build.sh gen`** so `docs_map.csv` and `website_map.csv` are fresh.
-3. **Launch subagents in one message** (see parallel pattern). Pass each subagent:
-   - the full module id (`vN_<name>.py`) and any affected doc names;
-   - the verified result summary (not what you expect);
-   - instruction to treat maps as authoritative and return a **checklist**
-     (file → section/line range → required action → done?).
-4. **Merge checklists**, resolve overlaps, apply all edits in one coherent change
-   (registry, papers, ledger, changelog, website, README, `next.txt`, Wolfram if exact).
-5. **`bash build.sh gen`** again, then compile/sync (`bash build.sh release` or
-   equivalent steps).
-6. **Exit gate:** `bash build.sh audit` must end `AUDIT OK`. If it fails, launch a
-   `shell` subagent to run the audit, report failures, and iterate until green.
-7. Optional **post-edit readonly subagent** to grep for stale superseded wording
-   the first pass may have missed.
+1. Run script → **summarise concrete output first**
+2. `bash build.sh gen`
+3. Launch subagents in **one message** (paper · website · stale wording; +status-scope if needed)
+4. Merge checklists → apply edits coherently
+5. `bash build.sh gen` → compile/sync
+6. **`bash build.sh audit` → AUDIT OK**
 
-## Parallel launch pattern (single message, concurrent)
+Maps: `verification/docs_map.csv`, `verification/website_map.csv` — see rule **`sync-maps`**.
 
-| # | Role | `subagent_type` | `readonly` | Task |
-|---|------|-----------------|------------|------|
-| 1 | Paper surfaces | `explore` | `true` | `grep vN_* verification/docs_map.csv`; open each (doc, section, line range); list every `\veri{}`, status marker, keybox, and related prose that must cite or reflect the new result; flag sections with related narrative but no citation yet. |
-| 2 | Website mirrors | `explore` | `true` | `grep vN_* verification/website_map.csv` plus affected doc slugs; enumerate `papers.ts` sections, `VerificationDag.tsx` nodes, `StatusPyramid.tsx`, `StatusMatrix.tsx`, `predictions.ts`, `README.md`, `next.txt`; list exact edits needed. |
-| 3 | Stale wording hunt | `explore` | `true` | Grep active `*.tex`, `website/`, `README.md`, `next.txt` for superseded open-gate / residual phrases tied to the finding (e.g. "remaining input", "stays open", "one missing", old gate ids); return every hit with suggested rewrite or explicit "status update" note. |
+## Subagents must NOT
 
-For **status moves** that affect intro/frontier/contracts/origin gap lists, add a
-fourth readonly `explore` subagent scoped to:
-`introduction.tex`, `tfpt_4_frontier.tex`, `tfpt_research_contracts.tex`,
-`origin_theory.tex`, and their website mirrors.
-
-After edits, if the change is large or audit failed once, launch **`shell`**
-(readonly false) with: run `bash build.sh audit`, parse failures, list remaining
-fixes — parent applies fixes, subagent re-runs until `AUDIT OK`.
-
-## Subagent prompt template (copy/adapt)
-
-```
-TFPT deep-sync subagent. Readonly unless explicitly fixing audit.
-
-Module: vN_<name>.py
-Verified result: <concrete summary from script run>
-Affected docs (if known): <e.g. tfpt_2, origin_theory>
-
-1. Assume maps may be stale — note if parent should re-run `bash build.sh gen`.
-2. Use verification/docs_map.csv and verification/website_map.csv as primary index.
-3. Return a markdown checklist: file | location | required change | priority.
-4. Flag ambiguous placements (which paper section owns the narrative).
-5. Do NOT edit files unless this is the audit-fix shell subagent.
-```
-
-## What subagents must not do
-
-- Fabricate script results or upgrade status markers without ledger backing
-- Edit generated files by hand (`verification.tex`, `ScriptIndex.tsx`,
-  `changelog.ts`, `docs_map.csv`, `website_map.csv`, `version.ts`)
-- Mark work complete without the parent running `bash build.sh audit`
-- Skip `README.md`, `next.txt`, or changelog when the finding is user-visible
-
-## Completion criteria (parent verifies)
-
-- [ ] Every row from merged subagent checklists addressed or explicitly N/A
-- [ ] Script in `run_all.py`, registry, ledger, changelog (if new `vN`)
-- [ ] `\veri{}` in paper **body** (not index alone); Wolfram if exact
-- [ ] Status markers agree across intro, frontier, website status components
-- [ ] `bash build.sh audit` → `AUDIT OK`; `npm run build` in `website/` passes
-- [ ] Browser-check touched website pages per `website-sync` rule
+- Fabricate results or upgrade markers without ledger backing
+- Hand-edit generated files
+- Mark complete without `AUDIT OK`
+- Skip README, `next.txt`, changelog when user-visible

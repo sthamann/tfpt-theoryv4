@@ -1,0 +1,47 @@
+---
+description: TFPT core invariants, audit gate, and skill routing (always on)
+alwaysApply: true
+---
+
+# TFPT core
+
+Discrete compiler: axioms `c3 = 1/(8π)` (P1) + `g_car = 5` (P2) → `D5 ⊕ A3 + μ4 ⇒ E8` → SM readouts.
+Every **load-bearing** claim: machine-checked in `verification/vN_*.py`, cited in a **paper body** with `\veri{}`, row in `status_ledger.csv`.
+
+## Hard rules
+
+1. **Summary before edits** — after any script run, report exact numbers/pass-fail **before** touching papers, ledger, changelog, website, manifests. No summary ⇒ no edits.
+2. **Ledger wins** on status/disagreement. Display markers: `[E]/[C]/[O]/[X]` in TeX/website; fine types in ledger only. Never silently upgrade.
+3. **Generated — never hand-edit:** `tex-artefacts/verification.tex`, `ScriptIndex.tsx`, `changelog.ts`, `version.ts`, `docs_map.csv`, `website_map.csv`, `docs_map_dates.json`. Regenerate via `bash build.sh gen` / `bash build.sh website`.
+4. **Exit gate:** `bash build.sh audit` → `AUDIT OK` before calling verification/paper work done. Suite green: `run_all.py` → ALL CHECKS PASSED.
+5. **Single sources:** doc list → `tfpt_docset.tex`; changelog → `changelog.tex`; status → ledger. Papers/website English; `next.txt` German OK.
+6. **No summary `.md` files** unless explicitly asked.
+
+## Three workspaces
+
+| Path | Role |
+|------|------|
+| `verification/` | Load-bearing suite → papers + ledger + website |
+| `experiments/` | Search surfaces / scorecard — **not** claims until promoted |
+| `website/` | Public mirror — same change as theory/scripts |
+
+## Skill routing (load on demand — `.cursor/skills/`)
+
+| Task | Skill |
+|------|-------|
+| `experiments/` exploration, firewall | `tfpt-experiment` |
+| FRB/GW/pulsar/recovery search | `tfpt-empirical-search` |
+| Scorecard row / enum typing | `tfpt-evidence-scorecard` |
+| New `vN_*.py` → papers/ledger | `promote-to-verification` |
+| vN integration / status move | `tfpt-deep-sync` |
+
+Glob-triggered rules (when editing matching files): `tfpt-workflow`, `sync-maps`, `subagent-deep-sync`, `website-sync`.
+
+## Quick commands
+
+```bash
+bash build.sh gen          # maps, script index, changelog.ts
+bash build.sh release      # full pipeline → audit + npm build
+bash build.sh audit        # must end AUDIT OK
+python verification/make_manifest.py   # last, after ledger/TeX changes
+```
