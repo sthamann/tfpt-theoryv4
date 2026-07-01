@@ -1,0 +1,10 @@
+# source,AqlX-1
+# provenance,"Li/Ootes et al. 2019, MNRAS 488, 99 (stz1963), Table 1 (2016-2017 quiescence; kT_eff^inf). t0 ESTIMATED ~MJD 57650 (outburst 'ceased 2016 September'; quiescence began before Oct 10)."
+# ingest,transcribed (t0 ESTIMATED)
+# notes,FIREWALL-MESSY: recurrent (~yearly) short outbursts; crust does not reach the core floor between them (Ootes+2018). Short baseline -> range-blind. Included for the named target list; low weight.
+t_days_since_outburst,kT_eff_eV,err
+27.700,118.9,4.5
+42.900,116.2,2.8
+64.800,117.5,1.3
+154.700,110.7,1.1
+209.100,102.6,2.5

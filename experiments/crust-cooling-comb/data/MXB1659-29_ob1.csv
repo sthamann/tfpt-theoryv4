@@ -1,0 +1,11 @@
+# source,MXB1659-29
+# provenance,"Parikh et al. 2019, A&A 624, A84, Table 1 (After Outburst I; t0 = MJD 52162)."
+# ingest,transcribed
+# notes,~2.5-yr outburst I; cooled ~111->55 eV. Independent relaxation epoch #1 of this NS.
+t_days_since_outburst,kT_eff_eV,err
+35.700,111.1,1.3
+401.000,79.5,1.6
+549.600,73,1.9
+606.700,67.8,2.1
+1404.400,55.5,2.4
+2421.800,54.8,3.2

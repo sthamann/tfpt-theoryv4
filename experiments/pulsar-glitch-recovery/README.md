@@ -173,6 +173,51 @@ obs (resumable; `--max-obs 0` = all ~6.5 GB / hours) → `data/nicer_vela/vela_n
 TOAs with tempo2/PINT (+ glitch model) → `vela_nu_t.csv` at µHz; STAGE 3 hook = `detect_comb` at
 ω=2.58 on that `nu(t)`. Tested here on one obs (F0=11.19275 Hz); the full run is offline by design.
 
+## PG.07 — the recovery comb on the REAL 2024 Vela GIANT glitch (NEW, `tfpt-pulsar pg07`)
+
+PG.06b proved the *pipeline* on real Vela photons but stopped at the honest wall: a comb-quality
+`ν(t)` needs a **phase-connected** timing solution. PG.07 clears that wall using the one that is
+already public. The **2024 April 29 Vela giant glitch** (PSR J0835−4510, MJD 60429.87) was caught
+**live** (IAR/PuMA, first-reported; Mount Pleasant precise timing) and the LVK "Constraints on
+gravitational waves from the 2024 Vela pulsar glitch" data release
+(**Zenodo [10.5281/zenodo.17735648](https://doi.org/10.5281/zenodo.17735648) → record 17735649,
+CC-BY-4.0**; A&A 698 A72 (2025) / arXiv:2512.17990) publishes the **phase-connected** TEMPO2 solution
+`J0835-4510_long_F3.par`. `scripts/fetch_vela_2024.py` downloads it (~2 KB, committed as provenance)
+and derives the small `nudot(τ)` recovery CSV. Real physics read off the `.par`:
+**Δν/ν = 2.38×10⁻⁶** (a classic giant Vela glitch), a permanent {Δν, Δν̇} jump, and **three transient
+recovery timescales τ_d = {0.39, 2.45, 15.1 d}** (matching A&A 698 A72's ~2.8 d + ~17 d + a fast
+term), over a public post-glitch window of **122.7 d**.
+
+`src/tfpt_pulsar/vela2024.py` reconstructs the post-glitch `nudot(τ)` recovery from that model and
+runs the **PG.05 detector unchanged** (`nu_recovery.detect_comb`) plus the PG.06 range-power
+machinery (`nicer_j0537`).
+
+**Result (real 2024 Vela `ν̇(t)`): `data_limited` — the widest real recovery yet, detector validated,
+no kernel comb, and the wall has MOVED off ln(τ)-range.**
+
+- **Reach.** The 2024 window gives **2.55 comb periods** in ln(τ) — the **widest real recovery** the
+  search has reached (vs J0537's ~1.9), a genuine step past PG.05/PG.06b.
+- **Detector injection-validated on the real Vela cadence:** an injected geometric-cascade comb is
+  detected at ω (p≈0.002); a smooth power-law recovery is rejected (p≈0.18).
+- **ω=2.583 is NOT special** in the recovery: off-kernel periodogram **p≈0.23**, within-segment
+  shuffle p≈0.60, and ω is **not the smallest-p member** of the off-kernel λ-battery (Bonferroni).
+- **Range is no longer the wall.** Reusing PG.06's injection-validated range-power curve (reference
+  amplitude ε=0.30), a strong comb at Vela-2024's 2.55 periods is localised **95%** of the time
+  (vs **0%** at J0537's ~1.9); the smooth null false-positive rate is 0%. The **stacked**
+  2016/2019/2021/2024 recoveries reach **3.41 periods** (2021's ~1012 d baseline + 535 d term) and
+  are equally flat (p≈0.53) — stacking buys amplitude, **not** range (PG.06).
+- **Honest scope (why it is `data_limited`, not a kill).** Two limits, neither of them ln(τ)-range:
+  **(1)** the public product is the *smooth parametric glitch MODEL* (permanent jump + a few
+  exponentials), **not the residual `ν(t)`** — a predicted **ε ~ exp(−π²/ln λ) ≈ 2%** comb, if it
+  exists, lives in the **residuals to that fit**, which the small release does not contain, so any
+  null here is null-by-construction; **(2)** at ~2% amplitude a single recovery is amplitude-limited,
+  and only **~4** Vela giant glitches exist (stacking √N ≈ 2×, not enough). **Decisive next step:**
+  the phase-connected IAR/MPRO ToA **residuals** over a full inter-glitch baseline (2021→2024 ~1012 d
+  ≈ 2.8 periods), glitch model removed, superposed-epoch stacked. **No claim; firewall intact** — a
+  hit would be a universal-DSI coincidence in the neutron-star interior, not a horizon signature and
+  not TFPT confirmation. Output: `results/pg07_vela2024.json` + `results/pg07_vela2024.png`;
+  preregistered in `hypotheses/pulsar_pg07_v1.yaml`.
+
 ## Reproduce
 
 ```bash
@@ -189,6 +234,8 @@ python scripts/fetch_nicer_j0537.py     # PG.06: confirm + list the 1165 NICER J
 tfpt-pulsar nicer                       # PG.06 scaffold: env + plan + downstream comb (injection-validated)
 python scripts/fetch_nicer_vela.py      # PG.06b: confirm + list the 665 NICER Vela-pulsar observations
 tfpt-pulsar vela --download             # PG.06b: download one real Vela obs + PINT-fold -> detect the pulsation
+python scripts/fetch_vela_2024.py       # PG.07: download the 2024 Vela glitch phase-connected .par (Zenodo)
+tfpt-pulsar pg07                        # PG.07: recovery comb (omega=2.58) on the REAL 2024 Vela giant glitch
 # or without install:  PYTHONPATH=src python -m tfpt_pulsar.cli analyze
 ```
 
@@ -201,6 +248,7 @@ scripts/fetch_crab_ephemeris.py  # download + parse Crab crab2.txt       -> data
 scripts/fetch_nicer_j0537.py     # HEASARC nicermastr -> data/nicer_j0537/j0537_observations.csv (PG.06)
 scripts/fetch_nicer_vela.py      # HEASARC nicermastr -> data/nicer_vela/vela_observations.csv (PG.06b)
 scripts/reduce_vela_nu_t.py      # OFFLINE heavy driver: download+barycentre+fold all Vela obs -> nu(t) (PG.06b)
+scripts/fetch_vela_2024.py       # PG.07: download 2024 Vela glitch .par (Zenodo 17735649) -> data/vela_2024/
 data/jbo_glitches.csv            # committed derived size catalogue (726 glitches)
 data/yu2013_recovery.csv         # committed derived recovery table (60 Q/tau_d components, 46 glitches)
 data/crab_ephemeris.csv          # committed derived Crab nu/nudot(t) monthly series (479 points, PG.05)
@@ -214,9 +262,14 @@ src/tfpt_pulsar/dsi.py           # discrete-scale-invariance predictor (omega=2p
 src/tfpt_pulsar/nu_recovery.py   # PG.05: dynamic recovery comb (omega=2.58) on real Crab nu(t) + injection
 src/tfpt_pulsar/nicer_j0537.py   # PG.06: J0537 stacked-recovery scaffold (PINT upstream + comb downstream)
 src/tfpt_pulsar/vela.py          # PG.06b: REAL NICER Vela download + PINT barycentre + H-test fold
+src/tfpt_pulsar/vela2024.py      # PG.07: recovery comb on the REAL 2024 Vela giant glitch (.par model)
 src/tfpt_pulsar/validation.py    # injection-recovery self-check
-src/tfpt_pulsar/cli.py           # `tfpt-pulsar audit|validate|analyze|dynamic|nicer|vela`
+src/tfpt_pulsar/cli.py           # `tfpt-pulsar audit|validate|analyze|dynamic|nicer|vela|pg07`
 data/nicer_vela/vela_observations.csv  # committed list of 665 NICER Vela-pulsar observations (PG.06b)
+data/vela_2024/J0835-4510_long_F3.par  # committed phase-connected 2024 Vela glitch ephemeris (PG.07)
+data/vela_2024/vela2024_nudot.csv      # committed derived post-glitch nudot(tau) recovery (PG.07)
+data/vela_2024/vela_glitch_recoveries.csv  # committed Vela giant-glitch recovery params 2016-2024 (PG.07)
+hypotheses/pulsar_pg07_v1.yaml   # preregistered PG.07 hypothesis (frozen kernel, nulls, kill/data-limited)
 results/results.json             # committed summary (+ pg01/pg05/pg06 png, gitignored)
-results/pg05_recovery_comb.json, pg06_nicer_j0537.json, pg06b_vela.json  # committed PG.05/06/06b summaries
+results/pg05_recovery_comb.json, pg06_nicer_j0537.json, pg06b_vela.json, pg07_vela2024.json  # committed summaries
 ```

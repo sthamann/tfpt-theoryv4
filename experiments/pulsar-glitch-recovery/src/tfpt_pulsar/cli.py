@@ -11,6 +11,8 @@ Commands:
               (HEASARC L2 events + PINT -> nu(t) -> stack); downstream injection-validated
     vela      PG.06b: REAL NICER Vela-pulsar data -- download one obs (--download) + PINT-fold to
               detect the pulsation; proves the reduction pipeline on real data (no HEASoft)
+    pg07      PG.07: the dynamic recovery comb (omega=2.58) on the REAL 2024 Vela GIANT glitch
+              (phase-connected .par, Zenodo 17735649); reach + injection + stack; data_limited
 """
 
 from __future__ import annotations
@@ -229,6 +231,81 @@ def _vela(seed: int, download: bool) -> int:
     return 0
 
 
+def _pg07(seed: int) -> int:
+    """PG.07 -- the dynamic recovery comb on the REAL 2024 Vela GIANT glitch.
+
+    PG.05 (Crab, monthly) was data_limited; PG.06 proved the comb needs >~2.8 ln(tau) periods and
+    pointed at a long-interval pulsar caught live (Vela). This runs the SAME injection-validated
+    detector on the phase-connected 2024 Vela glitch timing solution (Zenodo 17735649).
+    """
+    from .vela2024 import make_plot, pg07_vela2024
+
+    r = pg07_vela2024(seed=seed)
+    print("=" * 80)
+    print("PG.07 -- dynamic recovery comb on the REAL 2024 Vela giant glitch (phase-connected .par)")
+    print(f"  kernel cascade log-frequency omega = 2pi/ln((3/2)^6) = {r.omega:.3f}  "
+          f"(predicted comb amplitude eps ~ {r.eps_predicted:.3f})")
+    print("=" * 80)
+    print(f"  glitch: MJD {r.glitch_epoch_mjd:.5f} (2024-04-29); Delta nu/nu = {r.dnu_over_nu:.3e}; "
+          f"tau_d = {{{', '.join(f'{t:.3g}' for _, t in r.transients)}}} d")
+    print(f"  public post-glitch window: {r.post_glitch_days:.0f} d  ->  reach "
+          f"{r.reach_2024_periods:.2f} comb periods (gate = {r.reach_gate_periods})")
+
+    inj = r.injection_2024
+    print("\n  detector injection-validation (at the REAL Vela cadence/reach):")
+    print(f"    injected geometric cascade comb -> detected={inj.comb_detected} (p={inj.comb_p:.3f})")
+    print(f"    smooth power-law recovery       -> rejected={inj.smooth_rejected} (p={inj.smooth_p:.3f})")
+    print(f"    -> detector valid: {inj.passed}")
+
+    print("\n  is omega=2.583 special in the 2024 recovery?")
+    print(f"    off-kernel periodogram : gain={r.comb_gain_2024:.3f}  p={r.comb_p_2024:.3f}")
+    print(f"    within-segment shuffle : p={r.shuffle_p_2024:.3f}")
+    print("    off-kernel lambda battery (Bonferroni over the family):")
+    n_batt = len(r.lambda_battery)
+    for label, om, p in r.lambda_battery:
+        print(f"      {label:18s} omega={om:5.2f}  p={p:.3f}  (Bonferroni p={min(1.0, p*n_batt):.3f})")
+
+    pc = r.power
+    print("\n  range-power context (reuses PG.06's injection-validated curve, eps=0.30 -> isolates "
+          "RANGE):")
+    print(f"    J0537 ~{pc.j0537_periods:.1f} periods : comb detected {100*pc.j0537_rate:.0f}% "
+          "(range-blind)")
+    print(f"    Vela-2024 {pc.vela2024_periods:.2f} periods: comb detected {100*pc.vela2024_rate:.0f}% "
+          "-> RANGE adequate (no longer the wall)")
+    print(f"    gate {pc.gate_periods:.1f} periods      : comb detected {100*pc.gate_rate:.0f}%; "
+          f"smooth false-positive {100*pc.false_positive_rate:.0f}%; validated={pc.validated}")
+
+    s = r.stack
+    print(f"\n  stacked Vela recoveries (2016/2019/2021/2024, superposed in ln tau): "
+          f"{s.n_glitches} glitches")
+    print(f"    stacked reach {s.reach_periods:.2f} periods (= widest single recovery; stacking "
+          "buys amplitude, NOT range)")
+    print(f"    comb at omega: gain={s.comb_gain:.3f} p={s.comb_p:.3f} detected={s.detected}; "
+          f"injection valid={s.injection.passed}")
+    print(f"\n==> VERDICT: {r.verdict}")
+
+    RESULTS.mkdir(exist_ok=True)
+    out = {
+        "kernel_omega": r.omega, "eps_predicted": r.eps_predicted,
+        "glitch_epoch_mjd": r.glitch_epoch_mjd, "dnu_over_nu": r.dnu_over_nu,
+        "transients_amp_hz_tau_d": r.transients, "post_glitch_days": r.post_glitch_days,
+        "reach_2024_periods": r.reach_2024_periods, "reach_gate_periods": r.reach_gate_periods,
+        "comb_gain_2024": r.comb_gain_2024, "comb_p_2024": r.comb_p_2024,
+        "shuffle_p_2024": r.shuffle_p_2024,
+        "lambda_battery": [{"label": lab, "omega": om, "p": p, "p_bonferroni": min(1.0, p * n_batt)}
+                           for lab, om, p in r.lambda_battery],
+        "injection_2024": vars(r.injection_2024),
+        "power_context": vars(r.power),
+        "stack": {**{k: v for k, v in vars(r.stack).items() if k != "injection"},
+                  "injection": vars(r.stack.injection)},
+        "verdict": r.verdict,
+    }
+    (RESULTS / "pg07_vela2024.json").write_text(json.dumps(out, indent=2), encoding="utf-8")
+    print(f"\nWrote {RESULTS / 'pg07_vela2024.json'}")
+    print(f"Wrote {make_plot(RESULTS / 'pg07_vela2024.png', seed=seed)}")
+    return 0
+
+
 def _analyze(seed: int) -> int:
     records = load_catalog()
     sizes = glitch_sizes(records)
@@ -359,7 +436,8 @@ def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(
         description="TFPT recovery-kernel search in pulsar glitches (Jodrell Bank)")
     ap.add_argument("command",
-                    choices=["audit", "validate", "analyze", "dynamic", "nicer", "vela"],
+                    choices=["audit", "validate", "analyze", "dynamic", "nicer", "vela",
+                             "pg07", "vela2024"],
                     nargs="?", default="analyze")
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--download", action="store_true",
@@ -375,6 +453,8 @@ def main(argv: list[str] | None = None) -> int:
         return _nicer(args.seed)
     if args.command == "vela":
         return _vela(args.seed, args.download)
+    if args.command in ("pg07", "vela2024"):
+        return _pg07(args.seed)
     return _analyze(args.seed)
 
 

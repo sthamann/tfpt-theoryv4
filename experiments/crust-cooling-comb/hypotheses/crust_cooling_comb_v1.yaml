@@ -1,0 +1,88 @@
+# Preregistered hypotheses for the crust-cooling recovery-comb search.
+# Frozen BEFORE the data pass. The kernel is derived from the two TFPT axioms (c3=1/(8pi), g_car=5);
+# no neutron-star number enters. This file records the tests + kill conditions so nothing is
+# post-hoc. Verdicts use the tfpt-empirical-search enum (null/consistent/data_limited/tension/...).
+
+experiment: crust-cooling-comb
+domain: neutron-star crust cooling (quasi-persistent LMXB transients)
+role: independent SECOND data world for the dynamic log-periodic recovery comb
+version: v1
+
+firewall: >
+  Crust cooling is neutron-star crust HEAT DIFFUSION at the surface, relaxing back to core
+  equilibrium after an accretion outburst. It is NOT a horizon/boundary recovery and NOT a
+  geometric mode ladder, so there is NO a-priori reason for omega=2.583 to be special here. A hit
+  would be a universal discrete-scale-invariance (DSI) coincidence, NEVER TFPT confirmation. The
+  sole scientific value of this domain is as the independent 2nd world the discriminating comb
+  requires (omega=2.583 replicated in >=2 physically independent worlds). Nothing here is [E].
+
+observable_semantics:
+  quantity: kT_eff^inf(t)         # redshift-corrected effective surface temperature, observer at inf
+  time: days since end of accretion outburst (relaxation onset = t0)
+  recovery_observable: y = ln(kT_eff)   # multiplicative comb ripple -> additive, amplitude ~eps
+  baseline: degree-2 polynomial in ln(t) absorbs the smooth exponential-to-floor cooling trend
+  alt_observable: thermal luminosity L_x (equivalent up to a Stefan-Boltzmann power; not used)
+
+frozen_kernel:
+  lambda: (3/2)^6 = 11.390625
+  omega: 2*pi/ln((3/2)^6) = 2.5827        # the DISCRIMINATING signature
+  eps_predicted: exp(-pi^2/ln((3/2)^6)) ~ 0.017   # QT.02 amplitude-suppression law (~2%)
+  one_comb_period_in_ln_t: ln((3/2)^6) = 2.4328
+  min_comb_periods_gate: 2.8              # machine-checked ln-range floor; NO stacking relaxes it
+  hard_wall: N_fam = 3
+  protected_floor: w0 > 0                 # relaxation to a nonzero attractor (core equilibrium)
+
+tests:
+  - id: CC.01_kernel_per_curve
+    desc: >
+      Is omega=2.583 special in each single cooling curve, vs an off-kernel periodogram, over a
+      degree-2 poly-in-ln(t) baseline? Gated at >=2.8 comb periods (range-blind below).
+    prereg_expectation: >
+      Likely RANGE-BLIND: weeks..15 yr gives at most ~2.7 comb periods, and real curves start
+      months after t0, so most/all span < 2.8 periods -> not individually testable.
+
+  - id: CC.02_superposed_epoch_stack
+    desc: >
+      Pool >=6 cooling episodes into one ln(t) series (each aligned at its own t0, per-curve smooth
+      trend removed), spanning the UNION ln-range, then rank the kernel omega comb gain vs the
+      off-kernel periodogram. This is the primary KILL test for omega=2.583.
+    assumption: comb phase phi common across sources (cascade clock anchored at relaxation onset t0)
+    kill: omega=2.583 is NOT special across the stacked cooling ensemble (p >= 0.05)
+
+  - id: CC.03_lambda_battery
+    desc: >
+      Full TFPT log-period battery (lambda in {3/2, phi, 2, 3, 4, 5, 8, (3/2)^6, 30}), phase-
+      incoherent stack at each omega=2pi/ln(lambda), per-lambda ln-range+Nyquist gate, Bonferroni
+      look-elsewhere. Small-lambda entries are testable where the (3/2)^6 kernel is range-blind.
+    specificity: >
+      A small-lambda hit is LOW specificity (dense among any scaling story). Only an idiosyncratic
+      -lambda survivor (3/2, phi, (3/2)^6) after look-elsewhere would be interesting.
+
+  - id: CC.04_protected_floor
+    desc: >
+      Fit kT_eff(t) = b + A exp(-t/tau); test the TFPT protected floor against the well-known
+      "cooling curves cannot be fit without a constant offset" fact (b = core-equilibrium level).
+    prereg_expectation: b > 0 at high significance for relaxed sources
+    specificity: GENERIC crust physics (shallow heating / core equilibrium), NOT TFPT-specific.
+
+null_batteries:
+  - smooth-baseline surrogate: degree-2 poly-in-ln(t) detrend; a pure smooth decay must give p~0.5
+  - injection-recovery (real sampling): inject omega=2.583 comb on the ACTUAL epoch grids ->
+    strong comb MUST be recovered, comb-free MUST be rejected; report the eps~2% power floor
+  - phase-random washout control: source-random phi in the pooled stack must wash the comb out
+  - off-kernel lambda-battery with Bonferroni look-elsewhere correction
+
+kill_conditions:
+  primary: omega=2.583 not special across the stacked cooling ensemble (CC.02) -> null/kill_channel
+  data_limited_if: all curves range-blind AND the eps~2% injection power on the real sampling is low
+
+verdict_enum: [null, consistent, data_limited, tension, not_confirmed_not_refuted, hint_flag]
+prereg_expected_verdict: data_limited   # range-rich in principle but density-poor (~5-15 epochs/src)
+
+targets:  # transcribed from published spectral-fit tables (see scripts/fetch_crust_cooling.py)
+  - KS 1731-260      # Merritt+2016 ApJ 833 186; 12.5-yr outburst, reached the floor (~64 eV)
+  - MXB 1659-29      # Parikh+2019 A&A 624 A84; two independent outburst-cooling epochs
+  - XTE J1701-462    # Fridriksson+2011 ApJ 736 162; fast cooler (flare epoch excluded)
+  - EXO 0748-676     # Degenaar+2014 ApJ 791 47; ~24-yr outburst, shallow swing
+  - MAXI J0556-332   # Parikh+2017 ApJL 851 L28; hottest crust, multi-outburst
+  - Aql X-1          # Li/Ootes+2019 MNRAS 488 99; recurrent transient, crust never fully cools

@@ -1,0 +1,13 @@
+.venv*/
+.ruff_cache/
+__pycache__/
+*.egg-info/
+build/
+dist/
+*.pyc
+
+# The small NORMALISED, derived cooling curves (data/*.csv) ARE committed -- they are
+# transcribed from published tables (few kB each), exactly like the results JSON. Only bulky
+# raw downloads (if any fetcher pulls them) are ignored.
+data/raw/
+results/*.png

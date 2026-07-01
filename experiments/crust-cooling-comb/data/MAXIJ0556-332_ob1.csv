@@ -1,0 +1,16 @@
+# source,MAXIJ0556-332
+# provenance,"Parikh et al. 2017, ApJL 851, L28, Table 1 (days since end of outburst I). Rows 1-11: outburst-I cooling; outburst II did NOT significantly reheat, so cooling continues on trend."
+# ingest,transcribed
+# notes,Cooled ~333->145 eV. Hottest known crust cooler (~15-17 MeV/nucleon shallow heat).
+t_days_since_outburst,kT_eff_eV,err
+5.400,333.1,5.5
+16.000,324.1,2.5
+23.300,305.4,2.5
+51.000,286.9,1.9
+104.300,255.2,0.9
+134.900,247.1,1
+150.800,246.8,2.1
+291.700,215.8,2.2
+496.800,186.8,1
+850.100,161.5,0.8
+1222.600,145.4,1

@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[project]
+name = "comb-meta-limit"
+version = "0.1.0"
+description = "Hierarchical / meta-analytic 95% UPPER LIMIT on the TFPT recovery-comb amplitude eps at the frozen omega=2.583, combining the injection-validated recovery channels (search-surface, not a claim)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+    { name = "Stefan Hamann" },
+]
+keywords = [
+    "TFPT",
+    "discrete scale invariance",
+    "log-periodic",
+    "recovery comb",
+    "meta-analysis",
+    "upper limit",
+]
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.11",
+]
+
+[project.optional-dependencies]
+dev = ["ruff>=0.5"]
+
+[project.scripts]
+tfpt-metalimit = "tfpt_metalimit.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tfpt_metalimit"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

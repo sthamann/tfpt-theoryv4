@@ -1,0 +1,104 @@
+{
+  "kernel_omega": 2.5827069463082895,
+  "eps_predicted": 0.01730246011431484,
+  "glitch_epoch_mjd": 60429.86975,
+  "dnu_over_nu": 2.377332478649424e-06,
+  "transients_amp_hz_tau_d": [
+    [
+      1.5014095328219743e-07,
+      15.115506192522007
+    ],
+    [
+      1.237797177283275e-07,
+      2.446627871472549
+    ],
+    [
+      1.8532682856747786e-07,
+      0.39430498623383725
+    ]
+  ],
+  "post_glitch_days": 122.7063193036447,
+  "reach_2024_periods": 2.5469056357227733,
+  "reach_gate_periods": 2.8,
+  "comb_gain_2024": 9.564641080486916e-13,
+  "comb_p_2024": 0.23104693140794225,
+  "shuffle_p_2024": 0.5968063872255489,
+  "lambda_battery": [
+    {
+      "label": "(3/2)^6 [kernel]",
+      "omega": 2.5827069463082895,
+      "p": 0.23104693140794225,
+      "p_bonferroni": 1.0
+    },
+    {
+      "label": "(3/2)^5",
+      "omega": 3.0992483355699476,
+      "p": 0.19494584837545126,
+      "p_bonferroni": 1.0
+    },
+    {
+      "label": "(3/2)^7",
+      "omega": 2.213748811121391,
+      "p": 0.41397849462365593,
+      "p_bonferroni": 1.0
+    },
+    {
+      "label": "(3/2)^8",
+      "omega": 1.937030209731217,
+      "p": 0.13513513513513514,
+      "p_bonferroni": 0.945945945945946
+    },
+    {
+      "label": "lambda=2",
+      "omega": 9.064720283654388,
+      "p": 0.25493716337522443,
+      "p_bonferroni": 1.0
+    },
+    {
+      "label": "lambda=3",
+      "omega": 5.7192017347602535,
+      "p": 0.2786885245901639,
+      "p_bonferroni": 1.0
+    },
+    {
+      "label": "lambda=e",
+      "omega": 6.283185307179586,
+      "p": 0.37158469945355194,
+      "p_bonferroni": 1.0
+    }
+  ],
+  "injection_2024": {
+    "reach_periods": 2.5469056357227733,
+    "comb_detected": true,
+    "comb_p": 0.0018050541516245488,
+    "smooth_rejected": true,
+    "smooth_p": 0.18411552346570398,
+    "passed": true
+  },
+  "power_context": {
+    "gate_periods": 2.8,
+    "j0537_periods": 1.8929578624225245,
+    "j0537_rate": 0.0,
+    "vela2024_periods": 2.5469056357227733,
+    "vela2024_rate": 0.95,
+    "gate_rate": 0.9,
+    "false_positive_rate": 0.0,
+    "validated": true
+  },
+  "stack": {
+    "n_glitches": 4,
+    "reach_periods": 3.4141771366886426,
+    "comb_gain": 0.016960645807504438,
+    "comb_p": 0.5316455696202531,
+    "detected": false,
+    "injection": {
+      "reach_periods": 3.4141771366886426,
+      "comb_detected": true,
+      "comb_p": 0.0018083182640144665,
+      "smooth_rejected": true,
+      "smooth_p": 0.4972875226039783,
+      "passed": true
+    }
+  },
+  "verdict": "data_limited. Vela-2024 is the FIRST real, public, PHASE-CONNECTED wide-ln(tau) Vela recovery (Delta nu/nu=2.38e-06, tau_d={15, 2.4, 0.39} d) -- a clear step up from PG.06b's per-obs H-test, and the widest real recovery reached so far (2.55 comb periods vs J0537's ~1.9). The detector is injection-validated at the real Vela cadence (cascade comb found p=0.002, smooth power law rejected p=0.18); reusing PG.06's range-power curve, a strong comb at this reach is localised 95% of the time (vs 0% at J0537's ~1.9 periods). So RANGE is NO LONGER the dominant wall. Yet omega=2.583 is NOT special in the recovery (p=0.23; shuffle p=0.60; not the smallest-p member of the off-kernel lambda battery), and the ln-tau-stacked 2016/2019/2021/2024 recoveries (reach 3.41 periods) are equally flat (p=0.53). This is data_limited, NOT a well-powered kill, for two honest reasons: (1) the public product is the SMOOTH parametric glitch MODEL (permanent jump + 2-3 exponentials), not the residual nu(t) -- a ~2% (eps~exp(-pi^2/ln lambda)) comb, if present, lives in the RESIDUALS to that fit, which the small release does not contain, so any null here is null-by-construction; (2) at the predicted ~2% amplitude a single recovery is amplitude-limited, and only ~4 Vela giant glitches exist (stacking buys amplitude ~sqrt(N)~2x, not range -- PG.06). Decisive next step: the phase-connected IAR/MPRO ToA RESIDUALS over a full inter-glitch baseline (2021->2024 ~1012 d ~2.8 periods), glitch model removed, superposed-epoch stacked. No claim; a hit would be a universal-DSI coincidence in the NS interior, not TFPT confirmation. Firewall intact."
+}

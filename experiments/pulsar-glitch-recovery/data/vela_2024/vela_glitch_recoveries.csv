@@ -1,0 +1,5 @@
+glitch,epoch_mjd,dnu_over_nu,tau_d_days,baseline_days_to_next,template,params_source
+2016,57734.0000,1.40e-06,15.1;2.45;0.394,781,1,"Delta nu/nu, epoch (Palfreyman+2018 Nature 556,219); recovery = Vela template"
+2019,58515.0000,2.70e-06,15.1;2.45;0.394,902,1,"Delta nu/nu, epoch (Lopez Armengol+2019; Gancio+2020); recovery = Vela template"
+2021,59417.6200,1.20e-06,0.994;6.4;535,1012,0,"Delta nu/nu + tau_d {0.994,6.400,535} d (Zubieta+2023; IAR A&A 202450441)"
+2024,60429.8697,2.38e-06,15.1;2.45;0.394,123,0,"phase-connected .par (Zenodo 17735649, A&A 698 A72)"

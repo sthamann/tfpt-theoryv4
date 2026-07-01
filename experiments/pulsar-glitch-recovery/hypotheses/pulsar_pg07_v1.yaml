@@ -1,0 +1,69 @@
+# Preregistration of the TFPT dynamic recovery-comb search on the 2024 Vela giant
+# glitch (PG.07). FROZEN hypothesis. The kernel log-frequency below is an EXACT
+# consequence of the TFPT axioms (cascade scale lambda = (3/2)^6, transport
+# exponent 6); it must equal tfpt_pulsar.nu_recovery.OMEGA byte-for-byte and is the
+# SAME frozen object tested in PG.05 (Crab), FRB.02/09 and the GW ringdown echo. No
+# refitted omega, amplitude, or exponent is permitted. Editing the kernel after data
+# inspection invalidates the preregistration.
+version: 1
+frozen_on: 2026-07-01
+axis: PG.07
+reuses_detector: src/tfpt_pulsar/nu_recovery.py (detect_comb, injection_check)  # PG.05, injection-validated
+
+kernel:
+  omega: "2*pi/ln((3/2)^6)"       # = 2.5827069...  (period ln((3/2)^6)=2.4328 per 2*pi in ln tau)
+  one_comb_period_dln_tau: "ln((3/2)^6) = 2.4328"
+  amplitude_eps: "exp(-pi^2/ln((3/2)^6)) ~ 0.02"   # ~2%, a target, never fitted
+  wall_N_fam: 3
+  det_clean_bend: "ln3/ln(3/2) = 2.7095"
+  reach_gate_periods: 2.8          # PG.06 machine-checked: >~2.8 comb periods in ln tau to localise omega
+
+target:
+  name: vela_2024_giant_glitch
+  psr: J0835-4510
+  glitch_epoch_mjd: 60429.86975    # 2024-04-29, caught live (IAR/PuMA + MPRO)
+  observable: nudot_recovery_waveform_in_ln_tau   # post-glitch spin-down-rate recovery vs ln(time since glitch)
+  data:
+    source_doi: 10.5281/zenodo.17735648           # concept DOI -> record 17735649 (v1)
+    file: J0835-4510_long_F3.par                  # phase-connected TEMPO2 timing solution
+    paper: "A&A 698, A72 (2025); LVK arXiv:2512.17990"
+    license: CC-BY-4.0
+    product_type: parametric_glitch_model         # permanent jump + 3 exponential transients (NOT residual nu(t))
+
+rules:
+  no_refitted_omega_or_eps: true
+  require_injection_recovery_at_real_reach: true   # detector must detect a cascade comb + reject a smooth power law
+  require_off_kernel_periodogram_null: true        # omega must beat a grid of off-kernel log-frequencies
+  bonferroni_over_lambda_battery: true
+  single_source_match_is_candidate_only: true
+  a_hit_is_universal_DSI_coincidence_not_TFPT_confirmation: true   # firewall
+
+nulls:
+  - smooth_power_law_surrogate           # a pure power-law recovery must NOT fire the detector
+  - within_segment_shuffle               # destroy ln-tau phase coherence, keep amplitude
+  - injection_recovery                   # inject geometric cascade at omega -> must detect
+  - off_kernel_lambda_battery_bonferroni # (3/2)^{5,7,8}, lambda=2,3,e ... omega not special among the family
+
+success:
+  # what would ESCALATE (still never load-bearing on its own):
+  a_log_periodic_comb_at_omega_special_vs_off_kernel_periodogram_p_lt_0_01_over_a_ge_2_8_period_reach: escalate_only
+
+kill:
+  # a WELL-POWERED null (NOT data_limited): the detector is injection-validated at the
+  # achieved reach AND that reach is >= 2.8 comb periods AND omega is not special (p >~ 0.1).
+  condition: "reach_periods >= 2.8 AND injection_valid AND comb_p >= 0.1 on the real recovery"
+  meaning: "omega=2.583 is not a special recovery frequency in the (stacked) Vela recoveries"
+
+data_limited_if:
+  - "reach_periods < 2.8 (post-glitch baseline too short)"
+  - "only the smooth parametric glitch MODEL is public (a ~2% comb lives in the RESIDUAL nu(t), not the fitted model)"
+
+language:
+  forbidden:
+    - "Vela confirms TFPT"
+    - "the 2024 Vela glitch shows the boundary recovery kernel"
+    - "pulsar glitch recovery proves Hawking radiation / new gravity"
+  allowed:
+    - "the 2024 Vela giant glitch is the first real, public, phase-connected wide-ln(tau) recovery tested for the omega=2.58 comb"
+    - "a hit would be a universal discrete-scale-invariance coincidence in the neutron-star interior, not a horizon signature, until it recurs in >=2 independent worlds"
+    - "PG.07 is data_limited: the public product is a smooth glitch model, not residual nu(t); the decisive test needs the phase-connected ToA residuals over a full inter-glitch baseline"

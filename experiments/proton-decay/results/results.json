@@ -1,0 +1,300 @@
+{
+  "meta": {
+    "title": "TFPT proton-decay confrontation (carrier-native Pati-Salam -> SO(10), branch B)",
+    "axioms": {
+      "c3": 0.039788735772973836,
+      "c3_expr": "1/(8 pi)",
+      "Mbar_GeV": 2.435323203e+18,
+      "M_scalaron_GeV": 30599694999637.406,
+      "M_scalaron_expr": "c3^{7/2} * Mbar"
+    },
+    "mechanism": "dim-6 SO(10)/SU(5) X,Y gauge-boson exchange at M_GUT; tau ~ 1e36 (M_GUT/1e16)^4 (alpha_GUT^-1/40)^2 yr",
+    "hadronic_band_O": 3.0,
+    "band_softness": 1.3,
+    "R_nuK_band": [
+      0.1,
+      1.0
+    ],
+    "verdict_enum": [
+      "consistent",
+      "tension",
+      "kill",
+      "data_limited"
+    ],
+    "reproduces": "verification/v266 (PS.PROTON.02), v249 (PS.RGTEST.01); experiments/gauge-unification/results/pati_salam.json",
+    "firewall": "tau_p is a DOWNSTREAM/BRANCH prediction of the OPTIONAL gauged carrier-PS -> SO(10) UV branch B (v249/v266/v385), NOT a primitive compiler output. Never [E], never \\veri{}. The default reading A is boundary-only (no gauged intermediate group -> no M_GUT X,Y bosons -> no dim-6 proton decay; v385). Generic proton decay is a generic-GUT signature; the TFPT-specific sharpening is (i) M_PS = scalaron-scale coincidence, (ii) 126 forbidden + only one 45 => structurally marginal proton-safety, (iii) minimal 16-content already excluded."
+  },
+  "scales": {
+    "minimal_16H": {
+      "1loop": {
+        "M_PS_GeV": 42169608140386.39,
+        "M_GUT_GeV": 2398055369082637.5,
+        "alpha_gut_inv": 45.05121800970946,
+        "ratio_to_scalaron": 1.3781055053289284,
+        "valid": true,
+        "b_ps": [
+          -10.333333333333334,
+          -3.0,
+          -2.3333333333333335
+        ]
+      },
+      "2loop": {
+        "M_PS_GeV": 37409947481084.734,
+        "M_GUT_GeV": 1290612662081055.2,
+        "alpha_gut_inv": 44.48712344188514,
+        "ratio_to_scalaron": 1.2225594889598745,
+        "valid": true,
+        "b_ps": [
+          -10.333333333333334,
+          -3.0,
+          -2.3333333333333335
+        ]
+      }
+    },
+    "+(15,1,1)_45": {
+      "1loop": {
+        "M_PS_GeV": 40433705939867.31,
+        "M_GUT_GeV": 5797430685386016.0,
+        "alpha_gut_inv": 45.471588240682664,
+        "ratio_to_scalaron": 1.3213761098058798,
+        "valid": true,
+        "b_ps": [
+          -9.0,
+          -3.0,
+          -2.3333333333333335
+        ]
+      },
+      "2loop": {
+        "M_PS_GeV": 36060106716047.08,
+        "M_GUT_GeV": 2798863554030703.0,
+        "alpha_gut_inv": 44.85597067065534,
+        "ratio_to_scalaron": 1.1784466059702352,
+        "valid": true,
+        "b_ps": [
+          -9.0,
+          -3.0,
+          -2.3333333333333335
+        ]
+      }
+    }
+  },
+  "confrontation": [
+    {
+      "channel": "p -> e+ pi0",
+      "tau_central_yr": 4.1949802166141624e+33,
+      "tau_lo_yr": 1.3983267388713876e+33,
+      "tau_hi_yr": 1.2584940649842487e+34,
+      "current_experiment": "Super-Kamiokande I-IV",
+      "current_limit_yr": 2.4e+34,
+      "pull_dex": -0.7574813246602509,
+      "verdict": "kill",
+      "within_current_bound": false,
+      "best_future_experiment": "Hyper-Kamiokande (20 yr)",
+      "best_future_reach_yr": 1e+35,
+      "decisively_testable": false,
+      "note": "excluded: even the optimistic edge of the O(3) hadronic band is below the current limit",
+      "provenance": {
+        "current": "Phys. Rev. D 102, 112011 (2020); arXiv:2010.16098",
+        "future": [
+          "HK design report arXiv:1805.04163; WIN2025 (Wilson); inspirehep 4f0e1ddb",
+          "arXiv:1805.04163; SciPost Phys. Proc. 17, 019",
+          "arXiv:2503.23291"
+        ]
+      },
+      "branch": "minimal_16H",
+      "loop": "1loop"
+    },
+    {
+      "channel": "p -> nubar K+",
+      "tau_central_yr": 1.3265692223847274e+34,
+      "tau_lo_yr": 1.3983267388713876e+33,
+      "tau_hi_yr": 1.2584940649842487e+35,
+      "current_experiment": "Super-Kamiokande",
+      "current_limit_yr": 5.9e+33,
+      "pull_dex": 0.3518779054092109,
+      "verdict": "tension",
+      "within_current_bound": true,
+      "best_future_experiment": "Hyper-Kamiokande (10 yr)",
+      "best_future_reach_yr": 2e+34,
+      "decisively_testable": false,
+      "note": "central lifetime is below the current limit; only the optimistic edge of the O(3) hadronic band (or GUT-threshold headroom) keeps it from a clean kill",
+      "provenance": {
+        "current": "Phys. Rev. D 90, 072005 (2014)",
+        "future": [
+          "arXiv:1805.04163; SciPost Phys. Proc. 17, 019",
+          "arXiv:2503.23291; ETH thesis doi:10.3929/ethz-b-000462924",
+          "Chin. Phys. C 47, 113002 (2023); arXiv:1507.05613"
+        ]
+      },
+      "branch": "minimal_16H",
+      "loop": "1loop"
+    },
+    {
+      "channel": "p -> e+ pi0",
+      "tau_central_yr": 3.431882054248053e+32,
+      "tau_lo_yr": 1.143960684749351e+32,
+      "tau_hi_yr": 1.0295646162744159e+33,
+      "current_experiment": "Super-Kamiokande I-IV",
+      "current_limit_yr": 2.4e+34,
+      "pull_dex": -1.8446788879630953,
+      "verdict": "kill",
+      "within_current_bound": false,
+      "best_future_experiment": "Hyper-Kamiokande (20 yr)",
+      "best_future_reach_yr": 1e+35,
+      "decisively_testable": false,
+      "note": "excluded: even the optimistic edge of the O(3) hadronic band is below the current limit",
+      "provenance": {
+        "current": "Phys. Rev. D 102, 112011 (2020); arXiv:2010.16098",
+        "future": [
+          "HK design report arXiv:1805.04163; WIN2025 (Wilson); inspirehep 4f0e1ddb",
+          "arXiv:1805.04163; SciPost Phys. Proc. 17, 019",
+          "arXiv:2503.23291"
+        ]
+      },
+      "branch": "minimal_16H",
+      "loop": "2loop"
+    },
+    {
+      "channel": "p -> nubar K+",
+      "tau_central_yr": 1.0852563952481384e+33,
+      "tau_lo_yr": 1.143960684749351e+32,
+      "tau_hi_yr": 1.0295646162744158e+34,
+      "current_experiment": "Super-Kamiokande",
+      "current_limit_yr": 5.9e+33,
+      "pull_dex": -0.7353196578936334,
+      "verdict": "tension",
+      "within_current_bound": false,
+      "best_future_experiment": "Hyper-Kamiokande (10 yr)",
+      "best_future_reach_yr": 2e+34,
+      "decisively_testable": false,
+      "note": "central lifetime is below the current limit; only the optimistic edge of the O(3) hadronic band (or GUT-threshold headroom) keeps it from a clean kill",
+      "provenance": {
+        "current": "Phys. Rev. D 90, 072005 (2014)",
+        "future": [
+          "arXiv:1805.04163; SciPost Phys. Proc. 17, 019",
+          "arXiv:2503.23291; ETH thesis doi:10.3929/ethz-b-000462924",
+          "Chin. Phys. C 47, 113002 (2023); arXiv:1507.05613"
+        ]
+      },
+      "branch": "minimal_16H",
+      "loop": "2loop"
+    },
+    {
+      "channel": "p -> e+ pi0",
+      "tau_central_yr": 1.459830805834791e+35,
+      "tau_lo_yr": 4.86610268611597e+34,
+      "tau_hi_yr": 4.379492417504373e+35,
+      "current_experiment": "Super-Kamiokande I-IV",
+      "current_limit_yr": 2.4e+34,
+      "pull_dex": 0.7840912823260354,
+      "verdict": "consistent",
+      "within_current_bound": true,
+      "best_future_experiment": "Hyper-Kamiokande (20 yr)",
+      "best_future_reach_yr": 1e+35,
+      "decisively_testable": true,
+      "note": "clears the current bound; decisively probed by Hyper-Kamiokande (20 yr) (reach 1.0e+35 yr)",
+      "provenance": {
+        "current": "Phys. Rev. D 102, 112011 (2020); arXiv:2010.16098",
+        "future": [
+          "HK design report arXiv:1805.04163; WIN2025 (Wilson); inspirehep 4f0e1ddb",
+          "arXiv:1805.04163; SciPost Phys. Proc. 17, 019",
+          "arXiv:2503.23291"
+        ]
+      },
+      "branch": "+(15,1,1)_45",
+      "loop": "1loop"
+    },
+    {
+      "channel": "p -> nubar K+",
+      "tau_central_yr": 4.616390344916962e+35,
+      "tau_lo_yr": 4.86610268611597e+34,
+      "tau_hi_yr": 4.379492417504373e+36,
+      "current_experiment": "Super-Kamiokande",
+      "current_limit_yr": 5.9e+33,
+      "pull_dex": 1.8934505123954972,
+      "verdict": "data_limited",
+      "within_current_bound": true,
+      "best_future_experiment": "Hyper-Kamiokande (10 yr)",
+      "best_future_reach_yr": 2e+34,
+      "decisively_testable": false,
+      "note": "clears the current bound AND lies above the best next-gen reach (Hyper-Kamiokande (10 yr) 2.0e+34 yr) -> not testable soon",
+      "provenance": {
+        "current": "Phys. Rev. D 90, 072005 (2014)",
+        "future": [
+          "arXiv:1805.04163; SciPost Phys. Proc. 17, 019",
+          "arXiv:2503.23291; ETH thesis doi:10.3929/ethz-b-000462924",
+          "Chin. Phys. C 47, 113002 (2023); arXiv:1507.05613"
+        ]
+      },
+      "branch": "+(15,1,1)_45",
+      "loop": "1loop"
+    },
+    {
+      "channel": "p -> e+ pi0",
+      "tau_central_yr": 7.716981218085262e+33,
+      "tau_lo_yr": 2.572327072695087e+33,
+      "tau_hi_yr": 2.3150943654255785e+34,
+      "current_experiment": "Super-Kamiokande I-IV",
+      "current_limit_yr": 2.4e+34,
+      "pull_dex": -0.49276379846461416,
+      "verdict": "tension",
+      "within_current_bound": false,
+      "best_future_experiment": "Hyper-Kamiokande (20 yr)",
+      "best_future_reach_yr": 1e+35,
+      "decisively_testable": false,
+      "note": "central lifetime is below the current limit; only the optimistic edge of the O(3) hadronic band (or GUT-threshold headroom) keeps it from a clean kill",
+      "provenance": {
+        "current": "Phys. Rev. D 102, 112011 (2020); arXiv:2010.16098",
+        "future": [
+          "HK design report arXiv:1805.04163; WIN2025 (Wilson); inspirehep 4f0e1ddb",
+          "arXiv:1805.04163; SciPost Phys. Proc. 17, 019",
+          "arXiv:2503.23291"
+        ]
+      },
+      "branch": "+(15,1,1)_45",
+      "loop": "2loop"
+    },
+    {
+      "channel": "p -> nubar K+",
+      "tau_central_yr": 2.440323730988999e+34,
+      "tau_lo_yr": 2.572327072695087e+33,
+      "tau_hi_yr": 2.3150943654255784e+35,
+      "current_experiment": "Super-Kamiokande",
+      "current_limit_yr": 5.9e+33,
+      "pull_dex": 0.6165954316048476,
+      "verdict": "tension",
+      "within_current_bound": true,
+      "best_future_experiment": "Hyper-Kamiokande (10 yr)",
+      "best_future_reach_yr": 2e+34,
+      "decisively_testable": false,
+      "note": "central lifetime is below the current limit; only the optimistic edge of the O(3) hadronic band (or GUT-threshold headroom) keeps it from a clean kill",
+      "provenance": {
+        "current": "Phys. Rev. D 90, 072005 (2014)",
+        "future": [
+          "arXiv:1805.04163; SciPost Phys. Proc. 17, 019",
+          "arXiv:2503.23291; ETH thesis doi:10.3929/ethz-b-000462924",
+          "Chin. Phys. C 47, 113002 (2023); arXiv:1507.05613"
+        ]
+      },
+      "branch": "+(15,1,1)_45",
+      "loop": "2loop"
+    }
+  ],
+  "branch_summary": {
+    "minimal_16H": {
+      "note": "minimal renormalisable 16-Higgs (bidoublet + (4,1,2)); the minimal E8 10+16",
+      "e+pi0_verdict_1loop": "kill",
+      "e+pi0_verdict_2loop": "kill",
+      "overall_golden_channel": "kill",
+      "headline": "EXCLUDED at both loop orders (Super-K, golden e+pi0 channel)"
+    },
+    "+(15,1,1)_45": {
+      "note": "+ the single SU(4)-adjoint (15,1,1) = the one E8-allowed 45 (v247)",
+      "e+pi0_verdict_1loop": "consistent",
+      "e+pi0_verdict_2loop": "tension",
+      "overall_golden_channel": "tension",
+      "headline": "survives at 1-loop (consistent) but is a tension at 2-loop -- structurally marginal proton-safety (only one E8 45)"
+    }
+  },
+  "verdict": "Carrier-native Pati-Salam -> SO(10) proton decay (OPTIONAL gauged UV branch B; NOT the default boundary-only reading A). M_PS lands on the TFPT scalaron scale M_s=3.06e+13 GeV (x1.38-1.32), independent of the gauge running -- the TFPT-specific coincidence. GOLDEN CHANNEL p->e+pi0: (1) minimal 16-content M_GUT=2.40e+15 -> tau_p=4.19e+33 yr is EXCLUDED by Super-K (2.4e+34 yr) even at the optimistic band edge -> KILL. (2) The single E8-allowed 45 +(15,1,1) raises M_GUT to 5.80e+15 -> tau_p=1.46e+35 yr at 1-loop -> CONSISTENT and decisively probed by Hyper-Kamiokande (20 yr). (3) But at 2-loop M_GUT drops to 2.80e+15 -> tau_p=7.72e+33 yr < Super-K -> a latent TENSION (only the optimistic O(3) hadronic edge / GUT-threshold headroom saves it). So the whole PS branch is proton-safe ONLY with +(15,1,1) and ONLY marginally -- the E8 hull supplies just one 45 (v247), so this is a sharp, dated kill-test, not a knob. Second channel p->nubar K+ (DUNE/JUNO-optimised) is SUBDOMINANT in non-SUSY dim-6 gauge mediation: tau_p~4.6e+35 yr for +(15,1,1) sits above even the next-gen reach -> data_limited (R_nuK is an external nuisance, not a TFPT primitive). FIREWALL: tau_p is a downstream branch prediction, never [E]/\\veri{}; if only the minimal PS stage is gauged its leptoquarks mediate rare LFV, not p->e+pi0 (v385)."
+}

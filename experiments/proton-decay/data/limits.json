@@ -1,0 +1,75 @@
+{
+  "_comment": "External proton-decay limits + future reach. Published summary values only, with provenance. These are the ONLY empirical numbers on the data side; the TFPT side flows from the axioms via the RGE. Verified 2026-07-01 (see data/README.md).",
+  "channels": {
+    "e+pi0": {
+      "label": "p -> e+ pi0",
+      "current": {
+        "experiment": "Super-Kamiokande I-IV",
+        "tau_limit_yr": 2.4e34,
+        "cl": 0.90,
+        "exposure": "450 kton*yr",
+        "source": "Phys. Rev. D 102, 112011 (2020); arXiv:2010.16098"
+      },
+      "future": [
+        {
+          "experiment": "Hyper-Kamiokande (10 yr)",
+          "tau_reach_yr": 6.0e34,
+          "cl": 0.90,
+          "note": "~6e34 yr at 10 yr; rises to ~1e35 yr at 20 yr; data-taking from ~2027",
+          "source": "HK design report arXiv:1805.04163; WIN2025 (Wilson); inspirehep 4f0e1ddb"
+        },
+        {
+          "experiment": "Hyper-Kamiokande (20 yr)",
+          "tau_reach_yr": 1.0e35,
+          "cl": 0.90,
+          "source": "arXiv:1805.04163; SciPost Phys. Proc. 17, 019"
+        },
+        {
+          "experiment": "DUNE (400 kton*yr)",
+          "tau_reach_yr": 1.0e34,
+          "cl": 0.90,
+          "note": "8.7e33-1.1e34 yr depending on reconstruction; water Cherenkov leads this channel",
+          "source": "arXiv:2503.23291"
+        }
+      ]
+    },
+    "nubarK+": {
+      "label": "p -> nubar K+",
+      "current": {
+        "experiment": "Super-Kamiokande",
+        "tau_limit_yr": 5.9e33,
+        "cl": 0.90,
+        "exposure": "260 kton*yr",
+        "source": "Phys. Rev. D 90, 072005 (2014)",
+        "preliminary_update": {
+          "tau_limit_yr": 8.2e33,
+          "exposure": "365 kton*yr",
+          "source": "Super-K preliminary, GUTPC 2024 (unpublished)"
+        }
+      },
+      "future": [
+        {
+          "experiment": "Hyper-Kamiokande (10 yr)",
+          "tau_reach_yr": 2.0e34,
+          "cl": 0.90,
+          "note": "~2e34 yr at 10 yr, ~3e34 yr at 20 yr; K+ is below Cherenkov threshold (tagged via decay)",
+          "source": "arXiv:1805.04163; SciPost Phys. Proc. 17, 019"
+        },
+        {
+          "experiment": "DUNE (400 kton*yr)",
+          "tau_reach_yr": 1.3e34,
+          "cl": 0.90,
+          "note": "LArTPC images the K+ directly; the golden mode for DUNE (SUSY-favoured channel)",
+          "source": "arXiv:2503.23291; ETH thesis doi:10.3929/ethz-b-000462924"
+        },
+        {
+          "experiment": "JUNO (200 kton*yr, ~10 yr)",
+          "tau_reach_yr": 9.6e33,
+          "cl": 0.90,
+          "note": "liquid-scintillator triple-coincidence tag of K+",
+          "source": "Chin. Phys. C 47, 113002 (2023); arXiv:1507.05613"
+        }
+      ]
+    }
+  }
+}

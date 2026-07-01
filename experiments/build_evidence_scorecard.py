@@ -141,6 +141,14 @@ ROWS = [
      "strain_level_test", "HEASARC NICER J0537-6910 (Ho+2020 MNRAS 498,4605; 1165 obs) + PINT",
      "a stacked log-periodic comb at omega=2.58 over a >~2.8-period (long-interval) recovery",
      "data_limited"],
+    # PG.07: FIRST real phase-connected wide-ln(tau) Vela recovery (2024 giant glitch)
+    ["pulsar", "dynamic recovery comb on the 2024 Vela giant glitch (PG.07)",
+     "log-periodic comb at omega=2pi/ln((3/2)^6)=2.583 in the phase-connected post-glitch nudot(t) recovery",
+     "data_limited: FIRST real phase-connected wide-ln(tau) Vela recovery (Delta nu/nu=2.4e-6, tau_d={0.39,2.45,15.1} d, 123 d window -> reach 2.55 comb periods, widest yet vs J0537's ~1.9). Detector injection-validated on the real cadence (cascade p=0.002, smooth rejected p=0.18); omega=2.583 NOT special (p=0.23, shuffle 0.60, off-kernel lambda-battery Bonferroni ~1.0); stacked 2016/2019/2021/2024 (reach 3.41) flat p=0.53. RANGE no longer the wall (95% detect at 2.55p); limited by product=smooth glitch MODEL not residual nu(t) + ~2% (eps~exp(-pi^2/ln lambda)) amplitude",
+     None, "search_target", "boundary recovery kernel (dynamic)",
+     "strain_level_test", "2024 Vela giant glitch phase-connected .par (Zenodo 10.5281/zenodo.17735648; A&A 698 A72 2025)",
+     "a log-periodic comb at omega=2.58 is special vs the off-kernel periodogram over a >=2.8-period residual nu(t) Vela recovery",
+     "data_limited"],
     # ---- cross-domain recovery-comb search (experiments/recovery-comb-domains) ----
     ["FRB", "recovery comb in FRB burst tail (omega=2.58, stacked)",
      "log-periodic comb at omega=2pi/ln((3/2)^6) in the post-peak burst-tail recovery",
@@ -193,6 +201,22 @@ ROWS = [
      "search_target", "exact discrete->dynamic clock rate(n)=-6ln(1-n/3) (v124/v126/v147)",
      "search_target", "FRB tails / pulsar nu(t) sequences (future); QT.04 template validated; GW Stage 2 done",
      "recovery-waveform SEQUENCE shows the cascade comb at omega=2.58 (or a single recovery fits >=3 modes)",
+     "data_limited"],
+    # crust-cooling comb (experiments/crust-cooling-comb): the floor-terminated 2nd data world
+    ["X-ray", "recovery comb in neutron-star crust cooling (omega=2.583, superposed-epoch)",
+     "log-periodic comb at omega=2pi/ln((3/2)^6)=2.583 + protected floor w0>0 in the kT_eff(t) crust-cooling relaxation (the floor-terminated 2nd data world)",
+     "data_limited: 8 cooling episodes / 6 quasi-persistent transients (KS 1731-260, MXB 1659-29 x2, XTE J1701-462, EXO 0748-676, MAXI J0556-332 x2, Aql X-1; 67 kT_eff epochs transcribed from published tables). Every curve range-blind for the (3/2)^6 comb (best 2.46<2.8 periods) -> phase-incoherent kernel stack n_used=0; superposed-epoch pooled stack (3.08 periods) -> omega=2.583 NOT special (p=0.45, clean NULL, phase-aligned assumption); TFPT lambda-battery NULL after Bonferroni (global p=1.0); 7/8 episodes show a nonzero core-equilibrium floor. Injection on the real sampling: strong comb (eps=15%) recovered 100%, null FA 5%, but predicted eps~2% detected only 2% -> underpowered (density-poor)",
+     None, "search_target", "boundary recovery kernel (dynamic, surface/non-horizon caveat)",
+     "search_target", "published crust-cooling tables: Merritt+2016 (KS1731), Parikh+2019 (MXB1659), Fridriksson+2011 (XTEJ1701), Degenaar+2014 (EXO0748), Parikh+2017 (MAXIJ0556), Li/Ootes+2019 (AqlX-1)",
+     "the omega=2.583 comb is special vs the off-kernel periodogram in the superposed-epoch stacked cooling ensemble",
+     "data_limited"],
+    # comb-meta-limit (experiments/comb-meta-limit): first quantitative UL on the comb amplitude eps
+    ["cross-domain", "meta-analytic UL on recovery-comb amplitude eps (omega=2.583)",
+     "eps = exp(-pi^2/ln((3/2)^6)) = 0.0173 (~2%)",
+     "boundary/horizon-scoped: data_limited (NO horizon channel yields an absolute eps -- GW single-event bend degenerate, FRB raw tails absent/linear-intensity, A2 sub-SNR); all-channel universal-DSI 95% UL eps<0.120 (HKSJ over surface log-flux A1/A4/A5, ~6.9x the 2% prediction); injection self-consistent (inject 5% -> recover 4.8%, UL 5.5%; coverage 0.92)",
+     None, "search_target", "boundary recovery kernel (meta-analytic UL)",
+     "search_target", "recovery-comb-domains A1/A4/A5 + pulsar PG.05 + GW/FRB (read-only); DL+Hartung-Knapp random-effects UL",
+     "the boundary/horizon-scoped joint 95% UL on eps falls below 2% (soft constraint on the dynamic kernel)",
      "data_limited"],
     # ---- lab (experiments/lab-residuals) ----
     ["lab", "muon g-2 Delta a_mu (WP2020 dispersive)", "2.879e-9",
@@ -405,6 +429,17 @@ ROWS = [
      "bridge", "carrier half-spinor (v244/v245)",
      "not_applicable", "spectral-action matter content (v245, internal identity)",
      "the carrier 16 fails to be an anomaly-free SM generation", "consistent"],
+    # ---- proton decay (experiments/proton-decay): optional gauged carrier-PS->SO(10) UV branch B ----
+    ["proton decay",
+     "proton lifetime tau_p (p->e+pi0), carrier-PS->SO(10) branch B",
+     "+(15,1,1) [E8's single 45]: tau_p(e+pi0)=1.46e35 yr (1-loop)/7.7e33 (2-loop); minimal 16H=4.2e33 (excluded); M_PS=scalaron scale",
+     "minimal 16H KILLED by Super-K (>2.4e34); +(15,1,1) clears at 1-loop but 2-loop 7.7e33<Super-K = latent tension; Hyper-K ~1e35 (e+pi0) decisive this decade; p->nubar K+ subdominant (data_limited)",
+     None, "bridge",
+     "carrier-PS->SO(10) dim-6 X,Y gauge exchange at M_GUT (optional UV branch B; v266/v249)",
+     "downstream_bridge",
+     "proton-decay (2-step RGE) vs Super-K PRD102 112011 (e+pi0)/PRD90 072005 (nuK+); Hyper-K arXiv:1805.04163, DUNE arXiv:2503.23291, JUNO CPC47 113002",
+     "Hyper-K reaches ~1e35 yr (p->e+pi0) with no signal, or the 2-loop-low M_GUT holds -> +(15,1,1) excluded (last E8-allowed content; minimal dead, 126 E8-forbidden -> PS branch B killed)",
+     "tension"],
     # ---- extended signatures (experiments/extended-signatures) ----
     ["FRB", "joint echo x polarisation (EXT.1)", "echo 64/729 AND mu4/PA in same source",
      "data_limited without FAST/Blinkverse on disk; Fisher stack when data present", None,
@@ -513,8 +548,15 @@ OVERRIDES: dict[str, dict] = {
     "CCBH cosmological coupling": {"alternative_group": "w_de_eos", "discriminative_power": "weak"},
     "cosmic spin handedness": {"discriminative_power": "weak", "decision_horizon": "long_term"},
     # 3/8 is shared by every SU(5)/SO(10) GUT -> not TFPT-discriminating; the M_Z gap is the
-    # universal SM non-unification, not a TFPT-specific tension.
-    "Weinberg angle sin^2 th_W": {"discriminative_power": "weak"},
+    # universal SM non-unification, not a TFPT-specific tension. Grouped with proton decay:
+    # sin^2_W(3/8) and tau_p(branch B) are both downstream of the SAME carrier-PS->SO(10)
+    # unification story -> ONE independence_group, never two independent hits.
+    "Weinberg angle sin^2 th_W": {"discriminative_power": "weak",
+                                  "independence_group": "carrier_ps_so10_uv_branch"},
+    # proton lifetime: OPTIONAL gauged UV branch B (not the default boundary-only reading);
+    # weakly discriminating (generic GUT signature), near-term decisive (Hyper-K this decade).
+    "proton lifetime tau_p": {"discriminative_power": "weak", "decision_horizon": "near_term",
+                              "independence_group": "carrier_ps_so10_uv_branch"},
     # --- Higgs near-criticality: show the two-axis pull, not just a green label ---
     "Higgs near-criticality": {"lambda_pull_sigma": 2.5, "beta_lambda_pull_sigma": "near_zero",
                                "status_note": "near critical; exact double-critical surface "

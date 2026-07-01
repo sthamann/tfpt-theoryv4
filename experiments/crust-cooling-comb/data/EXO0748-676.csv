@@ -1,0 +1,16 @@
+# source,EXO0748-676
+# provenance,"Degenaar et al. 2014, ApJ 791, 47, Table 2 (kT_eff^inf; t0 = MJD 54714, Degenaar+2009; 90% CL errors). 1980 Einstein pre-outburst point excluded (not part of the cooling)."
+# ingest,transcribed
+# notes,Cooled ~129->110 eV; shallow swing. (Parikh+2020 later report a late-time rise.)
+t_days_since_outburst,kT_eff_eV,err
+41.500,129.1,2.3
+62.000,126.1,2.2
+172.000,122.6,2.6
+194.000,120,2
+278.000,117.8,2.5
+299.000,115.5,2.2
+592.000,116.8,2.5
+650.000,116.2,1.9
+775.000,115.4,2.2
+1031.000,117.6,2.2
+1791.000,109.9,2

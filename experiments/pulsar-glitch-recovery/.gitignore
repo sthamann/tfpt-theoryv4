@@ -20,6 +20,14 @@ data/nicer_j0537/*
 !data/nicer_vela/
 data/nicer_vela/*
 !data/nicer_vela/vela_observations.csv
+# PG.07: the 2024 Vela giant-glitch release (Zenodo 10.5281/zenodo.17735648).
+# Commit the tiny phase-connected .par (provenance) + the derived nudot(t) CSV;
+# ignore any large raw tarballs pulled alongside it.
+!data/vela_2024/
+data/vela_2024/*
+!data/vela_2024/J0835-4510_long_F3.par
+!data/vela_2024/vela2024_nudot.csv
+!data/vela_2024/vela_glitch_recoveries.csv
 *.tar.gz
 
 # generated plots (the small results.json summary IS committed)

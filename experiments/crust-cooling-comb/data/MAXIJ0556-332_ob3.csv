@@ -1,0 +1,11 @@
+# source,MAXIJ0556-332
+# provenance,"Parikh et al. 2017, ApJL 851, L28, Table 1 (After Outburst III), re-zeroed to end of outburst III. t0(OBIII) ESTIMATED ~1443 d after end of OB I (paper: last point ~350 d after OBIII end); re-cooling ~167->131 eV."
+# ingest,transcribed (t0 ESTIMATED)
+# notes,Outburst III reheated the crust to ~167 eV; independent re-cooling epoch.
+t_days_since_outburst,kT_eff_eV,err
+7.600,166.9,1.8
+40.100,155.1,2.8
+101.200,142.9,3.3
+127.500,139.9,1.4
+232.400,135.6,3.5
+350.000,130.9,1.5

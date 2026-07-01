@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[project]
+name = "crust-cooling-comb"
+version = "0.1.0"
+description = "Test the frozen TFPT dynamic log-periodic recovery comb (omega=2.583) on neutron-star crust-cooling curves: the independent, floor-terminated 2nd data world"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+    { name = "Stefan Hamann" },
+]
+keywords = [
+    "TFPT",
+    "discrete scale invariance",
+    "log-periodic",
+    "recovery comb",
+    "neutron star crust cooling",
+    "protected floor",
+]
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.11",
+]
+
+[project.optional-dependencies]
+dev = ["ruff>=0.5"]
+
+[project.scripts]
+tfpt-crust = "tfpt_crust.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tfpt_crust"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
