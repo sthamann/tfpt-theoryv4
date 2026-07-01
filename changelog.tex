@@ -60,6 +60,31 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-07-01 (\texttt{v465} --- the cross-sector one-parameter seed test: a CMB birefringence angle and a quark Cabibbo angle point to the same seed within $0.01\sigma$, the $\theta_{13}$-independent externally-runnable slice of \texttt{v306})}
+\begin{itemize}
+\item \textbf{\texttt{v465\_seed\_crosssector\_joint.py} (\texttt{SEED.CROSSSECTOR.01}).} The sharpest
+falsifiable signature of a \emph{shared-origin} theory is a correlation no non-shared-origin model
+predicts. In the Standard Model the cosmic-birefringence rotation $\beta$ (a CMB $EB/TB$ polarisation
+observable) and the Cabibbo angle $\lambda_C{=}|V_{us}|$ (a quark-flavour observable) are unrelated;
+TFPT reads both as functions of the \emph{one} axiom seed $\varphi_0{=}1/(6\pi){+}48c_3^4$.
+\textbf{[E]} plumbing: the axiom $\varphi_0$ reproduces the frozen $\lambda_C$, $\sin^2\theta_{12}$,
+$\beta$ to $10^{-9}$. \textbf{[N] cross-sector (headline):} back-solving $\varphi_0$ \emph{independently}
+from $\beta$ (CMB; ACT DR6 $+$ Planck PR4 combined) and from $\lambda_C$ (quark; PDG 2024) gives the
+same seed within $0.01\sigma_{\mathrm{comb}}$. \textbf{[N] one-parameter fit:} the error-weighted mean
+of the three back-solved $\varphi_0$ reproduces the axiom to $0.06\%$; the joint $\chi^2$ at the axiom
+(zero free parameters, $3$ dof) is $0.007$, $\chi^2/\mathrm{dof}{<}1$, combined pull $0.08\sigma$.
+\textbf{[N] $\theta_{13}$ exclusion declared:} adding $\sin^2\theta_{13}$ raises $\chi^2$ by ${\sim}4$
+(the documented ${\sim}2\sigma$ pressure point, \texttt{v328}/\texttt{v338}), so this slice is the honest
+$\theta_{13}$-independent statement, not a hidden dilution. \textbf{[N] power:} a data$\leftrightarrow$formula
+shuffle explodes the cluster $\chi^2$ by ${>}5{\times}10^4$. A consistency / out-of-sample statistic
+(a subset of \texttt{v306}); $\varphi_0$ is fixed by the axioms, so it upgrades \emph{no} prediction and
+closes \emph{no} gate. Python-only (floats).
+\item \textbf{Integration.} Registered in \texttt{run\_all.py} and \texttt{script\_registry.csv}
+(cluster \texttt{registry}); ledger row \texttt{SEED.CROSSSECTOR.01}; cited in \texttt{tfpt\_5\_redteam}
+(the seed-cross-validation firewall winbox, alongside \texttt{v305}/\texttt{v306}) and in the
+\texttt{origin\_theory} birefringence dependency chain; Python-only (flagged in the Wolfram README).
+\end{itemize}
+
 \subsection*{2026-06-30 (\texttt{v463}/\texttt{v464} + Lean + Wolfram --- the $c{=}8$ holomorphic-uniqueness pin and the one-particle realisation rigidity: the \texttt{SEAM.EQUIV.01} residual reduced to \emph{entirely certification} on both halves)}
 \begin{itemize}
 \item \textbf{The bird's-eye reframing.} The recent G-block modules all sharpened the \emph{target} of the

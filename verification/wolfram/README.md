@@ -154,7 +154,11 @@ generator-economy firewall), `v306_seed_crossval.py` (the leave-one-out seed
 cross-validation) and `v307_data_watchdog.py` (the decision pipeline over the
 frozen registry) — are structural/statistical/data-confrontation modules and
 are therefore Python-only by the same convention (no exact algebraic result is
-added, so the Wolfram exact-check count is unchanged).
+added, so the Wolfram exact-check count is unchanged). The 2026-07-01 cross-sector
+seed slice `v465_seed_crosssector_joint.py` (the θ13-independent β + λ_C
+back-solve, a subset of `v306`) is likewise a statistical consistency module,
+Python-only (no exact algebraic result added; the Wolfram exact-check count stays
+unchanged).
 
 The 2026-06-22 **cyclotomic/Galois arithmetic arc** added ten exact checks
 (275 → 285): `v313_golden_atoms_spectral.py` (the affine-E8 charpoly factors

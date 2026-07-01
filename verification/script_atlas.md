@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`458` registered scripts · `524` ledger claims · `10` clusters.
+`459` registered scripts · `525` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -600,7 +600,7 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
 - **v464_seam_oneparticle_rigidity** [E/C/O] `SEAM.EQUIV.ONEPARTICLE.01` — SEAM.EQUIV.ONEPARTICLE.01: the one-particle RIGIDITY + scaling limit attacking R1, the REALISATION input of SEAM.EQUIV.01 (A of the A+B round). The seam is quasi-free (v113/v160/v1
   - deps: v286_seam_equivalence_contract, v461_seam_strict_locality, v113, v160, v161, v426, v450, v463 · cited: research contracts
 
-### `registry` — Blind registry & red-team follow-ups (v84–v175)  (180 scripts)
+### `registry` — Blind registry & red-team follow-ups (v84–v175)  (181 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
 
 - **v84_frozen_registry** [E] `REG.FREEZE.01` — blind-prediction registry FROZEN 2026-06-09: every dimensionless prediction of record at 25 digits, re-derived from the two axioms each run (formula↔value lock); exactly ONE θ₁₂ pr
@@ -963,6 +963,8 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
   - deps: v432_overdet_floor, v100, v305, v382_alpha_quillen_exact, v187 · cited: safeguards
 - **v437_e8_degree_joint** [E] `E8.DEGREE.JOINT.01` — E8.DEGREE.JOINT.01: a CONSOLIDATION of v6/v66/v355/v431 deriving more from the E8 Casimir degrees WITHOUT crossing the v354/v355 anti-numerology line -- no new per-degree coinciden
   - deps: v354_e8_reverse_audit, v431_e8_degree_ladder, v6, v66, v355, v431 · cited: 5 redteam
+- **v465_seed_crosssector_joint** [E] `SEED.CROSSSECTOR.01` — SEED.CROSSSECTOR.01: the cross-sector one-parameter seed test -- the theta13-independent, externally-runnable slice of v306. TFPT says a CMB EB/TB birefringence angle beta and a qu
+  - deps: v306_seed_crossval, v23_anchor_generator, v84_frozen_registry · cited: origin theory, 5 redteam
 
 ## Supersede map — do NOT reuse the left-hand claim
 
@@ -981,13 +983,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×62, `v336`×31, `QGEO.SYM.01`×31, `v216`×18, `QG.AMB.01`×17, `v76`×17, `v56`×17, `E8.GLU.01`×16, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v312`×14, `v54`×13, `v323`×12, `REG.FREEZE.01`×12, `AX.P1.01`×11
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×62, `v336`×31, `QGEO.SYM.01`×31, `v216`×18, `QG.AMB.01`×17, `v76`×17, `v56`×17, `E8.GLU.01`×16, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v312`×14, `v54`×13, `REG.FREEZE.01`×13, `v323`×12, `AX.P1.01`×11
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v453_seam_mu4_from_marks** — `SEAM.RIGIDITY.MU4FROMMARKS.01`
 - **v454_seam_edge_virasoro** — `SEAM.EQUIV.EDGE.VIRASORO.01`
 - **v455_seam_bw_uniform** — `SEAM.EQUIV.BW.UNIFORM.01`
 - **v456_seam_chirality_from_c3** — `SEAM.S3.FROM-P1.01`
@@ -999,4 +1000,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v462_seam_spinor_continuum** — `SEAM.EQUIV.SPINOR.01`
 - **v463_seam_c8_holomorphic_uniqueness** — `SEAM.EQUIV.UNIQ.01`
 - **v464_seam_oneparticle_rigidity** — `SEAM.EQUIV.ONEPARTICLE.01`
+- **v465_seed_crosssector_joint** — `SEED.CROSSSECTOR.01`
 

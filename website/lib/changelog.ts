@@ -42,6 +42,550 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-07-01",
+    "dateLabel": "2026-07-01",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v465"
+      },
+      {
+        "k": "t",
+        "v": " — the cross-sector one-parameter seed test: a CMB birefringence angle and a quark Cabibbo angle point to the same seed within "
+      },
+      {
+        "k": "m",
+        "v": "0.01\\sigma"
+      },
+      {
+        "k": "t",
+        "v": ", the "
+      },
+      {
+        "k": "m",
+        "v": "\\theta_{13}"
+      },
+      {
+        "k": "t",
+        "v": "-independent externally-runnable slice of "
+      },
+      {
+        "k": "c",
+        "v": "v306"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v465_seed_crosssector_joint.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEED.CROSSSECTOR.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The sharpest falsifiable signature of a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "shared-origin"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " theory is a correlation no non-shared-origin model predicts. In the Standard Model the cosmic-birefringence rotation "
+        },
+        {
+          "k": "m",
+          "v": "\\beta"
+        },
+        {
+          "k": "t",
+          "v": " (a CMB "
+        },
+        {
+          "k": "m",
+          "v": "EB/TB"
+        },
+        {
+          "k": "t",
+          "v": " polarisation observable) and the Cabibbo angle "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_C{=}|V_{us}|"
+        },
+        {
+          "k": "t",
+          "v": " (a quark-flavour observable) are unrelated; TFPT reads both as functions of the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " axiom seed "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi_0{=}1/(6\\pi){+}48c_3^4"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "[E]"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " plumbing: the axiom "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi_0"
+        },
+        {
+          "k": "t",
+          "v": " reproduces the frozen "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_C"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\sin^2\\theta_{12}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\beta"
+        },
+        {
+          "k": "t",
+          "v": " to "
+        },
+        {
+          "k": "m",
+          "v": "10^{-9}"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "[N] cross-sector (headline):"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " back-solving "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi_0"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "independently"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " from "
+        },
+        {
+          "k": "m",
+          "v": "\\beta"
+        },
+        {
+          "k": "t",
+          "v": " (CMB; ACT DR6 "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " Planck PR4 combined) and from "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_C"
+        },
+        {
+          "k": "t",
+          "v": " (quark; PDG 2024) gives the same seed within "
+        },
+        {
+          "k": "m",
+          "v": "0.01\\sigma_{\\mathrm{comb}}"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "[N] one-parameter fit:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the error-weighted mean of the three back-solved "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi_0"
+        },
+        {
+          "k": "t",
+          "v": " reproduces the axiom to "
+        },
+        {
+          "k": "m",
+          "v": "0.06\\%"
+        },
+        {
+          "k": "t",
+          "v": "; the joint "
+        },
+        {
+          "k": "m",
+          "v": "\\chi^2"
+        },
+        {
+          "k": "t",
+          "v": " at the axiom (zero free parameters, "
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": " dof) is "
+        },
+        {
+          "k": "m",
+          "v": "0.007"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\chi^2/\\mathrm{dof}{<}1"
+        },
+        {
+          "k": "t",
+          "v": ", combined pull "
+        },
+        {
+          "k": "m",
+          "v": "0.08\\sigma"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "[N] "
+            },
+            {
+              "k": "m",
+              "v": "\\theta_{13}"
+            },
+            {
+              "k": "t",
+              "v": " exclusion declared:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " adding "
+        },
+        {
+          "k": "m",
+          "v": "\\sin^2\\theta_{13}"
+        },
+        {
+          "k": "t",
+          "v": " raises "
+        },
+        {
+          "k": "m",
+          "v": "\\chi^2"
+        },
+        {
+          "k": "t",
+          "v": " by "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}4"
+        },
+        {
+          "k": "t",
+          "v": " (the documented "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}2\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " pressure point, "
+        },
+        {
+          "k": "c",
+          "v": "v328"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v338"
+        },
+        {
+          "k": "t",
+          "v": "), so this slice is the honest "
+        },
+        {
+          "k": "m",
+          "v": "\\theta_{13}"
+        },
+        {
+          "k": "t",
+          "v": "-independent statement, not a hidden dilution. "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "[N] power:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " a data"
+        },
+        {
+          "k": "m",
+          "v": "\\leftrightarrow"
+        },
+        {
+          "k": "t",
+          "v": "formula shuffle explodes the cluster "
+        },
+        {
+          "k": "m",
+          "v": "\\chi^2"
+        },
+        {
+          "k": "t",
+          "v": " by "
+        },
+        {
+          "k": "m",
+          "v": "{>}5{\\times}10^4"
+        },
+        {
+          "k": "t",
+          "v": ". A consistency / out-of-sample statistic (a subset of "
+        },
+        {
+          "k": "c",
+          "v": "v306"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi_0"
+        },
+        {
+          "k": "t",
+          "v": " is fixed by the axioms, so it upgrades "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "no"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " prediction and closes "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "no"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " gate. Python-only (floats)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Integration."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Registered in "
+        },
+        {
+          "k": "c",
+          "v": "run_all.py"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "script_registry.csv"
+        },
+        {
+          "k": "t",
+          "v": " (cluster "
+        },
+        {
+          "k": "c",
+          "v": "registry"
+        },
+        {
+          "k": "t",
+          "v": "); ledger row "
+        },
+        {
+          "k": "c",
+          "v": "SEED.CROSSSECTOR.01"
+        },
+        {
+          "k": "t",
+          "v": "; cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_5_redteam"
+        },
+        {
+          "k": "t",
+          "v": " (the seed-cross-validation firewall winbox, alongside "
+        },
+        {
+          "k": "c",
+          "v": "v305"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v306"
+        },
+        {
+          "k": "t",
+          "v": ") and in the "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": " birefringence dependency chain; Python-only (flagged in the Wolfram README)."
+        }
+      ]
+    ]
+  },
+  {
     "date": "2026-06-30",
     "dateLabel": "2026-06-30",
     "heading": [
