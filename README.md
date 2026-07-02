@@ -1,6 +1,6 @@
 # TFPT — Topological Fixed-Point Theory
 
-> **Version 5.3** · A closed **discrete compiler** for the dimensionless skeleton of the Standard Model and
+> **Version 5.4** · A closed **discrete compiler** for the dimensionless skeleton of the Standard Model and
 > cosmology, built from **two inputs** plus typed physical anchors for the absolute scales.
 > Every load-bearing claim is machine-checked by an independent verification suite.
 
@@ -432,7 +432,7 @@ A development timeline of all 464 modules is in `introduction.tex` (and on the w
 - **Website (interactive):** <https://www.fixpoint-theory.com> — the reading guide, the compiler walkthrough,
   the interactive verification DAG, and an in-browser (Pyodide) reproducer for every script.
 - **Source code & documents:** <https://github.com/sthamann/tfpt-theoryv4>
-- **Archived deposit (DOI):** <https://doi.org/10.5281/zenodo.20846087> (Zenodo, v5.3)
+- **Archived deposit (DOI):** <https://doi.org/10.5281/zenodo.20846087> (Zenodo, v5.4)
 - **AI/agent context file:** <https://www.fixpoint-theory.com/llms.txt>
 
 ```bibtex
@@ -441,7 +441,7 @@ A development timeline of all 464 modules is in `introduction.tex` (and on the w
             the Standard-Model Skeleton Derived},
   author = {Hamann, Stefan and Rizzo, Alessandro},
   year   = {2026},
-  note   = {Version 5.3},
+  note   = {Version 5.4},
   doi    = {10.5281/zenodo.20846087},
   url    = {https://doi.org/10.5281/zenodo.20846087}
 }
