@@ -48,6 +48,7 @@ import matplotlib.pyplot as plt  # noqa: E402  (backend must be set before pyplo
 
 from .strain_data import (
     apply_whitening,
+    detector_frame_mass,
     fit_and_subtract_qnm,
     qnm_220,
     read_hdf5,
@@ -199,9 +200,10 @@ def search_event_dynamic(event: str, strain_dir, af: float = 0.69,
                          seed: int = 0) -> DynamicEventResult:
     """Run the dynamic walled-clock matched filter on the real strain of `event`."""
     meta = json.loads((Path(strain_dir) / f"{event}_meta.json").read_text(encoding="utf-8"))
-    merger_gps, mf = float(meta["gps"]), float(meta["mf"])
+    merger_gps, mf_src = float(meta["gps"]), float(meta["mf"])
+    mf = detector_frame_mass(event, mf_src)      # observed (redshifted) ringdown
     f0, tau = qnm_220(mf, af)
-    res = DynamicEventResult(event, mf, round(tau * 1e3, 2))
+    res = DynamicEventResult(event, round(mf, 1), round(tau * 1e3, 2))
     rng = np.random.default_rng(seed)
 
     for det, fname in meta["files"].items():
@@ -323,7 +325,7 @@ def _template_curve(t: np.ndarray, env: np.ndarray) -> tuple[np.ndarray, float]:
 def _loudest_on_source(event: str, strain_dir):
     """(det, t, env, fit_curve, q_hat, r2) for the highest-R^2 on-source detector of `event`."""
     meta = json.loads((Path(strain_dir) / f"{event}_meta.json").read_text(encoding="utf-8"))
-    f0, tau = qnm_220(float(meta["mf"]))
+    f0, tau = qnm_220(detector_frame_mass(event, float(meta["mf"])))
     best = None
     for det, fname in meta["files"].items():
         s = read_hdf5(str(Path(strain_dir) / Path(fname).name))

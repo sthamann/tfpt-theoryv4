@@ -724,7 +724,7 @@ export const papers: Paper[] = [
     contribution: [
       "Target A (seam–Calderón = (E8)₁ net): reduced to ONE residual — boundary-net holomorphy + c = 8 (⇔ the index-4 inclusion); E₈ and bulk uniqueness then follow (v83/v87/v89). The free-bulk premise is a fixed-point theorem (quasi-free ⇒ κ₂ₙ=0) and the infinite Schwinger cone is eliminated (cone gap = one-particle gap (2/3)⁶), so the reduction adds no new open content. Net existence and full-cone reflection positivity are discharged to [E] (the CAR second-quantisation functor reduces full-cone RP for every mode to the one-particle contraction, verified on the complete 2¹⁶-dim Fock space; v175), and A2 is an assembled, verified (E₈)₁ certificate. The seam realisation is the keystone SEAM.EQUIV.01 — the raw RP seam IS the holomorphic (E₈)₁ net at τ=i — now closed modulo cited theorems: an explicit gapped lattice model (v367/v368) and the S3 closure stack (v376–v379) pin the target at every computable level, Lean-pinned (FORM.SEAM.MMST.01) to the published MMST/Adamo theorems, leaving [O] = the cited continuum scaling-limit existence only (v336) — its 128-spinor extension leg now certified at net level by the peer-reviewed crossed-product package (v469: locality integer h_s = 16/16 = 1 ∈ ℤ, Longo–Rehren 1995 / Böckenhauer 1996 / Böckenhauer–Evans 1998 / KLM μ = 4/2² = 1 ⇒ holomorphic; the AGT/AMT lattice-VOA route demoted to an independent second witness), with the realisation input reduced from model fiat to invariant level R1′ (quasi-free + gap + class D + c₋ = 8 from P1; computed FHS Chern |C| = 1, ν = 16); SEAM.EQUIV.01 stays [O]. Its conformal-deck face QGEO.SYM.01 is a corollary (v335). The full sprint-by-sprint reduction (v176 → v302) is recorded on the /changelog page and in the research contracts.",
       "Target B (g_car = 5 Pascal selection): survives narrowed — residual = the degree-2 truncation (Quadratic Boundary Locality), since tied to the boundary-net premise (v108–v113).",
-      "Target C (k = c₃/2, S = A/4): survives — the only anchor is the UV-sensitive absolute 1/G.",
+      "Target C (k = c₃/2, S = A/4): survives narrowed — the replica/EH chain is now exercised numerically at the collar level with the seam's own kernel (v471); the residual is the cited continuum scaling limit (v336) plus the UV-sensitive absolute 1/G anchor; SEAM.THEOREM.01 stays [O].",
       "Targets D/E (one scale v_geo): survive narrowed — CP phases and the EW/reheating/leptogenesis scales are explicitly outside v_geo.",
       "Target F (perturbative 4D-QFT + scale round, v269–v275): survives narrowed — the two attacks that landed are resolved: the R²/Weyl² Stelle ghost is a Seeley–DeWitt truncation artefact (perturbative spin-2 graviton unitarity established [C], v304/v370/v380) and the ambient QG.AMB.01 measure is discharged as a [C] redundancy (v369+v379).",
     ],
@@ -749,7 +749,7 @@ export const papers: Paper[] = [
       },
       {
         title: "Targets B–E — narrowed, with named residuals",
-        body: "B: the Pascal ladder 2^{g−1} = Σ_{k≤2} C(g,k) is exactly equivalent to the degree-2 truncation; the residual is the QBL premise, since merged with the boundary-net gate. C: the replica chain is derived; the absolute 1/G stays the one anchor. D: the frozen CP phase survives at +0.98σ with a decision threshold σ_γ ≤ 0.96°. E: v_geo carries the dimensionless theory; EW/reheating scales are typed interfaces.",
+        body: "B: the Pascal ladder 2^{g−1} = Σ_{k≤2} C(g,k) is exactly equivalent to the degree-2 truncation; the residual is the QBL premise, since merged with the boundary-net gate. C: the replica chain is derived and now exercised numerically on the discretized collar with the seam's own kernel (v471) — the kernel premise is discharged at the finite level; what remains is the continuum leg (MMST class, v336) plus the one dimensionful anchor (v152), gate [O]. D: the frozen CP phase survives at +0.98σ with a decision threshold σ_γ ≤ 0.96°. E: v_geo carries the dimensionless theory; EW/reheating scales are typed interfaces.",
       },
       {
         title: "Target F — the perturbative 4D-QFT + scale round (v269–v275)",
@@ -955,7 +955,7 @@ export const papers: Paper[] = [
       },
       {
         title: "The '8' is triply forced",
-        body: "The seam denominator is fixed three independent ways. If the seam is a horizon, the gravitational 8π forces c₃; it must then coincide with the geometric 2|μ₄| (Gauss–Bonnet) and the lattice rank E₈ — all three give 8.",
+        body: "The seam denominator is fixed three independent ways. If the seam is a horizon, the gravitational 8π forces c₃; it must then coincide with the geometric 2|μ₄| (Gauss–Bonnet) and the lattice rank E₈ — all three give 8. The Seam–Horizon gate (SEAM.THEOREM.01) stays [O]: v150–v152 closed the mechanism and merged the normalisation into the one anchor, and v471 now exercises the replica chain numerically on the discretized collar with the seam's own kernel (real replica sheets n=2,3; BFK/Calderón conically clean on the kernel; the attractor mode's IR divergence regulated by the recovery gap) — the residual retypes to the cited continuum scaling limit (MMST class, the same single residual as SEAM.EQUIV.01) plus the one dimensionful anchor.",
         formulas: [
           "c_3 = \\frac{1}{|\\mathbb{Z}_2|\\oint_{S^2}K\\,dA} = \\frac{1}{2\\cdot 4\\pi} = \\frac{1}{8\\pi}, \\qquad 8\\pi = |\\mathbb{Z}_2|\\cdot 2\\pi\\chi(S^2)",
           "S = 4\\pi k\\,A = 2\\pi c_3\\,A = \\tfrac{1}{4}A \\iff 2\\pi c_3 = \\tfrac{1}{4}",
@@ -1048,7 +1048,7 @@ export const papers: Paper[] = [
       {
         label: "Area law",
         latex: "S = 2\\pi c_3\\,A = \\tfrac{1}{4}A \\iff c_3 = \\tfrac{1}{8\\pi}",
-        description: "c₃ is the unique value with the Bekenstein–Hawking 1/4. [I/L]",
+        description: "c₃ is the unique value with the Bekenstein–Hawking 1/4; the replica chain is exercised on the discretized collar (v471), the gate stays [O] (continuum leg + anchor). [I/L]",
       },
     ],
     highlights: [

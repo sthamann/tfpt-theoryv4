@@ -608,7 +608,7 @@
   "date": "2026-06-15"
  },
  "tfpt_4_frontier::section::Full quantum gravity --- induced from the boundary kernel::1": {
-  "hash": "d4dce6a3e41a",
+  "hash": "f12b84e739f2",
   "date": "2026-07-02"
  },
  "tfpt_4_frontier::section::Summary::1": {
@@ -704,8 +704,8 @@
   "date": "2026-07-02"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {
-  "hash": "6d4b577571f2",
-  "date": "2026-06-23"
+  "hash": "ca323e2f7f34",
+  "date": "2026-07-02"
  },
  "tfpt_research_contracts::section::Certifiability and recommended order::1": {
   "hash": "0e935206f060",
@@ -744,19 +744,19 @@
   "date": "2026-07-01"
  },
  "origin_theory::section::The seam and the horizon: the precise statement::1": {
-  "hash": "1800f1a1cec2",
-  "date": "2026-06-23"
+  "hash": "8e2d8c77681c",
+  "date": "2026-07-02"
  },
  "origin_theory::section::Consequences, and the whole story \\mC::1": {
   "hash": "d4c934798cd6",
   "date": "2026-06-23"
  },
  "origin_theory::section::A closure program (next phase) \\mO::1": {
-  "hash": "4ca669130012",
-  "date": "2026-06-24"
+  "hash": "a25346c2cec8",
+  "date": "2026-07-02"
  },
  "origin_theory::section::Honest status::1": {
-  "hash": "d3be9fd8f2bf",
+  "hash": "a26b282faf57",
   "date": "2026-07-02"
  },
  "origin_theory::section::Appendix: computational verification::1": {

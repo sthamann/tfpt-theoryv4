@@ -80,18 +80,26 @@ ROWS = [
      "residual has lambda^2 tail OR not 1/r^2 OR no E.B sign flip", "data_limited"],
     # ---- GW (experiments/gw-ringdown-echo) ----
     ["GW", "ringdown echo amplitude ratio", "A_{n+1}/A_n <= (2/3)^6",
-     "catalog reach rho_echo~6.3; Stage-1 matched-filter validated (3/3); real GWOSC strain "
-     "(GW150914,GW190521) run = no kernel-ratio echo coincident in >=2 detectors (q_hat~1, free-ratio rejected)",
+     "Stage-1 matched-filter validated (3/3); real GWOSC strain spans the 10 loudest ringdowns incl. "
+     "GW250114 (SNR 78.6, O4b), all templates redshift-corrected to detector-frame f0 -> no kernel-"
+     "ratio echo in any event; Stage-1b STACK over 23 detector streams: stacked p=0.262, kernel-"
+     "consistent streams 0/23; Stage-1c SIGNATURE BATTERY (energy-reading (2/3)^3, step 2/3, mu4 "
+     "per-bounce phases {0,pi/2,pi,3pi/2} = boundary-birefringence analogue, lags 0.5-350 ms incl. "
+     "Planckian window, joint 220+221 subtraction, Bonferroni x12): NO_VARIANT_ECHO; Stage-1d POINT "
+     "TEST (lag FIXED by C=3/8: dt=2.288 M_det +-25%, kernel ratios, + morphology-robust incoherent "
+     "per-echo statistic, Bonferroni x10): NO_POINT_ECHO (best p_bonf=0.013, single stream) -- the "
+     "null is robust against alternative signature readings; path birefringence cancels in the ratio",
      None, "search_target", "boundary recovery kernel",
-     "strain_level_test", "LVK GWTC-5.0 (390 canonical) + real 32s strain (GW150914/GW190521)",
-     "strain-level echo with ratio >>(2/3)^6 across events", "data_limited"],
+     "strain_level_test", "LVK GWTC-5.0 + real 32s strain (10 loudest ringdowns incl. GW250114, O4b)",
+     "strain-level echo with ratio >>(2/3)^6 across events", "consistent"],
     ["GW", "dynamic walled-clock recovery bend (Stage 2)",
      "bend rate(2)/rate(1)=ln3/ln(3/2)=2.7095 + protected floor + hard wall (v124/v147, QT.04)",
-     "NO_KERNEL_RECOVERY on real strain (q_hat~1, not the bend); identifiability: within ONE recovery "
-     "the bend is degenerate with single-exp (two-mode R^2 gain ~1.3e-3, even noise-free) -> a single "
-     "ringdown cannot carry the bend; discriminating signature is the cascade comb (omega=2.58, eps~2%)",
+     "NO_KERNEL_RECOVERY on real strain incl. GW250114 (loudest ringdown, O4b): q_hat~1, not the bend; "
+     "identifiability: within ONE recovery the bend is degenerate with single-exp (two-mode R^2 gain "
+     "~1.3e-3, even noise-free) -> a single ringdown cannot carry the bend; discriminating signature "
+     "is the cascade comb (omega=2.58, eps~2%)",
      None, "search_target", "boundary recovery kernel (dynamic)",
-     "strain_level_test", "real 32s GWOSC strain (GW150914/GW190521); QT.04 walled-clock template",
+     "strain_level_test", "real 32s GWOSC strain (GW250114/GW150914/GW190521); QT.04 walled-clock template",
      "a locked-bend (2.7095) two-timescale recovery coincident in >=2 detectors", "data_limited"],
     # ---- pulsar glitches (experiments/pulsar-glitch-recovery) ----
     # the missing cross-domain leg: same frozen kernel as FRB.02/09 + GW echo

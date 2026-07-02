@@ -60,6 +60,58 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-07-02 (\texttt{v471} --- the Seam--Horizon replica chain exercised numerically on the discretized collar: the kernel-identification premise of \texttt{SEAM.THEOREM.01} discharged at the finite/model level; residual retypes to the continuum MMST leg $+$ the anchor; gate stays \mO. Plus: the GW ringdown-echo channel hardened --- 10 loudest events incl.\ GW250114, redshift-corrected templates, stacked search and a 12-variant signature battery, all null)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v471\_seam\_horizon\_replica.py} (\texttt{SEAM.EHMODEL.04}).} The residual isolated by
+\texttt{v150}/\texttt{v151}/\texttt{v152} --- ``the RP seam kernel \emph{is} this BFK Calder\'on datum'' ---
+is exercised numerically on a discretized seam collar with the seam's \emph{own} kernel and \emph{real}
+replica sheets: the matched conical deficit has slope $2C(\gamma)$ on deficit cones ($0.01$--$0.05\%$) and
+replica sheets $n{=}2$ ($0.8\%$), $n{=}3$ ($1.5\%$); the EH coefficient is cutoff-independent ($0.5\%$
+drift) while the $\zeta$-scale $\mu_{\mathrm{lat}}$ drifts --- the \texttt{v152} anchor exhibited on data,
+with \emph{no} canonical $\ln(m/\mu){=}3/4$ emerging (recorded honestly); the BFK/Schur split is exact
+(${\sim}10^{-16}$) with the Calder\'on factor conically clean \emph{measured on the kernel} (pure cut-edge
+law, tip term $0$, power-checked) and the halves carrying $2C_{\mathrm{cone}}$ via Kac doubling; the
+\texttt{v302} transfer masses $6\ln(3/2)$, $6\ln 3$ sit on the calibrated EH line ($\le0.05\%$); and the
+Perron/attractor mode ($m{=}0$) is IR-divergent --- \textbf{the recovery gap $\Delta{=}6\ln(3/2)$ is what
+makes the induced-gravity coefficient finite} (the same gap that makes the attractor unique makes $1/G$
+finite). \texttt{SEAM.THEOREM.01} stays \mO; its residual retypes to the \emph{continuum} scaling limit
+(the MMST class --- the same single residual as \texttt{SEAM.EQUIV.01}, \texttt{v336}) plus the one declared
+anchor. $16/16$ checks; suite green through \texttt{v471} (465 modules); numerical (sparse lattice
+determinants), Python-only by nature. Papers updated: \texttt{origin\_theory} (new collar paragraph in the
+Seam--Horizon gapbox $+$ residual retyping), \texttt{tfpt\_research\_contracts} (R3 premise),
+\texttt{tfpt\_4\_frontier} ($3/4$ audit note), root \texttt{README}, \texttt{verification/README},
+\texttt{zenodo\_description.html}. Exploration original:
+\texttt{experiments/theory-contracts/seam\_horizon\_replica.py} ($17/17$, same day).
+\item \textbf{GW ringdown-echo channel hardened (\texttt{experiments/gw-ringdown-echo}, scorecard row
+\texttt{data\_limited}${\to}$\texttt{consistent}).} (i) Strain coverage extended to the \emph{10 loudest}
+ringdown events incl.\ GW250114 (network SNR $78.6$, O4b; new \texttt{fetch\_strain\_4096.py} crops the
+4096\,s GWOSC archive segments). (ii) \textbf{Redshift correction}: the GWTC catalogue reports source-frame
+masses, the observed ringdown is at $f_0/(1{+}z)$ --- all templates moved to detector-frame $M(1{+}z)$
+(before the fix GW190521, $z{=}0.56$, was filtered ${\sim}1.6\times$ too high); all stages re-run.
+(iii) Stage~1b \emph{stacked} search over 23 detector streams: stacked $p{=}0.262$, kernel-consistent
+streams $0/23$ --- STACKED NULL. (iv) Stage~1c \emph{signature battery} (Bonferroni $\times12$): ratio
+semantics (amplitude $(2/3)^6$ vs \emph{energy reading} $(2/3)^3$ vs step $2/3$) $\times$ $\mu_4$
+per-bounce phases $\{0,\pi/2,\pi,3\pi/2\}$ (the boundary-birefringence analogue --- path birefringence
+from parity violation $c_-{=}8$ cancels in the inter-echo ratio; only a per-reflection phase does not)
+$\times$ lags $0.5$--$350$\,ms (ECO through Planckian window), with joint $(2,2,0){+}(2,2,1)$ subtraction
+and a template-agnosticism control: \texttt{NO\_VARIANT\_ECHO} on all 10 events --- the null is robust
+against alternative signature readings. Search-target firewall unchanged: upper bound, no detection, no
+tension claim.
+\end{itemize}
+
+\subsection*{2026-07-02 (\texttt{v295} robustness patch --- external-review follow-up: the numeric $a_2$-kernel tolerance must dominate its own finite-difference floor)}
+\begin{itemize}
+\item \textbf{\texttt{v295\_flataway\_a2\_exact.py} (\texttt{FLATAWAY.A2.01}).} Alessandro's Git-baseline audit
+(commit \texttt{8cb8ad0}) hit a platform-marginal failure in check~3: the exact divided-difference $a_2$ kernel
+is compared against an $\varepsilon{=}10^{-3}$ second finite difference whose \emph{own} truncation error is
+$O(\varepsilon^2)\sim10^{-6}$, yet the tolerance was $10^{-6}$ --- on his machine $k{=}3$ landed at
+$1.1\times10^{-6}$ (ours: $2.9\times10^{-7}$). Fix: tolerance widened to $5\times10^{-6}$ so it \emph{dominates}
+the control's error floor, with the reasoning recorded in the check text; the load-bearing anchor remains the
+\emph{closed form} at machine precision (\texttt{v296}), the numeric witness stays as the independent
+cross-check. A numerical-robustness patch, no claim or status change; ledger row updated; suite green
+(\textsc{all checks passed} through \texttt{v470}).
+\end{itemize}
+
 \subsection*{2026-07-02 (\texttt{v469}/\texttt{v470} --- the closure-route round on the two named targets: the \texttt{SEAM.EQUIV.01} extension leg re-founded on 1995--2001 peer-reviewed crossed-product theorems $+$ the realisation axiom reduced to invariant level; the $\alpha^3$ level $=$ the \emph{computed} bulk Chern invariant $+$ the seam $F$-normalisation $=$ the embedding index $k_Y{=}5/3$; both targets stay \mO)}
 \begin{itemize}
 \item \textbf{\texttt{v469\_seam\_crossedproduct\_route.py} (\texttt{SEAM.EQUIV.CROSSEDPRODUCT.01}).}

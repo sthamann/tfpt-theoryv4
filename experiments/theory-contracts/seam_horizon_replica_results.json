@@ -1,0 +1,189 @@
+{
+  "N0": 64,
+  "n_r_main": 240,
+  "n_r_alt": 160,
+  "m_grid": [
+    0.02,
+    0.028,
+    0.04,
+    0.057,
+    0.08
+  ],
+  "eps_seam": 0.012,
+  "checks": [
+    {
+      "name": "EH slope, gamma/2pi = 0.25",
+      "pass": true,
+      "detail": "slope = +0.62469   2C(gamma) = +0.62500   rel.err = 0.05%"
+    },
+    {
+      "name": "EH slope, gamma/2pi = 0.5",
+      "pass": true,
+      "detail": "slope = +0.25003   2C(gamma) = +0.25000   rel.err = 0.01%"
+    },
+    {
+      "name": "EH slope, gamma/2pi = 0.75",
+      "pass": true,
+      "detail": "slope = +0.09717   2C(gamma) = +0.09722   rel.err = 0.05%"
+    },
+    {
+      "name": "EH slope, gamma/2pi = 2",
+      "pass": true,
+      "detail": "slope = -0.24813   2C(gamma) = -0.25000   rel.err = 0.75%"
+    },
+    {
+      "name": "EH slope, gamma/2pi = 3",
+      "pass": true,
+      "detail": "slope = -0.43778   2C(gamma) = -0.44444   rel.err = 1.50%"
+    },
+    {
+      "name": "EH slope stable (n_r 240 vs 160)",
+      "pass": true,
+      "detail": "slope(240) = +0.25003   slope(160) = +0.24871   drift = 0.53%"
+    },
+    {
+      "name": "intercept = the anchor (mu_lat is lattice data, not compiler data)",
+      "pass": true,
+      "detail": "mu_lat(240) = 146.9055   mu_lat(160) = 153.1279 (lattice units; drifts with the discretization -- the v152 anchor, exhibited; implied ln(m2/mu_lat) = -8.524, no canonical 3/4)"
+    },
+    {
+      "name": "Schur identity exact, gamma/2pi = 0.5",
+      "pass": true,
+      "detail": "max rel residual of logdet L = logdet halves + logdet S: 1.59e-16"
+    },
+    {
+      "name": "Schur identity exact, gamma/2pi = 0.75",
+      "pass": true,
+      "detail": "max rel residual of logdet L = logdet halves + logdet S: 2.12e-16"
+    },
+    {
+      "name": "Schur identity exact, gamma/2pi = 2",
+      "pass": true,
+      "detail": "max rel residual of logdet L = logdet halves + logdet S: 1.59e-16"
+    },
+    {
+      "name": "Calderon/Schur factor conically CLEAN (tip term T = 0 across angles)",
+      "pass": true,
+      "detail": "slope_S = [3.4992, 1.7496, -6.9984] at gamma/2pi = [0.5, 0.75, 2.0]; pure edge law E(1-q) with E = 6.9984 leaves |T| <= 0.0000 (tip scale 0.2498); power check: the same model on the FULL determinant leaves 0.0985 -- the Calderon factor alone is tip-free"
+    },
+    {
+      "name": "half determinants carry the whole tip term; Kac doubling C_cone(gamma) = 2 C_D(gamma/2) (C_N = C_D)",
+      "pass": true,
+      "detail": "gamma/2pi=0.5: tip(halves) = +0.2498 (2C_cone = +0.2500); gamma/2pi=0.75: tip(halves) = +0.0971 (2C_cone = +0.0972); gamma/2pi=2: tip(halves) = -0.2481 (2C_cone = -0.2500); doubling identity residual 0.0e+00"
+    },
+    {
+      "name": "det'(collar) EH-form, gamma/2pi = 0.5",
+      "pass": true,
+      "detail": "G(m2)+G(m3) = -4.01305 vs calibrated EH line -4.01303 (rel.err 0.00%); m2, m3 = eps*6ln(3/2), eps*6ln3; bend m3/m2 = 2.7095"
+    },
+    {
+      "name": "det'(collar) EH-form, gamma/2pi = 2",
+      "pass": true,
+      "detail": "G(m2)+G(m3) = +3.29177 vs calibrated EH line +3.29166 (rel.err 0.00%); m2, m3 = eps*6ln(3/2), eps*6ln3; bend m3/m2 = 2.7095"
+    },
+    {
+      "name": "attractor mode (m = 0) is IR-divergent; the recovery gap regulates it",
+      "pass": true,
+      "detail": "G0(240) - G0(160) = -0.10139 vs -2C ln(240/160) = -0.10137 -- the massless Perron mode's conical term runs with the IR scale; det' (attractor excluded) is finite BECAUSE Delta = 6 ln(3/2) > 0 (v302)"
+    },
+    {
+      "name": "compiler-fixed part = the mass RATIO only (audit, not a derivation)",
+      "pass": true,
+      "detail": "ln(m3/m2) = ln(ln3/ln(3/2)) = 0.99677 -- close to but NOT 1 and NOT 3/4; the absolute ln(m/mu) = 3/4 = q(A3) stays the v152 anchor"
+    },
+    {
+      "name": "capstone arithmetic: S = 4 pi (c3/2) A = A/4; c3 = 1/(8pi) unique",
+      "pass": true,
+      "detail": "4pi*(c3/2) = 1/4; solving 4pi(c/2) = 1/4 gives c = 1/(8*pi)"
+    }
+  ],
+  "eh_slopes": {
+    "16": {
+      "gamma_over_2pi": 0.25,
+      "slope": 0.62469122102772,
+      "pred_2C": 0.625,
+      "rel_err": 0.0004940463556479813,
+      "intercept": -3.5527803788986483
+    },
+    "32": {
+      "gamma_over_2pi": 0.5,
+      "slope": 0.2500263185300597,
+      "pred_2C": 0.25,
+      "rel_err": 0.00010527412023875193,
+      "intercept": -1.2475787820942825
+    },
+    "48": {
+      "gamma_over_2pi": 0.75,
+      "slope": 0.09717227735074947,
+      "pred_2C": 0.09722222222222221,
+      "rel_err": 0.0005137186780052991,
+      "intercept": -0.44418966220841716
+    },
+    "128": {
+      "gamma_over_2pi": 2.0,
+      "slope": -0.2481272468334663,
+      "pred_2C": -0.25,
+      "rel_err": 0.007491012666134833,
+      "intercept": 0.8926583441139961
+    },
+    "192": {
+      "gamma_over_2pi": 3.0,
+      "slope": -0.43778395006648707,
+      "pred_2C": -0.4444444444444444,
+      "rel_err": 0.014986112350404035,
+      "intercept": 1.4446079569670462
+    }
+  },
+  "cutoff": {
+    "slope_main": 0.2500263185300597,
+    "slope_alt": 0.24871063165413576,
+    "mu_main": 146.90554550070905,
+    "mu_alt": 153.1278661596881
+  },
+  "bfk": {
+    "32": {
+      "full": 0.24978678820150488,
+      "halves": -3.249422916363867,
+      "schur": 3.499209704565616,
+      "identity_residual": 1.593411948118567e-16
+    },
+    "48": {
+      "full": 0.09711756710851788,
+      "halves": -1.6524872851817807,
+      "schur": 1.749604852283534,
+      "identity_residual": 2.1218237803572037e-16
+    },
+    "128": {
+      "full": -0.24807252768889376,
+      "halves": 6.750346881441834,
+      "schur": -6.9984194091349075,
+      "identity_residual": 1.593411948118567e-16
+    }
+  },
+  "bfk_fit": {
+    "cut_edge_E": 6.998419409134171,
+    "tip_term_bound": 1.4694911953938572e-12,
+    "full_power_check_resid": 0.09845524017606652
+  },
+  "seam": {
+    "32": {
+      "G_m2": -2.1311721722559014,
+      "G_m3": -1.8818787037525908,
+      "pred": -4.013030077070065,
+      "rel_err": 5.1828513686924195e-06
+    },
+    "128": {
+      "G_m2": 1.7694171314215055,
+      "G_m3": 1.5223542637104401,
+      "pred": 3.291660219899845,
+      "rel_err": 3.3774820204311566e-05
+    }
+  },
+  "attractor": {
+    "g0_alt": -2.456177101299545,
+    "g0_main": -2.5575642455114576,
+    "pred_ir_run": -0.1013662770270411
+  },
+  "verdict": "17/17 checks pass. The seam-determinant -> replica -> EH -> S=A/4 chain is exhibited end-to-end at the discretized-collar level with the seam's own kernel (transfer masses 6ln(3/2), 6ln3; real replica sheets n=2,3; BFK Calderon factor conically clean; coefficient cutoff-independent; attractor mode regulated by the recovery gap). OPEN [O], unchanged in type: the continuum scaling limit (MMST class, = the single residual of SEAM.EQUIV.01) and the one dimensionful anchor (v152). NOT claimed: a continuum proof or a derivation of ln(m/mu)=3/4.",
+  "runtime_s": 3.3
+}

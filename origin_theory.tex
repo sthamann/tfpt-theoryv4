@@ -1174,7 +1174,30 @@ $q(A_3)$ normalisation is not a separate open item: $v_{\mathrm{geo}}$ (flavour,
 readings; the irreducibles stay $\{$one scale, $\pi\}$. \emph{Audit (not promoted):} the required log-ratio
 is numerically $\tfrac34=q(A_3)$ --- the target \emph{value} the anchor takes in seam units, not a
 derivation. \texttt{SEAM.THEOREM.01} stays \mO, but its residual is now precisely the
-kernel-identification premise alone (ledger \texttt{SEAM.EHMODEL.03}). \mE/\mO
+kernel-identification premise alone (ledger \texttt{SEAM.EHMODEL.03}) --- discharged at the
+finite/collar level in the next paragraph. \mE/\mO
+\smallskip\\
+\noindent\textbf{The replica chain on the collar, numerically
+(\veri{v471\_seam\_horizon\_replica.py}).} The kernel-identification premise is now
+\emph{exercised} on a discretized seam collar --- the seam's \emph{own} operator, with
+\emph{real} replica sheets, not the abstract 2d scalar: the matched conical deficit is linear
+in $\ln m$ with slope $2C(\gamma)$ on deficit cones ($0.01$--$0.05\%$) \emph{and} on replica
+sheets $n{=}2$ ($0.8\%$), $n{=}3$ ($1.5\%$); the EH coefficient is cutoff-independent
+($0.5\%$ drift) while the $\zeta$-scale $\mu_{\mathrm{lat}}$ drifts with the discretization
+--- the \vref{v152} anchor exhibited on data, with \emph{no} canonical
+$\ln(m/\mu){=}\tfrac34$ emerging (recorded honestly). The BFK split is measured on the
+kernel itself (Schur identity ${\sim}10^{-16}$; the Calder\'on factor follows a pure
+cut-edge law with tip term $0$, power-checked; the halves carry $2C_{\mathrm{cone}}$ via Kac
+doubling); the \vref{v302} transfer masses $6\ln\tfrac32$, $6\ln 3$ sit \emph{on} the
+calibrated EH line ($\le0.05\%$); and the Perron/attractor mode ($m{=}0$) is IR-divergent,
+running exactly as $-2C\ln(\mathrm{IR})$ --- \textbf{the recovery gap
+$\Delta{=}6\ln\tfrac32$ is what makes the induced-gravity coefficient finite}: the same gap
+that makes the attractor unique makes $1/G$ finite. \texttt{SEAM.THEOREM.01} stays \mO, but
+its residual \emph{retypes}: the kernel premise is discharged at the finite/model level, and
+what remains is the \emph{continuum} scaling limit of this statement (the MMST class --- the
+same single residual as \texttt{SEAM.EQUIV.01}, \vref{v336}) plus the one declared anchor
+(\vref{v152}) (ledger \texttt{SEAM.EHMODEL.04}). \mE/\mO
+\smallskip\\
 With the Einstein--Hilbert coefficient at the seam unit
 $k=\tfrac1{16\pi G}\big|_{G=1}=\tfrac{\cthree}2$,
 \[
@@ -1198,8 +1221,10 @@ the \emph{dimensionless} coefficient $k=\cthree/2$ that multiplies $\Lambda^2 f_
 normalisation. What \emph{is} cutoff-independent --- the $R^2$
 coefficient, the scalaron $M_{\mathrm{scal}}=\cthree^{7/2}\bar M_{\mathrm{Pl}}\approx3.06\times10^{13}$ GeV,
 $v_{\mathrm{GW}}=c$ --- is already derived (\veri{v36\_spectral\_action\_g2.py}). \textbf{So the central theorem
-is ``maximally closed'':} the structure is proven, the predictive gravitational content is derived, and the
-residual is the single irreducible anchor every theory must carry, \emph{not} a missing step.
+is ``maximally closed'' at the finite level:} the structure is proven, the predictive gravitational content is
+derived, the collar chain is exhibited numerically with the seam's own kernel (\vref{v471}), and the residual
+is the single irreducible anchor every theory must carry plus the continuum scaling limit (\vref{v336}) ---
+\emph{not} a missing mechanism.
 
 \smallskip\noindent\textbf{The flavor anchor is the \emph{same} anchor (\veri{v75\_upoint\_to\_vgeo.py}).} The
 absolute flavor amplitude $U_{\mathrm{point}}$ --- the only other thing that looked like an independent
@@ -1251,7 +1276,8 @@ when gapped (an area law) and grows as $\tfrac c3\log L$ when gapless. Crucially
 gapped --- by the \emph{same} gap $\Delta=6\log\tfrac32>0$ that makes the attractor unique
 (\S\ref{sec:attractor}) --- so \emph{one} spectral gap delivers both the unique attractor \emph{and} the
 area-law form. This is the structural necessary condition for the $S=A/(4G_\Sigma)$ step; the
-$\cthree=\tfrac1{8\pi}$ \emph{coefficient} still requires the specific seam kernel (the open part).
+$\cthree=\tfrac1{8\pi}$ \emph{coefficient} still requires the seam-determinant$\to$EH step at the
+\emph{continuum} level (the open part of \texttt{SEAM.THEOREM.01}, finite/collar-sharpened by \vref{v471}).
 \end{gapbox}
 
 \par\smallskip\noindent\textbf{The three theses, honestly graded.}
@@ -1336,7 +1362,9 @@ consequences''.
 \item \emph{Seam $=$ finite admissible local causal horizon} --- \textbf{open \mO} (the Seam--Horizon
 Theorem, \S\ref{sec:crosslinks}); if it closes, $\cthree=\tfrac1{8\pi}$ is physically forced. The area-law
 necessary condition is already met (\S\ref{sec:attractor}, \veri{v59\_area\_law\_evidence.py}); the open
-part is the $\cthree$ coefficient from the seam-determinant replica.
+part is the seam-determinant replica at the \emph{continuum} level --- the finite/collar chain is
+exhibited with the seam's own kernel (\vref{v471}), so the residual is the MMST scaling limit
+(\vref{v336}) plus the anchor (\vref{v152}).
 \item \emph{Uniqueness of the $\mu_4$ lattice closure} --- \textbf{already established \mE}: $A_n$ has
 discriminant $\Z_{n+1}$, so $\mu_4$ forces $A_3$; the rank/half-spinor conditions force $D_5$; hence
 $E_8=(D_5{\oplus}A_3)+\mu_4$ with $(\gcar,\Nfam)=(5,3)$ is the unique familyful simply-laced $\mu_4$ closure
@@ -1508,7 +1536,9 @@ the AGT/AMT preprints an independent second witness), with the realisation input
 $v_{\mathrm{geo}}$, the primitive $\pi$; a theorem) and the typed transfer functor $F_{\mathrm{transfer}}$ (Koide,
 $\eta_B$, axion, $m_p/m_e$). The historical ``five structural classes'' (seam clock, holomorphy$+c{=}8$,
 seam-determinant$\to$EH, H2 dictionary, $Q$-realisation) have all closed, discharged or merged into the one
-keystone; their round-by-round reduction is recorded in the changelog, not replayed here.
+keystone --- the seam-determinant$\to$EH leg now finite/collar-complete (\vref{v471}), its continuum leg
+\emph{being} the keystone's MMST residual; the round-by-round reduction is recorded in the changelog, not
+replayed here.
 \textbf{The honest one line:} TFPT is closed as a dimensionless boundary compiler; its only irreducibles
 are $\pi$ and the one metrology unit $v_{\mathrm{geo}}$; the seam-net keystone \texttt{SEAM.EQUIV.01} is
 \emph{closed modulo a cited theorem} (only the cited continuum existence stays \mO); and every ``frontier'' item is

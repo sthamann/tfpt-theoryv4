@@ -4,17 +4,43 @@ GWOSC HDF5 layout (32 s tutorial / event-API files): dataset ``strain/Strain`` w
 ``Xspacing`` = dt, group ``meta`` with ``GPSstart``/``Detector``. Read with h5py (no gwpy).
 The dominant ringdown frequency/damping come from the Berti-Cardoso-Will fits to the
 Kerr l=m=2, n=0 quasinormal mode (Berti+ 2006), so no LAL/qnm package is needed.
+
+REDSHIFT: the GWTC catalogue reports SOURCE-frame masses; the observed ringdown
+frequency is redshifted, so all QNM templates must use the DETECTOR-frame mass
+``mf_det = mf_src * (1 + z)`` (``detector_frame_mass``).  Without this the template
+frequency is wrong by up to ~1.6x for the high-z events (e.g. GW190521, z = 0.56).
 """
 
 from __future__ import annotations
 
+import csv
 from dataclasses import dataclass
+from pathlib import Path
 
 import h5py
 import numpy as np
 from scipy.signal import welch
 
 GMSUN_OVER_C3 = 4.925490947e-6   # s per solar mass (geometric time unit)
+CATALOG_CSV = Path(__file__).resolve().parents[2] / "data" / "gwtc_events.csv"
+_Z_CACHE: dict[str, float] = {}
+
+
+def catalog_redshift(event: str) -> float:
+    """Redshift z from the GWTC catalogue (0.0 if the event/value is missing)."""
+    if not _Z_CACHE and CATALOG_CSV.exists():
+        with open(CATALOG_CSV, encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                try:
+                    _Z_CACHE[row["name"]] = float(row["z"])
+                except (KeyError, TypeError, ValueError):
+                    continue
+    return _Z_CACHE.get(event, 0.0)
+
+
+def detector_frame_mass(event: str, mf_source: float) -> float:
+    """Detector-frame final mass mf_src * (1+z) — what the QNM template must use."""
+    return mf_source * (1.0 + catalog_redshift(event))
 
 
 @dataclass

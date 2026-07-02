@@ -10,17 +10,15 @@ A_{n+1} / A_n  ≤  λ₂ = (2/3)⁶ = 64/729 ≈ 0.0878        (lag free, ratio
 
 It is an **upper bound**, so this is a consistency / upper-limit channel.
 
-## Stage = `catalog_feasibility` (NOT a strain-level echo test)
+## Stages
 
-This experiment is a **GWTC-5.0 catalogue-based feasibility and sensitivity census**;
-**strain-level matched filtering is still pending**. It makes **no** echo detection or
-non-detection claim. It only forecasts whether a future stacked strain search *could*
-detect or bound a `(2/3)⁶` echo, to decide if that search is worth running.
-
-The real test (Stage 1) is separate: high-ringdown-SNR events → Kerr ringdown
-subtraction → matched filter on residuals (free lag, free phase, **fixed** ratio) →
-injection campaign with `q=(2/3)⁶` → free-`q` control template → time-slide nulls.
-Only after that may "null", "hint" or "bound" be written.
+Stage 0 is a **GWTC-5.0 catalogue-based feasibility and sensitivity census** (no echo
+claim; it only decided the strain search was worth running). Stages 1/1b/2 below are the
+actual strain-level tests: Kerr ringdown subtraction → matched filter on residuals (free
+lag, free phase, **fixed** ratio) → free-`q` control template → off-source backgrounds →
+a stacked statistic over the loudest events. The stacked search that Stage 0 forecast has
+now been **run** (Stage 1b); coherent time-slide backgrounds remain the escalation path
+if a candidate ever appears.
 
 ## Data
 
@@ -46,9 +44,79 @@ at catalog level.**
 The Stage-1 matched filter (`echo_search.py` synthetic injection-recovery, validated
 **3/3**; `real_echo_search.py` on real GWOSC strain) whitens the strain, subtracts the
 dominant Kerr (l=m=2,n=0) ringdown, and matched-filters the residual with an **echo train**
-at the frozen amplitude ratio `(2/3)⁶` (free lag, free-`q` control). Real strain (GW150914,
-GW190521) → **no faint kernel-ratio echo coincident in ≥2 detectors**; low-`p` excesses have
-`q̂ ~ 1` (residual ringdown power, free-ratio-rejected). Consistent with the upper bound; no claim.
+at the frozen amplitude ratio `(2/3)⁶` (free lag, free-`q` control). Real strain now spans
+the **10 loudest ringdown events** — including **GW250114 (network SNR 78.6, O4b, the
+loudest ringdown on record)**, GW230814, GW240920, GW231226, GW241127, GW200129,
+GW190521_074359, GW240621, GW150914, GW190521 — → **no faint kernel-ratio echo coincident
+in ≥2 detectors in any event**; low-`p` excesses have `q̂ ~ 1` (residual ringdown power,
+free-ratio-rejected). Consistent with the upper bound; no claim.
+
+O4/GWTC-4+ events have no 32 s files on GWOSC; `scripts/fetch_strain_4096.py` downloads the
+4096 s 4 kHz archive segment and crops a 32 s window in the same HDF5 layout.
+
+**Redshift correction (signature revision, 2026-07-02):** the GWTC catalogue reports
+**source-frame** masses, but the observed ringdown is at `f₀/(1+z)`. All searches now use
+the detector-frame mass `M_det = M_src (1+z)` (`strain_data.detector_frame_mass`). Before
+this fix GW190521 (z = 0.56) was filtered at 116 Hz instead of the correct ~75 Hz — a
+~1.6× template-frequency error on the highest-z event. All stages were re-run corrected.
+
+## Stage 1b — STACKED search over the loudest ringdowns (`tfpt-gw stack`) — NEW
+
+The Stage-0 forecast said only a **stack** reaches the detection threshold (realistic
+stacked echo-SNR 6.3 vs threshold 5). `stacked_search.py` combines the per-event
+matched-filter maxima into one on-source statistic `Z = Σ ρ²_max` over all detector
+streams and draws the background stack from each stream's off-source distribution
+(20 000 realisations), plus a Fisher combination as a secondary view.
+
+**Result (10 events, 23 detector streams, redshift-corrected): `Z_on = 149.5` vs
+background median `93.8` → stacked `p = 0.262`; kernel-consistent streams 0/23.** The
+Fisher secondary is dominated by `q̂ ~ 1` residual-ringdown streams that the free-ratio
+control rejects as non-kernel — it is not evidence for a `(2/3)⁶` train. **Verdict:
+STACKED NULL — a maximal kernel-ratio echo train is disfavoured in the loudest available
+stack; since `(2/3)⁶` is an upper bound, this is `consistent` (the bound tightens). No
+detection, no tension claim.**
+
+## Stage 1c — SIGNATURE BATTERY (`tfpt-gw battery`) — "could the signature be different?"
+
+A post-hoc robustness sweep over the alternative signature readings the kernel and the
+physics allow (Bonferroni ×12), on the same 10 events:
+
+- **Ratio semantics (the FRB lesson):** amplitude `(2/3)⁶`, **energy reading `(2/3)³`**
+  (GW energy ∝ amplitude², so an energy-ratio kernel gives a 3.4× louder strain train),
+  and step `2/3`.
+- **Per-bounce phase — the boundary-birefringence analogue:** `Δφ ∈ {0, π/2, π, 3π/2}`
+  (the μ₄ characters; TFPT's natural value is the quarter turn π/2). Propagation-path GW
+  birefringence (parity, `c₋ = 8 ≠ 0`) is common to all echoes of one event and **cancels
+  in the inter-echo ratio**; only a per-reflection phase does not cancel — scanned here.
+- **Extended lags 0.5–350 ms** (ECO/gravastar ~0.7 ms through Planckian ~0.23 s @63 M☉).
+- **Joint (2,2,0)+(2,2,1) subtraction** (Berti+ 2006 fits for both modes) — the `q̂ ~ 1`
+  excesses of the primary search are overtone/residual power.
+- **Template-agnosticism control:** streams where *all 12* variants fire together are
+  broadband residual power (an echo train prefers ONE reading) — rejected as non-echo.
+
+**Result: `NO_VARIANT_ECHO` on all 10 events.** Best Bonferroni `p = 0.0157` (single
+stream, not ratio-consistent, no second detector). The primary null is **robust against
+the alternative signature readings**. Not covered (documented limits): frequency-dependent
+barrier filtering of successive echoes (see Stage 1d's incoherent statistic), inter-echo
+lag drift, precessing remnants. Output: `results/signature_battery.json`.
+
+## Stage 1d — TFPT POINT TEST (`tfpt-gw point`) — theory-fixed lag × kernel-fixed ratio
+
+The battery scans the lag freely; TFPT actually **predicts** it: the gravastar-compactness
+Nariai rational `C = 3/8` gives the tortoise round trip **`Δt = 2.288 M_det`** (0.77 ms for
+GW250114; 2.59 ms for GW190521 at the detector-frame mass). Combining the predicted delay
+(±25 % tolerance) with the kernel-fixed ratios `{(2/3)⁶, (2/3)³}` and the μ₄ phases gives a
+**point hypothesis** with a minimal look-elsewhere budget (Bonferroni ×10) — the sharpest
+TFPT-specific echo test. A second, **morphology-robust incoherent statistic** (free phase
+per echo, only positions and ratio weights fixed) covers barrier low-pass filtering that
+degrades the coherent template.
+
+**Result: `NO_POINT_ECHO` on all 10 events** (best `p_bonf = 0.013`, GW150914/L1 — the same
+stream the battery already rejected as template-agnostic broadband residual; GW150914 shows
+mild sub-threshold raw excesses at the predicted lag in both detectors, but nothing
+Bonferroni-surviving in ≥2 detectors and the excess matches *every* template equally, i.e.
+residual power, not an echo train). The sharpest TFPT echo test is null; upper bound, no
+tension. Output: `results/point_test.json`.
 
 ## Stage 2 — DYNAMIC walled-clock recovery matched filter (`tfpt-gw dynamic`) — NEW
 
@@ -62,9 +130,9 @@ clock** `R(t)=w₀+w₁e^{-(6 ln 3/2)t/τ}+w₂e^{-(6 ln 3)t/τ}` with the **det
 residual power envelope** (binned RMS) and fits the **fixed-bend** template, profiling the
 rate ratio over a grid (each ratio = one nonlinear rate → well-conditioned, unlike a free
 2-exp fit) with a single-exponential (leftover-ringdown) null model and an off-source
-background `p`-value. **Result on real strain (GW150914, GW190521): `NO_KERNEL_RECOVERY`** —
-where the envelope decays it is leftover single-mode ringdown (profiled `q̂≈1`, not the bend
-2.7095).
+background `p`-value. **Result on real strain (GW250114, GW150914, GW190521):
+`NO_KERNEL_RECOVERY`** — where the envelope decays it is leftover single-mode ringdown
+(profiled `q̂≈1`, not the bend 2.7095); this now includes the loudest ringdown on record.
 
 **The honest, machine-checked finding (the reason this channel is structurally limited):**
 
@@ -88,9 +156,15 @@ python -m venv .venv && . .venv/bin/activate && pip install -e .
 python scripts/fetch_catalog.py      # re-download GWTC from GWOSC (catalog census)
 tfpt-gw analyze                       # Stage 0 census   (or: PYTHONPATH=src python -m tfpt_gw.cli analyze)
 tfpt-gw search                        # Stage 1 synthetic injection-recovery (3/3)
-python scripts/fetch_strain.py GW150914 GW190521   # real 32 s strain -> data/strain/
-tfpt-gw realdata                      # Stage 1 static (2/3)^6 echo on real strain
-tfpt-gw dynamic                       # Stage 2 dynamic walled-clock recovery on real strain
+python scripts/fetch_strain.py GW150914 GW190521          # O1-O3: 32 s files
+python scripts/fetch_strain_4096.py GW250114_082203 ...   # O4+: crop from 4096 s segments
+tfpt-gw realdata --events GW250114_082203 GW150914 GW190521   # Stage 1 static echo
+tfpt-gw dynamic  --events GW250114_082203 GW150914 GW190521   # Stage 2 walled clock
+tfpt-gw stack    --events GW250114_082203 GW230814_230901 GW240920_124024 \
+  GW231226_101520 GW241127_061008 GW200129_065458 GW190521_074359 \
+  GW240621_195059 GW150914 GW190521                            # Stage 1b stacked search
+tfpt-gw battery  --events ...same 10 events...                 # Stage 1c signature battery
+tfpt-gw point    --events ...same 10 events...                 # Stage 1d TFPT point test
 ```
 
 ## Layout
@@ -98,15 +172,22 @@ tfpt-gw dynamic                       # Stage 2 dynamic walled-clock recovery on
 ```
 scripts/fetch_catalog.py    # download GWTC event list from GWOSC -> data/gwtc_events.csv
 scripts/fetch_strain.py     # download 32 s, 4 kHz HDF5 strain per event -> data/strain/
+scripts/fetch_strain_4096.py# O4+: download 4096 s segment, crop 32 s (same HDF5 layout)
 src/tfpt_gw/constants.py    # frozen ratio (2/3)^6; STAGE
 src/tfpt_gw/echo_forecast.py# Stage 0 per-event + stacked echo-SNR sensitivity census
 src/tfpt_gw/echo_search.py  # Stage 1 synthetic echo-train injection-recovery (validated 3/3)
 src/tfpt_gw/strain_data.py  # real GWOSC HDF5 I/O + whitening + Kerr QNM (Berti+ 2006)
 src/tfpt_gw/real_echo_search.py # Stage 1 static (2/3)^6 echo train on real strain
 src/tfpt_gw/dynamic_recovery.py # Stage 2 dynamic walled-clock (bend 2.7095) on real strain
-src/tfpt_gw/cli.py          # `tfpt-gw analyze | search | realdata | dynamic`
+src/tfpt_gw/stacked_search.py   # Stage 1b stacked search over the loudest ringdowns
+src/tfpt_gw/signature_battery.py# Stage 1c signature battery (semantics x mu4 phases x lags)
+src/tfpt_gw/point_test.py   # Stage 1d TFPT point test (C=3/8 lag x kernel ratio, + incoherent)
+src/tfpt_gw/cli.py          # `tfpt-gw analyze | search | realdata | dynamic | stack | battery | point`
 data/gwtc_events.csv        # real LVK GWTC-5.0 catalogue (390 canonical; 391 raw rows)
 data/strain/                # real 32 s HDF5 strain (gitignored) + <event>_meta.json
 event_count_audit.md        # 390 vs 391 reconciliation + selection accounting
 results/dynamic_recovery.json,.png  # Stage 2 output + figure
+results/echo_stack.json     # Stage 1b stacked-search output
+results/signature_battery.json     # Stage 1c battery output
+results/point_test.json     # Stage 1d point-test output
 ```

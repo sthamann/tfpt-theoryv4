@@ -27,6 +27,7 @@ from .constants import DET_THRESHOLD, RATIO
 from .strain_data import (
     apply_whitening,
     damped_sinusoid,
+    detector_frame_mass,
     fit_and_subtract_qnm,
     qnm_220,
     read_hdf5,
@@ -108,9 +109,10 @@ def _q_hat(seg: np.ndarray, lag_ms: float, f0: float, tau: float, dt: float,
 
 def search_event(event: str, af: float = 0.69) -> EventResult:
     meta = json.loads((STRAIN_DIR / f"{event}_meta.json").read_text(encoding="utf-8"))
-    merger_gps, mf = float(meta["gps"]), float(meta["mf"])
+    merger_gps, mf_src = float(meta["gps"]), float(meta["mf"])
+    mf = detector_frame_mass(event, mf_src)      # observed (redshifted) ringdown
     f0, tau = qnm_220(mf, af)
-    res = EventResult(event, mf, round(f0, 1), round(tau * 1e3, 2))
+    res = EventResult(event, round(mf, 1), round(f0, 1), round(tau * 1e3, 2))
     rng = np.random.default_rng(0)
 
     for det, fname in meta["files"].items():

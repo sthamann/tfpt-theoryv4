@@ -26,7 +26,7 @@ die **Gesamtübersicht aller Untersuchungen, Tests, Datenquellen und Ergebnisse*
 | `neutrino-mixing/` | PMNS `θ12/θ13/θ23` + CKM `δ` vs NuFIT 6.0/JUNO/LHCb — **prediction_of_record** (θ12 −0.02σ). | aktiv |
 | `eht-achromatic-residual/` | Achromatischer dyonischer Residual-Test `β_BH(r) ∝ 1/r²` (3 Null-Tests). **(search.txt §4)** **Echte EHT-M87-2017-Polarimetrie ingestiert** (`tfpt-eht realdata`); **Injection-Recovery-Suite** (`tfpt-eht inject`, 4/4 korrekt klassifiziert); GRMHD-Residual-Nulls datenlimitiert. | aktiv |
 | `seed-consistency/` | Shared-Seed-Stresstest: β/Ω_b/Cabibbo/θ13 → φ₀, Joint-Fit + LOO + Dominant-Pull. **v2** GLS/PPC; **v3** reactor-only aus Daya Bay/RENO/Double Chooz (komb. `sin²θ13=0.02204`, χ²/dof=1.00, θ13 −1.62σ), NuFIT-global nur Shadow. | aktiv |
-| `gw-ringdown-echo/` | Ringdown-Echo-Amplitudenquotient `≤ (2/3)⁶`, Katalog-Feasibility auf GWTC-5.0 **(search.txt §5)**; **Stage 1** statische Echo-Suche auf echtem Strain (GW150914/GW190521) = kein Kernel-Echo; **Stage 2 NEU** dynamischer Walled-Clock-MF (Bend 2.7095) auf echtem Strain = `NO_KERNEL_RECOVERY` + maschineller Befund, dass der Bend in EINER Recovery entartet ist (Zwei-Moden-Gewinn ≈1.3×10⁻³) → die unterscheidende Signatur ist der Kaskaden-Kamm (`ω=2.58`), nicht ein Einzel-Ringdown. | aktiv (Stage 2) |
+| `gw-ringdown-echo/` | Ringdown-Echo-Amplitudenquotient `≤ (2/3)⁶`, Katalog-Feasibility auf GWTC-5.0 **(search.txt §5)**; **alle Templates rotverschiebungskorrigiert** (Detektor-Frame `M(1+z)`; vorher GW190521 ~1.6× daneben); **Stage 1** statische Echo-Suche auf echtem Strain, **die 10 lautesten Ringdowns inkl. GW250114 (SNR 78.6, O4b)** = kein Kernel-Echo; **Stage 1b** gestackte Suche über 23 Detektor-Streams = **STACKED NULL** (p=0.262, kernel-konsistent 0/23); **Stage 1c NEU** Signatur-Battery (Energie-Lesart `(2/3)³`, Step `2/3`, μ₄-Bounce-Phasen {0,π/2,π,3π/2} = Boundary-Birefringenz-Analogon, Lags 0.5–350 ms inkl. Planck-Fenster, Joint-220+221-Subtraktion, Bonferroni ×12) = **NO_VARIANT_ECHO** → der Null ist robust gegen alternative Signatur-Lesarten; **Stage 2** dynamischer Walled-Clock-MF (Bend 2.7095) inkl. GW250114 = `NO_KERNEL_RECOVERY` + Bend in EINER Recovery entartet (Zwei-Moden-Gewinn ≈1.3×10⁻³) → die unterscheidende Signatur ist der Kaskaden-Kamm (`ω=2.58`). | aktiv (Stage 1c/2) |
 | `gw-speed-multimessenger/` | `v_GW=c` Null-Test aus GW170817+GRB170817A (namentlicher Falsifikator). | aktiv |
 | `gw-ringdown-spectroscopy/` | **Schwarzloch-direkt**: QNM `ω_R/T_H→ln3=ln N_fam`, Flächenquant `4 ln3=ln81` — strukturell exakt, **datenlimitiert**. | aktiv |
 | `pulsar-glitch-recovery/` | **Fehlende Cross-Domain-Säule** (problem_1.txt): derselbe Kernel `{1,(2/3)⁶,(1/3)⁶}` wie FRB.02/09 + GW-Echo, in echten Pulsar-Glitches (Jodrell Bank, 726 Glitches) **+ Recovery `Q`/`τ_d`** (Yu+2013, 60 Komponenten). **Sauberer Null in allen vier statischen Kanälen** (PG.01–04). **PG.05 NEU** dynamischer Recovery-Kamm (`ω=2.58`) auf echtem **Crab-`ν(t)`** (JBO-Monatsephemeride, 479 Punkte): Detektor injection-validiert, **kein** Kern-Kamm → `data_limited`. **PG.06 NEU** (schwer) dichte **J0537**-Säule (1165 NICER-Obs) + Scaffold: Kamm braucht **>~2.8 ln(τ)-Perioden** → J0537 (~1.9) range-blind → Ziel ist **Vela**. **PG.06b NEU** echte NICER-**Vela**-Daten (665 Obs): 1 Obs geladen, mit **PINT barycentriert (kein HEASoft)**, **Vela-Pulsation real nachgewiesen** (F0=11.193 Hz, H=18.4) → Pipeline auf echten Daten bewiesen; comb-`ν(t)` braucht phasenverbundenes Timing (~6.5 GB, dokumentiert, kein Claim). **PG.07 NEU** erste echte **phasenverbundene** Vela-Recovery (2024-Riesenglitch, `Δν/ν=2.4×10⁻⁶`, `τ_d={0.39,2.45,15.1}` d, Reichweite **2.55 Kamm-Perioden** > J0537 ~1.9): Detektor auf der echten Kadenz injection-validiert (Kaskade p≈0.002, glatt verworfen p≈0.18), aber `ω=2.583` **nicht** besonders (p≈0.23; Shuffle 0.60; ln-τ-Stack 2016/2019/2021/2024 flach p≈0.53) → `data_limited`. Reichweite ist **nicht mehr** die Wand — limitiert durch das öffentliche Produkt = glattes Glitch-**Modell** (nicht das Residual-`ν(t)`) + die ~2%-Amplitude (`ε~e^{−π²/ln λ}`). | aktiv |
@@ -43,7 +43,7 @@ die **Gesamtübersicht aller Untersuchungen, Tests, Datenquellen und Ergebnisse*
 | `higgs-criticality/` | **Doppel-kritische Fläche** `λ(M_Pl)=0, β_λ(M_Pl)=0` vs SM-RGE (Buttazzo 2013 NNLO-Fit). λ=−0.0143±0.0057 (metastabil 2.5σ); downstream RGE-Bridge. | aktiv |
 | `lambda-h0-engine/` | Λ-Engine: `ρ_Λ/M_pl⁴=(3/256π⁴)e^{−2α⁻¹}` (122.95 vs 122.94 Größenordn.!), `S_dS ρ_Λ=32π⁴`, `H₀~√Λ`. | aktiv |
 | `recovery-channel/` | **Test C** (datenunabhängig): Recovery-Kernel als CPTP-Quantenkanal — CPTP/Choi, Data-Processing, QEC-Code, Page-Kurve bei `t_Page`. Packt `v155/160/161`. | aktiv |
-| `theory-contracts/` | **Reine Theorie-Contracts** (nicht in der empirischen Scorecard): QGEO-DtN-Mark-Locality (`[ρ,Λ]=0` aus Z4-Marken, Fourier-mod-4 + Negativkontrollen). | aktiv |
+| `theory-contracts/` | **Reine Theorie-Contracts** (nicht in der empirischen Scorecard): QGEO-DtN-Mark-Locality (`[ρ,Λ]=0` aus Z4-Marken, Fourier-mod-4 + Negativkontrollen); **NEU** Seam–Horizon-Replica-Contract (`seam_horizon_replica.py`, 17/17): Replica⇒EH-Form numerisch am diskretisierten Collar mit dem Seam-eigenen Kernel (echte Replica-Blätter n=2,3; BFK/Calderón konisch sauber; Attraktor-Mode IR-divergent ⇒ der Recovery-Gap macht den induzierten Newton-Koeffizienten endlich; kein kanonisches 3/4 ⇒ Anker bleibt). | aktiv |
 | `quantum-recovery-analog/` | **Geparkt**: Analog-Recovery `I_n ~ (64/729)^n`, kein direkter Datensatz. **(search.txt §10)** | geparkt |
 | `ftransfer/` | Theorieseitige `F_transfer`-Solver: Axion-Relik (**Spine-Finite-T-Solve** `Ωₐh²=0.125` + **unabhängiger Cross-Check** sudden/analytisch [0.125, 0.143]), Koide, Leptogenese-Boltzmann, QCD-Matching `m_p/m_e`. | aktiv |
 | `ccbh-dark-energy/` | **Kosmologisch gekoppelte BHs** (problem_b §B): de-Sitter-Seam-Innere `w_in=−1` ⇒ Kopplung `k=−3w_in=3` ⇒ Population `w=−1`; vs Farrah+2023 `k=3.11±0.79` (**−0.14σ**, aber CCBH-als-DE umstritten). Alternative-Lesart zu `dark-energy-w-watchdog` (`w_de_eos`). | aktiv |
@@ -83,7 +83,7 @@ Live-σ-Watchdog dafür existiert bereits in der Verifikations-Suite als
 CODATA/NuFIT/Planck; θ13 (+2.0σ) ist dort der dokumentierte Druckpunkt.)
 
 <!-- SCORECARD_STATS:START (generated by build_evidence_scorecard.py; do not edit) -->
-**Scorecard (auto-generated from `evidence_scorecard.json`): 83 Zeilen — 36 consistent, 5 tension, 13 null, 28 data_limited, 1 parked.**
+**Scorecard (auto-generated from `evidence_scorecard.json`): 83 Zeilen — 37 consistent, 5 tension, 13 null, 27 data_limited, 1 parked.**
 
 - nach `evidence_class`: 17 downstream_bridge, 27 external_data, 9 internal_consistency, 1 parked, 29 search_target
 - nach `independence_group`: 4 N_star_reheating, 3 alpha_em, 1 c3_topform_horizon, 2 carrier_ps_so10_uv_branch, 2 cp_mu6_phase, 62 independent, 9 phi0_seed
@@ -320,20 +320,20 @@ Kein Vortäuschen.
 
 ---
 
-## 5. GW-Ringdown-Echo — `gw-ringdown-echo/` (search.txt §5, Stage 0)
+## 5. GW-Ringdown-Echo — `gw-ringdown-echo/` (search.txt §5, Stage 0–2)
 
 Echo-Amplitudenquotient `A_{n+1}/A_n ≤ (2/3)⁶ ≈ 0.0878` (Obergrenze, Lag frei).
-**Stage = `catalog_feasibility`** — **kein** Strain-Level-Echo-Test, **kein** Echo-Claim.
-Es ist ein Sensitivitäts-Census: Reicht eine zukünftige gestackte Strain-Suche?
+Stage 0 war der Sensitivitäts-Census; die Strain-Level-Tests (Stage 1/1b/2) sind
+inzwischen **gelaufen** — inkl. der vom Census geforderten gestackten Suche.
 
 - Datenquelle: **echter LVK GWTC-5.0** via GWOSC-Event-API → `data/gwtc_events.csv`.
   **390 kanonische Events** (161 neu in O4b); lokale Rohzeilenzahl **391** separat in
   [`event_count_audit.md`](gw-ringdown-echo/event_count_audit.md) abgeglichen (die eine
   Differenz = BNS GW170817, ohnehin aus der BBH-Selektion ausgeschlossen).
 - Selektion: 391 → **278 ringdown-fähige BBH** (`M_f ≥ 5 M☉`).
-- Ergebnis: gestackte Echo-SNR-Obergrenze **6.3** (realistisch `f_rd=0.3`) bzw. 21.1
-  (konservativ) vs Schwelle 5 → ein maximaler `(2/3)⁶`-Echo **wäre erreichbar** ⇒
-  Strain-Level-Test lohnt sich. **Datenlimitiert** bis zum echten Strain-Matched-Filter.
+- Stage-0-Ergebnis: gestackte Echo-SNR-Obergrenze **6.3** (realistisch `f_rd=0.3`) bzw.
+  21.1 (konservativ) vs Schwelle 5 → ein maximaler `(2/3)⁶`-Echo **wäre erreichbar** ⇒
+  der Strain-Level-Test lohnt sich (und wurde ausgeführt, s.u.).
 
 **Stage 1 — Matched-Filter-Maschinerie gebaut + injection-validiert (`tfpt-gw search`).** Die
 Pipeline (Kerr-Ringdown-Subtraktion → Matched-Filter auf Residuen, Lag/Phase frei, Quotient
@@ -342,10 +342,42 @@ Strain **3/3 Injektionen korrekt**: Kernel-Echo → `DETECTION` (`q̂≈(2/3)⁶
 falsches Ratio (0.5) → `NON_KERNEL_ECHO` (Echo da, aber **nicht** der TFPT-Kernel). Das
 Template-Lag ist objektabhängig (das `C=3/8`-ECO der `gravastar-compactness` gibt `~0.7 ms`); der
 Lag wird gescannt, das Ratio `(2/3)⁶` ist der eingefrorene Diskriminator. **`tfpt-gw realdata`**
-läuft die statische `(2/3)⁶`-Echo-Train-Suche auf **echtem 32-s-GWOSC-Strain** (GW150914,
-GW190521, via `scripts/fetch_strain.py`, h5py — kein gwpy): **kein** kernel-Ratio-Echo koinzident
-in ≥2 Detektoren; Niedrig-`p`-Exzesse haben `q̂~1` (Rest-Ringdown, vom Free-Ratio-Control
-verworfen). **Kein Echo-Claim.**
+läuft die statische `(2/3)⁶`-Echo-Train-Suche auf **echtem 32-s-GWOSC-Strain**, inzwischen auf
+den **10 lautesten Ringdown-Events** — darunter **GW250114 (Netzwerk-SNR 78.6, O4b, lautester
+Ringdown überhaupt)**; O4+-Events haben keine 32-s-Files auf GWOSC, `scripts/fetch_strain_4096.py`
+croppt die 4096-s-Archiv-Segmente ins gleiche HDF5-Layout. **Rotverschiebungskorrektur:**
+der GWTC-Katalog liefert Quellsystem-Massen; die beobachtete Ringdown-Frequenz ist
+`f₀/(1+z)`, alle Templates nutzen jetzt `M_det = M_src(1+z)` (vorher lief GW190521, z=0.56,
+bei ~1.6× zu hoher Frequenz — alle Stufen korrigiert neu gelaufen). Ergebnis: **kein**
+kernel-Ratio-Echo koinzident in ≥2 Detektoren, in keinem Event; Niedrig-`p`-Exzesse haben
+`q̂~1` (Rest-Ringdown, vom Free-Ratio-Control verworfen). **Kein Echo-Claim.**
+
+**Stage 1b — GESTACKTE Suche über die lautesten Ringdowns (`tfpt-gw stack`).** Der vom
+Stage-0-Forecast geforderte Stack ist ausgeführt: `Z = Σρ²_max` über **23 Detektor-Streams**
+(10 Events) gegen einen Off-Source-Hintergrund-Stack (20 000 Realisierungen). **Ergebnis
+(z-korrigiert): STACKED NULL — `Z_on = 149.5` vs Hintergrund-Median 93.8, gestacktes
+`p = 0.262`, kernel-konsistente Streams 0/23.** Die Fisher-Sekundärstatistik ist von
+`q̂~1`-Rest-Ringdown-Streams dominiert, die der Free-Ratio-Control als nicht-Kernel verwirft —
+kein Kernel-Evidenz. Ein maximaler `(2/3)⁶`-Zug ist im lautesten verfügbaren Stack
+unbegünstigt; da `(2/3)⁶` eine **Obergrenze** ist, ist das `consistent` (die Schranke wird
+enger). **Kein Detection-, kein Tension-Claim.** Output: `results/echo_stack.json`.
+
+**Stage 1c — SIGNATUR-BATTERY (`tfpt-gw battery`, NEU): „könnte die Signatur anders
+aussehen?"** Post-hoc-Robustheits-Sweep über die alternativen Lesarten (Bonferroni ×12) auf
+denselben 10 Events: (a) **Ratio-Semantik** (FRB-Lektion): Amplitude `(2/3)⁶`,
+**Energie-Lesart `(2/3)³`** (GW-Energie ∝ Amplitude² ⇒ 3.4× lauterer Zug), Step `2/3`;
+(b) **Bounce-Phasen** `Δφ ∈ {0, π/2, π, 3π/2}` — die μ₄-Charaktere, das
+**Boundary-Birefringenz-Analogon** (Pfad-Birefringenz aus Paritätsverletzung `c₋=8` wirkt
+auf alle Echos eines Events gleich und kürzt sich im Inter-Echo-Ratio; nur die Phase pro
+Reflexion nicht — TFPTs natürlicher Wert ist die Viertelphase π/2); (c) **Lags 0.5–350 ms**
+(ECO ~0.7 ms bis Planck-Fenster ~0.23 s); (d) **Joint-(2,2,0)+(2,2,1)-Subtraktion** (die
+`q̂~1`-Exzesse der Primärsuche sind Overtone-/Rest-Leistung); (e)
+**Template-Agnostizismus-Kontrolle**: Streams, in denen alle 12 Varianten gleichzeitig
+feuern, sind breitbandige Rest-Leistung, kein Echo-Zug. **Ergebnis: `NO_VARIANT_ECHO` auf
+allen 10 Events** (bestes Bonferroni-p 0.0157, einzelner Stream, nicht ratio-konsistent,
+kein Zweit-Detektor) → der Primär-Null ist **robust gegen alternative Signatur-Lesarten**.
+Nicht abgedeckt (dokumentiert): Barrieren-Tiefpass pro Echo, Lag-Drift, Präzession.
+Output: `results/signature_battery.json`.
 
 **Stage 2 — DYNAMISCHER Walled-Clock-Recovery-Matched-Filter auf echtem Strain (`tfpt-gw
 dynamic`, NEU).** Schließt die **§1.1-Reconsideration** für den GW-Kanal: statt des statischen
@@ -355,8 +387,9 @@ Ratios wird die **gewallte Zwei-Moden-Uhr** (`v124`/`v147`, QT.04) als Template 
 QNM, bildet die **Post-Merger-Residuen-Leistungs-Hülle** (binned RMS) und fittet das
 Fixed-Bend-Template (Ratio profiliert: jede Ratio = ein nichtlinearer Raten-Scan → gut
 konditioniert, anders als ein freier 2-Exp-Fit) gegen ein Single-Exponential-Nullmodell +
-Off-Source-Hintergrund. **Realdaten-Ergebnis (GW150914, GW190521): `NO_KERNEL_RECOVERY`** —
-abklingende Hüllen sind Rest-Ringdown (`q̂≈1`, **nicht** der Bend). **Ehrlicher, maschinell
+Off-Source-Hintergrund. **Realdaten-Ergebnis (GW250114, GW150914, GW190521): `NO_KERNEL_RECOVERY`** —
+abklingende Hüllen sind Rest-Ringdown (`q̂≈1`, **nicht** der Bend); gilt jetzt auch für den
+lautesten Ringdown überhaupt (GW250114). **Ehrlicher, maschinell
 geprüfter Kern-Befund:** (i) **innerhalb EINER monotonen Recovery ist der Bend entartet** — die
 exakte Walled-Clock-Kurve wird von *Floor + einem* Exponential mit Zwei-Moden-R²-Gewinn von nur
 **≈1.3×10⁻³** gefittet (selbst rauschfrei) → eine Einzel-BH-Ringdown-Residuum kann das
@@ -971,7 +1004,12 @@ cd experiments/lab-residuals && PYTHONPATH=src python -m tfpt_lab.cli analyze
 cd experiments/gw-ringdown-echo && python scripts/fetch_catalog.py && PYTHONPATH=src python -m tfpt_gw.cli analyze
 cd experiments/gw-ringdown-echo && PYTHONPATH=src python -m tfpt_gw.cli search   # Stage-1 MF, 3/3 Injektionen
 cd experiments/gw-ringdown-echo && python scripts/fetch_strain.py GW150914 GW190521 && PYTHONPATH=src python -m tfpt_gw.cli realdata  # Stage-1 statisch (2/3)^6 auf echtem Strain
-cd experiments/gw-ringdown-echo && PYTHONPATH=src python -m tfpt_gw.cli dynamic   # Stage-2 dynamischer Walled-Clock-MF (echter Strain)
+cd experiments/gw-ringdown-echo && python scripts/fetch_strain_4096.py GW250114_082203  # O4+: 4096s-Segment croppen
+cd experiments/gw-ringdown-echo && PYTHONPATH=src python -m tfpt_gw.cli dynamic --events GW250114_082203 GW150914 GW190521  # Stage-2 Walled-Clock
+cd experiments/gw-ringdown-echo && PYTHONPATH=src python -m tfpt_gw.cli stack --events GW250114_082203 GW230814_230901 GW240920_124024 GW231226_101520 GW241127_061008 GW200129_065458 GW190521_074359 GW240621_195059 GW150914 GW190521  # Stage-1b Stack
+
+# Seam-Horizon-Replica-Contract (reine Theorie, kein Scorecard-Row)
+cd experiments/theory-contracts && python3 seam_horizon_replica.py
 
 # echte EHT-Polarimetrie laden + Achromatizität + Injection-Suite + Pipeline-Readiness
 cd experiments/eht-achromatic-residual && python scripts/fetch_eht_data.py && PYTHONPATH=src python -m tfpt_eht.cli realdata

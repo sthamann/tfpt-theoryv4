@@ -129,11 +129,11 @@ export interface Prediction {
  * without coupling the static build to the experiments tree.
  */
 export const EXPERIMENTS_AUDIT = {
-  rows: 51,
-  consistent: 27,
-  tension: 4,
-  null: 7,
-  dataLimited: 12,
+  rows: 83,
+  consistent: 37,
+  tension: 5,
+  null: 13,
+  dataLimited: 27,
   parked: 1,
   repoPath: "experiments",
   readmePath: "experiments/README.md",
@@ -141,7 +141,7 @@ export const EXPERIMENTS_AUDIT = {
   headline:
     "No discriminating empirical discovery — but a typed, reproducible, falsifiable test matrix.",
   finding:
-    "51 typed scorecard rows across FRB, CMB, neutrino, GW, EHT, lab (g−2/kaon/axion), dark-energy, recovery-channel and black-hole-cosmology (CCBH / gravastar-echo / spin-parity) domains: 27 consistent, 4 tension, 7 clean nulls, 12 data-limited, 1 parked. The latest structural round (v231/v233) ties the leptonic CP phase δ_PMNS = 4π/3 = 240° to δ_CKM via the Z2 sheet (δ_PMNS = δ_CKM,lead + π); confronted with the NuFIT 6.0 normal-ordering best fit (212°⁺²⁶₋₄₁) it sits at +1.08σ (consistent, weak power until DUNE/Hyper-K) and shares one independence group with δ_CKM. This is now a pre-registered kill test (v320, sharpened v322): both CP phases are powers of one hexagonal unit ρ = ζ₆, the selected node is the deck order |μ₄| (δ_PMNS = 4·δ_CKM,lead), the prediction band is 240° ± ~9° (the sub-leading bounded by the quark 3λ²), and the nearest wrong hexagonal node sits 60° away — so a δ_PMNS robustly away from 240° at DUNE/Hyper-K/JUNO would falsify the Galois-CP lock. The cyclotomic capstone (v313–v318) makes the whole SM structural sector ℚ(ζ₃₀) with Galois group μ₄ × ℤ₂ (degree 8 = rank E₈), leaving zero dimensionless free parameters — {a, π, v_geo} is the complete input. Correlated φ₀-seed legs, the cp_mu6_phase pair, alternative-group readings (e.g. CCBH vs DESI on w) and internal-consistency checks are NOT counted as independent external hits.",
+    "83 typed scorecard rows across FRB, CMB, neutrino, GW, EHT, lab (g−2/kaon/axion), dark-energy, recovery-channel and black-hole-cosmology (CCBH / gravastar-echo / spin-parity) domains: 37 consistent, 5 tension, 13 clean nulls, 27 data-limited, 1 parked. The GW ringdown-echo channel now covers the 10 loudest ringdowns on real GWOSC strain (incl. GW250114, network SNR 78.6, O4b), all templates redshift-corrected to detector-frame frequencies, plus a stacked search over 23 detector streams (stacked p = 0.26, kernel-consistent streams 0/23) and a 12-variant signature battery (energy vs amplitude ratio semantics, μ₄ per-bounce phases as the boundary-birefringence analogue, lags out to the Planckian window): NO_VARIANT_ECHO — a maximal (2/3)⁶ echo train is disfavoured and the null is robust against alternative signature readings; since the kernel ratio is an upper bound this is a consistency, not a tension. The latest structural round (v231/v233) ties the leptonic CP phase δ_PMNS = 4π/3 = 240° to δ_CKM via the Z2 sheet (δ_PMNS = δ_CKM,lead + π); confronted with the NuFIT 6.0 normal-ordering best fit (212°⁺²⁶₋₄₁) it sits at +1.08σ (consistent, weak power until DUNE/Hyper-K) and shares one independence group with δ_CKM. This is now a pre-registered kill test (v320, sharpened v322): both CP phases are powers of one hexagonal unit ρ = ζ₆, the selected node is the deck order |μ₄| (δ_PMNS = 4·δ_CKM,lead), the prediction band is 240° ± ~9° (the sub-leading bounded by the quark 3λ²), and the nearest wrong hexagonal node sits 60° away — so a δ_PMNS robustly away from 240° at DUNE/Hyper-K/JUNO would falsify the Galois-CP lock. The cyclotomic capstone (v313–v318) makes the whole SM structural sector ℚ(ζ₃₀) with Galois group μ₄ × ℤ₂ (degree 8 = rank E₈), leaving zero dimensionless free parameters — {a, π, v_geo} is the complete input. Correlated φ₀-seed legs, the cp_mu6_phase pair, alternative-group readings (e.g. CCBH vs DESI on w) and internal-consistency checks are NOT counted as independent external hits.",
 } as const;
 
 export const STATUS_BADGE: Record<PredictionStatus, { color: string; bg: string }> = {

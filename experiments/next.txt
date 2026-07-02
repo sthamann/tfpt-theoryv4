@@ -1,3 +1,56 @@
+## 2026-07-02 — Seam–Horizon-Doppelangriff: Replica-Contract (Beweis-Route 1) + GW-Stack GW250114 (Beweis-Route 2)
+
+**(1) Theorie — `experiments/theory-contracts/seam_horizon_replica.py` (17/17 PASS, CONTRACT HOLDS).**
+Der Kernel-Identifikations-Rest von SEAM.THEOREM.01 (nach v150/v151/v152: "der RP-Seam-Kernel IST
+das BFK-Calderón-Datum") erstmals NUMERISCH am diskretisierten Collar durchgerechnet, nicht nur
+symbolisch am abstrakten Skalar: (a) Replica⇒EH-Form am echten Gitter-Kegeloperator, Steigung
+2C(γ) auf Defizit-Kegeln (0.01–0.05% Fehler) UND echten Replica-Blättern n=2 (0.75%), n=3 (1.5%);
+(b) EH-Koeffizient cutoff-stabil (0.5% Drift), Intercept (ζ-Skala μ_lat) driftet mit der
+Diskretisierung = der v152-Anker, an Daten gezeigt — KEIN kanonisches 3/4 taucht auf (ehrlich
+protokolliert); (c) BFK/Schur-Split maschinengenau (1e-16), Calderón-Faktor folgt reinem
+Schnittkanten-Gesetz E(1−q), Tip-Term ≈ 0 mit Power-Check — v151s "conically clean" am Kernel
+selbst gemessen; (d) die Seam-eigenen Transfer-Massen 6ln(3/2), 6ln3 (spec T = {1,(2/3)⁶,(1/3)⁶},
+v302) liegen exakt auf der EH-Linie, und der Perron/Attraktor-Mode (m=0) ist nachweislich
+IR-divergent (läuft exakt mit −2C·ln(IR)) — **derselbe Recovery-Gap, der den Attraktor eindeutig
+macht, macht den induzierten Newton-Koeffizienten endlich.** Offen [O], typtreu: Kontinuums-Limes
+(MMST-Klasse = derselbe Einzel-Rest wie SEAM.EQUIV.01) + der eine Anker. Promotion-Kandidat
+(würde SEAM.EHMODEL.03s Kernel-Prämisse auf Modell-Ebene schärfen, SEAM.THEOREM.01 NICHT schließen).
+
+**(2) Empirie — GW-Echo-Kanal auf die 10 lautesten Ringdowns ausgeweitet, inkl. GW250114 (SNR 78.6, O4b).**
+Neuer Fetcher `fetch_strain_4096.py` (O4+ hat keine 32s-Files auf GWOSC; croppt 4096s-Segmente),
+neue Stage 1b `tfpt-gw stack`: Z = Σρ²_max über 23 Detektor-Streams gegen Off-Source-Hintergrund
+(20k Realisierungen). Ergebnis (z-korrigiert, s.u.): **STACKED NULL** — Z_on=149.5 vs.
+Hintergrund-Median 93.8, stacked p=0.262, kernel-konsistente Streams 0/23 (q̂~1-Exzesse =
+Rest-Ringdown, Free-Ratio-Control verwirft). Stage 2 (Walled-Clock) auf GW250114:
+NO_KERNEL_RECOVERY. Scorecard-Zeile GW-Echo: data_limited → **consistent** (der Stage-0-Forecast
+"Stack erreicht Schwelle" ist ausgeführt; obere Schranke, kein Tension-Claim).
+
+**(2b) Signatur-Revision (gleicher Tag, Nachfrage "könnte die Signatur anders aussehen /
+Birefringenz?"): zwei echte Lücken gefunden + geschlossen.** (i) **Rotverschiebung**: der
+GWTC-Katalog liefert Quellsystem-Massen, die beobachtete QNM-Frequenz ist f₀/(1+z) — GW190521
+(z=0.56) wurde vorher bei 116 Hz statt ~75 Hz gefiltert (~1.6× daneben). Alle Templates auf
+Detektor-Frame `M(1+z)` umgestellt (`strain_data.detector_frame_mass`), alle Stufen neu gelaufen.
+(ii) **Signatur-Battery Stage 1c** (`tfpt-gw battery`, Bonferroni ×12): Ratio-Semantik
+(Amplitude (2/3)⁶ vs. **Energie-Lesart (2/3)³** — die FRB-Lektion Energie↔Amplitude — vs. Step
+2/3) × **μ₄-Bounce-Phasen {0, π/2, π, 3π/2}** × Lags 0.5–350 ms (inkl. Planck-Fenster ~0.23 s)
++ Joint-(2,2,0)+(2,2,1)-Subtraktion + Template-Agnostizismus-Kontrolle. Zur Birefringenz-Frage:
+Pfad-Birefringenz (Parität, c₋=8) wirkt auf alle Echos eines Events gleich und **kürzt sich im
+Inter-Echo-Ratio**; nicht kürzen tut sich nur eine Paritätsphase **pro Reflexion** — das ist
+genau der μ₄-Phasenscan (TFPT-natürlich: π/2 pro Bounce). Ergebnis: **NO_VARIANT_ECHO auf allen
+10 Events** (bestes Bonferroni-p 0.0157, einzelner Stream, nicht ratio-konsistent, kein
+Zweit-Detektor). Der Null ist robust gegen alternative Signatur-Lesarten. Offen dokumentiert:
+Lag-Drift zwischen Echos, Präzession.
+
+**(2c) Punkt-Test Stage 1d (`tfpt-gw point`) — die schärfste TFPT-Hypothese, nie zuvor als
+Punkt getestet.** Die Battery scannt den Lag frei; TFPT SAGT ihn aber VORHER: Gravastar/Nariai
+C=3/8 ⇒ Tortoise-Round-Trip Δt = 2.288·M_det (0.77 ms GW250114, 2.59 ms GW190521). Punkt-Test =
+vorhergesagter Lag (±25%) × Kernel-Ratios {(2/3)⁶, (2/3)³} × μ₄-Phasen (Bonferroni nur ×10),
+plus eine morphologie-robuste INKOHÄRENTE Pro-Echo-Statistik (freie Phase pro Echo — deckt die
+Barrieren-Tiefpass-Lücke der Battery ab). Ergebnis: **NO_POINT_ECHO auf allen 10 Events**
+(bestes p_bonf=0.013, GW150914/L1 — derselbe Stream, den die Battery als template-agnostisches
+Breitband-Residuum verwirft). Damit ist der schärfste TFPT-spezifische Echo-Test (Theorie-Lag ×
+Kernel-Ratio) sauber null; obere Schranke, kein Tension-Claim.
+
 ## 2026-07-02 — Schließungsrouten-Kandidaten (Sandbox): SEAM.EQUIV.01 + ALPHA.QUILLEN.EXACT.01 (route_candidate, kein Claim)
 
 **UPDATE (gleicher Tag): PROMOTED.** Beide Routen sind als `verification/v469_seam_crossedproduct_route.py`

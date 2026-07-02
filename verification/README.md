@@ -115,7 +115,9 @@ All stdlib-only, runnable as plain `python3` (no venv needed); wired into
 > Fursaev–Solodukhin factor `S = 4πkA` (smoothed-cone Gauss–Bonnet, exactly
 > smoothing-independent; `S = A/4 ⇔ c₃ = 1/(8π)` sympy-solved) so the
 > Seam–Horizon residual is isolated to the single step "seam determinant ⇒ EH
-> form", with no Bekenstein–Hawking import anywhere; and `v86` (extended)
+> form", with no Bekenstein–Hawking import anywhere (that step is since
+> exhibited at model level by `v150`–`v152` and numerically on the discretized
+> collar by `v471`; the residual retypes to the continuum leg + anchor); and `v86` (extended)
 > records the **A_s dichotomy**: matching A_s at the slow-reheating point
 > would need `M_scal × 1.092` — impossible at locked `c₃^{7/2}` — so either
 > fast preheating `[P]` or the exponent-7 normalisation fails (decisive).

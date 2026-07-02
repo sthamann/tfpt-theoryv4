@@ -47,6 +47,956 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "c",
+        "v": "v471"
+      },
+      {
+        "k": "t",
+        "v": " — the Seam–Horizon replica chain exercised numerically on the discretized collar: the kernel-identification premise of "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.THEOREM.01"
+      },
+      {
+        "k": "t",
+        "v": " discharged at the finite/model level; residual retypes to the continuum MMST leg "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the anchor; gate stays "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": ". Plus: the GW ringdown-echo channel hardened — 10 loudest events incl. GW250114, redshift-corrected templates, stacked search and a 12-variant signature battery, all null"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "t",
+          "v": "[leftmargin=1.5em]"
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v471_seam_horizon_replica.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EHMODEL.04"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The residual isolated by "
+        },
+        {
+          "k": "c",
+          "v": "v150"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v151"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v152"
+        },
+        {
+          "k": "t",
+          "v": " — “the RP seam kernel "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " this BFK Calderón datum” — is exercised numerically on a discretized seam collar with the seam's "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "own"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " kernel and "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "real"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " replica sheets: the matched conical deficit has slope "
+        },
+        {
+          "k": "m",
+          "v": "2C(\\gamma)"
+        },
+        {
+          "k": "t",
+          "v": " on deficit cones ("
+        },
+        {
+          "k": "m",
+          "v": "0.01"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.05\\%"
+        },
+        {
+          "k": "t",
+          "v": ") and replica sheets "
+        },
+        {
+          "k": "m",
+          "v": "n{=}2"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "0.8\\%"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "n{=}3"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "1.5\\%"
+        },
+        {
+          "k": "t",
+          "v": "); the EH coefficient is cutoff-independent ("
+        },
+        {
+          "k": "m",
+          "v": "0.5\\%"
+        },
+        {
+          "k": "t",
+          "v": " drift) while the "
+        },
+        {
+          "k": "m",
+          "v": "\\zeta"
+        },
+        {
+          "k": "t",
+          "v": "-scale "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_{\\mathrm{lat}}"
+        },
+        {
+          "k": "t",
+          "v": " drifts — the "
+        },
+        {
+          "k": "c",
+          "v": "v152"
+        },
+        {
+          "k": "t",
+          "v": " anchor exhibited on data, with "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "no"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " canonical "
+        },
+        {
+          "k": "m",
+          "v": "\\ln(m/\\mu){=}3/4"
+        },
+        {
+          "k": "t",
+          "v": " emerging (recorded honestly); the BFK/Schur split is exact ("
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": ") with the Calderón factor conically clean "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "measured on the kernel"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (pure cut-edge law, tip term "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": ", power-checked) and the halves carrying "
+        },
+        {
+          "k": "m",
+          "v": "2C_{\\mathrm{cone}}"
+        },
+        {
+          "k": "t",
+          "v": " via Kac doubling; the "
+        },
+        {
+          "k": "c",
+          "v": "v302"
+        },
+        {
+          "k": "t",
+          "v": " transfer masses "
+        },
+        {
+          "k": "m",
+          "v": "6\\ln(3/2)"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "6\\ln 3"
+        },
+        {
+          "k": "t",
+          "v": " sit on the calibrated EH line ("
+        },
+        {
+          "k": "m",
+          "v": "\\le0.05\\%"
+        },
+        {
+          "k": "t",
+          "v": "); and the Perron/attractor mode ("
+        },
+        {
+          "k": "m",
+          "v": "m{=}0"
+        },
+        {
+          "k": "t",
+          "v": ") is IR-divergent — "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "the recovery gap "
+            },
+            {
+              "k": "m",
+              "v": "\\Delta{=}6\\ln(3/2)"
+            },
+            {
+              "k": "t",
+              "v": " is what makes the induced-gravity coefficient finite"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (the same gap that makes the attractor unique makes "
+        },
+        {
+          "k": "m",
+          "v": "1/G"
+        },
+        {
+          "k": "t",
+          "v": " finite). "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.THEOREM.01"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "; its residual retypes to the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "continuum"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " scaling limit (the MMST class — the same single residual as "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v336"
+        },
+        {
+          "k": "t",
+          "v": ") plus the one declared anchor. "
+        },
+        {
+          "k": "m",
+          "v": "16/16"
+        },
+        {
+          "k": "t",
+          "v": " checks; suite green through "
+        },
+        {
+          "k": "c",
+          "v": "v471"
+        },
+        {
+          "k": "t",
+          "v": " (465 modules); numerical (sparse lattice determinants), Python-only by nature. Papers updated: "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": " (new collar paragraph in the Seam–Horizon gapbox "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " residual retyping), "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " (R3 premise), "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_4_frontier"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "3/4"
+        },
+        {
+          "k": "t",
+          "v": " audit note), root "
+        },
+        {
+          "k": "c",
+          "v": "README"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "verification/README"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "zenodo_description.html"
+        },
+        {
+          "k": "t",
+          "v": ". Exploration original: "
+        },
+        {
+          "k": "c",
+          "v": "experiments/theory-contracts/seam_horizon_replica.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "17/17"
+        },
+        {
+          "k": "t",
+          "v": ", same day)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "GW ringdown-echo channel hardened ("
+            },
+            {
+              "k": "c",
+              "v": "experiments/gw-ringdown-echo"
+            },
+            {
+              "k": "t",
+              "v": ", scorecard row "
+            },
+            {
+              "k": "c",
+              "v": "data_limited"
+            },
+            {
+              "k": "m",
+              "v": "{\\to}"
+            },
+            {
+              "k": "c",
+              "v": "consistent"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (i) Strain coverage extended to the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "10 loudest"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ringdown events incl. GW250114 (network SNR "
+        },
+        {
+          "k": "m",
+          "v": "78.6"
+        },
+        {
+          "k": "t",
+          "v": ", O4b; new "
+        },
+        {
+          "k": "c",
+          "v": "fetch_strain_4096.py"
+        },
+        {
+          "k": "t",
+          "v": " crops the 4096 s GWOSC archive segments). (ii) "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Redshift correction"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the GWTC catalogue reports source-frame masses, the observed ringdown is at "
+        },
+        {
+          "k": "m",
+          "v": "f_0/(1{+}z)"
+        },
+        {
+          "k": "t",
+          "v": " — all templates moved to detector-frame "
+        },
+        {
+          "k": "m",
+          "v": "M(1{+}z)"
+        },
+        {
+          "k": "t",
+          "v": " (before the fix GW190521, "
+        },
+        {
+          "k": "m",
+          "v": "z{=}0.56"
+        },
+        {
+          "k": "t",
+          "v": ", was filtered "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}1.6\\times"
+        },
+        {
+          "k": "t",
+          "v": " too high); all stages re-run. (iii) Stage 1b "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "stacked"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " search over 23 detector streams: stacked "
+        },
+        {
+          "k": "m",
+          "v": "p{=}0.262"
+        },
+        {
+          "k": "t",
+          "v": ", kernel-consistent streams "
+        },
+        {
+          "k": "m",
+          "v": "0/23"
+        },
+        {
+          "k": "t",
+          "v": " — STACKED NULL. (iv) Stage 1c "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "signature battery"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (Bonferroni "
+        },
+        {
+          "k": "m",
+          "v": "\\times12"
+        },
+        {
+          "k": "t",
+          "v": "): ratio semantics (amplitude "
+        },
+        {
+          "k": "m",
+          "v": "(2/3)^6"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "energy reading"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "(2/3)^3"
+        },
+        {
+          "k": "t",
+          "v": " vs step "
+        },
+        {
+          "k": "m",
+          "v": "2/3"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "\\times"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " per-bounce phases "
+        },
+        {
+          "k": "m",
+          "v": "\\{0,\\pi/2,\\pi,3\\pi/2\\}"
+        },
+        {
+          "k": "t",
+          "v": " (the boundary-birefringence analogue — path birefringence from parity violation "
+        },
+        {
+          "k": "m",
+          "v": "c_-{=}8"
+        },
+        {
+          "k": "t",
+          "v": " cancels in the inter-echo ratio; only a per-reflection phase does not) "
+        },
+        {
+          "k": "m",
+          "v": "\\times"
+        },
+        {
+          "k": "t",
+          "v": " lags "
+        },
+        {
+          "k": "m",
+          "v": "0.5"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "350"
+        },
+        {
+          "k": "t",
+          "v": " ms (ECO through Planckian window), with joint "
+        },
+        {
+          "k": "m",
+          "v": "(2,2,0){+}(2,2,1)"
+        },
+        {
+          "k": "t",
+          "v": " subtraction and a template-agnosticism control: "
+        },
+        {
+          "k": "c",
+          "v": "NO_VARIANT_ECHO"
+        },
+        {
+          "k": "t",
+          "v": " on all 10 events — the null is robust against alternative signature readings. Search-target firewall unchanged: upper bound, no detection, no tension claim."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-02",
+    "dateLabel": "2026-07-02",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v295"
+      },
+      {
+        "k": "t",
+        "v": " robustness patch — external-review follow-up: the numeric "
+      },
+      {
+        "k": "m",
+        "v": "a_2"
+      },
+      {
+        "k": "t",
+        "v": "-kernel tolerance must dominate its own finite-difference floor"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v295_flataway_a2_exact.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "FLATAWAY.A2.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Alessandro's Git-baseline audit (commit "
+        },
+        {
+          "k": "c",
+          "v": "8cb8ad0"
+        },
+        {
+          "k": "t",
+          "v": ") hit a platform-marginal failure in check 3: the exact divided-difference "
+        },
+        {
+          "k": "m",
+          "v": "a_2"
+        },
+        {
+          "k": "t",
+          "v": " kernel is compared against an "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon{=}10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": " second finite difference whose "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "own"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " truncation error is "
+        },
+        {
+          "k": "m",
+          "v": "O(\\varepsilon^2)\\sim10^{-6}"
+        },
+        {
+          "k": "t",
+          "v": ", yet the tolerance was "
+        },
+        {
+          "k": "m",
+          "v": "10^{-6}"
+        },
+        {
+          "k": "t",
+          "v": " — on his machine "
+        },
+        {
+          "k": "m",
+          "v": "k{=}3"
+        },
+        {
+          "k": "t",
+          "v": " landed at "
+        },
+        {
+          "k": "m",
+          "v": "1.1\\times10^{-6}"
+        },
+        {
+          "k": "t",
+          "v": " (ours: "
+        },
+        {
+          "k": "m",
+          "v": "2.9\\times10^{-7}"
+        },
+        {
+          "k": "t",
+          "v": "). Fix: tolerance widened to "
+        },
+        {
+          "k": "m",
+          "v": "5\\times10^{-6}"
+        },
+        {
+          "k": "t",
+          "v": " so it "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "dominates"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the control's error floor, with the reasoning recorded in the check text; the load-bearing anchor remains the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "closed form"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " at machine precision ("
+        },
+        {
+          "k": "c",
+          "v": "v296"
+        },
+        {
+          "k": "t",
+          "v": "), the numeric witness stays as the independent cross-check. A numerical-robustness patch, no claim or status change; ledger row updated; suite green ("
+        },
+        {
+          "k": "t",
+          "v": "all checks passed"
+        },
+        {
+          "k": "t",
+          "v": " through "
+        },
+        {
+          "k": "c",
+          "v": "v470"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-02",
+    "dateLabel": "2026-07-02",
+    "heading": [
+      {
+        "k": "c",
         "v": "v469"
       },
       {

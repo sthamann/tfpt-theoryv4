@@ -1,0 +1,9 @@
+{
+  "gps": 1416723026.2,
+  "mf": 83.0,
+  "files": {
+    "H1": "H-H1_GWOSC_4KHZ_CROP32-1416723026-32.hdf5",
+    "L1": "L-L1_GWOSC_4KHZ_CROP32-1416723026-32.hdf5",
+    "V1": "V-V1_GWOSC_4KHZ_CROP32-1416723026-32.hdf5"
+  }
+}

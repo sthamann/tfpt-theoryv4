@@ -510,6 +510,7 @@ const NODES: DagNode[] = [
       "v463_seam_c8_holomorphic_uniqueness.py",
       "v464_seam_oneparticle_rigidity.py",
       "v469_seam_crossedproduct_route.py",
+      "v471_seam_horizon_replica.py",
     ],
   },
   {

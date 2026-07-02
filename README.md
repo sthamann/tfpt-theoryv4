@@ -125,10 +125,13 @@ layers (this separation is the discipline of the whole package):
 The single remaining **central theorem target** is to derive the
 `1/(8π)` area-law coefficient from the replica variation of the seam determinant. Its *structure*
 is closed (Fursaev–Solodukhin ⟹ `c₃ = 1/(8π)` is the unique value giving `S = A/4`), its
-*mechanism* is now exhibited at the gapped-model level (replica variation of a gapped 2d
-determinant **is** of EH form with a cutoff-independent coefficient; target equation
-`ln m = 3/4 = q(A₃)`, `v150`), and the residual is identified as the one irreducible dimensionful
-anchor (`1/G` is UV-sensitive, Sakharov-type induced gravity) — not a diffuse gap.
+*mechanism* is exhibited at the gapped-model level (`v150`) **and now numerically on the
+discretized collar with the seam's own kernel and real replica sheets** (`v471`: EH slope
+`2C(γ)` at 0.01–1.5%, BFK/Calderón conically clean on the kernel, transfer masses `6ln(3/2)`,
+`6ln3` on the EH line, attractor mode IR-divergent ⇒ the recovery gap makes `1/G` finite).
+The residual is the one irreducible dimensionful anchor (`1/G` is UV-sensitive, Sakharov-type
+induced gravity) plus the continuum scaling limit (the same MMST-class statement that is the
+single residual of `SEAM.EQUIV.01`) — not a diffuse gap.
 
 ---
 
@@ -152,7 +155,7 @@ anchor (`1/G` is UV-sensitive, Sakharov-type induced gravity) — not a diffuse 
 
 | Item | What it is |
 |---|---|
-| `v1_*.py … v470_*.py` | 464 numbered claim checks (one file per claim cluster; highest ID `v470`). |
+| `v1_*.py … v471_*.py` | 465 numbered claim checks (one file per claim cluster; highest ID `v471`). |
 | `run_all.py` | Runs the whole suite; ends `ALL CHECKS PASSED`. |
 | `tfpt_constants.py` | Shared constants + `check()` harness. |
 | `predictions_frozen.json` | **Blind-prediction registry** (frozen 2026-06-09): every dimensionless prediction of record at 25 digits, locked to its formula by `v84_frozen_registry.py` on every run; exactly one `θ12` prediction of record (seed `0.306747`), `r`/`n_s` only as `N_star` bands. |
@@ -390,8 +393,10 @@ Euclidean-QG conformal-factor problem (margin `Δ_eff ≈ 1.648 > 0`, `v76`/`v33
   Calderón transfer answered (the DtN kernel is conically clean; the seam-reduced action inherits
   the EH form via the BFK split, `v151`); the `q(A₃)`
   normalisation is itself the one dimensionful anchor in disguise (the EH coefficient is a log-ratio
-  `k = ln(m/μ)/12π`, and `m/μ` is `1/G`, `v152`), so the isolated residual is just the
-  kernel-identification premise plus that single declared anchor.
+  `k = ln(m/μ)/12π`, and `m/μ` is `1/G`, `v152`); and the whole chain is now exercised numerically
+  on the discretized collar with the seam's own kernel and real replica sheets (`v471`), discharging
+  the kernel-identification premise at the finite level — the isolated residual is the continuum
+  scaling limit (MMST class, shared with `SEAM.EQUIV.01`) plus that single declared anchor.
 - **Ambient QG measure** (`QG.AMB.01` / `G_metric`) — reframed as a **`[C]` redundancy** (`v369`): a
   certification object rather than missing dynamics, conditional on `SEAM.EQUIV.01` and Bisognano–Wichmann;
   gap-decoupled from the admissible IR sector (`Δ_eff ≈ 1.648 > 0`). The historical reduction chain
@@ -423,7 +428,7 @@ flagged at 2.0σ; since 2026-07-02 two named post-hoc `[O]` candidates sit next 
 Plus `v380`: the KMS Entire Hessian — the Stelle ghost is exactly a finite Seeley–DeWitt
 truncation; resummation pushes the ghost zero to infinity, so perturbative graviton unitarity holds.
 
-A development timeline of all 464 modules is in `introduction.tex` (and on the website verification page).
+A development timeline of all 465 modules is in `introduction.tex` (and on the website verification page).
 
 ---
 

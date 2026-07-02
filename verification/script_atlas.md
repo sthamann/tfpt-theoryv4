@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`464` registered scripts · `530` ledger claims · `10` clusters.
+`465` registered scripts · `531` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -228,7 +228,7 @@ _The R + R² spectral-action shadow, the seam-fixed scalaron, and the cosmologic
 - **v206_h0_lambda_branch** [E/C] `GRAV.H0.01` — must be displayed); [N] ρ_Λ=M_Pl⁴δ_Σ≈2.4×10⁻⁴⁷ GeV⁴ (observed vacuum order); [N] 123-orders cross-link |log₁₀δ_Σ|≈122.96, consistent with the v60 split 122.948; [C] under flatness 
   - deps: v60_lambda_metrology_branch, v55_coxeter_cycle · cited: 4 frontier
 
-### `horizon` — Horizon code & Origin Theory (self-consistency)  (19 scripts)
+### `horizon` — Horizon code & Origin Theory (self-consistency)  (20 scripts)
 _The seam as the universal horizon code, the order-30 Coxeter cycle, and the gapped unique attractor that makes parameter-freeness a theorem._
 
 - **v6_bootstrap** [E] `BOOT.01` — reverse glue μ²−5μ+4=0; g_car=5 three ways; 8 = rank E₈ = φ(30)
@@ -269,6 +269,8 @@ _The seam as the universal horizon code, the order-30 Coxeter cycle, and the gap
   - deps: v219_icosahedral_mckay, v223_coxeter_totative_clock, v233_cp_triality_phase, v232_e8_kleinian_seam, SEAM.COX.01 · cited: origin theory
 - **v319_translation_clock** [E/C/O] `TRANSLATE.CLOCK.01` — The translation clock: the discrete<->dynamic bridge IS the order-30 Coxeter element, a clock with two coprime hands 5 x 6, read law-inclusive (0..5) or live-only (1..5). The only 
   - deps: v314_rate_translation, v315_coxeter_coupling, v318_arithmetic_capstone, v314, v315, v124, v55 · cited: origin theory
+- **v471_seam_horizon_replica** [E/O] `SEAM.EHMODEL.04` — SEAM.EHMODEL.04: the Seam-Horizon replica chain exercised numerically on a discretized seam collar -- the kernel-identification premise of SEAM.THEOREM.01 (residual of v150/v151/v1
+  - deps: v152_norm_is_anchor, v151_bfk_split, v150_replica_eh_model, v58_seam_horizon_chain, v90_conical_defect_chain, v56, v73, v90 · cited: origin theory
 
 ### `uwall` — Open gate (U_wall) — the flavor wall  (12 scripts)
 _The parabolic wall-selection contract: the quark ratios are closed; only the absolute amplitude scale stays open._
@@ -993,13 +995,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×63, `v336`×32, `QGEO.SYM.01`×31, `v216`×18, `QG.AMB.01`×17, `v76`×17, `v56`×17, `E8.GLU.01`×16, `REG.FREEZE.01`×15, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v312`×14, `v54`×13, `v367`×13, `v323`×12
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×63, `v336`×33, `QGEO.SYM.01`×31, `v56`×18, `v216`×18, `QG.AMB.01`×17, `v76`×17, `E8.GLU.01`×16, `REG.FREEZE.01`×15, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v312`×14, `v54`×13, `v367`×13, `v323`×12
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v459_seam_lattice_voa_route** — `SEAM.EQUIV.LATTICEVOA.01`
 - **v460_seam_s3_lto** — `SEAM.S3.LTO.01`
 - **v461_seam_strict_locality** — `SEAM.S3.LOCALITY.01`
 - **v462_seam_spinor_continuum** — `SEAM.EQUIV.SPINOR.01`
@@ -1011,4 +1012,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v468_dm2_ratio_jarlskog** — `FLAV.DM2RATIO.01`
 - **v469_seam_crossedproduct_route** — `SEAM.EQUIV.CROSSEDPRODUCT.01`
 - **v470_alpha_inflow_level** — `ALPHA.QUILLEN.INFLOW.01`
+- **v471_seam_horizon_replica** — `SEAM.EHMODEL.04`
 

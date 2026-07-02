@@ -21,8 +21,11 @@ Fourier support 4Z), M_f multiplication by f.
         Delta Tr^(2) = (1/4) sum_n [Phi(|n|,|n+4k|) + Phi(|n|,|n-4k|)] g_k^2 with the
         divided-difference kernel of e^{-t x}, Phi(a,b) = [(b-a) t e^{bt} + e^{at} -
         e^{bt}] e^{-t(a+b)} / (a-b)^2 (a!=b) and Phi(a,a) = (t^2/2) e^{-t a} -- derived
-        by Duhamel and validated against the numerics to rel.err < 1e-6 (k=1,2,3:
-        W ~ 0.208, 0.148, 0.105 at t=0.5).
+        by Duhamel and validated against the eps=1e-3 finite-difference control to
+        rel.err < 5e-6 -- the tolerance must dominate the control's own O(eps^2)~1e-6
+        truncation floor (widened from 1e-6 on 2026-07-02 after an external review hit
+        a platform-marginal 1.1e-6 at k=3; the closed form at machine precision is
+        v296) -- (k=1,2,3: W ~ 0.208, 0.148, 0.105 at t=0.5).
   [E] 4. DEGENERATE-SPLIT CLOSED FORM.  the resonant level |2k| splits to 2k +- g_k/2,
         contributing exactly 2 e^{-2kt}(cosh(t g_k/2) - 1) >= 0 (all orders, manifestly
         positive), with leading term (t^2/4) e^{-2kt} g_k^2 -- a clean positive piece of
@@ -110,11 +113,19 @@ def run():
         we = _W_exact(k, T)
         wn = _dTr(k, 1e-3) / 1e-6
         errs.append(abs(we - wn) / wn)
+    # tolerance 5e-6, NOT 1e-6: the numeric control is an eps=1e-3 second finite
+    # difference whose own truncation error is O(eps^2) ~ 1e-6, so the comparison
+    # tolerance must DOMINATE the control's error floor (external review observed a
+    # platform-dependent marginal 1.1e-6 at k=3 with the old 1e-6). The closed-form
+    # anchor at machine precision is v296; this check keeps the independent numeric
+    # witness honest.
     check("EXACT a_2 KERNEL [E]: Delta Tr^(2) = (1/4) sum_n [Phi(|n|,|n+4k|)+"
           "Phi(|n|,|n-4k|)] g^2 with the divided-difference kernel of e^{-tx} (derived "
-          "by Duhamel: %s, Phi(a,a)=(t^2/2)e^{-ta}); matches numerics to rel.err < 1e-6 "
-          "(k=1,2,3: %s)" % (kernel, [f"{e:.1e}" for e in errs]),
-          all(e < 1e-6 for e in errs))
+          "by Duhamel: %s, Phi(a,a)=(t^2/2)e^{-ta}); matches the eps=1e-3 finite-"
+          "difference control to rel.err < 5e-6, dominating the control's own O(eps^2) "
+          "~ 1e-6 truncation floor (k=1,2,3: %s; closed form at machine precision: "
+          "v296)" % (kernel, [f"{e:.1e}" for e in errs]),
+          all(e < 5e-6 for e in errs))
 
     # 4. degenerate-split closed form: 2 e^{-2kt}(cosh(t g/2) - 1) >= 0
     g = 0.3
@@ -132,7 +143,7 @@ def run():
           "f = 0 off the marks. The positive-definiteness is now EXACT (convexity), so "
           "only the single external fact remains", True)
 
-    return summary("v295 FLATAWAY.A2.01: heat-trace deviation is non-negative for ALL deformations (convexity + zero-mean), with an exact divided-difference a_2 kernel (validated to 1e-7); v292 upgraded from numerical to analytic")
+    return summary("v295 FLATAWAY.A2.01: heat-trace deviation is non-negative for ALL deformations (convexity + zero-mean), with an exact divided-difference a_2 kernel (validated to <5e-6 against the finite-difference control, dominating its O(eps^2) floor; closed form at machine precision in v296); v292 upgraded from numerical to analytic")
 
 
 if __name__ == "__main__":

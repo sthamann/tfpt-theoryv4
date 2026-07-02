@@ -175,10 +175,11 @@ def _run_search() -> int:
 
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description="TFPT GW ringdown echo-ratio forecast + Stage-1 search")
-    ap.add_argument("command", choices=["audit", "analyze", "search", "realdata", "dynamic"],
+    ap.add_argument("command", choices=["audit", "analyze", "search", "realdata", "dynamic",
+                                        "stack", "battery", "point"],
                     nargs="?", default="analyze")
     ap.add_argument("--events", nargs="*", default=["GW150914", "GW190521"],
-                    help="events for the realdata/dynamic search (need scripts/fetch_strain.py first)")
+                    help="events for the realdata/dynamic/stack/battery search (fetch first)")
     args = ap.parse_args(argv)
 
     if args.command == "search":
@@ -187,6 +188,15 @@ def main(argv: list[str] | None = None) -> int:
         return _run_realdata(args.events)
     if args.command == "dynamic":
         return _run_dynamic(args.events)
+    if args.command == "stack":
+        from .stacked_search import run_stack   # local import: needs downloaded strain
+        return run_stack(args.events)
+    if args.command == "battery":
+        from .signature_battery import run_battery   # local import: needs strain
+        return run_battery(args.events)
+    if args.command == "point":
+        from .point_test import run_point            # local import: needs strain
+        return run_point(args.events)
 
     print("=" * 72)
     print(f"TFPT ringdown echo-ratio CENSUS (stage={constants.STAGE}; ratio (2/3)^6, lag free)")
