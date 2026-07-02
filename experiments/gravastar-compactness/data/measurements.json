@@ -29,6 +29,14 @@
     "M87star": 6.5e9,
     "SgrA": 4.15e6
   },
+  "redshifts": {
+    "comment": "source-frame masses above; an OBSERVED echo delay scales with the detector-frame mass M(1+z) (same correction as gw-ringdown-echo, 2026-07-02). Published z paired with the same mass provenance; galactic/local objects z=0.",
+    "GW150914_remnant": 0.09,
+    "GW190521_remnant": 0.82,
+    "stellar_30": 0.0,
+    "M87star": 0.0,
+    "SgrA": 0.0
+  },
   "constants": {
     "GMsun_over_c3_seconds": 4.925490947e-6,
     "comment": "GM_sun/c^3 in seconds; geometric time unit per solar mass"

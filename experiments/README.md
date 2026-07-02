@@ -47,7 +47,7 @@ die **Gesamtübersicht aller Untersuchungen, Tests, Datenquellen und Ergebnisse*
 | `quantum-recovery-analog/` | **Geparkt**: Analog-Recovery `I_n ~ (64/729)^n`, kein direkter Datensatz. **(search.txt §10)** | geparkt |
 | `ftransfer/` | Theorieseitige `F_transfer`-Solver: Axion-Relik (**Spine-Finite-T-Solve** `Ωₐh²=0.125` + **unabhängiger Cross-Check** sudden/analytisch [0.125, 0.143]), Koide, Leptogenese-Boltzmann, QCD-Matching `m_p/m_e`. | aktiv |
 | `ccbh-dark-energy/` | **Kosmologisch gekoppelte BHs** (problem_b §B): de-Sitter-Seam-Innere `w_in=−1` ⇒ Kopplung `k=−3w_in=3` ⇒ Population `w=−1`; vs Farrah+2023 `k=3.11±0.79` (**−0.14σ**, aber CCBH-als-DE umstritten). Alternative-Lesart zu `dark-energy-w-watchdog` (`w_de_eos`). | aktiv |
-| `gravastar-compactness/` | **Gravastar/ECO** (problem_b §F): Nariai `Q_geom=3/8` = Jampolski-Rezzolla Max-Kompaktheit `C=3/8` (exakter Rational-Match `[C]`); `1/3<3/8<4/9<1/2` ⇒ horizontloser Echo-Kandidat, Delay ~0.70 ms (62 M☉) + Amplitude `≤(2/3)⁶`. Schärft `gw-ringdown-echo`. | aktiv |
+| `gravastar-compactness/` | **Gravastar/ECO** (problem_b §F): Nariai `Q_geom=3/8` = Jampolski-Rezzolla Max-Kompaktheit `C=3/8` (exakter Rational-Match `[C]`); `1/3<3/8<4/9<1/2` ⇒ horizontloser Echo-Kandidat, **beobachteter** Delay ~0.76 ms (62 M☉ × (1+z), z-korrigiert 2026-07-02) + Amplitude `≤(2/3)⁶`. Schärft `gw-ringdown-echo` (Stage-1d-Punkt-Test nutzt `M_det`). | aktiv |
 | `cosmic-handedness/` | **Paritäts-Watchdog** (problem_b §J, Frontier): Galaxien-Spin-Händigkeit (Shamir JADES 158:105, **~3.3σ** Monopol) vs winziger `μ4`/`PSL(2,ℂ)`-Rest; Monopol-vs-MW-Aberrations-Dipol ungelöst, Galaxy-Zoo isotrop. | aktiv |
 
 Über die ursprünglichen **9 search.txt-Suchräume** hinaus jetzt erweitert um die scharfen
@@ -869,9 +869,11 @@ TFPT-Nariai `Q_geom=3/8` (de-Sitter-Limes `1/2`) und Jampolski-Rezzolla 2026
 - **Kompaktheitsfenster:** `1/3 < 3/8 < 4/9 < 1/2` ⇒ Oberfläche bei `R=8M/3 < 3M`: **über**
   der Photonensphären-Schwelle (lichtfangend, Echo-fähig), **unter** Buchdahl und Horizont →
   horizontloser Echo-Kandidat.
-- **Echo-Template:** Tortoise-Round-Trip-Delay `Δt=2.288 M` → ~0.70 ms (62 M☉), ~1.60 ms
-  (142 M☉); Amplitude `≤ (2/3)⁶`. Liefert `gw-ringdown-echo` die fehlende **Zeitskala** zum
-  bereits fixierten Amplitudenverhältnis. **EHT-Schatten** `b_c=3√3 M` ist **Kerr-entartet** →
+- **Echo-Template:** Tortoise-Round-Trip-Delay `Δt=2.288 M` mit **Detektor-Frame-Masse**
+  `M(1+z)` (z-Korrektur 2026-07-02) → **beobachtet** ~0.76 ms (GW150914, z=0.09), ~2.91 ms
+  (GW190521, z=0.82); Amplitude `≤ (2/3)⁶`. Liefert `gw-ringdown-echo` die fehlende
+  **Zeitskala** zum fixierten Amplitudenverhältnis — der Stage-1d-Punkt-Test fährt genau
+  dieses (Δt, Ratio)-Paar. **EHT-Schatten** `b_c=3√3 M` ist **Kerr-entartet** →
   Echos, nicht der Schatten, sind der Diskriminator. → `data_limited`.
 
 ### 7d.3 Kosmische Händigkeit — `cosmic-handedness/` (Frontier-Watchdog)

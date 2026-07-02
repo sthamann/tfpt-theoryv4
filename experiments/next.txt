@@ -41,6 +41,27 @@ genau der μ₄-Phasenscan (TFPT-natürlich: π/2 pro Bounce). Ergebnis: **NO_VA
 Zweit-Detektor). Der Null ist robust gegen alternative Signatur-Lesarten. Offen dokumentiert:
 Lag-Drift zwischen Echos, Präzession.
 
+**(2d) Cross-Source-Audit der Signatur-Erkenntnisse (gleicher Tag): alle anderen Kanäle gegen
+I1 Frame / I2 Semantik / I3 Template-Spezifität / I4 Punkt-Test geprüft.** Befund + Fixes:
+- **gravastar-compactness (I1-Bug behoben):** die ms-Delay-Tabelle nutzte Quellsystem-Massen;
+  beobachtete Delays skalieren mit M(1+z). `redshifts` in measurements.json, CLI korrigiert,
+  neu gelaufen: GW150914 0.70→**0.76 ms**, GW190521 1.60→**2.91 ms** (z=0.82!). Scorecard-Zeile
+  aktualisiert. (Der GW-Stage-1d-Punkt-Test nutzte bereits detector_frame_mass — konsistent.)
+- **gw-ringdown-spectroscopy (I1 latent behoben):** Hz-Umrechnung nutzte Quellsystem-Masse ohne
+  z-Feld; `redshift` ergänzt, f_fund/f_asym jetzt Detektor-Frame (ω_R/T_H selbst ist
+  frame-immun; Verdict data_limited unverändert).
+- **pulsar-glitch-recovery PG.01–03 (I2 geklärt, kein Code-Fix nötig):** die Teeth
+  {log 3/2, log(3/2)³, log(3/2)⁶} SIND die Semantik-Battery (Step/Amplitude/Energie in einem
+  Satz); README expliziert. PG.07 hat λ-Battery+Bonferroni (I3) und ε-Power-Aussage (I4).
+- **FRB (Referenz-Tier):** I1–I4 vollständig (observable_semantics.py, FRB.02b Free-Quotient+LEE,
+  Punkt-Hypothesen mit Placebos; FRB.09-Statistiken z-immun: Raten-RATIOS, Session-Gaps).
+- **crust-cooling-comb:** kT∞ bereits z-korrigiert, ε=2%-Injection auf echtem Sampling
+  quantifiziert — sauber. **comb-meta-limit:** aggregiert ULs vs ε=0.0173 by design.
+- **Offene methodische Delta (dokumentiert, nicht implementiert):** die Comb-Kanäle
+  A1–A4/PG.05 haben Off-Kernel-Periodogramm-Ränge, aber kein FRB.02b-artiges
+  Free-Quotient-LEE-Tier; ε=0.017-Injections auf echtem Sampling fehlen außerhalb
+  crust-cooling. Nächster Härtungsschritt, ändert keine bestehenden Nulls.
+
 **(2c) Punkt-Test Stage 1d (`tfpt-gw point`) — die schärfste TFPT-Hypothese, nie zuvor als
 Punkt getestet.** Die Battery scannt den Lag frei; TFPT SAGT ihn aber VORHER: Gravastar/Nariai
 C=3/8 ⇒ Tortoise-Round-Trip Δt = 2.288·M_det (0.77 ms GW250114, 2.59 ms GW190521). Punkt-Test =

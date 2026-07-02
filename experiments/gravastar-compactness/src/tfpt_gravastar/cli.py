@@ -67,13 +67,15 @@ def analyze(m: dict) -> dict:
     # (b) compactness ladder
     ladder_ok = lm["photon_sphere"] < C < lm["buchdahl"] < lm["black_hole"]
 
-    # (c) echo template
+    # (c) echo template -- OBSERVED delays scale with the DETECTOR-frame mass
+    # M(1+z) (redshift correction, 2026-07-02; same fix as gw-ringdown-echo)
     echo = echo_delay_geometric(C)
     unit = m["constants"]["GMsun_over_c3_seconds"]
+    redshifts = m.get("redshifts", {})
     delays_ms = {}
     for label in ("GW150914_remnant", "GW190521_remnant", "stellar_30"):
-        mass = m["masses_solar"][label]
-        delays_ms[label] = echo["delay_over_M_closed"] * mass * unit * 1e3  # ms
+        mass_det = m["masses_solar"][label] * (1.0 + float(redshifts.get(label, 0.0)))
+        delays_ms[label] = echo["delay_over_M_closed"] * mass_det * unit * 1e3  # ms
 
     # EHT shadow: critical impact parameter b_c = 3 sqrt(3) M (photon sphere) -> Kerr-degenerate
     b_c_over_M = 3.0 * math.sqrt(3.0)
@@ -83,8 +85,9 @@ def analyze(m: dict) -> dict:
         f"Jampolski-Rezzolla max compactness are the SAME rational 3/8 with the SAME de Sitter "
         f"endpoint 1/2 -- but no explicit C<->Q_geom map is proven, so it is a structural echo, "
         f"not an identity. C=3/8 sits in 1/3<3/8<4/9<1/2: a HORIZONLESS light-trapping ECO. As a "
-        f"GW echo template it predicts a round-trip delay ~{delays_ms['GW150914_remnant']:.2f} ms "
-        f"(M=62 Msun) with amplitude ratio <= (2/3)^6={pred['echo_amplitude_ratio_bound']:.4f}; "
+        f"GW echo template it predicts an OBSERVED round-trip delay ~{delays_ms['GW150914_remnant']:.2f} ms "
+        f"(GW150914: 62 Msun source frame x (1+z), z=0.09) with amplitude ratio <= "
+        f"(2/3)^6={pred['echo_amplitude_ratio_bound']:.4f}; "
         f"this is the (delay, amplitude) pair gw-ringdown-echo was missing. EHT shadow size "
         f"(b_c=3 sqrt3 M) is DEGENERATE with Kerr -> echoes, not the shadow, are the discriminator."
     ) if (rational_match and endpoint_match and ladder_ok and echo["light_trapping"]) else \

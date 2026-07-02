@@ -51,16 +51,20 @@ def main(argv: list[str] | None = None) -> int:
     print(f"\n  structural identity ln3 = ln N_fam: {abs(LN3 - math.log(N_FAM)) < 1e-12}")
     print(f"  fundamental / asymptotic real-frequency ratio = {ratio:.1f} "
           f"(the measured n=0 mode is NOT in the asymptotic ln3 regime)")
-    print("\n  per-event (measured fundamental vs where the asymptotic ln3 mode sits):")
+    print("\n  per-event (measured fundamental vs where the asymptotic ln3 mode sits;"
+          " Hz from DETECTOR-frame mass M(1+z) -- omega_R/T_H itself is frame-immune):")
     rows = []
     for ev in m["events"]:
-        Mgeo = ev["M_final_Msun"] * 4.92549e-6          # GM/c^3 in s
+        m_det = ev["M_final_Msun"] * (1.0 + float(ev.get("redshift", 0.0)))
+        Mgeo = m_det * 4.92549e-6                       # GM/c^3 in s, detector frame
         f_fund = M_OMEGA_FUNDAMENTAL / (2 * math.pi * Mgeo)
         f_asym = M_OMEGA_ASYMPTOTIC / (2 * math.pi * Mgeo)
         rows.append({"name": ev["name"], "f220_measured_Hz": ev["f220_Hz"],
+                     "M_detector_Msun": m_det,
                      "f_fundamental_pred_Hz": f_fund, "f_asymptotic_ln3_Hz": f_asym})
         print(f"    {ev['name']:10s} f220(meas)={ev['f220_Hz']:.0f} Hz, "
-              f"f_fund(Schw)~{f_fund:.0f} Hz, f_asym(ln3)~{f_asym:.0f} Hz")
+              f"M_det={m_det:.1f} Msun, f_fund(Schw)~{f_fund:.0f} Hz, "
+              f"f_asym(ln3)~{f_asym:.0f} Hz")
 
     verdict = ("structural: ln3 = ln N_fam exactly and the area quantum is 4 ln3 = ln 81 "
                "= ln(N_fam^4); but the asymptotic omega_R/T_H=ln3 lives in the high-overtone "

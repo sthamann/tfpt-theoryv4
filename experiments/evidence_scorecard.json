@@ -1480,7 +1480,7 @@
     {
       "domain": "GW",
       "observable": "ECO compactness C=3/8 (gravastar echo)",
-      "tfpt_value": "C=3/8=Q_geom(Nariai); echo delay ~0.70 ms (62 Msun), ratio <= (2/3)^6",
+      "tfpt_value": "C=3/8=Q_geom(Nariai); OBSERVED echo delay ~0.76 ms (62 Msun x (1+z), z=0.09), ratio <= (2/3)^6",
       "data_value": "no ECO echo detected; ringdown consistent with Kerr (rational 3/8 match is [C])",
       "pull_sigma": null,
       "claim_type": "bridge",

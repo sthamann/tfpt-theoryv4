@@ -412,7 +412,7 @@ ROWS = [
      "Farrah+2023 ApJL 944 L31 (disputed: Lacy/Amendola/Andrae&El-Badry/Mistele)",
      "robust k != 3 at >=3 sigma in a controlled SMBH-growth sample", "data_limited"],
     ["GW", "ECO compactness C=3/8 (gravastar echo)",
-     "C=3/8=Q_geom(Nariai); echo delay ~0.70 ms (62 Msun), ratio <= (2/3)^6",
+     "C=3/8=Q_geom(Nariai); OBSERVED echo delay ~0.76 ms (62 Msun x (1+z), z=0.09), ratio <= (2/3)^6",
      "no ECO echo detected; ringdown consistent with Kerr (rational 3/8 match is [C])", None, "bridge",
      "Nariai horizon-root quotient / ECO reflectivity", "search_target",
      "Jampolski-Rezzolla 2026 (arXiv:2509.15302) + LVK ringdown",
