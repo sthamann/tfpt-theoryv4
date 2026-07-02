@@ -176,7 +176,7 @@ def _run_search() -> int:
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description="TFPT GW ringdown echo-ratio forecast + Stage-1 search")
     ap.add_argument("command", choices=["audit", "analyze", "search", "realdata", "dynamic",
-                                        "stack", "battery", "point"],
+                                        "stack", "battery", "point", "bmcomb"],
                     nargs="?", default="analyze")
     ap.add_argument("--events", nargs="*", default=["GW150914", "GW190521"],
                     help="events for the realdata/dynamic/stack/battery search (fetch first)")
@@ -197,6 +197,9 @@ def main(argv: list[str] | None = None) -> int:
     if args.command == "point":
         from .point_test import run_point            # local import: needs strain
         return run_point(args.events)
+    if args.command == "bmcomb":
+        from .bm_comb import run_bm_comb             # local import: needs strain
+        return run_bm_comb(args.events)
 
     print("=" * 72)
     print(f"TFPT ringdown echo-ratio CENSUS (stage={constants.STAGE}; ratio (2/3)^6, lag free)")

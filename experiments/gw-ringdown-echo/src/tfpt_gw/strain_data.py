@@ -107,6 +107,35 @@ def whiten(x: np.ndarray, dt: float, seg_s: float = 4.0) -> np.ndarray:
     return apply_whitening(x, psd_i, scale)
 
 
+def whitening_filter_gated(x: np.ndarray, dt: float, gate_start: int, gate_end: int,
+                           seg_s: float = 4.0) -> tuple[np.ndarray, float]:
+    """OFF-SOURCE whitening filter: Welch PSD estimated EXCLUDING the gated
+    (event) stretch, so the filter cannot adapt to -- and ring after -- the
+    loud transient (signature-revision hardening, 2026-07-02).
+
+    The pre-gate and post-gate stretches are Welch-averaged weighted by their
+    lengths; the robust-std scale is computed off-gate as well."""
+    fs = 1.0 / dt
+    nperseg = int(seg_s * fs)
+    stretches = [seg for seg in (x[:max(0, gate_start)], x[gate_end:])
+                 if len(seg) >= 2 * nperseg]
+    if not stretches:
+        return whitening_filter(x, dt, seg_s)
+    freqs = np.fft.rfftfreq(len(x), dt)
+    acc = np.zeros_like(freqs)
+    w_tot = 0.0
+    for seg in stretches:
+        f_psd, psd = welch(seg, fs=fs, nperseg=nperseg, window="hann")
+        acc += len(seg) * np.interp(freqs, f_psd, psd, left=psd[0], right=psd[-1])
+        w_tot += len(seg)
+    psd_i = acc / w_tot
+    psd_i[psd_i <= 0] = psd_i[psd_i > 0].min()
+    white = np.fft.irfft(np.fft.rfft(x) / np.sqrt(psd_i), n=len(x))
+    off = np.concatenate([white[:max(0, gate_start)], white[gate_end:]])
+    scale = float(np.median(np.abs(off)) / 0.6745) or 1.0
+    return psd_i, scale
+
+
 def damped_sinusoid(n: int, start: int, f0: float, tau: float, dt: float,
                     phi: float = 0.0) -> np.ndarray:
     """Unit-amplitude ringdown e^{-t/tau} cos(2 pi f0 t + phi) for samples >= start."""

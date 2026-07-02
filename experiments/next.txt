@@ -41,6 +41,31 @@ genau der μ₄-Phasenscan (TFPT-natürlich: π/2 pro Bounce). Ergebnis: **NO_VA
 Zweit-Detektor). Der Null ist robust gegen alternative Signatur-Lesarten. Offen dokumentiert:
 Lag-Drift zwischen Echos, Präzession.
 
+**(2e) Systematik-Runde 2 (gleicher Tag, Vogelperspektive "was verzerrt die Signaturen noch?"):
+fünf Effekte identifiziert, implementiert, alle 10 Events neu gefahren.**
+1. **Off-Source-PSD (Whitening-Selbstkontamination):** Der Welch-Filter enthielt das Event selbst
+   — Filter-Ringing im Post-Merger-Fenster möglich. Fix: `whitening_filter_gated` (Event-Fenster
+   [−1s, +3s] aus der PSD-Schätzung ausgeschlossen). **Diagnose-Ergebnis: die breitbandigen
+   Exzesse (GW150914/GW200129/GW190521_074359) BLEIBEN unter Off-Source-PSD** → echte
+   Post-Merger-Restleistung (plausibel höhere Moden/nichtlineare QNMs), kein Filterartefakt.
+2. **Kurz-Lag-Selbstabsorption (struktureller Fehler des Punkt-Tests):** Der vorhergesagte
+   ECO-Lag (~0.8 ms) < τ (~4 ms) ⇒ Echos ÜBERLAPPEN den Ringdown, subtract-then-search frisst
+   Signal. Fix: **Joint-Fit QNM(220+221)+Zug** (F-Statistik, Off-Source-kalibriert).
+3. **Spin-Systematik:** af-Scan {0.60, 0.69, 0.80} statt fixem 0.69 (zählt im Bonferroni-Budget).
+4. **Erste-Echo-Nichtlinearität:** Skip-First-Variante (Ratio nur aus k≥2).
+5. **NEU aus dem Vorhersagen-Sweep (+ Archiv `tfpt_prediction_eht_achromatic_intercept.tex`):
+   das Flächenquant ΔA=4ln3 als Bekenstein-Mukhanov-LINIENSPEKTRUM** — f_n = n·ln3/(16π²·M_det),
+   ~14–23 Hz Abstand, ~10–25 Harmonische im Band; nie zuvor getestet. Neues Stage 1e
+   `tfpt-gw bmcomb` mit Spacing-Battery {0.8,0.9,1.1,1.25}×f_BM als Spezifitätskontrolle.
+   (Der archivierte dyonische β_BH-Kanal ist Photon-seitig; er begründet theorieseitig die
+   Rand-Paritätsphase, die der μ₄-Phasenscan bereits abdeckt.)
+**Ergebnisse:** Punkt-Test v2 **NO_POINT_ECHO** auf allen 10 Events (bestes p_bonf=0.052,
+GW150914/L1, kein Zweit-Detektor, Joint-Fit p=0.023–0.063 roh); Battery v3 (Off-Source-PSD)
+**NO_VARIANT_ECHO** unverändert; BM-Kamm **NO_BM_COMB** (bestes p_bonf=0.032, nicht
+spacing-spezifisch; Power-limitiert → data_limited, neue Scorecard-Zeile, 83→84 rows).
+Dokumentiert-offen: Offset≠Spacing-Zug (Scrambling-Delay des ersten Echos, 2D-Scan als
+nächste Prereg), Lag-Drift, Präzession, NR-informierte Subtraktion höherer Moden.
+
 **(2d) Cross-Source-Audit der Signatur-Erkenntnisse (gleicher Tag): alle anderen Kanäle gegen
 I1 Frame / I2 Semantik / I3 Template-Spezifität / I4 Punkt-Test geprüft.** Befund + Fixes:
 - **gravastar-compactness (I1-Bug behoben):** die ms-Delay-Tabelle nutzte Quellsystem-Massen;

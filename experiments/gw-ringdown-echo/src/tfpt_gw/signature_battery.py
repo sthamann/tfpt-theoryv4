@@ -54,8 +54,11 @@ from .strain_data import (
     damped_sinusoid,
     detector_frame_mass,
     read_hdf5,
-    whitening_filter,
+    whitening_filter_gated,
 )
+
+GATE_PRE_S = 1.0                # PSD gate around the event (off-source whitening)
+GATE_POST_S = 3.0
 
 GMSUN_OVER_C3 = 4.925490947e-6
 STRAIN_DIR = Path(__file__).resolve().parents[2] / "data" / "strain"
@@ -220,9 +223,13 @@ def battery_event(event: str, af: float = 0.69) -> EventBattery:
 
     for det, fname in meta["files"].items():
         s = read_hdf5(str(STRAIN_DIR / Path(fname).name))
-        psd_i, scale = whitening_filter(s.data, s.dt)
-        white = apply_whitening(s.data, psd_i, scale)
         merger = s.index_at(merger_gps)
+        # OFF-SOURCE PSD: the whitening filter must not adapt to (and ring
+        # after) the loud event itself -- gate [merger-1s, merger+3s]
+        psd_i, scale = whitening_filter_gated(
+            s.data, s.dt, merger - int(GATE_PRE_S / s.dt),
+            merger + int(GATE_POST_S / s.dt))
+        white = apply_whitening(s.data, psd_i, scale)
         resid, amp220 = subtract_qnm_multimode(
             white, merger, [(f0, tau0), (f1, tau1)], s.dt)
 

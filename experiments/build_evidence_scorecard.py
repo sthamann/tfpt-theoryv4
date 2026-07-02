@@ -85,13 +85,24 @@ ROWS = [
      "ratio echo in any event; Stage-1b STACK over 23 detector streams: stacked p=0.262, kernel-"
      "consistent streams 0/23; Stage-1c SIGNATURE BATTERY (energy-reading (2/3)^3, step 2/3, mu4 "
      "per-bounce phases {0,pi/2,pi,3pi/2} = boundary-birefringence analogue, lags 0.5-350 ms incl. "
-     "Planckian window, joint 220+221 subtraction, Bonferroni x12): NO_VARIANT_ECHO; Stage-1d POINT "
-     "TEST (lag FIXED by C=3/8: dt=2.288 M_det +-25%, kernel ratios, + morphology-robust incoherent "
-     "per-echo statistic, Bonferroni x10): NO_POINT_ECHO (best p_bonf=0.013, single stream) -- the "
-     "null is robust against alternative signature readings; path birefringence cancels in the ratio",
+     "Planckian window, joint 220+221 subtraction, OFF-SOURCE event-gated PSD, Bonferroni x12): "
+     "NO_VARIANT_ECHO; Stage-1d POINT TEST v2 (lag FIXED by C=3/8: dt=2.288 M_det +-25%, kernel "
+     "ratios, spin scan af={0.60,0.69,0.80}, skip-first-echo, morphology-robust incoherent statistic, "
+     "JOINT QNM+train fit repairing the short-lag subtract-then-search self-absorption, Bonferroni "
+     "x39): NO_POINT_ECHO (best p_bonf=0.052, single stream GW150914/L1; broadband residual power "
+     "persists under off-source PSD -> higher-mode/nonlinear-QNM content, not filter artefact) -- "
+     "the null is robust against all tested signature readings and systematics",
      None, "search_target", "boundary recovery kernel",
      "strain_level_test", "LVK GWTC-5.0 + real 32s strain (10 loudest ringdowns incl. GW250114, O4b)",
      "strain-level echo with ratio >>(2/3)^6 across events", "consistent"],
+    ["GW", "area-quantum spectral comb (BM lines)", "Delta A = 4 ln3 => f_n = n ln3/(16 pi^2 M_det)",
+     "Stage-1e first run: post-merger residual spectrum comb (~14-23 Hz spacing, ~10-25 harmonics "
+     "in band) with spacing battery {0.8,0.9,1.1,1.25}xf_BM as specificity control, off-source PSD, "
+     "spin scan: NO_BM_COMB on all 10 loudest events (best p_bonf=0.032, not spacing-specific, no "
+     "2nd detector); line widths/exterior coupling model-dependent -> power-limited null",
+     None, "search_target", "horizon area quantum (Hod ln3, v57)",
+     "strain_level_test", "real 32s GWOSC strain (10 loudest ringdowns incl. GW250114, O4b)",
+     "a spacing-specific BM comb coincident in >=2 detectors surviving injections", "data_limited"],
     ["GW", "dynamic walled-clock recovery bend (Stage 2)",
      "bend rate(2)/rate(1)=ln3/ln(3/2)=2.7095 + protected floor + hard wall (v124/v147, QT.04)",
      "NO_KERNEL_RECOVERY on real strain incl. GW250114 (loudest ringdown, O4b): q_hat~1, not the bend; "

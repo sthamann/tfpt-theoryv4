@@ -91,6 +91,11 @@ physics allow (Bonferroni ×12), on the same 10 events:
 - **Extended lags 0.5–350 ms** (ECO/gravastar ~0.7 ms through Planckian ~0.23 s @63 M☉).
 - **Joint (2,2,0)+(2,2,1) subtraction** (Berti+ 2006 fits for both modes) — the `q̂ ~ 1`
   excesses of the primary search are overtone/residual power.
+- **Off-source (event-gated) PSD** (v3 re-run): the whitening filter is estimated
+  excluding `[merger−1 s, merger+3 s]`, so it cannot adapt to — and ring after — the loud
+  event. Diagnostic outcome: the GW150914/GW200129/GW190521 broadband excesses **persist**
+  under the off-source PSD, i.e. they are genuine post-merger residual power (plausibly
+  unsubtracted higher-mode/nonlinear-QNM content), **not** filter artefacts.
 - **Template-agnosticism control:** streams where *all 12* variants fire together are
   broadband residual power (an echo train prefers ONE reading) — rejected as non-echo.
 
@@ -111,12 +116,43 @@ TFPT-specific echo test. A second, **morphology-robust incoherent statistic** (f
 per echo, only positions and ratio weights fixed) covers barrier low-pass filtering that
 degrades the coherent template.
 
-**Result: `NO_POINT_ECHO` on all 10 events** (best `p_bonf = 0.013`, GW150914/L1 — the same
-stream the battery already rejected as template-agnostic broadband residual; GW150914 shows
-mild sub-threshold raw excesses at the predicted lag in both detectors, but nothing
-Bonferroni-surviving in ≥2 detectors and the excess matches *every* template equally, i.e.
-residual power, not an echo train). The sharpest TFPT echo test is null; upper bound, no
-tension. Output: `results/point_test.json`.
+**Result (v2, systematic-hardened): `NO_POINT_ECHO` on all 10 events.** The v2 run adds the
+full systematics battery from the signature review: **off-source (event-gated) PSD** (the
+whitening filter cannot ring after a merger it never saw), a **remnant-spin scan**
+`af ∈ {0.60, 0.69, 0.80}` (Kerr template systematic), a **skip-first-echo** variant (the
+first reflection samples the nonlinear regime and may break the geometric progression), and
+a **joint QNM+train fit** that repairs the short-lag flaw of subtract-then-search: at the
+predicted ECO lag (~0.8 ms < τ ≈ 4 ms) echoes *overlap* the primary ringdown, so the QNM
+subtraction partially absorbs any train — the joint fit tests both together (F-statistic,
+off-source calibrated). GW150914 remains the one event with mild coincident raw excesses
+(p ~ 0.001–0.03 across statistics) that persist under the off-source PSD — but nothing
+survives Bonferroni in ≥2 detectors (best `p_bonf = 0.05`), and the battery's
+template-agnosticism control classifies the excess as broadband residual power (most
+plausibly unsubtracted higher-mode / nonlinear-QNM content; an NR-informed subtraction is
+the escalation path). Upper bound, no tension. Output: `results/point_test.json`.
+
+**Documented-but-untested configuration (offset train):** the TFPT scrambling time
+(t_scr ~ 4M ln S ≈ 0.25 s at 68 M☉) could delay the *first* echo by a global offset while
+subsequent echoes keep the cavity spacing 2.288 M — an offset ≠ spacing train. All searches
+so far anchor the train at the merger with offset = spacing; the 2-D (offset × spacing)
+scan is a preregistered candidate for the next hardening round (trials budget permitting).
+
+## Stage 1e — AREA-QUANTUM spectral comb (`tfpt-gw bmcomb`) — Bekenstein–Mukhanov lines
+
+BH-specific theory input never tested before: TFPT's area quantum **ΔA = 4 ln3** (v57,
+horizon readouts) plus Bekenstein–Mukhanov quantisation makes the horizon a discrete-line
+system with transition frequency `ω_BM = T_H ln3` (exactly the Hod frequency, read as a
+**line spectrum**): harmonics `f_n = n·ln3/(16π² M_det)` — ~20.5 Hz spacing at 68 M☉, i.e.
+**~20 comb lines across the LVK band** in the post-merger residual spectrum. The statistic
+compares residual power on comb bins vs interleaved off-comb bins (off-source PSD, joint
+220+221 subtraction, off-source backgrounds) with a **spacing battery**
+`{0.8, 0.9, 1.0, 1.1, 1.25}×f_BM` as template-specificity control and the spin scan in the
+Bonferroni budget.
+
+**Result: `NO_BM_COMB` on all 10 events.** Honest power note: line widths, exterior
+coupling and the residual-power fraction carrying the lines are model-dependent — this is
+a well-defined search-target null, not a kill test of the area quantum.
+Output: `results/bm_comb.json`.
 
 ## Stage 2 — DYNAMIC walled-clock recovery matched filter (`tfpt-gw dynamic`) — NEW
 
@@ -164,7 +200,8 @@ tfpt-gw stack    --events GW250114_082203 GW230814_230901 GW240920_124024 \
   GW231226_101520 GW241127_061008 GW200129_065458 GW190521_074359 \
   GW240621_195059 GW150914 GW190521                            # Stage 1b stacked search
 tfpt-gw battery  --events ...same 10 events...                 # Stage 1c signature battery
-tfpt-gw point    --events ...same 10 events...                 # Stage 1d TFPT point test
+tfpt-gw point    --events ...same 10 events...                 # Stage 1d TFPT point test v2
+tfpt-gw bmcomb   --events ...same 10 events...                 # Stage 1e area-quantum comb
 ```
 
 ## Layout
@@ -181,8 +218,9 @@ src/tfpt_gw/real_echo_search.py # Stage 1 static (2/3)^6 echo train on real stra
 src/tfpt_gw/dynamic_recovery.py # Stage 2 dynamic walled-clock (bend 2.7095) on real strain
 src/tfpt_gw/stacked_search.py   # Stage 1b stacked search over the loudest ringdowns
 src/tfpt_gw/signature_battery.py# Stage 1c signature battery (semantics x mu4 phases x lags)
-src/tfpt_gw/point_test.py   # Stage 1d TFPT point test (C=3/8 lag x kernel ratio, + incoherent)
-src/tfpt_gw/cli.py          # `tfpt-gw analyze | search | realdata | dynamic | stack | battery | point`
+src/tfpt_gw/point_test.py   # Stage 1d point test v2 (C=3/8 lag, spin scan, skip-first, joint fit)
+src/tfpt_gw/bm_comb.py      # Stage 1e area-quantum (Bekenstein-Mukhanov) spectral comb
+src/tfpt_gw/cli.py          # `tfpt-gw analyze|search|realdata|dynamic|stack|battery|point|bmcomb`
 data/gwtc_events.csv        # real LVK GWTC-5.0 catalogue (390 canonical; 391 raw rows)
 data/strain/                # real 32 s HDF5 strain (gitignored) + <event>_meta.json
 event_count_audit.md        # 390 vs 391 reconciliation + selection accounting
@@ -190,4 +228,5 @@ results/dynamic_recovery.json,.png  # Stage 2 output + figure
 results/echo_stack.json     # Stage 1b stacked-search output
 results/signature_battery.json     # Stage 1c battery output
 results/point_test.json     # Stage 1d point-test output
+results/bm_comb.json        # Stage 1e area-quantum comb output
 ```
