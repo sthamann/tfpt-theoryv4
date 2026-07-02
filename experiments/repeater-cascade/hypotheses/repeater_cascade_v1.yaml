@@ -1,0 +1,130 @@
+# Preregistration of the TFPT repeater-CASCADE search (RC, v1). FROZEN hypothesis.
+#
+# Written BEFORE any statistic was run on the burst tables (data were only format-
+# inspected / counted for ingestion). Every kernel number below is an EXACT
+# consequence of the two TFPT axioms (c3 = 1/(8*pi), g_car = 5) via the resummed
+# recovery clock rate(n) = -6 ln(1 - n/3) (verification v124/v126/v147) and the
+# cascade scale lambda = (3/2)^6; each must equal repeater_cascade.constants
+# byte-for-byte (guarded by tests/). No refitted omega, bend, epsilon or exponent
+# is permitted. Editing the kernel after data inspection invalidates this file.
+#
+# WHY this experiment: the GW Stage-2 identifiability analysis machine-checked that
+# the walled two-mode bend rate(2)/rate(1) = ln3/ln(3/2) = 2.7095 is DEGENERATE
+# within one monotone recovery (two-mode R^2 gain ~1e-3 even noise-free). The
+# discriminating dynamic signatures are (a) the log-periodic comb omega = 2.583
+# over >~2.8 ln-periods and (b) the time-resolved recovery SEQUENCE of a repeating
+# source. Hyperactive FRB repeaters are the one astrophysical system with
+# thousands of time-stamped events per activity episode and an ln(t) reach of
+# 4-6 comb periods inside a single observing session -- the range wall that killed
+# PG.05/PG.06/PG.07 does NOT apply here. The amplitude wall (eps ~ 1.7%) does.
+version: 1
+frozen_on: 2026-07-02
+experiment: repeater-cascade
+axes: [RC.01, RC.02, RC.03]
+
+kernel:
+  clock: "rate(n) = -6*ln(1 - n/3); rate(1) = 6 ln(3/2), rate(2) = 6 ln 3"
+  bend: "ln(3)/ln(3/2) = 2.70951129..."          # frozen two-mode rate ratio (v124)
+  wall_N_fam: 3                                   # at most 2 decay modes + floor
+  omega: "2*pi/ln((3/2)^6) = 2.58270693..."       # log-periodic comb frequency
+  one_comb_period_dln_t: "ln((3/2)^6) = 2.43279..."
+  amplitude_eps: "exp(-pi^2/ln((3/2)^6)) = 0.01730"   # predicted ripple, never fitted
+  reach_gate_periods: 2.8                         # PG.06 machine-checked localisation gate
+  ladder_teeth_dex: ["log10(3/2)", "log10((3/2)^3)", "log10((3/2)^6)"]
+  tolerance_dex_ladder: 0.05                      # PG.02/PG.03 convention
+
+data:
+  # verified accessible before freezing; per-dataset time resolution is a HARD
+  # gate on which taus enter the phase tests (tau_min >= 30x resolution).
+  - id: fast_frb20220912a_zhang2023
+    source: FRB 20220912A
+    n_bursts: 1076
+    provenance: "VizieR J/ApJ/955/142 table1.dat (Zhang Y.-K. et al. 2023, ApJ 955, 142); barycentric MJD @1.5 GHz"
+    time_resolution_s: 0.01
+  - id: fast_frb20201124a_xu2022
+    source: FRB 20201124A (spring-2021 episode)
+    n_bursts: 1863
+    provenance: "Xu H. et al. 2022, Nature 609, 685 (FAST); rows via the committed Blinkverse export (reference DOI 10.1038/s41586-022-05071-8)"
+    time_resolution_s: 0.01
+  - id: fast_frb20201124a_zhangyk2022
+    source: FRB 20201124A (autumn-2021 episode)
+    n_bursts: 881
+    provenance: "Zhang Y.-K. et al. 2022, RAA 22, 124002 (FAST, Sep-Oct 2021); rows via the committed Blinkverse export (reference DOI 10.1088/1674-4527/ac98f7)"
+    time_resolution_s: 0.01
+  - id: fast_frb20240114a_polcat
+    source: FRB 20240114A
+    n_bursts: 6134
+    provenance: "FAST polarization catalog (committed in frb-tfpt-signatures; ApJS 2025 add2eb); v5 stores MJD_topo at 1e-8 d ~ 0.9 ms"
+    # ingestion-fact correction 2026-07-02 (BEFORE any statistic was run): the v1
+    # header preview showed 5 decimals; the committed v5 file carries 8 decimals
+    # (histogram-checked). Data-format fact only -- kernel/tests/gates unchanged.
+    time_resolution_s: 0.001
+  - id: chime_catalog2_repeaters
+    source: "CHIME/FRB Catalog 2 repeaters (multi-burst transit days; FRB20220912A dominates)"
+    n_bursts: "~1200 repeater bursts (sub_num=0)"
+    provenance: "CHIME/FRB Collaboration 2026, ApJS 283, 34; CANFAR doi:10.11570/25.0066 data/table/chimefrbcat2.csv"
+    time_resolution_s: 0.001
+
+session_definition:
+  rule: "bursts of one source sorted by MJD; a gap > 0.2 d opens a new session"
+  onset: "t0 = MJD of the FIRST burst in the session (observed activity onset proxy); tau_i = (t_i - t0) in seconds for i >= 2"
+  caveat: "FAST sessions truncate the true activity onset; the off-kernel periodogram + rate-preserving surrogates calibrate the induced arbitrariness. No post-hoc re-anchoring of t0 is permitted."
+
+targets:
+  RC.01_walled_clock_rate_template:
+    observable: "per-session burst-rate curve R(t) after onset (equal-count bins in tau)"
+    template: "M1: R(t) = w0 + w1*exp(-r*t) + w2*exp(-BEND*r*t), weights >= 0, r > 0 profiled on a log grid; null model M0: single exponential + floor"
+    statistic: "Delta R^2 of M1 over M0 at the frozen bend"
+    nulls:
+      - "rate-preserving surrogate sessions (inhomogeneous Poisson from the smooth monotone fit of the same session)"
+      - "free-bend placebo: profile an ARBITRARY bend ratio in [1.5, 6]; the frozen 2.7095 must beat the placebo family (look-elsewhere)"
+    expected_degeneracy: "the GW Stage-2 result implies M1-over-M0 gains are ~1e-3 even for a TRUE two-mode clock; RC.01 is therefore a consistency channel, NOT the discriminating axis. It cannot 'support' alone."
+    min_bursts_per_session: 60
+  RC.02_frozen_comb_ln_t:
+    observable: "phases phi_i = omega * ln(tau_i) mod 2pi of burst arrival times after onset"
+    statistic: "Rayleigh power at the frozen omega; Kuiper/K-S of phases vs uniform as cross-check"
+    nulls:
+      - "rate-preserving shuffle: resample the same number of taus from the session's smooth rate profile (destroys ln-t phase coherence, keeps R(t) and N)"
+      - "off-kernel periodogram rank: Rayleigh power at omega vs a grid of off-kernel log-frequencies in [0.9, 6.5] excluding |w-omega| < 0.1*omega"
+      - "off-kernel lambda battery incl. (3/2)^5, (3/2)^7, (3/2)^8, lambda=2,3,e with Bonferroni: omega must be the smallest-p member"
+    gates:
+      - "session reach = ln(tau_max/tau_min)/ln((3/2)^6) > 2.8 REQUIRED (enforced per session, honestly reported)"
+      - "tau_min >= 30x the dataset time resolution"
+      - "n_bursts_used >= 30 per session"
+    aggregation: "per-source Fisher combination over sessions; across sources Benjamini-Hochberg; support needs q < 0.01 in >= 2 independent sources"
+  RC.03_waiting_time_ladder:
+    observable: "consecutive waiting-time ratios |log10(dt_{i+1}/dt_i)| within a session"
+    teeth: ["log10(3/2)", "log10((3/2)^3)", "log10((3/2)^6)"]
+    semantics: "the tooth set IS the step/amplitude/energy battery (PG.02/PG.03 convention, FRB energy<->amplitude lesson built in)"
+    statistic: "pooled fraction of ratios within 0.05 dex of any tooth"
+    nulls:
+      - "within-session shuffle of the RAW waiting intervals, then RECOMPUTE consecutive ratios (identical to PG.02/PG.03; permuting precomputed ratios is a tautology)"
+    min_bursts_per_session: 10
+
+validation:
+  injection_recovery_required: true
+  recipe: "synthetic session: inhomogeneous Poisson with power-law-decaying rate, N ~ 1000; multiply rate by (1 + eps*cos(omega ln tau)). At the REFERENCE amplitude eps = 0.30 the RC.02 detector must fire (p < 0.05) and a smooth (eps = 0) session must not; the detection rate at the PREDICTED eps = 0.01730 is reported as the honest power statement (expected ~none per single session -- the amplitude wall). RC.01: an injected frozen-bend two-mode rate must yield Delta R^2 above the surrogate 95% band; a single-exp session must not."
+
+rules:
+  no_refitted_kernel: true
+  hypotheses_frozen_before_first_statistic: true
+  single_source_match_is_candidate_only: true
+  support_needs_two_independent_sources_q_lt_0_01: true
+  a_hit_is_universal_DSI_coincidence_not_TFPT_confirmation: true   # firewall
+
+kill_and_verdict:
+  well_powered_null: "injection-valid at the achieved reach AND >= 2 sources with >= 3 gate-passing sessions each AND all RC.02 q-values > 0.1 -> the comb (at detectable amplitude >~ 0.1) is ABSENT from repeater cascades: verdict null"
+  data_limited_if:
+    - "no session passes the 2.8-period reach gate"
+    - "power at the predicted eps = 0.017 is < 50% even for the best session (amplitude wall) AND no excess is seen at larger eps"
+  escalate_only: "RC.02 q < 0.01 in >= 2 sources, omega Bonferroni-smallest in the lambda battery, surviving the rate-preserving surrogates"
+
+language:
+  forbidden:
+    - "FRB repeater cascades confirm TFPT"
+    - "the burst rate shows the boundary recovery clock"
+    - "repeaters prove Hawking radiation / new gravity"
+  allowed:
+    - "hyperactive repeater sessions are the first real dataset whose ln(t) reach exceeds the 2.8-period comb gate"
+    - "a hit would be a universal discrete-scale-invariance coincidence in the magnetar/FRB engine, not a horizon signature, until it recurs in >= 2 independent worlds"
+    - "a clean null at reference amplitude with the reach gate passed is a well-powered negative for detectable-amplitude combs; the predicted 1.7% ripple remains amplitude-limited"

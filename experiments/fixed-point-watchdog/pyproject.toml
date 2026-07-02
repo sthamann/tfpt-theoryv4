@@ -1,0 +1,12 @@
+[project]
+name = "tfpt-fixedpoint-watchdog"
+version = "0.1.0"
+description = "TFPT exact-fixed-point watchdog: w=-1, Sigma m_nu = 0.0588 eV, alpha static, Koide Q=2/3, and the alpha-Lambda lock, confronted with published data"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.11",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

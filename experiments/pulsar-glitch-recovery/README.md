@@ -218,6 +218,57 @@ no kernel comb, and the wall has MOVED off ln(τ)-range.**
   not TFPT confirmation. Output: `results/pg07_vela2024.json` + `results/pg07_vela2024.png`;
   preregistered in `hypotheses/pulsar_pg07_v1.yaml`.
 
+## PG.08 — the comb on REAL PuMA/IAR daily-cadence ToA RESIDUALS (NEW, `tfpt-pulsar pg08`)
+
+PG.07 named the decisive missing product: *phase-connected ToA residuals* at daily cadence.
+PG.08 obtains it. The **PuMA collaboration** (Instituto Argentino de Radioastronomía)
+publishes its glitch-monitoring data release on GitHub
+(**[PuMA-Coll/Timing_irregularities](https://github.com/PuMA-Coll/Timing_irregularities)**;
+Zubieta et al. 2024, A&A 689, A50441 / arXiv:2406.17099): pulse-numbered daily IAR TOAs
+(`.tim`, sites `iar1`/`iar2` — PINT-native) plus phase-connected TEMPO2 glitch models
+(`*_glitch.par` with GLF0D/GLTD transients) for **three giant glitches**.
+`scripts/fetch_puma_iar.py` commits them under `data/puma_iar/` (~560 kB).
+
+`src/tfpt_pulsar/puma_iar.py`: PINT residuals (pulse-number tracking) against the released
+glitch model → project out the refit-absorption basis `{1, τ, τ², e^(−τ/τ_d,i)}` (what a
+TEMPO2 refit would absorb) → the **PG.05/PG.07 detector unchanged** (`detect_comb` +
+within-segment shuffle + off-kernel λ battery) → **end-to-end injection at the real sampling
+AND real noise** (ripple ε·cos(ω ln τ) on the transient ν̇, integrated to phase, converted to
+time residuals, added to the *real* residuals, same projection + detector).
+Preregistered in `hypotheses/pulsar_pg08_v1.yaml` (kernel frozen before any comb statistic).
+
+**Result (real residuals, 969 post-glitch TOAs, seed 0): `data_limited` — bounded and honest.**
+
+| Leg | post-glitch TOAs | τ range (d) | reach | comb p at ω | injection power ε=0.30 / 0.0173 |
+|---|---|---|---|---|---|
+| J0835−4510 (Vela 2021) | 540/639 | 10.05–861 | **1.83** (below gate) | 0.28 | 0% / 0% |
+| J0742−2822 (2022) | 292/753 | 9.0–310 | 1.45 (below gate) | 0.89 | 17% / 0% |
+| J1740−3015 (2022) | 137/315 | **0.41–379** | **2.81 — first real residual recovery past the 2.8-period gate** | 0.48 | **50%** / 0% |
+
+- **The right product, at last:** unlike PG.07's smooth parametric model, these are the
+  *residuals to the fit* — exactly where a ~2% comb would live. `ω=2.583` is **not special**
+  in any leg (shuffle + λ battery agree; the kernel is never the smallest-p battery member).
+- **Honest Vela wall:** the *public* Vela `.tim` starts at τ = 10.05 d (the live sub-day TOAs
+  of Zubieta+2023 are not in the release), so Vela-2021 reaches only 1.83 periods —
+  **below** the gate the daily campaign could in principle deliver (~2.8 with τ_min ≲ 1 d).
+- **Power quantified end-to-end:** the injection at real sampling + real noise shows the
+  sub-gate legs are range-blind even at ε=0.30 (0%, 17% — PG.06's finding reproduced on real
+  residuals), and the gate-passing J1740−3015 leg reaches ~50% power at ε=0.30 (684 µs RMS)
+  and **0% at the predicted ε≈1.7%**. So PG.08 is a *bounded* statement: no comb, and an
+  ε ≳ 0.3 comb would have fired with ~50% probability on J1740−3015 — nothing stronger.
+  The amplitude wall, not the range wall, is now the binding constraint.
+- **Walled-clock reading:** the released GLTD ladders give 0/2 timescale ratios near the
+  bend 2.7095 (Vela-2021: {6.37, 78.7} — null), and Vela-2021's fit resolves **3 transient
+  modes** — a **wall exception** to keep on record next to PG.04c's 45/46 ≤ 2 census.
+- **Audit note (not a TFPT channel):** in J0742−2822 the *off-kernel* battery member λ=e
+  (ω≈6.28) has p=0.002 (Bonferroni 0.013) — an unexplained non-kernel periodicity in that
+  pulsar's residuals (J0742 is a known mode-switcher); flagged, not claimed.
+
+Output: `results/pg08_puma_iar.json` + `results/pg08_puma_iar.png`. **Firewall intact** — a
+hit would have been universal-DSI in the NS interior, not TFPT confirmation. Decisive next:
+the IAR-internal sub-day live TOAs (or an equivalent early-window public release) would push
+Vela past the gate where the ε sensitivity is best.
+
 ## Reproduce
 
 ```bash
@@ -236,6 +287,8 @@ python scripts/fetch_nicer_vela.py      # PG.06b: confirm + list the 665 NICER V
 tfpt-pulsar vela --download             # PG.06b: download one real Vela obs + PINT-fold -> detect the pulsation
 python scripts/fetch_vela_2024.py       # PG.07: download the 2024 Vela glitch phase-connected .par (Zenodo)
 tfpt-pulsar pg07                        # PG.07: recovery comb (omega=2.58) on the REAL 2024 Vela giant glitch
+python scripts/fetch_puma_iar.py        # PG.08: download the PuMA/IAR daily-cadence .par/.tim release (GitHub)
+tfpt-pulsar pg08                        # PG.08: recovery comb on REAL PuMA/IAR ToA residuals (3 glitches)
 # or without install:  PYTHONPATH=src python -m tfpt_pulsar.cli analyze
 ```
 
@@ -249,6 +302,7 @@ scripts/fetch_nicer_j0537.py     # HEASARC nicermastr -> data/nicer_j0537/j0537_
 scripts/fetch_nicer_vela.py      # HEASARC nicermastr -> data/nicer_vela/vela_observations.csv (PG.06b)
 scripts/reduce_vela_nu_t.py      # OFFLINE heavy driver: download+barycentre+fold all Vela obs -> nu(t) (PG.06b)
 scripts/fetch_vela_2024.py       # PG.07: download 2024 Vela glitch .par (Zenodo 17735649) -> data/vela_2024/
+scripts/fetch_puma_iar.py        # PG.08: download PuMA/IAR daily .par/.tim release (GitHub) -> data/puma_iar/
 data/jbo_glitches.csv            # committed derived size catalogue (726 glitches)
 data/yu2013_recovery.csv         # committed derived recovery table (60 Q/tau_d components, 46 glitches)
 data/crab_ephemeris.csv          # committed derived Crab nu/nudot(t) monthly series (479 points, PG.05)
@@ -263,13 +317,16 @@ src/tfpt_pulsar/nu_recovery.py   # PG.05: dynamic recovery comb (omega=2.58) on 
 src/tfpt_pulsar/nicer_j0537.py   # PG.06: J0537 stacked-recovery scaffold (PINT upstream + comb downstream)
 src/tfpt_pulsar/vela.py          # PG.06b: REAL NICER Vela download + PINT barycentre + H-test fold
 src/tfpt_pulsar/vela2024.py      # PG.07: recovery comb on the REAL 2024 Vela giant glitch (.par model)
+src/tfpt_pulsar/puma_iar.py      # PG.08: recovery comb on REAL PuMA/IAR ToA residuals + end-to-end injection
 src/tfpt_pulsar/validation.py    # injection-recovery self-check
 src/tfpt_pulsar/cli.py           # `tfpt-pulsar audit|validate|analyze|dynamic|nicer|vela|pg07`
 data/nicer_vela/vela_observations.csv  # committed list of 665 NICER Vela-pulsar observations (PG.06b)
 data/vela_2024/J0835-4510_long_F3.par  # committed phase-connected 2024 Vela glitch ephemeris (PG.07)
 data/vela_2024/vela2024_nudot.csv      # committed derived post-glitch nudot(tau) recovery (PG.07)
 data/vela_2024/vela_glitch_recoveries.csv  # committed Vela giant-glitch recovery params 2016-2024 (PG.07)
+data/puma_iar/                   # committed PuMA/IAR .par/.tim release (3 pulsars; provenance in fetch script)
 hypotheses/pulsar_pg07_v1.yaml   # preregistered PG.07 hypothesis (frozen kernel, nulls, kill/data-limited)
+hypotheses/pulsar_pg08_v1.yaml   # preregistered PG.08 hypothesis (residual product, end-to-end injection)
 results/results.json             # committed summary (+ pg01/pg05/pg06 png, gitignored)
-results/pg05_recovery_comb.json, pg06_nicer_j0537.json, pg06b_vela.json, pg07_vela2024.json  # committed summaries
+results/pg05_recovery_comb.json, pg06_nicer_j0537.json, pg06b_vela.json, pg07_vela2024.json, pg08_puma_iar.json  # committed summaries
 ```

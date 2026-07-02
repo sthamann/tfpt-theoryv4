@@ -131,6 +131,18 @@ template-agnosticism control classifies the excess as broadband residual power (
 plausibly unsubtracted higher-mode / nonlinear-QNM content; an NR-informed subtraction is
 the escalation path). Upper bound, no tension. Output: `results/point_test.json`.
 
+**16 kHz re-run (`tfpt-gw point --hires`) — the lag-resolution gap closed:** at 4 kHz the
+predicted ~0.8 ms spacing is only ~3 samples (3 unique lag steps inside the ±25 %
+tolerance). `scripts/fetch_strain_16k.py` crops 32 s windows from the 16 384 Hz 4096-s
+GWOSC archive segments (available for **all** runs: O1 `LOSC_16_V1`, O3 `16KHZ_R1`, O4b
+`O4b_16KHZ_R1`; fetched for GW250114, GW150914, GW200129, GW190521 — 10/10 detector
+streams) into `<event>_meta16k.json` + `*_16K.hdf5`, giving **~12–13 samples per lag step
+(7–8 unique steps, 11 for GW190521)**. Result: **`NO_POINT_ECHO` unchanged on all four
+events** — best `p_bonf` 0.052 (4 kHz) → 0.053 (16 kHz), still GW150914/L1, still single
+stream, no coincidence. Individual p-values move in both directions (finer lag grid +
+different high-frequency noise content) but no statistic crosses any threshold: the 4 kHz
+null was **not** an artefact of coarse lag sampling. Output: `results/point_test_16k.json`.
+
 ## Stage 1f — OFFSET-TRAIN point test (`tfpt-gw offset`) — scrambling delay × cavity spacing
 
 The last untested train geometry: the TFPT scrambling time **t_scr = 4M·ln S ≈ 0.25 s**
@@ -175,6 +187,46 @@ amplitudes while keeping positions — position-only statistic: free phase per e
 
 **Result: `NO_DRIFT_OR_PRECESSION_ECHO` on all 10 events** (best `p_bonf = 0.046`,
 GW150914/L1, single stream). Output: `results/robustness_scan.json`.
+
+## Stage 1h — ABSOLUTE echo amplitude limits (`tfpt-gw inject`) — injection-calibrated ε₉₀
+
+The nine null stages say *no echo found*; Stage 1h says **how loud an echo would have had
+to be for the pipeline to find it** — turning the nulls into calibrated absolute upper
+limits (the number the `comb-meta-limit` horizon tier lists as missing).
+`injection_limits.py` injects synthetic **C = 3/8 kernel trains** (delay `2.288 M_det`,
+per-echo ratio `(2/3)⁶`, af = 0.69 QNM morphology, first-echo amplitude
+`ε_inj × A220` with A220 the event's measured whitened (2,2,0) amplitude from the same
+joint 220+221 fit) into **off-source stretches of the real whitened strain** (off-source
+gated PSD, exact Stage-1d preprocessing), runs the **exact Stage-1d coherent point
+statistic** (predicted-lag grid ±25 %, 5 ms anchor jitter, off-source background), and
+finds **ε₉₀** = the smallest ε recovered at `p_raw < 0.01` in ≥ 90 % of 60 injections
+(log-bracket + bisection, then a **binding 200-injection confirmation**). Only streams
+whose *on-source* statistic is itself null for the same variant (`p_on ≥ 0.01`) anchor a
+limit; the on-source calibration statement is: **"on-source null ⇒ first-echo amplitude
+< ε₉₀ · A220 at 90 % CL"** (per event, best anchoring stream).
+
+| event | ε₉₀ (4 kHz) | ε₉₀ (16 kHz) | anchoring stream (4 k / 16 k) |
+|---|---|---|---|
+| GW250114_082203 | 15.90 | 15.39 | L1 / L1 (weak whitened A220 fit → weak *relative* limit) |
+| GW150914 | **0.69** | 1.67 | H1 / L1 (L1 4 kHz stream excluded: `p_on = 0.003`, the known single-stream excess) |
+| GW200129_065458 | **0.63** | 0.85 | V1 / V1 |
+| GW190521 | 1.86 | 1.47 | H1 / L1 |
+| **stack** (universal ε, conservative = best single event) | **0.63** | **0.85** | joint product view 0.80 / 0.80 (grid-quantised, factor-2 steps) |
+
+So the campaign calibrates the null to: **a coherent kernel-template first echo brighter
+than ~0.6–0.9 × the ringdown's own (2,2,0) amplitude is excluded at 90 % CL** in the best
+events — an order-1 relative limit, far above the kernel's own `(2/3)⁶ ≈ 0.088` ceiling.
+The kernel bound itself is therefore **not yet reachable** at current sensitivity
+(consistent with the Stage-0 forecast that only a many-event stack approaches it).
+
+**Honest scope:** these are **coherent-template limits** (injected morphology = search
+template, exact predicted lag, af = 0.69); morphology-robust limits (barrier low-pass,
+phase decoherence, lag/spin mismatch) would be somewhat weaker, and the off-source
+calibration does not include partial absorption of an on-source train by the QNM fit
+(the short-lag overlap Stage 1d's joint fit addresses). ε₉₀ is relative to the *measured*
+whitened A220 of each stream, so events with a weak A220 fit (GW250114 in this pipeline)
+get a correspondingly weak relative limit. Upper-bound kernel: no detection, no tension
+claim. Output: `results/injection_limits.json` (4 kHz), `results/injection_limits_16k.json`.
 
 ## Stage 1e — AREA-QUANTUM spectral comb (`tfpt-gw bmcomb`) — Bekenstein–Mukhanov lines
 
@@ -245,6 +297,13 @@ tfpt-gw offset   --events ...same 10 events...                 # Stage 1f offset
 tfpt-gw robust   --events ...same 10 events...                 # Stage 1g drift+precession
 tfpt-gw battery --multimode --events GW150914 ...              # 330/210/quadratic diagnostic
 tfpt-gw battery --aggressive --events GW150914 ...             # matching-pursuit diagnostic
+python scripts/fetch_strain_16k.py GW250114_082203 GW150914 \
+  GW200129_065458 GW190521                                     # 16 kHz crops (~0.5 GB/stream dl)
+tfpt-gw point  --hires --events GW250114_082203 GW150914 \
+  GW200129_065458 GW190521                                     # Stage 1d at 16 kHz
+tfpt-gw inject --events GW250114_082203 GW150914 \
+  GW200129_065458 GW190521                                     # Stage 1h injection limits (4 kHz)
+tfpt-gw inject --hires --events ...same 4 events...            # Stage 1h at 16 kHz
 ```
 
 ## Layout
@@ -253,6 +312,7 @@ tfpt-gw battery --aggressive --events GW150914 ...             # matching-pursui
 scripts/fetch_catalog.py    # download GWTC event list from GWOSC -> data/gwtc_events.csv
 scripts/fetch_strain.py     # download 32 s, 4 kHz HDF5 strain per event -> data/strain/
 scripts/fetch_strain_4096.py# O4+: download 4096 s segment, crop 32 s (same HDF5 layout)
+scripts/fetch_strain_16k.py # 16 kHz: crop 32 s from the 16384 Hz 4096 s archive segments
 src/tfpt_gw/constants.py    # frozen ratio (2/3)^6; STAGE
 src/tfpt_gw/echo_forecast.py# Stage 0 per-event + stacked echo-SNR sensitivity census
 src/tfpt_gw/echo_search.py  # Stage 1 synthetic echo-train injection-recovery (validated 3/3)
@@ -265,9 +325,11 @@ src/tfpt_gw/point_test.py   # Stage 1d point test v2 (C=3/8 lag, spin scan, skip
 src/tfpt_gw/bm_comb.py      # Stage 1e area-quantum (Bekenstein-Mukhanov) spectral comb
 src/tfpt_gw/offset_train.py # Stage 1f offset-train (scrambling delay x cavity spacing)
 src/tfpt_gw/robustness_scan.py # Stage 1g drift + precession (position-only) scan
-src/tfpt_gw/cli.py          # `tfpt-gw ...|point|bmcomb|offset|robust` (+ --multimode/--aggressive)
+src/tfpt_gw/injection_limits.py # Stage 1h injection campaign -> absolute eps_90 limits
+src/tfpt_gw/cli.py          # `tfpt-gw ...|point|bmcomb|offset|robust|inject` (+ --hires etc.)
 data/gwtc_events.csv        # real LVK GWTC-5.0 catalogue (390 canonical; 391 raw rows)
 data/strain/                # real 32 s HDF5 strain (gitignored) + <event>_meta.json
+                            #   + 16 kHz crops *_16K.hdf5 + <event>_meta16k.json
 event_count_audit.md        # 390 vs 391 reconciliation + selection accounting
 results/dynamic_recovery.json,.png  # Stage 2 output + figure
 results/echo_stack.json     # Stage 1b stacked-search output
@@ -276,6 +338,8 @@ results/point_test.json     # Stage 1d point-test output
 results/bm_comb.json        # Stage 1e area-quantum comb output
 results/offset_train.json   # Stage 1f offset-train output
 results/robustness_scan.json# Stage 1g drift+precession output
+results/point_test_16k.json # Stage 1d re-run on the 16 kHz crops (4 events)
+results/injection_limits.json,_16k.json # Stage 1h eps_90 absolute limits (4/16 kHz)
 results/signature_battery_multimode.json   # multimode-subtraction diagnostic
 results/signature_battery_aggressive.json  # matching-pursuit diagnostic
 ```

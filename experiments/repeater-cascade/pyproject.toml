@@ -1,0 +1,34 @@
+[build-system]
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[project]
+name = "repeater-cascade"
+version = "0.1.0"
+description = "TFPT CASCADE search: walled two-mode clock + log-periodic recovery comb + waiting-time ladders in hyperactive FRB repeater burst-time cascades"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Stefan Hamann" }]
+keywords = ["TFPT", "fast radio bursts", "repeater", "recovery clock", "log-periodic comb", "discrete scale invariance"]
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.12",
+    "matplotlib>=3.8",
+]
+
+[project.optional-dependencies]
+dev = ["ruff>=0.5"]
+
+[project.scripts]
+tfpt-cascade = "repeater_cascade.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/repeater_cascade"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

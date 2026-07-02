@@ -1,0 +1,72 @@
+# Preregistered protocol for the DSI false-positive CONTROL bed.
+# This is a DETECTOR CALIBRATION, not a TFPT search: the frozen comb detector is pointed at
+# systems that have NO TFPT boundary/horizon-recovery mapping BY CONSTRUCTION, to measure how
+# often the kernel frequency fires where TFPT physics is absent. Protocol frozen before the
+# data pass; the kernel is vendored unchanged (tests/test_frozen_kernel.py guards it).
+
+experiment: dsi-false-positive-control
+role: false-positive / specificity calibration for the frozen TFPT recovery-comb detector
+version: v1
+
+firewall: >
+  Earthquake aftershock cascades (Omori t^-p decay; Sornette-documented log-periodic DSI in some
+  sequences) and solar-flare sequences after large X-flares (Omori-like flaring rate) are
+  KNOWN NON-TFPT relaxation systems -- crustal/critical and magnetic-reconnection cascades, not
+  boundary/horizon recoveries. That is the point of the bed: no outcome here can EVER confirm
+  TFPT. A quiet detector calibrates the SPECIFICITY of the existing channel nulls
+  (recovery-comb-domains, pulsar-glitch-recovery, crust-cooling-comb); a detector firing at
+  omega=2.583 on controls would QUANTIFY the universal-DSI coincidence rate the firewall names.
+  Nothing here is [E]; no load-bearing claim in either direction.
+
+frozen_kernel:   # vendored verbatim from recovery-comb-domains/src/tfpt_combdomains/comb.py
+  lambda: (3/2)^6 = 11.390625
+  omega: 2*pi/ln((3/2)^6) = 2.5827
+  eps_predicted: exp(-pi^2/ln((3/2)^6)) ~ 0.017
+  min_comb_periods_gate: 2.8
+  detrend: degree-2 polynomial in ln(t)
+  p_threshold: 0.05
+  guard: tests/test_frozen_kernel.py (constants + statistic bit-identical to the original)
+
+data:
+  aftershocks:   # USGS ComCat FDSN, no auth; window/radius/minmag mirror recovery-comb-domains
+    - Landers1992 (M7.3), HectorMine1999 (M7.1), Tohoku2011 (M9.1), Ridgecrest2019 (M7.1)
+    - 3-yr windows; event START times as a point process; t0 = mainshock
+  flares:        # NOAA NGDC GOES XRS yearly flare reports, no auth
+    - Halloween2003 (X17.2), Sep2005 (X17.0), Aug2011 (X6.9), Oct2014 (X3.1)
+    - sun-wide >=C1 flare start times within 60 d of the trigger X-flare start (t0 from the data)
+
+observable_semantics:
+  construction: equal-ln(t) bins of event COUNTS, y = ln(count)   # = recovery-comb-domains quake.rate_curve
+  rationale: Omori rate ~ t^-p -> per-bin count ~ t^(1-p), near-flat in ln(t); the detector's
+    degree-2 poly-in-ln(t) baseline absorbs the smooth decay, a log-periodic comb survives.
+
+tests:
+  - id: FP.01_kernel_frozen
+    desc: frozen detector verdict at omega=2.583 per sequence (off-kernel periodogram-rank p +
+      the hard >=2.8-period ln-range gate; comb.run_comb unchanged)
+  - id: FP.02_rate_preserving_shuffle
+    desc: surrogate event sets multinomially redistributed over the same ln(t) bins with
+      probabilities from the fitted smooth (deg-2 in ln t) rate; preserves Omori trend + total
+      count, destroys ripple; p_shuffle = rank of the observed kernel comb gain (500 surrogates)
+  - id: FP.03_omega_scan
+    desc: dense comb-gain periodogram over omega in [1,6] (501 points); kernel rank among
+      off-kernel frequencies; best free omega, and best LOCALISABLE omega (>=2.8 cycles spanned)
+  - id: FP.04_eps_fit
+    desc: fitted ripple amplitude at the kernel in y=ln(count), reported next to eps_pred~0.017
+
+deliverables:
+  per_sequence: [p_kernel_periodogram, p_kernel_shuffle, kernel_rank, best_free_omega,
+                 best_localisable_omega, eps_fit_at_kernel, comb_periods, range_sufficient]
+  aggregate: kernel false-positive rate over GATED sequences (frozen criterion, and the strict
+    frozen+shuffle double criterion), with Wilson 95% intervals
+
+expected_outcomes:   # all three are honest, preregistered readings
+  - quiet: detector does not fire at the kernel on gated controls -> existing TFPT nulls are
+      SPECIFIC (the kernel does not fire on generic Omori/DSI cascades)
+  - fires_off_kernel: controls show DSI at their OWN omega (Sornette lambda ~ 2-3.5) but not at
+      2.583 -> fine, kernel stays specific
+  - fires_at_kernel: kernel fires on controls -> IMPORTANT WARNING; quantifies the universal-DSI
+      coincidence base rate; every TFPT-channel comb p-value must be read against it
+
+verdict_enum: [consistent, null, data_limited, tension]
+prereg_expected_verdict: consistent   # detector quiet at the kernel (nominal ~5% threshold rate)

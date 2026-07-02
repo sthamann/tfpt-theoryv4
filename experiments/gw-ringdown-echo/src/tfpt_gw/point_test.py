@@ -124,8 +124,12 @@ def _incoherent_stat(resid: np.ndarray, t0: int, lag_samp: int, ratio: float,
         end = min(n, start + int(6.0 * tau / dt))
         if start >= n or end - start < 8:
             break
-        c = damped_sinusoid(n, start, f0, tau, dt, phi=0.0)[start:end]
-        s = damped_sinusoid(n, start, f0, tau, dt, phi=-np.pi / 2)[start:end]
+        # segment-local damped sinusoid == damped_sinusoid(n, start, ...)[start:end]
+        # (built directly to avoid full-length allocations at 16 kHz)
+        t = np.arange(end - start) * dt
+        envelope = np.exp(-t / tau)
+        c = envelope * np.cos(2.0 * np.pi * f0 * t)
+        s = envelope * np.cos(2.0 * np.pi * f0 * t - np.pi / 2)
         seg = resid[start:end]
         nc, ns = float(c @ c), float(s @ s)
         if nc == 0 or ns == 0:
@@ -178,8 +182,15 @@ def _joint_fit_stat(white: np.ndarray, t0: int, lags_samp: np.ndarray, ratio: fl
     return best_f
 
 
-def point_event(event: str) -> PointEvent:
-    meta = json.loads((STRAIN_DIR / f"{event}_meta.json").read_text(encoding="utf-8"))
+def meta_name(event: str, hires: bool = False) -> str:
+    """Meta-file convention: <event>_meta.json (4 kHz) / <event>_meta16k.json
+    (16 kHz crops from scripts/fetch_strain_16k.py; ~12 samples per predicted
+    C=3/8 lag step instead of ~3)."""
+    return f"{event}_meta16k.json" if hires else f"{event}_meta.json"
+
+
+def point_event(event: str, hires: bool = False) -> PointEvent:
+    meta = json.loads((STRAIN_DIR / meta_name(event, hires)).read_text(encoding="utf-8"))
     merger_gps, mf_src = float(meta["gps"]), float(meta["mf"])
     mf = detector_frame_mass(event, mf_src)
     lag_pred_s = DELAY_COEFF * mf * GMSUN_OVER_C3
@@ -272,14 +283,15 @@ def point_event(event: str) -> PointEvent:
     return res
 
 
-def run_point(events: list[str]) -> int:
-    have = [e for e in events if (STRAIN_DIR / f"{e}_meta.json").exists()]
+def run_point(events: list[str], hires: bool = False) -> int:
+    have = [e for e in events if (STRAIN_DIR / meta_name(e, hires)).exists()]
+    fs_note = "16 kHz crops (_meta16k)" if hires else "4 kHz crops"
     print("=" * 88)
     print("TFPT GW Stage-1d: POINT TEST v2 -- theory-fixed lag (C=3/8: dt = 2.288 M_det)")
     print("  x kernel ratios x mu4 phases; + incoherent / skip-first (morphology,")
     print("  first-echo nonlinearity) + JOINT QNM+train fit (short-lag repair);")
     print(f"  OFF-SOURCE (event-gated) PSD; spin scan af={SPINS};")
-    print(f"  Bonferroni x{N_VARIANTS}; lag tol +-25%")
+    print(f"  Bonferroni x{N_VARIANTS}; lag tol +-25%; strain: {fs_note}")
     print("=" * 88)
     if not have:
         print("  no strain -> nothing to do.")
@@ -288,7 +300,7 @@ def run_point(events: list[str]) -> int:
     out = []
     best = {"p": 1.0, "where": ""}
     for ev in have:
-        r = point_event(ev)
+        r = point_event(ev, hires)
         print(f"\n  {ev}: M_det={r.mf_det} Msun, predicted lag = {r.lag_pred_ms} ms"
               f"  ->  {r.label}")
         for d in r.detectors:
@@ -326,8 +338,10 @@ def run_point(events: list[str]) -> int:
     print(f"\n-> {verdict}")
 
     RESULTS.mkdir(exist_ok=True)
-    (RESULTS / "point_test.json").write_text(json.dumps({
+    out_name = "point_test_16k.json" if hires else "point_test.json"
+    (RESULTS / out_name).write_text(json.dumps({
         "stage": f"strain_level_test (TFPT point test v2, Bonferroni x{N_VARIANTS})",
+        "strain": fs_note,
         "delay_model": "dt = 2.288 M_det (gravastar-compactness C = 3/8), tol +-25%",
         "systematics": {"psd": "off-source (event-gated) Welch",
                         "spin_scan": list(SPINS),
@@ -337,5 +351,5 @@ def run_point(events: list[str]) -> int:
         "phases_rad": {n: p for n, p in PHASES},
         "events": out, "best_p_bonf": best, "verdict": verdict},
         indent=2), encoding="utf-8")
-    print(f"\nWrote {RESULTS / 'point_test.json'}")
+    print(f"\nWrote {RESULTS / out_name}")
     return 0

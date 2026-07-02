@@ -1,0 +1,58 @@
+# Preregistration of the TFPT recovery-comb search on PuMA/IAR daily-cadence ToA
+# RESIDUALS (PG.08). FROZEN hypothesis, written after data INGESTION (file formats,
+# TOA counts, achieved ln-ranges) but BEFORE any comb statistic ran on the residuals.
+# The kernel is the SAME frozen object as PG.05/PG.07 (byte-identical imports from
+# nu_recovery/vela2024); no refitted omega, eps or exponent. Editing the kernel
+# after inspecting the comb statistics invalidates this preregistration.
+version: 1
+frozen_on: 2026-07-02
+axis: PG.08
+reuses_detector: src/tfpt_pulsar/nu_recovery.py (detect_comb) + vela2024 (shuffle, lambda battery)
+
+kernel:
+  omega: "2*pi/ln((3/2)^6) = 2.5827069..."
+  one_comb_period_dln_tau: "ln((3/2)^6) = 2.4328"
+  amplitude_eps: "exp(-pi^2/ln((3/2)^6)) ~ 0.0173"
+  det_clean_bend: "ln3/ln(3/2) = 2.7095"
+  wall_N_fam: 3
+  reach_gate_periods: 2.8
+
+target:
+  name: puma_iar_toa_residuals
+  data:
+    source: "https://github.com/PuMA-Coll/Timing_irregularities (Zubieta+2024, A&A 689 A50441)"
+    product_type: phase_connected_toa_residuals    # THE product PG.07 said was decisive
+    pulsars:
+      - {psr: J0835-4510, glitch: 2021-07-22, note: "public .tim starts tau~10 d post-glitch -> reach ~1.8 periods (below gate; live sub-day TOAs not in the release)"}
+      - {psr: J0742-2822, glitch: 2022-09, note: "reach ~1.5 periods (below gate)"}
+      - {psr: J1740-3015, glitch: 2022-12, note: "daily coverage from tau~0.4 d -> reach ~2.8 periods (the gate-passing leg)"}
+  observable: "post-glitch timing residuals r(tau) vs ln(tau), glitch model removed, refit-absorption basis {1, tau, tau^2, exp(-tau/tau_d_i)} projected out"
+
+rules:
+  no_refitted_omega_or_eps: true
+  require_end_to_end_injection: true       # ripple on the transient nudot -> phase -> time residuals -> SAME projection + detector, at the real sampling AND real noise
+  require_off_kernel_periodogram_null: true
+  bonferroni_over_lambda_battery: true
+  within_segment_shuffle: true
+  single_source_match_is_candidate_only: true
+  a_hit_is_universal_DSI_coincidence_not_TFPT_confirmation: true
+
+success:
+  escalate_only: "comb_p < 0.01 AND kernel Bonferroni-smallest AND shuffle p < 0.05 on a gate-passing leg"
+
+kill:
+  condition: "injection-valid leg with reach >= 2.8 periods AND comb_p >= 0.1 AND predicted-eps injection power >= 0.5"
+  meaning: "a >= 1.7% comb would have been seen and was not"
+
+data_limited_if:
+  - "reach < 2.8 periods on a leg (Vela public release truncation)"
+  - "predicted-eps injection power < 0.5 (residual noise above the ~2% ripple)"
+
+language:
+  forbidden:
+    - "PuMA residuals confirm TFPT"
+    - "the Vela/J1740 glitch shows the boundary recovery kernel"
+  allowed:
+    - "PG.08 is the first test on real phase-connected ToA residuals -- the product PG.07 identified as decisive"
+    - "J1740-3015 is the first real residual recovery to clear the ~2.8-period reach gate"
+    - "a null here is amplitude-honest: quoted against the end-to-end injected power at the predicted eps"

@@ -13,6 +13,9 @@ Commands:
               detect the pulsation; proves the reduction pipeline on real data (no HEASoft)
     pg07      PG.07: the dynamic recovery comb (omega=2.58) on the REAL 2024 Vela GIANT glitch
               (phase-connected .par, Zenodo 17735649); reach + injection + stack; data_limited
+    pg08      PG.08: the recovery comb on REAL PuMA/IAR daily-cadence ToA RESIDUALS
+              (GitHub data release; Vela-2021 + J0742-2822 + J1740-3015); the residual
+              product PG.07 said was decisive; end-to-end injection at real sampling/noise
 """
 
 from __future__ import annotations
@@ -306,6 +309,54 @@ def _pg07(seed: int) -> int:
     return 0
 
 
+def _pg08(seed: int) -> int:
+    """PG.08 -- the recovery comb on real PuMA/IAR daily-cadence ToA residuals.
+
+    Runs PINT residuals against the released phase-connected glitch models, projects
+    out the refit-absorption basis, then the SAME frozen comb detector as PG.05/07
+    plus an end-to-end injection at the real sampling and real noise.
+    """
+    from .puma_iar import load_pulsar, make_plot, pg08_puma, to_json
+
+    r = pg08_puma(seed=seed)
+    print("=" * 80)
+    print("PG.08 -- recovery comb on REAL PuMA/IAR daily-cadence ToA residuals "
+          "(PuMA-Coll/Timing_irregularities)")
+    print(f"  kernel omega = {r.omega:.3f}; predicted eps ~ {r.eps_predicted:.4f}; "
+          f"reach gate {r.reach_gate_periods} periods")
+    print("=" * 80)
+    for x in r.legs:
+        print(f"\n  [{x.psr}] glitch MJD {x.glep_mjd:.2f}, permanent dnu/nu (GLF0_1) = "
+              f"{x.dnu_over_nu:.2e}, transient tau_d={x.tau_d_days} d")
+        print(f"    {x.n_post}/{x.n_toa} post-glitch TOAs, tau {x.tau_min_d:.2f}.."
+              f"{x.tau_max_d:.0f} d -> reach {x.reach_periods:.2f} periods "
+              f"(gate {'PASSED' if x.gate_passed else 'not passed'}); "
+              f"residual RMS {x.rms_us:.0f} us")
+        print(f"    comb at omega: gain={x.comb_gain:.3f} p={x.comb_p:.3f}; "
+              f"shuffle p={x.shuffle_p:.3f}; kernel smallest-p in battery: "
+              f"{x.kernel_smallest}")
+        n_batt = len(x.battery)
+        for label, om, p in x.battery:
+            print(f"      {label:18s} omega={om:5.2f}  p={p:.3f}  "
+                  f"(Bonferroni p={min(1.0, p * n_batt):.3f})")
+        inj = x.injection
+        print(f"    injection (real sampling+noise, {inj.n_seeds} phases): "
+              f"eps=0.30 -> {inj.ref_rate:.0%}; eps=0 -> {inj.false_positive_rate:.0%}; "
+              f"eps={inj.eps_predicted:.4f} -> {inj.pred_rate:.0%}; "
+              f"valid={inj.passed}")
+        print(f"    walled clock (GLTD ladder): ratios {x.bend_ratios} -> "
+              f"{x.n_ratios_on_bend} near bend 2.7095; wall(>=3 modes) "
+              f"{'EXCEEDED' if x.wall_exceeded else 'ok'}")
+    print(f"\n==> VERDICT: {r.verdict}")
+
+    RESULTS.mkdir(exist_ok=True)
+    (RESULTS / "pg08_puma_iar.json").write_text(to_json(r), encoding="utf-8")
+    print(f"\nWrote {RESULTS / 'pg08_puma_iar.json'}")
+    residuals = {p: load_pulsar(p) for p in ("J1740-3015", "J0835-4510")}
+    print(f"Wrote {make_plot(RESULTS / 'pg08_puma_iar.png', r.legs, residuals, seed=seed)}")
+    return 0
+
+
 def _analyze(seed: int) -> int:
     records = load_catalog()
     sizes = glitch_sizes(records)
@@ -437,7 +488,7 @@ def main(argv: list[str] | None = None) -> int:
         description="TFPT recovery-kernel search in pulsar glitches (Jodrell Bank)")
     ap.add_argument("command",
                     choices=["audit", "validate", "analyze", "dynamic", "nicer", "vela",
-                             "pg07", "vela2024"],
+                             "pg07", "vela2024", "pg08"],
                     nargs="?", default="analyze")
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--download", action="store_true",
@@ -455,6 +506,8 @@ def main(argv: list[str] | None = None) -> int:
         return _vela(args.seed, args.download)
     if args.command in ("pg07", "vela2024"):
         return _pg07(args.seed)
+    if args.command == "pg08":
+        return _pg08(args.seed)
     return _analyze(args.seed)
 
 

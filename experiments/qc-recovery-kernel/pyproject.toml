@@ -1,0 +1,41 @@
+[build-system]
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[project]
+name = "qc-recovery-kernel"
+version = "0.1.0"
+description = "TFPT recovery channel as a quantum circuit: Kraus/unitary-dilation realisation of the frozen seam transfer, exact + noisy Aer tiers, IBM runtime hardware hook"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Stefan Hamann" }]
+keywords = [
+    "TFPT",
+    "amplitude damping",
+    "Kraus dilation",
+    "recovery kernel",
+    "qiskit",
+    "walled clock",
+]
+dependencies = [
+    "qiskit>=2.4",
+    "qiskit-aer>=0.17",
+    "qiskit-ibm-runtime>=0.47",
+]
+
+[project.optional-dependencies]
+dev = ["ruff>=0.5"]
+
+[project.scripts]
+tfpt-qckernel = "tfpt_qckernel.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tfpt_qckernel"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

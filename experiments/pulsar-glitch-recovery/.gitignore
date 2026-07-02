@@ -28,6 +28,9 @@ data/vela_2024/*
 !data/vela_2024/J0835-4510_long_F3.par
 !data/vela_2024/vela2024_nudot.csv
 !data/vela_2024/vela_glitch_recoveries.csv
+# PG.08: the PuMA/IAR daily-cadence glitch release (GitHub PuMA-Coll/Timing_irregularities):
+# small .par/.tim text files (~0.5 MB total), committed for reproducibility
+!data/puma_iar/
 *.tar.gz
 
 # generated plots (the small results.json summary IS committed)

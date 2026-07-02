@@ -1,0 +1,40 @@
+[build-system]
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dsi-false-positive-control"
+version = "0.1.0"
+description = "CONTROL bed: calibrate the false-positive rate of the frozen TFPT log-periodic comb detector (omega=2.583) on known NON-TFPT relaxation cascades (earthquake aftershocks, solar flares)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+    { name = "Stefan Hamann" },
+]
+keywords = [
+    "TFPT",
+    "discrete scale invariance",
+    "log-periodic",
+    "false-positive control",
+    "Omori",
+]
+dependencies = [
+    "numpy>=1.26",
+]
+
+[project.optional-dependencies]
+dev = ["ruff>=0.5"]
+
+[project.scripts]
+tfpt-dsicontrol = "tfpt_dsicontrol.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tfpt_dsicontrol"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

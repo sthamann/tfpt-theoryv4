@@ -97,7 +97,12 @@ ROWS = [
      "matching-pursuit residual modelling absorbs the GW200129/GW190521 excesses entirely (quasi-"
      "QNM transient power, higher overtones/mode mixing), GW150914 strongly reduced (one stream "
      "left, older detector state) -- no echo-train candidate at any subtraction depth; the null "
-     "is robust against every tested signature reading and systematic",
+     "is robust against every tested signature reading and systematic; Stage-1d re-run on 16 kHz "
+     "strain (lag now 12-13 samples): NO_POINT_ECHO unchanged (best p_bonf 0.053) -> null not a "
+     "lag-resolution artefact; Stage-1h INJECTION CAMPAIGN: calibrated ABSOLUTE limits eps_90 "
+     "(first-echo/A220, 90% CL): GW200129 0.63, GW150914 0.69, GW190521 1.86, GW250114 15.9 "
+     "(weak A220 fit); stack conservative 0.63 (4k)/0.85 (16k); kernel ceiling (2/3)^6=0.088 "
+     "~7x below current single-event reach",
      None, "search_target", "boundary recovery kernel",
      "strain_level_test", "LVK GWTC-5.0 + real 32s strain (10 loudest ringdowns incl. GW250114, O4b)",
      "strain-level echo with ratio >>(2/3)^6 across events", "consistent"],
@@ -174,6 +179,22 @@ ROWS = [
      "strain_level_test", "2024 Vela giant glitch phase-connected .par (Zenodo 10.5281/zenodo.17735648; A&A 698 A72 2025)",
      "a log-periodic comb at omega=2.58 is special vs the off-kernel periodogram over a >=2.8-period residual nu(t) Vela recovery",
      "data_limited"],
+    # PG.08: the comb on REAL PuMA/IAR daily-cadence phase-connected ToA RESIDUALS
+    ["pulsar", "recovery comb on PuMA/IAR daily ToA residuals (PG.08)",
+     "log-periodic comb at omega=2.583 in the post-glitch ToA residuals (the product PG.07 "
+     "named as decisive: residuals to the fit, refit-absorption basis projected out)",
+     "REAL PuMA/IAR daily-cadence release (3 giant glitches, 969 post-glitch TOAs, PINT "
+     "pulse-number tracking): J1740-3015 reaches 2.81 periods = FIRST real residual recovery "
+     "past the 2.8-period gate; omega=2.583 NOT special in any leg (p 0.28/0.89/0.48; shuffle "
+     "+ lambda battery agree); end-to-end injection at real sampling+noise: gate-passing leg "
+     "~50% power at eps=0.30, 0% at predicted eps~1.7% -> bounded null, amplitude wall now "
+     "binding (public Vela .tim starts at tau=10 d -> 1.83 periods); GLTD ladders 0/2 near "
+     "bend 2.7095, Vela-2021 resolves 3 transient modes (wall exception, on record)", None,
+     "search_target", "boundary recovery kernel (dynamic, ToA residuals)",
+     "strain_level_test", "PuMA/IAR Timing_irregularities release (Zubieta+2024 A&A 689; "
+     "GitHub PuMA-Coll) + PINT",
+     "the omega=2.583 comb is special vs shuffle + off-kernel battery in a >=2.8-period "
+     "residual recovery", "data_limited"],
     # ---- cross-domain recovery-comb search (experiments/recovery-comb-domains) ----
     ["FRB", "recovery comb in FRB burst tail (omega=2.58, stacked)",
      "log-periodic comb at omega=2pi/ln((3/2)^6) in the post-peak burst-tail recovery",
@@ -210,6 +231,22 @@ ROWS = [
      "search_target", "Nan\u00e7ay ECLAT FRB 20220912A microshots (Hewitt+2023; Zenodo 10552561)",
      "a microshot gap-clock at 2.71 OR a protected wall<=3 OR a time-DSI comb survives the null in >=2 bright bursts",
      "null"],
+    # repeater-cascade (experiments/repeater-cascade): first search past the 2.8-period range wall
+    ["FRB", "repeater burst-time cascade comb + walled clock (RC.01-03)",
+     "frozen comb omega=2.583 in ln(t-t_onset) + walled two-mode clock (bend 2.7095) + "
+     "waiting-time tooth ladder {log 3/2, log(3/2)^3, log(3/2)^6} on repeater burst-time cascades",
+     "9,916 real bursts / 4 sources (FRB 20220912A Zhang+2023, 20201124A Xu+2022/Zhang+2022, "
+     "20240114A FAST pol v5, 15 CHIME Cat2 repeaters): FIRST search past the 2.8-period range "
+     "wall -- 9 gate-passing sessions / 2 sources (max reach 4.80 periods), omega=2.583 NOT "
+     "special (Fisher p=0.72/0.38, BH q=0.72); RC.01 bend degenerate on real cascades (0/37, "
+     "Stage-2 degeneracy reproduced); RC.03 ladders null after Bonferroni (p=0.10); injection: "
+     "94% at eps=0.30, 0% at predicted eps=0.0173 -> null at detectable amplitude, amplitude "
+     "wall (~1e5 bursts/session) at the predicted 1.7%", None,
+     "search_target", "boundary recovery kernel (dynamic, burst-time cascade)",
+     "search_target", "FAST (VizieR J/ApJ/955/142; Blinkverse; pol catalog v5) + CHIME/FRB Cat2 "
+     "(CANFAR DOI 10.11570/25.0066); repeater-cascade RC.01-03",
+     "the omega=2.583 comb survives surrogates + off-kernel rank + lambda battery in >=2 "
+     "gate-passing sessions", "null"],
     ["X-ray", "recovery comb in magnetar outburst relaxation (omega=2.58)",
      "log-periodic comb at omega=2.58 in the post-outburst X-ray flux decay (wide ln t, stackable)",
      "data_limited: needs Swift/XRT or Coti Zelati+2018 flux(t); ~3 decades in ln t = best new "
@@ -235,6 +272,15 @@ ROWS = [
      "search_target", "published crust-cooling tables: Merritt+2016 (KS1731), Parikh+2019 (MXB1659), Fridriksson+2011 (XTEJ1701), Degenaar+2014 (EXO0748), Parikh+2017 (MAXIJ0556), Li/Ootes+2019 (AqlX-1)",
      "the omega=2.583 comb is special vs the off-kernel periodogram in the superposed-epoch stacked cooling ensemble",
      "data_limited"],
+    # DSI false-positive control (experiments/dsi-false-positive-control): detector specificity
+    ["cross-domain", "DSI false-positive control: frozen comb on non-TFPT cascades",
+     "kernel omega=2.583 must NOT fire on generic Omori/DSI relaxations",
+     "4 aftershock cascades (USGS ComCat, 17654 events) + 4 GOES flare sequences (1076 flares); "
+     "4/8 pass the 2.8-period gate; kernel FP 0/4 (Wilson95 [0,0.49]); controls DO show "
+     "NON-kernel DSI (flares lambda~2.9-3.9) -> detector specific, existing comb nulls informative",
+     None, "search_target", "detector specificity control (universal-DSI base rate)",
+     "search_target", "USGS ComCat + NGDC GOES XRS (dsi-false-positive-control)",
+     "kernel omega fires on generic cascades well above nominal 5%", "consistent"],
     # comb-meta-limit (experiments/comb-meta-limit): first quantitative UL on the comb amplitude eps
     ["cross-domain", "meta-analytic UL on recovery-comb amplitude eps (omega=2.583)",
      "eps = exp(-pi^2/ln((3/2)^6)) = 0.0173 (~2%)",
@@ -303,6 +349,19 @@ ROWS = [
      None, "search_target", "carrier anyon MTC (v241/v242/v243)", "search_target",
      "quantum-testbed (numerical)",
      "the modular (S,T) data fails Verlinde/Gauss-Milgram or the phase quanta are not pi/4, pi/2", "consistent"],
+    # qc-recovery-kernel: the recovery channel as an executable quantum circuit (analog tier)
+    ["quantum", "recovery kernel as a quantum circuit (Kraus dilation)",
+     "spec {1,(2/3)^6,(1/3)^6} + walled-clock bend ln3/ln(3/2)=2.7095 as a 5-qubit "
+     "amplitude-damping dilation circuit (Perron mode gate-protected; energy + amplitude readings)",
+     "Aer exact tier: per-step survivals exact to <=2.4e-15, free-ratio fit recovers the bend "
+     "2.709511 (bias -3.8e-14); noisy tier (FakeBrisbane 127-qubit Eagle model, ISA depth 158): "
+     "bend identifiable -- per-mode decode 2.65-2.69 at 256 shots, blind QT.04 free-ratio "
+     "2.89+/-0.12 at 16384 shots (3/3 seeds), protected floor retention 0.993; IBM hardware "
+     "hook prepared (open plan), not executed (needs token)", None,
+     "search_target", "engineered seam-transfer channel (quantum-circuit analog of QT.04)",
+     "not_applicable", "qc-recovery-kernel (Qiskit Aer + FakeBrisbane; numerical)",
+     "the bend is not identifiable under the device noise model at any tested shot count",
+     "consistent"],
     # ---- shared seed (one phi0 -> four observables) ----
     ["seed", "shared seed phi0", "phi0 = 1/(6pi)+3/(256pi^4) = 0.05317",
      "4 observables imply same phi0, chi2/dof=1.23 (dominant leg theta13, -1.80 sigma)",
@@ -369,10 +428,32 @@ ROWS = [
      "dark-energy-w-watchdog (DESI DR2, overlap-aware)",
      "w != -1 at >=5 sigma in a single systematics-controlled overlap-aware combination",
      "data_limited"],
+    # ---- exact-fixed-point watchdog (experiments/fixed-point-watchdog) ----
+    # pincer overlaps the w row (alternative_group w_de_eos) AND the sum-m_nu row
+    # (independence_group nu_mass_floor) -- never an independent hit; see OVERRIDES.
+    ["cosmo", "joint fixed point (w, Sigma m_nu) pincer",
+     "(w0, wa, Sigma m_nu) = (-1, 0, 0.0588 eV) jointly",
+     "DESI DR2 2025 model-dependent squeeze: LCDM eff-mass posterior puts the 0.0588 eV floor "
+     "at +3.1 sigma; w0waCDM relaxes nu (+0.65 sigma) but puts (w0,wa)=(-1,0) at 3.1-4.4 sigma; "
+     "joint ~3.7 sigma (below 5-sigma kill)", None, "prediction",
+     "Lambda constant + NO mass floor (joint point; fixed-point-watchdog)",
+     "prediction_of_record", "fixed-point-watchdog (DESI DR2 arXiv:2503.14744 + 2503.14738)",
+     "joint (w=-1, 0.0588 eV) excluded at >=5 sigma under BOTH model readings", "tension"],
+    ["lab", "alpha-Lambda drift lock (alpha_dot/alpha = 0)",
+     "d ln rho_Lambda/dt = 2 alpha^-1 (alpha_dot/alpha), amplifier 274.07; both drifts exactly zero",
+     "PTB Yb+ alpha_dot/alpha = 1.8(2.5)e-19/yr -> |d ln Lambda/dt| < 1.4e-16/yr; DESI w0wa "
+     "face value needs 3-7e-11/yr -> the lock excludes 'TFPT + real w(z)' by ~10^5.7", None,
+     "prediction", "alpha-Lambda lock (v60/v274)",
+     "prediction_of_record", "fixed-point-watchdog (Filzinger+ PRL 130 253001)",
+     "confirmed alpha drift != 0 or confirmed Lambda drift violating the lock", "consistent"],
     # ---- neutrino absolute sector (P2) ----
     ["neutrino", "sum m_nu", "Sigma m_nu = 5.88e-2 eV (normal ordering)",
-     "DESI+CMB upper limit ~0.07 eV", None, "prediction", "PMNS / mass scale",
-     "prediction_of_record", "DESI+CMB; KATRIN", "Sigma m_nu excluded or inverted ordering", "consistent"],
+     "DESI DR2 2025: LCDM 95% UL 0.0642 eV (floor still inside), but the effective-mass "
+     "posterior -0.101 +0.047/-0.056 eV puts the 0.0588 eV floor at +3.1 sigma "
+     "(model-dependent squeeze; w0waCDM relaxes to 0.163 eV / +0.65 sigma)", None,
+     "prediction", "PMNS / mass scale",
+     "prediction_of_record", "DESI DR2 (arXiv:2503.14744) + CMB; KATRIN",
+     "Sigma m_nu excluded or inverted ordering", "tension"],
     ["neutrino", "m_betabeta (0vbb)", "m_bb = 1.52e-3 eV (normal ordering)",
      "LEGEND/nEXO sensitivity ~10-20 meV (not yet reached)", None, "prediction", "Majorana mass",
      "prediction_of_record", "LEGEND-1000 / nEXO", "a 0vbb signal incompatible with 1.5 meV NO", "data_limited"],
@@ -410,6 +491,13 @@ ROWS = [
      "F_pole source->pole [C] (multiplier (2/3)^6; v93/v183) -- transfer conditional, not closed",
      "downstream_bridge", "PDG charged-lepton pole masses; ftransfer/koide_source_to_pole",
      "Q_pole drifts off 2/3 at >3 sigma", "consistent"],
+    # kill-window sharpening of the row above (independence_group koide_q_pole; see OVERRIDES)
+    ["lab", "Koide Q=2/3 tau-mass kill window", "m_tau(Q=2/3) = 1776.9690 MeV",
+     "PDG 2024/25 Q=0.6666645(51) -> -0.43 sigma; Belle II 2023 +0.86 sigma; 5-sigma kill "
+     "needs sigma(m_tau) 0.008-0.024 MeV", None, "bridge",
+     "F_pole transfer [C] (kill window sharpening of the existing Koide row)",
+     "downstream_bridge", "fixed-point-watchdog (PDG + Belle II arXiv:2305.19116)",
+     "|m_tau - 1776.9690| >= 5 sigma(m_tau)", "consistent"],
     ["lab", "proton/electron mass ratio m_p/m_e (F_QCD)",
      "~1836.15 (QCD/EW cross-sector, carrier b3=-7 run, v262); exact 1920-84+0.151=1836.151 [O] numerology-flagged",
      "PDG 1836.15267", None, "bridge",
@@ -539,7 +627,11 @@ OVERRIDES: dict[str, dict] = {
     "fine-structure constant": {"independence_group": "alpha_em", "watch_flag": True,
                                 "watch_level": "medium"},
     # F_transfer bridges to known constants: real handles, but weakly discriminating / [C]/[O].
-    "Koide ratio Q": {"discriminative_power": "weak"},
+    # Both Koide rows read the SAME PDG/Belle-II tau mass -> one cluster, never two hits.
+    "Koide ratio Q": {"discriminative_power": "weak", "independence_group": "koide_q_pole"},
+    "Koide Q=2/3 tau-mass kill window": {"discriminative_power": "weak",
+                                         "decision_horizon": "near_term",
+                                         "independence_group": "koide_q_pole"},
     "proton/electron mass ratio": {"discriminative_power": "weak"},
     # both CP phases are ONE hexagonal mu6 CM unit rho=e^{i pi/3} split by the Z2 sheet
     # (v231/v233): delta_PMNS = delta_CKM,lead + pi. They are correlated, NOT two
@@ -571,6 +663,15 @@ OVERRIDES: dict[str, dict] = {
     "dark-energy equation of state w": {"watch_flag": True, "watch_level": "high",
                                         "alternative_group": "w_de_eos"},
     "CCBH cosmological coupling": {"alternative_group": "w_de_eos", "discriminative_power": "weak"},
+    # the joint (w, Sigma m_nu) pincer is an ALTERNATIVE reading of the w question
+    # (w_de_eos) AND shares its nu leg with the sum-m_nu row (nu_mass_floor) -- it is
+    # never an independent hit on either axis.
+    "joint fixed point (w, Sigma m_nu) pincer": {"alternative_group": "w_de_eos",
+                                                 "independence_group": "nu_mass_floor"},
+    "sum m_nu": {"independence_group": "nu_mass_floor"},
+    # the drift lock DERIVES from the alpha^-1 <-> Lambda-hierarchy relation (v60/v274):
+    # same alpha_em cluster as the fine-structure and Lambda rows, not a new hit.
+    "alpha-Lambda drift lock": {"independence_group": "alpha_em"},
     "cosmic spin handedness": {"discriminative_power": "weak", "decision_horizon": "long_term"},
     # 3/8 is shared by every SU(5)/SO(10) GUT -> not TFPT-discriminating; the M_Z gap is the
     # universal SM non-unification, not a TFPT-specific tension. Grouped with proton decay:

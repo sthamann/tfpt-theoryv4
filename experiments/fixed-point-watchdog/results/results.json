@@ -1,0 +1,140 @@
+{
+  "tfpt_fixed_points": {
+    "w0": -1.0,
+    "wa": 0.0,
+    "sigma_mnu_eV": 0.0588,
+    "alpha_inv": 137.0359992168,
+    "koide_Q": "2/3",
+    "alpha_lambda_lock": "rho_L/Mbar^4 = (3/4pi^2) e^(-2 alpha^-1)",
+    "amplifier": 274.0719984336
+  },
+  "axis_A_mnu_w_pincer": {
+    "tfpt_point": {
+      "w0": -1.0,
+      "wa": 0.0,
+      "sigma_mnu_eV": 0.0588
+    },
+    "reading_LCDM": {
+      "model": "LCDM (w=-1 held, as TFPT demands); only the nu axis can pull",
+      "pull_nu_sigma": 3.1,
+      "published_tension_vs_NO_floor_sigma": 3.0,
+      "inside_standard_95_bound_0.0642eV": true,
+      "inside_feldman_cousins_95_bound_0.053eV": false
+    },
+    "reading_w0waCDM": {
+      "model": "w0waCDM (bound relaxes to 0.163 eV; eff-mass posterior peaks at 0)",
+      "pull_nu_sigma": 0.65,
+      "w_axis_2d_sigma": [
+        {
+          "name": "DESI+CMB+Pantheon+",
+          "tension_2d_sigma": 3.07,
+          "published_sigma_vs_LCDM": 2.8
+        },
+        {
+          "name": "DESI+CMB+Union3",
+          "tension_2d_sigma": 3.87,
+          "published_sigma_vs_LCDM": 3.8
+        },
+        {
+          "name": "DESI+CMB+DESY5",
+          "tension_2d_sigma": 4.37,
+          "published_sigma_vs_LCDM": 4.2
+        }
+      ],
+      "w_axis_headline_sigma": 4.37,
+      "w_axis_headline_combination": "DESI+CMB+DESY5",
+      "joint_3dof_equivalent_sigma": 3.7
+    },
+    "caveat": "Sigma m_nu bounds are MODEL-DEPENDENT: in LCDM the TFPT floor is in ~3-sigma tension (via the effective-mass posterior; it still sits inside the standard 95% bound 0.0642 eV but outside the Feldman-Cousins 0.053 eV); in w0waCDM the floor is fully compatible (+0.7 sigma) but then w=-1 itself is disfavoured at up to ~4.4 sigma. The pincer: no published model reading lets BOTH TFPT fixed points sit below ~3 sigma simultaneously. Gaussian approximations of published posteriors throughout; SN samples overlap (never stacked).",
+    "kill_rule": "joint (w=-1, 0.0588 eV) excluded at >= 5 sigma in a single systematics-controlled combination under BOTH model readings",
+    "max_tension_sigma": 3.7,
+    "kill_triggered": false,
+    "verdict": "tension"
+  },
+  "axis_B_alpha_lambda_lock": {
+    "lock": "rho_Lambda/Mbar^4 = (3/4pi^2) exp(-2 alpha^-1)  =>  d ln rho_Lambda/dt = 2 alpha^-1 * (alpha_dot/alpha)",
+    "amplifier_2_alpha_inv": 274.072,
+    "clock_limit_per_yr": {
+      "central": 1.8e-19,
+      "sigma": 2.5e-19,
+      "source": "PTB Yb+ E3/E2 optical clock comparison, Filzinger et al., Phys. Rev. Lett. 130, 253001 (2023), arXiv:2301.03433; data May 2016 - Nov 2022; still the strictest published limit as of 2026-07-02"
+    },
+    "lock_implied_dln_lambda_dt_per_yr": {
+      "central": 4.93e-17,
+      "bound_2sigma": 1.37e-16,
+      "bound_central_plus_2sigma": 1.86e-16
+    },
+    "desi_face_value_dln_rho_de_dt_per_yr": [
+      {
+        "name": "DESI+CMB+Pantheon+",
+        "w0": -0.838,
+        "dln_rho_de_dt_per_yr": 3.35e-11
+      },
+      {
+        "name": "DESI+CMB+Union3",
+        "w0": -0.667,
+        "dln_rho_de_dt_per_yr": 6.89e-11
+      },
+      {
+        "name": "DESI+CMB+DESY5",
+        "w0": -0.752,
+        "dln_rho_de_dt_per_yr": 5.13e-11
+      }
+    ],
+    "mutual_exclusion": {
+      "desi_implied_range_per_yr": [
+        3.35e-11,
+        6.89e-11
+      ],
+      "implied_alpha_drift_if_lock_and_desi_real_per_yr": 2.51e-13,
+      "clock_bound_2sigma_per_yr": 5e-19,
+      "violation_factor": 503000.0,
+      "orders_of_magnitude": 5.7,
+      "statement": "IF the DESI (w0,wa) preference is real dark-energy dynamics AND the TFPT alpha-Lambda lock holds, the implied alpha drift violates the optical-clock bound by ~10^5.7 -- so 'TFPT + real w(z) evolution' is internally killed; TFPT is only consistent with w = -1 (axis A) AND alpha static (this axis) JOINTLY."
+    },
+    "today": "clocks see alpha_dot/alpha = 1.8(2.5)e-19/yr (consistent with zero) -- exactly what TFPT's static fixed point demands; the lock then bounds |d ln Lambda/dt| < ~1.4e-16/yr (2 sigma)",
+    "kill_rule": "any confirmed alpha_dot/alpha != 0, or any confirmed Lambda drift violating d ln rho_Lambda/dt = 2 alpha^-1 d(alpha)/alpha/dt",
+    "kill_triggered": false,
+    "verdict": "consistent"
+  },
+  "axis_C_koide_tau": {
+    "inputs": {
+      "m_e_MeV": 0.51099895069,
+      "m_mu_MeV": 105.6583755,
+      "m_tau_MeV": [
+        1776.93,
+        0.09
+      ],
+      "m_tau_belle2_MeV": [
+        1777.09,
+        0.14
+      ]
+    },
+    "Q": 0.666664463,
+    "sigma_Q": 5.08e-06,
+    "Q_target": "2/3 = 0.666666667",
+    "pull_sigma": -0.43,
+    "m_tau_predicted_by_Q_two_thirds_MeV": 1776.969,
+    "m_tau_prediction_sigma_from_me_mmu_MeV": 3.5e-05,
+    "pull_pdg2024_sigma": -0.43,
+    "pull_belle2_2023_sigma": 0.86,
+    "kill_window": {
+      "rule": "|m_tau - m_tau(Q=2/3)| >= 5 sigma(m_tau), systematics-controlled",
+      "gap_today_pdg_MeV": 0.039,
+      "sigma_needed_to_kill_at_current_pdg_central_MeV": 0.0078,
+      "gap_today_belle2_MeV": 0.121,
+      "sigma_needed_to_kill_at_belle2_central_MeV": 0.0242,
+      "note": "a future tau-mass at today's Belle II central (1777.09) with sigma <~ 0.024 MeV would be a 5-sigma kill; at today's PDG central (1776.93) sigma <~ 0.008 MeV would be needed. Belle II full dataset aims at O(0.01-0.05) MeV -- the window is live."
+    },
+    "kill_triggered": false,
+    "verdict": "consistent"
+  },
+  "verdicts": {
+    "A": "tension",
+    "B": "consistent",
+    "C": "consistent"
+  },
+  "kill_triggered_any": false,
+  "retrieved": "2026-07-02",
+  "verdict_line": "WATCHDOG: A=tension (3.7s pincer), B=consistent (lock excludes TFPT+real-w(z) by ~10^5.7), C=consistent (-0.43s Koide). No kill triggered (threshold 5.0 sigma)."
+}

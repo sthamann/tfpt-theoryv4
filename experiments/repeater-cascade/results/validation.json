@@ -1,0 +1,12 @@
+{
+  "comb_ref_eps": 0.3,
+  "comb_ref_rate": 0.9375,
+  "false_positive_rate": 0.0,
+  "pred_eps": 0.01730246011431484,
+  "pred_detection_rate": 0.0,
+  "n_seeds": 16,
+  "clock_frozen_delta_r2": 0.004269125563061764,
+  "clock_frozen_p": 0.7880794701986755,
+  "clock_smooth_p": 0.5894039735099338,
+  "passed": true
+}

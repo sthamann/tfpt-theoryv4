@@ -177,7 +177,7 @@ def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description="TFPT GW ringdown echo-ratio forecast + Stage-1 search")
     ap.add_argument("command", choices=["audit", "analyze", "search", "realdata", "dynamic",
                                         "stack", "battery", "point", "bmcomb", "offset",
-                                        "robust"],
+                                        "robust", "inject"],
                     nargs="?", default="analyze")
     ap.add_argument("--events", nargs="*", default=["GW150914", "GW190521"],
                     help="events for the realdata/dynamic/stack/battery search (fetch first)")
@@ -185,6 +185,9 @@ def main(argv: list[str] | None = None) -> int:
                     help="battery diagnostic: subtract 330/210/quadratic modes too")
     ap.add_argument("--aggressive", action="store_true",
                     help="battery diagnostic: + greedy matching-pursuit residual modelling")
+    ap.add_argument("--hires", action="store_true",
+                    help="point/inject: use the 16 kHz crops (<event>_meta16k.json, "
+                         "scripts/fetch_strain_16k.py) instead of the 4 kHz crops")
     args = ap.parse_args(argv)
 
     if args.command == "search":
@@ -202,7 +205,10 @@ def main(argv: list[str] | None = None) -> int:
                            aggressive=args.aggressive)
     if args.command == "point":
         from .point_test import run_point            # local import: needs strain
-        return run_point(args.events)
+        return run_point(args.events, hires=args.hires)
+    if args.command == "inject":
+        from .injection_limits import run_inject     # local import: needs strain
+        return run_inject(args.events, hires=args.hires)
     if args.command == "bmcomb":
         from .bm_comb import run_bm_comb             # local import: needs strain
         return run_bm_comb(args.events)

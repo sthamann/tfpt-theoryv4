@@ -1,0 +1,217 @@
+{
+  "kernel_omega": 2.5827069463082895,
+  "eps_predicted": 0.01730246011431484,
+  "reach_gate_periods": 2.8,
+  "legs": [
+    {
+      "psr": "J0835-4510",
+      "glep_mjd": 59417.6194,
+      "dnu_over_nu": 7.952209683452029e-07,
+      "tau_d_days": [
+        6.38888889,
+        1.0030303,
+        502.6471264791262
+      ],
+      "n_toa": 639,
+      "n_post": 540,
+      "tau_min_d": 10.049254108242167,
+      "tau_max_d": 860.7070967969703,
+      "reach_periods": 1.8292802324793278,
+      "gate_passed": false,
+      "rms_us": 551.7763758313741,
+      "comb_gain": 0.037218052006218465,
+      "comb_p": 0.28125,
+      "shuffle_p": 0.001996007984031936,
+      "kernel_smallest": false,
+      "bend_ratios": [
+        6.37,
+        78.675
+      ],
+      "n_ratios_on_bend": 0,
+      "wall_exceeded": true,
+      "battery": [
+        {
+          "label": "(3/2)^6 [kernel]",
+          "omega": 2.5827069463082895,
+          "p": 0.28125
+        },
+        {
+          "label": "(3/2)^5",
+          "omega": 3.0992483355699476,
+          "p": 0.09927797833935018
+        },
+        {
+          "label": "(3/2)^7",
+          "omega": 2.213748811121391,
+          "p": 0.46238532110091746
+        },
+        {
+          "label": "(3/2)^8",
+          "omega": 1.937030209731217,
+          "p": 0.5416666666666666
+        },
+        {
+          "label": "lambda=2",
+          "omega": 9.064720283654388,
+          "p": 0.1431159420289855
+        },
+        {
+          "label": "lambda=3",
+          "omega": 5.7192017347602535,
+          "p": 0.9731182795698925
+        },
+        {
+          "label": "lambda=e",
+          "omega": 6.283185307179586,
+          "p": 0.8940754039497307
+        }
+      ],
+      "injection": {
+        "eps_reference": 0.3,
+        "ref_rate": 0.0,
+        "false_positive_rate": 0.0,
+        "eps_predicted": 0.01730246011431484,
+        "pred_rate": 0.0,
+        "n_seeds": 24,
+        "passed": false
+      }
+    },
+    {
+      "psr": "J0742-2822",
+      "glep_mjd": 59839.4,
+      "dnu_over_nu": 4.276243704908708e-06,
+      "tau_d_days": [
+        33.3833650590052
+      ],
+      "n_toa": 753,
+      "n_post": 292,
+      "tau_min_d": 9.044866479598568,
+      "tau_max_d": 310.2279174064897,
+      "reach_periods": 1.4531089593737174,
+      "gate_passed": false,
+      "rms_us": 250.07465365941673,
+      "comb_gain": 0.0062682006984042995,
+      "comb_p": 0.8899253731343284,
+      "shuffle_p": 0.39520958083832336,
+      "kernel_smallest": false,
+      "bend_ratios": [],
+      "n_ratios_on_bend": 0,
+      "wall_exceeded": false,
+      "battery": [
+        {
+          "label": "(3/2)^6 [kernel]",
+          "omega": 2.5827069463082895,
+          "p": 0.8899253731343284
+        },
+        {
+          "label": "(3/2)^5",
+          "omega": 3.0992483355699476,
+          "p": 0.8391866913123844
+        },
+        {
+          "label": "(3/2)^7",
+          "omega": 2.213748811121391,
+          "p": 0.9577205882352942
+        },
+        {
+          "label": "(3/2)^8",
+          "omega": 1.937030209731217,
+          "p": 1.0
+        },
+        {
+          "label": "lambda=2",
+          "omega": 9.064720283654388,
+          "p": 0.27041742286751363
+        },
+        {
+          "label": "lambda=3",
+          "omega": 5.7192017347602535,
+          "p": 0.05765765765765766
+        },
+        {
+          "label": "lambda=e",
+          "omega": 6.283185307179586,
+          "p": 0.0018018018018018018
+        }
+      ],
+      "injection": {
+        "eps_reference": 0.3,
+        "ref_rate": 0.16666666666666666,
+        "false_positive_rate": 0.0,
+        "eps_predicted": 0.01730246011431484,
+        "pred_rate": 0.0,
+        "n_seeds": 24,
+        "passed": false
+      }
+    },
+    {
+      "psr": "J1740-3015",
+      "glep_mjd": 59935.2,
+      "dnu_over_nu": 3.1480326830867303e-07,
+      "tau_d_days": [
+        124.29436440239216
+      ],
+      "n_toa": 315,
+      "n_post": 137,
+      "tau_min_d": 0.4050598785470356,
+      "tau_max_d": 379.39616204355843,
+      "reach_periods": 2.8125319044330954,
+      "gate_passed": true,
+      "rms_us": 684.1279127285645,
+      "comb_gain": 0.2671986671189616,
+      "comb_p": 0.47644927536231885,
+      "shuffle_p": 0.001996007984031936,
+      "kernel_smallest": false,
+      "bend_ratios": [],
+      "n_ratios_on_bend": 0,
+      "wall_exceeded": false,
+      "battery": [
+        {
+          "label": "(3/2)^6 [kernel]",
+          "omega": 2.5827069463082895,
+          "p": 0.47644927536231885
+        },
+        {
+          "label": "(3/2)^5",
+          "omega": 3.0992483355699476,
+          "p": 0.1223021582733813
+        },
+        {
+          "label": "(3/2)^7",
+          "omega": 2.213748811121391,
+          "p": 0.778175313059034
+        },
+        {
+          "label": "(3/2)^8",
+          "omega": 1.937030209731217,
+          "p": 0.8535262206148282
+        },
+        {
+          "label": "lambda=2",
+          "omega": 9.064720283654388,
+          "p": 0.6588447653429603
+        },
+        {
+          "label": "lambda=3",
+          "omega": 5.7192017347602535,
+          "p": 0.19782214156079855
+        },
+        {
+          "label": "lambda=e",
+          "omega": 6.283185307179586,
+          "p": 0.3453887884267631
+        }
+      ],
+      "injection": {
+        "eps_reference": 0.3,
+        "ref_rate": 0.5,
+        "false_positive_rate": 0.0,
+        "eps_predicted": 0.01730246011431484,
+        "pred_rate": 0.0,
+        "n_seeds": 24,
+        "passed": false
+      }
+    }
+  ],
+  "verdict": "data_limited (power-limited, honestly quantified) -- but the RIGHT product at last. PG.08 tests what PG.07 said was missing: real phase-connected ToA RESIDUALS (PuMA/IAR daily cadence, 969 post-glitch TOAs over three giant glitches), glitch model removed, refit-absorption basis projected out. Achieved reach: Vela-2021 1.83 periods (the public .tim starts at tau=10.0 d -- the live sub-day TOAs of Zubieta+2023 are not in the release, so Vela stays BELOW the 2.8 gate), J0742-2822 1.45, and J1740-3015 2.81 periods -- J1740-3015 is the FIRST real residual recovery to clear the ~2.8-period gate. omega=2.583 is NOT special in any leg (comb p = J0835-4510:0.28, J0742-2822:0.89, J1740-3015:0.48; lambda battery agrees). The end-to-end injection at the real sampling AND real noise quantifies what that non-detection is worth: at reference eps=0.30 the detection power is J0835-4510:0%, J0742-2822:17%, J1740-3015:50% (eps=0 false-positive ~0%) -- the sub-gate legs REPRODUCE the PG.06 range-blindness on real residuals, and even the gate-passing leg reaches only ~50% power at eps=0.30 (684 us RMS noise), formally 0/3 legs pass the >=60% validation bar. At the predicted eps~0.017 the power is 0% everywhere -- the amplitude wall stands. So PG.08 is a bounded statement: no comb, and a eps>~0.3 comb would have been seen with ~50% probability on J1740-3015; nothing stronger. Walled-clock reading on the released GLTD ladders: 0/2 timescale ratios near the 2.7095 bend (null), and ['J0835-4510'] resolve(s) >= 3 transient modes -- Vela-2021's 3-mode fit is a WALL exception to keep on record (PG.04c counted 45/46 <= 2). No claim; firewall intact. Decisive next: the sub-day live TOAs (IAR internal) or an equivalent public early-window release would push Vela past the gate where the eps sensitivity is best."
+}

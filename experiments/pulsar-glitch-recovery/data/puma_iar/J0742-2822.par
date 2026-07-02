@@ -1,0 +1,32 @@
+PSRJ           J0742-2822
+RAJ            07:42:49.058                
+DECJ           -28:22:43.76                
+F0             5.9961278261764909625       0 1e-10
+F1             -6.0291781967326923749e-13  0 1e-17
+F2             -3.5262005732474555123e-24  0 1e-26
+PEPOCH         57599.99910342749347         0
+POSEPOCH       57599.99910342749347         0
+DM             73.727993140996979822       
+PMRA           -29.000000899301486191      
+PMDEC          4.0000001240415843022                                 
+START          58751.443415191053887       
+FINISH         62103.756619292616392       
+TZRMJD         60149.615937894004336       
+TZRFRQ         1428.4375                
+TZRSITE        iar2   
+TRES           1536.859     
+EPHVER         2                           
+CLK            TT(TAI)
+MODE 1
+UNITS          TDB
+TRACK          -2
+TIMEEPH        FB90
+DILATEFREQ     N
+PLANET_SHAPIRO N
+T2CMETHOD      TEMPO
+NE_SW          9.961
+CORRECT_TROPOSPHERE  N
+EPHEM          DE405
+NITS           1
+NTOA           217
+CHI2R          1.0536 211

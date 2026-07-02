@@ -1,0 +1,931 @@
+{
+  "kernel": {
+    "c3": 0.039788735772973836,
+    "g_car": 5.0,
+    "N_fam": 3.0,
+    "p2_exp": 6.0,
+    "rate(1)=6ln(3/2)": 2.4327906486489863,
+    "rate(2)=6ln3": 6.591673732008658,
+    "bend=ln3/ln(3/2)": 2.709511291351455,
+    "wall_N_fam": 3.0,
+    "lambda=(3/2)^6": 11.390625,
+    "omega=2pi/ln(lambda)": 2.5827069463082895,
+    "one_period_dln_t": 2.4327906486489863,
+    "eps_predicted": 0.01730246011431484,
+    "reach_gate_periods": 2.8,
+    "tooth_3/2_dex": 0.17609125905568124,
+    "tooth_(3/2)^3_dex": 0.5282737771670437,
+    "tooth_(3/2)^6_dex": 1.0565475543340874
+  },
+  "n_series": 18,
+  "rc02_comb": {
+    "n_sessions_total": 264,
+    "n_gate_passing": 9,
+    "per_session": [
+      {
+        "dataset_id": "fast_frb20201124a_xu2022_spring",
+        "source": "FRB20201124A",
+        "t0_mjd": 59350.1632802,
+        "n_used": 38,
+        "reach_periods": 3.0334880880903277,
+        "gate_passed": true,
+        "z_omega": 9.600342555042632,
+        "p_surrogate": 0.04975124378109453,
+        "p_rank": 0.44525547445255476,
+        "ks_p": 0.010840460513771794,
+        "kernel_smallest_p": false,
+        "battery": [
+          {
+            "label": "(3/2)^6 [kernel]",
+            "omega": 2.5827069463082895,
+            "p": 0.04918032786885246
+          },
+          {
+            "label": "(3/2)^5",
+            "omega": 3.0992483355699476,
+            "p": 0.13114754098360656
+          },
+          {
+            "label": "(3/2)^7",
+            "omega": 2.213748811121391,
+            "p": 0.04918032786885246
+          },
+          {
+            "label": "(3/2)^8",
+            "omega": 1.937030209731217,
+            "p": 0.01639344262295082
+          },
+          {
+            "label": "lambda=2",
+            "omega": 9.064720283654388,
+            "p": 0.01639344262295082
+          },
+          {
+            "label": "lambda=3",
+            "omega": 5.7192017347602535,
+            "p": 0.21311475409836064
+          },
+          {
+            "label": "lambda=e",
+            "omega": 6.283185307179586,
+            "p": 0.01639344262295082
+          }
+        ]
+      },
+      {
+        "dataset_id": "fast_frb20201124a_zhangyk2022_autumn",
+        "source": "FRB20201124A",
+        "t0_mjd": 59484.815064813,
+        "n_used": 230,
+        "reach_periods": 3.159511879893363,
+        "gate_passed": true,
+        "z_omega": 35.289463784338544,
+        "p_surrogate": 0.1691542288557214,
+        "p_rank": 0.7883211678832117,
+        "ks_p": 0.09711453801710089,
+        "kernel_smallest_p": false,
+        "battery": [
+          {
+            "label": "(3/2)^6 [kernel]",
+            "omega": 2.5827069463082895,
+            "p": 0.19672131147540983
+          },
+          {
+            "label": "(3/2)^5",
+            "omega": 3.0992483355699476,
+            "p": 0.2459016393442623
+          },
+          {
+            "label": "(3/2)^7",
+            "omega": 2.213748811121391,
+            "p": 0.14754098360655737
+          },
+          {
+            "label": "(3/2)^8",
+            "omega": 1.937030209731217,
+            "p": 0.03278688524590164
+          },
+          {
+            "label": "lambda=2",
+            "omega": 9.064720283654388,
+            "p": 0.21311475409836064
+          },
+          {
+            "label": "lambda=3",
+            "omega": 5.7192017347602535,
+            "p": 0.06557377049180328
+          },
+          {
+            "label": "lambda=e",
+            "omega": 6.283185307179586,
+            "p": 0.6229508196721312
+          }
+        ]
+      },
+      {
+        "dataset_id": "fast_frb20240114a_polcat",
+        "source": "FRB20240114A",
+        "t0_mjd": 60380.15354443,
+        "n_used": 343,
+        "reach_periods": 3.0598800013277896,
+        "gate_passed": true,
+        "z_omega": 53.30417675592246,
+        "p_surrogate": 0.06467661691542288,
+        "p_rank": 0.18248175182481752,
+        "ks_p": 0.2975533137872774,
+        "kernel_smallest_p": false,
+        "battery": [
+          {
+            "label": "(3/2)^6 [kernel]",
+            "omega": 2.5827069463082895,
+            "p": 0.04918032786885246
+          },
+          {
+            "label": "(3/2)^5",
+            "omega": 3.0992483355699476,
+            "p": 0.3114754098360656
+          },
+          {
+            "label": "(3/2)^7",
+            "omega": 2.213748811121391,
+            "p": 0.11475409836065574
+          },
+          {
+            "label": "(3/2)^8",
+            "omega": 1.937030209731217,
+            "p": 0.09836065573770492
+          },
+          {
+            "label": "lambda=2",
+            "omega": 9.064720283654388,
+            "p": 0.03278688524590164
+          },
+          {
+            "label": "lambda=3",
+            "omega": 5.7192017347602535,
+            "p": 0.39344262295081966
+          },
+          {
+            "label": "lambda=e",
+            "omega": 6.283185307179586,
+            "p": 0.08196721311475409
+          }
+        ]
+      },
+      {
+        "dataset_id": "fast_frb20240114a_polcat",
+        "source": "FRB20240114A",
+        "t0_mjd": 60381.03906749,
+        "n_used": 1420,
+        "reach_periods": 3.1602745470777363,
+        "gate_passed": true,
+        "z_omega": 174.55809797211307,
+        "p_surrogate": 0.5223880597014925,
+        "p_rank": 0.7299270072992701,
+        "ks_p": 0.42133489804179936,
+        "kernel_smallest_p": false,
+        "battery": [
+          {
+            "label": "(3/2)^6 [kernel]",
+            "omega": 2.5827069463082895,
+            "p": 0.5409836065573771
+          },
+          {
+            "label": "(3/2)^5",
+            "omega": 3.0992483355699476,
+            "p": 0.32786885245901637
+          },
+          {
+            "label": "(3/2)^7",
+            "omega": 2.213748811121391,
+            "p": 0.47540983606557374
+          },
+          {
+            "label": "(3/2)^8",
+            "omega": 1.937030209731217,
+            "p": 0.7868852459016393
+          },
+          {
+            "label": "lambda=2",
+            "omega": 9.064720283654388,
+            "p": 0.04918032786885246
+          },
+          {
+            "label": "lambda=3",
+            "omega": 5.7192017347602535,
+            "p": 0.36065573770491804
+          },
+          {
+            "label": "lambda=e",
+            "omega": 6.283185307179586,
+            "p": 0.5737704918032787
+          }
+        ]
+      },
+      {
+        "dataset_id": "fast_frb20240114a_polcat",
+        "source": "FRB20240114A",
+        "t0_mjd": 60504.76206658,
+        "n_used": 46,
+        "reach_periods": 3.086348488367827,
+        "gate_passed": true,
+        "z_omega": 3.5438514778169954,
+        "p_surrogate": 0.2736318407960199,
+        "p_rank": 0.583941605839416,
+        "ks_p": 0.7746812966366912,
+        "kernel_smallest_p": false,
+        "battery": [
+          {
+            "label": "(3/2)^6 [kernel]",
+            "omega": 2.5827069463082895,
+            "p": 0.26229508196721313
+          },
+          {
+            "label": "(3/2)^5",
+            "omega": 3.0992483355699476,
+            "p": 0.7377049180327869
+          },
+          {
+            "label": "(3/2)^7",
+            "omega": 2.213748811121391,
+            "p": 0.13114754098360656
+          },
+          {
+            "label": "(3/2)^8",
+            "omega": 1.937030209731217,
+            "p": 0.08196721311475409
+          },
+          {
+            "label": "lambda=2",
+            "omega": 9.064720283654388,
+            "p": 0.5409836065573771
+          },
+          {
+            "label": "lambda=3",
+            "omega": 5.7192017347602535,
+            "p": 0.639344262295082
+          },
+          {
+            "label": "lambda=e",
+            "omega": 6.283185307179586,
+            "p": 0.5081967213114754
+          }
+        ]
+      },
+      {
+        "dataset_id": "fast_frb20240114a_polcat",
+        "source": "FRB20240114A",
+        "t0_mjd": 60515.77515078,
+        "n_used": 112,
+        "reach_periods": 3.440619648200163,
+        "gate_passed": true,
+        "z_omega": 11.490726724134419,
+        "p_surrogate": 0.4925373134328358,
+        "p_rank": 0.8248175182481752,
+        "ks_p": 0.9960707469752519,
+        "kernel_smallest_p": false,
+        "battery": [
+          {
+            "label": "(3/2)^6 [kernel]",
+            "omega": 2.5827069463082895,
+            "p": 0.47540983606557374
+          },
+          {
+            "label": "(3/2)^5",
+            "omega": 3.0992483355699476,
+            "p": 0.7049180327868853
+          },
+          {
+            "label": "(3/2)^7",
+            "omega": 2.213748811121391,
+            "p": 0.16393442622950818
+          },
+          {
+            "label": "(3/2)^8",
+            "omega": 1.937030209731217,
+            "p": 0.36065573770491804
+          },
+          {
+            "label": "lambda=2",
+            "omega": 9.064720283654388,
+            "p": 0.3114754098360656
+          },
+          {
+            "label": "lambda=3",
+            "omega": 5.7192017347602535,
+            "p": 0.39344262295081966
+          },
+          {
+            "label": "lambda=e",
+            "omega": 6.283185307179586,
+            "p": 0.3114754098360656
+          }
+        ]
+      },
+      {
+        "dataset_id": "fast_frb20240114a_polcat",
+        "source": "FRB20240114A",
+        "t0_mjd": 60517.8202008,
+        "n_used": 54,
+        "reach_periods": 4.303073491998716,
+        "gate_passed": true,
+        "z_omega": 2.313767593294014,
+        "p_surrogate": 0.572139303482587,
+        "p_rank": 0.32116788321167883,
+        "ks_p": 0.16994223948188128,
+        "kernel_smallest_p": false,
+        "battery": [
+          {
+            "label": "(3/2)^6 [kernel]",
+            "omega": 2.5827069463082895,
+            "p": 0.6885245901639344
+          },
+          {
+            "label": "(3/2)^5",
+            "omega": 3.0992483355699476,
+            "p": 0.6885245901639344
+          },
+          {
+            "label": "(3/2)^7",
+            "omega": 2.213748811121391,
+            "p": 0.09836065573770492
+          },
+          {
+            "label": "(3/2)^8",
+            "omega": 1.937030209731217,
+            "p": 0.01639344262295082
+          },
+          {
+            "label": "lambda=2",
+            "omega": 9.064720283654388,
+            "p": 0.2459016393442623
+          },
+          {
+            "label": "lambda=3",
+            "omega": 5.7192017347602535,
+            "p": 0.8524590163934426
+          },
+          {
+            "label": "lambda=e",
+            "omega": 6.283185307179586,
+            "p": 0.7049180327868853
+          }
+        ]
+      },
+      {
+        "dataset_id": "fast_frb20240114a_polcat",
+        "source": "FRB20240114A",
+        "t0_mjd": 60521.80098559,
+        "n_used": 60,
+        "reach_periods": 4.068196137956964,
+        "gate_passed": true,
+        "z_omega": 7.255162353855534,
+        "p_surrogate": 0.21890547263681592,
+        "p_rank": 0.3722627737226277,
+        "ks_p": 0.22934138154352396,
+        "kernel_smallest_p": false,
+        "battery": [
+          {
+            "label": "(3/2)^6 [kernel]",
+            "omega": 2.5827069463082895,
+            "p": 0.21311475409836064
+          },
+          {
+            "label": "(3/2)^5",
+            "omega": 3.0992483355699476,
+            "p": 0.7868852459016393
+          },
+          {
+            "label": "(3/2)^7",
+            "omega": 2.213748811121391,
+            "p": 0.03278688524590164
+          },
+          {
+            "label": "(3/2)^8",
+            "omega": 1.937030209731217,
+            "p": 0.01639344262295082
+          },
+          {
+            "label": "lambda=2",
+            "omega": 9.064720283654388,
+            "p": 0.6065573770491803
+          },
+          {
+            "label": "lambda=3",
+            "omega": 5.7192017347602535,
+            "p": 0.2459016393442623
+          },
+          {
+            "label": "lambda=e",
+            "omega": 6.283185307179586,
+            "p": 0.4098360655737705
+          }
+        ]
+      },
+      {
+        "dataset_id": "fast_frb20240114a_polcat",
+        "source": "FRB20240114A",
+        "t0_mjd": 60676.31558313,
+        "n_used": 234,
+        "reach_periods": 4.798216889042742,
+        "gate_passed": true,
+        "z_omega": 36.755565367967776,
+        "p_surrogate": 0.03980099502487562,
+        "p_rank": 0.021897810218978103,
+        "ks_p": 0.11394267497933683,
+        "kernel_smallest_p": true,
+        "battery": [
+          {
+            "label": "(3/2)^6 [kernel]",
+            "omega": 2.5827069463082895,
+            "p": 0.03278688524590164
+          },
+          {
+            "label": "(3/2)^5",
+            "omega": 3.0992483355699476,
+            "p": 0.18032786885245902
+          },
+          {
+            "label": "(3/2)^7",
+            "omega": 2.213748811121391,
+            "p": 0.08196721311475409
+          },
+          {
+            "label": "(3/2)^8",
+            "omega": 1.937030209731217,
+            "p": 0.22950819672131148
+          },
+          {
+            "label": "lambda=2",
+            "omega": 9.064720283654388,
+            "p": 0.7377049180327869
+          },
+          {
+            "label": "lambda=3",
+            "omega": 5.7192017347602535,
+            "p": 0.9344262295081968
+          },
+          {
+            "label": "lambda=e",
+            "omega": 6.283185307179586,
+            "p": 0.6229508196721312
+          }
+        ]
+      }
+    ],
+    "fisher_per_source": {
+      "FRB20201124A": 0.7184906567874283,
+      "FRB20240114A": 0.37585424345005425
+    },
+    "bh_q_per_source": {
+      "FRB20201124A": 0.7184906567874283,
+      "FRB20240114A": 0.7184906567874283
+    },
+    "n_surrogates": 200
+  },
+  "rc01_clock": {
+    "n_rate_curves": 37,
+    "median_delta_r2_frozen": 0.0,
+    "n_p_lt_005": 0,
+    "n_frozen_beats_placebos": 0,
+    "per_session": [
+      {
+        "dataset_id": "fast_frb20220912a_zhang2023",
+        "source": "FRB20220912A",
+        "t0_mjd": 59880.4976244,
+        "n_used": 193,
+        "applicable": true,
+        "delta_r2_frozen": 0.0,
+        "p_surrogate": 1.0,
+        "placebo_max_delta_r2": 0.0,
+        "frozen_beats_placebos": false
+      },
+      {
+        "dataset_id": "fast_frb20220912a_zhang2023",
+        "source": "FRB20220912A",
+        "t0_mjd": 59882.527851343,
+        "n_used": 276,
+        "applicable": true,
+        "delta_r2_frozen": 0.0,
+        "p_surrogate": 1.0,
+        "placebo_max_delta_r2": 0.0,
+        "frozen_beats_placebos": false
+      },
+      {
+        "dataset_id": "fast_frb20220912a_zhang2023",
+        "source": "FRB20220912A",
+        "t0_mjd": 59884.576892356,
+        "n_used": 71,
+        "applicable": true,
+        "delta_r2_frozen": 0.0007184929933976154,
+        "p_surrogate": 0.47019867549668876,
+        "placebo_max_delta_r2": 0.0008410223291425798,
+        "frozen_beats_placebos": false
+      },
+      {
+        "dataset_id": "fast_frb20220912a_zhang2023",
+        "source": "FRB20220912A",
+        "t0_mjd": 59900.545559858,
+        "n_used": 90,
+        "applicable": true,
+        "delta_r2_frozen": 0.0,
+        "p_surrogate": 1.0,
+        "placebo_max_delta_r2": 0.0,
+        "frozen_beats_placebos": false
+      },
+      {
+        "dataset_id": "fast_frb20201124a_xu2022_spring",
+        "source": "FRB20201124A",
+        "t0_mjd": 59313.32610275,
+        "n_used": 81,
+        "applicable": true,
+        "delta_r2_frozen": 6.632390754056216e-06,
+        "p_surrogate": 0.8211920529801324,
+        "placebo_max_delta_r2": 5.3723166452958154e-05,
+        "frozen_beats_placebos": false
+      },
+      {
+        "dataset_id": "fast_frb20201124a_xu2022_spring",
+        "source": "FRB20201124A",
+        "t0_mjd": 59314.32242844,
+        "n_used": 101,
+        "applicable": true,
+        "delta_r2_frozen": 0.0,
+        "p_surrogate": 1.0,
+        "placebo_max_delta_r2": 0.0,
+        "frozen_beats_placebos": false
+      },
+      {
+        "dataset_id": "fast_frb20201124a_xu2022_spring",
+        "source": "FRB20201124A",
+        "t0_mjd": 59315.31900409,
+        "n_used": 107,
+        "applicable": true,
+        "delta_r2_frozen": 4.21866413870946e-05,
+        "p_surrogate": 0.7880794701986755,
+        "placebo_max_delta_r2": 0.0001770159752580153,
+        "frozen_beats_placebos": false
+      },
+      {
+        "dataset_id": "fast_frb20201124a_xu2022_spring",
+        "source": "FRB20201124A",
+        "t0_mjd": 59316.31861985,
+        "n_used": 72,
+        "applicable": true,
+        "delta_r2_frozen": 0.0,
+        "p_surrogate": 1.0,
+        "placebo_max_delta_r2": 0.0,
+        "frozen_beats_placebos": false
+      },
+      {
+        "dataset_id": "fast_frb20201124a_xu2022_spring",
+        "source": "FRB20201124A",
+        "t0_mjd": 59319.31185708,
+        "n_used": 60,
+        "applicable": true,
+        "delta_r2_frozen": 0.0,
+        "p_surrogate": 1.0,
+        "placebo_max_delta_r2": 0.0,
+        "frozen_beats_placebos": false
+      },
+      {
+        "dataset_id": "fast_frb20201124a_xu2022_spring",
+        "source": "FRB20201124A",
+        "t0_mjd": 59323.29766878,
+        "n_used": 63,
+        "applicable": true,
+        "delta_r2_frozen": 0.0,
+        "p_surrogate": 1.0,
+        "placebo_max_delta_r2": 1.0609585052137094e-05,
+        "frozen_beats_placebos": false
+      },
+      {
+        "dataset_id": "fast_frb20201124a_xu2022_spring",
+        "source": "FRB20201124A",
+        "t0_mjd": 59326.22368679,
+        "n_used": 64,
+        "applicable": true,
+        "delta_r2_frozen": 0.0,
+        "p_surrogate": 1.0,
+        "placebo_max_delta_r2": 0.0,
+        "frozen_beats_placebos": false
+      },
+      {
+        "dataset_id": "fast_frb20201124a_xu2022_spring",
+        "source": "FRB20201124A",
+        "t0_mjd": 59328.26498175,
+        "n_used": 61,
+        "applicable": true,
+        "delta_r2_frozen": 0.0,
+        "p_surrogate": 1.0,
+        "placebo_max_delta_r2": 0.0,
+        "frozen_beats_placebos": false
+      },
+      {
+        "dataset_id": "fast_frb20201124a_xu2022_spring",
+        "source": "FRB20201124A",
+        "t0_mjd": 59334.22724451,
+        "n_used": 76,
+        "applicable": true,
+        "delta_r2_frozen": 0.0,
+        "p_surrogate": 1.0,
+        "placebo_max_delta_r2": 0.0,
+        "frozen_beats_placebos": false
+      },
+      {
+        "dataset_id": "fast_frb20201124a_xu2022_spring",
+        "source": "FRB20201124A",
+        "t0_mjd": 59337.20867753,
+        "n_used": 62,
+        "applicable": true,
+        "delta_r2_frozen": 0.0,
+        "p_surrogate": 1.0,
+        "placebo_max_delta_r2": 0.0,
+        "frozen_beats_placebos": false
+      },
+      {
+        "dataset_id": "fast_frb20201124a_zhangyk2022_autumn",
+        "source": "FRB20201124A",
+        "t0_mjd": 59483.864686554,
+        "n_used": 71,
+        "applicable": true,
+        "delta_r2_frozen": 0.0,
+        "p_surrogate": 1.0,
+        "placebo_max_delta_r2": 0.00014489859531628002,
+        "frozen_beats_placebos": false
+      },
+      {
+        "dataset_id": "fast_frb20201124a_zhangyk2022_autumn",
+        "source": "FRB20201124A",
+        "t0_mjd": 59484.815064813,
+        "n_used": 230,
+        "applicable": true,
+        "delta_r2_frozen": 0.0,
+        "p_surrogate": 1.0,
+        "placebo_max_delta_r2": 0.0,
+        "frozen_beats_placebos": false
+      },
+      {
+        "dataset_id": "fast_frb20201124a_zhangyk2022_autumn",
+        "source": "FRB20201124A",
+        "t0_mjd": 59485.784088726,
+        "n_used": 541,
+        "applicable": true,
+        "delta_r2_frozen": 0.0,
+        "p_surrogate": 1.0,
+        "placebo_max_delta_r2": 0.0,
+        "frozen_beats_placebos": false
+      },
+      {
+        "dataset_id": "fast_frb20240114a_polcat",
+        "source": "FRB20240114A",
+        "t0_mjd": 60374.18895212,
+        "n_used": 141,
+        "applicable": true,
+        "delta_r2_frozen": 0.00022581945652625385,
+        "p_surrogate": 0.7284768211920529,
+        "placebo_max_delta_r2": 0.005673745153906776,
+        "frozen_beats_placebos": false
+      },
+      {
+        "dataset_id": "fast_frb20240114a_polcat",
+        "source": "FRB20240114A",
+        "t0_mjd": 60375.13626336,
+        "n_used": 507,
+        "applicable": true,
+        "delta_r2_frozen": 0.0,
+        "p_surrogate": 1.0,
+        "placebo_max_delta_r2": 0.0,
+        "frozen_beats_placebos": false
+      },
+      {
+        "dataset_id": "fast_frb20240114a_polcat",
+        "source": "FRB20240114A",
+        "t0_mjd": 60376.10368608,
+        "n_used": 479,
+        "applicable": true,
+        "delta_r2_frozen": 0.0,
+        "p_surrogate": 1.0,
+        "placebo_max_delta_r2": 0.0,
+        "frozen_beats_placebos": false
+      },
+      {
+        "dataset_id": "fast_frb20240114a_polcat",
+        "source": "FRB20240114A",
+        "t0_mjd": 60377.19380815,
+        "n_used": 154,
+        "applicable": true,
+        "delta_r2_frozen": 0.00528827130231452,
+        "p_surrogate": 0.31788079470198677,
+        "placebo_max_delta_r2": 0.024080904371813518,
+        "frozen_beats_placebos": false
+      },
+      {
+        "dataset_id": "fast_frb20240114a_polcat",
+        "source": "FRB20240114A",
+        "t0_mjd": 60378.19310357,
+        "n_used": 71,
+        "applicable": true,
+        "delta_r2_frozen": 0.0,
+        "p_surrogate": 1.0,
+        "placebo_max_delta_r2": 0.0,
+        "frozen_beats_placebos": false
+      },
+      {
+        "dataset_id": "fast_frb20240114a_polcat",
+        "source": "FRB20240114A",
+        "t0_mjd": 60379.2001159,
+        "n_used": 132,
+        "applicable": true,
+        "delta_r2_frozen": 1.2238123064736448e-16,
+        "p_surrogate": 0.7682119205298014,
+        "placebo_max_delta_r2": 0.0002119010856671776,
+        "frozen_beats_placebos": false
+      },
+      {
+        "dataset_id": "fast_frb20240114a_polcat",
+        "source": "FRB20240114A",
+        "t0_mjd": 60380.15354443,
+        "n_used": 343,
+        "applicable": true,
+        "delta_r2_frozen": 0.0,
+        "p_surrogate": 1.0,
+        "placebo_max_delta_r2": 0.0,
+        "frozen_beats_placebos": false
+      },
+      {
+        "dataset_id": "fast_frb20240114a_polcat",
+        "source": "FRB20240114A",
+        "t0_mjd": 60381.03906749,
+        "n_used": 1420,
+        "applicable": true,
+        "delta_r2_frozen": 0.0,
+        "p_surrogate": 1.0,
+        "placebo_max_delta_r2": 0.0,
+        "frozen_beats_placebos": false
+      },
+      {
+        "dataset_id": "fast_frb20240114a_polcat",
+        "source": "FRB20240114A",
+        "t0_mjd": 60382.1743974,
+        "n_used": 246,
+        "applicable": true,
+        "delta_r2_frozen": 0.0016423028134054179,
+        "p_surrogate": 0.5894039735099338,
+        "placebo_max_delta_r2": 0.0026983204127323025,
+        "frozen_beats_placebos": false
+      },
+      {
+        "dataset_id": "fast_frb20240114a_polcat",
+        "source": "FRB20240114A",
+        "t0_mjd": 60386.11976966,
+        "n_used": 83,
+        "applicable": true,
+        "delta_r2_frozen": 0.0,
+        "p_surrogate": 1.0,
+        "placebo_max_delta_r2": 1.5996479897644736e-05,
+        "frozen_beats_placebos": false
+      },
+      {
+        "dataset_id": "fast_frb20240114a_polcat",
+        "source": "FRB20240114A",
+        "t0_mjd": 60396.1343171,
+        "n_used": 119,
+        "applicable": true,
+        "delta_r2_frozen": 0.0,
+        "p_surrogate": 1.0,
+        "placebo_max_delta_r2": 0.0,
+        "frozen_beats_placebos": false
+      },
+      {
+        "dataset_id": "fast_frb20240114a_polcat",
+        "source": "FRB20240114A",
+        "t0_mjd": 60401.06769393,
+        "n_used": 67,
+        "applicable": true,
+        "delta_r2_frozen": 0.0,
+        "p_surrogate": 1.0,
+        "placebo_max_delta_r2": 0.0,
+        "frozen_beats_placebos": false
+      },
+      {
+        "dataset_id": "fast_frb20240114a_polcat",
+        "source": "FRB20240114A",
+        "t0_mjd": 60515.77515078,
+        "n_used": 112,
+        "applicable": true,
+        "delta_r2_frozen": 1.425308468098687e-16,
+        "p_surrogate": 0.609271523178808,
+        "placebo_max_delta_r2": 5.701233872394748e-16,
+        "frozen_beats_placebos": false
+      },
+      {
+        "dataset_id": "fast_frb20240114a_polcat",
+        "source": "FRB20240114A",
+        "t0_mjd": 60519.76626127,
+        "n_used": 107,
+        "applicable": true,
+        "delta_r2_frozen": 0.0,
+        "p_surrogate": 1.0,
+        "placebo_max_delta_r2": 0.0,
+        "frozen_beats_placebos": false
+      },
+      {
+        "dataset_id": "fast_frb20240114a_polcat",
+        "source": "FRB20240114A",
+        "t0_mjd": 60521.80098559,
+        "n_used": 60,
+        "applicable": true,
+        "delta_r2_frozen": 0.0,
+        "p_surrogate": 1.0,
+        "placebo_max_delta_r2": 0.0,
+        "frozen_beats_placebos": false
+      },
+      {
+        "dataset_id": "fast_frb20240114a_polcat",
+        "source": "FRB20240114A",
+        "t0_mjd": 60669.34913981,
+        "n_used": 108,
+        "applicable": true,
+        "delta_r2_frozen": 3.172868758347098e-16,
+        "p_surrogate": 0.7152317880794702,
+        "placebo_max_delta_r2": 3.172868758347098e-16,
+        "frozen_beats_placebos": false
+      },
+      {
+        "dataset_id": "fast_frb20240114a_polcat",
+        "source": "FRB20240114A",
+        "t0_mjd": 60676.31558313,
+        "n_used": 234,
+        "applicable": true,
+        "delta_r2_frozen": 0.0,
+        "p_surrogate": 1.0,
+        "placebo_max_delta_r2": 0.0,
+        "frozen_beats_placebos": false
+      },
+      {
+        "dataset_id": "fast_frb20240114a_polcat",
+        "source": "FRB20240114A",
+        "t0_mjd": 60683.30775432,
+        "n_used": 70,
+        "applicable": true,
+        "delta_r2_frozen": 0.00018682808337351785,
+        "p_surrogate": 0.4768211920529801,
+        "placebo_max_delta_r2": 0.0008145456692941615,
+        "frozen_beats_placebos": false
+      },
+      {
+        "dataset_id": "fast_frb20240114a_polcat",
+        "source": "FRB20240114A",
+        "t0_mjd": 60687.2943,
+        "n_used": 133,
+        "applicable": true,
+        "delta_r2_frozen": 0.0,
+        "p_surrogate": 1.0,
+        "placebo_max_delta_r2": 0.0,
+        "frozen_beats_placebos": false
+      },
+      {
+        "dataset_id": "fast_frb20240114a_polcat",
+        "source": "FRB20240114A",
+        "t0_mjd": 60690.24663331,
+        "n_used": 200,
+        "applicable": true,
+        "delta_r2_frozen": 0.0,
+        "p_surrogate": 1.0,
+        "placebo_max_delta_r2": 0.0003774172947790856,
+        "frozen_beats_placebos": false
+      }
+    ]
+  },
+  "rc03_ladder": [
+    {
+      "source": "FRB20201124A",
+      "n_sessions": 49,
+      "n_ratios": 2593,
+      "frac_on_comb": 0.1801002699575781,
+      "null_mean": 0.17910952564596994,
+      "p_value": 0.45977011494252873,
+      "verdict": "consistent with shuffle (frac=0.180 vs null 0.179, p=0.460) -- no kernel comb"
+    },
+    {
+      "source": "FRB20220912A",
+      "n_sessions": 17,
+      "n_ratios": 1031,
+      "frac_on_comb": 0.17458777885548013,
+      "null_mean": 0.18091319107662462,
+      "p_value": 0.7136431784107946,
+      "verdict": "consistent with shuffle (frac=0.175 vs null 0.181, p=0.714) -- no kernel comb"
+    },
+    {
+      "source": "FRB20240114A",
+      "n_sessions": 65,
+      "n_ratios": 5870,
+      "frac_on_comb": 0.1890971039182283,
+      "null_mean": 0.18049497444633733,
+      "p_value": 0.033483258370814596,
+      "verdict": "waiting ladder ON kernel comb (frac=0.189 vs null 0.180, p=0.033)"
+    }
+  ],
+  "verdict": "null at detectable amplitude / data_limited at the predicted one. 9 sessions across 2 sources PASS the >2.8-period reach gate (the wall that stopped PG.05/06/07 does not apply to burst-time cascades) and the frozen omega=2.583 is not special in any (all Fisher p > 0.05 after surrogate calibration; BH q >= 0.72 at best). The detector is injection-validated at reference amplitude eps=0.30 on this exact session sampling; at the PREDICTED eps=1.7% single-session power is ~0 (amplitude wall: needs ~1e5 bursts/session), so the predicted-amplitude comb remains data_limited, not killed. RC.01 walled-clock bend is degenerate as machine-checked (GW Stage-2); RC.03 ladders are null (no tooth pile-up survives the look-elsewhere over sources)."
+}

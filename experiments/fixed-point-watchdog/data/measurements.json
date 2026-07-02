@@ -1,0 +1,63 @@
+{
+  "comment": "Published measurement inputs for the TFPT fixed-point watchdog. All values are public, published numbers; retrieval date 2026-07-02. TFPT constants are NOT in this file -- they come from the axioms/ledger and live in the CLI.",
+  "retrieved": "2026-07-02",
+  "neutrino_mass": {
+    "source": "DESI DR2 BAO + CMB neutrino constraints (Elbers et al., arXiv:2503.14744, 2025)",
+    "lcdm_upper_95_eV": 0.0642,
+    "lcdm_upper_95_note": "Sum m_nu < 0.0642 eV (95%), LCDM, DESI DR2 BAO + CMB (CamSpec); plik gives 0.0691, L-H 0.0774",
+    "lcdm_feldman_cousins_upper_95_eV": 0.053,
+    "lcdm_feldman_cousins_note": "boundary-corrected 95% Feldman-Cousins upper bound; breaches the normal-ordering oscillation floor",
+    "lcdm_eff_mean_eV": -0.101,
+    "lcdm_eff_sigma_plus_eV": 0.047,
+    "lcdm_eff_sigma_minus_eV": 0.056,
+    "lcdm_eff_note": "effective cosmological neutrino mass parameter (allows negative energy density, removes prior-weight effects); paper quotes 3.0 sigma tension with the NO oscillation floor 0.059 eV",
+    "w0wacdm_upper_95_eV": 0.163,
+    "w0wacdm_eff_mean_eV": 0.0,
+    "w0wacdm_eff_sigma_plus_eV": 0.10,
+    "w0wacdm_eff_sigma_minus_eV": 0.081,
+    "w0wacdm_eff_desy5_mean_eV": -0.044,
+    "w0wacdm_eff_desy5_sigma_eV": 0.084,
+    "w0wacdm_note": "in w0waCDM the bound relaxes to 0.163 eV (95%) and the effective-mass posterior peaks at 0 -- the neutrino tension is resolved by evolving dark energy",
+    "oscillation_no_floor_eV": 0.059,
+    "oscillation_note": "normal-ordering lower limit from oscillations as used by DESI (approx. 0.059 eV)"
+  },
+  "dark_energy_cpl": {
+    "source": "DESI DR2 Results II (arXiv:2503.14738, 2025), CPL w0-wa best fits, DESI BAO + CMB + one SN compilation at a time; same values as experiments/dark-energy-w-watchdog",
+    "combinations": [
+      {"name": "DESI+CMB+Pantheon+", "w0": -0.838, "sigma_w0": 0.055, "wa": -0.62, "sigma_wa": 0.205,
+       "rho_w0_wa": -0.9, "published_sigma_vs_LCDM": 2.8, "sn_family": "Pantheon+"},
+      {"name": "DESI+CMB+Union3", "w0": -0.667, "sigma_w0": 0.088, "wa": -1.09, "sigma_wa": 0.29,
+       "rho_w0_wa": -0.9, "published_sigma_vs_LCDM": 3.8, "sn_family": "Union3"},
+      {"name": "DESI+CMB+DESY5", "w0": -0.752, "sigma_w0": 0.057, "wa": -0.86, "sigma_wa": 0.21,
+       "rho_w0_wa": -0.9, "published_sigma_vs_LCDM": 4.2, "sn_family": "DES-SN5YR"}
+    ],
+    "overlap_note": "the three SN compilations share low-z SNe and are ALTERNATIVE datasets -- never stack them",
+    "h0_km_s_mpc": 67.4,
+    "h0_note": "H0 used only to convert d ln rho_DE / d ln a to a per-year rate (order-of-magnitude scale setting; DESI DR2 LCDM baseline H0 = 68.36 +- 0.29, Planck 67.4; the axis-B conclusion is insensitive to this choice at the quoted precision)"
+  },
+  "alpha_drift_clock": {
+    "source": "PTB Yb+ E3/E2 optical clock comparison, Filzinger et al., Phys. Rev. Lett. 130, 253001 (2023), arXiv:2301.03433; data May 2016 - Nov 2022; still the strictest published limit as of 2026-07-02",
+    "alpha_dot_over_alpha_per_yr": 1.8e-19,
+    "sigma_per_yr": 2.5e-19,
+    "note": "(1/alpha)(dalpha/dt) = 1.8(2.5)e-19 /yr -- consistent with zero"
+  },
+  "lepton_masses": {
+    "m_e_MeV": 0.51099895069,
+    "m_e_sigma_MeV": 1.6e-10,
+    "m_e_source": "CODATA 2022 (electron mass energy equivalent 0.51099895069(16) MeV)",
+    "m_mu_MeV": 105.6583755,
+    "m_mu_sigma_MeV": 2.3e-6,
+    "m_mu_source": "CODATA 2022 (muon mass energy equivalent 105.6583755(23) MeV)",
+    "m_tau_MeV": 1776.93,
+    "m_tau_sigma_MeV": 0.09,
+    "m_tau_source": "PDG 2024 + 2025 update world average (S. Navas et al., Phys. Rev. D 110, 030001 (2024); rpp2025-sum-leptons): 1776.93 +- 0.09 MeV. NOTE: supersedes the older 1776.86 +- 0.12 (PDG 2022/2023).",
+    "m_tau_belle2_MeV": 1777.09,
+    "m_tau_belle2_sigma_MeV": 0.14,
+    "m_tau_belle2_source": "Belle II 2023 (arXiv:2305.19116, PRD 108, 032006): 1777.09 +- 0.08(stat) +- 0.11(syst) MeV -- most precise single measurement, included in the PDG average"
+  },
+  "codata_alpha": {
+    "alpha_inverse": 137.035999177,
+    "alpha_inverse_sigma": 2.1e-8,
+    "source": "CODATA 2022: alpha^-1 = 137.035999177(21)"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "gps": 1242442967.4,
+  "mf": 147.4,
+  "sampling_rate": 16384,
+  "files": {
+    "H1": "H-H1_GWOSC_16KHZ_CROP32-1242442967-32_16K.hdf5",
+    "L1": "L-L1_GWOSC_16KHZ_CROP32-1242442967-32_16K.hdf5",
+    "V1": "V-V1_GWOSC_16KHZ_CROP32-1242442967-32_16K.hdf5"
+  }
+}
