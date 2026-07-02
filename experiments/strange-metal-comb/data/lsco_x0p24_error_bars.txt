@@ -1,0 +1,8 @@
+# Source: Michon et al., Nat. Commun. 14, 3033 (2023), doi:10.1038/s41467-023-38762-5
+# Open data: Yareta (University of Geneva), DOI 10.26037/yareta:zvtvqwmbl5emvd3bxr6sluurqi (CC-BY-4.0)
+# Archive member: researchdata/for-yareta/experimental-data/error_bars.txt
+# Fetched by scripts/fetch_michon2023.py; content below is verbatim.
+# Energy (eV)	Error 75K (S/cm)	Error 75K (S/cm)	Energy (eV)	Error 300K (eV)	Error 9K
+0.01	1554.4	2463.8	0.04	0.0042211	0.011373
+0.10	42.014	27.013	0.20	0.0033572	0.0030796
+1.00	0.4717	0.044193	0.36	0.0032856	0.0015707

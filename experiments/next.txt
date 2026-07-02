@@ -1,3 +1,63 @@
+## 2026-07-02 — Anomalie-Runde: Watchdog-Refresh + HFQPO-Leiter + Strange-Metal-Comb + Efimov/Glas-Kontrollen
+
+**(1) `fixed-point-watchdog/` Achse D NEU — Sterile-Dissolution-Watchdog (`N_fam=3` exakt, prediction_of_record, `consistent`).**
+E8-Familienzählung lässt keinen Slot für einen 4. leichten Zustand — die Short-Baseline-Anomalien
+müssen sich auflösen, und genau das passiert: **MicroBooNE-Zwei-Beam** (Nature 648, 64–69 (2025);
+arXiv:2512.07159) schließt die Single-Sterile-Deutung von LSND/MiniBooNE bei **95% CL** aus und
+schneidet in den Gallium/BEST-Raum; das Gallium-Defizit persistiert unerklärt (keine
+Oszillations-Signatur); JSNS² läuft ohne Exzess (arXiv:2602.06274); **SBND+ICARUS entscheiden
+diese Dekade**. Kill: ein bestätigtes steriles Oszillationssignal ≥5σ (systematik-kontrolliert).
+
+**(2) `dark-energy-w-watchdog/` — 2026-Timeline (vor DR3): die Evolving-DE-Präferenz löst sich auf, wie `w=−1` es verlangt.**
+**DES-Dovekie-Rekalibration** (arXiv:2511.07517): Kalibrationsfehler in DES-SN5YR gefunden
+(Systematik-Gewichte 0.3 statt 1/√9) → stärkste Kombination sinkt **4.2→3.2σ**. **Bayes-Reanalyse**
+(arXiv:2603.05472, PolyChord): die DESI+CMB-only-3.1σ-Präferenz ist **eliminiert (ln B=−0.57±0.26)**,
+mit Dovekie ln B=−0.01; nur die alte DES-SN5YR-Kalibration trug ln B=+3.32. Verbleibend: Union3
+frequentistisch 3.8σ (Bayesianisch nur 2.23σ, nicht rekalibriert). Scorecard-Zeile `w` bleibt
+`data_limited`/watch, data_value trägt jetzt die Timeline.
+
+**(3) `lab-residuals/` — WP2025-σ korrigiert 63→62, Lattice-Pull **3.86→3.92σ**, datierte g−2-Kill-Condition (2026-07-02).**
+Kontrast bleibt maximal: **+3.92σ Lattice/WP25 vs +0.58σ dispersiv (WP2020)**. Datierte Kill-Regel:
+ein daten-getriebener HVP-Konsens auf der Lattice/WP25-Seite (CMD-3-Seite) **killt die Bridge**
+(+3.9σ heute, härtet Richtung 5σ mit schrumpfenden HVP-Fehlern Richtung 127 ppb); ein KLOE-seitiger
+dispersiver Konsens stellt <1σ wieder her. Watch: **MUonE** (Phase-1 2025 analysiert, volle Runs
+nach LS3), **BaBar-2026-ππ** (arXiv:2601.16587, bleibt KLOE-seitig), **TI WP-3 ~2027–28** =
+der Entscheidungspunkt.
+
+**(4) `experiments/hfqpo-ladder/` NEU — BH-HFQPO-3:2-Paare vs Leiterschritt 3/2 (H1–H3 preregistriert, `data_limited`).**
+H1: 4 Paare konsistent mit exakt 3/2 (χ² p=0.78) — aber **XTE J1859+226 bricht die Universalität
+bei +9.2σ**. H2: die verankerte **Selektions-Null** (Boutelier/Török equal-rms-Fenster am
+3/2-Crossing) erzeugt den 4-von-5-Cluster in **18.5%** der Trials → der Cluster ist billig, trägt
+kein Gewicht. H3 (der Diskriminator): die **×1.5-Leiterzahn-Suche (`ν₃=(3/2)ν_u`:
+661.5/414/252/363 Hz) wurde nie publiziert**, obwohl die Zähne im durchsuchten RXTE-Band liegen;
+die einzigen publizierten Drittfrequenz-Strukturen sind Integer-Linien (92=184/2, 34/68 Hz) →
+GR-Harmonik favorisiert. Archivische RXTE-PCA-Reanalyse voll spezifiziert (prereg YAML), bewusst
+nicht gelaufen. Firewall: nicht-kanonisches Mapping, selbst ein Hit wäre `[C]`.
+
+**(5) `experiments/strange-metal-comb/` NEU — der erste Labor-Bound auf den Kamm (`data_limited`).**
+Log-periodischer Ripple (`ω=2.583`, `ε=0.0173`) auf der Planckschen `σ₁(ω/T)`-Master-Kurve
+(LSCO x=0.24, Michon+2023 Open Data: 11.227 Punkte, 2.92 Kamm-Perioden — Gate geklärt):
+`ω=2.583` **nicht besonders (primär p=0.30, detrend-robust)**; konservative per-T-Shift-Null p=0.68,
+95%-Amplituden-Floor ε≈0.19; λ-Batterie Bonferroni p=0.063 NULL; Injektionen: **vorhergesagtes
+ε=1.73% nur 0–25% detektiert → underpowered bei der vorhergesagten Amplitude** (limitiert durch
+glatte Systematik, nicht Punktzahl); Drude-Kontrollen (Au p=0.33, Cu p=0.14) still; Bi-2212 nicht
+öffentlich beziehbar. Erster Labor-Bound auf eine log-periodische Dekoration der Planckschen
+Master-Kurve bei der TFPT-Frequenz; entscheidend wäre sub-%-Kalibration oder ein differentieller
+Multi-Compound-Collapse.
+
+**(6) `dsi-false-positive-control/` erweitert — Lehrbuch-Negativkontrollen: Kernel-FP jetzt 0/5.**
+**Efimov-Leiter** (Cs/⁷Li/³⁹K, λ=e^{π/s₀}=22.69) passiert das Gate: Kernel-FP **0/5** über alle
+gegateten DSI-Kontrollen (Wilson95 [0,0.43]); gemessenes Efimov-λ 21.3±1.1 ist **8.9σ vom
+TFPT-λ=11.39 getrennt**, der Detektor bleibt 0/25 auf dem Efimov-Kamm und lokalisiert dabei korrekt
+ω≈2.01 → Kernel und Efimov-DSI sind sauber separierbar. **Glas/MCT** (7 Systeme): γ spannt
+[2.2, 2.8] (4× Messfehler), ein gelockter universeller Bend 2.7095 wird **~4.9σ** verworfen →
+der Bend ist systemabhängig, **nicht** generisch in boundary-loser Zwei-Step-Relaxation. Flares
+zeigen weiter eigene NICHT-Kernel-DSI (λ≈2.9–3.9) → Detektor spezifisch, Nulls informativ. `consistent`.
+
+Scorecard 91 → **94 rows** (41 consistent, 7 tension, 14 null, 31 data_limited, 1 parked);
+neue Domäne `condensed matter`; Website `EXPERIMENTS_AUDIT` synchron (94/41/7/14/31/1).
+Alles Suchflächen/Watchdogs/Kontrollen — kein `[E]`, kein Ledger-Touch, kein Verification-Touch.
+
 ## 2026-07-02 — Fünf neue Experiment-Workstreams (Subagenten-Runde): fixed-point-watchdog, DSI-Kontrolle, Repeater-Kaskade, 16kHz+ε₉₀-Limits, QC-Kernel
 
 **(1) `experiments/fixed-point-watchdog/` NEU — Exakt-Fixpunkt-Watchdog, 3 Achsen (A `tension`, B/C `consistent`).**

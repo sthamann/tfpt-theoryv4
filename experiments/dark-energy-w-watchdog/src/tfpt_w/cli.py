@@ -18,6 +18,12 @@ Frozen kill rule (pre-registered):
     -> the TFPT Lambda/H0 cosmology branch falls (not the compiler core).
 
 A naive sqrt(sum sigma^2) over the three overlapping SN families does NOT count.
+
+In addition to the frozen 2025 baseline, the watchdog carries a DATED STATUS TIMELINE
+(data/measurements.json -> "status_timeline"): TFPT predicts the evolving-DE preference
+dissolves, so the direction of each update matters and is recorded before the next data
+release (2026 entry: DES-Dovekie recalibration 4.2->3.2 sigma; Bayesian reanalysis
+eliminates the DESI+CMB-only preference, ln B = -0.57).
 """
 
 from __future__ import annotations
@@ -58,7 +64,8 @@ def analyze(m: dict) -> dict:
             "headline_combination": headline["name"],
             "naive_product_sigma_DO_NOT_USE": round(naive, 2),
             "kill_sigma": KILL_SIGMA, "kill_triggered": triggered,
-            "status": "tension" if triggered else "data_limited"}
+            "status": "tension" if triggered else "data_limited",
+            "status_timeline": m.get("status_timeline", [])}
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -85,13 +92,38 @@ def main(argv: list[str] | None = None) -> int:
           f"{res['naive_product_sigma_DO_NOT_USE']:.2f} sigma  <-- SPURIOUS, do not use "
           f"(SN samples overlap)")
     print(f"\n  kill rule: w != -1 at >= {KILL_SIGMA} sigma (single overlap-aware combo)")
+
+    if res["status_timeline"]:
+        print("\n  STATUS TIMELINE (TFPT predicts the evolving-DE preference dissolves;")
+        print("  each dated entry records the direction BEFORE the next data release):")
+        for t in res["status_timeline"]:
+            print(f"    [{t['date']}] {t['entry']}")
+            dv = t.get("des_dovekie_recalibration")
+            if dv:
+                print(f"        DES-Dovekie ({dv['reference'].split(' -- ')[0]}): "
+                      f"w0={dv['w0']}+-{dv['sigma_w0']}, wa={dv['wa']}+-{dv['sigma_wa']}; "
+                      f"{dv['significance_vs_LCDM_sigma']} sigma vs LCDM "
+                      f"(down from 4.2; ~20% underestimated photometric syst. corrected)")
+            by = t.get("bayesian_reanalysis")
+            if by:
+                print(f"        Bayesian (arXiv:2603.05472): DESI DR2+CMB-only preference "
+                      f"ELIMINATED, ln B = {by['desi_dr2_cmb_only_lnB']}+-"
+                      f"{by['desi_dr2_cmb_only_lnB_sigma']}; +Dovekie ln B = "
+                      f"{by['desi_dr2_cmb_dovekie_lnB']}; Union3 frequentist ~3.8 sigma "
+                      f"persists (2.23 sigma Bayesian)")
+            if t.get("surviving_pulls"):
+                print(f"        surviving: {t['surviving_pulls']}")
+
     if res["kill_triggered"]:
         verdict = (f"KILL TRIGGERED: {res['headline_combination']} excludes w=-1 at "
                    f"{res['headline_overlap_aware_sigma']:.1f} sigma -> Lambda/H0 cosmology branch falls.")
     else:
         verdict = (f"WATCHDOG ARMED (data_limited): strongest overlap-aware exclusion of w=-1 is "
-                   f"{res['headline_overlap_aware_sigma']:.1f} sigma (< {KILL_SIGMA}). DESI DR2 hints "
-                   f"at dynamical DE but is systematics/SN-sample dependent; not yet a TFPT kill.")
+                   f"{res['headline_overlap_aware_sigma']:.1f} sigma (< {KILL_SIGMA}) on the frozen "
+                   f"2025 baseline. 2026 status: that headline is known to be calibration-inflated "
+                   f"(DES-Dovekie: 4.2 -> 3.2 sigma; Bayesian DESI+CMB-only ln B = -0.57) -- the "
+                   f"preference is dissolving, as TFPT's w=-1 fixed point requires; Union3-driven "
+                   f"frequentist pulls (~3.8 sigma) remain. Not a TFPT kill.")
     print(f"\n-> {verdict}")
     res["verdict"] = verdict
 

@@ -1,10 +1,10 @@
 # fixed-point-watchdog — TFPT exact fixed points: zero-drift kill tests
 
-**Status: armed, not triggered — A `tension`, B `consistent`, C `consistent` (2026-07-02).**
+**Status: armed, not triggered — A `tension`, B `consistent`, C `consistent`, D `consistent` (2026-07-02).**
 
 TFPT predicts several observables as **exact fixed points**. They are not fit parameters:
 any confirmed deviation kills the corresponding branch (or, for the compiler outputs, the
-theory). The five fixed points under watch:
+theory). The six fixed points under watch:
 
 1. `w = −1` exactly — dark energy is a true cosmological constant (Λ/H₀ engine).
 2. `Σm_ν = 0.0588 eV` — the normal-ordering floor `m₃(1+√|J|)`, `m₁ ≈ 0` (ledger v272/v468).
@@ -12,8 +12,11 @@ theory). The five fixed points under watch:
 4. Koide `Q = 2/3` exactly, from the charged-lepton pole masses.
 5. The **α–Λ lock**: `ρ_Λ/M̄_Pl⁴ = (3/4π²)·e^(−2α⁻¹)` (v60/v274), which locks the drifts:
    `d ln ρ_Λ/dt = 2α⁻¹·(α̇/α)` — a fractional α drift is amplified by `2α⁻¹ ≈ 274.07` in Λ.
+6. `N_fam = 3` exactly — the compiler (`D5 ⊕ A3 + μ4 ⇒ E8`) leaves **no spare slot for a
+   4th light family/sterile state**, so TFPT *requires* every short-baseline anomaly to
+   dissolve.
 
-## Three test axes (all from public published values)
+## Four test axes (all from public published values)
 
 ### A. Σm_ν × w pincer — verdict `tension`
 
@@ -62,6 +65,30 @@ needed beyond the clocks we already have.
   (gap 0.121 MeV), `σ(m_τ) < 0.024 MeV`. Belle II's full dataset targets
   O(0.01–0.05) MeV — the window is live this decade.
 
+### D. Sterile-neutrino dissolution (`N_fam = 3`) — verdict `consistent`
+
+`N_fam = 3` is an exact compiler output, so TFPT does not merely *survive* the death of
+the sterile-neutrino hypothesis — it **requires** every short-baseline anomaly to
+dissolve. Front-by-front status (2025/26):
+
+- **MicroBooNE two-beam** (Nature 648, 64–69 (2025), arXiv:2512.07159): excludes the
+  single light sterile (3+1) interpretation of the LSND and MiniBooNE anomalies at
+  **95% CL** and rules out a significant portion of the gallium/BEST parameter space —
+  the first use of two accelerator beams (BNB 0.57% intrinsic ν_e, NuMI 4.6%) to break
+  the ν_e appearance/disappearance degeneracy.
+- **Gallium/BEST**: the ~20% counting deficit itself **persists unexplained**
+  (SAGE/GALLEX + BEST 2022, `R_in = 0.79 ± 0.05`, `R_out = 0.77 ± 0.05`, ≳4–5σ
+  combined) — but BEST sees *no distance dependence* (no oscillation signature), and
+  the large mixing a sterile explanation needs is disfavoured by solar/reactor data.
+- **JSNS²** (arXiv:2602.06274, first results 2026): direct LSND test, 2 events observed
+  vs 2.3 ± 0.4 expected background (LSND would add 1.1 ± 0.5) — no excess, not yet
+  conclusive; JSNS²-II near+far running since Nov 2025.
+- **SBN program**: ICARUS first results (Apr 2026) see no ν_μ disappearance (90% CL
+  limits on 3+1); the joint SBND+ICARUS analysis will decide this decade.
+
+The dissolution prediction is being confirmed; the unexplained gallium deficit is the
+honest caveat (a deficit without an oscillation signature is not a sterile signal).
+
 ## Run
 
 ```bash
@@ -82,6 +109,9 @@ Deterministic; writes `results/results.json`.
 - **Lepton masses**: CODATA 2022 (`m_e`, `m_μ`); PDG 2024 + 2025 update
   (`m_τ = 1776.93 ± 0.09 MeV`, S. Navas et al., PRD 110, 030001); Belle II
   arXiv:2305.19116 (`1777.09 ± 0.08 ± 0.11 MeV`).
+- **Short-baseline sterile status**: MicroBooNE, Nature 648, 64–69 (2025),
+  arXiv:2512.07159; BEST 2022 gallium ratios; JSNS² arXiv:2602.06274 (2026);
+  Fermilab SBN/ICARUS first results (Apr 2026).
 
 ## Verdict enums and kill rules
 
@@ -93,6 +123,8 @@ A: joint (w=-1, Sigma m_nu=0.0588 eV) excluded at >= 5 sigma under BOTH model re
 B: any confirmed alpha_dot/alpha != 0, or a confirmed Lambda drift violating
    d ln rho_Lambda/dt = 2 alpha^-1 d ln alpha/dt.
 C: |m_tau - m_tau(Q=2/3)| >= 5 sigma(m_tau), systematics-controlled.
+D: any confirmed sterile oscillation signal at >= 5 sigma (systematics-controlled;
+   e.g. joint SBND+ICARUS or JSNS2-II).
 ```
 
 ## Firewall
@@ -101,5 +133,7 @@ Standalone watchdog — a search surface, **not** a load-bearing claim. Not in t
 verification suite, ledger, or website. The fixed points under test are TFPT compiler
 outputs / branch readouts (`w=−1` and the lock are the cosmology branch; `Σm_ν` is the
 seesaw NO floor; Koide `Q=2/3` is an `F_transfer` frontier bridge — never a primitive
-compiler output). A `tension` verdict here upgrades nothing; a triggered kill would be
-reported honestly and routed to the ledger by the parent, not by this experiment.
+compiler output; `N_fam=3` is an exact compiler output whose *sterile-dissolution
+reading* on axis D is a confrontation, not a claim). A `consistent` or `tension`
+verdict here upgrades nothing; a triggered kill would be reported honestly and routed
+to the ledger by the parent, not by this experiment. **The firewall is intact.**

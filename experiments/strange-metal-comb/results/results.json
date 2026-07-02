@@ -1,0 +1,279 @@
+{
+  "kernel": {
+    "lambda": 11.390625,
+    "omega": 2.5827069463082895,
+    "eps_predicted": 0.01730246011431484,
+    "min_comb_periods": 2.8,
+    "one_period_in_u": 2.4327906486489863
+  },
+  "detector_validation": {
+    "sufficient_comb_rate": 0.96,
+    "sufficient_null_rate": 0.0,
+    "short_comb_rate": 0.0,
+    "passed": true
+  },
+  "primary_data": {
+    "name": "LSCO_x0.24",
+    "provenance": "Michon+ 2023 Nat.Commun. 14:3033 open data (Yareta, CC-BY-4.0), Epsilon_LSCO-0p24.txt; y=ln(T*sigma1), paper window T>=40K, E<=0.4eV",
+    "n_points": 11227,
+    "temps_K": [
+      40.0,
+      50.0,
+      60.0,
+      75.0,
+      100.0,
+      150.0,
+      200.0,
+      250.0,
+      300.0
+    ],
+    "n_dropped": 41,
+    "u_range": 7.096,
+    "comb_periods": 2.917,
+    "range_sufficient": true
+  },
+  "smc01_kernel_rank": {
+    "primary_deg2": {
+      "gain": 0.012854,
+      "p_value": 0.2972,
+      "n_off": 359,
+      "best_off_omega": 1.0
+    },
+    "frozen_detect_comb": {
+      "gain": 0.012854,
+      "p_value": 0.2477
+    },
+    "variants": {
+      "poly_deg3": {
+        "gain": 0.001383,
+        "p_value": 0.3472,
+        "n_off": 359,
+        "best_off_omega": 2.09
+      },
+      "poly_deg4": {
+        "gain": 0.001209,
+        "p_value": 0.1944,
+        "n_off": 359,
+        "best_off_omega": 5.073
+      },
+      "spline": {
+        "gain": 0.00033,
+        "p_value": 0.5056,
+        "n_off": 359,
+        "best_off_omega": 5.06
+      },
+      "per_T_deg2": {
+        "gain": 0.041395,
+        "p_value": 0.1444,
+        "n_off": 359,
+        "best_off_omega": 2.115
+      }
+    },
+    "detrend_robust": true
+  },
+  "smc02_amplitude": {
+    "eps_hat": 0.06697,
+    "phi_hat": 1.775,
+    "resid_rms": 0.43071
+  },
+  "smc03_nulls": {
+    "eps_obs": 0.06697,
+    "p_permutation": 0.001,
+    "p_block_shift": 0.6843,
+    "p_conservative": 0.6843,
+    "eps95_null": 0.18614
+  },
+  "smc04_lambda_battery": {
+    "battery": {
+      "3/2 (1/Koide, fundamental)": {
+        "lambda": 1.5,
+        "omega": 15.496,
+        "periods": 17.5,
+        "gated": true,
+        "idio": true,
+        "p_value": 0.9852,
+        "gain": 8e-06,
+        "comb_detected": false
+      },
+      "phi (golden, g_car=5)": {
+        "lambda": 1.618,
+        "omega": 13.057,
+        "periods": 14.75,
+        "gated": true,
+        "idio": true,
+        "p_value": 0.7721,
+        "gain": 1.8e-05,
+        "comb_detected": false
+      },
+      "2 (sheet doubling)": {
+        "lambda": 2.0,
+        "omega": 9.065,
+        "periods": 10.24,
+        "gated": true,
+        "idio": false,
+        "p_value": 0.3088,
+        "gain": 0.000155,
+        "comb_detected": false
+      },
+      "3 (N_fam)": {
+        "lambda": 3.0,
+        "omega": 5.719,
+        "periods": 6.46,
+        "gated": true,
+        "idio": false,
+        "p_value": 0.8779,
+        "gain": 0.000124,
+        "comb_detected": false
+      },
+      "4 (|mu4|)": {
+        "lambda": 4.0,
+        "omega": 4.532,
+        "periods": 5.12,
+        "gated": true,
+        "idio": false,
+        "p_value": 0.0079,
+        "gain": 0.002016,
+        "comb_detected": true
+      },
+      "5 (g_car)": {
+        "lambda": 5.0,
+        "omega": 3.904,
+        "periods": 4.41,
+        "gated": true,
+        "idio": false,
+        "p_value": 0.6142,
+        "gain": 0.001042,
+        "comb_detected": false
+      },
+      "8 (rank E8)": {
+        "lambda": 8.0,
+        "omega": 3.022,
+        "periods": 3.41,
+        "gated": true,
+        "idio": false,
+        "p_value": 0.3796,
+        "gain": 0.004583,
+        "comb_detected": false
+      },
+      "(3/2)^6 (recovery comb)": {
+        "lambda": 11.3906,
+        "omega": 2.583,
+        "periods": 2.92,
+        "gated": true,
+        "idio": true,
+        "p_value": 0.3657,
+        "gain": 0.012854,
+        "comb_detected": false
+      },
+      "30 (Coxeter h)": {
+        "lambda": 30.0,
+        "omega": 1.847,
+        "periods": 2.09,
+        "gated": false,
+        "idio": false,
+        "p_value": 1.0,
+        "gain": 0.0,
+        "comb_detected": false
+      }
+    },
+    "global_p": 0.0632,
+    "m_eff": 8,
+    "best": "4 (|mu4|)"
+  },
+  "smc05_injection": [
+    {
+      "eps": 0.0,
+      "variant": "primary",
+      "n_seeds": 40,
+      "detect_rate": 0.0,
+      "median_p": 0.2972
+    },
+    {
+      "eps": 0.01730246011431484,
+      "variant": "primary",
+      "n_seeds": 40,
+      "detect_rate": 0.0,
+      "median_p": 0.2972
+    },
+    {
+      "eps": 0.05,
+      "variant": "primary",
+      "n_seeds": 40,
+      "detect_rate": 0.0,
+      "median_p": 0.2972
+    },
+    {
+      "eps": 0.0,
+      "variant": "spline",
+      "n_seeds": 40,
+      "detect_rate": 0.0,
+      "median_p": 0.5056
+    },
+    {
+      "eps": 0.01730246011431484,
+      "variant": "spline",
+      "n_seeds": 40,
+      "detect_rate": 0.25,
+      "median_p": 0.468
+    },
+    {
+      "eps": 0.05,
+      "variant": "spline",
+      "n_seeds": 40,
+      "detect_rate": 0.3,
+      "median_p": 0.1611
+    },
+    {
+      "eps": 0.0,
+      "variant": "per_T",
+      "n_seeds": 40,
+      "detect_rate": 0.0,
+      "median_p": 0.1444
+    },
+    {
+      "eps": 0.01730246011431484,
+      "variant": "per_T",
+      "n_seeds": 40,
+      "detect_rate": 0.0,
+      "median_p": 0.1361
+    },
+    {
+      "eps": 0.05,
+      "variant": "per_T",
+      "n_seeds": 40,
+      "detect_rate": 0.0,
+      "median_p": 0.1028
+    }
+  ],
+  "smc06_drude_controls": {
+    "controls": [
+      {
+        "gain": 0.220939,
+        "p_value": 0.3278,
+        "n_off": 359,
+        "best_off_omega": 1.0,
+        "name": "Au (Ordal)",
+        "n_points": 43,
+        "periods": 2.23,
+        "range_sufficient": false
+      },
+      {
+        "gain": 0.807257,
+        "p_value": 0.1389,
+        "n_off": 359,
+        "best_off_omega": 2.253,
+        "name": "Cu (Ordal)",
+        "n_points": 52,
+        "periods": 1.56,
+        "range_sufficient": false
+      }
+    ],
+    "all_quiet": true
+  },
+  "smc07_replication": {
+    "source": "van der Marel et al. 2003, Nature 425:271 (Bi-2212)",
+    "status": "data_limited",
+    "note": "No machine-readable public table exists (checked: Nature supplement has figures/methods only; Leiden repository holds the PDF; the underlying data files were privately supplied between groups). Documented honestly; the replication leg is data_limited."
+  },
+  "verdict": "LSCO x=0.24 sigma1(omega/T) master curve (Michon+ 2023 open data, 11227 points, T=40..300 K, 2.92 comb periods in u=ln(hw/kT) -> clears the 2.8 gate). omega=2.583 is NOT special in the LSCO x=0.24 master curve (primary p=0.2972, frozen-detector p=0.248, detrend-robust=True). Amplitude at the fixed kernel omega: eps_hat=0.0670, against a 0.1861 95% conservative-null floor (predicted TFPT eps=0.0173, i.e. the data's own systematics sit ABOVE the predicted ripple). Conservative null p=0.6843. TFPT lambda-battery Bonferroni global p=0.0632. Injection on the real master curve (best documented detrend variant): eps=5% detected 30% [spline], predicted eps=1.73% detected 25% [spline], max false-alarm 0% -> the search is UNDERPOWERED at the predicted amplitude. Drude negative controls (Au, Cu Ordal): quiet. Replication leg (Bi-2212 vdM 2003): data_limited (no public machine-readable table). VERDICT: null-at-detectable-amplitude / data_limited at the predicted 1.7%. FIREWALL: strange metals have no established boundary-recovery structure; even a hit would be universal-DSI coincidence, never TFPT confirmation. No claim; nothing [E]."
+}

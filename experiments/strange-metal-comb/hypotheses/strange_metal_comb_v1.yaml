@@ -1,0 +1,151 @@
+# Preregistered hypotheses for the strange-metal comb-ripple search.
+# Frozen BEFORE the data pass (no Michon/van-der-Marel/gold number has been looked at when this
+# file is written). The kernel is derived from the two TFPT axioms (c3=1/(8pi), g_car=5); no
+# condensed-matter number enters. This file records the tests + kill conditions so nothing is
+# post-hoc. Verdicts use the tfpt-empirical-search enum.
+
+experiment: strange-metal-comb
+domain: strange-metal optical conductivity (cuprates), omega/T Planckian scaling
+role: first LABORATORY comb-ripple search on a quantum-critical master curve
+version: v1
+
+firewall: >
+  Strange metals have NO established boundary-recovery structure. The sigma1(omega/T) master
+  curve is a quantum-critical scaling function of a doped Mott insulator, NOT a horizon/boundary
+  relaxation and NOT a geometric mode ladder, so there is NO a-priori reason for omega=2.583 to
+  be special here. Even a hit would be a universal discrete-scale-invariance (DSI) coincidence
+  class per the repo firewall, NEVER TFPT confirmation. A null is EXPECTED and informative: the
+  established (RMP-colloquium) picture is a SMOOTH sigma1(omega/T) master curve from continuous
+  quantum criticality, and this search asks whether the data even permits a ~1.7% log-periodic
+  decoration. Nothing here is [E]; nothing gets a \veri{}.
+
+structural_motivation: >
+  TFPT's seam temperature T = 4*c3*kappa = kappa/(2*pi) is exactly the KMS/Planckian bound, and
+  strange metals dissipate at tau = hbar/(k_B T) universally (doping-independent; Michon+ 2023,
+  RMP colloquium open question). DISCRIMINATING question: continuous quantum criticality
+  predicts a SMOOTH sigma1(omega/T) master curve; a gapped-boundary-attractor reading would
+  decorate it with a log-periodic ripple in ln(omega/T) at the frozen omega with eps ~ 1.7%.
+  This is structural motivation only -- it does not upgrade the firewall class.
+
+observable_semantics:
+  quantity: sigma1(omega, T)          # real part of the optical conductivity, normal state
+  scaling_variable: u = ln(hbar*omega / (k_B*T))    # the comb lives in ln(omega/T)
+  master_curve: y = ln(T^x * sigma1)  # the paper's own omega/T collapse; x = 1 primary
+  #   (Michon+ 2023 demonstrate sigma1(omega,T) ~ T^-1 * F(omega/T) in their scaling window;
+  #    the exact collapse window / any paper-prescribed constant-background handling follow the
+  #    SOURCE PAPER and are documented in the fetch script -- ingestion follows the paper, the
+  #    DETECTOR below is frozen here.)
+  recovery_observable: >
+    residuals r(u) = y - smooth(u). The TFPT comb is a MULTIPLICATIVE fractional ripple
+    (1 + eps*cos(omega*u + phi)) on the smooth master curve, so in y = ln(...) it is ADDITIVE
+    with amplitude ~eps.
+  baseline_detrend: >
+    PRIMARY: degree-2 polynomial in u (the frozen recovery-comb-domains detector convention,
+    unchanged). SENSITIVITY VARIANTS (documented, not primary): degree-3 and degree-4
+    polynomials and a smoothing spline in u -- the master curve F is not a pure power law, so
+    detrend flexibility MUST be reported; a kernel hit that survives only one detrend choice is
+    an audit anomaly, not a candidate.
+  semantics_guard: >
+    y is ln(conductivity), an AMPLITUDE-type observable -> the additive ripple amplitude in y
+    is eps itself (no 64/729-vs-8/27 energy/amplitude pairing arises here).
+
+frozen_kernel:
+  lambda: (3/2)^6 = 11.390625
+  omega: 2*pi/ln((3/2)^6) = 2.5827          # the DISCRIMINATING log-frequency, in ln(omega/T)
+  eps_predicted: exp(-pi^2/ln((3/2)^6)) = 0.0173   # QT.02 amplitude-suppression law (~1.7%)
+  one_comb_period_in_u: ln((3/2)^6) = 2.4328
+  min_comb_periods_gate: 2.8                # machine-checked u-range floor; nothing relaxes it
+  hard_wall: N_fam = 3
+  detector: >
+    verbatim port of experiments/recovery-comb-domains comb.py (guarded bit-for-bit by
+    tests/test_frozen_kernel.py). No fitted exponents; ratios are exact rationals from axioms.
+
+data:
+  - id: LSCO_x0.24
+    role: PRIMARY
+    source: >
+      Michon et al. 2023, Nature Communications 14:3033, "Reconciling scaling of the optical
+      conductivity of cuprate superconductors with Planckian resistivity"; LSCO x=0.24
+      sigma(omega,T); public Source Data / supplementary download, provenance recorded in data/.
+  - id: Bi2212_vdM2003
+    role: REPLICATION (if publicly retrievable)
+    source: >
+      van der Marel et al. 2003, Nature 425:271, Bi-2212 optical conductivity tables. If no
+      machine-readable public table exists, document honestly -> replication leg data_limited.
+  - id: drude_control
+    role: NEGATIVE CONTROL
+    source: >
+      A conventional Drude metal sigma1(omega) from published gold/copper optical data (e.g.
+      Ordal+ 1985 tabulated n,k -> sigma1 = eps0*omega*2nk), restricted to the intraband/Drude
+      window. The detector MUST be quiet here; if it fires on a textbook Drude metal the
+      pipeline is invalid (audit anomaly, not a candidate).
+
+tests:
+  - id: SMC.01_kernel_rank
+    desc: >
+      Is omega=2.5827 special in the detrended master-curve residuals r(u)? Rank the comb gain
+      at the kernel omega against an off-kernel periodogram over omega in [1, 6] (kernel
+      neighbourhood +/-10% excluded), gated at >= 2.8 comb periods of u-range. Both the frozen
+      detect_comb rank and a dense uniform-[1,6] grid rank are reported.
+    kill: p >= 0.05 at adequate power -> null
+
+  - id: SMC.02_amplitude_phase
+    desc: >
+      Amplitude fit + phase scan at the FIXED kernel omega: least-squares eps_hat and phi_hat of
+      eps*cos(2.5827*u + phi) on r(u); significance from the SMC.03 null batteries. Compare
+      eps_hat against the predicted 0.0173 and against the data's own noise floor.
+
+  - id: SMC.03_null_batteries
+    desc: >
+      (a) residual permutation null: shuffle r(u) across the u grid (destroys any comb, keeps
+      the amplitude distribution); (b) block-shuffle null: circular shuffle of contiguous
+      u-blocks of length ~0.5*ln(lambda) (catches smooth autocorrelated structure masquerading
+      as a comb); report BOTH and use the MORE conservative (larger) p.
+
+  - id: SMC.04_lambda_battery
+    desc: >
+      Full TFPT log-period battery (lambda in {3/2, phi, 2, 3, 4, 5, 8, (3/2)^6, 30}) at
+      omega=2pi/ln(lambda) on the master-curve residuals, per-lambda u-range (>=2.8 periods) +
+      Nyquist gate, Bonferroni look-elsewhere over the gated lambdas.
+    specificity: >
+      A small-lambda hit is LOW specificity (dense among any scaling story). Only an
+      idiosyncratic-lambda survivor (3/2, phi, (3/2)^6) after look-elsewhere would be
+      interesting -- and still only DSI-coincidence class here.
+
+  - id: SMC.05_injection_power
+    desc: >
+      Inject eps in {0.0173, 0.05} multiplicative ripples at the kernel omega (random phase per
+      seed) into the REAL master curve (real u sampling, real residual noise), rerun the full
+      detector, and report detection rates + the eps=0 false-alarm rate. HONEST POWER STATEMENT
+      REQUIRED: is the optical-data precision even sufficient for a 1.7% ripple?
+
+  - id: SMC.06_drude_control
+    desc: >
+      Run the identical pipeline (same detrend, same kernel rank) on the conventional-metal
+      control curve. Expectation: quiet (p ~ uniform). A firing detector here invalidates the
+      pipeline (audit anomaly).
+
+  - id: SMC.07_replication
+    desc: >
+      Same primary test on the Bi-2212 (vdM 2003) master curve if the data is publicly
+      retrievable; otherwise the replication leg is data_limited (documented).
+
+kill_conditions:
+  primary: >
+    omega=2.5827 not special in the LSCO master-curve residuals (SMC.01 p >= 0.05) at adequate
+    injected power -> null (at the detectable amplitude).
+  data_limited_if: >
+    the u-range gate fails (< 2.8 comb periods), OR injected power at the PREDICTED eps=0.0173
+    is low (< 50%) while eps=0.05 is detectable -> "null at detectable amplitude" /
+    data_limited: the search constrains only ripples above the data's own noise floor.
+  invalid_if: >
+    the detector fires on the Drude negative control, or a nominal kernel hit does not survive
+    the preregistered detrend-sensitivity variants -> audit anomaly, not a candidate.
+
+verdict_enum: [null, consistent, data_limited, tension, not_confirmed_not_refuted, hint_flag]
+prereg_expected_verdict: >
+  null-at-detectable-amplitude or data_limited -- published optical conductivities carry few-%
+  systematic uncertainty (Kramers-Kronig + absolute calibration), which is at or above the
+  predicted 1.7% ripple; and a SMOOTH master curve is the established expectation. A clean,
+  well-powered null would itself be informative (first laboratory bound on a log-periodic
+  decoration of the Planckian master curve at the TFPT frequency).

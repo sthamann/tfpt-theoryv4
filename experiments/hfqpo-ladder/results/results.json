@@ -1,0 +1,217 @@
+{
+  "experiment": "hfqpo-ladder",
+  "version": "v1",
+  "prereg": "hypotheses/hfqpo_v1.yaml (frozen 2026-07-02, before the data pass)",
+  "kernel": {
+    "c3": 0.039788735772973836,
+    "g_car": 5.0,
+    "N_fam": 3.0,
+    "p2_exp": 6.0,
+    "step=3/2": 1.5,
+    "lambda=(3/2)^6": 11.390625,
+    "omega=2pi/ln(lambda)": 2.5827069463082895,
+    "eps_predicted": 0.01730246011431484
+  },
+  "firewall": "TFPT 3/2 = relaxation-ladder step, NOT a two-oscillator ratio; mapping non-canonical; bare 3:2 match = coincidence-risk (GR parametric resonance also selects 3:2); only the ladder test discriminates; even a ladder hit would be [C]-tier; nothing here is [E]",
+  "tests": {
+    "H1": {
+      "id": "HFQPO.H1_exact_3_2_point_test",
+      "per_source": [
+        {
+          "name": "GRO J1655-40",
+          "role": "consistent",
+          "nu_upper_hz": 441.0,
+          "nu_lower_hz": 298.0,
+          "ratio": 1.4798657718120805,
+          "sigma_ratio": 0.02096712483565339,
+          "pull_vs_3_2": -0.9602760676887109,
+          "within_pm_0.05": true,
+          "log_step_exponent": 0.9666710676295286
+        },
+        {
+          "name": "XTE J1550-564",
+          "role": "consistent",
+          "nu_upper_hz": 276.0,
+          "nu_lower_hz": 184.0,
+          "ratio": 1.5,
+          "sigma_ratio": 0.043900800058161715,
+          "pull_vs_3_2": 0.0,
+          "within_pm_0.05": true,
+          "log_step_exponent": 1.0
+        },
+        {
+          "name": "GRS 1915+105",
+          "role": "consistent",
+          "nu_upper_hz": 168.0,
+          "nu_lower_hz": 113.0,
+          "ratio": 1.4867256637168142,
+          "sigma_ratio": 0.07093947390234931,
+          "pull_vs_3_2": -0.18712200067142226,
+          "within_pm_0.05": true,
+          "log_step_exponent": 0.9780771582079643
+        },
+        {
+          "name": "H1743-322",
+          "role": "consistent",
+          "nu_upper_hz": 242.0,
+          "nu_lower_hz": 166.0,
+          "ratio": 1.4578313253012047,
+          "sigma_ratio": 0.04748417478080204,
+          "pull_vs_3_2": -0.8880574400514623,
+          "within_pm_0.05": true,
+          "log_step_exponent": 0.9296729367390736
+        },
+        {
+          "name": "XTE J1859+226",
+          "role": "counterexample",
+          "nu_upper_hz": 227.5,
+          "nu_lower_hz": 128.6,
+          "ratio": 1.7690513219284605,
+          "sigma_ratio": 0.029206161843922912,
+          "pull_vs_3_2": 9.212142402218575,
+          "within_pm_0.05": false,
+          "log_step_exponent": 1.4068865980825929
+        },
+        {
+          "name": "Sgr A*",
+          "role": "contested",
+          "nu_upper_hz": 0.001445,
+          "nu_lower_hz": 0.000886,
+          "ratio": 1.6309255079006775,
+          "sigma_ratio": 0.19502089044495247,
+          "pull_vs_3_2": 0.6713409399473188,
+          "within_pm_0.05": false,
+          "log_step_exponent": 1.2063865426638973
+        }
+      ],
+      "combined": {
+        "sources": 4,
+        "chi2": 1.745790786141726,
+        "dof": 4,
+        "p_value": 0.7823838351238039,
+        "reading": "3/2 exact NOT rejected across the 4 consistent sources"
+      },
+      "counterexample": {
+        "name": "XTE J1859+226",
+        "ratio": 1.7690513219284605,
+        "pull_vs_3_2": 9.212142402218575,
+        "note": "genuine published HFQPO pair far from 3:2 AND off the (3/2)^k ladder (log_1.5 ratio = 1.407, not an integer): 3:2 is NOT universal among BH HFQPO pairs"
+      },
+      "verdict": "consistent",
+      "honesty": "consistency here is ambiguous BY CONSTRUCTION (coincidence-risk): GR parametric resonance also selects exactly 3:2, and H2 shows selection alone clusters ratios near 3/2"
+    },
+    "H2": {
+      "id": "HFQPO.H2_selection_null",
+      "design": {
+        "n_mc": 200000,
+        "seed": 0,
+        "n_sources": 5,
+        "window": 0.05,
+        "cluster_k": 4,
+        "sel_width_x": 0.06,
+        "meas_sigma_r": 0.044,
+        "nu_l(x)": "100 + 400 x",
+        "ratio(x)": "2.2 - x",
+        "x_eq_anchored": 0.7
+      },
+      "variants": [
+        {
+          "variant": "anchored",
+          "p_source_near_3_2": 0.498429,
+          "p_cluster_4_of_5": 0.18497,
+          "p_all_5": 0.03073
+        },
+        {
+          "variant": "unanchored",
+          "p_source_near_3_2": 0.099971,
+          "p_cluster_4_of_5": 0.000505,
+          "p_all_5": 1e-05
+        },
+        {
+          "variant": "no_selection",
+          "p_source_near_3_2": 0.099806,
+          "p_cluster_4_of_5": 0.000525,
+          "p_all_5": 5e-06
+        }
+      ],
+      "observed": "4 of 5 published BH pairs within +-0.05 of 3/2 (J1859+226 breaks it)",
+      "deflator": {
+        "p_anchored_cluster": 0.18497,
+        "reading": "selection alone reproduces the observed 4-of-5 cluster in 18% of trials once the equal-rms detection window sits at the 3/2 crossing (empirically it does: Torok 2009) \u2014 the observed clustering does NOT beat the selection null, so it counts for nothing on its own"
+      },
+      "verdict": "consistent",
+      "honesty": "this is a null that DEFLATES H1, not a test of TFPT: it quantifies how cheap the 3:2 cluster is under pure detection selection"
+    },
+    "H3": {
+      "id": "HFQPO.H3_ladder_discriminator",
+      "prediction": {
+        "tfpt_ladder": "third QPO at nu_3 = (3/2) nu_u and NO integer harmonics",
+        "resonance_alternative": "integer lines of nu_0 = nu_u/3 (e.g. 4 nu_0, nu_l/2)"
+      },
+      "per_source": [
+        {
+          "name": "GRO J1655-40",
+          "nu_upper_hz": 441.0,
+          "ladder_tooth_hz": 661.5,
+          "harmonic_fundamental_hz": 147.0,
+          "harmonic_line_4nu0_hz": 588.0,
+          "tooth_vs_4nu0_separation_hz": 73.5,
+          "published_detection_at_tooth": false,
+          "published_upper_limit_at_tooth": false,
+          "census": "450 Hz is the highest BH QPO frequency ever published (Strohmayer 2001, ApJ 552, L49; 4.5% rms, 13-27 keV). Belloni+2012 (MNRAS 426, 1701) searched 100-1000 Hz over 7108 archival PCA observations: 4 detections for this source, all in the 300-450 Hz dichotomy; nothing near 661.5 Hz and no per-frequency upper limit published there."
+        },
+        {
+          "name": "XTE J1550-564",
+          "nu_upper_hz": 276.0,
+          "ladder_tooth_hz": 414.0,
+          "harmonic_fundamental_hz": 92.0,
+          "harmonic_line_4nu0_hz": 368.0,
+          "tooth_vs_4nu0_separation_hz": 46.0,
+          "published_detection_at_tooth": false,
+          "published_upper_limit_at_tooth": true,
+          "census": "Belloni+2012: 7 archive-wide detections, clustered near 180/280 Hz; nothing at 414 Hz. Varniere & Rodriguez 2018 (ApJ 865, 113) refit the stacked ~275 Hz group over 50-1000 Hz: 'no other peak is obvious' with 3 sigma upper limits ~1-1.8% rms for an additional HFQPO anywhere in the considered range \u2014 the closest thing to a published tooth limit (the known pair sits at 1.2-4.8% rms), but not targeted at 1.5 * nu_u."
+        },
+        {
+          "name": "GRS 1915+105",
+          "nu_upper_hz": 168.0,
+          "ladder_tooth_hz": 252.0,
+          "harmonic_fundamental_hz": 56.0,
+          "harmonic_line_4nu0_hz": 224.0,
+          "tooth_vs_4nu0_separation_hz": 28.0,
+          "published_detection_at_tooth": false,
+          "published_upper_limit_at_tooth": false,
+          "census": "Belloni & Altamirano 2013 systematic RXTE search (MNRAS 432, 10): 51 detections, 49 between 58-72 Hz, two isolated peaks at ~134/143 Hz; the 168/113 pair itself only appears in stacked PDS (Remillard & McClintock 2006). No feature and no published limit at 252 Hz."
+        },
+        {
+          "name": "H1743-322",
+          "nu_upper_hz": 242.0,
+          "ladder_tooth_hz": 363.0,
+          "harmonic_fundamental_hz": 80.66666666666667,
+          "harmonic_line_4nu0_hz": 322.6666666666667,
+          "tooth_vs_4nu0_separation_hz": 40.333333333333314,
+          "published_detection_at_tooth": false,
+          "published_upper_limit_at_tooth": false,
+          "census": "Remillard+2006 (ApJ 637, 1002) searched 50-2000 Hz in 111 intervals: one single->4sigma detection (239+-4 Hz); stacked detections 166/242 Hz only. No feature reported near 363 Hz, no per-frequency upper limit given."
+        }
+      ],
+      "anti_kernel_record": [
+        {
+          "source": "XTE J1550-564",
+          "feature": "marginal broad 92 Hz = 184/2 (integer subharmonic); Remillard+2002 modelled 92:184:276 as integer harmonics 1:2:3 of 92 Hz",
+          "weight": "marginal (one observation group, broad)"
+        },
+        {
+          "source": "GRS 1915+105",
+          "feature": "simultaneous 34/68 Hz integer 1:2 pair (Belloni & Altamirano 2013); also the 41/69 Hz pair (Strohmayer 2001)",
+          "weight": "4.2 sigma (different frequency regime from the 168/113 pair)"
+        }
+      ],
+      "stage1_finding": "the teeth lie INSIDE the band RXTE PCA archive searches covered (100-1000 Hz), yet no published search targeted nu_3 = 1.5 nu_u and no per-frequency upper limits exist at the tooth frequencies; the only published third-frequency structures are INTEGER lines (92 = 184/2; 34/68), which favour the harmonic alternative",
+      "next_stage": "archival RXTE PCA event-data reanalysis specified in hypotheses/hfqpo_v1.yaml (targets, ObsID groups, stacking selections, detection/upper-limit rules); NOT run in this version",
+      "verdict": "data_limited",
+      "honesty": "even a future ladder hit would be [C]-tier: the ratio->ladder mapping is not canonical TFPT output, and the GR-resonance explanation remains the standing favorite"
+    }
+  },
+  "overall_verdict": "data_limited",
+  "overall_reading": "H1 consistent-but-ambiguous (chi2 p=0.78 across 4 sources, but J1859+226 breaks universality at 9.2 sigma); H2: anchored selection alone manufactures the 4-of-5 cluster in 18% of trials; H3 data_limited: no published x1.5 tooth search \u2014 the archival RXTE PCA design in the YAML is the decisive next stage"
+}

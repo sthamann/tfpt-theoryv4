@@ -59,5 +59,34 @@
     "alpha_inverse": 137.035999177,
     "alpha_inverse_sigma": 2.1e-8,
     "source": "CODATA 2022: alpha^-1 = 137.035999177(21)"
+  },
+  "sterile_neutrino": {
+    "source": "short-baseline anomaly status as of 2026-07-02: MicroBooNE two-beam (Nature 648, 64-69 (2025)); gallium/BEST reviews; JSNS2 first results (arXiv:2602.06274); Fermilab SBN program (ICARUS first results, Apr 2026)",
+    "fronts": {
+      "microboone_two_beam": {
+        "reference": "MicroBooNE collab., Nature 648, 64-69 (2025), arXiv:2512.07159",
+        "status_note": "excludes the single light sterile (3+1) interpretation of the LSND and MiniBooNE anomalies at 95% CL; rules out a significant portion of the gallium/BEST parameter space. First use of two accelerator beams (BNB 0.57% intrinsic nu_e, NuMI 4.6%) to break the nu_e appearance/disappearance degeneracy.",
+        "direction": "dissolving",
+        "confirmed_sterile_signal": false
+      },
+      "gallium_anomaly": {
+        "reference": "SAGE/GALLEX calibrations + BEST 2022 (R_in = 0.79 +- 0.05, R_out = 0.77 +- 0.05); combined significance >~ 4-5 sigma",
+        "status_note": "the ~20% counting deficit itself PERSISTS unexplained; BEST sees no distance dependence (no oscillation signature), and the large mixing a sterile explanation needs is disfavoured by solar/reactor data; BEST-2 (58Co source) proposed.",
+        "direction": "unexplained_deficit_no_oscillation_signature",
+        "confirmed_sterile_signal": false
+      },
+      "jsns2": {
+        "reference": "JSNS2 first results, arXiv:2602.06274 (2026), 2022 data",
+        "status_note": "direct LSND test at J-PARC MLF: 2 events observed vs 2.3 +- 0.4 expected background (LSND anomaly would add 1.1 +- 0.5) -- no excess, not yet conclusive (~7% of approved POT analysed; ~half of planned POT accumulated by end 2025). JSNS2-II near+far detectors taking data since Nov 2025 (far detector commissioning).",
+        "direction": "running",
+        "confirmed_sterile_signal": false
+      },
+      "sbn_program": {
+        "reference": "Fermilab SBN: ICARUS first nu_mu-disappearance results (2022-23 data, Apr 2026); SBND running",
+        "status_note": "ICARUS sees no evidence of nu_mu disappearance and sets 90% CL limits on the 3+1 model; the joint SBND+ICARUS two-detector analysis is designed to decide the short-baseline anomalies this decade.",
+        "direction": "deciding_this_decade",
+        "confirmed_sterile_signal": false
+      }
+    }
   }
 }

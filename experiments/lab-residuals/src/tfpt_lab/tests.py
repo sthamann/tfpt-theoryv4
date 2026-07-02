@@ -55,6 +55,12 @@ def muon_g2(m: dict) -> ChannelResult:
     out.append("  -> baseline-dependent: mechanism VIABLE under the dispersive (WP2020) baseline, "
                "TENSION under the lattice-shifted (WP2025) baseline; CMD-3/future are placeholders. "
                "No single 'confirmed'/'killed' verdict (search.txt sec.8 / TFPT firewall).")
+    kc = g.get("kill_condition_dated")
+    if kc:
+        out.append(f"  KILL CONDITION (dated {kc['date']}): {kc['rule']}")
+        for w in kc["watch"]:
+            out.append(f"    watch: {w}")
+        detail["kill_condition_dated"] = kc
     return ChannelResult("muon_g-2", "baseline_dependent",
                          constants.CLAIM_TYPE["muon_g-2"], out, detail)
 

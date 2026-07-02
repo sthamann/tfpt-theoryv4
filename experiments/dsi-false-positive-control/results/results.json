@@ -287,5 +287,224 @@
     "nominal_rate_at_threshold": 0.05,
     "min_comb_periods_gate": 2.8
   },
-  "verdict": "8 real control sequences (4 aftershock cascades from USGS ComCat incl. Landers/Tohoku/Ridgecrest; 4 solar-flare sequences after large X-flares, NGDC GOES XRS), 4 clear the >= 2.8-period gate. Kernel omega=2.583 false-positive rate: frozen 0/4 (Wilson95 [0.0, 0.4899]), strict 0/4. the detector is QUIET at the kernel on every gated control (FP 0/4, Wilson95 upper 0.4899), consistent with the nominal ~5% threshold rate -> the existing TFPT-channel nulls are SPECIFIC: the kernel frequency does not fire on generic Omori/DSI-type cascades. FIREWALL: controls have no TFPT mapping by construction; this calibrates detector specificity only and is NOT evidence for TFPT. No claim; nothing [E]."
+  "efimov_control": {
+    "s0": 1.00624,
+    "lambda_efimov": 22.6942,
+    "omega_efimov": 2.0125,
+    "omega_kernel": 2.5827,
+    "frequency_separation_frac": 0.2208,
+    "ladder_ratios": {
+      "per_system": [
+        {
+          "system": "133Cs",
+          "ratio": 21.0,
+          "ratio_err": 1.3,
+          "z_efimov": -1.3,
+          "z_tfpt": 7.39
+        },
+        {
+          "system": "7Li",
+          "ratio": 21.1,
+          "ratio_err": 2.64,
+          "z_efimov": -0.6,
+          "z_tfpt": 3.68
+        },
+        {
+          "system": "39K",
+          "ratio": 25.0,
+          "ratio_err": 4.0,
+          "z_efimov": 0.58,
+          "z_tfpt": 3.4
+        }
+      ],
+      "combined_ratio": 21.331,
+      "combined_err": 1.12,
+      "combined_z_efimov": -1.22,
+      "combined_z_tfpt": 8.88,
+      "scan_lambda_band": [
+        5.0,
+        50.0
+      ],
+      "best_fit_lambda": 21.35,
+      "chi2_min": 0.91,
+      "chi2_at_lambda_efimov": 2.4,
+      "chi2_at_lambda_tfpt": 79.74,
+      "sigma_equiv_efimov": 1.22,
+      "sigma_equiv_tfpt": 8.88
+    },
+    "resolvability": {
+      "periods_kernel": 3.7,
+      "periods_efimov": 2.88,
+      "eps": 0.3,
+      "noise": 0.1,
+      "n_seeds": 25,
+      "kernel_fire_rate": 0.0,
+      "kernel_fired": 0,
+      "p_kernel_median": 0.2,
+      "efimov_detect_rate": 1.0,
+      "scan": {
+        "kernel_gain": 0.01224,
+        "kernel_rank": 252,
+        "n_scanned": 449,
+        "kernel_rank_frac": 0.56,
+        "best_free_omega": 2.01,
+        "best_free_lambda": 22.782,
+        "best_free_gain": 0.82684,
+        "localisable_omega_min": 1.954,
+        "best_localisable_omega": 2.01,
+        "best_localisable_lambda": 22.782,
+        "best_localisable_gain": 0.82684
+      }
+    },
+    "scan_localises_efimov": true,
+    "kernel_fired": false,
+    "gated": true,
+    "passed": true
+  },
+  "mct_control": {
+    "kind": "structural_control_no_comb_run",
+    "systems": [
+      {
+        "system": "hard_spheres_3d",
+        "gamma": 2.46,
+        "gamma_err": 0.1,
+        "lambda_mct": 0.735,
+        "lambda_quoted": true,
+        "a": 0.3117,
+        "b": 0.5829,
+        "gamma_derived_from_lambda": 2.4621,
+        "consistency_delta_gamma": 0.0021,
+        "pull_from_tfpt_bend": -2.5
+      },
+      {
+        "system": "binary_hard_disks_2d",
+        "gamma": 2.4969,
+        "gamma_err": 0.05,
+        "lambda_mct": 0.7421,
+        "lambda_quoted": false,
+        "a": 0.3084,
+        "b": 0.5711,
+        "gamma_derived_from_lambda": 2.4969,
+        "consistency_delta_gamma": -0.0,
+        "pull_from_tfpt_bend": -4.25
+      },
+      {
+        "system": "kob_andersen_lj_3d",
+        "gamma": 2.8,
+        "gamma_err": 0.2,
+        "lambda_mct": 0.78,
+        "lambda_quoted": true,
+        "a": 0.2897,
+        "b": 0.5089,
+        "gamma_derived_from_lambda": 2.7086,
+        "consistency_delta_gamma": -0.0914,
+        "pull_from_tfpt_bend": 0.45
+      },
+      {
+        "system": "bks_silica",
+        "gamma": 2.35,
+        "gamma_err": 0.15,
+        "lambda_mct": 0.7099,
+        "lambda_quoted": false,
+        "a": 0.3228,
+        "b": 0.6243,
+        "gamma_derived_from_lambda": 2.35,
+        "consistency_delta_gamma": -0.0,
+        "pull_from_tfpt_bend": -2.4
+      },
+      {
+        "system": "orthoterphenyl",
+        "gamma": 2.46,
+        "gamma_err": 0.2,
+        "lambda_mct": 0.735,
+        "lambda_quoted": true,
+        "a": 0.3117,
+        "b": 0.5829,
+        "gamma_derived_from_lambda": 2.4621,
+        "consistency_delta_gamma": 0.0021,
+        "pull_from_tfpt_bend": -1.25
+      },
+      {
+        "system": "gaussian_core_model",
+        "gamma": 2.7,
+        "gamma_err": 0.1,
+        "lambda_mct": 0.7786,
+        "lambda_quoted": false,
+        "a": 0.2904,
+        "b": 0.5111,
+        "gamma_derived_from_lambda": 2.7,
+        "consistency_delta_gamma": -0.0,
+        "pull_from_tfpt_bend": -0.1
+      },
+      {
+        "system": "soft_spheres_3d",
+        "gamma": 2.2,
+        "gamma_err": 0.15,
+        "lambda_mct": 0.6705,
+        "lambda_quoted": false,
+        "a": 0.3389,
+        "b": 0.6901,
+        "gamma_derived_from_lambda": 2.2,
+        "consistency_delta_gamma": 0.0,
+        "pull_from_tfpt_bend": -3.4
+      }
+    ],
+    "spread": {
+      "n_systems": 7,
+      "gamma_values": [
+        2.46,
+        2.4969,
+        2.8,
+        2.35,
+        2.46,
+        2.7,
+        2.2
+      ],
+      "gamma_mean": 2.4953,
+      "gamma_std_sample": 0.2023,
+      "gamma_range": [
+        2.2,
+        2.8
+      ],
+      "gamma_range_width": 0.6,
+      "median_per_system_err": 0.15,
+      "spread_over_error_std": 1.35,
+      "spread_over_error_range": 4.0,
+      "bend_tfpt": 2.7095,
+      "bend_inside_spread": true,
+      "universality_test": {
+        "weighted_mean": 2.5017,
+        "chi2": 11.45,
+        "dof": 6,
+        "sigma_equiv_wh": 1.44
+      },
+      "locked_bend_test": {
+        "locked_value": 2.7095,
+        "chi2": 43.36,
+        "dof": 7,
+        "sigma_equiv_wh": 4.87
+      },
+      "nearest_system_to_bend": {
+        "system": "gaussian_core_model",
+        "gamma": 2.7,
+        "distance": 0.0095
+      }
+    },
+    "exponent_relations_consistent": true,
+    "max_lambda_vs_gamma_inconsistency": 0.0914,
+    "locked_bend_rejected": true,
+    "spread_exceeds_error": true,
+    "passed": true
+  },
+  "dsi_controls_aggregate": {
+    "n_gated_dsi_controls": 5,
+    "members": "4 gated cascade sequences + Efimov ladder (EF.02)",
+    "kernel_fired": 0,
+    "rate": 0.0,
+    "wilson95": [
+      0.0,
+      0.4345
+    ]
+  },
+  "verdict": "8 real control sequences (4 aftershock cascades from USGS ComCat incl. Landers/Tohoku/Ridgecrest; 4 solar-flare sequences after large X-flares, NGDC GOES XRS), 4 clear the >= 2.8-period gate. Kernel omega=2.583 false-positive rate: frozen 0/4 (Wilson95 [0.0, 0.4899]), strict 0/4. the detector is QUIET at the kernel on every gated control (FP 0/4, Wilson95 upper 0.4899), consistent with the nominal ~5% threshold rate -> the existing TFPT-channel nulls are SPECIFIC: the kernel frequency does not fire on generic Omori/DSI-type cascades. CONTROL 1 (Efimov ladder, exactly-derived non-TFPT DSI lambda=e^(pi/s0)=22.69): measured cold-atom ratios (Cs/7Li/39K) combine to 21.331+-1.12 \u2014 Efimov-consistent (-1.22 sigma) and 8.88 sigma from the TFPT lambda=11.39 (Cs alone 7.39 sigma); the frozen detector on the gated Efimov comb fired at the kernel 0/25 seeds while detecting omega_Efimov=2.01 at 100% -> PASSED. CONTROL 2 (glass/MCT exponent spread, structural): gamma across 7 systems spans [2.2, 2.8] (std 0.2023, 4.0x the median per-system error) \u2014 the TFPT bend 2.7095 sits inside the spread but a LOCKED universal bend is rejected at chi2=43.36/7 dof (~4.87 sigma): boundary-less two-step relaxation shows no frozen bend -> PASSED. COMBINED over all 5 gated DSI controls (4 gated cascade sequences + Efimov ladder (EF.02)): kernel fired 0/5 (Wilson95 [0.0, 0.4345]). FIREWALL: controls have no TFPT mapping by construction; this calibrates detector specificity only and is NOT evidence for TFPT. No claim; nothing [E]."
 }

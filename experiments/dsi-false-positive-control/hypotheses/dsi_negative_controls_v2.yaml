@@ -1,0 +1,74 @@
+# Preregistered protocol for the two TEXTBOOK negative controls added on top of the v1
+# cascade bed (dsi_false_positive_control_v1.yaml, unchanged). Same firewall, same frozen
+# vendored kernel (tests/test_frozen_kernel.py), same discipline: no outcome here can ever
+# confirm TFPT — these controls calibrate specificity and distinctness only.
+
+experiment: dsi-false-positive-control
+role: textbook negative controls (exactly-derived non-TFPT DSI; boundary-less two-step relaxation)
+version: v2 (extends v1; v1 cascade protocol and results untouched)
+
+firewall: >
+  Efimov physics is textbook three-body universality (an exactly-derived, boundary-less DSI);
+  glassy/MCT relaxation is the canonical boundary-less two-step relaxation. Neither has any
+  TFPT boundary/horizon-recovery mapping BY CONSTRUCTION. Nothing here is [E]; no load-bearing
+  claim in either direction.
+
+control_1_efimov_ladder:
+  target: nature's cleanest NON-TFPT DSI with an exactly DERIVED scale factor
+  constants:
+    s0: 1.00624
+    lambda_efimov: e^(pi/s0) = 22.694   # ln = 3.1221
+    omega_efimov: 2*pi/ln(lambda) = 2.0125
+    kernel_separation: (2.5827-2.0125)/2.5827 = 22% > the +-10% kernel window -> resolvable
+  data: data/efimov.json  # published cold-atom resonance positions/ratios with references
+    # 133Cs Huang+ PRL 112,190401 (2014): 21.0(1.3); 7Li Pollack+ Science 326,1683 (2009):
+    # 21.1(2.6); 39K Zaccanti+ Nat.Phys. 5,586 (2009): 25(4)
+  tests:
+    - id: EF.01_ladder_ratios
+      desc: per-system and inverse-variance-combined z of the measured inter-generation
+        ratio against lambda_Efimov=22.694 AND against the TFPT lambda=(3/2)^6=11.39;
+        one-parameter chi^2 scan over lambda in [5,50]
+    - id: EF.02_detector_resolvability
+      desc: frozen detector (run_comb unchanged) on a realisation of the Efimov comb at
+        exactly omega_Efimov (validation-grade eps=0.30/noise=0.10, ln-range >= 2.8 comb
+        periods at BOTH frequencies, 25 noise seeds); kernel fire count = the gated-control
+        entry in the aggregate FP denominator; free omega scan must localise ~2.01
+  pass_criteria:
+    - combined TFPT sigma-equivalent >= 5 (inverse statement; 133Cs alone > 7 sigma)
+    - combined Efimov z within 2 sigma (the ladder IS Efimov)
+    - kernel fire rate <= 0.05 on the gated Efimov comb; detection at omega_Efimov >= 60%
+    - scan best localisable omega within 5% of omega_Efimov
+
+control_2_mct_exponent_spread:
+  target: boundary-less two-step relaxation (beta plateau + alpha decay) must NOT lock onto
+    the frozen walled-clock bend ln3/ln(3/2) = 2.7095
+  kind: STRUCTURAL control — no comb run, no detector; exponent bookkeeping only
+  data: data/mct_exponents.json  # >=5 systems, cited per system (hard spheres 2.46, 2D
+    # binary disks 2.4969, KA-LJ 2.8, BKS silica 2.35, OTP 2.46, GCM 2.7, soft spheres 2.2)
+  tests:
+    - id: MCT.01_exponent_relations
+      desc: complete every row via the exact Gamma-function relations
+        lambda = G(1-a)^2/G(1-2a) = G(1+b)^2/G(1+2b), gamma = 1/(2a)+1/(2b);
+        quoted-vs-derived consistency guard
+    - id: MCT.02_spread_statistic
+      desc: sample mean/std/range of gamma vs per-system errors; chi^2 of the best single
+        universal value (one-universal-gamma test) AND chi^2 of the specific locked value
+        2.7095 (frozen-bend test); Wilson-Hilferty sigma equivalents, labelled approximate
+  honesty_clauses:
+    - the bend 2.7095 DOES sit inside the observed gamma spread — state it
+    - any single system's proximity to 2.7095 is a coincidence to be named, not hidden
+      (cf. Landers lambda~12.1 near (3/2)^6 in the v1 bed)
+    - report the weaker one-universal-gamma chi^2 as-is even when it does not reject
+  pass_criteria:
+    - locked-bend hypothesis rejected at >= 3 sigma (WH)
+    - gamma range width >= 3x the median per-system error
+    - all quoted (lambda, gamma) pairs internally consistent
+
+aggregate_update:
+  desc: the Efimov ladder enters the kernel false-positive denominator as ONE additional
+    gated DSI control (EF.02); the v1 cascade aggregate stays reported unchanged alongside
+  deliverable: combined kernel FP count over all gated DSI controls (4 cascades + Efimov),
+    with Wilson 95% interval
+
+verdict_enum: [consistent, null, data_limited, tension]
+prereg_expected_verdict: consistent   # both controls pass, kernel fires 0/5

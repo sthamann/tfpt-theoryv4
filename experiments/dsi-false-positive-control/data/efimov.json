@@ -1,0 +1,58 @@
+{
+  "_comment": "CONTROL 1 data: published Efimov resonance positions from cold-atom experiments. The Efimov effect is nature's cleanest exactly-derived NON-TFPT discrete scale invariance: three resonantly interacting bosons support a geometric ladder of trimer states with scale factor lambda = e^(pi/s0), s0 = 1.00624 -> lambda = 22.694 (Efimov 1970; Braaten & Hammer, Phys. Rep. 428, 259 (2006)). Positions in Bohr radii a0; ratios are the measured inter-generation scale factors a_-(n+1)/a_-(n) (or a_+(n+1)/a_+(n)) as quoted by the cited papers. FIREWALL: textbook three-body universality, zero TFPT content; used only to calibrate detector specificity.",
+  "s0": 1.00624,
+  "lambda_efimov_ideal": 22.6936,
+  "systems": [
+    {
+      "system": "133Cs",
+      "feature": "triatomic resonances a_-(0), a_-(1) (a<0, three-body recombination peaks)",
+      "positions_a0": {
+        "a_minus_0": -963,
+        "a_minus_0_err": 11,
+        "a_minus_1": -20190,
+        "a_minus_1_err": 1200
+      },
+      "ratio": 21.0,
+      "ratio_err": 1.3,
+      "note": "Kraemer+ 2006 first saw a_-(0) ~ -850 a0 at finite T; the zero-T corrected value is -963(11) a0. The raw finite-T position of the second resonance is ~ -17000 a0; the zero-T corrected value -20190(1200) a0 gives the quoted Efimov period 21.0(1.3), consistent with the ideal 22.7 within 1.3 sigma. Most accurate demonstration of Efimov DSI to date.",
+      "references": [
+        "Kraemer et al., Nature 440, 315 (2006) - first triatomic Efimov resonance in Cs",
+        "Berninger et al., Phys. Rev. Lett. 107, 120401 (2011) - a_-(0) universality across Cs resonances",
+        "Huang, Sidorenkov, Grimm, Hutson, Phys. Rev. Lett. 112, 190401 (2014); arXiv:1402.6161 - second triatomic resonance, a_-(1)/a_-(0) = 21.0(1.3)"
+      ]
+    },
+    {
+      "system": "7Li",
+      "feature": "triatomic resonances a_-(1), a_-(2) (a<0, labelled a-_1, a-_2 in the paper)",
+      "positions_a0": {
+        "a_minus_first": -298,
+        "a_minus_first_err": 10,
+        "a_minus_second": -6301,
+        "a_minus_second_err": 264
+      },
+      "ratio": 21.1,
+      "ratio_err": 2.64,
+      "note": "Quoted ratio a-_2/a-_1 = 21.1(11)(24) (statistical, systematic); errors combined in quadrature -> 2.64. The a>0 side gives a+_2/a+_1 = 22.5(22)(11), also Efimov-consistent.",
+      "references": [
+        "Pollack, Dries, Hulet, Science 326, 1683 (2009); arXiv:0911.0893 - two universally connected Efimov trimers in 7Li, Tables 1-2"
+      ]
+    },
+    {
+      "system": "39K",
+      "feature": "recombination features a_1, a_2 (a>0, log-periodic L3 structure)",
+      "positions_a0": {
+        "a_plus_first": 224,
+        "a_plus_first_err": 7,
+        "a_plus_second": 5650,
+        "a_plus_second_err": 900
+      },
+      "ratio": 25.0,
+      "ratio_err": 4.0,
+      "note": "Quoted ratio a_2/a_1 = 25(4), nominally larger than but consistent with the ideal 22.7; 39K intermediate-strength resonances show documented finite-range deviations (cf. Chapurin+ PRL 123, 233402 (2019), Xie+ PRL 125, 243401 (2020): relative Efimov ratios hold to ~10%).",
+      "references": [
+        "Zaccanti et al., Nature Physics 5, 586 (2009); arXiv:0904.4453 - first Efimov spectrum (two trimer generations) in 39K",
+        "Xie et al., Phys. Rev. Lett. 125, 243401 (2020) - Efimov universal ratios within 10% across a 39K resonance"
+      ]
+    }
+  ]
+}

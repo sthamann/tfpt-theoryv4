@@ -1,0 +1,43 @@
+[build-system]
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[project]
+name = "strange-metal-comb"
+version = "0.1.0"
+description = "First laboratory comb-ripple search: does the strange-metal sigma1(omega/T) Planckian master curve carry the frozen TFPT log-periodic decoration (omega=2.583, eps~1.7%)?"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+    { name = "Stefan Hamann" },
+]
+keywords = [
+    "TFPT",
+    "discrete scale invariance",
+    "log-periodic",
+    "strange metal",
+    "Planckian dissipation",
+    "optical conductivity",
+    "omega/T scaling",
+]
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.11",
+]
+
+[project.optional-dependencies]
+dev = ["ruff>=0.5"]
+
+[project.scripts]
+tfpt-smc = "tfpt_smc.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tfpt_smc"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

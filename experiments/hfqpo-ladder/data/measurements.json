@@ -1,0 +1,76 @@
+{
+  "comment": "Published BH high-frequency-QPO pair measurements. All values are public, published numbers verified against the cited papers on the retrieval date; nothing here is fitted or derived. TFPT constants are NOT in this file -- they come from the axioms and live in src/tfpt_hfqpo/constants.py. Frequencies in Hz unless noted.",
+  "retrieved": "2026-07-02",
+  "instrument_note": "All stellar-mass detections are RXTE PCA (~mus event timing, Nyquist >> 1 kHz; the PCA band is sensitive well above 600 Hz -- the 450 Hz QPO of GRO J1655-40 was detected at 4.5% rms in the 13-27 keV band, Strohmayer 2001). Sgr A* values are X-ray/NIR flare periodicities, significance contested.",
+  "sources": [
+    {
+      "name": "GRO J1655-40",
+      "role": "consistent",
+      "nu_upper_hz": 441.0, "nu_upper_sigma_hz": 2.0,
+      "nu_lower_hz": 298.0, "nu_lower_sigma_hz": 4.0,
+      "pair_reference": "Motta et al. 2014a, MNRAS 437, 2554 (arXiv:1309.3652), sample B1: nu_U = 441+-2, nu_L = 298+-4, simultaneous with type-C at 17.3+-0.1 Hz; original pair discovery Strohmayer 2001, ApJ 552, L49 (450/300 Hz)",
+      "mass_msun": 5.4, "mass_sigma_msun": 0.3,
+      "mass_reference": "optical/NIR dynamical: Beer & Podsiadlowski 2002, MNRAS 331, 351 (5.4+-0.3); RPM X-ray-timing value 5.31+-0.07 (Motta et al. 2014a)",
+      "notes": "only source with a full simultaneous QPO triplet before J1859+226; highest-frequency BH QPO known (450 Hz, hard band only)"
+    },
+    {
+      "name": "XTE J1550-564",
+      "role": "consistent",
+      "nu_upper_hz": 276.0, "nu_upper_sigma_hz": 3.0,
+      "nu_lower_hz": 184.0, "nu_lower_sigma_hz": 5.0,
+      "pair_reference": "Remillard et al. 2002, ApJ 580, 1030 (astro-ph/0202305); Remillard & McClintock 2006, ARA&A 44, 49, Table: 276+-3 / 184+-5",
+      "mass_msun": 9.1, "mass_sigma_msun": 0.61,
+      "mass_reference": "Orosz et al. 2011, ApJ 730, 75: M = 9.10+-0.61 Msun (dynamical)",
+      "notes": "Belloni et al. 2012 (MNRAS 426, 1701) archive search: 7 of the 11 archive-wide significant HFQPO detections are from this source, clustered near 180 and 280 Hz",
+      "anti_kernel": {
+        "feature": "marginal broad feature at 92 Hz = 184/2 in one observation group; Remillard et al. 2002 modelled the profiles as integer harmonics 1:2:3 of 92 Hz",
+        "reading": "integer SUBHARMONIC -- evidence for the harmonic/resonance alternative and AGAINST a pure geometric (3/2)^k ladder, which forbids integer lines"
+      }
+    },
+    {
+      "name": "GRS 1915+105",
+      "role": "consistent",
+      "nu_upper_hz": 168.0, "nu_upper_sigma_hz": 3.0,
+      "nu_lower_hz": 113.0, "nu_lower_sigma_hz": 5.0,
+      "pair_reference": "Remillard & McClintock 2006, ARA&A 44, 49 (168+-3 / 113+-5); cf. Belloni & Altamirano 2013 systematic RXTE search (51 HFQPO detections, 49 of them 58-72 Hz; two isolated peaks at ~134 and ~143 Hz)",
+      "mass_msun": 12.4, "mass_sigma_msun": 1.9,
+      "mass_reference": "Reid et al. 2014, ApJ 796, 2: parallax distance 8.6 kpc, M = 12.4 (+2.0 -1.8) Msun",
+      "notes": "excluded from Belloni et al. 2012 (effectively persistent source; analysed separately)",
+      "anti_kernel": {
+        "feature": "simultaneous 34 Hz and 68 Hz QPOs (integer 1:2 pair), Belloni & Altamirano 2013, MNRAS (DOI 10.1093/mnras/stt285, arXiv:1303.4934); plus the 41/69 Hz ~3:2 pair of Strohmayer 2001",
+        "reading": "published integer-harmonic pair in the same source (different frequency regime); post-2023 reinterpretation as type-C harmonics near ISCO (arXiv:2307.00867) keeps it integer either way"
+      }
+    },
+    {
+      "name": "H1743-322",
+      "role": "consistent",
+      "nu_upper_hz": 242.0, "nu_upper_sigma_hz": 3.0,
+      "nu_lower_hz": 166.0, "nu_lower_sigma_hz": 5.0,
+      "pair_reference": "Remillard et al. 2006, ApJ 637, 1002 (astro-ph/0407025): stacked-PDS detections 242+-3 (6.0 sigma) and 166+-5 (4.1 sigma), published ratio 1.46+-0.05; single-observation 240+-3 / 163 (+5 -2) in Homan et al. 2005, ApJ 623, 383",
+      "mass_msun": null, "mass_sigma_msun": null,
+      "mass_reference": "no dynamical mass published (BH candidate; distance ~8.5 kpc from jet kinematics, Steiner et al. 2012)",
+      "notes": "pair only appears in stacked power spectra grouped by flux/state, not in single observations"
+    },
+    {
+      "name": "XTE J1859+226",
+      "role": "counterexample",
+      "nu_upper_hz": 227.5, "nu_upper_sigma_hz": 2.25,
+      "nu_lower_hz": 128.6, "nu_lower_sigma_hz": 1.7,
+      "sigma_note": "published asymmetric errors nu_U = 227.5 (+2.1 -2.4), nu_L = 128.6 (+1.6 -1.8) symmetrised to the mean",
+      "pair_reference": "Motta et al. 2022, MNRAS 517, 1469 (arXiv:2209.10376): QPO triplet with type-C at 3.65+-0.01 Hz; ratio nu_U/nu_L = 1.769, NOT 3:2",
+      "mass_msun": 7.8, "mass_sigma_msun": 1.9,
+      "mass_reference": "Yanes-Rizo et al. 2022, MNRAS 517, 1476 (arXiv:2209.10395): M = 7.8+-1.9 Msun (dynamical); RPM value 7.85+-0.46 (Motta et al. 2022)",
+      "notes": "universality breaker: a genuine published HFQPO pair far from 3:2 (and not on any (3/2)^k ladder tooth either: log_1.5(1.769) = 1.41). The RPM reads it as precession at a radius away from ISCO, which neither needs 3:2 nor a ladder. MUST be included in any honest census of BH HFQPO pairs."
+    },
+    {
+      "name": "Sgr A*",
+      "role": "contested",
+      "nu_upper_hz": 1.445e-3, "nu_upper_sigma_hz": 0.16e-3,
+      "nu_lower_hz": 0.886e-3, "nu_lower_sigma_hz": 0.04e-3,
+      "pair_reference": "Aschenbach et al. 2004, A&A 417, 71 (X-ray flare periods 692 s and 1130 s = 1.445/0.886 mHz); 3:2 reading proposed by Torok 2005, A&A 440, 1 (astro-ph/0412500). Significance of the underlying periodicities is DISPUTED and never confirmed (e.g. arXiv:1411.7731 'significance ... still questionable'); GRAVITY/Genzel 2003 NIR ~17 min flare period is a separate, also-debated feature.",
+      "mass_msun": 4.297e6, "mass_sigma_msun": 0.013e6,
+      "mass_reference": "GRAVITY Collaboration 2022, A&A 657, L12: M = 4.297+-0.013 x 10^6 Msun",
+      "notes": "EXPLORATORY ONLY -- excluded from all combined statistics by preregistration. Note the central ratio is 1.63, not 1.5; it is '3:2-consistent' only through the large errors."
+    }
+  ]
+}

@@ -7,15 +7,24 @@
       "SM_WP2020_dispersive": {"value": 116591810.0, "sigma": 43.0,
         "reference": "Theory Initiative White Paper 2020 (data-driven e+e- HVP)",
         "note": "the dispersive baseline that produced the historical 4-5 sigma anomaly"},
-      "SM_lattice_2025": {"value": 116592033.0, "sigma": 63.0,
-        "reference": "Theory Initiative update 2025, arXiv:2505.21476 (lattice-dominated HVP)",
-        "note": "lattice HVP; brings SM up, residual ~0 ('g-2 puzzle resolved')"},
+      "SM_lattice_2025": {"value": 116592033.0, "sigma": 62.0,
+        "reference": "Theory Initiative White Paper 2025, arXiv:2505.21476, Phys.Rept. 1143 (2025) 1: a_mu(SM) = 116 592 033(62)e-11 (530 ppb), lattice-dominated HVP",
+        "note": "lattice HVP; brings SM up, residual 38(63)e-11 ~ 0 ('no tension between SM and experiment at current precision' -- WP25 abstract)"},
       "SM_CMD3_related": {"value": null, "sigma": null,
         "reference": "CMD-3 2023 (Phys.Rev.D 109 112002) pi+pi- cross section",
         "note": "CMD-3 raises the pi+pi- HVP toward the lattice; no single standardized CMD-3-only SM amu exists -> placeholder (data_limited)"},
       "SM_future_consensus": {"value": null, "sigma": null,
         "reference": "pending dispersive-vs-lattice reconciliation",
         "note": "placeholder for a future consolidated SM HVP"}
+    },
+    "kill_condition_dated": {
+      "date": "2026-07-02",
+      "rule": "if a data-driven (e+e-) HVP consensus emerges consistent with the lattice/WP25 value (CMD-3-side resolution), the TFPT g-2 bridge is DEAD: the residual pins to ~0.4e-9 and the 2.879e-9 seam-vertex reading sits at +3.9 sigma today, hardening past 5 sigma as HVP errors shrink toward the 127-ppb experimental precision. A KLOE-side dispersive consensus restores the bridge to < 1 sigma (+0.58 sigma on the WP2020 baseline).",
+      "watch": [
+        "MUonE first results: Phase-1 pilot run completed at CERN SPS Jun-Aug 2025 (3 stations, ~5e11 scattering events); Delta-alpha_had analysis underway; full run post-LS3",
+        "new e+e- -> pi+pi- data: BaBar 2009+2025 combination (arXiv:2601.16587) keeps the dispersive prediction in tension with the FNAL measurement (KLOE-side); BESIII / Belle II / CMD-3 / SND remeasurements on 1-2 yr timescales; KLOE vs CMD-3 tension is >5 sigma at the rho peak",
+        "Theory Initiative WP-3, announced for ~2027-28 ('in 2-3 years', 8th g-2 workshop, Orsay Sep 2025): the next consensus SM HVP is the decision point"
+      ]
     }
   },
   "rare_kaons": {

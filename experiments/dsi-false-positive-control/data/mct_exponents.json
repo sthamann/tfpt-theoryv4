@@ -1,0 +1,89 @@
+{
+  "_comment": "CONTROL 2 data: measured/derived mode-coupling-theory (MCT) exponent sets for glass-forming systems. MCT is the canonical theory of boundary-LESS two-step relaxation (beta plateau + alpha decay). Its exponent parameter lambda_MCT fixes the critical exponent a, the von Schweidler exponent b, and the alpha-divergence exponent gamma = 1/(2a) + 1/(2b) via the exact relations lambda = Gamma(1-a)^2/Gamma(1-2a) = Gamma(1+b)^2/Gamma(1+2b) (Goetze, Complex Dynamics of Glass-Forming Liquids, 2009). Crucially gamma is an explicit FUNCTIONAL of the static structure S(q): system-DEPENDENT by construction, not a universal constant. gamma_err is the honest per-system uncertainty (quoted fit errors where available, documented systematics otherwise). FIREWALL: glassy relaxation has zero TFPT content; this is a structural control on the frozen walled-clock bend ln3/ln(3/2) = 2.7095 (no comb detector involved).",
+  "systems": [
+    {
+      "system": "hard_spheres_3d",
+      "description": "3D hard spheres, Percus-Yevick structure input (microscopic MCT); colloid-benchmarked",
+      "lambda_mct": 0.735,
+      "gamma": 2.46,
+      "gamma_err": 0.1,
+      "err_note": "PY value is numerically exact; using simulated S(q) input shifts lambda to 0.727-0.773, b = 0.56(4) (Sperl 2004) -> gamma shift ~0.1 taken as the systematic",
+      "references": [
+        "Franosch, Fuchs, Goetze, Mayr, Singh, Phys. Rev. E 55, 7153 (1997) - HSS asymptotics, lambda = 0.735, gamma = 2.46",
+        "Sperl, Phys. Rev. E 70, 061506 (2004) - tagged-particle HSS analysis, b ~= 0.583, S(q)-input sensitivity"
+      ]
+    },
+    {
+      "system": "binary_hard_disks_2d",
+      "description": "2D binary hard-disk mixture (delta = 5/7, x_s = 0.5), MCT with Brownian-dynamics structure factors",
+      "lambda_mct": null,
+      "gamma": 2.4969,
+      "gamma_err": 0.05,
+      "err_note": "numerical MCT value quoted to 4 decimals; fixed-gamma power law describes the simulated tau(phi) excellently for |phi - phi_c| <~ 0.01; 0.05 covers the S(q)-input systematic",
+      "references": [
+        "Weysser, Hajnal, Phys. Rev. E 83, 041503 (2011); arXiv:1103.1297 - gamma = 2.4969, b = 0.5571",
+        "Bayer et al., Phys. Rev. E 76, 011508 (2007) - MCT in 2D (hard disks)"
+      ]
+    },
+    {
+      "system": "kob_andersen_lj_3d",
+      "description": "Kob-Andersen 80:20 binary Lennard-Jones mixture (MD simulation fit)",
+      "lambda_mct": 0.78,
+      "lambda_err": 0.02,
+      "gamma": 2.8,
+      "gamma_err": 0.2,
+      "err_note": "fitted von Schweidler b = 0.49 -> gamma = 2.8 (paper's own MCT relation); diffusion constants give gamma ~ 2.6; microscopic-MCT calculation gives lambda = 0.708 (gamma ~ 2.46) - fitted value used, spread as error",
+      "references": [
+        "Kob, Andersen, Phys. Rev. E 51, 4626 (1995); cond-mat/9501102 - b = 0.49, gamma = 2.8, lambda = 0.78(2)",
+        "Nauroth, Kob, Phys. Rev. E 55, 657 (1997) - microscopic MCT for KA-LJ, lambda = 0.708"
+      ]
+    },
+    {
+      "system": "bks_silica",
+      "description": "BKS silica melt (strong network glass former, MD simulation)",
+      "lambda_mct": null,
+      "gamma": 2.35,
+      "gamma_err": 0.15,
+      "err_note": "alpha-relaxation times give gamma ~= 2.35; diffusion constants give gamma ~= 2.1 (hopping contamination) - tau value used, tau/D spread as the systematic",
+      "references": [
+        "Horbach, Kob, Phys. Rev. E 64, 041503 (2001) - tau power law, gamma ~= 2.35",
+        "Horbach, Kob, Phys. Rev. B 60, 3169 (1999) - D power law, gamma ~= 2.1, T_c = 3330 K"
+      ]
+    },
+    {
+      "system": "orthoterphenyl",
+      "description": "orthoterphenyl (OTP), molecular glass former, depolarized light scattering + schematic MCT",
+      "lambda_mct": 0.735,
+      "gamma": 2.46,
+      "gamma_err": 0.2,
+      "err_note": "schematic-MCT fit of GHz light-scattering spectra, exponent parameter 0.735 (a = 0.312); neutron/viscosity analyses report lambda up to ~0.77 (gamma ~ 2.6-2.9) - 0.2 covers the method spread",
+      "references": [
+        "Singh et al., J. Non-Cryst. Solids 235-237, 66 (1998) - schematic MCT for OTP, lambda = 0.735, a = 0.312",
+        "Toelle et al., Phys. Rev. E 56, 809 (1997) - OTP neutron scattering around T_c"
+      ]
+    },
+    {
+      "system": "gaussian_core_model",
+      "description": "monodisperse Gaussian core model (ultrasoft potential, MD + MCT)",
+      "lambda_mct": null,
+      "gamma": 2.7,
+      "gamma_err": 0.1,
+      "err_note": "MCT scaling exponent as compiled (Table 1) from the primary MD/MCT analysis",
+      "references": [
+        "Ikeda, Miyazaki, Phys. Rev. Lett. 106, 015701 (2011) - GCM glass transition, MCT analysis",
+        "compilation: Table 1, Commun. Phys. 7 (2024), doi:10.1038/s42005-024-01685-8 - gamma = 2.7"
+      ]
+    },
+    {
+      "system": "soft_spheres_3d",
+      "description": "3D soft spheres (inverse-power potential, rho = 0.8)",
+      "lambda_mct": null,
+      "gamma": 2.2,
+      "gamma_err": 0.15,
+      "err_note": "MCT scaling exponent as compiled (Table 1) from the primary simulation analyses",
+      "references": [
+        "compilation: Table 1, Commun. Phys. 7 (2024), doi:10.1038/s42005-024-01685-8 - gamma = 2.2, T_c = 0.267"
+      ]
+    }
+  ]
+}

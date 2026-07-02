@@ -5,6 +5,7 @@
     "sigma_mnu_eV": 0.0588,
     "alpha_inv": 137.0359992168,
     "koide_Q": "2/3",
+    "N_fam": 3,
     "alpha_lambda_lock": "rho_L/Mbar^4 = (3/4pi^2) e^(-2 alpha^-1)",
     "amplifier": 274.0719984336
   },
@@ -129,12 +130,53 @@
     "kill_triggered": false,
     "verdict": "consistent"
   },
+  "axis_D_sterile_dissolution": {
+    "tfpt_fixed_point": {
+      "N_fam": 3,
+      "statement": "N_fam = 3 is an exact compiler output (D5+A3+mu4 => E8): there is no spare E8 slot for a 4th light family/sterile state, so TFPT PREDICTS the dissolution of every short-baseline anomaly -- not merely survives it."
+    },
+    "fronts": [
+      {
+        "front": "microboone_two_beam",
+        "reference": "MicroBooNE collab., Nature 648, 64-69 (2025), arXiv:2512.07159",
+        "direction": "dissolving",
+        "confirmed_sterile_signal": false,
+        "status_note": "excludes the single light sterile (3+1) interpretation of the LSND and MiniBooNE anomalies at 95% CL; rules out a significant portion of the gallium/BEST parameter space. First use of two accelerator beams (BNB 0.57% intrinsic nu_e, NuMI 4.6%) to break the nu_e appearance/disappearance degeneracy."
+      },
+      {
+        "front": "gallium_anomaly",
+        "reference": "SAGE/GALLEX calibrations + BEST 2022 (R_in = 0.79 +- 0.05, R_out = 0.77 +- 0.05); combined significance >~ 4-5 sigma",
+        "direction": "unexplained_deficit_no_oscillation_signature",
+        "confirmed_sterile_signal": false,
+        "status_note": "the ~20% counting deficit itself PERSISTS unexplained; BEST sees no distance dependence (no oscillation signature), and the large mixing a sterile explanation needs is disfavoured by solar/reactor data; BEST-2 (58Co source) proposed."
+      },
+      {
+        "front": "jsns2",
+        "reference": "JSNS2 first results, arXiv:2602.06274 (2026), 2022 data",
+        "direction": "running",
+        "confirmed_sterile_signal": false,
+        "status_note": "direct LSND test at J-PARC MLF: 2 events observed vs 2.3 +- 0.4 expected background (LSND anomaly would add 1.1 +- 0.5) -- no excess, not yet conclusive (~7% of approved POT analysed; ~half of planned POT accumulated by end 2025). JSNS2-II near+far detectors taking data since Nov 2025 (far detector commissioning)."
+      },
+      {
+        "front": "sbn_program",
+        "reference": "Fermilab SBN: ICARUS first nu_mu-disappearance results (2022-23 data, Apr 2026); SBND running",
+        "direction": "deciding_this_decade",
+        "confirmed_sterile_signal": false,
+        "status_note": "ICARUS sees no evidence of nu_mu disappearance and sets 90% CL limits on the 3+1 model; the joint SBND+ICARUS two-detector analysis is designed to decide the short-baseline anomalies this decade."
+      }
+    ],
+    "today": "MicroBooNE's two-beam analysis (Nature, Dec 2025) excludes the single light sterile interpretation of LSND/MiniBooNE at 95% CL and cuts into the gallium/BEST parameter space; the gallium counting deficit itself persists unexplained (no oscillation signature); JSNS2 is running (first data consistent with background); SBND+ICARUS will decide this decade.",
+    "kill_rule": "any confirmed sterile oscillation signal at >= 5 sigma (systematics-controlled; e.g. joint SBND+ICARUS or JSNS2-II)",
+    "kill_triggered": false,
+    "verdict": "consistent"
+  },
   "verdicts": {
     "A": "tension",
     "B": "consistent",
-    "C": "consistent"
+    "C": "consistent",
+    "D": "consistent"
   },
   "kill_triggered_any": false,
   "retrieved": "2026-07-02",
-  "verdict_line": "WATCHDOG: A=tension (3.7s pincer), B=consistent (lock excludes TFPT+real-w(z) by ~10^5.7), C=consistent (-0.43s Koide). No kill triggered (threshold 5.0 sigma)."
+  "verdict_line": "WATCHDOG: A=tension (3.7s pincer), B=consistent (lock excludes TFPT+real-w(z) by ~10^5.7), C=consistent (-0.43s Koide), D=consistent (sterile dissolution on track, MicroBooNE 2025). No kill triggered (threshold 5.0 sigma)."
 }

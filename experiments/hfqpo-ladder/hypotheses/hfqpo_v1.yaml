@@ -1,0 +1,125 @@
+# Preregistered protocol for the BH high-frequency-QPO 3:2 / ladder search.
+# Frozen 2026-07-02, BEFORE any computation on the measurement table. The published pair
+# frequencies themselves are of course known from the literature (they cannot be blinded);
+# what is preregistered here is every test statistic, threshold, Monte-Carlo design and
+# verdict rule applied to them.
+
+experiment: hfqpo-ladder
+role: search target — BH HFQPO 3:2 pairs against the TFPT kernel step 3/2, with the
+  geometric-ladder discriminator vs the integer-harmonic (GR resonance) alternative
+version: v1
+frozen_date: "2026-07-02"
+
+firewall: >
+  TFPT's 3/2 is a RELAXATION-LADDER step (from N_fam=3: rate(n) = -6 ln(1-n/3), consecutive
+  scale factor 1/(1-1/3) = 3/2), NOT a two-oscillator frequency ratio. HFQPO pairs are
+  conventionally read as two simultaneous oscillation modes (relativistic precession, or the
+  Kluzniak-Abramowicz 3:2 parametric resonance nu_theta:nu_r). Mapping a two-oscillator ratio
+  onto a ladder step is NON-CANONICAL: TFPT has no derived HFQPO production mechanism. A bare
+  3:2 match is therefore COINCIDENCE-RISK (GR parametric resonance selects 3:2 on its own, and
+  selection effects cluster ratios near 3:2 even without any resonance). Only the LADDER test
+  (H3) discriminates. Even a ladder hit would be [C]-tier until the mapping is derived; the GR
+  resonance explanation is the standing favorite. Nothing here is [E]; no load-bearing claim.
+
+frozen_kernel:
+  step: 3/2 exact               # = N_fam/(N_fam-1), N_fam=3; no fitted exponent
+  ladder: nu_l -> nu_u = (3/2) nu_l -> nu_3 = (3/2) nu_u = (3/2)^2 nu_l   # geometric, no integer lines
+  anti_kernel: integer harmonics/subharmonics of a fundamental nu_0 = nu_u/3 = nu_l/2
+    (e.g. nu_l/2, 4 nu_0) are evidence AGAINST the ladder reading
+  consistency: step^6 = (3/2)^6 = 11.390625 is the shared comb lambda; omega = 2 pi/ln((3/2)^6)
+    = 2.5827 (identical to recovery-comb-domains / pulsar / FRB / repeater-cascade kernels)
+  guard: tests/test_frozen_kernel.py
+
+data:                            # published tables only; full refs in data/measurements.json
+  consistent_pairs:              # the 4 sources entering the combined H1 statistic
+    - GRO J1655-40:   nu_u 441+-2,  nu_l 298+-4    # Motta+2014a (MNRAS 437,2554) sample B1
+    - XTE J1550-564:  nu_u 276+-3,  nu_l 184+-5    # Remillard+2002 (ApJ 580,1030); RM06
+    - GRS 1915+105:   nu_u 168+-3,  nu_l 113+-5    # Remillard & McClintock 2006 (ARA&A 44,49)
+    - H1743-322:      nu_u 242+-3,  nu_l 166+-5    # Remillard+2006 (ApJ 637,1002); ratio 1.46+-0.05
+  counterexample:                # included, never hidden — universality breaker
+    - XTE J1859+226:  nu_u 227.5 +2.1-2.4, nu_l 128.6 +1.6-1.8   # Motta+2022 (MNRAS 517,1469); ratio 1.769
+  contested:                     # exploratory only, EXCLUDED from all combined statistics
+    - Sgr A*:         nu_u 1.445+-0.16 mHz, nu_l 0.886+-0.04 mHz # Aschenbach+2004; significance disputed
+  anti_kernel_record:            # published integer-harmonic lines (pro-resonance, anti-ladder)
+    - XTE J1550-564: marginal broad 92 Hz = 184/2 (Remillard+2002 modelled 92:184:276 as 1:2:3)
+    - GRS 1915+105: 34 Hz = 68/2 integer pair (Belloni & Altamirano 2013, MNRAS 432,10)
+
+tests:
+  - id: HFQPO.H1_exact_3_2_point_test
+    desc: per-pair ratio r = nu_u/nu_l with sigma_r from error propagation (asymmetric errors
+      symmetrised as the mean); pull = (r - 3/2)/sigma_r; combined chi^2 = sum(pull^2) over the
+      4 consistent sources, dof=4, p = sf_chi2(chi2, 4); J1859+226 pull reported separately and
+      prominently (universality breaker); Sgr A* pull exploratory only.
+    kill: combined chi^2 rejects 3/2 at p < 0.01 across the 4 sources -> ratio-cluster reading dead
+    note: a PASS here is explicitly NOT support (coincidence-risk; see firewall + H2)
+
+  - id: HFQPO.H2_selection_null
+    desc: Monte-Carlo of the Boutelier/Barret/Torok deflator — ratios of two linearly correlated
+      frequencies cluster near 1.5 by DETECTION SELECTION even for uniform underlying
+      distributions. Frozen design; position x ~ U[0,1] along the correlation; nu_l = 100+400x;
+      ratio r(x) = 2.2 - x (monotone GR-like decrease toward ISCO); detected x drawn
+      N(x_eq, sel_width_x) clipped to [0,1] (equal-rms detection window); measurement noise
+      N(0, meas_sigma_r) added to r. Statistic = P(>=4 of 5 sources within +-window of 1.5).
+    params:
+      n_mc: 200000
+      n_sources: 5
+      seed: 0
+      window: 0.05                  # the observed cluster criterion (4 of 5 within +-0.05)
+      sel_width_x: 0.06             # sharp equal-rms selection window along the correlation
+      meas_sigma_r: 0.044           # median published sigma_r of the five measured pairs
+      variants:
+        anchored:     x_eq = 0.7 for all sources (r(x_eq) = 1.5; the empirical Torok-2009
+                      equal-rms crossing sits at the 3/2 point)
+        unanchored:   x_eq ~ U[0,1] per source per trial (selection point physically unknown)
+        no_selection: x ~ U[0,1] (no detection weighting at all)
+    interpretation: the observed 4-of-5 cluster only counts as anything if it BEATS the
+      anchored variant; if p_anchored is O(0.1) the cluster is manufactured by selection and
+      H1 consistency carries no discriminating weight.
+
+  - id: HFQPO.H3_ladder_discriminator      # the decisive, preregistered test
+    desc: TFPT-kernel reading predicts a THIRD tooth at nu_3 = (3/2) nu_u
+      (661.5 Hz J1655, 414 Hz J1550, 252 Hz GRS1915, 363 Hz H1743) and NO integer
+      harmonic/subharmonic lines; the resonance/harmonic alternative predicts integer lines of
+      nu_0 = nu_u/3 = nu_l/2 (4 nu_0 = 588/368/224/322.7 Hz resp., plus the nu_l/2 subharmonics,
+      92 Hz already marginally seen). The tooth and the 4 nu_0 line are >= 26 Hz apart in every
+      source — resolvable at HFQPO widths. Stage 1 (this version): literature-only census of
+      published detections/upper limits at the tooth frequencies; encode what is known as the
+      verdict. Stage 2 (named design, NOT run here): archival RXTE PCA event-data reanalysis.
+    decision_rule:
+      ladder_hit: peak at nu_3 (+-1 sigma_tooth) at >=4 sigma after trials AND no integer line
+      harmonic_hit: integer line (4 nu_0 or nu_0 or nu_l/2) AND no tooth -> kernel reading dead
+      neither: report % rms upper limits at both frequencies
+    expected_stage1_verdict: data_limited   # no published third-QPO search at x1.5 exists
+
+  - id: HFQPO.H4_frozen_kernel_guard
+    desc: guard tests — step == 3/2 exact from N_fam=3, ladder tooth arithmetic, disjointness
+      of the geometric tooth set from the integer-harmonic set, consistency with the shared
+      TFPT comb kernel ((3/2)^6, omega = 2.5827), no SI inputs; tests/test_frozen_kernel.py
+      must ALL PASS before analyze output is valid.
+
+archival_design:               # Stage 2 of H3 — specified now, deliberately NOT run here
+  archive: HEASARC RXTE PCA event/single-bit mode data (public; ~mus time resolution,
+    Nyquist >> 1 kHz; Belloni+2012 searched 100-1000 Hz on the same archive)
+  targets:
+    - GRO J1655-40: 1996 Aug hard-state group (Remillard+1999 'very hard' selection;
+      Strohmayer 2001 ObsIDs 10255-01-*) + 2005 outburst (Motta+2014a sample); tooth 661.5+-3 Hz
+      in the >13 keV band (450 Hz QPO was hard-band only), harmonic line 588 Hz
+    - XTE J1550-564: 1998 Sep - 1999 May outburst (ObsIDs 30188-06-*, 30191-01-*;
+      Remillard+2002 groups A-C), tooth 414+-4.5 Hz, harmonic line 368 Hz = 4x92
+    - GRS 1915+105: Belloni & Altamirano 2012 detection set (168/113 Hz epochs), tooth
+      252+-4.5 Hz, harmonic line 224 Hz
+    - H1743-322: 2003 outburst (Remillard+2006 111 intervals, ObsIDs 80138-06-*), tooth
+      363+-4.5 Hz, harmonic line 322.7 Hz
+  method: stack PDS within the published state selections where each pair appears (steep
+    power-law state, LFQPO present, no band-limited noise); fit Lorentzian at the tooth and at
+    the integer line; detection >= 4 sigma single-trial with a 2-frequency x 4-source trials
+    correction; otherwise report 3 sigma % rms upper limits next to the 1-5% rms of the known
+    pairs (RXTE detected 450 Hz at 4.5% rms hard-band, so the band is sensitive enough)
+  effort: event-file downloads O(10 GB); no HEASoft needed for Leahy PDS from event lists
+
+verdict_enum: [consistent, null, data_limited, tension, not_confirmed_not_refuted]
+prereg_expected_verdicts:
+  H1: consistent            # but ambiguous by construction (coincidence-risk)
+  H2: quantifies the deflator (anchored selection expected to reproduce the cluster)
+  H3: data_limited          # no published x1.5 tooth search; archival design named
+overall_expected: data_limited

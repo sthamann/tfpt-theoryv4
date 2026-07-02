@@ -33,13 +33,29 @@ far below the KOTO 90%CL limit (2.2×10⁻⁹) → data-limited. This is the sha
 | SM baseline | residual aexp−aSM | pull | status |
 |---|---|---|---|
 | WP2020 dispersive | (2.62±0.45)×10⁻⁹ | +0.58σ | **viable** |
-| WP2025 lattice | (0.39±0.65)×10⁻⁹ | +3.86σ | **tension** |
+| WP2025 lattice | (0.39±0.64)×10⁻⁹ | +3.92σ | **tension** |
 | CMD-3-related | — | — | placeholder (data-limited) |
 | future consensus | — | — | placeholder |
+
+(Experiment: Fermilab final + BNL world average `116 592 071.5(14.5)×10⁻¹¹`, PRL 135,
+101802 (2025). WP2025: `a_µ(SM) = 116 592 033(62)×10⁻¹¹`, arXiv:2505.21476 — the σ=62
+supersedes the σ=63 previously carried here, moving the lattice pull 3.86σ → 3.92σ.)
 
 The seam-vertex value sits on the *old* dispersive anomaly but is pushed to tension if
 the 2025 lattice HVP holds — exactly the kill condition `search.txt §8` anticipated.
 Reported per baseline; **no `confirmed`/`killed` ampel**.
+
+**Kill condition (dated 2026-07-02):** if a data-driven (e⁺e⁻) HVP consensus emerges
+consistent with the lattice/WP25 value (a CMD-3-side resolution), the TFPT g−2 bridge
+is **dead** — the residual pins to ~0.4×10⁻⁹ and the seam-vertex reading sits at +3.9σ
+today, hardening past 5σ as HVP errors shrink toward the 127-ppb experimental
+precision. A KLOE-side dispersive consensus **restores the bridge to <1σ** (+0.58σ on
+WP2020). **Watch:** MUonE first results (Phase-1 pilot run completed Jun–Aug 2025,
+~5×10¹¹ events, Δα_had analysis underway; full run post-LS3); new e⁺e⁻→ππ data (BaBar
+2009+2025 combination, arXiv:2601.16587, keeps the dispersive prediction in tension
+with the FNAL measurement; BESIII/Belle II/CMD-3/SND remeasurements on 1–2 yr
+timescales; KLOE vs CMD-3 tension >5σ at the ρ peak); Theory Initiative **WP-3,
+announced for ~2027–28** — the next consensus SM HVP is the decision point.
 
 ### Axion — **`[C]` frontier; marker + two relic branches**
 - haloscope marker `m_a = 23.8 µeV (≈5.76 GHz)`: inside the HAYSTAC/CAPP band but **not

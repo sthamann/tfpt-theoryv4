@@ -19,10 +19,60 @@ from pathlib import Path
 
 import numpy as np
 
-from . import fetch, sequences
+from . import efimov, fetch, mct, sequences
 from .comb import EPS_PREDICTED, LAMBDA, MIN_COMB_PERIODS, OMEGA, P_THRESHOLD, validate_detector
 
 RESULTS = Path(__file__).resolve().parents[2] / "results"
+
+
+def _print_efimov(ef: dict) -> None:
+    """Report CONTROL 1 (Efimov ladder) — numbers before any verdict language."""
+    rt = ef["ladder_ratios"]
+    rs = ef["resolvability"]
+    print(f"      exactly-derived ladder: lambda=e^(pi/{ef['s0']})={ef['lambda_efimov']} "
+          f"(omega={ef['omega_efimov']}) vs kernel omega={ef['omega_kernel']} "
+          f"-> {100 * ef['frequency_separation_frac']:.1f}% apart (resolvable)")
+    for r in rt["per_system"]:
+        print(f"      {r['system']:6s} measured ratio {r['ratio']:5.1f} +- {r['ratio_err']:.2f}"
+              f"  | z(lambda=22.69) = {r['z_efimov']:+.2f}  z(lambda=11.39) = {r['z_tfpt']:+.2f}")
+    print(f"      combined (inv-var): {rt['combined_ratio']} +- {rt['combined_err']} | "
+          f"Efimov {rt['combined_z_efimov']:+.2f} sigma, TFPT {rt['combined_z_tfpt']:+.2f} sigma"
+          f" | chi2 scan best lambda={rt['best_fit_lambda']}: Efimov "
+          f"{rt['sigma_equiv_efimov']} sigma-equiv, TFPT {rt['sigma_equiv_tfpt']} sigma-equiv")
+    w_loc = rs["scan"]["best_localisable_omega"]
+    print(f"      EF.02 frozen detector on the Efimov comb ({rs['periods_kernel']} kernel / "
+          f"{rs['periods_efimov']} Efimov periods, eps={rs['eps']}, {rs['n_seeds']} seeds): "
+          f"kernel fired {rs['kernel_fired']}/{rs['n_seeds']} "
+          f"(median p={rs['p_kernel_median']}); detection AT omega_Efimov "
+          f"{100 * rs['efimov_detect_rate']:.0f}%; scan localises omega={w_loc} "
+          f"(lambda={rs['scan']['best_localisable_lambda']})")
+    tail = ("kernel and Efimov DSI are cleanly distinct scales" if ef["passed"]
+            else "see record for the failing criterion")
+    print(f"      -> control {'PASSED' if ef['passed'] else 'FAILED'}: {tail}")
+
+
+def _print_mct(mc: dict) -> None:
+    """Report CONTROL 2 (MCT exponent spread) — a structural control, no comb run."""
+    sp = mc["spread"]
+    for r in mc["systems"]:
+        src = "quoted" if r["lambda_quoted"] else "derived"
+        print(f"      {r['system']:22s} gamma={r['gamma']:.4f}+-{r['gamma_err']:.2f} "
+              f"(lambda_MCT={r['lambda_mct']:.3f} {src}, a={r['a']:.3f}, b={r['b']:.3f}) "
+              f"| pull from bend 2.7095: {r['pull_from_tfpt_bend']:+.1f} sigma")
+    ut, lt = sp["universality_test"], sp["locked_bend_test"]
+    print(f"      spread over {sp['n_systems']} systems: mean={sp['gamma_mean']} "
+          f"std={sp['gamma_std_sample']} range={sp['gamma_range']} "
+          f"(width {sp['gamma_range_width']} = {sp['spread_over_error_range']}x the median "
+          f"per-system error {sp['median_per_system_err']})")
+    print(f"      one-universal-gamma test: chi2={ut['chi2']}/{ut['dof']} dof "
+          f"(~{ut['sigma_equiv_wh']} sigma, WH approx) | LOCKED-BEND gamma==2.7095 test: "
+          f"chi2={lt['chi2']}/{lt['dof']} dof (~{lt['sigma_equiv_wh']} sigma, WH approx)")
+    nb = sp["nearest_system_to_bend"]
+    print(f"      bend 2.7095 sits INSIDE the spread; nearest system {nb['system']} "
+          f"(gamma={nb['gamma']}, distance {nb['distance']}) — proximity coincidence, "
+          "gamma is system-dependent by construction")
+    print(f"      -> control {'PASSED' if mc['passed'] else 'FAILED'}: boundary-less "
+          "two-step relaxation shows NO frozen universal bend")
 
 
 def _analyze(seed: int = 0, refresh: bool = False) -> int:
@@ -93,7 +143,26 @@ def _analyze(seed: int = 0, refresh: bool = False) -> int:
           f"{[round(w, 2) for w in sorted(best)]} (kernel = {OMEGA:.3f}); Sornette-type "
           f"seismic DSI is typically lambda~2-3.5 (omega~5-9), i.e. away from the kernel.")
 
-    verdict = _verdict(records, agg)
+    # (5) CONTROL 1 — the Efimov ladder (exactly-derived non-TFPT DSI, gated)
+    print("\n  [4] CONTROL 1 — Efimov ladder (nature's exactly-derived non-TFPT DSI):")
+    ef = efimov.run_efimov_control(seed=seed)
+    _print_efimov(ef)
+
+    # (6) CONTROL 2 — glass/MCT exponent spread (structural, no comb run)
+    print("\n  [5] CONTROL 2 — glass/MCT exponent spread vs the frozen bend 2.7095 "
+          "(structural control, no comb run):")
+    mc = mct.run_mct_control()
+    _print_mct(mc)
+
+    # (7) combined aggregate over ALL gated DSI controls (cascades + Efimov ladder)
+    comb_agg = sequences.combined_dsi_aggregate(agg, efimov_kernel_fired=ef["kernel_fired"])
+    print(f"\n  [6] COMBINED kernel false-positive rate over "
+          f"{comb_agg['n_gated_dsi_controls']} gated DSI controls "
+          f"({comb_agg['members']}): {comb_agg['kernel_fired']}/"
+          f"{comb_agg['n_gated_dsi_controls']} = {comb_agg['rate']} "
+          f"(Wilson95 {comb_agg['wilson95']})")
+
+    verdict = _verdict(records, agg, ef, mc, comb_agg)
     print(f"\n==> {verdict}")
 
     RESULTS.mkdir(exist_ok=True)
@@ -106,6 +175,9 @@ def _analyze(seed: int = 0, refresh: bool = False) -> int:
         "n_shuffles": sequences.N_SHUFFLE,
         "sequences": records,
         "aggregate": agg,
+        "efimov_control": ef,
+        "mct_control": mc,
+        "dsi_controls_aggregate": comb_agg,
         "verdict": verdict,
     }
     (RESULTS / "results.json").write_text(json.dumps(out, indent=2), encoding="utf-8")
@@ -113,7 +185,7 @@ def _analyze(seed: int = 0, refresh: bool = False) -> int:
     return 0
 
 
-def _verdict(records: list[dict], agg: dict) -> str:
+def _verdict(records: list[dict], agg: dict, ef: dict, mc: dict, comb_agg: dict) -> str:
     gated = [r for r in records if r["range_sufficient"]]
     ff, fs = agg["kernel_fp_frozen"], agg["kernel_fp_strict"]
     n_asc = sum(r["kind"] == "aftershock" for r in records)
@@ -134,11 +206,34 @@ def _verdict(records: list[dict], agg: dict) -> str:
                    f" = {fs['rate']}) -> IMPORTANT WARNING: this quantifies the universal-DSI "
                    "coincidence rate the firewall names; every TFPT-channel comb p-value must be "
                    "read against THIS base rate, not the nominal 5%")
+    rt, rs = ef["ladder_ratios"], ef["resolvability"]
+    ef_txt = (f"CONTROL 1 (Efimov ladder, exactly-derived non-TFPT DSI lambda=e^(pi/s0)=22.69): "
+              f"measured cold-atom ratios (Cs/7Li/39K) combine to "
+              f"{rt['combined_ratio']}+-{rt['combined_err']} — Efimov-consistent "
+              f"({rt['combined_z_efimov']} sigma) and {rt['sigma_equiv_tfpt']} sigma from the "
+              f"TFPT lambda=11.39 (Cs alone {rt['per_system'][0]['z_tfpt']} sigma); the frozen "
+              f"detector on the gated Efimov comb fired at the kernel "
+              f"{rs['kernel_fired']}/{rs['n_seeds']} seeds while detecting omega_Efimov=2.01 "
+              f"at {100 * rs['efimov_detect_rate']:.0f}% -> "
+              f"{'PASSED' if ef['passed'] else 'FAILED'}")
+    sp = mc["spread"]
+    lt = sp["locked_bend_test"]
+    mc_txt = (f"CONTROL 2 (glass/MCT exponent spread, structural): gamma across "
+              f"{sp['n_systems']} systems spans {sp['gamma_range']} "
+              f"(std {sp['gamma_std_sample']}, {sp['spread_over_error_range']}x the median "
+              f"per-system error) — the TFPT bend 2.7095 sits inside the spread but a LOCKED "
+              f"universal bend is rejected at chi2={lt['chi2']}/{lt['dof']} dof "
+              f"(~{lt['sigma_equiv_wh']} sigma): boundary-less two-step relaxation shows no "
+              f"frozen bend -> {'PASSED' if mc['passed'] else 'FAILED'}")
     return (f"{len(records)} real control sequences ({n_asc} aftershock cascades from USGS ComCat"
             f" incl. Landers/Tohoku/Ridgecrest; {n_fl} solar-flare sequences after large X-flares,"
             f" NGDC GOES XRS), {len(gated)} clear the >= {MIN_COMB_PERIODS}-period gate. "
             f"Kernel omega=2.583 false-positive rate: frozen {ff['fired']}/{len(gated)}"
             f" (Wilson95 {ff['wilson95']}), strict {fs['fired']}/{len(gated)}. {outcome}. "
+            f"{ef_txt}. {mc_txt}. COMBINED over all {comb_agg['n_gated_dsi_controls']} gated DSI "
+            f"controls ({comb_agg['members']}): kernel fired "
+            f"{comb_agg['kernel_fired']}/{comb_agg['n_gated_dsi_controls']} "
+            f"(Wilson95 {comb_agg['wilson95']}). "
             "FIREWALL: controls have no TFPT mapping by construction; this calibrates detector "
             "specificity only and is NOT evidence for TFPT. No claim; nothing [E].")
 
@@ -148,19 +243,29 @@ def main(argv: list[str] | None = None) -> int:
         description="False-positive control: frozen TFPT comb detector on non-TFPT cascades")
     ap.add_argument("command", nargs="?", default="analyze",
                     choices=["analyze", "fetch", "fetch-quakes", "fetch-flares",
-                             "validate", "audit"])
+                             "validate", "audit", "efimov", "mct"])
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--refresh", action="store_true", help="re-download raw data")
     args = ap.parse_args(argv)
     if args.command == "audit":
         print(f"kernel omega=2pi/ln((3/2)^6)={OMEGA:.4f}; eps_pred={EPS_PREDICTED:.4f}; "
               f"gate>={MIN_COMB_PERIODS} periods; p<{P_THRESHOLD}; scan band "
-              f"[{sequences.OMEGA_SCAN_LO},{sequences.OMEGA_SCAN_HI}]")
+              f"[{sequences.OMEGA_SCAN_LO},{sequences.OMEGA_SCAN_HI}]; controls: "
+              f"Efimov lambda={efimov.LAMBDA_EFIMOV:.4f} (omega={efimov.OMEGA_EFIMOV:.4f}), "
+              f"MCT bend reference={mct.BEND_TFPT:.4f}")
         return 0
     if args.command == "validate":
         v = validate_detector()
         print(asdict(v))
         return 0 if v.passed else 1
+    if args.command == "efimov":
+        ef = efimov.run_efimov_control(seed=args.seed)
+        _print_efimov(ef)
+        return 0 if ef["passed"] else 1
+    if args.command == "mct":
+        mc = mct.run_mct_control()
+        _print_mct(mc)
+        return 0 if mc["passed"] else 1
     if args.command in ("fetch", "fetch-quakes", "fetch-flares"):
         if args.command in ("fetch", "fetch-quakes"):
             for ms in fetch.MAINSHOCKS:

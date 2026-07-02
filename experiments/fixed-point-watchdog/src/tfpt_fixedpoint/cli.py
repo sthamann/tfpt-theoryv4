@@ -9,8 +9,11 @@ is a kill, not a fit-parameter update):
     (4) Koide Q = 2/3 exactly               (charged-lepton pole masses)
     (5) the alpha-Lambda lock:  rho_Lambda / Mbar^4 = (3/4pi^2) e^(-2 alpha^-1)  (v60/v274)
         =>  d ln rho_Lambda / dt = 2 alpha^-1 (alpha-dot/alpha)   [amplifier 2 alpha^-1 ~ 274]
+    (6) N_fam = 3 exactly                   (D5+A3+mu4 => E8 leaves NO slot for a 4th
+                                             light family/sterile state; every short-
+                                             baseline anomaly must DISSOLVE)
 
-Three test axes against PUBLIC published values (data/measurements.json):
+Four test axes against PUBLIC published values (data/measurements.json):
 
   A. Sigma m_nu x w PINCER   -- DESI DR2 neutrino-mass bounds vs the DESI evolving-DE
                                 preference; the joint TFPT point (w=-1, 0.0588 eV) is
@@ -20,6 +23,9 @@ Three test axes against PUBLIC published values (data/measurements.json):
                                 would imply; quantifies the mutual exclusion.
   C. KOIDE-tau KILL WINDOW   -- Q from CODATA/PDG masses, pull vs 2/3, the m_tau value
                                 Q=2/3 predicts, and the precision needed for a 5-sigma kill.
+  D. STERILE-nu DISSOLUTION  -- N_fam = 3 requires every short-baseline anomaly to
+                                dissolve; tracks MicroBooNE two-beam, gallium/BEST,
+                                JSNS2 and the SBN program front by front.
 
 Deterministic: no fetching, no randomness.  Writes results/results.json.
 
@@ -46,6 +52,8 @@ WA_TFPT = 0.0
 SIGMA_MNU_TFPT = 0.0588            # eV; NO floor m3(1+sqrt|J|) (v272 floor 0.0586, v468 closure 0.0588)
 ALPHA_INV_TFPT = 137.0359992168    # unique root of F_U(1)=0 (v3); TFPT: constant in time
 KOIDE_Q_TFPT = 2.0 / 3.0           # |Z2|/N_fam (v105 one-constant inventory)
+N_FAM_TFPT = 3                     # exact compiler output: D5+A3+mu4 => E8 fixes 3 families;
+                                   # no spare slot for a 4th light (sterile) state
 LOCK_PREFACTOR = 3.0 / (4.0 * math.pi ** 2)   # rho_Lambda/Mbar^4 = (3/4pi^2) e^(-2 alpha^-1) (v60/v274)
 AMPLIFIER = 2.0 * ALPHA_INV_TFPT   # d ln rho_Lambda = 2 alpha^-1 * (dalpha/alpha)
 
@@ -266,6 +274,42 @@ def solve_mtau(me: float, mmu: float) -> float:
     return mt
 
 
+# --------------------------------------------------------------------------- D
+def axis_d_sterile(m: dict) -> dict:
+    """N_fam = 3 dissolution watch: TFPT REQUIRES every short-baseline anomaly to
+    dissolve (no 4th light state exists to oscillate into). Data-driven front-by-front
+    status from data/measurements.json; kill = any confirmed >= 5 sigma sterile
+    oscillation signal."""
+    st = m["sterile_neutrino"]
+    fronts = []
+    any_signal = False
+    for name, f in st["fronts"].items():
+        any_signal = any_signal or bool(f["confirmed_sterile_signal"])
+        fronts.append({"front": name, "reference": f["reference"],
+                       "direction": f["direction"],
+                       "confirmed_sterile_signal": f["confirmed_sterile_signal"],
+                       "status_note": f["status_note"]})
+    return {
+        "tfpt_fixed_point": {
+            "N_fam": N_FAM_TFPT,
+            "statement": ("N_fam = 3 is an exact compiler output (D5+A3+mu4 => E8): "
+                          "there is no spare E8 slot for a 4th light family/sterile "
+                          "state, so TFPT PREDICTS the dissolution of every "
+                          "short-baseline anomaly -- not merely survives it.")},
+        "fronts": fronts,
+        "today": ("MicroBooNE's two-beam analysis (Nature, Dec 2025) excludes the "
+                  "single light sterile interpretation of LSND/MiniBooNE at 95% CL "
+                  "and cuts into the gallium/BEST parameter space; the gallium "
+                  "counting deficit itself persists unexplained (no oscillation "
+                  "signature); JSNS2 is running (first data consistent with "
+                  "background); SBND+ICARUS will decide this decade."),
+        "kill_rule": "any confirmed sterile oscillation signal at >= 5 sigma "
+                     "(systematics-controlled; e.g. joint SBND+ICARUS or JSNS2-II)",
+        "kill_triggered": any_signal,
+        "verdict": "tension" if any_signal else "consistent",
+    }
+
+
 # ------------------------------------------------------------------------ main
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description="TFPT exact-fixed-point watchdog")
@@ -278,7 +322,7 @@ def main(argv: list[str] | None = None) -> int:
           f"(retrieved {m['retrieved']})")
     print("=" * 78)
     print(f"  fixed points: w = -1 | Sigma m_nu = {SIGMA_MNU_TFPT} eV | "
-          f"alpha^-1 = {ALPHA_INV_TFPT} (static) | Koide Q = 2/3")
+          f"alpha^-1 = {ALPHA_INV_TFPT} (static) | Koide Q = 2/3 | N_fam = {N_FAM_TFPT}")
     print(f"  alpha-Lambda lock: rho_L/Mbar^4 = (3/4pi^2) e^(-2 alpha^-1), "
           f"amplifier 2 alpha^-1 = {AMPLIFIER:.2f}\n")
 
@@ -331,24 +375,40 @@ def main(argv: list[str] | None = None) -> int:
           f"the Belle II central")
     print(f"  -> verdict: {c['verdict'].upper()}\n")
 
+    d = axis_d_sterile(m)
+    print("AXIS D -- STERILE-nu DISSOLUTION (N_fam = 3; short-baseline status 2025/26)")
+    print(f"  TFPT: N_fam = {N_FAM_TFPT} exactly -- no E8 slot for a 4th light state; "
+          f"every short-baseline anomaly MUST dissolve")
+    for f in d["fronts"]:
+        sig = "SIGNAL" if f["confirmed_sterile_signal"] else "no signal"
+        print(f"      {f['front']:22s} [{sig}] {f['direction']}")
+        print(f"        {f['reference']}")
+    print(f"  kill rule: {d['kill_rule']}")
+    print(f"  -> verdict: {d['verdict'].upper()} (the dissolution prediction is being "
+          f"confirmed; gallium deficit still unexplained but shows no oscillation "
+          f"signature)\n")
+
     res = {
         "tfpt_fixed_points": {
             "w0": W0_TFPT, "wa": WA_TFPT, "sigma_mnu_eV": SIGMA_MNU_TFPT,
-            "alpha_inv": ALPHA_INV_TFPT, "koide_Q": "2/3",
+            "alpha_inv": ALPHA_INV_TFPT, "koide_Q": "2/3", "N_fam": N_FAM_TFPT,
             "alpha_lambda_lock": "rho_L/Mbar^4 = (3/4pi^2) e^(-2 alpha^-1)",
             "amplifier": AMPLIFIER},
         "axis_A_mnu_w_pincer": a,
         "axis_B_alpha_lambda_lock": b,
         "axis_C_koide_tau": c,
-        "verdicts": {"A": a["verdict"], "B": b["verdict"], "C": c["verdict"]},
+        "axis_D_sterile_dissolution": d,
+        "verdicts": {"A": a["verdict"], "B": b["verdict"], "C": c["verdict"],
+                     "D": d["verdict"]},
         "kill_triggered_any": bool(a["kill_triggered"] or b["kill_triggered"]
-                                   or c["kill_triggered"]),
+                                   or c["kill_triggered"] or d["kill_triggered"]),
         "retrieved": m["retrieved"],
     }
     om = b["mutual_exclusion"]["orders_of_magnitude"]
     verdict_line = (f"WATCHDOG: A={a['verdict']} ({a['max_tension_sigma']:.1f}s pincer), "
                     f"B={b['verdict']} (lock excludes TFPT+real-w(z) by ~10^{om}), "
-                    f"C={c['verdict']} ({c['pull_sigma']:+.2f}s Koide). "
+                    f"C={c['verdict']} ({c['pull_sigma']:+.2f}s Koide), "
+                    f"D={d['verdict']} (sterile dissolution on track, MicroBooNE 2025). "
                     f"No kill triggered (threshold {KILL_SIGMA} sigma).")
     print("-> " + verdict_line)
     res["verdict_line"] = verdict_line

@@ -211,3 +211,17 @@ def aggregate(records: list[dict]) -> dict:
                                  "wilson95": [round(lo_s, 4), round(hi_s, 4)]},
             "nominal_rate_at_threshold": P_THRESHOLD,
             "min_comb_periods_gate": MIN_COMB_PERIODS}
+
+
+def combined_dsi_aggregate(agg: dict, *, efimov_kernel_fired: bool) -> dict:
+    """The aggregate kernel false-positive count over ALL gated DSI controls: the gated
+    cascade sequences (aftershocks + flares) plus the Efimov ladder — the one exactly-derived
+    non-TFPT DSI in nature, entered as one gated control via the EF.02 resolvability run."""
+    n = agg["n_gated"] + 1
+    k = agg["kernel_fp_frozen"]["fired"] + int(efimov_kernel_fired)
+    lo, hi = wilson_ci(k, n)
+    return {"n_gated_dsi_controls": n,
+            "members": f"{agg['n_gated']} gated cascade sequences + Efimov ladder (EF.02)",
+            "kernel_fired": k,
+            "rate": round(k / n, 4),
+            "wilson95": [round(lo, 4), round(hi, 4)]}

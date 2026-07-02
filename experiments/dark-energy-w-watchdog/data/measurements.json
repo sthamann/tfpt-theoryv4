@@ -10,5 +10,33 @@
      "rho_w0_wa": -0.9, "published_sigma_vs_LCDM": 4.2, "sn_family": "DES-SN5YR"}
   ],
   "overlap_note": "Pantheon+, Union3 and DES-SN5YR share substantial low-z SNe; their w0-wa constraints are correlated, so combining them as if independent (e.g. sqrt(sum of sigma^2)) manufactures a spurious >5 sigma. Headline = strongest single overlap-aware combination, not a product.",
-  "downloaded": "2026-06-15 (published summary values)"
+  "status_timeline": [
+    {
+      "date": "2026-06-15",
+      "entry": "baseline: DESI DR2 (arXiv:2503.14738) frozen combinations above; strongest overlap-aware exclusion of w=-1 is DESI+CMB+DES-SN5YR at 4.2 sigma published (~4.4 sigma reproduced)."
+    },
+    {
+      "date": "2026-07-02",
+      "entry": "2026 direction, recorded BEFORE DESI DR3: the evolving-DE preference is DISSOLVING, exactly as TFPT's w=-1 fixed point predicts.",
+      "des_dovekie_recalibration": {
+        "reference": "DES collab., arXiv:2511.07517, MNRAS (2026) -- DES-Dovekie recalibration of DES-SN5YR",
+        "note": "found an input-file error in DES-SN5YR: the 9 SALT3 calibration-variant weights were rounded to 0.3 instead of 1/sqrt(9)=0.33, so the calibration-systematic weights summed to 0.81 instead of 1, underestimating the total photometric uncertainty by ~20%. Full recalibration (new cross-calibration incl. HST white dwarfs + Gaia, retrained SALT3).",
+        "w0": -0.803, "sigma_w0": 0.054, "wa": -0.72, "sigma_wa": 0.21,
+        "combination": "DES-Dovekie + CMB (Planck+ACT+SPT) + DESI DR2",
+        "significance_vs_LCDM_sigma": 3.2,
+        "significance_note": "3.2 sigma, reduced from 4.2 sigma for DES-SN5YR; equivalent to Bayesian odds ~5:1 -- 'only a weak preference for evolving dark energy' (paper's own wording)"
+      },
+      "bayesian_reanalysis": {
+        "reference": "Ong, Yallup & Handley, arXiv:2603.05472 (2026) -- nested-sampling evidences (PolyChord), Ockham/Jeffreys-Lindley penalty",
+        "desi_dr2_cmb_only_lnB": -0.57, "desi_dr2_cmb_only_lnB_sigma": 0.26,
+        "desi_dr2_cmb_only_note": "the DESI collaboration's 3.1 sigma frequentist preference for w0waCDM from DESI DR2 + CMB alone is ELIMINATED: ln B = -0.57 +- 0.26, modestly favouring LCDM",
+        "desi_dr2_cmb_dovekie_lnB": -0.01, "desi_dr2_cmb_dovekie_lnB_sigma": 0.27,
+        "desi_dr2_cmb_desy5_lnB": 3.32, "desi_dr2_cmb_desy5_lnB_sigma": 0.27,
+        "desy5_note": "with the ORIGINAL DES-SN5YR calibration the preference survives (ln B = +3.32 +- 0.27, 3.07 +- 0.10 sigma) -- traced to the calibration error, which put DES-SN5YR in 2.95 sigma conflict with DESI DR2 within LCDM (1.96 sigma after correction). 'With the calibration corrected, the Bayesian evidence for dynamical dark energy vanishes.'",
+        "union3_note": "Union3-driven pulls REMAIN: published frequentist 3.8 sigma (DESI DR2 + CMB + Union3, not recalibrated); Bayesian ln B = +1.37 +- 0.27 (2.23 +- 0.15 sigma) for the same triplet"
+      },
+      "surviving_pulls": "strongest surviving frequentist exclusions of w=-1: corrected DES-Dovekie combination 3.2 sigma (published); Union3 combination 3.8 sigma frequentist but only 2.23 sigma Bayesian. The 2025 4.2-4.4 sigma headline is now known to be calibration-inflated."
+    }
+  ],
+  "downloaded": "2026-06-15 (published summary values); status timeline updated 2026-07-02"
 }

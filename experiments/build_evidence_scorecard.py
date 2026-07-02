@@ -272,15 +272,53 @@ ROWS = [
      "search_target", "published crust-cooling tables: Merritt+2016 (KS1731), Parikh+2019 (MXB1659), Fridriksson+2011 (XTEJ1701), Degenaar+2014 (EXO0748), Parikh+2017 (MAXIJ0556), Li/Ootes+2019 (AqlX-1)",
      "the omega=2.583 comb is special vs the off-kernel periodogram in the superposed-epoch stacked cooling ensemble",
      "data_limited"],
+    # HFQPO ladder (experiments/hfqpo-ladder): BH 3:2 pairs as the geometric relaxation ladder
+    ["X-ray", "BH HFQPO 3:2 pairs + geometric-ladder discriminator (hfqpo-ladder H1-H3)",
+     "ladder step 3/2 exact (N_fam=3); third tooth nu_3=(3/2)nu_u (661.5/414/252/363 Hz); "
+     "NO integer harmonics",
+     "4 pairs consistent with exact 3/2 (chi2 p=0.78) BUT J1859+226 breaks universality at "
+     "9.2 sigma AND anchored selection null (Boutelier/Torok equal-rms window at the 3/2 "
+     "crossing) manufactures the 4-of-5 cluster in 18.5% of trials -> cluster cheap; NO "
+     "published x1.5 tooth search (teeth inside the searched RXTE band); only published "
+     "third-frequency structures are integer lines (92=184/2, 34/68) favouring the "
+     "GR-harmonic alternative; archival RXTE PCA reanalysis designed (prereg YAML), not run",
+     None, "search_target", "relaxation-ladder step (non-canonical HFQPO mapping; coincidence-risk)",
+     "search_target", "published RXTE tables: RM06, Motta+2014a/2022, Belloni+2012 (hfqpo-ladder)",
+     "a >=4sigma third QPO at 1.5*nu_u with no integer line (ladder hit, [C]-tier) OR an "
+     "integer line with no tooth (kernel reading dead)", "data_limited"],
+    # strange-metal comb (experiments/strange-metal-comb): first laboratory bound on the comb
+    ["condensed matter", "comb ripple on the strange-metal omega/T master curve (LSCO x=0.24)",
+     "log-periodic ripple at omega=2.583, eps=0.0173 decorating the Planckian sigma1(omega/T) "
+     "master curve (seam T=4c3 kappa = KMS/Planckian bound)",
+     "data_limited: Michon+2023 open data (11227 pts, 2.92 comb periods, clears gate); "
+     "omega=2.583 NOT special (primary p=0.30, detrend-robust; conservative per-T shift null "
+     "p=0.68, 95% amplitude floor eps~0.19); lambda-battery Bonferroni p=0.063 null; "
+     "injections: predicted eps=1.73% detected 0-25% -> underpowered at predicted amplitude; "
+     "Drude controls (Au p=0.33, Cu p=0.14) quiet; Bi-2212 replication leg not publicly "
+     "retrievable",
+     None, "search_target", "boundary recovery kernel (dynamic, laboratory/non-horizon caveat)",
+     "search_target", "Michon+2023 Nat.Commun. 14:3033 open data (Yareta DOI, CC-BY-4.0) + "
+     "Ordal Au/Cu controls (strange-metal-comb)",
+     "omega=2.583 special vs off-kernel periodogram in >=2 independent compounds",
+     "data_limited"],
     # DSI false-positive control (experiments/dsi-false-positive-control): detector specificity
-    ["cross-domain", "DSI false-positive control: frozen comb on non-TFPT cascades",
-     "kernel omega=2.583 must NOT fire on generic Omori/DSI relaxations",
-     "4 aftershock cascades (USGS ComCat, 17654 events) + 4 GOES flare sequences (1076 flares); "
-     "4/8 pass the 2.8-period gate; kernel FP 0/4 (Wilson95 [0,0.49]); controls DO show "
-     "NON-kernel DSI (flares lambda~2.9-3.9) -> detector specific, existing comb nulls informative",
+    # (extended 2026-07-02: Efimov ladder + glass/MCT textbook negative controls)
+    ["cross-domain", "DSI false-positive control: frozen comb + textbook negative controls "
+     "(Efimov, glass/MCT)",
+     "kernel omega=2.583 must NOT fire on generic Omori/DSI relaxations; frozen bend 2.7095 "
+     "must NOT be universal in boundary-less two-step relaxation",
+     "4 aftershock cascades (17654 events) + 4 GOES flare sequences (1076 flares), 4/8 gated; "
+     "PLUS Efimov ladder (Cs/7Li/39K, lambda=e^(pi/s0)=22.69) gated: kernel FP 0/5 over all "
+     "gated DSI controls (Wilson95 [0,0.43]); Efimov measured 21.3+-1.1 is 8.9 sigma from "
+     "TFPT lambda=11.39, detector 0/25 on the Efimov comb while localising omega=2.01; "
+     "glass/MCT (7 systems): gamma spans [2.2,2.8] (4x meas. error), locked universal bend "
+     "rejected ~4.9 sigma -> bend system-dependent, not generic; flares show own non-kernel "
+     "DSI (lambda~2.9-3.9) -> detector specific, nulls informative",
      None, "search_target", "detector specificity control (universal-DSI base rate)",
-     "search_target", "USGS ComCat + NGDC GOES XRS (dsi-false-positive-control)",
-     "kernel omega fires on generic cascades well above nominal 5%", "consistent"],
+     "search_target", "USGS ComCat + NGDC GOES XRS + Efimov cold-atom lit. + MCT lit. "
+     "(dsi-false-positive-control)",
+     "kernel fires on generic cascades well above 5%, OR Efimov inseparable from kernel, OR "
+     "glassy gamma clusters on 2.7095", "consistent"],
     # comb-meta-limit (experiments/comb-meta-limit): first quantitative UL on the comb amplitude eps
     ["cross-domain", "meta-analytic UL on recovery-comb amplitude eps (omega=2.583)",
      "eps = exp(-pi^2/ln((3/2)^6)) = 0.0173 (~2%)",
@@ -294,9 +332,12 @@ ROWS = [
      "residual 2.62e-9+/-0.45", 0.58, "bridge", "HVP (dispersive)",
      "downstream_bridge", "Fermilab 2025 + WP2020", "residual incompatible with 2.879e-9", "consistent"],
     ["lab", "muon g-2 Delta a_mu (WP2025 lattice)", "2.879e-9",
-     "residual 0.39e-9+/-0.65", 3.86, "bridge", "HVP (lattice)",
+     "residual 0.39e-9+/-0.64 (WP2025 sigma corrected to 62)", 3.92, "bridge", "HVP (lattice)",
      "downstream_bridge", "Fermilab 2025 + arXiv:2505.21476",
-     "lattice HVP consolidates and residual stays ~0", "tension"],
+     "lattice HVP consolidates and residual stays ~0; dated 2026-07-02: a data-driven HVP "
+     "consensus consistent with lattice/WP25 (CMD-3-side) kills the bridge (+3.9 sigma "
+     "today); a KLOE-side dispersive consensus restores <1 sigma. Watch: MUonE (Phase-1 2025 "
+     "analysed), BaBar 2026 pipi (stays KLOE-side), TI WP-3 ~2027-28", "tension"],
     ["lab", "rare kaon BR(K+ -> pi+ nu nu)", "9.45e-11",
      "NA62 2016-2024 (9.6 +1.9 -1.8)e-11", -0.08, "bridge", "short-distance QCD",
      "downstream_bridge", "NA62 arXiv:2604.12649", "BR(K+) outside [7,12]e-11", "consistent"],
@@ -423,7 +464,12 @@ ROWS = [
      "prediction_of_record", "internal identity", "identity fails", "consistent"],
     # ---- dark-energy watchdog (P2) ----
     ["cosmo", "dark-energy equation of state w", "w = -1 (cosmological constant)",
-     "DESI DR2 overlap-aware: strongest single combo 4.4 sigma (naive product 6.6 sigma is spurious)",
+     "DESI DR2 overlap-aware: strongest single combo 4.4 sigma (naive product 6.6 sigma is "
+     "spurious); 2026 timeline (before DR3): DES-Dovekie recalibration (arXiv:2511.07517) "
+     "cuts 4.2->3.2 sigma (calibration error in DES-SN5YR); Bayesian reanalysis "
+     "(arXiv:2603.05472) eliminates the DESI+CMB-only preference (ln B=-0.57) -- the "
+     "preference is dissolving as w=-1 requires; Union3 frequentist 3.8 sigma (2.23 Bayesian) "
+     "remains",
      None, "prediction", "Lambda = constant vacuum", "prediction_of_record",
      "dark-energy-w-watchdog (DESI DR2, overlap-aware)",
      "w != -1 at >=5 sigma in a single systematics-controlled overlap-aware combination",
@@ -462,6 +508,18 @@ ROWS = [
      "prediction", "PMNS CP phase (hexagonal mu6 unit, sheet-split)", "prediction_of_record",
      "neutrino-mixing (NuFIT 6.0); sharpens with DUNE/HyperK",
      "delta_nu_CP excludes 240 deg at >=3 sigma", "consistent"],
+    # sterile-neutrino dissolution watchdog (fixed-point-watchdog axis D): N_fam=3 leaves
+    # no slot for a 4th light state -- the short-baseline anomalies must dissolve.
+    ["lab", "sterile-neutrino dissolution watchdog (N_fam=3)",
+     "N_fam = 3 exactly (no 4th light state)",
+     "MicroBooNE two-beam (Nature 648, 64-69 (2025)) excludes single-sterile LSND/MiniBooNE "
+     "at 95% CL and cuts into gallium/BEST space; gallium deficit persists unexplained (no "
+     "oscillation signature); JSNS2 running (no excess); SBND+ICARUS decide this decade",
+     None, "prediction", "E8 family counting (D5+A3+mu4; no spare slot)",
+     "prediction_of_record",
+     "fixed-point-watchdog axis D (Nature 648 (2025); arXiv:2512.07159, 2602.06274; SBN 2026)",
+     "any confirmed sterile oscillation signal at >= 5 sigma (systematics-controlled; "
+     "e.g. joint SBND+ICARUS or JSNS2-II)", "consistent"],
     # ---- kaon flavor-bridge ratio (P2) ----
     ["CKM", "rare kaon ratio R_K = KL/K+", "3.33/9.45 = 0.35238",
      "geometry consistent (delta_CKM +1.45s, Jarlskog -0.07s, K+ -0.08s); KOTO KL not at SM reach",
