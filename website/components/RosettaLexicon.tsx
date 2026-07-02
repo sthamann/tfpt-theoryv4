@@ -77,7 +77,7 @@ const LEXICON: { term: string; reading: string }[] = [
   {
     term: "SEAM.EQUIV.01 (keystone)",
     reading:
-      "The keystone, now closed modulo cited theorems (not solved): the raw reflection-positive seam state IS the holomorphic (E₈)₁ net at τ=i. The target is pinned at every computable level by an explicit lattice model (v367/v368) and the S3 stack (v376–v379), Lean-pinned (FORM.SEAM.MMST.01) to the published MMST/Adamo theorems; the residual is the cited continuum scaling-limit existence only (v336). The role Einstein’s ‘c = const’ plays — TFPT’s one irreducible structural postulate; its conformal-deck face QGEO.SYM.01 is a corollary.",
+      "The keystone, now closed modulo cited theorems (not solved): the raw reflection-positive seam state IS the holomorphic (E₈)₁ net at τ=i. The target is pinned at every computable level by an explicit lattice model (v367/v368) and the S3 stack (v376–v379), Lean-pinned (FORM.SEAM.MMST.01) to the published MMST/Adamo theorems; the residual is the cited continuum scaling-limit existence only (v336; extension leg on the peer-reviewed crossed-product package, realisation at invariant level, v469; stays [O]). The role Einstein’s ‘c = const’ plays — TFPT’s one irreducible structural postulate; its conformal-deck face QGEO.SYM.01 is a corollary.",
   },
 ];
 

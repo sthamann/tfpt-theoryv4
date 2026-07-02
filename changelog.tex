@@ -60,6 +60,117 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-07-02 (\texttt{v469}/\texttt{v470} --- the closure-route round on the two named targets: the \texttt{SEAM.EQUIV.01} extension leg re-founded on 1995--2001 peer-reviewed crossed-product theorems $+$ the realisation axiom reduced to invariant level; the $\alpha^3$ level $=$ the \emph{computed} bulk Chern invariant $+$ the seam $F$-normalisation $=$ the embedding index $k_Y{=}5/3$; both targets stay \mO)}
+\begin{itemize}
+\item \textbf{\texttt{v469\_seam\_crossedproduct\_route.py} (\texttt{SEAM.EQUIV.CROSSEDPRODUCT.01}).}
+The $128$-spinor extension leg of \texttt{SEAM.EQUIV.01} no longer rests on 2024/2025 preprints:
+\mE\ the $SO(16)_1$ spinor has $h_s{=}N/16{=}16/16{=}1{\in}\Z$, so its statistics phase is $+1$ ---
+\emph{exactly} the Longo--Rehren locality criterion --- and the $\Z_2$ simple-current crossed product
+$SO(16)_1{\rtimes}\{1,s\}$ is a \emph{local} index-$2$ extension by the peer-reviewed subfactor package
+(Longo--Rehren, Rev.\ Math.\ Phys.\ 7 (1995); the level-$1$ $so(N)$ net with its DHR sectors from
+even-CAR: B\"ockenhauer, Rev.\ Math.\ Phys.\ 8 (1996); simple-current extensions of nets:
+B\"ockenhauer--Evans, Comm.\ Math.\ Phys.\ 197 (1998)); KLM (Comm.\ Math.\ Phys.\ 219 (2001)) gives
+$\mu(B){=}4/2^2{=}1$ $\Rightarrow$ holomorphic $\Rightarrow$ $(E_8)_1$ by the \texttt{v463} pin.
+The AGT/AMT lattice-VOA route (\texttt{v459}) is \emph{demoted to an independent second witness}.
+\mE\ the index-$4$ $\mu_4$ glue runs on the same integer: $h(J^k){=}\{1,1,1\}$ for $k{=}1,2,3$
+(the \texttt{v125} isotropy $q(k(1,1)){=}k^2$ at net level), $\mu{=}16/4^2{=}1$, same endpoint.
+\mE\ the realisation input is reduced from model fiat to \emph{invariants} (R1$'$): quasi-free
+\mC\ (\texttt{v155}/\texttt{v160}) $+$ gap \mE\ (\texttt{v302}) $+$ class D $+$ $c_-{=}8$ \mE\
+(\texttt{v456}, from P1), with the invariants \emph{computed} --- per-copy FHS Chern $|C|{=}1$ vs $0$
+(control), $\nu{=}16{\times}|C|{=}16$, $c_-{=}\nu/2{=}8$ --- and $\nu\equiv 0\ (\mathrm{mod}\ 16)$ is
+exactly Kitaev's class-D phase whose edge admits a purely bosonic description $=$ the $(E_8)_1$
+level-$1$ state (Ann.\ Phys.\ 321 (2006), sixteen-fold way); the phase-invariance of $c_-$ is cited
+(Kapustin--Spodyneiko, PRB 101 (2020); Kim et al., PRL 129 (2022)). \mO\ \emph{not closed}: the cited
+theorems stay cited; \texttt{SEAM.EQUIV.01} stays \mO.
+\item \textbf{Lean hardening.} \texttt{TfptCarrier/SeamResidualAxiom.lean} gains the \emph{parallel}
+peer-reviewed derivation \texttt{seamResidualClosed$'$}: the invariant-level axiom
+\texttt{collar\_invariants} (R1$'$) $+$ \emph{one} combined 1995--2001 package
+\texttt{crossedproduct\_route\_theorem}; the new joints are kernel facts with \emph{no} axioms ---
+\texttt{lr\_locality\_integer} ($h_s{=}16/16{\in}\Z$), \texttt{glue\_locality\_integers}
+($\mu_4$ $h(J^k){\in}\Z$), \texttt{klm\_holomorphic} ($4/2^2{=}1$, $16/4^2{=}1$),
+\texttt{sixteenfold\_pin} ($\nu{=}16{\equiv}0\bmod 16$, $c_-{=}8$), bundled as
+\texttt{crossedproduct\_arithmetic} (\texttt{[propext]} only); \texttt{\#print axioms
+seamResidualClosed$'$} $=$ exactly four; the original \texttt{seamResidualClosed} (AGT/AMT witness)
+is kept unchanged as the independent second route; \texttt{lake build} OK ($3285$ jobs).
+\item \textbf{\texttt{v470\_alpha\_inflow\_level.py} (\texttt{ALPHA.QUILLEN.INFLOW.01}).}
+Both residuals left on \texttt{ALPHA.QUILLEN.EXACT.01} after \texttt{v433}--\texttt{v435} are
+upgraded. \mE\ target re-verified ($\ainv{=}137.0359992168$; Quillen split ${<}10^{-35}$).
+\mC\ \emph{the level is computed, not minimal}: the $a^3$ coefficient $k_0{=}1$ \emph{equals} the
+FHS bulk Chern invariant $|C|{=}1$ of the \emph{same} p$+$ip collar that realises S3
+(\texttt{v367}/\texttt{v461}) --- ``why exactly $1$'' is answered by computation plus the cited
+inflow identification (TKNN PRL 49 (1982) / Avron--Seiler--Simon PRL 51 (1983) quantisation;
+Callan--Harvey, Nucl.\ Phys.\ B250 (1985) inflow; APS 1975 / Alvarez-Gaum\'e--Della~Pietra--Moore
+1985 / Witten, Rev.\ Mod.\ Phys.\ 88 (2016) $\eta{=}$CS part of $\delta\log\det$; Quillen 1985 /
+Bismut--Freed 1986 determinant-line integrality), \emph{replacing} \texttt{v435}'s minimality
+assumption. \mE\ $k_Y{=}\operatorname{tr}(Y^2)/\operatorname{tr}(T_3^2){=}(5/6)/(1/2){=}5/3$
+(Ginsparg, Phys.\ Lett.\ B197 (1987)): $(3/5){\times}\tfrac{41}{6}{=}\tfrac{41}{10}{=}b_1$ --- the
+``GUT $3/5$'' \emph{is} the inverse embedding index; $\tfrac{41}{6}{=}\tfrac{20}{3}{+}\tfrac16$
+(carrier decomposition). \mC\ the seam $F$-normalisation (the one \mC\ of \texttt{v434}) is
+\emph{retyped}: once the seam net is $(E_8)_1$ level $1$, $\langle JJ\rangle{=}k/(z{-}w)^2$ is fixed
+by $k_Y$ --- level-$1$ current-algebra rigidity, zero independent content, a face of
+\texttt{SEAM.EQUIV.01} (per the \texttt{v382} typing). \mE\ \emph{structural unification}: one
+invertible phase, two quantised responses --- $c_-{=}8$ (gravitational, feeds
+\texttt{SEAM.EQUIV.01}/S3) and $C{=}1$ ($U(1)$, feeds EM1) --- so closing R1$'$ feeds \emph{both}
+named targets. \mO\ \emph{not closed}: the bridge lemma ``$\delta\log\det_\zeta(\mathrm{seam}){=}$
+the inflow response'' stays the named cited step; \texttt{ALPHA.QUILLEN.EXACT.01} stays \mO;
+$\ainv$ stays \mE.
+\item \textbf{Integration.} Both registered in \texttt{run\_all.py} $+$
+\texttt{script\_registry.csv} (cluster \texttt{frontier}); ledger rows
+\texttt{SEAM.EQUIV.CROSSEDPRODUCT.01} $+$ \texttt{ALPHA.QUILLEN.INFLOW.01};
+\texttt{FORM.SEAM.RESIDUAL.01} updated (the \texttt{seamResidualClosed$'$} route); the exact joints
+Wolfram-mirrored ($365\to368$: the LR/glue locality integers, the KLM $\mu$-arithmetic, the
+sixteen-fold pin, the $k_Y{=}5/3$/$b_1$ identities); cited in \texttt{tfpt\_1} ($\alpha$ fixed point
+$+$ EM-Ward residual prose), \texttt{tfpt\_research\_contracts} (seam residual $+$ Lean section),
+\texttt{introduction} (closure ledger), \texttt{tfpt\_5\_redteam} (Target~A residual wording) and
+the README/website status surfaces; exploration provenance
+\texttt{experiments/tfpt-discovery/closure\_route\_*.py} (2026-07-02 note in
+\texttt{experiments/next.txt}). Suite \textsc{all checks passed} through \texttt{v470}.
+Curated version bumped to \textbf{v5.4} (Zenodo deposit updated).
+\end{itemize}
+
+\subsection*{2026-07-02 (\texttt{v467}/\texttt{v468} --- two named post-hoc \mO\ flavor candidates, record unchanged: the three ${\sim}2\sigma$ mixing tensions as \emph{one} third-generation $-\varphi_0$ pattern, and the splitting ratio $\Delta m^2_{21}/\Delta m^2_{31}=|J_{\mathrm{PMNS}}|$)}
+\begin{itemize}
+\item \textbf{\texttt{v467\_thirdgen\_mixing\_pattern.py} (\texttt{FLAV.THIRDGEN.PATTERN.01}).} The suite's
+three ${\sim}2\sigma$ mixing tensions ($\sin^2\theta_{13}$ $+2.0\sigma$, $\sin^2\theta_{23}$ $+1.76\sigma$,
+$|V_{cb}|$ $+1.79\sigma$; \texttt{v307}) are exactly the three \emph{third-generation} channels and share
+\emph{one} relative deviation $-5.36\%\pm1.67\%$ --- non-zero at $3.2\sigma$, $-0.03\sigma$ from $-\varphi_0$.
+\textbf{[E]} vocabulary identities: $\lambda_C^2{=}\varphi_0(1{-}\varphi_0)$ (the frozen Cabibbo);
+$\sin^2\theta_{23}{=}(1{-}\varphi_0)/2\Leftrightarrow\cos2\theta_{23}{=}\varphi_0$; the suppression size
+$\varphi_0{=}5.3\%$ sits inside the seam-gapped band $(2/3)^6{=}8.8\%$ (\texttt{v393}). \textbf{[N]} the
+ladder-base forms $\lambda_C^2e^{-5/6}{=}0.021880$ / $(1{-}\varphi_0)/2{=}0.473414$ /
+$\lambda_C^2/(1{+}\lambda_C){=}0.041119$ drop the joint four-observable $\chi^2$ from $10.4$ to $0.11$ with
+\emph{zero} new parameters; $|V_{ub}|$ (no bare $\varphi_0$) and the $1$--$2$ channels stay untouched and
+correct (dressing $\lambda_C$ would fail at $-24\sigma$ --- scope checked, not chosen); Daya~Bay alone already
+prefers the pattern form ($\Delta\chi^2{=}4.3$). \textbf{[C] honest:} post-hoc ($5/16$ equally-simple dressings
+fix the two PMNS tensions; $(1{-}\varphi_0)/(1{-}c_3)$/resolvent degenerate ${<}1.4\%$). \textbf{[O]} no
+seam-transport derivation (the Bernoulli-variance reading $\lambda_Y^2{=}\mathrm{Var}[\mathrm{Bernoulli}(\varphi_0)]$
+is an exact identity but only an interpretation) --- the frozen record (\texttt{v84}/\texttt{REG.FREEZE.01})
+is \emph{unchanged}. \textbf{[X]} pre-registered, symmetric: $\theta_{13}$ stable at $0.0231$ kills the pattern,
+at ${\sim}0.0219$ (sub-1\%) kills the record's bare-$\varphi_0$ reading, exclusive $|V_{cb}|{\sim}0.0395$ kills
+both --- JUNO-era reactors $+$ Belle~II decide. Python-only.
+\item \textbf{\texttt{v468\_dm2\_ratio\_jarlskog.py} (\texttt{FLAV.DM2RATIO.01}).} The splitting ratio
+$\Delta m^2_{21}/\Delta m^2_{31}$ was previously \emph{unpredicted}; the frozen PMNS matrix
+(\texttt{v9}/\texttt{v268}/\texttt{v270}, $\delta{=}4\pi/3$) has one canonical derived CP invariant, and
+\textbf{[N]} $|J_{\mathrm{PMNS}}|{=}0.029653$ meets the NuFIT~6.0 measured ratio $0.029805\pm0.000792$ at
+$-0.19\sigma$ (equivalently $m_2/m_3{=}\sqrt{|J|}{=}0.17220$ vs $0.17264(229)$) --- zero dials.
+\textbf{[N]} the informal \texttt{tfpt\_2} table heuristic $m_2/m_3{\sim}\pi\varphi_0{=}0.16704$ (a ``$\sim$''
+entry, never frozen) is now $-2.44\sigma$ and is \emph{superseded as the comparator}. \textbf{[C]} spectrum
+consistency: $\Sigma m_\nu{=}m_3(1{+}\sqrt{|J|}){=}0.0588$ eV reproduces the documented $0.0586$ eV
+(\texttt{v272}); no absolute number is added. \textbf{[O]} no mechanism (the $\mu\tau$ texture gives
+$\theta_{13}{=}0$ at leading order). \textbf{[X]} JUNO shrinks the window ${\sim}4\times$; adopting the
+\texttt{v467} pattern would shift $|J|\to0.028849$ ($-1.21\sigma$ today) --- the two candidates
+\emph{cross-discriminate} at JUNO precision. Python-only.
+\item \textbf{Integration.} Both registered in \texttt{run\_all.py} and \texttt{script\_registry.csv}
+(cluster \texttt{neutrinos}); ledger rows \texttt{FLAV.THIRDGEN.PATTERN.01} and \texttt{FLAV.DM2RATIO.01}
+(both \mO\ candidates); cited in \texttt{tfpt\_2} (\S~Neutrinos: pressure-point block $+$ new candidate
+paragraphs, the $m_2/m_3$ table row retyped to the $|J|$ comparator, the octant prose kept honest ---
+record does not select, the candidate would), \texttt{introduction} (closure ledger), \texttt{tfpt\_4\_frontier}
+(live kill-test board) and \texttt{tfpt\_5\_redteam} (seed-hyperplane caption); \texttt{v328}'s
+``single outlier'' wording scoped to the seed observables; exploration provenance
+\texttt{experiments/tfpt-discovery/pattern\_hunt\_pmns\_dressing.py} (2026-07-02 note in
+\texttt{experiments/next.txt}); Python-only (flagged in the Wolfram README).
+\end{itemize}
+
 \subsection*{2026-07-01 (\texttt{v466} --- a sixth seed channel from a new measurement sector: the charged-lepton mass ratio $m_e/m_\mu{=}\tfrac{12}{7}\varphi_0^2$ back-solves the same axiom seed to $-0.11\%$, extending the empirical over-determination to \emph{five} sectors)}
 \begin{itemize}
 \item \textbf{\texttt{v466\_seed\_leptonmass\_channel.py} (\texttt{SEED.LEPTONMASS.01}).} The seed

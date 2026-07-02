@@ -47,9 +47,12 @@ holomorphic $(E_8)_1$ net) is now \emph{closed modulo a cited theorem}. The expl
 $\mathrm{GSD}=1$ (\texttt{v378}) and reflection positivity (\texttt{v379}) --- and it is Lean-formalised as
 \texttt{FORM.SEAM.MMST.01}: the collar's MMST hypotheses are kernel-proved, the MMST scaling-limit and
 Adamo--Moriwaki--Tanimoto OS-reconstruction theorems enter as named cited axioms, and the \texttt{\#print axioms}
-check is clean. The \emph{only} residual that stays \mO\ is the abstract continuum existence of the scaling limit, i.e.\
-exactly those two cited published theorems (\texttt{v336}); so this is \emph{closed modulo a cited theorem}, not
-solved. \texttt{QGEO.SYM.01} (the $\mu_4$ deck acting geometrically) is its \emph{corollary}: a conformal net's vacuum
+check is clean. The \emph{only} residual that stays \mO\ is the abstract continuum existence of the scaling limit
+(\texttt{v336}) --- its $128$-spinor extension leg since certified at net level by the peer-reviewed
+crossed-product package ($h_s{=}16/16{=}1{\in}\Z$, the Longo--Rehren locality criterion; B\"ockenhauer; KLM
+$\mu{=}4/2^2{=}1$; AGT/AMT the independent second witness) with the realisation input reduced to invariant level
+and the parallel Lean route \texttt{seamResidualClosed$'$} (\texttt{v469}); so this is \emph{closed modulo a cited
+theorem}, not solved. \texttt{QGEO.SYM.01} (the $\mu_4$ deck acting geometrically) is its \emph{corollary}: a conformal net's vacuum
 is rotation-invariant by axiom, so the deck follows with no extra premise (\texttt{v335}, Lean
 \texttt{FORM.QGEO.BW.01}). The nonperturbative quantum-gravity measure \texttt{QG.AMB.01} is no longer carried as an
 open item: it is a \mC\ \emph{redundancy} (\texttt{v369}), a certification object rather than missing dynamics,

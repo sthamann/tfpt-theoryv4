@@ -8,8 +8,8 @@
   "date": "2026-06-12"
  },
  "introduction::subsection::In plain words::1": {
-  "hash": "5c765a4e98e5",
-  "date": "2026-06-23"
+  "hash": "4a1aba8db496",
+  "date": "2026-07-02"
  },
  "introduction::subsection::Sharper still: one anchor $a=(1,1,2)$, and $E_8$ as a compiler hull \\texorpdfstring{(\\mE)}{}::1": {
   "hash": "b79198ae8f83",
@@ -64,8 +64,8 @@
   "date": "2026-06-23"
  },
  "introduction::subsection::The closure ledger: what is done, and what genuinely remains::1": {
-  "hash": "6267d362db9a",
-  "date": "2026-06-23"
+  "hash": "8fb07c09cf1d",
+  "date": "2026-07-02"
  },
  "introduction::section::Does this make the theory more probable?::1": {
   "hash": "540397fd6436",
@@ -108,8 +108,8 @@
   "date": "2026-06-12"
  },
  "tfpt_1_architecture_e8::section::The $D_5\\times A_3$ compiler: $E_8$ as a closure, not an input::1": {
-  "hash": "e5a812d391d9",
-  "date": "2026-06-23"
+  "hash": "86f91d1611e5",
+  "date": "2026-07-02"
  },
  "tfpt_1_architecture_e8::subsection::Carrier $=D_5=\\mathfrak{so}_{10}$ (proved)::1": {
   "hash": "291366279c88",
@@ -152,8 +152,8 @@
   "date": "2026-06-12"
  },
  "tfpt_1_architecture_e8::subsection::The EM closure: $\\ainv$ as an explicit fixed point (made explicit here)::1": {
-  "hash": "6783e1234021",
-  "date": "2026-06-28"
+  "hash": "b727ce58fa87",
+  "date": "2026-07-02"
  },
  "tfpt_1_architecture_e8::subsection::The decuple bridge (new, exact headline)::1": {
   "hash": "604a14549a07",
@@ -340,8 +340,8 @@
   "date": "2026-06-25"
  },
  "tfpt_2_standard_model::subsection::Closing the audit gates: is $M{=}41$, $K$, $Q$ derived or imported?::1": {
-  "hash": "2d67ed11e25a",
-  "date": "2026-06-13"
+  "hash": "784125cbc405",
+  "date": "2026-07-02"
  },
  "tfpt_2_standard_model::section::Mixing: CKM and PMNS from holonomy::1": {
   "hash": "250e0e9b01e6",
@@ -352,8 +352,8 @@
   "date": "2026-06-22"
  },
  "tfpt_2_standard_model::section::Neutrinos::1": {
-  "hash": "353fdf23fe2f",
-  "date": "2026-06-24"
+  "hash": "91365ff29deb",
+  "date": "2026-07-02"
  },
  "tfpt_2_standard_model::section::How the legacy layers simplify (bridge map)::1": {
   "hash": "f76d4592f628",
@@ -608,8 +608,8 @@
   "date": "2026-06-15"
  },
  "tfpt_4_frontier::section::Full quantum gravity --- induced from the boundary kernel::1": {
-  "hash": "73a3ee02ff28",
-  "date": "2026-06-25"
+  "hash": "d4dce6a3e41a",
+  "date": "2026-07-02"
  },
  "tfpt_4_frontier::section::Summary::1": {
   "hash": "78fae67d1189",
@@ -620,8 +620,8 @@
   "date": "2026-06-25"
  },
  "tfpt_5_redteam::front::(front matter)::1": {
-  "hash": "2fcf6c438ba1",
-  "date": "2026-06-23"
+  "hash": "ded62f1ada27",
+  "date": "2026-07-02"
  },
  "tfpt_5_redteam::section::Method::1": {
   "hash": "610fddcc2990",
@@ -652,8 +652,8 @@
   "date": "2026-06-24"
  },
  "tfpt_5_redteam::section::Outcome::1": {
-  "hash": "22922106b70f",
-  "date": "2026-07-01"
+  "hash": "d574550d4f38",
+  "date": "2026-07-02"
  },
  "tfpt_horizon_readouts::front::(front matter)::1": {
   "hash": "091987bff9bb",
@@ -696,12 +696,12 @@
   "date": "2026-06-25"
  },
  "tfpt_research_contracts::front::(front matter)::1": {
-  "hash": "7934edc59e50",
-  "date": "2026-06-24"
+  "hash": "275406ab0b78",
+  "date": "2026-07-02"
  },
  "tfpt_research_contracts::section::Research Contract 1 --- $(U_{\\mathrm{wall}})$::1": {
-  "hash": "3fd5d12ff4f2",
-  "date": "2026-06-30"
+  "hash": "692103046af3",
+  "date": "2026-07-02"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {
   "hash": "6d4b577571f2",
@@ -756,8 +756,8 @@
   "date": "2026-06-24"
  },
  "origin_theory::section::Honest status::1": {
-  "hash": "655a8a4b98e7",
-  "date": "2026-06-23"
+  "hash": "d3be9fd8f2bf",
+  "date": "2026-07-02"
  },
  "origin_theory::section::Appendix: computational verification::1": {
   "hash": "273bbb10f788",
@@ -780,8 +780,8 @@
   "date": "2026-06-27"
  },
  "tfpt_safeguards::section::Layer 3 --- the over-determination map (multiply vs.\\ compress)::1": {
-  "hash": "411740bec6ef",
-  "date": "2026-06-28"
+  "hash": "c8351278605c",
+  "date": "2026-07-02"
  },
  "tfpt_safeguards::section::Layer 4 --- the firewall and the No-Unit theorem::1": {
   "hash": "491326327cb7",
@@ -792,16 +792,16 @@
   "date": "2026-06-25"
  },
  "tfpt_safeguards::section::Layer 6 --- two independent reproduction paths::1": {
-  "hash": "8a2780d5ad34",
-  "date": "2026-06-25"
+  "hash": "f19efb4eca87",
+  "date": "2026-07-02"
  },
  "tfpt_safeguards::section::Layer 7 --- the red team::1": {
   "hash": "0a2585467b1c",
   "date": "2026-06-25"
  },
  "tfpt_safeguards::section::What would still falsify TFPT::1": {
-  "hash": "b2b997e0c1fb",
-  "date": "2026-06-25"
+  "hash": "f3470de65947",
+  "date": "2026-07-02"
  },
  "tfpt_safeguards::section::Summary --- the layered defense::1": {
   "hash": "5e1d4ffe1f64",

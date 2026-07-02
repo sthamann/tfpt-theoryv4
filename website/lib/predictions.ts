@@ -358,7 +358,8 @@ export const predictions: Prediction[] = [
       derivation: "\\sin^2\\theta_{13} = \\varphi_0\\,e^{-5/6}",
       tfptValue: "0.0231",
       measured: "0.02195 ± 0.00058",
-      deviation: "+2.0σ (the honest pressure point)",
+      deviation:
+        "+2.0σ (largest single pull; θ₂₃/V_cb sit at ~1.8σ — one named post-hoc [O] pattern candidate, v467, record unchanged)",
       source: "NuFIT 6.0 (2024)",
       decisive: "JUNO / global fit ~2026–2028",
     },
@@ -388,13 +389,13 @@ export const predictions: Prediction[] = [
     ],
     pdf: "/papers/tfpt_2_standard_model.pdf",
     description:
-      "The atmospheric angle is near-maximal in the μτ-symmetric limit; the octant is not selected by the present transport. DUNE addresses the ambiguity.",
+      "The atmospheric angle is near-maximal in the μτ-symmetric limit; the octant is not selected by the present transport (the record). DUNE addresses the ambiguity. A named post-hoc [O] candidate (v467) reads the 2–3 texture with the same −φ₀/2 seed shift as θ₁₂ — cos 2θ₂₃ = φ₀, i.e. sin²θ₂₃ = 0.4734 (+0.20σ), which would select the lower octant; the record is unchanged.",
     category: "Neutrino",
     confrontation: {
       derivation: "\\theta_{23} = 45^\\circ\\ (\\mu\\tau\\text{-symmetric})",
       tfptValue: "≈ 0.5 (octant not selected)",
       measured: "0.470 ± 0.017",
-      deviation: "+1.76σ (octant open)",
+      deviation: "+1.76σ (octant open; v467 [O] candidate cos 2θ₂₃ = φ₀ would give +0.20σ)",
       source: "NuFIT 6.0 (2024)",
       decisive: "DUNE / NOvA / T2K ~2030 (octant)",
     },
@@ -419,7 +420,7 @@ export const predictions: Prediction[] = [
     ],
     pdf: "/papers/tfpt_2_standard_model.pdf",
     description:
-      "The Majorana neutrino sector prefers normal ordering with a small effective mass; the NO floor Σm_ν = 0.0586 eV is consistent with the cosmological bound and is a near-term kill test (v272). The absolute scale is one seesaw ratio (M_R, the same single anchor as v_geo), while the full complex PMNS matrix and the leptonic CP strength J_PMNS = −0.0297 (data-consistent) are now assembled (v270). The leptonic CP phase is no longer an assigned texture but a Galois-forced relation to the leading (π/3) component of the quark phase: δ_PMNS = δ_CKM,lead + π = 240° (both powers of one hexagonal unit ρ = ζ₆; the lock is to the structural π/3, not the full measured γ ≈ 68.7° — so 240°, not 248.7°; v320), testable at DUNE/Hyper-K. LEGEND / nEXO / DUNE / KATRIN are the comparison surface.",
+      "The Majorana neutrino sector prefers normal ordering with a small effective mass; the NO floor Σm_ν = 0.0586 eV is consistent with the cosmological bound and is a near-term kill test (v272). The absolute scale is one seesaw ratio (M_R, the same single anchor as v_geo), while the full complex PMNS matrix and the leptonic CP strength J_PMNS = −0.0297 (data-consistent) are now assembled (v270). A named post-hoc [O] candidate (v468) proposes the previously unpredicted splitting ratio Δm²₂₁/Δm²₃₁ = |J_PMNS| = 0.029653 vs measured 0.029805(792) → −0.19σ (the informal πφ₀ heuristic, now −2.44σ, is superseded as comparator); JUNO decides. The leptonic CP phase is no longer an assigned texture but a Galois-forced relation to the leading (π/3) component of the quark phase: δ_PMNS = δ_CKM,lead + π = 240° (both powers of one hexagonal unit ρ = ζ₆; the lock is to the structural π/3, not the full measured γ ≈ 68.7° — so 240°, not 248.7°; v320), testable at DUNE/Hyper-K. LEGEND / nEXO / DUNE / KATRIN are the comparison surface.",
     category: "Neutrino",
     confrontation: {
       derivation: "\\text{normal ordering},\\ \\Sigma m_\\nu \\gtrsim 0.0586\\,\\mathrm{eV}",

@@ -49,7 +49,7 @@ const ROWS: Row[] = [
   },
   {
     layer: "Residual interfaces v_geo [O], G_net [C], F_transfer [C]",
-    status: "Numbered research contracts — the scale anchor (open), the metric inclusion and the transfer functor (closed modulo cited theorems)",
+    status: "Numbered research contracts — the scale anchor (open), the metric inclusion and the transfer functor (closed modulo cited theorems; extension leg on peer-reviewed crossed-product theorems, v469)",
     paper: "Doc 8",
     tone: "downstream",
   },

@@ -42,6 +42,2569 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-07-02",
+    "dateLabel": "2026-07-02",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v469"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v470"
+      },
+      {
+        "k": "t",
+        "v": " — the closure-route round on the two named targets: the "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.EQUIV.01"
+      },
+      {
+        "k": "t",
+        "v": " extension leg re-founded on 1995–2001 peer-reviewed crossed-product theorems "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the realisation axiom reduced to invariant level; the "
+      },
+      {
+        "k": "m",
+        "v": "\\alpha^3"
+      },
+      {
+        "k": "t",
+        "v": " level "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "computed"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " bulk Chern invariant "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the seam "
+      },
+      {
+        "k": "m",
+        "v": "F"
+      },
+      {
+        "k": "t",
+        "v": "-normalisation "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the embedding index "
+      },
+      {
+        "k": "m",
+        "v": "k_Y{=}5/3"
+      },
+      {
+        "k": "t",
+        "v": "; both targets stay "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v469_seam_crossedproduct_route.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.EQUIV.CROSSEDPRODUCT.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The "
+        },
+        {
+          "k": "m",
+          "v": "128"
+        },
+        {
+          "k": "t",
+          "v": "-spinor extension leg of "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " no longer rests on 2024/2025 preprints: "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the "
+        },
+        {
+          "k": "m",
+          "v": "SO(16)_1"
+        },
+        {
+          "k": "t",
+          "v": " spinor has "
+        },
+        {
+          "k": "m",
+          "v": "h_s{=}N/16{=}16/16{=}1{\\in}\\Z"
+        },
+        {
+          "k": "t",
+          "v": ", so its statistics phase is "
+        },
+        {
+          "k": "m",
+          "v": "+1"
+        },
+        {
+          "k": "t",
+          "v": " — "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "exactly"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the Longo–Rehren locality criterion — and the "
+        },
+        {
+          "k": "m",
+          "v": "\\Z_2"
+        },
+        {
+          "k": "t",
+          "v": " simple-current crossed product "
+        },
+        {
+          "k": "m",
+          "v": "SO(16)_1{\\rtimes}\\{1,s\\}"
+        },
+        {
+          "k": "t",
+          "v": " is a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "local"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " index-"
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": " extension by the peer-reviewed subfactor package (Longo–Rehren, Rev. Math. Phys. 7 (1995); the level-"
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "so(N)"
+        },
+        {
+          "k": "t",
+          "v": " net with its DHR sectors from even-CAR: Böckenhauer, Rev. Math. Phys. 8 (1996); simple-current extensions of nets: Böckenhauer–Evans, Comm. Math. Phys. 197 (1998)); KLM (Comm. Math. Phys. 219 (2001)) gives "
+        },
+        {
+          "k": "m",
+          "v": "\\mu(B){=}4/2^2{=}1"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " holomorphic "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " by the "
+        },
+        {
+          "k": "c",
+          "v": "v463"
+        },
+        {
+          "k": "t",
+          "v": " pin. The AGT/AMT lattice-VOA route ("
+        },
+        {
+          "k": "c",
+          "v": "v459"
+        },
+        {
+          "k": "t",
+          "v": ") is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "demoted to an independent second witness"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the index-"
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " glue runs on the same integer: "
+        },
+        {
+          "k": "m",
+          "v": "h(J^k){=}\\{1,1,1\\}"
+        },
+        {
+          "k": "t",
+          "v": " for "
+        },
+        {
+          "k": "m",
+          "v": "k{=}1,2,3"
+        },
+        {
+          "k": "t",
+          "v": " (the "
+        },
+        {
+          "k": "c",
+          "v": "v125"
+        },
+        {
+          "k": "t",
+          "v": " isotropy "
+        },
+        {
+          "k": "m",
+          "v": "q(k(1,1)){=}k^2"
+        },
+        {
+          "k": "t",
+          "v": " at net level), "
+        },
+        {
+          "k": "m",
+          "v": "\\mu{=}16/4^2{=}1"
+        },
+        {
+          "k": "t",
+          "v": ", same endpoint. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the realisation input is reduced from model fiat to "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "invariants"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (R1"
+        },
+        {
+          "k": "m",
+          "v": "'"
+        },
+        {
+          "k": "t",
+          "v": "): quasi-free "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "("
+        },
+        {
+          "k": "c",
+          "v": "v155"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v160"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " gap "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "("
+        },
+        {
+          "k": "c",
+          "v": "v302"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " class D "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "c_-{=}8"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v456"
+        },
+        {
+          "k": "t",
+          "v": ", from P1), with the invariants "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "computed"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " — per-copy FHS Chern "
+        },
+        {
+          "k": "m",
+          "v": "|C|{=}1"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " (control), "
+        },
+        {
+          "k": "m",
+          "v": "\\nu{=}16{\\times}|C|{=}16"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "c_-{=}\\nu/2{=}8"
+        },
+        {
+          "k": "t",
+          "v": " — and "
+        },
+        {
+          "k": "m",
+          "v": "\\nu\\equiv 0\\ (\\mathrm{mod}\\ 16)"
+        },
+        {
+          "k": "t",
+          "v": " is exactly Kitaev's class-D phase whose edge admits a purely bosonic description "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " level-"
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " state (Ann. Phys. 321 (2006), sixteen-fold way); the phase-invariance of "
+        },
+        {
+          "k": "m",
+          "v": "c_-"
+        },
+        {
+          "k": "t",
+          "v": " is cited (Kapustin–Spodyneiko, PRB 101 (2020); Kim et al., PRL 129 (2022)). "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not closed"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the cited theorems stay cited; "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Lean hardening."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier/SeamResidualAxiom.lean"
+        },
+        {
+          "k": "t",
+          "v": " gains the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "parallel"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " peer-reviewed derivation "
+        },
+        {
+          "k": "c",
+          "v": "seamResidualClosed$'$"
+        },
+        {
+          "k": "t",
+          "v": ": the invariant-level axiom "
+        },
+        {
+          "k": "c",
+          "v": "collar_invariants"
+        },
+        {
+          "k": "t",
+          "v": " (R1"
+        },
+        {
+          "k": "m",
+          "v": "'"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " combined 1995–2001 package "
+        },
+        {
+          "k": "c",
+          "v": "crossedproduct_route_theorem"
+        },
+        {
+          "k": "t",
+          "v": "; the new joints are kernel facts with "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "no"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " axioms — "
+        },
+        {
+          "k": "c",
+          "v": "lr_locality_integer"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "h_s{=}16/16{\\in}\\Z"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "c",
+          "v": "glue_locality_integers"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "h(J^k){\\in}\\Z"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "c",
+          "v": "klm_holomorphic"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "4/2^2{=}1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "16/4^2{=}1"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "c",
+          "v": "sixteenfold_pin"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\nu{=}16{\\equiv}0\\bmod 16"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "c_-{=}8"
+        },
+        {
+          "k": "t",
+          "v": "), bundled as "
+        },
+        {
+          "k": "c",
+          "v": "crossedproduct_arithmetic"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "[propext]"
+        },
+        {
+          "k": "t",
+          "v": " only); "
+        },
+        {
+          "k": "c",
+          "v": "#print axioms seamResidualClosed$'$"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " exactly four; the original "
+        },
+        {
+          "k": "c",
+          "v": "seamResidualClosed"
+        },
+        {
+          "k": "t",
+          "v": " (AGT/AMT witness) is kept unchanged as the independent second route; "
+        },
+        {
+          "k": "c",
+          "v": "lake build"
+        },
+        {
+          "k": "t",
+          "v": " OK ("
+        },
+        {
+          "k": "m",
+          "v": "3285"
+        },
+        {
+          "k": "t",
+          "v": " jobs)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v470_alpha_inflow_level.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "ALPHA.QUILLEN.INFLOW.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Both residuals left on "
+        },
+        {
+          "k": "c",
+          "v": "ALPHA.QUILLEN.EXACT.01"
+        },
+        {
+          "k": "t",
+          "v": " after "
+        },
+        {
+          "k": "c",
+          "v": "v433"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v435"
+        },
+        {
+          "k": "t",
+          "v": " are upgraded. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "target re-verified ("
+        },
+        {
+          "k": "m",
+          "v": "\\ainv{=}137.0359992168"
+        },
+        {
+          "k": "t",
+          "v": "; Quillen split "
+        },
+        {
+          "k": "m",
+          "v": "{<}10^{-35}"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "the level is computed, not minimal"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the "
+        },
+        {
+          "k": "m",
+          "v": "a^3"
+        },
+        {
+          "k": "t",
+          "v": " coefficient "
+        },
+        {
+          "k": "m",
+          "v": "k_0{=}1"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "equals"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the FHS bulk Chern invariant "
+        },
+        {
+          "k": "m",
+          "v": "|C|{=}1"
+        },
+        {
+          "k": "t",
+          "v": " of the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "same"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " p"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": "ip collar that realises S3 ("
+        },
+        {
+          "k": "c",
+          "v": "v367"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v461"
+        },
+        {
+          "k": "t",
+          "v": ") — “why exactly "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": "” is answered by computation plus the cited inflow identification (TKNN PRL 49 (1982) / Avron–Seiler–Simon PRL 51 (1983) quantisation; Callan–Harvey, Nucl. Phys. B250 (1985) inflow; APS 1975 / Alvarez-Gaumé–Della Pietra–Moore 1985 / Witten, Rev. Mod. Phys. 88 (2016) "
+        },
+        {
+          "k": "m",
+          "v": "\\eta{=}"
+        },
+        {
+          "k": "t",
+          "v": "CS part of "
+        },
+        {
+          "k": "m",
+          "v": "\\delta\\log\\det"
+        },
+        {
+          "k": "t",
+          "v": "; Quillen 1985 / Bismut–Freed 1986 determinant-line integrality), "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "replacing"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v435"
+        },
+        {
+          "k": "t",
+          "v": "'s minimality assumption. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "k_Y{=}\\operatorname{tr}(Y^2)/\\operatorname{tr}(T_3^2){=}(5/6)/(1/2){=}5/3"
+        },
+        {
+          "k": "t",
+          "v": " (Ginsparg, Phys. Lett. B197 (1987)): "
+        },
+        {
+          "k": "m",
+          "v": "(3/5){\\times}\\tfrac{41}{6}{=}\\tfrac{41}{10}{=}b_1"
+        },
+        {
+          "k": "t",
+          "v": " — the “GUT "
+        },
+        {
+          "k": "m",
+          "v": "3/5"
+        },
+        {
+          "k": "t",
+          "v": "” "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the inverse embedding index; "
+        },
+        {
+          "k": "m",
+          "v": "\\tfrac{41}{6}{=}\\tfrac{20}{3}{+}\\tfrac16"
+        },
+        {
+          "k": "t",
+          "v": " (carrier decomposition). "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the seam "
+        },
+        {
+          "k": "m",
+          "v": "F"
+        },
+        {
+          "k": "t",
+          "v": "-normalisation (the one "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "of "
+        },
+        {
+          "k": "c",
+          "v": "v434"
+        },
+        {
+          "k": "t",
+          "v": ") is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "retyped"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": once the seam net is "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " level "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\langle JJ\\rangle{=}k/(z{-}w)^2"
+        },
+        {
+          "k": "t",
+          "v": " is fixed by "
+        },
+        {
+          "k": "m",
+          "v": "k_Y"
+        },
+        {
+          "k": "t",
+          "v": " — level-"
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " current-algebra rigidity, zero independent content, a face of "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " (per the "
+        },
+        {
+          "k": "c",
+          "v": "v382"
+        },
+        {
+          "k": "t",
+          "v": " typing). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "structural unification"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": one invertible phase, two quantised responses — "
+        },
+        {
+          "k": "m",
+          "v": "c_-{=}8"
+        },
+        {
+          "k": "t",
+          "v": " (gravitational, feeds "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": "/S3) and "
+        },
+        {
+          "k": "m",
+          "v": "C{=}1"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "U(1)"
+        },
+        {
+          "k": "t",
+          "v": ", feeds EM1) — so closing R1"
+        },
+        {
+          "k": "m",
+          "v": "'"
+        },
+        {
+          "k": "t",
+          "v": " feeds "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "both"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " named targets. "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not closed"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the bridge lemma “"
+        },
+        {
+          "k": "m",
+          "v": "\\delta\\log\\det_\\zeta(\\mathrm{seam}){=}"
+        },
+        {
+          "k": "t",
+          "v": " the inflow response” stays the named cited step; "
+        },
+        {
+          "k": "c",
+          "v": "ALPHA.QUILLEN.EXACT.01"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\ainv"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Integration."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Both registered in "
+        },
+        {
+          "k": "c",
+          "v": "run_all.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "script_registry.csv"
+        },
+        {
+          "k": "t",
+          "v": " (cluster "
+        },
+        {
+          "k": "c",
+          "v": "frontier"
+        },
+        {
+          "k": "t",
+          "v": "); ledger rows "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.CROSSEDPRODUCT.01"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "ALPHA.QUILLEN.INFLOW.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "FORM.SEAM.RESIDUAL.01"
+        },
+        {
+          "k": "t",
+          "v": " updated (the "
+        },
+        {
+          "k": "c",
+          "v": "seamResidualClosed$'$"
+        },
+        {
+          "k": "t",
+          "v": " route); the exact joints Wolfram-mirrored ("
+        },
+        {
+          "k": "m",
+          "v": "365\\to368"
+        },
+        {
+          "k": "t",
+          "v": ": the LR/glue locality integers, the KLM "
+        },
+        {
+          "k": "m",
+          "v": "\\mu"
+        },
+        {
+          "k": "t",
+          "v": "-arithmetic, the sixteen-fold pin, the "
+        },
+        {
+          "k": "m",
+          "v": "k_Y{=}5/3"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "m",
+          "v": "b_1"
+        },
+        {
+          "k": "t",
+          "v": " identities); cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": " fixed point "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " EM-Ward residual prose), "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " (seam residual "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " Lean section), "
+        },
+        {
+          "k": "c",
+          "v": "introduction"
+        },
+        {
+          "k": "t",
+          "v": " (closure ledger), "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_5_redteam"
+        },
+        {
+          "k": "t",
+          "v": " (Target A residual wording) and the README/website status surfaces; exploration provenance "
+        },
+        {
+          "k": "c",
+          "v": "experiments/tfpt-discovery/closure_route_*.py"
+        },
+        {
+          "k": "t",
+          "v": " (2026-07-02 note in "
+        },
+        {
+          "k": "c",
+          "v": "experiments/next.txt"
+        },
+        {
+          "k": "t",
+          "v": "). Suite "
+        },
+        {
+          "k": "t",
+          "v": "all checks passed"
+        },
+        {
+          "k": "t",
+          "v": " through "
+        },
+        {
+          "k": "c",
+          "v": "v470"
+        },
+        {
+          "k": "t",
+          "v": ". Curated version bumped to "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "v5.4"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (Zenodo deposit updated)."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-02",
+    "dateLabel": "2026-07-02",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v467"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v468"
+      },
+      {
+        "k": "t",
+        "v": " — two named post-hoc "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": "flavor candidates, record unchanged: the three "
+      },
+      {
+        "k": "m",
+        "v": "{\\sim}2\\sigma"
+      },
+      {
+        "k": "t",
+        "v": " mixing tensions as "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "one"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " third-generation "
+      },
+      {
+        "k": "m",
+        "v": "-\\varphi_0"
+      },
+      {
+        "k": "t",
+        "v": " pattern, and the splitting ratio "
+      },
+      {
+        "k": "m",
+        "v": "\\Delta m^2_{21}/\\Delta m^2_{31}=|J_{\\mathrm{PMNS}}|"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v467_thirdgen_mixing_pattern.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "FLAV.THIRDGEN.PATTERN.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The suite's three "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}2\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " mixing tensions ("
+        },
+        {
+          "k": "m",
+          "v": "\\sin^2\\theta_{13}"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+2.0\\sigma"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\sin^2\\theta_{23}"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+1.76\\sigma"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "|V_{cb}|"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+1.79\\sigma"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "v307"
+        },
+        {
+          "k": "t",
+          "v": ") are exactly the three "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "third-generation"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " channels and share "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " relative deviation "
+        },
+        {
+          "k": "m",
+          "v": "-5.36\\%\\pm1.67\\%"
+        },
+        {
+          "k": "t",
+          "v": " — non-zero at "
+        },
+        {
+          "k": "m",
+          "v": "3.2\\sigma"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "-0.03\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " from "
+        },
+        {
+          "k": "m",
+          "v": "-\\varphi_0"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "[E]"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " vocabulary identities: "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_C^2{=}\\varphi_0(1{-}\\varphi_0)"
+        },
+        {
+          "k": "t",
+          "v": " (the frozen Cabibbo); "
+        },
+        {
+          "k": "m",
+          "v": "\\sin^2\\theta_{23}{=}(1{-}\\varphi_0)/2\\Leftrightarrow\\cos2\\theta_{23}{=}\\varphi_0"
+        },
+        {
+          "k": "t",
+          "v": "; the suppression size "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi_0{=}5.3\\%"
+        },
+        {
+          "k": "t",
+          "v": " sits inside the seam-gapped band "
+        },
+        {
+          "k": "m",
+          "v": "(2/3)^6{=}8.8\\%"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v393"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "[N]"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the ladder-base forms "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_C^2e^{-5/6}{=}0.021880"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "m",
+          "v": "(1{-}\\varphi_0)/2{=}0.473414"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_C^2/(1{+}\\lambda_C){=}0.041119"
+        },
+        {
+          "k": "t",
+          "v": " drop the joint four-observable "
+        },
+        {
+          "k": "m",
+          "v": "\\chi^2"
+        },
+        {
+          "k": "t",
+          "v": " from "
+        },
+        {
+          "k": "m",
+          "v": "10.4"
+        },
+        {
+          "k": "t",
+          "v": " to "
+        },
+        {
+          "k": "m",
+          "v": "0.11"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "zero"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " new parameters; "
+        },
+        {
+          "k": "m",
+          "v": "|V_{ub}|"
+        },
+        {
+          "k": "t",
+          "v": " (no bare "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi_0"
+        },
+        {
+          "k": "t",
+          "v": ") and the "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": " channels stay untouched and correct (dressing "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_C"
+        },
+        {
+          "k": "t",
+          "v": " would fail at "
+        },
+        {
+          "k": "m",
+          "v": "-24\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " — scope checked, not chosen); Daya Bay alone already prefers the pattern form ("
+        },
+        {
+          "k": "m",
+          "v": "\\Delta\\chi^2{=}4.3"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "[C] honest:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " post-hoc ("
+        },
+        {
+          "k": "m",
+          "v": "5/16"
+        },
+        {
+          "k": "t",
+          "v": " equally-simple dressings fix the two PMNS tensions; "
+        },
+        {
+          "k": "m",
+          "v": "(1{-}\\varphi_0)/(1{-}c_3)"
+        },
+        {
+          "k": "t",
+          "v": "/resolvent degenerate "
+        },
+        {
+          "k": "m",
+          "v": "{<}1.4\\%"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "[O]"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " no seam-transport derivation (the Bernoulli-variance reading "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_Y^2{=}\\mathrm{Var}[\\mathrm{Bernoulli}(\\varphi_0)]"
+        },
+        {
+          "k": "t",
+          "v": " is an exact identity but only an interpretation) — the frozen record ("
+        },
+        {
+          "k": "c",
+          "v": "v84"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "REG.FREEZE.01"
+        },
+        {
+          "k": "t",
+          "v": ") is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "unchanged"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "[X]"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " pre-registered, symmetric: "
+        },
+        {
+          "k": "m",
+          "v": "\\theta_{13}"
+        },
+        {
+          "k": "t",
+          "v": " stable at "
+        },
+        {
+          "k": "m",
+          "v": "0.0231"
+        },
+        {
+          "k": "t",
+          "v": " kills the pattern, at "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}0.0219"
+        },
+        {
+          "k": "t",
+          "v": " (sub-1%) kills the record's bare-"
+        },
+        {
+          "k": "m",
+          "v": "\\varphi_0"
+        },
+        {
+          "k": "t",
+          "v": " reading, exclusive "
+        },
+        {
+          "k": "m",
+          "v": "|V_{cb}|{\\sim}0.0395"
+        },
+        {
+          "k": "t",
+          "v": " kills both — JUNO-era reactors "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " Belle II decide. Python-only."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v468_dm2_ratio_jarlskog.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "FLAV.DM2RATIO.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The splitting ratio "
+        },
+        {
+          "k": "m",
+          "v": "\\Delta m^2_{21}/\\Delta m^2_{31}"
+        },
+        {
+          "k": "t",
+          "v": " was previously "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "unpredicted"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "; the frozen PMNS matrix ("
+        },
+        {
+          "k": "c",
+          "v": "v9"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v268"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v270"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\delta{=}4\\pi/3"
+        },
+        {
+          "k": "t",
+          "v": ") has one canonical derived CP invariant, and "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "[N]"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "|J_{\\mathrm{PMNS}}|{=}0.029653"
+        },
+        {
+          "k": "t",
+          "v": " meets the NuFIT 6.0 measured ratio "
+        },
+        {
+          "k": "m",
+          "v": "0.029805\\pm0.000792"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "-0.19\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " (equivalently "
+        },
+        {
+          "k": "m",
+          "v": "m_2/m_3{=}\\sqrt{|J|}{=}0.17220"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "0.17264(229)"
+        },
+        {
+          "k": "t",
+          "v": ") — zero dials. "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "[N]"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the informal "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": " table heuristic "
+        },
+        {
+          "k": "m",
+          "v": "m_2/m_3{\\sim}\\pi\\varphi_0{=}0.16704"
+        },
+        {
+          "k": "t",
+          "v": " (a “"
+        },
+        {
+          "k": "m",
+          "v": "\\sim"
+        },
+        {
+          "k": "t",
+          "v": "” entry, never frozen) is now "
+        },
+        {
+          "k": "m",
+          "v": "-2.44\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " and is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "superseded as the comparator"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "[C]"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " spectrum consistency: "
+        },
+        {
+          "k": "m",
+          "v": "\\Sigma m_\\nu{=}m_3(1{+}\\sqrt{|J|}){=}0.0588"
+        },
+        {
+          "k": "t",
+          "v": " eV reproduces the documented "
+        },
+        {
+          "k": "m",
+          "v": "0.0586"
+        },
+        {
+          "k": "t",
+          "v": " eV ("
+        },
+        {
+          "k": "c",
+          "v": "v272"
+        },
+        {
+          "k": "t",
+          "v": "); no absolute number is added. "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "[O]"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " no mechanism (the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu\\tau"
+        },
+        {
+          "k": "t",
+          "v": " texture gives "
+        },
+        {
+          "k": "m",
+          "v": "\\theta_{13}{=}0"
+        },
+        {
+          "k": "t",
+          "v": " at leading order). "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "[X]"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " JUNO shrinks the window "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}4\\times"
+        },
+        {
+          "k": "t",
+          "v": "; adopting the "
+        },
+        {
+          "k": "c",
+          "v": "v467"
+        },
+        {
+          "k": "t",
+          "v": " pattern would shift "
+        },
+        {
+          "k": "m",
+          "v": "|J|\\to0.028849"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "-1.21\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " today) — the two candidates "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "cross-discriminate"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " at JUNO precision. Python-only."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Integration."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Both registered in "
+        },
+        {
+          "k": "c",
+          "v": "run_all.py"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "script_registry.csv"
+        },
+        {
+          "k": "t",
+          "v": " (cluster "
+        },
+        {
+          "k": "c",
+          "v": "neutrinos"
+        },
+        {
+          "k": "t",
+          "v": "); ledger rows "
+        },
+        {
+          "k": "c",
+          "v": "FLAV.THIRDGEN.PATTERN.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "FLAV.DM2RATIO.01"
+        },
+        {
+          "k": "t",
+          "v": " (both "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "candidates); cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": " ( Neutrinos: pressure-point block "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " new candidate paragraphs, the "
+        },
+        {
+          "k": "m",
+          "v": "m_2/m_3"
+        },
+        {
+          "k": "t",
+          "v": " table row retyped to the "
+        },
+        {
+          "k": "m",
+          "v": "|J|"
+        },
+        {
+          "k": "t",
+          "v": " comparator, the octant prose kept honest — record does not select, the candidate would), "
+        },
+        {
+          "k": "c",
+          "v": "introduction"
+        },
+        {
+          "k": "t",
+          "v": " (closure ledger), "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_4_frontier"
+        },
+        {
+          "k": "t",
+          "v": " (live kill-test board) and "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_5_redteam"
+        },
+        {
+          "k": "t",
+          "v": " (seed-hyperplane caption); "
+        },
+        {
+          "k": "c",
+          "v": "v328"
+        },
+        {
+          "k": "t",
+          "v": "'s “single outlier” wording scoped to the seed observables; exploration provenance "
+        },
+        {
+          "k": "c",
+          "v": "experiments/tfpt-discovery/pattern_hunt_pmns_dressing.py"
+        },
+        {
+          "k": "t",
+          "v": " (2026-07-02 note in "
+        },
+        {
+          "k": "c",
+          "v": "experiments/next.txt"
+        },
+        {
+          "k": "t",
+          "v": "); Python-only (flagged in the Wolfram README)."
+        }
+      ]
+    ]
+  },
+  {
     "date": "2026-07-01",
     "dateLabel": "2026-07-01",
     "heading": [

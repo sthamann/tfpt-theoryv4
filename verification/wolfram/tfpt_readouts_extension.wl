@@ -2921,6 +2921,40 @@ Module[{cand, forced, inv8, chiSer, tower},
     tower == {1, 248, 4124, 34752, 213126}];
 ];
 
+(* ==== v469 round: the net-level crossed-product certification -- the LR locality
+   integers (h_s(SO(16)_1) = 16/16 = 1 in Z; the mu4 glue h(J^k) = {1,1,1} all integer),
+   the KLM mu-index arithmetic (4/2^2 = 1 and 16/4^2 = 1, both holomorphic) and the
+   Kitaev 16-fold-way pin (nu = 16 x |C| = 16 = 0 mod 16, c_- = nu/2 = 8 = g_car+N_fam);
+   mirrors v469 (the FHS Chern itself is numerical, Python-only). ==== *)
+Module[{hs, hD5, hA3, glue, muI2, muI4, nu, cminus},
+  (* v469 (i): the LR locality integers of both extension routes *)
+  hs = 16/16;                                    (* so(N)_1 spinor weight N/16, N = 16 *)
+  hD5 = <|1 -> 5/8, 2 -> 1/2, 3 -> 5/8|>;        (* so(10)_1: s, v, c *)
+  hA3 = <|1 -> 3/8, 2 -> 1/2, 3 -> 3/8|>;        (* su(4)_1: k(4-k)/8 *)
+  glue = Table[hD5[k] + hA3[k], {k, 1, 3}];
+  checkExact["v469 SEAM.EQUIV.CROSSEDPRODUCT.01 (i): the LR locality integers -- the SO(16)_1 spinor has h_s = 16/16 = 1 in Z (statistics phase +1, the Longo-Rehren locality criterion for the Z2 simple-current crossed product), and the index-4 mu4 glue J = (s,Lambda1) of (D5)_1 x (A3)_1 has h(J^k) = {1,1,1} for k = 1,2,3 ALL integer (5/8+3/8 = 1, 1/2+1/2 = 1) -- the v125 isotropy q(k(1,1)) = k^2 at net level",
+    hs == 1 && IntegerQ[hs] && glue == {1, 1, 1} && AllTrue[glue, IntegerQ]];
+  (* v469 (ii): KLM mu-index + the 16-fold-way pin *)
+  muI2 = 4/2^2; muI4 = 16/4^2; nu = 16*1; cminus = nu/2;
+  checkExact["v469 SEAM.EQUIV.CROSSEDPRODUCT.01 (ii): KLM mu-index -- both routes land holomorphic, mu = 4/2^2 = 1 (index-2 SO(16)_1 route) and mu = 16/4^2 = 1 (index-4 mu4 route); and the Kitaev 16-fold-way pin nu = 16 x |C| = 16 = 0 mod 16 with c_- = nu/2 = 8 = g_car + N_fam = rank E8 (the class-D phase whose edge is the purely bosonic (E8)_1 state)",
+    muI2 == 1 && muI4 == 1 && Mod[nu, 16] == 0 && cminus == 8 && cminus == 5 + 3];
+];
+
+(* ==== v470 round: the alpha^3 level / embedding-index rigidity -- the exact k_Y = 5/3
+   arithmetic (tr Y^2 / tr T3^2 over the 5bar), the b1 conversion (3/5)(41/6) = 41/10,
+   and the carrier decomposition 41/6 = 20/3 + 1/6; mirrors v470 (the FHS Chern and the
+   alpha^-1 root re-verification are numerical, Python-only). ==== *)
+Module[{trY2, trT32, kY, b1SM, ferm, higgs},
+  trY2 = 3 (1/3)^2 + 2 (1/2)^2;                  (* 5bar of SU(5): d^c + L *)
+  trT32 = 2 (1/2)^2;                             (* SU(2) doublet *)
+  kY = trY2/trT32;
+  b1SM = 41/6;
+  ferm = (2/3)*3*(6 (1/6)^2 + 3 (2/3)^2 + 3 (1/3)^2 + 2 (1/2)^2 + 1);
+  higgs = (1/3)*2*(1/2)^2;
+  checkExact["v470 ALPHA.QUILLEN.INFLOW.01: the embedding-index rigidity -- k_Y = tr_5bar(Y^2)/tr(T3^2) = (5/6)/(1/2) = 5/3 (Ginsparg 1987), so (1/k_Y) x 41/6 = 3/5 x 41/6 = 41/10 = b1 (the 'GUT 3/5' IS the inverse embedding index); carrier decomposition 41/6 = 20/3 (fermions, 3 generations x 16-content) + 1/6 (Higgs doublet)",
+    kY == 5/3 && b1SM/kY == 41/10 && ferm == 20/3 && higgs == 1/6 && ferm + higgs == b1SM];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

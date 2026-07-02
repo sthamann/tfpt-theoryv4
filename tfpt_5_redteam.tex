@@ -66,7 +66,7 @@ outcome lives in the \textbf{status} of each target, never in a green pass.
 \toprule
 \textbf{Target} & \textbf{Minimal claim} & \textbf{Status} & \textbf{Residual risk} \\
 \midrule
-A & seam--Calder\'on measure $=$ $(E8)_1$ net & \textcolor{tfgold}{\textbf{[C] closed mod.\ cited thm}} & \emph{one} statement: boundary-net holomorphy $+$ $c{=}8$ ($\Leftrightarrow$ the index-$4$ inclusion); $E_8$ and bulk uniqueness then automatic (\vref{v83}/\vref{v87}/\vref{v89}; Lie-level realisation \vref{v143}). Now closed modulo a cited theorem: the lattice model (\vref{v367}/\vref{v368}) and the $S_3$ stack ($c{=}8$, $248$ currents/$1$ primary, torus $\mathrm{GSD}{=}1$, RP; \vref{v376}--\vref{v379}) pin it at every computable level, Lean-formalised as \texttt{FORM.SEAM.MMST.01}; only the cited MMST/OS continuum existence stays \mO\ (\vref{v336}). The free-bulk premise is a fixed-point theorem, the cone is eliminated (cone gap $=$ one-particle gap), and the residual factors into the $A_2$ net assembly $+$ \texttt{GATE.QGEO} (\vref{v160}--\vref{v165}). \\
+A & seam--Calder\'on measure $=$ $(E8)_1$ net & \textcolor{tfgold}{\textbf{[C] closed mod.\ cited thm}} & \emph{one} statement: boundary-net holomorphy $+$ $c{=}8$ ($\Leftrightarrow$ the index-$4$ inclusion); $E_8$ and bulk uniqueness then automatic (\vref{v83}/\vref{v87}/\vref{v89}; Lie-level realisation \vref{v143}). Now closed modulo a cited theorem: the lattice model (\vref{v367}/\vref{v368}) and the $S_3$ stack ($c{=}8$, $248$ currents/$1$ primary, torus $\mathrm{GSD}{=}1$, RP; \vref{v376}--\vref{v379}) pin it at every computable level, Lean-formalised as \texttt{FORM.SEAM.MMST.01}; only the cited MMST/OS continuum existence stays \mO\ (\vref{v336}) --- its $128$-spinor extension leg since re-founded on 1995--2001 peer-reviewed crossed-product theorems ($h_s{=}1{\in}\Z$, Longo--Rehren/B\"ockenhauer/KLM; AGT/AMT second witness) with the realisation input reduced to invariant level (\vref{v469}). The free-bulk premise is a fixed-point theorem, the cone is eliminated (cone gap $=$ one-particle gap), and the residual factors into the $A_2$ net assembly $+$ \texttt{GATE.QGEO} (\vref{v160}--\vref{v165}). \\
 B & $\gcar=5$ forced by the Pascal rule & \textcolor{tfgold}{\textbf{survives (narrowed)}} & boundary derivation of half-spinor exhaustion (degree-2 truncation) \\
 C & $k=\cthree/2=\tfrac{1}{16\pi}$, $S/A=\tfrac14$ & \textcolor{tfgreen}{\textbf{survives}} & absolute $1/G$ (UV-sensitive) is the one anchor \\
 D & ratios$+$products $\Rightarrow$ one scale $\vgeo$ & \textcolor{tfgold}{\textbf{survives (narrowed)}} & CP phases ($\delta_{\mathrm{CKM/PMNS}}$) not covered by $\vgeo$ \\
@@ -425,7 +425,15 @@ $e^{-2\pi i/3}{=}e^{-2\pi i c/24}$ ($c{=}8$) and is holomorphic ($c\equiv0\bmod8
 cross-ratio, so the residual \texttt{QGEO.SYM.01} of (iii) follows from marks$=\mu_4$ plus the existing
 \texttt{QGEO.REALIZE.01} --- no new premise (\veri{v453\_seam\_mu4\_from\_marks.py}); the integer backbone of
 (iv)--(ix) ($c_-{=}8$, the Chern integers, the order-$3$ $T$-phase) is kernel-hardened in Lean axiom-free as
-\texttt{FORM.SEAM.EDGE.CHERN.01}. \textbf{None of these promotes the keystone}: the \emph{only} thing
+\texttt{FORM.SEAM.EDGE.CHERN.01}. (xi) The certification package itself is re-founded
+(\veri{v469\_seam\_crossedproduct\_route.py}): the $128$-spinor extension is the \emph{local} $\Z_2$
+simple-current crossed product --- the locality integer $h_s(SO(16)_1){=}16/16{=}1{\in}\Z$ is exactly the
+Longo--Rehren criterion (LR 1995; B\"ockenhauer 1996; B\"ockenhauer--Evans 1998; KLM $\mu{=}4/2^2{=}1$
+$\Rightarrow$ holomorphic) --- so the extension leg rests on 1995--2001 \emph{peer-reviewed} subfactor theory
+with the AGT/AMT preprint route demoted to an independent second witness; and the realisation input is reduced
+from model fiat to invariants (R1$'$: quasi-free, gapped, class D, $c_-{=}8$ from $P_1$; computed $|C|{=}1$,
+$\nu{=}16$, the Kitaev sixteen-fold-way class), Lean-carried as the parallel derivation
+\texttt{seamResidualClosed$'$}. \textbf{None of these promotes the keystone}: the \emph{only} thing
 that stays \mO\ is still the abstract continuum-existence theorem (\vref{v336}); everything else is now
 corroborated, derived or kernel-checked.
 
@@ -561,7 +569,9 @@ $30$ & $29$ & $h(E_8)=2{\cdot}3{\cdot}5$ & forced   & yes: $\gcar$ \\
 \emph{independently} inverted to the latent seed $\varphi_0$ (with its measurement error). All five project
 onto the one axiom value $\varphi_0=\tfrac1{6\pi}+48\cthree^4=0.053172$ (green), and their error-weighted
 mean reproduces it to $0.04\%$ --- one real seed, not five fits. The honest pressure point is
-$\sin^2\theta_{13}$ ($\sim2\sigma$ low, a \emph{separate} carrier-trace channel, \vref{v268}); a
+$\sin^2\theta_{13}$ ($\sim2\sigma$ low, a \emph{separate} carrier-trace channel, \vref{v268}; across the
+\emph{mixing} channels it joins $\theta_{23}$ and $|V_{cb}|$ in the named post-hoc \mO\ candidate pattern
+\vref{v467}, record unchanged); a
 data$\leftrightarrow$formula shuffle explodes the cross-validation $\chi^2$ by $>100\times$. \mE.}
 \label{fig:seed-hyperplane}
 \end{figure}

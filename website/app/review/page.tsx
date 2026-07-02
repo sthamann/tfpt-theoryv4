@@ -85,8 +85,10 @@ const BLOCKS: Block[] = [
         (so the Distler–Garibaldi / Coleman–Mandula no-gos do not apply), and{" "}
         <strong className="text-slate-100">not</strong> a certified strict
         physical theory of everything end-to-end — the keystone SEAM.EQUIV.01 is
-        closed only modulo a cited published theorem (the MMST/Adamo continuum
-        scaling-limit existence). The local Einstein equation is parameter-free,
+        closed only modulo a cited published theorem (the cited continuum
+        scaling-limit existence, v336; extension leg on the peer-reviewed
+        crossed-product package, realisation at invariant level, v469; stays
+        [O]). The local Einstein equation is parameter-free,
         and the ambient, non-perturbative quantum-gravity measure is discharged as
         a redundancy [C] (a certification object, not missing dynamics), not an
         open hole. The absolute mass scale is a single declared dimensionful
@@ -162,7 +164,9 @@ const BLOCKS: Block[] = [
         level by an explicit lattice model (v367/v368) and the S3 closure stack
         (v376–v379), Lean-pinned (FORM.SEAM.MMST.01) to the published MMST/Adamo
         theorems, leaving [O] = the cited continuum scaling-limit existence only
-        (v336); its conformal-deck face QGEO.SYM.01 is a corollary. The
+        (v336; extension leg on the peer-reviewed crossed-product package,
+        realisation at invariant level, v469; stays [O]); its conformal-deck
+        face QGEO.SYM.01 is a corollary. The
         step-by-step reduction lives on the{" "}
         <Link href="/changelog" className="font-semibold text-blue-300 hover:text-blue-200">
           changelog

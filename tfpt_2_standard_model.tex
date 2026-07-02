@@ -1292,7 +1292,8 @@ the \emph{same} $q(A_3)$ that satisfies the $E_8$ glue condition $q(D_5)+q(A_3)=
   \quad(\text{NuFIT 6.0: }0.307),
 \]
 with $\sin^2\theta_{13}=e^{-5/6}\varphi_0$, $\delta_{CP}=4\pi/3$, and a $\mu\tau$-symmetric atmospheric
-sector $\theta_{23}\to45^\circ$ (the octant is \emph{not} selected; current global fits leave it open).
+sector $\theta_{23}\to45^\circ$ (the octant is \emph{not} selected by the record; current global fits leave it
+open --- the post-hoc \mO\ candidate $\cos2\theta_{23}=\phiz$ of \vref{v467} \emph{would} select the lower octant).
 The solar angle is thus a \emph{reduced} readout whose coefficient is now \emph{geometric}:
 $\varepsilon=q(A_3)\varphi_0$, the $A_3$ glue-norm. The residual is only \emph{why} the misalignment equals
 the $A_3$ discriminant norm
@@ -1415,7 +1416,7 @@ $U_{\mathrm{PMNS}}=U_{e,L}^\dagger U_{\nu,L}$.
 \midrule
 $\sin^2\theta_{13}$ & $\phiz\,e^{-5/6}$ (UV), closure $0.02311$ & $\approx0.0222$ \\
 $\sin^2\theta_{12}$ & \textbf{primary (freeze):} $\tfrac13-\tfrac{\phiz}{2}$ (seed, $\varepsilon{=}q(A_3)\phiz$); two derived variants in the named box & $0.306747$ (NuFIT 6.0 $0.307$) \\
-$m_2/m_3$ & $\sim\pi\phiz=(1-\gamma)+\tfrac{3}{256\pi^3}$ & $\approx0.167$ \\
+$m_2/m_3$ & candidate \mO: $\sqrt{|J_{\mathrm{PMNS}}|}$ (\vref{v468}; the older heuristic $\sim\pi\phiz$ is $-2.4\sigma$, superseded as comparator) & $0.17220$ (NuFIT $0.17264(229)$) \\
 $\Sigma m_\nu$ & closure readout (normal ordering) & $5.88\times10^{-2}$ eV \\
 $m_{\beta\beta}$ & Majorana effective mass ($0\nu\beta\beta$) & $1.52\times10^{-3}$ eV \\
 $\delta_{\mathrm{CP}}^\nu$ & phase lattice & $240^\circ$ \\
@@ -1431,9 +1432,10 @@ puncture correction exact --- conditional on the seam-misalignment lemma); the s
 the full non-linear $0.307020$ are \emph{derived variants} of the same texture, \emph{not} alternative
 predictions (named box below). The
 older democratic $\tfrac13$ and QLC $\tfrac\pi4{-}\theta_{12}^{\mathrm{CKM}}$ readings are superseded by this
-seed closure. The ratio
-$m_2/m_3\sim\pi\phiz$ carries the carrier complement $1-\gamma=1/6$ --- neutrino and charged sectors read
-the same seed. The heavy scale $M_R\sim10^{15}$ GeV links the seesaw bridge to the
+seed closure. The old ratio heuristic
+$m_2/m_3\sim\pi\phiz$ (motivated by the carrier complement $1-\gamma=1/6$) is now $-2.44\sigma$ against
+NuFIT~6.0 and is \emph{superseded as the comparator} by the parameter-free candidate relation
+$\Delta m^2_{21}/\Delta m^2_{31}=|J_{\mathrm{PMNS}}|$ (\mO, \vref{v468}; below). The heavy scale $M_R\sim10^{15}$ GeV links the seesaw bridge to the
 inflation/reheating scale (the scalaron-reheating chain, \vref{v86}).
 \par\smallskip\noindent\textbf{$M_\nu$ as the type-I seesaw of $D_F$ (\veri{v263\_mnu\_from\_df.py}).}
 The texture above is no longer only a posited matrix: the light mass matrix is the seesaw of the finite
@@ -1476,7 +1478,9 @@ ${\sim}5\%$ below the axiom, while PMNS $\theta_{13}$ RG running ($<1\%$, NO) an
 leave no freeze-respecting sub-leading correction --- so the prediction stays frozen (\texttt{REG.FREEZE.01}).
 \mX\ pre-registered kill: a stable $\sin^2\theta_{13}$ robustly away from $0.023108$ at $>3\sigma$ (JUNO / a future
 global fit) flags the carrier-trace / seed-grammar reading. It is exactly the single ${\sim}2\sigma$ outlier of the
-seed-hyperplane cross-validation (\vref{v306}) --- one honest pressure point, not a pattern of failures.
+seed-hyperplane cross-validation (\vref{v306}) --- one honest pressure point among the seed observables, not a
+scatter of unrelated failures; across the \emph{mixing} channels, however, it is not alone --- $\theta_{23}$ and
+$|V_{cb}|$ sit at the same ${\sim}1.8\sigma$, and the three form one named candidate pattern (\vref{v467}, below).
 \par\smallskip\noindent\textbf{The sub-leading budget, fenced (\veri{v338\_theta13\_budget.py}).} Quantified against
 \emph{both} NuFIT~6.0 normal-ordering variants, the tension is data-systematics dependent: $+2.0\sigma$ vs the
 no-SK central ($0.02195$) but $+1.7\sigma$ vs the with-SK best fit ($0.02215\pm0.00057$) --- a ${\sim}0.3\sigma$
@@ -1485,6 +1489,27 @@ bound $0.02388$): the frozen value is an upper-edge pressure point, \emph{not} a
 ${\sim}4\%$ gap to the central would need a ${\sim}3\%$ sub-leading channel (beyond the $<1\%$ RG and the exact
 $5/6$), larger than natural --- so it stays a genuine, mild tension. \mX\ JUNO's sub-1\% precision
 ($\sigma\!\sim\!1.5{\times}10^{-4}$) turns today's $1.7$--$2.0\sigma$ into a ${\sim}6\sigma$ kill-or-confirm.
+\par\smallskip\noindent\textbf{Post-hoc candidate \mO: the third-gen pattern.}
+\veri{v467\_thirdgen\_mixing\_pattern.py}\
+The suite's three ${\sim}2\sigma$ mixing tensions --- $\sin^2\theta_{13}$ ($+2.0\sigma$), $\sin^2\theta_{23}$
+($+1.76\sigma$) and $|V_{cb}|$ ($+1.79\sigma$) --- are exactly the three \emph{third-generation} channels, and all
+three sit low by one common relative amount: $-5.36\%\pm1.67\%$ ($3.2\sigma$ non-zero, $-0.03\sigma$ from $-\phiz$).
+In the existing vocabulary the pattern is parameter-free: the seed enters third-generation mixing through the
+\emph{ladder base} $\lamC^2=\phiz(1-\phiz)$ (the Yukawa mass-ladder base $\lambda_Y$) instead of bare $\phiz$, and
+the $2$--$3$ texture carries the same $-\phiz/2$ shift as $\theta_{12}$: $\sin^2\theta_{13}=\lamC^2 e^{-5/6}=0.021880$
+($-0.12\sigma$), $\sin^2\theta_{23}=(1-\phiz)/2\Leftrightarrow\cos2\theta_{23}=\phiz$ ($+0.20\sigma$; this
+\emph{candidate} would select the lower octant --- the frozen record does not), and $|V_{cb}|=\lamC^2/(1+\lamC)=0.041119$
+($+0.01\sigma$); the joint $\chi^2$ over the four third-generation observables drops $10.4\to0.11$ with \emph{zero}
+new parameters, while $|V_{ub}|=\lamC^3/3$ (no bare $\phiz$) and the $1$--$2$ channels stay untouched and correct
+(dressing $\lamC$ itself would fail at $-24\sigma$ --- the scope is checked, not chosen). \mC\ honestly: the pattern
+is \emph{post-hoc} (5 of 16 equally-simple dressings fix the two PMNS tensions; $(1-\phiz)$, $(1-\cthree)$ and the
+resolvent $1/(1+\phiz)$ are degenerate at current precision), the suppression size $\phiz=5.3\%$ sits inside the
+seam-gapped correction band $(2/3)^6=8.8\%$ (\vref{v393}) but \emph{no seam-transport derivation exists} --- so the
+frozen record (\texttt{REG.FREEZE.01}) is unchanged and the row is a named \mO\ candidate
+(\texttt{FLAV.THIRDGEN.PATTERN.01}). \mX\ pre-registered, symmetric: $\sin^2\theta_{13}$ stable at $0.0231$ kills the
+pattern; stable at ${\sim}0.0219$ with sub-1\% precision kills the record's bare-$\phiz$ reading; an exclusive-$|V_{cb}|$
+resolution at ${\sim}0.0395$ kills both --- JUNO-era reactors and Belle~II decide (Daya~Bay alone already prefers the
+pattern form, $\Delta\chi^2=4.3$).
 \par\smallskip\noindent\textbf{The full PMNS matrix and the CP strength (\veri{v270\_pmns\_jarlskog\_assembly.py}).}
 The four channels --- $\sin^2\theta_{12}=\tfrac13-\tfrac{\phiz}2$ (\vref{v9}/\vref{v263}),
 $\sin^2\theta_{23}=\tfrac12$ (\vref{v9}/\vref{v263}), $\sin^2\theta_{13}=\phiz e^{-5/6}$ (\vref{v16}/\vref{v268})
@@ -1497,11 +1522,25 @@ $J_{\mathrm{PMNS}}$ vs the best fit $\approx-0.026$ ($\delta_{\mathrm{data}}\app
 within $\sim1\sigma$), with the negative CP-violating sign reproduced. \mO\ this closes the CP-\emph{strength}
 readout but not the phase's operator origin ($\delta$ stays the $\mu_6$/triality phase, an assembled input,
 not an $M_\nu/D_F$ output) nor the absolute scale.
+\par\smallskip\noindent\textbf{Post-hoc candidate \mO: splitting ratio $=$ Jarlskog.}
+\veri{v468\_dm2\_ratio\_jarlskog.py}\
+The dimensionless splitting ratio $\Delta m^2_{21}/\Delta m^2_{31}$ was previously \emph{unpredicted} (the table
+heuristic $m_2/m_3\sim\pi\phiz=0.16704$ is now $-2.44\sigma$ against NuFIT~6.0 and is superseded as the comparator).
+The frozen matrix above has exactly one canonical derived CP invariant, and numerically
+$|J_{\mathrm{PMNS}}|=0.029653$ meets the measured ratio $0.029805\pm0.000792$ at $-0.19\sigma$ (equivalently
+$m_2/m_3=\sqrt{|J|}=0.17220$ vs $0.17264(229)$) --- the only tested closed form inside the $1\sigma$ band, with
+\emph{zero} dials (angles and phase are the frozen ones). \mC\ consistency: with $r=|J|$ the normal-ordering floor
+$\Sigma m_\nu=m_3(1+\sqrt{|J|})=0.0588$ eV reproduces the documented $0.0586$ eV (\vref{v272}); the absolute scale
+stays the one seesaw ratio --- no absolute number is added. \mO\ honestly: post-hoc, and \emph{no mechanism} --- the
+$\mu\tau$ texture gives $\theta_{13}=0$ at leading order and cannot carry this relation, so the row stays a named
+\mO\ candidate (\texttt{FLAV.DM2RATIO.01}) until an $M_\nu$-level derivation exists. \mX\ JUNO shrinks the
+$r$-window ${\sim}4\times$ (a stable offset $>3\sigma$ kills it); adopting the \vref{v467} pattern would shift
+$|J|\to0.028849$ ($-1.21\sigma$ today), so the two candidates \emph{cross-discriminate} at JUNO precision.
 \par\smallskip\noindent\textbf{The absolute $\nu$-mass scale is one seesaw ratio (\veri{v272\_nu\_mass\_scale.py}).}
 The one PMNS residual left is the overall scale, and it is typed honestly --- not fabricated. The type-I seesaw
 makes the absolute scale a \emph{single} ratio, $m_3=(y_\nu v_{\mathrm{EW}})^2/M_R$ (\mE), exactly the same kind of
-one irreducible input as $v_{\mathrm{geo}}$ (the No-Unit theorem, \vref{v153}); the dimensionless spectrum
-($m_2/m_3$, the ordering, the angles) is already pinned. \mC\ the observed $m_3=\sqrt{\Delta m^2_{\mathrm{atm}}}
+one irreducible input as $v_{\mathrm{geo}}$ (the No-Unit theorem, \vref{v153}); the dimensionless angles and ordering
+are pinned, and the ratio $m_2/m_3$ now carries the \mO\ candidate comparator $\sqrt{|J|}$ (\vref{v468}). \mC\ the observed $m_3=\sqrt{\Delta m^2_{\mathrm{atm}}}
 =0.050$ eV together with the TFPT PS$\to$GUT scale window $M_R\in[M_{\mathrm{PS}}{=}4.2{\times}10^{13},
 M_{\mathrm{GUT}}{=}2.4{\times}10^{15}]$ GeV (\vref{v249}) requires a third-generation Dirac Yukawa
 $y_\nu\in[0.26,2.0]$ --- $O(1)$, no tuning, so the observed scale is consistent with the TFPT seesaw scale.

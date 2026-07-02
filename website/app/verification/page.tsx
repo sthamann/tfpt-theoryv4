@@ -94,7 +94,7 @@ const PATHS: { label: string; value: string; body: string }[] = [
   },
   {
     label: "Wolfram mirror",
-    value: "116/116 + 365/365",
+    value: "116/116 + 368/368",
     body: "An independent second path for the exact algebraic / identity / lattice results, on the Wolfram Engine: the verified base file plus the v84+ extension file.",
   },
   {
@@ -147,7 +147,7 @@ const REVIEWER_MAP: { label: string; marker: string; tone: string; items: string
     items: [
       "P1, P2 — declared inputs, reduced to the anchor a=(1,1,2)+π (not free dials)",
       "v_geo — the one dimensionful scale (metrology primitive, No-Unit Theorem)",
-      "SEAM.EQUIV.01 — [C] closed modulo cited theorems (lattice v367/v368 + S3 stack v376–v379, Lean FORM.SEAM.MMST.01); the only [O] residual is the cited MMST/Adamo continuum scaling-limit existence (v336)",
+      "SEAM.EQUIV.01 — [C] closed modulo cited theorems (lattice v367/v368 + S3 stack v376–v379, Lean FORM.SEAM.MMST.01); the only [O] residual is the cited continuum scaling-limit existence (v336; extension leg on the peer-reviewed crossed-product package, realisation at invariant level, v469; stays [O])",
     ],
   },
   {
@@ -342,7 +342,8 @@ export default function VerificationPage() {
             closed modulo cited theorems: the target net is pinned at every computable level (lattice
             v367/v368 + S3 stack v376–v379) and Lean-pinned (FORM.SEAM.MMST.01) to the published MMST/Adamo
             theorems, so the AQFT closure to (E₈)₁ follows modulo the cited continuum-existence residual
-            (v336); its conformal-deck face QGEO.SYM.01 is a corollary.
+            (v336; extension leg on the peer-reviewed crossed-product package, realisation at invariant
+            level, v469; stays [O]); its conformal-deck face QGEO.SYM.01 is a corollary.
           </p>
         </div>
       </section>
@@ -496,7 +497,8 @@ export default function VerificationPage() {
               corollary): the target is pinned at every computable level by an explicit lattice model
               (v367/v368) and the S3 closure stack (v376–v379), Lean-pinned (FORM.SEAM.MMST.01) to the
               published MMST/Adamo theorems, leaving [O] = the cited continuum scaling-limit existence only
-              (v336). The full step-by-step reduction lives on the{" "}
+              (v336; extension leg on the peer-reviewed crossed-product package, realisation at invariant
+              level, v469; stays [O]). The full step-by-step reduction lives on the{" "}
               <span className="text-slate-200">/changelog</span> page.
             </figcaption>
           </figure>

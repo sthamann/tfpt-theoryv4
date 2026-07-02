@@ -105,7 +105,7 @@ v84–v93 block passed **45/45** on first run; the v94–v140 blocks were added
 the same day, the v141–v144 block on 2026-06-12. Current state:
 
 ```
---- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463: 365 passed, 0 failed ---
+--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470: 368 passed, 0 failed ---
 ALL WOLFRAM EXTENSION CHECKS PASSED
 ```
 
@@ -142,6 +142,17 @@ candidates `A8` (dim 80), `D8=SO(16)` (dim 120), `E8` (dim 248), all
 `v464` (the one-particle realization rigidity — symbol idempotency, Cauchy kernel
 convergence, entanglement `c`-fit) is numerical, Python-only.
 
+The 2026-07-02 closure-route round (`v469`/`v470`) adds 3 more exact mirrors
+(total `368/368`): `v469` (the net-level crossed-product certification — the LR
+locality integers `h_s(SO(16)₁) = 16/16 = 1 ∈ ℤ` and the `μ₄` glue
+`h(J^k) = {1,1,1}` all integer (`5/8+3/8`, `1/2+1/2`, the `v125` isotropy at net
+level); the KLM `μ`-index `4/2² = 1` and `16/4² = 1`, both holomorphic; and the
+Kitaev 16-fold-way pin `ν = 16·|C| = 16 ≡ 0 (mod 16)`, `c₋ = ν/2 = 8`), and
+`v470` (the embedding-index rigidity — `k_Y = tr(Y²)/tr(T3²) = (5/6)/(1/2) = 5/3`,
+the `b1` conversion `(3/5)·(41/6) = 41/10`, and the carrier decomposition
+`41/6 = 20/3 + 1/6`). The FHS Chern computations and the `α⁻¹` root/split
+re-verification are numerical, Python-only (as for `v367`/`v461`).
+
 (ledger `GATE.WOLFRAM.02`). The scipy-only parts of the round (the `v86`
 pivot ODE solve, the `v88` data pulls, the `v99` mpmath ODE probe of the
 time-1 map — its exact symbolic form *is* mirrored) stay Python-only and
@@ -162,7 +173,15 @@ unchanged). The 2026-07-01 sixth-channel `v466_seed_leptonmass_channel.py` (the
 charged-lepton mass ratio `m_e/m_μ = (12/7) φ0²` back-solving the same seed to
 −0.11%, a new measurement sector extending the `v306`/`v465` over-determination) is
 the same kind of statistical consistency module, Python-only (no exact algebraic
-result added; the Wolfram exact-check count stays unchanged).
+result added; the Wolfram exact-check count stays unchanged). The 2026-07-02
+flavor-candidate pair `v467_thirdgen_mixing_pattern.py` (the three ~2σ mixing
+tensions as one common −φ0 third-generation pattern, post-hoc [O] candidate,
+record unchanged) and `v468_dm2_ratio_jarlskog.py` (the splitting ratio
+`Δm²₂₁/Δm²₃₁ = |J_PMNS|` candidate at −0.19σ) are data-confrontation /
+statistical modules by the same convention, Python-only (their only exact
+contents — `λ_C² = φ0(1−φ0)`, `cos 2θ23 = φ0` as an identity of the candidate
+form — are trivial rearrangements of already-mirrored quantities; the Wolfram
+exact-check count stays unchanged).
 
 The 2026-06-22 **cyclotomic/Galois arithmetic arc** added ten exact checks
 (275 → 285): `v313_golden_atoms_spectral.py` (the affine-E8 charpoly factors

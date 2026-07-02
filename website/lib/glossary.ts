@@ -116,7 +116,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     term: "G_net",
     alias: ["G_net", "(G_metric)", "G_metric", "seam-net inclusion", "continuum realisation"],
     short:
-      "The metric-sector interface (historically labelled G_metric): R + R² is heat-kernel grounded (G2) and gap-decoupled (G5); the closing statement is the index-4 μ₄ seam-net inclusion ⇒ holomorphic (E₈)₁, with net existence and full-cone reflection positivity discharged to [E] (v175). Status [C] — closed modulo cited theorems (not solved): the target (E₈)₁ net is now pinned at every computable level by an explicit gapped lattice model (v367/v368) and the S3 closure stack — central charge c = 8 from the lattice (v376), the (E₈)₁ character 248/1 (v377), genus-1 torus GSD = 1 (v378) and reflection positivity (v379). With the Modular Spectral Closure (v258–v261), the boundary QFT is therefore one relative object closed modulo cited theorems via the Seam Equivalence Theorem SEAM.EQUIV.01 (the raw RP seam IS the holomorphic (E₈)₁ net at τ=i), Lean-pinned (FORM.SEAM.MMST.01, SeamScalingLimit.lean) to the published MMST/Adamo scaling-limit theorems. The one residual is [O] = the abstract continuum scaling-limit existence only (v336). The local field equation is separately parameter-free (v358/v359); QG closure is a certification layer, not a prerequisite for testing the readouts [C]/[O].",
+      "The metric-sector interface (historically labelled G_metric): R + R² is heat-kernel grounded (G2) and gap-decoupled (G5); the closing statement is the index-4 μ₄ seam-net inclusion ⇒ holomorphic (E₈)₁, with net existence and full-cone reflection positivity discharged to [E] (v175). Status [C] — closed modulo cited theorems (not solved): the target (E₈)₁ net is now pinned at every computable level by an explicit gapped lattice model (v367/v368) and the S3 closure stack — central charge c = 8 from the lattice (v376), the (E₈)₁ character 248/1 (v377), genus-1 torus GSD = 1 (v378) and reflection positivity (v379). With the Modular Spectral Closure (v258–v261), the boundary QFT is therefore one relative object closed modulo cited theorems via the Seam Equivalence Theorem SEAM.EQUIV.01 (the raw RP seam IS the holomorphic (E₈)₁ net at τ=i), Lean-pinned (FORM.SEAM.MMST.01, SeamScalingLimit.lean) to the published MMST/Adamo scaling-limit theorems. The one residual is [O] = the abstract continuum scaling-limit existence only (v336; extension leg on the peer-reviewed crossed-product package, realisation at invariant level, v469; stays [O]). The local field equation is separately parameter-free (v358/v359); QG closure is a certification layer, not a prerequisite for testing the readouts [C]/[O].",
   },
   {
     term: "F_transfer",
@@ -128,13 +128,25 @@ export const GLOSSARY: GlossaryEntry[] = [
     term: "SEAM.EQUIV.01",
     alias: ["SEAM.EQUIV.01", "Seam Equivalence Theorem", "S3", "the keystone", "seam equivalence", "the single keystone"],
     short:
-      "The keystone of the metric sector: the raw reflection-positive seam state IS the holomorphic (E₈)₁ boundary net at τ=i. Status [C] — closed modulo cited theorems, NOT solved: the target net is pinned at every computable level by an explicit gapped lattice model (v367/v368) and the S3 closure stack (c = 8 from the lattice v376, the (E₈)₁ character 248/1 v377, genus-1 torus GSD = 1 v378, reflection positivity v379), and the chain is Lean-pinned (FORM.SEAM.MMST.01, SeamScalingLimit.lean) to the published MMST/Adamo scaling-limit theorems. The only residual is [O] = the abstract continuum scaling-limit existence (v336), a cited published theorem outside the computational suite. Its conformal-deck face QGEO.SYM.01 is a corollary (v335). TFPT's one irreducible structural postulate — the role 'c = const' plays in relativity.",
+      "The keystone of the metric sector: the raw reflection-positive seam state IS the holomorphic (E₈)₁ boundary net at τ=i. Status [C] — closed modulo cited theorems, NOT solved: the target net is pinned at every computable level by an explicit gapped lattice model (v367/v368) and the S3 closure stack (c = 8 from the lattice v376, the (E₈)₁ character 248/1 v377, genus-1 torus GSD = 1 v378, reflection positivity v379), and the chain is Lean-pinned (FORM.SEAM.MMST.01, SeamScalingLimit.lean) to the published MMST/Adamo scaling-limit theorems. The only residual is [O] = the abstract continuum scaling-limit existence (v336), a cited published theorem outside the computational suite; its 128-spinor extension leg is certified at net level by the peer-reviewed crossed-product package (v469, Longo–Rehren/Böckenhauer/KLM; AGT/AMT second witness), realisation at invariant level; stays [O]. Its conformal-deck face QGEO.SYM.01 is a corollary (v335). TFPT's one irreducible structural postulate — the role 'c = const' plays in relativity.",
+  },
+  {
+    term: "Crossed-product route (v469)",
+    alias: ["crossed-product route", "crossed product route", "v469", "SEAM.EQUIV.CROSSEDPRODUCT.01"],
+    short:
+      "The net-level certification of the 128-spinor extension SO(16)₁ → (E₈)₁: the spinor weight h_s = 16/16 = 1 ∈ ℤ fulfils the Longo–Rehren locality criterion, so the ℤ₂ simple-current crossed product is a local index-2 extension (1995–2001 peer-reviewed subfactor theory; KLM μ = 1 ⇒ holomorphic). AGT/AMT preprints are the independent second witness. SEAM.EQUIV.01 stays [O].",
   },
   {
     term: "QG.AMB.01",
     alias: ["QG.AMB.01", "QG.AMB", "C7", "G6", "ambient measure", "quantum-gravity measure", "ambient QG measure"],
     short:
       "The ambient, non-perturbative quantum-gravity measure (historically C7 / G6). Status [C] — discharged as a redundancy, NOT an open frontier: the ambient-redundancy theorem (v369) plus the S3 reflection-positivity closure (v379) show it is a certification object, not missing dynamics — every readout factors through the gapped admissible spectrum (Decoupling Theorem v337, Δ_eff = 1.648 > 0), so TFPT provably does not need it. Conditional on SEAM.EQUIV.01 + Bisognano–Wichmann intrinsicality (the residual [O]). The R²/Weyl² Stelle ghost is a Seeley–DeWitt truncation artefact, so perturbative spin-2 graviton unitarity is established [C] (v304/v370/v380) — not a non-unitarity hole.",
+  },
+  {
+    term: "ALPHA.QUILLEN.EXACT.01",
+    alias: ["ALPHA.QUILLEN", "alpha Quillen target", "Quillen determinant target"],
+    short:
+      "The tracked [O] target: prove F_U(1) is the exact Quillen determinant functional of the seam U(1). v470 sharpens it: the α³ level = the computed bulk Chern invariant |C| = 1 (inflow), the F-normalisation = the embedding index k_Y = 5/3. The α⁻¹ value itself stays [E].",
   },
 ];
 

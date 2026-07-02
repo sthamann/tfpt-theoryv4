@@ -1,3 +1,108 @@
+## 2026-07-02 — Schließungsrouten-Kandidaten (Sandbox): SEAM.EQUIV.01 + ALPHA.QUILLEN.EXACT.01 (route_candidate, kein Claim)
+
+**UPDATE (gleicher Tag): PROMOTED.** Beide Routen sind als `verification/v469_seam_crossedproduct_route.py`
+(`SEAM.EQUIV.CROSSEDPRODUCT.01`) und `verification/v470_alpha_inflow_level.py` (`ALPHA.QUILLEN.INFLOW.01`)
+in die Suite übernommen (10/10 + 7/7, Suite ALL CHECKS PASSED durch v470), Wolfram-Mirror 365→368,
+Lean `seamResidualClosed'`-Parallelroute (lake build OK), Ledger/Paper/Website/Changelog synchron.
+Beide Targets bleiben [O] — Promotion = Zertifizierungs-Härtung, keine Statusaufwertung.
+Details unten (Original-Sandbox-Notiz).
+
+Zwei neue vollständige ZERTIFIZIERUNGS-Routen für die beiden benannten Residuen, als
+Sandbox-Skripte `experiments/tfpt-discovery/closure_route_seam_crossedproduct.py` (11/11 PASS)
+und `closure_route_alpha_inflow_level.py` (12/12 PASS). NICHTS promoted, kein
+Ledger-/Paper-/Lean-Touch; Verdict-Enum: route_candidate.
+
+**(1) SEAM.EQUIV.01 — Crossed-Product-Route + R1→R1'-Invariantenreduktion.**
+Die 128-Spinor-Erweiterung SO(16)₁→(E8)₁ braucht das 2025-Preprint-Leg (AGT 2506.01008 /
+AMT 2407.18222) nicht als EINZIGEN Träger: h_spinor(so(16)₁) = 16/16 = 1 ∈ ℤ ⇒
+Statistikphase +1 ⇒ der Z₂-Simple-Current-Crossed-Product ist eine LOKALE Index-2-Erweiterung
+(Longo–Rehren RMP 7 (1995); Böckenhauer RMP 8 (1996) liefert das Level-1-so(N)-Netz MIT
+Sektoren aus even-CAR; Böckenhauer–Evans CMP 197 (1998)); KLM μ = 4/2² = 1 ⇒ holomorph ⇒
+(E8)₁ per v463-Selektor (dim V₁ = 248, Turm [1,248,4124,34752] re-verifiziert). Parallel-Check
+μ₄-Glue (Index 4): h(J^k) = {1,1,1} alle ganzzahlig (deckt sich mit v125-Isotropie q(k,k)=k²).
+Zweitens: das Lean-Axiom `collar_realizes` (Modell-Fiat) ist reduzierbar auf
+`collar_invariants` — {quasi-frei [C v155/v160], Gap [E v302], Klasse D, c₋=8 [E via v456]}
++ Phasenklassifikation (Kitaev 2006/2009 — 16-fold way: ν=16 ⇒ bosonische (E8)₁-Kante;
+c₋-Invarianz: Kapustin–Spodyneiko PRB 101 (2020), Kim et al. PRL 129 (2022)); FHS-Chern
+C(M=1)=1 / C(M=3)=0 numerisch bestätigt, ν=16, c₋=8. EHRLICH: Quasi-Freiheit des abstrakten
+Seams bleibt [C]; zitierte Sätze bleiben zitiert (Zertifizierung, kein Re-Proof); die exakte
+Beispiel-Stelle SO(16)₁⊂(E8)₁ in BE I–III ist bei Promotion zu verifizieren.
+
+**(2) ALPHA.QUILLEN.EXACT.01 — Inflow-Level + Einbettungsrigidität (Vereinheitlichung).**
+(a) Das α³-Level k₀ = 1 ist nicht mehr "Einheitslevel per Minimalität" (v435 [C]), sondern
+= |C_bulk| = 1, BERECHNET am selben p+ip-Collar-Modell, das S3 realisiert (v367); Quantisierung
+zitiert (TKNN 1982 / Avron–Seiler–Simon 1983; Callan–Harvey 1985 Inflow; APS/Witten RMP 88
+für η=CS-Anteil von δ log det; Quillen/Bismut–Freed Determinantenlinien-Krümmung ganzzahlig).
+(b) Die Seam-F-Normalisierung (v434-[C]) ist der affine Einbettungsindex k_Y = tr(Y²)/tr(T3²)
+= (5/6)/(1/2) = 5/3 (Ginsparg 1987): (3/5)·(41/6) = 41/10 = b₁ exakt, 41/6 = 20/3+1/6 aus dem
+Carrier-Content — Level-1-Stromalgebra-Rigidität ⇒ kein freier Dial, konditional NUR auf
+SEAM.EQUIV.01 (konsistent mit v382 "face of"). STRUKTURELLER KERN: beide Targets sind zwei
+Antworten EINER invertiblen Phase — c₋=8 (gravitativ → Seam-Netz) und C=1 (U(1) → α³-Level);
+R1' schließen füttert beide. EHRLICH: das Brücken-Lemma "δ log det_ζ(Seam) = Inflow-Antwort"
+bleibt benannter zitierter Schritt; EM1-Lesart bleibt [C]; α⁻¹ = 137.0359992168 bleibt [E]
+(Wurzel + Split < 1e-35 re-verifiziert).
+
+Promotion-Pfad (wenn gewünscht): neue vN-Module (LR-Lokalitätszertifikat h_s=1 / k_Y-Rigidität /
+k₀=|C|) + Lean: `seam_realisation_theorem` auf das 95–01-Paket umgründen (AMT/AGT als zweiter
+unabhängiger Zeuge), `collar_realizes` → `collar_invariants`. Bis dahin: beide Targets bleiben
+[O] wie im Ledger.
+
+## 2026-07-02 — Muster-Suche (Sandbox): Dritte-Generation-Leiterbasis + dm²-Ratio=|J| (POST-HOC, kein Claim)
+
+Explorativer Lauf `experiments/tfpt-discovery/pattern_hunt_pmns_dressing.py` (reine Sandbox,
+NICHTS promoted, kein Scorecard-/Ledger-/Paper-Touch). Zwei Kandidaten-Muster, beide
+parameterfrei im EXISTIERENDEN Vokabular, beide ehrlich als post-hoc geflaggt:
+
+**(1) Dritte-Generation-Leiterbasis-Regel — die drei ~2σ-Spannungen sind EIN Muster.**
+Die drei unabhängigen ~2σ-Mixing-Spannungen der Suite (sin²θ13 +2.00σ, sin²θ23 +1.76σ,
+V_cb +1.79σ) verschwinden simultan, wenn der Seed in den Dritte-Generations-Kanälen durch
+die Leiterbasis λ_C² = φ₀(1−φ₀) statt bare φ₀ eintritt (dieselbe Basis, die die
+Yukawa-Massenleiter trägt, tfpt_2), plus derselbe −φ₀/2-Shift für θ23 wie im θ12-Record:
+- `sin²θ13 = λ_C² e^{-5/6} = 0.021880` → −0.12σ NuFIT (−0.27σ reactor-only v3; Daya-Bay-only +0.20σ, Δχ²=+4.3 vs Record)
+- `sin²θ23 = (1−φ₀)/2 = 0.473414` ⇔ **cos 2θ23 = φ₀** → +0.20σ
+- `V_cb = λ_C²/(1+λ_C) = 0.041119` → +0.01σ (PDG 0.0411±0.0013)
+- 1-2-Kanäle (θ12, λ_C) bleiben UNgedresst korrekt; V_ub verträgt beides (schwach).
+Joint-χ² der 4 Dritte-Gen-Mixings: 10.36 → 1.18 (Δχ²=9.18, NULL neue Parameter).
+Gewichtete gemeinsame Rel.-Abweichung der 4 Kanäle: −4.92%±1.62% — ≠0 bei 3.0σ,
+konsistent mit −φ₀ (+0.24σ). EHRLICH: (1−φ₀)/(1−c3)/(1−λ_C²) sind bei heutiger Präzision
+entartet (<1.4% auseinander); Dressing-Census: 5/16 gleich-einfache Dressings fixen die
+beiden PMNS-Spannungen ebenfalls (LEE!); alles post-hoc, Record-Freeze (v84/REG.FREEZE.01)
+UNangetastet — v328 nennt θ13 den ehrlichen Druckpunkt, dieses Muster wäre die strukturelle
+Auflösung, WENN sie je aus dem Transport (v393-Klasse, Schranke (2/3)⁶=8.8% > φ₀=5.3%)
+abgeleitet würde. Kill: sin²θ13 stabil auf der 0.0231-Seite ODER V_cb exklusiv ~0.0395.
+
+**(2) Splitting-Ratio-Kandidat: dm²₂₁/dm²₃₁ = |J_PMNS| (bisher UNvorhergesagt).**
+Die gefrorene PMNS-Matrix (Record-Winkel + δ=240°) hat |J| = 0.029653; NuFIT 6.0 NO misst
+dm²₂₁/dm²₃₁ = 0.029805±0.000796 → **−0.19σ** (äquivalent m2/m3 = √|J| = 0.17220 vs
+0.17264±0.00231). Der bisherige tfpt_2-Tabellenwert m2/m3 ~ πφ₀ = 0.16704 liegt bei
+**−2.43σ** — der neue Kandidat ist die einzige getestete Form im 1σ-Band (λ_C(1−λ_C)=0.17403
+bei +0.60σ als zweite). Konsequenz (m1≈0): Σm_ν = m3(1+√|J|) = 0.0588 eV (≈ Record 0.0586).
+EHRLICH: Grammatik-Dichte im 1σ-Fenster ~1.2e-2 (v100-Census) — als Einzeltreffer NICHT
+signifikant; der Wert liegt darin, dass |J| das KANONISCHE abgeleitete CP-Invariant der
+schon gefrorenen Matrix ist, nicht eine freie Formel. JUNO (σ(dm²)→0.2–0.5%) entscheidet;
+Spannung untereinander: mit gedressten Winkeln (Muster 1) wäre |J|=0.028849 (−1.20σ) —
+die beiden Kandidaten ziehen bei JUNO-Präzision gegeneinander (guter Diskriminator).
+
+**Nebenbefunde (nur fürs Protokoll, numerologie-geflaggt):** Ω_c = (2/7)(1−1/4π) → −0.30σ
+Planck (⇔ Ω_c/Ω_b = 2/(7φ₀); Koeffizienten-LEE: einziger p/q≤12-Hit; kollidiert konzeptionell
+mit dem Axion-Spine-DM-Branch = alternative Lesart, NIE doppelt zählen). Gatto-Check
+m_s/m_d = 1/λ_C² = 19.86 vs ~20.0(1.0) → −0.14σ (Folklore, konsistent). α_s(M_Z) ~ 3c₃
+bei +1.63σ (schwach, verworfen).
+
+**Status-UPDATE (gleicher Tag): als [O]-Kandidaten PROMOTED.** Der Ableitungsversuch
+(`derivation_attempt_ladderbase.py`: Bernoulli-Varianz-Lesart λ_Y² = Var[Bernoulli(φ₀)] exakt,
+aber nur Interpretation; Resolvent φ₀/(1+φ₀) zu 0.28% entartet; 1-2×2-3-Komposition 6.6× daneben)
+liefert KEINE first-principles-Ableitung → beide Befunde als benannte post-hoc **[O]-Kandidaten**
+promoviert, Record (v84) UNverändert: `verification/v467_thirdgen_mixing_pattern.py`
+(`FLAV.THIRDGEN.PATTERN.01`) + `verification/v468_dm2_ratio_jarlskog.py` (`FLAV.DM2RATIO.01`),
+beide 7/7 grün, Suite ALL CHECKS PASSED; Ledger-Rows, Changelog 2026-07-02, zitiert in tfpt_2
+(§ Neutrinos: zwei neue Kandidaten-Absätze, m₂/m₃-Tabellenzeile auf den |J|-Komparator retyped,
+Oktant-Prosa ehrlich), introduction (Closure-Ledger), tfpt_4 (Live-Board), tfpt_5 (Hyperplane-Caption);
+Website predictions.ts (θ13/θ23/NO-Zeilen-Notizen) + README-Zähler v468/462. Symmetrische Kills
+preregistriert (JUNO/Belle II); v467 und v468 diskriminieren sich gegenseitig bei JUNO-Präzision.
+
+---
+
 ## 2026-07-01 — vier neue/erweiterte Suchflächen-Experimente in die Scorecard integriert (79 → 83 Zeilen)
 
 Vier standalone `experiments/`-Runner (kein verification/website-Touch, nichts `[E]`/`\veri{}`) in die

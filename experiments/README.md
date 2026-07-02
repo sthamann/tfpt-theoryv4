@@ -628,8 +628,13 @@ Quellen: Planck 2018 VI, BICEP/Keck BK18, P-ACT-LB+DESI, CMB-S4-Forecast.
 | `δ_CKM` | 68.65° | LHCb γ 64.6°±2.8 | +1.45σ |
 | `δ_PMNS` | 240° (4π/3) | NuFIT 6.0 NO best fit 212°⁺²⁶₋₄₁ | **+1.08σ** (consistent) |
 
-→ θ12 ist ein **scharfer Treffer**; θ13 trägt die **~2σ-Spannung** (teilt `φ₀` mit β → siehe
-Seed-Stresstest 7b.7). **NEU (v231/v233):** die leptonische CP-Phase `δ_PMNS=4π/3=240°` ist
+→ θ12 ist ein **scharfer Treffer**; θ13 trägt die **größte ~2σ-Spannung** (teilt `φ₀` mit β → siehe
+Seed-Stresstest 7b.7). **NEU (2026-07-02, verification-seitig):** die drei ~2σ-Mixing-Spannungen
+(θ13, θ23, `V_cb`) sind als **ein** gemeinsames Dritte-Generations-Muster benannt
+(`verification/v467_thirdgen_mixing_pattern.py`, `FLAV.THIRDGEN.PATTERN.01`, post-hoc `[O]`-Kandidat,
+Record unverändert), und das bisher unvorhergesagte Splitting-Verhältnis hat einen parameterfreien
+Kandidaten `Δm²₂₁/Δm²₃₁ = |J_PMNS| = 0.029653` bei −0.19σ (`v468`, `FLAV.DM2RATIO.01`); JUNO/Belle II
+entscheiden. **NEU (v231/v233):** die leptonische CP-Phase `δ_PMNS=4π/3=240°` ist
 strukturell an `δ_CKM` gekoppelt (eine hexagonale `μ6`-CM-Einheit `ρ=e^{iπ/3}`, Sheet-aufgespalten:
 `δ_PMNS=δ_CKM,lead+π`); gegen den NuFIT-6.0-NO-best-fit `+1.08σ` (CP-verletzende Region), `[C]`
 downstream Bridge, schwach unterscheidend bis DUNE/HyperK. Quellen: NuFIT 6.0 (arXiv:2410.05380),

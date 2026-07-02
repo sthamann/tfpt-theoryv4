@@ -180,7 +180,7 @@ const TRUNK_AFTER: StepNode[] = [
     fixed:
       "One relative object: D_F = covariance induction of the seam state (v258), cutoff = the KMS weight ⇒ f₂/f₀ = 1 (v259), seam + carrier-16 + E₈ on one Kummer/K3 (v260); cross-checked 4 = [B:A] = |μ₄| = 2χ = |(ℤ/2)²| (v261)",
     notClaimed:
-      "Closed modulo cited theorems via the keystone SEAM.EQUIV.01 (QGEO.SYM.01 is its corollary, v335); the ambient QG measure is discharged as a redundancy [C] (v369+v379)",
+      "Closed modulo cited theorems via the keystone SEAM.EQUIV.01 (QGEO.SYM.01 is its corollary, v335; extension leg on the peer-reviewed crossed-product package, realisation at invariant level, v469; stays [O]); the ambient QG measure is discharged as a redundancy [C] (v369+v379)",
     fail: "An invariant disagrees across the round (index ≠ marks, two carrier-16s, or two different gaps)",
     status: "bridge",
   },
@@ -193,7 +193,7 @@ const TRUNK_AFTER: StepNode[] = [
     input: "The compiler closure",
     fixed:
       "One flavor wall-selection (v_geo, [O]); the ambient quantum-gravity measure now discharged as a redundancy [C] (v369+v379; the local field equation is itself parameter-free, v358/v359); and a set of typed runnable frontier solvers (F_transfer, v371–v375) — the whole boundary-QFT layer collapses onto the G_metric keystone (step 7), closed modulo cited theorems, adding no new open item",
-    notClaimed: "No strict physical TOE certified end-to-end (the keystone SEAM.EQUIV.01 is closed only modulo a cited published theorem, v336; v_geo stays the one unit). The ambient measure G6 is not an open hole — it is discharged as a redundancy [C]",
+    notClaimed: "No strict physical TOE certified end-to-end (the keystone SEAM.EQUIV.01 is closed only modulo a cited published theorem, v336 — extension leg crossed-product certified, v469; stays [O] — and v_geo stays the one unit). The ambient measure G6 is not an open hole — it is discharged as a redundancy [C]",
     fail: "A gate's closing theorem asserted before its lemma chain completes",
     status: "conditional",
   },

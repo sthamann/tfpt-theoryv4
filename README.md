@@ -152,7 +152,7 @@ anchor (`1/G` is UV-sensitive, Sakharov-type induced gravity) — not a diffuse 
 
 | Item | What it is |
 |---|---|
-| `v1_*.py … v466_*.py` | 460 numbered claim checks (one file per claim cluster; highest ID `v466`). |
+| `v1_*.py … v470_*.py` | 464 numbered claim checks (one file per claim cluster; highest ID `v470`). |
 | `run_all.py` | Runs the whole suite; ends `ALL CHECKS PASSED`. |
 | `tfpt_constants.py` | Shared constants + `check()` harness. |
 | `predictions_frozen.json` | **Blind-prediction registry** (frozen 2026-06-09): every dimensionless prediction of record at 25 digits, locked to its formula by `v84_frozen_registry.py` on every run; exactly one `θ12` prediction of record (seed `0.306747`), `r`/`n_s` only as `N_star` bands. |
@@ -162,7 +162,7 @@ anchor (`1/G` is UV-sensitive, Sakharov-type induced gravity) — not a diffuse 
 | `audit_sync.py` | **The sync audit** (papers ↔ suite ↔ ledger ↔ changelog ↔ website, both directions); must end `AUDIT OK`. |
 | `make_figures.py` | Regenerates the figures (status heatmap, attractor, Coxeter circle, …). |
 | `make_manifest.py` | Writes `manifest.sha256` + `lean_manifest.sha256` (content digests). |
-| `wolfram/tfpt_readouts.wl` | Independent second path on Wolfram Engine (`116/116` checks); `wolfram/tfpt_readouts_extension.wl` mirrors the exact algebraic/identity/lattice results (`360/360`, verified on Wolfram Engine 14.3). |
+| `wolfram/tfpt_readouts.wl` | Independent second path on Wolfram Engine (`116/116` checks); `wolfram/tfpt_readouts_extension.wl` mirrors the exact algebraic/identity/lattice results (`368/368`, verified on Wolfram Engine 14.3). |
 | `redteam/run_redteam.py` | **Adversarial layer.** Tries to *break* the five reductions (Targets A–E); verdicts in `REDTEAM.*` ledger rows + `tfpt_5_redteam.tex`. |
 
 ### Other directories
@@ -200,7 +200,7 @@ bash build.sh notes
 cd verification && python run_all.py
 
 # 3. Independent Wolfram path  ->  "116/116 passed"  (optional, needs Wolfram Engine)
-#    (the v84+ extension mirrors the exact results, 360/360)
+#    (the v84+ extension mirrors the exact results, 368/368)
 wolframscript -file verification/wolfram/tfpt_readouts.wl
 wolframscript -file verification/wolfram/tfpt_readouts_extension.wl
 
@@ -280,7 +280,15 @@ closing it: a solvable 4D model reaches the `a₄` heat-kernel order (`v433`); t
 `U(1)_Y` `a₄` coefficient via the `β = a₄` theorem, collapsing the three residuals to one `[C]` (the seam
 `F`-normalisation) + one `[O]` (`v434`); and a `π`-power test isolates the cubic `α³` as the *unique*
 metric-independent (`π⁰`) topological rung, whose coefficient is a conditional integer Chern–Simons level
-(`v435`) — the from-first-principles CS-boundary proof staying the single external `[O]`.
+(`v435`) — the from-first-principles CS-boundary proof staying the single external `[O]`. A fifth step
+(`v470`) upgrades both leftovers: the `α³` level is no longer "the unit level by minimality" but **equals
+the computed bulk Chern invariant** `|C| = 1` of the same p+ip collar that realises S3 (TKNN/Avron–Seiler–Simon
+quantisation + Callan–Harvey inflow + the APS/Witten `η`=CS reading of `δ log det`), and the seam
+`F`-normalisation is retyped as the **affine embedding index** `k_Y = tr(Y²)/tr(T3²) = 5/3` (Ginsparg 1987;
+`(3/5)·(41/6) = 41/10 = b₁` exactly) — level-1 current-algebra rigidity, zero independent content, a face of
+`SEAM.EQUIV.01`. One invertible phase, two quantised responses (`c₋ = 8` gravitational, `C = 1` U(1)) feeds
+both named targets; the bridge lemma `δ log det_ζ(seam) = inflow response` stays the cited step, so
+`ALPHA.QUILLEN.EXACT.01` stays `[O]`.
 
 **One principle behind "parameter-free", and the shape of what's left.** A bird's-eye synthesis
 shows every TFPT sector is the *same* object — a gapped operator with a unique attractor (the physics)
@@ -324,7 +332,17 @@ idempotent whose scaling limit is exhibited — Cauchy kernel, entanglement `c�
 Araki/Shale–Stinespring `R1` is the unique quasi-free realisation modulo the cited CAR functor). The whole
 G-block arithmetic is Lean-hardened as `FORM.SEAM.RESIDUAL.01`, now reducing the
 residual to *one* named TFPT-internal realisation axiom plus *one* combined cited theorem (the former
-`mmst_existence`∘`agt_lattice_extension` merged, so `#print axioms` drops from six to four). Across the
+`mmst_existence`∘`agt_lattice_extension` merged, so `#print axioms` drops from six to four). The
+closure-route round (`v469`) then **re-founds both halves on harder-to-reject ground**: the `128`-spinor
+extension is the *local* `Z₂` simple-current crossed product — the locality integer `h_s = 16/16 = 1 ∈ ℤ`
+is exactly the Longo–Rehren criterion (LR 1995; Böckenhauer 1996; Böckenhauer–Evans 1998; KLM `μ = 4/2² = 1`
+⇒ holomorphic), so the extension leg now rests on **1995–2001 peer-reviewed subfactor theory** with the
+AGT/AMT preprint route demoted to an independent second witness (the index-4 `μ₄` glue runs on the same
+integer, `h(J^k) = {1,1,1}`); and the realisation axiom is reduced from model fiat to *invariants* (R1′:
+quasi-free `[C]` + gap `[E]` + class D + `c₋ = 8` `[E]` from P1 — computed: FHS `|C| = 1`, `ν = 16`, the
+Kitaev 16-fold-way class whose edge *is* the bosonic `(E8)₁` state). Lean now carries the parallel
+derivation `seamResidualClosed'` (`collar_invariants` + `crossedproduct_route_theorem`; the locality/μ/16-fold
+joints are kernel facts with no axioms). Across the
 whole G-block the residual is now *entirely certification* — a named, hypothesis-audited package of
 published theorems with no open internal mechanism — yet `SEAM.EQUIV.01` stays `[O]` because it still
 rests on cited continuum-existence theorems we do not re-prove. `QGEO.SYM.01` (the `μ₄` deck acting geometrically) is its
@@ -399,10 +417,13 @@ Petz recovery — so `QG.AMB.01` is a certification object, not missing dynamics
 the four `F_transfer` interfaces promoted to typed runnable solvers (Koide QED-excluded negative; `η_B` BDP
 ODE factor ~1.1; axion spine branch lands on `Ω_DM`; `m_p/m_e` band contains 1836.15). Track 4 (`v375`):
 a status-typed CI over the frozen prediction registry with a live JUNO/NuFIT/ACT/BK18 scorecard (`θ13`
-flagged at 2.0σ). Plus `v380`: the KMS Entire Hessian — the Stelle ghost is exactly a finite Seeley–DeWitt
+flagged at 2.0σ; since 2026-07-02 two named post-hoc `[O]` candidates sit next to it in the ledger —
+`FLAV.THIRDGEN.PATTERN.01`/`v467`, the three ~2σ mixing tensions as one −φ0 third-generation pattern, and
+`FLAV.DM2RATIO.01`/`v468`, the splitting ratio = |J_PMNS| at −0.19σ — record unchanged, JUNO/Belle II decide).
+Plus `v380`: the KMS Entire Hessian — the Stelle ghost is exactly a finite Seeley–DeWitt
 truncation; resummation pushes the ghost zero to infinity, so perturbative graviton unitarity holds.
 
-A development timeline of all 459 modules is in `introduction.tex` (and on the website verification page).
+A development timeline of all 464 modules is in `introduction.tex` (and on the website verification page).
 
 ---
 

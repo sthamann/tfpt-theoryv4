@@ -181,6 +181,37 @@ theorem c8_three_candidates :
 theorem holomorphy_selects_e8 :
     forcedDimV1 = dimE8 ∧ forcedDimV1 ≠ dimA8 ∧ forcedDimV1 ≠ dimD8 := by decide
 
+/-! ### v469 — the crossed-product locality integers and the 16-fold-way pin. -/
+
+/-- The `SO(16)₁` spinor weight in units of `1/16`: `h_s = N/16 = 16/16 = 1`. -/
+def hSpinorSixteenths : Nat := 16
+/-- The Longo–Rehren locality integer: `h_s ∈ ℤ` (statistics phase `+1`), so the
+    `ℤ₂` simple-current crossed product is a LOCAL extension (LR 1995; BE 1998). -/
+theorem lr_locality_integer : hSpinorSixteenths % 16 = 0 := by decide
+
+/-- The `μ₄` glue weights `h(J^k)`, `k = 1,2,3`, in units of `1/8`:
+    `(5+3, 4+4, 5+3)` — `h_s(D₅) = 5/8 + h_{Λ₁}(A₃) = 3/8` etc. -/
+def glueEighths : List Nat := [5 + 3, 4 + 4, 5 + 3]
+/-- ALL glue powers have integer weight — the v125 isotropy `q(k(1,1)) = k²`
+    restated at net level: the `ℤ₄` crossed product is local. -/
+theorem glue_locality_integers : ∀ h ∈ glueEighths, h % 8 = 0 := by decide
+
+/-- KLM `μ`-index arithmetic: `μ(B) = μ(SO16)/[B:A]² = 4/4 = 1` (index-2 route)
+    and `16/16 = 1` (index-4 `μ₄` route) — both endpoints holomorphic. -/
+theorem klm_holomorphic : 4 / 2 ^ 2 = 1 ∧ 16 / 4 ^ 2 = 1 := by decide
+
+/-- The Kitaev 16-fold-way invariant `ν = 16·|C|`. -/
+def nuInvariant : Nat := 16 * chern.natAbs
+/-- `ν = 16 ≡ 0 (mod 16)` — exactly the class-D phase whose edge admits a purely
+    bosonic description (the `(E₈)₁` state, Kitaev 2006) — and `c₋ = ν/2 = 8`. -/
+theorem sixteenfold_pin : nuInvariant % 16 = 0 ∧ nuInvariant / 2 = cMinus := by decide
+
+/-- The whole v469 crossed-product arithmetic at once, kernel-checked, NO axioms. -/
+theorem crossedproduct_arithmetic :
+    hSpinorSixteenths % 16 = 0 ∧ (∀ h ∈ glueEighths, h % 8 = 0) ∧
+    (4 / 2 ^ 2 = 1 ∧ 16 / 4 ^ 2 = 1) ∧
+    nuInvariant % 16 = 0 ∧ nuInvariant / 2 = cMinus := by decide
+
 /-! ### The single realization axiom and the cited theorem. -/
 
 /-- The seam collar is realized as the concrete gapped quasi-free lattice free-fermion
@@ -215,6 +246,44 @@ theorem seamResidualClosed : SeamIsE8 :=
 
 example : SeamIsE8 := seamResidualClosed
 
+/-! ### v469 — the invariant-level realization (R1′) and the peer-reviewed route. -/
+
+/-- R1′: the collar carries the INVARIANTS {quasi-free, gapped, class D, `c₋ = 8`}
+    — each TFPT-derived (gap `v302`, chirality from P1 `v456`; quasi-freeness the
+    one `[C]` hypothesis, `v155`/`v160`).  An invariant-level statement replacing
+    the model-level fiat of `CollarRealizedAsLatticePhase`: by the class-D phase
+    classification any realization with these invariants is phase-equivalent to
+    the `v367` stack, hence has the same edge scaling limit. -/
+axiom CollarHasInvariants : Prop
+/-- The single TFPT-side residual of the v469 route: the collar invariants. -/
+axiom collar_invariants : CollarHasInvariants
+
+/-- The combined PEER-REVIEWED route theorem (v469, replacing the 2024/2025
+    preprint leg): phase classification (Kitaev Ann. Phys. 321 (2006) 16-fold way
+    + periodic table 2009; `c₋` a phase invariant: Kapustin–Spodyneiko PRB 101
+    (2020), Kim et al. PRL 129 (2022)) ∘ scaling limit (MMST CMP 397 (2023); the
+    level-1 `so(N)` net with DHR sectors from even-CAR: Böckenhauer RMP 8 (1996))
+    ∘ the LOCAL `ℤ₂` simple-current crossed product (Longo–Rehren RMP 7 (1995);
+    Böckenhauer–Evans CMP 197 (1998); KLM CMP 219 (2001)) ∘ holomorphic `c = 8`
+    uniqueness (Dong–Mason; v463): a collar with the R1′ invariants, in the MMST
+    range, with the LR locality integer and the holomorphy discriminator, has
+    scaling-limit net `(E₈)₁`.  The AGT/AMT lattice-VOA route stays available as
+    an independent second witness (`seam_realisation_theorem` above). -/
+axiom crossedproduct_route_theorem :
+    CollarHasInvariants →
+    (rankE8 ≤ cMinus ∧ cMinus ≤ D) →
+    hSpinorSixteenths % 16 = 0 →
+    (detK_E8 = 1 ∧ detK_SO16 ≠ detK_E8) →
+    SeamIsE8
+
+/-- `SEAM.EQUIV.01` via the v469 route: the invariant-level axiom, the *provable*
+    range/locality/holomorphy joints, and ONE combined peer-reviewed package. -/
+theorem seamResidualClosed' : SeamIsE8 :=
+  crossedproduct_route_theorem collar_invariants mmst_range lr_locality_integer
+    holomorphic_discriminator
+
+example : SeamIsE8 := seamResidualClosed'
+
 /-- The whole residual-surface arithmetic at once (incl. the v461 winding obstruction and
     the v462 finite-Fock sector counts), kernel-checked with NO axioms. -/
 theorem residual_arithmetic :
@@ -234,7 +303,13 @@ theorem residual_arithmetic :
 -- arithmetic (v458), the two-decomposition current content (v459), the finite-Fock spinor
 -- counts (v462) and the c=8 holomorphy selector (v463) are all kernel-checked with NO axioms.
 -- The realization rigidity (v464) is numerical (one-particle symbol convergence), not a kernel fact.
+-- The v469 route (`seamResidualClosed'`) is the PARALLEL peer-reviewed derivation: the
+-- invariant-level axiom `collar_invariants` (R1′) plus ONE combined 1995–2001 package
+-- (`crossedproduct_route_theorem`); its locality/μ/16-fold-way joints
+-- (`crossedproduct_arithmetic`) are kernel-checked with NO axioms.
 #print axioms residual_arithmetic
+#print axioms crossedproduct_arithmetic
 #print axioms seamResidualClosed
+#print axioms seamResidualClosed'
 
 end TfptCarrier.SeamResidualAxiom

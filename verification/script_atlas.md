@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`460` registered scripts · `526` ledger claims · `10` clusters.
+`464` registered scripts · `530` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -184,7 +184,7 @@ _The φ₀-ladder mass formula, the exact lepton coefficients, and the integer-P
 - **v229_lepton_frobenius_algebra** [E/C] `LEP.FROB.01` — a commutative Frobenius algebra. The C₆ shift has charpoly t⁶−1 (spectrum μ₆=μ₃ family ×μ₂ sheet). PMNS extension via Aut(A)+the hex CM point is [C].
   - deps: FLAV.LEPTON.01, ARCH.HEXRES.01, v220_cp_hexagonal_modulus · cited: 2 standard model
 
-### `neutrinos` — Neutrinos & the solar angle  (10 scripts)
+### `neutrinos` — Neutrinos & the solar angle  (12 scripts)
 _The Majorana texture, the dual anchor, and the previously open solar angle from the seam._
 
 - **v9_neutrino_texture** [E] `FLAV.TH12.01` — μτ Majorana texture → sin²θ₁₂ = 1/3 − φ₀/2, θ₂₃ = 45°
@@ -207,6 +207,10 @@ _The Majorana texture, the dual anchor, and the previously open solar angle from
   - deps: THETA13.PRESSURE.01, v306, v328, v84_frozen_registry · cited: 2 standard model
 - **v406_pmns_phase_origin** [E/C/O/X] `FLAV.PMNS.CLOSE.01` — FLAV.PMNS.CLOSE.01: the PMNS dynamics closed modulo the tau=omega keystone (v405) -- the CP-phase ORIGIN is the family CM point and the absolute scale is one v_geo-class unit, so P
   - deps: v405_seam_equiv_omega, v270_pmns_jarlskog_assembly, v272_nu_mass_scale, v405, v270, v272, v9, v268 · cited: origin theory, 2 standard model
+- **v467_thirdgen_mixing_pattern** [E/C/O] `FLAV.THIRDGEN.PATTERN.01` — FLAV.THIRDGEN.PATTERN.01: the three ~2σ mixing tensions (θ13, θ23, V_cb) are ONE common −φ₀ suppression (−5.36%±1.67%, 3.2σ non-zero); ladder-base forms λ_C²e^(−5/6) / (1−φ₀)/2 / λ
+  - deps: v328_theta13_pressure, v84_frozen_registry, v393_corrections_numeric, v268_theta13_carrier_trace, v306_seed_crossval · cited: 2 standard model
+- **v468_dm2_ratio_jarlskog** [E/C/O] `FLAV.DM2RATIO.01` — a parameter-free candidate relation for the (previously unpredicted) splitting ratio; the informal m₂/m₃ ~ πφ₀ heuristic is now −2.44σ and retyped; NO floor Σm_ν = 0.0588 eV consis
+  - deps: v270_pmns_jarlskog_assembly, v268_theta13_carrier_trace, v272_nu_mass_scale, v467_thirdgen_mixing_pattern · cited: 2 standard model
 
 ### `gravity` — Gravity, inflation & cosmology  (6 scripts)
 _The R + R² spectral-action shadow, the seam-fixed scalaron, and the cosmological readouts._
@@ -294,7 +298,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v407_dn_pairings_omega** [E/C/O] `FLAV.SELECTOR.CLOSE.01` — FLAV.SELECTOR.CLOSE.01: the R4' residue folds into the tau=omega keystone (v405) -- the three (d,n) selector pairings ARE the tau=omega family-slice atoms. [E] the frame (1,a,sigma
   - deps: v405_seam_equiv_omega, v49_readout_rigidity, v405, v139, v136, v42 · cited: origin theory, 1 architecture e8
 
-### `frontier` — Open gate (G_metric) & the frontier  (151 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (153 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -599,6 +603,10 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v286_seam_equivalence_contract, v458_seam_mmst_citation_audit, v459_seam_lattice_voa_route, v457_seam_character_killtest, v457, v458, v459 · cited: research contracts
 - **v464_seam_oneparticle_rigidity** [E/C/O] `SEAM.EQUIV.ONEPARTICLE.01` — SEAM.EQUIV.ONEPARTICLE.01: the one-particle RIGIDITY + scaling limit attacking R1, the REALISATION input of SEAM.EQUIV.01 (A of the A+B round). The seam is quasi-free (v113/v160/v1
   - deps: v286_seam_equivalence_contract, v461_seam_strict_locality, v113, v160, v161, v426, v450, v463 · cited: research contracts
+- **v469_seam_crossedproduct_route** [E/C/O] `SEAM.EQUIV.CROSSEDPRODUCT.01` — SEAM.EQUIV.CROSSEDPRODUCT.01: the net-level crossed-product certification of the 128-spinor extension + the R1 -> R1' invariant reduction. [E] LR LOCALITY INTEGER: h_s(SO(16)_1) = 
+  - deps: v286_seam_equivalence_contract, v458_seam_mmst_citation_audit, v459_seam_lattice_voa_route, v463_seam_c8_holomorphic_uniqueness, v464_seam_oneparticle_rigidity, FORM.SEAM.RESIDUAL.01, v125, v154 · cited: 1 architecture e8, 5 redteam, research contracts, safeguards
+- **v470_alpha_inflow_level** [E/C/O] `ALPHA.QUILLEN.INFLOW.01` — ALPHA.QUILLEN.INFLOW.01: the alpha^3 level = the COMPUTED bulk Chern invariant + the seam F-normalisation = the affine embedding index k_Y = 5/3. [E] target re-verified: alpha^-1 =
+  - deps: v382_alpha_quillen_exact, v433_alpha_quillen_heatkernel, v434_alpha_quillen_betafunction, v435_alpha_quillen_chernlevel, v48_em_ward, v469_seam_crossedproduct_route, v341, v367 · cited: 1 architecture e8
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (182 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -985,16 +993,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×62, `v336`×31, `QGEO.SYM.01`×31, `v216`×18, `QG.AMB.01`×17, `v76`×17, `v56`×17, `E8.GLU.01`×16, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v312`×14, `REG.FREEZE.01`×14, `v54`×13, `v323`×12, `AX.P1.01`×11
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×63, `v336`×32, `QGEO.SYM.01`×31, `v216`×18, `QG.AMB.01`×17, `v76`×17, `v56`×17, `E8.GLU.01`×16, `REG.FREEZE.01`×15, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v312`×14, `v54`×13, `v367`×13, `v323`×12
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v455_seam_bw_uniform** — `SEAM.EQUIV.BW.UNIFORM.01`
-- **v456_seam_chirality_from_c3** — `SEAM.S3.FROM-P1.01`
-- **v457_seam_character_killtest** — `SEAM.EQUIV.KILLTEST.01`
-- **v458_seam_mmst_citation_audit** — `SEAM.EQUIV.MMST.AUDIT.01`
 - **v459_seam_lattice_voa_route** — `SEAM.EQUIV.LATTICEVOA.01`
 - **v460_seam_s3_lto** — `SEAM.S3.LTO.01`
 - **v461_seam_strict_locality** — `SEAM.S3.LOCALITY.01`
@@ -1003,4 +1007,8 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v464_seam_oneparticle_rigidity** — `SEAM.EQUIV.ONEPARTICLE.01`
 - **v465_seed_crosssector_joint** — `SEED.CROSSSECTOR.01`
 - **v466_seed_leptonmass_channel** — `SEED.LEPTONMASS.01`
+- **v467_thirdgen_mixing_pattern** — `FLAV.THIRDGEN.PATTERN.01`
+- **v468_dm2_ratio_jarlskog** — `FLAV.DM2RATIO.01`
+- **v469_seam_crossedproduct_route** — `SEAM.EQUIV.CROSSEDPRODUCT.01`
+- **v470_alpha_inflow_level** — `ALPHA.QUILLEN.INFLOW.01`
 

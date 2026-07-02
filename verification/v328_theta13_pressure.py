@@ -22,9 +22,11 @@ separate from the theta12 channel, and pre-registers the kill.
         > 3 sigma (JUNO / a future global fit) flags the carrier-trace / seed-grammar
         reading -- the honest, named weak point (not hidden).
   [E] 5. CONSISTENCY WITH THE SEED HYPERPLANE: this is exactly the v306 leave-one-out
-        outlier (the seed-hyperplane figure) -- theta13 is the single ~2 sigma channel,
-        all others within ~1 sigma; it is one honest pressure point, not a pattern of
-        failures.
+        outlier (the seed-hyperplane figure) -- theta13 is the single ~2 sigma channel
+        AMONG THE SEED OBSERVABLES, all others within ~1 sigma; one honest pressure
+        point there, not a scatter of unrelated failures.  (Across the MIXING channels
+        theta23 and V_cb sit at the same ~1.8 sigma; that named third-generation
+        pattern candidate is v467, [O], record unchanged.)
 
 HONEST SCOPE: [N] the tension + the no-relief audit (data-confrontation, repo-documented
 NuFIT 6.0 centrals); [E] the separate-channel structure (v268) and the seed-hyperplane
@@ -83,8 +85,10 @@ def run():
 
     # 5. consistency with the seed-hyperplane (v306): theta13 is the single ~2 sigma outlier
     check("SEED-HYPERPLANE CONSISTENCY [E]: this is exactly the v306 leave-one-out outlier "
-          "(the seed-hyperplane figure) -- theta13 is the single ~2 sigma channel, all "
-          "others within ~1 sigma; one honest pressure point, not a pattern of failures",
+          "(the seed-hyperplane figure) -- theta13 is the single ~2 sigma channel among "
+          "the SEED observables, all others within ~1 sigma; one honest pressure point "
+          "there, not a scatter of unrelated failures (across the MIXING channels it "
+          "joins theta23/V_cb in the named v467 pattern candidate, [O])",
           1.9 <= round(float(abs(pull)), 1) <= 2.1)
 
     return summary("v328 theta13 pressure point (+2.0 sigma, named and pre-registered)")

@@ -88,8 +88,9 @@ which the external continuous solver merely evaluates (\veri{v224\_diamond\_ftra
 \noindent\textbf{The residual is certification, not construction (\veri{v384\_residual\_certification.py}).} A
 ledger-CI audit classifies every remaining item into exactly three \emph{external} kinds, with \emph{zero} open
 \emph{internal} TFPT mechanisms: \mE\ (A)~an external math proof --- \texttt{SEAM.EQUIV.01} continuum existence (the
-cited MMST/Adamo theorem, \vref{v336}), \texttt{ALPHA.QUILLEN.EXACT.01} (\vref{v382}) and the constructive
-\texttt{QG.AMB.01} measure (a \mC\ redundancy, \vref{v369}); \mE\ (B)~theorem-forbidden --- $v_{\mathrm{geo}}$, the
+cited MMST theorem plus the crossed-product extension package, \vref{v336}/\vref{v469}, with AGT/AMT as second
+witness), \texttt{ALPHA.QUILLEN.EXACT.01} (\vref{v382}, its level and normalisation sharpened by \vref{v470}) and
+the constructive \texttt{QG.AMB.01} measure (a \mC\ redundancy, \vref{v369}); \mE\ (B)~theorem-forbidden --- $v_{\mathrm{geo}}$, the
 one unit, by the No-Unit theorem (\vref{v153}/\vref{v364}); \mE\ (C)~external physics --- $F_{\mathrm{transfer}}$
 (\vref{v371}--\vref{v374}, firewalled \vref{v187}). The two load-bearing facts are checked (No-Unit
 dimensionlessness; the gap-decoupling margin $1.648>0$), so the only hard things left are theorems and external
@@ -846,7 +847,10 @@ step itself is now a \emph{rigorous AQFT construction}: Adamo--Giorgetti--Tanimo
 build the two-dimensional conformal net $\mathcal A_Q$ of an even lattice $Q$ and \emph{classify} every
 two-dimensional extension of the Heisenberg net (under a discreteness assumption) as such a lattice net --- so
 ``the lattice is a conformal net'' is a theorem of the same operator-algebraic lineage the continuum leg invokes,
-not a hope.
+not a hope; and since (xxxii) (\veri{v469\_seam\_crossedproduct\_route.py}) the extension step no longer even
+\emph{needs} the preprint lineage --- the local $\Z_2$ simple-current crossed product ($h_s{=}1{\in}\Z$,
+Longo--Rehren 1995; B\"ockenhauer 1996; B\"ockenhauer--Evans 1998; KLM 2001) certifies it on peer-reviewed
+ground, with AGT/AMT as the independent second witness.
 \par\smallskip\noindent\textbf{S3 made concrete: an explicit gapped chiral-Majorana lattice model
 (\veri{v367\_seam\_s3\_lattice.py}, \veri{v368\_seam\_s3\_inflow.py}).} The S3 input is no longer
 abstract. The $p{+}ip$ Bloch model $h(k){=}\sin k_x\,\sigma_x{+}\sin k_y\,\sigma_y{+}(M{-}\cos k_x{-}\cos
@@ -960,7 +964,8 @@ commuting-projector LTO realisation, the strict-locality (Kapustin--Fidkowski) o
 \veri{v457\_seam\_character\_killtest.py}, \veri{v458\_seam\_mmst\_citation\_audit.py},
 \veri{v459\_seam\_lattice\_voa\_route.py}, \veri{v460\_seam\_s3\_lto.py},
 \veri{v461\_seam\_strict\_locality.py}, \veri{v462\_seam\_spinor\_continuum.py},
-\veri{v463\_seam\_c8\_holomorphic\_uniqueness.py}, \veri{v464\_seam\_oneparticle\_rigidity.py}).} None closes
+\veri{v463\_seam\_c8\_holomorphic\_uniqueness.py}, \veri{v464\_seam\_oneparticle\_rigidity.py},
+\veri{v469\_seam\_crossedproduct\_route.py}).} None closes
 \texttt{SEAM.EQUIV.01}; together they ground the one continuum input on both its halves, reduce it to a single
 analytic fact and make the claim falsifiable.
 \emph{(v) The intrinsic Bisognano--Wichmann route} (\veri{v438\_seam\_hsmi\_borchers.py}): the seam supplies a
@@ -1095,14 +1100,16 @@ hypothesis-by-hypothesis reading of the cited MMST theorem (\texttt{arXiv:2107.1
 class, H2 massless limit, H3 the per-copy $c{=}\tfrac12$ Thm~4.11, H4 decoupled additivity to $c{=}8$, and H5 the WZW
 range $8{\le}8{\le}16$ with its $120$ bilinear currents all \emph{match}, isolating the single residual H6 to the
 $128$-spinor extension $SO(16)_1{\to}(E_8)_1$ (the $\det K\,4{\to}1$ holomorphy step), \emph{outside} MMST's bilinear
-method; \mE\ the per-copy theorem, \mC\ the additivity and range, \mO\ the one open spinor extension. \emph{(xxvi)
+method; \mE\ the per-copy theorem, \mC\ the additivity and range, \mO\ the one open spinor extension --- since
+(xxxii) certified at net level by the peer-reviewed crossed product. \emph{(xxvi)
 The complementary lattice-VOA route} (\veri{v459\_seam\_lattice\_voa\_route.py}): the second, independent
 construction that supplies exactly H6 --- for the even unimodular $E_8$ the lattice net $A_{E_8}$
 (Adamo--Giorgetti--Tanimoto, \texttt{arXiv:2506.01008}; OS \texttt{arXiv:2407.18222}) has weight-$1$ space
 $248{=}8{+}240$ with the $240$ roots splitting $112$ integer $+$ $128$ \emph{half-integer} (the spinor,
 $248{=}120{+}128$), so the lattice route builds the $128$-spinor currents MMST (xxv) leaves open; \mE\ the even
-unimodularity and root split, \mC\ AGT constructs the holomorphic extension, \mO\ the two routes leave one shared
-realisation input (the collar's scaling limit $={}A_{E_8}$), tied to $P_1$ by (xxiii). The G-block arithmetic
+unimodularity and root split, \mC\ AGT constructs the holomorphic extension --- since (xxxii) an \emph{independent
+second witness}, the primary net-level certification being the peer-reviewed crossed product --- \mO\ the routes
+leave one shared realisation input (the collar's scaling limit $={}A_{E_8}$), tied to $P_1$ by (xxiii). The G-block arithmetic
 (the one-sided $8{=}|\Z_2|\!\int\!K/\pi$, the reflection $C{\to}{-}C$, $c_-{=}8$, the range $8{\le}8{\le}16$,
 $248{=}8{+}240{=}120{+}128$, $240{=}112{+}128$, $\det K\,1$ vs $4$) is kernel-hardened in Lean
 (\texttt{FORM.SEAM.RESIDUAL.01}, \texttt{TfptCarrier/SeamResidualAxiom.lean}), reducing the residual to ONE named
@@ -1137,7 +1144,8 @@ spinor sectors, $\chi_{(E_8)_1}{=}E_4/\eta^8{=}\chi_o^{SO16}{+}\chi_s^{SO16}$ (w
 the finite $16$-Majorana Fock space already carries them ($C(16,2){=}120$ currents and $2^{16/2}{=}256{=}128{+}128$
 Ramond states); and a critical free-fermion ring converges to the chiral CFT (Casimir $c_-{\to}8$, lowest scaled
 gap $x_1{\to}1$ with $|x_1{-}1|{\sim}1/N^2$). \mE\ the $\theta$ identity, the $120{+}128{=}248$ split and the
-finite-$L$ convergence, \mC\mO\ AGT/AMT (xxvi) supply the rigorous holomorphic extension. \emph{(xxx) The $c{=}8$
+finite-$L$ convergence, \mC\mO\ the rigorous holomorphic extension is certified at net level by the crossed
+product (xxxii), with AGT/AMT (xxvi) as the independent second witness. \emph{(xxx) The $c{=}8$
 holomorphic-uniqueness pin} (\veri{v463\_seam\_c8\_holomorphic\_uniqueness.py}): the positive lever that makes the
 \emph{identification} half classification-forced rather than assumed. At level $1$ the central charge
 $c{=}\dim\mathfrak g/(1{+}h^\vee){=}8$ has \emph{three} simple solutions --- $A_8$ ($\dim 80$), $D_8{=}\mathfrak{so}(16)$
@@ -1158,15 +1166,40 @@ on every fixed window ($\max|P_{2N}{-}P_N|{\sim}1/N{\to}0$, so $P_\infty$ exists
 Dirac (entanglement $S(L){=}(c/3)\ln L$, $16$ copies $\Rightarrow c_-{=}8$, tying \vref{v450}). \mE\ idempotency,
 Cauchy convergence and the $c$-fit; \mC\ Araki/Shale--Stinespring give the state$\leftrightarrow$symbol bijection and
 implementable Bogoliubov map, so $R_1$ is upgraded from a bald axiom to ``the unique quasi-free realisation, its
-one-particle limit exhibited, modulo the named CAR functor''. The full G-block
-arithmetic --- now including the (xxviii) winding obstruction, the (xxix) finite-Fock spinor counts and the (xxx)
-holomorphy selector --- is kernel-hardened in Lean (\texttt{FORM.SEAM.RESIDUAL.01}), and the two formerly separate
+one-particle limit exhibited, modulo the named CAR functor''. \emph{(xxxii) The net-level crossed-product route
+$+$ the invariant-level realisation} (\veri{v469\_seam\_crossedproduct\_route.py}): both halves of the residual
+re-founded on harder-to-reject ground. The $128$-spinor extension needs no preprint: the $SO(16)_1$ spinor has
+$h_s{=}N/16{=}16/16{=}1{\in}\Z$, so its statistics phase is $+1$ --- \emph{exactly} the Longo--Rehren locality
+criterion --- and the $\Z_2$ simple-current crossed product $SO(16)_1{\rtimes}\{1,s\}$ is a \emph{local} index-$2$
+extension by 1995--2001 \emph{peer-reviewed} subfactor theory (Longo--Rehren, Rev.\ Math.\ Phys.\ 7 (1995); the
+level-$1$ $so(N)$ net with its DHR sectors from even-CAR: B\"ockenhauer, Rev.\ Math.\ Phys.\ 8 (1996);
+simple-current extensions of nets: B\"ockenhauer--Evans, Comm.\ Math.\ Phys.\ 197 (1998)); KLM (Comm.\ Math.\
+Phys.\ 219 (2001)) gives $\mu(B){=}4/2^2{=}1\Rightarrow$ holomorphic $\Rightarrow(E_8)_1$ by the (xxx) pin ---
+so the AGT/AMT route (xxvi) is \emph{demoted to an independent second witness}. The index-$4$ $\mu_4$ glue runs on
+the same integer, $h(J^k){=}\{1,1,1\}$ for $k{=}1,2,3$ (the \vref{v125} isotropy $q(k(1,1)){=}k^2$ at net level,
+$\mu{=}16/4^2{=}1$). And the realisation input $R_1$ is reduced from model fiat to \emph{invariants}
+(R1$'$): quasi-free \mC\ (\vref{v155}/\vref{v160}) $+$ gap \mE\ (\vref{v302}) $+$ class D $+$ $c_-{=}8$ \mE\
+((xxiii), from $P_1$) --- computed on the collar as FHS Chern $|C|{=}1$ (control $0$), $\nu{=}16{\times}|C|{=}16$,
+$c_-{=}\nu/2{=}8$; and $\nu{\equiv}0\ (\mathrm{mod}\ 16)$ is exactly Kitaev's class-D phase whose edge admits a
+purely bosonic description $=$ the $(E_8)_1$ level-$1$ state (the sixteen-fold way; $c_-$ a \emph{phase} invariant,
+Kapustin--Spodyneiko; Kim et al.), so any realisation with the R1$'$ invariants is phase-equivalent to the
+\vref{v367} stack. \mE\ the locality integers, the KLM $\mu$-arithmetic, the computed invariants and the composed
+chain; \mC\ the re-founded citation package; \mO\ the cited theorems stay cited. The full G-block
+arithmetic --- now including the (xxviii) winding obstruction, the (xxix) finite-Fock spinor counts, the (xxx)
+holomorphy selector and the (xxxii) locality/$\mu$/sixteen-fold joints --- is kernel-hardened in Lean
+(\texttt{FORM.SEAM.RESIDUAL.01}), the two formerly separate
 cited theorems are \emph{merged} into one combined external axiom \texttt{seam\_realisation\_theorem}, so the residual
-reduces to ONE realisation axiom plus ONE cited theorem (\texttt{\#print axioms} drops from six to four). Across
-(v)--(xxxi), \texttt{SEAM.EQUIV.01}
-stays \mO: with (xxx) pinning the identification and (xxxi) reducing the realisation to its one-particle data, the
+reduces to ONE realisation axiom plus ONE cited theorem (\texttt{\#print axioms} drops from six to four); and the
+(xxxii) route is Lean-carried as the \emph{parallel} derivation \texttt{seamResidualClosed$'$} (the invariant-level
+axiom \texttt{collar\_invariants} plus the single combined package \texttt{crossedproduct\_route\_theorem}, its
+joints --- \texttt{lr\_locality\_integer}, \texttt{glue\_locality\_integers}, \texttt{klm\_holomorphic},
+\texttt{sixteenfold\_pin} --- kernel facts with no axioms). Across
+(v)--(xxxii), \texttt{SEAM.EQUIV.01}
+stays \mO: with (xxx) pinning the identification, (xxxi) reducing the realisation to its one-particle data and
+(xxxii) re-founding the extension leg on peer-reviewed ground, the
 residual is now \emph{entirely certification} --- a named, hypothesis-audited package of published theorems (MMST,
-AGT/AMT, Dong--Mason, Araki, Shale--Stinespring) with no open internal mechanism --- yet still rests on cited
+Longo--Rehren/B\"ockenhauer/B\"ockenhauer--Evans/KLM, Dong--Mason, Araki, Shale--Stinespring; AGT/AMT as second
+witness) with no open internal mechanism --- yet still rests on cited
 continuum-existence theorems we do not re-prove.
 \par\smallskip\noindent\textbf{The TOE/QFT closure contracts as three citable certificates
 (\veri{v398\_seam\_state\_rigidity.py}, \veri{v399\_gravity\_complete.py}, \veri{v401\_metrology\_closure.py}).}

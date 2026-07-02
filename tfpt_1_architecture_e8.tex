@@ -546,7 +546,12 @@ the two functorial faces of a single commuting square (\vref{v234}/\vref{v277}/\
 realisation on which the strict-TOE residual turns (\texttt{SEAM.EQUIV.01}) is exactly the statement that the
 raw seam realises this square --- now \emph{closed modulo a cited theorem} (the lattice/$S_3$ stack pins it at
 every computable level, Lean \texttt{FORM.SEAM.MMST.01}; only the cited MMST/OS continuum-existence theorems stay
-\mO, \vref{v367}/\vref{v368}/\vref{v376}--\vref{v379}/\vref{v336}).
+\mO, \vref{v367}/\vref{v368}/\vref{v376}--\vref{v379}/\vref{v336}). The extension leg of that citation package is
+itself re-founded at net level (\veri{v469\_seam\_crossedproduct\_route.py}): the $128$-spinor step is the
+\emph{local} $\Z_2$ simple-current crossed product ($h_s(SO(16)_1)=16/16=1\in\Z$, the Longo--Rehren locality
+criterion; KLM $\mu=4/2^2=1$), on 1995--2001 peer-reviewed subfactor theory, with the lattice-VOA preprint route
+demoted to an independent second witness, and the realisation input reduced to invariant level (R1$'$).
+\texttt{SEAM.EQUIV.01} stays \mO.
 
 \TFPTdoublepushout
 
@@ -1149,7 +1154,8 @@ model --- the flat $\Delta=-\partial^2{+}m^2$ on $T^4$, $\operatorname{Tr}e^{-t\
 very order in which the quadratic term is grounded below (\vref{v342}, Gilkey $a_4$). So a $\zeta$-determinant's
 variation is heat-kernel data \emph{at the $a_4$ order}, and the measure itself is $\cthree$-built,
 $(4\pi)^{-2}=(2\cthree)^2=4\cthree^2$; the \emph{actual} seam $a_4=8b_1\cthree^6$ and the cubic $\alpha^3$ Chern
-moment stay \mO\ (\vref{v384}), the seam $F$-normalisation \mC.
+moment stay \mO\ (\vref{v384}), the seam $F$-normalisation \mC\ (retyped by the fifth step below,
+\vref{v470}, as the embedding index $k_Y{=}5/3$).
 \par\smallskip
 \noindent\textbf{The heat-kernel origin of the terms (\veri{v342\_em\_ward\_heatkernel.py}).} The determinant-line
 form is more than bookkeeping: its terms are textbook heat-kernel coefficients. \mE\ $\cthree=1/(8\pi)$ \emph{is}
@@ -1162,7 +1168,8 @@ contribution to $\log\det\Delta_{U(1)}$ --- so the Calder\'on $-2\cthree^3\alpha
 the three channels; $6=|R^+(A_3)|$, the $C_6$ hexagon), and the $\pi$-power test confirms it: $2\cthree^3=1/(256\pi^3)$
 carries $\pi^3$, i.e.\ \emph{three} boundary $\cthree$-insertions, not a single bulk coefficient. \textbf{Typing:} the
 boundary structure and the gauge-curvature origin of the quadratic term are heat-kernel-forced \mE; the exact
-coefficient value is \mC\ (the seam $F$-normalisation); the cubic $\alpha^3$ Maxwell moment (a topological/Chern
+coefficient value is \mC\ (the seam $F$-normalisation --- retyped as the embedding index $k_Y{=}5/3$ by the
+fifth step below, \vref{v470}); the cubic $\alpha^3$ Maxwell moment (a topological/Chern
 level) and the full ``this \emph{is} the seam $U(1)$ $\zeta$-determinant'' claim stay \mO\ --- exactly the
 \texttt{EM.WARD.01} residual, unchanged. So the quadratic/curvature half of the EM-Ward origin is now derived; the
 cubic-moment half remains the honest open part.
@@ -1189,6 +1196,23 @@ large-gauge invariance quantises the seam $U(1)$ level to $\Z$, so $k_0=1$ is th
 --- an integer, not a tunable real. \mC\ What stays \mO\ is the \texttt{EM1} lemma itself --- the
 from-first-principles Chern--Simons-boundary proof that $\partial_\tau\log Z_{\mathrm{Maxwell}}=a^3$ ---
 external math (type A, \vref{v384}).
+\emph{A fifth honest step (\veri{v470\_alpha\_inflow\_level.py}) upgrades both leftovers, still without
+closing the target.} \mC\ \emph{The level is computed, not minimal:} under the same \texttt{EM1} reading, the
+$a^3$ coefficient $k_0=1$ \emph{equals} the FHS bulk Chern invariant $|C|=1$ of the very p$+$ip collar that
+realises S3 of \texttt{SEAM.EQUIV.01} (\vref{v367}/\vref{v461}; control $C(M{=}3)=0$) --- ``why exactly
+$1$'' is answered by a computation plus the cited inflow identification (TKNN / Avron--Seiler--Simon
+quantisation; Callan--Harvey inflow; the APS/Witten $\eta{=}$CS reading of $\delta\log\det$;
+Quillen/Bismut--Freed determinant-line integrality), \emph{replacing} the minimality assumption of the fourth
+step. \mE\ \emph{The $F$-normalisation is the embedding index:} $k_Y=\operatorname{tr}_{\bar 5}(Y^2)/
+\operatorname{tr}(T_3^2)=(5/6)/(1/2)=5/3$ (Ginsparg 1987), so $(3/5)\times\tfrac{41}{6}=\tfrac{41}{10}=b_1$
+exactly --- the ``GUT $3/5$'' \emph{is} the inverse embedding index, and once the seam net is $(E_8)_1$ at
+level $1$ the $U(1)_Y$ normalisation $\langle J(z)J(w)\rangle=k/(z{-}w)^2$ is \emph{fixed} by it (level-$1$
+current-algebra rigidity, no continuous dial): the seam $F$-normalisation \mC\ has \emph{zero independent
+content} --- a face of \texttt{SEAM.EQUIV.01}, per the \vref{v382} typing. \mC\ \emph{One phase, two
+responses:} the collar phase carries $c_-=8$ (gravitational, feeding \texttt{SEAM.EQUIV.01}/S3, \vref{v456})
+\emph{and} $C=1$ ($U(1)$, feeding \texttt{EM1}) --- so discharging the one realisation input feeds both named
+targets at once. What stays \mO\ is the bridge lemma ``$\delta\log\det_\zeta(\mathrm{seam})=$ the inflow
+response''; \texttt{ALPHA.QUILLEN.EXACT.01} stays \mO, and $\ainv$ stays \mE\ regardless.
 \par\smallskip
 
 \noindent The full ablation --- which inputs are load-bearing and which only set the last digit --- is in
