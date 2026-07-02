@@ -124,6 +124,46 @@ def mode_list(mf_msun: float, af: float, multimode: bool = False):
     return modes
 
 
+def greedy_residual_subtraction(resid: np.ndarray, merger: int, dt: float,
+                                n_components: int = 6, win_s: float = 0.06,
+                                f_band: tuple[float, float] = (30.0, 600.0),
+                                tau_grid_ms=(2.0, 5.0, 10.0, 20.0, 40.0)) -> np.ndarray:
+    """AGNOSTIC residual modelling (matching pursuit) -- the honest stand-in
+    for an NR-informed subtraction: greedily fit up to `n_components` FREE
+    damped sinusoids (peak frequency of the current residual spectrum, tau
+    from a grid, cos+sin LS) in the post-merger window and subtract them.
+    Captures higher overtones (n>=2), mode mixing and quasi-QNM transient
+    power without assuming a waveform model.  Diagnostic use only."""
+    out = resid.copy()
+    n = len(out)
+    end = min(n, merger + int(win_s / dt))
+    sl = slice(merger, end)
+    m = end - merger
+    if m < 64:
+        return out
+    freqs = np.fft.rfftfreq(m, dt)
+    band = (freqs >= f_band[0]) & (freqs <= f_band[1])
+    for _ in range(n_components):
+        spec = np.abs(np.fft.rfft(out[sl] * np.hanning(m)))
+        spec[~band] = 0.0
+        f_pk = float(freqs[int(np.argmax(spec))])
+        if f_pk <= 0:
+            break
+        best = None
+        for tau_ms in tau_grid_ms:
+            tau = tau_ms * 1e-3
+            c = damped_sinusoid(n, merger, f_pk, tau, dt, phi=0.0)
+            s = damped_sinusoid(n, merger, f_pk, tau, dt, phi=-np.pi / 2)
+            A = np.vstack([c[sl], s[sl]]).T
+            coef, *_ = np.linalg.lstsq(A, out[sl], rcond=None)
+            model_win = A @ coef
+            rss = float(np.sum((out[sl] - model_win) ** 2))
+            if best is None or rss < best[0]:
+                best = (rss, coef[0] * c + coef[1] * s)
+        out = out - best[1]
+    return out
+
+
 def subtract_qnm_multimode(white: np.ndarray, merger: int, modes, dt: float,
                            n_tau: float = 8.0) -> tuple[np.ndarray, float]:
     """Joint LS fit of (cos, sin) for every mode in `modes`; returns residual +
@@ -233,7 +273,8 @@ def _ratio_consistency(resid: np.ndarray, t0: int, lag_samp: int, ratio: float,
     return q1_hat, step_hat, ok
 
 
-def battery_event(event: str, af: float = 0.69, multimode: bool = False) -> EventBattery:
+def battery_event(event: str, af: float = 0.69, multimode: bool = False,
+                  aggressive: bool = False) -> EventBattery:
     meta = json.loads((STRAIN_DIR / f"{event}_meta.json").read_text(encoding="utf-8"))
     merger_gps, mf_src = float(meta["gps"]), float(meta["mf"])
     mf = detector_frame_mass(event, mf_src)      # observed (redshifted) ringdown
@@ -252,6 +293,9 @@ def battery_event(event: str, af: float = 0.69, multimode: bool = False) -> Even
             merger + int(GATE_POST_S / s.dt))
         white = apply_whitening(s.data, psd_i, scale)
         resid, amp220 = subtract_qnm_multimode(white, merger, modes, s.dt)
+        if aggressive:
+            # agnostic matching-pursuit residual modelling (NR-subtraction proxy)
+            resid = greedy_residual_subtraction(resid, merger, s.dt)
 
         lags_samp = np.unique(np.round(LAGS_MS * 1e-3 / s.dt).astype(int))
         lags_samp = lags_samp[lags_samp > 0]
@@ -304,9 +348,12 @@ def battery_event(event: str, af: float = 0.69, multimode: bool = False) -> Even
     return res
 
 
-def run_battery(events: list[str], multimode: bool = False) -> int:
+def run_battery(events: list[str], multimode: bool = False,
+                aggressive: bool = False) -> int:
     have = [e for e in events if (STRAIN_DIR / f"{e}_meta.json").exists()]
     sub = ("220+221+330+210+quadratic(2x220)" if multimode else "220+221")
+    if aggressive:
+        sub += " + greedy matching pursuit (6 free damped sinusoids)"
     print("=" * 88)
     print("TFPT GW Stage-1c: SIGNATURE BATTERY (ratio semantics x mu4 per-bounce phases x")
     print(f"  extended lags; DETECTOR-FRAME (redshifted) QNM frequencies; joint {sub}")
@@ -321,7 +368,7 @@ def run_battery(events: list[str], multimode: bool = False) -> int:
     out_events = []
     worst = {name: 1.0 for name, _, _ in VARIANTS}
     for ev in have:
-        r = battery_event(ev, multimode=multimode)
+        r = battery_event(ev, multimode=multimode, aggressive=aggressive)
         print(f"\n  {ev}: M_f={r.mf_msun} Msun, f0={r.f0_hz} Hz  ->  {r.label}")
         for d in r.detectors:
             row = "  ".join(
@@ -368,8 +415,12 @@ def run_battery(events: list[str], multimode: bool = False) -> int:
     print(f"\n-> {verdict}")
 
     RESULTS.mkdir(exist_ok=True)
-    out_name = ("signature_battery_multimode.json" if multimode
-                else "signature_battery.json")
+    if aggressive:
+        out_name = "signature_battery_aggressive.json"
+    elif multimode:
+        out_name = "signature_battery_multimode.json"
+    else:
+        out_name = "signature_battery.json"
     (RESULTS / out_name).write_text(json.dumps({
         "stage": f"strain_level_test (post-hoc signature battery, Bonferroni x{N_VARIANTS}"
                  f"{', multimode subtraction diagnostic' if multimode else ''})",

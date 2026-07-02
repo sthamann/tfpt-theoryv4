@@ -149,10 +149,32 @@ stream, no coincidence). The offset≠spacing geometry is null. Output:
 **Multimode-subtraction diagnostic (`tfpt-gw battery --multimode`):** subtracting
 (3,3,0), (2,1,0) and the quadratic 220×220 mode (f = 2f₂₂₀, τ = τ₂₂₀/2) *in addition to*
 220+221 does **not** remove the GW150914/GW200129/GW190521 template-agnostic broadband
-excesses — they persist and stay template-agnostic. Together with the off-source-PSD test
-this narrows their origin to: higher overtones (n ≥ 2), mode mixing, or non-stationary
-detector noise; a full NR-informed waveform subtraction is the definitive next step.
+excesses — they persist and stay template-agnostic.
 Output: `results/signature_battery_multimode.json`.
+
+**Agnostic residual-modelling diagnostic (`tfpt-gw battery --aggressive`)** — the honest
+stand-in for NR-informed subtraction: greedy matching pursuit fits up to 6 *free* damped
+sinusoids (peak-frequency + τ-grid, 30–600 Hz) in the post-merger window and subtracts
+them. **Outcome: the broadband-excess mystery is resolved** — GW200129, GW190521 and
+GW190521_074359 lose their excesses entirely (H1 p goes 0.001 → 0.2–0.6), i.e. their
+"excess" was quasi-QNM transient power (higher overtones n ≥ 2 / mode mixing) that free
+damped sinusoids absorb; GW150914 is strongly reduced but retains one low-p
+template-agnostic stream (older detector state; residual non-stationarity or deeper mode
+content — the only place where a true NR waveform subtraction would still add
+information). No echo-train candidate appears at any stage of the subtraction ladder
+(220+221 → +330/210/quadratic → +matching pursuit).
+Output: `results/signature_battery_aggressive.json`.
+
+## Stage 1g — DRIFT + PRECESSION robustness scan (`tfpt-gw robust`)
+
+The last two signature-distortion axes: **per-bounce lag drift** (a relaxing cavity —
+spacing drifts by δ ∈ {−10 %, −5 %, +5 %, +10 %} per bounce, coherent templates at the
+C = 3/8 lag grid) and a **precession proxy** (a precessing remnant modulates per-echo
+amplitudes while keeping positions — position-only statistic: free phase per echo,
+*uniform* weights, testing the train positions without amplitude ordering).
+
+**Result: `NO_DRIFT_OR_PRECESSION_ECHO` on all 10 events** (best `p_bonf = 0.046`,
+GW150914/L1, single stream). Output: `results/robustness_scan.json`.
 
 ## Stage 1e — AREA-QUANTUM spectral comb (`tfpt-gw bmcomb`) — Bekenstein–Mukhanov lines
 
@@ -220,7 +242,9 @@ tfpt-gw battery  --events ...same 10 events...                 # Stage 1c signat
 tfpt-gw point    --events ...same 10 events...                 # Stage 1d TFPT point test v2
 tfpt-gw bmcomb   --events ...same 10 events...                 # Stage 1e area-quantum comb
 tfpt-gw offset   --events ...same 10 events...                 # Stage 1f offset-train test
+tfpt-gw robust   --events ...same 10 events...                 # Stage 1g drift+precession
 tfpt-gw battery --multimode --events GW150914 ...              # 330/210/quadratic diagnostic
+tfpt-gw battery --aggressive --events GW150914 ...             # matching-pursuit diagnostic
 ```
 
 ## Layout
@@ -240,7 +264,8 @@ src/tfpt_gw/signature_battery.py# Stage 1c signature battery (semantics x mu4 ph
 src/tfpt_gw/point_test.py   # Stage 1d point test v2 (C=3/8 lag, spin scan, skip-first, joint fit)
 src/tfpt_gw/bm_comb.py      # Stage 1e area-quantum (Bekenstein-Mukhanov) spectral comb
 src/tfpt_gw/offset_train.py # Stage 1f offset-train (scrambling delay x cavity spacing)
-src/tfpt_gw/cli.py          # `tfpt-gw analyze|search|realdata|dynamic|stack|battery|point|bmcomb|offset`
+src/tfpt_gw/robustness_scan.py # Stage 1g drift + precession (position-only) scan
+src/tfpt_gw/cli.py          # `tfpt-gw ...|point|bmcomb|offset|robust` (+ --multimode/--aggressive)
 data/gwtc_events.csv        # real LVK GWTC-5.0 catalogue (390 canonical; 391 raw rows)
 data/strain/                # real 32 s HDF5 strain (gitignored) + <event>_meta.json
 event_count_audit.md        # 390 vs 391 reconciliation + selection accounting
@@ -250,5 +275,7 @@ results/signature_battery.json     # Stage 1c battery output
 results/point_test.json     # Stage 1d point-test output
 results/bm_comb.json        # Stage 1e area-quantum comb output
 results/offset_train.json   # Stage 1f offset-train output
-results/signature_battery_multimode.json  # multimode-subtraction diagnostic
+results/robustness_scan.json# Stage 1g drift+precession output
+results/signature_battery_multimode.json   # multimode-subtraction diagnostic
+results/signature_battery_aggressive.json  # matching-pursuit diagnostic
 ```

@@ -77,7 +77,24 @@ spacing-spezifisch; Power-limitiert → data_limited, neue Scorecard-Zeile, 83�
    dem Off-Source-PSD-Test engt das die Ursache ein auf: höhere Overtones (n≥2), Mode-Mixing
    oder nichtstationäres Detektorrauschen. Definitiver nächster Schritt: NR-informierte
    Waveform-Subtraktion (externes Tooling, dokumentiert).
-Verbleibend offen: Lag-Drift zwischen Echos, Präzession, NR-Subtraktion.
+**(2g) Letzte Runde (gleicher Tag): Drift + Präzession + agnostische Residual-Modellierung.**
+1. **Stage 1g `tfpt-gw robust`:** (a) Lag-DRIFT pro Bounce (relaxierende Kavität, δ ∈
+   {−10,−5,+5,+10}% am C=3/8-Lag-Raster, kohärent); (b) PRÄZESSIONS-Proxy: Position-Only-
+   Statistik (freie Phase pro Echo, UNIFORME Gewichte — testet Zug-Positionen ohne
+   Amplituden-Ordnung, robust gegen Präzessions-Modulation). Ergebnis:
+   **NO_DRIFT_OR_PRECESSION_ECHO auf allen 10 Events** (best p_bonf=0.046, Einzelstream).
+2. **`battery --aggressive` (NR-Subtraktions-Ersatz): das Breitband-Exzess-Rätsel GELÖST.**
+   Greedy Matching Pursuit (bis 6 freie gedämpfte Sinusoide, Peak-Frequenz + τ-Raster) nach
+   der Moden-Subtraktion: **GW200129/GW190521/GW190521_074359 verlieren ihre Exzesse
+   vollständig** (H1 p 0.001→0.2–0.6) ⇒ es war quasi-QNM-Transientenleistung (Overtones
+   n≥2/Mode-Mixing); GW150914 stark reduziert, ein Stream bleibt (älterer Detektorzustand;
+   die einzige Stelle, wo echte NR-Subtraktion noch Information brächte). Kein
+   Echo-Kandidat auf irgendeiner Stufe der Subtraktions-Leiter (220+221 → +330/210/quad →
+   +Matching-Pursuit).
+Damit sind ALLE Signatur-Verzerrungsachsen der Vogelperspektive-Analyse getestet:
+Frame/z, Semantik, Bounce-Phasen/Birefringenz, Lag-Fenster, Overtones, PSD-Ringing,
+Kurz-Lag-Selbstabsorption (Joint-Fit), Spin, Skip-First, BM-Flächenquant-Kamm,
+Offset≠Spacing, Drift, Präzession, Residual-Modellierung. GW-Kanal: 9 Suchstufen, alle null.
 
 **(2d) Cross-Source-Audit der Signatur-Erkenntnisse (gleicher Tag): alle anderen Kanäle gegen
 I1 Frame / I2 Semantik / I3 Template-Spezifität / I4 Punkt-Test geprüft.** Befund + Fixes:

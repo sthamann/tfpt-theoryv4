@@ -89,12 +89,15 @@ ROWS = [
      "NO_VARIANT_ECHO; Stage-1d POINT TEST v2 (lag FIXED by C=3/8: dt=2.288 M_det +-25%, kernel "
      "ratios, spin scan af={0.60,0.69,0.80}, skip-first-echo, morphology-robust incoherent statistic, "
      "JOINT QNM+train fit repairing the short-lag subtract-then-search self-absorption, Bonferroni "
-     "x39): NO_POINT_ECHO (best p_bonf=0.052, single stream GW150914/L1; broadband residual power "
-     "persists under off-source PSD AND under 330/210/quadratic multimode subtraction -> higher "
-     "overtones/mode mixing/non-stationarity, not filter artefact); Stage-1f OFFSET TRAIN (first "
-     "echo at the scrambling time t_scr=4M lnS ~0.25s, spacing 2.288M -- the last untested train "
-     "geometry, no QNM subtraction needed): NO_OFFSET_TRAIN (best p_bonf=0.035, single stream) -- "
-     "the null is robust against all tested signature readings and systematics",
+     "x39): NO_POINT_ECHO (best p_bonf=0.052, single stream GW150914/L1); Stage-1f OFFSET TRAIN "
+     "(first echo at the scrambling time t_scr=4M lnS ~0.25s, spacing 2.288M, no QNM subtraction "
+     "needed): NO_OFFSET_TRAIN (best p_bonf=0.035); Stage-1g DRIFT+PRECESSION scan (per-bounce "
+     "spacing drift +-5/10%, position-only free-phase statistic): NO_DRIFT_OR_PRECESSION_ECHO "
+     "(best p_bonf=0.046); broadband-excess mystery RESOLVED by the subtraction ladder: greedy "
+     "matching-pursuit residual modelling absorbs the GW200129/GW190521 excesses entirely (quasi-"
+     "QNM transient power, higher overtones/mode mixing), GW150914 strongly reduced (one stream "
+     "left, older detector state) -- no echo-train candidate at any subtraction depth; the null "
+     "is robust against every tested signature reading and systematic",
      None, "search_target", "boundary recovery kernel",
      "strain_level_test", "LVK GWTC-5.0 + real 32s strain (10 loudest ringdowns incl. GW250114, O4b)",
      "strain-level echo with ratio >>(2/3)^6 across events", "consistent"],
