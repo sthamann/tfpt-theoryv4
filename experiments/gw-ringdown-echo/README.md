@@ -131,11 +131,28 @@ template-agnosticism control classifies the excess as broadband residual power (
 plausibly unsubtracted higher-mode / nonlinear-QNM content; an NR-informed subtraction is
 the escalation path). Upper bound, no tension. Output: `results/point_test.json`.
 
-**Documented-but-untested configuration (offset train):** the TFPT scrambling time
-(t_scr ~ 4M ln S ≈ 0.25 s at 68 M☉) could delay the *first* echo by a global offset while
-subsequent echoes keep the cavity spacing 2.288 M — an offset ≠ spacing train. All searches
-so far anchor the train at the merger with offset = spacing; the 2-D (offset × spacing)
-scan is a preregistered candidate for the next hardening round (trials budget permitting).
+## Stage 1f — OFFSET-TRAIN point test (`tfpt-gw offset`) — scrambling delay × cavity spacing
+
+The last untested train geometry: the TFPT scrambling time **t_scr = 4M·ln S ≈ 0.25 s**
+(ln S = 2 ln(M/l_P) + ln 4π) can delay the *first* re-emission globally while the cavity
+keeps the Nariai spacing **2.288 M ≈ 0.8 ms** — an offset ≠ spacing train that no earlier
+stage probed (all anchored the train at the merger). Two theory-fixed numbers ⇒ minimal
+trials (Bonferroni ×28: ratio × phase × spacing grid). Bonus: at t_scr the ringdown has
+decayed by ~60 e-folds, so **no QNM subtraction is needed** — that systematic vanishes.
+Caveat: at 4 kHz the ~0.8 ms spacing is only ~3 samples, so the spacing grid is coarse for
+the lightest remnants (documented in the module).
+
+**Result: `NO_OFFSET_TRAIN` on all 10 events** (best `p_bonf = 0.035`, GW200129/V1, single
+stream, no coincidence). The offset≠spacing geometry is null. Output:
+`results/offset_train.json`.
+
+**Multimode-subtraction diagnostic (`tfpt-gw battery --multimode`):** subtracting
+(3,3,0), (2,1,0) and the quadratic 220×220 mode (f = 2f₂₂₀, τ = τ₂₂₀/2) *in addition to*
+220+221 does **not** remove the GW150914/GW200129/GW190521 template-agnostic broadband
+excesses — they persist and stay template-agnostic. Together with the off-source-PSD test
+this narrows their origin to: higher overtones (n ≥ 2), mode mixing, or non-stationary
+detector noise; a full NR-informed waveform subtraction is the definitive next step.
+Output: `results/signature_battery_multimode.json`.
 
 ## Stage 1e — AREA-QUANTUM spectral comb (`tfpt-gw bmcomb`) — Bekenstein–Mukhanov lines
 
@@ -202,6 +219,8 @@ tfpt-gw stack    --events GW250114_082203 GW230814_230901 GW240920_124024 \
 tfpt-gw battery  --events ...same 10 events...                 # Stage 1c signature battery
 tfpt-gw point    --events ...same 10 events...                 # Stage 1d TFPT point test v2
 tfpt-gw bmcomb   --events ...same 10 events...                 # Stage 1e area-quantum comb
+tfpt-gw offset   --events ...same 10 events...                 # Stage 1f offset-train test
+tfpt-gw battery --multimode --events GW150914 ...              # 330/210/quadratic diagnostic
 ```
 
 ## Layout
@@ -220,7 +239,8 @@ src/tfpt_gw/stacked_search.py   # Stage 1b stacked search over the loudest ringd
 src/tfpt_gw/signature_battery.py# Stage 1c signature battery (semantics x mu4 phases x lags)
 src/tfpt_gw/point_test.py   # Stage 1d point test v2 (C=3/8 lag, spin scan, skip-first, joint fit)
 src/tfpt_gw/bm_comb.py      # Stage 1e area-quantum (Bekenstein-Mukhanov) spectral comb
-src/tfpt_gw/cli.py          # `tfpt-gw analyze|search|realdata|dynamic|stack|battery|point|bmcomb`
+src/tfpt_gw/offset_train.py # Stage 1f offset-train (scrambling delay x cavity spacing)
+src/tfpt_gw/cli.py          # `tfpt-gw analyze|search|realdata|dynamic|stack|battery|point|bmcomb|offset`
 data/gwtc_events.csv        # real LVK GWTC-5.0 catalogue (390 canonical; 391 raw rows)
 data/strain/                # real 32 s HDF5 strain (gitignored) + <event>_meta.json
 event_count_audit.md        # 390 vs 391 reconciliation + selection accounting
@@ -229,4 +249,6 @@ results/echo_stack.json     # Stage 1b stacked-search output
 results/signature_battery.json     # Stage 1c battery output
 results/point_test.json     # Stage 1d point-test output
 results/bm_comb.json        # Stage 1e area-quantum comb output
+results/offset_train.json   # Stage 1f offset-train output
+results/signature_battery_multimode.json  # multimode-subtraction diagnostic
 ```

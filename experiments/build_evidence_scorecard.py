@@ -90,7 +90,10 @@ ROWS = [
      "ratios, spin scan af={0.60,0.69,0.80}, skip-first-echo, morphology-robust incoherent statistic, "
      "JOINT QNM+train fit repairing the short-lag subtract-then-search self-absorption, Bonferroni "
      "x39): NO_POINT_ECHO (best p_bonf=0.052, single stream GW150914/L1; broadband residual power "
-     "persists under off-source PSD -> higher-mode/nonlinear-QNM content, not filter artefact) -- "
+     "persists under off-source PSD AND under 330/210/quadratic multimode subtraction -> higher "
+     "overtones/mode mixing/non-stationarity, not filter artefact); Stage-1f OFFSET TRAIN (first "
+     "echo at the scrambling time t_scr=4M lnS ~0.25s, spacing 2.288M -- the last untested train "
+     "geometry, no QNM subtraction needed): NO_OFFSET_TRAIN (best p_bonf=0.035, single stream) -- "
      "the null is robust against all tested signature readings and systematics",
      None, "search_target", "boundary recovery kernel",
      "strain_level_test", "LVK GWTC-5.0 + real 32s strain (10 loudest ringdowns incl. GW250114, O4b)",

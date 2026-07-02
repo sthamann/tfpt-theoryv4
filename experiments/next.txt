@@ -63,8 +63,21 @@ fünf Effekte identifiziert, implementiert, alle 10 Events neu gefahren.**
 GW150914/L1, kein Zweit-Detektor, Joint-Fit p=0.023–0.063 roh); Battery v3 (Off-Source-PSD)
 **NO_VARIANT_ECHO** unverändert; BM-Kamm **NO_BM_COMB** (bestes p_bonf=0.032, nicht
 spacing-spezifisch; Power-limitiert → data_limited, neue Scorecard-Zeile, 83→84 rows).
-Dokumentiert-offen: Offset≠Spacing-Zug (Scrambling-Delay des ersten Echos, 2D-Scan als
-nächste Prereg), Lag-Drift, Präzession, NR-informierte Subtraktion höherer Moden.
+**(2f) Next-Runde ausgeführt (gleicher Tag): Offset-Train + Multimode-Diagnose.**
+1. **Stage 1f `tfpt-gw offset` — Offset≠Spacing-Zug, die letzte ungetestete Zug-Geometrie:**
+   erstes Echo bei der Scrambling-Zeit t_scr = 4M·lnS (lnS = 2·ln(M/l_P)+ln4π; 248–853 ms je
+   Event), Abstand = Nariai 2.288M (±25%). Zwei theorie-fixierte Zahlen, Bonferroni ×28;
+   Bonus: Fenster liegt ~60 e-folds nach dem Ringdown ⇒ KEINE QNM-Subtraktion nötig (diese
+   Systematik entfällt komplett). Ergebnis: **NO_OFFSET_TRAIN auf allen 10 Events** (best
+   p_bonf=0.035, GW200129/V1, kein Zweit-Detektor). Caveat dokumentiert: bei 4 kHz ist der
+   ~0.8-ms-Abstand nur ~3 Samples (grobes Spacing-Raster für leichte Remnants).
+2. **Multimode-Diagnose `battery --multimode`:** zusätzliche Subtraktion von (3,3,0), (2,1,0)
+   und der quadratischen 220×220-Mode (f=2f₂₂₀, τ=τ₂₂₀/2, BCW-Fits) entfernt die
+   template-agnostischen Breitband-Exzesse (GW150914/GW200129/GW190521) NICHT — zusammen mit
+   dem Off-Source-PSD-Test engt das die Ursache ein auf: höhere Overtones (n≥2), Mode-Mixing
+   oder nichtstationäres Detektorrauschen. Definitiver nächster Schritt: NR-informierte
+   Waveform-Subtraktion (externes Tooling, dokumentiert).
+Verbleibend offen: Lag-Drift zwischen Echos, Präzession, NR-Subtraktion.
 
 **(2d) Cross-Source-Audit der Signatur-Erkenntnisse (gleicher Tag): alle anderen Kanäle gegen
 I1 Frame / I2 Semantik / I3 Template-Spezifität / I4 Punkt-Test geprüft.** Befund + Fixes:

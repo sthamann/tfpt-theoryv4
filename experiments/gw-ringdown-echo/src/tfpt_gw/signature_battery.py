@@ -85,22 +85,43 @@ LAGS_MS = np.concatenate([LAGS_FINE_MS, LAGS_COARSE_MS])
 
 
 # ---------------------------------------------------------------------------
-# Kerr (l=2, m=2) QNMs, n = 0 and n = 1 (Berti-Cardoso-Will 2006 fits)
+# Kerr QNMs (Berti-Cardoso-Will 2006 fits): (2,2,0), (2,2,1), (3,3,0), (2,1,0)
 # ---------------------------------------------------------------------------
-def qnm_22n(mf_msun: float, af: float, n: int) -> tuple[float, float]:
+_BCW = {
+    (2, 2, 0): (1.5251, -1.1568, 0.1292, 0.7000, 1.4187, -0.4990),
+    (2, 2, 1): (1.3673, -1.0260, 0.1628, 0.1000, 0.5436, -0.4731),
+    (3, 3, 0): (1.8956, -1.3043, 0.1818, 0.9000, 2.3430, -0.4810),
+    (2, 1, 0): (0.6000, -0.2339, 0.4175, -0.3000, 2.3561, -0.2277),
+}
+
+
+def qnm_mode(mf_msun: float, af: float, lmn: tuple[int, int, int]) -> tuple[float, float]:
     j = float(np.clip(af, 0.0, 0.99))
-    if n == 0:
-        m_omega = 1.5251 - 1.1568 * (1.0 - j) ** 0.1292
-        q_fac = 0.7000 + 1.4187 * (1.0 - j) ** (-0.4990)
-    elif n == 1:
-        m_omega = 1.3673 - 1.0260 * (1.0 - j) ** 0.1628
-        q_fac = 0.1000 + 0.5436 * (1.0 - j) ** (-0.4731)
-    else:
-        raise ValueError(n)
+    a1, a2, a3, b1, b2, b3 = _BCW[lmn]
+    m_omega = a1 + a2 * (1.0 - j) ** a3
+    q_fac = b1 + b2 * (1.0 - j) ** b3
     m_sec = mf_msun * GMSUN_OVER_C3
     f = m_omega / m_sec / (2.0 * np.pi)
     tau = q_fac / (np.pi * f)
     return float(f), float(tau)
+
+
+def qnm_22n(mf_msun: float, af: float, n: int) -> tuple[float, float]:
+    return qnm_mode(mf_msun, af, (2, 2, n))
+
+
+def mode_list(mf_msun: float, af: float, multimode: bool = False):
+    """Subtraction modes: 220+221; with multimode also 330, 210 and the
+    quadratic 220x220 mode (f = 2 f220, tau = tau220/2) -- the diagnostic for
+    whether the template-agnostic broadband excesses are unsubtracted
+    higher-mode / nonlinear-QNM power."""
+    f220, tau220 = qnm_mode(mf_msun, af, (2, 2, 0))
+    modes = [(f220, tau220), qnm_mode(mf_msun, af, (2, 2, 1))]
+    if multimode:
+        modes.append(qnm_mode(mf_msun, af, (3, 3, 0)))
+        modes.append(qnm_mode(mf_msun, af, (2, 1, 0)))
+        modes.append((2.0 * f220, tau220 / 2.0))     # quadratic 220x220
+    return modes
 
 
 def subtract_qnm_multimode(white: np.ndarray, merger: int, modes, dt: float,
@@ -212,12 +233,12 @@ def _ratio_consistency(resid: np.ndarray, t0: int, lag_samp: int, ratio: float,
     return q1_hat, step_hat, ok
 
 
-def battery_event(event: str, af: float = 0.69) -> EventBattery:
+def battery_event(event: str, af: float = 0.69, multimode: bool = False) -> EventBattery:
     meta = json.loads((STRAIN_DIR / f"{event}_meta.json").read_text(encoding="utf-8"))
     merger_gps, mf_src = float(meta["gps"]), float(meta["mf"])
     mf = detector_frame_mass(event, mf_src)      # observed (redshifted) ringdown
     f0, tau0 = qnm_22n(mf, af, 0)
-    f1, tau1 = qnm_22n(mf, af, 1)
+    modes = mode_list(mf, af, multimode)
     res = EventBattery(event, round(mf, 1), round(f0, 1))
     rng = np.random.default_rng(3)
 
@@ -230,8 +251,7 @@ def battery_event(event: str, af: float = 0.69) -> EventBattery:
             s.data, s.dt, merger - int(GATE_PRE_S / s.dt),
             merger + int(GATE_POST_S / s.dt))
         white = apply_whitening(s.data, psd_i, scale)
-        resid, amp220 = subtract_qnm_multimode(
-            white, merger, [(f0, tau0), (f1, tau1)], s.dt)
+        resid, amp220 = subtract_qnm_multimode(white, merger, modes, s.dt)
 
         lags_samp = np.unique(np.round(LAGS_MS * 1e-3 / s.dt).astype(int))
         lags_samp = lags_samp[lags_samp > 0]
@@ -284,11 +304,12 @@ def battery_event(event: str, af: float = 0.69) -> EventBattery:
     return res
 
 
-def run_battery(events: list[str]) -> int:
+def run_battery(events: list[str], multimode: bool = False) -> int:
     have = [e for e in events if (STRAIN_DIR / f"{e}_meta.json").exists()]
+    sub = ("220+221+330+210+quadratic(2x220)" if multimode else "220+221")
     print("=" * 88)
     print("TFPT GW Stage-1c: SIGNATURE BATTERY (ratio semantics x mu4 per-bounce phases x")
-    print("  extended lags; DETECTOR-FRAME (redshifted) QNM frequencies; joint 220+221")
+    print(f"  extended lags; DETECTOR-FRAME (redshifted) QNM frequencies; joint {sub}")
     print(f"  subtraction; post-hoc robustness sweep, Bonferroni x{N_VARIANTS})")
     print("=" * 88)
     missing = [e for e in events if e not in have]
@@ -300,7 +321,7 @@ def run_battery(events: list[str]) -> int:
     out_events = []
     worst = {name: 1.0 for name, _, _ in VARIANTS}
     for ev in have:
-        r = battery_event(ev)
+        r = battery_event(ev, multimode=multimode)
         print(f"\n  {ev}: M_f={r.mf_msun} Msun, f0={r.f0_hz} Hz  ->  {r.label}")
         for d in r.detectors:
             row = "  ".join(
@@ -347,12 +368,16 @@ def run_battery(events: list[str]) -> int:
     print(f"\n-> {verdict}")
 
     RESULTS.mkdir(exist_ok=True)
-    (RESULTS / "signature_battery.json").write_text(json.dumps({
-        "stage": f"strain_level_test (post-hoc signature battery, Bonferroni x{N_VARIANTS})",
+    out_name = ("signature_battery_multimode.json" if multimode
+                else "signature_battery.json")
+    (RESULTS / out_name).write_text(json.dumps({
+        "stage": f"strain_level_test (post-hoc signature battery, Bonferroni x{N_VARIANTS}"
+                 f"{', multimode subtraction diagnostic' if multimode else ''})",
+        "qnm_subtraction_modes": sub,
         "variants": [{"name": n, "amp_ratio": r, "per_bounce_phase_rad": p}
                      for n, r, p in VARIANTS],
         "lag_range_ms": [float(LAGS_MS.min()), float(LAGS_MS.max())],
-        "qnm_subtraction": "joint (2,2,0)+(2,2,1), Berti-Cardoso-Will 2006 fits",
+        "qnm_subtraction": f"joint {sub}, Berti-Cardoso-Will 2006 fits",
         "frequency_frame": "detector frame: mf_det = mf_src (1+z), z from GWTC catalogue",
         "birefringence_note": ("propagation-path GW birefringence (parity, c_-=8) is "
                                "common to all echoes of one event and cancels in the "
@@ -361,5 +386,5 @@ def run_battery(events: list[str]) -> int:
         "events": out_events,
         "best_p_bonf_per_variant": worst,
         "verdict": verdict}, indent=2), encoding="utf-8")
-    print(f"\nWrote {RESULTS / 'signature_battery.json'}")
+    print(f"\nWrote {RESULTS / out_name}")
     return 0
