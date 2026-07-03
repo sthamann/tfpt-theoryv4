@@ -13,6 +13,7 @@ import { GravityEmergence } from "@/components/GravityEmergence";
 import { SectionHeader } from "@/components/SectionHeader";
 import { PapersSection } from "@/components/PapersSection";
 import { PredictionsSection } from "@/components/PredictionsSection";
+import { EcosystemSection } from "@/components/EcosystemSection";
 import { DownloadsSection } from "@/components/DownloadsSection";
 
 export default function HomePage() {
@@ -20,8 +21,9 @@ export default function HomePage() {
     <>
       {/* Narrative arc: hook -> mechanism -> honesty discipline -> typed details
           -> translation -> what's open -> the dependency DAG -> the seam=horizon
-          story -> gravity falls out parameter-free -> papers / predictions /
-          downloads. The motivation (WhyThisMatters) leads, so the fascination
+          story -> gravity falls out parameter-free -> papers / predictions ->
+          where the structure travels (adjacent projects) -> downloads. The
+          motivation (WhyThisMatters) leads, so the fascination
           lands before the trust apparatus; the status discipline (TrustContract,
           ClaimStack) follows immediately to keep skeptical readers. */}
       <Hero />
@@ -52,6 +54,7 @@ export default function HomePage() {
       </section>
       <PapersSection />
       <PredictionsSection />
+      <EcosystemSection />
       <DownloadsSection />
     </>
   );
