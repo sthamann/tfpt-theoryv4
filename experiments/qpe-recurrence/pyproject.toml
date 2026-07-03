@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[project]
+name = "tfpt-qpe-recurrence"
+version = "0.1.0"
+description = "Preregistered TFPT recovery-kernel search on quasi-periodic eruption (QPE) recurrence sequences (eRO-QPE2, GSN 069) -- the horizon-adjacent repeating transient class (surface firewall)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Stefan Hamann" }]
+keywords = ["TFPT", "QPE", "quasi-periodic eruptions", "recovery kernel", "search target"]
+dependencies = ["numpy>=1.26"]
+
+[project.optional-dependencies]
+dev = ["ruff>=0.5"]
+
+[project.scripts]
+tfpt-qpe = "qpe_recurrence.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/qpe_recurrence"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "NPY"]

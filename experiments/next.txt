@@ -1,3 +1,75 @@
+## 2026-07-03 (IV) — Offene-Fragen-Runde: 7 neue Kandidaten aus unerklärten Anomalien (Scorecard 95 → 103)
+
+Frage der Runde: „Welche wissenschaftlichen Fragen erklärt derzeit kein Modell zufriedenstellend —
+und finden wir dort neue TFPT-Kandidaten?" Alle sieben identifizierten Kandidaten umgesetzt
+(experiments-only; NICHTS promoted, kein verification/-, Ledger- oder Paper-Touch; Firewall überall):
+
+**(1) `fixed-point-watchdog/` Achsen E–G NEU — drei Dissolution-Achsen auf echten offenen Anomalien.**
+- **Achse E (Cabibbo + parameterfreie Neutron-Lebensdauer — der Fund der Runde):** die 2026-07-03-(I)-
+  Cabibbo-Achse ist implementiert UND um ein nie aufgeschriebenes Bein erweitert: exakte Unitarität
+  ⇒ `V_ud = 0.97450`, mit der CMS-Masterformel `|V_ud|²τ_n(1+3g_A²) = 4906.4(1.7) s` (arXiv:1907.06737)
+  und g_A = 1.27641(56) (PERKEO III): **`τ_n(TFPT) = 877.53 ± 0.71 s`** → UCNτ-Bottle **−0.38σ**,
+  Beam-Mittel (Proton-Counting) **−4.98σ**, J-PARC-Elektronen-Beam **+0.08σ**. TFPT nimmt die
+  Bottle-Seite des ~4σ-Beam-Bottle-Rätsels ohne Dial, sagt „Proton-Counting-Systematik" vorher und
+  VERBIETET den `n→χ`-Dunkelzerfalls-Ausweg (No-Slot wie Achse D). Decider: BL2/BL3, J-PARC, τSPECT.
+  → `consistent`, Scorecard-Zeilen `Cabibbo first-row dissolution` + `neutron lifetime tau_n`
+  (beide `phi0_seed`, nie unabhängige Treffer).
+- **Achse F (X17):** MEG II null (EPJ C 85 763), PADME Run III global nur 1.8–2.0σ @ 16.90 MeV,
+  Run IV entscheidet → `consistent`.
+- **Achse G (R_D(*)):** HFLAV CKM25 kombiniert **3.8σ** (R_D +2.5σ, R_D* +2.2σ) — das schärfste
+  stehende Dissolution-Target; Belle II + LHCb Run 3 entscheiden → ehrlich `tension` + watch_flag.
+
+**(2) `cosmic-dipole-watchdog/` NEU — der kosmische Zähldipol (Ellis–Baldwin) als FLRW-Watchdog.**
+CatWISE ×2.1-Exzess, CMB-aligned; publiziert 4.4–5.7σ (RMP 97 041001 (2025): „>5σ") vs
+clustering/mask-bewusste FLASK-Reassessment 3.27–3.63σ (arXiv:2511.00822) → das Error-Budget ist
+die offene Frage. TFPT (flaches Budget auf FLRW, nur winziger μ4/PSL(2,ℂ)-Rest) fordert Dissolution;
+Kill (prereg): ≥5σ clustering-marginalisiert in ≥2 unabhängigen Selektionen → trifft den
+FLRW-Fuß des Kosmologie-Zweigs, nicht den Compiler-Kern. → `data_limited` (watch).
+
+**(3) `experiments/tfpt-discovery/s8_budget_forecast.py` NEU (Sandbox) — das Budget nimmt Partei in der S8-Spannung.**
+CAMB auf der Budget-Geometrie (H0=67.15, ω_b=0.02207, ω_c=0.11857, Σm_ν=0.0588): **S8 = 0.824**
+(geometry-only; profiled-N⋆-Branch identisch; frozen N⋆=51.4 → 0.754 = der bekannte A_s-Branch-Stress
+in Struktur-Form). Konfrontation 2026-Bifurkation: Combined CMB −0.89σ, Planck18 −0.59σ,
+KiDS-Legacy **+0.49σ**, HSC Y3 +1.08σ, **DES Y6 3x2pt +2.95σ** → TFPT sitzt auf der CMB/KiDS-Seite
+und sagt vorher, dass der DES-vs-KiDS-Split DES-seitig (Systematik) aufgeht — Spiegelbild der
+H0-Positionierung. Scorecard-Zeile (`pattern_candidate`, teilt phi0_seed + axion_branch mit der
+Flat-Budget-Zeile — nie ein neuer Hit). ALL CHECKS PASS.
+
+**(4) `bbn-lithium-watchdog/` NEU — das Li-7-Problem unter dem eingefrorenen η.**
+η₁₀ = 6.04 ohne Dial (frozen Ω_b + Budget-h); PRIMAT-reskaliert: **D/H −0.3σ, Yp +0.5σ ankern —
+⁷Li ×3.36 überproduziert (+9.9σ)** = das universelle Lithium-Problem in voller Schärfe. TFPTs
+datierte Aussage: Lösung ist stellar (Depletion) — η kann sich nicht bewegen, kein Exotic-BBN-Slot.
+Scorecard ehrlich `tension` (discriminative_power=weak — teilt jede ΛCDM-Kosmologie; `phi0_seed`).
+
+**(5) `qpe-recurrence/` NEU — der Kernel auf Quasi-Periodic Eruptions (preregistriert VOR Analyse).**
+Die unerklärte post-2019-Klasse am SMBH (horizon-adjazent, aber Akkretion/EMRI ⇒ Surface-Firewall
+wie A5). Echte Timings: eRO-QPE2 (32 Arrival-Times, arXiv:2604.09788 Tab. B.1, maschinell
+extrahiert) + GSN 069 (Miniutti+2023, kuratiert mit Lesbarkeits-Regel). **QPE.01: NULL in beiden
+Quellen mit quantifizierter Sensitivität** (12 Ratios, max|log r|=0.022 dex — der 2/3-Zahn liegt
+>17× die Streuung entfernt ⇒ ausgeschlossen, nicht unbeobachtet; der lose GSN-069-„Hit" stirbt am
+Shuffle-Null p=1.0). QPE.02 `data_limited` (3 monotone Triplets), QPE.03 range-blind (0.80 < 2.8
+Perioden — quasi-periodische Punktprozesse haben ln-Range ~ ln N). Guard-Tests 12/12.
+
+**(6) `qc-recovery-kernel/` — ERSTER ECHTER HARDWARE-LAUF (User-Token).**
+Job `d93ppd6vtlqs73ftdu5g` auf `ibm_marrakesh` (Heron R2), 13 Schaltkreise × 16.384 Shots:
+**Ein-Step-Survivals real reproduziert** (2/3 → −4.2%, 1/3 → +8.9%), Floor-Retention 0.860; der
+blinde 12-Block-Bend-Decode ist Floor/T1-verzerrt (**1.96 vs 2.71**, −28%; floor-aware Refit:
+s₂=0.541 sammelt Extra-Dekay, s₃=0.303 bleibt nah am Kernel) → Hardware-Tier `data_limited`
+(echtes Heron-Rauschen > Eagle-Fake-Modell; braucht DD/Mitigation jenseits Open-Plan). Sim-Tiers
+unverändert `consistent`. README + Scorecard-Zeile aktualisiert; kein Token im Repo.
+
+**(7) Geprüft und bewusst VERWORFEN (Look-Elsewhere-Disziplin):** Long-Period-Radiotransienten,
+ORCs, 511 keV, Amaterasu/UHECR, EDGES, AMS-Positronen, W-Masse (löst sich ohne uns), Protonradius
+(gelöst) — keine eingefrorene TFPT-Zahl vorhanden, keine Zeile ohne frozen Number.
+
+Scorecard 95 → **103 rows** (46 consistent, 9 tension, 15 null, 32 data_limited, 1 parked);
+neue Zeilen: Cabibbo-E, τ_n, X17-F, R_D-G, Dipol, Li-7, S8, QPE; qc-recovery-Zeile um den
+Hardware-Lauf ergänzt. README §1-Prosa präzisiert (die zwei neuen tension-Zeilen sind universal
+bzw. Dissolution-Targets, KEINE neuen TFPT-Kernspannungen). Website `EXPERIMENTS_AUDIT`
+103/46/9/15/32/1 synchron + finding-Text erweitert. **Papers/Ledger/verification unberührt**
+(nichts load-bearing; Promotion-Kandidat wäre erst ein v-Modul für die τ_n-Relation, wenn
+gewünscht — via promote-to-verification + tfpt-deep-sync).
+
 ## 2026-07-03 (III) — Integrationsrunde: v472 promoted + KERNEL-UV-Probe + Flat-Budget-Scorecard-Zeile
 
 Alle drei benannten Hebel der Runde (II) ausgeführt:

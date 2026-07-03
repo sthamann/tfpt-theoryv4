@@ -1,0 +1,84 @@
+# Preregistered TFPT hypotheses for quasi-periodic eruption (QPE) recurrence
+# sequences.  FROZEN 2026-07-03 BEFORE any statistic was computed on the
+# arrival-time data (the kernel values are axiom-fixed; the tests are the
+# structural mirrors of repeater-cascade RC.01-03 / pulsar PG.01-05 -- no QPE
+# number enters the prediction layer; guarded by tests/test_frozen_kernel.py).
+#
+# WHY QPEs: quasi-periodic eruptions (GSN 069, eRO-QPE1/2/3/4, ...) are a
+# genuinely UNEXPLAINED post-2019 phenomenon class -- repeating soft-X-ray
+# eruptions from galactic nuclei, i.e. the only repeating transient located
+# directly at an SMBH.  Within the TFPT recovery-search program they are the
+# closest horizon-ADJACENT repeating system available; the eruption clock is
+# nevertheless believed to be accretion/EMRI-mediated, hence the firewall
+# typing below.
+#
+# FIREWALL (governing constraint):
+#   - QPEs are NOT direct Hawking emission and NOT new gravity.  The eruption
+#     mechanism (disk collisions / EMRI / instabilities) is a SURFACE /
+#     accretion channel: legitimacy typing identical to recovery-comb-domains
+#     A5 (AGN-disk TDE) -- "horizon-adjacent surface (borderline)".
+#   - Every result is a search target, never a claim.  A hit would be a
+#     universal-DSI / ratio coincidence in the eruption engine, NEVER a TFPT
+#     confirmation, until it recurs in >= 2 independent worlds.
+#   - Forbidden language: "QPEs confirm TFPT", "the QPE clock is the recovery
+#     kernel".  Allowed: "preregistered search space", "clean null", "range-
+#     blind (gate failed)", "data_limited".
+
+frozen_kernel:
+  attractor_ratio: "2/3"            # |Z2|/N_fam
+  transport_exponent: 6             # Z6/A3 cycle
+  teeth_step: "2/3"                 # step reading
+  teeth_amplitude: "8/27"           # (2/3)^3 amplitude reading
+  teeth_energy: "64/729"            # (2/3)^6 energy reading
+  clock_bend: "ln3/ln(3/2) = 2.709511291351"
+  comb_omega: "2*pi/ln((3/2)^6) = 2.582993"
+  comb_amplitude: "exp(-pi^2/ln((3/2)^6)) = 0.01727"
+  wall: "N_fam = 3"
+
+global_rules:
+  no_refitted_exponents: true
+  require_surrogate_calibration: true
+  require_multi_source_replication: true
+  single_source_match_is_candidate_only: true
+  q_threshold: 0.01
+  tolerance_dex: 0.10
+  comb_range_gate_periods: 2.8      # hard ln-range gate (machine-checked, PG.06)
+
+tests:
+  QPE.01:
+    name: recurrence-ratio ladder
+    observable: consecutive within-campaign recurrence-time ratios T_{n+1}/T_n
+    prediction: pile-up at a tooth {2/3, 8/27, 64/729} or inverses (any reading)
+    null_model: within-campaign shuffle of the RAW recurrence times, ratios recomputed
+    n_surrogate: 2000
+    success: enrichment > 1.2 with p < 0.01 in >= 2 sources
+    expected_honest: QPE clocks are quasi-periodic (ratios ~ 1); a null here is
+      the likely, informative outcome (the eruption clock carries no kernel step)
+  QPE.02:
+    name: walled-clock gap ratio
+    observable: g1/g2 on strictly-monotone recurrence triplets
+    prediction: pile-up at the clock bend 2.7095; run lengths capped at N_fam=3
+    null_model: within-campaign shuffle + placebo ratios [1.7, 2.2, 3.3, 4.5]
+    n_surrogate: 2000
+    success: clock enrichment beats null (p < 0.05) AND every placebo, >= 2 sources
+  QPE.03:
+    name: log-periodic comb on the eruption point process
+    observable: Rayleigh power of phases omega * ln(t_i - t_onset) at omega = 2.583
+    prediction: comb IF the ln-range gate (> 2.8 periods) is passed
+    null_model: rate-preserving surrogates (smooth log-density redraw)
+    n_surrogate: 2000
+    gate: ln-range > 2.8 comb periods PER CAMPAIGN (stacking never adds range)
+    expected_honest: quasi-periodic point processes have ln-range ~ ln(N)/ln(lambda)
+      ~ 1.4 periods for N ~ 30 -- the gate will likely FAIL -> data_limited, and
+      that is the honest verdict (not a null)
+
+kill_conditions:
+  - "QPE.01/02 well-powered nulls in >= 2 sources close the QPE recurrence channel"
+  - "a gate-passing QPE.03 campaign with omega = 2.583 not special closes the comb leg"
+
+data_plan:
+  sources:
+    - "eRO-QPE2: arrival times, Table B.1 of arXiv:2604.09788 (XMM1-4 campaign + XRT/NICER/EP), ~2.24 h recurrence"
+    - "GSN 069: recurrence times, Table A.1 of Miniutti et al. 2023, A&A 670, A93 (XMM3-XMM6 + Chandra), ~9 h recurrence"
+  rule: only consecutive-eruption (Delta N_QPE = 1) pairs within one instrument
+    segment enter recurrence sequences; arrival-time errors propagated

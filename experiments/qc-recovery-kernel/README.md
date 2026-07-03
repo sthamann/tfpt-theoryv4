@@ -10,8 +10,9 @@
 This experiment **activates the parked analog domain** (`quantum-recovery-analog`)
 in the only honest way available today: instead of waiting for a natural per-step
 recovery dataset, it *engineers* the frozen seam-transfer channel as an executable
-quantum circuit (Kraus / unitary dilation) — runnable on exact and noisy simulators
-now, and on IBM's free open plan later. `quantum-testbed` is the **classical**
+quantum circuit (Kraus / unitary dilation) — run on exact and noisy simulators
+**and (2026-07-03) on real IBM hardware** (`ibm_marrakesh`, see the hardware section).
+`quantum-testbed` is the **classical**
 simulator of the walled clock (QT.01–QT.05); this project is the **quantum-circuit
 realisation** of the same object.
 
@@ -90,30 +91,42 @@ tfpt-qckernel analyze                  # exact + noisy tiers -> results/results.
 # or:  PYTHONPATH=src python -m tfpt_qckernel.cli analyze
 ```
 
-## Hardware hook (prepared, NOT executed)
+## Hardware run (EXECUTED 2026-07-03) — first real-device execution, `data_limited`
 
-The submission path to IBM Quantum (free open plan) is **fully prepared but has not
-been run** — it needs *your* IBM token and consumes your open-plan minutes:
+The prepared hook was executed on the free open plan: **job `d93ppd6vtlqs73ftdu5g` on
+`ibm_marrakesh` (156-qubit Heron R2), 13 circuits × 16,384 shots** (committed:
+`results/hardware_job.json`, `results/hardware_results.json`). Honest outcome:
 
-1. Get a token at <https://quantum.cloud.ibm.com> (free account).
-2. Save it once:
+- **The kernel's one-step survivals are reproduced on real hardware**: after the first
+  transfer block the measured survivals are `0.639` (mode 2, target `2/3`, **−4.2%**) and
+  `0.363` (mode 3, target `1/3`, **+8.9%**); the two-mode hierarchy and the protected
+  floor are qualitatively present (Perron retention after 12 blocks **0.860** — vs 0.993
+  under the FakeBrisbane noise model: the real device decays the idle protected qubit
+  noticeably faster).
+- **The blind 12-block bend decode does NOT recover 2.7095 on this device**: the QT.04
+  free-ratio fit gives **1.964** and the per-mode decode **1.943** (bias −28%). A
+  floor-aware refit localises the bias: mode 3 stays near-kernel (`s₃ = 0.303` vs 1/3,
+  −9%) but mode 2 accumulates extra per-block decay (`s₂ = 0.541` vs 2/3, −19%) from
+  gate/T1 noise over the deep ISA circuit, plus readout floors of ~0.17/0.08 — real
+  Heron noise exceeds the Eagle fake-backend model that predicted identifiability.
+- **Hardware-tier verdict: `data_limited`** (bend not identifiable at this depth/shots
+  on this device; the simulator-tier `consistent` verdicts are unchanged). The named
+  improvement path: dynamical decoupling on the idle qubits, measurement-error
+  mitigation, fewer blocks (1-step already suffices in the noisy sim), or an
+  error-suppressed session — all beyond the open-plan job mode used here.
+
+Reproduce / re-run (needs your IBM token, consumes open-plan minutes):
 
 ```bash
 .venv/bin/python -c "from qiskit_ibm_runtime import QiskitRuntimeService; \
 QiskitRuntimeService.save_account(channel='ibm_quantum_platform', \
 token='<YOUR_IBM_TOKEN>', set_as_default=True)"
-```
-
-3. Submit / retrieve:
-
-```bash
 tfpt-qckernel hardware --dry-run       # ISA transpilation check, no token needed
 tfpt-qckernel hardware                 # submits 13 circuits (job mode, least-busy device)
 tfpt-qckernel hardware --fetch <JOB_ID>  # bend analysis -> results/hardware_results.json
 ```
 
-No token is stored in this repository; nothing here phones home until you run
-`hardware` without `--dry-run`.
+No token is stored in this repository.
 
 ## Layout
 

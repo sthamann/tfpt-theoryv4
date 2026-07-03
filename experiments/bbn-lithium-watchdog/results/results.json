@@ -1,0 +1,35 @@
+{
+  "tfpt_frozen_eta": {
+    "Omega_b": 0.048941,
+    "omega_b_h2": 0.02207,
+    "eta10": 6.044,
+    "statement": "Omega_b = phi0(1-1/4pi) frozen (v84) + budget h = 0.6715: eta has NO dial; exotic-BBN escapes have no compiler slot => the lithium problem must resolve astrophysically (stellar depletion)"
+  },
+  "predicted_at_frozen_eta": {
+    "li7_h": "5.31e-10 +- 2.1e-11",
+    "dh": "2.512e-05 +- 3.7e-07",
+    "yp": "0.24696 +- 0.00017"
+  },
+  "confrontation": {
+    "li7_spite_plateau": {
+      "observed": "1.58e-10 +- 3.1e-11",
+      "pull_sigma": 9.91,
+      "overprediction_factor": 3.36
+    },
+    "dh_cooke2018": {
+      "observed": "2.527e-05 +- 3e-07",
+      "pull_sigma": -0.33
+    },
+    "yp_aver2021": {
+      "observed": "0.2453 +- 0.0034",
+      "pull_sigma": 0.49
+    }
+  },
+  "reading": "D/H and Yp agree at the frozen eta (the BBN concordance holds where it must); 7Li is overpredicted by the standard factor ~3.4 -- the lithium problem in full. TFPT's dated statement: the resolution is stellar (depletion/mixing), because eta cannot move and no exotic-BBN state exists. If the community resolution ever lands on 'eta was different' or 'new BBN physics', this watchdog fires.",
+  "resolution_landscape": "proposed resolutions: (a) stellar depletion/atomic diffusion + turbulent mixing in halo stars (supported by lower Li in more metal-poor / cooler stars, NGC 6397 trends); (b) nuclear (ruled out: the 7Be destruction channels are measured); (c) exotic BBN physics (decaying particles, varying constants) -- requires new light states or dials; (d) eta inhomogeneities. TFPT admits only (a): eta is frozen and there is no compiler slot for (c).",
+  "kill_rule": "established resolution requiring eta >= 5 sigma off the TFPT omega_b; OR confirmed new BBN-era physics at >= 5 sigma; OR D/H pulling >= 5 sigma from the frozen-eta BBN value",
+  "kill_triggered": false,
+  "verdict": "consistent",
+  "verdict_note": "'consistent' refers to the WATCHDOG state: D/H + Yp anchor the frozen eta, the Li discrepancy is the known open problem whose astrophysical resolution TFPT requires (dissolution family). The Li pull itself is reported honestly above.",
+  "verdict_line": "LITHIUM WATCHDOG: D/H -0.3s, Yp +0.5s anchor the frozen eta; 7Li overpredicted x3.36 (the known problem). TFPT's dated statement: resolution must be stellar/astrophysical -- eta cannot move, no exotic-BBN slot. verdict: consistent."
+}

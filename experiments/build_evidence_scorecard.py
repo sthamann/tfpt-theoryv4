@@ -272,6 +272,25 @@ ROWS = [
      "search_target", "published crust-cooling tables: Merritt+2016 (KS1731), Parikh+2019 (MXB1659), Fridriksson+2011 (XTEJ1701), Degenaar+2014 (EXO0748), Parikh+2017 (MAXIJ0556), Li/Ootes+2019 (AqlX-1)",
      "the omega=2.583 comb is special vs the off-kernel periodogram in the superposed-epoch stacked cooling ensemble",
      "data_limited"],
+    # QPE recurrence search (experiments/qpe-recurrence, 2026-07-03): the frozen kernel
+    # on quasi-periodic eruption timings -- the horizon-ADJACENT repeating transient
+    # class (surface firewall, same legitimacy as recovery-comb A5).
+    ["X-ray", "QPE recurrence kernel search (QPE.01-03)",
+     "recurrence-ratio teeth {2/3, 8/27, 64/729}; walled-clock bend 2.7095 (wall N=3); "
+     "comb omega=2.583 behind the >2.8-period ln-range gate (preregistered "
+     "hypotheses/qpe_tfpt_v1.yaml before analysis)",
+     "eRO-QPE2 (32 arrival times, arXiv:2604.09788 Table B.1) + GSN 069 (Miniutti+2023): "
+     "QPE.01 NULL in both sources with quantified sensitivity (eRO-QPE2: 12 ratios, "
+     "max|log r| = 0.022 dex, the 2/3 tooth is >17x the observed spread away -- a kernel "
+     "step in the QPE clock is EXCLUDED, not merely unobserved); QPE.02 data_limited "
+     "(3 monotone triplets; QPE clocks alternate by construction); QPE.03 range-blind "
+     "(best 0.80 < 2.8 periods)",
+     None, "search_target", "boundary-recovery residual (horizon-adjacent SURFACE channel; "
+     "accretion/EMRI-mediated -- a hit would be universal-DSI coincidence, never TFPT "
+     "confirmation)", "search_target",
+     "qpe-recurrence (eRO-QPE2 arXiv:2604.09788; GSN 069 A&A 670 A93)",
+     "a replicated tooth/clock excess in >= 2 QPE sources at q < 0.01, or a gate-passing "
+     "secular-decay campaign with omega = 2.583 special", "null"],
     # HFQPO ladder (experiments/hfqpo-ladder): BH 3:2 pairs as the geometric relaxation ladder
     ["X-ray", "BH HFQPO 3:2 pairs + geometric-ladder discriminator (hfqpo-ladder H1-H3)",
      "ladder step 3/2 exact (N_fam=3); third tooth nu_3=(3/2)nu_u (661.5/414/252/363 Hz); "
@@ -398,9 +417,13 @@ ROWS = [
      "2.709511 (bias -3.8e-14); noisy tier (FakeBrisbane 127-qubit Eagle model, ISA depth 158): "
      "bend identifiable -- per-mode decode 2.65-2.69 at 256 shots, blind QT.04 free-ratio "
      "2.89+/-0.12 at 16384 shots (3/3 seeds), protected floor retention 0.993; IBM hardware "
-     "hook prepared (open plan), not executed (needs token)", None,
+     "EXECUTED 2026-07-03 (ibm_marrakesh Heron R2, 13 circuits x 16384 shots, job "
+     "d93ppd6vtlqs73ftdu5g): one-step survivals reproduced (2/3 at -4.2%, 1/3 at +8.9%), "
+     "protected-floor retention 0.860, but the blind 12-block bend decode is floor/T1-biased "
+     "(1.96 vs 2.71, -28%) -> hardware tier data_limited (needs DD/mitigation beyond the "
+     "open plan); real Heron noise exceeds the Eagle fake-backend model", None,
      "search_target", "engineered seam-transfer channel (quantum-circuit analog of QT.04)",
-     "not_applicable", "qc-recovery-kernel (Qiskit Aer + FakeBrisbane; numerical)",
+     "not_applicable", "qc-recovery-kernel (Qiskit Aer + FakeBrisbane + ibm_marrakesh)",
      "the bend is not identifiable under the device noise model at any tested shot count",
      "consistent"],
     # ---- shared seed (one phi0 -> four observables) ----
@@ -481,6 +504,25 @@ ROWS = [
      "systematics-converged local H0 >= 71 with broken CMB/BAO concordance, or omega_c "
      "hardened >= 3 sigma away from 0.1186 -- kills the closure pattern only (frozen "
      "Omega_b/Lambda records untouched)", "consistent"],
+    # S8 forecast from the same closure (2026-07-03): the budget's first STRUCTURE
+    # observable -- takes the KiDS/CMB side of the 2026 S8 bifurcation. Shares every
+    # leg with the flat-budget row (phi0_seed + flagged Omega_c leg) -- never a new hit.
+    ["cosmo", "S8 forecast from the flat budget (structure side)",
+     "budget geometry (H0=67.15, omega_b=0.02207, omega_c=0.11857, Sigma m_nu=0.0588 eV) "
+     "+ CAMB -> sigma8 = 0.807, S8 = 0.824 (geometry-only, Planck A_s/n_s imported; "
+     "profiled-N_star branch identical 0.824; frozen N_star=51.4 branch 0.754 = the known "
+     "A_s branch stress in structure form)",
+     "2026 S8 bifurcation: Combined CMB 0.836(13) -0.89 sigma, Planck18 0.832(13) -0.59, "
+     "KiDS-Legacy 0.815(19) +0.49, HSC Y3 (DESI-recal) 0.805(18) +1.08, DES Y6 3x2pt "
+     "0.789(12) +2.95 -- TFPT sits on the CMB/KiDS side and predicts the DES-vs-KiDS "
+     "split resolves as DES-side systematics (mirror of the Hubble-side positioning)",
+     None, "pattern_candidate",
+     "flat-budget closure + inflation A_s branch (CAMB transfer)",
+     "downstream_bridge",
+     "experiments/tfpt-discovery/s8_budget_forecast.py (CAMB 1.6.6; KiDS-Legacy 2025, "
+     "DES Y6 2026, arXiv:2602.12238 review)",
+     "a systematics-converged lensing S8 <= 0.79 replicated across KiDS/DES/HSC/LSST at "
+     ">= 5 sigma from the budget value -- kills the closure pattern only", "consistent"],
     # ---- dark-energy watchdog (P2) ----
     ["cosmo", "dark-energy equation of state w", "w = -1 (cosmological constant)",
      "DESI DR2 overlap-aware: strongest single combo 4.4 sigma (naive product 6.6 sigma is "
@@ -539,6 +581,61 @@ ROWS = [
      "fixed-point-watchdog axis D (Nature 648 (2025); arXiv:2512.07159, 2602.06274; SBN 2026)",
      "any confirmed sterile oscillation signal at >= 5 sigma (systematics-controlled; "
      "e.g. joint SBND+ICARUS or JSNS2-II)", "consistent"],
+    # ---- fixed-point-watchdog axis E (2026-07-03): Cabibbo dissolution + the NEW
+    # parameter-free neutron lifetime. Both legs read the SAME frozen lambda_C
+    # (phi0-derived) -> independence_group phi0_seed, never independent hits.
+    ["CKM", "Cabibbo first-row dissolution watchdog (axis E)",
+     "lambda_C = sqrt(phi0(1-phi0)) = 0.2243762 exact + exact unitarity => V_ud = 0.97450; "
+     "first-row deficit must dissolve on the V_ud/nuclear side",
+     "PDG26 first row 0.9983(7) (+2.4 sigma deficit); lambda_C dead-on the kaon average "
+     "(+0.08 sigma, S=2.5), BETWEEN Kl3 (+2.03) and Kmu2 (-1.63) -> routes must converge on "
+     "0.22438; V_ud: superallowed is the outlier (+2.58) while neutron (PDG +0.10, best "
+     "+0.87) and pion beta (+0.22) agree with unitarity",
+     None, "prediction", "frozen v84 CKM assembly (exact unitarity)",
+     "prediction_of_record",
+     "fixed-point-watchdog axis E (PDG 2026 Vud/Vus review; PIONEER/lattice f+(0) decide)",
+     "converged all-route V_us (S~1) with |V_us-0.224376| >= 5 sigma, or a "
+     "systematics-converged first-row deficit >= 5 sigma", "consistent"],
+    ["lab", "neutron lifetime tau_n (parameter-free, beam-bottle side)",
+     "tau_n = 4906.4(1.7) s / (V_ud^2 (1+3 gA^2)) = 877.53 +- 0.71 s (V_ud exact from "
+     "unitarity; gA = 1.27641(56) PERKEO III) -- TFPT takes the BOTTLE side and forbids "
+     "the n->chi dark-decay exit (no E8 slot, same counting as the sterile axis)",
+     "UCNtau final (bottle) 877.82(30) -0.38 sigma; magnetic/grav storage avg 878.15(20) "
+     "-0.85 sigma; beam average (proton counting) 888.1(2.0) -4.98 sigma; J-PARC "
+     "ELECTRON-counting beam 877.2(4.0) +0.08 sigma -- the ~4-sigma beam-bottle puzzle "
+     "resolves as a proton-counting-beam systematic",
+     -0.38, "prediction", "CMS master formula (arXiv:1907.06737) + frozen lambda_C",
+     "prediction_of_record",
+     "fixed-point-watchdog axis E (UCNtau arXiv:2409.05560; J-PARC arXiv:2412.19519; "
+     "NIST BL2/BL3 + tauSPECT decide)",
+     "bottle tau_n drifting >= 5 sigma from 877.5 s at fixed gA, or a confirmed "
+     "beam-bottle split established as real new physics (dark decay) at >= 5 sigma",
+     "consistent"],
+    # ---- fixed-point-watchdog axis F (2026-07-03): X17 dissolution ----
+    ["lab", "X17 dissolution watchdog (no E8 slot)",
+     "no compiler slot for a ~17 MeV boson -> the ATOMKI anomaly family (MX = 16.85(4) "
+     "MeV in 8Be/4He/12C) must dissolve",
+     "MEG II (EPJ C 85 (2025) 763): NO signal in the same 7Li(p,e+e-)8Be reaction "
+     "(R_17.6 < 1.8e-6 at 90% CL; still ~1.5 sigma compatible with ATOMKI per Barducci+ "
+     "JHEP 04 (2025) 035); PADME Run III (JHEP 11 (2025) 007): background-consistent "
+     "except a 1.8-2.0 sigma GLOBAL excess at 16.90 MeV; PADME Run IV (2025/26) decisive",
+     None, "prediction", "E8 carrier counting (no light-boson slot)",
+     "prediction_of_record",
+     "fixed-point-watchdog axis F (MEG II 2025; PADME Run III 2025)",
+     "a confirmed >= 5 sigma X17 resonance, systematics-controlled and replicated "
+     "outside ATOMKI", "consistent"],
+    # ---- fixed-point-watchdog axis G (2026-07-03): R_D(*) dissolution ----
+    ["CKM", "R_D(*) lepton-universality dissolution watchdog",
+     "exact unitary CKM assembly + no light charged mediator slot => b->c tau nu "
+     "universality must return to SM (R_D = 0.296, R_D* = 0.254)",
+     "HFLAV CKM 2025: R_D = 0.358(24) (+2.5 sigma), R_D* = 0.281(11) (+2.2 sigma), "
+     "COMBINED 3.8 sigma (3.5 with FLAG24 lattice SM) -- the most significant standing "
+     "dissolution target; Belle II full dataset + LHCb Run 3 decide",
+     3.8, "prediction", "frozen CKM assembly + compiler content (no leptoquark/W' slot)",
+     "prediction_of_record",
+     "fixed-point-watchdog axis G (HFLAV CKM25; LHCb PRL 134 061801; Belle II PRD 112 032010)",
+     "R_D(*) excess confirmed at >= 5 sigma with independent tagging and consolidated "
+     "SM form factors", "tension"],
     # ---- kaon flavor-bridge ratio (P2) ----
     ["CKM", "rare kaon ratio R_K = KL/K+", "3.33/9.45 = 0.35238",
      "geometry consistent (delta_CKM +1.45s, Jarlskog -0.07s, K+ -0.08s); KOTO KL not at SM reach",
@@ -606,6 +703,37 @@ ROWS = [
      "Shamir 2025 MNRAS 538 76 (JWST JADES); Land+2008 Galaxy Zoo",
      "a parity-odd global spin monopole surviving MW-aberration + selection systematics across surveys",
      "data_limited"],
+    # cosmic number-count dipole (experiments/cosmic-dipole-watchdog, 2026-07-03): the
+    # Ellis-Baldwin excess vs the FLRW foundation of the cosmology branch. Same isotropy
+    # watchdog family as handedness (different observable, independent data).
+    ["cosmo", "cosmic number-count dipole (Ellis-Baldwin) watchdog",
+     "FLRW isotropy + tiny mu4/PSL(2,C) remnant: NO intrinsic super-Hubble matter dipole "
+     "-> the excess must dissolve into clustering/mask/selection systematics",
+     "CatWISE2020: D = 15.54e-3 vs kinematic 7.4e-3 (x2.1, CMB-aligned within ~27 deg); "
+     "claimed 4.4-5.7 sigma (Secrest+21/22, Dam+23, Wagenveld+25 residual 5.4 sigma; RMP "
+     "97 041001 (2025): '>5 sigma'); clustering/mask-aware FLASK reassessment "
+     "(arXiv:2511.00822): 3.27-3.63 sigma -- the ERROR BUDGET is the open question",
+     None, "frontier", "FLRW foundation of the flat budget / Lambda-H0 engine",
+     "search_target",
+     "cosmic-dipole-watchdog (CatWISE2020, NVSS/MALS; LSST/Euclid/SKA decide)",
+     "a clustering-marginalized, mask-controlled non-kinematic dipole at >= 5 sigma "
+     "replicated in >= 2 independent selections -> strikes the FLRW-based cosmology "
+     "branch (not the compiler core)", "data_limited"],
+    # frozen-eta BBN lithium watchdog (experiments/bbn-lithium-watchdog, 2026-07-03):
+    # the 20-year lithium problem under the parameter-free eta. UNIVERSAL to all
+    # LCDM-eta cosmologies (weak discriminative power); D/H + Yp legs share phi0_seed.
+    ["cosmo", "primordial 7Li at the frozen eta (lithium watchdog)",
+     "eta10 = 6.04 frozen (Omega_b = phi0(1-1/4pi), budget h) -> 7Li/H = 5.31(21)e-10 "
+     "(PRIMAT rescaled); NO eta dial and NO exotic-BBN slot => the lithium problem must "
+     "resolve astrophysically (stellar depletion), never by shifting eta or new BBN physics",
+     "Spite plateau 1.58(31)e-10 -> overpredicted x3.36 (+9.9 sigma) = the UNIVERSAL "
+     "cosmological lithium problem (shared by Planck-LCDM, NOT TFPT-specific); the anchors "
+     "hold at the frozen eta: D/H (Cooke+2018) -0.3 sigma, Yp (Aver+2021) +0.5 sigma",
+     9.9, "prediction", "frozen Omega_b record (v84) + flat-budget h + PRIMAT BBN",
+     "prediction_of_record",
+     "bbn-lithium-watchdog (Pitrou+2018 PRIMAT; Sbordone+2010; Cooke+2018; Aver+2021)",
+     "an established Li resolution requiring eta >= 5 sigma off the TFPT omega_b, or "
+     "confirmed new BBN-era physics at >= 5 sigma, or D/H pulling >= 5 sigma", "tension"],
     # ---- spectral action / NCG matter content (v244/v245); RGE-confronted in gauge-unification ----
     ["EW", "Weinberg angle sin^2 th_W (spectral scale)", "3/8 (NCG/SU(5) tree, v245)",
      "3/8 is the standard SU(5)/SO(10) GUT value; SM 1-loop run gives alpha1=alpha2 @ ~1e13 GeV "
@@ -759,6 +887,27 @@ OVERRIDES: dict[str, dict] = {
     # same alpha_em cluster as the fine-structure and Lambda rows, not a new hit.
     "alpha-Lambda drift lock": {"independence_group": "alpha_em"},
     "cosmic spin handedness": {"discriminative_power": "weak", "decision_horizon": "long_term"},
+    # --- 2026-07-03 watchdog round (axes E-G + dipole + Li + S8) ---
+    # both axis-E legs read the SAME frozen lambda_C (phi0-derived): one cluster.
+    "Cabibbo first-row dissolution watchdog": {"independence_group": "phi0_seed",
+                                               "decision_horizon": "near_term"},
+    "neutron lifetime tau_n": {"independence_group": "phi0_seed",
+                               "decision_horizon": "near_term"},
+    "X17 dissolution watchdog": {"decision_horizon": "near_term"},
+    "R_D(*) lepton-universality dissolution watchdog": {"watch_flag": True,
+                                                        "watch_level": "medium",
+                                                        "decision_horizon": "near_term"},
+    "cosmic number-count dipole": {"watch_flag": True, "watch_level": "medium",
+                                   "decision_horizon": "long_term"},
+    # the lithium problem is UNIVERSAL to every LCDM-eta cosmology -> weak discrimination;
+    # its D/H + Yp anchors share the phi0_seed Omega_b record.
+    "primordial 7Li at the frozen eta": {"discriminative_power": "weak",
+                                         "independence_group": "phi0_seed"},
+    # S8 forecast = the SAME closure pattern as the flat-budget row (all legs shared).
+    "S8 forecast from the flat budget": {"independence_group": "phi0_seed",
+                                         "alternative_group": "axion_branch",
+                                         "discriminative_power": "medium",
+                                         "dominant_leg": "A_s branch (N_star)"},
     # 3/8 is shared by every SU(5)/SO(10) GUT -> not TFPT-discriminating; the M_Z gap is the
     # universal SM non-unification, not a TFPT-specific tension. Grouped with proton decay:
     # sin^2_W(3/8) and tau_p(branch B) are both downstream of the SAME carrier-PS->SO(10)

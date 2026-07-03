@@ -1,0 +1,76 @@
+{
+  "tfpt_expectation": {
+    "statement": "FLRW isotropy + at most a tiny mu4/PSL(2,C) orientation remnant; no mechanism for an intrinsic super-Hubble matter dipole => the number-count dipole excess MUST dissolve into clustering/mask/selection systematics (dissolution watchdog, same family as fixed-point-watchdog axes D-G)",
+    "allowed_intrinsic_dipole": "~0 (kinematic dipole only)"
+  },
+  "observed": {
+    "catwise_D_obs": 0.01554,
+    "kinematic_expectation_D": 0.0074,
+    "excess_factor": 2.1,
+    "direction": "aligned with CMB dipole within ~27 deg"
+  },
+  "claimed_legs": [
+    {
+      "name": "CatWISE2020 quasars (Secrest+2021)",
+      "significance_sigma": 4.9,
+      "excess_over_kinematic": 2.1,
+      "reference": "Secrest et al. 2021, ApJL 908 L51"
+    },
+    {
+      "name": "CatWISE2020 Bayesian (Dam+2023)",
+      "significance_sigma": 5.7,
+      "excess_over_kinematic": 2.7,
+      "reference": "Dam, Lewis & Sarkar 2023, MNRAS 525 231 (arXiv:2212.07733)"
+    },
+    {
+      "name": "extended WISE catalog (Secrest+2022)",
+      "significance_sigma": 4.4,
+      "excess_over_kinematic": 2.0,
+      "reference": "Secrest et al. 2022, ApJL 937 L31"
+    },
+    {
+      "name": "MALS/radio kinematic decomposition (Wagenveld+2025)",
+      "significance_sigma": 5.4,
+      "excess_over_kinematic": null,
+      "reference": "Wagenveld et al. 2025, A&A (arXiv:2504.xxxx; aa53397-24): joint kinematic + residual fit"
+    },
+    {
+      "name": "RMP colloquium status (Secrest, von Hausegger, Rameez, Mohayaee, Sarkar 2025)",
+      "significance_sigma": 5.0,
+      "excess_over_kinematic": null,
+      "reference": "Rev. Mod. Phys. 97, 041001 (2025)"
+    }
+  ],
+  "clustering_mask_reassessments": [
+    {
+      "name": "FLASK reassessment S1 (no clustering dipole)",
+      "significance_sigma": 3.63,
+      "reference": "arXiv:2511.00822 (ApJ 2026): lognormal LSS + shot noise + exact mask"
+    },
+    {
+      "name": "FLASK reassessment S2 (random clustering dipole)",
+      "significance_sigma": 3.44,
+      "reference": "arXiv:2511.00822"
+    },
+    {
+      "name": "FLASK reassessment S3 (aligned clustering dipole)",
+      "significance_sigma": 3.27,
+      "reference": "arXiv:2511.00822"
+    },
+    {
+      "name": "octopole-marginalized reading (Abghari+2024)",
+      "significance_sigma": null,
+      "reference": "Abghari et al. 2024 (JCAP); contested by Secrest et al. 2025"
+    }
+  ],
+  "significance_spread_sigma": [
+    3.27,
+    5.7
+  ],
+  "today": "every catalog sees D ~ 2x kinematic aligned with the CMB dipole; claimed significances 4.4-5.7 sigma (RMP 2025: '>5 sigma'), clustering/mask-aware reassessments 3.3-3.6 sigma. The error budget -- not the excess -- is the open question. TFPT requires the FLRW-violating reading to dissolve.",
+  "deciders": "LSST + Euclid + SKA/MALS number-count dipoles (independent selections, deeper flux limits); DESI QSO spectroscopic dipole; joint clustering-marginalized analyses",
+  "kill_rule": "a clustering-marginalized, mask-controlled NON-kinematic dipole at >= 5 sigma, replicated in >= 2 independent selections (e.g. LSST/Euclid + SKA-MALS), surviving the aligned-clustering scenario => strikes the FLRW foundation of the TFPT cosmology branch (flat budget, Lambda/H0 engine) -- not the compiler core",
+  "kill_triggered": false,
+  "verdict": "data_limited",
+  "verdict_line": "DIPOLE WATCHDOG: excess x2.1 real in every catalog; FLRW-violation significance contested (3.3-5.7 sigma) -> data_limited (watch). TFPT requires dissolution; a confirmed >=5 sigma intrinsic dipole would strike the FLRW-based cosmology branch."
+}

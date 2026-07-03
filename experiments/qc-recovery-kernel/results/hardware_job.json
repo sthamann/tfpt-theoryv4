@@ -1,0 +1,9 @@
+{
+  "mode": "submitted",
+  "job_id": "d93ppd6vtlqs73ftdu5g",
+  "backend": "ibm_marrakesh",
+  "shots": 16384,
+  "n_blocks": 12,
+  "submitted_utc": "2026-07-03T11:27:48.595455+00:00",
+  "fetch_with": "tfpt-qckernel hardware --fetch d93ppd6vtlqs73ftdu5g"
+}

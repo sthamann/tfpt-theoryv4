@@ -1,10 +1,11 @@
 # fixed-point-watchdog — TFPT exact fixed points: zero-drift kill tests
 
-**Status: armed, not triggered — A `tension`, B `consistent`, C `consistent`, D `consistent` (2026-07-02).**
+**Status: armed, not triggered — A `tension`, B `consistent`, C `consistent`, D `consistent`,
+E `consistent`, F `consistent`, G `tension` (2026-07-03).**
 
 TFPT predicts several observables as **exact fixed points**. They are not fit parameters:
 any confirmed deviation kills the corresponding branch (or, for the compiler outputs, the
-theory). The six fixed points under watch:
+theory). The seven fixed points under watch:
 
 1. `w = −1` exactly — dark energy is a true cosmological constant (Λ/H₀ engine).
 2. `Σm_ν = 0.0588 eV` — the normal-ordering floor `m₃(1+√|J|)`, `m₁ ≈ 0` (ledger v272/v468).
@@ -15,8 +16,13 @@ theory). The six fixed points under watch:
 6. `N_fam = 3` exactly — the compiler (`D5 ⊕ A3 + μ4 ⇒ E8`) leaves **no spare slot for a
    4th light family/sterile state**, so TFPT *requires* every short-baseline anomaly to
    dissolve.
+7. `λ_C = √(φ₀(1−φ₀)) = 0.2243762` exactly + **exact CKM first-row unitarity** (frozen v84
+   assembly) — this fixes `V_ud = 0.97450` and, via the Czarnecki–Marciano–Sirlin master
+   formula, a **parameter-free neutron lifetime** `τ_n = 4906.4 s / (V_ud²(1+3g_A²))`
+   (axis E). The same no-slot counting as (6) forbids a light dark state, i.e. the
+   `n → χ` dark-decay exit of the beam–bottle puzzle.
 
-## Four test axes (all from public published values)
+## Seven test axes (all from public published values)
 
 ### A. Σm_ν × w pincer — verdict `tension`
 
@@ -89,6 +95,53 @@ dissolve. Front-by-front status (2025/26):
 The dissolution prediction is being confirmed; the unexplained gallium deficit is the
 honest caveat (a deficit without an oscillation signature is not a sterile signal).
 
+### E. Cabibbo dissolution + parameter-free neutron lifetime — verdict `consistent`
+
+The Cabibbo axis named on 2026-07-03 (third dissolution axis), now implemented — **plus a
+new leg that had never been written down**: the beam–bottle neutron-lifetime puzzle.
+
+- **First row**: PDG26 `|V_ud|²+|V_us|²+|V_ub|² = 0.9983(7)` (+2.4σ deficit) must dissolve
+  (the frozen assembly is exactly unitary). TFPT says *where*: `λ_C` sits at **+0.08σ** on
+  the PDG26 kaon average (S=2.5), *between* Kl3 (+2.03σ) and the Kμ2 route (−1.63σ) — the
+  two kaon routes must converge onto 0.22438. On the `V_ud` side, **superallowed 0⁺→0⁺ is
+  the outlier (+2.58σ)** while every neutron/pion route agrees with the TFPT-unitarity
+  value 0.97450 (<1σ): the deficit resolves on the nuclear-structure/RC side.
+- **Neutron lifetime (new)**: `V_ud = 0.97450` (exact) + `g_A = 1.27641(56)` (PERKEO III)
+  in the CMS master formula `|V_ud|²·τ_n·(1+3g_A²) = 4906.4(1.7) s` gives
+
+  ```
+  τ_n(TFPT) = 877.53 ± 0.71 s        (σ from the master-formula constant + g_A only)
+  ```
+
+  Confrontation: UCNτ final (bottle) 877.82±0.30 → **−0.38σ**; magnetic/grav storage
+  average 878.15±0.20 → −0.85σ; **beam average (proton counting) 888.1±2.0 → −4.98σ**;
+  J-PARC *electron-counting* beam 877.2±1.7+4.0/−3.6 → +0.08σ. TFPT takes the **bottle
+  side** of the ~4σ beam–bottle puzzle with no dial, predicts the proton-counting beam
+  result carries a systematic, and — via the `N_fam=3` no-slot counting — **forbids the
+  `n → χ` dark-decay explanation** of the split. Deciders: NIST BL2/BL3, J-PARC full
+  dataset, τSPECT; plus PIONEER, lattice `f₊(0)`, superallowed NS/RC re-evaluations for
+  the first row.
+
+### F. X17 dissolution — verdict `consistent`
+
+No E8 slot for a ~17 MeV boson with the required couplings → the ATOMKI anomaly family
+(⁸Be/⁴He/¹²C internal-pair peaks, `M_X = 16.85(4)` MeV) must dissolve. Status 2025/26:
+**MEG II** (EPJ C 85 (2025) 763) finds **no signal** in the same ⁷Li(p,e⁺e⁻)⁸Be reaction
+(90% CL limits `R_17.6 < 1.8×10⁻⁶`, `R_18.1 < 1.2×10⁻⁵`; still ~1.5σ compatible with the
+ATOMKI combination per Barducci+ JHEP 04 (2025) 035 — not yet a kill); **PADME Run III**
+(JHEP 11 (2025) 007) resonant `e⁺e⁻` scan is background-consistent except a **1.8–2.0σ
+global** excess at 16.90 MeV. PADME Run IV (upgraded tracker, 2025/26) is the decisive
+dataset. Kill: a confirmed ≥5σ X17 resonance replicated outside ATOMKI.
+
+### G. R_D(*) lepton-universality dissolution — verdict `tension`
+
+The frozen CKM assembly is exactly unitary and the compiler leaves no light charged
+mediator (leptoquark/W′) — `b → cτν` universality must return to SM. HFLAV CKM 2025:
+`R(D) = 0.358±0.024` (+2.5σ), `R(D*) = 0.281±0.011` (+2.2σ), **combined 3.8σ** (3.5σ with
+FLAG24 lattice SM) — the most significant currently-standing dissolution target of this
+watchdog. Belle II full dataset + LHCb Run 3 decide. Kill: a ≥5σ confirmed excess with
+independent tagging and consolidated SM form factors.
+
 ## Run
 
 ```bash
@@ -112,6 +165,18 @@ Deterministic; writes `results/results.json`.
 - **Short-baseline sterile status**: MicroBooNE, Nature 648, 64–69 (2025),
   arXiv:2512.07159; BEST 2022 gallium ratios; JSNS² arXiv:2602.06274 (2026);
   Fermilab SBN/ICARUS first results (Apr 2026).
+- **Neutron lifetime** (retrieved 2026-07-03): UCNτ final arXiv:2409.05560; beam/bottle
+  averages per the Symmetry 16 (2024) 956 review; J-PARC electron-counting beam
+  arXiv:2412.19519; master formula `|V_ud|²τ_n(1+3g_A²) = 4906.4(1.7) s`
+  (arXiv:1907.06737 eq. 49); `g_A = 1.27641(56)` PERKEO III (arXiv:1812.04666).
+- **Cabibbo/first row** (retrieved 2026-07-03): PDG 2026 rev. "Vud, Vus, the Cabibbo
+  Angle, and CKM Unitarity" — same frozen table as
+  `experiments/tfpt-discovery/electron_sector_cabibbo_probe.py`.
+- **X17** (retrieved 2026-07-03): MEG II EPJ C 85 (2025) 763 (arXiv:2411.07994); PADME
+  Run III JHEP 11 (2025) 007; Barducci et al. JHEP 04 (2025) 035; ATOMKI PRL 116 042501,
+  PRC 104 044003, PRC 106 L061601.
+- **R_D(*)** (retrieved 2026-07-03): HFLAV CKM 2025 averages (incl. LHCb PRL 134 061801
+  and Belle II PRD 112 032010).
 
 ## Verdict enums and kill rules
 
@@ -125,7 +190,19 @@ B: any confirmed alpha_dot/alpha != 0, or a confirmed Lambda drift violating
 C: |m_tau - m_tau(Q=2/3)| >= 5 sigma(m_tau), systematics-controlled.
 D: any confirmed sterile oscillation signal at >= 5 sigma (systematics-controlled;
    e.g. joint SBND+ICARUS or JSNS2-II).
+E: converged all-route V_us (S~1) with |V_us - 0.224376| >= 5 sigma; OR a
+   systematics-converged first-row deficit >= 5 sigma; OR a confirmed beam-bottle split
+   established as real new physics (dark decay) at >= 5 sigma; OR bottle tau_n drifting
+   >= 5 sigma from 877.5 s at fixed gA.
+F: a confirmed >= 5 sigma X17 resonance (systematics-controlled, replicated outside
+   ATOMKI; e.g. PADME Run IV or MEG II full data).
+G: R_D(*) excess confirmed at >= 5 sigma with independent tagging methods and
+   consolidated SM form factors.
 ```
+
+Anti double-counting: axis E is `independence_group = phi0_seed` (λ_C is φ₀-derived) —
+the τ_n leg is a *new measurement sector* (neutron decay) reading the *same* frozen seed,
+never an independent hit.
 
 ## Firewall
 

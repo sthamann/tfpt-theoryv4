@@ -1,0 +1,38 @@
+{
+  "comment": "Published BBN inputs for the TFPT frozen-eta lithium watchdog; retrieval date 2026-07-03. The TFPT baryon density is NOT in this file -- it comes from the frozen records (v84 Omega_b + flat-budget h) and lives in the CLI.",
+  "retrieved": "2026-07-03",
+  "bbn_reference": {
+    "source": "PRIMAT: Pitrou, Coc, Uzan, Vangioni 2018, Phys. Rep. 754, 1 (arXiv:1801.08023); reference point at Planck 2018 omega_b",
+    "omega_b_ref": 0.02236,
+    "li7_h_ref": 5.464e-10,
+    "li7_h_ref_sigma": 0.22e-10,
+    "dh_ref": 2.459e-5,
+    "dh_ref_sigma": 0.036e-5,
+    "yp_ref": 0.24709,
+    "yp_ref_sigma": 0.00017,
+    "scaling_note": "local power-law scalings around eta10 ~ 6: Li7/H ~ eta^+2.12, D/H ~ eta^-1.6, Yp ~ eta^+0.04 (Fields 2011, Ann. Rev. Nucl. Part. Sci. 61, 47; adequate over the <2% omega_b range used here)",
+    "li7_scaling_exponent": 2.12,
+    "dh_scaling_exponent": -1.6,
+    "yp_scaling_exponent": 0.04,
+    "eta10_per_omegab": 273.9
+  },
+  "observations": {
+    "li7_spite_plateau": {
+      "source": "Sbordone et al. 2010, A&A 522, A26 (metal-poor halo stars, Spite plateau)",
+      "li7_h": 1.58e-10,
+      "li7_h_sigma": 0.31e-10,
+      "note": "A(Li) = 2.199 +- 0.086; the plateau value is stable over 3 dex in metallicity -- the core of the lithium problem"
+    },
+    "dh_cooke": {
+      "source": "Cooke, Pettini, Steidel 2018, ApJ 855, 102 (precision QSO absorption systems)",
+      "dh": 2.527e-5,
+      "dh_sigma": 0.030e-5
+    },
+    "yp_aver": {
+      "source": "Aver et al. 2021 (He abundance in metal-poor HII regions)",
+      "yp": 0.2453,
+      "yp_sigma": 0.0034
+    }
+  },
+  "resolution_landscape": "proposed resolutions: (a) stellar depletion/atomic diffusion + turbulent mixing in halo stars (supported by lower Li in more metal-poor / cooler stars, NGC 6397 trends); (b) nuclear (ruled out: the 7Be destruction channels are measured); (c) exotic BBN physics (decaying particles, varying constants) -- requires new light states or dials; (d) eta inhomogeneities. TFPT admits only (a): eta is frozen and there is no compiler slot for (c)."
+}

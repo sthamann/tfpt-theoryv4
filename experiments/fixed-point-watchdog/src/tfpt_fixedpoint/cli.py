@@ -13,7 +13,14 @@ is a kill, not a fit-parameter update):
                                              light family/sterile state; every short-
                                              baseline anomaly must DISSOLVE)
 
-Four test axes against PUBLIC published values (data/measurements.json):
+    (7) lambda_C = sqrt(phi0(1-phi0)) = 0.2243762 exactly + exact CKM first-row
+        unitarity (frozen v84 assembly)  =>  V_ud = 0.97450, and via the
+        Czarnecki-Marciano-Sirlin master formula a PARAMETER-FREE neutron
+        lifetime tau_n = 4906.4 s / (V_ud^2 (1+3 gA^2)) -- TFPT takes the
+        BOTTLE side of the beam-bottle puzzle and forbids the dark-decay exit
+        (no E8 slot for a light dark state; same counting as axis D).
+
+Seven test axes against PUBLIC published values (data/measurements.json):
 
   A. Sigma m_nu x w PINCER   -- DESI DR2 neutrino-mass bounds vs the DESI evolving-DE
                                 preference; the joint TFPT point (w=-1, 0.0588 eV) is
@@ -26,6 +33,15 @@ Four test axes against PUBLIC published values (data/measurements.json):
   D. STERILE-nu DISSOLUTION  -- N_fam = 3 requires every short-baseline anomaly to
                                 dissolve; tracks MicroBooNE two-beam, gallium/BEST,
                                 JSNS2 and the SBN program front by front.
+  E. CABIBBO + NEUTRON tau_n -- the first-row deficit must dissolve (exact unitarity);
+                                V_us route table, V_ud route table, AND the new
+                                parameter-free tau_n = 877.5-877.8 s: bottle-side at
+                                <1 sigma, proton-counting beam average at ~ -5 sigma.
+  F. X17 DISSOLUTION         -- no E8 slot for a ~17 MeV boson; ATOMKI must dissolve;
+                                tracks MEG II (null) vs PADME Run III (1.8 sigma global).
+  G. R_D(*) DISSOLUTION      -- exact CKM assembly + no new light states => lepton-flavor
+                                universality in b -> c tau nu; the HFLAV 3.8 sigma
+                                excess must dissolve (Belle II / LHCb Run 3 decide).
 
 Deterministic: no fetching, no randomness.  Writes results/results.json.
 
@@ -59,6 +75,14 @@ AMPLIFIER = 2.0 * ALPHA_INV_TFPT   # d ln rho_Lambda = 2 alpha^-1 * (dalpha/alph
 
 KILL_SIGMA = 5.0
 KM_S_MPC_TO_PER_YR = 1.0227e-12    # 1 km/s/Mpc in 1/yr
+
+# frozen v84 CKM texture (identical to tfpt-discovery/electron_sector_cabibbo_probe.py):
+# lambda_C = sqrt(phi0(1-phi0)) with phi0 = 1/(6 pi) + 48 c3^4, s13 the frozen CKM 1-3 entry
+C3 = 1.0 / (8.0 * math.pi)
+PHI0 = 1.0 / (6.0 * math.pi) + 48.0 * C3 ** 4
+LAMBDA_C_TFPT = math.sqrt(PHI0 * (1.0 - PHI0))          # 0.2243762...
+S13_CKM = 0.003765384454486430                          # frozen v84 CKM texture
+V_UD_TFPT = math.sqrt(1.0 - LAMBDA_C_TFPT ** 2 - S13_CKM ** 2)   # exact unitarity
 
 
 def _mahalanobis_2d(c: dict, w0: float, wa: float) -> float:
@@ -310,6 +334,165 @@ def axis_d_sterile(m: dict) -> dict:
     }
 
 
+# --------------------------------------------------------------------------- E
+def axis_e_cabibbo_neutron(m: dict) -> dict:
+    """Cabibbo/first-row dissolution (the axis named 2026-07-03) PLUS the new
+    parameter-free neutron-lifetime reading: exact unitarity fixes V_ud, the
+    CMS master formula then fixes tau_n with NO TFPT dial -- taking the bottle
+    side of the beam-bottle puzzle and forbidding the dark-decay exit."""
+    cf = m["cabibbo_first_row"]
+    nl = m["neutron_lifetime"]
+
+    v_us_tfpt = LAMBDA_C_TFPT
+
+    # -- V_us routes vs frozen lambda_C --
+    vus_rows = []
+    for r in cf["V_us"]:
+        vus_rows.append({"route": r["route"], "value": r["value"], "sigma": r["sigma"],
+                         "pull_sigma": round((v_us_tfpt - r["value"]) / r["sigma"], 2)})
+    r_kmu2, s_r = cf["V_us_over_V_ud_kmu2"], cf["V_us_over_V_ud_kmu2_sigma"]
+    vus_kmu2 = r_kmu2 / math.sqrt(1.0 + r_kmu2 ** 2)
+    s_kmu2 = s_r / (1.0 + r_kmu2 ** 2) ** 1.5
+    vus_rows.insert(2, {"route": "Kmu2 route (unitarity-projected)", "value": round(vus_kmu2, 5),
+                        "sigma": round(s_kmu2, 5),
+                        "pull_sigma": round((v_us_tfpt - vus_kmu2) / s_kmu2, 2)})
+
+    # -- V_ud routes vs unitarity value --
+    vud_rows = []
+    for r in cf["V_ud"]:
+        vud_rows.append({"route": r["route"], "value": r["value"], "sigma": r["sigma"],
+                         "pull_sigma": round((V_UD_TFPT - r["value"]) / r["sigma"], 2)})
+
+    # -- the NEW leg: parameter-free tau_n via the CMS master formula --
+    C, sC = nl["master_formula_s"], nl["master_formula_sigma_s"]
+    gA, sgA = nl["gA_perkeo3"], nl["gA_perkeo3_sigma"]
+    denom = V_UD_TFPT ** 2 * (1.0 + 3.0 * gA ** 2)
+    tau_tfpt = C / denom
+    # error propagation: master-formula constant + gA (V_ud is exact in TFPT)
+    dtau_dC = tau_tfpt / C
+    dtau_dgA = -tau_tfpt * 6.0 * gA / (1.0 + 3.0 * gA ** 2)
+    s_tau = math.sqrt((dtau_dC * sC) ** 2 + (dtau_dgA * sgA) ** 2)
+
+    def pull(tau_meas: float, s_meas: float) -> float:
+        return (tau_tfpt - tau_meas) / math.sqrt(s_meas ** 2 + s_tau ** 2)
+
+    tau_rows = [
+        {"dataset": "UCNtau final (bottle, magnetic)", "value": nl["tau_bottle_ucntau_s"],
+         "sigma": nl["tau_bottle_ucntau_sigma_s"],
+         "pull_sigma": round(pull(nl["tau_bottle_ucntau_s"], nl["tau_bottle_ucntau_sigma_s"]), 2)},
+        {"dataset": "magnetic/grav UCN storage average", "value": nl["tau_bottle_magnetic_avg_s"],
+         "sigma": nl["tau_bottle_magnetic_avg_sigma_s"],
+         "pull_sigma": round(pull(nl["tau_bottle_magnetic_avg_s"],
+                                  nl["tau_bottle_magnetic_avg_sigma_s"]), 2)},
+        {"dataset": "beam average (proton counting)", "value": nl["tau_beam_avg_s"],
+         "sigma": nl["tau_beam_avg_sigma_s"],
+         "pull_sigma": round(pull(nl["tau_beam_avg_s"], nl["tau_beam_avg_sigma_s"]), 2)},
+        {"dataset": "J-PARC beam (electron counting)", "value": nl["tau_beam_jparc_s"],
+         "sigma": nl["tau_beam_jparc_sigma_s"],
+         "pull_sigma": round(pull(nl["tau_beam_jparc_s"], nl["tau_beam_jparc_sigma_s"]), 2)},
+    ]
+    bottle_pull = tau_rows[0]["pull_sigma"]
+    beam_pull = tau_rows[2]["pull_sigma"]
+
+    first_row_pull = (1.0 - cf["first_row_sum"]) / cf["first_row_sum_sigma"]
+    return {
+        "tfpt_fixed_point": {
+            "lambda_C": round(LAMBDA_C_TFPT, 7),
+            "V_ud_unitarity": round(V_UD_TFPT, 5),
+            "statement": ("lambda_C = sqrt(phi0(1-phi0)) exactly (frozen v84) + exact CKM "
+                          "unitarity: the first-row deficit MUST dissolve, and TFPT says "
+                          "where -- V_us converges to 0.22438 (between the two kaon routes) "
+                          "and the V_ud side resolves against superallowed (nuclear "
+                          "structure/RC), whose routes the neutron already contradicts.")},
+        "first_row_deficit_sigma": round(first_row_pull, 2),
+        "V_us_routes": vus_rows,
+        "V_ud_routes": vud_rows,
+        "neutron_lifetime": {
+            "master_formula": "tau_n = 4906.4(1.7) s / (V_ud^2 (1+3 gA^2))  [CMS, arXiv:1907.06737]",
+            "gA_input": f"{gA}({sgA}) PERKEO III",
+            "tau_n_tfpt_s": round(tau_tfpt, 2),
+            "tau_n_tfpt_sigma_s": round(s_tau, 2),
+            "confrontations": tau_rows,
+            "reading": ("TFPT's exact V_ud lands the parameter-free tau_n on the BOTTLE "
+                        "side of the beam-bottle puzzle (<1 sigma from UCNtau) and puts "
+                        "the proton-counting beam average at ~ -5 sigma => the beam "
+                        "carries a systematic (proton counting), exactly as the "
+                        "electron-counting J-PARC beam result already suggests. The "
+                        "dark-decay exit (n -> chi) is FORBIDDEN by the same E8 counting "
+                        "as axis D -- TFPT cannot absorb a real beam-bottle split."),
+        },
+        "deciders": "PIONEER (pi_e3), lattice f+(0)+fK/fpi, superallowed NS/RC re-evaluations, "
+                    "NIST BL2/BL3, J-PARC full dataset, tau_n/gA consensus",
+        "kill_rule": ("converged all-route V_us (S~1) with |V_us - 0.224376| >= 5 sigma; OR a "
+                      "systematics-converged first-row deficit >= 5 sigma; OR a confirmed "
+                      "beam-bottle split established as real new physics (dark decay) at >= 5 "
+                      "sigma; OR bottle tau_n drifting >= 5 sigma from 877.5-877.8 s at fixed gA"),
+        "kill_triggered": False,
+        "verdict": "consistent",
+    }
+
+
+# --------------------------------------------------------------------------- F
+def axis_f_x17(m: dict) -> dict:
+    """X17 dissolution watch: no E8 slot for a ~17 MeV boson -- the ATOMKI
+    anomaly family must dissolve (nuclear/systematic origin)."""
+    fronts = []
+    any_signal = False
+    for name, f in m["x17"]["fronts"].items():
+        any_signal = any_signal or bool(f["confirmed_signal"])
+        fronts.append({"front": name, "reference": f["reference"],
+                       "direction": f["direction"],
+                       "confirmed_signal": f["confirmed_signal"],
+                       "status_note": f["status_note"]})
+    return {
+        "tfpt_fixed_point": {
+            "statement": ("the E8 compiler content (D5+A3+mu4 carrier counting) has no slot "
+                          "for a new ~17 MeV boson with the required couplings -- like the "
+                          "sterile axis D, TFPT PREDICTS the dissolution of the ATOMKI "
+                          "anomaly family, not merely survives it.")},
+        "fronts": fronts,
+        "today": ("MEG II (2025) finds no signal in the same 8Be transition (though still "
+                  "~1.5 sigma compatible with the ATOMKI combination); PADME's resonant "
+                  "scan is background-consistent except a 1.8-2.0 sigma GLOBAL excess at "
+                  "16.90 MeV; PADME Run IV (upgraded, 2025/26) is the decisive dataset."),
+        "kill_rule": "a confirmed >= 5 sigma X17 resonance (systematics-controlled, "
+                     "replicated outside ATOMKI; e.g. PADME Run IV or MEG II full data)",
+        "kill_triggered": any_signal,
+        "verdict": "tension" if any_signal else "consistent",
+    }
+
+
+# --------------------------------------------------------------------------- G
+def axis_g_rd(m: dict) -> dict:
+    """R_D(*) lepton-flavor-universality dissolution watch: the frozen CKM
+    assembly is exactly unitary and the compiler leaves no light NP state to
+    source b -> c tau nu enhancement -- the HFLAV excess must dissolve."""
+    rd = m["rd_rdstar"]
+    pull_rd = (rd["RD_exp"] - rd["RD_sm"]) / math.sqrt(rd["RD_exp_sigma"] ** 2 + rd["RD_sm_sigma"] ** 2)
+    pull_rds = (rd["RDstar_exp"] - rd["RDstar_sm"]) / math.sqrt(rd["RDstar_exp_sigma"] ** 2 + rd["RDstar_sm_sigma"] ** 2)
+    return {
+        "tfpt_fixed_point": {
+            "statement": ("TFPT reads the flavor sector as the frozen, exactly unitary CKM/PMNS "
+                          "assembly + SM gauge content; there is no compiler slot for the "
+                          "charged mediator (leptoquark/W') a real R_D(*) excess needs. Like "
+                          "axes D/E/F this is a DISSOLUTION prediction: SM values must return.")},
+        "hflav_ckm2025": {
+            "RD": f"{rd['RD_exp']} +- {rd['RD_exp_sigma']} (SM {rd['RD_sm']} +- {rd['RD_sm_sigma']}, "
+                  f"pull {pull_rd:+.1f} sigma)",
+            "RDstar": f"{rd['RDstar_exp']} +- {rd['RDstar_exp_sigma']} (SM {rd['RDstar_sm']} +- "
+                      f"{rd['RDstar_sm_sigma']}, pull {pull_rds:+.1f} sigma)",
+            "combined_tension_sigma": rd["combined_tension_sigma"],
+            "combined_tension_flag24_sigma": rd["combined_tension_flag24_sigma"]},
+        "today": ("HFLAV CKM25 combination sits at 3.8 sigma (3.5 with FLAG24 lattice SM) -- "
+                  "the most significant currently-standing dissolution target of the watchdog; "
+                  "Belle II full dataset and LHCb Run 3 decide this decade."),
+        "kill_rule": "R_D(*) excess confirmed at >= 5 sigma with independent tagging methods "
+                     "and consolidated SM form factors (lattice + dispersive agreement)",
+        "kill_triggered": False,
+        "verdict": "tension",
+    }
+
+
 # ------------------------------------------------------------------------ main
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description="TFPT exact-fixed-point watchdog")
@@ -388,27 +571,82 @@ def main(argv: list[str] | None = None) -> int:
           f"confirmed; gallium deficit still unexplained but shows no oscillation "
           f"signature)\n")
 
+    e = axis_e_cabibbo_neutron(m)
+    print("AXIS E -- CABIBBO DISSOLUTION + parameter-free NEUTRON LIFETIME (PDG26/2026)")
+    print(f"  TFPT: lambda_C = {e['tfpt_fixed_point']['lambda_C']} exact -> unitarity "
+          f"V_ud = {e['tfpt_fixed_point']['V_ud_unitarity']}; first-row deficit "
+          f"{e['first_row_deficit_sigma']:+.1f} sigma must dissolve")
+    print("  V_us routes:")
+    for r in e["V_us_routes"]:
+        print(f"      {r['route']:32s} {r['value']:.5f} +- {r['sigma']:.5f}  "
+              f"pull {r['pull_sigma']:+5.2f}s")
+    print("  V_ud routes:")
+    for r in e["V_ud_routes"]:
+        print(f"      {r['route']:32s} {r['value']:.5f} +- {r['sigma']:.5f}  "
+              f"pull {r['pull_sigma']:+5.2f}s")
+    nlr = e["neutron_lifetime"]
+    print(f"  NEW parameter-free tau_n = {nlr['tau_n_tfpt_s']:.2f} +- "
+          f"{nlr['tau_n_tfpt_sigma_s']:.2f} s   [{nlr['master_formula']}]")
+    for r in nlr["confrontations"]:
+        print(f"      {r['dataset']:36s} {r['value']:.2f} +- {r['sigma']:.2f} s  "
+              f"pull {r['pull_sigma']:+5.2f}s")
+    print(f"  -> verdict: {e['verdict'].upper()} (tau_n lands on the BOTTLE side; "
+          f"beam average at {nlr['confrontations'][2]['pull_sigma']:+.1f}s; dark-decay "
+          f"exit forbidden)\n")
+
+    f_ = axis_f_x17(m)
+    print("AXIS F -- X17 DISSOLUTION (ATOMKI / MEG II / PADME status 2025/26)")
+    print("  TFPT: no E8 slot for a ~17 MeV boson -- the ATOMKI family must dissolve")
+    for fr in f_["fronts"]:
+        sig = "SIGNAL" if fr["confirmed_signal"] else "no confirmed signal"
+        print(f"      {fr['front']:10s} [{sig}] {fr['direction']}")
+    print(f"  kill rule: {f_['kill_rule']}")
+    print(f"  -> verdict: {f_['verdict'].upper()} (MEG II null; PADME 16.90 MeV global "
+          f"~1.8-2.0 sigma; Run IV decides)\n")
+
+    g = axis_g_rd(m)
+    print("AXIS G -- R_D(*) DISSOLUTION (HFLAV CKM 2025)")
+    print(f"  {g['hflav_ckm2025']['RD']}")
+    print(f"  {g['hflav_ckm2025']['RDstar']}")
+    print(f"  combined: {g['hflav_ckm2025']['combined_tension_sigma']} sigma "
+          f"({g['hflav_ckm2025']['combined_tension_flag24_sigma']} with FLAG24) -- "
+          f"must dissolve; Belle II / LHCb Run 3 decide")
+    print(f"  -> verdict: {g['verdict'].upper()} (the most significant standing "
+          f"dissolution target of the watchdog)\n")
+
     res = {
         "tfpt_fixed_points": {
             "w0": W0_TFPT, "wa": WA_TFPT, "sigma_mnu_eV": SIGMA_MNU_TFPT,
             "alpha_inv": ALPHA_INV_TFPT, "koide_Q": "2/3", "N_fam": N_FAM_TFPT,
             "alpha_lambda_lock": "rho_L/Mbar^4 = (3/4pi^2) e^(-2 alpha^-1)",
-            "amplifier": AMPLIFIER},
+            "amplifier": AMPLIFIER,
+            "lambda_C": round(LAMBDA_C_TFPT, 7), "V_ud_unitarity": round(V_UD_TFPT, 5)},
         "axis_A_mnu_w_pincer": a,
         "axis_B_alpha_lambda_lock": b,
         "axis_C_koide_tau": c,
         "axis_D_sterile_dissolution": d,
+        "axis_E_cabibbo_neutron_lifetime": e,
+        "axis_F_x17_dissolution": f_,
+        "axis_G_rd_dissolution": g,
         "verdicts": {"A": a["verdict"], "B": b["verdict"], "C": c["verdict"],
-                     "D": d["verdict"]},
+                     "D": d["verdict"], "E": e["verdict"], "F": f_["verdict"],
+                     "G": g["verdict"]},
         "kill_triggered_any": bool(a["kill_triggered"] or b["kill_triggered"]
-                                   or c["kill_triggered"] or d["kill_triggered"]),
+                                   or c["kill_triggered"] or d["kill_triggered"]
+                                   or e["kill_triggered"] or f_["kill_triggered"]
+                                   or g["kill_triggered"]),
         "retrieved": m["retrieved"],
     }
     om = b["mutual_exclusion"]["orders_of_magnitude"]
     verdict_line = (f"WATCHDOG: A={a['verdict']} ({a['max_tension_sigma']:.1f}s pincer), "
                     f"B={b['verdict']} (lock excludes TFPT+real-w(z) by ~10^{om}), "
                     f"C={c['verdict']} ({c['pull_sigma']:+.2f}s Koide), "
-                    f"D={d['verdict']} (sterile dissolution on track, MicroBooNE 2025). "
+                    f"D={d['verdict']} (sterile dissolution on track, MicroBooNE 2025), "
+                    f"E={e['verdict']} (tau_n {nlr['tau_n_tfpt_s']:.1f} s bottle-side "
+                    f"{nlr['confrontations'][0]['pull_sigma']:+.1f}s / beam "
+                    f"{nlr['confrontations'][2]['pull_sigma']:+.1f}s), "
+                    f"F={f_['verdict']} (X17 dissolving, PADME Run IV decides), "
+                    f"G={g['verdict']} (R_D(*) 3.8s standing -- sharpest dissolution target). "
                     f"No kill triggered (threshold {KILL_SIGMA} sigma).")
     print("-> " + verdict_line)
     res["verdict_line"] = verdict_line

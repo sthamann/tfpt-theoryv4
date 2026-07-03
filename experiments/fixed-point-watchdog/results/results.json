@@ -7,7 +7,9 @@
     "koide_Q": "2/3",
     "N_fam": 3,
     "alpha_lambda_lock": "rho_L/Mbar^4 = (3/4pi^2) e^(-2 alpha^-1)",
-    "amplifier": 274.0719984336
+    "amplifier": 274.0719984336,
+    "lambda_C": 0.2243762,
+    "V_ud_unitarity": 0.9745
   },
   "axis_A_mnu_w_pincer": {
     "tfpt_point": {
@@ -170,13 +172,166 @@
     "kill_triggered": false,
     "verdict": "consistent"
   },
+  "axis_E_cabibbo_neutron_lifetime": {
+    "tfpt_fixed_point": {
+      "lambda_C": 0.2243762,
+      "V_ud_unitarity": 0.9745,
+      "statement": "lambda_C = sqrt(phi0(1-phi0)) exactly (frozen v84) + exact CKM unitarity: the first-row deficit MUST dissolve, and TFPT says where -- V_us converges to 0.22438 (between the two kaon routes) and the V_ud side resolves against superallowed (nuclear structure/RC), whose routes the neutron already contradicts."
+    },
+    "first_row_deficit_sigma": 2.43,
+    "V_us_routes": [
+      {
+        "route": "kaon average (PDG26, S=2.5)",
+        "value": 0.22431,
+        "sigma": 0.00085,
+        "pull_sigma": 0.08
+      },
+      {
+        "route": "Kl3 (Nf=2+1+1 f+(0))",
+        "value": 0.2233,
+        "sigma": 0.00053,
+        "pull_sigma": 2.03
+      },
+      {
+        "route": "Kmu2 route (unitarity-projected)",
+        "value": 0.22515,
+        "sigma": 0.00047,
+        "pull_sigma": -1.63
+      },
+      {
+        "route": "hyperon decays",
+        "value": 0.225,
+        "sigma": 0.0027,
+        "pull_sigma": -0.23
+      },
+      {
+        "route": "tau decays",
+        "value": 0.2207,
+        "sigma": 0.0014,
+        "pull_sigma": 2.63
+      }
+    ],
+    "V_ud_routes": [
+      {
+        "route": "superallowed 0+->0+ (PDG26)",
+        "value": 0.97367,
+        "sigma": 0.00032,
+        "pull_sigma": 2.58
+      },
+      {
+        "route": "neutron (PDG averages)",
+        "value": 0.97441,
+        "sigma": 0.00088,
+        "pull_sigma": 0.1
+      },
+      {
+        "route": "neutron (best tau_n/gA)",
+        "value": 0.97413,
+        "sigma": 0.00042,
+        "pull_sigma": 0.87
+      },
+      {
+        "route": "pion beta decay",
+        "value": 0.9739,
+        "sigma": 0.0027,
+        "pull_sigma": 0.22
+      }
+    ],
+    "neutron_lifetime": {
+      "master_formula": "tau_n = 4906.4(1.7) s / (V_ud^2 (1+3 gA^2))  [CMS, arXiv:1907.06737]",
+      "gA_input": "1.27641(0.00056) PERKEO III",
+      "tau_n_tfpt_s": 877.53,
+      "tau_n_tfpt_sigma_s": 0.71,
+      "confrontations": [
+        {
+          "dataset": "UCNtau final (bottle, magnetic)",
+          "value": 877.82,
+          "sigma": 0.3,
+          "pull_sigma": -0.38
+        },
+        {
+          "dataset": "magnetic/grav UCN storage average",
+          "value": 878.15,
+          "sigma": 0.2,
+          "pull_sigma": -0.85
+        },
+        {
+          "dataset": "beam average (proton counting)",
+          "value": 888.1,
+          "sigma": 2.0,
+          "pull_sigma": -4.98
+        },
+        {
+          "dataset": "J-PARC beam (electron counting)",
+          "value": 877.2,
+          "sigma": 4.0,
+          "pull_sigma": 0.08
+        }
+      ],
+      "reading": "TFPT's exact V_ud lands the parameter-free tau_n on the BOTTLE side of the beam-bottle puzzle (<1 sigma from UCNtau) and puts the proton-counting beam average at ~ -5 sigma => the beam carries a systematic (proton counting), exactly as the electron-counting J-PARC beam result already suggests. The dark-decay exit (n -> chi) is FORBIDDEN by the same E8 counting as axis D -- TFPT cannot absorb a real beam-bottle split."
+    },
+    "deciders": "PIONEER (pi_e3), lattice f+(0)+fK/fpi, superallowed NS/RC re-evaluations, NIST BL2/BL3, J-PARC full dataset, tau_n/gA consensus",
+    "kill_rule": "converged all-route V_us (S~1) with |V_us - 0.224376| >= 5 sigma; OR a systematics-converged first-row deficit >= 5 sigma; OR a confirmed beam-bottle split established as real new physics (dark decay) at >= 5 sigma; OR bottle tau_n drifting >= 5 sigma from 877.5-877.8 s at fixed gA",
+    "kill_triggered": false,
+    "verdict": "consistent"
+  },
+  "axis_F_x17_dissolution": {
+    "tfpt_fixed_point": {
+      "statement": "the E8 compiler content (D5+A3+mu4 carrier counting) has no slot for a new ~17 MeV boson with the required couplings -- like the sterile axis D, TFPT PREDICTS the dissolution of the ATOMKI anomaly family, not merely survives it."
+    },
+    "fronts": [
+      {
+        "front": "atomki",
+        "reference": "ATOMKI combined: MX = 16.85(4) MeV claimed in 8Be*, 4He*, 12C* internal-pair angular correlations",
+        "direction": "unreplicated_source_anomaly",
+        "confirmed_signal": false,
+        "status_note": "the originating anomalies persist at the source lab; interpreted as a protophobic ~17 MeV boson; no independent confirmation of the nuclear-transition excess"
+      },
+      {
+        "front": "meg2",
+        "reference": "MEG II, EPJ C 85 (2025) 763: 7Li(p,e+e-)8Be at 1080 keV, four weeks 2023",
+        "direction": "dissolving",
+        "confirmed_signal": false,
+        "status_note": "no significant signal; 90% CL limits R_17.6 < 1.8e-6, R_18.1 < 1.2e-5 (16.5-17.1 MeV) -- still compatible at ~1.5 sigma with the ATOMKI combination (Barducci+ 2025), so not yet a kill"
+      },
+      {
+        "front": "padme",
+        "reference": "PADME Run III, JHEP 11 (2025) 007: resonant e+e- scan sqrt(s) = 16.4-17.4 MeV",
+        "direction": "ambiguous_running",
+        "confirmed_signal": false,
+        "status_note": "blind analysis consistent with background over most of the range; largest deviation at 16.90 MeV with GLOBAL significance ~1.8-2.0 sigma (local 2.5). Run IV (2025/26, upgraded tracker + finer scan) underway -- the decisive dataset"
+      }
+    ],
+    "today": "MEG II (2025) finds no signal in the same 8Be transition (though still ~1.5 sigma compatible with the ATOMKI combination); PADME's resonant scan is background-consistent except a 1.8-2.0 sigma GLOBAL excess at 16.90 MeV; PADME Run IV (upgraded, 2025/26) is the decisive dataset.",
+    "kill_rule": "a confirmed >= 5 sigma X17 resonance (systematics-controlled, replicated outside ATOMKI; e.g. PADME Run IV or MEG II full data)",
+    "kill_triggered": false,
+    "verdict": "consistent"
+  },
+  "axis_G_rd_dissolution": {
+    "tfpt_fixed_point": {
+      "statement": "TFPT reads the flavor sector as the frozen, exactly unitary CKM/PMNS assembly + SM gauge content; there is no compiler slot for the charged mediator (leptoquark/W') a real R_D(*) excess needs. Like axes D/E/F this is a DISSOLUTION prediction: SM values must return."
+    },
+    "hflav_ckm2025": {
+      "RD": "0.358 +- 0.024 (SM 0.296 +- 0.004, pull +2.5 sigma)",
+      "RDstar": "0.281 +- 0.011 (SM 0.254 +- 0.005, pull +2.2 sigma)",
+      "combined_tension_sigma": 3.8,
+      "combined_tension_flag24_sigma": 3.5
+    },
+    "today": "HFLAV CKM25 combination sits at 3.8 sigma (3.5 with FLAG24 lattice SM) -- the most significant currently-standing dissolution target of the watchdog; Belle II full dataset and LHCb Run 3 decide this decade.",
+    "kill_rule": "R_D(*) excess confirmed at >= 5 sigma with independent tagging methods and consolidated SM form factors (lattice + dispersive agreement)",
+    "kill_triggered": false,
+    "verdict": "tension"
+  },
   "verdicts": {
     "A": "tension",
     "B": "consistent",
     "C": "consistent",
-    "D": "consistent"
+    "D": "consistent",
+    "E": "consistent",
+    "F": "consistent",
+    "G": "tension"
   },
   "kill_triggered_any": false,
-  "retrieved": "2026-07-02",
-  "verdict_line": "WATCHDOG: A=tension (3.7s pincer), B=consistent (lock excludes TFPT+real-w(z) by ~10^5.7), C=consistent (-0.43s Koide), D=consistent (sterile dissolution on track, MicroBooNE 2025). No kill triggered (threshold 5.0 sigma)."
+  "retrieved": "2026-07-03",
+  "verdict_line": "WATCHDOG: A=tension (3.7s pincer), B=consistent (lock excludes TFPT+real-w(z) by ~10^5.7), C=consistent (-0.43s Koide), D=consistent (sterile dissolution on track, MicroBooNE 2025), E=consistent (tau_n 877.5 s bottle-side -0.4s / beam -5.0s), F=consistent (X17 dissolving, PADME Run IV decides), G=tension (R_D(*) 3.8s standing -- sharpest dissolution target). No kill triggered (threshold 5.0 sigma)."
 }

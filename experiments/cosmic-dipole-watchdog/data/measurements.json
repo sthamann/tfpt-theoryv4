@@ -1,0 +1,87 @@
+{
+  "comment": "Published cosmic number-count dipole measurements and reassessments; retrieval date 2026-07-03. TFPT expectation is NOT in this file -- it lives in the CLI (FLRW + tiny mu4/PSL(2,C) remnant).",
+  "retrieved": "2026-07-03",
+  "cmb_kinematic": {
+    "source": "Planck CMB dipole: v = 369.8 km/s toward (l,b) = (264.02, 48.25)",
+    "beta": 0.001233,
+    "catwise_kinematic_expectation_D": 0.0074,
+    "note": "Ellis-Baldwin kinematic expectation D_kin = [2 + x(1+alpha)] beta for the CatWISE quasar sample (Secrest+2021 spectral/flux parameters)"
+  },
+  "legs": [
+    {
+      "name": "CatWISE2020 quasars (Secrest+2021)",
+      "reference": "Secrest et al. 2021, ApJL 908 L51",
+      "n_sources": 1360000,
+      "D_obs": 0.01554,
+      "excess_over_kinematic": 2.1,
+      "direction_offset_deg_from_cmb": 27,
+      "significance_sigma": 4.9,
+      "note": "space-based IR selection; independent of radio catalogs"
+    },
+    {
+      "name": "CatWISE2020 Bayesian (Dam+2023)",
+      "reference": "Dam, Lewis & Sarkar 2023, MNRAS 525 231 (arXiv:2212.07733)",
+      "n_sources": 1360000,
+      "D_obs": null,
+      "excess_over_kinematic": 2.7,
+      "significance_sigma": 5.7,
+      "note": "Bayesian evidence analysis of the same sample; direction consistent with CMB dipole; mask leakage quantified"
+    },
+    {
+      "name": "extended WISE catalog (Secrest+2022)",
+      "reference": "Secrest et al. 2022, ApJL 937 L31",
+      "n_sources": 1600000,
+      "D_obs": null,
+      "excess_over_kinematic": 2.0,
+      "significance_sigma": 4.4,
+      "note": "extended selection; von Hausegger et al. 2026 infer a larger clustering dipole in this catalog"
+    },
+    {
+      "name": "MALS/radio kinematic decomposition (Wagenveld+2025)",
+      "reference": "Wagenveld et al. 2025, A&A (arXiv:2504.xxxx; aa53397-24): joint kinematic + residual fit",
+      "n_sources": null,
+      "D_obs": null,
+      "excess_over_kinematic": null,
+      "significance_sigma": 5.4,
+      "residual_dipole": 0.0081,
+      "residual_dipole_sigma": 0.0014,
+      "note": "joint fit across radio catalogs: best-fit residual (non-kinematic) dipole D_resid = (0.81 +- 0.14)e-2 at 5.4 sigma, aligned with the CMB dipole direction"
+    },
+    {
+      "name": "RMP colloquium status (Secrest, von Hausegger, Rameez, Mohayaee, Sarkar 2025)",
+      "reference": "Rev. Mod. Phys. 97, 041001 (2025)",
+      "n_sources": null,
+      "D_obs": null,
+      "excess_over_kinematic": null,
+      "significance_sigma": 5.0,
+      "note": "review-level claim: 'this discrepancy now exceeds 5 sigma'; partisan reading, listed as the optimistic pole of the spread"
+    }
+  ],
+  "reassessments": [
+    {
+      "name": "FLASK reassessment S1 (no clustering dipole)",
+      "reference": "arXiv:2511.00822 (ApJ 2026): lognormal LSS + shot noise + exact mask",
+      "significance_sigma": 3.63,
+      "note": "D_obs = 15.54e-3 reproduced; S0 pipeline check reproduces 4.82 sigma"
+    },
+    {
+      "name": "FLASK reassessment S2 (random clustering dipole)",
+      "reference": "arXiv:2511.00822",
+      "significance_sigma": 3.44,
+      "note": "Tiwari+2023 clustering dipole D_clus = 0.81e-3, random orientation"
+    },
+    {
+      "name": "FLASK reassessment S3 (aligned clustering dipole)",
+      "reference": "arXiv:2511.00822",
+      "significance_sigma": 3.27,
+      "note": "clustering dipole aligned with CMB direction (most conservative physical scenario)"
+    },
+    {
+      "name": "octopole-marginalized reading (Abghari+2024)",
+      "reference": "Abghari et al. 2024 (JCAP); contested by Secrest et al. 2025",
+      "significance_sigma": null,
+      "note": "mask-induced l=3 -> l=1 mode coupling could allow consistency with the CMB dipole; the required octopole amplitudes are disputed"
+    }
+  ],
+  "deciders": "LSST + Euclid + SKA/MALS number-count dipoles (independent selections, deeper flux limits); DESI QSO spectroscopic dipole; joint clustering-marginalized analyses"
+}

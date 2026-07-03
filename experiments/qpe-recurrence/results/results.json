@@ -1,0 +1,102 @@
+{
+  "seed": 0,
+  "n_surrogate": 2000,
+  "QPE01_ratio_ladder": {
+    "eRO-QPE2": {
+      "n_ratios": 12,
+      "hits_at_teeth": 0,
+      "null_p": 1.0,
+      "max_abs_log_ratio_dex": 0.0223,
+      "median_ratio_err_dex": 0.0054,
+      "ratio_spread_dex": 0.0092,
+      "nearest_tooth_gap_dex": 0.1538,
+      "sensitivity_note": "a step tooth (2/3 = 0.176 dex) exceeds the largest observed |log ratio| (0.022 dex) by >17x the observed spread -> a kernel step in the QPE clock is excluded, not merely unobserved",
+      "verdict": "null"
+    },
+    "GSN 069": {
+      "n_ratios": 4,
+      "hits_at_teeth": 1,
+      "null_p": 1.0,
+      "max_abs_log_ratio_dex": 0.0934,
+      "median_ratio_err_dex": 0.001,
+      "ratio_spread_dex": 0.0459,
+      "nearest_tooth_gap_dex": 0.0827,
+      "sensitivity_note": "a step tooth (2/3 = 0.176 dex) exceeds the largest observed |log ratio| (0.093 dex) by >2x the observed spread -> a kernel step in the QPE clock is excluded, not merely unobserved",
+      "verdict": "null"
+    }
+  },
+  "QPE02_clock": {
+    "eRO-QPE2": {
+      "n_monotone_triplets": 3,
+      "triplet_gap_ratios": [
+        1.152,
+        0.712,
+        2.329
+      ],
+      "clock_bend_target": 2.7095,
+      "placebo_ratios": [
+        1.7,
+        2.2,
+        3.3,
+        4.5
+      ],
+      "verdict": "data_limited",
+      "note": "fewer than 5 monotone recurrence triplets -- underpowered (QPE clocks alternate long/short; monotone runs are rare by construction)"
+    },
+    "GSN 069": {
+      "n_monotone_triplets": 0,
+      "triplet_gap_ratios": [],
+      "clock_bend_target": 2.7095,
+      "placebo_ratios": [
+        1.7,
+        2.2,
+        3.3,
+        4.5
+      ],
+      "verdict": "data_limited",
+      "note": "fewer than 5 monotone recurrence triplets -- underpowered (QPE clocks alternate long/short; monotone runs are rare by construction)"
+    }
+  },
+  "QPE03_comb_gate": {
+    "eRO-QPE2": {
+      "campaigns": [
+        {
+          "campaign": "block_N0-7",
+          "n_events": 8,
+          "ln_range_periods": 0.8,
+          "gate_passed": false
+        },
+        {
+          "campaign": "block_N65-69",
+          "n_events": 5,
+          "ln_range_periods": 0.57,
+          "gate_passed": false
+        },
+        {
+          "campaign": "block_N198-202",
+          "n_events": 5,
+          "ln_range_periods": 0.57,
+          "gate_passed": false
+        }
+      ],
+      "n_gate_passing": 0,
+      "gate": "> 2.8 comb periods in ln(tau)",
+      "verdict": "data_limited",
+      "note": "quasi-periodic point processes have ln-range ~ ln(N)/ln(lambda); stacking raises amplitude, never ln-range (PG.06 machine check)"
+    }
+  },
+  "verdicts": {
+    "QPE.01": {
+      "eRO-QPE2": "null",
+      "GSN 069": "null"
+    },
+    "QPE.02": {
+      "eRO-QPE2": "data_limited",
+      "GSN 069": "data_limited"
+    },
+    "QPE.03": {
+      "eRO-QPE2": "data_limited"
+    }
+  },
+  "overall": "null (QPE.01, replicated 2 sources, quantified sensitivity) + data_limited (QPE.02 triplet-starved, QPE.03 range-blind)"
+}

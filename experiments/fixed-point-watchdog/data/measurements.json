@@ -1,6 +1,6 @@
 {
-  "comment": "Published measurement inputs for the TFPT fixed-point watchdog. All values are public, published numbers; retrieval date 2026-07-02. TFPT constants are NOT in this file -- they come from the axioms/ledger and live in the CLI.",
-  "retrieved": "2026-07-02",
+  "comment": "Published measurement inputs for the TFPT fixed-point watchdog. All values are public, published numbers; retrieval dates 2026-07-02 (axes A-D) and 2026-07-03 (axes E-G). TFPT constants are NOT in this file -- they come from the axioms/ledger and live in the CLI.",
+  "retrieved": "2026-07-03",
   "neutrino_mass": {
     "source": "DESI DR2 BAO + CMB neutrino constraints (Elbers et al., arXiv:2503.14744, 2025)",
     "lcdm_upper_95_eV": 0.0642,
@@ -59,6 +59,82 @@
     "alpha_inverse": 137.035999177,
     "alpha_inverse_sigma": 2.1e-8,
     "source": "CODATA 2022: alpha^-1 = 137.035999177(21)"
+  },
+  "neutron_lifetime": {
+    "source": "beam-bottle status as of 2026-07-03: UCNtau final (arXiv:2409.05560, PRC 2025); beam average incl. NIST BL1 re-eval (Symmetry 16 (2024) 956 review); J-PARC electron-counting beam (arXiv:2412.19519); master formula |Vud|^2 tau_n (1+3 gA^2) = 4906.4(1.7) s (Czarnecki-Marciano-Sirlin update, arXiv:1907.06737 eq. 49); gA = 1.27641(56) (PERKEO III, arXiv:1812.04666); post-2002 average gA = 1.2762(5)",
+    "master_formula_s": 4906.4,
+    "master_formula_sigma_s": 1.7,
+    "gA_perkeo3": 1.27641,
+    "gA_perkeo3_sigma": 0.00056,
+    "gA_post2002_avg": 1.2762,
+    "gA_post2002_avg_sigma": 0.0005,
+    "tau_bottle_ucntau_s": 877.82,
+    "tau_bottle_ucntau_sigma_s": 0.30,
+    "tau_bottle_ucntau_note": "UCNtau final (trap-door loading): 877.82 +- 0.22(stat) +0.20/-0.17(syst) s; symmetrised 0.30",
+    "tau_bottle_magnetic_avg_s": 878.15,
+    "tau_bottle_magnetic_avg_sigma_s": 0.20,
+    "tau_bottle_magnetic_avg_note": "average of the three magnetic/gravitational UCN storage experiments (Symmetry 16 (2024) 956)",
+    "tau_beam_avg_s": 888.1,
+    "tau_beam_avg_sigma_s": 2.0,
+    "tau_beam_avg_note": "average of the three proton-counting beam results, dominated by NIST BL1 887.7 +- 1.2 +- 1.9 s",
+    "tau_beam_jparc_s": 877.2,
+    "tau_beam_jparc_sigma_s": 4.0,
+    "tau_beam_jparc_note": "J-PARC ELECTRON-counting beam (arXiv:2412.19519): 877.2 +- 1.7(stat) +4.0/-3.6(syst) -- a beam-method result already on the bottle side",
+    "discrepancy_note": "beam(p-counting) - bottle(UCN storage) = 9.8 +- 2.1 s (>4 sigma); exotic dark-decay explanations (n -> chi + ...) need a new light dark state"
+  },
+  "cabibbo_first_row": {
+    "source": "PDG 2026 rev. 'Vud, Vus, the Cabibbo Angle, and CKM Unitarity' (frozen 2026-07-03, same table as experiments/tfpt-discovery/electron_sector_cabibbo_probe.py)",
+    "first_row_sum": 0.9983,
+    "first_row_sum_sigma": 0.0007,
+    "V_ud": [
+      {"route": "superallowed 0+->0+ (PDG26)", "value": 0.97367, "sigma": 0.00032},
+      {"route": "neutron (PDG averages)", "value": 0.97441, "sigma": 0.00088},
+      {"route": "neutron (best tau_n/gA)", "value": 0.97413, "sigma": 0.00042},
+      {"route": "pion beta decay", "value": 0.9739, "sigma": 0.0027}
+    ],
+    "V_us": [
+      {"route": "kaon average (PDG26, S=2.5)", "value": 0.22431, "sigma": 0.00085},
+      {"route": "Kl3 (Nf=2+1+1 f+(0))", "value": 0.22330, "sigma": 0.00053},
+      {"route": "hyperon decays", "value": 0.2250, "sigma": 0.0027},
+      {"route": "tau decays", "value": 0.2207, "sigma": 0.0014}
+    ],
+    "V_us_over_V_ud_kmu2": 0.23108,
+    "V_us_over_V_ud_kmu2_sigma": 0.00051,
+    "note": "the ~2.4 sigma first-row deficit is the third dissolution axis named 2026-07-03; tau-route V_us is a known FESR outlier, PDG26 flags it as methodologically contested"
+  },
+  "x17": {
+    "source": "X17/ATOMKI status as of 2026-07-03: ATOMKI 8Be/4He/12C anomalies (PRL 116 042501; PRC 104 044003; PRC 106 L061601); MEG II null (Eur. Phys. J. C 85 (2025) 763, arXiv:2411.07994); PADME Run III resonant scan (JHEP 11 (2025) 007); Barducci et al. JHEP 04 (2025) 035",
+    "fronts": {
+      "atomki": {
+        "reference": "ATOMKI combined: MX = 16.85(4) MeV claimed in 8Be*, 4He*, 12C* internal-pair angular correlations",
+        "status_note": "the originating anomalies persist at the source lab; interpreted as a protophobic ~17 MeV boson; no independent confirmation of the nuclear-transition excess",
+        "direction": "unreplicated_source_anomaly",
+        "confirmed_signal": false
+      },
+      "meg2": {
+        "reference": "MEG II, EPJ C 85 (2025) 763: 7Li(p,e+e-)8Be at 1080 keV, four weeks 2023",
+        "status_note": "no significant signal; 90% CL limits R_17.6 < 1.8e-6, R_18.1 < 1.2e-5 (16.5-17.1 MeV) -- still compatible at ~1.5 sigma with the ATOMKI combination (Barducci+ 2025), so not yet a kill",
+        "direction": "dissolving",
+        "confirmed_signal": false
+      },
+      "padme": {
+        "reference": "PADME Run III, JHEP 11 (2025) 007: resonant e+e- scan sqrt(s) = 16.4-17.4 MeV",
+        "status_note": "blind analysis consistent with background over most of the range; largest deviation at 16.90 MeV with GLOBAL significance ~1.8-2.0 sigma (local 2.5). Run IV (2025/26, upgraded tracker + finer scan) underway -- the decisive dataset",
+        "direction": "ambiguous_running",
+        "confirmed_signal": false
+      }
+    }
+  },
+  "rd_rdstar": {
+    "source": "HFLAV CKM 2025 average (hflav-eos, incl. LHCb PRL 134 061801 (2025) and Belle II PRD 112 032010 (2025)); SM: HFLAV arithmetic averages",
+    "RD_exp": 0.358, "RD_exp_sigma": 0.024,
+    "RDstar_exp": 0.281, "RDstar_exp_sigma": 0.011,
+    "rho_RD_RDstar": -0.374,
+    "RD_sm": 0.296, "RD_sm_sigma": 0.004,
+    "RDstar_sm": 0.254, "RDstar_sm_sigma": 0.005,
+    "combined_tension_sigma": 3.8,
+    "combined_tension_flag24_sigma": 3.5,
+    "note": "R(D) +2.5 sigma, R(D*) +2.3 sigma individually; 3.8 sigma combined (3.5 with FLAG24 lattice SM). Belle II full dataset + LHCb Run 3 decide"
   },
   "sterile_neutrino": {
     "source": "short-baseline anomaly status as of 2026-07-02: MicroBooNE two-beam (Nature 648, 64-69 (2025)); gallium/BEST reviews; JSNS2 first results (arXiv:2602.06274); Fermilab SBN program (ICARUS first results, Apr 2026)",
