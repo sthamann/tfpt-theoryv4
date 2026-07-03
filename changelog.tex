@@ -60,6 +60,32 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-07-03 (surfacing round --- three already-computed unique readouts promoted to the public prediction surfaces: the axion--photon coefficient $g_{a\gamma\gamma}=-4\cthree$, the free-seam Higgs band $m_H\approx129$--$134$\,GeV, and the never-run BH HFQPO $\times1.5$ ladder-tooth search; no new \texttt{vN}, no status moves)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{Uniqueness scan follow-up (no new results --- presentation only).} A structure scan for
+``what does TFPT predict that nobody else pins?'' found three concrete, falsifiable readouts that were
+fully computed and ledgered but missing from the public prediction surfaces; they are now surfaced,
+with their existing typing unchanged. (i) \textbf{Axion--photon coefficient}: the determinant-line
+anomaly coefficient $g_{a\gamma\gamma}=-4\cthree=-1/(2\pi)$, $y^2=16\cthree^2=1/(4\pi^2)\approx0.0253$
+(\texttt{v207}, the \mE\ leg of \texttt{GRAV.ASYMP.01}; the \mC\ caveat --- coefficient, not a
+parameter-free $g_{a\gamma\gamma}$ in $\mathrm{GeV}^{-1}$ --- stated verbatim) joins the axion card in
+\texttt{website/lib/predictions.ts} and the frontier dark-matter mirror in \texttt{papers.ts}; the TeX
+source (\texttt{tfpt\_4\_frontier}) already carried it. (ii) \textbf{Higgs free-seam band}: the
+double-criticality prediction $\lambda(\Mbar)=\beta_\lambda(\Mbar)=0\Rightarrow m_H=133.5$\,GeV (band
+$129$--$134$, $m_t/\alpha_s$-sensitive; measured $125.25$ sits a few GeV below --- the known slight
+metastability, Buttazzo NNLO $\lambda(M_{\mathrm{Pl}})=-0.0143\pm0.0057$, $2.5\sigma$) becomes a
+prediction card (\mC; \texttt{v166}, \texttt{HIGGS.FREESEAM.01}, kill: settled-$(m_t,\alpha_s)$ RGE pull
+off the surface at $>5\sigma$). (iii) \textbf{BH HFQPO ladder tooth}: the one discriminating HFQPO test
+--- a third tooth at $\nu_3=(3/2)\nu_u$ ($661.5/414/252/363$\,Hz), integer harmonics forbidden --- that
+\emph{no published search ever targeted} although the teeth lie in the searched RXTE band
+(\texttt{experiments/hfqpo-ladder}, preregistered): added as an \mO\ search-target bullet to the
+\texttt{tfpt\_horizon\_readouts} ``Search targets (not claims)'' gapbox (firewall language verbatim:
+non-canonical mapping, selection null $18.5\%$, J1859+226 $+9.2\sigma$, GR resonance favored; even a
+tooth hit would be \mC) and as an \mO\ prediction card. Website mirrors updated in the same change
+(\texttt{predictions.ts} $23\to25$ cards, \texttt{papers.ts} frontier + horizon sections incl.\ the new
+search-targets mirror section); scorecard, ledger and all markers untouched.
+\end{itemize}
+
 \subsection*{2026-07-03 (\texttt{v472} --- the determinant line over the $U(1)$-twist moduli of the collar model carries curvature $=$ the inflow level: the \texttt{v470} bridge lemma exhibited at the finite/model level; \texttt{ALPHA.QUILLEN.EXACT.01} stays \mO. Plus: bird's-eye rounds --- electron-sector/Cabibbo whitespot probes, Calder\'on UV-universality, parameter-free flat-budget closure (sandbox); the flat-budget closure enters the evidence scorecard)}
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{\texttt{v472\_quillen\_detline\_moduli.py} (\texttt{ALPHA.QUILLEN.DETLINE.01}).}

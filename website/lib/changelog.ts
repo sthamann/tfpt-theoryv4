@@ -46,6 +46,405 @@ export const CHANGELOG: ChangelogEntry[] = [
     "dateLabel": "2026-07-03",
     "heading": [
       {
+        "k": "t",
+        "v": "surfacing round — three already-computed unique readouts promoted to the public prediction surfaces: the axion–photon coefficient "
+      },
+      {
+        "k": "m",
+        "v": "g_{a\\gamma\\gamma}=-4\\cthree"
+      },
+      {
+        "k": "t",
+        "v": ", the free-seam Higgs band "
+      },
+      {
+        "k": "m",
+        "v": "m_H\\approx129"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "134"
+      },
+      {
+        "k": "t",
+        "v": " GeV, and the never-run BH HFQPO "
+      },
+      {
+        "k": "m",
+        "v": "\\times1.5"
+      },
+      {
+        "k": "t",
+        "v": " ladder-tooth search; no new "
+      },
+      {
+        "k": "c",
+        "v": "vN"
+      },
+      {
+        "k": "t",
+        "v": ", no status moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Uniqueness scan follow-up (no new results — presentation only)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " A structure scan for “what does TFPT predict that nobody else pins?” found three concrete, falsifiable readouts that were fully computed and ledgered but missing from the public prediction surfaces; they are now surfaced, with their existing typing unchanged. (i) "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Axion–photon coefficient"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the determinant-line anomaly coefficient "
+        },
+        {
+          "k": "m",
+          "v": "g_{a\\gamma\\gamma}=-4\\cthree=-1/(2\\pi)"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "y^2=16\\cthree^2=1/(4\\pi^2)\\approx0.0253"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v207"
+        },
+        {
+          "k": "t",
+          "v": ", the "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "leg of "
+        },
+        {
+          "k": "c",
+          "v": "GRAV.ASYMP.01"
+        },
+        {
+          "k": "t",
+          "v": "; the "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "caveat — coefficient, not a parameter-free "
+        },
+        {
+          "k": "m",
+          "v": "g_{a\\gamma\\gamma}"
+        },
+        {
+          "k": "t",
+          "v": " in "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{GeV}^{-1}"
+        },
+        {
+          "k": "t",
+          "v": " — stated verbatim) joins the axion card in "
+        },
+        {
+          "k": "c",
+          "v": "website/lib/predictions.ts"
+        },
+        {
+          "k": "t",
+          "v": " and the frontier dark-matter mirror in "
+        },
+        {
+          "k": "c",
+          "v": "papers.ts"
+        },
+        {
+          "k": "t",
+          "v": "; the TeX source ("
+        },
+        {
+          "k": "c",
+          "v": "tfpt_4_frontier"
+        },
+        {
+          "k": "t",
+          "v": ") already carried it. (ii) "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Higgs free-seam band"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the double-criticality prediction "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda(\\Mbar)=\\beta_\\lambda(\\Mbar)=0\\Rightarrow m_H=133.5"
+        },
+        {
+          "k": "t",
+          "v": " GeV (band "
+        },
+        {
+          "k": "m",
+          "v": "129"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "134"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "m_t/\\alpha_s"
+        },
+        {
+          "k": "t",
+          "v": "-sensitive; measured "
+        },
+        {
+          "k": "m",
+          "v": "125.25"
+        },
+        {
+          "k": "t",
+          "v": " sits a few GeV below — the known slight metastability, Buttazzo NNLO "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda(M_{\\mathrm{Pl}})=-0.0143\\pm0.0057"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "2.5\\sigma"
+        },
+        {
+          "k": "t",
+          "v": ") becomes a prediction card ("
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "v166"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "HIGGS.FREESEAM.01"
+        },
+        {
+          "k": "t",
+          "v": ", kill: settled-"
+        },
+        {
+          "k": "m",
+          "v": "(m_t,\\alpha_s)"
+        },
+        {
+          "k": "t",
+          "v": " RGE pull off the surface at "
+        },
+        {
+          "k": "m",
+          "v": ">5\\sigma"
+        },
+        {
+          "k": "t",
+          "v": "). (iii) "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "BH HFQPO ladder tooth"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the one discriminating HFQPO test — a third tooth at "
+        },
+        {
+          "k": "m",
+          "v": "\\nu_3=(3/2)\\nu_u"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "661.5/414/252/363"
+        },
+        {
+          "k": "t",
+          "v": " Hz), integer harmonics forbidden — that "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "no published search ever targeted"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " although the teeth lie in the searched RXTE band ("
+        },
+        {
+          "k": "c",
+          "v": "experiments/hfqpo-ladder"
+        },
+        {
+          "k": "t",
+          "v": ", preregistered): added as an "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "search-target bullet to the "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_horizon_readouts"
+        },
+        {
+          "k": "t",
+          "v": " “Search targets (not claims)” gapbox (firewall language verbatim: non-canonical mapping, selection null "
+        },
+        {
+          "k": "m",
+          "v": "18.5\\%"
+        },
+        {
+          "k": "t",
+          "v": ", J1859+226 "
+        },
+        {
+          "k": "m",
+          "v": "+9.2\\sigma"
+        },
+        {
+          "k": "t",
+          "v": ", GR resonance favored; even a tooth hit would be "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": ") and as an "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "prediction card. Website mirrors updated in the same change ("
+        },
+        {
+          "k": "c",
+          "v": "predictions.ts"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "23\\to25"
+        },
+        {
+          "k": "t",
+          "v": " cards, "
+        },
+        {
+          "k": "c",
+          "v": "papers.ts"
+        },
+        {
+          "k": "t",
+          "v": " frontier + horizon sections incl. the new search-targets mirror section); scorecard, ledger and all markers untouched."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-03",
+    "dateLabel": "2026-07-03",
+    "heading": [
+      {
         "k": "c",
         "v": "v472"
       },

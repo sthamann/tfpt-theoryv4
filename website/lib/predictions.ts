@@ -812,6 +812,46 @@ export const predictions: Prediction[] = [
     },
   },
   {
+    id: "higgs-free-seam",
+    slug: "higgs-free-seam-criticality",
+    title: "Higgs Quartic — Near-Criticality from the Free Seam",
+    shortTitle: "λ(M̄) ≈ 0",
+    target: "λ(M̄_Pl) = 0 and β_λ(M̄_Pl) = 0 (double criticality); m_H band 129–134 GeV",
+    targetLatex:
+      "\\lambda(\\bar M_{\\mathrm{Pl}}) = 0,\\ \\ \\beta_\\lambda(\\bar M_{\\mathrm{Pl}}) = 0 \\;\\Rightarrow\\; m_H \\approx 129\\text{–}134\\,\\mathrm{GeV}",
+    numericValue: "133.5",
+    unit: "GeV",
+    status: "Conditional",
+    dependencyClass: "Carrier / Higgs index",
+    killTest:
+      "A settled (m_t, α_s) RGE pull off the double-critical surface λ(M̄) = β_λ(M̄) = 0 at >5σ kills the free-seam boundary condition (the compiler core is untouched).",
+    derivationFormulas: [
+      "\\lambda(M_{\\mathrm{seam}}) = 0, \\qquad \\beta_\\lambda(M_{\\mathrm{seam}}) = 0 \\ \\text{(free chiral } c=8 \\text{ fixed point)}",
+      "\\text{measured } (m_H, m_t) \\Rightarrow \\lambda(\\bar M_{\\mathrm{Pl}}) = 0.0024,\\ \\beta_\\lambda \\approx 0 \\ \\text{(2-loop)}",
+      "\\lambda = \\beta_\\lambda = 0 \\ \\text{at } \\bar M_{\\mathrm{Pl}} \\Rightarrow m_H = 133.5\\,\\mathrm{GeV}\\ (\\text{band } 129\\text{–}134)",
+    ],
+    pdf: "/papers/tfpt_4_frontier.pdf",
+    description:
+      "The seam UV is the free chiral c = 8 fixed point (v157/v158), so the one marginal SM scalar coupling vanishes there: λ(M_seam) = 0 AND β_λ(M_seam) = 0 — the Shaposhnikov–Wetterich double criticality, here derived from the free seam rather than postulated. Two-loop SM running (PyR@TE-sourced betas) with the measured (m_H, m_t) gives λ(M̄_Pl) = 0.0024 with β_λ ≈ 0 — the celebrated SM near-criticality, explained as a consequence of the free seam (the boundary condition is met to ~0.2% at two loops). Imposing the double condition instead predicts m_H = 133.5 GeV (band ~129–134, m_t/α_s sensitive); the measured 125.25 GeV sits a few GeV below the stability boundary — the known slight metastability (Buttazzo+ NNLO: λ(M_Pl) = −0.0143 ± 0.0057, 2.5σ). Scale selection is honest: the same condition at the scalaron scale gives m_H ≈ 107 GeV (too low), so the free-seam BC lives at the reduced Planck scale — consistent with seam = horizon = Planck (v166, HIGGS.FREESEAM.01). Typed [C]: the freeness signature and scale selection are identities, the m_H band is the [P] prediction leg.",
+    category: "Higgs",
+    confrontation: {
+      derivation: "\\lambda(\\bar M_{\\mathrm{Pl}}) = 0 = \\beta_\\lambda \\ \\text{(free seam)}",
+      tfptValue: "m_H = 133.5 GeV (band 129–134)",
+      measured: "125.25 ± 0.17 GeV (λ(M_Pl) = −0.0143 ± 0.0057)",
+      deviation: "a few GeV below the boundary (metastable, 2.5σ)",
+      source: "PDG 2024 · Buttazzo+ 2013 NNLO fit",
+      decisive: "precision m_t / α_s (FCC-ee class) sharpen the surface",
+    },
+    experiment: {
+      summary:
+        "experiments/higgs-criticality confronts the double-critical surface λ(M_Pl) = 0, β_λ(M_Pl) = 0 with the SM RGE flow (Buttazzo 2013 NNLO fit).",
+      result:
+        "λ(M_Pl) = −0.0143 ± 0.0057 with β_λ ≈ +1.9×10⁻⁴ — near-critical, slightly metastable at 2.5σ. A downstream RGE bridge; kill at an RGE pull off the surface >5σ with settled (m_t, α_s).",
+      finding: "consistent",
+      repoPath: "experiments/higgs-criticality",
+    },
+  },
+  {
     id: "birefringence",
     slug: "cosmic-birefringence",
     title: "Cosmic Birefringence — Determinant Line",
@@ -853,7 +893,7 @@ export const predictions: Prediction[] = [
     slug: "axion-dark-matter",
     title: "Axion Dark Matter — Candidate Fixed",
     shortTitle: "m_a",
-    target: "m_a ≈ 23.8 µeV, f_a = M_scal/128",
+    target: "m_a ≈ 23.8 µeV, f_a = M_scal/128, g_aγγ coefficient −4c₃",
     targetLatex: "m_a \\approx 23.8\\,\\mu\\text{eV}, \\quad f_a = \\frac{M_{\\mathrm{scal}}}{128} \\approx 2.39\\times 10^{11}\\,\\text{GeV}",
     numericValue: "23.8",
     unit: "µeV",
@@ -865,10 +905,11 @@ export const predictions: Prediction[] = [
       "\\theta_i = \\pi\\,N_{\\mathrm{fam}}/g_{\\mathrm{car}} = 3\\pi/5 = 108^\\circ \\;\\text{(robust spine branch)}",
       "\\theta_i = (g_{\\mathrm{car}}-2)\\pi/g_{\\mathrm{car}} = \\text{regular pentagon interior angle},\\ \\cos\\theta_i = -1/(2\\varphi)",
       "f_a = \\frac{M_{\\mathrm{scal}}}{2\\dim S^+|\\mu_4|} = \\frac{M_{\\mathrm{scal}}}{128}, \\quad m_a \\approx 23.8\\,\\mu\\text{eV}",
+      "g_{a\\gamma\\gamma} = -4c_3 = -\\tfrac{1}{2\\pi}, \\qquad y^2 = 16c_3^2 = \\tfrac{1}{4\\pi^2} \\approx 0.0253",
     ],
     pdf: "/papers/tfpt_4_frontier.pdf",
     description:
-      "The candidate is the determinant-line axion of the strong-CP sector (WIMPs ruled out — no spare E₈ singlet). The misalignment angle is a branch DECISION, not a closed number; f_a = M_scal/128 is a conjecture. A converged full finite-T solve (v185/v211, experiments/ftransfer/axion_relic) decides between two competing angles: the robust SPINE branch θ_i = π·N_fam/g_car = 3π/5 = 108° (the central spine quotient, no fit) lands Ω_a h² on Ω_DM untuned — 62° below the hilltop, in the MILD-anharmonic regime, so NOT exponentially sensitive (a far more robust landing). The seam hilltop θ_i = π(1 − φ_seam(α★)) ≈ 170° instead OVER-produces (Ω_a h² ≈ 0.66, ~5.4× above Ω_DM h² = 0.12) and is disfavoured. The two are mutually exclusive (neither is forced, the full solver decides); a converged Ω_a h² outside ~[0.08, 0.16] at the spine angle demotes the branch. A scenario, not a sharp prediction. Geometrically that spine angle is exactly the regular pentagon interior angle — since N_fam = g_car − 2, θ_i = (g_car−2)π/g_car, so cos θ_i = (1−√5)/4 = −1/(2φ), and the golden character is unique to g_car = 5 (v429): the otherwise-unmapped golden/icosahedral E₈ signature (v354/v313) is the geometry of this one external cosmological input — a [C] bridge that does NOT upgrade DM.AXION.SPINE.01.",
+      "The candidate is the determinant-line axion of the strong-CP sector (WIMPs ruled out — no spare E₈ singlet). The misalignment angle is a branch DECISION, not a closed number; f_a = M_scal/128 is a conjecture. The axion–photon anomaly coefficient, by contrast, is fixed by the seam constant itself: g_aγγ = −4c₃ = −1/(2π), i.e. y² = 16c₃² = 1/(4π²) ≈ 0.0253 — the same c₃ that fixes α and the birefringence β_rad, with no flow freedom (v207, GRAV.ASYMP.01 [E] leg). A [C] structural relation: it is the determinant-line coefficient, not a parameter-free g_aγγ in GeV⁻¹ (the physical coupling still carries f_a). A converged full finite-T solve (v185/v211, experiments/ftransfer/axion_relic) decides between two competing angles: the robust SPINE branch θ_i = π·N_fam/g_car = 3π/5 = 108° (the central spine quotient, no fit) lands Ω_a h² on Ω_DM untuned — 62° below the hilltop, in the MILD-anharmonic regime, so NOT exponentially sensitive (a far more robust landing). The seam hilltop θ_i = π(1 − φ_seam(α★)) ≈ 170° instead OVER-produces (Ω_a h² ≈ 0.66, ~5.4× above Ω_DM h² = 0.12) and is disfavoured. The two are mutually exclusive (neither is forced, the full solver decides); a converged Ω_a h² outside ~[0.08, 0.16] at the spine angle demotes the branch. A scenario, not a sharp prediction. Geometrically that spine angle is exactly the regular pentagon interior angle — since N_fam = g_car − 2, θ_i = (g_car−2)π/g_car, so cos θ_i = (1−√5)/4 = −1/(2φ), and the golden character is unique to g_car = 5 (v429): the otherwise-unmapped golden/icosahedral E₈ signature (v354/v313) is the geometry of this one external cosmological input — a [C] bridge that does NOT upgrade DM.AXION.SPINE.01.",
     category: "Astrophysics",
     confrontation: {
       derivation: "f_a = \\tfrac{M_{\\mathrm{scal}}}{128},\\ m_a \\approx 23.8\\,\\mu\\mathrm{eV}",
@@ -966,6 +1007,45 @@ export const predictions: Prediction[] = [
       repoPath: "experiments/eht-achromatic-residual",
     },
   },
+  {
+    id: "hfqpo-tooth",
+    slug: "hfqpo-ladder-tooth",
+    title: "BH HFQPO Third Tooth — the Never-Run ×1.5 Ladder Search",
+    shortTitle: "ν₃ = (3/2)ν_u",
+    target: "third tooth at ν₃ = 1.5 ν_u (661.5 / 414 / 252 / 363 Hz); integer harmonics forbidden",
+    targetLatex:
+      "\\nu_3 = \\tfrac{3}{2}\\,\\nu_u \\;\\; (661.5/414/252/363\\,\\mathrm{Hz}); \\ \\text{integer lines } 4\\nu_0 \\text{ forbidden}",
+    numericValue: "1.5",
+    unit: "× ν_u",
+    status: "Open / not forced",
+    dependencyClass: "Frontier interface",
+    killTest:
+      "A detected integer line (e.g. 4ν₀ = 2ν_u/1.5) with no geometric tooth at 1.5ν_u kills the ladder reading of the 3:2 pairs; even a tooth hit would stay [C] until the ladder↔oscillator mapping is derived. The compiler core is untouched either way.",
+    derivationFormulas: [
+      "\\mathrm{rate}(n) = -6\\ln\\bigl(1 - \\tfrac{n}{N_{\\mathrm{fam}}}\\bigr),\\ N_{\\mathrm{fam}} = 3 \\Rightarrow \\text{consecutive step } \\tfrac{3}{2}\\ \\text{exact}",
+      "\\nu_3 = \\tfrac{3}{2}\\nu_u; \\quad \\text{geometric teeth provably disjoint from integer harmonics } (\\Delta \\ge \\nu_u/6 \\ge 26\\,\\mathrm{Hz})",
+    ],
+    pdf: "/papers/tfpt_horizon_readouts.pdf",
+    description:
+      "The one discriminating test in the black-hole HFQPO sector — and it has never been run: no published search ever targeted ν₃ = 1.5 ν_u, although the teeth lie inside the RXTE PCA band that was searched. The four published twin pairs (GRO J1655−40, XTE J1550−564, GRS 1915+105, H1743−322) are consistent with exactly 3:2 (χ² p = 0.78), but that cluster is CHEAP: an anchored detection-selection null reproduces it in 18.5% of trials, and XTE J1859+226 breaks universality at +9.2σ — so GR parametric resonance remains the standing favorite. TFPT's 3/2 is a relaxation-ladder step from N_fam = 3 (the same frozen kernel as the recovery combs), NOT a two-oscillator ratio — the mapping is non-canonical, which is why this is a preregistered search target [O], not a claim. The geometric ladder forbids integer harmonics; the only published third-frequency structures are integer lines (92 = 184/2 Hz, 34/68 Hz), pointing to the harmonic side. The decisive archival RXTE reanalysis (stacked PDS, Lorentzian fits at tooth vs integer line, ≥4σ after trials correction) is fully specified in the preregistration YAML and deliberately not yet run.",
+    category: "Astrophysics",
+    confrontation: {
+      derivation: "\\text{ladder step } \\tfrac{3}{2} \\text{ from } N_{\\mathrm{fam}} = 3 \\Rightarrow \\nu_3 = \\tfrac{3}{2}\\nu_u",
+      tfptValue: "tooth at 661.5/414/252/363 Hz, no integer lines",
+      measured: "never searched (only integer lines published)",
+      deviation: "data-limited (H3 literature census)",
+      source: "RXTE PCA archive census (Belloni+ 2012, RM06, Motta+ 2014–2022)",
+      decisive: "preregistered archival RXTE PCA reanalysis (public data, runnable now)",
+    },
+    experiment: {
+      summary:
+        "experiments/hfqpo-ladder runs H1 (exact-3/2 point test), H2 (Boutelier/Török anchored selection-null MC, 200k trials) and H3 (ladder-tooth literature census + preregistered archival protocol) with the byte-guarded frozen kernel.",
+      result:
+        "H1: four pairs consistent with 3/2 (p = 0.78) but J1859+226 sits +9.2σ off — not universal. H2: anchored selection alone makes the cluster in 18.5% of trials — H1 carries no discriminating weight. H3: the ×1.5 tooth was never searched in any published analysis; archival next stage fully specified. Verdict data_limited; GR resonance favored.",
+      finding: "data_limited",
+      repoPath: "experiments/hfqpo-ladder",
+    },
+  },
 ];
 
 /**
@@ -1037,10 +1117,12 @@ export const CORRECTION_BUDGET: Record<string, CorrectionClass> = {
   "eta-b": "external-rate",
   hubble: "fixed-point",
   "no-second-higgs": "exact-identity",
+  "higgs-free-seam": "external-rate",
   birefringence: "fixed-point",
   axion: "external-rate",
   "rare-kaon": "external-rate",
   "eht-intercept": "external-rate",
+  "hfqpo-tooth": "seam-gapped",
 };
 
 /** Ledger claim IDs per prediction (mirror of the status-ledger row keys). */
@@ -1064,6 +1146,7 @@ export const CLAIM_ID: Record<string, string> = {
   "eta-b": "FR.ETAB.01",
   hubble: "COSMO.LAM.01",
   "no-second-higgs": "EM.BUDGET.01",
+  "higgs-free-seam": "HIGGS.FREESEAM.01",
   birefringence: "HOR.01",
   axion: "FR.DM.01",
   "rare-kaon": "FR.RAREKAON.01",
