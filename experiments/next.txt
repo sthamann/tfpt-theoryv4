@@ -1,3 +1,144 @@
+## 2026-07-03 (III) — Integrationsrunde: v472 promoted + KERNEL-UV-Probe + Flat-Budget-Scorecard-Zeile
+
+Alle drei benannten Hebel der Runde (II) ausgeführt:
+
+**(1) `verification/v472_quillen_detline_moduli.py` PROMOTED (`ALPHA.QUILLEN.DETLINE.01`, 7/7 PASS, Suite ALL CHECKS PASSED, 466 Module).**
+Die Determinantenlinie des besetzten Frames über den U(1)-Twist-Moduli (= Moduli flacher
+U(1)-Zusammenhänge — das Quillen-förmige Objekt, das ALPHA.QUILLEN.EXACT.01 benennt) trägt
+FHS-Krümmung = 1 = Inflow-Level, exakt (1e-9) und größenunabhängig (L=4,6); Kontrollen 0/−1;
+Twist-Integer == BZ-Integer (Niu–Thouless–Wu); Dai–Freed-Section global (Gap 2.0). Damit ist
+das v470-[O]-Brücken-Lemma („δ log det_ζ(Seam) = Inflow-Antwort") auf Modell-Ebene exhibiert —
+der frühere Satz „bleibt benannter zitierter Schritt" (Runde 2026-07-02) ist präzisiert: offen
+bleibt die KONTINUUMS-ζ-Det-Identifikation (= SEAM.EQUIV.01-Facette). Gate bleibt [O], α⁻¹
+bleibt [E]. Integriert: run_all/registry/Ledger-Zeile, tfpt_1 (sechster Honest Step im
+EM-Closure-Block), tfpt_research_contracts, tfpt_safeguards, changelog 2026-07-03, README
+(465→466), zenodo, Website (DAG-alpha-Node, UniversalGapLab, Glossar, papers.ts);
+Wolfram-README: numerisch, Python-only (wie v471).
+
+**(2) `experiments/tfpt-discovery/kernel_calderon_uv_universality.py` NEU (Sandbox, 7/7 PASS) — QGEO.KERNEL.01-Stütze.**
+Das rohe Collar-Calderón-Datum ist UV-universal: Mode-für-Mode-Konvergenz (Ordnung 0.99 =
+einseitiger FV-Randfluss) gegen das exakte Bessel-Symbol m·I_ν′(mR)/I_ν(mR), Richardson h→0
+max. rel. Fehler 3.2e-4 (Residuum sauber O(h²)); N_θ-unabhängig (1.4–1.6e-4 bei 32/64/128);
+Prinzipalsymbol √((ν/R)²+m²)→|k| (v156) monoton; μ4-Äquivarianz + Off-Charakter-Verschwinden
+auf Maschinenpräzision (6e-15); beide spec-T-Massen (Ratio ln3/ln(3/2) seam-fixiert, absolute
+Skala = v471-Anker, ehrlich geflaggt); 3-fold-Mesh-Defekt (1%) bricht die Blockstruktur um
+~12 Größenordnungen (Negativkontrolle). Lesart: die OPERATOR-Gleichung der KERNEL-Obligation
+hat eine wohldefinierte, diskretisierungsunabhängige linke Seite. Gate bleibt [O], kein Claim,
+nichts promoted (route_candidate; Promotion analog v471/v472 möglich).
+
+**(3) Scorecard 94 → 95 Zeilen (42 consistent): `cosmo / flat LambdaCDM budget closure` NEU.**
+Die Flat-Budget-Closure aus Runde (II) als typisierte Zeile: composite `pattern_candidate`,
+stage `downstream_bridge`, status `consistent`, `independence_group=phi0_seed`,
+`alternative_group=axion_branch` (Ω_c-Bein vs Axion-Spine — nie doppelt zählen),
+`dominant_leg=omega_b (−2.02σ)`. Generator grün, README-Stats-Block regeneriert,
+Website `EXPERIMENTS_AUDIT` 95/42/7/14/31/1 synchron, experiments/README §7b.6 erweitert.
+Kill preregistriert (H₀ ≥ 71 konvergiert + Konkordanzbruch; ω_c 3σ weg von 0.1186).
+
+## 2026-07-03 (II) — Theorie-intern-Runde: Quillen-Determinantenlinie am Twist-Modul + parameterfreies FLRW-Budget (Sandbox)
+
+Zwei neue Sandbox-Probes in `experiments/tfpt-discovery/` (beide ALL CHECKS PASS; NICHTS promoted,
+kein Ledger-/Paper-/Scorecard-/Website-Touch). Fokus dieser Runde: neue Lösungen für offene Stellen
++ neue Muster/Vereinfachungen + Origin-Stützen.
+
+**(1) `quillen_detline_twist_moduli.py` — das v470-[O]-Brücken-Lemma auf Modell-Ebene exhibiert (route_candidate).**
+ALPHA.QUILLEN.EXACT.01 benennt den α³-Level als Krümmung/Holonomie der DETERMINANTENLINIE über den
+U(1)-Seam-Moduli (Dai–Freed-Schnitt, Bismut–Freed-Krümmung). v470 berechnete den Bulk-Chern C=1 —
+aber über die Bloch-BZ (der translationsinvariante Shortcut), nicht das Quillen-Objekt selbst.
+NEU: dieselbe QWZ/p+ip-Collar (identisches h(k) wie v470/v367) in Realraum mit getwisteten
+Randbedingungen; die Determinantenlinie des besetzten Ein-Teilchen-Frames über dem TWIST-Torus
+(= Moduli flacher U(1)-Zusammenhänge — genau die Moduli-Sprache des Gates) trägt FHS-Krümmung
+**∮ = 2π·1 exakt** (L=4 und L=6, größenunabhängig, Werte ±1e-9-integer). Kontrollen: M=3 (trivial)
+→ 0 exakt; M=−1 → −1 (Orientierungs-Flip); **Twist-Modul-Integer == Bloch-BZ-Integer für alle
+drei M** (Niu–Thouless–Wu, am Collar exhibiert: zwei Tori, EIN Level); Fermi-Gap über dem ganzen
+Twist-Torus offen (min gap 2.0 → die Section ist global definiert, keine det-Linien-Nullstelle).
+Damit ist der FINITE Schatten des benannten [O]-Brücken-Lemmas („δ log det_ζ(Seam) = Inflow-
+Antwort") am Modell gezeigt: **det-Linien-Holonomie = Inflow-Level = 1.** NICHT geschlossen (ehrlich):
+die abstrakte ζ-Determinanten-Identifikation im Kontinuum (= die SEAM.EQUIV.01-Facette); α⁻¹
+bleibt [E], kein Gate bewegt. Promotion-Kandidat — würde v470s Residuum 7 auf Modell-Ebene
+schärfen, strukturell dasselbe Manöver wie v471 für die Replica-Seite von SEAM.THEOREM.01.
+
+**(2) `flat_budget_closure.py` — NEUES Muster: das parameterfreie flache ΛCDM-Budget (pattern_candidate, LEE-geflaggt).**
+Die Stücke existierten alle, aber getrennt: Ω_b = φ₀(1−1/4π) [frozen v84], ρ_Λ/M̄⁴ =
+(3/4π²)e^(−2α⁻¹) [frozen v84/v60], Σm_ν = 0.0588 eV [v468-Route], Ω_c = (2/7)(1−1/4π)
+[Nebenbefund 2026-07-02, NUMEROLOGIE-GEFLAGGT: einziger p/q≤12-Hit, post-hoc, kollidiert als
+Alternativ-Lesart mit dem Axion-Spine-DM-Branch — nie doppelt zählen; Kuriosum: die 7 = |b3| =
+Scalaron-Exponent, nur geflaggt]. Was NIE getan wurde: das Budget SCHLIESSEN. Mit Flachheit
+(Standard-Inflations-Input) determinieren die vier Stücke + Radiation ALLES, null Dials:
+**h = 0.6715 → H0 = 67.15 km/s/Mpc, Ω_Λ = 0.6866, Ω_m = 0.3133, ω_b = 0.02207, ω_c = 0.11857,
+t0 = 13.86 Gyr.** Konfrontation: H0 vs Planck18 **−0.39σ**, vs SH0ES22 **−5.67σ** — die
+parameterfreie PLANCK-Seite der Hubble-Spannung, eine scharfe datierte Positionierung; vs
+DESI-DR2 −2.16σ; Ω_m −0.27σ, Ω_Λ +0.26σ, Ω_c/Ω_b +0.14σ. EHRLICH festgehalten: **ω_b −2.02σ
+ist der schärfste interne Stress der Closure** (BBN-only-D/H nur −0.73σ — der Stress ist
+CMB-seitig), ω_c −1.19σ, abgeleitetes t0 +2.88σ — drei Gesichter EINER korrelierten
+low-h/low-ω_m-Richtung, nicht additiv. Externe Importe deklariert: die eine Einheit (v_geo-Klasse,
+M̄→s⁻¹), T_CMB, dm31² (winzig, via Σm_ν). Upgrade gegenüber v60 (das Ω_b UND ω_DM aus Planck
+importierte): jetzt null importierte Kosmologie-Parameter. Origin-Stütze: erweitert
+origin_theory §alpha („EIN α⁻¹ für EM, Horizont und Λ") zu „ein Axiompaar → das ganze
+FLRW-Budget". Kills (prereg): systematik-konvergiertes lokales H0 ≥ 71 mit brechender
+CMB/BAO-Konkordanz; ODER ω_c ≥ 3σ weg von 0.1186 hart. Die frozen Ω_b/Λ-Records bleiben davon
+unberührt (nur das Closure-MUSTER fällt).
+
+Benannte nächste Hebel (nicht ausgeführt): (a) KERNEL-Obligation (QGEO.KERNEL.01) numerisch:
+UV-Universalität des Calderón-Datums über eine Familie von Collar-Diskretisierungen (v471s
+`build_cone`/`bfk_parts` wiederverwendbar) — zeigt, dass die [O]-Operator-Identifikation
+UV-insensitiv/attraktorartig ist; (b) Promotion von (1) als vN-Modul (tfpt-deep-sync);
+(c) Scorecard-Zeile „flat budget closure" (cosmo, eigene independence-Behandlung: teilt
+phi0_seed + alpha_em, Ω_c-Leg als alternative_group zum Axion-Spine-Branch). Alles erst nach
+Freigabe.
+
+## 2026-07-03 — Vogelperspektive-Runde: Elektron-Sektor + Cabibbo-Anomalie (zwei weiße Flecken, Sandbox)
+
+Explorativer Lauf `experiments/tfpt-discovery/electron_sector_cabibbo_probe.py` (alle Checks PASS;
+reine Sandbox, NICHTS promoted, kein Ledger-/Paper-/Scorecard-/Website-Touch). Zwei Datenflächen
+gefunden, die die Suite noch NIE konfrontiert hat, plus ein interner Konsistenz-Catch:
+
+**(1) α-Metrologie-Dreieck — TFPTs Flaggschiff-Zahl nimmt Partei im 5.5σ-Rb/Cs-Streit (NEU protokolliert).**
+α⁻¹ = 137.0359992168 (v3/v84, exakte F_U1-Wurzel) wurde bisher nur gegen CODATA22 gestellt
+(+1.9σ, Scorecard-Zeile). Die Metrologie ist aber intern gespalten (Rb−Cs = 5.5σ), und die
+exakte Wurzel ordnet sich ein: **Rb-2020 (Morel+, Nature 588) +0.99σ / CODATA22 +1.90σ /
+a_e-2023+SM (Fan+, PRL 130, 071801: α⁻¹=137.035999166(15)) +3.39σ / Cs-2018 (Parker+) +6.33σ.**
+Der a_e-Route-Vergleich ist der schärfste Einzelvergleich der ganzen α-Fläche und war nie
+aufgeschrieben — ein ehrlicher NEUER Druckpunkt (kein Verstecken: +3.4σ). Kostenloser datierter
+Kill: konvergiert die Recoil-Metrologie (Gabrielse-10×-Upgrade, LKB/Berkeley-Re-Runs, diese
+Dekade) auf der Cs/a_e-Seite (α⁻¹ ≤ 137.03599917 bei σ ≤ 1e-8), steht die exakte α-Wurzel
+bei ≥5σ — das träfe [E]-Kern-Arithmetik, nicht nur einen Branch. Konvergenz auf der Rb-Seite
+(137.0359992±1e-8) wäre <1σ-Bestätigung auf 11 Stellen.
+
+**(2) v204-Universalitäts-Catch — die UNIVERSELLE Lesart des g−2-Seam-Vertex ist ab heute falsifiziert.**
+a_μ^seam = δ₂/(2π) = 45/(524288π⁹) = 2.879e-9 steht in v204 als reine Kompilerzahl OHNE
+Lepton-Massenabhängigkeit. Elektron-Gegenprobe (a_e = 1.15965218059(13)e-3, Fan+ 2023; Residuum
+@ TFPT-exaktem α: (4.3±1.3)e-13 = +3.3σ, konsistent mit (1)): **universal (p=0) → +21 888σ TOT;
+linear (p=1, 1.39e-11) → +103σ tot; quadratisch (p=2, Standard-Heavy-NP: 6.7e-14) → überlebt.**
+Die [C]-Brücke MUSS also ≥ quadratisch in m_l skalieren — eine neue harte Typisierung des
+v204-Bridges (Promotion-Kandidat: v204-Docstring/Ledger-Schärfung + Δa_e-Forecast).
+Post-hoc-Kuriosum (LEE-geflaggt, KEIN Claim): wären TFPT-α UND das a_e-Residuum beide echt,
+bräuchte der Vertex p = 1.65±0.06; **p = 5/3 (= k_Y, der v470-Einbettungsindex) landet bei
+−0.24σ** (Δa_e = 3.98e-13) — aber der Simple-Exponenten-Census erwartet ~0.8 Hits im 1σ-Fenster
+→ billig, pattern-level. τ-Forecast: p=2 → 8.1e-7, p=5/3 → 3.2e-7 (4 Größenordnungen unter der
+CMS-PbPb-Sensitivität ~3e-3, kein naher τ-Test). Entscheider ist derselbe wie in (1):
+die α/a_e-Metrologie der nächsten Jahre.
+
+**(3) Cabibbo-Winkel-Anomalie = DRITTE Dissolutions-Achse (Watchdog-Kandidat Achse E, nach Steriles N_fam=3 und Evolving-DE w=−1).**
+TFPT fixiert λ_C = √(φ₀(1−φ₀)) = 0.2243762 exakt (frozen v84) und die CKM-Assembly ist exakt
+unitär → das ~2.4σ-First-Row-Defizit (PDG26: |V_ud|²+|V_us|²+|V_ub|² = 0.9983(7)) MUSS sich
+auflösen, und TFPT sagt WIE: **λ_C vs PDG26-Kaon-Average (S=2.5) 0.22431(85) → +0.08σ dead-on;
+sitzt ZWISCHEN Kl3 0.22330(53) (+2.03σ) und Kμ2-Route 0.22515(47) (−1.63σ)** → Vorhersage: die
+beiden Kaon-Routen konvergieren auf 0.22438 (aktuell 2.7σ auseinander, PDG-Skalenfaktor 2.5).
+**V_ud(TFPT-Unitarität) = 0.97450: superallowed 0.97367(32) ist der Ausreißer (+2.58σ), ALLE
+anderen Routen stimmen zu** (Neutron-PDG +0.10σ, Neutron-best +0.87σ, Pion-Beta +0.22σ) → das
+Defizit löst sich auf der nuklearen V_ud-Seite (NS/ΔV_R-Systematik), nicht bei V_us. Decider
+diese Dekade: PIONEER (π_e3, R_e/μ), Lattice f+(0) + fK/fπ, superallowed-NS-Re-Evaluationen,
+τ_n/g_A-Konsens. Kill (prereg): konvergiertes All-Route-V_us (S~1) mit |V_us−0.224376| ≥ 5σ,
+ODER ein systematik-konvergiertes First-Row-Defizit ≥ 5σ (träfe die exakte Unitarität der
+frozen Assembly). Anti-Doppelzählung: λ_C ist φ₀-abgeleitet → `independence_group=phi0_seed`.
+Nebenbefund: τ-Route V_us = 0.2207(14) liegt bei +2.63σ (bekannter FESR-Ausreißer, PDG26 selbst
+flaggt ihn als methodisch strittig).
+
+Nächste Hebel (nicht ausgeführt): (a) `fixed-point-watchdog/` Achse E (Cabibbo-Dissolution) +
+neue Scorecard-Zeile; (b) `lab-residuals/`-Erweiterung um die a_e/α-Dreiecks-Matrix (analog zur
+g−2-Baseline-Matrix) + Scorecard-Zeile `alpha_em`; (c) v204-Schärfung (Universalitäts-Falsifikat
++ Skalierungs-Typisierung) als vN-Promotion mit tfpt-deep-sync. Alles erst nach Freigabe.
+
 ## 2026-07-02 — Anomalie-Runde: Watchdog-Refresh + HFQPO-Leiter + Strange-Metal-Comb + Efimov/Glas-Kontrollen
 
 **(1) `fixed-point-watchdog/` Achse D NEU — Sterile-Dissolution-Watchdog (`N_fam=3` exakt, prediction_of_record, `consistent`).**

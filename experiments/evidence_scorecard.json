@@ -27,9 +27,9 @@
     "parked",
     "search_target"
   ],
-  "n_rows": 94,
+  "n_rows": 95,
   "count_by_status": {
-    "consistent": 41,
+    "consistent": 42,
     "null": 14,
     "data_limited": 31,
     "tension": 7,
@@ -39,20 +39,20 @@
     "search_target": 33,
     "prediction_of_record": 23,
     "strain_level_test": 9,
-    "downstream_bridge": 18,
+    "downstream_bridge": 19,
     "not_applicable": 10,
     "parked_analog": 1
   },
   "count_by_evidence_class": {
     "search_target": 33,
     "external_data": 33,
-    "downstream_bridge": 18,
+    "downstream_bridge": 19,
     "internal_consistency": 9,
     "parked": 1
   },
   "count_by_independence_group": {
     "independent": 68,
-    "phi0_seed": 9,
+    "phi0_seed": 10,
     "c3_topform_horizon": 1,
     "N_star_reheating": 4,
     "cp_mu6_phase": 2,
@@ -63,7 +63,7 @@
   },
   "count_by_alternative_group": {
     "HVP_baseline": 2,
-    "axion_branch": 3,
+    "axion_branch": 4,
     "Nstar_branch": 2,
     "w_de_eos": 3
   },
@@ -1353,6 +1353,28 @@
       "evidence_class": "internal_consistency",
       "hint_flag": false,
       "alternative_group": null,
+      "watch_flag": false
+    },
+    {
+      "domain": "cosmo",
+      "observable": "flat LambdaCDM budget closure (H0, Omega_m, t0)",
+      "tfpt_value": "zero-dial closure {Omega_b=phi0(1-1/4pi) [frozen], Omega_c=(2/7)(1-1/4pi) [flagged candidate], rho_L/Mbar^4=(3/4pi^2)e^-2ainv [frozen], Sigma m_nu=0.0588 eV [v468 route]} + flatness -> H0=67.15 km/s/Mpc, Omega_m=0.3133, Omega_L=0.6866, t0=13.86 Gyr",
+      "data_value": "H0: Planck18 -0.39 sigma, SH0ES22 -5.67 sigma (the parameter-free PLANCK side of the Hubble tension), DESI DR2 BAO+CMB -2.16 sigma; Omega_m -0.27, Omega_L +0.26, Omega_c/Omega_b +0.14; honest stress: omega_b -2.02 (BBN-only D/H -0.73 -- the stress is CMB-side), omega_c -1.19, derived t0 +2.9 -- one correlated low-h direction, not additive",
+      "pull_sigma": null,
+      "claim_type": "pattern_candidate",
+      "bridge_type": "flat FLRW budget closure (phi0 seed + alpha Lambda engine + nu floor + flagged Omega_c leg)",
+      "stage": "downstream_bridge",
+      "source": "experiments/tfpt-discovery/flat_budget_closure.py (Planck 2018 TT,TE,EE+lowE+lensing; SH0ES 2022; DESI DR2; BBN D/H LUNA)",
+      "kill_condition": "systematics-converged local H0 >= 71 with broken CMB/BAO concordance, or omega_c hardened >= 3 sigma away from 0.1186 -- kills the closure pattern only (frozen Omega_b/Lambda records untouched)",
+      "status": "consistent",
+      "independence_group": "phi0_seed",
+      "alternative_group": "axion_branch",
+      "discriminative_power": "medium",
+      "dominant_leg": "omega_b (CMB-side)",
+      "max_leg_pull_sigma": 2.02,
+      "decision_horizon": "mid_term",
+      "evidence_class": "downstream_bridge",
+      "hint_flag": false,
       "watch_flag": false
     },
     {

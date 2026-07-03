@@ -243,7 +243,14 @@ def parse_items(body: str) -> list[list[dict]]:
     m = re.search(r"\\begin\{itemize\}(.*?)\\end\{itemize\}", body, re.S)
     if not m:
         return []
-    parts = re.split(r"\\item\b", m.group(1))
+    inner = m.group(1).lstrip()
+    # drop the enumitem optional argument (e.g. [leftmargin=1.5em]) so it is
+    # not rendered as a bogus first bullet
+    if inner.startswith("["):
+        close = inner.find("]")
+        if close != -1:
+            inner = inner[close + 1:]
+    parts = re.split(r"\\item\b", inner)
     items = []
     for part in parts:
         part = part.strip()

@@ -151,7 +151,11 @@ Kitaev 16-fold-way pin `ν = 16·|C| = 16 ≡ 0 (mod 16)`, `c₋ = ν/2 = 8`), a
 `v470` (the embedding-index rigidity — `k_Y = tr(Y²)/tr(T3²) = (5/6)/(1/2) = 5/3`,
 the `b1` conversion `(3/5)·(41/6) = 41/10`, and the carrier decomposition
 `41/6 = 20/3 + 1/6`). The FHS Chern computations and the `α⁻¹` root/split
-re-verification are numerical, Python-only (as for `v367`/`v461`).
+re-verification are numerical, Python-only (as for `v367`/`v461`). The
+2026-07-03 `v472` (the determinant line over the U(1)-twist moduli: FHS
+curvature of the occupied-frame det line = 1 = the inflow level, on the same
+collar model) is likewise numerical (dense eigh + FHS twist grid),
+Python-only by the same convention, like `v471`.
 
 (ledger `GATE.WOLFRAM.02`). The scipy-only parts of the round (the `v86`
 pivot ODE solve, the `v88` data pulls, the `v99` mpmath ODE probe of the

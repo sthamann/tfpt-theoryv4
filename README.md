@@ -155,7 +155,7 @@ single residual of `SEAM.EQUIV.01`) — not a diffuse gap.
 
 | Item | What it is |
 |---|---|
-| `v1_*.py … v471_*.py` | 465 numbered claim checks (one file per claim cluster; highest ID `v471`). |
+| `v1_*.py … v472_*.py` | 466 numbered claim checks (one file per claim cluster; highest ID `v472`). |
 | `run_all.py` | Runs the whole suite; ends `ALL CHECKS PASSED`. |
 | `tfpt_constants.py` | Shared constants + `check()` harness. |
 | `predictions_frozen.json` | **Blind-prediction registry** (frozen 2026-06-09): every dimensionless prediction of record at 25 digits, locked to its formula by `v84_frozen_registry.py` on every run; exactly one `θ12` prediction of record (seed `0.306747`), `r`/`n_s` only as `N_star` bands. |
@@ -290,7 +290,12 @@ quantisation + Callan–Harvey inflow + the APS/Witten `η`=CS reading of `δ lo
 `F`-normalisation is retyped as the **affine embedding index** `k_Y = tr(Y²)/tr(T3²) = 5/3` (Ginsparg 1987;
 `(3/5)·(41/6) = 41/10 = b₁` exactly) — level-1 current-algebra rigidity, zero independent content, a face of
 `SEAM.EQUIV.01`. One invertible phase, two quantised responses (`c₋ = 8` gravitational, `C = 1` U(1)) feeds
-both named targets; the bridge lemma `δ log det_ζ(seam) = inflow response` stays the cited step, so
+both named targets. A sixth step (`v472`) exhibits the bridge lemma at the finite level: the determinant
+line of the occupied frame over the **U(1)-twist moduli** (the moduli space of flat U(1) connections) of the
+same collar carries FHS curvature = 1 = the inflow level, exactly and size-independently (controls 0/−1;
+twist-moduli integer = Bloch-BZ integer, Niu–Thouless–Wu; the Dai–Freed section has no zero) — so
+`δ log det(seam model) = inflow response` holds verbatim at the model level. What stays `[O]` is the
+**continuum** ζ-det identification on the abstract seam (= the `SEAM.EQUIV.01` face), so
 `ALPHA.QUILLEN.EXACT.01` stays `[O]`.
 
 **One principle behind "parameter-free", and the shape of what's left.** A bird's-eye synthesis
@@ -428,7 +433,7 @@ flagged at 2.0σ; since 2026-07-02 two named post-hoc `[O]` candidates sit next 
 Plus `v380`: the KMS Entire Hessian — the Stelle ghost is exactly a finite Seeley–DeWitt
 truncation; resummation pushes the ghost zero to infinity, so perturbative graviton unitarity holds.
 
-A development timeline of all 465 modules is in `introduction.tex` (and on the website verification page).
+A development timeline of all 466 modules is in `introduction.tex` (and on the website verification page).
 
 ---
 

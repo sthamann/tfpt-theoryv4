@@ -77,7 +77,7 @@ const SECTORS: Sector[] = [
 
 const RESIDUALS: { id: string; kind: "A" | "B" | "C"; note: string }[] = [
   { id: "SEAM.EQUIV.01", kind: "A", note: "cited continuum theorem (v336); extension leg crossed-product certified, realisation at invariant level (v469, LR/Böckenhauer/KLM; AGT/AMT second witness); stays [O]" },
-  { id: "ALPHA.QUILLEN.EXACT.01", kind: "A", note: "Quillen ζ-functional (v382; reduced v391/v433; v434 → one [C]+one [O]; v435 → a³ is the unique π⁰ metric-independent topological rung, integer CS level [C]; v470: α³ level = computed |C| = 1, F-normalisation = k_Y = 5/3; stays [O])" },
+  { id: "ALPHA.QUILLEN.EXACT.01", kind: "A", note: "Quillen ζ-functional (v382; reduced v391/v433; v434 → one [C]+one [O]; v435 → a³ is the unique π⁰ metric-independent topological rung, integer CS level [C]; v470: α³ level = computed |C| = 1, F-normalisation = k_Y = 5/3; v472: bridge lemma exhibited at the finite level — det-line curvature over the U(1)-twist moduli = 1 = the inflow level; the continuum ζ-det identification stays [O])" },
   { id: "QG.AMB.01", kind: "A", note: "constructive measure, a [C] redundancy (v369)" },
   { id: "v_geo", kind: "B", note: "the one metrology unit — No-Unit theorem (v153/v364)" },
   { id: "F_transfer", kind: "C", note: "QCD / Boltzmann / relic (v371–v374, firewall v187)" },

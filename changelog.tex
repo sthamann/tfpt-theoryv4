@@ -60,6 +60,61 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-07-03 (\texttt{v472} --- the determinant line over the $U(1)$-twist moduli of the collar model carries curvature $=$ the inflow level: the \texttt{v470} bridge lemma exhibited at the finite/model level; \texttt{ALPHA.QUILLEN.EXACT.01} stays \mO. Plus: bird's-eye rounds --- electron-sector/Cabibbo whitespot probes, Calder\'on UV-universality, parameter-free flat-budget closure (sandbox); the flat-budget closure enters the evidence scorecard)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v472\_quillen\_detline\_moduli.py} (\texttt{ALPHA.QUILLEN.DETLINE.01}).}
+\texttt{ALPHA.QUILLEN.EXACT.01} names the $\alpha^3$ level as the curvature of the \emph{determinant line
+over the $U(1)$ seam moduli} (Quillen 1985 / Bismut--Freed CMP 106 (1986) curvature; Dai--Freed JMP 35
+(1994) section); \texttt{v470} computed the bulk Chern invariant only over the Bloch Brillouin zone (the
+translation-invariant shortcut). \texttt{v472} computes the Quillen-shaped object itself: the same collar
+Hamiltonian ($h(k)=\sin k_x\,\sigma_x+\sin k_y\,\sigma_y+(M-\cos k_x-\cos k_y)\,\sigma_z$,
+\texttt{v367}/\texttt{v470}) in real space on an $L\times L$ torus with \emph{twisted} boundary conditions --- the twist
+torus $(\theta_x,\theta_y)$ \emph{is} the moduli space of flat $U(1)$ connections --- and the
+Fukui--Hatsugai--Suzuki curvature of the \emph{determinant line of the occupied frame} over that torus:
+$\oint = 2\pi\cdot 1$ exactly (integer to $10^{-9}$) at $M{=}1$ for $L{=}4$ AND $L{=}6$ (size-independent);
+controls: trivial collar $M{=}3\to 0$, orientation flip $M{=}{-}1\to-1$; the twist-moduli integer equals
+the Bloch-BZ integer for all three $M$ (Niu--Thouless--Wu PRB 31 (1985), exhibited on the S3 collar model);
+the Fermi gap ($=2.0$) stays open over the whole twist torus, so the Dai--Freed section has no zero.
+\textbf{Reading \mC:} det-line holonomy over the $U(1)$ moduli $=$ inflow level $k_0=|C|=1$ --- the
+\texttt{v470} bridge lemma ``$\delta\log\det_\zeta(\mathrm{seam})=$ the inflow response'' holds
+\emph{verbatim at the finite/model level}, where $\log\det$ of the occupied frame replaces
+$\log\det_\zeta$. \textbf{Not closed \mO:} the \emph{continuum} $\zeta$-determinant identification on the
+abstract seam ($=$ the \texttt{SEAM.EQUIV.01} face); \texttt{ALPHA.QUILLEN.EXACT.01} stays \mO; $\ainv$
+stays \mE. Structurally the same manoeuvre as \texttt{v471} for \texttt{SEAM.THEOREM.01}'s replica side.
+$7/7$ checks; suite green through \texttt{v472} (466 modules); numerical (dense eigh $+$ FHS twist grid),
+Python-only by nature. Papers updated: \texttt{tfpt\_1} (sixth honest step in the EM closure),
+\texttt{tfpt\_research\_contracts} (residual certification), \texttt{tfpt\_safeguards} ($\alpha$-form
+lever), root \texttt{README}, \texttt{zenodo\_description.html}. Exploration original:
+\texttt{experiments/tfpt-discovery/quillen\_detline\_twist\_moduli.py} (same day).
+\item \textbf{Bird's-eye whitespot rounds (sandbox, \texttt{experiments/tfpt-discovery/}, nothing else
+promoted).} (i) \texttt{electron\_sector\_cabibbo\_probe.py}: the $\alpha$ metrology triangle (TFPT
+$\ainv=137.0359992168$ vs Rb-2020 $+0.99\sigma$ / CODATA22 $+1.90\sigma$ / $a_e$-route $+3.39\sigma$ /
+Cs-2018 $+6.33\sigma$ --- TFPT takes the Rb side of the $5.5\sigma$ metrology split; new honest pressure
+point recorded); the \texttt{v204} seam-vertex universality catch (a flavor-universal reading of
+$a_\mu^{\mathrm{seam}}=2.879\times10^{-9}$ is excluded by the electron at ${\sim}2\times10^4\sigma$; linear
+scaling at ${\sim}10^2\sigma$; quadratic survives --- the \mC\ bridge must scale at least quadratically in
+$m_\ell$); the Cabibbo-angle anomaly as a third dissolution watchdog ($\lambda_C=0.2243762$ exact sits
+$+0.08\sigma$ on the PDG-2026 rescaled kaon average, between $K_{\ell3}$ and $K_{\mu2}$; exact unitarity
+puts $V_{ud}=0.97450$ --- superallowed is the outlier at $+2.6\sigma$, all neutron/pion routes agree).
+(ii) \texttt{kernel\_calderon\_uv\_universality.py}: the raw-collar Calder\'on/DtN datum is UV-universal
+(mode-by-mode first-order convergence to the exact Bessel symbol $m I_\nu'(mR)/I_\nu(mR)$, Richardson
+residual $3\times10^{-4}$; $N_\theta$-independent; $|k|$ principal symbol; $\mu_4$ block structure at
+machine precision; both spec-$T$ masses; $3$-fold mesh-defect negative control) --- the operator equality
+demanded by \texttt{QGEO.KERNEL.01} has a well-defined discretization-independent left-hand side (gate
+stays \mO). (iii) \texttt{flat\_budget\_closure.py} $+$ scorecard row: see next bullet.
+\item \textbf{Flat-budget closure enters the evidence scorecard (experiments-only, pattern candidate).}
+The zero-dial closure $\{\Omega_b=\phiz(1-\tfrac{1}{4\pi})$ [frozen], $\Omega_c=\tfrac27(1-\tfrac{1}{4\pi})$
+[the 2026-07-02 numerology-flagged Nebenbefund], $\rho_\Lambda/\Mbar^4=(3/4\pi^2)e^{-2\ainv}$ [frozen],
+$\Sigma m_\nu=0.0588$\,eV [\texttt{v468} route]$\}$ $+$ spatial flatness determines the whole flat
+$\Lambda$CDM budget: $H_0=67.15$\,km/s/Mpc ($-0.39\sigma$ Planck18, $-5.67\sigma$ SH0ES22 --- the
+parameter-free Planck side of the Hubble tension), $\Omega_m=0.3133$ ($-0.27\sigma$), $t_0=13.86$\,Gyr;
+honest stresses recorded: $\omega_b$ $-2.02\sigma$ (BBN-only $-0.73\sigma$), $\omega_c$ $-1.19\sigma$,
+DESI-DR2 $H_0$ $-2.16\sigma$ (one correlated low-$h$ direction). Scorecard row \texttt{cosmo / flat budget
+closure} (\texttt{consistent}, composite: shares the \texttt{phi0\_seed} group (and the $\rho_\Lambda$ leg
+the $\alpha$ engine), $\Omega_c$ leg in \texttt{alternative\_group=axion\_branch} vs the axion-spine DM
+reading --- never double-counted); nothing promoted to \texttt{verification/}.
+\end{itemize}
+
 \subsection*{2026-07-02 (\texttt{v471} --- the Seam--Horizon replica chain exercised numerically on the discretized collar: the kernel-identification premise of \texttt{SEAM.THEOREM.01} discharged at the finite/model level; residual retypes to the continuum MMST leg $+$ the anchor; gate stays \mO. Plus: the GW ringdown-echo channel hardened --- 10 loudest events incl.\ GW250114, redshift-corrected templates, stacked search and a 12-variant signature battery, all null)}
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{\texttt{v471\_seam\_horizon\_replica.py} (\texttt{SEAM.EHMODEL.04}).} The residual isolated by

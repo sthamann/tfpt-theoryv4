@@ -42,6 +42,1119 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-07-03",
+    "dateLabel": "2026-07-03",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v472"
+      },
+      {
+        "k": "t",
+        "v": " — the determinant line over the "
+      },
+      {
+        "k": "m",
+        "v": "U(1)"
+      },
+      {
+        "k": "t",
+        "v": "-twist moduli of the collar model carries curvature "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the inflow level: the "
+      },
+      {
+        "k": "c",
+        "v": "v470"
+      },
+      {
+        "k": "t",
+        "v": " bridge lemma exhibited at the finite/model level; "
+      },
+      {
+        "k": "c",
+        "v": "ALPHA.QUILLEN.EXACT.01"
+      },
+      {
+        "k": "t",
+        "v": " stays "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": ". Plus: bird's-eye rounds — electron-sector/Cabibbo whitespot probes, Calderón UV-universality, parameter-free flat-budget closure (sandbox); the flat-budget closure enters the evidence scorecard"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v472_quillen_detline_moduli.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "ALPHA.QUILLEN.DETLINE.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "ALPHA.QUILLEN.EXACT.01"
+        },
+        {
+          "k": "t",
+          "v": " names the "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha^3"
+        },
+        {
+          "k": "t",
+          "v": " level as the curvature of the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "determinant line over the "
+            },
+            {
+              "k": "m",
+              "v": "U(1)"
+            },
+            {
+              "k": "t",
+              "v": " seam moduli"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (Quillen 1985 / Bismut–Freed CMP 106 (1986) curvature; Dai–Freed JMP 35 (1994) section); "
+        },
+        {
+          "k": "c",
+          "v": "v470"
+        },
+        {
+          "k": "t",
+          "v": " computed the bulk Chern invariant only over the Bloch Brillouin zone (the translation-invariant shortcut). "
+        },
+        {
+          "k": "c",
+          "v": "v472"
+        },
+        {
+          "k": "t",
+          "v": " computes the Quillen-shaped object itself: the same collar Hamiltonian ("
+        },
+        {
+          "k": "m",
+          "v": "h(k)=\\sin k_x\\,\\sigma_x+\\sin k_y\\,\\sigma_y+(M-\\cos k_x-\\cos k_y)\\,\\sigma_z"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v367"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v470"
+        },
+        {
+          "k": "t",
+          "v": ") in real space on an "
+        },
+        {
+          "k": "m",
+          "v": "L\\times L"
+        },
+        {
+          "k": "t",
+          "v": " torus with "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "twisted"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " boundary conditions — the twist torus "
+        },
+        {
+          "k": "m",
+          "v": "(\\theta_x,\\theta_y)"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the moduli space of flat "
+        },
+        {
+          "k": "m",
+          "v": "U(1)"
+        },
+        {
+          "k": "t",
+          "v": " connections — and the Fukui–Hatsugai–Suzuki curvature of the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "determinant line of the occupied frame"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " over that torus: "
+        },
+        {
+          "k": "m",
+          "v": "\\oint = 2\\pi\\cdot 1"
+        },
+        {
+          "k": "t",
+          "v": " exactly (integer to "
+        },
+        {
+          "k": "m",
+          "v": "10^{-9}"
+        },
+        {
+          "k": "t",
+          "v": ") at "
+        },
+        {
+          "k": "m",
+          "v": "M{=}1"
+        },
+        {
+          "k": "t",
+          "v": " for "
+        },
+        {
+          "k": "m",
+          "v": "L{=}4"
+        },
+        {
+          "k": "t",
+          "v": " AND "
+        },
+        {
+          "k": "m",
+          "v": "L{=}6"
+        },
+        {
+          "k": "t",
+          "v": " (size-independent); controls: trivial collar "
+        },
+        {
+          "k": "m",
+          "v": "M{=}3\\to 0"
+        },
+        {
+          "k": "t",
+          "v": ", orientation flip "
+        },
+        {
+          "k": "m",
+          "v": "M{=}{-}1\\to-1"
+        },
+        {
+          "k": "t",
+          "v": "; the twist-moduli integer equals the Bloch-BZ integer for all three "
+        },
+        {
+          "k": "m",
+          "v": "M"
+        },
+        {
+          "k": "t",
+          "v": " (Niu–Thouless–Wu PRB 31 (1985), exhibited on the S3 collar model); the Fermi gap ("
+        },
+        {
+          "k": "m",
+          "v": "=2.0"
+        },
+        {
+          "k": "t",
+          "v": ") stays open over the whole twist torus, so the Dai–Freed section has no zero. "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Reading "
+            },
+            {
+              "k": "s",
+              "v": "C"
+            },
+            {
+              "k": "t",
+              "v": ":"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " det-line holonomy over the "
+        },
+        {
+          "k": "m",
+          "v": "U(1)"
+        },
+        {
+          "k": "t",
+          "v": " moduli "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " inflow level "
+        },
+        {
+          "k": "m",
+          "v": "k_0=|C|=1"
+        },
+        {
+          "k": "t",
+          "v": " — the "
+        },
+        {
+          "k": "c",
+          "v": "v470"
+        },
+        {
+          "k": "t",
+          "v": " bridge lemma “"
+        },
+        {
+          "k": "m",
+          "v": "\\delta\\log\\det_\\zeta(\\mathrm{seam})="
+        },
+        {
+          "k": "t",
+          "v": " the inflow response” holds "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "verbatim at the finite/model level"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", where "
+        },
+        {
+          "k": "m",
+          "v": "\\log\\det"
+        },
+        {
+          "k": "t",
+          "v": " of the occupied frame replaces "
+        },
+        {
+          "k": "m",
+          "v": "\\log\\det_\\zeta"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Not closed "
+            },
+            {
+              "k": "s",
+              "v": "O"
+            },
+            {
+              "k": "t",
+              "v": ":"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "continuum"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\zeta"
+        },
+        {
+          "k": "t",
+          "v": "-determinant identification on the abstract seam ("
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " face); "
+        },
+        {
+          "k": "c",
+          "v": "ALPHA.QUILLEN.EXACT.01"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\ainv"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": ". Structurally the same manoeuvre as "
+        },
+        {
+          "k": "c",
+          "v": "v471"
+        },
+        {
+          "k": "t",
+          "v": " for "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.THEOREM.01"
+        },
+        {
+          "k": "t",
+          "v": "'s replica side. "
+        },
+        {
+          "k": "m",
+          "v": "7/7"
+        },
+        {
+          "k": "t",
+          "v": " checks; suite green through "
+        },
+        {
+          "k": "c",
+          "v": "v472"
+        },
+        {
+          "k": "t",
+          "v": " (466 modules); numerical (dense eigh "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " FHS twist grid), Python-only by nature. Papers updated: "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": " (sixth honest step in the EM closure), "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " (residual certification), "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_safeguards"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": "-form lever), root "
+        },
+        {
+          "k": "c",
+          "v": "README"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "zenodo_description.html"
+        },
+        {
+          "k": "t",
+          "v": ". Exploration original: "
+        },
+        {
+          "k": "c",
+          "v": "experiments/tfpt-discovery/quillen_detline_twist_moduli.py"
+        },
+        {
+          "k": "t",
+          "v": " (same day)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Bird's-eye whitespot rounds (sandbox, "
+            },
+            {
+              "k": "c",
+              "v": "experiments/tfpt-discovery/"
+            },
+            {
+              "k": "t",
+              "v": ", nothing else promoted)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (i) "
+        },
+        {
+          "k": "c",
+          "v": "electron_sector_cabibbo_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ": the "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": " metrology triangle (TFPT "
+        },
+        {
+          "k": "m",
+          "v": "\\ainv=137.0359992168"
+        },
+        {
+          "k": "t",
+          "v": " vs Rb-2020 "
+        },
+        {
+          "k": "m",
+          "v": "+0.99\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " / CODATA22 "
+        },
+        {
+          "k": "m",
+          "v": "+1.90\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "m",
+          "v": "a_e"
+        },
+        {
+          "k": "t",
+          "v": "-route "
+        },
+        {
+          "k": "m",
+          "v": "+3.39\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " / Cs-2018 "
+        },
+        {
+          "k": "m",
+          "v": "+6.33\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " — TFPT takes the Rb side of the "
+        },
+        {
+          "k": "m",
+          "v": "5.5\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " metrology split; new honest pressure point recorded); the "
+        },
+        {
+          "k": "c",
+          "v": "v204"
+        },
+        {
+          "k": "t",
+          "v": " seam-vertex universality catch (a flavor-universal reading of "
+        },
+        {
+          "k": "m",
+          "v": "a_\\mu^{\\mathrm{seam}}=2.879\\times10^{-9}"
+        },
+        {
+          "k": "t",
+          "v": " is excluded by the electron at "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}2\\times10^4\\sigma"
+        },
+        {
+          "k": "t",
+          "v": "; linear scaling at "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}10^2\\sigma"
+        },
+        {
+          "k": "t",
+          "v": "; quadratic survives — the "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "bridge must scale at least quadratically in "
+        },
+        {
+          "k": "m",
+          "v": "m_\\ell"
+        },
+        {
+          "k": "t",
+          "v": "); the Cabibbo-angle anomaly as a third dissolution watchdog ("
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_C=0.2243762"
+        },
+        {
+          "k": "t",
+          "v": " exact sits "
+        },
+        {
+          "k": "m",
+          "v": "+0.08\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " on the PDG-2026 rescaled kaon average, between "
+        },
+        {
+          "k": "m",
+          "v": "K_{\\ell3}"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "K_{\\mu2}"
+        },
+        {
+          "k": "t",
+          "v": "; exact unitarity puts "
+        },
+        {
+          "k": "m",
+          "v": "V_{ud}=0.97450"
+        },
+        {
+          "k": "t",
+          "v": " — superallowed is the outlier at "
+        },
+        {
+          "k": "m",
+          "v": "+2.6\\sigma"
+        },
+        {
+          "k": "t",
+          "v": ", all neutron/pion routes agree). (ii) "
+        },
+        {
+          "k": "c",
+          "v": "kernel_calderon_uv_universality.py"
+        },
+        {
+          "k": "t",
+          "v": ": the raw-collar Calderón/DtN datum is UV-universal (mode-by-mode first-order convergence to the exact Bessel symbol "
+        },
+        {
+          "k": "m",
+          "v": "m I_\\nu'(mR)/I_\\nu(mR)"
+        },
+        {
+          "k": "t",
+          "v": ", Richardson residual "
+        },
+        {
+          "k": "m",
+          "v": "3\\times10^{-4}"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "N_\\theta"
+        },
+        {
+          "k": "t",
+          "v": "-independent; "
+        },
+        {
+          "k": "m",
+          "v": "|k|"
+        },
+        {
+          "k": "t",
+          "v": " principal symbol; "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " block structure at machine precision; both spec-"
+        },
+        {
+          "k": "m",
+          "v": "T"
+        },
+        {
+          "k": "t",
+          "v": " masses; "
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": "-fold mesh-defect negative control) — the operator equality demanded by "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.KERNEL.01"
+        },
+        {
+          "k": "t",
+          "v": " has a well-defined discretization-independent left-hand side (gate stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "). (iii) "
+        },
+        {
+          "k": "c",
+          "v": "flat_budget_closure.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " scorecard row: see next bullet."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Flat-budget closure enters the evidence scorecard (experiments-only, pattern candidate)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The zero-dial closure "
+        },
+        {
+          "k": "m",
+          "v": "\\{\\Omega_b=\\phiz(1-\\tfrac{1}{4\\pi})"
+        },
+        {
+          "k": "t",
+          "v": " [frozen], "
+        },
+        {
+          "k": "m",
+          "v": "\\Omega_c=\\tfrac27(1-\\tfrac{1}{4\\pi})"
+        },
+        {
+          "k": "t",
+          "v": " [the 2026-07-02 numerology-flagged Nebenbefund], "
+        },
+        {
+          "k": "m",
+          "v": "\\rho_\\Lambda/\\Mbar^4=(3/4\\pi^2)e^{-2\\ainv}"
+        },
+        {
+          "k": "t",
+          "v": " [frozen], "
+        },
+        {
+          "k": "m",
+          "v": "\\Sigma m_\\nu=0.0588"
+        },
+        {
+          "k": "t",
+          "v": " eV ["
+        },
+        {
+          "k": "c",
+          "v": "v468"
+        },
+        {
+          "k": "t",
+          "v": " route]"
+        },
+        {
+          "k": "m",
+          "v": "\\}"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " spatial flatness determines the whole flat "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda"
+        },
+        {
+          "k": "t",
+          "v": "CDM budget: "
+        },
+        {
+          "k": "m",
+          "v": "H_0=67.15"
+        },
+        {
+          "k": "t",
+          "v": " km/s/Mpc ("
+        },
+        {
+          "k": "m",
+          "v": "-0.39\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " Planck18, "
+        },
+        {
+          "k": "m",
+          "v": "-5.67\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " SH0ES22 — the parameter-free Planck side of the Hubble tension), "
+        },
+        {
+          "k": "m",
+          "v": "\\Omega_m=0.3133"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "-0.27\\sigma"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "t_0=13.86"
+        },
+        {
+          "k": "t",
+          "v": " Gyr; honest stresses recorded: "
+        },
+        {
+          "k": "m",
+          "v": "\\omega_b"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "-2.02\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " (BBN-only "
+        },
+        {
+          "k": "m",
+          "v": "-0.73\\sigma"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "\\omega_c"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "-1.19\\sigma"
+        },
+        {
+          "k": "t",
+          "v": ", DESI-DR2 "
+        },
+        {
+          "k": "m",
+          "v": "H_0"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "-2.16\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " (one correlated low-"
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": " direction). Scorecard row "
+        },
+        {
+          "k": "c",
+          "v": "cosmo / flat budget closure"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "consistent"
+        },
+        {
+          "k": "t",
+          "v": ", composite: shares the "
+        },
+        {
+          "k": "c",
+          "v": "phi0_seed"
+        },
+        {
+          "k": "t",
+          "v": " group (and the "
+        },
+        {
+          "k": "m",
+          "v": "\\rho_\\Lambda"
+        },
+        {
+          "k": "t",
+          "v": " leg the "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": " engine), "
+        },
+        {
+          "k": "m",
+          "v": "\\Omega_c"
+        },
+        {
+          "k": "t",
+          "v": " leg in "
+        },
+        {
+          "k": "c",
+          "v": "alternative_group=axion_branch"
+        },
+        {
+          "k": "t",
+          "v": " vs the axion-spine DM reading — never double-counted); nothing promoted to "
+        },
+        {
+          "k": "c",
+          "v": "verification/"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
     "date": "2026-07-02",
     "dateLabel": "2026-07-02",
     "heading": [
@@ -79,12 +1192,6 @@ export const CHANGELOG: ChangelogEntry[] = [
       }
     ],
     "items": [
-      [
-        {
-          "k": "t",
-          "v": "[leftmargin=1.5em]"
-        }
-      ],
       [
         {
           "k": "b",

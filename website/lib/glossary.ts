@@ -146,7 +146,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     term: "ALPHA.QUILLEN.EXACT.01",
     alias: ["ALPHA.QUILLEN", "alpha Quillen target", "Quillen determinant target"],
     short:
-      "The tracked [O] target: prove F_U(1) is the exact Quillen determinant functional of the seam U(1). v470 sharpens it: the α³ level = the computed bulk Chern invariant |C| = 1 (inflow), the F-normalisation = the embedding index k_Y = 5/3. The α⁻¹ value itself stays [E].",
+      "The tracked [O] target: prove F_U(1) is the exact Quillen determinant functional of the seam U(1). v470 sharpens it: the α³ level = the computed bulk Chern invariant |C| = 1 (inflow), the F-normalisation = the embedding index k_Y = 5/3. v472 exhibits the bridge lemma at the finite level: the determinant line over the U(1)-twist moduli of the collar carries curvature = 1 = the inflow level; what stays [O] is the continuum ζ-det identification. The α⁻¹ value itself stays [E].",
   },
 ];
 

@@ -462,6 +462,25 @@ ROWS = [
     ["cosmo", "S_dS rho_Lambda = 32 pi^4", "1/(128 c3^4) = 32 pi^4 (exact)",
      "dimensionless identity", None, "prediction", "de Sitter entropy x Lambda",
      "prediction_of_record", "internal identity", "identity fails", "consistent"],
+    # flat-budget closure (2026-07-03): zero-dial composite; the Omega_c leg is the
+    # 2026-07-02 NUMEROLOGY-FLAGGED Nebenbefund (post-hoc, single p/q<=12 census hit,
+    # ALTERNATIVE reading to the axion-spine DM branch -- see OVERRIDES, never both).
+    ["cosmo", "flat LambdaCDM budget closure (H0, Omega_m, t0)",
+     "zero-dial closure {Omega_b=phi0(1-1/4pi) [frozen], Omega_c=(2/7)(1-1/4pi) [flagged "
+     "candidate], rho_L/Mbar^4=(3/4pi^2)e^-2ainv [frozen], Sigma m_nu=0.0588 eV [v468 "
+     "route]} + flatness -> H0=67.15 km/s/Mpc, Omega_m=0.3133, Omega_L=0.6866, t0=13.86 Gyr",
+     "H0: Planck18 -0.39 sigma, SH0ES22 -5.67 sigma (the parameter-free PLANCK side of the "
+     "Hubble tension), DESI DR2 BAO+CMB -2.16 sigma; Omega_m -0.27, Omega_L +0.26, "
+     "Omega_c/Omega_b +0.14; honest stress: omega_b -2.02 (BBN-only D/H -0.73 -- the "
+     "stress is CMB-side), omega_c -1.19, derived t0 +2.9 -- one correlated low-h "
+     "direction, not additive", None, "pattern_candidate",
+     "flat FLRW budget closure (phi0 seed + alpha Lambda engine + nu floor + flagged "
+     "Omega_c leg)", "downstream_bridge",
+     "experiments/tfpt-discovery/flat_budget_closure.py (Planck 2018 TT,TE,EE+lowE+lensing; "
+     "SH0ES 2022; DESI DR2; BBN D/H LUNA)",
+     "systematics-converged local H0 >= 71 with broken CMB/BAO concordance, or omega_c "
+     "hardened >= 3 sigma away from 0.1186 -- kills the closure pattern only (frozen "
+     "Omega_b/Lambda records untouched)", "consistent"],
     # ---- dark-energy watchdog (P2) ----
     ["cosmo", "dark-energy equation of state w", "w = -1 (cosmological constant)",
      "DESI DR2 overlap-aware: strongest single combo 4.4 sigma (naive product 6.6 sigma is "
@@ -679,6 +698,15 @@ _LONG = ("qnm", "m_betabeta", "page curve", "recovery kernel")
 # never silently double-counted).
 OVERRIDES: dict[str, dict] = {
     "achromatic dyonic intercept": {"independence_group": "c3_topform_horizon"},
+    # flat-budget closure: a COMPOSITE of already-counted legs (Omega_b/theta12-class
+    # phi0_seed + the alpha_em Lambda engine + the v468 nu floor) plus the flagged
+    # Omega_c candidate -- it shares phi0_seed and is an ALTERNATIVE DM reading to the
+    # axion-spine branch (one DM question, two readings, never two hits).
+    "flat LambdaCDM budget closure": {"independence_group": "phi0_seed",
+                                      "alternative_group": "axion_branch",
+                                      "discriminative_power": "medium",
+                                      "dominant_leg": "omega_b (CMB-side)",
+                                      "max_leg_pull_sigma": 2.02},
     # alpha^-1 is the PRIMARY alpha_em member: the Lambda hierarchy + S_dS DERIVE from it,
     # so all three are ONE cluster, not three independent hits. +1.9 sigma at CODATA precision
     # (a watch item, also tracked live in v307_data_watchdog) -- not a clean win.

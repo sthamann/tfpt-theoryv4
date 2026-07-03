@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`465` registered scripts · `531` ledger claims · `10` clusters.
+`466` registered scripts · `532` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -300,7 +300,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v407_dn_pairings_omega** [E/C/O] `FLAV.SELECTOR.CLOSE.01` — FLAV.SELECTOR.CLOSE.01: the R4' residue folds into the tau=omega keystone (v405) -- the three (d,n) selector pairings ARE the tau=omega family-slice atoms. [E] the frame (1,a,sigma
   - deps: v405_seam_equiv_omega, v49_readout_rigidity, v405, v139, v136, v42 · cited: origin theory, 1 architecture e8
 
-### `frontier` — Open gate (G_metric) & the frontier  (153 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (154 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -609,6 +609,8 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v286_seam_equivalence_contract, v458_seam_mmst_citation_audit, v459_seam_lattice_voa_route, v463_seam_c8_holomorphic_uniqueness, v464_seam_oneparticle_rigidity, FORM.SEAM.RESIDUAL.01, v125, v154 · cited: 1 architecture e8, 5 redteam, research contracts, safeguards
 - **v470_alpha_inflow_level** [E/C/O] `ALPHA.QUILLEN.INFLOW.01` — ALPHA.QUILLEN.INFLOW.01: the alpha^3 level = the COMPUTED bulk Chern invariant + the seam F-normalisation = the affine embedding index k_Y = 5/3. [E] target re-verified: alpha^-1 =
   - deps: v382_alpha_quillen_exact, v433_alpha_quillen_heatkernel, v434_alpha_quillen_betafunction, v435_alpha_quillen_chernlevel, v48_em_ward, v469_seam_crossedproduct_route, v341, v367 · cited: 1 architecture e8
+- **v472_quillen_detline_moduli** [E/C/O] `ALPHA.QUILLEN.DETLINE.01` — ALPHA.QUILLEN.DETLINE.01: the determinant line over the U(1)-twist moduli of the collar model carries curvature = the inflow level -- the finite Quillen/Dai-Freed shadow of the v47
+  - deps: v382_alpha_quillen_exact, v470_alpha_inflow_level, v48_em_ward, v367, v460, v461, v470, v471 · cited: 1 architecture e8
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (182 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -995,13 +997,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×63, `v336`×33, `QGEO.SYM.01`×31, `v56`×18, `v216`×18, `QG.AMB.01`×17, `v76`×17, `E8.GLU.01`×16, `REG.FREEZE.01`×15, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v312`×14, `v54`×13, `v367`×13, `v323`×12
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×63, `v336`×33, `QGEO.SYM.01`×31, `v56`×18, `v216`×18, `QG.AMB.01`×17, `v76`×17, `E8.GLU.01`×16, `REG.FREEZE.01`×15, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v367`×14, `v312`×14, `v54`×13, `v323`×12
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v460_seam_s3_lto** — `SEAM.S3.LTO.01`
 - **v461_seam_strict_locality** — `SEAM.S3.LOCALITY.01`
 - **v462_seam_spinor_continuum** — `SEAM.EQUIV.SPINOR.01`
 - **v463_seam_c8_holomorphic_uniqueness** — `SEAM.EQUIV.UNIQ.01`
@@ -1013,4 +1014,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v469_seam_crossedproduct_route** — `SEAM.EQUIV.CROSSEDPRODUCT.01`
 - **v470_alpha_inflow_level** — `ALPHA.QUILLEN.INFLOW.01`
 - **v471_seam_horizon_replica** — `SEAM.EHMODEL.04`
+- **v472_quillen_detline_moduli** — `ALPHA.QUILLEN.DETLINE.01`
 
