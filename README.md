@@ -170,9 +170,13 @@ single residual of `SEAM.EQUIV.01`) — not a diffuse gap.
 
 ### Other directories
 
-- `experiments/lean4-carrier-rigidity/` — Lean 4 proofs, machine-formalised `[F]` (`AUDIT: PASS`,
-  no `sorry`/`admit`, only the three standard kernel axioms): the carrier algebra (P2: hypercharge,
-  anomaly-freedom, integer rigidity, Pascal/glue uniqueness), the geometric/conditional cores of
+- `experiments/lean4-carrier-rigidity/` — Lean 4 proofs, machine-formalised `[F]` (no
+  `sorry`/`admit`; every headline theorem's `#print axioms` returns only the three standard kernel
+  axioms; the seam-residual modules additionally declare their *named cited-theorem* axioms
+  explicitly, e.g. `SeamResidualAxiom.lean`): the carrier algebra (P2: hypercharge,
+  anomaly-freedom, integer rigidity, Pascal/glue uniqueness), the anchor ladder incl. the rank-gap
+  converse *`p₄−p₃ = 8` selects `(1,1,2)` up to permutation* (`AnchorLadder.rankgap_uniqueness`),
+  the geometric/conditional cores of
   the open `QGEO.SYM.01` premise — the Möbius uniformisation normal form `z↦iz` / `σρσ=ρ⁻¹` / orbit→`μ₄`
   (`FORM.QGEO.02`, mirrors `v177`) and the conditional theorem *mark-local DtN ⇒ `ω∘ρ=ω`*
   (`FORM.QGEO.01`, mirrors `v201`/`v210`), the seam equivalence chain (`FORM.SEAMEQUIV.01`) and
