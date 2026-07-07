@@ -1,3 +1,1037 @@
+## 2026-07-07 (Y) — problem_b.txt verifiziert + tiefere Runde: METALLIC.LADDER.01 Contract (5/5)
+
+User-Auftrag: die problem_b.txt-Entdeckungssession (D1–D15, Findings 1–7)
+verifizieren und stärkere Verbindungen suchen. Alles Sandbox/Contract, nie
+load-bearing, nichts promoted.
+
+**Verifikation problem_b.txt (Sandbox):**
+- tfpt-discovery/problem_b_verification.py: alle exakten Checks PASS für D2
+  (Λ=(3/2)⁶, ω=2.5827069, ε=0.0173025, exp(2π/ω)=Λ), D11 (Nome q=(2/3)⁶=λ_T;
+  ε⁴=S-duales Nome), D12 (36t²−25t+4=(4t−1)(9t−4), Wurzeln 1/4,4/9, Disk. 49),
+  D13 (c₃=1/(φ(30)π)), D14 (lnΛ=Δ=m₂=−ln λ_T; ω·Δ=2π; m₃−m₂=ln64), D15
+  (Kompaktheits-Inversionen). Findings 1/7 live auf evidence_scorecard.json
+  nachgerechnet: χ²(„independent"-Pool)=35.52, dof=7, p=8.9e-6, aber Rest nach
+  Entfernen der geflaggten Tensions gesund (p>0.05) → Exklusion allein von den
+  bekannten g-2/R_D*-Tensions getragen; Sign-Test 14/7, p=0.19 (kein Bias).
+  Bestehende Skripte re-verifiziert: markov_modular_prime_clock_probe,
+  micro_coincidence_audit, comp01, nm01 → alle grün.
+
+**Neuer Fund N1 → METALLIC.LADDER.01 (theory-contracts, 5/5):**
+- Die gravastar-Kompaktheitsfunktion C(k)=(k²−1)/(6k) am n-ten metallischen
+  Mittel μ_n (Wurzel von x²−nx−1, Kettenbruch [n;n,…]) ist EXAKT C(μ_n)=n/6.
+- Photonensphäre C=1/3 = Silber (n=|Z₂|=2), Horizont C=1/2 = Bronze (n=N_fam=3);
+  physikalisches Fenster C≤1/2 ⟺ n≤3, gedeckelt am Horizont=N_fam. Buchdahl
+  (4/9) und Nariai (3/8) sind die NICHT-metallischen Blätter (6C nicht ganz).
+- Link zu D1: golden (n=1)=Fibonacci-Ast, silber (n=2)=Pell-Ast; Index 3 ist
+  keine Markov-Zahl, aber die Markov-Kopplung k=3 (D1: „3 ist die Kopplung,
+  kein Zustand"). Die 6=2·N_fam ist der Seam-DSI-Exponent aus (3/2)⁶.
+- Typisierung: [E] für die Arithmetik, [C] für die Physik-Lesart (fraktionale/
+  metallische Replika-Blätter brauchen dieselbe offene Kontinuation wie
+  gravastar-compactness). KEINE neue Vorhersage, KEIN Gate geschlossen, KEIN
+  Status-Move. Ordnungsprinzip, keine Evidenz.
+
+**N2 (nur Sandbox, deeper_connections_probe.py):** D11 geschärft — Eigenwert-
+und Comb-Nome sind S-duale Modul-Gesichter (τ=i lnΛ/(2π), |τ|<1, außerhalb FD;
+τ~=−1/τ=iω, im FD; q~=e^{−2πω}=ε⁴). Ehrliches Negativ: χ(λ_T)=E4/η⁸ am reellen
+Punkt ist reell (223.46) → Comb ist NICHT arg χ(λ_T), korrigiert D11s Test.
+E4/η⁸→comb bleibt offen [O].
+
+Sync: nur Sandbox (tfpt-discovery/problem_b_verification.py,
+deeper_connections_probe.py) + theory-contracts/metallic_compactness_ladder.py
+(+ results JSON) + gravastar-compactness/README.md (Cross-Ref) + diese Notiz.
+Kein Touch von verification/, Ledger, load-bearing Papers, Scorecard, Website.
+
+## 2026-07-07 (X) — Nerd-Runde Mikro-Zusammenhänge: Sandbox-Probe micro_coincidence_audit.py (7/7), ein [X]-Kandidat geparkt
+
+User-Auftrag: kleinste Zusammenhänge, „Dinge die unmöglich Zufall sein
+können". Sandbox-Probe (tfpt-discovery, nie Scorecard) typisiert alles als
+FORCED / EXTREMAL / DECLINED — v100-Disziplin:
+
+**FORCED (exakt, mit Route):**
+- A1: j = χ³ — die Monster-McKay-Zahlen sind vom Seam-Charakter FIXIERT:
+  744 = 3·248, 196884 = 3·4124 + 3·248² = 196883+1, 21493760 =
+  21296876+196883+1. Der berühmteste „unmöglicher Zufall" der Mathematik
+  (Moonshine-Startpunkt) ist eine arithmetische Konsequenz von χ = E4/η⁸.
+- A2: χ-Koeffizienten sind E8-Irrep-Summen (McKay): 4124 = 3875+248+1,
+  34752 = 30380+3875+2·248+1.
+- A3: E4 = θ_E8 zählt Gittershells: 240/2160/6720 = 240σ₃(k).
+- A4: 48c₃⁴/128c₃⁴ = 3/8 = N_fam/rank = C(Nariai) — ein Ratio, drei Namen
+  (Tail-Koeffizient, Spinor, Kompaktheit), erzwungen durch das geteilte
+  Atom 16 = dim S⁺.
+
+**EXTREMAL (neu gefunden, zahlentheoretisch):**
+- B1: h(E8) = 30 ist die GRÖSSTE ganze Zahl, deren Totativen > 1 alle prim
+  sind (Bonse-Klasse {1,2,3,4,6,8,12,18,24,30}, exhaustiv verifiziert; >168
+  durch 49/121/169 blockiert) — und ihre Totativen SIND die E8-Exponenten,
+  φ(30) = 8 = rank. Die zwei größten Mitglieder: 24 (Leech/Monster-Oktave)
+  und 30 (E8-Coxeter), beide mit φ = 8. Passt zu v431/v437 (Exponenten =
+  Totativen), gibt der 30 eine Extremal-Charakterisierung.
+
+**DECLINED (quantifiziert, Theorie claimt nichts):**
+- C1: Bend 2.70951 vs e (0.32 % daneben), ε = 0.017297 vs √3/100 (0.10 %)
+  und sin 1° (0.87 %) — keine Atom-Route, verworfen (Hygiene-Exhibit).
+- C2 **[X]-Kandidat, geparkt:** Lenz 1951 m_p/m_e ≈ 6π⁵ (18.8 ppm) hat die
+  exakte Atom-Form 6π⁵ = π⁴/φ₀_tree. Grammar-Census (p/q·π^k, p,q≤40,
+  |k|≤6: 12 727 Ausdrücke): GENAU EIN Hit im ±20-ppm-Fenster (6π⁵ selbst),
+  Log-Uniform-Null erwartet 0.02. Naiv p≈2 %, aber Look-Elsewhere über die
+  Zielkonstanten-Menge frisst das (~Dutzende Targets → global O(0.5)).
+  Verdikt: NICHT claimen; wenn überhaupt, volle v100-Maschinerie (Grammatik-
+  Census + MC + RNG-Kontrollen) — als Kandidat notiert. Berührungspunkt:
+  bestehende m_p/m_e-Zeile ist bereits numerology-flagged data_limited.
+
+Sync: nur Sandbox (micro_coincidence_audit.py + results JSON) + diese Notiz.
+Kein Touch von verification/, Ledger, Papers, Scorecard, Website.
+
+## 2026-07-07 (IX) — Kreativ-Runde nach außen: 4 externe Grenzphysik-Hooks + Kompressions-Contract COMP.01 (5/5)
+
+User-Auftrag: nicht in der Theorie suchen, sondern draußen — neue Ergebnisse,
+Grenzphysik (BEC etc.), größere Zusammenhänge, stärkere Kompressionen. Vier
+externe Hooks recherchiert (Websuche, Quellen notiert) + ein neuer Contract.
+
+**Hook 1 — Quanten-Tornado = das erste Bett mit motivierter S14-Uhr im Labor.**
+Nottingham 2024/2025 (Švančara+ Nature 628, 66; Smaniotto+ arXiv:2502.11209):
+stationärer Riesenvortex in superfluidem ⁴He, gemessene Analog-BH-QNMs +
+Bound-States + Ringdown auf der Grenzfläche. Das ist GENAU die Lücke des
+Programms: der einzige KMS-gerechtfertigte Clock-Sektor (Horizon) war bislang
+nur astrophysikalisch (GW, Decke 7× über Kernel). Ein Analog-Horizont liefert
+zeitaufgelöste Ringdown-WELLENFORMEN im Labor → QT.04-Matched-Filter (Bend
+2.7095), S1-Echo-Ratios und S2b-Comb mit benannter Uhr darauf laufen lassen.
+Typisierung vorab: Analog-System ≠ Gravitation; ein Hit wäre escalate-only
+(S15: B = Interface-Wellen-Detektion, bekannt!). Daten: Gruppe publiziert
+Spektrogramme; Kontakt/Public-Data prüfen. → stärkster neuer Suchort.
+
+**Hook 2 — Th-229-Nuklearuhr: der Decider für α̇/α = 0 existiert seit Juni.**
+Zwei funktionierende Nuklearuhren (Tsinghua + TU Wien-Klasse, 2026-06;
+Instabilität ~1e-13/Tag), α-Sensitivität K = 5900(2300) (Nat. Comm. 2025),
+Faktor 100–1000 tiefer in ΛQCD/mq als Atomuhren. TFPTs Drift-Lock-Record
+(α̇/α = 0 exakt, Scorecard-Zeile existiert) bekommt damit einen datierten
+Verschärfungspfad um Größenordnungen. Kein neuer Test nötig — nur die Zeile
+um den Nuklearuhr-Decider ergänzen, wenn erste Grenzen publiziert sind.
+
+**Hook 3 — E8 ist im Labor schon spektroskopiert (Einordnung, kein Claim).**
+CoNb₂O₆/BaCo₂V₂O₈ (Coldea Science 2010; PRB 102, 104431; PRL-Serie): am
+1D-Ising-QCP gemessene E8-Massenleiter, m₂/m₁ = φ. Maschinell nachgerechnet:
+die Zamolodchikov-Massen SIND der PF-Eigenvektor der E8-Cartan-Matrix
+(m₂/m₁ = 1.618034 exakt), niedrigster Cartan-Eigenwert = 2−2cos(π/30) — die
+h=30-Coxeter-Uhr direkt im Spektrum. Das ist dieselbe PF/golden-Struktur wie
+der Compiler-Attraktor (v312/v313, Gap (φ+2)/4). Ehrlich: das bestätigt E8-
+Physik, nicht TFPT — aber es ist der einzige Ort der Natur, wo die Order-30-
+Uhr spektroskopisch zugänglich ist; die volle 8er-Leiter (1.989, 2.405, …)
+wäre ein Detektor-Validierungsbett. Dazu: Seam-Edge = 16 Majoranas/c₋=8
+(v450/451) — die „E8-Phase" (κ_xy = 8 Quanten, kein Ladungs-Hall; Kitaev
+16-fold way) ist ein etabliertes Kondensmaterie-Target; eine Realisierung
+wäre ein wörtliches Seam-Edge-Material (Programm-Notiz, kein Test heute).
+
+**Hook 4 — Efimov-Tuning: die Kernel-DSI als einstellbares Hardware-Bett.**
+Der Efimov-Faktor ist massenverhältnis-abhängig: homonuklear λ=22.7
+(s₀=1.006), ⁶Li-¹³³Cs λ=4.88 gemessen (PRL 113, 240402; s₀=1.983), K-Rb 131.
+TFPTs Λ_DSI = (3/2)⁶ = 11.39 entspricht s₀ = π/Δ_gap = 1.2914 — liegt
+ZWISCHEN den realisierten Werten; ein Gemisch mittleren Massenverhältnisses
+könnte die Kernel-DSI exakt einstellen (hübsche Identität: das passende
+Efimov-s₀ ist π durch den Transfer-Gap). Nutzen ehrlich: End-to-End-HARDWARE-
+Injection für den Comb-Detektor (bisher nur Software-Injections), keine
+TFPT-Evidenz — Efimov-λ ist Standardphysik.
+
+**Kompression — neuer Contract `comp01_unique_holomorphic.py`: HOLDS 5/5.**
+Ein Axiom ersetzt (P1,P2): „der Seam trägt DIE eindeutige holomorphe
+Boundary-CFT". c=8 ist minimal UND eindeutig (Leiter 1/2/71 bei c=8/16/24;
+θ_{E8+E8} ≡ θ_{D16+} term-by-term maschinell — eine Oktave über dem Seam
+versagt die Eindeutigkeit bereits: die HETEROTISCHE Oktave). Daraus ohne
+weitere Wahl: c₃=1/(8π) [P1 = Rank-Readout], (N_fam,g_car)=(3,5) als Wurzeln
+von x²−8x+15 [P2 wird Theorem], φ₀, λ_T, Bend, Comb. Relocation ehrlich: das
+Axiom selbst bleibt unbewiesen (= SEAM.EQUIV.01), Anchor + v_geo unberührt.
+c=24/Moonshine als Anschluss geprüft und VERWORFEN ([X]-Risiko: 71 Theorien,
+keine Eindeutigkeit — der Seam sitzt auf der einzigen eindeutigen Oktave).
+
+Sync: theory-contracts/README.md + comp01_unique_holo_results.json. Kein
+Touch von verification/, Ledger, Papers, Scorecard, Website. Nächste
+konkrete Schritte: (a) Vortex-Ringdown-Daten beschaffen (Hook 1 → neues
+Experiment-Bett analog E17), (b) Nuklearuhr-Decider in die Drift-Lock-Zeile
+bei nächstem Scorecard-Update.
+
+## 2026-07-07 (VIII) — Vogelperspektive Doppelcover/Geburtsprozess: Inventar + 4 Kandidaten-Achsen (Notiz, keine Tests gelaufen)
+
+User-Frage: Wo könnten Deck-/Geburts-Signaturen noch auftauchen, anders erkannt/
+verworfen worden sein; „Universum auf dem Rand eines BH geboren", mehrere
+Universen auf dem Rand, Spuren? Repo-Inventar + ehrliche Antworten:
+
+**Was die Theorie zum Geburtsprozess wirklich sagt (origin_theory):**
+- §cycle ist explizit [C], nicht abgeleitet: U_k → Kollaps → Horizont (Seam-
+  Realisierung, Info auf dem Rand) → gapped Transport kontrahiert auf den
+  Rank-1-Attraktor („law") → reseedet U_{k+1}. SEQUENZIELLER Zyklus.
+  Entropie-Reset = der Spektral-Gap selbst (Tolman-Antwort); CCC-kompatibel;
+  CPT/Möbius = Orientierungsflip des zweiseitigen (TFD-)Horizonts.
+- §crosslinks präzisiert: der Seam IST kein Horizont — BH = lokale, dS =
+  globale Realisierung EINES Boundary-Normalisierers. „Auf dem BH-Rand
+  geboren" ist eine der zwei gleichberechtigten Lesarten.
+- v343: die BH-Geburts-Lesart schließt nichts zusätzlich — alle vier Routen
+  konvergieren auf SEAM.EQUIV.01.
+
+**Mehrere Universen auf dem Rand?** Die Theorie antwortet dreifach NEIN mit
+Struktur: (i) Petz/rank-one Baby-Universe — die randzugängliche Algebra
+kollabiert 1-dimensional mit ‖Tⁿ−P_∞‖=(2/3)^{6n}: KEINE unterscheidbaren
+Geschwister-Daten überleben; jedes vom selben Rand geseedete Universum erbt
+DENSELBEN Rank-1-Law (identische Konstanten — der „Multiversum"-Raum ist
+law-degeneriert). (ii) Der Deck ist Z₂: es gibt genau EINEN Partner (das
+CPT-konjugierte Blatt), kein Ensemble; N>2 Blätter brächen die E8-Schließung
+(Falsifier-Klasse 4. Generation). (iii) v430: das „andere Blatt" (S⁻/128-
+Ramond) ist MATCHED Struktur, nicht die unmapped Casimir-Degrees; „S⁻=DM"
+wurde v227 downgegradet, WIMP-No-Go. Sichtbare Spur des Partner-Blatts ist
+NICHT ein zweites Universum, sondern δ_PMNS = δ_CKM,lead + π (Record, +1.08σ,
+DUNE/Hyper-K entscheiden) und die Birefringenz β (das „live fossil" des
+Zyklus, 0.37σ, LiteBIRD-Band).
+
+**Deck-Signaturen: erkannt/verworfen-Status.** S4.a/b null; S4.c range-blind
+(13.6 e-folds nötig, max 13.1 — auch das neue UHECR-Bett hilft nicht, das ist
+ln-E, nicht ln-t); S4.d NO_VARIANT_ECHO; S4.e null (Händigkeit persistiert
+eher — on record); FO.06 Zweiblatt-Morphologie null (BIC=3). Prime-2-Regel
+(0b.4) bleibt die Erklärung, warum reine Z₂-Achsen keine autonome Rate tragen.
+
+**4 Kandidaten-Achsen (neu oder unbespielt, ehrlich typisiert):**
+1. **N_eff = 3.044 exakt als Prediction-of-Record-Kandidat** — dieselbe
+   No-Slot-Zählung wie Sterile/X17/n→dark (v430: kein spare Singlet, kein
+   Dark-Radiation-Slot). Heute nur als „BBN shadow" in der ξ-Zeile. CMB-S4
+   σ(N_eff)≈0.03 wäre der datierte Decider. Nächster Schritt: Scorecard-Zeile
+   mit Planck/ACT-Ist-Wert konfrontieren (nicht gelaufen).
+2. **Anisotrope Birefringenz ≡ 0** (Missing-Structure-Klasse): β ist EIN
+   globaler Boundary-Phase-Seed (φ₀/4π) — die Theorie hat keinen Slot für
+   β(n̂)-Anisotropie. ACT/SPT publizieren anisotrope β-Bounds; schwach
+   diskriminierend (ΛCDM sagt auch 0), aber schützt die Shared-Seed-Lesart:
+   detektierte Anisotropie OHNE Monopol wäre Spannung. Kandidat für
+   Watchdog-Zeile.
+3. **Kein Vorzyklus-Imprint** (CCC-Differenzial): weil nur der Rank-1-Law
+   den Rand passiert, sagt der TFPT-Zyklus KEINE Hawking-Points/Ring-Imprints
+   voraus — Penrose-CCC sagt sie voraus. Ein bestätigter Hawking-Point würde
+   die TFPT-Zyklus-Lesart (nicht den Kern) treffen. Typisierung [C], braucht
+   sauberen Contract bevor Zeile.
+4. **Monodromie/Hysterese-Invariante** (aus Runde IV, Punkt 4, weiter offen):
+   Vorher/Nachher-Invariante unter Deck-Projektion, Bett PG-Glitches mit
+   persistenten Offsets — stärkste ungebaute Deck-Achse, S15-Gate wartet auf
+   benannte Invariante.
+
+**Geburts-Imprint-Bestand (schon gebaut, richtig eingeordnet):** E23
+CMB-Primordial-Logcomb ist DAS Geburtsprozess-Bett (Inflations-e-folds =
+motivierte S14-Uhr; ω=2.583 im Planck-Band, ε=1.7 % Faktor 1.7 unter dem
+95 %-Bound — CMB-S4 datierter Decider); CCBH k=3 (−0.14σ, contested) und
+Gravastar C=3/8-Echo (Δt=2.288·M_det) sind die zwei lebenden
+„Universum-in/auf-BH"-Observablen, beide data_limited.
+
+Keine Tests gelaufen, keine Scorecard-Änderung; reine Bestandsaufnahme +
+Kandidatenliste. Kein Touch von verification/, Ledger, Papers, Website.
+
+## 2026-07-07 (VII) — Muster-Runde („wiederkehrende Formen statt Anomalien"): Mapping + neuer Contract NM01
+
+User-Liste (Ebene 1–3: universelle Relaxation, Topologie überall, Backflow/EPs/
+Boundary; Astro: Ratios/Kurvenform/Stacking; GW-Normalform; Mikroskopie) gegen
+das Programm gemappt. Kernbefund: **Der meiste Vorschlag IST das Programm** —
+und der geforderte „dimensionslose Invariant / festes Relaxationsverhältnis /
+universelle Skalierungsfunktion" existiert längst eingefroren:
+
+- Ratios τ₂/τ₁, E₂/E₁ = S1-Zähne (2/3)^k + S3-Bend ln3/ln(3/2)=2.7095 →
+  getestet FRB/GW/Pulsar/QPE/Magnetare/Beben, überall null/degeneriert.
+- Kurvenform = gewallte Zwei-Moden-Uhr mit Bend+Floor (v124/v147, QT.04-
+  Matched-Filter) → auf echten Daten gelaufen (GW Stage 2, PG.05/07/08, Crust),
+  data_limited/null. NICHT stretched-exp, nicht Potenzgesetz, nicht log.
+- Stacking („1000 Bursts aufeinanderlegen") = E06/E10-Programm (superposed
+  epochs, t0-aligned Stacks, Meta-UL ε<0.12) — Range-Wand gefallen, es bindet
+  die Amplitudenwand ε≈1.7 %.
+- GW-„universelle Einschwingform" = Stage-2-Template + Stage-1b-Stack (10
+  Events) → NO_KERNEL_RECOVERY, Decke ~7× unter Sensitivität.
+- Boundary Physics = die Hauptachse S8/EIT/Edge-CFT selbst (bestätigt die
+  Strategie-Linie 2026-07-06).
+- Kritische Langsamkeit (Kandidat C): KEIN TFPT-Inhalt — die Uhr hat Pol+Floor,
+  keine flache Landschaft; bräuchte einen eigenen Contract, keiner benannt.
+- Mikroskopie/Bio-Attraktoren: S15-Gate sofort verfehlt (kein B) — Firewall.
+
+**Genuin neu und heute prüfbar war nur die Quanten-Achse (Backflow/EPs) →
+neuer Contract `theory-contracts/nm01_backflow_ep.py`: CONTRACT HOLDS 5/5.**
+Ergebnis ist eine TYPISIERUNG, das Gegenteil der User-Vermutung:
+- C1: Seam-Kanal = fixe CPTP-Map ⇒ CP-divisibel ⇒ BLP-Backflow exakt 0
+  (max. Inkrement −1.5e-15 klassisch / −6.1e-8 Qubit, BLP-Summe 0.0) —
+  Backflow ist im Recovery-Kernel UNMÖGLICH, keine „natürliche Konsequenz".
+- C2: EIN unrefreshtes Bad-Qubit (Partial-Swap-Kollisionen) liefert Revivals
+  bis +0.34 — Backflow ist Bad-Gedächtnis/Bridge; Datenseite davon ist exakt
+  das FO.02b-Memory-Gate.
+- C3: Transfer normal (‖[T,Tᵀ]‖=5.6e-17, cond(V)=1, Gaps 665/729, 63/729
+  exakt) ⇒ KEIN Exceptional Point möglich (Jordan-Kontrolle cond~1e16);
+  Missing-Structure-Vorhersage (FO.08-Klasse): seam-eligible Recovery-Spektren
+  zeigen keine EP-Koaleszenz/Hysterese — EP-Phänomenologie ist Bridge.
+- C4: der geforderte Invarianten-Satz existiert parameterfrei: Bend 2.7095,
+  Zähne (2/3)^k, Comb-Paar (ω, ε)=(2.5827, 0.0173) — Frequenz UND Amplitude
+  fix; ε<2 % ist die Amplitudenwand hinter allen well-powered Nulls.
+- C5: Shape-only ist beweisbar schwach diskriminierend — Falsch-Ratio-(2.0)-
+  Familie fittet eine rauschfreie Kernel-Recovery auf rel. RMS 5.4e-3
+  (wahres Ratio 3.3e-16) — deshalb Kaskaden/Leitern/Comb-Phase statt
+  Einzelkurven-Formfits (S3-Degeneration standalone reproduziert).
+
+Sync: theory-contracts/README.md + nm01_backflow_results.json. Kein Touch von
+verification/, Ledger, Papers, Scorecard, Website.
+
+## 2026-07-07 (VI) — BORN.01: „Born-Regel aus Recovery?" als Theory-Contract beantwortet — Reduktion ja, Herleitung nein
+
+User-Frage (aus der Bereichs-Übersicht): kann TFPT die Born-Regel herleiten
+(„Recovery-Wahrscheinlichkeit → Born-Regel wäre enorm")? Befund vorab ehrlich:
+v130 („Born square") BENUTZT Γ=|A|² als Input für den Clock-Exponenten p₂=2h —
+es leitet ψ² nicht her. Neuer Contract `theory-contracts/born01_deck_envariance.py`
+(nie Scorecard, nie [E]): **CONTRACT HOLDS 6/6**, Lesart = Reduktion auf
+Strukturen, die die Theorie schon trägt, plus ehrliche Relocation-Liste:
+
+- C1: basisunabhängige Normierung erzwingt α=2 in der Potenzfamilie (π/4-Basis
+  tötet jede andere Potenz; Varianz über Basen 4e-33 bei α=2 vs 1e-2 daneben).
+- C2: Realität für alle Phasen erzwingt p = A·σ(A) — EIN Amplitudenfaktor pro
+  Z₂-Blatt; σ = Galois-/CP-Konjugation (v316: Gal Z₂ = CP conj). Der importierte
+  Faktor 2 aus v130 bekommt damit einen strukturellen Ursprung ([C]-typisiert).
+- C3: Deck-Swap = Envarianz exakt ((X⊗I)|Φ⁺⟩=(I⊗X)|Φ⁺⟩; ρ_S blind gegen
+  Partner-Unitaries 5e-16/200) — Zureks Swap durch den strukturellen Deck
+  implementiert statt durch ein Hilfs-Environment.
+- C4 (der TFPT-spezifischste Punkt): ALLE eingefrorenen Kernel-Gewichte
+  (2/3, 1/3, (2/3)⁶, (1/3)⁶, Clock-Gewichte (1−n/3)⁶) sind 3-adisch → auf dem
+  kerneleigenen Wahrscheinlichkeits-Sektor entscheidet ENDLICHES Abzählen
+  (3^k-Fine-Graining, N_fam-Verzweigung) — kein Stetigkeits-/Gleason-Axiom nötig;
+  exaktes 3-Branch-Fine-Graining von (√(2/3), √(1/3)) vorgeführt.
+- C5: das gematchte μ₄-Weyl-Paar (Clock+Shift) hat auf C⁴ GENAU EINE invariante
+  Hermitesche Form = das Born-Pairing (Kontrollen: nur Clock 4, nur Shift 4,
+  mismatched N=8 → 2).
+- C6 (Negativkontrolle gegen Überclaim): in dim 2 existiert eine explizite
+  nicht-quadratische Frame-Funktion u+(1/10)sin(2πu) — Additivität allein
+  erzwingt Born NICHT; ohne C1/C2+C5/dim≥3 (Gleason/Busch, extern zitiert)
+  gibt es keine Forcierung.
+
+Bleibt postuliert (im JSON festgehalten): Outcomes = Charakterblock-Projektionen,
+Einzel-Outcome-Selektion (das Messproblem — unberührt), die zwei Envarianz-Axiome
+(Lokalität von p, Partner-Blatt-No-Signalling), Stetigkeit außerhalb des
+3-adischen Sektors. Fazit für die Bereichsliste: I.2 wandert von „nichts" zu
+„Reduktion mit strukturellem Deck-Ursprung des Quadrats + abzählbarem
+Kernel-Sektor"; das Messproblem (I.1) bleibt korrekt bei „nichts".
+
+Sync: theory-contracts/README.md + born01_deck_results.json. Kein Touch von
+verification/, Ledger, Papers, Scorecard, Website.
+
+## 2026-07-07 (V) — Vogelperspektive „anderswo": zwei neue Betten gebaut (UHECR E22, CMB-Logcomb E23)
+
+User-Frage: Signaturen jenseits der bisherigen Astro-Betten — (a) bei der
+Entstehung geleaked (CMB), (b) Großereignisse, (c) subtilere Muster. Antworten:
+
+**(a) → E23 `cmb-primordial-logcomb` (NEU, data_limited mit datiertem Decider).**
+Der statische Seed leakt schon längst in die CMB (S9: β-Band = bester Kanal).
+NEU typisiert: die DYNAMISCHE Signatur in ln k — das einzige Naturbett, wo die
+S14-Log-Uhr MOTIVIERT ist (E-Folds sind eine Log-Uhr). Planck 2018 X hat exakt
+das Template P(k)=P0[1+A cos(ω ln k + φ)] gescannt; das eingefrorene ω=2.5827
+(log₁₀=0.412) liegt IN der Prior [0, 2.1]; keine Detektion; 95-%-Grenze ~0.03
+(Planck) / ~0.029 (kombiniert) = Faktor 1.7 ÜBER ε_pred=0.0173; Reach 3.12
+Perioden (volles Fenster; konservatives Fenster 1.52 sub-gate, dokumentiert).
+Kill datiert: künftige Grenze <0.017 bei ω=2.583 ohne Detektion tötet die
+primordiale Bridge-Lesart; Detektion BEIM eingefrorenen ω eskaliert
+(Null-Parameter-Target). Transfer-Bridge in P(k) bleibt S15-geflaggt.
+
+**(c) → E22 `uhecr-energy-dsi` (NEU, null).** Größter ln-E-Bereich der Natur:
+Auger Open Data R3 (Zenodo-DOI), 21.571 SD1500 + 54.434 SD750 über den
+Full-Efficiency-Schwellen (Apertur rein geometrisch), kombiniert 0.1–144 EeV
+= 2.99 Kamm-Perioden (einzeln sub-gate: 1.67/2.56 — Gate nur via geteiltem Kamm
+über beide Arrays). Glatt-Null: stückweise-lineare Log-Dichte mit Knoten
+EINGEFROREN an den publizierten Features (0.16/5.0/12.6/45.7 EeV) — die
+PG.01/KC.03-Populationsfalle per Konstruktion zu. Ergebnis: Kernel-Kamm ABWESEND
+(Λ=0.153, ε̂=0.0018, MC p=0.49, Off-Kernel-Rank p=0.77, seed 0/1 einig);
+Z₂-Batterie null nach per-ω-MC-Kalibrierung ((3/2)³ p=0.13, (3/2)⁴ p=0.78,
+Bonferroni 0.26; (3/2)¹² range-blind 1.49). AUDIT ON RECORD (Methoden-Lektion):
+(3/2)³ feuerte nominal p=0.0025 unter der falschen (Kernel-ω-)Null — die
+Null-Verteilung von Λ ist ω-abhängig (Glattmodell absorbiert bei kleinem ω mehr
+Kamm-Power); per-ω-Kalibrierung löst es auf. Injection: 97 % @ ε=0.05, 23 % @
+ε_pred=0.0173 → vorhergesagte Amplitude teilweise abgedeckt; Volldaten-Auger
+(10×) bzw. TA+Auger = datierter Decider.
+
+**(b) Großereignisse (analysiert, nicht gebaut):** GW/Magnetar/TDE/QPE/EHT sind
+abgedeckt. Der eine echte zukünftige Decider: galaktische SN (Neutrino-Burst,
+~10⁴–10⁵ Events über ms→10 s ≈ 3.7 Perioden, thermische Uhr physikalisch gut
+begründet — aber Rayleigh-Power n·ε²/4 braucht Hyper-K-Statistik für ε=1.7 %);
+ein vorregistriertes Protokoll wäre ein billiges datiertes Commitment (offen).
+PTA/NANOGrav ehrlich range-blind (~1 Frequenzdekade ≈ 0.9–1.9 Perioden < 2.8).
+
+Sync: Scorecard +2 Zeilen (114 gesamt: 47/9/24/33/1), README-Katalog + Stats,
+SIGNATURES (E22/E23, S7- und S14-Zeilen), predictions.ts. Kein Touch von
+verification/, Ledger, Papers.
+
+## 2026-07-07 (IV) — Operator-Struktur-Runde: 12 vorgeschlagene Achsen analysiert, 4 neue getestet (FO.07–10)
+
+User-Vorschlagsliste („Verbot, Auswahlregel, Kopplungsnull, Zustandsinvariante statt
+sichtbarer Muster") gegen das Programm gemappt. Vier Achsen waren echt neu und mit
+committeten Daten testbar → als datiertes v1.3-Addendum preregistriert und gelaufen
+(seed 0, seed 1 identisch). Ergebnisse:
+
+- **FO.07 Kovarianz-Charakterblöcke (S8-auf-Daten; Top-Pick der Liste): consistent.**
+  Die 10×10-Korrelationsmatrix der v5-Bursts (5694 komplette Zeilen, robust
+  within-session standardisiert) IST stark blockdiagonal gegen eine Spektrum-
+  erhaltende Rotations-Null (k=2: S_off 0.052 vs 0.273, Bonferroni p=0.006) — aber
+  die gefundene Partition ist EXAKT der Standard-Sektorsplit {DOC, cos2PA, sin2PA,
+  RM_res} (Faraday/Geometrie) vs Emission/Intensität (Rand-Agreement 1.0).
+  v1.3.1-Eskalationsgate (datiert, nach Erstlauf-hint_flag on record): Koinzidenz
+  mit dem Physik-Split → default Astro, kein Charakterklassen-Inhalt.
+- **FO.08 polarimetrischer Nullraum (Loch- statt Peak-Suche): NULL.** Größte leere
+  Scheibe in (DOL, DOC) r=0.302 @ (30 %, −57 %); die Marginal-erhaltende
+  Joint-Permutations-Null erreicht Median 0.551 → p=1.0. Alle sichtbaren Löcher
+  sind Marginal-getrieben; kein verbotener Joint-Bereich.
+- **FO.09 Rank-Drop („Rang fällt auf 3, nicht 2, nicht 5"): NULL.** Hankel-
+  Effektivrang (Tiefe 8, Shuffle-kalibriert) der within-session log-E-Serien:
+  Median 0 in BEIDEN Quellen (Li+2021: 27 Sessions; Zhang+2023: 10) — memoryless,
+  keine 3-Moden-Mannigfaltigkeit. v5-Multivariat-Leg (Median 3) deskriptiv
+  geflaggt: vermischt FO.07-Statik mit Dynamik (FO.02b: kein Memory).
+- **FO.10 Zeitpfeil (Causal Asymmetry): NULL — ein echter neuer Bound.**
+  Inkrement-Skewness 0.048/0.002, Pomeau-A −0.051/−0.006 (1582/1032 Inkremente),
+  Reversal-Null Bonferroni p=1.0 → within-session Energie-Sequenzen sind
+  ZEITUMKEHR-SYMMETRISCH auf Katalog-Statistik. Begrenzt jede „gerichtete
+  Recovery"-Lesart von Burst-Zügen — und ist exakt die FO.01-Verstärker-Vorhersage
+  (Threshold-Readout trägt keinen sichtbaren Pfeil). Quake-Kontrolle
+  (bekannt-irreversibel) offen: USGS-Daten gitignored.
+
+Mapping der übrigen 8 Vorschläge (nicht gelaufen, typisiert):
+- (2) Multi-Messenger-Kopplungsselektion: braucht Theory-Contract (welche Kopplung
+  DARF null sein?) + externe Kataloge — Programm-Idee, kein Test heute.
+- (3) Missing Echoes nach Symmetrieklasse: ohne abgeleitete Klassenregel und bei
+  All-Null-Echos (E02) heute leer-erfüllt — nicht diskriminierend.
+- (4) Topologische Hysterese/Monodromie: keine abgeleitete Invariante benannt →
+  S15-Gate verfehlt; als Contract-Kandidat notiert (Vorher/Nachher-Invariante
+  unter Projektion, Bett: PG-Glitches mit persistenten Offsets).
+- (6) Analog-Betten jenseits EIT: deckt sich mit B4/B5 (needs_experiment) — der
+  Punkt „B muss bekannt sein" ist exakt die S15-Linie des Programms.
+- (7) Entropie-Produktion pro Transferstufe: −ln λ_T = 6 ln(3/2) wäre die Zahl,
+  aber ohne Bridge B in Morphologie-Entropien → Surface-Leakage-Risiko; vertagt.
+- (10) Boundary Memory: RM/PA-Rand-Lesart ist FO.02/02b (Varianz ohne Gedächtnis);
+  Limb/Ring-Observablen = EHT S10.e (data_limited, GRMHD-Produkte fehlen).
+- (11) Residual-Operator nach Standard-Fit: existiert bereits — FRB.01 (Residual
+  nach Plasma-Fit), PG.08 (Residuen nach Glitch-Modell, PINT), EHT (GRMHD-Residuen
+  offen); als Systematik korrekt, aber kein neuer Test.
+- (12) Selection-Bias-Fingerprints: FO.06 ist die erste Version (Morphologie
+  prädiziert Repetition, AUC 0.833, default Selektion); mehr braucht
+  Exposure-Modelle — notiert.
+
+Sync: Scorecard +1 Kompositzeile FO.07–10 (112 Zeilen: 47/9/23/32/1),
+README/SIGNATURES/predictions.ts aktualisiert. Kein Touch von verification/,
+Ledger, Papers; nichts promotable. Strategisches Fazit: Auch die Operator-
+Struktur-Sprache findet auf FRB-Daten nur Standard-Sektoren, Reversibilität und
+Memorylosigkeit — konsistent mit FO.01 (blinder Verstärker), der einzigen Lesart,
+die das alles VORHERSAGT.
+
+## 2026-07-07 (III) — FO.02b: die Intra-Nacht-Daten existierten schon — Befund: Varianz OHNE Gedächtnis (Medium-Mess-Lesart auf Burst-Kadenz entkräftet)
+
+User-Frage „gibt es Daten, um FO.02 final zu klären?" — Antwort: ja, und sie lagen
+schon im Repo. (a) v5 trägt per-Burst-RM INNERHALB der Nächte (alle 35 Sessions mit
+≥30 RM-Bursts verwerfen Konstant-RM mit χ²_red 77–337; Spannen 30–85 rad/m² über
+0.3–4.3 h bei 1–2 rad/m² Fehler); (b) der committete Blinkverse-Export trägt 1131
+per-Burst-RM für FRB 20201124A (Xu+2022, 12 Sessions ≥30, Spannen 50–240 rad/m²).
+FO.02 v1 hatte diese Ebene per Nacht-Median weggemittelt.
+
+Datiertes v1.2-Addendum (prereg VOR dem Lauf; Daten-Audit on record: nur Counts/
+Spannen/Konstant-χ²/Verfügbarkeit inspiziert, keine ACF/Raten): FO.02b = Intra-
+Session-Common-Rate mit MEMORY-Gate (erster ACF-Bin vs Time-Shuffle), AIC-Gate,
+OU-Null + Placebo-Ratios, Quellen getrennt.
+
+**Ergebnis (seed 0, seed 1 identisch): data_limited als INFORMATIVER Negativbefund.**
+- 20240114A: 33/35 Sessions ohne zeitliches Gedächtnis in irgendeiner Medium-
+  Observablen; die 2 Memory-Sessions brauchen laut AIC keine zweite Rate.
+- 20201124A: 12/12 Sessions ohne Gedächtnis.
+- Das Gate ist auf den ECHTEN Zeitstempeln injektionsvalidiert: eingespeiste
+  OU-Relaxation (τ=120/600/1800 s) wird 31–34/35 bzw. 8–10/12 erkannt; weißes
+  Rauschen feuert 3/35 bzw. 0/12 (~Designrate 5 %).
+
+Lesart: Die starke Intra-Session-RM-Varianz ist per-Burst (Magnetosphäre/Sichtlinie
+durch turbulenten Screen), KEIN relaxierender Medium-Zustand — es gibt auf
+Burst-Kadenz nichts, worauf der Zwei-Raten-Operator wirken könnte. Kombiniert mit
+FO.02 v1 (nächtlich: Gedächtnis ja, aber Ein-Raten) überlebt die
+„FRB-als-Medium-Messung"-Ontologie nur noch (i) im ungetesteten Stunden-bis-Tage-
+Relaxationsband oder (ii) via echtem getracktem Injektionsereignis — konkretster
+Kandidat: RM-Umpolungs-Quelle der 20190520B-Klasse (Anna-Thomas+2023), deren
+RM-Tabelle login-walled ist (dokumentiert in frb-tfpt-signatures/data/README).
+„Final geklärt" im erreichbaren Sinn: die Vorbedingung der Ontologie scheitert
+empirisch auf der einzigen Kadenz, die Bursts selbst hergeben.
+
+Sync: prereg v1.2-Addendum, fo02b_intra_session.py (+Loader 20201124A), README,
+Scorecard-Zeile FO.02 um FO.02b erweitert (Status bleibt data_limited),
+SIGNATURES.md (S2a-Status + Matrixzeile FO.02b), Stats regeneriert. Kein Touch von
+verification/, Ledger, Papers.
+
+## 2026-07-07 (II) — FO.01–FO.06 ALLE GETESTET: neues Experiment frb-ontology + FO.01-Contract
+
+Alle sechs Ontologie-Achsen aus (I) sind implementiert und gelaufen (prereg
+`frb-ontology/hypotheses/frb_ontology_v1.yaml` VOR Datenkontakt; Kernel-Guard 11/11;
+seed 0, seed-1-Robustheitslauf identische Verdicts; Laufzeit ~12 s):
+
+- **FO.01 (theory-contracts/fo01_transduction_invisibility.py): 5/5 PASS.**
+  Uniform-Funktional exakt blind (9.8e-15); Threshold-Intensitäts-Züge Kernel-Seam vs
+  Scrambled-Seam ununterscheidbar (KS D=0.006–0.009, p≥0.47, 20k Züge); Charakter-
+  Readout recovert 64/729 exakt; ungleiches B unterscheidet dieselben Züge (D=0.061,
+  p=5e-33). Die FRB-Null-Landschaft ist damit maschinell als VORHERSAGE der
+  Verstärker-Ontologie typisiert. Offen bleibt der formale S15-Contract („für welche
+  Emissionsprozesse ist B·P_r=0 beweisbar?").
+- **FO.02 (benanntes B): data_limited.** 89 Nächte 20240114A; AIC bevorzugt
+  Einzelraten (8.07 vs 12.54), Shared-Ratio 4.20 (Kernel 2.7095 nicht am nächsten,
+  Placebo 4.5 näher), OU-Null p=0.55. Ehrliche Lesart: nächtliche Kadenz sieht nur
+  EIN Gedächtnis; der Common-Rate-Test braucht Intra-Nacht-Injektionsereignisse
+  (RM-Sprung + Relaxation in Stunden) — bespoke-Datenprojekt.
+- **FO.03 (benannte Uhr, S14): NULL bei detektierbarer Amplitude.** 3 Sessions über
+  dem 2.8-Perioden-Gate in ln τ_mod (2.82/2.85/3.16; 32 unter Gate), Survive-all-p
+  0.84/0.45/0.59, Fisher p=0.81. Erster benannter-Uhr-Kamm überhaupt; ε=1.7 % bleibt
+  hinter der Amplitudenwand.
+- **FO.04: consistent — mit Audit on record (die FRB.06-Lektion wiederholt sich).**
+  Der vm2-only-Erstlauf feuerte nominal bei m=4 (A4=0.0424 vs Null 0.0127, p=5e-4);
+  die als DATIERTES v1.1-Addendum nachregistrierte Spezifizitätsbatterie typisiert
+  ihn als Verteilungs-Misfit: z3=3.6/z4=4.4/z6=4.2 feuern ALLE (die zwei PA-Moden
+  liegen 60.2° auseinander, nicht 90°), 3-Komponenten-Glatt-Null absorbiert m=4
+  (p=0.64) → kein μ₄-Zeiger. Schaltzeiten ratenfrei (Zahn-Enrichment 0.74, p=1.0);
+  Klassenpersistenz 45/45 Sessions (p=2.8e-14). Alle drei Restvorhersagen halten.
+- **FO.05: NULL.** 8 Quellen über den Episoden-Gates (5 d prereg; 10-d-Sekundär
+  einig): Gap-Bonferroni p=1.0, Episoden-Energie p=0.44; größter Einzel-Ausreißer
+  20190520B-Energie enr 3.0 @ p=0.063 (nicht signifikant). Die letzte ungetestete
+  Aggregationsebene schließt null.
+- **FO.06: not_confirmed_not_refuted.** CHIME Cat1 (474 Erst-Subbursts): AUC 0.833
+  (p=0.001, Odds-Ratio 44.9 — repliziert Pleunis+2021, default Astro/Selektion),
+  aber BIC bevorzugt k=3 (−1218.6) vor k=2 (−1182.3) → die „exakt zwei
+  Klassen"-Vorhersage hält nicht.
+
+Sync: Scorecard +5 Zeilen (111 gesamt: 47/9/22/32/1; FO.02 core_operator mit
+transduction_B=named_linear_line_integral — erste Zeile dieser Klasse im FRB-Sektor),
+experiments/README-Katalog + Stats regeneriert, SIGNATURES.md (S2a/S14-Status, E21,
+Matrix-Zeilen FO.01–06, Scorecard-Zahl), theory-contracts/README (FO.01-Abschnitt),
+website/lib/predictions.ts (Audit-Block 111 Zeilen + Ontologie-Runde). Kein Touch von
+verification/, Ledger, Papers; nichts promotable — kein Support-Ergebnis.
+
+## 2026-07-07 (I) — FRB-Ontologie-Runde: sechs Hypothesen, was FRBs im Sinne von TFPT sein könnten (FO.01–FO.06)
+
+Auftrag: neue Hypothesen zur NATUR von FRBs in TFPT — eine Ebene über den Zahlentests.
+Harte Randbedingung (SIGNATURES.md §3/§4): die gesamte Intensitäts-/Timing-/Pol-Fläche
+ist null (FRB.01–09, KC.01–06, RC.01–04); die zwei einzigen robusten POSITIVEN
+Strukturen sind (a) PA-Fundamentale m=2 statt m=4 (FRB.08, p≈0) und (b) Händigkeits-
+PERSISTENZ statt -Alternation (KC.02: 0.480 vs 0.497). Eine tragfähige Ontologie muss
+die Null-Landschaft VORHERSAGEN, nicht wegerklären. Typisierung strikt nach 0b.1–0b.4
+(S15-Transduktionsgate, S14-Clock-Map-Gate, μ₄ = Galois-Gear ohne Zeiger, Prime-2 ohne
+Rate). Alles hier: exploratory / search-target — kein Ledger-, Paper-, Website-Touch;
+nichts ist gelaufen (reine Hypothesenentwicklung, keine Zahlen).
+
+**FO.01 — Intensitätsblinder Verstärker (verschärfte Baseline + Invisibility-Theorem).**
+Ontologie-Satz: Ein FRB ist der Schwellen-Readout eines kohärenten magnetosphärischen
+Verstärkers, getriggert von einer seam-gekoppelten Krustenrelaxation — und die
+Verstärker-Transduktion B projiziert die Transfer-/μ₄-Charakterstruktur aus ALLEN
+Intensitäts- und Timing-Funktionalen heraus (B·P_r = 0 für r ≠ trivial).
+- Warum: erklärt die 20+-fache Null-Landschaft als VORHERSAGE statt Misserfolg —
+  kohärente Maser-Emission ist ein Ein-Moden-Projektor (Intensität ∝ |Feld|²; Charakter-
+  besetzungen gehen nur als skalare Gesamtrate in den Trigger ein).
+- Eligibility (S15): interne Größe = Seam-Charakterbesetzungen; Kopplung = Schwellen-
+  Trigger; Nicht-Null-Argument: EXPLIZIT VERNEINT — das ist der Inhalt der Hypothese.
+- Vorhersage/Kill: kein zukünftiger Intensitäts-/Timing-Test findet den Kernel; ein
+  replizierter Comb-/Ladder-Fund in Intensität FALSIFIZIERT FO.01 (und wäre zugleich
+  universal-DSI-verdächtig). Sichtbar bleiben dürfen nur Klassifikations- (FO.04/06)
+  und Medium-Kanäle (FO.02/03).
+- Nächster Schritt: Theory-Contract-Kandidat „Transduktions-Theorem für kohärente
+  Emission" — für welche Standard-Emissionsprozesse ist B·P_r = 0 beweisbar?
+  (S15-Formalisierung; theory-contracts/, nie Scorecard.)
+
+**FO.02 — Das Repeater-System als natürliches EIT: Bursts = Probe-Pulse, das Medium =
+der Randoperator (erste FRB-Achse mit BENANNTEM B — Antwort auf die offene S2a-Zeile).**
+Ontologie-Satz: Nicht der Burst trägt die TFPT-Struktur — der Burst MISST sie. Die
+relaxierende magneto-ionische Umgebung (DM, RM, τ_scatter, Szintillationsbandbreite)
+ist der Zustand; jeder Burst ist ein Delta-Puls durchs Medium; die Transduktion ist
+wörtlich bekannt und linear: DM = ∫n_e dl, RM = 0.81·∫n_e B_∥ dl — Linienintegrale =
+Rand-Funktionale, exakt die EIT-Logik von S8/E17 in astrophysikalischer Ausführung.
+- Eligibility (S15), zum ersten Mal in einem FRB-Kanal bestehbar: (i) interne Größe =
+  Relaxationsmoden des Mediums nach Energie-Injektion; (ii) Kopplung = Linienintegral
+  (bekannt, linear); (iii) Nicht-Null: n_e-/B_∥-Moden sind generisch nicht orthogonal
+  zum Integrationskern. Ehrlich bleibt: WARUM das Medium Seam-Moden tragen sollte, ist
+  unbewiesen — Default-Lesart eines Treffers: universelle DSI im Magnetar-Wind-Nebel.
+- Vorhersage: das multivariate Continuous-Time-Relaxationsspektrum des Mediums nach
+  einem Injektionsereignis (RM-Sprung/Burst-Sturm) hat ZWEI GEMEINSAME Raten mit festem
+  Verhältnis r₃/r₂ = ln3/ln(3/2) = 2.7095 (= −ln((1/3)⁶)/−ln((2/3)⁶)) in ALLEN
+  gekoppelten Observablen gleichzeitig. Das ist der Diskriminator gegen die AR(1)-
+  Drift-Falle, die FRB.04b getötet hat: eine Drift hat observablen-spezifische
+  Gedächtnisse, ein Operator hat EINEN Ratensatz (Common-Rate-Rank-Test statt
+  Ein-Kanal-Bend — der ist laut RC.01/Stage-2 degeneriert).
+- Daten heute: FRB 20240114A pol v5 (6134 Bursts, RM 212→425 über 488 d, DM stabil,
+  Weff); CHIME-Baseband-Full-Stokes (E06) für τ_scatter; 20201124A-RM-Serie.
+- Typ: exploratory search-target, escalate-only. Kill: kein gemeinsamer Zwei-Raten-
+  Satz, oder freies Ratenverhältnis ohne Präferenz für 2.7095 (Placebo-Familie wie
+  RC.01/KC.03).
+
+**FO.03 — Clock-Map-Hypothese: die Uhr des Systems ist der Medium-Zustand, nicht die
+Beobachterzeit (erste S14-konforme FRB-Comb-Suche).**
+Ontologie-Satz: Falls die Session-Kaskade eine Recovery ist, tickt sie in der Eigenzeit
+der Relaxation — messbar als akkumulierter Medium-Zustandsweg τ_mod = Σ|ΔRM|
+(Total-Variation-Uhr) — nicht in ln(t − t0). Alle bisherigen S2b-Nulls liefen auf
+t_observer (rückwirkend Bridge-Nulls, S14); das hier wäre der erste FRB-Comb-Test mit
+BENANNTER Uhr.
+- Vorhersage: Log-Comb ω = 2.583 in ln τ_mod; Amplitude ε ≈ 1.7 % bleibt die bekannte
+  Wand. Reach-Gate ≥ 2.8 Perioden in ln τ_mod ist VOR dem Datentest zu prüfen (wenn
+  nicht erreichbar → data_limited, ehrlich dokumentieren, nicht stapeln).
+- Daten heute: 20240114A v5 trägt RM pro Burst — τ_mod ist ohne neue Daten baubar.
+- Typ: Bridge (Uhr benannt, Transduktion weiter unbewiesen); Kill: null bei
+  well-powered ε wie RC.02, mit Off-Kernel-Rank + Placebo-λ-Batterie.
+
+**FO.04 — Parität-ohne-Rate: die m=2-/Persistenz-Phänomenologie IST die Z₂-Signatur.**
+Ontologie-Satz: Das Einzige, was der Doppelcover in der FRB-Polarisation hinterlassen
+DARF, ist eine zweiklassige, ratenfreie Struktur — und genau die wird beobachtet:
+PA-Fundamentale m=2 (orthogonale Moden, FRB.08) und Händigkeits-Persistenz ohne
+Alternationstakt (KC.02). Prime 2 liefert Parität/Projektion, nie eine Rate (0b.4);
+m=4 MUSS fehlen (μ₄ ist Galois-Gear ohne Zeiger, 0b.3); ein Alternations-Takt MUSS
+fehlen. Beide bisherigen „Nulls" sind unter FO.04 Konsistenzen.
+- Ehrlichkeit: m=2/OMJ und Händigkeits-Memory sind auch Standard-Magnetosphären-
+  Phänomenologie — die Lesart ist eine Konsistenz-TYPISIERUNG, kein Diskriminator.
+- Diskriminierende Rest-Vorhersagen: (a) niemals eine signifikante m=4-Verfeinerung in
+  irgendeinem Full-Stokes-Katalog; (b) OMJ-Schaltereignisse sind ratenfrei (poissonsch
+  gegeben Medium-Zustand — kein Comb, keine Leiter in Schaltzeiten); (c) Klassen-
+  zugehörigkeit über Sessions persistent. Testbett: CHIME-Baseband (E06), 20240114A.
+- Typ: Diagnose-Sonde (0b.4), nie starke Suchachse.
+
+**FO.05 — Episoden-Ontologie: die Transfereinheit ist die Aktivitätsepisode, nicht der
+Burst.** Ontologie-Satz: Ein Burst ist Verstärkerrauschen; der Transferschritt bildet
+auf GANZE Aktivitätsepisoden ab (Anregung schreibt Marks, Episode = ein Schritt,
+Quieszenz = Recovery). Alle bisherigen Leitern (KC.01, RC.03, FRB.02) liefen
+burst-zu-burst — die Episoden-Aggregationsebene ist die einzige ungetestete.
+- Vorhersagen (exploratory): Quieszenz-Gap-Ratios aufeinanderfolgender Episoden auf den
+  Zähnen {3/2, (3/2)³, (3/2)⁶}; episodenintegrierte Fluenz-Ratios auf Partner-Zähnen.
+- Daten heute: 95 Nächte 20240114A; 121102A-Historie (Li+2021 + Blinkverse); CHIME-
+  Cat2-Langzeitüberdeckung. Episoden-Definition (gap > X d) MUSS vorregistriert werden
+  (X-Scan = LEE-Falle); Session-Konvention gap > 0.2 d bleibt unberührt.
+- Typ: exploratory surface leakage (kein benanntes B — dieselbe strukturelle Schwäche
+  wie S1–S7); geführt als Blind-Spot-Schließung, nicht als starke Achse. Kill:
+  Episoden-Reihenfolge-Shuffle + Placebo-Zähne.
+
+**FO.06 — Repeater/Nicht-Repeater = Blattklassen des Doppelcovers (Klassifikation,
+keine Dynamik).** Ontologie-Satz: Die Populationsdichotomie ist eine Z₂-Klassifikation:
+die zwei bekannten morphologischen Klassen (schmalbandig/länger = Repeater vs
+breitbandig/kurz = One-off) sind Blattklassen; Zugehörigkeit ist persistent, es gibt
+keine dritte Klasse und keine Übergangsrate.
+- Diskriminierende Vorhersage (testbar): Morphologie am Erstdetektionstag prädiziert
+  Repetition besser als jede beobachtete Rate — ein scheinbarer One-off mit Repeater-
+  Morphologie ist ein unentdeckter Repeater; nach Selektionskorrektur existiert kein
+  Kontinuum im (Bandbreite × Dauer)-Raum, sondern exakt zwei Moden.
+- Daten heute: chime_catalog1.tsv (600 Zeilen, committed, Nsb/RpName) + CHIME Cat2
+  (981, committed in repeater-cascade) — sofort baubar.
+- Typ: Diagnose (Prime-2, keine Rate); ein Treffer ist per Default Astro-Systematik
+  (Selektions-/Exposure-Effekte!), escalate-only.
+
+**Priorisierung:** FO.02 (benanntes B — kategorial neu, Antwort auf „S2a braucht ein
+System mit benanntem B") > FO.03 (benannte Uhr, Daten committed) > FO.01-Contract
+(formalisiert die Null-Landschaft als Vorhersage) > FO.06 (billig, committed Daten) >
+FO.04 (Typisierung + zwei Restvorhersagen) > FO.05 (Blind-Spot). Vor jedem Lauf:
+Prereg-YAML (z. B. hypotheses/frb_ontology_v1.yaml im passenden Experiment), Reach-/
+Power-Gates VOR Datenkontakt, Placebo-Familien wie RC.01/KC.03. Nichts hiervon berührt
+verification/, Ledger, Papers oder Website; Scorecard erst bei gelaufenen Tests.
+
+## 2026-07-06 (VIII) — Vogelperspektive Origin Story: drei neue Arithmetik-Kompressionen (Markov-Anker, Zahnrad-Amalgam, Prime-Clock-Maximum)
+
+Vogelperspektiven-Frage („neue Muster/Kompressionen in der Origin Story?") auf drei
+bislang unberührten klassischen Arithmetik-Flächen beantwortet. NEU
+`experiments/tfpt-discovery/markov_modular_prime_clock_probe.py` (25/25 PASS,
+exploration-only, sympy-exakt; Klassiker zitiert: Hurwitz 1907, Frobenius-Kongruenz,
+Cohn 1955, Serre-Amalgam, Schatunowsky 1893/Bonse 1907):
+
+**(I) Der Anker ist ein Markov-Tripel.** a=(1,1,2) löst x²+y²+z²=3xyz exakt; die
+Kopplung 3=N_fam ist Hurwitz-ERZWUNGEN (k∈{1,3} sind die einzigen lösbaren Werte,
+Scan bestätigt); Wurzel (1,1,1) und Anker sind die EINZIGEN symmetrischen Tripel des
+ganzen Baums. Die Vieta-Kaskade emittiert als erste neue Zahlen exakt (5, 13, 29) =
+(g_car, Δ_Q, größter E8-Exponent); die Markov-Normen der Spine sind (3, 6, 30) =
+(N_fam, 2N_fam, h(E8)) als Teilerkette — beide Uhrzeiger + volle Coxeter-Uhr (v319).
+Frobenius-Kongruenz als μ₄-Auswahlregel: alle 40 Markov-Zahlen ≤1e6 sind ≡1 mod 4
+(ungerade) bzw. ≡2 mod 32 (gerade); 3, 7, 11, 19, 23 (≡3 mod 4) sind Markov-verboten
+— die Familienzahl ist als ZUSTAND ausgeschlossen, aber die KOPPLUNG der Gleichung.
+Die zwei Rand-Äste des Baums sind odd-Fibonacci (→φ², Q(√5)=Carrier-Pentagon) und
+odd-Pell (→(1+√2)², Q(√2)=Raw-Seam-Zahl) — exakt die v349-Dichotomie golden/√2 als
+die zwei Extremaläste EINES Baums. Lagrange-Leiter: L(1)=√5, L(2)=√8=√rank E8,
+Häufungspunkt 3=N_fam.
+
+**(II) SL(2,Z) ist das Amalgam der TFPT-Zahnräder.** S⁴=I (Seam-Uhr μ₄, fixiert τ=i,
+j=1728), (ST)⁶=I (CP-Hexagon μ₆, fixiert τ=ω, j=0), S²=(ST)³=−I (Sheet μ₂):
+SL(2,Z) = Z4 *_{Z2} Z6 (Serre), T=S³(ST) verifiziert. Abelianisierung PSL^ab = Z/6 =
+μ₆ — die CP-Einheit ζ₆ (v316) ist wörtlich die abelianisierte Modulgruppe. η⁸ (der
+Nenner von χ_E8=E4/η⁸) trägt unter T exakt die μ₃-Familienphase ζ₃ (Ordnung
+24/gcd(8,24)=3).
+
+**(II') Die Brücke — die Zahnräder ERZEUGEN den Markov-Baum:** MCG(einfach
+punktierter Torus) = SL(2,Z); Dehn-Twist = Vieta-Move (Spuridentität
+tr(A²B)=tr(A)tr(AB)−tr(B), symbolisch verifiziert); Cohn-Paar A=LT, B=TL hat
+Spur-Tripel (3,3,6) = 3·ANKER mit tr[A,B]=−2 (Cusp); beide liegen im
+Kommutator-Kern der μ₆-Abelianisierung = π₁ des einfach punktierten Modultorus
+(Index 6 = 2N_fam), dessen einfache Geodäten Spuren 3·Markov tragen (Cohn). Ein-Satz-
+Kompression: **Seam-Zahnrad + CP-Zahnrad erzeugen die Modulgruppe; der Kern ihres
+Hexagons ist der Modultorus; dessen Geodätenspektrum ist der Markov-Baum; dessen
+Fundamentaltripel ist 3·Anker; die Kaskade emittiert g_car, Δ_Q, e_max.**
+Fricke-Identität + Integralpunkte (x²+y²+z²=xyz ⇔ 3·Markov) sympy-/brute-verifiziert.
+
+**(III) h(E8)=30 ist die größte „Primuhr" der Mathematik.** Schatunowsky/Bonse: die
+Menge der n, deren Totative alle 1-oder-prim sind, ist exakt {1,2,3,4,6,8,12,18,24,30}
+(endlich, Scan bis 1e5) — Maximum 30 = h(E8). Die zehn Primzahlen < 30 zerfallen exakt
+in Atome {2,3,5} (teilen die Uhr) + Live-Phasen {7,11,13,17,19,23,29} (= E8-Exponenten).
+ADE-Scan (Rang ≤30): Exponenten=Totative gilt nur für die trivialen A_{p−1}-Primuhren
+und GENAU EINE zusammengesetzte Uhr — E8 bei 30. Neuer „warum ausgerechnet 30"-Satz:
+E8 sitzt am absoluten Schatunowsky-Maximum.
+
+**Ehrliche Brüche on record (im Skript geprüft und gedruckt):** Live-Phase 17 ist
+μ₄-erlaubt aber NICHT Markov (Muster 3-von-4, nicht perfekt); Bonse-Menge enthält
+auch 24 und die h-Werte von A3/D5/E6/E7 (E8-Inhalt ist Maximum+Exponenten-Gleichheit,
+nicht bloße Mitgliedschaft); erste zusammengesetzte Markov-Zahl 34 (>30, daher ist
+„alle Markov <30 prim" automatisch); naive Mengen-Mitgliedschafts-LEE ~0.109 — die
+Last tragen die exakten Identitäten (Anker-Gleichung, Vieta-Adjazenz, Kongruenzgesetz,
+Cohn-Tripel), nicht die Mitgliedschaften. (3,4,5)-Dreiecks-Invarianten (Fläche 6,
+Umfang 12, Inradius 1, Umkreis 5/2, Produkt 60=|A5|) nur als LEE-geflaggtes Kurio.
+
+**Typisierung/Firewall:** reine Mathematik — KEINE Scorecard-Zeile (theory-contract-
+Klasse, nie empirisch); nichts promoted, kein Ledger/Paper/Website-Touch.
+**Promotion-Kandidaten** (via promote-to-verification, wenn gewünscht): (a) Markov-
+Anker-Modul (Hurwitz-Zwang + Vieta-Kaskade + Kongruenz + Cohn 3·Anker — schließt an
+v349/v350 an: die golden/√2-Dichotomie als die zwei Baum-Äste), (b) Prime-Clock-
+Maximum als neuer Über-Determinations-Zeuge für h(E8)=30 (v428-Klasse: Kompression,
+nicht unabhängiger Zeuge), (c) Amalgam/η⁸-Modul als Ergänzung zu v404/v316. Offene
+Frage (notiert, nicht behauptet): trägt die stille Phase 17 eine Bedeutung (einziger
+μ₄-erlaubter Nicht-Markov-Exponent — „der stumme Zahn")?
+
+## 2026-07-06 (VII) — Kategoriegrenzen-Runde: Befund verifiziert, Katalog restrukturiert, S9.d Tail-Ablation gelaufen
+
+Zweiter User-Befund („ihr seid eine Ebene zu weit draußen") analysiert und verifiziert —
+die tragenden Behauptungen halten alle gegen das Repo:
+
+**Verifikationen:**
+- μ₄-Galois-Lesart BESTÄTIGT (origin_theory Z. 175–183): h(E₈)=30 quadratfrei ⇒ Z/30 hat
+  kein Ordnung-4-Element; μ₄ = Aut(Carrier-Pentagon) = (Z/5)^×, Frobenius ζ₅↦ζ₅² —
+  „carries no rate, it is an automorphism, not a hand". Vierfach-Identität
+  Deck=Divisor=Galois=Diskriminante=Simple-Current (Z. 201).
+- Prime-2-Aussage BESTÄTIGT (research contracts Z. 110–112): „parity/projection, never a
+  nonzero contraction rate; no prime-2-only attractor" → reine Z₂-Lesarten (S4) sind
+  Diagnose, keine starken Suchachsen.
+- ε/λ-Notationsfalle: Code war IMMER korrekt (comb.py LAMBDA=(3/2)⁶); Katalog-Prosa war
+  mehrdeutig → Notation fixiert (λ_T=(2/3)⁶ Kontraktion vs Λ_DSI=(3/2)⁶ Skalenfaktor,
+  ω=2π/ln Λ_DSI, ε=exp(−π²/ln Λ_DSI)).
+- S6-„forciert" korrekt beanstandet: forciert nur unter der Emissions-Bridge-Annahme
+  (E_obs ∝ interne Population) — nicht aus TFPT abgeleitet → downgegradet zu
+  „Emission-Readout-Kopplung"; der KC.01-Null ist ein Bridge-Null, kein Core-Null.
+
+**SIGNATURES.md restrukturiert:** neues §0b Kategoriegrenzen (Transduktion B·T·A,
+Clock-Map, Galois-Gear, Prime-2); S1–S7 reklassifiziert als Surface-Leakage-Sonden
+(„no visible leakage in tested astrophysical channels"); S2 gesplittet (S2a Spektral-Gap
+kern-nah — bis auf FRB.04 unbestellt; S2b Log-Comb = Bridge, braucht Clock-Map);
+S8 zur HAUPTACHSE erklärt; NEU S13 Hexagon-/C₆-Phasenkanal (teilexistent als
+cp_mu6_phase-Predictions; Frobenius-Achse = Theorie-Programm), S14 Clock-Map-Gate
+(keine Uhr ⇒ kein S2b-Test; rückwirkend: alle bisherigen S2b-Nulls sind Bridge-Nulls),
+S15 Transduktions-Auswahlregel (Observable Eligibility Gate; Retro-Befund: KEIN
+Astro-Kanal hat heute ein begründetes B — nur S8/EIT und QC-Kernel testen den Core);
+§1b harte Neubewertung als Tabelle.
+
+**NEU GELAUFEN — S9.d Retarded-Tail-Ablation (`tfpt-seed v6`):** u_tree=1/(6π) vs
+u_ret=+3/(256π⁴) (+0.23%): heute UNENTSCHEIDBAR (|Δχ²|=0.30, marginal pro Tree via
+θ13-Crack — insignifikant; Tail <0.3σ in jedem Kanal, bester Cabibbo 0.28σ). Datierte
+prequentiale Decider: σ(V_us)≈8e-5 (Kaon/Lattice — der realistische), σ(sin²θ13)≈1.8e-5,
+σ(ω_b h²)≈1.7e-5; **β kann den Tail prinzipiell nie sehen** (braucht 1.8e-4°) — LiteBIRD
+testet den Seed, nicht den Tail. Frozen Crack: ≥2 Kanäle pro Tree bei ≥3σ töten die
+Retarded-Lesart. results_v6.json committed; Scorecard-Seed-Zeile (v1–v6) + KC-Zeile
+(Bridge-Downgrade) aktualisiert, Counts unverändert 106/47/9/18/31/1.
+
+**Nicht umgesetzt (bewusst, als Programm notiert):** Scorecard-Gewichtung nach Tiers
+(validation_tier existiert; volle 8-Tier-Taxonomie = größere Umtypisierung), S2a-Koopman-
+Suche (braucht erst Transduktions-Theorie), S13-Frobenius-Kontrakt, H3-Umbenennung
+(Blind-Clock-Recovery-Substanz steckt schon im v1.2-Freeze).
+
+## 2026-07-06 (VI) — Nachzügler-Runde: Phase-Zeit-Helix (KC.04) + Seed-v5-Forward-Band
+
+Die zwei letzten offenen Punkte der Tages-Roadmap umgesetzt:
+
+**(1) KC.04 — die μ₄ Phase-Zeit-Helix (der zurückgestellte Befund-P3):** datierter
+Prereg-Addendum VOR dem Lauf; Φ = ω·ln(τ_j/τ_i) + q·2ΔPA an frozen ω=2.583, q∈{1,2};
+FAST 20240114A pol v5 (83 Sessions, 5934 Paare mit L/I≥10%). **NULL — mit Lehrstück:**
+die naive Permutations-Null „feuert" bei q=1 (p=0.0005), aber genau dafür stand die
+drift-robuste CIRCULAR-SHIFT-Null im Prereg (erhält die PA-Autokorrelation): p=0.12,
+und der Off-Kernel-Rank zeigt ω=2.583 ist NICHT speziell (p=0.37) → langsamer PA-Drift
+gekoppelt an Burst-Clustering, bei JEDEM ω vorhanden, keine Kernel-Helix. Limitation
+dokumentiert (PA mod π, RM-unkorrigiert). Scorecard-Zeile → KC.01-04 (Counts
+unverändert 106/47/9/18/31/1).
+
+**(2) Seed v5 — Leave-One-Out-PREDICTION (der Forward-Test aus dem Lagebild):** jeder
+Kanal aus den drei anderen prognostiziert (GLS, Reaktor-θ13; das ausgelassene Datum
+geht nie in seinen eigenen Fit): β −0.36σ, Ω_b +0.15σ, θ13 −1.99σ (der bekannte
+Crack-Kandidat), V_us +1.28σ — alle <2σ. **FLAGSHIP (datiert, falsifizierbar):
+Cabibbo + θ13 + Ω_b ⇒ β = 0.2413 ± 0.0018°** — ein Band ~40× enger als der heutige
+ACT-Fehler (ACT DR6 z=−0.36); **LiteBIRD/Simons Observatory (σ_β~0.02°) testen dieses
+Band BLIND**, weil β nie im Fit war. results_v5.json committed, README-Tabelle,
+Scorecard-Seed-Zeile um das Forward-Band erweitert, Website-finding ergänzt.
+
+Damit ist die Tages-Roadmap komplett: alle vier KC-Achsen + v1.2-EIT-Freeze + Seed
+v4/v5. Offen bleiben nur Nicht-Code-Hebel (EIT-H3-Labormessung, RM-korrigierte
+PA-Serie, Grammar-Null-Enumeration als größere Seed-Ausbaustufe).
+
+**Nachtrag (explizit angefordert):** `experiments/SIGNATURES.md` — vollständiger
+Signaturkatalog mit S-Codes (S1–S12: Herleitung/Plausibilität/Sichtbarkeitsfenster),
+Experiment-Register (E01–E20 mit Datenqualität) und Test-Matrix (welche Signatur wo
+mit welchem Ergebnis); von experiments/README.md verlinkt.
+
+## 2026-07-06 (V) — Geometrie/Topologie-Scan: drei strukturell ungetestete Achsen gebaut und gelaufen (Scorecard 105 → 106)
+
+Vogelperspektiven-Frage („was haben wir bei den Signaturen übersehen?") systematisch
+beantwortet: für jedes Strukturelement der Theorie geprüft, welche Observable darunter
+nicht-trivial transformiert — und ob wir DIE getestet haben oder nur Invarianten.
+Drei Lücken gefunden, NEU `experiments/frb-kernel-couplings/` (KC.01–03, prereg
+kernel_couplings_v1.yaml VOR dem Datenpass; committete Kataloge, nichts gefetcht):
+
+- **KC.01 — der 2D-Leiter-Kopplungszahn (FORCIERT, das eigentliche Versäumnis):** eine
+  Kernel-Sprosse multipliziert Zeit ×(3/2)^k UND Energie ×(2/3)^k (E·t=const) — alle
+  bisherigen Tests (FRB.02 Energien, RC.02/03 Zeiten) waren Marginale. Test: Joint-Hits
+  auf (Zeit-Zahn, Partner-Energie-Zahn) vs EXAKTE Energie-Shuffle-Null (erhält beide
+  Marginale, zerstört nur die Kopplung) + Placebo-Paarung + Frei-Quotient-LEE.
+  **Ergebnis: sauberer NULL in beiden Quellen** — Li+2021 (20121102A, 1652 Bursts):
+  14 Hits vs 19.5 erwartet (enr 0.72, p=0.94); Zhang+2023 (20220912A): 3 vs 4.4
+  (p=0.84); >55% beliebiger Energie-Basen schlagen 2/3. Well-powered: die
+  Leiter-Kopplung fehlt bei Katalogstatistik.
+- **KC.02 — V-Händigkeits-Alternation (explorativ, topologisch scharf):** der Z₂-Deck
+  ist ein Orientierungsflip; PA ist mod π definiert (deck-invariant), |V|/I gerade —
+  FRB.04/06/08 waren konstruktionsbedingt deck-blind. Die einzige deck-sichtbare
+  Pol-Observable ist das VORZEICHEN von V. Daten: FAST 20240114A pol v5, 6134 Bursts
+  mit signiertem DOC (47% negativ). **Ergebnis: NULL** — 3454 Paare, Alternation 0.480
+  vs Shuffle 0.497 (p=0.98; Händigkeit persistiert eher — magnetosphärisches
+  Gedächtnis); Netto-Händigkeit balanciert (+0.06); Zahn-gegatete Teilmenge zu klein
+  (3 Paare, data_limited auf dem Bein).
+- **KC.03 — Size-Space-DSI (Energie-Verteilungs-Kamm, PG.01-Analog):** Rayleigh auf
+  ln E an der frozen λ-Batterie (inkl. Z2-Lesarten), 3-Null-Batterie
+  lognormal/KDE/GMM-populationskontrolliert (Li-Verteilung berühmt bimodal),
+  Bonferroni. **Ergebnis: NULL in beiden Quellen** (global p=0.185 bzw. 0.68).
+- **Audit-Notiz on record (der Lauf hat einen echten Bug gefangen):** Erstlauf zeigte
+  einen nominellen λ=8-„Kandidaten" (global p=0.01) — Ursache: sklearn
+  `GaussianMixture.sample()` re-seedet bei JEDEM Call aus random_state → alle 2000
+  GMM-Null-Draws identisch (Null-Median = Null-p95). Von den Robustheitsproben gefangen
+  (Split-Half instabil 38 vs 79; Frei-λ-Scan peakt am Range-Rand λ≈56–60, nicht bei 8).
+  Fix: frischer Seed pro Draw → Kandidat aufgelöst (p 0.001 → 0.0185, global 0.185).
+  Genau dafür existiert die Escalate-only-Disziplin.
+- **Nicht als Lücke gewertet** (geprüft): μ6/Hexagonal (lebt im CP-Sektor, Prediction
+  of Record), GW-Paritäts-Birefringenz (kein forcierter Koeffizient — bräuchte erst
+  Theory-Contract), Mod-4-Kaskadenrhythmus (unforced), β-Anisotropie (TFPT sagt
+  isotrop → Kontrolle), Cross-Observable-Phasenkopplung (data_limited).
+
+**Sync:** Scorecard NEUE Zeile `kernel couplings (KC.01-03)` → **106 Zeilen
+(47/9/18/31/1)**; experiments/README-Tabelle + Website EXPERIMENTS_AUDIT 106/47/18 +
+Scan-Absatz im finding; README frb-kernel-couplings mit Audit-Notiz. Alles
+experiments-only, kein Ledger-Touch, kein Escalate-Fall.
+
+## 2026-07-06 (IV) — Lagebild verifiziert + v1.2-Freeze: Differenzoperator-Metrik, Gruppen-Fingerprint, Blind-Protokoll
+
+User-Lagebild („Messbarkeits-Evidenz, nicht Natur-Evidenz; H3 härter machen") analysiert,
+verifiziert und die 48-Stunden-Liste umgesetzt:
+
+**Verifikationen (alle bestätigt, z.T. mit Zahlen):**
+- NtD≠DtN-Punkt korrekt: die Pipeline misst NtD (u = R·c); auf dem mean-free Raum
+  transferiert der Kommutant exakt auf die Pseudoinverse (numerisch 1.5e-15) → DtN-Proxy
+  als Robustheitsbein implementiert, Divergenz = Pipeline-Artefakt, nie Physik.
+- State-Level-Test ρCρ†=C mit C=f(R) ist für exakte Permutations-ρ MATHEMATISCH
+  äquivalent zu [ρ,R]=0 (verifiziert 1e-15) → dokumentiert, NICHT als separater Score
+  gezählt (wäre Doppelzählung).
+- δ²-Skalengesetz verifiziert: exakte S_off^sub vs Mark-Shift ε auf dem
+  Simulationskontrakt → Exponent 1.998 über ε=1e-3..3.2e-2 ✓ (Kontrollgesetz für die
+  Bruchleiter eingefroren).
+- „Latenter Seed Pull" (Vorschlag 2 des Lagebilds) EXISTIERT bereits wörtlich als
+  seed-consistency v1–v3 (jeder Kanal → impliziertes φ0, GLS auf den u_i) — als vorhanden
+  markiert; LOO-*Prediction* (β aus 3 Kanälen prognostizieren → LiteBIRD-Blindtest) und
+  Grammatik-Null als nächste Seed-Ausbaustufe notiert.
+- Scorecard-Kategorien: statt Enum-Bruch ein optionales Feld `validation_tier`
+  (instrument_validated | analog_positive_control) via OVERRIDES — EIT-Zeile +
+  qc-recovery-kernel getaggt; Schema-Doku ergänzt. Counts unverändert (105/47/9/17/31/1).
+
+**v1.2-Freeze (`qgeo-eit-soff`, gleicher Tag; Akzeptanzprotokoll für den Labor-Lauf):**
+- PRIMÄRMETRIK auf dem Differenzoperator Δ = R_case − R_hom: A_on/A_off/f_forbid; das
+  Pass/Fail-Dial ist die ABSOLUTE verbotene Leckage über dem Split-Half-Rauschboden
+  leak(m)=√(A_off_m/floor_m) (C_m hält <3, gebrochen ≥10) — v1.2-Lektion on record: die
+  FRAKTION allein ist das falsche Dial (dominante rotationsinvariante Komponente
+  verdünnt sie, während der anisotrope Anteil weiter leckt; genau der 6.x-Fall).
+- Gruppen-Fingerprint C2/C4/C8/C16: H3-Klasse = Δ sichtbar UND C4 hält UND C8 GEBROCHEN
+  → ein zentrierter Ring kann nie ein Positiv fälschen; Generisches bricht schon C4.
+- Clock-Recovery (Minima über alle 15 Rotationen, π/2-Orbit muss sich selbst zeigen),
+  D4-Reflexionsscore (ΘρΘ=ρ⁻¹-Facette, 16 Achsen gescannt), NtD/DtN-Robustheit,
+  Blind-Protokoll (20–40 unlabeled Messungen, frozen Scores, Unblind nach Lock) und
+  9-Stufen-Bruchleiter im Prereg-YAML eingefroren.
+- **Archiv-Re-Run (37 Fälle): 0 C4-Positive** — wie es sein muss (kein μ₄-Target im
+  Archiv); geometrie-blinder Klassifikator 34/37 gegen dokumentierte Geometrie; die 3
+  Mismatches sind physikalisch real (6.1-Schaumring: sichtbare Stöße + 4 Klemmen am
+  Rand, fotoverifiziert → echtes Leck). WICHTIGER Befund für H3: 9 Fälle liegen bei
+  leak 4–6× im Ambiguous-Band → der Split-Half-Floor (nur Injektionsrauschen) ist eine
+  UNTERGRENZE; Between-Session-Systematik (Refill/Temperatur/Kontakt) fehlt darin →
+  H3-Protokoll verlangt Wiederhol-Homogen-Messungen (in YAML eingefroren).
+
+Rest des Lagebilds (2-Wochen-/6-Wochen-Punkte: Laborkontakt, Bruchleiter-Messung,
+Kurzpaper „Measuring character leakage of boundary operators with EIT", Seed-LOO-
+Prediction + Grammar-Null, Leakage-Atlas) als Roadmap notiert — Physik/Orga, kein Code.
+Sprachregelung übernommen: „EIT validiert das μ₄-Randoperator-Observable auf realer
+Hardware", nie „EIT bestätigt TFPT".
+
+## 2026-07-06 (III) — Analog-Realisierung der S_off-Messung: QGEO auf einem ECHTEN gemessenen Randoperator (Scorecard 104 → 105)
+
+Der in Runde (II) bezifferte Hebel („Analog-Realisierung der S_off-Messung, Anforderung
+1e-3 relative Spektralpräzision") ist umgesetzt — mit einem Schlüssel-Insight: EIT
+(elektrische Impedanztomographie) MISST den Rand-ND-Operator eines 2D-Körpers wörtlich —
+die Labor-Realisierung von Λ_Σ. NEU `experiments/qgeo-eit-soff/`:
+
+- **Daten:** KIT4 Open 2D EIT Archive (Zenodo 10.5281/zenodo.1203914, CC BY 4.0;
+  Hauptmann+ arXiv:1704.01178): Kreis-Tank ⌀28 cm, **16 äquidistante Elektroden** (die
+  vier μ₄-Klassen sind EXAKTE Unterräume der Elektroden-Fourier-Basis, ρ = exakte
+  4-Elektroden-Permutation), 79 Injektionen × 16 Spannungen, 38 reale Messfälle.
+- **Pipeline:** Potentiale (least squares, zero-mean gauge) → mean-free ND-Matrix R
+  (überbestimmt, symmetrisiert; Reziprozität ||R−R^T||/||R|| = gemessener
+  Instrument-Floor = das σ-Dial des Simulationskontrakts) → 16-Punkt-Fourier →
+  harmonischer Split des off-circulant-Gewichts in μ₄-ERLAUBT (lag 0 mod 4) vs
+  VERBOTEN (S_off) + Clock-Kommutator.
+- **Prereg:** hypotheses/qgeo_eit_soff_v1.yaml VOR dem Datenpass (H1 Floor / H2
+  Kontrollen / H3 μ₄-positiv). Datierter v1.1-Addendum NACH Fotoprüfung: die
+  low-S_off-Fälle (1.4, 7.x, 8.x) sind ZENTRIERTE/annulare Targets → rotationsinvariant
+  → korrekt kein Leck; H2 daher anisotropie-gegated (≥10× homogener Floor) —
+  dokumentierte Abweichung, kein silent rewrite.
+- **Ergebnis (alle 38 Fälle): ANALOG CHANNEL VALIDATED (H1+H2).**
+  H1: der homogene Tank realisiert einen μ₄-blockdiagonalen GEMESSENEN Randoperator am
+  Instrument-Floor — S_off = 7.6e-5, Kommutator 1.5e-2, Reziprozität 5.3e-3 → die
+  1e-3-Anforderung aus qgeo_soff_reconstruction.py ist auf realer Hardware ERFÜLLT.
+  H2: alle 28 anisotropen Targets lecken mit der generisch-isotropen Signatur
+  (verbotene Harmonischen-Fraktion 0.87–1.00, Erwartung 12/15=0.8; S_off bis 250×
+  Floor), KEINES fälscht ein μ₄-Positiv.
+  H3: die entscheidende μ₄-positive Konfiguration (4 identische Inklusionen bei j·π/2,
+  Erwartung: GROSSE Anisotropie mit verbotener Fraktion am Floor) ist NICHT im Archiv →
+  data_limited, als Zukunftsmessung preregistriert — jedes KIT4-klassige EIT-Labor kann
+  sie fahren; Diskriminator, Floor und Effektgrößen sind jetzt auf deren eigener
+  publizierter Hardware kalibriert.
+- **Sync:** Scorecard NEUE Zeile `QGEO S_off on a real measured boundary operator`
+  (quantum, not_applicable, internal_consistency-Basket wie qc-recovery-kernel,
+  consistent) → **105 Zeilen (47/9/17/31/1)**; Website EXPERIMENTS_AUDIT 105/47 +
+  Operator-Symmetrie-Absatz im finding; README qgeo-eit-soff; Rohdaten gitignored
+  (~24 MB), results.json committed. Firewall: Instrument-Validierung des Observables,
+  nie TFPT-Evidenz.
+
+## 2026-07-06 (II) — Signaturklassen-Wechsel-Runde: User-Befund (10 Vorschläge) analysiert, 3 neue Tests implementiert und gelaufen
+
+User-Befund: „Kernel-Signaturen abgeerntet — Wechsel der Signaturklasse: Operatorstruktur,
+Phasenkopplung, gemeinsame Seed-Inferenz, lokaler Horizont-Readout." Bewertung gegen den
+Bestand + Umsetzung (alles experiments-only, kein verification/-, Ledger- oder Paper-Touch):
+
+**Implementiert und gelaufen (3 neue Testachsen):**
+- **(P1) QGEO-S_off-Rekonstruktions-Tomographie** — NEU `theory-contracts/qgeo_soff_reconstruction.py`
+  (die exakte Seite existierte: v192–v214, v210, qgeo_dtn_mark_locality.py; NEU ist die
+  Rekonstruktions-/Analog-Brücke): S_off = Σ_{r≠s}||P_r Λ P_s||²/||Λ||² auf μ₄-Klassen,
+  Λ̂ aus K=40 verrauschten Eigenpaaren, Clock-Winkel-Scan, Detektionsschwelle.
+  **CONTRACT HOLDS:** exakt S_off^sub < 3e-31 (μ₄) vs O(1) (Z₃ 1.00, generisch 0.97);
+  Rekonstruktion: μ₄-Floor ~O(σ²) (1.5e-6 @ σ=1e-4), Kontrollen ~0.9 bei jedem Noise —
+  Diskrimination überlebt Rekonstruktionsrauschen um 2–6 Größenordnungen; Zero-Set des
+  Winkel-Scans = exakt der μ₄-Orbit {π/2, π, 3π/2} (Z₃ → 2π/3-Orbit, generisch → nur 2π);
+  Instrument-Anforderung: Mark-Shift ε=0.001 rad 100% detektierbar @ σ≤1e-3, ε=0.01 @ σ=1e-2.
+- **(P2) Seed v4: shared-vs-free + hostile Decoder-Batterie** — NEU `seed-consistency/seed_v4.py`
+  (v1–v3 existierten: GLS/LOO/PPC/Reaktor-only; NEU: Modellvergleich + Placebos auf den
+  ROHEN Kanälen): ein latentes u=0.052921 fittet β/Ω_b/θ13(Reaktor)/Cabibbo simultan,
+  χ²=4.10 (dof 3, p=0.25); frozen φ0: χ²=4.51 (dof 4, p=0.34); **AIC bevorzugt den
+  1-Parameter-Decoder über das saturierte Modell (6.1 < 8.0); 0/14 Single-Swap-Nachbar-
+  Decoder schlagen TFPT** (nächster Rivale λ_C²=u mit 4.29 — der (1−u)-Faktor ist heute
+  nur schwach constrained); **0.0tes Perzentil von 2000 gleich komplexen Random-Placebo-
+  Decodern** (Median-χ²≈1200). Kill-Erweiterung eingefroren: >2 Nachbarn besser ODER
+  Placebo-Perzentil >10% → Architektur-Lesart fällt. Scorecard-Zeile `shared seed phi0`
+  aktualisiert (Status bleibt consistent; Counts unverändert 104/46/9/17/31/1).
+- **(P4) RC.04 Per-Source-Comb-Phasenkohärenz** — NEU `repeater-cascade/phase.py` + CLI
+  `phase` (RC.02 ist phaseninsensitiv; die t0-alignierten Stacks PG.07 p=0.53 und Crust
+  p=0.45 waren schon kohärent): per-Session-Phase φ_k = arg Σ e^{iω ln τ}, Cross-Session-
+  Konzentration vs rate-preserving Surrogate. **NULL:** FRB20240114A R=0.21 über 7
+  Sessions (p=0.15), FRB20201124A R=0.24 über 2 (p=0.49). Ehrliche Power-Scope: bindet
+  nur persistente Combs mit ε≳0.15–0.3 (Phasenrauschen ~1/√n) — gleiche Amplitudenwand
+  wie RC.02. Scorecard-Zeile RC.01-03 → RC.01-04 erweitert.
+
+**Bewertung der übrigen Vorschläge (kein neuer Lauf nötig / nicht heute machbar):**
+- (P3) μ₄-Phase-Zeit-Helix in Full-Stokes-FRB: NICHT vorhanden, echtes Neuland —
+  aber datenseitig brutal (Faraday-Drift, Scattering, Instrument-PA); als prereg-Design
+  notiert (FAST 20240114A pol v5 + CHIME Baseband wären die Betten). Deferred.
+- (P5) EHT achromatischer Pol-Intercept: EXISTIERT bereits exakt mit den drei Nulls
+  (kein λ²-Tail, 1/r², Sign-Flip) — `eht-achromatic-residual`, Scorecard `achromatic
+  dyonic intercept`, data_limited bis GRMHD-Subtraktionsprodukte verfügbar.
+- (P6) Page-Channel-Tomographie: recovery-channel prüft bereits CPTP/Choi/Spektrum/
+  DPI/KL-Code + Page-Turnover; qc-recovery-kernel die Schaltkreis-Seite. Offen bleibt
+  die Petz-Map + Choi-Tomographie AUF DEM SCHALTKREIS — als nächster qc-kernel-Schritt
+  notiert (bespoke, interne Konsistenz).
+- (P7) Nariai/Entropy-Floor in NR/Analog: needs_experiment, heute nicht lauffähig —
+  sauber als Strukturtest-Kandidat typisiert (S_N = 2/3 S_dS = |Z₂|/N_fam-Atom).
+- (P8) F_transfer-Clock-Fingerprints: Programm-Ebene; ftransfer/koide_source_to_pole
+  CONTRACT existiert; „erhält der externe Solver die Clock-Achse?" ist für ηB/Axion der
+  richtige nächste Kontrakt-Typ. Kein Lauf heute.
+- (P9) Negative Signaturen als Ausschlussfilter: inhaltlich VORHANDEN als
+  Verification-Module (v227/v354/v355/v430: kein E8-Singlet-WIMP, S⁻=DM downgraded,
+  Jarlskog nur Ordnung, ηB kein c₃-Integer-Power, mp/me extern) — Empfehlung
+  übernommen, sie als explizite Filter-Liste zu führen (Doku-Aufgabe, kein Test).
+- (P10) HFQPO-×1.5-Zahn: EXISTIERT preregistriert (hfqpo-ladder, RXTE-Archiv-Job
+  aussteht); g−2-Seam-Vertex: EXISTIERT (2 Scorecard-Zeilen, HVP-alternative_group,
+  datiertes Kill-Band).
+- „Nicht aufblasen"-Liste des Users (keine freien Log-Frequenzen ohne μ₄/Z₂/N_fam/g_car-
+  Ableitung, keine Surface-Combs unter der ε-Wand, Prime-2-only, Ratios ohne hostile
+  neighbours): deckt sich mit v355/v430-Disziplin — übernommen als Arbeitsregel.
+
+Alle drei Läufe deterministisch, Ergebnisse committed (qgeo_soff_results.json,
+results_v4.json, rc04_phase_coherence.json). Scorecard regeneriert, Counts unverändert →
+kein Website-Sync nötig. Kein Escalate-Fall; die Seed-v4-Spezifität (0/14, 0.0tes
+Perzentil) ist das stärkste neue Konsistenz-Ergebnis der Runde.
+
+## 2026-07-06 — Möbius-Runde: Z2/Double-Cover-Lesarten des Recovery-Kamms getestet (Scorecard 103 → 104)
+
+Frage der Runde (User): Kann das Möbiusband / Double-Cover die Signaturen „verdrehen", so dass
+die bisherigen Suchen sie strukturell verfehlt haben? Antwort: JA für genau eine Lesart — eine
+**antiperiodische** Comb (Blattparität pro Periode, periodisch erst auf dem Doppelcover) hat
+**exakt null** Fourier-Leistung bei der Kernel-ω=2.583; alle bisherigen Kernel-NULLs waren dafür
+blind. Drei abgeleitete Omegas schließen die Lücke (explorativ/UNFORCED — kein Theory-Contract
+erzwingt eine Lesart; prereg als escalate-only): Halbperioden-Takt `(3/2)³` (ω=5.17, das
+√λ-pro-Sprosse-Analogon der Amplituden-Semantik), erste ungerade Harmonische `(3/2)⁴` (ω=3.87),
+antiperiodische Fundamentale `(3/2)¹²` (ω=1.29).
+
+**Implementierung (experiments-only, kein verification/-, Ledger- oder Paper-Touch):**
+`recovery-comb-domains`: die drei Z2-Ratios in `TFPT_LAMBDAS` (+IDIO) der Quake/A5-Batterie;
+NEU `z2_battery`/`_z2_note` in `channels.py` — gestackter Permutationstest an jeder Z2-ω über
+ALLE lesbaren Kurven eines Kanals (per-ω Range+Nyquist-Gate, d.h. `(3/2)³` läuft auch auf
+kernel-range-blinden Kurven); in A1/A3/A3b/A4 verdrahtet, `z2_battery` in results.json.
+
+**Ergebnis (Läufe 2026-07-06, echte Daten): sauberer NULL überall, wo testbar.**
+- Quake (6 USGS-Sequenzen, das stärkste Bett): `(3/2)³` p=0.62, `(3/2)⁴` p=0.45 (n=6);
+  Batterie-Bonferroni global p=0.94 über 11 gegatete λ (vorher 0.77 über 9 — nur mehr Trials,
+  kein Signal). Free-fit unverändert λ_fit≈2.3–2.6.
+- A1 Magnetar: p=0.36/0.27; A3 FAST/GBT: p=0.81/0.60; A3b CHIME: p=0.21/0.40;
+  A4 GRB (22 Afterglows, well-powered): p=0.42/0.28; A5 ENT-Batterie global p=0.095
+  (min-p weiter der λ=2-Eintrag 0.0095, jetzt ×10 Trials).
+- Die **Fundamentale `(3/2)¹²` ist in ALLEN vorhandenen Daten range-blind** (Gate braucht
+  2.8·ln((3/2)¹²)=13.6 e-folds; breiteste Kurve Landers1992 hat 13.1) → n_used=0 überall,
+  ehrlich `data_limited` auf diesem Bein. Decider: noch längere Aftershock-Baselines oder
+  Jahrzehnte-AGN-Lichtkurven.
+
+**Sync:** README `recovery-comb-domains` (+Z2-Sektion, Quake/A5-Zahlen aktualisiert); Scorecard
+104 Zeilen (46 consistent / 9 tension / **17 null** / 31 data_limited / 1 parked): NEUE Zeile
+`Z2/Moebius double-cover readings` (cross-domain, search_target, null — alternative LESART
+derselben Comb-Frage, nie unabhängige Evidenz) + Magnetar-Zeile von stale `data_limited: needs
+Swift/XRT` auf den realen A1-Lauf (`null`, stacked p=0.99, surface-Firewall) gebracht; Website
+`EXPERIMENTS_AUDIT` 104/46/9/17/31/1 + Möbius-Absatz im finding synchron. Theorie-Anker der
+Lesart (nur Kontext, kein neuer Claim): der Z2-Deck ist der Faktor 1/2 in c3=1/(8π) (v58/v216),
+Origin-CPT/Möbius-Bullet; v430 bleibt maßgeblich dafür, dass „die andere Seite" matched
+structure ist — die Z2-Comb-Lesart war der einzige beobachtbare Blind Spot, jetzt geschlossen
+bzw. als data_limited typisiert. Kein Escalate-Fall.
+
+**Nachtrag (gleicher Tag) — Ausweitung auf FRB-Kaskaden, GW-Echos, Pulsar-Glitches, Crust,
+Microshots (User-Frage „auch in FRB/GW/Pulsar gesucht?"):**
+- **Guard-Fix zuerst:** die In-place-Erweiterung von `TFPT_LAMBDAS` hätte den bit-für-bit
+  Frozen-Kernel-Test in `strange-metal-comb` gebrochen → Z2-Lesarten jetzt als separates
+  `Z2_LAMBDAS` + `BATTERY_LAMBDAS` (quake.py); Guard ALL PASS, Quake/A5-Zahlen unverändert.
+- **GW-Echos: schon nativ abgedeckt.** Die Stage-1c-Battery testet die antiperiodische Lesart
+  als per-Bounce-Phase `dphi=π` (Vorzeichenflip pro Echo = Z2-Blattparität) × `(2/3)³`-Semantik
+  → `NO_VARIANT_ECHO` auf allen 10 Events (Bonferroni ×12). ω/2-Comb strukturell nicht testbar
+  (ein Ringdown ist keine Kaskade, Stage-2-Degenerationsbefund). README-Querverweis ergänzt.
+- **Pulsar PG.07 (Vela 2024):** (3/2)³ p=0.27, (3/2)⁴ p=0.23; (3/2)¹² raw p=0.03 → Bonferroni
+  0.30 UND nur 1.28 Perioden dieser λ (weit unter Gate) auf der glatten Modellkurve → null.
+- **Pulsar PG.08 (PuMA/IAR-Residuen, 3 Riesenglitches):** überall null ((3/2)³ 1.0/0.10/0.17,
+  (3/2)¹² 0.66/1.0/0.96). EIN nominelles Excess placebo-typisiert: J1740−3015 (3/2)⁴ raw
+  p=0.0018 — aber Periodogramm-Peak bei ω=3.73 (nicht 3.874), Placebos ω=3.6/3.73 gleich
+  signifikant → breiter unspezifischer ω≈3.6–4.0-Bump (gleiche Klasse wie das bekannte
+  λ=e-Flag in J0742), Audit-Anomalie, kein Kandidat.
+- **Repeater-Cascade RC.02 (9 gate-passing Sessions, 2 Quellen):** (3/2)³ Fisher p=0.25
+  (6.1–9.6 Perioden, gut getestet), (3/2)⁴ p=0.14. (3/2)¹² Fisher p=4e-4 nominal — Placebo-λ
+  {60,80,100,200,300} (alle gleich sub-gate, reach 1.5–2.4 < 2.8) liefern 3e-5–1.5e-4 → die
+  Rayleigh-vs-Surrogat-Statistik ist unterhalb des Range-Gates systematisch antikonservativ;
+  placebo-typisiert range-blind, Audit-Notiz im README.
+- **Crust-Cooling:** Batterie (vendored) + Z2: (3/2)³ p=0.99 (n=6 gated!), (3/2)⁴ p=0.27 (n=2),
+  (3/2)¹² range-blind; global p=1.0 → null.
+- **Microshots (B1/B2):** (3/2)³ ist die ERSTE Lesart, die das per-λ-Gate auf dem
+  Microshot-Forest besteht (B1 3.22 / B2 2.92 Perioden, Kernel dort range-blind 1.5–1.6) →
+  Rayleigh p=0.40/0.91, null. (3/2)⁴/(3/2)¹² unter Gate (B2 (3/2)⁴ p=0.08 sub-gate, kein
+  Kandidat).
+- **Gesamtfazit unverändert, jetzt flächendeckend:** die Möbius-verdrehte Comb ist in JEDEM
+  Kanal null, wo sie testbar ist; (3/2)¹² bleibt überall data_limited (Range). Kill-Bedingung
+  der Scorecard-Zeile verschärft (Placebo-Kontrollen Pflicht). Sync: READMEs pulsar/repeater/
+  crust/gw/recovery-comb-domains, Scorecard-Zeile erweitert (Counts unverändert 104/46/9/17/31/1),
+  predictions.ts finding erweitert. Kein Escalate-Fall.
+
 ## 2026-07-03 (IV) — Offene-Fragen-Runde: 7 neue Kandidaten aus unerklärten Anomalien (Scorecard 95 → 103)
 
 Frage der Runde: „Welche wissenschaftlichen Fragen erklärt derzeit kein Modell zufriedenstellend —

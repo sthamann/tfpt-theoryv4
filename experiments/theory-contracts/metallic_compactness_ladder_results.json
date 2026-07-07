@@ -1,0 +1,34 @@
+{
+  "contract": "METALLIC.LADDER.01 metallic-mean compactness ladder",
+  "date": "2026-07-07",
+  "firewall": "theory contract, never a scorecard row, never load-bearing; internal consistency, not evidence",
+  "verdict": "CONTRACT HOLDS (5/5)",
+  "checks": [
+    {
+      "check": "C1 METALLIC LAW [E, all n]: C(mu_n) = (mu_n^2-1)/(6 mu_n) = n/6, because mu_n^2 - 1 = n*mu_n (mu_n is the root of x^2-nx-1); the sheet index is 6 x compactness",
+      "pass": true,
+      "detail": "C((n+sqrt(n^2+4))/2) simplifies to n/6 symbolically"
+    },
+    {
+      "check": "C2 CLASSICAL THRESHOLDS [E]: photon sphere C=1/3 = silver (n=|Z2|=2), horizon C=1/2 = bronze (n=N_fam=3); n=1 golden -> 1/6, n=g_car=5 -> 5/6",
+      "pass": true,
+      "detail": "n=1: golden (1+sqrt5)/2, C=1/6; n=2: silver 1+sqrt2, C=1/3; n=3: bronze (3+sqrt13)/2, C=1/2; n=5: g_car (5+sqrt29)/2, C=5/6"
+    },
+    {
+      "check": "C3 PHYSICAL WINDOW [E]: C = n/6 <= 1/2 (horizon) iff n <= 3 = N_fam; the horizonless metallic sheets are exactly {golden, silver, bronze} = n in {1,2,3}, capped at horizon = N_fam",
+      "pass": true,
+      "detail": "n with C<=1/2: [1, 2, 3]; n=4 gives C=2/3 > 1/2 (inside horizon)"
+    },
+    {
+      "check": "C4 NON-METALLIC RUNGS [E]: Buchdahl 4/9 -> 6C = 8/3 (integer sheet k = 3 = N_fam) and Nariai 3/8 -> 6C = 9/4 (algebraic sheet k = (9+sqrt145)/8); neither is a continued-fraction [n;n,...] point",
+      "pass": true,
+      "detail": "Buchdahl k=[3]; Nariai k=(9+sqrt145)/8"
+    },
+    {
+      "check": "C5 MARKOV LINK [E, [C]-reading]: photon-sphere index 2 IS a Markov number (silver/Pell branch of the D1 tree exists); horizon index 3 = N_fam is NOT a Markov number but IS the Markov coupling k=3 -- consistent with D1's 'k=3 is the coupling, not a state'",
+      "pass": true,
+      "detail": "golden (n=1) = Fibonacci branch, silver (n=2) = Pell branch; bronze discriminant 13 = Delta_Q is a Markov number, but 3 itself is the coupling"
+    }
+  ],
+  "reading": "The gravastar compactness function C(k)=(k^2-1)/(6k) is one monotone curve whose special points are the metallic means: C(mu_n)=n/6, with the two classical GR thresholds at the two smallest metallic means carrying the two carrier hands as index (photon sphere = silver, n=|Z2|=2; horizon = bronze, n=N_fam=3). The physical window C<=1/2 is exactly n<=3, capped at horizon=N_fam. This unifies the compactness ladder (gravastar-compactness), the metallic Markov-tree branches (D1) and the carrier hands under one equation x^2-nx-1. [E] for the arithmetic; [C] for the physical reading (fractional/metallic replica sheets need the same open continuation as gravastar-compactness). No new prediction, no gate closed, no status change."
+}

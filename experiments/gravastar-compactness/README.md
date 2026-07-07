@@ -20,6 +20,17 @@ endpoint**:
    photon-sphere/light-trapping threshold (`1/3`, surface at `R = 8M/3 < 3M`) and **below**
    Buchdahl (`4/9`) and the horizon (`1/2`) → a **horizonless, light-trapping ECO** — exactly
    the regime that produces ringdown **echoes**.
+
+   *Metallic-mean structure (theory-contract cross-ref, `[C]`).* Writing the ladder via the
+   sheet-index form `C(k) = (k²−1)/(6k)`, the two **classical** thresholds land exactly on the
+   two smallest metallic means: `C(1+√2) = 1/3` (photon sphere = **silver** mean, index
+   `n=|Z₂|=2`) and `C((3+√13)/2) = 1/2` (horizon = **bronze** mean, index `n=N_fam=3`), since
+   `C(μ_n) = n/6` for the n-th metallic mean `μ_n` (root of `x²−nx−1`). The physical window
+   `C ≤ 1/2` is exactly `n ≤ 3 = N_fam`; Buchdahl `4/9` and Nariai `3/8` are the **non-metallic**
+   rungs in between (`6C` non-integer). Exact-arithmetic contract:
+   [`theory-contracts/metallic_compactness_ladder.py`](../theory-contracts/metallic_compactness_ladder.py)
+   (5/5). This is an internal ordering principle typed `[C]` (fractional/metallic replica sheets
+   need the same open continuation as the `3/8 ↔ Q_geom` map) — **no new prediction, no status change**.
 3. **Echo template.** Tortoise-coordinate round-trip delay (surface ↔ photon sphere) plus the
    TFPT recovery-reflectivity amplitude bound `(2/3)⁶`:
 
