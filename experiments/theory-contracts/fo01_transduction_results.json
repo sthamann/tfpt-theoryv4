@@ -1,0 +1,42 @@
+{
+  "contract": "FO.01_transduction_invisibility",
+  "spectrum": [
+    1.0,
+    0.08779149519890257,
+    0.0013717421124828527
+  ],
+  "scrambled_spectrum": [
+    1.0,
+    0.55,
+    0.3
+  ],
+  "n_runs": 8000,
+  "checks": [
+    {
+      "name": "C1 uniform functional exactly blind (1e-14)",
+      "pass": true,
+      "detail": "max |1.T^n.p - 1| = 9.77e-15"
+    },
+    {
+      "name": "C2a first-step intensity ratio blind for uniform B (KS p > 0.01, D < 0.03)",
+      "pass": true,
+      "detail": "D = 0.0085, p = 0.470, n = 20000/20000"
+    },
+    {
+      "name": "C2b threshold burst trains indistinguishable (KS p > 0.01, D < 0.03)",
+      "pass": true,
+      "detail": "ratios D = 0.0061 (p = 0.756); counts D = 0.0000 (p = 1.000)"
+    },
+    {
+      "name": "C3 character readout recovers 64/729 (1e-10)",
+      "pass": true,
+      "detail": "lambda_hat = 0.087791495199 vs 0.087791495199"
+    },
+    {
+      "name": "C4 unequal-weight coupling distinguishes (KS D > 0.04, p < 1e-10)",
+      "pass": true,
+      "detail": "D = 0.0612, p = 5.30e-33 vs blind D = 0.0085"
+    }
+  ],
+  "all_pass": true
+}

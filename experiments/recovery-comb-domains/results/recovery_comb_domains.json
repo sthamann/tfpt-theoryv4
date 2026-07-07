@@ -32,7 +32,7 @@
       "domain": "magnetar outburst flux relaxation (stacked)",
       "firewall_legitimacy": "surface",
       "data_status": "real",
-      "note": "REAL data: 6 outburst light curve(s); 2 clear the ln-range gate (>= 2.8 comb periods). 1E_1547.0-5408 (periods=3.54, p=1.0); SGR_1745-2900 (periods=2.93, p=0.302); SGR_1935+2154 (periods=2.07, p=0.0018, <gate: range-blind, EXCLUDED); Swift_J1818.0-1607 (periods=2.67, p=0.1354, <gate: range-blind, EXCLUDED); Swift_J1822.3-1606 (periods=1.59, p=0.898, <gate: range-blind, EXCLUDED); XTE_J1810-197 (periods=1.49, p=0.2164, <gate: range-blind, EXCLUDED). STACKED over 2 outbursts: kernel omega=2.58 is NOT special (p=0.986) -> clean NULL (magnetospheric/surface -> firewall caveat, not a horizon recovery).",
+      "note": "REAL data: 6 outburst light curve(s); 2 clear the ln-range gate (>= 2.8 comb periods). 1E_1547.0-5408 (periods=3.54, p=1.0); SGR_1745-2900 (periods=2.93, p=0.302); SGR_1935+2154 (periods=2.07, p=0.0018, <gate: range-blind, EXCLUDED); Swift_J1818.0-1607 (periods=2.67, p=0.1354, <gate: range-blind, EXCLUDED); Swift_J1822.3-1606 (periods=1.59, p=0.898, <gate: range-blind, EXCLUDED); XTE_J1810-197 (periods=1.49, p=0.2164, <gate: range-blind, EXCLUDED). STACKED over 2 outbursts: kernel omega=2.58 is NOT special (p=0.986) -> clean NULL (magnetospheric/surface -> firewall caveat, not a horizon recovery). Z2/Moebius readings (antiperiodic comb has zero power at the kernel omega): (3/2)^3 omega=5.165: p=0.3589 (n=6); (3/2)^4 omega=3.874: p=0.2709 (n=4); (3/2)^12 omega=1.291: n_used=0 (range/Nyquist-blind).",
       "result": {
         "n_points": 1281,
         "comb_periods": 3.54,
@@ -104,7 +104,33 @@
             "omega": 2.5827069463082895,
             "source": "XTE_J1810-197"
           }
-        ]
+        ],
+        "z2_battery": {
+          "(3/2)^3 (Z2 half-period)": {
+            "lambda": 3.375,
+            "omega": 5.165,
+            "n_used": 6,
+            "gain": 0.3437,
+            "p_value": 0.3589,
+            "comb_detected": false
+          },
+          "(3/2)^4 (Z2 antiperiodic harmonic)": {
+            "lambda": 5.0625,
+            "omega": 3.874,
+            "n_used": 4,
+            "gain": 0.1151,
+            "p_value": 0.2709,
+            "comb_detected": false
+          },
+          "(3/2)^12 (Z2 antiperiodic fundamental)": {
+            "lambda": 129.7463,
+            "omega": 1.291,
+            "n_used": 0,
+            "gain": 0.0,
+            "p_value": 1.0,
+            "comb_detected": false
+          }
+        }
       }
     },
     {
@@ -120,7 +146,7 @@
       "domain": "FRB burst tail (stacked)",
       "firewall_legitimacy": "horizon-residual",
       "data_status": "real",
-      "note": "REAL data: 8 bright FRB burst waterfall(s) across 3 repeater(s) [FRB190520x2, J2000-1234x5, FRB20201124Ax1]; 7 clear the ln-range gate (>= 2.8 comb periods). 117pulse (periods=3.19, p=0.6655); 149pulse (periods=3.02, p=0.2477); 20191003_1032 (periods=2.13, p=0.2116, <gate: range-blind, EXCLUDED); 315-pulse (periods=3.18, p=0.2477); 529-pulse (periods=3.06, p=0.2477); burst1 (1) (periods=3.19, p=0.2477); burst1 (periods=3.28, p=0.2477); pulse1 (periods=2.81, p=0.5181). STACKED over 7 burst tails: kernel omega=2.58 is NOT special (p=0.3414) -> clean NULL (horizon-residual, but FRB tails are scattering/noise-dominated and the comb is an intrinsic ~2% effect -> a weak constraint, not a horizon detection).",
+      "note": "REAL data: 8 bright FRB burst waterfall(s) across 3 repeater(s) [FRB190520x2, J2000-1234x5, FRB20201124Ax1]; 7 clear the ln-range gate (>= 2.8 comb periods). 117pulse (periods=3.19, p=0.6655); 149pulse (periods=3.02, p=0.2477); 20191003_1032 (periods=2.13, p=0.2116, <gate: range-blind, EXCLUDED); 315-pulse (periods=3.18, p=0.2477); 529-pulse (periods=3.06, p=0.2477); burst1 (1) (periods=3.19, p=0.2477); burst1 (periods=3.28, p=0.2477); pulse1 (periods=2.81, p=0.5181). STACKED over 7 burst tails: kernel omega=2.58 is NOT special (p=0.3414) -> clean NULL (horizon-residual, but FRB tails are scattering/noise-dominated and the comb is an intrinsic ~2% effect -> a weak constraint, not a horizon detection). Z2/Moebius readings (antiperiodic comb has zero power at the kernel omega): (3/2)^3 omega=5.165: p=0.8078 (n=8); (3/2)^4 omega=3.874: p=0.6026 (n=8); (3/2)^12 omega=1.291: n_used=0 (range/Nyquist-blind).",
       "result": {
         "n_points": 14257,
         "comb_periods": 3.28,
@@ -220,7 +246,33 @@
             "source": "pulse1",
             "frb": "J2000-1234"
           }
-        ]
+        ],
+        "z2_battery": {
+          "(3/2)^3 (Z2 half-period)": {
+            "lambda": 3.375,
+            "omega": 5.165,
+            "n_used": 8,
+            "gain": 0.008,
+            "p_value": 0.8078,
+            "comb_detected": false
+          },
+          "(3/2)^4 (Z2 antiperiodic harmonic)": {
+            "lambda": 5.0625,
+            "omega": 3.874,
+            "n_used": 8,
+            "gain": 0.0166,
+            "p_value": 0.6026,
+            "comb_detected": false
+          },
+          "(3/2)^12 (Z2 antiperiodic fundamental)": {
+            "lambda": 129.7463,
+            "omega": 1.291,
+            "n_used": 0,
+            "gain": 0.0,
+            "p_value": 1.0,
+            "comb_detected": false
+          }
+        }
       }
     },
     {
@@ -228,7 +280,7 @@
       "domain": "CHIME baseband FRB burst tail (stacked)",
       "firewall_legitimacy": "horizon-residual",
       "data_status": "real",
-      "note": "REAL CHIME baseband (2.56us, coherently dedispersed, full-Stokes): 8 distinct FRB(s); 8 clear the ln-range gate (>= 2.8 comb periods). FRB20181226E (periods=3.94, p=0.2477); FRB20181231C (periods=4.39, p=0.7541); FRB20190102A (periods=4.04, p=0.1013); FRB20190210B (periods=4.2, p=0.2477); FRB20190213D (periods=4.26, p=0.7016); FRB20190502B (periods=4.48, p=0.6528); FRB20190519H (periods=3.23, p=0.2477); FRB20190627A (periods=4.19, p=0.745). STACKED over 8 CHIME burst tails: kernel omega=2.58 is NOT special (p=0.6678) -> clean NULL (coherently-dedispersed genuine scattering tails -> cleaner than FAST, but a ms burst still has no wide recovery and the comb is an intrinsic ~2% effect -> a weak constraint, not a horizon detection).",
+      "note": "REAL CHIME baseband (2.56us, coherently dedispersed, full-Stokes): 8 distinct FRB(s); 8 clear the ln-range gate (>= 2.8 comb periods). FRB20181226E (periods=3.94, p=0.2477); FRB20181231C (periods=4.39, p=0.7541); FRB20190102A (periods=4.04, p=0.1013); FRB20190210B (periods=4.2, p=0.2477); FRB20190213D (periods=4.26, p=0.7016); FRB20190502B (periods=4.48, p=0.6528); FRB20190519H (periods=3.23, p=0.2477); FRB20190627A (periods=4.19, p=0.745). STACKED over 8 CHIME burst tails: kernel omega=2.58 is NOT special (p=0.6678) -> clean NULL (coherently-dedispersed genuine scattering tails -> cleaner than FAST, but a ms burst still has no wide recovery and the comb is an intrinsic ~2% effect -> a weak constraint, not a horizon detection). Z2/Moebius readings (antiperiodic comb has zero power at the kernel omega): (3/2)^3 omega=5.165: p=0.2104 (n=8); (3/2)^4 omega=3.874: p=0.4006 (n=8); (3/2)^12 omega=1.291: n_used=0 (range/Nyquist-blind).",
       "result": {
         "n_points": 219174,
         "comb_periods": 4.48,
@@ -320,7 +372,33 @@
             "omega": 2.5827069463082895,
             "source": "FRB20190627A"
           }
-        ]
+        ],
+        "z2_battery": {
+          "(3/2)^3 (Z2 half-period)": {
+            "lambda": 3.375,
+            "omega": 5.165,
+            "n_used": 8,
+            "gain": 0.1728,
+            "p_value": 0.2104,
+            "comb_detected": false
+          },
+          "(3/2)^4 (Z2 antiperiodic harmonic)": {
+            "lambda": 5.0625,
+            "omega": 3.874,
+            "n_used": 8,
+            "gain": 0.1778,
+            "p_value": 0.4006,
+            "comb_detected": false
+          },
+          "(3/2)^12 (Z2 antiperiodic fundamental)": {
+            "lambda": 129.7463,
+            "omega": 1.291,
+            "n_used": 0,
+            "gain": 0.0,
+            "p_value": 1.0,
+            "comb_detected": false
+          }
+        }
       }
     },
     {
@@ -328,7 +406,7 @@
       "domain": "GRB X-ray afterglow plateau (stacked)",
       "firewall_legitimacy": "surface",
       "data_status": "real",
-      "note": "REAL data: 22 Swift-XRT GRB afterglow(s); 17 clear the ln-range gate (>= 2.8 comb periods -- most single GRBs do, ~4-5 decades). GRB_050416A (periods=4.11, p=0.0597); GRB_050801 (periods=3.09, p=0.2387); GRB_050922C (periods=2.74, p=0.3533, <gate: EXCLUDED); GRB_051221A (periods=3.24, p=0.1519); GRB_060124 (periods=4.1, p=0.1989); GRB_060526 (periods=2.73, p=0.0018, <gate: EXCLUDED); GRB_060614 (periods=3.29, p=0.1826); GRB_060729 (periods=4.35, p=0.4521); GRB_061007 (periods=2.96, p=0.3146); GRB_061121 (periods=3.3, p=0.0958); GRB_080319B (periods=3.59, p=0.2098); GRB_080430 (periods=3.19, p=0.4882); GRB_081008 (periods=2.35, p=0.3509, <gate: EXCLUDED); GRB_090618 (periods=3.36, p=0.2188); GRB_100418A (periods=3.44, p=0.1989); GRB_100621A (periods=3.46, p=0.3255); GRB_100901A (periods=3.46, p=0.8969); GRB_110213A (periods=2.96, p=0.1573); GRB_110422A (periods=2.39, p=0.6497, <gate: EXCLUDED); GRB_120326A (periods=3.47, p=0.5407); GRB_121128A (periods=2.69, p=0.2441, <gate: EXCLUDED); GRB_130427A (periods=4.42, p=0.0036). STACKED over 17 GRBs: kernel omega=2.58 is NOT special (p=0.134) -> clean NULL (central-engine/accretion relaxation -> surface firewall, not a horizon recovery; but WIDE-ln(t) + high-statistics, so this NULL is well-powered, NOT data-limited).",
+      "note": "REAL data: 22 Swift-XRT GRB afterglow(s); 17 clear the ln-range gate (>= 2.8 comb periods -- most single GRBs do, ~4-5 decades). GRB_050416A (periods=4.11, p=0.0597); GRB_050801 (periods=3.09, p=0.2387); GRB_050922C (periods=2.74, p=0.3533, <gate: EXCLUDED); GRB_051221A (periods=3.24, p=0.1519); GRB_060124 (periods=4.1, p=0.1989); GRB_060526 (periods=2.73, p=0.0018, <gate: EXCLUDED); GRB_060614 (periods=3.29, p=0.1826); GRB_060729 (periods=4.35, p=0.4521); GRB_061007 (periods=2.96, p=0.3146); GRB_061121 (periods=3.3, p=0.0958); GRB_080319B (periods=3.59, p=0.2098); GRB_080430 (periods=3.19, p=0.4882); GRB_081008 (periods=2.35, p=0.3509, <gate: EXCLUDED); GRB_090618 (periods=3.36, p=0.2188); GRB_100418A (periods=3.44, p=0.1989); GRB_100621A (periods=3.46, p=0.3255); GRB_100901A (periods=3.46, p=0.8969); GRB_110213A (periods=2.96, p=0.1573); GRB_110422A (periods=2.39, p=0.6497, <gate: EXCLUDED); GRB_120326A (periods=3.47, p=0.5407); GRB_121128A (periods=2.69, p=0.2441, <gate: EXCLUDED); GRB_130427A (periods=4.42, p=0.0036). STACKED over 17 GRBs: kernel omega=2.58 is NOT special (p=0.134) -> clean NULL (central-engine/accretion relaxation -> surface firewall, not a horizon recovery; but WIDE-ln(t) + high-statistics, so this NULL is well-powered, NOT data-limited). Z2/Moebius readings (antiperiodic comb has zero power at the kernel omega): (3/2)^3 omega=5.165: p=0.4184 (n=22); (3/2)^4 omega=3.874: p=0.2802 (n=22); (3/2)^12 omega=1.291: n_used=0 (range/Nyquist-blind).",
       "result": {
         "n_points": 11195,
         "comb_periods": 4.42,
@@ -560,7 +638,33 @@
             "omega": 2.5827069463082895,
             "source": "GRB_130427A"
           }
-        ]
+        ],
+        "z2_battery": {
+          "(3/2)^3 (Z2 half-period)": {
+            "lambda": 3.375,
+            "omega": 5.165,
+            "n_used": 22,
+            "gain": 0.1037,
+            "p_value": 0.4184,
+            "comb_detected": false
+          },
+          "(3/2)^4 (Z2 antiperiodic harmonic)": {
+            "lambda": 5.0625,
+            "omega": 3.874,
+            "n_used": 22,
+            "gain": 0.138,
+            "p_value": 0.2802,
+            "comb_detected": false
+          },
+          "(3/2)^12 (Z2 antiperiodic fundamental)": {
+            "lambda": 129.7463,
+            "omega": 1.291,
+            "n_used": 0,
+            "gain": 0.0,
+            "p_value": 1.0,
+            "comb_detected": false
+          }
+        }
       }
     },
     {
@@ -568,7 +672,7 @@
       "domain": "nuclear transient (AGN-disk TDE) optical fade (ZTF)",
       "firewall_legitimacy": "surface",
       "data_status": "real",
-      "note": "REAL ZTF data: 2 per-band fade curve(s) across 1 nuclear transient(s); 1 clear the ln-range gate (>= 2.8 comb periods). J2245+3743:zg (407 epochs, periods=1.8, p=0.6624, <gate: range-blind, EXCLUDED); J2245+3743:zr (1007 epochs, periods=3.21, p=0.7993). KERNEL omega=2.58 on the widest band (J2245+3743:zr, 3.21 periods): NOT special (p=0.7993) -> clean NULL. TFPT-lambda battery (Bonferroni over gated ratios): global p=0.076 -> no TFPT log-period is special (NULL). Firewall: AGN-disk TDE = accretion/central-engine relaxation, NOT a horizon recovery -> any hit is a universal-DSI coincidence, never TFPT confirmation; this wide-ln(t) NULL is well-powered, not data-limited.",
+      "note": "REAL ZTF data: 2 per-band fade curve(s) across 1 nuclear transient(s); 1 clear the ln-range gate (>= 2.8 comb periods). J2245+3743:zg (407 epochs, periods=1.8, p=0.6624, <gate: range-blind, EXCLUDED); J2245+3743:zr (1007 epochs, periods=3.21, p=0.7993). KERNEL omega=2.58 on the widest band (J2245+3743:zr, 3.21 periods): NOT special (p=0.7993) -> clean NULL. TFPT-lambda battery (Bonferroni over gated ratios): global p=0.095 -> no TFPT log-period is special (NULL). Firewall: AGN-disk TDE = accretion/central-engine relaxation, NOT a horizon recovery -> any hit is a universal-DSI coincidence, never TFPT confirmation; this wide-ln(t) NULL is well-powered, not data-limited.",
       "result": {
         "n_points": 70,
         "n_epochs": 1414,
@@ -686,9 +790,36 @@
             "gain": 0.0,
             "p_value": 1.0,
             "comb_detected": false
+          },
+          "(3/2)^3 (Z2 half-period)": {
+            "lambda": 3.375,
+            "omega": 5.165,
+            "idio": true,
+            "n_used": 1,
+            "gain": 0.0047,
+            "p_value": 0.9645,
+            "comb_detected": false
+          },
+          "(3/2)^4 (Z2 antiperiodic harmonic)": {
+            "lambda": 5.0625,
+            "omega": 3.874,
+            "idio": true,
+            "n_used": 1,
+            "gain": 0.1255,
+            "p_value": 0.2644,
+            "comb_detected": false
+          },
+          "(3/2)^12 (Z2 antiperiodic fundamental)": {
+            "lambda": 129.7463,
+            "omega": 1.291,
+            "idio": true,
+            "n_used": 0,
+            "gain": 0.0,
+            "p_value": 1.0,
+            "comb_detected": false
           }
         },
-        "lambda_battery_global_p": 0.076,
+        "lambda_battery_global_p": 0.095,
         "lambda_battery_curve": "J2245+3743:zr",
         "stack": null
       }

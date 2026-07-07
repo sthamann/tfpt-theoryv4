@@ -24,6 +24,7 @@ from pathlib import Path
 import numpy as np
 
 from .comb import LAMBDA, MIN_COMB_PERIODS, OMEGA
+from .quake import Z2_LAMBDAS, _omega
 
 # --- vetted microshot arrival times (ms), Hewitt et al. 2023, Zenodo 10552561 / Figure2+6.ipynb ---
 B1_TIMES_MS = [11.9, 15.625, 15.8, 15.970, 16.136, 16.198, 16.358, 16.55, 16.715, 16.905, 17.016,
@@ -103,10 +104,13 @@ def cascade_wall(t: np.ndarray, rng: np.random.Generator) -> dict:
             "p_deficit": round(p_def, 4), "supported": bool(obs <= 3 and p_def < 0.05)}
 
 
-def time_comb(t: np.ndarray, rng: np.random.Generator, n_pool: int = 400) -> dict:
-    """Log-periodic (DSI) clustering of the microshot times at the kernel lambda=(3/2)^6. Times are
-    taken relative to a forest onset t0 = t_min - median_gap (so all tau>0); Rayleigh power at the
-    kernel omega ranked against a matched off-kernel pool. Range-limited: needs >=2.8 periods."""
+def time_comb(t: np.ndarray, rng: np.random.Generator, n_pool: int = 400, *,
+              omega: float = OMEGA, lam: float = LAMBDA) -> dict:
+    """Log-periodic (DSI) clustering of the microshot times at `lam` (default: the kernel
+    lambda=(3/2)^6). Times are taken relative to a forest onset t0 = t_min - median_gap (so all
+    tau>0); Rayleigh power at `omega` ranked against a matched off-kernel pool. Range-limited:
+    needs >=2.8 periods OF THAT lambda (the gate is per-omega, so the Z2 half-period reading
+    (3/2)^3 can pass on a forest that is range-blind at the kernel)."""
     ts = np.sort(np.asarray(t, float))
     g = np.diff(ts)
     t0 = ts[0] - float(np.median(g))
@@ -114,14 +118,14 @@ def time_comb(t: np.ndarray, rng: np.random.Generator, n_pool: int = 400) -> dic
     x = np.log(tau[tau > 0])
     if len(x) < 6:
         return {"periods": 0.0, "range_sufficient": False, "p": 1.0, "rayleigh": 0.0}
-    periods = float((x.max() - x.min()) / math.log(LAMBDA))
+    periods = float((x.max() - x.min()) / math.log(lam))
 
     def rayleigh(om: float) -> float:
         return float(abs(np.sum(np.exp(1j * om * x))) / len(x))
 
-    r0 = rayleigh(OMEGA)
-    fs = rng.uniform(0.72 * OMEGA, 1.40 * OMEGA, n_pool)
-    fs = fs[np.abs(fs - OMEGA) > 0.06 * OMEGA]
+    r0 = rayleigh(omega)
+    fs = rng.uniform(0.72 * omega, 1.40 * omega, n_pool)
+    fs = fs[np.abs(fs - omega) > 0.06 * omega]
     pool = np.array([rayleigh(f) for f in fs])
     p = float((1 + np.sum(pool >= r0)) / (len(pool) + 1))
     return {"periods": round(periods, 2), "range_sufficient": bool(periods >= MIN_COMB_PERIODS),
@@ -217,7 +221,10 @@ def analyze(seed: int = 0) -> dict:
         t = np.array(times)
         res = {"n_shots": len(t), "span_ms": round(float(t.max() - t.min()), 3),
                "gap_clock": gap_clock(t, rng), "wall": cascade_wall(t, rng),
-               "time_comb": time_comb(t, rng), "echo": None}
+               "time_comb": time_comb(t, rng),
+               "z2_time_comb": {label: time_comb(t, rng, omega=_omega(lam), lam=lam)
+                                for label, lam in Z2_LAMBDAS.items()},
+               "echo": None}
         # amplitude (echo-ratio) extension, if the NRT filterbanks are present
         prep = NRT_PREP.get(name)
         if prep and (ECLAT / prep[0]).exists():
@@ -238,6 +245,9 @@ def analyze(seed: int = 0) -> dict:
               f"(null mean {wl['mean_null_run']}) p_deficit={wl['p_deficit']} -> supported={wl['supported']}")
         print(f"    time DSI comb:  periods={tc['periods']} (gate {MIN_COMB_PERIODS}) "
               f"rayleigh p={tc['p']} -> detected={tc['detected']}")
+        for zl, zc in res["z2_time_comb"].items():
+            print(f"    Z2 {zl.split(' ')[0]:8s} comb: periods={zc['periods']} "
+                  f"(gate {MIN_COMB_PERIODS}) rayleigh p={zc['p']} -> detected={zc['detected']}")
         ec = res["echo"]
         if ec and "energy" in ec and ec["energy"]:
             print(f"    echo ratio:     energy(64/729) enr={ec['energy']['enrichment']} p={ec['energy']['p']}"
@@ -248,6 +258,7 @@ def analyze(seed: int = 0) -> dict:
         else:
             print("    echo ratio:     SKIPPED (NRT filterbanks not present; fetch Zenodo 10552561 nrt_data)")
     any_support = any(b["gap_clock"]["supported"] or b["wall"]["supported"] or b["time_comb"]["detected"]
+                      or any(z["detected"] for z in b["z2_time_comb"].values())
                       or (b.get("echo") or {}).get("supported", False)
                       for b in out["bursts"].values())
     has_echo = any((b.get("echo") or {}).get("energy") for b in out["bursts"].values())

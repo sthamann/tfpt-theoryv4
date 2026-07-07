@@ -1,0 +1,134 @@
+# QGEO S_off on a REAL measured boundary operator (EIT) -- preregistered v1
+# Frozen 2026-07-06 BEFORE any data pass (the KIT4 open EIT set is downloaded only
+# after this file is committed in spirit; the mu4-POSITIVE configuration does not
+# exist in the archive and is preregistered here as the decisive future measurement).
+#
+# FIREWALL: analog / instrument validation of the S_off observable -- NEVER external
+# evidence for TFPT. evidence_class = internal_consistency, same basket as
+# qc-recovery-kernel / quantum-testbed. A "hit" (a mu4-symmetric tank returning to the
+# instrument floor) validates the OBSERVABLE, not the physics; a failure kills the
+# analog CHANNEL, not the compiler.
+
+target: >
+  The seam premise QGEO.SYM.01, in its narrowest operator form (research contracts,
+  v198/v201/v210): the boundary energy form (DtN/ND map) of a mu4-marked disk is
+  block-diagonal in the four mu4 character classes {n = r mod 4}; Z3 or generic marks
+  break it. Simulation side certified by theory-contracts/qgeo_soff_reconstruction.py
+  (instrument requirement: relative spectral precision 1e-3 detects a mark shift of
+  1e-3 rad). THIS experiment asks whether the statistic is measurable on a real
+  laboratory boundary operator at all, and calibrates the real instrument floor.
+
+observable: >
+  From the KIT4 open 2D EIT archive (Zenodo 10.5281/zenodo.1203914; Hauptmann et al.
+  arXiv:1704.01178; circular tank, 16 equidistant electrodes, 79 pairwise current
+  injections, 1264 voltages per case): reconstruct the mean-free electrode
+  Neumann-to-Dirichlet matrix R (least squares over all injections), transform to the
+  16-electrode Fourier basis (16 = 4 classes x 4 modes -- the mu4 character classes are
+  exact), and compute
+    S_off = sum_{r != s} ||P_r R P_s||_F^2 / ||R||_F^2   (mean-free block)
+  plus the clock commutator ||[rho, R]||/||R|| with rho = rotation by 4 electrodes
+  (= pi/2, an exact permutation).
+
+hypotheses:
+  H1_floor: >
+    Case 1.0 (homogeneous saline) is rotation-invariant, hence mu4-symmetric: S_off and
+    the rho-commutator sit at the INSTRUMENT floor. The floor (electrode/contact
+    variability + reciprocity error ||R - R^T||/||R||) is the measured analog of the
+    sigma dial in qgeo_soff_reconstruction.py and is compared against the 1e-3
+    requirement.
+  H2_controls: >
+    Every inclusion case (1.1-8.6, generic placements) must LEAK: S_off well above the
+    homogeneous floor. The approximately annular cases (6.1, 8.1 foam rings) should sit
+    between floor and generic (approximate rotation invariance).
+  H3_mu4_positive (FUTURE MEASUREMENT, not in the archive): >
+    Four IDENTICAL inclusions placed at j*pi/2 (same radius, same distance from center,
+    aligned to electrodes 1/5/9/13) return S_off to the H1 floor while any single- or
+    three-inclusion placement leaks -- the mu4 block-diagonality read on a real
+    boundary operator. Decisive; any EIT lab with a KIT4-class system can run it.
+
+kill_conditions:
+  - "H1 fails (homogeneous tank leaks far above the reciprocity floor): the S_off
+     observable is not realisable at KIT4-class precision -> analog channel
+     data_limited/dead at this hardware class, not a TFPT statement."
+  - "H2 fails (generic inclusions do NOT leak): the statistic has no discriminating
+     power on real hardware -> channel dead."
+  - "H3 (when measured) fails at demonstrated instrument precision: the mu4
+     block-diagonality is not realisable in an analog boundary system -> the analog
+     realisation path for QGEO.SYM.01 closes (the symbolic/numerical contracts stand)."
+
+status_language: >
+  Outcomes are typed consistent / data_limited / channel-dead only; never [E], never
+  TFPT confirmation. The mu4-positive leg stays data_limited until H3 is measured.
+
+# ---------------------------------------------------------------------------
+# v1.1 ADDENDUM (2026-07-06, AFTER the first data pass -- documented deviation,
+# not a silent rewrite): the v1 H2 wording "every inclusion case must LEAK" was
+# geometrically too coarse. The target photos show that the low-S_off inclusion
+# cases (1.4, 7.1, 7.2, 8.x) are CENTERED or annular targets -- approximately
+# rotation-invariant, hence correctly non-leaking (rotation invariance implies
+# mu4 invariance; these are not false negatives). H2 is therefore evaluated on
+# the ANISOTROPY-gated subset: cases whose off-circulant (rotation-breaking)
+# weight exceeds 10x the homogeneous floor must leak with the generic isotropic
+# signature (forbidden harmonic fraction ~ 12/15 = 0.8), and none may fake a
+# mu4 positive (fraction -> floor). The decisive discriminator for H3 is
+# unchanged: LARGE anisotropy with forbidden fraction at the floor.
+addendum_v1_1:
+  h2_refined: anisotropy-gated (>= 10x homogeneous off-circulant floor)
+  reason: centered/annular targets are rotation-invariant-like -> no leak expected
+  typed: documented post-data refinement (photos), on record
+
+# ---------------------------------------------------------------------------
+# v1.2 FREEZE (2026-07-06, difference-operator upgrade; frozen BEFORE any future
+# H3 measurement -- this section is the acceptance protocol for the lab run):
+addendum_v1_2:
+  primary_metric: >
+    Difference operator Delta = R_case - R_hom on the mean-free electrode space
+    (NtD is the direct measurement; DtN proxy = pseudoinverse as robustness leg;
+    the commutant transfers exactly in the ideal case, verified to 1e-15).
+    A_on = sum_r ||P_r Delta P_r||^2, A_off = sum_{r!=s} ||P_r Delta P_s||^2,
+    f_forbid = A_off/(A_on+A_off) (atlas descriptor). PASS/FAIL dial = ABSOLUTE
+    forbidden leakage over the split-half noise floor:
+    leak(m) = sqrt(A_off_m(Delta)/A_off_m(Delta_noise)); C_m holds if leak(m) < 3,
+    broken if >= 10, ambiguous in between. Rationale (v1.2 lesson, on record): a
+    dominant rotation-invariant component dilutes the FRACTION while the
+    anisotropic part still leaks -- the fraction alone is the wrong dial.
+  group_fingerprint: >
+    leak profile under C2/C4/C8/C16. H3 class = Delta visible (>=10x floor) AND
+    C4 holds AND C8 broken -- a centered ring passes C8 too and can never fake
+    a positive; a generic target breaks C4 already.
+  clock_recovery: >
+    Leakage L(k) over all 15 electrode rotations; for the H3 target the minima
+    must sit at k in {4, 8, 12} (pi/2 orbit), READ OFF the operator, not assumed.
+  reflection: >
+    D4 face (Theta rho Theta = rho^-1, v196): min over the 16 dihedral axes of
+    ||sigma Delta sigma - Delta||/||Delta|| must reach the floor for an aligned
+    square (axis scanned, orientation recorded).
+  scaling_law: >
+    For small controlled mu4 breaking delta, the forbidden ENERGY leakage scales
+    quadratically: A_off ~ delta^2 (verified on the simulation contract: exponent
+    1.998 over eps = 1e-3..3.2e-2). The lab break-ladder must reproduce this.
+  floor_caveat: >
+    The split-half floor is a LOWER bound (injection noise only); between-session
+    systematics (refill, temperature, contact drift) are NOT in it -- the v1.2
+    archive run shows near-invariant rings at leak 4-6x (ambiguous zone). The H3
+    protocol therefore REQUIRES repeat homogeneous measurements (same session and
+    across sessions) to calibrate the true reproducibility floor.
+  blind_protocol: >
+    20-40 measurements in random order; the pipeline receives only currents and
+    voltages (no photos, no labels) and must classify each case into
+    {homogeneous-like, rotation-invariant-like, C4-POSITIVE, C2-symmetric,
+    generic-anisotropic, ambiguous} using the frozen scores: rank(patterns)=15,
+    reciprocity, |Delta|/floor, leak(C2/C4/C8/C16), NtD-vs-DtN agreement,
+    reflection score, clock-recovery minima. Unblinding only after score lock.
+  break_ladder: >
+    Measurement series: homogeneous / 1 off-center cylinder / 2 opposite /
+    4 identical at j*pi/2 / 4 with one rotated by dtheta / 4 with one radially
+    displaced / 4 with one at different conductivity / centered ring /
+    off-center ring. Expectations: case 4 = C4-POSITIVE; cases 5-7 = leak rising
+    ~ delta^2; ring = rotation-invariant-like (never a positive).
+  archive_run_v1_2: >
+    Result on the 38 KIT4 cases (no mu4 target present, as required): 0
+    C4-positives; 26 generic-anisotropic, 1 rotation-invariant-like (7.1), 1
+    homogeneous-like (1.4), 9 ambiguous (between-session floor); geometry-blind
+    classifier agrees with documented geometry 34/37 -- the 3 mismatches are
+    physically real (the 6.1 foam annulus has visible joints -> genuine leak).

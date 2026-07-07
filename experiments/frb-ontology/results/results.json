@@ -1,0 +1,1354 @@
+{
+  "experiment": "frb-ontology",
+  "prereg": "hypotheses/frb_ontology_v1.yaml",
+  "seed": 0,
+  "axes": {
+    "FO.02": {
+      "axis": "FO.02_common_rate_medium",
+      "n_sessions": 89,
+      "n_acf_points": 48,
+      "single_rates_per_day": {
+        "RM": 0.01863,
+        "DM": 0.01639,
+        "log10Weff": 0.08707,
+        "DOL": 0.07657
+      },
+      "shared_fit": {
+        "r1_per_day": 0.01863,
+        "ratio": 4.1959,
+        "amps": {
+          "RM": [
+            0.5205,
+            0.0
+          ],
+          "DM": [
+            0.5722,
+            0.0
+          ],
+          "log10Weff": [
+            0.0,
+            0.2709
+          ],
+          "DOL": [
+            0.0,
+            0.2185
+          ]
+        },
+        "sse_two": 41.0912,
+        "sse_one": 40.6901,
+        "aic_two": 12.54,
+        "aic_one": 8.07
+      },
+      "two_rate_required_by_aic": false,
+      "kernel_ratio": 2.709511,
+      "dstat_ln": 0.4373,
+      "placebo_dstat_ln": {
+        "1.5": 1.0286,
+        "2.0": 0.741,
+        "3.5": 0.1813,
+        "4.5": 0.07
+      },
+      "kernel_closest": false,
+      "p_ou_null": 0.5489021956087824,
+      "verdict": "data_limited",
+      "note": "AIC prefers per-observable single rates -> the data do not require a second rate"
+    },
+    "FO.02b": {
+      "axis": "FO.02b_intra_session_common_rate",
+      "per_source": [
+        {
+          "source": "FRB20240114A",
+          "n_sessions_eligible": 35,
+          "n_sessions_two_rate": 0,
+          "sessions": [
+            {
+              "mjd0": 60374.189,
+              "obs_kept": [
+                "log10Weff",
+                "DOL"
+              ],
+              "ratio": 6.005,
+              "r1_per_s": 0.07156163213076047,
+              "aic_two": 11.6,
+              "aic_one": 10.4,
+              "two_required": false
+            },
+            {
+              "mjd0": 60375.136,
+              "gate": "memory_failed",
+              "n_memory_obs": 0
+            },
+            {
+              "mjd0": 60376.104,
+              "gate": "memory_failed",
+              "n_memory_obs": 0
+            },
+            {
+              "mjd0": 60377.194,
+              "gate": "memory_failed",
+              "n_memory_obs": 1
+            },
+            {
+              "mjd0": 60378.193,
+              "gate": "memory_failed",
+              "n_memory_obs": 1
+            },
+            {
+              "mjd0": 60379.2,
+              "gate": "memory_failed",
+              "n_memory_obs": 0
+            },
+            {
+              "mjd0": 60380.154,
+              "gate": "memory_failed",
+              "n_memory_obs": 1
+            },
+            {
+              "mjd0": 60381.039,
+              "obs_kept": [
+                "RM",
+                "DOL"
+              ],
+              "ratio": 1.907,
+              "r1_per_s": 0.00036872094809344724,
+              "aic_two": 59.1,
+              "aic_one": 55.1,
+              "two_required": false
+            },
+            {
+              "mjd0": 60382.174,
+              "gate": "memory_failed",
+              "n_memory_obs": 0
+            },
+            {
+              "mjd0": 60386.12,
+              "gate": "memory_failed",
+              "n_memory_obs": 0
+            },
+            {
+              "mjd0": 60390.159,
+              "gate": "memory_failed",
+              "n_memory_obs": 0
+            },
+            {
+              "mjd0": 60396.134,
+              "gate": "memory_failed",
+              "n_memory_obs": 0
+            },
+            {
+              "mjd0": 60398.983,
+              "gate": "memory_failed",
+              "n_memory_obs": 0
+            },
+            {
+              "mjd0": 60401.068,
+              "gate": "memory_failed",
+              "n_memory_obs": 0
+            },
+            {
+              "mjd0": 60403.048,
+              "gate": "memory_failed",
+              "n_memory_obs": 0
+            },
+            {
+              "mjd0": 60430.03,
+              "gate": "memory_failed",
+              "n_memory_obs": 0
+            },
+            {
+              "mjd0": 60504.762,
+              "gate": "memory_failed",
+              "n_memory_obs": 0
+            },
+            {
+              "mjd0": 60511.686,
+              "gate": "memory_failed",
+              "n_memory_obs": 1
+            },
+            {
+              "mjd0": 60513.802,
+              "gate": "memory_failed",
+              "n_memory_obs": 0
+            },
+            {
+              "mjd0": 60515.775,
+              "gate": "memory_failed",
+              "n_memory_obs": 0
+            },
+            {
+              "mjd0": 60517.82,
+              "gate": "memory_failed",
+              "n_memory_obs": 0
+            },
+            {
+              "mjd0": 60518.743,
+              "gate": "memory_failed",
+              "n_memory_obs": 0
+            },
+            {
+              "mjd0": 60519.766,
+              "gate": "memory_failed",
+              "n_memory_obs": 0
+            },
+            {
+              "mjd0": 60521.801,
+              "gate": "memory_failed",
+              "n_memory_obs": 1
+            },
+            {
+              "mjd0": 60524.785,
+              "gate": "memory_failed",
+              "n_memory_obs": 0
+            },
+            {
+              "mjd0": 60653.358,
+              "gate": "memory_failed",
+              "n_memory_obs": 0
+            },
+            {
+              "mjd0": 60669.349,
+              "gate": "memory_failed",
+              "n_memory_obs": 0
+            },
+            {
+              "mjd0": 60670.401,
+              "gate": "memory_failed",
+              "n_memory_obs": 0
+            },
+            {
+              "mjd0": 60676.316,
+              "gate": "memory_failed",
+              "n_memory_obs": 0
+            },
+            {
+              "mjd0": 60677.271,
+              "gate": "memory_failed",
+              "n_memory_obs": 0
+            },
+            {
+              "mjd0": 60683.308,
+              "gate": "memory_failed",
+              "n_memory_obs": 0
+            },
+            {
+              "mjd0": 60687.294,
+              "gate": "memory_failed",
+              "n_memory_obs": 0
+            },
+            {
+              "mjd0": 60690.247,
+              "gate": "memory_failed",
+              "n_memory_obs": 0
+            },
+            {
+              "mjd0": 60694.282,
+              "gate": "memory_failed",
+              "n_memory_obs": 0
+            },
+            {
+              "mjd0": 60803.981,
+              "gate": "memory_failed",
+              "n_memory_obs": 0
+            }
+          ],
+          "kernel_ratio": 2.709511,
+          "memory_gate_injection_validation": {
+            "ou_tau120s": "31/35",
+            "ou_tau600s": "32/35",
+            "ou_tau1800s": "34/35",
+            "white_noise_fp": "3/35"
+          },
+          "verdict": "data_limited",
+          "note": "preregistered informative negative: 33/35 sessions fail the MEMORY gate although the gate is injection-validated on the same timestamps -> the intra-session variance is per-burst (magnetospheric/sightline), NOT a relaxing medium state; the two-rate ratio is untestable in this channel (data_limited per prereg), and the 'FRB as medium measurement' reading is disfavoured at burst-sampling cadence"
+        },
+        {
+          "source": "FRB20201124A",
+          "n_sessions_eligible": 12,
+          "n_sessions_two_rate": 0,
+          "sessions": [
+            {
+              "mjd0": 59313.326,
+              "gate": "memory_failed",
+              "n_memory_obs": 0
+            },
+            {
+              "mjd0": 59314.322,
+              "gate": "memory_failed",
+              "n_memory_obs": 0
+            },
+            {
+              "mjd0": 59315.319,
+              "gate": "memory_failed",
+              "n_memory_obs": 0
+            },
+            {
+              "mjd0": 59316.319,
+              "gate": "memory_failed",
+              "n_memory_obs": 0
+            },
+            {
+              "mjd0": 59318.312,
+              "gate": "memory_failed",
+              "n_memory_obs": 0
+            },
+            {
+              "mjd0": 59319.312,
+              "gate": "memory_failed",
+              "n_memory_obs": 0
+            },
+            {
+              "mjd0": 59322.301,
+              "gate": "memory_failed",
+              "n_memory_obs": 0
+            },
+            {
+              "mjd0": 59323.299,
+              "gate": "memory_failed",
+              "n_memory_obs": 0
+            },
+            {
+              "mjd0": 59326.224,
+              "gate": "memory_failed",
+              "n_memory_obs": 1
+            },
+            {
+              "mjd0": 59328.265,
+              "gate": "memory_failed",
+              "n_memory_obs": 0
+            },
+            {
+              "mjd0": 59334.227,
+              "gate": "memory_failed",
+              "n_memory_obs": 1
+            },
+            {
+              "mjd0": 59337.214,
+              "gate": "memory_failed",
+              "n_memory_obs": 1
+            }
+          ],
+          "kernel_ratio": 2.709511,
+          "memory_gate_injection_validation": {
+            "ou_tau120s": "9/12",
+            "ou_tau600s": "8/12",
+            "ou_tau1800s": "10/12",
+            "white_noise_fp": "0/12"
+          },
+          "verdict": "data_limited",
+          "note": "preregistered informative negative: 12/12 sessions fail the MEMORY gate although the gate is injection-validated on the same timestamps -> the intra-session variance is per-burst (magnetospheric/sightline), NOT a relaxing medium state; the two-rate ratio is untestable in this channel (data_limited per prereg), and the 'FRB as medium measurement' reading is disfavoured at burst-sampling cadence"
+        }
+      ],
+      "verdicts": {
+        "FRB20240114A": "data_limited",
+        "FRB20201124A": "data_limited"
+      },
+      "verdict": "data_limited"
+    },
+    "FO.03": {
+      "axis": "FO.03_state_clock_comb",
+      "omega": 2.5827,
+      "n_gate_passing_sessions": 3,
+      "n_gated_out": 32,
+      "sessions": [
+        {
+          "mjd0": 60375.136,
+          "n_rm": 508,
+          "n_phases": 506,
+          "reach_periods": 2.82,
+          "floor_rad_m2": 1.15,
+          "rayleigh_z": 62.604,
+          "p_perm": 0.6711644177911045,
+          "p_rank": 0.8429752066115702,
+          "p_session": 0.8429752066115702
+        },
+        {
+          "mjd0": 60380.154,
+          "n_rm": 344,
+          "n_phases": 343,
+          "reach_periods": 2.85,
+          "floor_rad_m2": 1.5,
+          "rayleigh_z": 51.928,
+          "p_perm": 0.21739130434782608,
+          "p_rank": 0.4462809917355372,
+          "p_session": 0.4462809917355372
+        },
+        {
+          "mjd0": 60381.039,
+          "n_rm": 1421,
+          "n_phases": 1419,
+          "reach_periods": 3.16,
+          "floor_rad_m2": 1.6,
+          "rayleigh_z": 195.343,
+          "p_perm": 0.2913543228385807,
+          "p_rank": 0.5867768595041323,
+          "p_session": 0.5867768595041323
+        }
+      ],
+      "fisher_p": 0.8061473596153418,
+      "verdict": "null",
+      "note": "comb at detectable amplitude absent in the state clock; the predicted epsilon = 1.7% stays behind the amplitude wall (data_limited)"
+    },
+    "FO.04": {
+      "axis": "FO.04_parity_without_rate",
+      "n_pa_bursts": 6133,
+      "vm2_fit": {
+        "mu_pa_deg": [
+          12.7,
+          -47.6
+        ],
+        "kappa": [
+          1.35,
+          3.98
+        ],
+        "weights": [
+          0.934,
+          0.066
+        ],
+        "mode_separation_pa_deg": 60.2
+      },
+      "a_m4_refinement": {
+        "A2": 0.1251,
+        "A_obs": {
+          "3": 0.0878,
+          "4": 0.0424,
+          "5": 0.0227,
+          "6": 0.0365
+        },
+        "p_vm2_null": {
+          "3": 0.0004997501249375312,
+          "4": 0.0004997501249375312,
+          "5": 0.04547726136931534,
+          "6": 0.0009995002498750624
+        },
+        "z_vm2_null": {
+          "3": 3.64,
+          "4": 4.43,
+          "5": 1.92,
+          "6": 4.19
+        },
+        "p_m4_vm3_null": 0.6356821589205397,
+        "m4_specific_mu4_pointer": false,
+        "prediction_no_excess_holds": true,
+        "battery_note": "v1.1 addendum ON RECORD: the specificity battery (odd-harmonic placebos + 3-component smooth null) was added after the vm2-only first run fired at m=4"
+      },
+      "b_switch_rate_free": {
+        "n_ratio_pairs": 376,
+        "tooth_hits": 89,
+        "tooth_enrichment": 0.7375334065342145,
+        "p_teeth": 1.0,
+        "n_comb_gated_sessions": 0,
+        "p_comb_fisher": null,
+        "prediction_rate_free_holds": true
+      },
+      "c_persistence": {
+        "n_sessions": 45,
+        "n_dominant_global": 45,
+        "p_binomial_one_sided": 2.842170943040401e-14,
+        "prediction_persistent_holds": true
+      },
+      "verdict": "consistent"
+    },
+    "FO.05": {
+      "axis": "FO.05_episode_transfer",
+      "episode_gap_primary_d": 5.0,
+      "sources_primary": [
+        {
+          "source": "FRB20220912A",
+          "gap_def_d": 5.0,
+          "n_bursts": 2088,
+          "n_episodes_valid": 8,
+          "n_quiescence_gaps": 6,
+          "gap_ratio_test": {
+            "n_ratios": 5,
+            "hits": 2,
+            "null_mean": 1.978,
+            "enrichment": 1.011,
+            "p": 0.6931534232883558
+          },
+          "gap_placebo": {
+            "1.8": {
+              "n_ratios": 5,
+              "hits": 1,
+              "null_mean": 1.312,
+              "enrichment": 0.762,
+              "p": 0.8600699650174912
+            },
+            "2.5": {
+              "n_ratios": 5,
+              "hits": 2,
+              "null_mean": 1.978,
+              "enrichment": 1.011,
+              "p": 0.6796601699150425
+            },
+            "4.0": {
+              "n_ratios": 5,
+              "hits": 0,
+              "null_mean": 0.0,
+              "enrichment": 0.0,
+              "p": 1.0
+            }
+          },
+          "energy_ratio_test": {
+            "n_ratios": 2,
+            "hits": 0,
+            "null_mean": 0.0,
+            "enrichment": 0.0,
+            "p": 1.0
+          },
+          "energy_kind": "energy"
+        },
+        {
+          "source": "FRB20121102A",
+          "gap_def_d": 5.0,
+          "n_bursts": 2043,
+          "n_episodes_valid": 12,
+          "n_quiescence_gaps": 7,
+          "gap_ratio_test": {
+            "n_ratios": 6,
+            "hits": 2,
+            "null_mean": 2.545,
+            "enrichment": 0.786,
+            "p": 0.8345827086456772
+          },
+          "gap_placebo": {
+            "1.8": {
+              "n_ratios": 6,
+              "hits": 0,
+              "null_mean": 1.161,
+              "enrichment": 0.0,
+              "p": 1.0
+            },
+            "2.5": {
+              "n_ratios": 6,
+              "hits": 1,
+              "null_mean": 1.145,
+              "enrichment": 0.873,
+              "p": 0.7971014492753623
+            },
+            "4.0": {
+              "n_ratios": 6,
+              "hits": 0,
+              "null_mean": 0.0,
+              "enrichment": 0.0,
+              "p": 1.0
+            }
+          },
+          "energy_ratio_test": {
+            "n_ratios": 11,
+            "hits": 2,
+            "null_mean": 1.442,
+            "enrichment": 1.386,
+            "p": 0.4512743628185907
+          },
+          "energy_kind": "fluence"
+        },
+        {
+          "source": "FRB20230607A",
+          "gap_def_d": 5.0,
+          "n_bursts": 565,
+          "n_episodes_valid": 13,
+          "n_quiescence_gaps": 11,
+          "gap_ratio_test": {
+            "n_ratios": 10,
+            "hits": 3,
+            "null_mean": 5.476,
+            "enrichment": 0.548,
+            "p": 0.9770114942528736
+          },
+          "gap_placebo": {
+            "1.8": {
+              "n_ratios": 10,
+              "hits": 2,
+              "null_mean": 3.066,
+              "enrichment": 0.652,
+              "p": 0.9105447276361819
+            },
+            "2.5": {
+              "n_ratios": 10,
+              "hits": 2,
+              "null_mean": 2.752,
+              "enrichment": 0.727,
+              "p": 0.823088455772114
+            },
+            "4.0": {
+              "n_ratios": 10,
+              "hits": 1,
+              "null_mean": 1.263,
+              "enrichment": 0.792,
+              "p": 0.7746126936531734
+            }
+          },
+          "energy_ratio_test": {
+            "n_ratios": 12,
+            "hits": 4,
+            "null_mean": 3.846,
+            "enrichment": 1.04,
+            "p": 0.6011994002998501
+          },
+          "energy_kind": "fluence"
+        },
+        {
+          "source": "FRB20180916B",
+          "gap_def_d": 5.0,
+          "n_bursts": 276,
+          "n_episodes_valid": 16,
+          "n_quiescence_gaps": 8,
+          "gap_ratio_test": {
+            "n_ratios": 7,
+            "hits": 1,
+            "null_mean": 0.98,
+            "enrichment": 1.021,
+            "p": 0.7296351824087957
+          },
+          "gap_placebo": {
+            "1.8": {
+              "n_ratios": 7,
+              "hits": 4,
+              "null_mean": 2.97,
+              "enrichment": 1.347,
+              "p": 0.34832583708145926
+            },
+            "2.5": {
+              "n_ratios": 7,
+              "hits": 2,
+              "null_mean": 1.986,
+              "enrichment": 1.007,
+              "p": 0.6826586706646677
+            },
+            "4.0": {
+              "n_ratios": 7,
+              "hits": 0,
+              "null_mean": 0.241,
+              "enrichment": 0.0,
+              "p": 1.0
+            }
+          },
+          "energy_ratio_test": {
+            "n_ratios": 15,
+            "hits": 7,
+            "null_mean": 5.357,
+            "enrichment": 1.307,
+            "p": 0.23888055972013994
+          },
+          "energy_kind": "fluence"
+        },
+        {
+          "source": "FRB20190520B",
+          "gap_def_d": 5.0,
+          "n_bursts": 114,
+          "n_episodes_valid": 6,
+          "n_quiescence_gaps": 3,
+          "gap_ratio_test": {
+            "n_ratios": 2,
+            "hits": 1,
+            "null_mean": 0.69,
+            "enrichment": 1.45,
+            "p": 0.6896551724137931
+          },
+          "gap_placebo": {
+            "1.8": {
+              "n_ratios": 2,
+              "hits": 1,
+              "null_mean": 0.659,
+              "enrichment": 1.516,
+              "p": 0.6596701649175413
+            },
+            "2.5": {
+              "n_ratios": 2,
+              "hits": 1,
+              "null_mean": 1.352,
+              "enrichment": 0.74,
+              "p": 1.0
+            },
+            "4.0": {
+              "n_ratios": 2,
+              "hits": 0,
+              "null_mean": 0.0,
+              "enrichment": 0.0,
+              "p": 1.0
+            }
+          },
+          "energy_ratio_test": {
+            "n_ratios": 5,
+            "hits": 2,
+            "null_mean": 0.663,
+            "enrichment": 3.017,
+            "p": 0.06296851574212893
+          },
+          "energy_kind": "energy"
+        },
+        {
+          "source": "FRB20240114A(v5)",
+          "gap_def_d": 5.0,
+          "n_bursts": 6134,
+          "n_episodes_valid": 35,
+          "n_quiescence_gaps": 28,
+          "gap_ratio_test": {
+            "n_ratios": 27,
+            "hits": 10,
+            "null_mean": 9.337,
+            "enrichment": 1.071,
+            "p": 0.46276861569215394
+          },
+          "gap_placebo": {
+            "1.8": {
+              "n_ratios": 27,
+              "hits": 6,
+              "null_mean": 3.85,
+              "enrichment": 1.558,
+              "p": 0.10694652673663169
+            },
+            "2.5": {
+              "n_ratios": 27,
+              "hits": 0,
+              "null_mean": 0.146,
+              "enrichment": 0.0,
+              "p": 1.0
+            },
+            "4.0": {
+              "n_ratios": 27,
+              "hits": 0,
+              "null_mean": 0.0,
+              "enrichment": 0.0,
+              "p": 1.0
+            }
+          }
+        },
+        {
+          "source": "FRB20220912A(CHIME)",
+          "gap_def_d": 5.0,
+          "n_bursts": 327,
+          "n_episodes_valid": 11,
+          "n_quiescence_gaps": 7,
+          "gap_ratio_test": {
+            "n_ratios": 6,
+            "hits": 2,
+            "null_mean": 1.71,
+            "enrichment": 1.17,
+            "p": 0.7101449275362319
+          },
+          "gap_placebo": {
+            "1.8": {
+              "n_ratios": 6,
+              "hits": 2,
+              "null_mean": 2.021,
+              "enrichment": 0.99,
+              "p": 0.7131434282858571
+            },
+            "2.5": {
+              "n_ratios": 6,
+              "hits": 1,
+              "null_mean": 2.564,
+              "enrichment": 0.39,
+              "p": 0.9810094952523738
+            },
+            "4.0": {
+              "n_ratios": 6,
+              "hits": 0,
+              "null_mean": 0.0,
+              "enrichment": 0.0,
+              "p": 1.0
+            }
+          },
+          "energy_ratio_test": {
+            "n_ratios": 10,
+            "hits": 5,
+            "null_mean": 4.554,
+            "enrichment": 1.098,
+            "p": 0.5137431284357821
+          },
+          "energy_kind": "fluence"
+        },
+        {
+          "source": "FRB20180916B(CHIME)",
+          "gap_def_d": 5.0,
+          "n_bursts": 104,
+          "n_episodes_valid": 4,
+          "n_quiescence_gaps": 0,
+          "energy_ratio_test": {
+            "n_ratios": 3,
+            "hits": 1,
+            "null_mean": 0.996,
+            "enrichment": 1.005,
+            "p": 0.8225887056471765
+          },
+          "energy_kind": "fluence"
+        }
+      ],
+      "sources_secondary_10d_flagged": [
+        {
+          "source": "FRB20220912A",
+          "gap_def_d": 10.0,
+          "n_bursts": 2088,
+          "n_episodes_valid": 5,
+          "n_quiescence_gaps": 4,
+          "gap_ratio_test": {
+            "n_ratios": 3,
+            "hits": 1,
+            "null_mean": 1.52,
+            "enrichment": 0.658,
+            "p": 1.0
+          },
+          "gap_placebo": {
+            "1.8": {
+              "n_ratios": 3,
+              "hits": 1,
+              "null_mean": 1.508,
+              "enrichment": 0.663,
+              "p": 1.0
+            },
+            "2.5": {
+              "n_ratios": 3,
+              "hits": 0,
+              "null_mean": 0.0,
+              "enrichment": 0.0,
+              "p": 1.0
+            },
+            "4.0": {
+              "n_ratios": 3,
+              "hits": 0,
+              "null_mean": 0.0,
+              "enrichment": 0.0,
+              "p": 1.0
+            }
+          }
+        },
+        {
+          "source": "FRB20121102A",
+          "gap_def_d": 10.0,
+          "n_bursts": 2043,
+          "n_episodes_valid": 11,
+          "n_quiescence_gaps": 6,
+          "gap_ratio_test": {
+            "n_ratios": 5,
+            "hits": 1,
+            "null_mean": 1.331,
+            "enrichment": 0.751,
+            "p": 0.8700649675162418
+          },
+          "gap_placebo": {
+            "1.8": {
+              "n_ratios": 5,
+              "hits": 1,
+              "null_mean": 1.383,
+              "enrichment": 0.723,
+              "p": 0.8150924537731135
+            },
+            "2.5": {
+              "n_ratios": 5,
+              "hits": 0,
+              "null_mean": 1.03,
+              "enrichment": 0.0,
+              "p": 1.0
+            },
+            "4.0": {
+              "n_ratios": 5,
+              "hits": 0,
+              "null_mean": 0.0,
+              "enrichment": 0.0,
+              "p": 1.0
+            }
+          },
+          "energy_ratio_test": {
+            "n_ratios": 10,
+            "hits": 1,
+            "null_mean": 1.456,
+            "enrichment": 0.687,
+            "p": 0.8145927036481759
+          },
+          "energy_kind": "fluence"
+        },
+        {
+          "source": "FRB20230607A",
+          "gap_def_d": 10.0,
+          "n_bursts": 565,
+          "n_episodes_valid": 12,
+          "n_quiescence_gaps": 10,
+          "gap_ratio_test": {
+            "n_ratios": 9,
+            "hits": 3,
+            "null_mean": 5.242,
+            "enrichment": 0.572,
+            "p": 0.974512743628186
+          },
+          "gap_placebo": {
+            "1.8": {
+              "n_ratios": 9,
+              "hits": 3,
+              "null_mean": 2.578,
+              "enrichment": 1.164,
+              "p": 0.5382308845577212
+            },
+            "2.5": {
+              "n_ratios": 9,
+              "hits": 2,
+              "null_mean": 2.204,
+              "enrichment": 0.907,
+              "p": 0.7051474262868566
+            },
+            "4.0": {
+              "n_ratios": 9,
+              "hits": 0,
+              "null_mean": 1.186,
+              "enrichment": 0.0,
+              "p": 1.0
+            }
+          },
+          "energy_ratio_test": {
+            "n_ratios": 11,
+            "hits": 2,
+            "null_mean": 2.809,
+            "enrichment": 0.712,
+            "p": 0.8670664667666167
+          },
+          "energy_kind": "fluence"
+        },
+        {
+          "source": "FRB20180916B",
+          "gap_def_d": 10.0,
+          "n_bursts": 276,
+          "n_episodes_valid": 15,
+          "n_quiescence_gaps": 7,
+          "gap_ratio_test": {
+            "n_ratios": 6,
+            "hits": 1,
+            "null_mean": 0.576,
+            "enrichment": 1.738,
+            "p": 0.526736631684158
+          },
+          "gap_placebo": {
+            "1.8": {
+              "n_ratios": 6,
+              "hits": 2,
+              "null_mean": 1.696,
+              "enrichment": 1.18,
+              "p": 0.6956521739130435
+            },
+            "2.5": {
+              "n_ratios": 6,
+              "hits": 0,
+              "null_mean": 0.845,
+              "enrichment": 0.0,
+              "p": 1.0
+            },
+            "4.0": {
+              "n_ratios": 6,
+              "hits": 0,
+              "null_mean": 0.0,
+              "enrichment": 0.0,
+              "p": 1.0
+            }
+          },
+          "energy_ratio_test": {
+            "n_ratios": 14,
+            "hits": 5,
+            "null_mean": 4.651,
+            "enrichment": 1.075,
+            "p": 0.5372313843078461
+          },
+          "energy_kind": "fluence"
+        },
+        {
+          "source": "FRB20190520B",
+          "gap_def_d": 10.0,
+          "n_bursts": 114,
+          "n_episodes_valid": 5,
+          "n_quiescence_gaps": 3,
+          "gap_ratio_test": {
+            "n_ratios": 2,
+            "hits": 1,
+            "null_mean": 1.33,
+            "enrichment": 0.752,
+            "p": 1.0
+          },
+          "gap_placebo": {
+            "1.8": {
+              "n_ratios": 2,
+              "hits": 0,
+              "null_mean": 0.0,
+              "enrichment": 0.0,
+              "p": 1.0
+            },
+            "2.5": {
+              "n_ratios": 2,
+              "hits": 0,
+              "null_mean": 0.0,
+              "enrichment": 0.0,
+              "p": 1.0
+            },
+            "4.0": {
+              "n_ratios": 2,
+              "hits": 1,
+              "null_mean": 1.333,
+              "enrichment": 0.75,
+              "p": 1.0
+            }
+          },
+          "energy_ratio_test": {
+            "n_ratios": 4,
+            "hits": 0,
+            "null_mean": 0.0,
+            "enrichment": 0.0,
+            "p": 1.0
+          },
+          "energy_kind": "energy"
+        },
+        {
+          "source": "FRB20240114A(v5)",
+          "gap_def_d": 10.0,
+          "n_bursts": 6134,
+          "n_episodes_valid": 7,
+          "n_quiescence_gaps": 6,
+          "gap_ratio_test": {
+            "n_ratios": 5,
+            "hits": 2,
+            "null_mean": 2.688,
+            "enrichment": 0.744,
+            "p": 0.8610694652673663
+          },
+          "gap_placebo": {
+            "1.8": {
+              "n_ratios": 5,
+              "hits": 2,
+              "null_mean": 1.669,
+              "enrichment": 1.199,
+              "p": 0.6686656671664168
+            },
+            "2.5": {
+              "n_ratios": 5,
+              "hits": 1,
+              "null_mean": 1.01,
+              "enrichment": 0.99,
+              "p": 0.8045977011494253
+            },
+            "4.0": {
+              "n_ratios": 5,
+              "hits": 1,
+              "null_mean": 0.679,
+              "enrichment": 1.473,
+              "p": 0.6096951524237881
+            }
+          }
+        },
+        {
+          "source": "FRB20220912A(CHIME)",
+          "gap_def_d": 10.0,
+          "n_bursts": 327,
+          "n_episodes_valid": 6,
+          "n_quiescence_gaps": 4,
+          "gap_ratio_test": {
+            "n_ratios": 3,
+            "hits": 1,
+            "null_mean": 1.502,
+            "enrichment": 0.666,
+            "p": 1.0
+          },
+          "gap_placebo": {
+            "1.8": {
+              "n_ratios": 3,
+              "hits": 1,
+              "null_mean": 1.004,
+              "enrichment": 0.997,
+              "p": 0.8345827086456772
+            },
+            "2.5": {
+              "n_ratios": 3,
+              "hits": 0,
+              "null_mean": 0.0,
+              "enrichment": 0.0,
+              "p": 1.0
+            },
+            "4.0": {
+              "n_ratios": 3,
+              "hits": 0,
+              "null_mean": 0.0,
+              "enrichment": 0.0,
+              "p": 1.0
+            }
+          },
+          "energy_ratio_test": {
+            "n_ratios": 5,
+            "hits": 2,
+            "null_mean": 1.669,
+            "enrichment": 1.199,
+            "p": 0.5677161419290355
+          },
+          "energy_kind": "fluence"
+        },
+        {
+          "source": "FRB20180916B(CHIME)",
+          "gap_def_d": 10.0,
+          "n_bursts": 104,
+          "n_episodes_valid": 4,
+          "n_quiescence_gaps": 0,
+          "energy_ratio_test": {
+            "n_ratios": 3,
+            "hits": 1,
+            "null_mean": 1.021,
+            "enrichment": 0.979,
+            "p": 0.8435782108945528
+          },
+          "energy_kind": "fluence"
+        }
+      ],
+      "bonferroni": {
+        "gap_ratio_p": 1.0,
+        "n_gap_sources": 7,
+        "energy_ratio_p": 0.4407796101949025,
+        "n_energy_sources": 7
+      },
+      "systematic_on_record": "observing-schedule selection dominates quiescence gaps",
+      "verdict": "null",
+      "note": "no tooth enrichment at the episode aggregation level (quiescence gaps + episode-integrated energies)"
+    },
+    "FO.06": {
+      "axis": "FO.06_leaf_classes",
+      "n_first_subbursts": 474,
+      "n_repeater": 59,
+      "n_flagged_out": 126,
+      "bic_by_k": {
+        "1": 263.0,
+        "2": -1182.3,
+        "3": -1218.6,
+        "4": -1186.8
+      },
+      "best_k": 3,
+      "gmm2_mode_sizes": [
+        182,
+        292
+      ],
+      "gmm2_repeater_fraction_per_mode": [
+        0.0055,
+        0.1986
+      ],
+      "odds_ratio": 44.86,
+      "auc_cv": 0.833,
+      "auc_null_mean": 0.493,
+      "p_auc_perm": 0.000999000999000999,
+      "caveats_on_record": [
+        "bandwidth censored at the 400-800 MHz band",
+        "exposure/beam selection uncorrected"
+      ],
+      "verdict": "not_confirmed_not_refuted",
+      "note": "morphology predicts repetition but BIC prefers k=3, not 2"
+    },
+    "FO.07": {
+      "axis": "FO.07_covariance_blocks",
+      "n_bursts_complete": 5694,
+      "n_observables": 10,
+      "corr_extremes": {
+        "max_abs_offdiag": 0.413
+      },
+      "per_k": {
+        "2": {
+          "s_off": 0.0518,
+          "null_median": 0.2732,
+          "p": 0.001996007984031936,
+          "blocks": [
+            [
+              "DOC",
+              "cos2PA",
+              "sin2PA",
+              "RM_res"
+            ],
+            [
+              "log10Weff",
+              "log10BW",
+              "log10SNR",
+              "DOL",
+              "DM_res",
+              "log10Wait"
+            ]
+          ]
+        },
+        "3": {
+          "s_off": 0.2525,
+          "null_median": 0.4344,
+          "p": 0.013972055888223553,
+          "blocks": [
+            [
+              "log10Weff",
+              "DOL",
+              "DM_res",
+              "log10Wait"
+            ],
+            [
+              "DOC",
+              "cos2PA",
+              "sin2PA",
+              "RM_res"
+            ],
+            [
+              "log10BW",
+              "log10SNR"
+            ]
+          ]
+        },
+        "4": {
+          "s_off": 0.4069,
+          "null_median": 0.5416,
+          "p": 0.04590818363273453,
+          "blocks": [
+            [
+              "RM_res",
+              "DM_res"
+            ],
+            [
+              "log10Weff",
+              "DOL",
+              "log10Wait"
+            ],
+            [
+              "DOC",
+              "cos2PA",
+              "sin2PA"
+            ],
+            [
+              "log10BW",
+              "log10SNR"
+            ]
+          ]
+        }
+      },
+      "bonferroni_p": 0.005988023952095808,
+      "physics_partition_rand_agreement": 1.0,
+      "verdict": "consistent",
+      "note": "block structure real (beats the spectrum-preserving null) but the partition coincides with the STANDARD propagation/geometry-vs-emission sector split (Rand agreement 1.00) -> default astro, no character-class content; the flagged first-run hint stays on record (v1.3.1)"
+    },
+    "FO.08": {
+      "axis": "FO.08_polarimetric_null_space",
+      "n_bursts_snr20": 6107,
+      "n_grid_centres": 1568,
+      "largest_empty_disk_r": 0.3024,
+      "at_DOL_DOC_pct": [
+        29.6,
+        -57.2
+      ],
+      "null_median_r": 0.5508,
+      "p_joint_perm": 1.0,
+      "caveats": [
+        "holes below the 2-4% measurement error are unresolvable",
+        "marginal-driven voids do not count (null preserves marginals)"
+      ],
+      "verdict": "null",
+      "note": "no joint forbidden region beyond the marginals in the only full-Stokes catalog in hand"
+    },
+    "FO.09": {
+      "axis": "FO.09_rank_drop",
+      "per_source": [
+        {
+          "source": "FRB20121102A(Li2021)",
+          "n_sessions": 19,
+          "ranks": [
+            0,
+            2,
+            0,
+            8,
+            0,
+            3,
+            1,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            2,
+            8,
+            1
+          ],
+          "median_rank": 0.0,
+          "max_rank": 8
+        },
+        {
+          "source": "FRB20220912A(Zhang2023)",
+          "n_sessions": 10,
+          "ranks": [
+            0,
+            0,
+            0,
+            0,
+            4,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "median_rank": 0.0,
+          "max_rank": 4
+        }
+      ],
+      "verdict": "null",
+      "note": "median effective rank <= 1 in every source -> memoryless/single-memory burst-energy dynamics; no multi-mode (rank-3) structure visible (consistent with the FO.01 amplifier)",
+      "v5_medium_leg": {
+        "n_sessions": 29,
+        "ranks": [
+          0,
+          16,
+          0,
+          2,
+          1,
+          15,
+          3,
+          13,
+          3,
+          16,
+          3,
+          12,
+          0,
+          0,
+          3,
+          0,
+          8,
+          15,
+          10,
+          2,
+          16,
+          1,
+          5,
+          0,
+          0,
+          1,
+          12,
+          1,
+          15
+        ],
+        "median_rank": 3.0,
+        "note": "DESCRIPTIVE ONLY: static cross-observable correlations (the FO.07 sector structure) enter the multivariate embedding, so these ranks conflate instantaneous correlation rank with dynamics -- given the FO.02b no-memory result they are NOT evidence of 3-mode dynamics; the clean dynamics leg is the scalar energy one"
+      }
+    },
+    "FO.10": {
+      "axis": "FO.10_causal_asymmetry",
+      "per_source": [
+        {
+          "source": "FRB20121102A(Li2021)",
+          "n_sessions": 27,
+          "n_increments": 1582,
+          "increment_skewness": 0.0482,
+          "p_skew": 0.5102448775612194,
+          "pomeau_A": -0.05078,
+          "p_pomeau": 0.36281859070464767
+        },
+        {
+          "source": "FRB20220912A(Zhang2023)",
+          "n_sessions": 14,
+          "n_increments": 1032,
+          "increment_skewness": 0.0017,
+          "p_skew": 0.9810094952523738,
+          "pomeau_A": -0.00572,
+          "p_pomeau": 0.9170414792603698
+        }
+      ],
+      "bonferroni_p": 1.0,
+      "n_tests": 4,
+      "open_control": "earthquake aftershocks (known irreversible) not run -- USGS data gitignored, on record",
+      "verdict": "null",
+      "note": "within-session energy sequences are time-reversible at catalog statistics -> an arrow-free cascade; bounds every 'directed recovery' reading of burst trains"
+    }
+  },
+  "runtime_s": 117.6
+}

@@ -61,6 +61,8 @@ MAINSHOCKS: tuple[Mainshock, ...] = (
 
 PHI = 0.5 * (1.0 + math.sqrt(5.0))
 # TFPT log-period battery: lambda (the discrete-scale-invariance ratio) -> omega = 2 pi / ln lambda.
+# FROZEN -- guarded bit-for-bit by strange-metal-comb/tests/test_frozen_kernel.py; the Z2/Moebius
+# readings live in the separate Z2_LAMBDAS below.
 TFPT_LAMBDAS: dict[str, float] = {
     "3/2 (1/Koide, fundamental)": 1.5,
     "phi (golden, g_car=5)": PHI,
@@ -72,9 +74,26 @@ TFPT_LAMBDAS: dict[str, float] = {
     "(3/2)^6 (recovery comb)": 1.5 ** 6,
     "30 (Coxeter h)": 30.0,
 }
+# The Z2/Moebius double-cover READINGS of the SAME kernel (added 2026-07-06, EXPLORATORY and
+# UNFORCED -- no theory contract selects one; a hit is "escalate -> independent cross-check",
+# never a claim): if the comb carries the Z2 sheet parity per kernel period (antiperiodic: sign
+# flip each period, periodic only on the double cover), its Fourier power at the kernel
+# omega=2.583 is exactly ZERO -- the fundamental moves to omega/2 <-> lambda=(3/2)^12 and the
+# first odd harmonic to 3*omega/2 <-> lambda=(3/2)^4. If instead the base observable ticks the
+# HALF period (the amplitude/sqrt-lambda reading per rung, cf. the energy-vs-amplitude
+# semantics), the comb sits at 2*omega <-> lambda=(3/2)^3.
+Z2_LAMBDAS: dict[str, float] = {
+    "(3/2)^3 (Z2 half-period)": 1.5 ** 3,
+    "(3/2)^4 (Z2 antiperiodic harmonic)": 1.5 ** 4,
+    "(3/2)^12 (Z2 antiperiodic fundamental)": 1.5 ** 12,
+}
+# the full battery = frozen atoms/kernel + the Z2 readings
+BATTERY_LAMBDAS: dict[str, float] = {**TFPT_LAMBDAS, **Z2_LAMBDAS}
 # the structurally "deep" (idiosyncratic) TFPT ratios -- a hit here would matter more than the
-# low-complexity atoms {2,3,4,5,8}, which are dense among any scaling story.
+# low-complexity atoms {2,3,4,5,8}, which are dense among any scaling story. (FROZEN, guarded
+# bit-for-bit.) The Z2 readings are kernel-derived, hence idiosyncratic too (BATTERY_IDIO).
 IDIO = {"3/2 (1/Koide, fundamental)", "phi (golden, g_car=5)", "(3/2)^6 (recovery comb)"}
+BATTERY_IDIO = IDIO | set(Z2_LAMBDAS)
 
 
 def _omega(lam: float) -> float:
@@ -221,13 +240,13 @@ def analyze(refresh: bool = False) -> dict:
     if not curves:
         print("  no usable sequences."); return {}
 
-    # (1) TFPT log-period battery, stacked + Bonferroni look-elsewhere
+    # (1) TFPT log-period battery (incl. the Z2/Moebius readings), stacked + Bonferroni
     print("\n  --- (1) comb at each TFPT log-period (stacked over sequences) ---")
     battery = {}
-    for label, lam in TFPT_LAMBDAS.items():
+    for label, lam in BATTERY_LAMBDAS.items():
         res = _stacked_at(curves, _omega(lam), seed=17)
         battery[label] = {"lambda": round(lam, 4), "omega": round(_omega(lam), 3), **res}
-        tag = "IDIO" if label in IDIO else "atom"
+        tag = "IDIO" if label in BATTERY_IDIO else "atom"
         print(f"    [{tag}] lambda={lam:7.3f} (omega={_omega(lam):5.2f})  "
               f"n_used={res['n_used']}  stacked p={res['p_value']:.4f}"
               f"{'  <-- nominally special' if res['comb_detected'] else ''}")
@@ -242,7 +261,7 @@ def analyze(refresh: bool = False) -> dict:
     print("\n  --- (2) free-fit: seismicity's OWN dominant log-period (top peaks) ---")
     peaks = free_fit(curves)
     for pk in peaks:
-        near = min(TFPT_LAMBDAS.items(), key=lambda kv: abs(math.log(kv[1]) - math.log(pk["lambda"])))
+        near = min(BATTERY_LAMBDAS.items(), key=lambda kv: abs(math.log(kv[1]) - math.log(pk["lambda"])))
         dev = abs(math.log(near[1]) - math.log(pk["lambda"])) / math.log(pk["lambda"]) * 100
         print(f"    lambda_fit={pk['lambda']:7.3f} (omega={pk['omega']:.2f}, gain={pk['stacked_gain']}) "
               f"-> nearest TFPT: {near[0]} ({dev:.0f}% off in ln)")

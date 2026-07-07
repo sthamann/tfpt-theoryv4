@@ -1,0 +1,309 @@
+# FRB ONTOLOGY axes -- preregistered v1 (frozen 2026-07-07, BEFORE any statistic ran;
+# only column names/units of the committed catalogs and published aggregate facts from
+# sibling-experiment READMEs were inspected).
+#
+# FIREWALL: search targets / consistency checks -- never load-bearing claims, never [E].
+# A hit in any axis is "escalate -> independent cross-check"; universal-DSI /
+# astrophysical coincidence / selection systematics remain the default reading.
+#
+# Context (next.txt 2026-07-07 (I)): six ontology hypotheses FO.01-FO.06 on what FRBs
+# could BE in TFPT. FO.01 is a theory contract (experiments/theory-contracts/, never
+# scorecard). FO.02-FO.06 are the empirical axes tested here. Typing per SIGNATURES.md
+# 0b.1-0b.4: FO.02 is the first FRB axis with a NAMED transduction B (line integrals);
+# FO.03 is the first S14-conforming clock; FO.04/FO.06 are parity diagnostics (prime 2
+# carries no rate); FO.05 is exploratory surface leakage (no named B).
+
+data:
+  fast_pol_v5: "FRB 20240114A: FAST pol catalog v5 (Wang+2026), 6134 bursts; MJD_topo, RM+err, DM+err, Weff+err, Bandwidth, S/N, DOL, DOC, PA_mean -- committed in frb-tfpt-signatures/data"
+  blinkverse: "Blinkverse multi-source export (10,890 bursts; mjd, energy, source) -- committed in frb-tfpt-signatures/data"
+  chime_cat2: "CHIME/FRB Catalog 2 repeaters (981 bursts, 15 sources; mjd_400, fluence) -- committed in repeater-cascade/data"
+  chime_cat1: "CHIME/FRB Catalog 1 (VizieR J/ApJS/257/59/table2; RpName, Widthfitb, b_Freq/B_Freq, Fluence, Nsb, Flag) -- committed in frb-tfpt-signatures/data"
+  sessions: "gap > 0.2 d opens a session (repeater-cascade convention)"
+  anti_double_counting: "FO.05 uses Blinkverse per source OR the dedicated catalog, never both for one source; FRB 20240114A enters only via the v5 catalog; CHIME legs are instrument-independent"
+
+frozen_constants:
+  lambda_dsi: "(3/2)^6 = 729/64 (log scale factor)"
+  omega: "2*pi/ln((3/2)^6) = 2.5830 (comb frequency)"
+  epsilon_pred: "exp(-pi^2/ln((3/2)^6)) = 0.0173 (predicted comb amplitude; the known wall)"
+  bend: "ln3/ln(3/2) = 2.709511 (two-rate ratio of the resummed clock, v124)"
+  teeth: "(3/2)^k, k in {1,3,6}; tolerance +/- 0.10 dex"
+  reach_gate: ">= 2.8 comb periods in the ln clock variable (PG.06 machine check)"
+
+axes:
+  FO.02_common_rate_medium:
+    ontology: >
+      The repeater system is a natural EIT: bursts are probe pulses, the relaxing
+      magneto-ionic medium is the state, and the transduction B is a KNOWN LINEAR
+      LINE INTEGRAL (DM = int n_e dl, RM = 0.81 int n_e B_par dl) -- the first FRB
+      axis that can pass the S15 eligibility gate. If the medium relaxes under the
+      transfer operator, ALL coupled observables share ONE two-rate set with the
+      frozen ratio r2/r1 = ln3/ln(3/2) = 2.7095 -- unlike an AR(1) drift, which has
+      observable-specific memories (the trap that killed FRB.04b).
+    method: >
+      FRB 20240114A v5. Per-session (gap > 0.2 d) medium state = median of
+      {RM, DM, log10 Weff, DOL} over finite values; timestamp = median MJD.
+      Standardise each series; empirical ACF from all pairs with lag 1-150 d in 12
+      log-spaced bins (weight sqrt(n_pairs)). Fit per observable: single-exp
+      (rate r_o); joint SHARED two-exp across the 4 observables: rho_o(D) =
+      c1_o e^{-r1 D} + c2_o e^{-r2 D}, c>=0 by NNLS, (r1, r2/r1) on a frozen grid
+      r1 in logspace(1/150,1,40) 1/d, ratio in logspace(0,ln8 base e ->[1,8],30).
+      Primary statistic Dstat = |ln(ratio_hat / 2.7095)|.
+    nulls_controls:
+      - "OU/AR(1) surrogates per observable on the SAME irregular timestamps, r_o from the single-exp fit, 500 draws, full refit -> p = P(Dstat_null <= Dstat_obs)"
+      - "placebo ratio family {1.5, 2.0, 3.5, 4.5}: kernel must be the closest (Dstat < every placebo Dstat)"
+      - "model gate: shared two-exp must beat single-exp by AIC in the joint fit; otherwise the data do not require two rates -> data_limited for this reading"
+    kill: "p >= 0.05 or a placebo ratio as close -> null (no common two-rate operator visible in the nightly medium state); single-rate adequate -> data_limited"
+  FO.03_state_clock_comb:
+    ontology: >
+      S14 clock-map hypothesis: if the session cascade is a recovery, it ticks in the
+      medium's own state path, not observer time. Frozen clock variable: tau_mod_i =
+      cumulative sum of |RM_i - RM_{i-1}| within a session (total-variation clock),
+      the first FRB comb test with a NAMED clock. All previous S2b nulls ran on
+      t_observer and are retro-typed bridge nulls.
+    method: >
+      FRB 20240114A v5, sessions with >= 30 finite-RM bursts. Noise floor: phases only
+      from bursts with tau_mod >= median session RM_err. Reach gate (>= 2.8 periods in
+      ln tau_mod) evaluated BEFORE the comb statistic; sessions below the gate are
+      excluded (reported). Rayleigh power at frozen omega = 2.5830 of omega*ln tau_mod.
+    nulls_controls:
+      - "within-session permutation of the |dRM| increments (rebuild the cumulative clock), 2000 draws"
+      - "off-kernel rank: surrogate-standardised z at 120 log-spaced omega in [0.6, 6.0]; kernel must rank in the top 5%"
+      - "Fisher combination over gate-passing sessions; per-session p = max(permutation p, rank p) (survive-all)"
+    kill: "Fisher p >= 0.05 -> null at detectable amplitude (the epsilon = 1.7% wall stays data_limited, as in RC.02)"
+  FO.04_parity_without_rate:
+    ontology: >
+      The m=2 PA fundamental (FRB.08) and the handedness persistence (KC.02) ARE the
+      only Z2 signature the double cover is allowed to leave: parity/projection,
+      never a rate (0b.4); m=4 MUST stay absent (mu4 is a Galois gear, 0b.3); switch
+      events MUST be rate-free. This axis TYPES the two known positives as
+      consistency and adds three residual predictions.
+    method: >
+      FRB 20240114A v5, bursts with finite PA and DOL >= 10%. psi = 2*PA (rad).
+      (a) m=4 refinement: A4 = |mean e^{i 4 psi}| calibrated against a parametric
+      bootstrap (2000) of the fitted 2-component von-Mises mixture on psi (EM fit;
+      the null carries the m=2 structure INCLUDING its natural even harmonics).
+      PREDICTION: no excess (p >= 0.05). (b) switch times: classify bursts by nearest
+      mixture mode; within-session waiting times between class switches -- tooth test
+      {3/2,(3/2)^3,(3/2)^6} +/- 0.10 dex on consecutive waiting-time ratios vs
+      within-session permutation (2000), AND comb at omega = 2.5830 in ln(t_switch -
+      t0) for sessions passing the 2.8-period gate. PREDICTION: null (rate-free).
+      (c) persistence: sessions with >= 20 classified bursts; fraction of sessions
+      whose dominant class equals the global dominant class vs binomial(0.5).
+      PREDICTION: significantly persistent.
+    kill: >
+      (a) significant m=4 excess kills the Galois-gear reading (would be a mu4
+      POINTER -- against 0b.3); (b) structured switch times kill rate-freeness;
+      (c) non-persistent classes kill the leaf-class reading. All three predictions
+      holding = 'consistent' (diagnostic, never support).
+  FO.05_episode_transfer:
+    ontology: >
+      The transfer unit is the ACTIVITY EPISODE, not the burst: excitation writes
+      marks, one episode = one transfer step, quiescence = recovery. All prior
+      ladders (KC.01, RC.03, FRB.02) ran burst-to-burst; the episode aggregation
+      level is untested. Exploratory surface leakage (no named B); scheduled-
+      observation selection is a KNOWN dominant systematic (documented, one-way:
+      it can fake nulls and hits alike -> escalate-only).
+    method: >
+      Episode = maximal burst group with inter-burst gap <= 5 d (FROZEN primary;
+      10 d as a flagged secondary robustness reading, never promotable alone).
+      Episode needs >= 5 bursts; source needs >= 4 episodes. Sources: Blinkverse
+      sources with >= 100 bursts and >= 200 d baseline; FRB 20240114A via v5;
+      CHIME Cat2 sources with >= 50 bursts. (i) consecutive quiescence-gap ratios
+      g_{k+1}/g_k (episode end -> next start) on the teeth +/- 0.10 dex (and
+      inverses); (ii) episode-integrated energy/fluence ratios on the partner teeth
+      (2/3)^k where energies exist.
+    nulls_controls:
+      - "gap permutation within source (2000 draws)"
+      - "placebo teeth {1.8, 2.5, 4.0} -- kernel must beat all"
+      - "Bonferroni over sources; a single-source excess is at most hint_flag"
+    kill: "no tooth enrichment anywhere -> null for the episode-level ladder (closes the last untested aggregation level)"
+  FO.06_leaf_classes:
+    ontology: >
+      The repeater / one-off dichotomy is a Z2 CLASSIFICATION (double-cover leaf
+      classes), not a rate: exactly two morphological modes, membership persistent,
+      morphology at first detection predicts repetition better than observed rate.
+      Prime-2 diagnostic; a hit is DEFAULT astro (selection/exposure; Pleunis+2021
+      already reports narrower-band longer repeaters) -- consistency typing only.
+    method: >
+      CHIME Cat1 (excluded_flag == 0, first sub-burst Nsb == 0, finite fitburst
+      width and band edges). Features x = (log10 Widthfitb, log10(B_Freq - b_Freq)).
+      (i) mode count: GMM BIC scan k = 1..4 (full covariance, seed 0); PREDICTION:
+      k = 2. (ii) label alignment: 5-fold CV logistic AUC predicting RpName != -9999
+      from x, vs 1000 label permutations; PREDICTION: AUC above the permutation null.
+      (iii) two-mode alignment: repeater fraction per GMM mode (odds ratio).
+      Caveats ON RECORD: band-limited bandwidths censored at 400 MHz; exposure and
+      beam selection uncorrected.
+    kill: "BIC prefers k = 1 or k >= 3, or AUC compatible with the permutation null -> the leaf-class reading fails on the only uniform-survey catalog"
+
+theory_contract:
+  FO.01_transduction_invisibility: >
+    Lives in experiments/theory-contracts/fo01_transduction_invisibility.py (never
+    scorecard). Machine-checks: (i) a trivial-character (single coherent mode,
+    threshold-triggered) readout of a seam channel with spectrum {1,(2/3)^6,(1/3)^6}
+    yields intensity/timing functionals statistically indistinguishable from a
+    character-scrambled seam (the 20+ null landscape as a PREDICTION); (ii) a
+    character-resolved readout recovers the eigenvalue; (iii) the uniform functional
+    annihilates the non-Perron modes exactly (left-eigenvector identity).
+
+verdict_language: "null / consistent / data_limited / hint_flag only; never a claim; any nominal hit requires controls AND a second source / independent world before even 'escalate'."
+
+# ---------------------------------------------------------------------------
+# v1.3 ADDENDUM (2026-07-07, dated BEFORE any FO.07-FO.10 statistic ran):
+# OPERATOR-STRUCTURE probes -- the strategy shift from "where do we see 2/3,
+# mu4, comb?" to "where is an operator forced NOT to mix states". Data audit
+# on record: only column availability and session counts already established
+# in earlier rounds were used; no covariance, occupancy, rank or asymmetry
+# statistic was inspected before this prereg.
+axes_added_v1_3:
+  FO.07_covariance_blocks:
+    ontology: >
+      S8 language applied to burst data: if transfer/mu4 character classes are
+      real and leak into observables at all, they should appear as BLOCK
+      STRUCTURE of the observable-observable correlation matrix (within-block
+      strong, between-block near zero) -- a state invariance, not a visible
+      number. No theory contract names the observable-to-character assignment,
+      so the test is for UNEXPECTED block-diagonality (exploratory; the found
+      partition is reported, never interpreted as confirmation).
+    method: >
+      FRB 20240114A v5, sessions >= 20 bursts; 10 per-burst observables
+      (log10 Weff, log10 BW, log10 S/N, DOL, DOC, cos 2PA, sin 2PA, RM_res,
+      DM_res, log10 wait) robustly standardised within session (median/MAD);
+      pooled Pearson correlation C over complete rows. Spectral clustering on
+      1-|C| for k in {2,3,4}; S_off(k) = sum of squared off-block correlations
+      / sum of all squared off-diagonal correlations.
+    nulls_controls:
+      - "spectrum-preserving null: C_null = Q Lambda Q^T with Haar-random Q, renormalised to unit diagonal, 500 draws, same clustering -> p(k) = P(S_off_null <= S_off_obs); Bonferroni over the 3 k values"
+      - "session-label control: correlations recomputed on session-shuffled residuals must NOT show the structure (guards session-level artefacts)"
+    kill: "no k with Bonferroni p < 0.05 -> no character-class block protection visible in the burst covariance (the S8 reading stays lab-only)"
+    # v1.3.1 escalation control (dated, added AFTER the first run fired at
+    # Bonferroni p = 0.006 with the k=2 partition {DOC, cos2PA, sin2PA, RM_res}
+    # vs the rest -- ON RECORD): a significant block structure is only a
+    # character-class CANDIDATE if its partition does NOT coincide with the
+    # standard propagation/geometry-vs-emission sector split that every
+    # magnetospheric model predicts (Faraday/geometry: DOC, cos2PA, sin2PA,
+    # RM_res). Coincidence gate: pairwise Rand agreement >= 0.9 -> typed
+    # 'consistent' (default astro), not hint_flag.
+  FO.08_polarimetric_null_space:
+    ontology: >
+      S15 hole search instead of peak search: if B projects character classes
+      away, TFPT could appear as a FORBIDDEN region of the polarization state
+      space rather than a pile-up. No forbidden set is derived -> exploratory
+      hole probe with the LEE inside the statistic.
+    method: >
+      FRB 20240114A v5, bursts with S/N >= 20 and finite (DOL, DOC); points
+      u = (DOL, DOC)/100 inside the physical disk DOL^2 + DOC^2 <= 1.05^2,
+      DOL >= 0. Statistic: largest empty disk -- max over a 40x80 grid of
+      centres (inside the physical domain AND inside the data's convex
+      envelope proxy: centre must have >= 5 points within radius 0.35) of the
+      nearest-data-point distance (cKDTree).
+    nulls_controls:
+      - "joint-structure null: permute DOC against DOL within the pooled sample (preserves BOTH marginals exactly, destroys the joint), 1000 draws -> p = P(r_null >= r_obs)"
+      - "documented caveats: detection-threshold smearing at low pol fractions; measurement errors ~2-4% -- holes smaller than that are unresolvable"
+    kill: "p >= 0.05 -> no joint forbidden region beyond the marginals (null-space reading closes on the only full-Stokes catalog in hand)"
+  FO.09_rank_drop:
+    ontology: >
+      If dynamics live on a protected Perron mode + two decay modes, the
+      visible signature is an EFFECTIVE RANK <= 3 of the delay-embedded
+      dynamics -- 'rank falls to 3, not 2, not 5, not continuous'. Field-near
+      and emission-detail-agnostic; constrained by KC.06/FO.02b (FRB medium
+      observables carry little/no memory, so rank 0 = memoryless is an
+      expected honest outcome there).
+    method: >
+      (a) log-energy within-session series, FRB 20121102A (Li+2021) and
+      FRB 20220912A (Zhang+2023), sessions >= 40 bursts: Hankel matrix with
+      delay depth 8 on the standardised series; per session, singular value
+      sigma_k is SIGNIFICANT if above the 95th percentile of 200 within-session
+      shuffle surrogates; effective rank = largest k significant. Source-level
+      rank = median over sessions. (b) v5 multivariate medium state (4 obs,
+      lag-embedded depth 4): same procedure.
+    kill: >
+      Median effective rank 0 or 1 -> memoryless/single-memory (no
+      multi-mode dynamics visible; consistent with the FO.01 amplifier);
+      rank >= 4 or continuous spectrum -> kills the 3-mode reading outright;
+      rank exactly 3 in >= 2 sources = escalate-only.
+  FO.10_causal_asymmetry:
+    ontology: >
+      The retarded seed / recovery direction implies a time-ARROW in the
+      dynamics: forward and backward reconstruction are inequivalent as
+      operator structure. CAVEAT preregistered: time-irreversibility is
+      generic in driven/dissipative systems -- a hit types as 'irreversible
+      cascade physics', never TFPT support; the informative outcomes are the
+      NULL (time-reversible => memoryless/linear-Gaussian, consistent with
+      FO.01) and the direction/shape typing.
+    method: >
+      log-energy within-session series (Li+2021, Zhang+2023; sessions >= 20):
+      two pooled statistics -- (i) skewness of increments dx; (ii) Pomeau
+      asymmetry A = <x_t x_{t+1}^2> - <x_t^2 x_{t+1}>. Null: random
+      per-session TIME REVERSAL (2000 draws; both statistics are sign-odd
+      under reversal, so the null is exact under H0 reversibility); two-sided
+      p per statistic, Bonferroni over the 2 statistics x 2 sources.
+    kill: "no reversal-null rejection -> within-session energy sequences are time-reversible at catalog statistics (an arrow-free cascade; bounds every 'directed recovery' reading of burst trains)"
+    note_control: "the earthquake-aftershock control (known-irreversible) is NOT run: USGS quake data are gitignored in recovery-comb-domains (not committed); documented as an open control"
+
+# ---------------------------------------------------------------------------
+# v1.2 ADDENDUM (2026-07-07, dated BEFORE the FO.02b run): INTRA-SESSION
+# common-rate test -- the data FO.02 said it needed already exist in committed
+# catalogs. Pre-registration data audit ON RECORD (quality/eligibility only,
+# no test statistic was computed): (a) FAST 20240114A v5 carries per-burst RM
+# WITHIN sessions; all 35 sessions with >= 30 RM bursts reject constant RM with
+# reduced chi2 77-337 (spans 30-85 rad/m2 over 0.3-4.3 h at ~1-2 rad/m2 errors);
+# (b) the committed Blinkverse export carries 1131 per-burst RM values for
+# FRB 20201124A (Xu+2022 Nature DOI), 12 sessions >= 30 RM bursts, intra-session
+# spans 50-240 rad/m2 over 2-3.5 h, with width/polar_l/polar_c on 1128 rows.
+# Inspected: session counts, spans, constant-model chi2, observable availability.
+# NOT inspected: ACF shapes, rates, rate ratios, any kernel proximity.
+axes_added_v1_2:
+  FO.02b_intra_session_common_rate:
+    ontology: >
+      Same FO.02 reading, one level down: within an activity session the medium
+      state relaxes visibly (constant-RM rejected); if that relaxation is driven
+      by the transfer operator, the two rates are SHARED by all coupled
+      observables within a session and their ratio is the frozen
+      r2/r1 = ln3/ln(3/2) = 2.7095 in EVERY session, even though the overall
+      clock r1 may vary session to session. Per-burst scatter without temporal
+      memory would instead type the intra-session RM variance as
+      per-burst/magnetospheric, not a medium state -- an informative negative
+      for the FO.02 ontology.
+    data:
+      - "FRB 20240114A v5: per-burst RM, DM, log10 Weff, DOL within sessions (gap > 0.2 d)"
+      - "FRB 20201124A via committed Blinkverse (Xu+2022 rows): per-burst RM (rm_qufit pref, rm_syn fallback), log10 width, polar_l, polar_c; dedup by (mjd, 1e-6 d)"
+    method: >
+      Sessions with >= 30 finite values in >= 2 observables. Standardise each
+      observable within session. MEMORY GATE per (session, observable): the
+      first ACF lag bin must beat a within-session time-shuffle null (200 draws,
+      p < 0.05); a session enters with its >= 2 memory-passing observables.
+      ACF: pair-product estimator in 8 log-spaced lag bins from 30 s to half the
+      session span. Per session: joint two-exponential fit SHARED across the
+      session's observables (amplitudes >= 0 per observable; session-adaptive
+      frozen grid r1 in logspace(0.25/T_sess, 3/lag_min, 40), ratio in
+      logspace over [1, 8], 30 points) + per-observable single-exp fits; AIC
+      gate as in FO.02. Primary statistic over AIC-passing sessions:
+      median Dstat = median |ln(ratio_s / 2.7095)|.
+    nulls_controls:
+      - "OU surrogates per (session, observable) at the fitted single rates on the same timestamps, 300 draws, full refit incl. memory gate + AIC gate -> p = P(median Dstat_null <= median Dstat_obs)"
+      - "placebo ratio family {1.5, 2.0, 3.5, 4.5}: kernel must give the smallest median Dstat"
+      - "two sources analysed separately; support-language requires BOTH"
+    kill: >
+      (i) no session passes memory + AIC gates in either source -> the
+      intra-session medium state carries no resolvable two-rate relaxation
+      (data_limited, but now at the RIGHT cadence -- a much stronger statement
+      than FO.02 v1); (ii) gates pass but the ratio is not preferentially at
+      2.7095 (p >= 0.05 or a placebo as close) -> NULL: the medium relaxes with
+      rates unrelated to the transfer operator -- the strongest available
+      negative against the 'FRB as measurement of a seam-mode medium' reading,
+      because B is named and the cadence is right.
+
+# ---------------------------------------------------------------------------
+# v1.1 ADDENDUM (2026-07-07, dated AFTER the first FO.04 run fired nominally at
+# m=4 against the vm2-only bootstrap -- A4 = 0.0424 vs null 0.0127, p = 0.001;
+# ON RECORD as a flagged first-run result, exactly the FRB.06 lesson):
+# a genuine mu4 refinement must pass a SPECIFICITY battery before it can even
+# be called tension/candidate:
+#   (i)  m=4-specific: the surrogate-standardised excess z4 must exceed the odd
+#        harmonics z3, z5 (odd harmonics are NOT mu4 predictions -- they act as
+#        placebos for generic null-model misfit; note the fitted modes are ~60
+#        deg apart in PA, not 90, so the 2-vM null is expected to underfit);
+#   (ii) smooth-null robust: the m=4 excess must survive a 3-component von
+#        Mises mixture null (more flexible smooth PA distribution).
+# If the excess fails (i) or (ii) it is typed as PA-distribution misfit
+# (surface structure), NOT a mu4 pointer; prediction (a) then HOLDS.

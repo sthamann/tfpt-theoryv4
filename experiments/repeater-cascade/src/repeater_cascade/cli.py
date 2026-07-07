@@ -32,6 +32,8 @@ from .ladder import ladder_test
 from .sessions import split_sessions, waiting_time_sequences
 from .validation import make_comb_session, run_validation
 
+from . import phase as rc04_phase
+
 RESULTS = Path(__file__).resolve().parents[2] / "results"
 
 
@@ -274,7 +276,7 @@ def _analyze(seed: int) -> int:
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(
         description="TFPT cascade search in hyperactive FRB repeater burst times")
-    ap.add_argument("command", choices=["audit", "validate", "analyze"],
+    ap.add_argument("command", choices=["audit", "validate", "analyze", "phase"],
                     nargs="?", default="analyze")
     ap.add_argument("--seed", type=int, default=0)
     args = ap.parse_args(argv)
@@ -282,6 +284,9 @@ def main(argv: list[str] | None = None) -> int:
         return _audit()
     if args.command == "validate":
         return _validate(args.seed)
+    if args.command == "phase":
+        rc04_phase.report(seed=args.seed)
+        return 0
     return _analyze(args.seed)
 
 

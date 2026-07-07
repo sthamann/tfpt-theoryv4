@@ -33,12 +33,35 @@
         "p": 0.378,
         "detected": false
       },
+      "z2_time_comb": {
+        "(3/2)^3 (Z2 half-period)": {
+          "periods": 3.22,
+          "range_sufficient": true,
+          "rayleigh": 0.5701,
+          "p": 0.4036,
+          "detected": false
+        },
+        "(3/2)^4 (Z2 antiperiodic harmonic)": {
+          "periods": 2.41,
+          "range_sufficient": false,
+          "rayleigh": 0.7174,
+          "p": 0.3994,
+          "detected": false
+        },
+        "(3/2)^12 (Z2 antiperiodic fundamental)": {
+          "periods": 0.8,
+          "range_sufficient": false,
+          "rayleigh": 0.9272,
+          "p": 0.6108,
+          "detected": false
+        }
+      },
       "echo": {
         "n_ratios": 26,
         "energy": {
           "obs": 1,
-          "enrichment": 0.797,
-          "p": 0.7456
+          "enrichment": 0.794,
+          "p": 0.7491
         },
         "amplitude": {
           "obs": 1,
@@ -59,23 +82,46 @@
       "gap_clock": {
         "n_ratios": 16,
         "obs": 1,
-        "enrichment": 0.334,
+        "enrichment": 0.333,
         "p": 0.9718,
-        "placebo_max_enr": 2.335,
+        "placebo_max_enr": 2.33,
         "supported": false
       },
       "wall": {
         "longest_run": 3,
-        "mean_null_run": 3.47,
-        "p_deficit": 0.5839,
+        "mean_null_run": 3.46,
+        "p_deficit": 0.5851,
         "supported": false
       },
       "time_comb": {
         "periods": 1.46,
         "range_sufficient": false,
         "rayleigh": 0.3734,
-        "p": 0.6198,
+        "p": 0.6273,
         "detected": false
+      },
+      "z2_time_comb": {
+        "(3/2)^3 (Z2 half-period)": {
+          "periods": 2.92,
+          "range_sufficient": true,
+          "rayleigh": 0.1973,
+          "p": 0.9074,
+          "detected": false
+        },
+        "(3/2)^4 (Z2 antiperiodic harmonic)": {
+          "periods": 2.19,
+          "range_sufficient": false,
+          "rayleigh": 0.3794,
+          "p": 0.08,
+          "detected": false
+        },
+        "(3/2)^12 (Z2 antiperiodic fundamental)": {
+          "periods": 0.73,
+          "range_sufficient": false,
+          "rayleigh": 0.5582,
+          "p": 0.4123,
+          "detected": false
+        }
       },
       "echo": {
         "n_ratios": 17,
@@ -87,7 +133,7 @@
         "amplitude": {
           "obs": 4,
           "enrichment": 1.483,
-          "p": 0.2544
+          "p": 0.2562
         },
         "best_free_quotient_hits": 4,
         "supported": false,

@@ -158,6 +158,21 @@ Boundary Polarization*).
 > `TFPT.Carrier.CohomologyGrading.*` (mirrors
 > `verification/v177_seam_marking_kernel.py`, ledger `FORM.QGEO.03`).
 
+> **Theorem (Anchor rank-gap uniqueness — `ANCHOR.RANKGAP.UNIQUENESS`;
+> added 2026-07-07).** The anchor ladder module (`AnchorLadder.lean`)
+> reads `p₄ − p₃ = 8 = rank E₈` off the anchor `a = (1,1,2)`
+> (`rank_step`). The new converse `rankgap_uniqueness` shows the
+> equation *selects* the anchor: for any positive integers `x, y, z`
+> with `x⁴+y⁴+z⁴ = x³+y³+z³+8`, the triple is `(1,1,2)` up to
+> permutation — the per-entry contribution `w³(w−1)` is `0` at `w = 1`,
+> `8` at `w = 2` and `≥ 54` for `w ≥ 3` (`cube_step_ge_54`,
+> `overshoot_ge_three`), so exactly one entry is `2`. Axiom footprint:
+> `[propext, Classical.choice, Quot.sound]` only. Scope (honest): this
+> forces the anchor *within* positive integer triples of length 3; that
+> the anchor is such a triple, and that the rank gap is the right
+> normalisation, remain the axiom-side inputs.
+> Formally verified: `TFPT.Carrier.AnchorLadder.rankgap_uniqueness`.
+
 ## Why this is interesting
 
 * The carrier polynomial `6 Y² − Y − 1 = 0` is in earlier TFPT drafts

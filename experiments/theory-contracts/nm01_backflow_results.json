@@ -1,0 +1,34 @@
+{
+  "contract": "NM01 backflow/EP (non-Markovianity + exceptional points)",
+  "date": "2026-07-07",
+  "firewall": "theory contract, never a scorecard row; internal consistency, not evidence",
+  "verdict": "CONTRACT HOLDS (5/5)",
+  "checks": [
+    {
+      "check": "C1 ZERO BACKFLOW [E]: the seam channel (fixed CPTP map, classical and qubit realisation) contracts trace distance monotonically -- BLP non-Markovianity measure = 0; backflow is impossible in the recovery kernel itself",
+      "pass": true,
+      "detail": "max increment classical -1.50e-15, quantum -6.13e-08, BLP sum 0.00e+00 (100 random pairs x 12 steps each)"
+    },
+    {
+      "check": "C2 MEMORY CONTROL [E]: one unrefreshed bath qubit under repeated partial-swap collisions produces large trace-distance REVIVALS -- information backflow is bath-memory (bridge) physics, the very object FO.02b's memory gate tests on data, not seam recovery",
+      "pass": true,
+      "detail": "max positive increment 0.340 over 25 collisions (theta = 0.35); min/max distance 0.024/1.000"
+    },
+    {
+      "check": "C3 NO EXCEPTIONAL POINT [E]: the seam transfer is normal with simple spectrum (eigenvector condition exactly 1); an EP needs a defective coalescence (Jordan control cond ~ 1e8). Typed missing-structure prediction: seam-eligible recovery spectra show no EP coalescence/hysteresis -- EP phenomenology is bridge physics",
+      "pass": true,
+      "detail": "||[T,T^T]|| = 5.6e-17; cond(V) = 1.000000000000; spectral gaps = 665/729, 63/729 exact; Jordan control cond(V_J) = 1.8e+16"
+    },
+    {
+      "check": "C4 FROZEN INVARIANT SET [E]: the requested 'dimensionless invariant / fixed relaxation ratio / universal scaling function' already exists parameter-free -- bend ln3/ln(3/2), teeth 2/3, 8/27, 64/729, comb pair (omega, eps) with BOTH frequency and amplitude fixed; eps < 2% is the amplitude wall behind every well-powered surface null",
+      "pass": true,
+      "detail": "bend = 2.70951; omega = 2.58271; eps = 0.01730; teeth (2/3, 8/27, 64/729) exact; wall: <= 2 decay modes + protected floor (v124/v147)"
+    },
+    {
+      "check": "C5 SHAPE DEGENERACY [E]: the walled clock is a one-parameter normal form (exact collapse under t -> t/tau), but a WRONG-ratio (2.0) family fits a single noiseless kernel recovery to relative RMS < 2e-2 -- single-curve shape searches are weakly discriminating; the power sits in cascades/ratio ladders/comb phase (the S3 degeneracy, reproduced standalone)",
+      "pass": true,
+      "detail": "relative RMS: true ratio 2.7095 -> 3.3e-16; wrong ratio 2.0 -> 5.4e-03 (561-point rate scan, free weights)"
+    }
+  ],
+  "reading": "Information backflow and exceptional points are NOT natural consequences of TFPT recovery: the seam channel is CP-divisible (zero BLP backflow) and normal with simple spectrum (no EP). Both phenomena, where observed, are environment/bridge physics -- the S15/FO.01 typing extended to the open-quantum-system literature, with FO.02b's memory gate as the data-side face of C2. The seam's only visible decoration stays the frozen invariant set (bend 2.7095, teeth (2/3)^k, comb (2.5827, 0.0173)); single-recovery shape fits are provably weakly discriminating (C5), so universal-normal-form searches must target cascades, ratio ladders and comb phase -- which is what the existing beds do."
+}

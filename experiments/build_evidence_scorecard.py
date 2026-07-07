@@ -105,7 +105,7 @@ ROWS = [
      "~7x below current single-event reach",
      None, "search_target", "boundary recovery kernel",
      "strain_level_test", "LVK GWTC-5.0 + real 32s strain (10 loudest ringdowns incl. GW250114, O4b)",
-     "strain-level echo with ratio >>(2/3)^6 across events", "consistent"],
+     "strain-level echo with ratio >>(2/3)^6 across events", "null"],
     ["GW", "area-quantum spectral comb (BM lines)", "Delta A = 4 ln3 => f_n = n ln3/(16 pi^2 M_det)",
      "Stage-1e first run: post-merger residual spectrum comb (~14-23 Hz spacing, ~10-25 harmonics "
      "in band) with spacing battery {0.8,0.9,1.1,1.25}xf_BM as specificity control, off-source PSD, "
@@ -231,30 +231,313 @@ ROWS = [
      "search_target", "Nan\u00e7ay ECLAT FRB 20220912A microshots (Hewitt+2023; Zenodo 10552561)",
      "a microshot gap-clock at 2.71 OR a protected wall<=3 OR a time-DSI comb survives the null in >=2 bright bursts",
      "null"],
+    # frb-kernel-couplings (2026-07-06): axes the bird's-eye geometry/topology
+    # scan found structurally untested -- the 2D ladder COUPLING (all prior tests were
+    # marginals), the deck-VISIBLE polarization observable (signed V; PA is mod pi and
+    # |V|/I is even, so FRB.04/06/08 were deck-blind by construction), size-space DSI,
+    # plus the new non-tooth operator proxies (S8-like block leakage and S2a spectrum).
+    ["FRB", "kernel couplings: joint energy-time tooth + V-handedness + size-space DSI "
+     "+ phase-time helix + operator proxies (KC.01-06)",
+     "KC.01 (forced UNDER THE EMISSION-READOUT BRIDGE E_obs ~ internal population, "
+     "t ~ inverse rate -- an assumption NOT derived from TFPT; downgraded 2026-07-06): "
+     "pairs on a time tooth (3/2)^k sit on the "
+     "partner energy tooth (2/3)^k (E*t=const along the ladder); KC.02 (exploratory Z2 "
+     "deck reading): consecutive kernel steps flip the SIGN of circular polarization "
+     "(the only deck-visible pol observable); KC.03: log-periodic decoration of the "
+     "burst-energy distribution at frozen TFPT ratios (PG.01 analog); KC.04 "
+     "(exploratory mu4 deck reading): coupled phase Phi = omega ln(tau ratio) + "
+     "q*2*dPA ~ const at frozen omega=2.583, q in {1,2}; KC.05 (exploratory S8 proxy): "
+     "PA-derived C4 transition operator should suppress off-character leakage; KC.06 "
+     "(exploratory S2a proxy): multivariate lag-1 operator on (cos2PA,sin2PA,L/I,signV) "
+     "should approach spectrum {1,64/729,1/729}",
+     "REAL committed catalogs (prereg kernel_couplings_v1.yaml + dated KC.04 addendum, "
+     "each before its run): KC.01 clean NULL in both sources (20121102A Li+2021 1652 "
+     "bursts: 14 joint hits vs 19.5 under the exact energy-shuffle null, enr 0.72 "
+     "p=0.94; 20220912A Zhang+2023: p=0.84; free-quotient: >55% of arbitrary bases "
+     "beat 2/3); KC.02 NULL (20240114A pol v5, 3540 signed-DOC bursts, 3454 pairs: "
+     "alternation 0.480 vs shuffle 0.497, p=0.98 -- handedness mildly persists, "
+     "magnetospheric memory; net handedness balanced +0.06); KC.03 NULL in both "
+     "sources after the lognormal/KDE/GMM 3-null battery + Bonferroni (global p=0.185 "
+     "/ 0.68; the famous energy bimodality is absorbed by the population null -- PG.01 "
+     "replicated in the FRB energy domain); KC.04 NULL (83 sessions / 5934 pairs: the "
+     "naive permutation null fires at q=1 p=0.0005 but the DRIFT-ROBUST circular-shift "
+     "null gives p=0.12 and omega=2.583 is not special vs the off-kernel rank p=0.37 "
+     "-- slow PA drift coupled to burst clustering, not a kernel helix; PA mod pi + "
+     "RM-uncorrected documented); KC.05 NULL (6037 PA-class pairs: C4 off=0.4268, "
+     "shuffle median 0.4629, p_low=0.0045, but Z3 off=0.3677 and random 4-mark controls "
+     "can be lower -> not C4-specific block protection); KC.06 NULL (3447 multivariate "
+     "polarization pairs: normalized eigs [1.0,0.5066,0.38444,0.04781], distance 0.5676 "
+     "to {1,64/729,1/729}, shuffle p_close=0.1799). Audit note on record: a first-pass lambda=8 "
+     "'candidate' in KC.03 was a null-generator artefact (sklearn GMM.sample re-seeds "
+     "per call -> identical draws), caught by the split-half + free-lambda probes and "
+     "fixed; the candidate dissolved", None,
+     "search_target", "boundary recovery kernel (2D coupling + Z2/mu4 deck polarization "
+     "+ size-space DSI + S8/S2a operator proxies)",
+     "search_target", "Li+2021 (VizieR) + Zhang+2023 (VizieR) + FAST 20240114A pol "
+     "catalog v5 (frb-kernel-couplings KC.01-06)",
+     "a joint tooth, handedness alternation, size-space comb, phase helix, C4 block-leakage "
+     "suppression, or S2a lag spectrum survives "
+     "its preregistered null battery + controls in >=2 independent sources", "null"],
     # repeater-cascade (experiments/repeater-cascade): first search past the 2.8-period range wall
-    ["FRB", "repeater burst-time cascade comb + walled clock (RC.01-03)",
+    ["FRB", "repeater burst-time cascade comb + walled clock (RC.01-04)",
      "frozen comb omega=2.583 in ln(t-t_onset) + walled two-mode clock (bend 2.7095) + "
-     "waiting-time tooth ladder {log 3/2, log(3/2)^3, log(3/2)^6} on repeater burst-time cascades",
+     "waiting-time tooth ladder {log 3/2, log(3/2)^3, log(3/2)^6} on repeater burst-time "
+     "cascades + RC.04 per-source PHASE coherence (persistent boundary-clock reading)",
      "9,916 real bursts / 4 sources (FRB 20220912A Zhang+2023, 20201124A Xu+2022/Zhang+2022, "
      "20240114A FAST pol v5, 15 CHIME Cat2 repeaters): FIRST search past the 2.8-period range "
      "wall -- 9 gate-passing sessions / 2 sources (max reach 4.80 periods), omega=2.583 NOT "
      "special (Fisher p=0.72/0.38, BH q=0.72); RC.01 bend degenerate on real cascades (0/37, "
      "Stage-2 degeneracy reproduced); RC.03 ladders null after Bonferroni (p=0.10); injection: "
      "94% at eps=0.30, 0% at predicted eps=0.0173 -> null at detectable amplitude, amplitude "
-     "wall (~1e5 bursts/session) at the predicted 1.7%", None,
+     "wall (~1e5 bursts/session) at the predicted 1.7%. RC.04 (2026-07-06): the per-source "
+     "comb PHASE at the frozen omega is NOT more concentrated across sessions than the "
+     "rate-preserving surrogate null (FRB20240114A R=0.21 over 7 sessions p=0.15; 20201124A "
+     "R=0.24 over 2 p=0.49) -> bounds the PERSISTENT per-source clock reading; the transient "
+     "per-event reading is untouched (t0-aligned coherent stacks elsewhere agree: PG.07 Vela "
+     "p=0.53, crust superposed p=0.45)", None,
      "search_target", "boundary recovery kernel (dynamic, burst-time cascade)",
      "search_target", "FAST (VizieR J/ApJ/955/142; Blinkverse; pol catalog v5) + CHIME/FRB Cat2 "
      "(CANFAR DOI 10.11570/25.0066); repeater-cascade RC.01-03",
      "the omega=2.583 comb survives surrogates + off-kernel rank + lambda battery in >=2 "
      "gate-passing sessions", "null"],
+    # frb-ontology (2026-07-07): the FO ontology round (next.txt 2026-07-07 (I)) --
+    # what FRBs could BE in TFPT. FO.01 (transduction-invisibility contract, 5/5 PASS)
+    # lives in theory-contracts and NEVER enters this scorecard. FO.02/FO.03 are the
+    # two categorically new probes (named transduction B / named clock); FO.04/FO.06
+    # are prime-2 parity diagnostics; FO.05 closes the episode aggregation level.
+    ["FRB", "medium-state common two-rate operator (FO.02, named-B line integrals)",
+     "if the relaxing magneto-ionic medium (probed by bursts as delta pulses; DM/RM "
+     "are KNOWN linear line integrals -- the first FRB axis passing the S15 "
+     "eligibility gate) relaxes under the transfer operator, ALL coupled observables "
+     "share ONE two-rate set with frozen ratio r2/r1 = ln3/ln(3/2) = 2.7095 (unlike "
+     "an AR(1)/OU drift with observable-specific memories, the FRB.04b killer)",
+     "REAL FAST 20240114A pol v5 (6134 bursts, 89 nightly sessions): ACF single "
+     "rates RM 0.019/d, DM 0.016/d, log10Weff 0.087/d, DOL 0.077/d; the joint "
+     "shared two-rate fit lands at ratio 4.20 but AIC prefers per-observable single "
+     "rates (8.07 vs 12.54) -> the nightly medium state does not REQUIRE a second "
+     "rate; kernel not the closest ratio (placebo 4.5 closer), OU-null p=0.55. "
+     "FO.02b (v1.2 addendum, INTRA-session cadence, 2 sources): the strong "
+     "intra-session RM variance (constant-RM rejected at chi2red 77-337 in all 35 "
+     "v5 sessions; Xu+2022 20201124A via Blinkverse, 1131 per-burst RM, spans "
+     "50-240 rad/m2 over 2-3.5 h) carries NO temporal memory -- 33/35 (v5) and "
+     "12/12 (20201124A) sessions fail the injection-validated memory gate (OU at "
+     "tau=2-30 min detected 31-34/35 and 8-10/12; white-noise FP 3/35, 0/12) -> "
+     "the burst-sampled variance is per-burst/magnetospheric, NOT a relaxing "
+     "medium state; the ratio test has nothing to act on at burst cadence. The "
+     "medium-measurement reading survives only in the untested hours-to-days band "
+     "or via a tracked RM-injection event (20190520B-class table login-walled)", None,
+     "search_target", "medium-state transfer operator (named linear transduction: "
+     "DM/RM line integrals; S2a-class)",
+     "search_target", "FAST 20240114A pol catalog v5 (frb-ontology FO.02, prereg "
+     "frb_ontology_v1.yaml)",
+     "a common two-rate set at 2.7095 beats the OU null + placebo ratios in the "
+     "medium state of >=2 sources", "data_limited"],
+    ["FRB", "state-clock comb in tau_mod = cumulative |dRM| (FO.03, S14 named clock)",
+     "S14 clock-map reading: the session cascade ticks in the medium's own state "
+     "path tau_mod = cumsum|dRM| (total-variation clock), not observer time; comb at "
+     "frozen omega=2.583 in ln tau_mod. First FRB comb test with a NAMED clock (all "
+     "prior S2b nulls ran on t_observer and are retro-typed bridge nulls)",
+     "REAL FAST 20240114A pol v5: 3 sessions pass the 2.8-period reach gate in "
+     "ln tau_mod (2.82/2.85/3.16 periods; 32 below gate); survive-all session p "
+     "(max of increment-permutation and off-kernel-rank p) 0.84/0.45/0.59; Fisher "
+     "p=0.81 -> NULL at detectable amplitude; the predicted eps=1.7% comb stays "
+     "behind the amplitude wall (that leg data_limited, as in RC.02)", None,
+     "search_target", "boundary recovery kernel (dynamic, S14 medium-state clock "
+     "reading of the same comb question as RC.02)",
+     "search_target", "FAST 20240114A pol catalog v5 (frb-ontology FO.03, prereg "
+     "frb_ontology_v1.yaml)",
+     "the omega=2.583 comb is special in ln tau_mod vs increment-permutation + "
+     "off-kernel rank in >=2 gate-passing sessions", "null"],
+    ["FRB", "parity-without-rate diagnostic: no mu4 PA refinement + rate-free "
+     "switches + persistent classes (FO.04)",
+     "the m=2 PA fundamental (FRB.08) and handedness persistence (KC.02) ARE the "
+     "only Z2 signature the double cover may leave (parity/projection, never a rate; "
+     "mu4 is a Galois gear without a pointer): (a) NO m=4 refinement ever; (b) "
+     "class-switch times rate-free (no teeth, no comb); (c) class membership "
+     "persistent across sessions",
+     "REAL FAST 20240114A pol v5 (6133 PA bursts, L/I>=10%): (a) vm2-only first run "
+     "fired nominally at m=4 (A4=0.0424 vs null 0.0127, p=0.0005) -- the dated v1.1 "
+     "specificity battery resolves it: odd/even harmonic placebos fire equally "
+     "(z3=3.6, z4=4.4, z6=4.2 -- generic misfit, the two PA modes sit 60.2 deg "
+     "apart, not 90) and a 3-component smooth null absorbs m=4 (p=0.64) -> "
+     "PA-distribution misfit, NOT a mu4 pointer, prediction (a) holds; (b) 376 "
+     "switch waiting-time ratios: tooth enrichment 0.74, p=1.0, no comb-gated "
+     "session -> rate-free; (c) 45/45 sessions share the global dominant PA mode "
+     "(binomial p=2.8e-14) -> persistent. All three predictions hold; the same "
+     "phenomenology is standard magnetospheric physics (orthogonal modes + "
+     "propagation memory) -> consistency typing, never support", None,
+     "search_target", "Z2 parity/projection diagnostic (prime 2 carries no rate; "
+     "mu4 Galois-gear reading)",
+     "search_target", "FAST 20240114A pol catalog v5 (frb-ontology FO.04, prereg "
+     "frb_ontology_v1.yaml + dated v1.1 specificity addendum)",
+     "a SPECIFIC m=4 refinement (beats odd-harmonic placebos + smooth-null battery) "
+     "OR structured switch times OR non-persistent classes kills the "
+     "parity-without-rate reading", "consistent"],
+    ["FRB", "episode-level transfer ladder: quiescence gaps + episode-integrated "
+     "energies on the teeth (FO.05)",
+     "if the transfer unit is the ACTIVITY EPISODE (excitation writes marks, one "
+     "episode = one step, quiescence = recovery), consecutive quiescence-gap ratios "
+     "sit on the time teeth {3/2,(3/2)^3,(3/2)^6} and episode-integrated energies "
+     "on the partner teeth (2/3)^k -- the last untested aggregation level (all "
+     "prior ladders ran burst-to-burst). Exploratory surface leakage (no named B)",
+     "REAL committed catalogs (Blinkverse multi-source deduplicated + FAST 20240114A "
+     "v5 times + CHIME Cat2; anti double-counting enforced): 8 sources clear the "
+     "5-d episode gates; quiescence-gap Bonferroni p=1.0 (7 sources), episode-energy "
+     "Bonferroni p=0.44 (7 sources); the flagged 10-d secondary agrees; largest "
+     "single-source excursion FRB20190520B energy enrichment 3.0 at p=0.063 (not "
+     "significant, single source) -> clean NULL. Known dominant systematic on "
+     "record: observing-schedule selection", None,
+     "search_target", "boundary recovery kernel (episode aggregation reading)",
+     "search_target", "Blinkverse export + FAST 20240114A pol v5 + CHIME Cat2 "
+     "(frb-ontology FO.05, prereg frb_ontology_v1.yaml; episode gap 5 d frozen)",
+     "a tooth enrichment in quiescence gaps or episode energies survives the "
+     "permutation null + placebo teeth in >=2 sources", "null"],
+    ["FRB", "repeater/one-off leaf classes: exact two-mode morphology (FO.06)",
+     "if the repeater/one-off dichotomy is a Z2 leaf classification (double cover), "
+     "the only uniform-survey catalog shows EXACTLY two morphological modes in "
+     "(log width, log bandwidth), membership is persistent, and first-detection "
+     "morphology predicts repetition. Prime-2 diagnostic; a hit is DEFAULT astro "
+     "(selection/exposure; Pleunis+2021)",
+     "REAL CHIME Cat1 (474 clean first sub-bursts, 59 repeater bursts): morphology "
+     "DOES predict repetition (CV-AUC 0.833 vs permutation null 0.493, p=0.001; "
+     "repeater fraction per GMM mode 0.6% vs 19.9%, odds ratio 44.9 -- replicates "
+     "Pleunis+2021, default reading astro/selection), BUT the TFPT-specific 'exactly "
+     "two classes' prediction FAILS: BIC prefers k=3 (-1218.6) over k=2 (-1182.3) "
+     "-> null for the leaf-class reading. Caveats on record: 400-800 MHz bandwidth "
+     "censoring, exposure/beam selection uncorrected", None,
+     "search_target", "Z2 leaf-class diagnostic (population morphology, prime-2 "
+     "classification without a rate)",
+     "search_target", "CHIME/FRB Catalog 1 (VizieR J/ApJS/257/59; frb-ontology "
+     "FO.06, prereg frb_ontology_v1.yaml)",
+     "BIC selects exactly k=2 AND morphology predicts repetition above the "
+     "permutation null after selection correction", "null"],
+    ["FRB", "operator-structure probes: covariance blocks + polarimetric null "
+     "space + rank drop + time arrow (FO.07-10)",
+     "the v1.3 strategy shift ('where is an operator forced NOT to mix states' "
+     "instead of visible numbers): FO.07 character classes as BLOCK structure of "
+     "the burst-observable correlation matrix (S8 on data); FO.08 FORBIDDEN "
+     "region in (DOL, DOC) instead of peaks (S15 hole search); FO.09 delay-"
+     "embedded dynamics on <= 3 modes ('rank 3, not 2, not 5'); FO.10 time "
+     "arrow in within-session energy sequences (retarded/recovery direction; "
+     "preregistered caveat: irreversibility is generic -- a hit is never support)",
+     "REAL committed catalogs (prereg frb_ontology_v1.yaml v1.3 + dated v1.3.1 "
+     "escalation gate): FO.07 block structure REAL on 5694 complete 10-observable "
+     "v5 bursts (k=2 S_off=0.052 vs spectrum-preserving null 0.273, Bonferroni "
+     "p=0.006) BUT the partition is exactly the standard Faraday/geometry-vs-"
+     "emission sector split (Rand agreement 1.0) -> consistent/default astro, "
+     "first-run hint on record; FO.08 NULL (6107 S/N>=20 bursts: largest empty "
+     "disk r=0.302 vs marginal-preserving joint-permutation null median 0.551, "
+     "p=1.0 -- visible voids are marginal-driven); FO.09 NULL (median Hankel "
+     "effective rank 0 in Li+2021 and Zhang+2023 energy sessions -- memoryless, "
+     "no 3-mode manifold; multivariate v5 leg flagged descriptive); FO.10 NULL "
+     "-- a NEW bound: increment skewness 0.048/0.002 + Pomeau asymmetry "
+     "-0.051/-0.006 over 1582/1032 increments, reversal-null Bonferroni p=1.0 -> "
+     "within-session energy sequences are TIME-REVERSIBLE at catalog statistics; "
+     "an arrow-free cascade bounds every directed-recovery reading of burst "
+     "trains (and matches the FO.01 amplifier prediction); quake control open "
+     "(USGS data gitignored)", None,
+     "search_target", "operator-structure probes (S8-on-data blocks, S15 hole "
+     "search, rank manifold, time arrow)",
+     "search_target", "FAST 20240114A pol v5 + Li+2021 + Zhang+2023 "
+     "(frb-ontology FO.07-10, prereg v1.3 + v1.3.1)",
+     "a non-standard-sector covariance block, a joint forbidden Stokes region, "
+     "a replicated rank-3 manifold, or a robust time arrow surviving its "
+     "reversal null in >= 2 sources", "null"],
+    # uhecr-energy-dsi (2026-07-07): the largest ln-E range in nature
+    ["cosmic-ray", "UHECR energy-spectrum size-space DSI (Auger Open Data)",
+     "log-periodic decoration of the cosmic-ray energy spectrum at the frozen "
+     "kernel scale factor (omega = 2.5827 in ln E) -- the S7 size-space reading "
+     "on the largest ln-E range in nature (0.1-144 EeV = 2.99 comb periods, "
+     "combined SD750+SD1500 above their full-efficiency thresholds where the "
+     "aperture is purely geometrical). Transduction B unproven -> exploratory "
+     "surface probe; smooth null = piecewise-linear log-density with knots "
+     "FROZEN at the published spectral features (second knee/ankle/instep/"
+     "suppression), so the population-feature trap is closed by construction",
+     "REAL Auger Open Data release 3 (Zenodo 10.5281/zenodo.10488964; 10% of "
+     "published events): 21,571 SD1500 vertical + 54,434 SD750 events (deduped): "
+     "kernel comb ABSENT -- Lambda = 0.15 (fitted eps 0.0018), MC p = 0.49, "
+     "off-kernel rank p = 0.77; Z2 battery null after per-omega MC calibration "
+     "((3/2)^3 p = 0.13, (3/2)^4 p = 0.78, Bonferroni 0.26; (3/2)^12 range-blind "
+     "at 1.49 periods); audit note on record: the (3/2)^3 leg nominally fired at "
+     "p = 0.0025 under the wrong (kernel-omega) null -- per-omega calibration "
+     "dissolves it. Injection: 97% power at eps = 0.05, 23% at the predicted "
+     "0.0173 -> the null constrains but does not kill the predicted amplitude "
+     "(full-statistics Auger / TA+Auger is the dated decider)", None,
+     "search_target", "size-space DSI (S7 reading; no clock map needed)",
+     "search_target", "Pierre Auger Observatory Open Data release 3 "
+     "(uhecr-energy-dsi, prereg uhecr_dsi_v1.yaml)",
+     "a shared multiplicative comb at the frozen omega survives the MC + "
+     "off-kernel rank on the combined spectrum AND replicates in the "
+     "full-statistics Auger or TA spectrum", "null"],
+    # cmb-primordial-logcomb (2026-07-07): the one natural bed with a MOTIVATED
+    # S14 clock (inflation e-folds are a log-clock); typing against the published
+    # Planck log-oscillation search (identical template in ln k).
+    ["CMB", "primordial log-comb at the frozen omega (Planck feature search)",
+     "if the seed epoch carried the seam recovery, its log-comb is imprinted in "
+     "ln k: P(k) = P0(k)[1 + A cos(omega ln(k/k*) + phi)] with FROZEN omega = "
+     "2.5827 (log10 = 0.412) and the QT.02 amplitude eps = 0.0173. The clock map "
+     "is MOTIVATED here (e-folds; the only such natural bed, S14); the transfer "
+     "of the comb into P(k) is an ASSUMED bridge (S15, flagged)",
+     "PUBLISHED Planck 2018 X log-oscillation search (identical template): the "
+     "frozen omega sits INSIDE the search prior (log10 omega in [0, 2.1]); no "
+     "significant feature anywhere (best-fit Delta chi2 ~ 10 typed as noise/"
+     "217-GHz artefact); 95% amplitude bound ~0.03 (Planck alone), ~0.029 "
+     "combined Planck+SPT-3G+ACT -- a factor 1.7 ABOVE the predicted 0.0173. "
+     "Reach: 3.12 comb periods over the full likelihood window (gate passed; "
+     "the conservative 0.005-0.2 Mpc^-1 window alone is sub-gate at 1.52). "
+     "Zero-parameter target: the frequency has no tunable freedom", None,
+     "search_target", "boundary recovery kernel (dynamic, primordial ln k "
+     "reading; motivated clock, assumed transfer bridge)",
+     "search_target", "Planck 2018 X (A&A 641, A10) Sect. 7-8 + combined "
+     "Planck/SPT-3G/ACT feature constraints (cmb-primordial-logcomb typing)",
+     "a future 95% bound A_log(omega = 2.583) < 0.017 with no detection kills "
+     "the primordial-DSI bridge; a phase-coherent detection AT the frozen omega "
+     "escalates (CMB-S4-class combinations decide)", "data_limited"],
     ["X-ray", "recovery comb in magnetar outburst relaxation (omega=2.58)",
      "log-periodic comb at omega=2.58 in the post-outburst X-ray flux decay (wide ln t, stackable)",
-     "data_limited: needs Swift/XRT or Coti Zelati+2018 flux(t); ~3 decades in ln t = best new "
-     "candidate, but magnetospheric (surface) relaxation -> search target with firewall caveat, "
-     "not a horizon recovery; detector injection-validated", None,
+     "REAL Swift-XRT/LSXPS data: 6 transient-magnetar outburst light curves; 2 clear the "
+     ">=2.8-period ln-range gate (1E 1547.0-5408 at 3.54, SGR 1745-2900 at 2.93 periods); "
+     "STACKED kernel omega=2.58 NOT special (p=0.99) -> clean NULL (magnetospheric/surface "
+     "relaxation -> firewall caveat, not a horizon recovery; a 2-curve stack at the predicted "
+     "~2% amplitude is a weak constraint)", None,
      "search_target", "boundary recovery kernel (dynamic, surface caveat)",
-     "search_target", "Swift/XRT light curves / Coti Zelati+2018 magnetar-outburst sample",
-     "the omega=2.58 comb is special in a wide-ln-t magnetar flux-decay recovery", "data_limited"],
+     "search_target", "Swift-XRT/LSXPS long-term light curves (6 curated transient magnetars)",
+     "the omega=2.58 comb is special in a wide-ln-t magnetar flux-decay recovery", "null"],
+    # Z2/Moebius double-cover readings of the SAME kernel (2026-07-06): an antiperiodic
+    # (sheet-parity) comb has ZERO Fourier power at the kernel omega -> every kernel NULL
+    # above is silent about it. Exploratory/unforced readings; same curves/detector as the
+    # kernel rows -> an alternative READING, never an independent null/hit.
+    ["cross-domain", "Z2/Moebius double-cover readings of the recovery comb "
+     "((3/2)^3, (3/2)^4, (3/2)^12)",
+     "if the comb carries the Z2 sheet parity per kernel period (antiperiodic, periodic only on "
+     "the double cover), its power at omega=2.583 is exactly zero: fundamental at omega/2=1.291 "
+     "(lambda=(3/2)^12), first odd harmonic at 3omega/2=3.874 ((3/2)^4); a half-period "
+     "(sqrt-lambda per rung) clock sits at 2omega=5.165 ((3/2)^3). UNFORCED readings (no theory "
+     "contract selects one) that close the antiperiodic blind spot of the kernel NULLs",
+     "REAL data, ALL in-hand dynamic channels (2026-07-06): quake battery (6 USGS sequences, "
+     "thousands of events) (3/2)^3 p=0.62 / (3/2)^4 p=0.45, Bonferroni global p=0.94 over 11 "
+     "gated lambdas; A1 magnetar (3/2)^3 p=0.36 / (3/2)^4 p=0.27; A3 FAST/GBT FRB tails p=0.81 / "
+     "p=0.60; A3b CHIME baseband p=0.21 / p=0.40; A4 GRB 22 afterglows p=0.42 / p=0.28; A5 ENT "
+     "battery global p=0.095; PULSAR legs: PG.07 Vela-2024 p=0.27/0.23, PG.08 residuals null in "
+     "all 3 glitches ((3/2)^3 p=1.0/0.10/0.17); repeater-cascade 9 gate-passing FRB sessions "
+     "Fisher p=0.25/(3/2)^3, 0.14/(3/2)^4; crust cooling (3/2)^3 p=0.99 (n=6 gated); FRB "
+     "microshots: (3/2)^3 is the FIRST reading to pass the per-lambda gate on the forest (3.22 "
+     "periods) -> p=0.40 null; GW echoes cover the antiperiodic reading natively as the "
+     "dphi=pi per-bounce phase x (2/3)^3 semantics in the Stage-1c battery (NO_VARIANT_ECHO, "
+     "10 events) -> clean NULL everywhere testable (well-powered in quake + GRB + PG.08-J1740 + "
+     "RC sessions). Two nominal excesses placebo-typed as artefacts, on record: PG.08 "
+     "J1740-3015 (3/2)^4 raw p=0.0018 is a broad non-specific omega=3.6-4.0 bump (periodogram "
+     "peak 3.73; placebos 3.6/3.73 equally significant); RC (3/2)^12 Fisher p=4e-4 is sub-gate "
+     "(1.5-2.4 < 2.8 periods; placebo lambdas 60-300 equally extreme -> anti-conservative below "
+     "the range gate). The antiperiodic FUNDAMENTAL (3/2)^12 (omega=1.29) is range-blind in ALL "
+     "current data (needs 13.6 e-folds; widest curve Landers1992 has 13.1) -> data_limited on "
+     "that leg", None,
+     "search_target", "boundary recovery kernel (dynamic, Z2/Moebius sheet-parity reading)",
+     "search_target", "recovery-comb-domains (quake/magnetar/GRB/FRB tails/ENT/microshots) + "
+     "pulsar-glitch-recovery PG.07/PG.08 + repeater-cascade RC.02 + crust-cooling-comb + "
+     "gw-ringdown-echo Stage-1c dphi=pi (shared stacked detector, per-omega gate)",
+     "a Z2 reading ((3/2)^3, (3/2)^4 or (3/2)^12) is special vs its matched off-kernel pool AND "
+     "its placebo controls in >=2 independent channels after look-elsewhere", "null"],
     ["pulsar", "recovery-waveform clock template (PG.04/QT.04)",
      "walled 2-mode clock: bend tau ratio 2.7095 + protected floor + wall (<=2 modes)",
      "GW single-event ringdown DONE (gw Stage 2): the bend is degenerate within one monotone recovery "
@@ -415,8 +698,11 @@ ROWS = [
      "amplitude-damping dilation circuit (Perron mode gate-protected; energy + amplitude readings)",
      "Aer exact tier: per-step survivals exact to <=2.4e-15, free-ratio fit recovers the bend "
      "2.709511 (bias -3.8e-14); noisy tier (FakeBrisbane 127-qubit Eagle model, ISA depth 158): "
-     "bend identifiable -- per-mode decode 2.65-2.69 at 256 shots, blind QT.04 free-ratio "
-     "2.89+/-0.12 at 16384 shots (3/3 seeds), protected floor retention 0.993; IBM hardware "
+     "bend identifiable by circuit-native per-mode decode (min_shots_per_mode=256; mean bends "
+     "2.46/2.69/2.68/2.65 over 256/1024/4096/16384 shots); the blind QT.04 combined free-ratio "
+     "fit is weaker in the fresh run (detection 0%/0%/33%/67%; strict min_shots_identifiable=None), "
+     "but first-seed one-step/two-step fits at 16384 are on-bend (2.787/2.806); protected floor "
+     "retention 0.993; IBM hardware "
      "EXECUTED 2026-07-03 (ibm_marrakesh Heron R2, 13 circuits x 16384 shots, job "
      "d93ppd6vtlqs73ftdu5g): one-step survivals reproduced (2/3 at -4.2%, 1/3 at +8.9%), "
      "protected-floor retention 0.860, but the blind 12-block bend decode is floor/T1-biased "
@@ -426,13 +712,67 @@ ROWS = [
      "not_applicable", "qc-recovery-kernel (Qiskit Aer + FakeBrisbane + ibm_marrakesh)",
      "the bend is not identifiable under the device noise model at any tested shot count",
      "consistent"],
+    # qgeo-eit-soff (2026-07-06): the QGEO S_off observable on a REAL measured boundary
+    # operator -- EIT measures the electrode ND map, the lab realisation of Lambda_Sigma.
+    # Analog/instrument validation, same basket as qc-recovery-kernel (never TFPT evidence).
+    ["quantum", "QGEO S_off on a real measured boundary operator (EIT analog channel)",
+     "mu4 character block-diagonality of the boundary energy form (QGEO.SYM.01 operator "
+     "form, v198/v201/v210): S_off = sum_{r!=s}||P_r R P_s||^2/||R||^2 at the instrument "
+     "floor for mu4-marked geometry; generic anisotropy leaks isotropically over the "
+     "harmonic lags (forbidden fraction ~12/15); simulation contract "
+     "qgeo_soff_reconstruction.py sets the requirement ~1e-3 relative spectral precision",
+     "REAL KIT4 open EIT archive (Zenodo 10.5281/zenodo.1203914; 38 tank measurements, 16 "
+     "electrodes, 79 injections each): H1 PASS -- the homogeneous tank realises a mu4-block-"
+     "diagonal measured ND map at the instrument floor (S_off = 7.6e-5, clock commutator "
+     "1.5e-2, reciprocity 5.3e-3 = the sigma~1e-3 dial met on real hardware); H2 PASS -- all "
+     "28 anisotropic targets leak with the generic isotropic signature (forbidden fraction "
+     "0.87-1.00 vs expected 0.8), none fakes a mu4 positive; 9 centered/annular targets are "
+     "rotation-invariant-like and sit near the floor (photo-verified v1.1 anisotropy gate, "
+     "dated addendum). v1.2 (same day, frozen acceptance protocol for the lab run): all "
+     "metrics moved to the DIFFERENCE operator Delta = R_case - R_hom with the absolute-"
+     "leakage dial leak(m)=sqrt(A_off_m/floor_m) (split-half noise floor), C2/C4/C8/C16 "
+     "group fingerprint (H3 class = C4 holds AND C8 broken, so a centered ring can never "
+     "fake it), clock recovery over all 15 rotations, D4 reflection score, NtD/DtN-proxy "
+     "robustness (commutant transfer verified 1e-15), delta^2 break-scaling verified "
+     "(exponent 1.998), blind protocol + 9-step break ladder preregistered. Archive re-run: "
+     "0 C4-positives (as required, no mu4 target exists), geometry-blind classifier 34/37 "
+     "vs documented geometry (3 mismatches physically real: 6.1 foam joints/clamps); "
+     "between-session floor identified as the H3-relevant systematic (repeat-homogeneous "
+     "requirement frozen). H3 (the decisive mu4-POSITIVE 4-inclusion configuration at "
+     "j*pi/2) is NOT in the archive -> data_limited, preregistered as the future "
+     "measurement any KIT4-class lab can run", None,
+     "search_target", "analog boundary-operator realisation of the QGEO seam premise",
+     "not_applicable", "qgeo-eit-soff (KIT4 open 2D EIT, Hauptmann+ arXiv:1704.01178)",
+     "H1 or H2 fail at KIT4-class precision (observable not realisable), or the future "
+     "mu4-positive H3 leaks at demonstrated instrument precision (analog path closes)",
+     "consistent"],
     # ---- shared seed (one phi0 -> four observables) ----
     ["seed", "shared seed phi0", "phi0 = 1/(6pi)+3/(256pi^4) = 0.05317",
-     "4 observables imply same phi0, chi2/dof=1.23 (dominant leg theta13, -1.80 sigma)",
+     "4 observables imply same phi0, chi2/dof=1.23 (dominant leg theta13, -1.80 sigma). "
+     "v4 (2026-07-06) DECODER test on the raw channels: ONE latent u = 0.05292 fits "
+     "beta/Omega_b/theta13(reactor)/Cabibbo simultaneously (chi2 = 4.10, dof 3, p = 0.25; "
+     "frozen phi0: chi2 = 4.51, dof 4, p = 0.34); AIC prefers the 1-parameter shared decoder "
+     "over the saturated per-channel model (6.1 < 8.0); 0/14 single-swap neighbour link "
+     "decoders (4pi -> pi..16pi, slope, exponent 5/6 -> 1/2..7/6, Cabibbo link) beat it, and "
+     "it sits at the 0.0th percentile of 2000 equal-complexity random placebo decoders "
+     "(median placebo chi2 ~ 1200) -- the cross-channel RATIOS are TFPT-specific, an "
+     "architecture consistency, not proof. v5 (same day) LOO FORWARD TEST: every "
+     "channel predicted by the other three within 2.0 sigma (worst leg theta13 at "
+     "-1.99, the known crack candidate); FLAGSHIP dated band: Cabibbo + theta13 + "
+     "Omega_b predict beta = 0.2413 +/- 0.0018 deg (~40x narrower than ACT's current "
+     "error; ACT DR6 sits at z=-0.36) -- LiteBIRD/Simons Observatory (sigma~0.02 deg) "
+     "test this band BLIND, beta never entered the fit. v6 (same day) RETARDED-TAIL "
+     "ABLATION: u_tree = 1/(6pi) vs u_ret = 1/(6pi) + 3/(256pi^4) (the specific "
+     "topological +0.23% correction) is UNDECIDABLE today (|Delta chi2| = 0.30, tail "
+     "< 0.3 sigma in every channel); dated prequential deciders: sigma(V_us) ~ 8e-5 "
+     "(kaon/lattice, the realistic one), sigma(sin2th13) ~ 1.8e-5, sigma(omega_b h2) "
+     "~ 1.7e-5; beta can NEVER see the tail (needs 1.8e-4 deg). Frozen crack: >= 2 "
+     "channels preferring the tree seed at >= 3 sigma kills the retarded reading",
      None, "prediction", "one retarded seed", "prediction_of_record",
-     "seed-consistency + cmb-birefringence-seed (shared_seed)",
+     "seed-consistency (v1-v6) + cmb-birefringence-seed (shared_seed)",
      "two independent seed legs >3 sigma, or one leg >5 sigma; theta13 alone >3 sigma flags "
-     "PMNS theta13 as transfer-corrected", "consistent"],
+     "PMNS theta13 as transfer-corrected; v4: >2 neighbour decoders beating the TFPT links "
+     "or placebo percentile >10% would void the architecture reading", "consistent"],
     # ---- inflation (cmb-inflation-scalaron) ----
     ["CMB", "inflation n_s (Starobinsky/scalaron)", "1-2/N_star = 0.9611 (N=51.4)",
      "Planck 0.9649+/-0.0042", -0.91, "prediction", "N_star reheating input",
@@ -806,6 +1146,9 @@ FIELDS = ["domain", "observable", "tfpt_value", "data_value", "pull_sigma",
 
 EVIDENCE_CLASS_ENUM = {"external_data", "internal_consistency", "downstream_bridge",
                        "search_target", "parked"}
+LEAKAGE_CLASS_ENUM = {"external_data", "downstream_bridge", "search_target",
+                      "surface_leakage", "core_operator", "architecture_core",
+                      "internal_kernel", "detector_control", "parked"}
 README = Path(__file__).resolve().parent / "README.md"
 
 # --- metadata enrichment (so correlated seed legs / internal checks are not counted
@@ -826,6 +1169,40 @@ _LONG = ("qnm", "m_betabeta", "page curve", "recovery kernel")
 # never silently double-counted).
 OVERRIDES: dict[str, dict] = {
     "achromatic dyonic intercept": {"independence_group": "c3_topform_horizon"},
+    # frb-ontology diagnostics: standard magnetospheric physics (orthogonal modes +
+    # propagation memory) / survey selection (Pleunis+2021 morphology split) predict
+    # the same phenomenology -> weakly discriminating consistency typings, never hits.
+    "parity-without-rate diagnostic": {"discriminative_power": "weak",
+                                       "signature_code": "S4/S5",
+                                       "transduction_B": "missing_or_unproven",
+                                       "projection_nonzero": "not_established"},
+    "repeater/one-off leaf classes": {"discriminative_power": "weak",
+                                      "signature_code": "S4",
+                                      "transduction_B": "missing_or_unproven",
+                                      "projection_nonzero": "not_established"},
+    "UHECR energy-spectrum size-space DSI": {"signature_code": "S7",
+                                             "clock_map": "not_required_size_space"},
+    "primordial log-comb at the frozen omega": {
+        "signature_code": "S2b/S14",
+        "clock_map": "motivated_inflation_efolds",
+        "transduction_B": "assumed_bridge_flagged",
+        "projection_nonzero": "assumed_bridge_flagged",
+        "decision_horizon": "mid_term"},
+    "operator-structure probes: covariance blocks": {
+        "signature_code": "S8-data/S15",
+        "discriminative_power": "weak",
+        "transduction_B": "missing_or_unproven",
+        "projection_nonzero": "not_established"},
+    # FO.02 carries the first NAMED FRB transduction (DM/RM line integrals; S15 gate
+    # passed); FO.03 carries the first NAMED clock (S14) -- same comb question as
+    # RC.02, an alternative READING, never an independent null.
+    "medium-state common two-rate operator": {"signature_code": "S2a",
+                                              "leakage_class": "core_operator",
+                                              "transduction_B": "named_linear_line_integral",
+                                              "projection_nonzero": "generic_nonorthogonality",
+                                              "clock_map": "not_required_for_rate_test"},
+    "state-clock comb in tau_mod": {"signature_code": "S2b/S14",
+                                    "clock_map": "named_medium_state_clock"},
     # flat-budget closure: a COMPOSITE of already-counted legs (Omega_b/theta12-class
     # phi0_seed + the alpha_em Lambda engine + the v468 nu floor) plus the flagged
     # Omega_c candidate -- it shares phi0_seed and is an ALTERNATIVE DM reading to the
@@ -850,8 +1227,29 @@ OVERRIDES: dict[str, dict] = {
     # both CP phases are ONE hexagonal mu6 CM unit rho=e^{i pi/3} split by the Z2 sheet
     # (v231/v233): delta_PMNS = delta_CKM,lead + pi. They are correlated, NOT two
     # independent hits; the leptonic phase has weak discriminative power (large delta_CP error).
-    "delta_CKM": {"independence_group": "cp_mu6_phase"},
-    "delta_nu_CP": {"independence_group": "cp_mu6_phase", "discriminative_power": "weak"},
+    "delta_CKM": {"independence_group": "cp_mu6_phase",
+                  "signature_code": "S13",
+                  "leakage_class": "architecture_core"},
+    "delta_nu_CP": {"independence_group": "cp_mu6_phase", "discriminative_power": "weak",
+                    "signature_code": "S13",
+                    "leakage_class": "architecture_core"},
+    # validation_tier (optional metadata, 2026-07-06): separates the evidence LADDER --
+    # math_closed < internal_consistency < instrument_validated < analog_positive_control
+    # < nature_* -- so analog/instrument rows never inflate the nature-evidence count.
+    "QGEO S_off on a real measured boundary operator":
+        {"validation_tier": "instrument_validated",
+         "signature_code": "S8",
+         "leakage_class": "core_operator",
+         "clock_map": "operator_clock_read_off_from_boundary_map",
+         "transduction_B": "EIT directly reconstructs the boundary ND operator",
+         "projection_nonzero": "direct_operator_projection"},
+    "recovery kernel as a quantum circuit":
+        {"validation_tier": "instrument_validated",
+         "signature_code": "S12",
+         "leakage_class": "internal_kernel",
+         "clock_map": "engineered_transfer_steps",
+         "transduction_B": "quantum circuit and readout implement the channel",
+         "projection_nonzero": "direct_circuit_readout"},
     "recovery kernel as CPTP map": {"stage": "not_applicable"},
     "Page curve turnover": {"stage": "not_applicable"},
     "Petz recovery + rank-one baby universe": {"stage": "not_applicable"},
@@ -861,7 +1259,12 @@ OVERRIDES: dict[str, dict] = {
     "anyon MTC statistical phases (QT.05)": {"stage": "not_applicable"},
     "S_dS rho_Lambda": {"stage": "not_applicable"},          # algebraic identity, not a measurement
     "shared seed phi0": {"chi2_dof": 1.23, "max_leg_pull_sigma": 2.0,
-                         "dominant_leg": "theta13", "dominant_chi2_fraction": 0.88},
+                         "dominant_leg": "theta13", "dominant_chi2_fraction": 0.88,
+                         "signature_code": "S9",
+                         "leakage_class": "architecture_core",
+                         "clock_map": "not_required",
+                         "transduction_B": "shared_seed_decoder",
+                         "projection_nonzero": "cross_channel_ratios"},
     "Lambda hierarchy": {"log_order_deviation": 0.004},
     # --- alternative interpretation bases (one theme, several readings) ---
     "inflation A_s (fixed N_star=51.4 point)": {"alternative_group": "Nstar_branch"},
@@ -928,14 +1331,112 @@ OVERRIDES: dict[str, dict] = {
 def _evidence_class(row: dict) -> str:
     if row["stage"] == "parked_analog":
         return "parked"
+    if row.get("validation_tier") in {"instrument_validated", "analog_positive_control"}:
+        return "internal_consistency"
+    if row["stage"] == "not_applicable":
+        return "internal_consistency"
     src = row["source"].lower()
     if "(numerical)" in src or "internal identity" in src:
         return "internal_consistency"
     if row["stage"] == "downstream_bridge":
         return "downstream_bridge"
-    if row["stage"] == "search_target":
+    if row["stage"] in {"search_target", "strain_level_test", "catalog_feasibility"}:
         return "search_target"
     return "external_data"
+
+
+def _infer_signature_metadata(row: dict) -> None:
+    """Attach the 2026-07-06 signature reclassification without changing row meaning."""
+    o = row["observable"].lower()
+    b = row["bridge_type"].lower()
+
+    if row["stage"] == "parked_analog":
+        row.setdefault("leakage_class", "parked")
+        return
+
+    if row["evidence_class"] == "downstream_bridge":
+        row.setdefault("leakage_class", "downstream_bridge")
+        row.setdefault("transduction_B", "downstream_bridge_model")
+        row.setdefault("projection_nonzero", "model_dependent")
+        return
+
+    if row["evidence_class"] == "external_data":
+        row.setdefault("leakage_class", "external_data")
+        row.setdefault("clock_map", "not_required")
+        row.setdefault("transduction_B", "prediction_decoder_or_standard_observable")
+        row.setdefault("projection_nonzero", "prediction_of_record")
+        return
+
+    if row["evidence_class"] == "internal_consistency":
+        row.setdefault("leakage_class", "internal_kernel")
+        row.setdefault("clock_map", "internal_or_engineered")
+        row.setdefault("transduction_B", "known_by_construction")
+        row.setdefault("projection_nonzero", "direct_internal_observable")
+
+    if "false-positive control" in o:
+        row.setdefault("signature_code", "detector-control")
+        row.setdefault("leakage_class", "detector_control")
+        row.setdefault("clock_map", "matched_to_control_system")
+        row.setdefault("transduction_B", "control_dataset_detector")
+        row.setdefault("projection_nonzero", "not_a_tfpt_projection")
+        return
+
+    # Old visible-number searches are now surface-leakage probes unless a direct operator
+    # readout or seed decoder was set by OVERRIDES.
+    surface_terms = (
+        "boundary recovery kernel", "sub-burst step kernel", "resummed recovery clock",
+        "mu4", "z2", "moebius", "walled clock", "recovery comb", "kernel couplings",
+        "size-space", "qpe recurrence", "hfqpo", "gravastar", "frb gap clock",
+    )
+    if row["evidence_class"] == "search_target" and any(t in b or t in o for t in surface_terms):
+        row.setdefault("leakage_class", "surface_leakage")
+        row.setdefault("transduction_B", "missing_or_unproven")
+        row.setdefault("projection_nonzero", "not_established")
+        if any(t in o for t in ("comb", "omega", "cascade", "dynamic", "recovery")):
+            row.setdefault("clock_map", "observer_time_or_surface_clock_unjustified")
+        else:
+            row.setdefault("clock_map", "not_required_for_static_probe")
+
+    signature_patterns = (
+        ("echo ratios", "S1"),
+        ("ringdown echo amplitude ratio", "S1/S10"),
+        ("activity-window eigenwidths", "S1"),
+        ("pol-fraction quantisation", "S5"),
+        ("width-relaxation echo", "S1"),
+        ("static PA mu4 classes", "S5"),
+        ("PA/RM Markov spectrum", "S2a/S5"),
+        ("recovery-clock dynamics", "S3"),
+        ("glitch-size log-periodicity", "S7"),
+        ("per-pulsar size/waiting kernel ladder", "S1/S7"),
+        ("recovery Q / tau_d", "S3"),
+        ("dynamic recovery comb", "S2b"),
+        ("recovery comb on", "S2b"),
+        ("recovery comb in", "S2b"),
+        ("microshot cascade", "S1/S2b/S3"),
+        ("kernel couplings", "S2a/S4/S5/S6/S7/S8-proxy"),
+        ("repeater burst-time cascade", "S2b/S11"),
+        ("Z2/Moebius double-cover", "S4"),
+        ("recovery-waveform clock template", "S3/S2b"),
+        ("QPE recurrence", "S1/S2b/S3"),
+        ("BH HFQPO", "S1e"),
+        ("comb ripple", "S2b"),
+        ("meta-analytic UL", "S2b"),
+        ("area-quantum spectral comb", "S10"),
+        ("compiler fingerprint catalog", "S10"),
+        ("achromatic dyonic intercept", "S10e"),
+        ("anyon pi/4", "S12/S5"),
+        ("dynamic Crab", "S2b/S3"),
+    )
+    for needle, code in signature_patterns:
+        if needle.lower() in o:
+            row.setdefault("signature_code", code)
+            break
+
+    if row["evidence_class"] == "search_target":
+        row.setdefault("leakage_class", "search_target")
+        row.setdefault("clock_map", "not_required_or_unspecified")
+        row.setdefault("transduction_B", "experiment_specific")
+        row.setdefault("projection_nonzero", "experiment_specific")
 
 
 def _enrich(row: dict) -> dict:
@@ -965,6 +1466,7 @@ def _enrich(row: dict) -> dict:
     row.setdefault("hint_flag", "FRB.03" in row["observable"])
     row.setdefault("alternative_group", None)     # not an alternative-interpretation base
     row.setdefault("watch_flag", False)           # high-priority non-red channel?
+    _infer_signature_metadata(row)
     return row
 
 
@@ -982,14 +1484,17 @@ def build() -> dict:
         row = _enrich(row)
         if row["evidence_class"] not in EVIDENCE_CLASS_ENUM:
             raise ValueError(f"bad evidence_class in {row['observable']!r}")
+        if row.get("leakage_class") not in LEAKAGE_CLASS_ENUM:
+            raise ValueError(f"bad leakage_class in {row['observable']!r}")
         rows.append(row)
 
     def _tally(key: str) -> dict[str, int]:
         out: dict[str, int] = {}
         for row in rows:
-            if row[key] is None:
+            value = row.get(key)
+            if value is None:
                 continue
-            out[row[key]] = out.get(row[key], 0) + 1
+            out[value] = out.get(value, 0) + 1
         return out
 
     return {
@@ -1001,10 +1506,13 @@ def build() -> dict:
         "stage_enum": sorted(STAGE_ENUM),
         "status_enum": sorted(STATUS_ENUM),
         "evidence_class_enum": sorted(EVIDENCE_CLASS_ENUM),
+        "leakage_class_enum": sorted(LEAKAGE_CLASS_ENUM),
         "n_rows": len(rows),
         "count_by_status": _tally("status"),
         "count_by_stage": _tally("stage"),
         "count_by_evidence_class": _tally("evidence_class"),
+        "count_by_leakage_class": _tally("leakage_class"),
+        "count_by_signature_code": _tally("signature_code"),
         "count_by_independence_group": _tally("independence_group"),
         "count_by_alternative_group": _tally("alternative_group"),
         "n_watch_flag": sum(1 for r in rows if r.get("watch_flag")),
@@ -1016,17 +1524,23 @@ def _readme_stats_block(card: dict) -> str:
     """The auto-generated stats paragraph (single source = the scorecard JSON)."""
     st = card["count_by_status"]
     ec = card["count_by_evidence_class"]
+    lc = card["count_by_leakage_class"]
+    sc = card["count_by_signature_code"]
     ig = card["count_by_independence_group"]
     ag = card["count_by_alternative_group"]
     order = ["consistent", "hint", "tension", "null", "data_limited", "kill_channel", "parked"]
     status_str = ", ".join(f"{st[k]} {k}" for k in order if k in st)
     ec_str = ", ".join(f"{ec[k]} {k}" for k in sorted(ec))
+    lc_str = ", ".join(f"{lc[k]} {k}" for k in sorted(lc))
+    sc_str = ", ".join(f"{sc[k]} {k}" for k in sorted(sc))
     ig_str = ", ".join(f"{ig[k]} {k}" for k in sorted(ig))
     ag_str = ", ".join(f"{ag[k]} {k}" for k in sorted(ag))
     return (f"<!-- SCORECARD_STATS:START (generated by build_evidence_scorecard.py; do not edit) -->\n"
             f"**Scorecard (auto-generated from `evidence_scorecard.json`): {card['n_rows']} "
             f"Zeilen — {status_str}.**\n\n"
             f"- nach `evidence_class`: {ec_str}\n"
+            f"- nach `leakage_class`: {lc_str}\n"
+            f"- nach `signature_code`: {sc_str}\n"
             f"- nach `independence_group`: {ig_str}\n"
             f"- `alternative_group` (eine Frage, mehrere Lesarten — *nicht* doppelt zählen): {ag_str}\n"
             f"- `watch_flag`: {card['n_watch_flag']} (schärfster nicht-roter Kanal: dunkle Energie `w`)\n"
@@ -1057,6 +1571,8 @@ def main() -> int:
     print("by status:", card["count_by_status"])
     print("by stage :", card["count_by_stage"])
     print("by evidence_class:", card["count_by_evidence_class"])
+    print("by leakage_class:", card["count_by_leakage_class"])
+    print("by signature_code:", card["count_by_signature_code"])
     print("by independence_group:", card["count_by_independence_group"])
     print("README stats block updated:" , _update_readme(card))
     sharp = [r for r in card["rows"] if isinstance(r["pull_sigma"], (int, float))

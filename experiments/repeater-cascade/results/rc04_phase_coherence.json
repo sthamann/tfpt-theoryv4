@@ -1,0 +1,47 @@
+{
+  "omega": 2.5827069463082895,
+  "n_surrogate": 2000,
+  "sources": [
+    {
+      "source": "FRB20201124A",
+      "n_sessions": 2,
+      "phases_deg": [
+        -99.4,
+        53.2
+      ],
+      "per_session_resultant": [
+        0.5026,
+        0.3917
+      ],
+      "r_obs": 0.2371,
+      "p_surrogate": 0.4923,
+      "coherent": false
+    },
+    {
+      "source": "FRB20240114A",
+      "n_sessions": 7,
+      "phases_deg": [
+        60.5,
+        -80.8,
+        -138.1,
+        104.9,
+        -99.7,
+        -79.0,
+        132.3
+      ],
+      "per_session_resultant": [
+        0.3942,
+        0.3506,
+        0.2776,
+        0.3203,
+        0.207,
+        0.3477,
+        0.3963
+      ],
+      "r_obs": 0.2066,
+      "p_surrogate": 0.1524,
+      "coherent": false
+    }
+  ],
+  "verdict": "NULL -- the per-source comb phase at the frozen omega=2.583 is NOT more concentrated across sessions than the rate-preserving surrogate null (FRB20201124A: R=0.2371 over 2 sessions (p=0.4923); FRB20240114A: R=0.2066 over 7 sessions (p=0.1524)). Honest power scope: a per-session phase estimate has noise resultant ~1/sqrt(n) (~0.07-0.15 here) vs a coherent comb contribution ~eps/2, so this bounds only PERSISTENT combs with eps >~ 2/sqrt(n) ~ 0.15-0.3 -- the same amplitude wall as RC.02; at the predicted eps~1.7% the phases are noise-dominated by construction. The transient per-event reading is untouched. Consistent with the t0-aligned (phase-coherent) stacks already run elsewhere: PG.07 Vela 2016-2024 p=0.53, crust-cooling superposed-epoch p=0.45."
+}

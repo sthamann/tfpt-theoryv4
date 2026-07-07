@@ -1,0 +1,1335 @@
+{
+  "version": "1.2",
+  "floor": {
+    "norm": 0.017073386322537708,
+    "fractions": {
+      "2": 0.23806960117506804,
+      "4": 0.4471354286885915,
+      "8": 0.5498711648717184,
+      "16": 0.9912996013250149
+    },
+    "off_weights": {
+      "2": 6.939741266219203e-05,
+      "4": 0.00013034021020503966,
+      "8": 0.00016028773077828452,
+      "16": 0.00028896434977613997
+    },
+    "reciprocity_hom": 0.0053305880176515216,
+    "rank_patterns": 15
+  },
+  "thresholds": {
+    "visibility_x_floor": 10.0,
+    "leak_consistent": 3.0,
+    "leak_broken": 10.0
+  },
+  "counts": {
+    "generic-anisotropic": 26,
+    "ambiguous": 9,
+    "homogeneous-like": 1,
+    "rotation-invariant-like": 1
+  },
+  "n_c4_positive": 0,
+  "classifier_geometry_mismatches": [
+    "6.1",
+    "7.2",
+    "8.1"
+  ],
+  "cases": [
+    {
+      "case": "1.1",
+      "geometry": "off-center",
+      "delta_norm_over_floor": 13.137339513381011,
+      "a_on": 0.02531975194315119,
+      "a_off": 0.024990232379284355,
+      "f_forbid": 0.4967251076669498,
+      "f_profile": {
+        "2": 0.4004,
+        "4": 0.4967,
+        "8": 0.5032,
+        "16": 0.5033
+      },
+      "leak_profile": {
+        "2": 17.0,
+        "4": 13.8,
+        "8": 12.6,
+        "16": 9.4
+      },
+      "f_profile_dtn": {
+        "2": 0.4832,
+        "4": 0.6846,
+        "8": 0.7124,
+        "16": 0.7129
+      },
+      "clock_min_k": [
+        1,
+        15,
+        2
+      ],
+      "reflection": 0.15125271567645712,
+      "reciprocity": 0.005846045780847843,
+      "rank": 15,
+      "classified": "generic-anisotropic"
+    },
+    {
+      "case": "1.2",
+      "geometry": "off-center",
+      "delta_norm_over_floor": 23.130133388691657,
+      "a_on": 0.13205946520023057,
+      "a_off": 0.023894208352510077,
+      "f_forbid": 0.15321350121598448,
+      "f_profile": {
+        "2": 0.1418,
+        "4": 0.1532,
+        "8": 0.1533,
+        "16": 0.1533
+      },
+      "leak_profile": {
+        "2": 17.9,
+        "4": 13.5,
+        "8": 12.2,
+        "16": 9.1
+      },
+      "f_profile_dtn": {
+        "2": 0.3434,
+        "4": 0.4011,
+        "8": 0.4023,
+        "16": 0.4024
+      },
+      "clock_min_k": [
+        1,
+        15,
+        2
+      ],
+      "reflection": 0.02154416482035539,
+      "reciprocity": 0.004083517282363332,
+      "rank": 15,
+      "classified": "generic-anisotropic"
+    },
+    {
+      "case": "1.3",
+      "geometry": "off-center",
+      "delta_norm_over_floor": 10.328941163257625,
+      "a_on": 0.0242413859977942,
+      "a_off": 0.006857937483790872,
+      "f_forbid": 0.2205172561985691,
+      "f_profile": {
+        "2": 0.1957,
+        "4": 0.2205,
+        "8": 0.221,
+        "16": 0.221
+      },
+      "leak_profile": {
+        "2": 9.4,
+        "4": 7.3,
+        "8": 6.5,
+        "16": 4.9
+      },
+      "f_profile_dtn": {
+        "2": 0.3843,
+        "4": 0.4809,
+        "8": 0.4848,
+        "16": 0.4848
+      },
+      "clock_min_k": [
+        1,
+        15,
+        2
+      ],
+      "reflection": 0.0271189425141082,
+      "reciprocity": 0.004798581766812198,
+      "rank": 15,
+      "classified": "ambiguous"
+    },
+    {
+      "case": "1.4",
+      "geometry": "centered/annular",
+      "delta_norm_over_floor": 5.736370226695693,
+      "a_on": 0.007971016896828383,
+      "a_off": 0.0016210827259333896,
+      "f_forbid": 0.169001865043875,
+      "f_profile": {
+        "2": 0.1501,
+        "4": 0.169,
+        "8": 0.1693,
+        "16": 0.1693
+      },
+      "leak_profile": {
+        "2": 4.6,
+        "4": 3.5,
+        "8": 3.2,
+        "16": 2.4
+      },
+      "f_profile_dtn": {
+        "2": 0.2382,
+        "4": 0.3003,
+        "8": 0.3023,
+        "16": 0.3025
+      },
+      "clock_min_k": [
+        1,
+        15,
+        2
+      ],
+      "reflection": 0.03374619948222039,
+      "reciprocity": 0.005020135978516138,
+      "rank": 15,
+      "classified": "homogeneous-like"
+    },
+    {
+      "case": "2.1",
+      "geometry": "off-center",
+      "delta_norm_over_floor": 32.61888003192045,
+      "a_on": 0.250015610666662,
+      "a_off": 0.06013841717811921,
+      "f_forbid": 0.19389855290938188,
+      "f_profile": {
+        "2": 0.1011,
+        "4": 0.1939,
+        "8": 0.2079,
+        "16": 0.2081
+      },
+      "leak_profile": {
+        "2": 21.3,
+        "4": 21.5,
+        "8": 20.1,
+        "16": 14.9
+      },
+      "f_profile_dtn": {
+        "2": 0.2238,
+        "4": 0.5337,
+        "8": 0.5877,
+        "16": 0.5934
+      },
+      "clock_min_k": [
+        1,
+        15,
+        2
+      ],
+      "reflection": 0.052908691590957506,
+      "reciprocity": 0.006978690333161215,
+      "rank": 15,
+      "classified": "generic-anisotropic"
+    },
+    {
+      "case": "2.2",
+      "geometry": "off-center",
+      "delta_norm_over_floor": 36.224378746164454,
+      "a_on": 0.2757094745507186,
+      "a_off": 0.10679914540826821,
+      "f_forbid": 0.27920715987974176,
+      "f_profile": {
+        "2": 0.2642,
+        "4": 0.2792,
+        "8": 0.2985,
+        "16": 0.2993
+      },
+      "leak_profile": {
+        "2": 38.2,
+        "4": 28.6,
+        "8": 26.7,
+        "16": 19.9
+      },
+      "f_profile_dtn": {
+        "2": 0.5215,
+        "4": 0.5646,
+        "8": 0.6616,
+        "16": 0.6725
+      },
+      "clock_min_k": [
+        1,
+        15,
+        2
+      ],
+      "reflection": 0.39384312115771425,
+      "reciprocity": 0.006956929340262779,
+      "rank": 15,
+      "classified": "generic-anisotropic"
+    },
+    {
+      "case": "2.3",
+      "geometry": "off-center",
+      "delta_norm_over_floor": 35.53002895696096,
+      "a_on": 0.30560957546714435,
+      "a_off": 0.062375713791131895,
+      "f_forbid": 0.16950599823394713,
+      "f_profile": {
+        "2": 0.1623,
+        "4": 0.1695,
+        "8": 0.1756,
+        "16": 0.1756
+      },
+      "leak_profile": {
+        "2": 29.3,
+        "4": 21.9,
+        "8": 20.1,
+        "16": 15.0
+      },
+      "f_profile_dtn": {
+        "2": 0.302,
+        "4": 0.317,
+        "8": 0.3559,
+        "16": 0.3565
+      },
+      "clock_min_k": [
+        1,
+        15,
+        2
+      ],
+      "reflection": 0.2650910519344389,
+      "reciprocity": 0.0031975047221853995,
+      "rank": 15,
+      "classified": "generic-anisotropic"
+    },
+    {
+      "case": "2.4",
+      "geometry": "off-center",
+      "delta_norm_over_floor": 36.168259836718455,
+      "a_on": 0.30326902241209985,
+      "a_off": 0.07805534871887165,
+      "f_forbid": 0.20469541059588447,
+      "f_profile": {
+        "2": 0.1922,
+        "4": 0.2047,
+        "8": 0.2089,
+        "16": 0.2089
+      },
+      "leak_profile": {
+        "2": 32.5,
+        "4": 24.5,
+        "8": 22.3,
+        "16": 16.6
+      },
+      "f_profile_dtn": {
+        "2": 0.3216,
+        "4": 0.3521,
+        "8": 0.3789,
+        "16": 0.3791
+      },
+      "clock_min_k": [
+        1,
+        15,
+        2
+      ],
+      "reflection": 0.18118185365556164,
+      "reciprocity": 0.0032699048097356736,
+      "rank": 15,
+      "classified": "generic-anisotropic"
+    },
+    {
+      "case": "2.5",
+      "geometry": "off-center",
+      "delta_norm_over_floor": 19.095002940363564,
+      "a_on": 0.08390098188059056,
+      "a_off": 0.022385686431220506,
+      "f_forbid": 0.2106161269967374,
+      "f_profile": {
+        "2": 0.1957,
+        "4": 0.2106,
+        "8": 0.2182,
+        "16": 0.2182
+      },
+      "leak_profile": {
+        "2": 17.3,
+        "4": 13.1,
+        "8": 12.0,
+        "16": 9.0
+      },
+      "f_profile_dtn": {
+        "2": 0.2355,
+        "4": 0.2701,
+        "8": 0.2996,
+        "16": 0.2999
+      },
+      "clock_min_k": [
+        1,
+        15,
+        14
+      ],
+      "reflection": 0.2826965144155782,
+      "reciprocity": 0.0042421170301817504,
+      "rank": 15,
+      "classified": "generic-anisotropic"
+    },
+    {
+      "case": "2.6",
+      "geometry": "off-center",
+      "delta_norm_over_floor": 16.86612622797715,
+      "a_on": 0.07790647419852585,
+      "a_off": 0.005015575234378742,
+      "f_forbid": 0.0604854229807361,
+      "f_profile": {
+        "2": 0.0456,
+        "4": 0.0605,
+        "8": 0.0617,
+        "16": 0.0617
+      },
+      "leak_profile": {
+        "2": 7.4,
+        "4": 6.2,
+        "8": 5.6,
+        "16": 4.2
+      },
+      "f_profile_dtn": {
+        "2": 0.0758,
+        "4": 0.1095,
+        "8": 0.1156,
+        "16": 0.1157
+      },
+      "clock_min_k": [
+        1,
+        15,
+        2
+      ],
+      "reflection": 0.07832025155912775,
+      "reciprocity": 0.0041988970826651005,
+      "rank": 15,
+      "classified": "ambiguous"
+    },
+    {
+      "case": "3.1",
+      "geometry": "off-center",
+      "delta_norm_over_floor": 53.21056397530538,
+      "a_on": 0.7714390848388942,
+      "a_off": 0.053905029502017074,
+      "f_forbid": 0.06531218744446199,
+      "f_profile": {
+        "2": 0.0239,
+        "4": 0.0653,
+        "8": 0.0704,
+        "16": 0.0705
+      },
+      "leak_profile": {
+        "2": 16.9,
+        "4": 20.3,
+        "8": 19.0,
+        "16": 14.2
+      },
+      "f_profile_dtn": {
+        "2": 0.1088,
+        "4": 0.2409,
+        "8": 0.2634,
+        "16": 0.2643
+      },
+      "clock_min_k": [
+        15,
+        1,
+        8
+      ],
+      "reflection": 0.23663977634567734,
+      "reciprocity": 0.008262231972440462,
+      "rank": 15,
+      "classified": "generic-anisotropic"
+    },
+    {
+      "case": "3.2",
+      "geometry": "off-center",
+      "delta_norm_over_floor": 61.20938635464281,
+      "a_on": 0.8916184240670707,
+      "a_off": 0.2005142131635731,
+      "f_forbid": 0.1835987739291662,
+      "f_profile": {
+        "2": 0.1074,
+        "4": 0.1836,
+        "8": 0.1972,
+        "16": 0.1986
+      },
+      "leak_profile": {
+        "2": 41.1,
+        "4": 39.2,
+        "8": 36.7,
+        "16": 27.4
+      },
+      "f_profile_dtn": {
+        "2": 0.4053,
+        "4": 0.6134,
+        "8": 0.6727,
+        "16": 0.6832
+      },
+      "clock_min_k": [
+        1,
+        15,
+        6
+      ],
+      "reflection": 0.3174948195109481,
+      "reciprocity": 0.008558854761237078,
+      "rank": 15,
+      "classified": "generic-anisotropic"
+    },
+    {
+      "case": "3.3",
+      "geometry": "off-center",
+      "delta_norm_over_floor": 41.03109238880051,
+      "a_on": 0.40570562593613396,
+      "a_off": 0.08505023355649682,
+      "f_forbid": 0.17330457071755848,
+      "f_profile": {
+        "2": 0.1178,
+        "4": 0.1733,
+        "8": 0.1933,
+        "16": 0.1941
+      },
+      "leak_profile": {
+        "2": 28.9,
+        "4": 25.5,
+        "8": 24.3,
+        "16": 18.2
+      },
+      "f_profile_dtn": {
+        "2": 0.3504,
+        "4": 0.4779,
+        "8": 0.5452,
+        "16": 0.5524
+      },
+      "clock_min_k": [
+        1,
+        15,
+        5
+      ],
+      "reflection": 0.3298505990716282,
+      "reciprocity": 0.007762669790401056,
+      "rank": 15,
+      "classified": "generic-anisotropic"
+    },
+    {
+      "case": "3.4",
+      "geometry": "off-center",
+      "delta_norm_over_floor": 41.8409752768878,
+      "a_on": 0.4933747559765566,
+      "a_off": 0.016945647611631726,
+      "f_forbid": 0.03320589867166335,
+      "f_profile": {
+        "2": 0.0238,
+        "4": 0.0332,
+        "8": 0.0362,
+        "16": 0.0363
+      },
+      "leak_profile": {
+        "2": 13.2,
+        "4": 11.4,
+        "8": 10.7,
+        "16": 8.0
+      },
+      "f_profile_dtn": {
+        "2": 0.1229,
+        "4": 0.1553,
+        "8": 0.1792,
+        "16": 0.1801
+      },
+      "clock_min_k": [
+        1,
+        15,
+        5
+      ],
+      "reflection": 0.12837613295060157,
+      "reciprocity": 0.0030208522610926385,
+      "rank": 15,
+      "classified": "generic-anisotropic"
+    },
+    {
+      "case": "3.5",
+      "geometry": "off-center",
+      "delta_norm_over_floor": 27.86116234295812,
+      "a_on": 0.20730755474154655,
+      "a_off": 0.01896808231794292,
+      "f_forbid": 0.08382732920096066,
+      "f_profile": {
+        "2": 0.0808,
+        "4": 0.0838,
+        "8": 0.0909,
+        "16": 0.0912
+      },
+      "leak_profile": {
+        "2": 16.2,
+        "4": 12.1,
+        "8": 11.3,
+        "16": 8.5
+      },
+      "f_profile_dtn": {
+        "2": 0.2006,
+        "4": 0.2143,
+        "8": 0.2508,
+        "16": 0.2523
+      },
+      "clock_min_k": [
+        1,
+        15,
+        5
+      ],
+      "reflection": 0.12623345136621386,
+      "reciprocity": 0.0038096726249904687,
+      "rank": 15,
+      "classified": "generic-anisotropic"
+    },
+    {
+      "case": "3.6",
+      "geometry": "off-center",
+      "delta_norm_over_floor": 28.10609805786102,
+      "a_on": 0.19712025763853297,
+      "a_off": 0.03315137959968544,
+      "f_forbid": 0.14396640418806764,
+      "f_profile": {
+        "2": 0.1125,
+        "4": 0.144,
+        "8": 0.1461,
+        "16": 0.1462
+      },
+      "leak_profile": {
+        "2": 19.3,
+        "4": 15.9,
+        "8": 14.5,
+        "16": 10.8
+      },
+      "f_profile_dtn": {
+        "2": 0.2146,
+        "4": 0.3027,
+        "8": 0.3186,
+        "16": 0.3195
+      },
+      "clock_min_k": [
+        1,
+        15,
+        2
+      ],
+      "reflection": 0.36051120533065323,
+      "reciprocity": 0.003720268098665828,
+      "rank": 15,
+      "classified": "generic-anisotropic"
+    },
+    {
+      "case": "4.1",
+      "geometry": "off-center",
+      "delta_norm_over_floor": 22.6303797239425,
+      "a_on": 0.03177107479967993,
+      "a_off": 0.11751627797577166,
+      "f_forbid": 0.7871817390488,
+      "f_profile": {
+        "2": 0.7024,
+        "4": 0.7872,
+        "8": 0.8105,
+        "16": 0.8109
+      },
+      "leak_profile": {
+        "2": 38.9,
+        "4": 30.0,
+        "8": 27.5,
+        "16": 20.5
+      },
+      "f_profile_dtn": {
+        "2": 0.5301,
+        "4": 0.6849,
+        "8": 0.7408,
+        "16": 0.7427
+      },
+      "clock_min_k": [
+        1,
+        15,
+        14
+      ],
+      "reflection": 0.7130469708176832,
+      "reciprocity": 0.0063251416543018985,
+      "rank": 15,
+      "classified": "generic-anisotropic"
+    },
+    {
+      "case": "4.2",
+      "geometry": "off-center",
+      "delta_norm_over_floor": 17.897065196373966,
+      "a_on": 0.0224829419667076,
+      "a_off": 0.07088611553848878,
+      "f_forbid": 0.7592035030935561,
+      "f_profile": {
+        "2": 0.688,
+        "4": 0.7592,
+        "8": 0.7779,
+        "16": 0.7779
+      },
+      "leak_profile": {
+        "2": 30.4,
+        "4": 23.3,
+        "8": 21.3,
+        "16": 15.9
+      },
+      "f_profile_dtn": {
+        "2": 0.5416,
+        "4": 0.6098,
+        "8": 0.6313,
+        "16": 0.6317
+      },
+      "clock_min_k": [
+        1,
+        15,
+        2
+      ],
+      "reflection": 0.03672873285288985,
+      "reciprocity": 0.0061524237631519095,
+      "rank": 15,
+      "classified": "generic-anisotropic"
+    },
+    {
+      "case": "4.3",
+      "geometry": "off-center",
+      "delta_norm_over_floor": 16.05340400602567,
+      "a_on": 0.0021313954928844255,
+      "a_off": 0.07299172257356368,
+      "f_forbid": 0.9716279682241206,
+      "f_profile": {
+        "2": 0.966,
+        "4": 0.9716,
+        "8": 0.9724,
+        "16": 0.9724
+      },
+      "leak_profile": {
+        "2": 32.3,
+        "4": 23.7,
+        "8": 21.3,
+        "16": 15.9
+      },
+      "f_profile_dtn": {
+        "2": 0.9951,
+        "4": 0.9972,
+        "8": 0.9979,
+        "16": 0.998
+      },
+      "clock_min_k": [
+        1,
+        15,
+        2
+      ],
+      "reflection": 0.21769690576235465,
+      "reciprocity": 0.005827307974181682,
+      "rank": 15,
+      "classified": "generic-anisotropic"
+    },
+    {
+      "case": "4.4",
+      "geometry": "off-center",
+      "delta_norm_over_floor": 10.267562390549115,
+      "a_on": 0.002186656033624875,
+      "a_off": 0.028544155955797883,
+      "f_forbid": 0.9288448338307007,
+      "f_profile": {
+        "2": 0.5719,
+        "4": 0.9288,
+        "8": 0.9509,
+        "16": 0.9511
+      },
+      "leak_profile": {
+        "2": 15.9,
+        "4": 14.8,
+        "8": 13.5,
+        "16": 10.1
+      },
+      "f_profile_dtn": {
+        "2": 0.523,
+        "4": 0.9309,
+        "8": 0.9876,
+        "16": 0.9887
+      },
+      "clock_min_k": [
+        1,
+        15,
+        2
+      ],
+      "reflection": 1.0297973612884488,
+      "reciprocity": 0.005571292377686591,
+      "rank": 15,
+      "classified": "generic-anisotropic"
+    },
+    {
+      "case": "5.1",
+      "geometry": "off-center",
+      "delta_norm_over_floor": 45.592328258324734,
+      "a_on": 0.34119731699869876,
+      "a_off": 0.264733270421062,
+      "f_forbid": 0.43690362546043077,
+      "f_profile": {
+        "2": 0.3236,
+        "4": 0.4369,
+        "8": 0.4463,
+        "16": 0.4479
+      },
+      "leak_profile": {
+        "2": 53.2,
+        "4": 45.1,
+        "8": 41.1,
+        "16": 30.6
+      },
+      "f_profile_dtn": {
+        "2": 0.4542,
+        "4": 0.7007,
+        "8": 0.7346,
+        "16": 0.7489
+      },
+      "clock_min_k": [
+        1,
+        15,
+        2
+      ],
+      "reflection": 0.3156592795334674,
+      "reciprocity": 0.00781134955400336,
+      "rank": 15,
+      "classified": "generic-anisotropic"
+    },
+    {
+      "case": "5.2",
+      "geometry": "off-center",
+      "delta_norm_over_floor": 32.43205854135274,
+      "a_on": 0.09568107681785816,
+      "a_off": 0.21093037047208954,
+      "f_forbid": 0.6879402981736126,
+      "f_profile": {
+        "2": 0.5701,
+        "4": 0.6879,
+        "8": 0.7068,
+        "16": 0.7076
+      },
+      "leak_profile": {
+        "2": 50.2,
+        "4": 40.2,
+        "8": 36.8,
+        "16": 27.4
+      },
+      "f_profile_dtn": {
+        "2": 0.357,
+        "4": 0.4716,
+        "8": 0.5064,
+        "16": 0.5088
+      },
+      "clock_min_k": [
+        15,
+        1,
+        14
+      ],
+      "reflection": 0.39571993909767383,
+      "reciprocity": 0.0042594777778653704,
+      "rank": 15,
+      "classified": "generic-anisotropic"
+    },
+    {
+      "case": "6.1",
+      "geometry": "centered/annular",
+      "delta_norm_over_floor": 117.34990491882284,
+      "a_on": 3.563584909822082,
+      "a_off": 0.45066881200904396,
+      "f_forbid": 0.11226714683183223,
+      "f_profile": {
+        "2": 0.0408,
+        "4": 0.1123,
+        "8": 0.1225,
+        "16": 0.1229
+      },
+      "leak_profile": {
+        "2": 48.6,
+        "4": 58.8,
+        "8": 55.4,
+        "16": 41.3
+      },
+      "f_profile_dtn": {
+        "2": 0.0085,
+        "4": 0.0365,
+        "8": 0.0425,
+        "16": 0.0429
+      },
+      "clock_min_k": [
+        1,
+        15,
+        8
+      ],
+      "reflection": 0.1268600902250777,
+      "reciprocity": 0.012586976271631752,
+      "rank": 15,
+      "classified": "generic-anisotropic"
+    },
+    {
+      "case": "6.2",
+      "geometry": "off-center",
+      "delta_norm_over_floor": 103.23600341595018,
+      "a_on": 2.8380705601785383,
+      "a_off": 0.2686464923167579,
+      "f_forbid": 0.08647279033698377,
+      "f_profile": {
+        "2": 0.0297,
+        "4": 0.0865,
+        "8": 0.0963,
+        "16": 0.0966
+      },
+      "leak_profile": {
+        "2": 36.5,
+        "4": 45.4,
+        "8": 43.2,
+        "16": 32.2
+      },
+      "f_profile_dtn": {
+        "2": 0.0063,
+        "4": 0.0433,
+        "8": 0.0508,
+        "16": 0.0511
+      },
+      "clock_min_k": [
+        1,
+        15,
+        8
+      ],
+      "reflection": 0.20366061279333783,
+      "reciprocity": 0.012519195029147884,
+      "rank": 15,
+      "classified": "generic-anisotropic"
+    },
+    {
+      "case": "6.3",
+      "geometry": "off-center",
+      "delta_norm_over_floor": 90.06684143177058,
+      "a_on": 1.9567547923136959,
+      "a_off": 0.4079079024340284,
+      "f_forbid": 0.17250151716777787,
+      "f_profile": {
+        "2": 0.0765,
+        "4": 0.1725,
+        "8": 0.1854,
+        "16": 0.1857
+      },
+      "leak_profile": {
+        "2": 51.0,
+        "4": 55.9,
+        "8": 52.3,
+        "16": 39.0
+      },
+      "f_profile_dtn": {
+        "2": 0.0077,
+        "4": 0.0522,
+        "8": 0.0606,
+        "16": 0.0609
+      },
+      "clock_min_k": [
+        1,
+        15,
+        2
+      ],
+      "reflection": 0.28302309712666446,
+      "reciprocity": 0.011277862367817769,
+      "rank": 15,
+      "classified": "generic-anisotropic"
+    },
+    {
+      "case": "6.4",
+      "geometry": "off-center",
+      "delta_norm_over_floor": 96.07117090489336,
+      "a_on": 2.4117037818300977,
+      "a_off": 0.27874979212426176,
+      "f_forbid": 0.10360698836165476,
+      "f_profile": {
+        "2": 0.042,
+        "4": 0.1036,
+        "8": 0.1145,
+        "16": 0.1148
+      },
+      "leak_profile": {
+        "2": 40.4,
+        "4": 46.2,
+        "8": 43.8,
+        "16": 32.7
+      },
+      "f_profile_dtn": {
+        "2": 0.0064,
+        "4": 0.0468,
+        "8": 0.055,
+        "16": 0.0552
+      },
+      "clock_min_k": [
+        1,
+        15,
+        8
+      ],
+      "reflection": 0.2508673663172346,
+      "reciprocity": 0.011924882755151047,
+      "rank": 15,
+      "classified": "generic-anisotropic"
+    },
+    {
+      "case": "6.5",
+      "geometry": "off-center",
+      "delta_norm_over_floor": 76.71099520838803,
+      "a_on": 1.52565013166754,
+      "a_off": 0.1897070644428121,
+      "f_forbid": 0.11059332999155003,
+      "f_profile": {
+        "2": 0.0214,
+        "4": 0.1106,
+        "8": 0.1272,
+        "16": 0.1276
+      },
+      "leak_profile": {
+        "2": 23.0,
+        "4": 38.2,
+        "8": 36.9,
+        "16": 27.5
+      },
+      "f_profile_dtn": {
+        "2": 0.0055,
+        "4": 0.0477,
+        "8": 0.0568,
+        "16": 0.0571
+      },
+      "clock_min_k": [
+        8,
+        1,
+        15
+      ],
+      "reflection": 0.20837830653330625,
+      "reciprocity": 0.00992158497433475,
+      "rank": 15,
+      "classified": "generic-anisotropic"
+    },
+    {
+      "case": "6.6",
+      "geometry": "off-center",
+      "delta_norm_over_floor": 83.3529712301085,
+      "a_on": 1.8124271638941423,
+      "a_off": 0.21283619497897582,
+      "f_forbid": 0.1050906263852028,
+      "f_profile": {
+        "2": 0.0179,
+        "4": 0.1051,
+        "8": 0.1191,
+        "16": 0.1195
+      },
+      "leak_profile": {
+        "2": 22.8,
+        "4": 40.4,
+        "8": 38.8,
+        "16": 28.9
+      },
+      "f_profile_dtn": {
+        "2": 0.0058,
+        "4": 0.0498,
+        "8": 0.0589,
+        "16": 0.0592
+      },
+      "clock_min_k": [
+        8,
+        1,
+        15
+      ],
+      "reflection": 0.11783922800802571,
+      "reciprocity": 0.010764390399120983,
+      "rank": 15,
+      "classified": "generic-anisotropic"
+    },
+    {
+      "case": "6.7",
+      "geometry": "off-center",
+      "delta_norm_over_floor": 79.80013246321458,
+      "a_on": 1.5905119187123322,
+      "a_off": 0.26578121862628246,
+      "f_forbid": 0.14317847395984856,
+      "f_profile": {
+        "2": 0.0286,
+        "4": 0.1432,
+        "8": 0.1607,
+        "16": 0.1611
+      },
+      "leak_profile": {
+        "2": 27.7,
+        "4": 45.2,
+        "8": 43.1,
+        "16": 32.2
+      },
+      "f_profile_dtn": {
+        "2": 0.0072,
+        "4": 0.0563,
+        "8": 0.0667,
+        "16": 0.0671
+      },
+      "clock_min_k": [
+        8,
+        1,
+        15
+      ],
+      "reflection": 0.25697002409347525,
+      "reciprocity": 0.010279554540011173,
+      "rank": 15,
+      "classified": "generic-anisotropic"
+    },
+    {
+      "case": "7.1",
+      "geometry": "centered/annular",
+      "delta_norm_over_floor": 22.859569236708513,
+      "a_on": 0.15180597852030334,
+      "a_off": 0.0005205059898706389,
+      "f_forbid": 0.0034170419644646496,
+      "f_profile": {
+        "2": 0.0024,
+        "4": 0.0034,
+        "8": 0.0035,
+        "16": 0.0035
+      },
+      "leak_profile": {
+        "2": 2.3,
+        "4": 2.0,
+        "8": 1.8,
+        "16": 1.4
+      },
+      "f_profile_dtn": {
+        "2": 0.0003,
+        "4": 0.0004,
+        "8": 0.0004,
+        "16": 0.0004
+      },
+      "clock_min_k": [
+        1,
+        15,
+        14
+      ],
+      "reflection": 0.03463737831781556,
+      "reciprocity": 0.010405161141986658,
+      "rank": 15,
+      "classified": "rotation-invariant-like"
+    },
+    {
+      "case": "7.2",
+      "geometry": "centered/annular",
+      "delta_norm_over_floor": 44.54505386228106,
+      "a_on": 0.575706764739535,
+      "a_off": 0.002706589683197774,
+      "f_forbid": 0.004679334705020773,
+      "f_profile": {
+        "2": 0.0028,
+        "4": 0.0047,
+        "8": 0.0051,
+        "16": 0.0051
+      },
+      "leak_profile": {
+        "2": 4.9,
+        "4": 4.6,
+        "8": 4.3,
+        "16": 3.2
+      },
+      "f_profile_dtn": {
+        "2": 0.0066,
+        "4": 0.0095,
+        "8": 0.01,
+        "16": 0.01
+      },
+      "clock_min_k": [
+        1,
+        15,
+        2
+      ],
+      "reflection": 0.0743332399670212,
+      "reciprocity": 0.008293987220886753,
+      "rank": 15,
+      "classified": "ambiguous"
+    },
+    {
+      "case": "8.1",
+      "geometry": "centered/annular",
+      "delta_norm_over_floor": 57.326546303734446,
+      "a_on": 0.9551012731503984,
+      "a_off": 0.002866481036857835,
+      "f_forbid": 0.002992252113214154,
+      "f_profile": {
+        "2": 0.0024,
+        "4": 0.003,
+        "8": 0.0033,
+        "16": 0.0033
+      },
+      "leak_profile": {
+        "2": 5.7,
+        "4": 4.7,
+        "8": 4.4,
+        "16": 3.3
+      },
+      "f_profile_dtn": {
+        "2": 0.0017,
+        "4": 0.0028,
+        "8": 0.0037,
+        "16": 0.0037
+      },
+      "clock_min_k": [
+        1,
+        15,
+        2
+      ],
+      "reflection": 0.0375628441019095,
+      "reciprocity": 0.0033258849926558693,
+      "rank": 15,
+      "classified": "ambiguous"
+    },
+    {
+      "case": "8.2",
+      "geometry": "off-center",
+      "delta_norm_over_floor": 77.91875856450143,
+      "a_on": 1.7668539248382078,
+      "a_off": 0.00294278631555857,
+      "f_forbid": 0.0016627821133423327,
+      "f_profile": {
+        "2": 0.0008,
+        "4": 0.0017,
+        "8": 0.0017,
+        "16": 0.0017
+      },
+      "leak_profile": {
+        "2": 4.4,
+        "4": 4.8,
+        "8": 4.4,
+        "16": 3.3
+      },
+      "f_profile_dtn": {
+        "2": 0.0031,
+        "4": 0.0041,
+        "8": 0.0043,
+        "16": 0.0043
+      },
+      "clock_min_k": [
+        15,
+        1,
+        8
+      ],
+      "reflection": 0.03482402894864252,
+      "reciprocity": 0.0035096859180022122,
+      "rank": 15,
+      "classified": "ambiguous"
+    },
+    {
+      "case": "8.3",
+      "geometry": "off-center",
+      "delta_norm_over_floor": 87.71211811368855,
+      "a_on": 2.2391076578248854,
+      "a_off": 0.003527012794183355,
+      "f_forbid": 0.0015727094744369305,
+      "f_profile": {
+        "2": 0.0015,
+        "4": 0.0016,
+        "8": 0.0016,
+        "16": 0.0016
+      },
+      "leak_profile": {
+        "2": 6.9,
+        "4": 5.2,
+        "8": 4.7,
+        "16": 3.5
+      },
+      "f_profile_dtn": {
+        "2": 0.0025,
+        "4": 0.003,
+        "8": 0.003,
+        "16": 0.0031
+      },
+      "clock_min_k": [
+        1,
+        15,
+        2
+      ],
+      "reflection": 0.022654539711575456,
+      "reciprocity": 0.004305682108066476,
+      "rank": 15,
+      "classified": "ambiguous"
+    },
+    {
+      "case": "8.4",
+      "geometry": "off-center",
+      "delta_norm_over_floor": 92.82824867800657,
+      "a_on": 2.509837286546397,
+      "a_off": 0.0020471126965554134,
+      "f_forbid": 0.0008149709027901066,
+      "f_profile": {
+        "2": 0.0007,
+        "4": 0.0008,
+        "8": 0.0008,
+        "16": 0.0008
+      },
+      "leak_profile": {
+        "2": 4.9,
+        "4": 4.0,
+        "8": 3.6,
+        "16": 2.7
+      },
+      "f_profile_dtn": {
+        "2": 0.0025,
+        "4": 0.003,
+        "8": 0.003,
+        "16": 0.003
+      },
+      "clock_min_k": [
+        1,
+        15,
+        14
+      ],
+      "reflection": 0.02569908251296054,
+      "reciprocity": 0.004880232384425421,
+      "rank": 15,
+      "classified": "ambiguous"
+    },
+    {
+      "case": "8.5",
+      "geometry": "off-center",
+      "delta_norm_over_floor": 100.19016857930224,
+      "a_on": 2.923634388939327,
+      "a_off": 0.002468206068063965,
+      "f_forbid": 0.0008435131674040742,
+      "f_profile": {
+        "2": 0.0004,
+        "4": 0.0008,
+        "8": 0.0009,
+        "16": 0.0009
+      },
+      "leak_profile": {
+        "2": 4.2,
+        "4": 4.4,
+        "8": 4.0,
+        "16": 3.0
+      },
+      "f_profile_dtn": {
+        "2": 0.003,
+        "4": 0.0039,
+        "8": 0.0039,
+        "16": 0.0039
+      },
+      "clock_min_k": [
+        1,
+        15,
+        7
+      ],
+      "reflection": 0.02160154175030163,
+      "reciprocity": 0.00592878952878393,
+      "rank": 15,
+      "classified": "ambiguous"
+    },
+    {
+      "case": "8.6",
+      "geometry": "off-center",
+      "delta_norm_over_floor": 110.56996453523081,
+      "a_on": 3.5590420506161693,
+      "a_off": 0.004760835306594888,
+      "f_forbid": 0.0013358862594226167,
+      "f_profile": {
+        "2": 0.0012,
+        "4": 0.0013,
+        "8": 0.0014,
+        "16": 0.0014
+      },
+      "leak_profile": {
+        "2": 8.0,
+        "4": 6.0,
+        "8": 5.5,
+        "16": 4.1
+      },
+      "f_profile_dtn": {
+        "2": 0.0037,
+        "4": 0.0042,
+        "8": 0.0042,
+        "16": 0.0042
+      },
+      "clock_min_k": [
+        1,
+        15,
+        2
+      ],
+      "reflection": 0.02062141364694484,
+      "reciprocity": 0.0075761042062748715,
+      "rank": 15,
+      "classified": "ambiguous"
+    }
+  ],
+  "verdict": "v1.2 DIFFERENCE-OPERATOR run (37 target cases vs the homogeneous reference): pass/fail dial = ABSOLUTE forbidden leakage over the split-half noise floor (fractions kept as atlas descriptors). Floor lag fractions {2: 0.24, 4: 0.45, 8: 0.55, 16: 0.99}; rank(current patterns) = 15/15, reciprocity 5.3e-03. Geometry-blind classification (preregistered thresholds leak<3 holds / >=10 broken): {'generic-anisotropic': 26, 'ambiguous': 9, 'homogeneous-like': 1, 'rotation-invariant-like': 1}. As required for an archive WITHOUT a mu4 target: 0 C4-positives; the classifier agrees with the documented geometry in 34/37 cases (mismatches: ['6.1', '7.2', '8.1']). NtD and DtN-proxy profiles agree case-by-case (pipeline-robust). H3 (the C4-POSITIVE class: Delta visible, C4 leakage at the floor, C8 BROKEN -- a centered ring can never fake it) remains the preregistered future measurement. Firewall: instrument validation, never TFPT evidence."
+}

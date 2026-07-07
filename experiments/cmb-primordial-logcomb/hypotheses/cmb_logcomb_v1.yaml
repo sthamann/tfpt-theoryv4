@@ -1,0 +1,48 @@
+# CMB primordial log-comb -- preregistered v1 typing (frozen 2026-07-07).
+#
+# FIREWALL: search target / consistency typing against PUBLISHED constraints --
+# never load-bearing, never [E]. No raw likelihood is re-fit here; this
+# experiment confronts the frozen kernel frequency with the published Planck
+# log-oscillation search and states the dated decider.
+#
+# WHY THIS BED IS SPECIAL (category typing per SIGNATURES.md 0b):
+#   S14 clock map: the ONLY natural-data bed where the log-clock is MOTIVATED --
+#     inflation e-folds are a log-clock by construction (modes exit the horizon
+#     at ln k proportional to N); no observer-time bridge is needed.
+#   S15 transduction: NOT derived -- that the seam recovery imprints a
+#     multiplicative comb on the primordial spectrum is an ASSUMPTION (flagged);
+#     the amplitude epsilon = exp(-pi^2/ln Lambda) is imported from the recovery
+#     kernel (QT.02 reading), not derived for the inflationary epoch.
+#
+# Template identification: Planck 2018 X (A&A 641, A10) Sect. 7 searches
+#   P(k) = P0(k) [1 + A_log cos(omega_log ln(k/k*) + phi)]
+# which is exactly the TFPT comb form in ln k. The frozen TFPT frequency
+#   omega = 2 pi / ln((3/2)^6) = 2.5827  (log10 omega = 0.412)
+# lies INSIDE the Planck power-spectrum search prior (log10 omega in [0, 2.1]).
+
+frozen_targets:
+  omega: 2.582707
+  log10_omega: 0.41210
+  epsilon_pred: 0.017302
+  reach_full_likelihood: "k ~ 1e-4 .. 0.2 Mpc^-1 (l = 2..2500) -> 7.6 e-folds = 3.12 comb periods (> 2.8 gate; low-l leg cosmic-variance dominated, documented)"
+  reach_conservative: "k = 0.005 .. 0.2 Mpc^-1 (non-parametric power-law window) -> 3.7 e-folds = 1.52 periods (sub-gate) -- the gate passes only with the low-l leg included"
+
+published_constraints:   # values ON RECORD with citations (no re-fit)
+  planck2018_x:
+    citation: "Planck 2018 results X (A&A 641, A10), Sect. 7-8, Fig. 28"
+    statement: "no statistically significant log-oscillation; relative modulation constrained to not exceed roughly 3% (95%) across the scanned band; best-fit Delta chi2 ~ 10 typed as noise/217-GHz artefact"
+    amplitude_bound_95: 0.03
+  combined_2024plus:
+    citation: "combined Planck+SPT-3G+ACT analyses (post-2021 literature)"
+    statement: "A_log <~ 0.029 at 95% CL, no hint of features"
+    amplitude_bound_95: 0.029
+
+verdict_logic:
+  - "epsilon_pred (0.0173) < published bound (0.029-0.03) -> the predicted amplitude is NOT reachable today: data_limited"
+  - "no published feature at log10 omega = 0.412 -> nothing to escalate"
+  - "dated decider: a future 95% bound < 0.017 at omega = 2.583 with no detection KILLS the primordial-DSI bridge reading; a detection AT the frozen omega (phase-coherent across TT/TE/EE) escalates"
+  - "CMB-S4 / further SPT-3G+ACT combinations are the realistic instruments (factor ~2 needed)"
+
+kill: "future bound A_log(omega = 2.583) < epsilon_pred with no detection; or a detected log-feature at a NON-kernel frequency with amplitude > epsilon_pred (would show the band is feature-active without the kernel)"
+
+verdict_language: "data_limited today; never a claim; the bridge assumption (comb transfer into P(k)) stays flagged until a theory contract derives it."

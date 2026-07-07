@@ -1,3 +1,44 @@
+## 2026-07-07 (Z) — Analyse-Runde 12 Claims verifiziert → RANKGAP-Lean-Lemma + FLAV.WINDING.DISC2 Contract
+
+User-Auftrag: 12 vorgeschlagene "Kompressionsachsen" (ANCHOR.RANKGAP.UNIQUENESS,
+MU4.GALOIS.NOT.CLOCK, MODULAR.GSM.CHECKSUM, FLAVOR.WINDING.DISCRIMINANT2, ...)
+analysieren/verifizieren, dann die zwei umsetzbaren Stücke bauen. Ergebnis der
+Analyse: ALLE Arithmetik-Claims exakt bestätigt (sympy/mpmath), aber Neuheit
+mehrfach überschätzt — Claims 2/3/8/9/10/11/12 stehen bereits (fast wortgleich)
+in origin_theory/tfpt_2/tfpt_horizon/tfpt_4/safeguards; der Diskriminanten-
+Fingerprint Δ(6)=39200=2·(10·14)² ist in v94/FLAV.DIAMOND.01/tfpt_2 publiziert.
+Genuin neu: (a) die UMKEHRUNG des Rank-Gap-Werts, (b) der Δ=2y²-Uniqueness-Scan.
+Beides umgesetzt, experiments-only, nichts promoted:
+
+**(a) ANCHOR.RANKGAP.UNIQUENESS — Lean-Lemma (lean4-carrier-rigidity):**
+- AnchorLadder.lean neu: `rankgap_uniqueness` — für positive ganze x,y,z mit
+  x⁴+y⁴+z⁴ = x³+y³+z³+8 folgt (1,1,2) bis auf Permutation (Beitrag w³(w−1):
+  0/8/≥54; Hilfslemmata `cube_step_ge_54`, `overshoot_ge_three`,
+  Soundness-Companion `rankgap_anchor`). lake build grün; Axiom-Footprint
+  [propext, Classical.choice, Quot.sound]. Scope ehrlich: erzwingt den Anchor
+  INNERHALB positiver Integer-Tripel; dass der Anchor ein solches Tripel ist
+  und p₄−p₃ die richtige Normierung, bleibt Axiom-Seite.
+- Hinweis (vorbestehend, nicht von dieser Änderung): scripts/audit.sh meldet
+  FAIL auf den greps "sorry" (False Positive: Kommentar in
+  SpectralGapAttractor.lean:18 "no `sorry`") und 39 `axiom`-Deklarationen in
+  den Seam*-Dateien (beabsichtigte Residual-Axiom-Ledger, z.B.
+  SeamResidualAxiom.lean) — die Lean-seitigen Checks (#print axioms,
+  AuditCheck, AuditContract) sind alle PASS. Der Audit-Grep ist gegenüber dem
+  Seam-Block veraltet, separates Aufräum-Thema.
+
+**(b) FLAV.WINDING.DISC2 — theory-contract (6/6 PASS):**
+- flav01_winding_disc2.py: publizierter Fingerprint reproduziert + NEU der
+  Selektor-Scan: s=6 ist das EINZIGE s∈[0,10000] mit Δ(s)=2y² (y=140); keine
+  Hits in [−100,−1]. Look-elsewhere-Kontrolle: Klassen ≤100 nur
+  {2:6, 23:306, 41:8, 65:3, 89:4} — Klasse-2-Uniqueness ist die
+  diskriminierende Aussage. Sibling {1,3,4} (tr 8, det 6): Δ′(6)=112224,
+  Klasse 7014 ≠ 2. Ehrlich typisiert: Ledger-Korrektur "Realität selektiert
+  s=6 nicht" bleibt stehen; audit-level bis (i) globale Diophantik
+  17s⁴−18s³+709s²+588s−7996=2y² bewiesen (Genus-1-Quartik, effektiv) und
+  (ii) Klasse=2=|Z₂| abgeleitet statt beobachtet.
+
+Kein Scorecard-Row, kein verification/-Touch, keine Paper-Edits.
+
 ## 2026-07-07 (Y) — problem_b.txt verifiziert + tiefere Runde: METALLIC.LADDER.01 Contract (5/5)
 
 User-Auftrag: die problem_b.txt-Entdeckungssession (D1–D15, Findings 1–7)

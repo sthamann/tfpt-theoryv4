@@ -33,7 +33,35 @@ from .ent import DATA as ENT_DIR
 from .ent import bin_ln_t, read_ent_curves
 from .grb import DATA as GRB_DIR
 from .grb import read_grb_csv
-from .quake import IDIO, TFPT_LAMBDAS, _omega, _stacked_at
+from .quake import BATTERY_IDIO, BATTERY_LAMBDAS, Z2_LAMBDAS, _omega, _stacked_at
+
+
+def z2_battery(curves: list[tuple[np.ndarray, np.ndarray]], *, seed: int = 23) -> dict:
+    """The Moebius/double-cover (Z2) readings of the SAME kernel (see quake.Z2_LAMBDAS): an
+    antiperiodic (sheet-parity) comb has ZERO Fourier power at the kernel omega=2.583, so the
+    kernel NULLs do not constrain it. Stacked permutation test at each Z2 omega, fed with ALL
+    readable curves of a channel: the gate is PER omega (ln-range in periods of THAT lambda +
+    Nyquist, inside ``_stacked_at``), so e.g. the (3/2)^3 half-period comb can be tested on
+    curves that are range-blind at the kernel. Exploratory/unforced; a hit is "escalate ->
+    independent cross-check", never a claim."""
+    out = {}
+    for label, lam in Z2_LAMBDAS.items():
+        out[label] = {"lambda": round(lam, 4), "omega": round(_omega(lam), 3),
+                      **_stacked_at(curves, _omega(lam), seed=seed)}
+    return out
+
+
+def _z2_note(z2: dict) -> str:
+    frags = []
+    for label, r in z2.items():
+        short = label.split(" ")[0]
+        frags.append(f"{short} omega={r['omega']}: "
+                     + ("n_used=0 (range/Nyquist-blind)" if not r["n_used"]
+                        else f"p={r['p_value']} (n={r['n_used']})"
+                        + (" <-- nominally special, ESCALATE" if r["comb_detected"] else "")))
+    return " Z2/Moebius readings (antiperiodic comb has zero power at the kernel omega): " \
+           + "; ".join(frags) + "."
+
 
 DATA = Path(__file__).resolve().parents[2] / "data"
 FRB_WATERFALLS = (Path(__file__).resolve().parents[3]
@@ -93,6 +121,7 @@ def channel_a1_magnetar() -> Channel:
     files = sorted(MAGNETAR_DIR.glob("*.csv")) if MAGNETAR_DIR.exists() else []
     per: list[dict] = []
     curves: list[tuple[np.ndarray, np.ndarray]] = []
+    all_curves: list[tuple[np.ndarray, np.ndarray]] = []
     for fpath in files:
         rd = _read_flux_csv(fpath)
         if rd is None:
@@ -102,6 +131,7 @@ def channel_a1_magnetar() -> Channel:
         res = run_comb(t, rec)
         res["source"] = fpath.stem
         per.append(res)
+        all_curves.append((t, rec))
         if res["range_sufficient"]:
             curves.append((t, rec))
 
@@ -116,6 +146,7 @@ def channel_a1_magnetar() -> Channel:
             "magnetospheric (surface), a search target with a firewall caveat, not a horizon recovery.")
 
     stack = stacked_comb_test(curves) if curves else None
+    z2 = z2_battery(all_curves)
     head = (f"REAL data: {len(per)} outburst light curve(s); {len(curves)} clear the ln-range gate "
             f"(>= {MIN_COMB_PERIODS} comb periods). ")
     detail = "; ".join(
@@ -131,6 +162,7 @@ def channel_a1_magnetar() -> Channel:
     else:
         tail = (". No single outburst clears the ln-range gate yet -> RANGE-LIMITED; add more "
                 "wide-baseline (days..years) light curves (stacking raises amplitude, not ln-range).")
+    tail += _z2_note(z2)
     agg = {
         "n_points": int(sum(p["n_points"] for p in per)),
         "comb_periods": max(p["comb_periods"] for p in per),
@@ -142,6 +174,7 @@ def channel_a1_magnetar() -> Channel:
         "n_sources": len(per),
         "n_stacked": (stack or {}).get("n_used", 0),
         "per_source": per,
+        "z2_battery": z2,
     }
     return Channel("A1", "magnetar outburst flux relaxation (stacked)", "surface", "real",
                    head + detail + tail, agg)
@@ -200,6 +233,7 @@ def channel_a3_frb_tail() -> Channel:
     files = sorted(FRB_WATERFALLS.glob("*.calibP")) if FRB_WATERFALLS.exists() else []
     per: list[dict] = []
     curves: list[tuple[np.ndarray, np.ndarray]] = []
+    all_curves: list[tuple[np.ndarray, np.ndarray]] = []
     for fpath in files:
         rd = _read_frb_profile(fpath)
         if rd is None:
@@ -213,6 +247,7 @@ def channel_a3_frb_tail() -> Channel:
         res["source"] = fpath.stem
         res["frb"] = src or "?"
         per.append(res)
+        all_curves.append((tau, rec))
         if res["range_sufficient"]:
             curves.append((tau, rec))
 
@@ -226,6 +261,7 @@ def channel_a3_frb_tail() -> Channel:
 
     by_src = Counter(p["frb"] for p in per)  # raw SRC_NAME; FAST 'J2000-1234' = FRB 20121102A campaign
     stack = stacked_comb_test(curves) if curves else None
+    z2 = z2_battery(all_curves)
     head = (f"REAL data: {len(per)} bright FRB burst waterfall(s) across {len(by_src)} repeater(s) "
             f"[{', '.join(f'{s}x{n}' for s, n in by_src.items())}]; {len(curves)} clear the "
             f"ln-range gate (>= {MIN_COMB_PERIODS} comb periods). ")
@@ -242,6 +278,7 @@ def channel_a3_frb_tail() -> Channel:
                    "an intrinsic ~2% effect -> a weak constraint, not a horizon detection).")
     else:
         tnote = ". No burst tail clears the ln-range gate -> RANGE-LIMITED."
+    tnote += _z2_note(z2)
     agg = {
         "n_points": int(sum(p["n_points"] for p in per)),
         "comb_periods": max(p["comb_periods"] for p in per),
@@ -253,6 +290,7 @@ def channel_a3_frb_tail() -> Channel:
         "n_sources": len(per),
         "n_stacked": (stack or {}).get("n_used", 0),
         "per_source": per,
+        "z2_battery": z2,
     }
     return Channel("A3", "FRB burst tail (stacked)", "horizon-residual", "real",
                    head + detail + tnote, agg)
@@ -271,6 +309,7 @@ def channel_a3b_chime_baseband() -> Channel:
     files = sorted(CHIME_DIR.glob("*_beamformed.h5")) if CHIME_DIR.exists() else []
     per: list[dict] = []
     curves: list[tuple[np.ndarray, np.ndarray]] = []
+    all_curves: list[tuple[np.ndarray, np.ndarray]] = []
     for fpath in files:
         rd = read_chime_profile(fpath)
         if rd is None:
@@ -283,6 +322,7 @@ def channel_a3b_chime_baseband() -> Channel:
         res = run_comb(tau, rec)
         res["source"] = src
         per.append(res)
+        all_curves.append((tau, rec))
         if res["range_sufficient"]:
             curves.append((tau, rec))
 
@@ -295,6 +335,7 @@ def channel_a3b_chime_baseband() -> Channel:
             "beamformed_files/<FRB>_beamformed.h5 .` (each ~0.15-4 GB; pick the smallest/brightest).")
 
     stack = stacked_comb_test(curves) if curves else None
+    z2 = z2_battery(all_curves)
     head = (f"REAL CHIME baseband (2.56us, coherently dedispersed, full-Stokes): {len(per)} "
             f"distinct FRB(s); {len(curves)} clear the ln-range gate (>= {MIN_COMB_PERIODS} comb "
             "periods). ")
@@ -312,6 +353,7 @@ def channel_a3b_chime_baseband() -> Channel:
                    "weak constraint, not a horizon detection).")
     else:
         tnote = ". No CHIME burst tail clears the ln-range gate -> RANGE-LIMITED."
+    tnote += _z2_note(z2)
     agg = {
         "n_points": int(sum(p["n_points"] for p in per)),
         "comb_periods": max(p["comb_periods"] for p in per),
@@ -323,6 +365,7 @@ def channel_a3b_chime_baseband() -> Channel:
         "n_sources": len(per),
         "n_stacked": (stack or {}).get("n_used", 0),
         "per_source": per,
+        "z2_battery": z2,
     }
     return Channel("A3b", "CHIME baseband FRB burst tail (stacked)", "horizon-residual", "real",
                    head + detail + tnote, agg)
@@ -341,6 +384,7 @@ def channel_a4_grb() -> Channel:
     files = sorted(GRB_DIR.glob("*.csv")) if GRB_DIR.exists() else []
     per: list[dict] = []
     curves: list[tuple[np.ndarray, np.ndarray]] = []
+    all_curves: list[tuple[np.ndarray, np.ndarray]] = []
     for fpath in files:
         rd = read_grb_csv(fpath)
         if rd is None:
@@ -350,6 +394,7 @@ def channel_a4_grb() -> Channel:
         res = run_comb(t, rec)
         res["source"] = fpath.stem
         per.append(res)
+        all_curves.append((t, rec))
         if res["range_sufficient"]:
             curves.append((t, rec))
 
@@ -363,6 +408,7 @@ def channel_a4_grb() -> Channel:
             "FRB tails cannot; central-engine relaxation (surface firewall), not a horizon recovery.")
 
     stack = stacked_comb_test(curves) if curves else None
+    z2 = z2_battery(all_curves)
     head = (f"REAL data: {len(per)} Swift-XRT GRB afterglow(s); {len(curves)} clear the ln-range gate "
             f"(>= {MIN_COMB_PERIODS} comb periods -- most single GRBs do, ~4-5 decades). ")
     detail = "; ".join(
@@ -378,6 +424,7 @@ def channel_a4_grb() -> Channel:
                   "but WIDE-ln(t) + high-statistics, so this NULL is well-powered, NOT data-limited).")
     else:
         tail = ". No GRB clears the ln-range gate yet -> RANGE-LIMITED (unexpected; check the fetch)."
+    tail += _z2_note(z2)
     agg = {
         "n_points": int(sum(p["n_points"] for p in per)),
         "comb_periods": max(p["comb_periods"] for p in per),
@@ -389,6 +436,7 @@ def channel_a4_grb() -> Channel:
         "n_sources": len(per),
         "n_stacked": (stack or {}).get("n_used", 0),
         "per_source": per,
+        "z2_battery": z2,
     }
     return Channel("A4", "GRB X-ray afterglow plateau (stacked)", "surface", "real",
                    head + detail + tail, agg)
@@ -403,10 +451,10 @@ def lambda_battery(t: np.ndarray, rec: np.ndarray, *, seed: int = 19) -> tuple[d
     kernel is range-blind on a ~3-period fade, but the small-lambda entries (3/2, phi, 2, 3, ...)
     are well sampled, so this is the realistic multi-scale test for a single light curve."""
     battery: dict = {}
-    for label, lam in TFPT_LAMBDAS.items():
+    for label, lam in BATTERY_LAMBDAS.items():
         res = _stacked_at([(np.asarray(t, float), np.asarray(rec, float))], _omega(lam), seed=seed)
         battery[label] = {"lambda": round(lam, 4), "omega": round(_omega(lam), 3),
-                          "idio": label in IDIO, **res}
+                          "idio": label in BATTERY_IDIO, **res}
     tested = [v for v in battery.values() if v["n_used"] > 0]
     min_p = min((v["p_value"] for v in tested), default=1.0)
     m_eff = max(1, len(tested))

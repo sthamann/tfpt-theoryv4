@@ -245,11 +245,38 @@
       "gain": 0.0,
       "p_value": 1.0,
       "comb_detected": false
+    },
+    "(3/2)^3 (Z2 half-period)": {
+      "lambda": 3.375,
+      "omega": 5.165,
+      "idio": true,
+      "n_used": 6,
+      "gain": 0.2484,
+      "p_value": 0.993,
+      "comb_detected": false
+    },
+    "(3/2)^4 (Z2 antiperiodic harmonic)": {
+      "lambda": 5.0625,
+      "omega": 3.874,
+      "idio": true,
+      "n_used": 2,
+      "gain": 0.1835,
+      "p_value": 0.2669,
+      "comb_detected": false
+    },
+    "(3/2)^12 (Z2 antiperiodic fundamental)": {
+      "lambda": 129.7463,
+      "omega": 1.291,
+      "idio": true,
+      "n_used": 0,
+      "gain": 0.0,
+      "p_value": 1.0,
+      "comb_detected": false
     }
   },
   "lambda_battery_global_p": 1.0,
-  "lambda_battery_m_eff": 5,
-  "lambda_battery_best": "5 (g_car)",
+  "lambda_battery_m_eff": 7,
+  "lambda_battery_best": "(3/2)^4 (Z2 antiperiodic harmonic)",
   "protected_floor": [
     {
       "floor_eV": 0.0,

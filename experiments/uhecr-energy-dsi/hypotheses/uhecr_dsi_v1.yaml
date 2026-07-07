@@ -1,0 +1,67 @@
+# UHECR size-space DSI -- preregistered v1 (frozen 2026-07-07, BEFORE any comb/
+# likelihood statistic ran on the data).
+#
+# FIREWALL: search target / consistency check -- never load-bearing, never [E].
+# The transduction B (why the cosmic-ray source population should carry seam
+# modes) is UNPROVEN -> exploratory surface probe (S7 size-space class); a hit is
+# escalate-only (universal-DSI / source-population coincidence stays the default
+# reading). This is a size-space test on a DISTRIBUTION -- no clock map needed
+# (S14 not applicable); the honest content is the largest ln-E range in nature.
+#
+# DATA AUDIT ON RECORD (inspected BEFORE this prereg -- counts/ranges/columns
+# only, no comb or likelihood statistic): Auger Open Data release 3 (Zenodo DOI
+# 10.5281/zenodo.10488964, summary CSVs): SD1500 vertical 21,591 events >= 2.5
+# EeV & theta <= 60 deg (max 144.1 EeV, 1.67 comb periods alone); SD750 54,477
+# events >= 0.1 EeV & theta <= 55 deg (max 50.5 EeV, 2.56 periods alone);
+# inclined 2,354 (excluded: separate exposure regime, negligible statistics);
+# 46 duplicate gpstime events between arrays (deduped, SD1500 preferred).
+# COMBINED reach 0.1 -> 144 EeV = 7.27 e-folds = 2.99 comb periods > 2.8 gate
+# (per-array smooth models + ONE shared comb).
+
+data:
+  source: "Pierre Auger Observatory Open Data release 3 (10% of published events), Zenodo DOI 10.5281/zenodo.10488964; summary CSVs dataSummarySD1500.csv + dataSummarySD750.csv"
+  selection:
+    sd1500: "sd_energy >= 2.5 EeV (full-efficiency threshold, vertical) AND sd_theta <= 60 deg"
+    sd750: "sd_energy >= 0.1 EeV (full-efficiency threshold) AND sd_theta <= 55 deg"
+    dedupe: "drop SD750 rows whose gpstime appears in the SD1500 selection"
+    inclined: "excluded (4 EeV threshold, 2.4k events, separate aperture)"
+  exposure: "above full efficiency the aperture is purely geometrical (flat in energy) -> the ln E event distribution is spectrum shape x constant"
+  resolution: "sigma(ln E) ~ 0.07-0.17; comb attenuation exp(-omega^2 sigma^2/2) >= 0.97 at the kernel omega -- negligible, documented"
+
+frozen_constants:
+  omega: "2*pi/ln((3/2)^6) = 2.582707 (frozen kernel; identical to all sibling experiments)"
+  epsilon_pred: "exp(-pi^2/ln((3/2)^6)) = 0.017302 (the known amplitude wall)"
+  lambda_battery: "Z2/Moebius readings (3/2)^3, (3/2)^4, (3/2)^12, gated at >= 2.8 periods of each lambda within the combined range"
+  placebo_omegas: "off-kernel rank grid: 60 log-spaced omega in [0.6, 8.0]"
+
+model:
+  smooth_null: >
+    Per-array binned Poisson model (200 bins in x = ln(E/EeV)): log-density
+    piecewise-linear in x with FROZEN knots at the published spectral features
+    -- second knee 0.16 EeV, ankle 5.0 EeV, instep 12.6 EeV, suppression 45.7
+    EeV (Auger PRD 102 (2020) 062005; EPJ C 81 (2021) 966) -- slopes and
+    per-array normalisations free. The knots are frozen so the smooth model
+    cannot absorb or fake a comb; the population-feature trap (PG.01/KC.03
+    lesson) is handled by construction.
+  comb_alternative: >
+    Multiplicative decoration (1 + a cos(omega x) + b sin(omega x)) SHARED by
+    both arrays (same phase and amplitude in ln E), omega FROZEN. Two-stage
+    fit everywhere (smooth fit first, then (a, b) with smooth frozen); the MC
+    calibration uses the identical two-stage machinery, so the procedure is
+    self-consistent.
+  statistic: "Lambda = 2 (lnL_comb - lnL_smooth) at the frozen omega"
+
+nulls_controls:
+  - "MC calibration: 400 draws from the fitted smooth model (per-array Poisson), identical two-stage fit -> p = P(Lambda_null >= Lambda_obs)"
+  - "off-kernel rank: Lambda(omega) over the 60-omega grid, surrogate-standardised on 100 MC draws; kernel must rank in the top 5%"
+  - "lambda battery with per-lambda reach gate; Bonferroni over gated entries"
+  - "injection-recovery: comb injected at epsilon = 0.05 and at the predicted 0.0173 into smooth draws -> detection rates (honest power statement)"
+
+kill: >
+  Lambda not significant (p >= 0.05) OR kernel not top-5% in the off-kernel
+  rank -> NULL for a size-space comb at the kernel scale factor on the largest
+  ln-E range in nature; if the injection shows ~0 power at epsilon = 0.0173,
+  the predicted-amplitude leg stays data_limited (amplitude wall), reported
+  separately.
+
+verdict_language: "null / consistent / data_limited / hint_flag only; a nominal hit is escalate-only and needs the full-statistics (non-open) Auger spectrum + a second experiment (TA) before anything more."

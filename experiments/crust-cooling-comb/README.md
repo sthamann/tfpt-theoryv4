@@ -55,7 +55,9 @@ constant offset"* fact) is a natural — if generic — test of the TFPT protect
    phase is common across sources (cascade clock anchored at `t0`); a phase-random washout control is
    run in the injection battery.
 3. **TFPT λ-battery (CC.03):** phase-incoherent stack at every TFPT ratio `λ ∈ {3/2, φ, 2, 3, 4, 5,
-   8, (3/2)⁶, 30}`, per-λ ln-range+Nyquist gate, **Bonferroni** look-elsewhere. Small-λ (large ω)
+   8, (3/2)⁶, 30}` **plus the Z2/Möbius readings `{(3/2)³, (3/2)⁴, (3/2)¹²}`** (2026-07-06,
+   exploratory/unforced — an antiperiodic sheet-parity comb has zero power at the kernel ω), per-λ
+   ln-range+Nyquist gate, **Bonferroni** look-elsewhere. Small-λ (large ω)
    entries need less ln-range, so they are testable where the `(3/2)⁶` kernel is range-blind — but a
    small-λ hit is **low specificity** (dense among any scaling story).
 4. **Protected-floor test (CC.04):** fit `kT_eff(t) = b + A e^{-t/τ}`; report the core-equilibrium
@@ -77,8 +79,10 @@ constant offset"* fact) is a natural — if generic — test of the TFPT protect
   phase-incoherent kernel stack has **`n_used = 0`** (`ω=2.583` not testable that way).
 - **Superposed-epoch pooled stack** (67 pts, **3.08** comb periods) clears the gate: **`ω=2.583` is
   NOT special, p ≈ 0.45 → clean NULL** (under the phase-aligned assumption).
-- **TFPT λ-battery:** **NULL** after look-elsewhere (**Bonferroni global p = 1.0**; best atom `λ=5`,
-  p≈0.28; the idiosyncratic `3/2, φ, (3/2)⁶` are all range-blind, 0 curves gated).
+- **TFPT λ-battery:** **NULL** after look-elsewhere (**Bonferroni global p = 1.0** over 7 gated
+  ratios; best member the Z2 harmonic `(3/2)⁴` at p≈0.27, far from significant; the Z2 half-period
+  `(3/2)³` is well gated at n=6 and null, p≈0.99; the idiosyncratic `3/2, φ, (3/2)⁶` and the Z2
+  antiperiodic fundamental `(3/2)¹²` are all range-blind, 0 curves gated).
 - **Protected floor:** **7/8** episodes show a significant nonzero core-equilibrium floor
   (consistent with the TFPT protected floor — but **generic crust physics**, not TFPT-specific).
 - **Injection on the real sampling:** a strong comb (ε=15%) is recovered **100%**, the comb-free

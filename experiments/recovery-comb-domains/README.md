@@ -48,7 +48,7 @@ claim).
 | **A3** | FRB burst tail (FAST/GBT, stacked) | horizon-residual | **real** | **8 bright bursts / 3 repeaters**, 7 clear the gate; **stacked ω=2.58 not special (p≈0.34) → clean NULL** (weak: scattering-dominated, ~2% comb) |
 | **A3b** | CHIME baseband FRB tail (stacked) | horizon-residual | **real** | **8 distinct FRBs**, 2.56 µs coherently-dedispersed full-Stokes (DOI 10.11570/23.0029); all 8 clear the gate; **stacked ω=2.58 not special (p≈0.67) → clean NULL** (genuine scattering tails, still ~2% ceiling) |
 | **A4** | GRB X-ray afterglow plateau (stacked) | surface (borderline) | **real** | **22 Swift-XRT afterglows** (UKSSDC), **17 clear the gate at 3–4.4 comb periods** — the widest-ln(t) astrophysical recovery in hand; **stacked ω=2.58 NOT special (p≈0.13) → well-powered NULL** (not data-limited; central-engine/accretion, surface firewall) |
-| **A5** | nuclear transient / AGN-disk TDE optical fade (stacked) | surface (borderline) | **real** | **J2245+3743** (AGN J224554.84+374326.5, z=2.554; Graham+2025) ZTF DR fade; the **zr** band (1007 epochs) spans **3.21 comb periods** and clears the gate (zg range-blind, 1.8); **kernel ω=2.58 NOT special (p≈0.80)**; full **TFPT-λ battery NULL** after look-elsewhere (Bonferroni global **p≈0.08**) → **well-powered NULL** (accretion/central-engine, surface firewall — not a horizon recovery) |
+| **A5** | nuclear transient / AGN-disk TDE optical fade (stacked) | surface (borderline) | **real** | **J2245+3743** (AGN J224554.84+374326.5, z=2.554; Graham+2025) ZTF DR fade; the **zr** band (1007 epochs) spans **3.21 comb periods** and clears the gate (zg range-blind, 1.8); **kernel ω=2.58 NOT special (p≈0.80)**; full **TFPT-λ battery NULL** after look-elsewhere (Bonferroni global **p≈0.095** over 10 gated ratios incl. the Z2 readings) → **well-powered NULL** (accretion/central-engine, surface firewall — not a horizon recovery) |
 | **B4** | BEC analog-horizon Hawking/Page | analog | `needs_experiment` | most direct boundary-recovery analog; theory = recovery-channel; needs analog-gravity data |
 | **B5** | quantum-simulator geometric ladder | internal | `needs_experiment` | comb by construction (quantum-testbed synthetic); needs a built simulator |
 
@@ -86,8 +86,9 @@ origin at the brightest epoch, binned in `ln(t)` (median per bin). The **zr** ba
 epochs, MJD 58242→60967) spans **3.21 comb periods** and **clears the >2.8 ln-range gate** that the
 ms FRB tails cannot (the zg band is range-blind at 1.8 after binning, honestly excluded). On that
 wide-ln(t) curve the **kernel ω=2.58 is NOT special (p≈0.80)**, and the **full TFPT-λ battery**
-(`λ ∈ {3/2, φ, 2, 3, 4, 5, 8, (3/2)⁶, 30}`, the same quake-style look-elsewhere test) is **NULL**
-after Bonferroni (global **p≈0.08**, no single ratio survives). **Firewall:** an AGN-disk TDE is an
+(`λ ∈ {3/2, φ, 2, 3, 4, 5, 8, (3/2)⁶, 30}` + the Z2 readings `{(3/2)³, (3/2)⁴, (3/2)¹²}`, the same
+quake-style look-elsewhere test) is **NULL** after Bonferroni (global **p≈0.095** over 10 gated
+ratios, no single ratio survives). **Firewall:** an AGN-disk TDE is an
 **accretion / central-engine** relaxation, **not a horizon recovery** — identical legitimacy to A1
 (magnetar) and A4 (GRB), so any hit would be a universal-DSI coincidence, never TFPT confirmation;
 this NULL is **well-powered, not data-limited**. Note that z=2.554 time dilation stretches the
@@ -95,6 +96,48 @@ observed time axis **multiplicatively** (= an additive shift in `ln(t)`), so it 
 **phase** but adds **no ln-range** — the years-long observed baseline + dense early sampling are what
 give the range. The channel is multi-source-ready: dropping more ENTs into `data/ent/` activates the
 cross-source phase-incoherent stack. **No claim.**
+
+## The Z2/Möbius (double-cover) readings — closing the antiperiodic blind spot (2026-07-06)
+
+The kernel NULLs above all test a **periodic** comb at ω = 2.583. But TFPT's seam lives on a
+one-sided Z2 double cover (the 1/2 in `c3 = 1/(2·4π)`), and if the comb **carries the Z2 sheet
+parity per period** (sign flip each period — antiperiodic, periodic only on the double cover),
+its Fourier power at the kernel ω is **exactly zero**: every kernel null so far was structurally
+silent about that reading. Three derived omegas close the blind spot (preregistered as
+**exploratory/unforced** — no theory contract selects a reading; a hit is escalate-only):
+
+| reading | λ | ω | gate needs (2.8 periods) |
+|---|---|---|---|
+| half-period clock (√λ per rung, amplitude-semantics analog) | `(3/2)³` | 5.165 | ~3.4 e-folds |
+| antiperiodic first odd harmonic (3ω/2) | `(3/2)⁴` | 3.874 | ~4.5 e-folds |
+| antiperiodic fundamental (ω/2) | `(3/2)¹²` | 1.291 | ~13.6 e-folds |
+
+`z2_battery` (in `channels.py`) runs the stacked permutation test at each Z2 omega on **all**
+readable curves of a channel with a per-omega ln-range + Nyquist gate (so e.g. the `(3/2)³` comb
+is tested on curves that are range-blind at the kernel); the same three ratios are also in the
+quake/A5 `TFPT_LAMBDAS` battery (Bonferroni now over 11–12 gated ratios).
+
+**Result (2026-07-06 run): clean NULL everywhere testable; the fundamental is range-blind in all
+current data.**
+
+| channel | (3/2)³ ω=5.17 | (3/2)⁴ ω=3.87 | (3/2)¹² ω=1.29 |
+|---|---|---|---|
+| quake battery (6 USGS sequences) | p=0.62 (n=6) | p=0.45 (n=6) | n_used=0 |
+| A1 magnetar (6 curves) | p=0.36 (n=6) | p=0.27 (n=4) | n_used=0 |
+| A3 FAST/GBT FRB tails (8) | p=0.81 (n=8) | p=0.60 (n=8) | n_used=0 |
+| A3b CHIME baseband (8) | p=0.21 (n=8) | p=0.40 (n=8) | n_used=0 |
+| A4 GRB afterglows (22) | p=0.42 (n=22) | p=0.28 (n=22) | n_used=0 |
+| A5 ENT J2245+3743 (zr) | p=0.96 (n=1) | p=0.26 (n=1) | n_used=0 |
+
+The testable Möbius readings `(3/2)³`/`(3/2)⁴` are null in **every** channel including the two
+well-powered ones (quake: Bonferroni global p=0.94 over 11 gated ratios; A4: 22 wide-ln(t)
+GRBs); the A5 battery global p moves 0.08 → 0.095 (min-p still the λ=2 entry, now ×10 trials,
+still null). The **antiperiodic fundamental `(3/2)¹²` cannot be tested with any data in hand**:
+2.8 periods need 13.6 e-folds of ln(t) and the widest curve (Landers 1992 aftershocks) spans
+13.1 → `n_used=0` in all channels, an honest `data_limited` leg (a longer-baseline aftershock or
+decades-long AGN light curve would clear it). Same firewall as everything here: surface/crustal
+channels can never confirm TFPT — but they **could** have shown the twisted comb, and did not.
+**No claim.**
 
 ## Reproduce
 
@@ -192,7 +235,11 @@ protected wall (B1's longest decreasing-gap run is 5 > 3); the time-DSI comb is 
 (1.5–1.6 periods < 2.8) and not special; and the **amplitude echo-ratio** (the FRB.02 `64/729`/`8/27`
 kernel, now run on the **real NRT peak fluxes** via the published `prep_burst` recipe) is **not
 enriched** (B1 energy enr 0.80, p≈0.75; a *free* quotient hits 9× vs ≈0 at the kernel). So the
-microshot forest carries no recovery-kernel echo, clock, wall, or comb. The NRT filterbanks
+microshot forest carries no recovery-kernel echo, clock, wall, or comb. **Z2/Möbius readings
+(2026-07-06):** the half-period `(3/2)³` comb is the first reading whose per-λ gate the microshot
+forest actually **passes** (B1 3.22, B2 2.92 periods, where the kernel is range-blind at 1.5–1.6) —
+and it is **not special** (Rayleigh p=0.40/0.91 → null); `(3/2)⁴` and `(3/2)¹²` stay below the
+gate (B2 `(3/2)⁴` p=0.08 at 2.19 periods — sub-gate, not a candidate). The NRT filterbanks
 (`b_59881.fil` etc., Zenodo `10552561`) live gitignored under `new-data/eclat-microshots/`; the
 microshot times are hard-coded so the times-based tests reproduce without the download.
 
@@ -206,14 +253,17 @@ Aftershock decay (Omori `rate ~ t^-p`) is the data-richest **terrestrial** relax
 `ln t` range *and* high counts the faint ~2% comb needs (6 sequences here span up to **5.4 comb
 periods** with thousands of events — finally **not** data-limited). It tests the **whole** TFPT
 battery, not just one kernel: (1) the comb at **every** TFPT log-period `λ ∈ {3/2, φ, 2, 3, 4, 5, 8,
-(3/2)⁶, 30}` (stacked, per-λ ln-range+Nyquist gate, **Bonferroni look-elsewhere**); (2) a **free-fit**
-of seismicity's own dominant log-period; (3) the Omori exponent vs TFPT rationals.
+(3/2)⁶, 30}` **plus the Z2/Möbius readings `{(3/2)³, (3/2)⁴, (3/2)¹²}`** (stacked, per-λ
+ln-range+Nyquist gate, **Bonferroni look-elsewhere**); (2) a **free-fit** of seismicity's own
+dominant log-period; (3) the Omori exponent vs TFPT rationals.
 
 > **Firewall:** earthquakes are a crustal/critical relaxation, **not** a boundary/horizon recovery.
 > Any hit is a *universal-DSI shape* coincidence, **never** TFPT confirmation.
 
 **Result (well-powered NULL):** no TFPT log-period is special after look-elsewhere (Bonferroni global
-`p ≈ 0.77`); seismicity's own scale is `λ_fit ≈ 2.3–2.6` (the standard value, 12–16% off the nearest
+`p ≈ 0.94` over 11 gated ratios, incl. the Z2 readings `(3/2)³` p=0.62 and `(3/2)⁴` p=0.45; the
+`(3/2)¹²` antiperiodic fundamental is range-blind even here, n_used=0); seismicity's own scale is
+`λ_fit ≈ 2.3–2.6` (the standard value, 12–16% off the nearest
 TFPT ratio in ln); the tempting `p ≈ 0.84 ≈ 5/6` is a 0-bit simple-rational coincidence (per-sequence
 `p` scatters 0.67–1.11, no clustering). Unlike the astro nulls this one is **not** data-limited — the
 signature is robustly absent in data that *could* have shown it.
@@ -222,7 +272,7 @@ signature is robustly absent in data that *could* have shown it.
 
 ```
 src/tfpt_combdomains/comb.py      # detector + injection validation + ln-range gate + STACKED permutation meta-test
-src/tfpt_combdomains/channels.py  # the 8 channels (A1 magnetar; A2 BH tail; A3 FAST/GBT FRB; A3b CHIME baseband; A4 GRB plateau; A5 nuclear-transient/ENT; B4, B5) + the single-curve TFPT-lambda battery
+src/tfpt_combdomains/channels.py  # the 8 channels (A1 magnetar; A2 BH tail; A3 FAST/GBT FRB; A3b CHIME baseband; A4 GRB plateau; A5 nuclear-transient/ENT; B4, B5) + the single-curve TFPT-lambda battery + the Z2/Moebius stacked battery (z2_battery)
 src/tfpt_combdomains/chime.py     # CHIME baseband-catalog HDF5 reader (incoherent cross-channel dedispersion -> true profile+tail)
 src/tfpt_combdomains/grb.py       # A4: Swift-XRT GRB afterglow flux light curves (UKSSDC qdp) fetch + reader
 src/tfpt_combdomains/ent.py       # A5: ENT/AGN-disk-TDE ZTF DR light curves (IRSA) fetch + per-band recovery reader + ln(t) binning

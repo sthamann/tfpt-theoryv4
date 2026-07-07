@@ -201,6 +201,12 @@ no kernel comb, and the wall has MOVED off ln(τ)-range.**
   detected at ω (p≈0.002); a smooth power-law recovery is rejected (p≈0.18).
 - **ω=2.583 is NOT special** in the recovery: off-kernel periodogram **p≈0.23**, within-segment
   shuffle p≈0.60, and ω is **not the smallest-p member** of the off-kernel λ-battery (Bonferroni).
+- **Z2/Möbius readings (added 2026-07-06, exploratory/unforced — an antiperiodic sheet-parity comb
+  has zero power at the kernel ω, so the kernel null is silent about it):** half-period `(3/2)³`
+  (ω=5.17) p=0.27, antiperiodic harmonic `(3/2)⁴` (ω=3.87) p=0.23 → null; the antiperiodic
+  fundamental `(3/2)¹²` (ω=1.29) has raw p=0.03 but Bonferroni 0.30 over the 10-member battery
+  *and* only 1.28 periods of that λ in the window (far below the 2.8 gate) on a
+  smooth-parametric-model curve → null/blind, not a candidate.
 - **Range is no longer the wall.** Reusing PG.06's injection-validated range-power curve (reference
   amplitude ε=0.30), a strong comb at Vela-2024's 2.55 periods is localised **95%** of the time
   (vs **0%** at J0537's ~1.9); the smooth null false-positive rate is 0%. The **stacked**
@@ -263,6 +269,15 @@ Preregistered in `hypotheses/pulsar_pg08_v1.yaml` (kernel frozen before any comb
 - **Audit note (not a TFPT channel):** in J0742−2822 the *off-kernel* battery member λ=e
   (ω≈6.28) has p=0.002 (Bonferroni 0.013) — an unexplained non-kernel periodicity in that
   pulsar's residuals (J0742 is a known mode-switcher); flagged, not claimed.
+- **Z2/Möbius readings (added 2026-07-06, exploratory/unforced):** the battery now includes the
+  double-cover readings `(3/2)³` (half-period, ω=5.17), `(3/2)⁴` (antiperiodic first harmonic,
+  ω=3.87) and `(3/2)¹²` (antiperiodic fundamental, ω=1.29) — the antiperiodic case is where a
+  sheet-parity-carrying comb would hide from every kernel-ω null. Result: null in all legs
+  ((3/2)³ p=1.0/0.10/0.17; (3/2)¹² p=0.66/1.0/0.96), with ONE nominal excess that fails its
+  placebo control: J1740−3015 has `(3/2)⁴` raw p=0.0018, **but** the periodogram peak sits at
+  ω=3.73 (not 3.874) and placebo frequencies ω=3.6/3.73 are exactly as significant (p=0.0018) —
+  a broad non-specific ω≈3.6–4.0 bump in these residuals (same class as the J0742 λ=e flag),
+  **not** the TFPT value. Flagged as an audit anomaly, not a candidate.
 
 Output: `results/pg08_puma_iar.json` + `results/pg08_puma_iar.png`. **Firewall intact** — a
 hit would have been universal-DSI in the NS interior, not TFPT confirmation. Decisive next:

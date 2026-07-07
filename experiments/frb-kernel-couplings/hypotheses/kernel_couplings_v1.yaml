@@ -1,0 +1,122 @@
+# FRB kernel COUPLINGS -- preregistered v1 (frozen 2026-07-06, BEFORE any statistic ran;
+# only column names/units of the committed catalogs were inspected).
+#
+# FIREWALL: search targets / consistency checks on horizon-residual channels -- never
+# load-bearing claims, never [E]. A hit in any axis is "escalate -> independent
+# cross-check" (universal-DSI / astrophysical coincidence remains the default reading).
+#
+# Motivation (bird's-eye scan 2026-07-06): all prior FRB tests probed MARGINALS
+# (energy ratios alone, time structure alone) or DECK-BLIND polarization invariants
+# (PA mod pi, |V|/I). Three structures were structurally untested:
+#   KC.01 the 2D LADDER COUPLING (forced by the frozen kernel semantics: one transfer
+#         rung multiplies time by (3/2)^k AND energy by (2/3)^k -- E*t = const),
+#   KC.02 the ORIENTATION FLIP of the Z2 deck in polarization (only the SIGN of the
+#         circular polarization V sees an orientation flip; exploratory/unforced),
+#   KC.03 discrete scale invariance in SIZE space (log-periodic decoration of the
+#         burst-energy distribution; the FRB analog of pulsar PG.01).
+
+data:
+  kc01_kc03_sources:
+    - "FRB 20121102A: Li+2021 (Nature 598, 267; VizieR J/other/Nat/598.267), 1652 bursts, MJD + isotropic energy E"
+    - "FRB 20220912A: Zhang+2023 (ApJ 955, 142; VizieR J/ApJ/955/142), 1076 bursts, mjd_bary + energy_1e36erg"
+  kc02_source: "FRB 20240114A: FAST pol catalog v5 (Wang+2026, ScienceDB), 6134 bursts, MJD_topo + SIGNED DOC=V/I (%) + DOC_err"
+  sessions: "gap > 0.2 d opens a new session (repeater-cascade convention); tau_i = t_i - t_first within session; tau gate 0.5 s"
+
+frozen_constants:
+  time_teeth: "(3/2)^k, k in {1, 3, 6}  (step / amplitude / energy reading -- the PG.02/RC.03 tooth set)"
+  energy_partner: "(2/3)^k for the SAME k (E*t = const along the ladder; direction: later burst = longer tau = smaller E)"
+  tolerance: "+/- 0.10 dex in log10 (microshots/FRB convention)"
+  lambda_battery_kc03: "quake BATTERY_LAMBDAS (9 TFPT ratios + 3 Z2 readings), Bonferroni over gated entries"
+  range_gate_kc03: ">= 2.8 periods of ln(lambda) in the ln E range"
+
+axes:
+  KC.01_joint_tooth:
+    hypothesis: >
+      For consecutive within-session burst pairs whose tau ratio lies on a time tooth
+      (3/2)^k, the energy ratio E_early/E_late lies on the PARTNER tooth (3/2)^k
+      (i.e. E_late/E_early = (2/3)^k) more often than chance. Primary statistic:
+      joint-hit enrichment vs the ENERGY-SHUFFLE null (within-session permutation of
+      energies, 2000 draws) -- the null preserves BOTH marginals exactly and destroys
+      only the coupling.
+    controls:
+      - "placebo pairing: time tooth k paired with energy tooth k' != k must NOT beat the matched pairing"
+      - "free-quotient: replace 2/3 by q on a grid q in [0.4, 0.95]; the kernel must not be beaten by > 95% of the grid (LEE)"
+    kill: "well-powered enrichment ~1 in both sources -> the 2D coupling is absent at catalog statistics (bounds the LADDER reading of sub-burst trains; marginals unaffected)"
+  KC.02_vsign_alternation:
+    hypothesis: >
+      EXPLORATORY (unforced observable coupling; deck reading): the Z2 deck flips
+      orientation per kernel step; signed circular polarization is the only
+      deck-visible polarization observable (PA is mod pi, |V| is even). Primary:
+      alternation fraction A = P(sign flip) over consecutive significant-handedness
+      pairs (|DOC| >= max(2 sigma_DOC, 5%)) vs within-session sign permutation
+      (2000 draws), one-sided (excess alternation). Secondary: tooth-gated pairs
+      (tau ratio on (3/2)^6 +/- 0.10 dex). Report net handedness balance.
+    kill: "no excess alternation at catalog statistics -> the deck does not imprint on V handedness in this source (escalate-only channel closes for FAST 20240114A)"
+  KC.03_energy_dsi:
+    hypothesis: >
+      The burst-energy DISTRIBUTION carries a log-periodic decoration at a frozen TFPT
+      ratio: Rayleigh power at omega = 2 pi / ln(lambda) on ln E, ranked against THREE
+      nulls (log-normal fit; KDE shape-preserving resample; population-controlled GMM
+      with BIC-selected k <= 3 -- the Li+2021 energy distribution is famously BIMODAL,
+      the PG.01 lesson). Per-lambda p = max over the three nulls (conservative);
+      Bonferroni over the gated battery.
+    kill: "clean Bonferroni null in both sources -> no size-space DSI at kernel ratios (the PG.01 pulsar result replicated in the FRB energy domain)"
+
+verdict_language: "null / consistent / data_limited / hint_flag only; never a claim; any nominal hit requires the controls AND a second source before even 'escalate'."
+
+# ---------------------------------------------------------------------------
+# v1.1 ADDENDUM (2026-07-06, dated BEFORE the KC.04 run; KC.01-03 already ran):
+axes_added:
+  KC.04_phase_helix:
+    hypothesis: >
+      EXPLORATORY (mu4 deck reading; unforced observable coupling): if a repeater
+      carries the same mu4 deck clock AND the same recovery kernel, the complex
+      linear polarization P = L e^{2i PA} and the burst times are PHASE-COUPLED:
+      Phi_ij(q) = omega ln(tau_j/tau_i) + q * 2*(PA_j - PA_i)  ~ const mod 2pi
+      for within-session consecutive pairs, with FROZEN omega = 2 pi/ln((3/2)^6)
+      = 2.583 (no free frequency) and q in {1, 2} (the mu4 variants; q=1 the
+      quarter-turn reading, q=2 the half-turn/Z2 reading).
+    method: >
+      Rayleigh concentration R of Phi over pairs (both taus > 0.5 s, PA present,
+      L/I >= 10%). THREE nulls: (a) within-session PA permutation (destroys the
+      coupling, keeps both marginals); (b) within-session CIRCULAR SHIFT of the
+      PA series (drift-robust: preserves PA autocorrelation -- the conservative
+      primary); (c) off-kernel omega rank in the matched band [0.72, 1.40]*omega
+      (the helix must be special AT the kernel). Faraday/instrument caveat: PA
+      is mod pi and sessions are hours -- slow drift is handled by (b), fast RM
+      swings are not (documented limitation).
+    kill: >
+      No concentration above the circular-shift null at either q in the one
+      well-sampled source (20240114A) -> the helix reading closes for FAST data;
+      a nominal hit is escalate-only and needs a second source + RM-corrected PA.
+
+# ---------------------------------------------------------------------------
+# v1.2 ADDENDUM (2026-07-06, after the signature reclassification; before the
+# KC.05/KC.06 operator-proxy run in this branch): these are the missing
+# non-tooth astro searches. They do NOT test the core directly because no FRB
+# transduction B is proven; they test whether a visible polarization proxy leaks
+# the operator signatures.
+axes_added_v1_2:
+  KC.05_mu4_block_proxy:
+    hypothesis: >
+      S8-style operator signature translated to the available FRB polarization
+      stream: if the visible PA-derived character classes carry a mu4-protected
+      operator, the consecutive-burst transition matrix on the four classes of
+      P = L exp(2i PA) should suppress off-character transitions. Primary
+      statistic: Frobenius off-diagonal energy fraction of the C4 transition
+      matrix. Nulls/controls: within-session class shuffle; Z3 marking; random
+      unequal 4-mark partitions. This is an exploratory S8 proxy, not an EIT-like
+      boundary-operator measurement.
+    kill: >
+      C4 off-character leakage not suppressed relative to shuffle/generic
+      controls -> no visible mu4 block protection in the FRB PA proxy.
+  KC.06_multivariate_spectrum:
+    hypothesis: >
+      S2a-style operator spectrum on the multivariate polarization state, not a
+      tooth or log-comb: fit a lag-1 linear operator on
+      (cos 2PA, sin 2PA, L/I, sign V) within sessions and compare the normalized
+      eigenvalue magnitudes to {1, 64/729, 1/729}. Primary null: within-session
+      shuffle of the state sequence.
+    kill: >
+      Spectrum distance to {1,64/729,1/729} is not unusually small relative to
+      the shuffle null -> no visible S2a transfer spectrum in this FRB proxy.

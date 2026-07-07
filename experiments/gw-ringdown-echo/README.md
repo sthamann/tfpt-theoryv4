@@ -88,6 +88,10 @@ physics allow (Bonferroni ×12), on the same 10 events:
   (the μ₄ characters; TFPT's natural value is the quarter turn π/2). Propagation-path GW
   birefringence (parity, `c₋ = 8 ≠ 0`) is common to all echoes of one event and **cancels
   in the inter-echo ratio**; only a per-reflection phase does not cancel — scanned here.
+  Note (2026-07-06): `Δφ = π` **is** the Z2/Möbius (double-cover) reading of the train — a
+  sheet-parity flip per bounce makes the train antiperiodic (periodic only on the double
+  cover), exactly the twisted signature the `recovery-comb-domains` Z2 battery tests as
+  `ω/2` in ln-t combs; here it is covered natively per event (and is null, below).
 - **Extended lags 0.5–350 ms** (ECO/gravastar ~0.7 ms through Planckian ~0.23 s @63 M☉).
 - **Joint (2,2,0)+(2,2,1) subtraction** (Berti+ 2006 fits for both modes) — the `q̂ ~ 1`
   excesses of the primary search are overtone/residual power.

@@ -1,0 +1,445 @@
+{
+  "prereg": "hypotheses/kernel_couplings_v1.yaml",
+  "axes": {
+    "KC.01_joint_tooth": [
+      {
+        "source": "FRB20121102A",
+        "n_pairs": 1569,
+        "n_time_tooth": 130,
+        "joint_hits": 14,
+        "null_mean": 19.5415,
+        "enrichment": 0.716,
+        "p_value": 0.9365,
+        "placebo_max_hits": 7,
+        "free_q_beat_frac": 0.6,
+        "per_tooth": {
+          "(3/2)^1": {
+            "time_tooth_pairs": 117,
+            "joint_hits": 14
+          },
+          "(3/2)^3": {
+            "time_tooth_pairs": 11,
+            "joint_hits": 0
+          },
+          "(3/2)^6": {
+            "time_tooth_pairs": 2,
+            "joint_hits": 0
+          }
+        },
+        "verdict": "NULL -- joint hits 14 vs shuffle mean 19.5 (enr 0.72, p=0.937); placebo max 7; free-q beats kernel in 60% of the grid"
+      },
+      {
+        "source": "FRB20220912A",
+        "n_pairs": 1040,
+        "n_time_tooth": 59,
+        "joint_hits": 3,
+        "null_mean": 4.3895,
+        "enrichment": 0.683,
+        "p_value": 0.8351,
+        "placebo_max_hits": 9,
+        "free_q_beat_frac": 0.556,
+        "per_tooth": {
+          "(3/2)^1": {
+            "time_tooth_pairs": 52,
+            "joint_hits": 3
+          },
+          "(3/2)^3": {
+            "time_tooth_pairs": 5,
+            "joint_hits": 0
+          },
+          "(3/2)^6": {
+            "time_tooth_pairs": 2,
+            "joint_hits": 0
+          }
+        },
+        "verdict": "NULL -- joint hits 3 vs shuffle mean 4.4 (enr 0.68, p=0.835); placebo max 9; free-q beats kernel in 56% of the grid"
+      }
+    ],
+    "KC.02_vsign": {
+      "source": "FRB20240114A",
+      "n_significant": 3540,
+      "n_pairs": 3454,
+      "alternation": 0.4797,
+      "null_mean": 0.4975,
+      "p_value": 0.9825,
+      "net_handedness": 0.058,
+      "n_tooth_pairs": 3,
+      "tooth_alternation": NaN,
+      "tooth_p": 1.0,
+      "verdict": "NULL -- alternation 0.480 vs shuffle 0.497 (p=0.983); tooth-gated (3 pairs) p=1.000"
+    },
+    "KC.04_phase_helix": {
+      "source": "FRB20240114A",
+      "n_sessions": 83,
+      "n_pairs": 5934,
+      "per_q": {
+        "q=1": {
+          "R": 0.2739,
+          "p_perm": 0.0005,
+          "p_shift": 0.1204,
+          "p_offkernel_rank": 0.372,
+          "detected": false
+        },
+        "q=2": {
+          "R": 0.0407,
+          "p_perm": 0.017,
+          "p_shift": 0.2584,
+          "p_offkernel_rank": 0.6412,
+          "detected": false
+        }
+      },
+      "verdict": "NULL -- the coupled phase Phi = omega ln(tau ratio) + q*2*dPA is not concentrated above the permutation AND drift-robust circular-shift nulls at the frozen omega for either mu4 reading (q=1, 2); the off-kernel rank agrees. The helix reading closes for FAST 20240114A at catalog statistics (PA is mod pi and RM-uncorrected -- documented limitation)."
+    },
+    "KC.03_energy_dsi": [
+      {
+        "source": "FRB20121102A",
+        "n_bursts": 1652,
+        "ln_e_range": 8.32,
+        "battery": {
+          "3/2 (1/Koide, fundamental)": {
+            "lambda": 1.5,
+            "omega": 15.496,
+            "periods": 20.51,
+            "gated": true,
+            "z": 0.969,
+            "p_by_null": {
+              "lognormal": 0.3863,
+              "kde": 0.3713,
+              "gmm": 0.3928
+            },
+            "p_max": 0.3928
+          },
+          "phi (golden, g_car=5)": {
+            "lambda": 1.618,
+            "omega": 13.057,
+            "periods": 17.28,
+            "gated": true,
+            "z": 0.343,
+            "p_by_null": {
+              "lognormal": 0.7001,
+              "kde": 0.7046,
+              "gmm": 0.7106
+            },
+            "p_max": 0.7106
+          },
+          "2 (sheet doubling)": {
+            "lambda": 2.0,
+            "omega": 9.065,
+            "periods": 12.0,
+            "gated": true,
+            "z": 0.281,
+            "p_by_null": {
+              "lognormal": 0.7541,
+              "kde": 0.7471,
+              "gmm": 0.7601
+            },
+            "p_max": 0.7601
+          },
+          "3 (N_fam)": {
+            "lambda": 3.0,
+            "omega": 5.719,
+            "periods": 7.57,
+            "gated": true,
+            "z": 4.535,
+            "p_by_null": {
+              "lognormal": 0.008,
+              "kde": 0.0445,
+              "gmm": 0.2689
+            },
+            "p_max": 0.2689
+          },
+          "4 (|mu4|)": {
+            "lambda": 4.0,
+            "omega": 4.532,
+            "periods": 6.0,
+            "gated": true,
+            "z": 7.558,
+            "p_by_null": {
+              "lognormal": 0.0015,
+              "kde": 0.0445,
+              "gmm": 0.9305
+            },
+            "p_max": 0.9305
+          },
+          "5 (g_car)": {
+            "lambda": 5.0,
+            "omega": 3.904,
+            "periods": 5.17,
+            "gated": true,
+            "z": 27.243,
+            "p_by_null": {
+              "lognormal": 0.0005,
+              "kde": 0.003,
+              "gmm": 0.6942
+            },
+            "p_max": 0.6942
+          },
+          "8 (rank E8)": {
+            "lambda": 8.0,
+            "omega": 3.022,
+            "periods": 4.0,
+            "gated": true,
+            "z": 111.17,
+            "p_by_null": {
+              "lognormal": 0.0005,
+              "kde": 0.0005,
+              "gmm": 0.0185
+            },
+            "p_max": 0.0185
+          },
+          "(3/2)^6 (recovery comb)": {
+            "lambda": 11.3906,
+            "omega": 2.583,
+            "periods": 3.42,
+            "gated": true,
+            "z": 146.96,
+            "p_by_null": {
+              "lognormal": 0.0005,
+              "kde": 0.001,
+              "gmm": 0.078
+            },
+            "p_max": 0.078
+          },
+          "30 (Coxeter h)": {
+            "lambda": 30.0,
+            "omega": 1.847,
+            "periods": 2.45,
+            "gated": false
+          },
+          "(3/2)^3 (Z2 half-period)": {
+            "lambda": 3.375,
+            "omega": 5.165,
+            "periods": 6.84,
+            "gated": true,
+            "z": 4.335,
+            "p_by_null": {
+              "lognormal": 0.0145,
+              "kde": 0.071,
+              "gmm": 0.7201
+            },
+            "p_max": 0.7201
+          },
+          "(3/2)^4 (Z2 antiperiodic harmonic)": {
+            "lambda": 5.0625,
+            "omega": 3.874,
+            "periods": 5.13,
+            "gated": true,
+            "z": 28.986,
+            "p_by_null": {
+              "lognormal": 0.0005,
+              "kde": 0.002,
+              "gmm": 0.6422
+            },
+            "p_max": 0.6422
+          },
+          "(3/2)^12 (Z2 antiperiodic fundamental)": {
+            "lambda": 129.7463,
+            "omega": 1.291,
+            "periods": 1.71,
+            "gated": false
+          }
+        },
+        "n_gated": 10,
+        "best_label": "8 (rank E8)",
+        "best_p": 0.0185,
+        "bonferroni_global_p": 0.185,
+        "gmm_components": 3,
+        "verdict": "NULL -- no TFPT log-period is special in the ln E distribution after the 3-null battery + Bonferroni (global p=0.185, best 8 (rank E8) p=0.0185; GMM population null uses k=3)"
+      },
+      {
+        "source": "FRB20220912A",
+        "n_bursts": 1076,
+        "ln_e_range": 9.95,
+        "battery": {
+          "3/2 (1/Koide, fundamental)": {
+            "lambda": 1.5,
+            "omega": 15.496,
+            "periods": 24.54,
+            "gated": true,
+            "z": 0.628,
+            "p_by_null": {
+              "lognormal": 0.5302,
+              "kde": 0.5482,
+              "gmm": 0.5322
+            },
+            "p_max": 0.5482
+          },
+          "phi (golden, g_car=5)": {
+            "lambda": 1.618,
+            "omega": 13.057,
+            "periods": 20.68,
+            "gated": true,
+            "z": 2.383,
+            "p_by_null": {
+              "lognormal": 0.1054,
+              "kde": 0.0805,
+              "gmm": 0.1064
+            },
+            "p_max": 0.1064
+          },
+          "2 (sheet doubling)": {
+            "lambda": 2.0,
+            "omega": 9.065,
+            "periods": 14.35,
+            "gated": true,
+            "z": 0.432,
+            "p_by_null": {
+              "lognormal": 0.6677,
+              "kde": 0.6532,
+              "gmm": 0.6652
+            },
+            "p_max": 0.6677
+          },
+          "3 (N_fam)": {
+            "lambda": 3.0,
+            "omega": 5.719,
+            "periods": 9.06,
+            "gated": true,
+            "z": 2.905,
+            "p_by_null": {
+              "lognormal": 0.062,
+              "kde": 0.057,
+              "gmm": 0.051
+            },
+            "p_max": 0.062
+          },
+          "4 (|mu4|)": {
+            "lambda": 4.0,
+            "omega": 4.532,
+            "periods": 7.18,
+            "gated": true,
+            "z": 2.265,
+            "p_by_null": {
+              "lognormal": 0.1019,
+              "kde": 0.1274,
+              "gmm": 0.1079
+            },
+            "p_max": 0.1274
+          },
+          "5 (g_car)": {
+            "lambda": 5.0,
+            "omega": 3.904,
+            "periods": 6.18,
+            "gated": true,
+            "z": 3.245,
+            "p_by_null": {
+              "lognormal": 0.044,
+              "kde": 0.0995,
+              "gmm": 0.0365
+            },
+            "p_max": 0.0995
+          },
+          "8 (rank E8)": {
+            "lambda": 8.0,
+            "omega": 3.022,
+            "periods": 4.78,
+            "gated": true,
+            "z": 1.742,
+            "p_by_null": {
+              "lognormal": 0.1844,
+              "kde": 0.3048,
+              "gmm": 0.2369
+            },
+            "p_max": 0.3048
+          },
+          "(3/2)^6 (recovery comb)": {
+            "lambda": 11.3906,
+            "omega": 2.583,
+            "periods": 4.09,
+            "gated": true,
+            "z": 2.386,
+            "p_by_null": {
+              "lognormal": 0.0975,
+              "kde": 0.2939,
+              "gmm": 0.4943
+            },
+            "p_max": 0.4943
+          },
+          "30 (Coxeter h)": {
+            "lambda": 30.0,
+            "omega": 1.847,
+            "periods": 2.93,
+            "gated": true,
+            "z": 13.695,
+            "p_by_null": {
+              "lognormal": 0.0005,
+              "kde": 0.1409,
+              "gmm": 0.6882
+            },
+            "p_max": 0.6882
+          },
+          "(3/2)^3 (Z2 half-period)": {
+            "lambda": 3.375,
+            "omega": 5.165,
+            "periods": 8.18,
+            "gated": true,
+            "z": 1.455,
+            "p_by_null": {
+              "lognormal": 0.2469,
+              "kde": 0.2709,
+              "gmm": 0.2394
+            },
+            "p_max": 0.2709
+          },
+          "(3/2)^4 (Z2 antiperiodic harmonic)": {
+            "lambda": 5.0625,
+            "omega": 3.874,
+            "periods": 6.13,
+            "gated": true,
+            "z": 3.056,
+            "p_by_null": {
+              "lognormal": 0.043,
+              "kde": 0.096,
+              "gmm": 0.045
+            },
+            "p_max": 0.096
+          },
+          "(3/2)^12 (Z2 antiperiodic fundamental)": {
+            "lambda": 129.7463,
+            "omega": 1.291,
+            "periods": 2.04,
+            "gated": false
+          }
+        },
+        "n_gated": 11,
+        "best_label": "3 (N_fam)",
+        "best_p": 0.062,
+        "bonferroni_global_p": 0.682,
+        "gmm_components": 2,
+        "verdict": "NULL -- no TFPT log-period is special in the ln E distribution after the 3-null battery + Bonferroni (global p=0.682, best 3 (N_fam) p=0.062; GMM population null uses k=2)"
+      }
+    ],
+    "KC.05_mu4_block_proxy": {
+      "source": "FRB20240114A",
+      "n_pairs": 6037,
+      "c4_off_fraction": 0.4268,
+      "shuffle_median": 0.4629,
+      "p_low": 0.0045,
+      "z3_off_fraction": 0.3677,
+      "generic4_median": 0.3958,
+      "generic4_min": 0.015,
+      "verdict": "NULL -- the PA-derived C4 transition operator is not unusually block-diagonal relative to shuffle/generic controls; no visible S8-style mu4 block protection in this FRB polarization proxy."
+    },
+    "KC.06_multivariate_spectrum": {
+      "source": "FRB20240114A",
+      "n_pairs": 3447,
+      "n_features": 4,
+      "eig_abs_norm": [
+        1.0,
+        0.5066,
+        0.38444,
+        0.04781
+      ],
+      "target_spectrum": [
+        1.0,
+        0.08779,
+        0.00137
+      ],
+      "distance_to_target": 0.56758,
+      "shuffle_median_distance": 0.93052,
+      "p_close": 0.1799,
+      "verdict": "NULL -- the multivariate polarization lag operator is not unusually close to the S2a spectrum {1,64/729,1/729} relative to the shuffle null."
+    }
+  },
+  "verdict": "8/8 axis-runs NULL. KC.05/KC.06 add the non-tooth operator-proxy searches: mu4 block leakage and S2a multivariate spectrum. Firewall: search targets, surface-leakage only, never TFPT confirmation."
+}

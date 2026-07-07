@@ -1,0 +1,152 @@
+{
+  "config": {
+    "M_max": 32,
+    "dim": 65,
+    "kappa": 4.0,
+    "K_eig": 40,
+    "noise_levels": [
+      0.0001,
+      0.001,
+      0.01
+    ],
+    "n_seeds": 40
+  },
+  "exact": {
+    "z4_marks": {
+      "S_off_full": 4.477421228332382e-33,
+      "S_off_subprincipal": 2.9172418122051655e-31
+    },
+    "z3_marks": {
+      "S_off_full": 0.06855753667173925,
+      "S_off_subprincipal": 0.9999999999897052
+    },
+    "generic_4_marks": {
+      "S_off_full": 0.0964860277583015,
+      "S_off_subprincipal": 0.9749241189425192
+    }
+  },
+  "reconstructed": {
+    "z4_marks": {
+      "sigma=0.0001": {
+        "S_off_full_median": 3.874900222731388e-07,
+        "S_off_sub_median": 1.4597575716000431e-06,
+        "S_off_sub_p95": 1.5457063417304635e-06
+      },
+      "sigma=0.001": {
+        "S_off_full_median": 3.873716557727409e-05,
+        "S_off_sub_median": 0.0001459698084650405,
+        "S_off_sub_p95": 0.00015455758782861976
+      },
+      "sigma=0.01": {
+        "S_off_full_median": 0.003846504824639961,
+        "S_off_sub_median": 0.014430671404114461,
+        "S_off_sub_p95": 0.015266004566501033
+      }
+    },
+    "z3_marks": {
+      "sigma=0.0001": {
+        "S_off_full_median": 0.3690680443815493,
+        "S_off_sub_median": 0.9271294861551135,
+        "S_off_sub_p95": 0.9271419410019758
+      },
+      "sigma=0.001": {
+        "S_off_full_median": 0.3690591633655015,
+        "S_off_sub_median": 0.9271056072851732,
+        "S_off_sub_p95": 0.927232787412607
+      },
+      "sigma=0.01": {
+        "S_off_full_median": 0.3684678359214216,
+        "S_off_sub_median": 0.9247767617426029,
+        "S_off_sub_p95": 0.9262994637357546
+      }
+    },
+    "generic_4_marks": {
+      "sigma=0.0001": {
+        "S_off_full_median": 0.3516411852196235,
+        "S_off_sub_median": 0.8695623007206563,
+        "S_off_sub_p95": 0.8695821147728336
+      },
+      "sigma=0.001": {
+        "S_off_full_median": 0.3516373564572809,
+        "S_off_sub_median": 0.8695503222165248,
+        "S_off_sub_p95": 0.8697492306747356
+      },
+      "sigma=0.01": {
+        "S_off_full_median": 0.3513228858962917,
+        "S_off_sub_median": 0.8679679636725177,
+        "S_off_sub_p95": 0.8701343362354452
+      }
+    }
+  },
+  "clock_scan": {
+    "z4_marks": {
+      "theta_grid": 720,
+      "zeros_over_pi": [
+        0.5,
+        1.0,
+        1.5,
+        2.0
+      ],
+      "leak_at_pi_2": 7.391018300910601e-32,
+      "leak_min_off_mu4": 1.870184840998882e-05
+    },
+    "z3_marks": {
+      "theta_grid": 720,
+      "zeros_over_pi": [
+        0.6667,
+        1.3333,
+        2.0
+      ],
+      "leak_at_pi_2": 0.1373940293841162,
+      "leak_min_off_mu4": 3.1819978824705946e-31
+    },
+    "generic_4_marks": {
+      "theta_grid": 720,
+      "zeros_over_pi": [
+        2.0
+      ],
+      "leak_at_pi_2": 0.24912323577922987,
+      "leak_min_off_mu4": 3.383742487204974e-05
+    }
+  },
+  "power": {
+    "sigma=0.0001": {
+      "threshold_S_off_sub_p95": 1.5457063417304635e-06,
+      "detection_rate": {
+        "eps=0.001": 1.0,
+        "eps=0.003": 1.0,
+        "eps=0.01": 1.0,
+        "eps=0.03": 1.0,
+        "eps=0.1": 1.0,
+        "eps=0.3": 1.0
+      },
+      "min_eps_95pct": 0.001
+    },
+    "sigma=0.001": {
+      "threshold_S_off_sub_p95": 0.00015455758782861976,
+      "detection_rate": {
+        "eps=0.001": 1.0,
+        "eps=0.003": 1.0,
+        "eps=0.01": 1.0,
+        "eps=0.03": 1.0,
+        "eps=0.1": 1.0,
+        "eps=0.3": 1.0
+      },
+      "min_eps_95pct": 0.001
+    },
+    "sigma=0.01": {
+      "threshold_S_off_sub_p95": 0.015266004566501033,
+      "detection_rate": {
+        "eps=0.001": 0.15,
+        "eps=0.003": 0.35,
+        "eps=0.01": 1.0,
+        "eps=0.03": 1.0,
+        "eps=0.1": 1.0,
+        "eps=0.3": 1.0
+      },
+      "min_eps_95pct": 0.01
+    }
+  },
+  "contract_holds": true,
+  "verdict": "CONTRACT HOLDS: the mu4 configuration has ZERO off-character leakage (S_off_sub < 1e-20 exact; reconstruction-noise floor ~ O(sigma^2)); the clock-angle zero set is exactly the mu4 orbit {pi/2, pi, 3pi/2}; Z3 and generic marks leak O(1) and lose the mu4 zeros; a mark shift is detectable through the reconstruction noise down to the eps listed per noise level (the instrument requirement for an analog realisation)."
+}

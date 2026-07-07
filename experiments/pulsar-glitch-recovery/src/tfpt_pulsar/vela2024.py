@@ -244,11 +244,20 @@ def off_kernel_lambda_battery(tau: np.ndarray, rec: np.ndarray, *, seed: int = 0
                               ) -> list[tuple[str, float, float]]:
     """Test omega for a battery of off-kernel cascade scales lambda (and a couple of generic
     ratios). Bonferroni over the family: if the KERNEL is not the smallest-p member after
-    correction, it is not special. Returns [(label, omega, p), ...] incl. the kernel."""
+    correction, it is not special. Returns [(label, omega, p), ...] incl. the kernel.
+
+    The three "Z2" members (added 2026-07-06) are the Moebius/double-cover READINGS of the same
+    kernel (exploratory/unforced, mirroring recovery-comb-domains Z2_LAMBDAS): an antiperiodic
+    (sheet-parity-carrying) comb has ZERO power at the kernel omega -- its fundamental sits at
+    omega/2 <-> (3/2)^12, the first odd harmonic at 3*omega/2 <-> (3/2)^4; a half-period
+    (sqrt-lambda per rung) clock sits at 2*omega <-> (3/2)^3."""
     battery = {
         "(3/2)^6 [kernel]": LAMBDA_CASCADE,
         "(3/2)^5": 1.5**5, "(3/2)^7": 1.5**7, "(3/2)^8": 1.5**8,
         "lambda=2": 2.0, "lambda=3": 3.0, "lambda=e": math.e,
+        "(3/2)^3 [Z2 half-period]": 1.5**3,
+        "(3/2)^4 [Z2 antiperiodic harmonic]": 1.5**4,
+        "(3/2)^12 [Z2 antiperiodic fundamental]": 1.5**12,
     }
     out = []
     for label, lam in battery.items():

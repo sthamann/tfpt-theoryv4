@@ -64,6 +64,21 @@
           "label": "lambda=e",
           "omega": 6.283185307179586,
           "p": 0.8940754039497307
+        },
+        {
+          "label": "(3/2)^3 [Z2 half-period]",
+          "omega": 5.165413892616579,
+          "p": 1.0
+        },
+        {
+          "label": "(3/2)^4 [Z2 antiperiodic harmonic]",
+          "omega": 3.874060419462434,
+          "p": 0.3496376811594203
+        },
+        {
+          "label": "(3/2)^12 [Z2 antiperiodic fundamental]",
+          "omega": 1.2913534731541447,
+          "p": 0.66
         }
       ],
       "injection": {
@@ -132,6 +147,21 @@
           "label": "lambda=e",
           "omega": 6.283185307179586,
           "p": 0.0018018018018018018
+        },
+        {
+          "label": "(3/2)^3 [Z2 half-period]",
+          "omega": 5.165413892616579,
+          "p": 0.09963768115942029
+        },
+        {
+          "label": "(3/2)^4 [Z2 antiperiodic harmonic]",
+          "omega": 3.874060419462434,
+          "p": 0.5108695652173914
+        },
+        {
+          "label": "(3/2)^12 [Z2 antiperiodic fundamental]",
+          "omega": 1.2913534731541447,
+          "p": 1.0
         }
       ],
       "injection": {
@@ -200,6 +230,21 @@
           "label": "lambda=e",
           "omega": 6.283185307179586,
           "p": 0.3453887884267631
+        },
+        {
+          "label": "(3/2)^3 [Z2 half-period]",
+          "omega": 5.165413892616579,
+          "p": 0.17122040072859745
+        },
+        {
+          "label": "(3/2)^4 [Z2 antiperiodic harmonic]",
+          "omega": 3.874060419462434,
+          "p": 0.0017953321364452424
+        },
+        {
+          "label": "(3/2)^12 [Z2 antiperiodic fundamental]",
+          "omega": 1.2913534731541447,
+          "p": 0.961335676625659
         }
       ],
       "injection": {

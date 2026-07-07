@@ -1,0 +1,46 @@
+{
+  "contract": "BORN.01 deck-envariance (Born weight reduction)",
+  "date": "2026-07-07",
+  "firewall": "theory contract, never a scorecard row; internal consistency, not evidence; measurement problem not addressed",
+  "verdict": "CONTRACT HOLDS (6/6)",
+  "checks": [
+    {
+      "check": "C1 EXPONENT [I]: basis-independent normalisation forces alpha = 2 within the power family",
+      "pass": true,
+      "detail": "solve(2^(1-a/2)=1) -> [2]; cos^2+sin^2=1 exact; variance over bases: ['1.0:1.23e-02', '1.5:3.32e-03', '2.0:4.09e-33', '3.0:9.77e-03']"
+    },
+    {
+      "check": "C2 SHEET PAIRING [I]+[C]: reality for all phases forces m = n; with C1 the weight is p = A * sigma(A) -- one factor per Z2 sheet (sigma = Galois/CP conjugation, v316)",
+      "pass": true,
+      "detail": "im(e^{i(m-n)phi}) = 0 as an identity iff m = n (swept |m-n| <= 3); 2m = 2 -> m = n = 1"
+    },
+    {
+      "check": "C3 DECK SWAP = ENVARIANCE [I]: the system swap is undone exactly by the partner-sheet swap; rho_S blind to any partner unitary -> equal amplitudes get equal probability (axioms: locality of p + partner-sheet no-signalling)",
+      "pass": true,
+      "detail": "(X x I)|Phi+> - (I x X)|Phi+> = 0 exact; max |rho_S(U_E) - rho_S| over 200 random U(2): 5.00e-16"
+    },
+    {
+      "check": "C4 KERNEL SECTOR [E]: every frozen kernel weight is 3-adic and therefore envariance-decidable by FINITE counting (3^k equal branches, N_fam-fold branching) -- no continuity axiom on the kernel's own sector",
+      "pass": true,
+      "detail": "fine-graining: all 3 branch amplitudes = 1/sqrt(3) exact, W an isometry, counting -> p = (2/3, 1/3); weights ['2/3', '1/3', '64/729', '1/729', '1', '64/729', '1/729'] all 3-adic; (2/3)^6 = 64/729 exact"
+    },
+    {
+      "check": "C5 UNIQUE PAIRING [E]: the matched Weyl pair (mu4 clock + character-transitive shift) on C^4 admits exactly ONE invariant Hermitian form (the Born pairing, up to scale); every weakening loses uniqueness",
+      "pass": true,
+      "detail": "dim(invariant forms): clock+shift N=4 -> 1; clock only -> 4; shift only -> 4; mismatched N=8 -> 2"
+    },
+    {
+      "check": "C6 RELOCATION AUDIT [E]: dim-2 additive normalisation does NOT force Born (explicit non-quadratic frame function) -- the forcing requires C1's power family, C2+C5's deck structure, or dim >= 3 (Gleason 1957 / Busch 2003, cited external)",
+      "pass": true,
+      "detail": "h(u) = u + (1/10) sin(2 pi u): h(u)+h(1-u) = 1 exact, h(0)=0, h(1)=1, h monotone, h != u"
+    }
+  ],
+  "stays_postulated": [
+    "outcomes = character-block projections (measurement postulate, untouched)",
+    "single-outcome selection (the measurement problem, untouched)",
+    "locality of p + partner-sheet no-signalling (the two envariance axioms)",
+    "off the 3-adic kernel sector: continuity or dim>=3 Gleason (external)",
+    "identification deck swap = envariance swap, sigma = CP conj (typed [C], v316)"
+  ],
+  "reading": "Born is NOT derived from recovery alone; it REDUCES to deck-swap symmetry (Z2 sheet pairing, one amplitude factor per sheet) + the matched mu4 Weyl pair (unique invariant pairing) + finite counting on the 3-adic kernel sector (no continuity axiom there). Same axiom weight class as Zurek envariance, with the swap and the conjugation structural (v316) instead of auxiliary. v130's imported factor 2 acquires the sheet-pairing origin p = A * sigma(A)."
+}

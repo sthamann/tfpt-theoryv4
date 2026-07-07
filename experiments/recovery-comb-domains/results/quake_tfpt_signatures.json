@@ -115,9 +115,33 @@
       "gain": 0.0942,
       "p_value": 0.0852,
       "comb_detected": false
+    },
+    "(3/2)^3 (Z2 half-period)": {
+      "lambda": 3.375,
+      "omega": 5.165,
+      "n_used": 6,
+      "gain": 0.0279,
+      "p_value": 0.6243,
+      "comb_detected": false
+    },
+    "(3/2)^4 (Z2 antiperiodic harmonic)": {
+      "lambda": 5.0625,
+      "omega": 3.874,
+      "n_used": 6,
+      "gain": 0.0344,
+      "p_value": 0.4534,
+      "comb_detected": false
+    },
+    "(3/2)^12 (Z2 antiperiodic fundamental)": {
+      "lambda": 129.7463,
+      "omega": 1.291,
+      "n_used": 0,
+      "gain": 0.0,
+      "p_value": 1.0,
+      "comb_detected": false
     }
   },
-  "bonferroni_global_p": 0.7668,
+  "bonferroni_global_p": 0.9372,
   "free_fit_peaks": [
     {
       "omega": 6.546,
@@ -146,5 +170,5 @@
   "omori_p_mean": 0.837,
   "omori_nearest_rational": "5/6",
   "omori_coincidence_chance": 0.076,
-  "verdict": "6 aftershock sequences (up to ~5-6 comb periods, thousands of events). NO TFPT log-period is special after look-elsewhere (Bonferroni global p=0.77 >= 0.05). Seismicity's own dominant log-period lambda_fit~2.611 (seismology typically reports ~2). Firewall: earthquakes are not a horizon recovery, so this tests the SHAPE only, never TFPT physics."
+  "verdict": "6 aftershock sequences (up to ~5-6 comb periods, thousands of events). NO TFPT log-period is special after look-elsewhere (Bonferroni global p=0.94 >= 0.05). Seismicity's own dominant log-period lambda_fit~2.611 (seismology typically reports ~2). Firewall: earthquakes are not a horizon recovery, so this tests the SHAPE only, never TFPT physics."
 }

@@ -28,12 +28,12 @@ import numpy as np
 from scipy.optimize import curve_fit
 
 from .comb import (
-    IDIO,
+    BATTERY_IDIO,
+    BATTERY_LAMBDAS,
     LAMBDA,
     MIN_COMB_PERIODS,
     OMEGA,
     P_THRESHOLD,
-    TFPT_LAMBDAS,
     _omega,
     _stacked_at,
     comb_periods,
@@ -163,10 +163,10 @@ def lambda_battery(curves: list[CoolingCurve], *, seed: int = 19) -> tuple[dict,
     (dense among any scaling story); only an idiosyncratic-lambda survivor would be interesting."""
     pairs = [(c.t, c.y) for c in curves]
     battery: dict = {}
-    for label, lam in TFPT_LAMBDAS.items():
+    for label, lam in BATTERY_LAMBDAS.items():
         res = _stacked_at(pairs, _omega(lam), seed=seed)
         battery[label] = {"lambda": round(lam, 4), "omega": round(_omega(lam), 3),
-                          "idio": label in IDIO, **res}
+                          "idio": label in BATTERY_IDIO, **res}
     tested = [v for v in battery.values() if v["n_used"] > 0]
     min_p = min((v["p_value"] for v in tested), default=1.0)
     m_eff = max(1, len(tested))

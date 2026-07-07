@@ -25,7 +25,7 @@ import json
 import math
 from pathlib import Path
 
-from tfpt_seed import seed_v2, seed_v3
+from tfpt_seed import seed_v2, seed_v3, seed_v4, seed_v5, seed_v6
 
 C3 = 1.0 / (8.0 * math.pi)
 PHI0 = (4.0 / 3.0) * C3 + 48.0 * C3**4
@@ -66,8 +66,8 @@ def _joint(legs: list[dict]) -> tuple[float, float, float]:
 
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description="TFPT shared-seed stress test")
-    ap.add_argument("command", choices=["audit", "analyze", "v2", "v3"], nargs="?",
-                    default="analyze")
+    ap.add_argument("command", choices=["audit", "analyze", "v2", "v3", "v4", "v5", "v6"],
+                    nargs="?", default="analyze")
     args = ap.parse_args(argv)
     m = json.loads(DATA.read_text(encoding="utf-8"))
 
@@ -76,6 +76,15 @@ def main(argv: list[str] | None = None) -> int:
         return 0
     if args.command == "v3":
         seed_v3.report(m)
+        return 0
+    if args.command == "v4":
+        seed_v4.report(m)
+        return 0
+    if args.command == "v5":
+        seed_v5.report(m)
+        return 0
+    if args.command == "v6":
+        seed_v6.report(m)
         return 0
 
     legs = _legs(m)

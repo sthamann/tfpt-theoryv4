@@ -1,0 +1,49 @@
+{
+  "probe": "micro-coincidence audit (discovery sandbox)",
+  "date": "2026-07-07",
+  "firewall": "sandbox probe; never scorecard, never evidence",
+  "findings": [
+    {
+      "basket": "A1",
+      "finding": "j = chi^3: the Monster's McKay numbers are FIXED by the seam character (E8 level 1)",
+      "pass": true,
+      "detail": "tower [1, 248, 4124, 34752, 213126]; j coeffs: 744 = 3*248, 196884 = 3*4124 + 3*248^2 = 196883+1, 21493760 = 21296876+196883+1 -- forced, not tuned"
+    },
+    {
+      "basket": "A2",
+      "finding": "McKay: chi coefficients are E8-irrep sums (3875, 30380 cited E8 dims)",
+      "pass": true,
+      "detail": "4124 = 3875+248+1; 34752 = 30380+3875+2*248+1"
+    },
+    {
+      "basket": "A3",
+      "finding": "E4 = theta_E8: the seam character counts E8 lattice shells",
+      "pass": true,
+      "detail": "norm-2/4/6 vector counts = [240, 2160, 6720] = 240 sigma_3(k)"
+    },
+    {
+      "basket": "A4",
+      "finding": "tail/spinor = N_fam/rank = C(Nariai): 48 c3^4 / 128 c3^4 = 3/8 -- one ratio, three names (forced by shared atom 16)",
+      "pass": true,
+      "detail": "48/128 = 3/8; 48 = N_fam*dim S+ (Omega_adm), 128 = rank*dim S+ (spinor), C = 3/8 = Q_geom(Nariai)"
+    },
+    {
+      "basket": "B1",
+      "finding": "Bonse extremality: h(E8) = 30 is the LARGEST integer whose totatives > 1 are all prime; its totatives ARE the E8 exponents; the two largest members are 24 (Leech/Monster octave) and 30 (E8 Coxeter), both with phi = 8 = rank E8",
+      "pass": true,
+      "detail": "members = [1, 2, 3, 4, 6, 8, 12, 18, 24, 30] (verified exhaustively to 199; >168 impossible since 49,121,169 block); totatives(30) = [1, 7, 11, 13, 17, 19, 23, 29]"
+    },
+    {
+      "basket": "C1",
+      "finding": "near-misses the theory does NOT claim (hygiene exhibit)",
+      "pass": true,
+      "detail": "bend 2.70951 vs e: 0.32% off; eps 0.017297 vs sqrt3/100: 0.10% off; vs sin(1deg): 0.87% off -- all declined, no atom route"
+    },
+    {
+      "basket": "C2",
+      "finding": "Lenz m_p/m_e ~ 6 pi^5 = pi^4/phi0_tree typed by grammar census",
+      "pass": true,
+      "detail": "6 pi^5 = 1836.1181 vs 1836.1527 (18.8 ppm); identity 6 pi^5 = pi^4/phi0_tree exact: True; census p,q<=40, |k|<=6: 12727 expressions, hits in +-20ppm: ['6/1*pi^5']; log-uniform null expects 0.02 -> worth a v100 full run"
+    }
+  ]
+}

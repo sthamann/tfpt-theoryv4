@@ -68,17 +68,20 @@ quantum device. Fitting mirrors QT.04: **fixed-bend template vs free-ratio contr
   **2.709511291351** (target `ln3/ln(3/2) = 2.709511291351`, bias `−3.8e-14`) —
   the circuit *is* the channel.
 - **Noisy tier** (Aer + `FakeBrisbane` 127-qubit Eagle noise model: T1/T2, gate +
-  readout errors, ISA-transpiled at optimization level 3, max depth 158 / 48 ECR):
-  the bend survives hardware-level noise. Circuit-native **per-mode decode**
-  (`p_k(m) = c + a·e^{−r_k m}`, bend `= r₃/r₂`): **2.65–2.69** (bias ≈ `−0.05`,
-  −2%) already at **256 shots**. Blind combined **QT.04 free-ratio fit**: needs
-  **16384 shots** for 3/3-seed detection (`2.89 ± 0.12`, bias `+0.19` ≈ +7%,
-  pulled up by readout floors); at ≤1024 shots the free two-exponential fit can
-  degenerate. **One transfer step (6 blocks) already suffices** at 16384 shots
-  (free ratio 2.79, on-bend). Protected floor retention after 12 blocks: **0.993**.
+  readout errors): the bend survives hardware-level noise in the **circuit-native
+  per-mode decode** (`p_k(m) = c + a·e^{−r_k m}`, bend `= r₃/r₂`) from the first
+  tested shot count; current run gives `min_shots_per_mode = 256` and mean
+  per-mode bend **2.46 / 2.69 / 2.68 / 2.65** over 256 / 1024 / 4096 / 16384
+  shots. The blind combined **QT.04 free-ratio fit** is weaker in the fresh run:
+  detection fractions **0% / 0% / 33% / 67%**, so `min_shots_identifiable = null`
+  under the strict 3/3-seed rule. At 16384 shots the first-seed one-step and
+  two-step fits are on-bend (`2.787`, `2.806`), while the all-seed combined
+  detector remains floor-sensitive. Protected floor retention after 12 blocks:
+  **0.993**.
 - **Verdict enum** (`verdict` in `results.json`): `consistent` (bend identifiable
   under the device noise model by either decode) / `tension` (not identifiable at
-  any tested shot count) / `not_run`. Current verdict: **`consistent`**.
+  any tested shot count) / `not_run`. Current verdict remains **`consistent`** via
+  per-mode decode, with the combined waveform fit explicitly marked weaker.
 
 ## Reproduce
 

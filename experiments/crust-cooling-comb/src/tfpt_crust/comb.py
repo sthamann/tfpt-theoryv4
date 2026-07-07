@@ -52,6 +52,17 @@ TFPT_LAMBDAS: dict[str, float] = {
     "30 (Coxeter h)": 30.0,
 }
 IDIO = {"3/2 (1/Koide, fundamental)", "phi (golden, g_car=5)", "(3/2)^6 (recovery comb)"}
+# The Z2/Moebius double-cover READINGS of the same kernel (2026-07-06, exploratory/unforced;
+# mirrors recovery-comb-domains quake.Z2_LAMBDAS): an antiperiodic (sheet-parity) comb has zero
+# power at the kernel omega -- fundamental at omega/2 <-> (3/2)^12, first odd harmonic at
+# 3*omega/2 <-> (3/2)^4; a half-period (sqrt-lambda per rung) clock sits at 2*omega <-> (3/2)^3.
+Z2_LAMBDAS: dict[str, float] = {
+    "(3/2)^3 (Z2 half-period)": 1.5 ** 3,
+    "(3/2)^4 (Z2 antiperiodic harmonic)": 1.5 ** 4,
+    "(3/2)^12 (Z2 antiperiodic fundamental)": 1.5 ** 12,
+}
+BATTERY_LAMBDAS: dict[str, float] = {**TFPT_LAMBDAS, **Z2_LAMBDAS}
+BATTERY_IDIO = IDIO | set(Z2_LAMBDAS)
 
 
 def _omega(lam: float) -> float:

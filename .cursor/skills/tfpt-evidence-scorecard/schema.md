@@ -27,6 +27,12 @@
 | `decision_horizon` | `near_term` · `mid_term` · `long_term` |
 | `hint_flag` | `true` when too cold for `status=hint` → use `data_limited` |
 | `watch_flag` | Sharpest non-red channel (e.g. dark energy `w`) |
+| `validation_tier` | Evidence-ladder rung for analog/lab rows: `instrument_validated` (readout chain proven on real hardware, e.g. EIT S_off, QC kernel) · `analog_positive_control` (engineered positive measured, e.g. a future EIT H3 pass). Nature rows carry no tier — keeps analog validation out of the nature-evidence count. |
+| `signature_code` | Optional SIGNATURES.md family tag (`S1`…`S15`, composites such as `S2b/S11`, or `detector-control`) |
+| `leakage_class` | New 2026-07-06 typing: `core_operator` · `architecture_core` · `internal_kernel` · `surface_leakage` · `search_target` · `downstream_bridge` · `external_data` · `detector_control` · `parked` |
+| `clock_map` | Whether a log-time/phase clock is justified (`operator_clock_read_off_from_boundary_map`, `engineered_transfer_steps`, `observer_time_or_surface_clock_unjustified`, etc.) |
+| `transduction_B` | Observable eligibility gate: named readout/coupling `B`, or `missing_or_unproven` for surface-leakage probes |
+| `projection_nonzero` | Observable eligibility gate: why the relevant character/mode is visible, or `not_established` |
 
 ## stage semantics
 
@@ -39,6 +45,20 @@
 | `strain_level_test` | GW strain-level null |
 | `parked_analog` | No physical dataset |
 | `not_applicable` | Internal consistency (Recovery-Channel, Page, S_dS identity) |
+
+## leakage_class semantics
+
+| leakage_class | Use |
+|----------------|-----|
+| `core_operator` | Direct operator/character-invariance readout (e.g. QGEO S_off / EIT instrument validation) |
+| `architecture_core` | Cross-pipeline architecture/seed or phase-family test, not an emission bridge |
+| `internal_kernel` | Internal or engineered kernel check; no external nature evidence |
+| `surface_leakage` | Astrophysical/lab observable that probes `O = B·T·A` without a proven nonzero `B·P_r` |
+| `search_target` | Search row without a stronger core/surface typing |
+| `downstream_bridge` | F_transfer/RGE/lab bridge row |
+| `external_data` | Direct prediction-of-record vs external measurement |
+| `detector_control` | Negative/false-positive control of the detector, not TFPT evidence |
+| `parked` | No active dataset |
 
 ## status semantics
 

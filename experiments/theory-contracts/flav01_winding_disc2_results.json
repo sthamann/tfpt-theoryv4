@@ -1,0 +1,43 @@
+{
+  "contract": "FLAV.WINDING.DISC2 discriminant-class-2 selector",
+  "date": "2026-07-07",
+  "firewall": "theory contract, never a scorecard row; internal consistency, not evidence",
+  "verdict": "CONTRACT HOLDS (6/6)",
+  "scan_range": [
+    0,
+    10000
+  ],
+  "checks": [
+    {
+      "check": "C1 FAMILY [E]: chi_{R_s} = t^3-(9+s)t^2+(10+5s)t-(8+2s) from R exactly; s=6 triple lock (tr 15 = dim A3, det 20 = 2 A_Lambda, coxeter lift 30 = h(E8))",
+      "pass": true,
+      "detail": "chi matches; tr/det/lift @ s=6 = 15/20/30"
+    },
+    {
+      "check": "C2 KNOWN FINGERPRINT [E, published v94/FLAV.DIAMOND.01]: Delta(s) = 17s^4-18s^3+709s^2+588s-7996; Delta(6) = 39200 = 2^5 5^2 7^2 = 2*(10*14)^2 (squarefree class 2 = |Z2|)",
+      "pass": true,
+      "detail": "Delta(6) = 39200 = {2: 5, 5: 2, 7: 2}; class = 2"
+    },
+    {
+      "check": "C3 UNIQUENESS SCAN [E, new]: s = 6 is the ONLY s in [0, 10000] with Delta(s) = 2 y^2 (witness y = 140); no hit in [-100, -1]. Global finiteness (genus-1 quartic 17s^4-...-7996 = 2y^2) is the OPEN Diophantine piece, not claimed here",
+      "pass": true,
+      "detail": "hits = [(6, 140)]; negative-s hits = []"
+    },
+    {
+      "check": "C4 LOOK-ELSEWHERE CONTROL [E]: squarefree classes k <= 100 hit in the scan -- class 2 ONLY at s=6; other small classes occur elsewhere (41 = 10 b1 at s=8 recorded as curiosity, NOT a claim): 'some small class somewhere' is cheap, class-2 uniqueness is the discriminating statement",
+      "pass": true,
+      "detail": "classes<=100: {2: [6], 23: [306], 41: [8], 65: [3], 89: [4]}"
+    },
+    {
+      "check": "C5 SIBLING CONTROL [E]: the spectrally-failing H2 sibling {1,3,4} (tr 8, det 6 -- the branch the spectral selector excludes) has Delta'(6) = 112224, squarefree class 7014 != 2: the class-2 signature separates the physical branch at the physical point",
+      "pass": true,
+      "detail": "sibling tr/det = 8/6; Delta'(6) = 112224; class = 7014"
+    },
+    {
+      "check": "C6 RELOCATION AUDIT [O, honest]: what is old, what is new, what stays open -- recorded verbatim",
+      "pass": true,
+      "detail": "Delta(6) = 2*(10*14)^2 already published (v94_sheet_diamond, ledger FLAV.DIAMOND.01, tfpt_2) -- new content here is ONLY the uniqueness scan (C3) + the Diophantine form; ledger correction stands: spectral REALITY does not select s=6 (disc changes sign at s* ~ 2.825; real for all s >~ 2.83) -- the class-2 selector is a different, post-hoc criterion; no-free-pattern typing: audit-level until (a) global finiteness of 17s^4-18s^3+709s^2+588s-7996 = 2y^2 is proven (quartic-to-elliptic reduction, effective) and (b) class = 2 = |Z2| is derived, not observed; never a scorecard row; never [E]-as-physics"
+    }
+  ],
+  "reading": "The published winding-line discriminant fingerprint Delta(6) = 39200 = 2*(10*14)^2 upgrades to a candidate SELECTOR: in [0, 10000] the physical winding s = 6 is the unique integer with squarefree discriminant class exactly 2 = |Z2|, the sibling branch fails it, and small-class hits elsewhere show the statement is specifically about class 2, not 'some nice class'. Open (recorded, not claimed): the global Diophantine statement 17s^4-18s^3+709s^2+588s-7996 = 2y^2 has s = 6 as its only nonnegative integral point, and a derivation of WHY the class is |Z2|. Until both close, this is an audit-level lock candidate, not a load-bearing identity."
+}

@@ -1,0 +1,59 @@
+{
+  "experiment": "uhecr-energy-dsi",
+  "prereg": "hypotheses/uhecr_dsi_v1.yaml",
+  "seed": 0,
+  "selection": {
+    "sd1500": {
+      "n": 21571,
+      "thr": 2.5,
+      "zen": 60.0
+    },
+    "sd750": {
+      "n": 54434,
+      "thr": 0.1,
+      "zen": 55.0
+    }
+  },
+  "combined_reach_periods": 2.99,
+  "omega_frozen": 2.582707,
+  "fit": {
+    "lambda_obs": 0.153,
+    "eps_hat": 0.00182,
+    "phase": 0.561
+  },
+  "p_mc": 0.486284289276808,
+  "p_offkernel_rank": 0.7704918032786885,
+  "z2_lambda_battery": {
+    "(3/2)^3": {
+      "omega": 5.165,
+      "omega_eval": 5.157,
+      "periods": 5.98,
+      "gated": true,
+      "lambda_stat": 2.24,
+      "null_median": 0.64,
+      "p_raw": 0.12871287128712872
+    },
+    "(3/2)^4": {
+      "omega": 3.874,
+      "omega_eval": 3.793,
+      "periods": 4.48,
+      "gated": true,
+      "lambda_stat": 0.09,
+      "null_median": 0.33,
+      "p_raw": 0.7821782178217822
+    },
+    "(3/2)^12": {
+      "omega": 1.291,
+      "periods": 1.49,
+      "gated": false
+    }
+  },
+  "battery_bonferroni_p": 0.25742574257425743,
+  "injection_power_at_95pct": {
+    "eps=0.0500": 0.967,
+    "eps=0.0173": 0.233
+  },
+  "predicted_amplitude_leg": "partially covered (power 23% at the predicted 1.7%): the null constrains but does not kill the predicted amplitude",
+  "verdict": "null",
+  "runtime_s": 3.7
+}

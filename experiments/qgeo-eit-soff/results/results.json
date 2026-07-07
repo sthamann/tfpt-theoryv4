@@ -1,0 +1,402 @@
+{
+  "n_cases": 38,
+  "h1_floor": true,
+  "h2_controls": true,
+  "h3_mu4_positive": "data_limited (not in archive; preregistered)",
+  "floor": {
+    "s_off": 7.565936171383455e-05,
+    "s_allowed": 2.0163586488186744e-05,
+    "commutator": 0.01542879221432432,
+    "reciprocity": 0.0053305880176515216
+  },
+  "n_anisotropic": 28,
+  "n_iso_like": 9,
+  "anisotropic_frac_forbidden_min_med_max": [
+    0.8728223437382359,
+    0.9473969311641558,
+    0.9955643287609983
+  ],
+  "cases": [
+    {
+      "case": "1.0",
+      "group": "homogeneous",
+      "s_allowed": 2.0163586488186744e-05,
+      "s_off": 7.565936171383455e-05,
+      "frac_forbidden": 0.7895745552967508,
+      "commutator": 0.01542879221432432,
+      "reciprocity": 0.0053305880176515216,
+      "cyclic_consistency": 0.0
+    },
+    {
+      "case": "1.1",
+      "group": "generic",
+      "s_allowed": 4.540380951202803e-05,
+      "s_off": 0.0020443179931042272,
+      "frac_forbidden": 0.9782727971468814,
+      "commutator": 0.06987292333444614,
+      "reciprocity": 0.005846045780847843,
+      "cyclic_consistency": 0.0
+    },
+    {
+      "case": "1.2",
+      "group": "generic",
+      "s_allowed": 2.0992730702106994e-05,
+      "s_off": 0.0022293266659706096,
+      "frac_forbidden": 0.9906712217238378,
+      "commutator": 0.06995528375694364,
+      "reciprocity": 0.004083517282363332,
+      "cyclic_consistency": 0.0
+    },
+    {
+      "case": "1.3",
+      "group": "generic",
+      "s_allowed": 2.1184214851466346e-05,
+      "s_off": 0.0006161377943863534,
+      "frac_forbidden": 0.9667605785703199,
+      "commutator": 0.0382445154263713,
+      "reciprocity": 0.004798581766812198,
+      "cyclic_consistency": 0.0
+    },
+    {
+      "case": "1.4",
+      "group": "generic",
+      "s_allowed": 2.0595957683558885e-05,
+      "s_off": 0.00018933857806040415,
+      "frac_forbidden": 0.9018934278222913,
+      "commutator": 0.022342603303273048,
+      "reciprocity": 0.005020135978516138,
+      "cyclic_consistency": 0.0
+    },
+    {
+      "case": "2.1",
+      "group": "generic",
+      "s_allowed": 0.0003092399127984167,
+      "s_off": 0.0037586547464813808,
+      "frac_forbidden": 0.9239803537948138,
+      "commutator": 0.10660993440521235,
+      "reciprocity": 0.006978690333161215,
+      "cyclic_consistency": 0.0
+    },
+    {
+      "case": "2.2",
+      "group": "generic",
+      "s_allowed": 0.00039879368339034777,
+      "s_off": 0.006481251191607176,
+      "frac_forbidden": 0.942036179903479,
+      "commutator": 0.11703573153385838,
+      "reciprocity": 0.006956929340262779,
+      "cyclic_consistency": 0.0
+    },
+    {
+      "case": "2.3",
+      "group": "generic",
+      "s_allowed": 0.0002571906771193746,
+      "s_off": 0.00651205691189185,
+      "frac_forbidden": 0.9620060171034545,
+      "commutator": 0.11635335418302709,
+      "reciprocity": 0.0031975047221853995,
+      "cyclic_consistency": 0.0
+    },
+    {
+      "case": "2.4",
+      "group": "generic",
+      "s_allowed": 0.0001948170732406064,
+      "s_off": 0.008193351249555572,
+      "frac_forbidden": 0.976774777788953,
+      "commutator": 0.13193004782408885,
+      "reciprocity": 0.0032699048097356736,
+      "cyclic_consistency": 0.0
+    },
+    {
+      "case": "2.5",
+      "group": "generic",
+      "s_allowed": 9.62068516626987e-05,
+      "s_off": 0.001940248102301487,
+      "frac_forbidden": 0.9527576824248326,
+      "commutator": 0.06494431457703954,
+      "reciprocity": 0.0042421170301817504,
+      "cyclic_consistency": 0.0
+    },
+    {
+      "case": "2.6",
+      "group": "generic",
+      "s_allowed": 3.038260058353861e-05,
+      "s_off": 0.0005502736407288697,
+      "frac_forbidden": 0.9476754085775994,
+      "commutator": 0.037370681581915956,
+      "reciprocity": 0.0041988970826651005,
+      "cyclic_consistency": 0.0
+    },
+    {
+      "case": "3.1",
+      "group": "generic",
+      "s_allowed": 0.0003124668535038838,
+      "s_off": 0.0029977274986774877,
+      "frac_forbidden": 0.9056046804931642,
+      "commutator": 0.09939504613790767,
+      "reciprocity": 0.008262231972440462,
+      "cyclic_consistency": 0.0
+    },
+    {
+      "case": "3.2",
+      "group": "generic",
+      "s_allowed": 0.0008534955997748457,
+      "s_off": 0.010033934829475046,
+      "frac_forbidden": 0.9216072511028988,
+      "commutator": 0.16885287264577925,
+      "reciprocity": 0.008558854761237078,
+      "cyclic_consistency": 0.0
+    },
+    {
+      "case": "3.3",
+      "group": "generic",
+      "s_allowed": 0.0005957037274263552,
+      "s_off": 0.004994301108729387,
+      "frac_forbidden": 0.8934341302223233,
+      "commutator": 0.11437912371116997,
+      "reciprocity": 0.007762669790401056,
+      "cyclic_consistency": 0.0
+    },
+    {
+      "case": "3.4",
+      "group": "generic",
+      "s_allowed": 0.000179267758377823,
+      "s_off": 0.00203658087204254,
+      "frac_forbidden": 0.9190974708665841,
+      "commutator": 0.07292110364779306,
+      "reciprocity": 0.0030208522610926385,
+      "cyclic_consistency": 0.0
+    },
+    {
+      "case": "3.5",
+      "group": "generic",
+      "s_allowed": 0.00018125489491086175,
+      "s_off": 0.002181441739209267,
+      "frac_forbidden": 0.9232847364772409,
+      "commutator": 0.0672029400388141,
+      "reciprocity": 0.0038096726249904687,
+      "cyclic_consistency": 0.0
+    },
+    {
+      "case": "3.6",
+      "group": "generic",
+      "s_allowed": 5.2846726509168474e-05,
+      "s_off": 0.003644284603177236,
+      "frac_forbidden": 0.9857060185866725,
+      "commutator": 0.09440950968487516,
+      "reciprocity": 0.003720268098665828,
+      "cyclic_consistency": 0.0
+    },
+    {
+      "case": "4.1",
+      "group": "generic",
+      "s_allowed": 0.00035760246431614965,
+      "s_off": 0.008717368680373738,
+      "frac_forbidden": 0.9605946444771456,
+      "commutator": 0.1395708038716911,
+      "reciprocity": 0.0063251416543018985,
+      "cyclic_consistency": 0.0
+    },
+    {
+      "case": "4.2",
+      "group": "generic",
+      "s_allowed": 0.00023612468064844927,
+      "s_off": 0.005360773133648339,
+      "frac_forbidden": 0.9578115076453086,
+      "commutator": 0.10854980684275102,
+      "reciprocity": 0.0061524237631519095,
+      "cyclic_consistency": 0.0
+    },
+    {
+      "case": "4.3",
+      "group": "generic",
+      "s_allowed": 2.5707093626270053e-05,
+      "s_off": 0.0057698291941477384,
+      "frac_forbidden": 0.9955643287609983,
+      "commutator": 0.10803826556658311,
+      "reciprocity": 0.005827307974181682,
+      "cyclic_consistency": 0.0
+    },
+    {
+      "case": "4.4",
+      "group": "generic",
+      "s_allowed": 4.6638502130469294e-05,
+      "s_off": 0.0021574729324757708,
+      "frac_forbidden": 0.9788402249549595,
+      "commutator": 0.07827244690193132,
+      "reciprocity": 0.005571292377686591,
+      "cyclic_consistency": 0.0
+    },
+    {
+      "case": "5.1",
+      "group": "generic",
+      "s_allowed": 0.00035414555317061125,
+      "s_off": 0.016265404850346846,
+      "frac_forbidden": 0.9786910268586052,
+      "commutator": 0.203894412990298,
+      "reciprocity": 0.00781134955400336,
+      "cyclic_consistency": 0.0
+    },
+    {
+      "case": "5.2",
+      "group": "generic",
+      "s_allowed": 0.0004806529083394285,
+      "s_off": 0.01890457900976675,
+      "frac_forbidden": 0.9752052020646453,
+      "commutator": 0.2107634608219217,
+      "reciprocity": 0.0042594777778653704,
+      "cyclic_consistency": 0.0
+    },
+    {
+      "case": "6.1",
+      "group": "annular",
+      "s_allowed": 0.0014209404487967134,
+      "s_off": 0.015524373597065627,
+      "frac_forbidden": 0.9161455228890446,
+      "commutator": 0.22546726236891435,
+      "reciprocity": 0.012586976271631752,
+      "cyclic_consistency": 0.0
+    },
+    {
+      "case": "6.2",
+      "group": "generic",
+      "s_allowed": 0.0011008909112849294,
+      "s_off": 0.009657475857340147,
+      "frac_forbidden": 0.8976711860674347,
+      "commutator": 0.17922196488326236,
+      "reciprocity": 0.012519195029147884,
+      "cyclic_consistency": 0.0
+    },
+    {
+      "case": "6.3",
+      "group": "generic",
+      "s_allowed": 0.0012406851539794712,
+      "s_off": 0.01685137581941657,
+      "frac_forbidden": 0.9314237799770922,
+      "commutator": 0.22978664080545635,
+      "reciprocity": 0.011277862367817769,
+      "cyclic_consistency": 0.0
+    },
+    {
+      "case": "6.4",
+      "group": "generic",
+      "s_allowed": 0.0011042846222270456,
+      "s_off": 0.010550569053061523,
+      "frac_forbidden": 0.9052510951237057,
+      "commutator": 0.18370030973662044,
+      "reciprocity": 0.011924882755151047,
+      "cyclic_consistency": 0.0
+    },
+    {
+      "case": "6.5",
+      "group": "generic",
+      "s_allowed": 0.0013238528235262168,
+      "s_off": 0.009085623671318044,
+      "frac_forbidden": 0.8728223437382359,
+      "commutator": 0.18063135589307414,
+      "reciprocity": 0.00992158497433475,
+      "cyclic_consistency": 0.0
+    },
+    {
+      "case": "6.6",
+      "group": "generic",
+      "s_allowed": 0.0012106713837951655,
+      "s_off": 0.009212876983976579,
+      "frac_forbidden": 0.8838522793698157,
+      "commutator": 0.18357172676999065,
+      "reciprocity": 0.010764390399120983,
+      "cyclic_consistency": 0.0
+    },
+    {
+      "case": "6.7",
+      "group": "generic",
+      "s_allowed": 0.0014576087712450982,
+      "s_off": 0.012250524791771265,
+      "frac_forbidden": 0.893668327307692,
+      "commutator": 0.20950548755194232,
+      "reciprocity": 0.010279554540011173,
+      "cyclic_consistency": 0.0
+    },
+    {
+      "case": "7.1",
+      "group": "generic",
+      "s_allowed": 2.256438143302227e-05,
+      "s_off": 0.00020301583406744791,
+      "frac_forbidden": 0.8999718065568776,
+      "commutator": 0.025150429330093368,
+      "reciprocity": 0.010405161141986658,
+      "cyclic_consistency": 0.0
+    },
+    {
+      "case": "7.2",
+      "group": "generic",
+      "s_allowed": 4.560333204576616e-05,
+      "s_off": 0.00047097964769625015,
+      "frac_forbidden": 0.9117211874294802,
+      "commutator": 0.03599719044084916,
+      "reciprocity": 0.008293987220886753,
+      "cyclic_consistency": 0.0
+    },
+    {
+      "case": "8.1",
+      "group": "annular",
+      "s_allowed": 4.347484936460989e-05,
+      "s_off": 0.00048384993779023144,
+      "frac_forbidden": 0.9175558395440188,
+      "commutator": 0.03629960927674333,
+      "reciprocity": 0.0033258849926558693,
+      "cyclic_consistency": 0.0
+    },
+    {
+      "case": "8.2",
+      "group": "generic",
+      "s_allowed": 3.6938560182125714e-05,
+      "s_off": 0.0008356957356127198,
+      "frac_forbidden": 0.9576700567922557,
+      "commutator": 0.049701394647919554,
+      "reciprocity": 0.0035096859180022122,
+      "cyclic_consistency": 0.0
+    },
+    {
+      "case": "8.3",
+      "group": "generic",
+      "s_allowed": 2.6273800362711088e-05,
+      "s_off": 0.0009343167256797994,
+      "frac_forbidden": 0.972648282852679,
+      "commutator": 0.04602633017550812,
+      "reciprocity": 0.004305682108066476,
+      "cyclic_consistency": 0.0
+    },
+    {
+      "case": "8.4",
+      "group": "generic",
+      "s_allowed": 3.021709178172905e-05,
+      "s_off": 0.00067503013558858,
+      "frac_forbidden": 0.9571539020516238,
+      "commutator": 0.041329455380105955,
+      "reciprocity": 0.004880232384425421,
+      "cyclic_consistency": 0.0
+    },
+    {
+      "case": "8.5",
+      "group": "generic",
+      "s_allowed": 2.511020882104937e-05,
+      "s_off": 0.0007573372973791479,
+      "frac_forbidden": 0.9679081233922104,
+      "commutator": 0.048801879319784816,
+      "reciprocity": 0.00592878952878393,
+      "cyclic_consistency": 0.0
+    },
+    {
+      "case": "8.6",
+      "group": "generic",
+      "s_allowed": 6.12952911390148e-05,
+      "s_off": 0.002167405259344958,
+      "frac_forbidden": 0.9724972961819819,
+      "commutator": 0.06773127389624407,
+      "reciprocity": 0.0075761042062748715,
+      "cyclic_consistency": 0.0
+    }
+  ],
+  "verdict": "ANALOG CHANNEL VALIDATED on real measured hardware (H1+H2): the homogeneous tank realises a mu4-block-diagonal measured boundary operator at the instrument floor (S_off = 7.6e-05, clock commutator 1.5e-02, reciprocity 5.3e-03 -- the measured analog of the sigma~1e-3 dial in qgeo_soff_reconstruction.py); all 28 anisotropic (off-center) targets LEAK with the generic isotropic signature (forbidden fraction 0.87-1.00, expected ~0.8 = 12/15), and NONE fakes a mu4 positive (fraction -> 0); the 9 centered/annular targets are rotation-invariant-like and correctly sit near the floor (photo-verified refinement of the v1 H2 wording, on record). The decisive mu4-POSITIVE 4-inclusion configuration (large anisotropy, forbidden fraction -> floor) is NOT in the archive: preregistered as the future measurement (H3, data_limited). Firewall: instrument validation of the S_off observable, never TFPT evidence."
+}

@@ -37,10 +37,17 @@ MIN_BURSTS_USED = 30
 N_SURROGATE = 200
 N_FREQ = 150
 FREQ_LO, FREQ_HI = 0.9, 6.5
+# The three "Z2" members (2026-07-06) are the Moebius/double-cover READINGS of the same kernel
+# (exploratory/unforced, mirroring recovery-comb-domains Z2_LAMBDAS): an antiperiodic
+# (sheet-parity) comb has ZERO power at the kernel omega -- fundamental at omega/2 <-> (3/2)^12,
+# first odd harmonic at 3*omega/2 <-> (3/2)^4; a half-period clock sits at 2*omega <-> (3/2)^3.
 LAMBDA_BATTERY = {
     "(3/2)^6 [kernel]": 1.5**6,
     "(3/2)^5": 1.5**5, "(3/2)^7": 1.5**7, "(3/2)^8": 1.5**8,
     "lambda=2": 2.0, "lambda=3": 3.0, "lambda=e": float(np.e),
+    "(3/2)^3 [Z2 half-period]": 1.5**3,
+    "(3/2)^4 [Z2 antiperiodic harmonic]": 1.5**4,
+    "(3/2)^12 [Z2 antiperiodic fundamental]": 1.5**12,
 }
 
 

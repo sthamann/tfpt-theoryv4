@@ -1,0 +1,34 @@
+{
+  "contract": "COMP.01 unique-holomorphic compression",
+  "date": "2026-07-07",
+  "firewall": "theory contract, never a scorecard row; internal consistency, not evidence",
+  "verdict": "CONTRACT HOLDS (5/5)",
+  "checks": [
+    {
+      "check": "C1 c=8 TOWER [E]: chi q^{1/3} = E4/prod(1-q^n)^8 = {1,248,4124,34752,213126}; dim V_1 = 248 = dim E8 -- holomorphy pins the theory at c=8 (v463 standalone)",
+      "pass": true,
+      "detail": "tower = [1, 248, 4124, 34752, 213126]"
+    },
+    {
+      "check": "C2 c=16 DEGENERACY [E]: theta_{E8+E8} == theta_{D16+} term by term -- two distinct even unimodular lattices (Witt 1941, cited), ONE character: uniqueness fails exactly one octave above the seam (the heterotic-string octave)",
+      "pass": true,
+      "detail": "first coeffs [1, 0, 480, 0, 61920] == [1, 0, 480, 0, 61920]; theta_E8 = E4 (Jacobi, v462): [1, 0, 240]"
+    },
+    {
+      "check": "C3 MINIMALITY [E]+[O-cited]: holomorphic c = 0 mod 8 (T-phase, v452); c = 8 is the smallest AND the only unique one -- count ladder 1 / 2 / 71 at c = 8 / 16 / 24 (Mordell, Witt, Schellekens cited)",
+      "pass": true,
+      "detail": "admissible c <= 24: [8, 16, 24]; #theories: {8: 1, 16: 2, 24: 71}"
+    },
+    {
+      "check": "C4 COMPRESSION CHAIN [E]: one axiom -> everything discrete: 8 = 2|mu4| => c3 = 1/(8pi) [P1]; x^2-8x+15 = (x-3)(x-5) => (N_fam, g_car) = (3,5) [P2 becomes a theorem]; phi0, lambda_T, bend, comb all follow exactly",
+      "pass": true,
+      "detail": "c3 = 1/(8pi); roots = [3, 5]; phi0 = 0.0531719522; lambda_T = 64/729; bend = 2.70951; (omega, eps) = (2.58271, 0.01730)"
+    },
+    {
+      "check": "C5 RELOCATION AUDIT [O]: the compression REARRANGES the axioms (P2 derived, P1 = the rank readout) -- it does not reduce content below one axiom + anchor; cited external theorems recorded",
+      "pass": true,
+      "detail": "physics has a holomorphic boundary CFT at all (the axiom; SEAM.EQUIV.01 is the in-theory route); dim-8 even-unimodular uniqueness (Mordell 1938, cited); c=16 twin / c=24 count 71 (Witt 1941 / Schellekens 1993, cited); the one dimensionful anchor + v_geo (unchanged)"
+    }
+  ],
+  "reading": "A stronger compression than (P1, P2) exists and is machine-exhibited: 'the seam carries THE unique holomorphic boundary CFT'. c = 8 is both the minimal holomorphic central charge and the ONLY one where the theory is unique -- one octave up (c = 16, the heterotic octave) two distinct lattices already share one character, and at c = 24 there are 71 theories. Given the axiom, P1 is the rank readout (8 = 2|mu4| => c3 = 1/(8pi)) and P2 becomes a theorem ((3,5) = roots of x^2-8x+15 from the E8 degree data), so the whole frozen kernel follows with zero further discrete choice. What the compression does NOT do: justify the axiom itself (that is SEAM.EQUIV.01), or remove the dimensionful anchor."
+}

@@ -46,7 +46,7 @@
       "label": "(3/2)^8",
       "omega": 1.937030209731217,
       "p": 0.13513513513513514,
-      "p_bonferroni": 0.945945945945946
+      "p_bonferroni": 1.0
     },
     {
       "label": "lambda=2",
@@ -65,6 +65,24 @@
       "omega": 6.283185307179586,
       "p": 0.37158469945355194,
       "p_bonferroni": 1.0
+    },
+    {
+      "label": "(3/2)^3 [Z2 half-period]",
+      "omega": 5.165413892616579,
+      "p": 0.27041742286751363,
+      "p_bonferroni": 1.0
+    },
+    {
+      "label": "(3/2)^4 [Z2 antiperiodic harmonic]",
+      "omega": 3.874060419462434,
+      "p": 0.22482014388489208,
+      "p_bonferroni": 1.0
+    },
+    {
+      "label": "(3/2)^12 [Z2 antiperiodic fundamental]",
+      "omega": 1.2913534731541447,
+      "p": 0.029513888888888888,
+      "p_bonferroni": 0.2951388888888889
     }
   ],
   "injection_2024": {

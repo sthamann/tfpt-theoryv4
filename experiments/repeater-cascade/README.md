@@ -67,6 +67,24 @@ reach ≈ 4 periods), survive-all-nulls criterion:
   (Rayleigh power scales as `n ε²/4`; a single-session 5σ detection at 1.7% needs
   ~1e5 bursts).
 
+## Z2/Möbius (double-cover) readings in the λ battery (2026-07-06)
+
+The RC.02 λ battery now also carries the three **Z2/Möbius readings** of the same kernel
+(exploratory/unforced, mirroring `recovery-comb-domains` `Z2_LAMBDAS`): half-period `(3/2)³`
+(ω=5.17), antiperiodic first harmonic `(3/2)⁴` (ω=3.87), antiperiodic fundamental `(3/2)¹²`
+(ω=1.29) — the antiperiodic case is where a sheet-parity-carrying comb has **zero** power at the
+kernel ω and would hide from every kernel null. Result over the 9 gate-passing sessions:
+
+- `(3/2)³`: Fisher p = 0.25 → null (sessions span 6.1–9.6 periods of this λ — well gated).
+- `(3/2)⁴`: Fisher p = 0.14 → null (4.6–7.2 periods — well gated).
+- `(3/2)¹²`: Fisher p = 4e-4 nominally — **but this is a sub-gate artefact, not a signal**: the
+  sessions span only **1.5–2.4 periods** of this λ (below the 2.8-period gate, which RC.02
+  enforces only at the kernel ω), and placebo ratios λ ∈ {60, 80, 100, 200, 300} (all equally
+  sub-gate) give the same or more extreme Fisher p (3e-5–1.5e-4): below the range gate the
+  Rayleigh-vs-surrogate statistic is systematically anti-conservative (the smooth ln-τ density
+  looks like a <1-period "comb" that surrogates destroy). Placebo-typed **range-blind**, on
+  record as an audit note — not a candidate.
+
 ## Verdict (v1, 2026-07-02)
 
 **`null` at detectable comb amplitude; `data_limited` at the predicted 1.7%.**
@@ -88,7 +106,29 @@ instrument-independent cross-check for future hyperactive episodes.
 **Decisive next step:** a super-session stack (phase-coherent in `ln τ` across
 ~50+ sessions of one source) would buy the missing amplitude sensitivity
 (√N × session-N); requires modelling per-session onset offsets — a real analysis
-project, preregister as RC.04 before running.
+project. The *phase* half of that idea is now implemented as RC.04 (below); the
+amplitude half (the coherent super-stack) remains the open project.
+
+## RC.04 — per-source comb-PHASE coherence (2026-07-06, `tfpt-cascade phase`)
+
+RC.02 is phase-insensitive: each session contributes only its Rayleigh power at ω, so a
+comb whose phase differs per session is treated identically to a persistent one. TFPT's
+stronger **persistent boundary-clock** reading says more: if the seam marks are persistent
+properties of the source, the log-comb phase (relative to each activity onset `t0`)
+should be **stable per source across sessions**. `phase.py` tests exactly that at the
+frozen ω (no free frequency): per gate-passing session the empirical phase
+`φ_k = arg Σ exp(iω ln τ)`, cross-session concentration `R = |mean e^{iφ_k}|`, ranked
+against the same rate-preserving surrogates as RC.02 (which erase any true comb phase but
+keep each session's window/envelope — shared-window artefacts are calibrated away).
+
+**Result (seed 0, 2000 surrogates): NULL.** FRB 20240114A: R = 0.21 over 7 sessions
+(p = 0.15); FRB 20201124A: R = 0.24 over 2 sessions (p = 0.49). Honest power scope: a
+per-session phase estimate carries noise resultant ~1/√n, so this bounds only persistent
+combs with `ε ≳ 0.15–0.3` — the same amplitude wall as RC.02; at the predicted ~1.7% the
+phases are noise-dominated by construction. A null here bounds the *persistent* per-source
+clock reading and leaves the transient per-event reading untouched. The t0-aligned
+(phase-coherent) stacks already run elsewhere agree: PG.07 Vela 2016–2024 stack p = 0.53,
+crust-cooling superposed-epoch p = 0.45. Output: `results/rc04_phase_coherence.json`.
 
 ## Reproduce
 
@@ -99,6 +139,7 @@ python tests/test_frozen_kernel.py          # frozen-kernel guard
 PYTHONPATH=src python -m repeater_cascade.cli audit
 PYTHONPATH=src python -m repeater_cascade.cli validate   # injection-recovery self-check
 PYTHONPATH=src python -m repeater_cascade.cli analyze    # RC.01/02/03 -> results/results.json
+PYTHONPATH=src python -m repeater_cascade.cli phase      # RC.04 -> results/rc04_phase_coherence.json
 ```
 
 ## Layout
@@ -113,8 +154,9 @@ src/repeater_cascade/sessions.py      # sessionisation, tau gating, reach in com
 src/repeater_cascade/clock_template.py# RC.01 walled two-mode clock (frozen bend + placebos)
 src/repeater_cascade/comb.py          # RC.02 frozen comb (surrogates, rank, lambda battery)
 src/repeater_cascade/ladder.py        # RC.03 waiting-time ladders (PG.02/03 mirror)
+src/repeater_cascade/phase.py         # RC.04 per-source comb-phase coherence (persistent-clock reading)
 src/repeater_cascade/validation.py    # injection-recovery on realistic session sampling
-src/repeater_cascade/cli.py           # tfpt-cascade audit|validate|analyze
+src/repeater_cascade/cli.py           # tfpt-cascade audit|validate|analyze|phase
 tests/test_frozen_kernel.py           # kernel byte-guard + cross-domain identity
-results/results.json, validation.json, rc_comb.png
+results/results.json, validation.json, rc04_phase_coherence.json, rc_comb.png
 ```
