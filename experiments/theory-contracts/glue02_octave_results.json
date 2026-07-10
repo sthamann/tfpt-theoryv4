@@ -1,0 +1,44 @@
+{
+  "contract": "GLUE.DYN.02 octave derivation",
+  "date": "2026-07-10",
+  "firewall": "theory contract, never a scorecard row; internal consistency, not evidence",
+  "verdict": "CONTRACT HOLDS (7/7)",
+  "checks": [
+    {
+      "check": "C1 CLOCK PREMISE [E] (v445 standalone mini): commutant of the order-4 clock diag(i^n) = EXACTLY the mu4 block algebra (entrywise iff; ad-nullspace dim = sum n_s^2), and the order-2 clock commutant is STRICTLY larger -- order 4 = |mu4| is the seam clock; in-suite origin marks=mu4 (v216/v453), raw-seam Z4 origin stays the parked open contract",
+      "pass": true,
+      "detail": "iff swept N=8,12; dim(commutant-4) < dim(commutant-2) at each N"
+    },
+    {
+      "check": "C2 CLOCK ==> SPINORIAL GLUE [E]: disc(D_n) = Z4 = {0, v, s, s'} has element orders {1, 2, 4, 4} -- every order-4 generator is a spinor class, so a mu4-cyclic glue necessarily runs through the half-spinor sector (dim 2^{n-1}; n = 5: 16 = dim S+); the vector class (order 2) cannot carry the clock",
+      "pass": true,
+      "detail": "D5: gens [1, 3] (spinor classes, q = 5/4), vector class order 2 (q = 1); D7: gens [1, 3] (spinor classes, q = 7/4), vector class order 2 (q = 1); D9: gens [1, 3] (spinor classes, q = 1/4), vector class order 2 (q = 1); D13: gens [1, 3] (spinor classes, q = 5/4), vector class order 2 (q = 1)"
+    },
+    {
+      "check": "C3 SELECTION WITHOUT THE OCTAVE [E]: on the machine-derived two-sided menu (glue01), disc pair isomorphic to (Z4, Z4) selects A3+D5 UNIQUELY -- the post-hoc octave gate of glue01 is REPLACED by the derived clock order 4 = |mu4|",
+      "pass": true,
+      "detail": "rejected: A1+E7 (discs [2, 2], cyclic [True, True]); A2+E6 (discs [3, 3], cyclic [True, True]); A4+A4 (discs [5, 5], cyclic [True, True]); A1+A7 (discs [2, 8], cyclic [True, True])"
+    },
+    {
+      "check": "C4 THE OCTAVE IS NOW A THEOREM [E]: h = |disc| holds EXACTLY for the A-family (h(A_m) = m+1 = |Z_{m+1}|; D-check 2n-2 = 4 iff n = 3 = A3; E all fail), so h(A3) = 4 = |mu4| -- the family Coxeter clock IS the seam clock; and h = 2|disc| holds EXACTLY for D5 (2n-2 = 8 iff n = 5; A-family never; E fail), so h(D5) = 8 = 2|mu4| = rank(E8). h2 = |Z2| h1 is DERIVED",
+      "pass": true,
+      "detail": "h=|disc|: A_m all m<=40, D-solutions [3] (= A3), E []; h=2|disc|: A [], D [5], E []"
+    },
+    {
+      "check": "C5 GLOBAL LADDER + EXPLICIT E8 [E]: clock pairing over ALL ADE (A<=40, D<=45, E) yields pairs ONLY at total ranks = 0 mod 8 (octave rungs; low rungs 8/16/24/32 carry 1/3/5/7 pairs); minimal rung UNIQUE = A3+D5, whose isotropic Z4 glue (index det 4*4/16 = 1) is built explicitly: 240 roots of norm 2 (classes 52+64+60+64), all integer inner products, rank 8 -- E8 emerges from the seam pair. HONESTY: octave ratio 2 recurs on (D_n, D_{2n-1}), n = 3 mod 8 (rank 32, 56, ...), so octave alone is not globally unique; minimality does the pinning",
+      "pass": true,
+      "detail": "low rungs [(8, ['A3+D5']), (16, ['A3+D13', 'D5+D11', 'D7+D9']), (24, ['A3+D21', 'D11+D13', 'D5+D19', 'D7+D17', 'D9+D15']), (32, ['A3+D29', 'D11+D21', 'D13+D19', 'D15+D17', 'D5+D27', 'D7+D25', 'D9+D23'])]; octave pairs [(8, 'A3+D5'), (32, 'D11+D21'), (56, 'D19+D37')]; E8 build: roots 240, classes {'(0,0)': 52, '(s,s)': 64, '(v,v)': 60, \"(s',s')\": 64}, det 1"
+    },
+    {
+      "check": "C6 CONTROLS [E]: A3+A3 fails anti-isometry (3/4 + 3/4 = 3/2 != 0 mod 2Z -- the clock pair is NOT self-gluable); D7/D9/D11 fail against A3 (n != 5 mod 8); odd clocks A2/E6 (Z3), A4 (Z5) and the non-isomorphic A1+A7 (Z2 vs Z8) excluded -- each gate does separate, checkable work",
+      "pass": true,
+      "detail": "A3+A3 gluable: False; D-fails vs A3: []; Z4-discs among A2/E6/A4: []; A1+A7 discs (2, 8)"
+    },
+    {
+      "check": "C7 RELOCATION AUDIT [O]: DERIVED -- the octave (C4), the spinorial glue (C2), E8 from the pair (C5); glue01's post-hoc octave selector is eliminated. NOT claimed: P2 closed, the raw-seam Z4 origin, global octave uniqueness (rank-32 recurrence recorded)",
+      "pass": true,
+      "detail": "clock order 4 = |mu4| (recomputed C1; in-suite origin v216/v453/v446/v445; raw-seam Z4 origin = the parked open contract); Nikulin anti-isometry glue theory (cited external machinery; verified by explicit construction at rank 8 in C5); minimality on the ladder (same principle class as COMP.01's minimal c; needed because the octave ratio 2 recurs at rank 32); the ADE scope (inherited from v299's rho <= 2 growth universe, Smith's theorem -- not free, but not new either); Borel-de Siebenthal for the menu route (glue01, cited there)"
+    }
+  ],
+  "reading": "glue01's post-hoc octave gate is eliminated as an input. The seam clock of order 4 = |mu4| (in-suite: marks = mu4, v216/v453; forcing, v445/v446) acts as the selector instead: glue group = Z4 picks A3+D5 uniquely on the menu, and necessarily through the D-side spinor classes (the Z2 double-cover sector carrying dim S+ = 16). The octave h(D5) = |Z2| h(A3) then FOLLOWS: h = |disc| characterises the A-family (family Coxeter clock = seam clock) and h = 2|disc| characterises D5 within ADE-cyclic. Globally the clock pairing produces the mod-8 rank ladder 8/16/24/32 with degeneracies 1/3/5/7 (the same octave structure in which COMP.01's holomorphic uniqueness fails above c = 8); the minimal rung A3+D5 glues to an explicit 240-root rank-8 even lattice of determinant 1 -- E8 built from the seam pair. Still imported: the clock's raw-seam origin (parked contract), Nikulin glue machinery, minimality, ADE scope (v299). P2 is not closed."
+}

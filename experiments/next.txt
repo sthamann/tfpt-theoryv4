@@ -1,3 +1,68 @@
+## 2026-07-10 (b) — GLUE.DYN.02: die Oktave ABGELEITET (μ4-Uhr ersetzt das Gate; E8 explizit aus dem Seam-Paar)
+
+Follow-up auf GLUE.DYN.01 (User: "mach a" = Oktav-Bedingung ableiten statt
+postulieren). Ergebnis: das post-hoc-Oktav-Gate ist als Input ELIMINIERT —
+glue02_octave_derivation.py (7/7 PASS, theory-contract):
+
+- Selektor ist jetzt die unabhängig tragende Seam-Prämisse "Uhr-Ordnung 4 =
+  |μ4|" (in-suite: marks=μ4 v216/v453, Forcing v445/v446; C1 standalone
+  reproduziert). Glue-Gruppe ≅ Z4 selektiert A3+D5 auf dem Menü eindeutig
+  OHNE Oktave (C3) — und zwingt die Verklebung durch die SPINOR-Klassen
+  (disc(D_n)-Elementordnungen {1,2,4,4}: jeder Ordnung-4-Generator ist
+  Spinor; n=5: dim 16 = dim S⁺) (C2).
+- Die Oktave h₂=|Z₂|h₁ ist jetzt THEOREM (C4): h=|disc| ⟺ A-Familie
+  (Familien-Coxeter-Uhr = Seam-Uhr, h(A3)=4=|μ4|); h=2|disc| ⟺ D5
+  (h=8=2|μ4|=rank E8). Geschlossene Formen, exakt.
+- Global ohne Menü (C5): Uhr-Pairing über alle ADE nur bei Gesamtrang ≡ 0
+  mod 8 (Sprossen 8/16/24/32: 1/3/5/7 Paare — dieselbe Oktavstruktur wie
+  COMP.01s 1/2/71-Zerfall über c=8). Minimale Sprosse eindeutig A3⊕D5;
+  dessen Z4-Glue EXPLIZIT gebaut: 240 Norm-2-Wurzeln (52+64+60+64), alle
+  Skalarprodukte ganzzahlig, det 1 — E8 entsteht aus dem Seam-Paar.
+  Ehrlich: Ratio 2 rekursiert auf (D_n,D_{2n−1}), n≡3 mod 8 (Rang 32:
+  D11+D21; 56: D19+D37) — Minimalität pinnt, nicht die Oktave allein.
+- Ehrlich importiert (C7): Raw-Seam-Ursprung der Z4-Uhr (geparkter offener
+  Contract), Nikulin-Glue-Theorie (zitiert; bei Rang 8 explizit verifiziert),
+  Minimalität (COMP.01-Prinzipklasse), ADE-Scope (v299-Erbe). P2 NICHT
+  geschlossen.
+
+Kein Scorecard-Row, kein verification/-Touch, keine Paper-Edits.
+
+## 2026-07-10 — Zuse-Runde: GLUE.DYN.01 — dynamische Glue-Selektion (lokale Gates ⇒ D5⊕A3+μ4)
+
+User-Auftrag: Zuse/"Rechnender Raum"-Vergleich untersucht. Befund der Analyse:
+das vorgeschlagene Programm "welche minimalen lokalen Regeln erzwingen die
+Compiler Closure?" existiert bereits als Kette v219→v298→v299→v327→v395→v396
+(alle frisch gelaufen, grün) — ABER die Kette erreicht E8 nur als STERN
+T(2,3,5); die Closure als ZERLEGUNG D5⊕A3+μ4 war bisher nur statisch
+eindeutig (v15-Klassifikation, v1-Zertifikat). Die echte Lücke geschlossen —
+experiments-only, nichts promoted:
+
+**GLUE.DYN.01 — theory-contract (8/8 PASS, glue01_dynamical_selection.py):**
+- Substrat: Ê8-Attraktorgraph (v299-Endpunkt; Kac-Marks = v298-Fixpunkt,
+  A·m=2m exakt, C1). Borel–de-Siebenthal-Deletionsmenü maschinell: Glue-Index
+  = gelöschter Kac-Mark für JEDE Deletion von Ê6/Ê7/Ê8 (C2) — Glue-Ordnung
+  ist Attraktor-Output.
+- Zwei unabhängige Gates auf den 5 zweiseitigen Punkturen: (ii) Seam-Pairing
+  (isomorphe + zyklische Diskriminanten; reproduziert v15-Kandidaten,
+  verwirft A1+A7 trotz Index 4) und (iii) Spektral-Oktave h₂=|Z₂|·h₁,
+  GEMESSEN per lokaler Diffusion pro Seite (Fehler 4e-16; Ratios 9,4,2,1,4 —
+  Ratio 2 eindeutig bei A3+D5). Schnitt: dieselbe eindeutige Punktur;
+  μ4=Z₄ emergiert als gelöschter Mark (=h(A3)), h(D5)=8=2|μ4|=rank(E8),
+  Ränge (3,5)=(N_fam,g_car) (C6). Kontrollen: Ê7 — Oktave feuert allein
+  (A2+A5), Pairing killt; Ê6 — beide leer (C7).
+- Gewinn gegen v15: dessen "familyful"-Filter importiert dim S⁺=16 und
+  N_fam=3 als Kriterien; hier kommen (3,5), μ4, 16 als OUTPUT heraus, Import
+  nur das Z₂-Atom. Ehrlich (C8): Oktav-Bedingung selbst ist post-hoc
+  (Audit-Level wie flav01 C6), Ein-Knoten-Punktur + Z₂ importiert,
+  Borel–de Siebenthal zitiert; v15 bleibt das statische Theorem, P2 NICHT
+  geschlossen (Ê8 = seed-abhängiger v299-Endpunkt).
+- Zuse-Einordnung (Chat-Analyse, keine Paper-Edits): ISA-Metapher
+  (D5=Speicher etc.), Zeit-aus-Konvergenz (=S14-Lücke) und c-als-
+  Rechengeschwindigkeit ohne Deckung; "Compiler statt Simulation" (v56)
+  und "warum E8" (v299-Negativkontrollen) sind die tragfähigen Punkte.
+
+Kein Scorecard-Row, kein verification/-Touch, keine Paper-Edits.
+
 ## 2026-07-07 (Z) — Analyse-Runde 12 Claims verifiziert → RANKGAP-Lean-Lemma + FLAV.WINDING.DISC2 Contract
 
 User-Auftrag: 12 vorgeschlagene "Kompressionsachsen" (ANCHOR.RANKGAP.UNIQUENESS,

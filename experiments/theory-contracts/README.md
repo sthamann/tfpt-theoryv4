@@ -270,6 +270,91 @@ Firewall: pure integer arithmetic; never a scorecard row; never `[E]`-as-physics
 Open Diophantine piece (recorded, not claimed): prove `s = 6` is the only
 nonnegative integral point of `Δ(s) = 2y²`.
 
+## `glue01_dynamical_selection.py` — dynamische Glue-Selektion: lokale Gates ⇒ D5⊕A3+μ4 (2026-07-10)
+
+Answers the dated question (Zuse/"Rechnender Raum" round) "kann eine lokale Regel die
+**Compiler Closure** `D5 ⊕ A3 + μ4` selektieren — statt nur den E8-Stern zu erreichen?"
+The network chain v298→v299→v327→v395 reaches E8 as a *star* T(2,3,5); the closure is a
+*decomposition*, whose uniqueness was so far **static** (v15 discriminant classification,
+v1 lattice certificate). This contract builds the dynamical layer on the attractor graph
+Ê8 (the endpoint of v299's growth, whose Kac marks are the v298 diffusion fixed point):
+
+- **C1 [E]**: Kac marks of Ê6/Ê7/Ê8 satisfy `A·m = 2m` exactly — the deletion menu lives
+  on the attractor.
+- **C2 [E]**: all single-node deletions of Ê8 = the classical Borel–de Siebenthal list,
+  and for *every* deletion (all three diagrams) the glue index `√(∏det/det_amb)` is an
+  integer **equal to the deleted Kac mark** — the glue order is attractor data, not input.
+- **C3 [E]**: exactly five Ê8 punctures are two-sided (the seam's `|Z₂| = 2` sides):
+  A1+E7, A2+E6, A3+D5, A4+A4, A1+A7.
+- **C4 [E]**: seam-pairing gate (isomorphic **and cyclic** discriminants) → survivors =
+  exactly the v15 candidate list, *recomputed from the menu*; A1+A7 rejected (Z₂ vs Z₈)
+  although its glue index is also 4 — the gate is finer than the index.
+- **C5 [E]**: spectral octave gate, **measured** by running the same lazy local diffusion
+  on each side (max err 4.4e-16 vs `2cos(π/h)`): h-ratios (9, 4, **2**, 1, 4) — ratio
+  `|Z₂| = 2` is *unique* at A3+D5.
+- **C6 [E]/[C]**: both gates independently select the same unique puncture; deleted mark
+  4 ⇒ **μ4 = Z₄ emerges** (= h(A3)), h(D5) = 8 = 2|μ4| = rank(E8) (the P1 rank readout,
+  COMP.01), ranks (3,5) = (N_fam, g_car), q(A3)+q(D5) = 2 (even glue, v1).
+- **C7 [E] controls**: on Ê7 the octave gate alone fires (A2+A5, both mark-3 deletions)
+  but pairing kills it (Z₃ vs Z₆); on Ê6 both gates are empty — the gates are
+  independent, their agreement is E8-specific.
+- **C8 [O] honest**: imported stay the single-node puncture, the Z₂ atom, and **the
+  octave condition itself (post-hoc selector until derived — audit-level, same
+  discipline as flav01 C6)**; Borel–de Siebenthal is cited machinery. v15 stays the
+  static theorem; **P2 is NOT closed** (Ê8 is v299's seed-dependent growth endpoint).
+
+Result (2026-07-10): **CONTRACT HOLDS, 8/8 PASS** (`glue01_dynamical_results.json`).
+Gain over v15: its "familyful" filter *imports* `dim S⁺ = 16` and `N_fam = 3` as
+selection criteria — here (3,5), μ4 = Z₄ and the 16 come *out* of two structural gates
+that import only the Z₂ atom. Never a scorecard row; never `[E]`-as-physics for the
+octave reading. **Follow-up:** the post-hoc octave gate (C8's residual) is *derived*
+in `glue02_octave_derivation.py` below.
+
+```bash
+cd experiments/theory-contracts && python3 glue01_dynamical_selection.py
+```
+
+## `glue02_octave_derivation.py` — die Oktave abgeleitet: μ4-Uhr ersetzt das Gate (2026-07-10)
+
+Closes glue01's own C8 residual ("octave condition post-hoc until derived"): the octave
+gate is **eliminated as an input**. The independently load-bearing seam premise "the
+clock has order 4 = |μ4|" (in-suite: marks = μ4, v216/v453; transfer inherits the clock
+and is forced block-diagonal, v446/v445) replaces it as the selector, and the octave
+reappears as a **proved property** of the selected pair:
+
+- **C1 [E]**: clock premise recomputed standalone (v445 mini): commutant of the order-4
+  clock = exactly the μ4 block algebra (iff); order-2 commutant strictly larger.
+- **C2 [E]**: **clock ⇒ spinorial glue**: `disc(D_n) = Z4 = {0,v,s,s'}` has element
+  orders {1,2,4,4} — every order-4 generator is a spinor class, so a μ4-cyclic glue
+  necessarily runs through the half-spinor sector (n=5: dim 16 = `dim S⁺`); the vector
+  class (order 2) cannot carry the clock.
+- **C3 [E]**: on glue01's machine-derived two-sided menu, disc pair ≅ (Z4, Z4) selects
+  A3+D5 **uniquely — no octave used**.
+- **C4 [E]**: the octave is now a **theorem**: `h = |disc|` characterises the A-family
+  exactly (family Coxeter clock = seam clock, h(A3) = 4 = |μ4|); `h = 2|disc|`
+  characterises **D5** exactly (h = 8 = 2|μ4| = rank E8). `h₂ = |Z₂|·h₁` derived.
+- **C5 [E]**: global ladder (no menu import): clock pairing over all ADE yields pairs
+  *only* at total rank ≡ 0 mod 8 (rungs 8/16/24/32 with 1/3/5/7 pairs — the same octave
+  structure in which COMP.01's holomorphic uniqueness fails above c=8); minimal rung
+  unique = A3⊕D5, whose Z4 glue is **built explicitly**: 240 roots of norm 2 (classes
+  52+64+60+64), all integer inner products, index det 1 — **E8 emerges from the seam
+  pair**. Honest: ratio 2 recurs on `(D_n, D_{2n−1})`, n ≡ 3 mod 8 (rank 32, 56, …) —
+  minimality does the pinning, not the octave alone.
+- **C6 [E] controls**: A3+A3 not gluable (3/4+3/4 ≢ 0 mod 2); D7/D9/D11 fail vs A3
+  (n ≢ 5 mod 8); odd clocks and A1+A7 excluded.
+- **C7 [O] honest**: imported stay the clock's raw-seam origin (the parked open
+  contract below), Nikulin glue machinery (cited; verified explicitly at rank 8),
+  minimality (COMP.01 principle class), and the ADE scope (inherited from v299's
+  ρ ≤ 2 growth universe). **P2 is NOT closed.**
+
+Result (2026-07-10): **CONTRACT HOLDS, 7/7 PASS** (`glue02_octave_results.json`).
+Chain now: clock (order 4) ⇒ glue = μ4 ⇒ spinorial ⇒ A3⊕D5 ⇒ octave (theorem) ⇒ E8
+(explicit 240 roots). Never a scorecard row; never `[E]`-as-physics.
+
+```bash
+cd experiments/theory-contracts && python3 glue02_octave_derivation.py
+```
+
 ## Open next contract — raw RP seam → Z4 mark-local source
 
 `qgeo_dtn_mark_locality.py` proves the mark-local structure **given** the Z4 marking. The

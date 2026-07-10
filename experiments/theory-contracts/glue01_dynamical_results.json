@@ -1,0 +1,561 @@
+{
+  "contract": "GLUE.DYN.01 dynamical glue selection",
+  "date": "2026-07-10",
+  "firewall": "theory contract, never a scorecard row; internal consistency, not evidence; octave selector audit-level",
+  "verdict": "CONTRACT HOLDS (8/8)",
+  "checks": [
+    {
+      "check": "C1 MARKS = PERRON [E]: the Kac marks of E6^/E7^/E8^ satisfy A*m = 2*m exactly -- the deletion menu lives on the v298 attractor (marks = the dynamical fixed point of the lazy local diffusion)",
+      "pass": true,
+      "detail": "E8^: A*m == 2m True (sum marks = 30 = h); E7^: A*m == 2m True (sum marks = 18 = h); E6^: A*m == 2m True (sum marks = 12 = h)"
+    },
+    {
+      "check": "C2 DELETION TABLE [E]: E8^ single-node deletions = the classical Borel-de Siebenthal list, and for EVERY deletion of E6^/E7^/E8^ the glue index sqrt(prod det / det_ambient) is an integer EQUAL to the deleted Kac mark -- the glue order is attractor data",
+      "pass": true,
+      "detail": "del 0(m=1)->E8; del 1(m=2)->A1+E7; del 2(m=3)->A2+E6; del 3(m=4)->A3+D5; del 4(m=5)->A4+A4; del 5(m=6)->A1+A2+A5; del 6(m=4)->A1+A7; del 7(m=2)->D8; del 8(m=3)->A8"
+    },
+    {
+      "check": "C3 TWO-SIDED GATE [E]: exactly five E8^ punctures leave two sides (marks 2,3,4,5,4 -> A1+E7, A2+E6, A3+D5, A4+A4, A1+A7); one- and three-component punctures excluded (|Z2| = 2 sides of the seam)",
+      "pass": true,
+      "detail": "excluded: del 0(E8: 1 comp); del 5(A1+A2+A5: 3 comp); del 7(D8: 1 comp); del 8(A8: 1 comp)"
+    },
+    {
+      "check": "C4 SEAM-PAIRING GATE [E]: isomorphic + cyclic discriminant groups -> survivors {A1+E7, A2+E6, A3+D5, A4+A4} = the v15 candidate list, recomputed from the deletion menu; A1+A7 REJECTED (disc Z2 vs Z8) although its glue index is also 4 -- the pairing gate is finer than the index",
+      "pass": true,
+      "detail": "survivors ['A1+E7', 'A2+E6', 'A3+D5', 'A4+A4']; A1+A7 dets [2, 8] (glue index 4)"
+    },
+    {
+      "check": "C5 SPECTRAL OCTAVE GATE [E]: per-component Perron values MEASURED by the lazy diffusion reproduce 2cos(pi/h) (max err 4.4e-16); the h-ratios over the five two-sided punctures are (9,4,2,4,1) -- ratio |Z2| = 2 is UNIQUE at A3+D5",
+      "pass": true,
+      "detail": "ratios A1+E7: 9, A2+E6: 4, A3+D5: 2, A4+A4: 1, A1+A7: 4"
+    },
+    {
+      "check": "C6 INTERSECTION + EMERGENCE [E]/[C]: gates (ii) and (iii) independently select the SAME unique puncture A3+D5; deleted mark 4 => glue = Z4 = mu4 EMERGES (= h(A3) = 4 = |mu4|), h(D5) = 8 = 2|mu4| = rank(E8) (the P1 rank readout, COMP.01), ranks (3,5) = (N_fam, g_car), q(A3)+q(D5) = 3/4+5/4 = 2 (even glue, v1), 16 q q = 15 = dim S+ - 1",
+      "pass": true,
+      "detail": "unique survivor A3+D5, deleted mark 4, h pair [4, 8], ranks [3, 5]"
+    },
+    {
+      "check": "C7 LOOK-ELSEWHERE CONTROLS [E]: on E7^ the octave gate ALONE fires (A2+A5, h = (3,6)) but seam-pairing rejects it (disc Z3 vs Z6) -- the gates are INDEPENDENT and their agreement is E8-specific; on E6^ both gates are empty",
+      "pass": true,
+      "detail": "E7^: pairing [], octave ['A2+A5', 'A2+A5'], both []; E6^: pairing [], octave [], both []"
+    },
+    {
+      "check": "C8 RELOCATION AUDIT [O]: the pipeline REPLACES v15's familyful filter (imports dim S+ = 16, N_fam = 3) by two structural gates importing only the Z2 atom -- but the octave selector is new and post-hoc; recorded honestly",
+      "pass": true,
+      "detail": "the single-node puncture (one deletion; why one is not derived); two-sidedness = the Z2 atom (gate i); the octave condition h2 = |Z2| h1 itself (POST-HOC selector until derived; audit-level, same discipline as flav01 C6 -- its resonances with the c=8->16 octave / half-spinor 2^4 are [C] readings only); Borel-de Siebenthal deletions <-> maximal-rank subalgebras (cited external theorem; recomputed here at graph level); v15 stays the static theorem; P2 is NOT closed (E8^ itself is v299's seed-dependent growth endpoint)"
+    }
+  ],
+  "deletion_tables": {
+    "E8^": [
+      {
+        "deleted": 0,
+        "mark": 1,
+        "names": [
+          "E8"
+        ],
+        "n_comp": 1,
+        "dets": [
+          1
+        ],
+        "hs": [
+          30
+        ],
+        "ranks": [
+          8
+        ],
+        "glue_index": 1
+      },
+      {
+        "deleted": 1,
+        "mark": 2,
+        "names": [
+          "A1",
+          "E7"
+        ],
+        "n_comp": 2,
+        "dets": [
+          2,
+          2
+        ],
+        "hs": [
+          2,
+          18
+        ],
+        "ranks": [
+          1,
+          7
+        ],
+        "glue_index": 2
+      },
+      {
+        "deleted": 2,
+        "mark": 3,
+        "names": [
+          "A2",
+          "E6"
+        ],
+        "n_comp": 2,
+        "dets": [
+          3,
+          3
+        ],
+        "hs": [
+          3,
+          12
+        ],
+        "ranks": [
+          2,
+          6
+        ],
+        "glue_index": 3
+      },
+      {
+        "deleted": 3,
+        "mark": 4,
+        "names": [
+          "A3",
+          "D5"
+        ],
+        "n_comp": 2,
+        "dets": [
+          4,
+          4
+        ],
+        "hs": [
+          4,
+          8
+        ],
+        "ranks": [
+          3,
+          5
+        ],
+        "glue_index": 4
+      },
+      {
+        "deleted": 4,
+        "mark": 5,
+        "names": [
+          "A4",
+          "A4"
+        ],
+        "n_comp": 2,
+        "dets": [
+          5,
+          5
+        ],
+        "hs": [
+          5,
+          5
+        ],
+        "ranks": [
+          4,
+          4
+        ],
+        "glue_index": 5
+      },
+      {
+        "deleted": 5,
+        "mark": 6,
+        "names": [
+          "A1",
+          "A2",
+          "A5"
+        ],
+        "n_comp": 3,
+        "dets": [
+          2,
+          3,
+          6
+        ],
+        "hs": [
+          2,
+          3,
+          6
+        ],
+        "ranks": [
+          1,
+          2,
+          5
+        ],
+        "glue_index": 6
+      },
+      {
+        "deleted": 6,
+        "mark": 4,
+        "names": [
+          "A1",
+          "A7"
+        ],
+        "n_comp": 2,
+        "dets": [
+          2,
+          8
+        ],
+        "hs": [
+          2,
+          8
+        ],
+        "ranks": [
+          1,
+          7
+        ],
+        "glue_index": 4
+      },
+      {
+        "deleted": 7,
+        "mark": 2,
+        "names": [
+          "D8"
+        ],
+        "n_comp": 1,
+        "dets": [
+          4
+        ],
+        "hs": [
+          14
+        ],
+        "ranks": [
+          8
+        ],
+        "glue_index": 2
+      },
+      {
+        "deleted": 8,
+        "mark": 3,
+        "names": [
+          "A8"
+        ],
+        "n_comp": 1,
+        "dets": [
+          9
+        ],
+        "hs": [
+          9
+        ],
+        "ranks": [
+          8
+        ],
+        "glue_index": 3
+      }
+    ],
+    "E7^": [
+      {
+        "deleted": 0,
+        "mark": 1,
+        "names": [
+          "E7"
+        ],
+        "n_comp": 1,
+        "dets": [
+          2
+        ],
+        "hs": [
+          18
+        ],
+        "ranks": [
+          7
+        ],
+        "glue_index": 1
+      },
+      {
+        "deleted": 1,
+        "mark": 2,
+        "names": [
+          "A1",
+          "D6"
+        ],
+        "n_comp": 2,
+        "dets": [
+          2,
+          4
+        ],
+        "hs": [
+          2,
+          10
+        ],
+        "ranks": [
+          1,
+          6
+        ],
+        "glue_index": 2
+      },
+      {
+        "deleted": 2,
+        "mark": 3,
+        "names": [
+          "A2",
+          "A5"
+        ],
+        "n_comp": 2,
+        "dets": [
+          3,
+          6
+        ],
+        "hs": [
+          3,
+          6
+        ],
+        "ranks": [
+          2,
+          5
+        ],
+        "glue_index": 3
+      },
+      {
+        "deleted": 3,
+        "mark": 4,
+        "names": [
+          "A1",
+          "A3",
+          "A3"
+        ],
+        "n_comp": 3,
+        "dets": [
+          2,
+          4,
+          4
+        ],
+        "hs": [
+          2,
+          4,
+          4
+        ],
+        "ranks": [
+          1,
+          3,
+          3
+        ],
+        "glue_index": 4
+      },
+      {
+        "deleted": 4,
+        "mark": 3,
+        "names": [
+          "A2",
+          "A5"
+        ],
+        "n_comp": 2,
+        "dets": [
+          3,
+          6
+        ],
+        "hs": [
+          3,
+          6
+        ],
+        "ranks": [
+          2,
+          5
+        ],
+        "glue_index": 3
+      },
+      {
+        "deleted": 5,
+        "mark": 2,
+        "names": [
+          "A1",
+          "D6"
+        ],
+        "n_comp": 2,
+        "dets": [
+          2,
+          4
+        ],
+        "hs": [
+          2,
+          10
+        ],
+        "ranks": [
+          1,
+          6
+        ],
+        "glue_index": 2
+      },
+      {
+        "deleted": 6,
+        "mark": 1,
+        "names": [
+          "E7"
+        ],
+        "n_comp": 1,
+        "dets": [
+          2
+        ],
+        "hs": [
+          18
+        ],
+        "ranks": [
+          7
+        ],
+        "glue_index": 1
+      },
+      {
+        "deleted": 7,
+        "mark": 2,
+        "names": [
+          "A7"
+        ],
+        "n_comp": 1,
+        "dets": [
+          8
+        ],
+        "hs": [
+          8
+        ],
+        "ranks": [
+          7
+        ],
+        "glue_index": 2
+      }
+    ],
+    "E6^": [
+      {
+        "deleted": 0,
+        "mark": 3,
+        "names": [
+          "A2",
+          "A2",
+          "A2"
+        ],
+        "n_comp": 3,
+        "dets": [
+          3,
+          3,
+          3
+        ],
+        "hs": [
+          3,
+          3,
+          3
+        ],
+        "ranks": [
+          2,
+          2,
+          2
+        ],
+        "glue_index": 3
+      },
+      {
+        "deleted": 1,
+        "mark": 2,
+        "names": [
+          "A1",
+          "A5"
+        ],
+        "n_comp": 2,
+        "dets": [
+          2,
+          6
+        ],
+        "hs": [
+          2,
+          6
+        ],
+        "ranks": [
+          1,
+          5
+        ],
+        "glue_index": 2
+      },
+      {
+        "deleted": 2,
+        "mark": 1,
+        "names": [
+          "E6"
+        ],
+        "n_comp": 1,
+        "dets": [
+          3
+        ],
+        "hs": [
+          12
+        ],
+        "ranks": [
+          6
+        ],
+        "glue_index": 1
+      },
+      {
+        "deleted": 3,
+        "mark": 2,
+        "names": [
+          "A1",
+          "A5"
+        ],
+        "n_comp": 2,
+        "dets": [
+          2,
+          6
+        ],
+        "hs": [
+          2,
+          6
+        ],
+        "ranks": [
+          1,
+          5
+        ],
+        "glue_index": 2
+      },
+      {
+        "deleted": 4,
+        "mark": 1,
+        "names": [
+          "E6"
+        ],
+        "n_comp": 1,
+        "dets": [
+          3
+        ],
+        "hs": [
+          12
+        ],
+        "ranks": [
+          6
+        ],
+        "glue_index": 1
+      },
+      {
+        "deleted": 5,
+        "mark": 2,
+        "names": [
+          "A1",
+          "A5"
+        ],
+        "n_comp": 2,
+        "dets": [
+          2,
+          6
+        ],
+        "hs": [
+          2,
+          6
+        ],
+        "ranks": [
+          1,
+          5
+        ],
+        "glue_index": 2
+      },
+      {
+        "deleted": 6,
+        "mark": 1,
+        "names": [
+          "E6"
+        ],
+        "n_comp": 1,
+        "dets": [
+          3
+        ],
+        "hs": [
+          12
+        ],
+        "ranks": [
+          6
+        ],
+        "glue_index": 1
+      }
+    ]
+  },
+  "reading": "The static v15 uniqueness acquires a dynamical formulation: on the attractor graph E8-hat (whose Kac marks are the fixed point of the v298 local diffusion), single-node punctures form a Borel-de Siebenthal menu in which the glue order IS the deleted mark. Two independent local gates -- seam-pairing (isomorphic cyclic discriminants) and the spectral octave h2 = |Z2| h1, the latter measurable by running the same local diffusion on each side -- select the SAME unique puncture, A3+D5 at mark 4, so mu4 = Z4 = deleted mark = h(A3) comes OUT of the selection, and (N_fam, g_car) = (3,5) are the component ranks. The E7-hat control shows the gates are independent (octave alone fires on A2+A5; pairing kills it); on E6-hat both are empty. What is NOT claimed: a derivation of the octave condition (post-hoc until derived), of the single puncture, or of P2 -- the substrate remains v299's seed-dependent endpoint."
+}
