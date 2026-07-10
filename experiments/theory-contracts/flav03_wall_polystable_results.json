@@ -1,0 +1,34 @@
+{
+  "contract": "FLAV.WALL.03 polystable-wall reduction",
+  "date": "2026-07-10",
+  "firewall": "theory contract, never a scorecard row; not evidence",
+  "verdict": "REDUCED to finite data + one boundary extension (open) (5/5)",
+  "checks": [
+    {
+      "check": "C1 POLYSTABLE => UNITARY => Phi=0 [E]: a non-unitary cusp-class triple (||M^dag M - I|| = 3.41) is UNITARISABLE -- a POSITIVE-DEFINITE invariant form H (M^dag H M = H, min eig 0.353 > 0) exists; nonabelian Hodge => a unitary rep has Higgs Phi=0, a C*-fixed point (finite linear algebra, no PDE)",
+      "pass": true,
+      "detail": "||M^dag H M - H|| = 1.4e-15, prod=I resid 1.1e-15, H pos-def True"
+    },
+    {
+      "check": "C2 REDUCED COCHAR [E]: the wall cocharacter (2,1,1) = omega_1 (minuscule); all A2 root pairings in {0,+-1} (multiplicity-free = reduced)",
+      "pass": true,
+      "detail": "lambda = ('2/3', '-1/3', '-1/3') = omega_1: True; reduced: True"
+    },
+    {
+      "check": "C3 THE REDUCTION [C]: at a Phi=0 unitary C*-fixed point the nilpotent Higgs part is ZERO, so the very-stable obstruction is carried by the cocharacter's reducedness alone (C2); the upward Bialynicki-Birula flow is then a Hitchin section (affine length ell(t_lambda)=2, all multiplicities <= 1). [C]: cites nonabelian Hodge + BB + Gonzalez",
+      "pass": true,
+      "detail": "ell(t_lambda) = 2, multiplicity-free = True"
+    },
+    {
+      "check": "C4 DISCRIMINATING CONTROL [E]: a wobbly cocharacter O(-3)+O(0)^2 has max pairing 3 >= 2 (NOT reduced), so even at a Phi=0 point the section obstruction does NOT vanish -- the finite reduction separates reduced (section) from wobbly (no section)",
+      "pass": true,
+      "detail": "wobbly max|pairing| = 3 (>=2 => no reduction)"
+    },
+    {
+      "check": "C5 RELOCATION AUDIT [O]: the wall case is reduced to finite linear algebra (C1) + reduced arithmetic (C2/C3); the ONLY remaining cited input is Gonzalez's very-stable <=> section equivalence extended to the Phi=0 polystable boundary -- NOT a transcendental Hitchin PDE. Never a scorecard row; never [E]",
+      "pass": true,
+      "detail": "Mehta-Seshadri: polystable parabolic (pardeg 0) <=> unitary rep (cited); nonabelian Hodge: unitary rep <=> Higgs Phi=0 (cited); Bialynicki-Birula stratification of the C*-action on the Hitchin base (cited); Gonzalez arXiv:2606.16880 very-stable <=> section, EXTENDED to the Phi=0 polystable BOUNDARY (parahoric/logahoric) -- the ONE remaining cited input"
+    }
+  ],
+  "reading": "flav02's residual (extend Gonzalez from smooth interior to the TFPT stability WALL) is reduced here to finite data. The polystable wall point is unitary (Mehta-Seshadri) hence has Higgs Phi=0 (nonabelian Hodge) -- a genuine C*-fixed point, exhibited as finite linear algebra (a positive-definite invariant form unitarises an explicit non-unitary cusp triple, the standalone core of v40). With Phi=0 the nilpotent obstruction is already zero, so Gonzalez's very-stable criterion is carried by the cocharacter's reducedness alone -- and that cocharacter is the minuscule omega_1 (flav02). Hence the upward flow is a Hitchin section. The ONE remaining cited input is Gonzalez's very-stable <=> section equivalence EXTENDED to the Phi=0 polystable boundary (parahoric) -- a finite/algebraic boundary case, not a transcendental PDE. Wobbly controls fail correctly. Never a scorecard row; never [E]."
+}

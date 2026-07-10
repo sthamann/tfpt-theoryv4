@@ -1,0 +1,36 @@
+{
+  "contract": "AXION.NDW.06 domain-wall number",
+  "date": "2026-07-10",
+  "firewall": "theory contract, never a scorecard row; not evidence",
+  "N_DW_det_line": 1,
+  "N_DW_dfsz_alt": 6,
+  "verdict": "N_DW = 1 [C] => post-inflationary axion is DOMAIN-WALL-SAFE (axion05 S1 complete, no dial) (5/5)",
+  "checks": [
+    {
+      "check": "C1 N_DW DEFINITION [E]: N_DW = |colour anomaly of the PQ current| = degeneracy of the axion potential = the integer N in N (a/f_a)(g_s^2/32pi^2) G Gtilde; (the det-line f_a normalisation 2 dim S+ |mu4| = 128 is the amplitude, distinct from the anomaly integer)",
+      "pass": true,
+      "detail": "f_a denominator 2*dim S+*|mu4| = 128 (amplitude); N_DW is the anomaly integer, computed next"
+    },
+    {
+      "check": "C2 DET-LINE ANOMALY = SEAM INDEX = 1 [C]: the TFPT axion is the phase of the seam determinant line, so its QCD anomaly is the seam Dirac INDEX = the inflow level k0 = |C| = 1 (v470/v472, established) => N_DW = 1",
+      "pass": true,
+      "detail": "N_DW = |C| = 1 (seam det-line index = inflow level, v470/v472)"
+    },
+    {
+      "check": "C3 N_DW = 1 => DOMAIN-WALL-SAFE [E]: a unit anomaly gives a UNIQUE vacuum around theta in [0,2pi), so there are NO stable domain walls -- the post-inflationary scenario (axion05 S1) is cosmologically safe, no Lazarides-Shafi bias needed",
+      "pass": true,
+      "detail": "N_DW = 1 => unique vacuum => no wall network"
+    },
+    {
+      "check": "C4 CONTRAST / CONTROL [E]: a DFSZ-type universal coupling to the 3 quark families gives N_DW = 2 N_fam = 6 (needs the bias mechanism); the det-line reading gives index = 1 -- they DIFFER, and TFPT's axion is the det-line/strong-CP one, not a Higgs-portal DFSZ axion",
+      "pass": true,
+      "detail": "N_DW(DFSZ universal) = 6 vs N_DW(det-line index) = 1"
+    },
+    {
+      "check": "C5 RELOCATION AUDIT [C]/[O]: N_DW = 1 rests on identifying the domain-wall number with the seam det-line index (=1, v470/v472) -- a [C] physical identification. Given it, axion05's S1 is COMPLETE: the post-inflationary axion is domain-wall-safe, no dial. If the axion were DFSZ (N_DW=6) the bias mechanism is required. Never a scorecard row; never [E]",
+      "pass": true,
+      "detail": "domain-wall number = QCD colour anomaly of the PQ current = vacuum degeneracy (standard axion cosmology); seam det-line index = inflow level k0 = |C| = 1 (v470/v472, in-suite); the identification N_DW = seam det-line index (a physical identification, same [C] class as ALPHA.QUILLEN / EM.WARD); Lazarides-Shafi bias needed ONLY if N_DW > 1 (the DFSZ alternative)"
+    }
+  ],
+  "reading": "Computing axion05's one crux -- the domain-wall number N_DW. For the TFPT determinant-line axion the PQ current is the phase of the seam determinant line, so its QCD colour anomaly (= N_DW) is the seam Dirac INDEX, which is exactly the inflow level k0 = |C| = 1 already established in v470/v472. Hence N_DW = 1: the axion potential has a unique vacuum around the circle, there are NO stable domain walls, and the post-inflationary resolution (axion05 S1) is cosmologically SAFE with no Lazarides-Shafi bias -- and no dial. This is typed [C]: it rests on identifying N_DW with the seam det-line index (the same physical-identification class as ALPHA.QUILLEN). The DFSZ alternative (universal 3-family coupling, N_DW = 2 N_fam = 6) is shown as the contrast and would need the bias mechanism -- but TFPT's axion is the det-line/strong-CP one, not DFSZ. Net: axion01->05->06 turns the axion 'fixed-angle catastrophe' into a clean, dial-free, domain-wall-safe POST-INFLATIONARY axion -- at the cost only of the (fragile) angle prediction. Never a scorecard row; never [E]."
+}

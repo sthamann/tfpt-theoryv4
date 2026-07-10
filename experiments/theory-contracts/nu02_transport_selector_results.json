@@ -1,0 +1,39 @@
+{
+  "contract": "NU.CI.02 transport selector",
+  "date": "2026-07-10",
+  "firewall": "theory contract, never a scorecard row; not evidence",
+  "seam_gap_selector": {
+    "z": 2.4327906486489863,
+    "im_norm_R": 7.992310217867369,
+    "J_R": 2.9844249948826615e-16
+  },
+  "verdict": "CONDITIONAL closure on a NAMED transport selector (not from symmetry) (5/5)",
+  "checks": [
+    {
+      "check": "C1 FAMILY RECALLED (nu01) [E]: R(z)=F diag(1,e^z,e^-z) F^* is complex-orthogonal, det 1, [R,C3]=0, Theta-real for real z; Im R = 0 iff z=0",
+      "pass": true,
+      "detail": "||R^TR-I||=1.3e-15, |det-1|=6.7e-16, ||[R,C3]||=4.5e-16, Theta-real=4.3e-16, Im R(0)=1.4e-16"
+    },
+    {
+      "check": "C2 MINIMAL-TRANSPORT SELECTOR IS TRIVIAL [E]: argmin_z ||R(z)-I|| = 0.000 => R = I (no seesaw CP) -- a finite point but an ASSUMPTION (no leptogenesis), not a derivation",
+      "pass": true,
+      "detail": "z* = 0.000, ||R(z*)-I|| = 4.77e-16"
+    },
+    {
+      "check": "C3 SEAM-GAP SELECTOR => UNIQUE NONTRIVIAL R [P]: e^z = (3/2)^6 (z = 6 ln(3/2) = Delta, v302) gives a UNIQUE R with DEFINITE CP content ||Im R||_F = 7.9923, leptogenesis invariant J_R = Im(R12 R21) = 0.0000 -- a conditional prediction (selector = hypothesis)",
+      "pass": true,
+      "detail": "z=Delta=2.4328, e^z=11.3906=(3/2)^6, ||Im R||=7.9923, J_R=0.0000"
+    },
+    {
+      "check": "C4 DISCRIMINATION / POWER [E]: distinct selectors give distinct R (z->R injective for z>=0); CP content ranges from 0 (z=0, trivial) to 7.992 (z=Delta) -- the selector MATTERS, the CP is not selector-independent and a wrong selector is falsifiable against leptogenesis",
+      "pass": true,
+      "detail": "R(Delta) != R(0.5): True; ||Im R|| 0.0 -> 7.992 across selectors"
+    },
+    {
+      "check": "C5 RELOCATION AUDIT [O]: the seesaw is NOT closed by symmetry (nu01); it closes CONDITIONALLY on a transport selector. The seam-gap selector is a named [P] hypothesis with a concrete CP consequence (C3). Never a scorecard row; never [E]",
+      "pass": true,
+      "detail": "Casas-Ibarra R complex orthogonal (cited, hep-ph/0103065); nu01 residual = one real CI angle z; the transfer gap Delta = 6 ln(3/2), spec T = {1,(2/3)^6,(1/3)^6} (v302, in-suite); the seam-gap IDENTIFICATION z = Delta is a NAMED [P] hypothesis -- deriving or refuting it (vs leptogenesis / 0nubb) is the open step"
+    }
+  ],
+  "reading": "The one free Casas-Ibarra angle left by nu01 is NOT fixed by the seam symmetries. The minimal-transport selector (min ||R-I||) collapses to the trivial R=I (no CP) -- an assumption, not a result. A principled selector identifying the CI angle with the seam TRANSFER GAP, e^z = (3/2)^6 (z = 6 ln(3/2) = Delta, v302), gives a UNIQUE nontrivial R with a definite leptogenesis CP content (||Im R|| = 7.9923, J_R = 0.0000). That is a CONDITIONAL prediction [P]: the neutrino dynamics closes ONLY given the (unproven) transport selector. The contract's gain is to convert 'one free angle' into 'one named, falsifiable hypothesis'. Never a scorecard row; never [E]."
+}

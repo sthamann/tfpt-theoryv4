@@ -228,8 +228,8 @@ axiom collar_realizes : CollarRealizedAsLatticePhase
     `mmst_existence` ∘ `agt_lattice_extension`, dropping the intermediate `ChiralCFT_c8`):
     a realized collar in the MMST range `rank ≤ c ≤ D` whose holomorphy discriminator
     selects `E₈` has scaling-limit net `(E₈)₁`.  It packages the two cited published
-    theorems into ONE external input — existence (Morinelli–Morsella–Stottmeister–Tanimoto,
-    arXiv:2107.13834: 16 decoupled `c = 1/2` copies → free `c = 8` `SO(16)₁`) ∘ holomorphic
+    theorems into ONE external input — existence (Osborne–Stottmeister,
+    arXiv:2107.13834, CMP 398 (2023); legacy token "MMST": 16 decoupled `c = 1/2` copies → free `c = 8` `SO(16)₁`) ∘ holomorphic
     extension (Adamo–Giorgetti–Tanimoto arXiv:2506.01008 + OS arXiv:2407.18222: the lattice
     net `A_Q(E₈)` supplies the 128 spinor, `248 = 120 + 128`). -/
 axiom seam_realisation_theorem :

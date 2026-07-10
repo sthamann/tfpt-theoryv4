@@ -58,6 +58,8 @@ import TfptCarrier.SeamScalingLimit
 import TfptCarrier.SeamResidualAxiom
 import TfptCarrier.SeamStandardPair
 import TfptCarrier.SeamApplicabilityLedger
+import TfptCarrier.WallReducedMinuscule
+import TfptCarrier.WallRegularSemisimple
 import TfptCarrier.SeamRigidityForcing
 import TfptCarrier.SeamEdgeChern
 import TfptCarrier.BWKeystone

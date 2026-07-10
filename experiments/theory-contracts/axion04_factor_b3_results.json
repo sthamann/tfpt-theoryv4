@@ -1,0 +1,37 @@
+{
+  "contract": "AXION.FORCE.04 factor-b3 refutation",
+  "date": "2026-07-10",
+  "firewall": "theory contract, never a scorecard row; not evidence",
+  "amplification_p2": 6.961818046612078,
+  "amplification_p1": 13.923636093224156,
+  "b3_cancels": true,
+  "verdict": "REFUTED: factor ~7 is NOT b3 (b3 cancels); amplification not forced at leading order (5/5)",
+  "checks": [
+    {
+      "check": "C1 b3 CANCELS (core refutation) [E]: A = Delta_req/Delta_anom = ln(Lambda_req/Lambda_0)/ln(Omega^2) is INDEPENDENT of b3 -- A(b3=7) = 6.962 = A(b3=9) = 6.962; the '~b3' match is NOT structural (b3 cancels)",
+      "pass": true,
+      "detail": "A(b3=7)=6.9618, A(b3=9)=6.9618, identical=True"
+    },
+    {
+      "check": "C2 CONVENTION-DEPENDENT [E]: the Weyl power p shifts A from ~13.9 (p=1, ln Omega) to ~6.96 (p=2, ln Omega^2); the '~b3=7' match appears ONLY for p=2 and is not robust -- a further sign of coincidence",
+      "pass": true,
+      "detail": "A(p=1)=13.92, A(p=2)=6.96"
+    },
+    {
+      "check": "C3 A IS A PHYSICAL SCALE RATIO [E]: A = ln(sqrt(H_inf f_a)/Lambda_QCD)/ln(Omega^2) = 29.90/4.30 = 6.962 -- set by the inflation scale, the axion scale and the plateau (N_star), NOT by any group-theory integer of the A3(+)D5 index",
+      "pass": true,
+      "detail": "ln(Lambda_req/Lambda_0)=29.90, ln(Omega^2)=4.30, A=6.962"
+    },
+    {
+      "check": "C4 SPECTRAL-ACTION COUPLING IS SUBLEADING [O]: F^2 and R^2 are a4 terms (coefficient f0 -- the leading atoms); the scalaron(R)-gluon(F^2) coupling R F^2 is an a6 term (coefficient = higher moment f_{-2}), a DIFFERENT subleading order -- so the leading forced structure does not hand the amplification, independently of the b3 coincidence",
+      "pass": true,
+      "detail": "heat-kernel orders: F^2 = a4, R^2 = a4, R*F^2 = a6 (subleading)"
+    },
+    {
+      "check": "C5 VERDICT / RELOCATION [O]: REFUTED -- 'factor = b3 forced by the index' is a coincidence (b3 CANCELS in the ratio, convention-dependent p=2 only) and the spectral action's scalaron-gluon coupling is a subleading a6 term (not the a4 atoms). axion03's hint is RETIRED; the isocurvature rescue stays genuinely OPEN (a dim-4 dial, or a post-inflationary axion). Never a scorecard row; never [E]",
+      "pass": true,
+      "detail": "QCD RG Lambda = mu exp(-2pi/(b3 alpha_s)); anomaly coefficient = b3 (standard); Chamseddine-Connes spectral action heat-kernel expansion a0,a2,a4,a6 (Gilkey; cited) -- F^2/R^2 at a4, R*F^2 at a6; the amplification A = ln(Lambda_req/Lambda_0)/ln(Omega^p) (a physical scale ratio, b3-free)"
+    }
+  ],
+  "reading": "Trying to DERIVE axion03's factor ~6.96 from the spectral action / the A3(+)D5 index REFUTES the 'factor = b3' reading. Structurally, the required coupling shift and the trace-anomaly shift BOTH carry the same (b3/2pi) prefactor, so b3 CANCELS in their ratio: the amplification A = ln(Lambda_req/Lambda_0)/ln(Omega^p) is independent of b3 (A(b3=7) = A(b3=9) = 6.96). The numerical match with b3=7 holds only for the Weyl convention p=2 (p=1 gives 13.9), confirming coincidence. A is a physical scale ratio set by (H_inf, f_a, Lambda_QCD, N_star), not a group-theory integer. And the spectral action's genuine scalaron-gluon coupling (R F^2) is a subleading a6 term (higher moment f_{-2}), not one of the a4 atoms that fix F^2/R^2. So the leading TFPT structure does NOT force the amplification. Conclusion: axion03's suggestive '~b3' hint is retired as a coincidence, and the isocurvature rescue of FR.DM.02 stays genuinely open -- it needs either a postulated dim-4 scalaron-gluon coupling (a dial) or a post-inflationary axion scenario. A clean refutation, the anti-numerology discipline. Never a scorecard row; never [E]."
+}

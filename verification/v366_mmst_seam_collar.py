@@ -2,8 +2,10 @@
 scaling-limit class, so the chiral scaling limit is a chiral CFT of central charge 8 -- pinned to
 (E8)_1 -- which REDUCES SEAM.EQUIV.01 to the single S3 lattice-realisation input.
 
-MMST (Morinelli-Morsella-Stottmeister-Tanimoto, CMP 2022; operator-algebraic wavelet /
-Wilson-Kadanoff renormalisation built on Koo-Saleur lattice Virasoro generators): for FREE LATTICE
+Osborne-Stottmeister (arXiv:2107.13834, CMP 398 (2023) 219; the legacy filename/token
+"MMST" denotes THIS theorem, built on the MMST/Morinelli-Morsella-Stottmeister-Tanimoto
+operator-algebraic wavelet / Wilson-Kadanoff renormalisation framework, arXiv:2010.11121,
+via Koo-Saleur lattice Virasoro generators): for FREE LATTICE
 FERMIONS in the CAR/quasi-free class, the massless SCALING LIMIT is a chiral CFT with the correct
 central charge, in the applicability range  rank <= c <= D  (D = number of Majorana copies).
 

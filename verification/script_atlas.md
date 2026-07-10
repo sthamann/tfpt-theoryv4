@@ -314,7 +314,7 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
 - **v22_open_gates_audit** [C/O] `GATE.NSTAR.01, GATE.METRIC.01` — residual-gates audit: forced part vs named residual
   - deps: reheating, QG.AMB.01, v359_grav_nonlinear_einstein · cited: 1 architecture e8
 - **v25_frontier_conjectures** [C] `FR.KOIDE.02, FR.DM.02` — conjectures: Koide φ₀/24; axion f_a = M_scal/128
-  - deps: FR.KOIDE.01, FR.DM.01, M_scal=c3^{7/2}Mbar · cited: 4 frontier
+  - deps: FR.KOIDE.01, FR.DM.01, M_scal=c3^{7/2}Mbar, v470, v472 · cited: 4 frontier
 - **v26_flavor_frontier_unification** [E/O] `FLAV.UGATE.01` — the “11” not uniquely forced; flavor frontier → one (U) gate
   - deps: v19_monodromy_moduli, v24_quark_ratio_closure.py;v26_flavor_frontier_unification, v13_open_gates.py;v19_monodromy_moduli.py;v22_open_gates_audit, v19_monodromy_moduli.py;v22_open_gates_audit · cited: 2 standard model
 - **v29_research_contract_certs** [-] `(no ledger claim)` — contract certs: wall enumeration; G5 gap-dominance
@@ -591,7 +591,7 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v286_seam_equivalence_contract, v447_seam_edge_chern, v367_seam_s3_lattice, v356_continuum_mmst_applicability, v73, v367, v447, v336 · cited: research contracts
 - **v457_seam_character_killtest** [E/O/X] `SEAM.EQUIV.KILLTEST.01` — SEAM.EQUIV.KILLTEST.01 [X]: an explicit (E8)_1-vs-SO(16)_1 character/sector kill-test for the seam edge -- a FALSIFIABLE test of the (E8)_1 identification (G7). [E] (E8)_1 CHARACTE
   - deps: v286_seam_equivalence_contract, v452_seam_e8_modular, v377_seam_s3_e8character, v378_seam_s3_modular, v156, v281, v452, v336 · cited: research contracts
-- **v458_seam_mmst_citation_audit** [C/O] `SEAM.EQUIV.MMST.AUDIT.01` — SEAM.EQUIV.MMST.AUDIT.01: the EXACT hypothesis-by-hypothesis citation audit of MMST (arXiv:2107.13834) against our collar (G3, the Zitat-Abgleich). [C] H1 ALGEBRA CLASS: CAR 16-Maj
+- **v458_seam_mmst_citation_audit** [C/O] `SEAM.EQUIV.MMST.AUDIT.01` — SEAM.EQUIV.MMST.AUDIT.01: the EXACT hypothesis-by-hypothesis citation audit of Osborne-Stottmeister (arXiv:2107.13834, CMP 398 (2023); legacy internal token MMST) against our colla
   - deps: v286_seam_equivalence_contract, v366_mmst_seam_collar, v356_continuum_mmst_applicability, v459_seam_lattice_voa_route, v336, v356, v155, v160 · cited: research contracts
 - **v459_seam_lattice_voa_route** [E/C/O] `SEAM.EQUIV.LATTICEVOA.01` — SEAM.EQUIV.LATTICEVOA.01: the SECOND, independent route to (E8)_1 -- the lattice net A_Q(E8) (Adamo-Giorgetti-Tanimoto arXiv:2506.01008 + OS arXiv:2407.18222) supplies the 128-spin
   - deps: v286_seam_equivalence_contract, v458_seam_mmst_citation_audit, v378_seam_s3_modular, v456_seam_chirality_from_c3, v458, v456, v281, v336 · cited: research contracts

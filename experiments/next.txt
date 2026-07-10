@@ -2529,3 +2529,157 @@ Befund: kein neuer unterscheidender empirischer Treffer (wie erwartet). Aber eta
 ist ein bemerkenswerter Near-Hit, die Petz/Baby-Universe-Bruecke ist die sauberste QG-Anbindung, und
 die GW-Echo-Pipeline ist jetzt bereit fuer echtes Strain. Website EXPERIMENTS_AUDIT auf 51/26/13
 gesynct. verification/ (v219-v237) bewusst NICHT angefasst -- das ist der parallele Strang.
+
+## Update 2026-07-10: problem_b.txt Restpunkte als Theory-Contracts (4 neue, firewalled)
+
+Die externe Review (problem_b.txt) abgearbeitet: Kernzahlen alle reproduziert (alpha^-1=137.0359992168,
+q(D5)+q(A3)=2, g_car=5 erzwungen, sin^2 theta12=0.306747). Fuer die vier vom Reviewer als "binaer/
+schliessbar" markierten Restpunkte je einen theory-contract gebaut (experiments/theory-contracts/,
+NIE Scorecard, NIE [E]-als-Physik, verification/ nicht angefasst):
+
+(3) flav02_wall_bruhat_gonzalez.py -- Gonzalez/Bruhat-Wandtest (arXiv:2606.16880). Der TFPT-Wand-
+Splittingtyp O(-2)+O(-1)^2 (Exponenten {2,1,1}=Anker a) projiziert auf das MINUSKULE Fundamental-
+kogewicht omega_1 von A2; alle Wurzelpaarungen in {0,+-1} => Divisor multiplizitaetsfrei = REDUZIERT
+=> Gonzalez very-stable => kanonische Hitchin-Sektion, eindeutige Selektion (POSITIVER Zweig des Kill-
+Tests, 6/6). Ehrlicher Vorbehalt: Gonzalez beweist glatte innere Fixpunkte; TFPT sitzt AUF der Wand
+(alpha23-Paarung=0, polystabil) => braucht die parahorische/logahorische Randerweiterung. Schaerft
+GATE.UWALL von "positiv-dim D4-Locus" auf "ein Randfall eines 2026-Satzes".
+
+(4) nu01_casas_ibarra_seam.py -- Casas-Ibarra aus Seam-Symmetrien? EHRLICHES NEGATIV (6/6): [R,C3]=0
++ komplex-orthogonal + det1 schneiden O(3,C) (3 komplexe Param) auf 1 komplexen (CI-Winkel), Theta-
+Realitaet auf 1 REELLEN Param. Eine kontinuierliche Familie BLEIBT => Seesaw NICHT durch Symmetrie
+allein geschlossen; absolute nu-Skala + Leptogenese-Phase brauchen den (offenen) Transport/Minimalitaets-
+Selektor. Deckt sich mit Ledger-Status. Die Symmetrie leistet echte Arbeit (3->1), aber nicht bis zum Punkt.
+
+(5) koide01_u3_family_sumino.py -- U(3)-Familie in A3=SU(4) + Sumino (arXiv:0812.2103). Affordance REAL,
+Schliessung OFFEN (5/5): 15=8+1+3+3bar, die 9 Bloc/Diagonal-Generatoren SCHLIESSEN als u(3) (explizit);
+die konjugierte L/R-Zuordnung dreht das Koide-brechende Log-Vorzeichen (Cancellation moeglich); 53/54 =
+a^T(R+Q)1/(2*1^T R a) (v183, 54=|Z2|N_fam^3) landet Q bei 0.6666661. OFFENE make-or-break: dass
+alpha_F=4alpha vom E8-Level/Einbettungsindex ERZWUNGEN ist (4=|mu4|=N_fam*C2(3), exakte Identitaeten,
+aber physikalisch nicht abgeleitet). Koide wird damit ein Kandidat-Loop-Test des A3-Familiennetzes.
+
+(6) axion01_isocurvature_killtest.py -- Axion-Isokurvatur. KILL-TEST FEUERT (6/6): mit TFPT-eigenen
+r~0.004, A_s~2.1e-9, f_a~2.39e11 ist H_inf~1.6e13 GeV, H_inf/f_a~66>1 (PQ waehrend Inflation effektiv
+wiederhergestellt) und H_inf/2pi~10.4 f_a (Winkel randomisiert) => fixer Anfangswinkel (108 Spine ODER
+170 Hilltop) inkonsistent, Isokurvatur >> Planck beta_iso<0.038. Echte, bisher unregistrierte Spannung
+auf dem FR.DM.02-Zweig. Typisierte Rettung: early-QCD (arXiv:2605.15192) hebt m_a>H_inf, BEVORZUGT
+Plateau-Inflation (= TFPT R^2!), aber die Scalaron-Gluon-Kopplung MUSS erzwungen sein (c3/Spektralwirkung/
+A3+D5-Index), sonst Parameterfreiheit verloren. Negativkontrolle (r=1e-6, f_a=1e17) => konsistent.
+
+Zusaetzlich: bibliografische Korrektur (Reviewer-Punkt) -- arXiv:2107.13834 / doi:10.1007/s00220-022-
+04521-8 (CFT from Lattice Fermions, CMP 398 (2023)) ist OSBORNE & STOTTMEISTER, nicht MMST; das echte
+MMST (Scaling Limits ... by Wavelets) ist CMP 387 (2021) / arXiv:2010.11121. Wird im verification-Strang
++ Bibliografie richtiggestellt (separater, tragender Fix).
+
+## Update 2026-07-10 (II): Follow-up-Runde -- 5 next-steps auf den 4 Contracts (firewalled)
+
+Die 5 vorgeschlagenen next-steps umgesetzt (theory-contracts + 1 Lean-Modul, verification/ nicht angefasst):
+
+(2) flav03_wall_polystable_reduction.py -- REDUZIERT flav02's Rest: Wandpunkt polystabil => unitaer
+(Mehta-Seshadri) => Higgs Phi=0 (nichtabelscher Hodge), C*-Fixpunkt als ENDLICHE Lineare Algebra
+(explizites nicht-unitaeres Cusp-Triple wird durch pos.-def. Invariantenform unitarisiert). Mit Phi=0
+traegt das minuskule Kogewicht allein die very-stable-Bedingung => Wandfall = endliche Daten + EINE
+zitierte Randerweiterung von Gonzalez (parahorisch), KEINE transzendente Hitchin-PDE. 5/5.
+
+(3) nu02_transport_selector.py -- der uebrige CI-Winkel ist NICHT durch Symmetrie fixiert (nu01);
+Minimal-Transport => triviales R=I (keine CP, Annahme); ein BENANNTER Selektor (CI-Winkel = Seam-
+Transfer-Gap, e^z=(3/2)^6) => eindeutiges nichttriviales R mit definitem CP-Gehalt (||Im R||=7.99) =
+KONDITIONALE Vorhersage [P] (Selektor unbewiesen). 5/5.
+
+(4) koide02_alphaF_level.py -- WARNUNG/NEGATIV: das saubere 1-Loop-Eichcancellation-Verhaeltnis ist
+alpha_F/alpha = Q^2/C2(3) = 3/4, NICHT 4. Die "4" ist konventionsabhaengig, kein konventionsfreies
+Argument erzwingt sie => koide01's "4=|mu4|=N_fam*C2" ist Koinzidenz-bis-abgeleitet (Anti-Numerologie).
+Verschaerfter offener Schritt: zuerst Suminos U(3)-Normierung aus dem A3-Netz ableiten. 5/5.
+
+(1) axion02_scalaron_gluon_forced.py -- quantifiziert next-step 1: m_a>H_inf braucht Lambda_inf~1.9e12
+GeV, d.h. Delta(1/alpha_s)~-33 waehrend Inflation. Das ist O(1/alpha_s) und O(c3^-1=8pi, 4pi^2) => VIABEL,
+aber kein Atom trifft es exakt und g_agg=-4c3 ist ein anderer Operator => NOCH NICHT erzwungen; Ziel jetzt
+scharf definiert. 6/6.
+
+(5) Lean: TfptCarrier/WallReducedMinuscule.lean -- flav02-Kernarithmetik als kernel-checked Fakt
+(wall_certificate: reduziert/minuskul, affine Laenge 2, Wobbly-Kontrolle scheitert), #print axioms = nur
+die 3 Standard-Kernaxiome; in TfptCarrier.lean eingehaengt, lake build sauber. (Die audit.sh-Grep-FAILs
+sorry/axiom sind PRE-EXISTING: ein Kommentar-"sorry" in SpectralGapAttractor + 39 benannte cited-axioms;
+mein Modul fuegt 0 hinzu, #print-axioms-Gate bleibt gruen.)
+
+Fazit der Runde: keine der 5 "schliesst" ein tiefes Problem -- 2 schaerfen (flav03 Wand, axion02 Ziel),
+1 macht konditional (nu02), 1 ist ein wertvolles Negativ (koide02: 3/4 statt 4), 1 formalisiert (Lean).
+Genau das anti-inflationaere Verhalten der Safeguards.
+
+## Update 2026-07-10 (III): Deep-Runde -- next-steps 1-4 bis zur Entscheidung getrieben
+
+(1) axion03_anomaly_coupling.py -- die EINZIGE erzwungene (dial-freie) Scalaron-Gluon-Kopplung ist die
+Spur-Anomalie (F^2 ist in 4D weyl-invariant), Koeffizient = b3=7. Am Plateau: Delta(1/alpha_s)~-4.8
+(Lambda-Verstaerkung nur ~70x, 11 Groessenordnungen zu wenig IN Lambda). ABER Lambda ist EXPONENTIELL in
+der Kopplung => echte Luecke = Faktor ~6.96 im KOEFFIZIENTEN, O(1-10), auffaellig ~b3=7 (markiert, nicht
+abgeleitet). Urteil: MARGINAL -- mit bescheidener O(7)-Verstaerkung machbar, KEIN near-kill, noch nicht
+erzwungen. (Selbstkorrektur ggue. dem groberen "11 Ordnungen/near-kill" -- die exponentielle
+Sensitivitaet aendert das Bild.) 5/5.
+
+(2) koide03_net_level.py -- A3-Netz Level 1; SU(3)_F ist Level-1/Index-1-Unterstrom (4->3+1),
+U(1)_F=diag(1,1,1,-3) Norm^2=12 => am Seam alpha_F=alpha_colour=alpha_GUT (Familie-Farbe-UV-Vereinigung).
+Aber Sumino ist IR (Familienbrechungsskala ~10^2-10^3 TeV, extern + Running). Urteil: UV-fixiert, IR NICHT
+erzwungen -- schaerft koide02 (fehlender Input = Familienbrechungsskala). 5/5.
+
+(3) flav04_wall_logahoric.py -- der Wand-Punkt ist REGULAER-HALBEINFACH (Cusp-Gewichte {0,1/3,2/3}
+verschieden; Spec(Q+)=3w+1={1,2,3} verschieden) => zahmer Punkt im ETABLIERTEN logahorischen/parahorischen
+nichtabelschen Hodge-Rahmen (Biswas-Kydonakis-Majra; Baraglia-Kamgarpour-Varma). Gonzalez-Rest verengt sich
+von "unbekannter Phi=0-Rand" auf "Reduziertheit <=> logahorische Hitchin-Sektion bei regulaer-halbeinfachem
+Residuum" -- zitat-nah. 5/5.
+
+(4) Lean: TfptCarrier/WallRegularSemisimple.lean -- endlicher Kern von flav03/flav04 (Cusp-Gewichte
+verschieden, Spec(Q+)={1,2,3} verschieden = regulaer-halbeinfach, irregulaere Kontrolle scheitert, + mit
+wall_reduced kombiniert), #print axioms wall_regular_and_reduced = [propext], lake build sauber.
+
+Deep-Fazit: axion03 ist das interessanteste Ergebnis -- die Isokurvatur-Rettung haengt an EINER Zahl
+(Kopplungsfaktor ~7~b3), nicht an Groessenordnungen; ein sauberer Beweis, dass die Spektralwirkung genau
+diesen Faktor liefert, waere der Registry-Kandidat. koide03/flav04 verengen Reste auf externe Skala bzw.
+etablierten Rahmen. verification/ + Paper NICHT angefasst (Haupt-Manifest unveraendert).
+
+## Update 2026-07-10 (IV): axion04 -- der Faktor ~7 = b3 WIDERLEGT (Anti-Numerologie)
+
+Versuch, axion03's Faktor ~6.96 aus Spektralwirkung / A3+D5-Index abzuleiten -> sauber WIDERLEGT:
+(C1) b3 KUERZT SICH -- Delta_req und Delta_anom tragen beide (b3/2pi), also A = Delta_req/Delta_anom =
+ln(Lambda_req/Lambda_0)/ln(Omega^p) ist b3-UNABHAENGIG (A(b3=7)=A(b3=9)=6.962). Der "~b3"-Treffer ist
+kein struktureller Fakt. (C2) konventionsabhaengig: p=2 -> 6.96, p=1 -> 13.9; die Uebereinstimmung mit 7
+nur fuer p=2. (C3) A ist ein PHYSIKALISCHES Skalenverhaeltnis (H_inf, f_a, Lambda_QCD, N_star), keine
+Gruppentheorie-Zahl. (C4) die echte Scalaron-Gluon-Kopplung der Spektralwirkung (R F^2) ist ein
+SUBFUEHRENDER a6-Term (Moment f_{-2}), nicht die a4-Atome (F^2/R^2). 5/5.
+
+=> axion03's "~b3"-Hinweis ist als Koinzidenz ZURUECKGEZOGEN. Die Isokurvatur-Rettung von FR.DM.02 bleibt
+echt offen -- entweder eine postulierte dim-4-Kopplung (Dial) oder ein post-inflationaeres Axion. Ehrliche
+Widerlegung statt aufgeblasener Treffer -- genau die v354/v355-Disziplin. verification/ + Paper unberuehrt.
+
+## Update 2026-07-10 (V): axion05 -- Strategie-Scan fuer das Winkel-Problem (KONSTRUKTIV)
+
+Zurueckgetreten von der axion01-04-Spannung und die bekannten Auswege gegen TFPTs EIGENE Zahlen gescannt.
+Kern-Befund konstruktiv: die Spannung liegt an der FESTEN Vor-Inflations-Winkel-Annahme, NICHT an TFPT.
+Da H_inf ~ 1.6e13 > f_a ~ 2.39e11 (Faktor 66), ist das NATUERLICHE Szenario POST-INFLATIONAERE PQ-Brechung
+-- KEIN fester Winkel, KEINE Axion-Isokurvatur -- und f_a=2.39e11 liegt im post-inflationaeren Relikt-Fenster
+(Omega_a h^2 ~ 0.33). Diese Route ist SAUBER (kein Dial).
+
+Klassifikation:
+  S1 post-inflationaer:  SAUBER (kein Dial; Preis: kein Winkel-Predict + N_DW=1)
+  S2 f_a(inf) groesser:  KANDIDAT (braucht ~10x in de Sitter, nicht etabliert)
+  S3 early-QCD schwer:   DIAL (Kopplung ~7x Anomalie, nicht erzwungen -- axion04)
+  S4 subdominantes Axion: GIBT-AXION-DM-AUF (Omega_a/Omega_c < 8e-7)
+  S5 kleineres H_inf:    NICHT-VIABEL (r < 4e-5 bricht den R^2-Zweig)
+
+Empfehlung: FR.DM.02 UMDEUTEN -- den "108 Grad Spine-Winkel" als Vorhersage FALLEN LASSEN (wird ein
+Horizont-Mittel), f_a behalten, das Relikt vorhersagen; konsistent + dial-frei, am einzigen Knackpunkt
+N_DW=1 (fuer das Det-Linien-Axion zu pruefen). 7/7. Damit ist der Axion-Zweig nicht tot, sondern in GUTER
+Form -- nur die (ohnehin fragile) Winkel-Behauptung faellt. verification/ + Paper NICHT angefasst.
+
+## Update 2026-07-10 (VI): axion06 -- Domaenenwand-Zahl N_DW = 1 (axion05's Knackpunkt geloest)
+
+Der eine Knackpunkt von axion05 (S1 post-inflationaer braucht N_DW=1) berechnet: das TFPT-Axion ist die
+Phase der Seam-DETERMINANTEN-LINIE, also ist seine QCD-Farb-Anomalie (= N_DW) der Seam-Dirac-INDEX = der
+Inflow-Level k0 = |C| = 1 (v470/v472, in-suite). => N_DW = 1: eindeutiges Vakuum, KEINE stabilen
+Domaenenwaende => das post-inflationaere Szenario ist kosmologisch SICHER, KEIN Lazarides-Shafi-Bias, KEIN
+Dial. Typisiert [C] (ruht auf der Identifikation N_DW = Seam-Det-Linien-Index, gleiche Klasse wie
+ALPHA.QUILLEN). DFSZ-Alternative (universell, N_DW=2*N_fam=6) als Kontrast gezeigt -- aber TFPTs Axion ist
+das Det-Linien-/Strong-CP-Axion, nicht DFSZ. 5/5.
+
+Netto axion01->05->06: die "Winkel-Katastrophe" wird zu einem sauberen, dial-freien, domaenenwand-sicheren
+POST-INFLATIONAEREN Axion -- Preis nur die (ohnehin fragile) Winkel-Vorhersage. Der Axion-Zweig ist damit
+ehrlich AUSGEREIZT und in guter Form. verification/ + Paper NICHT angefasst (Haupt-Manifest unveraendert).

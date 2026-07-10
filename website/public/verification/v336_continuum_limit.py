@@ -8,8 +8,8 @@ state OS-reconstructs to the holomorphic (E8)_1 chiral net at tau=i".  Its only 
 was loosely called "the continuum OS reconstruction of the gapped quasi-free collar".  Two
 recent rigorous results split that into a CITABLE part and a narrow GENUINELY-OPEN part:
 
-  [C] 1. CONTINUUM SCALING-LIMIT LEG is citable.  Morinelli-Morsella-Stottmeister-Tanimoto,
-        "Conformal Field Theory from Lattice Fermions" (Comm. Math. Phys.,
+  [C] 1. CONTINUUM SCALING-LIMIT LEG is citable.  Osborne-Stottmeister,
+        "Conformal Field Theory from Lattice Fermions" (Comm. Math. Phys. 398 (2023),
         doi:10.1007/s00220-022-04521-8; built on "Scaling limits of lattice quantum fields
         by wavelets", CMP 387 (2021) 299, and PRL 127 (2021) 230601) prove, by
         operator-algebraic (Wilson-Kadanoff / wavelet) renormalization, that the massless
@@ -76,8 +76,8 @@ def run():
     # 1. continuum scaling-limit leg citable: (E8)_1 inside the OAR range rank <= c <= D
     in_range = (rank_E8 <= c_seam <= D_majorana)
     c_from_majorana = sp.Rational(D_majorana, 2)
-    check("CONTINUUM LEG [C]: Morinelli-Morsella-Stottmeister-Tanimoto (CFT from Lattice "
-          "Fermions, doi:10.1007/s00220-022-04521-8) give the chiral-CFT scaling limit of "
+    check("CONTINUUM LEG [C]: Osborne-Stottmeister (CFT from Lattice "
+          "Fermions, CMP 398 (2023) 219, doi:10.1007/s00220-022-04521-8) give the chiral-CFT scaling limit of "
           "free lattice fermions (Koo-Saleur -> Virasoro, correct c); their WZW range is "
           "rank <= c <= D. (E8)_1: c=%d, rank=%d, D=%d Majoranas (c=D/2=%s) => %d<=%d<=%d "
           "IN range; the collar is a gapped quasi-free (CAR) state, exactly this class"

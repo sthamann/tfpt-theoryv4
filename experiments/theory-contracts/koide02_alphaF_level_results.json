@@ -1,0 +1,37 @@
+{
+  "contract": "KOIDE.U3.02 Sumino ratio alpha_F/alpha",
+  "date": "2026-07-10",
+  "firewall": "theory contract, never a scorecard row; not evidence",
+  "clean_ratio": "3/4",
+  "claimed": "4",
+  "verdict_type": "cautionary/negative",
+  "verdict": "CAUTION: '4' NOT forced (clean ratio 3/4; convention-dependent) (5/5)",
+  "checks": [
+    {
+      "check": "C1 CASIMIRS [E]: C2(SU(3) fund) = (N^2-1)/(2N) = 4/3, C2(SU(3) adj) = N = 3 -- the objects the cancellation ratio is built from",
+      "pass": true,
+      "detail": "C2_fund = 4/3, C2_adj = 3"
+    },
+    {
+      "check": "C2 CLEAN GAUGE-CANCELLATION RATIO [E]: the gauge self-energy log coefficient ~ (coupling^2)(Casimir); cancellation alpha_F C2 = alpha Q^2 => alpha_F/alpha = Q^2/C2(fund) = 3/4 -- NOT 4",
+      "pass": true,
+      "detail": "alpha_F/alpha (clean) = 3/4 = 0.75; claimed 4 differs by factor 16/3"
+    },
+    {
+      "check": "C3 CONVENTION SCAN [E]: under plausible U(3) conventions the ratio lands in {3/4, 9/4, 1/3, 1, 4/3} -- 'which value' is CONVENTION-DEPENDENT and NONE cleanly gives 4",
+      "pass": true,
+      "detail": "fund, per-lepton (clean): 3/4; fund x N_fam (loop sum): 9/4; adjoint rep: 1/3; adjoint x N_fam: 1; inverse conv (C2/Q2): 4/3"
+    },
+    {
+      "check": "C4 THE '4' IS NUMEROLOGY-UNTIL-DERIVED [E]/[O]: 4 = |mu4| = N_fam*C2(3) = 3*(4/3) are EXACT identities, but the convention-free gauge ratio is 3/4, not 4 -- so NO gauge argument forces alpha_F/alpha = 4; koide01's '4=|mu4|' link is a COINCIDENCE unless Sumino's exact U(3) normalisation is derived from the A3 net",
+      "pass": true,
+      "detail": "identities hold (3*4/3=4=|mu4|); clean ratio 3/4 != 4 => not forced"
+    },
+    {
+      "check": "C5 RELOCATION AUDIT [O]: the open step is STRICTER than koide01 stated -- first derive Sumino's U(3) coupling normalisation from the A3 net (the clean gauge ratio is 3/4, not 4), THEN the cancellation. The '4=|mu4|' is not a derivation. Never a scorecard row; never [E]",
+      "pass": true,
+      "detail": "one-loop gauge self-energy log ~ (coupling^2)(Casimir), same structure for QED and family gauge (standard); Sumino arXiv:0812.2103 U(3) family cancellation at alpha_F ~ O(1) alpha (cited; the specific '4' is his normalisation); the A3 = SU(4) family net (TFPT) -- Sumino's coupling normalisation is NOT yet derived from it (the sharpened open step)"
+    }
+  ],
+  "reading": "Computing the Sumino cancellation ratio honestly: the clean one-loop gauge-cancellation gives alpha_F/alpha = Q^2/C2(SU(3) fund) = 3/4, NOT 4. The specific value 4 is convention-dependent (U(3) normalisation, charge assignment, family multiplicity) and none of the plausible conventions cleanly yields 4. So while 4 = |mu4| = N_fam*C2(3) are exact identities, there is NO convention-free gauge argument forcing alpha_F/alpha = 4 -- koide01's '4=|mu4|' link is downgraded to a coincidence-until-derived. The sharpened open step is stricter: first derive Sumino's U(3) coupling normalisation from the A3 net (the clean target is 3/4), then the cancellation. This is the anti-numerology discipline. Never a scorecard row; never [E]."
+}

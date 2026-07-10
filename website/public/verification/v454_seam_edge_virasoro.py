@@ -6,8 +6,9 @@ directly on our own free-fermion edge (G2 of the post-F next steps).
 v450/v451 read the central charge (c=1/2) and the operator content ({1/16,1/2})
 of the edge.  This module tests the ALGEBRA: that the lattice approximants of the
 chiral symmetry generators carry the correct CENTRAL EXTENSION -- the empirical
-content of the MMST theorem (Morinelli-Morsella-Stottmeister-Tanimoto, the cited
-v336 existence theorem) on OUR collar, not merely "in range".  Three parameter-free
+content of the seam scaling-limit theorem (Osborne-Stottmeister, arXiv:2107.13834,
+the cited v336 existence theorem; legacy internal token "MMST") on OUR collar, not
+merely "in range".  Three parameter-free
 / exact checks that converge on c_-=8:
 
   [E] 1. CASIMIR CENTRAL CHARGE (the L_0 eigenvalue).  the critical complex

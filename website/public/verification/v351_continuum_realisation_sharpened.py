@@ -28,7 +28,7 @@ ambiguity from the residual.
         NOT "which net" but ONLY: does the gapped quasi-free collar actually HAVE a chiral
         edge / a massless continuum scaling limit (the bulk-edge correspondence: a gapped E8
         bulk has a chiral c=8 edge)?  That existence question is the literature-anchored
-        continuum-limit leg (Morinelli-Stottmeister, Adamo OS; v336).  The residual is sharper
+        continuum-limit leg (Osborne-Stottmeister, Adamo OS; v336).  The residual is sharper
         (existence of the chiral edge), with the net and the holomorphy already pinned.
 
 HONEST SCOPE: [E] the order-4 clock + Coxeter-match jointly pin E8 over SO(16) (resolving the
@@ -87,7 +87,7 @@ def run():
     check("RESIDUAL IS PURELY EXISTENCE [O]: what remains open in SEAM.EQUIV.01 is NOT 'which "
           "net' but ONLY whether the gapped quasi-free collar HAS a chiral edge / massless "
           "scaling limit (the bulk-edge correspondence: a gapped E8 bulk has a chiral c=8 "
-          "edge) -- the literature-anchored continuum leg (Morinelli-Stottmeister, Adamo OS; "
+          "edge) -- the literature-anchored continuum leg (Osborne-Stottmeister, Adamo OS; "
           "v336). The net and the holomorphy are already pinned; only existence remains", True)
 
     return summary("v351 continuum realisation sharpened: the order-4 mu4 clock + the Coxeter-match pin E8 over SO(16) (the c=8 which-net ambiguity resolved, non-circularly); the residual of SEAM.EQUIV.01 is PURELY the chiral-edge/scaling-limit existence (v336), not which-net -- NOT closed")

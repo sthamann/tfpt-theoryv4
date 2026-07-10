@@ -1,0 +1,38 @@
+{
+  "contract": "AXION.FORCE.03 forced scalaron-gluon coupling",
+  "date": "2026-07-10",
+  "firewall": "theory contract, never a scorecard row; not evidence",
+  "forced_delta_inv_alpha_s": -4.785010362408915,
+  "forced_enhancement": 73.33333333333334,
+  "required_enhancement": 10000000000000.0,
+  "orders_short": 11.134698573897456,
+  "verdict": "MARGINAL: forced minimal anomaly ~11 orders short in Lambda, but a modest O(7~b3) coupling bridges it -- viable, NOT yet forced (5/5)",
+  "checks": [
+    {
+      "check": "C1 NO TREE COUPLING [E]: the 4D gauge kinetic F^2 sqrt(-g) is Weyl-INVARIANT (conformal weight 0), so the scalaron (the Weyl factor Omega) does NOT couple to gluons at tree level -- no O(1) phi F^2 term exists to tune",
+      "pass": true,
+      "detail": "conformal weight of F^2 sqrt(-g) in d=4 is 0 (invariant)"
+    },
+    {
+      "check": "C2 THE FORCED (ANOMALY) COUPLING [E]: the only no-dial coupling is the trace anomaly, coefficient fixed by b3=7; Delta(1/alpha_s)_anom = (b3/2pi) ln(Omega^2), ln(Omega^2)=sqrt(2/3) phi/Mbar",
+      "pass": true,
+      "detail": "Delta(1/alpha_s)_anom (anomaly factor 1) = -4.79"
+    },
+    {
+      "check": "C3 PLATEAU FIELD VALUE [E]: phi_inf = sqrt(3/2) Mbar ln(4N/3) = 5.26 Mbar (N=55), ln(Omega^2) = 4.30, Delta(1/alpha_s)_anom ~ -4.79 (O(5) even with generous anomaly factor)",
+      "pass": true,
+      "detail": "phi/Mbar=5.26, ln(Omega^2)=4.30, Delta=-4.79"
+    },
+    {
+      "check": "C4 EXPONENTIAL SENSITIVITY => FACTOR ~7 IN THE COUPLING [E]: anomaly gives Lambda_inf/Lambda_0 = 7.3e+01 (~11 orders short IN Lambda), but Lambda is exponential in the coupling, so bridging needs only a factor |Delta_req/Delta_anom| = 6.96 in the COUPLING COEFFICIENT -- O(1-10), suggestively ~ b3 = 7 (NOT derived)",
+      "pass": true,
+      "detail": "enhancement(anomaly)=7.3e+01; coupling factor needed = 6.96 ~ b3=7"
+    },
+    {
+      "check": "C5 VERDICT / RELOCATION [O]: MARGINAL -- the forced minimal anomaly (coeff 1) is ~11 orders short IN Lambda, but because Lambda is exponential in the coupling only a factor ~7 (~b3) in the coefficient bridges it, so a MODEST non-minimal enhancement suffices (viable, NOT a near-kill). The sharp target: derive a scalaron-gluon coupling ~b3 x the trace anomaly from the spectral action / the A3(+)D5 index; until then FR.DM.02's fixed angle is viable but not forced. Never a scorecard row; never [E]",
+      "pass": true,
+      "detail": "Starobinsky Einstein-frame Omega^2 = f'(R) = exp(sqrt(2/3) phi/Mbar) (standard f(R)); 4D Weyl-invariance of F^2 (standard); trace anomaly coefficient = b3 (standard); phi_inf = sqrt(3/2) Mbar ln(4N/3), N_star external band [50,60]; arXiv:2605.15192 postulates a LARGE non-minimal coupling (a dial), not the forced anomaly one"
+    }
+  ],
+  "reading": "Deep-step 1 pushed to a decision. The ONLY genuinely-forced (no-dial) scalaron-gluon coupling is the trace anomaly: the 4D gauge kinetic term is Weyl-invariant, so the scalaron couples to gluons only through the conformal anomaly, coefficient fixed by b3=7. At the plateau (phi ~ 5.3 Mbar, N=55) it gives Delta(1/alpha_s) ~ -4.8, a QCD enhancement of only ~7e+01 -- 11 orders short IN Lambda of the ~1e13 needed. But Lambda is EXPONENTIAL in the coupling, so the true gap is only a factor 6.96 in the coupling COEFFICIENT (4.8 -> 33) -- O(1-10), and suggestively close to b3 = 7 (flagged, not derived). So the honest verdict is MARGINAL, not a kill: the minimal anomaly is far too weak, but a modest O(7) non-minimal enhancement suffices. FR.DM.02's fixed-angle scenario is therefore VIABLE but hinges on deriving a scalaron-gluon coupling ~b3 x the anomaly from the spectral action / the A3(+)D5 index -- until then it is not forced (a dial of O(7)). This corrects axion02's cruder statement with the exponential sensitivity. Never a scorecard row; never [E]."
+}

@@ -1,0 +1,49 @@
+{
+  "contract": "AXION.ISO.01 isocurvature kill-test",
+  "date": "2026-07-10",
+  "firewall": "theory contract, never a scorecard row; F_transfer bridge self-consistency, not external evidence",
+  "inputs": {
+    "c3": 0.039788735772973836,
+    "f_a_GeV": 239060117184.66724,
+    "M_scal_GeV": 30599694999637.406,
+    "A_s": 2.1e-09,
+    "r_ref": 0.004,
+    "H_inf_GeV": 15679460829520.916,
+    "theta_spine_deg": 108,
+    "theta_hilltop_deg": 170
+  },
+  "verdict": "KILL-TEST FIRES (FR.DM.02 fixed-angle scenario inconsistent) (6/6)",
+  "checks": [
+    {
+      "check": "C1 H_inf FROM TFPT (A_s, r) [E]: H_inf = pi Mbar sqrt(A_s r/2) ~ 1.6e13 GeV across the frozen r-band 12/N*^2 (N* in [50,60]) -- reproduces the reviewer's number",
+      "pass": true,
+      "detail": "H_inf(r=0.004)=1.568e+13; band(N*=50,55,60)=[1.72e+13, 1.56e+13, 1.43e+13] GeV"
+    },
+    {
+      "check": "C2 PQ RESTORED DURING INFLATION [E]: H_inf/f_a ~ 66 > 1 -- the de Sitter field excursion exceeds the PQ VEV f_a, so a PRE-inflationary FIXED misalignment angle does NOT apply (post-inflationary/defect regime, not the fixed-theta_i regime FR.DM.02 assumes)",
+      "pass": true,
+      "detail": "H_inf/f_a = 65.6 (>1); f_a = 2.391e+11 GeV, H_inf = 1.568e+13 GeV"
+    },
+    {
+      "check": "C3 FIXED-ANGLE ISOCURVATURE EXCLUDED [O]: delta_theta = H_inf/(2 pi f_a) = 10.4 >> 2 pi (angle randomised); CDM axion isocurvature fraction beta = 1.000 (108 deg) / 1.000 (170 deg) both >> Planck beta_iso < 0.038 -- EXCLUDED by orders of magnitude",
+      "pass": true,
+      "detail": "delta_theta=10.44; beta_spine=1.0000, beta_hilltop=1.0000 (bound 0.038)"
+    },
+    {
+      "check": "C4 ESCAPE ROUTE TYPED (2605.15192) [O]: lift m_a(phi) > H_inf during inflation via an inflaton(scalaron)-driven early-QCD scale; the mechanism PREFERS plateau inflation and TFPT's R^2 branch IS a plateau (structural match).  Target: Lambda_inf > sqrt(H_inf f_a); coupling MUST be forced (c3 / spectral action / A3+D5 index), not a dial",
+      "pass": true,
+      "detail": "Lambda_inf needed ~ 1.936e+12 GeV (~9.7e+12 x today's Lambda_QCD) -- a well-defined target for the forced coupling"
+    },
+    {
+      "check": "C5 POWER / NEGATIVE CONTROL [E]: the tension is driven by TFPT's OWN r ~ 0.004 + f_a ~ 2.4e11 -- for low-scale inflation (r=1e-6) or trans-Planckian f_a (1e17) the SAME statistic gives delta_theta << 1 (consistent), so the kill-test has genuine discriminating power",
+      "pass": true,
+      "detail": "delta_theta(r=1e-6)=0.165; delta_theta(f_a=1e17)=2.495e-05 -- both < 1"
+    },
+    {
+      "check": "C6 RELOCATION AUDIT [O]: internal consistency test of the FR.DM.02 CONJECTURE branch. VERDICT: the fixed-angle relic scenario is INCONSISTENT as stated (C2+C3); FR.DM.02 needs the FORCED early-QCD coupling (C4). Registered as an OPEN kill-test -- never a scorecard row, never [E]",
+      "pass": true,
+      "detail": "single-field slow-roll relation A_s r = 2 H^2/(pi^2 Mbar^2) (standard); Planck 2018 uncorrelated CDM isocurvature bound beta_iso < 0.038 (cited); de Sitter field fluctuation H/(2 pi) per mode (standard); PQ-restoration criterion H_inf > f_a (standard); the escape mechanism arXiv:2605.15192 (cited, not adopted)"
+    }
+  ],
+  "reading": "GIVEN TFPT's own frozen numbers -- r ~ 0.004 (R^2 branch), A_s ~ 2.1e-9, f_a = M_scal/128 ~ 2.39e11 GeV (FR.DM.02) -- the inflationary Hubble scale H_inf ~ 1.6e13 GeV satisfies H_inf/f_a ~ 66 > 1 and H_inf/(2 pi f_a) ~ 10.4. So (i) the PQ symmetry is effectively restored during inflation, and (ii) a FIXED pre-inflationary misalignment angle (108 deg spine or 170 deg hilltop) is not a consistent homogeneous initial condition -- the induced CDM isocurvature exceeds the Planck bound by orders of magnitude. This is a genuine, previously-unregistered TENSION on the FR.DM.02 branch. The typed escape (arXiv:2605.15192) lifts m_a > H_inf during inflation and prefers plateau inflation, matching TFPT's R^2 branch; but the scalaron-gluon coupling that does this MUST follow from c3 / the spectral action / the A3(+)D5 index, or parameter freedom is lost. NOT claimed: any closure of the dark-matter relic scale. Open kill-test; never a scorecard row; never [E]."
+}

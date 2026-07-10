@@ -48124,7 +48124,7 @@ export const CHANGELOG: ChangelogEntry[] = [
         },
         {
           "k": "t",
-          "v": "continuum leg: Morinelli–Morsella–Stottmeister–Tanimoto ("
+          "v": "continuum leg: Osborne–Stottmeister ("
         },
         {
           "k": "i",
@@ -48137,7 +48137,20 @@ export const CHANGELOG: ChangelogEntry[] = [
         },
         {
           "k": "t",
-          "v": ", doi:10.1007/s00220-022-04521-8; CMP 387 (2021) 299; PRL 127 (2021) 230601) give, by operator-algebraic (wavelet) renormalization, the chiral-CFT scaling limit of free lattice fermions (Koo–Saleur "
+          "v": ", doi:10.1007/s00220-022-04521-8, CMP "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "398"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (2023) 219) give, building on the MMST (Morinelli–Morsella–Stottmeister–Tanimoto) operator-algebraic (wavelet) renormalization framework (CMP 387 (2021) 299; PRL 127 (2021) 230601), the chiral-CFT scaling limit of free lattice fermions (Koo–Saleur "
         },
         {
           "k": "m",

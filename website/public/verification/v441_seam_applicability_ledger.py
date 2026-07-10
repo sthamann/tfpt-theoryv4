@@ -10,7 +10,8 @@ that establishes it) or a genuinely external analytic assumption.  The audit sho
 all but ONE hypothesis are internal [E]; the lone external input is the CONTINUUM
 EXISTENCE of the chiral massless scaling limit.
 
-  [E] 1. MMST HYPOTHESES (Morinelli-Morsella-Stottmeister-Tanimoto).  D=16 Majoranas
+  [E] 1. OS HYPOTHESES (Osborne-Stottmeister, arXiv:2107.13834; legacy token "MMST",
+         built on the MMST/Morinelli-Morsella-Stottmeister-Tanimoto OAR framework).  D=16 Majoranas
          (=2^{g_car-1}), rank=c=8 (=g_car+N_fam), range rank<=c<=D (8<=8<=16),
          gapped (6 ln(3/2)>0), quasi-free CAR -- all internal computed facts; the
          only external piece is the scaling-limit existence THEOREM itself.

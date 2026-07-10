@@ -21,8 +21,9 @@ THE CHAIN (each step a theorem or a core TFPT fact, except the marked input):
   S4 [C, anomaly inflow / bulk-edge]  a NONTRIVIAL invertible phase has a NON-gappable
         (anomalous) edge -- so the EXISTENCE of a gapless chiral edge FOLLOWS from S3, it is
         not a separate assumption (the c_- != 0 edge cannot be gapped).
-  S5 [C, MMST]           the edge is 16 chiral Majoranas; Morinelli-Morsella-Stottmeister-
-        Tanimoto give its chiral-CFT scaling limit (Koo-Saleur -> Virasoro, correct c), range
+  S5 [C, OS]             the edge is 16 chiral Majoranas; Osborne-Stottmeister
+        (arXiv:2107.13834; legacy token "MMST") give its chiral-CFT scaling limit
+        (Koo-Saleur -> Virasoro, correct c), range
         rank <= c <= D: 8 <= 8 <= 16 -- IN range (v336).
   S6 [E, TFPT]           the order-4 mu4 clock selects the index-4 net = (E8)_1, not SO(16)
         (v351); the stack invertible -> trivial center -> holomorphic -> (E8)_1 is cited

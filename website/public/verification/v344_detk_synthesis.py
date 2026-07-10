@@ -22,7 +22,7 @@ limit).  A synthesis/roadmap (like v275/v343); it closes nothing and fabricates 
         topological information -- this is the precise reason det K=1 is the residual.
   [E] 3. THREE GENUINE GENUS-1 ACCESS ROUTES.  Exactly three known ways reach genus-1:
         (R1) CONTINUUM-MODULAR -- the scaling limit + the modular character chi_E8 = j^{1/3}
-             (Morinelli-Stottmeister scaling limit + Adamo OS, v336); the hard analytic path.
+             (Osborne-Stottmeister scaling limit + Adamo OS, v336); the hard analytic path.
         (R2) ANYON-CONDENSATION-TORUS -- the torus degeneracy = #anyons = |det K|, via the
              condensation tower 16->4->1 (KLM/Longo index, v281); algebraic but needs the
              full mu4.

@@ -600,8 +600,8 @@
   "date": "2026-06-25"
  },
  "tfpt_4_frontier::section::Dark matter --- the candidate is fixed, the scale is pending::1": {
-  "hash": "461df59eb123",
-  "date": "2026-06-27"
+  "hash": "dcafd579e0d1",
+  "date": "2026-07-10"
  },
  "tfpt_4_frontier::section::The muon anomalous magnetic moment --- a seam vertex readout::1": {
   "hash": "fa4b8d3cdd1a",
@@ -612,8 +612,8 @@
   "date": "2026-07-02"
  },
  "tfpt_4_frontier::section::Summary::1": {
-  "hash": "78fae67d1189",
-  "date": "2026-06-24"
+  "hash": "c0bc3591e81c",
+  "date": "2026-07-10"
  },
  "tfpt_4_frontier::section::Appendix: computational verification::1": {
   "hash": "435494367e01",
@@ -756,8 +756,8 @@
   "date": "2026-07-02"
  },
  "origin_theory::section::Honest status::1": {
-  "hash": "a26b282faf57",
-  "date": "2026-07-02"
+  "hash": "ac28a6442efb",
+  "date": "2026-07-10"
  },
  "origin_theory::section::Appendix: computational verification::1": {
   "hash": "273bbb10f788",

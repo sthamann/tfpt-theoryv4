@@ -1,0 +1,34 @@
+{
+  "contract": "KOIDE.U3.01 U(3) family in A3 + Sumino cancellation",
+  "date": "2026-07-10",
+  "firewall": "theory contract, never a scorecard row; F_transfer bridge internal consistency, not external evidence",
+  "verdict": "CONTRACT HOLDS (affordance real; closure OPEN at the forced coupling) (5/5)",
+  "checks": [
+    {
+      "check": "C1 U(3) \u2282 A3=SU(4) [E]: 15 = 8 + 1 + 3 + 3bar; the 9 generators (8 SU(3)_F + 1 U(1)_F = diag(1,1,1,-3)) CLOSE as u(3), and [u(3), coset] \u2282 coset (3+3bar) -- the family gauge sector is a genuine subalgebra of the A3 carrier",
+      "pass": true,
+      "detail": "u(3) closes: True; [u(3),coset]\u2282coset: True; dims 9+6=15: True"
+    },
+    {
+      "check": "C2 SUMINO SIGN FLIP [C]: a QED-sign mass-log perturbation BREAKS an exact-Koide (2/3) triple (dQ = 1.80e-04); the opposite-sign conjugate-rep family log has dQ = -1.80e-04 (opposite), and equal magnitudes RESTORE Q=2/3 (resid 1.1e-16) -- the conjugate L/R assignment is what makes the family log oppose QED",
+      "pass": true,
+      "detail": "sign(QED)=+1, sign(family)=-1 (opposite); cancellation resid 1.1e-16"
+    },
+    {
+      "check": "C3 THE '4' [E]/[O]: the log cancellation needs alpha_F = 4 alpha; and 4 = |mu4| = N_fam * C2(SU(3) fund) = 3 * 4/3 are EXACT identities [E]. Whether the E8 level/embedding index PHYSICALLY FORCES alpha_F = 4 alpha (vs tuning) is the OPEN make-or-break step [O]",
+      "pass": true,
+      "detail": "C2(SU(3) fund) = 4/3; N_fam*C2 = 4 = 4; |mu4| = 4 = 4 (both exact; physical forcing = open)"
+    },
+    {
+      "check": "C4 THE 53/54 FACTOR [I]/[C]: operator identity 53/54 = a^T(R+Q)1 / (2*1^T R a) (53 = missing corner, 54 = 2 N_fam^3 = |Z2| N_fam^3) [I]; the seed transfer u->(53/54)u lands Q = 0.6666661 (dev -5.7e-07 from 2/3); the transfer MECHANISM stays [C]",
+      "pass": true,
+      "detail": "corner=53, 2*cubic=54=|Z2|N_fam^3, ratio=53/54; Q_pole=0.6666661 dev=-5.7e-07"
+    },
+    {
+      "check": "C5 RELOCATION AUDIT [O]: the U(3) \u2282 A3 embedding (C1) and the Sumino sign flip (C2) are REAL; alpha_F=4alpha is NOT derived (C3, open); the 53/54 mechanism is [C]. VERDICT: the family sector is a genuine algebraic affordance of A3 -- Koide becomes a LOOP TEST of the A3 family net -- but closure via Sumino stays OPEN pending the forced coupling. Never a scorecard row; never [E]",
+      "pass": true,
+      "detail": "Sumino arXiv:0812.2103 U(3) family gauge, conjugate L/R reps, log cancellation at alpha_F ~ 4 alpha (cited; needs 10^2-10^3 TeV bosons); the coupling relation alpha_F = 4 alpha (NOT derived from the E8 level/index here -- the open make-or-break, C3); the 53/54 transfer MECHANISM (v183 operator identity is exact; the leptonic pole transfer reading the F corner stays [C])"
+    }
+  ],
+  "reading": "The U(3) family gauge sector the Sumino mechanism needs is ALGEBRAICALLY ALREADY PRESENT in the A3=SU(4) carrier: 15 = 8+1+3+3bar, and the 9 block/diagonal generators close as u(3) with the 3+3bar as coset (C1). The conjugate left/right assignment flips the Koide-breaking log sign, so a family-gauge term CAN cancel the QED breaking (C2), and the transfer factor 53/54 is the exact carrier operator identity a^T(R+Q)1/(2*1^T R a), with 54 = |Z2| N_fam^3, landing Q at 0.6666661 (C4). The make-or-break OPEN step is that the coupling relation alpha_F = 4 alpha be FORCED by the E8 level/embedding index rather than tuned; the '4' = |mu4| = N_fam*C2(3) are exact integers (C3), but their physical forcing is not derived. So the U(3) affordance turns Koide from an isolated curiosity into a candidate LOOP TEST of the A3 family net; closure via Sumino remains OPEN. Never a scorecard row; never [E]."
+}

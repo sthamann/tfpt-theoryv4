@@ -1,0 +1,44 @@
+{
+  "contract": "FLAV.WALL.04 regular-semisimple logahoric",
+  "date": "2026-07-10",
+  "firewall": "theory contract, never a scorecard row; not evidence",
+  "cusp_weights": [
+    "0",
+    "1/3",
+    "2/3"
+  ],
+  "residue_spectrum": [
+    "1",
+    "2",
+    "3"
+  ],
+  "verdict": "REGULAR-SEMISIMPLE => in the logahoric/parahoric framework; residual narrowed (open) (5/5)",
+  "checks": [
+    {
+      "check": "C1 CUSP WEIGHTS DISTINCT (regular) [E]: the parabolic cusp weights {0, 1/3, 2/3} are pairwise distinct -> a full regular flag (no coincident weights)",
+      "pass": true,
+      "detail": "weights = ['0', '1/3', '2/3'], distinct = True"
+    },
+    {
+      "check": "C2 RESIDUE SPECTRUM DISTINCT (regular semisimple) [E]: Spec(Q_+) = 3*{0,1/3,2/3}+1 = {1,2,3}, three distinct eigenvalues -> the residue is REGULAR SEMISIMPLE (the tame/regular-singular class)",
+      "pass": true,
+      "detail": "Spec(Q_+) = ['1', '2', '3'], distinct = True"
+    },
+    {
+      "check": "C3 IN THE LOGAHORIC/PARAHORIC FRAMEWORK [C]: a regular-semisimple residue at a tame puncture is exactly where the logahoric non-abelian Hodge correspondence (Biswas-Kydonakis-Majra) and the parahoric Hitchin section (Baraglia-Kamgarpour-Varma) are ESTABLISHED -- so the Phi=0 wall point sits in a worked framework, not a pathological boundary",
+      "pass": true,
+      "detail": "regular-semisimple + tame => logahoric/parahoric nonabelian Hodge (cited); Hitchin sections exist at regular-singular punctures"
+    },
+    {
+      "check": "C4 DISCRIMINATING CONTROL [E]: a coincident-weight residue (e.g. {0,0,2/3} -> Spec {1,1,3}) is NOT regular semisimple (repeated eigenvalue) and leaves the tame class; the TFPT residue is regular (C2), so it is in the good class -- the distinctness test genuinely discriminates",
+      "pass": true,
+      "detail": "bad Spec {1,1,3} distinct = False; TFPT Spec {1,2,3} distinct = True"
+    },
+    {
+      "check": "C5 RESIDUAL NARROWED [O]: from flav03's 'extend Gonz\u00e1lez to the unknown Phi=0 boundary' to 'match Gonz\u00e1lez's reducedness criterion to the logahoric Hitchin section for regular-semisimple residues' -- a cited-adjacent statement in an ESTABLISHED framework. Never a scorecard row; never [E]",
+      "pass": true,
+      "detail": "cusp weights {0,1/3,2/3} + Spec(Q_+)={1,2,3} (GATE.UWALL.03, in-suite); logahoric nonabelian Hodge: Biswas-Kydonakis-Majra (cited); parahoric Hitchin section: Baraglia-Kamgarpour-Varma (cited); the remaining cited-adjacent statement: Gonz\u00e1lez reducedness <=> logahoric Hitchin section for regular-semisimple residues"
+    }
+  ],
+  "reading": "Identifying which boundary flav03's residual lives on. The TFPT wall puncture has cusp weights {0,1/3,2/3} (distinct) and residue spectrum Spec(Q_+) = 3*weights+1 = {1,2,3} (distinct) -- so the parabolic residue is REGULAR SEMISIMPLE, a tame/regular-singular point. That is exactly the class for which the logahoric non-abelian Hodge correspondence (Biswas-Kydonakis-Majra) and the parahoric Hitchin section (Baraglia-Kamgarpour-Varma) are ESTABLISHED. So the Phi=0 wall is NOT a pathological boundary: it sits in a worked framework, and the Gonz\u00e1lez residual narrows from 'extend to an unknown boundary' to 'match reducedness to the logahoric Hitchin section for regular-semisimple residues' -- a cited-adjacent statement. An honest advance on deep-step 2's residual, not a closure. Never a scorecard row; never [E]."
+}

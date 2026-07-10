@@ -355,6 +355,225 @@ Chain now: clock (order 4) ⇒ glue = μ4 ⇒ spinorial ⇒ A3⊕D5 ⇒ octave (
 cd experiments/theory-contracts && python3 glue02_octave_derivation.py
 ```
 
+## `flav02_wall_bruhat_gonzalez.py` — Gonzalez/Bruhat Wand-Selektion (2026-07-10)
+
+Machine-tests the reviewer's binary kill-test for the quark holonomy normalisation
+(`problem_b.txt` point 3, arXiv:2606.16880): is the TFPT wall divisor **reduced**
+(→ canonical Hitchin section, unique selection) or **wobbly** (→ uniqueness false)?
+
+The wall splitting type `O(-2)⊕O(-1)²` (exponents `{2,1,1}` = the anchor `a`,
+GATE.UWALL.03) gives a cocharacter that projects to the **minuscule** fundamental
+coweight `ω₁` of `A₂`. All root pairings `⟨λ,α⟩ ∈ {0,±1}` → the affine-Weyl divisor
+is **multiplicity-free = REDUCED**, and the affine length `ℓ(t_λ)=2` is confirmed by
+an explicit inversion count. Wobbly controls (`O(-3)⊕O(0)²`, `O(-2)²⊕O(0)`) have a
+pairing `≥2` and correctly fail.
+
+Result (2026-07-10): **REDUCED / NOT WOBBLY, 6/6** (`flav02_wall_bruhat_results.json`)
+— the positive branch of the kill-test. Honest caveat (C6): Gonzalez proves
+very-stable ⟺ reduced for **smooth interior** Borel-type fixed points, whereas the
+TFPT point sits **on** the stability wall (the `α₂₃` pairing is 0) and is polystable,
+so verbatim applicability needs the parahoric/logahoric boundary extension. This
+**sharpens** GATE.UWALL from "positive-dimensional `D4` locus" to "one boundary case
+of a 2026 theorem". Never a scorecard row; never `[E]`.
+
+```bash
+cd experiments/theory-contracts && python3 flav02_wall_bruhat_gonzalez.py
+```
+
+## `nu01_casas_ibarra_seam.py` — Casas-Ibarra aus Seam-Symmetrien? (2026-07-10)
+
+Machine-tests whether the seam symmetries fix the Casas-Ibarra matrix of the type-I
+seesaw (`problem_b.txt` point 4). Enumerating `R` with `[R,C3]=0`, `Θ R Θ = R*`,
+`RᵀR=1`, `det R=1`: commuting with the family cycle `C3` gives the circulant algebra;
+complex-orthogonality + det 1 cut `O(3,ℂ)` (3 complex params) to **one complex param**
+(`λ₀=1`, `λ₁λ₂=1` — the CI angle); the reflection reality forces `λ₁,λ₂` real → **one
+real param**.
+
+Result (2026-07-10): **CONTRACT HOLDS — honest NEGATIVE, 6/6**
+(`nu01_casas_ibarra_results.json`): a continuous family **remains**, so the seam
+symmetries do **not** uniquely fix `R_CI`. The seesaw realisation, the absolute
+neutrino-mass scale and the leptogenesis phase are **not** closed by symmetry alone;
+an independent transport/minimality selector (open) is required — matching the
+ledger's status. The symmetries do real work (they cut `3→1`), but not to a point.
+Never a scorecard row; never `[E]`.
+
+```bash
+cd experiments/theory-contracts && python3 nu01_casas_ibarra_seam.py
+```
+
+## `koide01_u3_family_sumino.py` — U(3)-Familie in A3=SU(4) + Sumino (2026-07-10)
+
+Machine-tests the reviewer's Koide route (`problem_b.txt` point 5): the Sumino
+`U(3)` family-gauge cancellation (arXiv:0812.2103) needs a family sector that is
+**algebraically already present** in the carrier, `A₃ = SU(4) ⊃ S(U(3)×U(1)) ≅ U(3)`.
+
+- C1 `[E]`: `15 = 8+1+3+3̄`; the 9 block/diagonal generators **close** as `u(3)`,
+  `[u(3),coset]⊂coset` — a genuine subalgebra of `A₃`, not an add-on.
+- C2 `[C]`: the conjugate `L/R` assignment flips the Koide-breaking mass-log sign, so
+  a family term **can** cancel the QED breaking (verified on `dQ/dε` of an exact-Koide
+  triple).
+- C3 `[E]/[O]`: `4 = |μ4| = N_fam·C₂(SU(3) fund) = 3·(4/3)` are exact identities, but
+  whether they **force** `α_F = 4α` (vs tuning) is the **open make-or-break** step.
+- C4 `[I]/[C]`: reproduces v183's operator identity `53/54 = aᵀ(R+Q)1/(2·1ᵀRa)`
+  (`54 = |Z₂|N_fam³`); the seed transfer lands `Q = 0.6666661` (dev `−5.7e-7`);
+  mechanism stays `[C]`.
+
+Result (2026-07-10): **CONTRACT HOLDS — affordance real, closure OPEN, 5/5**
+(`koide01_u3_family_results.json`): the `U(3)` sector is a real algebraic affordance
+turning Koide into a candidate **loop test** of the `A₃` family net; closure via
+Sumino stays open pending the forced coupling. Never a scorecard row; never `[E]`.
+
+```bash
+cd experiments/theory-contracts && python3 koide01_u3_family_sumino.py
+```
+
+## `axion01_isocurvature_killtest.py` — Axion-Isokurvatur-Kill-Test (2026-07-10)
+
+Machine-tests the hidden tension the reviewer flagged (`problem_b.txt` point 6): given
+TFPT's own frozen `r ≈ 0.004` (R² branch), `A_s ≈ 2.1e-9` and `f_a = M_scal/128 ≈
+2.39e11 GeV` (FR.DM.02), is a **fixed** pre-inflationary misalignment angle
+self-consistent?
+
+`H_inf = π M̄ √(A_s r/2) ≈ 1.6e13 GeV` gives `H_inf/f_a ≈ 66 > 1` (PQ effectively
+**restored** during inflation) and `H_inf/(2π f_a) ≈ 10.4` (angle fully randomised);
+the induced CDM isocurvature exceeds Planck's `β_iso < 0.038` by orders of magnitude
+— for **both** candidate angles (108° spine, 170° hilltop).
+
+Result (2026-07-10): **KILL-TEST FIRES, 6/6** (`axion01_isocurvature_results.json`):
+the FR.DM.02 fixed-angle relic scenario is **inconsistent as stated** — a genuine,
+previously-unregistered tension. The typed escape (arXiv:2605.15192) lifts
+`m_a > H_inf` during inflation and **prefers plateau inflation**, matching TFPT's R²
+branch; but the scalaron-gluon coupling must be **forced** (from `c₃` / the spectral
+action / the `A₃⊕D₅` index), never a free dial, or parameter freedom is lost.
+Negative control (low-scale inflation / trans-Planckian `f_a`) → consistent, so the
+test has genuine discriminating power. **Not** a dark-matter closure; open kill-test.
+Never a scorecard row; never `[E]`.
+
+```bash
+cd experiments/theory-contracts && python3 axion01_isocurvature_killtest.py
+```
+
+## Follow-up round (2026-07-10) — deepening the four problem_b contracts
+
+Five next-steps on the four contracts above (each firewalled; honest verdict incl.
+negatives; `verification/` untouched):
+
+- **`flav03_wall_polystable_reduction.py`** (next-step 2) — reduces flav02's residual:
+  the polystable wall point is unitary (Mehta–Seshadri) ⇒ Higgs `Φ=0` (nonabelian
+  Hodge), a genuine C\*-fixed point exhibited as **finite linear algebra** (an explicit
+  non-unitary cusp triple is unitarised by a positive-definite invariant form). With
+  `Φ=0` the very-stable obstruction is carried by the minuscule cocharacter alone, so
+  the wall case reduces to finite data + **one** cited boundary extension of González
+  (parahoric) — *not* a transcendental Hitchin PDE. **5/5.**
+- **`nu02_transport_selector.py`** (next-step 3) — the leftover Casas–Ibarra angle is
+  *not* fixed by symmetry (nu01); the minimal-transport selector gives the trivial
+  `R=I` (no CP, an assumption), while a **named** selector identifying the CI angle with
+  the seam transfer gap `e^z=(3/2)^6` gives a unique nontrivial `R` with definite CP
+  content (`‖Im R‖=7.99`) — a **conditional prediction `[P]`**, selector unproven. **5/5.**
+- **`koide02_alphaF_level.py`** (next-step 4) — **cautionary/negative**: the clean
+  one-loop gauge-cancellation ratio is `α_F/α = Q²/C₂(3) = 3/4`, **not 4**. The value
+  "4" is convention-dependent and no convention-free argument forces it, so koide01's
+  `4=|μ4|=N_fam·C₂` link is downgraded to *coincidence-until-derived* (anti-numerology).
+  The open step is stricter: first derive Sumino's U(3) normalisation from the A₃ net. **5/5.**
+- **`axion02_scalaron_gluon_forced.py`** (next-step 1) — quantifies next-step 1 to a
+  number: lifting `m_a>H_inf` needs `Λ_inf~1.9e12 GeV`, i.e. `Δ(1/α_s)~−33` during
+  inflation. That is `O(1/α_s)` and `O(c₃⁻¹=8π, 4π²)` — **viable** — but no single atom
+  hits it exactly and the repo's fixed gluon coupling `g_agg=−4c₃` is a different
+  operator, so it is **not yet forced**; the target is now sharply defined. **6/6.**
+- **Lean (next-step 5)** — `TfptCarrier/WallReducedMinuscule.lean` formalises flav02's
+  core arithmetic as a kernel-checked fact (`wall_certificate`: reduced/minuscule,
+  affine length 2, wobbly control fails), `#print axioms` = only the three standard
+  kernel axioms. Wired into `TfptCarrier.lean`; `lake build` clean.
+
+## Deep round (2026-07-10) — pushing four next-steps to a decision
+
+- **`axion03_anomaly_coupling.py`** (deep-1) — the only genuinely *forced* (no-dial)
+  scalaron-gluon coupling is the trace anomaly (4D `F²` is Weyl-invariant), coefficient
+  fixed by `b₃=7`. At the plateau it gives `Δ(1/α_s)≈−4.8` (Λ enhancement only ~70×,
+  11 orders short in Λ). **But** Λ is exponential in the coupling, so the true gap is a
+  factor `≈6.96` in the *coefficient* — `O(1–10)`, suggestively `≈b₃=7` (flagged, not
+  derived). Honest verdict: **MARGINAL** — viable with a modest `O(7)` non-minimal
+  enhancement, not a near-kill, not yet forced. (Self-corrected from a cruder "11 orders
+  → near-kill" framing.) **5/5.**
+- **`koide03_net_level.py`** (deep-2) — the A₃ net is level 1; `SU(3)_F` is a level-1,
+  index-1 sub-current (`4→3+1`), `U(1)_F=diag(1,1,1,−3)` norm² `=12`, so at the seam
+  `α_F=α_colour=α_GUT` (family–colour UV unification). But Sumino's condition is IR
+  (family-breaking scale `~10²–10³ TeV`, external + running). Verdict: **UV-pinned, IR
+  not forced** — sharpens koide02 (the missing input is the family-breaking scale). **5/5.**
+- **`flav04_wall_logahoric.py`** (deep-3) — the wall puncture is **regular-semisimple**
+  (cusp weights `{0,1/3,2/3}` distinct; `Spec(Q₊)=3·w+1={1,2,3}` distinct), so it is a
+  tame point in the **established** logahoric/parahoric non-abelian Hodge framework
+  (Biswas–Kydonakis–Majra; Baraglia–Kamgarpour–Varma). The González residual narrows
+  from "unknown Φ=0 boundary" to "reducedness ⇔ logahoric Hitchin section for
+  regular-semisimple residues" — cited-adjacent. **5/5.**
+- **Lean (deep-4)** — `TfptCarrier/WallRegularSemisimple.lean` certifies the finite
+  core: cusp weights distinct, `Spec(Q₊)={1,2,3}` distinct (regular semisimple),
+  irregular control fails, combined with `wall_reduced`. `#print axioms
+  wall_regular_and_reduced` = `[propext]`; `lake build` clean.
+
+## `axion04_factor_b3_refutation.py` — is the factor ≈7 really b₃? (2026-07-10)
+
+Tries to *derive* axion03's amplification factor `≈6.96` from the spectral action /
+the A₃⊕D₅ index — and **cleanly refutes** the `b₃` reading. Structurally, the
+required shift and the trace-anomaly shift both carry the same `(b₃/2π)` prefactor,
+so **b₃ cancels** in their ratio: `A = ln(Λ_req/Λ₀)/ln(Ω^p)` is independent of b₃
+(`A(b₃=7)=A(b₃=9)=6.962`). The `≈b₃` match holds only for the Weyl convention `p=2`
+(`p=1`→13.9), and `A` is a physical scale ratio set by `(H_inf, f_a, Λ_QCD, N⋆)`,
+not a group-theory integer. Moreover the spectral action's genuine scalaron-gluon
+coupling `R F²` is a subleading `a₆` term (higher moment `f₋₂`), not the `a₄` atoms
+that fix `F²`/`R²`. **Verdict: REFUTED** — axion03's suggestive `~b₃` hint is retired
+as coincidence; the isocurvature rescue stays genuinely open (a dim-4 dial, or a
+post-inflationary axion). **5/5.** The anti-numerology discipline (v354/v355 class).
+
+```bash
+cd experiments/theory-contracts && python3 axion04_factor_b3_refutation.py
+```
+
+## `axion05_angle_strategies.py` — strategy scan for the angle problem (2026-07-10)
+
+Steps back from the axion01–04 tension and scans the known escape routes against
+TFPT's own numbers, classifying each. **Constructive headline:** the tension is with
+the *fixed pre-inflationary angle*, not with TFPT. Because `H_inf ~ 1.6e13 GeV`
+exceeds `f_a ~ 2.39e11 GeV` by ~66×, the **natural** scenario is **post-inflationary
+PQ breaking** — no fixed angle, no axion isocurvature — and `f_a=2.39e11` sits in the
+post-inflationary relic window (`Ω_a h² ~ 0.33`). That route is **CLEAN (no dial)**.
+
+| Strategy | Verdict |
+|---|---|
+| S1 post-inflationary PQ | **CLEAN** (no dial; cost: no angle prediction + `N_DW=1`) |
+| S2 inflation-era larger `f_a` | CANDIDATE (needs `f_a(inf)`~10× in de Sitter, not established) |
+| S3 early-QCD heavy axion | DIAL (coupling ~7× anomaly, not forced — axion04) |
+| S4 subdominant axion | GIVES-UP-AXION-DM (`Ω_a/Ω_c < 8e-7`) |
+| S5 lower `H_inf` | NOT-VIABLE (`r < 4e-5` breaks the R² branch) |
+
+Recommendation: **reframe FR.DM.02** — drop the "108° spine angle" as a prediction
+(it becomes a horizon average), keep `f_a`, predict the relic; consistent and
+dial-free, at the single crux `N_DW=1` (to check for the det-line axion). **7/7.**
+
+```bash
+cd experiments/theory-contracts && python3 axion05_angle_strategies.py
+```
+
+## `axion06_domain_wall_number.py` — the det-line axion's domain-wall number (2026-07-10)
+
+Computes axion05's one crux: the domain-wall number `N_DW`. The TFPT axion is the
+phase of the seam **determinant line**, so its QCD colour anomaly (`= N_DW`) is the
+seam Dirac **index** — which is exactly the inflow level `k₀ = |C| = 1` already
+established in `v470/v472`. Hence **`N_DW = 1`**: a unique vacuum around the circle,
+**no stable domain walls**, so the post-inflationary resolution (axion05 S1) is
+cosmologically safe with **no** Lazarides–Shafi bias and **no dial**. Typed **[C]**
+(rests on identifying `N_DW` with the seam det-line index — the ALPHA.QUILLEN
+identification class). The DFSZ alternative (`N_DW = 2·N_fam = 6`) is shown as the
+contrast, but TFPT's axion is the det-line/strong-CP one, not DFSZ. **5/5.**
+
+Net of `axion01→05→06`: the axion "fixed-angle catastrophe" becomes a clean,
+dial-free, **domain-wall-safe post-inflationary axion** — at the cost only of the
+(fragile) angle prediction.
+
+```bash
+cd experiments/theory-contracts && python3 axion06_domain_wall_number.py
+```
+
 ## Open next contract — raw RP seam → Z4 mark-local source
 
 `qgeo_dtn_mark_locality.py` proves the mark-local structure **given** the Z4 marking. The

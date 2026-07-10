@@ -1,0 +1,51 @@
+{
+  "contract": "AXION.ANGLE.05 strategy scan",
+  "date": "2026-07-10",
+  "firewall": "theory contract, never a scorecard row; not evidence",
+  "classification": {
+    "S1_post_inflationary": "CLEAN (no dial; needs N_DW=1)",
+    "S2_inflation_era_fa": "CANDIDATE (needs f_a(inf) ~10x, not established)",
+    "S3_early_qcd": "DIAL (coupling ~7x anomaly not forced, axion04)",
+    "S4_subdominant": "GIVES-UP-AXION-DM (Omega_a/Omega_c < 8e-7)",
+    "S5_lower_Hinf": "NOT-VIABLE (r < 4e-5 breaks R^2)"
+  },
+  "verdict": "CLEAN RESOLUTION = post-inflationary PQ (drop the fixed angle); the tension is with the assumption, not TFPT's numbers (7/7)",
+  "checks": [
+    {
+      "check": "C1 SETUP [E]: H_inf ~ 1.57e+13, f_a ~ 2.39e+11, H_inf/f_a ~ 66, delta_theta = H_inf/(2pi f_a) ~ 10.4, subdominant bound Omega_a/Omega_c < 8.3e-07",
+      "pass": true,
+      "detail": "H_inf=1.57e+13, f_a=2.39e+11, ratio=65.6, dtheta=10.4, sub=8.3e-07"
+    },
+    {
+      "check": "C2 S1 POST-INFLATIONARY PQ = CLEAN [E]: H_inf/f_a = 66 > 1 => PQ restored => POST-inflationary (NO fixed angle, NO isocurvature); f_a=2.39e+11 => Omega_a h^2 ~ 0.33 (in the relic window). No dial. Cost: the angle is not a prediction + N_DW=1 (flagged)",
+      "pass": true,
+      "detail": "H_inf>f_a: True; Omega_a h^2 ~ 0.33 (O(1) string/wall uncertainty)"
+    },
+    {
+      "check": "C3 S2 INFLATION-ERA LARGER f_a = CANDIDATE [E]: isocurvature killed if f_a(inf) > H_inf/(2pi) = 2.50e+12 GeV, i.e. f_a(inf)/f_a(0) > 10.4; keeps the angle but needs the det-line scale to grow ~10x in de Sitter -- NOT established (a TFPT-specific derivation target)",
+      "pass": true,
+      "detail": "f_a(inf) needed = 2.50e+12 GeV (~10.4 x today's f_a)"
+    },
+    {
+      "check": "C4 S3 EARLY-QCD HEAVY AXION = DIAL [E]: needs a scalaron-gluon coupling ~7.0x the trace anomaly (axion03), and that factor is NOT forced (axion04 refuted the b3 reading) -- a dial",
+      "pass": true,
+      "detail": "coupling amplification ~6.96, forced by a TFPT atom = False"
+    },
+    {
+      "check": "C5 S4 SUBDOMINANT AXION = GIVES-UP-AXION-DM [E]: the fixed-angle isocurvature bound is met only if Omega_a/Omega_c < 8.3e-07 (< 1 ppm) -- the axion is then NOT the dark matter",
+      "pass": true,
+      "detail": "Omega_a/Omega_c < 8.3e-07 => not the DM in the fixed-angle scenario"
+    },
+    {
+      "check": "C6 S5 LOWER H_inf = NOT-VIABLE [E]: needing H_inf/(2pi) < f_a forces r < 3.7e-05, ~109x below the R^2 prediction r ~ 0.004 -- breaks the locked scalaron branch",
+      "pass": true,
+      "detail": "r needed < 3.7e-05 vs R^2 r=0.004 (factor ~109 too small)"
+    },
+    {
+      "check": "C7 VERDICT / RELOCATION [O]: the CLEAN resolution is S1 (post-inflationary) -- drop the FIXED ANGLE (the faulty assumption), keep f_a, predict the relic; no dial, natural because H_inf > f_a. REFRAMES FR.DM.02: the 'spine angle' is not observable, the DM claim rests on f_a + N_DW=1. Never a scorecard row; never [E]",
+      "pass": true,
+      "detail": "post-inflationary QCD axion relic Omega_a h^2 ~ 0.12 (f_a/1e11)^1.17 (O(1) string/wall uncertainty; cited); PQ restoration criterion max(H_inf, T_reh) > f_a (standard); domain-wall number N_DW = 1 required post-inflationary (the one crux to check for the TFPT det-line axion; Lazarides-Shafi bias if N_DW>1); de Sitter f_a(inf) growth (S2) -- not established, a TFPT derivation target"
+    }
+  ],
+  "reading": "Scanning the strategies against TFPT's own frozen numbers gives a CONSTRUCTIVE answer: the isocurvature tension is with the FIXED pre-inflationary ANGLE, not with TFPT. Because H_inf ~ 1.6e13 GeV exceeds f_a ~ 2.39e11 GeV by ~66x, the NATURAL scenario is POST-INFLATIONARY PQ breaking -- there is then NO fixed angle and NO axion isocurvature, and f_a = 2.39e11 sits right in the post-inflationary relic window (Omega_a h^2 ~ O(0.1-0.5)). That route is CLEAN: no dial, forced by H_inf > f_a. The other routes rank below it: inflation-era larger f_a (S2) would keep the angle but needs the det-line scale to grow ~10x in de Sitter (a derivation target, not established); the early-QCD heavy axion (S3) needs a coupling ~7x the anomaly that is NOT forced (a dial, axion04); a subdominant axion (S4) evades the bound only at < 1 ppm of DM (not the DM); lowering H_inf (S5) needs r < 4e-5 and breaks the R^2 branch (not viable). So the recommended resolution is to REFRAME FR.DM.02: drop the '108 deg spine angle' as a prediction (it becomes a horizon average), keep f_a, predict the relic -- consistent and dial-free, at the single cost of the domain-wall number N_DW = 1 (the one crux to check). Never a scorecard row; never [E]."
+}

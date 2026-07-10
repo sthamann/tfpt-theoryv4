@@ -11,8 +11,9 @@
   (E₈)₁ character with 248 currents / one primary (v377), the genus-1 torus
   degeneracy 1 (v378) and reflection positivity (v379).  What a computation CANNOT
   supply is the abstract continuum-EXISTENCE of the limit; that is the cited,
-  published theorem of Morinelli–Morsella–Stottmeister–Tanimoto (chiral CFT from free
-  lattice fermions, CMP 2022) together with the Adamo–Moriwaki–Tanimoto OS
+  published theorem of Osborne–Stottmeister (chiral CFT from free
+  lattice fermions, CMP 398 (2023) 219, arXiv:2107.13834; legacy token "MMST", built on
+  the MMST/Morinelli–Morsella–Stottmeister–Tanimoto OAR framework) together with the Adamo–Moriwaki–Tanimoto OS
   reconstruction (2024).
 
   This module formalises the logical status **"closed modulo a cited theorem"**, in
@@ -75,7 +76,8 @@ axiom collar_gapped : CollarGappedQuasifree
 
 /-! ### The cited published theorems (named external axioms, the [C] links). -/
 
-/-- Morinelli–Morsella–Stottmeister–Tanimoto (CMP 2022): a gapped quasi-free lattice
+/-- Osborne–Stottmeister (CMP 398 (2023), arXiv:2107.13834; the seam scaling-limit
+    theorem, legacy token "MMST", on the MMST OAR framework): a gapped quasi-free lattice
     free-fermion collar that is in the applicability range `rank ≤ c ≤ D` and chiral
     (`c₋ ≠ 0`) has a massless scaling limit that is a chiral CFT with the matching
     central charge.  CITED, not re-proved; the arithmetic hypotheses are the provable

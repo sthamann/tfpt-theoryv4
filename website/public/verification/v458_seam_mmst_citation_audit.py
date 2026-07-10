@@ -3,10 +3,15 @@ of the MMST scaling-limit theorem against our collar -- "does the cited theorem 
 the c=8 limit, and if not, exactly which sub-statement remains?" (G3 of the post-F
 next steps; the "exakter Zitat-Abgleich").
 
-The cited backbone is Morinelli-Morsella-Stottmeister-Tanimoto, "Conformal Field
-Theory from Lattice Fermions" (Comm. Math. Phys. 397 (2023); arXiv:2107.13834,
-doi:10.1007/s00220-022-04521-8).  Reading the ACTUAL theorem statements:
-  * Theorem A / Thm 4.11: the chiral Koo-Saleur approximants converge STRONGLY to the
+The cited backbone is Osborne-Stottmeister, "Conformal Field Theory from Lattice
+Fermions" (Comm. Math. Phys. 398 (2023) 219-289; arXiv:2107.13834,
+doi:10.1007/s00220-022-04521-8); it builds on the MMST (Morinelli-Morsella-
+Stottmeister-Tanimoto) operator-algebraic renormalization framework (CMP 387 (2021)
+299; PRL 127 (2021) 230601; arXiv:2010.11121).  NB: the legacy code-token "MMST" in
+this module's filename and the claim-id SEAM.EQUIV.MMST.AUDIT.01 denote THIS
+Osborne-Stottmeister theorem (a naming artefact predating this correction, kept as a
+stable identifier).  Reading the ACTUAL theorem statements:
+  * Theorem A: the chiral Koo-Saleur approximants converge STRONGLY to the
     continuum Virasoro generators for free-fermion scaling limits with central charge
     c = 1/2 (Majorana) and c = 1 (Dirac), on the finite-energy core D_fin.
   * Sect. 4 (eq. around their (75) / Sect. 4.2): the massless lattice scaling limit
@@ -25,7 +30,7 @@ This module matches each hypothesis to our collar and returns a per-hypothesis v
          (the (-)-boundary state).  Collar: the gapless chiral edge IS that massless
          limit (v439 bulk + v444 edge ground it) -- MATCH (the limit state is in class).
   [E] 3. H3 PER-COPY THEOREM A APPLIES (c=1/2).  the edge is 16 chiral Majoranas,
-         EACH exactly the proven c=1/2 case of Thm 4.11 -- the cited theorem applies
+         EACH exactly the proven c=1/2 case of Theorem A -- the cited theorem applies
          copy-by-copy verbatim.
   [C] 4. H4 DECOUPLED ADDITIVITY -> c=8 (SO(16)_1).  MMST's limit DECOUPLES into
          independent Majoranas, so the total Virasoro generator is the finite sum
@@ -41,8 +46,8 @@ This module matches each hypothesis to our collar and returns a per-hypothesis v
          method.  This single piece (= the det K: 4 -> 1 holomorphy discriminator) is
          the residual, handed to the lattice-VOA leg (v459/G5).
   [C]/[O] 7. VERDICT.  the audit CLOSES-by-citation the c=8 EXISTENCE (free SO(16)_1
-         Virasoro + the 120 bilinear currents, MMST Thm 4.11/5.1 + decoupled
-         additivity), and pins the open residual EXACTLY to the 128-spinor extension
+         Virasoro + the 120 bilinear currents, Osborne-Stottmeister Theorem A / Thm 5.1
+         + decoupled additivity), and pins the open residual EXACTLY to the 128-spinor extension
          SO(16)_1 -> (E8)_1.  SEAM.EQUIV.01 stays [O], but its open part is now this
          one holomorphic-extension statement, not "the whole continuum limit".
 
@@ -62,7 +67,7 @@ def run():
     c_target = g_car + N_fam                            # 8
     rank = rankE8                                       # 8
     D = 2 ** (g_car - 1)                                # 16 Majorana copies
-    mmst_proven_c = {sp.Rational(1, 2), sp.Integer(1)}  # Thm 4.11 central charges
+    mmst_proven_c = {sp.Rational(1, 2), sp.Integer(1)}  # Osborne-Stottmeister Theorem A central charges
 
     # ---- 1. H1 algebra class ----
     check("H1 ALGEBRA CLASS [C]: MMST works on 1+1D lattice CAR/SDC fermions with a "
@@ -78,8 +83,9 @@ def run():
     # ---- 3. H3 per-copy Theorem A applies (c=1/2) ----
     per_copy = sp.Rational(1, 2) in mmst_proven_c
     check("H3 PER-COPY THEOREM A (c=1/2) [E]: the edge is %d chiral Majoranas, each "
-          "EXACTLY the proven c=1/2 case of MMST Thm 4.11 -- the cited Koo-Saleur->"
-          "Virasoro strong-convergence theorem applies copy-by-copy verbatim" % D,
+          "EXACTLY the proven c=1/2 case of Osborne-Stottmeister Theorem A -- the "
+          "cited Koo-Saleur->Virasoro strong-convergence theorem applies copy-by-copy "
+          "verbatim" % D,
           per_copy)
 
     # ---- 4. H4 decoupled additivity -> c=8 ----
@@ -93,7 +99,7 @@ def run():
     # ---- 5. H5 WZW range + the 120 bilinear currents ----
     in_range = (rank <= c_target <= D)
     bilinear_currents = 120                             # dim so(16) = level-1 currents
-    check("H5 WZW RANGE rank<=c<=D + 120 BILINEAR CURRENTS [C]: MMST Thm 5.1 covers "
+    check("H5 WZW RANGE rank<=c<=D + 120 BILINEAR CURRENTS [C]: OS Thm 5.1 covers "
           "WZW currents for rank<=c<=D; (E8)_1 has rank=%d, c=%d, D=%d => %d<=%d<=%d IN "
           "range, and the %d so(16)_1 currents are fermion bilinears -- covered"
           % (rank, c_target, D, rank, c_target, D, bilinear_currents),
@@ -111,14 +117,16 @@ def run():
     # ---- 7. verdict ----
     verdict = per_copy and additive and in_range and residual
     check("VERDICT [C]/[O]: the audit CLOSES-by-citation the c=8 EXISTENCE (free "
-          "SO(16)_1 Virasoro + the 120 bilinear currents, MMST Thm 4.11/5.1 + "
-          "decoupled additivity) and pins the open residual EXACTLY to the 128-spinor "
+          "SO(16)_1 Virasoro + the 120 bilinear currents, Osborne-Stottmeister "
+          "Theorem A / Thm 5.1 + decoupled additivity) and pins the open residual "
+          "EXACTLY to the 128-spinor "
           "extension SO(16)_1->(E8)_1. SEAM.EQUIV.01 stays [O], but its open part is "
           "now this ONE holomorphic-extension statement, not the whole continuum limit",
           verdict)
 
     return summary("v458 SEAM.EQUIV.MMST.AUDIT: exact hypothesis-by-hypothesis audit of "
-                   "MMST (arXiv:2107.13834, Thm 4.11 c=1/2,1 + Thm 5.1 range rank<=c<=D) "
+                   "Osborne-Stottmeister (arXiv:2107.13834, CMP 398 (2023); Theorem A "
+                   "c=1/2,1 + Thm 5.1 range rank<=c<=D) "
                    "against the collar -- H1-H5 MATCH (CAR class; massless pos-energy "
                    "limit; per-copy c=1/2; decoupled additivity 16*1/2=8; WZW range "
                    "8<=8<=16 + 120 bilinear so(16)_1 currents), so the c=8 EXISTENCE is "

@@ -1,0 +1,44 @@
+{
+  "contract": "AXION.FORCE.02 scalaron-gluon forced?",
+  "date": "2026-07-10",
+  "firewall": "theory contract, never a scorecard row; not evidence",
+  "required": {
+    "Lambda_inf_GeV": 1936061399671.423,
+    "delta_inv_alpha_s": -33.31237149424418,
+    "H_inf_GeV": 15679460829520.916
+  },
+  "verdict": "VIABLE + TARGET DEFINED, coupling NOT yet forced (open) (6/6)",
+  "checks": [
+    {
+      "check": "C1 REQUIRED SCALE [E]: Lambda_inf > sqrt(H_inf f_a) = 1.94e+12 GeV (m_a>H_inf), ln-enhancement ln(Lambda_inf/Lambda_0) = 29.9",
+      "pass": true,
+      "detail": "H_inf=1.57e+13, f_a=2.39e+11 -> Lambda_inf=1.94e+12 GeV (~1e13 x today)"
+    },
+    {
+      "check": "C2 REQUIRED COUPLING SHIFT [E]: Delta(1/alpha_s) = -|b3|/(2pi) * ln(Lambda_inf/Lambda_0) = -33.3 (1/alpha_s must drop by ~33 during inflation; alpha_s grows)",
+      "pass": true,
+      "detail": "|b3|=7 -> Delta(1/alpha_s) = -33.3"
+    },
+    {
+      "check": "C3 VIABILITY [E]: required |Delta(1/alpha_s)| = 33.3 is O(1/alpha_s) and O(the atoms c3^-1=25.1, 4pi^2=39.5) -- natural, not fine-tuned or trans-Planckian; the mechanism is quantitatively OPEN, not excluded",
+      "pass": true,
+      "detail": "closest atoms: c3^-1 = 8pi=25.1, 4pi^2=39.5, 2/c3 = 16pi=50.3, |b3|*2pi/... =7.0"
+    },
+    {
+      "check": "C4 NOT FORCED [O]: no single atom hits 33.3 exactly (4pi^2 19%, c3^-1 -25%); and the coupling->Delta map also carries phi_inf/Mbar (N_star-dependent, external). The repo's fixed axion-GLUON g_agg = -4c3 = -0.159 is a DIFFERENT operator (a G Gtilde/f_a), not the scalaron-gluon kinetic term -- so the needed coupling is NOT yet forced",
+      "pass": true,
+      "detail": "deviations from atoms: 4pi^2 19%, c3^-1=8pi -25%"
+    },
+    {
+      "check": "C5 NEGATIVE CONTROL / POWER [E]: with NO coupling m_a(inf)/H_inf = 1.5e-27 << 1 (the isocurvature catastrophe); and the required |Delta| tracks the frozen r (r=1e-4 -> |Delta|=32.3 < 33.3) -- the target scales as r^(1/4), so it is data-anchored, not tunable",
+      "pass": true,
+      "detail": "m_a(0)=2.4e-14 GeV, H_inf=1.6e+13 GeV"
+    },
+    {
+      "check": "C6 RELOCATION AUDIT [O]: next-step 1 sharpened to a NUMBER -- derive a scalaron-gluon kinetic coupling giving Delta(1/alpha_s)^inf ~ -33 (at the frozen r + N_star band) from c3 / spectral-action a-coefficients / the A3(+)D5 index. VERDICT: mechanism VIABLE, target DEFINED, coupling NOT yet forced. Never a scorecard row; never [E]",
+      "pass": true,
+      "detail": "single-field slow roll H_inf = pi Mbar sqrt(A_s r/2) (standard); chi(0)^(1/4) = 75.5 MeV lattice topological susceptibility (cited); QCD one-loop Lambda = mu exp(-2pi/(|b3| alpha_s)), |b3|=7 (standard); the early-QCD mechanism arXiv:2605.15192 (cited, not adopted); phi_inf/Mbar depends on N_star (external reheating, band [50,60])"
+    }
+  ],
+  "reading": "Quantifying next-step 1: to lift m_a > H_inf during inflation (killing the axion01 isocurvature catastrophe) the QCD scale must reach Lambda_inf ~ 1.9e12 GeV, a ln-enhancement ~30, i.e. Delta(1/alpha_s) ~ -33 during inflation. That shift is O(1/alpha_s) itself and of the same order as the TFPT atoms (c3^-1 = 8pi ~ 25, 4pi^2 ~ 39), so the mechanism is quantitatively VIABLE -- but no single atom hits 33 exactly, the map to the coupling also carries the N_star-dependent plateau field value, and the repo's only fixed gluon coupling (g_agg = -4c3) is a different operator. So the scalaron-gluon coupling is NOT yet forced; this contract turns next-step 1 into a sharp, data-anchored target rather than a closure. Never a scorecard row; never [E]."
+}

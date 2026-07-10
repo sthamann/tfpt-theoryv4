@@ -1,0 +1,40 @@
+{
+  "contract": "NU.CI.01 Casas-Ibarra seam enumeration",
+  "date": "2026-07-10",
+  "firewall": "theory contract, never a scorecard row; F_transfer bridge internal consistency, not external evidence",
+  "verdict": "CONTRACT HOLDS (honest NEGATIVE: seesaw NOT closed by symmetry) (6/6)",
+  "residual": "one real parameter (the Casas-Ibarra angle) -- not closed",
+  "checks": [
+    {
+      "check": "C1 COMMUTANT [E]: centraliser of the order-3 family cycle C3 = the circulant algebra a I + b C3 + c C3^2, dim_C = 3 (nullspace of X |-> [X, C3])",
+      "pass": true,
+      "detail": "dim centraliser = 3; ||[R_circ, C3]|| = 0.0e+00"
+    },
+    {
+      "check": "C2 COMPLEX-ORTHOGONAL + det 1 => 1 COMPLEX PARAM [E]: R^T R = 1 and det R = 1 on the circulant algebra reduce to lambda_0 = 1, lambda_1 lambda_2 = 1 -- the family R(z) = F diag(1, e^z, e^-z) F^*; verified R^T R = I, det = 1, [R,C3]=0 for 200 random complex z",
+      "pass": true,
+      "detail": "max ||R^T R - I|| = 5.8e-14, max |det-1| = 2.0e-14 over 200 complex z"
+    },
+    {
+      "check": "C3 REFLECTION REALITY => 1 REAL PARAM [E]: Theta (Theta C3 Theta = C3^2) imposes Theta R Theta = R* IFF lambda_1, lambda_2 REAL (z real); verified -- holds for z real, FAILS for z imaginary. One real parameter remains",
+      "pass": true,
+      "detail": "Theta C3 Theta = C3^2: True; max resid (z real) = 5.2e-15; min resid (z imag) = 0.01"
+    },
+    {
+      "check": "C4 DIMENSION COUNT [E]: O(3,C) has 3 complex params; [R,C3]=0 -> 1 complex (CI angle); + Theta-reality -> 1 REAL param. Residual dim = 1 != 0 -- the seam symmetries do NOT isolate a point; R_CI is NOT unique",
+      "pass": true,
+      "detail": "distinct family members R(0.3) != R(0.7): True (a genuine 1-parameter hyperbolic CI angle remains)"
+    },
+    {
+      "check": "C5 DISCRETE COLLAPSE NEEDS AN EXTRA SELECTOR [O]: z=0 -> R=I (real orthogonal, 'no seesaw CP') is a finite point but an ASSUMPTION, not derived; the transport/minimality selector that would fix z is the open step -- so symmetry alone does not close the seesaw",
+      "pass": true,
+      "detail": "z=0 => R=I (||R-I||=2.2e-16); nontrivial z stays a free CI angle"
+    },
+    {
+      "check": "C6 RELOCATION AUDIT [O]: IF z were fixed, Y_nu, M_R, Majorana phases, the absolute nu-mass scale and eta_B would all be computable; since the seam symmetries leave z free (C4), they stay OPEN -- matching the ledger. Never a scorecard row; never [E]",
+      "pass": true,
+      "detail": "Casas-Ibarra parametrisation Y_nu = (1/v) sqrt(M_R) R sqrt(m_nu) U^dag with R complex orthogonal (cited, hep-ph/0103065); C3 = the order-3 family cycle; Theta = the seam reflection (TFPT inputs); the transport/minimality selector (the open step that would fix z)"
+    }
+  ],
+  "reading": "The four seam conditions [R,C3]=0, Theta R Theta = R*, R^T R = 1, det R = 1 cut the Casas-Ibarra matrix from O(3,C) (3 complex parameters) down to a ONE-REAL-parameter family (the CI hyperbolic angle): commuting with C3 gives the circulant algebra, complex-orthogonality + det 1 give lambda_0=1 and lambda_1 lambda_2 = 1 (1 complex param), and the reflection reality forces lambda_1, lambda_2 real (1 real param). A continuous family REMAINS, so the seam symmetries do NOT uniquely fix R_CI -- the seesaw realisation, the absolute neutrino-mass scale and the leptogenesis phase are NOT closed by symmetry alone; an independent transport/minimality selector (open) is required. This is the honest negative the reviewer anticipated and it matches the ledger's status. Never a scorecard row; never [E]."
+}

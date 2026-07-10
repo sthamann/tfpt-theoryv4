@@ -1,0 +1,39 @@
+{
+  "contract": "FLAV.WALL.02 Gonzalez/Bruhat wall-selection",
+  "date": "2026-07-10",
+  "firewall": "theory contract, never a scorecard row; internal consistency, not evidence",
+  "verdict": "REDUCED / NOT WOBBLY (canonical section, modulo the wall extension) (6/6)",
+  "checks": [
+    {
+      "check": "C1 WALL SPLITTING TYPE [E]: W_wall exponents-at-infinity = {2,1,1} (splitting O(-2)+O(-1)^2), the anchor a=(1,1,2); pardeg 0, deg E = -4 = -|mu4|",
+      "pass": true,
+      "detail": "exponents [1, 1, 2] = anchor [1, 1, 2]; deg E = -4 = -|mu4|"
+    },
+    {
+      "check": "C2 ROOT PAIRINGS + THE WALL [E]: |<lambda, alpha>| over the positive roots = {1, 0, 1}; the ZERO is on alpha_23 -- lambda is NON-REGULAR, i.e. sits on the stability WALL",
+      "pass": true,
+      "detail": "pairings {'a12': '1', 'a23': '0', 'a13': '1'} -> {0,1,1}; wall root = a23"
+    },
+    {
+      "check": "C3 REDUCED <=> MINUSCULE [E]: lambda = omega_1 (a MINUSCULE fundamental coweight of A2); every root pairing lies in {0, +-1} -> the affine-Weyl divisor is MULTIPLICITY-FREE = REDUCED -> Gonzalez's very-stable criterion holds (the wall point is NOT wobbly)",
+      "pass": true,
+      "detail": "lambda = ('2/3', '-1/3', '-1/3') = omega_1: True; all root pairings in {0,+-1}: True"
+    },
+    {
+      "check": "C4 AFFINE LENGTH [E]: l(t_lambda) = sum_{alpha>0} |<lambda,alpha>| = 2 (Macdonald), cross-checked by explicit inversion count over the truncated affine root system = 2 -- a reduced word of length 2 exists (no cancellation, consistent with reducedness)",
+      "pass": true,
+      "detail": "Macdonald length = 2; inversion-count length = 2"
+    },
+    {
+      "check": "C5 DISCRIMINATING CONTROLS [E]: TFPT splitting is reduced (max pairing 1) while O(-3)+O(0)^2 (max pairing 3) and O(-2)^2+O(0) (max pairing 2) are NOT reduced -> WOBBLY; the reduced/wobbly test genuinely discriminates (not a tautology)",
+      "pass": true,
+      "detail": "O(-2)+O(-1)^2 (TFPT): max|pair|=1, reduced=True; O(-3)+O(0)^2 (wobbly): max|pair|=3, reduced=False; O(-2)^2+O(0) (wobbly): max|pair|=2, reduced=False; adjoint (-2,1,1) (quasi-min): max|pair|=3, reduced=False"
+    },
+    {
+      "check": "C6 RELOCATION AUDIT [O]: reducedness HOLDS (C3) -> a canonical Hitchin section exists and selects the wall point uniquely, MODULO extending Gonzalez from smooth-interior to the polystable WALL. This SHARPENS the GATE.UWALL residual from 'positive-dimensional locus' to 'one boundary extension of a June-2026 theorem'. Never a scorecard row; never [E]",
+      "pass": true,
+      "detail": "Gonzalez arXiv:2606.16880 very-stable <=> reduced (affine Bruhat) for SMOOTH Borel-type fixed points, regular Higgs, INTERIOR weights (cited); the TFPT point sits ON the wall (C2 zero pairing, non-regular) and is POLYSTABLE -> needs the parahoric/logahoric boundary extension; the splitting type {2,1,1} = anchor a and det R = 8 selectors (GATE.UWALL, in-suite v39/v49)"
+    }
+  ],
+  "reading": "The TFPT wall splitting type O(-2)+O(-1)^2 (exponents {2,1,1} = the anchor) gives a cocharacter that projects to the minuscule fundamental coweight omega_1 of A2. Every root pairing lies in {0,+-1}, so the associated affine-Weyl divisor is multiplicity-free = REDUCED, and the affine length l(t_lambda)=2 is confirmed by an explicit inversion count. By Gonzalez (arXiv:2606.16880) reduced <=> very stable => the upward Hitchin flow is a SECTION meeting a generic fibre in one point: a CANONICAL, unique selection of the wall point -- the POSITIVE branch of the reviewer's binary kill-test (NOT wobbly). The one honest caveat: Gonzalez's theorem is stated for smooth interior Borel-type fixed points, whereas the TFPT point sits ON the stability wall (the alpha_23 pairing is 0) and is polystable, so verbatim applicability needs the parahoric/logahoric boundary extension. This SHARPENS GATE.UWALL from 'positive-dimensional D4 locus' to 'one boundary case of a 2026 theorem'. Never a scorecard row; never [E]."
+}

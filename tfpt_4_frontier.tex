@@ -475,8 +475,8 @@ expression
 \]
 The initial misalignment angle is \emph{not} a single closed number: the finite-$T$ misalignment solve
 (below) selects the \emph{spine} branch $\theta_i=\pi\Nfam/g_{\mathrm{car}}=3\pi/5=108^\circ$ as the
-robust dominant-DM value (it lands $\Omega_a h^2$ on $\Omega_{\mathrm{DM}}$ untuned, in the mild-anharmonic
-regime), while the seam hilltop $\theta_i=\pi\bigl(1-\varphi_{\mathrm{seam}}(\alpha_\star)\bigr)=170.4^\circ$
+robust dominant-DM value in the \emph{pre-inflationary} reading (it lands $\Omega_a h^2$ on $\Omega_{\mathrm{DM}}$ untuned, in the mild-anharmonic
+regime; but superseded by the post-inflationary reframing below), while the seam hilltop $\theta_i=\pi\bigl(1-\varphi_{\mathrm{seam}}(\alpha_\star)\bigr)=170.4^\circ$
 \emph{over}-produces (${\sim}5.4\times$) and is disfavoured. So the minimal closed branch has
 \emph{dominant axion-like dark matter} on the spine angle --- a \mC\ scenario, \emph{not} a closed \mE\ input.
 
@@ -569,6 +569,24 @@ hill-top tuning. This is an \emph{alternative} ansatz to $\theta_i=\pi(1-\varphi
 (the two are mutually exclusive; neither is forced) --- a sharper \mC\ scenario decided by the full solver
 (\texttt{DM.AXION.SPINE.01}), \emph{not} a derivation; \mX\ a converged $\Omega_a h^2$ outside ${\sim}[0.08,0.16]$
 at $\theta_i=3\pi/5$ demotes the branch.
+
+\par\smallskip\noindent\textbf{Isocurvature and the post-inflationary reframing (\mC).}
+Both fixed-angle readings above are \emph{pre-inflationary}: they assume Peccei--Quinn breaking
+\emph{during} inflation with a homogeneous $\theta_i$. But the $R^2$ branch fixes
+$H_{\mathrm{inf}}=\pi\Mpl\sqrt{A_s r/2}\approx1.6\times10^{13}$~GeV, so $H_{\mathrm{inf}}/f_a\approx66>1$
+and $H_{\mathrm{inf}}/(2\pi f_a)\approx10$: the de~Sitter fluctuation of the angle exceeds its range, the
+symmetry is effectively \emph{restored} during inflation, and a fixed pre-inflationary $\theta_i$ (either
+$108^\circ$ or $170^\circ$) would carry CDM isocurvature far above the Planck bound
+$\beta_{\mathrm{iso}}<0.038$. The clean, \emph{dial-free} resolution is the \emph{post-inflationary}
+scenario: PQ breaks after inflation, $\theta_i$ is a horizon average (\emph{not} a prediction), and the
+relic follows from $f_a$ alone --- with $f_a\approx2.39\times10^{11}$~GeV in the post-inflationary window
+($\Omega_a h^2\sim O(0.1\text{--}0.5)$). It is domain-wall-safe because the determinant-line axion's colour
+anomaly is the seam Dirac index $=$ the inflow level $|C|=1$ (\vref{v470}/\vref{v472}), so
+$N_{\mathrm{DW}}=1$ (a \mC\ identification). Thus the spine/hilltop \emph{angle} is not an observable and
+the branch is \emph{reframed}, not killed: drop the fixed angle, keep $f_a$ and $N_{\mathrm{DW}}=1$, and the
+relic is a robust post-inflationary prediction. \mX\ a post-inflationary relic outside the plausible window
+at this $f_a$ (with $N_{\mathrm{DW}}=1$) demotes the branch. (Strategy scan and the $N_{\mathrm{DW}}$
+computation: \texttt{experiments/theory-contracts/axion01--06}.)
 
 % =====================================================================
 \section{The muon anomalous magnetic moment --- a seam vertex readout}
@@ -842,7 +860,7 @@ anchor --- the maximal predictivity a dimensionless compiler can have (\texttt{S
 $\eta_B$ & \mC & downstream readout $=6.1{\times}10^{-10}$ from closed $\Omega_b h^2$; leptogenesis interface, cleanest scenario $M_1{=}M_{\mathrm{scal}}(\phiz)^2/A_\Lambda$, $\tilde m_1{=}m_3/A_\Lambda$ (shared decuple, no seesaw scale) \\
 $m_p/m_e$ & \mC & cross-sector (QCD scale / closed $m_e$); typed runnable solver with ${\pm}7.5\%$ uncertainty budget (\vref{v374}), not a compiler power \\
 Koide $Q$ & \mC & source ratio $Q=0.664$ near $2/3$; the source$\to$pole factor $53/54$ is an \emph{exact operator readout} of the missing $F{=}R{+}Q$ Sheet-Diamond corner \mE; the physical pole transfer ($F_{\mathrm{pole}}$) stays \mC \\
-dark matter & \mC & determinant-line axion fixed: $f_a{=}M_{\mathrm{scal}}/128$, $m_a\approx23.8\,\mu$eV; the robust angle is the spine branch $\theta_i{=}\pi\Nfam/g_{\mathrm{car}}{=}3\pi/5{=}108^\circ$ (mild-anharmonic, lands on $\Omega_{\mathrm{DM}}$ untuned), an alternative to the over-producing $170^\circ$ hilltop --- branch-level kill test, not a theory closure \\
+dark matter & \mC & determinant-line axion: $f_a{=}M_{\mathrm{scal}}/128$, $m_a\approx23.8\,\mu$eV. \emph{Post-inflationary} ($H_{\mathrm{inf}}/f_a{\approx}66$, isocurvature): the misalignment angle is a horizon average (\emph{not} observable), the relic follows from $f_a$ (in the post-inflationary window), domain-wall-safe via $N_{\mathrm{DW}}{=}|C|{=}1$ (\vref{v470}/\vref{v472}); the $3\pi/5$ spine value is retained as a structural rational, not a relic prediction --- branch-level kill test, not a theory closure \\
 muon $a_\mu$ & \mC & seam vertex $a_\mu^{\mathrm{seam}}{=}\delta_2/(2\pi){=}45/(524288\pi^9){=}2.879{\times}10^{-9}$; exact \emph{value}, but the vertex projection is the \mC\ bridge ($0.81\sigma$ dispersive, ${\sim}1.5\sigma$ lattice) \\
 quantum gravity & \mE/\mC & local field eq.\ parameter-free ($G_{ab}{+}\Lambda g_{ab}{=}\cthree^{-1}T_{ab}$, \vref{v358}/\vref{v359}); $R+R^2$ heat-kernel grounded (G2); perturbative graviton unitarity established (Stelle ghost a truncation artefact, \vref{v304}/\vref{v370}/\vref{v380}); ambient measure (G6) a \mC\ redundancy (\vref{v369}) \\
 \bottomrule
@@ -879,7 +897,9 @@ QED's is positive), so the transfer is the non-QED $53/54$ operator / $(2/3)^6$ 
 ODE at the frozen $M_1{=}M_{\mathrm{scal}}(\phiz)^2/A_\Lambda$ gives $\eta_B$ within a factor ${\sim}1.1$ of
 $6.1{\times}10^{-10}$ with no $M_R$ dial. \emph{Axion} (\veri{v373\_ftransfer\_relic.py}): the finite-$T$
 misalignment ODE \emph{decides} the branch --- the frozen spine angle $3\pi/5$ lands $\Omega_a h^2$ on
-$\Omega_{\mathrm{DM}}$ (in band) while the hilltop $170^\circ$ over-produces (${\sim}5.4\times$).
+$\Omega_{\mathrm{DM}}$ (in band) while the hilltop $170^\circ$ over-produces (${\sim}5.4\times$); in the
+natural post-inflationary scenario ($H_{\mathrm{inf}}/f_a{\approx}66$) the angle is instead a horizon
+average and the relic follows from $f_a$ with $N_{\mathrm{DW}}{=}1$.
 \emph{$m_p/m_e$} (\veri{v374\_ftransfer\_qcd.py}): the observed $1836.15$ sits inside the propagated
 ${\pm}7.5\%$ band of the two declared externals ($\alpha_s(M_Z)$, $C_p$), with lattice tightening as the kill.
 Each remains \mC\ --- a transfer target, not a forced compiler number.
