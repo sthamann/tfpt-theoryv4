@@ -156,8 +156,12 @@ export function GravityEmergence() {
         ball modular Hamiltonian, boost via Bisognano–Wichmann, <span className="font-mono">v323</span>) and
         the entropy density is atom-fixed (<span className="font-mono">1/4 = 1/|μ₄|</span>, central charge{" "}
         <span className="font-mono">c = g_car + N_fam = 8</span>). What remains is the Jacobson
-        equation-of-state status, the global ambient measure (<span className="font-mono">QG.AMB.01</span>), and
-        the absolute scale <span className="font-mono">v_geo</span>.
+        equation-of-state status (an external candidate action — Bianconi&apos;s entropic action, PRD 111, 066001
+        (2025) — is quantified in <span className="font-mono">v473</span>–<span className="font-mono">v478</span>:{" "}
+        <span className="font-mono">β′_B = c₃/6</span> pinned, the R² kill test executed and resolved as a
+        scale-measure datum, the compression conjecture made well-posed — all without changing the typing), the
+        global ambient measure (<span className="font-mono">QG.AMB.01</span>), and the absolute scale{" "}
+        <span className="font-mono">v_geo</span>.
       </div>
     </div>
   );

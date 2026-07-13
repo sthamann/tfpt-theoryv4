@@ -2955,6 +2955,137 @@ Module[{trY2, trT32, kY, b1SM, ferm, higgs},
     kY == 5/3 && b1SM/kY == 41/10 && ferm == 20/3 && higgs == 1/6 && ferm + higgs == b1SM];
 ];
 
+(* ==== v473 round: the entropic-action bridge (Bianconi, PRD 111, 066001 (2025);
+   arXiv:2408.14391) -- the exact algebraic content: the carrier Hodge count
+   1+5+10 = 16 = 2^(g_car-1) (vs the 4d fiber 11), the coefficient pin
+   beta'_B = c3/6 = 1/(48 pi) from 3 beta' = 1/(16 pi), the entropy potential
+   s(x) = x-1-ln x (nonnegative, quadratic minimum), the Lambda-channel target
+   Tr Q^2 = 32 c3^4 = 1/(128 pi^4) = (2/3) delta_top, and the R^2 kill-test gap
+   3 c3^-9 = 3 (8 pi)^9; mirrors v473 (the Frullani quadrature is numerical,
+   Python-only). ==== *)
+Module[{c3v, dims, fiber4d, betaP, sfun, ser, trQ2, dtop, gap},
+  c3v = 1/(8 Pi);
+  (* v473 (i): carrier Hodge count + coefficient pin *)
+  dims = Table[Binomial[5, k], {k, 0, 2}];
+  fiber4d = Total[Table[Binomial[4, k], {k, 0, 2}]];
+  betaP = bp /. First[Solve[3 bp == 1/(16 Pi), bp]];
+  checkExact["v473 GRAV.ENTROPIC.ACTION.01 (i): the carrier Hodge count -- dim Omega^{0,1,2}(C^5) = 1+5+10 = 16 = 2^(g_car-1) = dim S+_{D5} (Hodge-folded onto L^even C^5 = 1+10+5), while on 4d spacetime the fiber is only 1+4+6 = 11 (the 16 REQUIRES the five-slot carrier); and the coefficient pin -- her weak-coupling 3 beta' R matched to the TFPT EH normalisation 1/(16 pi G) = c3/(2G) fixes beta'_B = c3/6 = 1/(48 pi) exactly (the 6 = 3 form blocks x 2 = p2 = |R+(A3)|)",
+    Total[dims] == 16 && dims == {1, 5, 10} && Total[{1, 10, 5}] == 16 &&
+    fiber4d == 11 && betaP == c3v/6 && betaP == 1/(48 Pi) && Binomial[4, 2] == 6];
+  (* v473 (ii): entropy potential + Lambda-channel target *)
+  sfun[y_] := y - 1 - Log[y];
+  ser = Normal[Series[sfun[1 + ee], {ee, 0, 3}]];
+  trQ2 = tq /. First[Solve[tq/(4 (c3v/6) c3v) == 3/(4 Pi^2), tq]];
+  dtop = 48 c3v^4;
+  checkExact["v473 GRAV.ENTROPIC.ACTION.01 (ii): the entropy potential s(x) = x-1-ln x has s(1) = 0, s''(1) = 1, series eps^2/2 - eps^3/3 (Lambda_G nonnegative, QUADRATIC at the fixed point); with eps_* = e^{-1/alpha} Q and beta' = c3/6, l_P^2 Mbar^2 = c3, the v60 branch (3/4 pi^2) e^{-2/alpha} forces the EXACT target Tr Q^2 = 32 c3^4 = 1/(128 pi^4) = (2/3) delta_top",
+    sfun[1] == 0 && (D[sfun[y], {y, 2}] /. y -> 1) == 1 &&
+    Simplify[ser - (ee^2/2 - ee^3/3)] == 0 &&
+    Simplify[trQ2 - 32 c3v^4] == 0 && Simplify[trQ2 - 1/(128 Pi^4)] == 0 &&
+    Simplify[trQ2 - (2/3) dtop] == 0];
+  (* v473 (iii): the R^2 kill-test gap *)
+  gap = Simplify[(1/(12 c3v^7))/((c3v/6)^2)];
+  checkExact["v473 GRAV.ENTROPIC.ACTION.01 (iii): the R^2 kill-test gap -- raw log-expansion coefficient (c3/6)^2 vs the TFPT Starobinsky 1/(12 c3^7) (M_scal^2 = c3^7 Mbar^2) mismatch EXACTLY 3 c3^-9 = 3 (8 pi)^9 ~ 1.2e13 (13 orders): direct identification FALSE without a mechanism -- the pre-registered kill test",
+    gap == 3 (8 Pi)^9 && Abs[N[gap] - 1.2002728758784*^13]/1.2*^13 < 10^-3];
+];
+
+(* ==== v474 round: the operator level of the entropic-action bridge -- the exact
+   arithmetic content: the Q-target enumeration d k^2 = 32 with integer k has
+   exactly the supports (2,4), (8,2), (32,1) = {|Z2|, rank E8, 2^g_car} with the
+   10/16 blocks excluded (irrational multipliers) and the mode-ratio identity
+   Tr Q^2/delta_top = 32/48 = 2/3; and the fold-is-conjugation weight identity:
+   the traceless u(5) weights of Lambda^4 are the negatives of those of Lambda^1
+   (5 -> 5bar), with the Pascal blocks {1,5,10} vs {1,10,5}; mirrors v474 (the
+   32x32 Fock/Clifford matrix checks are Python-only). ==== *)
+Module[{sols, q32, w1, w4, tl},
+  (* v474 (i): Q-target enumeration + mode-count ratio *)
+  sols = Select[Table[{d, Sqrt[32/d]}, {d, 1, 32}], IntegerQ[#[[2]]] &];
+  q32 = (1/(8 Pi))^2;
+  checkExact["v474 GRAV.ENTROPIC.HODGE.01 (i): the Q-target enumeration -- Tr Q^2 = d k^2 c3^4 = 32 c3^4 with INTEGER k has exactly the supports (d,k) = (2,4), (8,2), (32,1) = {|Z2|, g_car+N_fam = rank E8, 2^g_car = dim Lambda^* C^5}; the two-form block d = 10 needs Sqrt[16/5] and the fiber d = 16 needs Sqrt[2] (both irrational, the naive pair-block reading KILLED); minimal uniform q = c3^2 = 1/(64 pi^2); mode-ratio identity 32 c3^4 / delta_top = 32/48 = 2/3",
+    sols == {{2, 4}, {8, 2}, {32, 1}} &&
+    ! Element[Sqrt[32/10], Rationals] && ! Element[Sqrt[32/16], Rationals] &&
+    Simplify[q32 - 1/(64 Pi^2)] == 0 && 32/48 == 2/3];
+  (* v474 (ii): the fold is the 5 -> 5bar conjugation (traceless u(5) weights) *)
+  tl[deg_] := Sort[Table[(Table[If[MemberQ[s, i], 1, 0], {i, 1, 5}] - deg/5),
+    {s, Subsets[Range[5], {deg}]}]];
+  w1 = tl[1]; w4 = tl[4];
+  checkExact["v474 GRAV.ENTROPIC.HODGE.01 (ii): the fold is the 5 -> 5bar conjugation -- the traceless u(5) weights of Lambda^4 C^5 are EXACTLY the negatives of those of Lambda^1 (multisets equal), so the Hodge fold conjugates the vector block and Bianconi's fiber 1+5+10 becomes the GUT half-spinor 16 = 1 + 5bar + 10; Pascal blocks {1,5,10} (fiber) vs {1,10,5} (even)",
+    w4 == Sort[-# & /@ w1] &&
+    (Binomial[5, #] & /@ {0, 1, 2}) == {1, 5, 10} &&
+    (Binomial[5, #] & /@ {0, 2, 4}) == {1, 10, 5} && Total[{1, 5, 10}] == 16];
+];
+
+(* ==== v475 round: the R^2 kill test of the entropic-action bridge, executed --
+   the exact content: the maximally-symmetric eigenvalues {R, R/4 x4, R/6 x6} of
+   R~ g~^-1 (incl. the 6x6 two-form flattening), the exact vacuum f(R) series
+   3 b R + (17/24) b^2 R^2, the raw scalaron mass m^2 = 4608 pi^2/17 Mbar^2 with
+   the enhancement (72/17)(8 pi)^9, the domain pole 384 pi^2 Mbar^2, and the
+   Lorentzian timelike witness 1 - alpha v^2; mirrors v475 (all exact). ==== *)
+Module[{gm, ginv, riem, ricci, n1, prs, g2f, r2f, n2, fB, ser, betaV, lp4, m2A,
+        m2B, enh, gL, mM, evT, evS},
+  (* v475 (i): maximally symmetric eigenvalues incl. the 6x6 flattening *)
+  gm = DiagonalMatrix[{gg0, gg1, gg2, gg3}]; ginv = Inverse[gm];
+  riem[m_, n_, r_, s_] := (RR/12) (gm[[m, r]] gm[[n, s]] - gm[[m, s]] gm[[n, r]]);
+  ricci = Table[Sum[riem[m, a, n, b] ginv[[a, b]], {a, 4}, {b, 4}], {m, 4}, {n, 4}];
+  n1 = Simplify[ricci . ginv];
+  prs = Subsets[Range[4], {2}];
+  g2f = Table[gm[[prs[[A, 1]], prs[[B, 1]]]] gm[[prs[[A, 2]], prs[[B, 2]]]] -
+              gm[[prs[[A, 1]], prs[[B, 2]]]] gm[[prs[[A, 2]], prs[[B, 1]]]],
+              {A, 6}, {B, 6}];
+  r2f = Table[2 riem[prs[[A, 1]], prs[[A, 2]], prs[[B, 1]], prs[[B, 2]]], {A, 6}, {B, 6}];
+  n2 = Simplify[r2f . Inverse[g2f]];
+  checkExact["v475 GRAV.ENTROPIC.SCALARON.01 (i): maximally symmetric eigenvalues of the relative curvature operator -- on a general diagonal 4d metric with R_munurhosigma = (R/12)(gg - gg), the Ricci block is (R/4) Id_4 and the flattened 6x6 Riemann-on-2-forms block is (R/6) Id_6 (Bianconi's Appendix-B flattening verified); with the scalar block R the eigenvalues are exactly {R; R/4 x4; R/6 x6}",
+    n1 == (RR/4) IdentityMatrix[4] && n2 == (RR/6) IdentityMatrix[6]];
+  (* v475 (ii): exact vacuum f(R) series + the raw scalaron mass, two routes *)
+  fB = -(Log[1 - bb RR] + 4 Log[1 - bb RR/4] + 6 Log[1 - bb RR/6]);
+  ser = Normal[Series[fB, {RR, 0, 2}]];
+  betaV = ((1/(8 Pi))/6)/(8 Pi MB^2);            (* beta = beta' l_P^2 *)
+  lp4 = (8 Pi MB^2)^2;                            (* 1/l_P^4 *)
+  m2A = m2v /. First[Solve[lp4 (17/24) betaV^2 == MB^2/(12 m2v), m2v]];
+  m2B = Simplify[(3 betaV)/(3*2*(17/24) betaV^2)];
+  enh = Simplify[m2A/((1/(8 Pi))^7 MB^2)];
+  checkExact["v475 GRAV.ENTROPIC.SCALARON.01 (ii): the exact vacuum f(R) = 3 b R + (17/24) b^2 R^2 + O(R^3) (the 3 re-derives Eq. (45) = the v473 pin; 17/24 = (1/2)(1+1/4+1/6) the exact tensorial factor); with beta' = c3/6 the EH normalisation matches identically and BOTH routes give the raw scalaron m^2 = 4608 pi^2/17 Mbar^2 (~51.7 Mbar, trans-Planckian); required enhancement EXACTLY (72/17)(8 pi)^9 -- v473's interpretation 2 killed in naive form; domain pole 1/beta = 384 pi^2 Mbar^2",
+    Coefficient[ser, RR, 1] == 3 bb && Coefficient[ser, RR, 2] == (17/24) bb^2 &&
+    Simplify[lp4 3 betaV - MB^2/2] == 0 && Simplify[m2A - m2B] == 0 &&
+    Simplify[m2A - (4608/17) Pi^2 MB^2] == 0 &&
+    Simplify[enh - (72/17) (8 Pi)^9] == 0 &&
+    Simplify[1/betaV - 384 Pi^2 MB^2] == 0];
+  (* v475 (iii): the Lorentzian timelike positivity witness *)
+  gL = DiagonalMatrix[{-1, 1, 1, 1}];
+  mM = Outer[Times, {vv, 0, 0, 0}, {vv, 0, 0, 0}];
+  evT = Sort[Eigenvalues[(gL + aal mM) . Inverse[gL]]];
+  evS = Sort[Eigenvalues[(gL + aal Outer[Times, {0, vv, 0, 0}, {0, vv, 0, 0}]) . Inverse[gL]]];
+  checkExact["v475 GRAV.ENTROPIC.SCALARON.01 (iii): the Lorentzian-positivity witness -- on Minkowski a TIMELIKE gradient gives G g^-1 eigenvalues {1 - alpha v^2, 1, 1, 1} (nonpositive for v^2 >= 1/alpha, ln undefined) while a SPACELIKE gradient gives {1 + alpha v^2, 1, 1, 1} (positive for all v) -- the v473 caveat exhibited, the OS route sturdier",
+    Sort[evT] == Sort[{1 - aal vv^2, 1, 1, 1}] &&
+    Sort[evS] == Sort[{1 + aal vv^2, 1, 1, 1}]];
+];
+
+(* ==== v477 round: the scale-flow representation of the entropic action -- the
+   exact content: the Frullani identity Integrate[(e^{-a t}-e^{-t})/t] = -Log[a],
+   the moment dictionary (flat weight = unit moments = the v475 raw coefficients
+   3 b R + (17/24) b^2 R^2), the ONE moment condition mu2/mu1^2 = (72/17)(8 pi)^9
+   with the exact closure (4608 pi^2/17)/((72/17)(8 pi)^9) = c3^7, and the v36
+   consistency f0 = 6 (4 pi)^2/c3^7 <=> M^2 = c3^7 Mbar^2; mirrors v477 (the
+   chi-form quadrature is numerical, Python-only). ==== *)
+Module[{frul, eig, tr, serR, mu1f, mu2f, closure, c3v, m2v36},
+  c3v = 1/(8 Pi);
+  (* v477 (i): Frullani + the moment dictionary at flat weight *)
+  frul = Integrate[(Exp[-aa tt] - Exp[-tt])/tt, {tt, 0, Infinity}, Assumptions -> aa > 0];
+  eig = Join[{1}, Table[1/4, 4], Table[1/6, 6]];
+  tr = Total[Exp[-tt (1 - bb # RR)] & /@ eig] - 11 Exp[-tt];
+  serR = Normal[Series[tr, {RR, 0, 2}]];
+  mu1f = Integrate[Coefficient[serR, RR, 1]/tt, {tt, 0, Infinity}];
+  mu2f = Integrate[Coefficient[serR, RR, 2]/tt, {tt, 0, Infinity}];
+  checkExact["v477 GRAV.ENTROPIC.SCALEFLOW.01 (i): the Frullani/scale-flow identity -Log[a] = Integrate[(e^{-a t}-e^{-t})/t] (symbolic) and the moment dictionary -- at the FLAT weight the maximally-symmetric relative trace integrates to exactly the v475 raw coefficients 3 b R + (17/24) b^2 R^2 (unit moments mu1 = mu2 = 1): the raw entropic action is the unit-moment point of a scale-measure family",
+    frul == -Log[aa] && Simplify[mu1f - 3 bb] == 0 &&
+    Simplify[mu2f - (17/24) bb^2] == 0];
+  (* v477 (ii): the one moment condition + closure + v36 consistency *)
+  closure = Simplify[(4608 Pi^2/17)/((72/17) (8 Pi)^9)];
+  m2v36 = Simplify[6 (4 Pi)^2/(6 (4 Pi)^2/c3v^7)];
+  checkExact["v477 GRAV.ENTROPIC.SCALEFLOW.01 (ii): the ONE moment condition -- demanding m^2 = c3^7 Mbar^2 forces mu2/mu1^2 = (72/17)(8 pi)^9 (the v475 kill-test number IS a moment ratio), and the closure identity (4608 pi^2/17)/((72/17)(8 pi)^9) = c3^7 holds IDENTICALLY; v36 consistency: f0 = 6(4 pi)^2/c3^7 <=> M^2/Mbar^2 = c3^7 -- one KMS moment, two parametrisations, zero new dials",
+    Simplify[closure - c3v^7] == 0 && Simplify[m2v36 - c3v^7] == 0 &&
+    Simplify[(4608 Pi^2/17)/closure - (72/17) (8 Pi)^9] == 0];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

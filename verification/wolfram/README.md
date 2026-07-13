@@ -105,7 +105,7 @@ v84–v93 block passed **45/45** on first run; the v94–v140 blocks were added
 the same day, the v141–v144 block on 2026-06-12. Current state:
 
 ```
---- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470: 368 passed, 0 failed ---
+--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477: 378 passed, 0 failed ---
 ALL WOLFRAM EXTENSION CHECKS PASSED
 ```
 
@@ -156,6 +156,74 @@ re-verification are numerical, Python-only (as for `v367`/`v461`). The
 curvature of the occupied-frame det line = 1 = the inflow level, on the same
 collar model) is likewise numerical (dense eigh + FHS twist grid),
 Python-only by the same convention, like `v471`.
+
+The 2026-07-13 entropic-action bridge `v473_entropic_action_bridge.py`
+(Bianconi, *Gravity from entropy*, PRD 111, 066001 (2025); arXiv:2408.14391)
+adds 3 more exact mirrors (total `371/371`): (i) the carrier Hodge count
+`dim Ω^{0,1,2}(ℂ⁵) = 1+5+10 = 16 = 2^{g_car−1} = dim S⁺` (vs the 4d fiber
+`1+4+6 = 11`) plus the coefficient pin `β′_B = c₃/6 = 1/(48π)` from
+`3β′ = 1/(16π)`; (ii) the entropy potential `s(x) = x−1−ln x` (nonnegative,
+quadratic minimum, series `ε²/2 − ε³/3`) with the Λ-channel target
+`Tr Q² = 32c₃⁴ = 1/(128π⁴) = (2/3)δ_top`; (iii) the `R²` kill-test gap
+`3c₃⁻⁹ = 3(8π)⁹ ≈ 1.2×10¹³`. The Frullani quadrature
+`−ln A = ∫dt/t(e^{−tA}−e^{−t})` is numerical (mpmath), Python-only, flagged in
+the `.wl` comment.
+
+The 2026-07-13 operator-level follow-up `v474_entropic_hodge_carrier.py`
+(work packages 1 + 4-algebra of the v473 round) adds 2 more exact mirrors
+(total `373/373`): (i) the Q-target enumeration — `d·k² = 32` with integer `k`
+has exactly the supports `(2,4), (8,2), (32,1) = {|Z₂|, rank E₈, 2^{g_car}}`,
+the two-form block `d = 10` and the fiber `d = 16` are excluded (irrational
+multipliers `√(16/5)`, `√2`), minimal uniform `q = c₃² = 1/(64π²)`, and the
+mode-ratio identity `Tr Q²/δ_top = 32/48 = 2/3`; (ii) the fold-is-conjugation
+weight identity — the traceless `u(5)` weights of `Λ⁴ℂ⁵` are the negatives of
+those of `Λ¹` (`5 → 5̄`), with the Pascal blocks `{1,5,10}` vs `{1,10,5}`. The
+32×32 Fock/Clifford matrix checks (CAR ⇒ Clifford, the 45-dim `so(10)` span
+preserving `Λ^even`, the symbolic Hodge–Dirac symbol identity) are Python-only
+by the matrix-construction convention, flagged in the `.wl` comment.
+
+The 2026-07-13 kill-test round `v475_entropic_scalaron_gate.py` (work package
+5 of the v473 round, executed) adds 3 more exact mirrors (total `376/376`):
+(i) the maximally-symmetric eigenvalues of the relative curvature operator —
+Ricci block `(R/4)Id₄` and the flattened 6×6 Riemann-on-2-forms block
+`(R/6)Id₆` on a general diagonal 4d metric (Bianconi's Appendix-B flattening
+verified); (ii) the exact vacuum `f(R) = 3βR + (17/24)β²R² + O(R³)` with the
+raw scalaron mass `m² = 4608π²/17·M̄²` (two routes identical, trans-Planckian
+`≈ 51.7 M̄`), the required enhancement exactly `(72/17)(8π)⁹` and the domain
+pole `1/β = 384π²M̄²`; (iii) the Lorentzian-positivity witness — timelike
+gradient eigenvalues `{1−αv², 1,1,1}` vs spacelike `{1+αv², 1,1,1}`. All three
+blocks are exact; nothing is Python-only in this round.
+
+The 2026-07-13 AP2 well-posing `v476_entropic_compression_toy.py` (the
+compression conjecture of the v473 round exercised on a gapped chain: the
+operator-side reading `P f(C) P` ill-posed on a pure bulk, the state-side
+reading forced, the mismatch exactly second order in the cross-cut block,
+gap-controlled convergence) is numerical (numpy lattice model + Peschel
+modular data), Python-only by the suite convention; its one exact ingredient
+(the symbolic block identity `[Cⁿ]_AA − (C_AA)ⁿ` carrying the cross block
+twice) is trivial block algebra, flagged here rather than mirrored (the
+Wolfram exact-check count stays unchanged at `376/376`).
+
+The 2026-07-13 scale-flow round `v477_entropic_scaleflow.py` adds 2 more
+exact mirrors (total `378/378`): (i) the Frullani/scale-flow identity
+`−ln a = ∫dt/t (e^{−ta}−e^{−t})` (symbolic) plus the moment dictionary — at
+the flat weight the maximally-symmetric relative trace integrates to exactly
+the v475 raw coefficients `3βR + (17/24)β²R²` (unit moments); (ii) the ONE
+moment condition `μ₂/μ₁² = (72/17)(8π)⁹` with the exact closure identity
+`(4608π²/17)/((72/17)(8π)⁹) = c₃⁷` and the v36 consistency
+`f₀ = 6(4π)²/c₃⁷ ⇔ M²/M̄² = c₃⁷`. The χ-form quadrature of the Frullani
+substitution is numerical (mpmath), Python-only, flagged in the `.wl`
+comment.
+
+The 2026-07-13 two-leg exhibit `v478_entropic_continuum_legs.py` (leg A: the
+compressed critical state's modular data flows to the CHM/BW geometric form —
+Calabrese–Cardy `c_est → 1`, CHM parabola, even bands exactly zero; leg B: the
+single-scale corollary `μ₂/μ₁² = e^{t₀}` forcing `t₀ = ln(72/17) + 9ln(8π) =
+30.461` with the `h(E₈) = 30` near-miss explicitly declined) is
+high-precision numerical (mpmath 50-digit eigensolver on the sinc kernel),
+Python-only by the suite convention; its one exact ingredient (the point-
+measure moment ratio `e^{t₀}`) is trivial calculus, flagged here rather than
+mirrored (the Wolfram exact-check count stays unchanged at `378/378`).
 
 (ledger `GATE.WOLFRAM.02`). The scipy-only parts of the round (the `v86`
 pivot ODE solve, the `v88` data pulls, the `v99` mpmath ODE probe of the

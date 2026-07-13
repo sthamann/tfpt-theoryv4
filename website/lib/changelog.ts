@@ -42,6 +42,2565 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-07-13",
+    "dateLabel": "2026-07-13",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v478"
+      },
+      {
+        "k": "t",
+        "v": " — first computable steps on the two remaining legs of the entropic-action bridge: the state-side modular data flows to the CHM/Bisognano–Wichmann geometric form (Calabrese–Cardy "
+      },
+      {
+        "k": "m",
+        "v": "c_{\\mathrm{est}}{\\to}1"
+      },
+      {
+        "k": "t",
+        "v": ", CHM parabola, even bands exactly zero) — the bridge's modular side meets TFPT's Einstein-derivation input; and the measure condition reduced to one exact KMS time "
+      },
+      {
+        "k": "m",
+        "v": "t_0=\\ln\\tfrac{72}{17}+9\\ln(8\\pi)=30.461"
+      },
+      {
+        "k": "t",
+        "v": " with the "
+      },
+      {
+        "k": "m",
+        "v": "h(E_8){=}30"
+      },
+      {
+        "k": "t",
+        "v": " near-miss explicitly declined; both legs stay "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "no status moves"
+          }
+        ]
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v478_entropic_continuum_legs.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "GRAV.ENTROPIC.LEGS.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Leg A (AP2 continuum, exhibited):"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " on the exactly solvable critical chain (infinite-volume sinc kernel, "
+        },
+        {
+          "k": "m",
+          "v": "50"
+        },
+        {
+          "k": "t",
+          "v": "-digit precision) the compressed interval state has "
+        },
+        {
+          "k": "m",
+          "v": "S(L){=}(c/3)\\ln L{+}k"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "c_{\\mathrm{est}}{=}1.00089/1.00038/1.00021"
+        },
+        {
+          "k": "t",
+          "v": " (monotone "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " the Dirac "
+        },
+        {
+          "k": "m",
+          "v": "c{=}1{=}2{\\times}\\tfrac12"
+        },
+        {
+          "k": "t",
+          "v": ", the "
+        },
+        {
+          "k": "c",
+          "v": "v450"
+        },
+        {
+          "k": "t",
+          "v": " reading; gapped control "
+        },
+        {
+          "k": "m",
+          "v": "\\sim6{\\times}10^{-8}"
+        },
+        {
+          "k": "t",
+          "v": ", area law); the Peschel modular Hamiltonian "
+        },
+        {
+          "k": "m",
+          "v": "K{=}\\ln((1{-}C_A)/C_A)"
+        },
+        {
+          "k": "t",
+          "v": " organises on the CHM weight "
+        },
+        {
+          "k": "m",
+          "v": "\\beta(x){=}x(L{-}x)/L"
+        },
+        {
+          "k": "t",
+          "v": " (corr "
+        },
+        {
+          "k": "m",
+          "v": "0.87{\\to}0.99"
+        },
+        {
+          "k": "t",
+          "v": ", shrinking plateau drift; constants deliberately not asserted), the even-range bands vanish identically (particle–hole, "
+        },
+        {
+          "k": "m",
+          "v": "\\sim10^{-36}"
+        },
+        {
+          "k": "t",
+          "v": ") and the odd tail is "
+        },
+        {
+          "k": "m",
+          "v": "1.8\\%"
+        },
+        {
+          "k": "t",
+          "v": " with parabolic envelope — the state-side "
+        },
+        {
+          "k": "m",
+          "v": "\\Delta_\\Sigma"
+        },
+        {
+          "k": "t",
+          "v": " (the reading forced by "
+        },
+        {
+          "k": "c",
+          "v": "v476"
+        },
+        {
+          "k": "t",
+          "v": ") flows to the CHM/BW geometric form, exactly the object TFPT's Einstein derivation consumes ("
+        },
+        {
+          "k": "c",
+          "v": "v323"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v358"
+        },
+        {
+          "k": "t",
+          "v": "): the bridge's modular side and the gravity side meet in the continuum limit; a lattice exhibit, NOT a continuum proof — AP2 stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Leg B (the measure):"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "single-scale corollary — "
+        },
+        {
+          "k": "m",
+          "v": "d\\mu{=}\\delta(t{-}t_0)dt"
+        },
+        {
+          "k": "t",
+          "v": " gives "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_2/\\mu_1^2{=}e^{t_0}"
+        },
+        {
+          "k": "t",
+          "v": " exactly, so the "
+        },
+        {
+          "k": "c",
+          "v": "v477"
+        },
+        {
+          "k": "t",
+          "v": " one-moment condition forces "
+        },
+        {
+          "k": "m",
+          "v": "t_0{=}\\ln\\tfrac{72}{17}{+}9\\ln(8\\pi){=}30.461"
+        },
+        {
+          "k": "t",
+          "v": " (one dimensionless KMS time, closed form); the near-miss to "
+        },
+        {
+          "k": "m",
+          "v": "h(E_8){=}30"
+        },
+        {
+          "k": "t",
+          "v": " (difference "
+        },
+        {
+          "k": "m",
+          "v": "0.461"
+        },
+        {
+          "k": "t",
+          "v": ") is explicitly DECLINED per the "
+        },
+        {
+          "k": "c",
+          "v": "v354"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v355"
+        },
+        {
+          "k": "t",
+          "v": " no-free-pattern rule — deriving the measure from the entropic structure stays OPEN. Keybox extended in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": "; high-precision numerical module, Python-only by nature (Wolfram count unchanged, "
+        },
+        {
+          "k": "m",
+          "v": "378/378"
+        },
+        {
+          "k": "t",
+          "v": "; flagged in the Wolfram README); ledger row "
+        },
+        {
+          "k": "c",
+          "v": "GRAV.ENTROPIC.LEGS.01"
+        },
+        {
+          "k": "t",
+          "v": "; both legs stay "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": ", no marker moves."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-13",
+    "dateLabel": "2026-07-13",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v477"
+      },
+      {
+        "k": "t",
+        "v": " — the scale-flow representation of the entropic action: the surviving "
+      },
+      {
+        "k": "m",
+        "v": "R^2"
+      },
+      {
+        "k": "t",
+        "v": " route typed as "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "one moment condition"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_2/\\mu_1^2=\\tfrac{72}{17}(8\\pi)^9"
+      },
+      {
+        "k": "t",
+        "v": " with the exact closure "
+      },
+      {
+        "k": "m",
+        "v": "\\tfrac{4608\\pi^2/17}{(72/17)(8\\pi)^9}=\\cthree^7"
+      },
+      {
+        "k": "t",
+        "v": " — the kill-test gap is a scale-measure datum, satisfied by the same KMS moment TFPT already fixes ("
+      },
+      {
+        "k": "c",
+        "v": "v36"
+      },
+      {
+        "k": "t",
+        "v": "); zero new dials, "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "no status moves"
+          }
+        ]
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v477_entropic_scaleflow.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "GRAV.ENTROPIC.SCALEFLOW.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "The Frullani identity upgrades to a scale-flow representation: "
+        },
+        {
+          "k": "m",
+          "v": "-\\ln a=\\int\\tfrac{dt}t(e^{-ta}{-}e^{-t})\n=2\\int\\tfrac{d\\chi}\\chi(e^{-a/\\chi^2}{-}e^{-1/\\chi^2})"
+        },
+        {
+          "k": "t",
+          "v": " (symbolic "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "10^{-20}"
+        },
+        {
+          "k": "t",
+          "v": " quadrature) — Bianconi's log action IS the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "flat"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " scale-integral of relative heat-kernel actions, while TFPT's "
+        },
+        {
+          "k": "m",
+          "v": "S_{\\mathrm{rel},\\chi}"
+        },
+        {
+          "k": "t",
+          "v": " evaluates "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " KMS scale with a weight: the bridge between the two action principles is a choice of SCALE MEASURE. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "Moment dictionary: a weight "
+        },
+        {
+          "k": "m",
+          "v": "w(t)\\,dt/t"
+        },
+        {
+          "k": "t",
+          "v": " gives "
+        },
+        {
+          "k": "m",
+          "v": "3\\beta R\\,\\mu_1+\\tfrac{17}{24}\\beta^2R^2\\mu_2"
+        },
+        {
+          "k": "t",
+          "v": "; the flat weight has "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_1{=}\\mu_2{=}1"
+        },
+        {
+          "k": "t",
+          "v": " and reproduces the "
+        },
+        {
+          "k": "c",
+          "v": "v475"
+        },
+        {
+          "k": "t",
+          "v": " raw coefficients identically. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "The ONE moment condition: demanding "
+        },
+        {
+          "k": "m",
+          "v": "m^2{=}\\cthree^7\\Mbar^2"
+        },
+        {
+          "k": "t",
+          "v": " forces exactly "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_2/\\mu_1^2{=}\\tfrac{72}{17}(8\\pi)^9"
+        },
+        {
+          "k": "t",
+          "v": " — the "
+        },
+        {
+          "k": "c",
+          "v": "v475"
+        },
+        {
+          "k": "t",
+          "v": " kill-test number IS a moment ratio — and the closure identity "
+        },
+        {
+          "k": "m",
+          "v": "\\tfrac{4608\\pi^2/17}{(72/17)(8\\pi)^9}\n{=}\\cthree^7"
+        },
+        {
+          "k": "t",
+          "v": " holds identically: the “"
+        },
+        {
+          "k": "m",
+          "v": "13"
+        },
+        {
+          "k": "t",
+          "v": " orders” are a scale-measure datum, not a bridge mismatch. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "v36 consistency: "
+        },
+        {
+          "k": "m",
+          "v": "f_0{=}6(4\\pi)^2/\\cthree^7\\Leftrightarrow M^2/\\Mbar^2{=}\\cthree^7"
+        },
+        {
+          "k": "t",
+          "v": " — one KMS moment, two parametrisations, zero new dials. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "A consistency statement, not a derivation (the KMS weight is TFPT input; the entropic action supplies the Einstein"
+        },
+        {
+          "k": "m",
+          "v": "{}+\\Lambda"
+        },
+        {
+          "k": "t",
+          "v": " level and the scale-flow form, TFPT supplies the measure). Negative side-record: an exact lattice-BW commutator attempt for AP2 (Peschel–Eisler simple forms) did NOT hold on the half-filled open chain — kept out of the suite, logged in the research notes. Keybox extended in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": "; Wolfram mirrors both exact blocks ("
+        },
+        {
+          "k": "m",
+          "v": "378/378"
+        },
+        {
+          "k": "t",
+          "v": "); ledger row "
+        },
+        {
+          "k": "c",
+          "v": "GRAV.ENTROPIC.SCALEFLOW.01"
+        },
+        {
+          "k": "t",
+          "v": "; the "
+        },
+        {
+          "k": "m",
+          "v": "R^2"
+        },
+        {
+          "k": "t",
+          "v": " gate and the "
+        },
+        {
+          "k": "c",
+          "v": "v359"
+        },
+        {
+          "k": "t",
+          "v": " typing stay "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": ", no marker moves."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-13",
+    "dateLabel": "2026-07-13",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v476"
+      },
+      {
+        "k": "t",
+        "v": " — the AP2 compression conjecture of the entropic-action bridge made "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "well-posed"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " on an exactly solvable model: the literal operator-side reading is ill-posed on a pure bulk, the state-side reading is forced, the mismatch is exactly quadratic in the cross-cut correlations and gap-suppressed; AP2 stays "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "no status moves"
+          }
+        ]
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v476_entropic_compression_toy.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "GRAV.ENTROPIC.COMPRESS.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The last open work package of the "
+        },
+        {
+          "k": "c",
+          "v": "v473"
+        },
+        {
+          "k": "t",
+          "v": " round, exercised on a gapped staggered-mass chain ("
+        },
+        {
+          "k": "m",
+          "v": "N{=}16"
+        },
+        {
+          "k": "t",
+          "v": "). The seam situation is reproduced (pure bulk: the ground-state covariance is a projection to "
+        },
+        {
+          "k": "m",
+          "v": "10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": "; thermal boundary: "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{spec}(PCP)\\subset(0,1)"
+        },
+        {
+          "k": "t",
+          "v": ", Peschel "
+        },
+        {
+          "k": "m",
+          "v": "K{=}\\ln((1{-}C_A)/C_A)"
+        },
+        {
+          "k": "t",
+          "v": " finite, "
+        },
+        {
+          "k": "m",
+          "v": "S{>}0"
+        },
+        {
+          "k": "t",
+          "v": " — "
+        },
+        {
+          "k": "c",
+          "v": "v155"
+        },
+        {
+          "k": "t",
+          "v": " in the bridge context). "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "The reading is decided:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " on the pure bulk "
+        },
+        {
+          "k": "m",
+          "v": "f(x){=}x/(1{-}x)"
+        },
+        {
+          "k": "t",
+          "v": " is singular on "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{spec}(C){=}\\{0,1\\}"
+        },
+        {
+          "k": "t",
+          "v": ", so the literal operator-side reading "
+        },
+        {
+          "k": "m",
+          "v": "P f(C) P"
+        },
+        {
+          "k": "t",
+          "v": " of the "
+        },
+        {
+          "k": "c",
+          "v": "v473"
+        },
+        {
+          "k": "t",
+          "v": " conjecture is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "ill-posed"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " while the state-side "
+        },
+        {
+          "k": "m",
+          "v": "f(PCP)"
+        },
+        {
+          "k": "t",
+          "v": " is finite — the compression identity can only mean “build "
+        },
+        {
+          "k": "m",
+          "v": "\\Delta_\\Sigma"
+        },
+        {
+          "k": "t",
+          "v": " from the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "compressed"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " relative metric”, which matches Bianconi's own local-metric construction (AP2 retyped, not weakened). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "Block algebra (symbolic): "
+        },
+        {
+          "k": "m",
+          "v": "[C^2]_{AA}{-}(C_{AA})^2{=}BB^t"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "[C^3]_{AA}{-}(C_{AA})^3{=}ABB^t{+}\nBB^tA{+}BDB^t"
+        },
+        {
+          "k": "t",
+          "v": " — first order in the cross block vanishes identically, so for any analytic "
+        },
+        {
+          "k": "m",
+          "v": "f"
+        },
+        {
+          "k": "t",
+          "v": " the two readings agree to "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "second"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " order in the cross-cut correlations: the modular (entanglement) content lives exactly in that quadratic correction. Gap control at the bounded (covariance) level: the Bianconi-shaped bulk identity "
+        },
+        {
+          "k": "m",
+          "v": "f(C_T){=}e^{-h/T}"
+        },
+        {
+          "k": "t",
+          "v": " holds to "
+        },
+        {
+          "k": "m",
+          "v": "10^{-11}"
+        },
+        {
+          "k": "t",
+          "v": " relative; the mismatch obeys the quadratic law "
+        },
+        {
+          "k": "m",
+          "v": "d\\le x^2"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "d/x^2\\in[0.4,1.0]"
+        },
+        {
+          "k": "t",
+          "v": ") and falls with the gap in the gapped regime, the decoupled cut agrees exactly — the two readings converge in the gap-dominated regime, where TFPT operates ("
+        },
+        {
+          "k": "m",
+          "v": "\\Delta_{\\mathrm{eff}}{>}0"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v76"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v337"
+        },
+        {
+          "k": "t",
+          "v": "). Keybox extended in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": "; numerical module, Python-only by nature (Wolfram count unchanged, "
+        },
+        {
+          "k": "m",
+          "v": "376/376"
+        },
+        {
+          "k": "t",
+          "v": "; the block identity flagged in the Wolfram README); ledger row "
+        },
+        {
+          "k": "c",
+          "v": "GRAV.ENTROPIC.COMPRESS.01"
+        },
+        {
+          "k": "t",
+          "v": "; AP2 (the continuum seam statement) stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": ", no marker moves."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-13",
+    "dateLabel": "2026-07-13",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v475"
+      },
+      {
+        "k": "t",
+        "v": " — the "
+      },
+      {
+        "k": "m",
+        "v": "R^2"
+      },
+      {
+        "k": "t",
+        "v": " kill test of the entropic-action bridge, "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "executed"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": ": exact tensorial factors on the maximally symmetric background, raw entropic scalaron "
+      },
+      {
+        "k": "m",
+        "v": "m^2=\\tfrac{4608\\pi^2}{17}\\Mbar^2"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "\\approx51.7\\,\\Mbar"
+      },
+      {
+        "k": "t",
+        "v": ", trans-Planckian) "
+      },
+      {
+        "k": "m",
+        "v": "\\Rightarrow"
+      },
+      {
+        "k": "t",
+        "v": " the light-trace-mode reading is dead, KMS renormalisation the only surviving "
+      },
+      {
+        "k": "m",
+        "v": "R^2"
+      },
+      {
+        "k": "t",
+        "v": " route; plus the explicit Lorentzian-positivity witness; "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "no status moves"
+          }
+        ]
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v475_entropic_scalaron_gate.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "GRAV.ENTROPIC.SCALARON.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Work package 5 of the "
+        },
+        {
+          "k": "c",
+          "v": "v473"
+        },
+        {
+          "k": "t",
+          "v": " bridge. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "On a maximally symmetric background the relative curvature operator "
+        },
+        {
+          "k": "m",
+          "v": "\\widetilde{\\mathcal R}\\widetilde g^{-1}"
+        },
+        {
+          "k": "t",
+          "v": " has eigenvalues "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "exactly"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\{R;\\,R/4{\\times}4;\\,R/6{\\times}6\\}"
+        },
+        {
+          "k": "t",
+          "v": " (Bianconi's Appendix-B flattening verified symbolically, incl. the "
+        },
+        {
+          "k": "m",
+          "v": "6{\\times}6"
+        },
+        {
+          "k": "t",
+          "v": " two-form block), giving the exact vacuum action "
+        },
+        {
+          "k": "m",
+          "v": "\\mathcal L_{\\mathrm B}(R)=3\\beta R+\\tfrac{17}{24}\\beta^2R^2+O(R^3)"
+        },
+        {
+          "k": "t",
+          "v": " — the "
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": " re-derives her Eq. (45) ("
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "c",
+          "v": "v473"
+        },
+        {
+          "k": "t",
+          "v": " pin), "
+        },
+        {
+          "k": "m",
+          "v": "\\tfrac{17}{24}{=}\\tfrac12(1{+}\\tfrac14{+}\\tfrac16)"
+        },
+        {
+          "k": "t",
+          "v": " is the exact tensorial "
+        },
+        {
+          "k": "m",
+          "v": "R^2"
+        },
+        {
+          "k": "t",
+          "v": " factor. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "With the pinned "
+        },
+        {
+          "k": "m",
+          "v": "\\beta'{=}\\cthree/6"
+        },
+        {
+          "k": "t",
+          "v": " both mass routes (Starobinsky matching and "
+        },
+        {
+          "k": "m",
+          "v": "f'/3f''"
+        },
+        {
+          "k": "t",
+          "v": ") agree: the raw entropic scalaron is "
+        },
+        {
+          "k": "m",
+          "v": "m_{\\mathrm{raw}}^2{=}\\tfrac{4608\\pi^2}{17}\n\\Mbar^2"
+        },
+        {
+          "k": "t",
+          "v": ", i.e. "
+        },
+        {
+          "k": "m",
+          "v": "m_{\\mathrm{raw}}{\\approx}51.7\\,\\Mbar{\\approx}1.3{\\times}10^{20}"
+        },
+        {
+          "k": "t",
+          "v": " GeV — TRANS-PLANCKIAN, not light; "
+        },
+        {
+          "k": "c",
+          "v": "v473"
+        },
+        {
+          "k": "t",
+          "v": "'s interpretation 2 (the TFPT scalaron as the light "
+        },
+        {
+          "k": "m",
+          "v": "\\mathcal G"
+        },
+        {
+          "k": "t",
+          "v": "-trace mode) is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "dead in naive form"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "; a viable mechanism must supply exactly "
+        },
+        {
+          "k": "m",
+          "v": "\\tfrac{72}{17}(8\\pi)^9{\\approx}1.69{\\times}10^{13}"
+        },
+        {
+          "k": "t",
+          "v": " in mass"
+        },
+        {
+          "k": "m",
+          "v": "^2"
+        },
+        {
+          "k": "t",
+          "v": " (the kill-test number now WITH tensorial factors). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "Domain: first log pole at "
+        },
+        {
+          "k": "m",
+          "v": "R{=}1/\\beta{=}384\\pi^2\\Mbar^2"
+        },
+        {
+          "k": "t",
+          "v": " (trans-Planckian) — the obstruction is the mass, not the domain. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "Lorentzian-positivity witness: a timelike gradient gives the "
+        },
+        {
+          "k": "m",
+          "v": "Gg^{-1}"
+        },
+        {
+          "k": "t",
+          "v": " eigenvalue "
+        },
+        {
+          "k": "m",
+          "v": "1-\\alpha v^2\\le0"
+        },
+        {
+          "k": "t",
+          "v": " for "
+        },
+        {
+          "k": "m",
+          "v": "v^2\\ge1/\\alpha"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\ln"
+        },
+        {
+          "k": "t",
+          "v": " undefined), spacelike/Euclidean stay positive — the "
+        },
+        {
+          "k": "c",
+          "v": "v473"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "caveat exhibited, the OS route sturdier. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "Verdict: interpretation 1 survives (Einstein"
+        },
+        {
+          "k": "m",
+          "v": "{}+\\Lambda"
+        },
+        {
+          "k": "t",
+          "v": " level), 2 is dead naive, 3 (KMS-spectral renormalisation) is the ONLY surviving "
+        },
+        {
+          "k": "m",
+          "v": "R^2"
+        },
+        {
+          "k": "t",
+          "v": " route. Keybox extended in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": "; Wolfram mirrors all three blocks ("
+        },
+        {
+          "k": "m",
+          "v": "376/376"
+        },
+        {
+          "k": "t",
+          "v": "); ledger row "
+        },
+        {
+          "k": "c",
+          "v": "GRAV.ENTROPIC.SCALARON.01"
+        },
+        {
+          "k": "t",
+          "v": "; no gate closes, no marker moves."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-13",
+    "dateLabel": "2026-07-13",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v474"
+      },
+      {
+        "k": "t",
+        "v": " — the operator level of the entropic-action bridge: the "
+      },
+      {
+        "k": "m",
+        "v": "D_5"
+      },
+      {
+        "k": "t",
+        "v": " Clifford/spinor structure exhibited on the carrier Fock space, the Hodge fold identified as the "
+      },
+      {
+        "k": "m",
+        "v": "5{\\to}\\bar5"
+      },
+      {
+        "k": "t",
+        "v": " conjugation, and the "
+      },
+      {
+        "k": "c",
+        "v": "v473"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "Q"
+      },
+      {
+        "k": "t",
+        "v": "-target "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "decided"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " — supports exactly "
+      },
+      {
+        "k": "m",
+        "v": "\\{|\\Z_2|,\\operatorname{rank}E_8,2^{\\gcar}\\}"
+      },
+      {
+        "k": "t",
+        "v": ", the naive pair-block reading killed; "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "no status moves"
+          }
+        ]
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v474_entropic_hodge_carrier.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "GRAV.ENTROPIC.HODGE.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Work packages 1 and 4-algebra of the "
+        },
+        {
+          "k": "c",
+          "v": "v473"
+        },
+        {
+          "k": "t",
+          "v": " bridge, machine-checked on the finite carrier Fock space "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda^\\bullet\\mathbb C^5"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\dim 2^{\\gcar}{=}32"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "CAR"
+        },
+        {
+          "k": "m",
+          "v": "{\\Rightarrow}"
+        },
+        {
+          "k": "t",
+          "v": "Clifford: the ten "
+        },
+        {
+          "k": "m",
+          "v": "\\Gamma"
+        },
+        {
+          "k": "t",
+          "v": "'s from "
+        },
+        {
+          "k": "m",
+          "v": "(a_k^\\dagger,a_k)"
+        },
+        {
+          "k": "t",
+          "v": " satisfy "
+        },
+        {
+          "k": "m",
+          "v": "\\{\\Gamma_a,\\Gamma_b\\}{=}2\\delta_{ab}"
+        },
+        {
+          "k": "t",
+          "v": " exactly (all "
+        },
+        {
+          "k": "m",
+          "v": "100"
+        },
+        {
+          "k": "t",
+          "v": " pairs, integer matrices); the "
+        },
+        {
+          "k": "m",
+          "v": "45"
+        },
+        {
+          "k": "t",
+          "v": " bilinears "
+        },
+        {
+          "k": "m",
+          "v": "[\\Gamma_a,\\Gamma_b]/4"
+        },
+        {
+          "k": "t",
+          "v": " commute with "
+        },
+        {
+          "k": "m",
+          "v": "\\gamma{=}(-1)^N"
+        },
+        {
+          "k": "t",
+          "v": ", span exactly "
+        },
+        {
+          "k": "m",
+          "v": "45{=}\\dim\\mathfrak{so}(10)"
+        },
+        {
+          "k": "t",
+          "v": " and leak nothing from the "
+        },
+        {
+          "k": "m",
+          "v": "16"
+        },
+        {
+          "k": "t",
+          "v": "-dim even subspace — the carrier half-spinor "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the even exterior algebra "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "with"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " its spinor structure (the operator level of "
+        },
+        {
+          "k": "c",
+          "v": "v2"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v44"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v197"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the Hodge–Dirac symbol: "
+        },
+        {
+          "k": "m",
+          "v": "c(\\xi){=}a^\\dagger(\\xi)\n{-}a(\\xi)"
+        },
+        {
+          "k": "t",
+          "v": " satisfies "
+        },
+        {
+          "k": "m",
+          "v": "c(\\xi)^2{=}-|\\xi|^2\\,\\mathrm{Id}"
+        },
+        {
+          "k": "t",
+          "v": " for symbolic "
+        },
+        {
+          "k": "m",
+          "v": "\\xi"
+        },
+        {
+          "k": "t",
+          "v": " — Bianconi's "
+        },
+        {
+          "k": "m",
+          "v": "D{=}d{+}\n\\delta"
+        },
+        {
+          "k": "t",
+          "v": " is Clifford multiplication at symbol level. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the fold is the "
+        },
+        {
+          "k": "m",
+          "v": "5{\\to}\\bar5"
+        },
+        {
+          "k": "t",
+          "v": " conjugation: the traceless "
+        },
+        {
+          "k": "m",
+          "v": "\\mathfrak u(5)"
+        },
+        {
+          "k": "t",
+          "v": " weights of "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda^4"
+        },
+        {
+          "k": "t",
+          "v": " are the negatives of those of "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda^1"
+        },
+        {
+          "k": "t",
+          "v": ", so her fiber "
+        },
+        {
+          "k": "m",
+          "v": "1{+}5{+}10"
+        },
+        {
+          "k": "t",
+          "v": " becomes the GUT half-spinor "
+        },
+        {
+          "k": "m",
+          "v": "16{=}1{+}\\bar5{+}10"
+        },
+        {
+          "k": "t",
+          "v": " (the SM carrier decomposition). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "honest obstruction: "
+        },
+        {
+          "k": "m",
+          "v": "\\Omega^{\\le2}"
+        },
+        {
+          "k": "t",
+          "v": " is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Clifford-invariant ("
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda^2{\\to}\\Lambda^3"
+        },
+        {
+          "k": "t",
+          "v": " leak) — the bridge must go through the fold, never through degree truncation (a recorded constraint on the AP2 compression). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the "
+        },
+        {
+          "k": "m",
+          "v": "Q"
+        },
+        {
+          "k": "t",
+          "v": "-target enumeration (the "
+        },
+        {
+          "k": "c",
+          "v": "v473"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "conjecture decided at the algebraic level): "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{Tr}Q^2{=}d\\,k^2\\cthree^4{=}32\\cthree^4"
+        },
+        {
+          "k": "t",
+          "v": " with integer "
+        },
+        {
+          "k": "m",
+          "v": "k"
+        },
+        {
+          "k": "t",
+          "v": " has exactly the supports "
+        },
+        {
+          "k": "m",
+          "v": "(d,k){=}(2,4),(8,2),(32,1)"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "=\\{|\\Z_2|,\\ \\gcar{+}\\Nfam{=}\\operatorname{rank}E_8,\\\n2^{\\gcar}{=}\\dim\\Lambda^\\bullet\\}"
+        },
+        {
+          "k": "t",
+          "v": " — minimal uniform solution "
+        },
+        {
+          "k": "m",
+          "v": "q{=}\\cthree^2{=}1/(64\\pi^2)"
+        },
+        {
+          "k": "t",
+          "v": " per Fock mode, bonus identity "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{Tr}Q^2/\\delta_{\\mathrm{top}}{=}32/48{=}2/3{=}\\dim\\Lambda^\\bullet/\n\\Oadm"
+        },
+        {
+          "k": "t",
+          "v": "; the two-form block "
+        },
+        {
+          "k": "m",
+          "v": "10"
+        },
+        {
+          "k": "t",
+          "v": " (the problem-note “pair sector” conjecture) and the fiber "
+        },
+        {
+          "k": "m",
+          "v": "16"
+        },
+        {
+          "k": "t",
+          "v": " need irrational multipliers "
+        },
+        {
+          "k": "m",
+          "v": "\\sqrt{16/5}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\sqrt2"
+        },
+        {
+          "k": "t",
+          "v": " — "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "killed"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " in uniform form. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the physical choice among the three admissible supports; "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "unchanged (AP2 compression "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "R^2"
+        },
+        {
+          "k": "t",
+          "v": " mechanism). Keybox extended in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " (Research Contract 2, the "
+        },
+        {
+          "k": "c",
+          "v": "v473"
+        },
+        {
+          "k": "t",
+          "v": " keybox); Wolfram mirrors the enumeration and the weight-conjugation identity ("
+        },
+        {
+          "k": "m",
+          "v": "373/373"
+        },
+        {
+          "k": "t",
+          "v": "); ledger row "
+        },
+        {
+          "k": "c",
+          "v": "GRAV.ENTROPIC.HODGE.01"
+        },
+        {
+          "k": "t",
+          "v": "; no gate closes, no marker moves."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-13",
+    "dateLabel": "2026-07-13",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v473"
+      },
+      {
+        "k": "t",
+        "v": " — the entropic-action bridge: Bianconi's "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "Gravity from entropy"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " (Phys. Rev. D 111, 066001 (2025); "
+      },
+      {
+        "k": "c",
+        "v": "arXiv:2408.14391"
+      },
+      {
+        "k": "t",
+        "v": ") quantified as an "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "external candidate"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " for the missing action level of the parameter-free Einstein equation; her free constant pinned "
+      },
+      {
+        "k": "m",
+        "v": "\\beta'_{\\mathrm B}=\\cthree/6=1/(48\\pi)"
+      },
+      {
+        "k": "t",
+        "v": ", the "
+      },
+      {
+        "k": "m",
+        "v": "R^2"
+      },
+      {
+        "k": "t",
+        "v": " gap "
+      },
+      {
+        "k": "m",
+        "v": "3(8\\pi)^9"
+      },
+      {
+        "k": "t",
+        "v": " pre-registered as kill test; "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "no status moves"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": ", the "
+      },
+      {
+        "k": "c",
+        "v": "v359"
+      },
+      {
+        "k": "t",
+        "v": " equation-of-state typing stays "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v473_entropic_action_bridge.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "GRAV.ENTROPIC.ACTION.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " TFPT's classical field equation "
+        },
+        {
+          "k": "m",
+          "v": "G_{ab}+\\Lambda g_{ab}=\\cthree^{-1}T_{ab}"
+        },
+        {
+          "k": "t",
+          "v": " is derived thermodynamically ("
+        },
+        {
+          "k": "c",
+          "v": "v358"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v359"
+        },
+        {
+          "k": "t",
+          "v": ") and honestly typed “equation of state, not a from-action quantisation” "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": ". Bianconi's entropic action "
+        },
+        {
+          "k": "m",
+          "v": "S_{\\mathrm B}=-\\operatorname{Tr}_F\\ln(\\widetilde G\\widetilde g^{-1})"
+        },
+        {
+          "k": "t",
+          "v": " (the quantum relative entropy between the spacetime metric and the matter-induced metric, Araki-related via "
+        },
+        {
+          "k": "m",
+          "v": "\\Delta^{1/2}=\\widetilde G\\widetilde g^{-1}"
+        },
+        {
+          "k": "t",
+          "v": ") is a local covariant action whose variation gives Einstein "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " an emergent nonnegative "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda"
+        },
+        {
+          "k": "t",
+          "v": " at low coupling — an explicit "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "external candidate"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " for exactly that missing variational layer. Machine-checked: "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the carrier Hodge count (her "
+        },
+        {
+          "k": "m",
+          "v": "\\Omega^{0,1,2}"
+        },
+        {
+          "k": "t",
+          "v": " fiber on the five-slot carrier "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb C^5"
+        },
+        {
+          "k": "t",
+          "v": " counts "
+        },
+        {
+          "k": "m",
+          "v": "1{+}5{+}10{=}16{=}2^{\\gcar-1}\n{=}\\dim S^+_{D_5}"
+        },
+        {
+          "k": "t",
+          "v": ", while on "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": "d spacetime it is only "
+        },
+        {
+          "k": "m",
+          "v": "11"
+        },
+        {
+          "k": "t",
+          "v": " — the "
+        },
+        {
+          "k": "m",
+          "v": "16"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "requires"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the carrier); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the one quantitative pin — matching her weak-coupling "
+        },
+        {
+          "k": "m",
+          "v": "3\\beta R"
+        },
+        {
+          "k": "t",
+          "v": " to "
+        },
+        {
+          "k": "m",
+          "v": "1/(16\\pi G)=\\cthree/(2G)"
+        },
+        {
+          "k": "t",
+          "v": " fixes her free constant "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "exactly"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\beta'_{\\mathrm B}=\\cthree/6=1/(48\\pi)"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "her "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda_{\\mathcal G}=\\tfrac1{2\\beta}\\operatorname{Tr}(\\mathcal G-I-\\ln\\mathcal G)"
+        },
+        {
+          "k": "t",
+          "v": " is nonnegative and quadratic at the fixed point, and with "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon_\\star=e^{-\\alpha^{-1}}Q"
+        },
+        {
+          "k": "t",
+          "v": " it reproduces the closed "
+        },
+        {
+          "k": "c",
+          "v": "v60"
+        },
+        {
+          "k": "t",
+          "v": " branch "
+        },
+        {
+          "k": "m",
+          "v": "(3/4\\pi^2)e^{-2\\alpha^{-1}}"
+        },
+        {
+          "k": "t",
+          "v": " with the exact target "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{Tr}Q^2=\n32\\cthree^4=1/(128\\pi^4)=\\tfrac23\\delta_{\\mathrm{top}}"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "until "
+        },
+        {
+          "k": "m",
+          "v": "Q"
+        },
+        {
+          "k": "t",
+          "v": " is constructed); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the "
+        },
+        {
+          "k": "m",
+          "v": "R^2"
+        },
+        {
+          "k": "t",
+          "v": " kill test — the raw log expansion sits "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "exactly"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "3\\cthree^{-9}=3(8\\pi)^9\\approx\n1.2\\times10^{13}"
+        },
+        {
+          "k": "t",
+          "v": " below the TFPT Starobinsky coefficient "
+        },
+        {
+          "k": "m",
+          "v": "1/(12\\cthree^7)"
+        },
+        {
+          "k": "t",
+          "v": ", so a direct identification is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "false"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " without a mechanism (pre-registered); "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the compression conjecture "
+        },
+        {
+          "k": "m",
+          "v": "P_\\Sigma(\\widetilde G\\widetilde g^{-1})P_\\Sigma=\\Delta_\\Sigma^{1/2}"
+        },
+        {
+          "k": "t",
+          "v": " (the bridge proper) stays open, with Lorentzian positivity flagged (TFPT's OS route is the sturdier construction). New keybox in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " (Research Contract 2, after the "
+        },
+        {
+          "k": "c",
+          "v": "v359"
+        },
+        {
+          "k": "t",
+          "v": " keybox); residual pointers updated in "
+        },
+        {
+          "k": "c",
+          "v": "introduction"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "tfpt_4_frontier"
+        },
+        {
+          "k": "t",
+          "v": "/status card. Wolfram mirrors the three exact blocks ("
+        },
+        {
+          "k": "m",
+          "v": "371/371"
+        },
+        {
+          "k": "t",
+          "v": "); ledger row "
+        },
+        {
+          "k": "c",
+          "v": "GRAV.ENTROPIC.ACTION.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "no"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " gate closes, "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "no"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " marker moves, zero TFPT knobs added."
+        }
+      ]
+    ]
+  },
+  {
     "date": "2026-07-03",
     "dateLabel": "2026-07-03",
     "heading": [

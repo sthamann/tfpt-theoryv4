@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`466` registered scripts · `532` ledger claims · `10` clusters.
+`472` registered scripts · `538` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -300,7 +300,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v407_dn_pairings_omega** [E/C/O] `FLAV.SELECTOR.CLOSE.01` — FLAV.SELECTOR.CLOSE.01: the R4' residue folds into the tau=omega keystone (v405) -- the three (d,n) selector pairings ARE the tau=omega family-slice atoms. [E] the frame (1,a,sigma
   - deps: v405_seam_equiv_omega, v49_readout_rigidity, v405, v139, v136, v42 · cited: origin theory, 1 architecture e8
 
-### `frontier` — Open gate (G_metric) & the frontier  (154 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (160 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -611,6 +611,18 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v382_alpha_quillen_exact, v433_alpha_quillen_heatkernel, v434_alpha_quillen_betafunction, v435_alpha_quillen_chernlevel, v48_em_ward, v469_seam_crossedproduct_route, v341, v367 · cited: 1 architecture e8
 - **v472_quillen_detline_moduli** [E/C/O] `ALPHA.QUILLEN.DETLINE.01` — ALPHA.QUILLEN.DETLINE.01: the determinant line over the U(1)-twist moduli of the collar model carries curvature = the inflow level -- the finite Quillen/Dai-Freed shadow of the v47
   - deps: v382_alpha_quillen_exact, v470_alpha_inflow_level, v48_em_ward, v367, v460, v461, v470, v471 · cited: 1 architecture e8
+- **v473_entropic_action_bridge** [E/C/O/X] `GRAV.ENTROPIC.ACTION.01` — GRAV.ENTROPIC.ACTION.01: the entropic-action bridge -- Bianconi's 'Gravity from entropy' (Phys. Rev. D 111, 066001 (2025); arXiv:2408.14391) quantified as an EXTERNAL CANDIDATE for
+  - deps: v359_grav_nonlinear_einstein, v361_grav_backreaction, QG.AMB.01, v2, v36, v44, v58, v60 · cited: research contracts
+- **v474_entropic_hodge_carrier** [E/C/O/X] `GRAV.ENTROPIC.HODGE.01` — GRAV.ENTROPIC.HODGE.01: the OPERATOR level of the entropic-action bridge (work packages 1 + 4-algebra of v473). [E] CAR => Clifford: ten Gamma's on the carrier Fock space Lambda^* 
+  - deps: v473_entropic_action_bridge, v2, v44, v60, v197, v359, v473 · cited: research contracts
+- **v475_entropic_scalaron_gate** [E/C/O/X] `GRAV.ENTROPIC.SCALARON.01` — GRAV.ENTROPIC.SCALARON.01: the R^2 kill test of the entropic-action bridge EXECUTED (work package 5 of v473) + the explicit Lorentzian-positivity witness. [E] max-symmetric eigenva
+  - deps: v473_entropic_action_bridge, v474_entropic_hodge_carrier, v36, v60, v359, v473, v474 · cited: research contracts
+- **v476_entropic_compression_toy** [E/C/O] `GRAV.ENTROPIC.COMPRESS.01` — GRAV.ENTROPIC.COMPRESS.01: the AP2 compression conjecture of the entropic-action bridge (v473) made WELL-POSED on an exactly solvable model. [N] pure gapped bulk: staggered-mass ch
+  - deps: v473_entropic_action_bridge, v475_entropic_scalaron_gate, v76, v155, v337, v473 · cited: research contracts
+- **v477_entropic_scaleflow** [E/C/O/X] `GRAV.ENTROPIC.SCALEFLOW.01` — GRAV.ENTROPIC.SCALEFLOW.01: the scale-flow representation of the entropic action -- v475's surviving interpretation 3 typed precisely: the (72/17)(8 pi)^9 gap collapses to ONE mome
+  - deps: v473_entropic_action_bridge, v475_entropic_scalaron_gate, v259_modular_cutoff_kappa, v36, v259, v359, v473, v475 · cited: research contracts
+- **v478_entropic_continuum_legs** [E/C/O] `GRAV.ENTROPIC.LEGS.01` — GRAV.ENTROPIC.LEGS.01: first computable steps on the two remaining legs of the entropic-action bridge. LEG A (AP2 continuum): [N] the compressed critical interval has S(L) = (c/3) 
+  - deps: v476_entropic_compression_toy, v477_entropic_scaleflow, v323, v358, v450, v473, v476, v477 · cited: research contracts
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (182 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -997,22 +1009,22 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×63, `v336`×33, `QGEO.SYM.01`×31, `v56`×18, `v216`×18, `QG.AMB.01`×17, `v76`×17, `E8.GLU.01`×16, `REG.FREEZE.01`×15, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v367`×14, `v312`×14, `v54`×13, `v323`×12
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×63, `v336`×33, `QGEO.SYM.01`×31, `QG.AMB.01`×18, `v76`×18, `v56`×18, `v216`×18, `E8.GLU.01`×16, `REG.FREEZE.01`×15, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v367`×14, `v312`×14, `v54`×13, `v60`×13
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v461_seam_strict_locality** — `SEAM.S3.LOCALITY.01`
-- **v462_seam_spinor_continuum** — `SEAM.EQUIV.SPINOR.01`
-- **v463_seam_c8_holomorphic_uniqueness** — `SEAM.EQUIV.UNIQ.01`
-- **v464_seam_oneparticle_rigidity** — `SEAM.EQUIV.ONEPARTICLE.01`
-- **v465_seed_crosssector_joint** — `SEED.CROSSSECTOR.01`
-- **v466_seed_leptonmass_channel** — `SEED.LEPTONMASS.01`
 - **v467_thirdgen_mixing_pattern** — `FLAV.THIRDGEN.PATTERN.01`
 - **v468_dm2_ratio_jarlskog** — `FLAV.DM2RATIO.01`
 - **v469_seam_crossedproduct_route** — `SEAM.EQUIV.CROSSEDPRODUCT.01`
 - **v470_alpha_inflow_level** — `ALPHA.QUILLEN.INFLOW.01`
 - **v471_seam_horizon_replica** — `SEAM.EHMODEL.04`
 - **v472_quillen_detline_moduli** — `ALPHA.QUILLEN.DETLINE.01`
+- **v473_entropic_action_bridge** — `GRAV.ENTROPIC.ACTION.01`
+- **v474_entropic_hodge_carrier** — `GRAV.ENTROPIC.HODGE.01`
+- **v475_entropic_scalaron_gate** — `GRAV.ENTROPIC.SCALARON.01`
+- **v476_entropic_compression_toy** — `GRAV.ENTROPIC.COMPRESS.01`
+- **v477_entropic_scaleflow** — `GRAV.ENTROPIC.SCALEFLOW.01`
+- **v478_entropic_continuum_legs** — `GRAV.ENTROPIC.LEGS.01`
 

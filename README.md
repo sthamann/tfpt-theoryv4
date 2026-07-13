@@ -272,7 +272,33 @@ fixed — `c₃⁻¹ = 8π` (no free dimensionless Newton dial; the thermodynami
 with the geometric one `|Z₂|·2π·χ` via `|μ₄| = |Z₂|·χ(S²) = 4`, so `c₃` is triply over-determined —
 anchor, geometry, thermodynamics, `v358`/`v359`) and `Λ` from `α` (`ρ_Λ = (3/4π²)e^{−2α⁻¹}`, `v60`);
 the Einstein tensor (not Ricci) is forced by Lovelock, so matter conservation is an output (`v359`).
-The residual here is only the equation-of-state interpretive fork and the one unit `v_geo`. The global
+The residual here is only the equation-of-state interpretive fork and the one unit `v_geo`. An
+**external candidate** for the missing action level — Bianconi's entropic action, *Gravity from
+entropy*, PRD 111, 066001 (2025) — is quantified in `v473`: her free constant is pinned exactly
+(`β′_B = c₃/6 = 1/(48π)`), her emergent `Λ` reproduces the `v60` branch with the exact target
+`Tr Q² = 32c₃⁴`, and the `R²` sector misses the TFPT Starobinsky coefficient by exactly `3(8π)⁹ ≈ 10¹³`
+(pre-registered kill test) — nothing closes, the typing stays `[O]`. The operator level is executed in
+`v474`: the D₅ Clifford/spinor structure exhibited on the carrier Fock space `Λ•ℂ⁵` (ten exact gammas,
+the 45-dim `so(10)` preserving the 16-dim even subspace), the Hodge fold identified as the `5 → 5̄`
+conjugation (her `1+5+10` becomes the GUT `16 = 1+5̄+10`), and the `Q`-target decided — integer supports
+exactly `{|ℤ₂|, rank E₈, 2^g_car}` with minimal uniform `q = c₃²`; the naive pair-block (`10`) reading is
+killed. The `R²` kill test itself is executed in `v475`: with exact tensorial factors (vacuum action
+`3βR + (17/24)β²R²` on the maximally symmetric background) the raw entropic scalaron comes out
+**trans-Planckian** (`m² = 4608π²/17 M̄²`, ≈ 51.7 M̄), so the light-trace-mode reading is dead and
+KMS-spectral renormalisation is the only surviving `R²` route; the Lorentzian-positivity caveat now has
+an explicit timelike witness (`1 − αv² ≤ 0`). The compression conjecture (AP2) is made well-posed in
+`v476`: the literal operator-side reading is ill-posed on a pure bulk, the state-side reading (build
+`Δ_Σ` from the compressed relative metric) is forced, and the mismatch between the readings is exactly
+second order in the cross-cut correlations and gap-suppressed — AP2 itself stays `[O]`. The surviving
+`R²` route is typed as ONE moment condition in `v477`: the entropic action is the flat scale-integral of
+relative heat-kernel actions, and demanding `m² = c₃⁷M̄²` forces exactly `μ₂/μ₁² = (72/17)(8π)⁹` — with
+the closure identity `(4608π²/17)/((72/17)(8π)⁹) = c₃⁷` holding identically, the 13 orders are a
+scale-measure datum which TFPT's own KMS moment (`v36` `f₀`) fixes correctly; zero new dials,
+consistency not derivation `[C]`. First steps on the two remaining legs are in `v478`: the compressed
+critical state's modular data flows to the CHM/Bisognano–Wichmann geometric form (`c_est → 1` at 2×10⁻⁴,
+CHM parabola, even bands exactly zero) — meeting TFPT's Einstein-derivation input (`v323`/`v358`) — and
+the measure condition reduces to one exact KMS time `t₀ = ln(72/17) + 9ln(8π) = 30.461` (the `h(E₈) = 30`
+near-miss explicitly declined); both legs stay `[O]`. The global
 measure (`QG.AMB.01`) is now a **`[C]` redundancy** (`v369`): a certification object rather than
 missing dynamics, conditional on `SEAM.EQUIV.01` and Bisognano–Wichmann.
 
@@ -394,7 +420,9 @@ Euclidean-QG conformal-factor problem (margin `Δ_eff ≈ 1.648 > 0`, `v76`/`v33
   **triply over-determined** (anchor, geometry, thermodynamics). The matter flux is assembled (the CHM ball
   modular Hamiltonian, `v323`) and the entropy density is atom-fixed (`1/4 = 1/|μ₄|`, central charge
   `c = g_car+N_fam = 8`). The only residual is the equation-of-state interpretive fork and the one unit
-  `v_geo`. The perturbative Stelle ghost is a Seeley–DeWitt truncation artefact; resummation of the KMS
+  `v_geo` — an external candidate action for that fork (Bianconi's entropic action, PRD 111, 066001 (2025))
+  is quantified in `v473` (`β′_B = c₃/6` pinned, `R²` gap `3(8π)⁹` as pre-registered kill test) without
+  changing the typing. The perturbative Stelle ghost is a Seeley–DeWitt truncation artefact; resummation of the KMS
   heat kernel pushes it to infinity (`v380`).
 - **The central theorem**: `1/(8π)` from the seam-determinant replica — structure closed, the
   Fursaev–Solodukhin factor machine-derived (`v90`), and the mechanism now exhibited at the

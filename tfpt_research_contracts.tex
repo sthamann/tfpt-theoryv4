@@ -2325,7 +2325,149 @@ classical metric-sector field equation --- is closed parameter-free at the \emph
 \textbf{Residual:} the Jacobson equation-of-state \emph{status} (a thermodynamic derivation, not a
 from-action quantisation) and the single unit $v_{\mathrm{geo}}$ stay \mO, while the global ambient measure
 (Gate 2/C7, the constructive boundary projective limit) is now a \mC\ redundancy (\vref{v369}) --- no free
-dimensionless gravity dial remains. \mE/\mC
+dimensionless gravity dial remains. An \emph{external candidate} for the missing action level is quantified
+in the next keybox (\vref{v473}); it does not change this typing. \mE/\mC
+\end{keybox}
+
+\begin{keybox}[The entropic-action bridge: an external candidate for the missing action level, quantified --- nothing closes (\veri{v473\_entropic\_action\_bridge.py})]
+The one honest \mO\ left in the classical sector --- ``equation of state, not a from-action quantisation''
+(\vref{v359}) --- now has an explicit \emph{external} candidate: Bianconi's entropic action
+$S_{\mathrm B}=-\operatorname{Tr}_F\ln\bigl(\widetilde G\widetilde g^{-1}\bigr)$, the quantum relative
+entropy between the spacetime metric and the matter-induced metric
+(G.~Bianconi, \emph{Gravity from entropy}, Phys.\ Rev.\ D \textbf{111}, 066001 (2025);
+\texttt{arXiv:2408.14391}; her Appendix~C identifies $\Delta^{1/2}_{\widetilde G,\widetilde g}
+=\widetilde G\widetilde g^{-1}$ with an Araki-type modular operator) --- a local covariant action whose
+variation yields the Einstein equations plus an emergent nonnegative $\Lambda$ at low coupling: exactly the
+missing variational layer, \emph{if} the bridge identities hold. What is machine-checked today
+(\texttt{GRAV.ENTROPIC.ACTION.01}): \textbf{carrier Hodge count \mE.} Her $\Omega^{0,1,2}$ matter fiber,
+placed on the five-slot carrier $\mathbb C^5$ (\emph{not} on $4$d spacetime, where the fiber is
+$1{+}4{+}6{=}11$), counts $1{+}5{+}10{=}16{=}2^{\gcar-1}{=}\dim S^+_{D_5}$ and Hodge-folds
+($\star:\Lambda^1{\cong}\Lambda^4$) onto $\Lambda^{\mathrm{even}}\mathbb C^5$ --- the carrier half-spinor's
+own Pascal row (\vref{v2}/\vref{v44}); a vector-space identity \emph{only}. \textbf{Coefficient match \mE\
+(the one quantitative pin).} Her weak-coupling Lagrangian $\mathcal L=3\beta R-\alpha\mathcal L_{\mathrm m}
++\cdots$ (the $3$ $=$ the three form blocks) matched to the TFPT EH normalisation
+$1/(16\pi G)=\cthree/(2G)$ fixes her free constant \emph{exactly},
+\[
+  \boxed{\ \beta'_{\mathrm B}=\tfrac{\cthree}{6}=\tfrac1{48\pi}\ }
+\]
+(the $6=3\times2=p_2=|R^+(A_3)|$ is recorded as a structural echo, not a proof). \textbf{Entropy potential
+$=$ quadratic $\Lambda$ \mE.} Her $\Lambda_{\mathcal G}=\tfrac1{2\beta}\operatorname{Tr}_F(\mathcal G-I-
+\ln\mathcal G)$ is nonnegative and quadratic at the fixed point; with the TFPT displacement
+$\varepsilon_\star=e^{-\alpha^{-1}}Q$ it reproduces the closed $\Lambda$ branch
+$\rho_\Lambda/\Mpl^4=(3/4\pi^2)e^{-2\alpha^{-1}}$ (\vref{v60}), and the prefactor match yields the
+\emph{exact} normalisation target $\operatorname{Tr}_FQ^2=32\cthree^4=1/(128\pi^4)=\tfrac23\,
+\delta_{\mathrm{top}}$ --- a closed algebraic target for the two-form (pair) block
+($\binom52{=}10$), \mC\ until an explicit $Q$ is constructed. \textbf{$R^2$ kill test \mE\
+(pre-registered).} The raw log expansion carries a curvature-squared coefficient of order
+$(\cthree/6)^2$; the TFPT Starobinsky sector needs $\Mpl^2/(12M_{\mathrm{scal}}^2)=1/(12\cthree^7)$
+(\vref{v36}) --- the exact mismatch is $3\cthree^{-9}=3(8\pi)^9\approx1.2\times10^{13}$: a direct
+identification of the raw entropic action with the TFPT $R^2$ sector is \emph{false} without a mechanism
+(the scalaron as a light trace mode of her $\mathcal G$-field generating $\cthree^{-9}$, or a KMS-spectral
+renormalisation of the log action). \textbf{The bridge proper \mC\ (recorded, not proven).} The compression
+conjecture $P_\Sigma(\widetilde G\widetilde g^{-1})P_\Sigma=\Delta_\Sigma^{1/2}$ --- the physical
+Calder\'on compression of her relative metric operator equals the TFPT seam modular operator; if proven,
+$S_{\mathrm B}$ is a local volume representation of the TFPT relative spectral action
+$S_{\mathrm{rel},\chi}$ (her log action is the all-scale-integrated heat kernel, by Frullani
+$-\ln A=\int_0^\infty\tfrac{dt}t(e^{-tA}-e^{-t})$, verified). Open with it: the operator-level Hodge items
+(Clifford action, Dirac intertwining, leaf involution, Calder\'on polarisation), and Lorentzian positivity
+of $\widetilde G\widetilde g^{-1}$ is \emph{not} automatic (timelike gradients) --- TFPT's
+OS/reflection-positive route is the sturdier construction. \textbf{Residual \mO\ (unchanged).} Nothing
+closes: the \vref{v359} equation-of-state typing stays \mO; adopting $S_{\mathrm B}$ would close it
+\emph{only} after the compression conjecture \emph{and} an $R^2$ mechanism; zero TFPT knobs are added.
+\smallskip\\
+\noindent\textbf{The operator level, executed (\veri{v474\_entropic\_hodge\_carrier.py}).} Work packages
+1 and 4-algebra of the bridge are now machine-checked on the finite carrier Fock space
+$\Lambda^\bullet\mathbb C^5$ ($\dim 2^{\gcar}{=}32$). \textbf{Spinor structure exhibited \mE:} the ten
+CAR gammas satisfy $\{\Gamma_a,\Gamma_b\}{=}2\delta_{ab}$ exactly, the $45$ bilinears span
+$\mathfrak{so}(10)$ and leak nothing from the $16$-dim even subspace --- $S^+$ \emph{is} the even
+exterior algebra with its spinor structure, and Bianconi's Hodge--Dirac operator is Clifford
+multiplication at symbol level ($c(\xi)^2{=}-|\xi|^2$, symbolic). \textbf{The fold is the
+$5{\to}\bar5$ conjugation \mE:} the traceless $\mathfrak u(5)$ weights of $\Lambda^4$ are the negatives
+of those of $\Lambda^1$, so her fiber $1{+}5{+}10$ becomes the GUT half-spinor $16{=}1{+}\bar5{+}10$ ---
+the SM carrier decomposition, not a dimension match; honest obstruction: $\Omega^{\le2}$ is \emph{not}
+Clifford-invariant, so the identification must go through the fold, never through degree truncation.
+\textbf{The $Q$-target, decided \mE:} the uniform-block ansatz $\operatorname{Tr}Q^2{=}d\,k^2\cthree^4
+{=}32\cthree^4$ with integer $k$ admits \emph{exactly} the supports $(d,k){=}(2,4),(8,2),(32,1)$
+$=\{|\Z_2|,\operatorname{rank}E_8,2^{\gcar}\}$, with the minimal uniform solution $q{=}\cthree^2$ per
+Fock mode and the identity $\operatorname{Tr}Q^2/\delta_{\mathrm{top}}{=}32/48{=}2/3$; the two-form
+block $10$ (the naive pair-sector reading) and the fiber $16$ require irrational multipliers and are
+\emph{excluded}. The physical choice among the three supports stays \mC; AP2 and the $R^2$ mechanism
+stay \mO.
+\smallskip\\
+\noindent\textbf{The $R^2$ kill test, executed (\veri{v475\_entropic\_scalaron\_gate.py}).} On a
+maximally symmetric background the relative curvature operator has eigenvalues \emph{exactly}
+$\{R;\,R/4\times4;\,R/6\times6\}$ (her Appendix-B flattening verified, incl.\ the $6{\times}6$
+two-form block), so the exact vacuum action is
+$\mathcal L_{\mathrm B}(R)=-[\ln(1{-}\beta R)+4\ln(1{-}\beta R/4)+6\ln(1{-}\beta R/6)]
+=3\beta R+\tfrac{17}{24}\beta^2R^2+O(R^3)$ --- the $3$ re-derives her Eq.~(45) and
+$\tfrac{17}{24}$ is the exact tensorial factor behind the pre-registered gap. With the pinned
+$\beta'{=}\cthree/6$ \emph{both} mass routes (Starobinsky matching and $f'/3f''$) give the raw
+entropic scalaron
+\[
+  \boxed{\ m_{\mathrm{raw}}^2=\tfrac{4608\pi^2}{17}\,\Mpl^2\ \Rightarrow\ m_{\mathrm{raw}}
+  \approx51.7\,\Mpl\ }
+\]
+--- \emph{trans-Planckian}, not light: the naive reading ``the TFPT scalaron is the light trace mode
+of her $\mathcal G$-field'' is \emph{dead} \mE; a viable mechanism must supply exactly
+$m_{\mathrm{raw}}^2/m_{\mathrm{TFPT}}^2=\tfrac{72}{17}(8\pi)^9\approx1.69\times10^{13}$ in mass$^2$.
+The domain is not the obstruction (first log pole at $R{=}384\pi^2\Mpl^2$, trans-Planckian), and the
+Lorentzian caveat is now an explicit witness: a timelike gradient gives the $Gg^{-1}$ eigenvalue
+$1-\alpha v^2\le0$ for $v^2\ge1/\alpha$ ($\ln$ undefined), while spacelike/Euclidean stay positive
+--- the OS route is the sturdier construction. \textbf{Net verdict \mC:} of the three bridge
+interpretations, the entropic action covers the Einstein${}+\Lambda$ level (survives); the light-mode
+reading is dead; KMS-spectral renormalisation is the \emph{only} surviving route to the $R^2$
+sector. Nothing closes.
+\smallskip\\
+\noindent\textbf{AP2, made well-posed (\veri{v476\_entropic\_compression\_toy.py}).} The compression
+conjecture itself is sharpened on an exactly solvable gapped chain. \textbf{The reading is decided:}
+on a \emph{pure} bulk (the seam situation: pure bulk, thermal boundary) the covariance is a projection,
+so $f(x){=}x/(1{-}x)$ is singular on its spectrum --- the literal operator-side reading
+$P_\Sigma f(C) P_\Sigma$ is \emph{ill-posed}, while the state-side $f(P_\Sigma C P_\Sigma)$ (Peschel)
+is finite: the identity can only mean \emph{build $\Delta_\Sigma$ from the compressed relative metric},
+which is exactly Bianconi's own local construction --- AP2 retyped, not weakened. \textbf{The mismatch
+is exactly second order \mE:} symbolically, $[C^n]_{AA}-(C_{AA})^n$ carries the cross-cut block twice
+(first order vanishes identically), so for any analytic $f$ the two readings agree up to $O(\|C_{AB}\|^2)$
+--- the modular (entanglement) content \emph{is} that quadratic correction. \textbf{Gap control:} at the
+bounded (covariance) level the mismatch obeys $d\le x^2$ and falls with the gap, the decoupled cut agrees
+exactly --- the two readings converge in the gap-dominated regime, where TFPT operates
+($\Delta_{\mathrm{eff}}{>}0$, \vref{v76}/\vref{v337}). \textbf{Residual \mO\ (unchanged):} the continuum
+seam statement itself. No marker moves.
+\smallskip\\
+\noindent\textbf{The surviving $R^2$ route, typed as one moment (\veri{v477\_entropic\_scaleflow.py}).}
+The Frullani identity upgrades to a \emph{scale-flow representation}: $-\ln a=\int_0^\infty
+\tfrac{dt}t(e^{-ta}{-}e^{-t})=2\int_0^\infty\tfrac{d\chi}\chi(e^{-a/\chi^2}{-}e^{-1/\chi^2})$ ---
+Bianconi's log action \emph{is} the flat scale-integral of relative heat-kernel actions, while TFPT's
+$S_{\mathrm{rel},\chi}$ evaluates \emph{one} KMS scale with a weight $f$: the bridge between the two
+action principles is a choice of \emph{scale measure}. In the moment dictionary (weight $w(t)\,dt/t$,
+$\mu_k$ its $e^{-t}$-moments) the coefficients read $3\beta R\,\mu_1+\tfrac{17}{24}\beta^2R^2\mu_2$;
+the flat weight has $\mu_1{=}\mu_2{=}1$ ($=$ the raw \vref{v475} coefficients), and demanding
+$m^2{=}\cthree^7\Mpl^2$ forces \emph{exactly}
+\[
+  \boxed{\ \mu_2/\mu_1^2=\tfrac{72}{17}(8\pi)^9\ }\qquad\text{with}\qquad
+  \tfrac{4608\pi^2/17}{(72/17)(8\pi)^9}=\cthree^7\ \text{(identically)}
+\]
+--- the \vref{v475} kill-test number \emph{is} a moment ratio, and the ``$13$ orders of magnitude''
+are not a bridge mismatch but a scale-measure datum: the flat measure fixes it wrongly, the TFPT KMS
+measure ($f_0{=}6(4\pi)^2/\cthree^7$, \vref{v36}) fixes it correctly --- one KMS moment, two
+parametrisations, zero new dials. \mC\ (consistency, not derivation: the measure is TFPT input); the
+$R^2$ gate and the \vref{v359} typing stay \mO.
+\smallskip\\
+\noindent\textbf{The two remaining legs, first computable steps (\veri{v478\_entropic\_continuum\_legs.py}).}
+\emph{Leg A (AP2 continuum):} on the exactly solvable critical chain (infinite-volume kernel, $50$-digit
+precision) the compressed interval state carries the conformal/BW structure quantitatively --- the
+entanglement entropy follows Calabrese--Cardy with $c_{\mathrm{est}}=1.00089/1.00038/1.00021$ (monotone
+$\to$ the Dirac $c{=}1$; gapped control $\sim6{\times}10^{-8}$), and its Peschel modular Hamiltonian
+organises on the CHM weight $\beta(x){=}x(L{-}x)/L$ (corr $0.87{\to}0.99$, even-range bands vanishing
+identically, odd tail $1.8\%$): the state-side $\Delta_\Sigma$ (the reading \emph{forced} above) flows
+to the CHM/Bisognano--Wichmann geometric form --- \emph{exactly} the object the entanglement-equilibrium
+derivation consumes (\vref{v323}/\vref{v358}); the bridge's modular side and the gravity side meet in
+the continuum limit (a lattice exhibit, not a continuum proof --- AP2 stays \mO). \emph{Leg B (the
+measure):} the single-scale corollary is exact --- $d\mu{=}\delta(t{-}t_0)dt$ gives
+$\mu_2/\mu_1^2{=}e^{t_0}$, so the one-moment condition forces $t_0{=}\ln\tfrac{72}{17}{+}9\ln(8\pi)
+{=}30.461$, one dimensionless KMS time in closed form; the near-miss to $h(E_8){=}30$ (difference
+$0.461$) is explicitly \emph{declined} per the no-free-pattern rule (\vref{v354}/\vref{v355}) ---
+deriving the measure from the entropic structure stays \mO.
+\mE/\mC/\mO
 \end{keybox}
 
 \begin{keybox}[The Simple-Current Extension Theorem --- the central $G_{\mathrm{net}}$ closing statement \mE/\mC\ (\veri{v154\_simple\_current\_theorem.py})]

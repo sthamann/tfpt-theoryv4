@@ -28,6 +28,8 @@ tex-artefacts/release-version.txt
 list.txt
 experiments/older_tests/befund*
 alessandro*.html
+email_bianconi*.html
+2408.14391v7.pdf
 
 # Local problem / working notes (not shipped)
 problem_*

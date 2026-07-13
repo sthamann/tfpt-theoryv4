@@ -2683,3 +2683,149 @@ das Det-Linien-/Strong-CP-Axion, nicht DFSZ. 5/5.
 Netto axion01->05->06: die "Winkel-Katastrophe" wird zu einem sauberen, dial-freien, domaenenwand-sicheren
 POST-INFLATIONAEREN Axion -- Preis nur die (ohnehin fragile) Winkel-Vorhersage. Der Axion-Zweig ist damit
 ehrlich AUSGEREIZT und in guter Form. verification/ + Paper NICHT angefasst (Haupt-Manifest unveraendert).
+
+## Update 2026-07-13: v473 -- die entropische Wirkungs-Bruecke (Bianconi, PRD 111, 066001 (2025))
+
+Bianconis "Gravity from entropy" (arXiv:2408.14391) als EXTERNER KANDIDAT fuer die fehlende
+Wirkungsebene der parameterfreien Einstein-Gleichung (v358/v359, Residual "equation of state, nicht
+from-action" [O]) quantifiziert und promoted: verification/v473_entropic_action_bridge.py
+(GRAV.ENTROPIC.ACTION.01, 8/8), neue Keybox in Research Contract 2 (nach der v359-Keybox),
+Wolfram-Spiegel 3 Checks (371/371). Ergebnisse: [E] Traeger-Hodge-Count 1+5+10=16=dim S+ (nur auf dem
+Fuenf-Platz-Traeger; 4d-Faser waere 11); [E] der eine quantitative Pin beta'_B = c3/6 = 1/(48 pi)
+(aus 3 beta' R vs 1/(16 pi G)); [E] Lambda_G = (1/2b)Tr(G-I-ln G) >= 0 quadratisch, mit
+eps* = e^{-1/alpha} Q reproduziert den v60-Zweig exakt bei Tr Q^2 = 32 c3^4 = (2/3) delta_top
+([C] bis Q konstruiert -- Kandidat: Zweiform-/Paarblock, binom(5,2)=10); [E] R^2-KILL-TEST
+praeregistriert: rohe Log-Expansion vs Starobinsky 1/(12 c3^7) klafft EXAKT 3(8pi)^9 ~ 1.2e13 --
+direkte Gleichsetzung FALSCH ohne Mechanismus (leichter G-Spurmode erzeugt c3^{-9}, oder
+KMS-Renormierung); [C] Kompressions-Vermutung P_Sigma (G g^-1) P_Sigma = Delta_Sigma^{1/2} offen
+(+ Clifford/Dirac/Blatt/Calderon-Vertraeglichkeit; Lorentz-Positivitaet NICHT automatisch, OS-Route
+stabiler). NICHTS schliesst, KEIN Marker bewegt, null Dials. Naechste Schritte (Arbeitspakete aus der
+Analyse): (1) Traeger-Hodge-Operatoridentitaet, (2) Kompression beweisen, (3) expliziten Q-Block auf
+Lambda^2 C^5 konstruieren und Tr Q^2 = 1/(128 pi^4) pruefen, (4) Hesse-Matrix des G-Felds: traegt sie
+den Scalaron-Faktor c3^7? (der eigentliche Kill-Test).
+
+## Update 2026-07-13 (II): v474 -- Operator-Ebene der entropischen Bruecke (AP1 + AP4-Algebra erledigt)
+
+Arbeitspakete 1 und 4-Algebra aus dem v473-Plan ausgefuehrt: verification/v474_entropic_hodge_carrier.py
+(GRAV.ENTROPIC.HODGE.01, 7/7), Wolfram +2 (373/373). Ergebnisse:
+[E] CAR=>Clifford: 10 Gammas auf dem Traeger-Fock-Raum Lambda^* C^5 (dim 2^5=32) erfuellen
+{Gamma_a,Gamma_b}=2delta exakt; die 45 Bilineare kommutieren mit (-1)^N, spannen exakt so(10) und
+lecken nichts aus dem 16-dim geraden Unterraum -- S+ IST die gerade aeussere Algebra MIT
+Spinorstruktur (Operator-Level von v2/v44/v197).
+[E] Hodge-Dirac-Symbol: c(xi)^2 = -|xi|^2 symbolisch -- Bianconis D=d+delta ist auf Symbolebene
+Clifford-Multiplikation.
+[E] Der Fold IST die 5->5bar-Konjugation (spurfreie u(5)-Gewichte von Lambda^4 = Negative von
+Lambda^1): aus ihrem 1+5+10 wird das GUT-16 = 1+5bar+10 -- exakt die SM-Traegerzerlegung.
+[E] Ehrliche Obstruktion: Omega^{<=2} NICHT Clifford-invariant (Lambda^2->Lambda^3-Leck) --
+die Identifikation muss durch den Fold, nie durch Grad-Trunkierung (Randbedingung fuer AP2).
+[E] Q-ZIEL ENTSCHIEDEN: d k^2 = 32 mit ganzem k hat exakt die Traeger {(2,4),(8,2),(32,1)} =
+{|Z2|, rank E8, 2^g_car}; minimal-uniform q = c3^2 = 1/(64 pi^2) pro Fock-Mode;
+Tr Q^2/delta_top = 32/48 = 2/3 (Modenzahl-Quotient!). Der Zweiformblock 10 (Paarsektor-Vermutung
+aus der Analyse) und die Faser 16 brauchen irrationale Multiplikatoren -> in uniformer Form TOT.
+"Erst Operator, dann Champagner": der Operator sagt uniform-32 (oder 2/8), nicht Paarblock.
+[C] Physikalische Wahl unter den drei zulaessigen Traegern offen. [O] unveraendert: AP2-Kompression
+P_Sigma (G g^-1) P_Sigma = Delta_Sigma^{1/2} und der R^2-Mechanismus (v473-Kill-Test).
+Verbleibende naechste Schritte: (a) AP2 als Struktursatz angehen (Calderon-Kompression des relativen
+Metrikoperators vs. Seam-Modularoperator -- braucht ein konkretes Kollarmodell, Kandidat: v426/v471-
+Kollar), (b) Hesse-Matrix des G-Felds: traegt der leichte Spurmode c3^7? (der eigentliche Kill-Test,
+AP5), (c) ggf. Lorentz-Positivitaets-Gegenbeispiel als eigener Negativ-Check.
+
+## Update 2026-07-13 (III): v475 -- der R^2-Kill-Test AUSGEFUEHRT (AP5) + Lorentz-Positivitaets-Zeuge
+
+verification/v475_entropic_scalaron_gate.py (GRAV.ENTROPIC.SCALARON.01, 6/6), Wolfram +3 (376/376,
+alle exakt). Ergebnisse:
+[E] Max-symmetrische Eigenwerte von R~ g~^-1 EXAKT {R; R/4 x4; R/6 x6} (Bianconis Appendix-B-
+Flattening inkl. 6x6-Zweiformblock symbolisch verifiziert).
+[E] Exakte Vakuum-Wirkung: L_B(R) = -[ln(1-bR)+4ln(1-bR/4)+6ln(1-bR/6)] = 3bR + (17/24)b^2R^2 + ...
+-- die 3 reproduziert Gl. (45) (v473-Pin), 17/24 ist der exakte Tensorfaktor.
+[E] DER ROHE SCALARON IST TRANS-PLANCKISCH: m_raw^2 = 4608 pi^2/17 Mbar^2, m_raw ~ 51.7 Mbar
+~ 1.3e20 GeV (zwei unabhaengige Routen identisch). TFPT braucht 3.06e13 GeV. => v473-Interpretation 2
+("TFPT-Scalaron = leichter G-Spurmode") ist in naiver Form TOT; ein Mechanismus muesste exakt
+(72/17)(8pi)^9 ~ 1.69e13 in Masse^2 liefern (Kill-Test-Zahl jetzt MIT Tensorfaktoren).
+[E] Domain kein Problem: erster Log-Pol erst bei R = 384 pi^2 Mbar^2 (transplanckisch).
+[E] Lorentz-Zeuge: zeitartiger Gradient -> Eigenwert 1 - alpha v^2 <= 0 ab v^2 >= 1/alpha (Log
+undefiniert); raumartig/euklidisch immer positiv -- OS-Route bestaetigt staerker.
+[C] Verdikt: Von den drei v473-Interpretationen ueberlebt nur (1) Einstein+Lambda-Ebene und die
+Route (3) KMS-spektrale Renormierung fuer R^2. Nichts schliesst, kein Marker bewegt.
+Damit sind AP1, AP3, AP4-Algebra und AP5 (roher Sektor) abgearbeitet. Es verbleibt als echtes
+Forschungsproblem NUR noch AP2 (Kompressions-Satz P_Sigma (G g^-1) P_Sigma = Delta_Sigma^{1/2},
+operator-theoretisch, kein endlicher Check) und -- falls jemand die Bruecke voll will -- der
+KMS-Renormierungs-Mechanismus fuer den R^2-Sektor. Beides dokumentiert, beides [O].
+
+## Update 2026-07-13 (IV): v476 -- AP2 (Kompressions-Vermutung) WOHLGESTELLT gemacht
+
+verification/v476_entropic_compression_toy.py (GRAV.ENTROPIC.COMPRESS.01, 6/6). Am exakt loesbaren
+Gittermodell (gegappte Staggered-Mass-Kette, N=16, quasi-frei => alles via Kovarianz/Peschel
+berechenbar):
+[N] Seam-Situation reproduziert: reiner Bulk (C Projektion, 1e-15), thermischer Rand
+(spec(PCP) in (0,1), Peschel-K endlich, S>0 -- v155 im Bruecken-Kontext).
+[N] LESART ENTSCHIEDEN: auf dem reinen Bulk ist f(x)=x/(1-x) singulaer auf spec(C)={0,1} -- die
+WOERTLICHE Lesart der v473-Vermutung (P f(C) P, "erst Operator, dann komprimieren") ist ILL-POSED;
+f(PCP) ("erst komprimieren, dann Modularoperator") ist endlich => die State-Side-Lesart ist
+ERZWUNGEN. Passt zu Bianconis eigener Konstruktion (ihr G ist ein LOKALES Feld = bereits das
+komprimierte Datum). AP2 umgetypt, nicht geschwaecht.
+[E] Block-Algebra symbolisch: [C^n]_AA - (C_AA)^n traegt den Kreuzblock ZWEIMAL (erste Ordnung
+verschwindet identisch) => fuer jedes analytische f stimmen beide Lesarten bis zur ZWEITEN Ordnung
+in den Kreuz-Korrelationen ueberein -- der modulare (Verschraenkungs-)Gehalt IST diese quadratische
+Korrektur.
+[N] Gap-Kontrolle auf der beschraenkten (Kovarianz-)Ebene: Bulk-Identitaet f(C_T)=e^{-h/T} exakt
+(1e-11 rel.); Mismatch d <= x^2 (d/x^2 in [0.4,1.0]), faellt mit dem Gap im gegappten Regime;
+entkoppelter Schnitt EXAKT gleich => die Lesarten konvergieren im gap-dominierten Regime -- genau
+da, wo TFPT arbeitet (Delta_eff > 0, v76/v337).
+[O] Unveraendert offen: die Kontinuums-Seam-Aussage selbst (Calderon-Kompression des echten
+relativen Metrikoperators = echter Seam-Modularoperator). Kein Marker bewegt.
+ZWISCHENSTAND nach v476 (die Arbeitspakete AP1-AP5 der urspruenglichen Analyse sind damit
+abgearbeitet; die Folge-Untersuchungen v477/v478 kamen danach, s.u.): AP1+AP4 (v474), AP3 (v473),
+AP5 (v475), AP2 wohlgestellt (v476). Die Bruecke steht sauber typisiert: Einstein+Lambda-Ebene
+[E]-gepinnt, R^2 nur via KMS-Renormierung [C], AP2 als praezise Kontinuumsfrage [O]. Numerisch,
+Python-only (Wolfram-Count zum damaligen Stand 376; nach v477 = 378).
+
+## Update 2026-07-13 (V): v477 -- Scale-Flow: der R^2-Weg als EINE Momentenbedingung + BW-Negativprotokoll
+
+verification/v477_entropic_scaleflow.py (GRAV.ENTROPIC.SCALEFLOW.01, 5/5), Wolfram +2 (378/378).
+[E] Scale-Flow-Identitaet: -ln a = int dt/t (e^{-ta}-e^{-t}) = 2 int dchi/chi (e^{-a/chi^2}-e^{-1/chi^2})
+-- Bianconis Log-Wirkung IST das FLACHE Skalenintegral relativer Waermekern-Wirkungen; TFPTs S_rel,chi
+wertet EINE KMS-Skala mit Gewicht f aus. Die Bruecke zwischen beiden Wirkungsprinzipien ist die Wahl
+des SKALENMASSES.
+[E] Momenten-Woerterbuch: Gewicht w(t) dt/t => 3 beta R mu1 + (17/24) beta^2 R^2 mu2; flaches Mass =
+Einheitsmomente = exakt die rohen v475-Koeffizienten.
+[E] DIE EINE MOMENTENBEDINGUNG: m^2 = c3^7 Mbar^2 erzwingt exakt mu2/mu1^2 = (72/17)(8pi)^9 -- die
+v475-Kill-Test-Zahl IST ein Momentenverhaeltnis. Schliessungsidentitaet (4608 pi^2/17)/((72/17)(8pi)^9)
+= c3^7 gilt IDENTISCH: die "13 Groessenordnungen" sind kein Bruecken-Mismatch, sondern ein
+Skalenmass-Datum -- das flache Mass fixiert es falsch, das TFPT-KMS-Mass (f0 = 6(4pi)^2/c3^7, v36)
+richtig. Ein KMS-Moment, zwei Parametrisierungen, NULL neue Dials.
+[C] Ehrlich: Konsistenz, keine Herleitung -- das Mass ist TFPT-Input. Interpretation 3 bleibt [C],
+R^2-Gate und v359-Typisierung bleiben [O].
+NEGATIVPROTOKOLL (BW-Anbindung von AP2): Der Versuch, die State-Side-Lesart (v476) an einen EXAKTEN
+Gitter-Bisognano-Wichmann-Kommutator zu binden, schlug fehl: auf der halbgefuellten offenen Kette
+kommutiert C_A NICHT exakt mit den einfachen tridiagonalen Boost-Formen (n, n(L-n), n(N-n), n(2L-n)
+alle Kommutatornorm O(1)); der Block-mittig-Test zeigt nur ~parabelfoermige NN-Kopplungen (corr -0.93,
+kein exaktes CHM-Profil auf dem Gitter). D.h. die exakte Peschel-Eisler-Kommutante existiert (wenn
+ueberhaupt) nur in speziellerer Form (halb-unendlich/kontinuum); NICHT in die Suite aufgenommen.
+Naechster sinnvoller Schritt fuer AP2 waere die Kontinuums-/DtN-Version (v156-Kernel + CHM-Gewicht)
+-- echtes Analysis-Projekt, kein endlicher Check.
+STAND DER BIANCONI-RUNDE NACH v473-v477: Einstein+Lambda-Ebene [E]-gepinnt (beta', Lambda-Kanal, Q-
+Traeger), R^2 als Ein-Moment-Aussage [C] konsistent geschlossen, AP2 wohlgestellt [O], Scalaron-
+Abkuerzung und Paarblock-Lesart exakt widerlegt. Die Bruecke ist vollstaendig vermessen und typisiert.
+
+## Update 2026-07-13 (VI): v478 -- erste rechenbare Schritte auf den zwei verbleibenden Beinen
+
+verification/v478_entropic_continuum_legs.py (GRAV.ENTROPIC.LEGS.01, 5/5), Python-only (Wolfram 378
+unveraendert).
+BEIN A (AP2-Kontinuum, exhibiert -- kein Beweis): Auf der exakt loesbaren kritischen Kette
+(Unendlich-Volumen-sinc-Kernel, 50 Stellen) traegt der komprimierte Zustand quantitativ die
+konforme/BW-Struktur: Calabrese-Cardy c_est = 1.00089 -> 1.00038 -> 1.00021 (monoton -> Dirac c=1;
+gegappte Kontrolle 6e-8); der Peschel-Modular-Hamiltonian organisiert sich auf der CHM-Parabel
+beta(x)=x(L-x)/L (corr 0.87 -> 0.99), gerade Baender verschwinden IDENTISCH (Teilchen-Loch),
+ungerader Schwanz 1.8%. => Die in v476 erzwungene State-Side-Lesart fliesst im Kontinuumslimes auf
+GENAU die CHM/BW-Form, die TFPTs Einstein-Herleitung konsumiert (v323/v358): Modular-Seite der
+Bruecke und Gravitationsseite treffen sich. Konstanten bewusst NICHT behauptet (Gitter-EH nur
+asymptotisch lokal). AP2-Kontinuum bleibt [O].
+BEIN B (Massherleitung): Einzel-Skalen-Korollar exakt: mu2/mu1^2 = e^{t0} => t0 = ln(72/17) +
+9 ln(8pi) = 30.461 -- EINE dimensionslose KMS-Zeit in geschlossener Form. Near-Miss zu h(E8)=30
+(Differenz 0.461) EXPLIZIT ABGELEHNT (v354/v355-Disziplin). Herleitung des Masses aus der
+entropischen Struktur bleibt [O].
+Naechste echte Schritte (beide Analysis-/Theorieprojekte, keine endlichen Checks mehr):
+(1) Kontinuums-AP2: BW-Theorem-Route fuer den Calderon-Halbraum (die c=1/CHM-Exhibits sind die
+empirische Basis); (2) Massherleitung: gibt es eine entropische Begruendung fuer die eine KMS-Zeit
+t0 bzw. das Momentenverhaeltnis? Vorsicht Numerologie-Firewall: t0 ~ 30.46 ist NICHT h(E8).
