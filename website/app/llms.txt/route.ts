@@ -37,8 +37,8 @@ function buildLlmsTxt(): string {
 > builds an E8 audit hull and reads off the Standard Model gauge group, three
 > fermion generations, the flavor sector, the fine-structure constant
 > alpha^-1 = 137.0359992 (1.9 sigma from CODATA-2022), and the scale grammar.
-> 23 status-graded falsifiable predictions; zero fitted constants in the closed
-> branch; only pi is irreducible.
+> ${predictions.length} status-graded falsifiable test surfaces; zero fitted
+> constants in the closed branch; only pi is irreducible.
 
 Disambiguation: this is the physics theory "TFPT" (compiler closure for the
 Standard Model). It is NOT the established Brouwer–Lefschetz "topological fixed

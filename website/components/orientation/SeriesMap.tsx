@@ -18,8 +18,8 @@ export function SeriesMap() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
           eyebrow="Document map"
-          title="Four core documents plus three companions"
-          description="The reviewer path is the architecture and the two axioms (Doc 1), the E₈ glue and the α fixed point (Doc 1), the Standard Model (Doc 2), the E₈ audit and bootstrap (Doc 3), and the honest frontier (Doc 4). Appendix H (horizon), the Origin Theory synthesis, and the research contracts sit alongside."
+          title="Five core papers plus four companions"
+          description="The reviewer path is the architecture, the two axioms, the E₈ glue and the α fixed point (Doc 1), the Standard Model (Doc 2), the E₈ audit and bootstrap (Doc 3), the honest frontier (Doc 4), and the adversarial Red Team audit (Doc 5). Appendix H (horizon), the Origin Theory synthesis, the research contracts, and the safeguards discipline sit alongside."
         />
 
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

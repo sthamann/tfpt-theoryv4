@@ -352,7 +352,7 @@
   "date": "2026-06-22"
  },
  "tfpt_2_standard_model::section::Neutrinos::1": {
-  "hash": "5ac6b269911e",
+  "hash": "474c5a03569d",
   "date": "2026-07-14"
  },
  "tfpt_2_standard_model::section::How the legacy layers simplify (bridge map)::1": {
@@ -648,7 +648,7 @@
   "date": "2026-06-12"
  },
  "tfpt_5_redteam::section::Target F --- the perturbative 4D-QFT $+$ scale round (v269--v275)::1": {
-  "hash": "f2fe82287388",
+  "hash": "0be253919300",
   "date": "2026-07-14"
  },
  "tfpt_5_redteam::section::Outcome::1": {
@@ -716,8 +716,8 @@
   "date": "2026-06-24"
  },
  "origin_theory::section::The whole integer skeleton from one pair $(\\gcar,\\Nfam)=(5,3)$::1": {
-  "hash": "8398cd8266df",
-  "date": "2026-06-26"
+  "hash": "6d044f50a727",
+  "date": "2026-07-14"
  },
  "origin_theory::section::The ``$8$'' is triply forced: geometry $=$ lattice $=$ gravity::1": {
   "hash": "649048863210",

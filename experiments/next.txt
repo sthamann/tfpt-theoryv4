@@ -3227,3 +3227,48 @@ Mathematik noetig waere. Naechste Schritte aus der Runde: (a) Kronheimer-Seite: 
 rohe Seam als Quiver-Darstellung? (die ADHM/Moment-Map-Daten aus den v155/v160-Kovarianzen);
 (b) v480-Seite: die BW-Theorem-Route jetzt im 4-Intervall-Rahmen (Longo-Xu-Inklusion fuer den
 Seam-Kollar); (c) v481: die benannte Entscheidungsrechnung (2-Loop SM + PS-Threshold-Matching).
+
+## Update 2026-07-14 (II): v482/v483 -- Deep-Dive: Entscheidungsrechnung ausgefuehrt + Punktur-Target halbiert
+
+(1) v482_seesaw_rung_decision.py (FLAV.NUSCALE.03, 4/4): Die von v481 benannte Entscheidungs-
+rechnung AUSGEFUEHRT, in gebrackteter (annahme-robuster) Form statt exakter 2-Loop-Koeffizienten:
+der Integer-Rung M_R = c3^3 Mbar braucht Faktor x1.670 in m_3; m_t +-3 GeV (>3 sigma), alpha_s
+>3 sigma, kappa-Rundown +-10%, PS-Bein-Beta-Envelope x[0.5,1.5] liefern maximal x1.10 einzeln,
+x1.165 ALL-favourable kombiniert => der UNSTRUKTURIERTE Rung ist AUSGESCHLOSSEN (konditional auf
+y_nu = y_t; der 1-Loop-Miss war kein RG-Artefakt). Einziger Fluchtweg: Majorana-STRUKTUR-Faktor
+r ~ 1.67 der dritten Generation; post-hoc liegt r_needed = 1.6696 nur 0.18% von g_car/N_fam = 5/3
+-- AUFGEZEICHNET und ABGELEHNT (kein erzwingender Mechanismus; ein PS-Majorana-Clebsch waere der
+benannte fehlende Mechanismus -- exakt die t0~30-Disziplin von v478). Der Ein-Parameter-Fenster-
+Kandidat von v481 bleibt unberuehrt. Wer den Rung retten will, muss den 3/5-Clebsch HERLEITEN --
+das ist jetzt die praezise formulierte einzige Tuer.
+
+(2) v483_pillowcase_exact_traces.py (HYP.PHI0.GEOM.01, 4/4): Die GEOMETRISCHE Seite des
+phi0-Punktur-Targets (v408) ist EXAKT erledigt: ALLE getwisteten Waermespuren des flachen
+tau=i-Pillowcase sind t-UNABHAENGIGE RATIONALE -- Tr(sigma e^{tDelta}) = Tr(rho e^{tDelta}) = 1
+exakt fuer alle t (Modenzaehlungs-Beweis: nur n=0 ist gamma-diagonal; Positionsraum-Gauss-
+Bildsummen < 1e-9 verifiziert), Atiyah-Bott-Match 4x(1/4) (det = 4 = |mu4|) und 2x(1/2)
+(det = 2 = |Z2|), Pillowcase-Kontaktterm exakt 1/2 = 4x(1/8) pro Mark, Uhr-aequivariante Spur
+exakt 1. KONSEQUENZ: das pi^-4 in dtop = 48c3^4 = 3/(256pi^4) kann aus flacher Orbifold-Geometrie
+in KEINER Ordnung kommen -- es muss in der Kopplungs-NORMIERUNG der Kontakt-Einfuegungen sitzen
+(4 = |mu4| Einfuegungen mit Gewicht c3 => c3^4, Multiplizitaet Omega_adm = 48; der nackte
+1/(2pi)-Propagator-4-Zyklus unterscheidet sich um das exakte Rationale 3/16). Das Target verengt
+sich von "leite den Term her" auf EINE Regel: "Gewicht pro Mark-Einfuegung = c3" (dieselbe
+Residual-Klasse wie die EM-Ward-c3-Leiter, EM.WARD.02). Bleibt [O], aber die Haelfte ist bewiesen.
+
+BIG-PICTURE-BILANZ der verbliebenen Offenen (was "vollstaendige Loesung" jeweils HIESSE):
+- SEAM.EQUIV.01 (der eine Keystone-Pfeil): externes Analysis-Theorem (Kontinuums-Skalenlimit);
+  beide Seiten jetzt instrumentiert (Kronheimer-Datum v479; 4-Intervall/Longo-Xu-Rahmen v480).
+  Naechster rechenbarer Hebel: Extended-Algebra-Entropie-Exhibit (mu=1-Diskriminator) auf dem
+  16-Majorana-Stack -- Mini-Forschungsprojekt, benannt.
+- ALPHA.QUILLEN.EXACT.01 + HYP.PHI0.PUNCTURE.01: nach v483 teilen beide DIESELBE Residual-Klasse
+  ("c3-Gewicht pro Boundary-Einfuegung" bzw. c3-Leiter) -- ein Beweis der Normierungsregel wuerde
+  beide schliessen. Externe Mathematik (Quillen/zeta), kein endlicher Check.
+- v_geo: theorem-verboten (No-Unit v153) -- korrekt offen fuer immer (Definitionseinheit).
+- QG.AMB.01: dekoppeltes allgemeines QG-Problem, [C]-Redundanz -- keine TFPT-Aufgabe.
+- AP2-Kontinuum + KMS-Mass-Herleitung (Bianconi-Bruecke): echte Analysis-Projekte; der
+  4-Intervall-Rahmen (v480) ist jetzt der benannte Kontinuums-Zugang fuer AP2.
+- m_p/m_e, eta_B, Axion-Relic: getypte externe Solver (F_transfer) mit Kill-Tests -- "offen" ist
+  hier der ehrliche Endzustand, keine fehlende Theorie.
+- Absolute nu-Skala: nach v481/v482 ein Ein-Parameter-Fenster-Kandidat; die einzige Tuer zum
+  vollstaendigen Schliessen ist der herzuleitende PS-Majorana-Clebsch (3/5) ODER die Messung
+  (Sigma m_nu-Floor 0.059 eV, DESI/JUNO).

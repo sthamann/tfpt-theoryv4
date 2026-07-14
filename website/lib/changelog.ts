@@ -47,6 +47,726 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "II) ("
+      },
+      {
+        "k": "c",
+        "v": "v482"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v483"
+      },
+      {
+        "k": "t",
+        "v": " — the deep-dive round: the "
+      },
+      {
+        "k": "m",
+        "v": "\\nu"
+      },
+      {
+        "k": "t",
+        "v": "-scale decision computation EXECUTED (the integer "
+      },
+      {
+        "k": "m",
+        "v": "\\cthree^3"
+      },
+      {
+        "k": "t",
+        "v": "-rung excluded unstructured, the "
+      },
+      {
+        "k": "m",
+        "v": "5/3"
+      },
+      {
+        "k": "t",
+        "v": "-proximate structure escape recorded and declined) and the "
+      },
+      {
+        "k": "m",
+        "v": "\\phiz"
+      },
+      {
+        "k": "t",
+        "v": " puncture target HALVED (the geometric side proven exact: all twisted pillowcase heat traces are "
+      },
+      {
+        "k": "m",
+        "v": "t"
+      },
+      {
+        "k": "t",
+        "v": "-independent rationals, so the "
+      },
+      {
+        "k": "m",
+        "v": "\\pi^{-4}"
+      },
+      {
+        "k": "t",
+        "v": " must sit in the per-mark coupling weight) — "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "no gate closes, no marker moves"
+          }
+        ]
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v482_seesaw_rung_decision.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "FLAV.NUSCALE.03"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The decision computation NAMED by "
+        },
+        {
+          "k": "c",
+          "v": "v481"
+        },
+        {
+          "k": "t",
+          "v": " is EXECUTED in bracketed (assumption-robust) form: the integer rung "
+        },
+        {
+          "k": "m",
+          "v": "M_R=\\cthree^3\\Mbar"
+        },
+        {
+          "k": "t",
+          "v": " needs a rescue factor "
+        },
+        {
+          "k": "m",
+          "v": "\\times1.670"
+        },
+        {
+          "k": "t",
+          "v": " in "
+        },
+        {
+          "k": "m",
+          "v": "m_3"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "0.0301"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "0.0503"
+        },
+        {
+          "k": "t",
+          "v": " eV), while "
+        },
+        {
+          "k": "m",
+          "v": "m_t(\\overline{\\mathrm{MS}})\\pm3"
+        },
+        {
+          "k": "t",
+          "v": " GeV ("
+        },
+        {
+          "k": "m",
+          "v": ">3\\sigma"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha_3^{-1}\\mp0.10"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": ">3\\sigma"
+        },
+        {
+          "k": "t",
+          "v": "), a "
+        },
+        {
+          "k": "m",
+          "v": "\\pm10\\%"
+        },
+        {
+          "k": "t",
+          "v": " band on the ADKLR "
+        },
+        {
+          "k": "m",
+          "v": "\\kappa"
+        },
+        {
+          "k": "t",
+          "v": " run-down and a PS-leg Yukawa-beta envelope "
+        },
+        {
+          "k": "m",
+          "v": "\\times[0.5,1.5]"
+        },
+        {
+          "k": "t",
+          "v": " move it by at most "
+        },
+        {
+          "k": "m",
+          "v": "\\times1.10"
+        },
+        {
+          "k": "t",
+          "v": " singly and "
+        },
+        {
+          "k": "m",
+          "v": "\\times1.165"
+        },
+        {
+          "k": "t",
+          "v": " ALL-favourably combined — the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "unstructured"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " rung is EXCLUDED conditional on the carrier premise "
+        },
+        {
+          "k": "m",
+          "v": "y_\\nu{=}y_t"
+        },
+        {
+          "k": "t",
+          "v": " (the "
+        },
+        {
+          "k": "c",
+          "v": "v481"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": "-loop miss is not an RG artifact; no exact higher-loop coefficients trusted, pure envelope argument). "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "The only escape is a third-generation Majorana STRUCTURE factor "
+        },
+        {
+          "k": "m",
+          "v": "r\\sim1.67"
+        },
+        {
+          "k": "t",
+          "v": "; its post-hoc "
+        },
+        {
+          "k": "m",
+          "v": "0.18\\%"
+        },
+        {
+          "k": "t",
+          "v": " proximity to "
+        },
+        {
+          "k": "m",
+          "v": "\\gcar/\\Nfam=5/3"
+        },
+        {
+          "k": "t",
+          "v": " is recorded and DECLINED per "
+        },
+        {
+          "k": "c",
+          "v": "v354"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v355"
+        },
+        {
+          "k": "t",
+          "v": " (no forcing mechanism; the "
+        },
+        {
+          "k": "m",
+          "v": "t_0{\\sim}30"
+        },
+        {
+          "k": "t",
+          "v": " discipline of "
+        },
+        {
+          "k": "c",
+          "v": "v478"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the "
+        },
+        {
+          "k": "c",
+          "v": "v481"
+        },
+        {
+          "k": "t",
+          "v": " one-parameter window candidate (NO floor "
+        },
+        {
+          "k": "m",
+          "v": "\\Sigma m_\\nu{=}0.059"
+        },
+        {
+          "k": "t",
+          "v": " eV) never used the integer rung and STANDS. Integrated in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2_standard_model"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\nu"
+        },
+        {
+          "k": "t",
+          "v": "-scale paragraph) and "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_5_redteam"
+        },
+        {
+          "k": "t",
+          "v": "; ledger rows "
+        },
+        {
+          "k": "c",
+          "v": "FLAV.NUSCALE.03"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": ".02"
+        },
+        {
+          "k": "t",
+          "v": " update note; Python-only by nature."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v483_pillowcase_exact_traces.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "HYP.PHI0.GEOM.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The GEOMETRIC side of the "
+        },
+        {
+          "k": "m",
+          "v": "\\phiz"
+        },
+        {
+          "k": "t",
+          "v": " puncture target ("
+        },
+        {
+          "k": "c",
+          "v": "HYP.PHI0.PUNCTURE.01"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v408"
+        },
+        {
+          "k": "t",
+          "v": ") is EXACT: every twisted/orbifold heat trace of the flat "
+        },
+        {
+          "k": "m",
+          "v": "\\tau{=}i"
+        },
+        {
+          "k": "t",
+          "v": " pillowcase is a "
+        },
+        {
+          "k": "m",
+          "v": "t"
+        },
+        {
+          "k": "t",
+          "v": "-INDEPENDENT RATIONAL — "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{Tr}(\\gamma e^{t\\Delta})=1"
+        },
+        {
+          "k": "t",
+          "v": " for "
+        },
+        {
+          "k": "m",
+          "v": "\\gamma=\\sigma,\\rho,\\rho^3"
+        },
+        {
+          "k": "t",
+          "v": " at every tested "
+        },
+        {
+          "k": "m",
+          "v": "t"
+        },
+        {
+          "k": "t",
+          "v": " (position-space Gaussian image sums "
+        },
+        {
+          "k": "m",
+          "v": "<10^{-9}"
+        },
+        {
+          "k": "t",
+          "v": "; mode-space proof: only "
+        },
+        {
+          "k": "m",
+          "v": "n{=}0"
+        },
+        {
+          "k": "t",
+          "v": " is "
+        },
+        {
+          "k": "m",
+          "v": "\\gamma"
+        },
+        {
+          "k": "t",
+          "v": "-diagonal), matching the Atiyah–Bott fixed-point counts "
+        },
+        {
+          "k": "m",
+          "v": "4{\\times}\\tfrac14"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\det=4{=}|\\mu_4|"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "m",
+          "v": "2{\\times}\\tfrac12"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\det=2{=}|\\Z_2|"
+        },
+        {
+          "k": "t",
+          "v": "); the pillowcase contact term is EXACTLY "
+        },
+        {
+          "k": "m",
+          "v": "\\tfrac12=4\\times\\tfrac18"
+        },
+        {
+          "k": "t",
+          "v": " per mark and the clock-equivariant trace exactly "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": ", for all "
+        },
+        {
+          "k": "m",
+          "v": "t"
+        },
+        {
+          "k": "t",
+          "v": ". THEREFORE the "
+        },
+        {
+          "k": "m",
+          "v": "\\pi^{-4}"
+        },
+        {
+          "k": "t",
+          "v": " in "
+        },
+        {
+          "k": "m",
+          "v": "d_{\\mathrm{top}}=48\\cthree^4=\\tfrac{3}{256\\pi^4}"
+        },
+        {
+          "k": "t",
+          "v": " cannot come from flat orbifold geometry at ANY order: it must sit in the per-insertion COUPLING normalisation ("
+        },
+        {
+          "k": "m",
+          "v": "4{=}|\\mu_4|"
+        },
+        {
+          "k": "t",
+          "v": " marks of weight "
+        },
+        {
+          "k": "m",
+          "v": "\\cthree"
+        },
+        {
+          "k": "t",
+          "v": " give "
+        },
+        {
+          "k": "m",
+          "v": "\\cthree^4"
+        },
+        {
+          "k": "t",
+          "v": ", multiplicity "
+        },
+        {
+          "k": "m",
+          "v": "\\Oadm{=}48"
+        },
+        {
+          "k": "t",
+          "v": "; the bare "
+        },
+        {
+          "k": "m",
+          "v": "1/(2\\pi)"
+        },
+        {
+          "k": "t",
+          "v": "-propagator "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": "-cycle differs by the exact rational "
+        },
+        {
+          "k": "m",
+          "v": "\\tfrac{3}{16}"
+        },
+        {
+          "k": "t",
+          "v": "). The target NARROWS from “derive the term” to ONE rule — “per-mark insertion weight "
+        },
+        {
+          "k": "m",
+          "v": "=\\cthree"
+        },
+        {
+          "k": "t",
+          "v": "” (the same residual class as the EM-Ward "
+        },
+        {
+          "k": "m",
+          "v": "\\cthree"
+        },
+        {
+          "k": "t",
+          "v": "-ladder, "
+        },
+        {
+          "k": "c",
+          "v": "EM.WARD.02"
+        },
+        {
+          "k": "t",
+          "v": ") — and stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": ". Complements the experiments-side Donnelly probe (honest negative). Integrated in "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\phiz"
+        },
+        {
+          "k": "t",
+          "v": " split paragraph); ledger rows "
+        },
+        {
+          "k": "c",
+          "v": "HYP.PHI0.GEOM.01"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "HYP.PHI0.PUNCTURE.01"
+        },
+        {
+          "k": "t",
+          "v": " update note; Python-only by nature (quadrature verification of exact statements)."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-14",
+    "dateLabel": "2026-07-14",
+    "heading": [
+      {
+        "k": "t",
         "v": "website + figure refresh — the "
       },
       {
@@ -582,6 +1302,151 @@ export const CHANGELOG: ChangelogEntry[] = [
         {
           "k": "t",
           "v": " boundary condition, answers committed only on physical landing, capability claims gate-checked against a machine-checked claim registry (honest negatives published) — borrowing TFPT's structural discipline, not its physics predictions. The Agentic-Commerce card reference updated accordingly."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Live-site correctness pass (counts + reading order)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Sitewide audit against the deployed page found stale counts and fixed them: the document set is stated everywhere as "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "10 documents "
+            },
+            {
+              "k": "m",
+              "v": "="
+            },
+            {
+              "k": "t",
+              "v": " 1 reading guide "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " 5 numbered papers "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " 4 companions"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (the safeguards companion was missing from the papers/downloads headers, the JSON-LD collection and the "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_docset.tex"
+        },
+        {
+          "k": "t",
+          "v": " box, which still said “three companions” next to “four”); the stale “23 falsifiable predictions” claims (site metadata, OG image, "
+        },
+        {
+          "k": "c",
+          "v": "llms.txt"
+        },
+        {
+          "k": "t",
+          "v": ") now state the live count of the prediction surface ("
+        },
+        {
+          "k": "m",
+          "v": "25"
+        },
+        {
+          "k": "t",
+          "v": " test surfaces, sourced from "
+        },
+        {
+          "k": "c",
+          "v": "predictions.length"
+        },
+        {
+          "k": "t",
+          "v": " where possible), while the interactive compiler page is honestly labelled as its own "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "23-readout prediction board"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (the standalone app's board genuinely has 23 entries; the intro film keeps its spoken “twenty-three”); and the "
+        },
+        {
+          "k": "c",
+          "v": "/orientation"
+        },
+        {
+          "k": "t",
+          "v": " reading-order lists are fixed to the canonical numbering (Red Team "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " Doc 5 added, Appendix H "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " 6, Origin "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " 7, contracts "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " 8, safeguards "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " 9 — the old list mislabelled 6/7 and omitted three documents). Presentation/consistency only; no physics content changes."
         }
       ]
     ]

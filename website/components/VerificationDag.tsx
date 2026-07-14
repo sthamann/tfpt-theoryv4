@@ -246,7 +246,7 @@ const NODES: DagNode[] = [
     marker: "[E] / [C]",
     title: "Masses & mixings — the φ₀-ladder",
     summary:
-      "All nine masses, CKM and the PMNS skeleton from one master formula m = (v/√2) λ_Y^L Λ with the seed φ₀. The charged-lepton coefficients (16/7, 4/3, 7/6) are exact and the quark mass ratios (55/117, …) are integer Plücker readouts. The ratios are closed; only one overall amplitude v_geo remains — the same dimensionful anchor as gravity's 1/G, confirmed as the single dimensionful input of the whole theory (v364). The downstream F_transfer readouts are now typed, runnable solvers each with a kill test — Koide source→pole (v371), η_B via the BDP Boltzmann network (v372), the finite-T axion relic (v373), m_p/m_e (v374) — folded into a status-typed prediction-observatory CI (v375); they stay [C] bridges, never compiler outputs. The absolute neutrino scale has a named one-parameter CANDIDATE (v481, FLAV.NUSCALE.02): under the carrier normalisation y_ν = y_t the (y_ν, M_R) trade-off collapses to M_R alone, with the required M_R = 9.3×10¹³ GeV inside the PS window at log_c₃ rung 3.15 and the integer c₃³-rung explicitly declined at 1-loop — nothing closes, the frozen record is untouched.",
+      "All nine masses, CKM and the PMNS skeleton from one master formula m = (v/√2) λ_Y^L Λ with the seed φ₀. The charged-lepton coefficients (16/7, 4/3, 7/6) are exact and the quark mass ratios (55/117, …) are integer Plücker readouts. The ratios are closed; only one overall amplitude v_geo remains — the same dimensionful anchor as gravity's 1/G, confirmed as the single dimensionful input of the whole theory (v364). The downstream F_transfer readouts are now typed, runnable solvers each with a kill test — Koide source→pole (v371), η_B via the BDP Boltzmann network (v372), the finite-T axion relic (v373), m_p/m_e (v374) — folded into a status-typed prediction-observatory CI (v375); they stay [C] bridges, never compiler outputs. The absolute neutrino scale has a named one-parameter CANDIDATE (v481, FLAV.NUSCALE.02): under the carrier normalisation y_ν = y_t the (y_ν, M_R) trade-off collapses to M_R alone, with the required M_R = 9.3×10¹³ GeV inside the PS window at log_c₃ rung 3.15 and the integer c₃³-rung explicitly declined at 1-loop — and meanwhile EXCLUDED unstructured by the bracketed decision computation (v482: the rung needs ×1.67 in m₃, generous >3σ input envelopes reach at most ×1.165 combined; the 5/3-proximate Majorana structure escape is recorded post-hoc and declined) — nothing closes, the frozen record is untouched. The φ₀ seed's puncture term is geometry-exact (v483): all twisted pillowcase heat traces are t-independent rationals, so the π⁻⁴ in 48c₃⁴ must sit in the per-mark coupling weight — the puncture target narrows to that one rule.",
     inputs: ["R, L", "φ₀ (from c₃)"],
     outputs: ["9 masses, mixings"],
     failure: "Hierarchy mismatch.",
@@ -367,6 +367,8 @@ const NODES: DagNode[] = [
       "v375_observatory_registry.py",
       "v397_external_clock_probe.py",
       "v481_seesaw_carrier_ladder.py",
+      "v482_seesaw_rung_decision.py",
+      "v483_pillowcase_exact_traces.py",
     ],
   },
   {

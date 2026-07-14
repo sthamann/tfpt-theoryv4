@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`475` registered scripts · `541` ledger claims · `10` clusters.
+`477` registered scripts · `543` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (46 scripts)
+### `core` — Compiler core & the E₈ glue  (47 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -103,6 +103,8 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v419_seam_galois_carrier, v286_seam_equivalence_contract, v1_e8_glue, v89_carrier_index_lemma, v403_facet_compositum, v419, v1, v89 · cited: origin theory
 - **v479_kronheimer_quiver_bridge** [E/C/O] `SEAM.KRONHEIMER.01` — SEAM.KRONHEIMER.01: the R3 'combinatorial-to-geometric bridge' of the det K=1 keystone (SEAM.DETK.01/v344) is Kronheimer's theorem (JDG 29 (1989) 665+685) with all finite input dat
   - deps: v344_detk_synthesis, v345_hypergraph_homotopy, v286_seam_equivalence_contract, v312_hypergraph_substrate, v298_e8_network_attractor, CORR round (experiments), v232, v236 · cited: origin theory
+- **v483_pillowcase_exact_traces** [E/O] `HYP.PHI0.GEOM.01` — HYP.PHI0.GEOM.01: the GEOMETRIC side of the phi0 puncture target (HYP.PHI0.PUNCTURE.01/v408) is EXACT -- every twisted/orbifold heat trace of the flat tau = i pillowcase is a t-IND
+  - deps: v408_phi0_puncture_heatkernel, v396_phi0_icosahedral, v106_review_validation, v342_em_ward_heatkernel, v37, v216, v396, v408 · cited: origin theory
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -186,7 +188,7 @@ _The φ₀-ladder mass formula, the exact lepton coefficients, and the integer-P
 - **v229_lepton_frobenius_algebra** [E/C] `LEP.FROB.01` — a commutative Frobenius algebra. The C₆ shift has charpoly t⁶−1 (spectrum μ₆=μ₃ family ×μ₂ sheet). PMNS extension via Aut(A)+the hex CM point is [C].
   - deps: FLAV.LEPTON.01, ARCH.HEXRES.01, v220_cp_hexagonal_modulus · cited: 2 standard model
 
-### `neutrinos` — Neutrinos & the solar angle  (13 scripts)
+### `neutrinos` — Neutrinos & the solar angle  (14 scripts)
 _The Majorana texture, the dual anchor, and the previously open solar angle from the seam._
 
 - **v9_neutrino_texture** [E] `FLAV.TH12.01` — μτ Majorana texture → sin²θ₁₂ = 1/3 − φ₀/2, θ₂₃ = 45°
@@ -215,6 +217,8 @@ _The Majorana texture, the dual anchor, and the previously open solar angle from
   - deps: v270_pmns_jarlskog_assembly, v268_theta13_carrier_trace, v272_nu_mass_scale, v467_thirdgen_mixing_pattern · cited: 2 standard model
 - **v481_seesaw_carrier_ladder** [E/C/O/X] `FLAV.NUSCALE.02` — FLAV.NUSCALE.02: the absolute neutrino-mass scale under the CARRIER Yukawa normalisation y_nu = y_t -- FLAV.NUSCALE.01's two-parameter (y_nu, M_R) trade-off collapses to ONE parame
   - deps: v272_nu_mass_scale, v249_ps_unification, v248_ps_algebra, v245_spectral_matter_content, v406_pmns_phase_origin, v245, v248, v249 · cited: 2 standard model
+- **v482_seesaw_rung_decision** [C/O] `FLAV.NUSCALE.03` — FLAV.NUSCALE.03: the decision computation named by v481, EXECUTED in bracketed form -- the integer rung M_R = c3^3 Mbar is EXCLUDED as an unstructured exact pin (conditional on the
+  - deps: v272_nu_mass_scale, v481_seesaw_carrier_ladder, v249_ps_unification, v249, v272, v354, v355, v481 · cited: 2 standard model
 
 ### `gravity` — Gravity, inflation & cosmology  (6 scripts)
 _The R + R² spectral-action shadow, the seam-fixed scalaron, and the cosmological readouts._
@@ -1015,14 +1019,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×65, `v336`×33, `QGEO.SYM.01`×32, `v216`×19, `QG.AMB.01`×18, `v76`×18, `v56`×18, `E8.GLU.01`×16, `v312`×15, `REG.FREEZE.01`×15, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v323`×14, `v367`×14, `v54`×13
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×65, `v336`×33, `QGEO.SYM.01`×32, `v216`×20, `QG.AMB.01`×18, `v76`×18, `v56`×18, `E8.GLU.01`×16, `v312`×15, `REG.FREEZE.01`×15, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v323`×14, `v367`×14, `v54`×13
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v470_alpha_inflow_level** — `ALPHA.QUILLEN.INFLOW.01`
-- **v471_seam_horizon_replica** — `SEAM.EHMODEL.04`
 - **v472_quillen_detline_moduli** — `ALPHA.QUILLEN.DETLINE.01`
 - **v473_entropic_action_bridge** — `GRAV.ENTROPIC.ACTION.01`
 - **v474_entropic_hodge_carrier** — `GRAV.ENTROPIC.HODGE.01`
@@ -1033,4 +1035,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v479_kronheimer_quiver_bridge** — `SEAM.KRONHEIMER.01`
 - **v480_multilocal_four_interval** — `QGEO.MULTILOCAL.01`
 - **v481_seesaw_carrier_ladder** — `FLAV.NUSCALE.02`
+- **v482_seesaw_rung_decision** — `FLAV.NUSCALE.03`
+- **v483_pillowcase_exact_traces** — `HYP.PHI0.GEOM.01`
 

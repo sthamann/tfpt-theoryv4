@@ -7,9 +7,9 @@ import { SITE_URL } from "@/lib/utils";
 /**
  * Sitemap priority by asset path.
  *
- * The introduction (the reading guide) and the four core documents carry the
- * load-bearing arguments and rank highest; the three companions (Appendix H,
- * Origin Theory, research contracts) sit just below.
+ * The introduction (the reading guide) and the five core documents carry the
+ * load-bearing arguments and rank highest; the four companions (Appendix H,
+ * Origin Theory, research contracts, safeguards) sit just below.
  */
 function priorityForAsset(href: string): number {
   if (href === "/papers/introduction.pdf") return 0.7;

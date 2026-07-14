@@ -298,7 +298,17 @@ boundary heat-kernel (Seeley--DeWitt) contact term $\Omega_{\mathrm{adm}}c_3^4$ 
 summed over $\Omega_{\mathrm{adm}}{=}\Nfam\dim S^+{=}48$ admissible states ($c_3$ the same Gauss--Bonnet datum,
 so $c_3^4$ a fourth-order boundary power; cf.\ \vref{v391}). \mC\ Two engines, two terms: the icosahedral
 hypergraph delivers the tree term, the boundary heat-kernel delivers the puncture; its from-first-principles
-heat-kernel proof is the tracked \mO\ residual.
+heat-kernel proof is the tracked \mO\ residual. \mE\ That residual is meanwhile \emph{halved}
+(\veri{v483\_pillowcase\_exact\_traces.py}): the geometric/equivariant side is EXACT --- every twisted heat
+trace of the flat $\tau{=}i$ pillowcase is a $t$-\emph{independent rational}
+($\operatorname{Tr}(\sigma e^{t\Delta})=\operatorname{Tr}(\rho e^{t\Delta})=1$ for all $t$, the Atiyah--Bott
+fixed-point counts $4{\times}\tfrac14$ and $2{\times}\tfrac12$; pillowcase contact term exactly $\tfrac12$;
+clock-equivariant trace exactly $1$) --- so the $\pi^{-4}$ in $48c_3^4=\tfrac{3}{256\pi^4}$ \emph{cannot}
+come from flat orbifold geometry at any order: it must sit in the per-insertion \emph{coupling}
+normalisation ($4{=}|\mu_4|$ marks of weight $c_3$ give $c_3^4$, multiplicity $48{=}\Omega_{\mathrm{adm}}$;
+the bare $1/(2\pi)$-propagator $4$-cycle differs by the exact rational $\tfrac{3}{16}$). The target narrows
+from ``derive the term'' to \emph{one} rule --- ``per-mark insertion weight $=c_3$'' (the same residual
+class as the EM-Ward $c_3$-ladder) --- and stays \mO.
 
 \par\smallskip\noindent\textbf{Static vs.\ dynamic rates: a number-field split}
 (\veri{v314\_rate\_translation.py}). The discrete kernel and the dynamic recovery sit in \emph{different number

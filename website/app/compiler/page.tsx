@@ -5,7 +5,7 @@ import { SITE_URL } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "Compiler in Action — Watch Two Numbers Build the Standard Model",
   description:
-    "An interactive walkthrough of the TFPT compiler: from one boundary edge — the seam constant c₃ = 1/(8π) and the carrier rank g_car = 5 — E₈ validates the closure and the machine reads off the Standard Model, the constants (α⁻¹ = 137.0359992), the flavor sector and 23 falsifiable predictions. Turn the dials and watch every universe but ours fail to close.",
+    "An interactive walkthrough of the TFPT compiler: from one boundary edge — the seam constant c₃ = 1/(8π) and the carrier rank g_car = 5 — E₈ validates the closure and the machine reads off the Standard Model, the constants (α⁻¹ = 137.0359992), the flavor sector and a 23-readout prediction board. Turn the dials and watch every universe but ours fail to close.",
   keywords: [
     "TFPT compiler",
     "interactive Standard Model",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     type: "website",
     title: "The Compiler in Action — TFPT",
     description:
-      "Interactive: two numbers (c₃ = 1/(8π), g_car = 5) compile the Standard Model, the constants and 23 predictions. E₈ validates the closure; turn the dials and only the audited universe survives.",
+      "Interactive: two numbers (c₃ = 1/(8π), g_car = 5) compile the Standard Model, the constants and a 23-readout prediction board. E₈ validates the closure; turn the dials and only the audited universe survives.",
     url: `${SITE_URL}/compiler`,
     siteName: "TFPT — Topological Fixed-Point Theory",
     locale: "en_US",
@@ -47,7 +47,7 @@ export default function CompilerPage() {
           <p className="truncate text-xs text-slate-400">
             Two numbers — <span className="font-mono text-slate-300">c₃ = 1/(8π)</span> and{" "}
             <span className="font-mono text-slate-300">g_car = 5</span> — compile the Standard
-            Model, the constants and 23 predictions.{" "}
+            Model, the constants and a 23-readout prediction board.{" "}
             <span className="hidden sm:inline">Click any part of the machine to inspect it.</span>
           </p>
         </div>

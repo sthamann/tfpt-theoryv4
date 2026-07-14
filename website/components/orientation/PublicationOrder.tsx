@@ -10,8 +10,9 @@ const PUBLIC_ORDER = [
   { n: 2, label: "Standard Model", note: "The φ₀-ladder & flavor matrix" },
   { n: 3, label: "E₈ audit & bootstrap", note: "Audit raster, the loop" },
   { n: 4, label: "Frontier", note: "Honest open items" },
-  { n: 6, label: "Origin Theory", note: "Why no free number remains" },
-  { n: 7, label: "Research contracts", note: "The open interfaces v_geo, G_net, F_transfer" },
+  { n: 5, label: "Red Team", note: "The adversarial audit & kill tests" },
+  { n: 7, label: "Origin Theory", note: "Why no free number remains" },
+  { n: 8, label: "Research contracts", note: "The open interfaces v_geo, G_net, F_transfer" },
 ];
 
 const MATH_ORDER = [
@@ -19,8 +20,8 @@ const MATH_ORDER = [
   { n: 2, label: "Standard Model: the φ₀-ladder, flavor matrix, θ₁₂" },
   { n: 3, label: "E₈ audit raster, cascade bridge, Möbius bootstrap" },
   { n: 4, label: "Frontier: η_B, m_p/m_e, Koide, dark matter; QG measure discharged [C], graviton unitarity [C]" },
-  { n: 5, label: "Appendix H — horizon unit system (reframe)" },
-  { n: 6, label: "Origin Theory — the gapped unique attractor" },
+  { n: 6, label: "Appendix H — horizon unit system (reframe)" },
+  { n: 7, label: "Origin Theory — the gapped unique attractor" },
 ];
 
 export function PublicationOrder() {
@@ -34,7 +35,7 @@ export function PublicationOrder() {
         <SectionHeader
           eyebrow="Reading order"
           title="Two paths through the same set"
-          description="The dependency order of the four core documents is rigid (1 → 2 → 3 → 4). The recommended reading order starts from the introduction and adds the three companions — Appendix H, the Origin Theory synthesis, and the research contracts — without breaking the chain."
+          description="The dependency order of the four core documents is rigid (1 → 2 → 3 → 4), with the Red Team audit (Doc 5) on top. The recommended reading order starts from the introduction and adds the four companions — Appendix H, the Origin Theory synthesis, the research contracts, and the safeguards discipline — without breaking the chain."
         />
 
         <div className="mt-12 grid gap-6 lg:grid-cols-2">

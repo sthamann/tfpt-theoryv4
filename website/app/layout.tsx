@@ -11,8 +11,7 @@ import { REPO_URL, SITE_URL } from "@/lib/utils";
 import { SITE_VERSION } from "@/lib/version";
 
 const SITE_NAME = "TFPT — Topological Fixed-Point Theory";
-const SITE_DESCRIPTION =
-  "Topological Fixed-Point Theory (TFPT) is a parameter-free physics framework that derives the Standard Model and the fine-structure constant α⁻¹ = 137.0359992 (1.9σ from CODATA-2022) from just two numbers — the seam constant c₃ = 1/(8π) and the carrier rank g_car = 5. A discrete compiler reads off the gauge group, three fermion generations, the flavor sector and the scale grammar: 23 falsifiable predictions, zero fitted constants, only π irreducible. The physics theory by Hamann & Rizzo — distinct from the Brouwer–Lefschetz fixed-point theory of mathematics.";
+const SITE_DESCRIPTION = `Topological Fixed-Point Theory (TFPT) is a parameter-free physics framework that derives the Standard Model and the fine-structure constant α⁻¹ = 137.0359992 (1.9σ from CODATA-2022) from just two numbers — the seam constant c₃ = 1/(8π) and the carrier rank g_car = 5. A discrete compiler reads off the gauge group, three fermion generations, the flavor sector and the scale grammar: ${predictions.length} falsifiable test surfaces, zero fitted constants, only π irreducible. The physics theory by Hamann & Rizzo — distinct from the Brouwer–Lefschetz fixed-point theory of mathematics.`;
 
 export const viewport: Viewport = {
   themeColor: [
@@ -82,8 +81,7 @@ export const metadata: Metadata = {
     type: "website",
     siteName: SITE_NAME,
     title: `${SITE_NAME}: Two Axioms, One Compiler, the Standard-Model Skeleton Derived`,
-    description:
-      "From two numbers, c₃ = 1/(8π) and g_car = 5, a discrete compiler reads off the Standard Model, α⁻¹ = 137.0359992 (1.9σ from CODATA-2022), the flavor sector, strong-CP closure, and the scale grammar. 23 falsifiable predictions, zero fitted constants.",
+    description: `From two numbers, c₃ = 1/(8π) and g_car = 5, a discrete compiler reads off the Standard Model, α⁻¹ = 137.0359992 (1.9σ from CODATA-2022), the flavor sector, strong-CP closure, and the scale grammar. ${predictions.length} falsifiable test surfaces, zero fitted constants.`,
     locale: "en_US",
     url: SITE_URL,
   },
@@ -185,7 +183,7 @@ const collectionJsonLd = {
   name: `TFPT ${SITE_VERSION} Compiler-Closure Document Set`,
   url: `${SITE_URL}#papers`,
   description:
-    `The TFPT ${SITE_VERSION} document set: the introduction reading guide, the architecture and E₈ compiler, the Standard Model, the E₈ audit and bootstrap, the honest frontier, Appendix H (horizon), the Origin Theory synthesis, and the research contracts.`,
+    `The TFPT ${SITE_VERSION} document set: the introduction reading guide, the architecture and E₈ compiler, the Standard Model, the E₈ audit and bootstrap, the honest frontier, the adversarial Red-Team audit, and the four companions — Appendix H (horizon), the Origin Theory synthesis, the research contracts, and the safeguards discipline.`,
   hasPart: papers.map((p) => ({
     "@type": "ScholarlyArticle",
     name: p.title,
