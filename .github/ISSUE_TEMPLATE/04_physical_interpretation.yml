@@ -1,0 +1,29 @@
+name: "🔬 Physical interpretation"
+description: Question or dispute a physical identification — what a mathematical object is claimed to *mean* physically (the seam, the carrier, an interface).
+title: "[physics] "
+labels: ["interpretation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        TFPT separates what is *derived* from what is *physically identified*. This template is for
+        the identification layer — e.g. "the seam is a horizon", "the transport operator is …".
+  - type: input
+    id: object
+    attributes:
+      label: Object / identification in question
+      placeholder: "e.g. the boundary seam as a horizon; the F_transfer functor"
+    validations:
+      required: true
+  - type: textarea
+    id: concern
+    attributes:
+      label: The concern
+      description: What physical assumption is doing work, and where you think it is unjustified or alternative readings exist.
+    validations:
+      required: true
+  - type: textarea
+    id: alternative
+    attributes:
+      label: Alternative interpretation (optional)
+      description: A different physical reading and what it would change downstream.

@@ -1,0 +1,45 @@
+name: "🔁 Reproduction failure"
+description: A verification script, the audit, or a build step did not reproduce the stated result on your machine.
+title: "[repro] "
+labels: ["reproduction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reproducing. Please tell us exactly what you ran and what came out — a
+        failing `./verify` or `run_all.py` is a first-class bug report.
+  - type: dropdown
+    id: path
+    attributes:
+      label: Which path?
+      options:
+        - "./verify (30-second headline)"
+        - "./verify --full (Python suite)"
+        - "Docker (ghcr.io/sthamann/tfpt)"
+        - "Wolfram Engine (independent path)"
+        - "Lean 4 (carrier rigidity)"
+        - "bash build.sh audit / release"
+        - "In-browser reproducer (website)"
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command(s) you ran
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Output (paste the failing lines)
+      render: text
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      placeholder: "OS, Python version, git commit (git rev-parse --short HEAD)"
+    validations:
+      required: true

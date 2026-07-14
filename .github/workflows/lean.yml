@@ -1,0 +1,45 @@
+name: Lean Proofs
+
+# The Lean 4 carrier-rigidity proofs: no sorry/admit, no domain axioms, and
+# `#print axioms` on every headline theorem returns only the three standard
+# Lean kernel axioms (scripts/audit.sh).
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "experiments/lean4-carrier-rigidity/**"
+      - ".github/workflows/lean.yml"
+  pull_request:
+    paths:
+      - "experiments/lean4-carrier-rigidity/**"
+      - ".github/workflows/lean.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lean:
+    name: carrier-rigidity (no sorry / only kernel axioms)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: experiments/lean4-carrier-rigidity
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install elan (Lean toolchain manager)
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh \
+            | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Fetch the mathlib build cache
+        run: lake exe cache get
+
+      - name: Build
+        run: lake build
+
+      - name: Audit gate (scripts/audit.sh)
+        run: bash scripts/audit.sh

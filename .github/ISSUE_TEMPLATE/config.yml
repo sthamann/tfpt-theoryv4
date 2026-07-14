@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Run the 30-second verifier first
+    url: https://github.com/sthamann/tfpt#run-the-verifier
+    about: Before filing, try ./verify (or the in-browser reproducer) so we discuss concrete numbers.
+  - name: How to falsify TFPT (kill tests)
+    url: https://www.fixpoint-theory.com/falsification
+    about: The pre-registered predictions and the experiments that would kill the theory.
+  - name: Interactive verification & FAQ
+    url: https://www.fixpoint-theory.com/verification
+    about: The dependency graph, the in-browser reproducer, and answers to common objections.

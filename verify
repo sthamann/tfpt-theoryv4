@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+# TFPT one-command verifier.  Three levels of depth:
+#
+#   ./verify              # ~1s : re-derive the headline claims from the axioms
+#   ./verify --full       # ~1min: the entire Python suite (verification/run_all.py)
+#   ./verify --release    #  full pipeline: docs + suite + website + sync audit
+#
+# Independent engines (optional, needs the toolchain installed):
+#   ./verify --wolfram    # second path on the Wolfram Engine
+#   ./verify --lean       # the Lean 4 carrier-rigidity proofs (no sorry/admit)
+#   ./verify --audit      # papers <-> suite <-> ledger <-> changelog <-> website
+#
+# No arguments prints the 30-second proof-of-wow.  Requires python3 with
+# mpmath + numpy (see requirements.txt) or just: docker run ghcr.io/sthamann/tfpt
+set -euo pipefail
+ROOT="$(cd "$(dirname "$0")" && pwd)"
+cd "$ROOT"
+
+mode="${1:-quick}"
+case "$mode" in
+  ""|quick|-q)
+    exec python3 verification/verify_quick.py ;;
+  --full|full|-f)
+    echo "Running the full TFPT Python suite (verification/run_all.py) ..."
+    cd verification && exec python3 run_all.py ;;
+  --release|release)
+    exec bash build.sh release ;;
+  --wolfram|wolfram)
+    command -v wolframscript >/dev/null 2>&1 || { echo "wolframscript not found (install the free Wolfram Engine)"; exit 127; }
+    wolframscript -file verification/wolfram/tfpt_readouts.wl
+    exec wolframscript -file verification/wolfram/tfpt_readouts_extension.wl ;;
+  --lean|lean)
+    command -v lake >/dev/null 2>&1 || { echo "lake not found (install Lean 4 via elan)"; exit 127; }
+    cd experiments/lean4-carrier-rigidity && lake exe cache get && exec bash scripts/audit.sh ;;
+  --audit|audit)
+    exec bash build.sh audit ;;
+  -h|--help|help)
+    sed -n '2,20p' "$0" | sed 's/^# \{0,1\}//' ; exit 0 ;;
+  *)
+    echo "unknown option: $mode"; echo "try: ./verify --help"; exit 2 ;;
+esac

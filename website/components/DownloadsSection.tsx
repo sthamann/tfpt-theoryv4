@@ -207,7 +207,7 @@ export function DownloadsSection() {
                 <ArrowUpRight size={16} />
               </Link>
               <span className="font-mono text-[11px] text-slate-500">
-                github.com/sthamann/tfpt-theoryv4
+                github.com/sthamann/tfpt
               </span>
             </div>
           </div>

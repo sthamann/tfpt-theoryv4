@@ -10,7 +10,7 @@ export function cn(...inputs: ClassValue[]) {
  * verification stack (Python suite, Wolfram mirror, Lean carrier proof) and the
  * versioned status ledger.
  */
-export const REPO_URL = "https://github.com/sthamann/tfpt-theoryv4";
+export const REPO_URL = "https://github.com/sthamann/tfpt";
 
 /**
  * Canonical public site origin (no trailing slash). Single source for canonical

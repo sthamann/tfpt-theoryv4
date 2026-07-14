@@ -1,0 +1,8 @@
+# The verifier image needs only `verify` + `verification/`.  Keep everything
+# else out so the build context stays small and reproducible.
+*
+!verify
+!requirements.txt
+!verification/**
+verification/**/__pycache__/
+**/*.pyc

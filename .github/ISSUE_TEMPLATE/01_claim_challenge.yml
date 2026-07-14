@@ -1,0 +1,43 @@
+name: "⚔️ Claim challenge"
+description: Challenge a load-bearing claim — an unstated assumption, a circular dependency, or a uniqueness result you think is not forced.
+title: "[claim] "
+labels: ["claim-challenge"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The most valuable challenges attack the **load-bearing** claims. Please point at a
+        specific claim (a status-ledger id, a `vN` module, or a paper section) rather than the
+        theory in general.
+  - type: input
+    id: claim
+    attributes:
+      label: Which claim?
+      description: A ledger id (e.g. `SEAM.EQUIV.01`), a module (`v3_em_alpha.py`), or a paper section.
+      placeholder: "e.g. v3_em_alpha.py — α⁻¹ uniqueness"
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Type of challenge
+      options:
+        - Unstated physical assumption
+        - Circular / hidden dependency
+        - Claimed uniqueness is not forced
+        - Status marker is too strong ([E]/[C]/[O])
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: argument
+    attributes:
+      label: The argument
+      description: What breaks, and why. Concrete steps or a counter-derivation are far stronger than intuition.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What would change if you are right?
+      description: e.g. "this should be typed [O], not [E]" or "α⁻¹ is then not unique on (0, 0.05)".

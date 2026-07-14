@@ -1,0 +1,27 @@
+name: Sync Audit
+
+# The single sync audit: papers <-> suite <-> ledger <-> changelog <-> website
+# must agree in both directions (verification/audit_sync.py, ends "AUDIT OK").
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    name: papers <-> suite <-> ledger <-> changelog <-> website
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run the sync audit
+        run: bash build.sh audit

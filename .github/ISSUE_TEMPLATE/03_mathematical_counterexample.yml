@@ -1,0 +1,35 @@
+name: "🧮 Mathematical counterexample"
+description: A concrete counterexample to a lattice/Lie/identity result (e.g. the E₈ closure, the glue index, a uniqueness lemma).
+title: "[math] "
+labels: ["counterexample"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Counterexamples are the strongest possible contribution. Please make it **checkable** —
+        ideally a short script or a fully explicit construction.
+  - type: input
+    id: target
+    attributes:
+      label: Target result
+      placeholder: "e.g. (D5 ⊕ A3) + μ4 ≅ E8 is not unique / glue index ≠ 4"
+    validations:
+      required: true
+  - type: textarea
+    id: construction
+    attributes:
+      label: The counterexample
+      description: The explicit object (lattice, matrix, representation, root system) that violates the claim.
+    validations:
+      required: true
+  - type: textarea
+    id: check
+    attributes:
+      label: How to check it
+      description: A snippet (Python/Wolfram/Lean) or the exact arithmetic that a reviewer can run.
+      render: python
+  - type: input
+    id: module
+    attributes:
+      label: Which module/paper does it contradict?
+      placeholder: "e.g. v1_e8_glue.py, tfpt_1_architecture_e8.tex §II"

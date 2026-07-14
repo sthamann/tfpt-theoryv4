@@ -1,0 +1,42 @@
+name: "📈 Prediction update"
+description: New measurement or dataset that confirms, tensions, or falsifies a frozen prediction (θ₁₃, δ_CP, birefringence, n_s/r, …).
+title: "[prediction] "
+labels: ["prediction-update"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Predictions are frozen in `verification/predictions_frozen.json` (2026-06-09). This template
+        feeds the live scorecard. Please cite the source measurement.
+  - type: input
+    id: observable
+    attributes:
+      label: Observable
+      placeholder: "e.g. sin²θ₁₃, δ_PMNS, cosmic birefringence β, n_s"
+    validations:
+      required: true
+  - type: input
+    id: value
+    attributes:
+      label: New measured value (± uncertainty)
+      placeholder: "e.g. 0.02203 ± 0.00056"
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      placeholder: "experiment / collaboration + arXiv or DOI"
+    validations:
+      required: true
+  - type: dropdown
+    id: direction
+    attributes:
+      label: Effect on the frozen prediction
+      options:
+        - Confirms (moves toward the frozen value)
+        - Tensions (2–3σ)
+        - Falsifies (>3σ, a kill test triggered)
+        - Unclear / needs discussion
+    validations:
+      required: true

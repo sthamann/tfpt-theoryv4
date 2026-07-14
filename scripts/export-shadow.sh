@@ -92,7 +92,7 @@ that says \"ALL CHECKS PASSED\" cannot ship unless it actually reproduces as exp
 
 **Do not edit here.** Changes flow: main repo → this mirror (GitHub Action) → Overleaf pull.
 
-Source: \`${GITHUB_REPOSITORY:-sthamann/tfpt-theoryv4}\` @ \`${GITHUB_SHA:-local}\`
+Source: \`${GITHUB_REPOSITORY:-sthamann/tfpt}\` @ \`${GITHUB_SHA:-local}\`
 Last export: $(date -u +"%Y-%m-%d %H:%M:%SZ")
 Files exported: ${file_count}
 EOF
