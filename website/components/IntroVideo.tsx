@@ -76,7 +76,7 @@ const videoJsonLd = {
   description:
     "A short film on Topological Fixed-Point Theory (TFPT) built around one honest question: is reality compiled? It opens with the output — almost the whole Standard Model (forces, three generations, one Higgs, the masses and mixings, strong-CP = 0), gravity (Einstein's equation with fixed constants), pieces of cosmology, the fine-structure constant α⁻¹ = 137.0359992 as just one line among many, and 23 testable predictions — then shows how little goes in: two numbers that reduce to one small whole-number pattern and π. E₈ is the proof layer: the referee (240-root projection) where the parts fit only one way, so the inputs are forced — a fixed point. The same 2·3·5 runs through every part, and a spectral-gap clock settles on one attractor (constants selected, not tuned). On numerology: hundreds of machine-checks assembled the picture bottom-up, verified twice (Wolfram + Lean) with a red team; 13 predictions were frozen before the data and beat 200,000 random look-alikes (≤5/13), odds below 10⁻³⁰. It is honest about the gaps (one theorem, a few bridges, one unit no pure number can give) and falsifiable (neutrino mass, proton decay, dark energy). The verdict is humble: we don't know — but here is a version you can test.",
   thumbnailUrl: [`${SITE_URL}${POSTER_SRC}`],
-  uploadDate: "2026-06-25",
+  uploadDate: "2026-07-14",
   duration: "PT4M45S",
   contentUrl: `${SITE_URL}${VIDEO_SRC}`,
   inLanguage: "en",

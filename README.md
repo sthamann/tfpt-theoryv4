@@ -1,15 +1,34 @@
+<div align="center">
+
 # TFPT — Topological Fixed-Point Theory
 
-> **Version 5.4** · A closed **discrete compiler** for the dimensionless skeleton of the Standard Model and
-> cosmology, built from **two inputs** plus typed physical anchors for the absolute scales.
-> Every load-bearing claim is machine-checked by an independent verification suite.
+<strong>A closed discrete compiler for the dimensionless skeleton of the Standard Model and cosmology —<br/>built from two numbers and π, with every load-bearing claim machine-checked.</strong>
 
-**🌐 Website & interactive verification: [fixpoint-theory.com](https://www.fixpoint-theory.com)** —
-[reading guide](https://www.fixpoint-theory.com/orientation) ·
-[how the compiler works](https://www.fixpoint-theory.com/compiler) ·
-[reproduce every claim in-browser](https://www.fixpoint-theory.com/verification) ·
-[how to falsify TFPT](https://www.fixpoint-theory.com/falsification) ·
-[FAQ](https://www.fixpoint-theory.com/faq)
+<p>
+  <img alt="Version 5.4" src="https://img.shields.io/badge/version-5.4-6e56cf">
+  <a href="https://www.fixpoint-theory.com"><img alt="Website" src="https://img.shields.io/badge/website-fixpoint--theory.com-2563eb"></a>
+  <a href="https://doi.org/10.5281/zenodo.20846087"><img alt="DOI" src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20846087-3b82f6"></a>
+  <img alt="Verification" src="https://img.shields.io/badge/verification-3_independent_engines-16a34a">
+  <img alt="Predictions" src="https://img.shields.io/badge/predictions-23_falsifiable-db2777">
+</p>
+
+<p>
+  <a href="https://www.fixpoint-theory.com/orientation"><b>Reading guide</b></a> ·
+  <a href="https://www.fixpoint-theory.com/compiler">How the compiler works</a> ·
+  <a href="https://www.fixpoint-theory.com/verification">Reproduce in-browser</a> ·
+  <a href="https://www.fixpoint-theory.com/falsification">How to falsify</a> ·
+  <a href="https://www.fixpoint-theory.com/faq">FAQ</a>
+</p>
+
+<h3>▶︎ Watch the film — <em>Is reality compiled?</em> (5 min)</h3>
+
+<a href="https://www.fixpoint-theory.com/#intro-video">
+  <img src="website/public/intro/tfpt-intro-poster.jpeg" alt="Watch the 5-minute film — Is reality compiled?" width="820">
+</a>
+
+<p><sub>▶︎ Click to play on the website — with chapter markers and the full transcript &nbsp;·&nbsp; <a href="https://www.fixpoint-theory.com/intro/tfpt-intro.mp4">direct MP4</a></sub></p>
+
+</div>
 
 > _Disambiguation:_ this is the **physics** theory TFPT (a compiler closure for the Standard Model). It is
 > not the unrelated Brouwer–Lefschetz "topological fixed point theory" of mathematics (Nielsen/Lefschetz numbers).
@@ -19,6 +38,8 @@ TFPT models physics as a small deterministic *compiler*: two boundary inputs are
 read-outs fall out as **projections** — through a chain of exact identities and lattice/Lie
 theorems, not fits. This repository contains the theory documents, a full Python + Wolfram +
 Lean verification stack, and a versioned status ledger that types every claim.
+
+**Contents** &nbsp;·&nbsp; [1 · The theory in one page](#1-the-theory-in-one-page) &nbsp;·&nbsp; [2 · Repository structure](#2-repository-structure) &nbsp;·&nbsp; [3 · Reproduce / verify](#3-reproduce--verify) &nbsp;·&nbsp; [4 · Status markers](#4-status-markers) &nbsp;·&nbsp; [5 · What is genuinely open](#5-what-is-genuinely-open) &nbsp;·&nbsp; [Links & citation](#links--citation)
 
 ---
 
@@ -31,6 +52,11 @@ Lean verification stack, and a versioned status ledger that types every claim.
 | Seam normalisation (P1) | `c₃` | `1/(8π)` | boundary/horizon constant |
 | Carrier rank (P2) | `g_car` | `5` | the `3+2` carrier interface |
 
+<p align="center">
+  <img src="assets/readme/02_inputs.png" alt="The two inputs: c₃ = 1/(8π) and g_car = 5" width="720"><br>
+  <sub><em>The entire dimensionless input layer: a tempo <code>c₃ = 1/(8π)</code> and a width <code>g_car = 5</code>.</em></sub>
+</p>
+
 These two collapse further: both are the elementary-symmetric data of the **parabolic anchor**
 `a = (1,1,2)`, so the genuine input layer is `a` plus the single transcendental `π`
 (`c₃ = 1/(2·e₁(a)·π) = 1/(8π)`). The carrier choice `g_car = 5` is itself an *over-determined
@@ -38,6 +64,26 @@ bootstrap fixed point* (forced three independent ways via the `E8` closure), so 
 **no free load-bearing number** on the dimensionless axis — only `π` is primitive.
 
 ### The compiler pipeline
+
+```mermaid
+flowchart LR
+    C["c₃ = 1/(8π)"]:::inp --> AN
+    G["g_car = 5"]:::inp --> AN
+    AN["anchor a = (1,1,2) + π"]:::mid --> E8
+    E8["E₈ audit hull<br/>240 roots · rank 8"]:::hull
+    E8 --> SM["gauge group SU(3)×SU(2)×U(1)<br/>3 generations · 1 Higgs"]:::out
+    E8 --> AL["α⁻¹ = 137.0359992"]:::out
+    E8 --> FL["flavor: φ₀-ladder masses<br/>CKM / PMNS"]:::out
+    E8 --> GR["gravity: G+Λg = 8π·T"]:::out
+    E8 --> CO["cosmology: Ω_b · Λ · nₛ"]:::out
+    classDef inp fill:#111827,stroke:#60a5fa,color:#e2e8f0;
+    classDef mid fill:#111827,stroke:#a78bfa,color:#e2e8f0;
+    classDef hull fill:#0b1220,stroke:#34d399,color:#e2e8f0,stroke-width:2px;
+    classDef out fill:#111827,stroke:#f472b6,color:#e2e8f0;
+```
+
+<details>
+<summary>Show the exact text pipeline (with every intermediate identity)</summary>
 
 ```
   c₃ = 1/(8π)  ┐
@@ -55,6 +101,26 @@ bootstrap fixed point* (forced three independent ways via the `E8` closure), so 
                                                        v359); R+R² scalaron M ≈ 3.06×10¹³ GeV; Λ ~ e^(−2α⁻¹);
                                                        Ω_b = (1−1/4π)φ₀ ≈ 0.04894
 ```
+
+</details>
+
+<table>
+<tr>
+<td width="50%" align="center">
+  <img src="assets/readme/03_e8.png" alt="E₈ — the proof layer, 240 roots" width="100%"><br>
+  <sub><em><b>E₈ is the referee, not a force.</b> The parts can lock into its 240-root pattern only one way — so most possible universes simply don't compile.</em></sub>
+</td>
+<td width="50%" align="center">
+  <img src="assets/readme/04_fixedpoint.png" alt="The fixed point — the inputs force themselves" width="100%"><br>
+  <sub><em><b>The loop closes on itself.</b> The proof shuts only for one tempo and one width, so the structure forces its own inputs — the fixed point the theory is named after.</em></sub>
+</td>
+</tr>
+</table>
+
+<p align="center">
+  <img src="assets/readme/01_outputs.png" alt="What comes out: the Standard Model, gravity, cosmology, α⁻¹, ..." width="820"><br>
+  <sub><em>What comes out of those two numbers — the whole Standard-Model skeleton, gravity, pieces of cosmology, and <code>α⁻¹</code> as just one line among many.</em></sub>
+</p>
 
 ### What it produces (selected, all machine-checked)
 
@@ -76,6 +142,10 @@ bootstrap fixed point* (forced three independent ways via the `E8` closure), so 
   *theorem* — the gapped boundary transport (`Δ = 6·log(3/2) > 0`) has, by Perron–Frobenius, a
   **unique attractor** at rate `(2/3)⁶` (the physical identification of the transport operator
   stays `[P]`); the hull carries a literal order-`30 = 2·3·5` Coxeter cycle.
+
+<details>
+<summary><b>More machine-checked structural results</b> — icosahedral bedrock, master cover, spine tetrahedron, flavor diamond, the boundary QFT as one object</summary>
+
 - **Icosahedral bedrock** (`v219`): *why* the atoms are `{2,3,5}` — `E₈` is the exceptional top of
   the McKay tower of finite `SU(2)` subgroups (`2I`, order `120 = |R⁺(E₈)|`, has irrep degrees equal
   to the affine-`E₈` Kac marks, `Σ = 30 = h(E₈)`), so choosing `E₈` is choosing the icosahedron. A
@@ -109,6 +179,8 @@ bootstrap fixed point* (forced three independent ways via the `E8` closure), so 
   residual carries **no undischarged TFPT-internal assumption** — it is a composition of standard cited theorems
   (Steklov rigidity, the free-fermion classification, the AQFT stack) over established facts (the carrier-16, the
   derived gap `6log(3/2)>0`) — though it stays `[O]` (not machine-proved end-to-end). Ambient QG kept separate.
+
+</details>
 
 ### Honest scope — the four layers
 
@@ -196,6 +268,11 @@ single residual of `SEAM.EQUIV.01`) — not a diffuse gap.
 
 ## 3. Reproduce / verify
 
+<p align="center">
+  <img src="assets/readme/05_nullmodel.png" alt="Frozen predictions vs a null model of 200,000 random look-alikes" width="820"><br>
+  <sub><em>Not numerology: 13 predictions were frozen <b>before</b> the data; 200,000 random look-alikes score at most 5/13, while TFPT hits 13/13 — a look-elsewhere-corrected chance below 1 in 10³⁰.</em></sub>
+</p>
+
 Dependencies: a LaTeX distribution (`pdflatex`), Python 3 with `sympy`, `mpmath`, `numpy`,
 `matplotlib`; optionally Wolfram Engine and Lean 4 (`elan`/`lake`).
 
@@ -264,6 +341,9 @@ residual is **three named interface problems** — not a diffuse list:
 | `v_geo` | the one metrology unit (`=1/√G = m/μ`); No-Unit Thm: no compiler scale | primitive `[O]` |
 | `G_net` | `SEAM.EQUIV.01`: the raw seam *is* the holomorphic `(E8)₁` net | `[C]` — closed modulo a cited theorem |
 | `F_transfer` | one functor, four typed interfaces (Koide, `η_B`, axion, `m_p/m_e`) | `[C]` |
+
+<details>
+<summary><b>Deep dive — parameter-free gravity, the all-orders perturbative leg, and the <code>SEAM.EQUIV.01</code> status</b> (click to expand)</summary>
 
 **Gravity is parameter-free.** The classical metric-sector field equation is no longer only an `R+R²`
 readout. The entanglement first law `δS = δ⟨K⟩` (Jacobson; Faulkner et al.), run with TFPT's atoms,
@@ -387,9 +467,14 @@ rests on cited continuum-existence theorems we do not re-prove. `QGEO.SYM.01` (t
 **corollary** (`v335`, Lean `FORM.QGEO.BW.01`). `QG.AMB.01` is gap-decoupled from the general
 Euclidean-QG conformal-factor problem (margin `Δ_eff ≈ 1.648 > 0`, `v76`/`v330`).
 
+</details>
+
 ---
 
 ### Historical reduction (how we got here)
+
+<details>
+<summary><b>The full reduction chain and the forward plan</b> (click to expand)</summary>
 
 - **One condition, not many** (`v234`/`v235`): the whole *structural* residual — the metric inclusion
   `G_net`, the carrier `P2` and red-team Target A — is a single condition, *"the seam carries no
@@ -466,6 +551,8 @@ Plus `v380`: the KMS Entire Hessian — the Stelle ghost is exactly a finite See
 truncation; resummation pushes the ghost zero to infinity, so perturbative graviton unitarity holds.
 
 A development timeline of all 466 modules is in `introduction.tex` (and on the website verification page).
+
+</details>
 
 ---
 
