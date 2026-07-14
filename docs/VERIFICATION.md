@@ -32,7 +32,7 @@ TFPT is checked by **three independent engines**. `./verify` exposes each:
 
 ## Full manual reproduction
 
-Dependencies: Python 3 with `mpmath`, `numpy`, `sympy`, `matplotlib` (see
+Dependencies: Python 3 with `mpmath`, `numpy`, `sympy`, `scipy`, `matplotlib` (see
 [`requirements.txt`](../requirements.txt)); optionally a LaTeX distribution (`pdflatex`), the
 Wolfram Engine, and Lean 4 (`elan`/`lake`).
 
