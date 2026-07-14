@@ -3,13 +3,22 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 import Link from "next/link";
-import { Download, LayoutGrid, Table2, FlaskConical, Github, FileText } from "lucide-react";
+import {
+  Download,
+  LayoutGrid,
+  Table2,
+  FlaskConical,
+  Github,
+  FileText,
+  ChevronDown,
+} from "lucide-react";
 import { SectionHeader } from "./SectionHeader";
 import { PredictionCard } from "./PredictionCard";
 import { PredictionMatrix } from "./PredictionMatrix";
 import {
   predictions,
   Prediction,
+  AuditRound,
   CATEGORY_META,
   TEST_SURFACE_GROUPS,
   EXPERIMENTS_AUDIT,
@@ -25,6 +34,57 @@ const AUDIT_COUNTS: { label: string; value: number; tone: string }[] = [
   { label: "data-limited", value: EXPERIMENTS_AUDIT.dataLimited, tone: "text-sky-300" },
   { label: "parked", value: EXPERIMENTS_AUDIT.parked, tone: "text-slate-400" },
 ];
+
+const VERDICT_TONE: Record<AuditRound["verdict"], string> = {
+  "clean null": "text-slate-300 bg-slate-500/15 ring-slate-400/30",
+  "null / data-limited": "text-sky-200 bg-sky-500/15 ring-sky-400/30",
+  consistent: "text-emerald-200 bg-emerald-500/15 ring-emerald-400/30",
+  "data-limited": "text-sky-200 bg-sky-500/15 ring-sky-400/30",
+  "watchdogs armed": "text-amber-200 bg-amber-500/15 ring-amber-400/30",
+  "pattern candidate": "text-violet-200 bg-violet-500/15 ring-violet-400/30",
+  "preregistered kill test": "text-blue-200 bg-blue-500/15 ring-blue-400/30",
+  "forward band": "text-teal-200 bg-teal-500/15 ring-teal-400/30",
+};
+
+/** One dated audit round as a compact, expandable row. */
+function AuditRoundRow({ round }: { round: AuditRound }) {
+  return (
+    <details className="group rounded-xl border border-slate-700/40 bg-slate-950/40 open:bg-slate-950/60">
+      <summary className="flex cursor-pointer select-none flex-wrap items-center gap-x-2.5 gap-y-1 rounded-xl px-3.5 py-2.5 text-left [&::-webkit-details-marker]:hidden">
+        <span className="font-mono text-[10px] font-medium tracking-wide text-slate-500">
+          {round.date}
+        </span>
+        <span className="min-w-0 flex-1 break-words text-xs font-semibold text-slate-200">
+          {round.title}
+        </span>
+        <span
+          className={cn(
+            "inline-flex flex-none items-center rounded-full px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider ring-1",
+            VERDICT_TONE[round.verdict],
+          )}
+        >
+          {round.verdict}
+        </span>
+        <ChevronDown
+          size={14}
+          aria-hidden
+          className="flex-none text-slate-500 transition-transform group-open:rotate-180"
+        />
+      </summary>
+      <div className="border-t border-slate-800/60 px-3.5 py-3">
+        <p className="break-words text-xs leading-relaxed text-slate-300">{round.summary}</p>
+        <details className="mt-2">
+          <summary className="cursor-pointer select-none text-[10px] font-semibold uppercase tracking-widest text-slate-500 transition-colors hover:text-slate-300 [&::-webkit-details-marker]:hidden">
+            Full record ▾
+          </summary>
+          <p className="mt-2 break-words text-[11px] leading-relaxed text-slate-400">
+            {round.detail}
+          </p>
+        </details>
+      </div>
+    </details>
+  );
+}
 
 const READING_GUIDE = "/papers/introduction.pdf";
 
@@ -91,7 +151,10 @@ export function PredictionsSection() {
           </div>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-slate-300">
             <span className="font-semibold text-slate-100">{EXPERIMENTS_AUDIT.headline}</span>{" "}
-            {EXPERIMENTS_AUDIT.finding}
+            {EXPERIMENTS_AUDIT.rows} typed scorecard rows across{" "}
+            {EXPERIMENTS_AUDIT.domains.length} domains — every search preregistered,
+            surrogate-calibrated and status-typed. The dated rounds below expand to the full
+            record.
           </p>
           <div className="mt-4 grid grid-cols-3 gap-2 sm:grid-cols-6">
             {AUDIT_COUNTS.map((c) => (
@@ -106,6 +169,25 @@ export function PredictionsSection() {
               </div>
             ))}
           </div>
+          <div className="mt-3 flex flex-wrap gap-1.5">
+            {EXPERIMENTS_AUDIT.domains.map((d) => (
+              <span
+                key={d}
+                className="rounded-md border border-slate-700/40 bg-slate-950/40 px-2 py-0.5 font-mono text-[10px] text-slate-400"
+              >
+                {d}
+              </span>
+            ))}
+          </div>
+          <div className="mt-4 space-y-1.5">
+            {EXPERIMENTS_AUDIT.rounds.map((r) => (
+              <AuditRoundRow key={`${r.date}-${r.title}`} round={r} />
+            ))}
+          </div>
+          <p className="mt-3 text-[11px] leading-relaxed text-slate-500">
+            <span className="font-semibold text-slate-400">Counting discipline:</span>{" "}
+            {EXPERIMENTS_AUDIT.countingNote}
+          </p>
           <p className="mt-4 text-xs leading-relaxed text-slate-400">
             <span className="font-semibold text-slate-300">Firewall:</span> FRB / EHT / GW are
             search fields for residual boundary-recovery patterns, frontier observables (axion,

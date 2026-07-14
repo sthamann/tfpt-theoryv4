@@ -1,0 +1,45 @@
+{
+  "contract": "QGEO.MULTILOCAL.01 four-interval multilocal modular geometry",
+  "date": "2026-07-14",
+  "firewall": "theory contract, never a scorecard row, never load-bearing; internal consistency, not evidence; QGEO.SYM.01/SEAM.EQUIV.01 stay open",
+  "verdict": "CONTRACT HOLDS (6/6)",
+  "params": {
+    "N": 256,
+    "Q": 64,
+    "P0": 8,
+    "ELL": 48
+  },
+  "checks": [
+    {
+      "check": "M1 BINARY CLOCK [E-num]: the quarter-turn clock on the antiperiodic (RP-admissible) ring satisfies rho^4 = -1 EXACTLY -- the fermionic mu4 clock is the BINARY (double-cover) order-8 lift, the same Z2-lift pattern as 2I over the icosahedral group",
+      "pass": true,
+      "detail": "||rho^4 + 1||_max = 0.00e+00; clock is a signed permutation of the region (0 broken sites)"
+    },
+    {
+      "check": "M2 EXACT SECTOR DECOUPLING [E-num]: the primitive-8th-root character projectors of rho resolve the identity and commute with the reduced covariance to machine precision (Rehren-Tedesco multilocal/diagonal isomorphism at covariance level)",
+      "pass": true,
+      "detail": "sum P_k = 1 to 2.02e-16; idempotent to 1.76e-16; max ||[P_k, C]|| = 2.73e-15"
+    },
+    {
+      "check": "M3 COVER/TWIST IDENTITY [E-num]: each sector kernel C_k(u,u') = sum_m lambda_k^-m c(u'-u+mQ) is the SINGLE-interval kernel on the quarter ring with boundary twist lambda_k; union of sector spectra = full 4-interval spectrum exactly",
+      "pass": true,
+      "detail": "max spectral mismatch = 2.01e-14; twisted kernels hermitian to 1.09e-14"
+    },
+    {
+      "check": "M4 CLOCK INVARIANCE [E-num]: rho C rho^-1 = C at machine precision -- hence [rho, K] = 0 for K = ln((1-C)/C) by functional calculus (numerical residual amplified only by log'(x) at near-pure eigenvalues): omega o rho = omega is MANIFEST at the 4-interval state level",
+      "pass": true,
+      "detail": "||rho C rho^-1 - C||_max = 9.44e-15; ||[rho,K]||/||K|| = 3.07e-05 (log-amplified, exact in exact arithmetic given [rho,C]=0)"
+    },
+    {
+      "check": "M5 NEGATIVE CONTROL [E-num]: displacing ONE interval by one site breaks the clock map and re-couples the character sectors at O(10^-2) (vs machine zero symmetric) -- the invariance is the mu4-symmetric configuration, not an artifact",
+      "pass": true,
+      "detail": "clock broken on 2 sites; max cross-sector coupling displaced = 1.01e-02 vs symmetric = 2.76e-15"
+    },
+    {
+      "check": "M6 CONJUGATE-POINT MIXING [N]: every row of the cross-interval K block PEAKS on the conjugate diagonal s' ~ s (|s'-s| <= 2) at both sizes -- the lattice shadow of the Casini-Huerta multi-interval mixing term (the band ENERGY fraction decreases with size: the mixing keeps long-range conformal tails, honestly reported)",
+      "pass": true,
+      "detail": "ell=24: rows peaked 1.00, band energy 0.863; ell=48: rows peaked 1.00, band energy 0.328"
+    }
+  ],
+  "reading": "The seam circle minus the four mu4 marks IS the n=4 multi-interval geometry of the free fermion -- the continuum class whose modular theory is exactly known (Casini-Huerta mixing term; Longo-Xu multi-interval subfactors; Rehren-Tedesco multilocal diagonal isomorphism; KLM: holomorphic <=> trivial multi-interval inclusion, mu = 1 = det K, the SAME one bit as the keystone). On the exactly solvable ring: the fermionic clock is the BINARY order-8 lift (rho^4 = -1, M1); its primitive-8th-root character projectors decouple the 4-interval state EXACTLY (M2); each sector is a twisted quarter-ring single interval (M3, the cover picture); rho C rho^-1 = C at machine precision so omega o rho = omega is MANIFEST (M4) and configuration-forced (M5); the cross-interval modular coupling sits on the conjugate-point band (M6, the CH mixing shadow). This puts the bedrock QGEO.SYM.01 and the AP2 continuum leg in ONE exactly solvable, citable framework; the raw-seam premise itself stays [O]. No gate closed, no status change, no scorecard row."
+}

@@ -50,8 +50,12 @@ website/
 │   ├── PaperSection.tsx          Single document card with highlights
 │   ├── CarrierVisualization.tsx  3+2 carrier → D₅ spinor + SM packet (Doc 2)
 │   ├── AlphaVisualization.tsx    EM fixed point F_U(1)(α)=0 + no-knobs audit (Doc 1)
-│   ├── PredictionsSection.tsx    The prediction surface + filters
+│   ├── PredictionsSection.tsx    The prediction surface + filters + the empirical-audit rounds (dated, expandable)
 │   ├── PredictionCard.tsx        Single prediction card
+│   ├── SuiteTimeline.tsx         /verification — the suite journey (v1–v481) as live HTML; scripts run in-browser
+│   ├── ResidualChain.tsx         /verification — the structural-residual reduction chain as live HTML
+│   ├── Expandable.tsx            Clamp-long-prose helper (fade + Show more) used by papers/DAG/prediction cards
+│   ├── EcosystemSection.tsx      Adjacent projects (Hylaean · Agentic Commerce) — structure, not physics evidence
 │   ├── DownloadsSection.tsx      All-document downloads + reproducibility
 │   ├── Math.tsx                  KaTeX wrapper
 │   └── SectionHeader.tsx
@@ -61,6 +65,7 @@ website/
 │   ├── glossary.ts        Inline glossary vocabulary
 │   ├── release.ts         PDF version / size / SHA-256 metadata
 │   ├── changelog.ts       GENERATED from ../changelog.tex (do not edit by hand)
+│   ├── katex-macros.ts    Shared KaTeX macros (\gcar, \Nfam, \cthree, …) for every math surface
 │   └── utils.ts
 ├── public/
 │   ├── papers/            All 8 document PDFs (introduction + tfpt_1–4 + horizon + origin + contracts)

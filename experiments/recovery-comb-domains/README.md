@@ -77,6 +77,22 @@ firewall is the same as A1: a GRB plateau is a **central-engine / accretion** re
 spin-down or fallback), **not a horizon recovery** — a comb here would be a universal-DSI coincidence,
 and this NULL is informative precisely because it is **well-powered, not data-limited**.
 
+**A4 follow-up (2026-07-13): the post-hoc "complex-dimension tone" candidate is KILLED on a
+preregistered fresh sample.** A post-hoc discovery scan of the nonlattice fractal-string tones
+(FRACTAL.HUNT.04, `experiments/tfpt-discovery/new_tone_posthoc_scan.py`) had flagged the two
+resonances ω=2.749 and ω=4.911 on the 22 curated A4 GRBs (stacked p≈0.006/0.026, Bonferroni
+global 0.031) — with the free periodogram already warning that the global structure sits at
+ω≈1.6–1.9 (plateau breaks), not at the candidates. The confirmation test was **preregistered**
+(`hypotheses/grb_fresh_restone_v1.yaml`, frozen before any fresh data was fetched): a
+deterministic, disjoint sample of **60 fresh Swift-XRT afterglows** (seed-20260713 shuffle of the
+full UKSSDC `grb.list` minus all 24 discovery targets, ≥30 points each; `scripts/fetch_grb_fresh.py`),
+single analysis pass (`scripts/analyze_grb_fresh.py`), endpoints = the two frozen tones, Bonferroni
+×2. **Result: T1 ω=2.749 p=0.106 (n=27 gated), T2 ω=4.911 p=0.217 (n=55 gated), global p=0.211 →
+verdict NULL; the candidate is dead** (`results/grb_fresh_restone.json`). The free periodogram again
+peaks at ω≈1.6 — the discovery-sample hit was the broad plateau-break structure leaking through the
+matched-band rank, exactly as the control suspected. No retry with modified tones/gates/detrending;
+any variation would be a new preregistration.
+
 **A5 (nuclear transient / AGN-disk TDE optical fade) is the years-long, wide-ln(t) SINGLE recovery
 curve the search is starved for — a clean NULL.** The extreme nuclear transient **J2245+3743**
 (AGN J224554.84+374326.5, z=2.554; brightened >40× in 2018, ~10⁵⁴ erg, favoured as the TDE of a

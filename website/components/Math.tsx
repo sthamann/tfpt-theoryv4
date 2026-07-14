@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import katex from "katex";
 import { Check, Copy } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { TFPT_KATEX_MACROS } from "@/lib/katex-macros";
 
 interface MathProps {
   children: string;
@@ -49,6 +50,7 @@ export function Math({
         strict: "ignore",
         output: "htmlAndMathml",
         trust: false,
+        macros: { ...TFPT_KATEX_MACROS },
       });
     } catch {
       return children;

@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`472` registered scripts · `538` ledger claims · `10` clusters.
+`475` registered scripts · `541` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (45 scripts)
+### `core` — Compiler core & the E₈ glue  (46 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -101,6 +101,8 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v394_coxeter_atoms.py; v409_coxeter_prime2_lemma, v418_cyclotomic_norm_triple, v403_facet_compositum, v222_cm_norm_duality, v409, v418, v403, v316 · cited: origin theory
 - **v422_galois_net_bridge** [E/C] `SEAM.GALOIS.NET.01` — The Galois<->Net bridge: the seam mu4 = Gal(Q(zeta5)) is the SAME cyclic Z/4 as the (E8)_1 simple-current glue -- not a mere order-4 coincidence -- connecting the Galois gearbox of
   - deps: v419_seam_galois_carrier, v286_seam_equivalence_contract, v1_e8_glue, v89_carrier_index_lemma, v403_facet_compositum, v419, v1, v89 · cited: origin theory
+- **v479_kronheimer_quiver_bridge** [E/C/O] `SEAM.KRONHEIMER.01` — SEAM.KRONHEIMER.01: the R3 'combinatorial-to-geometric bridge' of the det K=1 keystone (SEAM.DETK.01/v344) is Kronheimer's theorem (JDG 29 (1989) 665+685) with all finite input dat
+  - deps: v344_detk_synthesis, v345_hypergraph_homotopy, v286_seam_equivalence_contract, v312_hypergraph_substrate, v298_e8_network_attractor, CORR round (experiments), v232, v236 · cited: origin theory
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -184,7 +186,7 @@ _The φ₀-ladder mass formula, the exact lepton coefficients, and the integer-P
 - **v229_lepton_frobenius_algebra** [E/C] `LEP.FROB.01` — a commutative Frobenius algebra. The C₆ shift has charpoly t⁶−1 (spectrum μ₆=μ₃ family ×μ₂ sheet). PMNS extension via Aut(A)+the hex CM point is [C].
   - deps: FLAV.LEPTON.01, ARCH.HEXRES.01, v220_cp_hexagonal_modulus · cited: 2 standard model
 
-### `neutrinos` — Neutrinos & the solar angle  (12 scripts)
+### `neutrinos` — Neutrinos & the solar angle  (13 scripts)
 _The Majorana texture, the dual anchor, and the previously open solar angle from the seam._
 
 - **v9_neutrino_texture** [E] `FLAV.TH12.01` — μτ Majorana texture → sin²θ₁₂ = 1/3 − φ₀/2, θ₂₃ = 45°
@@ -211,6 +213,8 @@ _The Majorana texture, the dual anchor, and the previously open solar angle from
   - deps: v328_theta13_pressure, v84_frozen_registry, v393_corrections_numeric, v268_theta13_carrier_trace, v306_seed_crossval · cited: 2 standard model
 - **v468_dm2_ratio_jarlskog** [E/C/O] `FLAV.DM2RATIO.01` — a parameter-free candidate relation for the (previously unpredicted) splitting ratio; the informal m₂/m₃ ~ πφ₀ heuristic is now −2.44σ and retyped; NO floor Σm_ν = 0.0588 eV consis
   - deps: v270_pmns_jarlskog_assembly, v268_theta13_carrier_trace, v272_nu_mass_scale, v467_thirdgen_mixing_pattern · cited: 2 standard model
+- **v481_seesaw_carrier_ladder** [E/C/O/X] `FLAV.NUSCALE.02` — FLAV.NUSCALE.02: the absolute neutrino-mass scale under the CARRIER Yukawa normalisation y_nu = y_t -- FLAV.NUSCALE.01's two-parameter (y_nu, M_R) trade-off collapses to ONE parame
+  - deps: v272_nu_mass_scale, v249_ps_unification, v248_ps_algebra, v245_spectral_matter_content, v406_pmns_phase_origin, v245, v248, v249 · cited: 2 standard model
 
 ### `gravity` — Gravity, inflation & cosmology  (6 scripts)
 _The R + R² spectral-action shadow, the seam-fixed scalaron, and the cosmological readouts._
@@ -300,7 +304,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v407_dn_pairings_omega** [E/C/O] `FLAV.SELECTOR.CLOSE.01` — FLAV.SELECTOR.CLOSE.01: the R4' residue folds into the tau=omega keystone (v405) -- the three (d,n) selector pairings ARE the tau=omega family-slice atoms. [E] the frame (1,a,sigma
   - deps: v405_seam_equiv_omega, v49_readout_rigidity, v405, v139, v136, v42 · cited: origin theory, 1 architecture e8
 
-### `frontier` — Open gate (G_metric) & the frontier  (160 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (161 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -623,6 +627,8 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v473_entropic_action_bridge, v475_entropic_scalaron_gate, v259_modular_cutoff_kappa, v36, v259, v359, v473, v475 · cited: research contracts
 - **v478_entropic_continuum_legs** [E/C/O] `GRAV.ENTROPIC.LEGS.01` — GRAV.ENTROPIC.LEGS.01: first computable steps on the two remaining legs of the entropic-action bridge. LEG A (AP2 continuum): [N] the compressed critical interval has S(L) = (c/3) 
   - deps: v476_entropic_compression_toy, v477_entropic_scaleflow, v323, v358, v450, v473, v476, v477 · cited: research contracts
+- **v480_multilocal_four_interval** [E/C/O] `QGEO.MULTILOCAL.01` — QGEO.MULTILOCAL.01: the four mu4 marks make the seam circle a FOUR-INTERVAL free-fermion geometry -- the class whose multi-interval modular theory is exactly known (Casini-Huerta m
+  - deps: v181_clock_is_conformal_symmetry, v286_seam_equivalence_contract, v398_seam_state_rigidity, v476_entropic_compression_toy, v478_entropic_continuum_legs, v216, v323, v358 · cited: research contracts
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (182 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -1009,15 +1015,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×63, `v336`×33, `QGEO.SYM.01`×31, `QG.AMB.01`×18, `v76`×18, `v56`×18, `v216`×18, `E8.GLU.01`×16, `REG.FREEZE.01`×15, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v367`×14, `v312`×14, `v54`×13, `v60`×13
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×65, `v336`×33, `QGEO.SYM.01`×32, `v216`×19, `QG.AMB.01`×18, `v76`×18, `v56`×18, `E8.GLU.01`×16, `v312`×15, `REG.FREEZE.01`×15, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v323`×14, `v367`×14, `v54`×13
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v467_thirdgen_mixing_pattern** — `FLAV.THIRDGEN.PATTERN.01`
-- **v468_dm2_ratio_jarlskog** — `FLAV.DM2RATIO.01`
-- **v469_seam_crossedproduct_route** — `SEAM.EQUIV.CROSSEDPRODUCT.01`
 - **v470_alpha_inflow_level** — `ALPHA.QUILLEN.INFLOW.01`
 - **v471_seam_horizon_replica** — `SEAM.EHMODEL.04`
 - **v472_quillen_detline_moduli** — `ALPHA.QUILLEN.DETLINE.01`
@@ -1027,4 +1030,7 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v476_entropic_compression_toy** — `GRAV.ENTROPIC.COMPRESS.01`
 - **v477_entropic_scaleflow** — `GRAV.ENTROPIC.SCALEFLOW.01`
 - **v478_entropic_continuum_legs** — `GRAV.ENTROPIC.LEGS.01`
+- **v479_kronheimer_quiver_bridge** — `SEAM.KRONHEIMER.01`
+- **v480_multilocal_four_interval** — `QGEO.MULTILOCAL.01`
+- **v481_seesaw_carrier_ladder** — `FLAV.NUSCALE.02`
 

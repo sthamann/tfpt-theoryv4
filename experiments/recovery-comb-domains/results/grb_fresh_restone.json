@@ -1,0 +1,47 @@
+{
+  "n_curves": 60,
+  "endpoints": {
+    "T1_res2.749": {
+      "omega": 2.749026,
+      "n_used": 27,
+      "gain": 0.2951,
+      "p_value": 0.1055,
+      "comb_detected": false,
+      "robustness_ps": [
+        0.1355,
+        0.0927,
+        0.1657,
+        0.0975,
+        0.1295
+      ],
+      "median_robust_p": 0.1295
+    },
+    "T2_res4.911": {
+      "omega": 4.911247,
+      "n_used": 55,
+      "gain": 0.2559,
+      "p_value": 0.2167,
+      "comb_detected": false,
+      "robustness_ps": [
+        0.2007,
+        0.1977,
+        0.1865,
+        0.1825,
+        0.2197
+      ],
+      "median_robust_p": 0.1977
+    }
+  },
+  "p_global_bonferroni2": 0.211,
+  "verdict": "null",
+  "omega1_reference": {
+    "omega": 2.582707,
+    "n_used": 18,
+    "gain": 0.2501,
+    "p_value": 0.1272,
+    "comb_detected": false
+  },
+  "free_periodogram_best_omega": 1.6,
+  "free_periodogram_gain_best": 21.294,
+  "prereg": "hypotheses/grb_fresh_restone_v1.yaml"
+}

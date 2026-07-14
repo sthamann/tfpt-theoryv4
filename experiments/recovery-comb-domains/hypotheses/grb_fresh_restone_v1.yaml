@@ -1,0 +1,86 @@
+# Preregistration: fresh-sample confirmation test of the two POST-HOC GRB
+# "complex-dimension tone" candidates (FRACTAL.HUNT.04, 2026-07-13).
+#
+# THIS FILE IS FROZEN BEFORE ANY FRESH DATA IS FETCHED. The discovery pass
+# (experiments/tfpt-discovery/new_tone_posthoc_scan.py, results JSON
+# new_tone_posthoc_results.json) found, POST HOC, on the 22 curated A4 GRB
+# afterglows:
+#   res_2.749  stacked p = 0.006..0.021 over seeds (Bonferroni global 0.031)
+#   res_4.911  stacked p = 0.026..0.054 over seeds
+# with an honest control already flagging: the free stacked periodogram peaks
+# at omega ~ 1.6-1.9 (broad plateau-break structure), NOT at the candidates.
+# This preregistration freezes the confirmation test on a DISJOINT sample.
+#
+# FIREWALL (unchanged from channel A4): a GRB X-ray plateau is a central-
+# engine / accretion relaxation, legitimacy "surface", NOT a horizon
+# recovery. Even a replicated hit is a universal-DSI shape result and NEVER
+# a TFPT confirmation. A null KILLS the post-hoc candidate -- that is the
+# informative outcome.
+
+version: 1
+frozen_on: 2026-07-13
+discovery_reference: experiments/tfpt-discovery/new_tone_posthoc_results.json
+
+kernel:
+  # the two-ratio transfer string 1 - e^(-a s) - e^(-b s), a = 6 ln(3/2),
+  # b = 6 ln 3 (axioms-only). Primary endpoints = the two flagged imaginary
+  # parts of its complex dimensions (Newton roots, frozen to 6 decimals; the
+  # analysis script re-derives them from a,b and asserts |delta| < 1e-4).
+  tone_T1: 2.749026     # leading resonance (closest to Re s = D = 1/6 locally)
+  tone_T2: 4.911247     # short-period resonance (ln-period 1.28)
+  reference_tone: 2.582707   # omega_1 = 2pi/(6 ln(3/2)); reported, NOT an endpoint
+  no_refitted_frequencies: true
+
+sample:
+  catalog: https://www.swift.ac.uk/xrt_curves/grb.list        # name <TAB> targetID
+  data_source: https://www.swift.ac.uk/xrt_curves/{targetID:08d}/flux.qdp
+  exclusion:
+    # the ENTIRE discovery pool is excluded by target id (all 24 curated A4
+    # targets, whether or not their fetch succeeded) and by any GRB name
+    # already present in data/grb/.
+    discovery_target_ids: [221755, 214805, 255443, 239899, 373570, 425151,
+                           554620, 306757, 232683, 148522, 211957, 156467,
+                           445414, 355083, 331093, 173780, 114753, 310613,
+                           178750, 419797, 518626, 539866, 433065, 451901]
+  selection_rule: >
+    Deterministic: shuffle the post-exclusion catalog with
+    numpy.random.default_rng(20260713).permutation, fetch in that order
+    (polite 1 s pause) until 60 light curves with >= 30 positive-flux points
+    each are stored in data/grb_fresh/, or 220 fetch attempts are exhausted.
+    No curve inspected before the full sample is fixed; no curve may be
+    dropped after inspection.
+  n_target_curves: 60
+  min_points_per_curve: 30
+  max_fetch_attempts: 220
+  rng_seed: 20260713
+
+test:
+  observable: "y = ln(flux) vs t_s (T0-relative); detector detrends with the
+    frozen degree-2 poly in ln t"
+  statistic: tfpt_combdomains.quake._stacked_at (frozen stacked permutation
+    comb test; per-omega gate >= 2.8 periods of that omega in ln t + Nyquist)
+  primary_seed: 20260713
+  robustness_seeds: [1, 7, 41, 99, 123]
+  endpoints:
+    - {name: T1, omega: 2.749026}
+    - {name: T2, omega: 4.911247}
+  look_elsewhere: "Bonferroni over the 2 endpoints: p_global = min(1, 2*min(p_T1, p_T2))"
+  secondary_reported_not_endpoints:
+    - omega_1 reference p-value
+    - free stacked periodogram global peak (control for broad-band structure)
+    - per-curve p lists, n_used per tone
+
+decision_rule:
+  replicate: "p_global < 0.05 AND both tones' median robustness-seed p < 0.10
+    -> verdict 'escalate_replicated': next step is a THIRD independent sample
+    + methods review; still never a claim (surface firewall)."
+  kill: "p_global >= 0.05 -> verdict 'null': the post-hoc GRB candidate is
+    dead; document in README and next.txt. No retry with modified tones,
+    gates, detrending or sample -- any such variation is a NEW preregistration."
+
+rules:
+  no_peeking_before_sample_fixed: true
+  no_post_hoc_sample_edits: true
+  single_analysis_pass: true
+  scorecard: "no scorecard row from this test alone; verdict goes to README +
+    next.txt only"

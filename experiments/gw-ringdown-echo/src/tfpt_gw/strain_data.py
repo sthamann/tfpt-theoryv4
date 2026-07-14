@@ -19,7 +19,7 @@ from pathlib import Path
 
 import h5py
 import numpy as np
-from scipy.signal import welch
+from scipy.signal import butter, sosfiltfilt, welch
 
 GMSUN_OVER_C3 = 4.925490947e-6   # s per solar mass (geometric time unit)
 CATALOG_CSV = Path(__file__).resolve().parents[2] / "data" / "gwtc_events.csv"
@@ -108,13 +108,15 @@ def whiten(x: np.ndarray, dt: float, seg_s: float = 4.0) -> np.ndarray:
 
 
 def whitening_filter_gated(x: np.ndarray, dt: float, gate_start: int, gate_end: int,
-                           seg_s: float = 4.0) -> tuple[np.ndarray, float]:
+                           seg_s: float = 4.0, average: str = "mean") -> tuple[np.ndarray, float]:
     """OFF-SOURCE whitening filter: Welch PSD estimated EXCLUDING the gated
     (event) stretch, so the filter cannot adapt to -- and ring after -- the
     loud transient (signature-revision hardening, 2026-07-02).
 
     The pre-gate and post-gate stretches are Welch-averaged weighted by their
-    lengths; the robust-std scale is computed off-gate as well."""
+    lengths; the robust-std scale is computed off-gate as well. ``average`` selects the
+    Welch periodogram averaging: ``"mean"`` (frozen default) or ``"median"`` (robust to
+    non-stationary lines/glitches -- required for O4 data, e.g. GW250114)."""
     fs = 1.0 / dt
     nperseg = int(seg_s * fs)
     stretches = [seg for seg in (x[:max(0, gate_start)], x[gate_end:])
@@ -125,7 +127,7 @@ def whitening_filter_gated(x: np.ndarray, dt: float, gate_start: int, gate_end: 
     acc = np.zeros_like(freqs)
     w_tot = 0.0
     for seg in stretches:
-        f_psd, psd = welch(seg, fs=fs, nperseg=nperseg, window="hann")
+        f_psd, psd = welch(seg, fs=fs, nperseg=nperseg, window="hann", average=average)
         acc += len(seg) * np.interp(freqs, f_psd, psd, left=psd[0], right=psd[-1])
         w_tot += len(seg)
     psd_i = acc / w_tot
@@ -134,6 +136,35 @@ def whitening_filter_gated(x: np.ndarray, dt: float, gate_start: int, gate_end: 
     off = np.concatenate([white[:max(0, gate_start)], white[gate_end:]])
     scale = float(np.median(np.abs(off)) / 0.6745) or 1.0
     return psd_i, scale
+
+
+def highpass(x: np.ndarray, dt: float, fc: float = 20.0, order: int = 4) -> np.ndarray:
+    """Zero-phase Butterworth high-pass. O4 4 kHz strain carries enormous sub-20 Hz seismic
+    power that a single-Welch whitening mishandles (heavy-tailed whitened output); high-passing
+    first removes it. O1 data (e.g. GW150914) was already cleaner, but the high-pass is
+    harmless there (the ringdown is at ~250 Hz)."""
+    sos = butter(order, fc, "highpass", fs=1.0 / dt, output="sos")
+    return sosfiltfilt(sos, x)
+
+
+def align_ringdown(white: np.ndarray, merger: int, dt: float,
+                   back_ms: float = 2.0, fwd_ms: float = 50.0,
+                   smooth_ms: float = 1.0) -> int:
+    """Refine the merger index to the whitened ringdown-envelope peak in a small forward
+    window [merger-back_ms, merger+fwd_ms].
+
+    The catalog coalescence GPS lands a few M before the post-peak ringdown, and the
+    whitening filter adds a small group delay, so the QNM fit at the *nominal* merger
+    systematically starts ~15-40 ms early (verified across GW150914/GW200129/GW190521),
+    under-measuring A220. Aligning to the smoothed |whitened| envelope peak (data-driven,
+    template-independent) fixes this without touching the frozen kernel."""
+    lo = max(0, merger - int(back_ms * 1e-3 / dt))
+    hi = min(len(white), merger + int(fwd_ms * 1e-3 / dt))
+    env = np.abs(white[lo:hi])
+    k = max(1, int(smooth_ms * 1e-3 / dt))
+    if k > 1:
+        env = np.convolve(env, np.ones(k) / k, mode="same")
+    return lo + int(np.argmax(env))
 
 
 def damped_sinusoid(n: int, start: int, f0: float, tau: float, dt: float,

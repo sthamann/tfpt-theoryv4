@@ -60,6 +60,123 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-07-14 (website + figure refresh --- the \texttt{/verification} journey views become \emph{live} HTML (the stale timeline/residual-chain images replaced by interactive components wired to the in-browser reproducer), the prediction surface's empirical-audit wall of text restructured into dated, expandable rounds, and the generated timeline/residual-chain figures extended to the current suite --- \emph{presentation only, no content or marker moves})}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{Website \texttt{/verification}: live journey views.} The static
+\texttt{script\_timeline.png} and \texttt{residual\_chain.png} images (stale at the
+\texttt{v303}--\texttt{v407} figure state, with alt text and captions still describing the
+old eleven-phase/\texttt{v237} state) are replaced by two interactive components,
+\texttt{SuiteTimeline.tsx} (17 phases, \texttt{v1}--\texttt{v481}) and
+\texttt{ResidualChain.tsx} (the reduction chain through the certification round to the
+bedrock): every phase/step lists representative \texttt{vN} scripts that run live in the
+browser via the existing Pyodide reproducer, exactly like the dependency graph. Stale counts
+fixed (``$\sim$295-script journey'', ``260 scripts'' $\to$ the generated suite total). The
+dependency graph itself was verified current (\texttt{v479}--\texttt{v481} present; all 288
+referenced scripts exist in the registry and the website mirror).
+\item \textbf{Prediction surface: the empirical-audit narrative restructured.} The single
+$\sim$13\,000-character audit paragraph in \texttt{lib/predictions.ts} is split into twelve
+dated, verdict-badged rounds (\texttt{AuditRound}: date, title, verdict, two-sentence summary,
+full unabridged record on expand) plus a domain-chip row and the anti-double-counting note ---
+same content, readable surface. Long-token overflow fixed (\texttt{break-words}) in the
+dependency-graph detail panel and the universal-gap-lab residual cards; the over-long
+\texttt{ALPHA.QUILLEN} residual note tightened to its current state
+(\texttt{v470}/\texttt{v472}, residual unchanged).
+\item \textbf{Generated figures + captions synced.} \texttt{make\_figures.py}: the script
+timeline gains the \texttt{v408}--\texttt{v481} certification-round phase (title now
+$\sim$475 scripts) and the residual chain gains the \texttt{v458}--\texttt{v480}
+certification step (Kronheimer \texttt{v479}, four-interval \texttt{v480}, crossed-product
+\texttt{v469}) with sub-text wrapping fixed; figures regenerated (PDF + website PNG). The
+stale figure captions updated: \texttt{introduction} (timeline caption now spans the full
+arc), \texttt{tfpt\_research\_contracts} (residual-chain caption now states the
+\texttt{SEAM.EQUIV.01} bedrock and certification round; QFT-skeleton caption now names the
+one \mO\ residual instead of the outdated ``two open items''). No numbers, statuses or
+claims change anywhere.
+\item \textbf{KaTeX macro fix (broken formula rendering).} Formulas copied from the document
+set that use the shared TeX macros (\texttt{\textbackslash gcar},
+\texttt{\textbackslash Nfam}, \texttt{\textbackslash cthree}, \dots) rendered as red KaTeX
+errors on the site (e.g.\ the $\varphi_0^{\mathrm{tree}}$ icosahedral-combinatorics formula
+on the Origin-Theory page). A shared macro map (\texttt{lib/katex-macros.ts}, mirroring the
+\texttt{changelog.tex} preamble) is now passed to every KaTeX render; an automated scan of
+all 19 site routes finds zero \texttt{katex-error} nodes.
+\item \textbf{Readability pass (text walls clamped, content unchanged).} A reusable
+\texttt{Expandable} component clamps long mirror prose with a fade $+$ ``Show more'' toggle
+--- applied to the paper-section bodies and front-box bullet lists
+(\texttt{PaperSection.tsx}, the home set pages and \texttt{/papers/[slug]}), the
+dependency-graph node summaries and the prediction-card descriptions. Nothing is deleted;
+the full text expands in place.
+\item \textbf{Hylaean ecosystem card corrected.} The \texttt{hylaean.ai} card spoke of
+``Field AI'' with structure tags that did not describe the project. It now speaks
+consistently of \emph{Hylaean} and is grounded in the project documentation
+(\texttt{\_documentation/core-physics/big-picture.md}) and the site's own status log: one
+cognitive substrate behaving like a physical material, knowledge $=$ attractor valleys,
+question $=$ boundary condition, answers committed only on physical landing, capability
+claims gate-checked against a machine-checked claim registry (honest negatives published) ---
+borrowing TFPT's structural discipline, not its physics predictions. The Agentic-Commerce
+card reference updated accordingly.
+\end{itemize}
+
+\subsection*{2026-07-14 (\texttt{v479}--\texttt{v481} --- the bird's-eye ``overlooked tools'' round: R3's graph$\to$geometry bridge discharged to Kronheimer 1989; the four $\mu_4$ marks realised as the exactly solvable \emph{four-interval} multilocal modular geometry with $\omega\circ\rho=\omega$ manifest; and the absolute $\nu$-scale collapsed to a one-parameter, PS-window-bracketed candidate under the carrier normalisation $y_\nu{=}y_t$ --- \emph{no gate closes, no marker moves})}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v479\_kronheimer\_quiver\_bridge.py} (\texttt{SEAM.KRONHEIMER.01}).} The R3 residual
+of the $\det K{=}1$ keystone (\texttt{v344}: ``the rewrite attractor graph IS the du~Val singularity'') is
+an ESTABLISHED THEOREM --- Kronheimer's ALE hyper-K\"ahler quotient construction $+$ Torelli classification
+(J.~Diff.~Geom.~29 (1989) 665 and 685) --- with all finite input data already compiler outputs, machine-checked
+\mE: the Kac marks $\{1,2,2,3,3,4,4,5,6\}$ are the null vector of the affine-$E_8$ Cartan matrix AND the
+Perron vector $A\delta{=}2\delta$ of the rewrite attractor (\texttt{v312}); the hyper-K\"ahler quotient
+dimension count lands exactly on $4$ (the $\mathbb{C}^2/\Gamma$ geometry;
+$\sum_{\mathrm{edges}}d_id_j{=}\sum d_i^2{=}120$ forced by the null identity); the gauge datum is
+$|2I|{=}120{=}|\mu_4|h(E_8)$, $h(E_8){=}30{=}2\cdot3\cdot5$; the resolution carries the unimodular $-E_8$
+form ($\det{=}1$, SNF $=$ identity --- the Poincar\'e link) with $3\cdot8{=}24$ deformation parameters. \mC\
+the theorems are cited, not re-proved (import class of NPW26/MMST/AGT); \mO\ the residual premise
+\emph{transforms} to ``the raw seam supplies ALE hyper-K\"ahler data asymptotic to the $(2,3,5)$ cone'' ---
+the same single arrow as \texttt{SEAM.EQUIV.01} (\texttt{v346} L2). Integrated in \texttt{origin\_theory}
+(R3 keybox $+$ new Kronheimer paragraph) and \texttt{tfpt\_research\_contracts} (Kummer/du~Val); ledger rows
+\texttt{SEAM.KRONHEIMER.01} $+$ \texttt{SEAM.DETK.01} update note; Wolfram mirror added to the
+extension file ($+2$ exact checks, counted with the next verified engine run --- the local engine is
+currently unactivated; the identical statements are sympy-exact in \texttt{v479}). LEAN: the finite
+input data are kernel-checked in \texttt{TfptCarrier/KronheimerMarks.lean} (marks $=$ null/Perron
+vector over $\Z$, $\sum\delta_i^2{=}120{=}4\cdot30$, $30{=}2\cdot3\cdot5$, dimension count $=4$;
+lake build clean, \texttt{\#print axioms} $=$ the three standard kernel axioms only).
+\item \textbf{\texttt{v480\_multilocal\_four\_interval.py} (\texttt{QGEO.MULTILOCAL.01}).} The seam circle
+minus its four marks IS the $n{=}4$ multi-interval region of a chiral free fermion --- the class whose
+multi-interval modular theory is exactly known (Casini--Huerta mixing term; Longo--Xu; Rehren--Tedesco
+multilocal fermions; KLM: holomorphic $\Leftrightarrow$ trivial multi-interval inclusion, $\mu{=}1$ ---
+the same one bit as $\det K{=}1$); until now the suite used only the single-ball CHM boost (\texttt{v358}).
+On the exactly solvable antiperiodic critical ring: \mE\ the quarter-turn clock is a signed permutation
+with $\rho^4{=}{-}1$ EXACTLY (the fermionic $\mu_4$ clock is the order-$8$ double-cover lift --- the same
+$\Z_2$-lift pattern as $2I$ over $I$); \mE\ its primitive-$8$th-root character projectors decouple the
+$4$-interval covariance at $10^{-15}$, each sector a single-interval quarter-ring kernel with boundary
+twist ($10^{-14}$ spectra); \mE\ $\rho C\rho^{-1}{=}C$ at $10^{-14}$, so $\omega\circ\rho{=}\omega$ holds
+\emph{manifestly} at the $4$-interval state level, and a one-site displacement re-couples the sectors at
+$10^{-2}$ (negative control); \mE\ the cross-interval modular coupling peaks on the conjugate-point
+diagonal (the Casini--Huerta mixing shadow). \mC\ continuum theory cited; \mO\ the raw-seam premise
+(\texttt{QGEO.SYM.01}/\texttt{SEAM.EQUIV.01}) unchanged. Integrated in \texttt{tfpt\_research\_contracts}
+(marks keybox $+$ rigidity contract $+$ v478 leg A), \texttt{origin\_theory} (BW paragraph),
+\texttt{tfpt\_4\_frontier} (v358 companion note); Python-only by nature.
+\item \textbf{\texttt{v481\_seesaw\_carrier\_ladder.py} (\texttt{FLAV.NUSCALE.02}, CANDIDATE class, genre
+\texttt{v467}/\texttt{v468}).} \texttt{FLAV.NUSCALE.01}'s $y_\nu{=}1$ probe was not the carrier
+normalisation: one $SO(10)$ $\mathbf{16}$ per family $+$ the minimal Yukawa sector ($\mathbf{10}_H$ / PS
+$(1,2,2)$) forces $y_\nu{=}y_t$ at the matching scale (named premise). With explicit $1$-loop RG
+(gauge/$y_t$/$\lambda$ up; ADKLR Weinberg-operator running down, hep-ph/0108005) the $(y_\nu,M_R)$
+trade-off collapses to $M_R$ alone: the observed $m_3{=}0.0503$ eV demands $M_R{=}9.3{\times}10^{13}$ GeV
+--- INSIDE the PS window $[4.2{\times}10^{13},2.4{\times}10^{15}]$ (\texttt{v249}) at
+$\log_{\cthree}(\Mbar/M_R){=}3.15$ (the $y_\nu{=}1$ inversion gives the structureless $2.58$). \mX\ honesty
+gate: the integer rung $M_R{=}\cthree^3\Mbar$ predicts $m_3{=}0.030$ eV --- $40\%$ low at $1$-loop
+($\kappa$ run-down $0.794$) --- the ladder pin is DECLINED per \texttt{v354}/\texttt{v355}; the decision
+computation is named ($2$-loop SM $+$ explicit PS thresholds). What survives: a \emph{one}-parameter,
+window-bracketed \mO\ candidate with the falsifiable band $m_3\in[0.002,0.115]$ eV and the NO floor
+$\Sigma m_\nu{=}0.059$ eV; frozen record untouched. Integrated in \texttt{tfpt\_2\_standard\_model} (new
+paragraph after \texttt{v272}), \texttt{introduction} status card (third named candidate),
+\texttt{tfpt\_5\_redteam}; ledger rows \texttt{FLAV.NUSCALE.02} $+$ \texttt{FLAV.NUSCALE.01} update note;
+Python-only by nature.
+\item \emph{Honest negative (experiments-only, no promotion):} the Donnelly/Atiyah--Bott equivariant
+heat-kernel route for the $\phi_0$ puncture target (\texttt{HYP.PHI0.PUNCTURE.01}) types the KIND of term
+(order-$4$ equivariant contact datum; the exact weights $\sum_{k=1}^{n-1}\tfrac1{4\sin^2(\pi k/n)}
+{=}\tfrac{n^2-1}{12}$ verified) but does NOT force the value $48\cthree^4$ (pure rationals vs $\pi^{-4}$)
+--- recorded in \texttt{experiments/theory-contracts/phi0\_donnelly\_equivariant\_probe.py}; the target
+stays \mO.
+\end{itemize}
+
 \subsection*{2026-07-13 (\texttt{v478} --- first computable steps on the two remaining legs of the entropic-action bridge: the state-side modular data flows to the CHM/Bisognano--Wichmann geometric form (Calabrese--Cardy $c_{\mathrm{est}}{\to}1$, CHM parabola, even bands exactly zero) --- the bridge's modular side meets TFPT's Einstein-derivation input; and the measure condition reduced to one exact KMS time $t_0=\ln\tfrac{72}{17}+9\ln(8\pi)=30.461$ with the $h(E_8){=}30$ near-miss explicitly declined; both legs stay \mO, \emph{no status moves})}
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{\texttt{v478\_entropic\_continuum\_legs.py} (\texttt{GRAV.ENTROPIC.LEGS.01}).}

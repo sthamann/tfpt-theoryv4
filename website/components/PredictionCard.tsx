@@ -12,6 +12,7 @@ import {
   Github,
 } from "lucide-react";
 import { Math as Tex } from "./Math";
+import { Expandable } from "./Expandable";
 import {
   Prediction,
   PredictionExperiment,
@@ -99,9 +100,11 @@ export function PredictionCard({
         </div>
       </div>
 
-      <p className="px-5 text-sm leading-relaxed text-slate-300">
-        {prediction.description}
-      </p>
+      <Expandable collapsedHeight={130} className="px-5">
+        <p className="break-words text-sm leading-relaxed text-slate-300">
+          {prediction.description}
+        </p>
+      </Expandable>
 
       <div className="mt-4 grid grid-cols-1 gap-px bg-slate-800/60">
         <div className="flex items-start gap-2 bg-slate-950/40 px-5 py-3">

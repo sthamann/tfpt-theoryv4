@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import Link from "next/link";
 import { Download, FileText } from "lucide-react";
 import { Math } from "./Math";
+import { Expandable } from "./Expandable";
 import { Paper, STATUS_META, paperLabel } from "@/lib/papers";
 import { cn } from "@/lib/utils";
 import { trackPdfInteraction } from "@/lib/track";
@@ -226,7 +227,11 @@ export function PaperSection({ paper }: { paper: Paper }) {
                 <h3 className="font-serif text-lg font-semibold text-slate-50">
                   {s.title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-slate-300">{s.body}</p>
+                <Expandable collapsedHeight={150} className="mt-3">
+                  <p className="break-words text-sm leading-relaxed text-slate-300">
+                    {s.body}
+                  </p>
+                </Expandable>
                 {s.formulas && s.formulas.length > 0 && (
                   <div className="mt-4 space-y-2 border-t border-slate-800/60 pt-4">
                     {s.formulas.map((f, i) => (
@@ -259,14 +264,16 @@ function FrontBox({
       <div className="text-[10px] font-semibold uppercase tracking-widest text-slate-300/90">
         {title}
       </div>
-      <ul className="mt-2 space-y-1.5 text-xs leading-relaxed text-slate-300">
-        {items.map((it, i) => (
-          <li key={i} className="flex gap-2">
-            <span className="mt-0.5 text-slate-500">›</span>
-            <span>{it}</span>
-          </li>
-        ))}
-      </ul>
+      <Expandable collapsedHeight={170} className="mt-2">
+        <ul className="space-y-1.5 text-xs leading-relaxed text-slate-300">
+          {items.map((it, i) => (
+            <li key={i} className="flex gap-2">
+              <span className="mt-0.5 text-slate-500">›</span>
+              <span className="min-w-0 break-words">{it}</span>
+            </li>
+          ))}
+        </ul>
+      </Expandable>
     </div>
   );
 }

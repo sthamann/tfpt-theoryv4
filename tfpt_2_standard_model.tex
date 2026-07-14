@@ -1460,7 +1460,9 @@ $(E_8)_1$ character $\chi_{E_8}$ vanishes), so the phase is a keystone consequen
 $\mu_6$ input. With the angles fixed (\vref{v9}/\vref{v268}), the derived $J_{\mathrm{PMNS}}=-0.0297$
 (\vref{v270}) and the absolute scale reduced to one seesaw ratio $=v_{\mathrm{geo}}$-class unit (\vref{v272}),
 the PMNS dynamics carry \emph{zero free flavor dials beyond $v_{\mathrm{geo}}$}; the residual is the seesaw
-operator realisation ($M_R$, \vref{v184}) and the $\Sigma m_\nu$ ordering kill test. \mE/\mC
+operator realisation ($M_R$, \vref{v184}) and the $\Sigma m_\nu$ ordering kill test --- under the carrier
+normalisation $y_\nu{=}y_t$ that residual is a \emph{one}-parameter, PS-window-bracketed candidate
+(\vref{v481}), no longer a two-dial trade-off. \mE/\mC
 \par\smallskip\noindent\textbf{The reactor-angle exponent is the carrier trace (\veri{v268\_theta13\_carrier\_trace.py}).}
 The reactor angle is a \emph{separate} channel from the seesaw $M_\nu$: its value $\sin^2\theta_{13}=\phiz
 e^{-5/6}=0.0231$ (\vref{v16}) now has its \emph{exponent} closed exactly --- $\gamma=5/6=\mathrm{tr}_E Y^2$,
@@ -1547,6 +1549,22 @@ $y_\nu\in[0.26,2.0]$ --- $O(1)$, no tuning, so the observed scale is consistent 
 \mO\ the $y_\nu{=}1$ value $M_R=v_{\mathrm{EW}}^2/m_3=6.1{\times}10^{14}$ GeV is \emph{not} a clean $\Mpl$ power
 ($\log_{c_3}(M_R/\Mpl)=2.57$), so the absolute $\Sigma m_\nu$ stays one open UV input (\vref{v184}). \mX\ the
 normal-ordering floor $\Sigma m_\nu=0.0586$ eV is the near-term cosmological kill test (\texttt{FLAV.NUSCALE.01}).
+\par\smallskip\noindent\textbf{The carrier normalisation: one parameter
+(\veri{v481\_seesaw\_carrier\_ladder.py}).} The $y_\nu{=}1$ probe above is \emph{not} the carrier normalisation:
+the carrier structure itself (one $SO(10)$ $\mathbf{16}$ per family, the PS algebra \vref{v245}/\vref{v248})
+with the \emph{minimal} Yukawa sector ($\mathbf{10}_H$ / PS $(1,2,2)$) forces $y_\nu=y_t$ at the matching scale
+--- a \emph{named} premise (conjectured, ledger-typed), not a proof. With that normalisation and explicit $1$-loop RG
+(gauge/$y_t$/$\lambda$ up; the ADKLR Weinberg-operator running down) the $(y_\nu,M_R)$ trade-off collapses to
+$M_R$ \emph{alone}: the observed $m_3{=}0.0503$ eV demands $M_R=9.3{\times}10^{13}$ GeV --- \emph{inside} the
+compiler's own PS window $[4.2{\times}10^{13},2.4{\times}10^{15}]$ (\vref{v249}), at
+$\log_{c_3}(\Mpl/M_R)=3.15$ (versus the structureless $2.58$ of the $y_\nu{=}1$ probe). \mX\ honesty gate: the
+integer rung $M_R=c_3^3\Mpl=1.53{\times}10^{14}$ GeV predicts $m_3=0.030$ eV --- $40\%$ low at $1$-loop
+($\kappa$ run-down factor $0.794$) --- so the ladder pin is \emph{declined} per the anti-numerology rule
+(\vref{v354}/\vref{v355}); the named decision computation is $2$-loop SM running $+$ explicit PS threshold
+matching. What survives regardless: over the PS window the carrier-normalised seesaw spans
+$m_3\in[0.002,0.115]$ eV, bracketing the observation, and DESI cuts the window from below --- a
+\emph{one}-parameter, window-bracketed \mO\ candidate (\texttt{FLAV.NUSCALE.02}, genre
+\vref{v467}/\vref{v468}); the frozen record and the \texttt{FLAV.NUSCALE.01} kill test are untouched.
 
 % =====================================================================
 \section{How the legacy layers simplify (bridge map)}

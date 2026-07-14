@@ -16,6 +16,9 @@ data/magnetar/raw/
 # A4: the small NORMALISED Swift-XRT GRB afterglow light curves are committed too (derived
 # products from the public UKSSDC qdp; fetch-grb regenerates them).
 !data/grb/
+# grb_fresh_restone_v1: the preregistered FRESH confirmation sample (disjoint from data/grb/;
+# scripts/fetch_grb_fresh.py regenerates it deterministically, seed 20260713).
+!data/grb_fresh/
 # A5: the small NORMALISED ENT ZTF light curve(s) are committed too (derived from the public
 # IRSA ZTF light-curve service; fetch-ent regenerates them).
 !data/ent/

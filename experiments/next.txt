@@ -1,3 +1,348 @@
+## 2026-07-14 — CORR.01: TFPT-Korrespondenzprinzip (Raumzeit↔Schwarzes-Loch-Phasengrenze) präregistriert [C]
+
+Follow-up auf die Bianconi-„Gravity from entropy"-Runde (User-Frage: hat TFPT
+eine eigene Version des String/Schwarzes-Loch-Correspondence-Principle —
+kleine Informationsdichte ⇒ Raumzeit, über einem kritischen Quotienten ⇒
+Schwarzes Loch, Horizont = Phasenübergang in der Info-Struktur?). Ergebnis der
+Prüfung + Umsetzung als eigenständiges Suchziel:
+
+**Neues Experiment `experiments/tfpt-correspondence/` (structural/theory-contract,
+OUT OF SCORECARD):**
+- Frozen Prereg `hypotheses/correspondence_v1.yaml` (frozen 2026-07-14): der Seam
+  als EIN Zustand mit zwei Kanal-Lesarten (Geometrie-Kanal = emergente Raumzeit
+  v358/v359; Rand/Info-Kanal = Compiler-QECC v221/v54). Zwei dimensionslose
+  Ordnungsparameter: (A) Bekenstein-Sättigung `q_Bek=4c₃·S/(E·R)`, kritischer
+  Wert 1 am Horizont; (B) SdS-Kompaktheits-Quotient `Q_geom∈[3/8,1/2]`.
+- Entscheidender Test CORR.H1 (Atom-Lock): die vier Phasengrenz-Konstanten
+  `{1/4=1/|μ4|, 1/2=|Z2|/|μ4|, 3/8=p2(a)/e1(a)², (2/3)⁶=(|Z2|/N_fam)^(2N_fam)}`
+  + Koeffizient `4c₃=1/(2π)` sind ALLE exakte Atom-Rationale → die Korrespondenz
+  braucht KEINE freie Zahl, übersteht den Numerologie-Test. CORR.H2 `q_Bek=1`
+  exakt für jedes M (S_BH=A/4). CORR.H3 Fenster monoton, Endpunkte = Atome.
+- Runner: `PYTHONPATH=src python3 -m tfpt_correspondence.cli analyze` →
+  status=consistent, type=[C]; `tests/test_frozen_kernel.py` 5/5 PASS.
+- HARTE FIREWALL: (1) [O]-gated auf das OFFENE Seam-Horizon-Theorem
+  SEAM.EQUIV.01 (origin_theory/v58/v346/v347) — kann nie über [C] hinaus, bis das
+  Theorem schließt. (2) No-New-State (v246) + No-Unit (v153): der „Phasenübergang"
+  darf KEINEN neuen Scale einführen. (3) Explizit NICHT Horowitz-Polchinski: TFPT
+  hat keine Hagedorn-/String-Skala; geteilter Gehalt nur „ein Zustand, zwei
+  Beschreibungen über eine Schwelle". Der physische Phasenübergang bleibt
+  data_limited.
+- Cross-ref (nicht dupliziert): `gravastar-compactness` (3/8-Rung + ECO-Echo),
+  `recovery-channel`/v221 (Info-Recovery), v358/v359 (emergenter Geometrie-Kanal).
+
+Kein Scorecard-Row, kein verification/-Touch, keine Paper-/Ledger-Edits. Narrative
+Heimat falls je promoted: eine [C]-Keybox in tfpt_research_contracts.tex, nie eine
+verification-Ledger-Zeile.
+
+**Follow-up B+C (User: „mach B und C"):**
+
+**B) Den offenen Riegel SEAM.EQUIV.01 geschärft (NICHT geschlossen) —
+`theory-contracts/corr_seam_orbifold_forcing.py` (5/5, out of scorecard):** der „eine
+Pfeil" (v346 L2) als maschinengeprüftes BEDINGTES Theorem. C1 ADE-Cartan-Dets exakt
+(A_n→n+1, D_n→4, E6→3, E7→2, E8→1). C2 Signatur `(2,3,5)=(|Z2|,N_fam,g_car)` selektiert
+`Γ=2I` (ikosaedrisch) EINDEUTIG unter {2T,2O,2I}. C3 E8 einziger ADE mit `det(Cartan)=1`,
+Smith-Normalform=I ⇒ `coker=0` ⇒ Poincaré-Homologiesphäre = `det K=1`. C4 2I-McKay-
+Fingerprint: Irrep-Dims = affine-E8-Marken {1,2,2,3,3,4,4,5,6}, `Σd²=|2I|=120=|μ4|·h(E8)=
+4·30`, `h(E8)=30=2·3·5` = Produkt der Signatur. C5 ehrliches Typing: Implikation [E], aber
+Prämisse „Seam ≅ ℂ²/Γ-Orbifold" bleibt [O] — Gate NICHT geschlossen, Korrespondenz bleibt
+[C]. Kernaussage: die Korrespondenz-Atome UND das Keystone-Ziel sind dasselbe Objekt; das
+ganze Gate reduziert sich auf den einen Orbifold-Pfeil.
+
+**C) Beobachtbar gemacht — `tfpt-correspondence` CORR.H5 (Echo-Hook, data_limited):**
+`echo_template()` in `order_parameter.py`: Phasengrenze `Q_geom=3/8` = horizontlose
+Licht-fangende ECO (Oberfläche `R=8M/3` innerhalb Photonensphäre) → Ringdown-Echo. Delay
+`2.288 M` (Tortoise; ~0.70 ms @ 62 M☉ Source-Frame, ~1.60 @ 142, ~0.34 @ 30 M☉),
+Amplitude `≤(2/3)⁶=0.0878` = Recovery-Reflektivität = Info-Kanal-Ordnungsparameter (CORR.H1).
+Delegiert an `gravastar-compactness` (Delay, z-korrigiert) + `gw-ringdown-echo` (Strain-
+Suche); erbt deren Null/data_limited-Verdikte ehrlich (kein frischer geblindeter Test).
+Kill-Regel: Echo-Hit über Hoch-SNR-Events → Phasengrenze physisch realisiert; sauberer
+well-powered Null → nur die „physisch-sichtbar"-Lesart fällt, das Bookkeeping überlebt.
+Runner: analyze → status=consistent, [C]; Guard 6/6 PASS.
+
+**Klarstellung (a) — Status des Riegels SEAM.EQUIV.01 (Ledger geprüft):** NICHT voll
+geschlossen, sondern „closed modulo a cited theorem". Der Kontinuums-Rest ist auf EINEN
+Gitter-Input reduziert (SEAM.EQUIV.CONTINUUM.03) und hängt am ZITIERTEN externen Theorem
+(Osborne-Stottmeister arXiv:2107.13834, SEAM.MMST.INCLASS.01); Gittermodell/Anomalie-Inflow/
+c=8 numerisch alle [E] (SEAM.S3.LATTICE/INFLOW/CENTRALCHARGE.01), ABER die strikte
+Kontinuums-EXISTENZ + „(E8)_1 genau" bleibt [O]. Der B-Contract nimmt die ANDERE (geometrische
+Orbifold-)Route und schärft sie zu einem bedingten Theorem — schließt SEAM.EQUIV.01 NICHT.
+Ehrliche Konsequenz: KEINE Verification gebaut, die Closure behauptet (das wäre unehrlich); der
+B-Contract bleibt korrekt ein experiments/theory-contract. Promotion NUR falls die eine
+Orbifold-Prämisse je bewiesen wird (hartes Mathe-Theorem, offene Front) — via
+promote-to-verification.
+
+**(b) Signatur-Coverage-Census — `tfpt-correspondence/scripts/signature_coverage.py`:**
+Audit aller Datenquellen/Experimente gegen die 4 Korrespondenz-Signaturen (S1 Recovery-
+Reflektivität `(2/3)⁶`, S2 Kompaktheitsfenster `[3/8,1/2]`, S3 `C=3/8`-ECO-Echo, S4
+Bekenstein-Sättigung). Ergebnis: **17 Experiment-Beine, ALLE null/data_limited/consistent**,
+Verdikte LIVE aus den jeweiligen `results.json` gezogen (grounded). S1→ frb/pulsar/recovery-
+comb/repeater/crust/uhecr/strange-metal/qpe/hfqpo/comb-meta/recovery-channel/qc-recovery;
+S2→ gravastar-compactness (+ eht: Schatten Kerr-entartet); S3→ gw-ringdown-echo (Stage 1d
+`NO_POINT_ECHO` am `2.288 M`-Lag × `(2/3)⁶`, Stage 1h ε₉₀). **Kernbefund (Anti-Doppelzählung):**
+die Korrespondenz fügt KEINEN unabhängigen Evidenz-Kanal hinzu — ihre Signaturen SIND der
+eingefrorene Kernel, den die Suite ohnehin testet → **null Scorecard-Gewicht**, sie
+re-interpretiert, misst nicht neu. Einziger Nah-Hebel: die **Echo-Reach-Gap** — `(2/3)⁶=0.088`
+liegt **~7.2× unter** der aktuellen besten ε₉₀-Stack-Grenze (0.63); datierte Kill-Schwelle,
+sobald ein Multi-Event-Stack `ε₉₀≲0.088` erreicht. JSON: `results/signature_coverage.json`.
+
+**Datenquellen-Update (2026-07-14, Web-Recherche zur Echo-Reach-Gap):** die ~7.2×-Zahl ist
+die KONSERVATIVE TFPT-Pipeline-Stack-Grenze (ε₉₀=0.63), die GW250114 UNTERNUTZT. Fakten:
+- **GW250114** (2025-01-14, lautestes BBH: Netzwerk-SNR ~80, **Post-Merger/Ringdown ~40 ≈ 3×
+  GW150914**; LVK: keine kohärente Post-Ringdown-Power, Residual-SNR **< 6.86** @ 90% CL,
+  arXiv:2509.08099 / PRL 135,111403; öffentlich auf GWOSC). Grounding darauf → Per-Event-
+  Amplituden-Reach ~0.17 (~2× über 0.088, NICHT 7×). gw-ringdown-echo zieht heute nur ε₉₀=15.9
+  (schwacher A220-Fit) → SOFORT-HEBEL: GW250114 an seine Ringdown-SNR re-ankern.
+- **O4c/GWTC-6 ausstehend**: O4 endete 2025-11-18; GWTC-5.0=390 nur bis O4b; das dritte
+  Segment (O4c) ist analysiert, aber NOCH NICHT released → mehr laute Ringdowns für den Stack.
+- **IR1** (Interim-Run) ~Sep/Okt 2026, 6 Monate, beide LIGOs; **O5** 2028–31 (A+).
+- **Next-Gen** ET/CE (~2035+, Ringdown-SNR ~Hunderte) + LISA (SMBH-Ringdowns, SNR ~Tausende)
+  → weit unter 0.088.
+- **Regime-Caveat (wichtig):** die Standard-Echo-Literatur (z.B. arXiv:2512.24730) zielt auf
+  STARKE Reflexion (R_wall~0.99, langlebige QNM-Züge) — das FALSCHE Regime für TFPTs SCHWACHEN
+  (2/3)⁶~0.088-Reflektor (ein schnell abklingendes Echo). Das richtige Instrument ist der
+  gezielte First-Echo-/Residual-Power-Bound am 2.288-M-Lag (gw-ringdown-echo Stage 1d/1h),
+  NICHT die Reflektivitäts-Papers.
+Ehrliche Neubewertung: die Lücke ist eher ~2× (nicht ~7×); GW250114 re-ankern + O4c/O5-Stack
+ist der Nah-Pfad. Eingetragen in signature_coverage.py (echo_reach_gap.data_sources_2026) +
+tfpt-correspondence/README. Kein verification/-Touch, kein Scorecard-Row.
+
+**Forensische Untersuchung der echten Daten (2026-07-14, gw-ringdown-echo, venv aufgesetzt,
+scripts/diag_gw250114.py):** Auftrag: die echten GW-Daten, die die Echo-Signatur `(2.288 M,
+(2/3)⁶)` tragen könnten, im Detail prüfen. Zwei belastbare Befunde (3 unabhängige Methoden:
+whitened A220 gated+ungated, ±1s-Alignment-Scan, roh-bandpass [30,500]Hz):
+1. **Echter, allgemeiner Pipeline-Bug (fixbar):** der QNM-Fit startet am NOMINALEN Merger, der
+   für JEDES Event ~15–40 ms VOR dem tatsächlichen Ringdown liegt → A220 wird um ×3–20
+   unterschätzt → ε₉₀ (relativ zu A220) für alle Events aufgebläht. Alignment auf das lokale
+   Amplituden-Maximum würde die Limits der sauberen Events (GW150914/GW200129/GW190521) schärfen.
+2. **GW250114 ist wie-geladen UNBRAUCHBAR (Daten-Provisionierung, KEIN Timing-Bug):** der lokale
+   4kHz-Crop trägt das SNR-80-Signal NICHT in voller Amplitude — roh-bandpass-Merger-Exzess nur
+   ~1.0–1.7σ (H1/L1) gegen GW150914 ~2.6 / GW200129 ~3.0; whitened A220 bleibt ~0.6–1.1 selbst
+   mit gated whitening + ±1s-Scan (GW150914 gibt ~4.2). GPS (1420878141.2) + Zentrierung sind
+   KORREKT (GWOSC bestätigt), also ist der Crop-Inhalt mis-provisioniert. ⇒ ein naiver Re-Run
+   gäbe ein IRREFÜHREND schwaches Limit.
+**Konsequenz (ehrlich):** die maßgebliche echte-Daten-Echo-Grenze für GW250114 ist die
+LVK-Eigenanalyse (**Residual-Netzwerk-SNR < 6.86 @ 90% CL**, keine kohärente Post-Ringdown-
+Power) — NICHT eine Re-Derivation aus dieser vereinfachten Pipeline. Nah-Pfad zum Schließen der
+Lücke: (i) korrekten GW250114-Strain re-fetchen (CLEAN_AR-Kanal, GWOSC 4096s-Datei, Signal bei
++317.2s), (ii) den Merger-Alignment-Bug fixen, (iii) O4c/GWTC-6 + O5-Stacks. Befund eingetragen
+in signature_coverage.py (GW250114.forensic_2026_07_14 + updated_assessment).
+
+**AUSGEFÜHRT (User: „mach das" = re-fetch + Alignment-Fix + Re-Run):**
+- (a) **GW250114 frisch von GWOSC re-gefetcht** (O4b_4KHZ_R1, H1+L1): IDENTISCHE Werte →
+  die lokale Datei war NICHT korrupt, es IST der echte R1-Archiv-Strain. Whitened: **7437
+  Samples > 5σ** (GW150914: 19) → die einfache Welch-Whitening ist auf GW250114s O4b-Daten
+  PATHOLOGISCH (Glitch/Nicht-Stationarität; die SNR-80 wurde auf dem separaten CLEAN_AR-Kanal
+  gemessen). High-Pass-Konditionierung getestet — löst es nicht sauber. ⇒ GW250114 mit
+  öffentlichem R1 + dieser Pipeline NICHT nutzbar; maßgeblich bleibt LVK Residual-SNR<6.86.
+- (b) **Alignment-Bug gefixt** (`strain_data.align_ringdown()`, opt-in `align=`-Flag in
+  `injection_limits.limit_event`, DEFAULT OFF → frozen Prereg unberührt): richtet den QNM-Start
+  auf den whitened Ringdown-Envelope-Peak aus.
+- (c) **Alignment-korrigierter Re-Run** (`scripts/aligned_limits.py`, NICHT-destruktiv, eigenes
+  `results/aligned_injection_limits.json`, saubere Events, GW250114 ausgeschlossen): GW150914 H1
+  A220 3.16→**7.76**, ε₉₀ 0.687→**0.280**; GW190521 ε₉₀ 1.86→0.58; GW200129 aligned schlechter
+  (H1 wird on-source-non-null, p_on=0.0013 = bekannter GW200129-Glitch). **Aligned Stack-ε₉₀ =
+  0.28** (bestes on-source-null-Event GW150914) vs frozen 0.63 → **Reach-Gap ×3.2** (war ×7.2).
+- **Netto:** Lücke ~halbiert (0.28 statt 0.63), aber NICHT geschlossen (0.28 > 0.088). Upper-Bound-
+  Kernel, keine Detektion, keine Spannung. Weg zu 0.088: CLEAN_AR-GW250114 + Konditionierung,
+  O4c/GWTC-6 + O5-Stacks, oder ein ET/CE-Event.
+
+Kein verification/-Touch, kein Scorecard-Row, keine Paper-/Ledger-Edits. Frozen
+injection_limits.json unberührt (align default off).
+
+**CLEAN_AR-Versuch (User: „bis zur 0.088-Decke — CLEAN_AR beschaffen + GW250114 einschließen"):**
+- GWOSC-Recherche: GW250114 hat KEINEN separaten CLEAN_AR-HDF-Download — die „Analysis
+  Ready"-Produkte, die GWOSC/das Event-API/die Event-HTML-Seite liefern, SIND die O4b-R1-
+  Archivdateien (HDF+GWF, Start 1420877824, +317.2s). Kein anderer Kanal öffentlich abrufbar.
+- Konditionierungs-Forensik auf den R1-Daten (mean/median-PSD, Self-Gating, Linien-Notching,
+  Schmalband): **das Ringdown-SIGNAL ist DA und stark** — bandbegrenzt A220~9.4/7.2 @ +24ms,
+  vergleichbar mit GW150914 (~9). ABER die R1-Daten haben **~12000 whitened Samples >5σ** (vs
+  GW150914 0–8) — pervasive nicht-stationäre Band-Rauschen, das KEINE der Standard-Methoden
+  sauber entfernt (die Kalibrations-/Violin-Linien bei 300–303Hz sind in BEIDEN Events ähnlich
+  → nicht die Ursache). Das ist genau das Rauschen, das die LVK-CLEAN_AR-Pipeline (BayesWave-
+  Glitch-/Rausch-Subtraktion) entfernt und das hier NICHT vertrauenswürdig replizierbar ist.
+- **Ehrliche Konsequenz:** ein GW250114-Echo-ε₉₀ aus öffentlichen R1-Daten wäre linien-
+  dominiert / nicht vertrauenswürdig → GW250114 bleibt AUSGESCHLOSSEN (Firewall: kein
+  erzwungenes Ergebnis). Korrektur der früheren Formulierung: das Signal FEHLT nicht — es ist
+  da, aber rausch-konditionierungs-limitiert. Maßgeblich bleibt LVK Residual-SNR<6.86.
+- **Was steht:** der Alignment-Fix (clean-event Stack-ε₉₀=0.28, ×3.2) ist das reale Ergebnis.
+  Weg zu 0.088: LVK-CLEAN_AR-konditioniertes GW250114, O4c/GWTC-6 + O5-Stacks, oder ET/CE.
+Befund in signature_coverage.py (forensic_2026_07_14 + updated_assessment). Kein
+verification/-Touch, kein Scorecard-Row.
+
+**KORREKTUR (2026-07-14, User: „hast du alle Datenquellen geprüft? die öffentlichen GWOSC-
+Daten reichen"):** Der User hatte RECHT — ich lag falsch. Der frühere Ausschluss von GW250114
+(„~12000 >5σ, unbrauchbar") war ein ARTEFAKT eines fehlenden HIGH-PASS: O4-4kHz-Strain hat
+enorme Sub-20Hz-Seismik, die eine einfache mean-Welch-Whitening falsch behandelt. Mit der
+KORREKTEN O4-Konditionierung — **High-Pass 20Hz + MEDIAN-Welch-PSD** (robust gegen nicht-
+stationäre Linien) — ist GW250114s Off-Source-Rauschen SAUBER (0 Samples >5σ) und der Ringdown
+wird sauber rekonstruiert. GW250114s öffentliche GWOSC-Daten REICHEN (genau wie LVKs eigene
+Ringdown-Analyse sie nutzt). GW250114 ist jetzt EINGESCHLOSSEN.
+- Zwei Konditionierungs-Fixes als opt-in Flags (`align`, `highpass_hz`; frozen Defaults OFF):
+  `align_ringdown()` + High-Pass/Median-Welch. `injection_limits.limit_event(..., align=True,
+  highpass_hz=20)`.
+- **Sauber konditionierter aligned Stage-1h INKL. GW250114** (`aligned_injection_limits.json`):
+  ε₉₀ GW250114=1.69, GW150914=1.30, GW200129=2.47, GW190521=1.55; **Stack-ε₉₀ ≈ 1.3 → ×15**.
+  EHRLICHE KORREKTUR: das ist SCHLECHTER als frozen 0.63 (×7.2) und mein früheres ×3.2 — weil
+  jene un-high-passed Whitening die A220-Referenz aufblähten; das sauber-konditionierte Limit
+  ist das vertrauenswürdige (Absolutwert konvention-sensitiv auf O(2–3×)). ALLE Events sind ein
+  sauberer NULL (kein Echo) → konsistent mit der (2/3)⁶-Obergrenze; keine Detektion, keine
+  Spannung; 0.088 NICHT erreicht. Weg dahin: O4c/GWTC-6 + O5-Multi-Event-Stacks oder ET/CE.
+- Frozen injection_limits.json unberührt (beide Flags default off). Kein verification/-Touch.
+
+**Web-Check „gibt es neuere/höher aufgelöste Daten?" (2026-07-14):**
+- **Neuerer Katalog: NEIN, noch nicht.** O4c (finales O4-Segment, Jan–Nov 2025) hat **68
+  Kandidaten** identifiziert, **öffentliche Freigabe ~Dezember 2026** (LVK/Caltech 2026-05-26).
+  IR1 ~late Okt/Nov 2026, O5 2028–31. ⇒ mehr laute Ringdowns für einen größeren Stack sind
+  ~5 Monate entfernt (O4c) — der eigentliche Nah-Hebel, aber NICHT jetzt verfügbar.
+- **Höher aufgelöst: JA, 16 kHz existiert** (GWOSC + lokal) und läuft jetzt sauber durch die
+  gefixte HP+Median-Pipeline: GW250114 16 kHz ε₉₀≈1.57 (L1), vergleichbar mit 4 kHz (~1.69),
+  weiterhin sauberer NULL. Feineres Lag-Sampling schließt die Lücke NICHT — das Limit ist
+  amplituden-limitiert, nicht lag-auflösungs-limitiert.
+- **GW250114-Zenodo** (10.5281/zenodo.16877102, Sep 2025): Posterior-Samples (4 Waveform-Modelle
+  + ein kalibrations-freier NRSur-Lauf) + Analyse-Ergebnisse/PSDs/Figure-Skripte — KEIN separates
+  gereinigtes Strain-File; der Strain IST das GWOSC-R1 (nach High-Pass nutzbar).
+- **Fazit:** die öffentlichen GWOSC-Daten (4 kHz + 16 kHz R1) sind der vollständige aktuelle
+  Datensatz, mit korrekter Konditionierung voll nutzbar; die Reach-Gap (~×15, alle NULL) ist mit
+  keinen heute verfügbaren Daten geschlossen. Nächste echte Verbesserung: O4c (~Dez 2026) + O5,
+  oder Next-Gen (ET/CE). In signature_coverage.py (data_sources_2026) eingetragen.
+
+Kein Scorecard-Row, kein verification/-Touch, keine Paper-/Ledger-Edits.
+
+## 2026-07-13 (c) — FRACTAL.HUNT.05: GRB-Präregistrierung (Kandidat GETÖTET) + Signatur-Coverage-Audit
+
+Follow-up auf FRACTAL.HUNT.04 (User: Präregistrierung des GRB-Kandidaten auf
+frischer Stichprobe + prüfen, ob alle Signaturen überall getestet sind):
+
+**(1) grb_fresh_restone_v1 — präregistrierter Bestätigungstest, Ergebnis NULL:**
+- Prereg EINGEFROREN vor Daten-Fetch: recovery-comb-domains/hypotheses/
+  grb_fresh_restone_v1.yaml (Endpunkte T1=2.749026, T2=4.911247; Detektor
+  _stacked_at unverändert; Bonferroni×2; Kill-Regel; Auswahlregel:
+  deterministischer Seed-20260713-Shuffle der vollen UKSSDC grb.list minus
+  alle 24 Discovery-Targets, ≥30 Punkte, max 220 Versuche).
+- Fetch: scripts/fetch_grb_fresh.py → 60 frische Swift-XRT-Kurven in
+  161 Versuchen (data/grb_fresh/, committed).
+- EIN Analyse-Durchlauf: scripts/analyze_grb_fresh.py →
+  T1 p=0.106 (n=27), T2 p=0.217 (n=55), global p=0.211, beide
+  Robustheits-Mediane > 0.10 ⇒ VERDICT NULL — der Post-hoc-Kandidat ist
+  TOT. Freies Periodogramm peakt erneut bei ω≈1.6 (Plateau-Breaks): der
+  Discovery-Hit war Breitband-Leckage durch den Matched-Band-Rang.
+  README-A4-Abschnitt + results/grb_fresh_restone.json dokumentiert.
+
+**(2) signature_coverage_audit.py (tfpt-discovery) — Census + Lücken geschlossen:**
+- Census-Matrix Signatur × Kanal (Zeit + Verteilungs-Domänen): 12 schließbare
+  Lücken identifiziert — die neuen Töne waren NUR in Zeit-Recovery-Kurven
+  gescannt, nie in den S7-Größen-/Energie-Verteilungen.
+- Verteilungs-Scan (UHECR 3 Ströme, JBO-Glitch-Größen, Yu2013 tau_d,
+  FRB20201124A-Fluenzen Frühling+Herbst): 4 nominelle Kandidaten, ALLE von
+  der Anti-Artefakt-Batterie einkassiert:
+  - UHECR_SD750 res_5.559 (p=0.0002) → Binning-Artefakt (Bootstrap-Median
+    0.38, Detuning tot);
+  - FRB spring res_4.911 / autumn res_5.559 → Binning-Artefakte;
+  - JBO df_f res_2.749 (p=0.0002, binning-/bootstrap-ROBUST!) → aber
+    ununterscheidbar vom BASIS-10-Reporting-Kamm 2π/ln10 = 2.7288 (0.74%
+    entfernt, Auflösung 0.37; Dezaden-Kamm ebenfalls p=0.0002; 45% der
+    Katalogwerte ≤2 signifikante Stellen) ⇒ Dezimal-Rundungs-Artefakt,
+    verworfen. Lehrreich: res_2.749 ≈ 2π/ln10 ist eine GEFÄHRLICHE
+    Verwechslungsfrequenz für alle künftigen Verteilungs-Scans.
+- Verbleibende offene Konzepte OHNE Detektor (ehrlich gelistet, kein Test
+  möglich heute): Zwei-Ton-JOINT-Kamm (ω₁+ω₂ kohärent, Sichtbarkeit ~3e-4),
+  Rang-2-Modul-Fit {k·a+m·b}, Nonlattice-Amplituden-Dämpfung t^(σ−D).
+- JSON: tfpt-discovery/signature_coverage_results.json.
+
+Kein Scorecard-Row, kein verification/-Touch, keine Paper-Edits.
+
+## 2026-07-13 (b) — FRACTAL.HUNT.02–04: Koinzidenz-Deepdive, Visuals, Post-hoc-Ton-Scan
+
+Follow-up auf FRACTAL.HUNT.01 (User: a) Grafiken/Animationen, b) neue
+Signaturen in den Experimenten suchen, c) "Bend≈e / Λ_DSI≈φ⁵ klingt mir
+nicht nach Zufall" genauer prüfen). Alles tfpt-discovery, exploration only,
+nichts promoted:
+
+**(c) bend_e_golden_deepdive.py — beide Beinahe-Treffer sind QUANTIFIZIERTER
+Zufall (alle Checks PASS):**
+- PSLQ bis |coeff| ≤ 10⁶: KEINE Integer-Relation hinter bend=e oder
+  Λ_DSI=φ^q (Λ_DSI ist keine rationale φ-Potenz; Z[ln2,ln3] ⊥ Q(√5)).
+- Kettenbrüche kalibriert: der große Quotient (308 bzw. 18/601) ist
+  Selektions-Tautologie (1/δ); Tail-Test mit Flag-Count-Look-elsewhere
+  (7 Zensus-Paare): p ≈ 0.07 / 0.12 — nicht signifikant. Kontrollanker:
+  π's berühmtes a₅=292. x ≈ 91/18 (1e-6) ist gewöhnliche Konvergente.
+- Zensus (10 TFPT-Targets × 112 Konstanten-Varianten, dichte-angepasstes
+  Jitter-Null): erwartet 1.3 Treffer @0.35% / 3.6 @1.2%, beobachtet 1 / 4
+  (p = 0.77 / 0.55). Entlarvend: bend liegt NÄHER an π⁴/36 (0.137%) als
+  an e (0.32%) — Pool-Dichte, kein Gesetz.
+- Struktureller Gegenbefund [E]: TFPTs eigenes "diskretes e" ist exakt
+  (1-1/N_fam)^(-N_fam) = 27/8 = √Λ_DSI (log = Δ/2); bend(N)-Leiter
+  {1.0, 2.71, 4.82, ...} zeigt: kein Limes-Mechanismus zielt auf e.
+
+**(a) fractal_hunt_visuals.py — figures/: fractal_string_barcode.png +
+4 GIFs** (anim_ifs_construction, anim_cascade_recovery,
+anim_diffraction_growth, anim_two_clocks): IFS-Konstruktion Generation
+0→6, Kaskaden-Ripple-Aufbau, Bragg-Peak-Schärfung auf die komplexen
+Dimensionen, inkommensurable Zwei-Uhren-Phasoren (Ratio = bend).
+
+**(b) new_tone_posthoc_scan.py — POST-HOC-Scan der neuen Töne über ALLE
+Recovery-Daten im Repo** (GW-Ringdown-Residual-Envelopes GWOSC 23 Kurven,
+FRB-Tails FAST 8 + CHIME 8, Magnetare 6, GRB 22, Quakes 6 cached, ENT 2,
+Crust-Cooling 7, LSCO 1, Vela-2024 1; Detektor+Gates identisch zu den
+preregistrierten Scans, _stacked_at):
+- ω₂ = 0.953 (Periode 6.59 e-folds): überall RANGE-BLIND (braucht ≥ 18.5
+  e-folds — wie der Möbius-(3/2)¹²-Kamm). ω₃ = 1.511: nur Quakes gated,
+  null (p = 0.60).
+- Kurzperioden-Resonanzen res_4.911/res_5.559 (Perioden 1.28/1.13): die
+  ERSTEN Kernel-Töne, die auf BH-Ringdown-Envelopes (n=23 gated, p = 0.88)
+  und ms-FRB-Tails (p = 0.17–0.20) überhaupt testbar sind → saubere Nulls.
+- Einzige nominelle Treffer: GRB-Afterglows res_2.749 (p = 0.006–0.02 über
+  Seeds, Bonferroni global p = 0.031) und res_4.911 (p = 0.026). ABER
+  Kontrolle: freies Stacked-Periodogramm hat globales Maximum bei ω ≈ 1.6–1.9
+  (breite Plateau-Break-Struktur), NICHT beim Kandidaten → matched-band-Rang
+  lokal inflationiert; Surface-Firewall (Central-Engine, kein Horizont).
+  Typisierung: escalate_candidate, KEIN Claim, kein Scorecard-Row; ein
+  echter Test bräuchte Präregistrierung auf unabhängiger GRB-Stichprobe.
+- JSON: tfpt-discovery/new_tone_posthoc_results.json.
+
+Kein Scorecard-Row, kein verification/-Touch, keine Paper-Edits.
+
+## 2026-07-13 — FRACTAL.HUNT.01: neue Selbstähnlichkeits-Achsen (Moran-Dimension 1/6, Nonlattice-Kernel, Log-Zeit-Quasikristall)
+
+User-Auftrag: nach fraktalen Selbstähnlichkeits-Mustern suchen, die noch nicht
+im Katalog stehen (SIGNATURES.md, recursive_crystal, tfpt_decagonal,
+metallic_compactness_ladder als Duplikat-Schutz abgeglichen). Ergebnis:
+fractal_selfsimilarity_hunt.py (tfpt-discovery, alle Checks PASS,
+figures/fractal_hunt.png) — exploration only, nichts promoted:
+
+- F1 [E]: Moran-Dimension des Transfer-IFS {(2/3)⁶,(1/3)⁶} ist EXAKT
+  s = 1/6 = 1/p₂ (weil 2/3+1/3=1); Kodimension 5/6 = γ_car (κ_E8-Zähler).
+  Uniqueness: Partition = 1 ⟺ N = 3 = N_fam (N=4 → 0.288, N=5 → 0.404).
+- F2 [E]: ln(3/2)/ln3 irrational (multiplikative Unabhängigkeit, Beweis) ⇒
+  der Kernel ist ein NONLATTICE-String (Lapidus); der Ein-Ton-Kamm
+  ω₁ = 2.5827 ist nur die Gitter-Approximation. Bend-Kettenbruch
+  [2;1,2,2,3,1,5,2,23,…], Konvergenten 2/1, 3/1, 8/3, 19/7, 65/24, …
+- F3 [E]: komplexe Dimensionen von 1−e^(−as)−e^(−bs) (a=6ln(3/2), b=6ln3):
+  reelle Wurzel exakt D=1/6; 56 Wurzeln bis Im s=60 alle strikt links von D
+  (max Re 0.16615, nonlattice-Signatur). NEUE Ton-Identitäten:
+  ω₂ = 2π/(6ln3) = 0.95320 mit Bend = ω₁/ω₂ EXAKT (S3-Bend = Ton-Ratio);
+  ω₃ = 2π/(6ln2) = 1.51079 mit 1/ω₂ = 1/ω₁ + 1/ω₃. Stärkste Resonanz
+  t = 18.097, Rang-2-Label (k,l) = (7,19) = Bend-Konvergente 19/7.
+- F4 [E, numerisch]: binomiale Multi-Generationen-Kaskade hat Laplace-
+  Transformierte exakt 1/f(s) ⇒ Log-Zeit-Diffraktionspeaks (w = 7.68, 10.42,
+  2.75) = komplexe Dimensionen: die Kaskade ist ein RANG-2-Fourier-
+  Quasikristall in ln t (zeitliches Geschwister des räumlichen 5→3-Sets).
+  [C]-Lesart, ehrlich: ω₁-Zahn dort verstimmt/gedämpft (nächste Wurzel
+  t=2.749, σ=+0.126) — Modell-Aussage, KEINE Korrektur der preregistrierten
+  S2b-Kämme, kein neues Suchziel ohne separate Präregistrierung.
+- F5 [E]: Selbst-Iteration der Familienformel F(g) = (2^(g−1)−1)/g kollabiert
+  5 → 3 → 1 → 0; Vakuum-Basin exakt {1,3,5} = Pascal-Ränge 2K+1 (v108);
+  gerade g steppen nie, ungerade g ≥ 7 steigen (2^(g−1)−1 > g²) ⇒ g_car = 5
+  ist der GRÖSSTE Rang, der zum Vakuum kompiliert.
+- F7 [E]: 2ln λ_Y = (1+δ)ln φ₀, δ = ln(1−φ₀)/ln(φ₀) = 0.01862; De-Phasierung
+  ~54 Sprossen ≫ L_max = 8 ⇒ Flavor-Leiter gitter-effektiv; Nonlattice-
+  Struktur kann nur im Recovery-Kernel sichtbar werden.
+- Declined (quantifiziert): Bend ≈ e (0.32% daneben); ln Λ_DSI/ln φ_golden ≈ 5
+  (1.11% daneben) — Q(√5) (statisch) bleibt sauber von Z[ln2,ln3] (dynamisch)
+  getrennt.
+
+Kein Scorecard-Row, kein verification/-Touch, keine Paper-Edits.
+
 ## 2026-07-10 (b) — GLUE.DYN.02: die Oktave ABGELEITET (μ4-Uhr ersetzt das Gate; E8 explizit aus dem Seam-Paar)
 
 Follow-up auf GLUE.DYN.01 (User: "mach a" = Oktav-Bedingung ableiten statt
@@ -2827,5 +3172,58 @@ BEIN B (Massherleitung): Einzel-Skalen-Korollar exakt: mu2/mu1^2 = e^{t0} => t0 
 entropischen Struktur bleibt [O].
 Naechste echte Schritte (beide Analysis-/Theorieprojekte, keine endlichen Checks mehr):
 (1) Kontinuums-AP2: BW-Theorem-Route fuer den Calderon-Halbraum (die c=1/CHM-Exhibits sind die
-empirische Basis); (2) Massherleitung: gibt es eine entropische Begruendung fuer die eine KMS-Zeit
+empirische Basis); NACHTRAG 2026-07-14: der natuerliche Kontinuumsrahmen dafuer ist die
+Vier-Intervall-Multilokal-Geometrie der vier Marks (v480, s.u.) -- nicht mehr nur der
+Single-Ball-CHM-Boost. (2) Massherleitung: gibt es eine entropische Begruendung fuer die eine KMS-Zeit
 t0 bzw. das Momentenverhaeltnis? Vorsicht Numerologie-Firewall: t0 ~ 30.46 ist NICHT h(E8).
+
+## Update 2026-07-14: v479-v481 -- die "uebersehene Werkzeuge"-Runde (Vogelperspektive)
+
+Frage: gibt es fuer die nicht-100%-geloesten Teile etablierte Werkzeuge, die wir uebersehen haben?
+Antwort: ja, drei -- alle drei nach Proben in experiments/theory-contracts promoted; ein vierter
+Kandidat (Donnelly) ehrlich negativ und NICHT promoted. KEIN Gate schliesst, KEIN Marker bewegt.
+
+(1) v479_kronheimer_quiver_bridge.py (SEAM.KRONHEIMER.01): Die R3-Restbruecke von SEAM.DETK.01
+("der Rewrite-Attraktor-Graph IST die du-Val-Singularitaet") ist ein SATZ -- Kronheimer 1989 (ALE-
+Hyperkaehler-Quotient + Torelli, JDG 29, 665+685). Alle endlichen Inputs sind Compiler-Output,
+exakt geprueft: Kac-Marken = Nullvektor der affinen E8-Cartan UND Perron-Vektor (= v312-Attraktor-
+Vektor); Quotienten-Dimension exakt 4 (sum_edges d_i d_j = sum d_i^2 = 120 via Null-Identitaet);
+|2I| = 120 = |mu4| h(E8), h = 30 = 2*3*5; Aufloesung = unimodulare -E8-Form (det 1 = Poincare-Link
+= det-K=1-Face) mit 24 Deformationsparametern. [C] zitiert (Import-Klasse NPW26/MMST/AGT); [O]
+die Praemisse TRANSFORMIERT: "der rohe Seam liefert das ALE/Orbifold-Datum" = derselbe eine Pfeil
+wie SEAM.EQUIV.01 (v346 L2). 6/6.
+
+(2) v480_multilocal_four_interval.py (QGEO.MULTILOCAL.01): Der Seam-Kreis minus die 4 mu4-Marks
+IST die n=4-Multi-Intervall-Geometrie des freien chiralen Fermions -- die Klasse mit EXAKT
+bekannter Multi-Intervall-Modulartheorie (Casini-Huerta-Mischterm; Longo-Xu; Rehren-Tedesco
+multilokal; KLM: holomorph <=> triviale Multi-Intervall-Inklusion, mu=1 = dasselbe Bit wie
+det K=1). Auf dem antiperiodischen Ring: NEBENFUND -- die fermionische mu4-Uhr ist BINAER,
+rho^4 = -1 exakt (Ordnung-8-Doppelcover-Lift, dasselbe Z2-Lift-Muster wie 2I ueber I); die
+primitiven 8.-Wurzel-Projektoren entkoppeln den 4-Intervall-Zustand exakt (1e-15); jeder Sektor =
+getwistetes Viertelring-Einzelintervall (1e-14); rho C rho^-1 = C (1e-14) => omega o rho = omega
+MANIFEST auf State-Level; Negativkontrolle 1e-2; Cross-Intervall-K peakt auf der Konjugations-
+diagonale (CH-Mischterm-Schatten). Bedrock-Mechanismus + AP2-Kontinuumsrahmen in EINEM etablierten
+Framework; Roh-Seam-Praemisse bleibt [O]. 7/7.
+
+(3) v481_seesaw_carrier_ladder.py (FLAV.NUSCALE.02, KANDIDAT-Klasse wie v467/v468): Die [O]-Notiz
+von FLAV.NUSCALE.01 (y_nu=1 => log_c3 = 2.57, strukturlos) hat die FALSCHE Normierung getestet:
+die Carrier-Struktur (ein 16 pro Familie + minimaler Yukawa-Sektor 10_H/PS(1,2,2)) erzwingt
+y_nu = y_t an der Matching-Skala [P benannt]. Damit kollabiert der (y_nu,M_R)-Trade-off auf EINEN
+Parameter: gemessenes m_3 = 0.0503 eV verlangt M_R = 9.3e13 GeV -- IM PS-Fenster (v249), bei
+log_c3(Mbar/M_R) = 3.15. Integer-Rung c3^3 Mbar: m_3 = 0.030 eV (40% zu tief bei 1-Loop, ADKLR-
+Run-down 0.794) => Leiter-Pin ABGELEHNT (v354/v355); Entscheidungsrechnung benannt (2-Loop +
+PS-Thresholds). Falsifizierbares Band [0.002, 0.115] eV; NO-Floor Sigma = 0.059 eV. Frozen record
+unberuehrt. 5/5.
+
+(4) EHRLICHES NEGATIV (bleibt Experiment, keine Promotion):
+experiments/theory-contracts/phi0_donnelly_equivariant_probe.py -- Donnelly/Atiyah-Bott ist die
+richtige WERKZEUGKLASSE fuer HYP.PHI0.PUNCTURE.01 (Ordnung-n-Kontaktterme an den Marks; Gewichte
+sum 1/(4sin^2) = (n^2-1)/12 exakt, Z4 -> 5/16), aber die klassischen 2d-Gewichte sind reine
+Rationale, waehrend dtop = 48 c3^4 pi^-4 traegt: der WERT wird nicht erzwungen. Target bleibt [O].
+
+Meta-Muster der Runde: die offenen Pfeile sitzen genau dort, wo ein etablierter externer Satz
+existiert, der noch nicht importiert war (wie zuvor NPW26/MMST/AGT) -- nicht dort, wo neue
+Mathematik noetig waere. Naechste Schritte aus der Runde: (a) Kronheimer-Seite: was liefert der
+rohe Seam als Quiver-Darstellung? (die ADHM/Moment-Map-Daten aus den v155/v160-Kovarianzen);
+(b) v480-Seite: die BW-Theorem-Route jetzt im 4-Intervall-Rahmen (Longo-Xu-Inklusion fuer den
+Seam-Kollar); (c) v481: die benannte Entscheidungsrechnung (2-Loop SM + PS-Threshold-Matching).

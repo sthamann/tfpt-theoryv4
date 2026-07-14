@@ -1,0 +1,172 @@
+# Preregistration of the TFPT correspondence-principle / phase-boundary search (v1).
+#
+# This file is the FROZEN hypothesis. Every atom below is an EXACT rational (or the
+# transcendental primitive pi) built from the two TFPT axioms P1 (c3 = 1/(8 pi)) and
+# P2 (g_car = 5); they must equal tfpt_correspondence.atoms.* byte-for-byte. No fitted
+# exponents, no free thresholds, no SI inputs are permitted. Editing any atom or any
+# critical value after inspecting the runner output invalidates the preregistration.
+#
+# ROLE: an INTERNAL-CONSISTENCY / theory-contract search target, NOT an external-data
+# confrontation. It asks one question: does TFPT's own algebra place the
+# spacetime <-> black-hole "correspondence" (a state described two ways across a
+# threshold in a dimensionless order parameter) onto COMPILER ATOMS, or would it need a
+# free number? Out of the evidence scorecard (structural, like theory-contracts).
+
+experiment: tfpt-correspondence
+version: v1
+frozen_date: "2026-07-14"
+role: >
+  search target -- test whether a TFPT-native "correspondence principle" (the seam's two
+  channel-readouts: geometry channel = ordinary spacetime; boundary/information channel =
+  the compiler) has an ATOM-LOCKED phase boundary in a dimensionless order parameter, i.e.
+  whether the critical quotient at which the SAME underlying seam state stops being
+  described as spacetime and starts being described as a black hole is a compiler atom
+  rather than a fitted number.
+
+firewall: >
+  This is a CHANGE-OF-BOOKKEEPING / structural search, NOT new gravitational physics and
+  NOT a detection. It is downstream of, and can never exceed, the still-OPEN Seam-Horizon
+  theorem SEAM.EQUIV.01 ("the seam is a holographic horizon in the mathematical sense",
+  origin_theory / v58 / v346 / v347). Everything here is therefore typed at most [C]
+  (structural alignment / reading), never [E], never load-bearing, no \veri{} citation, no
+  ledger row, no website surface. TWO HARD TFPT CONSTRAINTS are part of the preregistration:
+  (1) the no-new-state discipline (v246) and the No-Unit theorem (v153) FORBID introducing a
+  new scale or mechanism to drive the "phase transition"; it must be a re-description forced
+  by EXISTING atoms, or it stays [C]/[O]. (2) TFPT has NO Hagedorn temperature and NO string
+  scale, so this is explicitly NOT the Horowitz-Polchinski string/black-hole correspondence;
+  the shared content is only "one state, two equivalent descriptions across a threshold",
+  never the HP transition dynamics. A bare rational coincidence is COINCIDENCE-RISK, not
+  support.
+
+# ---------------------------------------------------------------------------
+# Frozen atoms (exact; from P1+P2). Guarded by tests/test_frozen_kernel.py.
+# ---------------------------------------------------------------------------
+atoms:
+  c3: "1/(8*pi)"                 # P1 boundary seam constant
+  g_car: 5                       # P2 carrier rank
+  mu4: 4                         # |mu4|, the four Gauss-Bonnet marks / order-4 clock
+  Z2: 2                          # |Z2|, the Moebius sheet involution
+  N_fam: 3                       # A3 family count = |mu4| - 1
+  anchor: [1, 1, 2]              # the parabolic anchor a; e1(a)=4, p2(a)=6
+  gap6: "64/729"                 # (2/3)^6 = (|Z2|/N_fam)^(2*N_fam); the transfer/recovery gap
+
+# ---------------------------------------------------------------------------
+# The correspondence order parameters (both dimensionless; both exact).
+# ---------------------------------------------------------------------------
+order_parameters:
+  # (A) Holographic / Bekenstein saturation quotient -- the "information density" quotient.
+  bekenstein_saturation:
+    definition: "q_Bek(state) = S / (2*pi*E*R) = 4*c3 * S / (E*R)"
+    coefficient_atom: "1/(2*pi) = 4*c3"           # atom-locked; 1/4 = 1/|mu4| entropy density
+    critical_value: 1                              # q_Bek = 1  <=>  Bekenstein bound saturated
+    reading: >
+      q_Bek < 1 -> the state is described by the geometry channel (ordinary spacetime);
+      q_Bek = 1 -> the SAME state saturates the holographic bound and is described as a
+      black hole. The horizon is the saturation locus, not a fundamental edge. Self-check:
+      a Schwarzschild hole (S=A/4=4 pi M^2, E=M, R=2M) has q_Bek = 1 EXACTLY.
+
+  # (B) SdS geometric compactness quotient -- the geometric phase-window (cross-ref only).
+  sds_compactness:
+    definition: "Q_geom(m) = sum r_i^2 / (sum |r_i|)^2  over the three roots of t^3 - 3t + 6m"
+    mass_line: "m = M sqrt(Lambda) in [0, 1/3]  (pure de Sitter -> Nariai merge)"
+    endpoint_de_sitter: "1/2 = |Z2|/|mu4|"         # m = 0
+    endpoint_nariai: "3/8 = p2(a)/e1(a)^2"         # m = 1/3, roots (1,1,-2)
+    monotone: decreasing                           # 1/2 -> 3/8, minimum at the Nariai merge
+    cross_ref: >
+      the 3/8 rung and its ECO echo template already live in
+      experiments/gravastar-compactness (Nariai 3/8 <-> Jampolski-Rezzolla max compactness
+      3/8); this target does NOT re-derive them, it only reuses the window as the geometric
+      face of the correspondence phase boundary.
+
+# ---------------------------------------------------------------------------
+# The decisive preregistered check: the ATOM-LOCK test.
+# ---------------------------------------------------------------------------
+tests:
+  - id: CORR.H1_atom_lock
+    desc: >
+      Every constant that defines the correspondence phase boundary must be an EXACT rational
+      built from the frozen atoms, not a free/fitted number. The four boundary constants and
+      their required atom identities:
+        Bekenstein entropy density  1/4  == 1/|mu4|
+        de Sitter endpoint          1/2  == |Z2|/|mu4|
+        Nariai/ECO threshold        3/8  == p2(a)/e1(a)^2         (a=(1,1,2): p2=6, e1=4)
+        recovery reflectivity bound (2/3)^6 == (|Z2|/N_fam)^(2*N_fam)
+      and the Bekenstein-bound coefficient 4*c3 == 1/(2*pi).
+    pass: all five identities hold as exact Fractions (or, for 4*c3, as the exact 1/(2*pi))
+    kill: >
+      any boundary constant requires a NON-atom (free) number to place the phase boundary
+      -> the correspondence-principle reading is rejected as numerology (verdict: tension).
+
+  - id: CORR.H2_saturation_selfconsistency
+    desc: >
+      The critical quotient of order parameter (A) must be exactly 1 for a black hole, with
+      the atom-locked coefficient. Verify S_BH = M^2/(2 c3) = A/4 (1/4 = 1/|mu4|) and
+      q_Bek(Schwarzschild) = 1 exactly, independent of M.
+    pass: q_Bek(horizon) == 1 for all sampled M; S_BH/(A/4) == 1 exactly
+    kill: the horizon does not sit at saturation q_Bek = 1 -> the order parameter is wrong.
+
+  - id: CORR.H3_geometric_window
+    desc: >
+      Order parameter (B) must run monotonically over [3/8, 1/2] with the two endpoints equal
+      to the atom expressions, and 3/8 must sit strictly inside the horizonless light-trapping
+      window 1/3 < 3/8 < 4/9 < 1/2 (photon sphere / Buchdahl / horizon).
+    pass: Q_geom(0)=1/2, Q_geom(1/3)=3/8, monotone decreasing, ladder ordering holds
+    kill: the window endpoints are not the atoms, or the ordering breaks.
+
+  - id: CORR.H4_gate_and_no_new_state
+    desc: >
+      Preregistered typing guard (not a data test): assert the target records its [O]
+      dependency on SEAM.EQUIV.01 and refuses any new scale. There must be NO Hagedorn/string
+      parameter anywhere in the kernel, and no dimensionful input beyond the single
+      irreducible unit v_geo (No-Unit theorem v153).
+    pass: kernel is atom-only + pi; gate field names SEAM.EQUIV.01; no Hagedorn/string scale
+    kill: a new dimensionful scale or a Hagedorn analogue appears -> firewall breach.
+
+  - id: CORR.H5_observable_echo
+    desc: >
+      The OBSERVABLE face (C): at the geometric phase boundary Q_geom = 3/8 the state is a
+      horizonless light-trapping ECO (surface R = 8M/3, inside the photon sphere 3M), a
+      ringdown-echo source. The correspondence fixes the echo round-trip DELAY (tortoise
+      surface<->photon sphere; canonical/redshift-corrected computation delegated to
+      gravastar-compactness) and the echo amplitude ratio bound = (2/3)^6 = the recovery
+      reflectivity = the SAME information-channel order parameter (CORR.H1). The strain
+      search lives in gw-ringdown-echo. This is NOT a fresh blinded test -- it inherits the
+      existing gw-ringdown-echo / gravastar-compactness verdicts (null / data_limited to
+      date) and states them honestly.
+    delegates_to: [gravastar-compactness, gw-ringdown-echo]
+    kill: >
+      an echo at (predicted delay, amplitude <= (2/3)^6) reproduced across high-ringdown-SNR
+      events -> the phase boundary is PHYSICALLY realised (strong hint, escalates the [C]);
+      a clean well-powered null across those events -> the "physically visible phase
+      boundary" reading falls, while the change-of-bookkeeping correspondence survives.
+    current_status: data_limited   # gw-ringdown-echo Stage-1/2 nulls; amplitude wall binding
+
+# ---------------------------------------------------------------------------
+gate:
+  depends_on: SEAM.EQUIV.01      # Seam-Horizon theorem, OPEN (origin_theory / v58 / v346 / v347)
+  max_type_until_gate_closes: "[C]"
+  discipline: [no_new_state_v246, no_unit_theorem_v153]
+
+verdict_enum: [consistent, null, data_limited, tension, not_confirmed_not_refuted]
+prereg_expected_verdicts:
+  CORR.H1_atom_lock: consistent           # all boundary constants are atoms (internal lock)
+  CORR.H2_saturation_selfconsistency: consistent
+  CORR.H3_geometric_window: consistent
+  CORR.H4_gate_and_no_new_state: consistent
+  CORR.H5_observable_echo: data_limited   # inherits gw-ringdown-echo / gravastar nulls
+overall_expected: >
+  a STRUCTURAL [C] correspondence: the phase-boundary constants ARE atom-locked (internal
+  consistency confirmed), but the physical spacetime<->BH phase transition stays
+  data_limited / [O]-gated on SEAM.EQUIV.01. NOT load-bearing; NOT scorecard-eligible.
+
+language:
+  forbidden:
+    - "TFPT derives the string/black-hole correspondence"
+    - "the event horizon is a proven phase transition"
+    - "the correspondence principle is confirmed / is [E]"
+    - "the Bekenstein saturation is a TFPT prediction"
+  allowed:
+    - "TFPT admits a change-of-bookkeeping correspondence whose phase-boundary constants are compiler atoms"
+    - "the spacetime<->black-hole phase-transition reading is [C], gated on the open SEAM.EQUIV.01"
+    - "this is not Horowitz-Polchinski: TFPT has no Hagedorn/string scale"
+    - "the critical quotient q_Bek=1 (Bekenstein saturation) has an atom-locked coefficient 4 c3 = 1/(2 pi)"

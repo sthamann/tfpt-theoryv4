@@ -76,8 +76,8 @@ const SECTORS: Sector[] = [
 ];
 
 const RESIDUALS: { id: string; kind: "A" | "B" | "C"; note: string }[] = [
-  { id: "SEAM.EQUIV.01", kind: "A", note: "cited continuum theorem (v336); extension leg crossed-product certified, realisation at invariant level (v469, LR/Böckenhauer/KLM; AGT/AMT second witness); stays [O]" },
-  { id: "ALPHA.QUILLEN.EXACT.01", kind: "A", note: "Quillen ζ-functional (v382; reduced v391/v433; v434 → one [C]+one [O]; v435 → a³ is the unique π⁰ metric-independent topological rung, integer CS level [C]; v470: α³ level = computed |C| = 1, F-normalisation = k_Y = 5/3; v472: bridge lemma exhibited at the finite level — det-line curvature over the U(1)-twist moduli = 1 = the inflow level; the continuum ζ-det identification stays [O])" },
+  { id: "SEAM.EQUIV.01", kind: "A", note: "cited continuum theorem (v336); extension leg certified via the crossed-product package, realisation at invariant level (v469); stays [O]" },
+  { id: "ALPHA.QUILLEN.EXACT.01", kind: "A", note: "the Quillen ζ-functional, narrowed stepwise (v382 → v472): α³ level = the computed inflow Chern |C| = 1, F-normalisation = k_Y = 5/3, det-line curvature over the U(1)-twist moduli = 1; only the continuum ζ-det identification stays [O]" },
   { id: "QG.AMB.01", kind: "A", note: "constructive measure, a [C] redundancy (v369)" },
   { id: "v_geo", kind: "B", note: "the one metrology unit — No-Unit theorem (v153/v364)" },
   { id: "F_transfer", kind: "C", note: "QCD / Boltzmann / relic (v371–v374, firewall v187)" },
@@ -120,12 +120,12 @@ function GapConvergence() {
 
   return (
     <div className="rounded-2xl border border-slate-700/40 bg-slate-950/50 p-5">
-      <div className="flex items-center justify-between">
-        <div>
-          <div className="text-[10px] font-semibold uppercase tracking-widest text-emerald-300/80">
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <div className="min-w-0">
+          <div className="break-words text-[10px] font-semibold uppercase tracking-widest text-emerald-300/80">
             A · every sector is the same gapped operator
           </div>
-          <div className="mt-1 font-serif text-lg text-slate-100">
+          <div className="mt-1 break-words font-serif text-lg text-slate-100">
             iterₙ = x⋆ + rⁿ(x₀ − x⋆) → the unique attractor
           </div>
         </div>
@@ -166,11 +166,11 @@ function GapConvergence() {
         })}
       </svg>
 
-      <div className="mt-2 flex items-center justify-between text-xs text-slate-400">
+      <div className="mt-2 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-400">
         <span>
           step n = <span className="font-mono text-slate-200">{n.toFixed(1)}</span>
         </span>
-        <span>
+        <span className="min-w-0 break-words">
           the rate r <span className="text-slate-300">is</span> the first-correction size (v388); r = 1 never forgets x₀ (Lean <span className="font-mono">FORM.SPECTRALGAP.01</span>)
         </span>
       </div>
@@ -220,12 +220,12 @@ function FormFactor() {
 
   return (
     <div className="rounded-2xl border border-slate-700/40 bg-slate-950/50 p-5">
-      <div className="flex items-center justify-between">
-        <div>
-          <div className="text-[10px] font-semibold uppercase tracking-widest text-blue-300/80">
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <div className="min-w-0">
+          <div className="break-words text-[10px] font-semibold uppercase tracking-widest text-blue-300/80">
             B · the entire-form-factor graviton (v386 / v389)
           </div>
-          <div className="mt-1 font-serif text-lg text-slate-100">
+          <div className="mt-1 break-words font-serif text-lg text-slate-100">
             dressed / GR ratio e<sup>−u</sup>, u = p²/M²
           </div>
         </div>
@@ -258,12 +258,14 @@ function FormFactor() {
         <circle cx={x(u)} cy={y(dressed(u))} r={4} fill="#f8fafc" />
       </svg>
 
-      <div className="mt-2 flex items-center justify-between text-xs text-slate-400">
+      <div className="mt-2 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-400">
         <span>
           u = <span className="font-mono text-slate-200">{u.toFixed(2)}</span>,{" "}
           e<sup>−u</sup> = <span className="font-mono text-slate-200">{Math.exp(-u).toExponential(2)}</span>
         </span>
-        <span>ghost-free, UV-soft, finite at every loop order by power counting (v389)</span>
+        <span className="min-w-0 break-words">
+          ghost-free, UV-soft, finite at every loop order by power counting (v389)
+        </span>
       </div>
     </div>
   );
@@ -273,10 +275,10 @@ function FormFactor() {
 function ResidualCertification() {
   return (
     <div className="rounded-2xl border border-slate-700/40 bg-slate-950/50 p-5">
-      <div className="text-[10px] font-semibold uppercase tracking-widest text-slate-300/80">
+      <div className="break-words text-[10px] font-semibold uppercase tracking-widest text-slate-300/80">
         C · the residual is certification, not construction (v384)
       </div>
-      <div className="mt-1 font-serif text-lg text-slate-100">
+      <div className="mt-1 break-words font-serif text-lg text-slate-100">
         every open item is external — zero open internal mechanisms
       </div>
       <div className="mt-4 grid gap-3 sm:grid-cols-3">
@@ -296,10 +298,10 @@ function ResidualCertification() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.1 * i }}
-                  className="rounded-lg bg-slate-900/50 px-2.5 py-1.5"
+                  className="min-w-0 rounded-lg bg-slate-900/50 px-2.5 py-1.5"
                 >
-                  <span className="font-mono text-[11px] text-slate-100">{r.id}</span>
-                  <span className="block text-[10px] leading-snug text-slate-400">{r.note}</span>
+                  <span className="break-words font-mono text-[11px] text-slate-100">{r.id}</span>
+                  <span className="block break-words text-[10px] leading-snug text-slate-400">{r.note}</span>
                 </motion.li>
               ))}
             </ul>

@@ -42,6 +42,1744 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-07-14",
+    "dateLabel": "2026-07-14",
+    "heading": [
+      {
+        "k": "t",
+        "v": "website + figure refresh — the "
+      },
+      {
+        "k": "c",
+        "v": "/verification"
+      },
+      {
+        "k": "t",
+        "v": " journey views become "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "live"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " HTML (the stale timeline/residual-chain images replaced by interactive components wired to the in-browser reproducer), the prediction surface's empirical-audit wall of text restructured into dated, expandable rounds, and the generated timeline/residual-chain figures extended to the current suite — "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "presentation only, no content or marker moves"
+          }
+        ]
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website "
+            },
+            {
+              "k": "c",
+              "v": "/verification"
+            },
+            {
+              "k": "t",
+              "v": ": live journey views."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The static "
+        },
+        {
+          "k": "c",
+          "v": "script_timeline.png"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "residual_chain.png"
+        },
+        {
+          "k": "t",
+          "v": " images (stale at the "
+        },
+        {
+          "k": "c",
+          "v": "v303"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v407"
+        },
+        {
+          "k": "t",
+          "v": " figure state, with alt text and captions still describing the old eleven-phase/"
+        },
+        {
+          "k": "c",
+          "v": "v237"
+        },
+        {
+          "k": "t",
+          "v": " state) are replaced by two interactive components, "
+        },
+        {
+          "k": "c",
+          "v": "SuiteTimeline.tsx"
+        },
+        {
+          "k": "t",
+          "v": " (17 phases, "
+        },
+        {
+          "k": "c",
+          "v": "v1"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v481"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "c",
+          "v": "ResidualChain.tsx"
+        },
+        {
+          "k": "t",
+          "v": " (the reduction chain through the certification round to the bedrock): every phase/step lists representative "
+        },
+        {
+          "k": "c",
+          "v": "vN"
+        },
+        {
+          "k": "t",
+          "v": " scripts that run live in the browser via the existing Pyodide reproducer, exactly like the dependency graph. Stale counts fixed (“"
+        },
+        {
+          "k": "m",
+          "v": "\\sim"
+        },
+        {
+          "k": "t",
+          "v": "295-script journey”, “260 scripts” "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " the generated suite total). The dependency graph itself was verified current ("
+        },
+        {
+          "k": "c",
+          "v": "v479"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v481"
+        },
+        {
+          "k": "t",
+          "v": " present; all 288 referenced scripts exist in the registry and the website mirror)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Prediction surface: the empirical-audit narrative restructured."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The single "
+        },
+        {
+          "k": "m",
+          "v": "\\sim"
+        },
+        {
+          "k": "t",
+          "v": "13 000-character audit paragraph in "
+        },
+        {
+          "k": "c",
+          "v": "lib/predictions.ts"
+        },
+        {
+          "k": "t",
+          "v": " is split into twelve dated, verdict-badged rounds ("
+        },
+        {
+          "k": "c",
+          "v": "AuditRound"
+        },
+        {
+          "k": "t",
+          "v": ": date, title, verdict, two-sentence summary, full unabridged record on expand) plus a domain-chip row and the anti-double-counting note — same content, readable surface. Long-token overflow fixed ("
+        },
+        {
+          "k": "c",
+          "v": "break-words"
+        },
+        {
+          "k": "t",
+          "v": ") in the dependency-graph detail panel and the universal-gap-lab residual cards; the over-long "
+        },
+        {
+          "k": "c",
+          "v": "ALPHA.QUILLEN"
+        },
+        {
+          "k": "t",
+          "v": " residual note tightened to its current state ("
+        },
+        {
+          "k": "c",
+          "v": "v470"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v472"
+        },
+        {
+          "k": "t",
+          "v": ", residual unchanged)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Generated figures + captions synced."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "make_figures.py"
+        },
+        {
+          "k": "t",
+          "v": ": the script timeline gains the "
+        },
+        {
+          "k": "c",
+          "v": "v408"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v481"
+        },
+        {
+          "k": "t",
+          "v": " certification-round phase (title now "
+        },
+        {
+          "k": "m",
+          "v": "\\sim"
+        },
+        {
+          "k": "t",
+          "v": "475 scripts) and the residual chain gains the "
+        },
+        {
+          "k": "c",
+          "v": "v458"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v480"
+        },
+        {
+          "k": "t",
+          "v": " certification step (Kronheimer "
+        },
+        {
+          "k": "c",
+          "v": "v479"
+        },
+        {
+          "k": "t",
+          "v": ", four-interval "
+        },
+        {
+          "k": "c",
+          "v": "v480"
+        },
+        {
+          "k": "t",
+          "v": ", crossed-product "
+        },
+        {
+          "k": "c",
+          "v": "v469"
+        },
+        {
+          "k": "t",
+          "v": ") with sub-text wrapping fixed; figures regenerated (PDF + website PNG). The stale figure captions updated: "
+        },
+        {
+          "k": "c",
+          "v": "introduction"
+        },
+        {
+          "k": "t",
+          "v": " (timeline caption now spans the full arc), "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " (residual-chain caption now states the "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " bedrock and certification round; QFT-skeleton caption now names the one "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "residual instead of the outdated “two open items”). No numbers, statuses or claims change anywhere."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "KaTeX macro fix (broken formula rendering)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Formulas copied from the document set that use the shared TeX macros ("
+        },
+        {
+          "k": "c",
+          "v": "\\gcar"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "\\Nfam"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "\\cthree"
+        },
+        {
+          "k": "t",
+          "v": ", …) rendered as red KaTeX errors on the site (e.g. the "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi_0^{\\mathrm{tree}}"
+        },
+        {
+          "k": "t",
+          "v": " icosahedral-combinatorics formula on the Origin-Theory page). A shared macro map ("
+        },
+        {
+          "k": "c",
+          "v": "lib/katex-macros.ts"
+        },
+        {
+          "k": "t",
+          "v": ", mirroring the "
+        },
+        {
+          "k": "c",
+          "v": "changelog.tex"
+        },
+        {
+          "k": "t",
+          "v": " preamble) is now passed to every KaTeX render; an automated scan of all 19 site routes finds zero "
+        },
+        {
+          "k": "c",
+          "v": "katex-error"
+        },
+        {
+          "k": "t",
+          "v": " nodes."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Readability pass (text walls clamped, content unchanged)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " A reusable "
+        },
+        {
+          "k": "c",
+          "v": "Expandable"
+        },
+        {
+          "k": "t",
+          "v": " component clamps long mirror prose with a fade "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " “Show more” toggle — applied to the paper-section bodies and front-box bullet lists ("
+        },
+        {
+          "k": "c",
+          "v": "PaperSection.tsx"
+        },
+        {
+          "k": "t",
+          "v": ", the home set pages and "
+        },
+        {
+          "k": "c",
+          "v": "/papers/[slug]"
+        },
+        {
+          "k": "t",
+          "v": "), the dependency-graph node summaries and the prediction-card descriptions. Nothing is deleted; the full text expands in place."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Hylaean ecosystem card corrected."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The "
+        },
+        {
+          "k": "c",
+          "v": "hylaean.ai"
+        },
+        {
+          "k": "t",
+          "v": " card spoke of “Field AI” with structure tags that did not describe the project. It now speaks consistently of "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Hylaean"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " and is grounded in the project documentation ("
+        },
+        {
+          "k": "c",
+          "v": "_documentation/core-physics/big-picture.md"
+        },
+        {
+          "k": "t",
+          "v": ") and the site's own status log: one cognitive substrate behaving like a physical material, knowledge "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " attractor valleys, question "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " boundary condition, answers committed only on physical landing, capability claims gate-checked against a machine-checked claim registry (honest negatives published) — borrowing TFPT's structural discipline, not its physics predictions. The Agentic-Commerce card reference updated accordingly."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-14",
+    "dateLabel": "2026-07-14",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v479"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v481"
+      },
+      {
+        "k": "t",
+        "v": " — the bird's-eye “overlooked tools” round: R3's graph"
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": "geometry bridge discharged to Kronheimer 1989; the four "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4"
+      },
+      {
+        "k": "t",
+        "v": " marks realised as the exactly solvable "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "four-interval"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " multilocal modular geometry with "
+      },
+      {
+        "k": "m",
+        "v": "\\omega\\circ\\rho=\\omega"
+      },
+      {
+        "k": "t",
+        "v": " manifest; and the absolute "
+      },
+      {
+        "k": "m",
+        "v": "\\nu"
+      },
+      {
+        "k": "t",
+        "v": "-scale collapsed to a one-parameter, PS-window-bracketed candidate under the carrier normalisation "
+      },
+      {
+        "k": "m",
+        "v": "y_\\nu{=}y_t"
+      },
+      {
+        "k": "t",
+        "v": " — "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "no gate closes, no marker moves"
+          }
+        ]
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v479_kronheimer_quiver_bridge.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.KRONHEIMER.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The R3 residual of the "
+        },
+        {
+          "k": "m",
+          "v": "\\det K{=}1"
+        },
+        {
+          "k": "t",
+          "v": " keystone ("
+        },
+        {
+          "k": "c",
+          "v": "v344"
+        },
+        {
+          "k": "t",
+          "v": ": “the rewrite attractor graph IS the du Val singularity”) is an ESTABLISHED THEOREM — Kronheimer's ALE hyper-Kähler quotient construction "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " Torelli classification (J. Diff. Geom. 29 (1989) 665 and 685) — with all finite input data already compiler outputs, machine-checked "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": ": the Kac marks "
+        },
+        {
+          "k": "m",
+          "v": "\\{1,2,2,3,3,4,4,5,6\\}"
+        },
+        {
+          "k": "t",
+          "v": " are the null vector of the affine-"
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " Cartan matrix AND the Perron vector "
+        },
+        {
+          "k": "m",
+          "v": "A\\delta{=}2\\delta"
+        },
+        {
+          "k": "t",
+          "v": " of the rewrite attractor ("
+        },
+        {
+          "k": "c",
+          "v": "v312"
+        },
+        {
+          "k": "t",
+          "v": "); the hyper-Kähler quotient dimension count lands exactly on "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " (the "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb{C}^2/\\Gamma"
+        },
+        {
+          "k": "t",
+          "v": " geometry; "
+        },
+        {
+          "k": "m",
+          "v": "\\sum_{\\mathrm{edges}}d_id_j{=}\\sum d_i^2{=}120"
+        },
+        {
+          "k": "t",
+          "v": " forced by the null identity); the gauge datum is "
+        },
+        {
+          "k": "m",
+          "v": "|2I|{=}120{=}|\\mu_4|h(E_8)"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "h(E_8){=}30{=}2\\cdot3\\cdot5"
+        },
+        {
+          "k": "t",
+          "v": "; the resolution carries the unimodular "
+        },
+        {
+          "k": "m",
+          "v": "-E_8"
+        },
+        {
+          "k": "t",
+          "v": " form ("
+        },
+        {
+          "k": "m",
+          "v": "\\det{=}1"
+        },
+        {
+          "k": "t",
+          "v": ", SNF "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " identity — the Poincaré link) with "
+        },
+        {
+          "k": "m",
+          "v": "3\\cdot8{=}24"
+        },
+        {
+          "k": "t",
+          "v": " deformation parameters. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": " the theorems are cited, not re-proved (import class of NPW26/MMST/AGT); "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the residual premise "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "transforms"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " to “the raw seam supplies ALE hyper-Kähler data asymptotic to the "
+        },
+        {
+          "k": "m",
+          "v": "(2,3,5)"
+        },
+        {
+          "k": "t",
+          "v": " cone” — the same single arrow as "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v346"
+        },
+        {
+          "k": "t",
+          "v": " L2). Integrated in "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": " (R3 keybox "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " new Kronheimer paragraph) and "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " (Kummer/du Val); ledger rows "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.KRONHEIMER.01"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.DETK.01"
+        },
+        {
+          "k": "t",
+          "v": " update note; Wolfram mirror added to the extension file ("
+        },
+        {
+          "k": "m",
+          "v": "+2"
+        },
+        {
+          "k": "t",
+          "v": " exact checks, counted with the next verified engine run — the local engine is currently unactivated; the identical statements are sympy-exact in "
+        },
+        {
+          "k": "c",
+          "v": "v479"
+        },
+        {
+          "k": "t",
+          "v": "). LEAN: the finite input data are kernel-checked in "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier/KronheimerMarks.lean"
+        },
+        {
+          "k": "t",
+          "v": " (marks "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " null/Perron vector over "
+        },
+        {
+          "k": "m",
+          "v": "\\Z"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\sum\\delta_i^2{=}120{=}4\\cdot30"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "30{=}2\\cdot3\\cdot5"
+        },
+        {
+          "k": "t",
+          "v": ", dimension count "
+        },
+        {
+          "k": "m",
+          "v": "=4"
+        },
+        {
+          "k": "t",
+          "v": "; lake build clean, "
+        },
+        {
+          "k": "c",
+          "v": "#print axioms"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the three standard kernel axioms only)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v480_multilocal_four_interval.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGEO.MULTILOCAL.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The seam circle minus its four marks IS the "
+        },
+        {
+          "k": "m",
+          "v": "n{=}4"
+        },
+        {
+          "k": "t",
+          "v": " multi-interval region of a chiral free fermion — the class whose multi-interval modular theory is exactly known (Casini–Huerta mixing term; Longo–Xu; Rehren–Tedesco multilocal fermions; KLM: holomorphic "
+        },
+        {
+          "k": "m",
+          "v": "\\Leftrightarrow"
+        },
+        {
+          "k": "t",
+          "v": " trivial multi-interval inclusion, "
+        },
+        {
+          "k": "m",
+          "v": "\\mu{=}1"
+        },
+        {
+          "k": "t",
+          "v": " — the same one bit as "
+        },
+        {
+          "k": "m",
+          "v": "\\det K{=}1"
+        },
+        {
+          "k": "t",
+          "v": "); until now the suite used only the single-ball CHM boost ("
+        },
+        {
+          "k": "c",
+          "v": "v358"
+        },
+        {
+          "k": "t",
+          "v": "). On the exactly solvable antiperiodic critical ring: "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the quarter-turn clock is a signed permutation with "
+        },
+        {
+          "k": "m",
+          "v": "\\rho^4{=}{-}1"
+        },
+        {
+          "k": "t",
+          "v": " EXACTLY (the fermionic "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " clock is the order-"
+        },
+        {
+          "k": "m",
+          "v": "8"
+        },
+        {
+          "k": "t",
+          "v": " double-cover lift — the same "
+        },
+        {
+          "k": "m",
+          "v": "\\Z_2"
+        },
+        {
+          "k": "t",
+          "v": "-lift pattern as "
+        },
+        {
+          "k": "m",
+          "v": "2I"
+        },
+        {
+          "k": "t",
+          "v": " over "
+        },
+        {
+          "k": "m",
+          "v": "I"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "its primitive-"
+        },
+        {
+          "k": "m",
+          "v": "8"
+        },
+        {
+          "k": "t",
+          "v": "th-root character projectors decouple the "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": "-interval covariance at "
+        },
+        {
+          "k": "m",
+          "v": "10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": ", each sector a single-interval quarter-ring kernel with boundary twist ("
+        },
+        {
+          "k": "m",
+          "v": "10^{-14}"
+        },
+        {
+          "k": "t",
+          "v": " spectra); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "\\rho C\\rho^{-1}{=}C"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "10^{-14}"
+        },
+        {
+          "k": "t",
+          "v": ", so "
+        },
+        {
+          "k": "m",
+          "v": "\\omega\\circ\\rho{=}\\omega"
+        },
+        {
+          "k": "t",
+          "v": " holds "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "manifestly"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " at the "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": "-interval state level, and a one-site displacement re-couples the sectors at "
+        },
+        {
+          "k": "m",
+          "v": "10^{-2}"
+        },
+        {
+          "k": "t",
+          "v": " (negative control); "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the cross-interval modular coupling peaks on the conjugate-point diagonal (the Casini–Huerta mixing shadow). "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "continuum theory cited; "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the raw-seam premise ("
+        },
+        {
+          "k": "c",
+          "v": "QGEO.SYM.01"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": ") unchanged. Integrated in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " (marks keybox "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " rigidity contract "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " v478 leg A), "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": " (BW paragraph), "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_4_frontier"
+        },
+        {
+          "k": "t",
+          "v": " (v358 companion note); Python-only by nature."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v481_seesaw_carrier_ladder.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "FLAV.NUSCALE.02"
+            },
+            {
+              "k": "t",
+              "v": ", CANDIDATE class, genre "
+            },
+            {
+              "k": "c",
+              "v": "v467"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "c",
+              "v": "v468"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "FLAV.NUSCALE.01"
+        },
+        {
+          "k": "t",
+          "v": "'s "
+        },
+        {
+          "k": "m",
+          "v": "y_\\nu{=}1"
+        },
+        {
+          "k": "t",
+          "v": " probe was not the carrier normalisation: one "
+        },
+        {
+          "k": "m",
+          "v": "SO(10)"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbf{16}"
+        },
+        {
+          "k": "t",
+          "v": " per family "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the minimal Yukawa sector ("
+        },
+        {
+          "k": "m",
+          "v": "\\mathbf{10}_H"
+        },
+        {
+          "k": "t",
+          "v": " / PS "
+        },
+        {
+          "k": "m",
+          "v": "(1,2,2)"
+        },
+        {
+          "k": "t",
+          "v": ") forces "
+        },
+        {
+          "k": "m",
+          "v": "y_\\nu{=}y_t"
+        },
+        {
+          "k": "t",
+          "v": " at the matching scale (named premise). With explicit "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": "-loop RG (gauge/"
+        },
+        {
+          "k": "m",
+          "v": "y_t"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "m",
+          "v": "\\lambda"
+        },
+        {
+          "k": "t",
+          "v": " up; ADKLR Weinberg-operator running down, hep-ph/0108005) the "
+        },
+        {
+          "k": "m",
+          "v": "(y_\\nu,M_R)"
+        },
+        {
+          "k": "t",
+          "v": " trade-off collapses to "
+        },
+        {
+          "k": "m",
+          "v": "M_R"
+        },
+        {
+          "k": "t",
+          "v": " alone: the observed "
+        },
+        {
+          "k": "m",
+          "v": "m_3{=}0.0503"
+        },
+        {
+          "k": "t",
+          "v": " eV demands "
+        },
+        {
+          "k": "m",
+          "v": "M_R{=}9.3{\\times}10^{13}"
+        },
+        {
+          "k": "t",
+          "v": " GeV — INSIDE the PS window "
+        },
+        {
+          "k": "m",
+          "v": "[4.2{\\times}10^{13},2.4{\\times}10^{15}]"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v249"
+        },
+        {
+          "k": "t",
+          "v": ") at "
+        },
+        {
+          "k": "m",
+          "v": "\\log_{\\cthree}(\\Mbar/M_R){=}3.15"
+        },
+        {
+          "k": "t",
+          "v": " (the "
+        },
+        {
+          "k": "m",
+          "v": "y_\\nu{=}1"
+        },
+        {
+          "k": "t",
+          "v": " inversion gives the structureless "
+        },
+        {
+          "k": "m",
+          "v": "2.58"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "X"
+        },
+        {
+          "k": "t",
+          "v": "honesty gate: the integer rung "
+        },
+        {
+          "k": "m",
+          "v": "M_R{=}\\cthree^3\\Mbar"
+        },
+        {
+          "k": "t",
+          "v": " predicts "
+        },
+        {
+          "k": "m",
+          "v": "m_3{=}0.030"
+        },
+        {
+          "k": "t",
+          "v": " eV — "
+        },
+        {
+          "k": "m",
+          "v": "40\\%"
+        },
+        {
+          "k": "t",
+          "v": " low at "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": "-loop ("
+        },
+        {
+          "k": "m",
+          "v": "\\kappa"
+        },
+        {
+          "k": "t",
+          "v": " run-down "
+        },
+        {
+          "k": "m",
+          "v": "0.794"
+        },
+        {
+          "k": "t",
+          "v": ") — the ladder pin is DECLINED per "
+        },
+        {
+          "k": "c",
+          "v": "v354"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v355"
+        },
+        {
+          "k": "t",
+          "v": "; the decision computation is named ("
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": "-loop SM "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " explicit PS thresholds). What survives: a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "-parameter, window-bracketed "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "candidate with the falsifiable band "
+        },
+        {
+          "k": "m",
+          "v": "m_3\\in[0.002,0.115]"
+        },
+        {
+          "k": "t",
+          "v": " eV and the NO floor "
+        },
+        {
+          "k": "m",
+          "v": "\\Sigma m_\\nu{=}0.059"
+        },
+        {
+          "k": "t",
+          "v": " eV; frozen record untouched. Integrated in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2_standard_model"
+        },
+        {
+          "k": "t",
+          "v": " (new paragraph after "
+        },
+        {
+          "k": "c",
+          "v": "v272"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "c",
+          "v": "introduction"
+        },
+        {
+          "k": "t",
+          "v": " status card (third named candidate), "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_5_redteam"
+        },
+        {
+          "k": "t",
+          "v": "; ledger rows "
+        },
+        {
+          "k": "c",
+          "v": "FLAV.NUSCALE.02"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "FLAV.NUSCALE.01"
+        },
+        {
+          "k": "t",
+          "v": " update note; Python-only by nature."
+        }
+      ],
+      [
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Honest negative (experiments-only, no promotion):"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the Donnelly/Atiyah–Bott equivariant heat-kernel route for the "
+        },
+        {
+          "k": "m",
+          "v": "\\phi_0"
+        },
+        {
+          "k": "t",
+          "v": " puncture target ("
+        },
+        {
+          "k": "c",
+          "v": "HYP.PHI0.PUNCTURE.01"
+        },
+        {
+          "k": "t",
+          "v": ") types the KIND of term (order-"
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " equivariant contact datum; the exact weights "
+        },
+        {
+          "k": "m",
+          "v": "\\sum_{k=1}^{n-1}\\tfrac1{4\\sin^2(\\pi k/n)}\n{=}\\tfrac{n^2-1}{12}"
+        },
+        {
+          "k": "t",
+          "v": " verified) but does NOT force the value "
+        },
+        {
+          "k": "m",
+          "v": "48\\cthree^4"
+        },
+        {
+          "k": "t",
+          "v": " (pure rationals vs "
+        },
+        {
+          "k": "m",
+          "v": "\\pi^{-4}"
+        },
+        {
+          "k": "t",
+          "v": ") — recorded in "
+        },
+        {
+          "k": "c",
+          "v": "experiments/theory-contracts/phi0_donnelly_equivariant_probe.py"
+        },
+        {
+          "k": "t",
+          "v": "; the target stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
     "date": "2026-07-13",
     "dateLabel": "2026-07-13",
     "heading": [

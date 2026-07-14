@@ -58,6 +58,9 @@ _game/
 # LinkedIn outreach drafts (article + generated banner/figures); local-only, not shipped
 /linkedin/
 
+# Medium article draft (story + generated figures); local-only, not part of the published record
+/medium/
+
 # Three.js / Rapier simulation (local-only; not part of the published record)
 simulation/
 

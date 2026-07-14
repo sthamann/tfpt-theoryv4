@@ -3086,6 +3086,34 @@ Module[{frul, eig, tr, serR, mu1f, mu2f, closure, c3v, m2v36},
     Simplify[(4608 Pi^2/17)/closure - (72/17) (8 Pi)^9] == 0];
 ];
 
+(* ==== v479 round: the Kronheimer quiver bridge -- the exact content: the Kac
+   marks are the null vector of the affine-E8 Cartan matrix AND the Perron vector
+   (A delta = 2 delta) with multiset {1,2,2,3,3,4,4,5,6} = 2I irrep dims; the
+   hyper-Kaehler quotient dimension count dim_R M - 4 dim_R G = 4 with
+   sum_edges d_i d_j = sum d_i^2 = 120 = |mu4| h(E8), h(E8) = 30 = 2*3*5; and the
+   finite-E8 Cartan is unimodular with Smith normal form = identity (the
+   Poincare-sphere link, the det K = 1 face); mirrors v479. ==== *)
+Module[{finEdges, affEdges, adj, aff, caff, marks, dsum, esum, dimM, dimG, dimX,
+        cfin, snf},
+  finEdges = {{1, 3}, {3, 4}, {4, 5}, {5, 6}, {6, 7}, {7, 8}, {2, 4}};
+  affEdges = Append[finEdges, {8, 9}];
+  adj[n_, ed_] := Module[{m = ConstantArray[0, {n, n}]},
+    Do[m[[e[[1]], e[[2]]]] = 1; m[[e[[2]], e[[1]]]] = 1, {e, ed}]; m];
+  aff = adj[9, affEdges]; caff = 2 IdentityMatrix[9] - aff;
+  marks = {2, 3, 4, 6, 5, 4, 3, 2, 1};
+  checkExact["v479 SEAM.KRONHEIMER.01 (i): the Kac marks {1,2,2,3,3,4,4,5,6} are simultaneously the null vector of the affine-E8 Cartan matrix (C_aff delta = 0) and the Perron eigenvector of the McKay graph (A delta = 2 delta) -- the v312 rewrite-attractor vector, i.e. Kronheimer's quiver dimension vector",
+    caff . marks == ConstantArray[0, 9] && aff . marks == 2 marks &&
+    Sort[marks] == {1, 2, 2, 3, 3, 4, 4, 5, 6}];
+  esum = Total[marks[[#[[1]]]] marks[[#[[2]]]] & /@ affEdges];
+  dsum = Total[marks^2];
+  dimM = 4 esum; dimG = dsum - 1; dimX = dimM - 4 dimG;
+  cfin = 2 IdentityMatrix[8] - adj[8, finEdges];
+  snf = SmithDecomposition[cfin][[2]];
+  checkExact["v479 SEAM.KRONHEIMER.01 (ii): the Kronheimer hyper-Kaehler quotient dimension count -- dim_R M - 4 dim_R G = 4(sum_edges d_i d_j - sum d_i^2 + 1) = 4 (the C^2/Gamma geometry), with sum_edges d_i d_j = sum d_i^2 = 120 = |2I| = |mu4| h(E8) forced by the null identity (h(E8) = 30 = 2*3*5); and the finite-E8 Cartan is unimodular with Smith normal form = identity (the Poincare-sphere link = the det K = 1 face) with 3*8 = 24 deformation parameters",
+    esum == 120 && dsum == 120 && dimX == 4 && dsum == 4*30 && 30 == 2*3*5 &&
+    Det[cfin] == 1 && snf == IdentityMatrix[8] && 3*8 == 24];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

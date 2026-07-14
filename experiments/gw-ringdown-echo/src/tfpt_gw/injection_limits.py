@@ -70,8 +70,10 @@ from .signature_battery import (
 )
 from .strain_data import (
     GMSUN_OVER_C3,
+    align_ringdown,
     apply_whitening,
     detector_frame_mass,
+    highpass,
     read_hdf5,
     whitening_filter_gated,
 )
@@ -142,7 +144,8 @@ def _recovery_fraction(rho_data: np.ndarray, resp: np.ndarray, bg_sorted: np.nda
     return hits / len(positions)
 
 
-def limit_event(event: str, hires: bool = False) -> EventLimit:
+def limit_event(event: str, hires: bool = False, align: bool = False,
+                highpass_hz: float | None = None) -> EventLimit:
     meta = json.loads((STRAIN_DIR / meta_name(event, hires)).read_text(encoding="utf-8"))
     merger_gps, mf_src = float(meta["gps"]), float(meta["mf"])
     mf = detector_frame_mass(event, mf_src)
@@ -154,14 +157,24 @@ def limit_event(event: str, hires: bool = False) -> EventLimit:
         s = read_hdf5(str(STRAIN_DIR / Path(fname).name))
         res.fs_hz = round(s.fs)
         merger = s.index_at(merger_gps)
-        n = len(s.data)
+        # OPT-IN (default off = frozen behavior): high-pass to remove sub-hz seismic power
+        # that a single-Welch whitening mishandles on O4 4 kHz data (needed for GW250114).
+        data = highpass(s.data, s.dt, highpass_hz) if highpass_hz else s.data
+        n = len(data)
 
         # EXACT Stage-1d preprocessing: off-source gated PSD -> whiten -> joint
-        # (220)+(221) subtraction; amp220 is the measured A220 (whitened units)
+        # (220)+(221) subtraction; amp220 is the measured A220 (whitened units). With the
+        # O4 conditioning on (highpass set), use a median-Welch PSD (robust to the
+        # non-stationary lines that otherwise over-whiten and suppress the ringdown).
         psd_i, scale = whitening_filter_gated(
-            s.data, s.dt, merger - int(GATE_PRE_S / s.dt),
-            merger + int(GATE_POST_S / s.dt))
-        white = apply_whitening(s.data, psd_i, scale)
+            data, s.dt, merger - int(GATE_PRE_S / s.dt),
+            merger + int(GATE_POST_S / s.dt),
+            average="median" if highpass_hz else "mean")
+        white = apply_whitening(data, psd_i, scale)
+        # OPT-IN (default off = frozen behavior): align the QNM start to the whitened
+        # ringdown-envelope peak (fixes the ~15-40 ms nominal-merger early-start bias).
+        if align:
+            merger = align_ringdown(white, merger, s.dt)
         f0, tau0 = qnm_22n(mf, AF_INJ, 0)
         f1, tau1 = qnm_22n(mf, AF_INJ, 1)
         resid, amp220 = subtract_qnm_multimode(white, merger,

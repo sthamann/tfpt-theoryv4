@@ -6,6 +6,7 @@ import { FileCode2, Play } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { RichText } from "@/lib/richtext";
 import { useReproducer } from "./Reproducer";
+import { Expandable } from "./Expandable";
 
 /**
  * Interactive dependency DAG of the TFPT compiler closure.
@@ -245,7 +246,7 @@ const NODES: DagNode[] = [
     marker: "[E] / [C]",
     title: "Masses & mixings — the φ₀-ladder",
     summary:
-      "All nine masses, CKM and the PMNS skeleton from one master formula m = (v/√2) λ_Y^L Λ with the seed φ₀. The charged-lepton coefficients (16/7, 4/3, 7/6) are exact and the quark mass ratios (55/117, …) are integer Plücker readouts. The ratios are closed; only one overall amplitude v_geo remains — the same dimensionful anchor as gravity's 1/G, confirmed as the single dimensionful input of the whole theory (v364). The downstream F_transfer readouts are now typed, runnable solvers each with a kill test — Koide source→pole (v371), η_B via the BDP Boltzmann network (v372), the finite-T axion relic (v373), m_p/m_e (v374) — folded into a status-typed prediction-observatory CI (v375); they stay [C] bridges, never compiler outputs.",
+      "All nine masses, CKM and the PMNS skeleton from one master formula m = (v/√2) λ_Y^L Λ with the seed φ₀. The charged-lepton coefficients (16/7, 4/3, 7/6) are exact and the quark mass ratios (55/117, …) are integer Plücker readouts. The ratios are closed; only one overall amplitude v_geo remains — the same dimensionful anchor as gravity's 1/G, confirmed as the single dimensionful input of the whole theory (v364). The downstream F_transfer readouts are now typed, runnable solvers each with a kill test — Koide source→pole (v371), η_B via the BDP Boltzmann network (v372), the finite-T axion relic (v373), m_p/m_e (v374) — folded into a status-typed prediction-observatory CI (v375); they stay [C] bridges, never compiler outputs. The absolute neutrino scale has a named one-parameter CANDIDATE (v481, FLAV.NUSCALE.02): under the carrier normalisation y_ν = y_t the (y_ν, M_R) trade-off collapses to M_R alone, with the required M_R = 9.3×10¹³ GeV inside the PS window at log_c₃ rung 3.15 and the integer c₃³-rung explicitly declined at 1-loop — nothing closes, the frozen record is untouched.",
     inputs: ["R, L", "φ₀ (from c₃)"],
     outputs: ["9 masses, mixings"],
     failure: "Hierarchy mismatch.",
@@ -365,6 +366,7 @@ const NODES: DagNode[] = [
       "v374_ftransfer_qcd.py",
       "v375_observatory_registry.py",
       "v397_external_clock_probe.py",
+      "v481_seesaw_carrier_ladder.py",
     ],
   },
   {
@@ -447,7 +449,7 @@ const NODES: DagNode[] = [
     marker: "[E]/[C] closed modulo cited theorems",
     title: "Boundary QFT & the seam bedrock",
     summary:
-      "On top of E₈ the boundary QFT is one relative object — the Modular Spectral Closure (v258–v261): the finite Dirac is the covariance induction of the seam KMS state, the spectral-action cutoff IS that KMS weight (f₂/f₀ = 1), and the seam, carrier-16 and E₈ live on one Kummer/K3. The perturbative 4D S-matrix S_pert is Epstein–Glaser-constructible with the SM gauge β-coefficients (41/10, −19/6, −7), LSZ-bridged with one-loop unitarity for matter+gauge — now closed to all orders as a typed EG/BRST contract (v381: dim-4 power-counting ⇒ finite counterterms, BRST nilpotency for su(3)×su(2), the seam gap ⇒ adiabatic limit, with imported all-order Tₙ existence and Slavnov–Taylor) — and the R²/Weyl² gravity sector's Stelle ghost is a Seeley–DeWitt truncation artefact (the untruncated KMS spectral-action Hessian is entire and zero-free, so resummation decouples it), so perturbative spin-2 graviton unitarity is established [C] (v304/v370/v380). The ambient QG.AMB.01 measure is discharged as a redundancy (v369 + v379) — a certification object, not missing dynamics, gap-decoupled (Decoupling Theorem v337: every readout factors through the gapped admissible spectrum, susceptibility χ=729/665, margin 1.648>0) and conditional only on SEAM.EQUIV.01 + Bisognano–Wichmann. The whole layer closes modulo cited theorems via ONE keystone, the Seam Equivalence Theorem (SEAM.EQUIV.01): 'the raw RP seam state IS the holomorphic (E₈)₁ boundary net at τ=i'. Its conformal-deck face QGEO.SYM.01 is a corollary (a conformal net's vacuum is rotation-invariant by axiom, v335). The target net is pinned at every computable level by an explicit gapped lattice model (v367/v368) and the S3 closure stack (central charge c = 8 from the lattice v376, the (E₈)₁ character 248/1 v377, genus-1 torus GSD = 1 v378, reflection positivity v379), and its two heavy legs are literature-anchored (v336): the continuum scaling limit (Osborne–Stottmeister, arXiv:2107.13834, free lattice fermions → chiral CFT) and the OS reconstruction of unitary lattice VOAs (Adamo–Moriwaki–Tanimoto), with (E₈)₁ inside their range — so the one residual is [O] = the abstract continuum scaling-limit existence only (v336), a cited published theorem (closed modulo a cited theorem, not solved). Its 128-spinor extension leg is certified at net level by the peer-reviewed crossed-product package (v469: locality integer h_s = 16/16 = 1 ∈ ℤ, Longo–Rehren 1995 / Böckenhauer 1996 / Böckenhauer–Evans 1998 / KLM μ = 4/2² = 1 ⇒ holomorphic), with the AGT/AMT lattice-VOA route demoted to an independent second witness, and the realisation input reduced from model fiat to invariant level R1′ (quasi-free + gap + class D + c₋ = 8 from P1; computed FHS Chern |C| = 1, ν = 16, the Kitaev 16-fold-way class; Lean parallel route seamResidualClosed'). SEAM.EQUIV.01 stays [O]. Lean-pinned (FORM.SEAM.MMST.01, SeamScalingLimit.lean) to those named steps plus the derived Recovery gap Δ = 6·ln(3/2) ≈ 2.43 > 0. The full sprint-by-sprint reduction (v269 → v302) lives on the /changelog page.",
+      "On top of E₈ the boundary QFT is one relative object — the Modular Spectral Closure (v258–v261): the finite Dirac is the covariance induction of the seam KMS state, the spectral-action cutoff IS that KMS weight (f₂/f₀ = 1), and the seam, carrier-16 and E₈ live on one Kummer/K3. The perturbative 4D S-matrix S_pert is Epstein–Glaser-constructible with the SM gauge β-coefficients (41/10, −19/6, −7), LSZ-bridged with one-loop unitarity for matter+gauge — now closed to all orders as a typed EG/BRST contract (v381: dim-4 power-counting ⇒ finite counterterms, BRST nilpotency for su(3)×su(2), the seam gap ⇒ adiabatic limit, with imported all-order Tₙ existence and Slavnov–Taylor) — and the R²/Weyl² gravity sector's Stelle ghost is a Seeley–DeWitt truncation artefact (the untruncated KMS spectral-action Hessian is entire and zero-free, so resummation decouples it), so perturbative spin-2 graviton unitarity is established [C] (v304/v370/v380). The ambient QG.AMB.01 measure is discharged as a redundancy (v369 + v379) — a certification object, not missing dynamics, gap-decoupled (Decoupling Theorem v337: every readout factors through the gapped admissible spectrum, susceptibility χ=729/665, margin 1.648>0) and conditional only on SEAM.EQUIV.01 + Bisognano–Wichmann. The whole layer closes modulo cited theorems via ONE keystone, the Seam Equivalence Theorem (SEAM.EQUIV.01): 'the raw RP seam state IS the holomorphic (E₈)₁ boundary net at τ=i'. Its conformal-deck face QGEO.SYM.01 is a corollary (a conformal net's vacuum is rotation-invariant by axiom, v335). The target net is pinned at every computable level by an explicit gapped lattice model (v367/v368) and the S3 closure stack (central charge c = 8 from the lattice v376, the (E₈)₁ character 248/1 v377, genus-1 torus GSD = 1 v378, reflection positivity v379), and its two heavy legs are literature-anchored (v336): the continuum scaling limit (Osborne–Stottmeister, arXiv:2107.13834, free lattice fermions → chiral CFT) and the OS reconstruction of unitary lattice VOAs (Adamo–Moriwaki–Tanimoto), with (E₈)₁ inside their range — so the one residual is [O] = the abstract continuum scaling-limit existence only (v336), a cited published theorem (closed modulo a cited theorem, not solved). Its 128-spinor extension leg is certified at net level by the peer-reviewed crossed-product package (v469: locality integer h_s = 16/16 = 1 ∈ ℤ, Longo–Rehren 1995 / Böckenhauer 1996 / Böckenhauer–Evans 1998 / KLM μ = 4/2² = 1 ⇒ holomorphic), with the AGT/AMT lattice-VOA route demoted to an independent second witness, and the realisation input reduced from model fiat to invariant level R1′ (quasi-free + gap + class D + c₋ = 8 from P1; computed FHS Chern |C| = 1, ν = 16, the Kitaev 16-fold-way class; Lean parallel route seamResidualClosed'). SEAM.EQUIV.01 stays [O]. Two further reductions sharpen the residual without moving it: the R3 'attractor graph IS the du Val singularity' bridge is discharged to Kronheimer's 1989 ALE hyper-Kähler quotient theorems with every finite input a compiler output (v479: Kac marks = null/Perron vector, quotient dim 4, |2I| = 120, unimodular −E₈ resolution — the premise transforms to 'the raw seam supplies the ALE/orbifold datum'); and the four μ₄ marks are the exactly solvable four-interval multilocal free-fermion geometry (v480: binary clock ρ⁴ = −1, exact 8th-root sector decoupling, ω∘ρ = ω manifest at the state level, Casini–Huerta mixing shadow — the bedrock mechanism in the cited multi-interval class, raw-seam premise unchanged). Lean-pinned (FORM.SEAM.MMST.01, SeamScalingLimit.lean) to those named steps plus the derived Recovery gap Δ = 6·ln(3/2) ≈ 2.43 > 0. The full sprint-by-sprint reduction (v269 → v302) lives on the /changelog page.",
     inputs: ["E₈", "seam KMS / DtN state"],
     outputs: ["one relative object; S_pert (1-loop unitary, matter+gauge)"],
     failure: "the seam net is not holomorphic (det K ≠ 1) / not the flat τ=i state.",
@@ -518,6 +520,8 @@ const NODES: DagNode[] = [
       "v464_seam_oneparticle_rigidity.py",
       "v469_seam_crossedproduct_route.py",
       "v471_seam_horizon_replica.py",
+      "v479_kronheimer_quiver_bridge.py",
+      "v480_multilocal_four_interval.py",
     ],
   },
   {
@@ -740,9 +744,11 @@ export function VerificationDag() {
             {node.marker}
           </span>
         </div>
-        <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-300">
-          <RichText text={node.summary} />
-        </p>
+        <Expandable collapsedHeight={140} className="mt-2 max-w-3xl">
+          <p className="break-words text-sm leading-relaxed text-slate-300">
+            <RichText text={node.summary} />
+          </p>
+        </Expandable>
 
         <div className="mt-4 grid gap-3 sm:grid-cols-3">
           <DetailCell label="Inputs" items={node.inputs} />
@@ -818,7 +824,7 @@ function DetailCell({
       >
         {label}
       </div>
-      <ul className="mt-1.5 space-y-1 text-xs leading-relaxed text-slate-300">
+      <ul className="mt-1.5 space-y-1 break-words text-xs leading-relaxed text-slate-300">
         {items.map((it, i) => (
           <li key={i}>
             <RichText text={it} />

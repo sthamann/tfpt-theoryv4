@@ -6,6 +6,8 @@ import { VerificationDag } from "@/components/VerificationDag";
 import { ScriptIndex } from "@/components/ScriptIndex";
 import { GravityEmergence } from "@/components/GravityEmergence";
 import { UniversalGapLab } from "@/components/UniversalGapLab";
+import { SuiteTimeline } from "@/components/SuiteTimeline";
+import { ResidualChain } from "@/components/ResidualChain";
 import { SCRIPT_TOTAL } from "@/lib/suite";
 import { REPO_URL, SITE_URL } from "@/lib/utils";
 
@@ -306,7 +308,7 @@ export default function VerificationPage() {
           <SectionHeader
             eyebrow="For the external reviewer"
             title="The attack surface, at a glance"
-            description="What is exact, what is conditional, what is an open premise, and how to kill it — so a reviewer can decide where to push without reading 260 scripts first. Nothing here is hidden: the exact kernel stands on its own; the conditional and open layers are explicitly typed."
+            description={`What is exact, what is conditional, what is an open premise, and how to kill it — so a reviewer can decide where to push without reading ${SCRIPT_TOTAL} scripts first. Nothing here is hidden: the exact kernel stands on its own; the conditional and open layers are explicitly typed.`}
           />
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {REVIEWER_MAP.map((box) => (
@@ -324,7 +326,7 @@ export default function VerificationPage() {
                 </div>
                 <ul className="mt-3 space-y-2">
                   {box.items.map((it) => (
-                    <li key={it} className="text-xs leading-relaxed text-slate-300">
+                    <li key={it} className="break-words text-xs leading-relaxed text-slate-300">
                       {it}
                     </li>
                   ))}
@@ -456,52 +458,27 @@ export default function VerificationPage() {
           <SectionHeader
             eyebrow="The journey & what remains"
             title="From two axioms to one geometric premise"
-            description="The verification suite grew in eleven phases — foundations, the Standard-Model readouts, the seam=horizon geometry, the horizon/flavor geometry, the R1–R5 and premise-(A) reductions, the PyR@TE RGE cross-checks, the AQFT bridges and closure, the F_transfer functor, the QGEO pillowcase, and the icosahedral capstone. The closure round drives the whole remaining structural question down, step by machine-checked step, to a target pinned at every computable level — closed modulo a cited published theorem (MMST/Adamo), not solved."
+            description={`The verification suite grew in phases — foundations, the Standard-Model readouts, the seam=horizon geometry, the reductions and external cross-checks, the AQFT closure, the icosahedral capstone, the seam-equivalence closing arc and the certification round (${SCRIPT_TOTAL} scripts today). The closure arc drives the whole remaining structural question down, step by machine-checked step, to a target pinned at every computable level — closed modulo a cited published theorem (MMST/Adamo), not solved. Both views below are live HTML, not images: every script chip runs the real Python in your browser.`}
           />
-          <figure className="mt-8 overflow-hidden rounded-2xl border border-slate-700/40 bg-slate-950/40 p-4 sm:p-6">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/figures/script_timeline.png"
-              alt="A vertical timeline of the verification suite in eleven phases: v1–v23 foundations (carrier D5+A3+mu4, E8 glue, alpha^-1, the anchor a=(1,1,2) to which c3 and g_car reduce); v24–v53 Standard-Model readouts; v54–v100 seam=horizon (one-sided Gauss-Bonnet c3=1/(8pi), Coxeter-30 cycle, gapped attractor); v101–v140 horizon and flavor geometry; v141–v158 the R1–R5 reductions and premise (A); v159–v169 PyR@TE RGE cross-checks; v170–v174 AQFT bridges; v175–v181 AQFT closure to the geometric bedrock; v182–v213 the F_transfer functor and frontier; v214–v218 the QGEO pillowcase and Sheet Diamond; v219–v237 the icosahedral capstone (McKay, CM norms, CP triality, the Kleinian seam and det K=1 = the Kitaev E8 phase, all from the (2,3,5) Brieskorn singularity)."
-              className="mx-auto w-full max-w-4xl rounded-lg bg-white"
-            />
-            <figcaption className="mt-4 text-sm leading-relaxed text-slate-400">
-              The eleven phases of the ~295-script journey — what each did, mathematically and
-              physically. The two axioms <span className="font-mono">c₃ = 1/(8π)</span> and{" "}
-              <span className="font-mono">g_car = 5</span> are not free knobs: they reduce to the single
-              parabolic anchor <span className="font-mono">a = (1,1,2)</span> plus π, and{" "}
-              <span className="font-mono">g_car = 5</span> is a bootstrap fixed point (forced three ways,
-              Lean-formalised).
-            </figcaption>
-          </figure>
-          <figure className="mt-8 overflow-hidden rounded-2xl border border-slate-700/40 bg-slate-950/40 p-4 sm:p-6">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/figures/residual_chain.png"
-              alt="A descending staircase showing the structural-residual reduction chain. From the naive 'build a quantum-gravity measure', through v175 net existence and full-cone reflection positivity (discharged to [E]), v176 one central theorem, v177–v178 the MARKS and KERNEL obligations with their finite cores closed, v179–v181 one geometric premise QGEO.SYM.01 (carrier mu4 clock = seam conformal deck), v194–v201 its non-circular form (state-invariance, mark-local DtN), v234 one condition with three faces forcing E8, v235 the Chern-Simons form holomorphic <=> det K = 1, down to v237 the physical bedrock: is the seam short-range-entangled (det K = 1, the Kitaev E8 phase)?"
-              className="mx-auto w-full max-w-4xl rounded-lg bg-white"
-            />
-            <figcaption className="mt-4 text-sm leading-relaxed text-slate-400">
-              The structural-residual reduction chain (v175 → v302). The whole remaining
-              &ldquo;quantum gravity&rdquo; question collapses, one machine-checked step at a time, from a
-              vague measure to a single <span className="text-slate-200">falsifiable physical</span>{" "}
-              condition: is the seam short-range-entangled (<span className="font-mono">det K = 1</span>,
-              the Kitaev E₈ phase)? Everything above is a theorem or an established citation;{" "}
-              <span className="font-mono">v_geo</span> stays the one no-unit primitive. The emergent-QFT
-              layer (<span className="font-mono">v258–v261</span>, the Modular Spectral Closure: Dirac =
-              covariance induction, cutoff = KMS weight, seam/carrier/E₈ on one Kummer/K3) collapses onto
-              this <em>same</em> bedrock — so the boundary QFT is one relative object that adds no new open
-              item. The bedrock is now closed modulo cited theorems via the Seam Equivalence Theorem
-              (<span className="font-mono">SEAM.EQUIV.01</span>) — the raw RP seam IS the holomorphic (E₈)₁
-              net at τ=i (its conformal-deck face <span className="font-mono">QGEO.SYM.01</span> is a
-              corollary): the target is pinned at every computable level by an explicit lattice model
-              (v367/v368) and the S3 closure stack (v376–v379), Lean-pinned (FORM.SEAM.MMST.01) to the
-              published MMST/Adamo theorems, leaving [O] = the cited continuum scaling-limit existence only
-              (v336; extension leg on the peer-reviewed crossed-product package, realisation at invariant
-              level, v469; stays [O]). The full step-by-step reduction lives on the{" "}
-              <span className="text-slate-200">/changelog</span> page.
-            </figcaption>
-          </figure>
+          <div className="mt-8">
+            <SuiteTimeline />
+          </div>
+          <div className="mt-8">
+            <ResidualChain />
+          </div>
+          <p className="mt-5 break-words text-sm leading-relaxed text-slate-400">
+            The bedrock is closed modulo cited theorems via the Seam Equivalence Theorem
+            (<span className="font-mono">SEAM.EQUIV.01</span>) — the raw RP seam IS the holomorphic (E₈)₁
+            net at τ=i (its conformal-deck face <span className="font-mono">QGEO.SYM.01</span> is a
+            corollary): the target is pinned at every computable level by an explicit lattice model
+            (v367/v368) and the S3 closure stack (v376–v379), Lean-pinned (FORM.SEAM.MMST.01) to the
+            published MMST/Adamo theorems, leaving [O] = the cited continuum scaling-limit existence only
+            (v336; extension leg on the peer-reviewed crossed-product package, realisation at invariant
+            level, v469; stays [O]). The emergent-QFT layer (<span className="font-mono">v258–v261</span>,
+            the Modular Spectral Closure) collapses onto this <em>same</em> bedrock — the boundary QFT is
+            one relative object that adds no new open item — and{" "}
+            <span className="font-mono">v_geo</span> stays the one no-unit primitive.
+          </p>
           <GravityEmergence />
         </div>
       </section>

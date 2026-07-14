@@ -717,10 +717,12 @@ the fresh angle --- the torus degeneracy is the discrete $H_1$ of the substrate,
 \emph{attractor} is the affine-$E_8$ graph (\vref{v312}) whose du~Val link is the Poincar\'e sphere ($H_1{=}0$,
 \vref{v232}), $\det K{=}1$ becomes a finite \emph{combinatorial} statement, no continuum limit.
 \end{itemize}
-\textbf{Honest residual} \mO: none of the three closes $\det K{=}1$; the hypergraph route's remaining gap is the
-combinatorial-to-geometric bridge (``the rewrite attractor \emph{is} the raw seam's du~Val realisation''), which is
-exactly the \texttt{SEAM.EQUIV.01} content. The synthesis sharpens the target to one combinatorial statement and
-ranks the routes --- it does not prove it.
+\textbf{Honest residual} \mO: none of the three closes $\det K{=}1$; R3's remaining gap was the
+combinatorial-to-geometric bridge (``the rewrite attractor \emph{is} the raw seam's du~Val realisation'').
+That bridge is meanwhile \emph{discharged to a cited theorem} --- Kronheimer's ALE hyper-K\"ahler quotient
+construction and Torelli classification (\veri{v479\_kronheimer\_quiver\_bridge.py}, below) --- so the residual
+\emph{transforms} into the single premise ``the raw seam supplies the ALE/orbifold datum'', exactly the
+\texttt{SEAM.EQUIV.01} content \mO. The synthesis sharpens the target and ranks the routes --- it does not prove it.
 \end{keybox}
 
 \noindent\textbf{Executing R3 (the Poincar\'e-sphere link).}
@@ -739,6 +741,23 @@ complete \mE: the $E_8$ attractor link is forced to be the Poincar\'e sphere ($\
 on its own, but the keystone is meanwhile \emph{closed modulo a cited theorem} by the separate lattice/$S_3$ route
 (\vref{v367}/\vref{v368}, \vref{v376}--\vref{v379}).
 
+\par\smallskip\noindent\textbf{Kronheimer closes graph$\to$geometry.}
+(\veri{v479\_kronheimer\_quiver\_bridge.py})
+R3's geometric half is not an open construction either: by Kronheimer's ALE theorems
+(J.~Diff.~Geom.~29 (1989) 665 and 685) the McKay graph \emph{with} its Kac marks already \emph{is} the du~Val
+geometry --- the hyper-K\"ahler quotient of the marks quiver at moment-map level zero is $\mathbb{C}^2/\Gamma$, and
+every ALE space with the $E_8$ intersection form is on that list (Torelli). Every finite input datum is a
+compiler output, machine-checked \mE: the Kac marks $\{1,2,2,3,3,4,4,5,6\}$ are simultaneously the null vector
+of the affine-$E_8$ Cartan matrix and the Perron vector $A\delta{=}2\delta$ of the rewrite attractor
+(\vref{v312}); the quotient dimension count lands exactly on $\dim_{\mathbb R}=4$ (the $\mathbb{C}^2/\Gamma$ geometry), with
+$\sum_{\text{edges}}d_id_j{=}\sum d_i^2{=}120$ forced by the null identity; the gauge datum is
+$\sum\delta_i^2{=}120{=}|2I|{=}|\mu_4|\,h(E_8)$ with $h(E_8){=}30{=}|\Z_2|\Nfam\gcar$; and the resolution carries
+$8{=}\operatorname{rank}E_8$ spheres with the unimodular $-E_8$ form ($\det{=}1$ --- the Poincar\'e link, the
+$\det K{=}1$ face) and $3\cdot8{=}24$ deformation parameters. \mC\ the theorems are cited, not re-proved (the
+same import class as the MMST/NPW26/AGT legs); \mO\ the residual premise \emph{transforms}, it does not vanish:
+``the raw seam supplies ALE hyper-K\"ahler data asymptotic to the $(2,3,5)$ cone'' --- the same single arrow as
+L2 below. No gate closes.
+
 \par\smallskip\noindent\textbf{The bridge is one arrow.} (\veri{v346\_seam\_geometric\_bridge.py})
 Assembling everything, the path from the raw seam to $\det K{=}1$ is a chain of \emph{six} links, of which exactly
 \emph{one} is open. \mE/\mC\ L1: the raw seam gives the $\mu_4$ clock and four marks (Gauss--Bonnet, \vref{v216}).
@@ -751,7 +770,9 @@ $(|\Z_2|,\Nfam,\gcar)$ --- is unique to $2I$. So \emph{if} the seam realises any
 is $2I$ and \emph{everything downstream is forced}; the entire keystone is the single statement ``the raw
 quasi-free seam normal bundle is an ADE orbifold point $\mathbb{C}^2/\Gamma$.'' \mO\ That one geometric realisation is
 \texttt{SEAM.EQUIV.01} itself --- not closed by \emph{this} route, but the bridge is now demonstrably \emph{one arrow},
-with the group pinned and all six downstream consequences proven; and the keystone is independently \emph{closed
+with the group pinned, all six downstream consequences proven, and (via Kronheimer,
+\vref{v479}) even the graph$\to$geometry half of L2 a cited theorem, so the arrow reads precisely ``the raw seam
+supplies the ALE/orbifold datum''; and the keystone is independently \emph{closed
 modulo a cited theorem} by the lattice/$S_3$ route (\vref{v367}/\vref{v368}, \vref{v376}--\vref{v379}, Lean
 \texttt{FORM.SEAM.MMST.01}).
 
@@ -1615,7 +1636,10 @@ $\omega\circ\rho=\omega$ \emph{follows} --- \texttt{QGEO.SYM.01} is not an indep
 collar vacuum is rotation-invariant (no preferred seam angle) --- cleaner than a bespoke thermal state, and
 \emph{shared} with the keystone, so the two open items collapse toward one (and the keystone itself is now
 \emph{closed modulo a cited theorem} via the lattice/$S_3$ pinning and \texttt{FORM.SEAM.MMST.01}, only the cited
-continuum existence staying \mO). This collapse is machine-pinned in
+continuum existence staying \mO). On the exactly solvable four-interval realisation of the four marks the
+invariance is \emph{manifest} at the state level ($\rho C\rho^{-1}{=}C$ at machine precision, with the
+fermionic clock the order-$8$ double-cover lift $\rho^4{=}{-}1$; \vref{v480}) --- the mechanism in the
+multilocal free-fermion class, the premise on the raw collar unchanged. This collapse is machine-pinned in
 Lean (\texttt{FORM.QGEO.BW.01}): \texttt{bedrockReducesToRotationInvariance} composes the Bisognano--Wichmann
 steps over the \vref{v308} chain, and \texttt{\#print axioms} confirms the residual is exactly the cited theorems
 $+$ the carrier recovery gap $+$ the one shared premise (rotation-invariant vacuum).

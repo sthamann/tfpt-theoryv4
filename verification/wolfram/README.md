@@ -225,6 +225,20 @@ Python-only by the suite convention; its one exact ingredient (the point-
 measure moment ratio `e^{t₀}`) is trivial calculus, flagged here rather than
 mirrored (the Wolfram exact-check count stays unchanged at `378/378`).
 
+The 2026-07-14 Kronheimer bridge `v479_kronheimer_quiver_bridge.py` has its
+two exact mirrors ADDED to `tfpt_readouts_extension.wl` (the Kac marks as
+null/Perron vector of the affine-E₈ Cartan/adjacency; the hyper-Kähler
+quotient dimension count `dim_R X = 4` with `Σ_edges d_i d_j = Σ d_i² = 120 =
+|μ₄|h(E₈)`; the unimodular finite-E₈ Cartan with SNF = identity), but the
+VERIFIED count stays `378/378`: the local Wolfram Engine is currently
+unactivated (license), so the two new checks enter the counted total only
+with the next verified engine run — the identical statements are
+machine-verified in Python (sympy, exact) in `v479` itself. The 2026-07-14
+companions `v480_multilocal_four_interval.py` (numpy lattice modular data)
+and `v481_seesaw_carrier_ladder.py` (explicit 1-loop RG integration) are
+numerical, Python-only by the suite convention, flagged here rather than
+mirrored.
+
 (ledger `GATE.WOLFRAM.02`). The scipy-only parts of the round (the `v86`
 pivot ODE solve, the `v88` data pulls, the `v99` mpmath ODE probe of the
 time-1 map — its exact symbolic form *is* mirrored) stay Python-only and

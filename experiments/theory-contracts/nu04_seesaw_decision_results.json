@@ -1,0 +1,29 @@
+{
+  "contract": "nu04 seesaw integer-rung decision (bracketed exclusion)",
+  "date": "2026-07-14",
+  "firewall": "theory contract, never a scorecard row, never load-bearing; frozen record untouched",
+  "verdict": "CONTRACT HOLDS (4/4)",
+  "checks": [
+    {
+      "check": "C1 THE GAP [E-num]: central m_3(rung) = 0.0301 eV vs observed 0.0503 eV -- the rung must be rescued by a factor F_req = 1.670 in m_3 (i.e. +67.0%), equivalently 0.154 c3-rungs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C2 BRACKETED EXCLUSION [E-num]: no generous input band reaches F_req -- max single shift x1.100, ALL-favourable combined x1.165, required x1.670: the unstructured rung is EXCLUDED conditional on [P] y_nu = y_t (not an RG artifact). Bands: m_t +3 GeV (>3 sigma): x1.051; m_t -3 GeV: x0.951; alpha_3^-1 -0.10 (>3 sigma): x0.987; alpha_3^-1 +0.10: x1.013; kappa band +10%: x1.100; kappa band -10%: x0.900; PS-leg beta_yt x1.5: x0.979; PS-leg beta_yt x0.5: x1.022",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C3 NAMED ESCAPE + POST-HOC NOTE (recorded, DECLINED per v354/v355): only an O(1.67) third-generation Majorana STRUCTURE factor (M_R,3 = M_R/r) can revive the rung. Post-hoc: r_needed = 1.6696 is 0.18% from the atom rational g_car/N_fam = 5/3 -- NO mechanism forces a 3/5 Clebsch on M_R,3 today, so this is a named coincidence with a named missing mechanism (PS Majorana-sector Clebsch), NOT a claim; no promotion of the coincidence",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C4 CANDIDATE UNAFFECTED [E-num]: the v481 one-parameter statement (M_R free in the PS window; required M_R = 9.3e13 GeV at rung 3.15; NO floor Sigma m_nu = 0.059 eV) does not use the integer rung and stands unchanged; FLAV.NUSCALE stays a window-bracketed [O] candidate",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "reading": "The decision computation named by v481 is executed in bracketed form: the integer rung M_R = c3^3 Mbar predicts m_3 a factor 1.67 low, and NO generous input band (m_t +-3 GeV, alpha_s >3 sigma, kappa-run +-10%, PS-leg beta envelope x[0.5,1.5]) moves it by more than x1.2 -- the unstructured rung is EXCLUDED conditional on the carrier premise y_nu = y_t. The only escape is a third-generation Majorana structure factor r = 1.671; its 0.3% proximity to g_car/N_fam = 5/3 is recorded post-hoc and DECLINED (no forcing mechanism). The v481 one-parameter window candidate is unaffected. No gate closes."
+}

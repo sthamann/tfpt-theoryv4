@@ -1217,7 +1217,9 @@ commutant (intrinsic Bisognano--Wichmann). \mE\ Moreover (\vref{v446}) that oper
 \emph{derived}: the OS canonical transfer of $\mu_4$-symmetric RP data inherits the clock (with the modular
 Hamiltonian commuting, \vref{v258}), so the residual reduces further to the \emph{structural} statement that the
 seam RP data is $\mu_4$-symmetric (the four marks, \texttt{QGEO.SYM.01}), leaving \mO\ only that structural
-symmetry on the raw continuum collar.
+symmetry on the raw continuum collar --- for which the four marks now have an \emph{established} continuum frame:
+the four-interval multilocal modular geometry (\vref{v480}, keybox below), where the invariance is manifest at the
+state level in the exactly solvable class.
 \emph{(ii) Gravity-complete $=$ Boundary-complete $+$ Ambient-redundancy} (\texttt{GRAVITY.COMPLETE.01}): the local
 equation parameter-free (\vref{v358}/\vref{v359}) plus the redundancy discriminators (\vref{v369}), with
 $\mathcal O_{\mathrm{phys}}\subset\mathcal A_\Sigma$ checked over five gravitational readout classes.
@@ -1237,7 +1239,8 @@ same $E_8$ the carrier glues to (\vref{v1}) is the surface's intersection form. 
 classes span the rank-$16$ Kummer lattice, a sublattice \emph{distinct} from the $E_8({-}1)^2$ summand ---
 both exact, not identified.) Thus the \vref{v1} ``glue $D_5{\oplus}A_3{+}\mu_4{\Rightarrow}E_8$'' is the
 lattice shadow of a single smooth object that already carries the seam and the carrier; $E_8$ appears both
-\emph{locally} as the du Val $\mathbb C^2/2I$ singularity (the Poincar\'e-sphere link, \vref{v232}/\vref{v236})
+\emph{locally} as the du Val $\mathbb C^2/2I$ singularity (the Poincar\'e-sphere link, \vref{v232}/\vref{v236};
+by Kronheimer that local model \emph{is} the hyper-K\"ahler quotient of the marks quiver, \vref{v479})
 and \emph{globally} as this $H^2$ summand. A unification (\texttt{ARCH.K3.01}), \emph{not} a closure: the
 lattice arithmetic is \mE, the carrier$\leftrightarrow$node identification \mC.
 \par\smallskip\noindent\textbf{Synthesis --- the Modular Spectral Closure (\veri{v261\_modular\_spectral\_closure.py}).}
@@ -1329,6 +1332,25 @@ and \emph{equality} move from input to derived; only the square \emph{modulus} (
 clock) stays the one carrier input, and the from-zero raw-seam emergence \texttt{QGEO.REALIZE.01} stays \mO.
 \mE\ (count $+$ equality), \mO\ (the square modulus and the raw-seam realisation) --- \texttt{QGEO.MARKS.03} /
 \texttt{QGEO.EMERGE.01}.
+\par\smallskip\noindent\textbf{And the four marks are a \emph{four-interval} modular geometry
+(\veri{v480\_multilocal\_four\_interval.py}).} The seam circle minus its four marks is the $n{=}4$
+disjoint-interval region of a chiral free fermion --- the one continuum class whose \emph{multi-interval}
+modular theory is exactly known (Casini--Huerta mixing term; Longo--Xu multi-interval subfactors;
+Rehren--Tedesco multilocal fermions; and Kawahigashi--Longo--M\"uger: \emph{holomorphic} $\Leftrightarrow$
+trivial multi-interval inclusion, $\mu{=}1$ --- the same one bit as $\det K{=}1$). Until now the suite used
+only the single-ball CHM boost (\vref{v358}); \vref{v480} exhibits the multilocal mechanism on the exactly
+solvable antiperiodic critical ring: \mE\ the quarter-turn clock is a signed permutation with
+$\rho^4{=}{-}1$ \emph{exactly} (the fermionic $\mu_4$ clock is the order-$8$ double-cover lift --- the same
+$\Z_2$-lift pattern as $2I$ over $I$); \mE\ its primitive-$8$th-root character projectors decouple the
+$4$-interval covariance at $10^{-15}$ (the diagonal $4$-fold-cover isomorphism), each sector a
+\emph{single}-interval quarter-ring kernel with boundary twist ($10^{-14}$ spectra); \mE\
+$\rho C\rho^{-1}{=}C$ at $10^{-14}$, so $\omega{\circ}\rho{=}\omega$ holds \emph{manifestly} at the
+$4$-interval state level --- and a one-site displacement of a single interval re-couples the sectors at
+$10^{-2}$ (the invariance is the $\mu_4$-symmetric configuration, not an artifact); and the cross-interval
+modular coupling peaks on the conjugate-point diagonal, the lattice shadow of the Casini--Huerta mixing
+term (numerical). \mC\ the continuum multi-interval theory is cited, not re-derived; \mO\ the raw-seam premise
+(\texttt{QGEO.SYM.01}) is untouched --- this puts the bedrock and the AP2 continuum leg (\vref{v476}/\vref{v478})
+in one established, exactly solvable frame; it does not close them.
 \end{keybox}
 
 \begin{figure}[t]
@@ -1336,9 +1358,11 @@ clock) stays the one carrier input, and the from-zero raw-seam emergence \texttt
 \includegraphics[width=0.9\linewidth]{figures/qft_skeleton.pdf}
 \caption{The emergent-QFT skeleton on the seam (\vref{v238}--\vref{v246}): time as the modular flow, the
 arrow as the recovery generator, particles as DHR sectors, the S-matrix as the braiding, and the 4d matter
-content as the carrier's $SO(10)$ \textbf{16}. Each step is machine-checked; the two open items
-(\texttt{QGEO.SYM.01} postulate and the unification tension) are in red. The whole skeleton is
-\emph{conditional} on \texttt{QGEO.SYM.01} and is neither solved nor experimentally confirmed.}
+content as the carrier's $SO(10)$ \textbf{16}. Each step is machine-checked; the one residual ---
+\texttt{SEAM.EQUIV.01}, closed modulo cited theorems (\vref{v367}--\vref{v379}) with the cited
+continuum scaling-limit existence (\vref{v336}) as its \mO\ leg --- is in red, the frozen 4D fork and
+the QG certification layer in gold. The whole skeleton is \emph{conditional} on that keystone and is
+neither solved nor experimentally confirmed.}
 \label{fig:qft-skeleton}
 \end{figure}
 
@@ -1357,11 +1381,15 @@ rescued by a cascade.}
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.92\linewidth]{figures/residual_chain.pdf}
-\caption{The structural-residual reduction chain (\vref{v175}--\vref{v181}). The naive
-``build a quantum-gravity measure'' shrinks, one machine-checked step at a time, to a single
-\emph{definitional} geometric premise \texttt{QGEO.SYM.01} (the carrier $\mu_4$ clock is the seam's
-conformal deck). Every step above the bedrock is a theorem or an established citation; the bedrock is a
-definition, left honestly \mO.}
+\caption{The structural-residual reduction chain (\vref{v175}~$\to$ the certification round). The naive
+``build a quantum-gravity measure'' shrinks, one machine-checked step at a time, from a vague measure to
+one falsifiable physical statement --- \emph{is the raw seam $(E_8)_1$ at $\tau=i$?}
+(\texttt{SEAM.EQUIV.01}; its conformal-deck face \texttt{QGEO.SYM.01} is a corollary, \vref{v335}).
+The closing arc (\vref{v276}--\vref{v302}) pins the shared fact and derives the gap $6\ln(3/2)>0$; the
+certification round discharges the extension leg to the crossed-product package (\vref{v469}), the R3
+graph$\to$geometry bridge to Kronheimer 1989 (\vref{v479}) and exhibits the four-interval $\mu_4$
+mechanism (\vref{v480}). Every step above the bedrock is a theorem, a Lean proof or an established
+citation; the residual --- the cited continuum scaling-limit existence (\vref{v336}) --- stays honestly \mO.}
 \label{fig:residual-chain}
 \end{figure}
 
@@ -2461,7 +2489,9 @@ organises on the CHM weight $\beta(x){=}x(L{-}x)/L$ (corr $0.87{\to}0.99$, even-
 identically, odd tail $1.8\%$): the state-side $\Delta_\Sigma$ (the reading \emph{forced} above) flows
 to the CHM/Bisognano--Wichmann geometric form --- \emph{exactly} the object the entanglement-equilibrium
 derivation consumes (\vref{v323}/\vref{v358}); the bridge's modular side and the gravity side meet in
-the continuum limit (a lattice exhibit, not a continuum proof --- AP2 stays \mO). \emph{Leg B (the
+the continuum limit (a lattice exhibit, not a continuum proof --- AP2 stays \mO; the natural continuum
+frame for the seam version is the \emph{four-interval} multilocal modular geometry of the four marks,
+\vref{v480}). \emph{Leg B (the
 measure):} the single-scale corollary is exact --- $d\mu{=}\delta(t{-}t_0)dt$ gives
 $\mu_2/\mu_1^2{=}e^{t_0}$, so the one-moment condition forces $t_0{=}\ln\tfrac{72}{17}{+}9\ln(8\pi)
 {=}30.461$, one dimensionless KMS time in closed form; the near-miss to $h(E_8){=}30$ (difference

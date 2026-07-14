@@ -64,8 +64,8 @@
   "date": "2026-07-13"
  },
  "introduction::subsection::The closure ledger: what is done, and what genuinely remains::1": {
-  "hash": "8fb07c09cf1d",
-  "date": "2026-07-02"
+  "hash": "7ada34a895c9",
+  "date": "2026-07-14"
  },
  "introduction::section::Does this make the theory more probable?::1": {
   "hash": "540397fd6436",
@@ -80,8 +80,8 @@
   "date": "2026-06-12"
  },
  "introduction::section::Appendix: computational verification (reproducibility)::1": {
-  "hash": "376b86d99cd2",
-  "date": "2026-06-17"
+  "hash": "4dd8212d1341",
+  "date": "2026-07-14"
  },
  "tfpt_1_architecture_e8::front::(front matter)::1": {
   "hash": "31add055d84c",
@@ -352,8 +352,8 @@
   "date": "2026-06-22"
  },
  "tfpt_2_standard_model::section::Neutrinos::1": {
-  "hash": "91365ff29deb",
-  "date": "2026-07-02"
+  "hash": "5ac6b269911e",
+  "date": "2026-07-14"
  },
  "tfpt_2_standard_model::section::How the legacy layers simplify (bridge map)::1": {
   "hash": "f76d4592f628",
@@ -608,8 +608,8 @@
   "date": "2026-06-15"
  },
  "tfpt_4_frontier::section::Full quantum gravity --- induced from the boundary kernel::1": {
-  "hash": "c17468f65eff",
-  "date": "2026-07-13"
+  "hash": "8c8c49126124",
+  "date": "2026-07-14"
  },
  "tfpt_4_frontier::section::Summary::1": {
   "hash": "c0bc3591e81c",
@@ -648,8 +648,8 @@
   "date": "2026-06-12"
  },
  "tfpt_5_redteam::section::Target F --- the perturbative 4D-QFT $+$ scale round (v269--v275)::1": {
-  "hash": "0f9757fd6eab",
-  "date": "2026-06-24"
+  "hash": "f2fe82287388",
+  "date": "2026-07-14"
  },
  "tfpt_5_redteam::section::Outcome::1": {
   "hash": "d574550d4f38",
@@ -700,12 +700,12 @@
   "date": "2026-07-03"
  },
  "tfpt_research_contracts::section::Research Contract 1 --- $(U_{\\mathrm{wall}})$::1": {
-  "hash": "692103046af3",
-  "date": "2026-07-02"
+  "hash": "ce5df6d311e1",
+  "date": "2026-07-14"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {
-  "hash": "0aac5b11d609",
-  "date": "2026-07-13"
+  "hash": "3cd69e059ee5",
+  "date": "2026-07-14"
  },
  "tfpt_research_contracts::section::Certifiability and recommended order::1": {
   "hash": "0e935206f060",
@@ -728,8 +728,8 @@
   "date": "2026-06-12"
  },
  "origin_theory::section::The unique attractor: a gapped transport selects ONE fixed point::1": {
-  "hash": "2969c3f8c425",
-  "date": "2026-06-25"
+  "hash": "c467f45440fc",
+  "date": "2026-07-14"
  },
  "origin_theory::section::One $\\ainv$ for electromagnetism, the cosmic horizon and $\\Lambda$::1": {
   "hash": "915ef1e6f23a",
@@ -756,8 +756,8 @@
   "date": "2026-07-02"
  },
  "origin_theory::section::Honest status::1": {
-  "hash": "ac28a6442efb",
-  "date": "2026-07-10"
+  "hash": "d70ec1994895",
+  "date": "2026-07-14"
  },
  "origin_theory::section::Appendix: computational verification::1": {
   "hash": "273bbb10f788",

@@ -19,23 +19,29 @@ interface EcosystemProject {
 }
 
 /**
- * Adjacent projects that reuse TFPT's *structure* — deliberately not presented as
- * evidence for the physics. Field AI states it "takes the structure, not the
- * physics predictions"; Agentic Commerce is the co-author's applied research
- * track that lists TFPT and Field AI as its theoretical work. Every claim here is
- * grounded in the linked sites' own wording.
+ * Adjacent projects that reuse TFPT's *structure* — deliberately not presented
+ * as evidence for the physics. Hylaean (hylaean.ai) is the field-native
+ * intelligence research project: it takes TFPT's structural discipline, not
+ * the physics predictions. Agentic Commerce is the co-author's applied
+ * research track. Every claim here is grounded in the linked sites' own
+ * wording and the project documentation.
  */
 const PROJECTS: EcosystemProject[] = [
   {
-    name: "Field AI",
+    name: "Hylaean",
     href: "https://www.hylaean.ai/",
     domain: "hylaean.ai",
     image: "/ecosystem/hylaean.png",
     imageAlt:
-      "Field AI landing page (hylaean.ai): the headline “Intelligence that grows like a landscape — not a lookup table” over a dark field visualization.",
-    eyebrow: "Architecture · field-native intelligence",
-    body: "A research architecture that treats intelligence as physics: knowledge is geometry (a valley / attractor), a question is a boundary condition, and the answer is the field relaxing into a single equilibrium. It explicitly builds on TFPT's structure and vocabulary — a field on a carrier, twist (K) and binding (L) operators, transport (T) between positions, and a spectral gap that guarantees one attractor — while taking the structure, not the physics predictions.",
-    tags: ["Field on a carrier", "K · L · T operators", "Spectral-gap attractor"],
+      "Hylaean landing page (hylaean.ai): the headline “Intelligence that grows like a landscape — not a lookup table” over a dark field visualization.",
+    eyebrow: "Research · field-native intelligence",
+    body: "Hylaean is field-native intelligence research: one cognitive substrate that behaves like a physical material, not a lookup table. Knowledge is geometry — a concept is a valley (an attractor) in an energy landscape; a question is a boundary condition; an answer is committed only when the field physically settles into it. Learning deepens the valleys: the operators adapt Hebbian-style and the field consolidates its own verified answers. Every capability claim is gate-checked against a machine-checked claim registry and published in a public status log, honest negatives included. From TFPT it borrows the structural discipline — a gapped relaxation to a unique attractor — not the physics predictions.",
+    tags: [
+      "Knowledge = attractor valleys",
+      "Question = boundary condition",
+      "Commit only on physical landing",
+      "Verified claim registry",
+    ],
   },
   {
     name: "Agentic Commerce",
@@ -45,7 +51,7 @@ const PROJECTS: EcosystemProject[] = [
     imageAlt:
       "Agentic Commerce landing page (agentic-commerce.sh): the headline “Agentic Commerce” with the line that commerce is executed by intelligent agents acting on human intent.",
     eyebrow: "Applied · agent-driven commerce",
-    body: "Stefan Hamann's (TFPT co-author, CEO of Shopware) work on the shift to agent-driven commerce — where intent becomes machine-readable and AI agents discover, negotiate and transact on behalf of people. Its “experimental work” research track sits explicitly alongside TFPT and Field AI, connecting the compiler's structural ideas to emergent intelligence and autonomous systems.",
+    body: "Stefan Hamann's (TFPT co-author, CEO of Shopware) work on the shift to agent-driven commerce — where intent becomes machine-readable and AI agents discover, negotiate and transact on behalf of people. Its “experimental work” research track sits explicitly alongside TFPT and Hylaean, connecting the compiler's structural ideas to emergent intelligence and autonomous systems.",
     tags: ["Emergent intelligence", "Systems thinking", "Open agent protocols"],
   },
 ];

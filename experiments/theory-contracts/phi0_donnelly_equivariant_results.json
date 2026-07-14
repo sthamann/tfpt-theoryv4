@@ -1,0 +1,23 @@
+{
+  "probe": "phi0_donnelly equivariant heat-kernel probe",
+  "date": "2026-07-14",
+  "verdict": "PROBE COMPLETE (3/3); NO promotion -- honest negative",
+  "checks": [
+    {
+      "check": "D1 DONNELLY/AB WEIGHTS EXACT [E]: sum_{k=1}^{n-1} 1/(4 sin^2(pi k/n)) = (n^2-1)/12 for n=2..6 (so the Z_n orbifold t^0 contact weight is (n^2-1)/(12n))",
+      "pass": true,
+      "detail": "sums = {2: '1/4', 3: '2/3', 4: '5/4', 5: '2', 6: '35/12'}; Z4 contact weight = 5/16, Z2 = 1/8"
+    },
+    {
+      "check": "D2 PILLOWCASE CONTACT BUDGET [E]: 4 x (Z2 weight 1/8) = 1/2 on the flat pillowcase (chi_orb = 0) -- the equivariant contact data live ONLY at the four marks, consistent with mark-locality (v201/v216)",
+      "pass": true,
+      "detail": "total Z2 contact = 1/2; chi_orb = 0"
+    },
+    {
+      "check": "D3 HONEST NEGATIVE [O stays]: dtop = 48 c3^4 = 3/(256 pi^4) ~ 1.2e-4 carries pi^-4 (a FOURTH heat-kernel power); the classical 2d Z4 contact weight is the pure rational 5/16 -- NO exact identification is forced; the Donnelly route types the KIND (order-4 equivariant contact x multiplicity 48) but does NOT derive the value",
+      "pass": true,
+      "detail": "dtop = 1.203045e-04 = 3/(256 pi^4): True; Z4 weight = 0.3125; ratio dtop/(5/16) = 3.850e-04 -- no match claimed"
+    }
+  ],
+  "reading": "The Donnelly/Atiyah-Bott equivariant heat kernel is the right TOOL CLASS for HYP.PHI0.PUNCTURE.01 (it produces exactly 'order-n contact terms at the marks', and the pillowcase budget is consistent with mark-locality), but the classical 2d weights are pure rationals (5/16 for Z4) while dtop = 48 c3^4 carries c3^4 = fourth heat-kernel power: the value is NOT forced by the plain 2d fixed-point formula. Honest verdict: route typed, target stays [O]; this probe stays in experiments/ (no promotion, no ledger row)."
+}

@@ -1,0 +1,34 @@
+{
+  "contract": "CORR.KRONHEIMER.01 Kronheimer quiver bridge for SEAM.DETK.01 R3",
+  "date": "2026-07-14",
+  "firewall": "theory contract, never a scorecard row, never load-bearing; internal consistency, not evidence; gated on SEAM.EQUIV.01 (open)",
+  "verdict": "CONTRACT HOLDS (5/5)",
+  "checks": [
+    {
+      "check": "C1 MARKS = NULL VECTOR = PERRON VECTOR [E]: C_aff delta = 0 and A delta = 2 delta for the affine-E8 McKay graph; multiset {1,2,2,3,3,4,4,5,6} = 2I irrep dims = the v312 rewrite-attractor Perron vector",
+      "pass": true,
+      "detail": "C.delta=0: True; A.delta=2delta: True; marks(sorted)=[1, 2, 2, 3, 3, 4, 4, 5, 6]"
+    },
+    {
+      "check": "C2 KRONHEIMER DIMENSION COUNT [E]: dim_R M - 4 dim_R G = 4(sum_edges d_i d_j - sum d_i^2 + 1) = 4 -- the hyper-Kaehler quotient of the marks quiver is a 4-real-dim (= C^2/Gamma) space; sum_edges d_i d_j = sum d_i^2 = 120 forced by the null-vector identity",
+      "pass": true,
+      "detail": "sum_edges d_i d_j = 120; sum d_i^2 = 120; dim_R M = 480; dim_R G = 119; dim_R X = 4"
+    },
+    {
+      "check": "C3 |2I| FROM THE MARKS [E]: sum delta_i^2 = 120 = |2I| = |mu4| h(E8), h(E8) = 30 = |Z2| N_fam g_car -- the quiver gauge datum is the seam's own group order",
+      "pass": true,
+      "detail": "sum delta_i^2 = 120; |mu4|*h = 120; 2*3*5 = 30"
+    },
+    {
+      "check": "C4 RESOLUTION DATA [E]: 8 = rank(E8) exceptional spheres, intersection form -Cartan(E8) unimodular (det = 1 => Poincare-sphere link => det K = 1); deformation space h (x) R^3 has dim 3*8 = 24",
+      "pass": true,
+      "detail": "det Cartan(E8) = 1; #spheres = 8; 3*rank = 24"
+    },
+    {
+      "check": "C5 CONDITIONAL TYPING [C cited / O premise]: with C1-C4 the Kronheimer input data ARE the seam atoms, so R3's 'combinatorial-to-geometric bridge' is the CITED theorem (K-A construction, K-B Torelli); residual premise = 'seam supplies the ALE/orbifold datum' = SEAM.EQUIV.01's one arrow; NOT closed here",
+      "pass": true,
+      "detail": "bridge discharged to Kronheimer 1989 (JDG 29, 665 and 685); premise stays OPEN; no gate closed, no status change"
+    }
+  ],
+  "reading": "SEAM.DETK.01's R3 residual ('the rewrite attractor graph IS the du Val singularity') is not an open construction: Kronheimer 1989 constructs C^2/Gamma and all its ALE deformations as the hyper-Kaehler quotient of exactly the data TFPT already outputs (the affine-E8 McKay graph with the Kac marks = the v312 Perron vector), and the Torelli theorem gives the converse. Every finite ingredient checks exactly: the marks are the null/Perron vector (C1), the quotient dimension is 4 (C2), the gauge datum is |2I| = 120 = 4*30 with 30 = 2*3*5 (C3), and the resolution carries the unimodular -E8 form (det 1 = the Poincare link = det K = 1) with 3*8 = 24 deformation parameters (C4). The open arrow transforms into 'the seam supplies the ALE/orbifold datum' -- the same single premise as SEAM.EQUIV.01/CORR.FORCING.01. [E] arithmetic, [C] citations, [O] premise; no gate closed."
+}
