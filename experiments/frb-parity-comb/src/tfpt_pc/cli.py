@@ -196,6 +196,102 @@ def analyze_ixpe(seed: int = 0) -> dict:
     return out
 
 
+NICER_RESULTS = RESULTS.parent / "results_nicer.json"
+
+
+def analyze_nicer(seed: int = 0) -> dict:
+    import math
+
+    import numpy as np
+
+    from . import nicer
+
+    out: dict = {"experiment": "frb-parity-comb v1.2 -- NICER burst-storm "
+                               "leg (NI.01-03)",
+                 "dataset": "NICER 3020560101, SGR 1935+2154 (2020-04-28 "
+                            "storm; Younes+2020 ApJL 904 L21)",
+                 "semantics": ("arrival-time combs = Z2-EVEN sector only "
+                               "(prereg v1.2 BEFORE the data pass)"),
+                 "firewall": ("magnetar bursts = surface channel (A5 "
+                              "class); a hit is a universal-DSI candidate, "
+                              "never direct TFPT confirmation; nothing "
+                              "load-bearing")}
+    t, gti, choice = nicer.load_chosen()
+    out["file_choice"] = choice
+    out["photons_1_10_keV"] = int(len(t))
+    out["gti_total_s"] = round(float(np.sum(gti[:, 1] - gti[:, 0])), 1)
+
+    bursts = nicer.find_bursts(t)
+    out["n_bursts"] = len(bursts)
+    cls = nicer.clusters(bursts)
+    out["clusters"] = [{"n_bursts": len(c),
+                        "span_s": round(c[-1].t_peak - c[0].t_peak, 1)}
+                       for c in cls]
+
+    fam_a = nicer.storm_sessions(bursts)
+    fam_b = nicer.photon_sessions(t, bursts)
+    out["family_A_sessions"] = [
+        {"n_bursts": len(u) + 1,
+         "ln_reach": round(float(u.max() - u.min()), 2),
+         "reach_omega1": round(float(u.max() - u.min()) * C.OMEGA_1
+                               / (2 * math.pi), 2),
+         "reach_omega2": round(float(u.max() - u.min()) * C.OMEGA_2
+                               / (2 * math.pi), 2)} for u in fam_a]
+    out["family_B_sessions"] = [
+        {"n_photons": len(u),
+         "reach_omega1": round(float(u.max() - u.min()) * C.OMEGA_1
+                               / (2 * math.pi), 2)} for u in fam_b]
+
+    for name, omega, role in (("NI01_omega2_forbidden", C.OMEGA_2,
+                               "forbidden"),
+                              ("NI02_omega1_allowed", C.OMEGA_1, "allowed")):
+        rows, ps, gates = [], [], []
+        for i, u in enumerate(fam_a):
+            r = nicer.even_comb_test(u, omega, min_n=nicer.MIN_BURSTS_A - 1,
+                                     seed=seed + i)
+            rows.append({"family": "A", **r})
+            if r["gate"] != "fail":
+                ps.append(r["p_surrogate"])
+                gates.append(f"A:{r['gate']}")
+        for i, u in enumerate(fam_b):
+            r = nicer.even_comb_test(u, omega, min_n=nicer.MIN_PHOTONS_B,
+                                     seed=seed + 50 + i)
+            rows.append({"family": "B", **r})
+            if r["gate"] != "fail":
+                ps.append(r["p_surrogate"])
+                gates.append(f"B:{r['gate']}")
+        pf = fisher(ps, 1 / (C.N_SURROGATE + 1)) if ps else float("nan")
+        if not ps:
+            verdict = "data_limited (no gate-passing session)"
+        elif role == "forbidden":
+            verdict = ("EVEN-CHANNEL OMEGA_2 LINE -> contradicts the v486 "
+                       "parity assignment (escalate-only)"
+                       if pf < 0.01 and len(ps) >= 2 else
+                       f"NULL (forbidden line absent; Fisher p={pf:.3f}; "
+                       f"gates {gates})")
+        else:
+            verdict = ("omega_1 comb candidate -> escalate-only"
+                       if pf < 0.01 else
+                       f"null-at-current-power (Fisher p={pf:.3f}; gates "
+                       f"{gates})")
+        out[name] = {"gated_sessions": len(ps), "gates": gates,
+                     "sessions": rows,
+                     "fisher_p": None if not ps else round(pf, 4),
+                     "verdict": verdict}
+
+    out["NI03_injection"] = {
+        "family_A_omega1": nicer.inject_thinning(
+            fam_a, C.OMEGA_1, min_n=nicer.MIN_BURSTS_A - 1, seed=seed + 7),
+        "family_A_omega2": nicer.inject_thinning(
+            fam_a, C.OMEGA_2, min_n=nicer.MIN_BURSTS_A - 1, seed=seed + 8),
+        "family_B_omega1": nicer.inject_thinning(
+            fam_b, C.OMEGA_1, min_n=nicer.MIN_PHOTONS_B, seed=seed + 9),
+        "note": ("comb-modulated thinning on the real times; compare "
+                 "eps_base = 0.0173 and the S-b budget at the recorded "
+                 "ln-reach")}
+    return out
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -203,6 +299,8 @@ def main() -> None:
     a.add_argument("--seed", type=int, default=0)
     b = sub.add_parser("analyze-ixpe")
     b.add_argument("--seed", type=int, default=0)
+    c = sub.add_parser("analyze-nicer")
+    c.add_argument("--seed", type=int, default=0)
     args = ap.parse_args()
     if args.cmd == "analyze":
         out = analyze(seed=args.seed)
@@ -223,6 +321,15 @@ def main() -> None:
                                              "session_stats")})
                           for k, v in out.items()}, indent=2))
         print(f"\nresults -> {IXPE_RESULTS}")
+    elif args.cmd == "analyze-nicer":
+        out = analyze_nicer(seed=args.seed)
+        NICER_RESULTS.parent.mkdir(exist_ok=True)
+        NICER_RESULTS.write_text(json.dumps(out, indent=2) + "\n")
+        print(json.dumps({k: (v if not isinstance(v, dict) else
+                              {kk: vv for kk, vv in v.items()
+                               if kk != "sessions"})
+                          for k, v in out.items()}, indent=2))
+        print(f"\nresults -> {NICER_RESULTS}")
 
 
 if __name__ == "__main__":

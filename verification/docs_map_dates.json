@@ -352,8 +352,8 @@
   "date": "2026-06-22"
  },
  "tfpt_2_standard_model::section::Neutrinos::1": {
-  "hash": "474c5a03569d",
-  "date": "2026-07-14"
+  "hash": "80fd28065a89",
+  "date": "2026-07-15"
  },
  "tfpt_2_standard_model::section::How the legacy layers simplify (bridge map)::1": {
   "hash": "f76d4592f628",
@@ -716,7 +716,7 @@
   "date": "2026-06-24"
  },
  "origin_theory::section::The whole integer skeleton from one pair $(\\gcar,\\Nfam)=(5,3)$::1": {
-  "hash": "da045971f9dc",
+  "hash": "2667d0a0b429",
   "date": "2026-07-15"
  },
  "origin_theory::section::The ``$8$'' is triply forced: geometry $=$ lattice $=$ gravity::1": {

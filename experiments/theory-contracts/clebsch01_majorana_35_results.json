@@ -1,0 +1,69 @@
+{
+  "D1_no_renormalisable_channel": {
+    "sym2_16": 136,
+    "decomposition": "10 + 126",
+    "E8_hull_SO10_content": [
+      1,
+      10,
+      16,
+      45
+    ],
+    "contains_126": false,
+    "conclusion": "M_R only via d=5 (16 16bar_H)^2/Lambda (16_H is E8-allowed; v247)",
+    "pass": true
+  },
+  "D2_channel_list": {
+    "16_x_16bar": "1 + 45 + 210 (256 total)",
+    "E8_admissible_channels": [
+      "singlet",
+      "45"
+    ],
+    "210_in_hull": false,
+    "pass": true
+  },
+  "D3_nu_c_charges": {
+    "Y_equals_T3R_plus_half_BL_on_all_16": true,
+    "Tr16_Y2": "10/3",
+    "nu_c_(B-L,T3R,Y)": [
+      "1",
+      "-1/2",
+      "0"
+    ],
+    "pass": true
+  },
+  "D4_23smooth_theorem": {
+    "nu_c_channel_weights": {
+      "singlet": "1",
+      "T3R^2": "1/4",
+      "(B-L)^2": "1",
+      "T3R*(B-L)": "-1/2",
+      "SU4_15^2 (lepton: 9/24)": "3/8",
+      "Y^2": "0",
+      "Y*(B-L)": "0"
+    },
+    "all_nonzero_weights_23smooth": true,
+    "5/3_is_23smooth": false,
+    "closure": "products/quotients of {2,3}-smooth rationals stay {2,3}-smooth -> 5/3 unreachable from any channel combination",
+    "unique_natural_5": "k_Y = Tr16 Y^2 / Tr16 T3L^2 = 5/3 (full-multiplet trace, v470)",
+    "k_Y_decoupled_from_nu_c": "Y(nu^c) = 0 exactly -> the only 5-carrying direction cannot touch M_R",
+    "pass": true
+  },
+  "D5_generation_blindness": {
+    "statement": "M_R = G * c_ij with G a family-space scalar; any generation ratio is c-texture, never Clebsch",
+    "symbolic_check_G_cancels": true,
+    "pass": true
+  },
+  "D6_compiler_flavor_inventory": {
+    "exact_35_hits": [
+      "K lepton row (5, 3, 2): gen2/gen1 = 3/5",
+      "R lepton row (2, 5, 3): gen3/gen2 = 3/5",
+      "L lepton row (8, 5, 3): gen3/gen2 = 3/5"
+    ],
+    "needed_slot": "gen3 vs unstructured base (v482: M_R3 = (3/5) c3^3 Mbar with gen1 = gen2 = base)",
+    "needed_slot_found": false,
+    "typing": "wrong-slot hits recorded as inventory; no mechanism links M_R to address tables; declined per v354/v355",
+    "pass": true
+  },
+  "VERDICT": "THE 3/5 CLEBSCH DOOR CLOSES: no renormalisable channel (126 E8-forbidden); all nu^c d=5 channel weights are {2,3}-smooth, so no channel combination reaches 5/3; the unique 5-carrying group number k_Y = 5/3 is decoupled (Y(nu^c) = 0); Clebsches are generation-blind by construction; compiler-flavor 3/5's sit in wrong slots.  The r ~ 5/3 rescue stays a numerical coincidence without mechanism -- the honest endpoint remains the v481 window candidate.",
+  "ALL_PASS": true
+}

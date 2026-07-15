@@ -1,0 +1,47 @@
+{
+  "A1_arrow_budget": {
+    "sum_edges_didj": 120,
+    "dimC_double_quiver": 240,
+    "roots_E8": 240,
+    "Z2_x_|2I|": 240,
+    "reading": "one complex arrow dimension per E8 root; the C^2 factor = the Z2 sheet doublet",
+    "pass": true
+  },
+  "A2_carrier_branching": {
+    "split": {
+      "D5_roots": 40,
+      "A3_roots": 12,
+      "(10,6)": 60,
+      "spinors": 128
+    },
+    "total": 240,
+    "carrier_coset_52_40_12": 52,
+    "pass": true
+  },
+  "A3_moment_map": {
+    "dimR_G": 119,
+    "moment_map_target": 357,
+    "dimR_mu_inv_0": 123,
+    "ALE_dimension": 4,
+    "pass": true
+  },
+  "A4_mu4_x_30_split": {
+    "mu4_character_multiplicities_in_regular_rep": [
+      "30",
+      "30",
+      "30",
+      "30"
+    ],
+    "|2I| = |mu4| x h(E8)": "120 = 4 x 30",
+    "h(E8) = |Z2| N_fam g_car": "30 = 2*3*5",
+    "period_datum": "dim(h x R^3) = 3 x 8 = 24 = |R+(A3)| x h(A3) = 6 x 4",
+    "pass": true
+  },
+  "A5_honest_residual": {
+    "named_next_extraction": "a 2I-equivariant identification of the v155/v160 seam covariance sector with a point of mu^-1(0); the three moment-map levels from the family 3-block x rank-8 Cartan (the 24-dim period datum)",
+    "class": "SEAM.EQUIV.01 face; recorded, not claimed",
+    "pass": true
+  },
+  "NET": "the arrow datum the seam must supply is exactly the E8 root budget 240 = 2x120, whose factors (|Z2| sheet, |mu4| marks, h(E8) = 30 Coxeter cycle, family 3-block, hexagon hand) are ALL frozen seam structures -- the bridge's input side is fully budgeted; the metric identification (A5) is the remaining research step",
+  "ALL_PASS": true
+}

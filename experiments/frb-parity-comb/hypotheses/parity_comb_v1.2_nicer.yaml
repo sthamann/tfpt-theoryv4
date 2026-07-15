@@ -1,0 +1,102 @@
+# frb-parity-comb v1.2 -- NICER BURST-STORM LEG ADDENDUM, PREREGISTERED
+# 2026-07-15 09:40 CEST (written BEFORE any pass over the NICER event data)
+#
+# Motivation (lesson of the IXPE leg, v1.1): the even-channel omega_2
+# forbidden test needs BURST STORMS (dense anchors, seconds-scale
+# inter-burst spacing), not post-outburst ToOs weeks after onset.  The
+# 2020-04-28 storm of SGR 1935+2154 (hundreds of bursts within ~1 ks;
+# Younes et al. 2020, ApJL 904 L21) is the archetype, and the even channel
+# needs arrival times only -- no polarization.
+#
+# Dataset: NICER ObsID 3020560101 (SGR_1935+2154, MJD 58967.027..58967.681,
+# ~3.1 ks exposure over several GTIs; public, HEASARC
+# /FTP/nicer/data/obs/2020_04/3020560101/xti/event_cl/).  Files:
+#   ni3020560101_0mpu7_cl.evt.gz   (cleaned, primary)
+#   ni3020560101_0mpu7_ufa.evt.gz  (calibrated-unfiltered, fallback)
+# FALLBACK RULE (fixed now): standard NICER screening can clip bright-burst
+# intervals; IF the cl file's storm GTI coverage is < 50% of the ufa
+# coverage in the storm hour, the ufa file (with PI band cut and
+# det-flag-agnostic arrival times) replaces it, and the switch is recorded.
+#
+# Channel semantics: arrival-time combs are Z2-EVEN under the deck reading
+# (KC/RC semantics; no handedness).  Even-sector tests only:
+#   * omega_2 = 0.9532 FORBIDDEN even line (the kill direction of the v486
+#     parity assignment -- a replicated even-channel omega_2 comb
+#     CONTRADICTS it; escalate-only protocol);
+#   * omega_1 = 2.5827 ALLOWED even line (recovery-comb search,
+#     escalate-only).
+#
+# Anchors (two preregistered session families):
+#   A. STORM-CASCADE (burst-time comb): the storm onset t_storm = first
+#      burst peak of the densest burst cluster; events = subsequent BURST
+#      PEAK TIMES, u = ln(t_peak - t_storm), tau >= 0.5 s.  One session per
+#      contiguous GTI cluster containing >= 30 bursts.  This is the
+#      repeater-cascade (RC) reading with X-ray bursts instead of FRBs.
+#   B. POST-BURST PHOTON CASCADES (IXPE v1.1 machinery unchanged): per
+#      burst, photon arrivals tau = t - t_peak, tau >= 0.1 s, session ends
+#      at the next burst / GTI gap > 200 s / 1e4 s; >= 200 photons.
+#      In a storm the typical inter-burst gap is seconds -> most sessions
+#      are expected to FAIL the reach gate (recorded honestly; family B is
+#      secondary by construction).
+#
+# Burst finder (fixed before the data pass; identical class to v1.1):
+# merged FPM events, 1-10 keV (PI 100..1000), 0.05 s bins (storm bursts are
+# ~0.1-1 s and BRIGHT); a burst = bin with Poisson tail p < 1e-6 against
+# the local +-50 s mean (burst bins excluded); adjacent bins within 0.5 s
+# merged, peak bin kept.  Deadtime/pile-up note: NICER deadtime at storm
+# peak rates distorts INTENSITY, not the log-periodic PHASE of arrival
+# times; recorded as a caveat, not corrected in v1.2.
+#
+# Tests (frozen kernel identical to v1; gates identical: reach > 2.8
+# periods of the tested tone primary / > 1.2 relaxed-labelled; family A
+# gate: >= 30 burst peaks per session):
+#   NI.01 omega_2 FORBIDDEN even line on family-A storm cascades (and any
+#         gate-passing family-B session): rate-preserving log-density
+#         surrogates (N=1000), Rayleigh z at omega_2; Fisher across
+#         sessions.  Kill: Fisher p < 0.01 with >= 2 independent sessions
+#         (BH q < 0.05) CONTRADICTS the v486 parity assignment.
+#   NI.02 omega_1 ALLOWED even line: same machinery at omega_1;
+#         escalate-only candidate on replicated detection.
+#   NI.03 injection calibration: family A -- comb-modulated thinning of
+#         burst peak times; family B -- photon thinning as IX.03.  Report
+#         smallest detectable eps vs eps_base = 0.0173 and vs the S-b
+#         budget at the storm's ln-reach.
+#
+# Expected reach (recorded before the pass): storm window ~1 ks of bursts
+# => family A ln-reach up to ln(1000/0.5) = 7.6 e-folds = 3.1 omega_1
+# periods (primary gate PASSABLE) and 1.15 omega_2 periods (relaxed only
+# -- omega_2 stays relaxed-labelled unless the burst cluster spans > 1e8 x
+# 0.5 s, impossible; recorded).
+#
+# Verdicts: enum as v1 (null-consistent / data_limited / escalate /
+# contradiction-candidate).
+#
+# FIREWALL: magnetar bursts are a SURFACE channel (crust/magnetosphere) --
+# same legitimacy class as crust-cooling/A5 and the IXPE leg: a hit would
+# be a universal-DSI coincidence candidate, never direct TFPT
+# confirmation; nulls kill only the coupling reading.  Nothing
+# load-bearing.
+datasets:
+  nicer_sgr1935_storm:
+    obsid: "3020560101"
+    source: SGR_1935+2154
+    storm_epoch_mjd: 58967.028          # 2020-04-28 00:40 UTC burst storm
+    obs_window_mjd: [58967.027, 58967.681]
+    files:
+      - ni3020560101_0mpu7_cl.evt.gz
+      - ni3020560101_0mpu7_ufa.evt.gz   # fallback per rule above
+    fetch: scripts/fetch_nicer.py (HEASARC public archive)
+burst_finder:
+  band_kev: [1.0, 10.0]                 # PI 100..1000 (PI * 0.01 keV)
+  bin_s: 0.05
+  local_window_s: 100.0
+  poisson_tail_p: 1.0e-6
+  merge_within_s: 0.5
+sessions:
+  family_A_storm_cascade:
+    tau_min_s: 0.5
+    min_bursts: 30
+  family_B_photon_cascade:
+    tau_min_s: 0.1
+    end_at: min(next burst, GTI gap > 200 s, 1.0e4 s)
+    min_photons: 200

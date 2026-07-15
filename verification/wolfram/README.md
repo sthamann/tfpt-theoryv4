@@ -255,6 +255,19 @@ determinant (1−4u)(1+2u)², the exact charge sums Tr₁₆Y² = 10/3 and Ginsp
 (3/5)(41/6) = 41/10): sympy/Fraction-exact in Python, mirrorable in
 principle, deferred to the same next engine run.
 
+The 2026-07-15 generator round `v486_transfer_full_rule.py` (the unique lazy
+Z₂-pair walk (1/2, 1/6, 1/3) generating eig(B⁶) = {64/729, 1/729} exactly)
+and its closure `v487_transfer_clock_rungs.py` (the split forced by the v124
+clock-ladder faithfulness: eig(M) = {1, 2/3, 1/3} = the complete ladder below
+the wall; deck parity = rung index; ω₁/ω₂ = log_{3/2}3 the bend) are
+sympy-exact in Python, mirrorable in principle, deferred to the same next
+verified engine run (engine currently unactivated), flagged here per the
+suite convention.  Likewise `v488_majorana_clebsch_door.py` (the 3/5
+Clebsch door closed: sym²(16) = 10 + 126, 16×16bar = 1 + 45 + 210, the
+ν^c charge table with Tr₁₆Y² = 10/3, the {2,3}-smooth channel weights and
+k_Y = 5/3 decoupled by Y(ν^c) = 0): Fraction/sympy-exact, mirrorable in
+principle, deferred to the same run.
+
 (ledger `GATE.WOLFRAM.02`). The scipy-only parts of the round (the `v86`
 pivot ODE solve, the `v88` data pulls, the `v99` mpmath ODE probe of the
 time-1 map — its exact symbolic form *is* mirrored) stay Python-only and

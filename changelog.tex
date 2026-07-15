@@ -60,6 +60,59 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-07-15 (III) (\texttt{v488} --- the $3/5$ Clebsch door ENUMERATED AND CLOSED: no minimal Pati--Salam/$SO(10)$ Majorana channel can produce $5/3$ --- the \texttt{v482} escape is decided dead, the \texttt{v481} window candidate stands as the honest endpoint; \emph{a clean negative result, no gate closes})}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v488\_majorana\_clebsch\_door.py} (\texttt{FLAV.NUSCALE.04}).} v482 named ONE escape
+for the integer seesaw rung $M_R=c_3^3\Mbar$: a third-generation Majorana factor $r\approx1.6696$, $0.18\%$
+from $\gcar/\Nfam=5/3$ --- declined for lack of mechanism. The mechanism search is now EXECUTED: \mE\ NO
+RENORMALISABLE CHANNEL --- $\operatorname{sym}^2(\mathbf{16})=136=\mathbf{10}+\mathbf{126}$ and the
+$\overline{\mathbf{126}}$ is NOT in the $E_8$ hull $\{1,10,16,45\}$ (\texttt{v247}), so $M_R$ only via the
+$d{=}5$ operator $(\mathbf{16}_F\overline{\mathbf{16}}_H)^2/\Lambda$; channels
+$\mathbf{16}\times\overline{\mathbf{16}}=\mathbf{1}+\mathbf{45}+\mathbf{210}$ with only singlet $+$
+$\mathbf{45}$ admissible. \mE\ CHARGE TABLE: $(B{-}L,T_{3R},Y)(\nu^c)=(+1,-\tfrac12,0)$,
+$\operatorname{Tr}_{16}Y^2=\tfrac{10}3$ (\texttt{v485}). \mE\ THE $\{2,3\}$-SMOOTH THEOREM (the door closes):
+every nonzero $\nu^c$ channel weight $\{1,\tfrac14,1,-\tfrac12,\tfrac38\}$ is $\{2,3\}$-smooth, and the
+multiplicative closure of $\{2,3\}$-smooth rationals never contains $\tfrac53$ (no factor $5$); the UNIQUE
+natural $5$ of the embedding, $k_Y=\tfrac53$ (Ginsparg, \texttt{v470}), is a full-multiplet trace whose
+direction has $Y(\nu^c)=0$ EXACTLY --- structurally decoupled from the Majorana operator. \mE\
+GENERATION-BLINDNESS: Clebsches are family-space scalars; $\operatorname{diag}(1,1,\tfrac35)$ cannot arise
+from group theory by construction. \mO\ compiler-flavor inventory typed and declined: exact $\tfrac35$'s only
+in wrong slots ($K$ lepton gen2/gen1; $R+L$ lepton gen3/gen2; never gen3 vs a degenerate base). NET: the
+rung${}+{}5/3$ rescue is DEAD as a mechanism candidate; the \texttt{v481} one-parameter window candidate
+($M_R$ free inside the PS window, the $\Sigma m_\nu=0.059$ eV floor as kill test) stands. Contract
+provenance: \texttt{experiments/theory-contracts/clebsch01\_majorana\_35\_door.py}. Integrated in
+\texttt{tfpt\_2\_standard\_model} (new paragraph closing the seesaw arc); ledger row
+\texttt{FLAV.NUSCALE.04} $+$ update note on \texttt{.03}; Python-only (Fraction/sympy exact), mirrorable,
+deferred to the next verified engine run.
+\end{itemize}
+
+\subsection*{2026-07-15 (II) (\texttt{v487} --- the lazy split FORCED by the resummed clock: the walk's one-step spectrum is the complete \texttt{v124} clock ladder below the wall, deck parity $=$ rung index, and the two comb tones are one bend apart --- the \texttt{v486} \mO\ ``split selection'' closes onto established structure; \emph{no gate closes, no marker moves})}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v487\_transfer\_clock\_rungs.py} (\texttt{HYP.REWRITE.03}).} v486 left the split
+selection open (``$(\tfrac12,\tfrac16)$ vs uniform $(\tfrac13,\tfrac13)$ is selected by the physical
+spectrum, not yet derived''; named candidate: the vague ``sheet-symmetric choice''). Closed: \mE\ RUNG
+READING --- the lazy rule's one-step spectrum is EXACTLY the complete resummed-clock ladder below the
+wall (\texttt{v124}: $\lambda_n^{1/p_2}=1-n/\Nfam$, pole at $n{=}\Nfam$):
+$\operatorname{eig}(M)=\{1,\tfrac23,\tfrac13\}=\{1-n/3:n=0,1,2\}$, while \texttt{v327}'s uniform rule
+puts its second pair mode ON the wall ($0=1-3/3$) --- the v486 degeneracy re-read as ``odd channel
+collapsed to the wall''. \mE\ DECK PARITY $=$ RUNG INDEX: $[B,\sigma]=0$; the $\sigma$-even pair mode
+carries rung $n{=}1$ (survival $\tfrac23$), the $\sigma$-odd mode rung $n{=}2$ (survival $\tfrac13$) ---
+each clock step flips the deck parity; this is the structural home of the v486 parity assignment
+($\omega_1$ even-channel, $\omega_2$ odd-channel) that \texttt{experiments/frb-parity-comb} tests.
+\mE\ FORCING: demanding the faithful ladder (no rung missing, no physical mode on the wall ---
+definitional for a full-spectrum generator) $+$ $\Z_2$ equivariance $+$ non-negative rates forces
+UNIQUELY both the split $(\tfrac12,\tfrac16)$ AND the rung assignment even$\to$1, odd$\to$2 (the swapped
+assignment needs $h=-\tfrac16<0$); the ``sheet-symmetric choice'' candidate is superseded by this proof.
+\mE\ BEND COROLLARY: $\omega_1/\omega_2=\mathrm{rate}(2)/\mathrm{rate}(1)=\log_{3/2}3=2.70951\ldots$ ---
+the parity-comb tone ratio IS the \texttt{v107}/\texttt{v124} bend of the pulsar-clock search. \mO\ what
+remains open is exactly what was open before v486: the arity $\{2,3\}$ (anchor input) and the clock's
+semiclassical derivation (R1); no independent choice remains at the walk level. Contract provenance:
+\texttt{experiments/theory-contracts/lazy01\_clock\_rung\_forcing.py}. Integrated in
+\texttt{origin\_theory} (new paragraph after the v486 block); ledger row \texttt{HYP.REWRITE.03} $+$
+update note on \texttt{.02}; Python-only (sympy exact), mirrorable, deferred to the next verified engine
+run.
+\end{itemize}
+
 \subsection*{2026-07-15 (\texttt{v486} --- generator hunt: the FULL transfer spectrum $\{1,(2/3)^6,(1/3)^6\}$ from ONE forced local rule --- the unique lazy $\Z_2$-pair walk $(\mathrm{stay},\mathrm{hop},\mathrm{leak})=(\tfrac12,\tfrac16,\tfrac13)$; the previously generator-less $(1/3)^6$ mode gets its origin; \texttt{v327}'s uniform rule superseded as full-spectrum generator --- \emph{no gate closes, no marker moves})}
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{\texttt{v486\_transfer\_full\_rule.py} (\texttt{HYP.REWRITE.02}).} The verified seam

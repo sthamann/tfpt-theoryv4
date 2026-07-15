@@ -326,7 +326,20 @@ ROWS = [
      "relaxed gate) -> IX.01 data_limited, IX.02 null-at-current-power (p=0.53), injection 2% "
      "at eps=0.3 -> leg honestly underpowered; typed insight: post-outburst ToOs weeks after "
      "onset carry no comb reach -- day-scale ToOs or NICER burst-storm data named as the next "
-     "leg", None,
+     "leg. NICER leg (v1.2 addendum, prereg before data pass): NICER 3020560101 = the "
+     "2020-04-28 SGR 1935+2154 burst storm (Younes+2020; 306,090 photons 1-10 keV; cl-vs-ufa "
+     "fallback rule documented, not triggered) -- 375 bursts, ONE storm cluster of 372 bursts "
+     "over 1095 s (the hoped-for dense anchor); family A (storm cascade of burst peak times) "
+     "reaches 4.6 e-folds = 1.89 omega_1 / 0.70 omega_2 periods; NI.01 (omega_2 forbidden, "
+     "kill direction) data_limited -- even the best archived storm cannot reach the omega_2 "
+     "gate (needs 7.9 e-folds), so the forbidden test stays OPEN for lack of reach, not "
+     "violated; NI.02 (omega_1 allowed) null-at-current-power (Fisher p=0.165 over 110 "
+     "sessions); NI.03 honesty finding: the smooth log-density surrogate is strongly "
+     "anti-conservative on the CLUSTERED family-A burst-time session (98% FP at eps=0 -- the "
+     "single A:relaxed p=0.005 is typed as surrogate misfit, not signal), while family B "
+     "photon cascades are clean (0% FP at eps=0; powered from eps~0.3). Typed conclusion: the "
+     "omega_2 forbidden direction is NOT decidable with existing archives -- it needs "
+     "multi-day storm monitoring (onset + hours-to-days cadence)", None,
      "search_target", "boundary recovery kernel (dynamic, parity-resolved comb)",
      "search_target", "FAST FRB 20240114A pol catalog v5 (committed, frb-tfpt-signatures); "
      "prereg hypotheses/parity_comb_v1.yaml 2026-07-15 before the data pass",

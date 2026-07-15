@@ -46,6 +46,886 @@ export const CHANGELOG: ChangelogEntry[] = [
     "dateLabel": "2026-07-15",
     "heading": [
       {
+        "k": "t",
+        "v": "III) ("
+      },
+      {
+        "k": "c",
+        "v": "v488"
+      },
+      {
+        "k": "t",
+        "v": " — the "
+      },
+      {
+        "k": "m",
+        "v": "3/5"
+      },
+      {
+        "k": "t",
+        "v": " Clebsch door ENUMERATED AND CLOSED: no minimal Pati–Salam/"
+      },
+      {
+        "k": "m",
+        "v": "SO(10)"
+      },
+      {
+        "k": "t",
+        "v": " Majorana channel can produce "
+      },
+      {
+        "k": "m",
+        "v": "5/3"
+      },
+      {
+        "k": "t",
+        "v": " — the "
+      },
+      {
+        "k": "c",
+        "v": "v482"
+      },
+      {
+        "k": "t",
+        "v": " escape is decided dead, the "
+      },
+      {
+        "k": "c",
+        "v": "v481"
+      },
+      {
+        "k": "t",
+        "v": " window candidate stands as the honest endpoint; "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "a clean negative result, no gate closes"
+          }
+        ]
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v488_majorana_clebsch_door.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "FLAV.NUSCALE.04"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " v482 named ONE escape for the integer seesaw rung "
+        },
+        {
+          "k": "m",
+          "v": "M_R=c_3^3\\Mbar"
+        },
+        {
+          "k": "t",
+          "v": ": a third-generation Majorana factor "
+        },
+        {
+          "k": "m",
+          "v": "r\\approx1.6696"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "0.18\\%"
+        },
+        {
+          "k": "t",
+          "v": " from "
+        },
+        {
+          "k": "m",
+          "v": "\\gcar/\\Nfam=5/3"
+        },
+        {
+          "k": "t",
+          "v": " — declined for lack of mechanism. The mechanism search is now EXECUTED: "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "NO RENORMALISABLE CHANNEL — "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{sym}^2(\\mathbf{16})=136=\\mathbf{10}+\\mathbf{126}"
+        },
+        {
+          "k": "t",
+          "v": " and the "
+        },
+        {
+          "k": "m",
+          "v": "\\overline{\\mathbf{126}}"
+        },
+        {
+          "k": "t",
+          "v": " is NOT in the "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " hull "
+        },
+        {
+          "k": "m",
+          "v": "\\{1,10,16,45\\}"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v247"
+        },
+        {
+          "k": "t",
+          "v": "), so "
+        },
+        {
+          "k": "m",
+          "v": "M_R"
+        },
+        {
+          "k": "t",
+          "v": " only via the "
+        },
+        {
+          "k": "m",
+          "v": "d{=}5"
+        },
+        {
+          "k": "t",
+          "v": " operator "
+        },
+        {
+          "k": "m",
+          "v": "(\\mathbf{16}_F\\overline{\\mathbf{16}}_H)^2/\\Lambda"
+        },
+        {
+          "k": "t",
+          "v": "; channels "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbf{16}\\times\\overline{\\mathbf{16}}=\\mathbf{1}+\\mathbf{45}+\\mathbf{210}"
+        },
+        {
+          "k": "t",
+          "v": " with only singlet "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbf{45}"
+        },
+        {
+          "k": "t",
+          "v": " admissible. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "CHARGE TABLE: "
+        },
+        {
+          "k": "m",
+          "v": "(B{-}L,T_{3R},Y)(\\nu^c)=(+1,-\\tfrac12,0)"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{Tr}_{16}Y^2=\\tfrac{10}3"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v485"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "THE "
+        },
+        {
+          "k": "m",
+          "v": "\\{2,3\\}"
+        },
+        {
+          "k": "t",
+          "v": "-SMOOTH THEOREM (the door closes): every nonzero "
+        },
+        {
+          "k": "m",
+          "v": "\\nu^c"
+        },
+        {
+          "k": "t",
+          "v": " channel weight "
+        },
+        {
+          "k": "m",
+          "v": "\\{1,\\tfrac14,1,-\\tfrac12,\\tfrac38\\}"
+        },
+        {
+          "k": "t",
+          "v": " is "
+        },
+        {
+          "k": "m",
+          "v": "\\{2,3\\}"
+        },
+        {
+          "k": "t",
+          "v": "-smooth, and the multiplicative closure of "
+        },
+        {
+          "k": "m",
+          "v": "\\{2,3\\}"
+        },
+        {
+          "k": "t",
+          "v": "-smooth rationals never contains "
+        },
+        {
+          "k": "m",
+          "v": "\\tfrac53"
+        },
+        {
+          "k": "t",
+          "v": " (no factor "
+        },
+        {
+          "k": "m",
+          "v": "5"
+        },
+        {
+          "k": "t",
+          "v": "); the UNIQUE natural "
+        },
+        {
+          "k": "m",
+          "v": "5"
+        },
+        {
+          "k": "t",
+          "v": " of the embedding, "
+        },
+        {
+          "k": "m",
+          "v": "k_Y=\\tfrac53"
+        },
+        {
+          "k": "t",
+          "v": " (Ginsparg, "
+        },
+        {
+          "k": "c",
+          "v": "v470"
+        },
+        {
+          "k": "t",
+          "v": "), is a full-multiplet trace whose direction has "
+        },
+        {
+          "k": "m",
+          "v": "Y(\\nu^c)=0"
+        },
+        {
+          "k": "t",
+          "v": " EXACTLY — structurally decoupled from the Majorana operator. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": " GENERATION-BLINDNESS: Clebsches are family-space scalars; "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{diag}(1,1,\\tfrac35)"
+        },
+        {
+          "k": "t",
+          "v": " cannot arise from group theory by construction. "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "compiler-flavor inventory typed and declined: exact "
+        },
+        {
+          "k": "m",
+          "v": "\\tfrac35"
+        },
+        {
+          "k": "t",
+          "v": "'s only in wrong slots ("
+        },
+        {
+          "k": "m",
+          "v": "K"
+        },
+        {
+          "k": "t",
+          "v": " lepton gen2/gen1; "
+        },
+        {
+          "k": "m",
+          "v": "R+L"
+        },
+        {
+          "k": "t",
+          "v": " lepton gen3/gen2; never gen3 vs a degenerate base). NET: the rung"
+        },
+        {
+          "k": "m",
+          "v": "{}+{}5/3"
+        },
+        {
+          "k": "t",
+          "v": " rescue is DEAD as a mechanism candidate; the "
+        },
+        {
+          "k": "c",
+          "v": "v481"
+        },
+        {
+          "k": "t",
+          "v": " one-parameter window candidate ("
+        },
+        {
+          "k": "m",
+          "v": "M_R"
+        },
+        {
+          "k": "t",
+          "v": " free inside the PS window, the "
+        },
+        {
+          "k": "m",
+          "v": "\\Sigma m_\\nu=0.059"
+        },
+        {
+          "k": "t",
+          "v": " eV floor as kill test) stands. Contract provenance: "
+        },
+        {
+          "k": "c",
+          "v": "experiments/theory-contracts/clebsch01_majorana_35_door.py"
+        },
+        {
+          "k": "t",
+          "v": ". Integrated in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2_standard_model"
+        },
+        {
+          "k": "t",
+          "v": " (new paragraph closing the seesaw arc); ledger row "
+        },
+        {
+          "k": "c",
+          "v": "FLAV.NUSCALE.04"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " update note on "
+        },
+        {
+          "k": "c",
+          "v": ".03"
+        },
+        {
+          "k": "t",
+          "v": "; Python-only (Fraction/sympy exact), mirrorable, deferred to the next verified engine run."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-15",
+    "dateLabel": "2026-07-15",
+    "heading": [
+      {
+        "k": "t",
+        "v": "II) ("
+      },
+      {
+        "k": "c",
+        "v": "v487"
+      },
+      {
+        "k": "t",
+        "v": " — the lazy split FORCED by the resummed clock: the walk's one-step spectrum is the complete "
+      },
+      {
+        "k": "c",
+        "v": "v124"
+      },
+      {
+        "k": "t",
+        "v": " clock ladder below the wall, deck parity "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " rung index, and the two comb tones are one bend apart — the "
+      },
+      {
+        "k": "c",
+        "v": "v486"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": "“split selection” closes onto established structure; "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "no gate closes, no marker moves"
+          }
+        ]
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v487_transfer_clock_rungs.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "HYP.REWRITE.03"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " v486 left the split selection open (“"
+        },
+        {
+          "k": "m",
+          "v": "(\\tfrac12,\\tfrac16)"
+        },
+        {
+          "k": "t",
+          "v": " vs uniform "
+        },
+        {
+          "k": "m",
+          "v": "(\\tfrac13,\\tfrac13)"
+        },
+        {
+          "k": "t",
+          "v": " is selected by the physical spectrum, not yet derived”; named candidate: the vague “sheet-symmetric choice”). Closed: "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "RUNG READING — the lazy rule's one-step spectrum is EXACTLY the complete resummed-clock ladder below the wall ("
+        },
+        {
+          "k": "c",
+          "v": "v124"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_n^{1/p_2}=1-n/\\Nfam"
+        },
+        {
+          "k": "t",
+          "v": ", pole at "
+        },
+        {
+          "k": "m",
+          "v": "n{=}\\Nfam"
+        },
+        {
+          "k": "t",
+          "v": "): "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{eig}(M)=\\{1,\\tfrac23,\\tfrac13\\}=\\{1-n/3:n=0,1,2\\}"
+        },
+        {
+          "k": "t",
+          "v": ", while "
+        },
+        {
+          "k": "c",
+          "v": "v327"
+        },
+        {
+          "k": "t",
+          "v": "'s uniform rule puts its second pair mode ON the wall ("
+        },
+        {
+          "k": "m",
+          "v": "0=1-3/3"
+        },
+        {
+          "k": "t",
+          "v": ") — the v486 degeneracy re-read as “odd channel collapsed to the wall”. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "DECK PARITY "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " RUNG INDEX: "
+        },
+        {
+          "k": "m",
+          "v": "[B,\\sigma]=0"
+        },
+        {
+          "k": "t",
+          "v": "; the "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma"
+        },
+        {
+          "k": "t",
+          "v": "-even pair mode carries rung "
+        },
+        {
+          "k": "m",
+          "v": "n{=}1"
+        },
+        {
+          "k": "t",
+          "v": " (survival "
+        },
+        {
+          "k": "m",
+          "v": "\\tfrac23"
+        },
+        {
+          "k": "t",
+          "v": "), the "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma"
+        },
+        {
+          "k": "t",
+          "v": "-odd mode rung "
+        },
+        {
+          "k": "m",
+          "v": "n{=}2"
+        },
+        {
+          "k": "t",
+          "v": " (survival "
+        },
+        {
+          "k": "m",
+          "v": "\\tfrac13"
+        },
+        {
+          "k": "t",
+          "v": ") — each clock step flips the deck parity; this is the structural home of the v486 parity assignment ("
+        },
+        {
+          "k": "m",
+          "v": "\\omega_1"
+        },
+        {
+          "k": "t",
+          "v": " even-channel, "
+        },
+        {
+          "k": "m",
+          "v": "\\omega_2"
+        },
+        {
+          "k": "t",
+          "v": " odd-channel) that "
+        },
+        {
+          "k": "c",
+          "v": "experiments/frb-parity-comb"
+        },
+        {
+          "k": "t",
+          "v": " tests. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "FORCING: demanding the faithful ladder (no rung missing, no physical mode on the wall — definitional for a full-spectrum generator) "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\Z_2"
+        },
+        {
+          "k": "t",
+          "v": " equivariance "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " non-negative rates forces UNIQUELY both the split "
+        },
+        {
+          "k": "m",
+          "v": "(\\tfrac12,\\tfrac16)"
+        },
+        {
+          "k": "t",
+          "v": " AND the rung assignment even"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": "1, odd"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": "2 (the swapped assignment needs "
+        },
+        {
+          "k": "m",
+          "v": "h=-\\tfrac16<0"
+        },
+        {
+          "k": "t",
+          "v": "); the “sheet-symmetric choice” candidate is superseded by this proof. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "BEND COROLLARY: "
+        },
+        {
+          "k": "m",
+          "v": "\\omega_1/\\omega_2=\\mathrm{rate}(2)/\\mathrm{rate}(1)=\\log_{3/2}3=2.70951\\ldots"
+        },
+        {
+          "k": "t",
+          "v": " — the parity-comb tone ratio IS the "
+        },
+        {
+          "k": "c",
+          "v": "v107"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v124"
+        },
+        {
+          "k": "t",
+          "v": " bend of the pulsar-clock search. "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "what remains open is exactly what was open before v486: the arity "
+        },
+        {
+          "k": "m",
+          "v": "\\{2,3\\}"
+        },
+        {
+          "k": "t",
+          "v": " (anchor input) and the clock's semiclassical derivation (R1); no independent choice remains at the walk level. Contract provenance: "
+        },
+        {
+          "k": "c",
+          "v": "experiments/theory-contracts/lazy01_clock_rung_forcing.py"
+        },
+        {
+          "k": "t",
+          "v": ". Integrated in "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": " (new paragraph after the v486 block); ledger row "
+        },
+        {
+          "k": "c",
+          "v": "HYP.REWRITE.03"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " update note on "
+        },
+        {
+          "k": "c",
+          "v": ".02"
+        },
+        {
+          "k": "t",
+          "v": "; Python-only (sympy exact), mirrorable, deferred to the next verified engine run."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-15",
+    "dateLabel": "2026-07-15",
+    "heading": [
+      {
         "k": "c",
         "v": "v486"
       },

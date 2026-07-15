@@ -574,6 +574,43 @@ dial-free, **domain-wall-safe post-inflationary axion** — at the cost only of 
 cd experiments/theory-contracts && python3 axion06_domain_wall_number.py
 ```
 
+## `lazy01_clock_rung_forcing.py` — der Lazy-Split aus der Resummed Clock erzwungen (2026-07-15)
+
+Schließt das v486-[O] „Split-Selektion": das Ein-Schritt-Spektrum des Lazy-Walks ist **exakt
+die komplette v124-Clock-Leiter unterhalb der Wall** (`eig(M) = {1−n/3 : n=0,1,2}`); v327's
+Uniform-Regel setzt den zweiten Paar-Mode **auf** die Wall (0 = 1−3/3). Deck-Parität = Rung-Index
+(`[B,σ]=0`, even→Rung 1, odd→Rung 2 — das strukturelle Zuhause der v486-Paritätszuweisung).
+Forcing: treue Leiter + ℤ₂-Äquivarianz + Raten ≥ 0 erzwingt eindeutig `(1/2, 1/6)` UND die
+Zuordnung (Tausch bräuchte hop = −1/6 < 0). Corollar: `ω₁/ω₂ = log_{3/2}3` = der v107/v124-Bend.
+**5/5 — promoted als `v487_transfer_clock_rungs.py` (HYP.REWRITE.03).**
+
+## `clebsch01_majorana_35_door.py` — die 3/5-Clebsch-Tür enumeriert und geschlossen (2026-07-15)
+
+Entscheidet v482's benannten Escape (`r ≈ 5/3` für die dritte Generation) **negativ**: kein
+renormierbarer Kanal (126bar E8-verboten, v247) ⇒ nur der d=5-Operator; alle ν^c-Kanalgewichte
+{1, 1/4, 1, −1/2, 3/8} sind {2,3}-glatt ⇒ 5/3 multiplikativ unerreichbar; das einzige natürliche
+5 der Einbettung (`k_Y = 5/3`, v470) ist durch `Y(ν^c) = 0` exakt entkoppelt; Clebsches sind
+generationsblind (Familienraum-Skalare). Compiler-3/5 nur in falschen Slots (K-Lepton gen2/gen1;
+R+L gen3/gen2). **Die Rung+5/3-Rettung ist tot; der v481-Fenster-Kandidat bleibt der ehrliche
+Endpunkt. 6/6 — promoted als `v488_majorana_clebsch_door.py` (FLAV.NUSCALE.04).**
+
+## `adhm01_seam_arrow_budget.py` — das Seam-seitige Arrow-Budget der Kronheimer-Brücke (2026-07-15)
+
+Erster konkreter Schritt, die v479-Brücke von der Seam-Seite zu füttern: **was** die Seam liefern
+muss, exakt budgetiert. Arrow-Datum des Marks-Quivers: `dim_C M = 2·Σ δᵢδⱼ = 240 = |R(E8)| =
+|Z₂|·|2I|` (ein komplexer Arrow-Freiheitsgrad pro E8-Wurzel; das C² = Sheet-Doublet). Branching
+wie der Carrier: 240 = 40+12+60+128 (Carrier-Coset 52 = v128/v135). Moment-Map-Buchhaltung:
+dim G = 119, μ⁻¹(0) = 123 = dim G + 4 (die ALE-4). Gauge-Datum `120 = |μ4|·h(E8)` — die reguläre
+Darstellung trägt exakt Multiplizität 30 pro μ4-Charakter; Perioden-Datum `24 = 6·4`. **[O]
+benannt (der eigentliche Forschungsschritt): 2I-äquivariante Identifikation des v155/v160-
+Kovarianz-Sektors mit einem Punkt von μ⁻¹(0). 5/5 — Inventar/Dictionary, nicht promoted.**
+
+```bash
+cd experiments/theory-contracts && python3 lazy01_clock_rung_forcing.py
+cd experiments/theory-contracts && python3 clebsch01_majorana_35_door.py
+cd experiments/theory-contracts && python3 adhm01_seam_arrow_budget.py
+```
+
 ## Open next contract — raw RP seam → Z4 mark-local source
 
 `qgeo_dtn_mark_locality.py` proves the mark-local structure **given** the Z4 marking. The

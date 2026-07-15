@@ -3399,3 +3399,84 @@ BIG-PICTURE-BILANZ der verbliebenen Offenen (was "vollstaendige Loesung" jeweils
 - Absolute nu-Skala: nach v481/v482 ein Ein-Parameter-Fenster-Kandidat; die einzige Tuer zum
   vollstaendigen Schliessen ist der herzuleitende PS-Majorana-Clebsch (3/5) ODER die Messung
   (Sigma m_nu-Floor 0.059 eV, DESI/JUNO).
+
+================================================================
+2026-07-15 (Runde II) -- Die 5 Auftraege: Commit, v487, v488, ADHM-Budget, NICER-Bein
+================================================================
+
+1) COMMIT: v486-Runde + frb-parity-comb + IXPE-Bein committed & gepusht (c4d8536).
+
+2) v487 (HYP.REWRITE.03, promoted aus lazy01_clock_rung_forcing.py): der v486-[O]
+"Split-Selektion" GESCHLOSSEN -- auf etablierte Struktur, nicht auf ein neues Prinzip.
+[E] Das Ein-Schritt-Spektrum des Lazy-Walks ist EXAKT die komplette v124-Clock-Leiter
+unterhalb der Wall: eig(M) = {1-n/3 : n=0,1,2} = {1, 2/3, 1/3}; v327's Uniform-Regel
+setzt den zweiten Paar-Mode AUF die Wall (0 = 1-3/3) -- "Odd-Kanal auf die Wall
+kollabiert". [E] Deck-Paritaet = Rung-Index ([B,sigma]=0; even->Rung 1, odd->Rung 2;
+jeder Clock-Schritt flippt die Paritaet) -- das strukturelle Zuhause der v486-
+Paritaetszuweisung, die frb-parity-comb testet. [E] Forcing: treue Leiter (kein Rung
+fehlt, kein physikalischer Mode auf der Wall -- fuer einen Voll-Spektrum-Generator
+definitorisch) + Z2-Aequivarianz + Raten >= 0 erzwingt eindeutig Split UND Zuordnung
+(Tausch braeuchte hop = -1/6 < 0). [E] Corollar: omega_1/omega_2 = log_{3/2}3 = der
+v107/v124-BEND -- die beiden Such-Toene des Empirie-Programms sind exakt einen Bend
+auseinander. Offen bleibt nur, was vor v486 offen war: Aritaet {2,3} + R1.
+
+3) v488 (FLAV.NUSCALE.04, promoted aus clebsch01_majorana_35_door.py): die 3/5-
+Clebsch-Tuer ENUMERIERT UND GESCHLOSSEN -- sauber NEGATIV. [E] Kein renormierbarer
+Kanal (sym^2(16) = 10 + 126; 126bar E8-verboten, v247) => M_R nur ueber den d=5-
+Operator (16 16bar_H)^2/Lambda; Kanaele 1 + 45 (210 nicht im Hull). [E] Ladungstafel:
+(B-L, T3R, Y)(nu^c) = (+1, -1/2, 0). [E] {2,3}-Glattheits-Theorem: alle nu^c-
+Kanalgewichte {1, 1/4, 1, -1/2, 3/8} sind {2,3}-glatt; multiplikative Huelle enthaelt
+NIE 5/3; das einzige natuerliche 5 der Einbettung (k_Y = 5/3, Ginsparg v470) ist ein
+Voll-Multiplett-Trace und durch Y(nu^c) = 0 EXAKT vom Majorana-Operator entkoppelt.
+[E] Clebsches sind generationsblind (Familienraum-Skalare) -- diag(1,1,3/5) kann aus
+Gruppentheorie prinzipiell nicht entstehen. [O] Compiler-3/5 nur in falschen Slots
+(K-Lepton (5,3,2): gen2/gen1; R (2,5,3) + L (8,5,3): gen3/gen2 -- nie gen3 gegen
+degenerierte Basis). NETTO: die Rung+5/3-Rettung ist als Mechanismus-Kandidat TOT;
+m_3-via-Rung war Koinzidenz; der v481-Fenster-Kandidat (M_R frei im PS-Fenster,
+Sigma-Floor 0.059 eV als Kill-Test) ist der ehrliche Endpunkt. Das ist das "faellt
+sauber durch"-Ergebnis -- auch wertvoll: die Tuer ist zu, niemand muss mehr suchen.
+
+4) ADHM-ANSCHLUSSSTUECK (adhm01_seam_arrow_budget.py, experiments-only, 5/5): das
+Seam-seitige Arrow-Budget der v479-Kronheimer-Bruecke exakt budgetiert. [E] Arrow-
+Datum des Marks-Quivers: dim_C M = 2 Sum_edges delta_i delta_j = 240 = |R(E8)| =
+|Z2| x |2I| -- EIN komplexer Arrow-Freiheitsgrad pro E8-Wurzel; das C^2 = das Z2-
+Sheet-Doublet der quaternionischen Struktur. [E] Branching wie der Carrier: 240 =
+40 + 12 + 60 + 128 (Carrier-Coset 52 = 40+12, v128/v135). [E] Moment-Map-Buchhaltung:
+dim_R G = 119, mu^-1(0) = 123 = dim G + 4 (die ALE-4). [E] Gauge-Datum 120 = |mu4| x
+h(E8): die regulaere 2I-Darstellung traegt exakt Multiplizitaet 30 pro mu4-Charakter
+(Marks x Coxeter-Totativ-Zyklus); Perioden-Datum 24 = 3x8 = 6x4 = Hexagon-Hand x
+h(A3). [O] BENANNT (der eigentliche Forschungsschritt): 2I-aequivariante
+Identifikation des v155/v160-Kovarianz-Sektors mit einem Punkt von mu^-1(0) (drei
+Moment-Map-Level aus Familien-3-Block x Rang-8-Cartan = das 24-dim Perioden-Datum) --
+SEAM.EQUIV.01-Klasse, nicht behauptet.
+
+5) NICER-BEIN (prereg v1.2 VOR dem Datenpass; fetch_nicer.py; ObsID 3020560101 =
+der 2020-04-28-Burst-Sturm von SGR 1935+2154, Younes+2020): 306.090 Photonen 1-10 keV
+(cl-File; Fallback-Regel cl-vs-ufa dokumentiert und NICHT ausgeloest: Coverage 1094 s
+vs 1299 s > 50%), 375 Bursts gefunden, EIN Sturm-Cluster mit 372 Bursts ueber 1095 s
+-- exakt der erhoffte dichte Anker. Familie A (Sturm-Kaskade, Burst-Peak-Zeiten):
+ln-Reichweite 4.6 e-folds = 1.89 omega_1-Perioden (relaxed) / 0.70 omega_2-Perioden
+(unter Gate). Familie B: 244 Photonen-Kaskaden (109 gated omega_1, davon 2 primary).
+NI.01 (omega_2-VERBOT, die Kill-Richtung): data_limited -- auch der Sturm traegt
+omega_2 nicht (braeuchte >1.2 Perioden = 7.9 e-folds zwischen Burst-Anker und
+Session-Ende; Sturm-Intraburst-Gaps sind Sekunden). Der v486-Verbotstest bleibt
+offen mangels Reichweite, nicht verletzt. NI.02 (omega_1 erlaubt): NULL-at-current-
+power -- Fisher p = 0.165 ueber 110 Sessions. WICHTIGER EHRLICHKEITS-BEFUND (NI.03
+eps=0-Baseline): das Smooth-Log-Density-Surrogat ist auf der GECLUSTERTEN Familie-A-
+Burst-Zeit-Session stark antikonservativ (98% False-Positive-Rate bei eps=0!) --
+das einzelne A:relaxed p=0.005 ist damit als Surrogat-Misfit typisiert, NICHT als
+Signal (und selbst inklusive ist die Fisher-Kombination null). Familie B (Photonen-
+Kaskaden) ist sauber: 0% FP bei eps=0, powered ab eps ~ 0.3 (92%; 50% bei 0.2);
+eps_base = 0.0173 bleibt weit darunter -- getestet wird das frueh-verstaerkte
+S-b-Szenario, nicht die Basis-Amplitude. TYPISIERTE LEHRE: selbst der beste
+archivierte Burst-Sturm
+liefert ~2 omega_1-Perioden Familie-A-Reichweite -- fuer omega_2 braeuchte es
+Multi-Tag-Sturm-Monitoring (Onset + Stunden-bis-Tage-Kadenz). Der geplante Weg
+(Burst-Stuerme statt ToOs) war richtig und ist jetzt mit Zahlen belegt; die
+omega_2-Verbots-Richtung ist mit EXISTIERENDEN Archiven nicht entscheidbar.
+
+SYNC: v487 + v488 in run_all/Registry/Ledger (HYP.REWRITE.03, FLAV.NUSCALE.04 +
+Update-Notes auf .02/.03), origin_theory- + tfpt_2-Absaetze, changelog (II)+(III),
+counts 482/v488, Wolfram-README-Flags (Engine unaktiviert, Mirrors deferred),
+papers.ts/predictions.ts-Spiegel, theory-contracts-README (lazy01/clebsch01/adhm01),
+Scorecard-Erweiterung frb-parity-comb um das NICER-Bein.

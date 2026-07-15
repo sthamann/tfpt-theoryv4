@@ -1,0 +1,4361 @@
+{
+  "experiment": "frb-parity-comb v1.2 -- NICER burst-storm leg (NI.01-03)",
+  "dataset": "NICER 3020560101, SGR 1935+2154 (2020-04-28 storm; Younes+2020 ApJL 904 L21)",
+  "semantics": "arrival-time combs = Z2-EVEN sector only (prereg v1.2 BEFORE the data pass)",
+  "firewall": "magnetar bursts = surface channel (A5 class); a hit is a universal-DSI candidate, never direct TFPT confirmation; nothing load-bearing",
+  "file_choice": {
+    "storm_window_met": [
+      199499934.4,
+      199501292.7
+    ],
+    "n_bursts_ufa_total": 438,
+    "coverage_cl_s": 1093.6,
+    "coverage_ufa_s": 1299.1,
+    "use_ufa": false,
+    "file": "ni3020560101_0mpu7_cl.evt.gz"
+  },
+  "photons_1_10_keV": 306090,
+  "gti_total_s": 3115.6,
+  "n_bursts": 375,
+  "clusters": [
+    {
+      "n_bursts": 372,
+      "span_s": 1094.6
+    },
+    {
+      "n_bursts": 1,
+      "span_s": 0.0
+    },
+    {
+      "n_bursts": 1,
+      "span_s": 0.0
+    },
+    {
+      "n_bursts": 1,
+      "span_s": 0.0
+    }
+  ],
+  "family_A_sessions": [
+    {
+      "n_bursts": 372,
+      "ln_reach": 4.6,
+      "reach_omega1": 1.89,
+      "reach_omega2": 0.7
+    }
+  ],
+  "family_B_sessions": [
+    {
+      "n_photons": 2773,
+      "reach_omega1": 1.92
+    },
+    {
+      "n_photons": 4272,
+      "reach_omega1": 0.66
+    },
+    {
+      "n_photons": 326,
+      "reach_omega1": 2.1
+    },
+    {
+      "n_photons": 414,
+      "reach_omega1": 0.81
+    },
+    {
+      "n_photons": 473,
+      "reach_omega1": 2.0
+    },
+    {
+      "n_photons": 243,
+      "reach_omega1": 2.06
+    },
+    {
+      "n_photons": 559,
+      "reach_omega1": 1.48
+    },
+    {
+      "n_photons": 330,
+      "reach_omega1": 0.76
+    },
+    {
+      "n_photons": 818,
+      "reach_omega1": 0.96
+    },
+    {
+      "n_photons": 355,
+      "reach_omega1": 1.95
+    },
+    {
+      "n_photons": 5093,
+      "reach_omega1": 1.25
+    },
+    {
+      "n_photons": 1650,
+      "reach_omega1": 0.66
+    },
+    {
+      "n_photons": 461,
+      "reach_omega1": 1.85
+    },
+    {
+      "n_photons": 339,
+      "reach_omega1": 2.02
+    },
+    {
+      "n_photons": 216,
+      "reach_omega1": 1.55
+    },
+    {
+      "n_photons": 7323,
+      "reach_omega1": 1.43
+    },
+    {
+      "n_photons": 1240,
+      "reach_omega1": 0.56
+    },
+    {
+      "n_photons": 1589,
+      "reach_omega1": 0.66
+    },
+    {
+      "n_photons": 325,
+      "reach_omega1": 1.86
+    },
+    {
+      "n_photons": 380,
+      "reach_omega1": 1.69
+    },
+    {
+      "n_photons": 261,
+      "reach_omega1": 1.77
+    },
+    {
+      "n_photons": 618,
+      "reach_omega1": 1.77
+    },
+    {
+      "n_photons": 311,
+      "reach_omega1": 1.66
+    },
+    {
+      "n_photons": 499,
+      "reach_omega1": 1.64
+    },
+    {
+      "n_photons": 419,
+      "reach_omega1": 1.77
+    },
+    {
+      "n_photons": 273,
+      "reach_omega1": 1.23
+    },
+    {
+      "n_photons": 252,
+      "reach_omega1": 1.57
+    },
+    {
+      "n_photons": 288,
+      "reach_omega1": 1.05
+    },
+    {
+      "n_photons": 501,
+      "reach_omega1": 0.94
+    },
+    {
+      "n_photons": 325,
+      "reach_omega1": 1.33
+    },
+    {
+      "n_photons": 221,
+      "reach_omega1": 1.58
+    },
+    {
+      "n_photons": 312,
+      "reach_omega1": 0.7
+    },
+    {
+      "n_photons": 207,
+      "reach_omega1": 0.99
+    },
+    {
+      "n_photons": 295,
+      "reach_omega1": 0.94
+    },
+    {
+      "n_photons": 250,
+      "reach_omega1": 1.14
+    },
+    {
+      "n_photons": 1689,
+      "reach_omega1": 1.22
+    },
+    {
+      "n_photons": 2854,
+      "reach_omega1": 0.66
+    },
+    {
+      "n_photons": 1247,
+      "reach_omega1": 0.66
+    },
+    {
+      "n_photons": 472,
+      "reach_omega1": 0.7
+    },
+    {
+      "n_photons": 831,
+      "reach_omega1": 1.06
+    },
+    {
+      "n_photons": 682,
+      "reach_omega1": 1.19
+    },
+    {
+      "n_photons": 256,
+      "reach_omega1": 1.52
+    },
+    {
+      "n_photons": 367,
+      "reach_omega1": 1.14
+    },
+    {
+      "n_photons": 807,
+      "reach_omega1": 1.08
+    },
+    {
+      "n_photons": 1369,
+      "reach_omega1": 0.8
+    },
+    {
+      "n_photons": 2224,
+      "reach_omega1": 1.11
+    },
+    {
+      "n_photons": 3819,
+      "reach_omega1": 0.59
+    },
+    {
+      "n_photons": 721,
+      "reach_omega1": 0.66
+    },
+    {
+      "n_photons": 238,
+      "reach_omega1": 0.84
+    },
+    {
+      "n_photons": 1670,
+      "reach_omega1": 1.11
+    },
+    {
+      "n_photons": 4678,
+      "reach_omega1": 0.77
+    },
+    {
+      "n_photons": 1827,
+      "reach_omega1": 0.66
+    },
+    {
+      "n_photons": 549,
+      "reach_omega1": 1.35
+    },
+    {
+      "n_photons": 318,
+      "reach_omega1": 1.2
+    },
+    {
+      "n_photons": 578,
+      "reach_omega1": 0.7
+    },
+    {
+      "n_photons": 808,
+      "reach_omega1": 1.44
+    },
+    {
+      "n_photons": 1346,
+      "reach_omega1": 0.66
+    },
+    {
+      "n_photons": 242,
+      "reach_omega1": 0.97
+    },
+    {
+      "n_photons": 277,
+      "reach_omega1": 0.88
+    },
+    {
+      "n_photons": 294,
+      "reach_omega1": 1.18
+    },
+    {
+      "n_photons": 220,
+      "reach_omega1": 0.83
+    },
+    {
+      "n_photons": 3891,
+      "reach_omega1": 1.34
+    },
+    {
+      "n_photons": 1789,
+      "reach_omega1": 0.66
+    },
+    {
+      "n_photons": 519,
+      "reach_omega1": 1.45
+    },
+    {
+      "n_photons": 218,
+      "reach_omega1": 1.09
+    },
+    {
+      "n_photons": 258,
+      "reach_omega1": 1.13
+    },
+    {
+      "n_photons": 394,
+      "reach_omega1": 1.49
+    },
+    {
+      "n_photons": 244,
+      "reach_omega1": 0.66
+    },
+    {
+      "n_photons": 523,
+      "reach_omega1": 0.92
+    },
+    {
+      "n_photons": 305,
+      "reach_omega1": 0.78
+    },
+    {
+      "n_photons": 539,
+      "reach_omega1": 1.29
+    },
+    {
+      "n_photons": 689,
+      "reach_omega1": 1.29
+    },
+    {
+      "n_photons": 256,
+      "reach_omega1": 0.93
+    },
+    {
+      "n_photons": 435,
+      "reach_omega1": 0.7
+    },
+    {
+      "n_photons": 370,
+      "reach_omega1": 1.47
+    },
+    {
+      "n_photons": 301,
+      "reach_omega1": 1.28
+    },
+    {
+      "n_photons": 345,
+      "reach_omega1": 0.92
+    },
+    {
+      "n_photons": 579,
+      "reach_omega1": 1.21
+    },
+    {
+      "n_photons": 305,
+      "reach_omega1": 0.98
+    },
+    {
+      "n_photons": 1205,
+      "reach_omega1": 1.34
+    },
+    {
+      "n_photons": 540,
+      "reach_omega1": 0.66
+    },
+    {
+      "n_photons": 1923,
+      "reach_omega1": 1.65
+    },
+    {
+      "n_photons": 1319,
+      "reach_omega1": 1.75
+    },
+    {
+      "n_photons": 1850,
+      "reach_omega1": 1.45
+    },
+    {
+      "n_photons": 1276,
+      "reach_omega1": 1.48
+    },
+    {
+      "n_photons": 233,
+      "reach_omega1": 1.29
+    },
+    {
+      "n_photons": 317,
+      "reach_omega1": 1.18
+    },
+    {
+      "n_photons": 1412,
+      "reach_omega1": 1.66
+    },
+    {
+      "n_photons": 391,
+      "reach_omega1": 1.53
+    },
+    {
+      "n_photons": 597,
+      "reach_omega1": 0.8
+    },
+    {
+      "n_photons": 1483,
+      "reach_omega1": 0.77
+    },
+    {
+      "n_photons": 595,
+      "reach_omega1": 1.23
+    },
+    {
+      "n_photons": 873,
+      "reach_omega1": 0.66
+    },
+    {
+      "n_photons": 291,
+      "reach_omega1": 0.84
+    },
+    {
+      "n_photons": 517,
+      "reach_omega1": 1.73
+    },
+    {
+      "n_photons": 648,
+      "reach_omega1": 2.03
+    },
+    {
+      "n_photons": 721,
+      "reach_omega1": 1.42
+    },
+    {
+      "n_photons": 352,
+      "reach_omega1": 0.96
+    },
+    {
+      "n_photons": 535,
+      "reach_omega1": 1.61
+    },
+    {
+      "n_photons": 601,
+      "reach_omega1": 0.66
+    },
+    {
+      "n_photons": 733,
+      "reach_omega1": 1.88
+    },
+    {
+      "n_photons": 787,
+      "reach_omega1": 0.99
+    },
+    {
+      "n_photons": 2654,
+      "reach_omega1": 0.66
+    },
+    {
+      "n_photons": 1991,
+      "reach_omega1": 1.51
+    },
+    {
+      "n_photons": 2687,
+      "reach_omega1": 0.66
+    },
+    {
+      "n_photons": 962,
+      "reach_omega1": 0.66
+    },
+    {
+      "n_photons": 675,
+      "reach_omega1": 1.01
+    },
+    {
+      "n_photons": 471,
+      "reach_omega1": 1.06
+    },
+    {
+      "n_photons": 393,
+      "reach_omega1": 0.97
+    },
+    {
+      "n_photons": 330,
+      "reach_omega1": 0.94
+    },
+    {
+      "n_photons": 945,
+      "reach_omega1": 0.82
+    },
+    {
+      "n_photons": 602,
+      "reach_omega1": 0.77
+    },
+    {
+      "n_photons": 216,
+      "reach_omega1": 0.85
+    },
+    {
+      "n_photons": 261,
+      "reach_omega1": 0.84
+    },
+    {
+      "n_photons": 2213,
+      "reach_omega1": 1.18
+    },
+    {
+      "n_photons": 2939,
+      "reach_omega1": 0.9
+    },
+    {
+      "n_photons": 1173,
+      "reach_omega1": 0.8
+    },
+    {
+      "n_photons": 1489,
+      "reach_omega1": 0.9
+    },
+    {
+      "n_photons": 828,
+      "reach_omega1": 0.82
+    },
+    {
+      "n_photons": 505,
+      "reach_omega1": 1.0
+    },
+    {
+      "n_photons": 572,
+      "reach_omega1": 0.88
+    },
+    {
+      "n_photons": 1519,
+      "reach_omega1": 0.9
+    },
+    {
+      "n_photons": 1563,
+      "reach_omega1": 0.88
+    },
+    {
+      "n_photons": 463,
+      "reach_omega1": 0.66
+    },
+    {
+      "n_photons": 563,
+      "reach_omega1": 0.89
+    },
+    {
+      "n_photons": 1980,
+      "reach_omega1": 1.05
+    },
+    {
+      "n_photons": 1710,
+      "reach_omega1": 1.05
+    },
+    {
+      "n_photons": 649,
+      "reach_omega1": 0.95
+    },
+    {
+      "n_photons": 772,
+      "reach_omega1": 0.94
+    },
+    {
+      "n_photons": 767,
+      "reach_omega1": 0.66
+    },
+    {
+      "n_photons": 558,
+      "reach_omega1": 0.77
+    },
+    {
+      "n_photons": 447,
+      "reach_omega1": 1.02
+    },
+    {
+      "n_photons": 6019,
+      "reach_omega1": 0.98
+    },
+    {
+      "n_photons": 1242,
+      "reach_omega1": 1.05
+    },
+    {
+      "n_photons": 207,
+      "reach_omega1": 0.69
+    },
+    {
+      "n_photons": 1083,
+      "reach_omega1": 1.1
+    },
+    {
+      "n_photons": 764,
+      "reach_omega1": 0.73
+    },
+    {
+      "n_photons": 265,
+      "reach_omega1": 0.66
+    },
+    {
+      "n_photons": 1699,
+      "reach_omega1": 1.02
+    },
+    {
+      "n_photons": 2654,
+      "reach_omega1": 1.13
+    },
+    {
+      "n_photons": 436,
+      "reach_omega1": 0.98
+    },
+    {
+      "n_photons": 1170,
+      "reach_omega1": 0.96
+    },
+    {
+      "n_photons": 359,
+      "reach_omega1": 1.14
+    },
+    {
+      "n_photons": 206,
+      "reach_omega1": 0.89
+    },
+    {
+      "n_photons": 276,
+      "reach_omega1": 0.12
+    },
+    {
+      "n_photons": 412,
+      "reach_omega1": 1.08
+    },
+    {
+      "n_photons": 1083,
+      "reach_omega1": 1.2
+    },
+    {
+      "n_photons": 592,
+      "reach_omega1": 0.94
+    },
+    {
+      "n_photons": 232,
+      "reach_omega1": 1.24
+    },
+    {
+      "n_photons": 200,
+      "reach_omega1": 1.02
+    },
+    {
+      "n_photons": 465,
+      "reach_omega1": 1.31
+    },
+    {
+      "n_photons": 245,
+      "reach_omega1": 0.82
+    },
+    {
+      "n_photons": 1030,
+      "reach_omega1": 1.35
+    },
+    {
+      "n_photons": 2253,
+      "reach_omega1": 0.74
+    },
+    {
+      "n_photons": 739,
+      "reach_omega1": 0.9
+    },
+    {
+      "n_photons": 243,
+      "reach_omega1": 1.13
+    },
+    {
+      "n_photons": 380,
+      "reach_omega1": 0.75
+    },
+    {
+      "n_photons": 210,
+      "reach_omega1": 0.68
+    },
+    {
+      "n_photons": 418,
+      "reach_omega1": 1.29
+    },
+    {
+      "n_photons": 574,
+      "reach_omega1": 1.3
+    },
+    {
+      "n_photons": 294,
+      "reach_omega1": 1.19
+    },
+    {
+      "n_photons": 4841,
+      "reach_omega1": 1.2
+    },
+    {
+      "n_photons": 1384,
+      "reach_omega1": 0.66
+    },
+    {
+      "n_photons": 703,
+      "reach_omega1": 1.2
+    },
+    {
+      "n_photons": 407,
+      "reach_omega1": 1.21
+    },
+    {
+      "n_photons": 257,
+      "reach_omega1": 1.31
+    },
+    {
+      "n_photons": 265,
+      "reach_omega1": 1.22
+    },
+    {
+      "n_photons": 254,
+      "reach_omega1": 1.08
+    },
+    {
+      "n_photons": 247,
+      "reach_omega1": 0.9
+    },
+    {
+      "n_photons": 1094,
+      "reach_omega1": 1.33
+    },
+    {
+      "n_photons": 400,
+      "reach_omega1": 0.77
+    },
+    {
+      "n_photons": 310,
+      "reach_omega1": 0.94
+    },
+    {
+      "n_photons": 479,
+      "reach_omega1": 0.66
+    },
+    {
+      "n_photons": 421,
+      "reach_omega1": 1.78
+    },
+    {
+      "n_photons": 743,
+      "reach_omega1": 1.55
+    },
+    {
+      "n_photons": 638,
+      "reach_omega1": 1.56
+    },
+    {
+      "n_photons": 290,
+      "reach_omega1": 1.1
+    },
+    {
+      "n_photons": 334,
+      "reach_omega1": 0.77
+    },
+    {
+      "n_photons": 471,
+      "reach_omega1": 0.66
+    },
+    {
+      "n_photons": 281,
+      "reach_omega1": 1.51
+    },
+    {
+      "n_photons": 302,
+      "reach_omega1": 1.62
+    },
+    {
+      "n_photons": 366,
+      "reach_omega1": 0.77
+    },
+    {
+      "n_photons": 1300,
+      "reach_omega1": 0.66
+    },
+    {
+      "n_photons": 230,
+      "reach_omega1": 1.51
+    },
+    {
+      "n_photons": 481,
+      "reach_omega1": 1.3
+    },
+    {
+      "n_photons": 378,
+      "reach_omega1": 1.0
+    },
+    {
+      "n_photons": 232,
+      "reach_omega1": 1.23
+    },
+    {
+      "n_photons": 314,
+      "reach_omega1": 0.92
+    },
+    {
+      "n_photons": 345,
+      "reach_omega1": 1.62
+    },
+    {
+      "n_photons": 237,
+      "reach_omega1": 0.63
+    },
+    {
+      "n_photons": 1500,
+      "reach_omega1": 1.42
+    },
+    {
+      "n_photons": 609,
+      "reach_omega1": 0.69
+    },
+    {
+      "n_photons": 251,
+      "reach_omega1": 1.99
+    },
+    {
+      "n_photons": 2234,
+      "reach_omega1": 1.66
+    },
+    {
+      "n_photons": 715,
+      "reach_omega1": 0.7
+    },
+    {
+      "n_photons": 984,
+      "reach_omega1": 1.5
+    },
+    {
+      "n_photons": 337,
+      "reach_omega1": 1.52
+    },
+    {
+      "n_photons": 309,
+      "reach_omega1": 0.9
+    },
+    {
+      "n_photons": 227,
+      "reach_omega1": 1.64
+    },
+    {
+      "n_photons": 226,
+      "reach_omega1": 1.53
+    },
+    {
+      "n_photons": 287,
+      "reach_omega1": 1.61
+    },
+    {
+      "n_photons": 367,
+      "reach_omega1": 2.01
+    },
+    {
+      "n_photons": 817,
+      "reach_omega1": 2.04
+    },
+    {
+      "n_photons": 476,
+      "reach_omega1": 0.66
+    },
+    {
+      "n_photons": 275,
+      "reach_omega1": 0.66
+    },
+    {
+      "n_photons": 391,
+      "reach_omega1": 1.28
+    },
+    {
+      "n_photons": 505,
+      "reach_omega1": 0.73
+    },
+    {
+      "n_photons": 1138,
+      "reach_omega1": 0.73
+    },
+    {
+      "n_photons": 389,
+      "reach_omega1": 1.31
+    },
+    {
+      "n_photons": 464,
+      "reach_omega1": 1.37
+    },
+    {
+      "n_photons": 630,
+      "reach_omega1": 1.73
+    },
+    {
+      "n_photons": 448,
+      "reach_omega1": 1.97
+    },
+    {
+      "n_photons": 208,
+      "reach_omega1": 1.23
+    },
+    {
+      "n_photons": 262,
+      "reach_omega1": 2.0
+    },
+    {
+      "n_photons": 345,
+      "reach_omega1": 1.45
+    },
+    {
+      "n_photons": 211,
+      "reach_omega1": 1.71
+    },
+    {
+      "n_photons": 2112,
+      "reach_omega1": 0.99
+    },
+    {
+      "n_photons": 1183,
+      "reach_omega1": 0.7
+    },
+    {
+      "n_photons": 341,
+      "reach_omega1": 1.11
+    },
+    {
+      "n_photons": 222,
+      "reach_omega1": 1.67
+    },
+    {
+      "n_photons": 305,
+      "reach_omega1": 1.67
+    },
+    {
+      "n_photons": 215,
+      "reach_omega1": 1.9
+    },
+    {
+      "n_photons": 225,
+      "reach_omega1": 1.85
+    },
+    {
+      "n_photons": 452,
+      "reach_omega1": 0.92
+    },
+    {
+      "n_photons": 468,
+      "reach_omega1": 1.81
+    },
+    {
+      "n_photons": 267,
+      "reach_omega1": 1.93
+    },
+    {
+      "n_photons": 225,
+      "reach_omega1": 1.85
+    },
+    {
+      "n_photons": 2057,
+      "reach_omega1": 1.41
+    },
+    {
+      "n_photons": 949,
+      "reach_omega1": 0.66
+    },
+    {
+      "n_photons": 338,
+      "reach_omega1": 1.9
+    },
+    {
+      "n_photons": 205,
+      "reach_omega1": 1.78
+    },
+    {
+      "n_photons": 339,
+      "reach_omega1": 1.91
+    },
+    {
+      "n_photons": 220,
+      "reach_omega1": 1.21
+    },
+    {
+      "n_photons": 477,
+      "reach_omega1": 1.41
+    },
+    {
+      "n_photons": 202,
+      "reach_omega1": 1.64
+    },
+    {
+      "n_photons": 209,
+      "reach_omega1": 1.92
+    },
+    {
+      "n_photons": 773,
+      "reach_omega1": 2.25
+    },
+    {
+      "n_photons": 345,
+      "reach_omega1": 0.94
+    },
+    {
+      "n_photons": 368,
+      "reach_omega1": 0.94
+    },
+    {
+      "n_photons": 1115,
+      "reach_omega1": 1.5
+    },
+    {
+      "n_photons": 280,
+      "reach_omega1": 2.37
+    },
+    {
+      "n_photons": 489,
+      "reach_omega1": 2.76
+    },
+    {
+      "n_photons": 717,
+      "reach_omega1": 2.86
+    },
+    {
+      "n_photons": 429,
+      "reach_omega1": 2.97
+    }
+  ],
+  "NI01_omega2_forbidden": {
+    "gated_sessions": 0,
+    "gates": [],
+    "sessions": [
+      {
+        "family": "A",
+        "n": 371,
+        "reach_periods": 0.699,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 2773,
+        "reach_periods": 0.708,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 4272,
+        "reach_periods": 0.244,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 326,
+        "reach_periods": 0.774,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 414,
+        "reach_periods": 0.298,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 473,
+        "reach_periods": 0.738,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 243,
+        "reach_periods": 0.761,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 559,
+        "reach_periods": 0.546,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 330,
+        "reach_periods": 0.282,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 818,
+        "reach_periods": 0.354,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 355,
+        "reach_periods": 0.719,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 5093,
+        "reach_periods": 0.463,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1650,
+        "reach_periods": 0.244,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 461,
+        "reach_periods": 0.684,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 339,
+        "reach_periods": 0.747,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 216,
+        "reach_periods": 0.572,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 7323,
+        "reach_periods": 0.529,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1240,
+        "reach_periods": 0.206,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1589,
+        "reach_periods": 0.244,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 325,
+        "reach_periods": 0.687,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 380,
+        "reach_periods": 0.622,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 261,
+        "reach_periods": 0.653,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 618,
+        "reach_periods": 0.655,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 311,
+        "reach_periods": 0.614,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 499,
+        "reach_periods": 0.604,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 419,
+        "reach_periods": 0.653,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 273,
+        "reach_periods": 0.455,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 252,
+        "reach_periods": 0.58,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 288,
+        "reach_periods": 0.387,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 501,
+        "reach_periods": 0.348,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 325,
+        "reach_periods": 0.49,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 221,
+        "reach_periods": 0.583,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 312,
+        "reach_periods": 0.258,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 207,
+        "reach_periods": 0.366,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 295,
+        "reach_periods": 0.348,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 250,
+        "reach_periods": 0.421,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1689,
+        "reach_periods": 0.451,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 2854,
+        "reach_periods": 0.244,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1247,
+        "reach_periods": 0.244,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 472,
+        "reach_periods": 0.258,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 831,
+        "reach_periods": 0.391,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 682,
+        "reach_periods": 0.438,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 256,
+        "reach_periods": 0.561,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 367,
+        "reach_periods": 0.42,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 807,
+        "reach_periods": 0.398,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1369,
+        "reach_periods": 0.295,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 2224,
+        "reach_periods": 0.409,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 3819,
+        "reach_periods": 0.218,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 721,
+        "reach_periods": 0.243,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 238,
+        "reach_periods": 0.31,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1670,
+        "reach_periods": 0.409,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 4678,
+        "reach_periods": 0.284,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1827,
+        "reach_periods": 0.244,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 549,
+        "reach_periods": 0.499,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 318,
+        "reach_periods": 0.444,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 578,
+        "reach_periods": 0.257,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 808,
+        "reach_periods": 0.53,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1346,
+        "reach_periods": 0.243,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 242,
+        "reach_periods": 0.357,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 277,
+        "reach_periods": 0.324,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 294,
+        "reach_periods": 0.436,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 220,
+        "reach_periods": 0.308,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 3891,
+        "reach_periods": 0.493,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1789,
+        "reach_periods": 0.244,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 519,
+        "reach_periods": 0.534,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 218,
+        "reach_periods": 0.402,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 258,
+        "reach_periods": 0.416,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 394,
+        "reach_periods": 0.548,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 244,
+        "reach_periods": 0.243,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 523,
+        "reach_periods": 0.341,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 305,
+        "reach_periods": 0.289,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 539,
+        "reach_periods": 0.475,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 689,
+        "reach_periods": 0.475,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 256,
+        "reach_periods": 0.344,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 435,
+        "reach_periods": 0.258,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 370,
+        "reach_periods": 0.541,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 301,
+        "reach_periods": 0.472,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 345,
+        "reach_periods": 0.339,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 579,
+        "reach_periods": 0.446,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 305,
+        "reach_periods": 0.361,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1205,
+        "reach_periods": 0.494,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 540,
+        "reach_periods": 0.243,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1923,
+        "reach_periods": 0.608,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1319,
+        "reach_periods": 0.644,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1850,
+        "reach_periods": 0.537,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1276,
+        "reach_periods": 0.545,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 233,
+        "reach_periods": 0.477,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 317,
+        "reach_periods": 0.437,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1412,
+        "reach_periods": 0.611,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 391,
+        "reach_periods": 0.565,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 597,
+        "reach_periods": 0.294,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1483,
+        "reach_periods": 0.283,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 595,
+        "reach_periods": 0.454,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 873,
+        "reach_periods": 0.244,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 291,
+        "reach_periods": 0.311,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 517,
+        "reach_periods": 0.638,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 648,
+        "reach_periods": 0.749,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 721,
+        "reach_periods": 0.524,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 352,
+        "reach_periods": 0.354,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 535,
+        "reach_periods": 0.596,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 601,
+        "reach_periods": 0.243,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 733,
+        "reach_periods": 0.696,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 787,
+        "reach_periods": 0.365,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 2654,
+        "reach_periods": 0.244,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1991,
+        "reach_periods": 0.558,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 2687,
+        "reach_periods": 0.244,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 962,
+        "reach_periods": 0.244,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 675,
+        "reach_periods": 0.372,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 471,
+        "reach_periods": 0.392,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 393,
+        "reach_periods": 0.359,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 330,
+        "reach_periods": 0.348,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 945,
+        "reach_periods": 0.301,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 602,
+        "reach_periods": 0.283,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 216,
+        "reach_periods": 0.315,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 261,
+        "reach_periods": 0.31,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 2213,
+        "reach_periods": 0.437,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 2939,
+        "reach_periods": 0.333,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1173,
+        "reach_periods": 0.295,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1489,
+        "reach_periods": 0.333,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 828,
+        "reach_periods": 0.303,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 505,
+        "reach_periods": 0.369,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 572,
+        "reach_periods": 0.323,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1519,
+        "reach_periods": 0.331,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1563,
+        "reach_periods": 0.324,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 463,
+        "reach_periods": 0.243,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 563,
+        "reach_periods": 0.327,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1980,
+        "reach_periods": 0.386,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1710,
+        "reach_periods": 0.388,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 649,
+        "reach_periods": 0.352,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 772,
+        "reach_periods": 0.348,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 767,
+        "reach_periods": 0.243,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 558,
+        "reach_periods": 0.283,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 447,
+        "reach_periods": 0.375,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 6019,
+        "reach_periods": 0.363,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1242,
+        "reach_periods": 0.389,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 207,
+        "reach_periods": 0.256,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1083,
+        "reach_periods": 0.405,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 764,
+        "reach_periods": 0.271,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 265,
+        "reach_periods": 0.243,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1699,
+        "reach_periods": 0.375,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 2654,
+        "reach_periods": 0.416,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 436,
+        "reach_periods": 0.363,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1170,
+        "reach_periods": 0.353,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 359,
+        "reach_periods": 0.419,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 206,
+        "reach_periods": 0.327,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 276,
+        "reach_periods": 0.045,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 412,
+        "reach_periods": 0.398,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1083,
+        "reach_periods": 0.441,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 592,
+        "reach_periods": 0.349,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 232,
+        "reach_periods": 0.456,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 200,
+        "reach_periods": 0.378,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 465,
+        "reach_periods": 0.484,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 245,
+        "reach_periods": 0.303,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1030,
+        "reach_periods": 0.497,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 2253,
+        "reach_periods": 0.271,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 739,
+        "reach_periods": 0.333,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 243,
+        "reach_periods": 0.418,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 380,
+        "reach_periods": 0.276,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 210,
+        "reach_periods": 0.252,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 418,
+        "reach_periods": 0.475,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 574,
+        "reach_periods": 0.48,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 294,
+        "reach_periods": 0.438,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 4841,
+        "reach_periods": 0.442,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1384,
+        "reach_periods": 0.244,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 703,
+        "reach_periods": 0.442,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 407,
+        "reach_periods": 0.446,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 257,
+        "reach_periods": 0.483,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 265,
+        "reach_periods": 0.452,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 254,
+        "reach_periods": 0.4,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 247,
+        "reach_periods": 0.331,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1094,
+        "reach_periods": 0.492,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 400,
+        "reach_periods": 0.284,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 310,
+        "reach_periods": 0.346,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 479,
+        "reach_periods": 0.244,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 421,
+        "reach_periods": 0.656,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 743,
+        "reach_periods": 0.571,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 638,
+        "reach_periods": 0.576,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 290,
+        "reach_periods": 0.405,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 334,
+        "reach_periods": 0.285,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 471,
+        "reach_periods": 0.244,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 281,
+        "reach_periods": 0.556,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 302,
+        "reach_periods": 0.598,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 366,
+        "reach_periods": 0.284,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1300,
+        "reach_periods": 0.243,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 230,
+        "reach_periods": 0.556,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 481,
+        "reach_periods": 0.481,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 378,
+        "reach_periods": 0.37,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 232,
+        "reach_periods": 0.454,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 314,
+        "reach_periods": 0.34,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 345,
+        "reach_periods": 0.599,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 237,
+        "reach_periods": 0.234,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1500,
+        "reach_periods": 0.525,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 609,
+        "reach_periods": 0.256,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 251,
+        "reach_periods": 0.735,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 2234,
+        "reach_periods": 0.614,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 715,
+        "reach_periods": 0.257,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 984,
+        "reach_periods": 0.554,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 337,
+        "reach_periods": 0.561,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 309,
+        "reach_periods": 0.331,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 227,
+        "reach_periods": 0.605,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 226,
+        "reach_periods": 0.566,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 287,
+        "reach_periods": 0.595,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 367,
+        "reach_periods": 0.742,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 817,
+        "reach_periods": 0.754,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 476,
+        "reach_periods": 0.244,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 275,
+        "reach_periods": 0.243,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 391,
+        "reach_periods": 0.472,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 505,
+        "reach_periods": 0.27,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1138,
+        "reach_periods": 0.27,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 389,
+        "reach_periods": 0.482,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 464,
+        "reach_periods": 0.505,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 630,
+        "reach_periods": 0.637,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 448,
+        "reach_periods": 0.726,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 208,
+        "reach_periods": 0.456,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 262,
+        "reach_periods": 0.738,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 345,
+        "reach_periods": 0.535,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 211,
+        "reach_periods": 0.632,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 2112,
+        "reach_periods": 0.364,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1183,
+        "reach_periods": 0.258,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 341,
+        "reach_periods": 0.412,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 222,
+        "reach_periods": 0.618,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 305,
+        "reach_periods": 0.617,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 215,
+        "reach_periods": 0.701,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 225,
+        "reach_periods": 0.684,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 452,
+        "reach_periods": 0.341,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 468,
+        "reach_periods": 0.667,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 267,
+        "reach_periods": 0.712,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 225,
+        "reach_periods": 0.683,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 2057,
+        "reach_periods": 0.522,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 949,
+        "reach_periods": 0.243,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 338,
+        "reach_periods": 0.7,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 205,
+        "reach_periods": 0.658,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 339,
+        "reach_periods": 0.704,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 220,
+        "reach_periods": 0.447,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 477,
+        "reach_periods": 0.522,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 202,
+        "reach_periods": 0.606,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 209,
+        "reach_periods": 0.709,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 773,
+        "reach_periods": 0.829,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 345,
+        "reach_periods": 0.347,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 368,
+        "reach_periods": 0.348,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1115,
+        "reach_periods": 0.553,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 280,
+        "reach_periods": 0.876,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 489,
+        "reach_periods": 1.02,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 717,
+        "reach_periods": 1.055,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 429,
+        "reach_periods": 1.096,
+        "gate": "fail"
+      }
+    ],
+    "fisher_p": null,
+    "verdict": "data_limited (no gate-passing session)"
+  },
+  "NI02_omega1_allowed": {
+    "gated_sessions": 109,
+    "gates": [
+      "A:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:relaxed",
+      "B:primary",
+      "B:primary"
+    ],
+    "sessions": [
+      {
+        "family": "A",
+        "n": 371,
+        "reach_periods": 1.893,
+        "gate": "relaxed",
+        "z": 65.999,
+        "p_surrogate": 0.005
+      },
+      {
+        "family": "B",
+        "n": 2773,
+        "reach_periods": 1.92,
+        "gate": "relaxed",
+        "z": 2458.5791,
+        "p_surrogate": 0.005
+      },
+      {
+        "family": "B",
+        "n": 4272,
+        "reach_periods": 0.661,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 326,
+        "reach_periods": 2.098,
+        "gate": "relaxed",
+        "z": 22.7316,
+        "p_surrogate": 0.0746
+      },
+      {
+        "family": "B",
+        "n": 414,
+        "reach_periods": 0.806,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 473,
+        "reach_periods": 1.999,
+        "gate": "relaxed",
+        "z": 16.5438,
+        "p_surrogate": 0.7114
+      },
+      {
+        "family": "B",
+        "n": 243,
+        "reach_periods": 2.061,
+        "gate": "relaxed",
+        "z": 24.8521,
+        "p_surrogate": 0.6617
+      },
+      {
+        "family": "B",
+        "n": 559,
+        "reach_periods": 1.48,
+        "gate": "relaxed",
+        "z": 472.2497,
+        "p_surrogate": 0.2736
+      },
+      {
+        "family": "B",
+        "n": 330,
+        "reach_periods": 0.764,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 818,
+        "reach_periods": 0.96,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 355,
+        "reach_periods": 1.949,
+        "gate": "relaxed",
+        "z": 117.1031,
+        "p_surrogate": 0.6965
+      },
+      {
+        "family": "B",
+        "n": 5093,
+        "reach_periods": 1.255,
+        "gate": "relaxed",
+        "z": 4592.7107,
+        "p_surrogate": 0.0498
+      },
+      {
+        "family": "B",
+        "n": 1650,
+        "reach_periods": 0.661,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 461,
+        "reach_periods": 1.854,
+        "gate": "relaxed",
+        "z": 141.308,
+        "p_surrogate": 0.4975
+      },
+      {
+        "family": "B",
+        "n": 339,
+        "reach_periods": 2.023,
+        "gate": "relaxed",
+        "z": 26.335,
+        "p_surrogate": 0.3333
+      },
+      {
+        "family": "B",
+        "n": 216,
+        "reach_periods": 1.55,
+        "gate": "relaxed",
+        "z": 8.8251,
+        "p_surrogate": 0.995
+      },
+      {
+        "family": "B",
+        "n": 7323,
+        "reach_periods": 1.433,
+        "gate": "relaxed",
+        "z": 7122.9884,
+        "p_surrogate": 0.005
+      },
+      {
+        "family": "B",
+        "n": 1240,
+        "reach_periods": 0.559,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1589,
+        "reach_periods": 0.661,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 325,
+        "reach_periods": 1.863,
+        "gate": "relaxed",
+        "z": 37.1254,
+        "p_surrogate": 0.5174
+      },
+      {
+        "family": "B",
+        "n": 380,
+        "reach_periods": 1.685,
+        "gate": "relaxed",
+        "z": 65.1897,
+        "p_surrogate": 0.9254
+      },
+      {
+        "family": "B",
+        "n": 261,
+        "reach_periods": 1.768,
+        "gate": "relaxed",
+        "z": 15.3935,
+        "p_surrogate": 1.0
+      },
+      {
+        "family": "B",
+        "n": 618,
+        "reach_periods": 1.774,
+        "gate": "relaxed",
+        "z": 170.5525,
+        "p_surrogate": 0.995
+      },
+      {
+        "family": "B",
+        "n": 311,
+        "reach_periods": 1.665,
+        "gate": "relaxed",
+        "z": 26.2614,
+        "p_surrogate": 0.4726
+      },
+      {
+        "family": "B",
+        "n": 499,
+        "reach_periods": 1.637,
+        "gate": "relaxed",
+        "z": 272.0959,
+        "p_surrogate": 0.8458
+      },
+      {
+        "family": "B",
+        "n": 419,
+        "reach_periods": 1.769,
+        "gate": "relaxed",
+        "z": 29.649,
+        "p_surrogate": 0.9801
+      },
+      {
+        "family": "B",
+        "n": 273,
+        "reach_periods": 1.233,
+        "gate": "relaxed",
+        "z": 75.9693,
+        "p_surrogate": 0.9851
+      },
+      {
+        "family": "B",
+        "n": 252,
+        "reach_periods": 1.57,
+        "gate": "relaxed",
+        "z": 22.0525,
+        "p_surrogate": 1.0
+      },
+      {
+        "family": "B",
+        "n": 288,
+        "reach_periods": 1.047,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 501,
+        "reach_periods": 0.943,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 325,
+        "reach_periods": 1.327,
+        "gate": "relaxed",
+        "z": 34.5704,
+        "p_surrogate": 0.6517
+      },
+      {
+        "family": "B",
+        "n": 221,
+        "reach_periods": 1.581,
+        "gate": "relaxed",
+        "z": 36.1344,
+        "p_surrogate": 1.0
+      },
+      {
+        "family": "B",
+        "n": 312,
+        "reach_periods": 0.7,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 207,
+        "reach_periods": 0.992,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 295,
+        "reach_periods": 0.943,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 250,
+        "reach_periods": 1.142,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1689,
+        "reach_periods": 1.221,
+        "gate": "relaxed",
+        "z": 1385.8951,
+        "p_surrogate": 0.9204
+      },
+      {
+        "family": "B",
+        "n": 2854,
+        "reach_periods": 0.661,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1247,
+        "reach_periods": 0.66,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 472,
+        "reach_periods": 0.699,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 831,
+        "reach_periods": 1.059,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 682,
+        "reach_periods": 1.188,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 256,
+        "reach_periods": 1.521,
+        "gate": "relaxed",
+        "z": 80.7313,
+        "p_surrogate": 0.0448
+      },
+      {
+        "family": "B",
+        "n": 367,
+        "reach_periods": 1.139,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 807,
+        "reach_periods": 1.079,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1369,
+        "reach_periods": 0.799,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 2224,
+        "reach_periods": 1.109,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 3819,
+        "reach_periods": 0.59,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 721,
+        "reach_periods": 0.66,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 238,
+        "reach_periods": 0.839,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1670,
+        "reach_periods": 1.109,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 4678,
+        "reach_periods": 0.769,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1827,
+        "reach_periods": 0.661,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 549,
+        "reach_periods": 1.353,
+        "gate": "relaxed",
+        "z": 180.0024,
+        "p_surrogate": 0.4527
+      },
+      {
+        "family": "B",
+        "n": 318,
+        "reach_periods": 1.204,
+        "gate": "relaxed",
+        "z": 78.3194,
+        "p_surrogate": 0.7562
+      },
+      {
+        "family": "B",
+        "n": 578,
+        "reach_periods": 0.695,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 808,
+        "reach_periods": 1.435,
+        "gate": "relaxed",
+        "z": 356.6014,
+        "p_surrogate": 1.0
+      },
+      {
+        "family": "B",
+        "n": 1346,
+        "reach_periods": 0.658,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 242,
+        "reach_periods": 0.966,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 277,
+        "reach_periods": 0.878,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 294,
+        "reach_periods": 1.182,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 220,
+        "reach_periods": 0.833,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 3891,
+        "reach_periods": 1.337,
+        "gate": "relaxed",
+        "z": 3413.6793,
+        "p_surrogate": 1.0
+      },
+      {
+        "family": "B",
+        "n": 1789,
+        "reach_periods": 0.661,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 519,
+        "reach_periods": 1.446,
+        "gate": "relaxed",
+        "z": 151.4454,
+        "p_surrogate": 0.6667
+      },
+      {
+        "family": "B",
+        "n": 218,
+        "reach_periods": 1.088,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 258,
+        "reach_periods": 1.127,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 394,
+        "reach_periods": 1.486,
+        "gate": "relaxed",
+        "z": 88.0257,
+        "p_surrogate": 1.0
+      },
+      {
+        "family": "B",
+        "n": 244,
+        "reach_periods": 0.657,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 523,
+        "reach_periods": 0.924,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 305,
+        "reach_periods": 0.784,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 539,
+        "reach_periods": 1.288,
+        "gate": "relaxed",
+        "z": 285.2962,
+        "p_surrogate": 0.9204
+      },
+      {
+        "family": "B",
+        "n": 689,
+        "reach_periods": 1.288,
+        "gate": "relaxed",
+        "z": 232.4276,
+        "p_surrogate": 0.6716
+      },
+      {
+        "family": "B",
+        "n": 256,
+        "reach_periods": 0.932,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 435,
+        "reach_periods": 0.7,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 370,
+        "reach_periods": 1.467,
+        "gate": "relaxed",
+        "z": 73.1602,
+        "p_surrogate": 0.2736
+      },
+      {
+        "family": "B",
+        "n": 301,
+        "reach_periods": 1.278,
+        "gate": "relaxed",
+        "z": 9.1491,
+        "p_surrogate": 0.9652
+      },
+      {
+        "family": "B",
+        "n": 345,
+        "reach_periods": 0.918,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 579,
+        "reach_periods": 1.209,
+        "gate": "relaxed",
+        "z": 74.9971,
+        "p_surrogate": 0.995
+      },
+      {
+        "family": "B",
+        "n": 305,
+        "reach_periods": 0.977,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1205,
+        "reach_periods": 1.338,
+        "gate": "relaxed",
+        "z": 873.6967,
+        "p_surrogate": 0.7662
+      },
+      {
+        "family": "B",
+        "n": 540,
+        "reach_periods": 0.658,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1923,
+        "reach_periods": 1.647,
+        "gate": "relaxed",
+        "z": 1360.683,
+        "p_surrogate": 1.0
+      },
+      {
+        "family": "B",
+        "n": 1319,
+        "reach_periods": 1.746,
+        "gate": "relaxed",
+        "z": 217.8392,
+        "p_surrogate": 1.0
+      },
+      {
+        "family": "B",
+        "n": 1850,
+        "reach_periods": 1.454,
+        "gate": "relaxed",
+        "z": 1534.4364,
+        "p_surrogate": 0.9602
+      },
+      {
+        "family": "B",
+        "n": 1276,
+        "reach_periods": 1.478,
+        "gate": "relaxed",
+        "z": 436.11,
+        "p_surrogate": 0.0846
+      },
+      {
+        "family": "B",
+        "n": 233,
+        "reach_periods": 1.294,
+        "gate": "relaxed",
+        "z": 56.7431,
+        "p_surrogate": 0.393
+      },
+      {
+        "family": "B",
+        "n": 317,
+        "reach_periods": 1.184,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1412,
+        "reach_periods": 1.656,
+        "gate": "relaxed",
+        "z": 748.4936,
+        "p_surrogate": 1.0
+      },
+      {
+        "family": "B",
+        "n": 391,
+        "reach_periods": 1.53,
+        "gate": "relaxed",
+        "z": 92.3685,
+        "p_surrogate": 0.005
+      },
+      {
+        "family": "B",
+        "n": 597,
+        "reach_periods": 0.795,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1483,
+        "reach_periods": 0.768,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 595,
+        "reach_periods": 1.231,
+        "gate": "relaxed",
+        "z": 329.9648,
+        "p_surrogate": 0.99
+      },
+      {
+        "family": "B",
+        "n": 873,
+        "reach_periods": 0.66,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 291,
+        "reach_periods": 0.844,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 517,
+        "reach_periods": 1.728,
+        "gate": "relaxed",
+        "z": 77.7912,
+        "p_surrogate": 1.0
+      },
+      {
+        "family": "B",
+        "n": 648,
+        "reach_periods": 2.029,
+        "gate": "relaxed",
+        "z": 81.6855,
+        "p_surrogate": 0.796
+      },
+      {
+        "family": "B",
+        "n": 721,
+        "reach_periods": 1.42,
+        "gate": "relaxed",
+        "z": 515.0825,
+        "p_surrogate": 0.995
+      },
+      {
+        "family": "B",
+        "n": 352,
+        "reach_periods": 0.959,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 535,
+        "reach_periods": 1.615,
+        "gate": "relaxed",
+        "z": 247.4541,
+        "p_surrogate": 1.0
+      },
+      {
+        "family": "B",
+        "n": 601,
+        "reach_periods": 0.659,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 733,
+        "reach_periods": 1.885,
+        "gate": "relaxed",
+        "z": 73.9342,
+        "p_surrogate": 0.0995
+      },
+      {
+        "family": "B",
+        "n": 787,
+        "reach_periods": 0.989,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 2654,
+        "reach_periods": 0.661,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1991,
+        "reach_periods": 1.511,
+        "gate": "relaxed",
+        "z": 1566.1928,
+        "p_surrogate": 1.0
+      },
+      {
+        "family": "B",
+        "n": 2687,
+        "reach_periods": 0.661,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 962,
+        "reach_periods": 0.661,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 675,
+        "reach_periods": 1.007,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 471,
+        "reach_periods": 1.063,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 393,
+        "reach_periods": 0.973,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 330,
+        "reach_periods": 0.944,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 945,
+        "reach_periods": 0.816,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 602,
+        "reach_periods": 0.767,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 216,
+        "reach_periods": 0.854,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 261,
+        "reach_periods": 0.84,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 2213,
+        "reach_periods": 1.184,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 2939,
+        "reach_periods": 0.902,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1173,
+        "reach_periods": 0.799,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1489,
+        "reach_periods": 0.903,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 828,
+        "reach_periods": 0.822,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 505,
+        "reach_periods": 1.0,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 572,
+        "reach_periods": 0.876,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1519,
+        "reach_periods": 0.897,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1563,
+        "reach_periods": 0.878,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 463,
+        "reach_periods": 0.659,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 563,
+        "reach_periods": 0.885,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1980,
+        "reach_periods": 1.045,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1710,
+        "reach_periods": 1.052,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 649,
+        "reach_periods": 0.954,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 772,
+        "reach_periods": 0.943,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 767,
+        "reach_periods": 0.658,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 558,
+        "reach_periods": 0.767,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 447,
+        "reach_periods": 1.017,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 6019,
+        "reach_periods": 0.984,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1242,
+        "reach_periods": 1.054,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 207,
+        "reach_periods": 0.693,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1083,
+        "reach_periods": 1.098,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 764,
+        "reach_periods": 0.734,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 265,
+        "reach_periods": 0.657,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1699,
+        "reach_periods": 1.017,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 2654,
+        "reach_periods": 1.126,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 436,
+        "reach_periods": 0.983,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1170,
+        "reach_periods": 0.957,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 359,
+        "reach_periods": 1.135,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 206,
+        "reach_periods": 0.886,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 276,
+        "reach_periods": 0.122,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 412,
+        "reach_periods": 1.078,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1083,
+        "reach_periods": 1.195,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 592,
+        "reach_periods": 0.945,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 232,
+        "reach_periods": 1.236,
+        "gate": "relaxed",
+        "z": 52.1814,
+        "p_surrogate": 0.5871
+      },
+      {
+        "family": "B",
+        "n": 200,
+        "reach_periods": 1.023,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 465,
+        "reach_periods": 1.312,
+        "gate": "relaxed",
+        "z": 108.2691,
+        "p_surrogate": 0.9851
+      },
+      {
+        "family": "B",
+        "n": 245,
+        "reach_periods": 0.821,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1030,
+        "reach_periods": 1.346,
+        "gate": "relaxed",
+        "z": 828.606,
+        "p_surrogate": 0.99
+      },
+      {
+        "family": "B",
+        "n": 2253,
+        "reach_periods": 0.735,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 739,
+        "reach_periods": 0.902,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 243,
+        "reach_periods": 1.134,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 380,
+        "reach_periods": 0.749,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 210,
+        "reach_periods": 0.683,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 418,
+        "reach_periods": 1.288,
+        "gate": "relaxed",
+        "z": 87.149,
+        "p_surrogate": 1.0
+      },
+      {
+        "family": "B",
+        "n": 574,
+        "reach_periods": 1.3,
+        "gate": "relaxed",
+        "z": 167.6394,
+        "p_surrogate": 0.9602
+      },
+      {
+        "family": "B",
+        "n": 294,
+        "reach_periods": 1.186,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 4841,
+        "reach_periods": 1.197,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1384,
+        "reach_periods": 0.661,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 703,
+        "reach_periods": 1.198,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 407,
+        "reach_periods": 1.209,
+        "gate": "relaxed",
+        "z": 104.7416,
+        "p_surrogate": 0.995
+      },
+      {
+        "family": "B",
+        "n": 257,
+        "reach_periods": 1.309,
+        "gate": "relaxed",
+        "z": 117.4698,
+        "p_surrogate": 0.3234
+      },
+      {
+        "family": "B",
+        "n": 265,
+        "reach_periods": 1.223,
+        "gate": "relaxed",
+        "z": 17.8017,
+        "p_surrogate": 0.8259
+      },
+      {
+        "family": "B",
+        "n": 254,
+        "reach_periods": 1.083,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 247,
+        "reach_periods": 0.897,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1094,
+        "reach_periods": 1.333,
+        "gate": "relaxed",
+        "z": 787.7999,
+        "p_surrogate": 1.0
+      },
+      {
+        "family": "B",
+        "n": 400,
+        "reach_periods": 0.769,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 310,
+        "reach_periods": 0.937,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 479,
+        "reach_periods": 0.661,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 421,
+        "reach_periods": 1.778,
+        "gate": "relaxed",
+        "z": 59.1173,
+        "p_surrogate": 0.7512
+      },
+      {
+        "family": "B",
+        "n": 743,
+        "reach_periods": 1.547,
+        "gate": "relaxed",
+        "z": 544.2337,
+        "p_surrogate": 0.9652
+      },
+      {
+        "family": "B",
+        "n": 638,
+        "reach_periods": 1.56,
+        "gate": "relaxed",
+        "z": 231.4884,
+        "p_surrogate": 1.0
+      },
+      {
+        "family": "B",
+        "n": 290,
+        "reach_periods": 1.098,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 334,
+        "reach_periods": 0.773,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 471,
+        "reach_periods": 0.661,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 281,
+        "reach_periods": 1.505,
+        "gate": "relaxed",
+        "z": 107.2986,
+        "p_surrogate": 0.9303
+      },
+      {
+        "family": "B",
+        "n": 302,
+        "reach_periods": 1.621,
+        "gate": "relaxed",
+        "z": 109.7788,
+        "p_surrogate": 0.005
+      },
+      {
+        "family": "B",
+        "n": 366,
+        "reach_periods": 0.771,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1300,
+        "reach_periods": 0.66,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 230,
+        "reach_periods": 1.507,
+        "gate": "relaxed",
+        "z": 53.0173,
+        "p_surrogate": 0.01
+      },
+      {
+        "family": "B",
+        "n": 481,
+        "reach_periods": 1.302,
+        "gate": "relaxed",
+        "z": 404.3036,
+        "p_surrogate": 0.5522
+      },
+      {
+        "family": "B",
+        "n": 378,
+        "reach_periods": 1.002,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 232,
+        "reach_periods": 1.231,
+        "gate": "relaxed",
+        "z": 7.5769,
+        "p_surrogate": 0.9851
+      },
+      {
+        "family": "B",
+        "n": 314,
+        "reach_periods": 0.92,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 345,
+        "reach_periods": 1.622,
+        "gate": "relaxed",
+        "z": 115.9832,
+        "p_surrogate": 0.7015
+      },
+      {
+        "family": "B",
+        "n": 237,
+        "reach_periods": 0.635,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1500,
+        "reach_periods": 1.421,
+        "gate": "relaxed",
+        "z": 1346.7958,
+        "p_surrogate": 0.8209
+      },
+      {
+        "family": "B",
+        "n": 609,
+        "reach_periods": 0.693,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 251,
+        "reach_periods": 1.993,
+        "gate": "relaxed",
+        "z": 53.4117,
+        "p_surrogate": 0.3234
+      },
+      {
+        "family": "B",
+        "n": 2234,
+        "reach_periods": 1.663,
+        "gate": "relaxed",
+        "z": 1978.2753,
+        "p_surrogate": 0.0149
+      },
+      {
+        "family": "B",
+        "n": 715,
+        "reach_periods": 0.697,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 984,
+        "reach_periods": 1.501,
+        "gate": "relaxed",
+        "z": 810.2763,
+        "p_surrogate": 0.5274
+      },
+      {
+        "family": "B",
+        "n": 337,
+        "reach_periods": 1.52,
+        "gate": "relaxed",
+        "z": 93.358,
+        "p_surrogate": 0.005
+      },
+      {
+        "family": "B",
+        "n": 309,
+        "reach_periods": 0.898,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 227,
+        "reach_periods": 1.639,
+        "gate": "relaxed",
+        "z": 8.0713,
+        "p_surrogate": 1.0
+      },
+      {
+        "family": "B",
+        "n": 226,
+        "reach_periods": 1.533,
+        "gate": "relaxed",
+        "z": 53.8559,
+        "p_surrogate": 0.5373
+      },
+      {
+        "family": "B",
+        "n": 287,
+        "reach_periods": 1.612,
+        "gate": "relaxed",
+        "z": 111.7382,
+        "p_surrogate": 0.7363
+      },
+      {
+        "family": "B",
+        "n": 367,
+        "reach_periods": 2.01,
+        "gate": "relaxed",
+        "z": 20.2536,
+        "p_surrogate": 0.6468
+      },
+      {
+        "family": "B",
+        "n": 817,
+        "reach_periods": 2.043,
+        "gate": "relaxed",
+        "z": 213.2534,
+        "p_surrogate": 1.0
+      },
+      {
+        "family": "B",
+        "n": 476,
+        "reach_periods": 0.661,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 275,
+        "reach_periods": 0.659,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 391,
+        "reach_periods": 1.278,
+        "gate": "relaxed",
+        "z": 194.1942,
+        "p_surrogate": 1.0
+      },
+      {
+        "family": "B",
+        "n": 505,
+        "reach_periods": 0.732,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1138,
+        "reach_periods": 0.732,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 389,
+        "reach_periods": 1.305,
+        "gate": "relaxed",
+        "z": 122.7904,
+        "p_surrogate": 0.4428
+      },
+      {
+        "family": "B",
+        "n": 464,
+        "reach_periods": 1.368,
+        "gate": "relaxed",
+        "z": 316.7203,
+        "p_surrogate": 0.9254
+      },
+      {
+        "family": "B",
+        "n": 630,
+        "reach_periods": 1.727,
+        "gate": "relaxed",
+        "z": 88.7029,
+        "p_surrogate": 0.005
+      },
+      {
+        "family": "B",
+        "n": 448,
+        "reach_periods": 1.968,
+        "gate": "relaxed",
+        "z": 226.1041,
+        "p_surrogate": 0.1244
+      },
+      {
+        "family": "B",
+        "n": 208,
+        "reach_periods": 1.235,
+        "gate": "relaxed",
+        "z": 91.0645,
+        "p_surrogate": 0.3532
+      },
+      {
+        "family": "B",
+        "n": 262,
+        "reach_periods": 1.998,
+        "gate": "relaxed",
+        "z": 48.8997,
+        "p_surrogate": 0.4826
+      },
+      {
+        "family": "B",
+        "n": 345,
+        "reach_periods": 1.449,
+        "gate": "relaxed",
+        "z": 67.9899,
+        "p_surrogate": 0.6169
+      },
+      {
+        "family": "B",
+        "n": 211,
+        "reach_periods": 1.713,
+        "gate": "relaxed",
+        "z": 53.9395,
+        "p_surrogate": 0.005
+      },
+      {
+        "family": "B",
+        "n": 2112,
+        "reach_periods": 0.985,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1183,
+        "reach_periods": 0.698,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 341,
+        "reach_periods": 1.115,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 222,
+        "reach_periods": 1.673,
+        "gate": "relaxed",
+        "z": 17.3353,
+        "p_surrogate": 0.7463
+      },
+      {
+        "family": "B",
+        "n": 305,
+        "reach_periods": 1.672,
+        "gate": "relaxed",
+        "z": 195.9549,
+        "p_surrogate": 0.0547
+      },
+      {
+        "family": "B",
+        "n": 215,
+        "reach_periods": 1.9,
+        "gate": "relaxed",
+        "z": 45.2034,
+        "p_surrogate": 0.3035
+      },
+      {
+        "family": "B",
+        "n": 225,
+        "reach_periods": 1.853,
+        "gate": "relaxed",
+        "z": 13.0811,
+        "p_surrogate": 0.8657
+      },
+      {
+        "family": "B",
+        "n": 452,
+        "reach_periods": 0.924,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 468,
+        "reach_periods": 1.808,
+        "gate": "relaxed",
+        "z": 13.8796,
+        "p_surrogate": 0.0149
+      },
+      {
+        "family": "B",
+        "n": 267,
+        "reach_periods": 1.929,
+        "gate": "relaxed",
+        "z": 100.9496,
+        "p_surrogate": 0.6517
+      },
+      {
+        "family": "B",
+        "n": 225,
+        "reach_periods": 1.852,
+        "gate": "relaxed",
+        "z": 43.8436,
+        "p_surrogate": 0.0299
+      },
+      {
+        "family": "B",
+        "n": 2057,
+        "reach_periods": 1.413,
+        "gate": "relaxed",
+        "z": 1930.3586,
+        "p_surrogate": 0.2886
+      },
+      {
+        "family": "B",
+        "n": 949,
+        "reach_periods": 0.659,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 338,
+        "reach_periods": 1.897,
+        "gate": "relaxed",
+        "z": 15.8711,
+        "p_surrogate": 0.2289
+      },
+      {
+        "family": "B",
+        "n": 205,
+        "reach_periods": 1.783,
+        "gate": "relaxed",
+        "z": 39.0201,
+        "p_surrogate": 0.4179
+      },
+      {
+        "family": "B",
+        "n": 339,
+        "reach_periods": 1.908,
+        "gate": "relaxed",
+        "z": 61.9006,
+        "p_surrogate": 0.9801
+      },
+      {
+        "family": "B",
+        "n": 220,
+        "reach_periods": 1.212,
+        "gate": "relaxed",
+        "z": 173.237,
+        "p_surrogate": 0.2836
+      },
+      {
+        "family": "B",
+        "n": 477,
+        "reach_periods": 1.415,
+        "gate": "relaxed",
+        "z": 315.9314,
+        "p_surrogate": 0.8856
+      },
+      {
+        "family": "B",
+        "n": 202,
+        "reach_periods": 1.643,
+        "gate": "relaxed",
+        "z": 12.6588,
+        "p_surrogate": 0.7164
+      },
+      {
+        "family": "B",
+        "n": 209,
+        "reach_periods": 1.92,
+        "gate": "relaxed",
+        "z": 21.5823,
+        "p_surrogate": 0.7214
+      },
+      {
+        "family": "B",
+        "n": 773,
+        "reach_periods": 2.247,
+        "gate": "relaxed",
+        "z": 215.0898,
+        "p_surrogate": 1.0
+      },
+      {
+        "family": "B",
+        "n": 345,
+        "reach_periods": 0.94,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 368,
+        "reach_periods": 0.943,
+        "gate": "fail"
+      },
+      {
+        "family": "B",
+        "n": 1115,
+        "reach_periods": 1.499,
+        "gate": "relaxed",
+        "z": 954.2421,
+        "p_surrogate": 0.005
+      },
+      {
+        "family": "B",
+        "n": 280,
+        "reach_periods": 2.374,
+        "gate": "relaxed",
+        "z": 138.2263,
+        "p_surrogate": 0.005
+      },
+      {
+        "family": "B",
+        "n": 489,
+        "reach_periods": 2.764,
+        "gate": "relaxed",
+        "z": 41.078,
+        "p_surrogate": 0.796
+      },
+      {
+        "family": "B",
+        "n": 717,
+        "reach_periods": 2.858,
+        "gate": "primary",
+        "z": 80.9278,
+        "p_surrogate": 0.204
+      },
+      {
+        "family": "B",
+        "n": 429,
+        "reach_periods": 2.971,
+        "gate": "primary",
+        "z": 50.2356,
+        "p_surrogate": 0.5174
+      }
+    ],
+    "fisher_p": 0.1655,
+    "verdict": "null-at-current-power (Fisher p=0.165; gates ['A:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:relaxed', 'B:primary', 'B:primary'])"
+  },
+  "NI03_injection": {
+    "family_A_omega1": {
+      "omega": 2.5827069463082895,
+      "eps_grid": [
+        0.0,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5
+      ],
+      "detection_rate": [
+        0.98,
+        0.94,
+        0.8,
+        0.68,
+        0.54,
+        0.56
+      ]
+    },
+    "family_A_omega2": {
+      "omega": 0.9532002891267091,
+      "eps_grid": [
+        0.0,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5
+      ],
+      "detection_rate": []
+    },
+    "family_B_omega1": {
+      "omega": 2.5827069463082895,
+      "eps_grid": [
+        0.0,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5
+      ],
+      "detection_rate": [
+        0.0,
+        0.0,
+        0.0,
+        0.5,
+        0.92,
+        1.0
+      ]
+    },
+    "note": "comb-modulated thinning on the real times; compare eps_base = 0.0173 and the S-b budget at the recorded ln-reach"
+  }
+}

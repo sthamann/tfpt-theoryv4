@@ -72,12 +72,38 @@ Perioden) noch über interne Bursts (2 Stück, 1 nutzbare Kaskade). Das Bein bra
 für die reine Zeitreihen-Seite (gerader Kanal) wäre **NICER** (große effektive Fläche,
 SGR-1935-Sturmdaten) das bessere Instrument als IXPE — als nächstes Bein benannt.
 
+## NICER-Bein (v1.2-Addendum, 2026-07-15 — `results/results_nicer.json`)
+
+**Datensatz:** NICER ObsID 3020560101 — der **Burst-Sturm vom 2020-04-28** von
+**SGR 1935+2154** (Younes+2020, ApJL 904 L21; per `scripts/fetch_nicer.py` von HEASARC,
+cl 7 MB + ufa 65 MB, gitignored). 306.090 Photonen 1–10 keV, 3.1 ks Exposure. Die
+preregistrierte cl-vs-ufa-Fallback-Regel (GTI-Coverage im Sturmfenster < 50 %) wurde
+**nicht** ausgelöst (1094 s vs 1299 s).
+
+**Motivation (Lehre des IXPE-Beins):** der ω₂-Verbotstest braucht Burst-**Stürme**, nicht
+Post-Outburst-ToOs — und der gerade Kanal braucht nur Ankunftszeiten. Der Sturm liefert
+genau den erhofften dichten Anker: **375 Bursts, ein Sturm-Cluster mit 372 Bursts über 1095 s**.
+
+| Test | Ergebnis | Verdikt |
+|---|---|---|
+| Familie A (Sturm-Kaskade: Burst-Peak-Zeiten, u = ln(t−t_storm)) | 372 Bursts, ln-Reichweite 4.6 e-folds = **1.89 ω₁- / 0.70 ω₂-Perioden** | ω₂ unter Gate |
+| NI.01 ω₂-Verbotslinie (Kill-Richtung) | keine Session (A oder B) erreicht das ω₂-Gate | **`data_limited`** — der Verbotstest bleibt mangels Reichweite **offen, nicht verletzt** |
+| NI.02 ω₁-Linie | 110 gated Sessions (1× A:relaxed, 107× B:relaxed, 2× B:primary), Fisher p = 0.165 | null-at-current-power |
+| NI.03 Injection + ε=0-Baseline | Familie A: **98 % False-Positives bei ε = 0** — das Smooth-Log-Density-Surrogat ist auf geclusterten Burst-Zeit-Sessions stark antikonservativ (das einzelne A-p=0.005 damit als Surrogat-Misfit typisiert, nicht Signal); Familie B sauber: 0 % FP, powered ab ε ≈ 0.3 (92 %; 50 % bei 0.2) | Kalibrierung dokumentiert |
+
+**Typisierte Erkenntnis:** Selbst der beste archivierte Burst-Sturm liefert nur ~1.9
+ω₁-Perioden Familie-A-Reichweite; für das ω₂-Gate (7.9 e-folds zwischen Anker und
+Session-Ende) bräuchte es **Multi-Tag-Sturm-Monitoring** (Onset + Stunden-bis-Tage-Kadenz).
+Die ω₂-Verbots-Richtung ist mit existierenden Archiven **nicht entscheidbar** — eine
+ehrliche, harte Grenze, jetzt mit Zahlen belegt.
+
 **Ausstehende Datensätze (dokumentiert, v1-Scope geschlossen):** Das öffentliche
 Xu+2022-Maschinentable zu 20201124A (Mirror: astroflash-frb/frb20201124A-kirsten-2023) trägt
 DoC **unsigniert** (1103 Messwerte, alle ≥ 0) — der zweite ungerade Kanal bräuchte die
 Per-Burst-Stokes-Profile von PSRPKU (volle polarimetrische Reduktion, pending). CHIME-Baseband-
-Pol (unabhängige Systematik) und IXPE-Magnetar-Outburst-Recoveries (bester Kandidat für die
-ω₂-Reichweite: Onset-dichte, lange Kaskaden) bleiben als nächste Beine benannt.
+Pol (unabhängige Systematik) bleibt als nächstes Bein benannt; Multi-Tag-Sturm-Monitoring
+(ω₂-Reichweite) ist ein Beobachtungs-Desiderat, kein Archiv-Projekt.
 
 Reproduzieren: `cd experiments/frb-parity-comb && PYTHONPATH=src python -m tfpt_pc.cli analyze --seed 0`
+(IXPE-Bein: `… analyze-ixpe`; NICER-Bein: `… analyze-nicer`)
 Kernel-Guard: `python3 tests/test_frozen_kernel.py`
