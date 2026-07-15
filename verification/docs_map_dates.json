@@ -152,8 +152,8 @@
   "date": "2026-06-12"
  },
  "tfpt_1_architecture_e8::subsection::The EM closure: $\\ainv$ as an explicit fixed point (made explicit here)::1": {
-  "hash": "677a0aa064a3",
-  "date": "2026-07-03"
+  "hash": "bf3b80a2ff6f",
+  "date": "2026-07-14"
  },
  "tfpt_1_architecture_e8::subsection::The decuple bridge (new, exact headline)::1": {
   "hash": "604a14549a07",
@@ -716,7 +716,7 @@
   "date": "2026-06-24"
  },
  "origin_theory::section::The whole integer skeleton from one pair $(\\gcar,\\Nfam)=(5,3)$::1": {
-  "hash": "6d044f50a727",
+  "hash": "73e1003d99ed",
   "date": "2026-07-14"
  },
  "origin_theory::section::The ``$8$'' is triply forced: geometry $=$ lattice $=$ gravity::1": {

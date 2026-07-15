@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`477` registered scripts · `543` ledger claims · `10` clusters.
+`479` registered scripts · `545` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (47 scripts)
+### `core` — Compiler core & the E₈ glue  (49 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -105,6 +105,10 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v344_detk_synthesis, v345_hypergraph_homotopy, v286_seam_equivalence_contract, v312_hypergraph_substrate, v298_e8_network_attractor, CORR round (experiments), v232, v236 · cited: origin theory
 - **v483_pillowcase_exact_traces** [E/O] `HYP.PHI0.GEOM.01` — HYP.PHI0.GEOM.01: the GEOMETRIC side of the phi0 puncture target (HYP.PHI0.PUNCTURE.01/v408) is EXACT -- every twisted/orbifold heat trace of the flat tau = i pillowcase is a t-IND
   - deps: v408_phi0_puncture_heatkernel, v396_phi0_icosahedral, v106_review_validation, v342_em_ward_heatkernel, v37, v216, v396, v408 · cited: origin theory
+- **v484_seam_contact_unit** [E/C/O] `SEAM.CONTACT.UNIT.01` — SEAM.CONTACT.UNIT.01: the shared 'c3 per boundary insertion' rule of the two open analytic targets (ALPHA.QUILLEN.EXACT.01 c3-ladder {0,3,6}; HYP.PHI0.PUNCTURE.01 per-mark weight c
+  - deps: v382_alpha_quillen_exact, v408_phi0_puncture_heatkernel, v483_pillowcase_exact_traces, v342_em_ward_heatkernel, v239_kms_thermal_time, v60_lambda_metrology_branch, v3, v37 · cited: origin theory, 1 architecture e8
+- **v485_contact_diagonal_closed** [E/C/O] `SEAM.CONTACT.UNIT.02` — SEAM.CONTACT.UNIT.02: the diagonal channel of the merged analytic target (v484) settled at the computable level -- the merged residual collapses onto the keystone. [E] diagonal zer
+  - deps: v484_seam_contact_unit, v382_alpha_quillen_exact, v408_phi0_puncture_heatkernel, v483_pillowcase_exact_traces, v342_em_ward_heatkernel, v239_kms_thermal_time, v3, v151 · cited: origin theory, 1 architecture e8
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1019,14 +1023,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×65, `v336`×33, `QGEO.SYM.01`×32, `v216`×20, `QG.AMB.01`×18, `v76`×18, `v56`×18, `E8.GLU.01`×16, `v312`×15, `REG.FREEZE.01`×15, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v323`×14, `v367`×14, `v54`×13
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×65, `v336`×33, `QGEO.SYM.01`×32, `v216`×20, `QG.AMB.01`×18, `v76`×18, `v56`×18, `E8.GLU.01`×16, `v312`×15, `REG.FREEZE.01`×15, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v60`×14, `v323`×14, `v367`×14
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v472_quillen_detline_moduli** — `ALPHA.QUILLEN.DETLINE.01`
-- **v473_entropic_action_bridge** — `GRAV.ENTROPIC.ACTION.01`
 - **v474_entropic_hodge_carrier** — `GRAV.ENTROPIC.HODGE.01`
 - **v475_entropic_scalaron_gate** — `GRAV.ENTROPIC.SCALARON.01`
 - **v476_entropic_compression_toy** — `GRAV.ENTROPIC.COMPRESS.01`
@@ -1037,4 +1039,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v481_seesaw_carrier_ladder** — `FLAV.NUSCALE.02`
 - **v482_seesaw_rung_decision** — `FLAV.NUSCALE.03`
 - **v483_pillowcase_exact_traces** — `HYP.PHI0.GEOM.01`
+- **v484_seam_contact_unit** — `SEAM.CONTACT.UNIT.01`
+- **v485_contact_diagonal_closed** — `SEAM.CONTACT.UNIT.02`
 

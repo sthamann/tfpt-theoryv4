@@ -1,0 +1,39 @@
+{
+  "contract": "unit01 seam contact unit -- the merged residual of ALPHA.QUILLEN and PHI0.PUNCTURE",
+  "date": "2026-07-14",
+  "firewall": "theory contract, never a scorecard row, never load-bearing; both targets stay [O]",
+  "verdict": "CONTRACT HOLDS (6/6)",
+  "checks": [
+    {
+      "check": "U1 THE UNIT CHAIN [E]: 1/(2 pi) = 4 c3 = |mu4| c3 = |Z2| chi(S^2) c3 -- one bare boundary insertion divided by the orbit order |mu4| = 4 is EXACTLY c3; identical to the v239 KMS seam unit (2 pi = 1/(4 c3), '1/4 = 1/|mu4|') and the v58/v73 one-sided Gauss-Bonnet",
+      "pass": true,
+      "detail": "4*c3 - 1/(2pi) = 0 exact; |Z2|*chi(S^2) = 4 = |mu4|"
+    },
+    {
+      "check": "U2a FOURIER IDENTITY [E]: sum_{n>=1} cos(n d)/n = Re Li_1(e^{id}) = -ln|2 sin(d/2)| -- the bare |D|^-1 seam Green function is G(d) = -(1/pi) ln|2 sin(d/2)| with normalisation 2 x (1/2pi) = 2 x 4c3",
+      "pass": true,
+      "detail": "polylog identity verified to 40 digits at d = pi/7, pi/3, 2pi/5, pi/2, pi (max err 1.1e-41)"
+    },
+    {
+      "check": "U2b MARK-GREEN MATRIX [E]: at the mu4 separations the bare Green function is an INTEGER multiple of c3 ln2 -- G(pi/2) = -4 c3 ln2, G(pi) = -8 c3 ln2, so G_marks = -4 c3 ln2 * C with C = circ(0,1,2,1) integer",
+      "pass": true,
+      "detail": "G(pi/2)/(c3 ln2) = -4; G(pi)/(c3 ln2) = -8"
+    },
+    {
+      "check": "U2c THE EMERGENT UNIT [E]: the mu4-invariant (orbit-averaged) insertion carries (GV)|_marks = -(c3 ln2) C exactly -- per-insertion weight = (1/|mu4|) x bare = c3; spec(C) = {4, -2, 0, -2}, cycle combinatorics Tr(C^k) = 4^k + 2(-2)^k INTEGER: the log-det contact expansion is exactly graded in c3 per insertion",
+      "pass": true,
+      "detail": "spec = [(4, 1), (0, 1), (-2, 2)]; Tr(C^k) k=1..4 = [0, 24, 48, 288]; unit ratio = 1"
+    },
+    {
+      "check": "U3 SUITE-WIDE GRAMMAR [E]: the Lambda prefactor 3/(4 pi^2) = (8 pi)^2 delta_top = 48 c3^2 (v60) -- the SAME multiplicity Omega_adm = 48 as the phi0 puncture 48 c3^4, at TWO insertions instead of four; phi0 tree = (4/3) c3 = 1/(6 pi) (one insertion); F_U(1) ladder {a^3, 2 c3^3 a^2, (4/5)41 c3^6 L} (v3) at {0,3,6}; the g-2 chain multiplies by the same unit 4 c3 = 1/(2 pi) -- ONE grammar: atom-rational x c3^(#insertions)",
+      "pass": true,
+      "detail": "48 c3^2 = 3/(4 pi^2) exact; 48 c3^4 = 3/(256 pi^4) exact; (4/3) c3 = 1/(6 pi) exact"
+    },
+    {
+      "check": "U4 THE MERGE [C]/[O]: ALPHA.QUILLEN.EXACT.01 and HYP.PHI0.PUNCTURE.01 share ONE analytic residual -- the seam contact calculus in the KMS unit c3 -- whose finite cycle sector is now DERIVED (U2: bare 4 c3 x orbit average 1/4, integer circulant combinatorics); what stays [O] is the DIAGONAL (self-energy) zeta-renormalisation at the marks + the state-multiplicity matching (48 = Omega_adm, 41 = 10 b1). Two targets merge into one named step; no gate closes, no value is claimed",
+      "pass": true,
+      "detail": "cycle sector derived; diagonal renormalisation + multiplicity matching stay open"
+    }
+  ],
+  "reading": "The commonality between the two open targets is NOT a coincidence and NOT a new unknown: 'weight c3 per boundary insertion' is the KMS seam unit 2 pi = 1/(4 c3) with 1/4 = 1/|mu4| (v239), i.e. one bare boundary propagator orbit-averaged over the four marks. On the actual seam circle this is now DERIVED for the finite cycle sector: the bare Green function at the mu4 separations is an integer multiple of c3 ln2 (G_marks = -4 c3 ln2 circ(0,1,2,1), spectrum {4,-2,0,-2}), so the log-det contact expansion is exactly graded in c3 per insertion. The grammar is already suite-wide (v3 ladder {0,3,6}; phi0 {1,4}; the v60 Lambda prefactor 3/(4 pi^2) = 48 c3^2 -- the same 48 as the puncture at two insertions; g-2 multiplies by the same 4 c3). Consequence: ALPHA.QUILLEN.EXACT.01 and HYP.PHI0.PUNCTURE.01 MERGE into one remaining analytic step -- the diagonal zeta-renormalisation + multiplicity matching. No gate closes; no coefficient is claimed."
+}

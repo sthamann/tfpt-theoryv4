@@ -60,6 +60,59 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-07-14 (IV) (\texttt{v485} --- the merged analytic target's computable side COMPLETED: the diagonal self-energy is renormalised to ZERO exactly at the KMS seam scale, the mark contact calculus resums in closed form (BFK route), and the $48$/$41$ multiplicities are ONE state set under two response weights --- the residual collapses onto the \texttt{SEAM.EQUIV.01} face alone; \emph{no gate closes, no marker moves})}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v485\_contact\_diagonal\_closed.py} (\texttt{SEAM.CONTACT.UNIT.02}).} The v484
+merge left one analytic step: the diagonal (self-energy) zeta-renormalisation at the marks $+$ the
+multiplicity matching. Settled at the computable level: \mE\ DIAGONAL ZERO AT THE KMS SCALE --- the
+renormalised coincident-point Green function of $|D|$ on circumference $\ell$ is
+$G_{\mathrm{reg}}(0;\ell)=\tfrac1\pi\ln(\ell/2\pi)$ EXACTLY (symbolic limit $+$ $30$-digit checks); it
+vanishes iff $\ell=2\pi=1/(4\cthree)$, the \texttt{v239} KMS seam circumference --- the seam scale is the
+unique zero-self-energy scheme point, and the log is the pure SCALE channel (matching the structure:
+$F_{U(1)}$ carries exactly ONE log term, the transport $8b_1\cthree^6\ln(1/\varphi_{\mathrm{seam}})$,
+while the $\phiz$ split is log-free). \mE\ CLOSED-FORM RESUMMATION (the BFK/gluing route already in the
+suite, \texttt{v151}): with the diagonal zero, the finite-rank mark determinant resums exactly ---
+$\det(I-uC)=(1-4u)(1+2u)^2$, $u=\varepsilon\cthree\ln2$, all orders, the linear term ABSENT precisely
+because the diagonal vanishes ($\operatorname{Tr}C=0$); the series matches \texttt{v484}'s
+$\operatorname{Tr}(C^k)=4^k+2(-2)^k$ term by term. \mE\ WEIGHT DICHOTOMY: the SAME $48=3\times16$
+admissible states carry BOTH multiplicities --- counted flat they give the $\phiz$ puncture count
+$48=\Oadm$; $Y^2$/loop/GUT-weighted they give the alpha budget $41=10b_1=40+1$
+($\operatorname{Tr}_{16}Y^2=\tfrac{10}3$ exact, $\nu^c=0$; Ginsparg $(3/5)(41/6)=41/10$, \texttt{v470})
+--- one state set, two response weights, no new number. \mC/\mO\ CONSEQUENCE: with \texttt{v484} EVERY
+finite/computable piece of the merged \texttt{ALPHA.QUILLEN.EXACT.01} $+$ \texttt{HYP.PHI0.PUNCTURE.01}
+target is proven; the single remaining \mO\ is the identification of the abstract seam $\zeta$-det with
+this glued mark determinant --- a face of \texttt{SEAM.EQUIV.01}, exactly the \texttt{v382} typing, now
+substantiated computationally. Integrated in \texttt{tfpt\_1\_architecture\_e8} (eighth step of the
+ALPHA.QUILLEN arc) and \texttt{origin\_theory}; ledger rows \texttt{SEAM.CONTACT.UNIT.02} $+$ update
+notes on \texttt{.01} and both targets; Python-only by nature, flagged in the Wolfram README.
+\end{itemize}
+
+\subsection*{2026-07-14 (III) (\texttt{v484} --- the two open analytic targets MERGE: the shared ``$\cthree$ per boundary insertion'' rule of \texttt{ALPHA.QUILLEN.EXACT.01} and \texttt{HYP.PHI0.PUNCTURE.01} is the KMS seam unit $2\pi=1/(4\cthree)$ with $\tfrac14=1/|\mu_4|$, derived on the seam circle for the finite cycle sector --- \emph{no gate closes, no marker moves})}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v484\_seam\_contact\_unit.py} (\texttt{SEAM.CONTACT.UNIT.01}).} The v483 round left
+the two analytic targets sharing one rule (``weight $\cthree$ per boundary contact insertion'': the
+$F_{U(1)}$ ladder $\{0,3,6\}$, the $\phiz$ puncture $\{1,4\}$). This module shows the shared rule is NOT
+a new unknown: \mE\ the unit chain $\tfrac1{2\pi}=4\cthree=|\mu_4|\cthree=|\Z_2|\chi(S^2)\cthree$ ---
+one \emph{bare} boundary insertion divided by the orbit order $|\mu_4|{=}4$ is exactly $\cthree$; this is
+the v239 KMS seam unit and the v58/v73 one-sided Gauss--Bonnet in a single identity. \mE\ the mechanism is
+DERIVED on the actual seam circle for the finite cycle sector: the bare Green function
+$G(d)=-\tfrac1\pi\ln|2\sin(d/2)|$ (polylog identity, $40$ digits) takes INTEGER multiples of
+$\cthree\ln2$ at the $\mu_4$ separations ($G(\pi/2)=-4\cthree\ln2$, $G(\pi)=-8\cthree\ln2$; mark matrix
+$-4\cthree\ln2\cdot\mathrm{circ}(0,1,2,1)$, spectrum $\{4,-2,0,-2\}$), so the $\mu_4$-invariant
+(orbit-averaged) insertion carries $-(\cthree\ln2)C$ exactly and the log-det contact expansion is exactly
+graded in $\cthree$ per insertion ($\operatorname{Tr}C^k=4^k+2(-2)^k$). \mE\ the grammar is suite-wide:
+the $\Lambda$ prefactor $\tfrac{3}{4\pi^2}=(8\pi)^2 d_{\mathrm{top}}=48\cthree^2$ (\texttt{v60}) carries
+the SAME multiplicity $\Oadm{=}48$ as the $\phiz$ puncture at TWO insertions; the $g{-}2$ seam loop
+divides by the same $2\pi=1/(4\cthree)$. \mC/\mO\ THE MERGE: the two tracked \mO\ targets collapse into
+ONE named analytic step --- the diagonal (self-energy) zeta-renormalisation at the marks $+$ the
+state-multiplicity matching ($48=\Oadm$, $41=10b_1$); the finite half is proven, no target coefficient is
+claimed (the integers are forced by the square configuration, \texttt{v354}/\texttt{v355}-clean).
+Integrated in \texttt{tfpt\_1\_architecture\_e8} (seventh step of the ALPHA.QUILLEN arc) and
+\texttt{origin\_theory} ($\phiz$ split paragraph); ledger rows \texttt{SEAM.CONTACT.UNIT.01} $+$ update
+notes on both targets; Python-only by nature (mpmath polylog), exact identities flagged in the Wolfram
+README.
+\end{itemize}
+
 \subsection*{2026-07-14 (II) (\texttt{v482}--\texttt{v483} --- the deep-dive round: the $\nu$-scale decision computation EXECUTED (the integer $\cthree^3$-rung excluded unstructured, the $5/3$-proximate structure escape recorded and declined) and the $\phiz$ puncture target HALVED (the geometric side proven exact: all twisted pillowcase heat traces are $t$-independent rationals, so the $\pi^{-4}$ must sit in the per-mark coupling weight) --- \emph{no gate closes, no marker moves})}
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{\texttt{v482\_seesaw\_rung\_decision.py} (\texttt{FLAV.NUSCALE.03}).} The decision

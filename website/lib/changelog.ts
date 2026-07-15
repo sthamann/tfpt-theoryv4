@@ -47,6 +47,891 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "IV) ("
+      },
+      {
+        "k": "c",
+        "v": "v485"
+      },
+      {
+        "k": "t",
+        "v": " — the merged analytic target's computable side COMPLETED: the diagonal self-energy is renormalised to ZERO exactly at the KMS seam scale, the mark contact calculus resums in closed form (BFK route), and the "
+      },
+      {
+        "k": "m",
+        "v": "48"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "m",
+        "v": "41"
+      },
+      {
+        "k": "t",
+        "v": " multiplicities are ONE state set under two response weights — the residual collapses onto the "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.EQUIV.01"
+      },
+      {
+        "k": "t",
+        "v": " face alone; "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "no gate closes, no marker moves"
+          }
+        ]
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v485_contact_diagonal_closed.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.CONTACT.UNIT.02"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The v484 merge left one analytic step: the diagonal (self-energy) zeta-renormalisation at the marks "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the multiplicity matching. Settled at the computable level: "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "DIAGONAL ZERO AT THE KMS SCALE — the renormalised coincident-point Green function of "
+        },
+        {
+          "k": "m",
+          "v": "|D|"
+        },
+        {
+          "k": "t",
+          "v": " on circumference "
+        },
+        {
+          "k": "m",
+          "v": "\\ell"
+        },
+        {
+          "k": "t",
+          "v": " is "
+        },
+        {
+          "k": "m",
+          "v": "G_{\\mathrm{reg}}(0;\\ell)=\\tfrac1\\pi\\ln(\\ell/2\\pi)"
+        },
+        {
+          "k": "t",
+          "v": " EXACTLY (symbolic limit "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "30"
+        },
+        {
+          "k": "t",
+          "v": "-digit checks); it vanishes iff "
+        },
+        {
+          "k": "m",
+          "v": "\\ell=2\\pi=1/(4\\cthree)"
+        },
+        {
+          "k": "t",
+          "v": ", the "
+        },
+        {
+          "k": "c",
+          "v": "v239"
+        },
+        {
+          "k": "t",
+          "v": " KMS seam circumference — the seam scale is the unique zero-self-energy scheme point, and the log is the pure SCALE channel (matching the structure: "
+        },
+        {
+          "k": "m",
+          "v": "F_{U(1)}"
+        },
+        {
+          "k": "t",
+          "v": " carries exactly ONE log term, the transport "
+        },
+        {
+          "k": "m",
+          "v": "8b_1\\cthree^6\\ln(1/\\varphi_{\\mathrm{seam}})"
+        },
+        {
+          "k": "t",
+          "v": ", while the "
+        },
+        {
+          "k": "m",
+          "v": "\\phiz"
+        },
+        {
+          "k": "t",
+          "v": " split is log-free). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "CLOSED-FORM RESUMMATION (the BFK/gluing route already in the suite, "
+        },
+        {
+          "k": "c",
+          "v": "v151"
+        },
+        {
+          "k": "t",
+          "v": "): with the diagonal zero, the finite-rank mark determinant resums exactly — "
+        },
+        {
+          "k": "m",
+          "v": "\\det(I-uC)=(1-4u)(1+2u)^2"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "u=\\varepsilon\\cthree\\ln2"
+        },
+        {
+          "k": "t",
+          "v": ", all orders, the linear term ABSENT precisely because the diagonal vanishes ("
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{Tr}C=0"
+        },
+        {
+          "k": "t",
+          "v": "); the series matches "
+        },
+        {
+          "k": "c",
+          "v": "v484"
+        },
+        {
+          "k": "t",
+          "v": "'s "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{Tr}(C^k)=4^k+2(-2)^k"
+        },
+        {
+          "k": "t",
+          "v": " term by term. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "WEIGHT DICHOTOMY: the SAME "
+        },
+        {
+          "k": "m",
+          "v": "48=3\\times16"
+        },
+        {
+          "k": "t",
+          "v": " admissible states carry BOTH multiplicities — counted flat they give the "
+        },
+        {
+          "k": "m",
+          "v": "\\phiz"
+        },
+        {
+          "k": "t",
+          "v": " puncture count "
+        },
+        {
+          "k": "m",
+          "v": "48=\\Oadm"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "Y^2"
+        },
+        {
+          "k": "t",
+          "v": "/loop/GUT-weighted they give the alpha budget "
+        },
+        {
+          "k": "m",
+          "v": "41=10b_1=40+1"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{Tr}_{16}Y^2=\\tfrac{10}3"
+        },
+        {
+          "k": "t",
+          "v": " exact, "
+        },
+        {
+          "k": "m",
+          "v": "\\nu^c=0"
+        },
+        {
+          "k": "t",
+          "v": "; Ginsparg "
+        },
+        {
+          "k": "m",
+          "v": "(3/5)(41/6)=41/10"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v470"
+        },
+        {
+          "k": "t",
+          "v": ") — one state set, two response weights, no new number. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "CONSEQUENCE: with "
+        },
+        {
+          "k": "c",
+          "v": "v484"
+        },
+        {
+          "k": "t",
+          "v": " EVERY finite/computable piece of the merged "
+        },
+        {
+          "k": "c",
+          "v": "ALPHA.QUILLEN.EXACT.01"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "HYP.PHI0.PUNCTURE.01"
+        },
+        {
+          "k": "t",
+          "v": " target is proven; the single remaining "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "is the identification of the abstract seam "
+        },
+        {
+          "k": "m",
+          "v": "\\zeta"
+        },
+        {
+          "k": "t",
+          "v": "-det with this glued mark determinant — a face of "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": ", exactly the "
+        },
+        {
+          "k": "c",
+          "v": "v382"
+        },
+        {
+          "k": "t",
+          "v": " typing, now substantiated computationally. Integrated in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1_architecture_e8"
+        },
+        {
+          "k": "t",
+          "v": " (eighth step of the ALPHA.QUILLEN arc) and "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": "; ledger rows "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.CONTACT.UNIT.02"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " update notes on "
+        },
+        {
+          "k": "c",
+          "v": ".01"
+        },
+        {
+          "k": "t",
+          "v": " and both targets; Python-only by nature, flagged in the Wolfram README."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-14",
+    "dateLabel": "2026-07-14",
+    "heading": [
+      {
+        "k": "t",
+        "v": "III) ("
+      },
+      {
+        "k": "c",
+        "v": "v484"
+      },
+      {
+        "k": "t",
+        "v": " — the two open analytic targets MERGE: the shared “"
+      },
+      {
+        "k": "m",
+        "v": "\\cthree"
+      },
+      {
+        "k": "t",
+        "v": " per boundary insertion” rule of "
+      },
+      {
+        "k": "c",
+        "v": "ALPHA.QUILLEN.EXACT.01"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "c",
+        "v": "HYP.PHI0.PUNCTURE.01"
+      },
+      {
+        "k": "t",
+        "v": " is the KMS seam unit "
+      },
+      {
+        "k": "m",
+        "v": "2\\pi=1/(4\\cthree)"
+      },
+      {
+        "k": "t",
+        "v": " with "
+      },
+      {
+        "k": "m",
+        "v": "\\tfrac14=1/|\\mu_4|"
+      },
+      {
+        "k": "t",
+        "v": ", derived on the seam circle for the finite cycle sector — "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "no gate closes, no marker moves"
+          }
+        ]
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v484_seam_contact_unit.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.CONTACT.UNIT.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The v483 round left the two analytic targets sharing one rule (“weight "
+        },
+        {
+          "k": "m",
+          "v": "\\cthree"
+        },
+        {
+          "k": "t",
+          "v": " per boundary contact insertion”: the "
+        },
+        {
+          "k": "m",
+          "v": "F_{U(1)}"
+        },
+        {
+          "k": "t",
+          "v": " ladder "
+        },
+        {
+          "k": "m",
+          "v": "\\{0,3,6\\}"
+        },
+        {
+          "k": "t",
+          "v": ", the "
+        },
+        {
+          "k": "m",
+          "v": "\\phiz"
+        },
+        {
+          "k": "t",
+          "v": " puncture "
+        },
+        {
+          "k": "m",
+          "v": "\\{1,4\\}"
+        },
+        {
+          "k": "t",
+          "v": "). This module shows the shared rule is NOT a new unknown: "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the unit chain "
+        },
+        {
+          "k": "m",
+          "v": "\\tfrac1{2\\pi}=4\\cthree=|\\mu_4|\\cthree=|\\Z_2|\\chi(S^2)\\cthree"
+        },
+        {
+          "k": "t",
+          "v": " — one "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "bare"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " boundary insertion divided by the orbit order "
+        },
+        {
+          "k": "m",
+          "v": "|\\mu_4|{=}4"
+        },
+        {
+          "k": "t",
+          "v": " is exactly "
+        },
+        {
+          "k": "m",
+          "v": "\\cthree"
+        },
+        {
+          "k": "t",
+          "v": "; this is the v239 KMS seam unit and the v58/v73 one-sided Gauss–Bonnet in a single identity. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the mechanism is DERIVED on the actual seam circle for the finite cycle sector: the bare Green function "
+        },
+        {
+          "k": "m",
+          "v": "G(d)=-\\tfrac1\\pi\\ln|2\\sin(d/2)|"
+        },
+        {
+          "k": "t",
+          "v": " (polylog identity, "
+        },
+        {
+          "k": "m",
+          "v": "40"
+        },
+        {
+          "k": "t",
+          "v": " digits) takes INTEGER multiples of "
+        },
+        {
+          "k": "m",
+          "v": "\\cthree\\ln2"
+        },
+        {
+          "k": "t",
+          "v": " at the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " separations ("
+        },
+        {
+          "k": "m",
+          "v": "G(\\pi/2)=-4\\cthree\\ln2"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "G(\\pi)=-8\\cthree\\ln2"
+        },
+        {
+          "k": "t",
+          "v": "; mark matrix "
+        },
+        {
+          "k": "m",
+          "v": "-4\\cthree\\ln2\\cdot\\mathrm{circ}(0,1,2,1)"
+        },
+        {
+          "k": "t",
+          "v": ", spectrum "
+        },
+        {
+          "k": "m",
+          "v": "\\{4,-2,0,-2\\}"
+        },
+        {
+          "k": "t",
+          "v": "), so the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": "-invariant (orbit-averaged) insertion carries "
+        },
+        {
+          "k": "m",
+          "v": "-(\\cthree\\ln2)C"
+        },
+        {
+          "k": "t",
+          "v": " exactly and the log-det contact expansion is exactly graded in "
+        },
+        {
+          "k": "m",
+          "v": "\\cthree"
+        },
+        {
+          "k": "t",
+          "v": " per insertion ("
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{Tr}C^k=4^k+2(-2)^k"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "the grammar is suite-wide: the "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda"
+        },
+        {
+          "k": "t",
+          "v": " prefactor "
+        },
+        {
+          "k": "m",
+          "v": "\\tfrac{3}{4\\pi^2}=(8\\pi)^2 d_{\\mathrm{top}}=48\\cthree^2"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v60"
+        },
+        {
+          "k": "t",
+          "v": ") carries the SAME multiplicity "
+        },
+        {
+          "k": "m",
+          "v": "\\Oadm{=}48"
+        },
+        {
+          "k": "t",
+          "v": " as the "
+        },
+        {
+          "k": "m",
+          "v": "\\phiz"
+        },
+        {
+          "k": "t",
+          "v": " puncture at TWO insertions; the "
+        },
+        {
+          "k": "m",
+          "v": "g{-}2"
+        },
+        {
+          "k": "t",
+          "v": " seam loop divides by the same "
+        },
+        {
+          "k": "m",
+          "v": "2\\pi=1/(4\\cthree)"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "THE MERGE: the two tracked "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "targets collapse into ONE named analytic step — the diagonal (self-energy) zeta-renormalisation at the marks "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the state-multiplicity matching ("
+        },
+        {
+          "k": "m",
+          "v": "48=\\Oadm"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "41=10b_1"
+        },
+        {
+          "k": "t",
+          "v": "); the finite half is proven, no target coefficient is claimed (the integers are forced by the square configuration, "
+        },
+        {
+          "k": "c",
+          "v": "v354"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v355"
+        },
+        {
+          "k": "t",
+          "v": "-clean). Integrated in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1_architecture_e8"
+        },
+        {
+          "k": "t",
+          "v": " (seventh step of the ALPHA.QUILLEN arc) and "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\phiz"
+        },
+        {
+          "k": "t",
+          "v": " split paragraph); ledger rows "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.CONTACT.UNIT.01"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " update notes on both targets; Python-only by nature (mpmath polylog), exact identities flagged in the Wolfram README."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-14",
+    "dateLabel": "2026-07-14",
+    "heading": [
+      {
+        "k": "t",
         "v": "II) ("
       },
       {

@@ -1227,6 +1227,33 @@ finite/model level}, where $\log\det$ of the occupied frame replaces $\log\det_\
 \mC\ (the EM1 reading). What stays \mO\ is the \emph{continuum} identification
 ``$\delta\log\det_\zeta(\mathrm{seam})=$ the inflow response'' on the abstract seam (the
 \texttt{SEAM.EQUIV.01} face); \texttt{ALPHA.QUILLEN.EXACT.01} stays \mO, and $\ainv$ stays \mE\ regardless.
+\emph{A seventh step unifies this target with the $\phiz$-puncture target
+(\veri{v484\_seam\_contact\_unit.py}).} The $\{0,3,6\}$ $\cthree$-ladder above and the puncture's per-mark
+weight $\cthree$ (\vref{v483}) are \emph{one} rule --- the seam contact unit --- and it is not a new
+unknown: ``$\cthree$ per insertion'' \emph{is} the KMS seam unit $2\pi=1/(4\cthree)$ with
+$\tfrac14=1/|\mu_4|$ (\vref{v239}), i.e.\ one bare boundary propagator ($\tfrac1{2\pi}=4\cthree$)
+orbit-averaged over the four marks. \mE\ derived on the seam circle for the finite cycle sector (the bare
+Green function takes integer multiples of $\cthree\ln2$ at the $\mu_4$ separations; the log-det contact
+expansion is exactly graded in $\cthree$ per insertion), with the grammar already suite-wide (the
+$\Lambda$ prefactor $\tfrac{3}{4\pi^2}=48\cthree^2$, \vref{v60}, carries the same $\Omega_{\mathrm{adm}}=48$
+at two insertions). \mC/\mO\ Consequence: \texttt{ALPHA.QUILLEN.EXACT.01} and \texttt{HYP.PHI0.PUNCTURE.01}
+\emph{merge} into one remaining analytic step --- the diagonal zeta-renormalisation at the marks plus the
+state-multiplicity matching ($41=10b_1$ here, $48=\Omega_{\mathrm{adm}}$ there).
+\emph{An eighth step settles that remaining step at the computable level
+(\veri{v485\_contact\_diagonal\_closed.py}).} \mE\ The renormalised coincident-point Green function on a
+circle of circumference $\ell$ is $G_{\mathrm{reg}}(0;\ell)=\tfrac1\pi\ln(\ell/2\pi)$ exactly --- it
+\emph{vanishes} precisely at $\ell=2\pi=1/(4\cthree)$, the KMS seam circumference (\vref{v239}): the seam
+scale is the unique zero-self-energy scheme point, and the log is the pure \emph{scale} channel (matching
+the fact that $F_{U(1)}$ carries exactly \emph{one} log term while the $\phiz$ split is log-free). \mE\
+With the diagonal zero the mark contact calculus \emph{resums in closed form} (the BFK/gluing route,
+\vref{v151}): $\det(I-uC)=(1-4u)(1+2u)^2$ with $u=\varepsilon\cthree\ln2$ --- all orders, the linear term
+absent because $\operatorname{Tr}C=0$. \mE\ And the two multiplicities are \emph{one} state set under two
+response weights: the same $48=3\times16$ admissible states counted flat give the $\phiz$ puncture count
+$48=\Omega_{\mathrm{adm}}$, and $Y^2$/loop/GUT-weighted give the alpha budget $41=10b_1=40+1$
+($\operatorname{Tr}_{16}Y^2=\tfrac{10}3$ exact, $\nu^c=0$; Ginsparg, \vref{v470}). \mC/\mO\ Net: every
+finite/computable piece of the merged target is proven; the single remaining \mO\ is the identification of
+the abstract seam $\zeta$-det with this glued mark determinant --- \emph{exactly} the \vref{v382} typing
+(a face of \texttt{SEAM.EQUIV.01}), now substantiated computationally rather than asserted.
 \par\smallskip
 
 \noindent The full ablation --- which inputs are load-bearing and which only set the last digit --- is in

@@ -1,0 +1,52 @@
+Status: `[E]` compiler-exakt · `[C]` bedingt/physikalische Brücke · `[O]` offen oder ausdrücklich keine Vorhersage.
+
+| Status | Was? | Worum geht es? | Wie berechnet TFPT das? | TFPT-Wert | Vergleichswert / Quelle | Abweichung | Laufende/geplante Experimente |
+|---|---|---|---|---|---|---|---|
+| `[E]` | Feinstrukturkonstante `α⁻¹` | Stärke des Elektromagnetismus | Eindeutige positive Nullstelle von `F_U(1)(α)=0` mit `c₃=1/(8π)` und U(1)-Index `41` | `137.0359992168` | `137.035999177(21)`, CODATA 2022 | `+1,9σ` | Berkeley Cs-Recoil, Paris Rb-Recoil, CODATA 2026 |
+| `[E]` | Cabibbo-Winkel `λC` | Quarkmischung 1↔2 | `φ₀=1/(6π)+3/(256π⁴)`; `λC=√[φ₀(1−φ₀)]` | `0.22437624` | Repo: `0.2245±0.0005`; CKMfitter 2025: `0.22504` | Repo: `−0,24σ`; live stärker, aber Vus-Routen uneinig | Belle II, LHCb, Kaon-/β-Zerfälle, PIONEER |
+| `[E]` | CKM `s₂₃≈|Vcb|` | Quarkmischung 2↔3 | `s₂₃=φ₀/(1+λC)` | `0.0434278` | CKMfitter 2025: `0.04159` | etwa `+4,4%`; Schema-/Fitfrage | Belle II, LHCb |
+| `[E]` | CKM `s₁₃≈|Vub|` | Quarkmischung 1↔3 | `s₁₃=λC³/3` | `0.00376538` | CKMfitter: `0.003743` | etwa `+0,6%` | Belle II, LHCb |
+| `[C]` | Quark-CP-Phase `δCKM` | CP-Verletzung im Quarksektor | `δCKM=π/3+3λC²` | `68.65°` | LHCb-Kombi `62.8°±2.6°`; neue Einzelanalyse `68.1°±6.7°` | `+2,25σ` zur Kombi; `+0,08σ` zur Einzelanalyse | LHCb Run-3-Analysen, Belle II |
+| `[E]` | Flavor-Matrix `R` | Algebraische Struktur der drei Familien | `R=[[1,3,0],[1,5,2],[2,5,3]]` | `detR=8`, Minoren `(2,3,5)`, `χR=t³−9t²+10t−8` | Von heutigen CKM/PMNS-Fits tragbar | nur strukturell vergleichbar | Künftige CKM-/PMNS-Globalfits |
+| `[E]` | `mμ/mτ` | Geladene Leptonhierarchie | `(8/7)φ₀` | `0.0607679` | Pole-Massen: ca. `0.05946` | `+2,2%`, aber Source- statt Pole-Skala | Belle II τ-Massenmessung |
+| `[E]` | `me/mμ` | Elektron-/Myonhierarchie | `(12/7)φ₀²` | `0.00484673` | Pole-Massen: ca. `0.004836` | `+0,22%`, Skalenfrage | Penning-Traps, CODATA |
+| `[E]` | `mu/md` | Leichte Quarkmassen | Plücker-Readout `55/117` | `0.470085` | FLAG/Lattice etwa `0.46–0.47` | konsistent | Lattice-QCD |
+| `[E]` | `mc/ms` | Charm-/Strange-Hierarchie | `(34/47)/φ₀` | `13.605` | Standard-`MS̄` etwa `11.77` | scheinbar `+16%`, aber nicht gleiche Skala | Lattice-QCD |
+| `[E]` | `mt/mb` | Top-/Bottom-Hierarchie | `(3/26)/φ₀²` | `40.812` | ungefähr `41` | etwa `−0,5%` | ATLAS, CMS, Lattice/RGE |
+| `[C]` | Koide-Relation | Relation der geladenen Leptonmassen | Source-Wert aus TFPT-Massen; Ziel `|Z₂|/Nfam=2/3` | `Qsource=0.66446`; `Qpole=2/3` | `Qexp=0.6666645(51)` | Source `−0,33%`; Pole etwa `−0,43σ` | Belle II; kein dediziertes Koide-Experiment |
+| `[E]/[C]` | Solarwinkel `sin²θ₁₂` | Solare Neutrinomischung | `ε=(3/4)φ₀`; `sin²θ₁₂=1/3−φ₀/2` | `0.30674736` | JUNO `0.3092±0.0087`; NuFIT `0.307±0.012` | `−0,28σ` JUNO; `−0,02σ` NuFIT | JUNO nimmt Daten |
+| `[E]` | Reaktorwinkel `sin²θ₁₃` | Kleine PMNS-1↔3-Mischung | `φ₀e^(−5/6)` | `0.02310844` | NuFIT `0.02195±0.00058` | `+2,0σ`, größter eingefrorener Kern-Pull | JUNO; Daya Bay/RENO-Legacy |
+| `[C]` | Atmosphärenwinkel `sin²θ₂₃` | Maximalität und Oktant | μτ-Symmetrie ⇒ `θ₂₃=45°` | `0.500` | NuFIT `0.470 +0.017/−0.013` | etwa `+1,76σ` | T2K, NOvA-Analyse, Hyper-K ab 2028, DUNE ab 2031 |
+| `[C]` | Neutrino-CP-Phase `δPMNS` | Leptonische CP-Verletzung | `ρ=ζ₆`; `δPMNS=arg(ρ⁴)=4π/3` | `240°±≈9°` | NuFIT `212° +26°/−41°` | `+1,08σ` | Hyper-K, DUNE, T2K/NOvA |
+| `[C]` | Neutrinoordnung | Normal oder invertiert | Minimale Majorana-Textur | normale Ordnung | NuFIT: NO nur mäßig bevorzugt | konsistent, noch nicht entschieden | JUNO, ORCA, IceCube Upgrade, Hyper-K, DUNE |
+| `[C]` | Neutrinomassensumme | Absolute Neutrinomasse | NO-Boden aus Massensplittings | `Σmν≈0.0588 eV` | DESI DR2: `<0.0642 eV` in ΛCDM; `<0.163 eV` in `w₀wₐ` | `3,1σ` Modellstress in ΛCDM; nur `0,65σ` in dynamischem DE-Modell | DESI, Euclid, Simons Observatory, KATRIN |
+| `[C]` | Majorana-Masse `mββ` | Neutrinoloser Doppelbetazerfall | Aus minimaler NO-Majorana-Textur | `mββ≈1.52 meV` | Heutige Grenzen etwa `75–200 meV` | weit unter aktueller Reichweite | LEGEND-200/1000, KamLAND2-Zen, CUPID, nEXO |
+| `[E]` | Genau drei Familien | Keine vierte leichte Familie | `Nfam=3` aus Carrier/Pascal/E8 | exakt `3` | LEP `Nν=2.9963±0.0074`; keine bestätigten Sterilen | etwa `−0,5σ` bei LEP; sterile Modelle weiter testbar | SBND, ICARUS, JSNS² |
+| `[E]` | Starke CP / Neutron-EDM | Warum `θeff≈0` | Pfaffian-Realität, Blattinvolution, Reflexionspositivität | `θeff=0`, `dn≈0` | `|dn|<1.8×10⁻²⁶ e·cm` | Nullresultat | PSI n2EDM, TUCAN, PanEDM |
+| `[E]` | Elektron-EDM | Zusätzlicher CP-Nulltest | Struktureller CP-Nullzweig | `de≈0` | `|de|<4.1×10⁻³⁰ e·cm`, JILA | Nullresultat | ACME III, JILA ThF⁺ |
+| `[C]` | Spektralindex `ns` | Form des primordialen Spektrums | `ns=1−2/N★`, `N★∈[50,60]` | `[0.9600,0.9667]`; Zweig `0.9611` | Planck `0.9649±0.0042` | Zweig `−0,91σ`; Band kompatibel | Simons Observatory, SPT-3G, BICEP Array, LiteBIRD |
+| `[C]` | Tensorverhältnis `r` | Primordiale Gravitationswellen | `r=12/N★²` | `[0.00333,0.00480]`; Zweig `0.0045` | BK18 `<0.036` | unter Grenze, datenlimitiert | Simons Observatory, BICEP Array, LiteBIRD |
+| `[C]` | Skalare Amplitude `As` | Stärke primordialer Dichtefluktuationen | `As=N★²c₃⁷/(24π²)` | etwa `2.0×10⁻⁹`; bei `N★=51.4`: `1.76×10⁻⁹` | Planck `≈2.10×10⁻⁹` | Band passt; fixer langsamer Reheating-Zweig `−11,3σ` | Simons Observatory, SPT-3G, LiteBIRD |
+| `[E]/[C]` | Skalaronmasse | Massenskala des R²-Freiheitsgrads | `Mscal/M̄Pl=c₃^(7/2)` | `1.256×10⁻⁵`; `3.06×10¹³ GeV` | Aus Planck-`As` inferierte Starobinsky-Skala | passt, aber keine Direktmessung | Indirekt über `r`, `ns`, `As` |
+| `[C]` | Baryonendichte `Ωb` | Anteil normaler Materie | `Ωb=(1−1/(4π))φ₀` | `0.04894066`; `Ωbh²≈0.0222` | BBN `≈0.0489±0.0014`; Planck `Ωbh²=0.02237±0.00015` | etwa `0,04σ` zur BBN-Linie | CMB, primordiales D/H, FRB-DM(z) |
+| `[C]` | Baryonenasymmetrie `ηB` | Materie-Antimaterie-Asymmetrie | `ηB=273.9×10⁻¹⁰Ωbh²`; Boltzmann-Zweig | `6.09×10⁻¹⁰`; ODE `6.5×10⁻¹⁰` | Beobachtet `≈6.1×10⁻¹⁰` | algebraisch `−0,2%`; ODE Faktor `1.07` | CMB/BBN; keine direkte Baryogenese-Messung |
+| `[C]` | Vakuumenergiedichte | Größe der kosmologischen Konstante | `(3/(4π²))e^(−2α⁻¹)` | `ρΛ/M̄⁴=7.125×10⁻¹²¹`; `2.2375 meV` | Kosmologisch etwa `2.24 meV` | `0.004` Größenordnungen | DESI, Euclid, Rubin, Roman |
+| `[C]` | Dunkle Energie `w` | Konstant oder zeitabhängig | Minimaler Λ-Zweig ⇒ `w=−1` | `−1` | DESI DR2: dynamisches `w` bei `2,8–4,2σ`, je SN-Sample | stärkster Live-Watchdog, aber unter 5σ und systematikabhängig | DESI, Euclid, Rubin LSST, Roman |
+| `[C]` | Hubble-Konstante | TFPT nimmt frühe/CMB-Seite | Zusammengesetztes Flat-Budget | `H₀≈67.15 km/s/Mpc` | Planck `67.36±0.54`; lokal etwa `73.0–73.5` | `−0,39σ` Planck; etwa `−5,7σ` lokal | DESI, Euclid, Rubin, Roman, SH0ES |
+| `[E]` | Kein zweites leichtes Higgs-Dublett | Anzahl leichter Higgsfelder | `NΦ=gcar−|μ₄|=5−4` | `NΦ=1` | Ein SM-artiges Higgs, kein bestätigtes zweites | strukturell konsistent | ATLAS/CMS Run-3-Analysen, HL-LHC ab 2030 |
+| `[C]` | Higgs-Kritikalität | `λ≈βλ≈0` nahe Planckskala | Freie `c=8`-Seam als UV-Randbedingung | `mH≈129–134 GeV`, zentral `133.5` | `mH≈125.1 GeV`; `λ(MPl)=−0.0143±0.0057` | Masse unter Band; RGE-Fläche etwa `2,5σ` metastabil | HL-LHC; FCC-ee nur geplant |
+| `[E]/[C]` | Kosmische Birefringenz | Drehung der CMB-Polarisation | `β=φ₀/(4π)` | `0.242435°` | ACT DR6 `0.215°±0.074°` | `+0,37σ`; ACT systematiklimitiert | Simons Observatory; LiteBIRD langfristig |
+| `[C]` | Axion-Dunkle-Materie | QCD-Axion-Kandidat | `fa=Mscal/128`; daraus `ma` | `ma≈23.8 µeV`, `fa≈2.39×10¹¹ GeV` | HAYSTAC hat das Massenfenster gescannt, aber nicht tief genug für generische QCD-Kopplungen | datenlimitiert | HAYSTAC Phase III, CAPP, ORGAN |
+| `[C]` | Seltene Kaonzerfälle | Sauberer FCNC-Test des CKM-Punkts | TFPT-CKM + externe Kurzdistanzfunktionen | `BR(K⁺)=9.45×10⁻¹¹`; `BR(KL)=3.33×10⁻¹¹` | NA62 `9.6 +1.9/−1.8×10⁻¹¹`; KOTO `<2.2×10⁻⁹` | K⁺ `+0,08σ`; KL datenlimitiert | finale NA62-Analyse, KOTO, KOTO II |
+| `[C]` | EHT-Polarisationsintercept | Achromatische Drehung nahe Horizonten | `βBH=16c₃⁴QeQm/r²` | Koeffizient `1/(256π⁴)`, Form `1/r²` | EHT M87: kein sauberer GRMHD-subtrahierter Intercept | datenlimitiert | EHT, ngEHT, GRMHD-Bibliotheken |
+| `[E]` | Gravitationswellengeschwindigkeit | Gemeinsamer Licht-/GW-Kegel | `(vGW−c)/c=0` | exakt `0` | GW170817: `[−3×10⁻¹⁵,+7×10⁻¹⁶]` | konsistent | LVK-Upgrades; IR1 ab Ende 2026, später O5 |
+| `[C]` | α–Λ-Drift-Lock | Zeitliche Konstanz von α und Λ | `dlnρΛ/dt=2α⁻¹·α̇/α` | beide Drifts `0` | PTB Yb⁺: `α̇/α=1.8(2.5)×10⁻¹⁹/Jahr` | konsistent | PTB und weltweite optische Uhren; DESI/Euclid |
+| `[C]` | Neutronenlebensdauer | TFPT nimmt Bottle-Seite | `τn=4906.4 s/[Vud²(1+3gA²)]` | `877.53±0.71 s` | UCNτ `877.82±≈0.30 s`; Proton-Beam `888.1±2.0 s` | `−0,38σ` Bottle; `−4,98σ` Beam | UCNτ+, τSPECT, NIST BL3, J-PARC |
+| `[C]` | `RD(*)`-Auflösungs-Watchdog | Kein leichter neuer geladener Mediator | SM-Rückkehr aus unitärem CKM-Zweig | `RD=0.296`, `RD*=0.254` | HFLAV 2025 kombiniert `3,8σ` höher | Spannung `3,8σ`; Kill erst bei robusten `5σ` | Belle II, LHCb |
+| `[C]` | X17-Auflösungs-Watchdog | Kein E8-Slot für 17-MeV-Boson | Teilcheninhalt des Compilers | kein X17 | MEG II null; PADME etwa `1,8–2,0σ` global | kein bestätigtes Signal | PADME Run IV, MEG II |
+| `[C]` | Lithium-7-Watchdog | `η` darf nicht verschoben werden; Lösung soll stellar sein | Gefrorenes `Ωb/η` + Standard-BBN | `⁷Li/H≈5.31×10⁻¹⁰` | Spite-Plateau `≈1.58×10⁻¹⁰` | Faktor `3,36`, etwa `9,9σ`; universelles BBN-Problem | Metallarme Sterne, ESPRESSO, BBN-Reaktionsmessungen |
+| `[O]` | `mp/me` | QCD-/EW-übergreifendes Verhältnis | Keine saubere φ₀-Potenz | ausdrücklich nicht vorhergesagt | `1836.152673` | nicht anwendbar | CODATA |
+| `[O]` | HFQPO-„third tooth“ | Geometrischer Frequenzzahn | Recovery-Leiter ⇒ `ν₃=1.5νu` | `661.5/414/252/363 Hz` je Quelle | Noch nie gezielt im RXTE-Archiv gesucht | datenlimitiert | Präregistrierte RXTE-Reanalyse; später eXTP |
+| `[O]` | Seam-Holomorphie | Raw Seam-Netz soll `(E8)₁` sein | `detK=1`, vier quadratische Marken | strukturelles Ziel | Kein direktes physikalisches Observable | nicht experimentell testbar | Derzeit nur interne Mathematik/KIT4-EIT-Analogie |
+
+Die 45 FRB-, GW-Echo-, Pulsar-, UHECR- und Recovery-Comb-Zeilen des Scorecards sind überwiegend präregistrierte Suchziele, nicht zusätzliche Theorievorhersagen.

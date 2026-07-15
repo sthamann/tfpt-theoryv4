@@ -3255,14 +3255,55 @@ in KEINER Ordnung kommen -- es muss in der Kopplungs-NORMIERUNG der Kontakt-Einf
 sich von "leite den Term her" auf EINE Regel: "Gewicht pro Mark-Einfuegung = c3" (dieselbe
 Residual-Klasse wie die EM-Ward-c3-Leiter, EM.WARD.02). Bleibt [O], aber die Haelfte ist bewiesen.
 
+## Update 2026-07-14 (III): v484 -- die beiden analytischen Targets VERSCHMELZEN (Kontakt-Einheit)
+
+Die Beobachtung aus v483 ("beide offenen Targets teilen die Regel 'c3 pro Rand-Einfuegung'") ist KEIN
+Zufall und KEIN neues Unbekanntes: v484_seam_contact_unit.py (SEAM.CONTACT.UNIT.01, 6/6) zeigt, dass
+die Regel die KMS-Seam-Einheit ist -- 2pi = 1/(4c3) mit 1/4 = 1/|mu4| (v239): EIN nackter Rand-
+propagator (1/(2pi) = 4c3) orbit-gemittelt ueber die vier Marks ergibt EXAKT c3 pro Einfuegung.
+Auf dem echten Seam-Kreis fuer den endlichen Zyklus-Sektor HERGELEITET: die nackte Greensfunktion
+G(d) = -(1/pi) ln|2 sin(d/2)| nimmt an den mu4-Separationen GANZZAHLIGE Vielfache von c3 ln2 an
+(G(pi/2) = -4c3 ln2, G(pi) = -8c3 ln2; Mark-Matrix -4c3 ln2 * circ(0,1,2,1), Spektrum {4,-2,0,-2});
+die orbit-gemittelte Einfuegung traegt exakt -(c3 ln2) C => die log-det-Kontaktentwicklung ist EXAKT
+in c3 pro Einfuegung graduiert (Tr C^k = 4^k + 2(-2)^k). Die Grammatik ist suite-weit: der Lambda-
+Praefaktor 3/(4pi^2) = (8pi)^2 dtop = 48 c3^2 (v60) traegt DIESELBE Multiplizitaet Omega_adm = 48 wie
+die phi0-Punktur bei ZWEI Einfuegungen; der g-2-Seam-Loop teilt durch dieselbe Einheit 2pi = 1/(4c3).
+KONSEQUENZ: ALPHA.QUILLEN.EXACT.01 und HYP.PHI0.PUNCTURE.01 kollabieren in EINEN verbleibenden
+analytischen Schritt -- die Diagonal-(Selbstenergie-)Zeta-Renormierung an den Marks + das
+Multiplizitaets-Matching (48 = Omega_adm, 41 = 10 b1). Die endliche Haelfte ist BEWIESEN; kein
+Koeffizient der Targets wird beansprucht (Anti-Numerologie: die Integers sind von der Quadrat-
+Konfiguration erzwungen). Kein Gate schliesst.
+
+## Update 2026-07-14 (IV): v485 -- die rechenbare Seite des Merged-Targets KOMPLETT
+
+v485_contact_diagonal_closed.py (SEAM.CONTACT.UNIT.02, 5/5): der nach v484 verbliebene
+Diagonal-Kanal ist erledigt. (1) DIAGONAL-NULL AN DER KMS-SKALA: G_reg(0; l) = (1/pi) ln(l/2pi)
+exakt (symbolischer Limes + 30 Stellen) -- verschwindet genau bei l = 2pi = 1/(4c3), der
+v239-KMS-Umfang: die Seam-Skala ist der eindeutige Null-Selbstenergie-Schemapunkt; der Log ist
+der reine SKALEN-Kanal (passt: F_U(1) hat genau EINEN Log-Term, der phi0-Split ist log-frei).
+(2) GESCHLOSSENE RESUMMATION (BFK-Route, v151): mit Diagonale = 0 resummiert die Mark-Determinante
+exakt: det(I - uC) = (1-4u)(1+2u)^2, u = eps c3 ln2 -- alle Ordnungen; der lineare Term fehlt
+GENAU WEIL die Diagonale verschwindet (Tr C = 0). (3) GEWICHTS-DICHOTOMIE: dieselben 48 = 3x16
+Zustaende tragen beide Multiplizitaeten -- flach 48 = Omega_adm (phi0-Punktur), Y^2/Loop/GUT-
+gewichtet 41 = 10b1 = 40 + 1 (Tr_16 Y^2 = 10/3 exakt, nu^c = 0; Ginsparg (3/5)(41/6) = 41/10,
+v470) -- EIN Zustandsraum, zwei Response-Gewichte. KONSEQUENZ: mit v484 ist JEDES endliche/
+rechenbare Stueck des Merged-Targets bewiesen; der einzige verbleibende [O] ist die
+Identifikation des abstrakten Seam-zeta-det mit dieser geklebten Mark-Determinante -- eine Face
+von SEAM.EQUIV.01, exakt die v382-Typisierung, jetzt substantiiert. Kein Gate schliesst.
+
 BIG-PICTURE-BILANZ der verbliebenen Offenen (was "vollstaendige Loesung" jeweils HIESSE):
 - SEAM.EQUIV.01 (der eine Keystone-Pfeil): externes Analysis-Theorem (Kontinuums-Skalenlimit);
   beide Seiten jetzt instrumentiert (Kronheimer-Datum v479; 4-Intervall/Longo-Xu-Rahmen v480).
   Naechster rechenbarer Hebel: Extended-Algebra-Entropie-Exhibit (mu=1-Diskriminator) auf dem
   16-Majorana-Stack -- Mini-Forschungsprojekt, benannt.
-- ALPHA.QUILLEN.EXACT.01 + HYP.PHI0.PUNCTURE.01: nach v483 teilen beide DIESELBE Residual-Klasse
-  ("c3-Gewicht pro Boundary-Einfuegung" bzw. c3-Leiter) -- ein Beweis der Normierungsregel wuerde
-  beide schliessen. Externe Mathematik (Quillen/zeta), kein endlicher Check.
+- ALPHA.QUILLEN.EXACT.01 + HYP.PHI0.PUNCTURE.01: nach v483/v484/v485 ist die RECHENBARE Seite
+  KOMPLETT -- Kontakt-Einheit = KMS-Einheit (v484), Diagonal-Selbstenergie = 0 exakt an der
+  KMS-Skala (G_reg(0;l) = (1/pi)ln(l/2pi), null iff l = 1/(4c3)), Mark-Determinante geschlossen
+  resummiert (det(I-uC) = (1-4u)(1+2u)^2, BFK-Route v151), 48/41 = EIN Zustandsraum unter zwei
+  Response-Gewichten (flach vs Y^2/Ginsparg). Der verbleibende [O] ist NUR noch die
+  Abstrakt-Seam-zeta-det-Identifikation = eine Face von SEAM.EQUIV.01 (die v382-Typisierung,
+  jetzt rechnerisch substantiiert statt behauptet). D.h.: die "vollstaendige Loesung" beider
+  Targets ist auf den einen Keystone-Pfeil reduziert.
 - v_geo: theorem-verboten (No-Unit v153) -- korrekt offen fuer immer (Definitionseinheit).
 - QG.AMB.01: dekoppeltes allgemeines QG-Problem, [C]-Redundanz -- keine TFPT-Aufgabe.
 - AP2-Kontinuum + KMS-Mass-Herleitung (Bianconi-Bruecke): echte Analysis-Projekte; der

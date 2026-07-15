@@ -239,6 +239,22 @@ and `v481_seesaw_carrier_ladder.py` (explicit 1-loop RG integration) are
 numerical, Python-only by the suite convention, flagged here rather than
 mirrored.
 
+The 2026-07-14 deep-dive round: `v482_seesaw_rung_decision.py` (bracketed RG
+envelopes) is numerical, Python-only; `v483_pillowcase_exact_traces.py`
+verifies EXACT statements (twisted traces = 1, contact term = 1/2) by
+position-space quadrature — numerical verification of exact facts,
+Python-only, with the exact arithmetic (48c₃⁴ = 3/(256π⁴), ratio 3/16)
+sympy-exact inside the module; `v484_seam_contact_unit.py` is sympy-exact +
+40-digit mpmath polylog (the unit chain 1/(2π) = 4c₃, the mark-Green integers
+−4/−8 · c₃ln2, circ(0,1,2,1) spectrum {4,−2,0,−2}, the Λ prefactor 3/(4π²) =
+48c₃²) — mirrorable in principle, kept out of the `.wl` count until the next
+verified engine run (engine currently unactivated), flagged here per the
+suite convention. Likewise `v485_contact_diagonal_closed.py` (the diagonal
+zero at the KMS scale G_reg(0;ℓ) = (1/π)ln(ℓ/2π), the closed-form mark
+determinant (1−4u)(1+2u)², the exact charge sums Tr₁₆Y² = 10/3 and Ginsparg
+(3/5)(41/6) = 41/10): sympy/Fraction-exact in Python, mirrorable in
+principle, deferred to the same next engine run.
+
 (ledger `GATE.WOLFRAM.02`). The scipy-only parts of the round (the `v86`
 pivot ODE solve, the `v88` data pulls, the `v99` mpmath ODE probe of the
 time-1 map — its exact symbolic form *is* mirrored) stay Python-only and
