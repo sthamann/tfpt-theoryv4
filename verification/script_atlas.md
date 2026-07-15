@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`479` registered scripts · `545` ledger claims · `10` clusters.
+`480` registered scripts · `546` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (49 scripts)
+### `core` — Compiler core & the E₈ glue  (50 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -109,6 +109,8 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v382_alpha_quillen_exact, v408_phi0_puncture_heatkernel, v483_pillowcase_exact_traces, v342_em_ward_heatkernel, v239_kms_thermal_time, v60_lambda_metrology_branch, v3, v37 · cited: origin theory, 1 architecture e8
 - **v485_contact_diagonal_closed** [E/C/O] `SEAM.CONTACT.UNIT.02` — SEAM.CONTACT.UNIT.02: the diagonal channel of the merged analytic target (v484) settled at the computable level -- the merged residual collapses onto the keystone. [E] diagonal zer
   - deps: v484_seam_contact_unit, v382_alpha_quillen_exact, v408_phi0_puncture_heatkernel, v483_pillowcase_exact_traces, v342_em_ward_heatkernel, v239_kms_thermal_time, v3, v151 · cited: origin theory, 1 architecture e8
+- **v486_transfer_full_rule** [E/O] `HYP.REWRITE.02` — HYP.REWRITE.02: the FULL physical transfer spectrum {1, (2/3)^6, (1/3)^6} now has ONE local recursive generator -- the lazy Z2-pair walk. [E] uniqueness: the symmetric 3-channel ru
+  - deps: v327_hypergraph_rewrite, v324_hypergraph_fiber, v312_hypergraph_substrate, v238_modular_lindblad_dynamics, v54, v76, v221, v312 · cited: origin theory
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1023,13 +1025,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×65, `v336`×33, `QGEO.SYM.01`×32, `v216`×20, `QG.AMB.01`×18, `v76`×18, `v56`×18, `E8.GLU.01`×16, `v312`×15, `REG.FREEZE.01`×15, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v60`×14, `v323`×14, `v367`×14
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×65, `v336`×33, `QGEO.SYM.01`×32, `v216`×20, `v76`×19, `QG.AMB.01`×18, `v56`×18, `E8.GLU.01`×16, `v312`×16, `REG.FREEZE.01`×15, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v54`×14, `v60`×14, `v323`×14
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v474_entropic_hodge_carrier** — `GRAV.ENTROPIC.HODGE.01`
 - **v475_entropic_scalaron_gate** — `GRAV.ENTROPIC.SCALARON.01`
 - **v476_entropic_compression_toy** — `GRAV.ENTROPIC.COMPRESS.01`
 - **v477_entropic_scaleflow** — `GRAV.ENTROPIC.SCALEFLOW.01`
@@ -1041,4 +1042,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v483_pillowcase_exact_traces** — `HYP.PHI0.GEOM.01`
 - **v484_seam_contact_unit** — `SEAM.CONTACT.UNIT.01`
 - **v485_contact_diagonal_closed** — `SEAM.CONTACT.UNIT.02`
+- **v486_transfer_full_rule** — `HYP.REWRITE.02`
 

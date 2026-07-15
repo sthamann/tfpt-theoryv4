@@ -42,6 +42,426 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-07-15",
+    "dateLabel": "2026-07-15",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v486"
+      },
+      {
+        "k": "t",
+        "v": " — generator hunt: the FULL transfer spectrum "
+      },
+      {
+        "k": "m",
+        "v": "\\{1,(2/3)^6,(1/3)^6\\}"
+      },
+      {
+        "k": "t",
+        "v": " from ONE forced local rule — the unique lazy "
+      },
+      {
+        "k": "m",
+        "v": "\\Z_2"
+      },
+      {
+        "k": "t",
+        "v": "-pair walk "
+      },
+      {
+        "k": "m",
+        "v": "(\\mathrm{stay},\\mathrm{hop},\\mathrm{leak})=(\\tfrac12,\\tfrac16,\\tfrac13)"
+      },
+      {
+        "k": "t",
+        "v": "; the previously generator-less "
+      },
+      {
+        "k": "m",
+        "v": "(1/3)^6"
+      },
+      {
+        "k": "t",
+        "v": " mode gets its origin; "
+      },
+      {
+        "k": "c",
+        "v": "v327"
+      },
+      {
+        "k": "t",
+        "v": "'s uniform rule superseded as full-spectrum generator — "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "no gate closes, no marker moves"
+          }
+        ]
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v486_transfer_full_rule.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "HYP.REWRITE.02"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The verified seam transfer spectrum is "
+        },
+        {
+          "k": "m",
+          "v": "\\{1,(2/3)^6,(1/3)^6\\}"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v54"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v221"
+        },
+        {
+          "k": "t",
+          "v": "), but the only local generator in the suite ("
+        },
+        {
+          "k": "c",
+          "v": "v327"
+        },
+        {
+          "k": "t",
+          "v": ") produces "
+        },
+        {
+          "k": "m",
+          "v": "\\{1,\\tfrac23,0\\}"
+        },
+        {
+          "k": "t",
+          "v": " — its zero mode persists under every power, so no iterate reaches the third mode. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "UNIQUENESS: for the symmetric "
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": "-channel rule "
+        },
+        {
+          "k": "m",
+          "v": "M(s,h)=[[1,0,0],[0,s,h],[0,h,s]]"
+        },
+        {
+          "k": "t",
+          "v": " (one absorbing family channel "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\Z_2"
+        },
+        {
+          "k": "t",
+          "v": " pair) the survival spectrum is "
+        },
+        {
+          "k": "m",
+          "v": "\\{s{+}h,s{-}h\\}"
+        },
+        {
+          "k": "t",
+          "v": "; demanding the PHYSICAL pair "
+        },
+        {
+          "k": "m",
+          "v": "\\{\\tfrac23,\\tfrac13\\}"
+        },
+        {
+          "k": "t",
+          "v": " forces UNIQUELY "
+        },
+        {
+          "k": "m",
+          "v": "(\\mathrm{stay},\\mathrm{hop},\\mathrm{leak})=(\\tfrac12,\\tfrac16,\\tfrac13)=(1/|\\Z_2|,1/(|\\Z_2|\\Nfam),\n1/\\Nfam)"
+        },
+        {
+          "k": "t",
+          "v": " — the lazy "
+        },
+        {
+          "k": "m",
+          "v": "\\Z_2"
+        },
+        {
+          "k": "t",
+          "v": "-pair walk, every rate an atom expression (honest direction: spectrum "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " rates). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "SIX-HAND GENERATION: over the order-"
+        },
+        {
+          "k": "m",
+          "v": "6=2\\Nfam=|R^+(A_3)|"
+        },
+        {
+          "k": "t",
+          "v": " hand, "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{eig}(B^6)=\\{\\tfrac{64}{729},\\tfrac1{729}\\}"
+        },
+        {
+          "k": "t",
+          "v": " exactly — both decay gaps now have one recursive generator: "
+        },
+        {
+          "k": "m",
+          "v": "6\\ln\\tfrac32"
+        },
+        {
+          "k": "t",
+          "v": " (recovery, "
+        },
+        {
+          "k": "c",
+          "v": "v76"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "m",
+          "v": "6\\ln3"
+        },
+        {
+          "k": "t",
+          "v": " (subdominant, previously generator-less). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "SUPERSESSION: the uniform rule's zero mode is power-persistent; its "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_2"
+        },
+        {
+          "k": "t",
+          "v": " arity story ("
+        },
+        {
+          "k": "m",
+          "v": "\\tfrac23=|\\Z_2|/\\Nfam"
+        },
+        {
+          "k": "t",
+          "v": ") is unchanged. "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the arity "
+        },
+        {
+          "k": "m",
+          "v": "\\{2,3\\}"
+        },
+        {
+          "k": "t",
+          "v": " stays the anchor input; the lazy-vs-uniform split is SELECTED by the physical spectrum, not yet first-principles-derived (named candidate: stay "
+        },
+        {
+          "k": "m",
+          "v": "=1/|\\Z_2|"
+        },
+        {
+          "k": "t",
+          "v": " as the sheet-symmetric choice). Discovery provenance: "
+        },
+        {
+          "k": "c",
+          "v": "experiments/tfpt-discovery/generator_hunt_full_transfer_rule.py"
+        },
+        {
+          "k": "t",
+          "v": " (plus a typed anchor-bilinear coverage inventory — known hits "
+        },
+        {
+          "k": "m",
+          "v": "a^TKa{=}41"
+        },
+        {
+          "k": "t",
+          "v": ", Koide "
+        },
+        {
+          "k": "m",
+          "v": "53"
+        },
+        {
+          "k": "t",
+          "v": ", and the recorded-only "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbf1^TQa{=}16"
+        },
+        {
+          "k": "t",
+          "v": " — and the lepton-exponent observation "
+        },
+        {
+          "k": "m",
+          "v": "(5,3,2)="
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "K"
+        },
+        {
+          "k": "t",
+          "v": "-row "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " atom triple; no unforced claims, "
+        },
+        {
+          "k": "c",
+          "v": "v354"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v355"
+        },
+        {
+          "k": "t",
+          "v": " discipline). Integrated in "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": " (new paragraph after the "
+        },
+        {
+          "k": "c",
+          "v": "v327"
+        },
+        {
+          "k": "t",
+          "v": " rewrite block); ledger rows "
+        },
+        {
+          "k": "c",
+          "v": "HYP.REWRITE.02"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " update note on "
+        },
+        {
+          "k": "c",
+          "v": ".01"
+        },
+        {
+          "k": "t",
+          "v": "; Python-only (sympy exact), mirrorable, deferred to the next verified engine run."
+        }
+      ]
+    ]
+  },
+  {
     "date": "2026-07-14",
     "dateLabel": "2026-07-14",
     "heading": [

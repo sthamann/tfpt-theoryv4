@@ -300,6 +300,39 @@ ROWS = [
      "(CANFAR DOI 10.11570/25.0066); repeater-cascade RC.01-03",
      "the omega=2.583 comb survives surrogates + off-kernel rank + lambda battery in >=2 "
      "gate-passing sessions", "null"],
+    # frb-parity-comb (2026-07-15): the v486 parity selection rule on signed circular
+    # polarization (PC.01-03; deck/Z2 reading of handedness, coupling unforced like KC.02)
+    ["FRB", "v486 parity-resolved combs on signed circular polarization (PC.01-03)",
+     "v486 fixes the transfer eigenvectors: lambda2=(2/3)^6 on the Z2-EVEN pair vector, "
+     "lambda3=(1/3)^6 on the Z2-ODD -- so omega_1=2.5827 is FORBIDDEN in the odd (signed-V) "
+     "channel (PC.01 kill direction), omega_2=0.9532 lives ONLY there (PC.02), and omega_2 "
+     "must not be an even-channel line (PC.03); comb-2 amplitude fades 2^-6 per period "
+     "(S-b budget)",
+     "FAST FRB 20240114A pol v5 (6,134 bursts, 3,474 significant handedness, 80 sessions): "
+     "PC.01 NULL -- the selection rule HOLDS at detectable amplitude (2 gate-passing "
+     "sessions n=213/61, reach 3.06/3.35 periods; signed Rayleigh Fisher p=0.83, off-tone "
+     "ranks 0.55/0.99; sign-permutation null is envelope-immune by construction; injection "
+     "on real session times: 88% detection at eps=0.5, 40% at 0.3). PC.02 data_limited "
+     "(primary omega_2 gate needs 18.5 e-folds of ln tau -- unreachable in FAST sessions; "
+     "1 relaxed session p=0.29; injection only 22% at eps=0.5) -- exactly the S-b x64-fading "
+     "budget. PC.03 data_limited (no gated even-channel omega_2 session; consistent with the "
+     "frozen new-tone scan nulls). Calibration-bug record: first injection flipped observed "
+     "signs (phase-incoherent) -> fixed to handedness-follows-clock model, documented. IXPE "
+     "leg (v1.1 addendum, prereg before data pass): IXPE 03250499 = 1E 1841-045 post-outburst "
+     "ToO (225,226 photons 2-8 keV, 12.2 d) -- IXPE is LINEAR-only, the Z2-odd channel does "
+     "not exist in X-rays, so the leg tests the EVEN sector (omega_2 = forbidden line); the "
+     "envelope anchor gives 0.11 omega_1 periods (data_limited by construction); 2 bursts "
+     "found (Poisson tail 4e-18/6e-10), 1 usable cascade (333 photons, 1.0 omega_2 periods < "
+     "relaxed gate) -> IX.01 data_limited, IX.02 null-at-current-power (p=0.53), injection 2% "
+     "at eps=0.3 -> leg honestly underpowered; typed insight: post-outburst ToOs weeks after "
+     "onset carry no comb reach -- day-scale ToOs or NICER burst-storm data named as the next "
+     "leg", None,
+     "search_target", "boundary recovery kernel (dynamic, parity-resolved comb)",
+     "search_target", "FAST FRB 20240114A pol catalog v5 (committed, frb-tfpt-signatures); "
+     "prereg hypotheses/parity_comb_v1.yaml 2026-07-15 before the data pass",
+     "an omega_1 signed-power excess (Fisher p<0.01, >=2 sessions, BH q<0.05) KILLS the "
+     "v486 parity assignment; an omega_2 odd-channel comb replicated in >=2 sessions "
+     "escalates only", "null"],
     # frb-ontology (2026-07-07): the FO ontology round (next.txt 2026-07-07 (I)) --
     # what FRBs could BE in TFPT. FO.01 (transduction-invisibility contract, 5/5 PASS)
     # lives in theory-contracts and NEVER enters this scorecard. FO.02/FO.03 are the

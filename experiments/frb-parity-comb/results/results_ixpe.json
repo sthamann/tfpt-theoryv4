@@ -1,0 +1,97 @@
+{
+  "experiment": "frb-parity-comb v1.1 -- IXPE leg (IX.01-03)",
+  "dataset": "IXPE 03250499, 1E 1841-045 post-outburst ToO (2024-09-28..10-10; outburst epoch ~MJD 60542)",
+  "semantics": "IXPE is LINEAR-only -> EVEN sector only; the Z2-odd handedness channel does not exist in X-rays (recorded in the v1.1 addendum BEFORE the data pass)",
+  "firewall": "magnetar bursts = surface channel (A5 class); a hit is a universal-DSI candidate, never direct TFPT confirmation; nothing load-bearing",
+  "photons_2_8_keV": 225226,
+  "span_s": 1050109.4,
+  "envelope_anchor": {
+    "t_minus_outburst_d": [
+      39.0,
+      51.2
+    ],
+    "ln_reach": 0.271,
+    "omega1_periods": 0.112,
+    "verdict": "data_limited by construction (recorded, not tested)"
+  },
+  "bursts_found": [
+    {
+      "t_peak_met": 244290034.43,
+      "counts_0p1s": 10,
+      "local_mean": 0.083,
+      "tail_p": 3.734346225687183e-18
+    },
+    {
+      "t_peak_met": 244396393.43,
+      "counts_0p1s": 6,
+      "local_mean": 0.088,
+      "tail_p": 5.981790283557195e-10
+    }
+  ],
+  "n_burst_sessions": 1,
+  "session_stats": [
+    {
+      "n_photons": 333,
+      "reach_omega1": 2.7,
+      "reach_omega2": 1.0
+    }
+  ],
+  "IX01_omega2_forbidden": {
+    "gated_sessions": 0,
+    "gates": [],
+    "sessions": [
+      {
+        "n_photons": 333,
+        "reach_periods": 0.995,
+        "gate": "fail"
+      }
+    ],
+    "fisher_p": null,
+    "verdict": "data_limited (no gate-passing burst session)"
+  },
+  "IX02_omega1_allowed": {
+    "gated_sessions": 1,
+    "gates": [
+      "relaxed"
+    ],
+    "sessions": [
+      {
+        "n_photons": 333,
+        "reach_periods": 2.697,
+        "gate": "relaxed",
+        "z": 37.9385,
+        "p_surrogate": 0.5323
+      }
+    ],
+    "fisher_p": 0.5323,
+    "verdict": "null-at-current-power (Fisher p=0.532)"
+  },
+  "IX03_injection": {
+    "omega_1": {
+      "omega": 2.5827069463082895,
+      "eps_grid": [
+        0.05,
+        0.1,
+        0.2,
+        0.3
+      ],
+      "detection_rate": [
+        0.0,
+        0.0,
+        0.0,
+        0.02
+      ]
+    },
+    "omega_2": {
+      "omega": 0.9532002891267091,
+      "eps_grid": [
+        0.05,
+        0.1,
+        0.2,
+        0.3
+      ],
+      "detection_rate": []
+    },
+    "note": "thinning injection on real photon times; compare eps_base = 0.0173"
+  }
+}

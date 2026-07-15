@@ -1,0 +1,47 @@
+{
+  "probe": "generator_hunt_full_transfer_rule",
+  "date": "2026-07-15",
+  "firewall": "discovery sandbox; v354/v355; nothing load-bearing",
+  "verdict": "HUNT COMPLETE (4/4)",
+  "bilinear_table": {
+    "1^T R 1": 22,
+    "1^T R a": 27,
+    "a^T R 1": 32,
+    "a^T R a": 40,
+    "1^T K 1": 25,
+    "1^T K a": 29,
+    "a^T K 1": 35,
+    "a^T K a": 41,
+    "1^T Q 1": 15,
+    "1^T Q a": 16,
+    "a^T Q 1": 21,
+    "a^T Q a": 23,
+    "1^T R+Q 1": 37,
+    "1^T R+Q a": 43,
+    "a^T R+Q 1": 53,
+    "a^T R+Q a": 63
+  },
+  "checks": [
+    {
+      "check": "H1 FULL-SPECTRUM RULE UNIQUE [E]: symmetric Z2-pair rule M(s,h) has survival spectrum {s+h, s-h}; demanding the PHYSICAL pair {2/3, 1/3} (v54/v221) forces UNIQUELY (s, h, leak) = (1/2, 1/6, 1/3) = (1/|Z2|, 1/(|Z2| N_fam), 1/N_fam) -- the lazy Z2-pair walk; all rates exact atom expressions (recorded, derived direction: spectrum -> rates)",
+      "pass": true,
+      "detail": "(s, h, leak) = (1/2, 1/6, 1/3); unique solution"
+    },
+    {
+      "check": "H2 SIX-HAND CONSISTENCY [E]: over the order-6 = 2 N_fam = |R+(A3)| hand the lazy rule generates EXACTLY the physical spectrum eig(B^6) = {64/729, 1/729} = {(2/3)^6, (1/3)^6}; decay gaps 6 ln(3/2) (the recovery gap, v76) and 6 ln 3 (the subdominant gap, previously generator-less).  v327's uniform rule (1/3, 1/3) is the degenerate case {2/3, 0} -- it can NEVER produce the (1/3)^6 mode: superseded as generator of the full spectrum",
+      "pass": true,
+      "detail": "eig(B^6) = [64/729, 1/729]; uniform-rule spectrum = [0, 2/3]"
+    },
+    {
+      "check": "H3 ANCHOR-BILINEAR COVERAGE [E-inventory]: full 16-cell table of x^T M y (x, y in {1, a}; M in {R, K, Q, R+Q}) computed exactly; KNOWN hits re-verified: a^T K a = 41 = 10 b1 and the Koide corner a^T (R+Q) 1 = 53; every other cell is INVENTORY ONLY -- no unforced hit is claimed (v354/v355)",
+      "pass": true,
+      "detail": "hits on load-bearing targets: ['a^T K a = 41 (10 b1)', '1^T Q a = 16 (dim S+)', 'a^T R+Q 1 = 53 (Koide corner)']; full table in results JSON"
+    },
+    {
+      "check": "H4 LEPTON-EXPONENT COLLISION [E-observation]: the charged-lepton phi0 exponents (5,3,2) (v20: (16/7)phi0^5, (4/3)phi0^3, (7/6)phi0^2) equal BOTH the bottom row of K AND the atom triple (g_car, N_fam, |Z2|) = the seam signature (2,3,5) reversed -- three readings of one integer vector, exact; typed as an OBSERVATION (the K-row reading is definitional), NOT a claim",
+      "pass": true,
+      "detail": "exponents (5, 3, 2) = K row 3 (5, 3, 2) = atoms (5, 3, 2)"
+    }
+  ],
+  "reading": "One genuinely new forced structure found: the FULL physical transfer spectrum {1, (2/3)^6, (1/3)^6} now has a LOCAL GENERATOR -- the lazy Z2-pair walk with (stay, hop, leak) = (1/2, 1/6, 1/3) = (1/|Z2|, 1/(|Z2| N_fam), 1/N_fam), the UNIQUE symmetric rule matching the physical pair {2/3, 1/3}; over the order-6 hand it reproduces both modes exactly, giving the previously generator-less (1/3)^6 its origin and superseding v327's uniform rule (which produces {2/3, 0} and kills the third mode). Recorded and typed, not over-claimed: derived direction is spectrum -> rates; the atom form of the rates is exact but its forcing from first principles is the [O]. Coverage inventory and the lepton-exponent collision recorded as typed observations, no unforced claims."
+}

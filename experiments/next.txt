@@ -3291,6 +3291,92 @@ rechenbare Stueck des Merged-Targets bewiesen; der einzige verbleibende [O] ist 
 Identifikation des abstrakten Seam-zeta-det mit dieser geklebten Mark-Determinante -- eine Face
 von SEAM.EQUIV.01, exakt die v382-Typisierung, jetzt substantiiert. Kein Gate schliesst.
 
+## Update 2026-07-15: v486 -- Generator-Jagd: das VOLLE Transfer-Spektrum aus EINER lokalen Regel
+
+Suchauftrag "neue zyklische Muster / Generatoren / rekursive Regelwerke" (Discovery-Sandbox,
+generator_hunt_full_transfer_rule.py, 4/4; v354/v355-Firewall). HAUPTFUND (promoted -> v486,
+HYP.REWRITE.02): das verifizierte Transfer-Spektrum {1, (2/3)^6, (1/3)^6} (v54/v221) hatte bisher
+nur fuer die 2/3-Mode einen lokalen Generator -- v327s uniforme Regel liefert {1, 2/3, 0}, und die
+Null-Mode ueberlebt JEDE Potenz: keine Iteration erreicht (1/3)^6. Die Luecke schliesst ein
+Eindeutigkeitssatz: die symmetrische Regel M(s,h) (1 absorbierender Familienkanal + Z2-Paar) hat
+Survival-Spektrum {s+h, s-h}; das PHYSIKALISCHE Paar {2/3, 1/3} erzwingt EINDEUTIG
+(stay, hop, leak) = (1/2, 1/6, 1/3) = (1/|Z2|, 1/(|Z2| N_fam), 1/N_fam) -- der TRAEGE Z2-Paar-Walk,
+jede Rate ein Atom-Ausdruck. Ueber die Ordnung-6-Hand (2 N_fam = |R+(A3)|) erzeugt er EXAKT
+eig(B^6) = {64/729, 1/729}; beide Zerfalls-Gaps haben jetzt EINEN rekursiven Generator:
+6 ln(3/2) (Recovery, v76) und 6 ln 3 (subdominant, vorher generator-los). Ehrlich: Richtung ist
+Spektrum -> Raten; die Arity {2,3} bleibt Anker-Input, die Lazy-vs-Uniform-Auswahl ist vom
+physikalischen Spektrum SELEKTIERT, noch nicht hergeleitet (benannter Kandidat: stay = 1/|Z2| als
+Sheet-symmetrische Wahl der Z2-Involution) -- [O].
+
+NEBENFUNDE (Inventar, KEINE Claims): Anker-Bilinear-Coverage ueber {R,K,Q,R+Q} x {1,a}: bekannte
+Treffer a^T K a = 41, Koide-Ecke a^T(R+Q)1 = 53 bestaetigt; NEU aufgezeichnet (nur Inventar,
+abgelehnt als Claim): 1^T Q a = 16 = dim S+. Lepton-Exponenten-Kollision: die phi0-Wortlaengen
+(5,3,2) der geladenen Leptonen = unterste K-Zeile = Atom-Tripel (g_car, N_fam, |Z2|) = Seam-Signatur
+rueckwaerts -- drei Lesarten EINES Integer-Vektors, exakt; als Beobachtung typisiert (K-Zeile ist
+definitorisch), kein Claim.
+
+SIGNATUR-IMPLIKATIONEN von v486 (Search-Programm-Typing, keine neuen Toene -- die Log-Uhr-Toene
+omega1 = 2pi/(6ln(3/2)) = 2.5827, omega2 = 2pi/(6ln3) = 0.9532, omega3 = 2pi/(6ln2) = 1.5108 sind
+bereits die eingefrorene Batterie): der Walk fixiert erstmals die EIGENVEKTOREN, daraus drei
+STRUKTUR-Signaturen: (S-a) PARITAETS-SELEKTIONSREGEL: lambda2 = (2/3)^6 lebt auf dem Z2-GERADEN
+Eigenvektor (1,1), lambda3 = (1/3)^6 auf dem Z2-UNGERADEN (1,-1) => der omega1-Kamm koppelt nur an
+sheet-symmetrische Observablen (Intensitaet/Energie), der omega2-Kamm NUR an sheet-antisymmetrische
+(Haendigkeit/Polaritaets-Alternation); ein Zwei-Ton-JOINT-Kamm in EINEM Paritaetskanal ist verboten
+(das bisherige "no-detector concept F" bekommt damit eine Regel; KC.02-Haendigkeits-NULL konsistent).
+(S-b) AMPLITUDEN-BUDGET: bei maximal sheet-polarisiertem Start starten beide Kaemme gleichgewichtet,
+Kamm 2 verblasst RELATIV um exakt 2^6 = 64 pro Periode => omega2-Suchen brauchen ~64x
+Amplituden-Sensitivitaet pro Periode (typisiert die bestehenden omega2-Nulls als erwartete
+data_limited, prereg-faehige Vorhersage eps2/eps1 = 2^-6 pro Periode). (S-c) MIKRO-SPLIT: pro Hand
+teilt sich das ueberlebende Gewicht exakt 65/128 same-sheet vs 63/128 cross-sheet (B^6 =
+[[65/1458, 63/1458],[63/1458, 65/1458]] mit 63/1458 = 7/162) -- nur testbar, wo Sheets aufloesbar
+sind; aufgezeichnet als typisierte Mikro-Signatur.
+
+## Update 2026-07-15 (II): frb-parity-comb -- die v486-Selektionsregel auf echten Daten (PC.01-03)
+
+Neues Such-Experiment experiments/frb-parity-comb (prereg parity_comb_v1.yaml VOR dem Datenpass;
+Firewall: Deck/Z2-Lesart der Haendigkeit, Kopplung unforced wie KC.02). Primaerdatensatz: FAST
+FRB 20240114A pol v5 (6134 Bursts, 3474 signifikante signed-V-Haendigkeiten, 80 Sessions).
+Statistik: signierte Rayleigh-Power mit Within-Session-VORZEICHEN-Permutations-Null --
+huellkurvenimmun by construction (die glatte Rate ist paritaetsgerade und faellt heraus).
+
+ERGEBNISSE (results/results.json, seed 0):
+(PC.01, die Verbots-/Kill-Richtung) omega_1 = 2.5827 im UNGERADEN Kanal: NULL -- 2 Gate-Sessions
+(n = 213/61, Reichweite 3.06/3.35 Perioden), Fisher p = 0.83, Off-Ton-Raenge 0.55/0.99. Die
+v486-Selektionsregel HAELT bei detektierbarer Amplitude (Injection auf echten Session-Zeiten:
+88% Detektion @ eps = 0.5, 40% @ 0.3, darunter unpowered).
+(PC.02) omega_2 = 0.9532 im ungeraden Kanal: data_limited -- das primaere Gate braucht 18.5
+e-folds ln tau (FAST-Sessions: max ~8); 1 relaxed-Session p = 0.29; Injection nur 22% @ eps=0.5.
+Exakt das S-b-Budget (x64-Fading pro Periode): der ungerade Kamm braucht Onset-nahe, lange
+Kaskaden -- IXPE-Magnetar-Outburst-Recoveries sind der benannte naechste Datensatz.
+(PC.03) omega_2 darf keine GERADE Linie sein: data_limited (kein Gate; konsistent mit den
+eingefrorenen New-Tone-Scan-Nulls).
+KALIBRIERUNGS-BUG-PROTOKOLL: erste Injection multiplizierte die BEOBACHTETEN Vorzeichen mit
+modulierten Flips -- die zufaelligen Ist-Vorzeichen verwerfen die injizierte Phasenkohaerenz
+(Detektion ~0 selbst bei eps 0.5); behoben auf das physikalische Modell (Haendigkeit folgt der
+Uhr, P(s=+1) = (1+eps cos(omega ln tau + phi))/2); im Code dokumentiert.
+Scorecard-Zeile ergaenzt (search_target/null); experiments/README-Katalogzeile ergaenzt.
+IXPE-BEIN AUSGEFUEHRT (2026-07-15, v1.1-Addendum prereg VOR dem Datenpass): IXPE 03250499 =
+1E 1841-045 Post-Outburst-ToO (Sept/Okt 2024, 5-7 Wochen nach dem 2024-08-20-Outburst;
+225.226 Photonen 2-8 keV, 12.2 Tage, via HEASARC gefetcht). SEMANTIK-KORREKTUR (ehrlich,
+vorab festgehalten): IXPE misst NUR lineare Polarisation -- der Z2-ungerade
+Haendigkeitskanal existiert im Roentgen nicht (PA mod pi deck-invariant, KC.02-Semantik);
+das Bein testet daher den GERADEN Sektor: omega_2 als VERBOTS-Linie (PC.03-Richtung),
+omega_1 als erlaubte. ERGEBNIS: data_limited auf ganzer Linie, mit Zahlen typisiert --
+Huellkurven-Anker 0.11 omega_1-Perioden (by construction); nur 2 interne Bursts in 12.2 d
+(Poisson-Tail 4e-18/6e-10), 1 nutzbare Kaskade (333 Photonen, 71 s bis GTI-Luecke = 1.0
+omega_2-Perioden < relaxed-Gate 1.2); IX.02 omega_1 null-at-current-power (p=0.53);
+Injection 2% @ eps=0.3 => ehrlich unterpowert. TYPISIERTE ERKENNTNIS: Post-Outburst-ToOs
+Wochen nach Onset tragen KEINE Kamm-Reichweite -- das Bein braucht Tag-Skala-ToOs oder
+Burst-STURM-Daten; fuer den geraden Kanal (nur Zeiten noetig) ist NICER (grosse Flaeche,
+SGR-1935-Stuerme) das bessere Instrument als IXPE -- als naechstes Bein benannt.
+Scorecard-Zeile um das IXPE-Bein ergaenzt.
+
+Ausstehend (dokumentiert im YAML): Xu+2022-Pol-Supplement 20201124A -- GEPRUEFT 2026-07-15:
+das oeffentliche Maschinentable (Kirsten-2023-Mirror) traegt DoC UNSIGNIERT (1103 Werte, alle
+>= 0), der zweite ungerade Kanal braeuchte die Per-Burst-Stokes-Profile von PSRPKU (volle
+polarimetrische Reduktion) -- pending; CHIME-Baseband-Pol pending; IXPE-Magnetar-Outburst-
+Recoveries = bester Kandidat fuer die omega_2-Reichweite (Onset-dichte lange Kaskaden).
+
 BIG-PICTURE-BILANZ der verbliebenen Offenen (was "vollstaendige Loesung" jeweils HIESSE):
 - SEAM.EQUIV.01 (der eine Keystone-Pfeil): externes Analysis-Theorem (Kontinuums-Skalenlimit);
   beide Seiten jetzt instrumentiert (Kronheimer-Datum v479; 4-Intervall/Longo-Xu-Rahmen v480).

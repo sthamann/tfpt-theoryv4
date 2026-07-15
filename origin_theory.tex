@@ -274,6 +274,20 @@ adjacency eigenvalue (the \vref{v312} negative, now a proof). \mO\ The residual 
 substrate is the $(2,3,5)$ adjacency (carrier) $\times$ this minimal branching rule (family), both built from
 $\{2,3,5\}$ \mC.
 
+\par\smallskip\noindent\textbf{The full spectrum from the unique lazy rule}
+(\veri{v486\_transfer\_full\_rule.py}). That rule generates only $\lambda_2$ --- its zero mode persists under
+every power, so no iterate reaches the verified \emph{third} transfer mode $(1/3)^6$ (\vref{v54}/\vref{v221}),
+which so far had no local-rule origin. \mE\ The gap closes with a \emph{uniqueness} statement: for the symmetric
+rule $M(s,h)$ (one absorbing family channel $+$ $\Z_2$ pair) the survival spectrum is $\{s{+}h,\,s{-}h\}$, and
+demanding the \emph{physical} pair $\{\tfrac23,\tfrac13\}$ forces uniquely
+$(\mathrm{stay},\mathrm{hop},\mathrm{leak})=(\tfrac12,\tfrac16,\tfrac13)=(1/|\Z_2|,\,1/(|\Z_2|\Nfam),\,1/\Nfam)$
+--- the \emph{lazy} $\Z_2$-pair walk, every rate an atom expression. Over the same order-$6$ hand it generates
+\emph{exactly} $\operatorname{eig}(B^6)=\{(2/3)^6,(1/3)^6\}$, so both decay gaps now have one recursive
+generator: $6\ln\tfrac32$ (recovery, \vref{v76}) and $6\ln3$ (subdominant, previously generator-less). \mO\ As
+before the arity $\{2,3\}$ is the anchor input; \emph{additionally} the lazy-vs-uniform split is selected by the
+physical spectrum, not yet derived (named candidate: stay $=1/|\Z_2|$ as the sheet-symmetric choice of the
+$\Z_2$ involution).
+
 \par\smallskip\noindent\textbf{One coupled local rule}
 (\veri{v395\_hypergraph\_coupled.py}). The three hypergraph modules (\veri{v299\_hypergraph\_0d\_autonomous.py},
 \veri{v327\_hypergraph\_rewrite.py}, \veri{v324\_hypergraph\_fiber.py}) merge

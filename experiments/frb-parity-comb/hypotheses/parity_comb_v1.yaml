@@ -1,0 +1,114 @@
+# frb-parity-comb v1 -- PREREGISTERED 2026-07-15 (before any data pass)
+#
+# Provenance: v486 (HYP.REWRITE.02) fixes the EIGENVECTORS of the seam transfer
+# for the first time: lambda_2 = (2/3)^6 lives on the Z2-EVEN pair eigenvector
+# (1,1); lambda_3 = (1/3)^6 on the Z2-ODD eigenvector (1,-1).  Consequences
+# (next.txt 2026-07-15, S-a/S-b/S-c):
+#   * the omega_1 comb (2.5827) couples ONLY to sheet-symmetric (Z2-even)
+#     observables (intensity/energy);
+#   * the omega_2 comb (0.9532) couples ONLY to sheet-antisymmetric (Z2-odd)
+#     observables (signed circular polarization = handedness);
+#   * relative tooth amplitude of comb-2 vs comb-1 fades x 2^6 = 64 per period.
+#
+# FIREWALL: boundary-recovery search target, never direct Hawking / new gravity;
+# a null is a valid outcome; nothing here is load-bearing or a paper claim.
+# The signed-V channel is a DECK/Z2 reading (exploratory coupling of the
+# observable to the sheet parity -- the coupling itself is unforced, as in KC.02).
+#
+# Frozen kernel (byte-guarded in tests/, identical derivation chain as
+# repeater-cascade/pulsar-glitch-recovery):
+frozen:
+  lambda_even: "(3/2)^6 = 729/64"          # even-channel clock (recovery)
+  omega_1: 2.582706946308289               # 2*pi / ln((3/2)^6)
+  lambda_odd: "3^6 = 729"                  # odd-channel clock (subdominant mode)
+  omega_2: 0.953200289126709               # 2*pi / ln(3^6)
+  omega_3: 1.510786713942398               # 2*pi / ln(2^6) (mode-ratio clock; context only)
+  eps_base: 0.017302460114315              # exp(-pi^2 / ln((3/2)^6))
+  comb2_relative_fading_per_period: 0.015625   # 2^-6 = 1/64 (S-b amplitude budget)
+  reach_gate_periods: 2.8                  # PG.06 machine-checked gate (per tested tone)
+  min_bursts_used: 30
+  session_gap_days: 0.2
+  tau_gate_s: 0.5
+  vsign_min_abs_pct: 5.0
+  vsign_min_sigma: 2.0
+
+datasets:
+  primary:
+    id: FRB20240114A_pol_v5
+    file: experiments/frb-tfpt-signatures/data/FAST_FRB20240114A_pol_catalog_v5.csv
+    channel: odd (signed circular polarization, vsign = +/-1 where significant) + even (times)
+  secondary_even:
+    - id: FRB20220912A_zhang2023
+      file: experiments/repeater-cascade/data/frb20220912a_zhang2023.csv
+    - id: FRB20121102A_li2021
+      file: experiments/frb-tfpt-signatures/data/frb20121102_fast_li2021_1652.tsv
+  external_pending:
+    - id: FRB20201124A_xu2022_polarization_supplement
+      status: >
+        checked 2026-07-15: the public machine-readable Xu+2022 table (mirrored in
+        astroflash-frb/frb20201124A-kirsten-2023, dbs/FRB20201124A_2021AprMay_FAST_BurstInfo.txt)
+        carries DoC UNSIGNED (1103 measured values, all >= 0) -- the handedness sign requires the
+        per-burst Stokes profiles from PSRPKU (psr.pku.edu.cn/index.php/publications/frb20201124a/),
+        a full polarimetric reduction; PENDING, out of scope for v1.
+    - id: CHIME_baseband_pol_repeaters      # pending (independent telescope/systematics)
+    - id: IXPE_magnetar_outburst_recoveries # pending; best candidate for the omega_2 reach
+                                            # (onset-dense recoveries, S-b budget)
+
+statistic:
+  odd_channel: >
+    signed Rayleigh power Z_s(w) = |sum_i s_i exp(i w ln tau_i)|^2 / n over
+    significant-handedness bursts (s_i = +/-1), tau_i from session onset.
+    NULL: within-session SIGN PERMUTATION (keeps every burst time and the full
+    rate envelope; destroys only sign-time coherence).  This null is
+    envelope-immune by construction: the smooth rate profile is parity-even
+    and cancels from the signed statistic.
+  even_channel: >
+    unsigned Rayleigh z(w) with the repeater-cascade rate-preserving
+    log-density surrogates (vendored construction, SURROGATE_POLY_DEG = 3).
+
+hypotheses:
+  PC.01:
+    name: selection rule -- omega_1 FORBIDDEN in the odd channel
+    test: >
+      signed Rayleigh at omega_1 = 2.5827 on every gate-passing session
+      (gate at the omega_1 period: reach > 2.8 * 2.4328 in ln tau, n >= 30
+      significant-handedness bursts); per-session sign-permutation p; Fisher
+      combination across sessions.
+    prediction: NULL (v486 parity assignment forbids omega_1 odd-power)
+    kill: >
+      Fisher p < 0.01 for EXCESS omega_1 signed power, replicated in >= 2
+      independent sessions with BH q < 0.05, kills the v486 parity assignment
+      (escalate-only; single-session hits stay hint_flag).
+  PC.02:
+    name: omega_2 comb in the odd channel (the subdominant-mode clock)
+    test: >
+      signed Rayleigh at omega_2 = 0.9532; PRIMARY gate at the omega_2 period
+      (reach > 2.8 * 6.5917 = 18.5 in ln tau -- expected to fail on FAST
+      sessions; document honestly); SECONDARY (exploratory, labelled): relaxed
+      gate reach > 1.2 * 6.5917 with n >= 60; sign-permutation null +
+      off-tone rank battery (omega grid 0.3..6.5 excluding +/-10% of omega_2).
+    prediction: >
+      detection only if sensitivity reaches the S-b budget; expected verdict
+      data_limited (amplitude fades x64 per period after onset).
+    kill: none from a null (data_limited is the typed outcome); an omega_2
+      odd-channel detection replicated in >= 2 sessions escalates only.
+  PC.03:
+    name: cross-check -- omega_2 must not be an EVEN-channel line
+    test: >
+      unsigned (even-channel) omega_2 test with rate-preserving surrogates on
+      the primary + secondary even catalogs; CONDITIONAL comparison: if PC.02
+      ever detects, the odd-channel standardized score must exceed the
+      even-channel score (parity assignment cuts both ways).
+    prediction: even-channel omega_2 NULL (consistent with the frozen
+      new-tone post-hoc scan nulls)
+
+injection:
+  odd_channel: >
+    sign-flip injection s_i -> s_i * B_i with P(B_i = -1) =
+    (1 - eps * cos(w ln tau_i + phi))/2 ... calibrate detectable eps at
+    omega_1 and omega_2 on the real session times (100 trials per eps in
+    {0.05, 0.10, 0.20, 0.30}, phi random); report the smallest detectable eps
+    vs the S-b budget.
+
+verdict_enum: [null_verdict, consistent, data_limited, tension, not_confirmed_not_refuted]
+scorecard: stage=search_target, evidence_class=search_target

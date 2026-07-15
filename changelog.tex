@@ -60,6 +60,31 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-07-15 (\texttt{v486} --- generator hunt: the FULL transfer spectrum $\{1,(2/3)^6,(1/3)^6\}$ from ONE forced local rule --- the unique lazy $\Z_2$-pair walk $(\mathrm{stay},\mathrm{hop},\mathrm{leak})=(\tfrac12,\tfrac16,\tfrac13)$; the previously generator-less $(1/3)^6$ mode gets its origin; \texttt{v327}'s uniform rule superseded as full-spectrum generator --- \emph{no gate closes, no marker moves})}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v486\_transfer\_full\_rule.py} (\texttt{HYP.REWRITE.02}).} The verified seam
+transfer spectrum is $\{1,(2/3)^6,(1/3)^6\}$ (\texttt{v54}/\texttt{v221}), but the only local generator
+in the suite (\texttt{v327}) produces $\{1,\tfrac23,0\}$ --- its zero mode persists under every power, so
+no iterate reaches the third mode. \mE\ UNIQUENESS: for the symmetric $3$-channel rule
+$M(s,h)=[[1,0,0],[0,s,h],[0,h,s]]$ (one absorbing family channel $+$ $\Z_2$ pair) the survival spectrum
+is $\{s{+}h,s{-}h\}$; demanding the PHYSICAL pair $\{\tfrac23,\tfrac13\}$ forces UNIQUELY
+$(\mathrm{stay},\mathrm{hop},\mathrm{leak})=(\tfrac12,\tfrac16,\tfrac13)=(1/|\Z_2|,1/(|\Z_2|\Nfam),
+1/\Nfam)$ --- the lazy $\Z_2$-pair walk, every rate an atom expression (honest direction: spectrum $\to$
+rates). \mE\ SIX-HAND GENERATION: over the order-$6=2\Nfam=|R^+(A_3)|$ hand,
+$\operatorname{eig}(B^6)=\{\tfrac{64}{729},\tfrac1{729}\}$ exactly --- both decay gaps now have one
+recursive generator: $6\ln\tfrac32$ (recovery, \texttt{v76}) and $6\ln3$ (subdominant, previously
+generator-less). \mE\ SUPERSESSION: the uniform rule's zero mode is power-persistent; its $\lambda_2$
+arity story ($\tfrac23=|\Z_2|/\Nfam$) is unchanged. \mO\ the arity $\{2,3\}$ stays the anchor input; the
+lazy-vs-uniform split is SELECTED by the physical spectrum, not yet first-principles-derived (named
+candidate: stay $=1/|\Z_2|$ as the sheet-symmetric choice). Discovery provenance:
+\texttt{experiments/tfpt-discovery/generator\_hunt\_full\_transfer\_rule.py} (plus a typed
+anchor-bilinear coverage inventory --- known hits $a^TKa{=}41$, Koide $53$, and the recorded-only
+$\mathbf1^TQa{=}16$ --- and the lepton-exponent observation $(5,3,2)=$ $K$-row $=$ atom triple; no
+unforced claims, \texttt{v354}/\texttt{v355} discipline). Integrated in \texttt{origin\_theory} (new
+paragraph after the \texttt{v327} rewrite block); ledger rows \texttt{HYP.REWRITE.02} $+$ update note on
+\texttt{.01}; Python-only (sympy exact), mirrorable, deferred to the next verified engine run.
+\end{itemize}
+
 \subsection*{2026-07-14 (IV) (\texttt{v485} --- the merged analytic target's computable side COMPLETED: the diagonal self-energy is renormalised to ZERO exactly at the KMS seam scale, the mark contact calculus resums in closed form (BFK route), and the $48$/$41$ multiplicities are ONE state set under two response weights --- the residual collapses onto the \texttt{SEAM.EQUIV.01} face alone; \emph{no gate closes, no marker moves})}
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{\texttt{v485\_contact\_diagonal\_closed.py} (\texttt{SEAM.CONTACT.UNIT.02}).} The v484

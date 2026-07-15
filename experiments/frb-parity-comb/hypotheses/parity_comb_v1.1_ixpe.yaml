@@ -1,0 +1,78 @@
+# frb-parity-comb v1.1 -- IXPE LEG ADDENDUM, PREREGISTERED 2026-07-15 09:25 CEST
+# (written BEFORE any pass over the IXPE light curve / event data)
+#
+# Dataset: IXPE ObsID 03250499, magnetar 1E 1841-045 -- the ToO ~5-7 weeks AFTER
+# its 2024-08-20/21 outburst onset (Swift/BAT + Fermi/GBM bursts, ATel/GCN
+# record; outburst epoch t_out ~ MJD 60542): MJD 60581.04..60593.22 (12.2 d,
+# 293 ks exposure, public since MJD 60691).  Level-2 event lists det1-3 from
+# HEASARC (event_l2/ixpe03250499_det{1,2,3}_evt2_v01.fits.gz).
+#
+# SEMANTICS CORRECTION (honest, recorded BEFORE analysis): IXPE measures LINEAR
+# polarization only (photoelectron tracks; per-event Stokes q,u).  Linear
+# polarization data are Z2-EVEN under the deck reading (PA is defined mod pi;
+# KC.02 semantics) -- IXPE CANNOT supply the Z2-odd handedness channel (no
+# X-ray circular polarimeter exists).  The IXPE leg therefore tests the EVEN
+# sector only:
+#   * omega_1 = 2.5827 is the ALLOWED even-channel line (search, escalate-only);
+#   * omega_2 = 0.9532 is FORBIDDEN in the even channel (the PC.03 kill
+#     direction, now with potentially real reach) -- an even-channel omega_2
+#     comb replicated across bursts would CONTRADICT the v486 parity
+#     assignment.
+#
+# Anchor policy (preregistered): the OUTBURST-envelope anchor is hopeless here
+# (t - t_out ~ 39..51 d -> ln-reach 0.27 e-folds ~ 0.11 omega_1 periods:
+# data_limited by construction; recorded, not tested).  The testable anchors
+# are WITHIN-observation magnetar SHORT BURSTS (1E 1841-045 was burst-active
+# in this window): each detected burst opens a photon-cascade session, tau =
+# photon arrival - burst peak, gated tau >= 0.1 s, session ends at the next
+# burst, an exposure gap > 200 s, or 10^4 s, whichever first.  ln-reach up to
+# ln(1e4/0.1) = 11.5 -> up to ~4.7 omega_1 periods / ~1.7 omega_2 periods.
+#
+# Burst finder (fixed before the data pass): merged det1-3 events, 2-8 keV,
+# 0.1 s bins; a burst = bin with counts whose Poisson tail probability against
+# the local (+-50 s, burst-bins excluded) mean is < 1e-6; contiguous/adjacent
+# burst bins merged; peak bin = onset.
+#
+# Tests (frozen kernel identical to v1; gates identical: reach > 2.8 periods
+# of the tested tone primary / > 1.2 relaxed-labelled, n_photons >= 200 for
+# photon cascades):
+#   IX.01 omega_2 FORBIDDEN even line: rate-preserving log-density surrogate
+#         test at omega_2 on every gate-passing post-burst photon cascade;
+#         Fisher across bursts.  Kill: Fisher p < 0.01 with >= 2 independent
+#         burst sessions (BH q < 0.05) CONTRADICTS the v486 parity assignment
+#         (escalate-only protocol).
+#   IX.02 omega_1 allowed even line: same machinery at omega_1; a replicated
+#         detection is an escalate-only candidate (recovery-comb reading, A5
+#         surface-channel firewall as in crust-cooling-comb).
+#   IX.03 injection calibration: rate-modulation injection (thinning) on the
+#         real photon times per gate-passing session; report smallest
+#         detectable eps vs the frozen eps_base = 0.0173.
+#
+# Verdicts: enum as v1; if NO burst is found or no session passes the gates,
+# the leg is data_limited with the reach numbers documented (a real, typed
+# outcome: single-pointing X-ray follow-ups cannot see the envelope comb).
+#
+# FIREWALL: magnetar bursts are a SURFACE channel (crust/magnetosphere) --
+# same legitimacy class as crust-cooling/A5: a hit would be a universal-DSI
+# coincidence candidate, never direct TFPT confirmation; nulls kill only the
+# coupling reading.  Nothing load-bearing.
+datasets:
+  ixpe_1e1841:
+    obsid: "03250499"
+    source: 1E 1841-045
+    outburst_epoch_mjd: 60542.0        # 2024-08-20/21 burst activation (GCN/ATel)
+    obs_window_mjd: [60581.04, 60593.22]
+    files:
+      - event_l2/ixpe03250499_det1_evt2_v01.fits.gz
+      - event_l2/ixpe03250499_det2_evt2_v01.fits.gz
+      - event_l2/ixpe03250499_det3_evt2_v01.fits.gz
+    fetch: scripts/fetch_ixpe.py (HEASARC public archive)
+burst_finder:
+  band_kev: [2.0, 8.0]
+  bin_s: 0.1
+  local_window_s: 100.0
+  poisson_tail_p: 1.0e-6
+session:
+  tau_min_s: 0.1
+  end_at: min(next burst, exposure gap > 200 s, 1.0e4 s)
+  min_photons: 200
