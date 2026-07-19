@@ -16,10 +16,13 @@ introduction,section,"Physical, geometric, topological: why the architecture is 
 introduction,section,What role $E_8$ now plays exactly,780,805,,07ec9c971cd7,2026-06-12
 introduction,section,What this means for the theory-of-everything question,806,869,,5a492ffa6c68,2026-07-13
 introduction,subsection,"The closure ledger: what is done, and what genuinely remains",870,960,,7ada34a895c9,2026-07-14
-introduction,section,Does this make the theory more probable?,961,978,,540397fd6436,2026-06-12
-introduction,section,Predictions for running and upcoming experiments,979,1049,v100_numerology_null_mc.py;v84_frozen_registry.py,aebe6e44a5a3,2026-06-12
-introduction,section,Conclusion,1050,1061,,85f94f17b1dd,2026-06-12
-introduction,section,Appendix: computational verification (reproducibility),1062,1105,v1_e8_glue.py,4dd8212d1341,2026-07-14
+introduction,section,TFPT in the light of algorithmic physics: Zuse--Schmidhuber--Wolfram,961,977,,ba6ca0b2afb6,2026-07-14
+introduction,subsection,Three shared instincts,978,997,,9ea479076763,2026-07-14
+introduction,subsection,Three deliberate divergences,998,1029,,739b95c8e428,2026-07-14
+introduction,section,Does this make the theory more probable?,1030,1047,,540397fd6436,2026-06-12
+introduction,section,Predictions for running and upcoming experiments,1048,1118,v100_numerology_null_mc.py;v84_frozen_registry.py,aebe6e44a5a3,2026-06-12
+introduction,section,Conclusion,1119,1130,,85f94f17b1dd,2026-06-12
+introduction,section,Appendix: computational verification (reproducibility),1131,1174,v1_e8_glue.py,4dd8212d1341,2026-07-14
 tfpt_1_architecture_e8,front,(front matter),1,146,,31add055d84c,2026-06-12
 tfpt_1_architecture_e8,section,How to read this document,147,364,v106_review_validation.py;v109_sheet_pairing.py;v110_calderon_sheet.py;v111_quadratic_transport.py;v112_selfcounting_channel.py;v113_quasifree_kernel.py;v23_anchor_generator.py,5afde72d746c,2026-06-12
 tfpt_1_architecture_e8,section,Headline: the Pascal compiler on five carrier slots,365,422,,32b8525a612e,2026-06-12

@@ -958,6 +958,75 @@ SM-only unification is killed, \vref{v246}); carrier-native Pati--Salam is a sep
 UV branch (thresholds $+$ proton decay). Not an open ambiguity, a decision tree.
 
 % =====================================================================
+\section{TFPT in the light of algorithmic physics: Zuse--Schmidhuber--Wolfram}
+% =====================================================================
+\noindent The ``compiler'' framing places TFPT in an older lineage --- the idea that
+physics is, at bottom, the output of a short computation --- and it is worth stating
+precisely what TFPT shares with that lineage and where it deliberately parts company, so
+the family resemblance is not mistaken for a claim the theory does not make. Three
+landmarks fix the coordinates. \textbf{Zuse} (\emph{Rechnender Raum}, 1969) proposed that
+the universe is literally a (cellular-automaton) computation. \textbf{Schmidhuber}
+sharpened this into an \emph{algorithmic} theory of everything (1997, 2000): the shortest
+program that outputs a universe is the natural prior --- a physics reading of Kolmogorov
+complexity and Solomonoff induction --- while his \emph{Speed Prior} (2002) adds that a
+computed universe should be one that is \emph{fast} to compute, and his
+low-complexity-art programme (1997) identifies beauty with compressibility.
+\textbf{Wolfram} (\emph{A New Kind of Science}, 2002; the Physics Project) recasts the
+same instinct combinatorially: space--time as a hypergraph updated by simple rewrite
+rules.
+
+\subsection*{Three shared instincts}
+\begin{enumerate}[leftmargin=1.6em,itemsep=2pt,topsep=2pt]
+\item \textbf{Minimal description length as the selection principle.} ``No load-bearing
+      free number, only $\pi$'' is, in these terms, a Kolmogorov-style compression
+      statement --- the plausibility discussion below already names it
+      \emph{Kolmogorov-like compression: many numbers from little} --- and the
+      grammar-internal null model of the next section turns it from rhetoric into a
+      measured bound.
+\item \textbf{Deterministic, resource-bounded generation.} The readouts fall out of a
+      chain of exact identities in about a second, not a search over a model space ---
+      the same spirit as the Speed Prior's preference for \emph{fast}-computable worlds,
+      though TFPT makes no claim to instantiate a speed prior.
+\item \textbf{Compressibility as the aesthetic.} ``Choosing $E_8$ is choosing the
+      icosahedron'' selects the maximally symmetric, shortest-to-describe object; the
+      affine Kac marks $(1,2,3,4,5,6,4,2,3)$ carry a fourfold identity (representation
+      dimensions $=$ network attractor $=$ spectral certificate $=$ local balance
+      weight). This is Schmidhuber's \emph{beauty $=$ compressibility}, realised on the
+      Standard-Model alphabet rather than on pixels.
+\end{enumerate}
+
+\subsection*{Three deliberate divergences}
+\begin{enumerate}[leftmargin=1.6em,itemsep=2pt,topsep=2pt,label=\textbf{(\Alph*)}]
+\item \textbf{One forced program, not an ensemble.} Schmidhuber's shortest program
+      computes \emph{all} universes and privileges none; TFPT bets the opposite --- an
+      over-determined bootstrap fixed point that \emph{forces} a single dimensionless
+      skeleton ($g_{\mathrm{car}}{=}5$ fixed three independent ways). TFPT is a candidate
+      for \emph{the} short program of our constants, not a measure over programs.
+\item \textbf{The description language is algebraic.} TFPT's compression is measured in a
+      Lie/lattice/VOA language, not in Turing bit-strings; Kolmogorov complexity is
+      language-dependent up to an additive constant, so the honest question --- is the
+      shortness real, or hidden in the $E_8$ machinery? --- is exactly what the null model
+      and the ``forced three ways'' bootstrap are built to answer. A Wolfram-style rewrite
+      reading sharpens the same point rather than dissolving it: the $(2,3,5)$ seed is the
+      terminal of a minimal $T(2,3,r)$ growth rule (Cartan determinants $3,2,1,0,-1$ for
+      $E_6,E_7,E_8,\hat E_8,E_{10}$), so the rewrite picture \emph{re-formulates}
+      axiom~P2 rather than removing it --- both pictures bottom out on the same single
+      irreducible seed.
+\item \textbf{Falsifiability --- the one thing TFPT adds.} As \emph{physics}, the
+      Zuse/Schmidhuber algorithmic TOE and Wolfram's rule search are essentially
+      unfalsifiable: no dated measurement can kill them. TFPT freezes dated, kill-tested
+      predictions (the registry \texttt{predictions\_frozen.json}, the predictions section
+      below) and so puts the computational-universe intuition at genuine empirical risk.
+      That, not the compression rhetoric, is the load-bearing difference.
+\end{enumerate}
+
+\noindent\emph{Status.} This section is \emph{positioning}, not a new result: it
+introduces no formula and moves no status marker. Its machine-checked hooks already live
+in the suite --- the grammar-internal null-model bound and the icosahedral/McKay bedrock
+with its network attractor; the Wolfram-style rewrite correspondence is worked out
+separately in the repository's hypergraph note.
+
+% =====================================================================
 \section{Does this make the theory more probable?}
 % =====================================================================
 \noindent\textbf{Plausibility balance.}

@@ -174,6 +174,14 @@ export const papers: Paper[] = [
           "c_3 = \\frac{1}{2\\,e_1(a)\\,\\pi} = \\frac{1}{8\\pi}, \\qquad |R(E_8)| = p_1 p_2 p_3 = 240",
         ],
       },
+      {
+        title: "TFPT in the light of algorithmic physics",
+        body: `The compiler framing sits in the Zuse–Schmidhuber–Wolfram lineage — physics as the output of a short computation. TFPT shares three instincts with it: minimal description length as the selection principle (no load-bearing free number, only π), deterministic resource-bounded generation (a chain of exact identities in about a second, not a search over models — the spirit of Schmidhuber's Speed Prior), and compressibility as the aesthetic (choosing E₈ is choosing the icosahedron, the shortest-to-describe object). It diverges on three points: TFPT forces one program instead of a measure over all universes, its description language is algebraic (Lie/lattice/VOA) rather than Turing bit-strings, and — the load-bearing difference — it is falsifiable, freezing dated kill-tested predictions where the algorithmic-TOE lineage stays metaphysics. This is positioning, not a new claim: it moves no status marker.`,
+        formulas: [
+          "\\text{shortest program} \\Rightarrow \\text{Kolmogorov / Solomonoff prior};\\quad \\text{TFPT} = \\text{one forced fixed point}",
+          "T(2,3,r):\\ \\det\\mathrm{Cartan} = 3,2,1,0,-1\\ \\ (E_6, E_7, E_8, \\hat{E}_8, E_{10})",
+        ],
+      },
     ],
     keyFormulas: [
       {

@@ -42,6 +42,132 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-07-19",
+    "dateLabel": "2026-07-19",
+    "heading": [
+      {
+        "k": "t",
+        "v": "editorial — positioning section "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "TFPT in the light of algorithmic physics: Zuse–Schmidhuber–Wolfram"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " added to "
+      },
+      {
+        "k": "c",
+        "v": "introduction"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " website mirror; "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "no result, no status change"
+          }
+        ]
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "introduction.tex"
+            },
+            {
+              "k": "t",
+              "v": " — new section “TFPT in the light of algorithmic physics”."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Positions the compiler against the Zuse–Schmidhuber–Wolfram algorithmic-physics lineage: three shared instincts (minimum description length as the selection principle, deterministic resource-bounded generation, compressibility as the aesthetic) and three deliberate divergences (one "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "forced"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " program vs. an ensemble of all universes; an algebraic Lie/lattice/VOA description language vs. Turing bit-strings; and falsifiability — dated, kill-tested predictions — as the load-bearing difference). Explicitly typed as "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "positioning"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": it introduces no formula and moves no status marker; its only machine-checked hooks are already in the suite (the grammar-internal null model and the icosahedral/McKay bedrock)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website mirror."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " A matching curated section was added to the "
+        },
+        {
+          "k": "c",
+          "v": "introduction"
+        },
+        {
+          "k": "t",
+          "v": " entry in "
+        },
+        {
+          "k": "c",
+          "v": "website/lib/papers.ts"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
     "date": "2026-07-15",
     "dateLabel": "2026-07-15",
     "heading": [
