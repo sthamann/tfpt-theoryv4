@@ -1,0 +1,607 @@
+{
+  "experiment": "e8-ladder-bed",
+  "version": "v1",
+  "firewall": "detector validation on published spectra; confirms Zamolodchikov E8, not TFPT axioms; nothing load-bearing",
+  "pf_selftest": {
+    "pf_ladder": [
+      1.0,
+      1.6180339887498971,
+      1.9890437907365457,
+      2.404867172372069,
+      2.9562952014676127,
+      3.218340458523667,
+      3.891156823326855,
+      4.783386116752818
+    ],
+    "max_rel_dev_vs_zamolodchikov": 1.4773014159015882e-15,
+    "lowest_cartan_eigenvalue": 0.010956209263452922,
+    "target_2_minus_2cos_pi_30": 0.01095620926345342,
+    "rel_dev_eigenvalue": 4.544141368913716e-14,
+    "m2_over_m1": 1.6180339887498971,
+    "golden_ratio_dev": 2.220446049250313e-15,
+    "pass": true
+  },
+  "e8_ladder_exact": [
+    1.0,
+    1.618033988749895,
+    1.9890437907365466,
+    2.4048671723720654,
+    2.9562952014676114,
+    3.2183404585236657,
+    3.891156823326854,
+    4.783386116752813
+  ],
+  "baco2v2o8": {
+    "data_file": "baco2v2o8_ins_peaks.csv",
+    "n_peaks_input": 17,
+    "recovery": {
+      "ok": true,
+      "n_assigned": 8,
+      "chi2": 2.431,
+      "chi2_dof": 0.3473,
+      "scale_m1_hat": 1.21516,
+      "missing_rungs": [],
+      "assignment": {
+        "rung_1": {
+          "peak": 1.2,
+          "predicted": 1.2152,
+          "pull_sigma": -0.15,
+          "kind_reporting_only": "single_marker"
+        },
+        "rung_2": {
+          "peak": 2.0051,
+          "predicted": 1.9662,
+          "pull_sigma": 0.39,
+          "kind_reporting_only": "single_marker"
+        },
+        "rung_3": {
+          "peak": 2.5077,
+          "predicted": 2.417,
+          "pull_sigma": 0.91,
+          "kind_reporting_only": "single_marker"
+        },
+        "rung_4": {
+          "peak": 3.0,
+          "predicted": 2.9223,
+          "pull_sigma": 0.78,
+          "kind_reporting_only": "single_marker"
+        },
+        "rung_5": {
+          "peak": 3.6256,
+          "predicted": 3.5924,
+          "pull_sigma": 0.33,
+          "kind_reporting_only": "single_marker"
+        },
+        "rung_6": {
+          "peak": 3.8974,
+          "predicted": 3.9108,
+          "pull_sigma": -0.13,
+          "kind_reporting_only": "single_marker"
+        },
+        "rung_7": {
+          "peak": 4.6538,
+          "predicted": 4.7284,
+          "pull_sigma": -0.62,
+          "kind_reporting_only": "other_peak"
+        },
+        "rung_8": {
+          "peak": 5.7564,
+          "predicted": 5.8126,
+          "pull_sigma": -0.56,
+          "kind_reporting_only": "single_marker"
+        }
+      },
+      "unassigned_peaks": [
+        {
+          "peak": 2.7821,
+          "kind_reporting_only": "other_peak"
+        },
+        {
+          "peak": 3.2846,
+          "kind_reporting_only": "other_peak"
+        },
+        {
+          "peak": 4.0897,
+          "kind_reporting_only": "other_peak"
+        },
+        {
+          "peak": 4.2846,
+          "kind_reporting_only": "other_peak"
+        },
+        {
+          "peak": 4.4974,
+          "kind_reporting_only": "single_marker"
+        },
+        {
+          "peak": 4.9564,
+          "kind_reporting_only": "other_peak"
+        },
+        {
+          "peak": 5.1154,
+          "kind_reporting_only": "other_peak"
+        },
+        {
+          "peak": 5.2692,
+          "kind_reporting_only": "other_peak"
+        },
+        {
+          "peak": 5.3872,
+          "kind_reporting_only": "other_peak"
+        }
+      ]
+    },
+    "mc_null": {
+      "p_value": 0.005598880223955209,
+      "n_null": 5000,
+      "n_as_good": 27
+    },
+    "sigma_variant_0p05": {
+      "recovery": {
+        "ok": true,
+        "n_assigned": 8,
+        "chi2": 9.3364,
+        "chi2_dof": 1.3338,
+        "scale_m1_hat": 1.21117,
+        "missing_rungs": [],
+        "assignment": {
+          "rung_1": {
+            "peak": 1.2,
+            "predicted": 1.2112,
+            "pull_sigma": -0.22,
+            "kind_reporting_only": "single_marker"
+          },
+          "rung_2": {
+            "peak": 2.0051,
+            "predicted": 1.9597,
+            "pull_sigma": 0.91,
+            "kind_reporting_only": "single_marker"
+          },
+          "rung_3": {
+            "peak": 2.5077,
+            "predicted": 2.4091,
+            "pull_sigma": 1.97,
+            "kind_reporting_only": "single_marker"
+          },
+          "rung_4": {
+            "peak": 2.7821,
+            "predicted": 2.9127,
+            "pull_sigma": -1.63,
+            "kind_reporting_only": "other_peak"
+          },
+          "rung_5": {
+            "peak": 3.6256,
+            "predicted": 3.5806,
+            "pull_sigma": 0.9,
+            "kind_reporting_only": "single_marker"
+          },
+          "rung_6": {
+            "peak": 3.8974,
+            "predicted": 3.898,
+            "pull_sigma": -0.01,
+            "kind_reporting_only": "single_marker"
+          },
+          "rung_7": {
+            "peak": 4.6538,
+            "predicted": 4.7128,
+            "pull_sigma": -0.74,
+            "kind_reporting_only": "other_peak"
+          },
+          "rung_8": {
+            "peak": 5.7564,
+            "predicted": 5.7935,
+            "pull_sigma": -0.74,
+            "kind_reporting_only": "single_marker"
+          }
+        },
+        "unassigned_peaks": [
+          {
+            "peak": 3.0,
+            "kind_reporting_only": "single_marker"
+          },
+          {
+            "peak": 3.2846,
+            "kind_reporting_only": "other_peak"
+          },
+          {
+            "peak": 4.0897,
+            "kind_reporting_only": "other_peak"
+          },
+          {
+            "peak": 4.2846,
+            "kind_reporting_only": "other_peak"
+          },
+          {
+            "peak": 4.4974,
+            "kind_reporting_only": "single_marker"
+          },
+          {
+            "peak": 4.9564,
+            "kind_reporting_only": "other_peak"
+          },
+          {
+            "peak": 5.1154,
+            "kind_reporting_only": "other_peak"
+          },
+          {
+            "peak": 5.2692,
+            "kind_reporting_only": "other_peak"
+          },
+          {
+            "peak": 5.3872,
+            "kind_reporting_only": "other_peak"
+          }
+        ]
+      },
+      "mc_null": {
+        "p_value": 0.007398520295940812,
+        "n_null": 5000,
+        "n_as_good": 36
+      }
+    },
+    "singles_only_run_A2": {
+      "recovery": {
+        "ok": true,
+        "n_assigned": 8,
+        "chi2": 6.69,
+        "chi2_dof": 0.9557,
+        "scale_m1_hat": 1.20527,
+        "missing_rungs": [],
+        "assignment": {
+          "rung_1": {
+            "peak": 1.2,
+            "predicted": 1.2053,
+            "pull_sigma": -0.05,
+            "kind_reporting_only": "single_marker"
+          },
+          "rung_2": {
+            "peak": 2.0051,
+            "predicted": 1.9502,
+            "pull_sigma": 0.55,
+            "kind_reporting_only": "single_marker"
+          },
+          "rung_3": {
+            "peak": 2.5077,
+            "predicted": 2.3973,
+            "pull_sigma": 1.1,
+            "kind_reporting_only": "single_marker"
+          },
+          "rung_4": {
+            "peak": 3.0,
+            "predicted": 2.8985,
+            "pull_sigma": 1.01,
+            "kind_reporting_only": "single_marker"
+          },
+          "rung_5": {
+            "peak": 3.6256,
+            "predicted": 3.5631,
+            "pull_sigma": 0.62,
+            "kind_reporting_only": "single_marker"
+          },
+          "rung_6": {
+            "peak": 3.8974,
+            "predicted": 3.879,
+            "pull_sigma": 0.18,
+            "kind_reporting_only": "single_marker"
+          },
+          "rung_7": {
+            "peak": 4.4974,
+            "predicted": 4.6899,
+            "pull_sigma": -1.92,
+            "kind_reporting_only": "single_marker"
+          },
+          "rung_8": {
+            "peak": 5.7564,
+            "predicted": 5.7653,
+            "pull_sigma": -0.09,
+            "kind_reporting_only": "single_marker"
+          }
+        },
+        "unassigned_peaks": []
+      },
+      "mc_null": {
+        "p_value": 0.0003999200159968006,
+        "n_null": 5000,
+        "n_as_good": 1
+      }
+    }
+  },
+  "conb2o6": {
+    "data_file": "conb2o6_thz_peaks.csv",
+    "n_peaks_input": 7,
+    "recovery": {
+      "ok": true,
+      "n_assigned": 6,
+      "chi2": 2.6036,
+      "chi2_dof": 0.5207,
+      "scale_m1_hat": 0.16053,
+      "missing_rungs": [
+        7,
+        8
+      ],
+      "assignment": {
+        "rung_1": {
+          "peak": 0.16,
+          "predicted": 0.1605,
+          "pull_sigma": -0.05,
+          "kind_reporting_only": "single_label_m1"
+        },
+        "rung_2": {
+          "peak": 0.26,
+          "predicted": 0.2597,
+          "pull_sigma": 0.03,
+          "kind_reporting_only": "single_label_m2"
+        },
+        "rung_3": {
+          "peak": 0.32,
+          "predicted": 0.3193,
+          "pull_sigma": 0.07,
+          "kind_reporting_only": "single_label_m3"
+        },
+        "rung_4": {
+          "peak": 0.4,
+          "predicted": 0.386,
+          "pull_sigma": 1.4,
+          "kind_reporting_only": "single_label_m4"
+        },
+        "rung_5": {
+          "peak": 0.47,
+          "predicted": 0.4746,
+          "pull_sigma": -0.46,
+          "kind_reporting_only": "single_label_m5"
+        },
+        "rung_6": {
+          "peak": 0.51,
+          "predicted": 0.5166,
+          "pull_sigma": -0.66,
+          "kind_reporting_only": "single_label_m6"
+        }
+      },
+      "unassigned_peaks": [
+        {
+          "peak": 0.43,
+          "kind_reporting_only": "broad_m1_plus_m2_onset"
+        }
+      ]
+    },
+    "mc_null": {
+      "p_value": 0.003799240151969606,
+      "n_null": 5000,
+      "n_as_good": 18
+    }
+  },
+  "controls": {
+    "baco2v2o6_note": "detection = n>=n_req & chi2/dof<=2 & MC p<0.01",
+    "baco2v2o8": {
+      "scramble": {
+        "n_trials": 200,
+        "n_detected_at_validation_bar": 1,
+        "rate_at_validation_bar": 0.005,
+        "n_detected_at_observed_strength": 1,
+        "n_near_duplicates": 0,
+        "n_detected_obs_non_near_dup": 1,
+        "rate_obs_non_near_dup": 0.005,
+        "rejected": true
+      },
+      "offset": {
+        "cases": {
+          "offset_+0.3m1": {
+            "detected": false,
+            "n_assigned": 7,
+            "chi2_dof": 1.3364091415245418
+          },
+          "offset_+0.5m1": {
+            "detected": false,
+            "n_assigned": 0,
+            "chi2_dof": null
+          },
+          "offset_-0.3m1": {
+            "detected": false,
+            "n_assigned": 7,
+            "chi2_dof": 0.4490859624452454
+          },
+          "offset_-0.5m1": {
+            "detected": false,
+            "n_assigned": 6,
+            "chi2_dof": 0.6877227977471555
+          }
+        },
+        "rejected": true
+      },
+      "jitter": {
+        "jitter_5pct": {
+          "n_trials": 200,
+          "n_detected": 42,
+          "detection_rate": 0.21
+        },
+        "jitter_10pct": {
+          "n_trials": 200,
+          "n_detected": 35,
+          "detection_rate": 0.175
+        },
+        "jitter_20pct": {
+          "n_trials": 200,
+          "n_detected": 12,
+          "detection_rate": 0.06
+        },
+        "jitter_30pct": {
+          "n_trials": 200,
+          "n_detected": 7,
+          "detection_rate": 0.035
+        },
+        "_dose_response_rates": [
+          0.21,
+          0.175,
+          0.06,
+          0.035
+        ],
+        "_rejected_at_destructive_level": true
+      },
+      "wrong_ladder": {
+        "harmonic_1_to_8": {
+          "n_rungs": 8,
+          "ok": false,
+          "passes_chi2_gate": false,
+          "n_assigned": 0,
+          "chi2_dof": null,
+          "e8_wins": true
+        },
+        "A3_cartan_pf": {
+          "n_rungs": 3,
+          "ok": false,
+          "passes_chi2_gate": false,
+          "n_assigned": 0,
+          "chi2_dof": null,
+          "e8_wins": true
+        },
+        "D8_cartan_pf": {
+          "n_rungs": 8,
+          "ok": false,
+          "passes_chi2_gate": false,
+          "n_assigned": 0,
+          "chi2_dof": null,
+          "e8_wins": true
+        },
+        "airy_confined_spinon": {
+          "n_rungs": 8,
+          "ok": true,
+          "passes_chi2_gate": true,
+          "n_assigned": 7,
+          "chi2_dof": 0.7662779051760186,
+          "mc_p": 0.00999000999000999,
+          "e8_wins": true
+        },
+        "_all_beaten_by_e8": true
+      }
+    },
+    "conb2o6": {
+      "scramble": {
+        "n_trials": 200,
+        "n_detected_at_validation_bar": 14,
+        "rate_at_validation_bar": 0.07,
+        "n_detected_at_observed_strength": 6,
+        "n_near_duplicates": 3,
+        "n_detected_obs_non_near_dup": 3,
+        "rate_obs_non_near_dup": 0.015,
+        "rejected": true
+      },
+      "offset": {
+        "cases": {
+          "offset_+0.3m1": {
+            "detected": false,
+            "n_assigned": 0,
+            "chi2_dof": null
+          },
+          "offset_+0.5m1": {
+            "detected": false,
+            "n_assigned": 0,
+            "chi2_dof": null
+          },
+          "offset_-0.3m1": {
+            "detected": false,
+            "n_assigned": 6,
+            "chi2_dof": 2.2564809407265196
+          },
+          "offset_-0.5m1": {
+            "detected": false,
+            "n_assigned": 5,
+            "chi2_dof": 0.6238258429645919
+          }
+        },
+        "rejected": true
+      },
+      "jitter": {
+        "jitter_5pct": {
+          "n_trials": 200,
+          "n_detected": 23,
+          "detection_rate": 0.115
+        },
+        "jitter_10pct": {
+          "n_trials": 200,
+          "n_detected": 12,
+          "detection_rate": 0.06
+        },
+        "jitter_20pct": {
+          "n_trials": 200,
+          "n_detected": 4,
+          "detection_rate": 0.02
+        },
+        "jitter_30pct": {
+          "n_trials": 200,
+          "n_detected": 6,
+          "detection_rate": 0.03
+        },
+        "_dose_response_rates": [
+          0.115,
+          0.06,
+          0.02,
+          0.03
+        ],
+        "_rejected_at_destructive_level": true
+      },
+      "wrong_ladder": {
+        "harmonic_1_to_8": {
+          "n_rungs": 8,
+          "ok": false,
+          "passes_chi2_gate": false,
+          "n_assigned": 0,
+          "chi2_dof": null,
+          "e8_wins": true
+        },
+        "A3_cartan_pf": {
+          "n_rungs": 3,
+          "ok": false,
+          "passes_chi2_gate": false,
+          "n_assigned": 0,
+          "chi2_dof": null,
+          "e8_wins": true
+        },
+        "D8_cartan_pf": {
+          "n_rungs": 8,
+          "ok": false,
+          "passes_chi2_gate": false,
+          "n_assigned": 0,
+          "chi2_dof": null,
+          "e8_wins": true
+        },
+        "airy_confined_spinon": {
+          "n_rungs": 8,
+          "ok": true,
+          "passes_chi2_gate": false,
+          "n_assigned": 7,
+          "chi2_dof": 2.383983267349344,
+          "mc_p": 0.005994005994005994,
+          "e8_wins": true
+        },
+        "_all_beaten_by_e8": true
+      }
+    },
+    "airy_bed": {
+      "peaks_mev": [
+        1.7387683999999999,
+        2.508698,
+        3.1390464,
+        3.6961524,
+        4.2054172,
+        4.679966,
+        5.1276748,
+        5.5537488
+      ],
+      "airy_ratios": [
+        1.0,
+        1.4443349728676955,
+        1.8081160759856885,
+        2.1296281718895615,
+        2.423530576850317,
+        2.6973979904065657,
+        2.9557757401393054,
+        3.2016678051146363
+      ],
+      "n_assigned": 0,
+      "chi2_dof": null,
+      "detected": false,
+      "rejected": true
+    }
+  },
+  "verdict": "validated",
+  "runtime_s": 76.8
+}

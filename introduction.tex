@@ -193,8 +193,14 @@ $\boxed{\,a=(1,1,2)\ \text{plus}\ \pi\,}$. \veri{v23\_anchor\_generator.py}
 \noindent\emph{And $a$ is itself half-forced} (\mE/\mC): on $\mathbb P^1$ every bundle splits
 (Birkhoff--Grothendieck), so once $|\mu_4|=4$, $\Nfam=3$, $\deg E=-4$ are set, the three positive
 anti-degrees are positive integers summing to $4$, and $4=2+1+1$ is the \emph{unique} partition into three
-positive parts. The genuine remaining axiom is therefore not ``why $a=(1,1,2)$'' but ``why the carrier
-$\gcar=5$ / $(|\mu_4|,\Nfam)=(4,3)$'' --- that interface (with $\cthree$) is the \mO\ input layer.
+positive parts --- machine-checked with all its negative controls as the partition corollary
+(\veri{v491\_p2\_partition\_corollary.py}, \texttt{P2.PARTITION.01}): the unique multiset $\{1,1,2\}$
+forces $e=(4,5,2)$, hence $\gcar=e_2=5$, $|\Z_2|=e_3=2$, $\Nfam=3$ as \emph{corollaries} (dropping
+positivity, the sum, the part count or integrality each destroys uniqueness --- Mehta--Seshadri-rational
+weights give $e_2=\tfrac{16}3$ or $\tfrac{44}9\neq5$), sharpening \vref{v53} which needs all three targets.
+The genuine remaining axiom is therefore not ``why $a=(1,1,2)$'' but ``why the carrier
+$\gcar=5$ / $(|\mu_4|,\Nfam)=(4,3)$'' --- that interface (with $\cthree$), i.e.\ the weight-\emph{typing}
+postulate itself, is the \mO\ input layer (\texttt{AX.P2.01} stays a declared axiom).
 \par\smallskip
 \noindent\emph{Two readings, one source (no contradiction).} P1 and P2 are the \emph{operational compiler
 inputs}; their anchor provenance is $a=(1,1,2)$ plus $\pi$. The \emph{single structural bedrock postulate}

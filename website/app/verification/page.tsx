@@ -137,7 +137,7 @@ const REVIEWER_MAP: { label: string; marker: string; tone: string; items: string
     tone: "border-amber-400/30 bg-amber-500/5",
     items: [
       "Reflection positivity + gap (Decoupling Theorem, Δ_eff = 1.648)",
-      "G_net algebra + AQFT machinery [E]; seam coupling [C] closed modulo cited theorems (v367/v368 + v376–v379)",
+      "G_net algebra + AQFT machinery [E]; seam coupling [C] closed modulo cited theorems (v367/v368 + v376–v379, ground-state witnesses v489/v490)",
       "F_transfer: Koide, η_B, axion relic, m_p/m_e — runnable typed solvers (v371–v375)",
       "Scheme layer / QCD + EW matching for absolute masses",
     ],
@@ -149,7 +149,7 @@ const REVIEWER_MAP: { label: string; marker: string; tone: string; items: string
     items: [
       "P1, P2 — declared inputs, reduced to the anchor a=(1,1,2)+π (not free dials)",
       "v_geo — the one dimensionful scale (metrology primitive, No-Unit Theorem)",
-      "SEAM.EQUIV.01 — [C] closed modulo cited theorems (lattice v367/v368 + S3 stack v376–v379, Lean FORM.SEAM.MMST.01); the only [O] residual is the cited continuum scaling-limit existence (v336; extension leg on the peer-reviewed crossed-product package, realisation at invariant level, v469; stays [O])",
+      "SEAM.EQUIV.01 — [C] closed modulo cited theorems (lattice v367/v368 + S3 stack v376–v379, ground-state witnesses v489/v490, Lean FORM.SEAM.MMST.01); the only [O] residual is the cited continuum scaling-limit existence (v336; extension leg on the peer-reviewed crossed-product package, realisation at invariant level, v469; stays [O])",
     ],
   },
   {
@@ -342,7 +342,7 @@ export default function VerificationPage() {
             </span>{" "}
             — and the keystone SEAM.EQUIV.01 (the raw RP seam = the holomorphic (E₈)₁ net at τ=i) is
             closed modulo cited theorems: the target net is pinned at every computable level (lattice
-            v367/v368 + S3 stack v376–v379) and Lean-pinned (FORM.SEAM.MMST.01) to the published MMST/Adamo
+            v367/v368 + S3 stack v376–v379, ground-state witnesses v489/v490) and Lean-pinned (FORM.SEAM.MMST.01) to the published MMST/Adamo
             theorems, so the AQFT closure to (E₈)₁ follows modulo the cited continuum-existence residual
             (v336; extension leg on the peer-reviewed crossed-product package, realisation at invariant
             level, v469; stays [O]); its conformal-deck face QGEO.SYM.01 is a corollary.
@@ -471,7 +471,7 @@ export default function VerificationPage() {
             (<span className="font-mono">SEAM.EQUIV.01</span>) — the raw RP seam IS the holomorphic (E₈)₁
             net at τ=i (its conformal-deck face <span className="font-mono">QGEO.SYM.01</span> is a
             corollary): the target is pinned at every computable level by an explicit lattice model
-            (v367/v368) and the S3 closure stack (v376–v379), Lean-pinned (FORM.SEAM.MMST.01) to the
+            (v367/v368) and the S3 closure stack (v376–v379, ground-state witnesses v489/v490), Lean-pinned (FORM.SEAM.MMST.01) to the
             published MMST/Adamo theorems, leaving [O] = the cited continuum scaling-limit existence only
             (v336; extension leg on the peer-reviewed crossed-product package, realisation at invariant
             level, v469; stays [O]). The emergent-QFT layer (<span className="font-mono">v258–v261</span>,

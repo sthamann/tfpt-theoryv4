@@ -60,6 +60,256 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-07-20 (VIII) (E8 mass-ladder blind-recovery bed EXECUTED: verdict \texttt{validated} at the detector level --- the Cartan--PF ladder pipeline blindly recovers the published Zamolodchikov-E8 spectra of BaCo$_2$V$_2$O$_8$ (8/8) and CoNb$_2$O$_6$ (6/8 in-window) and rejects every control class; \emph{experiments level only --- confirms Zamolodchikov E8, not TFPT; no verification module, no gate closes, no marker moves})}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{experiments/e8-ladder-bed/} executed (preregistered \texttt{hypotheses/e8\_ladder\_bed\_v1.yaml}).}
+The blind ladder detector (assignment DP $+$ scale fit $+$ 5000-ladder Monte-Carlo null; the same detector
+class TFPT uses on search surfaces, e.g.\ \texttt{hfqpo-ladder}) on the only public \emph{known-answer}
+mass-ladder dataset: BaCo$_2$V$_2$O$_8$ (Zou$+$ PRL \textbf{127}, 077201; INS at the 4.7\,T 1D QCP, Fig.~3a
+extraction QA-validated, 17 peaks blind) recovers \textbf{8/8 rungs}, $\chi^2/\mathrm{dof}=0.35$, MC
+$p=0.0056$ (singles-only run $p=0.0004$; $\sigma$-variant robust); CoNb$_2$O$_6$ (Amelin$+$ PRB
+\textbf{102}, 104431; verbatim THz values) recovers \textbf{6/8 in-window rungs},
+$\chi^2/\mathrm{dof}=0.52$, $p=0.0038$ ($m_7/m_8$ lie outside the 0.6-THz low-pass window; the broad
+0.43-THz $(m_1{+}m_2)$-continuum onset is correctly left unassigned). Cartan--PF self-test: the sorted PF
+eigenvector of $2I-A(E_8)$ equals the Zamolodchikov ladder to $1.5\times10^{-15}$ ($m_2/m_1=\varphi$ to
+$2.2\times10^{-16}$; lowest Cartan eigenvalue $2-2\cos(\pi/30)$ to $4.5\times10^{-14}$).
+\item \textbf{Control battery --- every class rejected.} Scramble $0.5\%/1.5\%$ false-positive rate
+(200 log-gap permutations, near-duplicate accounting); offset $\pm\{0.3,0.5\}m_1$: 0/8 detections; jitter
+dose-response $\le5\%$ at the destructive $30\%$ level; wrong ladders on the real data (harmonic 1..8,
+$A_3$-PF, $D_8$-PF, Airy confined-spinon) all beaten by E8; the synthetic Airy bed (the true zero-field
+physics of these compounds) yields \textbf{0} valid rungs. The one disclosed v1.1 criteria amendment
+(jitter as dose-response, scramble near-duplicates, $\chi^2$-gated wrong-ladder comparator) is fully
+documented in the hypotheses YAML with all v1 numbers preserved; the recoveries themselves were never touched.
+\item \textbf{Integration (firewall intact).} Scorecard row ``E8 mass-ladder blind recovery bed'' moves
+\texttt{parked} $\to$ \texttt{consistent} (stage \texttt{not\_applicable}, tier
+\texttt{analog\_positive\_control}, leakage \texttt{detector\_control} --- the executed-analog basket
+of \texttt{qc-recovery-kernel} and \texttt{qgeo-eit-soff});
+counters $120$ rows: $49$ consistent / $3$ parked; \texttt{experiments/README.md} catalog row $+$ stats
+(generator); website \texttt{predictions.ts} \texttt{EXPERIMENTS\_AUDIT} counters;
+\texttt{experiments/next.txt}. This validates the \emph{ladder-detector pipeline} --- it confirms
+Zamolodchikov E8, \emph{not} the TFPT axioms: no \mE, no \texttt{\textbackslash veri}, no ledger row.
+\end{itemize}
+
+\subsection*{2026-07-20 (VII) (\texttt{v493} --- WP2 of \texttt{CELEST.SEAM.01} executed: the clock-invariant deformation $XY{=}Z^4{+}a_0$ is a PURE SCALE with the $\tau{=}i$ pillowcase frozen, the $\mu_4$ clock IS the Picard--Lefschetz/Coxeter monodromy of the seam deformation, and the BHS deformed-algebra pattern transfers $\Z_2\to\Z_4$ with no sector leak; \emph{verdict B, contract updated to WP2 done, no gate closes, no marker moves, \texttt{SEAM.EQUIV.01} and the \texttt{v216} residual stay \mO})}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v493\_celestial\_wp2\_clock\_deformation.py} (\texttt{CELEST.WP2.01}).} WP2 of the
+celestial contract, sympy exact (47 checks), promoted from the \texttt{experiments/tfpt-discovery/}
+probe \texttt{celestial\_seam\_wp2\_clock\_deformation\_probe.py}. \emph{Geometry:}
+$P(iZ){=}P(Z)$ forces $a_3{=}a_2{=}a_1{=}0$ sharply and two-sided
+($\prod_k(Z-i^kw)=Z^4-w^4$); $XY{=}Z^4{+}a_0$ is smooth iff $a_0{\neq}0$
+($\operatorname{disc}=256\,a_0^3$); the branch points $Z^4{=}{-}a_0$ are one free $\mu_4$ orbit in
+\emph{every} fibre with cross-ratio $2$; the binary-quartic invariants of $w^2{=}Z^4{+}a_0$ are $I{=}12a_0$,
+$J{=}0$ \emph{identically}, so $j{=}1728$ and the $\tau{=}i$ pillowcase shape
+(\texttt{v168}/\texttt{v214}) is \emph{frozen} for all $a_0$ --- $a_0$ is a pure scale, no shape modulus
+survives clock-invariance. \emph{Periods/monodromy:} $\Pi=t(i{-}1)(1,i,i^2)$, all three vanishing spheres
+carry the same volume $\sqrt2\,t$ (lockstep); the clock acts on $H_2$ as a \emph{Coxeter element} of
+$W(A_3)$ (char $x^3{+}x^2{+}x{+}1$, eigenvalues $\{i,-1,-i\}$ $=$ the $A_3$ exponents,
+$h(A_3){=}4{=}|\mu_4|{=}\Nfam{+}1$), fixes no cycle ($\det(A{-}1){=}{-}4$), and \emph{is} the
+Picard--Lefschetz monodromy of the family ($a_0\to e^{2\pi i}a_0$ gives the $4$-cycle); the surviving
+direction is the weight-$1$ $\chi_1$-Fourier diagonal $(1,i,i^2)$, \emph{not} the naive invariant diagonal;
+the versal weights $(a_3,a_2,a_1,a_0)=(1,2,3,0)$ are the regular $\mu_4$ representation. \emph{Algebra
+(BHS $\Z_2\to\Z_4$, \texttt{arXiv:2305.09451}):} mode dictionary $\{w[m,n]:m{\equiv}n\bmod4\}$; the fibre
+bracket $-4\,\mathrm{Nambu}(XY{-}Z^4{-}a_0)$ anchored at the $a_0{=}0$ orbifold ($\{X,Y\}{=}16Z^3$, Jacobi
+$+$ Casimir exact, uniform clock-degree $-1$); S-algebra corrections exactly \emph{linear} in $a_0$ at the
+$\Z_4$ wrap, conserving the $\mu_4$ grade --- no sector leak, the \texttt{v492} equivariant sector deforms
+consistently; $a_0\leftrightarrow$ BHS's weight-$0$ $c^2$ slot; matrix factorisations deform along all orbit
+splittings, the clock fixing exactly the antipodal $2{+}2$ sector ($=$ the EH/$\Z_2$ middle node,
+$4{=}2{\times}2$). \emph{Negative controls:} $a_1Z\Rightarrow j{=}0$ (hexagonal); pure $a_2Z^2$ stays
+singular ($A_1$); $a_2{\neq}0\Rightarrow j{=}1556068/81{\neq}1728$; explicit grading leak --- doubly sharp.
+\emph{Verdict B} via three named \mC\ identifications ($-4$Nambu $=$ the $k{=}4$ CCA bracket; period $=$
+root difference; seam-scale reading via clock$^2{=}$deck); the \texttt{v216} residual is \emph{typed}, not
+moved (given the order-$4$ clock the square is automatic --- a relocation of the same input, no new
+derivation).
+\item \textbf{Contract updated to WP2 done.} \texttt{tfpt\_research\_contracts} \texttt{CELEST.SEAM.01}
+section: WP2 bullet ``finite, next'' $\to$ \emph{done (verdict B)} with the two sharpenings (clock $=$
+Coxeter/Picard--Lefschetz monodromy; surviving direction $=$ $\chi_1$-diagonal, $a_0$ pure scale);
+kill-test paragraph K1 ``survived by WP1 and WP2''; status line \texttt{CELEST.WP2.01} \mE/\mC\ executed,
+WP3--WP5 stay \mO. Ledger rows \texttt{CELEST.WP2.01} (new) $+$ \texttt{CELEST.SEAM.01} (WP2 done) $+$
+\texttt{GATE.WOLFRAM.02} (four exact \texttt{v493} mirrors added to
+\texttt{tfpt\_readouts\_extension.wl}, counted with the next verified engine run --- engine unactivated,
+same convention as \texttt{v491}); registry $+$ \texttt{run\_all} (487 modules, suite green); website mirrors
+(\texttt{papers.ts} contract section, generated script index). \texttt{SEAM.EQUIV.01} stays \mO; no marker
+moves anywhere. Exact (sympy).
+\end{itemize}
+
+\subsection*{2026-07-20 (VI) (HFQPO ``third tooth'': the preregistered archival RXTE PCA scan has RUN --- a well-powered null with limits; scorecard row S1.e \texttt{data\_limited}$\to$\texttt{null}, no marker moves)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{H3 stage 2 executed (\texttt{experiments/hfqpo-ladder/results/archival/}).} The preregistered
+archival scan (\texttt{hypotheses/hfqpo\_v1.yaml}, \texttt{archival\_design}) ran end-to-end on public
+HEASARC data: 77 ObsIDs / 4.42\,GB across all four $3{:}2$-pair sources (GRO J1655$-$40, XTE J1550$-$564,
+GRS 1915$+$105, H1743$-$322). Sanity gate PASS (11/12 published pair lines reproduced, e.g.\ 450.3\,Hz at
+$5.37\%$ rms $4.4\sigma$, 280.1\,Hz at $3.71\%$ $9.9\sigma$); injection calibration PASS in all four
+sources ($90\%$-recovery sensitivities $5.11/2.68/0.89/1.65\%$ rms at the tooth frequencies).
+\item \textbf{Blind-scan verdict: NULL with limits.} Neither the geometric tooth $\nu_3=1.5\,\nu_u$
+($661.5/414/252/363$\,Hz) nor the integer control line $4\nu_0$ ($588/368/224/322.7$\,Hz) is detected in
+any source ($\sim\!0\sigma$ single-trial; trials correction $N{=}8$ as preregistered). $3\sigma$ rms upper
+limits (tooth, primary bands): $3.06/1.61/0.53/1.26\%$ --- in every source at or below the strength of the
+detected upper pair line. The ladder reading gains no support but is not killed (the \texttt{harmonic\_hit}
+branch did not fire either; the anti-kernel record $92{=}184/2$, $34/68$ stands); GR parametric resonance
+stays the favorite. Caveats: GRS 1915$+$105 scanned in a proxy state (the $113/168$\,Hz epochs were never
+published at ObsID level); H1743's program is 80146 (YAML said 80138); GRO hard-band sensitivity $5.1\%$.
+\item \textbf{Integration.} Scorecard row S1.e (hfqpo-ladder) \texttt{data\_limited}$\to$\texttt{null}
+(120 rows: 26 null / 33 data\_limited), next decider eXTP-class sensitivity below the $0.5$--$3.1\%$ rms
+limits; HFQPO search-target paragraph updated in \texttt{tfpt\_horizon\_readouts} (+ the
+\texttt{papers.ts} mirror); website \texttt{predictions.ts} (\texttt{hfqpo-tooth} entry +
+\texttt{EXPERIMENTS\_AUDIT} counters); \texttt{predictions.txt}; \texttt{experiments/README.md};
+\texttt{experiments/next.txt}. No \texttt{verification/} module, no ledger row, no marker move
+(the search target stays \mO).
+\end{itemize}
+
+\subsection*{2026-07-20 (V) (\texttt{v492} $+$ the new research contract \texttt{CELEST.SEAM.01} --- the celestial-holographic route: the $E_8$ $\mu_4$-glue is the flat $\Z_4$ monodromy of the equivariant celestial chiral algebra on the $A_3$ ALE space, with the exact correction clock$^2{=}$deck (spin bridge $\Z_8$, $8{=}2|\mu_4|$); \emph{verdict B, no gate closes, no marker moves, \texttt{SEAM.EQUIV.01} stays \mO})}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v492\_celestial\_z4\_orbifold.py} (\texttt{CELEST.WP1.01}).} WP1 of the new contract,
+sympy exact (36 checks): the \texttt{v128} $\mu_4$-glue grading of $E_8$ ($240=52{+}64{+}60{+}64$, additive on
+all $6720$ root pairs) is \emph{inner} --- $h=(2,2,2,2,2;0^4)$ reads the glue class mod $4$ on all $240$
+roots, so the glue is $\operatorname{Ad}(\exp(2\pi ih/4))$, an order-$4$ inner torus automorphism $=$ a flat
+$\Z_4$ monodromy in the Kronheimer--Nakajima sense; the $A_3$-side detector $h'=(0^5;1,1,1,-3)$ reads the same class $=$ the diagonal
+$(1,1)$ of the discriminant group $\Z_4{\times}\Z_4$ (the \texttt{v92}/\texttt{v125} Lagrangian glue).
+$\mathbb C^2/\Z_4$ is verified as the $A_3$ singularity $XY{=}Z^4$ (Hilbert series
+$(1{+}t^4)/((1{-}t^2)(1{-}t^4))$, Molien exact); the glue-equivariant SDYM$(E_8)$ sector \emph{closes} with
+graded dimensions $60(d{+}1)/64(d{+}1)$ --- possible only because $\dim\mathfrak g_j=(60,64,60,64)$ --- with
+zero modes $=$ the carrier $D_5{\oplus}A_3{+}$Cartan $=60$ and density $1/4=1/|\Z_4|$; the four glue-sector
+characters sum exactly to $\chi_{(E_8)_1}=1{+}248q{+}4124q^2{+}34752q^3$ (\texttt{v377}), with sector weights
+$=$ the discriminant form $(5x^2{+}3y^2)/8$ and integer glue-diagonal $h=(0,1,1,1)$ ($=$ locality of the
+$(E_8)_1$ extension). \emph{Critical correction (verdict B):} the $A_3$ deck acts on the celestial sphere as
+$z\mapsto-z$ (order $2$), \emph{not} as the order-$4$ clock; the clock is the $U(2)$ phase
+$\operatorname{diag}(i,1)$ (normalising the deck, $\det=i$ rotating the holomorphic symplectic form by the
+$\mu_4$ generator), with the exact spin bridge $(\text{spin clock})^2=$ deck ($\Z_8$, $8=2|\mu_4|$, the
+$\cthree=1/(8\pi)$ winding integer). Clock-invariance selects the $1$-parameter $A_3$ deformation
+$XY{=}Z^4{+}a_0$ whose four branch points are one $\mu_4$ orbit with cross-ratio $2$
+(\texttt{v168}/\texttt{v214} pillowcase). Negative controls: the false action $\operatorname{diag}(i,i)$
+killed three ways, the false glue breaks additivity on $3112/6720$ pairs, rigidity $=\Aut(\Z_4)$.
+\item \textbf{New research contract \texttt{CELEST.SEAM.01}} in \texttt{tfpt\_research\_contracts} (own
+section, the fourth contract alongside $U_{\mathrm{wall}}$/$G_{\mathrm{metric}}$/\texttt{CONTRACT.F.01}):
+hypothesis (seam $=$ glue-equivariant $\Z_4$-orbifold sector of the CCA on the $A_3$ ALE; twistorial bulk $=$
+the \emph{self-dual} sector only), typing/non-circularity (the continuum $(E_8)_1$ existence --- the
+\texttt{SEAM.EQUIV.01} target --- is \emph{not} an admissible input), work packages WP1 (done, verdict B)
+through WP5 (second continuum route, Costello--Li grade), pre-registered kill tests K1--K4 (K1 survived by
+WP1), and an honest success estimate (full success low, partial findings high). Ledger rows
+\texttt{CELEST.WP1.01} $+$ \texttt{CELEST.SEAM.01}; website mirror (\texttt{papers.ts} section, script
+index). \texttt{SEAM.EQUIV.01} stays \mO; no marker moves. Exact (sympy).
+\end{itemize}
+
+\subsection*{2026-07-20 (IV) (evidence scorecard: five new typed rows --- the $\alpha_s$ running prediction of record, the $\mu$-distortion $A_s/N_\star$ branch discriminator, and three parked analog beds (bosonic-E8 thermal Hall, E8 mass-ladder recovery, Efimov DSI tuning); \emph{experiments level only --- no verification module, no gate closes, no marker moves})}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{$\alpha_s$ running (prediction of record, consistent).} The Starobinsky branch fixes
+the running of the spectral index: $\alpha_s=-2/N_\star^2=-7.6\times10^{-4}$ at $N_\star{=}51.4$
+(exact slow roll $-7.09\times10^{-4}$; band $N_\star\in[50,60]$: $[-8.0,-5.6]\times10^{-4}$) and
+$\beta_s=-4/N_\star^3$ (leading order; NOT $-8/N^3$) --- the identity $\alpha_s=-r/6$ holds only at
+leading order ($\sim$7\% off exact). Data: Planck 2018 $-0.0045\pm0.0067$ ($+0.57\sigma$), P-ACT
+$+0.0060\pm0.0055$ ($-1.22\sigma$), record leg P-ACT-LB $+0.0062\pm0.0052$ ($-1.33\sigma$,
+Calabrese et al.\ 2025 JCAP); $\beta_s$ (Planck run$+$runrun) $0.010\pm0.013$ ($-0.77\sigma$).
+Forecast: LiteBIRD$+$CMB-S4 $\sigma(\alpha_s)\approx4.9\times10^{-3}$ ($0.14\sigma$);
+CMB-S4$+$DESI$+$Euclid statistical $\sim3.3\times10^{-4}$ ($2.2\sigma$, systematics-limited). Same
+\texttt{N\_star\_reheating} independence group as the $n_s$/$r$/$A_s$ rows (anti double-counting:
+never an independent hit); kill: robust $\alpha_s<-5\times10^{-3}$ or $>+3\times10^{-3}$ at
+$\ge5\sigma$; any robust POSITIVE running kills the plateau branch. Probe:
+\texttt{experiments/tfpt-discovery/alpha\_s\_running\_probe.py}.
+\item \textbf{$\mu$-distortion (prediction of record, data-limited).} Chluba window integral
+(calibrated $+20\%$ to the full computation): sharp branch $N_\star{=}51.4$ ($A_s{=}1.76\times
+10^{-9}$) $\mu\approx1.6\times10^{-8}$, profiled record $N_\star{=}56.1$ ($A_s{=}2.10\times10^{-9}$)
+$\mu\approx2.0\times10^{-8}$, band $1.5$--$2.3\times10^{-8}$; the $23\%$ branch split
+($\Delta\mu=3.0\times10^{-9}$) gives a $3\sigma$ $A_s/N_\star$ branch decision at
+$\sigma(\mu)=10^{-9}$ (Voyage-2050 class; the PIXIE baseline $|\mu|<9\times10^{-8}$ does NOT reach
+--- factor 4--7 above the band; FIRAS $|\mu|<9\times10^{-5}$). Honest S15 typing: the frozen
+log-comb ($\omega=2.5827$, $\varepsilon=0.0173$) is STRUCTURALLY BLIND in the $\mu$ window ---
+window attenuation $|F(\omega)|=0.033$, $\delta\mu=7.4\times10^{-12}=0.007\sigma$ even at Voyage
+2050 --- the theory itself predicts where it is invisible, so NO separate comb-search row is
+opened. Shares the \texttt{Nstar\_branch} alternative group with the two $A_s$ rows (one branch
+question, several readings). Kill: robust $\mu<0.9\times10^{-8}$ or $>4\times10^{-8}$. Probe:
+\texttt{experiments/tfpt-discovery/mu\_distortion\_probe.py}.
+\item \textbf{Three parked analog beds (\texttt{parked\_analog}; honest typing: they validate E8
+edge/spectrum physics or the comb DETECTOR, never the TFPT axioms).} (i) Bosonic E8 phase /
+thermal Hall: $\kappa_{xy}/T=8\times(\pi^2k_B^2/3h)$ with no charge Hall (seam edge $c_-{=}8$,
+\texttt{v450}/\texttt{v451}/\texttt{v489}); no engineered material yet ($\alpha$-RuCl$_3$
+$c_-{=}1/2$ contested: ultraclean half-quantized plateau, npj QM 2025, vs phonon-dominated
+$\kappa_{xy}$, PRX 12, 021025). (ii) E8 mass-ladder validation bed
+(CoNb$_2$O$_6$/BaCo$_2$V$_2$O$_8$): all 8 one-particle masses published (Zou et al.\ 2021 PRL 127,
+077201, NMR$+$INS; Amelin et al.\ 2020 PRB 102, 104431, THz $m_1$--$m_6$; Coldea et al.\ 2010
+Science $m_2/m_1{=}\varphi$) --- blind Cartan-PF ladder recovery on the published spectra ($8/8$
+masses $+$ rejection of scrambled controls) as detector validation; confirms Zamolodchikov E8, not
+TFPT. (iii) Efimov DSI tuning: $s_0=\pi/(6\ln(3/2))=1.2914\Leftrightarrow\lambda=(3/2)^6=11.391$
+at $M/m=8.67$ (2 resonant pairs); best candidate $^{52}$Cr$_2$--$^{6}$Li ($M/m{=}8.635$,
+$s_0{=}1.2890$, $\lambda{=}11.44$, $+0.44\%$ vs $(3/2)^6$, gap deviation $+0.18\%$); alternatives
+$^{39}$K$_2$/$^{41}$K$_2$--$^{6}$Li ($\lambda=11.59/11.20$, needs double Feshbach control),
+$^{176}$Yb$_2$--$^{23}$Na ($+5.9\%$); solver validated on the Naidon--Endo anchors (homonuclear
+$22.69$, Cs$_2$Li $4.877$); first end-to-end HARDWARE injection of the comb detector at tunable
+$\lambda\approx11.39$; kill condition honestly ``none on TFPT axioms --- detector validation
+only''. Probe: \texttt{experiments/tfpt-discovery/efimov\_s0\_massratio\_probe.py}.
+\item Scorecard regenerated (\texttt{experiments/build\_evidence\_scorecard.py}): 120 rows --- 48
+consistent, 9 tension, 25 null, 34 data-limited, 4 parked; website mirror
+(\texttt{EXPERIMENTS\_AUDIT} in \texttt{predictions.ts}) synchronised. Experiments level only; the
+verification suite, ledger and papers are untouched.
+\end{itemize}
+
+\subsection*{2026-07-20 (III) (\texttt{v491} --- $\gcar{=}5$ as the partition COROLLARY of the four marks: $4$ into exactly $3$ positive parts is uniquely $\{1,1,2\}$, sharpening \texttt{v53}; the residual is the weight-typing postulate --- \texttt{AX.P2.01} stays a declared axiom; \emph{no gate closes, no marker moves})}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v491\_p2\_partition\_corollary.py} (\texttt{P2.PARTITION.01}).} Sympy-exact: a
+multiset of exactly $3$ POSITIVE INTEGERS summing to $4$ is UNIQUE --- $\{1,1,2\}$ --- so
+$e=(e_1,e_2,e_3)=(4,5,2)$ and hence $\gcar=e_2=5$, $|\Z_2|=e_3=2$, $\Nfam=e_2{-}e_3=3$ are
+\emph{corollaries}, not inputs (consistency fixed point $(2^4{-}1)/5=3=\operatorname{rank}H^1$).
+\mE\ negative controls, each assumption load-bearing: drop positivity $\to$ $4$ solutions, $e_2$
+ambiguous $\{0,3,4,5\}$; sum $3\to e_2{=}3$; sum $5\to$ not unique; $2/4$ parts $\to e_2\in\{3,4\}/\{6\}$;
+Mehta--Seshadri RATIONAL weights $\to e_2=\tfrac{16}3$ resp.\ $\tfrac{44}9\neq5$ (integrality $=$ the
+Birkhoff--Grothendieck splitting-type typing, not MS weights). \mE\ the \texttt{v53} sharpening:
+\texttt{v53} pins $(1,1,2)$ with ALL THREE targets $(4,5,2)$; the partition needs only $e_1{=}4$.
+\mE\ sum rule: $4\times\tfrac{N-1}2=4$ iff $N{=}3$; the \texttt{v115} route
+$|a|_1=|\mu_4|\operatorname{tr}(A_0)=4$ agrees. Independence chain: $\#$marks $=4$ from \texttt{v216}
+(P1-side, no $\gcar$ input); $\operatorname{rank}H^1=3$ pure topology (\texttt{v137}/\texttt{v228});
+$|a|_1=4$ $\gcar$-free (\texttt{v115}). \mC\ honest residual: P2 is NOT made axiom-free --- the
+weight-TYPING postulate remains (integrality/positivity $h^0{=}0$/sum ``given (U)'');
+\texttt{AX.P2.01} stays a declared axiom, and the $\Nfam$ direction reversal vs
+\texttt{tfpt\_constants} is typed as an over-determination check (never double-counted). Integrated in
+\texttt{introduction} (anchor half-forced paragraph), \texttt{tfpt\_1} ($(5,3)$ keybox),
+\texttt{tfpt\_2} (H2 winbox) and \texttt{origin\_theory} ($(5,3)$ keybox); ledger row
+\texttt{P2.PARTITION.01}; three exact Wolfram mirrors added to
+\texttt{tfpt\_readouts\_extension.wl} (counted with the next verified engine run, engine currently
+unactivated); website mirror (DAG node \texttt{P2}). Exact (sympy).
+\end{itemize}
+
+\subsection*{2026-07-20 (II) (\texttt{v490} --- the $T^2$ spin-structure parity census: $\mu_{\mathrm{pre}}{=}4$ witnessed on the lattice, the 16-fold-way bridge $\theta_v{=}1$ on measured numbers, and the honest TEE non-discriminator fence; \emph{no gate closes, no marker moves})}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v490\_seam\_parity\_census.py} (\texttt{SEAM.MU.01}).} The $T^2$ ground-state fermion
+parity of the \texttt{v367} $p{+}ip$ collar, resolved per spin structure $(AA,AP,PA,PP)$ and determined
+TWICE --- Read--Green TRIM product AND real-space Majorana Pfaffian (Schur), relative to the trivial
+$M{=}3$ phase, with the twisted real-space spectra matching the Bloch bands to $9\times10^{-15}$. \mE\
+per layer $(+,+,+,-)$ (the $\nu{=}1$ Ising signature, TRIM $\equiv$ Pfaffian in every sector); \mE\ the
+$16$-layer carrier has $\mathrm{parity}^{16}={+}$ in ALL FOUR sectors $\Rightarrow$ gauged torus
+$\mathrm{GSD}=4=\mu(SO(16)_1)=|\det\mathrm{Cartan}(D_8)|$ --- the lattice ground-state witness of
+``$\mu_{\mathrm{pre}}{=}4$ before condensation'' (step 1 of the \texttt{v378} KLM chain); \mE\ the
+16-fold-way bridge on MEASURED numbers: $\theta_v=e^{2\pi i\nu/16}=1$ exactly at $\nu=2c_-=16$
+(\texttt{v489}), rivals $\nu=1,2,8$ not holomorphically condensable; \mE\ honest fence: the fermionic
+Kitaev--Preskill TEE is identically zero for BOTH $M{=}1$ and $M{=}3$ ($\gamma_f{=}0.000001/0.000000$) ---
+it does NOT discriminate $(E_8)_1$ vs $SO(16)_1$. \mC\ the KLM step $\mu:4\to4/2^2=1$ stays the cited
+theorem (the condensed model is interacting); the numerics pin only the premise package
+$\{c_-{=}8,\ \mu_{\mathrm{pre}}{=}4,\ \theta_v{=}1\}$. \mO\ \texttt{SEAM.EQUIV.01} stays \mO\ (continuum
+existence, MMST \texttt{v336}). Integrated in \texttt{tfpt\_research\_contracts} (new S3-stack paragraph);
+ledger row \texttt{SEAM.MU.01}; website mirror (DAG node \texttt{qft}). Python (numpy $+$ scipy Schur $+$
+sympy exact $\theta_v$).
+\end{itemize}
+
+\subsection*{2026-07-20 (\texttt{v489} --- the chiral central charge $c_-{=}8$ measured DIRECTLY from the bulk ground state via the Kim--Shehab--Kim modular commutator: the first ground-state witness for premise (i) of \texttt{SEAM.EQUIV.01}, independent of the Chern route (\texttt{v367}) and the KLM count (\texttt{v378}); \emph{no gate closes, no marker moves})}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v489\_seam\_modular\_commutator.py} (\texttt{SEAM.CCC.01}).} The Kim--Shehab--Kim
+modular commutator $J(A,B,C)=i\operatorname{Tr}(\rho_{ABC}[K_{AB},K_{BC}])=(\pi/3)\,c_-$ (PRL 128 (2022);
+\texttt{arXiv:2110.06932}/\texttt{2110.10400}) is evaluated on the EXACT BdG ground state of the
+\texttt{v367} $p{+}ip$ seam collar model, entirely from the Peschel Majorana covariance
+($W_X=-2\operatorname{artanh}\Gamma_X$, $J=\tfrac14\operatorname{Tr}([W_{AB},W_{BC}]\Gamma_{ABC})$), on a
+disk about the torus centre cut into three $120^\circ$ wedges. \mE\ ground-state purity
+$\operatorname{eig}(i\Gamma)=\pm1$ to $6\times10^{-15}$; \mE\ per-layer $c_-=0.499998$ at $L{=}32$
+(convergence $0.499793$ at $L{=}16\to0.500000$ at $L{=}48$, deviation $-1.8\times10^{-7}$); \mE\ controls:
+trivial $M{=}3\to0.000000$, orientation flip $M{=}{-}1\to-0.499986$; \mE\ layer additivity exact
+($1.4\times10^{-14}$); \mE\ the $16$-layer carrier lands on $c_-{=}8{=}\gcar{+}\Nfam$ (direct $7.9967$ at
+$L{=}16$, additivity route $8.0000$); \mE\ clip invariance $5\times10^{-8}$. The FIRST ground-state witness
+for premise (i) of \texttt{SEAM.EQUIV.01} ($c_-{=}8$) that is INDEPENDENT of both the Chern-number route
+(\texttt{v367}) and the counting route (\texttt{v378}) --- read from entanglement data alone. \mO\ honest
+fence: does NOT close \texttt{SEAM.EQUIV.01}; the continuum scaling limit (MMST, \texttt{v336}) and the
+cited KLM condensation step are untouched. Integrated in \texttt{tfpt\_research\_contracts} (new S3-stack
+paragraph) and \texttt{tfpt\_1} (the \texttt{SEAM.EQUIV.01} package paragraph); ledger row
+\texttt{SEAM.CCC.01}; website mirrors (DAG node \texttt{qft}, papers/glossary/FAQ inventories). Numerical
+(numpy), Python-only by nature.
+\end{itemize}
+
 \subsection*{2026-07-19 (editorial --- positioning section \emph{TFPT in the light of algorithmic physics: Zuse--Schmidhuber--Wolfram} added to \texttt{introduction} $+$ website mirror; \emph{no result, no status change})}
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{\texttt{introduction.tex} --- new section ``TFPT in the light of algorithmic physics''.} Positions the

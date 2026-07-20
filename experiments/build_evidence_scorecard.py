@@ -626,14 +626,25 @@ ROWS = [
      "NO integer harmonics",
      "4 pairs consistent with exact 3/2 (chi2 p=0.78) BUT J1859+226 breaks universality at "
      "9.2 sigma AND anchored selection null (Boutelier/Torok equal-rms window at the 3/2 "
-     "crossing) manufactures the 4-of-5 cluster in 18.5% of trials -> cluster cheap; NO "
-     "published x1.5 tooth search (teeth inside the searched RXTE band); only published "
-     "third-frequency structures are integer lines (92=184/2, 34/68) favouring the "
-     "GR-harmonic alternative; archival RXTE PCA reanalysis designed (prereg YAML), not run",
+     "crossing) manufactures the 4-of-5 cluster in 18.5% of trials -> cluster cheap; "
+     "preregistered archival RXTE PCA scan EXECUTED 2026-07-20 (H3 stage 2: 77 ObsIDs / "
+     "4.42 GB / 4 sources; sanity gate PASS 11/12 published pair lines reproduced, injection "
+     "calibration PASS in all 4 sources): NEITHER the geometric tooth 1.5*nu_u NOR the "
+     "integer control line 4*nu_0 detected anywhere (~0 sigma single-trial, trials-corrected "
+     "N=8 as preregistered); 3-sigma rms upper limits 3.06/1.61/0.53/1.26% (tooth, "
+     "J1655/J1550/GRS1915/H1743) -- in every source at or below the strength of the detected "
+     "upper pair line -> WELL-POWERED NULL with limits; ladder reading unsupported but not "
+     "killed (the harmonic_hit branch did not fire either; anti-kernel record 92=184/2, "
+     "34/68 stands; GR resonance stays favoured); caveats: GRS 1915 scanned in a proxy state "
+     "(113/168 epochs unpublished at ObsID level), H1743's weak 166 Hz sanity line missed "
+     "(1.7 sigma), GRO hard-band sensitivity 5.1% only excludes a tooth at its 450 Hz "
+     "line strength",
      None, "search_target", "relaxation-ladder step (non-canonical HFQPO mapping; coincidence-risk)",
-     "search_target", "published RXTE tables: RM06, Motta+2014a/2022, Belloni+2012 (hfqpo-ladder)",
-     "a >=4sigma third QPO at 1.5*nu_u with no integer line (ladder hit, [C]-tier) OR an "
-     "integer line with no tooth (kernel reading dead)", "data_limited"],
+     "search_target", "published RXTE tables: RM06, Motta+2014a/2022, Belloni+2012 + archival "
+     "scan experiments/hfqpo-ladder/results/archival/archival_scan_results.json (hfqpo-ladder)",
+     "the preregistered archival test HAS run (null); next decider is eXTP-class sensitivity "
+     "below the 0.5-3.1% rms limits: a >=4sigma third QPO at 1.5*nu_u with no integer line "
+     "(ladder hit, [C]-tier) OR an integer line with no tooth (kernel reading dead)", "null"],
     # strange-metal comb (experiments/strange-metal-comb): first laboratory bound on the comb
     ["condensed matter", "comb ripple on the strange-metal omega/T master curve (LSCO x=0.24)",
      "log-periodic ripple at omega=2.583, eps=0.0173 decorating the Planckian sigma1(omega/T) "
@@ -826,6 +837,21 @@ ROWS = [
     ["CMB", "inflation r (tensor ratio)", "12/N_star^2 = 0.0045",
      "BICEP/Keck < 0.036; CMB-S4 sigma 5e-4", None, "prediction", "N_star reheating input",
      "prediction_of_record", "BICEP/Keck BK18; CMB-S4", "r excluded at CMB-S4 (>5 sigma)", "consistent"],
+    # alpha_s (2026-07-20): the LO Starobinsky running; exact SR at N=51.4 is -7.09e-4
+    # (LO identity alpha_s = -r/6 holds only to ~7%). NOT independent of n_s/r -- same
+    # N_star_reheating group (anti double-counting).
+    ["CMB", "inflation alpha_s (running of n_s)",
+     "-2/N_star^2 = -7.6e-4 (N=51.4); band [-8.0e-4,-5.6e-4]; beta_s = -4/N^3 = -2.9e-5",
+     "P-ACT-LB +0.0062+/-0.0052 (record leg; P-ACT +0.0060+/-0.0055 -> -1.22 sigma; "
+     "Planck18 -0.0045+/-0.0067 -> +0.57 sigma; beta_s run+runrun 0.010+/-0.013 -> -0.77 sigma); "
+     "forecast: LiteBIRD+CMB-S4 sigma(alpha_s)~4.9e-3 (0.14 sigma), CMB-S4+DESI+Euclid "
+     "statistical ~3.3e-4 (2.2 sigma, systematics-limited)", -1.33, "prediction",
+     "N_star reheating input",
+     "prediction_of_record",
+     "experiments/tfpt-discovery/alpha_s_running_probe.py + Calabrese+ 2025 JCAP (P-ACT-LB) "
+     "+ Planck 2018 X",
+     "robust alpha_s < -5e-3 or > +3e-3 at >=5 sigma; any robust POSITIVE running kills "
+     "the plateau branch", "consistent"],
     ["CMB", "inflation A_s (fixed N_star=51.4 point)", "1.76e-9 at N_star=51.4",
      "Planck 2.10e-9 (branch stress; record is the band, NOT the fixed point)", -11.3, "bridge",
      "N_star reheating branch", "downstream_bridge", "Planck 2018 + branch_resolver (lnB=+62)",
@@ -834,6 +860,26 @@ ROWS = [
      "Planck 2.10e-9 (consistent when profiled; this is the record reading)", -0.1, "bridge",
      "N_star reheating bridge", "downstream_bridge", "Planck 2018 + branch_resolver",
      "A_s incompatible across the whole [50,60] band", "consistent"],
+    # mu-distortion (2026-07-20): Chluba window integral calibrated +20% to the full
+    # computation; a mu measurement DECIDES the A_s/N_star branch (the fixed-point tension
+    # row vs the profiled record row) -> same Nstar_branch alternative group. NOTE: the
+    # log-comb (omega=2.5827, eps=0.0173) is STRUCTURALLY BLIND in the mu window --
+    # window attenuation |F(omega)|=0.033, delta_mu=7.4e-12=0.007 sigma even at Voyage-2050
+    # sensitivity (S15 typing: the theory itself predicts where it is invisible) -- so NO
+    # separate comb-search row is opened here.
+    ["CMB", "inflation mu-distortion (A_s/N_star branch discriminator)",
+     "Chluba window integral, calibrated +20%: sharp branch N_star=51.4 (A_s=1.76e-9) "
+     "mu~1.6e-8; profiled record N_star=56.1 (A_s=2.10e-9) mu~2.0e-8; band 1.5-2.3e-8; "
+     "branch split 23% (Delta mu=3.0e-9) -> 3 sigma branch separation at sigma(mu)=1e-9 "
+     "(Voyage-2050 class); the frozen log-comb is structurally blind here "
+     "(|F(2.5827)|=0.033, delta_mu=7.4e-12=0.007 sigma even at Voyage 2050)",
+     "FIRAS 95% |mu| < 9e-5 (only bound in hand, 4 dex above); PIXIE baseline 95% "
+     "|mu| < 9e-8 does NOT reach the band (factor 4-7 above the prediction); branch "
+     "decision needs sigma(mu)~1e-9 (Voyage-2050 class)", None, "prediction",
+     "N_star reheating branch (Silk damping / Chluba mu window)",
+     "prediction_of_record",
+     "experiments/tfpt-discovery/mu_distortion_probe.py + COBE/FIRAS",
+     "robust mu < 0.9e-8 or > 4e-8", "data_limited"],
     # ---- neutrino mixing (neutrino-mixing) ----
     ["neutrino", "sin^2 theta12", "1/3 - phi0/2 = 0.306747", "NuFIT 6.0 0.307+/-0.012", -0.02,
      "prediction", "PMNS (TBM+seam)", "prediction_of_record", "NuFIT 6.0 / JUNO",
@@ -1185,6 +1231,48 @@ ROWS = [
      "no direct physical dataset", None, "parked", "analog only",
      "parked_analog", "quantum-recovery-analog (parked)",
      "engineered per-step recovery not at 64/729 (free-ratio control)", "parked"],
+    # ---- analog beds (2026-07-20): parked_analog = no physical dataset yet; honest
+    # typing -- these beds validate E8 edge/spectrum physics or the comb DETECTOR,
+    # never the TFPT axioms themselves. ----
+    ["condensed matter", "bosonic E8 phase thermal Hall (seam edge c_-=8)",
+     "kappa_xy/T = 8 * (pi^2 k_B^2 / 3h), no charge Hall (seam edge c_-=8, v450/v451/v489)",
+     "no engineered material yet; alpha-RuCl3 c_-=1/2 contested (ultraclean half-quantized "
+     "plateau, npj QM 2025, vs phonon-dominated kappa_xy, PRX 12, 021025)", None, "parked",
+     "analog only (confirms E8 edge physics, not TFPT axioms)",
+     "parked_analog", "seam-edge analog bed (parked; no material)",
+     "engineered chiral phase must show kappa_xy/T = 8 quanta (no charge Hall); charge Hall "
+     "or c != 8 kills the seam-edge analog reading", "parked"],
+    ["condensed matter", "E8 mass-ladder blind recovery bed (CoNb2O6 / BaCo2V2O8)",
+     "blind ladder recovery by the Cartan-PF pipeline on the published Zamolodchikov-E8 "
+     "spectra: 8/8 one-particle masses (m2/m1 = golden ratio) + rejection of scrambled "
+     "controls (detector validation; confirms Zamolodchikov E8, not TFPT axioms)",
+     "EXECUTED 2026-07-20, verdict validated (detector level): BaCo2V2O8 blind (Zou+ PRL "
+     "127, 077201; INS 4.7 T, Fig. 3a QA-validated extraction, 17 peaks) 8/8 rungs, "
+     "chi2/dof=0.35, MC p=0.0056 (5000 null ladders; singles-only p=0.0004; sigma-variant "
+     "robust); CoNb2O6 blind (Amelin+ PRB 102, 104431; verbatim THz values) 6/8 in-window "
+     "rungs, chi2/dof=0.52, p=0.0038 (m7/m8 outside the 0.6-THz window; the 0.43-THz "
+     "(m1+m2)-onset correctly left unassigned); control battery all rejected: scramble "
+     "0.5%/1.5%, offset 0/8, jitter <=5% at destructive 30%, harmonic/A3-PF/D8-PF/Airy "
+     "wrong ladders beaten, synthetic Airy bed 0 rungs; Cartan-PF self-test 1.5e-15",
+     None, "search_target",
+     "analog only (ladder-detector validation on published spectra; validates the "
+     "ladder-detector pipeline for TFPT searches, e.g. hfqpo-ladder)",
+     "not_applicable", "experiments/e8-ladder-bed/results/results.json (Zou+ PRL 127, "
+     "077201; Amelin+ PRB 102, 104431; Coldea+ 2010 anchor)",
+     "pipeline fails to recover 8/8 published masses or fails to reject scrambled "
+     "controls -> kills the ladder detector, not TFPT", "consistent"],
+    ["quantum", "Efimov DSI tuned to the kernel lambda=(3/2)^6 (heteronuclear mass ratio)",
+     "s0 = pi/(6 ln(3/2)) = 1.2914 <=> lambda = (3/2)^6 = 11.391; required M/m = 8.67 "
+     "(2 resonant pairs)",
+     "best candidate 52Cr2-6Li: M/m=8.635 -> s0=1.2890, lambda=11.44 (+0.44% vs (3/2)^6; "
+     "gap deviation +0.18%); alternatives 39K2/41K2-6Li (lambda=11.59/11.20, needs double "
+     "Feshbach control), 176Yb2-23Na (+5.9%); solver validated on Naidon-Endo anchors "
+     "(homonuclear 22.69, Cs2Li 4.877); no tuned experiment yet", None, "parked",
+     "analog only (first end-to-end HARDWARE injection of the comb detector at tunable "
+     "lambda~11.39)",
+     "parked_analog", "experiments/tfpt-discovery/efimov_s0_massratio_probe.py "
+     "(parked; needs experiment)",
+     "none on TFPT axioms -- detector validation only", "parked"],
 ]
 
 FIELDS = ["domain", "observable", "tfpt_value", "data_value", "pull_sigma",
@@ -1315,6 +1403,27 @@ OVERRIDES: dict[str, dict] = {
     # --- alternative interpretation bases (one theme, several readings) ---
     "inflation A_s (fixed N_star=51.4 point)": {"alternative_group": "Nstar_branch"},
     "inflation A_s (profiled N_star)": {"alternative_group": "Nstar_branch"},
+    # mu-distortion decides the SAME A_s/N_star branch question as the two A_s rows
+    # (one question, several readings -> never a new independent hit); decisive
+    # instrument class is Voyage-2050 -> long_term.
+    "inflation mu-distortion": {"alternative_group": "Nstar_branch",
+                                "decision_horizon": "long_term"},
+    # 2026-07-20 analog beds: no engineered material / no tuned experiment yet.
+    "bosonic E8 phase thermal Hall": {"decision_horizon": "long_term"},
+    # e8-ladder-bed EXECUTED 2026-07-20 (verdict validated, detector level): known-answer
+    # positive control of the Cartan-PF ladder detector on published Zamolodchikov-E8
+    # spectra -- validates the ladder-detector pipeline; confirms Zamolodchikov E8, not
+    # TFPT axioms -- no [E], no veri. Same basket as qc-recovery-kernel / qgeo-eit-soff
+    # (never nature evidence).
+    "E8 mass-ladder blind recovery bed":
+        {"validation_tier": "analog_positive_control",
+         "signature_code": "detector-control",
+         "leakage_class": "detector_control",
+         "clock_map": "not_required_for_static_spectrum",
+         "transduction_B": "published INS/THz spectra; detector reads peak positions only",
+         "projection_nonzero": "not_a_tfpt_projection",
+         "status_note": "validates the ladder-detector pipeline; confirms Zamolodchikov "
+                        "E8, not TFPT axioms -- no [E], no veri"},
     "muon g-2 Delta a_mu (WP2020 dispersive)": {"alternative_group": "HVP_baseline"},
     "muon g-2 Delta a_mu (WP2025 lattice)": {"alternative_group": "HVP_baseline"},
     "axion haloscope marker": {"alternative_group": "axion_branch"},
@@ -1548,7 +1657,7 @@ def build() -> dict:
         "firewall": "search targets / downstream bridges, NOT load-bearing claims; "
                     "no row is upgraded to [E]",
         "domain_matrix": "9 active empirical search domains + sharp prediction-of-record "
-                         "channels + internal-consistency checks + 1 parked analog target",
+                         "channels + internal-consistency checks + 4 parked analog targets",
         "stage_enum": sorted(STAGE_ENUM),
         "status_enum": sorted(STATUS_ENUM),
         "evidence_class_enum": sorted(EVIDENCE_CLASS_ENUM),

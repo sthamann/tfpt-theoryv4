@@ -1,0 +1,246 @@
+{
+  "experiment": "hfqpo-ladder",
+  "stage": "H3 stage 2 - archival RXTE PCA event-data scan (preregistered in hypotheses/hfqpo_v1.yaml, archival_design)",
+  "manifest": "../data/archive/obsid_manifest.json",
+  "n_obsids": 77,
+  "downloaded_files": 711,
+  "downloaded_gb": 4.42,
+  "prereg_deviations": [
+    "H1743-322: prereg YAML says ObsIDs 80138-06-*; the 111-interval / 130-observation program of Remillard et al. 2006 (ApJ 637, 1002, Sec. 2) is actually program ID 80146. The manifest uses 80146-01-* (the published selection).",
+    "Mapping correction after first download pass (no scope change): xtemaster rows with status != archived are excluded, so the Belloni+2012 MJD 50394.884 epoch of GRO J1655-40 maps to 10255-01-20-00 (10255-01-19-00 was scheduled but never archived, HTTP 404). H1743-322 interval obsid 80146-01-57-01 exists in the archive only as its -01G variant (fetch script tries the G suffix on 404).",
+    "GRS 1915+105: the 113/168 Hz pair epochs were never published with an ObsID list (Remillard et al. 2003 is a BAAS abstract; RM06 cites it without a table). Proxy selection: the published HFQPO-pair detection epochs with ObsID lists - Strohmayer 2001b Table 1 (41/69 Hz, gamma class) and Belloni & Altamirano 2013 (34/68 Hz, delta class, 80701-01-28-00/01/02) plus the two strongest 67-Hz epochs of BA12 (10408-01-04-00/-06-00, Morgan et al. 1997). The 252-Hz tooth scan on this proxy stack is therefore a WEAKER test than preregistered (different state than the 168/113 stack); reported as such."
+  ],
+  "method_notes": [
+    "Leahy PDS from PCA processed SE event files + single-bit XTE_SA modes; 16-s segments, dt=1/4096 s (Nyquist 2048 Hz); GTI-clean segments only; stacks per (source, group, band).",
+    "No barycentring: max barycentric frequency modulation v/c ~1e-4 -> <=0.07 Hz at 661.5 Hz, negligible vs HFQPO widths (>=25 Hz) and the 0.0625 Hz Fourier resolution.",
+    "Bands mirror the published detections: hard27 = ~13-27 keV (Strohmayer), bh = event chn 36-79 + SB 14-35 (Belloni+12/R06 hard), bt = chn 0-79 total (+ full-band SB).",
+    "Detection fit: local continuum (c0+c1*x) + Lorentzian, f0 free within the preregistered tolerance, FWHM free within Q=4-25; significance = norm/sigma_norm (Belloni+2012 convention).",
+    "Upper limits: 3-sigma on the Lorentzian integral at fixed f0, max over Q grid (5, 8, 12, 20) -> conservative %rms.",
+    "%rms uses total (source+background) rate; PCA background is a few percent of these bright-state rates, so published source-rms values are marginally higher; effect << the quoted limits.",
+    "Injection-recovery: piecewise-coherent Lorentzian oscillator (Q=10), binomial thinning of the summed per-segment light curves; gate = >=90% recovery at <=2x the analytic sensitivity: PASS for all four sources."
+  ],
+  "trials_correction": {
+    "n_trials": 8,
+    "rule": "2 frequencies x 4 sources, p_final = 1-(1-p_single)^8"
+  },
+  "sanity_gate": {
+    "result": "PASS",
+    "lines_reproduced": "11/12",
+    "detail": {
+      "GRO_J1655-40/B2_450Hz/hard27/@449.0Hz": {
+        "f0_hz": 450.3045283466741,
+        "rms_pct": 5.369555591490583,
+        "significance_sigma": 4.448219731863998,
+        "status": "pass"
+      },
+      "GRO_J1655-40/B1_triplet/hard27/@441.0Hz": {
+        "f0_hz": 441.85676315034607,
+        "rms_pct": 3.852790531505876,
+        "significance_sigma": 4.467355803736813,
+        "status": "pass"
+      },
+      "GRO_J1655-40/T300_epochs/bt/@296.0Hz": {
+        "f0_hz": 282.05420362813146,
+        "rms_pct": 1.097636980461083,
+        "significance_sigma": 4.005740044891285,
+        "status": "pass"
+      },
+      "XTE_J1550-564/hard_280/bh/@280.0Hz": {
+        "f0_hz": 280.0576885016469,
+        "rms_pct": 3.7125850913468104,
+        "significance_sigma": 9.858410402003598,
+        "status": "pass"
+      },
+      "XTE_J1550-564/total_180/bt/@183.0Hz": {
+        "f0_hz": 182.16865002717688,
+        "rms_pct": 1.1268526607289995,
+        "significance_sigma": 4.880132642141554,
+        "status": "pass"
+      },
+      "XTE_J1550-564/outburst2000_270/bh/@273.0Hz": {
+        "f0_hz": 274.5608480380426,
+        "rms_pct": 4.758888564645371,
+        "significance_sigma": 4.959791688849947,
+        "status": "pass"
+      },
+      "GRS_1915+105/gamma_1997_41_69/hard27/@69.2Hz": {
+        "f0_hz": 68.93561501367877,
+        "rms_pct": 3.107647294740016,
+        "significance_sigma": 10.363180111117682,
+        "status": "pass"
+      },
+      "GRS_1915+105/gamma_1997_41_69/hard27/@41.5Hz": {
+        "f0_hz": 42.1968871960323,
+        "rms_pct": 1.9903584346036247,
+        "significance_sigma": 3.1515181473909313,
+        "status": "pass"
+      },
+      "GRS_1915+105/delta_2003_34_68/bt/@68.0Hz": {
+        "f0_hz": 68.03615723394877,
+        "rms_pct": 2.0003106267606237,
+        "significance_sigma": 19.691949904419012,
+        "status": "pass"
+      },
+      "GRS_1915+105/delta_2003_34_68/bt/@34.0Hz": {
+        "f0_hz": 34.99116037478967,
+        "rms_pct": 0.7993133683432078,
+        "significance_sigma": 3.599994664078285,
+        "status": "pass"
+      },
+      "H1743-322/q_low_242/bh/@242.0Hz": {
+        "f0_hz": 244.3446577423025,
+        "rms_pct": 1.4888541723512296,
+        "significance_sigma": 5.291351741232601,
+        "status": "pass"
+      },
+      "H1743-322/q_high_166/bt/@166.0Hz": {
+        "f0_hz": 163.9206034453827,
+        "rms_pct": 0.6180226461175514,
+        "significance_sigma": 1.6786952996016178,
+        "status": "secondary_miss"
+      }
+    }
+  },
+  "per_source": {
+    "GRO_J1655-40": {
+      "nu_u_hz": 441.0,
+      "tooth_hz": 661.5,
+      "integer_hz": 588.0,
+      "scan_band_primary": "hard27",
+      "scan_band_secondary": "bt",
+      "exposure_primary_s": 49632.0,
+      "mean_rate_primary_cps": 1048.1969898452612,
+      "tooth": {
+        "primary_sig_single": 6.161447181232913e-16,
+        "primary_sig_after_trials": -2.6600674686174592,
+        "primary_rms_ul3sig_pct": 3.0592720721202493,
+        "secondary_rms_ul3sig_pct": 0.5817534539789642
+      },
+      "integer": {
+        "primary_sig_single": 6.277733482487524e-14,
+        "primary_sig_after_trials": -2.660067468617325,
+        "primary_rms_ul3sig_pct": 2.935921370556378,
+        "secondary_rms_ul3sig_pct": 0.5518614441434283
+      },
+      "injection": {
+        "sens90_rms_pct": 5.107406345699287,
+        "predicted_rms_pct_full_stack": 3.4049375637995247,
+        "gate_90pct_at_2x": true
+      },
+      "verdict_decision_rule": "neither_upper_limits"
+    },
+    "XTE_J1550-564": {
+      "nu_u_hz": 276.0,
+      "tooth_hz": 414.0,
+      "integer_hz": 368.0,
+      "scan_band_primary": "bh",
+      "scan_band_secondary": "bt",
+      "exposure_primary_s": 41536.0,
+      "mean_rate_primary_cps": 4291.152157164869,
+      "tooth": {
+        "primary_sig_single": 1.6459558270620366e-13,
+        "primary_sig_after_trials": -2.660067468617105,
+        "primary_rms_ul3sig_pct": 1.6087658022048634,
+        "secondary_rms_ul3sig_pct": 0.6910356877725226
+      },
+      "integer": {
+        "primary_sig_single": 2.33575761524468e-13,
+        "primary_sig_after_trials": -2.660067468616962,
+        "primary_rms_ul3sig_pct": 1.506948242600451,
+        "secondary_rms_ul3sig_pct": 0.6823745244552187
+      },
+      "injection": {
+        "sens90_rms_pct": 2.6831551466057038,
+        "predicted_rms_pct_full_stack": 1.7887700977371357,
+        "gate_90pct_at_2x": true
+      },
+      "verdict_decision_rule": "neither_upper_limits"
+    },
+    "GRS_1915+105": {
+      "nu_u_hz": 168.0,
+      "tooth_hz": 252.0,
+      "integer_hz": 224.0,
+      "scan_band_primary": "bt",
+      "scan_band_secondary": "hard27",
+      "exposure_primary_s": 57776.0,
+      "mean_rate_primary_cps": 16519.329012046524,
+      "tooth": {
+        "primary_sig_single": 1.6574757580207714e-12,
+        "primary_sig_after_trials": -2.660067468613898,
+        "primary_rms_ul3sig_pct": 0.5318931895359822,
+        "secondary_rms_ul3sig_pct": 3.2264200280196387
+      },
+      "integer": {
+        "primary_sig_single": 1.5564541597151586e-15,
+        "primary_sig_after_trials": -2.6600674686174592,
+        "primary_rms_ul3sig_pct": 0.5314438301449682,
+        "secondary_rms_ul3sig_pct": 3.236264500810429
+      },
+      "injection": {
+        "sens90_rms_pct": 0.8923058136068998,
+        "predicted_rms_pct_full_stack": 0.5948705424045998,
+        "gate_90pct_at_2x": true
+      },
+      "verdict_decision_rule": "neither_upper_limits"
+    },
+    "H1743-322": {
+      "nu_u_hz": 242.0,
+      "tooth_hz": 363.0,
+      "integer_hz": 322.7,
+      "scan_band_primary": "bh",
+      "scan_band_secondary": "bt",
+      "exposure_primary_s": 212992.0,
+      "mean_rate_primary_cps": 2205.04203913762,
+      "tooth": {
+        "primary_sig_single": 2.5110800010230034e-14,
+        "primary_sig_after_trials": -2.660067468617402,
+        "primary_rms_ul3sig_pct": 1.2591380303512434,
+        "secondary_rms_ul3sig_pct": 0.7405402852090621
+      },
+      "integer": {
+        "primary_sig_single": 1.9304489336566627e-12,
+        "primary_sig_after_trials": -2.6600674686133052,
+        "primary_rms_ul3sig_pct": 1.2208904464771373,
+        "secondary_rms_ul3sig_pct": 0.7201757489166554
+      },
+      "injection": {
+        "sens90_rms_pct": 1.6451728694605594,
+        "predicted_rms_pct_full_stack": 1.347995754226119,
+        "gate_90pct_at_2x": true
+      },
+      "verdict_decision_rule": "neither_upper_limits"
+    }
+  },
+  "verdicts_decision_rule": {
+    "GRO_J1655-40": {
+      "verdict": "neither_upper_limits",
+      "tooth_sig_after_trials": -2.6600674686174592,
+      "integer_sig_after_trials": -2.660067468617325,
+      "tooth_rms_ul3sig_pct": 3.0592720721202493,
+      "integer_rms_ul3sig_pct": 2.935921370556378
+    },
+    "XTE_J1550-564": {
+      "verdict": "neither_upper_limits",
+      "tooth_sig_after_trials": -2.660067468617105,
+      "integer_sig_after_trials": -2.660067468616962,
+      "tooth_rms_ul3sig_pct": 1.6087658022048634,
+      "integer_rms_ul3sig_pct": 1.506948242600451
+    },
+    "GRS_1915+105": {
+      "verdict": "neither_upper_limits",
+      "tooth_sig_after_trials": -2.660067468613898,
+      "integer_sig_after_trials": -2.6600674686174592,
+      "tooth_rms_ul3sig_pct": 0.5318931895359822,
+      "integer_rms_ul3sig_pct": 0.5314438301449682
+    },
+    "H1743-322": {
+      "verdict": "neither_upper_limits",
+      "tooth_sig_after_trials": -2.660067468617402,
+      "integer_sig_after_trials": -2.6600674686133052,
+      "tooth_rms_ul3sig_pct": 1.2591380303512434,
+      "integer_rms_ul3sig_pct": 1.2208904464771373
+    }
+  },
+  "overall_verdict_enum": "null",
+  "overall_reading": "Blind scan at the preregistered tooth (1.5 nu_u) and integer (4 nu_0) frequencies in all four 3:2-pair sources: NO detection at either frequency in any source (all single-trial significances ~0, trials-corrected < 0; thresholds 4 sigma). 3-sigma rms upper limits in the preregistered primary bands: tooth 3.06% (GRO J1655-40, 13-27 keV), 1.61% (XTE J1550-564), 0.53% (GRS 1915+105), 1.26% (H1743-322); integer-line limits 2.94/1.51/0.53/1.22%. In every source the limit is at or below the measured strength of the upper pair line (5.4/3.7/2.0/1.5% rms) in the same stack, so a third tooth (or an integer line) as strong as the detected pair lines is excluded. The geometric-ladder reading gains NO support; the harmonic alternative gains no new line either (the published anti-kernel records 92=184/2 and 34/68 stand unchanged). Caveats: the GRS 1915+105 stack is a proxy state selection (168/113 epochs are not reconstructable at ObsID level from the literature) and the GRO J1655-40 hard-band sensitivity (5.1% at 90% recovery) only excludes a tooth at the strength of its 450-Hz line."
+}

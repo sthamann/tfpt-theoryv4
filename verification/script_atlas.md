@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`482` registered scripts · `548` ledger claims · `10` clusters.
+`487` registered scripts · `554` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (51 scripts)
+### `core` — Compiler core & the E₈ glue  (54 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -113,6 +113,12 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v327_hypergraph_rewrite, v324_hypergraph_fiber, v312_hypergraph_substrate, v238_modular_lindblad_dynamics, v54, v76, v221, v312 · cited: origin theory
 - **v487_transfer_clock_rungs** [E/O] `HYP.REWRITE.03` — HYP.REWRITE.03: the lazy split (1/2, 1/6) is FORCED by the resummed clock -- the v486 [O] 'split selection' closes onto v124 structure. [E] rung reading: the lazy rule's one-step s
   - deps: v486_transfer_full_rule, v327_hypergraph_rewrite, v124, v107, v327, v486, v54, v221 · cited: origin theory
+- **v489_seam_modular_commutator** [E/O] `SEAM.CCC.01` — SEAM.CCC.01: the chiral central charge c_- = 8 measured DIRECTLY from the bulk ground state of the v367 seam lattice model, via the Kim-Shehab-Kim modular commutator J(A,B,C) = i T
+  - deps: v286_seam_equivalence_contract, v367_seam_s3_lattice, v378_seam_s3_modular, v366_mmst_seam_collar, v336, v351, v367, v368 · cited: 1 architecture e8, research contracts
+- **v490_seam_parity_census** [E/C/O] `SEAM.MU.01` — SEAM.MU.01: the T^2 spin-structure fermion-parity census for the v367 seam lattice model -- the lattice ground-state witness of 'mu_pre = 4 before condensation' (step 1 of the v378
+  - deps: v286_seam_equivalence_contract, v489_seam_modular_commutator, v367_seam_s3_lattice, v378_seam_s3_modular, v336, v351, v367, v378 · cited: research contracts
+- **v491_p2_partition_corollary** [E/C/O] `P2.PARTITION.01` — P2.PARTITION.01: g_car = 5 as a COROLLARY of the four marks -- the partition sharpening of v53 (sympy exact). The lemma: exactly 3 positive integers summing to 4 = uniquely {1,1,2}
+  - deps: AX.P2.01, v53_compiler_core, v23_anchor_generator, MARKS.GB.01, v23, v53, v115, v137 · cited: introduction, origin theory, 1 architecture e8, 2 standard model
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -318,7 +324,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v407_dn_pairings_omega** [E/C/O] `FLAV.SELECTOR.CLOSE.01` — FLAV.SELECTOR.CLOSE.01: the R4' residue folds into the tau=omega keystone (v405) -- the three (d,n) selector pairings ARE the tau=omega family-slice atoms. [E] the frame (1,a,sigma
   - deps: v405_seam_equiv_omega, v49_readout_rigidity, v405, v139, v136, v42 · cited: origin theory, 1 architecture e8
 
-### `frontier` — Open gate (G_metric) & the frontier  (161 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (163 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -643,6 +649,10 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v476_entropic_compression_toy, v477_entropic_scaleflow, v323, v358, v450, v473, v476, v477 · cited: research contracts
 - **v480_multilocal_four_interval** [E/C/O] `QGEO.MULTILOCAL.01` — QGEO.MULTILOCAL.01: the four mu4 marks make the seam circle a FOUR-INTERVAL free-fermion geometry -- the class whose multi-interval modular theory is exactly known (Casini-Huerta m
   - deps: v181_clock_is_conformal_symmetry, v286_seam_equivalence_contract, v398_seam_state_rigidity, v476_entropic_compression_toy, v478_entropic_continuum_legs, v216, v323, v358 · cited: research contracts
+- **v492_celestial_z4_orbifold** [E/C/O/X] `CELEST.WP1.01, CELEST.SEAM.01` — CELEST.WP1.01: WP1 of the celestial-holographic research contract CELEST.SEAM.01 -- the E8 mu4-glue grading (v128) IS the flat Z4 monodromy of the glue-equivariant celestial chiral
+  - deps: v492_celestial_z4_orbifold, v286_seam_equivalence_contract, v1_e8_glue, v92, v125, v128, v168, v179 · cited: 3 e8 audit bootstrap, research contracts
+- **v493_celestial_wp2_clock_deformation** [E/C/O] `CELEST.WP2.01` — CELEST.WP2.01: WP2 of the celestial-holographic research contract CELEST.SEAM.01 -- the clock-invariant deformation XY = Z^4 + a0 of the A3 seam orbifold (geometry, periods/monodro
+  - deps: v492_celestial_z4_orbifold, v286_seam_equivalence_contract, v92, v125, v128, v168, v179, v180 · cited: 3 e8 audit bootstrap, research contracts
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (182 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -1029,17 +1039,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×65, `v336`×33, `QGEO.SYM.01`×32, `v216`×20, `v76`×19, `QG.AMB.01`×18, `v56`×18, `E8.GLU.01`×16, `v312`×16, `v54`×15, `REG.FREEZE.01`×15, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v60`×14, `v323`×14
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×70, `v336`×35, `QGEO.SYM.01`×32, `v216`×22, `v76`×19, `QG.AMB.01`×18, `v56`×18, `E8.GLU.01`×17, `v367`×16, `v312`×16, `v54`×15, `REG.FREEZE.01`×15, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v60`×14
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v477_entropic_scaleflow** — `GRAV.ENTROPIC.SCALEFLOW.01`
-- **v478_entropic_continuum_legs** — `GRAV.ENTROPIC.LEGS.01`
-- **v479_kronheimer_quiver_bridge** — `SEAM.KRONHEIMER.01`
-- **v480_multilocal_four_interval** — `QGEO.MULTILOCAL.01`
-- **v481_seesaw_carrier_ladder** — `FLAV.NUSCALE.02`
 - **v482_seesaw_rung_decision** — `FLAV.NUSCALE.03`
 - **v483_pillowcase_exact_traces** — `HYP.PHI0.GEOM.01`
 - **v484_seam_contact_unit** — `SEAM.CONTACT.UNIT.01`
@@ -1047,4 +1052,9 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v486_transfer_full_rule** — `HYP.REWRITE.02`
 - **v487_transfer_clock_rungs** — `HYP.REWRITE.03`
 - **v488_majorana_clebsch_door** — `FLAV.NUSCALE.04`
+- **v489_seam_modular_commutator** — `SEAM.CCC.01`
+- **v490_seam_parity_census** — `SEAM.MU.01`
+- **v491_p2_partition_corollary** — `P2.PARTITION.01`
+- **v492_celestial_z4_orbifold** — `CELEST.WP1.01, CELEST.SEAM.01`
+- **v493_celestial_wp2_clock_deformation** — `CELEST.WP2.01`
 

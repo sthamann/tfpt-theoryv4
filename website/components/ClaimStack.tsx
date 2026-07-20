@@ -98,7 +98,7 @@ const LAYERS: Layer[] = [
     title: "v_geo · G_net · F_transfer",
     items: [
       "v_geo — one dimensionful scale anchor (metrology primitive) [O]",
-      "G_net — metric-sector inclusion (algebra [E]; seam coupling [C] closed modulo cited theorems, v367/v368 + v376–v379; crossed-product certified extension (v469))",
+      "G_net — metric-sector inclusion (algebra [E]; seam coupling [C] closed modulo cited theorems, v367/v368 + v376–v379, ground-state witnesses v489/v490; crossed-product certified extension (v469))",
       "F_transfer — typed runnable solver suite (v371–v375), each with a kill test [C]",
     ],
     kill: "Declared honestly, not hidden — v_geo is the one genuine [O] unit; G_net and F_transfer are [C], written up as numbered research contracts.",

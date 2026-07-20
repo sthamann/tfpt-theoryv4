@@ -1,0 +1,14 @@
+[project]
+name = "tfpt-e8lb"
+version = "0.1.0"
+description = "E8 mass-ladder blind-recovery bed (detector validation on published CoNb2O6 / BaCo2V2O8 spectra)"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.11",
+    "matplotlib>=3.8",
+]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+packages = ["tfpt_e8lb"]

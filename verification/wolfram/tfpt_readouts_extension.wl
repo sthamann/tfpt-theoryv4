@@ -3114,6 +3114,99 @@ Module[{finEdges, affEdges, adj, aff, caff, marks, dsum, esum, dimM, dimG, dimX,
     Det[cfin] == 1 && snf == IdentityMatrix[8] && 3*8 == 24];
 ];
 
+(* ==== v491 round: P2.PARTITION.01 -- g_car = 5 as the partition corollary of the
+   four marks (the sharpening of v53).  Exact content: 4 into exactly 3 positive
+   integer parts is uniquely {1,1,2} => e = (4,5,2) => g_car = e2 = 5, |Z2| = e3 = 2,
+   N_fam = e2 - e3 = 3 as corollaries; every assumption load-bearing (positivity /
+   sum / part count / integrality negative controls); v53 needs all three targets,
+   the partition only e1 = 4; sum rule 4(N-1)/2 = 4 iff N = 3; mirrors v491. ==== *)
+Module[{esym2, msets, core, nc0, nc3, nc5, p2, p4, a1, a2, sharp, v53s},
+  esym2[m_List] := Total[Times @@@ Subsets[m, {2}]];
+  msets[np_, lo_, hi_, tot_] := Select[
+    DeleteDuplicates[Sort /@ Tuples[Range[lo, hi], np]], Total[#] == tot &];
+  core = msets[3, 1, 10, 4];
+  checkExact["v491 P2.PARTITION.01 (i): 4 into exactly 3 positive integer parts is UNIQUELY {1,1,2}; e = (e1,e2,e3) = (4,5,2), so g_car = e2 = 5, |Z2| = e3 = 2, N_fam = e2 - e3 = 3 are corollaries, and the carrier formula closes as a fixed point (2^4-1)/5 = 3 = rank H^1 = #marks - 1",
+    core == {{1, 1, 2}} && Total[core[[1]]] == 4 && esym2[core[[1]]] == 5 &&
+    Times @@ core[[1]] == 2 && esym2[core[[1]]] - Times @@ core[[1]] == 3 &&
+    (2^4 - 1)/5 == 3];
+  nc0 = msets[3, 0, 10, 4]; nc3 = msets[3, 1, 10, 3]; nc5 = msets[3, 1, 10, 5];
+  p2 = msets[2, 1, 10, 4]; p4 = msets[4, 1, 10, 4];
+  checkExact["v491 P2.PARTITION.01 (ii): negative controls -- drop positivity: 4 solutions, e2 ambiguous {0,3,4,5}; sum 3: unique but e2 = 3; sum 5: NOT unique; 2 parts: e2 in {3,4}; 4 parts: e2 = 6 -- every assumption is load-bearing",
+    Length[nc0] == 4 && Union[esym2 /@ nc0] == {0, 3, 4, 5} &&
+    Length[nc3] == 1 && esym2[nc3[[1]]] == 3 && Length[nc5] == 2 &&
+    Sort[esym2 /@ p2] == {3, 4} && (esym2 /@ p4) == {6}];
+  a1 = 4 {1/3, 1/3, 1/3}; a2 = 4 {1/6, 1/3, 1/2};
+  sharp = msets[3, 1, 10, 4];
+  v53s = Select[DeleteDuplicates[Sort /@ Tuples[Range[0, 6], 3]],
+    Total[#] == 4 && esym2[#] == 5 && Times @@ # == 2 &];
+  checkExact["v491 P2.PARTITION.01 (iii): integrality control -- Mehta-Seshadri RATIONAL weights (sum 1, scaled by 4) give e2 = 16/3 resp. 44/9 != 5 (integrality = the Birkhoff-Grothendieck splitting-type typing); v53 sharpening -- all-three-targets search == only-e1=4 search == {1,1,2}; sum rule 4(N-1)/2 = 4 iff N = 3, and |a|_1 = |mu4| tr(A0) = 4(0 + 1/3 + 2/3) = 4",
+    esym2[a1] == 16/3 && esym2[a2] == 44/9 && esym2[a1] != 5 && esym2[a2] != 5 &&
+    v53s == sharp == {{1, 1, 2}} &&
+    Select[Range[2, 6], 4 (# - 1)/2 == 4 &] == {3} && 4 (0 + 1/3 + 2/3) == 4];
+];
+
+(* ==== v493 round: CELEST.WP2.01 -- the clock-invariant deformation XY = Z^4 + a0
+   of the A3 seam orbifold (WP2 of CELEST.SEAM.01).  Exact content mirrored:
+   clock-invariance selects the 1-parameter slice sharply (P(iZ) = P(Z) forces
+   a3 = a2 = a1 = 0; prod(Z - i^k w) = Z^4 - w^4); disc = 256 a0^3; binary-quartic
+   invariants I = 12 a0, J = 0 identically => j = 1728 frozen (tau = i pillowcase),
+   cross-ratio 2; negative controls a1 (j = 0) and a2-instance (j = 1556068/81);
+   clock on H2 = Coxeter element of W(A3) (char x^3+x^2+x+1, eigenvalues {i,-1,-i},
+   no invariant cycle, chi_1-Fourier eigenline, period point t(i-1)(1,i,i^2));
+   versal weights (1,2,3,0) = regular mu4 rep; S-algebra corrections linear in a0
+   at the Z4 wrap (6/16 pairs) with the EH k = 2 analogue; mirrors v493. ==== *)
+Module[{Zs, a0s, a1s, a2s, a3s, ws, ts, c2s, Xs, Ys, Pgen, diffP, sol, prodq,
+        jOfLam, quartIJ, lam, Iq, Jq, Ia1, Ja1, jinst, Amat, dft, per, wts,
+        wrap, linok, remEH, xs},
+  Zs = \[FormalZ]; a0s = \[FormalA]; a1s = \[FormalB]; a2s = \[FormalC];
+  a3s = \[FormalD]; ws = \[FormalW]; ts = \[FormalT]; c2s = \[FormalG];
+  Xs = \[FormalX]; Ys = \[FormalY]; xs = \[FormalK];
+  Pgen = Zs^4 + a3s Zs^3 + a2s Zs^2 + a1s Zs + a0s;
+  diffP = Expand[(Pgen /. Zs -> I Zs) - Pgen];
+  sol = SolveAlways[diffP == 0, Zs];
+  prodq = Expand[(Zs - ws) (Zs - I ws) (Zs + ws) (Zs + I ws)];
+  jOfLam[l_] := Simplify[256 (l^2 - l + 1)^3/(l^2 (l - 1)^2)];
+  quartIJ[{a_, b_, c_, d_, e_}] := {12 a e - 3 b d + c^2,
+    72 a c e + 9 b c d - 27 a d^2 - 27 e b^2 - 2 c^3};
+  checkExact["v493 CELEST.WP2.01 (i): P(iZ) = P(Z) forces a3 = a2 = a1 = 0 (SHARP, two-sided: prod_k (Z - i^k w) = Z^4 - w^4), disc(Z^4 + a0) = 256 a0^3, and the branch points of Z^4 = t^4 are ONE free mu4 orbit with cross-ratio 2 and j(2) = 1728 -- the clock-invariant deformation is the 1-parameter family XY = Z^4 + a0 with the tau = i pillowcase configuration in every fibre",
+    Length[sol] === 1 && Union[sol[[1]]] === Union[{a3s -> 0, a2s -> 0, a1s -> 0}] &&
+    prodq === Expand[Zs^4 - ws^4] &&
+    Discriminant[Zs^4 + a0s, Zs] === 256 a0s^3 &&
+    Union[Zs /. Solve[Zs^4 == ts^4, Zs]] === Union[{ts, I ts, -ts, -I ts}] &&
+    Simplify[((ts - (-ts)) ((I ts) - (-I ts)))/((ts - (-I ts)) ((I ts) - (-ts)))] === 2 &&
+    jOfLam[2] === 1728];
+  {Iq, Jq} = quartIJ[{1, 0, 0, 0, a0s}];
+  {Ia1, Ja1} = quartIJ[{1, 0, 0, a1s, 0}];
+  jinst = jOfLam[((1 - (-1)) (2 - (-2)))/((1 - (-2)) (2 - (-1)))];
+  checkExact["v493 CELEST.WP2.01 (ii): PILLOWCASE FROZEN -- w^2 = Z^4 + a0 has I = 12 a0, J = 0 IDENTICALLY, so j = 6912 I^3/(4I^3 - J^2) = 1728 for every a0 != 0 (a0 = pure scale, no shape modulus); negative controls: the a1-deformation has I = 0 (j = 0, hexagonal CM point) and the a2-instance u = 1, v = 2 gives cross-ratio 8/9 with j = 1556068/81 != 1728 -- the clock-variant directions move the shape, a0 never does",
+    Iq === 12 a0s && Jq === 0 &&
+    Simplify[6912 Iq^3/(4 Iq^3 - Jq^2)] === 1728 &&
+    Ia1 === 0 && Simplify[Ja1 + 27 a1s^2] === 0 &&
+    jinst === 1556068/81];
+  Amat = {{0, 0, -1}, {1, 0, -1}, {0, 1, -1}};
+  dft = {1, I, I^2};
+  per = {I ts - ts, -ts - I ts, -I ts - (-ts)};
+  checkExact["v493 CELEST.WP2.01 (iii): COXETER MONODROMY -- the clock acts on H2 as A with A^4 = 1, char poly x^3+x^2+x+1, eigenvalues {i,-1,-i} = the A3 exponents (h(A3) = 4 = |mu4| = N_fam + 1), det(A - 1) = -4 (no invariant cycle); the period point Pi = t(i-1)(1,i,i^2) sits on the chi_1-Fourier eigenline (A^T v = i v); the versal clock weights are (a3,a2,a1,a0) -> (i,-1,-i,1) = the regular mu4 representation with invariant line a0 alone",
+    Amat.Amat.Amat.Amat === IdentityMatrix[3] &&
+    Expand[CharacteristicPolynomial[Amat, xs] + xs^3 + xs^2 + xs + 1] === 0 &&
+    Union[Eigenvalues[Amat]] === Union[{I, -1, -I}] &&
+    Det[Amat - IdentityMatrix[3]] === -4 &&
+    Simplify[per - ts (I - 1) dft] === {0, 0, 0} &&
+    Simplify[Transpose[Amat].dft - I dft] === {0, 0, 0} &&
+    Expand[(Pgen /. Zs -> Zs/I) -
+      (Zs^4 + I a3s Zs^3 - a2s Zs^2 - I a1s Zs + a0s)] === 0];
+  wrap = Select[Flatten[Table[{r, rp}, {r, 0, 3}, {rp, 0, 3}], 1],
+    Expand[PolynomialRemainder[Zs^(#[[1]] + #[[2]]), Zs^4 - Xs Ys + a0s, Zs] -
+      Zs^(#[[1]] + #[[2]])] =!= 0 &];
+  linok = And @@ (Exponent[PolynomialRemainder[Zs^(#[[1]] + #[[2]]),
+      Zs^4 - Xs Ys + a0s, Zs], a0s] === 1 & /@ wrap);
+  remEH = PolynomialRemainder[Zs^2, Zs^2 - Xs Ys + c2s, Zs];
+  checkExact["v493 CELEST.WP2.01 (iv): S-ALGEBRA CORRECTIONS -- the reduction Z^r Z^r' mod (Z^4 - XY + a0) picks up corrections exactly at the Z4 wrap r+r' >= 4 (6 of 16 basic products), each exactly LINEAR in a0; the EH k = 2 analogue reduces Z*Z to XY - c^2 (one wrap pair, linear in c^2) -- the BHS c^2 pattern transfers to k = 4 with a0 in the weight-0 slot",
+    Length[wrap] === 6 &&
+    Union[Sort /@ wrap] === {{1, 3}, {2, 2}, {2, 3}, {3, 3}} &&
+    linok && Expand[remEH - (Xs Ys - c2s)] === 0];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

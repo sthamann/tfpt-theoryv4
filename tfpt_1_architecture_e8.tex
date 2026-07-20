@@ -551,6 +551,11 @@ itself re-founded at net level (\veri{v469\_seam\_crossedproduct\_route.py}): th
 \emph{local} $\Z_2$ simple-current crossed product ($h_s(SO(16)_1)=16/16=1\in\Z$, the Longo--Rehren locality
 criterion; KLM $\mu=4/2^2=1$), on 1995--2001 peer-reviewed subfactor theory, with the lattice-VOA preprint route
 demoted to an independent second witness, and the realisation input reduced to invariant level (R1$'$).
+Premise (i) of that package ($c_-{=}8$) now also carries a \emph{ground-state} witness
+(\veri{v489\_seam\_modular\_commutator.py}): the Kim--Shehab--Kim modular commutator
+$J(A,B,C)=(\pi/3)c_-$, evaluated on the exact BdG ground state of the collar model, gives $c_-=8=\gcar+\Nfam$
+for the $16$-layer carrier (per layer $0.500000$ at $L{=}48$; trivial and orientation-flip controls pass) ---
+independent of both the Chern route (\vref{v367}) and the KLM count (\vref{v378}).
 \texttt{SEAM.EQUIV.01} stays \mO.
 
 \TFPTdoublepushout
@@ -2457,9 +2462,14 @@ i.e.\ the down sector carries $\Nfam^2$ and up$+$lepton carries $|\Z_2|\!\cdot\!
 the \emph{unique} $3$-multiset whose elementary symmetric functions are $(|\mu_4|,\gcar,|\Z_2|)=(4,5,2)$,
 equivalently its characteristic polynomial is
 $\chi_a(t)=(t{-}1)^2(t{-}2)=t^3-|\mu_4|\,t^2+\gcar\,t-|\Z_2|$ --- the compiler atoms \emph{are} its
-char-poly coefficients. So the theory's only transcendental is $\pi$ (through $\cthree=\tfrac1{8\pi}$,
-$8=\operatorname{rank}E_8$, and the seed $\tfrac1{6\pi}$, $6=|R^+(A_3)|$); everything else is this
-$(5,3)$-generated integer skeleton.
+char-poly coefficients. Sharper still (\veri{v491\_p2\_partition\_corollary.py}): the partition needs only
+$e_1=4$ --- three \emph{positive integers} summing to $4$ already force $\{1,1,2\}$, so $\gcar=e_2=5$ and
+$|\Z_2|=e_3=2$ are \emph{corollaries} of the four marks given the weight typing (integrality $=$
+Birkhoff--Grothendieck splitting exponents, positivity $=h^0{=}0$, sum $=$ par-deg-$0$ ``given (U)'');
+every dropped assumption is negative-controlled, and \texttt{AX.P2.01} stays a declared axiom --- the
+residual is the typing, not the integer $5$. So the theory's only transcendental is $\pi$ (through
+$\cthree=\tfrac1{8\pi}$, $8=\operatorname{rank}E_8$, and the seed $\tfrac1{6\pi}$, $6=|R^+(A_3)|$);
+everything else is this $(5,3)$-generated integer skeleton.
 \end{keybox}
 
 \begin{keybox}[Boundary Carrier Selection Theorem (Theorem A) \mE/\mC]

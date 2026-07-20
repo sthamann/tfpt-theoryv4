@@ -12,8 +12,8 @@
   "date": "2026-07-02"
  },
  "introduction::subsection::Sharper still: one anchor $a=(1,1,2)$, and $E_8$ as a compiler hull \\texorpdfstring{(\\mE)}{}::1": {
-  "hash": "b79198ae8f83",
-  "date": "2026-06-22"
+  "hash": "0c2f09beff20",
+  "date": "2026-07-20"
  },
  "introduction::subsection::The companion documents::1": {
   "hash": "cb43f67f0b4b",
@@ -120,8 +120,8 @@
   "date": "2026-06-12"
  },
  "tfpt_1_architecture_e8::section::The $D_5\\times A_3$ compiler: $E_8$ as a closure, not an input::1": {
-  "hash": "86f91d1611e5",
-  "date": "2026-07-02"
+  "hash": "684746e038da",
+  "date": "2026-07-20"
  },
  "tfpt_1_architecture_e8::subsection::Carrier $=D_5=\\mathfrak{so}_{10}$ (proved)::1": {
   "hash": "291366279c88",
@@ -304,8 +304,8 @@
   "date": "2026-06-12"
  },
  "tfpt_1_architecture_e8::section::Theorem 7 --- the $D_5\\times A_3$ lift of the $E_8$ atlas::1": {
-  "hash": "ab4727748034",
-  "date": "2026-06-12"
+  "hash": "d3206d75c1f0",
+  "date": "2026-07-20"
  },
  "tfpt_1_architecture_e8::section::Theorem 8 --- the $(1,1,2)$ anchor microcode and the $\\varphi_0$-ladder::1": {
   "hash": "8bd4d14e4c33",
@@ -492,8 +492,8 @@
   "date": "2026-06-12"
  },
  "tfpt_2_standard_model::section::H2: the moduli computation, set up explicitly::1": {
-  "hash": "c4405eeb0ca3",
-  "date": "2026-06-12"
+  "hash": "b300e7820c1f",
+  "date": "2026-07-20"
  },
  "tfpt_2_standard_model::section::Status: what is now written out, and what is honestly left::1": {
   "hash": "ebe59b0770f0",
@@ -568,8 +568,8 @@
   "date": "2026-06-12"
  },
  "tfpt_3_e8_audit_bootstrap::section::The M\u00f6bius origin of the irreducible $\\pi$::1": {
-  "hash": "42cf92482c16",
-  "date": "2026-06-15"
+  "hash": "d5bd99f646f2",
+  "date": "2026-07-20"
  },
  "tfpt_3_e8_audit_bootstrap::section::Honest status: bootstrap, not creation from nothing::1": {
   "hash": "7fa3623dd2c8",
@@ -700,8 +700,8 @@
   "date": "2026-06-14"
  },
  "tfpt_horizon_readouts::section::Search targets (not claims)::1": {
-  "hash": "a21fc51f366d",
-  "date": "2026-07-03"
+  "hash": "8945dc960221",
+  "date": "2026-07-20"
  },
  "tfpt_horizon_readouts::section::Appendix: computational verification::1": {
   "hash": "abf9b76e25f0",
@@ -712,12 +712,16 @@
   "date": "2026-07-03"
  },
  "tfpt_research_contracts::section::Research Contract 1 --- $(U_{\\mathrm{wall}})$::1": {
-  "hash": "ce5df6d311e1",
-  "date": "2026-07-14"
+  "hash": "e74faec2c0b6",
+  "date": "2026-07-20"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {
   "hash": "3cd69e059ee5",
   "date": "2026-07-14"
+ },
+ "tfpt_research_contracts::section::Research Contract --- \\texttt{CELEST.SEAM.01} (the celestial-holographic route)::1": {
+  "hash": "3c0300492e55",
+  "date": "2026-07-20"
  },
  "tfpt_research_contracts::section::Certifiability and recommended order::1": {
   "hash": "0e935206f060",
@@ -728,8 +732,8 @@
   "date": "2026-06-24"
  },
  "origin_theory::section::The whole integer skeleton from one pair $(\\gcar,\\Nfam)=(5,3)$::1": {
-  "hash": "2667d0a0b429",
-  "date": "2026-07-15"
+  "hash": "96d7faf6043b",
+  "date": "2026-07-20"
  },
  "origin_theory::section::The ``$8$'' is triply forced: geometry $=$ lattice $=$ gravity::1": {
   "hash": "649048863210",

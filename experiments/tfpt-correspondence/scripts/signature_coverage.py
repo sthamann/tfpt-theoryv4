@@ -73,7 +73,9 @@ COVERAGE: dict[str, list[dict]] = {
         {"exp": "qpe-recurrence", "tests": "QPE.01-03 recurrence ratio ladder",
          "results": "results/results.json", "doc": "null (2/3 tooth >17x scatter away)"},
         {"exp": "hfqpo-ladder", "tests": "step (3/2)=(2/3)^-1 ladder on BH HFQPO pairs",
-         "results": "results/results.json", "doc": "data_limited (tooth never searched)"},
+         "results": "results/results.json",
+         "doc": "null (archival RXTE scan 2026-07: no tooth, no integer line; "
+                "3sig limits 0.53-3.06% rms)"},
         {"exp": "comb-meta-limit", "tests": "meta upper limit on comb amplitude eps",
          "results": "results/results.json", "doc": "data_limited (eps<0.12 all-channel UL)"},
         {"exp": "recovery-channel", "tests": "Test C: CPTP recovery kernel / Page curve",

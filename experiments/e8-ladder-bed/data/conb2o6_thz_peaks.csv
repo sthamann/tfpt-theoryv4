@@ -1,0 +1,21 @@
+# CoNb2O6 THz absorption peak positions at the 1D critical field (B = 4.75 T || b, T = 0.25 K)
+# Source: Amelin, Engelmayer, Viirok, Nagel, Room, Lorenz, Wang,
+#   PRB 102, 104431 (2020); arXiv:2006.12956. Values VERBATIM from the text:
+#   "At 4.75 T one observes several well-defined sharp peaks at 0.16, 0.26, 0.32,
+#    0.40, 0.47, and 0.51 THz, which are labelled m1, m2, ... m6 [...].
+#    A relatively broad peak is observed at 0.43 THz as marked by the asterisk."
+#   The 0.43 THz asterisk peak is the onset maximum of the (m1+m2) two-particle
+#   continuum per the paper -- kept in the BLIND input as a real measured peak
+#   (the detector is not told). m7, m8 are not resolvable (0.6 THz low-pass filter
+#   at 4 K + weak spectral weight; m7 = 3.891*0.16 = 0.62 THz is outside the window).
+# sigma: 0.01 THz (frequency resolution 6 GHz stated in the paper + 0.005 THz
+#   rounding of the quoted two-decimal values).
+# 'kind' is REPORTING metadata only -- the blind detector never sees it.
+freq_thz,sigma_thz,kind,source
+0.16,0.01,single_label_m1,PRB102_104431_text
+0.26,0.01,single_label_m2,PRB102_104431_text
+0.32,0.01,single_label_m3,PRB102_104431_text
+0.40,0.01,single_label_m4,PRB102_104431_text
+0.43,0.01,broad_m1_plus_m2_onset,PRB102_104431_text
+0.47,0.01,single_label_m5,PRB102_104431_text
+0.51,0.01,single_label_m6,PRB102_104431_text

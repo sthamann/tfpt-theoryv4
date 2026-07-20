@@ -162,7 +162,7 @@ const BLOCKS: Block[] = [
         <span className="font-mono">SEAM.EQUIV.01</span> (the raw RP seam IS the
         holomorphic (E₈)₁ net at τ=i): the target net is pinned at every computable
         level by an explicit lattice model (v367/v368) and the S3 closure stack
-        (v376–v379), Lean-pinned (FORM.SEAM.MMST.01) to the published MMST/Adamo
+        (v376–v379, ground-state witnesses v489/v490), Lean-pinned (FORM.SEAM.MMST.01) to the published MMST/Adamo
         theorems, leaving [O] = the cited continuum scaling-limit existence only
         (v336; extension leg on the peer-reviewed crossed-product package,
         realisation at invariant level, v469; stays [O]); its conformal-deck

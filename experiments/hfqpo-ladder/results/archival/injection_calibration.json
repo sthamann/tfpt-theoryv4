@@ -1,0 +1,174 @@
+{
+  "GRO_J1655-40": {
+    "tooth_hz": 661.5,
+    "q_injected": 10.0,
+    "band": "hard27",
+    "n_seg_used": 3102,
+    "n_seg_full_stack": 3102,
+    "mean_rate_cps": 1048.1969898452612,
+    "pred_sens_rms_pct_subsample": 3.4049375637995247,
+    "pred_sens_rms_pct_full_stack": 3.4049375637995247,
+    "levels": {
+      "2.554": {
+        "injected_rms_pct": 2.5537031728496435,
+        "n_trials": 8,
+        "n_detected_3sig": 0,
+        "recovery_frac": 0.0,
+        "measured_rms_pct_mean": null
+      },
+      "3.405": {
+        "injected_rms_pct": 3.4049375637995247,
+        "n_trials": 8,
+        "n_detected_3sig": 1,
+        "recovery_frac": 0.125,
+        "measured_rms_pct_mean": 2.1818189634028005
+      },
+      "5.107": {
+        "injected_rms_pct": 5.107406345699287,
+        "n_trials": 8,
+        "n_detected_3sig": 8,
+        "recovery_frac": 1.0,
+        "measured_rms_pct_mean": 4.019234721233817
+      },
+      "6.810": {
+        "injected_rms_pct": 6.8098751275990494,
+        "n_trials": 8,
+        "n_detected_3sig": 8,
+        "recovery_frac": 1.0,
+        "measured_rms_pct_mean": 5.9659539420057
+      }
+    },
+    "sensitivity_rms_pct_90": 5.107406345699287,
+    "gate_90pct_at_2x": true,
+    "_complete": true
+  },
+  "XTE_J1550-564": {
+    "tooth_hz": 414.0,
+    "q_injected": 10.0,
+    "band": "bh",
+    "n_seg_used": 2596,
+    "n_seg_full_stack": 2596,
+    "mean_rate_cps": 4291.152157164869,
+    "pred_sens_rms_pct_subsample": 1.7887700977371357,
+    "pred_sens_rms_pct_full_stack": 1.7887700977371357,
+    "levels": {
+      "1.342": {
+        "injected_rms_pct": 1.3415775733028519,
+        "n_trials": 8,
+        "n_detected_3sig": 0,
+        "recovery_frac": 0.0,
+        "measured_rms_pct_mean": null
+      },
+      "1.789": {
+        "injected_rms_pct": 1.7887700977371357,
+        "n_trials": 8,
+        "n_detected_3sig": 0,
+        "recovery_frac": 0.0,
+        "measured_rms_pct_mean": null
+      },
+      "2.683": {
+        "injected_rms_pct": 2.6831551466057038,
+        "n_trials": 8,
+        "n_detected_3sig": 8,
+        "recovery_frac": 1.0,
+        "measured_rms_pct_mean": 2.1162842076604993
+      },
+      "3.578": {
+        "injected_rms_pct": 3.5775401954742714,
+        "n_trials": 8,
+        "n_detected_3sig": 8,
+        "recovery_frac": 1.0,
+        "measured_rms_pct_mean": 3.12278030464896
+      }
+    },
+    "sensitivity_rms_pct_90": 2.6831551466057038,
+    "gate_90pct_at_2x": true,
+    "_complete": true
+  },
+  "GRS_1915+105": {
+    "tooth_hz": 252.0,
+    "q_injected": 10.0,
+    "band": "bt",
+    "n_seg_used": 3611,
+    "n_seg_full_stack": 3611,
+    "mean_rate_cps": 16519.329012046524,
+    "pred_sens_rms_pct_subsample": 0.5948705424045998,
+    "pred_sens_rms_pct_full_stack": 0.5948705424045998,
+    "levels": {
+      "0.446": {
+        "injected_rms_pct": 0.4461529068034499,
+        "n_trials": 8,
+        "n_detected_3sig": 0,
+        "recovery_frac": 0.0,
+        "measured_rms_pct_mean": null
+      },
+      "0.595": {
+        "injected_rms_pct": 0.5948705424045998,
+        "n_trials": 8,
+        "n_detected_3sig": 0,
+        "recovery_frac": 0.0,
+        "measured_rms_pct_mean": null
+      },
+      "0.892": {
+        "injected_rms_pct": 0.8923058136068998,
+        "n_trials": 8,
+        "n_detected_3sig": 8,
+        "recovery_frac": 1.0,
+        "measured_rms_pct_mean": 0.8122164754598918
+      },
+      "1.190": {
+        "injected_rms_pct": 1.1897410848091996,
+        "n_trials": 8,
+        "n_detected_3sig": 8,
+        "recovery_frac": 1.0,
+        "measured_rms_pct_mean": 1.141517990697451
+      }
+    },
+    "sensitivity_rms_pct_90": 0.8923058136068998,
+    "gate_90pct_at_2x": true,
+    "_complete": true
+  },
+  "H1743-322": {
+    "tooth_hz": 363.0,
+    "q_injected": 10.0,
+    "band": "bh",
+    "n_seg_used": 6000,
+    "n_seg_full_stack": 13312,
+    "mean_rate_cps": 2213.7776041666666,
+    "pred_sens_rms_pct_subsample": 1.6451728694605594,
+    "pred_sens_rms_pct_full_stack": 1.347995754226119,
+    "levels": {
+      "1.234": {
+        "injected_rms_pct": 1.2338796520954196,
+        "n_trials": 8,
+        "n_detected_3sig": 0,
+        "recovery_frac": 0.0,
+        "measured_rms_pct_mean": null
+      },
+      "1.645": {
+        "injected_rms_pct": 1.6451728694605594,
+        "n_trials": 8,
+        "n_detected_3sig": 8,
+        "recovery_frac": 1.0,
+        "measured_rms_pct_mean": 1.1421305114664095
+      },
+      "2.468": {
+        "injected_rms_pct": 2.467759304190839,
+        "n_trials": 8,
+        "n_detected_3sig": 8,
+        "recovery_frac": 1.0,
+        "measured_rms_pct_mean": 2.0126128314791787
+      },
+      "3.290": {
+        "injected_rms_pct": 3.290345738921119,
+        "n_trials": 8,
+        "n_detected_3sig": 8,
+        "recovery_frac": 1.0,
+        "measured_rms_pct_mean": 2.8871791429441984
+      }
+    },
+    "sensitivity_rms_pct_90": 1.6451728694605594,
+    "gate_90pct_at_2x": true,
+    "_complete": true
+  }
+}

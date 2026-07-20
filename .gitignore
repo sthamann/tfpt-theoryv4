@@ -38,6 +38,10 @@ problem_*
 experiments/pyrate/
 verification/pyrate/*.generated.txt
 
+# RXTE raw event/science files (~4.4 GB; refetched on demand by
+# experiments/hfqpo-ladder/scripts -- the small catalog/manifest/log JSONs stay tracked)
+experiments/hfqpo-ladder/data/archive/raw/
+
 # Local secrets (Zenodo token, etc.)
 .env
 

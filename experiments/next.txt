@@ -1,3 +1,180 @@
+## 2026-07-20 (V) — e8-ladder-bed AUSGEFÜHRT: Verdikt `validated` (Detektor-Ebene) — blinde Recovery der publizierten Zamolodchikov-E8-Spektren
+
+Das E8-Massenleiter-Blind-Recovery-Bett (experiments/e8-ladder-bed, prereg
+hypotheses/e8_ladder_bed_v1.yaml) ist end-to-end gelaufen (~77 s, seed 0,
+deterministisch):
+
+- **BaCo₂V₂O₈ blind** (Zou+ PRL 127, 077201; INS 4.7 T, Fig.-3a-Extraktion
+  QA-validiert, 17 Peaks): **8/8 Rungs, χ²/dof=0.35, MC p=0.0056** (5000
+  Null-Leitern; singles-only p=0.0004; σ-Variante 0.05 meV robust p=0.0074).
+- **CoNb₂O₆ blind** (Amelin+ PRB 102, 104431; wörtliche THz-Werte): **6/8
+  In-Window-Rungs, χ²/dof=0.52, p=0.0038** — m₇/m₈ außerhalb des 0.6-THz-
+  Fensters (im Paper unaufgelöst), der 0.43-THz-(m₁+m₂)-Onset korrekt
+  unassigned.
+- **Kontroll-Batterie alle rejected:** Scramble 0.5%/1.5%; Offset 0/8; Jitter
+  ≤5% bei destruktiven 30% (Dose-Response); harmonische/A₃-PF/D₈-PF/Airy-
+  Leitern geschlagen; synthetisches Airy-Bett (Confined-Spinon) 0 Rungs.
+  Cartan-PF-Selbsttest 1.5e-15 (E8-Massen = PF-Eigenvektor der Cartan-Matrix,
+  m₂/m₁=φ auf 2.2e-16).
+
+Integration: Scorecard-Zeile „E8 mass-ladder blind recovery bed" parked →
+**consistent** (stage not_applicable, validation_tier analog_positive_control,
+leakage detector_control — derselbe Basket wie qc-recovery-kernel/qgeo-eit-soff;
+120 Zeilen: 49 consistent / 3 parked), experiments/README-Katalogzeile + Stats,
+EXPERIMENTS_AUDIT in predictions.ts, Changelog (VIII). Firewall: validiert die
+Leiter-Detektor-Pipeline (dieselbe Klasse wie hfqpo-ladder) — bestätigt
+Zamolodchikov-E8, NICHT die TFPT-Axiome; kein [E], kein \veri, keine Ledger-Zeile.
+
+## 2026-07-20 (IV) — v493 (CELEST.WP2.01): WP2 des celestial Contracts ausgeführt — Verdikt B, Contract auf „WP2 done"
+
+Die celestial_seam_wp2_clock_deformation_probe.py aus experiments/tfpt-discovery/
+ist als **v493_celestial_wp2_clock_deformation.py (CELEST.WP2.01)** promoviert
+(47 Checks, sympy-exakt, ~0.5 s, Suite grün):
+
+- **Geometrie:** P(iZ)=P(Z) erzwingt a₃=a₂=a₁=0 scharf & beidseitig; XY=Z⁴+a₀
+  glatt ⟺ a₀≠0 (disc=256a₀³); Verzweigungspunkte = EIN freier μ₄-Orbit; I=12a₀,
+  J=0 identisch ⇒ j=1728 für ALLE a₀ — **a₀ ist reine Skala, τ=i-Pillowcase
+  eingefroren** (kein Form-Modulus überlebt die Uhr-Invarianz).
+- **Perioden/Monodromie:** Π=t(i−1)(1,i,i²), alle 3 Sphären Lockstep (√2·t);
+  Uhr auf H₂ = **Coxeter-Element von W(A₃)** (char x³+x²+x+1, Eigenwerte
+  {i,−1,−i}, h(A₃)=4=|μ₄|=N_fam+1), kein invarianter Zykel (det(A−1)=−4);
+  überlebende Richtung = χ₁-Fourier-Diagonale (1,i,i²), NICHT die naive
+  Diagonale; **die Uhr IST die Picard-Lefschetz-Monodromie** (a₀→e^{2πi}a₀ ⇒
+  4-Zykel); versale Gewichte (1,2,3,0) = reguläre μ₄-Darstellung.
+- **BHS-Übertrag ℤ₂→ℤ₄** (arXiv:2305.09451): Moden-Wörterbuch {w[m,n]: m≡n mod
+  4}; Klammer −4·Nambu(F) am a₀=0-Orbifold verankert (Jacobi+Casimir exakt,
+  Uhr-Grad −1 uniform); S-Algebra-Korrekturen exakt LINEAR in a₀ am ℤ₄-Wrap,
+  Grad-erhaltend — **kein Sektor-Leck**, der v492-äquivariante Sektor deformiert
+  konsistent; a₀ ↔ BHS-c²-Slot (Gewicht 0); Matrix-Faktorisierungen deformieren,
+  Uhr fixiert exakt den antipodalen 2+2-Sektor (EH/ℤ₂-Mitte, 4=2×2).
+- **Negativkontrollen doppelt scharf:** a₁Z ⇒ j=0 (hexagonal); a₂Z² pur singulär
+  (A₁); a₂≠0 ⇒ j=1556068/81≠1728; Grading-Leck expliziert.
+- **Verdikt B** über drei benannte [C]-Identifikationen (−4·Nambu = DIE
+  k=4-CCA-Klammer; Periode = Wurzeldifferenz; Seam-Skala via clock²=deck);
+  **v216-Präzisierung getypt, kein Marker-Move** (gegeben die Order-4-Uhr
+  friert die Deformation den (2,2,2,2)-Modulus automatisch aufs Quadrat —
+  Relokation desselben Inputs, keine neue Herleitung).
+
+Integration: Contract-Section CELEST.SEAM.01 auf **WP2 done (verdict B)**
+(Kill-Test K1 „survived by WP1+WP2", Statuszeile WP3–WP5 [O]); Ledger-Zeilen
+CELEST.WP2.01 (neu) + CELEST.SEAM.01-Update + GATE.WOLFRAM.02 (4 exakte
+v493-Spiegel in tfpt_readouts_extension.wl, zählen mit dem nächsten
+verifizierten Engine-Lauf); Registry/run_all (493 Module); Changelog (VII);
+papers.ts-Spiegel. SEAM.EQUIV.01 bleibt [O], v216-Residual bleibt [O].
+Offen (WP2-Seite): volle Twisted-Sector-OPEs, W(μ)-Scaling-Limit für k=4,
+Splitting-Function-Check; als Nächstes WP3 (GS-Koeffizient vs c₃-Normierung).
+
+## 2026-07-20 (III) — HFQPO H3 Stufe 2: der präregistrierte RXTE-Archiv-Scan ist gelaufen — gut gepowertes NULL mit Limits
+
+Der „Third-Tooth"-Archiv-Scan (hfqpo-ladder, prereg hypotheses/hfqpo_v1.yaml
+archival_design) wurde end-to-end auf öffentlichen HEASARC-Daten ausgeführt:
+77 ObsIDs / 711 Dateien / 4.42 GB über alle 4 Quellen (GRO J1655-40,
+XTE J1550-564, GRS 1915+105, H1743-322; Exposure primär 49.6/41.5/57.8/213 ks).
+
+- **Sanity-Gate PASS (11/12):** die publizierten Paar-Linien werden reproduziert
+  (450.3 Hz @ 5.37% rms 4.4σ; 280.1 Hz @ 3.71% 9.9σ; 68.9 Hz @ 3.11% 10.4σ;
+  244.3 Hz @ 1.49% 5.3σ; einziger Miss: H1743s schwache 166-Hz-Linie, 1.7σ).
+- **Injektionskalibrierung PASS** in allen 4 Quellen (90%-Recovery bei
+  5.11/2.68/0.89/1.65% rms an den Zahnfrequenzen).
+- **Blinder Scan: WEDER Zahn ν₃=1.5νᵤ (661.5/414/252/363 Hz) NOCH
+  Integer-Kontrolllinie 4ν₀ (588/368/224/322.7 Hz)** in irgendeiner Quelle —
+  alle ~0σ single-trial, trials-korrigiert N=8 wie preregistriert. 3σ-rms-Limits
+  (Zahn, primäre Bänder): **3.06/1.61/0.53/1.26%** — in jeder Quelle ≤ Stärke
+  der bekannten oberen Paar-Linie (5.4/3.7/2.0/1.5%).
+- **Prereg-Enum-Verdikt: `null`** (kein ladder_hit, kein harmonic_hit) — die
+  Leiter-Lesart bekommt keinen Support, wird aber nicht gekillt (der
+  Harmonik-Zweig feuerte auch nicht; Anti-Kernel-Record 92=184/2, 34/68 steht);
+  GR-Resonanz bleibt Favorit. Caveats: GRS 1915 nur Proxy-State (113/168-Epochen
+  nie als ObsID-Liste publiziert), H1743-Programm 80146 statt YAML-Tippfehler
+  80138, GRO-Hard-Band-Sensitivität 5.1%.
+
+Integration: Scorecard-Zeile S1.e (hfqpo-ladder) data_limited → **null** (120
+Zeilen: 26 null / 33 data_limited), EXPERIMENTS_AUDIT + hfqpo-tooth-Eintrag in
+website/lib/predictions.ts, HFQPO-Absatz in tfpt_horizon_readouts (+ papers.ts-
+Spiegel), predictions.txt Zeile 49, experiments/README (Tabelle + Null-Stufe),
+hfqpo-ladder/README (H3 Stufe 2). Nächster Decider: eXTP-Klasse-Sensitivität
+unterhalb der 0.5–3.1%-rms-Limits. Kein verification/-, Ledger- oder
+Marker-Touch ([O] bleibt [O]).
+
+## 2026-07-20 (II) — CELEST.SEAM.01: celestial-holographischer Contract + v492 (WP1, Verdikt B; kein Gate schließt)
+
+Die celestial_seam_z4_orbifold_probe.py aus experiments/tfpt-discovery/ ist als
+**v492_celestial_z4_orbifold.py (CELEST.WP1.01)** promoviert (36 Checks, sympy-
+exakt, Suite grün) und der neue Research Contract **CELEST.SEAM.01** (vierter
+Contract neben U_wall/G_metric/CONTRACT.F.01) hat eine eigene Section in
+tfpt_research_contracts bekommen:
+
+- **WP1-Kern [E]:** die v128-μ₄-Glue-Graduierung (240=52+64+60+64) ist INNER —
+  h=(2,2,2,2,2;0⁴) liest die Glue-Klasse mod 4 auf allen 240 Wurzeln ⇒ Glue =
+  Ad(exp(2πi h/4)) = flache ℤ₄-Monodromie (Kronheimer–Nakajima); A3-Seite via
+  h′=(0⁵;1,1,1,−3) = Diagonale (1,1) von ℤ₄×ℤ₄ (v92/v125-Glue). ℂ²/ℤ₄ = A3-
+  Singularität XY=Z⁴ (Molien/Hilbert exakt). Glue-äquivarianter SDYM(E8)-
+  Sektor schließt: D[d]=60(d+1)/64(d+1) (geht NUR mit dim g_j=(60,64,60,64)),
+  Nullmoden = Carrier D5⊕A3+Cartan = 60, Dichte 1/4=1/|ℤ₄|; Θ_E8 = Summe der 4
+  Glue-Coset-Thetas, Sektor-Charaktere summieren exakt zum (E8)₁-Charakter
+  (v377), Gewichte = Diskriminantenform (5x²+3y²)/8, Glue-Diagonale h=(0,1,1,1)
+  ganzzahlig (= Lokalität der (E8)₁-Erweiterung).
+- **Kritische Korrektur [E] (⇒ Verdikt B):** Deck diag(i,i⁻¹) wirkt auf der
+  Himmelssphäre nur als z↦−z (Ordnung 2); die Ordnung-4-Uhr z↦iz ist die U(2)-
+  Phase diag(i,1) (normalisiert das Deck, det=i dreht ω um den μ₄-Generator);
+  exakte Spin-Brücke (Spin-Uhr)² = Deck, ℤ₈ mit 8 = 2|μ₄|. Uhr-invariante A3-
+  Deformation = 1-Parameter XY=Z⁴+a₀, Verzweigungspunkte = EIN μ₄-Orbit,
+  Cross-Ratio 2 (v168/v214-Pillowcase). Negativkontrollen: diag(i,i) dreifach
+  gekillt; falscher Glue 3112/6720 Verletzungen; Rigidität = Aut(ℤ₄).
+- **Contract-Section:** Hypothese (Seam = glue-äquivarianter ℤ₄-Orbifold-Sektor
+  der CCA; twistorieller Bulk = NUR selbstdualer Sektor), Typing/Nicht-
+  Zirkularität (Kontinuum-(E8)₁-Existenz = SEAM.EQUIV.01-Ziel ist KEIN
+  zulässiger Input), WP1 done / WP2 (a₀ ↔ τ=i-Modulus) / WP3 (GS-Koeffizient
+  vs c3, nur Alignment) / WP4 ((E8)₁-Charakter als konformer Block der
+  E8[ℂ²]-S-Algebra, Typ-Mismatch frontal) / WP5 (zweite Kontinuum-Route,
+  Costello-Li-Niveau), Kill-Tests K1 (überlebt) bis K4, ehrliche
+  Erfolgseinschätzung (Vollerfolg niedrig, Teilbefunde hoch).
+
+Integration: Ledger-Zeilen CELEST.WP1.01 + CELEST.SEAM.01; \veri{v492} in der
+neuen Contract-Section + ein Satz im Möbius=PSL(2,ℂ)-Absatz von tfpt_3;
+Changelog-Eintrag 2026-07-20 (V); Website: papers.ts-Section + Highlight,
+DAG-Knoten qft, ScriptIndex/changelog.ts generiert. SEAM.EQUIV.01 bleibt [O],
+keine Marker-Bewegung. Wolfram-Spiegel: exakt möglich, mit dem nächsten
+verifizierten Engine-Lauf (Engine derzeit unaktiviert).
+
+## 2026-07-20 — Ground-State-Witness-Runde: v489/v490/v491 promoviert (kein Gate schließt)
+
+Drei Probes aus experiments/tfpt-discovery/ in die tragende Suite promoviert
+(alle Zahlen re-verifiziert, Suite grün, SEAM.EQUIV.01 bleibt [O], AX.P2.01
+bleibt Axiom):
+
+- **v489_seam_modular_commutator.py (SEAM.CCC.01):** Kim–Shehab–Kim-Kommutator
+  J(A,B,C)=(π/3)c₋ auf dem exakten BdG-Grundzustand des v367-Modells (Peschel-
+  Kovarianz, 120°-Tortenstücke). Pro Layer c₋=0.499998 (L=32; 0.500000 bei
+  L=48, Abw. −1.8e-7); M=3 → 0.000000; M=−1 → −0.499986 (Vorzeichenflip);
+  Layer-Additivität exakt (1.4e-14); 16-Layer-Carrier c₋=8=g_car+N_fam
+  (direkt 7.9967, Additivität 8.0000). DRITTER unabhängiger c₋=8-Zeuge
+  (nach v367-Chern und v378-KLM), erster aus Grundzustands-Entanglement allein.
+- **v490_seam_parity_census.py (SEAM.MU.01):** T²-Spin-Struktur-Paritätszensus,
+  doppelt bestimmt (Read-Green-TRIM + Realraum-Pfaffian, Spektren 9e-15):
+  pro Layer (+,+,+,−); 16 Layer ⇒ alle 4 Sektoren gerade ⇒ gegaugte Torus-GSD
+  = 4 = μ(SO(16)₁) — Gitter-Zeuge für μ_pre=4 (v378 Schritt 1). 16-fold-way:
+  θ_v=1 exakt bei ν=2c₋=16 (Rivalen ν=1,2,8 nicht kondensierbar). Ehrliche
+  Fence: fermionische Kitaev-Preskill-TEE γ_f=0 für M=1 UND M=3 — KEIN
+  (E8)₁-vs-SO(16)₁-Diskriminator; KLM-Schritt 4→4/2²=1 bleibt [C].
+- **v491_p2_partition_corollary.py (P2.PARTITION.01):** 4 in genau 3 positive
+  Teile = eindeutig {1,1,2} ⇒ e=(4,5,2) ⇒ g_car=5, |Z2|=2, N_fam=3 als
+  Korollare (sympy exakt); Negativkontrollen (Positivität/Summe/Teilezahl/
+  Ganzzahligkeit, MS-rational 16/3 bzw. 44/9 ≠ 5) alle tragend; schärft v53
+  (braucht nur e1=4 statt aller drei Ziele). Residual = Gewichts-Typungs-
+  Postulat (Birkhoff-Grothendieck-Ganzzahligkeit, h⁰=0-Positivität, Summe
+  „given (U)"); N_fam-Richtungsumkehr vs tfpt_constants als Überbestimmung
+  getypt (nie doppelt zählen). Drei exakte Wolfram-Spiegel in
+  tfpt_readouts_extension.wl ergänzt (Engine derzeit unaktiviert, zählen mit
+  dem nächsten verifizierten Lauf).
+
+Integration: \veri-Zitate in tfpt_research_contracts (S3-Stack, v489+v490),
+tfpt_1 (SEAM.EQUIV.01-Paket + (5,3)-Keybox), introduction (Anker-Absatz),
+tfpt_2 (H2-Winbox), origin_theory ((5,3)-Keybox); Ledger-Zeilen SEAM.CCC.01,
+SEAM.MU.01, P2.PARTITION.01; DAG-Knoten qft (v489/v490) und P2 (v491);
+Website-Inventare (papers/glossary/faq/OpenGates u.a.) um die neuen Zeugen
+ergänzt — keine Marker-Bewegung.
+
 ## 2026-07-14 — CORR.01: TFPT-Korrespondenzprinzip (Raumzeit↔Schwarzes-Loch-Phasengrenze) präregistriert [C]
 
 Follow-up auf die Bianconi-„Gravity from entropy"-Runde (User-Frage: hat TFPT

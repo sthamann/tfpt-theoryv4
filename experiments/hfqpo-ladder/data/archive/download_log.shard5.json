@@ -1,0 +1,623 @@
+{
+ "files": {
+  "10255-01-04-00/FS37_4db9f50-4dba5d0.gz": {
+   "bytes": 2328505,
+   "source": "GRO_J1655-40",
+   "group": "T300_epochs"
+  },
+  "10255-01-04-00/FS37_4dbb160-4dbbdb8.gz": {
+   "bytes": 4452004,
+   "source": "GRO_J1655-40",
+   "group": "T300_epochs"
+  },
+  "10255-01-04-00/FS37_4dbc7e0-4dbd5a0.gz": {
+   "bytes": 5016351,
+   "source": "GRO_J1655-40",
+   "group": "T300_epochs"
+  },
+  "10255-01-04-00/FS37_4dbde60-4dbe158.gz": {
+   "bytes": 1147904,
+   "source": "GRO_J1655-40",
+   "group": "T300_epochs"
+  },
+  "10255-01-04-00/FS3b_4db9f50-4dba5d6.gz": {
+   "bytes": 17185301,
+   "source": "GRO_J1655-40",
+   "group": "T300_epochs"
+  },
+  "10255-01-04-00/FS3b_4dbb160-4dbbdbe.gz": {
+   "bytes": 32414648,
+   "source": "GRO_J1655-40",
+   "group": "T300_epochs"
+  },
+  "10255-01-04-00/FS3b_4dbc7e0-4dbd5a6.gz": {
+   "bytes": 38302829,
+   "source": "GRO_J1655-40",
+   "group": "T300_epochs"
+  },
+  "10255-01-04-00/FS3b_4dbde60-4dbe15e.gz": {
+   "bytes": 10499891,
+   "source": "GRO_J1655-40",
+   "group": "T300_epochs"
+  },
+  "10255-01-04-00/FS3f_4db9f60-4dba5d6.gz": {
+   "bytes": 10664102,
+   "source": "GRO_J1655-40",
+   "group": "T300_epochs"
+  },
+  "10255-01-04-00/FS3f_4dbb160-4dbbdbe.gz": {
+   "bytes": 20395732,
+   "source": "GRO_J1655-40",
+   "group": "T300_epochs"
+  },
+  "10255-01-04-00/FS3f_4dbc7e0-4dbd5a6.gz": {
+   "bytes": 23363347,
+   "source": "GRO_J1655-40",
+   "group": "T300_epochs"
+  },
+  "10255-01-04-00/FS3f_4dbde60-4dbe15e.gz": {
+   "bytes": 5475210,
+   "source": "GRO_J1655-40",
+   "group": "T300_epochs"
+  },
+  "10255-01-04-00/FS4f_4db9f60-4dba5d6.gz": {
+   "bytes": 278326,
+   "source": "GRO_J1655-40",
+   "group": "T300_epochs"
+  },
+  "10255-01-04-00/FS4f_4dbb160-4dbbdbd.gz": {
+   "bytes": 528858,
+   "source": "GRO_J1655-40",
+   "group": "T300_epochs"
+  },
+  "10255-01-04-00/FS4f_4dbc7e0-4dbd5a6.gz": {
+   "bytes": 593589,
+   "source": "GRO_J1655-40",
+   "group": "T300_epochs"
+  },
+  "10255-01-04-00/FS4f_4dbde60-4dbe15e.gz": {
+   "bytes": 135954,
+   "source": "GRO_J1655-40",
+   "group": "T300_epochs"
+  },
+  "10255-01-04-00/SE2_4db9f5e-4dba5d6.evt.gz": {
+   "bytes": 18437398,
+   "source": "GRO_J1655-40",
+   "group": "T300_epochs"
+  },
+  "10255-01-04-00/SE2_4dbb160-4dbbdbe.evt.gz": {
+   "bytes": 34720689,
+   "source": "GRO_J1655-40",
+   "group": "T300_epochs"
+  },
+  "10255-01-04-00/SE2_4dbc7e0-4dbd5a6.evt.gz": {
+   "bytes": 41314856,
+   "source": "GRO_J1655-40",
+   "group": "T300_epochs"
+  },
+  "10255-01-04-00/SE2_4dbde60-4dbe15e.evt.gz": {
+   "bytes": 11729657,
+   "source": "GRO_J1655-40",
+   "group": "T300_epochs"
+  },
+  "40401-01-51-00/FS37_9bb0c70-9bb1278.gz": {
+   "bytes": 1935451,
+   "source": "XTE_J1550-564",
+   "group": "hard_280"
+  },
+  "40401-01-51-00/FS3b_9bb0c70-9bb1278.gz": {
+   "bytes": 6232298,
+   "source": "XTE_J1550-564",
+   "group": "hard_280"
+  },
+  "40401-01-51-00/FS3f_9bb0c70-9bb1278.gz": {
+   "bytes": 5006837,
+   "source": "XTE_J1550-564",
+   "group": "hard_280"
+  },
+  "40401-01-51-00/FS4f_9bb0c80-9bb1278.gz": {
+   "bytes": 2881773,
+   "source": "XTE_J1550-564",
+   "group": "hard_280"
+  },
+  "40401-01-51-00/SE2_9bb0c81-9bb1278.evt.gz": {
+   "bytes": 5750395,
+   "source": "XTE_J1550-564",
+   "group": "hard_280"
+  },
+  "40401-01-53-00/FS37_9becd3a-9bed818.gz": {
+   "bytes": 3378951,
+   "source": "XTE_J1550-564",
+   "group": "total_180"
+  },
+  "40401-01-53-00/FS3b_9becd3a-9bed818.gz": {
+   "bytes": 13317816,
+   "source": "XTE_J1550-564",
+   "group": "total_180"
+  },
+  "40401-01-53-00/FS3f_9becd3a-9bed818.gz": {
+   "bytes": 8449379,
+   "source": "XTE_J1550-564",
+   "group": "total_180"
+  },
+  "40401-01-53-00/FS4f_9becd3a-9bed818.gz": {
+   "bytes": 5440548,
+   "source": "XTE_J1550-564",
+   "group": "total_180"
+  },
+  "40401-01-53-00/SE2_9becd3a-9bed818.evt.gz": {
+   "bytes": 12587640,
+   "source": "XTE_J1550-564",
+   "group": "total_180"
+  },
+  "20402-01-38-00/FS37_6ad2740-6ad3360.gz": {
+   "bytes": 4128347,
+   "source": "GRS_1915+105",
+   "group": "gamma_1997_41_69"
+  },
+  "20402-01-38-00/FS37_6ad3dc0-6ad4a98.gz": {
+   "bytes": 4419987,
+   "source": "GRS_1915+105",
+   "group": "gamma_1997_41_69"
+  },
+  "20402-01-38-00/FS37_6ad5440-6ad58e0.gz": {
+   "bytes": 1608587,
+   "source": "GRS_1915+105",
+   "group": "gamma_1997_41_69"
+  },
+  "20402-01-38-00/FS3b_6ad2750-6ad3367.gz": {
+   "bytes": 11464490,
+   "source": "GRS_1915+105",
+   "group": "gamma_1997_41_69"
+  },
+  "20402-01-38-00/FS3b_6ad3dd0-6ad4a9b.gz": {
+   "bytes": 12192913,
+   "source": "GRS_1915+105",
+   "group": "gamma_1997_41_69"
+  },
+  "20402-01-38-00/FS3b_6ad5440-6ad58e7.gz": {
+   "bytes": 4656790,
+   "source": "GRS_1915+105",
+   "group": "gamma_1997_41_69"
+  },
+  "20402-01-38-00/FS3f_6ad2750-6ad3367.gz": {
+   "bytes": 8875609,
+   "source": "GRS_1915+105",
+   "group": "gamma_1997_41_69"
+  },
+  "20402-01-38-00/FS3f_6ad3dd0-6ad4a9a.gz": {
+   "bytes": 9490431,
+   "source": "GRS_1915+105",
+   "group": "gamma_1997_41_69"
+  },
+  "20402-01-38-00/FS3f_6ad5450-6ad58e7.gz": {
+   "bytes": 3437819,
+   "source": "GRS_1915+105",
+   "group": "gamma_1997_41_69"
+  },
+  "20402-01-38-00/FS4f_6ad2750-6ad3367.gz": {
+   "bytes": 9363088,
+   "source": "GRS_1915+105",
+   "group": "gamma_1997_41_69"
+  },
+  "20402-01-38-00/FS4f_6ad3dc0-6ad4a9b.gz": {
+   "bytes": 10039448,
+   "source": "GRS_1915+105",
+   "group": "gamma_1997_41_69"
+  },
+  "20402-01-38-00/FS4f_6ad5440-6ad58e8.gz": {
+   "bytes": 3670159,
+   "source": "GRS_1915+105",
+   "group": "gamma_1997_41_69"
+  },
+  "20402-01-38-00/SE2_6ad2775-6ad3367.evt.gz": {
+   "bytes": 11558927,
+   "source": "GRS_1915+105",
+   "group": "gamma_1997_41_69"
+  },
+  "20402-01-38-00/SE2_6ad3dd0-6ad4a9b.evt.gz": {
+   "bytes": 12297536,
+   "source": "GRS_1915+105",
+   "group": "gamma_1997_41_69"
+  },
+  "20402-01-38-00/SE2_6ad5440-6ad58e7.evt.gz": {
+   "bytes": 4755932,
+   "source": "GRS_1915+105",
+   "group": "gamma_1997_41_69"
+  },
+  "10408-01-06-00/FS37_467f766-46804f8.gz": {
+   "bytes": 4191904,
+   "source": "GRS_1915+105",
+   "group": "gamma_1996_67"
+  },
+  "10408-01-06-00/FS37_4680db0-4681b78.gz": {
+   "bytes": 4282443,
+   "source": "GRS_1915+105",
+   "group": "gamma_1996_67"
+  },
+  "10408-01-06-00/FS37_4682430-4682fa0.gz": {
+   "bytes": 3553843,
+   "source": "GRS_1915+105",
+   "group": "gamma_1996_67"
+  },
+  "10408-01-06-00/FS3b_467f766-46804fa.gz": {
+   "bytes": 13246094,
+   "source": "GRS_1915+105",
+   "group": "gamma_1996_67"
+  },
+  "10408-01-06-00/FS3b_4680db0-4681b7a.gz": {
+   "bytes": 13686199,
+   "source": "GRS_1915+105",
+   "group": "gamma_1996_67"
+  },
+  "10408-01-06-00/FS3b_4682430-4682fa2.gz": {
+   "bytes": 11330857,
+   "source": "GRS_1915+105",
+   "group": "gamma_1996_67"
+  },
+  "10408-01-06-00/FS3f_467f766-46804fa.gz": {
+   "bytes": 17983752,
+   "source": "GRS_1915+105",
+   "group": "gamma_1996_67"
+  },
+  "10408-01-06-00/FS3f_4680dc0-4681b7a.gz": {
+   "bytes": 18307098,
+   "source": "GRS_1915+105",
+   "group": "gamma_1996_67"
+  },
+  "10408-01-06-00/FS3f_4682440-4682fa2.gz": {
+   "bytes": 15132963,
+   "source": "GRS_1915+105",
+   "group": "gamma_1996_67"
+  },
+  "10408-01-06-00/FS4f_467f766-46804fa.gz": {
+   "bytes": 481818,
+   "source": "GRS_1915+105",
+   "group": "gamma_1996_67"
+  },
+  "10408-01-06-00/FS4f_4680db0-4681b7a.gz": {
+   "bytes": 491574,
+   "source": "GRS_1915+105",
+   "group": "gamma_1996_67"
+  },
+  "10408-01-06-00/FS4f_4682430-4682fa2.gz": {
+   "bytes": 407991,
+   "source": "GRS_1915+105",
+   "group": "gamma_1996_67"
+  },
+  "10408-01-06-00/SE2_467f766-46804fa.evt.gz": {
+   "bytes": 11643104,
+   "source": "GRS_1915+105",
+   "group": "gamma_1996_67"
+  },
+  "10408-01-06-00/SE2_4680db0-4681b7a.evt.gz": {
+   "bytes": 12080195,
+   "source": "GRS_1915+105",
+   "group": "gamma_1996_67"
+  },
+  "10408-01-06-00/SE2_4682430-4682fa2.evt.gz": {
+   "bytes": 9995661,
+   "source": "GRS_1915+105",
+   "group": "gamma_1996_67"
+  },
+  "80146-01-06-00/FS37_117f5730-117f5c04.gz": {
+   "bytes": 1656360,
+   "source": "H1743-322",
+   "group": "q_high_166"
+  },
+  "80146-01-06-00/FS37_117f66a0-117f73ec.gz": {
+   "bytes": 4574439,
+   "source": "H1743-322",
+   "group": "q_high_166"
+  },
+  "80146-01-06-00/FS37_117f7ce0-117f8b98.gz": {
+   "bytes": 4776483,
+   "source": "H1743-322",
+   "group": "q_high_166"
+  },
+  "80146-01-06-00/FS37_117f92f0-117fa1dc.gz": {
+   "bytes": 4801671,
+   "source": "H1743-322",
+   "group": "q_high_166"
+  },
+  "80146-01-06-00/FS37_117fa9f0-117fb820.gz": {
+   "bytes": 4854847,
+   "source": "H1743-322",
+   "group": "q_high_166"
+  },
+  "80146-01-06-00/FS3b_117f5730-117f5c08.gz": {
+   "bytes": 3243172,
+   "source": "H1743-322",
+   "group": "q_high_166"
+  },
+  "80146-01-06-00/FS3b_117f66a0-117f73f0.gz": {
+   "bytes": 8751042,
+   "source": "H1743-322",
+   "group": "q_high_166"
+  },
+  "80146-01-06-00/FS3b_117f7cf0-117f8b9c.gz": {
+   "bytes": 7658384,
+   "source": "H1743-322",
+   "group": "q_high_166"
+  },
+  "80146-01-06-00/FS3b_117f92f0-117fa1e0.gz": {
+   "bytes": 7573199,
+   "source": "H1743-322",
+   "group": "q_high_166"
+  },
+  "80146-01-06-00/FS3b_117fa9f0-117fb824.gz": {
+   "bytes": 8289386,
+   "source": "H1743-322",
+   "group": "q_high_166"
+  },
+  "80146-01-06-00/FS3f_117f5730-117f5c08.gz": {
+   "bytes": 2543911,
+   "source": "H1743-322",
+   "group": "q_high_166"
+  },
+  "80146-01-06-00/FS3f_117f66a0-117f73f0.gz": {
+   "bytes": 7073349,
+   "source": "H1743-322",
+   "group": "q_high_166"
+  },
+  "80146-01-06-00/FS3f_117f7cf0-117f8b9c.gz": {
+   "bytes": 7185469,
+   "source": "H1743-322",
+   "group": "q_high_166"
+  },
+  "80146-01-06-00/FS3f_117f92f0-117fa1e0.gz": {
+   "bytes": 7233595,
+   "source": "H1743-322",
+   "group": "q_high_166"
+  },
+  "80146-01-06-00/FS3f_117fa9f0-117fb824.gz": {
+   "bytes": 7482695,
+   "source": "H1743-322",
+   "group": "q_high_166"
+  },
+  "80146-01-06-00/FS4f_117f5730-117f5c08.gz": {
+   "bytes": 2337538,
+   "source": "H1743-322",
+   "group": "q_high_166"
+  },
+  "80146-01-06-00/FS4f_117f66a0-117f73f0.gz": {
+   "bytes": 6416942,
+   "source": "H1743-322",
+   "group": "q_high_166"
+  },
+  "80146-01-06-00/FS4f_117f7ce0-117f8b9c.gz": {
+   "bytes": 6069840,
+   "source": "H1743-322",
+   "group": "q_high_166"
+  },
+  "80146-01-06-00/FS4f_117f92f0-117fa1e0.gz": {
+   "bytes": 6024786,
+   "source": "H1743-322",
+   "group": "q_high_166"
+  },
+  "80146-01-06-00/FS4f_117fa9f0-117fb824.gz": {
+   "bytes": 6328776,
+   "source": "H1743-322",
+   "group": "q_high_166"
+  },
+  "80146-01-06-00/SE2_117f5730-117f5c08.evt.gz": {
+   "bytes": 2628164,
+   "source": "H1743-322",
+   "group": "q_high_166"
+  },
+  "80146-01-06-00/SE2_117f66a0-117f73f0.evt.gz": {
+   "bytes": 7047789,
+   "source": "H1743-322",
+   "group": "q_high_166"
+  },
+  "80146-01-06-00/SE2_117f7cf0-117f8b9c.evt.gz": {
+   "bytes": 5690168,
+   "source": "H1743-322",
+   "group": "q_high_166"
+  },
+  "80146-01-06-00/SE2_117f92f0-117fa1e0.evt.gz": {
+   "bytes": 5584026,
+   "source": "H1743-322",
+   "group": "q_high_166"
+  },
+  "80146-01-06-00/SE2_117fa9f0-117fb824.evt.gz": {
+   "bytes": 6524145,
+   "source": "H1743-322",
+   "group": "q_high_166"
+  },
+  "80146-01-49-00/FS37_11ad2d20-11ad3ae8.gz": {
+   "bytes": 4925500,
+   "source": "H1743-322",
+   "group": "q_high_166"
+  },
+  "80146-01-49-00/FS37_11ad4330-11ad50f4.gz": {
+   "bytes": 4525445,
+   "source": "H1743-322",
+   "group": "q_high_166"
+  },
+  "80146-01-49-00/FS3b_11ad2d30-11ad3aec.gz": {
+   "bytes": 8606903,
+   "source": "H1743-322",
+   "group": "q_high_166"
+  },
+  "80146-01-49-00/FS3b_11ad4330-11ad50f4.gz": {
+   "bytes": 6890994,
+   "source": "H1743-322",
+   "group": "q_high_166"
+  },
+  "80146-01-49-00/FS3f_11ad2d30-11ad3aec.gz": {
+   "bytes": 7867013,
+   "source": "H1743-322",
+   "group": "q_high_166"
+  },
+  "80146-01-49-00/FS3f_11ad4330-11ad50f4.gz": {
+   "bytes": 7041922,
+   "source": "H1743-322",
+   "group": "q_high_166"
+  },
+  "80146-01-49-00/FS4f_11ad2cb0-11ad2d18.gz": {
+   "bytes": 140728,
+   "source": "H1743-322",
+   "group": "q_high_166"
+  },
+  "80146-01-49-00/FS4f_11ad2d30-11ad3aec.gz": {
+   "bytes": 6416496,
+   "source": "H1743-322",
+   "group": "q_high_166"
+  },
+  "80146-01-49-00/FS4f_11ad4330-11ad50f5.gz": {
+   "bytes": 5475234,
+   "source": "H1743-322",
+   "group": "q_high_166"
+  },
+  "80146-01-49-00/SE2_11ad2d30-11ad3aec.evt.gz": {
+   "bytes": 6957339,
+   "source": "H1743-322",
+   "group": "q_high_166"
+  },
+  "80146-01-49-00/SE2_11ad4330-11ad50f4.evt.gz": {
+   "bytes": 5021868,
+   "source": "H1743-322",
+   "group": "q_high_166"
+  },
+  "80146-01-49-00/SE7_11ad2cb0-11ad2d18.evt.gz": {
+   "bytes": 126386,
+   "source": "H1743-322",
+   "group": "q_high_166"
+  },
+  "80146-01-11-00/FS37_1180b3b0-1180c080.gz": {
+   "bytes": 4384010,
+   "source": "H1743-322",
+   "group": "q_low_242"
+  },
+  "80146-01-11-00/FS3b_1180b3b0-1180c084.gz": {
+   "bytes": 6977921,
+   "source": "H1743-322",
+   "group": "q_low_242"
+  },
+  "80146-01-11-00/FS3f_1180b3b0-1180c084.gz": {
+   "bytes": 6811944,
+   "source": "H1743-322",
+   "group": "q_low_242"
+  },
+  "80146-01-11-00/FS4f_1180b3b0-1180c084.gz": {
+   "bytes": 5584040,
+   "source": "H1743-322",
+   "group": "q_low_242"
+  },
+  "80146-01-11-00/SE2_1180b3b0-1180c084.evt.gz": {
+   "bytes": 5341464,
+   "source": "H1743-322",
+   "group": "q_low_242"
+  },
+  "80146-01-26-00/FS37_119065b8-11907084.gz": {
+   "bytes": 3902947,
+   "source": "H1743-322",
+   "group": "q_low_242"
+  },
+  "80146-01-26-00/FS3b_119065b8-11907088.gz": {
+   "bytes": 5667532,
+   "source": "H1743-322",
+   "group": "q_low_242"
+  },
+  "80146-01-26-00/FS3f_119065a0-11907088.gz": {
+   "bytes": 6417048,
+   "source": "H1743-322",
+   "group": "q_low_242"
+  },
+  "80146-01-26-00/FS4f_119065a0-11907088.gz": {
+   "bytes": 4981536,
+   "source": "H1743-322",
+   "group": "q_low_242"
+  },
+  "80146-01-26-00/SE2_119065b8-11907088.evt.gz": {
+   "bytes": 4266097,
+   "source": "H1743-322",
+   "group": "q_low_242"
+  },
+  "80146-01-52-01/FS37_11b6738c-11b681d8.gz": {
+   "bytes": 4442338,
+   "source": "H1743-322",
+   "group": "q_low_242"
+  },
+  "80146-01-52-01/FS3b_11b6738c-11b681d8.gz": {
+   "bytes": 5786992,
+   "source": "H1743-322",
+   "group": "q_low_242"
+  },
+  "80146-01-52-01/FS3f_11b6738c-11b681d8.gz": {
+   "bytes": 6838453,
+   "source": "H1743-322",
+   "group": "q_low_242"
+  },
+  "80146-01-52-01/FS4f_11b6738c-11b681d8.gz": {
+   "bytes": 4908993,
+   "source": "H1743-322",
+   "group": "q_low_242"
+  },
+  "80146-01-52-01/SE2_11b6738c-11b681d8.evt.gz": {
+   "bytes": 3886456,
+   "source": "H1743-322",
+   "group": "q_low_242"
+  },
+  "80146-01-64-00/FS37_11c18eb3-11c19c1c.gz": {
+   "bytes": 4343004,
+   "source": "H1743-322",
+   "group": "q_low_242"
+  },
+  "80146-01-64-00/FS37_11c1a330-11c1aaa4.gz": {
+   "bytes": 2196077,
+   "source": "H1743-322",
+   "group": "q_low_242"
+  },
+  "80146-01-64-00/FS3b_11c18eb3-11c19c1c.gz": {
+   "bytes": 5812946,
+   "source": "H1743-322",
+   "group": "q_low_242"
+  },
+  "80146-01-64-00/FS3b_11c1a330-11c1aaa4.gz": {
+   "bytes": 2670091,
+   "source": "H1743-322",
+   "group": "q_low_242"
+  },
+  "80146-01-64-00/FS3f_11c18eb3-11c19c1c.gz": {
+   "bytes": 7023090,
+   "source": "H1743-322",
+   "group": "q_low_242"
+  },
+  "80146-01-64-00/FS3f_11c1a330-11c1aaa4.gz": {
+   "bytes": 3417562,
+   "source": "H1743-322",
+   "group": "q_low_242"
+  },
+  "80146-01-64-00/FS4f_11c18ea0-11c19c1c.gz": {
+   "bytes": 4676719,
+   "source": "H1743-322",
+   "group": "q_low_242"
+  },
+  "80146-01-64-00/FS4f_11c1a330-11c1aaa5.gz": {
+   "bytes": 2159026,
+   "source": "H1743-322",
+   "group": "q_low_242"
+  },
+  "80146-01-64-00/SE2_11c18eb3-11c19c1c.evt.gz": {
+   "bytes": 4155538,
+   "source": "H1743-322",
+   "group": "q_low_242"
+  },
+  "80146-01-64-00/SE2_11c1a330-11c1aaa4.evt.gz": {
+   "bytes": 1674122,
+   "source": "H1743-322",
+   "group": "q_low_242"
+  }
+ },
+ "errors": [
+  {
+   "obsid": "80146-01-57-01",
+   "stage": "list",
+   "err": "HTTP Error 404: Not Found"
+  }
+ ],
+ "total_bytes": 917413748,
+ "aborted_over_gate": false
+}

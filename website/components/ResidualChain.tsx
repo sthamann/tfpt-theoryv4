@@ -111,7 +111,7 @@ const STEPS: Step[] = [
   {
     tag: "v335–v379",
     head: "Closed modulo cited theorems",
-    sub: "QGEO.SYM.01 = a corollary of SEAM.EQUIV.01 (v335); the gapped lattice model (v367/v368) + the S3 stack (v376–v379), Lean-pinned MMST",
+    sub: "QGEO.SYM.01 = a corollary of SEAM.EQUIV.01 (v335); the gapped lattice model (v367/v368) + the S3 stack (v376–v379, ground-state witnesses v489/v490), Lean-pinned MMST",
     tone: "green",
     scripts: ["v335_seam_equiv_unify.py", "v367_seam_s3_lattice.py", "v379_seam_s3_rp.py"],
   },

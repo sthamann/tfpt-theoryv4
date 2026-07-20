@@ -261,12 +261,12 @@ const AUDIT_ROUNDS: AuditRound[] = [
  * without coupling the static build to the experiments tree.
  */
 export const EXPERIMENTS_AUDIT = {
-  rows: 114,
-  consistent: 47,
+  rows: 120,
+  consistent: 49,
   tension: 9,
-  null: 24,
+  null: 26,
   dataLimited: 33,
-  parked: 1,
+  parked: 3,
   repoPath: "experiments",
   readmePath: "experiments/README.md",
   scorecardPath: "experiments/evidence_scorecard.json",
@@ -1157,7 +1157,7 @@ export const predictions: Prediction[] = [
   {
     id: "hfqpo-tooth",
     slug: "hfqpo-ladder-tooth",
-    title: "BH HFQPO Third Tooth — the Never-Run ×1.5 Ladder Search",
+    title: "BH HFQPO Third Tooth — the ×1.5 Ladder Search, Now Run: a Well-Powered Null",
     shortTitle: "ν₃ = (3/2)ν_u",
     target: "third tooth at ν₃ = 1.5 ν_u (661.5 / 414 / 252 / 363 Hz); integer harmonics forbidden",
     targetLatex:
@@ -1174,22 +1174,22 @@ export const predictions: Prediction[] = [
     ],
     pdf: "/papers/tfpt_horizon_readouts.pdf",
     description:
-      "The one discriminating test in the black-hole HFQPO sector — and it has never been run: no published search ever targeted ν₃ = 1.5 ν_u, although the teeth lie inside the RXTE PCA band that was searched. The four published twin pairs (GRO J1655−40, XTE J1550−564, GRS 1915+105, H1743−322) are consistent with exactly 3:2 (χ² p = 0.78), but that cluster is CHEAP: an anchored detection-selection null reproduces it in 18.5% of trials, and XTE J1859+226 breaks universality at +9.2σ — so GR parametric resonance remains the standing favorite. TFPT's 3/2 is a relaxation-ladder step from N_fam = 3 (the same frozen kernel as the recovery combs), NOT a two-oscillator ratio — the mapping is non-canonical, which is why this is a preregistered search target [O], not a claim. The geometric ladder forbids integer harmonics; the only published third-frequency structures are integer lines (92 = 184/2 Hz, 34/68 Hz), pointing to the harmonic side. The decisive archival RXTE reanalysis (stacked PDS, Lorentzian fits at tooth vs integer line, ≥4σ after trials correction) is fully specified in the preregistration YAML and deliberately not yet run.",
+      "The one discriminating test in the black-hole HFQPO sector has now been run: no published search ever targeted ν₃ = 1.5 ν_u, so the preregistered archival RXTE PCA scan (executed 2026-07: 77 ObsIDs / 4.42 GB across all four sources, sanity gate 11/12 published pair lines reproduced, injection-calibrated in every source) searched the tooth and the integer control line 4ν₀ blind — and found NEITHER anywhere (~0σ single-trial, trials-corrected N = 8 as preregistered). 3σ rms upper limits: 3.06 / 1.61 / 0.53 / 1.26% (GRO J1655−40, XTE J1550−564, GRS 1915+105, H1743−322) — in every source at or below the strength of the detected upper pair line. A well-powered null: the ladder reading gains no support (GR parametric resonance stays the standing favorite) but is not killed, since the harmonic branch did not fire either (the published integer lines 92 = 184/2 Hz, 34/68 Hz stand). TFPT's 3/2 is a relaxation-ladder step from N_fam = 3 (the same frozen kernel as the recovery combs), NOT a two-oscillator ratio — the mapping is non-canonical, which is why this stays a search target [O], not a claim. Caveats: GRS 1915+105 was scanned in a proxy state (the 113/168 Hz epochs were never published at ObsID level), and the GRO J1655−40 hard-band sensitivity (5.1% at 90% recovery) only excludes a tooth at the strength of its 450 Hz line.",
     category: "Astrophysics",
     confrontation: {
       derivation: "\\text{ladder step } \\tfrac{3}{2} \\text{ from } N_{\\mathrm{fam}} = 3 \\Rightarrow \\nu_3 = \\tfrac{3}{2}\\nu_u",
       tfptValue: "tooth at 661.5/414/252/363 Hz, no integer lines",
-      measured: "never searched (only integer lines published)",
-      deviation: "data-limited (H3 literature census)",
-      source: "RXTE PCA archive census (Belloni+ 2012, RM06, Motta+ 2014–2022)",
-      decisive: "preregistered archival RXTE PCA reanalysis (public data, runnable now)",
+      measured: "no tooth, no integer line (~0σ, trials-corrected; archival scan 2026-07)",
+      deviation: "well-powered null; 3σ limits 0.53–3.06% rms in all four sources",
+      source: "RXTE PCA archive scan, 77 ObsIDs (Belloni+ 2012, RM06, Motta+ 2014–2022 epochs)",
+      decisive: "eXTP-class sensitivity below the 0.5–3.1% rms limits",
     },
     experiment: {
       summary:
-        "experiments/hfqpo-ladder runs H1 (exact-3/2 point test), H2 (Boutelier/Török anchored selection-null MC, 200k trials) and H3 (ladder-tooth literature census + preregistered archival protocol) with the byte-guarded frozen kernel.",
+        "experiments/hfqpo-ladder runs H1 (exact-3/2 point test), H2 (Boutelier/Török anchored selection-null MC, 200k trials), H3 (ladder-tooth literature census) and the H3 stage-2 preregistered archival RXTE PCA scan with the byte-guarded frozen kernel.",
       result:
-        "H1: four pairs consistent with 3/2 (p = 0.78) but J1859+226 sits +9.2σ off — not universal. H2: anchored selection alone makes the cluster in 18.5% of trials — H1 carries no discriminating weight. H3: the ×1.5 tooth was never searched in any published analysis; archival next stage fully specified. Verdict data_limited; GR resonance favored.",
-      finding: "data_limited",
+        "H1: four pairs consistent with 3/2 (p = 0.78) but J1859+226 sits +9.2σ off — not universal. H2: anchored selection alone makes the cluster in 18.5% of trials — H1 carries no discriminating weight. H3 stage 2 (archival scan, 2026-07): sanity gate and injection calibration PASS; neither the tooth nor the integer line detected anywhere; 3σ limits 0.53–3.06% rms. Verdict null (well-powered); GR resonance favored, ladder unsupported but not killed.",
+      finding: "null",
       repoPath: "experiments/hfqpo-ladder",
     },
   },

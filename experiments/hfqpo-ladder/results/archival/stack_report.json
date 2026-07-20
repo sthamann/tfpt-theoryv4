@@ -1,0 +1,134 @@
+{
+  "GRO_J1655-40/B1_triplet/bt": {
+    "n_seg": 894,
+    "n_photons": 343423767,
+    "mean_rate_cps": 24008.9,
+    "exposure_s": 14304.0
+  },
+  "GRO_J1655-40/B1_triplet/hard27": {
+    "n_seg": 899,
+    "n_photons": 11993734,
+    "mean_rate_cps": 833.8,
+    "exposure_s": 14384.0
+  },
+  "GRO_J1655-40/B2_450Hz/bt": {
+    "n_seg": 890,
+    "n_photons": 336989257,
+    "mean_rate_cps": 23665.0,
+    "exposure_s": 14240.0
+  },
+  "GRO_J1655-40/B2_450Hz/hard27": {
+    "n_seg": 895,
+    "n_photons": 9094601,
+    "mean_rate_cps": 635.1,
+    "exposure_s": 14320.0
+  },
+  "GRO_J1655-40/T300_epochs/bt": {
+    "n_seg": 1302,
+    "n_photons": 586695439,
+    "mean_rate_cps": 28163.2,
+    "exposure_s": 20832.0
+  },
+  "GRO_J1655-40/T300_epochs/hard27": {
+    "n_seg": 1308,
+    "n_photons": 30935778,
+    "mean_rate_cps": 1478.2,
+    "exposure_s": 20928.0
+  },
+  "XTE_J1550-564/hard_280/bh": {
+    "n_seg": 799,
+    "n_photons": 30691239,
+    "mean_rate_cps": 2400.8,
+    "exposure_s": 12784.0
+  },
+  "XTE_J1550-564/hard_280/bt": {
+    "n_seg": 798,
+    "n_photons": 151503687,
+    "mean_rate_cps": 11865.9,
+    "exposure_s": 12768.0
+  },
+  "XTE_J1550-564/total_180/bh": {
+    "n_seg": 1154,
+    "n_photons": 136536711,
+    "mean_rate_cps": 7394.8,
+    "exposure_s": 18464.0
+  },
+  "XTE_J1550-564/total_180/bt": {
+    "n_seg": 1150,
+    "n_photons": 453673061,
+    "mean_rate_cps": 24656.1,
+    "exposure_s": 18400.0
+  },
+  "XTE_J1550-564/outburst2000_270/bh": {
+    "n_seg": 643,
+    "n_photons": 11009346,
+    "mean_rate_cps": 1070.1,
+    "exposure_s": 10288.0
+  },
+  "XTE_J1550-564/outburst2000_270/bt": {
+    "n_seg": 642,
+    "n_photons": 61761706,
+    "mean_rate_cps": 6012.6,
+    "exposure_s": 10272.0
+  },
+  "GRS_1915+105/gamma_1997_41_69/bt": {
+    "n_seg": 2162,
+    "n_photons": 623094417,
+    "mean_rate_cps": 18012.7,
+    "exposure_s": 34592.0
+  },
+  "GRS_1915+105/gamma_1997_41_69/hard27": {
+    "n_seg": 2167,
+    "n_photons": 20975723,
+    "mean_rate_cps": 605.0,
+    "exposure_s": 34672.0
+  },
+  "GRS_1915+105/gamma_1996_67/bt": {
+    "n_seg": 1159,
+    "n_photons": 288456786,
+    "mean_rate_cps": 15555.3,
+    "exposure_s": 18544.0
+  },
+  "GRS_1915+105/gamma_1996_67/hard27": {
+    "n_seg": 1165,
+    "n_photons": 5760871,
+    "mean_rate_cps": 309.1,
+    "exposure_s": 18640.0
+  },
+  "GRS_1915+105/delta_2003_34_68/bt": {
+    "n_seg": 290,
+    "n_photons": 42869550,
+    "mean_rate_cps": 9239.1,
+    "exposure_s": 4640.0
+  },
+  "GRS_1915+105/delta_2003_34_68/hard27": {
+    "n_seg": 290,
+    "n_photons": 1430118,
+    "mean_rate_cps": 308.2,
+    "exposure_s": 4640.0
+  },
+  "H1743-322/q_low_242/bh": {
+    "n_seg": 8768,
+    "n_photons": 251516395,
+    "mean_rate_cps": 1792.9,
+    "exposure_s": 140288.0
+  },
+  "H1743-322/q_low_242/bt": {
+    "n_seg": 8767,
+    "n_photons": 682586908,
+    "mean_rate_cps": 4866.2,
+    "exposure_s": 140272.0
+  },
+  "H1743-322/q_high_166/bh": {
+    "n_seg": 4544,
+    "n_photons": 218139919,
+    "mean_rate_cps": 3000.4,
+    "exposure_s": 72704.0
+  },
+  "H1743-322/q_high_166/bt": {
+    "n_seg": 4542,
+    "n_photons": 481470018,
+    "mean_rate_cps": 6625.2,
+    "exposure_s": 72672.0
+  }
+}

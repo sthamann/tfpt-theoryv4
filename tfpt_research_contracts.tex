@@ -888,6 +888,36 @@ exact character, genus-1 count, RP); \mO\ the one thing a computation cannot sup
 \emph{continuum existence} of the limit (the cited MMST theorem, \vref{v336}). With RP in hand the ambient
 measure C7 is then discharged by the redundancy theorem (\vref{v369}), so S3 is the master key: the target
 is pinned exactly, only the existence proof is external.
+\par\smallskip\noindent\textbf{A ground-state witness for premise (i): the modular commutator measures
+$c_-{=}8$ from the bulk state alone (\veri{v489\_seam\_modular\_commutator.py}, \texttt{SEAM.CCC.01}).}
+The chiral central charge entered so far through band topology (the Chern number, \vref{v367}) and through
+counting (the KLM/det-Cartan arithmetic, \vref{v378}). The Kim--Shehab--Kim modular commutator
+$J(A,B,C)=i\operatorname{Tr}(\rho_{ABC}[K_{AB},K_{BC}])=(\pi/3)\,c_-$ (PRL 128 (2022)) reads $c_-$ off the
+\emph{entanglement data of the exact BdG ground state} of the same collar --- no band bundle, no
+representation theory enters --- via the Peschel covariance ($W_X=-2\operatorname{artanh}\Gamma_X$) on a
+disk cut into three $120^\circ$ wedges: per layer $c_-=0.499998$ at $L{=}32$ (converged $0.500000$ at
+$L{=}48$, deviation $-1.8\times10^{-7}$), the trivial $M{=}3$ control gives $0.000000$, the orientation
+flip $M{=}{-}1$ gives $-0.499986$ (sign flip), layer additivity is exact ($10^{-14}$), and the $16$-layer
+carrier lands on $c_-=8=\gcar+\Nfam$ (direct run $7.9967$ at $L{=}16$, additivity route $8.0000$). \mE\ the
+third, mutually independent lattice witness of premise (i) of \texttt{SEAM.EQUIV.01} --- and the first read
+from ground-state entanglement alone; \mO\ unchanged: the continuum scaling limit (MMST, \vref{v336}) and
+the cited KLM condensation step stay exactly where \vref{v367}/\vref{v378} left them ---
+\texttt{SEAM.EQUIV.01} stays \mO.
+\par\smallskip\noindent\textbf{The spin-structure parity census: $\mu_{\mathrm{pre}}{=}4$ witnessed on the
+lattice (\veri{v490\_seam\_parity\_census.py}, \texttt{SEAM.MU.01}).} Step 1 of the KLM chain
+(\vref{v378}) --- ``the carrier sits in the $SO(16)_1$ class, $\mu_{\mathrm{pre}}{=}4$, \emph{before} the
+$\mu_4$ condensation'' --- was arithmetic; it is now a lattice ground-state measurement. The $T^2$
+fermion parity per spin structure $(AA,AP,PA,PP)$ is determined \emph{twice} (Read--Green TRIM product and
+real-space Majorana Pfaffian, spectra matching to $9{\times}10^{-15}$): per layer $(+,+,+,-)$ --- the
+$\nu{=}1$ Ising signature --- and for the $16$-layer carrier $\mathrm{parity}^{16}={+}$ in \emph{all four}
+sectors, so the gauged torus GSD is $4=\mu(SO(16)_1)=|\det\mathrm{Cartan}(D_8)|$. The 16-fold-way bridge
+then runs on \emph{measured} numbers: $\theta_v=e^{2\pi i\nu/16}=1$ exactly at $\nu=2c_-=16$ (\vref{v489})
+--- the gauged vortex is a boson, condensable, while the rivals $\nu=1,2,8$ are not holomorphically
+condensable. Honest fences: the fermionic Kitaev--Preskill TEE is identically zero for \emph{both} $M{=}1$
+and $M{=}3$ ($\gamma_f=0.000001/0.000000$) --- an invertible fermionic phase has no TEE, so $\gamma_f$ does
+\emph{not} discriminate $(E_8)_1$ vs $SO(16)_1$; and the KLM step $\mu:4\to4/2^2=1$ stays the cited
+theorem (\mC, the condensed model is interacting). The numerics pin exactly the premise package
+$\{c_-{=}8,\ \mu_{\mathrm{pre}}{=}4,\ \theta_v{=}1\}$ of the condensation; \texttt{SEAM.EQUIV.01} stays \mO.
 \par\smallskip\noindent\textbf{And that external step is now Lean-formalised as ``closed modulo a cited
 theorem'' (\texttt{FORM.SEAM.MMST.01}, \texttt{TfptCarrier/SeamScalingLimit.lean}).} The continuum leg is
 machine-formalised in the audit-contract style of \texttt{SeamEquivChain.lean}: the collar's MMST
@@ -2715,6 +2745,152 @@ local covariant field equation is parameter-free (\vref{v358}/\vref{v359}); Theo
 the projective-limit ambient \emph{measure} $\mu_{\mathrm{QG}}$ (G6, the deepest item). G5 certified; the
 regime equation closed \veri{v28\_gravity\_fR.py}.}
 \end{keybox}
+
+% =====================================================================
+\section*{Research Contract --- \texttt{CELEST.SEAM.01} (the celestial-holographic route)}
+\addcontentsline{toc}{section}{Research Contract: CELEST.SEAM.01}
+% =====================================================================
+\noindent\textbf{Hypothesis (as corrected by WP1).} \emph{The seam is the glue-equivariant
+$\Z_4$-orbifold sector of the celestial chiral algebra on the $A_3$ ALE space $\mathbb C^2/\Z_4$; the
+$\mu_4$ clock is the K\"ahler $U(2)$ phase $\operatorname{diag}(i,1)$ whose square is the deck group
+(spin bridge $\Z_8$, $8=2|\mu_4|$ --- the $\cthree=1/(8\pi)$ seam winding integer); and the associated
+twistorial bulk is the \emph{self-dual} sector of TFPT gravity.} This is the fourth research contract,
+alongside $(U_{\mathrm{wall}})$, $(G_{\mathrm{metric}})$ and \texttt{CONTRACT.F.01}: a numbered chain
+of work packages with pre-registered kill tests, \emph{not} a claim. The method is the celestial-chiral-algebra
+(CCA) construction of Bittleston--Homans--Sharma on Eguchi--Hanson space
+(\texttt{arXiv:2305.09451}, JHEP 09 (2023) 008 --- the $\Z_2$ case, refined here to $\Z_4$ with a flat
+connection at infinity in the Kronheimer--Nakajima / heterotic-on-ALE sense), inside the celestial-holography
+programme (Strominger, PRL \textbf{127}, 221601: $w_{1+\infty}$; Costello--Paquette--Sharma, PRL
+\textbf{130}, 061602: Burns holography, the $SO(8)$ WZW$_4$ model; Bittleston--Sharma--Skinner, CMP
+\textbf{403} (2023): quantizing the non-linear graviton). The gauge-algebra admissibility gate is already
+passed in the literature: Costello's one-loop axionic-consistency analysis (\texttt{arXiv:2111.08879})
+admits the exceptional algebras \emph{including} $E_8$ for SDYM on twistor space (Okubo: no independent
+quartic Casimir).
+
+\begin{keybox}[WP1, executed and verified: the $E_8$ $\mu_4$-glue \emph{is} the flat $\Z_4$ monodromy of the equivariant CCA on the $A_3$ ALE space --- verdict B (\veri{v492\_celestial\_z4\_orbifold.py}, \texttt{CELEST.WP1.01})]
+Everything in this box is exact arithmetic (sympy, no floats). \textbf{Inner grading / flat monodromy
+\mE:} the \vref{v128} glue grading ($240=52{+}64{+}60{+}64$, additive on all $6720$ root pairs, dims with
+Cartan $(60,64,60,64)$, $\mathfrak g_0=D_5{\oplus}A_3$ carrier $=60$) is \emph{inner}:
+$h=(2,2,2,2,2;0^4)$ reads the glue class mod $4$ on all $240$ roots, so the glue is
+$\operatorname{Ad}(\exp(2\pi ih/4))$ --- an order-$4$ torus element, i.e.\ a \emph{flat $\Z_4$ monodromy}
+in the Kronheimer--Nakajima sense; the $A_3$-side detector $h'=(0^5;1,1,1,-3)$ reads the \emph{same}
+class, so the glue charge is the diagonal $(1,1)$ of the discriminant group $\Z_4{\times}\Z_4$ --- the
+\vref{v92}/\vref{v125} Lagrangian glue. \textbf{The spatial side \mE:} $\mathbb C^2/\Z_4$ under the deck
+$(z_1,z_2)\mapsto(iz_1,i^{-1}z_2)$ \emph{is} the $A_3$ singularity $XY=Z^4$ (invariant ring exact; Hilbert
+series $(1{+}t^4)/((1{-}t^2)(1{-}t^4))$; Molien table verified). \textbf{The equivariant sector closes
+\mE:} the glue-equivariant SDYM$(E_8)$ modes ($j+m\equiv0$ mod $4$) form a Lie subalgebra with graded
+dimensions $D[d]=60(d{+}1)$ (even $d$) $/\,64(d{+}1)$ (odd $d$) --- uniform per parity \emph{only} because
+$\dim\mathfrak g_0=\dim\mathfrak g_2=60$ and $\dim\mathfrak g_1=\dim\mathfrak g_3=64$: the \vref{v128}
+dimensions are exactly the consistency condition. The zero modes ($d{=}0$) are $\mathfrak g_0$ alone ---
+\emph{the unbroken algebra on the orbifold is the carrier} $D_5{\oplus}A_3{+}$Cartan $=60$; the asymptotic
+density is $62/248=1/4=1/|\Z_4|$ (the orbifold index), and the $\Z_2$ halfway sector reproduces the
+Eguchi--Hanson towers $120/128=SO(16)$ adjoint/spinor --- $\mu_4$ refines the sheet $\Z_2$ exactly as
+$4=2\times2$ (\vref{v125}). \textbf{Character level \mE:} $\Theta_{E_8}$ splits into the four glue-coset
+thetas (shell $1=(52,64,60,64)$ re-derived from the \emph{lattice}); the four sector characters
+$\Theta_{C_j}/\eta^8$ sum \emph{exactly} to $\chi_{(E_8)_1}=1{+}248q{+}4124q^2{+}34752q^3$ (the
+\vref{v377} series); the sector conformal weights are $h_{D_5}=(0,\tfrac58,\tfrac12,\tfrac58)$,
+$h_{A_3}=(0,\tfrac38,\tfrac12,\tfrac38)$ --- the \vref{v92}/\vref{v125} discriminant form
+$(5x^2{+}3y^2)/8$ mod $1$ --- and the glue diagonal has \emph{integer} $h=(0,1,1,1)$: the v125 isotropy
+\emph{is} the locality of the extension to $(E_8)_1$. \textbf{The critical correction \mE\ (why verdict B,
+not A):} the $A_3$ deck $\operatorname{diag}(i,i^{-1})$ induces on the celestial sphere $z=z_1/z_2$ only
+$z\mapsto-z$ (projective order $2$, the sheet flip) --- it is \emph{not} the order-$4$ clock $z\mapsto iz$.
+The exact bridge: any $SU(2)$ lift of the clock has order $8$ (spin group $\Z_8$, which would quotient to
+$A_7$), and $(\text{spin clock})^2=$ the deck generator \emph{exactly}, with $|\Z_8|=8=2|\mu_4|$ --- the
+$\cthree=1/(8\pi)$ winding integer. The order-$4$ clock \emph{is} realised, as the $U(2)$ phase
+$\operatorname{diag}(i,1)$: projective order $4$, fixed points $\{0,\infty\}$, free $\mu_4$ orbit (all
+\vref{v180} clock properties), normalising the deck (so preserving the glue flat connection), with
+$\det=i$ rotating the holomorphic symplectic form by the $\mu_4$ generator (a K\"ahler, \emph{not}
+triholomorphic isometry --- it rotates the twistor sphere by $\pi/2$). \textbf{Gravity side \mE:}
+clock-invariance selects from the $3$-parameter versal $A_3$ family $XY=Z^4{+}a_2Z^2{+}a_1Z{+}a_0$
+\emph{exactly} the $1$-parameter family $XY=Z^4{+}a_0$, whose four branch points are \emph{one} $\mu_4$
+orbit with cross-ratio $2$ --- the seam marks (\vref{v179} clock orbit; \vref{v168}/\vref{v214}
+cross-ratio $2\Rightarrow j{=}1728$ pillowcase). \textbf{Negative controls \mE:} the false spatial action
+$\operatorname{diag}(i,i)$ is killed three ways ($\det=-1\notin SL(2,\mathbb C)$, no CY/ALE resolution;
+Poisson closure fails in $14/14$ nonzero cases; conjugation symmetry broken), the false glue ($60/64$
+blocks swapped) breaks additivity on $3112/6720$ root pairs, and of all $24$ relabelings exactly
+$\{\mathrm{id},\,j\mapsto-j\}=\operatorname{Aut}(\Z_4)$ are additive --- the grading is rigid.
+\textbf{Verdict \mC:} the celestial and glue $\Z_4$ structures match under \emph{one} precisely named
+extra identification --- clock$^2=$ deck on the sphere (the sheet-$\Z_2$ spin bookkeeping) --- so WP1
+lands at verdict B (match modulo one named identification), close to but honestly short of A. \mE/\mC
+\end{keybox}
+
+\par\smallskip\noindent\textbf{Typing and non-circularity.} Admissible \emph{inputs} are the finite
+seam/glue data already in the suite --- the $\mu_4$ Q-system glue (\vref{v92}/\vref{v125}), the graded hull
+(\vref{v128}), the seam rigidity and pillowcase geometry (\vref{v168}/\vref{v214}), the M\"obius clock
+(\vref{v180}) --- plus the WP1 \mE\ arithmetic (\veri{v492\_celestial\_z4\_orbifold.py}). \emph{Not}
+admissible as an input: the \emph{continuum existence} of the holomorphic $(E_8)_1$ net on the seam ---
+that is precisely the \texttt{SEAM.EQUIV.01} target, and assuming it would make the contract circular.
+\emph{Scope fence:} the twistorial bulk of this contract is the \emph{self-dual} sector only, never full
+Einstein gravity --- the classical field-equation route (entanglement equilibrium, \vref{v358}/\vref{v359})
+and the entropic-action bridge (\texttt{GRAV.ENTROPIC.ACTION.01}, \vref{v473}) are separate, non-competing
+statements about the full equation. \texttt{SEAM.EQUIV.01} stays \mO\ throughout; nothing in this contract
+moves it.
+
+\par\smallskip\noindent\textbf{Work packages.}
+\begin{itemize}
+\item \textbf{WP1 (\emph{done}, verdict B) \mE/\mC:} the structural $\Z_4$ arithmetic of the
+keybox above, executed and machine-verified as \texttt{CELEST.WP1.01}
+\veri{v492\_celestial\_z4\_orbifold.py}.
+\item \textbf{WP2 (\emph{done}, verdict B) \mE/\mC:} the clock-invariant deformation theory, executed
+and machine-verified as \texttt{CELEST.WP2.01} \veri{v493\_celestial\_wp2\_clock\_deformation.py}
+(sympy exact, $47$ checks). Both targets landed, \emph{sharpened}: (i) $a_0$ is the pure \emph{scale} of
+the seam configuration --- the binary-quartic invariants of $w^2=Z^4{+}a_0$ are $I=12a_0$, $J=0$
+\emph{identically}, so $j=1728$ and the $\tau{=}i$ pillowcase shape (\vref{v168}/\vref{v214}) is
+\emph{frozen} for every $a_0\neq0$ (no shape modulus survives clock-invariance; the negative controls
+$a_1Z\Rightarrow j{=}0$ and $a_2\neq0\Rightarrow j{=}1556068/81$ show the test has teeth); (ii) the three
+resolved spheres ($3=\operatorname{rank}A_3=\Nfam$) carry \emph{exactly} the three nontrivial $\mu_4$
+characters $\{i,-1,-i\}$ under the clock, which acts on $H_2$ as a \emph{Coxeter element} of $W(A_3)$
+(char $x^3{+}x^2{+}x{+}1$, order $h(A_3){=}4{=}|\mu_4|{=}\Nfam{+}1$) and \emph{is} the Picard--Lefschetz
+monodromy of the family ($a_0\to e^{2\pi i}a_0$ gives the $4$-cycle); the surviving deformation direction
+is the weight-$1$ $\chi_1$-Fourier diagonal $(1,i,i^2)$ --- \emph{not} the naive invariant diagonal
+($\det(A{-}1)={-}4$: no invariant cycle) --- and all three sphere volumes move in lockstep
+($|\Pi_j|=\sqrt2\,t$). The BHS deformed-algebra pattern transfers from $\Z_2$ to $\Z_4$: the fibre bracket
+$-4\,\mathrm{Nambu}(XY{-}Z^4{-}a_0)$, anchored at the $a_0{=}0$ orbifold, closes with corrections exactly
+\emph{linear} in $a_0$ at the $\Z_4$ wrap, conserving the $\mu_4$ grade (no sector leak --- the WP1
+equivariant sector deforms consistently), with $a_0$ in the weight-$0$ slot of BHS's $c^2$. Verdict B via
+three named \mC\ identifications ($-4\,$Nambu as \emph{the} $k{=}4$ CCA bracket; period $=$ root
+difference; the seam-scale reading via clock$^2=$deck); the full deformed twisted-sector OPEs and the
+$W(\mu)$-type scaling limit for $k{=}4$ stay \mO. The \vref{v216} $[$O$]$-residual is \emph{typed}, not
+moved: given the order-$4$ clock, the deformation freezes the $(2,2,2,2)$ modulus to the square
+automatically --- a relocation of the same order-$4$ carrier input, not a new derivation.
+\item \textbf{WP3 (alignment test only) \mO:} the Green--Schwarz axion coefficient of the celestial
+$E_8$ theory, $\lambda_{\mathfrak e_8}/(8\pi\sqrt3)$ (Costello's normalisation), against the TFPT seam
+constant $\cthree=1/(8\pi)$ --- an \emph{alignment} check between two fixed normalisations, never a
+derivation of $\cthree$ from celestial data.
+\item \textbf{WP4 (the type mismatch, head-on) \mO:} the $(E_8)_1$ \emph{character} as a conformal block
+of the celestial $E_8[\mathbb C^2]$ S-algebra --- WP1 shows the four glue sectors sum to the $(E_8)_1$
+character at the counting level, but the S-algebra is graded by polynomial degree ($60/64$ towers), not by
+conformal weight; WP4 must either produce the character from the S-algebra trace or localise the
+obstruction.
+\item \textbf{WP5 (the summit) \mO:} the twistorial construction as a \emph{second continuum route} for
+\texttt{SEAM.EQUIV.01} --- a Costello--Li-grade construction of the holomorphic boundary theory from the
+twistor uplift; hard, and explicitly typed as a research programme.
+\end{itemize}
+
+\par\smallskip\noindent\textbf{Kill tests (pre-registered).} \textbf{(K1)} the equivariant sector could
+have \emph{contradicted} the $52{+}64{+}60{+}64$ split (uniformity of $D[d]$ needs exactly
+$\dim\mathfrak g_j=(60,64,60,64)$) --- \emph{survived by WP1 and WP2}: the false-glue control shows the
+test has teeth ($3112/6720$ violations), and WP2 adds the deformation side (a shape modulus surviving
+clock-invariance, or $a_0$-corrections leaking between $\mu_4$ sectors, would have fired --- neither
+occurred; the clock-variant controls fail in two independent ways each). \textbf{(K2)} if one-loop
+associativity of the celestial
+$E_8$ theory demanded extra fields that TFPT does not possess, the contract dies (Costello's axionic
+mechanism is the first pass: $E_8$ is admissible; the TFPT-specific field content is the open half).
+\textbf{(K3)} if WP3 finds no exact alignment between the GS coefficient and the $\cthree$ normalisation,
+the $\cthree$-connection of the celestial route dies (the orbifold arithmetic of WP1 survives on its own).
+\textbf{(K4)} if WP4 is negative, the contract degrades to ``$E_8$ is an admissible gauge algebra for
+celestial SDYM'' --- already known from the literature, i.e.\ zero TFPT content.
+
+\par\smallskip\noindent\textbf{Honest success estimate.} The probability of \emph{full} success (WP5: a
+second continuum route to \texttt{SEAM.EQUIV.01}) is low --- it is constructive holography at the
+Costello--Li grade. The probability of \emph{partial} findings is high: WP3 is a finite computation on
+fixed data, and WP1/WP2 already returned nontrivial structural matches (verdict B each) with sharp
+refinements --- the WP1 critical correction (clock $\neq$ deck; clock$^2=$ deck) and the WP2 sharpenings
+(the clock \emph{is} the Picard--Lefschetz/Coxeter monodromy of the seam deformation; the surviving
+direction is the $\chi_1$-Fourier diagonal, $a_0$ pure scale with the $\tau{=}i$ shape frozen) --- exactly
+the kind of sharp, falsifiable refinement the contract format is for. Status: \texttt{CELEST.SEAM.01}
+\mO\ (research contract); \texttt{CELEST.WP1.01} \mE/\mC\ (executed); \texttt{CELEST.WP2.01} \mE/\mC\
+(executed); \texttt{SEAM.EQUIV.01} untouched, stays \mO.
 
 % =====================================================================
 \section*{Certifiability and recommended order}

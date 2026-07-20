@@ -1,0 +1,28 @@
+# BaCo2V2O8 INS peak positions at the 1D QCP (H = 4.7 T || [010], T = 0.4 K, Q = (002))
+# Source: Zou, Cui, Wang et al., PRL 127, 077201 (2021); arXiv:2005.13302v3, Fig. 3(a).
+# Extraction: scripts/extract_zou_fig3.py (deterministic digitization of the arXiv
+#   vector figure). Red vertical markers = the paper's single-E8-particle peaks;
+#   additional rows = maxima of the paper's Gaussian fit curve (multi-particle /
+#   zone-folding peaks P/F of the paper). Axis: ticks every 0.2 meV, 195 px/meV;
+#   calibration validated on Fig. 3(b) (analytic panel, m1 = 1.2 meV) to < 1%.
+# sigma: 0.10 meV singles / 0.12 meV broader features (instrument resolution
+#   0.1 meV per the paper; digitization adds ~0.01 meV).
+# 'kind' is REPORTING metadata only -- the blind detector never sees it.
+energy_mev,sigma_mev,kind,source
+1.2000,0.10,single_marker,fig3a_red_marker
+2.0051,0.10,single_marker,fig3a_red_marker
+2.5077,0.10,single_marker,fig3a_red_marker
+2.7821,0.12,other_peak,fig3a_curve_max
+3.0000,0.10,single_marker,fig3a_red_marker
+3.2846,0.12,other_peak,fig3a_curve_max
+3.6256,0.10,single_marker,fig3a_red_marker
+3.8974,0.10,single_marker,fig3a_red_marker
+4.0897,0.12,other_peak,fig3a_curve_max
+4.2846,0.12,other_peak,fig3a_curve_max
+4.4974,0.10,single_marker,fig3a_red_marker
+4.6538,0.12,other_peak,fig3a_curve_max
+4.9564,0.12,other_peak,fig3a_curve_max
+5.1154,0.12,other_peak,fig3a_curve_max
+5.2692,0.12,other_peak,fig3a_curve_max
+5.3872,0.12,other_peak,fig3a_curve_max
+5.7564,0.10,single_marker,fig3a_red_marker

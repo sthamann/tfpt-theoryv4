@@ -29,7 +29,7 @@ const GATES: Gate[] = [
     tag: "Interface 2",
     marker: "[E] target · [C] seam",
     title: "G_net — the metric-sector inclusion",
-    body: "The (E₈)₁ target is closed [E] (v154/v175). The seam coupling SEAM.EQUIV.01 is closed modulo cited theorems: the lattice model (v367/v368) + the S3 stack pin it at every computable level (c = 8, the (E₈)₁ character, torus GSD = 1, RP; v376–v379), Lean-pinned (FORM.SEAM.MMST.01). Residual [O] = the cited MMST continuum-existence only (v336; extension leg on the peer-reviewed crossed-product package, realisation at invariant level, v469; stays [O]).",
+    body: "The (E₈)₁ target is closed [E] (v154/v175). The seam coupling SEAM.EQUIV.01 is closed modulo cited theorems: the lattice model (v367/v368) + the S3 stack pin it at every computable level (c = 8, the (E₈)₁ character, torus GSD = 1, RP; v376–v379, ground-state witnesses v489/v490), Lean-pinned (FORM.SEAM.MMST.01). Residual [O] = the cited MMST continuum-existence only (v336; extension leg on the peer-reviewed crossed-product package, realisation at invariant level, v469; stays [O]).",
     formula: "[\\,(E_8)_1 : (D_5)_1\\times(A_3)_1\\,] = 4 = |\\mu_4| \\Rightarrow \\text{holomorphic } c = 8",
     tone: "border-amber-400/30 bg-amber-500/5",
   },
@@ -52,7 +52,7 @@ const RESIDUAL: { label: string; marker: string; blurb: string; tone: string }[]
   {
     label: "G_net",
     marker: "[E] target · [C] seam",
-    blurb: "Metric inclusion: the (E₈)₁ target is closed and pinned at every computable level (lattice v367/v368 + S3 stack v376–v379); the seam coupling SEAM.EQUIV.01 is closed modulo cited theorems (Lean FORM.SEAM.MMST.01), residual [O] = the cited MMST continuum existence only (v336; extension leg crossed-product certified, v469; stays [O]).",
+    blurb: "Metric inclusion: the (E₈)₁ target is closed and pinned at every computable level (lattice v367/v368 + S3 stack v376–v379, ground-state witnesses v489/v490); the seam coupling SEAM.EQUIV.01 is closed modulo cited theorems (Lean FORM.SEAM.MMST.01), residual [O] = the cited MMST continuum existence only (v336; extension leg crossed-product certified, v469; stays [O]).",
     tone: "from-amber-500/15 to-amber-500/[0.03] border-amber-400/30",
   },
   {
@@ -151,7 +151,7 @@ function ClosingCondition() {
         onto this one premise (the Modular Spectral Closure, v258–v261), so{" "}
         <span className="font-mono text-emerald-200">SEAM.EQUIV.01</span> is{" "}
         <span className="text-emerald-200">closed modulo cited theorems</span>: the explicit lattice model
-        (v367/v368) and the S3 stack (v376–v379) pin the target at every computable level, Lean-pinned
+        (v367/v368) and the S3 stack (v376–v379, ground-state witnesses v489/v490) pin the target at every computable level, Lean-pinned
         (FORM.SEAM.MMST.01) to the published MMST/Adamo theorems — the only residual{" "}
         <span className="text-amber-200">[O]</span> is their abstract continuum-existence (v336; its 128-spinor
         extension leg is certified at net level by the peer-reviewed crossed-product package v469, LR/Böckenhauer/KLM,

@@ -268,6 +268,37 @@ Clebsch door closed: sym²(16) = 10 + 126, 16×16bar = 1 + 45 + 210, the
 k_Y = 5/3 decoupled by Y(ν^c) = 0): Fraction/sympy-exact, mirrorable in
 principle, deferred to the same run.
 
+The 2026-07-20 ground-state-witness round: `v489_seam_modular_commutator.py`
+(the Kim–Shehab–Kim modular commutator c₋ = 8 on the exact BdG ground state)
+and `v490_seam_parity_census.py` (the T² spin-structure parity census
+μ_pre = 4 + the TEE fence) are numerical (numpy/scipy dense linear algebra),
+Python-only by the suite convention, flagged here rather than mirrored (the
+exact θ_v = e^{2πiν/16} = 1 arithmetic inside `v490` is sympy-exact in
+Python). The exact partition corollary `v491_p2_partition_corollary.py`
+(P2.PARTITION.01: 4 into exactly 3 positive parts uniquely {1,1,2} ⇒
+e = (4,5,2) ⇒ g_car = 5, |Z₂| = 2, N_fam = 3 as corollaries, with all four
+negative controls and the v53 sharpening) has its THREE exact mirrors ADDED
+to `tfpt_readouts_extension.wl`, but the VERIFIED count stays unchanged:
+the local Wolfram Engine is currently unactivated (license), so the new
+checks enter the counted total only with the next verified engine run —
+the identical statements are machine-verified in Python (sympy, exact) in
+`v491` itself.
+
+The 2026-07-20 celestial round: `v492_celestial_z4_orbifold.py`
+(CELEST.WP1.01: the E₈ μ₄-glue as inner order-4 torus element / flat Z₄
+monodromy, the equivariant 60/64 towers, the (E₈)₁ character sum, the
+clock²=deck spin bridge) is sympy-exact and mirrorable in principle,
+deferred to the next verified engine run (flagged in its docstring).
+`v493_celestial_wp2_clock_deformation.py` (CELEST.WP2.01: the clock-invariant
+deformation XY = Z⁴ + a₀ — sharp selection, disc = 256a₀³, quartic
+invariants I = 12a₀ / J = 0 identically ⇒ j = 1728 frozen, the Coxeter/
+Picard–Lefschetz monodromy with the χ₁-Fourier eigenline, versal weights
+(1,2,3,0), S-algebra corrections linear in a₀ with the EH k = 2 analogue)
+has its FOUR exact mirrors ADDED to `tfpt_readouts_extension.wl`, same
+convention: the VERIFIED count stays unchanged until the next verified
+engine run; the identical statements are machine-verified in Python
+(sympy, exact, 47 checks) in `v493` itself.
+
 (ledger `GATE.WOLFRAM.02`). The scipy-only parts of the round (the `v86`
 pivot ODE solve, the `v88` data pulls, the `v99` mpmath ODE probe of the
 time-1 map — its exact symbolic form *is* mirrored) stay Python-only and

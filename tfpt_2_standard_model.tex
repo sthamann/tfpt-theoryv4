@@ -3279,7 +3279,9 @@ three winding magnitudes are three positive integers summing to $4$, and
 \[
   4=1+1+2\ \text{is the \emph{unique} partition of $|\mu_4|$ into three positive parts,}
 \]
-so $E=\mathcal O(-2)\oplus\mathcal O(-1)^2$ and $a=(1,1,2)$.
+so $E=\mathcal O(-2)\oplus\mathcal O(-1)^2$ and $a=(1,1,2)$ --- machine-checked with its negative
+controls (positivity/sum/part-count/integrality each load-bearing; $\gcar=e_2=5$ a corollary) in
+\veri{v491\_p2\_partition\_corollary.py}, sharpening \vref{v53}.
 \textbf{(b) Residue branch.} An explicit $D_4$-symmetric $SU(3)$ monodromy (each puncture carrying the
 cusp triple $\{1,\omega,\omega^2\}$, product $=\mathbf1$ at residual $10^{-11}$) realises $r\bmod3$; among
 the two $D_6$-admissible branches exactly one has $\operatorname{coker}R=\Z_{h(D_5)}=\Z_8$
